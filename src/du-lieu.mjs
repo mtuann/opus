@@ -203,7 +203,6 @@ function khoangGrade(g) {
 	const n = (s.match(/\d+/g) ?? []).map(Number);
 	return n.length ? [Math.min(...n), Math.max(...n)] : null;
 }
-const chuanGrade = (g) => g.replace(/≈|\bkhoảng\b|\bABRSM\b/gi, ' ').replace(/\s+/g, ' ').trim().replace(/-/g, '–');
 
 /**
  * Kiểm giữa các bộ dữ liệu: tham chiếu tới thứ có thật, chặng liền nhau, Grade hợp chặng, năm sinh–mất và cấp độ chép
@@ -239,13 +238,13 @@ function kiemTraCheo(d, hong) {
 		const goc = `tac-pham.yml: bản ghi "${r.slug}"`;
 		if (co('nha-soan-nhac') && r.tac_gia && !nguoi.has(r.tac_gia))
 			loi.push(`${goc}: tac_gia "${r.tac_gia}" không có trong nha-soan-nhac.yml`);
-		const cd = chang.get(r.chang);
-		if (co('cap-do') && r.chang !== undefined && !cd) loi.push(`${goc}: chặng ${r.chang} không có trong cap-do.yml`);
-		if (cd && r.grade) {
-			const k = khoangGrade(r.grade);
-			const hop = (x) => cd.grade_tu <= x && x <= cd.grade_den;
-			if (!k || !(hop(k[0]) || hop(k[1])))
-				loi.push(`${goc}: grade "${r.grade}" không hợp chặng ${r.chang} (${cd.nhan_grade})`);
+		const chang_r = chang.get(r.chang);
+		if (co('cap-do') && r.chang !== undefined && !chang_r) loi.push(`${goc}: chặng ${r.chang} không có trong cap-do.yml`);
+		const kGrade = r.grade ? khoangGrade(r.grade) : null;
+		if (chang_r && r.grade) {
+			const hop = (x) => chang_r.grade_tu <= x && x <= chang_r.grade_den;
+			if (!kGrade || !(hop(kGrade[0]) || hop(kGrade[1])))
+				loi.push(`${goc}: grade "${r.grade}" không hợp chặng ${r.chang} (${chang_r.nhan_grade})`);
 		}
 		if (co('trang') && trang.get(trangChinh(r))?.tang !== 'tac-pham')
 			loi.push(`${goc}: trang ${trangChinh(r)} không có trong trang.yml với tầng tac-pham`);
@@ -263,12 +262,14 @@ function kiemTraCheo(d, hong) {
 		}
 		// Phần chép nguyên văn từ trang cũ phải khớp trường gốc: chip cấp độ chứa grade, dòng tác giả có tên tác giả
 		const chipCapDo = (r.chip ?? []).find((c) => typeof c === 'object')?.cap_do;
-		if (chipCapDo && r.grade && !chuanGrade(chipCapDo).includes(chuanGrade(r.grade)))
+		const kChip = chipCapDo ? khoangGrade(chipCapDo.split('(')[0]) : null; // phần trong ngoặc là cấp của một đoạn
+		if (chipCapDo && kGrade && String(kChip) !== String(kGrade))
 			loi.push(`${goc}: chip cấp độ "${chipCapDo}" không khớp grade "${r.grade}"`);
 		const dongTacGia = (r.thong_tin ?? []).find(([muc]) => muc === 'Nhà soạn nhạc')?.[1];
 		const tg = nguoi.get(r.tac_gia);
-		if (dongTacGia && tg && ![tg.ten, ...(tg.cach_viet_khac ?? [])].some((t) => dongTacGia.includes(t)))
-			loi.push(`${goc}: dòng "Nhà soạn nhạc" của thong_tin không có tên ${tg.ten} (tac_gia "${r.tac_gia}")`);
+		const dongTen = dongTacGia?.replace(/^Gán cho /, '');
+		if (dongTen && tg && ![tg.ten, ...(tg.cach_viet_khac ?? [])].some((t) => dongTen.startsWith(t)))
+			loi.push(`${goc}: dòng "Nhà soạn nhạc" của thong_tin không mở đầu bằng tên ${tg.ten} (tac_gia "${r.tac_gia}")`);
 		// Năm sinh–mất chép trong bảng thông tin phải khớp nha-soan-nhac.yml
 		for (const [muc, noiDung] of r.thong_tin ?? []) {
 			for (const p of nguoi.values()) {
