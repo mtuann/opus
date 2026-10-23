@@ -1,18 +1,24 @@
 ---
-// Tiêu đề trang của Starlight, thêm nhãn nhóm nội dung phía trên (màu và biểu tượng của nhóm, src/nhom.mjs),
-// để người đọc nhìn là biết mình đang ở mục nào.
+// Tiêu đề trang của Starlight, thêm nhãn nhóm nội dung phía trên (màu và biểu tượng của nhóm, src/nhom.mjs), để người
+// đọc nhìn là biết mình đang ở mục nào, và huy hiệu "Đã kiểm định" phía dưới khi trang đã khóa và hồ sơ có nhận định.
 import { getCollection } from 'astro:content';
 import Default from '@astrojs/starlight/components/PageTitle.astro';
+import { kiemDinh, ngayViet } from '../kiem-dinh.mjs';
 import { nhomCuaTrang, svgNhom } from '../nhom.mjs';
 
+// Đọc lúc build; Vite gói nội dung file vào bản dựng. Chưa có kiem-dinh/ thì cả hai rỗng.
+const KHOA = Object.values(import.meta.glob('/kiem-dinh/khoa.json', { eager: true, import: 'default' }))[0];
+const HO_SO = import.meta.glob('/kiem-dinh/**/*.yml', { eager: true, query: '?raw', import: 'default' });
+
 const { entry } = Astro.locals.starlightRoute;
-// Đường dẫn trang như trong trang.yml và anh-xa.md: theo file nguồn, nên trang mục lục giữ đuôi /index (id của
-// Starlight thì không). Trang không có file nguồn (404 mặc định của Starlight) thì không có nhãn.
+// Đường dẫn trang như trong trang.yml, kiem-dinh/ và anh-xa.md: theo file nguồn, nên trang mục lục giữ đuôi /index (id
+// của Starlight thì không). Trang không có file nguồn (404 mặc định của Starlight) thì không có nhãn hay huy hiệu.
 const trang = entry.filePath?.replace(/^src\/content\/docs\//, '').replace(/\.mdx?$/, '');
 // Tầng của trang (src/data/trang.yml) quyết định vài trang vào Đọc thêm. Đọc cả bộ (Astro giữ sẵn), không dùng
 // getEntry: tra một trang không có bản ghi thì Astro in cảnh báo.
 const tang = new Map((await getCollection('trang')).map((r) => [r.id, r.data.tang]));
 const nhom = trang ? nhomCuaTrang(trang, tang.get(trang)) : undefined;
+const kd = trang ? kiemDinh(trang, KHOA, HO_SO[`/kiem-dinh/${trang}.yml`]) : null;
 ---
 
 {
@@ -24,3 +30,16 @@ const nhom = trang ? nhomCuaTrang(trang, tang.get(trang)) : undefined;
 	)
 }
 <Default />
+{
+	kd && kd.nhanDinh > 0 && (
+		<p
+			class="oz-kiem-dinh"
+			title="Mọi nhận định trên trang đã được đối chiếu với nguồn, qua hai lượt kiểm độc lập và một lần review."
+		>
+			<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+				<path d="M9.6 16.2 5.4 12 4 13.4l5.6 5.6 12-12-1.4-1.4z" />
+			</svg>
+			Đã kiểm định{kd.ngay && ` ngày ${ngayViet(kd.ngay)}`}
+		</p>
+	)
+}

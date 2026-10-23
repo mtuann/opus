@@ -1,0 +1,11 @@
+---
+// Nội dung trang của Starlight, thêm bộ tải thành phần (src/scripts/tai.js) chỉ ở trang có khối cần JavaScript:
+// khuông nhạc (```abc), câu hỏi kiểm tra nhanh (```quiz), khối nghe (::khoi-nghe). Trang khác không tải gì thêm.
+import Default from '@astrojs/starlight/components/MarkdownContent.astro';
+import TaiThanhPhan from './TaiThanhPhan.astro';
+
+const canTai = /^\s*(?:```(?:abc|quiz)\b|::khoi-nghe\b)/m.test(Astro.locals.starlightRoute.entry.body ?? '');
+---
+
+<Default><slot /></Default>
+{canTai && <TaiThanhPhan />}

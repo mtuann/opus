@@ -1,7 +1,10 @@
 // @ts-check
 // Cấu hình site Opus (Astro và Starlight). Phiên bản và lý do: plans/lam-lai/cong-nghe.md.
+import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import { satteri } from '@astrojs/markdown-satteri';
+import { opusMarkdown } from './src/plugins/opus-markdown.mjs';
 
 const site = 'https://mtuann.github.io';
 const base = '/opus';
@@ -24,6 +27,19 @@ export default defineConfig({
 	// Địa chỉ dạng thư mục như site cũ: /opus/piano/gam/
 	trailingSlash: 'always',
 	build: { format: 'directory' },
+	markdown: {
+		// Sätteri, bộ xử lý Markdown mặc định của Astro 7 (plans/lam-lai/cong-nghe.md mục 2), cộng plugin của dự án:
+		// khối ```abc, ```quiz và các chỉ thị ::hop-tac-pham… (cú pháp: AGENTS.md, mục "Khối đặc biệt").
+		processor: satteri({
+			mdastPlugins: [opusMarkdown({ base: `${base}/`, docsDir: fileURLToPath(new URL('./src/content/docs/', import.meta.url)) })],
+			features: {
+				smartPunctuation: false, // giữ nguyên dấu nháy, gạch ngang như chữ của site cũ (Astro mặc định bật)
+				headingAttributes: true, // ## Tiêu đề { #id }: giữ id cũ của tiêu đề
+				definitionList: true,
+				gfm: { footnotes: { label: 'Chú thích', backLabel: 'Quay lại chỗ chú thích {reference}' } },
+			},
+		}),
+	},
 	integrations: [
 		starlight({
 			title: 'Opus',
@@ -34,10 +50,11 @@ export default defineConfig({
 			logo: { light: './src/assets/logo-muc.svg', dark: './src/assets/logo.svg' },
 			favicon: '/favicon.svg',
 			social: [{ icon: 'github', label: 'Mã nguồn trên GitHub', href: 'https://github.com/mtuann/opus' }],
-			customCss: ['./src/styles/fonts.css', './src/styles/opus.css'],
+			customCss: ['./src/styles/fonts.css', './src/styles/opus.css', './src/styles/thanh-phan.css'],
 			components: {
 				Footer: './src/components/Footer.astro',
 				Hero: './src/components/Hero.astro',
+				MarkdownContent: './src/components/MarkdownContent.astro',
 				PageTitle: './src/components/PageTitle.astro',
 			},
 			head: [

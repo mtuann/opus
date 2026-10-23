@@ -3,6 +3,7 @@
 // Dữ liệu sai (YAML hỏng, sai kiểu, trường lạ, trùng id, tham chiếu tới thứ không có) thì ném lỗi, nên build hỏng.
 // Kiểm thử dùng thẳng kiemTra() trên bộ dữ liệu hỏng mẫu trong tests/du-lieu-hong/.
 // Biến môi trường OPUS_DU_LIEU đổi thư mục dữ liệu (mặc định src/data), để thử build với bộ dữ liệu khác.
+import { createHash } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -24,6 +25,18 @@ const duongDan = z.string().regex(/^[a-z0-9-]+(?:\/[a-z0-9-]+)*$/, 'đường d�
 const nam = z.number().int().min(800).max(2100);
 
 export const TANG = ['loi', 'tac-pham', 'tham-chieu', 'khung', 'ngoai-vi'];
+
+/** Loại đoạn của hình cấu trúc (màu của ô): a, b, c (tương phản), dev (phát triển), cad (kết, âm nền), coda, intro, x. */
+export const LOAI_DOAN = ['a', 'b', 'c', 'dev', 'cad', 'coda', 'intro', 'x'];
+
+/** Một sơ đồ các đoạn: mỗi đoạn [nhãn, chú thích nhỏ (có thể rỗng), độ rộng (gần đúng số ô nhịp), loại]. */
+const soDo = z
+	.object({
+		chu_thich: chu,
+		doan: z.array(z.tuple([chu, z.string(), z.number().positive(), z.enum(LOAI_DOAN)])).min(1),
+		ghi_chu: chu.optional(),
+	})
+	.strict();
 
 /** Schema của từng bộ dữ liệu. Trường lạ là lỗi (strict), để gõ sai tên trường không lọt qua. */
 export const schema = {
@@ -99,7 +112,8 @@ export const schema = {
 			goi_y: z.boolean().optional(),
 			chip: z.array(z.union([chu, z.object({ cap_do: chu }).strict()])).optional(),
 			thong_tin: z.array(z.tuple([chu, chu])).optional(),
-			hinh: z.record(z.string(), z.unknown()).optional(),
+			// Hình cấu trúc theo trang: bai-hoc ở trang bài học, nghe ở trang hướng dẫn nghe dùng bản ghi này
+			hinh: z.object({ 'bai-hoc': z.array(soDo).min(1).optional(), nghe: z.array(soDo).min(1).optional() }).strict().optional(),
 			ban_thu: z.array(z.unknown()).optional(),
 			them_ngay: z.iso.date().optional(),
 		})
@@ -260,6 +274,10 @@ function kiemTraCheo(d, hong) {
 			if (kia && kia.cap !== trangChinh(r))
 				loi.push(`${goc}: cap "${r.cap}" có bản ghi riêng "${kia.slug}", nên "${kia.slug}" phải có cap "${trangChinh(r)}"`);
 		}
+		// Hình của loại trang nào thì bản ghi phải có trang loại ấy (trang chính, hay trang cap dùng chung bản ghi)
+		const coTrang = (loai) => r.loai === loai || (r.cap && !theoTrangChinh.has(r.cap) && r.cap.startsWith(loai === 'nghe' ? 'nghe-nhac/' : 'piano/tac-pham/'));
+		for (const loai of Object.keys(r.hinh ?? {}))
+			if (!coTrang(loai)) loi.push(`${goc}: có hinh.${loai} nhưng không có trang ${loai === 'nghe' ? 'hướng dẫn nghe' : 'bài học'} dùng bản ghi này`);
 		// Phần chép nguyên văn từ trang cũ phải khớp trường gốc: chip cấp độ chứa grade, dòng tác giả có tên tác giả
 		const chipCapDo = (r.chip ?? []).find((c) => typeof c === 'object')?.cap_do;
 		const kChip = chipCapDo ? khoangGrade(chipCapDo.split('(')[0]) : null; // phần trong ngoặc là cấp của một đoạn
@@ -293,6 +311,9 @@ function napTatCa(dir) {
 	return daNap.duLieu;
 }
 
+/** Toàn bộ dữ liệu đã qua schema và kiểm chéo, cho plugin Markdown (src/plugins/); dữ liệu sai thì ném lỗi. */
+export const duLieuDaKiem = () => napTatCa(thuMuc());
+
 /** Slug của mọi tác phẩm, cho trường tac_pham ở frontmatter (src/content.config.ts). */
 export function slugTacPham() {
 	return new Set(napTatCa(thuMuc())['tac-pham'].map((r) => r.slug));
@@ -317,6 +338,38 @@ export function boNap(ten) {
 			watcher?.add(path.join(dir, TEP[ten]));
 			// Đang chạy npm run dev mà file dữ liệu hỏng: báo lỗi, giữ dữ liệu cũ đến khi file sửa xong
 			watcher?.on('change', (f) => f === path.join(dir, TEP[ten]) && nap(true).catch((e) => logger.error(e.message)));
+		},
+	};
+}
+
+/** Dấu vết của những gì HTML dựng từ chỉ thị phụ thuộc, ngoài chính trang: dữ liệu, schema, plugin Markdown. */
+function dauVet() {
+	const h = createHash('sha256');
+	for (const tep of Object.values(TEP)) {
+		const f = path.join(thuMuc(), tep);
+		h.update(fs.existsSync(f) ? fs.readFileSync(f) : `không có ${tep}`);
+	}
+	for (const f of ['src/du-lieu.mjs', 'src/plugins/opus-markdown.mjs', 'src/plugins/thanh-phan.mjs'])
+		h.update(fs.readFileSync(path.join(GOC, f)));
+	return h.digest('hex');
+}
+
+/**
+ * Bọc bộ nạp trang (docsLoader của Starlight). Astro giữ HTML đã dựng của trang giữa các lần build và chỉ dựng lại trang
+ * có file đổi; chỉ thị (::hop-tac-pham…) lấy chữ từ src/data/ lúc dựng, nên dữ liệu hay plugin đổi mà trang không đổi
+ * thì trang vẫn mang HTML cũ. Ở đây: dấu vết khác lần trước thì xóa bộ nhớ đệm của trang, dựng lại hết.
+ * Đang chạy npm run dev mà sửa src/data/: khởi động lại npm run dev để chỉ thị cập nhật.
+ */
+export function dungLaiKhiDoi(loader) {
+	return {
+		...loader,
+		load: async (ctx) => {
+			const moi = dauVet();
+			if (ctx.meta.get('opus-du-lieu') !== moi) {
+				ctx.store.clear();
+				ctx.meta.set('opus-du-lieu', moi);
+			}
+			await loader.load(ctx);
 		},
 	};
 }

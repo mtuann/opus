@@ -5,7 +5,7 @@ import { defineCollection } from 'astro:content';
 import { z } from 'astro/zod';
 import { docsLoader, i18nLoader } from '@astrojs/starlight/loaders';
 import { docsSchema, i18nSchema } from '@astrojs/starlight/schema';
-import { boNap, schema, slugTacPham } from './du-lieu.mjs';
+import { boNap, dungLaiKhiDoi, schema, slugTacPham } from './du-lieu.mjs';
 
 // Đọc và kiểm toàn bộ dữ liệu ngay khi nạp cấu hình; sai thì ném lỗi tại đây.
 const tacPham = slugTacPham();
@@ -14,7 +14,8 @@ const duLieu = (ten: keyof typeof schema) => defineCollection({ loader: boNap(te
 
 export const collections = {
 	docs: defineCollection({
-		loader: docsLoader(),
+		// dựng lại mọi trang khi src/data/ hay plugin Markdown đổi (xem dungLaiKhiDoi)
+		loader: dungLaiKhiDoi(docsLoader()),
 		schema: docsSchema({
 			extend: z.object({
 				// Slug bản ghi trong src/data/tac-pham.yml; chỉ trang tác phẩm (bài học, hướng dẫn nghe) có trường này

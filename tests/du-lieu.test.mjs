@@ -7,7 +7,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { parse } from 'yaml';
-import { kiemTra } from '../src/du-lieu.mjs';
+import { dungLaiKhiDoi, kiemTra } from '../src/du-lieu.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 
@@ -31,6 +31,8 @@ test('bộ dữ liệu hỏng mẫu: mỗi lỗi cố ý đều bị bắt', () 
 		'nha-soan-nhac.yml: bản ghi "liszt"', // trường lạ nam_sinh
 		'nha-soan-nhac.yml: bản ghi "Mozart": id:',
 		'tac-pham.yml: bản ghi "fur-elise": chang:',
+		'tac-pham.yml: bản ghi "fur-elise": hinh.bai-hoc.0.doan.1.3:',
+		'tac-pham.yml: bản ghi "bagatelle": có hinh.nghe nhưng không có trang hướng dẫn nghe dùng bản ghi này',
 		'tac-pham.yml: bản ghi "ballade": tac_gia "chopin-sai" không có',
 		'tac-pham.yml: bản ghi "ballade": chặng 2 không có trong cap-do.yml',
 		'tac-pham.yml: bản ghi "ballade": cap "nghe-nhac/khong-co" không có',
@@ -73,6 +75,28 @@ test('build hỏng khi dữ liệu sai (astro sync với OPUS_DU_LIEU=tests/du-l
 	});
 	assert.notEqual(r.status, 0, 'astro sync phải hỏng');
 	assert.match(r.stdout + r.stderr, /Dữ liệu trong tests\/du-lieu-hong sai \(\d+ lỗi\)/);
+});
+
+test('bộ nạp trang xóa HTML đã dựng khi dữ liệu đổi, giữ nguyên khi không đổi (dungLaiKhiDoi, D1.3)', async () => {
+	const tam = fs.mkdtempSync(path.join(os.tmpdir(), 'opus-du-lieu-'));
+	const cu = process.env.OPUS_DU_LIEU;
+	try {
+		fs.cpSync(path.join(ROOT, 'src/data'), tam, { recursive: true });
+		process.env.OPUS_DU_LIEU = tam;
+		let xoa = 0;
+		let nap = 0;
+		const ctx = { meta: new Map(), store: { clear: () => xoa++ } };
+		const loader = dungLaiKhiDoi({ name: 'thu', load: async () => nap++ });
+		await loader.load(ctx); // lần đầu: chưa có dấu vết, dựng hết
+		await loader.load(ctx); // không đổi gì: giữ HTML đã dựng
+		fs.appendFileSync(path.join(tam, 'tac-pham.yml'), '\n# sửa một bản ghi\n');
+		await loader.load(ctx); // dữ liệu đổi: dựng lại hết
+		assert.deepEqual({ xoa, nap }, { xoa: 2, nap: 3 });
+	} finally {
+		if (cu === undefined) delete process.env.OPUS_DU_LIEU;
+		else process.env.OPUS_DU_LIEU = cu;
+		fs.rmSync(tam, { recursive: true, force: true });
+	}
 });
 
 test('mỗi trang trong src/content/docs/ có đúng một tầng trong src/data/trang.yml', () => {

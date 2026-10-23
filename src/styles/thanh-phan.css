@@ -1,0 +1,511 @@
+/* Thành phần trong trang (D1.3): chip, hộp thông tin tác phẩm, khuông nhạc ABC, câu hỏi kiểm tra nhanh, khối nghe,
+   hình cấu trúc, "Học tiếp", huy hiệu "Đã kiểm định". Chuyển từ ../opus-zero/docs/assets/css/opus.css, đổi biến màu
+   của Material sang của Starlight; màu riêng (--oz-*) khai ở src/styles/opus.css. */
+
+/* ---------- Nút, hàng nút, phản hồi (dùng chung cho các công cụ) ---------- */
+/* Starlight cách phần tử liền sau phần tử khác trong bài 1rem (margin-top), kể cả nút trong một hàng, làm các nút
+   lệch nhau: trong hàng của thành phần, khoảng cách do gap lo. */
+.sl-markdown-content :is(.oz-row, .oz-hands, .oz-abc-tools, .oz-chips) > * {
+	margin-top: 0;
+}
+.oz-tool {
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 10px;
+	padding: 1rem 1.1rem;
+	background: var(--oz-card);
+}
+.oz-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	align-items: center;
+	margin: 0.6rem 0;
+}
+.oz-btn {
+	font: inherit;
+	font-size: var(--sl-text-sm);
+	line-height: 1.3;
+	cursor: pointer;
+	padding: 0.45rem 0.8rem;
+	min-width: 3.2rem;
+	border-radius: 8px;
+	border: 1px solid var(--sl-color-gray-4);
+	background: transparent;
+	color: var(--sl-color-white);
+}
+.oz-btn:hover {
+	border-color: var(--oz-accent);
+}
+/* Nút chính và nút đang chọn: nền màu nhấn đậm (sáng: mực; tối: xanh nhạt), chữ màu nền trang; cả hai chế độ từ 9:1 */
+.oz-btn--primary {
+	background: var(--sl-color-accent-high);
+	border-color: transparent;
+	color: var(--sl-color-black);
+}
+.oz-btn--primary:hover {
+	background: color-mix(in srgb, var(--sl-color-accent-high) 85%, var(--sl-color-white));
+}
+.oz-btn.is-correct {
+	border-color: var(--oz-ok);
+	color: var(--oz-ok);
+	font-weight: 700;
+}
+.oz-btn.is-wrong {
+	border-color: var(--oz-bad);
+	color: var(--oz-bad);
+	text-decoration: line-through;
+}
+.oz-btn[disabled] {
+	opacity: 0.6;
+	cursor: default;
+}
+.oz-feedback {
+	min-height: 1.6em;
+	margin: 0.4rem 0;
+	font-size: var(--sl-text-sm);
+}
+.oz-feedback.ok {
+	color: var(--oz-ok);
+}
+.oz-feedback.bad {
+	color: var(--oz-bad);
+}
+.oz-stats {
+	font-size: var(--sl-text-sm);
+	color: var(--sl-color-gray-3);
+}
+.oz-input {
+	flex: 1 1 16rem;
+	min-width: 0;
+	font: inherit;
+	font-size: var(--sl-text-sm);
+	padding: 0.45rem 0.6rem;
+	border: 1px solid var(--sl-color-gray-4);
+	border-radius: 8px;
+	background: var(--sl-color-black);
+	color: var(--sl-color-white);
+}
+/* Màn hình cảm ứng: vùng bấm tối thiểu 44 px */
+@media (pointer: coarse) {
+	.oz-btn {
+		min-height: 44px;
+		min-width: 44px;
+	}
+	.oz-input {
+		min-height: 44px;
+	}
+}
+
+/* ---------- Chip và hộp thông tin tác phẩm ---------- */
+.sl-markdown-content .oz-piece {
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 12px;
+	padding: 0.7rem 0.9rem;
+	background: var(--oz-card);
+}
+.sl-markdown-content .oz-chips {
+	margin: 0;
+	max-width: none;
+}
+.oz-chip {
+	display: inline-block;
+	margin: 0.15rem 0.2rem 0.15rem 0;
+	padding: 0.1rem 0.65rem;
+	border-radius: 999px;
+	font-size: var(--sl-text-sm);
+	background: var(--sl-color-gray-6);
+	color: var(--sl-color-white);
+}
+.oz-chip--level {
+	background: color-mix(in srgb, var(--oz-accent) 24%, transparent);
+	font-weight: 700;
+}
+.sl-markdown-content .oz-piece-info {
+	margin-top: 0.6rem;
+}
+.oz-piece-info > summary {
+	cursor: pointer;
+	font-weight: 700;
+	color: var(--sl-color-text-accent);
+}
+.sl-markdown-content .oz-piece-info table {
+	margin-top: 0.6rem;
+}
+.oz-piece-info th[scope='row'] {
+	white-space: nowrap;
+	vertical-align: top;
+}
+
+/* ---------- Khuông nhạc ABC ---------- */
+.sl-markdown-content .oz-abc {
+	margin-block: 1.4rem;
+}
+.oz-abc-title {
+	margin: 0 0 0.2rem;
+	text-align: center;
+	font-family: var(--oz-heading);
+	font-weight: 600;
+	color: var(--sl-color-gray-2);
+}
+.abc-notation {
+	overflow-x: auto;
+	color: var(--sl-color-white);
+}
+/* Giữ chỗ cho khuông chưa vẽ (tránh xô bố cục): --he là số khuông × số hệ ước lượng lúc build */
+.abc-notation:not([data-rendered]) {
+	min-height: calc(6rem + var(--he, 1) * 4.6rem);
+	border-radius: 8px;
+	background: repeating-linear-gradient(to bottom, transparent 0 0.9rem, var(--sl-color-gray-6) 0.9rem calc(0.9rem + 1px))
+		0 1.5rem / 100% calc(4 * 0.95rem) no-repeat;
+}
+.abc-notation svg {
+	color: inherit;
+}
+.abc-notation .oz-playing,
+.abc-notation .oz-playing path {
+	fill: var(--oz-accent) !important;
+	stroke: var(--oz-accent) !important;
+}
+.abc-audio {
+	max-width: 36rem;
+	margin: 0.4rem 0;
+}
+.oz-abc-tools {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.4rem 0.9rem;
+	font-size: var(--sl-text-sm);
+}
+.oz-abc-tools button {
+	font: inherit;
+	cursor: pointer;
+	padding: 0.25rem 0.75rem;
+	border: 1px solid var(--sl-color-gray-4);
+	border-radius: 999px;
+	background: transparent;
+	color: var(--sl-color-white);
+}
+.oz-abc-tools button:hover {
+	border-color: var(--oz-accent);
+}
+.oz-abc-tools button[aria-pressed='true'] {
+	background: var(--sl-color-accent-high);
+	border-color: var(--sl-color-accent-high);
+	color: var(--sl-color-black);
+}
+.oz-hands {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.25rem;
+}
+.oz-check {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.3rem;
+	cursor: pointer;
+}
+/* Màn hình cảm ứng: vùng bấm từ 44 px (AGENTS.md). Trình phát của abcjs mặc định có nút 28×34 px và thanh tiến độ
+   cao 10 px: nới nút, cho hàng xuống dòng khi hẹp; thanh tiến độ cao 44 px nhưng chỉ hiện dải giữa 20 px. */
+@media (pointer: coarse) {
+	.oz-abc-tools button,
+	.oz-check {
+		min-height: 44px;
+	}
+	.abc-audio .abcjs-inline-audio {
+		flex-wrap: wrap;
+		height: auto;
+		min-height: 48px;
+		padding-block: 2px;
+	}
+	.abc-audio .abcjs-inline-audio .abcjs-btn {
+		width: 44px;
+		height: 44px;
+		padding: 12px 10px;
+	}
+	.abc-audio .abcjs-inline-audio .abcjs-midi-progress-background {
+		height: 44px;
+		min-width: 6rem;
+		border: 12px solid transparent;
+		border-radius: 22px;
+		background-clip: padding-box;
+		box-shadow: inset 0 0 0 2px #ccc;
+	}
+	.abc-audio .abcjs-inline-audio .abcjs-midi-progress-indicator {
+		width: 28px;
+		height: 28px;
+		margin-left: -14px;
+		top: -4px;
+		border-radius: 50%;
+	}
+	.abc-audio .abcjs-inline-audio .abcjs-midi-tempo {
+		min-height: 44px;
+		width: 3.4em;
+		font-size: 16px;
+	}
+	.abc-audio .abcjs-inline-audio .abcjs-tempo-wrapper {
+		font-size: var(--sl-text-xs);
+	}
+}
+/* Chế độ giá nhạc: khuông chiếm cả màn hình */
+.oz-abc.oz-stand {
+	position: fixed;
+	inset: 0;
+	z-index: 50;
+	margin: 0;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	background: var(--sl-color-black);
+	padding: 0.4rem max(1rem, env(safe-area-inset-right)) 3rem max(1rem, env(safe-area-inset-left));
+}
+.oz-abc.oz-stand .oz-abc-tools {
+	order: -2;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	padding: 0.5rem 0;
+	background: var(--sl-color-black);
+	border-bottom: 1px solid var(--sl-color-gray-5);
+}
+.oz-abc.oz-stand .abc-audio {
+	order: -1;
+	max-width: none;
+}
+html.oz-stand-open,
+html.oz-stand-open body {
+	overflow: hidden;
+}
+
+/* ---------- Câu hỏi kiểm tra nhanh ---------- */
+.sl-markdown-content .oz-quiz {
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 10px;
+	padding: 0.8rem 1rem;
+	background: var(--oz-card);
+}
+.sl-markdown-content .oz-quiz-head {
+	margin: 0 0 0.4rem;
+}
+.oz-quiz-q {
+	margin: 0;
+	padding: 0.5rem 0 0;
+	border: 0;
+	border-top: 1px solid var(--sl-color-gray-6);
+}
+.oz-quiz-q legend {
+	padding: 0;
+	float: left;
+	width: 100%;
+	margin-bottom: 0.2rem;
+}
+.oz-quiz-q legend + * {
+	clear: both;
+}
+.sl-markdown-content .oz-quiz-result {
+	font-weight: 700;
+	margin: 0.6rem 0 0;
+}
+
+/* ---------- Khối nghe ---------- */
+.oz-listen.oz-tool .oz-stats {
+	margin: 0.2rem 0;
+}
+.oz-video {
+	position: relative;
+	width: 100%;
+	max-width: 40rem;
+	aspect-ratio: 16 / 9;
+	margin: 0.8rem 0;
+	border-radius: 10px;
+	overflow: hidden;
+	background: #000;
+}
+.oz-video iframe,
+.oz-video .oz-yt {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+.oz-audio,
+.oz-part {
+	display: block;
+	width: 100%;
+	max-width: 40rem;
+	margin: 0.6rem 0;
+}
+.oz-audio[hidden],
+.oz-part[hidden],
+.oz-video[hidden] {
+	display: none;
+}
+.sl-markdown-content td.oz-mark-cell {
+	white-space: nowrap;
+}
+.oz-time,
+.oz-time-add,
+.oz-time-x,
+.oz-ref-time {
+	font-size: var(--sl-text-xs);
+	padding: 0.2rem 0.45rem;
+	min-width: 0;
+}
+.oz-time {
+	font-variant-numeric: tabular-nums;
+	font-weight: 700;
+}
+.oz-time-x {
+	margin-left: 0.2rem;
+	opacity: 0.7;
+}
+@media (pointer: coarse) {
+	.oz-time,
+	.oz-time-add,
+	.oz-time-x,
+	.oz-ref-time {
+		min-width: 44px;
+	}
+}
+.oz-ref-row {
+	margin: 0.1rem 0 0.6rem;
+}
+.oz-ref-toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+	font-size: var(--sl-text-sm);
+	font-weight: 700;
+	cursor: pointer;
+}
+.sl-markdown-content td.oz-mark-cell .oz-ref {
+	display: block;
+	margin-top: 0.3rem;
+	font-size: var(--sl-text-xs);
+	color: var(--sl-color-gray-3);
+}
+.oz-ref-d {
+	margin-left: 0.35rem;
+	font-weight: 700;
+}
+.oz-ref-d.ok {
+	color: var(--oz-ok);
+}
+.oz-ref-d.off {
+	color: var(--oz-warn);
+}
+/* Dòng đang nghe trong bảng mốc */
+.sl-markdown-content tr.oz-now td {
+	background: color-mix(in srgb, var(--oz-accent) 18%, transparent);
+}
+.sl-markdown-content tr.oz-now td:first-child {
+	box-shadow: inset 3px 0 0 var(--oz-accent);
+}
+
+/* ---------- Hình cấu trúc (sơ đồ các đoạn) ---------- */
+.sl-markdown-content .oz-figure {
+	margin-block: 1rem 1.4rem;
+}
+.oz-form-map {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2px;
+	width: 100%;
+}
+/* Starlight đặt khoảng cách trên cho phần tử liền sau phần tử khác trong bài: các ô của sơ đồ thì không */
+.sl-markdown-content .oz-form-map > * {
+	margin-top: 0;
+}
+/* Ô rộng theo trọng số nhưng không hẹp hơn 4,6rem; quá chật thì xuống dòng thay vì bẻ chữ */
+.oz-seg {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 2.9rem;
+	padding: 0.3rem 0.4rem;
+	border-radius: 5px;
+	color: #1b1b1b;
+	font-size: var(--sl-text-xs);
+	line-height: 1.25;
+	text-align: center;
+}
+.oz-seg b {
+	font-size: var(--sl-text-sm);
+	hyphens: auto;
+}
+.oz-seg small {
+	opacity: 0.85;
+}
+.oz-seg.k-a { background: #a9c7e8; }
+.oz-seg.k-b { background: #f1d9a0; }
+.oz-seg.k-c { background: #e9b3a6; }
+.oz-seg.k-dev { background: #c9b6dd; }
+.oz-seg.k-cad { background: #b6dcc1; }
+.oz-seg.k-coda { background: #d6d6d6; }
+.oz-seg.k-intro { background: #e3e3e3; }
+.oz-seg.k-x { background: #ececec; color: #444; }
+.sl-markdown-content .oz-figure figcaption {
+	margin-top: 0.35rem;
+	font-size: var(--sl-text-sm);
+	color: var(--sl-color-gray-3);
+}
+
+/* ---------- Chú thích cuối trang ---------- */
+/* Tách khỏi bài bằng một đường kẻ, chữ nhỏ hơn, như site cũ. Tiêu đề "Chú thích" chỉ dành cho máy đọc màn hình;
+   mục lục bên phải vẫn có dòng "Chú thích" dẫn tới đây. */
+.sl-markdown-content .footnotes {
+	margin-top: 2.5rem;
+	padding-top: 0.75rem;
+	border-top: 1px solid var(--sl-color-hairline);
+	font-size: var(--sl-text-sm);
+}
+
+/* ---------- Học tiếp ---------- */
+.sl-markdown-content .oz-hoc-tiep li + li {
+	margin-top: 0.4rem;
+}
+
+/* ---------- Huy hiệu "Đã kiểm định" ---------- */
+.oz-kiem-dinh {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	margin: 0.6rem 0 0;
+	padding: 0.15rem 0.7rem;
+	border-radius: 999px;
+	font-size: var(--sl-text-sm);
+	font-weight: 700;
+	/* chữ xanh đậm hơn --oz-ok: trên nền nhạt của huy hiệu vẫn đạt 4,5:1 ở cả hai chế độ */
+	color: var(--sl-color-green-high);
+	background: color-mix(in srgb, var(--oz-ok) 12%, transparent);
+}
+.oz-kiem-dinh svg {
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+
+@media print {
+	.oz-abc-tools,
+	.abc-audio,
+	.oz-listen,
+	.oz-feedback,
+	.oz-time-add,
+	.oz-time-x {
+		display: none !important;
+	}
+	.oz-seg,
+	.oz-chip {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+	.oz-abc,
+	.oz-figure,
+	.oz-quiz-q {
+		break-inside: avoid;
+	}
+	.abc-notation svg {
+		color: #000 !important;
+	}
+}

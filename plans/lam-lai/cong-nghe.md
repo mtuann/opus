@@ -16,6 +16,7 @@ Công chuyển sang Astro cao (5 hook, cú pháp Material ở 105 file, thành p
 ## 2. Hai điểm phải thử ở đợt 1
 
 1. **Bộ xử lý Markdown.** Astro 7 mặc định dùng Sätteri (viết bằng Rust) thay cho remark/rehype; Sätteri có plugin riêng (`mdastPlugins`, `hastPlugins`) và không chạy plugin remark/rehype. Muốn giữ remark/rehype thì cài `@astrojs/markdown-remark` và đặt `markdown.processor`. Nhóm Astro nói không định bỏ hỗ trợ unified, nhưng không nói đến bao giờ. Đợt 1 (D1.3, D1.4) thử cả hai cách cho: chỉ thị thành phần, khối ```abc, aside của Starlight, chú thích. Chọn Sätteri nếu làm được hết; không thì dùng unified. Plugin của dự án viết trên cây mdast/hast để chuyển giữa hai bên dễ.
+   **Kết quả (D1.3): chọn Sätteri** (`@astrojs/markdown-satteri` 0.4.5, `satteri` 0.10.5). Chỉ thị thành phần, khối ```abc và ```quiz, aside của Starlight, chú thích cuối trang, id cố định cho tiêu đề và danh sách định nghĩa đều chạy, với một plugin mdast của dự án (`src/plugins/opus-markdown.mjs`). D1.4 thử thêm trên trang thật. Ba điều cần biết khi sửa plugin: Astro tách frontmatter trước khi gọi Sätteri và đưa vào `ctx.data.astro.frontmatter`; plugin của dự án chạy trước plugin của Starlight; Astro giữ HTML đã dựng của trang giữa các lần build, nên `src/content.config.ts` bọc bộ nạp trang bằng `dungLaiKhiDoi` (dựng lại mọi trang khi dữ liệu hay plugin đổi).
 2. **Tìm kiếm tiếng Việt.** Chạy bộ truy vấn của `../opus-zero/tests/search.mjs` trên Pagefind. Chữ "đ" không phải chữ "d" có dấu nên có thể không khớp khi gõ "dan"; nếu vậy thì thêm bước chuẩn hóa lúc build (ví dụ một trường ẩn chứa chữ đã bỏ dấu, chỉ cho Pagefind đọc).
 
 ## 3. Phiên bản và môi trường
@@ -33,6 +34,7 @@ package.json, package-lock.json, tsconfig.json
 src/content.config.ts       # schema frontmatter và năm bộ dữ liệu
 src/du-lieu.mjs             # schema, bộ nạp và kiểm chéo của năm bộ dữ liệu (content.config.ts dùng)
 src/nhom.mjs                # nhóm nội dung của menu: tên, mô tả, biểu tượng; trang nào thuộc nhóm nào
+src/kiem-dinh.mjs           # trạng thái kiểm định của trang (đọc kiem-dinh/), cho huy hiệu "Đã kiểm định"
 src/content/docs/           # trang; cùng đường dẫn với ../opus-zero/docs/
 src/data/                   # cap-do.yml, tac-pham.yml, nha-soan-nhac.yml, thuat-ngu.yml, trang.yml
 src/components/             # thành phần Astro

@@ -27,6 +27,7 @@ npm test          # kiểm thử trên dist/: chạy sau npm run build
 - Kiểm thử ở `tests/*.test.mjs`, chạy bằng trình kiểm thử có sẵn của Node (`node --test`), không cần gói thêm. Thêm kiểm thử thì thêm file `tests/<tên>.test.mjs`.
 - `npm run build:xem` (bản xem, thêm trang chưa khóa) có từ D1.6.
 - `tools/` dùng Python 3.12: `python3 -m pip install -r requirements.txt`.
+- Chỉ thị trong trang (`::hop-tac-pham`…) lấy chữ từ `src/data/` lúc dựng trang. `npm run build` tự dựng lại mọi trang khi dữ liệu hay plugin Markdown đổi (`dungLaiKhiDoi` trong `src/du-lieu.mjs`); đang chạy `npm run dev` mà sửa `src/data/` thì khởi động lại `npm run dev` để thấy thay đổi.
 
 ## Dữ liệu
 
@@ -51,4 +52,52 @@ Chủ repo yêu cầu (23/10/2026): site gọn, thân thiện. Điều gì giả
 
 ## Mẫu trang và khối đặc biệt
 
-Chốt ở D1.3; trước đó tra `../opus-zero/AGENTS.md`.
+Chốt ở D1.3. Mọi trang là Markdown trong `src/content/docs/<đường dẫn>.md`. Tiêu đề trang ghi ở frontmatter `title`; Starlight tự đặt nó làm H1, nên thân trang không có dòng `# …`. Nhãn nhóm phía trên tiêu đề và huy hiệu "Đã kiểm định" phía dưới hiện tự động (`src/components/PageTitle.astro`), không ghi gì trong trang.
+
+### Bài học tác phẩm (`piano/tac-pham/<slug>.md`)
+
+```markdown
+---
+title: "Beethoven: Für Elise, WoO 59"
+description: Một câu tóm tắt cho máy tìm kiếm và khi chia sẻ link.
+tac_pham: fur-elise
+---
+
+Một hai câu mở đầu.
+
+::hop-tac-pham
+
+## Vì sao nên học bài này
+```
+
+Thứ tự các mục như mẫu bài học ở `../opus-zero/AGENTS.md` ("Mẫu trang"), với các chỗ đổi sau:
+
+- Hàng chip và hộp thông tin: `::hop-tac-pham`, dựng từ `chip` và `thong_tin` của bản ghi. Không viết tay.
+- Cuối mục `## Nghe trước khi tập`: `::khoi-nghe`; bảng `## Theo dõi khi nghe` ngay sau, cột đầu mỗi dòng ghi `…`.
+- Đầu mục `## Cấu trúc`: `::hinh-cau-truc`.
+- Mục `## Học tiếp`: `::hoc-tiep` (bài cùng chặng, bài chặng sau, trang nghe kèm, sinh từ dữ liệu); có thể thêm vài gạch đầu dòng viết tay ngay sau.
+
+### Hướng dẫn nghe (`nghe-nhac/<slug>.md`)
+
+Frontmatter có `tac_pham`. Thứ tự các mục như mẫu ở `../opus-zero/AGENTS.md`. Bảng `| Mục | Thông tin |` đầu trang vẫn viết trong trang. Mục `## Sơ đồ cấu trúc` dùng `::hinh-cau-truc`; mục `## Nghe kèm bản thu` dùng `::khoi-nghe`, bảng `## Theo dõi khi nghe` ngay sau.
+
+### Khối đặc biệt
+
+| Khối | Cách viết | Dựng thành |
+|---|---|---|
+| Khuông nhạc | Khối ` ```abc ` theo "Quy ước ABC" của `../opus-zero/AGENTS.md`; dòng `T:` ở phần đầu thành tiêu đề | Khuông và trình phát (abcjs 6.7.1 trong `public/vendor/`): tốc độ, lặp, nghe từng tay, gõ nhịp, chế độ giá nhạc. Vẽ khi khối tới gần màn hình; trước khi in thì vẽ hết |
+| Câu hỏi kiểm tra nhanh | Khối ` ```quiz `: dòng `? câu hỏi`, `+ đáp án đúng`, `- đáp án sai`, `> giải thích` | Câu hỏi bấm được, thứ tự lựa chọn trộn mỗi lần. Thiếu đáp án đúng hay có dòng lạ thì build hỏng |
+| Hộp thông tin tác phẩm | `::hop-tac-pham` | Chip (giọng · nhịp, tốc độ, cấp độ, hình thức) và bảng "Thông tin tác phẩm và bản nhạc nên dùng" thu gọn |
+| Hình cấu trúc | `::hinh-cau-truc` | Sơ đồ các đoạn từ `hinh` của bản ghi: `hinh.bai-hoc` ở trang bài học, `hinh.nghe` ở hướng dẫn nghe |
+| Khối nghe | `::khoi-nghe` | Trình nghe kèm bản thu; người học bấm "Ghi mốc" ngay trong bảng `## Theo dõi khi nghe`. Bản thu gợi ý lấy từ `ban_thu` của bản ghi (cùng dạng `data-rec` của site cũ; D1.4 chuyển); không có thì người học tự dán link hay chọn file |
+| Học tiếp | `::hoc-tiep` | Danh sách bài nên học tiếp, sinh từ dữ liệu |
+| Ghi chú, mẹo, chú ý | `:::note`, `:::tip`, `:::caution`, `:::danger`, tiêu đề tùy chọn: `:::tip[Chưa sẵn sàng?]` … `:::` | Aside của Starlight |
+| Thu gọn | `<details>`, `<summary>…</summary>`, một dòng trống, nội dung Markdown, một dòng trống, `</details>` | Khối bấm để mở |
+| Chú thích cuối trang | `chữ[^1]` … `[^1]: Chú thích.` | Danh sách cuối trang, tách bằng một đường kẻ |
+| Id cố định cho tiêu đề | `## Tiêu đề { #id }` | Tiêu đề có id đã chọn (giữ id cũ để link `#mục` cũ còn chạy) |
+| Danh sách định nghĩa | Dòng thuật ngữ, rồi dòng `: định nghĩa` | `<dl>` |
+
+- Chỉ thị `::…` đứng một mình trên một dòng, không có chữ hay thuộc tính. Ba chỉ thị `::hop-tac-pham`, `::hinh-cau-truc`, `::hoc-tiep` cần `tac_pham` ở frontmatter; `::hinh-cau-truc` chỉ dùng ở trang bài học hay hướng dẫn nghe, và bản ghi phải có hình cho loại trang đó. Sai thì build hỏng, lỗi ghi tên file.
+- Plugin dựng các khối: `src/plugins/opus-markdown.mjs` (đọc trang) và `src/plugins/thanh-phan.mjs` (dựng HTML). JavaScript của khối nằm ở `src/scripts/` và chỉ tải ở trang có khuông nhạc, câu hỏi hay khối nghe (`src/components/MarkdownContent.astro`). CSS: `src/styles/thanh-phan.css`.
+- Tiến độ của người học (bài đã làm hết câu hỏi, mốc nghe) lưu trong trình duyệt ở khóa `opus-zero:v1` như site cũ, nên dữ liệu đã lưu ở site cũ vẫn đọc được.
+- Link nội bộ: chốt ở D1.4.

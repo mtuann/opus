@@ -4,11 +4,13 @@
 Chạy từ thư mục gốc của repo:  python3 tools/du_lieu/tach.py [--ghi-de] > /tmp/tach.md
 Ghi src/data/cap-do.yml, tac-pham.yml, nha-soan-nhac.yml, thuat-ngu.yml, trang.yml; in ra (Markdown) các chỗ site cũ
 tự mâu thuẫn và các chỗ script không tự quyết, để chép vào báo cáo. Chỉ đọc ../opus-zero/ (file và lịch sử git).
+Trường hinh của tac-pham.yml (sơ đồ các đoạn, từ ../opus-zero/tools/figures.py) thêm ở việc D1.3.
 
 src/data/ đã có dữ liệu thì script từ chối ghi, trừ khi có cờ --ghi-de. Chỉ ghi đè trước khi dữ liệu được kiểm định;
 từ đợt 2, src/data/ sửa tay theo hồ sơ kiểm định.
 Cần PyYAML (requirements.txt).
 """
+import ast
 import collections
 import importlib.util
 import pathlib
@@ -77,10 +79,10 @@ Dumper.add_representer(list, _seq)
 Dumper.add_representer(dict, _map)
 
 
-def ghi(ten, ban_ghi, commit):
+def ghi(ten, ban_ghi, commit, them=""):
     OUT.mkdir(parents=True, exist_ok=True)
     text = yaml.dump(ban_ghi, Dumper=Dumper, allow_unicode=True, sort_keys=False, width=1_000_000)
-    (OUT / ten).write_text(HEAD.format(commit=commit) + "\n" + text, encoding="utf-8")
+    (OUT / ten).write_text(HEAD.format(commit=commit) + them + "\n" + text, encoding="utf-8")
 
 
 # ---------- cap-do.yml: 7 chặng ----------
@@ -457,6 +459,74 @@ def tac_pham(nguoi):
     return recs
 
 
+# ---------- hinh: sơ đồ các đoạn của tác phẩm (form_map trong ../opus-zero/tools/figures.py), việc D1.3 ----------
+def so_do_hinh():
+    """Tên hình (p-…, g-…) -> danh sách sơ đồ {chu_thich, doan, ghi_chu}. Đọc mã cũ bằng ast, không chạy nó."""
+    cay = ast.parse((CU / "tools" / "figures.py").read_text(encoding="utf-8"))
+
+    def cac_form_map(nut):
+        """Các lời gọi form_map(...) trong một biểu thức: form_map(...) hay "".join([form_map(...), ...])."""
+        if isinstance(nut, ast.Call) and getattr(nut.func, "id", None) == "form_map":
+            return [nut]
+        if isinstance(nut, ast.Call) and isinstance(nut.func, ast.Attribute) and nut.func.attr == "join":
+            ds = nut.args[0]
+            if isinstance(ds, (ast.List, ast.Tuple)):
+                out = []
+                for e in ds.elts:
+                    r = cac_form_map(e)
+                    if r is None:
+                        return None
+                    out += r
+                return out
+        return None
+
+    hinh = {}
+    for d in (n for n in ast.walk(cay) if isinstance(n, ast.Dict)):
+        for k, v in zip(d.keys, d.values):
+            if not (isinstance(k, ast.Constant) and isinstance(k.value, str) and re.match(r"[pg]-", k.value)):
+                continue
+            goi = cac_form_map(v)
+            if goi is None:
+                bao["Hình: không đọc được"].append(f"`{k.value}`: không phải form_map")
+                continue
+            so_do = []
+            for g in goi:
+                chu_thich, doan, *ghi_chu = [ast.literal_eval(a) for a in g.args]
+                x = {"chu_thich": chu_thich, "doan": [list(o) for o in doan]}
+                if ghi_chu and ghi_chu[0]:
+                    x["ghi_chu"] = ghi_chu[0]
+                so_do.append(x)
+            hinh[k.value] = so_do
+    return hinh
+
+
+def them_hinh(recs):
+    """Thêm trường hinh: sơ đồ ở trang bài học (khóa bai-hoc) và ở trang hướng dẫn nghe (khóa nghe) của bản ghi.
+    Hình thuộc trang chứa vùng <!-- fig:… --> của nó, kể cả khi tên hình mở đầu bằng g- mà nằm ở trang bài học."""
+    hinh = so_do_hinh()
+    da_dung = set()
+    for r in recs:
+        trang = {r["loai"]: ("piano/tac-pham/" if r["loai"] == "bai-hoc" else "nghe-nhac/") + r["slug"]}
+        if r.get("cap") in CUNG_TAC_PHAM.values():  # hướng dẫn nghe dùng chung bản ghi của bài học
+            trang["nghe"] = r["cap"]
+        h = {}
+        for loai, rel in trang.items():
+            ten = re.findall(r"<!-- fig:([pg]-[a-z0-9-]+) -->", doc(rel + ".md"))
+            thieu = [t for t in ten if t not in hinh]
+            if thieu:
+                bao["Hình: trang dùng hình không có trong figures.py"].append(f"`{rel}`: {', '.join(thieu)}")
+            ds = [x for t in ten if t in hinh for x in hinh[t]]
+            da_dung.update(ten)
+            if ds:
+                h[loai] = ds
+        if h:
+            r["hinh"] = h
+    thua = sorted(set(hinh) - da_dung)
+    if thua:
+        bao["Hình: có trong figures.py nhưng không trang tác phẩm nào dùng"].append(", ".join(f"`{t}`" for t in thua))
+    return recs
+
+
 def main():
     if any((OUT / f).exists() for f in TEP) and "--ghi-de" not in sys.argv:
         sys.exit("src/data/ đã có dữ liệu. Chỉ ghi đè trước khi dữ liệu được kiểm định: chạy lại với --ghi-de.")
@@ -466,7 +536,8 @@ def main():
     ghi("thuat-ngu.yml", thuat_ngu(), commit)
     nguoi = nha_soan_nhac()
     ghi("nha-soan-nhac.yml", nguoi, commit)
-    ghi("tac-pham.yml", tac_pham(nguoi), commit)
+    ghi("tac-pham.yml", them_hinh(tac_pham(nguoi)), commit,
+        "# Trường hinh thêm ở D1.3, từ form_map trong ../opus-zero/tools/figures.py.\n")
     for muc, dong in bao.items():
         print(f"### {muc}\n")
         for d in dong:
