@@ -58,6 +58,7 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'Mã nguồn trên GitHub', href: 'https://github.com/mtuann/opus' }],
 			customCss: ['./src/styles/fonts.css', './src/styles/opus.css', './src/styles/thanh-phan.css'],
 			components: {
+				Banner: './src/components/Banner.astro',
 				Footer: './src/components/Footer.astro',
 				Hero: './src/components/Hero.astro',
 				MarkdownContent: './src/components/MarkdownContent.astro',

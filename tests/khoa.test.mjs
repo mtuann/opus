@@ -1,0 +1,181 @@
+// Kiểm thử khóa (D1.6): mã băm (chuẩn hóa nguồn, JSON của bản ghi), mọi mục trong kiem-dinh/khoa.json còn khớp và có hồ sơ
+// đủ, công cụ tools/khoa.mjs (mẫu, khóa, tính, mở, xuất) trên một bản chép nhỏ, lọc trang theo bản build, và trên bản build:
+// trang đã khóa không có dải "Chưa kiểm định" hay ô "chưa chuyển" (hình, công cụ chưa có thành phần), trang chưa khóa (chỉ
+// ở bản xem) có dải.
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import { parse } from 'yaml';
+import { locTheoBan } from '../src/ban-build.mjs';
+import { chuanHoaTrang, docKhoa, jsonChuan, kiemKhoa, maBamBanGhi, maBamTrang } from '../src/khoa.mjs';
+import { lenh, loiHoSo } from '../tools/khoa.mjs';
+
+const ROOT = path.resolve(import.meta.dirname, '..');
+const DIST = path.join(ROOT, 'dist');
+
+test('mã băm của trang không đổi theo kiểu xuống dòng, khoảng trắng cuối dòng, số dòng trống cuối file', () => {
+	const goc = '---\ntitle: A\n---\n\nChữ.\n';
+	assert.equal(chuanHoaTrang('---\r\ntitle: A  \r\n---\r\n\r\nChữ.\t\r\n\r\n\r\n'), goc);
+	assert.equal(maBamTrang(goc), maBamTrang('---\ntitle: A\n---\n\nChữ.'));
+	assert.notEqual(maBamTrang(goc), maBamTrang(goc.replace('Chữ.', 'Chữ!')));
+	assert.match(maBamTrang(goc), /^sha256:[0-9a-f]{64}$/);
+});
+
+test('mã băm của bản ghi không đổi theo thứ tự khóa, ở mọi cấp', () => {
+	assert.equal(jsonChuan({ b: 1, a: { d: [2, { y: 1, x: 2 }], c: 'ê' } }), '{"a":{"c":"ê","d":[2,{"x":2,"y":1}]},"b":1}');
+	assert.equal(maBamBanGhi({ slug: 'x', ten: 'A' }), maBamBanGhi({ ten: 'A', slug: 'x' }));
+	assert.notEqual(maBamBanGhi({ slug: 'x', ten: 'A' }), maBamBanGhi({ slug: 'x', ten: 'B' }));
+});
+
+test('mọi mục trong kiem-dinh/khoa.json còn khớp mã băm và có hồ sơ đủ', () => {
+	assert.deepEqual(kiemKhoa(), []);
+	const { trang, ban_ghi } = docKhoa();
+	assert.ok('index' in trang && '404' in trang, 'trang chủ tạm và trang 404 phải được khóa (D1.6)');
+	for (const muc of [...Object.keys(trang), ...Object.keys(ban_ghi).map((k) => `du-lieu/${k}`)]) {
+		const f = path.join(ROOT, 'kiem-dinh', `${muc}.yml`);
+		assert.ok(fs.existsSync(f), `${muc}: thiếu hồ sơ kiem-dinh/${muc}.yml`);
+		const hs = parse(fs.readFileSync(f, 'utf8'));
+		assert.deepEqual(loiHoSo(hs, muc, ROOT), [], `hồ sơ của ${muc} chưa đủ`);
+		assert.equal(hs.lan.at(-1).ma_bam, (muc.startsWith('du-lieu/') ? ban_ghi[muc.slice(8)] : trang[muc]), `${muc}: lần cuối trong hồ sơ phải ghi mã băm đang khóa`);
+	}
+});
+
+test('công cụ khóa trên bản chép nhỏ: mẫu, khóa (đòi hồ sơ đủ), tính, mở khóa, khóa lại, xuất nhận định', () => {
+	const goc = fs.mkdtempSync(path.join(os.tmpdir(), 'opus-khoa-'));
+	try {
+		const ghi = (f, chu) => {
+			fs.mkdirSync(path.dirname(path.join(goc, f)), { recursive: true });
+			fs.writeFileSync(path.join(goc, f), chu);
+		};
+		ghi('src/content/docs/nhac-ly/a.md', '---\ntitle: A\n---\n\nChữ.\n\n```abc\nX:1\nK:C\nC|\n```\n');
+		ghi('src/data/trang.yml', '- id: nhac-ly/a\n  tang: loi\n');
+		ghi('src/data/tac-pham.yml', '- slug: x\n  loai: nghe\n  ten: X\n');
+		ghi('plans/lam-lai/anh-xa.md', '### D9-L1 (1 trang)\n\n| Trang cũ | Tầng |\n|---|---|\n| `nhac-ly/a` | lõi |\n\n### D9-L2 (1 trang)\n');
+		const chay = (...ts) => lenh([...ts, '--goc', goc], ROOT, () => {});
+		const doc = (f) => parse(fs.readFileSync(path.join(goc, f), 'utf8'));
+		const khoaJson = () => doc('kiem-dinh/khoa.json');
+		const fHoSo = path.join(goc, 'kiem-dinh/nhac-ly/a.yml');
+		/** Sửa hồ sơ: thay chuỗi hay biểu thức `cu` bằng `moi`. */
+		const sua = (f, ...cap) => {
+			let chu = fs.readFileSync(f, 'utf8');
+			for (let i = 0; i < cap.length; i += 2) chu = chu.replace(cap[i], cap[i + 1]);
+			fs.writeFileSync(f, chu);
+		};
+		const NGUOI = [/luot_1: null\n(\s+)luot_2: null\n(\s+)review: null\n(\s+)kiem_mau: null/, 'luot_1: agent A\n$1luot_2: agent B\n$2review: Claude\n$3kiem_mau: "chủ repo, 1/1"'];
+
+		chay('mau', 'nhac-ly/a');
+		const hs = parse(fs.readFileSync(fHoSo, 'utf8'));
+		assert.equal(hs.tang, 'loi');
+		assert.equal(hs.khuong_nhac.length, 1, 'mỗi khối abc một mục khuong_nhac');
+		assert.throws(() => chay('mau', 'nhac-ly/a'), /đã có/);
+		assert.throws(() => chay('khoa', 'nhac-ly/a'), /chưa đủ để khóa[\s\S]*thiếu nguoi\.luot_1[\s\S]*khuông nhạc khối 1: ket_qua/);
+
+		// điền hồ sơ: chỗ đã sửa thiếu ghi chú, nhận định chưa qua lượt 2, lượt 2 "khong-chac" chưa giải quyết thì bị chặn
+		const nhanDinh = (...ds) => sua(fHoSo, /nhan_dinh: \[\]|nhan_dinh:\n(  - .*\n?)+/, `nhan_dinh:\n${ds.map((d) => `  - { id: ${d}, loai: dinh-nghia, nguon: [s1] }`).join('\n')}\n`);
+		sua(fHoSo, 'nguon: []', 'nguon:\n  - { id: s1, bac: 2, ten: Sách A }', /loai: null\n(\s+)kiem: \[\]\n(\s+)ket_qua: null/, 'loai: vi-du-soan\n$1kiem: [cu-phap]\n$2ket_qua: dung', ...NGUOI);
+		nhanDinh('n1, cau: Câu một., luot_2: dung, ket_qua: dung', 'n2, cau: Câu hai., luot_2: sai, ket_qua: da-sua');
+		assert.throws(() => chay('khoa', 'nhac-ly/a'), /n2: da-sua cần ghi_chu/);
+		nhanDinh('n1, cau: Câu một., ket_qua: dung');
+		assert.throws(() => chay('khoa', 'nhac-ly/a'), /n1: chưa có kết quả lượt 2/);
+		nhanDinh('n1, cau: Câu một., luot_2: khong-chac, ket_qua: dung');
+		assert.throws(() => chay('khoa', 'nhac-ly/a'), /n1: lượt 2 cho "khong-chac" mà kết quả "dung": ghi_chu/);
+		nhanDinh('n1, cau: Câu một., luot_2: dung, ket_qua: dung');
+		chay('khoa', 'nhac-ly/a');
+		const ma = khoaJson().trang['nhac-ly/a'];
+		assert.match(ma, /^sha256:/);
+		assert.deepEqual(parse(fs.readFileSync(fHoSo, 'utf8')).lan.map((l) => l.ma_bam), [ma]);
+		assert.equal(chay('tinh'), 0);
+		assert.throws(() => chay('khoa', 'nhac-ly/a'), /đã có mã băm[\s\S]*mo nhac-ly\/a/);
+
+		// sửa trang đã khóa: tính ra lệch; mở khóa gỡ khỏi khoa.json, ghi lý do, thêm lần mới để điền; điền rồi khóa lại
+		fs.appendFileSync(path.join(goc, 'src/content/docs/nhac-ly/a.md'), '\nThêm.\n');
+		assert.equal(chay('tinh'), 1);
+		chay('mo', 'nhac-ly/a', '--ly-do', 'Có lỗi được báo');
+		assert.deepEqual(khoaJson().trang, {});
+		const moRa = parse(fs.readFileSync(fHoSo, 'utf8'));
+		assert.equal(moRa.mo_khoa[0].ly_do, 'Có lỗi được báo');
+		assert.deepEqual(moRa.lan.map((l) => [l.so, l.ma_bam]), [[1, ma], [2, null]]);
+		assert.throws(() => chay('khoa', 'nhac-ly/a'), /thiếu nguoi\.review/);
+		sua(fHoSo, ...NGUOI);
+		chay('khoa', 'nhac-ly/a');
+		const lan = parse(fs.readFileSync(fHoSo, 'utf8')).lan;
+		assert.equal(lan.length, 2);
+		assert.equal(lan[1].ma_bam, khoaJson().trang['nhac-ly/a']);
+		assert.notEqual(lan[1].ma_bam, ma);
+
+		// xuất danh sách nhận định cho lượt 2: không nguồn, không kết quả; theo lô thì ghi vào báo cáo của lô; --mau: kèm nguồn
+		chay('xuat', 'nhac-ly/a', '--ra', 'xuat.yml');
+		assert.deepEqual(doc('xuat.yml'), [{ trang: 'nhac-ly/a', id: 'n1', cau: 'Câu một.', loai: 'dinh-nghia' }]);
+		chay('xuat', 'D9-L1');
+		assert.deepEqual(doc('plans/lam-lai/bao-cao/d9-l1-nhan-dinh.yml'), doc('xuat.yml'));
+		chay('xuat', 'd9-l1', '--mau', '5');
+		const mau = doc('plans/lam-lai/bao-cao/d9-l1-kiem-mau.yml');
+		assert.equal(mau[0].nguon[0].ten, 'Sách A');
+		assert.equal(mau[0].ket_qua_luot_1, 'dung');
+		assert.throws(() => chay('xuat', 'D9-L3'), /không có lô D9-L3/);
+
+		// bản ghi dữ liệu: hồ sơ mẫu, khóa theo bản ghi; bản ghi không có thì báo lỗi
+		assert.throws(() => chay('mau', 'du-lieu/tac-pham/khong-co'), /không có bản ghi tac-pham\/khong-co/);
+		chay('mau', 'du-lieu/tac-pham/x');
+		const fBanGhi = path.join(goc, 'kiem-dinh/du-lieu/tac-pham/x.yml');
+		assert.equal(parse(fs.readFileSync(fBanGhi, 'utf8')).ban_ghi, 'tac-pham/x');
+		sua(fBanGhi, ...NGUOI);
+		chay('khoa', 'du-lieu/tac-pham/x');
+		assert.match(khoaJson().ban_ghi['tac-pham/x'], /^sha256:/);
+		assert.equal(chay('tinh'), 0);
+
+		// build hỏng khi mục đã khóa đổi hay mất (kiemKhoa; src/content.config.ts gọi lúc nạp cấu hình)
+		assert.deepEqual(kiemKhoa(goc), []);
+		sua(path.join(goc, 'src/data/tac-pham.yml'), 'ten: X', 'ten: Y');
+		fs.rmSync(path.join(goc, 'src/content/docs/nhac-ly/a.md'));
+		const loi = kiemKhoa(goc);
+		assert.equal(loi.length, 2);
+		assert.match(loi[0], /trang nhac-ly\/a đã khóa nhưng không còn file src\/content\/docs\/nhac-ly\/a\.md/);
+		assert.match(loi[1], /bản ghi tac-pham\/x đã khóa mà đã đổi[\s\S]*node tools\/khoa\.mjs mo du-lieu\/tac-pham\/x/);
+	} finally {
+		fs.rmSync(goc, { recursive: true, force: true });
+	}
+});
+
+test('bản thật bỏ trang chưa khóa khỏi bộ docs; bản xem giữ mọi trang', async () => {
+	const tao = () => {
+		const muc = new Map([
+			['index', { filePath: 'src/content/docs/index.md' }],
+			['nhac-ly/x', { filePath: 'src/content/docs/nhac-ly/x.md' }],
+		]);
+		return { store: { entries: () => [...muc], delete: (id) => muc.delete(id) }, muc };
+	};
+	const cu = process.env.OPUS_BAN;
+	try {
+		delete process.env.OPUS_BAN;
+		const that = tao();
+		await locTheoBan({ name: 'thu', load: async () => {} }).load(that);
+		assert.deepEqual([...that.muc.keys()], ['index'], 'bản thật chỉ giữ trang đã khóa');
+		process.env.OPUS_BAN = 'xem';
+		const xem = tao();
+		await locTheoBan({ name: 'thu', load: async () => {} }).load(xem);
+		assert.deepEqual([...xem.muc.keys()], ['index', 'nhac-ly/x']);
+	} finally {
+		if (cu === undefined) delete process.env.OPUS_BAN;
+		else process.env.OPUS_BAN = cu;
+	}
+});
+
+test('bản build: trang đã khóa không có dải "Chưa kiểm định" hay ô "chưa chuyển"; trang chưa khóa có dải', () => {
+	if (!fs.existsSync(path.join(DIST, 'index.html'))) throw new Error('Chưa có dist/: chạy `npm run build` trước `npm test`.');
+	const khoa = docKhoa().trang;
+	const loi = [];
+	for (const f of fs.readdirSync(path.join(ROOT, 'src/content/docs'), { recursive: true }).filter((x) => /\.mdx?$/.test(x))) {
+		const t = f.replace(/\\/g, '/').replace(/\.mdx?$/, '');
+		const html = path.join(DIST, t === '404' ? '404.html' : path.join(t === 'index' ? '' : t.replace(/\/index$/, ''), 'index.html'));
+		if (!fs.existsSync(html)) continue;
+		const noiDung = fs.readFileSync(html, 'utf8');
+		const coDai = noiDung.includes('class="oz-chua-kiem-dinh"');
+		if (t in khoa && coDai) loi.push(`${t}: đã khóa mà có dải "Chưa kiểm định"`);
+		if (t in khoa && noiDung.includes('class="oz-chua-co"')) loi.push(`${t}: đã khóa mà có hình hay công cụ "chưa chuyển"`);
+		if (!(t in khoa) && !coDai) loi.push(`${t}: chưa khóa mà không có dải "Chưa kiểm định" (bản thật không được có trang này)`);
+	}
+	assert.deepEqual(loi, []);
+});

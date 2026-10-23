@@ -10,6 +10,7 @@ import { fileURLToPath } from 'node:url';
 import { parse } from 'yaml';
 import { z } from 'astro/zod';
 import { trangTrongBan } from './ban-build.mjs';
+import { ban, docKhoa } from './khoa.mjs';
 
 /** Tên bộ dữ liệu -> file trong thư mục dữ liệu. */
 export const TEP = {
@@ -368,18 +369,19 @@ export function boNap(ten) {
 }
 
 /**
- * File mã mà HTML đã dựng của trang phụ thuộc: schema, danh sách trang trong bản build (src/ban-build.mjs) và mọi
- * plugin trong src/plugins/ (thêm plugin thì tự tính).
+ * File mã mà HTML đã dựng của trang phụ thuộc: schema, bản build và khóa (src/khoa.mjs), danh sách trang trong bản
+ * build (src/ban-build.mjs) và mọi plugin trong src/plugins/ (thêm plugin thì tự tính).
  */
 export const tepDauVet = () => [
 	'src/du-lieu.mjs',
 	'src/ban-build.mjs',
+	'src/khoa.mjs',
 	...fs.readdirSync(path.join(GOC, 'src/plugins')).sort().map((f) => `src/plugins/${f}`),
 ];
 
 /**
- * Dấu vết của những gì HTML đã dựng của trang phụ thuộc, ngoài chính trang: dữ liệu, các file ở tepDauVet(), và danh
- * sách trang trong bản build.
+ * Dấu vết của những gì HTML đã dựng của trang phụ thuộc, ngoài chính trang: dữ liệu, các file ở tepDauVet(), bản build
+ * (thật hay xem), khóa và danh sách trang trong bản build.
  */
 function dauVet() {
 	const h = createHash('sha256');
@@ -388,7 +390,10 @@ function dauVet() {
 		h.update(fs.existsSync(f) ? fs.readFileSync(f) : `không có ${tep}`);
 	}
 	for (const f of tepDauVet()) h.update(fs.readFileSync(path.join(GOC, f)));
-	// danh sách trang trong bản build: thêm trang thì link "sắp có" ở trang khác thành link (src/plugins/sap-co.mjs)
+	// bản build (thật hay xem), khóa và danh sách trang trong bản build: thêm hay khóa trang thì link "sắp có" ở trang khác
+	// thành link (src/plugins/sap-co.mjs)
+	h.update(ban());
+	h.update(JSON.stringify(docKhoa()));
 	h.update(trangTrongBan().join('\n'));
 	return h.digest('hex');
 }

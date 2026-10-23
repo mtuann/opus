@@ -1,0 +1,21 @@
+---
+// Dải trên cùng của trang. Starlight hiện `banner` của frontmatter; ở bản xem, trang chưa khóa có thêm dải
+// "Chưa kiểm định" (D1.6). Bản thật không dựng trang chưa khóa (src/ban-build.mjs), nên dải này không lên site.
+import Default from '@astrojs/starlight/components/Banner.astro';
+import { trangCuaMuc } from '../ban-build.mjs';
+import { ban } from '../khoa.mjs';
+
+// Đọc lúc build; Vite gói nội dung file vào bản dựng. Chưa có kiem-dinh/khoa.json thì mọi trang là chưa khóa.
+const KHOA = Object.values(import.meta.glob('/kiem-dinh/khoa.json', { eager: true, import: 'default' }))[0];
+const trang = trangCuaMuc(Astro.locals.starlightRoute.entry);
+const chuaKhoa = ban() === 'xem' && trang && !KHOA?.trang?.[trang];
+---
+
+{
+	chuaKhoa && (
+		<p class="oz-chua-kiem-dinh" role="note" data-pagefind-ignore>
+			<strong>Chưa kiểm định.</strong> Trang này chỉ có ở bản xem, chưa lên site.
+		</p>
+	)
+}
+<Default />

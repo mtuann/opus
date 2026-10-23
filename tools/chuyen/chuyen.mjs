@@ -10,6 +10,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { stringify, parse } from 'yaml';
 import { duLieuDaKiem } from '../../src/du-lieu.mjs';
+import { jsonChuan } from '../../src/khoa.mjs';
 
 const GOC = fileURLToPath(new URL('../../', import.meta.url));
 export const DOCS_CU = path.resolve(GOC, '..', 'opus-zero', 'docs');
@@ -37,9 +38,6 @@ const ASIDE = {
 /** Tên phím của pymdownx.keys -> chữ site cũ hiện; chữ cái thì in hoa, chữ số giữ nguyên. */
 const PHIM = { ctrl: 'Ctrl', cmd: 'Cmd', alt: 'Alt', shift: 'Shift', space: 'Space', enter: 'Enter', esc: 'Esc', tab: 'Tab' };
 
-/** JSON với khóa xếp theo chữ cái, để so hai object không phụ thuộc thứ tự khóa. */
-const jsonChuan = (x) =>
-	JSON.stringify(x, (_, v) => (v && typeof v === 'object' && !Array.isArray(v) ? Object.fromEntries(Object.entries(v).sort()) : v));
 /** Giải mã thực thể HTML trong giá trị thuộc tính (data-rec, mô tả của site cũ). */
 const giaiMa = (s) =>
 	s

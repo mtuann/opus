@@ -58,7 +58,7 @@ lan:                       # mỗi lần kiểm định một mục, lần mới
   - so: 1
     ngay: 2026-11-02
     nhanh: moi/d3-l2
-    ma_bam: sha256:3f2a...  # mã băm của trang lúc khóa (tools/khoa.py tính)
+    ma_bam: sha256:3f2a...  # mã băm của trang lúc khóa (node tools/khoa.mjs khoa ghi)
     nguoi: {luot_1: agent, luot_2: agent, review: Claude, kiem_mau: "bạn, 3/31 nhận định"}
 nguon:
   - id: omt-triads
@@ -107,7 +107,7 @@ Chỉ trong ba trường hợp:
 2. Nguồn thay đổi: chương trình thi mới, ấn bản mới đáng tin hơn, link nguồn chết.
 3. Đợt mở rộng lõi có trong kế hoạch.
 
-Cách làm: `tools/khoa.py mo <trang> --ly-do "..."` (ghi lý do vào hồ sơ, gỡ dòng trong `khoa.json`); sửa; kiểm định **chỉ những nhận định bị chạm** cộng các nhận định cùng đoạn; thêm một mục vào `lan`; khóa lại. Commit mở khóa và commit khóa lại nằm cùng một nhánh (`mo/<tên ngắn>`), review như một việc lẻ; trên `main` trang luôn ở trạng thái khóa. Trang lõi bị sửa một định nghĩa hay một quy tắc thì liệt kê các trang link tới đoạn đó (kiểm thử anchor có sẵn giúp tìm) và ghi trong báo cáo trang nào cần sửa theo.
+Cách làm: `node tools/khoa.mjs mo <trang> --ly-do "..."` (ghi lý do vào hồ sơ, gỡ dòng trong `khoa.json`, thêm một mục mới vào `lan`); sửa; kiểm định **chỉ những nhận định bị chạm** cộng các nhận định cùng đoạn; điền mục mới trong `lan`; khóa lại (`node tools/khoa.mjs khoa <trang>`). Commit mở khóa và commit khóa lại nằm cùng một nhánh (`mo/<tên ngắn>`), review như một việc lẻ; trên `main` trang luôn ở trạng thái khóa. Trang lõi bị sửa một định nghĩa hay một quy tắc thì liệt kê các trang link tới đoạn đó (kiểm thử anchor có sẵn giúp tìm) và ghi trong báo cáo trang nào cần sửa theo.
 
 Bản ghi khóa từng phần thì mở đúng khóa ấy (`du-lieu/<bộ>/<id>#<trường>,…`); sửa trường chưa khóa thì không cần mở khóa.
 
@@ -117,4 +117,4 @@ Lượt 1 nằm trong lời giao lô ở `plans/lam-lai/README.md` (mục "Lời
 
 > Bạn làm **kiểm định lượt 2** cho lô **D<đợt>-L<lô>** của repo opus. Chỉ đọc `plans/ben-vung/chuan-kiem-dinh.md` và file `plans/lam-lai/bao-cao/d<đợt>-l<lô>-nhan-dinh.yml` (danh sách nhận định, không có nguồn và kết quả). Không mở hồ sơ trong `kiem-dinh/` và báo cáo của lượt 1. Với mỗi nhận định, tự tìm nguồn theo mục 2, ghi `dung`, `sai` (kèm nguồn và câu đúng) hoặc `khong-chac`, kèm link đã mở. Ghi kết quả vào `plans/lam-lai/bao-cao/d<đợt>-l<lô>-luot-2.yml`. Không sửa trang. Không push.
 
-> Bạn **mở khóa và sửa** trang `<đường dẫn>` của repo opus vì `<lý do: lỗi được báo, nguồn đổi>`. Đọc `AGENTS.md` và `plans/ben-vung/chuan-kiem-dinh.md` mục 7. Tạo nhánh `mo/<tên ngắn>` từ `main`. Chạy `python3 tools/khoa.py mo <trang> --ly-do "..."`, sửa, kiểm định lại những nhận định bị chạm và các nhận định cùng đoạn, thêm một mục vào `lan` của hồ sơ, khóa lại. Liệt kê trong báo cáo các trang link tới đoạn đã sửa. Khi xong: `npm run build` và `npm test` đạt; commit; báo cáo `plans/ben-vung/bao-cao/mo-<tên ngắn>.md`. Không push.
+> Bạn **mở khóa và sửa** trang `<đường dẫn>` của repo opus vì `<lý do: lỗi được báo, nguồn đổi>`. Đọc `AGENTS.md` và `plans/ben-vung/chuan-kiem-dinh.md` mục 7. Tạo nhánh `mo/<tên ngắn>` từ `main`. Chạy `node tools/khoa.mjs mo <trang> --ly-do "..."`, sửa, kiểm định lại những nhận định bị chạm và các nhận định cùng đoạn, điền mục mới trong `lan` của hồ sơ, khóa lại. Liệt kê trong báo cáo các trang link tới đoạn đã sửa. Khi xong: `npm run build` và `npm test` đạt; commit; báo cáo `plans/ben-vung/bao-cao/mo-<tên ngắn>.md`. Không push.

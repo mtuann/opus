@@ -35,7 +35,8 @@ src/content.config.ts       # schema frontmatter và năm bộ dữ liệu
 src/du-lieu.mjs             # schema, bộ nạp và kiểm chéo của năm bộ dữ liệu (content.config.ts dùng)
 src/nhom.mjs                # nhóm nội dung của menu: tên, mô tả, biểu tượng; trang nào thuộc nhóm nào
 src/kiem-dinh.mjs           # trạng thái kiểm định của trang (đọc kiem-dinh/), cho huy hiệu "Đã kiểm định"
-src/ban-build.mjs           # trang nào có trong bản build (cho link "sắp có")
+src/khoa.mjs                # mã băm, đọc và kiểm kiem-dinh/khoa.json, bản build đang dựng (thật hay xem)
+src/ban-build.mjs           # trang nào có trong bản build (cho link "sắp có"); bản thật bỏ trang chưa khóa
 src/content/docs/           # trang; cùng đường dẫn với ../opus-zero/docs/
 src/data/                   # cap-do.yml, tac-pham.yml, nha-soan-nhac.yml, thuat-ngu.yml, trang.yml
 src/components/             # thành phần Astro
@@ -48,7 +49,7 @@ tests/                      # kiểm thử site mới
 kiem-dinh/                  # hồ sơ kiểm định, khoa.json (không đăng lên site)
 tools/chuyen/               # script chuyển cú pháp
 tools/du_lieu/              # script tách dữ liệu một lần
-tools/khoa.py               # tính, ghi, mở khóa
+tools/khoa.mjs              # hồ sơ mẫu, khóa, tính, mở khóa, xuất nhận định cho lượt 2
 tools/audio/                # chép từ ../opus-zero/tools/audio/ ở đợt 6
 plans/                      # kế hoạch, báo cáo
 .github/workflows/          # deploy.yml, test.yml (từ D1.7)
@@ -95,7 +96,14 @@ Site cũ nằm ở thư mục cạnh `../opus-zero/` (repo cũ, chỉ đọc). M
 | Dùng cho | deploy từ `main` | review lô, ảnh chụp, kiểm thử trên nhánh |
 | Đăng lên mạng | có | không |
 
-Cách lọc trang chưa khóa do D1.6 chọn (ví dụ loader đọc `kiem-dinh/khoa.json`, hoặc đặt `draft` lúc nạp) và ghi vào đây.
+Cách làm (D1.6):
+
+- **Chọn bản:** biến môi trường `OPUS_BAN=xem` là bản xem (`npm run build:xem`, `npm run dev`); không có biến là bản thật (`ban()` trong `src/khoa.mjs`).
+- **Lọc ở bộ nạp:** `locTheoBan` (`src/ban-build.mjs`) bọc bộ nạp trang của Starlight. Ở bản thật, nạp xong thì xóa khỏi bộ `docs` mọi trang không có trong `kiem-dinh/khoa.json`, nên Starlight không biết trang đó: không dựng, không đưa vào menu, nút Trước và Tiếp, tìm kiếm, sitemap. Không dùng `draft` của Starlight, vì phải ghi vào frontmatter, làm đổi mã băm của trang.
+- **Kiểm khóa lúc nạp cấu hình:** `src/content.config.ts` gọi `kiemKhoa()`. Trang hay bản ghi đã khóa mà mã băm lệch, hay không còn, thì build hỏng ở cả hai bản; thông báo kèm lệnh mở khóa.
+- **Dải "Chưa kiểm định":** `src/components/Banner.astro` thay thành phần Banner của Starlight; chỉ hiện ở bản xem, ở trang chưa khóa, đầu phần nội dung.
+- **Link "sắp có"** (D1.5) đọc danh sách trang từ `trangTrongBan()`, nên ở bản thật link tới trang chưa khóa cũng hiện "sắp có".
+- **Công cụ khóa viết bằng Node** (`tools/khoa.mjs`), không phải Python như kế hoạch ban đầu (`tools/khoa.py`). Lý do: mã băm của trang và JSON chuẩn của bản ghi chỉ có một chỗ tính (`src/khoa.mjs`), dùng chung cho bản build và công cụ. Hai bản tính ở hai ngôn ngữ dễ lệch nhau (cách viết số, thoát ký tự Unicode trong JSON).
 
 ## 8. Deploy
 

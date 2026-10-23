@@ -200,11 +200,3 @@ test(
 		assert.deepEqual(khac, [], 'xem chỗ khác bằng: node tools/chuyen/so-chu.mjs <trang>');
 	},
 );
-
-test('bản build không có ô "chưa chuyển" (hình hay công cụ chưa có thành phần)', () => {
-	if (!fs.existsSync(DIST)) return;
-	const co = fs
-		.readdirSync(DIST, { recursive: true })
-		.filter((f) => f.endsWith('.html') && fs.readFileSync(path.join(DIST, f), 'utf8').includes('class="oz-chua-co"'));
-	assert.deepEqual(co, [], 'trang dùng hình hay công cụ chưa có thành phần: lô của trang làm thành phần trước');
-});

@@ -18,15 +18,16 @@ Node theo `.nvmrc` (24, bản LTS; Astro 7.4 cần Node từ 22.23.4). Phiên b�
 
 ```bash
 npm ci            # cài đúng các gói trong package-lock.json
-npm run dev       # máy chủ thử, tự tải lại khi sửa: http://localhost:4321/opus/ (tìm kiếm chỉ chạy ở bản build)
-npm run build     # bản thật vào dist/ (từ D1.6: chỉ trang đã khóa)
+npm run dev       # máy chủ thử (bản xem), tự tải lại khi sửa: http://localhost:4321/opus/ (tìm kiếm chỉ chạy ở bản build)
+npm run build     # bản thật vào dist/: chỉ trang đã khóa; deploy dùng bản này
+npm run build:xem # bản xem vào dist/: thêm trang chưa khóa, có dải "Chưa kiểm định"; không đăng
 npm run preview   # xem dist/ vừa build: http://localhost:4321/opus/
-npm test          # kiểm thử trên dist/: chạy sau npm run build
+npm test          # kiểm thử trên dist/: chạy sau npm run build hay npm run build:xem
 ```
 
 - Kiểm thử ở `tests/*.test.mjs`, chạy bằng trình kiểm thử có sẵn của Node (`node --test`), không cần gói thêm. Thêm kiểm thử thì thêm file `tests/<tên>.test.mjs`.
-- `npm run build:xem` (bản xem, thêm trang chưa khóa) có từ D1.6.
-- `tools/` dùng Python 3.12: `python3 -m pip install -r requirements.txt`.
+- Trang mới chuyển chưa khóa nên chỉ có ở bản xem: xem và kiểm bằng `npm run build:xem`, không phải `npm run build`.
+- `tools/du_lieu/` dùng Python 3.12: `python3 -m pip install -r requirements.txt`. `tools/chuyen/` và `tools/khoa.mjs` chạy bằng Node.
 - Chỉ thị trong trang (`::hop-tac-pham`…) lấy chữ từ `src/data/` lúc dựng trang. `npm run build` tự dựng lại mọi trang khi dữ liệu hay plugin Markdown đổi (`dungLaiKhiDoi` trong `src/du-lieu.mjs`); đang chạy `npm run dev` mà sửa `src/data/`, hay thêm, xóa trang (link "sắp có" chỉ tính lại khi trang được dựng lại), thì khởi động lại `npm run dev` để thấy thay đổi.
 
 ## Dữ liệu
@@ -39,6 +40,22 @@ npm test          # kiểm thử trên dist/: chạy sau npm run build
 - Dữ liệu sai (YAML hỏng, sai kiểu, trường lạ, trùng id, tham chiếu tới thứ không có) thì build hỏng. Thử: `OPUS_DU_LIEU=tests/du-lieu-hong npm run build`.
 - Bản ghi tác phẩm có thể có `hinh` (sơ đồ các đoạn, theo loại trang `bai-hoc`, `nghe`) và `ban_thu` (bản thu gợi ý cho khối nghe, cùng dạng `data-rec` của site cũ: `by`, `lic`, `licUrl`, `note`, `page`, `parts`; file mp3 của site viết `audio/x.mp3`). Mốc tham khảo theo bảng "Theo dõi khi nghe" của từng trang nên nằm trong trang (`::khoi-nghe{moc="…"}`), không ở dữ liệu.
 - `tools/du_lieu/tach.py` tách dữ liệu từ site cũ (D1.2; D1.3 thêm `hinh`, D1.4 thêm `ban_thu`); `src/data/` đã có dữ liệu thì phải thêm cờ `--ghi-de`, và chỉ chạy lại khi dữ liệu chưa kiểm định. Từ đợt 2, sửa `src/data/` bằng tay, theo hồ sơ kiểm định.
+
+## Khóa
+
+- Trang và bản ghi dữ liệu lên site thật khi đã khóa: mã băm trong `kiem-dinh/khoa.json`, hồ sơ kiểm định trong `kiem-dinh/<trang>.yml` hay `kiem-dinh/du-lieu/<bộ>/<id>.yml` (`plans/ben-vung/chuan-kiem-dinh.md` mục 5–7). Trang hay bản ghi đã khóa mà đổi thì build hỏng, ở cả hai bản; sửa theo thủ tục mở khóa.
+- Công cụ `tools/khoa.mjs`; mã băm tính ở `src/khoa.mjs`, dùng chung với bản build. `<mục>` là trang (`nhac-ly/10-hop-am-ba`, `index`) hay bản ghi (`du-lieu/tac-pham/fur-elise`).
+
+```bash
+node tools/khoa.mjs mau <mục>               # tạo hồ sơ mẫu
+node tools/khoa.mjs khoa <mục>              # kiểm hồ sơ đủ, ghi mã băm vào khoa.json và vào lần cuối của lan
+node tools/khoa.mjs tinh                    # kiểm mọi mục đã khóa; lệch thì thoát 1
+node tools/khoa.mjs mo <mục> --ly-do "…"    # mở khóa: ghi lý do, thêm một lần mới vào lan để điền
+node tools/khoa.mjs xuat D3-L2 [--mau 10]   # nhận định của lô cho lượt 2 (--mau: mẫu cho chủ repo kiểm)
+```
+
+- Khóa được khi mọi nhận định đã qua hai lượt và có kết quả, chỗ sửa hay bỏ có ghi chú, chỗ hai lượt khác nhau đã giải quyết, mọi khuông nhạc (khối `abc`) đã kiểm, và lần cuối trong `lan` ghi đủ người (`luot_1`, `luot_2`, `review`, `kiem_mau`).
+- Trên nhánh lô `moi/d<đợt>-l<lô>`, `tests/pham-vi.test.mjs` so với `main` (cần nhánh `main` hay `origin/main`): file ngoài phạm vi của lô (kế hoạch, mục "Quy tắc chung"; trang của lô theo `plans/lam-lai/anh-xa.md`) và trang của lô khác bị khóa hay mở khóa thì kiểm thử hỏng. Việc kế hoạch giao riêng cho một lô (như trang sinh từ dữ liệu ở D2-L1) ghi trong `THEM` của file kiểm thử đó.
 
 ## Giao diện
 
@@ -103,7 +120,7 @@ Frontmatter có `tac_pham`. Thứ tự các mục như mẫu ở `../opus-zero/A
 
 - Chỉ thị `::…` đứng một mình trên một dòng, không có chữ, chỉ có thuộc tính ghi trong bảng (`::khoi-nghe` nhận `moc`; `::hinh`, `::cong-cu` cần `ten`; `::cong-cu` nhận thêm thông số của công cụ). Ba chỉ thị `::hop-tac-pham`, `::hinh-cau-truc`, `::hoc-tiep` cần `tac_pham` ở frontmatter; `::hinh-cau-truc` chỉ dùng ở trang bài học hay hướng dẫn nghe, và bản ghi phải có hình cho loại trang đó. Sai, kể cả gõ sai tên chỉ thị, thì build hỏng, lỗi ghi tên file.
 - Chữ trong chip, `thong_tin`, câu hỏi (dòng `?`, `+`, `-`, `>`) và tên tác phẩm là Markdown trong dòng: `*nghiêng*`, `**đậm**`, `[link](/opus/…/)`. Thẻ HTML thô không dùng được: hiện ra thành chữ. Link trong dữ liệu viết như link trong trang (mục "Link nội bộ").
-- Hình hay công cụ chưa có thành phần thì hiện ô "… chưa chuyển sang site mới": build vẫn chạy (có cảnh báo `[opus]`) để xem được trang, nhưng kiểm thử chặn ô này trong bản build. Lô đầu tiên chuyển trang dùng hình hay công cụ ấy làm thành phần và thêm vào `HINH`, `CONG_CU` trong `src/plugins/thanh-phan.mjs`.
+- Hình hay công cụ chưa có thành phần thì hiện ô "… chưa chuyển sang site mới": build vẫn chạy (có cảnh báo `[opus]`) để xem được trang ở bản xem, nhưng trang đã khóa có ô này thì kiểm thử hỏng (`tests/khoa.test.mjs`). Lô đầu tiên chuyển trang dùng hình hay công cụ ấy làm thành phần và thêm vào `HINH`, `CONG_CU` trong `src/plugins/thanh-phan.mjs`.
 - Plugin dựng các khối: `src/plugins/opus-markdown.mjs` (đọc trang) và `src/plugins/thanh-phan.mjs` (dựng HTML). JavaScript của khối nằm ở `src/scripts/` và chỉ tải ở trang có khuông nhạc, câu hỏi hay khối nghe (`src/components/MarkdownContent.astro`). CSS: `src/styles/thanh-phan.css`.
 - Tiến độ của người học (bài đã làm hết câu hỏi, mốc nghe) lưu trong trình duyệt ở khóa `opus-zero:v1` như site cũ, nên dữ liệu đã lưu ở site cũ vẫn đọc được.
 
@@ -125,4 +142,4 @@ Frontmatter có `tac_pham`. Thứ tự các mục như mẫu ở `../opus-zero/A
    - Khối `oz-` bọc nội dung mà JavaScript cũ đọc hay điền (`oz-lesson-status`, `oz-piano-level`): giữ nội dung, thêm `::cong-cu{ten}` (ô "chưa chuyển") và cảnh báo. `oz-print-only` (chỉ hiện khi in) giữ nguyên, site mới có CSS. Lớp `oz-` khác còn trong HTML thô thì cảnh báo; lô của trang thêm CSS hay bỏ lớp.
    - `data-rec` thành `ban_thu` (dữ liệu, đã tách) cộng `moc` (trong trang); link `.md` thành địa chỉ, cả `href` trong HTML thô.
    - Tiêu đề `#` thành `title` (bỏ định dạng Markdown); mô tả trang lấy thẻ `og:description` của bản build cũ (thẻ `description` cũ bị cắt ở dấu `"`), rỗng hay không có thì cảnh báo.
-3. `npm run build`, rồi `node tools/chuyen/so-chu.mjs <trang> …`: chữ hiển thị, mô tả trang, trọn mã ABC của từng khuông, từng câu hỏi (lựa chọn, đáp án đúng, giải thích) và id tiêu đề phải giống trang cũ. `npm test` kiểm lại cho mọi trang đã chuyển, khi máy có `.cache/site-cu/`.
+3. `npm run build:xem`, rồi `node tools/chuyen/so-chu.mjs <trang> …`: chữ hiển thị, mô tả trang, trọn mã ABC của từng khuông, từng câu hỏi (lựa chọn, đáp án đúng, giải thích) và id tiêu đề phải giống trang cũ. `npm test` kiểm lại cho mọi trang đã chuyển, khi máy có `.cache/site-cu/`.

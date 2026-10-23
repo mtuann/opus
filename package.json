@@ -4,8 +4,9 @@
   "description": "Opus: sổ tay tiếng Việt học piano cổ điển cho người lớn tự học (site làm lại bằng Astro và Starlight)",
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "OPUS_BAN=xem astro dev",
     "build": "astro build",
+    "build:xem": "OPUS_BAN=xem astro build",
     "preview": "astro preview",
     "test": "node --test --test-reporter=spec \"tests/**/*.test.mjs\""
   },

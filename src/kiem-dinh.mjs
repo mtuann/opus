@@ -1,6 +1,6 @@
 // Trạng thái kiểm định của một trang, cho huy hiệu "Đã kiểm định" dưới tiêu đề (src/components/PageTitle.astro).
 // Trạng thái không ghi trong trang (để mã băm không đổi khi khóa) mà đọc lúc build từ kiem-dinh/:
-// khoa.json { "trang": { "<đường dẫn trang>": "sha256:…" } } (D1.6 ghi bằng tools/khoa.py) và hồ sơ
+// khoa.json { "trang": { "<đường dẫn trang>": "sha256:…" } } (ghi bằng node tools/khoa.mjs) và hồ sơ
 // kiem-dinh/<đường dẫn trang>.yml (plans/ben-vung/chuan-kiem-dinh.md mục 5).
 import { parse } from 'yaml';
 

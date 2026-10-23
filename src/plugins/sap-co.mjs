@@ -1,4 +1,5 @@
-// Plugin hast cho Sätteri (D1.5): link tới một trang của site chưa có trong bản build thành chữ thường kèm nhãn "sắp có".
+// Plugin hast cho Sätteri (D1.5): link tới một trang của site chưa có trong bản build (chưa chuyển; ở bản thật: chưa khóa)
+// thành chữ thường kèm nhãn "sắp có".
 // Khi trang lên site, link tự hiện lại: danh sách trang nằm trong dấu vết của dungLaiKhiDoi (src/du-lieu.mjs), nên bản
 // build sau dựng lại mọi trang. Chỉ xét link tới trang (/opus/…/); link ngoài, #mục trong trang, file tĩnh giữ nguyên.
 // Xét cả link trong HTML thô: HTML do chỉ thị dựng từ dữ liệu (::hoc-tiep, thong_tin của ::hop-tac-pham) và khối HTML

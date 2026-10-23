@@ -90,7 +90,7 @@ Cần sửa file khác (một trang lõi muốn dẫn tác phẩm mới làm ví
 
 ## 6. Gộp và khóa
 
-`python3 tools/khoa.py khoa <trang>` ghi mã băm của trang và của bản ghi vào `kiem-dinh/khoa.json`, và lần kiểm định vào hồ sơ. Gộp vào `main`: trang lên site thật. Từ đây trang chỉ đổi qua thủ tục mở khóa.
+`node tools/khoa.mjs khoa <trang> du-lieu/tac-pham/<slug>` ghi mã băm của trang và của bản ghi vào `kiem-dinh/khoa.json`, và lần kiểm định vào hồ sơ. Gộp vào `main`: trang lên site thật. Từ đây trang chỉ đổi qua thủ tục mở khóa.
 
 ## Lời giao việc mẫu
 
