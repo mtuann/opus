@@ -50,9 +50,13 @@ kiem-dinh/                  # hồ sơ kiểm định, khoa.json (không đăng 
 tools/chuyen/               # script chuyển cú pháp
 tools/du_lieu/              # script tách dữ liệu một lần
 tools/khoa.mjs              # hồ sơ mẫu, khóa, tính, mở khóa, xuất nhận định cho lượt 2
+tools/khuong-nhac.mjs       # kiểm khối ```abc: cảnh báo của abcjs, độ dài ô nhịp
+tools/may-chu.mjs           # máy chủ tĩnh cho kiểm thử trình duyệt và Lighthouse (HTTP/2 như GitHub Pages)
+tools/lighthouse/kiem.mjs   # đo Lighthouse, kiểm luật 7
 tools/audio/                # chép từ ../opus-zero/tools/audio/ ở đợt 6
 plans/                      # kế hoạch, báo cáo
 .github/workflows/          # deploy.yml, test.yml (từ D1.7)
+.github/actions/kiem-thu/   # các bước build và kiểm thử dùng chung cho hai workflow
 AGENTS.md, CLAUDE.md, README.md, LICENSE, LICENSE-CONTENT, .nvmrc, .gitignore
 
 # git bỏ qua: dist/, .astro/, .cache/, node_modules/, .claude/
@@ -110,7 +114,7 @@ Cách làm (D1.6):
 ## 8. Deploy
 
 - **Đến D1.7:** chưa đăng gì. Repo mới có trên GitHub từ đợt 0 nhưng chưa bật Pages.
-- **Từ D1.7:** bạn bật Pages của repo mới (Settings → Pages, nguồn GitHub Actions). `deploy.yml` build bản thật, chạy kiểm thử, rồi đăng `dist/` bằng `configure-pages`, `upload-pages-artifact`, `deploy-pages`; kiểm thử hỏng thì site giữ bản trước. `test.yml` chạy bản xem và kiểm thử trên nhánh `moi/**`, không đăng.
+- **Từ D1.7:** Pages của repo mới đã bật, nguồn GitHub Actions. `deploy.yml` build bản thật, chạy kiểm thử (`npm test`, kiểm thử trình duyệt, Lighthouse), rồi đăng `dist/` bằng `configure-pages`, `upload-pages-artifact`, `deploy-pages`. Kiểm thử hỏng thì site giữ bản trước. `test.yml` chạy bản xem và các kiểm thử ấy trên nhánh `moi/**`, `mo/**`, `them/**` và pull request, không đăng. Hai workflow dùng chung `.github/actions/kiem-thu/`.
 - **Site cũ:** bạn tắt Pages của repo cũ khi muốn (Settings → Pages → Unpublish site). Không cần sửa gì trong repo cũ. Service worker của site cũ chỉ có phạm vi `/opus-zero/`, nên không đụng tới site mới ở `/opus/`.
 - **Service worker của site mới:** chưa có cho đến đợt 7; khi có, phạm vi `/opus/`, danh sách tệp và phiên bản sinh lúc build.
 - **Tùy chọn, không bắt buộc:** muốn người vào địa chỉ cũ tìm được site mới thì đăng lại Pages của repo cũ chỉ với một trang chuyển hướng `/opus-zero/<trang>/` → `/opus/<trang>/`. Đường dẫn giữ nguyên (luật 4) nên ánh xạ chỉ là đổi phần đầu địa chỉ.
@@ -118,18 +122,20 @@ Cách làm (D1.6):
 
 ## 9. Kiểm thử site mới
 
-| Kiểm thử | Thay cho (trong `../opus-zero/`) |
-|---|---|
-| Schema dữ liệu và frontmatter lúc build | `tests/levels.py`, `tests/counts.py` |
-| Khóa: mã băm trang và bản ghi | (mới) |
-| Phạm vi lô | (mới) |
-| Link và anchor nội bộ, link "sắp có" | `tests/anchors.py`, phần link của `tests/site_static.py` |
-| Khuông nhạc: cảnh báo ABC, đủ phách | `tests/abc_warn.mjs`, `tests/abc_bars.py` |
-| Trợ năng trên các trang mẫu | `tests/a11y.mjs` |
-| Trình duyệt: công cụ khởi tạo, in, ngoại tuyến | `tests/browser.mjs` |
-| Tìm kiếm: bộ truy vấn chuẩn | `tests/search.mjs` |
-| Lighthouse ở ba trang | `tools/lighthouse/` |
-| Bản thu và mốc (từ đợt 6) | `tools/audio/check_audio.py` (vẫn ở gốc, đổi đường dẫn) |
+| Kiểm thử | Ở site mới | Thay cho (trong `../opus-zero/`) |
+|---|---|---|
+| Schema dữ liệu và frontmatter lúc build | `src/content.config.ts`, `tests/du-lieu.test.mjs` | `tests/levels.py`, `tests/counts.py` |
+| Khóa: mã băm trang và bản ghi | `tests/khoa.test.mjs` | (mới) |
+| Phạm vi lô | `tests/pham-vi.test.mjs` | (mới) |
+| Link và anchor nội bộ, link "sắp có" | `tests/link.test.mjs` | `tests/anchors.py`, phần link của `tests/site_static.py` |
+| Khuông nhạc: cảnh báo ABC, đủ phách | `tests/khuong-nhac.test.mjs` (`tools/khuong-nhac.mjs`) | `tests/abc_warn.mjs`, `tests/abc_bars.py` |
+| Trợ năng trên các trang mẫu | `tests/trinh-duyet/kiem-tro-nang.mjs` (axe trên trình duyệt thật) | `tests/a11y.mjs` |
+| Trình duyệt: hiển thị, công cụ khởi tạo, in | `tests/trinh-duyet/kiem-hien-thi.mjs`, `kiem-thanh-phan.mjs`; ngoại tuyến từ đợt 7 | `tests/browser.mjs` |
+| Tìm kiếm: bộ truy vấn chuẩn | D1.8 | `tests/search.mjs` |
+| Lighthouse ở ba trang | `tools/lighthouse/kiem.mjs` | `tools/lighthouse/` |
+| Bản thu và mốc (từ đợt 6) | | `tools/audio/check_audio.py` (vẫn ở gốc, đổi đường dẫn) |
+
+`npm test` chạy các file `tests/*.test.mjs`; kiểm thử trình duyệt và Lighthouse chạy riêng (`npm run test:trinh-duyet`, `npm run lighthouse`). CI chạy cả ba (mục 8).
 
 ## Nguồn
 

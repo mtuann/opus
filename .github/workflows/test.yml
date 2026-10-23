@@ -1,0 +1,26 @@
+name: Kiểm thử
+
+# Nhánh việc (moi/**: việc của kế hoạch và lô; mo/**: mở khóa; them/**: thêm tác phẩm), pull request, hay bấm chạy tay:
+# build bản xem (có cả trang chưa khóa, kèm dải "Chưa kiểm định"), kiểm thử, kiểm thử trình duyệt, Lighthouse. Không đăng
+# gì. Nhánh main do deploy.yml kiểm thử trên bản thật trước khi đăng.
+on:
+  push:
+    branches: ['moi/**', 'mo/**', 'them/**']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  kiem-thu:
+    name: Kiểm thử (bản xem)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          # kiểm thử phạm vi lô (tests/pham-vi.test.mjs) so nhánh với main: cần đủ lịch sử
+          fetch-depth: 0
+      - uses: ./.github/actions/kiem-thu
+        with:
+          ban: xem

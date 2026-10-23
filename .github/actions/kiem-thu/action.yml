@@ -1,0 +1,33 @@
+name: Build và kiểm thử
+description: >-
+  Cài Node và các gói, build bản thật hay bản xem, chạy kiểm thử (npm test), kiểm thử trình duyệt trên ba trình duyệt
+  và Lighthouse (luật 7 của kế hoạch). Dùng chung cho test.yml và deploy.yml.
+inputs:
+  ban:
+    description: "that: bản thật (npm run build, chỉ trang đã khóa); xem: bản xem (npm run build:xem, thêm trang chưa khóa)"
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Kiểm tham số
+      if: inputs.ban != 'that' && inputs.ban != 'xem'
+      run: echo "ban phải là that hay xem" && exit 1
+      shell: bash
+    - uses: actions/setup-node@v7
+      with:
+        node-version-file: .nvmrc
+        cache: npm
+    - run: npm ci
+      shell: bash
+    - name: Build (${{ inputs.ban == 'xem' && 'bản xem' || 'bản thật' }})
+      run: npm run ${{ inputs.ban == 'xem' && 'build:xem' || 'build' }}
+      shell: bash
+    - run: npm test
+      shell: bash
+    - name: Cài trình duyệt cho kiểm thử trình duyệt và Lighthouse
+      run: npx playwright install --with-deps chromium webkit firefox
+      shell: bash
+    - run: npm run test:trinh-duyet
+      shell: bash
+    - run: npm run lighthouse
+      shell: bash

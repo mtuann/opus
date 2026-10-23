@@ -1,0 +1,45 @@
+name: Đăng site lên GitHub Pages
+
+# Mỗi lần push lên main (hay bấm chạy tay): build bản thật (chỉ trang đã khóa trong kiem-dinh/khoa.json), kiểm thử, kiểm
+# thử trình duyệt, Lighthouse; đạt hết thì đăng dist/. Hỏng bước nào thì không đăng: site giữ bản trước.
+on:
+  push:
+    branches: [main]
+    # chỉ đổi kế hoạch, báo cáo, sổ tay hay giấy phép thì site không đổi: không cần build lại
+    paths-ignore: ['plans/**', 'README.md', 'AGENTS.md', 'CLAUDE.md', 'LICENSE', 'LICENSE-CONTENT']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Mỗi lúc một lần đăng; lần push sau chờ lần trước xong, để bản cũ hơn không ghi đè bản mới.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build và kiểm thử (bản thật)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ./.github/actions/kiem-thu
+        with:
+          ban: that
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  deploy:
+    name: Đăng
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.dang.outputs.page_url }}
+    steps:
+      - id: dang
+        uses: actions/deploy-pages@v5

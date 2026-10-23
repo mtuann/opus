@@ -23,9 +23,13 @@ npm run build     # bản thật vào dist/: chỉ trang đã khóa; deploy dùn
 npm run build:xem # bản xem vào dist/: thêm trang chưa khóa, có dải "Chưa kiểm định"; không đăng
 npm run preview   # xem dist/ vừa build: http://localhost:4321/opus/
 npm test          # kiểm thử trên dist/: chạy sau npm run build hay npm run build:xem
+npm run test:trinh-duyet  # kiểm thử trình duyệt trên dist/: ba trình duyệt, ba cỡ màn hình, axe, thành phần
+npm run lighthouse        # Lighthouse ở tối đa ba trang của dist/, kiểm luật 7 của kế hoạch
 ```
 
-- Kiểm thử ở `tests/*.test.mjs`, chạy bằng trình kiểm thử có sẵn của Node (`node --test`), không cần gói thêm. Thêm kiểm thử thì thêm file `tests/<tên>.test.mjs`.
+- Kiểm thử ở `tests/*.test.mjs`, chạy bằng trình kiểm thử có sẵn của Node (`node --test`). Thêm kiểm thử thì thêm file `tests/<tên>.test.mjs`.
+- Kiểm thử trình duyệt ở `tests/trinh-duyet/kiem-*.mjs` (Playwright), không nằm trong `npm test`. Lần đầu cài trình duyệt: `npx playwright install chromium webkit firefox`. Phép thử nào cần trang có khối (khuông nhạc, câu hỏi) mà bản build chưa có thì tự bỏ qua.
+- Khuông nhạc: `npm test` kiểm mọi khối ```` ```abc ```` trong `src/content/docs/` (abcjs không cảnh báo, ô nhịp đủ độ dài). Xem chi tiết: `node tools/khuong-nhac.mjs`.
 - Trang mới chuyển chưa khóa nên chỉ có ở bản xem: xem và kiểm bằng `npm run build:xem`, không phải `npm run build`.
 - `tools/du_lieu/` dùng Python 3.12: `python3 -m pip install -r requirements.txt`. `tools/chuyen/` và `tools/khoa.mjs` chạy bằng Node.
 - Chỉ thị trong trang (`::hop-tac-pham`…) lấy chữ từ `src/data/` lúc dựng trang. `npm run build` tự dựng lại mọi trang khi dữ liệu hay plugin Markdown đổi (`dungLaiKhiDoi` trong `src/du-lieu.mjs`); đang chạy `npm run dev` mà sửa `src/data/`, hay thêm, xóa trang (link "sắp có" chỉ tính lại khi trang được dựng lại), thì khởi động lại `npm run dev` để thấy thay đổi.
@@ -40,6 +44,12 @@ npm test          # kiểm thử trên dist/: chạy sau npm run build hay npm r
 - Dữ liệu sai (YAML hỏng, sai kiểu, trường lạ, trùng id, tham chiếu tới thứ không có) thì build hỏng. Thử: `OPUS_DU_LIEU=tests/du-lieu-hong npm run build`.
 - Bản ghi tác phẩm có thể có `hinh` (sơ đồ các đoạn, theo loại trang `bai-hoc`, `nghe`) và `ban_thu` (bản thu gợi ý cho khối nghe, cùng dạng `data-rec` của site cũ: `by`, `lic`, `licUrl`, `note`, `page`, `parts`; file mp3 của site viết `audio/x.mp3`). Mốc tham khảo theo bảng "Theo dõi khi nghe" của từng trang nên nằm trong trang (`::khoi-nghe{moc="…"}`), không ở dữ liệu.
 - `tools/du_lieu/tach.py` tách dữ liệu từ site cũ (D1.2; D1.3 thêm `hinh`, D1.4 thêm `ban_thu`); `src/data/` đã có dữ liệu thì phải thêm cờ `--ghi-de`, và chỉ chạy lại khi dữ liệu chưa kiểm định. Từ đợt 2, sửa `src/data/` bằng tay, theo hồ sơ kiểm định.
+
+## CI và đăng site
+
+- `.github/workflows/test.yml`: nhánh `moi/**`, `mo/**`, `them/**`, pull request, hay bấm chạy tay. Build bản xem, chạy `npm test`, kiểm thử trình duyệt, Lighthouse. Không đăng gì.
+- `.github/workflows/deploy.yml`: mỗi lần push lên `main`. Build bản thật, chạy đủ các kiểm thử như trên; đạt hết thì đăng `dist/` lên GitHub Pages. Hỏng bước nào thì không đăng, site giữ bản trước. Push chỉ đổi `plans/`, `AGENTS.md`, `README.md`, giấy phép thì không chạy.
+- Hai workflow dùng chung các bước ở `.github/actions/kiem-thu/action.yml`. Trên GitHub không có `../opus-zero/` và `.cache/site-cu/`, nên kiểm thử cần hai thư mục ấy tự bỏ qua.
 
 ## Khóa
 
