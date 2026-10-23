@@ -72,10 +72,9 @@ Site cũ nằm ở thư mục cạnh `../opus-zero/` (repo cũ, chỉ đọc). M
 |---|---|
 | Khuông nhạc ABC, vẽ khi gần màn hình và khi in | `../opus-zero/docs/assets/js/abc.js`, `loader.js`, `print.js` |
 | Khối nghe có mốc tham khảo | `listen.js` |
-| Bàn phím, âm thanh dùng chung (lô D3-L1) | `piano.js`, `audio.js`, mẫu âm `../opus-zero/docs/assets/samples/piano/` (CC BY 3.0) |
 | Hình cấu trúc | `../opus-zero/tools/figures.py` (thông số chuyển vào bản ghi) |
 | Câu hỏi kiểm tra nhanh | `quiz.js` |
-| Bàn phím, hóa biểu, vòng quãng năm, máy đếm nhịp | `piano.js`, `theory.js`, `circle.js`, `metronome.js` |
+| Bàn phím, hóa biểu, vòng quãng năm, máy đếm nhịp | `piano.js`, `theory.js`, `circle.js`, `metronome.js`; âm thanh dùng chung `audio.js` và mẫu âm `../opus-zero/docs/assets/samples/piano/` (CC BY 3.0), chép ở lô đầu tiên có bàn phím (D3-L1) |
 | Kế hoạch tập, nhật ký, dữ liệu học | `practice.js`, `plan.js`, `journal.js`, `data.js` |
 | Kiểm tra đầu vào | `placement.js` |
 | Các công cụ luyện tập khác | các module còn lại trong `../opus-zero/docs/assets/js/` |

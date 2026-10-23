@@ -97,7 +97,7 @@ Mỗi việc một nhánh, làm theo thứ tự. Site mới chưa đăng gì cho
 - **D1.5 Link và 404:** link tới trang không có trong bản build hiện chữ thường kèm nhãn "sắp có", tự thành link khi trang lên; kiểm link và anchor nội bộ trên cả bản thật và bản xem. Trang 404 thân thiện: báo site đang được làm lại, dẫn về trang chủ và ô tìm kiếm.
 - **D1.6 Khóa, phạm vi, bản thật và bản xem:** `tools/khoa.py` (`tinh`, `khoa`, `mo`, `mau`, `xuat`) theo `../ben-vung/chuan-kiem-dinh.md`; `kiem-dinh/khoa.json`; kiểm thử khóa; kiểm thử phạm vi lô (so nhánh `moi/dN-lM` với `anh-xa.md`). `npm run build` chỉ đưa trang đã khóa; `npm run build:xem` đưa cả trang chưa khóa, có dải "Chưa kiểm định" ở đầu. Khóa trang chủ tạm và trang 404 (hồ sơ không có nhận định). Ghi cách làm đã chọn vào `cong-nghe.md` mục 7.
 - **D1.7 CI và deploy:** `.github/workflows/test.yml` (nhánh `moi/**`: bản xem và kiểm thử) và `deploy.yml` (nhánh `main`: bản thật, kiểm thử, rồi đăng `dist/` lên GitHub Pages). Kiểm thử gồm build, schema, khóa, link, trợ năng, Lighthouse ở ba trang; hỏng thì không đăng. Bạn bật Pages của repo mới (Settings → Pages, nguồn GitHub Actions) trước khi gộp việc này.
-- **D1.8 Thử:** chuyển ba trang `nhac-ly/10-hop-am-ba`, `piano/tac-pham/fur-elise`, `nghe-nhac/bach-goldberg` bằng `tools/chuyen/`; chưa kiểm định, chưa khóa, nên chỉ có ở bản xem. Chạy bộ truy vấn tìm kiếm của `../opus-zero/tests/search.mjs` trên bản xem.
+- **D1.8 Thử:** chuyển ba trang `nhac-ly/10-hop-am-ba`, `piano/tac-pham/fur-elise`, `nghe-nhac/bach-goldberg` bằng `tools/chuyen/`; chưa kiểm định, chưa khóa, nên chỉ có ở bản xem. Trang `10-hop-am-ba` hiện ô "chưa chuyển" ở chỗ bàn phím (thành phần làm ở D3-L1): được phép ở bản xem, không tính là lỗi hiển thị. Chạy bộ truy vấn tìm kiếm của `../opus-zero/tests/search.mjs` trên bản xem.
 
 **Xong khi:** ba trang thử hiện đúng ở bản xem (ảnh chụp 360 px và 1280 px), đạt chuẩn ở luật 7, và không có trong bản thật; bộ dữ liệu hỏng làm build hỏng; tìm "hop am ba" ra bài 10, tìm "dan" ra trang có chữ "đàn"; https://mtuann.github.io/opus/ hiện trang chủ tạm, địa chỉ không có ra trang 404 mới.
 
@@ -111,8 +111,9 @@ Từ đợt này, mỗi lô gộp vào `main` là trang của lô lên site th�
   - `grade` nếu trang chặng hiện Grade của từng bài; không thì `grade` khóa ở D8-L1 (Tác phẩm theo cấp độ).
 
   Trang chặng hiện thêm trường nào thì khóa thêm trường ấy, ghi trong báo cáo. Các trường còn lại khóa ở đợt 6.
-- Kiểm thử: trang đã khóa chỉ dùng trường đã khóa của bản ghi (chỉ thị trong trang, trang chặng, ô gợi ý tập).
-- Ô gợi ý tập (`practice.js` cũ, ở trang chủ; đợt 4, 7 dùng lại ở trang Piano, Luyện tập) sinh link bằng JavaScript. Khi chuyển, D2-L1 cho bản build xuất danh sách trang để script dùng: link tới trang chưa có hiện "sắp có" như link dựng lúc build.
+- Kiểm thử hỏng nếu trang đã khóa hiện một trường chưa khóa của bản ghi, qua chỉ thị trong trang, trang chặng hay ô gợi ý tập.
+- Ô gợi ý tập (`practice.js` cũ, ở trang chủ; đợt 4, 7 dùng lại ở trang Piano, Luyện tập) sinh link bằng JavaScript. Link tới trang chưa có phải hiện "sắp có" như link dựng lúc build. Vì vậy bản build xuất danh sách trang cho script; D2-L1 làm việc này khi chuyển `practice.js` (phạm vi của D2-L1 gồm cả cấu hình build, xem kiểm thử phạm vi của D1.6).
+- Kiểm định trường của 79 bản ghi là phần nặng nhất của đợt. Quá tải thì tách thành một việc dữ liệu riêng, làm trước D2-L1 (chủ repo quyết).
 - 7 trang chặng `piano/lo-trinh/chang-1` đến `chang-7` sinh từ dữ liệu; trang lộ trình giữ các mục chặng dạng tóm tắt, mỗi mục dẫn sang trang chặng.
 - 9 trang của lô, gồm trang chủ mới (thay trang chủ tạm) và bài kiểm tra đầu vào (`placement.js`).
 - Menu đủ 9 nhóm; nhóm chưa có trang hiện nhãn "sắp có".
@@ -151,7 +152,7 @@ Từ đợt này, mỗi lô gộp vào `main` là trang của lô lên site th�
 ## Đợt 8. Tham chiếu có hạn và Đọc thêm (D8-L1 đến D8-L3)
 
 - Trang tham chiếu có `ra_lai` trong `trang.yml`; workflow hằng tuần mở issue "Trang cần rà lại" khi quá hạn (không chặn deploy).
-- Thầy và thi, Tác phẩm theo cấp độ: kiểm định theo chương trình ABRSM đang dùng lúc làm (từ tháng 1/2027 là chương trình piano 2027–2028). Hai trang liệt kê tác phẩm: dùng trường đã khóa (`grade` khóa ở đợt 2); link tới bài chưa lên hiện "sắp có".
+- Thầy và thi, Tác phẩm theo cấp độ: kiểm định theo chương trình ABRSM đang dùng lúc làm (từ tháng 1/2027 là chương trình piano 2027–2028). Hai trang liệt kê tác phẩm: dùng trường đã khóa; `grade` khóa ở đợt 2 nếu trang chặng hiện Grade, không thì chính lô này khóa. Link tới bài chưa lên hiện "sắp có".
 - Trang Đọc thêm có dòng "ngoài lộ trình" ở đầu.
 
 **Xong khi:** 21 trang của 3 lô đã khóa.
@@ -210,7 +211,7 @@ Một phiên một việc, mở trong thư mục `opus/`. Đổi các chỗ tron
 
 **Một lô (đợt 2 đến 8):**
 
-> Bạn làm lô **D<đợt>-L<lô>** trong `plans/lam-lai/README.md` của repo opus. Đọc `AGENTS.md`; các mục Bảy luật, Quy tắc chung, Quy trình mỗi lô và Đợt <đợt> trong kế hoạch; danh sách trang của lô trong `plans/lam-lai/anh-xa.md`; `plans/ben-vung/chuan-kiem-dinh.md`. Tạo nhánh `moi/d<đợt>-l<lô>` từ `main`. Chuyển từng trang từ `../opus-zero/docs/` bằng `tools/chuyen/`, tách dữ liệu, kiểm định lượt 1 và ghi hồ sơ, cả hồ sơ của các trường dữ liệu mà trang của lô hiện ra nếu trường ấy chưa khóa; chưa khóa. Chỉ chạm file của lô. Không push. Khi xong: `npm run build:xem` và `npm test` đạt; commit; viết báo cáo `plans/lam-lai/bao-cao/d<đợt>-l<lô>.md`; xuất danh sách nhận định cho lượt 2 bằng `python3 tools/khoa.py xuat D<đợt>-L<lô>`.
+> Bạn làm lô **D<đợt>-L<lô>** trong `plans/lam-lai/README.md` của repo opus. Đọc `AGENTS.md`; các mục Bảy luật, Quy tắc chung, Quy trình mỗi lô và Đợt <đợt> trong kế hoạch; danh sách trang của lô trong `plans/lam-lai/anh-xa.md`; `plans/ben-vung/chuan-kiem-dinh.md`. Tạo nhánh `moi/d<đợt>-l<lô>` từ `main`. Chuyển từng trang từ `../opus-zero/docs/` bằng `tools/chuyen/`, tách dữ liệu, kiểm định lượt 1 và ghi hồ sơ, kể cả các trường dữ liệu chưa khóa mà trang của lô hiện ra; chưa khóa gì. Chỉ chạm file của lô. Không push. Khi xong: `npm run build:xem` và `npm test` đạt; commit; viết báo cáo `plans/lam-lai/bao-cao/d<đợt>-l<lô>.md`; xuất danh sách nhận định cho lượt 2 bằng `python3 tools/khoa.py xuat D<đợt>-L<lô>`.
 
 **Lượt 2:** lời mẫu ở `../ben-vung/chuan-kiem-dinh.md` mục 8.
 
