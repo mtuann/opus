@@ -1,0 +1,18 @@
+# Bộ dữ liệu hỏng mẫu (D1.2). Mỗi lỗi cố ý có ghi chú "lỗi:". Thử: OPUS_DU_LIEU=tests/du-lieu-hong npm run build
+# (build phải hỏng và liệt kê đủ các lỗi). tests/du-lieu.test.mjs kiểm từng lỗi.
+- id: 1
+  ten: Khởi đầu
+  nhan_grade: trước Grade 1
+  tuong_duong: trước Grade 1
+  grade_tu: 0
+  grade_den: 0
+  moc_thoi_gian: 0–6 tháng
+  thoi_luong: 20–30 phút/ngày
+- id: 3 # lỗi: chặng nhảy từ 1 lên 3
+  ten: Sơ trung cấp
+  nhan_grade: Grade 3
+  tuong_duong: Grade 3
+  grade_tu: 5 # lỗi: lớn hơn grade_den
+  grade_den: 3
+  moc_thoi_gian: 1,5–2,5 năm
+  thoi_luong: 30–45 phút

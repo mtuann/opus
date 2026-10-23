@@ -26,6 +26,14 @@ npm test          # kiểm thử trên dist/: chạy sau npm run build
 
 - Kiểm thử ở `tests/*.test.mjs`, chạy bằng trình kiểm thử có sẵn của Node (`node --test`), không cần gói thêm. Thêm kiểm thử thì thêm file `tests/<tên>.test.mjs`.
 - `npm run build:xem` (bản xem, thêm trang chưa khóa) có từ D1.6.
+- `tools/` dùng Python 3.12: `python3 -m pip install -r requirements.txt`.
+
+## Dữ liệu
+
+- Năm bộ dữ liệu YAML trong `src/data/`: `cap-do.yml` (7 chặng), `tac-pham.yml`, `nha-soan-nhac.yml` (mọi người có năm sinh–mất trên site), `thuat-ngu.yml`, `trang.yml` (tầng của mọi trang). Trường, kiểu và các phép kiểm chéo: `src/du-lieu.mjs`; trong code Astro đọc bằng `getCollection('tac-pham')`…
+- Thông tin dùng ở nhiều trang (chặng, Grade, năm sinh–mất, số danh mục, danh sách tác phẩm) lấy từ dữ liệu, không viết tay. Trang tác phẩm chỉ khai `tac_pham: <slug>` ở frontmatter.
+- Dữ liệu sai (YAML hỏng, sai kiểu, trường lạ, trùng id, tham chiếu tới thứ không có) thì build hỏng. Thử: `OPUS_DU_LIEU=tests/du-lieu-hong npm run build`.
+- `tools/du_lieu/tach.py` tách dữ liệu từ site cũ, chỉ chạy một lần (D1.2): chạy lại sẽ ghi đè. Từ đợt 2, sửa `src/data/` bằng tay, theo hồ sơ kiểm định.
 
 ## Giao diện
 

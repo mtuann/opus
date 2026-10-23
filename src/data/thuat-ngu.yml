@@ -1,0 +1,704 @@
+# Sinh một lần bằng tools/du_lieu/tach.py từ ../opus-zero/docs/ (commit 5d08189), việc D1.2.
+# Chưa kiểm định, chưa khóa. Từ nay sửa tay; trường và kiểu: src/du-lieu.mjs.
+
+- id: grave
+  thuat_ngu: Grave
+  nghia: Rất chậm, nặng nề
+  ghi_chu: Chậm nhất trong các thuật ngữ thường gặp
+  nhom: Tốc độ
+- id: largo
+  thuat_ngu: Largo
+  nghia: Rất chậm, rộng rãi
+  ghi_chu: Khoảng 40–60 BPM
+  nhom: Tốc độ
+- id: lento
+  thuat_ngu: Lento
+  nghia: Chậm
+  nhom: Tốc độ
+- id: adagio
+  thuat_ngu: Adagio
+  nghia: Chậm, thong thả
+  ghi_chu: Khoảng 66–76 BPM
+  nhom: Tốc độ
+- id: andante
+  thuat_ngu: Andante
+  nghia: Vừa phải, như bước đi
+  ghi_chu: Khoảng 76–108 BPM
+  nhom: Tốc độ
+- id: andantino
+  thuat_ngu: Andantino
+  nghia: Hơi nhanh hơn Andante
+  nhom: Tốc độ
+- id: moderato
+  thuat_ngu: Moderato
+  nghia: Vừa
+  ghi_chu: Khoảng 108–120 BPM
+  nhom: Tốc độ
+- id: allegretto
+  thuat_ngu: Allegretto
+  nghia: Hơi nhanh
+  ghi_chu: Chậm hơn Allegro
+  nhom: Tốc độ
+- id: allegro
+  thuat_ngu: Allegro
+  nghia: Nhanh, vui tươi
+  ghi_chu: Khoảng 120–156 BPM
+  nhom: Tốc độ
+- id: vivace
+  thuat_ngu: Vivace
+  nghia: Nhanh, sống động
+  nhom: Tốc độ
+- id: presto
+  thuat_ngu: Presto
+  nghia: Rất nhanh
+  ghi_chu: Khoảng 168–200 BPM
+  nhom: Tốc độ
+- id: prestissimo
+  thuat_ngu: Prestissimo
+  nghia: Cực nhanh
+  nhom: Tốc độ
+- id: accelerando
+  thuat_ngu: accelerando
+  nghia: Nhanh dần
+  ghi_chu: Viết tắt accel.
+  nhom: Thay đổi tốc độ
+- id: ritardando
+  thuat_ngu: ritardando
+  nghia: Chậm dần
+  ghi_chu: Viết tắt rit.
+  nhom: Thay đổi tốc độ
+- id: rallentando
+  thuat_ngu: rallentando
+  nghia: Chậm dần
+  ghi_chu: Viết tắt rall.
+  nhom: Thay đổi tốc độ
+- id: a-tempo
+  thuat_ngu: a tempo
+  nghia: Trở lại tốc độ ban đầu
+  nhom: Thay đổi tốc độ
+- id: rubato
+  thuat_ngu: rubato
+  nghia: Co giãn tốc độ tự do để diễn cảm
+  ghi_chu: Đặc trưng khi chơi Chopin
+  nhom: Thay đổi tốc độ
+- id: piu-mosso
+  thuat_ngu: più mosso
+  nghia: Nhanh hơn
+  nhom: Thay đổi tốc độ
+- id: meno-mosso
+  thuat_ngu: meno mosso
+  nghia: Chậm hơn
+  nhom: Thay đổi tốc độ
+- id: ma-non-troppo
+  thuat_ngu: ma non troppo
+  nghia: Nhưng không quá
+  ghi_chu: 'Allegro ma non troppo: nhanh nhưng không quá nhanh'
+  nhom: Thay đổi tốc độ
+- id: pianissimo
+  thuat_ngu: pianissimo
+  nghia: Rất nhỏ
+  ghi_chu: Ký hiệu pp
+  nhom: Cường độ
+- id: piano
+  thuat_ngu: piano
+  nghia: Nhỏ
+  ghi_chu: Ký hiệu p
+  nhom: Cường độ
+- id: mezzo-piano
+  thuat_ngu: mezzo piano
+  nghia: Hơi nhỏ
+  ghi_chu: Ký hiệu mp
+  nhom: Cường độ
+- id: mezzo-forte
+  thuat_ngu: mezzo forte
+  nghia: Hơi to
+  ghi_chu: Ký hiệu mf
+  nhom: Cường độ
+- id: forte
+  thuat_ngu: forte
+  nghia: To
+  ghi_chu: Ký hiệu f
+  nhom: Cường độ
+- id: fortissimo
+  thuat_ngu: fortissimo
+  nghia: Rất to
+  ghi_chu: Ký hiệu ff
+  nhom: Cường độ
+- id: crescendo
+  thuat_ngu: crescendo
+  nghia: To dần
+  ghi_chu: Viết tắt cresc., hoặc dấu < kéo dài
+  nhom: Cường độ
+- id: diminuendo
+  thuat_ngu: diminuendo
+  nghia: Nhỏ dần
+  ghi_chu: Viết tắt dim., hoặc dấu > kéo dài
+  nhom: Cường độ
+- id: sforzando
+  thuat_ngu: sforzando
+  nghia: Nhấn mạnh đột ngột
+  ghi_chu: Ký hiệu sfz
+  nhom: Cường độ
+- id: forte-piano
+  thuat_ngu: forte-piano
+  nghia: To rồi nhỏ ngay
+  ghi_chu: Ký hiệu fp
+  nhom: Cường độ
+- id: legato
+  thuat_ngu: legato
+  nghia: Liền mạch
+  ghi_chu: Ký hiệu dấu luyến
+  nhom: Cách diễn tấu
+- id: staccato
+  thuat_ngu: staccato
+  nghia: Ngắt ngắn
+  ghi_chu: Chấm trên hoặc dưới đầu nốt
+  nhom: Cách diễn tấu
+- id: tenuto
+  thuat_ngu: tenuto
+  nghia: Giữ đủ độ dài
+  ghi_chu: Gạch ngang ngắn trên nốt
+  nhom: Cách diễn tấu
+- id: accent
+  thuat_ngu: accent
+  nghia: Nhấn
+  ghi_chu: Ký hiệu >
+  nhom: Cách diễn tấu
+- id: marcato
+  thuat_ngu: marcato
+  nghia: Nhấn mạnh, rõ
+  ghi_chu: Ký hiệu ^
+  nhom: Cách diễn tấu
+- id: fermata
+  thuat_ngu: fermata
+  nghia: Ngân dài tùy ý
+  ghi_chu: Hình con mắt
+  nhom: Cách diễn tấu
+- id: pizzicato
+  thuat_ngu: pizzicato
+  nghia: Gảy dây bằng ngón tay
+  ghi_chu: Đàn dây; viết tắt pizz.
+  nhom: Cách diễn tấu
+- id: arco
+  thuat_ngu: arco
+  nghia: Kéo vĩ
+  ghi_chu: Trở lại sau pizzicato
+  nhom: Cách diễn tấu
+- id: glissando
+  thuat_ngu: glissando
+  nghia: Lướt liên tục từ nốt này sang nốt khác
+  nhom: Cách diễn tấu
+- id: tremolo
+  thuat_ngu: tremolo
+  nghia: Lặp lại rất nhanh một nốt hoặc đổi giữa hai nốt
+  nhom: Cách diễn tấu
+- id: con-sordino
+  thuat_ngu: con sordino
+  nghia: Dùng câm tiếng (mute)
+  ghi_chu: Với đàn dây và kèn; âm thanh mờ, nhỏ. Trên piano, xem mục Piano bên dưới
+  nhom: Cách diễn tấu
+- id: trill
+  thuat_ngu: trill
+  nghia: 'Láy rền: đổi nhanh giữa nốt chính và nốt trên'
+  ghi_chu: Ký hiệu tr
+  nhom: Cách diễn tấu
+- id: dolce
+  thuat_ngu: dolce
+  nghia: Ngọt ngào
+  nhom: Tính cách
+- id: cantabile
+  thuat_ngu: cantabile
+  nghia: Như hát
+  nhom: Tính cách
+- id: espressivo
+  thuat_ngu: espressivo
+  nghia: Diễn cảm
+  nhom: Tính cách
+- id: con-brio
+  thuat_ngu: con brio
+  nghia: Sôi nổi, đầy năng lượng
+  ghi_chu: Beethoven Giao hưởng số 5, chương 1
+  nhom: Tính cách
+- id: maestoso
+  thuat_ngu: maestoso
+  nghia: Trang trọng, uy nghi
+  nhom: Tính cách
+- id: agitato
+  thuat_ngu: agitato
+  nghia: Kích động, bồn chồn
+  nhom: Tính cách
+- id: grazioso
+  thuat_ngu: grazioso
+  nghia: Duyên dáng
+  nhom: Tính cách
+- id: sostenuto
+  thuat_ngu: sostenuto
+  nghia: Ngân giữ
+  nhom: Tính cách
+- id: sotto-voce
+  thuat_ngu: sotto voce
+  nghia: Khẽ khàng, như nói nhỏ
+  nhom: Tính cách
+- id: scherzando
+  thuat_ngu: scherzando
+  nghia: Đùa vui
+  ghi_chu: Cùng gốc với scherzo
+  nhom: Tính cách
+- id: giocoso
+  thuat_ngu: giocoso
+  nghia: Vui tươi, tinh nghịch
+  nhom: Tính cách
+- id: tranquillo
+  thuat_ngu: tranquillo
+  nghia: Yên tĩnh
+  nhom: Tính cách
+- id: da-capo
+  thuat_ngu: Da Capo
+  nghia: Quay lại từ đầu
+  ghi_chu: Viết tắt D.C.
+  nhom: Chỉ đường trên bản nhạc
+- id: dal-segno
+  thuat_ngu: Dal Segno
+  nghia: Quay lại từ dấu Segno
+  ghi_chu: Viết tắt D.S.
+  nhom: Chỉ đường trên bản nhạc
+- id: fine
+  thuat_ngu: Fine
+  nghia: Kết thúc
+  ghi_chu: Dùng với D.C. al Fine
+  nhom: Chỉ đường trên bản nhạc
+- id: coda
+  thuat_ngu: Coda
+  nghia: Đoạn kết
+  ghi_chu: 'Nghĩa đen: "cái đuôi"'
+  nhom: Chỉ đường trên bản nhạc
+- id: prima-volta
+  thuat_ngu: prima volta
+  nghia: Ngoặc lần 1
+  nhom: Chỉ đường trên bản nhạc
+- id: seconda-volta
+  thuat_ngu: seconda volta
+  nghia: Ngoặc lần 2
+  nhom: Chỉ đường trên bản nhạc
+- id: ottava
+  thuat_ngu: ottava
+  nghia: Chơi cao hơn một quãng tám
+  ghi_chu: Ký hiệu 8va
+  nhom: Chỉ đường trên bản nhạc
+- id: tacet
+  thuat_ngu: tacet
+  nghia: Im lặng (bè này không chơi)
+  nhom: Chỉ đường trên bản nhạc
+- id: attacca
+  thuat_ngu: attacca
+  nghia: Chuyển sang chương sau không ngắt nghỉ
+  ghi_chu: Beethoven 5, chương 3 sang 4
+  nhom: Chỉ đường trên bản nhạc
+- id: ped
+  thuat_ngu: Ped.
+  nghia: Nhấn bàn đạp vang
+  ghi_chu: Dấu \* là nhả. Xem [Bàn đạp](../piano/ban-dap.md)
+  nhom: Piano
+- id: con-pedale
+  thuat_ngu: con pedale
+  nghia: Dùng bàn đạp
+  ghi_chu: Thường để người chơi tự quyết định chỗ đổi
+  nhom: Piano
+- id: senza-pedale
+  thuat_ngu: senza pedale
+  nghia: Không dùng bàn đạp
+  nhom: Piano
+- id: una-corda
+  thuat_ngu: una corda
+  nghia: Dùng bàn đạp trái (làm tiếng nhỏ và mờ hơn)
+  ghi_chu: 'Nghĩa đen: "một dây"'
+  nhom: Piano
+- id: tre-corde
+  thuat_ngu: tre corde
+  nghia: Nhả bàn đạp trái
+  ghi_chu: 'Nghĩa đen: "ba dây"; viết tắt t.c.'
+  nhom: Piano
+- id: senza-sordino
+  thuat_ngu: senza sordino
+  nghia: 'Ở Beethoven: giữ bộ giảm âm nhấc lên, tức giữ bàn đạp vang'
+  ghi_chu: Đầu chương 1 Sonata *Ánh trăng*. Xem [Bàn đạp](../piano/ban-dap.md#beethoven)
+  nhom: Piano
+- id: con-sordino-con-sordina
+  thuat_ngu: con sordino, con sordina
+  nghia: 'Ở nhiều nhà soạn nhạc về sau (Debussy, Ravel…): dùng bàn đạp trái *una corda*'
+  ghi_chu: 'Cùng chữ *sordino*: ở Beethoven là bộ giảm âm, về sau là una corda. Xem [Bàn đạp: ký hiệu](../piano/ban-dap.md#ky-hieu)'
+  nhom: Piano
+- id: sostenuto-ban-dap
+  thuat_ngu: sostenuto (bàn đạp)
+  nghia: 'Bàn đạp giữa: chỉ giữ các nốt đang được nhấn'
+  ghi_chu: Khác *sostenuto* nghĩa là "ngân giữ"
+  nhom: Piano
+- id: m-d-m-s
+  thuat_ngu: m.d. / m.s.
+  nghia: Tay phải / tay trái
+  ghi_chu: Tiếng Ý *mano destra* / *mano sinistra*; tiếng Pháp m.d. / m.g.; tiếng Anh r.h. / l.h.
+  nhom: Piano
+- id: loco
+  thuat_ngu: loco
+  nghia: Trở lại quãng tám như viết
+  ghi_chu: Sau một đoạn *8va*
+  nhom: Piano
+- id: leggiero
+  thuat_ngu: leggiero
+  nghia: Nhẹ nhàng, thanh thoát
+  ghi_chu: Hay gặp ở các đoạn chạy nhanh
+  nhom: Piano
+- id: non-legato
+  thuat_ngu: non legato
+  nghia: Không liền, hơi tách
+  ghi_chu: Cách chơi thường dùng cho nhạc Baroque trên piano
+  nhom: Piano
+- id: arpeggiando
+  thuat_ngu: arpeggiando
+  nghia: Rải hợp âm
+  ghi_chu: Ký hiệu đường lượn sóng dọc trước hợp âm
+  nhom: Piano
+- id: mordent
+  thuat_ngu: mordent
+  nghia: 'Láy: chính – dưới – chính (có gạch)'
+  ghi_chu: Không gạch là láy trên. Xem [Nốt hoa mỹ](../piano/not-hoa-my.md)
+  nhom: Piano
+- id: turn
+  thuat_ngu: turn
+  nghia: 'Láy quanh: trên – chính – dưới – chính'
+  ghi_chu: Ký hiệu chữ S nằm ngang
+  nhom: Piano
+- id: appoggiatura
+  thuat_ngu: appoggiatura
+  nghia: Nốt dựa, đúng phách, lấy bớt độ dài của nốt chính
+  ghi_chu: Nốt nhỏ không gạch
+  nhom: Piano
+- id: acciaccatura
+  thuat_ngu: acciaccatura
+  nghia: Nốt luyến cực nhanh trước nốt chính
+  ghi_chu: Nốt nhỏ có gạch chéo
+  nhom: Piano
+- id: fioritura
+  thuat_ngu: fioritura
+  nghia: Chùm nốt trang trí tự do
+  ghi_chu: Đặc trưng trong nhạc Chopin
+  nhom: Piano
+- id: alberti-bass
+  thuat_ngu: Alberti bass
+  nghia: 'Hình đệm rải hợp âm: trầm – cao – giữa – cao'
+  ghi_chu: Đặt theo tên Domenico Alberti
+  nhom: Piano
+- id: fingering
+  thuat_ngu: fingering
+  nghia: Số ngón tay ghi trên nốt
+  ghi_chu: 1 là ngón cái, ở cả hai tay
+  nhom: Piano
+- id: urtext
+  thuat_ngu: Urtext
+  nghia: Bản nhạc in theo nguồn gốc của tác giả
+  ghi_chu: Ít thêm thắt của người biên tập
+  nhom: Piano
+- id: pitch
+  thuat_ngu: pitch
+  nghia: Cao độ
+  nhom: Nhạc lý (Anh – Việt)
+- id: staff
+  thuat_ngu: staff
+  nghia: Khuông nhạc
+  ghi_chu: 'Tiếng Anh–Anh: stave'
+  nhom: Nhạc lý (Anh – Việt)
+- id: clef
+  thuat_ngu: clef
+  nghia: Khóa nhạc
+  ghi_chu: treble = khóa Sol, bass = khóa Fa
+  nhom: Nhạc lý (Anh – Việt)
+- id: ledger-line
+  thuat_ngu: ledger line
+  nghia: Dòng kẻ phụ
+  nhom: Nhạc lý (Anh – Việt)
+- id: time-signature
+  thuat_ngu: time signature
+  nghia: Số chỉ nhịp
+  nhom: Nhạc lý (Anh – Việt)
+- id: measure
+  thuat_ngu: measure
+  nghia: Ô nhịp
+  ghi_chu: 'Tiếng Anh–Anh: bar'
+  nhom: Nhạc lý (Anh – Việt)
+- id: beat
+  thuat_ngu: beat
+  nghia: Phách
+  nhom: Nhạc lý (Anh – Việt)
+- id: tempo
+  thuat_ngu: tempo
+  nghia: Tốc độ
+  nhom: Nhạc lý (Anh – Việt)
+- id: interval
+  thuat_ngu: interval
+  nghia: Quãng
+  nhom: Nhạc lý (Anh – Việt)
+- id: semitone
+  thuat_ngu: semitone
+  nghia: Nửa cung
+  ghi_chu: 'Tiếng Anh–Mỹ: half step'
+  nhom: Nhạc lý (Anh – Việt)
+- id: tone
+  thuat_ngu: tone
+  nghia: Cung
+  ghi_chu: 'Tiếng Anh–Mỹ: whole step'
+  nhom: Nhạc lý (Anh – Việt)
+- id: scale
+  thuat_ngu: scale
+  nghia: Gam
+  nhom: Nhạc lý (Anh – Việt)
+- id: key
+  thuat_ngu: key
+  nghia: Giọng
+  nhom: Nhạc lý (Anh – Việt)
+- id: key-signature
+  thuat_ngu: key signature
+  nghia: Hóa biểu
+  nhom: Nhạc lý (Anh – Việt)
+- id: accidental
+  thuat_ngu: accidental
+  nghia: Dấu hóa bất thường
+  nhom: Nhạc lý (Anh – Việt)
+- id: tonic
+  thuat_ngu: tonic
+  nghia: Chủ âm
+  ghi_chu: Bậc I
+  nhom: Nhạc lý (Anh – Việt)
+- id: dominant
+  thuat_ngu: dominant
+  nghia: Át âm
+  ghi_chu: Bậc V
+  nhom: Nhạc lý (Anh – Việt)
+- id: subdominant
+  thuat_ngu: subdominant
+  nghia: Hạ át âm
+  ghi_chu: Bậc IV
+  nhom: Nhạc lý (Anh – Việt)
+- id: leading-tone
+  thuat_ngu: leading tone
+  nghia: Cảm âm
+  ghi_chu: Bậc VII, cách chủ âm nửa cung
+  nhom: Nhạc lý (Anh – Việt)
+- id: chord
+  thuat_ngu: chord
+  nghia: Hợp âm
+  nhom: Nhạc lý (Anh – Việt)
+- id: triad
+  thuat_ngu: triad
+  nghia: Hợp âm ba
+  nhom: Nhạc lý (Anh – Việt)
+- id: inversion
+  thuat_ngu: inversion
+  nghia: Thể đảo
+  nhom: Nhạc lý (Anh – Việt)
+- id: cadence
+  thuat_ngu: cadence
+  nghia: Kết
+  nhom: Nhạc lý (Anh – Việt)
+- id: phrase
+  thuat_ngu: phrase
+  nghia: Câu nhạc
+  nhom: Nhạc lý (Anh – Việt)
+- id: modulation
+  thuat_ngu: modulation
+  nghia: Chuyển giọng
+  nhom: Nhạc lý (Anh – Việt)
+- id: consonance
+  thuat_ngu: consonance
+  nghia: Thuận tai
+  nhom: Nhạc lý (Anh – Việt)
+- id: dissonance
+  thuat_ngu: dissonance
+  nghia: Nghịch tai
+  nhom: Nhạc lý (Anh – Việt)
+- id: movement
+  thuat_ngu: movement
+  nghia: Chương
+  ghi_chu: Một phần độc lập của tác phẩm lớn
+  nhom: Hình thức và thể loại
+- id: symphony
+  thuat_ngu: symphony
+  nghia: Giao hưởng
+  ghi_chu: Thường 4 chương
+  nhom: Hình thức và thể loại
+- id: concerto
+  thuat_ngu: concerto
+  nghia: Concerto
+  ghi_chu: Độc tấu cùng dàn nhạc
+  nhom: Hình thức và thể loại
+- id: sonata
+  thuat_ngu: sonata
+  nghia: Sonata
+  ghi_chu: Tác phẩm cho một hoặc hai nhạc cụ
+  nhom: Hình thức và thể loại
+- id: sonata-form
+  thuat_ngu: sonata form
+  nghia: Hình thức sonata
+  ghi_chu: Trình bày – phát triển – tái hiện
+  nhom: Hình thức và thể loại
+- id: exposition
+  thuat_ngu: exposition
+  nghia: Phần trình bày
+  nhom: Hình thức và thể loại
+- id: development
+  thuat_ngu: development
+  nghia: Phần phát triển
+  nhom: Hình thức và thể loại
+- id: recapitulation
+  thuat_ngu: recapitulation
+  nghia: Phần tái hiện
+  nhom: Hình thức và thể loại
+- id: cadenza
+  thuat_ngu: cadenza
+  nghia: Đoạn độc tấu tự do trong concerto
+  nhom: Hình thức và thể loại
+- id: fugue
+  thuat_ngu: fugue
+  nghia: Fugue
+  ghi_chu: Chủ đề lần lượt vào ở các bè
+  nhom: Hình thức và thể loại
+- id: rondo
+  thuat_ngu: rondo
+  nghia: Rondo
+  ghi_chu: A B A C A…
+  nhom: Hình thức và thể loại
+- id: scherzo
+  thuat_ngu: scherzo
+  nghia: Scherzo
+  ghi_chu: Chương nhanh, vui; nghĩa đen "trò đùa"
+  nhom: Hình thức và thể loại
+- id: minuet
+  thuat_ngu: minuet
+  nghia: Minuet
+  ghi_chu: Điệu múa nhịp 3/4
+  nhom: Hình thức và thể loại
+- id: suite
+  thuat_ngu: suite
+  nghia: Tổ khúc
+  ghi_chu: Chuỗi các điệu múa
+  nhom: Hình thức và thể loại
+- id: opus
+  thuat_ngu: opus
+  nghia: Tác phẩm (số)
+  ghi_chu: Viết tắt Op.; số thứ tự tác phẩm
+  nhom: Hình thức và thể loại
+- id: etude
+  thuat_ngu: étude
+  nghia: Bài luyện
+  nhom: Hình thức và thể loại
+- id: nocturne
+  thuat_ngu: nocturne
+  nghia: Dạ khúc
+  nhom: Hình thức và thể loại
+- id: overture
+  thuat_ngu: overture
+  nghia: Khúc mở màn
+  nhom: Hình thức và thể loại
+- id: aria
+  thuat_ngu: aria
+  nghia: Aria
+  ghi_chu: Đoạn hát đơn trong opera
+  nhom: Hình thức và thể loại
+- id: oratorio
+  thuat_ngu: oratorio
+  nghia: Oratorio
+  ghi_chu: Như opera nhưng không dàn dựng
+  nhom: Hình thức và thể loại
+- id: requiem
+  thuat_ngu: requiem
+  nghia: Lễ cầu hồn
+  nhom: Hình thức và thể loại
+- id: chamber-music
+  thuat_ngu: chamber music
+  nghia: Nhạc thính phòng
+  ghi_chu: Nhóm nhỏ, mỗi bè một người
+  nhom: Hình thức và thể loại
+- id: string-quartet
+  thuat_ngu: string quartet
+  nghia: Tứ tấu đàn dây
+  ghi_chu: 2 violin, viola, cello
+  nhom: Hình thức và thể loại
+- id: texture
+  thuat_ngu: texture
+  nghia: Kết cấu
+  ghi_chu: Cách các bè/giọng kết hợp với nhau
+  nhom: Kết cấu, hình thức và kỹ thuật thế kỷ 20
+- id: monophony
+  thuat_ngu: monophony
+  nghia: Đơn âm
+  ghi_chu: Một dòng giai điệu duy nhất
+  nhom: Kết cấu, hình thức và kỹ thuật thế kỷ 20
+- id: homophony
+  thuat_ngu: homophony
+  nghia: Chủ điệu
+  ghi_chu: Một giai điệu chính với bè đệm
+  nhom: Kết cấu, hình thức và kỹ thuật thế kỷ 20
+- id: polyphony
+  thuat_ngu: polyphony
+  nghia: Phức điệu
+  ghi_chu: Nhiều giai điệu độc lập cùng lúc
+  nhom: Kết cấu, hình thức và kỹ thuật thế kỷ 20
+- id: heterophony
+  thuat_ngu: heterophony
+  nghia: Dị âm
+  ghi_chu: Cùng một giai điệu, mỗi nhạc cụ chơi biến tấu riêng
+  nhom: Kết cấu, hình thức và kỹ thuật thế kỷ 20
+- id: motif
+  thuat_ngu: motif
+  nghia: Môtip
+  ghi_chu: Ý nhạc ngắn, đơn vị xây dựng tác phẩm
+  nhom: Kết cấu, hình thức và kỹ thuật thế kỷ 20
+- id: sequence
+  thuat_ngu: sequence
+  nghia: Chuỗi
+  ghi_chu: Lặp lại môtip ở các cao độ khác nhau
+  nhom: Kết cấu, hình thức và kỹ thuật thế kỷ 20
+- id: augmentation
+  thuat_ngu: augmentation
+  nghia: Nới rộng
+  ghi_chu: Kéo dài trường độ các nốt của môtip
+  nhom: Kết cấu, hình thức và kỹ thuật thế kỷ 20
+- id: diminution
+  thuat_ngu: diminution
+  nghia: Thu hẹp
+  ghi_chu: Rút ngắn trường độ các nốt của môtip
+  nhom: Kết cấu, hình thức và kỹ thuật thế kỷ 20
+- id: fragmentation
+  thuat_ngu: fragmentation
+  nghia: Chia nhỏ
+  ghi_chu: Chỉ dùng một mảnh của môtip để phát triển
+  nhom: Kết cấu, hình thức và kỹ thuật thế kỷ 20
+- id: inversion-giai-dieu
+  thuat_ngu: inversion (giai điệu)
+  nghia: Đảo
+  ghi_chu: Lật ngược hướng đi của môtip; khác "thể đảo" của hợp âm
+  nhom: Kết cấu, hình thức và kỹ thuật thế kỷ 20
+- id: whole-tone-scale
+  thuat_ngu: whole-tone scale
+  nghia: Gam toàn cung
+  ghi_chu: 6 nốt, mỗi nốt cách nhau một cung
+  nhom: Kết cấu, hình thức và kỹ thuật thế kỷ 20
+- id: octatonic-scale
+  thuat_ngu: octatonic scale
+  nghia: Gam bát cung
+  ghi_chu: 8 nốt xen kẽ cung – nửa cung
+  nhom: Kết cấu, hình thức và kỹ thuật thế kỷ 20
+- id: polytonality
+  thuat_ngu: polytonality
+  nghia: Đa điệu tính
+  ghi_chu: Nhiều giọng cùng lúc
+  nhom: Kết cấu, hình thức và kỹ thuật thế kỷ 20
+- id: twelve-tone
+  thuat_ngu: twelve-tone
+  nghia: Nhạc 12 âm
+  ghi_chu: Dùng đủ 12 nốt nửa cung theo một dãy định sẵn
+  nhom: Kết cấu, hình thức và kỹ thuật thế kỷ 20
+- id: minimalism
+  thuat_ngu: minimalism
+  nghia: Tối giản
+  ghi_chu: Lặp lại các mẫu ngắn với biến đổi dần dần
+  nhom: Kết cấu, hình thức và kỹ thuật thế kỷ 20
