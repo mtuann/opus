@@ -32,6 +32,8 @@ test('bộ dữ liệu hỏng mẫu: mỗi lỗi cố ý đều bị bắt', () 
 		'nha-soan-nhac.yml: bản ghi "Mozart": id:',
 		'tac-pham.yml: bản ghi "fur-elise": chang:',
 		'tac-pham.yml: bản ghi "fur-elise": hinh.bai-hoc.0.doan.1.3:',
+		'tac-pham.yml: bản ghi "fur-elise": ban_thu.0.page:',
+		'tac-pham.yml: bản ghi "fur-elise": ban_thu.0.parts.0: mỗi phần cần mp3 hay link',
 		'tac-pham.yml: bản ghi "bagatelle": có hinh.nghe nhưng không có trang hướng dẫn nghe dùng bản ghi này',
 		'tac-pham.yml: bản ghi "ballade": tac_gia "chopin-sai" không có',
 		'tac-pham.yml: bản ghi "ballade": chặng 2 không có trong cap-do.yml',

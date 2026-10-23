@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { satteri } from '@astrojs/markdown-satteri';
+import { idCu } from './src/plugins/id-cu.mjs';
 import { opusMarkdown } from './src/plugins/opus-markdown.mjs';
 
 const site = 'https://mtuann.github.io';
@@ -32,9 +33,11 @@ export default defineConfig({
 		// khối ```abc, ```quiz và các chỉ thị ::hop-tac-pham… (cú pháp: AGENTS.md, mục "Khối đặc biệt").
 		processor: satteri({
 			mdastPlugins: [opusMarkdown({ base: `${base}/`, docsDir: fileURLToPath(new URL('./src/content/docs/', import.meta.url)) })],
+			// id tiêu đề theo kiểu site cũ, để link #mục cũ vẫn đúng (D1.4); chạy trước plugin id của Starlight
+			hastPlugins: [idCu()],
 			features: {
 				smartPunctuation: false, // giữ nguyên dấu nháy, gạch ngang như chữ của site cũ (Astro mặc định bật)
-				headingAttributes: true, // ## Tiêu đề { #id }: giữ id cũ của tiêu đề
+				headingAttributes: true, // ## Tiêu đề { #id }: id viết tay
 				definitionList: true,
 				gfm: { footnotes: { label: 'Chú thích', backLabel: 'Quay lại chỗ chú thích {reference}' } },
 			},

@@ -4,7 +4,8 @@
 Chạy từ thư mục gốc của repo:  python3 tools/du_lieu/tach.py [--ghi-de] > /tmp/tach.md
 Ghi src/data/cap-do.yml, tac-pham.yml, nha-soan-nhac.yml, thuat-ngu.yml, trang.yml; in ra (Markdown) các chỗ site cũ
 tự mâu thuẫn và các chỗ script không tự quyết, để chép vào báo cáo. Chỉ đọc ../opus-zero/ (file và lịch sử git).
-Trường hinh của tac-pham.yml (sơ đồ các đoạn, từ ../opus-zero/tools/figures.py) thêm ở việc D1.3.
+Trường hinh của tac-pham.yml (sơ đồ các đoạn, từ ../opus-zero/tools/figures.py) thêm ở việc D1.3; trường ban_thu (bản
+thu gợi ý, từ data-rec của khối nghe trong trang) thêm ở việc D1.4.
 
 src/data/ đã có dữ liệu thì script từ chối ghi, trừ khi có cờ --ghi-de. Chỉ ghi đè trước khi dữ liệu được kiểm định;
 từ đợt 2, src/data/ sửa tay theo hồ sơ kiểm định.
@@ -12,7 +13,9 @@ Cần PyYAML (requirements.txt).
 """
 import ast
 import collections
+import html
 import importlib.util
+import json
 import pathlib
 import posixpath
 import re
@@ -539,6 +542,34 @@ def them_hinh(recs):
     return recs
 
 
+# ---------- ban_thu: bản thu gợi ý của khối nghe (data-rec trong trang), việc D1.4 ----------
+def them_ban_thu(recs):
+    """Thêm trường ban_thu: bản thu trong data-rec của khối nghe ở trang chính (và trang cap dùng chung bản ghi).
+    Mốc tham khảo (ref) không vào dữ liệu: nó theo từng dòng bảng "Theo dõi khi nghe" của từng trang, nên tools/chuyen/
+    để nó trong trang (::khoi-nghe{moc="…"}). File mp3 của site cũ (../../../assets/audio/x.mp3) thành audio/x.mp3."""
+    for r in recs:
+        trang = [("piano/tac-pham/" if r["loai"] == "bai-hoc" else "nghe-nhac/") + r["slug"]]
+        if r.get("cap") in CUNG_TAC_PHAM.values():
+            trang.append(r["cap"])
+        ban = []
+        for rel in trang:
+            m = re.search(r'<div class="oz-listen" data-rec="([^"]+)"', doc(rel + ".md"))
+            if not m:
+                continue
+            b = json.loads(html.unescape(m.group(1)))
+            b.pop("ref", None)
+            for p in b["parts"]:
+                if "mp3" in p and not p["mp3"].startswith("http"):
+                    p["mp3"] = re.sub(r"^(\.\./)+assets/", "", p["mp3"])
+            if b not in ban:
+                ban.append(b)
+        if len(ban) > 1:
+            bao["Bản thu: hai trang dùng chung bản ghi gợi ý hai bản thu khác nhau"].append(f"`{r['slug']}`")
+        if ban:
+            r["ban_thu"] = ban
+    return recs
+
+
 def main():
     if any((OUT / f).exists() for f in TEP) and "--ghi-de" not in sys.argv:
         sys.exit("src/data/ đã có dữ liệu. Chỉ ghi đè trước khi dữ liệu được kiểm định: chạy lại với --ghi-de.")
@@ -548,8 +579,9 @@ def main():
     ghi("thuat-ngu.yml", thuat_ngu(), commit)
     nguoi = nha_soan_nhac()
     ghi("nha-soan-nhac.yml", nguoi, commit)
-    ghi("tac-pham.yml", them_hinh(tac_pham(nguoi)), commit,
-        "# Trường hinh thêm ở D1.3, từ form_map trong ../opus-zero/tools/figures.py.\n")
+    ghi("tac-pham.yml", them_ban_thu(them_hinh(tac_pham(nguoi))), commit,
+        "# Trường hinh thêm ở D1.3, từ form_map trong ../opus-zero/tools/figures.py;"
+        " ban_thu thêm ở D1.4, từ data-rec của khối nghe.\n")
     for muc, dong in bao.items():
         print(f"### {muc}\n")
         for d in dong:

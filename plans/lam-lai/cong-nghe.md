@@ -64,7 +64,8 @@ Site cũ nằm ở thư mục cạnh `../opus-zero/` (repo cũ, chỉ đọc). M
 - Thành phần riêng viết bằng chỉ thị ngắn, plugin của dự án đổi thành HTML lúc build. Cú pháp chốt ở D1.3 và ghi vào `AGENTS.md`; ví dụ `::khoi-nghe` (đọc bản thu từ bản ghi của trang), `::hinh-cau-truc`, `::hoc-tiep`.
 - Thông tin tác phẩm (hộp thông tin, chip cấp độ) không viết trong trang; trang chỉ khai báo `tac_pham: <slug>` ở frontmatter.
 - Trạng thái kiểm định không ghi vào trang: huy hiệu đọc từ `kiem-dinh/` lúc build.
-- Khối ```abc giữ nguyên cú pháp như site cũ. Link nội bộ theo cú pháp chốt ở D1.4 (thay link tới file `.md` của MkDocs).
+- Khối ```abc giữ nguyên cú pháp như site cũ. Link nội bộ viết địa chỉ trên site, có base (`/opus/piano/gam/#muc`), thay link tới file `.md` của MkDocs; id của tiêu đề theo kiểu site cũ để link `#mục` cũ vẫn đúng (D1.4; `AGENTS.md`, mục "Link nội bộ").
+- Trang chuyển từ site cũ bằng `tools/chuyen/chuyen.mjs`; `tools/chuyen/so-chu.mjs` so chữ hiển thị với bản build cũ (D1.4).
 
 ## 6. Thành phần và nguồn chuyển
 

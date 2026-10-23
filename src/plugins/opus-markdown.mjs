@@ -1,7 +1,9 @@
 // Plugin Markdown của dự án cho Sätteri (cây mdast), đăng ký ở astro.config.mjs (D1.3). Lúc build, nó đổi:
 // - khối ```abc thành khuông nhạc (abcjs vẽ khi tới gần màn hình), khối ```quiz thành câu hỏi kiểm tra nhanh;
 // - chỉ thị một dòng ::hop-tac-pham, ::hinh-cau-truc, ::khoi-nghe, ::hoc-tiep thành thành phần dựng từ bản ghi của
-//   tác phẩm mà trang khai ở frontmatter (tac_pham: <slug>).
+//   tác phẩm mà trang khai ở frontmatter (tac_pham: <slug>);
+// - chỉ thị ::hinh{ten="…"} (hình minh họa) và ::cong-cu{ten="…" …} (công cụ luyện tập) thành thành phần cùng tên, hay
+//   một ô "chưa chuyển" khi lô đầu tiên dùng nó chưa làm thành phần (D1.4).
 // Cú pháp: AGENTS.md, mục "Khối đặc biệt". Chỉ thị khối (aside :::note của Starlight…) để nguyên cho Starlight.
 // Viết sai (chỉ thị một dòng không có tên trong CHI_THI, thiếu tac_pham, thuộc tính lạ, quiz không có đáp án đúng, hình
 // chưa có dữ liệu) thì ném lỗi: build hỏng.
@@ -9,7 +11,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse } from 'yaml';
 import { duLieuDaKiem } from '../du-lieu.mjs';
-import { hinhCauTruc, hocTiep, hopTacPham, khoiNghe, khuongAbc, quiz } from './thanh-phan.mjs';
+import { congCu, hinh, hinhCauTruc, hocTiep, hopTacPham, khoiNghe, khuongAbc, quiz } from './thanh-phan.mjs';
 
 /** Loại của trang tác phẩm theo đường dẫn: bai-hoc (piano/tac-pham/), nghe (nghe-nhac/). */
 function loaiTrang(trang) {
@@ -27,6 +29,9 @@ const CHI_THI = {
 	'hinh-cau-truc': { tacPham: true, ve: ({ rec, trang }) => hinhCauTruc(rec, loaiTrang(trang)) },
 	'khoi-nghe': { thuocTinh: ['moc'], ve: ({ rec, base, tt }) => khoiNghe(rec, base, tt.moc) },
 	'hoc-tiep': { tacPham: true, ve: (c) => hocTiep(c.rec, c) },
+	hinh: { thuocTinh: ['ten*'], ve: ({ tt, trang }) => hinh(tt.ten, trang) },
+	// thuộc tính khác của ::cong-cu là thông số của công cụ (data-* của khối oz- ở site cũ)
+	'cong-cu': { thuocTinh: ['ten*', '…'], ve: ({ tt, trang }) => congCu(tt, trang) },
 };
 
 /** Kiểm thuộc tính của một chỉ thị theo khai báo; trả về thông báo lỗi hay null. */
@@ -59,6 +64,8 @@ export function opusMarkdown({ base, docsDir }) {
 				try {
 					if (node.lang === 'abc') return { type: 'html', value: khuongAbc(node.value) };
 					if (node.lang === 'quiz') return { type: 'html', value: quiz(node.value) };
+					// bài kiểm tra đầu vào (khối ```placement của site cũ): đợt 2 làm thành phần
+					if (node.lang === 'placement') return { type: 'html', value: congCu({ ten: 'placement' }, trang) };
 				} catch (e) {
 					throw loi(e.message);
 				}

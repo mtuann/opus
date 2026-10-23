@@ -189,6 +189,33 @@ export function khoiNghe(rec, base, moc) {
 	return `<div class="oz-listen" data-rec="${esc(JSON.stringify(rec2))}"></div>`;
 }
 
+// ---------- Hình minh họa, công cụ: thành phần các lô thêm dần ----------
+
+/**
+ * Ô thay cho hình hay công cụ chưa có thành phần: build vẫn chạy để xem trang (bản xem), có cảnh báo; kiểm thử chặn
+ * ô này trong bản thật. Lô đầu tiên chuyển trang dùng hình hay công cụ ấy thì làm thành phần và thêm vào HINH, CONG_CU.
+ */
+function chuaChuyen(loai, ten, trang) {
+	console.warn(`[opus] ${trang}: ${loai} "${ten}" chưa có thành phần trên site mới`);
+	return `<p class="oz-chua-co" data-pagefind-ignore>${esc(loai[0].toUpperCase() + loai.slice(1))} "${esc(ten)}" chưa chuyển sang site mới.</p>`;
+}
+
+/** Hình đã có thành phần: tên (như vùng <!-- fig:tên --> của site cũ) -> hàm dựng HTML. */
+const HINH = {};
+
+/** ::hinh{ten="…"}: hình minh họa không thuộc bản ghi tác phẩm (vùng <!-- fig:… --> của trang cũ, trừ hình cấu trúc). */
+export function hinh(ten, trang) {
+	return HINH[ten] ? HINH[ten]() : chuaChuyen('hình', ten, trang);
+}
+
+/** Công cụ đã có thành phần: tên (như khối <div class="oz-tên"> của site cũ) -> hàm dựng HTML từ thông số. */
+const CONG_CU = {};
+
+/** ::cong-cu{ten="…" …}: công cụ luyện tập; thuộc tính khác là thông số (data-* của khối oz- cũ). */
+export function congCu({ ten, ...thongSo }, trang) {
+	return CONG_CU[ten] ? CONG_CU[ten](thongSo) : chuaChuyen('công cụ', ten, trang);
+}
+
 /**
  * ::hoc-tiep: phần sinh từ dữ liệu của mục "Học tiếp", đặt sau 2–5 bài chọn lọc viết tay (mẫu bài học cũ): trang của
  * chặng hiện tại và chặng sau (danh sách mọi bài nằm ở trang chặng, không chép lại vào từng bài) và trang cùng tác phẩm

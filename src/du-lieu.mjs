@@ -29,6 +29,30 @@ export const TANG = ['loi', 'tac-pham', 'tham-chieu', 'khung', 'ngoai-vi'];
 /** Loại đoạn của hình cấu trúc (màu của ô): a, b, c (tương phản), dev (phát triển), cad (kết, âm nền), coda, intro, x. */
 export const LOAI_DOAN = ['a', 'b', 'c', 'dev', 'cad', 'coda', 'intro', 'x'];
 
+/**
+ * Một bản thu gợi ý cho khối nghe, cùng dạng data-rec của site cũ để src/scripts/nghe.js đọc thẳng: người chơi (by),
+ * giấy phép (lic, licUrl), ghi chú (note), trang của bản thu ở nguồn (page), các phần (parts: file mp3 hay link, file gốc,
+ * tiêu đề phần t, thời lượng d giây). File mp3 của site viết từ gốc site, không có base: audio/x.mp3. Mốc tham khảo
+ * theo bảng của từng trang nên nằm trong trang (::khoi-nghe{moc="…"}), không ở đây.
+ */
+const banThu = z
+	.object({
+		by: chu,
+		lic: chu,
+		licUrl: z.url().optional(),
+		note: chu.optional(),
+		page: z.url(),
+		parts: z
+			.array(
+				z
+					.object({ mp3: chu.optional(), src: z.url().optional(), link: z.url().optional(), t: chu.optional(), d: z.number().positive() })
+					.strict()
+					.refine((p) => p.mp3 || p.link, 'mỗi phần cần mp3 hay link'),
+			)
+			.min(1),
+	})
+	.strict();
+
 /** Một sơ đồ các đoạn: mỗi đoạn [nhãn, chú thích nhỏ (có thể rỗng), độ rộng (gần đúng số ô nhịp), loại]. */
 const soDo = z
 	.object({
@@ -114,7 +138,7 @@ export const schema = {
 			thong_tin: z.array(z.tuple([chu, chu])).optional(),
 			// Hình cấu trúc theo trang: bai-hoc ở trang bài học, nghe ở trang hướng dẫn nghe dùng bản ghi này
 			hinh: z.object({ 'bai-hoc': z.array(soDo).min(1).optional(), nghe: z.array(soDo).min(1).optional() }).strict().optional(),
-			ban_thu: z.array(z.unknown()).optional(),
+			ban_thu: z.array(banThu).min(1).optional(),
 			them_ngay: z.iso.date().optional(),
 		})
 		.strict()

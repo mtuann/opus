@@ -37,7 +37,8 @@ npm test          # kiểm thử trên dist/: chạy sau npm run build
   - trang `cap` không có bản ghi riêng: trang đó viết về đúng tác phẩm này và dùng chung bản ghi;
   - trang `cap` có bản ghi riêng (tác phẩm lớn hơn, như *Kinderszenen* của *Träumerei*): hai bản ghi trỏ `cap` sang nhau.
 - Dữ liệu sai (YAML hỏng, sai kiểu, trường lạ, trùng id, tham chiếu tới thứ không có) thì build hỏng. Thử: `OPUS_DU_LIEU=tests/du-lieu-hong npm run build`.
-- `tools/du_lieu/tach.py` tách dữ liệu từ site cũ, chỉ chạy một lần (D1.2); `src/data/` đã có dữ liệu thì phải thêm cờ `--ghi-de`. Từ đợt 2, sửa `src/data/` bằng tay, theo hồ sơ kiểm định.
+- Bản ghi tác phẩm có thể có `hinh` (sơ đồ các đoạn, theo loại trang `bai-hoc`, `nghe`) và `ban_thu` (bản thu gợi ý cho khối nghe, cùng dạng `data-rec` của site cũ: `by`, `lic`, `licUrl`, `note`, `page`, `parts`; file mp3 của site viết `audio/x.mp3`). Mốc tham khảo theo bảng "Theo dõi khi nghe" của từng trang nên nằm trong trang (`::khoi-nghe{moc="…"}`), không ở dữ liệu.
+- `tools/du_lieu/tach.py` tách dữ liệu từ site cũ (D1.2; D1.3 thêm `hinh`, D1.4 thêm `ban_thu`); `src/data/` đã có dữ liệu thì phải thêm cờ `--ghi-de`, và chỉ chạy lại khi dữ liệu chưa kiểm định. Từ đợt 2, sửa `src/data/` bằng tay, theo hồ sơ kiểm định.
 
 ## Giao diện
 
@@ -89,16 +90,35 @@ Frontmatter có `tac_pham`. Thứ tự các mục như mẫu ở `../opus-zero/A
 | Câu hỏi kiểm tra nhanh | Khối ` ```quiz `: dòng `? câu hỏi`, `+ đáp án đúng`, `- đáp án sai`, `> giải thích` | Câu hỏi bấm được, thứ tự lựa chọn trộn mỗi lần. Thiếu đáp án đúng hay có dòng lạ thì build hỏng |
 | Hộp thông tin tác phẩm | `::hop-tac-pham` | Chip (giọng · nhịp, tốc độ, cấp độ, hình thức) và bảng "Thông tin tác phẩm và bản nhạc nên dùng" thu gọn |
 | Hình cấu trúc | `::hinh-cau-truc` | Sơ đồ các đoạn từ `hinh` của bản ghi: `hinh.bai-hoc` ở trang bài học, `hinh.nghe` ở hướng dẫn nghe |
-| Khối nghe | `::khoi-nghe`; có mốc tham khảo: `::khoi-nghe{moc="3 61 - 73"}` (số giây cho từng dòng của bảng `## Theo dõi khi nghe`, `-` là dòng chưa có mốc) | Trình nghe kèm bản thu; người học bấm "Ghi mốc" ngay trong bảng `## Theo dõi khi nghe`. Bản thu gợi ý lấy từ `ban_thu` của bản ghi (D1.4 chuyển), dùng chung cho bài học và hướng dẫn nghe; mốc tham khảo nằm ở trang vì mỗi trang có bảng riêng. Không có bản thu thì người học tự dán link hay chọn file |
+| Khối nghe | `::khoi-nghe`; có mốc tham khảo: `::khoi-nghe{moc="3 61 - 73"}` (số giây cho từng dòng của bảng `## Theo dõi khi nghe`, `-` là dòng chưa có mốc) | Trình nghe kèm bản thu; người học bấm "Ghi mốc" ngay trong bảng `## Theo dõi khi nghe`. Bản thu gợi ý lấy từ `ban_thu` của bản ghi, dùng chung cho bài học và hướng dẫn nghe; mốc tham khảo nằm ở trang vì mỗi trang có bảng riêng. Không có bản thu thì người học tự dán link hay chọn file |
 | Học tiếp | `::hoc-tiep` | Link tới trang chặng hiện tại và chặng sau (ở bài học), trang cùng tác phẩm (bài học và hướng dẫn nghe trỏ sang nhau); đặt sau các bài chọn lọc viết tay |
+| Hình minh họa | `::hinh{ten="circle"}` (tên như vùng `<!-- fig:… -->` của site cũ) | Hình do thành phần cùng tên vẽ |
+| Công cụ luyện tập | `::cong-cu{ten="metronome"}`, thông số thêm như `::cong-cu{ten="piano" range="G3-G4" notes="B3 D4 F#4"}` (tên và thông số như `<div class="oz-tên" data-…>` của site cũ) | Công cụ do thành phần cùng tên dựng |
+| Bài kiểm tra đầu vào | Khối ` ```placement ` như site cũ | Công cụ `placement` (đợt 2) |
 | Ghi chú, mẹo, chú ý | `:::note`, `:::tip`, `:::caution`, `:::danger`, tiêu đề tùy chọn: `:::tip[Chưa sẵn sàng?]` … `:::` | Aside của Starlight |
 | Thu gọn | `<details>`, `<summary>…</summary>`, một dòng trống, nội dung Markdown, một dòng trống, `</details>` | Khối bấm để mở |
 | Chú thích cuối trang | `chữ[^1]` … `[^1]: Chú thích.` | Danh sách cuối trang, tách bằng một đường kẻ |
 | Id cố định cho tiêu đề | `## Tiêu đề { #id }` | Tiêu đề có id đã chọn (giữ id cũ để link `#mục` cũ còn chạy) |
 | Danh sách định nghĩa | Dòng thuật ngữ, rồi dòng `: định nghĩa` | `<dl>` |
 
-- Chỉ thị `::…` đứng một mình trên một dòng, không có chữ; chỉ `::khoi-nghe` nhận thuộc tính (`moc`). Ba chỉ thị `::hop-tac-pham`, `::hinh-cau-truc`, `::hoc-tiep` cần `tac_pham` ở frontmatter; `::hinh-cau-truc` chỉ dùng ở trang bài học hay hướng dẫn nghe, và bản ghi phải có hình cho loại trang đó. Sai, kể cả gõ sai tên chỉ thị, thì build hỏng, lỗi ghi tên file.
+- Chỉ thị `::…` đứng một mình trên một dòng, không có chữ, chỉ có thuộc tính ghi trong bảng (`::khoi-nghe` nhận `moc`; `::hinh`, `::cong-cu` cần `ten`; `::cong-cu` nhận thêm thông số của công cụ). Ba chỉ thị `::hop-tac-pham`, `::hinh-cau-truc`, `::hoc-tiep` cần `tac_pham` ở frontmatter; `::hinh-cau-truc` chỉ dùng ở trang bài học hay hướng dẫn nghe, và bản ghi phải có hình cho loại trang đó. Sai, kể cả gõ sai tên chỉ thị, thì build hỏng, lỗi ghi tên file.
 - Chữ trong chip, `thong_tin`, câu hỏi (dòng `?`, `+`, `-`, `>`) và tên tác phẩm là Markdown trong dòng: `*nghiêng*`, `**đậm**`, `[link](/opus/…/)`. Thẻ HTML thô không dùng được: hiện ra thành chữ. Link trong dữ liệu viết như link trong trang (mục "Link nội bộ").
+- Hình hay công cụ chưa có thành phần thì hiện ô "… chưa chuyển sang site mới": build vẫn chạy (có cảnh báo `[opus]`) để xem được trang, nhưng kiểm thử chặn ô này trong bản build. Lô đầu tiên chuyển trang dùng hình hay công cụ ấy làm thành phần và thêm vào `HINH`, `CONG_CU` trong `src/plugins/thanh-phan.mjs`.
 - Plugin dựng các khối: `src/plugins/opus-markdown.mjs` (đọc trang) và `src/plugins/thanh-phan.mjs` (dựng HTML). JavaScript của khối nằm ở `src/scripts/` và chỉ tải ở trang có khuông nhạc, câu hỏi hay khối nghe (`src/components/MarkdownContent.astro`). CSS: `src/styles/thanh-phan.css`.
 - Tiến độ của người học (bài đã làm hết câu hỏi, mốc nghe) lưu trong trình duyệt ở khóa `opus-zero:v1` như site cũ, nên dữ liệu đã lưu ở site cũ vẫn đọc được.
-- Link nội bộ: chốt ở D1.4.
+
+### Link nội bộ
+
+- Link tới trang viết địa chỉ trên site, có base và `/` ở cuối: `[Gam](/opus/piano/gam/)`, `[…](/opus/piano/gam/#muc)`; trang mục lục là thư mục (`/opus/piano/`); trang chủ `/opus/`. Không viết link tới file `.md`. File tĩnh: `/opus/<đường dẫn trong public/>`.
+- Id của tiêu đề theo kiểu site cũ (`src/plugins/id-cu.mjs`): bỏ dấu, chữ "đ" mất, ký tự lạ bỏ, trùng thì thêm `_1`, `_2`. Ví dụ `## Trước ngày đầu tiên` có id `truoc-ngay-au-tien`. Nhờ vậy link `#mục` của site cũ, trong site và từ nơi khác, vẫn đúng. Cần id khác thì viết `{ #id }`.
+
+### Chuyển trang từ site cũ
+
+1. Build site cũ ra `.cache/site-cu/` (lệnh ở mục "Quy tắc chung" của kế hoạch).
+2. `node tools/chuyen/chuyen.mjs <trang> …`, ví dụ `nhac-ly/10-hop-am-ba` (thêm `--ghi-de` để chuyển lại). Script đổi cú pháp, không đổi chữ, và in cảnh báo cho chỗ không tự quyết. Luật chuyển:
+   - `!!!` thành aside: `tip`, `example`, `success` thành `tip`; `note`, `info`, `question` thành `note`; `warning` thành `caution`; `danger` giữ nguyên.
+   - `???` thành `<details>`; `++phím++` thành `<kbd>`; HTML có thuộc tính `markdown` thành HTML thường, cách dòng trống.
+   - Vùng `<!-- fig:… -->` thành `::hinh-cau-truc` hay `::hinh`; khối `oz-` rỗng thành `::cong-cu`; hộp tác phẩm thành `::hop-tac-pham`.
+   - `data-rec` thành `ban_thu` (dữ liệu, đã tách) cộng `moc` (trong trang); link `.md` thành địa chỉ.
+   - Tiêu đề `#` thành `title` (bỏ định dạng Markdown); mô tả trang lấy đúng thẻ `description` của bản build cũ.
+3. `npm run build`, rồi `node tools/chuyen/so-chu.mjs <trang> …`: chữ hiển thị, tiêu đề khuông nhạc, số câu hỏi và id tiêu đề phải giống trang cũ. `npm test` kiểm lại cho mọi trang đã chuyển, khi máy có `.cache/site-cu/`.

@@ -104,10 +104,16 @@ test('::hoc-tiep: trang chặng hiện tại và chặng sau, trang cùng tác p
 });
 
 test('::khoi-nghe: không có bản thu trong dữ liệu thì để người học tự dán link; có thì gợi ý bản đầu tiên, mốc theo trang', () => {
-	assert.match(dung(trangTacPham('fur-elise', '::khoi-nghe')), /<div class="oz-listen"><\/div>/);
+	const khongBan = duLieuDaKiem()['tac-pham'].find((r) => r.loai === 'nghe' && !r.ban_thu);
+	assert.match(dung(trangTacPham(khongBan.slug, '::khoi-nghe'), 'nghe-nhac/' + khongBan.slug), /<div class="oz-listen"><\/div>/);
+	assert.throws(() => dung(trangTacPham(khongBan.slug, '::khoi-nghe{moc="1 2"}'), 'nghe-nhac/' + khongBan.slug), /có moc nhưng bản ghi không có ban_thu/);
+	const docRec = (html) => JSON.parse(/data-rec="([^"]+)"/.exec(html)[1].replaceAll('&quot;', '"'));
+	const goiY = docRec(dung(trangTacPham('fur-elise', '::khoi-nghe{moc="2 12 - 41"}')));
+	assert.equal(goiY.by, 'V. Gao');
+	assert.deepEqual(goiY.ref, [2, 12, null, 41]);
+	assert.throws(() => dung(trangTacPham('fur-elise', '::khoi-nghe{moc="2 x"}')), /mốc "x" không phải số giây/);
 	// file mp3 của site (đường dẫn tính từ gốc site) thêm base; link ngoài giữ nguyên
 	const banGhi = { ban_thu: [{ by: 'A', parts: [{ mp3: 'audio/a.mp3', d: 60 }, { mp3: 'https://x.org/b.mp3', d: 30 }] }] };
-	const docRec = (html) => JSON.parse(/data-rec="([^"]+)"/.exec(html)[1].replaceAll('&quot;', '"'));
 	const rec = docRec(khoiNghe(banGhi, '/opus/'));
 	assert.deepEqual(rec.parts.map((p) => p.mp3), ['/opus/audio/a.mp3', 'https://x.org/b.mp3']);
 	assert.equal(rec.ref, undefined);
@@ -116,7 +122,6 @@ test('::khoi-nghe: không có bản thu trong dữ liệu thì để người h�
 	assert.deepEqual(docMoc(' 0  12.5 -'), [0, 12.5, null]);
 	assert.throws(() => docMoc('3 1:05'), /mốc "1:05" không phải số giây/);
 	assert.throws(() => khoiNghe({}, '/opus/', '3 4'), /có moc nhưng bản ghi không có ban_thu/);
-	assert.throws(() => dung(trangTacPham('fur-elise', '::khoi-nghe{moc="3 4"}')), /fur-elise\.md: ::khoi-nghe có moc nhưng bản ghi không có ban_thu/);
 });
 
 test('chỉ thị viết sai thì báo lỗi kèm tên file, kể cả gõ sai tên; chỉ thị khối để nguyên cho Starlight', () => {
@@ -125,6 +130,7 @@ test('chỉ thị viết sai thì báo lỗi kèm tên file, kể cả gõ sai t
 	assert.throws(() => dung(trangTacPham('fur-elise', '::khoi-nghe{moc="1" x="2"}')), /::khoi-nghe không nhận thuộc tính x \(chỉ nhận: moc\)/);
 	assert.throws(() => dung(trangTacPham('fur-elise', '::hop-tac-pham[chữ]')), /::hop-tac-pham không nhận chữ/);
 	assert.throws(() => dung(trangTacPham('fur-elise', '::hop-tac-phamm')), /fur-elise\.md: không có chỉ thị ::hop-tac-phamm \(có: ::hop-tac-pham,/);
+	assert.throws(() => dung('::hinh'), /::hinh thiếu thuộc tính ten/);
 	assert.doesNotThrow(() => dung(':::tip\nMẹo.\n:::'), 'chỉ thị khối (aside) là việc của Starlight');
 });
 
@@ -145,5 +151,11 @@ test('huy hiệu "Đã kiểm định": chỉ khi trang có trong khoa.json; ng�
 	// Trang khóa mà hồ sơ không có nhận định (trang chủ tạm): nhanDinh 0, PageTitle không hiện huy hiệu
 	assert.deepEqual(kiemDinh('index', khoa, 'lan:\n  - so: 1\n    ngay: 2026-10-30\n'), { ngay: '2026-10-30', nhanDinh: 0 });
 	assert.equal(ngayViet('2027-01-15'), '15/1/2027');
+});
+
+test('::hinh và ::cong-cu chưa có thành phần: build vẫn chạy, hiện ô "chưa chuyển" (kiểm thử chặn ô này trong bản thật)', () => {
+	const html = dung('::hinh{ten="circle"}\n\n::cong-cu{ten="piano" range="G4-F5" notes="A4 B4"}', 'nhac-ly/10-hop-am-ba');
+	assert.match(html, /<p class="oz-chua-co" data-pagefind-ignore>Hình "circle" chưa chuyển sang site mới\.<\/p>/);
+	assert.match(html, /<p class="oz-chua-co" data-pagefind-ignore>Công cụ "piano" chưa chuyển sang site mới\.<\/p>/);
 });
 
