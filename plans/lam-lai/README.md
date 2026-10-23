@@ -14,18 +14,20 @@ File này là bản chuẩn cho người làm và agent. Bản cho người đ�
 | `../ben-vung/README.md` | Vì sao làm lại; các tầng, bốn luật, lớp dữ liệu; vận hành sau khi xong |
 | `../ben-vung/chuan-kiem-dinh.md` | Nhận định, thứ bậc nguồn, kiểm định hai lượt, hồ sơ, khóa, mở khóa |
 | `../ben-vung/kiem-ke.md` | Tầng và số liệu của từng trang cũ |
-| `../ben-vung/them-tac-pham.md` | Thêm tác phẩm, từ sau đợt 6 (đợt làm sau cùng, trước đợt 9) |
+| `../ben-vung/them-tac-pham.md` | Thêm tác phẩm, từ sau đợt 6 |
 
 ## Quyết định
 
 Đã chọn ngày 23/10/2026:
 
-- Repo mới `mtuann/opus`, thư mục mới `opus/`, git từ đầu. Repo cũ `mtuann/opus-zero` và thư mục `../opus-zero/` để nguyên; tạo release `v15` và tắt Pages của repo cũ khi bạn muốn.
+- Repo mới `mtuann/opus`, thư mục mới `opus/`, git từ đầu. Repo cũ `mtuann/opus-zero` và thư mục `../opus-zero/` để nguyên; tạo release `v15` khi bạn muốn; tắt Pages của repo cũ nên để sau khi đợt 6 xong (mục Rủi ro).
 - Site mới ở `https://mtuann.github.io/opus/`; địa chỉ cũ `/opus-zero/` không giữ. Không có bản xem trước trên mạng.
 - Tên site: Opus. Ban đầu chọn giữ tên Opus Zero; chủ repo đổi thành Opus ngày 23/10/2026, khi duyệt giao diện. Khóa dữ liệu học trong trình duyệt vẫn là `opus-zero:v1`, để giữ tiến độ của người học cũ.
 - Giữ 7 chặng.
 - 13 trang ngoại vi vào mục Đọc thêm, chuyển ở đợt 8.
-- Thứ tự làm các đợt: 0 đến 5, rồi 7, 8, 6, 9. Tác phẩm (đợt 6) làm sau cùng, khi khung site, phần lõi, công cụ, sách in và trang tham chiếu đã xong; rồi thêm tác phẩm từng lô, như cách `../ben-vung/them-tac-pham.md` tả cho giai đoạn sau. Số đợt, tên lô, tên nhánh và `anh-xa.md` giữ nguyên. Chủ repo chọn ngày 23/10/2026, lúc đang làm đợt 1. Hai trang tác phẩm thử của D1.8 (Für Elise, Bach Goldberg) vẫn làm ở đợt 1, chỉ có ở bản xem, để kiểm khung.
+- Thứ tự làm các đợt: 0 đến 5, rồi 7, 8, 6, 9. Tác phẩm (đợt 6) làm sau cùng, khi khung site, phần lõi, công cụ, sách in và trang tham chiếu đã xong. Đợt 6 thêm tác phẩm theo lô (D6-L1 đến D6-L11); sau đợt 6, mỗi tác phẩm mới thêm theo `../ben-vung/them-tac-pham.md`. Số đợt, tên lô, tên nhánh và `anh-xa.md` giữ nguyên. Chủ repo chọn ngày 23/10/2026, lúc đang làm đợt 1.
+  - Ba trang thử của D1.8 (`nhac-ly/10-hop-am-ba`, Für Elise, Bach Goldberg) chuyển ở đợt 1, chỉ có ở bản xem, để kiểm khung. Lô của chúng (D3-L2 và hai lô đợt 6) chỉ kiểm định và khóa, không chuyển lại.
+  - Trang ngoài đợt 6 vẫn hiện vài trường của bản ghi tác phẩm (danh sách ở trang chặng, ô gợi ý tập, trang Cập nhật, trang theo cấp độ). Các trường đó khóa riêng, ở lô đầu tiên có trang hiện chúng (mục "Quy tắc chung"); đợt 6 khóa nốt phần còn lại.
 
 Chờ bạn. Mục "khuyên dùng" là lựa chọn mà kế hoạch đang giả định. Đợt 0 không phụ thuộc các mục này nên giao được ngay; hai mục đầu cần có trước đợt 1, ba mục sau trước đợt 2.
 
@@ -70,6 +72,7 @@ Bảng xếp theo thứ tự làm: đợt 6 (tác phẩm) sau đợt 8. Số tra
 - Một lô chỉ chạm: trang của lô trong `src/content/docs/`; dữ liệu liên quan trong `src/data/`; thành phần, script và file tĩnh mà trang của lô cần lần đầu (`src/components/`, `src/scripts/`, `public/`); hồ sơ trong `kiem-dinh/`; báo cáo của lô. Kiểm thử phạm vi chặn chỗ khác.
 - Không push (bạn push). Không sửa `.claude/`. Không sửa trang đã khóa: kiểm thử khóa chặn; cần sửa thì theo thủ tục mở khóa (`../ben-vung/chuan-kiem-dinh.md` mục 7).
 - Không thêm trang ngoài kế hoạch cho đến hết đợt 6; sau đó tác phẩm mới theo `../ben-vung/them-tac-pham.md`.
+- Trang chỉ hiện dữ liệu đã khóa. Trường của bản ghi mà trang của một lô hiện ra (danh sách, ô gợi ý, con số) được chính lô đó kiểm định và khóa trước khi gộp, nếu chưa khóa. Bản ghi khóa được từng phần, theo trường (`../ben-vung/chuan-kiem-dinh.md` mục 6).
 - Commit message, mạng, `_imslp/`: như mục "Cách làm việc" của `AGENTS.md`.
 - **Người review:** mặc định là Claude (phiên Cowork hay Claude Code của bạn); có thể là người hay LLM khác, miễn không làm lượt 1 hay lượt 2 của chính lô đó.
 
@@ -78,7 +81,7 @@ Bảng xếp theo thứ tự làm: đợt 6 (tác phẩm) sau đợt 8. Số tra
 Claude đã dựng thư mục `opus/` ngày 23/10/2026: `git init`, `.gitignore`, `plans/` (kế hoạch này), giấy phép, `AGENTS.md`, `CLAUDE.md`, `README.md`; chưa commit. Site cũ ở thư mục cạnh `../opus-zero/`, không chép sang: agent đọc thẳng ở đó.
 
 1. **Bạn:** xem các file, commit đầu tiên, tạo repo trống `mtuann/opus` trên GitHub (không thêm README hay giấy phép), push.
-2. **Bạn, khi muốn:** trong repo cũ, tạo release `v15` ở commit `5d08189` và tắt Pages (Settings → Pages, bấm "…" cạnh dòng "Your site is live at", chọn Unpublish site). Repo cũ không cần sửa gì khác.
+2. **Bạn, khi muốn:** trong repo cũ, tạo release `v15` ở commit `5d08189` và tắt Pages (Settings → Pages, bấm "…" cạnh dòng "Your site is live at", chọn Unpublish site). Tắt Pages nên để sau khi đợt 6 xong: tới lúc đó site mới chưa có trang tác phẩm (mục Rủi ro). Repo cũ không cần sửa gì khác.
 
 **Xong khi:** repo mới có commit đầu tiên trên GitHub.
 
@@ -102,7 +105,8 @@ Mỗi việc một nhánh, làm theo thứ tự. Site mới chưa đăng gì cho
 
 Từ đợt này, mỗi lô gộp vào `main` là trang của lô lên site thật.
 
-- Kiểm định và khóa: `cap-do.yml`; `nha-soan-nhac.yml`; các trường tên, tác giả, số danh mục, chặng của 79 bản ghi trong `tac-pham.yml` (các trường còn lại ở đợt 6).
+- Kiểm định và khóa: `cap-do.yml`; `nha-soan-nhac.yml`; các trường của 79 bản ghi trong `tac-pham.yml` mà trang của lô hiện ra. Gồm tên, tác giả, số danh mục, chặng (trang chặng); `grade`, `goi_y` (ô gợi ý tập ở trang chủ); và trường khác nếu trang chặng hiện. Khóa từng trường (`../ben-vung/chuan-kiem-dinh.md` mục 6); các trường còn lại khóa ở đợt 6.
+- Ô gợi ý tập (`practice.js` cũ, ở trang chủ; đợt 4, 7 dùng lại ở trang Piano, Luyện tập) sinh link bằng JavaScript. Link tới trang chưa có trong bản build phải hiện "sắp có" như link dựng lúc build: bản build xuất danh sách trang cho script dùng.
 - 7 trang chặng `piano/lo-trinh/chang-1` đến `chang-7` sinh từ dữ liệu; trang lộ trình giữ các mục chặng dạng tóm tắt, mỗi mục dẫn sang trang chặng.
 - 9 trang của lô, gồm trang chủ mới (thay trang chủ tạm) và bài kiểm tra đầu vào (`placement.js`).
 - Menu đủ 9 nhóm; nhóm chưa có trang hiện nhãn "sắp có".
@@ -112,7 +116,7 @@ Từ đợt này, mỗi lô gộp vào `main` là trang của lô lên site th�
 ## Đợt 3. Nhạc lý và luyện tai (D3-L1 đến D3-L6)
 
 - `thuat-ngu.yml` kiểm định và khóa cùng lô D3-L5; trang Từ điển sinh từ dữ liệu.
-- Thành phần mà các bài này dùng (bàn phím, hóa biểu, vòng quãng năm, máy đếm nhịp, câu hỏi) chuyển trong lô có trang đầu tiên cần nó.
+- Thành phần mà các bài này dùng (bàn phím, hóa biểu, vòng quãng năm, máy đếm nhịp, câu hỏi) chuyển trong lô có trang đầu tiên cần nó. Công cụ phát âm thanh dùng chung `audio.js` cũ: lô đầu tiên cần nó chép kèm mẫu âm piano (`../opus-zero/docs/assets/samples/piano/`, Salamander Grand Piano, CC BY 3.0, cả file `LICENSE.txt` của thư mục).
 
 **Xong khi:** 45 trang của 6 lô và `thuat-ngu.yml` đã khóa.
 
@@ -131,24 +135,25 @@ Từ đợt này, mỗi lô gộp vào `main` là trang của lô lên site th�
 - 17 trang công cụ và các module còn lại.
 - Dữ liệu học giữ khóa `opus-zero:v1` và định dạng sao lưu cũ. Trình duyệt lưu dữ liệu theo tên miền `mtuann.github.io`, không theo đường dẫn, nên site mới ở `/opus/` đọc được tiến độ người học đã lưu ở site cũ.
 - Service worker của site mới (phạm vi `/opus/`): danh sách tệp và phiên bản sinh lúc build; dùng khi mất mạng và cài như ứng dụng như site cũ.
-- Sách in sinh từ dữ liệu (thay `../opus-zero/hooks/books.py`), chỉ gồm trang đã khóa. Hai cuốn có tác phẩm ("Hướng dẫn nghe", "Piano: 10 bài đầu tiên và bài học tác phẩm") lúc này mới có phần không phải tác phẩm, và tự đủ chương khi đợt 6 xong. Nhật ký trang Cập nhật sinh từ dữ liệu và các mục viết tay.
+- Sách in sinh từ dữ liệu (thay `../opus-zero/hooks/books.py`), chỉ gồm trang đã khóa. Hai cuốn có tác phẩm ("Hướng dẫn nghe", "Piano: 10 bài đầu tiên và bài học tác phẩm") lúc này chỉ có phần không phải tác phẩm, và tự đủ chương khi đợt 6 xong. Nhật ký trang Cập nhật sinh từ dữ liệu và các mục viết tay.
 - Bài blog chuyển sang với đường dẫn theo cú pháp của site mới.
+- Trang Cập nhật hiện trường `them_ngay` của bản ghi tác phẩm: lô của trang khóa trường này. Mục viết tay chép từ site cũ có câu chỉ đúng khi tác phẩm đã lên (như "bản thu lưu ngay trên site"): kiểm định như mọi nhận định, sửa cho đúng lúc đăng.
 
-**Xong khi:** mọi công cụ chạy; bản sao lưu xuất từ site cũ (build `../opus-zero/` trên máy) khôi phục được; sách in đủ chương, trừ phần tác phẩm; trang đã xem mở lại được khi mất mạng.
+**Xong khi:** mọi công cụ chạy; ô gợi ý tập chỉ dùng trường đã khóa, link tới bài chưa lên hiện "sắp có"; bản sao lưu xuất từ site cũ (build `../opus-zero/` trên máy) khôi phục được; sách in đủ chương, trừ phần tác phẩm; trang đã xem mở lại được khi mất mạng.
 
 ## Đợt 8. Tham chiếu có hạn và Đọc thêm (D8-L1 đến D8-L3)
 
 - Trang tham chiếu có `ra_lai` trong `trang.yml`; workflow hằng tuần mở issue "Trang cần rà lại" khi quá hạn (không chặn deploy).
-- Thầy và thi, Tác phẩm theo cấp độ: kiểm định theo chương trình ABRSM đang dùng lúc làm (từ tháng 1/2027 là chương trình piano 2027–2028).
+- Thầy và thi, Tác phẩm theo cấp độ: kiểm định theo chương trình ABRSM đang dùng lúc làm (từ tháng 1/2027 là chương trình piano 2027–2028). Hai trang liệt kê tác phẩm: dùng trường đã khóa (`grade` khóa ở đợt 2); link tới bài chưa lên hiện "sắp có".
 - Trang Đọc thêm có dòng "ngoài lộ trình" ở đầu.
 
 **Xong khi:** 21 trang của 3 lô đã khóa.
 
 ## Đợt 6. Tác phẩm (D6-L1 đến D6-L11), làm sau đợt 8
 
-Khung, lõi, công cụ và tham chiếu đã lên site; đợt này thêm tác phẩm từng lô. Link "sắp có" tới bài học ở trang lõi, trang chặng và công cụ tự thành link khi lô lên.
+Khung, lõi, công cụ và tham chiếu đã lên site; đợt này thêm tác phẩm từng lô. Link "sắp có" tới bài học (ở trang lõi, trang chặng, ô gợi ý tập, công cụ, trang tham chiếu) tự thành link khi lô lên. Mỗi lô khóa nốt các trường còn lại của bản ghi tác phẩm trong lô.
 
-- Trước lô đầu, một việc riêng (nhánh `moi/d6-0-chuan-bi`, báo cáo `d6-0.md`): chép file âm thanh còn lại từ `../opus-zero/docs/assets/audio/` sang `public/audio/` (cả `NGUON.txt`); chép `../opus-zero/tools/audio/` sang `tools/audio/` rồi sửa để `attach.py`, `check_audio.py`, phần căn mốc đọc và ghi bản thu trong bản ghi của `tac-pham.yml` thay vì trong trang; thông số hình cấu trúc nằm trong bản ghi; `tools/them_tac_pham.py` và kiểm thử `tac_pham` theo `../ben-vung/them-tac-pham.md`.
+- Trước lô đầu, một việc riêng (nhánh `moi/d6-0-chuan-bi`, báo cáo `d6-0.md`): chép các bản thu từ `../opus-zero/docs/assets/audio/` sang `public/audio/` (cả `NGUON.txt`); chép `../opus-zero/tools/audio/` sang `tools/audio/` rồi sửa để `attach.py`, `check_audio.py`, phần căn mốc đọc và ghi bản thu trong bản ghi của `tac-pham.yml` thay vì trong trang; thông số hình cấu trúc nằm trong bản ghi; `tools/them_tac_pham.py` và kiểm thử `tac_pham` theo `../ben-vung/them-tac-pham.md`.
 - Đối chiếu nốt và căn mốc bản thu IMSLP dùng `../opus-zero/_imslp/` (chỉ có trên máy bạn, không có trong git).
 - D6-L1 đến D6-L6: bài học chặng 2 đến 7, kèm hướng dẫn nghe cùng tác phẩm; D6-L7 đến D6-L11: các hướng dẫn nghe còn lại theo thứ tự nav cũ, cùng hai trang mục lục.
 - Danh mục `tac-pham` sinh từ dữ liệu, lọc theo chặng, thời kỳ, tác giả, loại.
@@ -175,7 +180,7 @@ Khung, lõi, công cụ và tham chiếu đã lên site; đợt này thêm tác 
 | Công cụ luyện tập vắng đến đợt 7 | Cần sớm thì đưa D7-L1, D7-L2 lên ngay sau đợt 2 (công cụ ít nhận định, chủ yếu là code) |
 | Astro hoặc Starlight đổi API | Ghim phiên bản, nâng mỗi tháng trên nhánh riêng, ít override |
 | `_imslp/` chỉ có trên máy bạn | Người làm đợt 6 ở máy khác cần bạn gửi riêng thư mục này, bỏ tài liệu có giấy phép dùng cá nhân |
-| Tác phẩm lên sau cùng: lâu mới có bài học và hướng dẫn nghe; trang lõi, trang chặng, công cụ có nhiều link "sắp có" tới bài học | Link "sắp có" tự thành link khi trang lên; danh sách tác phẩm ở trang chặng và danh mục sinh từ dữ liệu. Nên để site cũ chạy (chưa tắt Pages của repo cũ) tới khi đợt 6 xong, để người đang học bài tác phẩm vẫn đọc được. Muốn có vài trang tác phẩm sớm thì đưa một lô của đợt 6 lên trước, như trang mẫu |
+| Tác phẩm lên sau cùng: lâu mới có bài học và hướng dẫn nghe; trang lõi, trang chặng, ô gợi ý tập, công cụ và trang tham chiếu có nhiều link "sắp có" tới bài học | Link "sắp có" tự thành link khi trang lên (cả link do JavaScript sinh); danh sách tác phẩm ở trang chặng và danh mục sinh từ dữ liệu. Nên để site cũ chạy (chưa tắt Pages của repo cũ) tới khi đợt 6 xong, để người đang học bài tác phẩm vẫn đọc được. Muốn có vài trang tác phẩm sớm thì làm việc chuẩn bị D6-0 rồi đưa một lô của đợt 6 lên trước, ví dụ D6-L1 (bài học chặng 2) |
 
 ## Quy trình mỗi lô
 

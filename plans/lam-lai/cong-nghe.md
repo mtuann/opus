@@ -42,7 +42,7 @@ src/plugins/                # plugin Markdown của dự án (chỉ thị, khố
 src/pages/                  # trang sinh: chặng, danh mục tác phẩm, sách in
 src/scripts/                # module JavaScript chuyển từ ../opus-zero/docs/assets/js/
 src/styles/
-public/                     # font, âm thanh (từ đợt 6), abcjs, biểu tượng, sw.js
+public/                     # font, abcjs, biểu tượng, mẫu âm piano (lô đầu tiên dùng audio.js), bản thu (đợt 6), sw.js
 tests/                      # kiểm thử site mới
 kiem-dinh/                  # hồ sơ kiểm định, khoa.json (không đăng lên site)
 tools/chuyen/               # script chuyển cú pháp

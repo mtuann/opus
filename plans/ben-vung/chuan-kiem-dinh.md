@@ -96,6 +96,7 @@ Link trong `nguon` phải là trang đã mở và đọc, không phải kết qu
 - Mã băm tính trên cả file, kể cả frontmatter, sau khi chuẩn hóa: xuống dòng kiểu `\n`, bỏ khoảng trắng cuối dòng. Site mới không có vùng do công cụ sinh trong trang (hình, hộp thông tin, danh sách đều sinh lúc build từ dữ liệu), và trạng thái kiểm định không ghi vào trang, nên khóa xong thì file không đổi nữa. Chỉ thị như `::khoi-nghe` giữ nguyên trong mã băm vì chính chúng không đổi khi dữ liệu đổi.
 - Bản build thật chỉ đưa trang có trong `khoa.json`; trang có trong `khoa.json` mà mã băm khác thì build hỏng, thông báo kèm cách mở khóa (`plans/lam-lai/cong-nghe.md` mục 7).
 - Bản ghi trong `src/data/` khóa theo từng bản ghi (mã băm của bản ghi sau khi chuẩn hóa: khóa xếp theo thứ tự chữ cái). Thêm bản ghi mới được; sửa hay xóa bản ghi đã khóa thì phải mở khóa.
+- Bản ghi khóa được từng phần: chỉ các trường đã kiểm định (mã băm tính trên các trường ấy), ví dụ đợt 2 khóa tên, tác giả, số danh mục, chặng của bản ghi tác phẩm, đợt 6 khóa cả bản ghi. Sửa trường đã khóa thì phải mở khóa; trường chưa khóa sửa tự do, nhưng trang chỉ được hiện trường đã khóa (`plans/lam-lai/README.md`, Quy tắc chung).
 - Thành phần, plugin, JavaScript, CSS và mẫu trang không nằm trong khóa; chúng được giữ đúng bằng kiểm thử tự động. Phần do dữ liệu sinh ra trong trang (danh sách, con số) đổi khi thêm tác phẩm mà không phá khóa, và vẫn đúng vì từng bản ghi đã được kiểm định.
 
 ## 7. Mở khóa
