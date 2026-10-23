@@ -66,7 +66,7 @@ Trang tác phẩm dẫn link về trang lõi để giải thích khái niệm, k
 
 ```mermaid
 flowchart LR
-  OZ(["Opus Zero"]) --> M1["Bắt đầu<br/>Bài 0, kiểm tra đầu vào,<br/>lộ trình năm đầu,<br/>lộ trình nghe, mỗi ngày,<br/>tóm tắt một tờ"]
+  OZ(["Opus"]) --> M1["Bắt đầu<br/>Bài 0, kiểm tra đầu vào,<br/>lộ trình năm đầu,<br/>lộ trình nghe, mỗi ngày,<br/>tóm tắt một tờ"]
   OZ --> M2["Lộ trình 7 chặng<br/>tổng quan,<br/>7 trang chặng<br/>sinh từ dữ liệu"]
   OZ --> M3["Nhạc lý và luyện tai<br/>bài theo nhóm, ôn tập,<br/>Từ điển, luyện tai"]
   OZ --> M4["Piano<br/>bắt đầu bên phím,<br/>kỹ thuật, tập luyện,<br/>hòa âm bên phím,<br/>văn học piano"]

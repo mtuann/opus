@@ -1,0 +1,23 @@
+---
+// Tiêu đề trang của Starlight, thêm nhãn nhóm nội dung phía trên (màu và biểu tượng của nhóm, src/nhom.mjs),
+// để người đọc nhìn là biết mình đang ở mục nào.
+import { getEntry } from 'astro:content';
+import Default from '@astrojs/starlight/components/PageTitle.astro';
+import { nhomCuaTrang, svgNhom } from '../nhom.mjs';
+
+const { id } = Astro.locals.starlightRoute.entry;
+// Tầng của trang (src/data/trang.yml) quyết định vài trang vào Đọc thêm. Bản ghi giữ đường dẫn cũ: trang mục lục
+// có đuôi /index, còn id của Starlight thì không.
+const banGhi = (await getEntry('trang', id)) ?? (await getEntry('trang', `${id}/index`));
+const nhom = nhomCuaTrang(id, banGhi?.data.tang);
+---
+
+{
+	nhom && (
+		<p class="oz-nhom" style={`--c: var(--oz-c-${nhom.id})`}>
+			<span class="oz-icon" set:html={svgNhom(nhom)} />
+			{nhom.ten}
+		</p>
+	)
+}
+<Default />

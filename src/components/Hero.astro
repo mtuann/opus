@@ -1,6 +1,7 @@
 ---
 // Phần đầu của trang có `hero` (hiện chỉ trang chủ): tên site nằm trên khuông nhạc như .oz-hero của site cũ,
-// dưới là dải phím đàn như ảnh chia sẻ cũ (og.png). Đọc hero.title, hero.tagline, hero.actions; bỏ qua hero.image.
+// dưới là dải phím đàn như ảnh chia sẻ cũ (og.png), tất cả trên một dải màu mực tràn ngang, ở cả hai chế độ.
+// Đọc hero.title, hero.tagline, hero.actions; bỏ qua hero.image.
 import { LinkButton } from '@astrojs/starlight/components';
 import DraftContentNotice from '@astrojs/starlight/components/DraftContentNotice.astro';
 
@@ -47,8 +48,20 @@ const lit = new Set([23, 25, 27]);
 </div>
 
 <style is:global>
+	/* Dải mực vẽ bằng border-image: phần vẽ ra ngoài khung không tính vào vùng cuộn, nên dải tràn hết bề ngang
+	   (100vmax mỗi bên) và lên sát thanh trên (1.5rem, khoảng đệm trên của khung nội dung Starlight) mà trang
+	   không cuộn ngang. Màu chữ và phím đặt lại cho nền tối này. */
 	.oz-hero {
+		--oz-staff: rgba(255, 255, 255, 0.3);
+		--oz-key-white: var(--oz-paper);
+		--oz-key-black: #0b1422;
+		--oz-key-line: var(--oz-ink);
+		--oz-accent: var(--oz-rosin-light);
 		padding-top: clamp(1.5rem, 5vw, 3.5rem);
+		/* Nền mực trong khung, nằm dưới dải: công cụ kiểm tương phản (axe trong Lighthouse) không coi border-image
+		   là nền, thiếu dòng này thì nó đo chữ trắng trên nền giấy và hạ điểm trợ năng. */
+		background-color: var(--oz-ink);
+		border-image: linear-gradient(165deg, var(--oz-ink) 0%, #183256 55%, #2c2b5e 100%) fill 0 / / 1.5rem 100vmax 0;
 	}
 
 	/* Năm dòng kẻ khuông sau tên site; khoảng cách theo cỡ chữ nên khuông to nhỏ cùng chữ */
@@ -61,7 +74,7 @@ const lit = new Set([23, 25, 27]);
 		font-weight: 600;
 		line-height: 1.05;
 		letter-spacing: -0.015em;
-		color: var(--sl-color-white);
+		color: #fff;
 		/* dòng trên cùng ngang đầu chữ hoa, dòng dưới cùng ngang chân chữ, như ảnh chia sẻ cũ */
 		background: repeating-linear-gradient(to bottom, var(--oz-staff) 0 1px, transparent 1px var(--gap)) 0
 			calc(50% + 0.07em) / 100% calc(4 * var(--gap) + 1px) no-repeat;
@@ -72,7 +85,7 @@ const lit = new Set([23, 25, 27]);
 		margin-top: 1rem;
 		font-size: clamp(var(--sl-text-lg), calc(0.75rem + 1.6vw), var(--sl-text-2xl));
 		line-height: 1.5;
-		color: var(--sl-color-gray-2);
+		color: #dbe5f2;
 	}
 
 	.oz-hero .actions {
@@ -104,9 +117,30 @@ const lit = new Set([23, 25, 27]);
 		fill: var(--oz-key-line);
 	}
 
+	/* Khi in và ở chế độ tương phản cao của hệ điều hành: bỏ dải mực, chữ về màu thường của trang. Viết
+	   border-image-source chứ không viết `border-image: none`: bộ nén CSS của bản build biến dòng đó thành
+	   `border-image:` rỗng, trình duyệt bỏ qua. */
 	@media print {
+		.oz-hero {
+			--oz-staff: rgba(0, 0, 0, 0.25);
+			background: none;
+			border-image-source: none;
+		}
+		.oz-hero h1,
+		.oz-hero .tagline {
+			color: #000;
+		}
 		.oz-hero .keys {
 			display: none;
+		}
+	}
+	@media (forced-colors: active) {
+		.oz-hero {
+			border-image-source: none;
+		}
+		.oz-hero h1,
+		.oz-hero .tagline {
+			color: CanvasText;
 		}
 	}
 </style>

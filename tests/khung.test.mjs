@@ -10,7 +10,7 @@ const ROOT = path.resolve(import.meta.dirname, '..');
 const DIST = path.join(ROOT, 'dist');
 const SITE = 'https://mtuann.github.io';
 const BASE = '/opus/';
-const NOTICE = 'Opus Zero đang được làm lại; từng phần sẽ lên sau khi được kiểm tra lại từ đầu.';
+const NOTICE = 'Opus đang được làm lại; từng phần sẽ lên sau khi được kiểm tra lại từ đầu.';
 
 const read = (file) => fs.readFileSync(file, 'utf8');
 const readJson = (file) => JSON.parse(read(file));
@@ -55,7 +55,7 @@ test('trang chủ tạm: tiếng Việt, câu thông báo của kế hoạch, th
 	const html = read(path.join(DIST, 'index.html'));
 	assert.match(html, /<html lang="vi"/);
 	assert.ok(html.includes(NOTICE), 'thiếu câu thông báo trang chủ tạm (plans/lam-lai/README.md, D1.1)');
-	assert.match(html, /<title>Opus Zero<\/title>/);
+	assert.match(html, /<title>Opus<\/title>/);
 	assert.match(html, /<meta name="viewport" content="width=device-width, initial-scale=1"\/?>/);
 	assert.match(html, /<meta name="description" content="[^"]+"/);
 	assert.match(html, new RegExp(`<link rel="canonical" href="${SITE}${BASE}"/?>`));

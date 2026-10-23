@@ -1,4 +1,4 @@
-# Opus Zero
+# Opus
 
 Sổ tay tiếng Việt học piano cổ điển cho người lớn tự học, từ con số 0. Đang được làm lại trong repo này; site: https://mtuann.github.io/opus/. Bản trước (v15) ở repo [mtuann/opus-zero](https://github.com/mtuann/opus-zero).
 

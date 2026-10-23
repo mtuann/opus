@@ -31,6 +31,8 @@ Công chuyển sang Astro cao (5 hook, cú pháp Material ở 105 file, thành p
 astro.config.mjs            # site 'https://mtuann.github.io', base '/opus'
 package.json, package-lock.json, tsconfig.json
 src/content.config.ts       # schema frontmatter và năm bộ dữ liệu
+src/du-lieu.mjs             # schema, bộ nạp và kiểm chéo của năm bộ dữ liệu (content.config.ts dùng)
+src/nhom.mjs                # nhóm nội dung của menu: tên, mô tả, biểu tượng; trang nào thuộc nhóm nào
 src/content/docs/           # trang; cùng đường dẫn với ../opus-zero/docs/
 src/data/                   # cap-do.yml, tac-pham.yml, nha-soan-nhac.yml, thuat-ngu.yml, trang.yml
 src/components/             # thành phần Astro

@@ -1,6 +1,6 @@
 # Kế hoạch làm lại site theo đợt
 
-Site mới (Astro và Starlight) dựng trong **repo mới `mtuann/opus`**, ở thư mục `opus/` cạnh thư mục cũ, lịch sử git bắt đầu từ đầu, đăng ở https://mtuann.github.io/opus/. Tên site vẫn là Opus Zero. Site cũ (MkDocs) ở nguyên repo cũ `mtuann/opus-zero`, thư mục cạnh `../opus-zero/`: đọc và chép nội dung từ đó, không sửa. Nội dung chuyển sang theo 10 đợt (0 đến 9). Trang chỉ lên site sau khi đã kiểm định và khóa, nên trong lúc làm lại, site chỉ có những phần đã xong và lớn dần sau mỗi lô.
+Site mới (Astro và Starlight) dựng trong **repo mới `mtuann/opus`**, ở thư mục `opus/` cạnh thư mục cũ, lịch sử git bắt đầu từ đầu, đăng ở https://mtuann.github.io/opus/. Tên site đổi thành Opus (bản trước tên Opus Zero). Site cũ (MkDocs) ở nguyên repo cũ `mtuann/opus-zero`, thư mục cạnh `../opus-zero/`: đọc và chép nội dung từ đó, không sửa. Nội dung chuyển sang theo 10 đợt (0 đến 9). Trang chỉ lên site sau khi đã kiểm định và khóa, nên trong lúc làm lại, site chỉ có những phần đã xong và lớn dần sau mỗi lô.
 
 File này là bản chuẩn cho người làm và agent. Bản cho người đọc, có hình: `so-do.md` (GitHub tự vẽ) và tài liệu Claude Docs "Opus Zero: kế hoạch làm lại site theo đợt" (https://claude.ai/artifact/512CAjWi2xmyqsTYkqANXS, chỉ người được chủ repo chia sẻ mới mở được). Hai bản khác nhau thì file này đúng.
 
@@ -22,14 +22,14 @@ File này là bản chuẩn cho người làm và agent. Bản cho người đ�
 
 - Repo mới `mtuann/opus`, thư mục mới `opus/`, git từ đầu. Repo cũ `mtuann/opus-zero` và thư mục `../opus-zero/` để nguyên; tạo release `v15` và tắt Pages của repo cũ khi bạn muốn.
 - Site mới ở `https://mtuann.github.io/opus/`; địa chỉ cũ `/opus-zero/` không giữ. Không có bản xem trước trên mạng.
-- Tên site vẫn là Opus Zero.
+- Tên site: Opus. Ban đầu chọn giữ tên Opus Zero; chủ repo đổi thành Opus ngày 23/10/2026, khi duyệt giao diện. Khóa dữ liệu học trong trình duyệt vẫn là `opus-zero:v1`, để giữ tiến độ của người học cũ.
 - Giữ 7 chặng.
 - 13 trang ngoại vi vào mục Đọc thêm, chuyển sau cùng (đợt 8).
 
 Chờ bạn. Mục "khuyên dùng" là lựa chọn mà kế hoạch đang giả định. Đợt 0 không phụ thuộc các mục này nên giao được ngay; hai mục đầu cần có trước đợt 1, ba mục sau trước đợt 2.
 
 - [x] Công nghệ: Astro 7 và Starlight (khuyên dùng; lý do ở `cong-nghe.md`), hay MkDocs và Material như cũ. **Chọn Astro 7 và Starlight** (23/10/2026, khi duyệt D1.1).
-- [x] Giao diện: giữ font, màu và giọng văn hiện có (khuyên dùng), hay làm nhận diện mới ở đợt 1. **Giữ font, màu, giọng văn** (23/10/2026, khi duyệt D1.1); thêm yêu cầu về hình ảnh ở mục "Giao diện" của `AGENTS.md`.
+- [x] Giao diện: giữ font, màu và giọng văn hiện có (khuyên dùng), hay làm nhận diện mới ở đợt 1. **Giữ font, màu, giọng văn** (23/10/2026, khi duyệt D1.1); thêm yêu cầu về hình ảnh ở mục "Giao diện" của `AGENTS.md`. Cùng ngày, sau khi so ba bản mẫu, chủ repo chọn bố cục **bản B** (thanh trên nền giấy viền nhựa thông, màu và biểu tượng riêng cho từng nhóm nội dung) **cộng phần đầu trang chủ của bản C** (dải màu mực tràn ngang); làm ở D1.2b.
 - [ ] Mức kiểm định: hai lượt agent, review, bạn kiểm khoảng 10 nhận định mỗi lô (khuyên dùng); hay một lượt agent và review.
 - [ ] Nguồn chính cho nhạc lý: giáo trình bạn có (ghi tên và lần in), hay giáo trình mở Open Music Theory (https://viva.pressbooks.pub/openmusictheory/).
 - [ ] Bảng tầng: duyệt `../ben-vung/kiem-ke.md`, nhất là các trang tham chiếu có hạn và ngày rà lại.
@@ -39,7 +39,7 @@ Chờ bạn. Mục "khuyên dùng" là lựa chọn mà kế hoạch đang giả
 | Đợt | Nội dung | Lô | Sau đợt này site mới có thêm | Trạng thái |
 |---|---|---|---|---|
 | 0 | Dựng repo mới | | Chưa đăng gì | Xong 23/10/2026 |
-| 1 | Nền kỹ thuật | D1.1–D1.8 | Trang chủ tạm và trang 404 ở `/opus/`; chưa có bài | Đang làm: D1.1 xong |
+| 1 | Nền kỹ thuật | D1.1–D1.8 | Trang chủ tạm và trang 404 ở `/opus/`; chưa có bài | Đang làm: D1.1, D1.2, D1.2b xong |
 | 2 | Khung cấp độ và lối vào | 1 | Trang chủ, Bắt đầu, lộ trình và 7 trang chặng, bài kiểm tra đầu vào | Chưa làm |
 | 3 | Nhạc lý và luyện tai | 6 | 45 trang, Từ điển | Chưa làm |
 | 4 | Piano nền tảng | 4 | 28 trang: bắt đầu bên phím, kỹ thuật, tập luyện, hòa âm bên phím, văn học piano | Chưa làm |
@@ -85,8 +85,9 @@ Claude đã dựng thư mục `opus/` ngày 23/10/2026: `git init`, `.gitignore`
 
 Mỗi việc một nhánh, làm theo thứ tự. Site mới chưa đăng gì cho đến khi D1.7 gộp.
 
-- **D1.1 Khởi tạo:** dự án Astro và Starlight ở thư mục gốc theo `cong-nghe.md`: `site: 'https://mtuann.github.io'`, `base: '/opus'`, địa chỉ dạng thư mục như cũ (`/opus/piano/gam/`), tiếng Việt; font tự host và màu lấy từ `../opus-zero/docs/assets/` và `../opus-zero/overrides/`; trang chủ tạm ("Opus Zero đang được làm lại; từng phần sẽ lên sau khi được kiểm tra lại từ đầu"); `.nvmrc` theo Node mà Astro 7 cần; `.gitignore` thêm `dist/`, `.astro/` nếu chưa có. Điền mục lệnh vào `AGENTS.md`.
+- **D1.1 Khởi tạo:** dự án Astro và Starlight ở thư mục gốc theo `cong-nghe.md`: `site: 'https://mtuann.github.io'`, `base: '/opus'`, địa chỉ dạng thư mục như cũ (`/opus/piano/gam/`), tiếng Việt; font tự host và màu lấy từ `../opus-zero/docs/assets/` và `../opus-zero/overrides/`; trang chủ tạm ("Opus đang được làm lại; từng phần sẽ lên sau khi được kiểm tra lại từ đầu"); `.nvmrc` theo Node mà Astro 7 cần; `.gitignore` thêm `dist/`, `.astro/` nếu chưa có. Điền mục lệnh vào `AGENTS.md`.
 - **D1.2 Dữ liệu và schema:** `src/content.config.ts`: frontmatter của Starlight cộng `tac_pham` (slug bản ghi, chỉ trang tác phẩm). Tầng và ngày rà nằm trong `trang.yml`; trạng thái kiểm định đọc từ `kiem-dinh/` lúc build, không ghi vào trang (để mã băm không đổi khi khóa). Năm bộ dữ liệu trong `src/data/`, nội dung và thứ chúng thay như `../ben-vung/README.md` mục "Lớp dữ liệu"; trường của `tac-pham.yml` như `../ben-vung/them-tac-pham.md` mục 2. Script tách một lần trong `tools/du_lieu/`, đọc `../opus-zero/docs/`. Chỗ site cũ tự mâu thuẫn (hai năm khác nhau cho cùng người) thì ghi vào báo cáo, không tự chọn. Dữ liệu sai thì build hỏng; có bộ dữ liệu hỏng mẫu để thử. Dữ liệu chưa khóa ở việc này.
+- **D1.2b Giao diện** (thêm ngày 23/10/2026, theo bản mẫu chủ repo chọn ở mục Quyết định): thanh trên nền giấy (tối: nền trang), viền nhựa thông; logo hai bản cho nền sáng và tối; dải mực tràn ngang ở phần đầu trang chủ; mỗi nhóm nội dung một màu và một biểu tượng (`src/nhom.mjs`), nhãn nhóm trên tiêu đề trang, thẻ "Sắp có trên site" ở trang chủ tạm. Đổi tên hiển thị thành Opus.
 - **D1.3 Thành phần tối thiểu:** chip cấp độ, hộp thông tin tác phẩm, khuông nhạc ABC (khối ```abc, abcjs tải khi gần màn hình, vẽ đủ khi in), khối nghe, hình cấu trúc từ dữ liệu, câu hỏi kiểm tra nhanh, "Học tiếp", huy hiệu "Đã kiểm định". Logic lấy từ module trong `../opus-zero/docs/assets/js/`. Chốt cú pháp trong trang và ghi vào mục "Mẫu trang", "Khối đặc biệt" của `AGENTS.md`.
 - **D1.4 Script chuyển cú pháp** `tools/chuyen/`: đọc `../opus-zero/docs/<trang>.md`, ghi `src/content/docs/<trang>.md`. Admonition thành aside; khối thu gọn thành `<details>`; khối `oz-` thành chỉ thị thành phần; vùng `<!-- fig: -->` thành thành phần hình; `data-rec` thành dữ liệu của khối nghe; link tới file `.md` thành link theo địa chỉ; giữ nguyên khối ```abc và chú thích. Kiểm thử: chữ hiển thị của một trang ở bản build cũ (`.cache/site-cu/`) và ở bản xem giống nhau.
 - **D1.5 Link và 404:** link tới trang không có trong bản build hiện chữ thường kèm nhãn "sắp có", tự thành link khi trang lên; kiểm link và anchor nội bộ trên cả bản thật và bản xem. Trang 404 thân thiện: báo site đang được làm lại, dẫn về trang chủ và ô tìm kiếm.

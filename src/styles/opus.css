@@ -1,5 +1,5 @@
-/* Màu, chữ và các chi tiết riêng của Opus Zero trên nền Starlight. Màu lấy từ ../opus-zero/docs/assets/css/opus.css
-   (mực xanh đậm, nhựa thông, giấy) và overrides/main.html (theme-color). File này không nằm trong cascade layer nào,
+/* Màu, chữ và các chi tiết riêng của Opus trên nền Starlight. Màu gốc lấy từ ../opus-zero/docs/assets/css/opus.css
+   (mực xanh đậm, nhựa thông, giấy); màu theo nhóm nội dung là phần mới (D1.2b). File này không nằm trong cascade layer nào,
    nên thắng mọi quy tắc của Starlight (đặt trong @layer starlight.*); vì thế màu chế độ sáng phải ghi lại ở
    :root[data-theme='light'], không thì giá trị của chế độ tối ở :root đè lên cả chế độ sáng. */
 
@@ -16,8 +16,6 @@
 	--sl-line-height-headings: 1.25;
 
 	/* Chế độ tối (mặc định của Starlight) */
-	--oz-header-bg: #18293f;
-	--oz-header-line: #101c2c;
 	--oz-accent: var(--oz-rosin-light);
 	--oz-focus: var(--oz-rosin-light);
 	--oz-staff: rgba(200, 215, 235, 0.2);
@@ -48,11 +46,19 @@
 	--sl-color-purple-low: #2a2136;
 	--sl-color-purple: #b49ad3;
 	--sl-color-purple-high: #d9c9ec;
+
+	/* Màu theo nhóm nội dung (src/nhom.mjs): nhãn trên tiêu đề, thẻ ở trang chủ */
+	--oz-c-bat-dau: #5fc3b9;
+	--oz-c-lo-trinh: #e0b45e;
+	--oz-c-nhac-ly: #7fb0ea;
+	--oz-c-piano: #a8bde0;
+	--oz-c-co-dien: #c4a3e0;
+	--oz-c-tac-pham: #ec9a85;
+	--oz-c-luyen-tap: #79c99a;
+	--oz-c-doc-them: #c9bfb2;
 }
 
 :root[data-theme='light'] {
-	--oz-header-bg: var(--oz-ink);
-	--oz-header-line: var(--oz-ink-dark);
 	--oz-accent: var(--oz-rosin);
 	--oz-focus: var(--oz-rosin);
 	--oz-staff: rgba(31, 58, 95, 0.2);
@@ -81,6 +87,15 @@
 	--sl-color-purple-low: #ece4f1;
 	--sl-color-purple: #6b4f8a;
 	--sl-color-purple-high: #4a3263;
+
+	--oz-c-bat-dau: #24736e;
+	--oz-c-lo-trinh: #946716; /* nhựa thông đậm hơn chút để chữ nhỏ đạt 4,5:1 trên nền giấy */
+	--oz-c-nhac-ly: #2b65a8;
+	--oz-c-piano: #1f3a5f;
+	--oz-c-co-dien: #6f4790;
+	--oz-c-tac-pham: #a9472f;
+	--oz-c-luyen-tap: #2b7449;
+	--oz-c-doc-them: #6b6258;
 }
 
 /* ---------- Chữ ---------- */
@@ -112,28 +127,14 @@ h1#_top,
 	outline-offset: 2px;
 }
 
-/* ---------- Thanh trên cùng: nền mực xanh như site cũ, cả hai chế độ ---------- */
+/* ---------- Thanh trên cùng: nền giấy (tối: nền trang), viền mảnh màu nhựa thông ---------- */
 header.header {
-	background-color: var(--oz-header-bg);
-	border-bottom-color: var(--oz-header-line);
-}
-/* Đổi bảng màu chỉ cho từng phần của thanh, không cho cả header: hộp tìm kiếm (dialog) nằm trong header
-   và phải giữ màu của trang. */
-header.header .site-title,
-header.header button[data-open-modal],
-header.header .right-group {
-	--sl-color-white: #fff;
-	--sl-color-text-accent: #fff;
-	--sl-color-gray-1: #eef2f8;
-	--sl-color-gray-2: #d3dce8;
-	--sl-color-gray-5: rgba(255, 255, 255, 0.3);
-	--sl-color-gray-6: rgba(255, 255, 255, 0.14);
-	--sl-color-black: rgba(0, 0, 0, 0.2);
-	--sl-color-bg-nav: var(--oz-header-bg);
-	--oz-focus: var(--oz-rosin-light);
+	background-color: var(--sl-color-black);
+	border-bottom: 2px solid var(--oz-accent);
 }
 .site-title {
 	font-size: var(--sl-text-xl);
+	color: var(--sl-color-white);
 }
 /* Starlight để ô chọn giao diện rộng 6,25em (viết cho tiếng Anh), chữ "Tự động" bị cắt */
 starlight-theme-select select {
@@ -161,7 +162,7 @@ starlight-theme-select select {
 	background: var(--oz-card);
 	counter-increment: oz-step;
 }
-/* Số bước trong vòng tròn */
+/* Số bước trong vòng tròn: mỗi bước một màu nhạt, bước cuối (lên site) màu nhựa thông */
 .oz-steps > li::before {
 	content: counter(oz-step);
 	position: absolute;
@@ -172,10 +173,14 @@ starlight-theme-select select {
 	width: 2.1rem;
 	height: 2.1rem;
 	border-radius: 50%;
-	background: var(--sl-color-accent-low);
-	color: var(--sl-color-text-accent);
+	background: var(--sl-color-gray-6);
+	background: color-mix(in srgb, var(--c, var(--oz-c-nhac-ly)) 15%, transparent);
+	color: var(--c, var(--oz-c-nhac-ly));
 	font-family: var(--oz-heading);
 	font-weight: 600;
+}
+.oz-steps > li:nth-child(2)::before {
+	--c: var(--oz-c-co-dien);
 }
 /* Bước cuối: phần đã lên site, dùng màu nhựa thông */
 .oz-steps > li:last-child::before {
@@ -217,6 +222,100 @@ starlight-theme-select select {
 		border-block: 0.45rem solid transparent;
 		border-inline: 0;
 		border-inline-start: 0.6rem solid var(--sl-color-gray-4);
+	}
+}
+
+/* ---------- Nhóm nội dung: nhãn trên tiêu đề, thẻ ở trang chủ (src/nhom.mjs) ---------- */
+.oz-icon {
+	display: inline-grid;
+	place-items: center;
+	flex: none;
+	width: 2.6rem;
+	height: 2.6rem;
+	border-radius: 50%;
+	background: var(--sl-color-gray-6);
+	background: color-mix(in srgb, var(--c) 15%, transparent);
+	color: var(--c);
+}
+.oz-icon svg {
+	width: 55%;
+	height: 55%;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.8;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+.oz-nhom {
+	display: flex;
+	align-items: center;
+	gap: 0.55rem;
+	margin: 1rem 0 0; /* bằng khoảng trên của tiêu đề Starlight khi không có nhãn */
+	font-size: var(--sl-text-sm);
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--c);
+}
+.oz-nhom .oz-icon {
+	width: 2rem;
+	height: 2rem;
+}
+.oz-nhom + h1 {
+	margin-top: 0.5rem;
+}
+/* Lưới thẻ: 1 cột trên điện thoại, 2 cột, rồi 4 cột trên màn rộng (8 nhóm chia đều, không thừa ô) */
+.oz-muc {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 0.75rem;
+	padding: 0;
+	list-style: none;
+}
+.sl-markdown-content .oz-muc > li {
+	margin: 0;
+}
+/* Thẻ: trên điện thoại biểu tượng nằm bên trái cho thẻ thấp, đỡ cuộn; từ 2 cột, biểu tượng nằm trên tên */
+.oz-the {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	gap: 0.1rem 0.9rem;
+	padding: 0.85rem 1rem;
+	border: 1px solid var(--sl-color-gray-5);
+	border-top: 4px solid var(--c);
+	border-radius: 12px;
+	background: var(--oz-card);
+}
+.oz-the .oz-icon {
+	grid-row: span 2;
+}
+.oz-the b {
+	font-size: var(--sl-text-lg);
+	line-height: 1.35;
+	color: var(--sl-color-white);
+}
+.oz-the > span:last-child {
+	font-size: var(--sl-text-sm);
+	line-height: 1.5;
+	color: var(--sl-color-gray-2);
+}
+@media (min-width: 32rem) {
+	.oz-muc {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+	.oz-the {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.35rem;
+		padding: 1rem 1.1rem 1.1rem;
+	}
+}
+@media (min-width: 64rem) {
+	.oz-muc {
+		grid-template-columns: repeat(4, 1fr);
 	}
 }
 
