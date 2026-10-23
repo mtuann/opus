@@ -2,7 +2,7 @@
 
 Bản vẽ để nắm nhanh kế hoạch. Chữ trong `README.md` là chuẩn: sơ đồ khác chữ thì sửa sơ đồ. GitHub tự vẽ các khối `mermaid` dưới đây; sửa chúng như sửa chữ.
 
-## 1. Mười đợt, làm lần lượt
+## 1. Mười đợt, làm lần lượt (tác phẩm sau cùng)
 
 ```mermaid
 flowchart TB
@@ -14,14 +14,14 @@ flowchart TB
     direction LR
     D2["Đợt 2<br/>Khung cấp độ, lối vào<br/>1 lô, 9 trang"] --> D3["Đợt 3<br/>Nhạc lý, luyện tai<br/>6 lô, 45 trang"] --> D4["Đợt 4<br/>Piano nền tảng<br/>4 lô, 28 trang"] --> D5["Đợt 5<br/>Nhạc cổ điển nền tảng<br/>3 lô, 26 trang"]
   end
-  subgraph G3["Phần còn lại"]
+  subgraph G3["Phần còn lại: tác phẩm sau cùng"]
     direction LR
-    D6["Đợt 6<br/>Tác phẩm<br/>11 lô, 81 trang"] --> D7["Đợt 7<br/>Công cụ, sách in, blog<br/>3 lô, 23 trang"] --> D8["Đợt 8<br/>Tham chiếu, Đọc thêm<br/>3 lô, 21 trang"] --> D9["Đợt 9<br/>Hoàn tất<br/>mọi địa chỉ cũ chạy lại"]
+    D7["Đợt 7<br/>Công cụ, sách in, blog<br/>3 lô, 23 trang"] --> D8["Đợt 8<br/>Tham chiếu, Đọc thêm<br/>3 lô, 21 trang"] --> D6["Đợt 6<br/>Tác phẩm<br/>11 lô, 81 trang"] --> D9["Đợt 9<br/>Hoàn tất<br/>mọi địa chỉ cũ chạy lại"]
   end
   G1 --> G2 --> G3
 ```
 
-Từ đợt 2, mỗi lô gộp vào `main` là trang của lô lên https://mtuann.github.io/opus/. Số trang tính cả trang mục lục; tổng 31 lô, 233 trang cũ.
+Từ đợt 2, mỗi lô gộp vào `main` là trang của lô lên https://mtuann.github.io/opus/. Đợt 6 (tác phẩm) làm sau đợt 8; số đợt giữ nguyên để tên lô và nhánh không đổi. Số trang tính cả trang mục lục; tổng 31 lô, 233 trang cũ.
 
 ## 2. Một lô đi qua những bước nào
 

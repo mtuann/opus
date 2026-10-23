@@ -1,6 +1,6 @@
 # Kế hoạch làm lại site theo đợt
 
-Site mới (Astro và Starlight) dựng trong **repo mới `mtuann/opus`**, ở thư mục `opus/` cạnh thư mục cũ, lịch sử git bắt đầu từ đầu, đăng ở https://mtuann.github.io/opus/. Tên site đổi thành Opus (bản trước tên Opus Zero). Site cũ (MkDocs) ở nguyên repo cũ `mtuann/opus-zero`, thư mục cạnh `../opus-zero/`: đọc và chép nội dung từ đó, không sửa. Nội dung chuyển sang theo 10 đợt (0 đến 9). Trang chỉ lên site sau khi đã kiểm định và khóa, nên trong lúc làm lại, site chỉ có những phần đã xong và lớn dần sau mỗi lô.
+Site mới (Astro và Starlight) dựng trong **repo mới `mtuann/opus`**, ở thư mục `opus/` cạnh thư mục cũ, lịch sử git bắt đầu từ đầu, đăng ở https://mtuann.github.io/opus/. Tên site đổi thành Opus (bản trước tên Opus Zero). Site cũ (MkDocs) ở nguyên repo cũ `mtuann/opus-zero`, thư mục cạnh `../opus-zero/`: đọc và chép nội dung từ đó, không sửa. Nội dung chuyển sang theo 10 đợt (0 đến 9), làm theo thứ tự 0, 1, 2, 3, 4, 5, 7, 8, 6, 9: tác phẩm làm sau cùng. Trang chỉ lên site sau khi đã kiểm định và khóa, nên trong lúc làm lại, site chỉ có những phần đã xong và lớn dần sau mỗi lô.
 
 File này là bản chuẩn cho người làm và agent. Bản cho người đọc, có hình: `so-do.md` (GitHub tự vẽ) và tài liệu Claude Docs "Opus Zero: kế hoạch làm lại site theo đợt" (https://claude.ai/artifact/512CAjWi2xmyqsTYkqANXS, chỉ người được chủ repo chia sẻ mới mở được). Hai bản khác nhau thì file này đúng.
 
@@ -14,7 +14,7 @@ File này là bản chuẩn cho người làm và agent. Bản cho người đ�
 | `../ben-vung/README.md` | Vì sao làm lại; các tầng, bốn luật, lớp dữ liệu; vận hành sau khi xong |
 | `../ben-vung/chuan-kiem-dinh.md` | Nhận định, thứ bậc nguồn, kiểm định hai lượt, hồ sơ, khóa, mở khóa |
 | `../ben-vung/kiem-ke.md` | Tầng và số liệu của từng trang cũ |
-| `../ben-vung/them-tac-pham.md` | Thêm tác phẩm, từ sau đợt 6 |
+| `../ben-vung/them-tac-pham.md` | Thêm tác phẩm, từ sau đợt 6 (đợt làm sau cùng, trước đợt 9) |
 
 ## Quyết định
 
@@ -24,7 +24,8 @@ File này là bản chuẩn cho người làm và agent. Bản cho người đ�
 - Site mới ở `https://mtuann.github.io/opus/`; địa chỉ cũ `/opus-zero/` không giữ. Không có bản xem trước trên mạng.
 - Tên site: Opus. Ban đầu chọn giữ tên Opus Zero; chủ repo đổi thành Opus ngày 23/10/2026, khi duyệt giao diện. Khóa dữ liệu học trong trình duyệt vẫn là `opus-zero:v1`, để giữ tiến độ của người học cũ.
 - Giữ 7 chặng.
-- 13 trang ngoại vi vào mục Đọc thêm, chuyển sau cùng (đợt 8).
+- 13 trang ngoại vi vào mục Đọc thêm, chuyển ở đợt 8.
+- Thứ tự làm các đợt: 0 đến 5, rồi 7, 8, 6, 9. Tác phẩm (đợt 6) làm sau cùng, khi khung site, phần lõi, công cụ, sách in và trang tham chiếu đã xong; rồi thêm tác phẩm từng lô, như cách `../ben-vung/them-tac-pham.md` tả cho giai đoạn sau. Số đợt, tên lô, tên nhánh và `anh-xa.md` giữ nguyên. Chủ repo chọn ngày 23/10/2026, lúc đang làm đợt 1. Hai trang tác phẩm thử của D1.8 (Für Elise, Bach Goldberg) vẫn làm ở đợt 1, chỉ có ở bản xem, để kiểm khung.
 
 Chờ bạn. Mục "khuyên dùng" là lựa chọn mà kế hoạch đang giả định. Đợt 0 không phụ thuộc các mục này nên giao được ngay; hai mục đầu cần có trước đợt 1, ba mục sau trước đợt 2.
 
@@ -44,12 +45,12 @@ Chờ bạn. Mục "khuyên dùng" là lựa chọn mà kế hoạch đang giả
 | 3 | Nhạc lý và luyện tai | 6 | 45 trang, Từ điển | Chưa làm |
 | 4 | Piano nền tảng | 4 | 28 trang: bắt đầu bên phím, kỹ thuật, tập luyện, hòa âm bên phím, văn học piano | Chưa làm |
 | 5 | Nhạc cổ điển nền tảng | 3 | 26 trang: thời kỳ, hình thức, nhận diện; đủ 100 trang lõi | Chưa làm |
-| 6 | Tác phẩm | 11 | 34 bài học, 45 hướng dẫn nghe, danh mục tác phẩm | Chưa làm |
 | 7 | Công cụ, sách in, blog, Cập nhật | 3 | 17 công cụ luyện tập, sách in, blog, dùng khi mất mạng | Chưa làm |
-| 8 | Tham chiếu có hạn và Đọc thêm | 3 | 21 trang; đủ 233 trang cũ | Chưa làm |
+| 8 | Tham chiếu có hạn và Đọc thêm | 3 | 21 trang | Chưa làm |
+| 6 | Tác phẩm | 11 | 34 bài học, 45 hướng dẫn nghe, danh mục tác phẩm; đủ 233 trang cũ | Chưa làm |
 | 9 | Hoàn tất | | Site mới không còn cần `../opus-zero/` | Chưa làm |
 
-Số trang tính cả trang mục lục của mỗi mục. Danh sách trang của từng lô: `anh-xa.md`. Người review cập nhật bảng này cuối mỗi đợt.
+Bảng xếp theo thứ tự làm: đợt 6 (tác phẩm) sau đợt 8. Số trang tính cả trang mục lục của mỗi mục. Danh sách trang của từng lô: `anh-xa.md`. Người review cập nhật bảng này cuối mỗi đợt.
 
 ## Bảy luật
 
@@ -125,24 +126,15 @@ Từ đợt này, mỗi lô gộp vào `main` là trang của lô lên site th�
 
 **Xong khi:** 26 trang của 3 lô đã khóa; đủ 100 trang lõi.
 
-## Đợt 6. Tác phẩm (D6-L1 đến D6-L11)
-
-- Trước lô đầu, một việc riêng (nhánh `moi/d6-0-chuan-bi`, báo cáo `d6-0.md`): chép file âm thanh còn lại từ `../opus-zero/docs/assets/audio/` sang `public/audio/` (cả `NGUON.txt`); chép `../opus-zero/tools/audio/` sang `tools/audio/` rồi sửa để `attach.py`, `check_audio.py`, phần căn mốc đọc và ghi bản thu trong bản ghi của `tac-pham.yml` thay vì trong trang; thông số hình cấu trúc nằm trong bản ghi; `tools/them_tac_pham.py` và kiểm thử `tac_pham` theo `../ben-vung/them-tac-pham.md`.
-- Đối chiếu nốt và căn mốc bản thu IMSLP dùng `../opus-zero/_imslp/` (chỉ có trên máy bạn, không có trong git).
-- D6-L1 đến D6-L6: bài học chặng 2 đến 7, kèm hướng dẫn nghe cùng tác phẩm; D6-L7 đến D6-L11: các hướng dẫn nghe còn lại theo thứ tự nav cũ, cùng hai trang mục lục.
-- Danh mục `tac-pham` sinh từ dữ liệu, lọc theo chặng, thời kỳ, tác giả, loại.
-
-**Xong khi:** 81 trang của 11 lô đã khóa; `python3 tools/audio/check_audio.py` không lỗi; danh mục, trang chặng và "Học tiếp" hiện đủ.
-
 ## Đợt 7. Công cụ, sách in, blog, Cập nhật (D7-L1 đến D7-L3)
 
 - 17 trang công cụ và các module còn lại.
 - Dữ liệu học giữ khóa `opus-zero:v1` và định dạng sao lưu cũ. Trình duyệt lưu dữ liệu theo tên miền `mtuann.github.io`, không theo đường dẫn, nên site mới ở `/opus/` đọc được tiến độ người học đã lưu ở site cũ.
 - Service worker của site mới (phạm vi `/opus/`): danh sách tệp và phiên bản sinh lúc build; dùng khi mất mạng và cài như ứng dụng như site cũ.
-- Sách in sinh từ dữ liệu (thay `../opus-zero/hooks/books.py`); nhật ký trang Cập nhật sinh từ dữ liệu và các mục viết tay.
+- Sách in sinh từ dữ liệu (thay `../opus-zero/hooks/books.py`), chỉ gồm trang đã khóa. Hai cuốn có tác phẩm ("Hướng dẫn nghe", "Piano: 10 bài đầu tiên và bài học tác phẩm") lúc này mới có phần không phải tác phẩm, và tự đủ chương khi đợt 6 xong. Nhật ký trang Cập nhật sinh từ dữ liệu và các mục viết tay.
 - Bài blog chuyển sang với đường dẫn theo cú pháp của site mới.
 
-**Xong khi:** mọi công cụ chạy; bản sao lưu xuất từ site cũ (build `../opus-zero/` trên máy) khôi phục được; sách in đủ chương; trang đã xem mở lại được khi mất mạng.
+**Xong khi:** mọi công cụ chạy; bản sao lưu xuất từ site cũ (build `../opus-zero/` trên máy) khôi phục được; sách in đủ chương, trừ phần tác phẩm; trang đã xem mở lại được khi mất mạng.
 
 ## Đợt 8. Tham chiếu có hạn và Đọc thêm (D8-L1 đến D8-L3)
 
@@ -151,6 +143,17 @@ Từ đợt này, mỗi lô gộp vào `main` là trang của lô lên site th�
 - Trang Đọc thêm có dòng "ngoài lộ trình" ở đầu.
 
 **Xong khi:** 21 trang của 3 lô đã khóa.
+
+## Đợt 6. Tác phẩm (D6-L1 đến D6-L11), làm sau đợt 8
+
+Khung, lõi, công cụ và tham chiếu đã lên site; đợt này thêm tác phẩm từng lô. Link "sắp có" tới bài học ở trang lõi, trang chặng và công cụ tự thành link khi lô lên.
+
+- Trước lô đầu, một việc riêng (nhánh `moi/d6-0-chuan-bi`, báo cáo `d6-0.md`): chép file âm thanh còn lại từ `../opus-zero/docs/assets/audio/` sang `public/audio/` (cả `NGUON.txt`); chép `../opus-zero/tools/audio/` sang `tools/audio/` rồi sửa để `attach.py`, `check_audio.py`, phần căn mốc đọc và ghi bản thu trong bản ghi của `tac-pham.yml` thay vì trong trang; thông số hình cấu trúc nằm trong bản ghi; `tools/them_tac_pham.py` và kiểm thử `tac_pham` theo `../ben-vung/them-tac-pham.md`.
+- Đối chiếu nốt và căn mốc bản thu IMSLP dùng `../opus-zero/_imslp/` (chỉ có trên máy bạn, không có trong git).
+- D6-L1 đến D6-L6: bài học chặng 2 đến 7, kèm hướng dẫn nghe cùng tác phẩm; D6-L7 đến D6-L11: các hướng dẫn nghe còn lại theo thứ tự nav cũ, cùng hai trang mục lục.
+- Danh mục `tac-pham` sinh từ dữ liệu, lọc theo chặng, thời kỳ, tác giả, loại.
+
+**Xong khi:** 81 trang của 11 lô đã khóa; `python3 tools/audio/check_audio.py` không lỗi; danh mục, trang chặng và "Học tiếp" hiện đủ; hai cuốn sách in có tác phẩm ("Hướng dẫn nghe", "Piano: 10 bài đầu tiên và bài học tác phẩm") đủ chương.
 
 ## Đợt 9. Hoàn tất
 
@@ -172,6 +175,7 @@ Từ đợt này, mỗi lô gộp vào `main` là trang của lô lên site th�
 | Công cụ luyện tập vắng đến đợt 7 | Cần sớm thì đưa D7-L1, D7-L2 lên ngay sau đợt 2 (công cụ ít nhận định, chủ yếu là code) |
 | Astro hoặc Starlight đổi API | Ghim phiên bản, nâng mỗi tháng trên nhánh riêng, ít override |
 | `_imslp/` chỉ có trên máy bạn | Người làm đợt 6 ở máy khác cần bạn gửi riêng thư mục này, bỏ tài liệu có giấy phép dùng cá nhân |
+| Tác phẩm lên sau cùng: lâu mới có bài học và hướng dẫn nghe; trang lõi, trang chặng, công cụ có nhiều link "sắp có" tới bài học | Link "sắp có" tự thành link khi trang lên; danh sách tác phẩm ở trang chặng và danh mục sinh từ dữ liệu. Nên để site cũ chạy (chưa tắt Pages của repo cũ) tới khi đợt 6 xong, để người đang học bài tác phẩm vẫn đọc được. Muốn có vài trang tác phẩm sớm thì đưa một lô của đợt 6 lên trước, như trang mẫu |
 
 ## Quy trình mỗi lô
 
@@ -182,7 +186,7 @@ Từ đợt này, mỗi lô gộp vào `main` là trang của lô lên site th�
 5. Review báo cáo, hồ sơ và ảnh chụp; chỗ cần sửa trả về agent trên cùng nhánh.
 6. Bạn kiểm khoảng 10 nhận định; agent khóa; bạn gộp vào `main` và push. Trang của lô lên site thật.
 
-Hai lô cùng đợt làm song song được nếu không chung file. Các đợt làm lần lượt. Cuối mỗi đợt, người review xét cả đợt theo "Xong khi" và cập nhật bảng Tiến độ.
+Hai lô cùng đợt làm song song được nếu không chung file. Các đợt làm lần lượt, theo thứ tự ở bảng Tiến độ. Cuối mỗi đợt, người review xét cả đợt theo "Xong khi" và cập nhật bảng Tiến độ.
 
 ## Lời giao việc mẫu
 
