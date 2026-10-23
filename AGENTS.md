@@ -44,10 +44,10 @@ npm test          # kiểm thử trên dist/: chạy sau npm run build hay npm r
 ## Khóa
 
 - Trang và bản ghi dữ liệu lên site thật khi đã khóa: mã băm trong `kiem-dinh/khoa.json`, hồ sơ kiểm định trong `kiem-dinh/<trang>.yml` hay `kiem-dinh/du-lieu/<bộ>/<id>.yml` (`plans/ben-vung/chuan-kiem-dinh.md` mục 5–7). Trang hay bản ghi đã khóa mà đổi thì build hỏng, ở cả hai bản; sửa theo thủ tục mở khóa.
-- Công cụ `tools/khoa.mjs`; mã băm tính ở `src/khoa.mjs`, dùng chung với bản build. `<mục>` là trang (`nhac-ly/10-hop-am-ba`, `index`) hay bản ghi (`du-lieu/tac-pham/fur-elise`).
+- Công cụ `tools/khoa.mjs`; mã băm tính ở `src/khoa.mjs`, dùng chung với bản build. `<mục>` là trang (`nhac-ly/10-hop-am-ba`, `index`) hay bản ghi (`du-lieu/tac-pham/fur-elise`). Khóa từng phần bản ghi, chỉ các trường đã kiểm định: `du-lieu/tac-pham/fur-elise#chang,danh_muc,tac_gia,ten`; khóa cả bản ghi thì thay các khóa từng phần của nó.
 
 ```bash
-node tools/khoa.mjs mau <mục>               # tạo hồ sơ mẫu
+node tools/khoa.mjs mau <mục>               # tạo hồ sơ mẫu; hồ sơ đã có thì thêm lần kiểm định mới
 node tools/khoa.mjs khoa <mục>              # kiểm hồ sơ đủ, ghi mã băm vào khoa.json và vào lần cuối của lan
 node tools/khoa.mjs tinh                    # kiểm mọi mục đã khóa; lệch thì thoát 1
 node tools/khoa.mjs mo <mục> --ly-do "…"    # mở khóa: ghi lý do, thêm một lần mới vào lan để điền

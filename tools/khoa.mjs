@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Khóa trang và bản ghi đã kiểm định (D1.6; plans/ben-vung/chuan-kiem-dinh.md mục 5–7).
-//   node tools/khoa.mjs mau <mục>…                    tạo hồ sơ mẫu kiem-dinh/<mục>.yml (không ghi đè)
+//   node tools/khoa.mjs mau <mục>…                    tạo hồ sơ mẫu kiem-dinh/<mục>.yml; hồ sơ đã có và lần cuối đã khóa
+//                                                     thì thêm một lần kiểm định mới (để điền) vào lan
 //   node tools/khoa.mjs khoa <mục>…                   kiểm hồ sơ đủ; ghi mã băm vào kiem-dinh/khoa.json và vào lần cuối
 //                                                     trong lan của hồ sơ (lần đó phải chưa có mã băm)
 //   node tools/khoa.mjs mo <mục> --ly-do "…"          gỡ khóa; ghi lý do và thêm một lần mới (để điền) vào lan của hồ sơ
@@ -10,22 +11,25 @@
 //       cho chủ repo kiểm mẫu. Lô ("D3-L2", trang lấy từ plans/lam-lai/anh-xa.md) thì mặc định ghi vào
 //       plans/lam-lai/bao-cao/d3-l2-nhan-dinh.yml (với --mau: d3-l2-kiem-mau.yml); trang thì in ra màn hình
 // <mục>: đường dẫn trang ("nhac-ly/10-hop-am-ba", "nhac-ly/index", "index", "404") hay bản ghi "du-lieu/<bộ>/<id>"
-// ("du-lieu/tac-pham/fur-elise"). --goc <thư mục>: chạy trên bản chép của repo (kiểm thử).
+// ("du-lieu/tac-pham/fur-elise"). Khóa từng phần bản ghi: "du-lieu/<bộ>/<id>#<trường>,<trường>" (chỉ các trường đã kiểm
+// định, chuan-kiem-dinh.md mục 6); khóa cả bản ghi thì thay các khóa từng phần của nó. Hồ sơ vẫn là một file cho mỗi
+// bản ghi. --goc <thư mục>: chạy trên bản chép của repo (kiểm thử).
 import { execFileSync } from 'node:child_process';
 import { randomInt } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse, parseDocument, stringify } from 'yaml';
-import { GOC, docBanGhi, docKhoa, fileTrang, maBamBanGhi, maBamTrang } from '../src/khoa.mjs';
+import { GOC, chuanKhoaBanGhi, docKhoa, fileTrang, maBamKhoaBanGhi, maBamTrang, tachKhoaBanGhi } from '../src/khoa.mjs';
 
 const KET_QUA = ['dung', 'da-sua', 'da-bo', 'khong-can-nguon'];
 const LUOT_2 = ['dung', 'sai', 'khong-chac'];
 const KET_QUA_KHUONG = ['dung', 'da-sua'];
 
-/** Mục là bản ghi ("du-lieu/<bộ>/<id>")? Trả về "<bộ>/<id>" hay null. */
-const laBanGhi = (muc) => (muc.startsWith('du-lieu/') ? muc.slice('du-lieu/'.length) : null);
-const fileHoSo = (muc, goc) => path.join(goc, 'kiem-dinh', `${muc}.yml`);
+/** Mục là bản ghi ("du-lieu/<bộ>/<id>[#<trường>,…]")? Trả về khóa viết chuẩn ("<bộ>/<id>[#…]") hay null. */
+const laBanGhi = (muc) => (muc.startsWith('du-lieu/') ? chuanKhoaBanGhi(muc.slice('du-lieu/'.length)) : null);
+/** Hồ sơ của mục: một file cho mỗi trang hay mỗi bản ghi (khóa từng phần dùng chung hồ sơ của bản ghi). */
+const fileHoSo = (muc, goc) => path.join(goc, 'kiem-dinh', `${muc.split('#')[0]}.yml`);
 const homNay = () => new Date().toISOString().slice(0, 10);
 /** Những người phải ghi ở mỗi lần kiểm định (chuan-kiem-dinh.md mục 3, 5). */
 const NGUOI = ['luot_1', 'luot_2', 'review', 'kiem_mau'];
@@ -43,9 +47,9 @@ function nhanh(goc) {
 function maBamMuc(muc, goc) {
 	const bg = laBanGhi(muc);
 	if (bg) {
-		const r = docBanGhi(bg, goc);
-		if (!r) throw new Error(`không có bản ghi ${bg} trong src/data/`);
-		return maBamBanGhi(r);
+		const ma = maBamKhoaBanGhi(bg, goc);
+		if (!ma) throw new Error(`không có bản ghi ${tachKhoaBanGhi(bg).banGhi} trong src/data/`);
+		return ma;
 	}
 	const f = fileTrang(muc, goc);
 	if (!fs.existsSync(f)) throw new Error(`không có trang ${path.relative(goc, f)}`);
@@ -67,7 +71,7 @@ const soKhuong = (noiDung) => (noiDung.match(/^```abc\s*$/gm) ?? []).length;
  */
 export function loiHoSo(hs, muc, goc) {
 	const loi = [];
-	const bg = laBanGhi(muc);
+	const bg = laBanGhi(muc) && tachKhoaBanGhi(laBanGhi(muc)).banGhi;
 	if (bg ? hs.ban_ghi !== bg : hs.trang !== `src/content/docs/${muc}.md`)
 		loi.push(bg ? `ban_ghi phải là "${bg}"` : `trang phải là "src/content/docs/${muc}.md"`);
 	if (!Array.isArray(hs.lan) || !hs.lan.length) loi.push('thiếu lan (các lần kiểm định)');
@@ -123,7 +127,7 @@ function hoSoMau(muc, goc) {
 	const bg = laBanGhi(muc);
 	maBamMuc(muc, goc); // trang hay bản ghi phải có
 	const dau = `# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa ${muc}\n`;
-	if (bg) return dau + stringify({ ban_ghi: bg, lan: [lanMoi(1, goc)], nguon: [], nhan_dinh: [] });
+	if (bg) return dau + stringify({ ban_ghi: tachKhoaBanGhi(bg).banGhi, lan: [lanMoi(1, goc)], nguon: [], nhan_dinh: [] });
 	const tang = (parse(fs.readFileSync(path.join(goc, 'src/data/trang.yml'), 'utf8')) ?? []).find((r) => r.id === muc)?.tang ?? null;
 	const cu = path.join(goc, '..', 'opus-zero', 'docs', `${muc}.md`);
 	const hs = {
@@ -138,11 +142,15 @@ function hoSoMau(muc, goc) {
 	return dau + stringify(hs);
 }
 
-/** Ghi ngày, nhánh và mã băm vào lần cuối trong lan của hồ sơ (lần đó chưa có mã băm: khoa đã kiểm). */
-function ghiLan(fHoSo, ma, goc) {
+/**
+ * Ghi ngày, nhánh và mã băm vào lần cuối trong lan của hồ sơ (lần đó chưa có mã băm: khoa đã kiểm); khóa từng phần
+ * thì ghi cả các trường đã khóa.
+ */
+function ghiLan(fHoSo, ma, goc, truong) {
 	const doc = parseDocument(fs.readFileSync(fHoSo, 'utf8'));
 	const cuoi = doc.get('lan').items.at(-1);
 	for (const [k, v] of Object.entries({ ngay: homNay(), nhanh: nhanh(goc), ma_bam: ma })) cuoi.set(k, v);
+	if (truong) cuoi.set('truong', doc.createNode(truong, { flow: true }));
 	fs.writeFileSync(fHoSo, doc.toString({ lineWidth: 0 }));
 }
 
@@ -159,7 +167,16 @@ export function lenh(thamSo, goc = GOC, in_ = console.log) {
 	if (viec === 'mau') {
 		for (const t of con) {
 			const f = fileHoSo(t, goc);
-			if (fs.existsSync(f)) throw new Error(`${path.relative(goc, f)} đã có`);
+			if (fs.existsSync(f)) {
+				// hồ sơ đã có (lần kiểm định trước đã khóa): thêm lần mới, ví dụ khóa thêm trường hay khóa cả bản ghi
+				const doc = parseDocument(fs.readFileSync(f, 'utf8'));
+				const lan = doc.get('lan');
+				if (!lan?.items.at(-1)?.get('ma_bam')) throw new Error(`${path.relative(goc, f)} đã có, lần cuối trong lan chưa khóa: điền lần đó rồi khóa`);
+				lan.add(doc.createNode(lanMoi(lan.items.length + 1, goc)));
+				fs.writeFileSync(f, doc.toString({ lineWidth: 0 }));
+				in_(`đã thêm lần kiểm định ${lan.items.length} vào ${path.relative(goc, f)}`);
+				continue;
+			}
 			fs.mkdirSync(path.dirname(f), { recursive: true });
 			fs.writeFileSync(f, hoSoMau(t, goc));
 			in_(`đã tạo ${path.relative(goc, f)}`);
@@ -177,9 +194,12 @@ export function lenh(thamSo, goc = GOC, in_ = console.log) {
 			if (loi.length) throw new Error(`${muc}: hồ sơ chưa đủ để khóa:\n- ${loi.join('\n- ')}`);
 			const ma = maBamMuc(muc, goc);
 			const bg = laBanGhi(muc);
+			const { banGhi, truong } = bg ? tachKhoaBanGhi(bg) : {};
+			if (bg && truong && khoa.ban_ghi[banGhi]) throw new Error(`${muc}: bản ghi ${banGhi} đã khóa cả bản ghi`);
+			if (bg && !truong) for (const k of Object.keys(khoa.ban_ghi)) if (k.startsWith(`${banGhi}#`)) delete khoa.ban_ghi[k];
 			if (bg) khoa.ban_ghi[bg] = ma;
 			else khoa.trang[muc] = ma;
-			ghiLan(f, ma, goc);
+			ghiLan(f, ma, goc, truong);
 			ghiKhoa(khoa, goc);
 			in_(`đã khóa ${muc} (${ma.slice(0, 19)}…)`);
 			if (!bg) {
@@ -197,7 +217,10 @@ export function lenh(thamSo, goc = GOC, in_ = console.log) {
 		const bg = laBanGhi(muc);
 		const bang = bg ? khoa.ban_ghi : khoa.trang;
 		const k = bg ?? muc;
-		if (!(k in bang)) throw new Error(`${muc} chưa khóa`);
+		if (!(k in bang)) {
+			const phan = bg ? Object.keys(khoa.ban_ghi).filter((x) => x.startsWith(`${tachKhoaBanGhi(bg).banGhi}#`)) : [];
+			throw new Error(`${muc} chưa khóa` + (phan.length ? `; bản ghi đang khóa từng phần: ${phan.map((x) => `du-lieu/${x}`).join(', ')}` : ''));
+		}
 		delete bang[k];
 		ghiKhoa(khoa, goc);
 		const f = fileHoSo(muc, goc);

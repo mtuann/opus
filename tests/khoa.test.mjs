@@ -34,11 +34,13 @@ test('mọi mục trong kiem-dinh/khoa.json còn khớp mã băm và có hồ s�
 	const { trang, ban_ghi } = docKhoa();
 	assert.ok('index' in trang && '404' in trang, 'trang chủ tạm và trang 404 phải được khóa (D1.6)');
 	for (const muc of [...Object.keys(trang), ...Object.keys(ban_ghi).map((k) => `du-lieu/${k}`)]) {
-		const f = path.join(ROOT, 'kiem-dinh', `${muc}.yml`);
+		const f = path.join(ROOT, 'kiem-dinh', `${muc.split('#')[0]}.yml`);
 		assert.ok(fs.existsSync(f), `${muc}: thiếu hồ sơ kiem-dinh/${muc}.yml`);
 		const hs = parse(fs.readFileSync(f, 'utf8'));
 		assert.deepEqual(loiHoSo(hs, muc, ROOT), [], `hồ sơ của ${muc} chưa đủ`);
-		assert.equal(hs.lan.at(-1).ma_bam, (muc.startsWith('du-lieu/') ? ban_ghi[muc.slice(8)] : trang[muc]), `${muc}: lần cuối trong hồ sơ phải ghi mã băm đang khóa`);
+		// trang: lần cuối ghi mã băm đang khóa; bản ghi khóa từng phần qua nhiều lần: một lần nào đó ghi mã băm của khóa ấy
+		if (muc.startsWith('du-lieu/')) assert.ok(hs.lan.some((l) => l.ma_bam === ban_ghi[muc.slice(8)]), `${muc}: hồ sơ không có lần nào ghi mã băm đang khóa`);
+		else assert.equal(hs.lan.at(-1).ma_bam, trang[muc], `${muc}: lần cuối trong hồ sơ phải ghi mã băm đang khóa`);
 	}
 });
 
@@ -122,8 +124,28 @@ test('công cụ khóa trên bản chép nhỏ: mẫu, khóa (đòi hồ sơ đ�
 		const fBanGhi = path.join(goc, 'kiem-dinh/du-lieu/tac-pham/x.yml');
 		assert.equal(parse(fs.readFileSync(fBanGhi, 'utf8')).ban_ghi, 'tac-pham/x');
 		sua(fBanGhi, ...NGUOI);
+		// khóa từng phần: chỉ các trường đã kiểm định (đợt 2 khóa vài trường của bản ghi tác phẩm, đợt 6 khóa cả bản ghi)
+		chay('khoa', 'du-lieu/tac-pham/x#ten, loai,ten');
+		assert.deepEqual(Object.keys(khoaJson().ban_ghi), ['tac-pham/x#loai,ten'], 'trường xếp theo chữ cái, không trùng');
+		assert.deepEqual(parse(fs.readFileSync(fBanGhi, 'utf8')).lan.at(-1).truong, ['loai', 'ten']);
+		const fTacPham = path.join(goc, 'src/data/tac-pham.yml');
+		sua(fTacPham, 'ten: X\n', 'ten: X\n  grade: G\n');
+		assert.deepEqual(kiemKhoa(goc), [], 'trường chưa khóa sửa tự do');
+		sua(fTacPham, 'ten: X', 'ten: Z');
+		assert.match(kiemKhoa(goc).join(), /bản ghi tac-pham\/x#loai,ten đã khóa mà đã đổi/);
+		sua(fTacPham, 'ten: Z', 'ten: X');
+		assert.throws(() => chay('mo', 'du-lieu/tac-pham/x', '--ly-do', 'thử'), /chưa khóa; bản ghi đang khóa từng phần: du-lieu\/tac-pham\/x#loai,ten/);
+		// khóa cả bản ghi: lần kiểm định mới (mau thêm vào hồ sơ đã có), rồi khóa; khóa từng phần cũ được thay
+		assert.throws(() => chay('khoa', 'du-lieu/tac-pham/x'), /đã có mã băm/);
+		chay('mau', 'du-lieu/tac-pham/x');
+		assert.equal(parse(fs.readFileSync(fBanGhi, 'utf8')).lan.length, 2);
+		assert.throws(() => chay('mau', 'du-lieu/tac-pham/x'), /lần cuối trong lan chưa khóa/);
+		sua(fBanGhi, ...NGUOI);
 		chay('khoa', 'du-lieu/tac-pham/x');
-		assert.match(khoaJson().ban_ghi['tac-pham/x'], /^sha256:/);
+		assert.deepEqual(Object.keys(khoaJson().ban_ghi), ['tac-pham/x'], 'khóa cả bản ghi thay khóa từng phần');
+		chay('mau', 'du-lieu/tac-pham/x');
+		sua(fBanGhi, ...NGUOI);
+		assert.throws(() => chay('khoa', 'du-lieu/tac-pham/x#ten'), /đã khóa cả bản ghi/);
 		assert.equal(chay('tinh'), 0);
 
 		// build hỏng khi mục đã khóa đổi hay mất (kiemKhoa; src/content.config.ts gọi lúc nạp cấu hình)
