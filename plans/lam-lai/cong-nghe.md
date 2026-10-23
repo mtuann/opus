@@ -42,7 +42,7 @@ src/plugins/                # plugin Markdown của dự án (chỉ thị, khố
 src/pages/                  # trang sinh: chặng, danh mục tác phẩm, sách in
 src/scripts/                # module JavaScript chuyển từ ../opus-zero/docs/assets/js/
 src/styles/
-public/                     # font, abcjs, biểu tượng, mẫu âm piano (lô đầu tiên dùng audio.js), bản thu (đợt 6), sw.js
+public/                     # font, abcjs, biểu tượng, mẫu âm piano (lô D3-L1), bản thu (đợt 6), sw.js
 tests/                      # kiểm thử site mới
 kiem-dinh/                  # hồ sơ kiểm định, khoa.json (không đăng lên site)
 tools/chuyen/               # script chuyển cú pháp
@@ -71,7 +71,8 @@ Site cũ nằm ở thư mục cạnh `../opus-zero/` (repo cũ, chỉ đọc). M
 | Thành phần | Lấy từ site cũ |
 |---|---|
 | Khuông nhạc ABC, vẽ khi gần màn hình và khi in | `../opus-zero/docs/assets/js/abc.js`, `loader.js`, `print.js` |
-| Khối nghe có mốc tham khảo | `listen.js`, `audio.js` |
+| Khối nghe có mốc tham khảo | `listen.js` |
+| Bàn phím, âm thanh dùng chung (lô D3-L1) | `piano.js`, `audio.js`, mẫu âm `../opus-zero/docs/assets/samples/piano/` (CC BY 3.0) |
 | Hình cấu trúc | `../opus-zero/tools/figures.py` (thông số chuyển vào bản ghi) |
 | Câu hỏi kiểm tra nhanh | `quiz.js` |
 | Bàn phím, hóa biểu, vòng quãng năm, máy đếm nhịp | `piano.js`, `theory.js`, `circle.js`, `metronome.js` |

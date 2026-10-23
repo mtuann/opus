@@ -95,9 +95,9 @@ Link trong `nguon` phải là trang đã mở và đọc, không phải kết qu
 - `kiem-dinh/khoa.json` ánh xạ đường dẫn trang → mã băm SHA-256 của nguồn Markdown lúc khóa.
 - Mã băm tính trên cả file, kể cả frontmatter, sau khi chuẩn hóa: xuống dòng kiểu `\n`, bỏ khoảng trắng cuối dòng. Site mới không có vùng do công cụ sinh trong trang (hình, hộp thông tin, danh sách đều sinh lúc build từ dữ liệu), và trạng thái kiểm định không ghi vào trang, nên khóa xong thì file không đổi nữa. Chỉ thị như `::khoi-nghe` giữ nguyên trong mã băm vì chính chúng không đổi khi dữ liệu đổi.
 - Bản build thật chỉ đưa trang có trong `khoa.json`; trang có trong `khoa.json` mà mã băm khác thì build hỏng, thông báo kèm cách mở khóa (`plans/lam-lai/cong-nghe.md` mục 7).
-- Bản ghi trong `src/data/` khóa theo từng bản ghi (mã băm của bản ghi sau khi chuẩn hóa: khóa xếp theo thứ tự chữ cái). Thêm bản ghi mới được; sửa hay xóa bản ghi đã khóa thì phải mở khóa.
-- Bản ghi khóa được từng phần: chỉ các trường đã kiểm định (mã băm tính trên các trường ấy), ví dụ đợt 2 khóa tên, tác giả, số danh mục, chặng của bản ghi tác phẩm, đợt 6 khóa cả bản ghi. Sửa trường đã khóa thì phải mở khóa; trường chưa khóa sửa tự do, nhưng trang chỉ được hiện trường đã khóa (`plans/lam-lai/README.md`, Quy tắc chung).
-- Thành phần, plugin, JavaScript, CSS và mẫu trang không nằm trong khóa; chúng được giữ đúng bằng kiểm thử tự động. Phần do dữ liệu sinh ra trong trang (danh sách, con số) đổi khi thêm tác phẩm mà không phá khóa, và vẫn đúng vì từng bản ghi đã được kiểm định.
+- Bản ghi trong `src/data/` khóa theo từng bản ghi, cả bản ghi hay từng phần (mã băm của phần được khóa sau khi chuẩn hóa: khóa xếp theo thứ tự chữ cái). Thêm bản ghi mới được; sửa hay xóa phần đã khóa thì phải mở khóa.
+- Khóa từng phần: chỉ các trường đã kiểm định, mã băm tính trên các trường ấy (khóa `du-lieu/<bộ>/<id>#<trường>,<trường>` của `tools/khoa.mjs`, D1.6; hồ sơ vẫn một file cho mỗi bản ghi). Ví dụ: đợt 2 khóa các trường của bản ghi tác phẩm mà trang chặng và ô gợi ý tập hiện ra; đợt 6 khóa phần còn lại, tức cả bản ghi. Trường chưa khóa sửa tự do, nhưng trang chỉ được hiện trường đã khóa (`plans/lam-lai/README.md`, Quy tắc chung).
+- Thành phần, plugin, JavaScript, CSS và mẫu trang không nằm trong khóa; chúng được giữ đúng bằng kiểm thử tự động. Phần do dữ liệu sinh ra trong trang (danh sách, con số) đổi khi thêm tác phẩm mà không phá khóa, và vẫn đúng vì mọi trường trang hiện ra đã được kiểm định và khóa.
 
 ## 7. Mở khóa
 
@@ -108,6 +108,8 @@ Chỉ trong ba trường hợp:
 3. Đợt mở rộng lõi có trong kế hoạch.
 
 Cách làm: `tools/khoa.py mo <trang> --ly-do "..."` (ghi lý do vào hồ sơ, gỡ dòng trong `khoa.json`); sửa; kiểm định **chỉ những nhận định bị chạm** cộng các nhận định cùng đoạn; thêm một mục vào `lan`; khóa lại. Commit mở khóa và commit khóa lại nằm cùng một nhánh (`mo/<tên ngắn>`), review như một việc lẻ; trên `main` trang luôn ở trạng thái khóa. Trang lõi bị sửa một định nghĩa hay một quy tắc thì liệt kê các trang link tới đoạn đó (kiểm thử anchor có sẵn giúp tìm) và ghi trong báo cáo trang nào cần sửa theo.
+
+Bản ghi khóa từng phần thì mở đúng khóa ấy (`du-lieu/<bộ>/<id>#<trường>,…`); sửa trường chưa khóa thì không cần mở khóa.
 
 ## 8. Lời giao việc kiểm định mẫu
 

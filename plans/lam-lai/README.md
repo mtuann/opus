@@ -27,7 +27,7 @@ File này là bản chuẩn cho người làm và agent. Bản cho người đ�
 - 13 trang ngoại vi vào mục Đọc thêm, chuyển ở đợt 8.
 - Thứ tự làm các đợt: 0 đến 5, rồi 7, 8, 6, 9. Tác phẩm (đợt 6) làm sau cùng, khi khung site, phần lõi, công cụ, sách in và trang tham chiếu đã xong. Đợt 6 thêm tác phẩm theo lô (D6-L1 đến D6-L11); sau đợt 6, mỗi tác phẩm mới thêm theo `../ben-vung/them-tac-pham.md`. Số đợt, tên lô, tên nhánh và `anh-xa.md` giữ nguyên. Chủ repo chọn ngày 23/10/2026, lúc đang làm đợt 1.
   - Ba trang thử của D1.8 (`nhac-ly/10-hop-am-ba`, Für Elise, Bach Goldberg) chuyển ở đợt 1, chỉ có ở bản xem, để kiểm khung. Lô của chúng (D3-L2 và hai lô đợt 6) chỉ kiểm định và khóa, không chuyển lại.
-  - Trang ngoài đợt 6 vẫn hiện vài trường của bản ghi tác phẩm (danh sách ở trang chặng, ô gợi ý tập, trang Cập nhật, trang theo cấp độ). Các trường đó khóa riêng, ở lô đầu tiên có trang hiện chúng (mục "Quy tắc chung"); đợt 6 khóa nốt phần còn lại.
+  - Trang ngoài đợt 6 vẫn hiện vài trường của bản ghi tác phẩm (danh sách ở trang chặng, ô gợi ý tập, Tác phẩm theo cấp độ, Thầy và thi). Các trường đó khóa riêng, ở lô đầu tiên có trang hiện chúng (mục "Quy tắc chung"); đợt 6 khóa nốt phần còn lại.
 
 Chờ bạn. Mục "khuyên dùng" là lựa chọn mà kế hoạch đang giả định. Đợt 0 không phụ thuộc các mục này nên giao được ngay; hai mục đầu cần có trước đợt 1, ba mục sau trước đợt 2.
 
@@ -72,7 +72,7 @@ Bảng xếp theo thứ tự làm: đợt 6 (tác phẩm) sau đợt 8. Số tra
 - Một lô chỉ chạm: trang của lô trong `src/content/docs/`; dữ liệu liên quan trong `src/data/`; thành phần, script và file tĩnh mà trang của lô cần lần đầu (`src/components/`, `src/scripts/`, `public/`); hồ sơ trong `kiem-dinh/`; báo cáo của lô. Kiểm thử phạm vi chặn chỗ khác.
 - Không push (bạn push). Không sửa `.claude/`. Không sửa trang đã khóa: kiểm thử khóa chặn; cần sửa thì theo thủ tục mở khóa (`../ben-vung/chuan-kiem-dinh.md` mục 7).
 - Không thêm trang ngoài kế hoạch cho đến hết đợt 6; sau đó tác phẩm mới theo `../ben-vung/them-tac-pham.md`.
-- Trang chỉ hiện dữ liệu đã khóa. Trường của bản ghi mà trang của một lô hiện ra (danh sách, ô gợi ý, con số) được chính lô đó kiểm định và khóa trước khi gộp, nếu chưa khóa. Bản ghi khóa được từng phần, theo trường (`../ben-vung/chuan-kiem-dinh.md` mục 6).
+- Trang chỉ hiện trường dữ liệu đã khóa. Trang của lô hiện một trường chưa khóa thì lô đó kiểm định và khóa trường ấy cùng trang. Khóa từng phần bản ghi: `../ben-vung/chuan-kiem-dinh.md` mục 6.
 - Commit message, mạng, `_imslp/`: như mục "Cách làm việc" của `AGENTS.md`.
 - **Người review:** mặc định là Claude (phiên Cowork hay Claude Code của bạn); có thể là người hay LLM khác, miễn không làm lượt 1 hay lượt 2 của chính lô đó.
 
@@ -105,18 +105,24 @@ Mỗi việc một nhánh, làm theo thứ tự. Site mới chưa đăng gì cho
 
 Từ đợt này, mỗi lô gộp vào `main` là trang của lô lên site thật.
 
-- Kiểm định và khóa: `cap-do.yml`; `nha-soan-nhac.yml`; các trường của 79 bản ghi trong `tac-pham.yml` mà trang của lô hiện ra. Gồm tên, tác giả, số danh mục, chặng (trang chặng); `grade`, `goi_y` (ô gợi ý tập ở trang chủ); và trường khác nếu trang chặng hiện. Khóa từng trường (`../ben-vung/chuan-kiem-dinh.md` mục 6); các trường còn lại khóa ở đợt 6.
-- Ô gợi ý tập (`practice.js` cũ, ở trang chủ; đợt 4, 7 dùng lại ở trang Piano, Luyện tập) sinh link bằng JavaScript. Link tới trang chưa có trong bản build phải hiện "sắp có" như link dựng lúc build: bản build xuất danh sách trang cho script dùng.
+- Kiểm định và khóa: `cap-do.yml`; `nha-soan-nhac.yml`; các trường của 79 bản ghi trong `tac-pham.yml` mà trang của lô hiện ra, khóa từng phần (`../ben-vung/chuan-kiem-dinh.md` mục 6). Tối thiểu:
+  - `ten`, `tac_gia`, `danh_muc`, `chang`, `loai`: trang chặng liệt kê bài, link tới đúng trang bài học hay hướng dẫn nghe;
+  - `goi_y`: ô gợi ý tập ở trang chủ;
+  - `grade` nếu trang chặng hiện Grade của từng bài; không thì `grade` khóa ở D8-L1 (Tác phẩm theo cấp độ).
+
+  Trang chặng hiện thêm trường nào thì khóa thêm trường ấy, ghi trong báo cáo. Các trường còn lại khóa ở đợt 6.
+- Kiểm thử: trang đã khóa chỉ dùng trường đã khóa của bản ghi (chỉ thị trong trang, trang chặng, ô gợi ý tập).
+- Ô gợi ý tập (`practice.js` cũ, ở trang chủ; đợt 4, 7 dùng lại ở trang Piano, Luyện tập) sinh link bằng JavaScript. Khi chuyển, D2-L1 cho bản build xuất danh sách trang để script dùng: link tới trang chưa có hiện "sắp có" như link dựng lúc build.
 - 7 trang chặng `piano/lo-trinh/chang-1` đến `chang-7` sinh từ dữ liệu; trang lộ trình giữ các mục chặng dạng tóm tắt, mỗi mục dẫn sang trang chặng.
 - 9 trang của lô, gồm trang chủ mới (thay trang chủ tạm) và bài kiểm tra đầu vào (`placement.js`).
 - Menu đủ 9 nhóm; nhóm chưa có trang hiện nhãn "sắp có".
 
-**Xong khi:** trang của lô và phần dữ liệu trên đã khóa và có trên site thật; người mới đi được từ trang chủ tới trang chặng của mình.
+**Xong khi:** trang của lô và phần dữ liệu trên đã khóa và có trên site thật; người mới đi được từ trang chủ tới trang chặng của mình; ô gợi ý tập ở trang chủ chỉ dùng trường đã khóa, link tới bài chưa lên hiện "sắp có".
 
 ## Đợt 3. Nhạc lý và luyện tai (D3-L1 đến D3-L6)
 
 - `thuat-ngu.yml` kiểm định và khóa cùng lô D3-L5; trang Từ điển sinh từ dữ liệu.
-- Thành phần mà các bài này dùng (bàn phím, hóa biểu, vòng quãng năm, máy đếm nhịp, câu hỏi) chuyển trong lô có trang đầu tiên cần nó. Công cụ phát âm thanh dùng chung `audio.js` cũ: lô đầu tiên cần nó chép kèm mẫu âm piano (`../opus-zero/docs/assets/samples/piano/`, Salamander Grand Piano, CC BY 3.0, cả file `LICENSE.txt` của thư mục).
+- Thành phần mà các bài này dùng (bàn phím, hóa biểu, vòng quãng năm, máy đếm nhịp, câu hỏi) chuyển trong lô có trang đầu tiên cần nó. Bàn phím (`piano.js` cũ) phát tiếng qua `audio.js`, module âm thanh dùng chung. Lô đầu tiên có bàn phím là D3-L1 (bài 1). Lô đó chép kèm `audio.js` và mẫu âm piano (`../opus-zero/docs/assets/samples/piano/`, Salamander Grand Piano, CC BY 3.0, cả file `LICENSE.txt` của thư mục). Trước đó, trang thử `nhac-ly/10-hop-am-ba` của D1.8 hiện ô "chưa chuyển" ở chỗ bàn phím.
 
 **Xong khi:** 45 trang của 6 lô và `thuat-ngu.yml` đã khóa.
 
@@ -137,7 +143,8 @@ Từ đợt này, mỗi lô gộp vào `main` là trang của lô lên site th�
 - Service worker của site mới (phạm vi `/opus/`): danh sách tệp và phiên bản sinh lúc build; dùng khi mất mạng và cài như ứng dụng như site cũ.
 - Sách in sinh từ dữ liệu (thay `../opus-zero/hooks/books.py`), chỉ gồm trang đã khóa. Hai cuốn có tác phẩm ("Hướng dẫn nghe", "Piano: 10 bài đầu tiên và bài học tác phẩm") lúc này chỉ có phần không phải tác phẩm, và tự đủ chương khi đợt 6 xong. Nhật ký trang Cập nhật sinh từ dữ liệu và các mục viết tay.
 - Bài blog chuyển sang với đường dẫn theo cú pháp của site mới.
-- Trang Cập nhật hiện trường `them_ngay` của bản ghi tác phẩm: lô của trang khóa trường này. Mục viết tay chép từ site cũ có câu chỉ đúng khi tác phẩm đã lên (như "bản thu lưu ngay trên site"): kiểm định như mọi nhận định, sửa cho đúng lúc đăng.
+- Nhật ký tác phẩm mới ở trang Cập nhật (theo `them_ngay`) chỉ hiện tác phẩm đã lên site (trang đã khóa); trước đợt 6 phần này trống. `them_ngay` khóa cùng bản ghi ở đợt 6.
+- Mục viết tay chép từ site cũ có câu chỉ đúng khi tác phẩm đã lên (như "bản thu lưu ngay trên site"): kiểm định như mọi nhận định, viết lại cho đúng với site lúc đăng.
 
 **Xong khi:** mọi công cụ chạy; ô gợi ý tập chỉ dùng trường đã khóa, link tới bài chưa lên hiện "sắp có"; bản sao lưu xuất từ site cũ (build `../opus-zero/` trên máy) khôi phục được; sách in đủ chương, trừ phần tác phẩm; trang đã xem mở lại được khi mất mạng.
 
@@ -158,7 +165,7 @@ Khung, lõi, công cụ và tham chiếu đã lên site; đợt này thêm tác 
 - D6-L1 đến D6-L6: bài học chặng 2 đến 7, kèm hướng dẫn nghe cùng tác phẩm; D6-L7 đến D6-L11: các hướng dẫn nghe còn lại theo thứ tự nav cũ, cùng hai trang mục lục.
 - Danh mục `tac-pham` sinh từ dữ liệu, lọc theo chặng, thời kỳ, tác giả, loại.
 
-**Xong khi:** 81 trang của 11 lô đã khóa; `python3 tools/audio/check_audio.py` không lỗi; danh mục, trang chặng và "Học tiếp" hiện đủ; hai cuốn sách in có tác phẩm ("Hướng dẫn nghe", "Piano: 10 bài đầu tiên và bài học tác phẩm") đủ chương.
+**Xong khi:** 81 trang của 11 lô đã khóa; mọi trường của 79 bản ghi tác phẩm đã khóa (khóa cả bản ghi); `python3 tools/audio/check_audio.py` không lỗi; danh mục, trang chặng và "Học tiếp" hiện đủ; hai cuốn sách in có tác phẩm ("Hướng dẫn nghe", "Piano: 10 bài đầu tiên và bài học tác phẩm") đủ chương.
 
 ## Đợt 9. Hoàn tất
 
@@ -203,7 +210,7 @@ Một phiên một việc, mở trong thư mục `opus/`. Đổi các chỗ tron
 
 **Một lô (đợt 2 đến 8):**
 
-> Bạn làm lô **D<đợt>-L<lô>** trong `plans/lam-lai/README.md` của repo opus. Đọc `AGENTS.md`; các mục Bảy luật, Quy tắc chung, Quy trình mỗi lô và Đợt <đợt> trong kế hoạch; danh sách trang của lô trong `plans/lam-lai/anh-xa.md`; `plans/ben-vung/chuan-kiem-dinh.md`. Tạo nhánh `moi/d<đợt>-l<lô>` từ `main`. Chuyển từng trang từ `../opus-zero/docs/` bằng `tools/chuyen/`, tách dữ liệu, kiểm định lượt 1 và ghi hồ sơ; chưa khóa. Chỉ chạm file của lô. Không push. Khi xong: `npm run build:xem` và `npm test` đạt; commit; viết báo cáo `plans/lam-lai/bao-cao/d<đợt>-l<lô>.md`; xuất danh sách nhận định cho lượt 2 bằng `python3 tools/khoa.py xuat D<đợt>-L<lô>`.
+> Bạn làm lô **D<đợt>-L<lô>** trong `plans/lam-lai/README.md` của repo opus. Đọc `AGENTS.md`; các mục Bảy luật, Quy tắc chung, Quy trình mỗi lô và Đợt <đợt> trong kế hoạch; danh sách trang của lô trong `plans/lam-lai/anh-xa.md`; `plans/ben-vung/chuan-kiem-dinh.md`. Tạo nhánh `moi/d<đợt>-l<lô>` từ `main`. Chuyển từng trang từ `../opus-zero/docs/` bằng `tools/chuyen/`, tách dữ liệu, kiểm định lượt 1 và ghi hồ sơ, cả hồ sơ của các trường dữ liệu mà trang của lô hiện ra nếu trường ấy chưa khóa; chưa khóa. Chỉ chạm file của lô. Không push. Khi xong: `npm run build:xem` và `npm test` đạt; commit; viết báo cáo `plans/lam-lai/bao-cao/d<đợt>-l<lô>.md`; xuất danh sách nhận định cho lượt 2 bằng `python3 tools/khoa.py xuat D<đợt>-L<lô>`.
 
 **Lượt 2:** lời mẫu ở `../ben-vung/chuan-kiem-dinh.md` mục 8.
 
@@ -217,6 +224,6 @@ Một phiên một việc, mở trong thư mục `opus/`. Đổi các chỗ tron
 
 ## Review những gì
 
-- **Mỗi lô:** phạm vi file; hồ sơ đủ; mọi chỗ hai lượt lệch nhau và mọi chỗ đã sửa; trang dựng đúng trên ảnh chụp; thành phần mới có kiểm thử; dữ liệu tách ra khớp trang cũ trong `../opus-zero/`; `git -C ../opus-zero diff --stat` trống.
+- **Mỗi lô:** phạm vi file; hồ sơ đủ; trường dữ liệu mà trang của lô hiện ra đã kiểm định (khóa cùng trang); mọi chỗ hai lượt lệch nhau và mọi chỗ đã sửa; trang dựng đúng trên ảnh chụp; thành phần mới có kiểm thử; dữ liệu tách ra khớp trang cũ trong `../opus-zero/`; `git -C ../opus-zero diff --stat` trống.
 - **Đợt 1:** chạy lại build và kiểm thử; đọc schema, plugin, script chuyển; so chữ ba trang thử với site cũ; thử dữ liệu hỏng; bản thật không có trang chưa khóa; link "sắp có" và trang 404; đo Lighthouse.
 - **Cuối mỗi đợt:** tiêu chí "Xong khi"; số trang đã khóa khớp `anh-xa.md`; site thật hiện đúng phần đã khóa, không link chết.
