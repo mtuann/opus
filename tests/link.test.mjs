@@ -5,6 +5,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { markdownToHtml } from 'satteri';
+import { parse } from 'yaml';
 import { trangCuaDiaChi } from '../src/ban-build.mjs';
 import { sapCo } from '../src/plugins/sap-co.mjs';
 
@@ -67,6 +68,13 @@ test('mọi link nội bộ trong nội dung các trang của bản build tới 
 		}
 	}
 	assert.deepEqual(hong, []);
+});
+
+test('trang 404 không có trong menu, nên không trang nào link tới nó (nút "Trước", "Tiếp" theo menu)', () => {
+	const fm = parse(/^---\n([\s\S]*?)\n---/.exec(fs.readFileSync(path.join(ROOT, 'src/content/docs/404.md'), 'utf8'))[1]);
+	assert.equal(fm.sidebar?.hidden, true, 'src/content/docs/404.md cần sidebar: { hidden: true }');
+	const co = trangDist().filter((f) => fs.readFileSync(path.join(DIST, f), 'utf8').includes(`href="${BASE}404/"`));
+	assert.deepEqual(co, []);
 });
 
 test('trang 404 bằng tiếng Việt, dẫn về trang chủ và mở ô tìm kiếm', () => {
