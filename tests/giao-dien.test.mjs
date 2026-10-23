@@ -50,8 +50,9 @@ test('trang thuộc nhóm đúng như plans/lam-lai/anh-xa.md, đủ 233 trang c
 	assert.deepEqual(lech, []);
 });
 
-test('id trang mục lục của Starlight (không đuôi /index) và trang ngoài kế hoạch', () => {
+test('trang ngoài 233 trang cũ: trang chặng của đợt 2, trang mục lục viết không đuôi /index, trang lạ', () => {
 	const nhom = (id, tang) => nhomCuaTrang(id, tang)?.id;
+	assert.equal(nhom('piano/lo-trinh/chang-1'), 'lo-trinh');
 	assert.equal(nhom('nhac-ly'), 'nhac-ly');
 	assert.equal(nhom('piano/tac-pham'), 'tac-pham');
 	assert.equal(nhom('nhac-cu'), 'doc-them');
@@ -61,6 +62,14 @@ test('id trang mục lục của Starlight (không đuôi /index) và trang ngo�
 	assert.equal(nhom('index'), undefined);
 	assert.equal(nhom('404'), undefined);
 	assert.equal(nhom('pianola/x'), undefined);
+});
+
+test('khi in, opus.css dùng đúng bảng màu của chế độ sáng', () => {
+	const i = CSS.indexOf('@media print {\n\t:root {');
+	assert.ok(i >= 0, 'opus.css thiếu khối @media print { :root { … } }');
+	const khoi = CSS.slice(i, CSS.indexOf('\n\t}', i));
+	const inRa = Object.fromEntries([...khoi.matchAll(/^\s*(--[\w-]+):\s*([^;]+);/gm)].map((m) => [m[1], m[2].trim()]));
+	assert.deepEqual(inRa, bien(":root[data-theme='light']"));
 });
 
 test('mỗi nhóm có tên, mô tả, biểu tượng và màu ở cả hai chế độ, chữ màu nhóm đủ tương phản trên nền trang', () => {
@@ -102,3 +111,14 @@ test('thanh trên có logo hai bản: mực cho nền sáng, kem cho nền tối
 	assert.ok(logo.some(([ten, cls]) => ten === 'logo' && cls.includes('light:sl-hidden')), 'logo kem phải ẩn ở chế độ sáng');
 	assert.ok(logo.some(([ten, cls]) => ten === 'logo-muc' && cls.includes('dark:sl-hidden')), 'logo mực phải ẩn ở chế độ tối');
 });
+
+test('CSS đã nén không có khai báo rỗng (bộ nén biến `border-image: none` thành `border-image:`, AGENTS.md mục Giao diện)', () => {
+	trangChu();
+	const dir = path.join(DIST, '_astro');
+	const rong = fs
+		.readdirSync(dir)
+		.filter((f) => f.endsWith('.css'))
+		.flatMap((f) => [...fs.readFileSync(path.join(dir, f), 'utf8').matchAll(/[\w-]+:(?=[;}])/g)].map((m) => `${f}: ${m[0]}`));
+	assert.deepEqual(rong, []);
+});
+

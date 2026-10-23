@@ -1,20 +1,23 @@
 ---
 // Tiêu đề trang của Starlight, thêm nhãn nhóm nội dung phía trên (màu và biểu tượng của nhóm, src/nhom.mjs),
 // để người đọc nhìn là biết mình đang ở mục nào.
-import { getEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 import Default from '@astrojs/starlight/components/PageTitle.astro';
 import { nhomCuaTrang, svgNhom } from '../nhom.mjs';
 
-const { id } = Astro.locals.starlightRoute.entry;
-// Tầng của trang (src/data/trang.yml) quyết định vài trang vào Đọc thêm. Bản ghi giữ đường dẫn cũ: trang mục lục
-// có đuôi /index, còn id của Starlight thì không.
-const banGhi = (await getEntry('trang', id)) ?? (await getEntry('trang', `${id}/index`));
-const nhom = nhomCuaTrang(id, banGhi?.data.tang);
+const { entry } = Astro.locals.starlightRoute;
+// Đường dẫn trang như trong trang.yml và anh-xa.md: theo file nguồn, nên trang mục lục giữ đuôi /index (id của
+// Starlight thì không). Trang không có file nguồn (404 mặc định của Starlight) thì không có nhãn.
+const trang = entry.filePath?.replace(/^src\/content\/docs\//, '').replace(/\.mdx?$/, '');
+// Tầng của trang (src/data/trang.yml) quyết định vài trang vào Đọc thêm. Đọc cả bộ (Astro giữ sẵn), không dùng
+// getEntry: tra một trang không có bản ghi thì Astro in cảnh báo.
+const tang = new Map((await getCollection('trang')).map((r) => [r.id, r.data.tang]));
+const nhom = trang ? nhomCuaTrang(trang, tang.get(trang)) : undefined;
 ---
 
 {
 	nhom && (
-		<p class="oz-nhom" style={`--c: var(--oz-c-${nhom.id})`}>
+		<p class="oz-nhom" style={`--c: var(--oz-c-${nhom.id})`} data-pagefind-ignore>
 			<span class="oz-icon" set:html={svgNhom(nhom)} />
 			{nhom.ten}
 		</p>

@@ -18,10 +18,6 @@
 	/* Chế độ tối (mặc định của Starlight) */
 	--oz-accent: var(--oz-rosin-light);
 	--oz-focus: var(--oz-rosin-light);
-	--oz-staff: rgba(200, 215, 235, 0.2);
-	--oz-key-white: #e9ecf1;
-	--oz-key-black: #0b0f15;
-	--oz-key-line: #0b0f15;
 	--oz-card: #19202a;
 
 	--sl-color-accent-low: #18293f;
@@ -61,10 +57,6 @@
 :root[data-theme='light'] {
 	--oz-accent: var(--oz-rosin);
 	--oz-focus: var(--oz-rosin);
-	--oz-staff: rgba(31, 58, 95, 0.2);
-	--oz-key-white: #fff;
-	--oz-key-black: #1b1d22;
-	--oz-key-line: var(--oz-ink);
 	--oz-card: #fff;
 
 	--sl-color-accent-low: #dce5f0;
@@ -96,6 +88,47 @@
 	--oz-c-tac-pham: #a9472f;
 	--oz-c-luyen-tap: #2b7449;
 	--oz-c-doc-them: #6b6258;
+}
+
+/* In: luôn theo bảng màu sáng. Starlight đưa --sl-color-* về màu sáng khi in (print.css), nhưng file này nằm sau
+   print.css nên giá trị của chế độ tối ở :root vẫn thắng khi in từ chế độ tối: chép lại đúng khối
+   :root[data-theme='light'] ở trên (tests/giao-dien.test.mjs kiểm hai khối khớp nhau). */
+@media print {
+	:root {
+		--oz-accent: var(--oz-rosin);
+		--oz-focus: var(--oz-rosin);
+		--oz-card: #fff;
+
+		--sl-color-accent-low: #dce5f0;
+		--sl-color-accent: var(--oz-ink-soft);
+		--sl-color-accent-high: var(--oz-ink);
+		--sl-color-black: var(--oz-paper);
+
+		--sl-color-blue-low: #e3eaf3;
+		--sl-color-blue: var(--oz-ink-soft);
+		--sl-color-blue-high: var(--oz-ink);
+		--sl-color-orange-low: #f6ead2;
+		--sl-color-orange: var(--oz-rosin);
+		--sl-color-orange-high: #6e4c12;
+		--sl-color-green-low: #dcefe3;
+		--sl-color-green: #2e7d4f;
+		--sl-color-green-high: #1d5434;
+		--sl-color-red-low: #f6dfda;
+		--sl-color-red: #b3412e;
+		--sl-color-red-high: #7c2a1c;
+		--sl-color-purple-low: #ece4f1;
+		--sl-color-purple: #6b4f8a;
+		--sl-color-purple-high: #4a3263;
+
+		--oz-c-bat-dau: #24736e;
+		--oz-c-lo-trinh: #946716; /* nhựa thông đậm hơn chút để chữ nhỏ đạt 4,5:1 trên nền giấy */
+		--oz-c-nhac-ly: #2b65a8;
+		--oz-c-piano: #1f3a5f;
+		--oz-c-co-dien: #6f4790;
+		--oz-c-tac-pham: #a9472f;
+		--oz-c-luyen-tap: #2b7449;
+		--oz-c-doc-them: #6b6258;
+	}
 }
 
 /* ---------- Chữ ---------- */
@@ -134,7 +167,21 @@ header.header {
 }
 .site-title {
 	font-size: var(--sl-text-xl);
-	color: var(--sl-color-white);
+}
+/* Màn hình cảm ứng: tên site, nút tìm kiếm và nút menu (Starlight để cao 35, 40 và 32 px) có vùng bấm từ 44 px */
+@media (pointer: coarse) {
+	:root {
+		--sl-menu-button-size: 2.75rem;
+	}
+	.sl-menu-button {
+		align-items: center;
+		justify-content: center;
+	}
+	.site-title,
+	header.header button[data-open-modal] {
+		min-height: 44px;
+		min-width: 44px;
+	}
 }
 /* Starlight để ô chọn giao diện rộng 6,25em (viết cho tiếng Anh), chữ "Tự động" bị cắt */
 starlight-theme-select select {
@@ -185,7 +232,7 @@ starlight-theme-select select {
 /* Bước cuối: phần đã lên site, dùng màu nhựa thông */
 .oz-steps > li:last-child::before {
 	background: var(--oz-accent);
-	color: var(--oz-ink-dark);
+	color: #0b1422; /* 5,5:1 trên nhựa thông ở chế độ sáng (--oz-ink-dark chỉ được 4,4:1) */
 }
 /* Mũi tên nối các bước: xuống dưới trên điện thoại, sang phải trên màn hình rộng */
 .oz-steps > li + li::after {

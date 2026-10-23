@@ -1,8 +1,10 @@
 // Nhóm nội dung của site (menu mới, plans/lam-lai/so-do.md mục 5): tên, màu, biểu tượng, một dòng mô tả.
 // Màu theo nhóm giúp người đọc nhìn là biết mình đang ở mục nào: nhãn trên tiêu đề trang (src/components/PageTitle.astro),
 // thẻ ở trang chủ. Mã màu khai ở src/styles/opus.css (--oz-c-<id>), có bản sáng và tối.
-// Trang thuộc nhóm nào: theo đường dẫn và tầng của trang, đúng luật nhom_menu() của plans/lam-lai/anh_xa.py (bảng kết quả:
-// plans/lam-lai/anh-xa.md; tests/giao-dien.test.mjs so đủ 233 trang cũ). Nhóm thứ chín của menu, "Thêm", không có nhãn.
+// Trang thuộc nhóm nào: theo đường dẫn và tầng của trang, như luật nhom_menu() của plans/lam-lai/anh_xa.py; với 233 trang
+// cũ thì kết quả giống hệt (bảng: plans/lam-lai/anh-xa.md; tests/giao-dien.test.mjs so đủ). Với trang mới thì khác hai
+// chỗ: trang dưới piano/lo-trinh/ (các trang chặng của đợt 2) vào Lộ trình, nhom_menu() cho vào Piano; trang ngoài mọi
+// mục đã biết không có nhãn, nhom_menu() cho vào Nhạc cổ điển. Nhóm thứ chín của menu, "Thêm", không có nhãn.
 
 /** Biểu tượng nét (24×24, stroke = currentColor), dùng chung cho nhãn và thẻ. */
 const BIEU_TUONG = {
@@ -52,7 +54,7 @@ const CO_DIEN = ['lich-su', 'hinh-thuc', 'nhan-dien'];
  */
 export function nhomCuaTrang(id, tang) {
 	const thuoc = (dau) => id === dau || id.startsWith(dau + '/');
-	if (THEM.some((t) => id === t || id === t + '/index') || thuoc('blog')) return undefined;
+	if (THEM.includes(id) || thuoc('blog')) return undefined;
 	let ma = THEO_DUONG_DAN.find(([dau]) => thuoc(dau))?.[1];
 	if (!ma && (tang === 'ngoai-vi' || thuoc('nhac-cu'))) ma = 'doc-them';
 	if (!ma && CO_DIEN.some(thuoc)) ma = 'co-dien';

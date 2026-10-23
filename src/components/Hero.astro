@@ -1,7 +1,7 @@
 ---
-// Phần đầu của trang có `hero` (hiện chỉ trang chủ): tên site nằm trên khuông nhạc như .oz-hero của site cũ,
-// dưới là dải phím đàn như ảnh chia sẻ cũ (og.png), tất cả trên một dải màu mực tràn ngang, ở cả hai chế độ.
-// Đọc hero.title, hero.tagline, hero.actions; bỏ qua hero.image.
+// Phần đầu của trang có `hero` (trang chủ và trang 404 mặc định của Starlight): tên site nằm trên khuông nhạc như
+// .oz-hero của site cũ, dưới là dải phím đàn như ảnh chia sẻ cũ (og.png), tất cả trên một dải màu mực tràn ngang, ở
+// cả hai chế độ. Đọc hero.title, hero.tagline, hero.actions; bỏ qua hero.image.
 import { LinkButton } from '@astrojs/starlight/components';
 import DraftContentNotice from '@astrojs/starlight/components/DraftContentNotice.astro';
 
@@ -50,13 +50,17 @@ const lit = new Set([23, 25, 27]);
 <style is:global>
 	/* Dải mực vẽ bằng border-image: phần vẽ ra ngoài khung không tính vào vùng cuộn, nên dải tràn hết bề ngang
 	   (100vmax mỗi bên) và lên sát thanh trên (1.5rem, khoảng đệm trên của khung nội dung Starlight) mà trang
-	   không cuộn ngang. Màu chữ và phím đặt lại cho nền tối này. */
+	   không cuộn ngang. Màu chữ, phím, nút (hero.actions) và viền focus đặt lại cho nền tối này, ở cả hai chế độ. */
 	.oz-hero {
 		--oz-staff: rgba(255, 255, 255, 0.3);
 		--oz-key-white: var(--oz-paper);
 		--oz-key-black: #0b1422;
 		--oz-key-line: var(--oz-ink);
 		--oz-accent: var(--oz-rosin-light);
+		--oz-focus: var(--oz-rosin-light);
+		--sl-color-white: #fff;
+		--sl-color-black: var(--oz-ink-dark);
+		--sl-color-text-accent: var(--oz-rosin-light);
 		padding-top: clamp(1.5rem, 5vw, 3.5rem);
 		/* Nền mực trong khung, nằm dưới dải: công cụ kiểm tương phản (axe trong Lighthouse) không coi border-image
 		   là nền, thiếu dòng này thì nó đo chữ trắng trên nền giấy và hạ điểm trợ năng. */
@@ -123,6 +127,9 @@ const lit = new Set([23, 25, 27]);
 	@media print {
 		.oz-hero {
 			--oz-staff: rgba(0, 0, 0, 0.25);
+			--sl-color-white: #000;
+			--sl-color-black: #fff;
+			--sl-color-text-accent: var(--oz-ink);
 			background: none;
 			border-image-source: none;
 		}
