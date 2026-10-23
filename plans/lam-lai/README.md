@@ -28,8 +28,8 @@ File này là bản chuẩn cho người làm và agent. Bản cho người đ�
 
 Chờ bạn. Mục "khuyên dùng" là lựa chọn mà kế hoạch đang giả định. Đợt 0 không phụ thuộc các mục này nên giao được ngay; hai mục đầu cần có trước đợt 1, ba mục sau trước đợt 2.
 
-- [ ] Công nghệ: Astro 7 và Starlight (khuyên dùng; lý do ở `cong-nghe.md`), hay MkDocs và Material như cũ.
-- [ ] Giao diện: giữ font, màu và giọng văn hiện có (khuyên dùng), hay làm nhận diện mới ở đợt 1.
+- [x] Công nghệ: Astro 7 và Starlight (khuyên dùng; lý do ở `cong-nghe.md`), hay MkDocs và Material như cũ. **Chọn Astro 7 và Starlight** (23/10/2026, khi duyệt D1.1).
+- [x] Giao diện: giữ font, màu và giọng văn hiện có (khuyên dùng), hay làm nhận diện mới ở đợt 1. **Giữ font, màu, giọng văn** (23/10/2026, khi duyệt D1.1); thêm yêu cầu về hình ảnh ở mục "Giao diện" của `AGENTS.md`.
 - [ ] Mức kiểm định: hai lượt agent, review, bạn kiểm khoảng 10 nhận định mỗi lô (khuyên dùng); hay một lượt agent và review.
 - [ ] Nguồn chính cho nhạc lý: giáo trình bạn có (ghi tên và lần in), hay giáo trình mở Open Music Theory (https://viva.pressbooks.pub/openmusictheory/).
 - [ ] Bảng tầng: duyệt `../ben-vung/kiem-ke.md`, nhất là các trang tham chiếu có hạn và ngày rà lại.
@@ -38,8 +38,8 @@ Chờ bạn. Mục "khuyên dùng" là lựa chọn mà kế hoạch đang giả
 
 | Đợt | Nội dung | Lô | Sau đợt này site mới có thêm | Trạng thái |
 |---|---|---|---|---|
-| 0 | Dựng repo mới | | Chưa đăng gì | Còn commit đầu và push |
-| 1 | Nền kỹ thuật | D1.1–D1.8 | Trang chủ tạm và trang 404 ở `/opus/`; chưa có bài | Chưa làm |
+| 0 | Dựng repo mới | | Chưa đăng gì | Xong 23/10/2026 |
+| 1 | Nền kỹ thuật | D1.1–D1.8 | Trang chủ tạm và trang 404 ở `/opus/`; chưa có bài | Đang làm: D1.1 xong |
 | 2 | Khung cấp độ và lối vào | 1 | Trang chủ, Bắt đầu, lộ trình và 7 trang chặng, bài kiểm tra đầu vào | Chưa làm |
 | 3 | Nhạc lý và luyện tai | 6 | 45 trang, Từ điển | Chưa làm |
 | 4 | Piano nền tảng | 4 | 28 trang: bắt đầu bên phím, kỹ thuật, tập luyện, hòa âm bên phím, văn học piano | Chưa làm |
@@ -63,7 +63,7 @@ Số trang tính cả trang mục lục của mỗi mục. Danh sách trang củ
 
 ## Quy tắc chung
 
-- Lệnh (từ đợt 1): `npm ci`; `npm run build` (bản thật, chỉ trang đã khóa); `npm run build:xem` (bản xem, thêm trang chưa khóa, không đăng); `npm test`. Chi tiết và phiên bản: `cong-nghe.md`. Site cũ build lại để so chữ, ra ngoài thư mục cũ: `mkdocs build -f ../opus-zero/mkdocs.yml -d .cache/site-cu` (môi trường Python như `../opus-zero/AGENTS.md`).
+- Lệnh (từ đợt 1): `npm ci`; `npm run build` (bản thật, chỉ trang đã khóa); `npm run build:xem` (bản xem, thêm trang chưa khóa, không đăng); `npm test`. Chi tiết và phiên bản: `cong-nghe.md`. Site cũ build lại để so chữ, ra ngoài thư mục cũ: `PYTHONDONTWRITEBYTECODE=1 mkdocs build -f ../opus-zero/mkdocs.yml -d "$PWD/.cache/site-cu"`, chạy từ `opus/`, môi trường Python như `../opus-zero/AGENTS.md`. Đường dẫn `-d` phải tuyệt đối: MkDocs tính đường dẫn tương đối theo thư mục chứa `mkdocs.yml`, nên `.cache/site-cu` sẽ ghi vào `../opus-zero/.cache/`. `PYTHONDONTWRITEBYTECODE=1` để Python không ghi `__pycache__` vào `../opus-zero/hooks/`.
 - Nhánh: `moi/d1-<số việc>-<tên ngắn>` cho việc ở đợt 1; `moi/d<đợt>-l<lô>` cho một lô (ví dụ `moi/d3-l2`). Đợt 0 commit thẳng lên `main` vì repo mới chưa có commit nào.
 - Báo cáo: `plans/lam-lai/bao-cao/<mã>.md` (ví dụ `d0.md`, `d1-3.md`, `d3-l2.md`): việc đã làm và file đã chạm, số nhận định, số đã sửa và đã bỏ, chỗ chưa chắc, kết quả kiểm thử, nguồn đã dùng. Người review ghi tiếp vào cuối cùng file.
 - Một lô chỉ chạm: trang của lô trong `src/content/docs/`; dữ liệu liên quan trong `src/data/`; thành phần, script và file tĩnh mà trang của lô cần lần đầu (`src/components/`, `src/scripts/`, `public/`); hồ sơ trong `kiem-dinh/`; báo cáo của lô. Kiểm thử phạm vi chặn chỗ khác.

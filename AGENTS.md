@@ -27,6 +27,14 @@ npm test          # kiểm thử trên dist/: chạy sau npm run build
 - Kiểm thử ở `tests/*.test.mjs`, chạy bằng trình kiểm thử có sẵn của Node (`node --test`), không cần gói thêm. Thêm kiểm thử thì thêm file `tests/<tên>.test.mjs`.
 - `npm run build:xem` (bản xem, thêm trang chưa khóa) có từ D1.6.
 
+## Giao diện
+
+Chủ repo yêu cầu (23/10/2026): site gọn, thân thiện. Điều gì giải thích được bằng hình hay sơ đồ thì vẽ hình, vì dễ nhớ hơn chữ.
+
+- Hình và sơ đồ vẽ bằng SVG hoặc HTML và CSS ngay trong trang, theo màu của site (`src/styles/opus.css`), có bản sáng và tối. Chữ trong sơ đồ là chữ thật, để máy đọc màn hình đọc được và tìm kiếm thấy. Hình chỉ để trang trí thì đặt `aria-hidden`.
+- Mọi trang và thành phần phải hiển thị tốt ở 360 px, 768 px và 1280 px, trên Chromium, WebKit (Safari) và Firefox: không tràn ngang; trên màn hình cảm ứng, vùng bấm từ 44 px.
+- Không lùi chuẩn Lighthouse ở luật 7 của kế hoạch.
+
 ## Mẫu trang và khối đặc biệt
 
 Chốt ở D1.3; trước đó tra `../opus-zero/AGENTS.md`.

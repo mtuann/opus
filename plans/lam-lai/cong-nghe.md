@@ -1,10 +1,10 @@
 # Công nghệ của site mới
 
-**Đề xuất:** Astro 7 và Starlight 0.41, build tĩnh, trong repo mới `mtuann/opus`, deploy lên GitHub Pages ở https://mtuann.github.io/opus/. Chờ bạn xác nhận ở mục "Quyết định" của `README.md`. Số liệu và tình trạng dưới đây là lúc kiểm, 23/10/2026. Site cũ (MkDocs) ở repo cũ `mtuann/opus-zero`, thư mục cạnh `../opus-zero/`; mọi đường dẫn tới site cũ dưới đây tính từ thư mục đó.
+**Đã chọn** (mục "Quyết định" của `README.md`, 23/10/2026): Astro 7 và Starlight, build tĩnh, trong repo mới `mtuann/opus`, deploy lên GitHub Pages ở https://mtuann.github.io/opus/. D1.1 dùng Astro 7.4.2 và Starlight 0.42.7 (lúc viết đề xuất, kế hoạch ghi Starlight 0.41; bản 0.42.0 ra ngày 2/9/2026). Số liệu và tình trạng dưới đây là lúc kiểm, 23/10/2026. Site cũ (MkDocs) ở repo cũ `mtuann/opus-zero`, thư mục cạnh `../opus-zero/`; mọi đường dẫn tới site cũ dưới đây tính từ thư mục đó.
 
 ## 1. Vì sao
 
-| Tiêu chí | MkDocs 1.6.1 + Material 9.7.7 (site cũ) | Zensical | Astro 7 + Starlight 0.41 |
+| Tiêu chí | MkDocs 1.6.1 + Material 9.7.7 (site cũ) | Zensical | Astro 7 + Starlight |
 |---|---|---|---|
 | Tình trạng | Material ngừng thêm tính năng từ 11/2025 (9.7.0 là bản tính năng cuối), cam kết vá lỗi nghiêm trọng ít nhất 12 tháng; MkDocs 1.x không còn bản mới | Cùng nhóm làm Material; bản 0.0.x (mới nhất 0.0.71 khi kiểm), chưa có lịch ra 1.0, API module chưa công khai | Astro 7 ra tháng 6/2026; Cloudflare mua Astro ngày 16/1/2026, Astro vẫn mã nguồn mở MIT |
 | Dữ liệu có schema | Tự viết hook | Chưa làm được | Content collections, schema Zod |
@@ -20,7 +20,8 @@ Công chuyển sang Astro cao (5 hook, cú pháp Material ở 105 file, thành p
 
 ## 3. Phiên bản và môi trường
 
-- Node: theo yêu cầu của Astro 7, kiểm ở D1.1 và ghi vào `.nvmrc` (site cũ dùng Node 22). Python 3.12 cho `tools/`.
+- Node 24 trong `.nvmrc` (D1.1): Astro 7.4 cần Node từ 22.23.4; Node 24 là bản LTS, hỗ trợ đến 30/4/2028 (Node 22 của site cũ hết hỗ trợ 30/4/2027). Node 26 thành LTS ngày 28/10/2026: có thể chuyển ở lần nâng cấp tháng 11. Python 3.12 cho `tools/`.
+- Phiên bản đang dùng: `astro` 7.4.2, `@astrojs/starlight` 0.42.7 (D1.1); xem `package.json`.
 - Ghim phiên bản chính xác trong `package-lock.json`. Nâng mỗi tháng một lần trên nhánh `moi/nang-cap-<tháng>`, gộp khi mọi kiểm thử đạt.
 - abcjs: giữ bản đang dùng trong `../opus-zero/docs/assets/js/vendor/`, chép sang `public/vendor/`.
 
