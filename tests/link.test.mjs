@@ -4,10 +4,12 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { markdownToHtml } from 'satteri';
 import { parse } from 'yaml';
 import { trangCuaDiaChi } from '../src/ban-build.mjs';
 import { sapCo } from '../src/plugins/sap-co.mjs';
+import { opusMarkdown } from '../src/plugins/opus-markdown.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DIST = path.join(ROOT, 'dist');
@@ -38,6 +40,27 @@ test('link tới trang chưa có trong bản build thành chữ thường kèm n
 	assert.match(html, /<span class="oz-sap-co" title="[^"]+">Gam <em>trưởng<\/em><span class="oz-sap-co-nhan" data-pagefind-ignore[^>]*>sắp có<\/span><\/span>/);
 	assert.doesNotMatch(html, /href="\/opus\/piano\/gam\//);
 	for (const giu of ['href="/opus/"', 'href="https://imslp.org/"', 'href="/opus/audio/NGUON.txt"', 'href="#muc"']) assert.ok(html.includes(giu), giu);
+});
+
+test('link trong HTML thô (do chỉ thị dựng từ dữ liệu, hay viết trong trang) cũng thành "sắp có"', () => {
+	const plugin = sapCo({ base: BASE, trangCo: () => ['index', 'nhac-ly/10-hop-am-ba'] });
+	const html = markdownToHtml(
+		'<p class="x"><a href="/opus/piano/gam/"><em>Gam</em> trưởng</a>, <a href="/opus/nhac-ly/10-hop-am-ba/#a">Hợp âm ba</a>, <a class="y" href="/opus/audio/NGUON.txt">nguồn</a></p>',
+		{ hastPlugins: [plugin] },
+	).html;
+	assert.match(html, /<span class="oz-sap-co" title="[^"]+"><em>Gam<\/em> trưởng<span class="oz-sap-co-nhan" data-pagefind-ignore>sắp có<\/span><\/span>/);
+	assert.match(html, /<a href="\/opus\/nhac-ly\/10-hop-am-ba\/#a">Hợp âm ba<\/a>/);
+	assert.match(html, /<a class="y" href="\/opus\/audio\/NGUON.txt">nguồn<\/a>/);
+	// qua chỉ thị thật: ::hoc-tiep trỏ tới trang chặng (chưa có) và trang cùng tác phẩm
+	const docs = path.join(ROOT, 'src/content/docs');
+	const md = opusMarkdown({ base: BASE, docsDir: docs })({ fileURL: pathToFileURL(path.join(docs, 'nghe-nhac/liszt-liebestraum.md')) });
+	const hocTiep = markdownToHtml('---\ntitle: T\ntac_pham: liszt-liebestraum\n---\n\n::hoc-tiep\n', {
+		mdastPlugins: [md],
+		hastPlugins: [sapCo({ base: BASE, trangCo: () => ['index'] })],
+		features: { directive: true, smartPunctuation: false },
+	}).html;
+	assert.match(hocTiep, /<strong>Bài học:<\/strong> <span class="oz-sap-co"/);
+	assert.doesNotMatch(hocTiep, /<a /);
 });
 
 const trangDist = () => {
