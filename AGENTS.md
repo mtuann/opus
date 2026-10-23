@@ -73,9 +73,9 @@ Một hai câu mở đầu.
 Thứ tự các mục như mẫu bài học ở `../opus-zero/AGENTS.md` ("Mẫu trang"), với các chỗ đổi sau:
 
 - Hàng chip và hộp thông tin: `::hop-tac-pham`, dựng từ `chip` và `thong_tin` của bản ghi. Không viết tay.
-- Cuối mục `## Nghe trước khi tập`: `::khoi-nghe`; bảng `## Theo dõi khi nghe` ngay sau, cột đầu mỗi dòng ghi `…`.
+- Cuối mục `## Nghe trước khi tập`: `::khoi-nghe` (hay `::khoi-nghe{moc="…"}`); bảng `## Theo dõi khi nghe` ngay sau, cột đầu mỗi dòng ghi `…`.
 - Đầu mục `## Cấu trúc`: `::hinh-cau-truc`.
-- Mục `## Học tiếp`: `::hoc-tiep` (bài cùng chặng, bài chặng sau, trang nghe kèm, sinh từ dữ liệu); có thể thêm vài gạch đầu dòng viết tay ngay sau.
+- Mục `## Học tiếp`: 2–5 bài chọn lọc viết tay như mẫu cũ (gạch đầu dòng, link tới trang có thật), rồi `::hoc-tiep` (trang chặng hiện tại và chặng sau, trang cùng tác phẩm, sinh từ dữ liệu). Danh sách mọi bài của một chặng nằm ở trang chặng, không chép vào từng bài.
 
 ### Hướng dẫn nghe (`nghe-nhac/<slug>.md`)
 
@@ -85,19 +85,20 @@ Frontmatter có `tac_pham`. Thứ tự các mục như mẫu ở `../opus-zero/A
 
 | Khối | Cách viết | Dựng thành |
 |---|---|---|
-| Khuông nhạc | Khối ` ```abc ` theo "Quy ước ABC" của `../opus-zero/AGENTS.md`; dòng `T:` ở phần đầu thành tiêu đề | Khuông và trình phát (abcjs 6.7.1 trong `public/vendor/`): tốc độ, lặp, nghe từng tay, gõ nhịp, chế độ giá nhạc. Vẽ khi khối tới gần màn hình; trước khi in thì vẽ hết |
+| Khuông nhạc | Khối ` ```abc ` theo "Quy ước ABC" của `../opus-zero/AGENTS.md`; dòng `T:` ở phần đầu (trước `K:`) thành tiêu đề | Khuông và trình phát (abcjs 6.7.1 trong `public/vendor/`): tốc độ, lặp, nghe từng tay, gõ nhịp, chế độ giá nhạc. Vẽ khi khối tới gần màn hình; trước khi in thì vẽ hết. abcjs tải sẵn lúc trình duyệt rảnh, khoảng một giây sau khi mở trang; in sớm hơn thì chỗ khuông chưa vẽ in dòng nhắc |
 | Câu hỏi kiểm tra nhanh | Khối ` ```quiz `: dòng `? câu hỏi`, `+ đáp án đúng`, `- đáp án sai`, `> giải thích` | Câu hỏi bấm được, thứ tự lựa chọn trộn mỗi lần. Thiếu đáp án đúng hay có dòng lạ thì build hỏng |
 | Hộp thông tin tác phẩm | `::hop-tac-pham` | Chip (giọng · nhịp, tốc độ, cấp độ, hình thức) và bảng "Thông tin tác phẩm và bản nhạc nên dùng" thu gọn |
 | Hình cấu trúc | `::hinh-cau-truc` | Sơ đồ các đoạn từ `hinh` của bản ghi: `hinh.bai-hoc` ở trang bài học, `hinh.nghe` ở hướng dẫn nghe |
-| Khối nghe | `::khoi-nghe` | Trình nghe kèm bản thu; người học bấm "Ghi mốc" ngay trong bảng `## Theo dõi khi nghe`. Bản thu gợi ý lấy từ `ban_thu` của bản ghi (cùng dạng `data-rec` của site cũ; D1.4 chuyển); không có thì người học tự dán link hay chọn file |
-| Học tiếp | `::hoc-tiep` | Danh sách bài nên học tiếp, sinh từ dữ liệu |
+| Khối nghe | `::khoi-nghe`; có mốc tham khảo: `::khoi-nghe{moc="3 61 - 73"}` (số giây cho từng dòng của bảng `## Theo dõi khi nghe`, `-` là dòng chưa có mốc) | Trình nghe kèm bản thu; người học bấm "Ghi mốc" ngay trong bảng `## Theo dõi khi nghe`. Bản thu gợi ý lấy từ `ban_thu` của bản ghi (D1.4 chuyển), dùng chung cho bài học và hướng dẫn nghe; mốc tham khảo nằm ở trang vì mỗi trang có bảng riêng. Không có bản thu thì người học tự dán link hay chọn file |
+| Học tiếp | `::hoc-tiep` | Link tới trang chặng hiện tại và chặng sau (ở bài học), trang cùng tác phẩm (bài học và hướng dẫn nghe trỏ sang nhau); đặt sau các bài chọn lọc viết tay |
 | Ghi chú, mẹo, chú ý | `:::note`, `:::tip`, `:::caution`, `:::danger`, tiêu đề tùy chọn: `:::tip[Chưa sẵn sàng?]` … `:::` | Aside của Starlight |
 | Thu gọn | `<details>`, `<summary>…</summary>`, một dòng trống, nội dung Markdown, một dòng trống, `</details>` | Khối bấm để mở |
 | Chú thích cuối trang | `chữ[^1]` … `[^1]: Chú thích.` | Danh sách cuối trang, tách bằng một đường kẻ |
 | Id cố định cho tiêu đề | `## Tiêu đề { #id }` | Tiêu đề có id đã chọn (giữ id cũ để link `#mục` cũ còn chạy) |
 | Danh sách định nghĩa | Dòng thuật ngữ, rồi dòng `: định nghĩa` | `<dl>` |
 
-- Chỉ thị `::…` đứng một mình trên một dòng, không có chữ hay thuộc tính. Ba chỉ thị `::hop-tac-pham`, `::hinh-cau-truc`, `::hoc-tiep` cần `tac_pham` ở frontmatter; `::hinh-cau-truc` chỉ dùng ở trang bài học hay hướng dẫn nghe, và bản ghi phải có hình cho loại trang đó. Sai thì build hỏng, lỗi ghi tên file.
+- Chỉ thị `::…` đứng một mình trên một dòng, không có chữ; chỉ `::khoi-nghe` nhận thuộc tính (`moc`). Ba chỉ thị `::hop-tac-pham`, `::hinh-cau-truc`, `::hoc-tiep` cần `tac_pham` ở frontmatter; `::hinh-cau-truc` chỉ dùng ở trang bài học hay hướng dẫn nghe, và bản ghi phải có hình cho loại trang đó. Sai, kể cả gõ sai tên chỉ thị, thì build hỏng, lỗi ghi tên file.
+- Chữ trong chip, `thong_tin`, câu hỏi (dòng `?`, `+`, `-`, `>`) và tên tác phẩm là Markdown trong dòng: `*nghiêng*`, `**đậm**`, `[link](/opus/…/)`. Thẻ HTML thô không dùng được: hiện ra thành chữ. Link trong dữ liệu viết như link trong trang (mục "Link nội bộ").
 - Plugin dựng các khối: `src/plugins/opus-markdown.mjs` (đọc trang) và `src/plugins/thanh-phan.mjs` (dựng HTML). JavaScript của khối nằm ở `src/scripts/` và chỉ tải ở trang có khuông nhạc, câu hỏi hay khối nghe (`src/components/MarkdownContent.astro`). CSS: `src/styles/thanh-phan.css`.
 - Tiến độ của người học (bài đã làm hết câu hỏi, mốc nghe) lưu trong trình duyệt ở khóa `opus-zero:v1` như site cũ, nên dữ liệu đã lưu ở site cũ vẫn đọc được.
 - Link nội bộ: chốt ở D1.4.

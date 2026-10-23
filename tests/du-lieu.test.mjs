@@ -7,7 +7,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { parse } from 'yaml';
-import { dungLaiKhiDoi, kiemTra } from '../src/du-lieu.mjs';
+import { dungLaiKhiDoi, kiemTra, tepDauVet } from '../src/du-lieu.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 
@@ -97,6 +97,14 @@ test('bộ nạp trang xóa HTML đã dựng khi dữ liệu đổi, giữ nguy�
 		else process.env.OPUS_DU_LIEU = cu;
 		fs.rmSync(tam, { recursive: true, force: true });
 	}
+});
+
+test('dấu vết dựng lại tính schema và mọi plugin Markdown; dữ liệu không còn link .md của site cũ', () => {
+	const tep = tepDauVet();
+	assert.ok(tep.includes('src/du-lieu.mjs'));
+	for (const f of fs.readdirSync(path.join(ROOT, 'src/plugins'))) assert.ok(tep.includes(`src/plugins/${f}`), f);
+	for (const f of fs.readdirSync(path.join(ROOT, 'src/data')))
+		assert.doesNotMatch(fs.readFileSync(path.join(ROOT, 'src/data', f), 'utf8'), /\]\([^)\s]*\.md[#)]/, `${f}: link .md cũ (tools/du_lieu/tach.py đổi thành /opus/…/)`);
 });
 
 test('mỗi trang trong src/content/docs/ có đúng một tầng trong src/data/trang.yml', () => {

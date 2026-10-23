@@ -1,26 +1,28 @@
 // Dựng HTML cho các thành phần trong trang (D1.3), chạy lúc build. Plugin opus-markdown.mjs gọi các hàm ở đây khi gặp
-// khối ```abc, ```quiz hay một chỉ thị (::hop-tac-pham…). Chữ lấy từ dữ liệu có thể chứa Markdown trong dòng
-// (*nghiêng*, [link](…)): dựng bằng chính Sätteri để giống phần còn lại của trang.
+// khối ```abc, ```quiz hay một chỉ thị (::hop-tac-pham…). Chữ lấy từ dữ liệu và chữ trong câu hỏi là Markdown trong
+// dòng (*nghiêng*, [link](…)), dựng bằng chính Sätteri để giống phần còn lại của trang; thẻ HTML thô không dùng được.
 import { markdownToHtml } from 'satteri';
 
 export const esc = (s) =>
 	String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 
-/** Markdown trong dòng -> HTML (bỏ thẻ <p> bao ngoài). */
+/** HTML đã dựng của trang có khối cần JavaScript (khuông nhạc, câu hỏi, khối nghe) không: MarkdownContent.astro chỉ
+ * tải bộ tải thành phần ở những trang này. */
+export const canTaiScript = (html) => /\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen)[\s"]/.test(html);
+
+/** Markdown trong dòng -> HTML (bỏ thẻ <p> bao ngoài). Dấu < được thoát trước, nên thẻ HTML thô hiện thành chữ. */
 export function md(s) {
-	const { html } = markdownToHtml(String(s), { features: { smartPunctuation: false } });
+	const { html } = markdownToHtml(String(s).replace(/</g, '&lt;'), { features: { smartPunctuation: false } });
 	return html.trim().replace(/^<p>([\s\S]*)<\/p>$/, '$1');
 }
-
-/** Chữ thường của một chuỗi Markdown trong dòng (cho aria-label, title). */
-export const chuTho = (s) => String(s).replace(/[*_`]/g, '').replace(/\[([^\]]*)\]\([^)]*\)/g, '$1');
 
 // ---------- Khuông nhạc ABC ----------
 
 /**
  * Khối ```abc: khung có tiêu đề (dòng T: ở phần đầu, dựng bằng HTML để tự xuống dòng) và chỗ abcjs vẽ khuông khi
  * khối tới gần màn hình (src/scripts/abc.js). Mã ABC nằm trong data-abc, không thành chữ của trang.
- * --he: số khuông × số hệ ước lượng, để giữ chỗ (tránh xô bố cục khi khuông vẽ xong).
+ * --he: số khuông × số hệ ước lượng, để giữ chỗ (tránh xô bố cục khi khuông vẽ xong); --he-hep: như --he khi khung
+ * hẹp (dưới 620 px abcjs tự ngắt dòng, khoảng 4 ô một hệ), như hàm guess() của site cũ.
  */
 export function khuongAbc(src) {
 	const tieuDe = [];
@@ -35,11 +37,22 @@ export function khuongAbc(src) {
 		dong.push(l);
 	}
 	const nhac = dong.filter((l) => l.trim() && !/^\s*%/.test(l) && !/^[A-Za-z]:/.test(l));
-	const be = [...new Set(nhac.map((l) => /^\s*\[V:\s*([^\]\s]+)/.exec(l)?.[1] ?? ''))];
-	const he = Math.max(1, Math.round(nhac.length / Math.max(1, be.length))) * Math.max(1, be.length);
+	const giong = (l) => /^\s*\[V:\s*([^\]\s]+)/.exec(l)?.[1] ?? '';
+	const be = [...new Set(nhac.map(giong))];
+	const soBe = Math.max(1, be.length);
+	const soHe = Math.max(1, Math.round(nhac.length / soBe));
+	// khung hẹp: đếm ô có nốt của bè đầu (bỏ [V:…], hợp âm "…", ký hiệu !…!), 4 ô một hệ
+	const o = nhac
+		.filter((l) => giong(l) === be[0])
+		.join(' ')
+		.replace(/\[V:[^\]]*\]|"[^"]*"|![^!]*!/g, '')
+		.split('|')
+		.filter((x) => /[A-Ga-gz]/.test(x)).length;
+	const he = soHe * soBe;
+	const heHep = Math.max(soHe, Math.ceil(o / 4)) * soBe;
 	const ten = tieuDe.join(' · ');
 	return (
-		`<figure class="oz-abc" style="--he:${he}">` +
+		`<figure class="oz-abc" style="--he:${he};--he-hep:${heHep}">` +
 		(ten ? `<figcaption class="oz-abc-title">${esc(ten)}</figcaption>` : '') +
 		`<div class="abc-notation" role="img" aria-label="${esc(ten ? 'Khuông nhạc: ' + ten : 'Khuông nhạc')}" data-abc="${esc(dong.join('\n'))}"></div>` +
 		`</figure>`
@@ -145,31 +158,48 @@ export function hinhCauTruc(rec, loai) {
 		.join('');
 }
 
+/** moc="3 61 - 73": số giây của mốc tham khảo cho từng dòng bảng "Theo dõi khi nghe"; "-" là dòng chưa có mốc. */
+export function docMoc(chu) {
+	return chu
+		.trim()
+		.split(/\s+/)
+		.map((x) => {
+			if (x === '-') return null;
+			const n = Number(x);
+			if (!Number.isFinite(n) || n < 0) throw new Error(`::khoi-nghe: mốc "${x}" không phải số giây (dòng chưa có mốc ghi "-")`);
+			return n;
+		});
+}
+
 /**
- * ::khoi-nghe: trình nghe kèm bản thu (src/scripts/nghe.js). Có bản thu trong bản ghi (ban_thu) thì gợi ý sẵn, kèm
- * mốc tham khảo; không có thì người học tự dán link hay chọn file. Bảng "Theo dõi khi nghe" ngay sau khối là nơi ghi mốc.
+ * ::khoi-nghe: trình nghe kèm bản thu (src/scripts/nghe.js). Có bản thu trong bản ghi (ban_thu) thì gợi ý bản đầu tiên,
+ * kèm mốc tham khảo `moc` của trang (nếu có); không có thì người học tự dán link hay chọn file. Bảng "Theo dõi khi
+ * nghe" ngay sau khối là nơi ghi mốc. Dữ liệu cho script cùng dạng data-rec của site cũ.
+ * Mốc nằm ở trang, không ở bản ghi: bài học và hướng dẫn nghe dùng chung bản ghi (và bản thu) nhưng mỗi trang có bảng
+ * "Theo dõi khi nghe" riêng.
  */
-export function khoiNghe(rec, base) {
+export function khoiNghe(rec, base, moc) {
 	const ban = rec?.ban_thu?.[0];
-	if (!ban) return `<div class="oz-listen"></div>`;
-	const rec2 = { ...ban, parts: ban.parts.map((p) => (p.mp3 && !/^https?:/.test(p.mp3) ? { ...p, mp3: base + p.mp3 } : p)) };
+	if (!ban) {
+		if (moc !== undefined) throw new Error('::khoi-nghe có moc nhưng bản ghi không có ban_thu');
+		return `<div class="oz-listen"></div>`;
+	}
+	const parts = ban.parts.map((p) => (p.mp3 && !/^https?:/.test(p.mp3) ? { ...p, mp3: base + p.mp3 } : p));
+	const rec2 = { ...ban, parts, ...(moc !== undefined && { ref: docMoc(moc) }) };
 	return `<div class="oz-listen" data-rec="${esc(JSON.stringify(rec2))}"></div>`;
 }
 
 /**
- * ::hoc-tiep: bài nên học tiếp, sinh từ dữ liệu: các bài cùng chặng, các bài của chặng sau, và trang nghe kèm (cap).
- * Thêm một bài học mới thì mọi trang cùng chặng tự có link tới nó, không phải sửa tay.
+ * ::hoc-tiep: phần sinh từ dữ liệu của mục "Học tiếp", đặt sau 2–5 bài chọn lọc viết tay (mẫu bài học cũ): trang của
+ * chặng hiện tại và chặng sau (danh sách mọi bài nằm ở trang chặng, không chép lại vào từng bài) và trang cùng tác phẩm
+ * (cap: bài học và hướng dẫn nghe trỏ sang nhau).
  */
 export function hocTiep(rec, { tacPham, nguoi, base, trang }) {
-	const bai = tacPham.filter((r) => r.loai === 'bai-hoc');
-	const link = (r) =>
-		`<a href="${base}piano/tac-pham/${r.slug}/">${md(tenTacPham(r, nguoi))}</a>`;
 	const dong = [];
 	if (rec.loai === 'bai-hoc') {
-		const cung = bai.filter((r) => r.chang === rec.chang && r.slug !== rec.slug);
-		const sau = bai.filter((r) => r.chang === rec.chang + 1);
-		if (cung.length) dong.push(`<strong>Cùng chặng ${rec.chang}:</strong> ${cung.map(link).join(', ')}.`);
-		if (sau.length) dong.push(`<strong>Chặng ${rec.chang + 1}:</strong> ${sau.map(link).join(', ')}.`);
+		const chang = (n, nhan) => `<strong>${nhan}:</strong> <a href="${base}piano/lo-trinh/chang-${n}/">các bài của chặng ${n}</a>.`;
+		dong.push(chang(rec.chang, `Cùng chặng ${rec.chang}`));
+		if (tacPham.some((r) => r.loai === 'bai-hoc' && r.chang === rec.chang + 1)) dong.push(chang(rec.chang + 1, `Chặng ${rec.chang + 1}`));
 	}
 	if (rec.cap) {
 		// Trang cùng tác phẩm hay tác phẩm lớn hơn: trang chính của bản ghi và trang cap trỏ sang nhau

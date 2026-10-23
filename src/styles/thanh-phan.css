@@ -132,8 +132,28 @@
 	margin-top: 0.6rem;
 }
 .oz-piece-info th[scope='row'] {
-	white-space: nowrap;
 	vertical-align: top;
+}
+/* Màn hình rộng: tên mục một dòng. Màn hình hẹp: tên mục xuống dòng, để cột thông tin đủ rộng (bảng không cao vọt) */
+@media (min-width: 40rem) {
+	.oz-piece-info th[scope='row'] {
+		white-space: nowrap;
+	}
+}
+@media (max-width: calc(40rem - 1px)) {
+	.sl-markdown-content .oz-piece-info :is(th, td) {
+		padding-inline: 0.45rem;
+	}
+	.oz-piece-info th[scope='row'] {
+		width: 5.5rem;
+	}
+}
+
+/* Khi khối phía trên chỗ đang đọc cao lên lúc vẽ, trình duyệt cuộn bù theo một phần tử làm mốc (scroll anchoring).
+   Từ 72rem Starlight chia hai cột và trình duyệt chọn cột "Trên trang này" làm mốc, nên phần đang đọc bị xô và đích
+   của link #mục lệch: không cho cột đó làm mốc. */
+.right-sidebar-container {
+	overflow-anchor: none;
 }
 
 /* ---------- Khuông nhạc ABC ---------- */
@@ -151,13 +171,29 @@
 	overflow-x: auto;
 	color: var(--sl-color-white);
 }
-/* Giữ chỗ cho khuông chưa vẽ (tránh xô bố cục): --he là số khuông × số hệ ước lượng lúc build */
+/* Giữ chỗ cho khuông chưa vẽ (tránh xô bố cục): --he là số khuông × số hệ ước lượng lúc build; khung hẹp hơn 620 px
+   (abcjs tự ngắt dòng, khoảng 4 ô một hệ) dùng --he-hep. Cộng cả chỗ cho thanh phát và hàng nút, hiện khi vẽ xong. */
+.oz-abc:not(.oz-stand) {
+	container-type: inline-size;
+}
 .abc-notation:not([data-rendered]) {
-	min-height: calc(6rem + var(--he, 1) * 4.6rem);
+	min-height: calc(6.9rem + var(--he, 1) * 5.5rem);
 	border-radius: 8px;
 	background: repeating-linear-gradient(to bottom, transparent 0 0.9rem, var(--sl-color-gray-6) 0.9rem calc(0.9rem + 1px))
 		0 1.5rem / 100% calc(4 * 0.95rem) no-repeat;
 }
+/* màn hình cảm ứng: nút của thanh phát và hàng nút cao 44 px */
+@media (pointer: coarse) {
+	.abc-notation:not([data-rendered]) {
+		min-height: calc(10.1rem + var(--he, 1) * 6.25rem);
+	}
+}
+@container (max-width: 619px) {
+	.abc-notation:not([data-rendered]) {
+		min-height: calc(25.9rem + var(--he-hep, 1) * 6.65rem);
+	}
+}
+/* Các hằng số trên đo ở trang Für Elise (D1.3, sau review): 1280 px chuột, 768 px và 360 px cảm ứng. */
 .abc-notation svg {
 	color: inherit;
 }
@@ -209,7 +245,13 @@
    cao 10 px: nới nút, cho hàng xuống dòng khi hẹp; thanh tiến độ cao 44 px nhưng chỉ hiện dải giữa 20 px. */
 @media (pointer: coarse) {
 	.oz-abc-tools button,
-	.oz-check {
+	.oz-check,
+	.oz-ref-toggle {
+		min-height: 44px;
+	}
+	.oz-piece-info > summary {
+		display: flex;
+		align-items: center;
 		min-height: 44px;
 	}
 	.abc-audio .abcjs-inline-audio {
@@ -276,6 +318,12 @@ html.oz-stand-open,
 html.oz-stand-open body {
 	overflow: hidden;
 }
+/* .main-pane của Starlight có isolation: isolate, nên khung giá nhạc (z-index 50) chỉ nổi trong .main-pane, vẫn nằm
+   dưới thanh trên và thanh "Trên trang này": nút thoát bị che, điện thoại (không có Esc) không thoát được. Khi mở giá
+   nhạc thì bỏ lớp đó. */
+html.oz-stand-open .main-pane {
+	isolation: auto;
+}
 
 /* ---------- Câu hỏi kiểm tra nhanh ---------- */
 .sl-markdown-content .oz-quiz {
@@ -308,6 +356,17 @@ html.oz-stand-open body {
 }
 
 /* ---------- Khối nghe ---------- */
+/* Giữ chỗ cho khối nghe chưa khởi tạo (khối rỗng tới khi nghe.js dựng) */
+.oz-listen:empty {
+	min-height: 16.7rem;
+	border-radius: 10px;
+	background: var(--oz-card);
+}
+@media (max-width: 40rem) {
+	.oz-listen:empty {
+		min-height: 25rem;
+	}
+}
 .oz-listen.oz-tool .oz-stats {
 	margin: 0.2rem 0;
 }
@@ -490,10 +549,23 @@ html.oz-stand-open body {
 	.oz-abc-tools,
 	.abc-audio,
 	.oz-listen,
+	.oz-quiz .oz-row,
+	.oz-quiz .oz-stats,
 	.oz-feedback,
 	.oz-time-add,
-	.oz-time-x {
+	.oz-time-x,
+	h2:has(+ .oz-listen),
+	.sl-heading-wrapper:has(+ .oz-listen) {
 		display: none !important;
+	}
+	/* abcjs chưa tải xong khi bấm in (ngay sau khi mở trang): báo thay vì để trống */
+	.abc-notation:not([data-rendered]) {
+		min-height: 0;
+		background: none;
+	}
+	.abc-notation:not([data-rendered])::before {
+		content: 'Khuông nhạc chưa vẽ xong: đợi vài giây sau khi mở trang rồi in lại.';
+		font-style: italic;
 	}
 	.oz-seg,
 	.oz-chip {

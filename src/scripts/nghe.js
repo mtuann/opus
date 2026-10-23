@@ -107,6 +107,8 @@ function activeRow(t, marks) {
   Object.keys(marks).forEach(function (i) { const v = marks[i]; if (v <= t + 0.25 && v > bt) { bt = v; best = Number(i); } });
   return best;
 }
+/* Hàm thuần, cho kiểm thử (tests/nghe.test.mjs), như window.OZListen của bản cũ */
+export { activeRow, audioUrl, compare, partAt, readRec, switchSource, tally, videoId };
 
 function findTable(root) {
   const article = root.closest(".sl-markdown-content") || document;
@@ -143,7 +145,7 @@ export function mount(root) {
   function refPref(on) {
     try {
       const all = JSON.parse(localStorage.getItem(RKEY) || "{}") || {};
-      if (on === undefined) return !!all[key];
+      if (on === undefined) return !!(all[key] || all[keyCu]);
       if (on) all[key] = 1; else delete all[key];
       localStorage.setItem(RKEY, JSON.stringify(all));
     } catch (e) { /* trình duyệt chặn bộ nhớ: vẫn dùng được, chỉ không nhớ lựa chọn */ }

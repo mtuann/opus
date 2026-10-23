@@ -14,6 +14,7 @@ import ast
 import collections
 import importlib.util
 import pathlib
+import posixpath
 import re
 import subprocess
 import sys
@@ -30,6 +31,17 @@ HEAD = ("# Sinh một lần bằng tools/du_lieu/tach.py từ ../opus-zero/docs/
 
 TEP = ("cap-do.yml", "trang.yml", "thuat-ngu.yml", "nha-soan-nhac.yml", "tac-pham.yml")
 bao = collections.defaultdict(list)  # mục báo cáo -> các dòng
+BASE = "/opus/"
+
+
+def link_moi(chu, trang):
+    """Link Markdown tới file .md của site cũ, tương đối với trang `trang` (như "nhac-ly/tu-dien"), thành địa chỉ trên
+    site mới (/opus/…/; trang mục lục là thư mục), như tools/chuyen/ làm với trang (AGENTS.md, mục "Link nội bộ")."""
+    def doi(m):
+        p = posixpath.normpath(posixpath.join(posixpath.dirname(trang), m.group(1)))
+        p = "" if p == "index" else p.removesuffix("/index")
+        return f"]({BASE}{p + '/' if p else ''}{m.group(2) or ''})"
+    return re.sub(r"\]\(([^)\s#:]+)\.md(#[^)\s]*)?\)", doi, chu)
 
 
 def doc(rel):
@@ -130,9 +142,9 @@ def thuat_ngu():
             nhom = line[3:].strip()
         elif line.startswith("| ") and not line.startswith("| Thuật ngữ"):
             tn, nghia, ghi = o_bang(line)
-            r = {"id": slug(tn), "thuat_ngu": tn, "nghia": nghia}
+            r = {"id": slug(tn), "thuat_ngu": tn, "nghia": link_moi(nghia, "nhac-ly/tu-dien")}
             if ghi:
-                r["ghi_chu"] = ghi
+                r["ghi_chu"] = link_moi(ghi, "nhac-ly/tu-dien")
             r["nhom"] = nhom
             recs.append(r)
     return recs
@@ -416,7 +428,7 @@ def tac_pham(nguoi):
         if nghe:
             r["luyen_nghe"] = nghe[1][2]
         r["chip"] = chip
-        r["thong_tin"] = [[k, v] for k, v in tt.items()]
+        r["thong_tin"] = [[k, link_moi(v, rel)] for k, v in tt.items()]
         recs.append(r)
 
     for p in sorted((DOCS / "nghe-nhac").glob("*.md")):

@@ -7,7 +7,7 @@ import { pathToFileURL } from 'node:url';
 import { markdownToHtml } from 'satteri';
 import { duLieuDaKiem } from '../src/du-lieu.mjs';
 import { opusMarkdown } from '../src/plugins/opus-markdown.mjs';
-import { docQuiz, khoiNghe } from '../src/plugins/thanh-phan.mjs';
+import { canTaiScript, docMoc, docQuiz, hinhCauTruc, khoiNghe, md } from '../src/plugins/thanh-phan.mjs';
 import { kiemDinh, ngayViet } from '../src/kiem-dinh.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
@@ -22,11 +22,18 @@ const trangTacPham = (slug, than) => `---\ntitle: Thử\ntac_pham: ${slug}\n---\
 
 test('khối ```abc: tiêu đề từ dòng T:, mã ABC trong data-abc (không thành chữ của trang), có giữ chỗ', () => {
 	const html = dung('```abc\nX:1\nT:Ví dụ một\nM:4/4\nL:1/4\nK:C\nCDEF|G4|]\n```');
-	assert.match(html, /<figure class="oz-abc" style="--he:1">/);
+	assert.match(html, /<figure class="oz-abc" style="--he:1;--he-hep:1">/);
 	assert.match(html, /<figcaption class="oz-abc-title">Ví dụ một<\/figcaption>/);
 	assert.match(html, /aria-label="Khuông nhạc: Ví dụ một"/);
 	assert.match(html, /data-abc="X:1\nM:4\/4\nL:1\/4\nK:C\nCDEF\|G4\|\]"/);
 	assert.doesNotMatch(html, /T:Ví dụ/);
+	// T: sau K: là tiêu đề phần trong bản nhạc, abcjs vẽ: giữ trong data-abc, không lấy làm tiêu đề khung
+	const phan = dung('```abc\nX:1\nT:Tên\nK:C\nCDEF|\nT:Phần hai\nGABc|\n```');
+	assert.match(phan, /<figcaption class="oz-abc-title">Tên<\/figcaption>/);
+	assert.match(phan, /data-abc="X:1\nK:C\nCDEF\|\nT:Phần hai\nGABc\|"/);
+	// giữ chỗ: hai bè, hai dòng mỗi bè, 9 ô bè trên (khung hẹp ngắt khoảng 4 ô một hệ: 3 hệ)
+	const bai = '```abc\nX:1\nL:1/8\nK:C\n[V:1] "C"cdef gabc|cdef gabc|cdef gabc|cdef gabc|cdef gabc|\n[V:2] C4 E4|C4 E4|C4 E4|C4 E4|C4 E4|\n[V:1] !p!cdef gabc|cdef gabc|cdef gabc|cdef gabc|]\n[V:2] C4 E4|C4 E4|C4 E4|C4 E4|]\n```';
+	assert.match(dung(bai), /style="--he:4;--he-hep:6"/);
 });
 
 test('khối ```quiz: câu hỏi dựng sẵn bằng HTML, dữ liệu cho script trong data-quiz; quiz sai thì báo lỗi', () => {
@@ -35,6 +42,15 @@ test('khối ```quiz: câu hỏi dựng sẵn bằng HTML, dữ liệu cho scrip
 	assert.match(html, /<li><p>Đô giữa là nốt nào\?<\/p><ul><li>C4<\/li><li>C5<\/li><\/ul><\/li>/);
 	assert.throws(() => docQuiz('? Câu không có đáp án đúng\n- Sai'), /không có đáp án đúng/);
 	assert.throws(() => dung('```quiz\nkhông mở bằng dấu\n```'), /fur-elise\.md: khối quiz: dòng không hiểu/);
+	// chữ trong câu hỏi là Markdown trong dòng; thẻ HTML thô hiện thành chữ, không thành thẻ
+	const the = dung('```quiz\n? Nốt *nào* <b>đậm</b> & <img src=x onerror=alert(1)>?\n+ C4\n```');
+	assert.match(the, /<p>Nốt <em>nào<\/em> &lt;b&gt;đậm&lt;\/b&gt; &amp; &lt;img src=x onerror=alert\(1\)&gt;\?<\/p>/);
+	assert.doesNotMatch(the, /<b>|<img/);
+});
+
+test('Markdown trong dòng của dữ liệu: nghiêng, link; HTML thô thành chữ', () => {
+	assert.equal(md('*Für Elise*, [Bàn đạp](/opus/piano/ban-dap/)'), '<em>Für Elise</em>, <a href="/opus/piano/ban-dap/">Bàn đạp</a>');
+	assert.equal(md('<script>x</script> 1 < 2'), '&lt;script&gt;x&lt;/script&gt; 1 &lt; 2');
 });
 
 test('::hop-tac-pham: chip và bảng thông tin đúng như bản ghi', () => {
@@ -46,6 +62,10 @@ test('::hop-tac-pham: chip và bảng thông tin đúng như bản ghi', () => {
 	assert.match(html, /<summary>Thông tin tác phẩm và bản nhạc nên dùng<\/summary>/);
 	assert.equal((html.match(/<th scope="row">/g) ?? []).length, rec.thong_tin.length);
 	assert.match(html, /<td>Ludwig van Beethoven \(1770–1827\)<\/td>/);
+	// link trong dữ liệu là địa chỉ trên site mới (tools/du_lieu/tach.py đổi link .md cũ)
+	const bwv847 = dung(trangTacPham('bach-prelude-fugue-do-thu', '::hop-tac-pham'), 'piano/tac-pham/bach-prelude-fugue-do-thu');
+	assert.match(bwv847, /<a href="\/opus\/piano\/tac-pham\/bach-prelude-do\/">Prelude Đô trưởng BWV 846<\/a>/);
+	assert.match(bwv847, /<a href="\/opus\/piano\/lo-trinh\/">lộ trình<\/a>/);
 });
 
 test('::hinh-cau-truc: sơ đồ các đoạn từ hinh của bản ghi, theo loại trang', () => {
@@ -57,14 +77,25 @@ test('::hinh-cau-truc: sơ đồ các đoạn từ hinh của bản ghi, theo lo
 	const bai = dung(trangTacPham('liszt-liebestraum', '::hinh-cau-truc'), 'piano/tac-pham/liszt-liebestraum');
 	const nghe = dung(trangTacPham('liszt-liebestraum', '::hinh-cau-truc'), 'nghe-nhac/liszt-liebestraum');
 	assert.notEqual(bai, nghe);
+	// chữ của hình được thoát; ghi chú nối sau chú thích
+	const gia = { slug: 'x', hinh: { 'bai-hoc': [{ chu_thich: 'Hai <đoạn>', ghi_chu: 'Ô "1" & ô 2.', doan: [['A<', 'ô 1–8', 8, 'a'], ['B', null, 4, 'b']] }] } };
+	assert.equal(
+		hinhCauTruc(gia, 'bai-hoc'),
+		'<figure class="oz-figure"><div class="oz-form-map"><div class="oz-seg k-a" style="flex:8 1 4.6rem"><b>A&lt;</b><small>ô 1–8</small></div>' +
+			'<div class="oz-seg k-b" style="flex:4 1 4.6rem"><b>B</b></div></div><figcaption>Hai &lt;đoạn&gt; Ô &quot;1&quot; &amp; ô 2.</figcaption></figure>',
+	);
 });
 
-test('::hoc-tiep: bài cùng chặng, bài chặng sau và trang nghe kèm, sinh từ dữ liệu', () => {
+test('::hoc-tiep: trang chặng hiện tại và chặng sau, trang cùng tác phẩm; bài chọn lọc thì viết tay', () => {
 	const html = dung(trangTacPham('fur-elise', '::hoc-tiep'));
-	assert.match(html, /<strong>Cùng chặng 4:<\/strong>/);
-	assert.match(html, /href="\/opus\/piano\/tac-pham\/bach-prelude-do\/"/);
-	assert.match(html, /<strong>Chặng 5:<\/strong>/);
-	assert.doesNotMatch(html, /href="\/opus\/piano\/tac-pham\/fur-elise\/"/, 'không link tới chính nó');
+	assert.equal(
+		html.trim(),
+		'<ul class="oz-hoc-tiep"><li><strong>Cùng chặng 4:</strong> <a href="/opus/piano/lo-trinh/chang-4/">các bài của chặng 4</a>.</li>' +
+			'<li><strong>Chặng 5:</strong> <a href="/opus/piano/lo-trinh/chang-5/">các bài của chặng 5</a>.</li></ul>',
+	);
+	// chặng cuối: không có dòng chặng sau
+	const chang7 = duLieuDaKiem()['tac-pham'].find((r) => r.loai === 'bai-hoc' && r.chang === 7);
+	assert.doesNotMatch(dung(trangTacPham(chang7.slug, '::hoc-tiep'), `piano/tac-pham/${chang7.slug}`), /chang-8/);
 	const traumerei = dung(trangTacPham('schumann-traumerei', '::hoc-tiep'), 'piano/tac-pham/schumann-traumerei');
 	assert.match(traumerei, /<strong>Nghe kèm:<\/strong> <a href="\/opus\/nghe-nhac\/schumann-kinderszenen\/">/);
 	// Trang hướng dẫn nghe dùng chung bản ghi: dẫn về bài học, không dẫn về chính nó
@@ -72,18 +103,37 @@ test('::hoc-tiep: bài cùng chặng, bài chặng sau và trang nghe kèm, sinh
 	assert.match(nghe, /<strong>Bài học:<\/strong> <a href="\/opus\/piano\/tac-pham\/liszt-liebestraum\/">/);
 });
 
-test('::khoi-nghe: không có bản thu trong dữ liệu thì để người học tự dán link; có thì gợi ý bản đầu tiên', () => {
+test('::khoi-nghe: không có bản thu trong dữ liệu thì để người học tự dán link; có thì gợi ý bản đầu tiên, mốc theo trang', () => {
 	assert.match(dung(trangTacPham('fur-elise', '::khoi-nghe')), /<div class="oz-listen"><\/div>/);
-	// file mp3 của site (đường dẫn tương đối) thêm base; link ngoài giữ nguyên
-	const html = khoiNghe({ ban_thu: [{ by: 'A', parts: [{ mp3: 'audio/a.mp3', d: 60 }, { mp3: 'https://x.org/b.mp3', d: 30 }] }] }, '/opus/');
-	const rec = JSON.parse(/data-rec="([^"]+)"/.exec(html)[1].replaceAll('&quot;', '"'));
+	// file mp3 của site (đường dẫn tính từ gốc site) thêm base; link ngoài giữ nguyên
+	const banGhi = { ban_thu: [{ by: 'A', parts: [{ mp3: 'audio/a.mp3', d: 60 }, { mp3: 'https://x.org/b.mp3', d: 30 }] }] };
+	const docRec = (html) => JSON.parse(/data-rec="([^"]+)"/.exec(html)[1].replaceAll('&quot;', '"'));
+	const rec = docRec(khoiNghe(banGhi, '/opus/'));
 	assert.deepEqual(rec.parts.map((p) => p.mp3), ['/opus/audio/a.mp3', 'https://x.org/b.mp3']);
+	assert.equal(rec.ref, undefined);
+	// mốc tham khảo nằm ở trang (moc), vì bài học và hướng dẫn nghe dùng chung bản ghi mà bảng mốc khác nhau
+	assert.deepEqual(docRec(khoiNghe(banGhi, '/opus/', '3 61 - 73')).ref, [3, 61, null, 73]);
+	assert.deepEqual(docMoc(' 0  12.5 -'), [0, 12.5, null]);
+	assert.throws(() => docMoc('3 1:05'), /mốc "1:05" không phải số giây/);
+	assert.throws(() => khoiNghe({}, '/opus/', '3 4'), /có moc nhưng bản ghi không có ban_thu/);
+	assert.throws(() => dung(trangTacPham('fur-elise', '::khoi-nghe{moc="3 4"}')), /fur-elise\.md: ::khoi-nghe có moc nhưng bản ghi không có ban_thu/);
 });
 
-test('chỉ thị viết sai thì báo lỗi kèm tên file; chỉ thị lạ để nguyên cho Starlight', () => {
+test('chỉ thị viết sai thì báo lỗi kèm tên file, kể cả gõ sai tên; chỉ thị khối để nguyên cho Starlight', () => {
 	assert.throws(() => dung('::hop-tac-pham'), /fur-elise\.md: ::hop-tac-pham cần trường tac_pham/);
-	assert.throws(() => dung(trangTacPham('fur-elise', '::hop-tac-pham{x="1"}')), /không nhận chữ hay thuộc tính/);
-	assert.doesNotMatch(dung('::la-lam'), /oz-/);
+	assert.throws(() => dung(trangTacPham('fur-elise', '::hop-tac-pham{x="1"}')), /::hop-tac-pham không nhận thuộc tính x/);
+	assert.throws(() => dung(trangTacPham('fur-elise', '::khoi-nghe{moc="1" x="2"}')), /::khoi-nghe không nhận thuộc tính x \(chỉ nhận: moc\)/);
+	assert.throws(() => dung(trangTacPham('fur-elise', '::hop-tac-pham[chữ]')), /::hop-tac-pham không nhận chữ/);
+	assert.throws(() => dung(trangTacPham('fur-elise', '::hop-tac-phamm')), /fur-elise\.md: không có chỉ thị ::hop-tac-phamm \(có: ::hop-tac-pham,/);
+	assert.doesNotThrow(() => dung(':::tip\nMẹo.\n:::'), 'chỉ thị khối (aside) là việc của Starlight');
+});
+
+test('trang nào tải bộ tải thành phần: dò trên HTML đã dựng, khớp mọi cách viết plugin dựng được', () => {
+	assert.ok(canTaiScript(dung('~~~abc\nX:1\nK:C\nC|\n~~~')), 'khối ~~~abc');
+	assert.ok(canTaiScript(dung('> ```quiz\n> ? Câu?\n> + Đúng\n> ```')), 'câu hỏi trong trích dẫn');
+	assert.ok(canTaiScript(dung(trangTacPham('fur-elise', '::khoi-nghe'))), 'khối nghe');
+	assert.ok(!canTaiScript(dung('Chữ thường, `class="oz-quiz"` trong mã, và <span class="oz-chip">chip</span>.')));
+	assert.ok(!canTaiScript(dung(trangTacPham('fur-elise', '::hop-tac-pham\n\n::hinh-cau-truc\n\n::hoc-tiep'))));
 });
 
 test('huy hiệu "Đã kiểm định": chỉ khi trang có trong khoa.json; ngày của lần kiểm định gần nhất; đếm nhận định', () => {

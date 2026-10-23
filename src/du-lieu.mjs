@@ -342,6 +342,9 @@ export function boNap(ten) {
 	};
 }
 
+/** File mã mà HTML dựng từ chỉ thị phụ thuộc: schema và mọi plugin trong src/plugins/ (thêm plugin thì tự tính). */
+export const tepDauVet = () => ['src/du-lieu.mjs', ...fs.readdirSync(path.join(GOC, 'src/plugins')).sort().map((f) => `src/plugins/${f}`)];
+
 /** Dấu vết của những gì HTML dựng từ chỉ thị phụ thuộc, ngoài chính trang: dữ liệu, schema, plugin Markdown. */
 function dauVet() {
 	const h = createHash('sha256');
@@ -349,8 +352,7 @@ function dauVet() {
 		const f = path.join(thuMuc(), tep);
 		h.update(fs.existsSync(f) ? fs.readFileSync(f) : `không có ${tep}`);
 	}
-	for (const f of ['src/du-lieu.mjs', 'src/plugins/opus-markdown.mjs', 'src/plugins/thanh-phan.mjs'])
-		h.update(fs.readFileSync(path.join(GOC, f)));
+	for (const f of tepDauVet()) h.update(fs.readFileSync(path.join(GOC, f)));
 	return h.digest('hex');
 }
 
