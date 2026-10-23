@@ -1,0 +1,112 @@
+---
+// Phần đầu của trang có `hero` (hiện chỉ trang chủ): tên site nằm trên khuông nhạc như .oz-hero của site cũ,
+// dưới là dải phím đàn như ảnh chia sẻ cũ (og.png). Đọc hero.title, hero.tagline, hero.actions; bỏ qua hero.image.
+import { LinkButton } from '@astrojs/starlight/components';
+import DraftContentNotice from '@astrojs/starlight/components/DraftContentNotice.astro';
+
+const { data } = Astro.locals.starlightRoute.entry;
+const { title = data.title, tagline, actions = [] } = data.hero || {};
+
+// Bàn phím 88 phím, từ A0 đến C8: 52 phím trắng, phím đen nằm sau các phím trắng A, C, D, F, G.
+const W = 24;
+const H = 96;
+const whites = Array.from({ length: 52 }, (_, i) => i);
+const blacks = whites.filter((i) => i < 51 && 'ACDFG'.includes('ABCDEFG'[i % 7]));
+// Đô giữa (C4) là phím trắng thứ 24 tính từ A0; tô ba phím của hợp âm Đô trưởng C4, E4, G4.
+const lit = new Set([23, 25, 27]);
+---
+
+<div class="oz-hero">
+	{/* id="_top" như PAGE_TITLE_ID của Starlight: link "Bỏ qua để đến nội dung" trỏ tới đây */}
+	<h1 id="_top" data-page-title set:html={title} />
+	{data.draft && <DraftContentNotice />}
+	{tagline && <p class="tagline" set:html={tagline} />}
+	{
+		actions.length > 0 && (
+			<div class="actions">
+				{actions.map(({ attrs: { class: className, ...attrs } = {}, icon, link: href, text, variant }) => (
+					<LinkButton {href} {variant} icon={icon?.name} class:list={[className]} {...attrs}>
+						{text}
+						{icon?.html && <Fragment set:html={icon.html} />}
+					</LinkButton>
+				))}
+			</div>
+		)
+	}
+	<svg
+		class="keys"
+		viewBox={`0 0 ${whites.length * W} ${H}`}
+		preserveAspectRatio="xMidYMax slice"
+		aria-hidden="true"
+		focusable="false"
+	>
+		{whites.map((i) => <rect class:list={['w', { lit: lit.has(i) }]} x={i * W} y="-4" width={W} height={H + 4} rx="3" />)}
+		{blacks.map((i) => <rect class="b" x={(i + 1) * W - 7} y="-4" width="14" height="62" rx="2" />)}
+		<rect class="rail" x="0" y="-4" width={whites.length * W} height="9" />
+	</svg>
+</div>
+
+<style is:global>
+	.oz-hero {
+		padding-top: clamp(1.5rem, 5vw, 3.5rem);
+	}
+
+	/* Năm dòng kẻ khuông sau tên site; khoảng cách theo cỡ chữ nên khuông to nhỏ cùng chữ */
+	.oz-hero h1 {
+		--gap: 0.19em;
+		margin: 0;
+		padding-block: 0.15em;
+		font-family: var(--oz-heading);
+		font-size: clamp(3rem, 13vw, 5.5rem);
+		font-weight: 600;
+		line-height: 1.05;
+		letter-spacing: -0.015em;
+		color: var(--sl-color-white);
+		/* dòng trên cùng ngang đầu chữ hoa, dòng dưới cùng ngang chân chữ, như ảnh chia sẻ cũ */
+		background: repeating-linear-gradient(to bottom, var(--oz-staff) 0 1px, transparent 1px var(--gap)) 0
+			calc(50% + 0.07em) / 100% calc(4 * var(--gap) + 1px) no-repeat;
+	}
+
+	.oz-hero .tagline {
+		max-width: 38ch;
+		margin-top: 1rem;
+		font-size: clamp(var(--sl-text-lg), calc(0.75rem + 1.6vw), var(--sl-text-2xl));
+		line-height: 1.5;
+		color: var(--sl-color-gray-2);
+	}
+
+	.oz-hero .actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin-top: 1.5rem;
+	}
+
+	.oz-hero .keys {
+		display: block;
+		width: 100%;
+		height: clamp(4rem, 9vw, 6rem);
+		margin-top: clamp(1.75rem, 5vw, 3rem);
+		border-radius: 0 0 6px 6px;
+	}
+	.oz-hero .keys .w {
+		fill: var(--oz-key-white);
+		stroke: var(--oz-key-line);
+		stroke-width: 1;
+	}
+	.oz-hero .keys .w.lit {
+		fill: var(--oz-accent);
+	}
+	.oz-hero .keys .b {
+		fill: var(--oz-key-black);
+	}
+	.oz-hero .keys .rail {
+		fill: var(--oz-key-line);
+	}
+
+	@media print {
+		.oz-hero .keys {
+			display: none;
+		}
+	}
+</style>

@@ -1,0 +1,231 @@
+/* Màu, chữ và các chi tiết riêng của Opus Zero trên nền Starlight. Màu lấy từ ../opus-zero/docs/assets/css/opus.css
+   (mực xanh đậm, nhựa thông, giấy) và overrides/main.html (theme-color). File này không nằm trong cascade layer nào,
+   nên thắng mọi quy tắc của Starlight (đặt trong @layer starlight.*); vì thế màu chế độ sáng phải ghi lại ở
+   :root[data-theme='light'], không thì giá trị của chế độ tối ở :root đè lên cả chế độ sáng. */
+
+/* ---------- Tokens ---------- */
+:root {
+	--oz-ink: #1f3a5f; /* mực xanh đậm */
+	--oz-ink-soft: #2f5582;
+	--oz-ink-dark: #142843;
+	--oz-rosin: #b5832a; /* màu nhựa thông (rosin) của vĩ violin */
+	--oz-rosin-light: #e0b45e;
+	--oz-paper: #fbfbf9;
+	--oz-heading: 'Literata', Georgia, 'Times New Roman', serif; /* Literata chỉ có độ đậm 600 (fonts.css) */
+	--sl-font: 'Be Vietnam Pro';
+	--sl-line-height-headings: 1.25;
+
+	/* Chế độ tối (mặc định của Starlight) */
+	--oz-header-bg: #18293f;
+	--oz-header-line: #101c2c;
+	--oz-accent: var(--oz-rosin-light);
+	--oz-focus: var(--oz-rosin-light);
+	--oz-staff: rgba(200, 215, 235, 0.2);
+	--oz-key-white: #e9ecf1;
+	--oz-key-black: #0b0f15;
+	--oz-key-line: #0b0f15;
+	--oz-card: #19202a;
+
+	--sl-color-accent-low: #18293f;
+	--sl-color-accent: #4f7fb8;
+	--sl-color-accent-high: #8fb6e6;
+	--sl-color-black: #12161d;
+
+	/* Các dải màu Starlight dùng cho hộp ghi chú (aside), huy hiệu, thẻ: kéo về bảng màu của site
+	   (xanh: mực; cam: nhựa thông; xanh lá, đỏ: --oz-ok, --oz-bad của site cũ; tím: tím xám dịu) */
+	--sl-color-blue-low: #1a2a40;
+	--sl-color-blue: #5f8fca;
+	--sl-color-blue-high: #a9c6ec;
+	--sl-color-orange-low: #3a2c12;
+	--sl-color-orange: var(--oz-rosin-light);
+	--sl-color-orange-high: #f0d49a;
+	--sl-color-green-low: #173323;
+	--sl-color-green: #6cc28f;
+	--sl-color-green-high: #a8dfbd;
+	--sl-color-red-low: #3d1d17;
+	--sl-color-red: #e48b78;
+	--sl-color-red-high: #f2bcb0;
+	--sl-color-purple-low: #2a2136;
+	--sl-color-purple: #b49ad3;
+	--sl-color-purple-high: #d9c9ec;
+}
+
+:root[data-theme='light'] {
+	--oz-header-bg: var(--oz-ink);
+	--oz-header-line: var(--oz-ink-dark);
+	--oz-accent: var(--oz-rosin);
+	--oz-focus: var(--oz-rosin);
+	--oz-staff: rgba(31, 58, 95, 0.2);
+	--oz-key-white: #fff;
+	--oz-key-black: #1b1d22;
+	--oz-key-line: var(--oz-ink);
+	--oz-card: #fff;
+
+	--sl-color-accent-low: #dce5f0;
+	--sl-color-accent: var(--oz-ink-soft);
+	--sl-color-accent-high: var(--oz-ink);
+	--sl-color-black: var(--oz-paper);
+
+	--sl-color-blue-low: #e3eaf3;
+	--sl-color-blue: var(--oz-ink-soft);
+	--sl-color-blue-high: var(--oz-ink);
+	--sl-color-orange-low: #f6ead2;
+	--sl-color-orange: var(--oz-rosin);
+	--sl-color-orange-high: #6e4c12;
+	--sl-color-green-low: #dcefe3;
+	--sl-color-green: #2e7d4f;
+	--sl-color-green-high: #1d5434;
+	--sl-color-red-low: #f6dfda;
+	--sl-color-red: #b3412e;
+	--sl-color-red-high: #7c2a1c;
+	--sl-color-purple-low: #ece4f1;
+	--sl-color-purple: #6b4f8a;
+	--sl-color-purple-high: #4a3263;
+}
+
+/* ---------- Chữ ---------- */
+.sl-markdown-content :is(h1, h2, h3),
+h1#_top,
+.site-title {
+	font-family: var(--oz-heading);
+	font-weight: 600;
+	letter-spacing: -0.01em;
+}
+/* Tiêu đề xuống dòng cân hai bên, không để một chữ lẻ ở dòng cuối (trình duyệt cũ bỏ qua). Tiêu đề trong bài là
+   phần tử inline trong .sl-heading-wrapper của Starlight, nên đặt ở cả khối bọc ngoài. */
+:is(h1, h2, h3, h4),
+.sl-heading-wrapper {
+	text-wrap: balance;
+}
+.sl-markdown-content :is(p, li) {
+	max-width: 72ch;
+}
+/* Link trong bài có gạch chân, để không chỉ phân biệt với chữ quanh nó bằng màu (trợ năng) */
+.sl-markdown-content a:not(:where(.not-content *)) {
+	text-underline-offset: 0.15em;
+	text-decoration-thickness: from-font;
+}
+
+/* Viền khi dùng bàn phím: màu nhựa thông như site cũ */
+:is(a, button, select, summary, input, textarea, [tabindex]):focus-visible {
+	outline: 2px solid var(--oz-focus);
+	outline-offset: 2px;
+}
+
+/* ---------- Thanh trên cùng: nền mực xanh như site cũ, cả hai chế độ ---------- */
+header.header {
+	background-color: var(--oz-header-bg);
+	border-bottom-color: var(--oz-header-line);
+}
+/* Đổi bảng màu chỉ cho từng phần của thanh, không cho cả header: hộp tìm kiếm (dialog) nằm trong header
+   và phải giữ màu của trang. */
+header.header .site-title,
+header.header button[data-open-modal],
+header.header .right-group {
+	--sl-color-white: #fff;
+	--sl-color-text-accent: #fff;
+	--sl-color-gray-1: #eef2f8;
+	--sl-color-gray-2: #d3dce8;
+	--sl-color-gray-5: rgba(255, 255, 255, 0.3);
+	--sl-color-gray-6: rgba(255, 255, 255, 0.14);
+	--sl-color-black: rgba(0, 0, 0, 0.2);
+	--sl-color-bg-nav: var(--oz-header-bg);
+	--oz-focus: var(--oz-rosin-light);
+}
+.site-title {
+	font-size: var(--sl-text-xl);
+}
+/* Starlight để ô chọn giao diện rộng 6,25em (viết cho tiếng Anh), chữ "Tự động" bị cắt */
+starlight-theme-select select {
+	--sl-select-width: 7.25em;
+}
+
+/* ---------- Sơ đồ các bước (trang chủ tạm) ---------- */
+.oz-steps {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.75rem;
+	padding: 0;
+	list-style: none;
+	counter-reset: oz-step;
+}
+.sl-markdown-content .oz-steps > li {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	margin: 0;
+	padding: 1rem 1.1rem 1.1rem 4rem;
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 12px;
+	background: var(--oz-card);
+	counter-increment: oz-step;
+}
+/* Số bước trong vòng tròn */
+.oz-steps > li::before {
+	content: counter(oz-step);
+	position: absolute;
+	inset-inline-start: 1rem;
+	top: 1rem;
+	display: grid;
+	place-items: center;
+	width: 2.1rem;
+	height: 2.1rem;
+	border-radius: 50%;
+	background: var(--sl-color-accent-low);
+	color: var(--sl-color-text-accent);
+	font-family: var(--oz-heading);
+	font-weight: 600;
+}
+/* Bước cuối: phần đã lên site, dùng màu nhựa thông */
+.oz-steps > li:last-child::before {
+	background: var(--oz-accent);
+	color: var(--oz-ink-dark);
+}
+/* Mũi tên nối các bước: xuống dưới trên điện thoại, sang phải trên màn hình rộng */
+.oz-steps > li + li::after {
+	content: '';
+	position: absolute;
+	top: -1.45rem;
+	inset-inline-start: 2.05rem;
+	width: 0;
+	height: 0;
+	border-inline: 0.45rem solid transparent;
+	border-top: 0.6rem solid var(--sl-color-gray-4);
+}
+.oz-steps b {
+	color: var(--sl-color-white);
+	font-size: var(--sl-text-lg);
+	line-height: 1.35;
+}
+.oz-steps span {
+	color: var(--sl-color-gray-2);
+	font-size: var(--sl-text-sm);
+	line-height: 1.5;
+}
+@media (min-width: 50rem) {
+	.oz-steps {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+	}
+	.sl-markdown-content .oz-steps > li {
+		padding: 3.75rem 1.1rem 1.2rem;
+	}
+	.oz-steps > li + li::after {
+		top: 1.6rem;
+		inset-inline-start: -1.45rem;
+		border-block: 0.45rem solid transparent;
+		border-inline: 0;
+		border-inline-start: 0.6rem solid var(--sl-color-gray-4);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		transition: none !important;
+		animation: none !important;
+		scroll-behavior: auto !important;
+	}
+}

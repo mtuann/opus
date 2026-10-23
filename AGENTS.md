@@ -14,7 +14,18 @@ Như `plans/lam-lai/cong-nghe.md` mục 4.
 
 ## Lệnh
 
-Chốt ở D1.1.
+Node theo `.nvmrc` (24, bản LTS; Astro 7.4 cần Node từ 22.23.4). Phiên bản gói ghim chính xác trong `package.json` và `package-lock.json`; nâng theo `plans/lam-lai/cong-nghe.md` mục 3.
+
+```bash
+npm ci            # cài đúng các gói trong package-lock.json
+npm run dev       # máy chủ thử, tự tải lại khi sửa: http://localhost:4321/opus/ (tìm kiếm chỉ chạy ở bản build)
+npm run build     # bản thật vào dist/ (từ D1.6: chỉ trang đã khóa)
+npm run preview   # xem dist/ vừa build: http://localhost:4321/opus/
+npm test          # kiểm thử trên dist/: chạy sau npm run build
+```
+
+- Kiểm thử ở `tests/*.test.mjs`, chạy bằng trình kiểm thử có sẵn của Node (`node --test`), không cần gói thêm. Thêm kiểm thử thì thêm file `tests/<tên>.test.mjs`.
+- `npm run build:xem` (bản xem, thêm trang chưa khóa) có từ D1.6.
 
 ## Mẫu trang và khối đặc biệt
 
