@@ -525,6 +525,25 @@ html.oz-stand-open .main-pane {
 	margin-top: 0.4rem;
 }
 
+/* ---------- Ô "chưa chuyển" (hình hay công cụ chưa có thành phần; chỉ ở bản xem) và phần chỉ dành cho bản in ---------- */
+.sl-markdown-content .oz-chua-co {
+	padding: 0.6rem 0.9rem;
+	border: 2px dashed var(--sl-color-gray-4);
+	border-radius: 10px;
+	color: var(--sl-color-gray-2);
+	font-size: var(--sl-text-sm);
+	font-style: italic;
+}
+/* như site cũ: phần chỉ dành cho bản in (ví dụ hình tĩnh thay biểu đồ tương tác) ẩn trên màn hình */
+.oz-print-only {
+	display: none;
+}
+@media print {
+	.oz-print-only {
+		display: block;
+	}
+}
+
 /* ---------- Huy hiệu "Đã kiểm định" ---------- */
 .oz-kiem-dinh {
 	display: inline-flex;

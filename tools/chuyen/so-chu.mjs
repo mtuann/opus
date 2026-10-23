@@ -2,8 +2,9 @@
 // So chữ hiển thị của một trang ở bản build cũ (.cache/site-cu/) và bản build mới (dist/), theo từng khối (đoạn, mục
 // danh sách, ô bảng…), để biết việc chuyển cú pháp (tools/chuyen/chuyen.mjs) không làm mất hay đổi chữ (D1.4).
 //   node tools/chuyen/so-chu.mjs <trang> [<trang>…] [--dist <thư mục build mới>]
-// Không so phần do thành phần dựng khác cách: khuông nhạc (so tiêu đề), câu hỏi (so số câu và số lựa chọn), hình chưa
-// chuyển; bỏ chữ chỉ dành cho máy đọc màn hình và link #mục cạnh tiêu đề.
+// Phần do thành phần dựng khác cách thì so riêng: khuông nhạc (tiêu đề và trọn mã ABC), câu hỏi (chữ từng câu, lựa
+// chọn kèm đáp án đúng, giải thích); so cả tiêu đề, mô tả trang và id tiêu đề. Bỏ hình chưa chuyển, chữ chỉ dành cho
+// máy đọc màn hình và link #mục cạnh tiêu đề.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -40,21 +41,42 @@ function* tach(html) {
 
 const coLop = (tt, lop) => (tt.class ?? '').split(/\s+/).includes(lop);
 
-/** Cắt phần nội dung chính: phần tử đầu tiên khớp `laGoc(ten, tt)`, đến thẻ đóng tương ứng. */
-function catNoiDung(html, laGoc) {
+/** Cắt phần nội dung chính: phần tử đầu tiên khớp `laGoc(ten, tt)`, đến thẻ đóng tương ứng. Không thấy thì báo lỗi. */
+function catNoiDung(html, laGoc, ten) {
 	const ra = [];
 	let sau = 0;
+	let thay = false;
 	for (const t of tach(html)) {
 		if (!sau) {
 			if (t.loai === 'mo' && laGoc(t.ten, t.tt)) sau = 1;
+			thay ||= !!sau;
 			continue;
 		}
 		if (t.loai === 'mo' && !t.tuDong && !RONG.has(t.ten)) sau++;
 		if (t.loai === 'dong' && --sau === 0) break;
 		ra.push(t);
 	}
+	if (!thay) throw new Error(`không thấy phần nội dung (${ten}) trong trang`);
 	return ra;
 }
+
+/** Chữ hiện ra của một đoạn HTML ngắn (dữ liệu câu hỏi của trang mới): bỏ thẻ, giải mã, gộp khoảng trắng. */
+const chuHien = (html) => giaiMa(String(html ?? '').replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim();
+
+/** Mã ABC để so: bỏ dòng T: ở phần đầu (trước K:, thành tiêu đề khung ở site mới), khoảng trắng cuối dòng, dòng trống ở hai đầu. */
+function maAbc(chu) {
+	let dau = true;
+	const dong = [];
+	for (const l of chu.replace(/\r/g, '').split('\n')) {
+		if (dau && /^\s*T:/.test(l)) continue;
+		if (/^\s*K:/.test(l)) dau = false;
+		dong.push(l.replace(/\s+$/, ''));
+	}
+	return dong.join('\n').trim();
+}
+
+/** Một câu hỏi thành một chuỗi để so: câu, các lựa chọn (đáp án đúng có dấu ✓), giải thích. */
+const cauHoi = ({ q, opts, why }) => [q, ...opts.map((o) => (o.ok ? '✓ ' : '') + o.t), why].join(' | ');
 
 /**
  * Các khối chữ hiển thị (chuỗi đã gộp khoảng trắng) của dãy thẻ `the`, bỏ cây con khớp `bo(ten, tt)`. Vùng giữa chú thích
@@ -100,10 +122,13 @@ function khoiChu(the, bo, boHinh = () => false) {
 	return khoi;
 }
 
-/** Tiêu đề khuông nhạc và số câu hỏi, lựa chọn của trang cũ: đọc từ mã ABC, mã quiz còn nằm nguyên trong HTML. */
+/**
+ * Khuông nhạc (tiêu đề, mã) và câu hỏi của trang cũ: mã ABC và mã quiz còn nằm nguyên trong HTML. quiz.js cũ hiện chữ
+ * câu hỏi đúng như viết (chữ thô), nên dấu * hiện nguyên.
+ */
 function phanThanhPhanCu(the) {
 	const abc = [];
-	const quiz = { cau: 0, luaChon: 0 };
+	const quiz = [];
 	let dang = null;
 	let chu = '';
 	for (const t of the) {
@@ -121,32 +146,34 @@ function phanThanhPhanCu(the) {
 					if (/^K:/.test(d)) break;
 					if (/^T:/.test(d)) ten.push(d.slice(2).trim());
 				}
-				abc.push(ten.join(' · '));
+				abc.push({ ten: ten.join(' · '), ma: maAbc(chu) });
 			} else {
-				quiz.cau += dong.filter((d) => d.startsWith('?')).length;
-				quiz.luaChon += dong.filter((d) => /^[+-]/.test(d)).length;
+				let c = null;
+				for (const d of dong) {
+					const [dau, noi] = [d[0], d.slice(1).trim().replace(/\s+/g, ' ')];
+					if (dau === '?') quiz.push((c = { q: noi, opts: [], why: '' }));
+					else if (c && (dau === '+' || dau === '-')) c.opts.push({ t: noi, ok: dau === '+' });
+					else if (c && dau === '>') c.why += (c.why ? ' ' : '') + noi;
+				}
 			}
 			dang = null;
 		}
 	}
-	return { abc, quiz };
+	return { abc, quiz: quiz.map(cauHoi) };
 }
 
-/** Như trên cho trang mới: tiêu đề trong figcaption của .oz-abc, câu hỏi dựng sẵn trong .oz-quiz. */
+/** Như trên cho trang mới: tiêu đề trong aria-label của khung, mã trong data-abc; câu hỏi trong data-quiz (HTML). */
 function phanThanhPhanMoi(the) {
 	const abc = [];
-	const quiz = { cau: 0, luaChon: 0 };
+	const quiz = [];
 	for (const t of the) {
 		if (t.loai !== 'mo') continue;
-		if (coLop(t.tt, 'oz-abc')) abc.push('');
-		if (coLop(t.tt, 'abc-notation') && t.tt['aria-label']) abc[abc.length - 1] = giaiMa(t.tt['aria-label']).replace(/^Khuông nhạc(: )?/, '');
-		if (coLop(t.tt, 'oz-quiz') && t.tt['data-quiz']) {
-			const ds = JSON.parse(giaiMa(t.tt['data-quiz']));
-			quiz.cau += ds.length;
-			quiz.luaChon += ds.reduce((n, x) => n + x.opts.length, 0);
-		}
+		if (coLop(t.tt, 'abc-notation'))
+			abc.push({ ten: giaiMa(t.tt['aria-label'] ?? '').replace(/^Khuông nhạc(: )?/, ''), ma: maAbc(giaiMa(t.tt['data-abc'] ?? '')) });
+		if (coLop(t.tt, 'oz-quiz') && t.tt['data-quiz'])
+			for (const x of JSON.parse(giaiMa(t.tt['data-quiz']))) quiz.push({ q: chuHien(x.q), opts: x.opts.map((o) => ({ t: chuHien(o.t), ok: o.ok })), why: chuHien(x.why) });
 	}
-	return { abc, quiz };
+	return { abc, quiz: quiz.map(cauHoi) };
 }
 
 /** Id của các tiêu đề h2–h6 trong dãy thẻ (để link #mục của site cũ vẫn đúng). */
@@ -155,7 +182,7 @@ const idTieuDe = (the, bo = () => false) =>
 
 /** Khối chữ, khuông nhạc, câu hỏi của trang ở bản build cũ. */
 export function docCu(html) {
-	const the = catNoiDung(html, (ten, tt) => ten === 'article' && coLop(tt, 'md-content__inner'));
+	const the = catNoiDung(html, (ten, tt) => ten === 'article' && coLop(tt, 'md-content__inner'), 'article.md-content__inner của bản cũ');
 	const bo = (ten, tt) =>
 		ten === 'h1' || ten === 'script' || ten === 'style' || coLop(tt, 'headerlink') || coLop(tt, 'md-content__button') || coLop(tt, 'md-source-file') ||
 		coLop(tt, 'abc-notation') || coLop(tt, 'oz-quiz') || coLop(tt, 'oz-placement') || coLop(tt, 'footnote-backref');
@@ -164,7 +191,7 @@ export function docCu(html) {
 
 /** Khối chữ, khuông nhạc, câu hỏi của trang ở bản build mới. */
 export function docMoi(html) {
-	const the = catNoiDung(html, (ten, tt) => ten === 'div' && coLop(tt, 'sl-markdown-content'));
+	const the = catNoiDung(html, (ten, tt) => ten === 'div' && coLop(tt, 'sl-markdown-content'), 'div.sl-markdown-content của bản mới');
 	const bo = (ten, tt) =>
 		ten === 'script' || ten === 'style' || coLop(tt, 'sl-anchor-link') || coLop(tt, 'sr-only') || coLop(tt, 'oz-abc') || coLop(tt, 'oz-quiz') ||
 		coLop(tt, 'oz-chua-co') || 'data-footnote-backref' in tt || coLop(tt, 'copy');
@@ -200,18 +227,22 @@ export function soTrang(trang, dist = path.join(GOC, 'dist')) {
 	const moi = docMoi(moiHtml);
 	const h1 = (html, re) =>
 		giaiMa((re.exec(html)?.[1] ?? '').replace(/<a class="headerlink"[\s\S]*?<\/a>/, '').replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim();
+	// mô tả: bản cũ đọc og:description (thẻ description của site cũ không thoát dấu nháy), bản mới đọc thẻ description
+	const moTa = (html, re) => giaiMa(re.exec(html)?.[1] ?? '');
 	return {
 		khac: khacNhau(cu.khoi, moi.khoi),
 		abc: [cu.abc, moi.abc],
 		quiz: [cu.quiz, moi.quiz],
 		id: [cu.id, moi.id],
 		tieuDe: [h1(cuHtml, /<h1[^>]*>([\s\S]*?)<\/h1>/), h1(moiHtml, /<h1 id="_top"[^>]*>([\s\S]*?)<\/h1>/)],
+		moTa: [moTa(cuHtml, /<meta property="og:description" content="([^"]*)"/), moTa(moiHtml, /<meta name="description" content="([^"]*)"/)],
 	};
 }
 
 export const dat = (kq) =>
 	!kq.khac.length &&
 	kq.tieuDe[0] === kq.tieuDe[1] &&
+	kq.moTa[0] === kq.moTa[1] &&
 	['abc', 'quiz', 'id'].every((k) => JSON.stringify(kq[k][0]) === JSON.stringify(kq[k][1]));
 
 // ---------- Dòng lệnh ----------
@@ -222,7 +253,14 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.a
 	const trangs = ts.filter((t, i) => !t.startsWith('--') && (iDist < 0 || i !== iDist + 1));
 	let hong = 0;
 	for (const trang of trangs) {
-		const kq = soTrang(trang, dist);
+		let kq;
+		try {
+			kq = soTrang(trang, dist);
+		} catch (e) {
+			hong++;
+			console.log(`${trang}: KHÔNG SO ĐƯỢC: ${e.message}`);
+			continue;
+		}
 		if (dat(kq)) {
 			console.log(`${trang}: chữ giống nhau`);
 			continue;
@@ -230,8 +268,23 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.a
 		hong++;
 		console.log(`${trang}: KHÁC`);
 		if (kq.tieuDe[0] !== kq.tieuDe[1]) console.log(`  tiêu đề: "${kq.tieuDe[0]}" / "${kq.tieuDe[1]}"`);
-		if (JSON.stringify(kq.abc[0]) !== JSON.stringify(kq.abc[1])) console.log(`  khuông nhạc: ${JSON.stringify(kq.abc[0])} / ${JSON.stringify(kq.abc[1])}`);
-		if (JSON.stringify(kq.quiz[0]) !== JSON.stringify(kq.quiz[1])) console.log(`  câu hỏi: ${JSON.stringify(kq.quiz[0])} / ${JSON.stringify(kq.quiz[1])}`);
+		if (kq.moTa[0] !== kq.moTa[1]) console.log(`  mô tả: "${kq.moTa[0]}" / "${kq.moTa[1]}"`);
+		const [abcCu, abcMoi] = kq.abc;
+		if (abcCu.length !== abcMoi.length) console.log(`  khuông nhạc: cũ ${abcCu.length} khối, mới ${abcMoi.length} khối`);
+		abcCu.forEach((a, i) => {
+			const b = abcMoi[i];
+			if (!b) return;
+			if (a.ten !== b.ten) console.log(`  khuông ${i + 1}, tiêu đề: "${a.ten}" / "${b.ten}"`);
+			if (a.ma !== b.ma) {
+				const [x, y] = [a.ma.split('\n'), b.ma.split('\n')];
+				const j = x.findIndex((l, k) => l !== y[k]);
+				const k = j < 0 ? x.length : j;
+				console.log(`  khuông ${i + 1}, mã ABC dòng ${k + 1}: "${x[k] ?? ''}" / "${y[k] ?? ''}"`);
+			}
+		});
+		const [qCu, qMoi] = kq.quiz;
+		if (qCu.length !== qMoi.length) console.log(`  câu hỏi: cũ ${qCu.length} câu, mới ${qMoi.length} câu`);
+		qCu.forEach((q, i) => qMoi[i] !== undefined && q !== qMoi[i] && console.log(`  câu hỏi ${i + 1}:\n    cũ:  ${q}\n    mới: ${qMoi[i]}`));
 		const idKhac = kq.id[0].filter((x, i) => x !== kq.id[1][i]);
 		if (idKhac.length || kq.id[0].length !== kq.id[1].length) console.log(`  id tiêu đề: cũ ${JSON.stringify(kq.id[0])} / mới ${JSON.stringify(kq.id[1])}`);
 		for (const { cu, moi } of kq.khac.slice(0, 20)) console.log(cu !== null ? `  - cũ: ${cu.slice(0, 200)}` : `  + mới: ${moi.slice(0, 200)}`);

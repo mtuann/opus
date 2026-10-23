@@ -16,6 +16,17 @@ export const DOCS_CU = path.resolve(GOC, '..', 'opus-zero', 'docs');
 export const SITE_CU = path.join(GOC, '.cache', 'site-cu');
 const BASE = '/opus/';
 
+/**
+ * Khối bọc có chức năng ở site cũ (JavaScript điền hay đọc nội dung bên trong): giữ nội dung, thêm ô "chưa chuyển"
+ * (::cong-cu) để lô của trang làm thành phần; kiểm thử khóa chặn trang đã khóa còn ô này.
+ */
+const BOC_CO_CHUC_NANG = {
+	'lesson-status': 'quiz.js đánh dấu bài đã học',
+	'piano-level': 'practice.js tính chặng từ các ô đánh dấu',
+};
+/** Lớp oz- của HTML thô mà site mới đã có CSS (src/styles/thanh-phan.css); lớp khác còn sót thì cảnh báo. */
+const LOP_DA_CO = new Set(['oz-print-only']);
+
 /** Loại hộp !!! của MkDocs -> loại aside của Starlight (Starlight có 4 loại). */
 const ASIDE = {
 	note: 'note', info: 'note', abstract: 'note', question: 'note', quote: 'note',
@@ -59,6 +70,10 @@ const loaiTrang = (trang) => (trang.startsWith('piano/tac-pham/') ? 'bai-hoc' : 
  */
 export function doiLink(url, trang, canhBao = []) {
 	if (/^[a-z][a-z0-9+.-]*:/i.test(url) || url.startsWith('#')) return url;
+	if (url.startsWith('/')) {
+		canhBao.push(`link tuyệt đối, giữ nguyên: ${url}`);
+		return url;
+	}
 	const [duongDan, muc] = url.split('#');
 	const dich = path.posix.normalize(path.posix.join(path.posix.dirname(trang), decodeURI(duongDan)));
 	if (dich.startsWith('..')) {
@@ -80,14 +95,20 @@ export function doiLink(url, trang, canhBao = []) {
 	return url;
 }
 
-/** Link Markdown trong một dòng: [chữ](url "tiêu đề") và định nghĩa link tham chiếu [id]: url. */
+/** Link trong một dòng: Markdown [chữ](url "tiêu đề"), định nghĩa link tham chiếu [id]: url, và href="…" của HTML thô. */
 function doiLinkTrongDong(dong, trang, canhBao) {
 	const dinhNghia = /^(\s*\[[^\]]+\]:\s*)(\S+)(.*)$/.exec(dong);
 	if (dinhNghia) return dinhNghia[1] + doiLink(dinhNghia[2], trang, canhBao) + dinhNghia[3];
 	// bỏ qua đoạn trong `code`: tách theo dấu ` rồi chỉ đổi phần ngoài
 	return dong
 		.split(/(`+[^`]*`+)/)
-		.map((phan, i) => (i % 2 ? phan : phan.replace(/\]\(([^)\s]+)((?:\s+"[^"]*")?)\)/g, (_, u, t) => `](${doiLink(u, trang, canhBao)}${t})`)))
+		.map((phan, i) =>
+			i % 2
+				? phan
+				: phan
+						.replace(/\]\(([^)\s]+)((?:\s+"[^"]*")?)\)/g, (_, u, t) => `](${doiLink(u, trang, canhBao)}${t})`)
+						.replace(/(<a\b[^>]*?\shref=")([^"]+)"/g, (_, dau, u) => `${dau}${doiLink(u, trang, canhBao)}"`),
+		)
 		.join('');
 }
 
@@ -223,6 +244,13 @@ function chuyenThan(dong, ngucanh) {
 		const md = /^(\s*<[a-z]+\b[^>]*?)\s+markdown(?:="[^"]*")?(\s*>)\s*$/.exec(l);
 		if (md) {
 			ra.push(md[1] + md[2], '');
+			for (const lop of /class="([^"]*)"/.exec(md[1])?.[1].split(/\s+/) ?? []) {
+				const ten = lop.replace(/^oz-/, '');
+				if (lop === ten || !BOC_CO_CHUC_NANG[ten]) continue;
+				ra.push(`::cong-cu{ten="${ten}"}`);
+				if (!RONG.test(dong[i + 1] ?? '')) ra.push('');
+				canhBao.push(`khối oz-${ten} có chức năng ở site cũ (${BOC_CO_CHUC_NANG[ten]}): thêm ô "chưa chuyển", lô của trang làm thành phần`);
+			}
 			sauHtml++;
 			continue;
 		}
@@ -272,18 +300,32 @@ export function chuyenTrang(md, { trang, moTa, banGhi }) {
 	const dau = { title: tieuDe, ...(moTa && { description: moTa }), ...(banGhi && { tac_pham: banGhi.slug }), ...giu };
 	const moi = chuyenThan(dong, { trang, banGhi, canhBao });
 	while (moi.length && moi.at(-1) === '') moi.pop();
+	// lớp oz- còn sót trong HTML thô: site cũ có CSS hay JavaScript cho lớp này, site mới thì chưa
+	const conSot = new Set(
+		moi
+			.join('\n')
+			.match(/class="[^"]*"/g)
+			?.flatMap((c) => c.slice(7, -1).split(/\s+/))
+			.filter((c) => c.startsWith('oz-') && !LOP_DA_CO.has(c) && !BOC_CO_CHUC_NANG[c.slice(3)]),
+	);
+	for (const c of conSot) canhBao.push(`lớp ${c} còn trong HTML thô: site cũ có CSS cho lớp này, site mới chưa có (lô của trang thêm CSS, hay bỏ lớp)`);
 	return { noiDung: `---\n${stringify(dau, { lineWidth: 0 })}---\n\n${moi.join('\n')}\n`, canhBao };
 }
 
 /**
- * Mô tả trang của site cũ: thẻ <meta name="description"> trong .cache/site-cu/<trang>/index.html. Không có trang ở bản
- * build cũ (bài blog: địa chỉ cũ theo ngày đăng) thì trả về undefined.
+ * Mô tả trang của site cũ, đọc ở .cache/site-cu/<trang>/index.html. Đọc thẻ og:description: thẻ <meta name="description">
+ * của site cũ không thoát dấu nháy, nên mô tả có dấu " bị cắt ở đó (50 trang). Không có trang ở bản build cũ (bài blog:
+ * địa chỉ cũ theo ngày đăng) thì trả về undefined.
  */
 export function moTaCu(trang) {
 	if (!fs.existsSync(SITE_CU)) throw new Error('chưa có .cache/site-cu/: build site cũ trước (plans/lam-lai/README.md, Quy tắc chung)');
 	const f = path.join(SITE_CU, trang === 'index' ? '' : trang.replace(/\/index$/, ''), 'index.html');
-	if (!fs.existsSync(f)) return undefined;
-	const m = /<meta name="description" content="([^"]*)"/.exec(fs.readFileSync(f, 'utf8'));
+	return fs.existsSync(f) ? moTaTuHtml(fs.readFileSync(f, 'utf8')) : undefined;
+}
+
+/** Mô tả trong HTML của bản build cũ: thẻ og:description (có thoát dấu nháy), hay undefined. */
+export function moTaTuHtml(html) {
+	const m = /<meta property="og:description" content="([^"]*)"/.exec(html);
 	return m ? giaiMa(m[1]) : undefined;
 }
 
@@ -308,7 +350,7 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.a
 			if (fs.existsSync(dich) && !ghiDe) throw new Error(`${path.relative(goc, dich)} đã có; thêm --ghi-de nếu muốn chuyển lại`);
 			const moTa = moTaCu(trang);
 			const { noiDung, canhBao } = chuyenTrang(fs.readFileSync(nguon, 'utf8'), { trang, moTa, banGhi: theoTrang.get(trang) });
-			if (moTa === undefined) canhBao.unshift('không thấy trang ở bản build cũ (hay trang không có mô tả): frontmatter không có description');
+			if (!moTa) canhBao.unshift('không thấy mô tả của trang ở bản build cũ (hay mô tả rỗng): frontmatter không có description');
 			fs.mkdirSync(path.dirname(dich), { recursive: true });
 			fs.writeFileSync(dich, noiDung);
 			console.log(`${trang}: đã ghi ${path.relative(goc, dich)}${canhBao.length ? `, ${canhBao.length} cảnh báo:` : ''}`);

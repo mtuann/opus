@@ -5,8 +5,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
-import { chuyenTrang, doiLink } from '../tools/chuyen/chuyen.mjs';
-import { SITE_CU, dat, soTrang } from '../tools/chuyen/so-chu.mjs';
+import { chuyenTrang, doiLink, moTaTuHtml } from '../tools/chuyen/chuyen.mjs';
+import { SITE_CU, dat, docCu, docMoi, soTrang } from '../tools/chuyen/so-chu.mjs';
 import { khongTrung, slugCu } from '../src/plugins/id-cu.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
@@ -69,6 +69,47 @@ test('phím ++…++ thành <kbd> như site cũ (chữ hiện ra: Ctrl+P, Space, 
 test('HTML có Markdown bên trong: bỏ thuộc tính markdown, cách dòng trống để Markdown bên trong được đọc', () => {
 	const { than } = chuyen('<div class="oz-path" markdown>\n### Tôi chưa từng chơi đàn\nĐọc [Bài 0](bat-dau/bai-0.md).\n</div>');
 	assert.equal(than, '<div class="oz-path">\n\n### Tôi chưa từng chơi đàn\nĐọc [Bài 0](/opus/nhac-ly/bat-dau/bai-0/).\n\n</div>');
+});
+
+test('khối bọc có chức năng ở site cũ thêm ô "chưa chuyển"; lớp oz- chỉ có CSS thì cảnh báo; phần chỉ để in giữ nguyên', () => {
+	const trang = chuyen('<div class="oz-lesson-status" markdown>\n\n1. [Bài 1](01-cao-do-ten-not.md)\n\n</div>');
+	assert.equal(trang.than, '<div class="oz-lesson-status">\n\n::cong-cu{ten="lesson-status"}\n\n1. [Bài 1](/opus/nhac-ly/01-cao-do-ten-not/)\n\n</div>');
+	assert.match(trang.canhBao.join(), /khối oz-lesson-status có chức năng ở site cũ/);
+	assert.match(chuyen('<div class="oz-piano-level" markdown>\n\n- [ ] Việc\n\n</div>').than, /::cong-cu\{ten="piano-level"\}/);
+	const css = chuyen('<div class="oz-paths" markdown>\n\n<div class="oz-path" markdown>\n\nChữ.\n\n</div>\n\n</div>');
+	assert.deepEqual(css.canhBao.filter((c) => c.startsWith('lớp')).length, 2);
+	assert.doesNotMatch(css.than, /cong-cu/);
+	const inRa = chuyen('<div class="oz-print-only" markdown>\n\n*Bản in.*\n\n</div>');
+	assert.deepEqual(inRa.canhBao, [], 'oz-print-only: site mới có CSS (ẩn trên màn hình, hiện khi in)');
+});
+
+test('href trong HTML thô: file .md thành địa chỉ; link tương đối khác (ra ngoài docs/) thì cảnh báo', () => {
+	const { than, canhBao } = chuyen('<p><a href="../piano/gam.md#c">Gam</a> · <a class="x" href="../../sach/a.html">Sách</a> · <a href="https://x.org/">X</a></p>', { trang: 'bat-dau/thu' });
+	assert.equal(than, '<p><a href="/opus/piano/gam/#c">Gam</a> · <a class="x" href="../../sach/a.html">Sách</a> · <a href="https://x.org/">X</a></p>');
+	assert.deepEqual(canhBao, ['link ra ngoài docs/: ../../sach/a.html']);
+	assert.equal(doiLink('/opus-zero/piano/', 'x/y'), '/opus-zero/piano/', 'link tuyệt đối giữ nguyên');
+});
+
+test('mô tả trang đọc từ og:description: thẻ description của site cũ không thoát dấu nháy', () => {
+	const html = '<meta name="description" content="Bốn nốt "ngắn – dài" nổi tiếng"><meta property="og:description" content="Bốn nốt &#34;ngắn – dài&#34; nổi tiếng">';
+	assert.equal(moTaTuHtml(html), 'Bốn nốt "ngắn – dài" nổi tiếng');
+	assert.equal(moTaTuHtml('<meta name="description" content="x">'), undefined);
+});
+
+test('so-chu so chữ từng câu hỏi (cả lựa chọn, đáp án đúng, giải thích) và trọn mã ABC; không thấy phần nội dung thì báo lỗi', () => {
+	const cu = (quiz, abc) => `<article class="md-content__inner"><div class="oz-quiz">${quiz}</div><div class="abc-notation">${abc}</div></article>`;
+	const moi = (quiz, abc) =>
+		`<div class="sl-markdown-content"><div class="oz-quiz" data-quiz="${JSON.stringify(quiz).replaceAll('"', '&quot;')}"></div>` +
+		`<figure class="oz-abc"><div class="abc-notation" aria-label="Khuông nhạc: Ví dụ" data-abc="${abc}"></div></figure></div>`;
+	const quizMoi = [{ q: 'Nốt nào?', opts: [{ t: 'Đô', ok: true }, { t: 'Rê', ok: false }], why: 'Vì <em>vậy</em>.' }];
+	const a = docCu(cu('? Nốt nào?\n+ Đô\n- Rê\n> Vì vậy.\n', 'X:1\nT:Ví dụ\nK:C\nCDE|\n'));
+	const b = docMoi(moi(quizMoi, 'X:1\nK:C\nCDE|'));
+	assert.deepEqual(a.quiz, b.quiz);
+	assert.deepEqual(a.abc, b.abc);
+	assert.notDeepEqual(a.quiz, docMoi(moi([{ ...quizMoi[0], opts: [{ t: 'Đô', ok: true }, { t: 'Mi', ok: false }] }], 'X:1\nK:C\nCDE|')).quiz, 'đổi chữ một lựa chọn');
+	assert.notDeepEqual(a.quiz, docMoi(moi([{ ...quizMoi[0], opts: [{ t: 'Đô', ok: false }, { t: 'Rê', ok: true }] }], 'X:1\nK:C\nCDE|')).quiz, 'đổi đáp án đúng');
+	assert.notDeepEqual(a.abc, docMoi(moi(quizMoi, 'X:1\nK:C\nCDEF|')).abc, 'thêm một nốt');
+	assert.throws(() => docCu('<main>chữ</main>'), /không thấy phần nội dung/);
 });
 
 test('khối công cụ <div class="oz-…"> rỗng thành ::cong-cu, thuộc tính data-* thành thông số', () => {
@@ -139,13 +180,21 @@ const trangDaChuyen = fs.existsSync(path.join(ROOT, 'src/content/docs'))
 			.filter((t) => t !== 'index' && fs.existsSync(path.join(SITE_CU, t.replace(/\/index$/, ''), 'index.html')))
 	: [];
 
+/** Trang không so được với bản cũ, kèm lý do (không có phần nội dung kiểu thường ở bản build cũ). */
+const KHONG_SO = { 'blog/index': 'bản cũ là trang danh sách bài do plugin blog của MkDocs tự sinh; blog làm lại ở đợt 7' };
+
 test(
 	'chữ hiển thị và id tiêu đề của mọi trang đã chuyển giống trang ở bản build cũ (cần .cache/site-cu/ và npm run build)',
 	{ skip: !fs.existsSync(SITE_CU) && 'máy này chưa build site cũ ở .cache/site-cu/ (plans/lam-lai/README.md, Quy tắc chung)' },
 	() => {
-		const khac = trangDaChuyen
-			.filter((t) => fs.existsSync(path.join(DIST, t.replace(/\/index$/, ''), 'index.html')))
-			.filter((t) => !dat(soTrang(t, DIST)));
+		const khac = [];
+		for (const t of trangDaChuyen.filter((t) => !KHONG_SO[t] && fs.existsSync(path.join(DIST, t.replace(/\/index$/, ''), 'index.html')))) {
+			try {
+				if (!dat(soTrang(t, DIST))) khac.push(t);
+			} catch (e) {
+				khac.push(`${t}: không so được: ${e.message}`);
+			}
+		}
 		assert.deepEqual(khac, [], 'xem chỗ khác bằng: node tools/chuyen/so-chu.mjs <trang>');
 	},
 );
