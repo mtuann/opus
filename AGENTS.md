@@ -32,8 +32,11 @@ npm test          # kiểm thử trên dist/: chạy sau npm run build
 
 - Năm bộ dữ liệu YAML trong `src/data/`: `cap-do.yml` (7 chặng), `tac-pham.yml`, `nha-soan-nhac.yml` (mọi người có năm sinh–mất trên site), `thuat-ngu.yml`, `trang.yml` (tầng của mọi trang). Trường, kiểu và các phép kiểm chéo: `src/du-lieu.mjs`; trong code Astro đọc bằng `getCollection('tac-pham')`…
 - Thông tin dùng ở nhiều trang (chặng, Grade, năm sinh–mất, số danh mục, danh sách tác phẩm) lấy từ dữ liệu, không viết tay. Trang tác phẩm chỉ khai `tac_pham: <slug>` ở frontmatter.
+- Một tác phẩm, một bản ghi. Trang chính của bản ghi là `piano/tac-pham/<slug>` (`loai: bai-hoc`) hay `nghe-nhac/<slug>` (`loai: nghe`). Trường `cap` có hai nghĩa:
+  - trang `cap` không có bản ghi riêng: trang đó viết về đúng tác phẩm này và dùng chung bản ghi;
+  - trang `cap` có bản ghi riêng (tác phẩm lớn hơn, như *Kinderszenen* của *Träumerei*): hai bản ghi trỏ `cap` sang nhau.
 - Dữ liệu sai (YAML hỏng, sai kiểu, trường lạ, trùng id, tham chiếu tới thứ không có) thì build hỏng. Thử: `OPUS_DU_LIEU=tests/du-lieu-hong npm run build`.
-- `tools/du_lieu/tach.py` tách dữ liệu từ site cũ, chỉ chạy một lần (D1.2): chạy lại sẽ ghi đè. Từ đợt 2, sửa `src/data/` bằng tay, theo hồ sơ kiểm định.
+- `tools/du_lieu/tach.py` tách dữ liệu từ site cũ, chỉ chạy một lần (D1.2); `src/data/` đã có dữ liệu thì phải thêm cờ `--ghi-de`. Từ đợt 2, sửa `src/data/` bằng tay, theo hồ sơ kiểm định.
 
 ## Giao diện
 

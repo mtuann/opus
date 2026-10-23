@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Tách một lần năm bộ dữ liệu của site mới (src/data/*.yml) từ site cũ ở ../opus-zero/docs/ (việc D1.2).
 
-Chạy từ thư mục gốc của repo:  python3 tools/du_lieu/tach.py > /tmp/tach.md
+Chạy từ thư mục gốc của repo:  python3 tools/du_lieu/tach.py [--ghi-de] > /tmp/tach.md
 Ghi src/data/cap-do.yml, tac-pham.yml, nha-soan-nhac.yml, thuat-ngu.yml, trang.yml; in ra (Markdown) các chỗ site cũ
 tự mâu thuẫn và các chỗ script không tự quyết, để chép vào báo cáo. Chỉ đọc ../opus-zero/ (file và lịch sử git).
 
-Chạy lại sẽ ghi đè dữ liệu, nên chỉ dùng trước khi dữ liệu được kiểm định; từ đợt 2, src/data/ sửa tay theo hồ sơ.
+src/data/ đã có dữ liệu thì script từ chối ghi, trừ khi có cờ --ghi-de. Chỉ ghi đè trước khi dữ liệu được kiểm định;
+từ đợt 2, src/data/ sửa tay theo hồ sơ kiểm định.
 Cần PyYAML (requirements.txt).
 """
 import collections
@@ -25,6 +26,7 @@ OUT = ROOT / "src" / "data"
 HEAD = ("# Sinh một lần bằng tools/du_lieu/tach.py từ ../opus-zero/docs/ (commit {commit}), việc D1.2.\n"
         "# Chưa kiểm định, chưa khóa. Từ nay sửa tay; trường và kiểu: src/du-lieu.mjs.\n")
 
+TEP = ("cap-do.yml", "trang.yml", "thuat-ngu.yml", "nha-soan-nhac.yml", "tac-pham.yml")
 bao = collections.defaultdict(list)  # mục báo cáo -> các dòng
 
 
@@ -33,7 +35,7 @@ def doc(rel):
 
 
 def bo_code(t):
-    """Bỏ khối code (```…```), giữ số dòng không quan trọng."""
+    """Chữ của trang sau khi thay mỗi khối code (```…```) bằng một dấu cách, để năm trong khuông nhạc không bị quét."""
     return re.sub(r"^ *```.*?^ *```", " ", t, flags=re.M | re.S)
 
 
@@ -142,7 +144,8 @@ KHONG_PHAI_TEN = {"Thời", "Năm", "Bài", "Bản", "Tập", "Grade", "Op.", "S
                   "Pieces", "Album", "Bộ", "Opera", "Vở", "Tứ", "Ngũ", "Tổ", "Messiah", "Requiem", "Etude", "Étude"}
 TEN_VN = re.compile(r"[đĐăĂâÂêÊôÔơƠưƯẠ-ỹ]")
 NAM = re.compile(r"\((khoảng |k\. )?(\d{3,4})\s*[–-]\s*(\d{3,4})(?:[,;][^)]*)?\)")
-SONG = re.compile(r"\(sinh(?: năm)? (\d{4})(?:[,;][^)]*)?\)")
+# "(sinh 1941)", "(sinh năm 1935, Estonia)", "(sinh 1958 ở Hà Nội)", "(tên thật Lee Ru-ma, sinh 1978)"
+SONG = re.compile(r"\((?:[^()]*?, )?sinh(?: năm)? (\d{4})(?:[^)\d][^)]*)?\)")
 
 
 def la_tu_ten(tok):
@@ -194,7 +197,8 @@ ID = {"Johann Sebastian Bach": "bach", "Carl Philipp Emanuel Bach": "cpe-bach", 
       "Leopold Mozart": "leopold-mozart", "Robert Schumann": "schumann", "Clara Schumann": "clara-schumann",
       "Felix Mendelssohn": "mendelssohn", "Fanny Mendelssohn": "fanny-mendelssohn",
       "Nadia Boulanger": "nadia-boulanger", "Lili Boulanger": "lili-boulanger", "Hildegard von Bingen": "hildegard",
-      "Josquin des Prez": "josquin", "Élisabeth Jacquet de La Guerre": "jacquet-de-la-guerre", "Lang Lang": "lang-lang"}
+      "Josquin des Prez": "josquin", "Élisabeth Jacquet de La Guerre": "jacquet-de-la-guerre", "Lang Lang": "lang-lang",
+      "Max Richter": "max-richter"}
 
 
 def nha_soan_nhac():
@@ -214,6 +218,15 @@ def nha_soan_nhac():
             ten = ten_truoc(t, m.start())
             if ten and ten not in KHONG_PHAI_NGUOI:
                 lan.append((ten, int(m.group(1)), None, False, k))
+        # Bảng có cột "Năm sinh" (ví dụ lich-su/duong-dai.md): tên ở cột đầu, bỏ phần trong ngoặc (nước)
+        for bang in re.finditer(r"^\|([^\n]*\| Năm sinh \|[^\n]*)\n\|[-| :]+\|\n((?:\|.*\n?)+)", t, re.M):
+            cot = o_bang(bang.group(1)).index("Năm sinh")
+            for hang in bang.group(2).splitlines():
+                o = o_bang(hang)
+                ten = re.sub(r"\s*\([^)]*\)$", "", o[0]).strip("* ")
+                ns = re.fullmatch(r"(\d{4})(?:\s*[–-]\s*(\d{4}))?", o[cot])
+                if ns and ten:
+                    lan.append((ten, int(ns.group(1)), int(ns.group(2)) if ns.group(2) else None, False, k))
     for ten, (s, d, _) in moc.items():
         lan.append((ten, s, d, False, "lich-su/dong-thoi-gian"))
 
@@ -275,6 +288,8 @@ CUNG_TAC_PHAM = {"liszt-liebestraum": "nghe-nhac/liszt-liebestraum",
 # Bài học có hướng dẫn nghe cho cả tác phẩm lớn hơn (piano/tac-pham/index.md, mục "Nghe kèm"): mỗi trang một bản ghi
 NGHE_KEM = {"schumann-traumerei": "nghe-nhac/schumann-kinderszenen",
             "pathetique-adagio": "nghe-nhac/beethoven-pathetique"}
+GIONG = re.compile(r"(Đô|Rê|Mi|Fa|Sol|La|Si)[♯♭]? (trưởng|thứ)")
+NHIP = re.compile(r"\d+/\d+")
 KHONG_PHAI_TAC_PHAM = {"index", "mau", "doc-ten-tac-pham", "nghe-gi-tiep"}  # trang trong nghe-nhac/ không về một tác phẩm
 
 
@@ -366,10 +381,26 @@ def tac_pham(nguoi):
         dm = DANH_MUC.search(chu) or DANH_MUC.search(tt.get("Tác phẩm", ""))
         if dm:
             r["danh_muc"] = dm.group(1)
-        gnt = tt.get("Giọng · nhịp · tốc độ", "")
-        phan = [x.strip() for x in gnt.split("·")]
-        if len(phan) >= 2:
-            r["giong"], r["nhip"] = phan[0], phan[1]
+        khoi = re.search(r'<div class="oz-piece" markdown>\n(.*?)\n</div>', t, re.S)
+        chip = []
+        for m in re.finditer(r'<span class="oz-chip( oz-chip--level)?">(.*?)</span>', khoi.group(1) if khoi else ""):
+            chip.append({"cap_do": m.group(2)} if m.group(1) else m.group(2))
+        # Giọng, nhịp: lấy ở dòng "Giọng · nhịp · tốc độ" khi dòng đúng dạng ba phần; bài nhiều chương hay nhiều bài
+        # thì lấy ở chip đầu (chip ghi giọng chính); không có thì để trống và ghi vào báo cáo
+        gnt = [x.strip() for x in tt.get("Giọng · nhịp · tốc độ", "").split(" · ")]
+        if re.match(r"I\.|Số \d", gnt[0]):  # dòng tả từng chương hay từng bài: giọng, nhịp của phần đầu không đại diện
+            gnt = [""]
+        chip0 = [x.strip() for x in (chip[0] if chip and isinstance(chip[0], str) else "").split(" · ")]
+        giong = next((x[0] for x in (gnt, chip0) if GIONG.fullmatch(x[0])), None)
+        nhip = next((x[1] for x in (gnt, chip0) if len(x) > 1 and NHIP.fullmatch(x[1])), None)
+        if giong:
+            r["giong"] = giong
+        if nhip:
+            r["nhip"] = nhip
+        if not (GIONG.fullmatch(gnt[0]) and len(gnt) > 1 and NHIP.fullmatch(gnt[1])):
+            bao["Tác phẩm: dòng giọng · nhịp không đúng dạng ba phần"].append(
+                f"`{rel}`: giong {giong or '(trống)'}, nhip {nhip or '(trống)'}"
+                + (" (lấy ở chip)" if giong and not GIONG.fullmatch(gnt[0]) or nhip and not (len(gnt) > 1 and NHIP.fullmatch(gnt[1])) else "") + ".")
         r["thoi_ky"] = h[2]
         r["chang"] = chang_cap.get(sl, int(gm.group(2)))
         r["grade"] = gm.group(1)
@@ -382,10 +413,6 @@ def tac_pham(nguoi):
         nghe = chi_muc_nghe.get(CUNG_TAC_PHAM.get(sl)) or chi_muc_nghe.get(rel)
         if nghe:
             r["luyen_nghe"] = nghe[1][2]
-        khoi = re.search(r'<div class="oz-piece" markdown>\n(.*?)\n</div>', t, re.S)
-        chip = []
-        for m in re.finditer(r'<span class="oz-chip( oz-chip--level)?">(.*?)</span>', khoi.group(1) if khoi else ""):
-            chip.append({"cap_do": m.group(2)} if m.group(1) else m.group(2))
         r["chip"] = chip
         r["thong_tin"] = [[k, v] for k, v in tt.items()]
         recs.append(r)
@@ -411,6 +438,13 @@ def tac_pham(nguoi):
         dm = list(dict.fromkeys(m.group(1) for m in (DANH_MUC.search(x) for x in dong.split(";")) if m))
         if not dm and DANH_MUC.search(chu):
             dm = [DANH_MUC.search(chu).group(1)]
+        if not dm:  # vài trang chỉ ghi số danh mục ở dòng khác, ví dụ Erlkönig: "1815, … (D. 328)"
+            for muc, noi in tt.items():
+                m = DANH_MUC.search(noi) if muc not in ("Nhà soạn nhạc", "Tên đầy đủ", "Tác phẩm") else None
+                if m:
+                    dm = [m.group(1)]
+                    bao["Tác phẩm: số danh mục lấy ở dòng khác"].append(f"`{rel}`: {m.group(1)}, ở dòng \"{muc}\".")
+                    break
         if dm:
             r["danh_muc"] = ", ".join(dm)
         if h:
@@ -424,6 +458,8 @@ def tac_pham(nguoi):
 
 
 def main():
+    if any((OUT / f).exists() for f in TEP) and "--ghi-de" not in sys.argv:
+        sys.exit("src/data/ đã có dữ liệu. Chỉ ghi đè trước khi dữ liệu được kiểm định: chạy lại với --ghi-de.")
     commit = subprocess.run(["git", "-C", str(CU), "log", "-1", "--format=%h"], capture_output=True, text=True).stdout.strip()
     ghi("cap-do.yml", cap_do(), commit)
     ghi("trang.yml", trang(), commit)

@@ -91,6 +91,9 @@ export const schema = {
 			luyen_nghe: chu.optional(),
 			an_ban: z.object({ ten: chu, nguon: z.url() }).strict().optional(),
 			doi_chieu: chu.optional(),
+			// Trang của cùng tác phẩm: dùng chung bản ghi này khi trang ấy không có bản ghi riêng (liszt-liebestraum và
+			// nghe-nhac/liszt-liebestraum); còn không là tác phẩm lớn hơn có bản ghi riêng (Träumerei và Kinderszenen),
+			// khi đó hai bản ghi trỏ cap sang nhau.
 			cap: duongDan.optional(),
 			ky_nang: z.array(idChu).optional(),
 			goi_y: z.boolean().optional(),
@@ -135,9 +138,12 @@ export const schema = {
 /** Khóa (id) của một bản ghi: tac-pham dùng slug, các bộ khác dùng id. */
 export const khoa = (ten, r) => String(ten === 'tac-pham' ? r?.slug : r?.id);
 
-/** Thư mục dữ liệu: OPUS_DU_LIEU hay src/data, tính từ thư mục gốc của dự án (chỗ chạy npm). */
-export function thuMuc(goc = process.cwd()) {
-	return path.resolve(goc, process.env.OPUS_DU_LIEU || 'src/data');
+/** Thư mục gốc của dự án: thư mục cha của src/, nơi có file này. */
+const GOC = fileURLToPath(new URL('../', import.meta.url));
+
+/** Thư mục dữ liệu: OPUS_DU_LIEU (tương đối với thư mục gốc) hay src/data. */
+export function thuMuc() {
+	return path.resolve(GOC, process.env.OPUS_DU_LIEU || 'src/data');
 }
 
 const tiengViet = { error: z.locales.vi().localeError }; // lời báo lỗi của Zod bằng tiếng Việt
@@ -149,6 +155,7 @@ const tiengViet = { error: z.locales.vi().localeError }; // lời báo lỗi c�
 export function kiemTra(dir = thuMuc()) {
 	const loi = [];
 	const duLieu = {};
+	const hong = new Set(); // bộ không đọc được (thiếu file, YAML hỏng, không phải danh sách, rỗng): bỏ qua kiểm chéo với nó
 	for (const [ten, tep] of Object.entries(TEP)) {
 		const file = path.join(dir, tep);
 		duLieu[ten] = [];
@@ -157,10 +164,12 @@ export function kiemTra(dir = thuMuc()) {
 			tho = parse(fs.readFileSync(file, 'utf8'));
 		} catch (e) {
 			loi.push(`${tep}: ${e.code === 'ENOENT' ? 'không có file' : 'YAML hỏng: ' + e.message.split('\n')[0]}`);
+			hong.add(ten);
 			continue;
 		}
-		if (!Array.isArray(tho)) {
-			loi.push(`${tep}: phải là một danh sách bản ghi`);
+		if (!Array.isArray(tho) || !tho.length) {
+			loi.push(`${tep}: ${Array.isArray(tho) ? 'không có bản ghi nào' : 'phải là một danh sách bản ghi'}`);
+			hong.add(ten);
 			continue;
 		}
 		const daCo = new Set();
@@ -182,16 +191,38 @@ export function kiemTra(dir = thuMuc()) {
 			}
 		});
 	}
-	loi.push(...kiemTraCheo(duLieu));
+	loi.push(...kiemTraCheo(duLieu, hong));
 	return { duLieu, loi };
 }
 
-/** Kiểm giữa các bộ dữ liệu: tham chiếu tới thứ có thật, chặng liền nhau, năm sinh–mất chép lại phải khớp. */
-function kiemTraCheo(d) {
+/** Khoảng Grade (0: trước Grade 1, 9: sau Grade 8) của chuỗi như "Grade 4–5", "≈ Grade 3", "Grade 8 trở lên". */
+function khoangGrade(g) {
+	const s = g.replace(/≈|\bkhoảng\b|\bABRSM\b/gi, ' ').trim().toLowerCase();
+	if (s.startsWith('trước')) return [0, 0];
+	if (s.startsWith('sau') || s.includes('trở lên')) return [9, 9];
+	const n = (s.match(/\d+/g) ?? []).map(Number);
+	return n.length ? [Math.min(...n), Math.max(...n)] : null;
+}
+const chuanGrade = (g) => g.replace(/≈|\bkhoảng\b|\bABRSM\b/gi, ' ').replace(/\s+/g, ' ').trim().replace(/-/g, '–');
+
+/**
+ * Kiểm giữa các bộ dữ liệu: tham chiếu tới thứ có thật, chặng liền nhau, Grade hợp chặng, năm sinh–mất và cấp độ chép
+ * lại trong bản ghi phải khớp trường gốc. Bộ hỏng ở mức file (trong `hong`) thì bỏ qua các phép kiểm cần nó, để một lỗi
+ * không kéo theo hàng chục lỗi "không có".
+ */
+function kiemTraCheo(d, hong) {
 	const loi = [];
 	const nguoi = new Map(d['nha-soan-nhac'].map((r) => [r.id, r]));
-	const chang = new Set(d['cap-do'].map((r) => r.id));
+	const chang = new Map(d['cap-do'].map((r) => [r.id, r]));
 	const trang = new Map(d.trang.map((r) => [r.id, r]));
+	const co = (ten) => !hong.has(ten);
+
+	const theoTen = new Map();
+	for (const p of d['nha-soan-nhac']) {
+		if (theoTen.has(p.ten) && theoTen.get(p.ten) !== p.id)
+			loi.push(`nha-soan-nhac.yml: "${p.ten}" có hai id: "${theoTen.get(p.ten)}" và "${p.id}"`);
+		theoTen.set(p.ten, p.id);
+	}
 
 	const cd = [...d['cap-do']].sort((a, b) => a.id - b.id);
 	cd.forEach((r, i) => {
@@ -201,18 +232,43 @@ function kiemTraCheo(d) {
 			loi.push(`cap-do.yml: chặng ${r.id}: grade_tu phải bằng grade_den của chặng trước cộng 1`);
 	});
 
+	const trangChinh = (r) => (r.loai === 'bai-hoc' ? 'piano/tac-pham/' : 'nghe-nhac/') + r.slug;
+	const theoTrangChinh = new Map(d['tac-pham'].map((r) => [trangChinh(r), r]));
+	const theoCap = new Map();
 	for (const r of d['tac-pham']) {
 		const goc = `tac-pham.yml: bản ghi "${r.slug}"`;
-		if (r.tac_gia && !nguoi.has(r.tac_gia)) loi.push(`${goc}: tac_gia "${r.tac_gia}" không có trong nha-soan-nhac.yml`);
-		if (r.chang !== undefined && !chang.has(r.chang)) loi.push(`${goc}: chặng ${r.chang} không có trong cap-do.yml`);
-		const trangChinh = (r.loai === 'bai-hoc' ? 'piano/tac-pham/' : 'nghe-nhac/') + r.slug;
-		if (trang.get(trangChinh)?.tang !== 'tac-pham')
-			loi.push(`${goc}: trang ${trangChinh} không có trong trang.yml với tầng tac-pham`);
+		if (co('nha-soan-nhac') && r.tac_gia && !nguoi.has(r.tac_gia))
+			loi.push(`${goc}: tac_gia "${r.tac_gia}" không có trong nha-soan-nhac.yml`);
+		const cd = chang.get(r.chang);
+		if (co('cap-do') && r.chang !== undefined && !cd) loi.push(`${goc}: chặng ${r.chang} không có trong cap-do.yml`);
+		if (cd && r.grade) {
+			const k = khoangGrade(r.grade);
+			const hop = (x) => cd.grade_tu <= x && x <= cd.grade_den;
+			if (!k || !(hop(k[0]) || hop(k[1])))
+				loi.push(`${goc}: grade "${r.grade}" không hợp chặng ${r.chang} (${cd.nhan_grade})`);
+		}
+		if (co('trang') && trang.get(trangChinh(r))?.tang !== 'tac-pham')
+			loi.push(`${goc}: trang ${trangChinh(r)} không có trong trang.yml với tầng tac-pham`);
+		// cap: trang của cùng tác phẩm (dùng chung bản ghi này khi trang ấy không có bản ghi riêng), hay tác phẩm lớn
+		// hơn có bản ghi riêng (khi đó hai bản ghi trỏ cap sang nhau). Một trang chỉ là cap của một bản ghi.
 		if (r.cap) {
-			if (!trang.has(r.cap)) loi.push(`${goc}: cap "${r.cap}" không có trong trang.yml`);
+			if (co('trang') && !trang.has(r.cap)) loi.push(`${goc}: cap "${r.cap}" không có trong trang.yml`);
 			if (!r.cap.startsWith(r.loai === 'bai-hoc' ? 'nghe-nhac/' : 'piano/tac-pham/'))
 				loi.push(`${goc}: cap của ${r.loai === 'bai-hoc' ? 'bài học phải là hướng dẫn nghe' : 'hướng dẫn nghe phải là bài học'}`);
+			if (theoCap.has(r.cap)) loi.push(`${goc}: cap "${r.cap}" đã là cap của bản ghi "${theoCap.get(r.cap)}"`);
+			theoCap.set(r.cap, r.slug);
+			const kia = theoTrangChinh.get(r.cap);
+			if (kia && kia.cap !== trangChinh(r))
+				loi.push(`${goc}: cap "${r.cap}" có bản ghi riêng "${kia.slug}", nên "${kia.slug}" phải có cap "${trangChinh(r)}"`);
 		}
+		// Phần chép nguyên văn từ trang cũ phải khớp trường gốc: chip cấp độ chứa grade, dòng tác giả có tên tác giả
+		const chipCapDo = (r.chip ?? []).find((c) => typeof c === 'object')?.cap_do;
+		if (chipCapDo && r.grade && !chuanGrade(chipCapDo).includes(chuanGrade(r.grade)))
+			loi.push(`${goc}: chip cấp độ "${chipCapDo}" không khớp grade "${r.grade}"`);
+		const dongTacGia = (r.thong_tin ?? []).find(([muc]) => muc === 'Nhà soạn nhạc')?.[1];
+		const tg = nguoi.get(r.tac_gia);
+		if (dongTacGia && tg && ![tg.ten, ...(tg.cach_viet_khac ?? [])].some((t) => dongTacGia.includes(t)))
+			loi.push(`${goc}: dòng "Nhà soạn nhạc" của thong_tin không có tên ${tg.ten} (tac_gia "${r.tac_gia}")`);
 		// Năm sinh–mất chép trong bảng thông tin phải khớp nha-soan-nhac.yml
 		for (const [muc, noiDung] of r.thong_tin ?? []) {
 			for (const p of nguoi.values()) {
@@ -245,8 +301,8 @@ export function slugTacPham() {
 export function boNap(ten) {
 	return {
 		name: `opus-du-lieu-${ten}`,
-		load: async ({ store, parseData, watcher, config }) => {
-			const dir = thuMuc(fileURLToPath(config.root));
+		load: async ({ store, parseData, watcher, logger }) => {
+			const dir = thuMuc();
 			const nap = async (lai) => {
 				if (lai) daNap = undefined;
 				const duLieu = napTatCa(dir);
@@ -258,7 +314,8 @@ export function boNap(ten) {
 			};
 			await nap(false);
 			watcher?.add(path.join(dir, TEP[ten]));
-			watcher?.on('change', (f) => f === path.join(dir, TEP[ten]) && nap(true));
+			// Đang chạy npm run dev mà file dữ liệu hỏng: báo lỗi, giữ dữ liệu cũ đến khi file sửa xong
+			watcher?.on('change', (f) => f === path.join(dir, TEP[ten]) && nap(true).catch((e) => logger.error(e.message)));
 		},
 	};
 }

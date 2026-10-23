@@ -4,6 +4,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import { parse } from 'yaml';
 import { kiemTra } from '../src/du-lieu.mjs';
@@ -35,6 +36,9 @@ test('bộ dữ liệu hỏng mẫu: mỗi lỗi cố ý đều bị bắt', () 
 		'tac-pham.yml: bản ghi "ballade": cap "nghe-nhac/khong-co" không có',
 		'tac-pham.yml: bản ghi "bagatelle": thong_tin "Nhà soạn nhạc" ghi Ludwig van Beethoven (1770–1828)',
 		'tac-pham.yml: bản ghi "bai-nghe": loai:',
+		'tac-pham.yml: bản ghi "sonatina": grade "Grade 5" không hợp chặng 1',
+		'tac-pham.yml: bản ghi "sonatina": cap "nghe-nhac/khong-co" đã là cap của bản ghi "ballade"',
+		'tac-pham.yml: bản ghi "sonatina": chip cấp độ "≈ Grade 4" không khớp grade "Grade 5"',
 		'thuat-ngu.yml: YAML hỏng',
 		'trang.yml: bản ghi "piano/thay-va-thi": ra_lai:',
 		'trang.yml: bản ghi "piano/chon-dan": ra_lai:',
@@ -42,6 +46,22 @@ test('bộ dữ liệu hỏng mẫu: mỗi lỗi cố ý đều bị bắt', () 
 	];
 	for (const c of canBat) assert.ok(loi.some((l) => l.startsWith(c)), `không bắt được lỗi: ${c}\nCác lỗi bắt được:\n${loi.join('\n')}`);
 	assert.ok(loi.some((l) => l.includes('nam_sinh')), 'không bắt được trường lạ nam_sinh');
+});
+
+test('file dữ liệu rỗng hay hỏng: báo một lỗi, không kéo theo hàng loạt lỗi "không có"', () => {
+	const tam = fs.mkdtempSync(path.join(os.tmpdir(), 'opus-du-lieu-'));
+	try {
+		for (const f of fs.readdirSync(path.join(ROOT, 'src/data'))) fs.copyFileSync(path.join(ROOT, 'src/data', f), path.join(tam, f));
+		fs.writeFileSync(path.join(tam, 'tac-pham.yml'), '[]\n');
+		assert.deepEqual(kiemTra(tam).loi, ['tac-pham.yml: không có bản ghi nào']);
+		fs.copyFileSync(path.join(ROOT, 'src/data/tac-pham.yml'), path.join(tam, 'tac-pham.yml'));
+		fs.writeFileSync(path.join(tam, 'nha-soan-nhac.yml'), '- id: a\n  id: b\n');
+		const { loi } = kiemTra(tam);
+		assert.equal(loi.length, 1, loi.join('\n'));
+		assert.match(loi[0], /^nha-soan-nhac\.yml: YAML hỏng/);
+	} finally {
+		fs.rmSync(tam, { recursive: true, force: true });
+	}
 });
 
 test('build hỏng khi dữ liệu sai (astro sync với OPUS_DU_LIEU=tests/du-lieu-hong)', () => {
