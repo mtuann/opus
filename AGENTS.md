@@ -110,6 +110,7 @@ Frontmatter có `tac_pham`. Thứ tự các mục như mẫu ở `../opus-zero/A
 ### Link nội bộ
 
 - Link tới trang viết địa chỉ trên site, có base và `/` ở cuối: `[Gam](/opus/piano/gam/)`, `[…](/opus/piano/gam/#muc)`; trang mục lục là thư mục (`/opus/piano/`); trang chủ `/opus/`. Không viết link tới file `.md`. File tĩnh: `/opus/<đường dẫn trong public/>`.
+- Link tới trang chưa có trong bản build (chưa chuyển, hay ở bản thật: chưa khóa) tự thành chữ thường kèm nhãn "sắp có" (`src/plugins/sap-co.mjs`); khi trang lên, link tự hiện lại. Cứ viết link bình thường. `tests/link.test.mjs` kiểm mọi link nội bộ và `#mục` trong bản build.
 - Id của tiêu đề theo kiểu site cũ (`src/plugins/id-cu.mjs`): bỏ dấu, chữ "đ" mất, ký tự lạ bỏ, trùng thì thêm `_1`, `_2`. Ví dụ `## Trước ngày đầu tiên` có id `truoc-ngay-au-tien`. Nhờ vậy link `#mục` của site cũ, trong site và từ nơi khác, vẫn đúng. Cần id khác thì viết `{ #id }`.
 
 ### Chuyển trang từ site cũ

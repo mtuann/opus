@@ -115,7 +115,8 @@ test('mỗi trang trong src/content/docs/ có đúng một tầng trong src/data
 	const trang = fs
 		.readdirSync(docs, { recursive: true })
 		.filter((f) => /\.mdx?$/.test(f))
-		.map((f) => f.replace(/\\/g, '/').replace(/\.mdx?$/, ''));
+		.map((f) => f.replace(/\\/g, '/').replace(/\.mdx?$/, ''))
+		.filter((t) => t !== '404'); // trang 404 là trang mới của khung (D1.5), không có ở site cũ
 	assert.ok(trang.length > 0);
 	const thieu = trang.filter((t) => !tang.has(t));
 	assert.deepEqual(thieu, [], 'trang chưa có tầng trong trang.yml');

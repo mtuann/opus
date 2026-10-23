@@ -194,7 +194,7 @@ export function docMoi(html) {
 	const the = catNoiDung(html, (ten, tt) => ten === 'div' && coLop(tt, 'sl-markdown-content'), 'div.sl-markdown-content của bản mới');
 	const bo = (ten, tt) =>
 		ten === 'script' || ten === 'style' || coLop(tt, 'sl-anchor-link') || coLop(tt, 'sr-only') || coLop(tt, 'oz-abc') || coLop(tt, 'oz-quiz') ||
-		coLop(tt, 'oz-chua-co') || 'data-footnote-backref' in tt || coLop(tt, 'copy');
+		coLop(tt, 'oz-chua-co') || coLop(tt, 'oz-sap-co-nhan') || 'data-footnote-backref' in tt || coLop(tt, 'copy');
 	return { khoi: khoiChu(the, bo), id: idTieuDe(the, (id) => id === 'footnote-label'), ...phanThanhPhanMoi(the) };
 }
 

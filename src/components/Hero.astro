@@ -47,6 +47,22 @@ const lit = new Set([23, 25, 27]);
 	</svg>
 </div>
 
+<script>
+	// Nút "Tìm trên site" của trang 404 (hero.actions có data-mo-tim-kiem): mở hộp tìm kiếm của Starlight ở thanh trên.
+	// Không có JavaScript thì nút là link tới mục hướng dẫn tìm ngay dưới. Chặn cú bấm lan lên window: Starlight đóng hộp
+	// tìm kiếm khi có cú bấm ra ngoài hộp, kể cả chính cú bấm vừa mở nó.
+	document.querySelectorAll('[data-mo-tim-kiem]').forEach((nut) =>
+		nut.addEventListener('click', (e) => {
+			const mo = document.querySelector('site-search button[data-open-modal]');
+			if (mo) {
+				e.preventDefault();
+				e.stopPropagation();
+				mo.click();
+			}
+		}),
+	);
+</script>
+
 <style is:global>
 	/* Dải mực vẽ bằng border-image: phần vẽ ra ngoài khung không tính vào vùng cuộn, nên dải tràn hết bề ngang
 	   (100vmax mỗi bên) và lên sát thanh trên (1.5rem, khoảng đệm trên của khung nội dung Starlight) mà trang
