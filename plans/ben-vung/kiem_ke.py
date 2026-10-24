@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sinh plans/ben-vung/kiem-ke.md: tầng đề xuất và số liệu của từng trang của site cũ.
+"""Sinh plans/ben-vung/kiem-ke.md: tầng (đã duyệt 24/10/2026) và số liệu của từng trang của site cũ.
 
 Chạy từ thư mục gốc của repo:  python3 plans/ben-vung/kiem_ke.py > plans/ben-vung/kiem-ke.md
 Chỉ đọc (file và lịch sử git), không sửa gì. Đọc site cũ ở gốc repo cũ (opus-zero), hay ở thư mục cạnh
@@ -96,11 +96,11 @@ def main():
                           capture_output=True, text=True).stdout.strip()
     out = []
     w = out.append
-    w("# Kiểm kê trang: tầng đề xuất và số liệu")
+    w("# Kiểm kê trang: tầng và số liệu")
     w("")
-    w(f"Sinh bằng `python3 plans/ben-vung/kiem_ke.py` trên commit `{head}`. Đây là **đề xuất**: bạn duyệt tầng của từng "
-      "trang, nhất là các trang tham chiếu có hạn và ngày rà lại; sau khi duyệt, việc D1.2 của `plans/lam-lai/README.md` "
-      "chuyển bảng này thành `src/data/trang.yml`. Đường dẫn trang tính trong `docs/` của site cũ (từ repo mới là "
+    w(f"Sinh bằng `python3 plans/ben-vung/kiem_ke.py` trên commit `{head}`. Bảng đã duyệt ngày 24/10/2026 (`plans/lam-lai/README.md`, "
+      "mục Quyết định; soát và lý do: `plans/lam-lai/bao-cao/d2-bang-tang.md`). Đổi tầng thì sửa `src/data/trang.yml` và "
+      "script này cùng lúc, rồi chạy lại script này và `plans/lam-lai/anh_xa.py`. Đường dẫn trang tính trong `docs/` của site cũ (từ repo mới là "
       "`../opus-zero/docs/`).")
     w("")
     w("Cột: **Chữ** là số chữ ngoài khối code; **Khuông** là số khối ABC (trong ngoặc: số khối ghi \"soạn cho trang này\"); "
@@ -120,15 +120,17 @@ def main():
     w("## Quy tắc xếp tầng")
     w("")
     w("- **Lõi:** nền tảng nhạc lý, luyện tai, piano (kỹ thuật, cách tập, hòa âm bên phím, lộ trình 7 chặng), nhạc cổ điển "
-      "(thời kỳ, hình thức, nhận diện, nhà soạn nhạc) và các trang bắt đầu. Nội dung ít đổi theo thời gian.")
+      "(thời kỳ, hình thức, nhận diện, nhà soạn nhạc), các trang bắt đầu, và trang mà lộ trình giao cho người mới đọc "
+      "(như opera, dàn nhạc). Nội dung ít đổi theo thời gian; chi tiết mau cũ lẻ trong trang Lõi thì lô của trang viết lại "
+      "hay chuyển sang trang tham chiếu.")
     w("- **Tác phẩm:** mỗi trang viết về một tác phẩm hoặc một tập: bài học trong `piano/tac-pham/`, hướng dẫn nghe "
       "trong `nghe-nhac/`. Thêm mới theo `them-tac-pham.md`.")
-    w("- **Tham chiếu có hạn:** nội dung đổi theo thời gian (chương trình thi, ứng dụng, giá đàn, tài nguyên). "
-      "Cột Rà lại là ngày đề xuất.")
+    w("- **Tham chiếu có hạn:** phần chính của trang đổi theo thời gian (chương trình thi, ứng dụng, giá đàn, thiết bị, "
+      "link bản thu, tin và sự kiện, tài nguyên). Cột Rà lại là ngày rà lại; D8-L1 đặt lại theo ngày khóa.")
     w("- **Khung và công cụ:** trang chủ, trang mục lục, trang công cụ luyện tập, nhật ký Cập nhật, blog. "
       "Danh sách và con số trong các trang này sẽ sinh từ dữ liệu.")
-    w("- **Ngoại vi:** ngoài trọng tâm piano cổ điển: nhạc cụ khác, opera, nhạc Việt Nam, nhạc đương đại, nữ nhà soạn nhạc. "
-      "Vào mục Đọc thêm (đã chọn ngày 23/10/2026).")
+    w("- **Ngoại vi:** ngoài trọng tâm piano cổ điển và ngoài lộ trình của người mới: nhạc cụ khác, nhạc truyền thống "
+      "Việt Nam, nữ nhà soạn nhạc. Vào mục Đọc thêm (đã chọn ngày 23/10/2026).")
     for t in TEN_TANG:
         rs = [r for r in rows if r["tang"] == t]
         w("")

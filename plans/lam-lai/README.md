@@ -29,7 +29,7 @@ File này là bản chuẩn cho người làm và agent. Bản cho người đ�
   - Ba trang thử của D1.8 (`nhac-ly/10-hop-am-ba`, Für Elise, Bach Goldberg) chuyển ở đợt 1, chỉ có ở bản xem, để kiểm khung. Lô của chúng (D3-L2 và hai lô đợt 6) chỉ kiểm định và khóa, không chuyển lại.
   - Trang ngoài đợt 6 vẫn hiện vài trường của bản ghi tác phẩm (danh sách ở trang chặng, ô gợi ý tập, Tác phẩm theo cấp độ, Thầy và thi). Các trường đó khóa riêng, ở lô đầu tiên có trang hiện chúng (mục "Quy tắc chung"); đợt 6 khóa nốt phần còn lại.
 
-Chờ bạn. Mục "khuyên dùng" là lựa chọn mà kế hoạch đang giả định. Đợt 0 không phụ thuộc các mục này nên giao được ngay; hai mục đầu cần có trước đợt 1, ba mục sau trước đợt 2.
+Năm mục cần chốt trước đợt 1 và đợt 2, đã chốt cả (ngày ghi ở từng mục). Câu hỏi nhỏ còn chờ ghi ở cuối mục này, kèm lô cần có câu trả lời.
 
 - [x] Công nghệ: Astro 7 và Starlight (khuyên dùng; lý do ở `cong-nghe.md`), hay MkDocs và Material như cũ. **Chọn Astro 7 và Starlight** (23/10/2026, khi duyệt D1.1).
 - [x] Giao diện: giữ font, màu và giọng văn hiện có (khuyên dùng), hay làm nhận diện mới ở đợt 1. **Giữ font, màu, giọng văn** (23/10/2026, khi duyệt D1.1); thêm yêu cầu về hình ảnh ở mục "Giao diện" của `AGENTS.md`. Cùng ngày, sau khi so ba bản mẫu, chủ repo chọn bố cục **bản B** (thanh trên nền giấy viền nhựa thông, màu và biểu tượng riêng cho từng nhóm nội dung) **cộng phần đầu trang chủ của bản C** (dải màu mực tràn ngang); làm ở D1.2b.
@@ -47,6 +47,21 @@ Chờ bạn. Mục "khuyên dùng" là lựa chọn mà kế hoạch đang giả
   - Giữ: mục "Sau 6 tháng: đi sâu hơn" của lộ trình nghe hiểu không tính là bước của người mới, nên `lich-su/nhac-truyen-thong-viet-nam` vẫn ở Đọc thêm. Trang Tác phẩm giữ tầng: link bản thu của chúng nằm trong dữ liệu (`ban_thu`) và sẽ có kiểm link định kỳ.
 
   Sau khi đổi: Lõi 101, Tác phẩm 79, Khung và công cụ 34, Tham chiếu có hạn 10, Ngoại vi 9.
+
+  Chủ repo xác nhận cách hiểu (24/10/2026): thông tin mau cũ là phần chính thì trang vào Tham chiếu có hạn; chỉ là câu lẻ thì trang giữ tầng, và trang Lõi không giữ câu ấy: lô của trang viết lại cho bền hay chuyển sang trang tham chiếu (`../ben-vung/chuan-kiem-dinh.md` mục 3).
+
+Thêm, chốt ngày 24/10/2026:
+
+- [x] Thuật ngữ tiếng Việt: **khóa dần theo lô**. Mỗi lô kiểm định và khóa (từng phần) các bản ghi của `thuat-ngu.yml` mà trang của lô dùng; D3-L5 khóa nốt và dựng trang Từ điển. Bài đã khóa không phải mở lại vì đổi thuật ngữ.
+- [x] CI của nhánh lô: từ đợt 2, **push nhánh lô lên GitHub trước khi gộp**, chờ `test.yml` (bản xem) đạt rồi mới gộp vào `main`; gộp xong xóa nhánh trên GitHub. Agent làm lô vẫn không push; người gộp push.
+- [x] Hai link tới repo trên site (biểu tượng GitHub ở thanh trên, chữ "MIT" ở chân trang): **bỏ tạm** khi repo còn riêng tư (người đọc mở ra trang 404); thêm lại khi repo công khai.
+
+Câu hỏi nhỏ còn chờ (từ review nhánh quyết định, `bao-cao/d2-bang-tang.md`); hỏi chủ repo trước lô ghi bên cạnh:
+
+- `nhan-dien/nghe-mu` ở Tham chiếu nên 6 trang trỏ tới nó (3 ở D3-L6, 3 ở D5-L3) hiện "sắp có" tới đợt 8: giữ vậy, hay giữ trang ở Lõi và đưa 10 bản thu vào dữ liệu có kiểm link. Trước D3-L6.
+- Mục "Sau 6 tháng: đi sâu hơn" của lộ trình nghe hiểu: `nhac-ly/am-hoc` (Lõi) và `lich-su/nhac-truyen-thong-viet-nam` (Đọc thêm) nằm cùng một dòng việc. Có tính mục ấy là lộ trình không (tính thì trang nhạc truyền thống vào Lõi, lô D5-L1). Trước D5-L1.
+- Cỡ mẫu lượt 2 của trang Đọc thêm: 5 nhận định mỗi trang (đang làm), hay theo lô, hay theo tỉ lệ. Trước đợt 8.
+- Trang Tác phẩm có cần đủ hai lượt không: xem lại khi đã đo được tỉ lệ hai lượt lệch nhau ở các lô Lõi. Trước D6-0.
 
 ## Tiến độ
 
@@ -133,7 +148,7 @@ Từ đợt này, mỗi lô gộp vào `main` là trang của lô lên site th�
 
 ## Đợt 3. Nhạc lý và luyện tai (D3-L1 đến D3-L6)
 
-- `thuat-ngu.yml` kiểm định và khóa cùng lô D3-L5; trang Từ điển sinh từ dữ liệu.
+- `thuat-ngu.yml` khóa dần (chủ repo chọn 24/10/2026): mỗi lô của đợt 3 kiểm định và khóa từng phần các bản ghi thuật ngữ mà trang của lô dùng; D3-L5 khóa nốt và dựng trang Từ điển từ dữ liệu.
 - Thành phần mà các bài này dùng (bàn phím, hóa biểu, vòng quãng năm, máy đếm nhịp, câu hỏi) chuyển trong lô có trang đầu tiên cần nó. Bàn phím (`piano.js` cũ) phát tiếng qua `audio.js`, module âm thanh dùng chung. Lô đầu tiên có bàn phím là D3-L1 (bài 1). Lô đó chép kèm `audio.js` và mẫu âm piano (`../opus-zero/docs/assets/samples/piano/`, Salamander Grand Piano, CC BY 3.0, cả file `LICENSE.txt` của thư mục). Trước đó, trang thử `nhac-ly/10-hop-am-ba` của D1.8 hiện ô "chưa chuyển" ở chỗ bàn phím.
 
 **Xong khi:** 45 trang của 6 lô và `thuat-ngu.yml` đã khóa.
@@ -162,7 +177,7 @@ Từ đợt này, mỗi lô gộp vào `main` là trang của lô lên site th�
 
 ## Đợt 8. Tham chiếu có hạn và Đọc thêm (D8-L1 đến D8-L3)
 
-- Trang tham chiếu có `ra_lai` trong `trang.yml`; workflow hằng tuần mở issue "Trang cần rà lại" khi quá hạn (không chặn deploy). D8-L1 đặt lại các ngày rà lại tính từ ngày khóa: ví dụ khóa sau tháng 1/2027 thì trang theo chương trình ABRSM rà lại tháng 1/2028.
+- Trang tham chiếu có `ra_lai` trong `trang.yml`; workflow hằng tuần mở issue "Trang cần rà lại" khi quá hạn (không chặn deploy). Cùng lúc: workflow kiểm link ra ngoài hằng tuần (như `link-check.yml` của site cũ, dùng lychee), gồm link bản thu trong `ban_thu` của `tac-pham.yml`; link hỏng thì mở issue. D8-L1 đặt lại các ngày rà lại tính từ ngày khóa: ví dụ khóa sau tháng 1/2027 thì trang theo chương trình ABRSM rà lại tháng 1/2028.
 - Thầy và thi, Tác phẩm theo cấp độ: kiểm định theo chương trình ABRSM đang dùng lúc làm (từ tháng 1/2027 là chương trình piano 2027–2028). Hai trang liệt kê tác phẩm: dùng trường đã khóa; `grade` khóa ở đợt 2 nếu trang chặng hiện Grade, không thì chính lô này khóa. Link tới bài chưa lên hiện "sắp có".
 - Trang Đọc thêm có dòng "ngoài lộ trình" ở đầu.
 
@@ -206,7 +221,7 @@ Khung, lõi, công cụ và tham chiếu đã lên site; đợt này thêm tác 
 1. Bạn giao lô bằng lời mẫu dưới đây.
 2. Agent chuyển trang bằng `tools/chuyen/`, tách dữ liệu, kiểm định lượt 1, ghi hồ sơ (chưa khóa).
 3. Agent khác kiểm định lượt 2 độc lập, mức theo tầng của trang (`../ben-vung/chuan-kiem-dinh.md` mục 3 và 8).
-4. CI trên bản xem: build, schema, khóa, link, khuông nhạc, trợ năng, Lighthouse một trang; ảnh chụp từng trang ở 360 px và 1280 px đính vào báo cáo.
+4. Người gộp push nhánh lô lên GitHub; `test.yml` chạy trên bản xem: build, schema, khóa, link, khuông nhạc, kiểm thử trình duyệt, trợ năng, Lighthouse trang mẫu. Phải đạt trước khi gộp. Ảnh chụp từng trang ở 360 px và 1280 px đính vào báo cáo.
 5. Review báo cáo, hồ sơ và ảnh chụp; chỗ cần sửa trả về agent trên cùng nhánh.
 6. Bạn đọc tóm tắt hồ sơ trong báo cáo của lô và xem ngẫu nhiên khoảng 5 nhận định (`node tools/khoa.mjs xuat <lô> --mau 5`); agent khóa; bạn gộp vào `main` và push. Trang của lô lên site thật.
 
@@ -222,7 +237,7 @@ Một phiên một việc, mở trong thư mục `opus/`. Đổi các chỗ tron
 
 **Một lô (đợt 2 đến 8):**
 
-> Bạn làm lô **D<đợt>-L<lô>** trong `plans/lam-lai/README.md` của repo opus. Đọc `AGENTS.md`; các mục Bảy luật, Quy tắc chung, Quy trình mỗi lô và Đợt <đợt> trong kế hoạch; danh sách trang của lô trong `plans/lam-lai/anh-xa.md`; `plans/ben-vung/chuan-kiem-dinh.md`. Tạo nhánh `moi/d<đợt>-l<lô>` từ `main`. Chuyển từng trang từ `../opus-zero/docs/` bằng `tools/chuyen/`, tách dữ liệu, kiểm định lượt 1 và ghi hồ sơ, kể cả các trường dữ liệu chưa khóa mà trang của lô hiện ra; chưa khóa gì. Chỉ chạm file của lô. Không push. Khi xong: `npm run build:xem` và `npm test` đạt; commit; viết báo cáo `plans/lam-lai/bao-cao/d<đợt>-l<lô>.md`; xuất danh sách nhận định cho lượt 2 bằng `node tools/khoa.mjs xuat D<đợt>-L<lô>`.
+> Bạn làm lô **D<đợt>-L<lô>** trong `plans/lam-lai/README.md` của repo opus. Đọc `AGENTS.md`; các mục Bảy luật, Quy tắc chung, Quy trình mỗi lô và Đợt <đợt> trong kế hoạch; danh sách trang của lô trong `plans/lam-lai/anh-xa.md`; `plans/ben-vung/chuan-kiem-dinh.md`. Tạo nhánh `moi/d<đợt>-l<lô>` từ `main`. Chuyển từng trang từ `../opus-zero/docs/` bằng `tools/chuyen/`, tách dữ liệu, kiểm định lượt 1 theo mức của tầng và ghi hồ sơ (trang Lõi không giữ chi tiết mau cũ; đợt 3: lập hồ sơ cả cho bản ghi thuật ngữ mà trang dùng, để khóa từng phần cùng trang), kể cả các trường dữ liệu chưa khóa mà trang của lô hiện ra; chưa khóa gì. Chỉ chạm file của lô. Không push. Khi xong: `npm run build:xem` và `npm test` đạt; commit; viết báo cáo `plans/lam-lai/bao-cao/d<đợt>-l<lô>.md`; xuất danh sách nhận định cho lượt 2 bằng `node tools/khoa.mjs xuat D<đợt>-L<lô>`.
 
 **Lượt 2:** lời mẫu ở `../ben-vung/chuan-kiem-dinh.md` mục 8.
 

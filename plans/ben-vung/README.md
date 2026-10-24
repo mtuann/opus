@@ -2,7 +2,7 @@
 
 Phần "vì sao" của việc làm lại site. Mục tiêu: phần lõi (nền tảng nhạc lý, piano, nhạc cổ điển, khung cấp độ) kiểm định một lần rồi không phải đọc lại; phần mở rộng (tác phẩm) chỉ thêm, mỗi lần chỉ kiểm phần thêm. Bản trình bày có số liệu và biểu đồ: tài liệu Claude Docs "Opus Zero: kế hoạch phát triển bền vững" (https://claude.ai/artifact/PMnBEmGUxUfMzyZXufYmxi, chỉ người được chủ repo chia sẻ mới mở được). Hai bản khác nhau thì file trong repo đúng.
 
-**Thực hiện theo `plans/lam-lai/README.md`** (quyết định ngày 23/10/2026): site mới dựng trong repo mới `mtuann/opus`, git từ đầu, đăng ở https://mtuann.github.io/opus/; site cũ ở nguyên repo cũ `mtuann/opus-zero`, thư mục cạnh `../opus-zero/` (chỉ đọc). Nội dung chuyển sang theo 10 đợt và mỗi trang qua kiểm định, khóa trước khi lên site. Thứ tự A–D trước đây không dùng nữa (bảng đổi ở mục "Từ A–D sang các đợt"). Các tầng, bốn luật, lớp dữ liệu, chuẩn kiểm định và quy trình thêm tác phẩm vẫn là chuẩn. Mọi quyết định còn chờ ghi ở mục "Quyết định" của `plans/lam-lai/README.md`.
+**Thực hiện theo `plans/lam-lai/README.md`** (quyết định ngày 23/10/2026): site mới dựng trong repo mới `mtuann/opus`, git từ đầu, đăng ở https://mtuann.github.io/opus/; site cũ ở nguyên repo cũ `mtuann/opus-zero`, thư mục cạnh `../opus-zero/` (chỉ đọc). Nội dung chuyển sang theo 10 đợt và mỗi trang qua kiểm định, khóa trước khi lên site. Thứ tự A–D trước đây không dùng nữa (bảng đổi ở mục "Từ A–D sang các đợt"). Các tầng, bốn luật, lớp dữ liệu, chuẩn kiểm định và quy trình thêm tác phẩm vẫn là chuẩn. Các quyết định ghi ở mục "Quyết định" của `plans/lam-lai/README.md` (đã chốt hết; câu hỏi nhỏ còn chờ ở cuối mục).
 
 | File | Nội dung |
 |---|---|

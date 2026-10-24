@@ -31,6 +31,9 @@ const KET_QUA_KHUONG = ['dung', 'da-sua'];
 /** Trang Đọc thêm (tầng ngoại vi): lượt 2 chỉ kiểm mẫu, chừng này nhận định mỗi trang (chuan-kiem-dinh.md mục 3). */
 export const MAU_NGOAI_VI = 5;
 
+/** Tầng của trang trong src/data/trang.yml, hay null nếu trang không có ở đó (như trang 404). */
+const tangTrong = (muc, goc) => (parse(fs.readFileSync(path.join(goc, 'src/data/trang.yml'), 'utf8')) ?? []).find((r) => r.id === muc)?.tang ?? null;
+
 /** `n` phần tử chọn ngẫu nhiên của `ds` (cả `ds` nếu ít hơn). */
 const chonNgauNhien = (ds, n) => {
 	const conLai = [...ds];
@@ -95,12 +98,15 @@ export function loiHoSo(hs, muc, goc) {
 		loi.push(bg ? `ban_ghi phải là "${bg}"` : `trang phải là "src/content/docs/${muc}.md"`);
 	if (!Array.isArray(hs.lan) || !hs.lan.length) loi.push('thiếu lan (các lần kiểm định)');
 	else for (const k of NGUOI) if (!hs.lan.at(-1).nguoi?.[k]) loi.push(`lần kiểm định cuối: thiếu nguoi.${k}`);
+	// tầng lấy từ src/data/trang.yml (mức kiểm theo tầng): hồ sơ ghi khác thì sửa hồ sơ, không tin hồ sơ
+	const tang = bg ? null : tangTrong(muc, goc);
+	if (!bg && (hs.tang ?? null) !== tang) loi.push(`hồ sơ ghi tang: ${hs.tang ?? null} mà src/data/trang.yml ghi ${tang}: sửa tang trong hồ sơ`);
 	// chỉ trang khung (và trang 404, không có tầng) được khóa với hồ sơ không có nhận định; khác thì cần ghi_chu giải thích
-	if ((bg || (hs.tang && hs.tang !== 'khung')) && !(hs.nhan_dinh ?? []).length && !hs.ghi_chu)
-		loi.push(`chưa có nhận định nào: ${bg ? 'bản ghi' : `trang tầng ${hs.tang}`} cần ít nhất một nhận định đã kiểm, hay ghi_chu giải thích vì sao không có`);
+	if ((bg || (tang && tang !== 'khung')) && !(hs.nhan_dinh ?? []).length && !hs.ghi_chu)
+		loi.push(`chưa có nhận định nào: ${bg ? 'bản ghi' : `trang tầng ${tang}`} cần ít nhất một nhận định đã kiểm, hay ghi_chu giải thích vì sao không có`);
 	const nguon = new Set((hs.nguon ?? []).map((n) => n.id));
 	// trang Đọc thêm: lượt 2 chỉ kiểm mẫu, nên nhận định ngoài mẫu không có luot_2
-	const motLuot = !bg && hs.tang === 'ngoai-vi';
+	const motLuot = tang === 'ngoai-vi';
 	for (const n of hs.nhan_dinh ?? []) {
 		const ten = `nhận định ${n.id ?? '(không id)'}`;
 		if (!n.id || !n.cau) loi.push(`${ten}: thiếu id hay cau`);
@@ -116,9 +122,12 @@ export function loiHoSo(hs, muc, goc) {
 			loi.push(`${ten}: lượt 2 cho "${n.luot_2}" mà kết quả "dung": ghi_chu cách đã giải quyết`);
 	}
 	if (motLuot) {
-		const can = Math.min(MAU_NGOAI_VI, (hs.nhan_dinh ?? []).length);
-		const co = (hs.nhan_dinh ?? []).filter((n) => LUOT_2.includes(n.luot_2)).length;
-		if (co < can) loi.push(`trang Đọc thêm: lượt 2 phải kiểm mẫu ít nhất ${can} nhận định (mới có ${co})`);
+		const ds = hs.nhan_dinh ?? [];
+		const co = ds.filter((n) => LUOT_2.includes(n.luot_2)).length;
+		// mẫu có nhận định sai thì lượt 2 kiểm cả trang (chuan-kiem-dinh.md mục 3)
+		const can = ds.some((n) => n.luot_2 === 'sai') ? ds.length : Math.min(MAU_NGOAI_VI, ds.length);
+		if (co < can)
+			loi.push(can === ds.length && ds.some((n) => n.luot_2 === 'sai') ? `trang Đọc thêm: mẫu lượt 2 có nhận định sai, nên lượt 2 phải kiểm cả trang (mới có ${co}/${can})` : `trang Đọc thêm: lượt 2 phải kiểm mẫu ít nhất ${can} nhận định (mới có ${co})`);
 	}
 	if (!bg) {
 		const f = fileTrang(muc, goc);

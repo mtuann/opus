@@ -12,11 +12,11 @@ flowchart TB
   end
   subgraph G2["Nền tảng: đủ 101 trang lõi sau đợt 5"]
     direction LR
-    D2["Đợt 2<br/>Khung cấp độ, lối vào<br/>1 lô, 9 trang"] --> D3["Đợt 3<br/>Nhạc lý, luyện tai<br/>6 lô, 45 trang"] --> D4["Đợt 4<br/>Piano nền tảng<br/>4 lô, 28 trang"] --> D5["Đợt 5<br/>Nhạc cổ điển nền tảng<br/>3 lô, 26 trang"]
+    D2["Đợt 2<br/>Khung cấp độ, lối vào<br/>1 lô, 9 trang"] --> D3["Đợt 3<br/>Nhạc lý, luyện tai<br/>6 lô, 45 trang"] --> D4["Đợt 4<br/>Piano nền tảng<br/>4 lô, 28 trang"] --> D5["Đợt 5<br/>Nhạc cổ điển nền tảng<br/>3 lô, 27 trang"]
   end
   subgraph G3["Phần còn lại: tác phẩm sau cùng"]
     direction LR
-    D7["Đợt 7<br/>Công cụ, sách in, blog<br/>3 lô, 23 trang"] --> D8["Đợt 8<br/>Tham chiếu, Đọc thêm<br/>3 lô, 21 trang"] --> D6["Đợt 6<br/>Tác phẩm<br/>11 lô, 81 trang"] --> D9["Đợt 9<br/>Hoàn tất<br/>mọi địa chỉ cũ chạy lại"]
+    D7["Đợt 7<br/>Công cụ, sách in, blog<br/>3 lô, 23 trang"] --> D8["Đợt 8<br/>Tham chiếu, Đọc thêm<br/>3 lô, 20 trang"] --> D6["Đợt 6<br/>Tác phẩm<br/>11 lô, 81 trang"] --> D9["Đợt 9<br/>Hoàn tất<br/>mọi địa chỉ cũ chạy lại"]
   end
   G1 --> G2 --> G3
 ```
@@ -32,7 +32,7 @@ flowchart TB
   C --> D["CI trên bản xem:<br/>build, kiểm thử, ảnh chụp"]
   D --> E{"Review"}
   E -->|cần sửa| B
-  E -->|đạt| F["Bạn kiểm khoảng<br/>10 nhận định"]
+  E -->|đạt| F["Bạn đọc tóm tắt,<br/>xem khoảng 5 nhận định"]
   F --> G["Agent khóa"]
   G --> H["Bạn gộp vào main, push"]
   H --> I["Trang lên site thật"]

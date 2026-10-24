@@ -290,3 +290,30 @@ Chỗ người làm nhánh tự diễn giải, hoặc chủ repo chưa nói. The
 ### Kết luận
 
 **Chưa gộp.** Ba quyết định ghi đúng ý chủ repo ở `README.md`, `chuan-kiem-dinh.md` và `AGENTS.md`, trừ các chỗ tự diễn giải ở "Nên hỏi lại". Build và 82 kiểm thử đạt; hai script sinh lại đúng hai bảng; tầng, ngày rà lại và nhóm menu của 233 trang khớp; bằng chứng ở mục 1 của báo cáo đúng. Còn ba chỗ chữ và số phải sửa (không đụng mã), rồi gộp được. Nên làm luôn "Nên sửa" 1 và 2 (mã `tools/khoa.mjs`, vài dòng và một kiểm thử mỗi chỗ), vì chúng nới cổng kiểm định ở tầng Đọc thêm. Hai tài liệu Claude Docs (`giao-viec.md` dòng 8 đến 11) vẫn ghi số cũ: cập nhật sau khi gộp.
+
+### Sửa theo review
+
+Claude Code (Claude Opus 5.5), ngày 24/10/2026, trên commit review `ba2d0eb`.
+
+**Phải sửa: đã sửa cả ba.**
+
+1. `so-do.md`: đợt 5 có 27 trang, đợt 8 có 20 trang; bước kiểm mẫu ghi "đọc tóm tắt, xem khoảng 5 nhận định".
+2. `kiem_ke.py` (rồi sinh lại `kiem-ke.md`): bỏ chữ "đề xuất"; quy tắc xếp tầng ghi đúng ba tầng đã đổi và hai quy tắc chủ repo chốt.
+3. `plans/lam-lai/README.md` và `plans/ben-vung/README.md`: không còn câu "chờ bạn"; các mục đã chốt hết.
+
+**Nên sửa: đã làm.**
+
+- `tools/khoa.mjs` lấy tầng từ `src/data/trang.yml`; hồ sơ ghi tầng khác thì báo lỗi. Mẫu lượt 2 của trang Đọc thêm có nhận định sai thì lượt 2 phải kiểm cả trang. Có kiểm thử. Hai kịch bản của người review (`k8.mjs`: K8, K9) nay đều ra lỗi.
+- Luật "trang Lõi không giữ chi tiết mau cũ" ghi vào `chuan-kiem-dinh.md` mục 3 và lời giao việc lô. Chủ repo xác nhận cách hiểu này ngày 24/10/2026.
+- Kiểm link định kỳ cho link bản thu (`ban_thu`): ghi vào mục Đợt 8 (workflow kiểm link ra ngoài hằng tuần, cùng workflow "Trang cần rà lại").
+
+**Hỏi chủ repo:** đã hỏi hai câu ảnh hưởng sớm.
+
+- Cách hiểu "mau cũ" là phần chính, kèm luật trang Lõi bỏ câu mau cũ lẻ: chủ repo chọn cách này.
+- Thuật ngữ: chủ repo chọn khóa dần theo lô; mục Đợt 3 đã sửa.
+
+Bốn câu còn lại chưa cần ngay (`nghe-mu`, mục "Sau 6 tháng", cỡ mẫu Đọc thêm, mức kiểm của Tác phẩm). Đã ghi ở cuối mục Quyết định của README, kèm lô cần có câu trả lời. Câu về "ví dụ Open Music Theory" không hỏi lại: đó cũng là lựa chọn đã ghi sẵn trong kế hoạch.
+
+**Chưa làm:** hai tài liệu Claude Docs mà README trỏ tới còn số cũ. README ghi rõ "hai bản khác nhau thì file trong repo đúng", nên để chủ repo cập nhật khi cần.
+
+Kiểm thử: `npm run build`, `npm test` 82 kiểm thử, 80 đạt, 2 bỏ qua; `kiem_ke.py` và `anh_xa.py` sinh lại đúng bảng đang commit.

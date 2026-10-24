@@ -47,6 +47,8 @@ Mức kiểm theo tầng của trang (`tang` trong `src/data/trang.yml`), chủ 
 3. **Review** (mặc định Claude; không phải người đã làm lượt 1 hay lượt 2): mọi nhận định hai lượt cho kết quả khác nhau, mọi chỗ đã sửa, mọi khuông nhạc ví dụ soạn riêng.
 4. **Bạn đọc tóm tắt và kiểm mẫu:** đọc bản tóm tắt hồ sơ trong báo cáo của lô, xem ngẫu nhiên khoảng 5 nhận định mỗi lô (`node tools/khoa.mjs xuat <lô> --mau 5`), ghi kết quả vào hồ sơ. Mục đích là biết có tin được các lượt agent không; mẫu sai thì kiểm lại cả lô. Bạn không kiểm tay mọi nhận định: hơn 200 trang thì bạn thành chỗ nghẽn.
 
+Trang Lõi không giữ chi tiết mau cũ (tên ứng dụng, giá, thiết bị, link bản thu, sự kiện): lượt 1 viết lại câu ấy cho bền, hay chuyển sang trang tham chiếu có hạn và link tới đó (chủ repo chọn ngày 24/10/2026; danh sách câu đã thấy: `plans/lam-lai/bao-cao/d2-bang-tang.md`, mục 4 của phần phân tích). Trang Đọc thêm mà mẫu lượt 2 có nhận định sai thì lượt 2 kiểm cả trang.
+
 Một trang chỉ được khóa khi mọi nhận định có kết quả `dung`, `da-sua` hoặc `da-bo`, đã qua đủ lượt theo tầng (trang Đọc thêm: lượt 2 đủ mẫu), và không còn chỗ hai lượt khác nhau chưa giải quyết.
 
 ## 4. Khuông nhạc

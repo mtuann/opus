@@ -225,6 +225,15 @@ test('trang Đọc thêm (ngoại vi): một lượt, lượt 2 chỉ kiểm m�
 		assert.throws(() => chay('khoa', 'lich-su/opera'), new RegExp(`lượt 2 phải kiểm mẫu ít nhất ${MAU_NGOAI_VI} nhận định \\(mới có 4\\)`));
 		// nhận định ngoài mẫu không cần luot_2
 		assert.doesNotMatch(loiHoSo(parse(fs.readFileSync(f, 'utf8')), 'lich-su/opera', goc).join(), /chưa có kết quả lượt 2/);
+		// tầng lấy từ trang.yml, không tin hồ sơ: trang đổi sang Lõi sau khi lập hồ sơ thì không khóa được với mẫu (review)
+		const fTang = path.join(goc, 'src/data/trang.yml');
+		fs.writeFileSync(fTang, '- id: lich-su/opera\n  tang: loi\n');
+		dien(5);
+		assert.throws(() => chay('khoa', 'lich-su/opera'), /hồ sơ ghi tang: ngoai-vi mà src\/data\/trang\.yml ghi loi[\s\S]*chưa có kết quả lượt 2/);
+		fs.writeFileSync(fTang, '- id: lich-su/opera\n  tang: ngoai-vi\n');
+		// mẫu lượt 2 có nhận định sai: lượt 2 phải kiểm cả trang
+		fs.writeFileSync(f, fs.readFileSync(f, 'utf8').replace('id: n1, cau: Câu 1., loai: lich-su, nguon: [s1], ket_qua: dung, luot_2: dung', 'id: n1, cau: Câu 1., loai: lich-su, nguon: [s1], ket_qua: da-sua, ghi_chu: đã sửa, luot_2: sai'));
+		assert.throws(() => chay('khoa', 'lich-su/opera'), /mẫu lượt 2 có nhận định sai, nên lượt 2 phải kiểm cả trang \(mới có 5\/7\)/);
 		dien(5);
 		chay('khoa', 'lich-su/opera');
 		// lượt 2 của trang Đọc thêm nhận đúng 5 nhận định ngẫu nhiên
