@@ -251,15 +251,18 @@ export function lenh(thamSo, goc = GOC, in_ = console.log) {
 		const bang = bg ? khoa.ban_ghi : khoa.trang;
 		const k = bg ?? muc;
 		if (!(k in bang)) {
-			const phan = bg ? Object.keys(khoa.ban_ghi).filter((x) => x.startsWith(`${tachKhoaBanGhi(bg).banGhi}#`)) : [];
+			const banGhi = bg && tachKhoaBanGhi(bg).banGhi;
+			if (bg && banGhi !== bg && khoa.ban_ghi[banGhi]) throw new Error(`${muc} chưa khóa riêng: bản ghi đang khóa cả bản ghi, mở bằng: node tools/khoa.mjs mo du-lieu/${banGhi} --ly-do "…"`);
+			const phan = bg ? Object.keys(khoa.ban_ghi).filter((x) => x.startsWith(`${banGhi}#`)) : [];
 			throw new Error(`${muc} chưa khóa` + (phan.length ? `; bản ghi đang khóa từng phần: ${phan.map((x) => `du-lieu/${x}`).join(', ')}` : ''));
 		}
-		// lý do mở khóa ghi vào hồ sơ: không có hồ sơ thì không mở
+		// lý do mở khóa ghi vào hồ sơ: không có hồ sơ, hay hồ sơ hỏng, thì không mở (đọc hồ sơ trước khi gỡ khóa)
 		const f = fileHoSo(muc, goc);
 		if (!fs.existsSync(f)) throw new Error(`${muc}: không có hồ sơ ${path.relative(goc, f)} để ghi lý do mở khóa`);
+		const doc = parseDocument(fs.readFileSync(f, 'utf8'));
+		if (doc.errors.length || !doc.get('lan')?.items) throw new Error(`${muc}: hồ sơ ${path.relative(goc, f)} hỏng (đọc YAML lỗi hay thiếu lan): sửa hồ sơ trước khi mở khóa`);
 		delete bang[k];
 		ghiKhoa(khoa, goc);
-		const doc = parseDocument(fs.readFileSync(f, 'utf8'));
 		if (!doc.has('mo_khoa')) doc.set('mo_khoa', doc.createNode([]));
 		doc.get('mo_khoa').add(doc.createNode({ ngay: homNay(), nhanh: nhanh(goc), ly_do: lyDo }));
 		const lan = doc.get('lan');

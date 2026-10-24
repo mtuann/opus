@@ -4,6 +4,7 @@
 // ở bản xem) có dải.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -151,6 +152,11 @@ test('công cụ khóa trên bản chép nhỏ: mẫu, khóa (đòi hồ sơ đ�
 		assert.equal(parse(fs.readFileSync(fBanGhi, 'utf8')).lan.length, 2);
 		assert.throws(() => chay('mau', 'du-lieu/tac-pham/x'), /lần cuối trong lan chưa khóa/);
 		sua(fBanGhi, ...NGUOI);
+		// khóa rời (không chứa khóa cũ): khóa cũ vẫn còn
+		chay('khoa', 'du-lieu/tac-pham/x#grade');
+		assert.deepEqual(Object.keys(khoaJson().ban_ghi), ['tac-pham/x#grade', 'tac-pham/x#loai,ten'], 'khóa rời không thay khóa cũ');
+		chay('mau', 'du-lieu/tac-pham/x');
+		sua(fBanGhi, ...NGUOI);
 		chay('khoa', 'du-lieu/tac-pham/x#grade,loai,ten');
 		assert.deepEqual(Object.keys(khoaJson().ban_ghi), ['tac-pham/x#grade,loai,ten'], 'khóa từng phần mới thay khóa cũ nằm trọn trong nó');
 		// khóa cả bản ghi khi một trường đã khóa bị sửa: bị chặn, phải mở khóa trước (review D1.6)
@@ -163,6 +169,13 @@ test('công cụ khóa trên bản chép nhỏ: mẫu, khóa (đòi hồ sơ đ�
 		assert.deepEqual(Object.keys(khoaJson().ban_ghi), ['tac-pham/x'], 'khóa cả bản ghi thay khóa từng phần');
 		assert.throws(() => chay('mau', 'du-lieu/tac-pham/x'), /du-lieu\/tac-pham\/x đang khóa/);
 		assert.throws(() => chay('khoa', 'du-lieu/tac-pham/x#ten'), /đã khóa cả bản ghi/);
+		assert.throws(() => chay('mo', 'du-lieu/tac-pham/x#ten', '--ly-do', 'thử'), /đang khóa cả bản ghi, mở bằng: node tools\/khoa\.mjs mo du-lieu\/tac-pham\/x /);
+		// hồ sơ hỏng (sửa tay mất lan): mo từ chối trước khi gỡ khóa
+		const giuBanGhi = fs.readFileSync(fBanGhi);
+		sua(fBanGhi, /^lan:\n(?:[ -].*\n)+/m, '');
+		assert.throws(() => chay('mo', 'du-lieu/tac-pham/x', '--ly-do', 'thử'), /hồ sơ .* hỏng/);
+		assert.ok('tac-pham/x' in khoaJson().ban_ghi, 'khóa còn nguyên');
+		fs.writeFileSync(fBanGhi, giuBanGhi);
 		// mở khóa phải ghi được lý do vào hồ sơ: không có hồ sơ thì không mở
 		const giu = fs.readFileSync(fHoSo);
 		fs.rmSync(fHoSo);
@@ -181,6 +194,17 @@ test('công cụ khóa trên bản chép nhỏ: mẫu, khóa (đòi hồ sơ đ�
 		assert.match(loi[1], /bản ghi tac-pham\/x đã khóa mà đã đổi[\s\S]*node tools\/khoa\.mjs mo du-lieu\/tac-pham\/x/);
 	} finally {
 		fs.rmSync(goc, { recursive: true, force: true });
+	}
+});
+
+test('lệnh chạy được qua đường dẫn có liên kết tượng trưng (như /tmp trên macOS): không im lặng thoát', () => {
+	const tam = fs.mkdtempSync(path.join(os.tmpdir(), 'opus-lien-ket-'));
+	try {
+		fs.symlinkSync(ROOT, path.join(tam, 'repo'));
+		const ra = execFileSync(process.execPath, [path.join(tam, 'repo', 'tools', 'khoa.mjs'), 'tinh'], { encoding: 'utf8' });
+		assert.match(ra, /^index\s+sha256:\S+\s+khớp$/m);
+	} finally {
+		fs.rmSync(tam, { recursive: true, force: true });
 	}
 });
 

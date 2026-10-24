@@ -53,7 +53,7 @@ flowchart LR
 
 ```mermaid
 flowchart TB
-  DATA["src/data/<br/>có schema,<br/>khóa theo bản ghi<br/>hay từng trường<br/><br/>cap-do.yml: 7 chặng<br/>tac-pham.yml: 79 bản ghi<br/>nha-soan-nhac.yml<br/>thuat-ngu.yml<br/>trang.yml: tầng, ngày rà"]
+  DATA["src/data/<br/>có schema,<br/>khóa theo bản ghi<br/>hay từng trường<br/><br/>cap-do.yml: 7 chặng<br/>tac-pham.yml: 73 bản ghi<br/>nha-soan-nhac.yml<br/>thuat-ngu.yml<br/>trang.yml: tầng, ngày rà"]
   PAGES["src/content/docs/<br/>Markdown,<br/>khóa theo trang<br/><br/>số trang theo tầng:<br/>Lõi: 100<br/>Tác phẩm: 79<br/>Tham chiếu có hạn: 7<br/>Đọc thêm: 13"]
   GEN["Sinh lúc build,<br/>không viết tay<br/><br/>trang chủ, mục lục,<br/>7 trang chặng,<br/>danh mục tác phẩm,<br/>sách in, Cập nhật,<br/>con số về site"]
   DATA -->|năm, cấp độ, số danh mục| PAGES

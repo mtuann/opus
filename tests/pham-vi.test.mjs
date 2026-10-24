@@ -178,10 +178,12 @@ test('nhánh lô trong repo thử: bắt file ngoài phạm vi (đã commit, ch�
 		ghi('plans/lam-lai/anh-xa.md', fs.readFileSync(path.join(ROOT, 'plans/lam-lai/anh-xa.md'), 'utf8'));
 		ghi('src/content/docs/index.md', 'chủ\n');
 		ghi('src/content/docs/nhac-ly/01-cao-do-ten-not.md', 'cũ\n');
-		ghi('src/data/tac-pham.yml', '- slug: x\n  ten: X\n- slug: y\n  ten: Y\n- slug: z\n  ten: Z\n');
+		const DU_LIEU = (y, w) => `- slug: u\n  ten: U\n- slug: v\n  ten: V\n  loai: nghe\n- slug: w\n  ten: ${w}\n- slug: x\n  ten: X\n- slug: y\n  ten: ${y}\n- slug: z\n  ten: Z\n`;
+		ghi('src/data/tac-pham.yml', DU_LIEU('Y', 'W'));
 		ghi('kiem-dinh/index.yml', 'trang: src/content/docs/index.md\n');
 		const ma = (k) => maBamKhoaBanGhi(k, goc);
-		ghi('kiem-dinh/khoa.json', JSON.stringify({ trang: { index: 'sha256:a' }, ban_ghi: { 'tac-pham/x#ten': ma('tac-pham/x#ten'), 'tac-pham/y#ten': ma('tac-pham/y#ten'), 'tac-pham/z#ten': ma('tac-pham/z#ten') } }));
+		const khoaBg = (...ks) => Object.fromEntries(ks.map((k) => [k, ma(k)]));
+		ghi('kiem-dinh/khoa.json', JSON.stringify({ trang: { index: 'sha256:a' }, ban_ghi: khoaBg('tac-pham/u#ten', 'tac-pham/v#loai,ten', 'tac-pham/w#ten', 'tac-pham/x#ten', 'tac-pham/y#ten', 'tac-pham/z#ten') }));
 		g('add', '-A');
 		g('commit', '-q', '-m', 'nền');
 		g('checkout', '-q', '-b', 'moi/d3-l2');
@@ -191,10 +193,11 @@ test('nhánh lô trong repo thử: bắt file ngoài phạm vi (đã commit, ch�
 		g('commit', '-q', '-m', 'lô');
 		ghi('AGENTS.md', 'chưa commit\n');
 		ghi('kiem-dinh/index.yml', 'trang: src/content/docs/index.md\nghi_chu: sửa lén\n');
-		// x: khóa cả bản ghi thay khóa từng phần, dữ liệu không đổi (được); y: sửa trường đã khóa rồi tính lại mã băm bằng tay;
-		// z: gỡ khóa
-		ghi('src/data/tac-pham.yml', '- slug: x\n  ten: X\n- slug: y\n  ten: Y2\n- slug: z\n  ten: Z\n');
-		ghi('kiem-dinh/khoa.json', JSON.stringify({ trang: { 'nhac-ly/10-hop-am-ba': 'sha256:b', 'nhac-ly/01-cao-do-ten-not': 'sha256:c' }, ban_ghi: { 'tac-pham/x': ma('tac-pham/x'), 'tac-pham/y#ten': ma('tac-pham/y#ten') } }));
+		// u: khóa giữ nguyên (không báo); v: thu hẹp khóa (#loai,ten thành #ten); w: sửa trường đã khóa rồi thay bằng khóa
+		// cả bản ghi; x: khóa cả bản ghi thay khóa từng phần, dữ liệu không đổi (được); y: sửa trường đã khóa rồi tính lại
+		// mã băm bằng tay; z: gỡ khóa
+		ghi('src/data/tac-pham.yml', DU_LIEU('Y2', 'W2'));
+		ghi('kiem-dinh/khoa.json', JSON.stringify({ trang: { 'nhac-ly/10-hop-am-ba': 'sha256:b', 'nhac-ly/01-cao-do-ten-not': 'sha256:c' }, ban_ghi: khoaBg('tac-pham/u#ten', 'tac-pham/v#ten', 'tac-pham/w', 'tac-pham/x', 'tac-pham/y#ten') }));
 		assert.equal(kiemPhamVi(goc, 'moi/d1-6-khoa'), null);
 		assert.equal(kiemPhamVi(goc, 'main'), null);
 		assert.deepEqual(kiemPhamVi(goc, 'moi/d3-l2'), {
@@ -205,6 +208,8 @@ test('nhánh lô trong repo thử: bắt file ngoài phạm vi (đã commit, ch�
 				'src/content/docs/nhac-ly/01-cao-do-ten-not.md: ngoài phạm vi của lô D3-L2',
 				'kiem-dinh/khoa.json: trang index không thuộc lô D3-L2 mà bị mở khóa',
 				'kiem-dinh/khoa.json: trang nhac-ly/01-cao-do-ten-not không thuộc lô D3-L2 mà được khóa',
+				'kiem-dinh/khoa.json: bản ghi tac-pham/v#loai,ten đã khóa ở main mà bị gỡ',
+				'kiem-dinh/khoa.json: bản ghi tac-pham/w#ten được thay bằng khóa rộng hơn mà trường đã khóa bị sửa',
 				'kiem-dinh/khoa.json: bản ghi tac-pham/y#ten đã khóa ở main mà đổi mã băm',
 				'kiem-dinh/khoa.json: bản ghi tac-pham/z#ten đã khóa ở main mà bị gỡ',
 			],

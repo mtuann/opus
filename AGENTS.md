@@ -55,7 +55,7 @@ node tools/khoa.mjs xuat D3-L2 [--mau 10]   # nhận định của lô cho lư�
 ```
 
 - Khóa được khi mọi nhận định đã qua hai lượt và có kết quả, chỗ sửa hay bỏ có ghi chú, chỗ hai lượt khác nhau đã giải quyết, mọi khuông nhạc (khối `abc`) đã kiểm, và lần cuối trong `lan` ghi đủ người (`luot_1`, `luot_2`, `review`, `kiem_mau`). Hồ sơ không có nhận định chỉ khóa được ở trang khung, hay khi có `ghi_chu` giải thích.
-- Mục đang khóa thì `khoa` và `mau` từ chối: muốn sửa thì `mo` trước (ghi lý do), không khóa đè.
+- Mục đang khóa thì `khoa` và `mau` từ chối: muốn sửa thì `mo` trước (ghi lý do), không khóa đè. Riêng bản ghi đang khóa từng phần: `mau` thêm lần kiểm định mới để khóa thêm trường hay khóa cả bản ghi, khi các khóa cũ còn khớp.
 - Trang viết `.md` (không `.mdx`), không có khoảng trắng cuối dòng (mã băm bỏ qua chúng; ngắt dòng cứng viết `<br>`), khối khuông nhạc mở bằng ` ```abc ` ở đầu dòng (cách công cụ đếm khuông cho hồ sơ). `tests/khoa.test.mjs` chặn.
 - `npm run dev` chỉ kiểm khóa lúc khởi động: sửa trang đã khóa khi dev đang chạy thì không bị chặn ngay; `npm run build` mới chặn.
 - Trên nhánh lô `moi/d<đợt>-l<lô>`, `tests/pham-vi.test.mjs` so với `main` (cần nhánh `main` hay `origin/main`): file ngoài phạm vi của lô (kế hoạch, mục "Quy tắc chung"; trang của lô theo `plans/lam-lai/anh-xa.md`), hồ sơ của trang ngoài lô bị sửa, trang của lô khác bị khóa hay mở khóa, khóa bản ghi đã có ở `main` bị đổi hay gỡ thì kiểm thử hỏng. Việc kế hoạch giao riêng cho một lô (như trang sinh từ dữ liệu ở D2-L1) ghi trong `THEM` của file kiểm thử đó.
