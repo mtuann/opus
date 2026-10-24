@@ -56,6 +56,7 @@ Thêm, chốt ngày 24/10/2026:
 - [x] CI của nhánh lô: từ đợt 2, **push nhánh lô lên GitHub trước khi gộp**, chờ `test.yml` (bản xem) đạt rồi mới gộp vào `main`; gộp xong xóa nhánh trên GitHub. Agent làm lô vẫn không push; người gộp push.
 - [x] Hai link tới repo trên site (biểu tượng GitHub ở thanh trên, chữ "MIT" ở chân trang): **bỏ tạm** khi repo còn riêng tư (người đọc mở ra trang 404); thêm lại khi repo công khai. Link tới issue cũng vậy: các trang đang trỏ tới issue của repo cũ (công khai) giữ link ấy cho tới khi repo mới công khai.
 - [x] Review: **ba mức theo rủi ro** (Nhỏ, Vừa, Lớn), cho mọi thay đổi về sau; bảng ở mục "Ba mức review" (cuối Quy tắc chung). Thay cho cách cũ "gộp và push mỗi việc sau khi review". Lượt 2 kiểm định nội dung của mỗi lô vẫn giữ.
+- [x] Đợt 2: **tách phần dữ liệu thành việc D2-0**, làm trước D2-L1 (mục Đợt 2). D2-L1 chỉ làm trang và dùng các trường đã khóa.
 
 Câu hỏi nhỏ còn chờ (từ review nhánh quyết định, `bao-cao/d2-bang-tang.md`); hỏi chủ repo trước lô ghi bên cạnh:
 
@@ -70,7 +71,7 @@ Câu hỏi nhỏ còn chờ (từ review nhánh quyết định, `bao-cao/d2-ban
 |---|---|---|---|---|
 | 0 | Dựng repo mới | | Chưa đăng gì | Xong 23/10/2026 |
 | 1 | Nền kỹ thuật | D1.1–D1.8 | Trang chủ tạm và trang 404 ở `/opus/`; chưa có bài | Xong 24/10/2026: trang chủ tạm và trang 404 trên site thật; ba trang thử ở bản xem |
-| 2 | Khung cấp độ và lối vào | 1 | Trang chủ, Bắt đầu, lộ trình và 7 trang chặng, bài kiểm tra đầu vào | Chưa làm |
+| 2 | Khung cấp độ và lối vào | 1 | Trang chủ, Bắt đầu, lộ trình và 7 trang chặng, bài kiểm tra đầu vào | Đang làm: D2-0 (dữ liệu), D2-nền (chuẩn bị kỹ thuật) |
 | 3 | Nhạc lý và luyện tai | 6 | 45 trang, Từ điển | Chưa làm |
 | 4 | Piano nền tảng | 4 | 28 trang: bắt đầu bên phím, kỹ thuật, tập luyện, hòa âm bên phím, văn học piano | Chưa làm |
 | 5 | Nhạc cổ điển nền tảng | 3 | 27 trang: thời kỳ, hình thức, nhận diện; đủ 101 trang lõi | Chưa làm |
@@ -156,7 +157,19 @@ Từ đợt này, mỗi lô gộp vào `main` là trang của lô lên site th�
   Trang chặng hiện thêm trường nào thì khóa thêm trường ấy, ghi trong báo cáo. Các trường còn lại khóa ở đợt 6.
 - Kiểm thử hỏng nếu trang đã khóa hiện một trường chưa khóa của bản ghi, qua chỉ thị trong trang, trang chặng hay ô gợi ý tập.
 - Ô gợi ý tập (`practice.js` cũ, ở trang chủ; đợt 4, 7 dùng lại ở trang Piano, Luyện tập) sinh link bằng JavaScript. Link tới trang chưa có phải hiện "sắp có" như link dựng lúc build. Vì vậy bản build xuất danh sách trang cho script; D2-L1 làm việc này khi chuyển `practice.js` (phạm vi của D2-L1 gồm cả cấu hình build, xem kiểm thử phạm vi của D1.6).
-- Kiểm định trường của 73 bản ghi là phần nặng nhất của đợt. Quá tải thì tách thành một việc dữ liệu riêng, làm trước D2-L1 (chủ repo quyết).
+- Kiểm định trường của 73 bản ghi là phần nặng nhất của đợt, nên tách thành **việc D2-0** (chủ repo chọn ngày 24/10/2026), làm trước D2-L1 trên nhánh `moi/d2-0-du-lieu`:
+  - Kiểm định `cap-do.yml`, `nha-soan-nhac.yml` và các trường đợt 2 của `tac-pham.yml`: `ten`, `tac_gia`, `gan_cho`, `khuyet_danh`, `danh_muc`, `chang`, `grade`, `loai`, `goi_y`. `grade` kiểm luôn để D2-L1 không phải quay lại.
+  - Lượt 1 chia bốn phần chạy song song: A gồm 7 chặng và 34 bài học; B gồm 39 hướng dẫn nghe; C và D chia đôi 146 người.
+  - Chỗ sửa dữ liệu ghi vào `bao-cao/d2-0/sua-<phần>.yml`, rồi gom lại một lần. Sau đó là lượt 2 độc lập, review, chủ repo kiểm mẫu khoảng 5 nhận định, và khóa từng phần.
+  - Báo cáo `bao-cao/d2-0.md`.
+- Việc chuẩn bị kỹ thuật **D2-nền** (nhánh `moi/d2-nen`, làm song song với D2-0) gồm những việc mà review cuối đợt 1 khuyên làm trước lô (`bao-cao/d1.md`, mục "Nên sửa" 1–4 và 6):
+  - thành phần danh sách việc có nhãn;
+  - phép thử `#mục` không giả định `h2`;
+  - bảng hẹp ở 360 px;
+  - hai kiểm thử còn thiếu;
+  - lệnh `nhap` đưa kết quả lượt 2 vào hồ sơ;
+  - kiểm thử "trang đã khóa chỉ hiện trường đã khóa".
+  Báo cáo `bao-cao/d2-nen.md`.
 - 7 trang chặng `piano/lo-trinh/chang-1` đến `chang-7` sinh từ dữ liệu; trang lộ trình giữ các mục chặng dạng tóm tắt, mỗi mục dẫn sang trang chặng.
 - 9 trang của lô, gồm trang chủ mới (thay trang chủ tạm) và bài kiểm tra đầu vào (`placement.js`).
 - Menu đủ 9 nhóm; nhóm chưa có trang hiện nhãn "sắp có". Mô tả nhóm Đọc thêm bỏ chữ "opera" (opera thành Lõi khi duyệt bảng tầng), sửa cùng lúc ở `src/nhom.mjs` và thẻ của trang chủ mới.
