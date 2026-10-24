@@ -380,6 +380,9 @@ test('nhap: đưa kết quả lượt 2 vào hồ sơ (kèm link, câu đúng); 
 		fs.writeFileSync(f, stringify(them));
 		ghi('l2.yml', dong('n4', 'dung'));
 		assert.doesNotMatch(chay('nhap', 'l2.yml'), /cần review/);
+		// `nguon:` để trống (null) với khong-chac: như không ghi nguồn
+		ghi('l2.yml', '- { trang: du-lieu/nha-soan-nhac/a, id: n3, luot_2: khong-chac, nguon: , ghi_chu: chưa tìm được }\n');
+		assert.match(chay('nhap', 'l2.yml'), /1 khong-chac/);
 
 		// nguon không phải danh sách; hai nhận định cùng id; hồ sơ đã khóa; hồ sơ thứ hai hỏng YAML: không ghi file nào
 		ghi('src/data/nha-soan-nhac.yml', '- id: a\n  ten: A\n  sinh: 1900\n  mat: 1950\n- id: b\n  ten: B\n  sinh: 1800\n  mat: 1850\n- id: c\n  ten: C\n  sinh: 1700\n  mat: 1750\n');

@@ -361,7 +361,8 @@ export function lenh(thamSo, goc = GOC, in_ = console.log) {
 			const ten = `dòng ${i + 1} (${d?.trang ?? '?'}, ${d?.id ?? '?'})`;
 			if (!d?.trang || !d?.id) return loi.push(`${ten}: thiếu trang hay id`);
 			if (!LUOT_2.includes(d.luot_2)) return loi.push(`${ten}: luot_2 phải là ${LUOT_2.join(', ')}`);
-			if (d.nguon !== undefined && (!Array.isArray(d.nguon) || d.nguon.some((x) => typeof x !== 'string')))
+			// `nguon:` để trống (null) như không ghi
+			if (d.nguon != null && (!Array.isArray(d.nguon) || d.nguon.some((x) => typeof x !== 'string')))
 				return loi.push(`${ten}: nguon phải là danh sách link`);
 			if (d.luot_2 === 'sai' && !d.cau_dung && !d.ghi_chu) loi.push(`${ten}: sai cần cau_dung hay ghi_chu`);
 			if (daGap.has(`${d.trang}#${d.id}`)) return loi.push(`${ten}: trùng dòng trước`);

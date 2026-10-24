@@ -76,7 +76,10 @@ Chỗ nên sửa, cũng đã sửa:
 - `khoa`: cảnh báo "bản ghi của trang chưa khóa" tính cả khóa từng phần.
 - `thieuChiMuc` bắt cả file thiếu hẳn: `pagefind.js`, và file `pf_meta` của từng ngôn ngữ.
 
-Vòng kiểm lại: chính người review xem các chỗ sửa (mức lớn).
+Vòng kiểm lại (cùng người review): **đạt, không còn chỗ phải sửa.**
+- Đối chiếu mã việc tính lúc build với thuật toán của site cũ trên cả 264 mục việc của site cũ, cộng 18 trường hợp biên (lồng nhau, mục thưa, `<a>` thô, chú thích, ký tự HTML): không lệch mục nào, cả khi trang đích chưa lên lẫn khi đã lên. Cách cũ lệch 36 mục.
+- Thử trên Chromium với kho `opus-zero:v1` kiểu cũ, có cả mã "-2": dấu cũ hiện, dấu mới lưu đúng chỗ, tải lại vẫn còn.
+- Chỗ nhỏ còn lại, đã sửa kèm kiểm thử: `nguon:` để trống (null) thì `nhap` coi như không ghi.
 
 ## Kiểm thử
 
