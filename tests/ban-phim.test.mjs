@@ -10,7 +10,8 @@ import { pathToFileURL } from 'node:url';
 import { markdownToHtml } from 'satteri';
 import { opusMarkdown } from '../src/plugins/opus-markdown.mjs';
 import { banPhim, canTaiScript, coAmPiano, docThongSoBanPhim, nguonAmPiano } from '../src/plugins/thanh-phan.mjs';
-import { DAI_MAU, MAU, catMau, mauGanNhat, tanSo } from '../src/scripts/am-thanh.js';
+import { DAI_MAU, GIAI_MA_CUNG_LUC, GIOI_HAN_MAU, MAU, catMau, mauDaGiu, mauGanNhat, taiTruoc, tanSo, trangThai } from '../src/scripts/am-thanh.js';
+import { VUNG_TAI, vungQuanh } from '../src/scripts/ban-phim.js';
 import {
 	GIONG,
 	THU_TU_GIANG,
@@ -197,23 +198,128 @@ test('mẫu âm piano: 30 mẫu từ La0 đến Đô8, mỗi ba nửa cung, đ�
 	assert.equal(mauGanNhat(10), null, 'ngoài đàn quá xa thì không có mẫu');
 });
 
-test('mẫu âm đã giải mã chỉ giữ 4 giây đầu (bộ nhớ), 50 ms cuối nhỏ dần; mẫu ngắn hơn giữ nguyên', () => {
-	const tao = (kenh, dai, tan) => {
-		const du = Array.from({ length: kenh }, () => new Float32Array(dai).fill(0.5));
+test('mẫu âm đã giải mã chỉ giữ 4 giây đầu (bộ nhớ), chép đúng từng giá trị của từng kênh, 50 ms cuối nhỏ dần; mẫu ngắn hơn giữ nguyên', () => {
+	// createBuffer như trình duyệt: bộ đệm mới toàn số 0. Mẫu nguồn: mỗi kênh một dốc riêng, để thấy chép thiếu, chép lệch
+	// hay lẫn kênh (bỏ dòng chép trong catMau thì phép thử hỏng)
+	const rong = (kenh, dai, tan) => {
+		const du = Array.from({ length: kenh }, () => new Float32Array(dai));
 		return { numberOfChannels: kenh, length: dai, sampleRate: tan, getChannelData: (k) => du[k] };
 	};
-	const c = { createBuffer: tao };
-	const day = tao(2, 48000 * 7, 48000);
+	const doc = (kenh, dai, tan) => {
+		const b = rong(kenh, dai, tan);
+		for (let k = 0; k < kenh; k++) b.getChannelData(k).forEach((_, i, a) => (a[i] = (k + 1) * 1e6 + i));
+		return b;
+	};
+	const c = { createBuffer: rong };
+	const tan = 48000;
+	const day = doc(2, tan * 7, tan);
 	const cat = catMau(c, day);
+	const n = tan * DAI_MAU;
+	const mo = tan * 0.05;
 	assert.equal(DAI_MAU, 4);
-	assert.equal(cat.length, 48000 * 4);
+	assert.equal(cat.length, n);
 	assert.equal(cat.numberOfChannels, 2);
-	assert.equal(cat.sampleRate, 48000);
-	assert.equal(cat.getChannelData(1)[1000], 0.5, 'phần đầu giữ nguyên');
-	assert.equal(cat.getChannelData(0)[48000 * 4 - 2400], 0.5, 'chỉ 50 ms cuối nhỏ dần');
-	assert.ok(cat.getChannelData(0).at(-1) < 0.001, 'mẫu nhỏ dần về 0 ở cuối, không có tiếng tách');
-	const ngan = tao(1, 48000 * 3, 48000);
+	assert.equal(cat.sampleRate, tan);
+	for (let k = 0; k < 2; k++) {
+		const ra = cat.getChannelData(k);
+		const vao = day.getChannelData(k);
+		const lech = ra.subarray(0, n - mo).findIndex((x, i) => x !== vao[i]);
+		assert.equal(lech, -1, `kênh ${k}: phần trước 50 ms cuối phải chép nguyên (mẫu ${lech}: ${ra[lech]} thay vì ${vao[lech]})`);
+		for (const i of [0, 1, mo / 2, mo - 1]) {
+			const can = vao[n - mo + i] * (1 - i / mo);
+			assert.ok(Math.abs(ra[n - mo + i] - can) <= can * 1e-6 + 1e-6, `kênh ${k}, mẫu ${n - mo + i}: ${ra[n - mo + i]} thay vì ${can}`);
+		}
+		assert.ok(ra.at(-1) < vao[n - 1] / mo + 1, `kênh ${k}: nhỏ dần về gần 0 ở cuối, không có tiếng tách`);
+		assert.equal(vao[n - 1], (k + 1) * 1e6 + n - 1, `kênh ${k}: mẫu nguồn không bị sửa`);
+	}
+	assert.equal(cat.getChannelData(1)[1000], 2e6 + 1000, 'kênh 2 là kênh 2 của nguồn');
+	const ngan = doc(1, tan * 3, tan);
 	assert.equal(catMau(c, ngan), ngan, 'mẫu ngắn hơn 4 giây giữ nguyên');
+});
+
+test('tải mẫu theo vùng: vùng ±12 nửa cung quanh phím; lần gọi sau và mẫu gần trước; giải mã tối đa 2 mẫu một lúc; giữ tối đa 12 mẫu, bỏ mẫu lâu không dùng; hỏng thì thử lại', async () => {
+	const cac = Array.from({ length: 25 }, (_, i) => 48 + i); // Đô3–Đô5
+	assert.equal(VUNG_TAI, 12);
+	assert.deepEqual(vungQuanh(48, cac), cac.slice(0, 13));
+	assert.deepEqual(vungQuanh(60, cac), cac);
+	assert.deepEqual(vungQuanh(72, cac), cac.slice(12));
+	const soMidi = (url) => MAU.find(([, t]) => `${t}.mp3` === url.split('/').pop())[0];
+	const lay = [];
+	const giai = [];
+	const hongTai = new Set([75]);
+	const hongGiai = new Set([78]);
+	let dang = 0;
+	let toiDa = 0;
+	const rong = (kenh, dai, tan) => {
+		const du = Array.from({ length: kenh }, () => new Float32Array(dai));
+		return { numberOfChannels: kenh, length: dai, sampleRate: tan, getChannelData: (k) => du[k] };
+	};
+	const fetchGoc = globalThis.fetch;
+	globalThis.fetch = async (url) => {
+		const m = soMidi(url);
+		lay.push(m);
+		return hongTai.has(m) ? { ok: false, status: 404 } : { ok: true, arrayBuffer: async () => ({ m }) };
+	};
+	// như trình duyệt mới: vừa gọi lại vừa trả promise; mẫu 16 giây (100 mẫu mỗi giây cho nhẹ)
+	globalThis.OfflineAudioContext = class {
+		createBuffer = rong;
+		decodeAudioData(ab, ok, hong) {
+			giai.push(ab.m);
+			toiDa = Math.max(toiDa, ++dang);
+			return new Promise((xong, loi) =>
+				setTimeout(() => {
+					dang--;
+					if (hongGiai.has(ab.m)) {
+						const e = new Error('mp3 hỏng');
+						hong(e);
+						loi(e);
+					} else {
+						const b = rong(2, 1600, 100);
+						ok(b);
+						xong(b);
+					}
+				}, 0),
+			);
+		}
+	};
+	const loiLot = [];
+	const batLoi = (e) => loiLot.push(e);
+	process.on('unhandledRejection', batLoi);
+	try {
+		// bấm Đô3 rồi, trước khi kịp giải mã, bấm Đô5: vùng của lần bấm sau giải mã trước, mẫu gần phím trước
+		await Promise.all([taiTruoc(vungQuanh(48, cac), 48), taiTruoc(vungQuanh(72, cac), 72)]);
+		assert.deepEqual(giai, [48, 51, 72, 69, 66, 63, 60, 54, 57], 'thứ tự giải mã');
+		assert.deepEqual([...lay].sort((a, b) => a - b), [48, 51, 54, 57, 60, 63, 66, 69, 72], 'mỗi mẫu tải một lần');
+		assert.equal(trangThai().da_tai, 9);
+		assert.equal(mauDaGiu()[0], 48);
+		// dùng lại Đô3: thành mẫu vừa dùng
+		await taiTruoc([48]);
+		assert.equal(mauDaGiu().at(-1), 48);
+		assert.equal(lay.length, 9, 'mẫu đã có thì không tải lại');
+		// đàn 88 phím, bấm ở quãng cao: thêm 9 mẫu, bộ nhớ vẫn giữ tối đa 12, bỏ các mẫu lâu không dùng nhất
+		const dan88 = Array.from({ length: 88 }, (_, i) => 21 + i);
+		await taiTruoc(vungQuanh(96, dan88), 96);
+		assert.equal(GIOI_HAN_MAU, 12);
+		assert.equal(trangThai().da_tai, 12);
+		assert.deepEqual(mauDaGiu().slice(0, 3), [54, 57, 48], 'còn các mẫu dùng gần đây nhất');
+		assert.ok(!mauDaGiu().includes(51), 'mẫu lâu không dùng đã bỏ');
+		// tải hỏng (HTTP 404) hay giải mã hỏng: không lỗi lọt ra ngoài, không giữ mẫu; lần sau tải lại
+		await taiTruoc([75, 78], 75);
+		assert.ok(!mauDaGiu().includes(75) && !mauDaGiu().includes(78));
+		hongTai.clear();
+		hongGiai.clear();
+		await taiTruoc([75, 78], 75);
+		assert.ok(mauDaGiu().includes(75) && mauDaGiu().includes(78), 'thử lại sau khi hỏng');
+		assert.equal(lay.filter((m) => m === 75).length, 2);
+		assert.equal(GIAI_MA_CUNG_LUC, 2);
+		assert.equal(toiDa, 2, 'giải mã tối đa 2 mẫu một lúc');
+		await new Promise((ok) => setTimeout(ok, 10));
+		assert.deepEqual(loiLot, [], 'lỗi "unhandled rejection"');
+	} finally {
+		process.off('unhandledRejection', batLoi);
+		delete globalThis.OfflineAudioContext;
+		globalThis.fetch = fetchGoc;
+	}
 });
 
 test('lưu kỹ năng như site cũ (skill của progress.js): số lần, số đúng, độ chính xác trượt, lịch sử theo ngày', async () => {

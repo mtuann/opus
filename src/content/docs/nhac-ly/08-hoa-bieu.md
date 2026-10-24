@@ -67,7 +67,7 @@ Bấm vào một giọng để xem hóa biểu, các nốt, hợp âm và nghe t
 
 ::cong-cu{ten="circle"}
 
-Vòng quãng năm còn cho biết **giọng nào "gần" nhau**: hai giọng cạnh nhau trên vòng chỉ khác một dấu hóa, nên nhạc chuyển giữa chúng rất tự nhiên. Đó là một lý do chủ đề 2 trong hình thức sonata giọng trưởng thường ở giọng át, ngay bên phải giọng chính.
+Vòng quãng năm còn cho biết **giọng nào "gần" nhau**: hai giọng cạnh nhau trên vòng chỉ khác một dấu hóa, nên nhạc chuyển giữa chúng rất tự nhiên. Chẳng hạn, chủ đề 2 trong hình thức sonata giọng trưởng thường ở giọng át, ngay bên phải giọng chính.
 
 ## Luyện tập
 

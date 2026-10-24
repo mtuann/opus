@@ -46,6 +46,14 @@ nguon:
     bac: 2
     ten: Robert Hutchinson, Music Theory for the 21st-Century Classroom (giáo trình mở, University of Puget Sound), 2.2 The Major Scale
     link: https://musictheory.pugetsound.edu/mt21c/TheMajorScale.html
+  - id: teoria-scale
+    bac: 2
+    ten: "teoría (José Rodríguez Alvira), Reference: scale; cùng các mục major scale, minor scale (bậc viết bằng số La Mã)"
+    link: https://www.teoria.com/en/reference/s/scale.php
+  - id: novas
+    bac: 3
+    ten: Giáo trình môn Lý thuyết âm nhạc cơ bản (tệp PDF trên novaspro.vn; không ghi tác giả, nhà xuất bản); chỉ dùng chứng thực cách gọi ở Việt Nam, không phải nguồn bậc 2
+    link: https://novaspro.vn/upload/files/giao_trinh_mon_ly_thuyet_am_nhac_co_ban.pdf
 nhan_dinh:
   - id: n1
     cau: Gam (scale) là một chuỗi nốt đi lên hoặc đi xuống theo một công thức khoảng cách cố định.
@@ -180,12 +188,14 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: Bài 8 (nhac-ly/08-hoa-bieu, cùng lô, đã chuyển) có mục "Bảng 15 giọng" (15 hàng) và mục "Đọc hóa biểu ra tên giọng".
   - id: n14
-    cau: Mỗi nốt trong gam là một bậc, đánh số La Mã từ I đến VII.
+    cau: 'Mỗi nốt trong gam là một bậc, đánh số từ 1 đến 7; nhiều sách viết bằng số La Mã, I đến VII.'
     loai: dinh-nghia
     nguon:
       - omt-major
-    ket_qua: dung
-    ghi_chu: 'OMT Major Scales, bảng thuật ngữ: scale degree = "The relative position of a note within a diatonic scale. Indicated with a number, 1–7". Cách đánh số: OMT viết số Ả Rập có dấu mũ (1̂ đến 7̂) cho bậc và dành số La Mã cho hợp âm; trang này và src/data/thuat-ngu.yml (ghi chú "Bậc I", "Bậc V", "Bậc IV", "Bậc VII") dùng số La Mã cho bậc, còn bài 7 và 8 viết "bậc 3", "bậc 6", "bậc 7" bằng số Ả Rập: không sai, nhưng cần thống nhất (ghi cho D3-L5).'
+      - teoria-scale
+      - novas
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Mỗi nốt trong gam là một bậc, đánh số La Mã từ I đến VII." Chữ mới: "Mỗi nốt trong gam là một bậc, đánh số từ 1 đến 7 (nhiều sách viết bằng số La Mã, I đến VII, như bảng dưới)." Lý do (lượt 2: khong-chac): nguồn chính đánh số bậc bằng số Ả Rập, bài 7 và 8 cũng viết "bậc 3", "bậc 6", "bậc 7"; số La Mã vẫn hay gặp và bảng của trang giữ I, V, VII, nên câu nói cả hai cách. OMT Major Scales: "Scale degrees are solmization syllables notated by Arabic numerals with carets above them."; bảng thuật ngữ: scale degree = "The relative position of a note within a diatonic scale. Indicated with a number, 1–7"; OMT dành số La Mã cho hợp âm. teoría, Reference: scale: "Each of these notes is called a degree. Each degree has its own name, but is often referred to by a Roman numeral"; Reference: major scale: "except for the degrees III-IV and the degrees VII-I, which are separated by 1 half step". Cách viết ở Việt Nam (chỉ để chứng thực cách gọi): Giáo trình Lý thuyết âm nhạc cơ bản (novaspro.vn), bảng thuật ngữ (tr. 50–51 của tệp PDF): "Degree: bậc (trong thang âm)", "Mediant: âm bậc III của điệu thức". src/data/thuat-ngu.yml cũng ghi "Bậc I", "Bậc V", "Bậc IV", "Bậc VII". Thống nhất một cách viết cho cả site: ghi cho D3-L5. (review D3-L1 yêu cầu)'
     luot_2: khong-chac
     luot_2_nguon: [ https://viva.pressbooks.pub/openmusictheory/chapter/roman-numerals/, https://viva.pressbooks.pub/openmusictheory/chapter/major-scales/, https://www.teoria.com/en/reference/m/minor.php ]
     luot_2_ghi_chu: OMT gọi bậc là scale degrees, ký hiệu số Ả Rập có dấu mũ (1̂–7̂); số La Mã (I–VII) dành cho hợp âm theo bậc của nốt gốc (chương Roman Numerals). teoria.com vẫn gọi 'VI and VII degree' bằng số La Mã, nên câu không sai mà lệch quy ước của nguồn chính; trang 07 và 08 lại dùng 'bậc 3, bậc 6, bậc 7' bằng số Ả Rập. Theo luật 'tên gọi khác nhau thì theo OMT' nên chọn số Ả Rập (1–7) và dùng nhất quán, hoặc ghi rõ 'số La Mã là quy ước của sách tiếng Việt' nếu giữ.
@@ -327,13 +337,13 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ: ../opus-zero/docs/luyen-tap/xay-hop-am.md có khối oz-build; assets/js/build.js SETS.major có tên "Gam trưởng" (ô "Bài tập"). ../opus-zero/docs/luyen-tap/thi-tau.md ("Thị tấu một bè", dòng "Bắt đầu với Đô trưởng, cấp độ 1, tốc độ 60"); assets/js/sight-reading.js: ô "Giọng" có "Đô trưởng", ô "Cấp độ" có "1: đen, trắng, bước gần". Lô chuyển hai trang ấy (D7-L2) phải giữ các lựa chọn này.'
   - id: n30
-    cau: 'Câu hỏi 1: "Công thức gam trưởng là gì?" Đáp án đúng: Cung – Cung – Nửa – Cung – Cung – Cung – Nửa. Sai: Cung – Nửa – Cung – Cung – Nửa – Cung – Cung; Nửa – Cung – Cung – Cung – Nửa – Cung – Cung. Giải thích: công thức thứ hai là của gam thứ tự nhiên.'
+    cau: 'Câu hỏi 1: "Công thức gam trưởng là gì?" Đáp án đúng: Cung – Cung – Nửa – Cung – Cung – Cung – Nửa. Sai: Cung – Nửa – Cung – Cung – Nửa – Cung – Cung; Nửa – Cung – Cung – Cung – Nửa – Cung – Cung. Giải thích: Cung – Nửa – Cung – Cung – Nửa – Cung – Cung là công thức của gam thứ tự nhiên.'
     loai: dinh-nghia
     nguon:
       - omt-major
       - omt-minor
-    ket_qua: dung
-    ghi_chu: 'Đáp án đúng = W‑W‑H‑W‑W‑W‑H (OMT Major Scales). Lựa chọn 2 = W‑H‑W‑W‑H‑W‑W, đúng là gam thứ tự nhiên (OMT Minor Scales: "Natural minor: W‑H‑W‑W‑H‑W‑W"), nên giải thích đúng. Lựa chọn 3 (H‑W‑W‑W‑H‑W‑W) khác công thức gam trưởng ngay ở bước đầu (nửa cung thay vì cung), nên sai.'
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ của lời giải thích: "Công thức thứ hai là của gam thứ tự nhiên." Chữ mới: "Cung – Nửa – Cung – Cung – Nửa – Cung – Cung là công thức của gam thứ tự nhiên." Lý do: site mới trộn thứ tự lựa chọn mỗi lần, nên "công thức thứ hai" có thể chỉ vào lựa chọn khác (lượt 2 cũng lưu ý); câu mới gọi thẳng công thức. Đã rà mọi khối quiz của bài 1–8: không còn lời giải thích nào dựa vào vị trí lựa chọn. Kiểm: đáp án đúng = W‑W‑H‑W‑W‑W‑H (OMT Major Scales). W‑H‑W‑W‑H‑W‑W là gam thứ tự nhiên (OMT Minor Scales: "Natural minor: W‑H‑W‑W‑H‑W‑W"), nên lời giải thích đúng. Lựa chọn H‑W‑W‑W‑H‑W‑W khác công thức gam trưởng ngay ở bước đầu (nửa cung thay vì cung), nên sai. (review D3-L1 yêu cầu)'
     luot_2: dung
     luot_2_nguon: [ https://viva.pressbooks.pub/openmusictheory/chapter/major-scales/, https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/, https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-diatonic-modes-and-the-chromatic-scale/ ]
     luot_2_ghi_chu: "Đáp án khớp OMT, Major Scales (W‑W‑H‑W‑W‑W‑H). Phương án 2 là W‑H‑W‑W‑H‑W‑W = thứ tự nhiên (Minor Scales); phương án 3 (H‑W‑W‑W‑H‑W‑W) là mode Phrygian (Intro to Diatonic Modes). Lưu ý: 'công thức thứ hai' chỉ đúng theo thứ tự trong dữ liệu, mà quiz trộn thứ tự lựa chọn mỗi lần."
@@ -392,8 +402,11 @@ khuong_nhac:
     ghi_chu: Gam Sol trưởng đi lên, K:G (hóa biểu một dấu thăng Fa♯), M:4/4, L:1/4. abcjs đọc G3 A3 B3 C4 | D4 E4 F♯4 G4 (Fa♯ do hóa biểu, không viết ^), trùng 8 phím tô ở bàn phím ngay trên (n10) và n8. Hai ô, mỗi ô 4 phách. abcjs không cảnh báo.
 doi_chu:
   - cu: "Mỗi nốt trong gam là một bậc, đánh số La Mã từ I đến VII. Ba bậc quan trọng nhất:"
-    moi: "Mỗi nốt trong gam là một bậc, đánh số La Mã từ I đến VII. Ba bậc cần nhớ trước:"
-    ly_do: 'n15 (da-bo), n16: "quan trọng nhất" là xếp hạng không kiểm được; câu dẫn mới là lời khuyên học (khuyen-tap), bảng ba bậc giữ nguyên.'
+    moi: "Mỗi nốt trong gam là một bậc, đánh số từ 1 đến 7 (nhiều sách viết bằng số La Mã, I đến VII, như bảng dưới). Ba bậc cần nhớ trước:"
+    ly_do: 'n15 (da-bo), n16: "quan trọng nhất" là xếp hạng không kiểm được; câu dẫn mới là lời khuyên học (khuyen-tap), bảng ba bậc giữ nguyên. n14 (da-sua, review D3-L1 yêu cầu): bậc đánh số 1 đến 7 như Open Music Theory và bài 7, 8; số La Mã là cách nhiều sách viết (teoría), như bảng của trang.'
+  - cu: "câu hỏi: Công thức gam trưởng là gì? | ✓ Cung – Cung – Nửa – Cung – Cung – Cung – Nửa | Cung – Nửa – Cung – Cung – Nửa – Cung – Cung | Nửa – Cung – Cung – Cung – Nửa – Cung – Cung | Công thức thứ hai là của gam thứ tự nhiên."
+    moi: "câu hỏi: Công thức gam trưởng là gì? | ✓ Cung – Cung – Nửa – Cung – Cung – Cung – Nửa | Cung – Nửa – Cung – Cung – Nửa – Cung – Cung | Nửa – Cung – Cung – Cung – Nửa – Cung – Cung | Cung – Nửa – Cung – Cung – Nửa – Cung – Cung là công thức của gam thứ tự nhiên."
+    ly_do: 'n30 (da-sua, review D3-L1 yêu cầu): site mới trộn thứ tự lựa chọn mỗi lần, nên lời giải thích "Công thức thứ hai…" có thể chỉ vào lựa chọn khác; lời giải thích mới gọi thẳng công thức của gam thứ tự nhiên.'
   - cu: Open Music Theory; musictheory.net.
     moi:
       - "Open Music Theory: Major Scales, Scale Degrees, and Key Signatures; Half Steps, Whole Steps, and Accidentals; Minor Scales, Scale Degrees, and Key Signatures; Introduction to Harmony, Cadences, and Phrase Endings."

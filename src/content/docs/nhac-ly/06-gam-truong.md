@@ -55,7 +55,7 @@ Tương tự, **gam Fa trưởng có một dấu giáng: Si♭**. Toàn bộ 15 
 
 ## Tên các bậc
 
-Mỗi nốt trong gam là một **bậc**, đánh số La Mã từ I đến VII. Ba bậc cần nhớ trước:
+Mỗi nốt trong gam là một **bậc**, đánh số từ 1 đến 7 (nhiều sách viết bằng số La Mã, I đến VII, như bảng dưới). Ba bậc cần nhớ trước:
 
 | Bậc | Tên | Vai trò |
 |---|---|---|
@@ -92,7 +92,7 @@ Ngón bấm gam Đô trưởng một quãng tám: tay phải **1-2-3-1-2-3-4-5**
 + Cung – Cung – Nửa – Cung – Cung – Cung – Nửa
 - Cung – Nửa – Cung – Cung – Nửa – Cung – Cung
 - Nửa – Cung – Cung – Cung – Nửa – Cung – Cung
-> Công thức thứ hai là của gam thứ tự nhiên.
+> Cung – Nửa – Cung – Cung – Nửa – Cung – Cung là công thức của gam thứ tự nhiên.
 ? Gam Sol trưởng có dấu hóa nào?
 - Si♭
 + Fa♯

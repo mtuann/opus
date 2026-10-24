@@ -30,9 +30,13 @@ const LUYEN = coLop('oz-lhb ');
 const BAN_PHIM_TO = BAN_PHIM.filter((t) => fs.readFileSync(path.join(DIST, t, 'index.html'), 'utf8').includes('data-k="nghe"'));
 const khongCo = (khoi) => `bản build không có trang nào có ${khoi}`;
 
-/** Đếm nốt được phát: mỗi nốt mẫu âm một AudioBufferSourceNode, mỗi nốt tổng hợp hai OscillatorNode (src/scripts/am-thanh.js). */
+/**
+ * Đếm nốt được phát: mỗi nốt mẫu âm một AudioBufferSourceNode, mỗi nốt tổng hợp hai OscillatorNode (src/scripts/am-thanh.js).
+ * __ozNot: mọi nốt; __ozTongHop: nốt phát âm tổng hợp (mẫu âm chưa có).
+ */
 const DEM_NOT = () => {
 	window.__ozNot = 0;
+	window.__ozTongHop = 0;
 	for (const AC of [window.AudioContext, window.webkitAudioContext].filter(Boolean)) {
 		const { createBufferSource: nguon, createOscillator: daoDong } = AC.prototype;
 		AC.prototype.createBufferSource = function (...a) {
@@ -41,11 +45,21 @@ const DEM_NOT = () => {
 		};
 		AC.prototype.createOscillator = function (...a) {
 			window.__ozNot += 0.5;
+			window.__ozTongHop += 0.5;
 			return daoDong.apply(this, a);
 		};
 	}
 };
 const soNot = (p) => p.evaluate(() => window.__ozNot ?? 0);
+/** Số MIDI của một file mẫu âm (C4.mp3 = 60, Ds4.mp3 = 63), như MAU của src/scripts/am-thanh.js. */
+const TEN_MAU = ['C', 'Cs', 'D', 'Ds', 'E', 'F', 'Fs', 'G', 'Gs', 'A', 'As', 'B'];
+const midiMau = (url) => {
+	const [, t, o] = /\/([A-G]s?)(\d)\.mp3$/.exec(url);
+	return TEN_MAU.indexOf(t) + 12 * (Number(o) + 1);
+};
+const laMp3 = (url) => /\/mau-am\/piano\/[^/]+\.mp3$/.test(url);
+/** Bàn phím có nhiều phím trắng nhất (kịch bản bấm đi lên): trang 1, Đô3–Đô5, 15 phím trắng. */
+const BAN_PHIM_DAI = BAN_PHIM.map((t) => [t, fs.readFileSync(path.join(DIST, t, 'index.html'), 'utf8').split('oz-phim-trang').length]).sort((a, b) => b[1] - a[1])[0]?.[0];
 const coAmThanh = (p) => p.evaluate(() => !!(window.AudioContext || window.webkitAudioContext));
 
 async function moTrang(ctx, trang, chon) {
@@ -90,17 +104,23 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 				return { m: ph.dataset.m, ten: ph.dataset.ten, x: r.left + r.width / 2, y: r.bottom - 12 };
 			});
 			const amThanh = await coAmThanh(p);
-			// mỗi lần chạm chỉ tải mẫu của nốt ấy, không tải cả khoảng phím
+			// chạm lần đầu: tải mẫu của vùng ±12 nửa cung quanh phím (trong khoảng của bàn phím), không tải cả bộ 30 mẫu
 			const taiMp3 = [];
-			p.on('request', (r) => /\/mau-am\/piano\/[^/]+\.mp3$/.test(r.url()) && taiMp3.push(r.url()));
-			const mau = amThanh ? p.waitForResponse((r) => r.url().includes('/mau-am/piano/') && r.url().endsWith('.mp3'), { timeout: 10000 }) : null;
+			p.on('request', (r) => laMp3(r.url()) && taiMp3.push(r.url()));
+			const mau = amThanh ? p.waitForResponse((r) => laMp3(r.url()), { timeout: 10000 }) : null;
 			await p.touchscreen.tap(k.x, k.y);
 			await p.waitForFunction((t) => document.querySelector('.oz-phim-ten')?.textContent === t, k.ten, { timeout: 5000 });
 			if (amThanh) {
 				assert.equal((await mau).status(), 200, 'mẫu âm piano tải được');
 				await p.waitForTimeout(300);
 				assert.equal(await soNot(p), 1, 'chạm một lần, phát đúng một nốt');
-				assert.equal(taiMp3.length, 1, `một lần chạm tải đúng một mẫu (đã tải: ${taiMp3.join(', ')})`);
+				const cac = await el.evaluate((g) => [...g.querySelectorAll('[data-m]')].map((x) => Number(x.dataset.m)));
+				const [thap, cao] = [Math.min(...cac), Math.max(...cac)];
+				const da = taiMp3.map(midiMau);
+				const m = Number(k.m);
+				assert.ok(da.length >= 1 && da.length <= 9 && new Set(da).size === da.length, `tải ${da.length} mẫu: ${da.join(', ')}`);
+				assert.ok(da.some((x) => Math.abs(x - m) <= 1), `chưa tải mẫu của chính phím vừa chạm (${m}): ${da.join(', ')}`);
+				for (const x of da) assert.ok(Math.abs(x - m) <= 13 && x >= thap - 1 && x <= cao + 1, `mẫu ${x} ngoài vùng của phím ${m} (bàn phím ${thap}–${cao})`);
 			}
 			assert.equal(await p.evaluate(() => scrollX), 0, 'chạm phím không cuộn trang');
 			assert.deepEqual(loi, []);
@@ -132,6 +152,92 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 			assert.equal(await el.locator('.bam').count(), 0, 'vuốt mà phím nháy');
 			assert.deepEqual(loi, []);
 			await ctx.close();
+		} finally {
+			await trinhDuyet.close();
+		}
+	});
+
+	// Kịch bản của review mã: bấm lần lượt các phím trắng đi lên, mỗi lần cách 350 ms. Tải mẫu theo từng nốt thì 9/15 lần
+	// là âm tổng hợp (15/15 khi mạng trễ 400 ms); tải trước theo vùng thì chỉ lần đầu, và lần thứ hai khi mạng chậm.
+	test(`${ten}: bàn phím: bấm lần lượt các phím trắng đi lên (Đô3–Đô5, mỗi lần cách 350 ms): tối đa 2 lần âm tổng hợp, cả khi mạng trễ 400 ms`, { skip: !BAN_PHIM_DAI && khongCo('bàn phím') }, async (t) => {
+		const trinhDuyet = await loai.launch();
+		try {
+			for (const tre of [0, 400]) {
+				const ctx = await nguCanh(trinhDuyet, ten, { w: 1280, h: 800, camUng: false });
+				if (tre) await ctx.route(/\/mau-am\/piano\/[^/]+\.mp3$/, async (r) => (await new Promise((ok) => setTimeout(ok, tre)), r.continue()));
+				const { p, el, loi } = await moTrang(ctx, BAN_PHIM_DAI, '.oz-ban-phim');
+				if (!(await coAmThanh(p))) return t.skip('trình duyệt không có Web Audio');
+				const taiMp3 = [];
+				p.on('request', (r) => laMp3(r.url()) && taiMp3.push(midiMau(r.url())));
+				const phim = await el.evaluate((g) =>
+					[...g.querySelectorAll('.oz-phim-trang')]
+						.map((k) => {
+							const r = k.getBoundingClientRect();
+							return { m: Number(k.dataset.m), x: r.left + r.width / 2, y: r.bottom - 12 };
+						})
+						.sort((a, b) => a.m - b.m),
+				);
+				for (const [i, k] of phim.entries()) {
+					// 350 ms là nhịp bấm của người học trong kịch bản, không phải chờ cho xong việc gì
+					if (i) await p.waitForTimeout(350);
+					await p.mouse.click(k.x, k.y);
+				}
+				await p.waitForFunction((n) => window.__ozNot >= n, phim.length, { timeout: 5000 });
+				const tongHop = await p.evaluate(() => window.__ozTongHop);
+				t.diagnostic(`mạng trễ ${tre} ms: ${tongHop}/${phim.length} lần âm tổng hợp; tải ${taiMp3.length} mẫu`);
+				assert.equal(await soNot(p), phim.length, 'mỗi lần bấm một nốt');
+				if (tongHop > 2) {
+					// trình duyệt không giải mã được mp3 (máy thiếu bộ giải mã): không đo được kịch bản này
+					const giaiDuoc = await p.evaluate(async (u) => {
+						try {
+							await new OfflineAudioContext(2, 1, 44100).decodeAudioData(await (await fetch(u)).arrayBuffer());
+							return true;
+						} catch {
+							return false;
+						}
+					}, `${await goc()}mau-am/piano/C4.mp3`);
+					if (!giaiDuoc) return t.skip('trình duyệt này không giải mã được mp3');
+				}
+				assert.ok(tongHop <= 2, `${tongHop}/${phim.length} lần âm tổng hợp (mạng trễ ${tre} ms)`);
+				assert.ok(taiMp3.length <= 9 && new Set(taiMp3).size === taiMp3.length, `tải ${taiMp3.length} mẫu (tối đa 9, mỗi mẫu một lần): ${taiMp3.join(', ')}`);
+				assert.deepEqual(loi, []);
+				await ctx.close();
+			}
+		} finally {
+			await trinhDuyet.close();
+		}
+	});
+
+	// Nút nghe trong lúc chờ mẫu âm (mạng chậm): người dùng cảm ứng không thấy con trỏ, nên phải có vạch chờ nhìn thấy được;
+	// nút không đổi cỡ; người dùng chọn giảm chuyển động thì vạch đứng yên.
+	test(`${ten}: nút nghe đang chờ mẫu âm: có vạch chờ ở đáy nút, nút không đổi cỡ; giảm chuyển động thì vạch đứng yên`, { skip: !BAN_PHIM_TO.length && khongCo('bàn phím có phím được tô') }, async () => {
+		const trinhDuyet = await loai.launch();
+		try {
+			for (const giam of [false, true]) {
+				const ctx = await trinhDuyet.newContext({ viewport: { width: 360, height: 780 }, hasTouch: true, isMobile: ten !== 'firefox', reducedMotion: giam ? 'reduce' : 'no-preference' });
+				await ctx.route(/\/mau-am\/piano\/[^/]+\.mp3$/, async (r) => (await new Promise((ok) => setTimeout(ok, 1200)), r.continue()));
+				const { p, el } = await moTrang(ctx, BAN_PHIM_TO[0], '.oz-ban-phim:has([data-k="nghe"])');
+				const nut = el.locator('[data-k="nghe"]');
+				const truoc = await nut.boundingBox();
+				await nut.tap();
+				await p.waitForFunction(() => document.querySelector('.oz-ban-phim [data-k="nghe"][aria-busy="true"]'), null, { timeout: 5000 });
+				const cho = await nut.evaluate((b) => {
+					const s = getComputedStyle(b, '::after');
+					const r = b.getBoundingClientRect();
+					return { content: s.content, cao: s.height, rong: parseFloat(s.width), trong: b.clientWidth, ten: s.animationName, vien: getComputedStyle(b).borderBottomStyle, w: r.width, h: r.height };
+				});
+				assert.equal(cho.content, '""', 'không có vạch chờ');
+				assert.equal(cho.cao, '3px');
+				assert.ok(Math.abs(cho.w - truoc.width) < 0.5 && Math.abs(cho.h - truoc.height) < 0.5, `nút đổi cỡ: ${truoc.width}×${truoc.height} thành ${cho.w}×${cho.h}`);
+				if (giam) {
+					assert.equal(cho.ten, 'none', 'giảm chuyển động mà vạch vẫn chạy');
+					assert.ok(Math.abs(cho.rong - cho.trong) < 1, `giảm chuyển động: vạch đứng yên, dài hết nút (${cho.rong} / ${cho.trong} px)`);
+					assert.equal(cho.vien, 'dashed');
+				} else assert.equal(cho.ten, 'oz-cho');
+				await p.waitForFunction(() => !document.querySelector('.oz-ban-phim [data-k="nghe"][aria-busy]'), null, { timeout: 8000 });
+				assert.ok(['none', 'normal', ''].includes(await nut.evaluate((b) => getComputedStyle(b, '::after').content)), 'vạch chờ còn sau khi tải xong');
+				await ctx.close();
+			}
 		} finally {
 			await trinhDuyet.close();
 		}

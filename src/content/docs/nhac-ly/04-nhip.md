@@ -9,7 +9,7 @@ Các phách trong âm nhạc thường được nhóm lại theo chu kỳ, trong
 
 ## Số chỉ nhịp
 
-Ở đầu bản nhạc, ngay sau khóa, có hai con số xếp chồng gọi là **số chỉ nhịp**:
+Ở đầu bản nhạc, sau khóa (và sau [hóa biểu](/opus/nhac-ly/08-hoa-bieu/), nếu có), có hai con số xếp chồng gọi là **số chỉ nhịp**:
 
 - **Số trên**: mỗi ô nhịp có **bao nhiêu phách**.
 - **Số dưới**: hình nốt nào **được tính là 1 phách** (4 = nốt đen, 2 = nốt trắng, 8 = nốt móc đơn).

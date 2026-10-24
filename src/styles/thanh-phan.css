@@ -1006,9 +1006,37 @@ html.oz-stand-open .main-pane {
 		width: clamp(calc(var(--phim) * 44px + 4px), 100%, calc(var(--phim) * 52px + 4px));
 	}
 }
-/* nút đang chờ tải mẫu âm (aria-busy, không khóa nút để tiêu điểm không mất) */
+/* Nút đang chờ tải mẫu âm (aria-busy; không khóa nút, để tiêu điểm không mất): con trỏ chờ, và một vạch chạy qua lại ở đáy
+   nút, nhìn thấy được cả trên màn hình cảm ứng (không có con trỏ). Vạch vẽ đè lên nút, nút không đổi cỡ, chữ không mờ đi.
+   Người dùng chọn giảm chuyển động: vạch đứng yên, viền nút thành nét đứt. */
 .oz-btn[aria-busy='true'] {
 	cursor: progress;
+	position: relative;
+	overflow: hidden;
+}
+.oz-btn[aria-busy='true']::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 40%;
+	height: 3px;
+	background: currentColor;
+	animation: oz-cho 0.8s ease-in-out infinite alternate;
+}
+@keyframes oz-cho {
+	to {
+		transform: translateX(150%);
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	.oz-btn[aria-busy='true'] {
+		border-style: dashed;
+	}
+	.oz-btn[aria-busy='true']::after {
+		width: 100%;
+		animation: none;
+	}
 }
 .oz-phim-trang,
 .oz-phim-den {

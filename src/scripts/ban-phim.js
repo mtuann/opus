@@ -3,9 +3,17 @@
 // ngay, không xô bố cục; ở đây thêm phần bấm được: bấm phím thì phát tiếng (src/scripts/am-thanh.js) và đọc tên nốt; bàn
 // phím máy tính: Tab vào bàn phím đàn, mũi tên chọn phím, Enter hay Space để bấm; nút nghe các nốt được tô.
 // Trên màn hình cảm ứng, phím phát tiếng khi chạm (click), không phải khi vừa đặt ngón: vuốt để cuộn trang hay cuộn ngang
-// bàn phím không làm phím kêu. Chuột và bút thì phát ngay khi nhấn. Mỗi lần bấm chỉ tải mẫu âm của nốt ấy (am-thanh.js).
+// bàn phím không làm phím kêu. Chuột và bút thì phát ngay khi nhấn.
+// Mẫu âm tải theo vùng (am-thanh.js): khi người học bắt đầu dùng bàn phím (rê chuột vào lần đầu, phím nhận tiêu điểm, đặt
+// ngón, bấm) thì tải trước mẫu của các phím trong khoảng ±VUNG_TAI nửa cung quanh phím ấy; bấm sang vùng khác thì vùng tải
+// mở rộng theo. Nhờ vậy chỉ lần bấm đầu (và lần sau đó, nếu mạng chậm) còn là âm tổng hợp.
 // Không có âm thanh (trình duyệt không tạo được AudioContext) thì phím vẫn nháy và vẫn đọc tên nốt.
-import { chuanBi, choiNot, layNgCanh } from './am-thanh.js';
+import { chuanBi, choiNot, layNgCanh, taiTruoc } from './am-thanh.js';
+
+/** Nửa bề rộng vùng tải trước quanh phím người học đang dùng, tính bằng nửa cung (một quãng tám mỗi bên: tối đa 9 mẫu). */
+export const VUNG_TAI = 12;
+/** Các nốt trong `cac` (số MIDI các phím của bàn phím) cách nốt m không quá VUNG_TAI nửa cung. */
+export const vungQuanh = (m, cac) => cac.filter((x) => Math.abs(x - m) <= VUNG_TAI);
 
 /**
  * Thêm phần bấm được cho một hình bàn phím (svg.oz-phim do veBanPhim dựng). `thongBao`: chỗ đọc tên nốt vừa bấm (vùng
@@ -14,6 +22,9 @@ import { chuanBi, choiNot, layNgCanh } from './am-thanh.js';
  */
 export function ganBanPhim(svg, { thongBao, khiBam } = {}) {
 	const phim = [...svg.querySelectorAll('[data-m]')].sort((a, b) => a.dataset.m - b.dataset.m);
+	const cacNot = phim.map((k) => Number(k.dataset.m));
+	/** Tải trước mẫu âm của vùng quanh phím k (mẫu gần k trước). */
+	const taiQuanh = (k) => taiTruoc(vungQuanh(Number(k.dataset.m), cacNot), Number(k.dataset.m));
 	svg.setAttribute('role', 'group');
 	svg.setAttribute('aria-label', `${svg.getAttribute('aria-label')}. Dùng phím mũi tên để chọn phím, Enter để nghe.`);
 	const dau = phim.find((k) => k.classList.contains('to')) ?? phim[0];
@@ -30,19 +41,33 @@ export function ganBanPhim(svg, { thongBao, khiBam } = {}) {
 	};
 	const bam = (k) => {
 		const m = Number(k.dataset.m);
-		// chỉ tải mẫu của nốt này (lần đầu có thể còn là âm tổng hợp); không tải cả khoảng phím: bàn phím 88 phím sẽ giải mã
-		// đủ 30 mẫu ngay lần chạm đầu
+		// mở rộng vùng tải trước theo phím vừa bấm (mẫu của chính nốt này trước); nốt này, nếu mẫu chưa có, phát âm tổng hợp
+		taiQuanh(k);
 		choiNot(m, undefined, 1.2);
 		nhay(m);
 		if (thongBao) thongBao.textContent = k.dataset.ten;
 		khiBam?.(m);
 	};
 	const phimCua = (e) => e.target.closest?.('[data-m]');
-	// chuột, bút: phát ngay khi nhấn; click ngay sau đó (cùng phím) bỏ qua
+	// rê chuột (hay bút) vào bàn phím lần đầu: tải trước quanh phím dưới con trỏ, để lần bấm đầu đã có tiếng piano
+	let daRe = false;
+	svg.addEventListener('pointerover', (e) => {
+		const k = phimCua(e);
+		if (daRe || !k || e.pointerType === 'touch') return;
+		daRe = true;
+		taiQuanh(k);
+	});
+	// phím nhận tiêu điểm (Tab, mũi tên): tải trước quanh phím ấy
+	svg.addEventListener('focusin', (e) => {
+		const k = phimCua(e);
+		if (k) taiQuanh(k);
+	});
+	// chuột, bút: phát ngay khi nhấn; click ngay sau đó (cùng phím) bỏ qua. Chạm: chỉ tải trước (có thể là bắt đầu vuốt)
 	let vuaNhan = null;
 	svg.addEventListener('pointerdown', (e) => {
 		const k = phimCua(e);
-		if (!k || e.pointerType === 'touch' || e.button > 0) return;
+		if (!k || e.button > 0) return;
+		if (e.pointerType === 'touch') return void taiQuanh(k);
 		vuaNhan = k;
 		bam(k);
 	});
