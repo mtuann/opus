@@ -76,7 +76,9 @@ test('khối bọc có chức năng ở site cũ thêm ô "chưa chuyển"; lớ
 	assert.equal(trang.than, '<div class="oz-lesson-status">\n\n::cong-cu{ten="lesson-status"}\n\n1. [Bài 1](/opus/nhac-ly/01-cao-do-ten-not/)\n\n</div>');
 	assert.match(trang.canhBao.join(), /khối oz-lesson-status có chức năng ở site cũ/);
 	assert.match(chuyen('<div class="oz-piano-level" markdown>\n\n- [ ] Việc\n\n</div>').than, /::cong-cu\{ten="piano-level"\}/);
-	const css = chuyen('<div class="oz-paths" markdown>\n\n<div class="oz-path" markdown>\n\nChữ.\n\n</div>\n\n</div>');
+	// thiếu thuộc tính markdown: không thêm được ô, nhưng phải báo
+	assert.match(chuyen('<div class="oz-lesson-status"><ol><li>Bài 1</li></ol></div>').canhBao.join(), /oz-lesson-status có chức năng ở site cũ .* không có thuộc tính markdown/);
+	const css =chuyen('<div class="oz-paths" markdown>\n\n<div class="oz-path" markdown>\n\nChữ.\n\n</div>\n\n</div>');
 	assert.deepEqual(css.canhBao.filter((c) => c.startsWith('lớp')).length, 2);
 	assert.doesNotMatch(css.than, /cong-cu/);
 	const inRa = chuyen('<div class="oz-print-only" markdown>\n\n*Bản in.*\n\n</div>');

@@ -300,15 +300,21 @@ export function chuyenTrang(md, { trang, moTa, banGhi }) {
 	const dau = { title: tieuDe, ...(moTa && { description: moTa }), ...(banGhi && { tac_pham: banGhi.slug }), ...giu };
 	const moi = chuyenThan(dong, { trang, banGhi, canhBao });
 	while (moi.length && moi.at(-1) === '') moi.pop();
-	// lớp oz- còn sót trong HTML thô: site cũ có CSS hay JavaScript cho lớp này, site mới thì chưa
+	// lớp oz- còn sót trong HTML thô: site cũ có CSS hay JavaScript cho lớp này, site mới thì chưa. Khối có chức năng
+	// chỉ được thêm ô "chưa chuyển" khi có thuộc tính markdown; thiếu thì cũng phải báo.
 	const conSot = new Set(
 		moi
 			.join('\n')
 			.match(/class="[^"]*"/g)
 			?.flatMap((c) => c.slice(7, -1).split(/\s+/))
-			.filter((c) => c.startsWith('oz-') && !LOP_DA_CO.has(c) && !BOC_CO_CHUC_NANG[c.slice(3)]),
+			.filter((c) => c.startsWith('oz-') && !LOP_DA_CO.has(c) && !(BOC_CO_CHUC_NANG[c.slice(3)] && moi.includes(`::cong-cu{ten="${c.slice(3)}"}`))),
 	);
-	for (const c of conSot) canhBao.push(`lớp ${c} còn trong HTML thô: site cũ có CSS cho lớp này, site mới chưa có (lô của trang thêm CSS, hay bỏ lớp)`);
+	for (const c of conSot)
+		canhBao.push(
+			BOC_CO_CHUC_NANG[c.slice(3)]
+				? `khối ${c} có chức năng ở site cũ (${BOC_CO_CHUC_NANG[c.slice(3)]}) nhưng không có thuộc tính markdown: chưa thêm ô "chưa chuyển", thêm tay ::cong-cu{ten="${c.slice(3)}"}`
+				: `lớp ${c} còn trong HTML thô: site cũ có CSS cho lớp này, site mới chưa có (lô của trang thêm CSS, hay bỏ lớp)`,
+		);
 	return { noiDung: `---\n${stringify(dau, { lineWidth: 0 })}---\n\n${moi.join('\n')}\n`, canhBao };
 }
 

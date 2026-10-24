@@ -122,3 +122,23 @@ test('CSS đã nén không có khai báo rỗng (bộ nén biến `border-image:
 	assert.deepEqual(rong, []);
 });
 
+test('phần chỉ để in (.oz-print-only, giữ từ site cũ khi chuyển trang) ẩn trên màn hình, hiện khi in, trong CSS đã nén', () => {
+	trangChu();
+	const dir = path.join(DIST, '_astro');
+	let manHinh = fs
+		.readdirSync(dir)
+		.filter((f) => f.endsWith('.css'))
+		.map((f) => fs.readFileSync(path.join(dir, f), 'utf8'))
+		.join('\n');
+	// tách các khối @media (đếm ngoặc) khỏi phần còn lại; giữ nội dung các khối @media print
+	const khiIn = [];
+	for (let m; (m = /@media([^{]*)\{/.exec(manHinh)); ) {
+		let i = m.index + m[0].length;
+		for (let sau = 1; sau && i < manHinh.length; i++) sau += { '{': 1, '}': -1 }[manHinh[i]] ?? 0;
+		if (m[1].trim() === 'print') khiIn.push(manHinh.slice(m.index + m[0].length, i - 1));
+		manHinh = manHinh.slice(0, m.index) + manHinh.slice(i);
+	}
+	assert.match(manHinh, /(^|[},\n])\.oz-print-only\{display:none\}/, 'trên màn hình: thiếu .oz-print-only{display:none}');
+	assert.ok(khiIn.some((k) => /(^|[},])\.oz-print-only\{display:block\}/.test(k)), 'khi in: thiếu .oz-print-only{display:block} trong @media print');
+});
+
