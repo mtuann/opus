@@ -202,6 +202,11 @@ header.header {
 		inset: min(-0.25rem, calc(50% - 22px)) min(-0.5rem, calc(50% - 22px));
 	}
 }
+/* Không có link mạng xã hội (social trong astro.config.mjs) thì Starlight vẫn để ô trống, kèm vạch ngăn (::after) đứng
+   lẻ bên trái ô chọn giao diện. Ẩn ô khi trống; có link lại thì vạch tự hiện lại. */
+header.header .social-icons:empty {
+	display: none;
+}
 /* Starlight để ô chọn giao diện rộng 6,25em (viết cho tiếng Anh), chữ "Tự động" bị cắt */
 starlight-theme-select select {
 	--sl-select-width: 7.25em;

@@ -46,11 +46,18 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 						// trang 404 trả mã 404 là đúng; file khác của site thì phải có
 						p.on('response', (r) => r.status() >= 400 && r.url() !== dauTrang && loi.push(`mã ${r.status()}: ${r.url()}`));
 						await p.goto(dauTrang, { waitUntil: 'load' });
-						await cuonHet(p);
+						await cuonHet(p, loi);
 						assert.deepEqual(loi, [], 'lỗi JavaScript, lỗi ghi ra console, hay file tải hỏng');
 						const tran = await p.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
 						assert.ok(tran <= 0, `tràn ngang ${tran} px`);
 						if (co.camUng) assert.deepEqual(await p.evaluate(nhoHon44), [], 'vùng bấm dưới 44 px');
+						// Ô trống ở thanh trên vẫn chiếm chỗ (ô link mạng xã hội kèm vạch ngăn, khi không có link)
+						const oTrong = await p.evaluate(() =>
+							[...document.querySelectorAll('header.header .right-group > :not(script)')]
+								.filter((e) => !e.childElementCount && !e.textContent.trim() && getComputedStyle(e).display !== 'none')
+								.map((e) => `${e.tagName.toLowerCase()}.${[...e.classList].join('.')}`),
+						);
+						assert.deepEqual(oTrong, [], 'ô trống ở thanh trên');
 						await p.close();
 					});
 				}

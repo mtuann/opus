@@ -42,20 +42,37 @@ export async function goc() {
 }
 export const dongMayChu = () => mayChu?.dong();
 
-/** Cuộn hết trang (để các khối ở xa khởi tạo), rồi chờ khuông vẽ xong, câu hỏi và khối nghe dựng xong. */
-export async function cuonHet(p) {
+/**
+ * Chạy trong trang: các khối chưa dựng xong (khuông chưa vẽ, câu hỏi chưa có nút, khối nghe còn rỗng). `ten`: trả tên các
+ * khối ấy; không thì cuộn tới khối đầu tiên còn chờ, và trả true khi không còn khối nào chờ.
+ */
+function khoiCho(ten) {
+	const cho = [
+		...[...document.querySelectorAll('.abc-notation')].filter((e) => !e.dataset.rendered),
+		...[...document.querySelectorAll('.oz-quiz')].filter((e) => !e.querySelector('button')),
+		...[...document.querySelectorAll('.oz-listen')].filter((e) => !e.childElementCount),
+	];
+	if (ten) return cho.map((e) => `${e.className} "${e.textContent.trim().slice(0, 30)}"`);
+	cho[0]?.scrollIntoView({ block: 'center' });
+	return !cho.length;
+}
+
+/**
+ * Cuộn hết trang (để các khối ở xa khởi tạo), rồi chờ khuông vẽ xong, câu hỏi và khối nghe dựng xong. Máy chậm (WebKit
+ * trên máy của GitHub) có thể bỏ lỡ một khối khi cuộn nhanh qua nó: IntersectionObserver chỉ xét lúc trình duyệt vẽ lại,
+ * mà trình duyệt đang bận (như lúc nạp abcjs). Người đọc cuộn tới gần khối thì khối khởi tạo; lúc chờ, phép thử cũng
+ * cuộn tới khối đầu tiên còn chờ, như người đọc. Chờ quá lâu thì lỗi ghi khối nào còn chờ, kèm `loi` (lỗi trên trang mà
+ * phép thử gom được).
+ */
+export async function cuonHet(p, loi = []) {
 	const cao = await p.evaluate(() => document.documentElement.scrollHeight);
 	for (let y = 0; y < cao; y += 400) {
 		await p.evaluate((y) => scrollTo(0, y), y);
 		await p.waitForTimeout(40);
 	}
-	await p.waitForFunction(
-		() =>
-			[...document.querySelectorAll('.abc-notation')].every((e) => e.dataset.rendered) &&
-			[...document.querySelectorAll('.oz-quiz')].every((e) => e.querySelector('button')) &&
-			[...document.querySelectorAll('.oz-listen')].every((e) => e.childElementCount),
-		null,
-		{ timeout: 20000 },
-	);
+	await p.waitForFunction(khoiCho, false, { timeout: 20000, polling: 250 }).catch(async (e) => {
+		const cho = await p.evaluate(khoiCho, true);
+		throw new Error(`khối chưa dựng xong sau 20 giây: ${cho.join('; ')}; lỗi trên trang: ${loi.join(' | ') || 'không có'}`, { cause: e });
+	});
 	await p.evaluate(() => scrollTo(0, 0));
 }
