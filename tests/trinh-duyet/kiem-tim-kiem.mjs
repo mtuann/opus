@@ -5,6 +5,7 @@ import { after, test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { chromium } from 'playwright';
 import { DIST, TRINH_DUYET, dongMayChu, goc } from './chung.mjs';
 
@@ -48,14 +49,26 @@ const chiCoDan = () =>
 		})
 		.map((f) => '/opus/' + f.replace(/index\.html$/, ''));
 
-/** Trang (địa chỉ, bỏ #mục) của kết quả tìm, theo thứ tự, không trùng. */
-async function tim(p, cau) {
-	return p.evaluate(async (cau) => {
-		const pf = await import('/opus/pagefind/pagefind.js');
-		const kq = await pf.search(cau);
-		const ds = await Promise.all(kq.results.slice(0, 20).map((r) => r.data()));
-		return { so: kq.results.length, trang: [...new Set(ds.map((d) => d.url.split('#')[0]))] };
-	}, cau);
+/**
+ * Tùy chọn xếp hạng mà ô tìm kiếm của Starlight đưa cho Pagefind: astro.config.mjs không đặt `pagefind`, nên là mặc định
+ * của Starlight. API dùng cùng tùy chọn thì thứ hạng như ô tìm kiếm (review D1.8: không có thì "lay tren lay duoi" ra
+ * hạng 8 thay vì hạng 1).
+ */
+const { PagefindConfigDefaults } = await import(pathToFileURL(path.resolve(import.meta.dirname, '../../node_modules/@astrojs/starlight/dist/schemas/pagefind.js')).href);
+const XEP_HANG = PagefindConfigDefaults().ranking;
+
+/** Trang (địa chỉ, bỏ #mục) của `toiDa` kết quả đầu (không ghi: mọi kết quả), theo thứ tự, không trùng. */
+async function tim(p, cau, toiDa) {
+	return p.evaluate(
+		async ([cau, toiDa, xepHang]) => {
+			const pf = await import('/opus/pagefind/pagefind.js');
+			await pf.options({ ranking: xepHang });
+			const kq = await pf.search(cau);
+			const ds = await Promise.all(kq.results.slice(0, toiDa ?? undefined).map((r) => r.data()));
+			return { so: kq.results.length, trang: [...new Set(ds.map((d) => d.url.split('#')[0]))] };
+		},
+		[cau, toiDa ?? null, XEP_HANG],
+	);
 }
 
 test('tìm kiếm qua pagefind.js của bản build', async (t) => {
@@ -66,11 +79,12 @@ test('tìm kiếm qua pagefind.js của bản build', async (t) => {
 		const co = BO.filter(([, trang]) => coTrang(trang));
 		for (const [cau, trang] of co)
 			await t.test(`"${cau}" ra ${trang} trong 5 kết quả đầu`, async () => {
-				const ds = (await tim(p, cau)).trang.slice(0, 5);
+				const ds = (await tim(p, cau, 5)).trang;
 				assert.ok(ds.includes('/opus/' + trang), `5 kết quả đầu: ${ds.join(', ')}`);
 			});
 		const dan = chiCoDan();
 		await t.test(`"dan" ra cả trang chỉ có chữ "đ…an" như "đàn" (${dan.length} trang)`, { skip: !dan.length && 'bản build chưa có trang chỉ có "đàn" mà không có "dan"' }, async () => {
+			// mọi kết quả, không chỉ những kết quả đầu: site lớn thì có hàng chục trang như vậy
 			const { trang } = await tim(p, 'dan');
 			assert.deepEqual(dan.filter((x) => !trang.includes(x)), [], `kết quả: ${trang.join(', ')}`);
 		});

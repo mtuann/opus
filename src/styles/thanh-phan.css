@@ -249,12 +249,11 @@
 	.oz-ref-toggle {
 		min-height: 44px;
 	}
-	/* mọi dòng tiêu đề của khối thu gọn trong bài (hộp thông tin tác phẩm, khối <details> chuyển từ ??? của site cũ);
-	   flex giữ mũi tên ::before của Starlight cạnh chữ */
+	/* mọi dòng tiêu đề của khối thu gọn trong bài (hộp thông tin tác phẩm, khối <details> chuyển từ ??? của site cũ):
+	   đệm trên dưới cho dòng chữ cao đủ 44 px. Không dùng flex: flex bỏ dấu cách quanh chữ có thẻ ("Xem **đáp án** bài"
+	   thành "Xemđáp ánbài"). Mũi tên ::before của Starlight vẫn đứng giữa dòng (vertical-align: middle). */
 	.sl-markdown-content summary {
-		display: flex;
-		align-items: center;
-		min-height: 44px;
+		padding-block: calc((44px - 1lh) / 2);
 	}
 	.abc-audio .abcjs-inline-audio {
 		flex-wrap: wrap;

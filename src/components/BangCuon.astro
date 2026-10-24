@@ -1,14 +1,29 @@
 ---
 // Bảng rộng hơn khung thì cuộn ngang (Starlight); người dùng bàn phím phải tới được bảng để cuộn (axe:
-// scrollable-region-focusable). Chỉ bảng đang tràn mới nhận focus, để bảng vừa khung không thành điểm dừng Tab thừa.
+// scrollable-region-focusable). Chỉ bảng đang tràn mới nhận focus, để bảng vừa khung không thành điểm dừng Tab thừa;
+// bảng nhận focus có tên theo mục chứa nó, để máy đọc màn hình đọc ra.
 // MarkdownContent.astro chỉ đưa thành phần này vào trang có bảng.
 ---
 
 <script>
+	/** Tiêu đề h2–h4 gần nhất đứng trước bảng, theo thứ tự trong trang. */
+	const tenBang = (b: HTMLTableElement) => {
+		const truoc = [...document.querySelectorAll<HTMLElement>('.sl-markdown-content :is(h2, h3, h4)')].filter(
+			(h) => h.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING,
+		);
+		const h = truoc.at(-1)?.textContent?.trim();
+		return h ? `Bảng ở mục ${h}` : 'Bảng';
+	};
 	const gan = () =>
 		document.querySelectorAll<HTMLTableElement>('.sl-markdown-content table').forEach((b) => {
-			if (b.scrollWidth > b.clientWidth + 1) b.tabIndex = 0;
-			else b.removeAttribute('tabindex');
+			if (b.scrollWidth > b.clientWidth + 1) {
+				b.tabIndex = 0;
+				// vùng nhận focus cần tên: "Bảng ở mục <tiêu đề gần nhất phía trên>"
+				if (!b.hasAttribute('aria-label')) b.setAttribute('aria-label', tenBang(b)), (b.dataset.tenTuDong = '');
+			} else {
+				b.removeAttribute('tabindex');
+				if ('tenTuDong' in b.dataset) b.removeAttribute('aria-label'), delete b.dataset.tenTuDong;
+			}
 		});
 	gan();
 	addEventListener('load', gan);
