@@ -365,7 +365,7 @@ test('nhap: đưa kết quả lượt 2 vào hồ sơ (kèm link, câu đúng); 
 		assert.equal(hs.nhan_dinh[2].luot_2, undefined);
 		assert.match(fs.readFileSync(f, 'utf8'), /^# Hồ sơ kiểm định/, 'giữ dòng chú thích đầu hồ sơ');
 		assert.match(ra, /đã nhập 2 kết quả lượt 2 vào 1 hồ sơ: 1 dung, 1 sai, 0 khong-chac/);
-		assert.match(ra, /còn 1 nhận định trong các hồ sơ ấy chưa có lượt 2/);
+		assert.match(ra, /các hồ sơ ấy còn 1 nhận định cần lượt 2/);
 		assert.match(ra, /cần review \(1\):\n {2}du-lieu\/nha-soan-nhac\/a n2: lượt 1 da-sua, lượt 2 sai/);
 
 		// nhập lại: phần của lượt 2 thay hẳn, không sót câu đúng hay link của lần trước
@@ -442,7 +442,7 @@ test('câu về chính site (ve-site) không qua lượt 2 nhưng cần ghi_chu;
 			id,
 			cau: `Câu ${id}.`,
 			loai,
-			...(loai === 'khuyen-tap' ? { ket_qua: 'khong-can-nguon' } : loai === 've-site' ? { ket_qua: 'dung', ghi_chu: 'đã đếm trên trang' } : { ket_qua: 'dung', nguon: ['s1'] }),
+			...(loai === 'khuyen-tap' ? { ket_qua: 'khong-can-nguon' } : loai === 've-site' ? { ket_qua: 'dung', ghi_chu: 'đã đếm trên trang', review: 'dung' } : { ket_qua: 'dung', nguon: ['s1'] }),
 			...them,
 		});
 		const hs = (ds) => ({ trang: 'src/content/docs/bat-dau/a.md', tang: 'loi', lan: [{ so: 1, nguoi: { luot_1: 'A', luot_2: 'B', review: 'C', kiem_mau: 'D' } }], nguon: [{ id: 's1' }], nhan_dinh: ds, khuong_nhac: [] });
@@ -453,6 +453,12 @@ test('câu về chính site (ve-site) không qua lượt 2 nhưng cần ghi_chu;
 		assert.equal(MAU_KHUYEN_TAP, 3);
 		assert.equal(loi(du), '');
 		assert.match(loi([du[0], { ...du[1], ghi_chu: undefined }, ...du.slice(2)]), /câu về chính site cần ghi_chu/);
+		// không cho dùng ve-site để né lượt 2: không kèm nguồn ngoài, phải có kết quả review, không có ở bản ghi dữ liệu
+		assert.match(loi([du[0], { ...du[1], nguon: ['s1'] }, ...du.slice(2)]), /câu về chính site không ghi nguồn ngoài/);
+		assert.match(loi([du[0], { ...du[1], review: undefined }, ...du.slice(2)]), /câu về chính site cần kết quả review/);
+		assert.match(loi([du[0], { ...du[1], review: 'sai' }, ...du.slice(2)]), /review ghi sai mà kết quả dung/);
+		const hsDuLieu = { ban_ghi: 'nha-soan-nhac/a', lan: hs([]).lan, nguon: [{ id: 's1' }], nhan_dinh: [du[1]] };
+		assert.match(loiHoSo(hsDuLieu, 'du-lieu/nha-soan-nhac/a', goc).join(' | '), /bản ghi dữ liệu không có câu về chính site/);
 		assert.match(loi([du[0], du[1], kt(1, 'dung'), kt(2, 'dung'), kt(3), kt(4), kt(5)]), /lượt 2 phải kiểm mẫu ít nhất 3 câu \(mới có 2\)/);
 		assert.match(loi([du[0], du[1], kt(1, 'sai'), kt(2, 'dung'), kt(3, 'dung'), kt(4), kt(5)]), /mẫu lượt 2 có câu sai, nên lượt 2 phải kiểm mọi lời khuyên tập \(mới có 3\/5\)/);
 		assert.match(loi([nd('n1', 'dinh-nghia'), ...du.slice(1)]), /nhận định n1: chưa có kết quả lượt 2/);
@@ -461,6 +467,28 @@ test('câu về chính site (ve-site) không qua lượt 2 nhưng cần ghi_chu;
 		lenh(['xuat', 'bat-dau/a', '--ra', 'xuat.yml', '--goc', goc], ROOT, () => {});
 		const x = parse(fs.readFileSync(path.join(goc, 'xuat.yml'), 'utf8'));
 		assert.deepEqual([x.filter((n) => n.loai === 've-site').length, x.filter((n) => n.loai === 'khuyen-tap').length, x.filter((n) => n.loai === 'dinh-nghia').length], [0, 3, 1]);
+		// --con-lai sau khi nhập: mẫu lời khuyên tập có câu sai thì ra mọi câu còn lại; nhận định đã có lượt 2 thì không ra nữa
+		ghi('kiem-dinh/bat-dau/a.yml', stringify(hs([du[0], du[1], kt(1, 'sai'), kt(2, 'dung'), kt(3, 'dung'), kt(4), kt(5)])));
+		lenh(['xuat', 'bat-dau/a', '--con-lai', '--ra', 'xuat.yml', '--goc', goc], ROOT, () => {});
+		assert.deepEqual(parse(fs.readFileSync(path.join(goc, 'xuat.yml'), 'utf8')).map((n) => n.id), ['k4', 'k5']);
+		// kiểm mẫu của chủ repo: mọi nhận định, kèm ghi chú (câu về site: đã kiểm ở đâu)
+		lenh(['xuat', 'bat-dau/a', '--mau', '20', '--ra', 'mau.yml', '--goc', goc], ROOT, () => {});
+		const mau = parse(fs.readFileSync(path.join(goc, 'mau.yml'), 'utf8'));
+		assert.equal(mau.length, 7);
+		assert.equal(mau.find((n) => n.id === 's1').ghi_chu, 'đã đếm trên trang');
+		// trang Đọc thêm: câu về site không vào mẫu lượt 2, cũng không tính vào cỡ mẫu
+		ghi('src/content/docs/lich-su/b.md', '---\ntitle: B\n---\n\nChữ.\n');
+		ghi('src/data/trang.yml', '- id: bat-dau/a\n  tang: loi\n- id: lich-su/b\n  tang: ngoai-vi\n');
+		const nv = [1, 2, 3, 4].map((i) => nd(`n${i}`, 'lich-su')).concat([nd('s1', 've-site'), nd('s2', 've-site')]);
+		ghi('kiem-dinh/lich-su/b.yml', stringify({ ...hs(nv), trang: 'src/content/docs/lich-su/b.md', tang: 'ngoai-vi' }));
+		lenh(['xuat', 'lich-su/b', '--ra', 'xuat.yml', '--goc', goc], ROOT, () => {});
+		assert.deepEqual(parse(fs.readFileSync(path.join(goc, 'xuat.yml'), 'utf8')).map((n) => n.loai), ['lich-su', 'lich-su', 'lich-su', 'lich-su']);
+		const loiNv = (ds) => loiHoSo({ ...hs(ds), trang: 'src/content/docs/lich-su/b.md', tang: 'ngoai-vi' }, 'lich-su/b', goc).join(' | ');
+		assert.equal(loiNv(nv.map((n) => (n.loai === 'lich-su' ? { ...n, luot_2: 'dung' } : n))), '', 'đủ mẫu: 4 nhận định cần nguồn (ít hơn 5)');
+		// trang Đọc thêm: lời khuyên tập nằm trong mẫu chung của trang, không lấy mẫu riêng
+		const nvKt = [...nv.map((n) => (n.loai === 'lich-su' ? { ...n, luot_2: 'dung' } : n)), kt(1), kt(2)];
+		assert.match(loiNv(nvKt), /trang Đọc thêm: lượt 2 phải kiểm mẫu ít nhất 5 nhận định \(mới có 4\)/);
+		assert.doesNotMatch(loiNv(nvKt), /lời khuyên tập:/);
 	} finally {
 		fs.rmSync(goc, { recursive: true, force: true });
 	}

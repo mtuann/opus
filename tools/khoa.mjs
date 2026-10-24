@@ -8,15 +8,16 @@
 //                                                     từ chối; khóa từng phần cũ của bản ghi phải còn khớp
 //   node tools/khoa.mjs mo <mục> --ly-do "…"          gỡ khóa; ghi lý do và thêm một lần mới (để điền) vào lan của hồ sơ
 //   node tools/khoa.mjs tinh [<mục>…]                 in mã băm; không có mục thì kiểm mọi mục đã khóa (lệch thì thoát 1)
-//   node tools/khoa.mjs xuat <lô hay trang>… [--mau <n>] [--ra <file>]
-//       danh sách nhận định cho lượt 2 (không nguồn, không kết quả; bỏ câu về chính site; trang Đọc thêm chỉ 5 nhận định
-//       ngẫu nhiên mỗi trang; lời khuyên tập chỉ 3 câu ngẫu nhiên mỗi trang hay bản ghi);
+//   node tools/khoa.mjs xuat <lô hay trang>… [--mau <n> | --con-lai] [--ra <file>]
+//       danh sách nhận định cho lượt 2 (không nguồn, không kết quả; bỏ câu về chính site; trang Đọc thêm chỉ 5 nhận
+//       định ngẫu nhiên mỗi trang; lời khuyên tập chỉ 3 câu mỗi trang hay bản ghi); --con-lai: chỉ phần còn thiếu sau khi
+//       đã nhập kết quả (mẫu chưa đủ, hay mẫu có câu sai nên phải kiểm mọi câu còn lại);
 //       --mau n: n nhận định chọn ngẫu nhiên, kèm nguồn,
 //       cho chủ repo kiểm mẫu. Lô ("D3-L2", trang lấy từ plans/lam-lai/anh-xa.md) thì mặc định ghi vào
 //       plans/lam-lai/bao-cao/d3-l2-nhan-dinh.yml (với --mau: d3-l2-kiem-mau.yml); trang thì in ra màn hình
 //   node tools/khoa.mjs nhap <file kết quả lượt 2>
 //       đưa kết quả lượt 2 (danh sách { trang, id, luot_2: dung|sai|khong-chac, nguon: [link], cau_dung?, ghi_chu? },
-//       chuan-kiem-dinh.md mục 8) vào hồ sơ: luot_2 của từng nhận định, kèm luot_2_nguon, luot_2_ghi_chu. Kiểm hết trước,
+//       plans/lam-lai/loi-giao/luot-2-trang.md) vào hồ sơ: luot_2 của từng nhận định, kèm luot_2_nguon, luot_2_ghi_chu. Kiểm hết trước,
 //       một dòng sai thì không ghi gì. In các nhận định cần review (hai lượt khác nhau, lượt 1 đã sửa, bỏ hay chưa có kết quả)
 //       và số nhận định còn thiếu lượt 2 trong các hồ sơ ấy
 // <mục>: đường dẫn trang ("nhac-ly/10-hop-am-ba", "nhac-ly/index", "index", "404") hay bản ghi "du-lieu/<bộ>/<id>"
@@ -125,8 +126,15 @@ export function loiHoSo(hs, muc, goc) {
 		if (!LUOT_2.includes(n.luot_2) && !(mauLuot2(n) && n.luot_2 == null)) loi.push(`${ten}: chưa có kết quả lượt 2 (luot_2: ${LUOT_2.join(', ')})`);
 		if ((n.ket_qua === 'da-sua' || n.ket_qua === 'da-bo') && !n.ghi_chu) loi.push(`${ten}: ${n.ket_qua} cần ghi_chu`);
 		if (n.ket_qua === 'khong-can-nguon' && n.loai !== 'khuyen-tap') loi.push(`${ten}: khong-can-nguon chỉ cho loai khuyen-tap`);
-		// câu về chính site: kiểm trên trang, thành phần hay dữ liệu đã khóa; ghi_chu ghi đã kiểm ở đâu, thay cho nguồn
-		if (n.loai === VE_SITE && !n.ghi_chu) loi.push(`${ten}: câu về chính site cần ghi_chu ghi đã kiểm trên trang, thành phần hay dữ liệu nào`);
+		// câu về chính site: review kiểm trên trang, thành phần hay dữ liệu đã khóa và ghi kết quả (review); ghi_chu ghi đã
+		// kiểm ở đâu. Không qua lượt 2, nên không cho dùng để né lượt 2: không có ở bản ghi dữ liệu, không kèm nguồn ngoài
+		if (n.loai === VE_SITE) {
+			if (bg) loi.push(`${ten}: bản ghi dữ liệu không có câu về chính site (mọi điều trong dữ liệu cần nguồn)`);
+			if (n.nguon?.length) loi.push(`${ten}: câu về chính site không ghi nguồn ngoài; có điều cần nguồn ngoài thì xếp loại khác (qua lượt 2)`);
+			if (!n.ghi_chu) loi.push(`${ten}: câu về chính site cần ghi_chu ghi đã kiểm trên trang, thành phần hay dữ liệu nào`);
+			if (!['dung', 'sai'].includes(n.review)) loi.push(`${ten}: câu về chính site cần kết quả review (review: dung hay sai)`);
+			if (n.review === 'sai' && n.ket_qua === 'dung') loi.push(`${ten}: review ghi sai mà kết quả dung: sửa câu (da-sua) hay bỏ (da-bo)`);
+		}
 		if (n.ket_qua !== 'khong-can-nguon' && n.ket_qua !== 'da-bo' && n.loai !== VE_SITE) {
 			if (!n.nguon?.length) loi.push(`${ten}: thiếu nguon`);
 			for (const id of n.nguon ?? []) if (!nguon.has(id)) loi.push(`${ten}: nguồn "${id}" không có trong danh sách nguon`);
@@ -162,6 +170,23 @@ export function loiHoSo(hs, muc, goc) {
 		}
 	}
 	return loi;
+}
+
+/**
+ * Nhận định của hồ sơ cần lượt 2, theo mức của tầng (chuan-kiem-dinh.md mục 3): mọi nhận định cần nguồn; lời khuyên tập
+ * và trang Đọc thêm thì một mẫu (`chon(ds, k)` chọn k câu); câu về chính site không qua lượt 2. `conLai`: chỉ phần còn
+ * thiếu, tính cả kết quả lượt 2 đã nhập: mẫu chưa đủ thì thêm cho đủ, mẫu đã có câu sai thì mọi câu còn lại.
+ */
+function conCanLuot2(hs, chon = chonNgauNhien, conLai = false) {
+	const co = (n) => conLai && LUOT_2.includes(n.luot_2);
+	const mau = (nhom, k) => {
+		const chua = nhom.filter((n) => !co(n));
+		if (conLai && nhom.some((n) => n.luot_2 === 'sai')) return chua;
+		return chon(chua, Math.max(0, Math.min(k, nhom.length) - nhom.filter(co).length));
+	};
+	const ds = (hs.nhan_dinh ?? []).filter((n) => n.loai !== VE_SITE);
+	if (hs.tang === 'ngoai-vi') return mau(ds, MAU_NGOAI_VI);
+	return [...ds.filter((n) => n.loai !== 'khuyen-tap' && !co(n)), ...mau(ds.filter((n) => n.loai === 'khuyen-tap'), MAU_KHUYEN_TAP)];
 }
 
 /** Mã lô chuẩn ("d3-l2" -> "D3-L2"), hay null nếu không phải mã lô. */
@@ -344,6 +369,8 @@ export function lenh(thamSo, goc = GOC, in_ = console.log) {
 	}
 	if (viec === 'xuat') {
 		const mau = Number(lay('--mau') ?? 0);
+		const iConLai = con.indexOf('--con-lai');
+		const conLai = iConLai >= 0 && Boolean(con.splice(iConLai, 1));
 		const lo = con.length === 1 && maLo(con[0]);
 		const ra = lay('--ra') ?? (lo ? `plans/lam-lai/bao-cao/${lo.toLowerCase()}-${mau ? 'kiem-mau' : 'nhan-dinh'}.yml` : undefined);
 		const tatCa = [];
@@ -352,17 +379,14 @@ export function lenh(thamSo, goc = GOC, in_ = console.log) {
 			if (!fs.existsSync(f)) throw new Error(`${t}: chưa có hồ sơ`);
 			const hs = parse(fs.readFileSync(f, 'utf8')) ?? {};
 			const nguon = new Map((hs.nguon ?? []).map((n) => [n.id, n]));
-			// lượt 2 của trang Đọc thêm: chỉ mẫu ngẫu nhiên
-			// lượt 2: bỏ câu về chính site; trang Đọc thêm chỉ mẫu ngẫu nhiên; lời khuyên tập chỉ mẫu MAU_KHUYEN_TAP câu
-			const moi = hs.nhan_dinh ?? [];
-			const canNguon = moi.filter((n) => n.loai !== VE_SITE);
-			const cho = mau
-				? moi
-				: hs.tang === 'ngoai-vi'
-					? chonNgauNhien(canNguon, MAU_NGOAI_VI)
-					: [...canNguon.filter((n) => n.loai !== 'khuyen-tap'), ...chonNgauNhien(canNguon.filter((n) => n.loai === 'khuyen-tap'), MAU_KHUYEN_TAP)];
+			// kiểm mẫu của chủ repo: mọi nhận định; lượt 2: những nhận định còn cần lượt 2 (conCanLuot2)
+			const cho = mau ? (hs.nhan_dinh ?? []) : conCanLuot2(hs, chonNgauNhien, conLai);
 			for (const n of cho)
-				tatCa.push(mau ? { trang: t, id: n.id, cau: n.cau, loai: n.loai, nguon: (n.nguon ?? []).map((id) => ({ ten: nguon.get(id)?.ten, link: nguon.get(id)?.link })), ket_qua_luot_1: n.ket_qua } : { trang: t, id: n.id, cau: n.cau, loai: n.loai });
+				tatCa.push(
+					mau
+						? { trang: t, id: n.id, cau: n.cau, loai: n.loai, nguon: (n.nguon ?? []).map((id) => ({ ten: nguon.get(id)?.ten, link: nguon.get(id)?.link })), ket_qua_luot_1: n.ket_qua, ...(n.ghi_chu && { ghi_chu: n.ghi_chu }) }
+						: { trang: t, id: n.id, cau: n.cau, loai: n.loai },
+				);
 		}
 		const ds = mau ? chonNgauNhien(tatCa, mau) : tatCa;
 		const chu = stringify(ds, { lineWidth: 0 });
@@ -434,11 +458,11 @@ export function lenh(thamSo, goc = GOC, in_ = console.log) {
 				if (d.luot_2 !== 'dung' || !['dung', 'khong-can-nguon'].includes(kq)) canReview.push(`${d.trang} ${d.id}: lượt 1 ${kq ?? 'chưa có kết quả'}, lượt 2 ${d.luot_2}`);
 			}
 			ghiRa.push([f, doc.toString({ lineWidth: 0 })]);
-			thieu += (doc.get('nhan_dinh')?.items ?? []).filter((x) => !LUOT_2.includes(x.get('luot_2'))).length;
+			thieu += conCanLuot2(doc.toJSON(), (ds, k) => ds.slice(0, k), true).length;
 		}
 		for (const [f, chu] of ghiRa) fs.writeFileSync(f, chu);
 		in_(`đã nhập ${ds.length} kết quả lượt 2 vào ${hoSo.size} hồ sơ: ${LUOT_2.map((k) => `${dem[k]} ${k}`).join(', ')}`);
-		if (thieu) in_(`còn ${thieu} nhận định trong các hồ sơ ấy chưa có lượt 2 (trang Đọc thêm chỉ cần mẫu)`);
+		if (thieu) in_(`các hồ sơ ấy còn ${thieu} nhận định cần lượt 2 (theo mức của tầng): xuất phần còn thiếu bằng node tools/khoa.mjs xuat … --con-lai`);
 		if (canReview.length) in_(`cần review (${canReview.length}):\n  ${canReview.join('\n  ')}`);
 		return 0;
 	}

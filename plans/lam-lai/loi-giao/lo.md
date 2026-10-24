@@ -50,6 +50,6 @@ Bạn làm lô **<D…-L…>** trong `plans/lam-lai/README.md` của repo opus.
    - chỗ chưa chắc;
    - kết quả kiểm thử;
    - nguồn đã dùng;
-   - tối đa 4 ảnh tiêu biểu (ảnh đủ do CI chụp).
+   - tối đa 4 ảnh tiêu biểu. Ảnh đủ do CI chụp khi người gộp push nhánh.
 4. Xuất danh sách cho lượt 2: `node tools/khoa.mjs xuat <D…-L…>`. Lệnh tự bỏ câu về chính site và lấy mẫu lời khuyên tập.
 5. Trả lời ngắn: đã làm gì, còn gì, cần chủ repo quyết gì.

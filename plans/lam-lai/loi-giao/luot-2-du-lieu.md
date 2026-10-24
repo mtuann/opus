@@ -4,7 +4,7 @@ Như `luot-2-trang.md`, với các chỗ khác sau.
 
 - **Đầu vào:** `<file danh sách>`, xuất bằng `node tools/khoa.mjs xuat du-lieu/<bộ>/<id> … --ra <file>`. `trang` là `du-lieu/<bộ>/<id>`.
 - **Không mở `src/data/`:** kiểm câu nhận định, không phải file dữ liệu.
-- **Không mở** `kiem-dinh/` và `plans/lam-lai/bao-cao/<việc>/`.
+- **Không mở** `kiem-dinh/` và `plans/lam-lai/bao-cao/<việc>/` (trừ file danh sách được giao).
 - **Nguồn:**
   - người: IMSLP, BnF, LoC (`.json`), GND (qua deutsche-biographie.de), trang nghệ sĩ của hãng đĩa hay đại diện;
   - nhạc sĩ Việt Nam: `hoinhacsi.vn`, cơ quan chính thức; báo chính thức khi không có nguồn tốt hơn, ghi rõ.

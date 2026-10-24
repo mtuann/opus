@@ -33,13 +33,18 @@ jobs:
           ban: xem
       # ảnh chụp các trang nhánh đã đổi và trang mẫu, 360 và 1280 px, để review xem (tools/chup-anh.mjs); không commit vào
       # repo. Tải về: gh run download <số lần chạy> -n anh-chup
+      # ảnh chỉ để xem: bước này hỏng thì không làm hỏng lần chạy
       - name: Chụp ảnh trang cho review
         if: ${{ !cancelled() }}
+        continue-on-error: true
         run: node tools/chup-anh.mjs anh-chup
       - uses: actions/upload-artifact@v7
         if: ${{ !cancelled() }}
+        continue-on-error: true
         with:
           name: anh-chup
           path: anh-chup
-          retention-days: 30
+          # giữ ngắn cho khỏi đầy dung lượng lưu tệp của repo; chạy lại lần chạy thì ghi đè
+          retention-days: 7
+          overwrite: true
           if-no-files-found: ignore

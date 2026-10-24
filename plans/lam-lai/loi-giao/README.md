@@ -19,7 +19,7 @@ Chủ repo chọn ngày 24/10/2026, sau đợt 2. Lý do: đợt 2 chạm giới
 - Lượt 2 chia phần khi một phần quá khoảng 150 nhận định; ít hơn thì một agent.
 - Các lô làm lần lượt. Chỉ chồng phần việc nhẹ (chờ CI, chờ chủ repo kiểm mẫu) với việc của lô sau.
 - Review mã chỉ đọc diff và chạy đúng phép thử liên quan; CI chạy đủ.
-- Ảnh chụp do CI chụp (`tools/chup-anh.mjs`, tệp của lần chạy `anh-chup`). Báo cáo giữ tối đa 4 ảnh tiêu biểu.
+- Ảnh chụp do CI chụp khi push nhánh (`tools/chup-anh.mjs`, tệp `anh-chup` của lần chạy, giữ 7 ngày). Báo cáo giữ tối đa 4 ảnh tiêu biểu.
 
 ## Quy tắc chung cho mọi lời giao
 

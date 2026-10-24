@@ -18,7 +18,7 @@ Nhận định là mọi câu có thể đúng hoặc sai. Mỗi nhận định 
 | `lich-su` | bối cảnh, ảnh hưởng, người đề tặng | có |
 | `so-lieu` | con số khác (số chương, độ dài, tốc độ máy đếm nhịp do tác giả ghi) | có |
 | `khuyen-tap` | "Tập hai tay riêng trước, chậm." | không, nhưng không được trái với trang lõi khác |
-| `ve-site` | câu nói về chính site: "Bài kiểm tra có 28 câu", "xem trang chặng 3", "site chia 7 chặng", số bài, link sang trang khác | không; review kiểm thẳng trên trang, thành phần hay dữ liệu đã khóa, `ghi_chu` ghi đã kiểm ở đâu. Không qua lượt 2 |
+| `ve-site` | câu nói về chính site: "Bài kiểm tra có 28 câu", "xem trang chặng 3", "site chia 7 chặng", số bài, link sang trang khác | không; review kiểm thẳng trên trang, thành phần hay dữ liệu đã khóa và ghi `review: dung` hay `sai`; `ghi_chu` ghi đã kiểm ở đâu. Không qua lượt 2. Không kèm nguồn ngoài, không có ở hồ sơ bản ghi dữ liệu (công cụ khóa chặn) |
 
 - Câu viết chung chung đến mức không kiểm được ("bài này rất hay") thì viết lại cho cụ thể hoặc bỏ.
 - **Lời khuyên dính tới sức khỏe** (đau, chấn thương, tư thế gây hại, thính lực) không xếp `khuyen-tap`. Xếp loại cần nguồn (`quy-tac`, `so-lieu`), nên vẫn đủ hai lượt.
@@ -71,7 +71,7 @@ Mức kiểm theo tầng của trang (`tang` trong `src/data/trang.yml`), chủ 
 
 1. **Lượt 1 (agent A):** tách trang thành danh sách nhận định và danh sách khuông nhạc; kiểm từng mục; ghi nguồn và kết quả vào hồ sơ; sửa trang nếu sai (mỗi chỗ sửa có nguồn).
 2. **Lượt 2 (agent B, độc lập):** nhận danh sách nhận định do `node tools/khoa.mjs xuat` tách ra (bỏ câu về chính site; lời khuyên tập và trang Đọc thêm: chỉ mẫu ngẫu nhiên), không kèm nguồn và kết luận của lượt 1. Không dùng chung trang nguồn đã tải với lượt 1, để giữ độc lập; tự tìm nguồn và cho kết quả. Sonnet đủ cho việc đối chiếu; chỗ khó (nguồn mâu thuẫn, nhận định cần đọc bản nhạc) dùng Opus.
-3. **Review** (mặc định Claude; không phải người đã làm lượt 1 hay lượt 2): mọi nhận định hai lượt cho kết quả khác nhau, mọi chỗ đã sửa, mọi khuông nhạc ví dụ soạn riêng, và mọi câu về chính site (kiểm trên trang, thành phần, dữ liệu).
+3. **Review** (mặc định Claude; không phải người đã làm lượt 1 hay lượt 2): mọi nhận định hai lượt cho kết quả khác nhau, mọi chỗ đã sửa, mọi khuông nhạc ví dụ soạn riêng, và mọi câu về chính site (kiểm trên trang, thành phần, dữ liệu, rồi ghi `review`). **Soát nhãn:** câu `ve-site` thật sự chỉ nói về site, không chứa điều cần nguồn ngoài; câu `khuyen-tap` không chứa điều về sức khỏe hay sự kiện cần nguồn. Nhãn sai thì đổi loại và đưa câu ấy vào lượt 2 (`node tools/khoa.mjs xuat … --con-lai`).
 4. **Bạn đọc tóm tắt và kiểm mẫu:** đọc bản tóm tắt hồ sơ trong báo cáo của lô, xem ngẫu nhiên khoảng 5 nhận định mỗi lô (`node tools/khoa.mjs xuat <lô> --mau 5`), ghi kết quả vào hồ sơ. Mục đích là biết có tin được các lượt agent không; mẫu sai thì kiểm lại cả lô. Bạn không kiểm tay mọi nhận định: hơn 200 trang thì bạn thành chỗ nghẽn.
 
 Trang Lõi không giữ chi tiết mau cũ (tên ứng dụng, giá, thiết bị, link bản thu, sự kiện): lượt 1 viết lại câu ấy cho bền, hay chuyển sang trang tham chiếu có hạn và link tới đó (chủ repo chọn ngày 24/10/2026; danh sách câu đã thấy: `plans/lam-lai/bao-cao/d2-bang-tang.md`, mục 4 của phần phân tích). Trang Đọc thêm mà mẫu lượt 2 có nhận định sai thì lượt 2 kiểm cả trang.

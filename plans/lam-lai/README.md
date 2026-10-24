@@ -275,11 +275,11 @@ Khung, lõi, công cụ và tham chiếu đã lên site; đợt này thêm tác 
 1. Bạn giao lô bằng `loi-giao/lo.md`, chọn model theo phần việc (`loi-giao/README.md`).
 2. Agent chuyển trang bằng `tools/chuyen/`, tách dữ liệu, kiểm định lượt 1, ghi hồ sơ (chưa khóa). Câu về chính site ghi loại `ve-site`, có ghi chú đã kiểm ở đâu.
 3. Agent khác kiểm định lượt 2 độc lập (`loi-giao/luot-2-trang.md`), mức theo tầng của trang (`../ben-vung/chuan-kiem-dinh.md` mục 3). Danh sách do `node tools/khoa.mjs xuat` tách: bỏ câu về chính site, lấy mẫu lời khuyên tập. Kết quả vào hồ sơ bằng `node tools/khoa.mjs nhap`.
-4. Người gộp push nhánh lô lên GitHub; `test.yml` chạy trên bản xem: build, schema, khóa, link, khuông nhạc, kiểm thử trình duyệt, trợ năng, Lighthouse trang mẫu. Phải đạt trước khi gộp. CI chụp từng trang của nhánh ở 360 px và 1280 px (tệp `anh-chup` của lần chạy, giữ 30 ngày). Báo cáo chỉ giữ tối đa 4 ảnh tiêu biểu.
+4. Người gộp push nhánh lô lên GitHub; `test.yml` chạy trên bản xem: build, schema, khóa, link, khuông nhạc, kiểm thử trình duyệt, trợ năng, Lighthouse trang mẫu. Phải đạt trước khi gộp. CI chụp từng trang của nhánh ở 360 px và 1280 px (tệp `anh-chup` của lần chạy, giữ 7 ngày). Báo cáo chỉ giữ tối đa 4 ảnh tiêu biểu.
 5. Review báo cáo, hồ sơ và ảnh chụp: chỗ hai lượt lệch nhau, mọi chỗ sửa, câu về chính site. Chỗ cần sửa trả về agent trên cùng nhánh. Phần mã của lô review theo mục "Ba mức review" (`loi-giao/review-ma.md`).
 6. Bạn đọc tóm tắt hồ sơ trong báo cáo của lô và xem ngẫu nhiên khoảng 5 nhận định (`node tools/khoa.mjs xuat <lô> --mau 5`); agent khóa; bạn gộp vào `main` và push. Trang của lô lên site thật.
 
-Hai lô cùng đợt làm song song được nếu không chung file. Các đợt làm lần lượt, theo thứ tự ở bảng Tiến độ. Cuối mỗi đợt, người review xét cả đợt theo "Xong khi" và cập nhật bảng Tiến độ.
+Các lô làm lần lượt (chủ repo chọn ngày 24/10/2026, sau đợt 2); chỉ chồng phần việc nhẹ, như chờ CI hay chờ chủ repo kiểm mẫu. Các đợt làm lần lượt, theo thứ tự ở bảng Tiến độ. Cuối mỗi đợt, người review xét cả đợt theo "Xong khi" và cập nhật bảng Tiến độ.
 
 ## Lời giao việc mẫu
 
@@ -311,6 +311,6 @@ Chỉ đổi phần trong `<>`. Lời giao của đợt 1 và của lô trước
 
 ## Review những gì
 
-- **Mỗi lô:** phạm vi file; hồ sơ đủ; trường dữ liệu mà trang của lô hiện ra đã kiểm định (khóa cùng trang); mọi chỗ hai lượt lệch nhau và mọi chỗ đã sửa; trang dựng đúng trên ảnh chụp; thành phần mới có kiểm thử; dữ liệu tách ra khớp trang cũ trong `../opus-zero/`; `git -C ../opus-zero diff --stat` trống.
+- **Mỗi lô:** phạm vi file; soát nhãn nhận định (câu `ve-site` chỉ nói về site; `khuyen-tap` không có điều về sức khỏe hay sự kiện cần nguồn) và ghi `review` cho mọi câu `ve-site`; hồ sơ đủ; trường dữ liệu mà trang của lô hiện ra đã kiểm định (khóa cùng trang); mọi chỗ hai lượt lệch nhau và mọi chỗ đã sửa; trang dựng đúng trên ảnh chụp; thành phần mới có kiểm thử; dữ liệu tách ra khớp trang cũ trong `../opus-zero/`; `git -C ../opus-zero diff --stat` trống.
 - **Đợt 1:** chạy lại build và kiểm thử; đọc schema, plugin, script chuyển; so chữ ba trang thử với site cũ; thử dữ liệu hỏng; bản thật không có trang chưa khóa; link "sắp có" và trang 404; đo Lighthouse.
 - **Cuối mỗi đợt:** tiêu chí "Xong khi"; số trang đã khóa khớp `anh-xa.md`; site thật hiện đúng phần đã khóa, không link chết.

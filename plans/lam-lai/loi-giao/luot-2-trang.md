@@ -8,7 +8,7 @@ Bạn kiểm định **lượt 2**, độc lập với lượt 1, cho phần nh�
 
 **Không mở:**
 - `kiem-dinh/` (hồ sơ của lượt 1);
-- `plans/lam-lai/bao-cao/`;
+- `plans/lam-lai/bao-cao/`, trừ file danh sách được giao;
 - trang trong `src/content/docs/`.
 
 Không chạy lệnh git. Không dùng trang nguồn mà lượt 1 đã tải.
