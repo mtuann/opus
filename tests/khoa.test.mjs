@@ -34,7 +34,9 @@ test('mã băm của bản ghi không đổi theo thứ tự khóa, ở mọi c�
 test('mọi mục trong kiem-dinh/khoa.json còn khớp mã băm và có hồ sơ đủ', () => {
 	assert.deepEqual(kiemKhoa(), []);
 	const { trang, ban_ghi } = docKhoa();
-	assert.ok('index' in trang && '404' in trang, 'trang chủ tạm và trang 404 phải được khóa (D1.6)');
+	// trang 404 luôn khóa (D1.6). Trang chủ thì một lô có thể mở khóa để làm lại (D2-L1) rồi khóa lại trước khi gộp; bản
+	// thật không có trang chủ thì khung.test.mjs hỏng ở deploy.yml
+	assert.ok('404' in trang, 'trang 404 phải được khóa (D1.6)');
 	for (const muc of [...Object.keys(trang), ...Object.keys(ban_ghi).map((k) => `du-lieu/${k}`)]) {
 		const f = path.join(ROOT, 'kiem-dinh', `${muc.split('#')[0]}.yml`);
 		assert.ok(fs.existsSync(f), `${muc}: thiếu hồ sơ kiem-dinh/${muc}.yml`);
@@ -251,7 +253,7 @@ test('lệnh chạy được qua đường dẫn có liên kết tượng trưng
 	try {
 		fs.symlinkSync(ROOT, path.join(tam, 'repo'));
 		const ra = execFileSync(process.execPath, [path.join(tam, 'repo', 'tools', 'khoa.mjs'), 'tinh'], { encoding: 'utf8' });
-		assert.match(ra, /^index\s+sha256:\S+\s+khớp$/m);
+		assert.match(ra, /^404\s+sha256:\S+\s+khớp$/m);
 	} finally {
 		fs.rmSync(tam, { recursive: true, force: true });
 	}
@@ -277,7 +279,7 @@ test('nguồn trang viết theo cách công cụ khóa hiểu: chỉ .md, không
 test('bản thật bỏ trang chưa khóa khỏi bộ docs; bản xem giữ mọi trang', async () => {
 	const tao = () => {
 		const muc = new Map([
-			['index', { filePath: 'src/content/docs/index.md' }],
+			['404', { filePath: 'src/content/docs/404.md' }],
 			['nhac-ly/x', { filePath: 'src/content/docs/nhac-ly/x.md' }],
 		]);
 		return { store: { entries: () => [...muc], delete: (id) => muc.delete(id) }, muc };
@@ -287,11 +289,11 @@ test('bản thật bỏ trang chưa khóa khỏi bộ docs; bản xem giữ mọ
 		delete process.env.OPUS_BAN;
 		const that = tao();
 		await locTheoBan({ name: 'thu', load: async () => {} }).load(that);
-		assert.deepEqual([...that.muc.keys()], ['index'], 'bản thật chỉ giữ trang đã khóa');
+		assert.deepEqual([...that.muc.keys()], ['404'], 'bản thật chỉ giữ trang đã khóa');
 		process.env.OPUS_BAN = 'xem';
 		const xem = tao();
 		await locTheoBan({ name: 'thu', load: async () => {} }).load(xem);
-		assert.deepEqual([...xem.muc.keys()], ['index', 'nhac-ly/x']);
+		assert.deepEqual([...xem.muc.keys()], ['404', 'nhac-ly/x']);
 	} finally {
 		if (cu === undefined) delete process.env.OPUS_BAN;
 		else process.env.OPUS_BAN = cu;
