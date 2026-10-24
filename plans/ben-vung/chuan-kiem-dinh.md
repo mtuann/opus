@@ -24,19 +24,30 @@ Câu viết chung chung đến mức không kiểm được ("bài này rất ha
 ## 2. Thứ bậc nguồn
 
 1. **Bản nhạc:** bản in đã hết bảo hộ trên IMSLP; bản gõ lại có giấy phép mở trên Mutopia. Dùng cho cấu trúc, số ô, trích đoạn, giọng.
-2. **Tài liệu chuẩn:** giáo trình nhạc lý (nguồn chính do bạn chọn ở mục "Quyết định" của `plans/lam-lai/README.md`); chương trình thi ABRSM, Trinity (đúng kỳ); trang henle.de của đúng tác phẩm; trang tác phẩm trên IMSLP cho năm và số danh mục; danh mục tác phẩm của nhà soạn nhạc; trang của nhà xuất bản, hãng đĩa, thư viện.
+2. **Tài liệu chuẩn:** giáo trình nhạc lý: nguồn chính là *Open Music Theory* (https://viva.pressbooks.pub/openmusictheory/, chọn ngày 24/10/2026), dẫn link tới đúng mục; khi các sách gọi tên hay định nghĩa khác nhau thì theo nguồn này. Nhận định về Grade đối chiếu với đề cương chính thức của ABRSM (đúng kỳ); chương trình thi Trinity (đúng kỳ); trang henle.de của đúng tác phẩm; trang tác phẩm trên IMSLP cho năm và số danh mục; danh mục tác phẩm của nhà soạn nhạc; trang của nhà xuất bản, hãng đĩa, thư viện.
 3. **Nguồn phổ thông** (Wikipedia, blog, diễn đàn): chỉ để tìm nguồn bậc 1–2. Không dùng làm nguồn duy nhất cho nhận định nào.
+
+Sách in (như *The AB Guide to Music Theory*) chỉ là nguồn phụ: agent không đọc được sách in, nên nhận định nào ghi nguồn sách in cũng phải có thêm một nguồn bậc 1–2 đọc được trên mạng. Thuật ngữ tiếng Việt theo `src/data/thuat-ngu.yml` (khóa ở lô D3-L5).
 
 Hai nguồn bậc 2 mâu thuẫn nhau: ghi cả hai vào hồ sơ, viết trên trang theo nguồn gần bản gốc hơn hoặc viết chung lại ("khoảng 1810"), ghi lý do.
 
-## 3. Kiểm định hai lượt
+## 3. Kiểm định: mức theo tầng
+
+Mức kiểm theo tầng của trang (`tang` trong `src/data/trang.yml`), chủ repo chọn ngày 24/10/2026:
+
+| Tầng | Lượt 1 | Lượt 2 | Thêm |
+|---|---|---|---|
+| Lõi, Tác phẩm; bản ghi dữ liệu | agent làm lô, mọi nhận định có nguồn | agent khác, độc lập, mọi nhận định | |
+| Tham chiếu có hạn | như lõi | như lõi | hồ sơ ghi ngày kiểm; `trang.yml` ghi ngày rà lại (`ra_lai`); đến hạn thì rà lại, mỗi lần là một lần kiểm định mới |
+| Đọc thêm (ngoại vi) | như lõi | agent khác kiểm mẫu: khoảng 5 nhận định mỗi trang, script chọn ngẫu nhiên | |
+| Khung và công cụ | không có nhận định: danh sách và con số sinh từ dữ liệu, kiểm thử tự động | | hồ sơ không có nhận định |
 
 1. **Lượt 1 (agent A):** tách trang thành danh sách nhận định và danh sách khuông nhạc; kiểm từng mục; ghi nguồn và kết quả vào hồ sơ; sửa trang nếu sai (mỗi chỗ sửa có nguồn).
-2. **Lượt 2 (agent B, độc lập):** nhận danh sách nhận định đã tách, không kèm nguồn và kết luận của lượt 1; tự tìm nguồn và cho kết quả.
+2. **Lượt 2 (agent B, độc lập):** nhận danh sách nhận định đã tách (trang Đọc thêm: chỉ mẫu ngẫu nhiên), không kèm nguồn và kết luận của lượt 1; tự tìm nguồn và cho kết quả. Sonnet đủ cho việc đối chiếu; chỗ khó (nguồn mâu thuẫn, nhận định cần đọc bản nhạc) dùng Opus.
 3. **Review** (mặc định Claude; không phải người đã làm lượt 1 hay lượt 2): mọi nhận định hai lượt cho kết quả khác nhau, mọi chỗ đã sửa, mọi khuông nhạc ví dụ soạn riêng.
-4. **Bạn kiểm mẫu:** khoảng 10 nhận định mỗi lô, do script chọn ngẫu nhiên; ghi kết quả vào hồ sơ. Mục đích là biết có tin được hai lượt agent không; mẫu sai nhiều thì kiểm lại cả lô.
+4. **Bạn đọc tóm tắt và kiểm mẫu:** đọc bản tóm tắt hồ sơ trong báo cáo của lô, xem ngẫu nhiên khoảng 5 nhận định mỗi lô (`node tools/khoa.mjs xuat <lô> --mau 5`), ghi kết quả vào hồ sơ. Mục đích là biết có tin được các lượt agent không; mẫu sai thì kiểm lại cả lô. Bạn không kiểm tay mọi nhận định: hơn 200 trang thì bạn thành chỗ nghẽn.
 
-Một trang chỉ được khóa khi mọi nhận định có kết quả `dung`, `da-sua` hoặc `da-bo`, và không còn chỗ hai lượt khác nhau chưa giải quyết.
+Một trang chỉ được khóa khi mọi nhận định có kết quả `dung`, `da-sua` hoặc `da-bo`, đã qua đủ lượt theo tầng (trang Đọc thêm: lượt 2 đủ mẫu), và không còn chỗ hai lượt khác nhau chưa giải quyết.
 
 ## 4. Khuông nhạc
 

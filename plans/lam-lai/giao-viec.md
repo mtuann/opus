@@ -54,7 +54,7 @@ Không cần đọc: `../opus-zero/plans/ke-hoach-v15.md`, `../opus-zero/plans/b
 2. Mở một phiên mới cho người nhận trong thư mục `opus/`, dán lời giao việc.
 3. Người nhận làm trên nhánh riêng, viết báo cáo trong `plans/lam-lai/bao-cao/`, không push.
 4. Nhờ review bằng lời mẫu trong `README.md`; người review ghi kết quả vào cuối báo cáo.
-5. Đọc kết luận review; từ đợt 2, kiểm mẫu khoảng 10 nhận định; gộp vào `main`, push.
+5. Đọc kết luận review; từ đợt 2, đọc tóm tắt hồ sơ và xem ngẫu nhiên khoảng 5 nhận định mỗi lô; gộp vào `main`, push.
 6. Cuối mỗi đợt: review cả đợt, cập nhật bảng Tiến độ.
 
 Phiên mới không nhớ phiên cũ: điều gì cần nhớ phải nằm trong file (báo cáo, bảng Tiến độ, mục Quyết định).

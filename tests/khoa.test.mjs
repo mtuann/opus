@@ -12,7 +12,7 @@ import { parse } from 'yaml';
 import { locTheoBan } from '../src/ban-build.mjs';
 import { schema } from '../src/du-lieu.mjs';
 import { chuanHoaTrang, docKhoa, jsonChuan, kiemKhoa, maBamBanGhi, maBamTrang } from '../src/khoa.mjs';
-import { lenh, loiHoSo } from '../tools/khoa.mjs';
+import { MAU_NGOAI_VI, lenh, loiHoSo } from '../tools/khoa.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DIST = path.join(ROOT, 'dist');
@@ -192,6 +192,46 @@ test('công cụ khóa trên bản chép nhỏ: mẫu, khóa (đòi hồ sơ đ�
 		assert.equal(loi.length, 2);
 		assert.match(loi[0], /trang nhac-ly\/a đã khóa nhưng không còn file src\/content\/docs\/nhac-ly\/a\.md/);
 		assert.match(loi[1], /bản ghi tac-pham\/x đã khóa mà đã đổi[\s\S]*node tools\/khoa\.mjs mo du-lieu\/tac-pham\/x/);
+	} finally {
+		fs.rmSync(goc, { recursive: true, force: true });
+	}
+});
+
+test('trang Đọc thêm (ngoại vi): một lượt, lượt 2 chỉ kiểm mẫu khoảng 5 nhận định mỗi trang (chuan-kiem-dinh.md mục 3)', () => {
+	const goc = fs.mkdtempSync(path.join(os.tmpdir(), 'opus-khoa-nv-'));
+	try {
+		const ghi = (f, chu) => {
+			fs.mkdirSync(path.dirname(path.join(goc, f)), { recursive: true });
+			fs.writeFileSync(path.join(goc, f), chu);
+		};
+		ghi('src/content/docs/lich-su/opera.md', '---\ntitle: Opera\n---\n\nChữ.\n');
+		ghi('src/data/trang.yml', '- id: lich-su/opera\n  tang: ngoai-vi\n');
+		const chay = (...ts) => lenh([...ts, '--goc', goc], ROOT, () => {});
+		chay('mau', 'lich-su/opera');
+		const f = path.join(goc, 'kiem-dinh/lich-su/opera.yml');
+		const nhanDinh = (soLuot2) =>
+			Array.from({ length: 7 }, (_, i) => `  - { id: n${i + 1}, cau: Câu ${i + 1}., loai: lich-su, nguon: [s1], ket_qua: dung${i < soLuot2 ? ', luot_2: dung' : ''} }`).join('\n');
+		const dien = (soLuot2) =>
+			fs.writeFileSync(
+				f,
+				fs
+					.readFileSync(f, 'utf8')
+					.replace(/nhan_dinh:(?: \[\]|\n(?:  - .*\n?)+)/, `nhan_dinh:\n${nhanDinh(soLuot2)}\n`)
+					.replace('nguon: []', 'nguon:\n  - { id: s1, bac: 2, ten: Sách A }')
+					.replace(/luot_1: null\n(\s+)luot_2: null\n(\s+)review: null\n(\s+)kiem_mau: null/, 'luot_1: agent A\n$1luot_2: agent B (mẫu)\n$2review: Claude\n$3kiem_mau: "chủ repo, 1/1"'),
+			);
+		dien(4);
+		assert.equal(parse(fs.readFileSync(f, 'utf8')).tang, 'ngoai-vi');
+		assert.throws(() => chay('khoa', 'lich-su/opera'), new RegExp(`lượt 2 phải kiểm mẫu ít nhất ${MAU_NGOAI_VI} nhận định \\(mới có 4\\)`));
+		// nhận định ngoài mẫu không cần luot_2
+		assert.doesNotMatch(loiHoSo(parse(fs.readFileSync(f, 'utf8')), 'lich-su/opera', goc).join(), /chưa có kết quả lượt 2/);
+		dien(5);
+		chay('khoa', 'lich-su/opera');
+		// lượt 2 của trang Đọc thêm nhận đúng 5 nhận định ngẫu nhiên
+		chay('xuat', 'lich-su/opera', '--ra', 'xuat.yml');
+		const xuat = parse(fs.readFileSync(path.join(goc, 'xuat.yml'), 'utf8'));
+		assert.equal(xuat.length, MAU_NGOAI_VI);
+		assert.equal(new Set(xuat.map((n) => n.id)).size, MAU_NGOAI_VI);
 	} finally {
 		fs.rmSync(goc, { recursive: true, force: true });
 	}

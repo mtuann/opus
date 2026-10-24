@@ -9,7 +9,8 @@
 //   node tools/khoa.mjs mo <mục> --ly-do "…"          gỡ khóa; ghi lý do và thêm một lần mới (để điền) vào lan của hồ sơ
 //   node tools/khoa.mjs tinh [<mục>…]                 in mã băm; không có mục thì kiểm mọi mục đã khóa (lệch thì thoát 1)
 //   node tools/khoa.mjs xuat <lô hay trang>… [--mau <n>] [--ra <file>]
-//       danh sách nhận định cho lượt 2 (không nguồn, không kết quả); --mau n: n nhận định chọn ngẫu nhiên, kèm nguồn,
+//       danh sách nhận định cho lượt 2 (không nguồn, không kết quả; trang Đọc thêm chỉ 5 nhận định ngẫu nhiên mỗi trang);
+//       --mau n: n nhận định chọn ngẫu nhiên, kèm nguồn,
 //       cho chủ repo kiểm mẫu. Lô ("D3-L2", trang lấy từ plans/lam-lai/anh-xa.md) thì mặc định ghi vào
 //       plans/lam-lai/bao-cao/d3-l2-nhan-dinh.yml (với --mau: d3-l2-kiem-mau.yml); trang thì in ra màn hình
 // <mục>: đường dẫn trang ("nhac-ly/10-hop-am-ba", "nhac-ly/index", "index", "404") hay bản ghi "du-lieu/<bộ>/<id>"
@@ -27,6 +28,16 @@ import { GOC, chuanKhoaBanGhi, docBanGhi, docKhoa, fileTrang, maBamKhoaBanGhi, m
 const KET_QUA = ['dung', 'da-sua', 'da-bo', 'khong-can-nguon'];
 const LUOT_2 = ['dung', 'sai', 'khong-chac'];
 const KET_QUA_KHUONG = ['dung', 'da-sua'];
+/** Trang Đọc thêm (tầng ngoại vi): lượt 2 chỉ kiểm mẫu, chừng này nhận định mỗi trang (chuan-kiem-dinh.md mục 3). */
+export const MAU_NGOAI_VI = 5;
+
+/** `n` phần tử chọn ngẫu nhiên của `ds` (cả `ds` nếu ít hơn). */
+const chonNgauNhien = (ds, n) => {
+	const conLai = [...ds];
+	const ra = [];
+	while (ra.length < n && conLai.length) ra.push(conLai.splice(randomInt(conLai.length), 1)[0]);
+	return ra;
+};
 
 /** Mục là bản ghi ("du-lieu/<bộ>/<id>[#<trường>,…]")? Trả về khóa viết chuẩn ("<bộ>/<id>[#…]") hay null. */
 const laBanGhi = (muc) => (muc.startsWith('du-lieu/') ? chuanKhoaBanGhi(muc.slice('du-lieu/'.length)) : null);
@@ -88,11 +99,13 @@ export function loiHoSo(hs, muc, goc) {
 	if ((bg || (hs.tang && hs.tang !== 'khung')) && !(hs.nhan_dinh ?? []).length && !hs.ghi_chu)
 		loi.push(`chưa có nhận định nào: ${bg ? 'bản ghi' : `trang tầng ${hs.tang}`} cần ít nhất một nhận định đã kiểm, hay ghi_chu giải thích vì sao không có`);
 	const nguon = new Set((hs.nguon ?? []).map((n) => n.id));
+	// trang Đọc thêm: lượt 2 chỉ kiểm mẫu, nên nhận định ngoài mẫu không có luot_2
+	const motLuot = !bg && hs.tang === 'ngoai-vi';
 	for (const n of hs.nhan_dinh ?? []) {
 		const ten = `nhận định ${n.id ?? '(không id)'}`;
 		if (!n.id || !n.cau) loi.push(`${ten}: thiếu id hay cau`);
 		if (!KET_QUA.includes(n.ket_qua)) loi.push(`${ten}: ket_qua phải là ${KET_QUA.join(', ')}`);
-		if (!LUOT_2.includes(n.luot_2)) loi.push(`${ten}: chưa có kết quả lượt 2 (luot_2: ${LUOT_2.join(', ')})`);
+		if (!LUOT_2.includes(n.luot_2) && !(motLuot && n.luot_2 == null)) loi.push(`${ten}: chưa có kết quả lượt 2 (luot_2: ${LUOT_2.join(', ')})`);
 		if ((n.ket_qua === 'da-sua' || n.ket_qua === 'da-bo') && !n.ghi_chu) loi.push(`${ten}: ${n.ket_qua} cần ghi_chu`);
 		if (n.ket_qua === 'khong-can-nguon' && n.loai !== 'khuyen-tap') loi.push(`${ten}: khong-can-nguon chỉ cho loai khuyen-tap`);
 		if (n.ket_qua !== 'khong-can-nguon' && n.ket_qua !== 'da-bo') {
@@ -101,6 +114,11 @@ export function loiHoSo(hs, muc, goc) {
 		}
 		if ((n.luot_2 === 'sai' || n.luot_2 === 'khong-chac') && n.ket_qua === 'dung' && !n.ghi_chu)
 			loi.push(`${ten}: lượt 2 cho "${n.luot_2}" mà kết quả "dung": ghi_chu cách đã giải quyết`);
+	}
+	if (motLuot) {
+		const can = Math.min(MAU_NGOAI_VI, (hs.nhan_dinh ?? []).length);
+		const co = (hs.nhan_dinh ?? []).filter((n) => LUOT_2.includes(n.luot_2)).length;
+		if (co < can) loi.push(`trang Đọc thêm: lượt 2 phải kiểm mẫu ít nhất ${can} nhận định (mới có ${co})`);
 	}
 	if (!bg) {
 		const f = fileTrang(muc, goc);
@@ -301,15 +319,12 @@ export function lenh(thamSo, goc = GOC, in_ = console.log) {
 			if (!fs.existsSync(f)) throw new Error(`${t}: chưa có hồ sơ`);
 			const hs = parse(fs.readFileSync(f, 'utf8')) ?? {};
 			const nguon = new Map((hs.nguon ?? []).map((n) => [n.id, n]));
-			for (const n of hs.nhan_dinh ?? [])
+			// lượt 2 của trang Đọc thêm: chỉ mẫu ngẫu nhiên
+			const cho = !mau && hs.tang === 'ngoai-vi' ? chonNgauNhien(hs.nhan_dinh ?? [], MAU_NGOAI_VI) : (hs.nhan_dinh ?? []);
+			for (const n of cho)
 				tatCa.push(mau ? { trang: t, id: n.id, cau: n.cau, loai: n.loai, nguon: (n.nguon ?? []).map((id) => ({ ten: nguon.get(id)?.ten, link: nguon.get(id)?.link })), ket_qua_luot_1: n.ket_qua } : { trang: t, id: n.id, cau: n.cau, loai: n.loai });
 		}
-		let ds = tatCa;
-		if (mau) {
-			ds = [];
-			const conLai = [...tatCa];
-			while (ds.length < mau && conLai.length) ds.push(conLai.splice(randomInt(conLai.length), 1)[0]);
-		}
+		const ds = mau ? chonNgauNhien(tatCa, mau) : tatCa;
 		const chu = stringify(ds, { lineWidth: 0 });
 		if (ra) {
 			fs.mkdirSync(path.dirname(path.resolve(goc, ra)), { recursive: true });

@@ -33,8 +33,12 @@ Chờ bạn. Mục "khuyên dùng" là lựa chọn mà kế hoạch đang giả
 
 - [x] Công nghệ: Astro 7 và Starlight (khuyên dùng; lý do ở `cong-nghe.md`), hay MkDocs và Material như cũ. **Chọn Astro 7 và Starlight** (23/10/2026, khi duyệt D1.1).
 - [x] Giao diện: giữ font, màu và giọng văn hiện có (khuyên dùng), hay làm nhận diện mới ở đợt 1. **Giữ font, màu, giọng văn** (23/10/2026, khi duyệt D1.1); thêm yêu cầu về hình ảnh ở mục "Giao diện" của `AGENTS.md`. Cùng ngày, sau khi so ba bản mẫu, chủ repo chọn bố cục **bản B** (thanh trên nền giấy viền nhựa thông, màu và biểu tượng riêng cho từng nhóm nội dung) **cộng phần đầu trang chủ của bản C** (dải màu mực tràn ngang); làm ở D1.2b.
-- [ ] Mức kiểm định: hai lượt agent, review, bạn kiểm khoảng 10 nhận định mỗi lô (khuyên dùng); hay một lượt agent và review.
-- [ ] Nguồn chính cho nhạc lý: giáo trình bạn có (ghi tên và lần in), hay giáo trình mở Open Music Theory (https://viva.pressbooks.pub/openmusictheory/).
+- [x] Mức kiểm định: **theo tầng của trang** (24/10/2026; chi tiết ở `../ben-vung/chuan-kiem-dinh.md` mục 3).
+  - Lõi và dữ liệu dùng ở nhiều trang: đủ hai lượt. Lượt 1 do agent làm lô, nhận định nào cũng có nguồn. Lượt 2 do một agent khác làm độc lập: Sonnet cho việc đối chiếu, Opus cho chỗ khó. Trang Tác phẩm cũng hai lượt, vì trang và bản ghi của chúng là dữ liệu dùng ở nhiều trang.
+  - Đọc thêm (ngoại vi): một lượt, kèm lượt 2 kiểm khoảng 5 nhận định mỗi trang, chọn ngẫu nhiên.
+  - Tham chiếu có hạn: kiểm như lõi, ghi ngày kiểm và ngày rà lại; đến hạn thì rà lại.
+  - Bạn chỉ đọc bản tóm tắt hồ sơ và xem ngẫu nhiên vài nhận định (khoảng 5) mỗi lô; không kiểm tay mọi nhận định.
+- [x] Nguồn chính cho nhạc lý: **Open Music Theory** (https://viva.pressbooks.pub/openmusictheory/; 24/10/2026): miễn phí, đọc được trên mạng, dẫn link được tới từng mục, nên agent kiểm định mở được để đối chiếu và người đọc bấm vào xem được. Phần liên quan đến Grade đối chiếu với đề cương chính thức của ABRSM. Sách in (như *The AB Guide to Music Theory*) chỉ làm nguồn phụ, vì agent không đọc được sách in. Thuật ngữ tiếng Việt chốt trong `thuat-ngu.yml`, khóa ở D3-L5.
 - [ ] Bảng tầng: duyệt `../ben-vung/kiem-ke.md`, nhất là các trang tham chiếu có hạn và ngày rà lại.
 
 ## Tiến độ
@@ -194,10 +198,10 @@ Khung, lõi, công cụ và tham chiếu đã lên site; đợt này thêm tác 
 
 1. Bạn giao lô bằng lời mẫu dưới đây.
 2. Agent chuyển trang bằng `tools/chuyen/`, tách dữ liệu, kiểm định lượt 1, ghi hồ sơ (chưa khóa).
-3. Agent khác kiểm định lượt 2 độc lập (`../ben-vung/chuan-kiem-dinh.md` mục 3 và 8).
+3. Agent khác kiểm định lượt 2 độc lập, mức theo tầng của trang (`../ben-vung/chuan-kiem-dinh.md` mục 3 và 8).
 4. CI trên bản xem: build, schema, khóa, link, khuông nhạc, trợ năng, Lighthouse một trang; ảnh chụp từng trang ở 360 px và 1280 px đính vào báo cáo.
 5. Review báo cáo, hồ sơ và ảnh chụp; chỗ cần sửa trả về agent trên cùng nhánh.
-6. Bạn kiểm khoảng 10 nhận định; agent khóa; bạn gộp vào `main` và push. Trang của lô lên site thật.
+6. Bạn đọc tóm tắt hồ sơ trong báo cáo của lô và xem ngẫu nhiên khoảng 5 nhận định (`node tools/khoa.mjs xuat <lô> --mau 5`); agent khóa; bạn gộp vào `main` và push. Trang của lô lên site thật.
 
 Hai lô cùng đợt làm song song được nếu không chung file. Các đợt làm lần lượt, theo thứ tự ở bảng Tiến độ. Cuối mỗi đợt, người review xét cả đợt theo "Xong khi" và cập nhật bảng Tiến độ.
 
