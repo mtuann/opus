@@ -471,6 +471,12 @@ test('câu về chính site (ve-site) không qua lượt 2 nhưng cần ghi_chu;
 		ghi('kiem-dinh/bat-dau/a.yml', stringify(hs([du[0], du[1], kt(1, 'sai'), kt(2, 'dung'), kt(3, 'dung'), kt(4), kt(5)])));
 		lenh(['xuat', 'bat-dau/a', '--con-lai', '--ra', 'xuat.yml', '--goc', goc], ROOT, () => {});
 		assert.deepEqual(parse(fs.readFileSync(path.join(goc, 'xuat.yml'), 'utf8')).map((n) => n.id), ['k4', 'k5']);
+		// --con-lai khi mẫu chưa đủ (không câu nào sai): thêm cho đủ MAU_KHUYEN_TAP câu
+		ghi('kiem-dinh/bat-dau/a.yml', stringify(hs([du[0], du[1], kt(1, 'dung'), kt(2), kt(3), kt(4), kt(5)])));
+		lenh(['xuat', 'bat-dau/a', '--con-lai', '--ra', 'xuat.yml', '--goc', goc], ROOT, () => {});
+		const them = parse(fs.readFileSync(path.join(goc, 'xuat.yml'), 'utf8'));
+		assert.equal(them.length, 2);
+		assert.ok(them.every((n) => n.loai === 'khuyen-tap' && n.id !== 'k1'), JSON.stringify(them));
 		// kiểm mẫu của chủ repo: mọi nhận định, kèm ghi chú (câu về site: đã kiểm ở đâu)
 		lenh(['xuat', 'bat-dau/a', '--mau', '20', '--ra', 'mau.yml', '--goc', goc], ROOT, () => {});
 		const mau = parse(fs.readFileSync(path.join(goc, 'mau.yml'), 'utf8'));

@@ -300,7 +300,8 @@ Chỉ đổi phần trong `<>`. Lời giao của đợt 1 và của lô trước
 > - Đọc mục "Review những gì" trong `plans/lam-lai/README.md`, `plans/ben-vung/chuan-kiem-dinh.md`, báo cáo của lô, và hồ sơ trong `kiem-dinh/` của các trang trong lô.
 > - Kiểm lại:
 >   - mọi nhận định hai lượt cho kết quả khác nhau, mọi chỗ đã sửa (mở đúng nguồn ghi trong hồ sơ);
->   - mọi câu về chính site (`ve-site`), trên trang và dữ liệu.
+>   - mọi câu về chính site (`ve-site`), trên trang và dữ liệu, rồi ghi `review: dung` hay `sai` vào hồ sơ.
+> - Soát nhãn: câu `ve-site` chỉ nói về site; câu `khuyen-tap` không có điều về sức khỏe hay sự kiện cần nguồn. Nhãn sai thì đổi loại và xuất câu ấy cho lượt 2 (`node tools/khoa.mjs xuat … --con-lai`).
 > - Không chạy lại toàn bộ kiểm thử: CI đã chạy.
 > - Ghi vào cuối báo cáo, mục "Review": chỗ phải sửa (file, dòng, lý do, nguồn), chỗ nên sửa, kết luận gộp được hay chưa.
 > - Không sửa trang. Không push.

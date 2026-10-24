@@ -372,7 +372,7 @@ export function lenh(thamSo, goc = GOC, in_ = console.log) {
 		const iConLai = con.indexOf('--con-lai');
 		const conLai = iConLai >= 0 && Boolean(con.splice(iConLai, 1));
 		const lo = con.length === 1 && maLo(con[0]);
-		const ra = lay('--ra') ?? (lo ? `plans/lam-lai/bao-cao/${lo.toLowerCase()}-${mau ? 'kiem-mau' : 'nhan-dinh'}.yml` : undefined);
+		const ra = lay('--ra') ?? (lo ? `plans/lam-lai/bao-cao/${lo.toLowerCase()}-${mau ? 'kiem-mau' : conLai ? 'nhan-dinh-con-lai' : 'nhan-dinh'}.yml` : undefined);
 		const tatCa = [];
 		for (const t of con.flatMap((x) => (maLo(x) ? trangCuaLo(x, goc) : [x]))) {
 			const f = fileHoSo(t, goc);
