@@ -58,6 +58,9 @@ test('Markdown trong dòng của dữ liệu: nghiêng, link; HTML thô thành c
 	// link chỉ tới địa chỉ an toàn; ảnh thành chữ
 	assert.equal(md('[a](javascript:alert(1)) [b](/opus/x/) [c](https://x.org/) [d](#m)'), 'a <a href="/opus/x/">b</a> <a href="https://x.org/">c</a> <a href="#m">d</a>');
 	assert.equal(md('![ảnh](x.png)'), 'ảnh');
+	// kiểu tham chiếu và //máy-khác (kiểm lại nhánh sửa nhỏ): không thành link hay ảnh
+	for (const s of ['[a][x]\n\n[x]: javascript:alert(1)', '[a][x]\n\n[x]: data:text/html,x', '![a][x]\n\n[x]: javascript:alert(1)', '[a]\n\n[a]: javascript:alert(1)', '[a](//evil.example/)', '<javascript:alert(1)>'])
+		assert.doesNotMatch(md(s), /<a |<img /, s);
 	assert.doesNotMatch(md('```x" onclick="y'), / onclick=/);
 	// mọi cách viết backtick (không cân, thoát bằng \\) đều không để lọt thẻ: thử hết chuỗi tới 6 ký tự (review nhánh sửa nhỏ)
 	const KY_TU = ['`', '\\', '<b>', '</b>', 'x', ' '];

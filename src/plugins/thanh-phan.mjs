@@ -10,19 +10,25 @@ export const esc = (s) =>
  * tải bộ tải thành phần ở những trang này. */
 export const canTaiScript = (html) => /\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen)[\s"]/.test(html);
 
-/** Địa chỉ link được dùng trong dữ liệu: trên site (/…), #mục, http(s), mailto. Khác (như javascript:) thì bỏ link. */
-const DIA_CHI_DUOC = /^(\/|#|https?:\/\/|mailto:)/i;
+/**
+ * Địa chỉ link được dùng trong dữ liệu: trên site (/…, không phải //máy-khác), #mục, http(s), mailto. Khác (như
+ * javascript:, data:) thì bỏ link.
+ */
+const DIA_CHI_DUOC = /^(\/(?!\/)|#|https?:\/\/|mailto:)/i;
 const chuCua = (n) => (typeof n.value === 'string' ? n.value : (n.children ?? []).map(chuCua).join(''));
 
 /**
  * Plugin mdast cho chữ của dữ liệu: thẻ HTML thô (nút html, trong dòng hay khối) thành nút chữ, nên hiện ra đúng như
- * viết; link có địa chỉ lạ thành chữ thường; ảnh thành chữ thay thế của nó.
+ * viết; link có địa chỉ lạ thành chữ thường; ảnh thành chữ thay thế của nó. Link và ảnh kiểu tham chiếu ([chữ][x] cùng
+ * dòng [x]: địa chỉ) thành chữ: dữ liệu không dùng, và địa chỉ của chúng nằm ở nút khác, không kiểm cùng lúc được.
  */
 const chuAnToan = {
 	name: 'chu-an-toan',
 	html: (node) => ({ type: 'text', value: node.value }),
 	link: (node) => (DIA_CHI_DUOC.test(node.url.trim()) ? undefined : { type: 'text', value: chuCua(node) }),
 	image: (node) => ({ type: 'text', value: node.alt ?? '' }),
+	linkReference: (node) => ({ type: 'text', value: chuCua(node) }),
+	imageReference: (node) => ({ type: 'text', value: node.alt ?? '' }),
 };
 
 /**
