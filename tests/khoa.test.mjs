@@ -9,6 +9,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { parse } from 'yaml';
 import { locTheoBan } from '../src/ban-build.mjs';
+import { schema } from '../src/du-lieu.mjs';
 import { chuanHoaTrang, docKhoa, jsonChuan, kiemKhoa, maBamBanGhi, maBamTrang } from '../src/khoa.mjs';
 import { lenh, loiHoSo } from '../tools/khoa.mjs';
 
@@ -38,6 +39,8 @@ test('mọi mục trong kiem-dinh/khoa.json còn khớp mã băm và có hồ s�
 		assert.ok(fs.existsSync(f), `${muc}: thiếu hồ sơ kiem-dinh/${muc}.yml`);
 		const hs = parse(fs.readFileSync(f, 'utf8'));
 		assert.deepEqual(loiHoSo(hs, muc, ROOT), [], `hồ sơ của ${muc} chưa đủ`);
+		const [, bo, truong] = /^du-lieu\/([^/]+)\/[^#]+(?:#(.+))?$/.exec(muc) ?? [];
+		for (const t of truong?.split(',') ?? []) assert.ok(t in schema[bo].shape, `${muc}: bộ ${bo} không có trường ${t}`);
 		// trang: lần cuối ghi mã băm đang khóa; bản ghi khóa từng phần qua nhiều lần: một lần nào đó ghi mã băm của khóa ấy
 		if (muc.startsWith('du-lieu/')) assert.ok(hs.lan.some((l) => l.ma_bam === ban_ghi[muc.slice(8)]), `${muc}: hồ sơ không có lần nào ghi mã băm đang khóa`);
 		else assert.equal(hs.lan.at(-1).ma_bam, trang[muc], `${muc}: lần cuối trong hồ sơ phải ghi mã băm đang khóa`);
@@ -89,7 +92,9 @@ test('công cụ khóa trên bản chép nhỏ: mẫu, khóa (đòi hồ sơ đ�
 		assert.match(ma, /^sha256:/);
 		assert.deepEqual(parse(fs.readFileSync(fHoSo, 'utf8')).lan.map((l) => l.ma_bam), [ma]);
 		assert.equal(chay('tinh'), 0);
-		assert.throws(() => chay('khoa', 'nhac-ly/a'), /đã có mã băm[\s\S]*mo nhac-ly\/a/);
+		assert.throws(() => chay('khoa', 'nhac-ly/a'), /trang đã khóa[\s\S]*mo nhac-ly\/a/);
+		// không lách được thủ tục mở khóa: sửa trang đã khóa rồi mau, khoa thì bị chặn (review D1.6)
+		assert.throws(() => chay('mau', 'nhac-ly/a'), /nhac-ly\/a đang khóa[\s\S]*mo nhac-ly\/a/);
 
 		// sửa trang đã khóa: tính ra lệch; mở khóa gỡ khỏi khoa.json, ghi lý do, thêm lần mới để điền; điền rồi khóa lại
 		fs.appendFileSync(path.join(goc, 'src/content/docs/nhac-ly/a.md'), '\nThêm.\n');
@@ -124,28 +129,46 @@ test('công cụ khóa trên bản chép nhỏ: mẫu, khóa (đòi hồ sơ đ�
 		const fBanGhi = path.join(goc, 'kiem-dinh/du-lieu/tac-pham/x.yml');
 		assert.equal(parse(fs.readFileSync(fBanGhi, 'utf8')).ban_ghi, 'tac-pham/x');
 		sua(fBanGhi, ...NGUOI);
+		assert.throws(() => chay('khoa', 'du-lieu/tac-pham/x#ten'), /chưa có nhận định nào: bản ghi cần ít nhất một nhận định/);
+		sua(fBanGhi, 'nguon: []', 'nguon:\n  - { id: s1, bac: 2, ten: Sách A }', 'nhan_dinh: []', 'nhan_dinh:\n  - { id: n1, cau: Tên X., loai: ten-goi, nguon: [s1], luot_2: dung, ket_qua: dung }');
 		// khóa từng phần: chỉ các trường đã kiểm định (đợt 2 khóa vài trường của bản ghi tác phẩm, đợt 6 khóa cả bản ghi)
+		assert.throws(() => chay('khoa', 'du-lieu/tac-pham/x#ten,chnag'), /bộ tac-pham không có trường chnag/);
 		chay('khoa', 'du-lieu/tac-pham/x#ten, loai,ten');
 		assert.deepEqual(Object.keys(khoaJson().ban_ghi), ['tac-pham/x#loai,ten'], 'trường xếp theo chữ cái, không trùng');
 		assert.deepEqual(parse(fs.readFileSync(fBanGhi, 'utf8')).lan.at(-1).truong, ['loai', 'ten']);
 		const fTacPham = path.join(goc, 'src/data/tac-pham.yml');
 		sua(fTacPham, 'ten: X\n', 'ten: X\n  grade: G\n');
 		assert.deepEqual(kiemKhoa(goc), [], 'trường chưa khóa sửa tự do');
+		assert.throws(() => chay('khoa', 'du-lieu/tac-pham/x#loai,ten'), /khóa này đã có/);
 		sua(fTacPham, 'ten: X', 'ten: Z');
 		assert.match(kiemKhoa(goc).join(), /bản ghi tac-pham\/x#loai,ten đã khóa mà đã đổi/);
 		sua(fTacPham, 'ten: Z', 'ten: X');
 		assert.throws(() => chay('mo', 'du-lieu/tac-pham/x', '--ly-do', 'thử'), /chưa khóa; bản ghi đang khóa từng phần: du-lieu\/tac-pham\/x#loai,ten/);
-		// khóa cả bản ghi: lần kiểm định mới (mau thêm vào hồ sơ đã có), rồi khóa; khóa từng phần cũ được thay
-		assert.throws(() => chay('khoa', 'du-lieu/tac-pham/x'), /đã có mã băm/);
+		// khóa thêm trường: lần kiểm định mới (mau thêm vào hồ sơ của bản ghi đang khóa từng phần), rồi khóa; khóa cũ nằm trọn
+		// trong khóa mới thì được thay
+		assert.throws(() => chay('khoa', 'du-lieu/tac-pham/x#grade,loai,ten'), /đã có mã băm/);
 		chay('mau', 'du-lieu/tac-pham/x');
 		assert.equal(parse(fs.readFileSync(fBanGhi, 'utf8')).lan.length, 2);
 		assert.throws(() => chay('mau', 'du-lieu/tac-pham/x'), /lần cuối trong lan chưa khóa/);
 		sua(fBanGhi, ...NGUOI);
-		chay('khoa', 'du-lieu/tac-pham/x');
-		assert.deepEqual(Object.keys(khoaJson().ban_ghi), ['tac-pham/x'], 'khóa cả bản ghi thay khóa từng phần');
+		chay('khoa', 'du-lieu/tac-pham/x#grade,loai,ten');
+		assert.deepEqual(Object.keys(khoaJson().ban_ghi), ['tac-pham/x#grade,loai,ten'], 'khóa từng phần mới thay khóa cũ nằm trọn trong nó');
+		// khóa cả bản ghi khi một trường đã khóa bị sửa: bị chặn, phải mở khóa trước (review D1.6)
 		chay('mau', 'du-lieu/tac-pham/x');
 		sua(fBanGhi, ...NGUOI);
+		sua(fTacPham, 'ten: X', 'ten: Z');
+		assert.throws(() => chay('khoa', 'du-lieu/tac-pham/x'), /khóa du-lieu\/tac-pham\/x#grade,loai,ten đã lệch[\s\S]*mo du-lieu\/tac-pham\/x#grade,loai,ten/);
+		sua(fTacPham, 'ten: Z', 'ten: X');
+		chay('khoa', 'du-lieu/tac-pham/x');
+		assert.deepEqual(Object.keys(khoaJson().ban_ghi), ['tac-pham/x'], 'khóa cả bản ghi thay khóa từng phần');
+		assert.throws(() => chay('mau', 'du-lieu/tac-pham/x'), /du-lieu\/tac-pham\/x đang khóa/);
 		assert.throws(() => chay('khoa', 'du-lieu/tac-pham/x#ten'), /đã khóa cả bản ghi/);
+		// mở khóa phải ghi được lý do vào hồ sơ: không có hồ sơ thì không mở
+		const giu = fs.readFileSync(fHoSo);
+		fs.rmSync(fHoSo);
+		assert.throws(() => chay('mo', 'nhac-ly/a', '--ly-do', 'thử'), /không có hồ sơ kiem-dinh\/nhac-ly\/a\.yml/);
+		assert.ok('nhac-ly/a' in khoaJson().trang, 'khóa còn nguyên');
+		fs.writeFileSync(fHoSo, giu);
 		assert.equal(chay('tinh'), 0);
 
 		// build hỏng khi mục đã khóa đổi hay mất (kiemKhoa; src/content.config.ts gọi lúc nạp cấu hình)
@@ -159,6 +182,23 @@ test('công cụ khóa trên bản chép nhỏ: mẫu, khóa (đòi hồ sơ đ�
 	} finally {
 		fs.rmSync(goc, { recursive: true, force: true });
 	}
+});
+
+test('nguồn trang viết theo cách công cụ khóa hiểu: chỉ .md, không khoảng trắng cuối dòng, khối abc mở bằng ```abc ở đầu dòng', () => {
+	const docs = path.join(ROOT, 'src/content/docs');
+	const loi = [];
+	for (const f of fs.readdirSync(docs, { recursive: true }).filter((x) => /\.mdx?$/.test(x))) {
+		// fileTrang() chỉ tìm .md: trang .mdx dựng được ở bản xem mà không khóa được
+		if (f.endsWith('.mdx')) loi.push(`${f}: viết .md, không .mdx`);
+		const dong = fs.readFileSync(path.join(docs, f), 'utf8').split('\n');
+		dong.forEach((l, i) => {
+			// mã băm bỏ khoảng trắng cuối dòng, nên hai dấu cách ngắt dòng cứng không được khóa: ngắt dòng viết <br>
+			if (/[ \t]+$/.test(l)) loi.push(`${f}:${i + 1}: khoảng trắng cuối dòng`);
+			// công cụ khóa đếm khuông nhạc theo dòng ```abc; kiểu hàng rào khác plugin vẫn dựng mà hồ sơ không đếm
+			if (/^\s*(`{3,}|~{3,})\s*abc\b/.test(l) && !/^```abc\s*$/.test(l)) loi.push(`${f}:${i + 1}: khối abc mở bằng \`\`\`abc ở đầu dòng`);
+		});
+	}
+	assert.deepEqual(loi, []);
 });
 
 test('bản thật bỏ trang chưa khóa khỏi bộ docs; bản xem giữ mọi trang', async () => {

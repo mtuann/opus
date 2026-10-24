@@ -334,7 +334,8 @@ export function moTaTuHtml(html) {
 }
 
 // ---------- Dòng lệnh ----------
-if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {
+// import.meta.main: đúng cả khi đường dẫn script đi qua liên kết tượng trưng (/tmp trên macOS)
+if (import.meta.main) {
 	const thamSo = process.argv.slice(2);
 	const ghiDe = thamSo.includes('--ghi-de');
 	const iRa = thamSo.indexOf('--ra');

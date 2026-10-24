@@ -60,26 +60,37 @@ export const chuanKhoaBanGhi = (k) => {
 /** Phần được khóa của bản ghi: cả bản ghi, hay chỉ các trường đã khai (trường bản ghi chưa có thì bỏ qua). */
 export const phanKhoa = (r, truong) => (truong ? Object.fromEntries(truong.filter((t) => t in r).map((t) => [t, r[t]])) : r);
 
-/** Mã băm hiện tại của một khóa bản ghi (cả bản ghi hay từng phần), hay undefined nếu bản ghi không có. */
-export function maBamKhoaBanGhi(k, goc = GOC) {
+/**
+ * Mã băm hiện tại của một khóa bản ghi (cả bản ghi hay từng phần), hay undefined nếu bản ghi không có. `nho`: Map giữ các
+ * bộ dữ liệu đã đọc trong một lần kiểm, để không parse lại YAML cho từng khóa.
+ */
+export function maBamKhoaBanGhi(k, goc = GOC, nho) {
 	const { banGhi, truong } = tachKhoaBanGhi(k);
-	const r = docBanGhi(banGhi, goc);
+	const r = docBanGhi(banGhi, goc, nho);
 	return r && maBamBanGhi(phanKhoa(r, truong));
 }
 
 /** Bản ghi "<bộ>/<id>" đọc thẳng từ YAML (chưa qua schema), hay undefined. */
-export function docBanGhi(khoaBanGhi, goc = GOC) {
+export function docBanGhi(khoaBanGhi, goc = GOC, nho = new Map()) {
 	const [bo, ...phan] = khoaBanGhi.split('#')[0].split('/');
 	const id = phan.join('/');
 	if (!TEP_DU_LIEU[bo]) return undefined;
-	const ds = parse(fs.readFileSync(path.join(goc, 'src', 'data', TEP_DU_LIEU[bo]), 'utf8')) ?? [];
+	const f = path.join(goc, 'src', 'data', TEP_DU_LIEU[bo]);
+	if (!nho.has(f)) nho.set(f, parse(fs.readFileSync(f, 'utf8')) ?? []);
+	const ds = nho.get(f);
 	return ds.find((r) => String(bo === 'tac-pham' ? r.slug : r.id) === id);
 }
 
 /** Nội dung kiem-dinh/khoa.json: { trang: { đường dẫn: mã băm }, ban_ghi: { "<bộ>/<id>[#<trường>,…]": mã băm } }. */
 export function docKhoa(goc = GOC) {
 	const f = path.join(goc, 'kiem-dinh', 'khoa.json');
-	const k = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : {};
+	let k = {};
+	try {
+		if (fs.existsSync(f)) k = JSON.parse(fs.readFileSync(f, 'utf8'));
+	} catch (e) {
+		// file chung của mọi lô: hay hỏng vì xung đột khi gộp nhánh
+		throw new Error(`kiem-dinh/khoa.json không đọc được (${e.message}); sửa file cho đúng JSON, như khi gỡ xung đột git`);
+	}
 	return { trang: k.trang ?? {}, ban_ghi: k.ban_ghi ?? {} };
 }
 
@@ -90,6 +101,7 @@ export function docKhoa(goc = GOC) {
 export function kiemKhoa(goc = GOC) {
 	const { trang, ban_ghi } = docKhoa(goc);
 	const loi = [];
+	const nho = new Map();
 	const cachMo = (muc) => `sửa theo thủ tục mở khóa: node tools/khoa.mjs mo ${muc} --ly-do "…" (plans/ben-vung/chuan-kiem-dinh.md mục 7)`;
 	for (const [t, ma] of Object.entries(trang)) {
 		const f = fileTrang(t, goc);
@@ -97,7 +109,7 @@ export function kiemKhoa(goc = GOC) {
 		else if (maBamTrang(fs.readFileSync(f, 'utf8')) !== ma) loi.push(`trang ${t} đã khóa mà nội dung đã đổi (mã băm lệch); ${cachMo(t)}`);
 	}
 	for (const [k, ma] of Object.entries(ban_ghi)) {
-		const moi = maBamKhoaBanGhi(k, goc);
+		const moi = maBamKhoaBanGhi(k, goc, nho);
 		if (!moi) loi.push(`bản ghi ${k} đã khóa nhưng không còn trong src/data/`);
 		else if (moi !== ma) loi.push(`bản ghi ${k} đã khóa mà đã đổi (mã băm lệch); ${cachMo(`du-lieu/${k}`)}`);
 	}

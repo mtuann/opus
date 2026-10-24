@@ -95,7 +95,7 @@ Mỗi việc một nhánh, làm theo thứ tự. Site mới chưa đăng gì cho
 - **D1.3 Thành phần tối thiểu:** chip cấp độ, hộp thông tin tác phẩm, khuông nhạc ABC (khối ```abc, abcjs tải khi gần màn hình, vẽ đủ khi in), khối nghe, hình cấu trúc từ dữ liệu, câu hỏi kiểm tra nhanh, "Học tiếp", huy hiệu "Đã kiểm định". Logic lấy từ module trong `../opus-zero/docs/assets/js/`. Chốt cú pháp trong trang và ghi vào mục "Mẫu trang", "Khối đặc biệt" của `AGENTS.md`.
 - **D1.4 Script chuyển cú pháp** `tools/chuyen/`: đọc `../opus-zero/docs/<trang>.md`, ghi `src/content/docs/<trang>.md`. Admonition thành aside; khối thu gọn thành `<details>`; khối `oz-` thành chỉ thị thành phần; vùng `<!-- fig: -->` thành thành phần hình; `data-rec` thành dữ liệu của khối nghe; link tới file `.md` thành link theo địa chỉ; giữ nguyên khối ```abc và chú thích. Kiểm thử: chữ hiển thị của một trang ở bản build cũ (`.cache/site-cu/`) và ở bản xem giống nhau.
 - **D1.5 Link và 404:** link tới trang không có trong bản build hiện chữ thường kèm nhãn "sắp có", tự thành link khi trang lên; kiểm link và anchor nội bộ trên cả bản thật và bản xem. Trang 404 thân thiện: báo site đang được làm lại, dẫn về trang chủ và ô tìm kiếm.
-- **D1.6 Khóa, phạm vi, bản thật và bản xem:** `tools/khoa.mjs` (`tinh`, `khoa`, `mo`, `mau`, `xuat`; kế hoạch ban đầu ghi `tools/khoa.py`, lý do đổi ở `cong-nghe.md` mục 7) theo `../ben-vung/chuan-kiem-dinh.md`; `kiem-dinh/khoa.json`; kiểm thử khóa; kiểm thử phạm vi lô (so nhánh `moi/dN-lM` với `anh-xa.md`). `npm run build` chỉ đưa trang đã khóa; `npm run build:xem` đưa cả trang chưa khóa, có dải "Chưa kiểm định" ở đầu. Khóa trang chủ tạm và trang 404 (hồ sơ không có nhận định). Ghi cách làm đã chọn vào `cong-nghe.md` mục 7.
+- **D1.6 Khóa, phạm vi, bản thật và bản xem:** `tools/khoa.mjs` (`tinh`, `khoa`, `mo`, `mau`, `xuat`; kế hoạch ban đầu ghi `tools/khoa.py`, lý do đổi ở `cong-nghe.md` mục 7) theo `../ben-vung/chuan-kiem-dinh.md`, cả khóa từng phần bản ghi (`du-lieu/<bộ>/<id>#<trường>,…`); `kiem-dinh/khoa.json`; kiểm thử khóa; kiểm thử phạm vi lô (so nhánh `moi/dN-lM` với `anh-xa.md`). `npm run build` chỉ đưa trang đã khóa; `npm run build:xem` đưa cả trang chưa khóa, có dải "Chưa kiểm định" ở đầu. Khóa trang chủ tạm và trang 404 (hồ sơ không có nhận định). Ghi cách làm đã chọn vào `cong-nghe.md` mục 7.
 - **D1.7 CI và deploy:** `.github/workflows/test.yml` (nhánh `moi/**`: bản xem và kiểm thử) và `deploy.yml` (nhánh `main`: bản thật, kiểm thử, rồi đăng `dist/` lên GitHub Pages). Kiểm thử gồm build, schema, khóa, link, trợ năng, Lighthouse ở ba trang; hỏng thì không đăng. Bạn bật Pages của repo mới (Settings → Pages, nguồn GitHub Actions) trước khi gộp việc này.
 - **D1.8 Thử:** chuyển ba trang `nhac-ly/10-hop-am-ba`, `piano/tac-pham/fur-elise`, `nghe-nhac/bach-goldberg` bằng `tools/chuyen/`; chưa kiểm định, chưa khóa, nên chỉ có ở bản xem. Trang `10-hop-am-ba` hiện ô "chưa chuyển" ở chỗ bàn phím (thành phần làm ở D3-L1): được phép ở bản xem, không tính là lỗi hiển thị. Chạy bộ truy vấn tìm kiếm của `../opus-zero/tests/search.mjs` trên bản xem.
 
@@ -105,7 +105,7 @@ Mỗi việc một nhánh, làm theo thứ tự. Site mới chưa đăng gì cho
 
 Từ đợt này, mỗi lô gộp vào `main` là trang của lô lên site thật.
 
-- Kiểm định và khóa: `cap-do.yml`; `nha-soan-nhac.yml`; các trường của 79 bản ghi trong `tac-pham.yml` mà trang của lô hiện ra, khóa từng phần (`../ben-vung/chuan-kiem-dinh.md` mục 6). Tối thiểu:
+- Kiểm định và khóa: `cap-do.yml`; `nha-soan-nhac.yml`; các trường của 73 bản ghi trong `tac-pham.yml` mà trang của lô hiện ra, khóa từng phần (`../ben-vung/chuan-kiem-dinh.md` mục 6). Tối thiểu:
   - `ten`, `tac_gia`, `danh_muc`, `chang`, `loai`: trang chặng liệt kê bài, link tới đúng trang bài học hay hướng dẫn nghe;
   - `goi_y`: ô gợi ý tập ở trang chủ;
   - `grade` nếu trang chặng hiện Grade của từng bài; không thì `grade` khóa ở D8-L1 (Tác phẩm theo cấp độ).
@@ -113,7 +113,7 @@ Từ đợt này, mỗi lô gộp vào `main` là trang của lô lên site th�
   Trang chặng hiện thêm trường nào thì khóa thêm trường ấy, ghi trong báo cáo. Các trường còn lại khóa ở đợt 6.
 - Kiểm thử hỏng nếu trang đã khóa hiện một trường chưa khóa của bản ghi, qua chỉ thị trong trang, trang chặng hay ô gợi ý tập.
 - Ô gợi ý tập (`practice.js` cũ, ở trang chủ; đợt 4, 7 dùng lại ở trang Piano, Luyện tập) sinh link bằng JavaScript. Link tới trang chưa có phải hiện "sắp có" như link dựng lúc build. Vì vậy bản build xuất danh sách trang cho script; D2-L1 làm việc này khi chuyển `practice.js` (phạm vi của D2-L1 gồm cả cấu hình build, xem kiểm thử phạm vi của D1.6).
-- Kiểm định trường của 79 bản ghi là phần nặng nhất của đợt. Quá tải thì tách thành một việc dữ liệu riêng, làm trước D2-L1 (chủ repo quyết).
+- Kiểm định trường của 73 bản ghi là phần nặng nhất của đợt. Quá tải thì tách thành một việc dữ liệu riêng, làm trước D2-L1 (chủ repo quyết).
 - 7 trang chặng `piano/lo-trinh/chang-1` đến `chang-7` sinh từ dữ liệu; trang lộ trình giữ các mục chặng dạng tóm tắt, mỗi mục dẫn sang trang chặng.
 - 9 trang của lô, gồm trang chủ mới (thay trang chủ tạm) và bài kiểm tra đầu vào (`placement.js`).
 - Menu đủ 9 nhóm; nhóm chưa có trang hiện nhãn "sắp có".
@@ -166,7 +166,7 @@ Khung, lõi, công cụ và tham chiếu đã lên site; đợt này thêm tác 
 - D6-L1 đến D6-L6: bài học chặng 2 đến 7, kèm hướng dẫn nghe cùng tác phẩm; D6-L7 đến D6-L11: các hướng dẫn nghe còn lại theo thứ tự nav cũ, cùng hai trang mục lục.
 - Danh mục `tac-pham` sinh từ dữ liệu, lọc theo chặng, thời kỳ, tác giả, loại.
 
-**Xong khi:** 81 trang của 11 lô đã khóa; mọi trường của 79 bản ghi tác phẩm đã khóa (khóa cả bản ghi); `python3 tools/audio/check_audio.py` không lỗi; danh mục, trang chặng và "Học tiếp" hiện đủ; hai cuốn sách in có tác phẩm ("Hướng dẫn nghe", "Piano: 10 bài đầu tiên và bài học tác phẩm") đủ chương.
+**Xong khi:** 81 trang của 11 lô đã khóa; mọi trường của 73 bản ghi tác phẩm đã khóa (khóa cả bản ghi); `python3 tools/audio/check_audio.py` không lỗi; danh mục, trang chặng và "Học tiếp" hiện đủ; hai cuốn sách in có tác phẩm ("Hướng dẫn nghe", "Piano: 10 bài đầu tiên và bài học tác phẩm") đủ chương.
 
 ## Đợt 9. Hoàn tất
 

@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 // Khóa trang và bản ghi đã kiểm định (D1.6; plans/ben-vung/chuan-kiem-dinh.md mục 5–7).
-//   node tools/khoa.mjs mau <mục>…                    tạo hồ sơ mẫu kiem-dinh/<mục>.yml; hồ sơ đã có và lần cuối đã khóa
-//                                                     thì thêm một lần kiểm định mới (để điền) vào lan
+//   node tools/khoa.mjs mau <mục>…                    tạo hồ sơ mẫu kiem-dinh/<mục>.yml; bản ghi đang khóa từng phần thì
+//                                                     thêm một lần kiểm định mới (để điền) vào lan, để khóa thêm trường hay
+//                                                     khóa cả bản ghi. Mục đang khóa thì từ chối: muốn sửa thì mo
 //   node tools/khoa.mjs khoa <mục>…                   kiểm hồ sơ đủ; ghi mã băm vào kiem-dinh/khoa.json và vào lần cuối
-//                                                     trong lan của hồ sơ (lần đó phải chưa có mã băm)
+//                                                     trong lan của hồ sơ (lần đó phải chưa có mã băm). Mục đang khóa thì
+//                                                     từ chối; khóa từng phần cũ của bản ghi phải còn khớp
 //   node tools/khoa.mjs mo <mục> --ly-do "…"          gỡ khóa; ghi lý do và thêm một lần mới (để điền) vào lan của hồ sơ
 //   node tools/khoa.mjs tinh [<mục>…]                 in mã băm; không có mục thì kiểm mọi mục đã khóa (lệch thì thoát 1)
 //   node tools/khoa.mjs xuat <lô hay trang>… [--mau <n>] [--ra <file>]
@@ -18,9 +20,9 @@ import { execFileSync } from 'node:child_process';
 import { randomInt } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { parse, parseDocument, stringify } from 'yaml';
-import { GOC, chuanKhoaBanGhi, docKhoa, fileTrang, maBamKhoaBanGhi, maBamTrang, tachKhoaBanGhi } from '../src/khoa.mjs';
+import { schema } from '../src/du-lieu.mjs';
+import { GOC, chuanKhoaBanGhi, docBanGhi, docKhoa, fileTrang, maBamKhoaBanGhi, maBamTrang, tachKhoaBanGhi } from '../src/khoa.mjs';
 
 const KET_QUA = ['dung', 'da-sua', 'da-bo', 'khong-can-nguon'];
 const LUOT_2 = ['dung', 'sai', 'khong-chac'];
@@ -30,7 +32,13 @@ const KET_QUA_KHUONG = ['dung', 'da-sua'];
 const laBanGhi = (muc) => (muc.startsWith('du-lieu/') ? chuanKhoaBanGhi(muc.slice('du-lieu/'.length)) : null);
 /** Hồ sơ của mục: một file cho mỗi trang hay mỗi bản ghi (khóa từng phần dùng chung hồ sơ của bản ghi). */
 const fileHoSo = (muc, goc) => path.join(goc, 'kiem-dinh', `${muc.split('#')[0]}.yml`);
-const homNay = () => new Date().toISOString().slice(0, 10);
+/** Ngày theo giờ máy (không theo UTC: ở Việt Nam, trước 7 giờ sáng UTC còn là hôm trước). */
+const homNay = () => {
+	const d = new Date();
+	return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+};
+/** Trường của từng bộ dữ liệu theo schema (src/du-lieu.mjs): khóa từng phần chỉ nhận các tên này. */
+const TRUONG = Object.fromEntries(Object.entries(schema).map(([bo, s]) => [bo, Object.keys(s.shape)]));
 /** Những người phải ghi ở mỗi lần kiểm định (chuan-kiem-dinh.md mục 3, 5). */
 const NGUOI = ['luot_1', 'luot_2', 'review', 'kiem_mau'];
 const lanMoi = (so, goc) => ({ so, ngay: null, nhanh: nhanh(goc), ma_bam: null, nguoi: Object.fromEntries(NGUOI.map((k) => [k, null])) });
@@ -76,6 +84,9 @@ export function loiHoSo(hs, muc, goc) {
 		loi.push(bg ? `ban_ghi phải là "${bg}"` : `trang phải là "src/content/docs/${muc}.md"`);
 	if (!Array.isArray(hs.lan) || !hs.lan.length) loi.push('thiếu lan (các lần kiểm định)');
 	else for (const k of NGUOI) if (!hs.lan.at(-1).nguoi?.[k]) loi.push(`lần kiểm định cuối: thiếu nguoi.${k}`);
+	// chỉ trang khung (và trang 404, không có tầng) được khóa với hồ sơ không có nhận định; khác thì cần ghi_chu giải thích
+	if ((bg || (hs.tang && hs.tang !== 'khung')) && !(hs.nhan_dinh ?? []).length && !hs.ghi_chu)
+		loi.push(`chưa có nhận định nào: ${bg ? 'bản ghi' : `trang tầng ${hs.tang}`} cần ít nhất một nhận định đã kiểm, hay ghi_chu giải thích vì sao không có`);
 	const nguon = new Set((hs.nguon ?? []).map((n) => n.id));
 	for (const n of hs.nhan_dinh ?? []) {
 		const ten = `nhận định ${n.id ?? '(không id)'}`;
@@ -168,7 +179,12 @@ export function lenh(thamSo, goc = GOC, in_ = console.log) {
 		for (const t of con) {
 			const f = fileHoSo(t, goc);
 			if (fs.existsSync(f)) {
-				// hồ sơ đã có (lần kiểm định trước đã khóa): thêm lần mới, ví dụ khóa thêm trường hay khóa cả bản ghi
+				// hồ sơ đã có: chỉ bản ghi đang khóa từng phần được thêm lần mới (khóa thêm trường hay khóa cả bản ghi). Trang hay
+				// bản ghi đang khóa thì phải mở khóa (lệnh mo tự thêm lần mới), để mọi lần sửa đều có lý do (chuẩn mục 7)
+				const bg = laBanGhi(t);
+				const ten = bg ? `du-lieu/${tachKhoaBanGhi(bg).banGhi}` : t;
+				if (bg ? khoa.ban_ghi[tachKhoaBanGhi(bg).banGhi] : khoa.trang[t])
+					throw new Error(`${ten} đang khóa: muốn sửa thì mở khóa trước (node tools/khoa.mjs mo ${ten} --ly-do "…"); lệnh mo tự thêm lần kiểm định mới vào hồ sơ`);
 				const doc = parseDocument(fs.readFileSync(f, 'utf8'));
 				const lan = doc.get('lan');
 				if (!lan?.items.at(-1)?.get('ma_bam')) throw new Error(`${path.relative(goc, f)} đã có, lần cuối trong lan chưa khóa: điền lần đó rồi khóa`);
@@ -187,16 +203,33 @@ export function lenh(thamSo, goc = GOC, in_ = console.log) {
 		for (const muc of con) {
 			const f = fileHoSo(muc, goc);
 			if (!fs.existsSync(f)) throw new Error(`${muc}: chưa có hồ sơ ${path.relative(goc, f)} (tạo bằng: node tools/khoa.mjs mau ${muc})`);
+			const bg = laBanGhi(muc);
+			const { banGhi, truong } = bg ? tachKhoaBanGhi(bg) : {};
+			const mo = (x) => `node tools/khoa.mjs mo ${x} --ly-do "…"`;
+			// đã khóa thì phải mở khóa trước (chuan-kiem-dinh.md mục 7): không khóa đè
+			if (!bg && khoa.trang[muc]) throw new Error(`${muc}: trang đã khóa. Muốn sửa thì mở khóa trước: ${mo(muc)}`);
+			if (bg && khoa.ban_ghi[banGhi]) throw new Error(`${muc}: bản ghi ${banGhi} đã khóa cả bản ghi. Muốn sửa thì mở khóa trước: ${mo(`du-lieu/${banGhi}`)}`);
+			if (bg && khoa.ban_ghi[bg]) throw new Error(`${muc}: khóa này đã có. Muốn sửa thì mở khóa trước: ${mo(`du-lieu/${bg}`)}`);
+			// khóa từng phần cũ của bản ghi phải còn khớp: khóa mới không được che chỗ đã sửa ở trường đã khóa
+			const phanCu = bg ? Object.keys(khoa.ban_ghi).filter((k) => k.startsWith(`${banGhi}#`)) : [];
+			for (const k of phanCu)
+				if (maBamKhoaBanGhi(k, goc) !== khoa.ban_ghi[k]) throw new Error(`${muc}: khóa du-lieu/${k} đã lệch (trường đã khóa bị sửa). Mở khóa trước: ${mo(`du-lieu/${k}`)}`);
+			if (truong) {
+				const bo = banGhi.split('/')[0];
+				const la = truong.filter((t) => !TRUONG[bo]?.includes(t));
+				if (la.length) throw new Error(`${muc}: bộ ${bo} không có trường ${la.join(', ')} (trường có: ${(TRUONG[bo] ?? []).join(', ')})`);
+				const r = docBanGhi(banGhi, goc);
+				const chuaCo = r ? truong.filter((t) => !(t in r)) : [];
+				if (chuaCo.length) in_(`  chú ý: bản ghi ${banGhi} chưa có trường ${chuaCo.join(', ')}; khóa vẫn giữ trường ấy chưa có`);
+			}
 			const hs = parse(fs.readFileSync(f, 'utf8')) ?? {};
 			if (hs.lan?.at(-1)?.ma_bam)
 				throw new Error(`${muc}: lần cuối trong lan của hồ sơ đã có mã băm. Trang hay bản ghi đã khóa thì sửa theo thủ tục mở khóa: node tools/khoa.mjs mo ${muc} --ly-do "…"`);
 			const loi = loiHoSo(hs, muc, goc);
 			if (loi.length) throw new Error(`${muc}: hồ sơ chưa đủ để khóa:\n- ${loi.join('\n- ')}`);
 			const ma = maBamMuc(muc, goc);
-			const bg = laBanGhi(muc);
-			const { banGhi, truong } = bg ? tachKhoaBanGhi(bg) : {};
-			if (bg && truong && khoa.ban_ghi[banGhi]) throw new Error(`${muc}: bản ghi ${banGhi} đã khóa cả bản ghi`);
-			if (bg && !truong) for (const k of Object.keys(khoa.ban_ghi)) if (k.startsWith(`${banGhi}#`)) delete khoa.ban_ghi[k];
+			// khóa cả bản ghi thay mọi khóa từng phần cũ; khóa từng phần mới thay khóa cũ có các trường nằm trọn trong nó
+			for (const k of phanCu) if (!truong || tachKhoaBanGhi(k).truong.every((t) => truong.includes(t))) delete khoa.ban_ghi[k];
 			if (bg) khoa.ban_ghi[bg] = ma;
 			else khoa.trang[muc] = ma;
 			ghiLan(f, ma, goc, truong);
@@ -221,17 +254,17 @@ export function lenh(thamSo, goc = GOC, in_ = console.log) {
 			const phan = bg ? Object.keys(khoa.ban_ghi).filter((x) => x.startsWith(`${tachKhoaBanGhi(bg).banGhi}#`)) : [];
 			throw new Error(`${muc} chưa khóa` + (phan.length ? `; bản ghi đang khóa từng phần: ${phan.map((x) => `du-lieu/${x}`).join(', ')}` : ''));
 		}
+		// lý do mở khóa ghi vào hồ sơ: không có hồ sơ thì không mở
+		const f = fileHoSo(muc, goc);
+		if (!fs.existsSync(f)) throw new Error(`${muc}: không có hồ sơ ${path.relative(goc, f)} để ghi lý do mở khóa`);
 		delete bang[k];
 		ghiKhoa(khoa, goc);
-		const f = fileHoSo(muc, goc);
-		if (fs.existsSync(f)) {
-			const doc = parseDocument(fs.readFileSync(f, 'utf8'));
-			if (!doc.has('mo_khoa')) doc.set('mo_khoa', doc.createNode([]));
-			doc.get('mo_khoa').add(doc.createNode({ ngay: homNay(), nhanh: nhanh(goc), ly_do: lyDo }));
-			const lan = doc.get('lan');
-			lan.add(doc.createNode(lanMoi(lan.items.length + 1, goc)));
-			fs.writeFileSync(f, doc.toString({ lineWidth: 0 }));
-		}
+		const doc = parseDocument(fs.readFileSync(f, 'utf8'));
+		if (!doc.has('mo_khoa')) doc.set('mo_khoa', doc.createNode([]));
+		doc.get('mo_khoa').add(doc.createNode({ ngay: homNay(), nhanh: nhanh(goc), ly_do: lyDo }));
+		const lan = doc.get('lan');
+		lan.add(doc.createNode(lanMoi(lan.items.length + 1, goc)));
+		fs.writeFileSync(f, doc.toString({ lineWidth: 0 }));
 		in_(`đã mở khóa ${muc}: sửa, kiểm định lại những nhận định bị chạm và các nhận định cùng đoạn, điền lần mới trong lan của hồ sơ, rồi khóa lại`);
 		return 0;
 	}
@@ -285,7 +318,8 @@ export function lenh(thamSo, goc = GOC, in_ = console.log) {
 	throw new Error('việc phải là mau, khoa, mo, tinh hay xuat (xem đầu file tools/khoa.mjs)');
 }
 
-if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {
+// import.meta.main: đúng cả khi đường dẫn script đi qua liên kết tượng trưng (/tmp trên macOS)
+if (import.meta.main) {
 	try {
 		process.exit(lenh(process.argv.slice(2)));
 	} catch (e) {

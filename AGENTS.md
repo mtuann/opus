@@ -44,18 +44,21 @@ npm test          # kiểm thử trên dist/: chạy sau npm run build hay npm r
 ## Khóa
 
 - Trang và bản ghi dữ liệu lên site thật khi đã khóa: mã băm trong `kiem-dinh/khoa.json`, hồ sơ kiểm định trong `kiem-dinh/<trang>.yml` hay `kiem-dinh/du-lieu/<bộ>/<id>.yml` (`plans/ben-vung/chuan-kiem-dinh.md` mục 5–7). Trang hay bản ghi đã khóa mà đổi thì build hỏng, ở cả hai bản; sửa theo thủ tục mở khóa.
-- Công cụ `tools/khoa.mjs`; mã băm tính ở `src/khoa.mjs`, dùng chung với bản build. `<mục>` là trang (`nhac-ly/10-hop-am-ba`, `index`) hay bản ghi (`du-lieu/tac-pham/fur-elise`). Khóa từng phần bản ghi, chỉ các trường đã kiểm định: `du-lieu/tac-pham/fur-elise#chang,danh_muc,tac_gia,ten`; khóa cả bản ghi thì thay các khóa từng phần của nó.
+- Công cụ `tools/khoa.mjs`; mã băm tính ở `src/khoa.mjs`, dùng chung với bản build. `<mục>` là trang (`nhac-ly/10-hop-am-ba`, `index`) hay bản ghi (`du-lieu/tac-pham/fur-elise`). Khóa từng phần bản ghi, chỉ các trường đã kiểm định: `du-lieu/tac-pham/fur-elise#chang,danh_muc,tac_gia,ten` (tên trường phải có trong schema của bộ); khóa cả bản ghi, hay khóa nhiều trường hơn, thay các khóa từng phần cũ của nó khi chúng còn khớp.
 
 ```bash
-node tools/khoa.mjs mau <mục>               # tạo hồ sơ mẫu; hồ sơ đã có thì thêm lần kiểm định mới
+node tools/khoa.mjs mau <mục>               # tạo hồ sơ mẫu; bản ghi đang khóa từng phần thì thêm lần kiểm định mới
 node tools/khoa.mjs khoa <mục>              # kiểm hồ sơ đủ, ghi mã băm vào khoa.json và vào lần cuối của lan
 node tools/khoa.mjs tinh                    # kiểm mọi mục đã khóa; lệch thì thoát 1
 node tools/khoa.mjs mo <mục> --ly-do "…"    # mở khóa: ghi lý do, thêm một lần mới vào lan để điền
 node tools/khoa.mjs xuat D3-L2 [--mau 10]   # nhận định của lô cho lượt 2 (--mau: mẫu cho chủ repo kiểm)
 ```
 
-- Khóa được khi mọi nhận định đã qua hai lượt và có kết quả, chỗ sửa hay bỏ có ghi chú, chỗ hai lượt khác nhau đã giải quyết, mọi khuông nhạc (khối `abc`) đã kiểm, và lần cuối trong `lan` ghi đủ người (`luot_1`, `luot_2`, `review`, `kiem_mau`).
-- Trên nhánh lô `moi/d<đợt>-l<lô>`, `tests/pham-vi.test.mjs` so với `main` (cần nhánh `main` hay `origin/main`): file ngoài phạm vi của lô (kế hoạch, mục "Quy tắc chung"; trang của lô theo `plans/lam-lai/anh-xa.md`) và trang của lô khác bị khóa hay mở khóa thì kiểm thử hỏng. Việc kế hoạch giao riêng cho một lô (như trang sinh từ dữ liệu ở D2-L1) ghi trong `THEM` của file kiểm thử đó.
+- Khóa được khi mọi nhận định đã qua hai lượt và có kết quả, chỗ sửa hay bỏ có ghi chú, chỗ hai lượt khác nhau đã giải quyết, mọi khuông nhạc (khối `abc`) đã kiểm, và lần cuối trong `lan` ghi đủ người (`luot_1`, `luot_2`, `review`, `kiem_mau`). Hồ sơ không có nhận định chỉ khóa được ở trang khung, hay khi có `ghi_chu` giải thích.
+- Mục đang khóa thì `khoa` và `mau` từ chối: muốn sửa thì `mo` trước (ghi lý do), không khóa đè.
+- Trang viết `.md` (không `.mdx`), không có khoảng trắng cuối dòng (mã băm bỏ qua chúng; ngắt dòng cứng viết `<br>`), khối khuông nhạc mở bằng ` ```abc ` ở đầu dòng (cách công cụ đếm khuông cho hồ sơ). `tests/khoa.test.mjs` chặn.
+- `npm run dev` chỉ kiểm khóa lúc khởi động: sửa trang đã khóa khi dev đang chạy thì không bị chặn ngay; `npm run build` mới chặn.
+- Trên nhánh lô `moi/d<đợt>-l<lô>`, `tests/pham-vi.test.mjs` so với `main` (cần nhánh `main` hay `origin/main`): file ngoài phạm vi của lô (kế hoạch, mục "Quy tắc chung"; trang của lô theo `plans/lam-lai/anh-xa.md`), hồ sơ của trang ngoài lô bị sửa, trang của lô khác bị khóa hay mở khóa, khóa bản ghi đã có ở `main` bị đổi hay gỡ thì kiểm thử hỏng. Việc kế hoạch giao riêng cho một lô (như trang sinh từ dữ liệu ở D2-L1) ghi trong `THEM` của file kiểm thử đó.
 
 ## Giao diện
 

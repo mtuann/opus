@@ -1,20 +1,22 @@
 // Kiểm thử phạm vi lô (D1.6; plans/lam-lai/README.md, mục Quy tắc chung): trên nhánh moi/d<đợt>-l<lô>, mọi file khác
-// với main (kể cả file chưa commit) phải thuộc phạm vi của lô, và trang khóa, đổi mã băm hay mở khóa trong
-// kiem-dinh/khoa.json phải là trang của lô. Trang của lô lấy từ plans/lam-lai/anh-xa.md. Nhánh khác thì bỏ qua.
+// với main (kể cả file chưa commit) phải thuộc phạm vi của lô; trang khóa, đổi mã băm hay mở khóa trong
+// kiem-dinh/khoa.json phải là trang của lô; khóa bản ghi đã có ở main không đổi, không bị gỡ (mở khóa đi nhánh mo/…).
+// Trang của lô lấy từ plans/lam-lai/anh-xa.md. Nhánh khác thì bỏ qua.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { docKhoa } from '../src/khoa.mjs';
+import { docKhoa, maBamKhoaBanGhi, tachKhoaBanGhi } from '../src/khoa.mjs';
 import { trangCuaLo } from '../tools/khoa.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const git = (goc, ...ts) => execFileSync('git', ['-C', goc, ...ts], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
 
 /**
- * Phạm vi chung của một lô: trang của lô; dữ liệu; thành phần, script, file tĩnh; hồ sơ; báo cáo của lô (cả ảnh chụp,
+ * Phạm vi chung của một lô: trang của lô; dữ liệu; thành phần, script, file tĩnh; hồ sơ (của trang trong lô, của bản ghi,
+ * và khoa.json); báo cáo của lô (cả ảnh chụp,
  * danh sách nhận định, kết quả lượt 2, mẫu kiểm). Thêm theo AGENTS.md: lô làm thành phần thì đăng ký nó trong
  * src/plugins/thanh-phan.mjs, thêm CSS vào src/styles/thanh-phan.css và kiểm thử vào tests/, trừ hai kiểm thử canh cổng
  * (khóa và phạm vi).
@@ -22,7 +24,7 @@ const git = (goc, ...ts) => execFileSync('git', ['-C', goc, ...ts], { encoding: 
 const CHUNG = [
 	/^src\/(data|components|scripts)\//,
 	/^public\//,
-	/^kiem-dinh\//,
+	/^kiem-dinh\/(khoa\.json$|du-lieu\/)/,
 	/^src\/plugins\/thanh-phan\.mjs$/,
 	/^src\/styles\/thanh-phan\.css$/,
 	/^tests\/(?!khoa\.test\.mjs$|pham-vi\.test\.mjs$)/,
@@ -40,6 +42,9 @@ const THEM = {
 function trongPhamVi(file, lo, trangLo) {
 	if (CHUNG.some((re) => re.test(file))) return true;
 	if ((THEM[lo] ?? []).some((p) => (p.endsWith('/') ? file.startsWith(p) : file === p))) return true;
+	// hồ sơ kiểm định của trang: chỉ của trang trong lô
+	const hs = /^kiem-dinh\/(.+)\.yml$/.exec(file);
+	if (hs) return trangLo.includes(hs[1]);
 	const bc = `plans/lam-lai/bao-cao/${lo.toLowerCase()}`;
 	if (file.startsWith(bc) && /^[./-]/.test(file.slice(bc.length))) return true;
 	const m = /^src\/content\/docs\/(.+)\.mdx?$/.exec(file);
@@ -78,11 +83,28 @@ function kiemPhamVi(goc, nhanh) {
 	const loi = [...file].sort().filter((f) => !trongPhamVi(f, lo, trangLo)).map((f) => `${f}: ngoài phạm vi của lô ${lo}`);
 	let truoc = {};
 	try {
-		truoc = JSON.parse(git(goc, 'show', `${chung}:kiem-dinh/khoa.json`)).trang ?? {};
+		truoc = JSON.parse(git(goc, 'show', `${chung}:kiem-dinh/khoa.json`));
 	} catch {}
-	const nay = docKhoa(goc).trang;
-	for (const t of new Set([...Object.keys(truoc), ...Object.keys(nay)]))
-		if (truoc[t] !== nay[t] && !trangLo.includes(t)) loi.push(`kiem-dinh/khoa.json: trang ${t} không thuộc lô ${lo} mà ${!truoc[t] ? 'được khóa' : !nay[t] ? 'bị mở khóa' : 'đổi mã băm'}`);
+	const nay = docKhoa(goc);
+	const [tTruoc, tNay] = [truoc.trang ?? {}, nay.trang];
+	for (const t of new Set([...Object.keys(tTruoc), ...Object.keys(tNay)]))
+		if (tTruoc[t] !== tNay[t] && !trangLo.includes(t)) loi.push(`kiem-dinh/khoa.json: trang ${t} không thuộc lô ${lo} mà ${!tTruoc[t] ? 'được khóa' : !tNay[t] ? 'bị mở khóa' : 'đổi mã băm'}`);
+	// bản ghi: khóa mới thì cho. Khóa đã có ở main không được đổi mã băm hay bị gỡ, trừ khóa từng phần được thay bằng khóa
+	// rộng hơn của cùng bản ghi (cả bản ghi, hay nhiều trường hơn), khi các trường đã khóa vẫn y như cũ
+	for (const [k, ma] of Object.entries(truoc.ban_ghi ?? {})) {
+		if (nay.ban_ghi[k] === ma) continue;
+		if (k in nay.ban_ghi) {
+			loi.push(`kiem-dinh/khoa.json: bản ghi ${k} đã khóa ở main mà đổi mã băm`);
+			continue;
+		}
+		const { banGhi, truong } = tachKhoaBanGhi(k);
+		const thay = truong && Object.keys(nay.ban_ghi).some((x) => {
+			const moi = tachKhoaBanGhi(x);
+			return moi.banGhi === banGhi && (!moi.truong || truong.every((t) => moi.truong.includes(t)));
+		});
+		if (!thay) loi.push(`kiem-dinh/khoa.json: bản ghi ${k} đã khóa ở main mà bị gỡ`);
+		else if (maBamKhoaBanGhi(k, goc) !== ma) loi.push(`kiem-dinh/khoa.json: bản ghi ${k} được thay bằng khóa rộng hơn mà trường đã khóa bị sửa`);
+	}
 	return { lo, loi };
 }
 
@@ -110,6 +132,7 @@ test('phạm vi của một lô: trang của lô, thư mục chung, báo cáo c�
 		'public/vendor/x.js',
 		'kiem-dinh/nhac-ly/10-hop-am-ba.yml',
 		'kiem-dinh/khoa.json',
+		'kiem-dinh/du-lieu/tac-pham/fur-elise.yml',
 		'src/plugins/thanh-phan.mjs',
 		'src/styles/thanh-phan.css',
 		'tests/ban-phim.test.mjs',
@@ -133,6 +156,8 @@ test('phạm vi của một lô: trang của lô, thư mục chung, báo cáo c�
 		'tests/khoa.test.mjs',
 		'tests/pham-vi.test.mjs',
 		'src/pages/tu-dien.astro',
+		'kiem-dinh/index.yml',
+		'kiem-dinh/nhac-ly/01-cao-do-ten-not.yml',
 	])
 		assert.ok(!trongPhamVi(f, 'D3-L2', trang), `${f} phải ngoài phạm vi`);
 	assert.ok(trongPhamVi('src/pages/tu-dien.astro', 'D3-L5', []));
@@ -141,7 +166,7 @@ test('phạm vi của một lô: trang của lô, thư mục chung, báo cáo c�
 	assert.ok(trongPhamVi('src/content/docs/blog/2026/bat-dau.md', 'D7-L3', ['blog/posts/2026-10-11-bat-dau', 'cap-nhat']));
 });
 
-test('nhánh lô trong repo thử: bắt file ngoài phạm vi (đã commit, chưa commit, file mới) và khóa trang của lô khác', () => {
+test('nhánh lô trong repo thử: bắt file ngoài phạm vi (đã commit, chưa commit, file mới), hồ sơ và khóa trang của lô khác, khóa bản ghi bị đổi hay gỡ', () => {
 	const goc = fs.mkdtempSync(path.join(os.tmpdir(), 'opus-pham-vi-'));
 	const g = (...ts) => execFileSync('git', ['-C', goc, '-c', 'user.name=thu', '-c', 'user.email=thu@example.com', ...ts], { stdio: 'ignore' });
 	const ghi = (f, chu) => {
@@ -153,7 +178,10 @@ test('nhánh lô trong repo thử: bắt file ngoài phạm vi (đã commit, ch�
 		ghi('plans/lam-lai/anh-xa.md', fs.readFileSync(path.join(ROOT, 'plans/lam-lai/anh-xa.md'), 'utf8'));
 		ghi('src/content/docs/index.md', 'chủ\n');
 		ghi('src/content/docs/nhac-ly/01-cao-do-ten-not.md', 'cũ\n');
-		ghi('kiem-dinh/khoa.json', JSON.stringify({ trang: { index: 'sha256:a' }, ban_ghi: {} }));
+		ghi('src/data/tac-pham.yml', '- slug: x\n  ten: X\n- slug: y\n  ten: Y\n- slug: z\n  ten: Z\n');
+		ghi('kiem-dinh/index.yml', 'trang: src/content/docs/index.md\n');
+		const ma = (k) => maBamKhoaBanGhi(k, goc);
+		ghi('kiem-dinh/khoa.json', JSON.stringify({ trang: { index: 'sha256:a' }, ban_ghi: { 'tac-pham/x#ten': ma('tac-pham/x#ten'), 'tac-pham/y#ten': ma('tac-pham/y#ten'), 'tac-pham/z#ten': ma('tac-pham/z#ten') } }));
 		g('add', '-A');
 		g('commit', '-q', '-m', 'nền');
 		g('checkout', '-q', '-b', 'moi/d3-l2');
@@ -162,16 +190,23 @@ test('nhánh lô trong repo thử: bắt file ngoài phạm vi (đã commit, ch�
 		g('add', '-A');
 		g('commit', '-q', '-m', 'lô');
 		ghi('AGENTS.md', 'chưa commit\n');
-		ghi('kiem-dinh/khoa.json', JSON.stringify({ trang: { 'nhac-ly/10-hop-am-ba': 'sha256:b', 'nhac-ly/01-cao-do-ten-not': 'sha256:c' }, ban_ghi: {} }));
+		ghi('kiem-dinh/index.yml', 'trang: src/content/docs/index.md\nghi_chu: sửa lén\n');
+		// x: khóa cả bản ghi thay khóa từng phần, dữ liệu không đổi (được); y: sửa trường đã khóa rồi tính lại mã băm bằng tay;
+		// z: gỡ khóa
+		ghi('src/data/tac-pham.yml', '- slug: x\n  ten: X\n- slug: y\n  ten: Y2\n- slug: z\n  ten: Z\n');
+		ghi('kiem-dinh/khoa.json', JSON.stringify({ trang: { 'nhac-ly/10-hop-am-ba': 'sha256:b', 'nhac-ly/01-cao-do-ten-not': 'sha256:c' }, ban_ghi: { 'tac-pham/x': ma('tac-pham/x'), 'tac-pham/y#ten': ma('tac-pham/y#ten') } }));
 		assert.equal(kiemPhamVi(goc, 'moi/d1-6-khoa'), null);
 		assert.equal(kiemPhamVi(goc, 'main'), null);
 		assert.deepEqual(kiemPhamVi(goc, 'moi/d3-l2'), {
 			lo: 'D3-L2',
 			loi: [
 				'AGENTS.md: ngoài phạm vi của lô D3-L2',
+				'kiem-dinh/index.yml: ngoài phạm vi của lô D3-L2',
 				'src/content/docs/nhac-ly/01-cao-do-ten-not.md: ngoài phạm vi của lô D3-L2',
 				'kiem-dinh/khoa.json: trang index không thuộc lô D3-L2 mà bị mở khóa',
 				'kiem-dinh/khoa.json: trang nhac-ly/01-cao-do-ten-not không thuộc lô D3-L2 mà được khóa',
+				'kiem-dinh/khoa.json: bản ghi tac-pham/y#ten đã khóa ở main mà đổi mã băm',
+				'kiem-dinh/khoa.json: bản ghi tac-pham/z#ten đã khóa ở main mà bị gỡ',
 			],
 		});
 	} finally {

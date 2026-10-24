@@ -248,7 +248,8 @@ export const dat = (kq) =>
 	['abc', 'quiz', 'id'].every((k) => JSON.stringify(kq[k][0]) === JSON.stringify(kq[k][1]));
 
 // ---------- Dòng lệnh ----------
-if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {
+// import.meta.main: đúng cả khi đường dẫn script đi qua liên kết tượng trưng (/tmp trên macOS)
+if (import.meta.main) {
 	const ts = process.argv.slice(2);
 	const iDist = ts.indexOf('--dist');
 	const dist = iDist >= 0 ? path.resolve(ts[iDist + 1]) : undefined;

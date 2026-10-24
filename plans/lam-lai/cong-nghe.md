@@ -100,6 +100,8 @@ Cách làm (D1.6):
 
 - **Chọn bản:** biến môi trường `OPUS_BAN=xem` là bản xem (`npm run build:xem`, `npm run dev`); không có biến là bản thật (`ban()` trong `src/khoa.mjs`).
 - **Lọc ở bộ nạp:** `locTheoBan` (`src/ban-build.mjs`) bọc bộ nạp trang của Starlight. Ở bản thật, nạp xong thì xóa khỏi bộ `docs` mọi trang không có trong `kiem-dinh/khoa.json`, nên Starlight không biết trang đó: không dựng, không đưa vào menu, nút Trước và Tiếp, tìm kiếm, sitemap. Không dùng `draft` của Starlight, vì phải ghi vào frontmatter, làm đổi mã băm của trang.
+- **Khóa từng phần bản ghi:** khóa `du-lieu/<bộ>/<id>#<trường>,…` chỉ băm các trường đã khai (tên trường phải có trong schema của bộ); trường khác sửa tự do. Khóa cả bản ghi, hay khóa nhiều trường hơn, thay các khóa từng phần cũ của bản ghi, khi các khóa cũ vẫn khớp.
+- **Không khóa đè:** mục đang khóa thì `khoa` và `mau` từ chối; muốn sửa thì `mo` (ghi lý do vào hồ sơ, thêm lần kiểm định mới), sửa, rồi khóa lại. Trên nhánh lô, kiểm thử phạm vi chặn việc đổi hay gỡ khóa bản ghi đã có ở `main`.
 - **Kiểm khóa lúc nạp cấu hình:** `src/content.config.ts` gọi `kiemKhoa()`. Trang hay bản ghi đã khóa mà mã băm lệch, hay không còn, thì build hỏng ở cả hai bản; thông báo kèm lệnh mở khóa.
 - **Dải "Chưa kiểm định":** `src/components/Banner.astro` thay thành phần Banner của Starlight; chỉ hiện ở bản xem, ở trang chưa khóa, đầu phần nội dung.
 - **Link "sắp có"** (D1.5) đọc danh sách trang từ `trangTrongBan()`, nên ở bản thật link tới trang chưa khóa cũng hiện "sắp có".
