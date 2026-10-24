@@ -1,0 +1,57 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/cap-do/6
+ban_ghi: cap-do/6
+lan:
+  - so: 1
+    ngay: 2026-10-24
+    nhanh: moi/d2-0-du-lieu
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D2-0 phần A)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: "Tên chặng (ten) và ranh giới giữa các chặng là lựa chọn biên tập của site, không phải nhận định cần nguồn; chỉ kiểm: (1) nhan_grade, tuong_duong, grade_tu, grade_den khớp nhau và khớp cấu trúc cấp của ABRSM; (2) moc_thoi_gian và thoi_luong (lời khuyên tập) khớp ba trang lõi cũ lo-trinh.md, moi-ngay.md, lo-trinh-choi.md. Trang Piano của ABRSM (abrsm.org/en-gb/instruments/piano) trả HTTP 403 khi mở trực tiếp, nên dùng bản lưu của Wayback Machine (13/11/2025) cùng hai bản đề cương PDF chính thức của ABRSM (2025–2026, 2019–2020), đều liệt kê Initial Grade (từ 2021), Grade 1–8 và các diploma."
+nguon:
+  - id: abrsm-piano
+    bac: 2
+    ten: ABRSM, trang Piano chính thức (abrsm.org/en-gb/instruments/piano; bản lưu 13/11/2025, vì trang gốc trả HTTP 403)
+    link: https://web.archive.org/web/20251113192510/https://www.abrsm.org/en-gb/instruments/piano
+  - id: abrsm-2526
+    bac: 2
+    ten: ABRSM, Practical Music Grades Piano Syllabus 2025 & 2026, Qualification Specification
+    link: https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20&%202026%20Prac%20syllabus%2020240524_access.pdf
+  - id: abrsm-1920
+    bac: 2
+    ten: ABRSM, Piano Syllabus 2019 & 2020 (bản đầy đủ; bản lưu của us.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf)
+    link: https://web.archive.org/web/2021/https://us.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf
+nhan_dinh:
+  - id: n1
+    cau: Chặng 6 (Nâng cao) ứng với ABRSM Grade 7–8 (grade_tu 7, grade_den 8).
+    loai: cap-do
+    truong:
+      - nhan_grade
+      - tuong_duong
+      - grade_tu
+      - grade_den
+    nguon:
+      - abrsm-piano
+      - abrsm-2526
+      - abrsm-1920
+    ket_qua: dung
+    ghi_chu: "Nhãn \"Grade 7–8\" (nhan_grade và tuong_duong) khớp grade_tu 7, grade_den 8. Quy ước của site: grade_tu và grade_den = 0 là trước Grade 1 (gồm Initial Grade), 9 là sau Grade 8 (diploma); mỗi chặng bắt đầu ngay sau chặng trước. ABRSM, trang Piano (bản lưu 13/11/2025): \"Face-to-face Practical Grades and digital Performance Grades are available from Initial Grade to Grade 8\" và \"For advanced pianists we offer ARSM, LRSM and FRSM diplomas in Music Performance\". ABRSM Piano Practical Grades 2025 & 2026 (mục \"Progression route\"): \"ABRSM Practical Music qualifications are available from Grade 1 to Grade 8, and in some subjects from Initial Grade\"; bản này có các trang \"Piano Initial Grade\" và \"Piano Grade 1\" đến \"Piano Grade 8\" (Initial Grade là bậc Entry Level, đứng trước Grade 1); và \"an ideal platform from which to progress to ABRSM's diploma offer, beginning with the performance-only ARSM ... The LRSM and FRSM Diplomas are progressive from the ARSM\". ABRSM Piano Syllabus 2019 & 2020 (mục lục): \"Grades 1–8\" và \"Post-Grade 8: ARSM; DipABRSM, LRSM, FRSM\"."
+  - id: n2
+    cau: "Mốc thời gian của chặng 6: 5,5–9 năm."
+    loai: khuyen-tap
+    truong:
+      - moc_thoi_gian
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: "Khớp ../opus-zero/docs/piano/lo-trinh.md: `| 6. Nâng cao | Grade 7–8 | 5,5–9 năm | 60–90 phút | ... |`. Hai trang còn lại không nêu mốc cho chặng này. Không mâu thuẫn."
+  - id: n3
+    cau: "Thời lượng tập mỗi ngày ở chặng 6: 60–90 phút."
+    loai: khuyen-tap
+    truong:
+      - thoi_luong
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Khớp ../opus-zero/docs/piano/lo-trinh.md: `| 6. Nâng cao | Grade 7–8 | 5,5–9 năm | 60–90 phút | ... |`; ../opus-zero/docs/bat-dau/moi-ngay.md: "Khi buổi tập dài 45 hoặc 90 phút" (90 phút là mốc trên của chặng này). Không mâu thuẫn.'

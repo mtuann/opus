@@ -1,0 +1,86 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/chopin-valse-si-thu
+ban_ghi: tac-pham/chopin-valse-si-thu
+lan:
+  - so: 1
+    ngay: 2026-10-24
+    nhanh: moi/d2-0-du-lieu
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D2-0 phần A)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/chopin-valse-si-thu.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Cần cập nhật theo: chip.cap_do, dòng "Độ khó" trong thong_tin, trang chặng, bảng "Tác phẩm theo cấp độ" và gợi ý trong lộ trình (bài đang xếp ở chặng 5).'
+nguon:
+  - id: imslp-op69
+    bac: 2
+    ten: IMSLP, Waltzes, Op.69 (Chopin)
+    link: https://imslp.org/wiki/Waltzes,_Op.69_(Chopin,_Fr%C3%A9d%C3%A9ric)
+  - id: henle-hn131
+    bac: 2
+    ten: G. Henle Verlag, HN 131 Chopin, Waltzes (mức khó từng valse)
+    link: https://www.henle.de/en/Waltzes/HN-131
+  - id: abrsm-1516g8
+    bac: 2
+    ten: "ABRSM, Piano 2015 & 2016, Grade 8: danh sách tác phẩm (bản lưu của us.abrsm.org/media/62106/piano0815.pdf)"
+    link: https://web.archive.org/web/2020/https://us.abrsm.org/media/62106/piano0815.pdf
+  - id: rcm-2022
+    bac: 2
+    ten: The Royal Conservatory (RCM), Piano Syllabus, 2022 Edition
+    link: https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf
+  - id: henle-thang
+    bac: 2
+    ten: G. Henle Verlag, Levels of Difficulty (thang độ khó 1–9; trang không có bảng quy đổi sang ABRSM)
+    link: https://www.henle.de/Levels-of-Difficulty/
+nhan_dinh:
+  - id: n1
+    cau: "Tên bài: Valse Si thứ, Op. 69 số 2 (tác phẩm di cảo)."
+    loai: ten
+    truong:
+      - ten
+    nguon:
+      - imslp-op69
+      - henle-hn131
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Waltzes, Op.69", mục 2 "Moderato (B minor)". Henle HN 131: "Waltz b minor op. post. 69,2".'
+  - id: n2
+    cau: "Tác giả: Frédéric Chopin."
+    loai: lich-su
+    truong:
+      - tac_gia
+    nguon:
+      - imslp-op69
+      - henle-hn131
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Composer "Chopin, Frédéric"; Henle HN 131.'
+  - id: n3
+    cau: "Số danh mục: Op. 69 số 2 (opus di cảo)."
+    loai: danh-muc
+    truong:
+      - danh_muc
+    nguon:
+      - imslp-op69
+      - henle-hn131
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Op./Cat. No. "Op.69", mục 2. Henle: "op. post. 69,2".'
+  - id: n4
+    cau: Bài tương đương khoảng ABRSM Grade 7–8.
+    loai: cap-do
+    truong:
+      - grade
+    nguon:
+      - abrsm-1516g8
+      - rcm-2022
+      - henle-hn131
+      - henle-thang
+    ket_qua: da-sua
+    ghi_chu: 'Dữ liệu ghi "Grade 5–6"; sửa thành "Grade 7–8". Đề cương chính thức: ABRSM Piano 2015 & 2016, Grade 8, danh sách C, mục 3: "Chopin, Waltz in B minor, Op. 69 No. 2". RCM 2022: Level 8. Henle chỉ xếp mức 4 (medium). Chỉ có một kỳ ABRSM (2015–2016) liệt kê bài này (các kỳ 2017–2028 không có), nên chọn "Grade 7–8" thay vì "Grade 8"; chỗ này nên được lượt 2 và chủ repo xem lại.'
+  - id: n5
+    cau: Bài thuộc chặng 6 (Grade 7–8) của lộ trình piano.
+    loai: cap-do
+    truong:
+      - chang
+    nguon:
+      - abrsm-1516g8
+    ket_qua: da-sua
+    ghi_chu: "Dữ liệu ghi chặng 5; sửa thành chặng 6. Chặng 5 (Grade 6) không còn chứa khoảng Grade 7–8 (cap-do.yml: chặng 6 = Grade 7–8)."
