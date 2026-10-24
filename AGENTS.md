@@ -159,6 +159,24 @@ Frontmatter có `tac_pham`. Thứ tự các mục như mẫu ở `../opus-zero/A
 | Danh sách việc | `- [ ] việc` (đã làm: `- [x]`) | Ô đánh dấu bấm được, nhãn 44 px, tên đọc được là chữ của việc. Ô đã đánh dấu được nhớ trong trình duyệt, cùng khóa và định dạng với site cũ (`src/plugins/danh-sach-viec.mjs`, `src/scripts/viec.js`) |
 
 - Chỉ thị `::…` đứng một mình trên một dòng, không có chữ, chỉ có thuộc tính ghi trong bảng (`::khoi-nghe` nhận `moc`; `::hinh`, `::cong-cu` cần `ten`; `::cong-cu` nhận thêm thông số của công cụ). Ba chỉ thị `::hop-tac-pham`, `::hinh-cau-truc`, `::hoc-tiep` cần `tac_pham` ở frontmatter; `::hinh-cau-truc` chỉ dùng ở trang bài học hay hướng dẫn nghe, và bản ghi phải có hình cho loại trang đó. Sai, kể cả gõ sai tên chỉ thị, thì build hỏng, lỗi ghi tên file.
+- Sau đợt 2 có thêm (D2-L1):
+  - `::hinh{ten="lo-trinh"}`: sơ đồ 7 chặng, dựng từ `cap-do.yml`.
+  - Công cụ:
+    - `placement`: bài kiểm tra nhạc lý; khối ```` ```placement ````, thành phần đọc khối từ nguồn trang;
+    - `piano-level`: chọn chặng piano;
+    - `goi-y-tap`: mục "Hôm nay tập gì?" ở trang chủ.
+
+    Cả ba lưu trong trình duyệt như site cũ.
+  - Link do JavaScript dựng cũng hiện "sắp có" như link dựng lúc build: bản build xuất danh sách trang cho script.
+  - Nút của dải mực trỏ tới trang chưa có trong bản build thì tự ẩn.
+  - Ảnh chia sẻ: `public/og.png`.
+- 7 trang chặng `piano/lo-trinh/chang-1` đến `chang-7` sinh từ dữ liệu ở `src/pages/piano/lo-trinh/[chang].astro`:
+  - luôn đăng, cả ở bản thật;
+  - không có dải "Chưa kiểm định";
+  - mọi chỗ đọc bản ghi đi qua `chiDaKhoa`.
+
+  Menu (thứ tự nhóm `THU_TU`, tên chặng) ở `src/nhom.mjs`. Bản thật không chạy plugin Markdown của dự án cho trang chưa khóa, chỉ áp cho file trong `src/content/docs/` (`chiTrangTrongBan`, `src/ban-build.mjs`).
+- Chữ khác trang cũ phải ghi trong `doi_chu` của hồ sơ: mỗi mục có `cu` và/hoặc `moi`, cùng `ly_do`. `tests/chuyen.test.mjs` bắt chỗ đổi chưa ghi và chỗ ghi thừa.
 - Chữ trong chip, `thong_tin`, câu hỏi (dòng `?`, `+`, `-`, `>`) và tên tác phẩm là Markdown trong dòng: `*nghiêng*`, `**đậm**`, `[link](/opus/…/)`. Thẻ HTML thô không dùng được: hiện ra thành chữ. Link trong dữ liệu viết như link trong trang (mục "Link nội bộ").
 - Hình hay công cụ chưa có thành phần thì hiện ô "… chưa chuyển sang site mới": build vẫn chạy (có cảnh báo `[opus]`) để xem được trang ở bản xem, nhưng trang đã khóa có ô này thì kiểm thử hỏng (`tests/khoa.test.mjs`). Lô đầu tiên chuyển trang dùng hình hay công cụ ấy làm thành phần và thêm vào `HINH`, `CONG_CU` trong `src/plugins/thanh-phan.mjs`.
 - Bảng nhiều cột: ở màn hình hẹp, ô tiêu đề mỗi cột giữ độ rộng tối thiểu theo ô dài chữ nhất của cột (`src/plugins/bang-hep.mjs`). Bảng rộng hơn khung thì cuộn ngang trong khung, trang không tràn. Không viết gì thêm trong trang.

@@ -21,6 +21,10 @@ export const KHOI = {
 	'chữ "sắp có"': 'class="oz-sap-co"',
 	'ô "chưa chuyển"': 'class="oz-chua-co',
 	'danh sách việc': 'class="task-list-item oz-viec',
+	'trang chặng': 'class="oz-chang-hinh oz-chang-hinh--gon',
+	'bài kiểm tra đầu vào': 'class="oz-placement',
+	'chọn chặng piano': 'class="oz-muc-do',
+	'ô gợi ý tập': 'class="oz-goi-y',
 };
 
 /** File HTML của một trang mẫu ("" là trang chủ, "404.html", "nhac-ly/x/"). */
