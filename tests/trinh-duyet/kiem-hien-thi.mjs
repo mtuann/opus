@@ -1,11 +1,46 @@
 // Hiển thị trên ba trình duyệt, ba cỡ màn hình (AGENTS.md, mục Giao diện): không tràn ngang, không lỗi JavaScript hay lỗi
-// ghi ra console, không file nào tải hỏng, mọi khối khởi tạo được (khuông vẽ xong, câu hỏi có nút, khối nghe dựng xong);
-// trên màn hình cảm ứng, vùng bấm từ 44 px.
+// ghi ra console, không file nào tải hỏng, mọi khối khởi tạo được (khuông vẽ xong, câu hỏi có nút, khối nghe dựng xong),
+// các con của một hàng không lệch nhau; trên màn hình cảm ứng, vùng bấm từ 44 px.
 import { after, test } from 'node:test';
 import assert from 'node:assert/strict';
 import { CO, TRANG, TRINH_DUYET, cuonHet, dongMayChu, goc, nguCanh, tenTrang } from './chung.mjs';
 
 after(dongMayChu);
+
+/**
+ * Hàng (flex, grid) trong bài có con dính lề trên của Starlight (phần tử liền sau phần tử khác trong bài cách 1rem, kể cả
+ * nút trong một hàng) mà con khác thì không: các con lệch nhau theo chiều dọc. Cả nút của thanh phát abcjs tràn khỏi thanh
+ * (abcjs mặc định cho nút cao hơn thanh).
+ */
+const hangLech = () => {
+	const bai = document.querySelector('.sl-markdown-content');
+	if (!bai) return [];
+	const thu = bai.appendChild(document.createElement('div'));
+	thu.style.marginTop = 'var(--sl-content-gap-y)';
+	const khoang = getComputedStyle(thu).marginTop;
+	thu.remove();
+	const ten = (x) => `${x.tagName.toLowerCase()}${x.getAttribute('class') ? '.' + x.getAttribute('class').trim().split(/\s+/).join('.') : ''}`;
+	const lech = [...bai.querySelectorAll('*')]
+		.filter((x) => {
+			const s = getComputedStyle(x);
+			return /flex|grid/.test(s.display) && !(s.display.includes('flex') && s.flexDirection.startsWith('column'));
+		})
+		.filter((x) => {
+			const le = [...x.children]
+				.filter((c) => c.getClientRects().length && !/absolute|fixed/.test(getComputedStyle(c).position))
+				.map((c) => getComputedStyle(c).marginTop);
+			return le.includes(khoang) && le.some((m) => m !== khoang);
+		})
+		.map(ten);
+	const tran = [...bai.querySelectorAll('.abcjs-inline-audio .abcjs-btn')]
+		.filter((n) => {
+			const t = n.closest('.abcjs-inline-audio').getBoundingClientRect();
+			const r = n.getBoundingClientRect();
+			return n.getClientRects().length && (r.top < t.top - 0.5 || r.bottom > t.bottom + 0.5);
+		})
+		.map((n) => `${ten(n)} tràn khỏi thanh phát`);
+	return [...new Set(lech), ...tran];
+};
 
 /**
  * Phần tử bấm được thấp hay hẹp hơn 44 px: nút, ô nhập, link đứng riêng (link nằm trong câu chữ, như trong đoạn văn, mục
@@ -51,6 +86,7 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 						const tran = await p.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
 						assert.ok(tran <= 0, `tràn ngang ${tran} px`);
 						if (co.camUng) assert.deepEqual(await p.evaluate(nhoHon44), [], 'vùng bấm dưới 44 px');
+						assert.deepEqual(await p.evaluate(hangLech), [], 'con của hàng lệch nhau, hay nút tràn khỏi thanh phát');
 						// Ô trống ở thanh trên vẫn chiếm chỗ (ô link mạng xã hội kèm vạch ngăn, khi không có link). Xét display của
 						// chính ô, ở mọi cỡ màn hình (dưới 50rem cả nhóm bị ẩn, ô vẫn phải ẩn để lên màn rộng không hiện)
 						assert.ok(await p.evaluate(() => document.querySelector('header.header .right-group')), 'thanh trên không còn .right-group: sửa phép thử');

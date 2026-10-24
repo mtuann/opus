@@ -4,8 +4,8 @@
 
 /* ---------- Nút, hàng nút, phản hồi (dùng chung cho các công cụ) ---------- */
 /* Starlight cách phần tử liền sau phần tử khác trong bài 1rem (margin-top), kể cả nút trong một hàng, làm các nút
-   lệch nhau: trong hàng của thành phần, khoảng cách do gap lo. */
-.sl-markdown-content :is(.oz-row, .oz-hands, .oz-abc-tools, .oz-chips) > * {
+   lệch nhau: trong hàng của thành phần, khoảng cách do gap lo; trong thanh phát của abcjs, do CSS của abcjs. */
+.sl-markdown-content :is(.oz-row, .oz-hands, .oz-abc-tools, .oz-chips, .abcjs-inline-audio) > * {
 	margin-top: 0;
 }
 .oz-tool {
@@ -185,15 +185,16 @@
 /* màn hình cảm ứng: nút của thanh phát và hàng nút cao 44 px */
 @media (pointer: coarse) {
 	.abc-notation:not([data-rendered]) {
-		min-height: calc(10.1rem + var(--he, 1) * 6.25rem);
+		min-height: calc(9.1rem + var(--he, 1) * 6.25rem);
 	}
 }
 @container (max-width: 619px) {
 	.abc-notation:not([data-rendered]) {
-		min-height: calc(25.9rem + var(--he-hep, 1) * 6.65rem);
+		min-height: calc(24.9rem + var(--he-hep, 1) * 6.65rem);
 	}
 }
-/* Các hằng số trên đo ở trang Für Elise (D1.3, sau review): 1280 px chuột, 768 px và 360 px cảm ứng. */
+/* Các hằng số trên đo ở trang Für Elise (D1.3, sau review): 1280 px chuột, 768 px và 360 px cảm ứng. Hai hằng số của
+   cảm ứng bớt 1rem khi bỏ lề trên của nút trong thanh phát (thanh thấp đi 16 px). */
 .abc-notation svg {
 	color: inherit;
 }
@@ -205,6 +206,12 @@
 .abc-audio {
 	max-width: 36rem;
 	margin: 0.4rem 0;
+}
+/* abcjs cho nút cao 34 px trong thanh cao 26 px: nút đang bật (lặp lại) tràn khỏi thanh. Nút cao bằng thanh, hình
+   vẫn 18 px; trên cảm ứng nút cao 44 px, thanh cao theo (bên dưới). */
+.abc-audio .abcjs-inline-audio .abcjs-btn {
+	height: 26px;
+	padding-block: 3px;
 }
 .oz-abc-tools {
 	display: flex;
