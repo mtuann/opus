@@ -24,7 +24,7 @@ File này là bản chuẩn cho người làm và agent. Bản cho người đ�
 - Site mới ở `https://mtuann.github.io/opus/`; địa chỉ cũ `/opus-zero/` không giữ. Không có bản xem trước trên mạng.
 - Tên site: Opus. Ban đầu chọn giữ tên Opus Zero; chủ repo đổi thành Opus ngày 23/10/2026, khi duyệt giao diện. Khóa dữ liệu học trong trình duyệt vẫn là `opus-zero:v1`, để giữ tiến độ của người học cũ.
 - Giữ 7 chặng.
-- 13 trang ngoại vi vào mục Đọc thêm, chuyển ở đợt 8.
+- Trang ngoại vi vào mục Đọc thêm, chuyển ở đợt 8: 9 trang sau khi duyệt bảng tầng (24/10/2026; lúc đầu 13).
 - Thứ tự làm các đợt: 0 đến 5, rồi 7, 8, 6, 9. Tác phẩm (đợt 6) làm sau cùng, khi khung site, phần lõi, công cụ, sách in và trang tham chiếu đã xong. Đợt 6 thêm tác phẩm theo lô (D6-L1 đến D6-L11); sau đợt 6, mỗi tác phẩm mới thêm theo `../ben-vung/them-tac-pham.md`. Số đợt, tên lô, tên nhánh và `anh-xa.md` giữ nguyên. Chủ repo chọn ngày 23/10/2026, lúc đang làm đợt 1.
   - Ba trang thử của D1.8 (`nhac-ly/10-hop-am-ba`, Für Elise, Bach Goldberg) chuyển ở đợt 1, chỉ có ở bản xem, để kiểm khung. Lô của chúng (D3-L2 và hai lô đợt 6) chỉ kiểm định và khóa, không chuyển lại.
   - Trang ngoài đợt 6 vẫn hiện vài trường của bản ghi tác phẩm (danh sách ở trang chặng, ô gợi ý tập, Tác phẩm theo cấp độ, Thầy và thi). Các trường đó khóa riêng, ở lô đầu tiên có trang hiện chúng (mục "Quy tắc chung"); đợt 6 khóa nốt phần còn lại.
@@ -39,7 +39,14 @@ Chờ bạn. Mục "khuyên dùng" là lựa chọn mà kế hoạch đang giả
   - Tham chiếu có hạn: kiểm như lõi, ghi ngày kiểm và ngày rà lại; đến hạn thì rà lại.
   - Bạn chỉ đọc bản tóm tắt hồ sơ và xem ngẫu nhiên vài nhận định (khoảng 5) mỗi lô; không kiểm tay mọi nhận định.
 - [x] Nguồn chính cho nhạc lý: **Open Music Theory** (https://viva.pressbooks.pub/openmusictheory/; 24/10/2026): miễn phí, đọc được trên mạng, dẫn link được tới từng mục, nên agent kiểm định mở được để đối chiếu và người đọc bấm vào xem được. Phần liên quan đến Grade đối chiếu với đề cương chính thức của ABRSM. Sách in (như *The AB Guide to Music Theory*) chỉ làm nguồn phụ, vì agent không đọc được sách in. Thuật ngữ tiếng Việt chốt trong `thuat-ngu.yml`, khóa ở D3-L5.
-- [ ] Bảng tầng: duyệt `../ben-vung/kiem-ke.md`, nhất là các trang tham chiếu có hạn và ngày rà lại.
+- [x] Bảng tầng: **duyệt bảng hiện có, soát hai chỗ dễ sai** (24/10/2026): trang có thông tin mau cũ (giá, ứng dụng, thiết bị, link bản thu, sự kiện) là phần chính thì vào Tham chiếu có hạn; trang nằm giữa Lõi và Đọc thêm mà người mới cần trên lộ trình thì vào Lõi. Một agent soát cả 233 trang, có câu trích làm bằng chứng (báo cáo `bao-cao/d2-bang-tang.md`). Đổi 5 trang:
+  - `lich-su/opera`, `nhac-cu/dan-nhac`: Ngoại vi thành Lõi (lộ trình nghe hiểu giao đọc ở tháng 5 và tháng 3). `dan-nhac` học cùng phần nhận diện (lô D5-L3), để mọi trang Lõi xong ở đợt 5.
+  - `lich-su/duong-dai` (rà lại 2027-06), `lich-su/viet-nam` (2027-04): Ngoại vi thành Tham chiếu có hạn: tin, cuộc thi, đơn vị và lịch diễn là phần chính.
+  - `nhan-dien/nghe-mu` (2027-10): Lõi thành Tham chiếu có hạn: phần chính là 10 bản thu phát từ Wikimedia Commons và gợi ý dịch vụ nghe.
+  - `tai-nguyen` rà lại 2027-01 (có ngày của chương trình ABRSM), thay 2027-04.
+  - Giữ: mục "Sau 6 tháng: đi sâu hơn" của lộ trình nghe hiểu không tính là bước của người mới, nên `lich-su/nhac-truyen-thong-viet-nam` vẫn ở Đọc thêm. Trang Tác phẩm giữ tầng: link bản thu của chúng nằm trong dữ liệu (`ban_thu`) và sẽ có kiểm link định kỳ.
+
+  Sau khi đổi: Lõi 101, Tác phẩm 79, Khung và công cụ 34, Tham chiếu có hạn 10, Ngoại vi 9.
 
 ## Tiến độ
 
@@ -50,9 +57,9 @@ Chờ bạn. Mục "khuyên dùng" là lựa chọn mà kế hoạch đang giả
 | 2 | Khung cấp độ và lối vào | 1 | Trang chủ, Bắt đầu, lộ trình và 7 trang chặng, bài kiểm tra đầu vào | Chưa làm |
 | 3 | Nhạc lý và luyện tai | 6 | 45 trang, Từ điển | Chưa làm |
 | 4 | Piano nền tảng | 4 | 28 trang: bắt đầu bên phím, kỹ thuật, tập luyện, hòa âm bên phím, văn học piano | Chưa làm |
-| 5 | Nhạc cổ điển nền tảng | 3 | 26 trang: thời kỳ, hình thức, nhận diện; đủ 100 trang lõi | Chưa làm |
+| 5 | Nhạc cổ điển nền tảng | 3 | 27 trang: thời kỳ, hình thức, nhận diện; đủ 101 trang lõi | Chưa làm |
 | 7 | Công cụ, sách in, blog, Cập nhật | 3 | 17 công cụ luyện tập, sách in, blog, dùng khi mất mạng | Chưa làm |
-| 8 | Tham chiếu có hạn và Đọc thêm | 3 | 21 trang | Chưa làm |
+| 8 | Tham chiếu có hạn và Đọc thêm | 3 | 20 trang | Chưa làm |
 | 6 | Tác phẩm | 11 | 34 bài học, 45 hướng dẫn nghe, danh mục tác phẩm; đủ 233 trang cũ | Chưa làm |
 | 9 | Hoàn tất | | Site mới không còn cần `../opus-zero/` | Chưa làm |
 
@@ -120,7 +127,7 @@ Từ đợt này, mỗi lô gộp vào `main` là trang của lô lên site th�
 - Kiểm định trường của 73 bản ghi là phần nặng nhất của đợt. Quá tải thì tách thành một việc dữ liệu riêng, làm trước D2-L1 (chủ repo quyết).
 - 7 trang chặng `piano/lo-trinh/chang-1` đến `chang-7` sinh từ dữ liệu; trang lộ trình giữ các mục chặng dạng tóm tắt, mỗi mục dẫn sang trang chặng.
 - 9 trang của lô, gồm trang chủ mới (thay trang chủ tạm) và bài kiểm tra đầu vào (`placement.js`).
-- Menu đủ 9 nhóm; nhóm chưa có trang hiện nhãn "sắp có".
+- Menu đủ 9 nhóm; nhóm chưa có trang hiện nhãn "sắp có". Mô tả nhóm Đọc thêm bỏ chữ "opera" (opera thành Lõi khi duyệt bảng tầng), sửa cùng lúc ở `src/nhom.mjs` và thẻ của trang chủ mới.
 
 **Xong khi:** trang của lô và phần dữ liệu trên đã khóa và có trên site thật; người mới đi được từ trang chủ tới trang chặng của mình; ô gợi ý tập ở trang chủ chỉ dùng trường đã khóa, link tới bài chưa lên hiện "sắp có".
 
@@ -139,7 +146,7 @@ Từ đợt này, mỗi lô gộp vào `main` là trang của lô lên site th�
 
 - Trang nhà soạn nhạc và dòng thời gian đọc năm sinh–mất từ `nha-soan-nhac.yml`.
 
-**Xong khi:** 26 trang của 3 lô đã khóa; đủ 100 trang lõi.
+**Xong khi:** 27 trang của 3 lô đã khóa; đủ 101 trang lõi.
 
 ## Đợt 7. Công cụ, sách in, blog, Cập nhật (D7-L1 đến D7-L3)
 
@@ -155,11 +162,11 @@ Từ đợt này, mỗi lô gộp vào `main` là trang của lô lên site th�
 
 ## Đợt 8. Tham chiếu có hạn và Đọc thêm (D8-L1 đến D8-L3)
 
-- Trang tham chiếu có `ra_lai` trong `trang.yml`; workflow hằng tuần mở issue "Trang cần rà lại" khi quá hạn (không chặn deploy).
+- Trang tham chiếu có `ra_lai` trong `trang.yml`; workflow hằng tuần mở issue "Trang cần rà lại" khi quá hạn (không chặn deploy). D8-L1 đặt lại các ngày rà lại tính từ ngày khóa: ví dụ khóa sau tháng 1/2027 thì trang theo chương trình ABRSM rà lại tháng 1/2028.
 - Thầy và thi, Tác phẩm theo cấp độ: kiểm định theo chương trình ABRSM đang dùng lúc làm (từ tháng 1/2027 là chương trình piano 2027–2028). Hai trang liệt kê tác phẩm: dùng trường đã khóa; `grade` khóa ở đợt 2 nếu trang chặng hiện Grade, không thì chính lô này khóa. Link tới bài chưa lên hiện "sắp có".
 - Trang Đọc thêm có dòng "ngoài lộ trình" ở đầu.
 
-**Xong khi:** 21 trang của 3 lô đã khóa.
+**Xong khi:** 20 trang của 3 lô đã khóa.
 
 ## Đợt 6. Tác phẩm (D6-L1 đến D6-L11), làm sau đợt 8
 

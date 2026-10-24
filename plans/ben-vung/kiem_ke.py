@@ -24,10 +24,15 @@ THAM_CHIEU = {  # đổi theo thời gian: rà theo ngày ghi bên cạnh
     "piano/nghe-si": "2027-10",
     "bat-dau/hoi-dap": "2027-04",
     "bat-dau/ung-dung": "2027-04",
-    "tai-nguyen": "2027-04",
+    "tai-nguyen": "2027-01 (có ngày của chương trình ABRSM)",
+    # duyệt bảng tầng 24/10/2026: trang có thông tin mau cũ là phần chính
+    "lich-su/duong-dai": "2027-06 (giải Pulitzer Âm nhạc công bố tháng 5; tin và cuộc thi)",
+    "lich-su/viet-nam": "2027-04 (đơn vị, nhà hát và lịch diễn trong nước)",
+    "nhan-dien/nghe-mu": "2027-10 (10 bản thu phát từ Wikimedia Commons; gợi ý radio và danh sách phát)",
 }
-NGOAI_VI = {"lich-su/opera", "lich-su/nhac-truyen-thong-viet-nam", "lich-su/viet-nam", "lich-su/duong-dai",
-            "lich-su/nu-nha-soan-nhac"}
+NGOAI_VI = {"lich-su/nhac-truyen-thong-viet-nam", "lich-su/nu-nha-soan-nhac"}
+# duyệt bảng tầng 24/10/2026: trang người mới cần trên lộ trình nghe hiểu (bat-dau/lo-trinh-nghe) vào Lõi
+LOI = {"lich-su/opera", "nhac-cu/dan-nhac"}
 KHUNG = {"index", "cap-nhat", "bat-dau/index", "bat-dau/sach-in", "piano/index", "piano/tac-pham/index",
          "nghe-nhac/index", "nhac-ly/index", "lich-su/index", "hinh-thuc/index", "nhan-dien/index",
          "luyen-tai/index", "nhac-cu/index"}
@@ -46,6 +51,8 @@ def tang(k):
         return "khung"
     if k in THAM_CHIEU:
         return "tham-chieu"
+    if k in LOI:
+        return "loi"
     if k in NGOAI_VI or muc == "nhac-cu":
         return "ngoai-vi"
     if k.startswith("piano/tac-pham/") or muc == "nghe-nhac":
@@ -57,7 +64,7 @@ def nhom_loi(k):
     muc = k.split("/")[0] if "/" in k else "(gốc)"
     return {"nhac-ly": "Nhạc lý", "luyen-tai": "Luyện tai", "piano": "Piano nền tảng", "bat-dau": "Bắt đầu",
             "hinh-thuc": "Nhạc cổ điển nền tảng", "lich-su": "Nhạc cổ điển nền tảng",
-            "nhan-dien": "Nhạc cổ điển nền tảng"}.get(muc, "Tài liệu tham khảo")
+            "nhan-dien": "Nhạc cổ điển nền tảng", "nhac-cu": "Nhạc cổ điển nền tảng"}.get(muc, "Tài liệu tham khảo")
 
 
 def lich_su_git():

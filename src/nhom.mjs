@@ -56,8 +56,9 @@ export function nhomCuaTrang(id, tang) {
 	const thuoc = (dau) => id === dau || id.startsWith(dau + '/');
 	if (THEM.includes(id) || thuoc('blog')) return undefined;
 	let ma = THEO_DUONG_DAN.find(([dau]) => thuoc(dau))?.[1];
-	if (!ma && (tang === 'ngoai-vi' || thuoc('nhac-cu'))) ma = 'doc-them';
-	if (!ma && CO_DIEN.some(thuoc)) ma = 'co-dien';
+	// nhac-cu/: Đọc thêm, trừ trang Lõi (dan-nhac: lộ trình nghe hiểu cần, duyệt bảng tầng 24/10/2026) thuộc Nhạc cổ điển
+	if (!ma && (tang === 'ngoai-vi' || (thuoc('nhac-cu') && tang !== 'loi'))) ma = 'doc-them';
+	if (!ma && (CO_DIEN.some(thuoc) || thuoc('nhac-cu'))) ma = 'co-dien';
 	return NHOM.find((n) => n.id === ma);
 }
 

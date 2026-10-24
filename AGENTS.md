@@ -162,5 +162,6 @@ Frontmatter có `tac_pham`. Thứ tự các mục như mẫu ở `../opus-zero/A
    - Vùng `<!-- fig:… -->` thành `::hinh-cau-truc` hay `::hinh`; khối `oz-` rỗng thành `::cong-cu`; hộp tác phẩm thành `::hop-tac-pham`.
    - Khối `oz-` bọc nội dung mà JavaScript cũ đọc hay điền (`oz-lesson-status`, `oz-piano-level`): giữ nội dung, thêm `::cong-cu{ten}` (ô "chưa chuyển") và cảnh báo. `oz-print-only` (chỉ hiện khi in) giữ nguyên, site mới có CSS. Lớp `oz-` khác còn trong HTML thô thì cảnh báo; lô của trang thêm CSS hay bỏ lớp.
    - `data-rec` thành `ban_thu` (dữ liệu, đã tách) cộng `moc` (trong trang); link `.md` thành địa chỉ, cả `href` trong HTML thô.
+   - Link tới issue của repo cũ (`https://github.com/mtuann/opus-zero/issues`) script chưa đổi: lô của trang sửa thành `https://github.com/mtuann/opus/issues` (4 trang: `tai-lieu-tham-khao`, `tai-nguyen`, `bat-dau/hoi-dap`, một bài blog).
    - Tiêu đề `#` thành `title` (bỏ định dạng Markdown); mô tả trang lấy thẻ `og:description` của bản build cũ (thẻ `description` cũ bị cắt ở dấu `"`), rỗng hay không có thì cảnh báo.
 3. `npm run build:xem`, rồi `node tools/chuyen/so-chu.mjs <trang> …`: chữ hiển thị, mô tả trang, trọn mã ABC của từng khuông, từng câu hỏi (lựa chọn, đáp án đúng, giải thích) và id tiêu đề phải giống trang cũ. `npm test` kiểm lại cho mọi trang đã chuyển, khi máy có `.cache/site-cu/`.

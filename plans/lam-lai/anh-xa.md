@@ -11,10 +11,10 @@ Ngoài các trang dưới đây, site mới có 8 trang mới sinh từ dữ li�
 | 2 | Khung cấp độ và lối vào | 1 | 9 |
 | 3 | Nhạc lý và luyện tai | 6 | 45 |
 | 4 | Piano nền tảng | 4 | 28 |
-| 5 | Nhạc cổ điển nền tảng | 3 | 26 |
+| 5 | Nhạc cổ điển nền tảng | 3 | 27 |
 | 6 | Tác phẩm | 11 | 81 |
 | 7 | Công cụ, sách in, blog, Cập nhật | 3 | 23 |
-| 8 | Tham chiếu có hạn và Đọc thêm | 3 | 21 |
+| 8 | Tham chiếu có hạn và Đọc thêm | 3 | 20 |
 | **Cộng** | | **31** | **233** |
 
 ## Đợt 2. Khung cấp độ và lối vào
@@ -162,12 +162,13 @@ Ngoài các trang dưới đây, site mới có 8 trang mới sinh từ dữ li�
 
 ## Đợt 5. Nhạc cổ điển nền tảng
 
-### D5-L1 (9 trang)
+### D5-L1 (10 trang)
 
 | Trang cũ | Tầng | Nhóm menu mới |
 |---|---|---|
 | `lich-su/dong-thoi-gian` | lõi | Nhạc cổ điển |
 | `lich-su/nha-soan-nhac` | lõi | Nhạc cổ điển |
+| `lich-su/opera` | lõi | Nhạc cổ điển |
 | `lich-su/thoi-ky/baroque` | lõi | Nhạc cổ điển |
 | `lich-su/thoi-ky/co-dien` | lõi | Nhạc cổ điển |
 | `lich-su/thoi-ky/lang-man` | lõi | Nhạc cổ điển |
@@ -195,9 +196,9 @@ Ngoài các trang dưới đây, site mới có 8 trang mới sinh từ dữ li�
 
 | Trang cũ | Tầng | Nhóm menu mới |
 |---|---|---|
+| `nhac-cu/dan-nhac` | lõi | Nhạc cổ điển |
 | `nhan-dien/dau-van-tay` | lõi | Nhạc cổ điển |
 | `nhan-dien/luyen-nghe` | lõi | Nhạc cổ điển |
-| `nhan-dien/nghe-mu` | lõi | Nhạc cổ điển |
 | `nhan-dien/so-sanh-thoi-ky` | lõi | Nhạc cổ điển |
 | `nhan-dien/the-loai` | lõi | Nhạc cổ điển |
 | `tai-lieu-tham-khao` | lõi | Thêm |
@@ -383,25 +384,27 @@ Ngoài các trang dưới đây, site mới có 8 trang mới sinh từ dữ li�
 
 ## Đợt 8. Tham chiếu có hạn và Đọc thêm
 
-### D8-L1 (7 trang)
+### D8-L1 (10 trang)
 
 | Trang cũ | Tầng | Nhóm menu mới |
 |---|---|---|
 | `bat-dau/hoi-dap` | tham chiếu | Bắt đầu |
 | `bat-dau/ung-dung` | tham chiếu | Bắt đầu |
+| `lich-su/duong-dai` | tham chiếu | Nhạc cổ điển |
+| `lich-su/viet-nam` | tham chiếu | Nhạc cổ điển |
+| `nhan-dien/nghe-mu` | tham chiếu | Nhạc cổ điển |
 | `piano/chon-dan` | tham chiếu | Piano |
 | `piano/nghe-si` | tham chiếu | Piano |
 | `piano/tac-pham-theo-cap` | tham chiếu | Piano |
 | `piano/thay-va-thi` | tham chiếu | Piano |
 | `tai-nguyen` | tham chiếu | Thêm |
 
-### D8-L2 (9 trang)
+### D8-L2 (8 trang)
 
 | Trang cũ | Tầng | Nhóm menu mới |
 |---|---|---|
 | `nhac-cu/cello` | ngoại vi | Đọc thêm |
 | `nhac-cu/clarinet` | ngoại vi | Đọc thêm |
-| `nhac-cu/dan-nhac` | ngoại vi | Đọc thêm |
 | `nhac-cu/guitar` | ngoại vi | Đọc thêm |
 | `nhac-cu/nhac-cu-khac` | ngoại vi | Đọc thêm |
 | `nhac-cu/sao` | ngoại vi | Đọc thêm |
@@ -409,12 +412,9 @@ Ngoài các trang dưới đây, site mới có 8 trang mới sinh từ dữ li�
 | `nhac-cu/violin` | ngoại vi | Đọc thêm |
 | `nhac-cu/index` | khung | Đọc thêm |
 
-### D8-L3 (5 trang)
+### D8-L3 (2 trang)
 
 | Trang cũ | Tầng | Nhóm menu mới |
 |---|---|---|
-| `lich-su/duong-dai` | ngoại vi | Đọc thêm |
 | `lich-su/nhac-truyen-thong-viet-nam` | ngoại vi | Đọc thêm |
 | `lich-su/nu-nha-soan-nhac` | ngoại vi | Đọc thêm |
-| `lich-su/opera` | ngoại vi | Đọc thêm |
-| `lich-su/viet-nam` | ngoại vi | Đọc thêm |

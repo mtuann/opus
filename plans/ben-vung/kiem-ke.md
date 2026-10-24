@@ -8,11 +8,11 @@ Cột: **Chữ** là số chữ ngoài khối code; **Khuông** là số khối 
 
 | Tầng | Trang | Chữ | Khuông | Thiếu mục Nguồn | Giữ đúng bằng cách |
 |---|---|---|---|---|---|
-| Lõi | 100 | 130.728 | 233 | 13 | Kiểm định một lần rồi khóa (đợt 2–5) |
+| Lõi | 101 | 132.249 | 233 | 12 | Kiểm định một lần rồi khóa (đợt 2–5) |
 | Tác phẩm | 79 | 148.405 | 127 | 3 | Kiểm định từng trang rồi khóa (trang có sẵn: đợt 6; trang mới: them-tac-pham.md) |
-| Tham chiếu có hạn | 7 | 20.153 | 0 | 3 | Rà theo ngày ghi trong cột Rà lại (chuyển ở đợt 8) |
+| Tham chiếu có hạn | 10 | 23.541 | 0 | 5 | Rà theo ngày ghi trong cột Rà lại (chuyển ở đợt 8) |
 | Khung và công cụ | 34 | 23.499 | 0 | 31 | Sinh từ dữ liệu; kiểm thử tự động (chuyển cùng đợt với mục của nó) |
-| Ngoại vi | 13 | 11.552 | 1 | 1 | Vào mục Đọc thêm với dòng "ngoài lộ trình" (chuyển ở đợt 8) |
+| Ngoại vi | 9 | 6.643 | 1 | 0 | Vào mục Đọc thêm với dòng "ngoài lộ trình" (chuyển ở đợt 8) |
 | **Cộng** | **233** | **334.337** | **361** | **51** | |
 
 ## Quy tắc xếp tầng
@@ -23,7 +23,7 @@ Cột: **Chữ** là số chữ ngoài khối code; **Khuông** là số khối 
 - **Khung và công cụ:** trang chủ, trang mục lục, trang công cụ luyện tập, nhật ký Cập nhật, blog. Danh sách và con số trong các trang này sẽ sinh từ dữ liệu.
 - **Ngoại vi:** ngoài trọng tâm piano cổ điển: nhạc cụ khác, opera, nhạc Việt Nam, nhạc đương đại, nữ nhà soạn nhạc. Vào mục Đọc thêm (đã chọn ngày 23/10/2026).
 
-## Lõi (100 trang)
+## Lõi (101 trang)
 
 | Trang | Nhóm | Chữ | Khuông | Nguồn | Sửa |
 |---|---|---|---|---|---|
@@ -50,15 +50,16 @@ Cột: **Chữ** là số chữ ngoài khối code; **Khuông** là số khối 
 | `hinh-thuc/symphonic-poem` | Nhạc cổ điển nền tảng | 886 | 0 (0) | có | 4 |
 | `lich-su/dong-thoi-gian` | Nhạc cổ điển nền tảng | 940 | 0 (0) | có | 5 |
 | `lich-su/nha-soan-nhac` | Nhạc cổ điển nền tảng | 3127 | 0 (0) | có | 6 |
+| `lich-su/opera` | Nhạc cổ điển nền tảng | 1476 | 0 (0) | có | 6 |
 | `lich-su/thoi-ky/baroque` | Nhạc cổ điển nền tảng | 650 | 1 (0) | có | 4 |
 | `lich-su/thoi-ky/co-dien` | Nhạc cổ điển nền tảng | 528 | 1 (0) | có | 2 |
 | `lich-su/thoi-ky/lang-man` | Nhạc cổ điển nền tảng | 598 | 1 (0) | có | 3 |
 | `lich-su/thoi-ky/phuc-hung` | Nhạc cổ điển nền tảng | 485 | 1 (0) | có | 3 |
 | `lich-su/thoi-ky/the-ky-20` | Nhạc cổ điển nền tảng | 569 | 2 (0) | có | 3 |
 | `lich-su/thoi-ky/trung-co` | Nhạc cổ điển nền tảng | 523 | 1 (0) | có | 2 |
+| `nhac-cu/dan-nhac` | Nhạc cổ điển nền tảng | 706 | 0 (0) | có | 4 |
 | `nhan-dien/dau-van-tay` | Nhạc cổ điển nền tảng | 866 | 0 (0) | có | 2 |
 | `nhan-dien/luyen-nghe` | Nhạc cổ điển nền tảng | 239 | 0 (0) | **thiếu** | 2 |
-| `nhan-dien/nghe-mu` | Nhạc cổ điển nền tảng | 661 | 0 (0) | **thiếu** | 2 |
 | `nhan-dien/so-sanh-thoi-ky` | Nhạc cổ điển nền tảng | 890 | 0 (0) | có | 3 |
 | `nhan-dien/the-loai` | Nhạc cổ điển nền tảng | 410 | 0 (0) | có | 2 |
 | `nhac-ly/01-cao-do-ten-not` | Nhạc lý | 639 | 1 (0) | có | 5 |
@@ -212,17 +213,20 @@ Cột: **Chữ** là số chữ ngoài khối code; **Khuông** là số khối 
 | `piano/tac-pham/tchaikovsky-bai-ca-phap-co` | bài học | 3505 | 4 (3) | có | có | 3 |
 | `piano/tac-pham/tchaikovsky-cau-nguyen-buoi-sang` | bài học | 3704 | 4 (3) | có | có | 4 |
 
-## Tham chiếu có hạn (7 trang)
+## Tham chiếu có hạn (10 trang)
 
 | Trang | Chữ | Nguồn | Sửa | Rà lại |
 |---|---|---|---|---|
 | `bat-dau/hoi-dap` | 1995 | **thiếu** | 6 | 2027-04 |
 | `bat-dau/ung-dung` | 266 | **thiếu** | 2 | 2027-04 |
+| `lich-su/duong-dai` | 637 | **thiếu** | 2 | 2027-06 (giải Pulitzer Âm nhạc công bố tháng 5; tin và cuộc thi) |
+| `lich-su/viet-nam` | 2090 | có | 3 | 2027-04 (đơn vị, nhà hát và lịch diễn trong nước) |
+| `nhan-dien/nghe-mu` | 661 | **thiếu** | 2 | 2027-10 (10 bản thu phát từ Wikimedia Commons; gợi ý radio và danh sách phát) |
 | `piano/chon-dan` | 2010 | có | 1 | 2027-10 |
 | `piano/nghe-si` | 3616 | có | 2 | 2027-10 |
 | `piano/tac-pham-theo-cap` | 8419 | có | 4 | 2027-01 (danh sách bài thi ABRSM) |
 | `piano/thay-va-thi` | 2971 | có | 2 | 2027-01 (chương trình ABRSM 2027–2028) |
-| `tai-nguyen` | 876 | **thiếu** | 5 | 2027-04 |
+| `tai-nguyen` | 876 | **thiếu** | 5 | 2027-01 (có ngày của chương trình ABRSM) |
 
 ## Khung và công cụ (34 trang)
 
@@ -263,18 +267,14 @@ Cột: **Chữ** là số chữ ngoài khối code; **Khuông** là số khối 
 | `piano/index` | 1920 | 0 | không | 4 |
 | `piano/tac-pham/index` | 2198 | 0 | có | 4 |
 
-## Ngoại vi (13 trang)
+## Ngoại vi (9 trang)
 
 | Trang | Chữ | Khuông | Nguồn | Sửa |
 |---|---|---|---|---|
-| `lich-su/duong-dai` | 637 | 0 | không | 2 |
 | `lich-su/nhac-truyen-thong-viet-nam` | 2212 | 1 | có | 4 |
 | `lich-su/nu-nha-soan-nhac` | 1165 | 0 | có | 3 |
-| `lich-su/opera` | 1476 | 0 | có | 6 |
-| `lich-su/viet-nam` | 2090 | 0 | có | 3 |
 | `nhac-cu/cello` | 460 | 0 | có | 4 |
 | `nhac-cu/clarinet` | 465 | 0 | có | 4 |
-| `nhac-cu/dan-nhac` | 706 | 0 | có | 4 |
 | `nhac-cu/guitar` | 265 | 0 | có | 6 |
 | `nhac-cu/nhac-cu-khac` | 680 | 0 | có | 6 |
 | `nhac-cu/sao` | 436 | 0 | có | 4 |

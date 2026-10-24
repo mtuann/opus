@@ -27,11 +27,11 @@ Kiểm thử của site cũ chỉ báo chỗ lệch sau khi đã sửa tay; chú
 
 | Tầng | Trang | Gồm | Giữ đúng bằng cách | Chuyển ở |
 |---|---|---|---|---|
-| Lõi | 100 | Piano nền tảng 28, nhạc lý 37, nhạc cổ điển nền tảng 22, luyện tai 6, bắt đầu 6, tài liệu tham khảo 1 | Kiểm định một lần, khóa | Đợt 2–5 |
+| Lõi | 101 | Piano nền tảng 28, nhạc lý 37, nhạc cổ điển nền tảng 23, luyện tai 6, bắt đầu 6, tài liệu tham khảo 1 | Kiểm định một lần, khóa | Đợt 2–5 |
 | Tác phẩm | 79 | 34 bài học, 45 hướng dẫn nghe | Kiểm định từng trang, khóa; về sau chỉ thêm | Đợt 6 |
-| Tham chiếu có hạn | 7 | Thầy và thi, Tác phẩm theo cấp độ, chọn đàn, nghệ sĩ, hỏi đáp, ứng dụng, tài nguyên | Kiểm định, khóa, rà lại theo ngày ghi | Đợt 8 |
+| Tham chiếu có hạn | 10 | Thầy và thi, Tác phẩm theo cấp độ, chọn đàn, nghệ sĩ, hỏi đáp, ứng dụng, tài nguyên, nhạc đương đại, nhạc cổ điển ở Việt Nam, nghe mù | Kiểm định, khóa, rà lại theo ngày ghi | Đợt 8 |
 | Khung và công cụ | 34 | Trang chủ, mục lục, công cụ luyện tập, Cập nhật, blog | Sinh từ dữ liệu, kiểm thử tự động | Cùng đợt với mục của nó; công cụ và blog ở đợt 7 |
-| Ngoại vi | 13 | Nhạc cụ, opera, nhạc Việt Nam, đương đại, nữ nhà soạn nhạc | Kiểm định, khóa; mục Đọc thêm, ghi "ngoài lộ trình" | Đợt 8 |
+| Ngoại vi | 9 | Nhạc cụ, nhạc truyền thống Việt Nam, nữ nhà soạn nhạc | Kiểm định, khóa; mục Đọc thêm, ghi "ngoài lộ trình" | Đợt 8 |
 
 Danh sách từng trang: `kiem-ke.md`. Trang nào thuộc đợt, lô nào: `plans/lam-lai/anh-xa.md`.
 

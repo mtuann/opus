@@ -112,9 +112,10 @@ def main():
     dat([k for k in pages if k.startswith("luyen-tai/")], 3, "L6")
     for lo, ds in PIANO_LO.items():
         dat(ds, 4, lo)
-    dat([k for k in pages if k.startswith("lich-su/") and tang[k] != "ngoai-vi"], 5, "L1")
+    dat([k for k in pages if k.startswith("lich-su/") and tang[k] not in ("ngoai-vi", "tham-chieu")], 5, "L1")
     dat([k for k in pages if k.startswith("hinh-thuc/")], 5, "L2")
-    dat([k for k in pages if k.startswith("nhan-dien/")] + ["tai-lieu-tham-khao"], 5, "L3")
+    # nhac-cu/dan-nhac: Lõi (lộ trình nghe hiểu, tháng 3), học cùng phần nhận diện; trang tham chiếu vào D8-L1
+    dat([k for k in pages if k.startswith("nhan-dien/") and tang[k] != "tham-chieu"] + ["tai-lieu-tham-khao", "nhac-cu/dan-nhac"], 5, "L3")
     chang = chang_bai_hoc()
     bai = sorted((k for k in pages if k.startswith("piano/tac-pham/") and not k.endswith("/index")),
                  key=lambda k: (chang[k.split("/")[-1]], k))
@@ -133,7 +134,7 @@ def main():
     dat(cc[9:], 7, "L2")
     dat([k for k in pages if k.startswith("blog/")] + ["cap-nhat", "bat-dau/sach-in"], 7, "L3")
     dat([k for k in pages if tang[k] == "tham-chieu"], 8, "L1")
-    dat([k for k in pages if k.startswith("nhac-cu/")], 8, "L2")
+    dat([k for k in pages if k.startswith("nhac-cu/") and k not in gan], 8, "L2")
     dat([k for k in pages if k.startswith("lich-su/") and tang[k] == "ngoai-vi"], 8, "L3")
     thieu = [k for k in pages if k not in gan]
     assert not thieu, thieu
