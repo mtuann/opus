@@ -9,8 +9,8 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: Claude Sonnet 5.5 (D3-L1 lượt 1, phần 1/2)
-      luot_2: null
-      review: null
+      luot_2: Claude Opus 5.5 (D3-L1 lượt 2, phần A)
+      review: "Claude Opus 5.5 (review D3-L1, 24/10/2026; câu ve-site: Claude Sonnet 5.5)"
       kiem_mau: null
 ghi_chu: 'Bài nhạc lý 3 (trường độ, hình nốt, dấu lặng, chấm dôi, dấu nối). Nguồn chính: Open Music Theory (OMT), mở từng chương bằng curl ngày 24/10/2026 (WebFetch trả 403); bổ sung MT21C (Puget Sound, 4.2–4.4) và bài giảng Weinreich về âm học piano (Viện Hàn lâm Âm nhạc Hoàng gia Thụy Điển) cho n20. Không sửa chữ của trang (chỉ sửa mục ## Nguồn: thay link chung bằng link từng chương đã dùng, bỏ musictheory.net vì chưa đối chiếu nội dung). Không tính là nhận định: tiêu đề mục; câu hỏi của phần Bài tập (chỉ tính câu trả lời trong khối thu gọn). Câu "trường hợp phổ biến nhất" (n5): suy từ MT21C 4.2 (số chỉ nhịp phổ biến nhất hiện nay là 4/4, phách là nốt đen); OMT chỉ nói số dưới "usually" là 2, 4 hay 8. Thuật ngữ tiếng Việt chưa có trong src/data/thuat-ngu.yml, ghi cho D3-L5: "nốt tròn / trắng / đen / móc đơn / móc kép" (whole, half, quarter, eighth, sixteenth note), "dấu lặng" và "lặng đơn / lặng kép" (cách gọi tắt của lặng móc đơn / móc kép), "chấm dôi" (dot), "dấu nối" (tie), "dấu luyến" (slur), "gạch ngang" (beam), "đuôi" (stem) và "móc" (flag). Đối chiếu "Giáo trình môn Lý thuyết âm nhạc cơ bản" (tệp PDF https://novaspro.vn/upload/files/giao_trinh_mon_ly_thuyet_am_nhac_co_ban.pdf; không ghi tác giả, bậc 3, chỉ để chứng thực cách gọi ở Việt Nam): có "nốt tròn, nốt trắng, nốt đen, nốt móc đơn, nốt móc kép", "dấu lặng" (bảng lặng tròn, trắng, đen, móc đơn, móc kép; bảng thuật ngữ cuối sách: quaver rest = "lặng đơn", semiquaver rest = "lặng kép"), "dấu chấm dôi", "dấu nối", "dấu luyến", "đuôi nốt nhạc" và "nét móc ở đuôi nốt nhạc"; cái tương ứng với beam là "vạch nối đuôi nốt nhạc" (không có "gạch ngang"). Chú ý trùng chữ: thuat-ngu.yml mô tả dấu tenuto là "gạch ngang ngắn trên nốt", nên "gạch ngang" (beam) ở trang này dễ lẫn: D3-L5 chọn tên khác cho beam (như "vạch nối đuôi nốt") hay giữ và thêm "(beam)".'
 nguon:
@@ -135,7 +135,8 @@ nhan_dinh:
     cau: 'Khuông ví dụ thứ nhất ("Nghe từng ô nhịp dưới đây") gồm bốn ô nhịp 4/4, mỗi ô dài 4 phách, chỉ khác cách chia: một nốt tròn; hai nốt trắng; bốn nốt đen; tám nốt móc đơn.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: "abcjs đọc khối abc 1 (M:4/4, L:1/4): ô 1 C4 (4 phách), ô 2 C2 C2 (2+2), ô 3 C C C C (1+1+1+1), ô 4 tám nốt móc đơn C/ (8×½): mỗi ô đúng 4 phách. tools/khuong-nhac.mjs không báo ô sai độ dài."
+    ghi_chu: "abcjs đọc khối abc 1 (M:4/4, L:1/4): ô 1 C4 (4 phách), ô 2 C2 C2 (2+2), ô 3 C C C C (1+1+1+1), ô 4 tám nốt móc đơn C/ (8×½): mỗi ô đúng 4 phách. tools/khuong-nhac.mjs không báo ô sai độ dài. Review: đã đọc khối abc 1 của 03-truong-do.md bằng abcjs của site (parseOnly): M:4/4, L:1/4; ô 1 một nốt dài 1 (nốt tròn), ô 2 hai nốt 1/2 (nốt trắng), ô 3 bốn nốt 1/4 (nốt đen), ô 4 tám nốt 1/8 (nốt móc đơn); mỗi ô tổng bằng 1 nốt tròn, tức 4 phách; không cảnh báo. Đã mở bản xem và chụp khuông: đúng bốn ô như câu mô tả. Quan hệ nốt tròn 4 phách, nốt trắng 2… là điều cần nguồn, đã có ở n8."
+    review: dung
   - id: n10
     cau: Khi nhiều nốt móc đứng cạnh nhau, đuôi móc thường được nối thành gạch ngang (beam) cho dễ đọc.
     loai: dinh-nghia
@@ -150,7 +151,8 @@ nhan_dinh:
     cau: Ô nhịp cuối của khuông ví dụ thứ nhất có các nốt móc đơn nối thành gạch ngang.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: "abcjs parseOnly, khối abc 1, ô 4: tám nốt móc đơn (duration 0,125 nốt tròn) mang cờ startBeam / endBeam thành bốn cặp (C/C/ viết liền không cách), nên khi vẽ ra là bốn gạch ngang nối từng cặp. Review nên nhìn khuông đã vẽ ở bản chạy."
+    ghi_chu: "abcjs parseOnly, khối abc 1, ô 4: tám nốt móc đơn (duration 0,125 nốt tròn) mang cờ startBeam / endBeam thành bốn cặp (C/C/ viết liền không cách), nên khi vẽ ra là bốn gạch ngang nối từng cặp. Review nên nhìn khuông đã vẽ ở bản chạy. Review: abcjs (parseOnly) đánh dấu 8 nốt móc đơn của ô 4 thành bốn cặp (startBeam, endBeam); trên bản xem khuông đã vẽ có đúng 4 gạch ngang (.abcjs-beam-elem = 4), ô 1 đến 3 không có. Đã chụp ảnh khuông: bốn cặp móc đơn nối bằng gạch ngang ở ô cuối, khớp câu \"như ô nhịp cuối ở trên\" (03-truong-do.md dòng 31)."
+    review: dung
   - id: n12
     cau: Dấu lặng là khoảng im lặng có độ dài xác định.
     loai: dinh-nghia
@@ -273,7 +275,8 @@ nhan_dinh:
     cau: Trang 10 bài đầu tiên (link /opus/piano/10-bai-dau-tien/) có thật.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ: ../opus-zero/docs/piano/10-bai-dau-tien.md (tiêu đề "10 bài đầu tiên (hai tay)"). Link hiện chữ "sắp có" ở site mới cho tới khi trang lên.'
+    ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ: ../opus-zero/docs/piano/10-bai-dau-tien.md (tiêu đề "10 bài đầu tiên (hai tay)"). Link hiện chữ "sắp có" ở site mới cho tới khi trang lên. Review: trang đích /opus/piano/10-bai-dau-tien/ chưa chuyển (có trong trang.yml; bản xem: "sắp có"), nên kiểm trên bản cũ: ../opus-zero/docs/piano/10-bai-dau-tien.md tồn tại (tiêu đề "10 bài đầu tiên (hai tay)"); mục "Cách tập mỗi bài" bước 2 (dòng 27) cũng bảo đếm to, khớp lời khuyên ở câu chứa link (03-truong-do.md dòng 78).'
+    review: dung
   - id: n25
     cau: Vỗ tay ví dụ đầu tiên, vừa vỗ vừa đếm to "1 – 2 – 3 – 4"; dùng máy đếm nhịp ở 60 BPM.
     loai: khuyen-tap
@@ -284,7 +287,8 @@ nhan_dinh:
     cau: Máy đếm nhịp (link /opus/luyen-tap/metronome/) đặt được 60 BPM.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ: ../opus-zero/docs/assets/js/metronome.js dòng 26: thanh trượt tốc độ min=30 max=240 (mặc định 80) và nút +/−, nên đặt được 60 BPM; ../opus-zero/docs/luyen-tap/metronome.md tồn tại ("Đơn vị là BPM").'
+    ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ: ../opus-zero/docs/assets/js/metronome.js dòng 26: thanh trượt tốc độ min=30 max=240 (mặc định 80) và nút +/−, nên đặt được 60 BPM; ../opus-zero/docs/luyen-tap/metronome.md tồn tại ("Đơn vị là BPM"). Review: trang đích /opus/luyen-tap/metronome/ chưa chuyển (bản xem: "sắp có"), nên kiểm trên bản cũ: assets/js/metronome.js dòng 22–26 (nút − và + đổi 1 BPM; thanh trượt min=30, max=240, mặc định 80) và dòng 45 (làm tròn, giới hạn 30 đến 240): 60 BPM đặt được. luyen-tap/metronome.md dòng 3 ghi đơn vị BPM, dòng 9 lấy chính 60 BPM làm ví dụ.'
+    review: dung
   - id: n27
     cau: Một nốt trắng chấm dôi cộng một nốt đen bằng 4 phách (3 + 1), vừa đủ một ô nhịp 4/4.
     loai: so-lieu
@@ -308,7 +312,8 @@ nhan_dinh:
     cau: 'Hộp "Luyện tập kèm theo": công cụ Tiết tấu (link /opus/luyen-tap/tiet-tau/) có cấp độ 1–2, và máy đếm nhịp (link /opus/luyen-tap/metronome/).'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ: ../opus-zero/docs/assets/js/rhythm.js dòng 62: ô Cấp độ có "1: tròn, trắng, đen", "2: thêm móc đơn, dấu lặng", "3: chấm dôi, đảo phách", "4: liên ba, móc kép"; cấp 1–2 khớp nội dung bài (hình nốt, dấu lặng). ../opus-zero/docs/luyen-tap/tiet-tau.md và metronome.md tồn tại. (Chấm dôi nằm ở cấp 3; câu chỉ nêu cấp 1–2 nên không sai.)'
+    ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ: ../opus-zero/docs/assets/js/rhythm.js dòng 62: ô Cấp độ có "1: tròn, trắng, đen", "2: thêm móc đơn, dấu lặng", "3: chấm dôi, đảo phách", "4: liên ba, móc kép"; cấp 1–2 khớp nội dung bài (hình nốt, dấu lặng). ../opus-zero/docs/luyen-tap/tiet-tau.md và metronome.md tồn tại. (Chấm dôi nằm ở cấp 3; câu chỉ nêu cấp 1–2 nên không sai.) Review: trang đích /opus/luyen-tap/tiet-tau/ chưa chuyển (bản xem: "sắp có" cho cả hai link), nên kiểm trên bản cũ: assets/js/rhythm.js dòng 62: ô Cấp độ có "1: tròn, trắng, đen", "2: thêm móc đơn, dấu lặng", "3: chấm dôi, đảo phách", "4: liên ba, móc kép" (cấp 1 và 2 có); luyen-tap/tiet-tau.md và metronome.md tồn tại. Câu chỉ nêu cấp 1–2 nên đúng (chấm dôi nằm ở cấp 3).'
+    review: dung
   - id: n30
     cau: 'Câu hỏi: "Trong nhịp 4/4, nốt trắng dài bao nhiêu phách?" Đáp án đúng "2"; "1", "4" sai; giải thích "Nốt trắng bằng hai nốt đen." đúng.'
     loai: so-lieu
