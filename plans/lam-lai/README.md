@@ -54,7 +54,8 @@ Thêm, chốt ngày 24/10/2026:
 
 - [x] Thuật ngữ tiếng Việt: **khóa dần theo lô**. Mỗi lô kiểm định và khóa (từng phần) các bản ghi của `thuat-ngu.yml` mà trang của lô dùng; D3-L5 khóa nốt và dựng trang Từ điển. Bài đã khóa không phải mở lại vì đổi thuật ngữ.
 - [x] CI của nhánh lô: từ đợt 2, **push nhánh lô lên GitHub trước khi gộp**, chờ `test.yml` (bản xem) đạt rồi mới gộp vào `main`; gộp xong xóa nhánh trên GitHub. Agent làm lô vẫn không push; người gộp push.
-- [x] Hai link tới repo trên site (biểu tượng GitHub ở thanh trên, chữ "MIT" ở chân trang): **bỏ tạm** khi repo còn riêng tư (người đọc mở ra trang 404); thêm lại khi repo công khai.
+- [x] Hai link tới repo trên site (biểu tượng GitHub ở thanh trên, chữ "MIT" ở chân trang): **bỏ tạm** khi repo còn riêng tư (người đọc mở ra trang 404); thêm lại khi repo công khai. Link tới issue cũng vậy: các trang đang trỏ tới issue của repo cũ (công khai) giữ link ấy cho tới khi repo mới công khai.
+- [x] Review: **ba mức theo rủi ro** (Nhỏ, Vừa, Lớn), cho mọi thay đổi về sau; bảng ở mục "Ba mức review" (cuối Quy tắc chung). Thay cho cách cũ "gộp và push mỗi việc sau khi review". Lượt 2 kiểm định nội dung của mỗi lô vẫn giữ.
 
 Câu hỏi nhỏ còn chờ (từ review nhánh quyết định, `bao-cao/d2-bang-tang.md`); hỏi chủ repo trước lô ghi bên cạnh:
 
@@ -101,6 +102,22 @@ Bảng xếp theo thứ tự làm: đợt 6 (tác phẩm) sau đợt 8. Số tra
 - Trang chỉ hiện trường dữ liệu đã khóa. Trang của lô hiện một trường chưa khóa thì lô đó kiểm định và khóa trường ấy cùng trang. Khóa từng phần bản ghi: `../ben-vung/chuan-kiem-dinh.md` mục 6.
 - Commit message, mạng, `_imslp/`: như mục "Cách làm việc" của `AGENTS.md`.
 - **Người review:** mặc định là Claude (phiên Cowork hay Claude Code của bạn); có thể là người hay LLM khác, miễn không làm lượt 1 hay lượt 2 của chính lô đó.
+
+### Ba mức review
+
+Chủ repo chọn ngày 24/10/2026, cho mọi thay đổi về sau. Nhánh có sửa ở nhiều mức thì theo mức cao nhất.
+
+| Mức | Loại sửa | Chạy trên máy | Review | Gộp khi |
+|---|---|---|---|---|
+| **Nhỏ** | Chữ trong kế hoạch, báo cáo, tài liệu; bỏ hay đổi một link; config một dòng; sửa đã có kiểm thử bắt | `npm run build` và `npm test` (1–2 phút). Chỉ đổi `plans/` thì không cần chạy | Không | `test.yml` trên GitHub đạt |
+| **Vừa** | Mã thành phần, CSS, plugin, script | Kiểm thử liên quan | Haiku hay Sonnet, chỉ đọc diff, không build lại | CI đạt và review không có chỗ phải sửa |
+| **Lớn** | Công cụ khóa, dữ liệu dùng chung, workflow deploy, phần lọc HTML hay link (bảo mật) | Chạy đủ: build hai bản, `npm test` cho mỗi bản, kiểm thử trình duyệt | Sonnet hay Opus, có vòng kiểm lại | CI đạt; review và vòng kiểm lại không còn chỗ phải sửa |
+
+- Ba lớp chặn, theo thứ tự: `npm test` trên máy; `test.yml` trên GitHub (thêm kiểm thử trình duyệt và Lighthouse); `deploy.yml` chạy lại tất cả trước khi đăng, hỏng thì không đăng và site giữ bản cũ. Lỡ sai thì `git revert` commit đó.
+- Gom nhiều sửa nhỏ vào một nhánh, kiểm một lần.
+- Sửa theo review mà chỗ sửa nhỏ và có kiểm thử kèm theo thì bỏ vòng kiểm lại; CI làm việc đó.
+- Người review không chạy lại toàn bộ kiểm thử, vì CI đã chạy: chỉ đọc diff và chạy đúng phép thử liên quan.
+- Lượt 2 kiểm định nội dung của mỗi lô không phải review mã: vẫn giữ, theo `../ben-vung/chuan-kiem-dinh.md`.
 
 ## Đợt 0. Dựng repo mới
 
@@ -222,7 +239,7 @@ Khung, lõi, công cụ và tham chiếu đã lên site; đợt này thêm tác 
 2. Agent chuyển trang bằng `tools/chuyen/`, tách dữ liệu, kiểm định lượt 1, ghi hồ sơ (chưa khóa).
 3. Agent khác kiểm định lượt 2 độc lập, mức theo tầng của trang (`../ben-vung/chuan-kiem-dinh.md` mục 3 và 8).
 4. Người gộp push nhánh lô lên GitHub; `test.yml` chạy trên bản xem: build, schema, khóa, link, khuông nhạc, kiểm thử trình duyệt, trợ năng, Lighthouse trang mẫu. Phải đạt trước khi gộp. Ảnh chụp từng trang ở 360 px và 1280 px đính vào báo cáo.
-5. Review báo cáo, hồ sơ và ảnh chụp; chỗ cần sửa trả về agent trên cùng nhánh.
+5. Review báo cáo, hồ sơ và ảnh chụp; chỗ cần sửa trả về agent trên cùng nhánh. Phần mã của lô (thành phần, CSS, script) review theo mục "Ba mức review".
 6. Bạn đọc tóm tắt hồ sơ trong báo cáo của lô và xem ngẫu nhiên khoảng 5 nhận định (`node tools/khoa.mjs xuat <lô> --mau 5`); agent khóa; bạn gộp vào `main` và push. Trang của lô lên site thật.
 
 Hai lô cùng đợt làm song song được nếu không chung file. Các đợt làm lần lượt, theo thứ tự ở bảng Tiến độ. Cuối mỗi đợt, người review xét cả đợt theo "Xong khi" và cập nhật bảng Tiến độ.
@@ -243,7 +260,7 @@ Một phiên một việc, mở trong thư mục `opus/`. Đổi các chỗ tron
 
 **Review một lô:**
 
-> Bạn review lô **D<đợt>-L<lô>** của repo opus, nhánh `moi/d<đợt>-l<lô>`. Đọc mục "Review những gì" trong `plans/lam-lai/README.md`, `plans/ben-vung/chuan-kiem-dinh.md`, báo cáo của lô và hồ sơ trong `kiem-dinh/` của các trang trong lô; xem diff của nhánh so với `main`. Chạy `npm ci`, `npm run build:xem`, `npm test`. Kiểm lại mọi nhận định hai lượt cho kết quả khác nhau và mọi chỗ đã sửa, mở đúng nguồn ghi trong hồ sơ. Ghi vào cuối báo cáo, mục "Review": chỗ phải sửa (file, dòng, lý do, nguồn), chỗ nên sửa, kết luận gộp được hay chưa. Không sửa trang. Không push.
+> Bạn review lô **D<đợt>-L<lô>** của repo opus, nhánh `moi/d<đợt>-l<lô>`. Đọc mục "Review những gì" trong `plans/lam-lai/README.md`, `plans/ben-vung/chuan-kiem-dinh.md`, báo cáo của lô và hồ sơ trong `kiem-dinh/` của các trang trong lô; xem diff của nhánh so với `main`. Không chạy lại toàn bộ kiểm thử (`test.yml` đã chạy trên nhánh); chỉ chạy phép thử liên quan tới chỗ đang xem. Kiểm lại mọi nhận định hai lượt cho kết quả khác nhau và mọi chỗ đã sửa, mở đúng nguồn ghi trong hồ sơ. Ghi vào cuối báo cáo, mục "Review": chỗ phải sửa (file, dòng, lý do, nguồn), chỗ nên sửa, kết luận gộp được hay chưa. Không sửa trang. Không push.
 
 **Review cuối đợt:**
 

@@ -59,6 +59,15 @@ npm run lighthouse        # Lighthouse ở tối đa ba trang mẫu của dist/,
 - Trang mẫu của kiểm thử trình duyệt và Lighthouse lấy từ bản build (`tools/trang-mau.mjs`): trang chủ, trang 404, trang nhánh đang làm đã đổi so với `main` (tối đa 6), rồi mỗi loại khối (khuông nhạc, câu hỏi, khối nghe, hộp tác phẩm, hình, bảng, khối thu gọn, "sắp có", ô "chưa chuyển") một trang. Thêm trang: `OPUS_TRANG="piano/gam/,nhac-ly/" npm run test:trinh-duyet`. Lighthouse đo trang chủ và hai trang mẫu đầu; chọn trang khác bằng `LH_TRANG`.
 - Máy chủ tĩnh của kiểm thử: `tools/may-chu.mjs` (chỉ nghe 127.0.0.1, có Range như GitHub Pages); chạy riêng: `node tools/may-chu.mjs dist 4400 [--http2]`.
 
+## Review và gộp
+
+Ba mức theo rủi ro (chủ repo chọn ngày 24/10/2026); bảng đủ ở `plans/lam-lai/README.md`, mục "Ba mức review". Nhánh có sửa ở nhiều mức thì theo mức cao nhất.
+
+- **Nhỏ** (chữ trong kế hoạch, báo cáo, tài liệu; một link; config một dòng; sửa đã có kiểm thử bắt): `npm run build`, `npm test`; không review; gộp khi `test.yml` đạt.
+- **Vừa** (thành phần, CSS, plugin, script): kiểm thử liên quan; Haiku hay Sonnet chỉ đọc diff; gộp khi CI đạt và review không có chỗ phải sửa.
+- **Lớn** (công cụ khóa, dữ liệu dùng chung, workflow deploy, lọc HTML hay link): chạy đủ; Sonnet hay Opus review, có vòng kiểm lại.
+- Gom sửa nhỏ vào một nhánh. Sửa theo review mà nhỏ và có kiểm thử kèm thì để CI kiểm lại. Lượt 2 kiểm định nội dung của lô vẫn giữ.
+
 ## Khóa
 
 - Trang và bản ghi dữ liệu lên site thật khi đã khóa: mã băm trong `kiem-dinh/khoa.json`, hồ sơ kiểm định trong `kiem-dinh/<trang>.yml` hay `kiem-dinh/du-lieu/<bộ>/<id>.yml` (`plans/ben-vung/chuan-kiem-dinh.md` mục 5–7). Trang hay bản ghi đã khóa mà đổi thì build hỏng, ở cả hai bản; sửa theo thủ tục mở khóa.
@@ -162,6 +171,6 @@ Frontmatter có `tac_pham`. Thứ tự các mục như mẫu ở `../opus-zero/A
    - Vùng `<!-- fig:… -->` thành `::hinh-cau-truc` hay `::hinh`; khối `oz-` rỗng thành `::cong-cu`; hộp tác phẩm thành `::hop-tac-pham`.
    - Khối `oz-` bọc nội dung mà JavaScript cũ đọc hay điền (`oz-lesson-status`, `oz-piano-level`): giữ nội dung, thêm `::cong-cu{ten}` (ô "chưa chuyển") và cảnh báo. `oz-print-only` (chỉ hiện khi in) giữ nguyên, site mới có CSS. Lớp `oz-` khác còn trong HTML thô thì cảnh báo; lô của trang thêm CSS hay bỏ lớp.
    - `data-rec` thành `ban_thu` (dữ liệu, đã tách) cộng `moc` (trong trang); link `.md` thành địa chỉ, cả `href` trong HTML thô.
-   - Link tới issue của repo cũ (`https://github.com/mtuann/opus-zero/issues`) script chưa đổi: lô của trang sửa thành `https://github.com/mtuann/opus/issues` (4 trang: `tai-lieu-tham-khao`, `tai-nguyen`, `bat-dau/hoi-dap`, một bài blog).
+   - Link tới issue của repo cũ (`https://github.com/mtuann/opus-zero/issues`, 4 trang: `tai-lieu-tham-khao`, `tai-nguyen`, `bat-dau/hoi-dap`, một bài blog): giữ nguyên khi repo mới còn riêng tư. Repo cũ công khai nên người đọc vẫn báo lỗi được; link tới repo mới thì ra trang 404 và `tests/khung.test.mjs` chặn. Khi repo mới công khai thì đổi thành `https://github.com/mtuann/opus/issues`.
    - Tiêu đề `#` thành `title` (bỏ định dạng Markdown); mô tả trang lấy thẻ `og:description` của bản build cũ (thẻ `description` cũ bị cắt ở dấu `"`), rỗng hay không có thì cảnh báo.
 3. `npm run build:xem`, rồi `node tools/chuyen/so-chu.mjs <trang> …`: chữ hiển thị, mô tả trang, trọn mã ABC của từng khuông, từng câu hỏi (lựa chọn, đáp án đúng, giải thích) và id tiêu đề phải giống trang cũ. `npm test` kiểm lại cho mọi trang đã chuyển, khi máy có `.cache/site-cu/`.
