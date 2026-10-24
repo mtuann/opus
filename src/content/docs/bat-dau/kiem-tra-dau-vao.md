@@ -39,7 +39,7 @@ Bài kiểm tra có hai phần, làm phần nào trước cũng được. **Ph�
 
 - [ ] Chơi trọn một chương sonata Cổ điển ở tốc độ gần với chỉ dẫn
 - [ ] Làm nổi được giai điệu nằm ở giữa hoặc ở tay trái
-- [ ] Hai bè của Bach rõ ràng, như trong [Invention số 1](/opus/piano/tac-pham/bach-invention-1/)
+- [ ] Hai bè của Bach rõ ràng, cách phát âm nhất quán từ đầu đến cuối
 
 **Xong chặng 6 (Nâng cao, ≈ Grade 7–8)**
 
@@ -168,9 +168,9 @@ Phần này gồm 28 câu, mỗi bài nhạc lý có 2 câu, mất khoảng 5–
 ? Kết thúc câu nhạc ở hợp âm V gọi là gì?
 + Kết nửa
 - Kết trọn
-- Kết lừa
-? V – vi là loại kết nào?
-+ Kết lừa
+- Kết plagal
+? Tai chờ kết mà V đi tới vi thay vì I: đó là gì?
++ Lừa (tránh kết)
 - Kết plagal
 - Kết trọn
 @ 14 | Ký hiệu biểu diễn | nhac-ly/14-ky-hieu-bieu-dien/

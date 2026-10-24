@@ -154,7 +154,7 @@ Mục tiêu: chơi những tác phẩm lớn được yêu thích nhất, với 
 | Đọc nhạc | Thị tấu ở mức Grade 5. Chơi nhạc thính phòng: sonata cho violin hoặc cello với piano. |
 | Nhạc lý | [Bài 27](/opus/nhac-ly/27-ky-hieu-hop-am/) đến [bài 32](/opus/nhac-ly/32-ky-thuat-the-ky-20/) (ký hiệu hợp âm, kết cấu, chuỗi hòa âm, phát triển môtip, hình thức, kỹ thuật thế kỷ 20). Phân tích mọi bài mình chơi. |
 | Tai | Nghe và so sánh nhiều bản thu của cùng một tác phẩm, xem [nghệ sĩ và bản thu](/opus/piano/nghe-si/). |
-| Tác phẩm | Bài học trên site: [trang chặng 6](/opus/piano/lo-trinh/chang-6/). Ngoài ra: các Impromptu khác trong Op. 90 của Schubert, Brahms: Intermezzo Op. 118 số 2, các Sinfonia của Bach, Mozart: Sonata K. 330. |
+| Tác phẩm | Bài học trên site: [trang chặng 6](/opus/piano/lo-trinh/chang-6/). Ngoài ra: Schubert: Impromptu Op. 142 số 2, Brahms: Intermezzo Op. 118 số 2, các Sinfonia của Bach, Mozart: Sonata K. 330. |
 | Nghe | [Beethoven: Pathétique](/opus/nghe-nhac/beethoven-pathetique/) (cả ba chương), [Rachmaninoff: Concerto số 2](/opus/nghe-nhac/rachmaninoff-2/), [Bach: Goldberg Variations](/opus/nghe-nhac/bach-goldberg/) trong hai bản thu khác nhau. |
 | Biểu diễn | Chương trình 20–30 phút thuộc lòng, nhiều phong cách. Biểu diễn trước khán giả không quen biết. |
 

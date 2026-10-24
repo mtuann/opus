@@ -13,15 +13,7 @@ lan:
       review: null
       kiem_mau: null
 ghi_chu: >-
-  Trang tóm tắt nhạc lý cơ bản (14 ô, hai mặt A4). Nguồn chính: Open Music Theory (OMT), mở từng chương (tải bằng curl,
-  ngày 24/10/2026; WebFetch bị trang trả 403). Thuật ngữ tiếng Việt đối chiếu src/data/thuat-ngu.yml (chưa khóa) và các
-  bài nhạc lý cũ cùng chủ đề (../opus-zero/docs/nhac-ly/03, 04, 05, 06, 07, 08, 12): không lệch. Sửa cấu trúc trước lượt 1
-  (agent chính, commit a745865): 14 tiêu đề "###" thành "##", vì trang không có h2 nào (axe heading-order); chữ tiêu đề và
-  id giữ nguyên. Sửa chữ ở lượt 1: n24 (quy tắc số chỉ nhịp, thêm trường hợp 6/8), n30 (hạ át âm), n36 (hình vòng quãng
-  năm: d♯/e♭), n51 (bảng chức năng: vi). Sửa không đổi chữ: chữ "Đô giữa (C4)" dưới hình bàn phím đổi fill="#222" thành
-  fill="currentColor" để đọc được ở chế độ tối (nằm ngoài phím đàn, trên nền trang). Bố cục in hai mặt A4 (n3) tùy CSS
-  của agent chính (lớp oz-sheet, oz-sheet-page, oz-cell, oz-fig, oz-fig-circle): agent chính kiểm sau khi build. Không
-  tính là nhận định: câu mở đầu "Toàn bộ kiến thức đọc nhạc và nhạc lý cơ bản" (nói phạm vi của trang).
+  Trang tóm tắt nhạc lý cơ bản (14 ô, hai mặt A4). Nguồn chính: Open Music Theory (OMT), mở từng chương (tải bằng curl, ngày 24/10/2026; WebFetch bị trang trả 403). Thuật ngữ tiếng Việt đối chiếu src/data/thuat-ngu.yml (chưa khóa) và các bài nhạc lý cũ cùng chủ đề (../opus-zero/docs/nhac-ly/03, 04, 05, 06, 07, 08, 12): không lệch. Sửa cấu trúc trước lượt 1 (agent chính, commit a745865): 14 tiêu đề "###" thành "##", vì trang không có h2 nào (axe heading-order); chữ tiêu đề và id giữ nguyên. Sửa chữ ở lượt 1: n24 (quy tắc số chỉ nhịp, thêm trường hợp 6/8), n30 (hạ át âm), n36 (hình vòng quãng năm: d♯/e♭), n51 (bảng chức năng: vi). Sửa không đổi chữ: chữ "Đô giữa (C4)" dưới hình bàn phím đổi fill="#222" thành fill="currentColor" để đọc được ở chế độ tối (nằm ngoài phím đàn, trên nền trang). Bố cục in hai mặt A4 (n3) tùy CSS của agent chính (lớp oz-sheet, oz-sheet-page, oz-cell, oz-fig, oz-fig-circle): agent chính kiểm sau khi build. Không tính là nhận định: câu mở đầu "Toàn bộ kiến thức đọc nhạc và nhạc lý cơ bản" (nói phạm vi của trang).
 nguon:
   - id: omt-notation
     bac: 2
@@ -535,12 +527,12 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'OMT Plagal Motion: "You may sometimes see all (IV)–I motions described as “plagal cadences” ... While true phrase endings involving the progression (IV)–I do exist, in 18th-century classical music, it''s more common to see a (IV)–I tonic prolongation". Tên kết đúng; OMT chỉ lưu ý kết này ít gặp ở cuối câu nhạc thế kỷ 18.'
   - id: n57
-    cau: "Kết lừa: V → vi."
+    cau: "Lừa (tránh kết): V → vi."
     loai: dinh-nghia
     nguon:
       - omt-la-bass
-    ket_qua: dung
-    ghi_chu: 'OMT: "Deceptive motion most commonly occurs when V(7) moves to vi rather than I"; "Some people use the term “deceptive cadence” to describe what we refer to as “deceptive motion.”" (OMT thích gọi là deceptive motion; kết lừa là tên quen dùng, bài 13 cũ cũng gọi vậy).'
+    ket_qua: da-sua
+    ghi_chu: 'Ô bảng cũ: "Lừa | V → vi" trong bảng các loại kết. Open Music Theory (La in the Bass): V(7)–vi là "deceptive motion", "avoids a cadence rather than creating one", nên ghi thêm "(tránh kết)": không coi là một loại kết. src/data/thuat-ngu.yml chưa có tên gọi; lô D3 (bài 13) quyết.'
   - id: n58
     cau: "Tốc độ: Largo < Adagio < Andante < Moderato < Allegro < Presto."
     loai: dinh-nghia
@@ -677,3 +669,6 @@ doi_chu:
   - cu: I, vi
     moi: I (vi đôi khi thay I)
     ly_do: "n51 (da-sua): Open Music Theory xếp chỉ I là hợp âm chủ, vi là hạ át yếu, đôi khi mang chức năng chủ; MT21C xếp vi là kéo dài chủ. Hai nguồn khác nhau nên viết chung lại (chuan-kiem-dinh.md mục 2)."
+  - cu: Lừa
+    moi: Lừa (tránh kết)
+    ly_do: "n57 (da-sua): theo Open Music Theory, V–vi tránh kết chứ không phải một loại kết (deceptive motion); tên tiếng Việt chưa có trong thuat-ngu.yml, lô D3 (bài 13) quyết."

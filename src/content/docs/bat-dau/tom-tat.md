@@ -269,7 +269,7 @@ Trong giọng trưởng: **I ii iii IV V vi vii°** (chữ hoa: trưởng, chữ
 | Trọn | V → I |
 | Nửa | … → V |
 | Plagal | IV → I |
-| Lừa | V → vi |
+| Lừa (tránh kết) | V → vi |
 
 </div>
 
