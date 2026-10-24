@@ -178,7 +178,8 @@ header.header {
 .site-title {
 	font-size: var(--sl-text-xl);
 }
-/* Màn hình cảm ứng: tên site, nút tìm kiếm và nút menu (Starlight để cao 35, 40 và 32 px) có vùng bấm từ 44 px */
+/* Màn hình cảm ứng: tên site, nút tìm kiếm, nút menu và nút dạng link của hero (Starlight để cao 35, 40, 32 và 33 px)
+   có vùng bấm từ 44 px */
 @media (pointer: coarse) {
 	:root {
 		--sl-menu-button-size: 2.75rem;
@@ -191,6 +192,9 @@ header.header {
 	header.header button[data-open-modal] {
 		min-height: 44px;
 		min-width: 44px;
+	}
+	.sl-link-button {
+		min-height: 44px;
 	}
 }
 /* Starlight để ô chọn giao diện rộng 6,25em (viết cho tiếng Anh), chữ "Tự động" bị cắt */

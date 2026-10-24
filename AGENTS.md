@@ -27,7 +27,7 @@ npm test          # kiểm thử trên dist/: chạy sau npm run build
 - Kiểm thử ở `tests/*.test.mjs`, chạy bằng trình kiểm thử có sẵn của Node (`node --test`), không cần gói thêm. Thêm kiểm thử thì thêm file `tests/<tên>.test.mjs`.
 - `npm run build:xem` (bản xem, thêm trang chưa khóa) có từ D1.6.
 - `tools/` dùng Python 3.12: `python3 -m pip install -r requirements.txt`.
-- Chỉ thị trong trang (`::hop-tac-pham`…) lấy chữ từ `src/data/` lúc dựng trang. `npm run build` tự dựng lại mọi trang khi dữ liệu hay plugin Markdown đổi (`dungLaiKhiDoi` trong `src/du-lieu.mjs`); đang chạy `npm run dev` mà sửa `src/data/` thì khởi động lại `npm run dev` để thấy thay đổi.
+- Chỉ thị trong trang (`::hop-tac-pham`…) lấy chữ từ `src/data/` lúc dựng trang. `npm run build` tự dựng lại mọi trang khi dữ liệu hay plugin Markdown đổi (`dungLaiKhiDoi` trong `src/du-lieu.mjs`); đang chạy `npm run dev` mà sửa `src/data/`, hay thêm, xóa trang (link "sắp có" chỉ tính lại khi trang được dựng lại), thì khởi động lại `npm run dev` để thấy thay đổi.
 
 ## Dữ liệu
 
@@ -47,7 +47,7 @@ Chủ repo yêu cầu (23/10/2026): site gọn, thân thiện. Điều gì giả
 - Hình và sơ đồ vẽ bằng SVG hoặc HTML và CSS ngay trong trang, theo màu của site (`src/styles/opus.css`), có bản sáng và tối. Chữ trong sơ đồ là chữ thật, để máy đọc màn hình đọc được và tìm kiếm thấy. Hình chỉ để trang trí thì đặt `aria-hidden`.
 - Mọi trang và thành phần phải hiển thị tốt ở 360 px, 768 px và 1280 px, trên Chromium, WebKit (Safari) và Firefox: không tràn ngang; trên màn hình cảm ứng, vùng bấm từ 44 px.
 - Không lùi chuẩn Lighthouse ở luật 7 của kế hoạch.
-- Bố cục (D1.2b): thanh trên nền giấy (chế độ tối: nền trang), viền 2 px màu nhựa thông; dải màu mực chỉ ở phần đầu trang có `hero`: trang chủ và trang 404 mặc định của Starlight (`src/components/Hero.astro`).
+- Bố cục (D1.2b): thanh trên nền giấy (chế độ tối: nền trang), viền 2 px màu nhựa thông; dải màu mực chỉ ở phần đầu trang có `hero`: trang chủ và trang 404 (`src/content/docs/404.md`), dựng bằng `src/components/Hero.astro`.
 - Mỗi nhóm nội dung của menu có một màu và một biểu tượng: tên, mô tả, biểu tượng và trang nào thuộc nhóm nào ở `src/nhom.mjs`; màu là biến `--oz-c-<id nhóm>` trong `src/styles/opus.css`, có bản sáng và tối. Màu nhóm hiện ở nhãn trên tiêu đề trang (`src/components/PageTitle.astro`) và thẻ nhóm ở trang chủ. Thêm hay đổi nhóm thì sửa `src/nhom.mjs`, màu trong `opus.css` và thẻ trong `src/content/docs/index.md`; `tests/giao-dien.test.mjs` bắt chỗ thiếu, chỗ lệch và màu chữ dưới 4,5:1.
 - Bộ nén CSS của bản build biến `border-image: none` thành `border-image:` (rỗng, trình duyệt bỏ qua): muốn bỏ thì viết thuộc tính con, như `border-image-source: none`. Sửa CSS xong thì xem file trong `dist/_astro/`, đừng chỉ xem mã nguồn.
 
@@ -110,7 +110,9 @@ Frontmatter có `tac_pham`. Thứ tự các mục như mẫu ở `../opus-zero/A
 ### Link nội bộ
 
 - Link tới trang viết địa chỉ trên site, có base và `/` ở cuối: `[Gam](/opus/piano/gam/)`, `[…](/opus/piano/gam/#muc)`; trang mục lục là thư mục (`/opus/piano/`); trang chủ `/opus/`. Không viết link tới file `.md`. File tĩnh: `/opus/<đường dẫn trong public/>`.
-- Link tới trang chưa có trong bản build (chưa chuyển, hay ở bản thật: chưa khóa) tự thành chữ thường kèm nhãn "sắp có" (`src/plugins/sap-co.mjs`); khi trang lên, link tự hiện lại. Cứ viết link bình thường. `tests/link.test.mjs` kiểm mọi link nội bộ và `#mục` trong bản build.
+- Link tới trang chưa có trong bản build (chưa chuyển, hay ở bản thật: chưa khóa) tự thành chữ thường kèm nhãn "sắp có" (`src/plugins/sap-co.mjs`); khi trang lên, link tự hiện lại. Cứ viết link bình thường. Chữ "sắp có" giữ địa chỉ đích (`data-href`).
+- Link nội bộ viết bằng Markdown, không viết thẻ `<a>`: chỗ đổi thành "sắp có" chỉ đọc chắc thẻ `<a href="…">` nháy kép, mở và đóng trong cùng một khối HTML. Không đặt link trong tiêu đề: nhãn "sắp có" sẽ lọt vào mục lục bên phải.
+- `tests/link.test.mjs` kiểm trên bản build, trong phần nội dung (`<main>`) của mọi trang: link nội bộ (cả link tương đối) tới trang, file và `#mục` có thật; chữ "sắp có" trỏ tới một trang trong kế hoạch (`src/data/trang.yml` cộng 7 trang chặng) mà bản build chưa có, nên link gõ sai hay trang bị bỏ sót khỏi bản build đều bị bắt. Link tới file tĩnh chưa có (như `/opus/audio/NGUON.txt`) thì hỏng: lô đầu tiên link tới file ấy chép nó vào `public/`.
 - Id của tiêu đề theo kiểu site cũ (`src/plugins/id-cu.mjs`): bỏ dấu, chữ "đ" mất, ký tự lạ bỏ, trùng thì thêm `_1`, `_2`. Ví dụ `## Trước ngày đầu tiên` có id `truoc-ngay-au-tien`. Nhờ vậy link `#mục` của site cũ, trong site và từ nơi khác, vẫn đúng. Cần id khác thì viết `{ #id }`.
 
 ### Chuyển trang từ site cũ

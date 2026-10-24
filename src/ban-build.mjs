@@ -16,13 +16,15 @@ export function trangTrongBan() {
 		.sort();
 }
 
+/** Địa chỉ trỏ tới file (.txt, .mp3…): đoạn cuối của đường dẫn (bỏ ?… và #…) có đuôi, không có "/" ở cuối. */
+export const laFile = (diaChi) => /\.[a-z0-9]+$/i.test(diaChi.split(/[?#]/)[0]);
+
 /**
  * Trang (trong `trang`, dạng trangTrongBan) mà địa chỉ `diaChi` (/opus/x/y/#muc) trỏ tới, hay undefined nếu không có.
  * Địa chỉ không thuộc site (không bắt đầu bằng `base`) hay trỏ tới file (có đuôi như .txt) cũng trả về undefined.
  */
 export function trangCuaDiaChi(diaChi, base, trang) {
-	if (!diaChi.startsWith(base)) return undefined;
+	if (!diaChi.startsWith(base) || laFile(diaChi)) return undefined;
 	const p = decodeURI(diaChi.slice(base.length).split(/[?#]/)[0]).replace(/\/$/, '');
-	if (/\.[a-z0-9]+$/i.test(p)) return undefined;
 	return [p || 'index', `${p}/index`].find((t) => trang.includes(t));
 }

@@ -12,7 +12,7 @@ const HO_SO = import.meta.glob('/kiem-dinh/**/*.yml', { eager: true, query: '?ra
 
 const { entry } = Astro.locals.starlightRoute;
 // Đường dẫn trang như trong trang.yml, kiem-dinh/ và anh-xa.md: theo file nguồn, nên trang mục lục giữ đuôi /index (id
-// của Starlight thì không). Trang không có file nguồn (404 mặc định của Starlight) thì không có nhãn hay huy hiệu.
+// của Starlight thì không). Trang không có file nguồn thì không có nhãn hay huy hiệu.
 const trang = entry.filePath?.replace(/^src\/content\/docs\//, '').replace(/\.mdx?$/, '');
 // Tầng của trang (src/data/trang.yml) quyết định vài trang vào Đọc thêm. Đọc cả bộ (Astro giữ sẵn), không dùng
 // getEntry: tra một trang không có bản ghi thì Astro in cảnh báo.

@@ -35,6 +35,7 @@ src/content.config.ts       # schema frontmatter và năm bộ dữ liệu
 src/du-lieu.mjs             # schema, bộ nạp và kiểm chéo của năm bộ dữ liệu (content.config.ts dùng)
 src/nhom.mjs                # nhóm nội dung của menu: tên, mô tả, biểu tượng; trang nào thuộc nhóm nào
 src/kiem-dinh.mjs           # trạng thái kiểm định của trang (đọc kiem-dinh/), cho huy hiệu "Đã kiểm định"
+src/ban-build.mjs           # trang nào có trong bản build (cho link "sắp có")
 src/content/docs/           # trang; cùng đường dẫn với ../opus-zero/docs/
 src/data/                   # cap-do.yml, tac-pham.yml, nha-soan-nhac.yml, thuat-ngu.yml, trang.yml
 src/components/             # thành phần Astro

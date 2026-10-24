@@ -397,7 +397,8 @@ function dauVet() {
  * Bọc bộ nạp trang (docsLoader của Starlight). Astro giữ HTML đã dựng của trang giữa các lần build và chỉ dựng lại trang
  * có file đổi; chỉ thị (::hop-tac-pham…) lấy chữ từ src/data/ lúc dựng, nên dữ liệu hay plugin đổi mà trang không đổi
  * thì trang vẫn mang HTML cũ. Ở đây: dấu vết khác lần trước thì xóa bộ nhớ đệm của trang, dựng lại hết.
- * Đang chạy npm run dev mà sửa src/data/: khởi động lại npm run dev để chỉ thị cập nhật.
+ * Đang chạy npm run dev mà sửa src/data/, hay thêm, xóa trang: khởi động lại npm run dev để chỉ thị và link "sắp có"
+ * cập nhật.
  */
 export function dungLaiKhiDoi(loader) {
 	return {
