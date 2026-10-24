@@ -11,8 +11,6 @@ Bài kiểm tra có hai phần, làm phần nào trước cũng được. **Ph�
 
 <div class="oz-piano-level">
 
-::cong-cu{ten="piano-level"}
-
 **Xong chặng 1 (Khởi đầu)**
 
 - [ ] Chơi được bằng hai tay vài bài đơn giản, như [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/), không dừng, ở tốc độ chậm vừa
@@ -48,6 +46,8 @@ Bài kiểm tra có hai phần, làm phần nào trước cũng được. **Ph�
 - [ ] Chơi thuộc lòng một chương trình 20–30 phút gồm ít nhất ba thời kỳ
 - [ ] Chơi một prelude và fugue của Bach, các bè nghe rõ
 - [ ] Tự quyết định ngón bấm, sắc thái và tốc độ cho một bài mới, và giải thích được vì sao
+
+::cong-cu{ten="piano-level"}
 
 </div>
 

@@ -5,7 +5,7 @@ description: Trước khi chạm vào phím đàn đầu tiên, hãy dành 10 ph
 
 Trước khi chạm vào phím đàn đầu tiên, hãy dành 10 phút đọc trang này. Nó trả lời những câu hỏi mà gần như người lớn nào mới học piano cũng có, nhưng ít khi được nói ra.
 
-Opus Zero dạy nhạc cổ điển **qua cây đàn piano**: bạn học nhạc lý bằng mắt và tai, rồi biến nó thành thứ sờ được dưới mười ngón tay. Chưa có đàn vẫn bắt đầu được (nghe và đọc nhạc), nhưng piano là con đường chính của site. "Nhạc cổ điển" ở đây là cả truyền thống âm nhạc nghệ thuật phương Tây, từ thánh ca thời Trung cổ đến các nhà soạn nhạc đang sống; còn **thời kỳ Cổ điển** chỉ là giai đoạn khoảng 1750–1820 của Haydn, Mozart và Beethoven. Site sẽ ghi rõ khi nói về thời kỳ.
+Opus dạy nhạc cổ điển **qua cây đàn piano**: bạn học nhạc lý bằng mắt và tai, rồi biến nó thành thứ sờ được dưới mười ngón tay. Chưa có đàn vẫn bắt đầu được (nghe và đọc nhạc), nhưng piano là con đường chính của site. "Nhạc cổ điển" ở đây là cả truyền thống âm nhạc nghệ thuật phương Tây, từ thánh ca thời Trung cổ đến các nhà soạn nhạc đang sống; còn **thời kỳ Cổ điển** chỉ là giai đoạn khoảng 1750–1820 của Haydn, Mozart và Beethoven. Site sẽ ghi rõ khi nói về thời kỳ.
 
 ## Ba hiểu lầm khi người lớn học piano
 

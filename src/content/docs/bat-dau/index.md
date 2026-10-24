@@ -1,9 +1,9 @@
 ---
 title: Bắt đầu
-description: Opus Zero là sổ tay học piano cổ điển công khai cho người lớn bắt đầu từ con số 0. Mỗi trang gom những gì cần biết để tiến bộ bên phím đàn, viết bằng lời dễ…
+description: Opus là sổ tay học piano cổ điển công khai cho người lớn bắt đầu từ con số 0. Mỗi trang gom những gì cần biết để tiến bộ bên phím đàn, viết bằng lời dễ…
 ---
 
-Opus Zero là **sổ tay học piano cổ điển công khai** cho người lớn bắt đầu từ con số 0. Mỗi trang gom những gì cần biết để tiến bộ bên phím đàn, viết bằng lời dễ hiểu, kèm ví dụ nghe được, bài tập và công cụ luyện tập. Site không thay thế một người thầy giỏi, nhưng giúp bạn tập đúng cách và đều đặn mỗi ngày, dù có thầy hay không.
+Opus là **sổ tay học piano cổ điển công khai** cho người lớn bắt đầu từ con số 0. Mỗi trang gom những gì cần biết để tiến bộ bên phím đàn, viết bằng lời dễ hiểu, kèm ví dụ nghe được, bài tập và công cụ luyện tập. Site không thay thế một người thầy giỏi, nhưng giúp bạn tập đúng cách và đều đặn mỗi ngày, dù có thầy hay không.
 
 ## Ba nguyên tắc
 
