@@ -213,3 +213,80 @@ Bảy trang tham chiếu hiện có: giữ cả bảy ngày rà lại, với hai
 1. `nhac-cu/dan-nhac` vào D8-L2 (theo quy tắc hiện hành, không sửa script) hay D5-L3 (sửa hai dòng, giữ "đủ Lõi sau đợt 5"). Tôi nghiêng về D5-L3.
 2. `nhan-dien/nghe-mu`: chuyển Tham chiếu, hay giữ Lõi và đưa 10 URL bản thu vào dữ liệu có kiểm link.
 3. Mục "Sau 6 tháng: đi sâu hơn" của lộ trình nghe hiểu có tính là bước phải học không. Nếu có, `lich-su/nhac-truyen-thong-viet-nam` chuyển Lõi (D8-L3 → D5-L1, không sửa script).
+
+## Review nhánh quyết định
+
+Claude Code (Claude Sonnet 5.5), ngày 24/10/2026, ở commit `e214a45`
+
+**Đã kiểm** (Node 24.22.1, bản chép của nhánh):
+
+- `npm run build` và `npm test` đạt: 82 kiểm thử, 80 đạt, 2 bỏ qua đúng chỗ (cần `.cache/site-cu/`; nhánh không phải nhánh lô). `npm run build:xem` rồi `npm test` cũng đạt. Kiểm thử mới chạy lặp 15 lần, không chập chờn.
+- `python3 plans/ben-vung/kiem_ke.py | diff - plans/ben-vung/kiem-ke.md` và `python3 plans/lam-lai/anh_xa.py | diff - plans/lam-lai/anh-xa.md`: không khác (site cũ ở `5d08189`).
+- Tầng, ngày rà lại và lý do của 5 trang đổi, cộng `tai-nguyen`, khớp ở `trang.yml`, `kiem-ke.md`, `anh-xa.md`. Tầng của cả 233 trang giữa ba file cũng khớp (so bằng script ngoài repo).
+- `src/nhom.mjs`: đọc mã, hai dòng mới đúng; kiểm thử giao diện so đủ 233 dòng với `anh-xa.md`, khớp. `tests/pham-vi.test.mjs` đã cho D2-L1 sửa `src/nhom.mjs`, nên việc đổi mô tả nhóm Đọc thêm ở D2-L1 không bị chặn.
+- `AGENTS.md`: 4 trang có link issue của repo cũ đúng như ghi (`tai-lieu-tham-khao`, `tai-nguyen`, `bat-dau/hoi-dap`, bài blog `2026-10-23-phien-ban-15`).
+- Mục 1 của báo cáo: 28 cặp (`trang:dòng`, câu trích) kiểm bằng script, khớp cả 28; các câu viết tắt tên file (như `cello.md:36`) và các câu ở mục 4 (`opera.md:61–89`, `thi-tau.md:181–182`, v.v.) tôi xem tay, đúng. Tỉ lệ chữ gần đúng khi đếm lại theo mục (`viet-nam` 58%, `nghe-mu` khoảng 67%; `duong-dai` tôi đếm 44%, báo cáo ghi 47%).
+- `tools/khoa.mjs`: đọc phần mới và chạy 9 kịch bản trên bản chép (trang ít hơn 5 nhận định, hồ sơ không có `tang`, bản ghi dữ liệu, tầng lệch, mẫu có `sai`, `xuat` ba lần, `--mau`). Kết quả ở "Nên sửa" 1 và 2.
+- Tài liệu: `grep` số cũ và cụm cũ trong cả repo, trừ báo cáo đợt 1.
+
+### Phải sửa
+
+Cả ba chỉ là chữ và số trong tài liệu, không đụng mã.
+
+1. **`plans/lam-lai/so-do.md` dòng 15, 19, 35 còn số và câu cũ.** Báo cáo (mục 6, điểm 5) chỉ liệt kê dòng 13, 57, 76, 87.
+   - Dòng 15: đợt 5 ghi "3 lô, 26 trang"; phải là 27 (`README.md` bảng Tiến độ và `anh-xa.md` ghi 27).
+   - Dòng 19: đợt 8 ghi "3 lô, 21 trang"; phải là 20.
+   - Dòng 35: "Bạn kiểm khoảng 10 nhận định"; theo quyết định 1 là bạn đọc tóm tắt hồ sơ và xem khoảng 5 nhận định mỗi lô.
+   - Thử lại: `grep -n -E "26 trang|21 trang|10 nhận định|khoảng<br/>10" plans/lam-lai/so-do.md` không ra dòng nào.
+2. **Phần "Quy tắc xếp tầng" và đầu file của `kiem-ke.md` (sinh từ `plans/ben-vung/kiem_ke.py` dòng 101–104, 122–131) mâu thuẫn với bảng ngay bên dưới.**
+   - `kiem-ke.md:24`: Ngoại vi gồm "opera, nhạc Việt Nam, nhạc đương đại". Nay opera là Lõi, `duong-dai` và `viet-nam` là Tham chiếu; Ngoại vi chỉ còn nhạc cụ, nhạc truyền thống Việt Nam, nữ nhà soạn nhạc.
+   - `kiem-ke.md:20, 22`: Lõi và Tham chiếu chưa ghi hai quy tắc chủ repo chốt (thông tin mau cũ là phần chính thì vào Tham chiếu; người mới cần trên lộ trình thì vào Lõi). Dòng 22 còn "ngày đề xuất".
+   - `kiem-ke.md:3` (và `plans/ben-vung/README.md:10`): "Đây là đề xuất: bạn duyệt tầng…". Bảng đã duyệt ngày 24/10/2026; tầng nay ở `src/data/trang.yml`.
+   - Cách làm: sửa chữ trong `kiem_ke.py`, sinh lại `kiem-ke.md`. Thử lại: `python3 plans/ben-vung/kiem_ke.py | diff - plans/ben-vung/kiem-ke.md` rỗng; `python3 plans/lam-lai/anh_xa.py | diff - plans/lam-lai/anh-xa.md` vẫn rỗng.
+3. **Câu "còn chờ" sai khi cả năm mục đã `[x]`:** `plans/lam-lai/README.md:32` ("Chờ bạn. Mục 'khuyên dùng'… ba mục sau trước đợt 2") và `plans/ben-vung/README.md:5` ("Mọi quyết định còn chờ ghi ở mục 'Quyết định'"). Bỏ, hay đổi thành "Năm quyết định đã chốt; đổi thì ghi ngày và lý do ở đây". Thử lại: `grep -n -E "Chờ bạn|còn chờ" plans/lam-lai/README.md plans/ben-vung/README.md` không ra dòng nào.
+
+### Nên sửa
+
+Theo mức quan trọng. Từ 1 đến 5 và 8 nên làm luôn trong nhánh này (đợt 2 chạy theo chúng); 6, 7, 9 làm sau cũng được.
+
+1. **`tools/khoa.mjs:103`: tầng lấy từ trường `tang` của hồ sơ, không đối chiếu `src/data/trang.yml`.** Nay trường ấy quyết định có được bỏ lượt 2 hay không (trước chỉ quyết định chuyện hồ sơ trang khung không có nhận định).
+   - Thử: tạo hồ sơ khi trang ghi `ngoai-vi`, đổi `trang.yml` sang `loi`, điền `luot_2` cho 5 trên 10 nhận định, chạy `khoa`: khóa được. Trang Lõi chỉ qua nửa lượt 2. Sửa tay `tang:` trong hồ sơ cũng qua.
+   - Đổi tầng sau khi tạo hồ sơ chắc sẽ xảy ra (chủ repo đổi được ba chỗ đã chọn).
+   - Cách sửa: `loiHoSo` đọc tầng từ `trang.yml` (qua `goc`) và báo lỗi khi khác `hs.tang`; so với `?? null`, vì hồ sơ `404` có `tang: null` và trang không có trong `trang.yml`. Kiểm thử "mọi mục trong `khoa.json` còn khớp" nhờ đó bắt luôn trang đã khóa mà tầng đổi.
+   - Hồ sơ không có `tang` thì bị chặt như Lõi: đúng.
+2. **`tools/khoa.mjs:118–122` và `chuan-kiem-dinh.md` mục 3: mẫu lượt 2 có `sai` không kéo theo kiểm cả trang.** Thử: 12 nhận định, 5 có lượt 2, một cái `sai` đã ghi cách giải quyết: `loiHoSo` trả `[]`, 7 nhận định còn lại chưa qua lượt 2. Quy tắc mẫu của chính chủ repo là "mẫu sai thì kiểm lại cả lô". Thêm một câu vào mục 3 (mẫu có `sai` hay `khong-chac` thì lượt 2 kiểm nốt cả trang) và một điều kiện vào `loiHoSo`.
+3. **Luật "Lõi không giữ chi tiết mau cũ" mới nằm ở báo cáo này (mục 4), không nằm nơi lô đọc.** Quy tắc 1 chỉ xếp tầng. Trang Lõi giữ lại một dòng như "Sight Reading Factory (trả phí)" hay "tròn 100 tuổi năm 2026" thì khóa một lần rồi cũ dần. Mục 4 liệt kê 15 trang (9 Lõi, 4 Khung, 2 Ngoại vi) kèm gợi ý theo lô; ngoài báo cáo này, chỉ `plans/lam-lai/README.md:42` nhắc tới nó, và lời giao việc lô không trỏ tới. Riêng `lich-su/opera`, vừa vào Lõi, có 5 dòng như vậy (`:61`, `:63`, `:85`, `:87`, `:89` của trang cũ; mục 4 đề nghị bỏ ba, giữ hai có ghi năm). Cách sửa: thêm vào `chuan-kiem-dinh.md` (mục 1 hay 3) "trang Lõi và Tác phẩm không ghi giá, ứng dụng, thiết bị, sự kiện theo năm: bỏ, hay trỏ sang trang Tham chiếu; review kiểm"; thêm vào lời giao việc mẫu "Một lô": đọc mục 4 của `bao-cao/d2-bang-tang.md` cho trang của lô.
+4. **Câu hứa "sẽ có kiểm link định kỳ" (`README.md:47`) chưa có việc nào đỡ**, mà lý do giữ Tác phẩm ở tầng cũ dựa vào nó. `.github/workflows/` chỉ có `test.yml` và `deploy.yml`. Workflow hằng tuần của site cũ (`link-check.yml`: lychee, và `check_audio.py --static --network`) chỉ được nhắc ở `bao-cao/d1-7.md:79` ("đợt 8 hay đợt 9"). `README.md` không giao việc này cho đợt 8, đợt 9 hay D6-0 (đợt 9 chỉ đòi kiểm tra link đạt một lần trên site thật). Ghi việc này vào đợt 8 (cùng workflow `ra_lai`) hay D6-0.
+5. **Hai chỗ của `chuan-kiem-dinh.md`.**
+   - Mục 7 "Chỉ trong ba trường hợp" thiếu "đến hạn rà lại" của Tham chiếu, trong khi mục 3 bảo đến hạn thì rà lại, mỗi lần là một lần kiểm định mới (cần `mo`). Thêm trường hợp 4.
+   - Mục 2 chỉ xếp sách in vào nguồn phụ. Grove Music Online (cần tài khoản, agent không mở được) có ở 42 trang cũ. Xếp cùng loại: nguồn trả phí là nguồn phụ, nhận định cần thêm một nguồn đọc được.
+6. **Kiểm thử còn thiếu; tên trang mẫu dễ lẫn.** Thêm: trang ít hơn 5 nhận định (phải đủ cả số nhận định đang có), hồ sơ lệch tầng (sau mục 1), mẫu có `sai` (sau mục 2). Hai kiểm thử dùng `lich-su/opera` làm trang Đọc thêm (`tests/khoa.test.mjs:207–231`, `tests/giao-dien.test.mjs:60`) trong khi trang ấy nay là Lõi: đổi sang `lich-su/nu-nha-soan-nhac`. Thêm `nhom('nhac-cu/dan-nhac', 'loi') === 'co-dien'` để quy tắc mới có kiểm thử riêng, không chỉ nằm trong bảng 233 dòng.
+7. **Tầng nằm ở ba chỗ.** `trang.yml` (nguồn thật), `kiem_ke.py` (sinh `kiem-ke.md`), `anh_xa.py` (sinh `anh-xa.md`); không kiểm thử nào so cột "Tầng" của `anh-xa.md` với `trang.yml` (kiểm thử giao diện chỉ so cột nhóm). Nay khớp, nhưng lần đổi tầng sau dễ lệch. Thêm một phép so cột tầng vào kiểm thử giao diện, hay cho `kiem_ke.py` đọc `trang.yml`.
+   - `anh_xa.py:118` gõ cứng `"nhac-cu/dan-nhac"`: đổi thành "trang `nhac-cu/` tầng Lõi". Không thì hạ tầng trang ấy mà nó vẫn nằm ở D5-L3, không báo gì (D8-L2 lọc `k not in gan` che đi).
+   - `anh-xa.md:3` (từ `anh_xa.py:152`) còn ghi "Tầng lấy từ kiem-ke.md; bạn đổi tầng ở đó". Đổi tầng nay là sửa `trang.yml` và `kiem_ke.py`, rồi sinh lại hai bảng; ghi vào `AGENTS.md` mục "Dữ liệu".
+8. **"Tóm tắt hồ sơ" cho chủ repo chưa có mẫu.** Quyết định 1 nói chủ repo chỉ đọc tóm tắt. `README.md` mục Quy tắc chung, phần Báo cáo, có "số nhận định, số đã sửa và đã bỏ, chỗ chưa chắc" nhưng không gọi tên một mục. Thêm mục "Tóm tắt hồ sơ" vào lời giao việc lô: mỗi trang có số nhận định theo loại, số chỗ lượt 2 khác lượt 1, số sửa và bỏ (kèm lý do), nguồn chính, chỗ không chắc, và 5 nhận định mẫu.
+9. **Chữ nhỏ còn cũ.**
+   - `plans/lam-lai/README.md:15`, `plans/ben-vung/README.md:11`: "kiểm định hai lượt" thành "mức kiểm định theo tầng".
+   - `chuan-kiem-dinh.md:73`: ví dụ `kiem_mau: "bạn, 3/31 nhận định"`; nên ví dụ 5 nhận định.
+   - `tools/khoa.mjs:88–89`: "đã qua hai lượt".
+   - `AGENTS.md:75` nói "khoảng 5"; mã đòi ít nhất 5 (hay hết, nếu ít hơn).
+   - `AGENTS.md` mục "Chuyển trang từ site cũ" chỉ nói link issue. `tai-lieu-tham-khao.md:60–61` còn `mtuann.github.io/opus-zero/` và hai link giấy phép của repo cũ; trang `/opus-zero/` sẽ chết khi tắt Pages. Mở rộng thành mọi link tới `mtuann/opus-zero` và `mtuann.github.io/opus-zero`.
+   - Bảng "File đã sửa" ở đầu báo cáo này thiếu `AGENTS.md`, `chuan-kiem-dinh.md`, `giao-viec.md`, `tools/khoa.mjs`, `tests/khoa.test.mjs` (commit `f1e5cf7`).
+
+### Nên hỏi lại chủ repo
+
+Chỗ người làm nhánh tự diễn giải, hoặc chủ repo chưa nói. Theo mức quan trọng. Không câu nào chặn D2-L1.
+
+1. **`nhan-dien/nghe-mu` sang Tham chiếu có hạn (làm ở D8-L1).** Đúng chữ của quy tắc 1 (link bản thu). Nhưng 6 trang đang trỏ tới nó: `luyen-tai/index`, `nghe-tien-trinh`, `choi-bang-tai` (D3-L6); `nhan-dien/index` (xếp nó vào "Tháng 2"), `so-sanh-thoi-ky`, `tai-lieu-tham-khao` (D5-L3). Chúng hiện "sắp có" tới đợt 8. Cùng hệ quả với `duong-dai`, `viet-nam` (bước Tháng 6 của lộ trình nghe hiểu, cũng làm ở D8-L1). Hỏi: giữ vậy; hay giữ Lõi và đưa 10 URL bản thu vào dữ liệu có kiểm link; hay Tham chiếu nhưng làm sớm ở D5-L3. Tôi nghiêng về giữ vậy, vì hợp chữ của chủ repo và hậu quả chỉ là "sắp có". Hỏi trước D3-L6.
+2. **Ngưỡng "phần chính" của quy tắc 1.** Chủ repo viết trang có thông tin mau cũ "phải ở Tham chiếu có hạn"; `README.md` thêm "là phần chính" (báo cáo: quá nửa số mục). Theo chữ chặt hơn, ít nhất 15 trang ở mục 4 của báo cáo cũng thành Tham chiếu, và nhiều trang trong đó là Lõi. Cách của người làm hợp lý (Lõi mà gồm 15 trang rà lại thì mất ý nghĩa khóa một lần), với điều kiện có luật "Lõi không giữ chi tiết mau cũ" ("Nên sửa" 3). Xin chủ repo xác nhận.
+3. **Mục "Sau 6 tháng: đi sâu hơn" không tính là lộ trình** (nên `lich-su/nhac-truyen-thong-viet-nam` ở lại Đọc thêm). Trang là một dòng `- [ ]` ở `bat-dau/lo-trinh-nghe.md:60`, cùng dòng với `nhac-ly/am-hoc` (Lõi); `nhan-dien/index` (Lõi) ở dòng 58 cùng mục. Cách xếp đang bất đối xứng: giữ Lõi cho các trang kia, không nâng trang này. Nếu tính cả mục ấy thì đổi một trang (thành Lõi, D5-L1; Ngoại vi còn 8). Hỏi trước D5-L1.
+4. **Cỡ mẫu lượt 2 của Đọc thêm: 5 mỗi trang.** Chủ repo nói "vài nhận định", không nói "mỗi trang". Ước thô theo số câu, 9 trang có khoảng 300 nhận định: mẫu 5 mỗi trang là 45 (15%). Trang lớn bị kiểm rất thưa (`nhac-truyen-thong-viet-nam` khoảng 100 câu: 5%; `nu-nha-soan-nhac` khoảng 65: 8%), trang nhỏ gần hết (`guitar` khoảng 9: 55%). Hỏi: giữ 5 mỗi trang, hay 5 mỗi lô, hay theo tỉ lệ (ví dụ số lớn hơn của 5 và 25% số nhận định). Hỏi trước D8.
+5. **Hai lượt cho Tham chiếu có hạn, Tác phẩm, và hàng Khung "không có nhận định" là suy luận của người làm.** Chủ repo chỉ nói Tham chiếu "ghi ngày kiểm, đến hạn thì rà lại".
+   - Tham chiếu: mỗi lần rà lại là một lần kiểm định mới, tức hai lượt mỗi lần, cho 10 trang mỗi 6 đến 12 tháng. Nặng hơn chữ "rà lại".
+   - Tác phẩm: lý do ghi ở `README.md` ("trang và bản ghi là dữ liệu dùng ở nhiều trang") đúng với bản ghi, chưa đúng với trang bài học. Đây là 79 trang, 44% số chữ, phần tốn nhất. Gợi ý: để nguyên hai lượt, nhưng hỏi lại trước D6-0, khi đã đo được tỉ lệ lệch giữa hai lượt ở Lõi (đợt 2 đến 5).
+   - Khung (34 trang, có blog, Cập nhật): vài trang có câu khẳng định thật (như "Safari chưa hỗ trợ MIDI"); chuẩn ghi "không có nhận định".
+6. **Nguồn nhạc lý.** Chủ repo viết "ví dụ Open Music Theory"; `chuan-kiem-dinh.md` mục 2 ghi cứng "nguồn chính là Open Music Theory… khi các sách gọi tên hay định nghĩa khác nhau thì theo nguồn này". Hỏi: Open Music Theory là nguồn duy nhất, hay các nguồn miễn phí cùng loại (musictheory.net, 37 trang cũ dẫn) ngang bậc? Luật "theo nguồn này" có đúng ý không (Open Music Theory là giáo trình Mỹ, ABRSM là Anh, tên gọi có chỗ khác nhau)? Thêm: `thuat-ngu.yml` khóa ở D3-L5, nhưng 32 bài của D3-L1 đến L4 khóa trước và dùng thuật ngữ ấy; nếu D3-L5 đổi thuật ngữ thì phải mở khóa nhiều bài. Có chốt danh sách thuật ngữ trước D3-L1 không? Hỏi trước D3-L1.
+
+### Kết luận
+
+**Chưa gộp.** Ba quyết định ghi đúng ý chủ repo ở `README.md`, `chuan-kiem-dinh.md` và `AGENTS.md`, trừ các chỗ tự diễn giải ở "Nên hỏi lại". Build và 82 kiểm thử đạt; hai script sinh lại đúng hai bảng; tầng, ngày rà lại và nhóm menu của 233 trang khớp; bằng chứng ở mục 1 của báo cáo đúng. Còn ba chỗ chữ và số phải sửa (không đụng mã), rồi gộp được. Nên làm luôn "Nên sửa" 1 và 2 (mã `tools/khoa.mjs`, vài dòng và một kiểm thử mỗi chỗ), vì chúng nới cổng kiểm định ở tầng Đọc thêm. Hai tài liệu Claude Docs (`giao-viec.md` dòng 8 đến 11) vẫn ghi số cũ: cập nhật sau khi gộp.
