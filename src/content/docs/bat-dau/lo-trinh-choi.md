@@ -43,7 +43,7 @@ Thời gian chỉ là gợi ý. Đi chậm hơn một nửa vẫn hoàn toàn �
 
 | Bên đàn | Đọc nhạc và nhạc lý | Tai và nghe |
 |---|---|---|
-| 10 bài đầu tiên, bài 6–7 (Amazing Grace, Greensleeves). [Gam](/opus/piano/gam/) Đô trưởng một quãng tám, tay riêng rồi hai tay | [Bài 6–7](/opus/nhac-ly/06-gam-truong/): gam trưởng, gam thứ | [Nghe quãng](/opus/luyen-tai/nghe-quang/): quãng 2, 3, 5, 8. Nghe [Beethoven: Sonata Ánh trăng](/opus/nghe-nhac/beethoven-moonlight/) |
+| 10 bài đầu tiên, bài 6–7 (Amazing Grace, Greensleeves). [Gam](/opus/piano/gam/) Đô trưởng một quãng tám, tay riêng rồi hai tay | [Bài 6–7](/opus/nhac-ly/06-gam-truong/): gam trưởng, gam thứ | [Nghe quãng](/opus/luyen-tai/nghe-quang/): quãng 3 trưởng, 5 đúng, 8 đúng. Nghe [Beethoven: Sonata Ánh trăng](/opus/nghe-nhac/beethoven-moonlight/) |
 
 - [ ] Gam Đô trưởng hai tay, một quãng tám, nốt móc đơn ở ♩ = 60
 - [ ] Thu âm bài 6 hoặc bài 7, nghe lại và ghi hai điều cần sửa
@@ -146,7 +146,7 @@ Cuối năm đầu, bạn đã ở khoảng chặng 2 của [lộ trình](/opus/
 
 ## Năm thứ hai
 
-- Bên đàn: từ chặng 2 sang chặng 3 của [lộ trình piano](/opus/piano/lo-trinh/), với [Sonatina Sol trưởng](/opus/piano/tac-pham/beethoven-sonatina-sol/), [Clementi: Sonatina Op. 36 số 1](/opus/piano/tac-pham/clementi-sonatina/), [Burgmüller: Arabesque](/opus/piano/tac-pham/burgmuller-arabesque/), [Bach: Prelude nhỏ BWV 939](/opus/piano/tac-pham/bach-prelude-bwv939/), [Tchaikovsky: Cầu nguyện buổi sáng](/opus/piano/tac-pham/tchaikovsky-cau-nguyen-buoi-sang/) và [Chopin: Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/). Cuối năm, nếu muốn, chọn một "bài với" của chặng 4 như [Gymnopédie số 1](/opus/piano/tac-pham/satie-gymnopedie/) hoặc [Für Elise](/opus/piano/tac-pham/fur-elise/) trọn bài. Thêm bài từ [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
+- Bên đàn: từ chặng 2 sang chặng 3 của [lộ trình piano](/opus/piano/lo-trinh/), với [các bài học của chặng 3](/opus/piano/lo-trinh/chang-3/). Cuối năm, nếu muốn, chọn một "bài với" của chặng 4 như [Gymnopédie số 1](/opus/piano/tac-pham/satie-gymnopedie/) hoặc [Für Elise](/opus/piano/tac-pham/fur-elise/) trọn bài. Thêm bài từ [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
 - Nhạc lý và nghe: [nhánh nhạc lý](/opus/bat-dau/lo-trinh-nghe/#nhanh-nhac-ly) từ bài 16, rồi các bài trung cấp; nghe theo [lộ trình nghe hiểu](/opus/bat-dau/lo-trinh-nghe/).
 - Mục tiêu bên ngoài: vài buổi học với thầy để chỉnh tư thế, hoặc một kỳ thi cấp ([Học với thầy và thi cấp](/opus/piano/thay-va-thi/)).
 

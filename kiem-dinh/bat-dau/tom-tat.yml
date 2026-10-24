@@ -1,0 +1,665 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa bat-dau/tom-tat
+trang: src/content/docs/bat-dau/tom-tat.md
+nguon_cu: ../opus-zero/docs/bat-dau/tom-tat.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-24
+    nhanh: moi/d2-l1
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (D2-L1 lượt 1, phần C)"
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: >-
+  Trang tóm tắt nhạc lý cơ bản (14 ô, hai mặt A4). Nguồn chính: Open Music Theory (OMT), mở từng chương (tải bằng curl,
+  ngày 24/10/2026; WebFetch bị trang trả 403). Thuật ngữ tiếng Việt đối chiếu src/data/thuat-ngu.yml (chưa khóa) và các
+  bài nhạc lý cũ cùng chủ đề (../opus-zero/docs/nhac-ly/03, 04, 05, 06, 07, 08, 12): không lệch. Sửa cấu trúc trước lượt 1
+  (agent chính, commit a745865): 14 tiêu đề "###" thành "##", vì trang không có h2 nào (axe heading-order); chữ tiêu đề và
+  id giữ nguyên. Sửa chữ ở lượt 1: n24 (quy tắc số chỉ nhịp, thêm trường hợp 6/8), n30 (hạ át âm), n36 (hình vòng quãng
+  năm: d♯/e♭), n51 (bảng chức năng: vi). Sửa không đổi chữ: chữ "Đô giữa (C4)" dưới hình bàn phím đổi fill="#222" thành
+  fill="currentColor" để đọc được ở chế độ tối (nằm ngoài phím đàn, trên nền trang). Bố cục in hai mặt A4 (n3) tùy CSS
+  của agent chính (lớp oz-sheet, oz-sheet-page, oz-cell, oz-fig, oz-fig-circle): agent chính kiểm sau khi build. Không
+  tính là nhận định: câu mở đầu "Toàn bộ kiến thức đọc nhạc và nhạc lý cơ bản" (nói phạm vi của trang).
+nguon:
+  - id: omt-notation
+    bac: 2
+    ten: "Open Music Theory, Notation of Notes, Clefs, and Ledger Lines"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/notation-of-notes-clefs-and-ledger-lines/
+  - id: omt-clefs
+    bac: 2
+    ten: "Open Music Theory, Reading Clefs"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/clefs/
+  - id: omt-keyboard
+    bac: 2
+    ten: "Open Music Theory, The Keyboard and the Grand Staff"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/the-keyboard-and-grand-staff/
+  - id: omt-steps
+    bac: 2
+    ten: "Open Music Theory, Half Steps, Whole Steps, and Accidentals"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/half-and-whole-steps/
+  - id: omt-aspn
+    bac: 2
+    ten: "Open Music Theory, American Standard Pitch Notation (ASPN)"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/aspn/
+  - id: omt-rhythm
+    bac: 2
+    ten: "Open Music Theory, Notating Rhythm"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/notating-rhythm/
+  - id: omt-simple
+    bac: 2
+    ten: "Open Music Theory, Simple Meter and Time Signatures"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/simple-meter-and-time-signatures/
+  - id: omt-compound
+    bac: 2
+    ten: "Open Music Theory, Compound Meter and Time Signatures"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/compound-meters-and-time-signatures/
+  - id: omt-major
+    bac: 2
+    ten: "Open Music Theory, Major Scales, Scale Degrees, and Key Signatures (cả mục The Circle of Fifths và bảng thuật ngữ)"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/major-scales/
+  - id: omt-minor
+    bac: 2
+    ten: "Open Music Theory, Minor Scales, Scale Degrees, and Key Signatures"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/
+  - id: omt-intervals
+    bac: 2
+    ten: "Open Music Theory, Intervals (cả bảng số nửa cung ở mục Intervallic Enharmonic Equivalence)"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/intervals/
+  - id: omt-triads
+    bac: 2
+    ten: "Open Music Theory, Triads"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/triads/
+  - id: omt-seventh
+    bac: 2
+    ten: "Open Music Theory, Seventh Chords"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/seventh-chords/
+  - id: omt-roman
+    bac: 2
+    ten: "Open Music Theory, Roman Numerals"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/roman-numerals/
+  - id: omt-harmony
+    bac: 2
+    ten: "Open Music Theory, Introduction to Harmony, Cadences, and Phrase Endings"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/
+  - id: omt-plagal
+    bac: 2
+    ten: "Open Music Theory, Plagal Motion as a Form of Prolongation"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/plagal-motion/
+  - id: omt-la-bass
+    bac: 2
+    ten: "Open Music Theory, La (6̂) in the Bass at Beginnings, Middles, and Endings (mục Deceptive motion)"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/la-in-the-bass/
+  - id: omt-other
+    bac: 2
+    ten: "Open Music Theory, Other Aspects of Notation (cường độ, cách diễn tấu, tốc độ, dấu chỉ đường)"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/other-aspects-of-notation/
+  - id: mmt-accidentals
+    bac: 2
+    ten: "MyMusicTheory (Victoria Williams), Accidentals, mục Bar lines and Accidentals: khóa nhạc lý theo các cấp lý thuyết ABRSM; chương Half Steps, Whole Steps, and Accidentals của OMT dẫn tới bài này"
+    link: https://mymusictheory.com/pitch/accidentals/
+  - id: mt21c-accidentals
+    bac: 2
+    ten: "Robert Hutchinson, Music Theory for the 21st-Century Classroom (giáo trình mở, University of Puget Sound), 1.4 Accidentals"
+    link: https://musictheory.pugetsound.edu/mt21c/Accidentals.html
+  - id: mt21c-function
+    bac: 2
+    ten: "Robert Hutchinson, Music Theory for the 21st-Century Classroom, 9.4 Harmonic Function"
+    link: https://musictheory.pugetsound.edu/mt21c/HarmonicFunction.html
+  - id: lt-stress
+    bac: 2
+    ten: "Equipping the Musical Ear (Sierra College, giáo trình mở trên LibreTexts), 19.2 Natural Stress in Meter"
+    link: https://human.libretexts.org/Courses/Sierra_College/Equipping_the_Musical_Ear/19%3A_Syncopated_Subdivisions/19.02%3A_Natural_Stress_in_Meter
+  - id: cup-mckee
+    bac: 2
+    ten: "Ryan McClelland, bài điểm sách Eric McKee, Decorum of the Minuet, Delirium of the Waltz: A Study of Dance-Music Relations in 3/4 Time (Indiana University Press, 2012), Nineteenth-Century Music Review 11/1 (Cambridge University Press, 2014)"
+    link: https://www.cambridge.org/core/journals/nineteenth-century-music-review/article/eric-mckee-decorum-of-the-minuet-delirium-of-the-waltz-a-study-of-dancemusic-relations-in-34-time-bloomington-indiana-university-press-2012-vii-262-pp-4500/38869606B774B5E9EA02D59EF278A867
+  - id: site-in
+    bac: 2
+    ten: "Mã nguồn site mới: kiểu in của Starlight (node_modules/@astrojs/starlight/dist/style/print.css; lớp print:hidden ở components/PageFrame.astro, Header.astro, TwoColumnContent.astro, Pagination.astro, MobileMenuToggle.astro) và src/styles/thanh-phan.css (@media print)"
+    link: node_modules/@astrojs/starlight/dist/style/print.css
+  - id: site-khuong
+    bac: 2
+    ten: "Mã nguồn site mới: src/scripts/tai.js (beforeprint: khởi tạo mọi khối còn chờ, vẽ đồng bộ khi module đã tải; tải sẵn abcjs lúc rảnh) và src/styles/thanh-phan.css (@media print: khuông chưa vẽ in dòng nhắc)"
+    link: src/scripts/tai.js
+nhan_dinh:
+  - id: n1
+    cau: "Bấm Ctrl+P (hoặc Cmd+P), chọn khổ A4."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: "Hướng dẫn thao tác in; không trái trang lõi nào. Trang cũ ../opus-zero/docs/bat-dau/tom-tat.md ghi giống hệt."
+  - id: n2
+    cau: "Menu và nút bấm tự ẩn khi in."
+    loai: quy-tac
+    nguon:
+      - site-in
+    ket_qua: dung
+    ghi_chu: 'Nhận định về site mới. Starlight đặt lớp print:hidden (print.css: ".print\:hidden { display: none; }") cho thanh menu bên (PageFrame.astro: nav.sidebar), ô tìm kiếm và nhóm nút bên phải thanh trên (Header.astro), cột "Trên trang này" cả bản điện thoại (TwoColumnContent.astro: aside.right-sidebar-container), nút Trước, Tiếp (Pagination.astro), nút mở menu (MobileMenuToggle.astro). src/styles/thanh-phan.css (@media print) ẩn hàng nút và trình phát của khuông nhạc (.oz-abc-tools, .abc-audio). Thanh trên vẫn in tên site và logo.'
+  - id: n3
+    cau: "Toàn bộ kiến thức đọc nhạc và nhạc lý cơ bản trên hai mặt giấy A4: mặt 1 là đọc nhạc, mặt 2 là nhạc lý."
+    loai: quy-tac
+    nguon:
+      - site-in
+    ket_qua: dung
+    ghi_chu: "Nhận định về bản in của site mới, ĐÚNG CÓ ĐIỀU KIỆN: trang chia hai khối oz-sheet-page (ô 1–7 đọc nhạc, ô 8–14 nhạc lý); site cũ in mỗi khối một mặt A4 nhờ CSS ../opus-zero/docs/assets/css/opus.css dòng 366–394 (@media print: .oz-sheet-page hai cột, cỡ chữ 8.6pt; .oz-sheet-page + .oz-sheet-page { break-before: page }; ô inline-block không bị chia đôi). Agent chính thêm CSS tương đương (tiêu đề ô nay là h2 trong .sl-heading-wrapper của Starlight, không còn h3) rồi kiểm bằng in ra PDF khổ A4: đúng hai trang, mỗi khối một trang. Nếu không vừa thì sửa CSS hay câu này."
+  - id: n4
+    cau: "Nên chờ các khuông nhạc hiện đủ trước khi in."
+    loai: khuyen-tap
+    nguon:
+      - site-khuong
+    ket_qua: khong-can-nguon
+    ghi_chu: "Vẫn đúng với site mới: khuông vẽ khi tới gần màn hình; trước khi in, src/scripts/tai.js khởi tạo mọi khối còn chờ và vẽ đồng bộ nếu abcjs đã tải (tải sẵn lúc rảnh, Safari sau 3 giây); nếu chưa tải, chỗ khuông in dòng 'Khuông nhạc chưa vẽ xong: đợi vài giây sau khi mở trang rồi in lại.' (thanh-phan.css). Đợi vài giây trước khi in là đủ."
+  - id: n5
+    cau: "Hình bàn phím từ Đô3 (C3) đến Đô5 (C5): 15 phím trắng ghi tên hai hệ, 10 phím đen theo nhóm hai và ba, Đô giữa C4 được tô màu, bốn ngoặc ½ đánh dấu Mi–Fa và Si–Đô."
+    loai: dinh-nghia
+    nguon:
+      - omt-keyboard
+      - omt-steps
+      - omt-aspn
+    ket_qua: dung
+    ghi_chu: 'Đã đọc từng phần tử SVG: phím trắng x=1…309 (rộng 22) ghi Đô C3, Rê D, Mi E, Fa F, Sol G, La A, Si B, Đô C4 (tô #f3e3b8), …, Đô C5; phím đen ở x=16.5, 38.5 | 82.5, 104.5, 126.5 | 170.5, 192.5 | 236.5, 258.5, 280.5: nhóm 2 rồi 3, không có phím đen giữa Mi–Fa và Si–Đô; ngoặc ½ nối tâm Mi–Fa (56–78, 210–232) và Si–Đô (144–166, 298–320); chữ "Đô giữa (C4)" dưới phím Đô thứ hai. OMT The Keyboard and the Grand Staff: "The black keys are grouped into sets of either three or two"; OMT ASPN: "Middle C is C4 in ASPN"; OMT Half Steps: "Two pairs of white keys—E/F and B/C—do not have black keys in between them ... E–F and B–C are both half steps." Sửa không đổi chữ: chữ "Đô giữa (C4)" (nằm trên nền trang) đổi fill="#222" thành currentColor để đọc được ở chế độ tối.'
+  - id: n6
+    cau: "Bảy tên nốt lặp lại: Đô Rê Mi Fa Sol La Si = C D E F G A B."
+    loai: dinh-nghia
+    nguon:
+      - omt-keyboard
+      - omt-major
+    ket_qua: dung
+    ghi_chu: 'OMT The Keyboard and the Grand Staff: "pitches in Western musical notation are designated by the letters A, B, C, D, E, F, and G, repeating in a loop". Tên Đô Rê Mi… là solfège cố định (fixed do), bảng thuật ngữ của OMT Major Scales: "fixed do, where do is always the pitch class C". Cách viết tiếng Việt (Đô, Rê, Mi, Fa, Sol, La, Si) theo quy ước của site (bat-dau/index, mục Ký hiệu; bài nhạc lý 1 cũ).'
+  - id: n7
+    cau: "Đô nằm bên trái nhóm 2 phím đen."
+    loai: dinh-nghia
+    nguon:
+      - omt-keyboard
+    ket_qua: dung
+    ghi_chu: 'OMT: "The white note C is to the immediate left of the two-note black key pattern".'
+  - id: n8
+    cau: "Phím đen mang hai tên (Đô♯ = Rê♭)."
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+    ket_qua: dung
+    ghi_chu: 'OMT Half Steps, Whole Steps, and Accidentals, Example 6: "Each black key note has both a sharp and a flat name"; "C♯ and D♭ are enharmonically equivalent".'
+  - id: n9
+    cau: "Nửa cung tự nhiên: Mi–Fa và Si–Đô (không có phím đen xen giữa)."
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+    ket_qua: dung
+    ghi_chu: 'OMT: "Two pairs of white keys—E/F and B/C—do not have black keys in between them (see Example 1). This is because E–F and B–C are both half steps."'
+  - id: n10
+    cau: "Khóa Sol: các dòng, đếm từ dưới lên, là Mi Sol Si Rê Fa (E G B D F); các khe là Fa La Đô Mi (F A C E)."
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+    ket_qua: dung
+    ghi_chu: 'Chữ dưới khuông của khối abc 1. OMT Reading Clefs: "The letter names of the lines are labeled. Bottom to top these are: E, G, B, D, and F"; "The letter names of the spaces are labeled. From bottom to top these are: F, A, C, and E."'
+  - id: n11
+    cau: "Nét xoắn của khóa Sol ôm dòng 2 = Sol (G4)."
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+      - omt-aspn
+    ket_qua: dung
+    ghi_chu: 'OMT Reading Clefs: "the treble clef wraps around the G line (the second line from the bottom). For this reason, it is sometimes called the “G clef.”" OMT ASPN, Example 2: các nốt C4…B4 viết trên khóa Sol, nên Sol ở dòng 2 là G4 (nằm trên C4).'
+  - id: n12
+    cau: "Khóa Fa: các dòng, đếm từ dưới lên, là Sol Si Rê Fa La (G B D F A); các khe là La Đô Mi Sol (A C E G)."
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+    ket_qua: dung
+    ghi_chu: 'Chữ dưới khuông của khối abc 2. OMT Reading Clefs: "Bottom to top these are: G, B, D, F, A"; spaces "(bottom to top): A, C, E, and G".'
+  - id: n13
+    cau: "Hai chấm của khóa Fa kẹp dòng 4 = Fa (F3)."
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+      - omt-notation
+      - omt-aspn
+    ket_qua: dung
+    ghi_chu: 'OMT Reading Clefs: "the dot of the bass clef begins on the F line (the second line from the top)". OMT Notation of Notes: "Place two dots to the right of the backward C, centered respectively in the top two spaces of the staff" (hai khe kẹp dòng thứ hai từ trên xuống, tức dòng 4). F ở dòng ấy dưới Đô giữa C4 nên thuộc quãng tám 3 (OMT ASPN: mỗi quãng tám bắt đầu từ C).'
+  - id: n14
+    cau: "Đô4 (Đô giữa, C4) nằm trên một dòng kẻ phụ: ngay dưới khuông khóa Sol, ngay trên khuông khóa Fa."
+    loai: dinh-nghia
+    nguon:
+      - omt-keyboard
+      - omt-aspn
+    ket_qua: dung
+    ghi_chu: 'OMT The Keyboard and the Grand Staff (định nghĩa middle C): "C₄; the C near the middle of the piano keyboard, written on the first ledger line below the treble clef staff or the first ledger line above the bass clef staff." Khối abc 3 viết C4 ở cả hai khuông.'
+  - id: n15
+    cau: "Khi nốt đen = 1 phách: nốt tròn 4 phách, nốt trắng 2, nốt đen 1, nốt móc đơn ½, nốt móc kép ¼, nốt đen chấm dôi 1½; dấu lặng cùng tên dài bằng nốt tương ứng."
+    loai: dinh-nghia
+    nguon:
+      - omt-rhythm
+    ket_qua: dung
+    ghi_chu: 'Chữ dưới khuông của khối abc 4 và 5 cùng câu "Đơn = nốt móc đơn, kép = nốt móc kép, đen. = nốt đen chấm dôi. Số phách tính khi nốt đen = 1 phách." OMT Notating Rhythm: "a whole note divides into two half notes, four quarter notes, eight eighth notes, and so on"; "Each hierarchical note value has a corresponding rest value"; "a dotted quarter note would be equivalent to three eighth notes". Tên tiếng Việt (tròn, trắng, đen, móc đơn, móc kép) như bài nhạc lý 3 cũ (bảng hình nốt: whole, half, quarter, eighth, sixteenth note).'
+  - id: n16
+    cau: "Chấm dôi thêm một nửa độ dài."
+    loai: quy-tac
+    nguon:
+      - omt-rhythm
+    ket_qua: dung
+    ghi_chu: 'OMT: "A dot increases the duration of a note by half."'
+  - id: n17
+    cau: "Dấu nối cộng hai nốt cùng cao độ."
+    loai: quy-tac
+    nguon:
+      - omt-rhythm
+    ket_qua: dung
+    ghi_chu: 'OMT: "A tie is a curved line that connects two or more notes with the same pitch ... ties are used to combine the durations of multiple notes."'
+  - id: n18
+    cau: "Dấu thăng nâng nửa cung, dấu giáng hạ nửa cung, dấu bình hủy dấu hóa trước đó."
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+    ket_qua: dung
+    ghi_chu: 'Chữ dưới khuông của khối abc 6 ("thăng giáng bình", "+½ −½ hủy"). OMT: "A sharp raises a note by a half step, while a flat lowers a note by a half step. A natural cancels a previous accidental."'
+  - id: n19
+    cau: "Dấu hóa bất thường có hiệu lực đến hết ô nhịp."
+    loai: quy-tac
+    nguon:
+      - mmt-accidentals
+      - mt21c-accidentals
+    ket_qua: dung
+    ghi_chu: 'Các chương OMT đã đọc không nêu quy tắc này. MyMusicTheory: "When an accidental has been written, all the other notes which are the same pitch, (or position on the staff), are also affected by the accidental, but only until a bar line is drawn"; MT21C: "The natural symbol—♮—cancels out any other accidentals that may have occurred earlier in a measure". Câu tóm tắt không nói "cho nốt cùng vị trí trên khuông"; bài 5 cũ nói đủ ("mọi nốt cùng cao độ từ đó đến hết ô nhịp"). Không sai.'
+  - id: n20
+    cau: "2/4: 2 phách nốt đen, MẠNH–nhẹ."
+    loai: dinh-nghia
+    nguon:
+      - omt-simple
+      - lt-stress
+    ket_qua: dung
+    ghi_chu: 'OMT Simple Meter: "In simple meters, the top number of a time signature represents the number of beats in each measure, while the bottom number represents the beat unit." LibreTexts 19.2: "In a simple duple meter, the natural stress or accent is a strong beat on beat one and a weaker beat on beat two."'
+  - id: n21
+    cau: "3/4: 3 phách, MẠNH–nhẹ–nhẹ (valse, minuet)."
+    loai: dinh-nghia
+    nguon:
+      - omt-simple
+      - lt-stress
+      - cup-mckee
+    ket_qua: dung
+    ghi_chu: 'LibreTexts 19.2: "In a simple triple meter, the natural stress or accent is a strong beat on beat one and weak beats on beats two and three." OMT Simple Meter: "Wolfgang Amadeus Mozart''s “Minuet in F major,” K.2 (1774) is in a simple triple meter". Sách của Eric McKee (Indiana University Press, 2012), tên đầy đủ trên trang điểm sách của Cambridge: "Decorum of the Minuet, Delirium of the Waltz: A Study of Dance-Music Relations in 3/4 Time".'
+  - id: n22
+    cau: "4/4 (C): 4 phách, MẠNH–nhẹ–vừa–nhẹ."
+    loai: dinh-nghia
+    nguon:
+      - omt-simple
+      - lt-stress
+    ket_qua: dung
+    ghi_chu: 'OMT: "Common time is the equivalent of 4/4 (simple quadruple—four beats per measure)" (ký hiệu 𝄴, chữ C). LibreTexts 19.2: "In a simple quadruple meter, the natural stress or accent is a strong beat on beat one and a secondary strong beat on beat three (although beat three is not as strong as beat one)."'
+  - id: n23
+    cau: "6/8: 2 phách lớn, mỗi phách chia 3."
+    loai: dinh-nghia
+    nguon:
+      - omt-compound
+    ket_qua: dung
+    ghi_chu: 'OMT Compound Meter: "Compound meters are meters in which the beat divides into three"; với 6/8 "each measure has two beats (6÷3=2), indicating duple meter"; "If 8 is the bottom number, the beat is a dotted quarter note (equivalent to three eighth notes)."'
+  - id: n24
+    cau: "Số trên: số phách mỗi ô. Số dưới: hình nốt làm 1 phách (4 = đen). Riêng 6/8: đếm 6 nốt móc đơn (8 = móc đơn), gộp ba nốt thành một phách lớn."
+    loai: quy-tac
+    nguon:
+      - omt-simple
+      - omt-compound
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Số trên: số phách mỗi ô. Số dưới: hình nốt làm 1 phách (4 = đen, 8 = móc đơn)." Đúng với nhịp đơn, nhưng cùng ô có 6/8 nên đọc theo câu cũ thì 6/8 có 6 phách móc đơn, trái dòng ngay trên ("2 phách lớn"). OMT Simple Meter: "In simple meters, the top number ... represents the number of beats in each measure, while the bottom number represents the beat unit." OMT Compound Meter: "The top number of a time signature in compound meter expresses the number of divisions in a measure, while the bottom number expresses the division unit". Câu mới thêm trường hợp 6/8, dùng chữ như bài nhạc lý 4 cũ ("6 nốt móc đơn, nhóm thành 2 phách").'
+  - id: n25
+    cau: "Gam Đô trưởng: Đô Rê Mi Fa Sol La Si Đô, bậc I đến VII rồi I."
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+    ket_qua: dung
+    ghi_chu: "Chữ dưới khuông của khối abc 7. OMT Major Scales: bảy bậc của gam trưởng đánh số 1–7, bậc 8 là chủ âm lặp lại; khuông C4–C5 không có dấu hóa."
+  - id: n26
+    cau: "Gam trưởng: C C N C C C N (C = cung, N = nửa cung)."
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+    ket_qua: dung
+    ghi_chu: 'OMT: "A major scale is an ordered collection of half- (abbreviated H) and whole steps (abbreviated W) in the following ascending succession: W-W-H-W-W-W-H."'
+  - id: n27
+    cau: "Gam thứ tự nhiên: C N C C N C C."
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: 'OMT Minor Scales: "Natural minor: W‑H‑W‑W‑H‑W‑W (ascending)".'
+  - id: n28
+    cau: "Gam thứ hòa âm: như thứ tự nhiên, nâng bậc 7."
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: 'OMT: "Harmonic minor: W‑H‑W‑W‑H‑3Hs‑H (ascending)"; "In harmonic minor (Example 7b), ti (↑7̂) replaces te (7̂)."'
+  - id: n29
+    cau: "Gam thứ giai điệu: đi lên nâng bậc 6 và 7."
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: 'OMT: "In the ascending form of melodic minor, le–te (6̂–7̂) becomes la-ti (↑6̂–↑7̂)"; "In the descending form of melodic minor, natural minor is restored" (câu tóm tắt chỉ nói chiều đi lên, không sai).'
+  - id: n30
+    cau: "Bậc I chủ âm · V át âm · IV hạ át âm · VII cảm âm."
+    loai: ten
+    nguon:
+      - omt-major
+    ket_qua: da-sua
+    ghi_chu: 'OMT Major Scales: "Each note of a major scale is also named with scale-degree names: tonic, supertonic, mediant, subdominant, dominant, submediant, and leading tone"; "the leading tone is a half step below the tonic". Tên tiếng Việt theo src/data/thuat-ngu.yml: tonic = Chủ âm (bậc I), dominant = Át âm (bậc V), subdominant = Hạ át âm (bậc IV), leading tone = Cảm âm (bậc VII). Câu cũ ghi "IV hạ át", thiếu chữ "âm" của tên bậc (chữ "hạ át" là tên chức năng ở ô 13); sửa cho khớp bảng thuật ngữ.'
+  - id: n31
+    cau: "Bảy dấu thăng, luôn theo thứ tự Fa Đô Sol Rê La Mi Si."
+    loai: quy-tac
+    nguon:
+      - omt-major
+    ket_qua: dung
+    ghi_chu: 'OMT: "The order of sharps is always F, C, G, D, A, E, B." Khối abc 8 (K:C#): abcjs dựng hóa biểu thăng f c g d A e B, đúng thứ tự.'
+  - id: n32
+    cau: "Bảy dấu giáng, theo thứ tự ngược lại Si Mi La Rê Sol Đô Fa."
+    loai: quy-tac
+    nguon:
+      - omt-major
+    ket_qua: dung
+    ghi_chu: 'OMT: "The order of the flats is the opposite of the order of the sharps: B, E, A, D, G, C, F." Khối abc 9 (K:Cb): abcjs dựng hóa biểu giáng B e A d G c F, đúng thứ tự.'
+  - id: n33
+    cau: "Thăng: dấu cuối + nửa cung = giọng trưởng."
+    loai: quy-tac
+    nguon:
+      - omt-major
+    ket_qua: dung
+    ghi_chu: 'OMT: "In sharp key signatures, the last sharp is a half step below the tonic (the first note of a scale)."'
+  - id: n34
+    cau: "Giáng: dấu áp chót = giọng trưởng (riêng 1♭ = Fa trưởng)."
+    loai: quy-tac
+    nguon:
+      - omt-major
+    ket_qua: dung
+    ghi_chu: 'OMT: "In flat key signatures, the second-to-last flat is the tonic"; "F major, which has one flat: B♭" (một trong hai hóa biểu phải nhớ, cùng với Đô trưởng).'
+  - id: n35
+    cau: "Giọng thứ song song: từ chủ âm trưởng xuống 3 nửa cung."
+    loai: quy-tac
+    nguon:
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: 'OMT Minor Scales: "Each major key signature has a corresponding relative minor key signature whose tonic is three half steps below the relative major''s tonic." "Giọng thứ song song" của site là relative minor (chung hóa biểu), như bài nhạc lý 7 cũ ("Giọng thứ song song (relative minor) dùng chung hóa biểu"); parallel minor là "giọng thứ cùng tên".'
+  - id: n36
+    cau: "Hình vòng quãng năm: vòng ngoài là 12 giọng trưởng C, G, D, A, E, B, F♯/G♭, D♭, A♭, E♭, B♭, F, kèm số dấu 0, 1♯ … 5♯, 6♯/6♭, 5♭ … 1♭; vòng trong là giọng thứ song song a, e, b, f♯, c♯, g♯, d♯/e♭, b♭, f, c, g, d."
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+      - omt-minor
+    ket_qua: da-sua
+    ghi_chu: 'Đã đọc từng chữ trong SVG: mỗi giọng trưởng đúng số dấu, mỗi giọng thứ ở vòng trong là giọng thứ song song của giọng trưởng cùng hướng (cách 3 nửa cung, OMT Minor Scales). OMT Major Scales, The Circle of Fifths: "If you continue clockwise, sharp key signatures appear, each subsequent key signature adding one more sharp. If you continue counter-clockwise from C major, flat key signatures appear". Sửa: ô dưới cùng ghi "F♯/G♭" và "6♯/6♭" mà vòng trong ghi "e♭/d♯", thứ tự ngược, dễ ghép F♯ với e♭ (sai: F♯ trưởng đi với d♯ thứ, G♭ trưởng với e♭ thứ); đổi thành "d♯/e♭". Hình chỉ ghi một cặp đồng âm (6♯/6♭); hai cặp 5♯/7♭, 7♯/5♭ không ghi: giản lược, không sai.'
+  - id: n37
+    cau: "Theo chiều kim đồng hồ: lên quãng 5, thêm một ♯. Ngược chiều: thêm một ♭."
+    loai: quy-tac
+    nguon:
+      - omt-major
+    ket_qua: dung
+    ghi_chu: 'OMT: "The circle of fifths is so named because each key signature is a fifth away from the ones on either side of it"; "If you continue clockwise, sharp key signatures appear, each subsequent key signature adding one more sharp. If you continue counter-clockwise from C major, flat key signatures appear, each subsequent key signature adding one more flat." Câu tóm tắt nói như OMT (tính từ Đô trưởng); bài 8 cũ ghi giống.'
+  - id: n38
+    cau: "Hai giọng cạnh nhau khác nhau một dấu hóa."
+    loai: quy-tac
+    nguon:
+      - omt-major
+    ket_qua: dung
+    ghi_chu: 'Suy ra trực tiếp từ OMT (mỗi bước "adding one more sharp" hay "one more flat", hóa biểu xếp "in order of number of accidentals"). Ở đáy vòng, F♯ (6♯) cạnh B (5♯) và G♭ (6♭) cạnh D♭ (5♭): vẫn khác một dấu.'
+  - id: n39
+    cau: "Quãng 2 thứ / 2 trưởng: 1 / 2 nửa cung; từ Đô là Rê♭ / Rê."
+    loai: dinh-nghia
+    nguon:
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "OMT Intervals, bảng số nửa cung (Example 16): 1 nửa cung = mi2, 2 nửa cung = ma2. Đô–Rê♭ là 2 thứ, Đô–Rê là 2 trưởng (Rê thuộc gam Đô trưởng)."
+  - id: n40
+    cau: "Quãng 3 thứ / 3 trưởng: 3 / 4 nửa cung; từ Đô là Mi♭ / Mi."
+    loai: dinh-nghia
+    nguon:
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "OMT, bảng số nửa cung: 3 = mi3, 4 = ma3."
+  - id: n41
+    cau: "Quãng 4 đúng: 5 nửa cung; từ Đô là Fa."
+    loai: dinh-nghia
+    nguon:
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "OMT, bảng số nửa cung: 5 = P4."
+  - id: n42
+    cau: "Quãng 4 tăng = 5 giảm: 6 nửa cung; từ Đô là Fa♯ = Sol♭."
+    loai: dinh-nghia
+    nguon:
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: 'OMT, bảng số nửa cung: 6 = A4 và d5 (đồng âm). OMT: "a diminished fifth (also called a tritone)".'
+  - id: n43
+    cau: "Quãng 5 đúng: 7 nửa cung; từ Đô là Sol."
+    loai: dinh-nghia
+    nguon:
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "OMT, bảng số nửa cung: 7 = P5."
+  - id: n44
+    cau: "Quãng 6 thứ / 6 trưởng: 8 / 9 nửa cung; từ Đô là La♭ / La."
+    loai: dinh-nghia
+    nguon:
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "OMT, bảng số nửa cung: 8 = mi6, 9 = ma6."
+  - id: n45
+    cau: "Quãng 7 thứ / 7 trưởng: 10 / 11 nửa cung; từ Đô là Si♭ / Si."
+    loai: dinh-nghia
+    nguon:
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "OMT, bảng số nửa cung: 10 = mi7, 11 = ma7."
+  - id: n46
+    cau: "Quãng 8 đúng: 12 nửa cung; từ Đô là Đô."
+    loai: dinh-nghia
+    nguon:
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "OMT, bảng số nửa cung: 12 = P8."
+  - id: n47
+    cau: "Đảo quãng: 9 − số; trưởng ↔ thứ, tăng ↔ giảm, đúng giữ nguyên."
+    loai: quy-tac
+    nguon:
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: 'OMT Intervals, Intervallic Inversion: "the size of inverted pairs always adds up to 9"; "Perfect intervals invert to perfect intervals. Major intervals invert to minor intervals (and minor intervals to major intervals). Augmented intervals invert to diminished intervals (and diminished intervals to augmented intervals)."'
+  - id: n48
+    cau: "Bốn loại hợp âm ba (trên Đô): trưởng Đô–Mi–Sol (3T+3t), thứ Đô–Mi♭–Sol (3t+3T), giảm Đô–Mi♭–Sol♭ (3t+3t), tăng Đô–Mi–Sol♯ (3T+3T)."
+    loai: dinh-nghia
+    nguon:
+      - omt-triads
+    ket_qua: dung
+    ghi_chu: 'Khuông và chữ dưới khuông của khối abc 10. OMT Triads: "A major triad''s third is major and its fifth is perfect, while a minor triad''s third is minor and its fifth is perfect. A diminished triad''s third is minor and its fifth is diminished, while an augmented triad''s third is major and its fifth is augmented." Viết thành hai quãng ba chồng: trưởng 4+3, thứ 3+4, giảm 3+3, tăng 4+4 nửa cung (OMT Intervals: ma3 = 4, mi3 = 3 nửa cung), khớp 3T+3t, 3t+3T, 3t+3t, 3T+3T.'
+  - id: n49
+    cau: "Trong giọng trưởng: I ii iii IV V vi vii° (chữ hoa: trưởng, chữ thường: thứ, °: giảm)."
+    loai: quy-tac
+    nguon:
+      - omt-triads
+      - omt-roman
+    ket_qua: dung
+    ghi_chu: 'OMT Triads: "triads built on do, fa, and sol ... in major keys are major ... Triads built on re, mi, and la ... are minor ... Triads built on ti are diminished". OMT Roman Numerals: "Uppercase Roman numerals denote major triads, and lowercase Roman numerals denote minor triads"; "Special symbols are added for augmented (+), diminished (o)".'
+  - id: n50
+    cau: "Hợp âm bảy át V7 = hợp âm trưởng + 7 thứ."
+    loai: dinh-nghia
+    nguon:
+      - omt-seventh
+    ket_qua: dung
+    ghi_chu: 'OMT Seventh Chords: "major-minor seventh chord = major triad + minor seventh"; "the major-minor seventh chord is also often called the dominant seventh chord"; hợp âm bảy dựng trên sol (bậc 5) của gam trưởng là hợp âm bảy át.'
+  - id: n51
+    cau: "Chức năng chủ (ổn định): I (vi đôi khi thay I)."
+    loai: quy-tac
+    nguon:
+      - omt-harmony
+      - omt-la-bass
+      - mt21c-function
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ (ô bảng): "Chủ (ổn định) | I, vi". Hai nguồn bậc 2 xếp vi khác nhau. OMT Introduction to Harmony: "Tonic (T): ... the only chord that belongs to this category is I"; "Weak predominants ...: iii and vi"; bảng thuật ngữ cùng chương: "The I chord is the paradigmatic tonic-function chord, but vi and iii occasionally have tonic function." MT21C 9.4: vi có "tonic prolongation function". OMT La in the Bass: "Deceptive motion most commonly occurs when V(7) moves to vi rather than I". Theo nguồn chính (OMT) chỉ I là hợp âm chủ; viết lại cho đúng với cả hai nguồn (chuan-kiem-dinh mục 2: viết chung lại): vi đôi khi thay I. Vẫn khớp câu hỏi ở bài kiểm tra đầu vào ("Hợp âm nào có thể thay thế I vì cùng chức năng chủ? vi"). Bài 12 cũ (D3) xếp vi vào nhóm chủ: lô của bài 12 nên chọn cùng cách viết.'
+  - id: n52
+    cau: "Chức năng hạ át (rời đi): IV, ii."
+    loai: quy-tac
+    nguon:
+      - omt-harmony
+      - mt21c-function
+    ket_qua: dung
+    ghi_chu: 'OMT: "Predominant (PD): Chords that transition away from tonic function toward dominant function ... Strong predominants signal that a dominant function chord is imminent: IV and ii". MT21C: "Pre-dominant function ...: The IV and ii". "Hạ át" là tên tiếng Việt của chức năng này (bài 12 cũ: "Hạ át (Subdominant)").'
+  - id: n53
+    cau: "Chức năng át (căng, đòi về): V, V7, vii°."
+    loai: quy-tac
+    nguon:
+      - omt-harmony
+      - mt21c-function
+    ket_qua: dung
+    ghi_chu: 'OMT: "Dominant (D): Chords that provide a sense of urgency to resolve toward the tonic chord: V and viio". V7 là hợp âm V thêm quãng 7 (OMT Seventh Chords, hợp âm bảy át). MT21C: "Dominant function ...: The V and vii°".'
+  - id: n54
+    cau: "Kết trọn: V → I."
+    loai: dinh-nghia
+    nguon:
+      - omt-harmony
+    ket_qua: dung
+    ghi_chu: 'OMT: "Authentic cadences involve the progression V–I" (kết trọn là authentic cadence; "perfect" khi cả hai hợp âm ở thế gốc và chủ âm ở bè trên).'
+  - id: n55
+    cau: "Kết nửa: … → V."
+    loai: dinh-nghia
+    nguon:
+      - omt-harmony
+    ket_qua: dung
+    ghi_chu: 'OMT: "Half cadences involve the progression x–V, where x is any of a variety of harmonies."'
+  - id: n56
+    cau: "Kết plagal: IV → I."
+    loai: dinh-nghia
+    nguon:
+      - omt-plagal
+    ket_qua: dung
+    ghi_chu: 'OMT Plagal Motion: "You may sometimes see all (IV)–I motions described as “plagal cadences” ... While true phrase endings involving the progression (IV)–I do exist, in 18th-century classical music, it''s more common to see a (IV)–I tonic prolongation". Tên kết đúng; OMT chỉ lưu ý kết này ít gặp ở cuối câu nhạc thế kỷ 18.'
+  - id: n57
+    cau: "Kết lừa: V → vi."
+    loai: dinh-nghia
+    nguon:
+      - omt-la-bass
+    ket_qua: dung
+    ghi_chu: 'OMT: "Deceptive motion most commonly occurs when V(7) moves to vi rather than I"; "Some people use the term “deceptive cadence” to describe what we refer to as “deceptive motion.”" (OMT thích gọi là deceptive motion; kết lừa là tên quen dùng, bài 13 cũ cũng gọi vậy).'
+  - id: n58
+    cau: "Tốc độ: Largo < Adagio < Andante < Moderato < Allegro < Presto."
+    loai: dinh-nghia
+    nguon:
+      - omt-other
+    ket_qua: dung
+    ghi_chu: 'OMT Other Aspects of Notation, Example 8: "Tempi are listed on a line from slowest to fastest. They are Grave, Lento, Largo, Adagio, Andante, Moderato, Allegretto, Allegro, Vivace, and Presto". Khớp khoảng BPM trong src/data/thuat-ngu.yml.'
+  - id: n59
+    cau: "rit. chậm dần, accel. nhanh dần, a tempo trở lại."
+    loai: dinh-nghia
+    nguon:
+      - omt-other
+    ket_qua: dung
+    ghi_chu: 'OMT: "ritardando (rit.) for a gradual decrease and accelerando (accel.) for a gradual increase"; "to return to the original tempo ... they will write a tempo".'
+  - id: n60
+    cau: "Cường độ: pp < p < mp < mf < f < ff."
+    loai: dinh-nghia
+    nguon:
+      - omt-other
+    ket_qua: dung
+    ghi_chu: "OMT liệt kê từ to đến nhỏ: fff, ff, f, mf, mp, p, pp, ppp (Example 1: Dynamics are arranged from quietest to loudest)."
+  - id: n61
+    cau: "cresc. to dần, dim. nhỏ dần, sfz nhấn đột ngột."
+    loai: dinh-nghia
+    nguon:
+      - omt-other
+    ket_qua: dung
+    ghi_chu: 'OMT: "Crescendo (cresc.) means to get louder, while decrescendo (decresc.) and diminuendo (dim.) both mean to get quieter"; "Accented notes can also be indicated by the italicized abbreviations sfz, sf, or fz (sforzando, forzando, or forzato). These accents are usually interpreted to be slightly more forceful". src/data/thuat-ngu.yml: sforzando "Nhấn mạnh đột ngột".'
+  - id: n62
+    cau: "staccato ngắt, legato liền, fermata ngân dài."
+    loai: dinh-nghia
+    nguon:
+      - omt-other
+    ket_qua: dung
+    ghi_chu: 'OMT: "Legato means to play or sing smoothly or connected"; "Staccato means to play or sing notes more separated"; "A fermata indicates that a note should be held longer than its regular duration."'
+  - id: n63
+    cau: "D.C. từ đầu, Fine hết."
+    loai: dinh-nghia
+    nguon:
+      - omt-other
+    ket_qua: dung
+    ghi_chu: 'OMT: "D.C. al Fine, or da capo al fine, means to play or sing a work from the beginning until one sees D.C. al Fine. You then go back to the beginning, and play or sing until the Fine."'
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - khoa
+      - not
+      - chu-duoi-khuong
+    ket_qua: dung
+    ghi_chu: "Khóa Sol, M:none. abcjs đọc ra E4 G4 B4 D5 F5 (dòng) | F4 A4 C5 E5 (khe), nốt đen; chữ w: khớp (Mi Sol Si Rê Fa | Fa La Đô Mi; E G B D F | F A C E). Đúng điều trang nói (n10). abcjs không cảnh báo (tools/khuong-nhac.mjs, hàm canhBao)."
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - khoa
+      - not
+      - chu-duoi-khuong
+    ket_qua: dung
+    ghi_chu: "Khóa Fa (clef=bass). abcjs đọc ra G2 B2 D3 F3 A3 (dòng) | A2 C3 E3 G3 (khe); chữ w: khớp. Đúng n12. abcjs không cảnh báo."
+  - khoi: 3
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - khoa
+      - not
+    ket_qua: dung
+    ghi_chu: "Khuông kép (%%score {RH LH}). Tay phải C4(trắng) D4 E4 F4 G4(trắng) ở khóa Sol, tay trái C4(trắng) B3 A3 G3 F3(trắng) ở khóa Fa: Đô giữa viết trên dòng kẻ phụ ở cả hai khuông, như n14. Mỗi bè 6 phách, M:none. abcjs không cảnh báo."
+  - khoi: 4
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - truong-do
+      - chu-duoi-khuong
+    ket_qua: dung
+    ghi_chu: "Nốt Si4, L:1/4: B4 tròn, B2 trắng, B đen, B/ móc đơn, B/4 móc kép, B3/2 đen chấm dôi (abcjs: 1, 1/2, 1/4, 1/8, 1/16, 3/8 nốt tròn); x là dấu lặng ẩn để mỗi ô đủ 4 phách. Chữ w: tròn trắng đen đơn kép đen. / 4 2 1 ½ ¼ 1½ khớp. abcjs không cảnh báo."
+  - khoi: 5
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - truong-do
+    ket_qua: dung
+    ghi_chu: "Dấu lặng tròn, trắng, đen, móc đơn, móc kép (abcjs: z4 = lặng tròn, z2, z, z/, z/4), nhãn 4, 2, 1, ½, ¼ khớp số phách. abcjs không cảnh báo."
+  - khoi: 6
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - dau-hoa
+      - chu-duoi-khuong
+    ket_qua: dung
+    ghi_chu: "Fa♯ (^F), Si♭ (_B), Si♮ (=B), mỗi nốt một ô; dấu bình ở ô mới sau Si♭ là dấu hóa nhắc, minh họa đúng chữ 'hủy'. Chữ w: thăng giáng bình / +½ −½ hủy khớp n18. abcjs không cảnh báo."
+  - khoi: 7
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - not
+      - chu-duoi-khuong
+    ket_qua: dung
+    ghi_chu: "Gam Đô trưởng C4–C5, không dấu hóa; chữ w: Đô…Đô và I…VII I khớp n25. abcjs không cảnh báo."
+  - khoi: 8
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - hoa-bieu
+    ket_qua: dung
+    ghi_chu: "K:C# với x4 (chỉ hiện hóa biểu): abcjs dựng 7 dấu thăng theo thứ tự f c g d A e B, tức Fa Đô Sol Rê La Mi Si (n31)."
+  - khoi: 9
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - hoa-bieu
+    ket_qua: dung
+    ghi_chu: "K:Cb với x4: abcjs dựng 7 dấu giáng theo thứ tự B e A d G c F, tức Si Mi La Rê Sol Đô Fa (n32)."
+  - khoi: 10
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - hop-am
+      - chu-duoi-khuong
+    ket_qua: dung
+    ghi_chu: "Bốn hợp âm nốt tròn trên Đô4: C–E–G, C–E♭–G, C–E♭–G♭, C–E–G♯ (abcjs đọc đúng dấu hóa từng ô; ô 4 E trở lại tự nhiên vì sang ô mới). Chữ w: trưởng thứ giảm tăng / 3T+3t 3t+3T 3t+3t 3T+3T khớp n48. abcjs không cảnh báo."
