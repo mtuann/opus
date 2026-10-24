@@ -55,6 +55,20 @@ test('Markdown trong dòng của dữ liệu: nghiêng, link; HTML thô thành c
 	assert.equal(md('`c<d`'), '<code>c&lt;d</code>');
 	assert.equal(md('<https://imslp.org/>'), '<a href="https://imslp.org/">https://imslp.org/</a>');
 	assert.equal(md('<https://x.org/><b>y</b>'), '<a href="https://x.org/">https://x.org/</a>&lt;b&gt;y&lt;/b&gt;');
+	// link chỉ tới địa chỉ an toàn; ảnh thành chữ
+	assert.equal(md('[a](javascript:alert(1)) [b](/opus/x/) [c](https://x.org/) [d](#m)'), 'a <a href="/opus/x/">b</a> <a href="https://x.org/">c</a> <a href="#m">d</a>');
+	assert.equal(md('![ảnh](x.png)'), 'ảnh');
+	assert.doesNotMatch(md('```x" onclick="y'), / onclick=/);
+	// mọi cách viết backtick (không cân, thoát bằng \\) đều không để lọt thẻ: thử hết chuỗi tới 6 ký tự (review nhánh sửa nhỏ)
+	const KY_TU = ['`', '\\', '<b>', '</b>', 'x', ' '];
+	// mọi chuỗi ghép từ 0 đến 6 phần
+	let lop = [''];
+	const ds = [''];
+	for (let n = 0; n < 6; n++) ds.push(...(lop = lop.flatMap((s) => KY_TU.map((k) => s + k))));
+	assert.equal(ds.length, 55987);
+	// giá trị thuộc tính (như class="language-<b>" của khối mã có rào) không phải thẻ: bỏ trước khi tìm
+	const lot = ds.filter((s) => /<b>|<\/b>/.test(md(s).replace(/="[^"]*"/g, '=""')));
+	assert.deepEqual(lot.slice(0, 5), [], `${lot.length} chuỗi để lọt thẻ <b>`);
 });
 
 test('::hop-tac-pham: chip và bảng thông tin đúng như bản ghi', () => {
@@ -126,7 +140,7 @@ test('::khoi-nghe: không có bản thu trong dữ liệu thì để người h�
 	assert.deepEqual(docMoc(' 0  12.5 -'), [0, 12.5, null]);
 	assert.throws(() => docMoc('3 1:05'), /mốc "1:05" không phải số giây/);
 	// chỉ số giây viết thường; moc rỗng là lỗi (review D1.3)
-	for (const x of ['0x10', '1e2', '-3', '+4', '.5']) assert.throws(() => docMoc(x), /không phải số giây/, x);
+	for (const x of ['0x10', '1e2', '-3', '+4', '.5', '9'.repeat(400)]) assert.throws(() => docMoc(x), /không phải số giây/, x.slice(0, 8));
 	assert.throws(() => docMoc('  '), /moc rỗng/);
 	assert.throws(() => khoiNghe({}, '/opus/', '3 4'), /có moc nhưng bản ghi không có ban_thu/);
 	// mốc không quá độ dài bản thu (60 + 30 giây)
@@ -137,6 +151,12 @@ test('::khoi-nghe: không có bản thu trong dữ liệu thì để người h�
 	assert.doesNotThrow(() => dung(bang('2 12', 'chủ đề', 'đoạn B')));
 	assert.doesNotThrow(() => dung(bang('2', 'chủ đề', 'đoạn B')), 'ít mốc hơn số dòng: được (dòng cuối chưa có mốc)');
 	assert.throws(() => dung(bang('2 12 23', 'chủ đề', 'đoạn B')), /có 3 mốc mà bảng "Theo dõi khi nghe" ngay sau chỉ có 2 dòng/);
+	// bảng phải thuộc mục "Theo dõi khi nghe" đứng ngay sau khối nghe; mỗi khối nghe có mốc một bảng
+	const nghe = (than) => dung(trangTacPham('fur-elise', than));
+	assert.throws(() => nghe('::khoi-nghe{moc="2"}\n\n## Cấu trúc\n\n| A |\n|---|\n| x |\n'), /mục ngay sau không phải "Theo dõi khi nghe" \(gặp "Cấu trúc"\)/);
+	assert.throws(() => nghe('::khoi-nghe{moc="2"}\n\n## Theo dõi khi nghe\n\nChưa có bảng.\n\n## Cấu trúc\n'), /mục "Theo dõi khi nghe" không có bảng/);
+	assert.throws(() => nghe('::khoi-nghe{moc="2"}\n\n::khoi-nghe{moc="3"}\n'), /khối nghe trước có moc mà chưa gặp bảng/);
+	assert.doesNotThrow(() => nghe('| Bảng | trước |\n|---|---|\n| a | b |\n\n::khoi-nghe{moc="2"}\n\n## Theo dõi khi nghe\n\n| Mốc | Nghe gì |\n|---|---|\n| … | x |\n'), 'bảng trước khối nghe không tính');
 });
 
 test('chỉ thị viết sai thì báo lỗi kèm tên file, kể cả gõ sai tên; chỉ thị khối để nguyên cho Starlight', () => {

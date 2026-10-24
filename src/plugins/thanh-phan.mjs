@@ -10,16 +10,28 @@ export const esc = (s) =>
  * tải bộ tải thành phần ở những trang này. */
 export const canTaiScript = (html) => /\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen)[\s"]/.test(html);
 
+/** Địa chỉ link được dùng trong dữ liệu: trên site (/…), #mục, http(s), mailto. Khác (như javascript:) thì bỏ link. */
+const DIA_CHI_DUOC = /^(\/|#|https?:\/\/|mailto:)/i;
+const chuCua = (n) => (typeof n.value === 'string' ? n.value : (n.children ?? []).map(chuCua).join(''));
+
 /**
- * Markdown trong dòng -> HTML (bỏ thẻ <p> bao ngoài). Dấu < được thoát trước, nên thẻ HTML thô hiện thành chữ; trừ trong
- * đoạn mã `…` (bộ dựng tự thoát) và trong link tự động <https://…>.
+ * Plugin mdast cho chữ của dữ liệu: thẻ HTML thô (nút html, trong dòng hay khối) thành nút chữ, nên hiện ra đúng như
+ * viết; link có địa chỉ lạ thành chữ thường; ảnh thành chữ thay thế của nó.
+ */
+const chuAnToan = {
+	name: 'chu-an-toan',
+	html: (node) => ({ type: 'text', value: node.value }),
+	link: (node) => (DIA_CHI_DUOC.test(node.url.trim()) ? undefined : { type: 'text', value: chuCua(node) }),
+	image: (node) => ({ type: 'text', value: node.alt ?? '' }),
+};
+
+/**
+ * Markdown trong dòng -> HTML (bỏ thẻ <p> bao ngoài). Thẻ HTML thô hiện thành chữ; đoạn mã `…` và link tự động
+ * <https://…> vẫn đúng; link chỉ tới địa chỉ an toàn. Thoát trên cây Markdown chứ không trên chữ nguồn, để mọi cách viết
+ * backtick đều theo đúng CommonMark (review nhánh sửa nhỏ D1.3).
  */
 export function md(s) {
-	const chu = String(s)
-		.split(/(`+[^`]*`+)/)
-		.map((phan, i) => (i % 2 ? phan : phan.replace(/<(?!https?:\/\/[^\s<>]+>)/g, '&lt;')))
-		.join('');
-	const { html } = markdownToHtml(chu, { features: { smartPunctuation: false } });
+	const { html } = markdownToHtml(String(s), { mdastPlugins: [chuAnToan], features: { smartPunctuation: false } });
 	return html.trim().replace(/^<p>([\s\S]*)<\/p>$/, '$1');
 }
 
@@ -174,8 +186,9 @@ export function docMoc(chu) {
 		.map((x) => {
 			if (x === '-') return null;
 			// chỉ số giây viết thường (12, 12.5): không nhận 0x10, 1e2, số âm
-			if (!/^\d+(\.\d+)?$/.test(x)) throw new Error(`::khoi-nghe: mốc "${x}" không phải số giây (dòng chưa có mốc ghi "-")`);
-			return Number(x);
+			const n = Number(x);
+			if (!/^\d+(\.\d+)?$/.test(x) || !Number.isFinite(n)) throw new Error(`::khoi-nghe: mốc "${x}" không phải số giây (dòng chưa có mốc ghi "-")`);
+			return n;
 		});
 }
 

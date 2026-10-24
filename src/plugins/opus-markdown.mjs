@@ -34,6 +34,12 @@ const CHI_THI = {
 	'cong-cu': { thuocTinh: ['ten*', '…'], ve: ({ tt, trang }) => congCu(tt, trang) },
 };
 
+/** Tiêu đề mục chứa bảng mốc, ngay sau ::khoi-nghe{moc}. */
+const TIEU_DE_MOC = 'Theo dõi khi nghe';
+
+/** Chữ của một nút mdast (nối mọi nút chữ, mã trong dòng bên trong). */
+const chuCua = (n) => (typeof n.value === 'string' ? n.value : (n.children ?? []).map(chuCua).join(''));
+
 /** Kiểm thuộc tính của một chỉ thị theo khai báo; trả về thông báo lỗi hay null. */
 function loiThuocTinh(ten, { thuocTinh = [] }, tt) {
 	const nhan = thuocTinh.map((t) => t.replace('*', ''));
@@ -55,7 +61,8 @@ export function opusMarkdown({ base, docsDir }) {
 		const loi = (msg) => new Error(`${path.relative(process.cwd(), file)}: ${msg}`);
 		// Astro tách frontmatter trước khi gọi Sätteri và đưa vào data.astro; chạy thẳng Sätteri (kiểm thử) thì đọc nút yaml
 		let fm = data?.astro?.frontmatter ?? {};
-		// số mốc của ::khoi-nghe{moc} vừa gặp, chờ bảng "Theo dõi khi nghe" ngay sau (Sätteri duyệt theo thứ tự trong trang)
+		// ::khoi-nghe{moc} vừa gặp: { so: số mốc, trongMuc: đã tới tiêu đề "Theo dõi khi nghe" chưa }, chờ bảng của mục ấy
+		// (Sätteri duyệt theo thứ tự trong trang). Trang hết mà chưa gặp bảng thì chưa bắt được: Sätteri không báo lúc hết cây.
 		let choMoc = null;
 		return {
 			name: 'opus-markdown',
@@ -72,12 +79,19 @@ export function opusMarkdown({ base, docsDir }) {
 					throw loi(e.message);
 				}
 			},
-			// mốc đi theo dòng của bảng "Theo dõi khi nghe": nhiều mốc hơn số dòng là mốc thừa (bảng đã sửa, hay bản thu đã đổi)
-			table(node) {
+			// mốc đi theo dòng của bảng "Theo dõi khi nghe" (mục đứng ngay sau khối nghe, AGENTS.md mục Mẫu trang): nhiều mốc
+			// hơn số dòng là mốc thừa (bảng đã sửa, hay bản thu đã đổi)
+			heading(node) {
 				if (choMoc === null) return;
-				const [so, soDong] = [choMoc, node.children.length - 1];
+				if (choMoc.trongMuc) throw loi(`::khoi-nghe có moc mà mục "${TIEU_DE_MOC}" không có bảng`);
+				if (chuCua(node).trim() !== TIEU_DE_MOC) throw loi(`::khoi-nghe có moc mà mục ngay sau không phải "${TIEU_DE_MOC}" (gặp "${chuCua(node).trim()}")`);
+				choMoc.trongMuc = true;
+			},
+			table(node) {
+				if (!choMoc?.trongMuc) return;
+				const [so, soDong] = [choMoc.so, node.children.length - 1];
 				choMoc = null;
-				if (so > soDong) throw loi(`::khoi-nghe có ${so} mốc mà bảng "Theo dõi khi nghe" ngay sau chỉ có ${soDong} dòng`);
+				if (so > soDong) throw loi(`::khoi-nghe có ${so} mốc mà bảng "${TIEU_DE_MOC}" ngay sau chỉ có ${soDong} dòng`);
 			},
 			leafDirective(node) {
 				const muc = CHI_THI[node.name];
@@ -93,7 +107,8 @@ export function opusMarkdown({ base, docsDir }) {
 				const nguoi = new Map(duLieu['nha-soan-nhac'].map((r) => [r.id, r]));
 				try {
 					const html = muc.ve({ rec, tt, base, trang, nguoi, tacPham: duLieu['tac-pham'] });
-					if (node.name === 'khoi-nghe' && tt.moc !== undefined) choMoc = docMoc(tt.moc).length;
+					if (node.name === 'khoi-nghe' && choMoc) throw new Error(`khối nghe trước có moc mà chưa gặp bảng "${TIEU_DE_MOC}"`);
+					if (node.name === 'khoi-nghe' && tt.moc !== undefined) choMoc = { so: docMoc(tt.moc).length, trongMuc: false };
 					return { type: 'html', value: html };
 				} catch (e) {
 					throw loi(e.message);

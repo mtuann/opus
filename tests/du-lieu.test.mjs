@@ -107,7 +107,7 @@ test('dấu vết dựng lại tính schema và mọi plugin Markdown; dữ li�
 	const goc = fs.readFileSync;
 	const truoc = dauVet();
 	try {
-		for (const f of [tep.find((x) => x.startsWith('src/plugins/')), 'src/du-lieu.mjs']) {
+		for (const f of tep) {
 			fs.readFileSync = (p, ...r) => (String(p).endsWith(f) ? Buffer.from('đã sửa') : goc(p, ...r));
 			assert.notEqual(dauVet(), truoc, `${f} đổi mà dấu vết không đổi`);
 		}

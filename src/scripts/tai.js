@@ -34,8 +34,9 @@ let lanCuon = 0;
 for (const ev of ['wheel', 'touchmove', 'keydown']) addEventListener(ev, () => lanCuon++, { passive: true });
 
 /**
- * Sau khi các khối phía trên khởi tạo xong: đích của link #mục bị đẩy đi thì cuộn lại cho đúng. Người đọc đã tự cuộn,
- * hay đã sang đích khác (bấm mục lục khi các khối còn đang tải), thì thôi, không kéo về đích cũ.
+ * Sau khi các khối phía trên khởi tạo xong: đích của link #mục bị đẩy đi thì cuộn lại cho đúng. Thôi, không kéo về đích
+ * cũ, khi người đọc đã cuộn bằng bánh xe, chạm hay bàn phím (lanCuon), hay đã sang đích khác (bấm mục lục khi các khối
+ * còn đang tải). Kéo thanh cuộn hay tìm chữ (Ctrl+F) lúc đang tải thì chưa nhận ra: vẫn bị kéo về đích cũ.
  */
 function giuDich(viec, t, tren) {
 	const lan = lanCuon;
