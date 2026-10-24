@@ -12,9 +12,9 @@ on:
 permissions:
   contents: read
 
-# Một nhánh, một lần chạy: push mới hủy lần đang chạy của cùng nhánh hay cùng pull request
+# Một nhánh, một lần chạy: push mới (hay pull request của cùng nhánh) hủy lần đang chạy
 concurrency:
-  group: kiem-thu-${{ github.head_ref || github.ref }}
+  group: kiem-thu-${{ github.head_ref || github.ref_name }}
   cancel-in-progress: true
 
 jobs:

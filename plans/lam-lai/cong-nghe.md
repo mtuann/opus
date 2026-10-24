@@ -114,7 +114,7 @@ Cách làm (D1.6):
 ## 8. Deploy
 
 - **Đến D1.7:** chưa đăng gì. Repo mới có trên GitHub từ đợt 0 nhưng chưa bật Pages.
-- **Từ D1.7:** Pages của repo mới đã bật, nguồn GitHub Actions. `deploy.yml` build bản thật, chạy kiểm thử (`npm test`, kiểm thử trình duyệt, Lighthouse), rồi đăng `dist/` bằng `configure-pages`, `upload-pages-artifact`, `deploy-pages`. Kiểm thử hỏng thì site giữ bản trước. `test.yml` chạy bản xem và các kiểm thử ấy trên nhánh `moi/**`, `mo/**`, `them/**` và pull request, không đăng. Hai workflow dùng chung `.github/actions/kiem-thu/`.
+- **Từ D1.7:** Pages của repo mới đã bật, nguồn GitHub Actions. `deploy.yml` build bản thật, chạy kiểm thử (`npm test`, kiểm thử trình duyệt, Lighthouse), rồi đăng `dist/` bằng `upload-pages-artifact`, `deploy-pages` (không cần `configure-pages`: Astro đã có `site` và `base`). Kiểm thử hỏng thì site giữ bản trước. `test.yml` chạy bản xem và các kiểm thử ấy trên nhánh `moi/**`, `mo/**`, `them/**` và pull request, không đăng. Hai workflow dùng chung `.github/actions/kiem-thu/`.
 - **Site cũ:** bạn tắt Pages của repo cũ khi muốn (Settings → Pages → Unpublish site). Không cần sửa gì trong repo cũ. Service worker của site cũ chỉ có phạm vi `/opus-zero/`, nên không đụng tới site mới ở `/opus/`.
 - **Service worker của site mới:** chưa có cho đến đợt 7; khi có, phạm vi `/opus/`, danh sách tệp và phiên bản sinh lúc build.
 - **Tùy chọn, không bắt buộc:** muốn người vào địa chỉ cũ tìm được site mới thì đăng lại Pages của repo cũ chỉ với một trang chuyển hướng `/opus-zero/<trang>/` → `/opus/<trang>/`. Đường dẫn giữ nguyên (luật 4) nên ánh xạ chỉ là đổi phần đầu địa chỉ.

@@ -16,8 +16,10 @@ import { moMayChu } from '../may-chu.mjs';
 import { trangMau } from '../trang-mau.mjs';
 
 const DIST = path.resolve('dist');
-// trang chủ, rồi trang mẫu của bản build (trang đã đổi trên nhánh trước, rồi mỗi loại khối một trang), tối đa ba trang
-const TRANG = process.env.LH_TRANG ? process.env.LH_TRANG.split(',') : trangMau(DIST).filter((t) => t !== '404.html').slice(0, 3);
+// trang chủ, rồi trang mẫu của bản build (trang đã đổi trên nhánh trước, rồi mỗi loại khối một trang), trang 404 nếu
+// còn chỗ; tối đa ba trang
+const mau = trangMau(DIST);
+const TRANG = process.env.LH_TRANG ? process.env.LH_TRANG.split(',') : [...mau.filter((t) => t !== '404.html'), ...mau.filter((t) => t === '404.html')].slice(0, 3);
 const LAN = Number(process.env.LH_LAN || 3);
 const NGUONG = { perf: 95, a11y: 100, bp: 100, seo: 100 };
 const TEN = { perf: 'hiệu năng', a11y: 'trợ năng', bp: 'thực hành tốt', seo: 'SEO' };
@@ -58,7 +60,8 @@ try {
 				);
 			} catch (e) {
 				don();
-				loi.push(`${trang || '(trang chủ)'}: Lighthouse không chạy xong (${e.killed ? 'quá 240 s' : e.message.split('\n')[0]})`);
+				const lyDo = e.killed ? 'quá 240 s' : (String(e.stderr ?? '').trim().split('\n').at(-1) || e.message.split('\n')[0]);
+				loi.push(`${trang || '(trang chủ)'}: Lighthouse không chạy xong (${lyDo})`);
 				break;
 			}
 			const { audits: a, categories: c } = JSON.parse(fs.readFileSync(file, 'utf8'));
