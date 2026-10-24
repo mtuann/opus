@@ -1,0 +1,351 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/05-dau-hoa
+trang: src/content/docs/nhac-ly/05-dau-hoa.md
+nguon_cu: ../opus-zero/docs/nhac-ly/05-dau-hoa.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-24
+    nhanh: moi/d3-l1
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D3-L1 lượt 1, phần 2/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Trang cung, nửa cung và dấu hóa (tầng lõi). Nguồn chính: Open Music Theory (OMT), mở từng chương bằng curl ngày 24/10/2026 (công cụ đọc web bị trang chặn, theo lời giao việc của lô); chỗ OMT không nói (hiệu lực của dấu hóa đến hết ô nhịp, dấu hóa nhắc, dấu hóa kép dùng khi nào): Andre Mount (FFF) ch. 5 và 8, MT21C 1.4 và 1.5, MyMusicTheory, UMass Unit 7. Câu về site (n12, n13, n22, n24, n29): kiểm trên bản cũ ../opus-zero/docs/ và JavaScript cũ, vì trang đích chưa chuyển; riêng bàn phím kiểm với thành phần mới của lô (src/scripts/ve.js, ban-phim.js). Sửa trang: n18 (ví dụ và câu về dấu hóa nhắc: dời dấu bình lên nốt Fa đầu ô 2) và mục Nguồn (thay link chung tới OMT và musictheory.net bằng các chương đã đọc; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, agent không đọc được chữ). Thuật ngữ cho D3-L5: "đồng âm khác tên" (enharmonic), "dấu thăng kép, giáng kép", "dấu hóa nhắc" (courtesy accidental) chưa có trong src/data/thuat-ngu.yml; "dấu hóa bất thường" (accidental) đã có. Không tính là nhận định: tên tiêu đề, "Ba dấu hóa" (tiêu đề bảng), lời dẫn "Nghe đi lên…" (đã gộp vào n14).'
+nguon:
+  - id: omt-steps
+    bac: 2
+    ten: Open Music Theory, Half Steps, Whole Steps, and Accidentals
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/half-and-whole-steps/
+  - id: omt-intervals
+    bac: 2
+    ten: Open Music Theory, Intervals (cả bảng số nửa cung ở mục Intervallic Enharmonic Equivalence)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/intervals/
+  - id: omt-minor
+    bac: 2
+    ten: Open Music Theory, Minor Scales, Scale Degrees, and Key Signatures (cả các mục The Parallel and Relative Relationships, Minor Keys and the Circle of Fifths, Major or Minor?)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/
+  - id: omt-seventh
+    bac: 2
+    ten: "Open Music Theory, Seventh Chords (ví dụ 9: hạ E♭ thành E𝄫)"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/seventh-chords/
+  - id: fff-pitch
+    bac: 2
+    ten: "Andre Mount, Fundamentals, Function, and Form (Milne Publishing, SUNY Geneseo, giáo trình mở), 5. Pitch (các mục về dấu hóa trên khuông: hiệu lực đến hết ô nhịp, dấu hóa nhắc, dấu thăng kép, giáng kép; mục đồng âm khác tên)"
+    link: https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/5-pitch/
+  - id: fff-major-scales
+    bac: 2
+    ten: Andre Mount, Fundamentals, Function, and Form (Milne Publishing, SUNY Geneseo, giáo trình mở), 6. Major Scales (mục 6.1, 6.2 Spelling a major scale)
+    link: https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/6-major-scales-2/
+  - id: fff-major-keys
+    bac: 2
+    ten: Andre Mount, Fundamentals, Function, and Form (Milne Publishing, SUNY Geneseo, giáo trình mở), 8. Major Keys and Key Signatures (mục 8.3 Key signatures gồm đoạn courtesy accidentals, 8.4 Writing key signatures, 8.5 Summary)
+    link: https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/8-major-keys-and-key-signatures-2/
+  - id: mt21c-accidentals
+    bac: 2
+    ten: Robert Hutchinson, Music Theory for the 21st-Century Classroom (giáo trình mở, University of Puget Sound), 1.4 Accidentals
+    link: https://musictheory.pugetsound.edu/mt21c/Accidentals.html
+  - id: mt21c-enharmonic
+    bac: 2
+    ten: Robert Hutchinson, Music Theory for the 21st-Century Classroom (giáo trình mở, University of Puget Sound), 1.5 Enharmonic Notes
+    link: https://musictheory.pugetsound.edu/mt21c/EnharmonicNotes.html
+  - id: mmt-accidentals
+    bac: 2
+    ten: "MyMusicTheory (Victoria Williams), Accidentals, mục Bar lines and Accidentals: khóa nhạc lý theo các cấp lý thuyết ABRSM"
+    link: https://mymusictheory.com/pitch/accidentals/
+  - id: umass-ks
+    bac: 2
+    ten: "Christopher White, Fundamentals of Theory (An Introduction), Unit 7: Key Signatures (University of Massachusetts Amherst, giáo trình mở; có cả mục Accidentals)"
+    link: https://fundamentalsofmusictheory.umasscreate.net/unit-7/
+nhan_dinh:
+  - id: n1
+    cau: Trên piano, khoảng cách giữa hai phím liền kề (tính cả phím đen) là nửa cung.
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+    ket_qua: dung
+    ghi_chu: 'OMT Half Steps: "A half step above a key on the piano is the key to its immediate right, while a half step below a key on the piano is the key to its immediate left." Bảng thuật ngữ cùng chương: nửa cung là "One-twelfth of an octave; generally considered to be the smallest interval in Western musical notation".'
+  - id: n2
+    cau: Hai nửa cung là một cung.
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+    ket_qua: dung
+    ghi_chu: 'OMT Half Steps: "A whole step is two half steps."'
+  - id: n3
+    cau: Giữa hầu hết các cặp phím trắng (liền nhau) có một phím đen, nên chúng cách nhau một cung.
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+    ket_qua: dung
+    ghi_chu: 'OMT Half Steps: "Pairs of white keys with a black key in between them (A and B, C and D, D and E, F and G, and G and A) are a whole step apart." Năm trong bảy cặp phím trắng liền nhau có phím đen xen giữa: "hầu hết" đúng.'
+  - id: n4
+    cau: "Có hai chỗ không có phím đen xen giữa hai phím trắng liền nhau, và đó là nửa cung tự nhiên: Mi – Fa (E – F) và Si – Đô (B – C)."
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+    ket_qua: dung
+    ghi_chu: 'OMT Half Steps: "Two pairs of white keys—E/F and B/C—do not have black keys in between them (see Example 1). This is because E–F and B–C are both half steps."'
+  - id: n5
+    cau: "Hãy nhớ kỹ hai cặp này (Mi – Fa, Si – Đô): chúng là chìa khóa để hiểu gam và hợp âm sau này."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên học, không trái trang lõi nào: bài 6 cũ (../opus-zero/docs/nhac-ly/06-gam-truong.md) dùng đúng hai cặp này để giải thích vì sao gam Đô trưởng chỉ có phím trắng ("hai nửa cung tự nhiên Mi–Fa và Si–Đô rơi đúng vào vị trí 3–4 và 7–8"); bài 7 cũ dùng cho gam La thứ.'
+  - id: n6
+    cau: Dấu thăng (♯) nâng nốt lên nửa cung.
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+      - mt21c-accidentals
+    ket_qua: dung
+    ghi_chu: 'OMT Half Steps: "A sharp raises a note by a half step"; "Sharps, flats, and naturals are the three most common accidentals" (khớp tiêu đề "Ba dấu hóa" của trang). MT21C 1.4: "The sharp symbol—♯—raises a pitch a half step."'
+  - id: n7
+    cau: Dấu giáng (♭) hạ nốt xuống nửa cung.
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+      - mt21c-accidentals
+    ket_qua: dung
+    ghi_chu: 'OMT Half Steps: "a flat lowers a note by a half step". MT21C 1.4: "The flat symbol—♭—lowers a pitch a half step."'
+  - id: n8
+    cau: Dấu bình (♮) hủy dấu thăng hoặc giáng, trả nốt về tự nhiên.
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+      - mt21c-accidentals
+    ket_qua: dung
+    ghi_chu: 'OMT Half Steps: "A natural (♮) ... cancels a previous accidental such as a sharp or flat." MT21C 1.4: "The natural symbol—♮—cancels out any other accidentals that may have occurred earlier in a measure or in Major Key Signatures or Minor Key Signatures."'
+  - id: n9
+    cau: Fa♯ (F♯) là phím đen ngay bên phải Fa. Si♭ (B♭) là phím đen ngay bên trái Si.
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+    ket_qua: dung
+    ghi_chu: 'OMT Half Steps: nửa cung trên một phím là phím liền bên phải, nửa cung dưới là phím liền bên trái; "the black key to the right of the note C is called “C-sharp” ... the black key to the left of the note D is called “D-flat”". Fa♯ cao hơn Fa nửa cung (phím đen liền bên phải Fa); Si♭ thấp hơn Si nửa cung (phím đen liền bên trái Si).'
+  - id: n10
+    cau: Dấu thăng kép (×) nâng nốt lên một cung; dấu giáng kép (♭♭) hạ nốt xuống một cung.
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+      - fff-pitch
+      - mt21c-accidentals
+    ket_qua: dung
+    ghi_chu: 'OMT Half Steps: "A double sharp raises a note by a whole step, while a double flat lowers a note by a whole step"; "(usually notated as 𝄪 or less commonly as ♯♯)". FFF 5: "A double sharp symbol (x) indicates that the pitch in question is two semitones higher ... a double flat symbol (bb) ... two semitones lower". MT21C 1.4: 𝄪 "raises a pitch two half steps, or a whole step", 𝄫 "lowers". Trang viết × và ♭♭ thay cho 𝄪 và 𝄫: cùng nghĩa.'
+  - id: n11
+    cau: Dấu thăng kép và dấu giáng kép dùng khi cần nâng hay hạ một nốt đã mang dấu hóa.
+    loai: quy-tac
+    nguon:
+      - umass-ks
+      - omt-seventh
+    ket_qua: dung
+    ghi_chu: 'UMass Unit 7: "In some rare instances, musicians need to lower or raise a note by two half steps. In such cases, we use a DOUBLE FLAT (bb) ... or a DOUBLE SHARP (##)"; ví dụ trong chính bài ấy: nốt đầu ô là F# (dấu thăng của hóa biểu), hai nốt sau là F## (nâng tiếp một nốt đã mang dấu thăng). OMT Seventh Chords, ví dụ 9: "C and E♭ are lowered by a half step to C♭ and E𝄫" (E♭ đã có trong hóa biểu La♭ trưởng).'
+  - id: n12
+    cau: Bạn sẽ gặp dấu thăng kép và dấu giáng kép ở các bài nâng cao.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ (../opus-zero/docs): nhac-ly/17-khoa-do-dich-giong.md (mục 4: "một dấu thăng có thể thành dấu bình hoặc thăng kép"), nhac-ly/27-ky-hieu-hop-am.md ("Si giáng kép"), piano/hoa-am/ket.md ("Fa thăng kép", "Đô thăng kép"), piano/tac-pham/chopin-fantaisie-impromptu.md ("Fa thăng kép"), piano/tac-pham/schubert-impromptu-sol-giang.md ("dấu giáng kép"), piano/ban-do-ban-phim.md (dấu thăng kép 𝄪 và giáng kép 𝄫).'
+  - id: n13
+    cau: Bấm thử các phím đen trên bàn phím dưới đây để xem tên của chúng (bàn phím từ Đô4 đến Si4).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Kiểm với chỉ thị ::cong-cu{ten="piano" range="C4-B4"} và thành phần mới (src/scripts/ve.js veBanPhim, ban-phim.js; đã chạy veBanPhim cho khoảng này): 12 phím, 7 trắng và 5 đen; bấm phím thì phát tiếng và dòng aria-live đọc tên, năm phím đen là "Đô♯/Rê♭ (C♯/D♭4)", "Rê♯/Mi♭ (D♯/E♭4)", "Fa♯/Sol♭ (F♯/G♭4)", "Sol♯/La♭ (G♯/A♭4)", "La♯/Si♭ (A♯/B♭4)". Bản cũ (piano.js, nameOf) ghi cùng dạng tên.'
+  - id: n14
+    cau: Đi lên từng nửa cung từ Đô đến Đô là đi qua tất cả 12 phím của một quãng tám.
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+      - mt21c-enharmonic
+    ket_qua: dung
+    ghi_chu: 'Nửa cung là một phần mười hai quãng tám (OMT Half Steps, bảng thuật ngữ); một quãng tám có 7 phím trắng và 5 phím đen, MT21C 1.5: "C♯=D♭, D♯=E♭, F♯=G♭, G♯=A♭, A♯=B♭". Khối abc 1 có 13 nốt (12 phím và Đô cao ở cuối, lặp lại phím Đô đầu), mỗi bước đúng một nửa cung (abcjs: C4 C♯4 D4 D♯4 E4 F4 F♯4 G4 G♯4 A4 A♯4 B4 C5, MIDI 60 đến 72).'
+  - id: n15
+    cau: Dấu hóa viết ngay trước một nốt trong bài gọi là dấu hóa bất thường (accidental).
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+      - umass-ks
+      - mt21c-accidentals
+    ket_qua: dung
+    ghi_chu: 'OMT Half Steps: "An accidental changes the pitch of a note ... Accidentals are always written to the left of a note". UMass Unit 7: "Any sharp, flat, or natural placed immediately before a note is called an ACCIDENTAL." MT21C 1.4: "accidentals are characters that can be placed before notes to raise or lower them." Tên "dấu hóa bất thường" theo src/data/thuat-ngu.yml (id accidental).'
+  - id: n16
+    cau: Dấu hóa bất thường có hiệu lực với mọi nốt cùng cao độ từ đó đến hết ô nhịp. Sang ô nhịp mới thì hết tác dụng.
+    loai: quy-tac
+    nguon:
+      - fff-pitch
+      - mmt-accidentals
+      - umass-ks
+    ket_qua: dung
+    ghi_chu: 'FFF 5: "By convention, accidentals apply to all other noteheads appearing on that line or space for the remainder of the measure in which it appears unless otherwise indicated." MyMusicTheory: "all the other notes which are the same pitch, (or position on the staff), are also affected by the accidental, but only until a bar line is drawn"; nốt cùng tên ở vị trí khác trên khuông không bị ảnh hưởng ("an octave higher"). UMass Unit 7: "the bar line cancels the effect of all accidentals". "Cùng cao độ" của trang = cùng dòng hay khe.'
+  - id: n17
+    cau: Ở ví dụ ^F G F G | …, ô nhịp đầu có hai nốt Fa đều là Fa♯ vì dấu thăng còn hiệu lực; ở ô nhịp sau, Fa trở lại tự nhiên.
+    loai: quy-tac
+    nguon:
+      - fff-pitch
+      - umass-ks
+    ket_qua: dung
+    ghi_chu: "abcjs (setUpAudio, public/vendor/abcjs-basic-min.js) phát F♯4 G4 F♯4 G4 | F4 G4 F4: nốt Fa thứ hai của ô 1 phát F♯ (MIDI 66), Fa ở ô 2 phát F (65). Khớp FFF 5 và UMass Unit 7 (dấu hóa có hiệu lực đến hết ô nhịp, vạch nhịp hủy dấu hóa)."
+  - id: n18
+    cau: Dấu bình ở đầu ô nhịp sau không bắt buộc (dấu thăng đã hết hiệu lực ở vạch nhịp), nhưng người viết vẫn thêm vào để nhắc người đọc; đây gọi là dấu hóa nhắc (courtesy accidental).
+    loai: dinh-nghia
+    nguon:
+      - fff-pitch
+      - fff-major-keys
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Dấu bình cuối cùng không bắt buộc nhưng người viết vẫn thêm vào để nhắc người đọc; đây gọi là dấu hóa nhắc.", với ví dụ ^F G F G | F G =F2 |] (dấu bình ở nốt Fa thứ hai của ô 2). Chữ mới: "Dấu bình ở đầu ô nhịp sau không bắt buộc, nhưng người viết vẫn thêm vào để nhắc người đọc; đây gọi là dấu hóa nhắc.", với ví dụ ^F G F G | =F G F2 |]. Lý do: định nghĩa của câu đúng. FFF 5: "a composer or publisher will include redundant accidentals as helpful reminders to performers ... The natural symbol in m. 18 is not entirely necessary, since the flat symbol in m. 17 applies only until the end of the bar ... Accidentals such as these are called “courtesy accidentals”"; FFF 8.3: "They occur after a previous accidental altered a given pitch ... to remind the performer that a scale degree has gone back to normal as specified by the key signature." Ví dụ của FFF 5 (mm. 17–18) đặt dấu bình trên nốt đầu của ô 18, ngay sau bốn nốt La♭ của ô 17; FFF 8.3 cũng mô tả dấu nhắc xuất hiện ở ô sau ô có dấu hóa. Ví dụ cũ đặt dấu bình ở nốt Fa thứ hai của ô 2, sau một nốt Fa không dấu trong cùng ô: vẫn là dấu thừa nên đúng định nghĩa, nhưng không điển hình và dễ gây hiểu nhầm (nốt người đọc ngờ nhất là nốt Fa đầu ô, ngay sau vạch nhịp). Đã dời dấu bình lên nốt Fa đầu ô 2 (lần xuất hiện đầu tiên của Fa trong ô mới). Âm thanh không đổi (abcjs: cùng F♯4 G4 F♯4 G4 F4 G4 F4); abcjs vẽ ♮ trước nốt đầu ô 2 (đã xem ảnh vẽ bằng Chromium).'
+  - id: n19
+    cau: "Một phím đen có thể có hai tên: phím giữa Đô và Rê vừa là Đô♯ vừa là Rê♭."
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+      - mt21c-enharmonic
+    ket_qua: dung
+    ghi_chu: 'OMT Half Steps: phím đen bên phải C là C♯, phím đen bên trái D là D♭ (cùng một phím giữa C và D); "each key on the piano keyboard has more than one name ... C♯ and D♭ are enharmonically equivalent". MT21C 1.5: "C♯ and D♭ are the same note on the piano but are written as different notes on the staff."'
+  - id: n20
+    cau: Hai tên này chỉ cùng một âm thanh trên piano, gọi là đồng âm khác tên (enharmonic).
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+      - fff-pitch
+      - mt21c-enharmonic
+    ket_qua: dung
+    ghi_chu: 'OMT Half Steps: "Notes have enharmonic equivalence when they are spelled differently but sound the same." FFF 5: "When two names refer to the same pitch, those names are said to be enharmonically equivalent." MT21C 1.5: "When two notes sound the same but are written as two different notes on the staff, the written notes are said to be enharmonic." Tên tiếng Việt "đồng âm khác tên" chưa có trong src/data/thuat-ngu.yml (ghi cho D3-L5).'
+  - id: n21
+    cau: Dùng tên nào phụ thuộc vào giọng của bản nhạc.
+    loai: quy-tac
+    nguon:
+      - fff-pitch
+      - fff-major-scales
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: 'FFF 5: "The way a pitch is spelled—that is, the way it is labeled with a pitch-letter name—indicates how it sounds and functions in relation to the notes around it. D# and an Eb might refer to the same pitch, but in a musical context these labels might mean something very different." FFF 6.2: gam viết theo mỗi tên nốt một lần (nên phím đen giữa La và Si là Si♭ trong gam Fa trưởng). OMT Minor Scales: chọn đúng tên đồng âm theo hóa biểu ("only B♭ minor (five flats) is the relative minor of D♭ major ... because A♯ minor has a different key signature"). "Giọng" là cách trang nói về ngữ cảnh ấy.'
+  - id: n22
+    cau: Ta sẽ hiểu điều này ở bài gam.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Bài 6 (nhac-ly/06-gam-truong, cùng lô, đã chuyển) trả lời đúng câu hỏi này: bài tập 2 và câu hỏi cuối "Vì sao gam Fa trưởng dùng Si♭ mà không dùng La♯?" (mỗi tên nốt chỉ xuất hiện một lần trong gam).'
+  - id: n23
+    cau: "Trên bàn phím, mỗi phím đen có hai tên (Đô♯ cũng là Rê♭), và có hai cặp phím trắng không có phím đen ở giữa: Mi–Fa và Si–Đô, chính là hai nửa cung tự nhiên."
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+      - mt21c-enharmonic
+    ket_qua: dung
+    ghi_chu: Lặp lại điều đã kiểm ở n4 và n19 (OMT Half Steps; MT21C 1.5).
+  - id: n24
+    cau: Xem Bản đồ bàn phím (/opus/piano/ban-do-ban-phim/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển (lô D4-L1), kiểm trên bản cũ ../opus-zero/docs/piano/ban-do-ban-phim.md: có hình bàn phím 88 phím, nhóm 2 và nhóm 3 phím đen, bảng "Cách tìm" từng nốt, và dòng "Giữa Mi–Fa và Si–Đô không có phím đen: đó là hai nửa cung tự nhiên (xem bài 5)".'
+  - id: n25
+    cau: Giữa Mi và Fa là nửa cung; giữa Fa và Sol là một cung.
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+    ket_qua: dung
+    ghi_chu: 'OMT Half Steps: E/F không có phím đen xen giữa (nửa cung); F và G có phím đen xen giữa (cặp "F and G" cách nhau một cung).'
+  - id: n26
+    cau: Phím đen giữa Sol và La có hai tên là Sol♯ và La♭.
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+    ket_qua: dung
+    ghi_chu: 'OMT Half Steps: phím đen bên phải G là G♯ (nửa cung trên G), cũng là phím đen bên trái A nên là A♭ ("the black key to the upper right of G is “in between” the notes G and A ... a half step above G and a half step below A"); chú thích hình ví dụ 1: "Half steps between B/C, E/F, G and G sharp and A and A flat are shown".'
+  - id: n27
+    cau: Mi♯ nâng Mi lên nửa cung, rơi đúng vào phím Fa. Đô♭ hạ Đô xuống nửa cung, rơi vào phím Si.
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+      - fff-pitch
+      - mt21c-enharmonic
+    ket_qua: dung
+    ghi_chu: 'OMT Half Steps: "F is also known as E♯, and E is also known as F♭. C is also known as B♯, and B is also known as C♭." FFF 5: "A C ... is enharmonically equivalent to a B# and an E is enharmonically equivalent to Fb". MT21C 1.5: "Notes on the white keys of the piano can be written enharmonically as well (C=B♯, E=F♭, D=C𝄪, etc.)".'
+  - id: n28
+    cau: Đây là lý do không nên nghĩ "thăng = phím đen".
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: "Hệ quả của n27: E♯ = F và B♯ = C là phím trắng (OMT Half Steps; MT21C 1.5). Không trái trang lõi nào."
+  - id: n29
+    cau: 'Hộp "Luyện tập kèm theo": trang Nhận biết quãng (mục Luyện với công cụ) có công cụ với bộ quãng "Tất cả", dùng để nghe quãng 2 thứ và 2 trưởng.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ: ../opus-zero/docs/luyen-tai/nghe-quang.md có mục "## Luyện với công cụ" (id luyen-voi-cong-cu, chính trang ấy dùng #luyen-voi-cong-cu) và khối oz-interval-trainer; assets/js/interval-trainer.js: ô "Bộ quãng" có "Tất cả 12 quãng" (SETS.all = 1 đến 12 nửa cung; NAMES: 1 = "2 thứ", 2 = "2 trưởng"). Các bộ nhỏ hơn không có 2 thứ (bộ "Mở rộng" chỉ có 2 trưởng), nên phải chọn bộ Tất cả để nghe cả hai: câu của trang đúng. Lô chuyển trang Nhận biết quãng (D3-L6) phải giữ ô "Bộ quãng" có bộ "Tất cả".'
+  - id: n30
+    cau: Quãng 2 thứ là một nửa cung; quãng 2 trưởng là một cung (hai nửa cung).
+    loai: dinh-nghia
+    nguon:
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "OMT Intervals, bảng số nửa cung (mục Intervallic Enharmonic Equivalence): 1 nửa cung = mi2 (2 thứ), 2 nửa cung = ma2 (2 trưởng)."
+  - id: n31
+    cau: 'Câu hỏi 1: "Giữa hai nốt nào trong các cặp sau là nửa cung tự nhiên?" Đáp án đúng: Mi – Fa. Sai: Đô – Rê, Sol – La. Giải thích: hai nửa cung tự nhiên là Mi–Fa và Si–Đô.'
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+    ket_qua: dung
+    ghi_chu: Đô – Rê và Sol – La đều có phím đen xen giữa (cặp "C and D", "G and A" cách nhau một cung); Mi – Fa không có phím đen (OMT Half Steps). Giải thích đúng.
+  - id: n32
+    cau: 'Câu hỏi 2: "Dấu giáng có tác dụng gì?" Đáp án đúng: hạ nốt xuống nửa cung. Sai: nâng nốt lên nửa cung, hủy dấu hóa trước đó. Giải thích: dấu bình mới là dấu hủy.'
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+    ket_qua: dung
+    ghi_chu: 'OMT Half Steps: "A sharp raises a note by a half step, while a flat lowers a note by a half step. A natural cancels a previous accidental." Hai lựa chọn sai là tác dụng của dấu thăng và dấu bình; giải thích đúng.'
+  - id: n33
+    cau: 'Câu hỏi 3: "Dấu hóa bất thường có hiệu lực đến khi nào?" Đáp án đúng: đến hết ô nhịp. Sai: chỉ với một nốt ngay sau nó, đến hết bản nhạc. Giải thích: sang ô nhịp mới thì hết tác dụng.'
+    loai: quy-tac
+    nguon:
+      - fff-pitch
+      - mmt-accidentals
+    ket_qua: dung
+    ghi_chu: 'FFF 5 và MyMusicTheory (xem n16): hiệu lực đến hết ô nhịp, cho mọi nốt cùng dòng hay khe. "Chỉ một nốt" sai (nốt sau trong cùng ô vẫn chịu ảnh hưởng, như ví dụ F♯ ở n17); "đến hết bản nhạc" sai (đó là việc của hóa biểu, không phải dấu hóa bất thường).'
+  - id: n34
+    cau: 'Câu hỏi 4: "Phím đen giữa Rê và Mi có những tên nào?" Đáp án đúng: Rê♯ và Mi♭. Sai: Rê♭ và Mi♯; Đô♯ và Rê♭. Giải thích: hai tên đồng âm khác tên của cùng một phím.'
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+      - mt21c-enharmonic
+    ket_qua: dung
+    ghi_chu: 'Phím đen giữa D và E là D♯ = E♭ (MT21C 1.5: D♯=E♭). "Rê♭ và Mi♯": Rê♭ là phím đen giữa Đô và Rê, Mi♯ = Fa (phím trắng) nên sai. "Đô♯ và Rê♭" là tên của phím đen giữa Đô và Rê, không phải giữa Rê và Mi. Giải thích đúng.'
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - not
+      - dau-hoa
+    ket_qua: dung
+    ghi_chu: "Gam nửa cung đi lên, K:C, M:none, L:1/8. abcjs đọc C4 C♯4 D4 D♯4 E4 F4 F♯4 G4 G♯4 A4 A♯4 B4 C5 (MIDI 60 đến 72): mỗi bước đúng một nửa cung, 13 nốt (12 phím và Đô cao); dấu thăng viết bằng ^ trước nốt, không dùng dấu giáng. Đúng điều trang nói (n14). Không có vạch nhịp nên không có phép kiểm độ dài ô. abcjs không cảnh báo (tools/khuong-nhac.mjs)."
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - dau-hoa
+      - nhip
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ (ABC): ^F G F G | F G =F2 |] ; chữ mới: ^F G F G | =F G F2 |] (dấu bình dời từ nốt Fa thứ hai lên nốt Fa đầu ô 2; xem n18). M:4/4, L:1/4: ô 1 = 4 phách, ô 2 = 4 phách (=F G F2: 1+1+2). abcjs đọc F♯4 G4 F♯4 G4 | F4 G4 F4: nốt Fa thứ hai của ô 1 là Fa♯ nhờ dấu thăng còn hiệu lực (n17), Fa ở ô 2 tự nhiên; hai bản cho cùng âm thanh. Vị trí dấu hóa nhắc theo FFF 5 (mm. 17–18: dấu bình trên nốt đầu của ô sau) và FFF 8.3 (dấu nhắc ở ô sau ô có dấu hóa): ở đây trên lần xuất hiện đầu tiên của Fa trong ô 2. abcjs không cảnh báo."
+doi_chu:
+  - cu: Ở ô nhịp đầu, cả hai nốt Fa đều là Fa♯ vì dấu thăng còn hiệu lực. Ở ô nhịp sau, Fa trở lại tự nhiên. Dấu bình cuối cùng không bắt buộc nhưng người viết vẫn thêm vào để nhắc người đọc; đây gọi là dấu hóa nhắc.
+    moi: Ở ô nhịp đầu, cả hai nốt Fa đều là Fa♯ vì dấu thăng còn hiệu lực. Ở ô nhịp sau, Fa trở lại tự nhiên. Dấu bình ở đầu ô nhịp sau không bắt buộc, nhưng người viết vẫn thêm vào để nhắc người đọc; đây gọi là dấu hóa nhắc.
+    ly_do: "n18 (da-sua): dấu hóa nhắc thường đặt ở nốt cùng tên đầu tiên của ô nhịp sau (Andre Mount, Fundamentals, Function, and Form, ch. 5 và 8.3); ví dụ cũ đặt dấu bình ở nốt Fa thứ hai, sau một Fa không dấu cùng ô, dễ nhầm. Câu và ví dụ (khuông 2) sửa cùng nhau."
+  - cu: |-
+      khuông:  | X:1
+      L:1/4
+      M:4/4
+      Q:1/4=90
+      K:C
+      ^F G F G | F G =F2 |]
+    moi: |-
+      khuông:  | X:1
+      L:1/4
+      M:4/4
+      Q:1/4=90
+      K:C
+      ^F G F G | =F G F2 |]
+    ly_do: "Khuông 2 (da-sua), theo n18: dời dấu bình lên nốt Fa đầu ô nhịp 2; âm thanh không đổi."
+  - cu: Open Music Theory; musictheory.net.
+    moi:
+      - "Open Music Theory: Half Steps, Whole Steps, and Accidentals; Intervals."
+      - "Andre Mount, Fundamentals, Function, and Form: chương 5. Pitch và 8. Major Keys and Key Signatures (dấu hóa bất thường, dấu hóa nhắc)."
+    ly_do: "Mục Nguồn: thay link chung tới Open Music Theory bằng link tới đúng các chương đã đọc khi kiểm định (lượt 1), thêm giáo trình mở và trang IMSLP đã dùng; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, không đọc được chữ để kiểm."

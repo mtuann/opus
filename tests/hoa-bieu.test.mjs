@@ -163,8 +163,11 @@ test('::cong-cu{ten="keysig-quiz"}: điều khiển như circle.js cũ; câu h�
 	assert.deepEqual(giongDuocHoi(4).map((k) => k.chu_am), ['C', 'G', 'D', 'A', 'E', 'F', 'Bb', 'Eb', 'Ab']);
 	assert.equal(giongDuocHoi(7).length, 15);
 	assert.match(nutTraLoi('thu', 4), /^<button type="button" class="oz-btn" data-giong="C">La thứ <small>A<\/small><\/button>/);
-	assert.equal(meo(3), 'Chưa đúng. Mẹo: dấu thăng cuối cùng nằm ngay dưới chủ âm nửa cung.');
-	assert.equal(meo(-2), 'Chưa đúng. Mẹo: dấu giáng áp chót chính là tên giọng (trừ Fa trưởng có 1 dấu giáng).');
-	assert.equal(meo(0), 'Chưa đúng. Không có dấu hóa nào.');
+	assert.equal(meo(3), 'Chưa đúng. Mẹo: dấu thăng cuối cùng, đi lên nửa cung, là chủ âm của giọng trưởng.');
+	assert.equal(meo(-2), 'Chưa đúng. Mẹo: dấu giáng áp chót là tên giọng trưởng (riêng 1 dấu giáng là Fa trưởng).');
+	assert.equal(meo(0), 'Chưa đúng. Mẹo: không có dấu hóa nào là Đô trưởng.');
+	// hỏi giọng thứ: nhắc thêm bước từ giọng trưởng sang giọng thứ song song (mẹo cũ chỉ đúng cho giọng trưởng)
+	assert.equal(meo(1, 'thu'), 'Chưa đúng. Mẹo: dấu thăng cuối cùng, đi lên nửa cung, là chủ âm của giọng trưởng. Giọng thứ song song thấp hơn chủ âm giọng trưởng 3 nửa cung.');
+	assert.match(meo(-1, 'thu'), /riêng 1 dấu giáng là Fa trưởng\)\. Giọng thứ song song thấp hơn chủ âm giọng trưởng 3 nửa cung\.$/);
 	assert.throws(() => dung('::cong-cu{ten="keysig-quiz" khoa="fa"}'), /không nhận thông số/);
 });

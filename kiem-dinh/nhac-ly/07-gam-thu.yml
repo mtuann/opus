@@ -1,0 +1,413 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/07-gam-thu
+trang: src/content/docs/nhac-ly/07-gam-thu.md
+nguon_cu: ../opus-zero/docs/nhac-ly/07-gam-thu.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-24
+    nhanh: moi/d3-l1
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D3-L1 lượt 1, phần 2/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Trang gam thứ (tầng lõi). Nguồn chính: Open Music Theory (OMT), mở từng chương bằng curl ngày 24/10/2026 (công cụ đọc web bị trang chặn, theo lời giao việc của lô); bổ sung: Andre Mount (FFF) ch. 7, 9, 16, MT21C 3.2; giọng của ba tác phẩm theo IMSLP (trang tác phẩm mở được). Câu về site (n11, n28, n31, n35): kiểm trên bản cũ ../opus-zero/docs/ và JavaScript cũ vì trang đích chưa chuyển; riêng bàn phím kiểm với thành phần mới của lô. Sửa trang: n1 (câu mở đầu và mô tả trang), n2 đến n4 (thêm giọng của ba tác phẩm; Bach thêm số BWV), n10 (bỏ "bậc 3 tạo nên màu tối"), n22 (bỏ "nghe hơi phương Đông", "âm thanh" đổi thành "bước nhảy") và mục Nguồn (thay link chung tới OMT và musictheory.net bằng các chương đã đọc; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, agent không đọc được chữ). Thuật ngữ cho D3-L5: "giọng thứ song song" (relative minor), "giọng thứ cùng tên" (parallel minor), "gam thứ tự nhiên, hòa âm, giai điệu", tính chất quãng ("quãng 2 tăng", "4 tăng", "3 thứ") chưa có trong src/data/thuat-ngu.yml; bài 7 và 8 viết bậc bằng số Ả Rập ("bậc 3, 6, 7") còn bài 6 dùng số La Mã; bản cũ luyen-tai/nghe-gam viết "Thứ hòa thanh" còn bài 7 và công cụ cũ viết "gam thứ hòa âm" (cần một tên). Không tính là nhận định: tên tiêu đề, "Bài tập" mục 1 và 2 (là câu hỏi, đáp án đã tính ở n33, n34).'
+nguon:
+  - id: omt-steps
+    bac: 2
+    ten: Open Music Theory, Half Steps, Whole Steps, and Accidentals
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/half-and-whole-steps/
+  - id: omt-intervals
+    bac: 2
+    ten: Open Music Theory, Intervals (cả bảng số nửa cung ở mục Intervallic Enharmonic Equivalence)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/intervals/
+  - id: omt-major
+    bac: 2
+    ten: Open Music Theory, Major Scales, Scale Degrees, and Key Signatures (cả mục The Circle of Fifths và bảng thuật ngữ)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/major-scales/
+  - id: omt-minor
+    bac: 2
+    ten: Open Music Theory, Minor Scales, Scale Degrees, and Key Signatures (cả các mục The Parallel and Relative Relationships, Minor Keys and the Circle of Fifths, Major or Minor?)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/
+  - id: omt-harmony
+    bac: 2
+    ten: Open Music Theory, Introduction to Harmony, Cadences, and Phrase Endings
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/
+  - id: fff-minor-scales
+    bac: 2
+    ten: Andre Mount, Fundamentals, Function, and Form (Milne Publishing, SUNY Geneseo, giáo trình mở), 7. Minor Scales (mục 7.3 Summary)
+    link: https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/7-minor-scales/
+  - id: fff-minor-keys
+    bac: 2
+    ten: Andre Mount, Fundamentals, Function, and Form (Milne Publishing, SUNY Geneseo, giáo trình mở), 9. Minor Keys and Key Signatures (mục 9.2 Minor keys, 9.3 Minor key signatures, 9.4 Parallel and relative keys)
+    link: https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/9-minor-keys-and-key-signatures-2/
+  - id: fff-minor-variants
+    bac: 2
+    ten: "Andre Mount, Fundamentals, Function, and Form (Milne Publishing, SUNY Geneseo, giáo trình mở), 16. Minor Scale Variants (mục 16.2 đến 16.4: bậc 7 trong gam thứ, gam thứ hòa âm, gam thứ giai điệu)"
+    link: https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/16-minor-scale-variants/
+  - id: mt21c-minor-sigs
+    bac: 2
+    ten: "Robert Hutchinson, Music Theory for the 21st-Century Classroom (giáo trình mở, University of Puget Sound), 3.2 Minor Key Signatures (cả chú thích hình 3.2.4: Mozart, Giao hưởng số 40 giọng Sol thứ)"
+    link: https://musictheory.pugetsound.edu/mt21c/MinorKeySignatures.html
+  - id: imslp-mozart40
+    bac: 2
+    ten: "IMSLP, Symphony No.40, K.550 (Mozart): mục General Information, ô Key: G minor"
+    link: https://imslp.org/wiki/Symphony_No.40,_K.550_%28Mozart,_Wolfgang_Amadeus%29
+  - id: imslp-beethoven5
+    bac: 2
+    ten: "IMSLP, Symphony No.5, Op.67 (Beethoven): mục General Information, ô Key: C minor và danh sách chương kèm giọng"
+    link: https://imslp.org/wiki/Symphony_No.5,_Op.67_%28Beethoven,_Ludwig_van%29
+  - id: imslp-bwv565
+    bac: 2
+    ten: "IMSLP, Toccata and Fugue in D minor, BWV 565 (Bach): mục General Information, ô Key: D minor"
+    link: https://imslp.org/wiki/Toccata_and_Fugue_in_D_minor,_BWV_565_%28Bach,_Johann_Sebastian%29
+  - id: imslp-bwv540
+    bac: 2
+    ten: "IMSLP, Toccata and Fugue in F major, BWV 540 (Bach): mục General Information, ô Key: F major"
+    link: https://imslp.org/wiki/Toccata_and_Fugue_in_F_major,_BWV_540_%28Bach,_Johann_Sebastian%29
+nhan_dinh:
+  - id: n1
+    cau: So với gam trưởng, gam thứ nghe tối hơn và thường được dùng để diễn tả nỗi buồn.
+    loai: dinh-nghia
+    nguon:
+      - fff-minor-scales
+      - omt-minor
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Gam trưởng nghe sáng và vững vàng. Gam thứ nghe tối hơn, buồn hơn hoặc kịch tính hơn." Chữ mới: "So với gam trưởng, gam thứ nghe tối hơn và thường được dùng để diễn tả nỗi buồn." (mô tả trang sửa theo: cũ "Gam trưởng nghe sáng và vững vàng. Gam thứ nghe tối hơn, buồn hơn hoặc kịch tính hơn. Mozart Giao hưởng số 40, Beethoven Giao hưởng số 5 và Bach Toccata và…", mới "So với gam trưởng, gam thứ nghe tối hơn và thường được dùng để diễn tả nỗi buồn. Mozart Giao hưởng số 40 (Sol thứ), Beethoven Giao hưởng số 5 (Đô thứ) và…"). Lý do: câu cũ nói chung và quá lời. "Sáng và vững vàng" cho gam trưởng và "kịch tính hơn" cho gam thứ không có nguồn; giữ phần nguồn nói được. FFF 7.3: các bậc 3, 6, 7 hạ xuống, "These alterations give the minor scale is unique, dark sound" (nguyên văn, sai chính tả "is" thay cho "its"). OMT Minor Scales: "Minor is often (but not always!) used to depict negative emotions, such as sadness, in Western music."'
+  - id: n2
+    cau: Mozart Giao hưởng số 40 viết ở giọng thứ (Sol thứ).
+    loai: cau-truc
+    nguon:
+      - imslp-mozart40
+      - mt21c-minor-sigs
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Mozart Giao hưởng số 40"; chữ mới: "Mozart Giao hưởng số 40 (Sol thứ)" (thêm giọng cho rõ). IMSLP, trang Symphony No.40, K.550: Key "G minor"; tên khác "Symphony No. 40 in G Minor, K. 550". MT21C 3.2, chú thích hình 3.2.4: "Mozart, Symphony No. 40 in G Minor, K. 550, 1st movement". Khớp ../opus-zero/docs/nghe-nhac/mozart-40.md ("cung Sol thứ, K. 550").'
+  - id: n3
+    cau: Beethoven Giao hưởng số 5 viết ở giọng thứ (Đô thứ).
+    loai: cau-truc
+    nguon:
+      - imslp-beethoven5
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Beethoven Giao hưởng số 5"; chữ mới: "Beethoven Giao hưởng số 5 (Đô thứ)". IMSLP, trang Symphony No.5, Op.67: Key "C minor"; danh sách chương: "Allegro con brio (C minor, 502 bars)", "Andante con moto (A♭ major, 247 bars)", "Scherzo. Allegro (C minor) - Trio (C major, 374 bars)", "Allegro (C major, 446 bars)". Khớp ../opus-zero/docs/nghe-nhac/beethoven-5.md ("cung Đô thứ, Op. 67").'
+  - id: n4
+    cau: Bach Toccata và Fugue (BWV 565) viết ở giọng thứ (Rê thứ).
+    loai: cau-truc
+    nguon:
+      - imslp-bwv565
+      - imslp-bwv540
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Bach *Toccata và Fugue*" (không ghi giọng, không ghi số BWV); chữ mới: "Bach *Toccata và Fugue* (Rê thứ, BWV 565)". Lý do: Bach có nhiều cặp toccata và fugue, trong đó có cặp ở giọng trưởng (IMSLP: Toccata and Fugue in F major, BWV 540, Key "F major"), nên câu cũ không kiểm được nếu không biết là tác phẩm nào. Tác phẩm nổi tiếng nhất là BWV 565 (bản cũ ../opus-zero/docs/nhac-cu/nhac-cu-khac.md: "Toccata và Fugue cung Rê thứ, BWV 565 (nổi tiếng nhất, dù một số học giả nghi ngờ đây có thật là tác phẩm của Bach)"). IMSLP, trang Toccata and Fugue in D minor, BWV 565: Key "D minor", xếp dưới tên Bach. Trang này không bàn về quyền tác giả của BWV 565.'
+  - id: n5
+    cau: "Công thức của gam thứ tự nhiên: Cung – Nửa cung – Cung – Cung – Nửa cung – Cung – Cung."
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: 'OMT Minor Scales: "Natural minor: W‑H‑W‑W‑H‑W‑W (ascending)"; "the natural minor form ... ascending succession W‑H‑W‑W‑H‑W‑W".'
+  - id: n6
+    cau: Gam La thứ dùng toàn phím trắng, giống Đô trưởng nhưng bắt đầu từ La.
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+      - fff-minor-keys
+    ket_qua: dung
+    ghi_chu: 'A B C D E F G A toàn phím trắng. OMT Minor Scales: "C major does not have any sharps or flats in its key signature, and neither does A minor" (A minor là giọng thứ song song của C major, cùng bảy nốt). FFF 9.2: A minor "uses the pitches of the diatonic A-minor scale (A, B, C, D, E, F, and G)".'
+  - id: n7
+    cau: "Khoảng cách các cặp nốt liền nhau của gam La thứ tự nhiên: La–Si cung, Si–Đô nửa cung, Đô–Rê cung, Rê–Mi cung, Mi–Fa nửa cung, Fa–Sol cung, Sol–La cung."
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: A–B, C–D, D–E, F–G, G–A có phím đen xen giữa (một cung); B–C và E–F là nửa cung tự nhiên (OMT Half Steps). Thành W‑H‑W‑W‑H‑W‑W, khớp công thức gam thứ tự nhiên ở n5.
+  - id: n8
+    cau: "Trong La thứ, từ La lên Đô chỉ có 3 nửa cung (quãng 3 thứ), còn trong La trưởng là 4 nửa cung (La lên Đô♯): bậc 3 của gam thứ thấp hơn bậc 3 của gam trưởng cùng tên nửa cung."
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "OMT Minor Scales: \"A minor scale's third note is always a half step lower than the third note of the major scale with the same name.\" OMT Intervals, bảng số nửa cung: 3 nửa cung = mi3 (3 thứ), 4 nửa cung = ma3 (3 trưởng); A–C = 3, A–C♯ = 4."
+  - id: n9
+    cau: Điểm khác quyết định giữa gam thứ và gam trưởng là bậc 3.
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+      - fff-minor-scales
+    ket_qua: dung
+    ghi_chu: "OMT Minor Scales, ví dụ 10 (bảng \"Lowered Scale Degrees (versus major)\"): natural ↓3̂ ↓6̂ ↓7̂; harmonic ↓3̂ ↓6̂; melodic (ascending) ↓3̂. Bậc 3 là bậc duy nhất hạ xuống ở cả ba dạng (bậc 6 và 7 đổi theo dạng); câu đầu của chương: \"A minor scale's third note is always a half step lower than the third note of the major scale with the same name.\" Hiểu \"quyết định\" theo nghĩa này. FFF 7.2: gam thứ khác gam trưởng song song ở \"lowered scale degrees 3̂, 6̂ and 7̂\"."
+  - id: n10
+    cau: Bậc 3 thấp hơn nửa cung này có mặt ở cả ba dạng gam thứ.
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Chính bậc 3 tạo nên màu "tối" của giọng thứ."; chữ mới: "Bậc 3 thấp hơn này có mặt ở cả ba dạng gam thứ (xem bảng so sánh bên dưới)." Lý do: gán màu "tối" riêng cho bậc 3 không kiểm được; FFF 7.3 gán màu tối cho cả ba bậc hạ xuống (3, 6, 7), không riêng bậc 3. Câu mới nói điều kiểm được: OMT Minor Scales, ví dụ 10, ↓3̂ có ở gam thứ tự nhiên, hòa âm và giai điệu (đi lên).'
+  - id: n11
+    cau: Bàn phím từ La3 đến La4 tô 8 phím (ngay sau đoạn về bậc 3).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Kiểm với chỉ thị ::cong-cu{ten="piano" range="A3-A4" notes="A3 B3 C4 D4 E4 F4 G4 A4"} và thành phần mới (src/scripts/ve.js veBanPhim; đã chạy): 13 phím (8 trắng, 5 đen), tô La3, Si3, Đô4, Rê4, Mi4, Fa4, Sol4, La4; nút "Nghe các nốt được tô". Bản cũ (piano.js mountSimple) có cùng thông số.'
+  - id: n12
+    cau: Tám phím được tô (A3 B3 C4 D4 E4 F4 G4 A4) là các nốt của gam La thứ tự nhiên.
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+      - omt-steps
+    ket_qua: dung
+    ghi_chu: "La – Si – Đô – Rê – Mi – Fa – Sol – La, theo n5 đến n7; khớp khối abc 1 (abcjs: A3 B3 C4 D4 E4 F4 G4 A4)."
+  - id: n13
+    cau: Giọng thứ song song (relative minor) dùng chung hóa biểu với một giọng trưởng.
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+      - mt21c-minor-sigs
+      - fff-minor-keys
+    ket_qua: dung
+    ghi_chu: 'OMT Minor Scales: "The relative relationship is when a major and minor key share a key signature." MT21C 3.2: "We use the term relative minor when referring to a minor key that has the same key signature as a major key." Thuật ngữ: "giọng thứ song song" của site là relative minor của OMT (còn "giọng cùng tên" là parallel); thuat-ngu.yml chưa có hai mục này (ghi cho D3-L5).'
+  - id: n14
+    cau: Chủ âm của giọng thứ song song là bậc 6 của gam trưởng, hay thấp hơn chủ âm trưởng 3 nửa cung.
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+      - omt-major
+      - fff-minor-keys
+    ket_qua: dung
+    ghi_chu: "OMT Minor Scales: \"whose tonic is three half steps below the relative major's tonic\"; \"the submediant is a third below the tonic\" và OMT Major Scales: bậc 6̂ = submediant, nên chủ âm thứ nằm ở bậc 6 của gam trưởng. FFF 9.4: \"a major scale and its relative minor use the same set of pitch classes with minor starting two steps lower down\" (nốt chủ âm C minor là \"la\" trong E♭ major)."
+  - id: n15
+    cau: Đô trưởng ↔ La thứ (không dấu hóa); Sol trưởng ↔ Mi thứ (1 dấu thăng); Fa trưởng ↔ Rê thứ (1 dấu giáng).
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+      - omt-major
+    ket_qua: dung
+    ghi_chu: 'OMT Minor Scales: "C major does not have any sharps or flats in its key signature, and neither does A minor"; thứ tự các giọng thứ theo số dấu (ví dụ 12: A, E, B, F♯ … minor; ví dụ 13: A, D, G, C … minor) cho E minor một dấu thăng (cặp với G major, một dấu thăng F♯) và D minor một dấu giáng (cặp với F major, một dấu giáng B♭, OMT Major Scales).'
+  - id: n16
+    cau: "Giọng thứ cùng tên (parallel minor) có cùng chủ âm nhưng khác hóa biểu: Đô trưởng và Đô thứ."
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+      - mt21c-minor-sigs
+      - fff-minor-keys
+    ket_qua: dung
+    ghi_chu: 'OMT Minor Scales: "The parallel relationship is when a major key shares a tonic (do, 1̂) with a minor key. For example, C major and C minor ... are parallel keys." FFF 9.4: "C major ... has no sharps or flats while C minor requires three flats."'
+  - id: n17
+    cau: Beethoven Giao hưởng số 5 đi từ Đô thứ ở chương đầu đến Đô trưởng ở chương cuối.
+    loai: cau-truc
+    nguon:
+      - imslp-beethoven5
+    ket_qua: dung
+    ghi_chu: 'IMSLP, trang Symphony No.5, Op.67: chương 1 "Allegro con brio (C minor, 502 bars)", chương 4 "Allegro (C major, 446 bars)". Khớp ../opus-zero/docs/nghe-nhac/beethoven-5.md (bảng chương: 1 Đô thứ, 4 Đô trưởng). Là ví dụ về hai giọng cùng tên (n16).'
+  - id: n18
+    cau: Trong gam thứ tự nhiên, bậc 7 cách chủ âm một cung (Sol – La), nên không có lực kéo mạnh về chủ âm như cảm âm của gam trưởng.
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+      - fff-minor-variants
+    ket_qua: dung
+    ghi_chu: 'OMT Minor Scales: "The supertonic is one whole step above the tonic, while the subtonic is one whole step below the tonic"; gam thứ tự nhiên "lacks the same sense of closure you heard in the major scale". FFF 16.2: "the seventh scale degree is a whole step away from the tonic ... the analogous scale degree in the diatonic minor lacks that force."'
+  - id: n19
+    cau: "Để tạo lực kéo đó, người ta nâng bậc 7 lên nửa cung: Sol thành Sol♯. Đó là gam thứ hòa âm."
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+      - fff-minor-variants
+    ket_qua: dung
+    ghi_chu: 'OMT Minor Scales: harmonic minor "Like natural minor, but with a raised leading tone" (bảng thuật ngữ); "In harmonic minor (Example 7b), ti (↑7̂) replaces te (7̂). Having ti (7̂) creates the sense of closure that is absent in the natural minor scale." FFF 16.3: "The harmonic minor composite ... adjusts scale degree 7̂ of the diatonic minor scale ... in order to create the otherwise missing leading tone."'
+  - id: n20
+    cau: Dấu thăng này không nằm trong hóa biểu, mà được viết như dấu hóa bất thường mỗi lần xuất hiện.
+    loai: quy-tac
+    nguon:
+      - fff-minor-keys
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: 'FFF 9.3: "Scale degrees 6̂ and 7̂ may be raised by an accidental within the music ... but these alterations are not represented by the key signature." OMT Minor Scales: minor key signatures "are based on the natural minor scale".'
+  - id: n21
+    cau: Thấy một nốt hay bị thăng lên trong bản nhạc giọng thứ thì đó thường là cảm âm.
+    loai: quy-tac
+    nguon:
+      - fff-minor-variants
+      - fff-minor-keys
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: 'Cảm âm nâng (↑7̂) có ở cả gam thứ hòa âm lẫn giai điệu (OMT Minor Scales; FFF 16.3, 16.4); bậc 6 nâng chỉ có ở gam thứ giai điệu đi lên (n23). FFF 16.2: ví dụ Brahms, "This E#—an altered form of scale degree 7̂—pulls strongly toward the F# tonic". Câu đã có "thường".'
+  - id: n22
+    cau: Khoảng cách giữa Fa và Sol♯ là 3 nửa cung; đây là bước nhảy đặc trưng của gam thứ hòa âm.
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+      - omt-intervals
+      - fff-minor-variants
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Khoảng cách giữa Fa và Sol♯ là 3 nửa cung, nghe hơi "phương Đông". Đây là âm thanh đặc trưng của gam thứ hòa âm." Chữ mới: "Khoảng cách giữa Fa và Sol♯ là 3 nửa cung. Đây là bước nhảy đặc trưng của gam thứ hòa âm." Lý do: "nghe hơi phương Đông" là cảm nhận văn hóa không kiểm được, và nguồn đọc được không nói vậy. Phần kiểm được: OMT Minor Scales: harmonic minor = "W‑H‑W‑W‑H‑3Hs‑H" (bước 3 nửa cung giữa bậc 6 và 7); OMT Intervals, bảng số nửa cung: 3 nửa cung = A2 (quãng 2 tăng); FFF 16.4: "an augmented second appears between the sixth and seventh scale degrees". Bước 3 nửa cung này OMT và FFF gọi là augmented second; trang không đưa tên tiếng Việt vào (bài 9 cũ gọi quãng "4 tăng", "3 thứ", nên sẽ là "quãng 2 tăng"; thuat-ngu.yml chưa có các tính chất quãng: ghi cho D3-L5). Bản cũ ../opus-zero/docs/luyen-tai/nghe-gam.md cũng viết gam thứ hòa âm là "màu Trung Đông / Tây Ban Nha": lô chuyển trang ấy xử lý như ở đây.'
+  - id: n23
+    cau: Để tránh bước nhảy 3 nửa cung khi viết giai điệu, người ta nâng cả bậc 6 và bậc 7 khi đi lên (Fa♯, Sol♯).
+    loai: quy-tac
+    nguon:
+      - fff-minor-variants
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: 'FFF 16.4: nâng bậc 7 "creates a melodic problem: an augmented second appears between the sixth and seventh scale degrees ... By raising scale degree 6̂, one may avoid both of these issues. The interval between 6̂ and 7̂ contracts to become a major second". OMT Minor Scales: "In the ascending form of melodic minor, le–te (6̂–7̂) becomes la-ti (↑6̂–↑7̂)".'
+  - id: n24
+    cau: Gam thứ giai điệu trở về gam tự nhiên khi đi xuống.
+    loai: quy-tac
+    nguon:
+      - omt-minor
+      - fff-minor-variants
+    ket_qua: dung
+    ghi_chu: 'OMT Minor Scales: "In the descending form of melodic minor, natural minor is restored"; melodic minor đi xuống W‑W‑H‑W‑W‑H‑W. FFF 16.4: "When a melody descends through a minor scale, there is no longer a need for the raised scale degrees and the adjusted pitches typically revert back to their diatonic forms." Khối abc 3 (abcjs): A3 B3 C4 D4 E4 F♯4 G♯4 A4 | A4 G4 F4 E4 D4 C4 B3 A3.'
+  - id: n25
+    cau: "Dạng tự nhiên (từ La): bậc 6 Fa, bậc 7 Sol; gam gốc, đúng theo hóa biểu."
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+      - fff-minor-variants
+    ket_qua: dung
+    ghi_chu: 'FFF 16.1: "We refer to the scale shown above as the natural or diatonic minor since it consists of only those pitches specified by the key signature." OMT Minor Scales: hóa biểu giọng thứ "are based on the natural minor scale". A natural minor: F và G tự nhiên.'
+  - id: n26
+    cau: "Dạng hòa âm (từ La): bậc 6 Fa, bậc 7 Sol♯; dùng để xây hợp âm, đặc biệt hợp âm bậc V."
+    loai: dinh-nghia
+    nguon:
+      - fff-minor-variants
+      - omt-harmony
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: "FFF 16.3: \"the raised seventh scale degree applies only to the chords built on scale degrees 5̂ and 7̂ ... we have the same V and vii° triads in minor as we do in the parallel major.\" OMT Intro to Harmony: \"If you're writing in minor, remember that you need to use the leading-tone, ti (↑7̂), in your V chord (making it a major triad, not minor) to give it momentum toward the tonic.\""
+  - id: n27
+    cau: "Dạng giai điệu, đi lên (từ La): bậc 6 Fa♯, bậc 7 Sol♯; dùng cho giai điệu đi lên về chủ âm."
+    loai: dinh-nghia
+    nguon:
+      - fff-minor-variants
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: 'FFF 16.4: gam thứ giai điệu "provides a further modification of the diatonic minor to accommodate certain melodic circumstances ... the leading tone of the melodic minor scale resolves to scale degree 8̂". OMT Minor Scales: đi lên 6̂, 7̂ thành "la-ti (↑6̂–↑7̂)".'
+  - id: n28
+    cau: 'Thử nghe cả ba dạng trên bàn phím piano (/opus/luyen-tap/ban-phim/): chọn "Gam thứ…" ở ô "Loại".'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ: ../opus-zero/docs/luyen-tap/ban-phim.md có khối oz-piano-explorer; assets/js/piano.js (mountExplorer): ô "Loại" (select data-k="type") có nhóm "Gam" gồm "Gam trưởng", "Gam thứ tự nhiên", "Gam thứ hòa âm", "Gam thứ giai điệu (đi lên)" cùng nút "Nghe". Ba mục "Gam thứ …" là ba dạng của bài. Lô chuyển trang Bàn phím piano (D7-L1) phải giữ ô "Loại" với ba mục này.'
+  - id: n29
+    cau: Gam La thứ hòa âm dùng cùng ngón bấm với Đô trưởng; chỉ cần nhớ Sol♯ ở bậc 7.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Khớp ../opus-zero/docs/piano/gam.md, mục "Gam thứ hòa âm": hàng "La, Mi, Rê, Sol, Đô thứ" tay phải 1 2 3 1 2 3 4 (5), tay trái (5) 4 3 2 1 3 2 1, trùng ngón của Đô trưởng ("năm giọng La, Mi, Rê, Sol, Đô thứ dùng đúng ngón của Đô trưởng"). Không trái trang lõi nào.'
+  - id: n30
+    cau: Tập gam thứ ngay sau gam trưởng song song của nó (Đô trưởng rồi La thứ) để tay và tai so sánh.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập; không trái trang lõi nào (../opus-zero/docs/piano/gam.md cũng xếp gam trưởng và gam thứ song song thành cặp: "mỗi tuần một cặp giọng trưởng và giọng thứ song song", tuần 1: Đô – La thứ).'
+  - id: n31
+    cau: Xem Gam và ngón bấm (/opus/piano/gam/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Trang đích chưa chuyển (lô D4-L2), kiểm trên bản cũ ../opus-zero/docs/piano/gam.md ("# Gam và ngón bấm"; có mục "## Gam thứ hòa âm").
+  - id: n32
+    cau: Nghe chương 1 Mozart Giao hưởng số 40 (Sol thứ). Bạn có nghe thấy màu "tối" của giọng thứ không?
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Bài tập nghe, không trái trang lõi nào (../opus-zero/docs/nghe-nhac/mozart-40.md). Giọng Sol thứ đã kiểm ở n2; IMSLP: chương 1 "Molto allegro". Câu hỏi về "màu tối" là lời mời nghe, khớp n1.'
+  - id: n33
+    cau: "Gam Mi thứ tự nhiên: Mi – Fa♯ – Sol – La – Si – Đô – Rê – Mi; hóa biểu giống Sol trưởng (1 dấu thăng Fa♯)."
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+      - omt-major
+    ket_qua: dung
+    ghi_chu: "E F♯ G A B C D E = W‑H‑W‑W‑H‑W‑W. E minor là giọng thứ song song của G major (chủ âm thấp hơn G ba nửa cung: G–F♯–F–E); G major có một dấu thăng F♯ (OMT Major Scales, ví dụ 12). OMT Minor Scales, ví dụ 12: dãy giọng thứ A, E, B… cho E minor một dấu thăng."
+  - id: n34
+    cau: "Gam Rê thứ hòa âm: Rê – Mi – Fa – Sol – La – Si♭ – Đô♯ – Rê; bậc 7 Đô được nâng thành Đô♯."
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+      - omt-major
+    ket_qua: dung
+    ghi_chu: 'D minor tự nhiên: D E F G A B♭ C D (một dấu giáng B♭, giọng thứ song song của F major); harmonic minor nâng bậc 7 (C) thành C♯: D E F G A B♭ C♯ D (OMT Minor Scales: "Like natural minor, but with a raised leading tone"; W‑H‑W‑W‑H‑3Hs‑H: B♭–C♯ là 3 nửa cung).'
+  - id: n35
+    cau: 'Hộp "Luyện tập kèm theo": Nhận biết gam (/opus/luyen-tai/nghe-gam/#luyen-voi-cong-cu), bộ "Trưởng và thứ tự nhiên" rồi "Ba dạng gam thứ".'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ: ../opus-zero/docs/luyen-tai/nghe-gam.md có mục "## Luyện với công cụ" (id luyen-voi-cong-cu) và khối oz-scale-trainer; assets/js/scale-trainer.js: ô "Bộ gam" có "Trưởng và thứ tự nhiên" (SETS.mm: major, natural) và "Ba dạng gam thứ" (SETS.minors: natural, harmonic, melodic). Lô chuyển trang ấy (D3-L6) phải giữ hai bộ này.'
+  - id: n36
+    cau: 'Câu hỏi 1: "Giọng thứ song song của Đô trưởng là gì?" Đáp án đúng: La thứ. Sai: Đô thứ, Mi thứ. Giải thích: chủ âm của giọng thứ song song là bậc 6 của gam trưởng: La.'
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: "OMT Minor Scales: A minor là relative minor của C major. Đô thứ là giọng thứ cùng tên (parallel), Mi thứ là giọng thứ song song của Sol trưởng. Giải thích đúng (n14)."
+  - id: n37
+    cau: 'Câu hỏi 2: "Gam thứ hòa âm khác gam thứ tự nhiên ở bậc nào?" Đáp án đúng: bậc 7. Sai: bậc 3, bậc 6. Giải thích: bậc 7 được nâng lên nửa cung để tạo cảm âm.'
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+      - fff-minor-variants
+    ket_qua: dung
+    ghi_chu: "OMT Minor Scales, ví dụ 10: natural ↓3̂ ↓6̂ ↓7̂, harmonic ↓3̂ ↓6̂: hai dạng giống nhau ở bậc 3 và 6, khác ở bậc 7 (nâng). FFF 16.3: harmonic minor nâng bậc 7 để có cảm âm."
+  - id: n38
+    cau: 'Câu hỏi 3: "Gam thứ giai điệu khi đi xuống giống dạng nào?" Đáp án đúng: gam thứ tự nhiên. Sai: gam thứ hòa âm, gam trưởng. Giải thích: khi đi xuống, gam thứ giai điệu trở về dạng tự nhiên.'
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+      - fff-minor-variants
+    ket_qua: dung
+    ghi_chu: 'OMT Minor Scales: "the descending pattern is the same as the natural minor form" (W‑W‑H‑W‑W‑H‑W). Hòa âm và trưởng có bậc 7 nâng nên không trùng.'
+  - id: n39
+    cau: 'Câu hỏi 4: "Đô trưởng và Đô thứ có quan hệ gì?" Đáp án đúng: cùng tên chủ âm, khác hóa biểu. Sai: giọng song song, chung hóa biểu; không có quan hệ gì. Giải thích: chúng có cùng chủ âm Đô nhưng Đô thứ có 3 dấu giáng.'
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+      - fff-minor-keys
+    ket_qua: dung
+    ghi_chu: 'Cùng chủ âm C = parallel (OMT Minor Scales); khác hóa biểu: FFF 9.4 "C major ... has no sharps or flats while C minor requires three flats" (OMT Minor Scales, ví dụ 13: A, D, G, C … minor có 0, 1, 2, 3 dấu giáng). Chung hóa biểu là quan hệ song song (C major với A minor), nên lựa chọn đó sai.'
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - giong
+      - not
+      - nhip
+    ket_qua: dung
+    ghi_chu: "La thứ tự nhiên, K:Am (không dấu hóa), M:4/4, L:1/4. abcjs đọc A3 B3 C4 D4 | E4 F4 G4 A4: tám nốt La thứ tự nhiên (n5, n7), trùng 8 phím tô ở bàn phím (n12). Hai ô, mỗi ô 4 phách. abcjs không cảnh báo."
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - giong
+      - dau-hoa
+      - not
+      - nhip
+    ket_qua: dung
+    ghi_chu: "La thứ hòa âm, K:Am, M:4/4, L:1/4. abcjs đọc A3 B3 C4 D4 | E4 F4 G♯4 A4: chỉ bậc 7 nâng (^G, dấu hóa bất thường), đúng n19 và n20. Hai ô, mỗi ô 4 phách. abcjs không cảnh báo."
+  - khoi: 3
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - giong
+      - dau-hoa
+      - not
+      - nhip
+    ket_qua: dung
+    ghi_chu: "La thứ giai điệu, K:Am, M:4/4, L:1/4. abcjs đọc A3 B3 C4 D4 | E4 F♯4 G♯4 A4 | A4 G4 F4 E4 | D4 C4 B3 A3: đi lên nâng bậc 6 và 7 (^F ^G), đi xuống về tự nhiên (n23, n24). Dấu bình ở =G =F của ô 3 là dấu hóa nhắc (nhắc Sol, Fa đã trở về tự nhiên sau Sol♯, Fa♯ của ô 2), đặt ở lần xuất hiện đầu tiên của từng nốt trong ô mới, như FFF 5 và 8.3 mô tả. Bốn ô, mỗi ô 4 phách. abcjs không cảnh báo."
+doi_chu:
+  - cu: Gam trưởng nghe sáng và vững vàng. Gam thứ nghe tối hơn, buồn hơn hoặc kịch tính hơn. Mozart Giao hưởng số 40, Beethoven Giao hưởng số 5 và Bach Toccata và Fugue đều viết ở giọng thứ.
+    moi: So với gam trưởng, gam thứ nghe tối hơn và thường được dùng để diễn tả nỗi buồn. Mozart Giao hưởng số 40 (Sol thứ), Beethoven Giao hưởng số 5 (Đô thứ) và Bach Toccata và Fugue (Rê thứ, BWV 565) đều viết ở giọng thứ.
+    ly_do: 'n1 (da-sua): "sáng và vững vàng", "kịch tính hơn" không có nguồn; câu mới theo OMT Minor Scales ("often (but not always!) ... sadness") và Mount 7.3 ("dark sound"), như lô D2-L1 đã viết ở lộ trình nghe hiểu. n2–n4 (da-sua): thêm giọng của ba tác phẩm (IMSLP); ghi số BWV 565 vì Bach có toccata và fugue ở giọng trưởng (BWV 540, Fa trưởng).'
+  - cu: 'So với gam trưởng, điểm khác quyết định là bậc 3: trong La thứ, từ La lên Đô chỉ có 3 nửa cung (quãng 3 thứ), còn trong La trưởng là 4 nửa cung (La lên Đô♯). Chính bậc 3 tạo nên màu "tối" của giọng thứ.'
+    moi: "So với gam trưởng, điểm khác quyết định là bậc 3: trong La thứ, từ La lên Đô chỉ có 3 nửa cung (quãng 3 thứ), còn trong La trưởng là 4 nửa cung (La lên Đô♯). Bậc 3 thấp hơn này có mặt ở cả ba dạng gam thứ (xem bảng so sánh bên dưới)."
+    ly_do: "n10 (da-sua): Mount 7.3 gán màu tối cho cả ba bậc 3, 6, 7 hạ thấp, không riêng bậc 3; câu mới nói điều kiểm được (OMT Minor Scales, ví dụ 10: bậc 3 hạ ở cả ba dạng)."
+  - cu: Khoảng cách giữa Fa và Sol♯ là 3 nửa cung, nghe hơi "phương Đông". Đây là âm thanh đặc trưng của gam thứ hòa âm.
+    moi: Khoảng cách giữa Fa và Sol♯ là 3 nửa cung. Đây là bước nhảy đặc trưng của gam thứ hòa âm.
+    ly_do: 'n22 (da-sua): "phương Đông" không có nguồn; phần kiểm được giữ: OMT Minor Scales (công thức W–H–W–W–H–3H–H của gam thứ hòa âm) và Mount 16.4 (quãng 2 tăng giữa bậc 6 và bậc 7).'
+  - cu: Open Music Theory; musictheory.net.
+    moi:
+      - "Open Music Theory: Minor Scales, Scale Degrees, and Key Signatures; Major Scales, Scale Degrees, and Key Signatures; Intervals."
+      - "Andre Mount, Fundamentals, Function, and Form: chương 7. Minor Scales, 9. Minor Keys and Key Signatures và 16. Minor Scale Variants; Robert Hutchinson, Music Theory for the 21st-Century Classroom: 3.2 Minor Key Signatures."
+      - "Giọng của ba tác phẩm: IMSLP, trang Giao hưởng số 40, K. 550 (Mozart), Giao hưởng số 5, Op. 67 (Beethoven) và Toccata và Fugue Rê thứ, BWV 565 (Bach)."
+    ly_do: "Mục Nguồn: thay link chung tới Open Music Theory bằng link tới đúng các chương đã đọc khi kiểm định (lượt 1), thêm giáo trình mở và trang IMSLP đã dùng; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, không đọc được chữ để kiểm."
+  - cu: "mô tả: Gam trưởng nghe sáng và vững vàng. Gam thứ nghe tối hơn, buồn hơn hoặc kịch tính hơn. Mozart Giao hưởng số 40, Beethoven Giao hưởng số 5 và Bach Toccata và…"
+    moi: "mô tả: So với gam trưởng, gam thứ nghe tối hơn và thường được dùng để diễn tả nỗi buồn. Mozart Giao hưởng số 40 (Sol thứ), Beethoven Giao hưởng số 5 (Đô thứ) và…"
+    ly_do: Mô tả trang là đoạn mở đầu cắt ngắn (cách site cũ làm), sửa theo n1–n3.

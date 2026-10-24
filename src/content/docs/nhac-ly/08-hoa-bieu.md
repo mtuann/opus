@@ -28,7 +28,7 @@ Ví dụ: 3 dấu thăng, dấu cuối là Sol♯, nửa cung trên là **La** �
 Ví dụ: 3 dấu giáng (Si♭, Mi♭, La♭), dấu áp chót là Mi♭ → **Mi♭ trưởng**.
 Trường hợp riêng cần thuộc lòng: **1 dấu giáng là Fa trưởng**.
 
-**Giọng thứ:** tìm giọng trưởng như trên rồi đi xuống 3 nửa cung (bậc 6). Muốn biết bản nhạc ở giọng trưởng hay thứ, hãy nhìn nốt kết thúc và hợp âm cuối, và để ý cảm âm bị thăng lên (bài 7).
+**Giọng thứ:** tìm giọng trưởng như trên rồi đi xuống 3 nửa cung (bậc 6). Muốn biết bản nhạc ở giọng trưởng hay thứ, hãy nhìn nốt đầu và nốt kết thúc (bản nhạc thường bắt đầu và kết thúc ở chủ âm), và để ý cảm âm bị thăng lên (bài 7).
 
 Dấu hóa được thêm dần theo đúng thứ tự, từ 1 đến 7:
 
@@ -67,7 +67,7 @@ Bấm vào một giọng để xem hóa biểu, các nốt, hợp âm và nghe t
 
 ::cong-cu{ten="circle"}
 
-Vòng quãng năm còn cho biết **giọng nào "gần" nhau**: hai giọng cạnh nhau trên vòng chỉ khác một dấu hóa, nên nhạc chuyển giữa chúng rất tự nhiên. Đó là một lý do chủ đề 2 trong hình thức sonata thường ở giọng át, ngay bên phải giọng chính.
+Vòng quãng năm còn cho biết **giọng nào "gần" nhau**: hai giọng cạnh nhau trên vòng chỉ khác một dấu hóa, nên nhạc chuyển giữa chúng rất tự nhiên. Đó là một lý do chủ đề 2 trong hình thức sonata giọng trưởng thường ở giọng át, ngay bên phải giọng chính.
 
 ## Luyện tập
 
@@ -78,7 +78,7 @@ Vòng quãng năm còn cho biết **giọng nào "gần" nhau**: hai giọng c�
 :::
 
 :::tip[Trên phím đàn]
-Mỗi giọng có một "địa hình" phím đen riêng. Chơi thế năm ngón trưởng ở cả 12 giọng ([Vị trí năm ngón](/opus/piano/nam-ngon/)), rồi tập gam đi dần quanh vòng quãng năm, là cách nhanh nhất để tay nhớ hóa biểu.
+Mỗi giọng có một "địa hình" phím đen riêng. Chơi thế năm ngón trưởng ở cả 12 giọng ([Vị trí năm ngón](/opus/piano/nam-ngon/)), rồi tập gam đi dần quanh vòng quãng năm để tay làm quen với hóa biểu của từng giọng.
 :::
 
 ```quiz
@@ -111,5 +111,7 @@ Mỗi giọng có một "địa hình" phím đen riêng. Chơi thế năm ngón
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- *Open Music Theory*: [Major Scales, Scale Degrees, and Key Signatures](https://viva.pressbooks.pub/openmusictheory/chapter/major-scales/); [Minor Scales, Scale Degrees, and Key Signatures](https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/); [Intervals](https://viva.pressbooks.pub/openmusictheory/chapter/intervals/); [Sonata Form](https://viva.pressbooks.pub/openmusictheory/chapter/sonata-form/).
+- Andre Mount, *Fundamentals, Function, and Form*: chương [8. Major Keys and Key Signatures](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/8-major-keys-and-key-signatures-2/), [9. Minor Keys and Key Signatures](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/9-minor-keys-and-key-signatures-2/), [10. The Circle of Fifths](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/10-the-circle-of-fifths-2/) và [28. Modulation](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/28-modulation/).
+- Robert Hutchinson, *Music Theory for the 21st-Century Classroom*: [2.3 Major Key Signatures](https://musictheory.pugetsound.edu/mt21c/MajorKeySignatures.html), [3.2 Minor Key Signatures](https://musictheory.pugetsound.edu/mt21c/MinorKeySignatures.html), [22.3 Key Relationships](https://musictheory.pugetsound.edu/mt21c/KeyRelationships.html); Christopher White, *Fundamentals of Theory*: [Unit 7, Key Signatures](https://fundamentalsofmusictheory.umasscreate.net/unit-7/).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

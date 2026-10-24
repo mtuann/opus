@@ -1,9 +1,9 @@
 ---
 title: 7. Gam thứ
-description: Gam trưởng nghe sáng và vững vàng. Gam thứ nghe tối hơn, buồn hơn hoặc kịch tính hơn. Mozart Giao hưởng số 40, Beethoven Giao hưởng số 5 và Bach Toccata và…
+description: So với gam trưởng, gam thứ nghe tối hơn và thường được dùng để diễn tả nỗi buồn. Mozart Giao hưởng số 40 (Sol thứ), Beethoven Giao hưởng số 5 (Đô thứ) và…
 ---
 
-Gam trưởng nghe sáng và vững vàng. **Gam thứ** nghe tối hơn, buồn hơn hoặc kịch tính hơn. Mozart Giao hưởng số 40, Beethoven Giao hưởng số 5 và Bach *Toccata và Fugue* đều viết ở giọng thứ.
+So với gam trưởng, **gam thứ** nghe tối hơn và thường được dùng để diễn tả nỗi buồn. Mozart Giao hưởng số 40 (Sol thứ), Beethoven Giao hưởng số 5 (Đô thứ) và Bach *Toccata và Fugue* (Rê thứ, BWV 565) đều viết ở giọng thứ.
 
 ## Gam thứ tự nhiên
 
@@ -27,7 +27,7 @@ K:Am
 A, B, C D | E F G A |]
 ```
 
-So với gam trưởng, điểm khác quyết định là **bậc 3**: trong La thứ, từ La lên Đô chỉ có 3 nửa cung (quãng 3 thứ), còn trong La trưởng là 4 nửa cung (La lên Đô♯). Chính bậc 3 tạo nên màu "tối" của giọng thứ.
+So với gam trưởng, điểm khác quyết định là **bậc 3**: trong La thứ, từ La lên Đô chỉ có 3 nửa cung (quãng 3 thứ), còn trong La trưởng là 4 nửa cung (La lên Đô♯). Bậc 3 thấp hơn này có mặt ở cả ba dạng gam thứ (xem bảng so sánh bên dưới).
 
 ::cong-cu{ten="piano" range="A3-A4" notes="A3 B3 C4 D4 E4 F4 G4 A4"}
 
@@ -57,7 +57,7 @@ K:Am
 A, B, C D | E F ^G A |]
 ```
 
-Khoảng cách giữa Fa và Sol♯ là 3 nửa cung, nghe hơi "phương Đông". Đây là âm thanh đặc trưng của gam thứ hòa âm.
+Khoảng cách giữa Fa và Sol♯ là 3 nửa cung. Đây là bước nhảy đặc trưng của gam thứ hòa âm.
 
 ## Gam thứ giai điệu
 
@@ -130,5 +130,7 @@ Gam La thứ hòa âm dùng cùng ngón bấm với Đô trưởng; chỉ cần 
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- *Open Music Theory*: [Minor Scales, Scale Degrees, and Key Signatures](https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/); [Major Scales, Scale Degrees, and Key Signatures](https://viva.pressbooks.pub/openmusictheory/chapter/major-scales/); [Intervals](https://viva.pressbooks.pub/openmusictheory/chapter/intervals/).
+- Andre Mount, *Fundamentals, Function, and Form*: chương [7. Minor Scales](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/7-minor-scales/), [9. Minor Keys and Key Signatures](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/9-minor-keys-and-key-signatures-2/) và [16. Minor Scale Variants](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/16-minor-scale-variants/); Robert Hutchinson, *Music Theory for the 21st-Century Classroom*: [3.2 Minor Key Signatures](https://musictheory.pugetsound.edu/mt21c/MinorKeySignatures.html).
+- Giọng của ba tác phẩm: IMSLP, trang [Giao hưởng số 40, K. 550](https://imslp.org/wiki/Symphony_No.40,_K.550_%28Mozart,_Wolfgang_Amadeus%29) (Mozart), [Giao hưởng số 5, Op. 67](https://imslp.org/wiki/Symphony_No.5,_Op.67_%28Beethoven,_Ludwig_van%29) (Beethoven) và [Toccata và Fugue Rê thứ, BWV 565](https://imslp.org/wiki/Toccata_and_Fugue_in_D_minor,_BWV_565_%28Bach,_Johann_Sebastian%29) (Bach).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

@@ -222,7 +222,7 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 			const dung = { 0: 'C', 1: 'G', 2: 'D', 3: 'A', 4: 'E', 5: 'B', 6: 'F#', 7: 'C#', '-1': 'F', '-2': 'Bb', '-3': 'Eb', '-4': 'Ab', '-5': 'Db', '-6': 'Gb', '-7': 'Cb' }[n];
 			const sai = el.locator(`.oz-lhb-chon button:not([data-giong="${dung}"])`).first();
 			await sai.tap();
-			assert.match(await el.locator('.oz-feedback').textContent(), /^Chưa đúng\./);
+			assert.match(await el.locator('.oz-feedback').textContent(), /^Chưa đúng\. Mẹo: .*giọng trưởng/);
 			assert.ok(await sai.isDisabled());
 			await el.locator(`.oz-lhb-chon button[data-giong="${dung}"]`).tap();
 			assert.match(await el.locator('.oz-feedback').textContent(), /^Đúng\./);

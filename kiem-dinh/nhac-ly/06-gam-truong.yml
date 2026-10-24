@@ -1,0 +1,323 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/06-gam-truong
+trang: src/content/docs/nhac-ly/06-gam-truong.md
+nguon_cu: ../opus-zero/docs/nhac-ly/06-gam-truong.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-24
+    nhanh: moi/d3-l1
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D3-L1 lượt 1, phần 2/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Trang gam trưởng (tầng lõi). Nguồn chính: Open Music Theory (OMT), mở từng chương bằng curl ngày 24/10/2026 (công cụ đọc web bị trang chặn, theo lời giao việc của lô); bổ sung khi OMT không nói: Andre Mount (FFF) ch. 6, 8, 16, MT21C 2.2. Câu về site (n9, n13, n24, n29): kiểm trên bài 8 (cùng lô), bản cũ ../opus-zero/docs/ và JavaScript cũ vì trang đích chưa chuyển; riêng bàn phím kiểm với thành phần mới của lô. Sửa trang: n15 và n16 ("Ba bậc quan trọng nhất:" thành "Ba bậc cần nhớ trước:") và mục Nguồn (thay link chung tới OMT và musictheory.net bằng các chương đã đọc; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, agent không đọc được chữ). Thuật ngữ cho D3-L5: bậc đánh số La Mã (trang này, thuat-ngu.yml) hay số Ả Rập (bài 7, 8; OMT); các tên "chủ âm", "át âm", "cảm âm" đã có trong thuat-ngu.yml. Không tính là nhận định: tên tiêu đề, "Bài tập 3" đã tính ở n25.'
+nguon:
+  - id: omt-steps
+    bac: 2
+    ten: Open Music Theory, Half Steps, Whole Steps, and Accidentals
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/half-and-whole-steps/
+  - id: omt-major
+    bac: 2
+    ten: Open Music Theory, Major Scales, Scale Degrees, and Key Signatures (cả mục The Circle of Fifths và bảng thuật ngữ)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/major-scales/
+  - id: omt-minor
+    bac: 2
+    ten: Open Music Theory, Minor Scales, Scale Degrees, and Key Signatures (cả các mục The Parallel and Relative Relationships, Minor Keys and the Circle of Fifths, Major or Minor?)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/
+  - id: omt-harmony
+    bac: 2
+    ten: Open Music Theory, Introduction to Harmony, Cadences, and Phrase Endings
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/
+  - id: fff-major-scales
+    bac: 2
+    ten: Andre Mount, Fundamentals, Function, and Form (Milne Publishing, SUNY Geneseo, giáo trình mở), 6. Major Scales (mục 6.1, 6.2 Spelling a major scale)
+    link: https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/6-major-scales-2/
+  - id: fff-major-keys
+    bac: 2
+    ten: Andre Mount, Fundamentals, Function, and Form (Milne Publishing, SUNY Geneseo, giáo trình mở), 8. Major Keys and Key Signatures (mục 8.3 Key signatures gồm đoạn courtesy accidentals, 8.4 Writing key signatures, 8.5 Summary)
+    link: https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/8-major-keys-and-key-signatures-2/
+  - id: fff-minor-variants
+    bac: 2
+    ten: "Andre Mount, Fundamentals, Function, and Form (Milne Publishing, SUNY Geneseo, giáo trình mở), 16. Minor Scale Variants (mục 16.2 đến 16.4: bậc 7 trong gam thứ, gam thứ hòa âm, gam thứ giai điệu)"
+    link: https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/16-minor-scale-variants/
+  - id: mt21c-major-scale
+    bac: 2
+    ten: Robert Hutchinson, Music Theory for the 21st-Century Classroom (giáo trình mở, University of Puget Sound), 2.2 The Major Scale
+    link: https://musictheory.pugetsound.edu/mt21c/TheMajorScale.html
+nhan_dinh:
+  - id: n1
+    cau: Gam (scale) là một chuỗi nốt đi lên hoặc đi xuống theo một công thức khoảng cách cố định.
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+      - fff-major-scales
+    ket_qua: dung
+    ghi_chu: 'OMT Major Scales, bảng thuật ngữ: scale = "An ordered collection of half steps and whole steps"; công thức cố định của gam trưởng ở n4. FFF 6.1: "The major scale ... consists of an ordered collection of seven pitch classes"; "The major scale (and other scales) can therefore continue indefinitely in both directions" (đi lên hay đi xuống).'
+  - id: n2
+    cau: Gam là "nguyên liệu" để xây giai điệu và hợp âm của một bản nhạc.
+    loai: dinh-nghia
+    nguon:
+      - fff-major-scales
+      - fff-major-keys
+      - fff-minor-variants
+    ket_qua: dung
+    ghi_chu: '"Nguyên liệu" là cách nói ví von cho chất liệu cao độ. FFF 6.1: "The major scale is a cornerstone of pitch organization and structure in tonal music." FFF 8.3: "a piece in a major key will draw from the same pitches as its corresponding major scale". Hợp âm cũng xây trên bậc của gam: FFF 16.3, "the triads built with the leading-tone adjusted harmonic minor scale" (hợp âm dựng trên các bậc 5̂, 7̂).'
+  - id: n3
+    cau: Gam trưởng có 7 nốt khác tên, cộng nốt thứ 8 lặp lại nốt đầu.
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+      - fff-major-scales
+    ket_qua: dung
+    ghi_chu: 'OMT Major Scales: bậc 1̂ đến 7̂, nốt cuối "is also 1̂ (although some instructors prefer 8̂)", "it is a repetition of the first note". FFF 6.2: dùng "each of the seven note letter names (A, B, C, D, E, F, and G) until we return to the keynote".'
+  - id: n4
+    cau: "Công thức gam trưởng: Cung – Cung – Nửa cung – Cung – Cung – Cung – Nửa cung."
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+      - mt21c-major-scale
+    ket_qua: dung
+    ghi_chu: 'OMT Major Scales: "A major scale is an ordered collection of half (H) and whole (W) steps with the ascending succession W‑W‑H‑W‑W‑W‑H." MT21C 2.2: W–W–H, một cung nối, W–W–H.'
+  - id: n5
+    cau: Gam Đô trưởng dùng toàn phím trắng, vì hai nửa cung tự nhiên Mi–Fa và Si–Đô rơi đúng vào vị trí 3–4 và 7–8.
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+      - omt-steps
+    ket_qua: dung
+    ghi_chu: 'C D E F G A B C: E–F là bậc 3 đến 4, B–C là bậc 7 đến 8; hai cặp này là nửa cung vì không có phím đen xen giữa (OMT Half Steps). OMT Major Scales: C major "has nothing in its key signature (no sharps or flats)".'
+  - id: n6
+    cau: "Khoảng cách các cặp nốt liền nhau của gam Đô trưởng: Đô–Rê cung, Rê–Mi cung, Mi–Fa nửa cung, Fa–Sol cung, Sol–La cung, La–Si cung, Si–Đô nửa cung."
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+      - omt-major
+    ket_qua: dung
+    ghi_chu: 'Đô–Rê, Rê–Mi, Fa–Sol, Sol–La, La–Si có phím đen xen giữa nên là một cung; Mi–Fa và Si–Đô không có (OMT Half Steps: "Pairs of white keys with a black key in between them (A and B, C and D, D and E, F and G, and G and A) are a whole step apart"). Thành W‑W‑H‑W‑W‑W‑H, khớp n4.'
+  - id: n7
+    cau: "Áp dụng cùng công thức từ nốt Sol: Sol – La – Si – Đô – Rê – Mi – ?; từ Mi phải đi lên một cung, nhưng Mi–Fa chỉ là nửa cung, nên cần Fa♯; sau đó Fa♯–Sol là nửa cung, khớp với công thức."
+    loai: quy-tac
+    nguon:
+      - omt-major
+      - omt-steps
+    ket_qua: dung
+    ghi_chu: 'G A B C D E F♯ G: G–A cung, A–B cung, B–C nửa cung, C–D cung, D–E cung, E–F♯ cung, F♯–G nửa cung = W‑W‑H‑W‑W‑W‑H (OMT Major Scales: "the pattern of half and whole steps is the same in every major scale"). E–F là nửa cung tự nhiên (OMT Half Steps), nên bậc 7 phải là F♯.'
+  - id: n8
+    cau: "Gam Sol trưởng có một dấu thăng: Fa♯."
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+      - fff-major-keys
+    ket_qua: dung
+    ghi_chu: 'OMT Major Scales, ví dụ 12: "The last sharp (in this case the only sharp), F♯, is a half step below the note G. Therefore, this is the key signature of G major." FFF 8.4: "G major is built on scale degree 5̂ of C major and has one sharp (F#)."'
+  - id: n9
+    cau: "Gam Sol trưởng trên bàn phím (phím được tô): bàn phím từ Sol3 đến Sol4 tô 8 phím."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Kiểm với chỉ thị ::cong-cu{ten="piano" range="G3-G4" notes="G3 A3 B3 C4 D4 E4 F#4 G4"} và thành phần mới (src/scripts/ve.js veBanPhim; đã chạy): 13 phím (8 trắng, 5 đen), tô Sol3, La3, Si3, Đô4, Rê4, Mi4, Fa♯4/Sol♭4, Sol4; nút "Nghe các nốt được tô" (có notes). Bản cũ (piano.js mountSimple) có cùng thông số.'
+  - id: n10
+    cau: Tám phím được tô (G3 A3 B3 C4 D4 E4 F♯4 G4) là các nốt của gam Sol trưởng.
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+      - fff-major-keys
+    ket_qua: dung
+    ghi_chu: "Sol – La – Si – Đô – Rê – Mi – Fa♯ – Sol, theo n7 và n8; khớp khối abc 2 (abcjs: G3 A3 B3 C4 D4 E4 F♯4 G4)."
+  - id: n11
+    cau: Thay vì viết dấu thăng trước mọi nốt Fa, người ta viết nó một lần ở đầu khuông, ngay sau khóa. Đó là hóa biểu.
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+      - fff-major-keys
+    ket_qua: dung
+    ghi_chu: 'OMT Major Scales: "A key signature ... appears at the beginning of a composition, after a clef but before a time signature"; "Key signatures collect the accidentals in a scale and place them at the beginning of a composition so that it is easier to keep track of which notes have accidentals applied to them." FFF 8.1: bản viết không hóa biểu "much more cluttered". Tên "hóa biểu" = key signature theo src/data/thuat-ngu.yml.'
+  - id: n12
+    cau: "Gam Fa trưởng có một dấu giáng: Si♭."
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+      - fff-major-keys
+    ket_qua: dung
+    ghi_chu: 'OMT Major Scales: "F major, which has one flat: B♭" (một trong hai hóa biểu phải nhớ). FFF 8.4: "F major, for example, begins on scale degree 4̂ of C major and has one flat (Bb)."'
+  - id: n13
+    cau: Toàn bộ 15 giọng và cách đọc hóa biểu nằm ở bài 8.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Bài 8 (nhac-ly/08-hoa-bieu, cùng lô, đã chuyển) có mục "Bảng 15 giọng" (15 hàng) và mục "Đọc hóa biểu ra tên giọng".
+  - id: n14
+    cau: Mỗi nốt trong gam là một bậc, đánh số La Mã từ I đến VII.
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+    ket_qua: dung
+    ghi_chu: 'OMT Major Scales, bảng thuật ngữ: scale degree = "The relative position of a note within a diatonic scale. Indicated with a number, 1–7". Cách đánh số: OMT viết số Ả Rập có dấu mũ (1̂ đến 7̂) cho bậc và dành số La Mã cho hợp âm; trang này và src/data/thuat-ngu.yml (ghi chú "Bậc I", "Bậc V", "Bậc IV", "Bậc VII") dùng số La Mã cho bậc, còn bài 7 và 8 viết "bậc 3", "bậc 6", "bậc 7" bằng số Ả Rập: không sai, nhưng cần thống nhất (ghi cho D3-L5).'
+  - id: n15
+    cau: Chủ âm (I), át âm (V) và cảm âm (VII) là ba bậc quan trọng nhất của gam trưởng.
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+      - fff-major-keys
+      - fff-minor-variants
+      - omt-harmony
+    ket_qua: da-bo
+    ghi_chu: 'Bỏ khỏi trang: câu dẫn cũ "Ba bậc quan trọng nhất:" đổi thành "Ba bậc cần nhớ trước:" (n16). Lý do: xếp hạng "quan trọng nhất" cho ba bậc này không kiểm được. Nguồn nói từng bậc đều quan trọng nhưng không xếp chúng trên các bậc khác: FFF 8.2 (chủ âm "a position of primary importance"), OMT Major Scales ("dominant ... refers to the importance of the fifth above the tonic"), FFF 16.2 ("the leading tone is one of the most important pitches of the major scale"); bậc IV (hạ át âm) cũng là bậc chính (OMT Intro to Harmony: IV thuộc "strong predominants").'
+  - id: n16
+    cau: "Ba bậc cần nhớ trước: chủ âm (I), át âm (V), cảm âm (VII)."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Câu mới thay cho n15. Lời khuyên học, không trái trang lõi nào (bài 12 cũ về hòa âm chức năng dùng chủ âm, hạ át âm, át âm).
+  - id: n17
+    cau: 'Bậc I là chủ âm (tonic): "nhà", nơi giai điệu muốn trở về.'
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+      - fff-major-keys
+      - omt-harmony
+    ket_qua: dung
+    ghi_chu: 'OMT Major Scales: 1̂ = tonic. FFF 8.2: nốt chủ âm là nốt nghe "more stable ... more restful, more like a musical destination"; OMT Intro to Harmony: tonic = "Chords that sound stable, providing a sense of home or center". Tên "chủ âm" theo src/data/thuat-ngu.yml.'
+  - id: n18
+    cau: "Bậc V là át âm (dominant): tạo căng thẳng, kéo về chủ âm."
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+      - omt-harmony
+    ket_qua: dung
+    ghi_chu: 'OMT Major Scales: 5̂ = dominant. OMT Intro to Harmony: dominant = "provide a sense of urgency to resolve toward the tonic chord: V and vii°". Tên "át âm" theo src/data/thuat-ngu.yml.'
+  - id: n19
+    cau: "Bậc VII là cảm âm (leading tone): cách chủ âm nửa cung, rất muốn đi lên chủ âm."
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+      - fff-minor-variants
+    ket_qua: dung
+    ghi_chu: 'OMT Major Scales, bảng thuật ngữ: leading tone = "Scale degree 7 that is one half step below the tonic." FFF 16.2: "Because of its tendency to resolve to the tonic, the leading tone is one of the most important pitches of the major scale." Tên "cảm âm" theo src/data/thuat-ngu.yml.'
+  - id: n20
+    cau: Thử hát Đô – Rê – Mi – Fa – Sol – La – Si rồi dừng lại.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Bài tập nghe và hát; không trái trang lõi nào (bài nghe gam cũ, ../opus-zero/docs/luyen-tai/nghe-gam.md, cũng dùng việc hát từ chủ âm lên và dừng ở bậc 7 để cảm nhận lực kéo).
+  - id: n21
+    cau: Khi hát đến Si rồi dừng, bạn cảm thấy rất muốn hát tiếp lên Đô; đó là sức kéo của cảm âm.
+    loai: dinh-nghia
+    nguon:
+      - fff-minor-variants
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: 'FFF 16.2: "The half-step relationship between the leading tone and the tonic in the diatonic major scale has a clearly perceptible directional force"; OMT Minor Scales: "In the major scale, this closure is created in part by the ascending semitone between ti (↑7̂) and do (1̂)", còn gam thứ tự nhiên "the ending lacks the same sense of closure you heard in the major scale".'
+  - id: n22
+    cau: "Ngón bấm gam Đô trưởng một quãng tám: tay phải 1-2-3-1-2-3-4-5, tay trái 5-4-3-2-1-3-2-1."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Khớp ../opus-zero/docs/piano/gam.md, "Bảng ngón bấm 12 gam trưởng", hàng Đô: tay phải 1 2 3 1 2 3 4 (5), tay trái (5) 4 3 2 1 3 2 1. Không trái trang lõi nào.'
+  - id: n23
+    cau: Ngón cái luồn dưới để nối liền.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Khớp ../opus-zero/docs/piano/gam.md, mục "Luồn ngón cái và vắt ngón": tay phải đi lên luồn ngón cái, tay trái đi xuống luồn ngón cái; tay trái đi lên thì ngón 3 hay 4 vắt qua ngón cái ("hai mặt của cùng một chuyển động"). Câu tóm tắt của trang không nói riêng từng tay; không trái.'
+  - id: n24
+    cau: "Bảng ngón bấm cho cả 12 gam và cách tập: Gam và ngón bấm (/opus/piano/gam/)."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển (lô D4-L2), kiểm trên bản cũ ../opus-zero/docs/piano/gam.md: có "## Bảng ngón bấm 12 gam trưởng" (12 hàng: Đô, Sol, Rê, La, Mi, Si, Fa♯ = Sol♭, Rê♭ = Đô♯, La♭, Mi♭, Si♭, Fa) và "## Cách tập".'
+  - id: n25
+    cau: Hát (hoặc ngân nga) gam Đô trưởng đi lên, rồi đi xuống, cùng ví dụ ở trên.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Bài tập hát theo khối abc 1 "Gam Đô trưởng" (đi lên rồi xuống); không trái trang lõi nào.
+  - id: n26
+    cau: "Gam Rê trưởng: Rê – Mi – Fa♯ – Sol – La – Si – Đô♯ – Rê, hai dấu thăng (Fa♯ và Đô♯)."
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+      - fff-major-keys
+    ket_qua: dung
+    ghi_chu: 'D E F♯ G A B C♯ D = W‑W‑H‑W‑W‑W‑H (OMT Major Scales, ví dụ 5: gam D major). OMT Major Scales, ví dụ 15: D là hóa biểu thứ hai trong dãy G, D, A… (hai dấu thăng, theo thứ tự F, C). FFF 8.4: "D major is built on scale degree 5̂ of G major and has two sharps (F# and C#)."'
+  - id: n27
+    cau: "Gam Fa trưởng: Fa – Sol – La – Si♭ – Đô – Rê – Mi – Fa."
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+      - fff-major-keys
+    ket_qua: dung
+    ghi_chu: F G A B♭ C D E F = W‑W‑H‑W‑W‑W‑H; một dấu giáng Si♭ (xem n12).
+  - id: n28
+    cau: Mỗi tên nốt chỉ xuất hiện một lần trong gam; nếu dùng La♯ thì gam có hai nốt "La" và thiếu nốt "Si".
+    loai: quy-tac
+    nguon:
+      - mt21c-major-scale
+      - fff-major-scales
+    ket_qua: dung
+    ghi_chu: 'MT21C 2.2: "All major scales use the notes of the musical alphabet in order; no notes are skipped and no notes occur twice. In the example above, the first four notes are D–E–F♯–G, not D–E–G♭–G." FFF 6.2: "the only repeated note letter name is the keynote ... To repeat any other note letter name would be incorrect". La♯ và Si♭ là cùng một phím (OMT Half Steps), nhưng viết La♯ thì gam F – G – A – A♯ – C… có hai chữ A và không có chữ B.'
+  - id: n29
+    cau: 'Hộp "Luyện tập kèm theo": Xây gam và hợp âm, bài "Gam trưởng", và đọc thị tấu cấp độ 1 ở Đô trưởng.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ: ../opus-zero/docs/luyen-tap/xay-hop-am.md có khối oz-build; assets/js/build.js SETS.major có tên "Gam trưởng" (ô "Bài tập"). ../opus-zero/docs/luyen-tap/thi-tau.md ("Thị tấu một bè", dòng "Bắt đầu với Đô trưởng, cấp độ 1, tốc độ 60"); assets/js/sight-reading.js: ô "Giọng" có "Đô trưởng", ô "Cấp độ" có "1: đen, trắng, bước gần". Lô chuyển hai trang ấy (D7-L2) phải giữ các lựa chọn này.'
+  - id: n30
+    cau: 'Câu hỏi 1: "Công thức gam trưởng là gì?" Đáp án đúng: Cung – Cung – Nửa – Cung – Cung – Cung – Nửa. Sai: Cung – Nửa – Cung – Cung – Nửa – Cung – Cung; Nửa – Cung – Cung – Cung – Nửa – Cung – Cung. Giải thích: công thức thứ hai là của gam thứ tự nhiên.'
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: 'Đáp án đúng = W‑W‑H‑W‑W‑W‑H (OMT Major Scales). Lựa chọn 2 = W‑H‑W‑W‑H‑W‑W, đúng là gam thứ tự nhiên (OMT Minor Scales: "Natural minor: W‑H‑W‑W‑H‑W‑W"), nên giải thích đúng. Lựa chọn 3 (H‑W‑W‑W‑H‑W‑W) khác công thức gam trưởng ngay ở bước đầu (nửa cung thay vì cung), nên sai.'
+  - id: n31
+    cau: 'Câu hỏi 2: "Gam Sol trưởng có dấu hóa nào?" Đáp án đúng: Fa♯. Sai: Si♭, Đô♯. Giải thích: từ Mi phải lên một cung đến Fa♯.'
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+      - fff-major-keys
+    ket_qua: dung
+    ghi_chu: Gam Sol trưởng chỉ có Fa♯ (n8). Si♭ là dấu của Fa trưởng; Đô♯ chỉ có từ Rê trưởng (hai dấu thăng). Giải thích khớp n7.
+  - id: n32
+    cau: 'Câu hỏi 3: "Bậc V của gam trưởng gọi là gì?" Đáp án đúng: át âm. Sai: chủ âm, cảm âm. Giải thích: bậc I là chủ âm, bậc VII là cảm âm.'
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+    ket_qua: dung
+    ghi_chu: "OMT Major Scales, bảng tên bậc: 1̂ tonic, 5̂ dominant, 7̂ leading tone."
+  - id: n33
+    cau: 'Câu hỏi 4: "Vì sao gam Fa trưởng dùng Si♭ mà không dùng La♯?" Đáp án đúng: mỗi tên nốt chỉ xuất hiện một lần trong gam. Sai: vì La♯ không tồn tại; vì Si♭ dễ đọc hơn. Giải thích: dùng La♯ thì gam có hai nốt La và thiếu nốt Si.'
+    loai: quy-tac
+    nguon:
+      - mt21c-major-scale
+      - fff-major-scales
+      - omt-steps
+    ket_qua: dung
+    ghi_chu: 'Đáp án đúng theo n28. "La♯ không tồn tại" sai: La♯ là một nốt thật, cùng phím với Si♭ (OMT Half Steps: phím đen giữa A và B có hai tên). "Si♭ dễ đọc hơn" không phải lý do của quy tắc (lý do là mỗi chữ cái một lần), nên sai. Giải thích đúng.'
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - giong
+      - not
+      - nhip
+    ket_qua: dung
+    ghi_chu: "Gam Đô trưởng đi lên rồi xuống, K:C (không hóa biểu), M:4/4, L:1/4. abcjs đọc C4 D4 E4 F4 | G4 A4 B4 C5 | C5 B4 A4 G4 | F4 E4 D4 C4: tám nốt của gam Đô trưởng (n4, n5) rồi đi xuống. Bốn ô, mỗi ô 4 phách; nốt Đô cao lặp ở cuối ô 2 và đầu ô 3 để đủ ô, không ảnh hưởng điều trang nói. abcjs không cảnh báo."
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - giong
+      - hoa-bieu
+      - not
+      - nhip
+    ket_qua: dung
+    ghi_chu: Gam Sol trưởng đi lên, K:G (hóa biểu một dấu thăng Fa♯), M:4/4, L:1/4. abcjs đọc G3 A3 B3 C4 | D4 E4 F♯4 G4 (Fa♯ do hóa biểu, không viết ^), trùng 8 phím tô ở bàn phím ngay trên (n10) và n8. Hai ô, mỗi ô 4 phách. abcjs không cảnh báo.
+doi_chu:
+  - cu: "Mỗi nốt trong gam là một bậc, đánh số La Mã từ I đến VII. Ba bậc quan trọng nhất:"
+    moi: "Mỗi nốt trong gam là một bậc, đánh số La Mã từ I đến VII. Ba bậc cần nhớ trước:"
+    ly_do: 'n15 (da-bo), n16: "quan trọng nhất" là xếp hạng không kiểm được; câu dẫn mới là lời khuyên học (khuyen-tap), bảng ba bậc giữ nguyên.'
+  - cu: Open Music Theory; musictheory.net.
+    moi:
+      - "Open Music Theory: Major Scales, Scale Degrees, and Key Signatures; Half Steps, Whole Steps, and Accidentals; Minor Scales, Scale Degrees, and Key Signatures; Introduction to Harmony, Cadences, and Phrase Endings."
+      - "Andre Mount, Fundamentals, Function, and Form: chương 6. Major Scales và 16. Minor Scale Variants; Robert Hutchinson, Music Theory for the 21st-Century Classroom: 2.2 The Major Scale."
+    ly_do: "Mục Nguồn: thay link chung tới Open Music Theory bằng link tới đúng các chương đã đọc khi kiểm định (lượt 1), thêm giáo trình mở và trang IMSLP đã dùng; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, không đọc được chữ để kiểm."

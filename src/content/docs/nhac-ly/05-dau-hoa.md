@@ -51,10 +51,10 @@ L:1/4
 M:4/4
 Q:1/4=90
 K:C
-^F G F G | F G =F2 |]
+^F G F G | =F G F2 |]
 ```
 
-Ở ô nhịp đầu, cả hai nốt Fa đều là Fa♯ vì dấu thăng còn hiệu lực. Ở ô nhịp sau, Fa trở lại tự nhiên. Dấu bình cuối cùng không bắt buộc nhưng người viết vẫn thêm vào để nhắc người đọc; đây gọi là **dấu hóa nhắc**.
+Ở ô nhịp đầu, cả hai nốt Fa đều là Fa♯ vì dấu thăng còn hiệu lực. Ở ô nhịp sau, Fa trở lại tự nhiên. Dấu bình ở đầu ô nhịp sau không bắt buộc, nhưng người viết vẫn thêm vào để nhắc người đọc; đây gọi là **dấu hóa nhắc**.
 
 ## Đồng âm khác tên
 
@@ -108,5 +108,6 @@ Trên bàn phím, mỗi phím đen có hai tên (Đô♯ cũng là Rê♭), và 
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- *Open Music Theory*: [Half Steps, Whole Steps, and Accidentals](https://viva.pressbooks.pub/openmusictheory/chapter/half-and-whole-steps/); [Intervals](https://viva.pressbooks.pub/openmusictheory/chapter/intervals/).
+- Andre Mount, *Fundamentals, Function, and Form*: chương [5. Pitch](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/5-pitch/) và [8. Major Keys and Key Signatures](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/8-major-keys-and-key-signatures-2/) (dấu hóa bất thường, dấu hóa nhắc).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

@@ -9,11 +9,19 @@ import { canKyHieu, veHoaBieu } from './ve.js';
 
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 
-/** Mẹo khi trả lời sai, theo hóa biểu (n dấu: dương là dấu thăng, âm là dấu giáng). */
-export function meo(n) {
-	if (n > 0) return 'Chưa đúng. Mẹo: dấu thăng cuối cùng nằm ngay dưới chủ âm nửa cung.';
-	if (n < 0) return 'Chưa đúng. Mẹo: dấu giáng áp chót chính là tên giọng (trừ Fa trưởng có 1 dấu giáng).';
-	return 'Chưa đúng. Không có dấu hóa nào.';
+/**
+ * Mẹo khi trả lời sai, theo hóa biểu (n dấu: dương là dấu thăng, âm là dấu giáng) và loại câu hỏi, như mục "Đọc hóa biểu
+ * ra tên giọng" của bài 8: tìm giọng trưởng trước; câu hỏi về giọng thứ thì nhắc thêm giọng thứ song song thấp hơn 3 nửa cung
+ * (circle.js cũ chỉ có câu cho giọng trưởng, hiện cả khi hỏi giọng thứ, nên dễ dẫn sai: lượt 1, hồ sơ bài 8, n45 và n46).
+ */
+export function meo(n, loai = 'truong') {
+	const truong =
+		n > 0
+			? 'dấu thăng cuối cùng, đi lên nửa cung, là chủ âm của giọng trưởng'
+			: n < 0
+				? 'dấu giáng áp chót là tên giọng trưởng (riêng 1 dấu giáng là Fa trưởng)'
+				: 'không có dấu hóa nào là Đô trưởng';
+	return `Chưa đúng. Mẹo: ${truong}.` + (loai === 'thu' ? ' Giọng thứ song song thấp hơn chủ âm giọng trưởng 3 nửa cung.' : '');
 }
 
 /** Các giọng được hỏi: hóa biểu có tối đa `toiDa` dấu hóa. */
@@ -85,7 +93,7 @@ export function mount(goc) {
 			}
 			b.classList.add('is-wrong');
 			b.disabled = true;
-			phanHoi.textContent = meo(cau.k.n);
+			phanHoi.textContent = meo(cau.k.n, cau.loai);
 			phanHoi.className = 'oz-feedback bad';
 		}
 		so.textContent = `Lượt này: đúng ngay lần đầu ${phien.dung}/${phien.tong}.`;

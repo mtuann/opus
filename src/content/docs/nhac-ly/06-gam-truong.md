@@ -55,7 +55,7 @@ Tương tự, **gam Fa trưởng có một dấu giáng: Si♭**. Toàn bộ 15 
 
 ## Tên các bậc
 
-Mỗi nốt trong gam là một **bậc**, đánh số La Mã từ I đến VII. Ba bậc quan trọng nhất:
+Mỗi nốt trong gam là một **bậc**, đánh số La Mã từ I đến VII. Ba bậc cần nhớ trước:
 
 | Bậc | Tên | Vai trò |
 |---|---|---|
@@ -112,5 +112,6 @@ Ngón bấm gam Đô trưởng một quãng tám: tay phải **1-2-3-1-2-3-4-5**
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- *Open Music Theory*: [Major Scales, Scale Degrees, and Key Signatures](https://viva.pressbooks.pub/openmusictheory/chapter/major-scales/); [Half Steps, Whole Steps, and Accidentals](https://viva.pressbooks.pub/openmusictheory/chapter/half-and-whole-steps/); [Minor Scales, Scale Degrees, and Key Signatures](https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/); [Introduction to Harmony, Cadences, and Phrase Endings](https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/).
+- Andre Mount, *Fundamentals, Function, and Form*: chương [6. Major Scales](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/6-major-scales-2/) và [16. Minor Scale Variants](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/16-minor-scale-variants/); Robert Hutchinson, *Music Theory for the 21st-Century Classroom*: [2.2 The Major Scale](https://musictheory.pugetsound.edu/mt21c/TheMajorScale.html).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
