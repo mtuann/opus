@@ -19,6 +19,7 @@ const hangLech = () => {
 	thu.style.marginTop = 'var(--sl-content-gap-y)';
 	const khoang = getComputedStyle(thu).marginTop;
 	thu.remove();
+	if (khoang === '0px') return ['Starlight không còn --sl-content-gap-y (đổi tên?): sửa hangLech'];
 	const ten = (x) => `${x.tagName.toLowerCase()}${x.getAttribute('class') ? '.' + x.getAttribute('class').trim().split(/\s+/).join('.') : ''}`;
 	const lech = [...bai.querySelectorAll('*')]
 		.filter((x) => {

@@ -487,8 +487,9 @@ html.oz-stand-open .main-pane {
 	gap: 2px;
 	width: 100%;
 }
-/* Starlight đặt khoảng cách trên cho phần tử liền sau phần tử khác trong bài: các ô của sơ đồ thì không */
-.sl-markdown-content .oz-form-map > * {
+/* Starlight đặt khoảng cách trên cho phần tử liền sau phần tử khác trong bài: các ô của sơ đồ thì không, tên đoạn và
+   dòng phụ trong mỗi ô cũng không (sát nhau như site cũ) */
+.sl-markdown-content :is(.oz-form-map, .oz-seg) > * {
 	margin-top: 0;
 }
 /* Ô rộng theo trọng số nhưng không hẹp hơn 4,6rem; quá chật thì xuống dòng thay vì bẻ chữ */
