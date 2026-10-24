@@ -130,8 +130,9 @@ export function veBanPhim({ thap, cao, to = [] }) {
 		const giua = so(x + PHIM_RONG / 2);
 		trang.push(
 			`<rect class="oz-phim-trang${coTo(m)}" x="${x}" y="1" width="${PHIM_RONG}" height="${PHIM_CAO}" rx="3" data-m="${m}" data-ten="${esc(tenPhim(m))}"/>` +
-				`<text class="oz-phim-chu" x="${giua}" y="${PHIM_CAO - 7}">${SOLFEGE[l]}</text>` +
-				`<text class="oz-phim-chu oz-phim-chu--nho" x="${giua}" y="${PHIM_CAO - 19}">${CHU[l]}${l === 0 ? Math.floor(m / 12) - 1 : ''}</text>`,
+				// chữ trên phím chỉ để nhìn: tên phím đã ở aria-label của nút (ban-phim.js), không đọc lặp
+				`<text class="oz-phim-chu" x="${giua}" y="${PHIM_CAO - 7}" aria-hidden="true">${SOLFEGE[l]}</text>` +
+				`<text class="oz-phim-chu oz-phim-chu--nho" x="${giua}" y="${PHIM_CAO - 19}" aria-hidden="true">${CHU[l]}${l === 0 ? Math.floor(m / 12) - 1 : ''}</text>`,
 		);
 		if (m + 1 <= cao && laPhimDen(m + 1))
 			den.push(

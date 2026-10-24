@@ -75,7 +75,8 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 				tran: g.querySelector('.oz-phim-cuon').scrollWidth > g.querySelector('.oz-phim-cuon').clientWidth + 1,
 				nhac: g.querySelector('.oz-phim-ten').textContent,
 			}));
-			assert.ok(co.trang >= 43.5 && co.cao >= 43.5, `phím trắng ${co.trang.toFixed(1)}×${co.cao.toFixed(1)} px`);
+			// đủ 44 px thật, không nhờ sai số nửa px (CSS cộng lề của viewBox)
+			assert.ok(co.trang >= 44 - 0.01 && co.cao >= 44, `phím trắng ${co.trang.toFixed(2)}×${co.cao.toFixed(1)} px`);
 			assert.ok(co.den >= 24, `phím đen ${co.den.toFixed(1)} px`);
 			if (co.tran) assert.match(co.nhac, /Kéo ngang để xem thêm phím\.$/);
 			// chạm phần dưới của một phím trắng đang hiện trong khung (phần không có phím đen đè lên)
@@ -89,15 +90,46 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 				return { m: ph.dataset.m, ten: ph.dataset.ten, x: r.left + r.width / 2, y: r.bottom - 12 };
 			});
 			const amThanh = await coAmThanh(p);
+			// mỗi lần chạm chỉ tải mẫu của nốt ấy, không tải cả khoảng phím
+			const taiMp3 = [];
+			p.on('request', (r) => /\/mau-am\/piano\/[^/]+\.mp3$/.test(r.url()) && taiMp3.push(r.url()));
 			const mau = amThanh ? p.waitForResponse((r) => r.url().includes('/mau-am/piano/') && r.url().endsWith('.mp3'), { timeout: 10000 }) : null;
 			await p.touchscreen.tap(k.x, k.y);
 			await p.waitForFunction((t) => document.querySelector('.oz-phim-ten')?.textContent === t, k.ten, { timeout: 5000 });
 			if (amThanh) {
 				assert.equal((await mau).status(), 200, 'mẫu âm piano tải được');
-				await p.waitForTimeout(100);
+				await p.waitForTimeout(300);
 				assert.equal(await soNot(p), 1, 'chạm một lần, phát đúng một nốt');
+				assert.equal(taiMp3.length, 1, `một lần chạm tải đúng một mẫu (đã tải: ${taiMp3.join(', ')})`);
 			}
 			assert.equal(await p.evaluate(() => scrollX), 0, 'chạm phím không cuộn trang');
+			assert.deepEqual(loi, []);
+			await ctx.close();
+		} finally {
+			await trinhDuyet.close();
+		}
+	});
+
+	// Vuốt qua bàn phím (cuộn trang hay cuộn ngang khung): trình duyệt gửi pointerdown (chạm) rồi pointercancel khi nhận cử chỉ
+	// cuộn, không có click. Phím không được kêu, không đổi dòng tên nốt. Bỏ phần chặn chạm ở pointerdown thì phép thử hỏng.
+	test(`${ten}: bàn phím: vuốt qua phím (chạm rồi trình duyệt hủy để cuộn) không phát nốt nào`, { skip: !BAN_PHIM.length && khongCo('bàn phím') }, async () => {
+		const trinhDuyet = await loai.launch();
+		try {
+			const ctx = await nguCanh(trinhDuyet, ten, { w: 360, h: 780, camUng: true });
+			const { p, el, loi } = await moTrang(ctx, BAN_PHIM[0], '.oz-ban-phim');
+			const truoc = await el.locator('.oz-phim-ten').textContent();
+			await el.evaluate((g) => {
+				const k = g.querySelector('.oz-phim-trang');
+				const r = k.getBoundingClientRect();
+				const chung = { bubbles: true, cancelable: true, composed: true, pointerId: 7, pointerType: 'touch', isPrimary: true, clientX: r.left + r.width / 2, clientY: r.bottom - 10 };
+				k.dispatchEvent(new PointerEvent('pointerdown', { ...chung, button: 0, buttons: 1 }));
+				k.dispatchEvent(new PointerEvent('pointermove', { ...chung, clientY: r.bottom - 60, buttons: 1 }));
+				k.dispatchEvent(new PointerEvent('pointercancel', { ...chung, buttons: 0 }));
+			});
+			await p.waitForTimeout(300);
+			assert.equal(await soNot(p), 0, 'vuốt mà phím kêu');
+			assert.equal(await el.locator('.oz-phim-ten').textContent(), truoc, 'vuốt mà dòng tên nốt đổi');
+			assert.equal(await el.locator('.bam').count(), 0, 'vuốt mà phím nháy');
 			assert.deepEqual(loi, []);
 			await ctx.close();
 		} finally {
@@ -130,8 +162,28 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 			const m1 = await p.evaluate(() => Number(document.activeElement.dataset.m));
 			const thuTu = (await phim.evaluateAll((ks) => ks.map((k) => Number(k.dataset.m)))).sort((a, b) => a - b);
 			assert.equal(m1, thuTu[thuTu.indexOf(m0) + 1], 'mũi tên phải: phím kế tiếp (cả phím đen)');
-			await p.keyboard.press('Enter');
+			// giữ Enter: trình duyệt lặp keydown, chỉ lần đầu phát tiếng
+			const truocEnter = await soNot(p);
+			await p.keyboard.down('Enter');
+			await p.keyboard.down('Enter');
+			await p.keyboard.down('Enter');
+			await p.keyboard.up('Enter');
 			assert.equal(await el.locator('.oz-phim-ten').textContent(), await el.locator(`[data-m="${m1}"]`).getAttribute('data-ten'));
+			if (await coAmThanh(p)) {
+				await p.waitForTimeout(100);
+				assert.equal((await soNot(p)) - truocEnter, 1, 'giữ Enter mà phát lặp');
+			}
+			// phím bổ trợ (Alt + mũi tên: lùi, tiến trang) để cho trình duyệt: không đổi phím đang chọn, không phát
+			await p.evaluate(() =>
+				document.activeElement.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight', altKey: true, bubbles: true, cancelable: true })),
+			);
+			assert.equal(await p.evaluate(() => Number(document.activeElement.dataset.m)), m1, 'Alt + mũi tên mà bàn phím đổi phím');
+			const khongChan = await p.evaluate(() => {
+				const ev = new KeyboardEvent('keydown', { key: 'ArrowLeft', metaKey: true, bubbles: true, cancelable: true });
+				document.activeElement.dispatchEvent(ev);
+				return !ev.defaultPrevented;
+			});
+			assert.ok(khongChan, 'Cmd + mũi tên bị chặn');
 			await p.keyboard.press('End');
 			assert.equal(await p.evaluate(() => Number(document.activeElement.dataset.m)), thuTu.at(-1));
 			assert.equal(await el.locator('[data-m][tabindex="0"]').count(), 1);
@@ -160,9 +212,16 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 					}),
 				to.length,
 			);
-			await el.locator('[data-k="nghe"]').click();
+			// bấm bằng bàn phím máy tính (người dùng bàn phím mất chỗ đang đứng nếu nút bị khóa): tiêu điểm ở lại trên nút
+			const nut = el.locator('[data-k="nghe"]');
+			await nut.focus();
+			await p.keyboard.press('Enter');
+			assert.equal(await nut.isDisabled(), false, 'nút bị khóa');
+			assert.ok(await nut.evaluate((b) => document.activeElement === b), 'tiêu điểm rời khỏi nút');
 			assert.deepEqual(await nhay, to, 'mọi phím được tô đều nháy');
 			if (await coAmThanh(p)) assert.equal(await soNot(p), to.length, 'mỗi phím được tô một nốt');
+			assert.equal(await nut.getAttribute('aria-busy'), null, 'nút còn aria-busy sau khi phát');
+			assert.ok(await nut.evaluate((b) => document.activeElement === b), 'tiêu điểm rời khỏi nút sau khi phát');
 			await ctx.close();
 		} finally {
 			await trinhDuyet.close();

@@ -990,10 +990,11 @@ html.oz-stand-open .main-pane {
 	overscroll-behavior-x: contain;
 	scrollbar-width: thin;
 }
-/* Mỗi phím trắng rộng 30–48 px (chuột) hay 44–52 px (cảm ứng: vùng bấm từ 44 px, AGENTS.md); --phim: số phím trắng */
+/* Mỗi phím trắng rộng 30–48 px (chuột) hay 44–52 px (cảm ứng: vùng bấm từ 44 px, AGENTS.md); --phim: số phím trắng.
+   Cộng 4 px cho lề 2 đơn vị của viewBox (veBanPhim), để phím trắng đủ 44 px chứ không chỉ 43,75 px. */
 .oz-phim {
 	display: block;
-	width: clamp(calc(var(--phim) * 30px), 100%, calc(var(--phim) * 48px));
+	width: clamp(calc(var(--phim) * 30px + 4px), 100%, calc(var(--phim) * 48px + 4px));
 	height: auto;
 	touch-action: manipulation;
 	user-select: none;
@@ -1002,8 +1003,12 @@ html.oz-stand-open .main-pane {
 }
 @media (pointer: coarse) {
 	.oz-phim {
-		width: clamp(calc(var(--phim) * 44px), 100%, calc(var(--phim) * 52px));
+		width: clamp(calc(var(--phim) * 44px + 4px), 100%, calc(var(--phim) * 52px + 4px));
 	}
+}
+/* nút đang chờ tải mẫu âm (aria-busy, không khóa nút để tiêu điểm không mất) */
+.oz-btn[aria-busy='true'] {
+	cursor: progress;
 }
 .oz-phim-trang,
 .oz-phim-den {

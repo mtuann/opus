@@ -10,7 +10,7 @@ import { pathToFileURL } from 'node:url';
 import { markdownToHtml } from 'satteri';
 import { opusMarkdown } from '../src/plugins/opus-markdown.mjs';
 import { banPhim, canTaiScript, coAmPiano, docThongSoBanPhim, nguonAmPiano } from '../src/plugins/thanh-phan.mjs';
-import { MAU, mauGanNhat, tanSo } from '../src/scripts/am-thanh.js';
+import { DAI_MAU, MAU, catMau, mauGanNhat, tanSo } from '../src/scripts/am-thanh.js';
 import {
 	GIONG,
 	THU_TU_GIANG,
@@ -130,6 +130,8 @@ test('hình bàn phím: phím trắng, phím đen đúng chỗ, tên hai hệ, p
 	assert.deepEqual(chuCai.filter((c) => c.startsWith('C')), ['C3', 'C4', 'C5'], 'phím Đô ghi số quãng tám');
 	assert.match(svg, /role="img" aria-label="Bàn phím piano từ Đô \(C3\) đến Đô \(C5\); các phím được tô: Đô \(C3\), Đô \(C4\), Đô \(C5\)"/);
 	assert.match(svg, /style="--phim:15"/);
+	assert.equal((svg.match(/<text /g) ?? []).length, 30, 'mỗi phím trắng hai dòng chữ');
+	assert.equal((svg.match(/<text [^>]*aria-hidden="true"/g) ?? []).length, 30, 'chữ trên phím chỉ để nhìn: tên đã ở aria-label của nút');
 	assert.match(svg, /data-m="61" data-ten="Đô♯\/Rê♭ \(C♯\/D♭4\)"/);
 });
 
@@ -193,6 +195,25 @@ test('mẫu âm piano: 30 mẫu từ La0 đến Đô8, mỗi ba nửa cung, đ�
 	// mọi phím của đàn 88 phím có mẫu cách không quá một nửa cung (phát mẫu ấy ở tốc độ khác)
 	for (let m = 21; m <= 108; m++) assert.ok(Math.abs(mauGanNhat(m) - m) <= 1, `phím ${m}`);
 	assert.equal(mauGanNhat(10), null, 'ngoài đàn quá xa thì không có mẫu');
+});
+
+test('mẫu âm đã giải mã chỉ giữ 4 giây đầu (bộ nhớ), 50 ms cuối nhỏ dần; mẫu ngắn hơn giữ nguyên', () => {
+	const tao = (kenh, dai, tan) => {
+		const du = Array.from({ length: kenh }, () => new Float32Array(dai).fill(0.5));
+		return { numberOfChannels: kenh, length: dai, sampleRate: tan, getChannelData: (k) => du[k] };
+	};
+	const c = { createBuffer: tao };
+	const day = tao(2, 48000 * 7, 48000);
+	const cat = catMau(c, day);
+	assert.equal(DAI_MAU, 4);
+	assert.equal(cat.length, 48000 * 4);
+	assert.equal(cat.numberOfChannels, 2);
+	assert.equal(cat.sampleRate, 48000);
+	assert.equal(cat.getChannelData(1)[1000], 0.5, 'phần đầu giữ nguyên');
+	assert.equal(cat.getChannelData(0)[48000 * 4 - 2400], 0.5, 'chỉ 50 ms cuối nhỏ dần');
+	assert.ok(cat.getChannelData(0).at(-1) < 0.001, 'mẫu nhỏ dần về 0 ở cuối, không có tiếng tách');
+	const ngan = tao(1, 48000 * 3, 48000);
+	assert.equal(catMau(c, ngan), ngan, 'mẫu ngắn hơn 4 giây giữ nguyên');
 });
 
 test('lưu kỹ năng như site cũ (skill của progress.js): số lần, số đúng, độ chính xác trượt, lịch sử theo ngày', async () => {

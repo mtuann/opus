@@ -9,9 +9,10 @@ after(dongMayChu);
 
 /**
  * Phần tử bấm được thấp hay hẹp hơn 44 px: nút, ô nhập, link đứng riêng (link nằm trong câu chữ, như trong đoạn văn, mục
- * danh sách, ô bảng, thì được miễn), trừ ô chọn nằm trong nhãn bấm được, phím đen của bàn phím đàn, và link "bỏ qua tới
- * nội dung" của Starlight (chỉ hiện khi dùng bàn phím). Link neo cạnh tiêu đề của Starlight nới vùng bấm bằng ::after mà
- * không đổi bố cục, nên tính cả phần ấy. Cho sai số nửa px của bố cục.
+ * danh sách, ô bảng, thì được miễn), trừ ô chọn nằm trong nhãn bấm được, và link "bỏ qua tới nội dung" của Starlight (chỉ
+ * hiện khi dùng bàn phím). Phím đen của bàn phím đàn chỉ cần từ 24 px (mức AA, WCAG 2.5.8): hẹp hơn phím trắng là hình dạng
+ * của bàn phím (ngoại lệ "thiết yếu" của WCAG 2.5.5; chủ repo chấp nhận ngày 24/10/2026). Link neo cạnh tiêu đề của
+ * Starlight nới vùng bấm bằng ::after mà không đổi bố cục, nên tính cả phần ấy. Cho sai số nửa px của bố cục.
  */
 const nhoHon44 = () =>
 	[...document.querySelectorAll(
@@ -20,17 +21,16 @@ const nhoHon44 = () =>
 		.filter((x) => x.getClientRects().length && getComputedStyle(x).visibility !== 'hidden' && !x.closest('[hidden], dialog:not([open])'))
 		.filter((x) => !(x.matches('input[type=checkbox], input[type=radio]') && x.closest('label')))
 		.filter((x) => !(x.matches('a') && x.closest('p, li, td, th, dd, dt, figcaption, blockquote, .sr-only, .sl-skip-link')))
-		// phím đen của bàn phím đàn: hẹp hơn phím trắng là hình dạng của bàn phím (WCAG 2.5.5, 2.5.8: ngoại lệ "thiết yếu");
-		// phím trắng vẫn từ 44 px, phím đen từ 24 px (tests/trinh-duyet/kiem-ban-phim.mjs)
-		.filter((x) => !x.matches('.oz-phim-den'))
 		.map((x) => {
 			const r = x.getBoundingClientRect();
-			if (!x.matches('.sl-anchor-link')) return [x, r];
+			const toiThieu = x.matches('.oz-phim-den') ? 24 : 44;
+			if (!x.matches('.sl-anchor-link')) return [x, r, toiThieu];
 			const a = getComputedStyle(x, '::after');
-			return [x, { width: r.width - parseFloat(a.left) - parseFloat(a.right), height: r.height - parseFloat(a.top) - parseFloat(a.bottom) }];
+			return [x, { width: r.width - parseFloat(a.left) - parseFloat(a.right), height: r.height - parseFloat(a.top) - parseFloat(a.bottom) }, toiThieu];
 		})
-		.filter(([, r]) => r.height < 43.5 || r.width < 43.5)
-		.map(([x, r]) => `${x.tagName.toLowerCase()}${x.className && typeof x.className === 'string' ? '.' + x.className.trim().split(/\s+/).join('.') : ''} ${Math.round(r.width)}×${Math.round(r.height)}`);
+		.filter(([, r, toiThieu]) => r.height < toiThieu - 0.5 || r.width < toiThieu - 0.5)
+		// lớp lấy bằng getAttribute: phần tử SVG có className là đối tượng, không phải chuỗi
+		.map(([x, r]) => `${x.tagName.toLowerCase()}${x.getAttribute('class') ? '.' + x.getAttribute('class').trim().split(/\s+/).join('.') : ''} ${Math.round(r.width)}×${Math.round(r.height)}`);
 
 for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 	test(ten, async (t) => {

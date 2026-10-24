@@ -46,7 +46,8 @@ export function mount(goc) {
 	});
 	svg.addEventListener('keydown', (e) => {
 		const g = e.target.closest?.('.oz-vong-o');
-		if (!g) return;
+		// phím bổ trợ (Alt hay Cmd + mũi tên: lùi, tiến trang; Ctrl…) là việc của trình duyệt
+		if (!g || e.altKey || e.ctrlKey || e.metaKey) return;
 		const i = o.indexOf(g); // thứ tự: vị trí 0 ngoài, vị trí 0 trong, vị trí 1 ngoài…
 		const [viTri, trong] = [Math.floor(i / 2), i % 2];
 		const ke = { ArrowRight: [viTri + 1, trong], ArrowLeft: [viTri - 1, trong], ArrowDown: [viTri, 1], ArrowUp: [viTri, 0] }[e.key];
@@ -55,13 +56,17 @@ export function mount(goc) {
 			chonO(o[((ke[0] + 12) % 12) * 2 + ke[1]], { doiTieuDiem: true });
 		} else if (e.key === 'Enter' || e.key === ' ') {
 			e.preventDefault();
-			chonO(g);
+			if (!e.repeat) chonO(g);
 		}
 	});
+	// Như nút nghe của bàn phím: trong lúc chờ mẫu âm, nút báo aria-busy (không khóa nút), bấm thêm thì bỏ qua
+	let dangChay = false;
 	tin.addEventListener('click', async (e) => {
 		const b = e.target.closest?.('button[data-k]');
-		const c = b && chon && layNgCanh();
+		const c = b && chon && !dangChay && layNgCanh();
 		if (!c) return;
+		dangChay = true;
+		b.setAttribute('aria-busy', 'true');
 		const ds = notGam(chon);
 		const r = ds[0];
 		const hopAm = [
@@ -71,7 +76,12 @@ export function mount(goc) {
 			[0, 4, 7],
 		];
 		const nots = b.dataset.k === 'gam' ? ds : hopAm.flatMap((h) => [r - 12 + h[0], ...h.map((x) => r + x)]);
-		await chuanBi(nots);
+		try {
+			await chuanBi(nots);
+		} finally {
+			b.removeAttribute('aria-busy');
+			dangChay = false;
+		}
 		const t = c.currentTime;
 		if (b.dataset.k === 'gam') ds.forEach((m, i) => choiNot(m, t + i * 0.32, 0.55));
 		else hopAm.forEach((h, i) => [r - 12 + h[0], ...h.map((x) => r + x)].forEach((m) => choiNot(m, t + i * 0.9, 1, 0.11)));

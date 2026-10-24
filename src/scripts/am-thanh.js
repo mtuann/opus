@@ -2,8 +2,10 @@
 // ../opus-zero/docs/assets/js/audio.js. Mặc định dùng mẫu âm piano thật (Salamander Grand Piano, Alexander Holm, CC BY
 // 3.0: public/mau-am/piano/LICENSE.txt), một mẫu mỗi ba nửa cung, nốt ở giữa thì phát mẫu gần nhất ở tốc độ khác; mẫu chưa
 // tải xong, hay người dùng chọn âm tổng hợp, thì phát âm tổng hợp. Lựa chọn lưu ở cùng khóa với site cũ (opus-zero:sound).
-// Khác bản cũ: chỉ tải các mẫu cần cho những nốt sắp phát (chuanBi), không tải cả 30 mẫu (khoảng 2 MB) ngay lần phát đầu.
-// Module chỉ đụng tới trình duyệt khi được gọi (tạo AudioContext trong lúc người dùng bấm, như trình duyệt đòi).
+// Khác bản cũ: chỉ tải mẫu của nốt sắp phát (choiNot, chuanBi), không tải cả 30 mẫu (khoảng 2 MB) ngay lần phát đầu; mẫu
+// đã giải mã chỉ giữ 4 giây đầu (catMau), vì mỗi mẫu đầy đủ chiếm khoảng 5 MB bộ nhớ.
+// Module chỉ đụng tới trình duyệt khi được gọi (tạo AudioContext trong lúc người dùng bấm, như trình duyệt đòi). Không tạo
+// được AudioContext thì mọi hàm phát im lặng bỏ qua: công cụ vẫn chạy phần hình (tên nốt, phím nháy).
 
 const KHOA = 'opus-zero:sound';
 const TEN = ['C', 'Cs', 'D', 'Ds', 'E', 'F', 'Fs', 'G', 'Gs', 'A', 'As', 'B'];
@@ -49,12 +51,25 @@ export const trangThai = () => ({ che_do: cheDo(), da_tai: bo.size, tong: MAU.le
 export const khiDoi = (f) => nghe.push(f);
 const baoTin = () => nghe.forEach((f) => f(trangThai()));
 
-/** AudioContext dùng chung (tạo lần đầu khi người dùng bấm); trình duyệt không có Web Audio thì null. */
+/**
+ * AudioContext dùng chung (tạo lần đầu khi người dùng bấm). Trình duyệt không có Web Audio, hay không tạo được (ném lỗi,
+ * ví dụ đã quá số AudioContext cho phép), thì null.
+ */
 export function layNgCanh() {
 	if (!ngCanh) {
 		const AC = window.AudioContext || window.webkitAudioContext;
 		if (!AC) return null;
-		ngCanh = new AC();
+		try {
+			ngCanh = new AC();
+		} catch {
+			return null;
+		}
+		// iPhone: Web Audio mặc định theo công tắc im lặng; "playback" phát như trình nghe nhạc (Audio Session API, Safari 17+)
+		try {
+			if (navigator.audioSession && navigator.audioSession.type !== 'playback') navigator.audioSession.type = 'playback';
+		} catch {
+			// trình duyệt không cho đặt: để mặc định
+		}
 		chinh = ngCanh.createGain();
 		chinh.gain.value = 0.9;
 		// bộ nén nhẹ: hợp âm nhiều nốt không bị rè
@@ -73,12 +88,33 @@ export function layNgCanh() {
 			nen.connect(ngCanh.destination);
 		} else chinh.connect(ngCanh.destination);
 	}
-	if (ngCanh.state === 'suspended') ngCanh.resume?.();
+	// "suspended" (chưa có thao tác của người dùng) hay "interrupted" (iOS: cuộc gọi, chuyển ứng dụng): đánh thức lại
+	if (ngCanh.state !== 'running') ngCanh.resume?.()?.catch?.(() => {});
 	return ngCanh;
 }
 const dauRa = () => (layNgCanh(), chinh);
 
-/** Tải một mẫu (một lần); hỏng (mất mạng) thì lần sau thử lại, nốt ấy phát âm tổng hợp. */
+/** Số giây giữ lại của mỗi mẫu: đủ cho nốt dài nhất các công cụ phát (khoảng 2,5 giây), cả khi phát chậm hơn một nửa cung. */
+export const DAI_MAU = 4;
+
+/**
+ * Cắt mẫu đã giải mã còn DAI_MAU giây đầu, làm nhỏ dần 50 ms cuối (không có tiếng "tách" nếu nốt kéo tới đó); mẫu ngắn hơn
+ * thì giữ nguyên. Mẫu đầy đủ (khoảng 5 MB sau khi giải mã) không còn ai giữ nên được giải phóng.
+ */
+export function catMau(c, buf) {
+	const n = Math.min(buf.length, Math.round(DAI_MAU * buf.sampleRate));
+	if (n >= buf.length) return buf;
+	const moi = c.createBuffer(buf.numberOfChannels, n, buf.sampleRate);
+	const mo = Math.min(n, Math.round(0.05 * buf.sampleRate));
+	for (let k = 0; k < buf.numberOfChannels; k++) {
+		const ra = moi.getChannelData(k);
+		ra.set(buf.getChannelData(k).subarray(0, n));
+		for (let i = 0; i < mo; i++) ra[n - mo + i] *= 1 - i / mo;
+	}
+	return moi;
+}
+
+/** Tải một mẫu (một lần); hỏng (mất mạng, file lỗi) thì lần sau thử lại, nốt ấy phát âm tổng hợp. */
 function taiMau(m) {
 	if (bo.has(m)) return Promise.resolve();
 	if (dangTai.has(m)) return dangTai.get(m);
@@ -90,9 +126,11 @@ function taiMau(m) {
 			if (!r.ok) throw new Error(`mẫu âm ${ten}: HTTP ${r.status}`);
 			return r.arrayBuffer();
 		})
-		.then((ab) => new Promise((ok, hong) => c.decodeAudioData(ab, ok, hong)))
+		// decodeAudioData vừa gọi lại (trình duyệt cũ) vừa trả promise (trình duyệt mới): bắt cả hai, kẻo file hỏng (hay
+		// nhận trang HTML thay mp3) thành lỗi "unhandled rejection"
+		.then((ab) => new Promise((ok, hong) => c.decodeAudioData(ab, ok, hong)?.catch?.(hong)))
 		.then((buf) => {
-			bo.set(m, buf);
+			bo.set(m, catMau(c, buf));
 			baoTin();
 		})
 		.catch(() => {})
@@ -137,7 +175,10 @@ function amTongHop(c, m, t, d, dinh) {
 	}
 }
 
-/** Phát một nốt: số MIDI, lúc bắt đầu (giây theo AudioContext; bỏ trống là ngay), độ dài (giây), âm lượng 0–1 (playNote). */
+/**
+ * Phát một nốt: số MIDI, lúc bắt đầu (giây theo AudioContext; bỏ trống là ngay), độ dài (giây, đến khoảng 3 giây: mẫu chỉ
+ * giữ DAI_MAU giây), âm lượng 0–1 (playNote). Mẫu của nốt chưa có thì tải (lần sau có tiếng piano), lần này phát âm tổng hợp.
+ */
 export function choiNot(m, luc, dai = 1, am = 0.22) {
 	const c = layNgCanh();
 	if (!c) return;
