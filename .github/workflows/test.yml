@@ -12,10 +12,17 @@ on:
 permissions:
   contents: read
 
+# Một nhánh, một lần chạy: push mới hủy lần đang chạy của cùng nhánh hay cùng pull request
+concurrency:
+  group: kiem-thu-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   kiem-thu:
     name: Kiểm thử (bản xem)
     runs-on: ubuntu-latest
+    # chặn đường treo (mặc định của GitHub là 6 giờ); một lần chạy thường 6–10 phút
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v7
         with:

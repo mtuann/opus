@@ -9,7 +9,7 @@ import { TRINH_DUYET, dongMayChu, goc, nguCanh, trangCo } from './chung.mjs';
 after(dongMayChu);
 const KHUONG = trangCo('oz-abc');
 const QUIZ = trangCo('oz-quiz');
-const khongCo = (khoi) => `bản build không có trang nào có ${khoi} (bản thật trước đợt 2; bản xem có từ D1.8)`;
+const khongCo = (khoi) => `bản build không có trang nào có ${khoi}`;
 
 for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 	test(`${ten}: giá nhạc mở được, chạm nút "Thoát giá nhạc" thì thoát (360 px, cảm ứng)`, { skip: !KHUONG.length && khongCo('khuông nhạc') }, async () => {
@@ -43,22 +43,24 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 		}
 	});
 
+	// mọi trang mẫu có khuông nhạc (review D1.7: chỉ một trang thì WebKit lệch ở trang khác mà kiểm thử không thấy)
 	test(`${ten}: mở thẳng link #mục thì đích đứng đúng chỗ, ở 360 và 1280 px`, { skip: !KHUONG.length && khongCo('khuông nhạc') }, async () => {
 		const trinhDuyet = await loai.launch();
 		try {
-			for (const co of [{ w: 360, h: 780, camUng: true }, { w: 1280, h: 800, camUng: false }]) {
-				const ctx = await nguCanh(trinhDuyet, ten, co);
-				const p = await ctx.newPage();
-				// tiêu đề cuối của bài: phía trên có mọi khối của trang
-				await p.goto((await goc()) + KHUONG[0], { waitUntil: 'load' });
-				const id = await p.evaluate(() => [...document.querySelectorAll('.sl-markdown-content h2[id]')].at(-1).id);
-				await p.goto((await goc()) + KHUONG[0] + '#' + encodeURIComponent(id), { waitUntil: 'load' });
-				await p.waitForTimeout(3000);
-				const truoc = await p.evaluate((id) => document.getElementById(id).getBoundingClientRect().top, id);
-				const dung = await p.evaluate((id) => (document.getElementById(id).scrollIntoView(), document.getElementById(id).getBoundingClientRect().top), id);
-				assert.ok(Math.abs(truoc - dung) <= 3, `${co.w} px: #${id} ở ${Math.round(truoc)} px, đúng chỗ là ${Math.round(dung)} px`);
-				await ctx.close();
-			}
+			for (const trang of KHUONG)
+				for (const co of [{ w: 360, h: 780, camUng: true }, { w: 1280, h: 800, camUng: false }]) {
+					const ctx = await nguCanh(trinhDuyet, ten, co);
+					const p = await ctx.newPage();
+					// tiêu đề cuối của bài: phía trên có mọi khối của trang
+					await p.goto((await goc()) + trang, { waitUntil: 'load' });
+					const id = await p.evaluate(() => [...document.querySelectorAll('.sl-markdown-content h2[id]')].at(-1).id);
+					await p.goto((await goc()) + trang + '#' + encodeURIComponent(id), { waitUntil: 'load' });
+					await p.waitForTimeout(3000);
+					const truoc = await p.evaluate((id) => document.getElementById(id).getBoundingClientRect().top, id);
+					const dung = await p.evaluate((id) => (document.getElementById(id).scrollIntoView(), document.getElementById(id).getBoundingClientRect().top), id);
+					assert.ok(Math.abs(truoc - dung) <= 3, `${trang}, ${co.w} px: #${id} ở ${Math.round(truoc)} px, đúng chỗ là ${Math.round(dung)} px`);
+					await ctx.close();
+				}
 		} finally {
 			await trinhDuyet.close();
 		}

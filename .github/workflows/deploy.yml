@@ -9,10 +9,9 @@ on:
     paths-ignore: ['plans/**', 'README.md', 'AGENTS.md', 'CLAUDE.md', 'LICENSE', 'LICENSE-CONTENT']
   workflow_dispatch:
 
+# Quyền đăng Pages chỉ ở job deploy; job build (chạy npm ci, mã của gói bên thứ ba) chỉ đọc
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 # Mỗi lúc một lần đăng; lần push sau chờ lần trước xong, để bản cũ hơn không ghi đè bản mới.
 concurrency:
@@ -23,6 +22,8 @@ jobs:
   build:
     name: Build và kiểm thử (bản thật)
     runs-on: ubuntu-latest
+    # chặn đường treo (mặc định của GitHub là 6 giờ); một lần chạy thường 6–10 phút
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v7
       - uses: ./.github/actions/kiem-thu
@@ -37,6 +38,10 @@ jobs:
     name: Đăng
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.dang.outputs.page_url }}

@@ -24,10 +24,35 @@ runs:
       shell: bash
     - run: npm test
       shell: bash
+    # trình duyệt của Playwright: lưu đệm theo phiên bản Playwright trong package-lock.json (đỡ khoảng 2 phút mỗi lần);
+    # thư viện hệ thống thì cài mỗi lần
+    - name: Phiên bản Playwright
+      id: pw
+      run: echo "phien-ban=$(node -p "require('./node_modules/playwright/package.json').version")" >> "$GITHUB_OUTPUT"
+      shell: bash
+    - uses: actions/cache@v6
+      id: luu-dem
+      with:
+        path: ~/.cache/ms-playwright
+        key: playwright-${{ runner.os }}-${{ steps.pw.outputs.phien-ban }}
     - name: Cài trình duyệt cho kiểm thử trình duyệt và Lighthouse
+      if: steps.luu-dem.outputs.cache-hit != 'true'
       run: npx playwright install --with-deps chromium webkit firefox
+      shell: bash
+    - name: Cài thư viện hệ thống cho trình duyệt
+      if: steps.luu-dem.outputs.cache-hit == 'true'
+      run: npx playwright install-deps chromium webkit firefox
       shell: bash
     - run: npm run test:trinh-duyet
       shell: bash
-    - run: npm run lighthouse
+    - name: Lighthouse
+      run: LH_RA=lighthouse-ket-qua npm run lighthouse
       shell: bash
+    # hỏng thì giữ JSON của Lighthouse để xem lại (tab Summary của lần chạy, 14 ngày)
+    - uses: actions/upload-artifact@v7
+      if: failure()
+      with:
+        name: lighthouse-${{ inputs.ban }}
+        path: lighthouse-ket-qua
+        retention-days: 14
+        if-no-files-found: ignore

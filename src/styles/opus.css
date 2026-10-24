@@ -196,6 +196,11 @@ header.header {
 	.sl-link-button {
 		min-height: 44px;
 	}
+	/* Link neo cạnh tiêu đề: Starlight nới vùng bấm bằng ::after (0,25 rem trên dưới, 0,5 rem hai bên); ở tiêu đề nhỏ vẫn
+	   dưới 44 px, nên nới tới đủ 44 px mỗi chiều. Không đổi bố cục. */
+	.sl-markdown-content .sl-anchor-link::after {
+		inset: min(-0.25rem, calc(50% - 22px)) min(-0.5rem, calc(50% - 22px));
+	}
 }
 /* Starlight để ô chọn giao diện rộng 6,25em (viết cho tiếng Anh), chữ "Tự động" bị cắt */
 starlight-theme-select select {

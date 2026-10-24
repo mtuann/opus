@@ -1,16 +1,16 @@
-// Dùng chung cho kiểm thử trình duyệt (D1.7): máy chủ tĩnh trên dist/, trang mẫu có trong bản build, ba trình duyệt,
+// Dùng chung cho kiểm thử trình duyệt (D1.7): máy chủ tĩnh trên dist/, trang mẫu lấy từ bản build (tools/trang-mau.mjs), ba trình duyệt,
 // ba cỡ màn hình, cuộn hết trang để các khối khởi tạo. Chạy: npm run test:trinh-duyet (sau npm run build hay build:xem;
 // cần trình duyệt của Playwright: npx playwright install chromium webkit firefox).
 import fs from 'node:fs';
 import path from 'node:path';
 import { chromium, firefox, webkit } from 'playwright';
 import { moMayChu } from '../../tools/may-chu.mjs';
+import { trangMau } from '../../tools/trang-mau.mjs';
 
 export const DIST = path.resolve(import.meta.dirname, '../../dist');
 
-/** Trang mẫu: trang chủ, trang 404, và các trang thử của D1.8 khi bản build có (bản xem). */
-const UNG_VIEN = ['', '404.html', 'nhac-ly/10-hop-am-ba/', 'piano/tac-pham/fur-elise/', 'nghe-nhac/bach-goldberg/'];
-export const TRANG = UNG_VIEN.filter((t) => fs.existsSync(path.join(DIST, t.endsWith('.html') ? t : path.join(t, 'index.html'))));
+/** Trang mẫu: trang chủ, trang 404, trang đã đổi trên nhánh, mỗi loại khối một trang. Chưa build thì báo lỗi. */
+export const TRANG = trangMau(DIST);
 export const tenTrang = (t) => t || '(trang chủ)';
 
 /** Trang có khối cần JavaScript (khuông nhạc, câu hỏi, khối nghe) trong bản build. */

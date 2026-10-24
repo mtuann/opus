@@ -1,0 +1,78 @@
+// Trang mẫu cho kiểm thử trình duyệt và Lighthouse (D1.7, sửa theo review): lấy từ chính bản build, để trang của mọi lô
+// đều được kiểm. Thứ tự: trang chủ, trang 404, các trang nhánh đang làm đã đổi so với main (tối đa 6: trang của lô), rồi
+// với mỗi loại khối, trang đầu tiên (theo thứ tự chữ cái) có khối ấy; cộng trang ghi trong biến môi trường OPUS_TRANG
+// ("nhac-ly/10-hop-am-ba/,piano/gam/").
+import { execFileSync } from 'node:child_process';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const GOC = fileURLToPath(new URL('../', import.meta.url));
+
+/** Dấu hiệu của từng loại khối trong HTML đã dựng. */
+export const KHOI = {
+	'khuông nhạc': 'class="oz-abc',
+	'câu hỏi': 'class="oz-quiz',
+	'khối nghe': 'class="oz-listen',
+	'hộp tác phẩm': 'class="oz-piece',
+	'hình cấu trúc': 'class="oz-figure',
+	'bảng': '<table',
+	'khối thu gọn': '<details',
+	'chữ "sắp có"': 'class="oz-sap-co"',
+	'ô "chưa chuyển"': 'class="oz-chua-co',
+};
+
+/** File HTML của một trang mẫu ("" là trang chủ, "404.html", "nhac-ly/x/"). */
+export const fileCua = (dist, t) => path.join(dist, t.endsWith('.html') ? t : path.join(t, 'index.html'));
+
+/** Mọi trang của bản build, theo thứ tự chữ cái: "", "404.html", "nhac-ly/10-hop-am-ba/"… */
+function tatCa(dist) {
+	return fs
+		.readdirSync(dist, { recursive: true })
+		.map((f) => f.replace(/\\/g, '/'))
+		.filter((f) => f.endsWith('index.html') && !f.startsWith('pagefind/') && !f.startsWith('_astro/'))
+		.map((f) => f.slice(0, -'index.html'.length))
+		.sort();
+}
+
+/** Trang (trong src/content/docs/) nhánh đang làm đã đổi so với main; rỗng nếu đang ở main hay không đọc được git. */
+function trangDaDoi(goc) {
+	const git = (...ts) => execFileSync('git', ['-C', goc, ...ts], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
+	try {
+		const nen = ['main', 'origin/main'].find((b) => {
+			try {
+				return git('rev-parse', '--verify', '--quiet', `${b}^{commit}`);
+			} catch {
+				return false;
+			}
+		});
+		if (!nen) return [];
+		const doi = git('diff', '--name-only', '--diff-filter=AM', git('merge-base', 'HEAD', nen), '--', 'src/content/docs');
+		return doi
+			.split('\n')
+			.map((f) => /^src\/content\/docs\/(.+)\.md$/.exec(f)?.[1])
+			.filter(Boolean)
+			.map((t) => (t === 'index' ? '' : t.replace(/(^|\/)index$/, '') + '/').replace(/^\/$/, ''));
+	} catch {
+		return [];
+	}
+}
+
+/** Danh sách trang mẫu của bản build ở `dist`. */
+export function trangMau(dist, goc = GOC) {
+	if (!fs.existsSync(path.join(dist, 'index.html'))) throw new Error(`Chưa có ${path.relative(goc, dist) || dist}/index.html: chạy npm run build (hay build:xem) trước.`);
+	const co = tatCa(dist);
+	const html = new Map(co.map((t) => [t, fs.readFileSync(fileCua(dist, t), 'utf8')]));
+	const ra = ['', ...(fs.existsSync(path.join(dist, '404.html')) ? ['404.html'] : [])];
+	ra.push(...trangDaDoi(goc).filter((t) => html.has(t)).slice(0, 6));
+	for (const dau of Object.values(KHOI)) {
+		const t = co.find((x) => x && html.get(x).includes(dau));
+		if (t !== undefined) ra.push(t);
+	}
+	for (const t of (process.env.OPUS_TRANG ?? '').split(',').map((x) => x.trim()).filter(Boolean)) {
+		const t2 = t.endsWith('.html') || t.endsWith('/') ? t : t + '/';
+		if (!fs.existsSync(fileCua(dist, t2))) throw new Error(`OPUS_TRANG: bản build không có trang ${t2}`);
+		ra.push(t2);
+	}
+	return [...new Set(ra)];
+}

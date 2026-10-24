@@ -113,6 +113,8 @@ export function doDaiO(than, L, ghep = false) {
 		if (c === '[') {
 			// hợp âm: độ dài của nốt đầu trong ngoặc nhân độ dài sau ngoặc
 			const j = s.indexOf(']', i);
+			// không có "]" phía sau: abcjs cũng báo; dừng ở đây (đọc tiếp từ -1 thì vòng lặp không tiến, treo)
+			if (j < 0) throw new Error('hợp âm mở bằng "[" mà không đóng bằng "]"');
 			const trong = s.slice(i + 1, j);
 			const m = /^[_^=]*[A-Ga-gz][,']*/.exec(trong);
 			const [dTrong] = docDoDai(trong, m ? m[0].length : 0);
@@ -163,7 +165,13 @@ export function oSai(abc) {
 	}
 	const sai = [];
 	for (const [k, phan] of be) {
-		const o = doDaiO(phan.join(' '), L, ghep);
+		let o;
+		try {
+			o = doDaiO(phan.join(' '), L, ghep);
+		} catch (e) {
+			sai.push(`bè ${k}: ${e.message}`);
+			continue;
+		}
 		o.forEach((d, i) => {
 			if (d && bang(d, M)) return;
 			if (d && nhoHon(d, M) && (i === 0 || i === o.length - 1)) return;
@@ -197,7 +205,8 @@ export function kiemThuMuc(thuMuc) {
 	return { khoi: khoi.length, loi };
 }
 
-if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {
+// import.meta.main: đúng cả khi đường dẫn script đi qua liên kết tượng trưng (/tmp trên macOS)
+if (import.meta.main) {
 	const { khoi, loi } = kiemThuMuc(process.argv[2] ? path.resolve(process.argv[2]) : undefined);
 	for (const l of loi) console.log(`✗ ${l}`);
 	console.log(`khuông nhạc: ${khoi} khối, ${loi.length} lỗi`);

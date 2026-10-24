@@ -23,8 +23,8 @@ npm run build     # bản thật vào dist/: chỉ trang đã khóa; deploy dùn
 npm run build:xem # bản xem vào dist/: thêm trang chưa khóa, có dải "Chưa kiểm định"; không đăng
 npm run preview   # xem dist/ vừa build: http://localhost:4321/opus/
 npm test          # kiểm thử trên dist/: chạy sau npm run build hay npm run build:xem
-npm run test:trinh-duyet  # kiểm thử trình duyệt trên dist/: ba trình duyệt, ba cỡ màn hình, axe, thành phần
-npm run lighthouse        # Lighthouse ở tối đa ba trang của dist/, kiểm luật 7 của kế hoạch
+npm run test:trinh-duyet  # kiểm thử trình duyệt trên trang mẫu của dist/: ba trình duyệt, ba cỡ màn hình, axe, thành phần
+npm run lighthouse        # Lighthouse ở tối đa ba trang mẫu của dist/, kiểm luật 7 của kế hoạch
 ```
 
 - Kiểm thử ở `tests/*.test.mjs`, chạy bằng trình kiểm thử có sẵn của Node (`node --test`). Thêm kiểm thử thì thêm file `tests/<tên>.test.mjs`.
@@ -49,7 +49,10 @@ npm run lighthouse        # Lighthouse ở tối đa ba trang của dist/, kiể
 
 - `.github/workflows/test.yml`: nhánh `moi/**`, `mo/**`, `them/**`, pull request, hay bấm chạy tay. Build bản xem, chạy `npm test`, kiểm thử trình duyệt, Lighthouse. Không đăng gì.
 - `.github/workflows/deploy.yml`: mỗi lần push lên `main`. Build bản thật, chạy đủ các kiểm thử như trên; đạt hết thì đăng `dist/` lên GitHub Pages. Hỏng bước nào thì không đăng, site giữ bản trước. Push chỉ đổi `plans/`, `AGENTS.md`, `README.md`, giấy phép thì không chạy.
-- Hai workflow dùng chung các bước ở `.github/actions/kiem-thu/action.yml`. Trên GitHub không có `../opus-zero/` và `.cache/site-cu/`, nên kiểm thử cần hai thư mục ấy tự bỏ qua.
+- Hai workflow dùng chung các bước ở `.github/actions/kiem-thu/action.yml`; mỗi job dừng sau 30 phút. Hỏng thì JSON của Lighthouse được tải lên lần chạy (giữ 14 ngày).
+- Trên GitHub không có `../opus-zero/` và `.cache/site-cu/`: kiểm thử cần hai thư mục ấy tự bỏ qua (so chữ với site cũ; script chuyển bỏ phép kiểm trang đích ở site cũ). Thử như CI: clone repo vào thư mục không có `opus-zero` cạnh nó, rồi `npm ci`, build, kiểm thử.
+- Trang mẫu của kiểm thử trình duyệt và Lighthouse lấy từ bản build (`tools/trang-mau.mjs`): trang chủ, trang 404, trang nhánh đang làm đã đổi so với `main` (tối đa 6), rồi mỗi loại khối (khuông nhạc, câu hỏi, khối nghe, hộp tác phẩm, hình, bảng, khối thu gọn, "sắp có", ô "chưa chuyển") một trang. Thêm trang: `OPUS_TRANG="piano/gam/,nhac-ly/" npm run test:trinh-duyet`. Lighthouse đo trang chủ và hai trang mẫu đầu; chọn trang khác bằng `LH_TRANG`.
+- Máy chủ tĩnh của kiểm thử: `tools/may-chu.mjs` (chỉ nghe 127.0.0.1, có Range như GitHub Pages); chạy riêng: `node tools/may-chu.mjs dist 4400 [--http2]`.
 
 ## Khóa
 

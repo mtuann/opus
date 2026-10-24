@@ -12,6 +12,8 @@ test('bắt được ô nhịp sai độ dài, bè chồng lệch nhau, cảnh b
 	// mỗi bè ([V:…]) kiểm riêng
 	assert.deepEqual(oSai('X:1\nM:2/4\nL:1/8\nK:C\n[V:1] cdef|g4|a4|]\n[V:2] C4|G,2|C4|]'), ['bè 2, ô 2: 1/4, cần 1/2']);
 	assert.deepEqual(oSai('X:1\nM:none\nL:1/4\nK:C\nCDE|]'), [], 'không có nhịp: không kiểm độ dài');
+	// hợp âm (hay [V:…]) mất "]" mà không còn "]" nào phía sau: báo lỗi, không treo (review D1.7)
+	assert.deepEqual(oSai('X:1\nM:4/4\nL:1/4\nK:C\nCDEF|G A B c|\nC D [E F'), ['bè _: hợp âm mở bằng "[" mà không đóng bằng "]"']);
 	assert.match(canhBao('X:1\nM:4/4\nL:1/4\nK:C\n!foo!CDEF|G4|]').join(), /Unknown decoration: foo/);
 	assert.deepEqual(canhBao('X:1\nM:4/4\nL:1/4\nK:C\nCDEF|G4|]'), []);
 });

@@ -81,7 +81,8 @@ export function doiLink(url, trang, canhBao = []) {
 	const sau = muc !== undefined ? `#${muc}` : '';
 	if (duongDan.endsWith('.md')) {
 		const t = dich.slice(0, -3);
-		if (!fs.existsSync(path.join(DOCS_CU, t + '.md'))) canhBao.push(`link tới trang không có ở site cũ: ${url}`);
+		// kiểm trang đích có ở site cũ; máy không có ../opus-zero (như trên GitHub) thì bỏ phép kiểm này
+		if (fs.existsSync(DOCS_CU) && !fs.existsSync(path.join(DOCS_CU, t + '.md'))) canhBao.push(`link tới trang không có ở site cũ: ${url}`);
 		const p = t === 'index' ? '' : t.replace(/\/index$/, '') + '/';
 		return BASE + p + sau;
 	}
