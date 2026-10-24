@@ -6,12 +6,12 @@ lan:
   - so: 1
     ngay: 2026-10-24
     nhanh: moi/d2-l1
-    ma_bam: null
+    ma_bam: sha256:1532703d96a1422a6f6478043362e4d7554c5b13a935e9c698924f96bbd4e89f
     nguoi:
       luot_1: "Claude Opus 5.5 (D2-L1 lượt 1, phần C)"
       luot_2: Claude Sonnet 5.5 (D2-L1 lượt 2 phần 1/2)
       review: Claude Opus 5.5 (review D2-L1, 24/10/2026)
-      kiem_mau: null
+      kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-L1 đúng (d2-l1-kiem-mau.yml)
 ghi_chu: >-
   Trang tóm tắt nhạc lý cơ bản (14 ô, hai mặt A4). Nguồn chính: Open Music Theory (OMT), mở từng chương (tải bằng curl, ngày 24/10/2026; WebFetch bị trang trả 403). Thuật ngữ tiếng Việt đối chiếu src/data/thuat-ngu.yml (chưa khóa) và các bài nhạc lý cũ cùng chủ đề (../opus-zero/docs/nhac-ly/03, 04, 05, 06, 07, 08, 12): không lệch. Sửa cấu trúc trước lượt 1 (agent chính, commit a745865): 14 tiêu đề "###" thành "##", vì trang không có h2 nào (axe heading-order); chữ tiêu đề và id giữ nguyên. Sửa chữ ở lượt 1: n24 (quy tắc số chỉ nhịp, thêm trường hợp 6/8), n30 (hạ át âm), n36 (hình vòng quãng năm: d♯/e♭), n51 (bảng chức năng: vi). Sửa không đổi chữ: chữ "Đô giữa (C4)" dưới hình bàn phím đổi fill="#222" thành fill="currentColor" để đọc được ở chế độ tối (nằm ngoài phím đàn, trên nền trang). Bố cục in hai mặt A4 (n3) tùy CSS của agent chính (lớp oz-sheet, oz-sheet-page, oz-cell, oz-fig, oz-fig-circle): agent chính kiểm sau khi build. Không tính là nhận định: câu mở đầu "Toàn bộ kiến thức đọc nhạc và nhạc lý cơ bản" (nói phạm vi của trang).
 nguon:
