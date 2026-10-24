@@ -66,6 +66,7 @@ Thêm, chốt ngày 24/10/2026:
   - Ảnh chụp do CI chụp (tệp của lần chạy); báo cáo giữ tối đa 4 ảnh.
   - Kiểm thử chờ điều kiện, không chờ cố định.
   - Không làm: dùng chung trang nguồn đã tải giữa hai lượt (để giữ độc lập); chạy song song hai lô (các lô làm lần lượt).
+- [x] Đợt 3: **làm thử D3-L1 trọn vẹn, rồi gom D3-L2 đến D3-L6** (chủ repo chọn ngày 24/10/2026; cách làm ở mục Đợt 3). Mục đích: kiểm định cả loạt bài nhạc lý một lượt (bài dẫn chéo nhau, dùng chung thuật ngữ) và bớt phần việc lặp lại của từng lô, nhưng vẫn thử thành phần dùng chung và cách làm mới ở một lô trước.
 
 Câu hỏi nhỏ còn chờ (từ review nhánh quyết định, `bao-cao/d2-bang-tang.md`); hỏi chủ repo trước lô ghi bên cạnh:
 
@@ -189,6 +190,20 @@ Từ đợt này, mỗi lô gộp vào `main` là trang của lô lên site th�
 
 - `thuat-ngu.yml` khóa dần (chủ repo chọn 24/10/2026): mỗi lô của đợt 3 kiểm định và khóa từng phần các bản ghi thuật ngữ mà trang của lô dùng; D3-L5 khóa nốt và dựng trang Từ điển từ dữ liệu.
 - Thành phần mà các bài này dùng (bàn phím, hóa biểu, vòng quãng năm, máy đếm nhịp, câu hỏi) chuyển trong lô có trang đầu tiên cần nó. Bàn phím (`piano.js` cũ) phát tiếng qua `audio.js`, module âm thanh dùng chung. Lô đầu tiên có bàn phím là D3-L1 (bài 1). Lô đó chép kèm `audio.js` và mẫu âm piano (`../opus-zero/docs/assets/samples/piano/`, Salamander Grand Piano, CC BY 3.0, cả file `LICENSE.txt` của thư mục). Trước đó, trang thử `nhac-ly/10-hop-am-ba` của D1.8 hiện ô "chưa chuyển" ở chỗ bàn phím.
+
+- **Cách làm (chủ repo chọn ngày 24/10/2026):**
+  1. **D3-L1** làm trọn vẹn như một lô (lượt 1, lượt 2, review, kiểm mẫu, khóa, đăng). Lô này làm các thành phần dùng chung (bàn phím, `audio.js`, mẫu âm piano, công cụ luyện tai), nên thử chúng và cách làm mới trước. Lỗi hệ thống sửa ở đây, trước khi nhân ra 37 trang.
+  2. **Lượt 1 của D3-L2 đến D3-L6:**
+     - lần lượt từng lô, mỗi lúc một agent;
+     - mỗi lô một nhánh `moi/d3-l<lô>` từ `main`;
+     - push để `test.yml` kiểm phạm vi và kiểm thử của từng lô;
+     - mỗi lô xuất danh sách cho lượt 2.
+  3. **Nhánh gom `moi/d3-gom`** từ `main`, gộp năm nhánh lô. Trên nhánh này, làm chung một lần cho cả loạt:
+     - Lượt 2, chia phần khoảng 150 nhận định, mỗi lần 2–3 agent. Kết quả nhập vào hồ sơ bằng `nhap`.
+     - Review: chỗ hai lượt lệch nhau, chỗ sửa, câu về chính site, và chỗ các bài nói khác nhau hay dùng thuật ngữ lệch nhau.
+     - Chủ repo kiểm mẫu khoảng 10 nhận định cho cả loạt (`node tools/khoa.mjs xuat D3-L2 D3-L3 D3-L4 D3-L5 D3-L6 --mau 10`).
+     - Khóa, rồi gộp vào `main` một lần.
+  4. **Thuật ngữ:** mỗi lô lập hồ sơ cho bản ghi thuật ngữ mà trang của lô dùng. Trên nhánh gom, lô sau thêm vào hồ sơ đã có, không lập lại. D3-L5 dựng trang Từ điển và khóa nốt.
 
 **Xong khi:** 45 trang của 6 lô và `thuat-ngu.yml` đã khóa.
 
