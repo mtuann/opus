@@ -18,8 +18,13 @@ Nhận định là mọi câu có thể đúng hoặc sai. Mỗi nhận định 
 | `lich-su` | bối cảnh, ảnh hưởng, người đề tặng | có |
 | `so-lieu` | con số khác (số chương, độ dài, tốc độ máy đếm nhịp do tác giả ghi) | có |
 | `khuyen-tap` | "Tập hai tay riêng trước, chậm." | không, nhưng không được trái với trang lõi khác |
+| `ve-site` | câu nói về chính site: "Bài kiểm tra có 28 câu", "xem trang chặng 3", "site chia 7 chặng", số bài, link sang trang khác | không; review kiểm thẳng trên trang, thành phần hay dữ liệu đã khóa, `ghi_chu` ghi đã kiểm ở đâu. Không qua lượt 2 |
 
-Câu viết chung chung đến mức không kiểm được ("bài này rất hay") thì viết lại cho cụ thể hoặc bỏ.
+- Câu viết chung chung đến mức không kiểm được ("bài này rất hay") thì viết lại cho cụ thể hoặc bỏ.
+- **Lời khuyên dính tới sức khỏe** (đau, chấn thương, tư thế gây hại, thính lực) không xếp `khuyen-tap`. Xếp loại cần nguồn (`quy-tac`, `so-lieu`), nên vẫn đủ hai lượt.
+- Câu về chính site có kèm điều kiểm được từ bên ngoài thì tách đôi. Ví dụ "bài Für Elise ở chặng 4, khoảng Grade 4–5": phần chặng là `ve-site` (khớp dữ liệu đã khóa); phần Grade là `cap-do`, cần nguồn.
+
+Hai loại sau do chủ repo chọn ngày 24/10/2026, sau đợt 2. Lý do: ở D2-L1, khoảng 30 câu về chính site làm lượt 2 ghi "chưa chắc" và review phải gỡ từng câu.
 
 ## 2. Thứ bậc nguồn
 
@@ -31,20 +36,42 @@ Sách in (như *The AB Guide to Music Theory*) chỉ là nguồn phụ: agent kh
 
 Hai nguồn bậc 2 mâu thuẫn nhau: ghi cả hai vào hồ sơ, viết trên trang theo nguồn gần bản gốc hơn hoặc viết chung lại ("khoảng 1810"), ghi lý do.
 
+### Nguồn và cách mở
+
+Ghi từ đợt 2, để lô sau khỏi mò lại. Thấy cách mới thì thêm vào đây.
+
+| Nguồn | Cách đọc được |
+|---|---|
+| Open Music Theory | Mở thẳng từng chương, dạng `https://viva.pressbooks.pub/openmusictheory/chapter/<tên>/`. Mục lục ở trang đầu |
+| IMSLP | Trang tác phẩm và trang `Category:<Họ>, <Tên>` mở được; cuối trang có thể loại "People from the X era" (thời kỳ). File PDF trên IMSLP bị chặn bot: lấy bản nhạc ở Mutopia hay Wikimedia Commons |
+| Library of Congress | Trang HTML trả 403. Bản `.json` đọc được: `https://id.loc.gov/authorities/names/<mã>.json` |
+| GND (thư viện Đức) | d-nb.info và lobid.org hay chặn: đọc qua `https://www.deutsche-biographie.de/pnd<mã GND>.html` |
+| BnF | `https://data.bnf.fr/…` mở được; năm sinh, mất ở tiêu đề bản ghi. Người còn sống thường không ghi năm |
+| VIAF | Hay trả 403: dùng LoC, BnF, GND thay |
+| ABRSM | Trang HTML trả 403. PDF đề cương mở được ở `abrsm.org/sites/default/files/…`. Đề cương cũ (trước 2021) lấy qua Wayback Machine, như `web.archive.org/web/2020/https://us.abrsm.org/media/…`. Danh sách bằng ARSM là một PDF riêng |
+| Henle | Trang sản phẩm (`henle.de/en/…/HN-<số>`) ghi mức khó 1–9, và có khi ghi "ABRSM: Grade X" |
+| Bach-Digital | Trang web chặn bot. Dùng IMSLP, Henle, hay API của Bach-Digital nếu mở được |
+| Köchel online, Beethoven-Haus | Trang tác phẩm mở được |
+| PubMed | Trang web chặn bot: đọc bản ghi qua NCBI E-utilities, dẫn link PubMed |
+| Nhạc sĩ Việt Nam | `hoinhacsi.vn` (Hội Nhạc sĩ Việt Nam); báo chính thức (Nhân Dân) khi không có nguồn tốt hơn, ghi rõ loại nguồn. Vài trang cơ quan lỗi chứng chỉ |
+
+- Trang dài (IMSLP, đề cương): bản tóm tắt của công cụ đọc web có khi sai hay thiếu. Chỗ quan trọng thì đọc chữ thật của trang, ví dụ `curl -sL <link> | sed 's/<[^>]*>//g' | grep -i …`, hay đọc PDF bằng thư viện.
+- **Không đưa email hay thông tin cá nhân của chủ repo vào yêu cầu gửi ra ngoài** (header User-Agent, tham số, nội dung). Dịch vụ nào đòi thông tin liên hệ thì dùng `opus-kiem-dinh/1.0 (https://mtuann.github.io/opus/)`, hay bỏ dịch vụ ấy.
+
 ## 3. Kiểm định: mức theo tầng
 
 Mức kiểm theo tầng của trang (`tang` trong `src/data/trang.yml`), chủ repo chọn ngày 24/10/2026:
 
 | Tầng | Lượt 1 | Lượt 2 | Thêm |
 |---|---|---|---|
-| Lõi, Tác phẩm; bản ghi dữ liệu | agent làm lô, mọi nhận định có nguồn | agent khác, độc lập, mọi nhận định | |
+| Lõi, Tác phẩm; bản ghi dữ liệu | agent làm lô, mọi nhận định có nguồn | agent khác, độc lập, mọi nhận định cần nguồn; lời khuyên tập chỉ mẫu 3 câu mỗi trang hay bản ghi (mẫu có câu sai thì kiểm hết); câu về chính site không qua lượt 2 | review kiểm câu về chính site |
 | Tham chiếu có hạn | như lõi | như lõi | hồ sơ ghi ngày kiểm; `trang.yml` ghi ngày rà lại (`ra_lai`); đến hạn thì rà lại, mỗi lần là một lần kiểm định mới |
 | Đọc thêm (ngoại vi) | như lõi | agent khác kiểm mẫu: khoảng 5 nhận định mỗi trang, script chọn ngẫu nhiên | |
 | Khung và công cụ | không có nhận định: danh sách và con số sinh từ dữ liệu, kiểm thử tự động | | hồ sơ không có nhận định |
 
 1. **Lượt 1 (agent A):** tách trang thành danh sách nhận định và danh sách khuông nhạc; kiểm từng mục; ghi nguồn và kết quả vào hồ sơ; sửa trang nếu sai (mỗi chỗ sửa có nguồn).
-2. **Lượt 2 (agent B, độc lập):** nhận danh sách nhận định đã tách (trang Đọc thêm: chỉ mẫu ngẫu nhiên), không kèm nguồn và kết luận của lượt 1; tự tìm nguồn và cho kết quả. Sonnet đủ cho việc đối chiếu; chỗ khó (nguồn mâu thuẫn, nhận định cần đọc bản nhạc) dùng Opus.
-3. **Review** (mặc định Claude; không phải người đã làm lượt 1 hay lượt 2): mọi nhận định hai lượt cho kết quả khác nhau, mọi chỗ đã sửa, mọi khuông nhạc ví dụ soạn riêng.
+2. **Lượt 2 (agent B, độc lập):** nhận danh sách nhận định do `node tools/khoa.mjs xuat` tách ra (bỏ câu về chính site; lời khuyên tập và trang Đọc thêm: chỉ mẫu ngẫu nhiên), không kèm nguồn và kết luận của lượt 1. Không dùng chung trang nguồn đã tải với lượt 1, để giữ độc lập; tự tìm nguồn và cho kết quả. Sonnet đủ cho việc đối chiếu; chỗ khó (nguồn mâu thuẫn, nhận định cần đọc bản nhạc) dùng Opus.
+3. **Review** (mặc định Claude; không phải người đã làm lượt 1 hay lượt 2): mọi nhận định hai lượt cho kết quả khác nhau, mọi chỗ đã sửa, mọi khuông nhạc ví dụ soạn riêng, và mọi câu về chính site (kiểm trên trang, thành phần, dữ liệu).
 4. **Bạn đọc tóm tắt và kiểm mẫu:** đọc bản tóm tắt hồ sơ trong báo cáo của lô, xem ngẫu nhiên khoảng 5 nhận định mỗi lô (`node tools/khoa.mjs xuat <lô> --mau 5`), ghi kết quả vào hồ sơ. Mục đích là biết có tin được các lượt agent không; mẫu sai thì kiểm lại cả lô. Bạn không kiểm tay mọi nhận định: hơn 200 trang thì bạn thành chỗ nghẽn.
 
 Trang Lõi không giữ chi tiết mau cũ (tên ứng dụng, giá, thiết bị, link bản thu, sự kiện): lượt 1 viết lại câu ấy cho bền, hay chuyển sang trang tham chiếu có hạn và link tới đó (chủ repo chọn ngày 24/10/2026; danh sách câu đã thấy: `plans/lam-lai/bao-cao/d2-bang-tang.md`, mục 4 của phần phân tích). Trang Đọc thêm mà mẫu lượt 2 có nhận định sai thì lượt 2 kiểm cả trang.
@@ -128,8 +155,12 @@ Bản ghi khóa từng phần thì mở đúng khóa ấy (`du-lieu/<bộ>/<id>#
 
 ## 8. Lời giao việc kiểm định mẫu
 
-Lượt 1 nằm trong lời giao lô ở `plans/lam-lai/README.md` (mục "Lời giao việc mẫu").
+Lời giao việc mẫu nằm ở `plans/lam-lai/loi-giao/`:
+- lượt 1 nằm trong lời giao lô;
+- lượt 2 cho trang và cho dữ liệu;
+- lượt 1 cho dữ liệu;
+- review mã.
 
-> Bạn làm **kiểm định lượt 2** cho lô **D<đợt>-L<lô>** của repo opus. Chỉ đọc `plans/ben-vung/chuan-kiem-dinh.md` và file `plans/lam-lai/bao-cao/d<đợt>-l<lô>-nhan-dinh.yml` (danh sách nhận định, không có nguồn và kết quả). Không mở hồ sơ trong `kiem-dinh/` và báo cáo của lượt 1. Với mỗi nhận định, tự tìm nguồn theo mục 2, ghi `dung`, `sai` (kèm nguồn và câu đúng) hoặc `khong-chac`, kèm link đã mở. Ghi kết quả vào `plans/lam-lai/bao-cao/d<đợt>-l<lô>-luot-2.yml`: danh sách `{ trang, id, luot_2, nguon: [link], cau_dung, ghi_chu }` (`trang` và `id` chép từ danh sách nhận định; `cau_dung` khi `sai`), để `node tools/khoa.mjs nhap` đọc được. Không sửa trang. Không push.
+Dùng lại, chỉ đổi phần trong `<>`.
 
 > Bạn **mở khóa và sửa** trang `<đường dẫn>` của repo opus vì `<lý do: lỗi được báo, nguồn đổi>`. Đọc `AGENTS.md` và `plans/ben-vung/chuan-kiem-dinh.md` mục 7. Tạo nhánh `mo/<tên ngắn>` từ `main`. Chạy `node tools/khoa.mjs mo <trang> --ly-do "..."`, sửa, kiểm định lại những nhận định bị chạm và các nhận định cùng đoạn, điền mục mới trong `lan` của hồ sơ, khóa lại. Liệt kê trong báo cáo các trang link tới đoạn đã sửa. Khi xong: `npm run build` và `npm test` đạt; commit; báo cáo `plans/ben-vung/bao-cao/mo-<tên ngắn>.md`. Không push.

@@ -37,7 +37,7 @@ function tatCa(dist) {
 }
 
 /** Trang (trong src/content/docs/) nhánh đang làm đã đổi so với main; rỗng nếu đang ở main hay không đọc được git. */
-function trangDaDoi(goc) {
+export function trangDaDoi(goc = GOC) {
 	const git = (...ts) => execFileSync('git', ['-C', goc, ...ts], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
 	try {
 		const nen = ['main', 'origin/main'].find((b) => {

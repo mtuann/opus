@@ -8,6 +8,10 @@ Site cũ (MkDocs, repo `mtuann/opus-zero`, bản v15) ở thư mục cạnh `../
 
 Các mục **Cách làm việc**, **Quy tắc nội dung**, **Bản quyền**, **Quy ước ABC** trong `../opus-zero/AGENTS.md` vẫn áp dụng cho site mới, trừ phần gắn với MkDocs (hộp `!!!`, link tới file `.md`, id do MkDocs sinh, đường dẫn `docs/assets/...`, tên kiểm thử cũ): cú pháp mới chốt ở đợt 1 (D1.3–D1.5) và ghi vào đây. Nhánh và báo cáo theo mục "Quy tắc chung" của kế hoạch.
 
+## Mạng
+
+Không đưa email hay thông tin cá nhân của chủ repo vào yêu cầu gửi ra ngoài (header User-Agent, tham số, nội dung). Dịch vụ nào đòi thông tin liên hệ thì dùng `opus-kiem-dinh/1.0 (https://mtuann.github.io/opus/)`. Nguồn hay bị chặn và cách vòng: `plans/ben-vung/chuan-kiem-dinh.md`, mục "Nguồn và cách mở". Lời giao việc mẫu cho agent: `plans/lam-lai/loi-giao/`.
+
 ## Thư mục
 
 Như `plans/lam-lai/cong-nghe.md` mục 4.
@@ -28,7 +32,7 @@ npm run lighthouse        # Lighthouse ở tối đa ba trang mẫu của dist/,
 ```
 
 - Kiểm thử ở `tests/*.test.mjs`, chạy bằng trình kiểm thử có sẵn của Node (`node --test`). Thêm kiểm thử thì thêm file `tests/<tên>.test.mjs`.
-- Kiểm thử trình duyệt ở `tests/trinh-duyet/kiem-*.mjs` (Playwright), không nằm trong `npm test`. Lần đầu cài trình duyệt: `npx playwright install chromium webkit firefox`. Phép thử nào cần trang có khối (khuông nhạc, câu hỏi) mà bản build chưa có thì tự bỏ qua.
+- Kiểm thử trình duyệt ở `tests/trinh-duyet/kiem-*.mjs` (Playwright), không nằm trong `npm test`. Chờ điều kiện (khối dựng xong, `document.fonts.ready`, hai khung hình), không chờ cố định: chờ cố định đã làm CI chập chờn trên WebKit ở máy GitHub. Lần đầu cài trình duyệt: `npx playwright install chromium webkit firefox`. Phép thử nào cần trang có khối (khuông nhạc, câu hỏi) mà bản build chưa có thì tự bỏ qua.
 - Khuông nhạc: `npm test` kiểm mọi khối ```` ```abc ```` trong `src/content/docs/` (abcjs không cảnh báo, ô nhịp đủ độ dài). Xem chi tiết: `node tools/khuong-nhac.mjs`.
 - Trang mới chuyển chưa khóa nên chỉ có ở bản xem: xem và kiểm bằng `npm run build:xem`, không phải `npm run build`.
 - `tools/du_lieu/` dùng Python 3.12: `python3 -m pip install -r requirements.txt`. `tools/chuyen/` và `tools/khoa.mjs` chạy bằng Node.
@@ -56,6 +60,7 @@ npm run lighthouse        # Lighthouse ở tối đa ba trang mẫu của dist/,
 
 - `.github/workflows/test.yml`: nhánh `moi/**`, `mo/**`, `them/**`, pull request, hay bấm chạy tay. Build bản xem, chạy `npm test`, kiểm thử trình duyệt, Lighthouse. Không đăng gì.
 - `.github/workflows/deploy.yml`: mỗi lần push lên `main`. Build bản thật, chạy đủ các kiểm thử như trên; đạt hết thì đăng `dist/` lên GitHub Pages. Hỏng bước nào thì không đăng, site giữ bản trước. Push chỉ đổi `plans/`, `AGENTS.md`, `README.md`, giấy phép thì không chạy.
+- `test.yml` chụp ảnh các trang nhánh đã đổi và trang mẫu, ở 360 và 1280 px (`tools/chup-anh.mjs`), lưu thành tệp `anh-chup` của lần chạy, giữ 30 ngày. Tải về: `gh run download <số lần chạy> -n anh-chup`. Báo cáo của lô chỉ giữ tối đa 4 ảnh tiêu biểu.
 - Hai workflow dùng chung các bước ở `.github/actions/kiem-thu/action.yml`; job build và kiểm thử dừng sau 30 phút, job đăng sau 15 phút. Hỏng thì JSON của Lighthouse được tải lên lần chạy (giữ 14 ngày).
 - Trên GitHub không có `../opus-zero/` và `.cache/site-cu/`: kiểm thử cần hai thư mục ấy tự bỏ qua (so chữ với site cũ; script chuyển bỏ phép kiểm trang đích ở site cũ). Thử như CI: clone repo vào thư mục không có `opus-zero` cạnh nó, rồi `npm ci`, build, kiểm thử.
 - Trang mẫu của kiểm thử trình duyệt và Lighthouse lấy từ bản build (`tools/trang-mau.mjs`): trang chủ, trang 404, trang nhánh đang làm đã đổi so với `main` (tối đa 6), rồi mỗi loại khối (khuông nhạc, câu hỏi, khối nghe, hộp tác phẩm, hình, bảng, khối thu gọn, "sắp có", ô "chưa chuyển") một trang. Thêm trang: `OPUS_TRANG="piano/gam/,nhac-ly/" npm run test:trinh-duyet`. Lighthouse đo trang chủ và hai trang mẫu đầu; chọn trang khác bằng `LH_TRANG`.
@@ -84,6 +89,7 @@ node tools/khoa.mjs xuat D3-L2 [--mau 5]    # nhận định của lô cho lư�
 node tools/khoa.mjs nhap <file lượt 2>      # đưa kết quả lượt 2 vào hồ sơ; in nhận định cần review
 ```
 
+- Câu nói về chính site (loại `ve-site`): review kiểm trên trang và dữ liệu, `ghi_chu` ghi đã kiểm ở đâu, không qua lượt 2. Lời khuyên tập: lượt 2 chỉ kiểm mẫu 3 câu mỗi trang. `xuat` tự bỏ và tự lấy mẫu như vậy. Chi tiết: `plans/ben-vung/chuan-kiem-dinh.md` mục 1 và 3.
 - Khóa được khi mọi nhận định đã qua đủ lượt theo tầng (`plans/ben-vung/chuan-kiem-dinh.md` mục 3: trang Đọc thêm chỉ cần lượt 2 cho khoảng 5 nhận định mẫu) và có kết quả, chỗ sửa hay bỏ có ghi chú, chỗ hai lượt khác nhau đã giải quyết, mọi khuông nhạc (khối `abc`) đã kiểm, và lần cuối trong `lan` ghi đủ người (`luot_1`, `luot_2`, `review`, `kiem_mau`). Hồ sơ không có nhận định chỉ khóa được ở trang khung, hay khi có `ghi_chu` giải thích.
 - Mục đang khóa thì `khoa` và `mau` từ chối: muốn sửa thì `mo` trước (ghi lý do), không khóa đè. Riêng bản ghi đang khóa từng phần: `mau` thêm lần kiểm định mới để khóa thêm trường hay khóa cả bản ghi, khi các khóa cũ còn khớp.
 - Trang viết `.md` (không `.mdx`), không có khoảng trắng cuối dòng (mã băm bỏ qua chúng; ngắt dòng cứng viết `<br>`), khối khuông nhạc mở bằng ` ```abc ` ở đầu dòng (cách công cụ đếm khuông cho hồ sơ). `tests/khoa.test.mjs` chặn.

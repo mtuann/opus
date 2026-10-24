@@ -31,3 +31,15 @@ jobs:
       - uses: ./.github/actions/kiem-thu
         with:
           ban: xem
+      # ảnh chụp các trang nhánh đã đổi và trang mẫu, 360 và 1280 px, để review xem (tools/chup-anh.mjs); không commit vào
+      # repo. Tải về: gh run download <số lần chạy> -n anh-chup
+      - name: Chụp ảnh trang cho review
+        if: ${{ !cancelled() }}
+        run: node tools/chup-anh.mjs anh-chup
+      - uses: actions/upload-artifact@v7
+        if: ${{ !cancelled() }}
+        with:
+          name: anh-chup
+          path: anh-chup
+          retention-days: 30
+          if-no-files-found: ignore

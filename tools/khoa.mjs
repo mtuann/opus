@@ -9,7 +9,8 @@
 //   node tools/khoa.mjs mo <mục> --ly-do "…"          gỡ khóa; ghi lý do và thêm một lần mới (để điền) vào lan của hồ sơ
 //   node tools/khoa.mjs tinh [<mục>…]                 in mã băm; không có mục thì kiểm mọi mục đã khóa (lệch thì thoát 1)
 //   node tools/khoa.mjs xuat <lô hay trang>… [--mau <n>] [--ra <file>]
-//       danh sách nhận định cho lượt 2 (không nguồn, không kết quả; trang Đọc thêm chỉ 5 nhận định ngẫu nhiên mỗi trang);
+//       danh sách nhận định cho lượt 2 (không nguồn, không kết quả; bỏ câu về chính site; trang Đọc thêm chỉ 5 nhận định
+//       ngẫu nhiên mỗi trang; lời khuyên tập chỉ 3 câu ngẫu nhiên mỗi trang hay bản ghi);
 //       --mau n: n nhận định chọn ngẫu nhiên, kèm nguồn,
 //       cho chủ repo kiểm mẫu. Lô ("D3-L2", trang lấy từ plans/lam-lai/anh-xa.md) thì mặc định ghi vào
 //       plans/lam-lai/bao-cao/d3-l2-nhan-dinh.yml (với --mau: d3-l2-kiem-mau.yml); trang thì in ra màn hình
@@ -35,6 +36,10 @@ const LUOT_2 = ['dung', 'sai', 'khong-chac'];
 const KET_QUA_KHUONG = ['dung', 'da-sua'];
 /** Trang Đọc thêm (tầng ngoại vi): lượt 2 chỉ kiểm mẫu, chừng này nhận định mỗi trang (chuan-kiem-dinh.md mục 3). */
 export const MAU_NGOAI_VI = 5;
+/** Lời khuyên tập (loai khuyen-tap): lượt 2 chỉ kiểm mẫu, chừng này câu mỗi trang hay bản ghi (chuan-kiem-dinh.md mục 3). */
+export const MAU_KHUYEN_TAP = 3;
+/** Câu nói về chính site (loai ve-site): review kiểm trên trang và dữ liệu, không qua lượt 2. */
+const VE_SITE = 've-site';
 
 /** Tầng của trang trong src/data/trang.yml, hay null nếu trang không có ở đó (như trang 404). */
 const tangTrong = (muc, goc) => (parse(fs.readFileSync(path.join(goc, 'src/data/trang.yml'), 'utf8')) ?? []).find((r) => r.id === muc)?.tang ?? null;
@@ -110,24 +115,36 @@ export function loiHoSo(hs, muc, goc) {
 	if ((bg || (tang && tang !== 'khung')) && !(hs.nhan_dinh ?? []).length && !hs.ghi_chu)
 		loi.push(`chưa có nhận định nào: ${bg ? 'bản ghi' : `trang tầng ${tang}`} cần ít nhất một nhận định đã kiểm, hay ghi_chu giải thích vì sao không có`);
 	const nguon = new Set((hs.nguon ?? []).map((n) => n.id));
-	// trang Đọc thêm: lượt 2 chỉ kiểm mẫu, nên nhận định ngoài mẫu không có luot_2
+	// lượt 2 chỉ kiểm mẫu ở trang Đọc thêm (mọi nhận định) và ở lời khuyên tập; câu về chính site không qua lượt 2
 	const motLuot = tang === 'ngoai-vi';
+	const mauLuot2 = (n) => motLuot || n.loai === 'khuyen-tap' || n.loai === VE_SITE;
 	for (const n of hs.nhan_dinh ?? []) {
 		const ten = `nhận định ${n.id ?? '(không id)'}`;
 		if (!n.id || !n.cau) loi.push(`${ten}: thiếu id hay cau`);
 		if (!KET_QUA.includes(n.ket_qua)) loi.push(`${ten}: ket_qua phải là ${KET_QUA.join(', ')}`);
-		if (!LUOT_2.includes(n.luot_2) && !(motLuot && n.luot_2 == null)) loi.push(`${ten}: chưa có kết quả lượt 2 (luot_2: ${LUOT_2.join(', ')})`);
+		if (!LUOT_2.includes(n.luot_2) && !(mauLuot2(n) && n.luot_2 == null)) loi.push(`${ten}: chưa có kết quả lượt 2 (luot_2: ${LUOT_2.join(', ')})`);
 		if ((n.ket_qua === 'da-sua' || n.ket_qua === 'da-bo') && !n.ghi_chu) loi.push(`${ten}: ${n.ket_qua} cần ghi_chu`);
 		if (n.ket_qua === 'khong-can-nguon' && n.loai !== 'khuyen-tap') loi.push(`${ten}: khong-can-nguon chỉ cho loai khuyen-tap`);
-		if (n.ket_qua !== 'khong-can-nguon' && n.ket_qua !== 'da-bo') {
+		// câu về chính site: kiểm trên trang, thành phần hay dữ liệu đã khóa; ghi_chu ghi đã kiểm ở đâu, thay cho nguồn
+		if (n.loai === VE_SITE && !n.ghi_chu) loi.push(`${ten}: câu về chính site cần ghi_chu ghi đã kiểm trên trang, thành phần hay dữ liệu nào`);
+		if (n.ket_qua !== 'khong-can-nguon' && n.ket_qua !== 'da-bo' && n.loai !== VE_SITE) {
 			if (!n.nguon?.length) loi.push(`${ten}: thiếu nguon`);
 			for (const id of n.nguon ?? []) if (!nguon.has(id)) loi.push(`${ten}: nguồn "${id}" không có trong danh sách nguon`);
 		}
 		if ((n.luot_2 === 'sai' || n.luot_2 === 'khong-chac') && n.ket_qua === 'dung' && !n.ghi_chu)
 			loi.push(`${ten}: lượt 2 cho "${n.luot_2}" mà kết quả "dung": ghi_chu cách đã giải quyết`);
 	}
+	// lời khuyên tập (trang không phải Đọc thêm): lượt 2 kiểm mẫu MAU_KHUYEN_TAP câu; mẫu có câu sai thì kiểm hết các câu ấy
+	const khuyen = motLuot ? [] : (hs.nhan_dinh ?? []).filter((n) => n.loai === 'khuyen-tap');
+	if (khuyen.length) {
+		const co = khuyen.filter((n) => LUOT_2.includes(n.luot_2)).length;
+		const sai = khuyen.some((n) => n.luot_2 === 'sai');
+		const can = sai ? khuyen.length : Math.min(MAU_KHUYEN_TAP, khuyen.length);
+		if (co < can)
+			loi.push(sai ? `lời khuyên tập: mẫu lượt 2 có câu sai, nên lượt 2 phải kiểm mọi lời khuyên tập (mới có ${co}/${can})` : `lời khuyên tập: lượt 2 phải kiểm mẫu ít nhất ${can} câu (mới có ${co})`);
+	}
 	if (motLuot) {
-		const ds = hs.nhan_dinh ?? [];
+		const ds = (hs.nhan_dinh ?? []).filter((n) => n.loai !== VE_SITE);
 		const co = ds.filter((n) => LUOT_2.includes(n.luot_2)).length;
 		// mẫu có nhận định sai thì lượt 2 kiểm cả trang (chuan-kiem-dinh.md mục 3)
 		const can = ds.some((n) => n.luot_2 === 'sai') ? ds.length : Math.min(MAU_NGOAI_VI, ds.length);
@@ -336,7 +353,14 @@ export function lenh(thamSo, goc = GOC, in_ = console.log) {
 			const hs = parse(fs.readFileSync(f, 'utf8')) ?? {};
 			const nguon = new Map((hs.nguon ?? []).map((n) => [n.id, n]));
 			// lượt 2 của trang Đọc thêm: chỉ mẫu ngẫu nhiên
-			const cho = !mau && hs.tang === 'ngoai-vi' ? chonNgauNhien(hs.nhan_dinh ?? [], MAU_NGOAI_VI) : (hs.nhan_dinh ?? []);
+			// lượt 2: bỏ câu về chính site; trang Đọc thêm chỉ mẫu ngẫu nhiên; lời khuyên tập chỉ mẫu MAU_KHUYEN_TAP câu
+			const moi = hs.nhan_dinh ?? [];
+			const canNguon = moi.filter((n) => n.loai !== VE_SITE);
+			const cho = mau
+				? moi
+				: hs.tang === 'ngoai-vi'
+					? chonNgauNhien(canNguon, MAU_NGOAI_VI)
+					: [...canNguon.filter((n) => n.loai !== 'khuyen-tap'), ...chonNgauNhien(canNguon.filter((n) => n.loai === 'khuyen-tap'), MAU_KHUYEN_TAP)];
 			for (const n of cho)
 				tatCa.push(mau ? { trang: t, id: n.id, cau: n.cau, loai: n.loai, nguon: (n.nguon ?? []).map((id) => ({ ten: nguon.get(id)?.ten, link: nguon.get(id)?.link })), ket_qua_luot_1: n.ket_qua } : { trang: t, id: n.id, cau: n.cau, loai: n.loai });
 		}

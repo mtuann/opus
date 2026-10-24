@@ -12,7 +12,7 @@ import { parse, stringify } from 'yaml';
 import { locTheoBan } from '../src/ban-build.mjs';
 import { chiDaKhoa, schema } from '../src/du-lieu.mjs';
 import { chuanHoaTrang, docKhoa, jsonChuan, kiemKhoa, maBamBanGhi, maBamTrang, truongDaKhoa } from '../src/khoa.mjs';
-import { MAU_NGOAI_VI, lenh, loiHoSo } from '../tools/khoa.mjs';
+import { MAU_KHUYEN_TAP, MAU_NGOAI_VI, lenh, loiHoSo } from '../tools/khoa.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DIST = path.join(ROOT, 'dist');
@@ -427,4 +427,41 @@ test('chiDaKhoa: đọc id và trường đã khóa được; trường chưa kh
 	assert.throws(() => JSON.stringify(r), /#chip/, 'chép cả bản ghi ra trang là hiện mọi trường');
 	assert.equal(chiDaKhoa({ id: 'y', ten: 'Y', sinh: 1 }, 'nha-soan-nhac', 'trang thử', daKhoa).sinh, 1, 'khóa cả bản ghi');
 	assert.throws(() => chiDaKhoa({ id: 'z', ten: 'Z' }, 'nha-soan-nhac', 'trang thử', daKhoa).ten, /nha-soan-nhac\/z#ten/);
+});
+
+test('câu về chính site (ve-site) không qua lượt 2 nhưng cần ghi_chu; lời khuyên tập chỉ cần lượt 2 cho mẫu, mẫu có câu sai thì cần hết; xuat làm đúng như vậy', () => {
+	const goc = fs.mkdtempSync(path.join(os.tmpdir(), 'opus-khoa-mau-'));
+	try {
+		const ghi = (f, chu) => {
+			fs.mkdirSync(path.dirname(path.join(goc, f)), { recursive: true });
+			fs.writeFileSync(path.join(goc, f), chu);
+		};
+		ghi('src/content/docs/bat-dau/a.md', '---\ntitle: A\n---\n\nChữ.\n');
+		ghi('src/data/trang.yml', '- id: bat-dau/a\n  tang: loi\n');
+		const nd = (id, loai, them = {}) => ({
+			id,
+			cau: `Câu ${id}.`,
+			loai,
+			...(loai === 'khuyen-tap' ? { ket_qua: 'khong-can-nguon' } : loai === 've-site' ? { ket_qua: 'dung', ghi_chu: 'đã đếm trên trang' } : { ket_qua: 'dung', nguon: ['s1'] }),
+			...them,
+		});
+		const hs = (ds) => ({ trang: 'src/content/docs/bat-dau/a.md', tang: 'loi', lan: [{ so: 1, nguoi: { luot_1: 'A', luot_2: 'B', review: 'C', kiem_mau: 'D' } }], nguon: [{ id: 's1' }], nhan_dinh: ds, khuong_nhac: [] });
+		const loi = (ds) => loiHoSo(hs(ds), 'bat-dau/a', goc).join(' | ');
+		const kt = (i, luot2) => nd(`k${i}`, 'khuyen-tap', luot2 ? { luot_2: luot2 } : {});
+		// đủ: nhận định cần nguồn có lượt 2; câu về site không qua lượt 2; MAU_KHUYEN_TAP trong 5 lời khuyên tập có lượt 2
+		const du = [nd('n1', 'dinh-nghia', { luot_2: 'dung' }), nd('s1', 've-site'), kt(1, 'dung'), kt(2, 'dung'), kt(3, 'dung'), kt(4), kt(5)];
+		assert.equal(MAU_KHUYEN_TAP, 3);
+		assert.equal(loi(du), '');
+		assert.match(loi([du[0], { ...du[1], ghi_chu: undefined }, ...du.slice(2)]), /câu về chính site cần ghi_chu/);
+		assert.match(loi([du[0], du[1], kt(1, 'dung'), kt(2, 'dung'), kt(3), kt(4), kt(5)]), /lượt 2 phải kiểm mẫu ít nhất 3 câu \(mới có 2\)/);
+		assert.match(loi([du[0], du[1], kt(1, 'sai'), kt(2, 'dung'), kt(3, 'dung'), kt(4), kt(5)]), /mẫu lượt 2 có câu sai, nên lượt 2 phải kiểm mọi lời khuyên tập \(mới có 3\/5\)/);
+		assert.match(loi([nd('n1', 'dinh-nghia'), ...du.slice(1)]), /nhận định n1: chưa có kết quả lượt 2/);
+		// xuat cho lượt 2: bỏ câu về site, lấy MAU_KHUYEN_TAP lời khuyên tập ngẫu nhiên, giữ mọi nhận định cần nguồn
+		ghi('kiem-dinh/bat-dau/a.yml', stringify(hs(du.map(({ luot_2, ...x }) => x))));
+		lenh(['xuat', 'bat-dau/a', '--ra', 'xuat.yml', '--goc', goc], ROOT, () => {});
+		const x = parse(fs.readFileSync(path.join(goc, 'xuat.yml'), 'utf8'));
+		assert.deepEqual([x.filter((n) => n.loai === 've-site').length, x.filter((n) => n.loai === 'khuyen-tap').length, x.filter((n) => n.loai === 'dinh-nghia').length], [0, 3, 1]);
+	} finally {
+		fs.rmSync(goc, { recursive: true, force: true });
+	}
 });

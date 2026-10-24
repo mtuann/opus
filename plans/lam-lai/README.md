@@ -57,6 +57,15 @@ Thêm, chốt ngày 24/10/2026:
 - [x] Hai link tới repo trên site (biểu tượng GitHub ở thanh trên, chữ "MIT" ở chân trang): **bỏ tạm** khi repo còn riêng tư (người đọc mở ra trang 404); thêm lại khi repo công khai. Link tới issue cũng vậy: các trang đang trỏ tới issue của repo cũ (công khai) giữ link ấy cho tới khi repo mới công khai.
 - [x] Review: **ba mức theo rủi ro** (Nhỏ, Vừa, Lớn), cho mọi thay đổi về sau; bảng ở mục "Ba mức review" (cuối Quy tắc chung). Thay cho cách cũ "gộp và push mỗi việc sau khi review". Lượt 2 kiểm định nội dung của mỗi lô vẫn giữ.
 - [x] Đợt 2: **tách phần dữ liệu thành việc D2-0**, làm trước D2-L1 (mục Đợt 2). D2-L1 chỉ làm trang và dùng các trường đã khóa.
+- [x] **Làm các đợt sau cho đỡ tốn mà không giảm chất lượng.** Chủ repo đưa gợi ý và giao Claude chọn ngày 24/10/2026, sau đợt 2; chi tiết ở `loi-giao/README.md` và `../ben-vung/chuan-kiem-dinh.md`.
+  - Câu nói về chính site (`ve-site`): review kiểm thẳng trên trang và dữ liệu, không qua lượt 2.
+  - Lời khuyên tập: lượt 2 chỉ kiểm mẫu 3 câu mỗi trang; mẫu có câu sai thì kiểm hết. Lời khuyên dính tới sức khỏe xếp loại cần nguồn, nên vẫn đủ hai lượt.
+  - Mục "Nguồn và cách mở" trong chuẩn kiểm định.
+  - Lời giao việc mẫu ở `loi-giao/`.
+  - Tối đa 2–3 agent nặng cùng lúc; model theo phần việc (Opus cho lô có thành phần mới, Sonnet cho chuyển chữ, kiểm định và review, Haiku cho kiểm lại).
+  - Ảnh chụp do CI chụp (tệp của lần chạy); báo cáo giữ tối đa 4 ảnh.
+  - Kiểm thử chờ điều kiện, không chờ cố định.
+  - Không làm: dùng chung trang nguồn đã tải giữa hai lượt (để giữ độc lập); chạy song song hai lô (các lô làm lần lượt).
 
 Câu hỏi nhỏ còn chờ (từ review nhánh quyết định, `bao-cao/d2-bang-tang.md`); hỏi chủ repo trước lô ghi bên cạnh:
 
@@ -248,11 +257,11 @@ Khung, lõi, công cụ và tham chiếu đã lên site; đợt này thêm tác 
 
 ## Quy trình mỗi lô
 
-1. Bạn giao lô bằng lời mẫu dưới đây.
-2. Agent chuyển trang bằng `tools/chuyen/`, tách dữ liệu, kiểm định lượt 1, ghi hồ sơ (chưa khóa).
-3. Agent khác kiểm định lượt 2 độc lập, mức theo tầng của trang (`../ben-vung/chuan-kiem-dinh.md` mục 3 và 8).
-4. Người gộp push nhánh lô lên GitHub; `test.yml` chạy trên bản xem: build, schema, khóa, link, khuông nhạc, kiểm thử trình duyệt, trợ năng, Lighthouse trang mẫu. Phải đạt trước khi gộp. Ảnh chụp từng trang ở 360 px và 1280 px đính vào báo cáo.
-5. Review báo cáo, hồ sơ và ảnh chụp; chỗ cần sửa trả về agent trên cùng nhánh. Phần mã của lô (thành phần, CSS, script) review theo mục "Ba mức review".
+1. Bạn giao lô bằng `loi-giao/lo.md`, chọn model theo phần việc (`loi-giao/README.md`).
+2. Agent chuyển trang bằng `tools/chuyen/`, tách dữ liệu, kiểm định lượt 1, ghi hồ sơ (chưa khóa). Câu về chính site ghi loại `ve-site`, có ghi chú đã kiểm ở đâu.
+3. Agent khác kiểm định lượt 2 độc lập (`loi-giao/luot-2-trang.md`), mức theo tầng của trang (`../ben-vung/chuan-kiem-dinh.md` mục 3). Danh sách do `node tools/khoa.mjs xuat` tách: bỏ câu về chính site, lấy mẫu lời khuyên tập. Kết quả vào hồ sơ bằng `node tools/khoa.mjs nhap`.
+4. Người gộp push nhánh lô lên GitHub; `test.yml` chạy trên bản xem: build, schema, khóa, link, khuông nhạc, kiểm thử trình duyệt, trợ năng, Lighthouse trang mẫu. Phải đạt trước khi gộp. CI chụp từng trang của nhánh ở 360 px và 1280 px (tệp `anh-chup` của lần chạy, giữ 30 ngày). Báo cáo chỉ giữ tối đa 4 ảnh tiêu biểu.
+5. Review báo cáo, hồ sơ và ảnh chụp: chỗ hai lượt lệch nhau, mọi chỗ sửa, câu về chính site. Chỗ cần sửa trả về agent trên cùng nhánh. Phần mã của lô review theo mục "Ba mức review" (`loi-giao/review-ma.md`).
 6. Bạn đọc tóm tắt hồ sơ trong báo cáo của lô và xem ngẫu nhiên khoảng 5 nhận định (`node tools/khoa.mjs xuat <lô> --mau 5`); agent khóa; bạn gộp vào `main` và push. Trang của lô lên site thật.
 
 Hai lô cùng đợt làm song song được nếu không chung file. Các đợt làm lần lượt, theo thứ tự ở bảng Tiến độ. Cuối mỗi đợt, người review xét cả đợt theo "Xong khi" và cập nhật bảng Tiến độ.
@@ -261,19 +270,25 @@ Hai lô cùng đợt làm song song được nếu không chung file. Các đợ
 
 Một phiên một việc, mở trong thư mục `opus/`. Đổi các chỗ trong `<>` trước khi gửi.
 
-**Một việc của đợt 1:**
+**Một lô (đợt 2 đến 8), lượt 2, review mã:** dùng các file ở `loi-giao/`:
+- `lo.md`;
+- `luot-2-trang.md`;
+- `luot-1-du-lieu.md`, `luot-2-du-lieu.md` (việc dữ liệu riêng như D2-0);
+- `review-ma.md`.
 
-> Bạn làm việc **D1.<số>** trong `plans/lam-lai/README.md` của repo opus. Đọc `AGENTS.md`, `plans/lam-lai/README.md` (Quyết định, Bảy luật, Quy tắc chung, Đợt 1) và `plans/lam-lai/cong-nghe.md`. Tạo nhánh `moi/d1-<số>-<tên ngắn>` từ `main`. Chỉ làm việc này; gặp việc khác thì ghi vào báo cáo. Không sửa `../opus-zero/`. Không push. Khi xong: `npm ci`, `npm run build`, `npm test` đạt (từ D1.6 chạy thêm `npm run build:xem`); commit; viết báo cáo `plans/lam-lai/bao-cao/d1-<số>.md`.
+Chỉ đổi phần trong `<>`. Lời giao của đợt 1 và của lô trước đợt 3 nằm trong lịch sử git của file này.
 
-**Một lô (đợt 2 đến 8):**
+**Review một lô (nội dung):**
 
-> Bạn làm lô **D<đợt>-L<lô>** trong `plans/lam-lai/README.md` của repo opus. Đọc `AGENTS.md`; các mục Bảy luật, Quy tắc chung, Quy trình mỗi lô và Đợt <đợt> trong kế hoạch; danh sách trang của lô trong `plans/lam-lai/anh-xa.md`; `plans/ben-vung/chuan-kiem-dinh.md`. Tạo nhánh `moi/d<đợt>-l<lô>` từ `main`. Chuyển từng trang từ `../opus-zero/docs/` bằng `tools/chuyen/`, tách dữ liệu, kiểm định lượt 1 theo mức của tầng và ghi hồ sơ (trang Lõi không giữ chi tiết mau cũ; đợt 3: lập hồ sơ cả cho bản ghi thuật ngữ mà trang dùng, để khóa từng phần cùng trang), kể cả các trường dữ liệu chưa khóa mà trang của lô hiện ra; chưa khóa gì. Chỉ chạm file của lô. Không push. Khi xong: `npm run build:xem` và `npm test` đạt; commit; viết báo cáo `plans/lam-lai/bao-cao/d<đợt>-l<lô>.md`; xuất danh sách nhận định cho lượt 2 bằng `node tools/khoa.mjs xuat D<đợt>-L<lô>`.
-
-**Lượt 2:** lời mẫu ở `../ben-vung/chuan-kiem-dinh.md` mục 8.
-
-**Review một lô:**
-
-> Bạn review lô **D<đợt>-L<lô>** của repo opus, nhánh `moi/d<đợt>-l<lô>`. Đọc mục "Review những gì" trong `plans/lam-lai/README.md`, `plans/ben-vung/chuan-kiem-dinh.md`, báo cáo của lô và hồ sơ trong `kiem-dinh/` của các trang trong lô; xem diff của nhánh so với `main`. Không chạy lại toàn bộ kiểm thử (`test.yml` đã chạy trên nhánh); chỉ chạy phép thử liên quan tới chỗ đang xem. Kiểm lại mọi nhận định hai lượt cho kết quả khác nhau và mọi chỗ đã sửa, mở đúng nguồn ghi trong hồ sơ. Ghi vào cuối báo cáo, mục "Review": chỗ phải sửa (file, dòng, lý do, nguồn), chỗ nên sửa, kết luận gộp được hay chưa. Không sửa trang. Không push.
+> Bạn review lô **D<đợt>-L<lô>** của repo opus, nhánh `moi/d<đợt>-l<lô>`.
+>
+> - Đọc mục "Review những gì" trong `plans/lam-lai/README.md`, `plans/ben-vung/chuan-kiem-dinh.md`, báo cáo của lô, và hồ sơ trong `kiem-dinh/` của các trang trong lô.
+> - Kiểm lại:
+>   - mọi nhận định hai lượt cho kết quả khác nhau, mọi chỗ đã sửa (mở đúng nguồn ghi trong hồ sơ);
+>   - mọi câu về chính site (`ve-site`), trên trang và dữ liệu.
+> - Không chạy lại toàn bộ kiểm thử: CI đã chạy.
+> - Ghi vào cuối báo cáo, mục "Review": chỗ phải sửa (file, dòng, lý do, nguồn), chỗ nên sửa, kết luận gộp được hay chưa.
+> - Không sửa trang. Không push.
 
 **Review cuối đợt:**
 
