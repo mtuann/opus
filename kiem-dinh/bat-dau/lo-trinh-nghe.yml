@@ -9,8 +9,8 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: Claude Opus 5.5 (D2-L1 lượt 1, phần D)
-      luot_2: null
-      review: null
+      luot_2: Claude Sonnet 5.5 (D2-L1 lượt 2 phần 2/2)
+      review: Claude Opus 5.5 (review D2-L1, 24/10/2026)
       kiem_mau: null
 ghi_chu: >-
   Tên tác phẩm, giọng, năm sáng tác, độ dài đối chiếu trang tác phẩm trên IMSLP (link lấy từ hồ sơ D2-0 của cùng bản ghi, mở lại ở lượt này); tác phẩm còn bản quyền (Pärt, Britten) đối chiếu cơ sở dữ liệu IRCAM và chương trình hòa nhạc của Utah Symphony. Câu về nội dung site (bài nhạc lý, công cụ, trang thời kỳ, mục Nhận diện) đối chiếu trang cũ trong ../opus-zero/docs/ và mkdocs.yml cũ; các trang ấy chưa lên site lúc D2-L1 gộp nên link hiện "sắp có". Đổi chữ: bỏ tên YouTube (chi tiết mau cũ, d2-bang-tang.md mục 4), bỏ hai con số viết tay ("hàng trăm bản thu", "16 hướng dẫn"), sửa "luôn hay hơn" và danh sách "các hướng dẫn còn lại". Hai mục việc - [ ] đổi chữ nên mã việc lưu trong trình duyệt của hai mục ấy đổi theo (dấu đã đánh ở site cũ cho hai mục này không còn hiện).
@@ -183,6 +183,18 @@ nguon:
     bac: 1
     ten: 'Dữ liệu của site: src/data/tac-pham.yml ở nhánh moi/d2-0-du-lieu (39 hướng dẫn nghe; haydn-94, mozart-40 có hinh.nghe)'
     link: src/data/tac-pham.yml
+  - id: margulis-2010
+    bac: 2
+    ten: "E. H. Margulis (2010), \"When program notes don't help: Music descriptions and enjoyment\", Psychology of Music"
+    link: https://doi.org/10.1177/0305735609351921
+  - id: schellenberg-2008
+    bac: 2
+    ten: 'E. G. Schellenberg, I. Peretz, S. Vieillard (2008), "Liking for happy- and sad-sounding music: Effects of exposure", Cognition and Emotion'
+    link: https://sites.utm.utoronto.ca/sites/sites.utm.utoronto.ca.glenn_website/files/download/SP&V2008.pdf
+  - id: who-nghe-an-toan
+    bac: 2
+    ten: 'Tổ chức Y tế Thế giới (WHO), "Deafness and hearing loss: Safe listening" (hỏi đáp, 6/3/2026)'
+    link: https://www.who.int/news-room/questions-and-answers/item/deafness-and-hearing-loss-safe-listening
 nhan_dinh:
   - id: n1
     cau: Phần chính là lộ trình nghe khoảng 6 tháng, mỗi ngày 20 phút, chỉ dùng phần nhạc lý thật sự cần cho việc nghe.
@@ -246,11 +258,12 @@ nhan_dinh:
     luot_2_nguon: [ http://hyperphysics.phy-astr.gsu.edu/hbase/Sound/dba2.html ]
     luot_2_ghi_chu: "HyperPhysics (Georgia State University, theo Backus): ppp khoảng 40 dB, p 60 dB, f 80 dB, fff 100 dB (tại C6), tức dải danh nghĩa khoảng 60 dB; đo ở buổi hòa nhạc dàn nhạc: Magic Flute 56–84 dBA, William Tell Overture 76–89 dBA. Dải âm lượng của nhạc dàn nhạc thực sự rộng."
   - id: n8
-    cau: Đừng chỉnh âm lượng theo đoạn to nhất; hãy để đoạn nhỏ đủ nghe được.
+    cau: Đừng chỉnh âm lượng theo đoạn to nhất; hãy để đoạn nhỏ đủ nghe được, nhưng đừng mở quá to khi nghe lâu, nhất là với tai nghe.
     loai: khuyen-tap
-    nguon: []
-    ket_qua: khong-can-nguon
-    ghi_chu: Lời khuyên nghe; không trái trang lõi nào.
+    nguon:
+      - who-nghe-an-toan
+    ket_qua: da-sua
+    ghi_chu: 'Review (24/10/2026): thêm lời dặn về an toàn thính giác theo ghi chú của lượt 2. Câu trước: "Đừng chỉnh âm lượng theo đoạn to nhất; hãy để đoạn nhỏ đủ nghe được." WHO (Safe listening): "with regular exposure to loud or prolonged noise, the sensory cells and other structures can become permanently damaged"; khuyên để âm lượng thiết bị không quá 60% mức tối đa. Lượt 1: Lời khuyên nghe; không trái trang lõi nào.'
     luot_2: dung
     luot_2_nguon: [ http://hyperphysics.phy-astr.gsu.edu/hbase/Sound/dba2.html ]
     luot_2_ghi_chu: "Lời khuyên đúng với cách nghe nhạc cổ điển, nhưng nên thêm lưu ý an toàn thính giác: HyperPhysics ghi mức fff khoảng 100 dB và ngưỡng đau 120 dB, nên đừng nâng âm lượng quá cao để nghe rõ đoạn nhỏ trong thời gian dài, nhất là khi dùng tai nghe."
@@ -264,19 +277,22 @@ nhan_dinh:
     luot_2_nguon: [ https://cdn.eicom.ru/media/PDF/3468456.pdf ]
     luot_2_ghi_chu: 'Datasheet Knowles 2403-260-00001 (loa mini 11×15×3,5 mm "dành cho thiết bị di động, điện thoại nghe nhạc và smartphone"; bản lưu trên cdn.eicom.ru): tần số cộng hưởng 800 Hz ± 7,5% (hộp sau 1 cm³; 450 Hz khi không hộp), bảng đáp tuyến chỉ bắt đầu từ 300 Hz, tại đó mức cho phép thấp hơn khoảng 20 dB so với ở 770 Hz và méo hài cho phép tới 25%; thử tuổi thọ dùng bộ lọc cao qua 800 Hz. Nghĩa là loa điện thoại gần như không phát được các nốt dưới khoảng Rê4 (~294 Hz); "mất gần hết âm trầm" đúng.'
   - id: n10
-    cau: 'Nhạc cổ điển thường không có lời: âm nhạc tự kể chuyện bằng giai điệu, hòa âm và màu sắc nhạc cụ.'
+    cau: 'Nhiều tác phẩm cổ điển (giao hưởng, sonata, tứ tấu) là khí nhạc, không có lời: âm nhạc tự kể chuyện bằng giai điệu, hòa âm và màu sắc nhạc cụ.'
     loai: dinh-nghia
     nguon: [ imslp-b5, imslp-brahms4, imslp-k331 ]
-    ket_qua: dung
-    ghi_chu: 'Các thể loại chính trang này cho nghe đều là nhạc không lời: giao hưởng (IMSLP xếp vào "Symphonies; For orchestra"), sonata cho piano, concerto, tứ tấu; nhạc có lời (opera, lied, requiem) có riêng ở tháng 5 và mục "Sau 6 tháng". "Thường" không có nghĩa là luôn luôn.'
+    ket_qua: da-sua
+    ghi_chu: 'Review (24/10/2026): viết lại theo lượt 2. Câu trước: "Nhạc cổ điển thường không có lời: …". Nhạc có lời (opera, oratorio, lied, thánh ca) là một phần lớn của nhạc cổ điển (chính trang này có tháng dành cho opera và lied), nên không nói chung "thường không có lời"; câu mới chỉ nói các thể loại khí nhạc. IMSLP: giao hưởng số 5 của Beethoven, số 4 của Brahms (cho dàn nhạc), sonata K. 331 (cho piano). Lượt 1: Các thể loại chính trang này cho nghe đều là nhạc không lời: giao hưởng (IMSLP xếp vào "Symphonies; For orchestra"), sonata cho piano, concerto, tứ tấu; nhạc có lời (opera, lied, requiem) có riêng ở tháng 5 và mục "Sau 6 tháng". "Thường" không có nghĩa là luôn luôn.'
     luot_2: khong-chac
     luot_2_ghi_chu: 'Câu quá chung. Một phần lớn nhạc cổ điển là nhạc không lời (giao hưởng, sonata, tứ tấu), nhưng opera, lieder, hợp xướng, cantata, requiem có lời và chiếm tỷ trọng đáng kể; chưa tìm được nguồn bậc 2 mở được để xác nhận "thường không có lời". Đề nghị viết cụ thể hơn, ví dụ: "Nhiều tác phẩm cổ điển là nhạc không lời, nên âm nhạc tự kể chuyện bằng giai điệu, hòa âm và màu sắc nhạc cụ."'
   - id: n11
-    cau: Đọc vài dòng về bối cảnh trước khi nghe cho bạn một điểm bám, và lần thứ ba nghe một tác phẩm thường hay hơn lần đầu.
-    loai: quy-tac
-    nguon: [ szpunar-2004 ]
+    cau: Đọc vài dòng về bối cảnh trước hay sau khi nghe, tùy bạn; nghe lại một tác phẩm vài lần, vì lần sau thường dễ nghe hơn lần đầu, nhưng đừng nghe một bài quá nhiều lần liền.
+    loai: khuyen-tap
+    nguon:
+      - margulis-2010
+      - schellenberg-2008
+      - szpunar-2004
     ket_qua: da-sua
-    ghi_chu: 'Câu cũ: "lần thứ ba nghe một tác phẩm luôn hay hơn lần đầu". Szpunar và cộng sự 2004: nghe kỹ thì độ thích "followed an inverted U-shaped function of exposure for the most ecologically valid stimuli (initial increases followed by decreases)": mấy lần nghe đầu thường làm thích hơn, nhưng không phải luôn luôn, nên "luôn" thành "thường".'
+    ghi_chu: 'Review (24/10/2026): viết lại theo lượt 2 thành lời khuyên, không kèm con số và không nói như một kết quả khoa học (loại đổi từ quy-tac sang khuyen-tap). Câu trước: "Đọc vài dòng về bối cảnh trước khi nghe cho bạn một điểm bám, và lần thứ ba nghe một tác phẩm thường hay hơn lần đầu." Margulis 2010: mô tả bằng chữ đặt trước đoạn nhạc làm người không học nhạc thích ít hơn, nên không khuyên đọc trước. Schellenberg, Peretz và Vieillard 2008: nghe tập trung thì độ thích tăng sau 2 lần rồi giảm sau 8 hay 32 lần (hình chữ U ngược); Szpunar và cộng sự 2004 cũng thấy hình chữ U ngược. Không nguồn nào cho con số "lần thứ ba". Lượt 1: Câu cũ: "lần thứ ba nghe một tác phẩm luôn hay hơn lần đầu". Szpunar và cộng sự 2004: nghe kỹ thì độ thích "followed an inverted U-shaped function of exposure for the most ecologically valid stimuli (initial increases followed by decreases)": mấy lần nghe đầu thường làm thích hơn, nhưng không phải luôn luôn, nên "luôn" thành "thường".'
     luot_2: khong-chac
     luot_2_nguon: [ https://sites.utm.utoronto.ca/sites/sites.utm.utoronto.ca.glenn_website/files/download/SP&V2008.pdf, https://collaborate.princeton.edu/en/publications/when-program-notes-dont-help-music-descriptions-and-enjoyment/ ]
     luot_2_ghi_chu: 'Hai vế có bằng chứng trái chiều. (1) Đọc mô tả trước khi nghe: Margulis (2010, Psychology of Music 38) thấy mô tả bằng chữ trước đoạn nhạc làm giảm mức thích (mẫu nhỏ, người không học nhạc). (2) "Nghe lần ba hay hơn lần đầu": Schellenberg, Peretz & Vieillard (2008) thấy khi nghe tập trung, mức thích tăng sau 2 lần nghe rồi giảm sau 8 hoặc 32 lần (đường chữ U ngược); khi nghe không tập trung thì tăng tuyến tính theo số lần nghe. Không có nguồn nào xác nhận con số "lần thứ ba". Nên viết mềm: "nghe lặp lại thường giúp bạn thích hơn, nhưng đừng nghe quá nhiều lần liền".'
@@ -310,7 +326,7 @@ nhan_dinh:
     loai: ten
     nguon: [ bai-nhac-ly-cu ]
     ket_qua: dung
-    ghi_chu: 'Bài cũ 1 "Cao độ và tên nốt", bài 4 "Nhịp và số chỉ nhịp".'
+    ghi_chu: 'Review (24/10/2026): câu về chính site, đã kiểm tiêu đề bài 1 (Cao độ và tên nốt) và bài 4 (Nhịp và số chỉ nhịp) ở bài cũ và src/data/trang.yml. Lượt 1: Bài cũ 1 "Cao độ và tên nốt", bài 4 "Nhịp và số chỉ nhịp".'
     luot_2: khong-chac
     luot_2_ghi_chu: "Tham chiếu nội bộ (số bài nhạc lý của site), không có nguồn ngoài. Nội dung (cao độ và nhịp là điều cần để bắt đầu nghe) hợp lý và nhất quán với n35 (bài 1–4: tên nốt và đếm nhịp). Cần review đối chiếu tiêu đề bài 1 và bài 4."
   - id: n16
@@ -323,11 +339,11 @@ nhan_dinh:
     luot_2_nguon: [ https://viva.pressbooks.pub/openmusictheory/chapter/intervals/ ]
     luot_2_ghi_chu: 5 phút mỗi ngày nhận biết quãng là khuyến nghị luyện tai hợp lý (thực chất là khuyen-tap); "bộ Khởi động" là công cụ nội bộ của site. Tên và chất lượng quãng theo OMT (Intervals).
   - id: n17
-    cau: 'Nhạc lý tháng 2: bài 6, bài 7; hiểu vì sao giọng thứ nghe buồn.'
+    cau: 'Nhạc lý tháng 2: bài 6, bài 7; hiểu vì sao giọng thứ hay được dùng cho nhạc buồn.'
     loai: dinh-nghia
     nguon: [ omt-minor, bai-nhac-ly-cu ]
-    ket_qua: dung
-    ghi_chu: 'Bài cũ 6 "Gam trưởng", 7 "Gam thứ". OMT, Minor Scales: "Minor is often (but not always!) used to depict negative emotions, such as sadness, in Western music". Câu của trang là mục tiêu học (hiểu vì sao), không nói giọng thứ lúc nào cũng buồn.'
+    ket_qua: da-sua
+    ghi_chu: 'Review (24/10/2026): viết lại theo lượt 2. Câu trước: "…; hiểu vì sao giọng thứ nghe buồn." OMT, Minor Scales: "Minor is often (but not always!) used to depict negative emotions, such as sadness, in Western music": giọng thứ hay được dùng cho nhạc buồn, không phải lúc nào cũng buồn. Đây là một mục việc ("- [ ]"): đổi chữ thì mã việc đổi, dấu đã đánh ở site cũ cho mục này không còn. Lượt 1: Bài cũ 6 "Gam trưởng", 7 "Gam thứ". OMT, Minor Scales: "Minor is often (but not always!) used to depict negative emotions, such as sadness, in Western music". Câu của trang là mục tiêu học (hiểu vì sao), không nói giọng thứ lúc nào cũng buồn.'
     luot_2: khong-chac
     luot_2_nguon: [ https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/, https://viva.pressbooks.pub/openmusictheory/chapter/triads/ ]
     luot_2_ghi_chu: 'OMT (Minor Scales): "Minor is often (but not always!) used to depict negative emotions, such as sadness, in Western music"; OMT (Triads): coi hợp âm thứ là "buồn" chỉ là cách ghép cảm xúc thường gặp. Vì vậy "hiểu vì sao giọng thứ nghe buồn" nên viết mềm: "hiểu vì sao giọng thứ thường gắn với cảm giác buồn, tối (nhưng không phải luôn luôn)". Số bài 6–7 là tham chiếu nội bộ.'
@@ -381,7 +397,7 @@ nhan_dinh:
     loai: ten
     nguon: [ bai-nhac-ly-cu ]
     ket_qua: dung
-    ghi_chu: 'Bài cũ 12 "Hòa âm chức năng", 13 "Kết và câu nhạc" (hợp với chủ đề "Kiến trúc âm nhạc"). Phần trong ngoặc là lời khuyên.'
+    ghi_chu: 'Review (24/10/2026): câu về chính site, đã kiểm tiêu đề bài 12 (Hòa âm chức năng), bài 13 (Kết và câu nhạc); lộ trình nghe và nhánh nhạc lý song song đi khác nhịp, nên không trái với n37. Lượt 1: Bài cũ 12 "Hòa âm chức năng", 13 "Kết và câu nhạc" (hợp với chủ đề "Kiến trúc âm nhạc"). Phần trong ngoặc là lời khuyên.'
     luot_2: khong-chac
     luot_2_ghi_chu: "Tham chiếu nội bộ (bài 12 và 13), không có nguồn ngoài. Cần review đối chiếu với trang nhạc lý. Ghi chú nhất quán: câu này đặt bài 12–13 ở tháng 4 của lộ trình nghe, còn n37 xếp bài 10–14 vào tháng 5–7 của nhánh nhạc lý song song; hai lộ trình khác nhịp nên không mâu thuẫn."
   - id: n24
@@ -433,7 +449,7 @@ nhan_dinh:
     loai: so-lieu
     nguon: [ thoi-ky-cu ]
     ket_qua: dung
-    ghi_chu: 'Nhận định về site. Sáu trang cũ trung-co, phuc-hung, baroque, co-dien, lang-man, the-ky-20 đều có mục "## 10 tác phẩm để nghe". Lô D5-L1 (các trang thời kỳ) giữ mục ấy, hay báo để sửa câu này.'
+    ghi_chu: 'Review (24/10/2026): câu về chính site, đã kiểm: sáu trang thời kỳ cũ đều có mục "10 tác phẩm để nghe"; lô D5-L1 giữ mục ấy, hay báo để sửa câu này. Lượt 1: Nhận định về site. Sáu trang cũ trung-co, phuc-hung, baroque, co-dien, lang-man, the-ky-20 đều có mục "## 10 tác phẩm để nghe". Lô D5-L1 (các trang thời kỳ) giữ mục ấy, hay báo để sửa câu này.'
     luot_2: khong-chac
     luot_2_ghi_chu: Tham chiếu nội bộ (số tác phẩm trên mỗi trang thời kỳ), không có nguồn ngoài. Cần review đếm trực tiếp trên các trang thời kỳ.
   - id: n30
@@ -450,7 +466,7 @@ nhan_dinh:
     loai: so-lieu
     nguon: [ du-lieu-d20, imslp-scarlatti, imslp-rhapsody ]
     ket_qua: da-sua
-    ghi_chu: 'Câu cũ: "Nghe trọn mục **Nhạc piano** (16 hướng dẫn, theo thứ tự thời gian từ Scarlatti đến Gershwin)". Bỏ "16 hướng dẫn": con số về nội dung site sẽ đổi khi thêm bài (con số tính lúc build, plans/ben-vung/README.md). Bỏ "theo thứ tự thời gian" và tên mục "Nhạc piano" của menu cũ: thứ tự và tên mục ở danh mục mới do đợt 6 quyết. Hai đầu vẫn đúng: Scarlatti (sonata K. 380, thế kỷ 18) và Gershwin (Rhapsody in Blue, IMSLP ghi năm 1924, muộn nhất trong các hướng dẫn nghe nhạc piano của dữ liệu).'
+    ghi_chu: 'Review (24/10/2026): câu về chính site, đã kiểm trên tac-pham.yml đã khóa: các hướng dẫn nghe nhạc piano đi từ Scarlatti (sonata K. 380) đến Gershwin (Rhapsody in Blue, 1924). Giữ da-sua vì câu đổi so với trang cũ. Lượt 1: Câu cũ: "Nghe trọn mục **Nhạc piano** (16 hướng dẫn, theo thứ tự thời gian từ Scarlatti đến Gershwin)". Bỏ "16 hướng dẫn": con số về nội dung site sẽ đổi khi thêm bài (con số tính lúc build, plans/ben-vung/README.md). Bỏ "theo thứ tự thời gian" và tên mục "Nhạc piano" của menu cũ: thứ tự và tên mục ở danh mục mới do đợt 6 quyết. Hai đầu vẫn đúng: Scarlatti (sonata K. 380, thế kỷ 18) và Gershwin (Rhapsody in Blue, IMSLP ghi năm 1924, muộn nhất trong các hướng dẫn nghe nhạc piano của dữ liệu).'
     luot_2: khong-chac
     luot_2_ghi_chu: Tham chiếu nội bộ (danh sách hướng dẫn nghe nhạc piano "từ Scarlatti đến Gershwin"), không có nguồn ngoài. Cần review đối chiếu danh sách trang hướng dẫn nghe.
   - id: n32
@@ -458,7 +474,7 @@ nhan_dinh:
     loai: so-lieu
     nguon: [ nav-cu ]
     ket_qua: dung
-    ghi_chu: 'Nhận định về site. Menu cũ, mục Nhận diện: "So sánh các thời kỳ", "Luyện nghe nhận diện", "Nghe mù" (theo thứ tự ấy). Nghe mù ở tầng Tham chiếu có hạn (D8); các trang này chưa lên site lúc D2-L1 gộp.'
+    ghi_chu: 'Review (24/10/2026): câu về chính site, đã kiểm menu cũ (mục Nhận diện: So sánh các thời kỳ, Luyện nghe nhận diện, Nghe mù); các trang ấy lên ở D8. Lượt 1: Nhận định về site. Menu cũ, mục Nhận diện: "So sánh các thời kỳ", "Luyện nghe nhận diện", "Nghe mù" (theo thứ tự ấy). Nghe mù ở tầng Tham chiếu có hạn (D8); các trang này chưa lên site lúc D2-L1 gộp.'
     luot_2: khong-chac
     luot_2_ghi_chu: 'Mô tả mục "Nhận diện" của site (bảng so sánh các thời kỳ, luyện nghe nhận diện, nghe mù): tham chiếu nội bộ, không có nguồn ngoài. Cần review đối chiếu với trang.'
   - id: n33
@@ -466,7 +482,7 @@ nhan_dinh:
     loai: ten
     nguon: [ bai-nhac-ly-cu ]
     ket_qua: dung
-    ghi_chu: 'Tiêu đề cũ: "28. Kết cấu âm nhạc", "29. Chuỗi hòa âm", "31. Hình thức nhỏ", "Âm học cơ bản"; lich-su/nhac-truyen-thong-viet-nam.md: "Nhạc truyền thống Việt Nam và nhạc cổ điển".'
+    ghi_chu: 'Review (24/10/2026): câu về chính site, đã kiểm tiêu đề bài 28, 29, 31, Âm học cơ bản ở bài cũ và trang Nhạc truyền thống Việt Nam và nhạc cổ điển. Lượt 1: Tiêu đề cũ: "28. Kết cấu âm nhạc", "29. Chuỗi hòa âm", "31. Hình thức nhỏ", "Âm học cơ bản"; lich-su/nhac-truyen-thong-viet-nam.md: "Nhạc truyền thống Việt Nam và nhạc cổ điển".'
     luot_2: khong-chac
     luot_2_ghi_chu: "Tham chiếu nội bộ (tiêu đề bài 28, 29, 31 và các chuyên đề). Nhất quán với trang lộ trình 7 chặng (bài 27–32: ký hiệu hợp âm, kết cấu, chuỗi hòa âm, phát triển môtip, hình thức, kỹ thuật thế kỷ 20, tức 28 = kết cấu, 29 = chuỗi hòa âm, 31 = hình thức nhỏ). Cần review đối chiếu tiêu đề."
   - id: n34
@@ -514,11 +530,11 @@ nhan_dinh:
     luot_2_nguon: [ https://viva.pressbooks.pub/openmusictheory/chapter/sonata-form/, "https://imslp.org/wiki/Symphony_No.94_in_G_major,_Hob.I%3A94_(Haydn,_Joseph)", "https://imslp.org/wiki/Symphony_No.40_in_G_minor,_K.550_(Mozart,_Wolfgang_Amadeus)" ]
     luot_2_ghi_chu: Mục tiêu hợp lý (nghe tác phẩm dài mà không bị lạc, dùng sơ đồ). Haydn 94 là Giao hưởng số 94 "Surprise" Hob. I:94 (IMSLP, trung bình 24 phút); Mozart 40 là K. 550. Hình thức sonata theo OMT.
   - id: n39
-    cau: 'Tháng 11–12, bài 15–20: tiết tấu nâng cao, điệu thức, khóa Đô, âm ngoài hợp âm, át phụ và chuyển giọng, đọc tổng phổ.'
+    cau: 'Tháng 11–12, bài 15–20: tiết tấu nâng cao, điệu thức và gam ngũ cung, khóa Đô và dịch giọng, âm ngoài hợp âm, át phụ và chuyển giọng, đọc tổng phổ.'
     loai: ten
     nguon: [ bai-nhac-ly-cu ]
-    ket_qua: dung
-    ghi_chu: 'Bài cũ 15–20: Tiết tấu nâng cao; Điệu thức và gam ngũ cung; Khóa Đô và dịch giọng; Âm ngoài hợp âm; Át phụ và chuyển giọng; Đọc tổng phổ.'
+    ket_qua: da-sua
+    ghi_chu: 'Review (24/10/2026): sửa cho khớp tiêu đề bài và trang lộ trình piano (piano/lo-trinh n14, sửa cùng lúc): 15 Tiết tấu nâng cao, 16 Điệu thức và gam ngũ cung, 17 Khóa Đô và dịch giọng, 18 Âm ngoài hợp âm, 19 Át phụ và chuyển giọng, 20 Đọc tổng phổ (bài cũ, src/data/trang.yml). Câu trước ghi tắt bài 16, 17 ("điệu thức", "khóa Đô"). Lượt 1: Bài cũ 15–20: Tiết tấu nâng cao; Điệu thức và gam ngũ cung; Khóa Đô và dịch giọng; Âm ngoài hợp âm; Át phụ và chuyển giọng; Đọc tổng phổ.'
     luot_2: khong-chac
     luot_2_ghi_chu: 'Tham chiếu nội bộ (bài 15–20). Các chủ đề đều là nhạc lý chuẩn (tiết tấu nâng cao, điệu thức, khóa Đô, âm ngoài hợp âm, át phụ và chuyển giọng, đọc tổng phổ). Đối chiếu nội bộ: trang lộ trình 7 chặng liệt kê bài 15–19 là "tiết tấu nâng cao, điệu thức, dịch giọng, âm ngoài hợp âm, át phụ và chuyển giọng" (không có "khóa Đô" và "đọc tổng phổ", bỏ bài 20): cần review xem tiêu đề bài 17 và bài 20 có khớp không.'
   - id: n40
@@ -526,7 +542,7 @@ nhan_dinh:
     loai: ten
     nguon: [ bai-nhac-ly-cu ]
     ket_qua: dung
-    ghi_chu: 'Bài cũ 21 "Hòa âm bốn bè" mở phần bài 21–32; bài 26 "Phân tích một tác phẩm" có mục "## Quy trình 6 bước" (sáu bước đánh số).'
+    ghi_chu: 'Review (24/10/2026): câu về chính site, đã kiểm: bài 21 Hòa âm bốn bè mở phần bài 21–32; bài 26 có mục "Quy trình 6 bước". Lượt 1: Bài cũ 21 "Hòa âm bốn bè" mở phần bài 21–32; bài 26 "Phân tích một tác phẩm" có mục "## Quy trình 6 bước" (sáu bước đánh số).'
     luot_2: khong-chac
     luot_2_ghi_chu: Tham chiếu nội bộ (Âm học, bài 21–32 "từ Hòa âm bốn bè", quy trình phân tích 6 bước), không có nguồn ngoài. Cần review đối chiếu với trang.
   - id: n41
@@ -543,8 +559,8 @@ doi_chu:
     moi: Được ghi lại bằng bản nhạc, nhưng mỗi người chơi diễn giải một khác. Vì thế một tác phẩm có nhiều bản thu, và so sánh chúng là một phần niềm vui.
     ly_do: 'n3 (da-sua): "hàng trăm bản thu" không có nguồn bậc 2 đếm số bản thu, viết "nhiều bản thu".'
   - cu: Thường không có lời. Âm nhạc tự kể chuyện bằng giai điệu, hòa âm và màu sắc nhạc cụ. Đọc vài dòng về bối cảnh trước khi nghe cho bạn một điểm bám, và lần thứ ba nghe một tác phẩm luôn hay hơn lần đầu.
-    moi: Thường không có lời. Âm nhạc tự kể chuyện bằng giai điệu, hòa âm và màu sắc nhạc cụ. Đọc vài dòng về bối cảnh trước khi nghe cho bạn một điểm bám, và lần thứ ba nghe một tác phẩm thường hay hơn lần đầu.
-    ly_do: 'n11 (da-sua): "luôn hay hơn" thành "thường hay hơn": độ thích theo số lần nghe theo đường chữ U ngược, không phải lúc nào cũng tăng (Szpunar 2004).'
+    moi: "Nhiều tác phẩm không có lời. Giao hưởng, sonata, tứ tấu là khí nhạc: âm nhạc tự kể chuyện bằng giai điệu, hòa âm và màu sắc nhạc cụ. Đọc vài dòng về bối cảnh trước hay sau khi nghe, tùy bạn thấy cách nào dễ vào hơn; và nghe lại một tác phẩm vài lần, vì lần sau thường dễ nghe hơn lần đầu, nhưng đừng nghe một bài quá nhiều lần liền."
+    ly_do: 'n11 (da-sua): "luôn hay hơn" thành "thường hay hơn": độ thích theo số lần nghe theo đường chữ U ngược, không phải lúc nào cũng tăng (Szpunar 2004). Review (24/10/2026), n10, n11: nhạc có lời là một phần lớn của nhạc cổ điển, nên chỉ nói các thể loại khí nhạc; bỏ con số "lần thứ ba" và lời khuyên đọc trước (Margulis 2010; Schellenberg và cộng sự 2008), viết thành lời khuyên.'
   - cu: Thấy chán thường không phải do "không hợp", mà do chưa biết nghe cái gì; phương pháp 4 lần nghe giải quyết đúng chuyện này. YouTube là đủ để bắt đầu; các dịch vụ chuyên nhạc cổ điển có ở Tài nguyên.
     moi: Thấy chán thường không phải do "không hợp", mà do chưa biết nghe cái gì; phương pháp 4 lần nghe giải quyết đúng chuyện này. Bản thu miễn phí trên mạng là đủ để bắt đầu; các dịch vụ chuyên nhạc cổ điển có ở Tài nguyên.
     ly_do: "n13 (da-sua): chi tiết mau cũ trên trang Lõi (tên dịch vụ): bỏ tên YouTube, giữ phần trỏ sang Tài nguyên (bao-cao/d2-bang-tang.md, mục 4)."
@@ -554,3 +570,12 @@ doi_chu:
   - cu: "Nghe trọn mục Nhạc piano (16 hướng dẫn, theo thứ tự thời gian từ Scarlatti đến Gershwin), kèm Các thể loại nhạc piano và Nghệ sĩ piano và bản thu. Muốn tự chơi: Lộ trình piano năm đầu."
     moi: "Nghe trọn các hướng dẫn nghe nhạc piano, từ Scarlatti đến Gershwin, kèm Các thể loại nhạc piano và Nghệ sĩ piano và bản thu. Muốn tự chơi: Lộ trình piano năm đầu."
     ly_do: 'n31 (da-sua): bỏ con số viết tay ("16 hướng dẫn": con số về site tính lúc build, plans/ben-vung/README.md) và thứ tự của mục cũ (danh mục mới làm ở đợt 6).'
+  - cu: "Dải âm lượng rất rộng, từ tiếng thì thầm của một cây violin đến tiếng gầm của cả dàn nhạc. Đừng chỉnh âm lượng theo đoạn to nhất; hãy để đoạn nhỏ đủ nghe được. Tai nghe hoặc loa tử tế giúp nhiều hơn bạn nghĩ: loa điện thoại làm mất gần hết âm trầm."
+    moi: "Dải âm lượng rất rộng, từ tiếng thì thầm của một cây violin đến tiếng gầm của cả dàn nhạc. Đừng chỉnh âm lượng theo đoạn to nhất; hãy để đoạn nhỏ đủ nghe được, nhưng đừng mở quá to khi nghe lâu, nhất là với tai nghe. Tai nghe hoặc loa tử tế giúp nhiều hơn bạn nghĩ: loa điện thoại làm mất gần hết âm trầm."
+    ly_do: "n8 (da-sua, review 24/10/2026): thêm lời dặn về an toàn thính giác (WHO, Safe listening)."
+  - cu: "Nhạc lý: bài 6, bài 7. Hiểu vì sao giọng thứ nghe buồn."
+    moi: "Nhạc lý: bài 6, bài 7. Hiểu vì sao giọng thứ hay được dùng cho nhạc buồn."
+    ly_do: "n17 (da-sua, review 24/10/2026): giọng thứ hay được dùng cho nhạc buồn, nhưng không phải luôn luôn (Open Music Theory, Minor Scales)."
+  - cu: Tiết tấu nâng cao, điệu thức, khóa Đô, âm ngoài hợp âm, át phụ và chuyển giọng, đọc tổng phổ
+    moi: Tiết tấu nâng cao, điệu thức và gam ngũ cung, khóa Đô và dịch giọng, âm ngoài hợp âm, át phụ và chuyển giọng, đọc tổng phổ
+    ly_do: "n39 (da-sua, review 24/10/2026): ghi đủ tên bài 16, 17 cho khớp tiêu đề bài và trang lộ trình piano."

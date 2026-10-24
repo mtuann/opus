@@ -35,16 +35,18 @@ function oTruoc(el) {
 	return !!t && t !== el && !!(el.compareDocumentPosition(t) & Node.DOCUMENT_POSITION_FOLLOWING);
 }
 
-// Người đọc tự cuộn trong lúc chờ thì thôi, không kéo về đích nữa
+// Người đọc tự cuộn trong lúc chờ thì thôi, không kéo về đích nữa. Bấm chuột hay chạm (pointerdown, mousedown), như lúc
+// bắt đầu kéo thanh cuộn, cũng tính là tự cuộn.
 let lanCuon = 0;
-for (const ev of ['wheel', 'touchmove', 'keydown']) addEventListener(ev, () => lanCuon++, { passive: true });
+for (const ev of ['wheel', 'touchmove', 'keydown', 'pointerdown', 'mousedown']) addEventListener(ev, () => lanCuon++, { passive: true });
 
 /**
  * Sau khi các khối phía trên khởi tạo xong: đích của link #mục bị đẩy đi thì cuộn lại cho đúng. Làm lại một lần nữa khi
  * font tải xong: font về sau các khối (mạng chậm) làm chữ phía trên xuống dòng khác, đích lại bị đẩy đi, ở cả trình duyệt
  * có overflow-anchor (đo ở bản build: font về trễ 2,5 giây thì đích lệch tới hàng trăm px, ở cả ba trình duyệt). Thôi,
- * không kéo về đích cũ, khi người đọc đã cuộn bằng bánh xe, chạm hay bàn phím (lanCuon), hay đã sang đích khác (bấm mục
- * lục khi các khối còn đang tải). Kéo thanh cuộn hay tìm chữ (Ctrl+F) lúc đang tải thì chưa nhận ra: vẫn bị kéo về đích cũ.
+ * không kéo về đích cũ, khi người đọc đã tự cuộn (bánh xe, chạm, bàn phím, bấm chuột hay chạm vào thanh cuộn: lanCuon), hay
+ * đã sang đích khác (bấm mục lục khi các khối còn đang tải). Cuộn không qua các sự kiện ấy (tìm chữ bằng Ctrl+F, máy đọc
+ * màn hình di chuyển trong trang) lúc đang tải thì chưa nhận ra: vẫn bị kéo về đích cũ.
  */
 function giuDich(viec, t, tren) {
 	const lan = lanCuon;

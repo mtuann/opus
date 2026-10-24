@@ -17,7 +17,7 @@ Hàng **Nhạc lý** ở mỗi chặng là mức tối thiểu cần có. Nhạc
 
 ## Các cấp ABRSM, Trinity và các chặng ở đây
 
-Site dùng **cấp (grade) của ABRSM** làm thước đo độ khó, vì đây là hệ thống phổ biến nhất thế giới.
+Site dùng **cấp (grade) của ABRSM** làm thước đo độ khó, vì đây là một trong những hệ thống thi âm nhạc lớn nhất thế giới.
 
 - **ABRSM** và **Trinity College London** (đều của Anh) có cấp Initial, rồi Grade 1 đến Grade 8, sau đó là các bằng diploma. Chương trình thi, lịch đổi chương trình và các bằng diploma được ghi ở [Học với thầy và thi cấp](/opus/piano/thay-va-thi/#thi-cap).
 - Nhà xuất bản **G. Henle** có thang độ khó thứ hai, từ 1 đến 9, cho từng tác phẩm; cách đọc và bảng đối chiếu với các chặng ở [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/#cach-oc-danh-muc).
@@ -39,8 +39,8 @@ Mục tiêu: ngồi đúng, biết bàn phím, đọc được nốt ở cả ha
 | Đọc nhạc | Khuông kép và [các nốt mốc](/opus/piano/ban-do-ban-phim/): Đô giữa, Sol của khóa Sol, Fa của khóa Fa. Đọc bài 4–8 ô nhịp trong vị trí năm ngón, đếm to. Mỗi ngày 5 phút [đọc nốt](/opus/luyen-tap/doc-not/). |
 | Nhạc lý | [Bài 1](/opus/nhac-ly/01-cao-do-ten-not/) đến [bài 5](/opus/nhac-ly/05-dau-hoa/), rồi [Ôn tập 1](/opus/nhac-ly/on-tap-1/). |
 | Tai | [Hát lại](/opus/luyen-tap/hat-lai/) một nốt, [nghe quãng](/opus/luyen-tai/nghe-quang/) 3 trưởng, 5 đúng và 8 đúng; gõ đúng [tiết tấu](/opus/luyen-tap/tiet-tau/) đơn giản. |
-| Tác phẩm | [Hai tuần đầu tiên](/opus/piano/hai-tuan-dau/), [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/), một giáo trình cho người lớn (Alfred, Faber), các bài đầu trong Türk, Bartók *Mikrokosmos*. Bài học trên site: [trang chặng 1](/opus/piano/lo-trinh/chang-1/). Xem thêm [chặng 1 trong danh mục](/opus/piano/tac-pham-theo-cap/). |
-| Nghe | Những bài bạn sẽ chơi trong vài năm tới, để có đích đến: [Bach: Prelude Đô trưởng](/opus/piano/tac-pham/bach-prelude-do/), [Schumann: Kinderszenen](/opus/nghe-nhac/schumann-kinderszenen/), [Beethoven: Ánh trăng](/opus/nghe-nhac/beethoven-moonlight/). |
+| Tác phẩm | [Hai tuần đầu tiên](/opus/piano/hai-tuan-dau/), [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/), một giáo trình cho người lớn (Alfred, Faber), các bài đầu trong Bartók *Mikrokosmos*; cuối chặng, các bài đầu trong Türk (khoảng Grade 1). Bài học trên site: [trang chặng 1](/opus/piano/lo-trinh/chang-1/). Xem thêm [chặng 1 trong danh mục](/opus/piano/tac-pham-theo-cap/). |
+| Nghe | Những bài bạn sẽ chơi trong vài năm tới, để có đích đến: [Bach: Prelude Đô trưởng](/opus/piano/tac-pham/bach-prelude-do/), vài bài trong [Schumann: Kinderszenen](/opus/nghe-nhac/schumann-kinderszenen/), chương 1 của [Beethoven: Ánh trăng](/opus/nghe-nhac/beethoven-moonlight/). |
 | Biểu diễn | Thu âm mỗi tuần. Cuối chặng, chơi 3 bài cho người thân nghe. |
 
 **Sẵn sàng lên chặng tiếp khi…**
@@ -103,10 +103,10 @@ Mục tiêu: chơi phức điệu, làm nổi giai điệu trong cùng một tay
 
 | Mảng | Mục tiêu |
 |---|---|
-| Tay | **Phức điệu hai bè** kiểu Bach: mỗi tay một giọng độc lập, đôi khi hai giọng trong một tay. Cân bằng giai điệu và phần đệm trong cùng một tay. Rubato nhẹ. Nốt hoa mỹ Baroque (láy rền bắt đầu từ nốt trên). Chuyền tay nhanh (Für Elise), hợp âm chơi thật khẽ và đều (Chopin, Prélude Mi thứ). |
+| Tay | **Phức điệu hai bè** kiểu Bach: mỗi tay một giọng độc lập, đôi khi hai giọng trong một tay. Cân bằng giai điệu và phần đệm trong cùng một tay. Rubato nhẹ. Nốt hoa mỹ Baroque (láy rền thường bắt đầu từ nốt trên). Chuyền tay nhanh (Für Elise), hợp âm chơi thật khẽ và đều (Chopin, Prélude Mi thứ). |
 | Gam, hợp âm | Mọi gam trưởng và thứ (hòa âm, giai điệu), hai tay, 2–3 quãng tám; gam ngược chiều; hợp âm rải hai tay hai quãng tám; gam nửa cung hai tay. [Các mẫu hòa âm thời Cổ điển](/opus/piano/hoa-am/mau-galant/) và [ứng tác](/opus/piano/hoa-am/ung-tac/) trên các mẫu ấy. |
 | Đọc nhạc | Thị tấu ở mức Grade 2–3. Đọc trước một ô nhịp. Bắt đầu đọc nhạc [bốn tay](/opus/piano/choi-cung-nguoi-khac/) cùng người khác. |
-| Nhạc lý | [Bài 15](/opus/nhac-ly/15-tiet-tau-nang-cao/) đến [bài 19](/opus/nhac-ly/19-at-phu-chuyen-giong/) (tiết tấu nâng cao, điệu thức, dịch giọng, âm ngoài hợp âm, át phụ và chuyển giọng) và [bài 31: Hình thức nhỏ](/opus/nhac-ly/31-hinh-thuc-nho/); đọc [Rondo](/opus/hinh-thuc/rondo/). |
+| Nhạc lý | [Bài 15](/opus/nhac-ly/15-tiet-tau-nang-cao/) đến [bài 20](/opus/nhac-ly/20-doc-tong-pho/) (tiết tấu nâng cao, điệu thức và gam ngũ cung, khóa Đô và dịch giọng, âm ngoài hợp âm, át phụ và chuyển giọng, đọc tổng phổ) và [bài 31: Hình thức nhỏ](/opus/nhac-ly/31-hinh-thuc-nho/); đọc [Rondo](/opus/hinh-thuc/rondo/). |
 | Tai | [Chép giai điệu](/opus/luyen-tap/chep-giai-dieu/) ngắn; nghe tiến trình có hợp âm thứ. |
 | Tác phẩm | Bài học trên site: [trang chặng 4](/opus/piano/lo-trinh/chang-4/). Ngoài ra: Kuhlau: Sonatina Op. 55 số 1, các *Lyric Pieces* khác trong Op. 12 của Grieg. |
 | Nghe | [Bach: Goldberg Variations](/opus/nghe-nhac/bach-goldberg/), [Chopin: Études](/opus/nghe-nhac/chopin-etude/), [Liszt: Liebestraum số 3](/opus/nghe-nhac/liszt-liebestraum/). |
@@ -131,7 +131,7 @@ Mục tiêu: chơi một chương sonata thật, giữ nhiều lớp âm thanh t
 | Đọc nhạc | Thị tấu ở mức Grade 3–4. Đệm cho người hát hoặc chơi nhạc cụ khác: đọc cùng lúc khuông giai điệu và hai khuông piano. |
 | Nhạc lý | [Bài 21: Hòa âm bốn bè](/opus/nhac-ly/21-hoa-am-bon-be/), [bài 22: Đối âm](/opus/nhac-ly/22-doi-am/) (rất có ích khi chơi Bach), bài 23–25, và [bài 26: Phân tích một tác phẩm](/opus/nhac-ly/26-phan-tich/); đọc [Hình thức sonata](/opus/hinh-thuc/sonata/). |
 | Tai | Nhận biết [hợp âm bảy](/opus/luyen-tai/nghe-hop-am/#luyen-voi-cong-cu) và các kiểu kết. |
-| Tác phẩm | Bài học trên site: [trang chặng 5](/opus/piano/lo-trinh/chang-5/). Ngoài ra: Debussy: *The Little Shepherd*, vài bài trong *Romanian Folk Dances* của Bartók. |
+| Tác phẩm | Bài học trên site: [trang chặng 5](/opus/piano/lo-trinh/chang-5/). Ngoài ra: vài bài trong *Romanian Folk Dances* của Bartók. |
 | Nghe | [Brahms: Intermezzo Op. 118 số 2](/opus/nghe-nhac/brahms-intermezzo/), [Grieg: Concerto piano](/opus/nghe-nhac/grieg-concerto/), [Mussorgsky: Bức tranh triển lãm](/opus/nghe-nhac/mussorgsky-tranh/). |
 | Biểu diễn | Chương trình 15 phút. Thử song tấu bốn tay hoặc đệm cho một người bạn ([cách tập chung](/opus/piano/choi-cung-nguoi-khac/)). |
 
@@ -154,7 +154,7 @@ Mục tiêu: chơi những tác phẩm lớn được yêu thích nhất, với 
 | Đọc nhạc | Thị tấu ở mức Grade 5. Chơi nhạc thính phòng: sonata cho violin hoặc cello với piano. |
 | Nhạc lý | [Bài 27](/opus/nhac-ly/27-ky-hieu-hop-am/) đến [bài 32](/opus/nhac-ly/32-ky-thuat-the-ky-20/) (ký hiệu hợp âm, kết cấu, chuỗi hòa âm, phát triển môtip, hình thức, kỹ thuật thế kỷ 20). Phân tích mọi bài mình chơi. |
 | Tai | Nghe và so sánh nhiều bản thu của cùng một tác phẩm, xem [nghệ sĩ và bản thu](/opus/piano/nghe-si/). |
-| Tác phẩm | Bài học trên site: [trang chặng 6](/opus/piano/lo-trinh/chang-6/). Ngoài ra: Schubert: Impromptu Op. 142 số 2, Brahms: Intermezzo Op. 118 số 2, các Sinfonia của Bach, Mozart: Sonata K. 330. |
+| Tác phẩm | Bài học trên site: [trang chặng 6](/opus/piano/lo-trinh/chang-6/). Ngoài ra: Debussy: *The Little Shepherd*, Schubert: Impromptu Op. 142 số 2, các Sinfonia của Bach, Mozart: Sonata K. 330; cuối chặng, gần chặng 7: Brahms: Intermezzo Op. 118 số 2. |
 | Nghe | [Beethoven: Pathétique](/opus/nghe-nhac/beethoven-pathetique/) (cả ba chương), [Rachmaninoff: Concerto số 2](/opus/nghe-nhac/rachmaninoff-2/), [Bach: Goldberg Variations](/opus/nghe-nhac/bach-goldberg/) trong hai bản thu khác nhau. |
 | Biểu diễn | Chương trình 20–30 phút thuộc lòng, nhiều phong cách. Biểu diễn trước khán giả không quen biết. |
 

@@ -43,6 +43,32 @@ async function choBoCucYen(p, id) {
 	await p.evaluate(() => document.fonts.ready.then(() => new Promise((ok) => requestAnimationFrame(() => requestAnimationFrame(ok)))));
 }
 
+/**
+ * Id của tiêu đề cuối trong nội dung trang (h2 đến h4: có trang chỉ có h3, như bat-dau/tom-tat): phía trên nó có mọi khối
+ * của trang. Đọc trong một ngữ cảnh riêng, để lần mở trang#id sau đó là một lần tải mới, không dùng lại gì của lần này.
+ */
+async function tieuDeCuoi(trinhDuyet, trang) {
+	const ctx = await trinhDuyet.newContext();
+	try {
+		const p = await ctx.newPage();
+		await p.goto((await goc()) + trang, { waitUntil: 'domcontentloaded' });
+		return await p.evaluate(() => [...document.querySelectorAll('.sl-markdown-content :is(h2, h3, h4)[id]')].at(-1).id);
+	} finally {
+		await ctx.close();
+	}
+}
+
+/** Mở thẳng trang#id trong một trang mới (tải mới, không phải đổi # trong cùng tài liệu), chờ bố cục yên, rồi đo vị trí đích. */
+async function viTriDich(ctx, trang, id, truocKhiMo) {
+	const p = await ctx.newPage();
+	await truocKhiMo?.(p);
+	await p.goto((await goc()) + trang + '#' + encodeURIComponent(id), { waitUntil: 'load' });
+	await choBoCucYen(p, id);
+	const truoc = await p.evaluate((id) => document.getElementById(id).getBoundingClientRect().top, id);
+	const dung = await p.evaluate((id) => (document.getElementById(id).scrollIntoView(), document.getElementById(id).getBoundingClientRect().top), id);
+	return [truoc, dung];
+}
+
 for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 	test(`${ten}: giá nhạc mở được, chạm nút "Thoát giá nhạc" thì thoát (360 px, cảm ứng)`, { skip: !KHUONG.length && khongCo('khuông nhạc') }, async () => {
 		const trinhDuyet = await loai.launch();
@@ -79,20 +105,37 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 	test(`${ten}: mở thẳng link #mục thì đích đứng đúng chỗ, ở 360 và 1280 px`, { skip: !KHUONG.length && khongCo('khuông nhạc') }, async () => {
 		const trinhDuyet = await loai.launch();
 		try {
-			for (const trang of KHUONG)
+			for (const trang of KHUONG) {
+				const id = await tieuDeCuoi(trinhDuyet, trang);
 				for (const co of [{ w: 360, h: 780, camUng: true }, { w: 1280, h: 800, camUng: false }]) {
 					const ctx = await nguCanh(trinhDuyet, ten, co);
-					const p = await ctx.newPage();
-					// tiêu đề cuối của bài: phía trên có mọi khối của trang. Tiêu đề h2 đến h4: có trang chỉ có h3 (bat-dau/tom-tat)
-					await p.goto((await goc()) + trang, { waitUntil: 'load' });
-					const id = await p.evaluate(() => [...document.querySelectorAll('.sl-markdown-content :is(h2, h3, h4)[id]')].at(-1).id);
-					await p.goto((await goc()) + trang + '#' + encodeURIComponent(id), { waitUntil: 'load' });
-					await choBoCucYen(p, id);
-					const truoc = await p.evaluate((id) => document.getElementById(id).getBoundingClientRect().top, id);
-					const dung = await p.evaluate((id) => (document.getElementById(id).scrollIntoView(), document.getElementById(id).getBoundingClientRect().top), id);
+					const [truoc, dung] = await viTriDich(ctx, trang, id);
 					assert.ok(Math.abs(truoc - dung) <= 3, `${trang}, ${co.w} px: #${id} ở ${Math.round(truoc)} px, đúng chỗ là ${Math.round(dung)} px`);
 					await ctx.close();
 				}
+			}
+		} finally {
+			await trinhDuyet.close();
+		}
+	});
+
+	// Font về trễ (mạng chậm), sau khi các khối phía trên đã dựng: chữ xuống dòng khác, đích bị đẩy đi; phần giữ đích của
+	// src/scripts/tai.js kiểm lại khi font tải xong. Một trang (trang có khuông dài nhất), 1280 px, font trễ 2,5 giây.
+	test(`${ten}: mở thẳng link #mục khi font về trễ thì đích vẫn đứng đúng chỗ`, { skip: !KHUONG.length && khongCo('khuông nhạc') }, async () => {
+		const kichThuoc = (t) => fs.statSync(path.join(DIST, t, 'index.html')).size;
+		const trang = [...KHUONG].sort((a, b) => kichThuoc(b) - kichThuoc(a))[0];
+		const trinhDuyet = await loai.launch();
+		try {
+			const id = await tieuDeCuoi(trinhDuyet, trang);
+			const ctx = await nguCanh(trinhDuyet, ten, { w: 1280, h: 800, camUng: false });
+			const [truoc, dung] = await viTriDich(ctx, trang, id, (p) =>
+				p.route('**/*.woff2', async (r) => {
+					await new Promise((ok) => setTimeout(ok, 2500));
+					await r.continue();
+				}),
+			);
+			assert.ok(Math.abs(truoc - dung) <= 3, `${trang}, font trễ: #${id} ở ${Math.round(truoc)} px, đúng chỗ là ${Math.round(dung)} px`);
+			await ctx.close();
 		} finally {
 			await trinhDuyet.close();
 		}

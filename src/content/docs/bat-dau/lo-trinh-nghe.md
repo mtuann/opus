@@ -11,8 +11,8 @@ Nhạc cổ điển khác nhạc phổ thông ở vài điểm; biết trước 
 
 - **Được ghi lại bằng bản nhạc**, nhưng mỗi người chơi diễn giải một khác. Vì thế một tác phẩm có nhiều bản thu, và so sánh chúng là một phần niềm vui.
 - **Dài hơn và có kiến trúc.** Một bản giao hưởng có thể dài 40 phút, chia thành các chương; ý tưởng được giới thiệu, phát triển, biến đổi rồi quay lại. Hãy nghe từng chương một, tìm giai điệu chính và để ý khi nó trở lại.
-- **Dải âm lượng rất rộng**, từ tiếng thì thầm của một cây violin đến tiếng gầm của cả dàn nhạc. Đừng chỉnh âm lượng theo đoạn to nhất; hãy để đoạn nhỏ đủ nghe được. Tai nghe hoặc loa tử tế giúp nhiều hơn bạn nghĩ: loa điện thoại làm mất gần hết âm trầm.
-- **Thường không có lời.** Âm nhạc tự kể chuyện bằng giai điệu, hòa âm và màu sắc nhạc cụ. Đọc vài dòng về bối cảnh trước khi nghe cho bạn một điểm bám, và lần thứ ba nghe một tác phẩm thường hay hơn lần đầu.
+- **Dải âm lượng rất rộng**, từ tiếng thì thầm của một cây violin đến tiếng gầm của cả dàn nhạc. Đừng chỉnh âm lượng theo đoạn to nhất; hãy để đoạn nhỏ đủ nghe được, nhưng đừng mở quá to khi nghe lâu, nhất là với tai nghe. Tai nghe hoặc loa tử tế giúp nhiều hơn bạn nghĩ: loa điện thoại làm mất gần hết âm trầm.
+- **Nhiều tác phẩm không có lời.** Giao hưởng, sonata, tứ tấu là khí nhạc: âm nhạc tự kể chuyện bằng giai điệu, hòa âm và màu sắc nhạc cụ. Đọc vài dòng về bối cảnh trước hay sau khi nghe, tùy bạn thấy cách nào dễ vào hơn; và nghe lại một tác phẩm vài lần, vì lần sau thường dễ nghe hơn lần đầu, nhưng đừng nghe một bài quá nhiều lần liền.
 
 Thấy chán thường không phải do "không hợp", mà do chưa biết nghe cái gì; [phương pháp 4 lần nghe](/opus/nghe-nhac/) giải quyết đúng chuyện này. Bản thu miễn phí trên mạng là đủ để bắt đầu; các dịch vụ chuyên nhạc cổ điển có ở [Tài nguyên](/opus/tai-nguyen/).
 
@@ -26,7 +26,7 @@ Thấy chán thường không phải do "không hợp", mà do chưa biết nghe
 
 ## Tháng 2: Sáng và tối
 
-- [ ] Nhạc lý: [bài 6](/opus/nhac-ly/06-gam-truong/), [bài 7](/opus/nhac-ly/07-gam-thu/). Hiểu vì sao giọng thứ nghe buồn.
+- [ ] Nhạc lý: [bài 6](/opus/nhac-ly/06-gam-truong/), [bài 7](/opus/nhac-ly/07-gam-thu/). Hiểu vì sao giọng thứ hay được dùng cho nhạc buồn.
 - [ ] [Luyện tai hợp âm](/opus/luyen-tai/nghe-hop-am/#luyen-voi-cong-cu): phân biệt trưởng và thứ.
 - [ ] Nghe: [Beethoven Giao hưởng số 5](/opus/nghe-nhac/beethoven-5/) (từ Đô thứ đến Đô trưởng), [Chopin Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/).
 
@@ -72,7 +72,7 @@ Thấy chán thường không phải do "không hợp", mà do chưa biết nghe
 | Tháng 3–4 | Bài [5](/opus/nhac-ly/05-dau-hoa/)–[9](/opus/nhac-ly/09-quang/) | Hiểu dấu hóa, gam, hóa biểu và quãng: đọc hóa biểu đến 4 dấu hóa ([công cụ](/opus/luyen-tap/hoa-bieu/)); nghe ra 3 trưởng, 5 đúng, 8 đúng ([luyện tai](/opus/luyen-tai/nghe-quang/#luyen-voi-cong-cu)); gõ đúng tiết tấu cấp độ 2 ([công cụ](/opus/luyen-tap/tiet-tau/)) |
 | Tháng 5–7 | Bài [10](/opus/nhac-ly/10-hop-am-ba/)–[14](/opus/nhac-ly/14-ky-hieu-bieu-dien/) | Hợp âm, hòa âm chức năng, kết và ký hiệu biểu diễn: phân biệt hợp âm trưởng và thứ ([luyện tai](/opus/luyen-tai/nghe-hop-am/#luyen-voi-cong-cu)); thị tấu giai điệu cấp độ 1 ([công cụ](/opus/luyen-tap/thi-tau/)); ôn [thuật ngữ](/opus/nhac-ly/tu-dien/) |
 | Tháng 8–10 | [Hình thức & thể loại](/opus/hinh-thuc/) | Nghe một tác phẩm dài mà không bị lạc: hai đoạn, ba đoạn, rondo, biến tấu, [sonata](/opus/hinh-thuc/sonata/), [fugue](/opus/hinh-thuc/fugue/); nghe [Haydn 94](/opus/nghe-nhac/haydn-94/) và [Mozart 40](/opus/nghe-nhac/mozart-40/) với sơ đồ |
-| Tháng 11–12 | Bài [15](/opus/nhac-ly/15-tiet-tau-nang-cao/)–[20](/opus/nhac-ly/20-doc-tong-pho/) | Tiết tấu nâng cao, điệu thức, khóa Đô, âm ngoài hợp âm, át phụ và chuyển giọng, đọc tổng phổ |
+| Tháng 11–12 | Bài [15](/opus/nhac-ly/15-tiet-tau-nang-cao/)–[20](/opus/nhac-ly/20-doc-tong-pho/) | Tiết tấu nâng cao, điệu thức và gam ngũ cung, khóa Đô và dịch giọng, âm ngoài hợp âm, át phụ và chuyển giọng, đọc tổng phổ |
 | Năm thứ hai | [Âm học](/opus/nhac-ly/am-hoc/), bài 21–32 từ [Hòa âm bốn bè](/opus/nhac-ly/21-hoa-am-bon-be/) | Mỗi tháng phân tích một tác phẩm theo [quy trình 6 bước](/opus/nhac-ly/26-phan-tich/) |
 
 Suốt năm: luyện tập gần như mỗi ngày và ghi [nhật ký luyện tập](/opus/luyen-tap/nhat-ky/). Nếu có thể, học piano song song theo [Lộ trình piano năm đầu](/opus/bat-dau/lo-trinh-choi/): đàn biến mọi bài nhạc lý ở trên thành thứ bạn chơi được.

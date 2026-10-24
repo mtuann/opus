@@ -9,8 +9,8 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: "Claude Opus 5.5 (D2-L1 lượt 1, phần C)"
-      luot_2: null
-      review: null
+      luot_2: Claude Sonnet 5.5 (D2-L1 lượt 2 phần 1/2)
+      review: Claude Opus 5.5 (review D2-L1, 24/10/2026)
       kiem_mau: null
 ghi_chu: >-
   Trang tóm tắt nhạc lý cơ bản (14 ô, hai mặt A4). Nguồn chính: Open Music Theory (OMT), mở từng chương (tải bằng curl, ngày 24/10/2026; WebFetch bị trang trả 403). Thuật ngữ tiếng Việt đối chiếu src/data/thuat-ngu.yml (chưa khóa) và các bài nhạc lý cũ cùng chủ đề (../opus-zero/docs/nhac-ly/03, 04, 05, 06, 07, 08, 12): không lệch. Sửa cấu trúc trước lượt 1 (agent chính, commit a745865): 14 tiêu đề "###" thành "##", vì trang không có h2 nào (axe heading-order); chữ tiêu đề và id giữ nguyên. Sửa chữ ở lượt 1: n24 (quy tắc số chỉ nhịp, thêm trường hợp 6/8), n30 (hạ át âm), n36 (hình vòng quãng năm: d♯/e♭), n51 (bảng chức năng: vi). Sửa không đổi chữ: chữ "Đô giữa (C4)" dưới hình bàn phím đổi fill="#222" thành fill="currentColor" để đọc được ở chế độ tối (nằm ngoài phím đàn, trên nền trang). Bố cục in hai mặt A4 (n3) tùy CSS của agent chính (lớp oz-sheet, oz-sheet-page, oz-cell, oz-fig, oz-fig-circle): agent chính kiểm sau khi build. Không tính là nhận định: câu mở đầu "Toàn bộ kiến thức đọc nhạc và nhạc lý cơ bản" (nói phạm vi của trang).
@@ -131,16 +131,16 @@ nhan_dinh:
     nguon:
       - site-in
     ket_qua: dung
-    ghi_chu: 'Nhận định về site mới. Starlight đặt lớp print:hidden (print.css: ".print\:hidden { display: none; }") cho thanh menu bên (PageFrame.astro: nav.sidebar), ô tìm kiếm và nhóm nút bên phải thanh trên (Header.astro), cột "Trên trang này" cả bản điện thoại (TwoColumnContent.astro: aside.right-sidebar-container), nút Trước, Tiếp (Pagination.astro), nút mở menu (MobileMenuToggle.astro). src/styles/thanh-phan.css (@media print) ẩn hàng nút và trình phát của khuông nhạc (.oz-abc-tools, .abc-audio). Thanh trên vẫn in tên site và logo.'
+    ghi_chu: 'Review (24/10/2026): câu về chính site, đã kiểm CSS in: Starlight ẩn menu, ô tìm kiếm, mục lục, nút Trước, Tiếp khi in (print:hidden); src/styles/thanh-phan.css ẩn hàng nút và trình phát của khuông; in thử ra PDF A4 bằng Chromium. Lượt 1: Nhận định về site mới. Starlight đặt lớp print:hidden (print.css: ".print\:hidden { display: none; }") cho thanh menu bên (PageFrame.astro: nav.sidebar), ô tìm kiếm và nhóm nút bên phải thanh trên (Header.astro), cột "Trên trang này" cả bản điện thoại (TwoColumnContent.astro: aside.right-sidebar-container), nút Trước, Tiếp (Pagination.astro), nút mở menu (MobileMenuToggle.astro). src/styles/thanh-phan.css (@media print) ẩn hàng nút và trình phát của khuông nhạc (.oz-abc-tools, .abc-audio). Thanh trên vẫn in tên site và logo.'
     luot_2: khong-chac
     luot_2_ghi_chu: Hành vi in của site (CSS in); không có nguồn ngoài. Kiểm bằng xem trước khi in ở Chromium, WebKit, Firefox hoặc kiểm thử của site.
   - id: n3
-    cau: "Toàn bộ kiến thức đọc nhạc và nhạc lý cơ bản trên hai mặt giấy A4: mặt 1 là đọc nhạc, mặt 2 là nhạc lý."
+    cau: "Những điều cốt lõi của đọc nhạc và nhạc lý cơ bản trên hai mặt giấy A4: mặt 1 là đọc nhạc, mặt 2 là nhạc lý."
     loai: quy-tac
     nguon:
       - site-in
-    ket_qua: dung
-    ghi_chu: "Nhận định về bản in của site mới, ĐÚNG CÓ ĐIỀU KIỆN: trang chia hai khối oz-sheet-page (ô 1–7 đọc nhạc, ô 8–14 nhạc lý); site cũ in mỗi khối một mặt A4 nhờ CSS ../opus-zero/docs/assets/css/opus.css dòng 366–394 (@media print: .oz-sheet-page hai cột, cỡ chữ 8.6pt; .oz-sheet-page + .oz-sheet-page { break-before: page }; ô inline-block không bị chia đôi). Agent chính thêm CSS tương đương (tiêu đề ô nay là h2 trong .sl-heading-wrapper của Starlight, không còn h3) rồi kiểm bằng in ra PDF khổ A4: đúng hai trang, mỗi khối một trang. Nếu không vừa thì sửa CSS hay câu này."
+    ket_qua: da-sua
+    ghi_chu: "Review (24/10/2026): sửa theo lượt 2: \"toàn bộ kiến thức\" nói quá, thay bằng \"những điều cốt lõi\" (cả mô tả trang). Phần \"hai mặt giấy A4\" đã thử (in PDF A4 bằng Chromium: đúng hai trang), giữ. Lượt 1: Nhận định về bản in của site mới, ĐÚNG CÓ ĐIỀU KIỆN: trang chia hai khối oz-sheet-page (ô 1–7 đọc nhạc, ô 8–14 nhạc lý); site cũ in mỗi khối một mặt A4 nhờ CSS ../opus-zero/docs/assets/css/opus.css dòng 366–394 (@media print: .oz-sheet-page hai cột, cỡ chữ 8.6pt; .oz-sheet-page + .oz-sheet-page { break-before: page }; ô inline-block không bị chia đôi). Agent chính thêm CSS tương đương (tiêu đề ô nay là h2 trong .sl-heading-wrapper của Starlight, không còn h3) rồi kiểm bằng in ra PDF khổ A4: đúng hai trang, mỗi khối một trang. Nếu không vừa thì sửa CSS hay câu này."
     luot_2: khong-chac
     luot_2_ghi_chu: "Nói về bố cục trang (hai mặt A4: mặt 1 đọc nhạc, mặt 2 nhạc lý), tự tham chiếu; không có nguồn ngoài. 'Toàn bộ kiến thức ... cơ bản' là nói rộng, khó kiểm; đề nghị viết 'tóm tắt kiến thức cơ bản'."
   - id: n4
@@ -471,7 +471,7 @@ nhan_dinh:
     nguon:
       - omt-minor
     ket_qua: dung
-    ghi_chu: 'OMT Minor Scales: "Each major key signature has a corresponding relative minor key signature whose tonic is three half steps below the relative major''s tonic." "Giọng thứ song song" của site là relative minor (chung hóa biểu), như bài nhạc lý 7 cũ ("Giọng thứ song song (relative minor) dùng chung hóa biểu"); parallel minor là "giọng thứ cùng tên".'
+    ghi_chu: 'Review (24/10/2026): giữ. "Giọng (thứ) song song" trong tiếng Việt là relative của Open Music Theory (cùng hóa biểu), "giọng cùng tên" là parallel; ghi cho D3-L5 (thuat-ngu.yml) để bảng thuật ngữ nói rõ. Lượt 1: OMT Minor Scales: "Each major key signature has a corresponding relative minor key signature whose tonic is three half steps below the relative major''s tonic." "Giọng thứ song song" của site là relative minor (chung hóa biểu), như bài nhạc lý 7 cũ ("Giọng thứ song song (relative minor) dùng chung hóa biểu"); parallel minor là "giọng thứ cùng tên".'
     luot_2: dung
     luot_2_nguon: [ https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/, https://thcsnguyenduq1.hcm.edu.vn/am-nhac/nhac-8-bai-3-tim-hieu-ve-giong-song-song-va-giong-cung-ten/ctmb/31062/80133, https://rdsic.edu.vn/blog/blog-3/giong-song-song-vi-cb.html ]
     luot_2_ghi_chu: "OMT, Minor Scales: 'The tonic of a minor key is always three half steps below the tonic of its relative major' (C → A). Thuật ngữ: OMT gọi A minor là 'relative minor' của C major (cùng hóa biểu, tonic thấp hơn ba nửa cung) và C minor là 'parallel minor' (cùng tonic). 'Giọng song song' trong tiếng Việt chỉ cặp cùng hóa biểu (Đô trưởng – La thứ) còn 'giọng cùng tên' chỉ cặp cùng chủ âm (hai trang giáo dục tiếng Việt đã mở nêu đúng định nghĩa này; chúng chỉ dùng để chứng thực cách gọi, không phải nguồn bậc 2). Nội dung câu đúng; chú ý 'song song' tiếng Việt tương ứng 'relative' của OMT, KHÔNG phải 'parallel', nên thuat-ngu.yml nên ghi rõ đối ứng tiếng Anh để khỏi lẫn."
@@ -482,7 +482,7 @@ nhan_dinh:
       - omt-major
       - omt-minor
     ket_qua: da-sua
-    ghi_chu: 'Đã đọc từng chữ trong SVG: mỗi giọng trưởng đúng số dấu, mỗi giọng thứ ở vòng trong là giọng thứ song song của giọng trưởng cùng hướng (cách 3 nửa cung, OMT Minor Scales). OMT Major Scales, The Circle of Fifths: "If you continue clockwise, sharp key signatures appear, each subsequent key signature adding one more sharp. If you continue counter-clockwise from C major, flat key signatures appear". Sửa: ô dưới cùng ghi "F♯/G♭" và "6♯/6♭" mà vòng trong ghi "e♭/d♯", thứ tự ngược, dễ ghép F♯ với e♭ (sai: F♯ trưởng đi với d♯ thứ, G♭ trưởng với e♭ thứ); đổi thành "d♯/e♭". Hình chỉ ghi một cặp đồng âm (6♯/6♭); hai cặp 5♯/7♭, 7♯/5♭ không ghi: giản lược, không sai.'
+    ghi_chu: 'Review (24/10/2026): giữ; "giọng thứ song song" như n35 (ghi cho D3-L5). Lượt 1: Đã đọc từng chữ trong SVG: mỗi giọng trưởng đúng số dấu, mỗi giọng thứ ở vòng trong là giọng thứ song song của giọng trưởng cùng hướng (cách 3 nửa cung, OMT Minor Scales). OMT Major Scales, The Circle of Fifths: "If you continue clockwise, sharp key signatures appear, each subsequent key signature adding one more sharp. If you continue counter-clockwise from C major, flat key signatures appear". Sửa: ô dưới cùng ghi "F♯/G♭" và "6♯/6♭" mà vòng trong ghi "e♭/d♯", thứ tự ngược, dễ ghép F♯ với e♭ (sai: F♯ trưởng đi với d♯ thứ, G♭ trưởng với e♭ thứ); đổi thành "d♯/e♭". Hình chỉ ghi một cặp đồng âm (6♯/6♭); hai cặp 5♯/7♭, 7♯/5♭ không ghi: giản lược, không sai.'
     luot_2: dung
     luot_2_nguon: [ https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/, https://viva.pressbooks.pub/openmusictheory/chapter/major-scales/ ]
     luot_2_ghi_chu: "OMT, Minor Scales (vòng quãng năm cho giọng trưởng và thứ): giọng trưởng chữ hoa ở vòng ngoài, giọng thứ chữ thường ở vòng trong, xếp theo số dấu hóa; từ C theo chiều kim đồng hồ thêm thăng, ngược chiều thêm giáng. Tôi tự đối chiếu: các giọng trưởng C, G, D, A, E, B, F♯/G♭, D♭, A♭, E♭, B♭, F với số dấu 0, 1♯ ... 5♯, 6♯/6♭, 5♭ ... 1♭ khớp các hóa biểu OMT liệt kê (Major Scales); giọng thứ song song tính bằng quy tắc 'ba nửa cung dưới' cho a, e, b, f♯, c♯, g♯, d♯/e♭, b♭, f, c, g, d: khớp. Thuật ngữ 'song song' = relative của OMT (xem n35)."
@@ -635,7 +635,7 @@ nhan_dinh:
       - omt-la-bass
       - mt21c-function
     ket_qua: da-sua
-    ghi_chu: 'Câu cũ (ô bảng): "Chủ (ổn định) | I, vi". Hai nguồn bậc 2 xếp vi khác nhau. OMT Introduction to Harmony: "Tonic (T): ... the only chord that belongs to this category is I"; "Weak predominants ...: iii and vi"; bảng thuật ngữ cùng chương: "The I chord is the paradigmatic tonic-function chord, but vi and iii occasionally have tonic function." MT21C 9.4: vi có "tonic prolongation function". OMT La in the Bass: "Deceptive motion most commonly occurs when V(7) moves to vi rather than I". Theo nguồn chính (OMT) chỉ I là hợp âm chủ; viết lại cho đúng với cả hai nguồn (chuan-kiem-dinh mục 2: viết chung lại): vi đôi khi thay I. Vẫn khớp câu hỏi ở bài kiểm tra đầu vào ("Hợp âm nào có thể thay thế I vì cùng chức năng chủ? vi"). Bài 12 cũ (D3) xếp vi vào nhóm chủ: lô của bài 12 nên chọn cùng cách viết.'
+    ghi_chu: 'Review (24/10/2026): giữ "vi đôi khi thay I": phần thuật ngữ của Open Music Theory ghi "vi and iii occasionally have tonic function", sách mở của Mount gọi vi là "weak tonic substitute"; văn bản chính của OMT xếp vi là hạ át yếu, nên chỉ nói "đôi khi". Lượt 1: Câu cũ (ô bảng): "Chủ (ổn định) | I, vi". Hai nguồn bậc 2 xếp vi khác nhau. OMT Introduction to Harmony: "Tonic (T): ... the only chord that belongs to this category is I"; "Weak predominants ...: iii and vi"; bảng thuật ngữ cùng chương: "The I chord is the paradigmatic tonic-function chord, but vi and iii occasionally have tonic function." MT21C 9.4: vi có "tonic prolongation function". OMT La in the Bass: "Deceptive motion most commonly occurs when V(7) moves to vi rather than I". Theo nguồn chính (OMT) chỉ I là hợp âm chủ; viết lại cho đúng với cả hai nguồn (chuan-kiem-dinh mục 2: viết chung lại): vi đôi khi thay I. Vẫn khớp câu hỏi ở bài kiểm tra đầu vào ("Hợp âm nào có thể thay thế I vì cùng chức năng chủ? vi"). Bài 12 cũ (D3) xếp vi vào nhóm chủ: lô của bài 12 nên chọn cùng cách viết.'
     luot_2: dung
     luot_2_nguon: [ https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/, https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/22-phrases-cadences-and-harmonic-function/, https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/24-the-pre-dominant-function/ ]
     luot_2_ghi_chu: "OMT, Introduction to Harmony: chức năng chủ là I (i); mục thuật ngữ 'tonic function': 'vi and iii occasionally have tonic function'. FFF ch. 24: hợp âm chức năng chủ thường gặp là I, iii, vi; ch. 22 mục 22.7: vi là 'weak tonic substitute'. Chữ 'đôi khi' trong câu khớp; văn bản chính của OMT xếp vi là 'weak predominant' (La in the Bass)."
@@ -687,7 +687,7 @@ nhan_dinh:
     nguon:
       - omt-plagal
     ket_qua: dung
-    ghi_chu: 'OMT Plagal Motion: "You may sometimes see all (IV)–I motions described as “plagal cadences” ... While true phrase endings involving the progression (IV)–I do exist, in 18th-century classical music, it''s more common to see a (IV)–I tonic prolongation". Tên kết đúng; OMT chỉ lưu ý kết này ít gặp ở cuối câu nhạc thế kỷ 18.'
+    ghi_chu: 'Review (24/10/2026): giữ "kết plagal": Open Music Theory gọi (IV)–I là plagal motion và nhận có trường hợp (IV)–I kết câu thật; sách mở của Mount gọi là plagal cadence. Lượt 1: OMT Plagal Motion: "You may sometimes see all (IV)–I motions described as “plagal cadences” ... While true phrase endings involving the progression (IV)–I do exist, in 18th-century classical music, it''s more common to see a (IV)–I tonic prolongation". Tên kết đúng; OMT chỉ lưu ý kết này ít gặp ở cuối câu nhạc thế kỷ 18.'
     luot_2: dung
     luot_2_nguon: [ https://viva.pressbooks.pub/openmusictheory/chapter/plagal-motion/, https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/24-the-pre-dominant-function/ ]
     luot_2_ghi_chu: "OMT, Plagal Motion: (IV)–I; OMT dùng 'plagal motion' thay vì 'plagal cadence' vì trong nhạc thế kỷ 18 (IV)–I thường kéo dài chủ âm sau PAC hay ở đầu câu, nhưng thừa nhận có trường hợp (IV)–I thật sự kết câu. FFF ch. 24 mục 24.5: 'plagal cadence' = IV về thẳng I ở cuối câu (cũng gọi amen cadence). Câu 'Kết plagal: IV → I' đúng theo FFF; muốn bám OMT thì thêm 'thường kéo dài chủ âm'."
@@ -737,7 +737,7 @@ nhan_dinh:
     nguon:
       - omt-other
     ket_qua: dung
-    ghi_chu: 'OMT: "Crescendo (cresc.) means to get louder, while decrescendo (decresc.) and diminuendo (dim.) both mean to get quieter"; "Accented notes can also be indicated by the italicized abbreviations sfz, sf, or fz (sforzando, forzando, or forzato). These accents are usually interpreted to be slightly more forceful". src/data/thuat-ngu.yml: sforzando "Nhấn mạnh đột ngột".'
+    ghi_chu: 'Review (24/10/2026): giữ "sfz nhấn đột ngột": sforzando là nhấn mạnh đột ngột; Open Music Theory ghi sfz là dấu nhấn mạnh hơn dấu nhấn thường. Lượt 1: OMT: "Crescendo (cresc.) means to get louder, while decrescendo (decresc.) and diminuendo (dim.) both mean to get quieter"; "Accented notes can also be indicated by the italicized abbreviations sfz, sf, or fz (sforzando, forzando, or forzato). These accents are usually interpreted to be slightly more forceful". src/data/thuat-ngu.yml: sforzando "Nhấn mạnh đột ngột".'
     luot_2: dung
     luot_2_nguon: [ https://viva.pressbooks.pub/openmusictheory/chapter/other-aspects-of-notation/, https://www.naxos.com/Glossary/ABC, https://www.naxos.com/Glossary/DEF ]
     luot_2_ghi_chu: "OMT, Other Aspects of Notation: crescendo (cresc.) to dần; decrescendo/diminuendo (dim.) nhỏ dần; sfz, sf, fz (sforzando...) là dấu nhấn 'usually interpreted to be slightly more forceful (i.e., louder) than regular accents'. Naxos: Crescendo 'becoming louder', Diminuendo 'becoming less'. OMT không nói 'đột ngột' cho sfz, nhưng sforzando thường được định nghĩa là nhấn mạnh đột ngột (không có nguồn mở được trong lượt này)."
@@ -858,3 +858,9 @@ doi_chu:
   - cu: Lừa
     moi: Lừa (tránh kết)
     ly_do: "n57 (da-sua): theo Open Music Theory, V–vi tránh kết chứ không phải một loại kết (deceptive motion); tên tiếng Việt chưa có trong thuat-ngu.yml, lô D3 (bài 13) quyết."
+  - cu: "Toàn bộ kiến thức đọc nhạc và nhạc lý cơ bản trên hai mặt giấy A4: mặt 1 là đọc nhạc, mặt 2 là nhạc lý. Bấm Ctrl+P (hoặc Cmd+P), chọn khổ A4; menu và nút bấm tự ẩn khi in. Nên chờ các khuông nhạc hiện đủ trước khi in."
+    moi: "Những điều cốt lõi của đọc nhạc và nhạc lý cơ bản trên hai mặt giấy A4: mặt 1 là đọc nhạc, mặt 2 là nhạc lý. Bấm Ctrl+P (hoặc Cmd+P), chọn khổ A4; menu và nút bấm tự ẩn khi in. Nên chờ các khuông nhạc hiện đủ trước khi in."
+    ly_do: 'n3 (da-sua, review 24/10/2026): "toàn bộ kiến thức" nói quá.'
+  - cu: "mô tả: Toàn bộ kiến thức đọc nhạc và nhạc lý cơ bản trên hai mặt giấy A4: mặt 1 là đọc nhạc, mặt 2 là nhạc lý. Bấm Ctrl+P (hoặc Cmd+P), chọn khổ A4; menu và nút bấm…"
+    moi: "mô tả: Những điều cốt lõi của đọc nhạc và nhạc lý cơ bản trên hai mặt giấy A4: mặt 1 là đọc nhạc, mặt 2 là nhạc lý. Bấm Ctrl+P (hoặc Cmd+P), chọn khổ A4; menu và nút bấm…"
+    ly_do: "n3: mô tả trang sửa như câu đầu trang."

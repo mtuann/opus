@@ -9,8 +9,8 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: Claude Opus 5.5 (D2-L1 lượt 1, phần D)
-      luot_2: null
-      review: null
+      luot_2: Claude Sonnet 5.5 (D2-L1 lượt 2 phần 1/2)
+      review: Claude Opus 5.5 (review D2-L1, 24/10/2026)
       kiem_mau: null
 ghi_chu: >-
   Trang không đổi chữ. 28 câu hỏi nhạc lý kiểm theo Open Music Theory (chương ghi trong nguon) và bài nhạc lý cũ cùng số; thuật ngữ tiếng Việt theo bài cũ (giọng thứ song song là relative minor, giọng cùng tên là parallel; hạ át là subdominant, OMT gọi nhóm này là predominant; kết lừa là deceptive cadence). Tiêu chí từng chặng so với danh sách "Sẵn sàng lên chặng tiếp khi…" của trang cũ piano/lo-trinh.md; bài nêu làm ví dụ so với dữ liệu D2-0 và đề cương ABRSM, trang Henle. Các câu về cách bài kiểm tra chạy (lưu kết quả, "Tôi chưa biết", trang chủ dùng kết quả) đúng với site cũ (placement.js, practice.js, plan.js) và đúng ở site mới khi hai thành phần placement, piano-level và ô gợi ý tập ở trang chủ làm như vậy (agent chính làm trong D2-L1): review kiểm trên bản build trước khi khóa.
@@ -153,7 +153,7 @@ nhan_dinh:
     loai: so-lieu
     nguon: [ placement-js-cu, practice-js-cu ]
     ket_qua: dung
-    ghi_chu: 'Nhận định về site. Hai phần là hai thành phần độc lập (site cũ: practice.js tính chặng từ các ô đánh dấu; placement.js chạy câu hỏi nhạc lý), không phần nào cần kết quả của phần kia.'
+    ghi_chu: 'Review (24/10/2026): câu về chính site, đã kiểm trên thành phần: phần piano (src/scripts/muc-do.js) và phần nhạc lý (src/scripts/placement.js) độc lập, không phần nào đọc kết quả của phần kia. Lượt 1: Nhận định về site. Hai phần là hai thành phần độc lập (site cũ: practice.js tính chặng từ các ô đánh dấu; placement.js chạy câu hỏi nhạc lý), không phần nào cần kết quả của phần kia.'
     luot_2: khong-chac
     luot_2_ghi_chu: Mô tả cấu trúc bài kiểm tra của site (hai phần, thứ tự tùy ý); tự tham chiếu tới công cụ, không có nguồn ngoài. Kiểm bằng cách mở công cụ.
   - id: n2
@@ -169,7 +169,7 @@ nhan_dinh:
     loai: so-lieu
     nguon: [ practice-js-cu, placement-js-cu ]
     ket_qua: dung
-    ghi_chu: 'Nhận định về site. Site cũ: practice.js hiện "Chặng của bạn: …" từ các ô đã đánh dấu; placement.js kết thúc bằng "Gợi ý: bắt đầu từ bài …" (bài đầu tiên chưa đúng cả hai câu). Site mới: đúng khi thành phần piano-level và placement làm như vậy (agent chính, D2-L1).'
+    ghi_chu: 'Review (24/10/2026): câu về chính site, đã kiểm trên thành phần: phần piano hiện "Chặng của bạn: …", phần nhạc lý kết thúc bằng "Gợi ý: bắt đầu từ bài …" (kiểm thử trình duyệt tests/trinh-duyet/kiem-thanh-phan.mjs). Lượt 1: Nhận định về site. Site cũ: practice.js hiện "Chặng của bạn: …" từ các ô đã đánh dấu; placement.js kết thúc bằng "Gợi ý: bắt đầu từ bài …" (bài đầu tiên chưa đúng cả hai câu). Site mới: đúng khi thành phần piano-level và placement làm như vậy (agent chính, D2-L1).'
     luot_2: khong-chac
     luot_2_ghi_chu: Mô tả đầu ra của công cụ (phần piano → chặng; phần nhạc lý → bài nhạc lý nên bắt đầu); tự tham chiếu, không có nguồn ngoài. Kiểm trên công cụ và đối chiếu danh sách chặng/bài nhạc lý của site.
   - id: n4
@@ -177,7 +177,7 @@ nhan_dinh:
     loai: so-lieu
     nguon: [ practice-js-cu, placement-js-cu, plan-js-cu ]
     ket_qua: dung
-    ghi_chu: 'Nhận định về site. Site cũ: practice.js ghi store.pianoLevel { stage, date }, placement.js ghi store.placement { date, start }, cùng khóa opus-zero:v1; plan.js (khối "Hôm nay" ở trang chủ) đọc pianoLevel để gợi ý gam và bài. Site mới (D2-L1): piano-level lưu store.pianoLevel, placement lưu store.placement, cùng khóa opus-zero:v1 (src/scripts/muc-do.js, placement.js); ô gợi ý tập ở trang chủ (mục "Hôm nay tập gì?", src/scripts/goi-y.js) đọc cả hai: chặng và bài nên bắt đầu, bài nhạc lý nên bắt đầu. Kiểm trong trình duyệt (tests/trinh-duyet/kiem-thanh-phan.mjs).'
+    ghi_chu: 'Review (24/10/2026): câu về chính site, đã kiểm: hai phần lưu store.pianoLevel, store.placement (khóa opus-zero:v1); ô gợi ý tập ở trang chủ đọc cả hai; kiểm thử trình duyệt thử cả đường đi từ trang này về trang chủ. Lượt 1: Nhận định về site. Site cũ: practice.js ghi store.pianoLevel { stage, date }, placement.js ghi store.placement { date, start }, cùng khóa opus-zero:v1; plan.js (khối "Hôm nay" ở trang chủ) đọc pianoLevel để gợi ý gam và bài. Site mới (D2-L1): piano-level lưu store.pianoLevel, placement lưu store.placement, cùng khóa opus-zero:v1 (src/scripts/muc-do.js, placement.js); ô gợi ý tập ở trang chủ (mục "Hôm nay tập gì?", src/scripts/goi-y.js) đọc cả hai: chặng và bài nên bắt đầu, bài nhạc lý nên bắt đầu. Kiểm trong trình duyệt (tests/trinh-duyet/kiem-thanh-phan.mjs).'
     luot_2: khong-chac
     luot_2_ghi_chu: Hành vi của công cụ (lưu kết quả trong trình duyệt, gợi ý buổi tập ở trang chủ); không có nguồn ngoài. AGENTS.md có nói tiến độ của người học lưu trong trình duyệt ở khóa 'opus-zero:v1' nhưng chưa nói đến gợi ý buổi tập ở trang chủ. Kiểm trên công cụ.
   - id: n5
@@ -185,7 +185,7 @@ nhan_dinh:
     loai: so-lieu
     nguon: [ practice-js-cu, khoi-placement ]
     ket_qua: dung
-    ghi_chu: 'Trang có 6 nhóm, mỗi nhóm đúng 3 việc (18 ô). Site cũ, practice.js, hàm stage(): một nhóm xong khi số ô đánh dấu từ ceil(3 × 2/3) = 2; chặng là nhóm đầu tiên chưa xong. Site mới: thành phần piano-level phải giữ luật này (agent chính, D2-L1).'
+    ghi_chu: 'Review (24/10/2026): câu về chính site, đã kiểm: khối của trang có 6 nhóm, mỗi nhóm 3 việc; tinhChang (src/scripts/muc-do.js) tính xong một nhóm khi đánh dấu từ 2 việc (kiểm thử khung-d2). Lượt 1: Trang có 6 nhóm, mỗi nhóm đúng 3 việc (18 ô). Site cũ, practice.js, hàm stage(): một nhóm xong khi số ô đánh dấu từ ceil(3 × 2/3) = 2; chặng là nhóm đầu tiên chưa xong. Site mới: thành phần piano-level phải giữ luật này (agent chính, D2-L1).'
     luot_2: khong-chac
     luot_2_ghi_chu: Quy tắc chấm của công cụ (ba việc mỗi nhóm, đạt hai trong ba là xong chặng); tự tham chiếu, không có nguồn ngoài. Kiểm trên khối 'placement' hoặc thử trực tiếp.
   - id: n6
@@ -193,7 +193,7 @@ nhan_dinh:
     loai: cap-do
     nguon: [ du-lieu-d20, abrsm-2526 ]
     ket_qua: dung
-    ghi_chu: 'Khớp cap-do.yml (ten, nhan_grade của chặng 1–6; D2-0 đã kiểm). ABRSM 2025 & 2026: "ABRSM Practical Music qualifications are available from Grade 1 to Grade 8, and in some subjects from Initial Grade". Tên chặng là lựa chọn của site.'
+    ghi_chu: 'Review (24/10/2026): câu về chính site, đã kiểm: tên và Grade của sáu nhóm khớp cap-do.yml đã khóa (D2-0). Cách gán chặng với Grade là thiết kế của site. Lượt 1: Khớp cap-do.yml (ten, nhan_grade của chặng 1–6; D2-0 đã kiểm). ABRSM 2025 & 2026: "ABRSM Practical Music qualifications are available from Grade 1 to Grade 8, and in some subjects from Initial Grade". Tên chặng là lựa chọn của site.'
     luot_2: khong-chac
     luot_2_ghi_chu: Ánh xạ chặng–Grade là thiết kế riêng của site, không phải định nghĩa của ABRSM; rank-2 không xác nhận hay bác bỏ được. Nhất quán nội bộ với các câu khác của trang (Minuet = chặng 2 = cấp 1–2; Clementi Op. 36 số 1 = chặng 3 ≈ Grade 3; Invention số 1 = chặng 5 ≈ Grade 6). Kiểm bằng đối chiếu cap-do.yml và trang chặng.
   - id: n7
@@ -217,7 +217,7 @@ nhan_dinh:
     loai: cap-do
     nguon: [ henle-hn349, du-lieu-d20 ]
     ket_qua: dung
-    ghi_chu: 'Henle HN 349: "Menuet BWV Anhang 114" mức 1 (easy). Dữ liệu D2-0: minuet-sol chặng 2, grade "Grade 1–2" (D2-0 đối chiếu thêm RCM Level 3 và minuet Sol thứ Anh. 115 ở ABRSM Grade 2).'
+    ghi_chu: 'Review (24/10/2026): giữ, vì khớp tac-pham.yml đã khóa (D2-0): minuet-sol là BWV Anh. 114, chặng 2, grade "Grade 1–2"; Henle HN 349 xếp bài này mức 1. Lượt 1: Henle HN 349: "Menuet BWV Anhang 114" mức 1 (easy). Dữ liệu D2-0: minuet-sol chặng 2, grade "Grade 1–2" (D2-0 đối chiếu thêm RCM Level 3 và minuet Sol thứ Anh. 115 ở ABRSM Grade 2).'
     luot_2: khong-chac
     luot_2_nguon: [ https://www.henle.de/en/Notebook-for-Anna-Magdalena-Bach/HN-349, https://www.henle.de/en/Levels-of-Difficulty/, https://www.abrsm.org/sites/default/files/2026-06/Piano%20Performance%20Grades%20Syllabus%202027%20&%202028.pdf, https://www.abrsm.org/sites/default/files/2024-06/Piano%202023%20&%202024%20Prac%20syllabus%2020230807.pdf, https://www.trinitycollege.com/resource?id=10125 ]
     luot_2_ghi_chu: "Chưa có Grade chính thức cho chính bài này. Henle HN 349: Menuet BWV Anh. 114 mức 1 (easy), cùng mức với Anh. 115 và Menuet của Böhm; Levels of Difficulty: mức 1 = 'ideally playable after a year of good piano instruction'. ABRSM 2027–28 xếp Minuet in G minor của Petzold (cùng tập Anna Magdalena) ở Grade 2; Trinity (8/2026) xếp Minuet in G của Böhm (cùng tập) và Minuet in G minor của Petzold ở Grade 2. ABRSM 2021–2028 và Trinity không liệt kê Anh. 114 nên 'cấp 1–2' chỉ là suy ra gián tiếp (khả dĩ, có thể đúng). Cảnh báo: nếu bản ghi trỏ BWV Anh. II 116 thì ABRSM 2023–24 xếp Grade 3; cần kiểm số danh mục của 'Minuet Sol trưởng' trong dữ liệu."
@@ -259,7 +259,7 @@ nhan_dinh:
     loai: cap-do
     nguon: [ henle-hn591, abrsm-2526, du-lieu-d20 ]
     ket_qua: da-bo
-    ghi_chu: 'Đã bỏ khỏi trang (sau khi D2-0 gộp): dữ liệu mới xếp Invention số 1 ở chặng 4, Grade 4–5 (src/data/tac-pham.yml; hồ sơ kiem-dinh/du-lieu/tac-pham/bach-invention-1.yml), nên câu "Invention số 1 là bài của chặng 5" không còn đúng; tiêu chí chặng 5 không nêu ví dụ nữa (n13). Lượt 1 trước đó: Henle HN 591 mức 3; ABRSM 2025–2026 xếp Invention số 6 ở Grade 6, số 8 ở Grade 5.'
+    ghi_chu: 'Review (24/10/2026): đồng ý bỏ: Invention số 1 nay ở chặng 4 theo dữ liệu đã khóa (D2-0); lượt 2 cũng không thấy đề cương nào xếp riêng bài này. Lượt 1: Đã bỏ khỏi trang (sau khi D2-0 gộp): dữ liệu mới xếp Invention số 1 ở chặng 4, Grade 4–5 (src/data/tac-pham.yml; hồ sơ kiem-dinh/du-lieu/tac-pham/bach-invention-1.yml), nên câu "Invention số 1 là bài của chặng 5" không còn đúng; tiêu chí chặng 5 không nêu ví dụ nữa (n13). Lượt 1 trước đó: Henle HN 591 mức 3; ABRSM 2025–2026 xếp Invention số 6 ở Grade 6, số 8 ở Grade 5.'
     luot_2: khong-chac
     luot_2_nguon: [ https://www.henle.de/en/Inventions-and-Sinfonias/HN-590, https://www.abrsm.org/sites/default/files/2023-09/piano-2021-2022-syllabus-rev-sep-2020-final.pdf, https://www.abrsm.org/sites/default/files/2024-06/Piano%202023%20&%202024%20Prac%20syllabus%2020230807.pdf, https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20&%202026%20Prac%20syllabus%2020240524_access.pdf, https://www.abrsm.org/sites/default/files/2026-06/Piano%20Performance%20Grades%20Syllabus%202027%20&%202028.pdf, https://www.trinitycollege.com/resource?id=10125 ]
     luot_2_ghi_chu: "Henle HN 590: Invention số 1 (BWV 772) mức 3 (easy), không ghi Grade ABRSM; chỉ ghi ABRSM Piano Grade 5 cho Invention số 8, Grade 6 'recommended' cho số 6, Grade 6 cho số 14. Đề cương piano ABRSM 2021–2028 chỉ có Invention số 8 (Grade 5), số 6 (Grade 6) và số 14 (Grade 6, 2025–26); Trinity (8/2026) có số 4 (Grade 5), số 6 (Grade 6), số 12 (Grade 7). Không đề cương nào liệt kê Invention số 1 nên '≈ Grade 6' không có xác nhận chính thức; suy ra từ Invention số 6 (cùng mức Henle 3, Grade 6) là hợp lý nhưng vẫn là suy ra."
@@ -276,7 +276,7 @@ nhan_dinh:
     loai: so-lieu
     nguon: [ khoi-placement ]
     ket_qua: dung
-    ghi_chu: Khối placement có 14 dòng @ (bài 1–14), mỗi bài đúng 2 câu ?, mỗi câu đúng một đáp án +.
+    ghi_chu: "Review (24/10/2026): câu về chính site, đã đếm trên khối placement của trang: 14 dòng @, mỗi bài 2 câu, tổng 28 câu (kiểm thử khung-d2 đọc khối thật của trang: 14 bài). Lượt 1: Khối placement có 14 dòng @ (bài 1–14), mỗi bài đúng 2 câu ?, mỗi câu đúng một đáp án +."
     luot_2: khong-chac
     luot_2_ghi_chu: "Số câu của khối 'placement': 28 = 14 bài × 2 khớp số học với n20 (14 dòng @ ứng với bài nhạc lý 1–14), nhưng đếm thật phải làm trên khối câu hỏi của trang; tự tham chiếu, không có nguồn ngoài."
   - id: n17
@@ -292,7 +292,7 @@ nhan_dinh:
     loai: so-lieu
     nguon: [ placement-js-cu ]
     ket_qua: dung
-    ghi_chu: 'Nhận định về site. Site cũ: placement.js thêm lựa chọn { t: "Tôi chưa biết", ok: false } sau các đáp án; chọn nó tính là chưa nắm, nên không bị tính đúng nhờ đoán may. Site mới: thành phần placement phải giữ lựa chọn này (agent chính, D2-L1).'
+    ghi_chu: 'Review (24/10/2026): câu về chính site, đã kiểm trên thành phần: placement.js thêm "Tôi chưa biết" và tính là chưa đúng (hàm ketQua, kiểm thử khung-d2), nên không có câu đúng nhờ đoán may. Lượt 1: Nhận định về site. Site cũ: placement.js thêm lựa chọn { t: "Tôi chưa biết", ok: false } sau các đáp án; chọn nó tính là chưa nắm, nên không bị tính đúng nhờ đoán may. Site mới: thành phần placement phải giữ lựa chọn này (agent chính, D2-L1).'
     luot_2: khong-chac
     luot_2_ghi_chu: Loại 'so-lieu' nhưng thực chất là lời khuyên về cách dùng công cụ ('Tôi chưa biết' thay vì đoán thì kết quả chính xác hơn). Nguyên tắc chung của bài chẩn đoán xếp lớp là đoán may mắn làm sai lệch kết quả, nên hợp lý; nhưng 'chính xác hơn' phụ thuộc cách công cụ tính điểm ('Tôi chưa biết' có được tính như trả lời sai hay không), không có nguồn ngoài. Kiểm trên công cụ.
   - id: n19
@@ -300,7 +300,7 @@ nhan_dinh:
     loai: so-lieu
     nguon: [ placement-js-cu ]
     ket_qua: dung
-    ghi_chu: 'Nhận định về site. Site cũ: finish() hiện "Gợi ý: bắt đầu từ bài …" (hay "Bạn đã nắm chắc phần nền tảng…") và ghi store.placement { date, start }. Site mới: như n18.'
+    ghi_chu: 'Review (24/10/2026): câu về chính site, đã kiểm: placement.js hiện "Gợi ý: bắt đầu từ bài …" và lưu store.placement (kiểm thử trình duyệt). Lượt 1: Nhận định về site. Site cũ: finish() hiện "Gợi ý: bắt đầu từ bài …" (hay "Bạn đã nắm chắc phần nền tảng…") và ghi store.placement { date, start }. Site mới: như n18.'
     luot_2: khong-chac
     luot_2_ghi_chu: Hành vi của công cụ (gợi ý bài nên bắt đầu và lưu kết quả); tự tham chiếu, không có nguồn ngoài. Kiểm trên công cụ.
   - id: n20
@@ -308,7 +308,7 @@ nhan_dinh:
     loai: ten
     nguon: [ bai-nhac-ly-cu ]
     ket_qua: dung
-    ghi_chu: 'Tiêu đề bài cũ: 1 Cao độ và tên nốt, 2 Khuông nhạc và khóa, 3 Trường độ và dấu lặng, 4 Nhịp và số chỉ nhịp, 5 Cung, nửa cung và dấu hóa, 6 Gam trưởng, 7 Gam thứ, 8 Hóa biểu và vòng quãng năm, 9 Quãng, 10 Hợp âm ba, 11 Hợp âm bảy và thể đảo, 12 Hòa âm chức năng, 13 Kết và câu nhạc, 14 Ký hiệu biểu diễn; đường dẫn nhac-ly/01-cao-do-ten-not/ … nhac-ly/14-ky-hieu-bieu-dien/ đúng tên file. Bài nhạc lý lên site ở đợt 3.'
+    ghi_chu: 'Review (24/10/2026): câu về chính site, đã kiểm: 14 dòng @ khớp tiêu đề và đường dẫn bài nhạc lý 1–14 (bài cũ, src/data/trang.yml); link tới bài chưa lên hiện "sắp có". Lượt 1: Tiêu đề bài cũ: 1 Cao độ và tên nốt, 2 Khuông nhạc và khóa, 3 Trường độ và dấu lặng, 4 Nhịp và số chỉ nhịp, 5 Cung, nửa cung và dấu hóa, 6 Gam trưởng, 7 Gam thứ, 8 Hóa biểu và vòng quãng năm, 9 Quãng, 10 Hợp âm ba, 11 Hợp âm bảy và thể đảo, 12 Hòa âm chức năng, 13 Kết và câu nhạc, 14 Ký hiệu biểu diễn; đường dẫn nhac-ly/01-cao-do-ten-not/ … nhac-ly/14-ky-hieu-bieu-dien/ đúng tên file. Bài nhạc lý lên site ở đợt 3.'
     luot_2: khong-chac
     luot_2_ghi_chu: Câu kiểm tính nhất quán nội bộ (tên bài và đường dẫn ở 14 dòng @ của khối câu hỏi khớp bài nhạc lý 1–14); không có nguồn ngoài. Kiểm bằng đối chiếu tiêu đề và địa chỉ các trang nhạc lý 1–14 (kiểm thử liên kết của site).
   - id: n21
@@ -424,7 +424,7 @@ nhan_dinh:
     loai: dinh-nghia
     nguon: [ omt-minor, bai-nhac-ly-cu ]
     ket_qua: dung
-    ghi_chu: 'OMT, Minor Scales: "C major is the relative major of A minor, and A minor is the relative minor of C major"; "C major and C minor … are parallel keys". Thuật ngữ tiếng Việt theo bài cũ 7: "Giọng thứ song song (relative minor) dùng chung hóa biểu"; "Giọng thứ cùng tên (parallel minor)". Lưu ý: "song song" tiếng Việt ứng với relative, không phải parallel của tiếng Anh.'
+    ghi_chu: 'Review (24/10/2026): giữ. "Giọng (thứ) song song" trong tiếng Việt là relative của Open Music Theory (cùng hóa biểu), "giọng cùng tên" là parallel; ghi cho D3-L5 (thuat-ngu.yml) để bảng thuật ngữ nói rõ. Lượt 1: OMT, Minor Scales: "C major is the relative major of A minor, and A minor is the relative minor of C major"; "C major and C minor … are parallel keys". Thuật ngữ tiếng Việt theo bài cũ 7: "Giọng thứ song song (relative minor) dùng chung hóa biểu"; "Giọng thứ cùng tên (parallel minor)". Lưu ý: "song song" tiếng Việt ứng với relative, không phải parallel của tiếng Anh.'
     luot_2: dung
     luot_2_nguon: [ https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/, https://thcsnguyenduq1.hcm.edu.vn/am-nhac/nhac-8-bai-3-tim-hieu-ve-giong-song-song-va-giong-cung-ten/ctmb/31062/80133, https://rdsic.edu.vn/blog/blog-3/giong-song-song-vi-cb.html ]
     luot_2_ghi_chu: "Thuật ngữ: OMT gọi A minor là 'relative minor' của C major (cùng hóa biểu, tonic thấp hơn ba nửa cung) và C minor là 'parallel minor' (cùng tonic). 'Giọng song song' trong tiếng Việt chỉ cặp cùng hóa biểu (Đô trưởng – La thứ) còn 'giọng cùng tên' chỉ cặp cùng chủ âm (hai trang giáo dục tiếng Việt đã mở nêu đúng định nghĩa này; chúng chỉ dùng để chứng thực cách gọi, không phải nguồn bậc 2). Nội dung câu đúng; chú ý 'song song' tiếng Việt tương ứng 'relative' của OMT, KHÔNG phải 'parallel', nên thuat-ngu.yml nên ghi rõ đối ứng tiếng Anh để khỏi lẫn."
@@ -523,7 +523,7 @@ nhan_dinh:
     loai: dinh-nghia
     nguon: [ omt-harmony ]
     ket_qua: dung
-    ghi_chu: 'OMT, Introduction to Harmony, bảng thuật ngữ: "The I chord is the paradigmatic tonic-function chord, but vi and iii occasionally have tonic function"; ii là predominant (hạ át). Bài cũ 12: "vi (La – Đô – Mi) chung hai nốt với I … nên có thể thay thế nhau".'
+    ghi_chu: 'Review (24/10/2026): giữ: phần thuật ngữ của Open Music Theory ghi "vi and iii occasionally have tonic function", sách mở của Mount (Fundamentals, Function, and Form) gọi vi là "weak tonic substitute"; văn bản chính của OMT xếp vi là hạ át yếu, nên chỉ nói vi "có thể" thay I. Lượt 1: OMT, Introduction to Harmony, bảng thuật ngữ: "The I chord is the paradigmatic tonic-function chord, but vi and iii occasionally have tonic function"; ii là predominant (hạ át). Bài cũ 12: "vi (La – Đô – Mi) chung hai nốt với I … nên có thể thay thế nhau".'
     luot_2: dung
     luot_2_nguon: [ https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/, https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/22-phrases-cadences-and-harmonic-function/, https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/24-the-pre-dominant-function/ ]
     luot_2_ghi_chu: "OMT, Introduction to Harmony, mục thuật ngữ 'tonic function': 'vi and iii occasionally have tonic function'. FFF ch. 22, mục 22.7: vi là 'weak tonic substitute' (kết lừa V7–vi); ch. 24: các hợp âm chức năng chủ thường gặp là I, iii, vi; V và vii° chức năng át; IV, ii chức năng hạ át/predominant. Lưu ý: ở văn bản chính của OMT, vi được xếp 'weak predominant' (La in the Bass), nên 'có thể thay I' chỉ nên giữ ở mức 'đôi khi' như câu đã viết."

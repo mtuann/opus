@@ -9,8 +9,8 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: Claude Opus 5.5 (D2-L1 lượt 1, phần D)
-      luot_2: null
-      review: null
+      luot_2: Claude Sonnet 5.5 (D2-L1 lượt 2 phần 1/2)
+      review: Claude Opus 5.5 (review D2-L1, 24/10/2026)
       kiem_mau: null
 ghi_chu: >-
   Nhận định về nghiên cứu (học động tác, tập rải đều, amusia, "lệch tông", nghe không cần học) đối chiếu với bài báo khoa học; tóm tắt đọc qua Europe PMC hay Crossref (link trong nguon), vì PubMed và trang nhà xuất bản chặn truy cập tự động. Nhận định về site (nội dung trang khác, bài kiểm tra, bản thu) đối chiếu với trang cũ trong ../opus-zero/docs/ và dữ liệu D2-0 (nhánh moi/d2-0-du-lieu, đã kiểm lượt 1). Các trang được link tới (Hỏi đáp, Hai tuần đầu tiên, bài học tác phẩm) chưa lên site lúc D2-L1 gộp: link hiện "sắp có".
@@ -99,13 +99,37 @@ nguon:
     bac: 1
     ten: AGENTS.md, mục "Mẫu trang và khối đặc biệt" (bài học tác phẩm có ::khoi-nghe và bảng "Theo dõi khi nghe")
     link: AGENTS.md
+  - id: penhune-2011
+    bac: 2
+    ten: 'V. B. Penhune (2011), "Sensitive periods in human development: evidence from musical training", Cortex'
+    link: https://europepmc.org/article/MED/21665201
+  - id: bailey-penhune-2012
+    bac: 2
+    ten: 'J. Bailey, V. B. Penhune (2012), "A sensitive period for musical training: contributions of age of onset and cognitive abilities", Annals of the New York Academy of Sciences'
+    link: https://europepmc.org/article/MED/22524355
+  - id: steele-2013
+    bac: 2
+    ten: 'C. J. Steele và cộng sự (2013), "Early musical training and white-matter plasticity in the corpus callosum: evidence for a sensitive period", Journal of Neuroscience'
+    link: https://europepmc.org/article/MED/23325263
+  - id: pan-rickard-2015
+    bac: 2
+    ten: 'S. C. Pan, T. C. Rickard (2015), "Sleep and motor learning: Is there room for consolidation?", Psychological Bulletin (phân tích gộp 34 bài)'
+    link: https://europepmc.org/article/MED/25822130
+  - id: micheyl-2006
+    bac: 2
+    ten: C. Micheyl và cộng sự (2006), "Influence of musical and psychoacoustical training on pitch discrimination", Hearing Research
+    link: https://europepmc.org/article/MED/16839723
+  - id: zarate-2010
+    bac: 2
+    ten: J. M. Zarate và cộng sự (2010), "Vocal accuracy and neural plasticity following micromelody-discrimination training", PLoS ONE
+    link: https://europepmc.org/article/MED/20567521
 nhan_dinh:
   - id: n1
     cau: 'Opus dạy nhạc cổ điển qua cây đàn piano: bạn học nhạc lý bằng mắt và tai, rồi biến nó thành thứ sờ được dưới mười ngón tay. Chưa có đàn vẫn bắt đầu được (nghe và đọc nhạc), nhưng piano là con đường chính của site.'
     loai: ten
     nguon: [ ke-hoach ]
     ket_qua: da-sua
-    ghi_chu: 'Câu cũ mở đầu bằng "Opus Zero dạy nhạc cổ điển…". Tên site đổi thành Opus ngày 23/10/2026 (kế hoạch, mục Quyết định); sửa ở commit a745865. Phần còn lại của câu tả cách site dạy, không đổi.'
+    ghi_chu: 'Review (24/10/2026): câu về chính site, đã kiểm trên trang (câu mở đầu bài 0) và kế hoạch (tên Opus; piano là con đường chính, nghe và đọc nhạc đi kèm). Giữ da-sua vì câu đổi tên site so với trang cũ. Lượt 1: Câu cũ mở đầu bằng "Opus Zero dạy nhạc cổ điển…". Tên site đổi thành Opus ngày 23/10/2026 (kế hoạch, mục Quyết định); sửa ở commit a745865. Phần còn lại của câu tả cách site dạy, không đổi.'
     luot_2: khong-chac
     luot_2_ghi_chu: Câu tự mô tả mục tiêu của site (loại 'ten' ghi chưa đúng); không có nguồn ngoài để kiểm. Khớp với mô tả dự án trong AGENTS.md (sổ tay tiếng Việt học piano cổ điển cho người lớn tự học) nhưng đó không phải nguồn độc lập. Đề nghị coi là không cần nguồn hoặc bỏ khỏi danh sách nhận định.
   - id: n2
@@ -127,11 +151,16 @@ nhan_dinh:
     luot_2_nguon: [ https://viva.pressbooks.pub/openmusictheory/chapter/other-aspects-of-notation/, https://www.naxos.com/classicalmusichistory, https://viva.pressbooks.pub/openmusictheory/chapter/sonata-form/ ]
     luot_2_ghi_chu: "OMT, Other Aspects of Notation: Classical c. 1750–1820 (Baroque c. 1600–1750, Romantic c. 1800–1910, nên hai thời kỳ gối nhau). Naxos ghi c.1750–c.1830, nên 'khoảng' là hợp lý. Haydn và Mozart là hai nhà soạn nhạc trung tâm của thời kỳ (Naxos, mục Classical); Beethoven đứng ở lúc Cổ điển đạt đỉnh và chuyển sang Lãng mạn (Naxos, mục Early Romantic); OMT dẫn sách Caplin, Classical Form: ... the Instrumental Music of Haydn, Mozart, and Beethoven (Further Readings của chương Sonata Form). 'Chỉ' (nghĩa hẹp) đúng với cách dùng phổ biến."
   - id: n4
-    cau: Người lớn biết tự sắp xếp việc tập tốt hơn trẻ em; ngón tay có thể quen chậm hơn một chút, nhưng đó là chuyện thời gian chứ không phải giới hạn.
+    cau: Người lớn vẫn học được piano và có lợi thế ở cách tự sắp xếp việc học; người học từ nhỏ có lợi thế về phối hợp động tác, nên ngón tay người lớn có thể quen chậm hơn.
     loai: quy-tac
-    nguon: [ schneider-2008, king-2013 ]
+    nguon:
+      - schneider-2008
+      - king-2013
+      - penhune-2011
+      - bailey-penhune-2012
+      - steele-2013
     ket_qua: da-sua
-    ghi_chu: 'Câu cũ: "Người lớn hiểu nhạc lý và biết tự sắp xếp việc tập tốt hơn trẻ em; …". Bỏ "hiểu nhạc lý": không tìm được nguồn so sánh người lớn và trẻ em về hiểu nhạc lý. Schneider 2008: kiến thức siêu nhận thức "show steady improvement through childhood and adolescence, mainly due to increases in knowledge about strategies", và "Age trends … are significant for self-control activities" (tự sắp xếp, tự điều khiển việc học tăng theo tuổi). King và cộng sự 2013 (người lớn tuổi): "the initial acquisition of motor sequences is not altered, except under conditions of increased task complexity"; "older adults demonstrate deficits in motor sequence memory consolidation" (chậm hơn ở vài khâu, vẫn học được).'
+    ghi_chu: 'Review (24/10/2026): viết lại theo lượt 2. Câu trước: "Người lớn biết tự sắp xếp việc tập tốt hơn trẻ em; ngón tay có thể quen chậm hơn một chút, nhưng đó là chuyện thời gian chứ không phải giới hạn." Nghiên cứu về giai đoạn nhạy cảm cho thấy học sớm có lợi thế về vận động: người bắt đầu học nhạc trước 7 tuổi đồng bộ động tác với nhịp tốt hơn người bắt đầu muộn dù cùng số năm học (Penhune 2011; Bailey và Penhune 2012), kèm khác biệt ở thể chai (Steele và cộng sự 2013), nên bỏ vế "không phải giới hạn". Người lớn vẫn học được chuỗi động tác (King và cộng sự 2013: ở người lớn tuổi "the initial acquisition of motor sequences is not altered", trừ bài phức tạp); khả năng tự điều khiển việc học tăng dần qua tuổi thơ và tuổi dậy thì (Schneider 2008). Không ghi "hiểu lý thuyết": không có nguồn so sánh người lớn với trẻ em về mặt này. Lượt 1: Câu cũ: "Người lớn hiểu nhạc lý và biết tự sắp xếp việc tập tốt hơn trẻ em; …". Bỏ "hiểu nhạc lý": không tìm được nguồn so sánh người lớn và trẻ em về hiểu nhạc lý. Schneider 2008: kiến thức siêu nhận thức "show steady improvement through childhood and adolescence, mainly due to increases in knowledge about strategies", và "Age trends … are significant for self-control activities" (tự sắp xếp, tự điều khiển việc học tăng theo tuổi). King và cộng sự 2013 (người lớn tuổi): "the initial acquisition of motor sequences is not altered, except under conditions of increased task complexity"; "older adults demonstrate deficits in motor sequence memory consolidation" (chậm hơn ở vài khâu, vẫn học được).'
     luot_2: khong-chac
     luot_2_nguon: [ https://pubmed.ncbi.nlm.nih.gov/21665201/, https://pubmed.ncbi.nlm.nih.gov/23325263/, https://pubmed.ncbi.nlm.nih.gov/22524355/ ]
     luot_2_ghi_chu: "Không có nguồn trực tiếp cho cả hai vế. (1) 'Người lớn tự sắp xếp việc tập tốt hơn trẻ em': tôi không mở được nghiên cứu nào xác nhận. (2) 'Chỉ là chuyện thời gian chứ không phải giới hạn': bị làm yếu bởi các nghiên cứu về giai đoạn nhạy cảm: nhạc công bắt đầu học trước 7 tuổi vẫn giỏi hơn ở đồng bộ vận động-thính giác dù đã ghép cùng số năm kinh nghiệm (Penhune 2011; Steele et al. 2013; Bailey & Penhune 2012), tuy các nghiên cứu này nói về nhạc công chuyên nghiệp chứ không nói về việc người lớn đạt Grade 8. Đề nghị viết thận trọng hơn (bỏ so sánh với trẻ em và bỏ 'không phải giới hạn') hoặc chuyển thành lời khuyên."
@@ -140,7 +169,7 @@ nhan_dinh:
     loai: cap-do
     nguon: [ henle-hn349, abrsm-1920, du-lieu-d20, lo-trinh-choi-cu ]
     ket_qua: dung
-    ghi_chu: 'Henle HN 349: "Menuet BWV Anhang 114" mức 1 (easy). ABRSM 2019 & 2020, Grade 3, danh sách B, số 6: "Tchaikovsky Old French Song (No. 16 from Album for the Young, Op. 39)". Dữ liệu D2-0: minuet-sol chặng 2 (Grade 1–2), tchaikovsky-bai-ca-phap-co chặng 2 (Grade 2–3); cap-do.yml: chặng 2 ứng với mốc 6 tháng – 1,5 năm. Lộ trình năm đầu đặt Minuet Sol trưởng ở tháng 6, Bài ca Pháp cổ ở tháng 7 và trong chương trình tháng 11–12. Khớp nhau.'
+    ghi_chu: 'Review (24/10/2026): giữ, vì là ước lượng của site, khớp dữ liệu đã khóa (D2-0): minuet-sol (BWV Anh. 114) và tchaikovsky-bai-ca-phap-co ở chặng 2, mốc thời gian của chặng 2 trong cap-do.yml là 6 tháng – 1,5 năm. Henle HN 349 xếp BWV Anh. 114 mức 1 ("ideally playable after a year of good piano instruction"). Lượt 1: Henle HN 349: "Menuet BWV Anhang 114" mức 1 (easy). ABRSM 2019 & 2020, Grade 3, danh sách B, số 6: "Tchaikovsky Old French Song (No. 16 from Album for the Young, Op. 39)". Dữ liệu D2-0: minuet-sol chặng 2 (Grade 1–2), tchaikovsky-bai-ca-phap-co chặng 2 (Grade 2–3); cap-do.yml: chặng 2 ứng với mốc 6 tháng – 1,5 năm. Lộ trình năm đầu đặt Minuet Sol trưởng ở tháng 6, Bài ca Pháp cổ ở tháng 7 và trong chương trình tháng 11–12. Khớp nhau.'
     luot_2: khong-chac
     luot_2_nguon: [ https://www.henle.de/en/Levels-of-Difficulty/, https://www.henle.de/en/Notebook-for-Anna-Magdalena-Bach/HN-349, https://www.abrsm.org/sites/default/files/2024-06/Piano%202023%20&%202024%20Prac%20syllabus%2020230807.pdf, https://www.abrsm.org/sites/default/files/2026-06/Piano%20Performance%20Grades%20Syllabus%202027%20&%202028.pdf, https://www.trinitycollege.com/resource?id=10125 ]
     luot_2_ghi_chu: "Gồm hai phần. (a) Độ khó: Henle HN 349 xếp Menuet BWV Anh. 114 ở mức 1 (easy), và trang Levels of Difficulty định nghĩa mức 1 là bài 'ideally playable after a year of good piano instruction': khớp phần Minuet nếu đó là Anh. 114. ABRSM piano 2021–2028 và Trinity (8/2026) không liệt kê Anh. 114; ABRSM 2023–24 có Minuet in G BWV Anh. II 116 (bài khác) ở Grade 3. 'Bài ca Pháp cổ' (Tchaikovsky, Album cho thiếu nhi Op. 39) không có mục riêng ở Henle, ABRSM hay Trinity; các bài khác của tập này được ABRSM xếp Grade 3–5 (Chanson italienne: Grade 3; Douce rêverie: Grade 5), nên chưa có cơ sở xếp bài này vào mức 'sau năm đầu'. (b) Mốc 'sau năm đầu' là ước lượng theo giờ tập, không nguồn bậc 2 nào gắn bài với thời gian của người tự học. Đề nghị bỏ mốc thời gian hoặc ghi rõ là ước lượng, và kiểm số danh mục của 'Minuet Sol trưởng' trong dữ liệu."
@@ -149,7 +178,7 @@ nhan_dinh:
     loai: cap-do
     nguon: [ henle-hn1347, du-lieu-d20, hoi-dap-cu ]
     ket_qua: dung
-    ghi_chu: 'Henle HN 1347: "Bagatelle (Für Elise) a minor WoO 59", mức 3 (easy). Dữ liệu D2-0: fur-elise chặng 4 (Grade 5); cap-do.yml: chặng 4 có mốc thời gian 2,5–4 năm (mốc là ước lượng của site, D2-0 ghi là lời khuyên). Trang Hỏi đáp cũ ghi cùng mốc ("cả bài khi tới chặng 4, thường sau hai năm rưỡi đến bốn năm").'
+    ghi_chu: 'Review (24/10/2026): giữ, vì là ước lượng của site, khớp dữ liệu đã khóa (D2-0): fur-elise ở chặng 4, mốc thời gian của chặng 4 trong cap-do.yml là 2,5–4 năm. Lượt 1: Henle HN 1347: "Bagatelle (Für Elise) a minor WoO 59", mức 3 (easy). Dữ liệu D2-0: fur-elise chặng 4 (Grade 5); cap-do.yml: chặng 4 có mốc thời gian 2,5–4 năm (mốc là ước lượng của site, D2-0 ghi là lời khuyên). Trang Hỏi đáp cũ ghi cùng mốc ("cả bài khi tới chặng 4, thường sau hai năm rưỡi đến bốn năm").'
     luot_2: khong-chac
     luot_2_nguon: [ https://www.henle.de/en/Bagatelle-in-a-minor-WoO-59-Fuer-Elise/HN-1347 ]
     luot_2_ghi_chu: Henle (HN 1347) xếp Für Elise mức 3 (easy). Bài không có trong đề cương piano ABRSM 2021–2028 và danh mục piano Trinity (8/2026) nên không có Grade chính thức. 'Hai năm rưỡi đến bốn năm' là ước lượng thời gian của người tự học; không nguồn bậc 2 nào nêu và nó phụ thuộc giờ tập, nền tảng. Đề nghị bỏ khoảng thời gian hoặc ghi rõ là ước lượng của site.
@@ -158,7 +187,7 @@ nhan_dinh:
     loai: so-lieu
     nguon: [ hoi-dap-cu ]
     ket_qua: dung
-    ghi_chu: 'Hỏi đáp cũ, câu "Bao lâu thì chơi được Für Elise, Chopin hay Clair de lune?": "các bản nocturne dễ của Chopin sau khoảng bốn đến sáu năm; Clair de lune sau năm năm rưỡi trở lên". Trang Hỏi đáp ở tầng Tham chiếu (D8-L1): link hiện "sắp có" đến khi trang lên; lô đó giữ hay sửa các con số này.'
+    ghi_chu: 'Review (24/10/2026): câu về chính site, đã kiểm trên trang Hỏi đáp cũ (câu "Bao lâu thì chơi được Für Elise, Chopin hay Clair de lune?" có con số cho các bài khác); trang Hỏi đáp lên ở D8-L1, lô ấy giữ hay sửa các con số. Lượt 1: Hỏi đáp cũ, câu "Bao lâu thì chơi được Für Elise, Chopin hay Clair de lune?": "các bản nocturne dễ của Chopin sau khoảng bốn đến sáu năm; Clair de lune sau năm năm rưỡi trở lên". Trang Hỏi đáp ở tầng Tham chiếu (D8-L1): link hiện "sắp có" đến khi trang lên; lô đó giữ hay sửa các con số này.'
     luot_2: khong-chac
     luot_2_ghi_chu: Nói về nội dung trang Hỏi đáp của site; tự tham chiếu, không có nguồn ngoài để kiểm; cần đối chiếu với trang đích.
   - id: n8
@@ -188,11 +217,14 @@ nhan_dinh:
     luot_2: dung
     luot_2_ghi_chu: "Lời khuyên tập: phiên ngắn, đều, có mục tiêu thay vì dồn vào cuối tuần; phù hợp quan điểm sư phạm phổ biến (tập phân bố). Không hại."
   - id: n11
-    cau: Một phần lớn việc học động tác diễn ra sau buổi tập, kể cả trong giấc ngủ.
+    cau: Kỹ năng vận động còn tiếp tục tiến bộ sau buổi tập, trong lúc nghỉ.
     loai: quy-tac
-    nguon: [ bonstrup-2019, walker-2002 ]
+    nguon:
+      - walker-2002
+      - bonstrup-2019
+      - pan-rickard-2015
     ket_qua: da-sua
-    ghi_chu: 'Câu cũ: "vì phần lớn việc học động tác diễn ra *sau* buổi tập"; nay "vì một phần lớn …", như trang cũ Hai tuần đầu tiên ("Một phần lớn việc học động tác diễn ra *sau* buổi tập, kể cả trong giấc ngủ"). Nguồn không cho phép nói "phần lớn" cho mọi việc học. Bönstrup 2019: "performance improvements in between practice periods, when subjects were at rest, were significant and accounted for early procedural learning". Walker 2002: "a night of sleep results in a 20% increase in motor speed without loss of accuracy, while an equivalent period of time during wake provides no significant benefit".'
+    ghi_chu: 'Review (24/10/2026): viết lại theo lượt 2. Câu trước: "Một phần lớn việc học động tác diễn ra sau buổi tập, kể cả trong giấc ngủ." Bỏ "một phần lớn" (không định lượng được) và vế giấc ngủ: Walker và cộng sự 2002 thấy một đêm ngủ làm tốc độ tăng 20%, nhưng phân tích gộp của Pan và Rickard 2015 (34 bài, 1.296 người) kết luận, khi đã tính các biến gây nhiễu, "there was no evidence that sleep enhances learning". Câu mới chỉ giữ điều các nguồn cùng ủng hộ: Walker 2002 mở đầu "Improvement in motor skill performance is known to continue for at least 24 hr following training"; Bönstrup 2019: tiến bộ trong các quãng nghỉ giữa các lượt tập là phần chính của việc học sớm. Lượt 1: Câu cũ: "vì phần lớn việc học động tác diễn ra *sau* buổi tập"; nay "vì một phần lớn …", như trang cũ Hai tuần đầu tiên ("Một phần lớn việc học động tác diễn ra *sau* buổi tập, kể cả trong giấc ngủ"). Nguồn không cho phép nói "phần lớn" cho mọi việc học. Bönstrup 2019: "performance improvements in between practice periods, when subjects were at rest, were significant and accounted for early procedural learning". Walker 2002: "a night of sleep results in a 20% increase in motor speed without loss of accuracy, while an equivalent period of time during wake provides no significant benefit".'
     luot_2: khong-chac
     luot_2_nguon: [ https://pubmed.ncbi.nlm.nih.gov/12123620/, https://pubmed.ncbi.nlm.nih.gov/25822130/ ]
     luot_2_ghi_chu: "Nguồn không thống nhất. Walker et al. 2002 (Neuron): một đêm ngủ làm tốc độ gõ chuỗi ngón tăng 20%, cùng thời gian thức thì không. Nhưng Pan & Rickard 2015 (Psychological Bulletin, phân tích gộp 34 bài, 1.296 người): khi tính các biến gây nhiễu thì 'không có bằng chứng giấc ngủ làm tăng học vận động' và vai trò của giấc ngủ 'không thể kết luận'. 'Một phần lớn' cũng không định lượng được. Đề nghị viết bớt chắc chắn, ví dụ 'kỹ năng vận động vẫn tiếp tục được củng cố sau buổi tập', hoặc chuyển thành lời khuyên (tập đều, ngủ đủ)."
@@ -214,11 +246,14 @@ nhan_dinh:
     luot_2_nguon: [ https://pubmed.ncbi.nlm.nih.gov/16597781/, https://pubmed.ncbi.nlm.nih.gov/16597772/, https://pubmed.ncbi.nlm.nih.gov/28224991/, https://pubmed.ncbi.nlm.nih.gov/17348539/ ]
     luot_2_ghi_chu: "Gần 17% sinh viên tự nhận 'điếc nhạc' (Cuddy et al. 2005) trong khi amusia bẩm sinh thật chỉ khoảng 1,5% (Peretz & Vuvan 2017, mẫu 20.000 người; ước tính cũ 4%), nên phần lớn người tự nhận không có khiếm khuyết nhận biết cao độ thật. Sloboda, Wise & Peretz 2005: nhiều người có thần kinh bình thường tự cho là 'không có năng khiếu' vì tiêu chí hát/biểu diễn; thiếu các điều kiện cá nhân, xã hội, môi trường có thể dẫn đến thiếu thành tựu âm nhạc. Dalla Bella et al. 2007: chỉ thiểu số người hát nghiệp dư sai cao độ nhiều, hát chậm thì hầu hết chính xác như người chuyên. 'Chỉ chưa được luyện' là cách nói gọn của 'thiếu trải nghiệm/huấn luyện'; một số ít có khó khăn thuần về phát thanh vận động (Dalla Bella 2007)."
   - id: n14
-    cau: Khả năng nghe và hát đúng cao độ cải thiện khi luyện tai đều đặn.
+    cau: Luyện tai đều đặn giúp nghe cao độ chính xác hơn; muốn hát đúng thì cần tập cả hát.
     loai: quy-tac
-    nguon: [ wise-sloboda-2008 ]
+    nguon:
+      - micheyl-2006
+      - zarate-2010
+      - wise-sloboda-2008
     ket_qua: da-sua
-    ghi_chu: 'Câu cũ: "khả năng nghe và hát đúng cao độ cải thiện rõ rệt sau vài tuần luyện tai đều đặn". Bỏ "rõ rệt sau vài tuần": không tìm được nghiên cứu cho mốc thời gian ấy. Wise và Sloboda 2008: người tự nhận lệch tông "are not facing an insurmountable difficulty, but are likely to improve with targeted intervention".'
+    ghi_chu: 'Review (24/10/2026): viết lại theo lượt 2. Câu trước: "Khả năng nghe và hát đúng cao độ cải thiện khi luyện tai đều đặn." Micheyl và cộng sự 2006: người không học nhạc luyện phân biệt cao độ 4–8 giờ thì ngưỡng nhỏ như nhạc công cổ điển. Zarate và cộng sự 2010: luyện phân biệt giai điệu làm nghe tốt hơn nhưng không làm hát chính xác hơn, nên tách hai vế: nghe nhờ luyện tai, hát cần tập hát. Wise và Sloboda 2008: người tự nhận lệch tông "are likely to improve with targeted intervention". Lượt 1: Câu cũ: "khả năng nghe và hát đúng cao độ cải thiện rõ rệt sau vài tuần luyện tai đều đặn". Bỏ "rõ rệt sau vài tuần": không tìm được nghiên cứu cho mốc thời gian ấy. Wise và Sloboda 2008: người tự nhận lệch tông "are not facing an insurmountable difficulty, but are likely to improve with targeted intervention".'
     luot_2: khong-chac
     luot_2_nguon: [ https://pubmed.ncbi.nlm.nih.gov/16839723/, https://pubmed.ncbi.nlm.nih.gov/20567521/, https://pubmed.ncbi.nlm.nih.gov/28224991/ ]
     luot_2_ghi_chu: "Vế 'nghe cao độ' được ủng hộ: người không học nhạc luyện phân biệt cao độ thì ngưỡng giảm, 4–8 giờ là đạt mức nhạc sĩ cổ điển (Micheyl et al. 2006). Vế 'hát đúng cao độ nhờ luyện tai' thì không: Zarate et al. 2010 (PLoS ONE) luyện phân biệt vi giai điệu làm nghe tốt hơn nhưng độ chính xác khi hát không đổi; kết luận 'perceptual discrimination training alone is not sufficient to improve vocal accuracy'. Với amusia thật (khoảng 1,5%) huấn luyện âm nhạc không làm giảm khiếm khuyết (Peretz & Vuvan 2017). Đề nghị tách: nghe cao độ cải thiện nhờ luyện tai; hát đúng cần tập hát có phản hồi."
@@ -241,11 +276,11 @@ nhan_dinh:
     luot_2_nguon: [ https://pubmed.ncbi.nlm.nih.gov/16412412/ ]
     luot_2_ghi_chu: "Lời khuyên nghe nhạc. Phù hợp với nghiên cứu: người nghe không học nhạc vẫn có nhiều năng lực xử lý nhạc phương Tây thu nhận qua tiếp xúc (Bigand & Poulin-Charronnat 2006). Không hại."
   - id: n17
-    cau: Mỗi bài học tác phẩm có bản thu và bảng "Theo dõi khi nghe" để bạn bắt đầu.
+    cau: Mỗi bài học tác phẩm có bảng "Theo dõi khi nghe", kèm bản thu gợi ý khi có, để bạn bắt đầu.
     loai: so-lieu
     nguon: [ du-lieu-d20, mau-bai-hoc ]
-    ket_qua: dung
-    ghi_chu: 'Nhận định về site. Dữ liệu D2-0: cả 34 bản ghi bài học (loai bai-hoc) có ban_thu. Mẫu bài học (AGENTS.md): mục "Nghe trước khi tập" có ::khoi-nghe, bảng "Theo dõi khi nghe" ngay sau. Bài học tác phẩm lên site ở đợt 6; trước đó link hiện "sắp có".'
+    ket_qua: da-sua
+    ghi_chu: 'Review (24/10/2026): viết lại theo lượt 2 và review. Câu trước: "Mỗi bài học tác phẩm có bản thu và bảng ''Theo dõi khi nghe'' để bạn bắt đầu." Dữ liệu hiện có ban_thu cho cả 34 bản ghi bài học, nhưng ban_thu chưa kiểm định (đợt 6 kiểm từng bản thu, bản không đạt thì bỏ), và bài không có bản thu thì người học tự dán link hay chọn file (AGENTS.md, khối nghe), nên câu mới không hứa mọi bài có bản thu. Bảng "Theo dõi khi nghe" có ở mọi bài học theo mẫu trang. Lượt 1: Nhận định về site. Dữ liệu D2-0: cả 34 bản ghi bài học (loai bai-hoc) có ban_thu. Mẫu bài học (AGENTS.md): mục "Nghe trước khi tập" có ::khoi-nghe, bảng "Theo dõi khi nghe" ngay sau. Bài học tác phẩm lên site ở đợt 6; trước đó link hiện "sắp có".'
     luot_2: khong-chac
     luot_2_ghi_chu: "Đặc điểm của chính site (bản thu và bảng 'Theo dõi khi nghe' ở mọi bài học tác phẩm); không có nguồn ngoài. Lưu ý: theo AGENTS.md, bản thu gợi ý lấy từ 'ban_thu' của bản ghi và 'không có bản thu thì người học tự dán link hay chọn file', nên 'mỗi bài có bản thu' có thể nói quá; kiểm bằng dữ liệu 'ban_thu' của các bản ghi bài học."
   - id: n18
@@ -253,7 +288,7 @@ nhan_dinh:
     loai: so-lieu
     nguon: [ kiem-tra-dau-vao ]
     ket_qua: da-sua
-    ghi_chu: 'Câu cũ ghi "(5 phút)", trái với trang Kiểm tra đầu vào: phần piano khoảng 2 phút, phần nhạc lý 28 câu khoảng 5–10 phút. Người đã chơi được một chút cần phần piano để biết chặng, nên ghi thời lượng của phần ấy.'
+    ghi_chu: 'Review (24/10/2026): giữ, vì là ước lượng như kiem-tra-dau-vao n2: phần piano chỉ là đánh dấu 18 việc (6 nhóm × 3). Lượt 1: Câu cũ ghi "(5 phút)", trái với trang Kiểm tra đầu vào: phần piano khoảng 2 phút, phần nhạc lý 28 câu khoảng 5–10 phút. Người đã chơi được một chút cần phần piano để biết chặng, nên ghi thời lượng của phần ấy.'
     luot_2: khong-chac
     luot_2_ghi_chu: "Nói về công cụ của site (bài kiểm tra đầu vào, phần piano 'khoảng 2 phút'): ước lượng thời gian, không có nguồn ngoài. Cùng ước lượng ở kiem-tra-dau-vao n2 (ở đó loại khuyen-tap nên tôi để dung); kiểm bằng cách tự làm thử và bấm giờ."
   - id: n19
@@ -261,7 +296,7 @@ nhan_dinh:
     loai: so-lieu
     nguon: [ hai-tuan-dau-cu ]
     ket_qua: dung
-    ghi_chu: 'Trang cũ Hai tuần đầu tiên, mục "Trước ngày đầu tiên": cây đàn, ghế chỉnh được độ cao, điện thoại để thu âm, máy đếm nhịp, bút chì, "Một khung giờ cố định". Câu của bài 0 kể bốn trong sáu mục, không sai. Trang lên site ở D4-L1; link hiện "sắp có" đến khi đó.'
+    ghi_chu: 'Review (24/10/2026): câu về chính site, đã kiểm trên trang cũ Hai tuần đầu tiên (mục "Trước ngày đầu tiên" có cây đàn, ghế chỉnh được độ cao, máy đếm nhịp, một khung giờ cố định); trang ấy lên ở D4-L1. Lượt 1: Trang cũ Hai tuần đầu tiên, mục "Trước ngày đầu tiên": cây đàn, ghế chỉnh được độ cao, điện thoại để thu âm, máy đếm nhịp, bút chì, "Một khung giờ cố định". Câu của bài 0 kể bốn trong sáu mục, không sai. Trang lên site ở D4-L1; link hiện "sắp có" đến khi đó.'
     luot_2: khong-chac
     luot_2_ghi_chu: Trỏ tới hai mục khác của site ('Trước ngày đầu tiên', 'Hai tuần đầu tiên bên phím đàn') và liệt kê nội dung của chúng (đàn, ghế, máy đếm nhịp, khung giờ cố định); tự tham chiếu, không có nguồn ngoài. Kiểm bằng đối chiếu trang đích.
   - id: n20
@@ -269,7 +304,7 @@ nhan_dinh:
     loai: so-lieu
     nguon: [ du-lieu-d20, ke-hoach ]
     ket_qua: dung
-    ghi_chu: 'cap-do.yml có 7 chặng; kế hoạch, mục Quyết định: "Giữ 7 chặng". Chặng 7 ("Sau Grade 8") có các bài như Ballade số 1 của Chopin (dữ liệu D2-0).'
+    ghi_chu: 'Review (24/10/2026): câu về chính site, đã kiểm trên dữ liệu đã khóa: cap-do.yml có 7 chặng; chặng 7 có các bài như Ballade số 1 trong tac-pham.yml. Lượt 1: cap-do.yml có 7 chặng; kế hoạch, mục Quyết định: "Giữ 7 chặng". Chặng 7 ("Sau Grade 8") có các bài như Ballade số 1 của Chopin (dữ liệu D2-0).'
     luot_2: khong-chac
     luot_2_ghi_chu: Số chặng khớp AGENTS.md ('cap-do.yml' có 7 chặng) nhưng đó là tài liệu của chính dự án; 'dẫn bạn tới những tác phẩm lớn' là mô tả chung chung, không kiểm được bằng nguồn ngoài.
   - id: n21
@@ -277,7 +312,7 @@ nhan_dinh:
     loai: so-lieu
     nguon: [ hoi-dap-cu ]
     ket_qua: dung
-    ghi_chu: 'Hỏi đáp cũ, mục "Về học piano" (id ve-hoc-piano): "Đàn piano điện có đủ để học piano cổ điển không?", "Tay tôi nhỏ, ngón ngắn, có học piano được không?", "Có cần thầy dạy không?", "Có nên thi cấp (ABRSM, Trinity) không?".'
+    ghi_chu: 'Review (24/10/2026): câu về chính site, đã kiểm trên trang Hỏi đáp cũ (mục "Về học piano" có bốn câu hỏi: đàn điện, tay nhỏ, có cần thầy, có nên thi cấp); trang ấy lên ở D8-L1. Lượt 1: Hỏi đáp cũ, mục "Về học piano" (id ve-hoc-piano): "Đàn piano điện có đủ để học piano cổ điển không?", "Tay tôi nhỏ, ngón ngắn, có học piano được không?", "Có cần thầy dạy không?", "Có nên thi cấp (ABRSM, Trinity) không?".'
     luot_2: khong-chac
     luot_2_ghi_chu: Trỏ tới trang Hỏi đáp và liệt kê chủ đề của nó (đàn điện, tay nhỏ, có cần thầy, có nên thi cấp); tự tham chiếu, không có nguồn ngoài. Kiểm bằng đối chiếu trang đích.
 khuong_nhac: []
@@ -286,14 +321,17 @@ doi_chu:
     moi: 'Opus dạy nhạc cổ điển qua cây đàn piano: bạn học nhạc lý bằng mắt và tai, rồi biến nó thành thứ sờ được dưới mười ngón tay. Chưa có đàn vẫn bắt đầu được (nghe và đọc nhạc), nhưng piano là con đường chính của site. "Nhạc cổ điển" ở đây là cả truyền thống âm nhạc nghệ thuật phương Tây, từ thánh ca thời Trung cổ đến các nhà soạn nhạc đang sống; còn thời kỳ Cổ điển chỉ là giai đoạn khoảng 1750–1820 của Haydn, Mozart và Beethoven. Site sẽ ghi rõ khi nói về thời kỳ.'
     ly_do: "n1 (da-sua): tên site đổi thành Opus (plans/lam-lai/README.md, Quyết định, 23/10/2026)."
   - cu: '"Bắt đầu ở tuổi này thì quá muộn." Không. Người lớn hiểu nhạc lý và biết tự sắp xếp việc tập tốt hơn trẻ em; ngón tay có thể quen chậm hơn một chút, nhưng đó là chuyện thời gian chứ không phải giới hạn. Điều cần chỉnh là kỳ vọng: sau năm đầu, bạn chơi trọn vẹn được những bài nhỏ như Minuet Sol trưởng hay Bài ca Pháp cổ; Für Elise trọn bài thường đến sau hai năm rưỡi đến bốn năm. Hỏi đáp có con số cho các bài khác.'
-    moi: '"Bắt đầu ở tuổi này thì quá muộn." Không. Người lớn biết tự sắp xếp việc tập tốt hơn trẻ em; ngón tay có thể quen chậm hơn một chút, nhưng đó là chuyện thời gian chứ không phải giới hạn. Điều cần chỉnh là kỳ vọng: sau năm đầu, bạn chơi trọn vẹn được những bài nhỏ như Minuet Sol trưởng hay Bài ca Pháp cổ; Für Elise trọn bài thường đến sau hai năm rưỡi đến bốn năm. Hỏi đáp có con số cho các bài khác.'
-    ly_do: 'n4 (da-sua): bỏ "hiểu nhạc lý và": không có nguồn so sánh người lớn với trẻ em về hiểu nhạc lý; phần còn lại có nguồn (Schneider 2008, King 2013).'
+    moi: '"Bắt đầu ở tuổi này thì quá muộn." Không. Người lớn vẫn học được piano, và có lợi thế ở cách tự sắp xếp việc học. Người học từ nhỏ có lợi thế về phối hợp động tác, nên ngón tay của bạn có thể quen chậm hơn. Điều cần chỉnh là kỳ vọng: sau năm đầu, bạn chơi trọn vẹn được những bài nhỏ như Minuet Sol trưởng hay Bài ca Pháp cổ; Für Elise trọn bài thường đến sau hai năm rưỡi đến bốn năm. Hỏi đáp có con số cho các bài khác.'
+    ly_do: 'n4 (da-sua): bỏ "hiểu nhạc lý và": không có nguồn so sánh người lớn với trẻ em về hiểu nhạc lý; phần còn lại có nguồn (Schneider 2008, King 2013). Review (24/10/2026), n4: viết lại: người lớn vẫn học được và có lợi thế ở cách tự sắp xếp việc học; người học từ nhỏ có lợi thế về phối hợp động tác (giai đoạn nhạy cảm: Penhune 2011, Bailey và Penhune 2012), nên bỏ vế "không phải giới hạn".'
   - cu: '"Phải tập hàng giờ mỗi ngày." Không. 20–30 phút mỗi ngày, có mục tiêu rõ, đi xa hơn ba tiếng dồn vào cuối tuần, vì phần lớn việc học động tác diễn ra sau buổi tập, kể cả trong giấc ngủ. Xem Thói quen mỗi ngày.'
-    moi: '"Phải tập hàng giờ mỗi ngày." Không. 20–30 phút mỗi ngày, có mục tiêu rõ, đi xa hơn ba tiếng dồn vào cuối tuần, vì một phần lớn việc học động tác diễn ra sau buổi tập, kể cả trong giấc ngủ. Xem Thói quen mỗi ngày.'
-    ly_do: 'n11 (da-sua): "phần lớn" thành "một phần lớn": nghiên cứu cho thấy một phần đáng kể (không phải phần lớn) việc học động tác diễn ra sau buổi tập (Bönstrup 2019, Walker 2002); khớp câu của trang Hai tuần đầu tiên cũ.'
+    moi: '"Phải tập hàng giờ mỗi ngày." Không. 20–30 phút mỗi ngày, có mục tiêu rõ, đi xa hơn ba tiếng dồn vào cuối tuần, vì kỹ năng vận động còn tiếp tục tiến bộ sau buổi tập, trong lúc nghỉ. Xem Thói quen mỗi ngày.'
+    ly_do: 'n11 (da-sua): "phần lớn" thành "một phần lớn": nghiên cứu cho thấy một phần đáng kể (không phải phần lớn) việc học động tác diễn ra sau buổi tập (Bönstrup 2019, Walker 2002); khớp câu của trang Hai tuần đầu tiên cũ. Review (24/10/2026), n11: bỏ "một phần lớn" và vế giấc ngủ (bằng chứng trái nhau: Walker 2002 với Pan và Rickard 2015); giữ điều các nguồn cùng ủng hộ.'
   - cu: 'Bạn không cần hát hay. Nhưng ngân nga (dù lệch) là công cụ học tốt nhất, vì nó buộc tai bạn chú ý đến cao độ. Phần lớn người tự nhận "lệch tông" thực ra chỉ chưa được luyện: khả năng nghe và hát đúng cao độ cải thiện rõ rệt sau vài tuần luyện tai đều đặn. Chỉ một tỉ lệ rất nhỏ dân số gặp khó khăn thật sự về nhận biết cao độ (amusia). Hãy cứ bắt đầu.'
-    moi: 'Bạn không cần hát hay. Nhưng ngân nga (dù lệch) là công cụ học tốt nhất, vì nó buộc tai bạn chú ý đến cao độ. Phần lớn người tự nhận "lệch tông" thực ra chỉ chưa được luyện: khả năng nghe và hát đúng cao độ cải thiện khi luyện tai đều đặn. Chỉ một tỉ lệ rất nhỏ dân số gặp khó khăn thật sự về nhận biết cao độ (amusia). Hãy cứ bắt đầu.'
-    ly_do: 'n14 (da-sua): bỏ "rõ rệt sau vài tuần": không có nguồn cho mốc thời gian (Wise và Sloboda 2008 chỉ cho thấy luyện thì cải thiện).'
+    moi: 'Bạn không cần hát hay. Nhưng ngân nga (dù lệch) là công cụ học tốt nhất, vì nó buộc tai bạn chú ý đến cao độ. Phần lớn người tự nhận "lệch tông" thực ra chỉ chưa được luyện: luyện tai đều đặn giúp nghe cao độ chính xác hơn, còn muốn hát đúng thì cần tập cả hát. Chỉ một tỉ lệ rất nhỏ dân số gặp khó khăn thật sự về nhận biết cao độ (amusia). Hãy cứ bắt đầu.'
+    ly_do: 'n14 (da-sua): bỏ "rõ rệt sau vài tuần": không có nguồn cho mốc thời gian (Wise và Sloboda 2008 chỉ cho thấy luyện thì cải thiện). Review (24/10/2026), n14: tách nghe và hát: luyện tai giúp nghe cao độ (Micheyl 2006), hát đúng cần tập hát (Zarate 2010).'
   - cu: Đã chơi được một chút? Làm bài kiểm tra đầu vào (5 phút) để biết nên vào từ đâu. Chưa từng chơi thì bỏ qua bước này.
     moi: Đã chơi được một chút? Làm bài kiểm tra đầu vào (phần piano khoảng 2 phút) để biết nên vào từ đâu. Chưa từng chơi thì bỏ qua bước này.
     ly_do: 'n18 (da-sua): "(5 phút)" trái với trang Kiểm tra đầu vào (phần piano khoảng 2 phút, phần nhạc lý 5–10 phút); người đã chơi được một chút cần phần piano để biết chặng.'
+  - cu: 'Hãy nghe kỹ bài mình sắp tập, và nghe rộng hơn những gì mình tập. Nghe nhạc cổ điển không cần năng khiếu hay biết đọc nốt; điều cần là biết nghe cái gì: nghe từng chương một, tìm giai điệu chính và nhận ra khi nó quay lại, nghe lại nhiều lần. Phương pháp nghe chủ động chỉ cách làm; mỗi bài học tác phẩm có bản thu và bảng "Theo dõi khi nghe" để bạn bắt đầu.'
+    moi: 'Hãy nghe kỹ bài mình sắp tập, và nghe rộng hơn những gì mình tập. Nghe nhạc cổ điển không cần năng khiếu hay biết đọc nốt; điều cần là biết nghe cái gì: nghe từng chương một, tìm giai điệu chính và nhận ra khi nó quay lại, nghe lại nhiều lần. Phương pháp nghe chủ động chỉ cách làm; mỗi bài học tác phẩm có bảng "Theo dõi khi nghe", kèm bản thu gợi ý khi có, để bạn bắt đầu.'
+    ly_do: "n17 (da-sua, review 24/10/2026): không hứa mọi bài học có bản thu: bản thu (ban_thu) kiểm định ở đợt 6, bài không có thì người học tự dán link."

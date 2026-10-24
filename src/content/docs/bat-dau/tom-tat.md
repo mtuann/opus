@@ -1,9 +1,9 @@
 ---
 title: Tóm tắt một tờ
-description: "Toàn bộ kiến thức đọc nhạc và nhạc lý cơ bản trên hai mặt giấy A4: mặt 1 là đọc nhạc, mặt 2 là nhạc lý. Bấm Ctrl+P (hoặc Cmd+P), chọn khổ A4; menu và nút bấm…"
+description: "Những điều cốt lõi của đọc nhạc và nhạc lý cơ bản trên hai mặt giấy A4: mặt 1 là đọc nhạc, mặt 2 là nhạc lý. Bấm Ctrl+P (hoặc Cmd+P), chọn khổ A4; menu và nút bấm…"
 ---
 
-Toàn bộ kiến thức đọc nhạc và nhạc lý cơ bản trên **hai mặt giấy A4**: mặt 1 là đọc nhạc, mặt 2 là nhạc lý. Bấm <span class="keys"><kbd>Ctrl</kbd><span>+</span><kbd>P</kbd></span> (hoặc <span class="keys"><kbd>Cmd</kbd><span>+</span><kbd>P</kbd></span>), chọn khổ A4; menu và nút bấm tự ẩn khi in. Nên chờ các khuông nhạc hiện đủ trước khi in.
+Những điều cốt lõi của đọc nhạc và nhạc lý cơ bản trên **hai mặt giấy A4**: mặt 1 là đọc nhạc, mặt 2 là nhạc lý. Bấm <span class="keys"><kbd>Ctrl</kbd><span>+</span><kbd>P</kbd></span> (hoặc <span class="keys"><kbd>Cmd</kbd><span>+</span><kbd>P</kbd></span>), chọn khổ A4; menu và nút bấm tự ẩn khi in. Nên chờ các khuông nhạc hiện đủ trước khi in.
 
 <div class="oz-sheet">
 
