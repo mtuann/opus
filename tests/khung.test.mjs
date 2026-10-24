@@ -162,3 +162,13 @@ test('Node trong .nvmrc và Node đang chạy đủ yêu cầu của Astro', () 
 	assert.ok(Number(nvmrc) > need[0] || (Number(nvmrc) === need[0] && need[1] === 0 && need[2] === 0), `.nvmrc ${nvmrc} không đủ ${engine}`);
 	assert.ok(atLeast(parse(process.versions.node), need), `Node ${process.versions.node} không đủ ${engine}`);
 });
+
+test('không link tới repo trên GitHub khi repo còn riêng tư (người đọc mở ra trang 404; chủ repo bỏ tạm ngày 24/10/2026)', () => {
+	// Repo công khai thì thêm lại biểu tượng GitHub (astro.config.mjs) và link MIT (src/components/Footer.astro), bỏ kiểm thử này.
+	const DIST = path.join(path.resolve(import.meta.dirname, '..'), 'dist');
+	const co = fs
+		.readdirSync(DIST, { recursive: true })
+		.filter((f) => f.endsWith('.html'))
+		.filter((f) => /href="https:\/\/github\.com\/mtuann\/opus(?![\w-])/i.test(fs.readFileSync(path.join(DIST, f), 'utf8')));
+	assert.deepEqual(co, []);
+});

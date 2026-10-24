@@ -56,7 +56,8 @@ export default defineConfig({
 			// Logo khuông nhạc: bản mực cho nền sáng, bản kem cho nền tối
 			logo: { light: './src/assets/logo-muc.svg', dark: './src/assets/logo.svg' },
 			favicon: '/favicon.svg',
-			social: [{ icon: 'github', label: 'Mã nguồn trên GitHub', href: 'https://github.com/mtuann/opus' }],
+			// Biểu tượng GitHub (link tới repo): bỏ tạm khi repo còn riêng tư, vì người đọc mở ra trang 404 (chủ repo chọn
+			// 24/10/2026). Repo công khai thì thêm lại: social: [{ icon: 'github', label: 'Mã nguồn trên GitHub', href: … }]
 			customCss: ['./src/styles/fonts.css', './src/styles/opus.css', './src/styles/thanh-phan.css'],
 			components: {
 				Banner: './src/components/Banner.astro',
