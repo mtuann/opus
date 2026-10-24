@@ -373,6 +373,12 @@ function khoiPlacement(trang) {
 	return khoi[0];
 }
 
+/**
+ * Lời nhắc cho trình duyệt tắt JavaScript, trong ô công cụ do script dựng (script thay cả ô khi chạy). data-sinh: chữ do
+ * thành phần dựng, không phải chữ của trang (so chữ với site cũ bỏ qua, tests/chuyen.test.mjs).
+ */
+const canJs = (chu) => `<noscript data-sinh><p>${esc(chu)}</p></noscript>`;
+
 /** Bài nhạc lý gợi ý khi đã nắm hết phần nền tảng (như placement.js cũ). */
 const BAI_NANG_CAO = 'nhac-ly/15-tiet-tau-nang-cao/';
 
@@ -393,7 +399,7 @@ export function placement(src) {
 		})),
 		nang_cao: lk(BAI_NANG_CAO),
 	};
-	return `<div class="oz-placement oz-tool" data-placement="${esc(JSON.stringify(data))}"></div>`;
+	return `<div class="oz-placement oz-tool" data-placement="${esc(JSON.stringify(data))}">${canJs('Phần nhạc lý cần JavaScript: bật JavaScript trong trình duyệt để làm bài.')}</div>`;
 }
 
 // ---------- Công cụ: chặng piano của bạn (tự đánh giá ở trang kiểm tra đầu vào) ----------
@@ -429,7 +435,7 @@ export function goiYTheoChang({ capDo, tacPham, nguoi }, ds = trangTrongBan()) {
  */
 export function mucDoPiano(duLieu) {
 	const data = { chang: goiYTheoChang(duLieu), lo_trinh: { href: `${DUONG_GOC}piano/lo-trinh/`, co: coTrongBan(`${DUONG_GOC}piano/lo-trinh/`) } };
-	return `<div class="oz-muc-do oz-tool" aria-live="polite" data-chang="${esc(JSON.stringify(data))}"></div>`;
+	return `<div class="oz-muc-do oz-tool" aria-live="polite" data-chang="${esc(JSON.stringify(data))}">${canJs('Cần bật JavaScript trong trình duyệt để tính chặng của bạn.')}</div>`;
 }
 
 // ---------- Công cụ: ô gợi ý tập ở trang chủ ----------

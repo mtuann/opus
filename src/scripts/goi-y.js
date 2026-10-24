@@ -7,6 +7,9 @@
 import { esc, lienKet } from './lien-ket.js';
 import { layKho } from './tien-do.js';
 
+/** Số bài nhạc lý đã lưu: site mới lưu số, site cũ lưu chuỗi ("4", tách từ dòng "@ 4 | …" của khối placement). */
+const soBai = (x) => (typeof x === 'string' && /^\d+$/.test(x) ? Number(x) : x);
+
 /**
  * Phần gợi ý theo dữ liệu đã lưu (hàm thuần, để kiểm thử): HTML, hay null khi chưa lưu gì dùng được. Dữ liệu lưu trong
  * trình duyệt có thể cũ hay hỏng: chặng ngoài 1–7, bài nhạc lý không phải số, địa chỉ không phải bài nhạc lý của site
@@ -15,10 +18,11 @@ import { layKho } from './tien-do.js';
 export function dungGoiY(data, mucDo, xepLop) {
 	const { chang, kiem_tra, nhac_ly, nang_cao, bai_nhac_ly } = data;
 	const c = Number.isInteger(mucDo?.stage) ? chang.find((x) => x.id === mucDo.stage) : undefined;
+	const batDau = soBai(xepLop?.start);
 	let nhacLy = '';
-	if (xepLop?.start === 'done') nhacLy = `bạn đã nắm phần nền tảng; tiếp với ${lienKet(nang_cao.href, 'phần nâng cao', nang_cao.co)}.`;
-	else if (Number.isInteger(xepLop?.start) && xepLop.start > 0) {
-		const n = xepLop.start;
+	if (batDau === 'done') nhacLy = `bạn đã nắm phần nền tảng; tiếp với ${lienKet(nang_cao.href, 'phần nâng cao', nang_cao.co)}.`;
+	else if (Number.isInteger(batDau) && batDau > 0) {
+		const n = batDau;
 		// bài lưu ở site mới có tên và địa chỉ; site cũ chỉ lưu số bài: dẫn tới mục lục nhạc lý
 		const href = typeof xepLop.href === 'string' && xepLop.href.startsWith(nhac_ly.href) && /^[a-z0-9-]+\/$/.test(xepLop.href.slice(nhac_ly.href.length)) ? xepLop.href : null;
 		const ten = typeof xepLop.ten === 'string' && xepLop.ten.trim() ? `bài ${n}: ${esc(xepLop.ten.trim())}` : `bài ${n}`;

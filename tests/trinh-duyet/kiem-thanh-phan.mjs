@@ -196,10 +196,10 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 			const luu = (await kho(p)).placement;
 			assert.equal(luu?.start, bai[1].n, `kho placement: ${JSON.stringify(luu)}`);
 			assert.match(luu?.date ?? '', /^\d{4}-\d{2}-\d{2}$/);
-			// link tới bài chưa lên site là chữ "sắp có", như link dựng lúc build
-			const sapCo = await hop.locator('.oz-sap-co').count();
-			const link = await hop.locator('tbody a').count();
-			assert.equal(sapCo + link, bai.length + 1, 'mỗi bài (và bài gợi ý) một link hay một chữ "sắp có"');
+			// link tới bài chưa lên site là chữ "sắp có", như link dựng lúc build: mỗi bài trong bảng và bài gợi ý (dòng đầu)
+			// là một link hay một chữ "sắp có", tùy bài đã có trong bản build chưa
+			const linkHaySapCo = await hop.locator('tbody a, .oz-feedback a, .oz-sap-co').count();
+			assert.equal(linkHaySapCo, bai.length + 1, 'mỗi bài (và bài gợi ý) một link hay một chữ "sắp có"');
 			await hop.getByRole('button', { name: 'Làm lại' }).click();
 			assert.match(await hop.locator('.oz-pl-dau').innerText(), /^Câu 1\//);
 			await ctx.close();
@@ -266,6 +266,13 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 			const d = JSON.parse(await p.locator('.oz-goi-y').getAttribute('data-goi-y'));
 			assert.equal(await p.locator('.oz-goi-y-bai > li').count(), d.chang[2].goi_y.length);
 			assert.deepEqual(await p.evaluate(viTri), [true, 'Hôm nay tập gì?'], 'có gợi ý riêng: mục lên trước các lối vào');
+			// dữ liệu của site cũ: chỉ có kết quả nhạc lý, số bài dạng chuỗi
+			await p.evaluate(() => localStorage.setItem('opus-zero:v1', JSON.stringify({ days: {}, store: { placement: { date: '2026-10-01', start: '4' } } })));
+			await p.reload({ waitUntil: 'load' });
+			await p.waitForFunction(() => document.querySelector('.oz-goi-y.oz-goi-y--rieng'), null, { timeout: 20000 });
+			const cu = await p.locator('.oz-goi-y').innerText();
+			assert.match(cu, /Chưa có chặng piano của bạn/);
+			assert.match(cu, /Nhạc lý: bắt đầu từ bài 4 \(các bài nhạc lý/);
 			await ctx.close();
 		} finally {
 			await trinhDuyet.close();

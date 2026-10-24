@@ -839,12 +839,22 @@ html.oz-stand-open .main-pane {
 }
 
 /* ---------- Bài kiểm tra đầu vào: phần nhạc lý (src/scripts/placement.js) và chặng piano (src/scripts/muc-do.js) ---------- */
-/* Giữ chỗ trước khi script dựng (tránh xô bố cục): một câu hỏi và hàng nút */
-.oz-placement:empty {
+/* Giữ chỗ trước khi script dựng (tránh xô bố cục): một câu hỏi và hàng nút. Ô chỉ có lời nhắc bật JavaScript (<noscript>)
+   vẫn là ô chưa dựng; trình duyệt tắt JavaScript thì không giữ chỗ, chỉ hiện lời nhắc. */
+.oz-placement:not(:has(> :not(noscript))) {
 	min-height: 12rem;
 }
-.oz-muc-do:empty {
+.oz-muc-do:not(:has(> :not(noscript))) {
 	min-height: 7rem;
+}
+@media (scripting: none) {
+	.oz-placement:not(:has(> :not(noscript))),
+	.oz-muc-do:not(:has(> :not(noscript))) {
+		min-height: 0;
+	}
+}
+.sl-markdown-content :is(.oz-placement, .oz-muc-do) noscript p {
+	margin: 0;
 }
 .oz-pl-tien {
 	display: block;

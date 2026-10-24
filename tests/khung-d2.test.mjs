@@ -120,7 +120,7 @@ test('khối placement: đọc bài, câu, đáp án; viết sai thì báo lỗi
 
 test('công cụ placement: chữ dựng thành HTML (thẻ thô thành chữ), link tới bài kèm cờ có trong bản build; bộ tải thành phần nạp script', () => {
 	const html = placement('@ 10 | Hợp âm ba | nhac-ly/10-hop-am-ba/\n? Rê – Fa – La là *loại* gì?\n+ Thứ <b>x</b>\n- Trưởng\n@ 1 | Tên nốt | nhac-ly/01-cao-do-ten-not/\n? A?\n+ B\n');
-	assert.match(html, /^<div class="oz-placement oz-tool" data-placement="/);
+	assert.match(html, /^<div class="oz-placement oz-tool" data-placement="[^"]*"><noscript data-sinh><p>[^<]*JavaScript[^<]*<\/p><\/noscript><\/div>$/, 'tắt JavaScript: lời nhắc bật JavaScript');
 	const d = json(html, 'data-placement');
 	assert.equal(d.bai[0].cau[0].q, 'Rê – Fa – La là <em>loại</em> gì?');
 	assert.equal(d.bai[0].cau[0].opts[0].t, 'Thứ &lt;b&gt;x&lt;/b&gt;');
@@ -152,7 +152,7 @@ test('chặng piano tự đánh giá: hai trong ba việc của một nhóm là 
 
 test('công cụ piano-level: mỗi chặng tên, Grade, trang chặng, bài nên bắt đầu (bài học có goi_y của chặng; chặng 1: trang khởi đầu)', () => {
 	const html = congCu({ ten: 'piano-level' }, 'bat-dau/kiem-tra-dau-vao');
-	assert.match(html, /^<div class="oz-muc-do oz-tool" aria-live="polite" data-chang="/);
+	assert.match(html, /^<div class="oz-muc-do oz-tool" aria-live="polite" data-chang="[^"]*"><noscript data-sinh><p>[^<]*JavaScript[^<]*<\/p><\/noscript><\/div>$/, 'tắt JavaScript: lời nhắc bật JavaScript');
 	const { chang, lo_trinh } = json(html, 'data-chang');
 	const { capDo, tacPham } = duLieuCho('thử');
 	assert.deepEqual(chang.map((c) => c.id), capDo.map((c) => c.id));
@@ -191,7 +191,7 @@ test('ô gợi ý tập: dữ liệu theo chặng (goi_y, chang), luôn đăng n
 test('ô gợi ý tập trong trình duyệt: chặng và bài nhạc lý đã lưu (site mới, site cũ); dữ liệu hỏng thì bỏ qua', () => {
 	const d = json(goiYTap(duLieuCho('thử', { luonKhoa: true }), ['nhac-ly/index', 'nhac-ly/04-nhip', 'piano/lo-trinh/chang-3']), 'data-goi-y');
 	assert.equal(dungGoiY(d, null, null), null, 'chưa lưu gì: giữ phần dựng sẵn');
-	assert.equal(dungGoiY(d, { stage: '3' }, { start: 'x' }), null, 'chặng không phải số, bài không phải số');
+	for (const start of ['x', '4a', ' 4', '0', 0, -1, 4.5, null]) assert.equal(dungGoiY(d, { stage: '3' }, { start }), null, `chặng không phải số, bài ${JSON.stringify(start)} không dùng được`);
 	assert.equal(dungGoiY(d, { stage: 9 }, null), null, 'chặng ngoài 1–7');
 	const c3 = dungGoiY(d, { stage: 3, date: '2026-10-20' }, null);
 	assert.match(c3, /Chặng của bạn: <a href="\/opus\/piano\/lo-trinh\/chang-3\/">3\. Sơ trung cấp<\/a><\/strong> \(<span class="oz-khong-ngat">≈ Grade 3<\/span>\)/);
@@ -202,8 +202,8 @@ test('ô gợi ý tập trong trình duyệt: chặng và bài nhạc lý đã l
 	// bài nhạc lý lưu ở site mới: tên và địa chỉ; có trong bản build thì là link, chưa có thì "sắp có"
 	assert.match(dungGoiY(d, null, { start: 4, ten: 'Nhịp <b>', href: '/opus/nhac-ly/04-nhip/' }), /Chưa có chặng piano của bạn[\s\S]*<strong>Nhạc lý:<\/strong> bắt đầu từ <a href="\/opus\/nhac-ly\/04-nhip\/">bài 4: Nhịp &lt;b&gt;<\/a>\./);
 	assert.match(dungGoiY(d, null, { start: 5, ten: 'Quãng', href: '/opus/nhac-ly/05-quang/' }), /<span class="oz-sap-co" data-href="\/opus\/nhac-ly\/05-quang\/"[^>]*>bài 5: Quãng <span class="oz-sap-co-nhan"/);
-	// site cũ chỉ lưu số bài; địa chỉ lạ thì không dùng
-	for (const lop of [{ start: 4 }, { start: 4, href: 'javascript:alert(1)' }, { start: 4, href: '/opus/piano/gam/' }, { start: 4, href: '/opus/nhac-ly/../x/' }])
+	// site cũ chỉ lưu số bài, dạng chuỗi (placement.js cũ: "@ 4 | …" tách ra "4"); địa chỉ lạ thì không dùng
+	for (const lop of [{ start: '4' }, { start: '04' }, { start: 4 }, { start: 4, href: 'javascript:alert(1)' }, { start: 4, href: '/opus/piano/gam/' }, { start: 4, href: '/opus/nhac-ly/../x/' }])
 		assert.match(dungGoiY(d, null, lop), /bắt đầu từ bài 4 \(<a href="\/opus\/nhac-ly\/">các bài nhạc lý<\/a>\)\./, JSON.stringify(lop));
 	assert.match(dungGoiY(d, { stage: 7 }, { start: 'done' }), /bạn đã nắm phần nền tảng; tiếp với <span class="oz-sap-co" data-href="\/opus\/nhac-ly\/15-tiet-tau-nang-cao\/"/);
 });
@@ -211,16 +211,21 @@ test('ô gợi ý tập trong trình duyệt: chặng và bài nhạc lý đã l
 test('bản thật: trang chưa khóa không qua plugin của dự án (lỗi cú pháp không làm hỏng bản build đăng lên site); bản xem thì có', () => {
 	const ctx = (trang) => ({ fileURL: pathToFileURL(path.join(DOCS, trang + '.md')) });
 	const goc = () => ({ name: 'goc' });
+	// trang chưa khóa: một đường dẫn không có trong khoa.json (không dùng trang thật: lô sau khóa thì phép thử hỏng)
+	const chuaKhoa = 'thu/trang-chua-khoa-khong-co';
 	const cu = process.env.OPUS_BAN;
 	try {
 		delete process.env.OPUS_BAN;
-		const bo = chiTrangTrongBan(goc)(ctx('piano/tac-pham/fur-elise'));
+		const bo = chiTrangTrongBan(goc)(ctx(chuaKhoa));
 		assert.equal(bo.name, 'opus-bo-qua-trang-chua-khoa');
 		assert.deepEqual(bo.code({ lang: 'abc' }), { type: 'html', value: '' }, 'khối ```abc không sang Expressive Code');
 		assert.equal(chiTrangTrongBan(goc)(ctx('404')).name, 'goc', 'trang đã khóa vẫn qua plugin');
 		assert.equal(chiTrangTrongBan(goc)({}).name, 'goc', 'không biết trang (kiểm thử gọi thẳng): vẫn qua plugin');
+		// file ngoài thư mục trang (không phải trang của bộ docs): vẫn qua plugin, không bị coi là trang chưa khóa
+		for (const f of [path.join(ROOT, 'src/pages/x.md'), path.join(DOCS, '../pages/x.md'), path.join(ROOT, '..', 'khac', 'x.md')])
+			assert.equal(chiTrangTrongBan(goc)({ fileURL: pathToFileURL(f) }).name, 'goc', f);
 		process.env.OPUS_BAN = 'xem';
-		assert.equal(chiTrangTrongBan(goc)(ctx('piano/tac-pham/fur-elise')).name, 'goc');
+		assert.equal(chiTrangTrongBan(goc)(ctx(chuaKhoa)).name, 'goc');
 	} finally {
 		if (cu === undefined) delete process.env.OPUS_BAN;
 		else process.env.OPUS_BAN = cu;

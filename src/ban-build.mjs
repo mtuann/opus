@@ -85,9 +85,12 @@ export function locTheoBan(loader) {
 
 /**
  * Bọc plugin Markdown (mdast) của dự án: ở bản thật, trang chưa khóa không qua plugin. Bộ nạp của Starlight dựng mọi trang
- * rồi locTheoBan mới bỏ trang chưa khóa, nên không bọc thì lỗi cú pháp ở một trang chưa khóa (không lên site) làm hỏng
- * bản build đăng lên site, và log in cảnh báo [opus] của trang ấy (review cuối đợt 1, d1.md "Việc còn mở"; D2-L1 làm).
- * Trang không đọc được đường dẫn (gọi thẳng Sätteri, như trong kiểm thử) thì vẫn qua plugin.
+ * rồi locTheoBan mới bỏ trang chưa khóa, nên không bọc thì lỗi cú pháp ở một khối (```abc, ```quiz, chỉ thị) của trang
+ * chưa khóa (không lên site) làm hỏng bản build đăng lên site, và log in cảnh báo [opus] của trang ấy (review cuối đợt 1,
+ * d1.md "Việc còn mở"; D2-L1 làm). Chỉ plugin này được bọc: frontmatter (schema, tac_pham) và các plugin hast vẫn chạy trên
+ * mọi trang trước locTheoBan, nên lỗi ở đó của trang chưa khóa vẫn làm hỏng bản thật. Chỉ file nằm trong thư mục trang
+ * (`docsDir`) mới có thể là trang chưa khóa; file khác, hay không đọc được đường dẫn (gọi thẳng Sätteri, như trong kiểm
+ * thử), vẫn qua plugin.
  * @param {(ctx: { fileURL?: URL }) => object} plugin
  */
 const BO = () => ({ type: 'html', value: '' });
@@ -95,10 +98,12 @@ const BO = () => ({ type: 'html', value: '' });
 export function chiTrangTrongBan(plugin, docsDir = DOCS) {
 	return (ctx) => {
 		if (ban() !== 'xem' && ctx?.fileURL) {
-			const trang = path.relative(docsDir, fileURLToPath(ctx.fileURL)).replace(/\\/g, '/').replace(/\.mdx?$/, '');
+			const tuongDoi = path.relative(docsDir, fileURLToPath(ctx.fileURL));
+			const trongDocs = tuongDoi !== '' && tuongDoi.split(/[\\/]/)[0] !== '..' && !path.isAbsolute(tuongDoi);
+			const trang = tuongDoi.replace(/\\/g, '/').replace(/\.mdx?$/, '');
 			// trang sẽ bị bỏ: khối mã và chỉ thị thành chỗ trống, để Expressive Code không dựng khối ```abc, ```quiz (và báo
 			// "không có ngôn ngữ") cho trang không đăng
-			if (!(trang in docKhoa().trang)) return { name: 'opus-bo-qua-trang-chua-khoa', code: BO, leafDirective: BO };
+			if (trongDocs && !(trang in docKhoa().trang)) return { name: 'opus-bo-qua-trang-chua-khoa', code: BO, leafDirective: BO };
 		}
 		return plugin(ctx);
 	};

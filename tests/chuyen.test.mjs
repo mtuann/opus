@@ -187,8 +187,8 @@ const trangDaChuyen = fs.existsSync(path.join(ROOT, 'src/content/docs'))
 const KHONG_SO = { 'blog/index': 'bản cũ là trang danh sách bài do plugin blog của MkDocs tự sinh; blog làm lại ở đợt 7' };
 
 /**
- * Bỏ khỏi HTML các phần tử có thuộc tính data-sinh (phần sinh từ dữ liệu, như sơ đồ 7 chặng): chữ của chúng đến từ dữ liệu
- * đã kiểm định, không phải chữ của trang, nên không so với trang cũ.
+ * Bỏ khỏi HTML các phần tử có thuộc tính data-sinh (phần sinh từ dữ liệu, như sơ đồ 7 chặng; chữ do thành phần dựng, như
+ * lời nhắc bật JavaScript trong <noscript>): chữ của chúng không phải chữ của trang, nên không so với trang cũ.
  */
 function boPhanSinh(html) {
 	let ra = html;
@@ -228,6 +228,7 @@ test('boPhanSinh: bỏ phần tử data-sinh (kể cả lồng nhau cùng tên t
 	assert.equal(boPhanSinh('<p>a</p><figure class="x" data-sinh><figure>b</figure><ol><li>c</li></ol></figure><p>d</p>'), '<p>a</p><p>d</p>');
 	assert.equal(boPhanSinh('<div data-sinh="1">x</div><div>y</div>'), '<div>y</div>');
 	assert.equal(boPhanSinh('<p data-sinhx>z</p>'), '<p data-sinhx>z</p>');
+	assert.equal(boPhanSinh('<div class="oz-placement"><noscript data-sinh><p>Cần JavaScript.</p></noscript></div>'), '<div class="oz-placement"></div>');
 });
 
 test(
