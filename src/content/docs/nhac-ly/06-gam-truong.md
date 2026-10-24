@@ -66,7 +66,7 @@ Mỗi nốt trong gam là một **bậc**, đánh số từ 1 đến 7 (nhiều 
 Thử hát Đô – Rê – Mi – Fa – Sol – La – Si rồi **dừng lại**. Bạn sẽ cảm thấy rất muốn hát tiếp lên Đô. Đó là sức kéo của cảm âm.
 
 :::tip[Trên phím đàn]
-Ngón bấm gam Đô trưởng một quãng tám: tay phải **1-2-3-1-2-3-4-5**, tay trái **5-4-3-2-1-3-2-1**; ngón cái luồn dưới để nối liền. Bảng ngón bấm cho cả 12 gam và cách tập: [Gam và ngón bấm](/opus/piano/gam/).
+Ngón bấm gam Đô trưởng một quãng tám: tay phải **1-2-3-1-2-3-4-5**, tay trái **5-4-3-2-1-3-2-1**. Đi lên, tay phải luồn ngón cái dưới ngón 3 (Mi sang Fa), tay trái vắt ngón 3 qua ngón cái (Sol sang La); đi xuống thì ngược lại. Bảng ngón bấm cho cả 12 gam và cách tập: [Gam và ngón bấm](/opus/piano/gam/).
 :::
 
 ## Bài tập

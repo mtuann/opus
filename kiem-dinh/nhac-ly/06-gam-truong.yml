@@ -54,6 +54,14 @@ nguon:
     bac: 3
     ten: Giáo trình môn Lý thuyết âm nhạc cơ bản (tệp PDF trên novaspro.vn; không ghi tác giả, nhà xuất bản); chỉ dùng chứng thực cách gọi ở Việt Nam, không phải nguồn bậc 2
     link: https://novaspro.vn/upload/files/giao_trinh_mon_ly_thuyet_am_nhac_co_ban.pdf
+  - id: hanon
+    bac: 1
+    ten: "Charles-Louis Hanon, The Virtuoso Pianist in Sixty Exercises (New York: G. Schirmer, bản in 1928; bản scan trên Internet Archive): phần II, số 39 \"The 12 Major Scales, and the 12 Minor Scales\" (tr. 50: Đô trưởng và La thứ, có ghi ngón), số 32–36 \"Turning the thumb under\" (tr. 43–47)"
+    link: https://archive.org/details/hanonvirtuosopia00hano
+  - id: baylor-c-ht
+    bac: 2
+    ten: "Michael Clark, Baylor Piano Basics (giáo trình mở, Baylor University Libraries, CC BY-NC-SA 4.0), 114. C Major Scale Hands Together (đọc bản tải ngày 24/10/2026; trang nay trả 403 cho curl)"
+    link: https://openbooks.library.baylor.edu/pianobasics/chapter/c-major-scale-hands-together/
 nhan_dinh:
   - id: n1
     cau: Gam (scale) là một chuỗi nốt đi lên hoặc đi xuống theo một công thức khoảng cách cố định.
@@ -272,19 +280,22 @@ nhan_dinh:
     luot_2_nguon: [ https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/ ]
     luot_2_ghi_chu: "OMT, Minor Scales: sự khép lại của gam trưởng nhờ 'the ascending semitone between ti and do'. Ví dụ Si → Đô (C major) đúng."
   - id: n22
-    cau: "Ngón bấm gam Đô trưởng một quãng tám: tay phải 1-2-3-1-2-3-4-5, tay trái 5-4-3-2-1-3-2-1."
-    loai: khuyen-tap
-    nguon: []
-    ket_qua: khong-can-nguon
-    ghi_chu: 'Khớp ../opus-zero/docs/piano/gam.md, "Bảng ngón bấm 12 gam trưởng", hàng Đô: tay phải 1 2 3 1 2 3 4 (5), tay trái (5) 4 3 2 1 3 2 1. Không trái trang lõi nào.'
+    cau: 'Ngón bấm gam Đô trưởng một quãng tám: tay phải 1-2-3-1-2-3-4-5, tay trái 5-4-3-2-1-3-2-1.'
+    loai: quy-tac
+    nguon:
+      - hanon
+      - baylor-c-ht
+    ket_qua: dung
+    ghi_chu: 'Đổi loại từ khuyen-tap sang quy-tac theo review D3-L1: ngón bấm là sự kiện, cần nguồn. Chữ trang không đổi. Hanon, The Virtuoso Pianist, số 39 (tr. 50; đọc từ ảnh bản scan): gam Đô trưởng, tay phải 1 2 3 1 2 3 4 rồi 1 để đi tiếp quãng tám sau, nốt Đô cao nhất (chỗ quay đầu) ngón 5; tay trái từ Đô thấp nhất 5 4 3 2 1 3 2 1. Một quãng tám thì tay phải 1-2-3-1-2-3-4-5, tay trái 5-4-3-2-1-3-2-1, như trang. Baylor Piano Basics 114, câu đọc cho hai tay khi chơi gam Đô trưởng: "Ascending: 1s, 4 left, 3s, exchange 1s and 2s, 3s, 4 right, 1s"; "C is played by finger 1 in each hand unless it is the lowest note in the left hand or the highest note in the right hand": khớp với ngón trên. Bản cũ ../opus-zero/docs/piano/gam.md, hàng Đô: cùng ngón. (review D3-L1 yêu cầu)'
     luot_2: dung
     luot_2_ghi_chu: Ngón bấm chuẩn của gam Đô trưởng một quãng tám (tay phải 1‑2‑3‑1‑2‑3‑4‑5, tay trái 5‑4‑3‑2‑1‑3‑2‑1), hợp cách dạy phổ biến.
   - id: n23
-    cau: Ngón cái luồn dưới để nối liền.
-    loai: khuyen-tap
-    nguon: []
-    ket_qua: khong-can-nguon
-    ghi_chu: 'Khớp ../opus-zero/docs/piano/gam.md, mục "Luồn ngón cái và vắt ngón": tay phải đi lên luồn ngón cái, tay trái đi xuống luồn ngón cái; tay trái đi lên thì ngón 3 hay 4 vắt qua ngón cái ("hai mặt của cùng một chuyển động"). Câu tóm tắt của trang không nói riêng từng tay; không trái.'
+    cau: 'Đi lên, tay phải luồn ngón cái dưới ngón 3 (Mi sang Fa), tay trái vắt ngón 3 qua ngón cái (Sol sang La); đi xuống thì ngược lại.'
+    loai: quy-tac
+    nguon:
+      - hanon
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "…; ngón cái luồn dưới để nối liền." Chữ mới: "Đi lên, tay phải luồn ngón cái dưới ngón 3 (Mi sang Fa), tay trái vắt ngón 3 qua ngón cái (Sol sang La); đi xuống thì ngược lại." Lý do: câu cũ đứng ngay sau ngón bấm đi lên của cả hai tay, nhưng luồn ngón cái chỉ đúng với tay phải đi lên, tay trái đi xuống; tay trái đi lên thì ngón 3 vắt qua ngón cái. Đổi loại từ khuyen-tap sang quy-tac (cách chuyển ngón là sự kiện). Hanon, The Virtuoso Pianist, số 39 (tr. 50): tay phải đi lên, Mi ngón 3 rồi Fa ngón 1, tức ngón cái sang phím bên phải ngón 3 (luồn dưới bàn tay); tay trái đi lên, Sol ngón 1 rồi La ngón 3, tức ngón 3 sang phím bên phải ngón cái (vắt qua ngón cái). Đi xuống thì cùng ngón theo thứ tự ngược lại: tay phải vắt ngón 3 qua ngón cái (Fa sang Mi), tay trái luồn ngón cái (La sang Sol). Hanon số 32–36 (tr. 43–47), các bài chuẩn bị cho gam: "Turning the thumb under the 2nd finger", "… the 3rd finger", "… the 4th finger", "… the 5th finger", "Another example of turning the thumb under". Bản cũ ../opus-zero/docs/piano/gam.md, mục "Luồn ngón cái và vắt ngón" (dòng 15–21): cùng cách chia hai tay, hai chiều. (review D3-L1 yêu cầu)'
   - id: n24
     cau: "Bảng ngón bấm cho cả 12 gam và cách tập: Gam và ngón bấm (/opus/piano/gam/)."
     loai: ve-site
@@ -401,6 +412,9 @@ khuong_nhac:
     ket_qua: dung
     ghi_chu: Gam Sol trưởng đi lên, K:G (hóa biểu một dấu thăng Fa♯), M:4/4, L:1/4. abcjs đọc G3 A3 B3 C4 | D4 E4 F♯4 G4 (Fa♯ do hóa biểu, không viết ^), trùng 8 phím tô ở bàn phím ngay trên (n10) và n8. Hai ô, mỗi ô 4 phách. abcjs không cảnh báo.
 doi_chu:
+  - cu: "Ngón bấm gam Đô trưởng một quãng tám: tay phải 1-2-3-1-2-3-4-5, tay trái 5-4-3-2-1-3-2-1; ngón cái luồn dưới để nối liền. Bảng ngón bấm cho cả 12 gam và cách tập: Gam và ngón bấm."
+    moi: "Ngón bấm gam Đô trưởng một quãng tám: tay phải 1-2-3-1-2-3-4-5, tay trái 5-4-3-2-1-3-2-1. Đi lên, tay phải luồn ngón cái dưới ngón 3 (Mi sang Fa), tay trái vắt ngón 3 qua ngón cái (Sol sang La); đi xuống thì ngược lại. Bảng ngón bấm cho cả 12 gam và cách tập: Gam và ngón bấm."
+    ly_do: "n23 (da-sua, review D3-L1 yêu cầu): luồn ngón cái chỉ đúng với tay phải đi lên, tay trái đi xuống; tay trái đi lên thì ngón 3 vắt qua ngón cái (Hanon, The Virtuoso Pianist, số 39: tay trái Sol ngón 1 rồi La ngón 3)."
   - cu: "Mỗi nốt trong gam là một bậc, đánh số La Mã từ I đến VII. Ba bậc quan trọng nhất:"
     moi: "Mỗi nốt trong gam là một bậc, đánh số từ 1 đến 7 (nhiều sách viết bằng số La Mã, I đến VII, như bảng dưới). Ba bậc cần nhớ trước:"
     ly_do: 'n15 (da-bo), n16: "quan trọng nhất" là xếp hạng không kiểm được; câu dẫn mới là lời khuyên học (khuyen-tap), bảng ba bậc giữ nguyên. n14 (da-sua, review D3-L1 yêu cầu): bậc đánh số 1 đến 7 như Open Music Theory và bài 7, 8; số La Mã là cách nhiều sách viết (teoría), như bảng của trang.'

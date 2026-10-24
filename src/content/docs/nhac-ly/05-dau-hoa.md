@@ -12,7 +12,7 @@ Giữa hầu hết các cặp phím trắng có một phím đen, nên chúng c�
 - **Mi – Fa** (E – F)
 - **Si – Đô** (B – C)
 
-Hãy nhớ kỹ hai cặp này: chúng là chìa khóa để hiểu gam và hợp âm sau này.
+Hãy nhớ kỹ hai cặp này: chúng là chìa khóa để hiểu gam sau này.
 
 ## Ba dấu hóa
 

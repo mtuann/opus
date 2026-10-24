@@ -63,7 +63,7 @@ Xếp các giọng thành vòng tròn: mỗi bước theo chiều kim đồng h�
 
 ::hinh{ten="circle"}
 
-Bấm vào một giọng để xem hóa biểu, các nốt, hợp âm và nghe thử:
+Bấm vào một giọng để xem hóa biểu, các nốt, hợp âm các bậc (ở giọng trưởng) và nghe thử:
 
 ::cong-cu{ten="circle"}
 

@@ -27,7 +27,7 @@ K:Am
 A, B, C D | E F G A |]
 ```
 
-So với gam trưởng, điểm khác quyết định là **bậc 3**: trong La thứ, từ La lên Đô chỉ có 3 nửa cung (quãng 3 thứ), còn trong La trưởng là 4 nửa cung (La lên Đô♯). Bậc 3 thấp hơn này có mặt ở cả ba dạng gam thứ (xem bảng so sánh bên dưới).
+So với gam trưởng, điểm khác quyết định là **bậc 3**: trong La thứ, từ La lên Đô chỉ có 3 nửa cung (quãng 3 thứ), còn trong La trưởng là 4 nửa cung (La lên Đô♯). Bậc 3 thấp hơn này có mặt ở cả ba dạng gam thứ.
 
 ::cong-cu{ten="piano" range="A3-A4" notes="A3 B3 C4 D4 E4 F4 G4 A4"}
 
