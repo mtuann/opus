@@ -50,3 +50,23 @@ export function datKho(ten, giaTri) {
 	ghi(data);
 	bao();
 }
+
+/**
+ * Theo dõi một kỹ năng (skill của progress.js cũ, cùng chỗ lưu): số lần, số đúng, độ chính xác trượt (ema), ngày luyện cuối;
+ * kèm lịch sử theo ngày (store.skillHist[kỹ năng][ngày] = [số lượt, số đúng]) để vẽ biểu đồ tiến bộ ở trang Luyện tập.
+ */
+export function kyNang(id, dung) {
+	const data = doc();
+	const kho = (data.store ??= {});
+	const tat = (kho.skills ??= {});
+	const s = (tat[id] ??= { n: 0, c: 0, ema: 0.5, last: '' });
+	s.n++;
+	if (dung) s.c++;
+	s.ema = s.n === 1 ? (dung ? 0.7 : 0.3) : s.ema * 0.85 + (dung ? 1 : 0) * 0.15;
+	s.last = homNay();
+	const lich = ((kho.skillHist ??= {})[id] ??= {});
+	const [luot, dungLuot] = lich[s.last] ?? [0, 0];
+	lich[s.last] = [luot + 1, dungLuot + (dung ? 1 : 0)];
+	ghi(data);
+	bao();
+}

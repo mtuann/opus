@@ -8,13 +8,32 @@ import { markdownToHtml } from 'satteri';
 import { DUONG_GOC, trangCuaDiaChi, trangTrongBan } from '../ban-build.mjs';
 import { chiDaKhoa, duLieuDaKiem } from '../du-lieu.mjs';
 import { docKhoa, truongDaKhoa } from '../khoa.mjs';
+import { GIONG, midiCua, soDauGon, tenVietCua } from '../scripts/nhac-ly.js';
+import { khoangPhim, thongTinGiong, veBanPhim, veHoaBieu, veVongChon, veVongQuangNam } from '../scripts/ve.js';
+import { CAU_HOI, nutTraLoi } from '../scripts/luyen-hoa-bieu.js';
 
 export const esc = (s) =>
 	String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 
 /** HTML đã dựng của trang có khối cần JavaScript (khuông nhạc, câu hỏi, khối nghe, danh sách việc, bài kiểm tra đầu vào,
- * chặng piano, ô gợi ý tập) không: MarkdownContent.astro chỉ tải bộ tải thành phần ở những trang này. */
-export const canTaiScript = (html) => /\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec|oz-placement|oz-muc-do|oz-goi-y)[\s"]/.test(html);
+ * chặng piano, ô gợi ý tập, bàn phím, vòng quãng năm, luyện hóa biểu) không: MarkdownContent.astro chỉ tải bộ tải thành
+ * phần ở những trang này. */
+export const canTaiScript = (html) =>
+	/\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec|oz-placement|oz-muc-do|oz-goi-y|oz-ban-phim|oz-vong|oz-lhb)[\s"]/.test(html);
+
+/** HTML đã dựng có hình hóa biểu (vẽ bằng <use href="#oz-kh-…">) không: MarkdownContent.astro thêm định nghĩa ký hiệu một lần. */
+export const canKyHieu = (html) => html.includes('href="#oz-kh-');
+
+/**
+ * Trang có công cụ phát tiếng piano (bàn phím, vòng quãng năm) không: MarkdownContent.astro ghi nguồn của mẫu âm (CC BY 3.0
+ * đòi ghi tác giả) một lần ở cuối bài, cạnh mục Nguồn.
+ */
+export const coAmPiano = (html) => /\sclass="(?:[^"]*\s)?(?:oz-ban-phim|oz-vong)[\s"]/.test(html);
+
+/** Dòng ghi nguồn mẫu âm piano (public/mau-am/piano/LICENSE.txt); data-sinh: không phải chữ của trang. */
+export const nguonAmPiano = (base = DUONG_GOC) =>
+	`<p class="oz-nguon-am" data-sinh>Tiếng piano của công cụ trên trang: mẫu âm Salamander Grand Piano V3 của Alexander Holm, giấy phép ` +
+	`<a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> (<a href="${base}mau-am/piano/LICENSE.txt">nguồn</a>).</p>`;
 
 /**
  * Địa chỉ link được dùng trong dữ liệu: trên site (/…, không phải //máy-khác), #mục, http(s), mailto. Khác (như
@@ -320,9 +339,35 @@ export function hinhLoTrinh(capDo, { hienTai, base = DUONG_GOC, gon = false } = 
 	);
 }
 
+// ---------- Hình: mười lăm hóa biểu, vòng quãng năm (bài nhạc lý 8; D3-L1) ----------
+
+/**
+ * Mười lăm hóa biểu (::hinh{ten="keysigs"}, như vùng <!-- fig:keysigs --> cũ do tools/keysigs.mjs vẽ bằng abcjs): mỗi ô
+ * một hóa biểu trên khóa Sol, số dấu hóa, giọng trưởng và giọng thứ song song; thứ tự không dấu, 1 đến 7 dấu thăng, 1 đến 7
+ * dấu giáng. Ký hiệu vẽ bằng <use> tới định nghĩa chung của trang (MarkdownContent.astro thêm). data-sinh: chữ do thành phần
+ * dựng (so chữ với site cũ bỏ qua, như vùng hình của trang cũ).
+ */
+export function hinhHoaBieu() {
+	const o = GIONG.map(
+		(k) =>
+			`<li class="oz-ks"><span class="oz-ks-n"><span aria-hidden="true">${soDauGon(k.n)}</span><span class="sr-only">${k.n === 0 ? 'không dấu hóa' : `${Math.abs(k.n)} dấu ${k.n > 0 ? 'thăng' : 'giáng'}`}</span></span>` +
+			`${veHoaBieu(k.n)}<b>${tenVietCua(k.chu_am)} trưởng</b><small>${tenVietCua(k.thu)} thứ</small></li>`,
+	);
+	return (
+		`<figure class="oz-figure oz-ks-hinh not-content" data-sinh><ol class="oz-ks-luoi" aria-label="Mười lăm hóa biểu">${o.join('')}</ol>` +
+		`<figcaption>Mười lăm hóa biểu. Dưới mỗi hóa biểu: giọng trưởng (đậm) và giọng thứ song song. Dấu hóa luôn được thêm theo đúng thứ tự.</figcaption></figure>`
+	);
+}
+
+/** Vòng quãng năm tĩnh (::hinh{ten="circle"}, như vùng <!-- fig:circle --> cũ); data-sinh như trên. */
+export const hinhVongQuangNam = () =>
+	`<figure class="oz-figure not-content" data-sinh>${veVongQuangNam()}<figcaption>Theo chiều kim đồng hồ: thêm một dấu thăng; ngược chiều: thêm một dấu giáng.</figcaption></figure>`;
+
 /** Hình đã có thành phần: tên (như vùng <!-- fig:tên --> của site cũ, hay hình mới) -> hàm dựng HTML (trang đang dựng). */
 const HINH = {
 	'lo-trinh': (trang) => hinhLoTrinh(duLieuCho(trang).capDo),
+	keysigs: () => hinhHoaBieu(),
+	circle: () => hinhVongQuangNam(),
 };
 
 /** ::hinh{ten="…"}: hình minh họa không thuộc bản ghi tác phẩm (vùng <!-- fig:… --> của trang cũ, trừ hình cấu trúc). */
@@ -466,14 +511,100 @@ export function goiYTap(duLieu = duLieuCho('ô gợi ý tập ở trang chủ', 
 	);
 }
 
+// ---------- Công cụ: bàn phím piano, vòng quãng năm, luyện hóa biểu (D3-L1) ----------
+
+/** Nốt viết kiểu "C4", "F#3", "Bb5" (phải có số quãng tám) -> số MIDI trên đàn 88 phím, hay lỗi ghi rõ chỗ sai. */
+function notPhim(chu, ten) {
+	const m = /^[A-G](?:#|b)?\d$/.test(chu) ? midiCua(chu) : null;
+	if (m === null || m < 21 || m > 108) throw new Error(`công cụ "piano": ${ten} "${chu}" không phải nốt trên đàn 88 phím (viết như C4, F#3, Bb5)`);
+	return m;
+}
+
+/**
+ * Thông số của bàn phím (như data-range, data-notes, data-play của khối oz-piano cũ): range="C3-C5" (mặc định C4-C5, như
+ * piano.js cũ; đầu hay cuối là phím đen thì mở rộng ra phím trắng bên cạnh), notes="C3 C4 C5" (phím được tô; phải nằm
+ * trong khoảng), play="chord" (nút nghe phát cùng lúc như hợp âm). Viết sai hay thông số lạ thì build hỏng.
+ */
+export function docThongSoBanPhim({ range = 'C4-C5', notes = '', play, ...thua }) {
+	const la = Object.keys(thua);
+	if (la.length) throw new Error(`công cụ "piano" không nhận thông số ${la.join(', ')} (nhận: range, notes, play)`);
+	const hai = String(range).split('-');
+	if (hai.length !== 2) throw new Error(`công cụ "piano": range "${range}" phải dạng "C3-C5"`);
+	const [thap, cao] = khoangPhim(notPhim(hai[0], 'range'), notPhim(hai[1], 'range'));
+	if (thap >= cao) throw new Error(`công cụ "piano": range "${range}" phải từ nốt thấp tới nốt cao`);
+	const to = String(notes).split(/\s+/).filter(Boolean).map((n) => notPhim(n, 'notes'));
+	const ngoai = to.filter((m) => m < thap || m > cao);
+	if (ngoai.length) throw new Error(`công cụ "piano": notes có nốt ngoài range "${range}"`);
+	if (play !== undefined && play !== 'chord') throw new Error(`công cụ "piano": play chỉ nhận "chord" (gặp "${play}")`);
+	return { thap, cao, to: [...new Set(to)], hopAm: play === 'chord' };
+}
+
+/**
+ * Bàn phím piano (::cong-cu{ten="piano" …}, như khối oz-piano của piano.js cũ): hình bàn phím dựng sẵn (veBanPhim, hiện cả
+ * khi chưa có JavaScript), dòng đọc tên nốt vừa bấm, nút nghe các nốt được tô (khi có notes). src/scripts/ban-phim.js thêm
+ * phần bấm được. Không có khung viền như các công cụ khác, để bàn phím dùng hết bề ngang của bài.
+ */
+export function banPhim(thongSo) {
+	const { thap, cao, to, hopAm } = docThongSoBanPhim(thongSo);
+	return (
+		`<div class="oz-ban-phim not-content" data-sinh data-pagefind-ignore${hopAm ? ' data-choi="hop-am"' : ''}>` +
+		`<div class="oz-phim-cuon">${veBanPhim({ thap, cao, to }).svg}</div>` +
+		`<p class="oz-stats oz-phim-ten" aria-live="polite">Bấm vào phím để nghe và xem tên nốt.</p>` +
+		(to.length ? `<div class="oz-row"><button type="button" class="oz-btn" data-k="nghe">${hopAm ? 'Nghe hợp âm' : 'Nghe các nốt được tô'}</button></div>` : '') +
+		`${canJs('Bật JavaScript trong trình duyệt để bấm phím và nghe.')}</div>`
+	);
+}
+
+/**
+ * Vòng quãng năm bấm được (::cong-cu{ten="circle"}, như khối oz-circle của circle.js cũ): vòng và thông tin của giọng Đô
+ * trưởng dựng sẵn; src/scripts/vong-quang-nam.js cho chọn giọng khác và nghe.
+ */
+export const congCuVongQuangNam = () =>
+	`<div class="oz-vong oz-tool not-content" data-sinh data-pagefind-ignore><div class="oz-vong-luoi">${veVongChon()}` +
+	`<div class="oz-vong-tin" aria-live="polite">${thongTinGiong({ giong: 'C', thu: false })}</div></div>` +
+	`${canJs('Bật JavaScript trong trình duyệt để chọn giọng khác và nghe thử.')}</div>`;
+
+/**
+ * Luyện đọc hóa biểu (::cong-cu{ten="keysig-quiz"}, như khối oz-keysig-quiz của circle.js cũ): phần điều khiển, khuông trống,
+ * câu hỏi và các nút trả lời của câu hỏi mặc định (giọng trưởng, cả 15 giọng) dựng sẵn, nên khi src/scripts/luyen-hoa-bieu.js
+ * chọn hóa biểu đầu tiên, ô không đổi chiều cao (không xô phần dưới).
+ */
+export function congCuLuyenHoaBieu() {
+	const chon = (k, nhan, ds) =>
+		`<label>${nhan} <select data-k="${k}">${ds.map(([v, t, dangChon]) => `<option value="${v}"${dangChon ? ' selected' : ''}>${t}</option>`).join('')}</select></label>`;
+	return (
+		`<div class="oz-lhb oz-tool not-content" data-sinh data-pagefind-ignore><div class="oz-row">` +
+		chon('loai', 'Hỏi về', [
+			['truong', 'Giọng trưởng'],
+			['thu', 'Giọng thứ'],
+			['ca-hai', 'Cả hai'],
+		]) +
+		chon('pham-vi', 'Phạm vi', [
+			['4', 'Đến 4 dấu hóa'],
+			['7', 'Tất cả 15 giọng', true],
+		]) +
+		chon('khoa', 'Khóa', [
+			['sol', 'Khóa Sol'],
+			['fa', 'Khóa Fa'],
+		]) +
+		`</div><div class="oz-lhb-hinh">${veHoaBieu(0)}</div><p class="oz-lhb-hoi">${CAU_HOI.truong}</p>` +
+		`<div class="oz-row oz-lhb-chon" role="group" aria-label="Chọn giọng">${nutTraLoi('truong', 7)}</div>` +
+		`<p class="oz-feedback" aria-live="polite"></p><div class="oz-row"><button type="button" class="oz-btn" data-k="tiep">Câu khác</button></div>` +
+		`<p class="oz-stats oz-lhb-so"></p>${canJs('Luyện hóa biểu cần JavaScript: bật JavaScript trong trình duyệt để làm bài.')}</div>`
+	);
+}
+
 /** Công cụ đã có thành phần: tên (như khối <div class="oz-tên"> của site cũ) -> hàm dựng HTML (thông số, trang). */
 const CONG_CU = {
 	placement: (_, trang) => placement(khoiPlacement(trang)),
 	'piano-level': (_, trang) => mucDoPiano(duLieuCho(trang)),
 	'goi-y-tap': () => goiYTap(),
+	piano: (thongSo) => banPhim(thongSo),
+	circle: () => congCuVongQuangNam(),
+	'keysig-quiz': () => congCuLuyenHoaBieu(),
 };
 /** Công cụ không có thông số: viết thêm thuộc tính thì build hỏng (gõ nhầm, hay chép từ khối cũ). */
-const KHONG_THONG_SO = new Set(['placement', 'piano-level', 'goi-y-tap']);
+const KHONG_THONG_SO = new Set(['placement', 'piano-level', 'goi-y-tap', 'circle', 'keysig-quiz']);
 
 /** ::cong-cu{ten="…" …}: công cụ luyện tập; thuộc tính khác là thông số (data-* của khối oz- cũ). */
 export function congCu({ ten, ...thongSo }, trang) {

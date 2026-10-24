@@ -2,15 +2,19 @@
 // Nội dung trang của Starlight, thêm bộ tải thành phần (src/scripts/tai.js) chỉ ở trang có khối cần JavaScript:
 // khuông nhạc, câu hỏi kiểm tra nhanh, khối nghe. Dò trên HTML đã dựng (lớp do plugin đặt), nên khớp đúng những gì
 // plugin dựng, kể cả khối ~~~abc hay câu hỏi nằm trong trích dẫn. Trang khác không tải gì thêm.
+// Trang có hình hóa biểu (vẽ bằng <use href="#oz-kh-…">) thì thêm định nghĩa các ký hiệu (khóa, dấu hóa) một lần; trang có
+// công cụ phát tiếng piano thì ghi nguồn mẫu âm (CC BY 3.0) ở cuối bài.
 // Trang có bảng thì thêm script nhỏ cho bảng cuộn ngang (BangCuon.astro).
 import Default from '@astrojs/starlight/components/MarkdownContent.astro';
-import { canTaiScript } from '../plugins/thanh-phan.mjs';
+import { canKyHieu, canTaiScript, coAmPiano, nguonAmPiano } from '../plugins/thanh-phan.mjs';
+import { dinhNghiaKyHieu } from '../scripts/ve.js';
 import BangCuon from './BangCuon.astro';
 import TaiThanhPhan from './TaiThanhPhan.astro';
 
 const html = await Astro.slots.render('default');
 ---
 
-<Default><Fragment set:html={html} /></Default>
+<Default><Fragment set:html={html} />{coAmPiano(html) && <Fragment set:html={nguonAmPiano()} />}</Default>
+{canKyHieu(html) && <Fragment set:html={dinhNghiaKyHieu()} />}
 {canTaiScript(html) && <TaiThanhPhan />}
 {/<table[\s>]/.test(html) && <BangCuon />}

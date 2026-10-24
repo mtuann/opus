@@ -9,9 +9,9 @@ after(dongMayChu);
 
 /**
  * Phần tử bấm được thấp hay hẹp hơn 44 px: nút, ô nhập, link đứng riêng (link nằm trong câu chữ, như trong đoạn văn, mục
- * danh sách, ô bảng, thì được miễn), trừ ô chọn nằm trong nhãn bấm được, và link "bỏ qua tới nội dung" của Starlight (chỉ
- * hiện khi dùng bàn phím). Link neo cạnh tiêu đề của Starlight nới vùng bấm bằng ::after mà không đổi bố cục, nên tính cả
- * phần ấy. Cho sai số nửa px của bố cục.
+ * danh sách, ô bảng, thì được miễn), trừ ô chọn nằm trong nhãn bấm được, phím đen của bàn phím đàn, và link "bỏ qua tới
+ * nội dung" của Starlight (chỉ hiện khi dùng bàn phím). Link neo cạnh tiêu đề của Starlight nới vùng bấm bằng ::after mà
+ * không đổi bố cục, nên tính cả phần ấy. Cho sai số nửa px của bố cục.
  */
 const nhoHon44 = () =>
 	[...document.querySelectorAll(
@@ -20,6 +20,9 @@ const nhoHon44 = () =>
 		.filter((x) => x.getClientRects().length && getComputedStyle(x).visibility !== 'hidden' && !x.closest('[hidden], dialog:not([open])'))
 		.filter((x) => !(x.matches('input[type=checkbox], input[type=radio]') && x.closest('label')))
 		.filter((x) => !(x.matches('a') && x.closest('p, li, td, th, dd, dt, figcaption, blockquote, .sr-only, .sl-skip-link')))
+		// phím đen của bàn phím đàn: hẹp hơn phím trắng là hình dạng của bàn phím (WCAG 2.5.5, 2.5.8: ngoại lệ "thiết yếu");
+		// phím trắng vẫn từ 44 px, phím đen từ 24 px (tests/trinh-duyet/kiem-ban-phim.mjs)
+		.filter((x) => !x.matches('.oz-phim-den'))
 		.map((x) => {
 			const r = x.getBoundingClientRect();
 			if (!x.matches('.sl-anchor-link')) return [x, r];

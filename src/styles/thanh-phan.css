@@ -947,6 +947,377 @@ html.oz-stand-open .main-pane {
 	}
 }
 
+/* ---------- Bàn phím piano (::cong-cu{ten="piano"}; veBanPhim trong src/scripts/ve.js, src/scripts/ban-phim.js) ---------- */
+/* Phím trắng sáng ở cả hai chế độ (như phím đàn thật); màu tô theo nhựa thông, màu lúc bấm theo mực. Chữ trên phím trắng
+   (cả phím được tô hay đang bấm) từ 7:1. */
+:root {
+	--oz-phim-trang: #e9ecf1;
+	--oz-phim-den: #0b0d11;
+	--oz-phim-vien: #5c6370;
+	--oz-phim-chu: #1f2329;
+	--oz-phim-to-trang: #e0b45e;
+	--oz-phim-to-den: #c08a2c;
+	--oz-phim-bam-trang: #a9c6ec;
+	--oz-phim-bam-den: #4f7fb8;
+}
+:root[data-theme='light'] {
+	--oz-phim-trang: #fff;
+	--oz-phim-den: #1b1d22;
+	--oz-phim-vien: #8a8f99;
+	--oz-phim-chu: #333;
+	--oz-phim-to-trang: #f0d49a;
+	--oz-phim-to-den: #a8771f;
+	--oz-phim-bam-trang: #a9c6ec;
+	--oz-phim-bam-den: #2f5582;
+}
+@media print {
+	:root {
+		--oz-phim-trang: #fff;
+		--oz-phim-den: #1b1d22;
+		--oz-phim-vien: #8a8f99;
+		--oz-phim-chu: #333;
+		--oz-phim-to-trang: #f0d49a;
+		--oz-phim-to-den: #a8771f;
+	}
+}
+.oz-ban-phim {
+	max-width: 100%;
+}
+/* Khung cuộn ngang: bàn phím rộng hơn khung thì cuộn trong khung, trang không tràn; dòng nhắc dưới bàn phím báo "kéo ngang"
+   (src/scripts/ban-phim.js) */
+.oz-phim-cuon {
+	overflow-x: auto;
+	overscroll-behavior-x: contain;
+	scrollbar-width: thin;
+}
+/* Mỗi phím trắng rộng 30–48 px (chuột) hay 44–52 px (cảm ứng: vùng bấm từ 44 px, AGENTS.md); --phim: số phím trắng */
+.oz-phim {
+	display: block;
+	width: clamp(calc(var(--phim) * 30px), 100%, calc(var(--phim) * 48px));
+	height: auto;
+	touch-action: manipulation;
+	user-select: none;
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: transparent;
+}
+@media (pointer: coarse) {
+	.oz-phim {
+		width: clamp(calc(var(--phim) * 44px), 100%, calc(var(--phim) * 52px));
+	}
+}
+.oz-phim-trang,
+.oz-phim-den {
+	stroke: var(--oz-phim-vien);
+	stroke-width: 1px;
+	vector-effect: non-scaling-stroke;
+	transition: fill 0.12s;
+}
+.oz-phim-trang {
+	fill: var(--oz-phim-trang);
+}
+.oz-phim-den {
+	fill: var(--oz-phim-den);
+}
+.oz-phim-trang.to {
+	fill: var(--oz-phim-to-trang);
+}
+.oz-phim-den.to {
+	fill: var(--oz-phim-to-den);
+}
+.oz-phim-trang.bam {
+	fill: var(--oz-phim-bam-trang);
+}
+.oz-phim-den.bam {
+	fill: var(--oz-phim-bam-den);
+}
+.oz-phim [role='button'] {
+	cursor: pointer;
+	outline: none;
+}
+.oz-phim [role='button']:focus-visible {
+	stroke: var(--oz-focus);
+	stroke-width: 3px;
+}
+.oz-phim-chu {
+	font-size: 8px;
+	font-weight: 600;
+	text-anchor: middle;
+	fill: var(--oz-phim-chu);
+	pointer-events: none;
+}
+.oz-phim-chu--nho {
+	font-size: 6.5px;
+	font-weight: 400;
+}
+.oz-ban-phim .oz-phim-ten {
+	min-height: 1.75em;
+	min-height: 1lh;
+	margin: 0.4rem 0 0;
+}
+/* cảm ứng: chừa hai dòng, vì dòng nhắc thêm "Kéo ngang để xem thêm phím" khi bàn phím rộng hơn khung (không xô bố cục) */
+@media (pointer: coarse) {
+	.oz-ban-phim .oz-phim-ten {
+		min-height: 3.5em;
+		min-height: 2lh;
+	}
+}
+.oz-ban-phim .oz-row {
+	margin-bottom: 0;
+}
+@media (scripting: none) {
+	.oz-ban-phim .oz-phim-ten,
+	.oz-ban-phim .oz-row,
+	.oz-vong .oz-row,
+	.oz-lhb > :not(noscript) {
+		display: none;
+	}
+}
+:is(.oz-ban-phim, .oz-vong, .oz-lhb) noscript p {
+	margin: 0.4rem 0 0;
+	font-size: var(--sl-text-sm);
+	color: var(--sl-color-gray-2);
+}
+
+.sl-markdown-content .oz-nguon-am {
+	margin-top: 1.5rem;
+	font-size: var(--sl-text-xs);
+	color: var(--sl-color-gray-2);
+}
+
+/* ---------- Hóa biểu (veHoaBieu trong src/scripts/ve.js): khuông nhỏ, khóa, các dấu ---------- */
+.oz-kh-dinh-nghia {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+.oz-hb {
+	display: block;
+	width: 100%;
+	height: auto;
+	color: var(--sl-color-white);
+}
+.oz-hb use {
+	fill: currentColor;
+}
+.oz-hb-dong path {
+	stroke: currentColor;
+	stroke-width: 0.75;
+	fill: none;
+}
+
+/* ---------- Mười lăm hóa biểu (::hinh{ten="keysigs"}) ---------- */
+.oz-ks-luoi {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(6.25rem, 1fr));
+	gap: 0.5rem 0.6rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.oz-ks {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0.25rem 0.45rem 0.45rem;
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 8px;
+	background: var(--oz-card);
+	text-align: center;
+	line-height: 1.3;
+	break-inside: avoid;
+}
+.oz-ks .oz-hb {
+	max-width: 9rem;
+	margin: 0.1rem 0 0.2rem;
+}
+.oz-ks-n {
+	align-self: flex-end;
+	font-size: var(--sl-text-xs);
+	color: var(--sl-color-gray-2);
+}
+.oz-ks b {
+	font-size: var(--sl-text-sm);
+}
+.oz-ks small {
+	font-size: var(--sl-text-xs);
+	color: var(--sl-color-gray-2);
+}
+
+/* ---------- Vòng quãng năm tĩnh (::hinh{ten="circle"}; veVongQuangNam trong src/scripts/ve.js) ---------- */
+.oz-vong-tinh text {
+	fill: currentColor;
+	text-anchor: middle;
+}
+.oz-vong-tinh .oz-vong-nhat {
+	fill: var(--sl-color-gray-2);
+}
+.oz-vong-duong {
+	fill: none;
+	stroke: var(--sl-color-gray-4);
+}
+.oz-vong-ke {
+	stroke: var(--sl-color-gray-5);
+}
+
+/* ---------- Vòng quãng năm bấm được (::cong-cu{ten="circle"}; src/scripts/vong-quang-nam.js) ---------- */
+/* Mỗi ô hình quạt: ở 360 px, khung hình còn khoảng 290 px, ô nhỏ nhất (vòng trong) vẫn rộng và cao từ 44 px */
+.oz-vong-luoi {
+	display: grid;
+	grid-template-columns: minmax(0, 20rem) minmax(0, 1fr);
+	gap: 1rem 1.4rem;
+	align-items: start;
+}
+@media (max-width: 44rem) {
+	.oz-vong-luoi {
+		grid-template-columns: minmax(0, 1fr);
+	}
+	.oz-vong-hinh {
+		max-width: 22rem;
+		margin-inline: auto;
+	}
+}
+.oz-vong-hinh {
+	display: block;
+	width: 100%;
+	height: auto;
+	-webkit-tap-highlight-color: transparent;
+}
+.oz-vong-o path {
+	fill: color-mix(in srgb, var(--sl-color-accent) 8%, var(--oz-card));
+	stroke: var(--sl-color-gray-5);
+	stroke-width: 1px;
+	vector-effect: non-scaling-stroke;
+}
+.oz-vong-o--thu path {
+	fill: color-mix(in srgb, var(--sl-color-accent) 18%, var(--oz-card));
+}
+.oz-vong-o text {
+	font-size: 16px;
+	font-weight: 600;
+	text-anchor: middle;
+	fill: var(--sl-color-white);
+	pointer-events: none;
+}
+.oz-vong-o--thu text {
+	font-size: 14px;
+	font-weight: 400;
+}
+.oz-vong-o text.oz-vong-dai {
+	font-size: 12px;
+}
+.oz-vong-o[role='radio'] {
+	cursor: pointer;
+	outline: none;
+}
+.oz-vong-o[role='radio']:hover path {
+	stroke: var(--oz-accent);
+	stroke-width: 2px;
+}
+.oz-vong-o:focus-visible path {
+	stroke: var(--oz-focus);
+	stroke-width: 3px;
+}
+.oz-vong-o.chon path {
+	fill: var(--sl-color-accent-high);
+}
+.oz-vong-o.chon text {
+	fill: var(--sl-color-black);
+}
+.oz-vong-giua {
+	fill: var(--oz-card);
+	stroke: var(--sl-color-gray-5);
+}
+.oz-vong-giua-chu {
+	font-size: 22px;
+	font-weight: 600;
+	text-anchor: middle;
+	fill: var(--sl-color-white);
+}
+.oz-vong-tin p {
+	margin: 0.35rem 0 0;
+	font-size: var(--sl-text-sm);
+}
+.oz-vong-tin .oz-vong-ten {
+	margin-top: 0;
+	font-size: var(--sl-text-base);
+}
+.oz-vong-hb .oz-hb {
+	max-width: 11rem;
+	margin: 0.3rem 0 0.1rem;
+}
+
+/* ---------- Luyện đọc hóa biểu (::cong-cu{ten="keysig-quiz"}; src/scripts/luyen-hoa-bieu.js) ---------- */
+.oz-lhb label {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	font-size: var(--sl-text-sm);
+}
+/* Ô chọn tự vẽ (appearance: none, mũi tên bằng gradient theo màu chữ): ô chọn gốc của WebKit trên điện thoại giữ chiều cao
+   khoảng 23 px, không theo min-height */
+.oz-lhb select {
+	appearance: none;
+	-webkit-appearance: none;
+	font: inherit;
+	padding: 0.3rem 1.8rem 0.3rem 0.55rem;
+	border: 1px solid var(--sl-color-gray-4);
+	border-radius: 8px;
+	color: var(--sl-color-white);
+	background-color: var(--sl-color-black);
+	background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+	background-position:
+		calc(100% - 0.95rem) 55%,
+		calc(100% - 0.6rem) 55%;
+	background-size: 0.35rem 0.35rem;
+	background-repeat: no-repeat;
+}
+@media (pointer: coarse) {
+	.oz-lhb select {
+		min-height: 44px;
+		min-width: 44px;
+	}
+}
+.oz-lhb-hinh .oz-hb {
+	max-width: 15rem;
+}
+.oz-lhb-hoi {
+	margin: 0.2rem 0 0;
+	font-weight: 600;
+}
+.oz-lhb-chon small {
+	font-size: var(--sl-text-xs);
+	color: var(--sl-color-gray-2);
+}
+.oz-lhb-chon .is-correct small,
+.oz-lhb-chon .is-wrong small {
+	color: inherit;
+}
+
+@media print {
+	.oz-phim-cuon {
+		overflow: visible;
+		background: none;
+	}
+	.oz-phim {
+		width: min(100%, calc(var(--phim) * 1cm));
+	}
+	.oz-ban-phim :is(.oz-phim-ten, .oz-row),
+	.oz-vong .oz-row,
+	.oz-lhb {
+		display: none;
+	}
+	.oz-phim-trang,
+	.oz-phim-den,
+	.oz-ks {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+	.oz-ks-luoi {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
+
 /* ---------- Học tiếp ---------- */
 .sl-markdown-content .oz-hoc-tiep li + li {
 	margin-top: 0.4rem;

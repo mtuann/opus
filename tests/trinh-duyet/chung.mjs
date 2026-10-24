@@ -43,7 +43,8 @@ export async function goc() {
 export const dongMayChu = () => mayChu?.dong();
 
 /**
- * Chạy trong trang: các khối chưa dựng xong (khuông chưa vẽ, câu hỏi chưa có nút, khối nghe còn rỗng). `ten`: trả tên các
+ * Chạy trong trang: các khối chưa dựng xong (khuông chưa vẽ, câu hỏi chưa có nút, khối nghe còn rỗng, bàn phím và công cụ
+ * hóa biểu chưa gắn phần bấm được). `ten`: trả tên các
  * khối ấy; không thì cuộn tới khối đầu tiên còn chờ, và trả true khi không còn khối nào chờ.
  */
 function khoiCho(ten) {
@@ -51,6 +52,8 @@ function khoiCho(ten) {
 		...[...document.querySelectorAll('.abc-notation')].filter((e) => !e.dataset.rendered),
 		...[...document.querySelectorAll('.oz-quiz')].filter((e) => !e.querySelector('button')),
 		...[...document.querySelectorAll('.oz-listen')].filter((e) => !e.childElementCount),
+		// bàn phím, vòng quãng năm, luyện hóa biểu (D3-L1): hình dựng sẵn, script gắn phần bấm được rồi đặt data-san
+		...document.querySelectorAll('.oz-ban-phim:not([data-san]), .oz-vong:not([data-san]), .oz-lhb:not([data-san])'),
 	];
 	if (ten) return cho.map((e) => `${e.className} "${e.textContent.trim().slice(0, 30)}"`);
 	cho[0]?.scrollIntoView({ block: 'center' });

@@ -14,6 +14,10 @@ const LUAT = [
 	['.oz-muc-do', () => import('./muc-do.js'), true],
 	// khởi tạo ngay: ô gợi ý tập ở trang chủ có gợi ý riêng thì chuyển mục của nó lên đầu, làm sớm cho đỡ xô bố cục
 	['.oz-goi-y', () => import('./goi-y.js'), true],
+	// bàn phím, vòng quãng năm, luyện hóa biểu (D3-L1): hình đã dựng sẵn lúc build, script chỉ thêm phần bấm được
+	['.oz-ban-phim', () => import('./ban-phim.js'), false],
+	['.oz-vong', () => import('./vong-quang-nam.js'), false],
+	['.oz-lhb', () => import('./luyen-hoa-bieu.js'), false],
 ];
 const LE = 600;
 const cho = new Map(); // phần tử đang chờ tới gần màn hình -> hàm khởi tạo (trả về promise)

@@ -22,7 +22,8 @@ const kho = (p) => p.evaluate(() => JSON.parse(localStorage.getItem('opus-zero:v
 const khongCo = (khoi) => `bản build không có trang nào có ${khoi}`;
 
 /**
- * Trong trang: mọi khối nằm trước phần tử `id` đã dựng xong: khuông đã vẽ, câu hỏi có nút, khối nghe có con. Không chờ một
+ * Trong trang: mọi khối nằm trước phần tử `id` đã dựng xong: khuông đã vẽ, câu hỏi có nút, khối nghe có con, bàn phím và
+ * công cụ hóa biểu đã gắn phần bấm được. Không chờ một
  * khoảng cố định: máy chậm (WebKit trên máy của GitHub) vẽ khuông lâu hơn mọi khoảng ấy.
  */
 function khoiTruocDaDung(id) {
@@ -31,6 +32,7 @@ function khoiTruocDaDung(id) {
 		...[...document.querySelectorAll('.abc-notation')].filter((e) => !e.dataset.rendered),
 		...[...document.querySelectorAll('.oz-quiz')].filter((e) => !e.querySelector('button')),
 		...[...document.querySelectorAll('.oz-listen')].filter((e) => !e.childElementCount),
+		...document.querySelectorAll('.oz-ban-phim:not([data-san]), .oz-vong:not([data-san]), .oz-lhb:not([data-san])'),
 	].filter((e) => e.compareDocumentPosition(t) & Node.DOCUMENT_POSITION_FOLLOWING).length;
 }
 
