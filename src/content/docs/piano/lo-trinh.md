@@ -9,23 +9,15 @@ Năm đầu tiên được viết chi tiết theo từng tháng ở [Lộ trình
 
 ## Tổng quan
 
-| Chặng | Tương đương (≈ ABRSM) | Mốc thời gian* | Thời lượng tập gợi ý | Tác phẩm tiêu biểu |
-|---|---|---|---|---|
-| 1. Khởi đầu | trước Grade 1 | 0–6 tháng | 20–30 phút/ngày | [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/) |
-| 2. Sơ cấp | Grade 1–2 | 6 tháng – 1,5 năm | 30 phút | [Minuet Sol trưởng](/opus/piano/tac-pham/minuet-sol/), [Schumann Op. 68](/opus/piano/tac-pham/schumann-album/) |
-| 3. Sơ trung cấp | Grade 3 | 1,5–2,5 năm | 30–45 phút | [Clementi Op. 36 số 1](/opus/piano/tac-pham/clementi-sonatina/), [Arabesque](/opus/piano/tac-pham/burgmuller-arabesque/) |
-| 4. Trung cấp | Grade 4–5 | 2,5–4 năm | 45 phút | [Bach: Prelude Đô trưởng](/opus/piano/tac-pham/bach-prelude-do/), [Für Elise](/opus/piano/tac-pham/fur-elise/) |
-| 5. Trung cấp cao | Grade 6 | 4–5,5 năm | 45–60 phút | [Mozart K. 545](/opus/piano/tac-pham/mozart-k545/), [Invention số 1](/opus/piano/tac-pham/bach-invention-1/) |
-| 6. Nâng cao | Grade 7–8 | 5,5–9 năm | 60–90 phút | [Pathétique, chương 2](/opus/piano/tac-pham/pathetique-adagio/), [Clair de lune](/opus/piano/tac-pham/debussy-clair-de-lune/) |
-| 7. Sau Grade 8 | diploma trở lên | không giới hạn | 1–3 giờ, chia nhiều buổi | [Ballade số 1](/opus/piano/tac-pham/chopin-ballade-1/) |
+::hinh{ten="lo-trinh"}
 
-\* Tính từ ngày bắt đầu, cho người lớn tập đều đặn và có người hướng dẫn (thầy, hoặc ít nhất là người nghe và góp ý định kỳ). Đây là con số rất thô: có người đi nhanh gấp đôi, có người mất gấp đôi thời gian, và cả hai đều bình thường. Điều quyết định không phải tốc độ, mà là bạn có tiếp tục đi hay không.
+Mốc thời gian tính từ ngày bắt đầu, cho người lớn tập đều đặn và có người hướng dẫn (thầy, hoặc ít nhất là người nghe và góp ý định kỳ). Đây là con số rất thô: có người đi nhanh gấp đôi, có người mất gấp đôi thời gian, và cả hai đều bình thường. Điều quyết định không phải tốc độ, mà là bạn có tiếp tục đi hay không.
 
 Hàng **Nhạc lý** ở mỗi chặng là mức tối thiểu cần có. Nhạc lý thường đi nhanh hơn đôi tay: [lộ trình năm đầu](/opus/bat-dau/lo-trinh-choi/) học hết bài 1–15 ngay trong 12 tháng, và học trước như vậy là tốt.
 
 ## Các cấp ABRSM, Trinity và các chặng ở đây
 
-Site dùng **cấp (grade) của ABRSM** làm thước đo độ khó, vì đây là hệ thống phổ biến nhất thế giới và gần như mọi danh sách tác phẩm đều tham chiếu nó.
+Site dùng **cấp (grade) của ABRSM** làm thước đo độ khó, vì đây là hệ thống phổ biến nhất thế giới.
 
 - **ABRSM** và **Trinity College London** (đều của Anh) có cấp Initial, rồi Grade 1 đến Grade 8, sau đó là các bằng diploma. Chương trình thi, lịch đổi chương trình và các bằng diploma được ghi ở [Học với thầy và thi cấp](/opus/piano/thay-va-thi/#thi-cap).
 - Nhà xuất bản **G. Henle** có thang độ khó thứ hai, từ 1 đến 9, cho từng tác phẩm; cách đọc và bảng đối chiếu với các chặng ở [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/#cach-oc-danh-muc).
@@ -46,8 +38,8 @@ Mục tiêu: ngồi đúng, biết bàn phím, đọc được nốt ở cả ha
 | Gam, hợp âm | Năm ngón trưởng và thứ ở Đô, Sol, Rê, La, Mi, Fa. [Gam](/opus/piano/gam/) Đô trưởng một quãng tám, từng tay, luồn ngón cái. Hợp âm Đô và Sol bảy ở tay trái (I và V7), xem [hợp âm và hình đệm](/opus/piano/hop-am-rai/). |
 | Đọc nhạc | Khuông kép và [các nốt mốc](/opus/piano/ban-do-ban-phim/): Đô giữa, Sol của khóa Sol, Fa của khóa Fa. Đọc bài 4–8 ô nhịp trong vị trí năm ngón, đếm to. Mỗi ngày 5 phút [đọc nốt](/opus/luyen-tap/doc-not/). |
 | Nhạc lý | [Bài 1](/opus/nhac-ly/01-cao-do-ten-not/) đến [bài 5](/opus/nhac-ly/05-dau-hoa/), rồi [Ôn tập 1](/opus/nhac-ly/on-tap-1/). |
-| Tai | [Hát lại](/opus/luyen-tap/hat-lai/) một nốt, [nghe quãng](/opus/luyen-tai/nghe-quang/) 2, 3 và 5; gõ đúng [tiết tấu](/opus/luyen-tap/tiet-tau/) đơn giản. |
-| Tác phẩm | [Hai tuần đầu tiên](/opus/piano/hai-tuan-dau/), [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/), một giáo trình cho người lớn (Alfred, Faber), các bài đầu trong Türk, Bartók *Mikrokosmos*. Xem [chặng 1 trong danh mục](/opus/piano/tac-pham-theo-cap/). |
+| Tai | [Hát lại](/opus/luyen-tap/hat-lai/) một nốt, [nghe quãng](/opus/luyen-tai/nghe-quang/) 3 trưởng, 5 đúng và 8 đúng; gõ đúng [tiết tấu](/opus/luyen-tap/tiet-tau/) đơn giản. |
+| Tác phẩm | [Hai tuần đầu tiên](/opus/piano/hai-tuan-dau/), [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/), một giáo trình cho người lớn (Alfred, Faber), các bài đầu trong Türk, Bartók *Mikrokosmos*. Bài học trên site: [trang chặng 1](/opus/piano/lo-trinh/chang-1/). Xem thêm [chặng 1 trong danh mục](/opus/piano/tac-pham-theo-cap/). |
 | Nghe | Những bài bạn sẽ chơi trong vài năm tới, để có đích đến: [Bach: Prelude Đô trưởng](/opus/piano/tac-pham/bach-prelude-do/), [Schumann: Kinderszenen](/opus/nghe-nhac/schumann-kinderszenen/), [Beethoven: Ánh trăng](/opus/nghe-nhac/beethoven-moonlight/). |
 | Biểu diễn | Thu âm mỗi tuần. Cuối chặng, chơi 3 bài cho người thân nghe. |
 
@@ -70,7 +62,7 @@ Mục tiêu: rời khỏi vị trí năm ngón, chơi những bản nhạc cổ 
 | Đọc nhạc | [Thị tấu](/opus/piano/thi-tau/) bài hai tay 4–8 ô nhịp, ít dấu hóa, dễ hơn bài đang tập khoảng hai cấp. Tập đọc theo **hình dạng quãng** thay vì gọi tên từng nốt. |
 | Nhạc lý | [Bài 6](/opus/nhac-ly/06-gam-truong/) đến [bài 9](/opus/nhac-ly/09-quang/) (gam, hóa biểu, quãng), rồi [Ôn tập 2](/opus/nhac-ly/on-tap-2/). |
 | Tai | [Nghe quãng](/opus/luyen-tai/nghe-quang/), phân biệt [hợp âm trưởng và thứ](/opus/luyen-tai/nghe-hop-am/), [nhận biết gam](/opus/luyen-tai/nghe-gam/#luyen-voi-cong-cu). [Chơi theo tai](/opus/luyen-tai/choi-bang-tai/): tìm lại trên phím một giai điệu quen, đệm bằng I, IV, V, chơi lại ở Sol trưởng và Fa trưởng. |
-| Tác phẩm | [Mozart: Minuet Fa trưởng K. 2](/opus/piano/tac-pham/mozart-minuet-k2/), [Petzold: Minuet Sol trưởng](/opus/piano/tac-pham/minuet-sol/) và [Sol thứ](/opus/piano/tac-pham/minuet-sol-thu/), [Musette Rê trưởng](/opus/piano/tac-pham/musette-re/), [Schumann: Album für die Jugend](/opus/piano/tac-pham/schumann-album/) (Melodie, Wilder Reiter, Fröhlicher Landmann), [Burgmüller: La candeur](/opus/piano/tac-pham/burgmuller-la-candeur/), [Tchaikovsky: Bài ca Pháp cổ](/opus/piano/tac-pham/tchaikovsky-bai-ca-phap-co/), Kabalevsky, Bartók *For Children*. |
+| Tác phẩm | Bài học trên site: [trang chặng 2](/opus/piano/lo-trinh/chang-2/). Ngoài ra: Kabalevsky, Bartók *For Children*. |
 | Nghe | [Mozart: Sonata K. 331](/opus/nghe-nhac/mozart-k331/), [Scarlatti: các sonata](/opus/nghe-nhac/scarlatti-sonata/), [Chopin: Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/). |
 | Biểu diễn | Học thuộc một bài. Quay video chơi trọn 3 bài như một buổi hòa nhạc nhỏ. |
 
@@ -93,7 +85,7 @@ Mục tiêu: chơi trọn một sonatina Cổ điển, ngón chạy đều, và 
 | Đọc nhạc | Thị tấu ở mức Grade 1–2. Nhận ra hợp âm ba ở mọi thể đảo chỉ bằng một cái nhìn. Đọc trước nửa ô nhịp. |
 | Nhạc lý | [Bài 10](/opus/nhac-ly/10-hop-am-ba/) đến [bài 14](/opus/nhac-ly/14-ky-hieu-bieu-dien/) (hợp âm, hòa âm chức năng, kết, ký hiệu biểu diễn), rồi [Ôn tập 3](/opus/nhac-ly/on-tap-3/). |
 | Tai | [Nghe tiến trình hòa âm](/opus/luyen-tai/nghe-tien-trinh/): nghe ra I, IV, V và các kết. |
-| Tác phẩm | [Clementi: Sonatina Op. 36 số 1](/opus/piano/tac-pham/clementi-sonatina/), [Burgmüller: Arabesque](/opus/piano/tac-pham/burgmuller-arabesque/), [Chopin: Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/), [Bach: Prelude nhỏ Đô trưởng BWV 939](/opus/piano/tac-pham/bach-prelude-bwv939/), [Sonatina Sol trưởng Anh. 5 số 1](/opus/piano/tac-pham/beethoven-sonatina-sol/), [Tchaikovsky: Cầu nguyện buổi sáng](/opus/piano/tac-pham/tchaikovsky-cau-nguyen-buoi-sang/), Kuhlau: Sonatina Op. 55 số 1. |
+| Tác phẩm | Bài học trên site: [trang chặng 3](/opus/piano/lo-trinh/chang-3/). |
 | Nghe | [Mozart: Concerto piano số 21](/opus/nghe-nhac/mozart-concerto-21/), [Schubert: Impromptu Op. 90 số 3](/opus/nghe-nhac/schubert-impromptu/), [Beethoven: Pathétique](/opus/nghe-nhac/beethoven-pathetique/). |
 | Biểu diễn | Chơi trọn một sonatina ba chương. Học thuộc hai bài. |
 
@@ -116,7 +108,7 @@ Mục tiêu: chơi phức điệu, làm nổi giai điệu trong cùng một tay
 | Đọc nhạc | Thị tấu ở mức Grade 2–3. Đọc trước một ô nhịp. Bắt đầu đọc nhạc [bốn tay](/opus/piano/choi-cung-nguoi-khac/) cùng người khác. |
 | Nhạc lý | [Bài 15](/opus/nhac-ly/15-tiet-tau-nang-cao/) đến [bài 19](/opus/nhac-ly/19-at-phu-chuyen-giong/) (tiết tấu nâng cao, điệu thức, dịch giọng, âm ngoài hợp âm, át phụ và chuyển giọng) và [bài 31: Hình thức nhỏ](/opus/nhac-ly/31-hinh-thuc-nho/); đọc [Rondo](/opus/hinh-thuc/rondo/). |
 | Tai | [Chép giai điệu](/opus/luyen-tap/chep-giai-dieu/) ngắn; nghe tiến trình có hợp âm thứ. |
-| Tác phẩm | [Bach: Prelude Đô trưởng](/opus/piano/tac-pham/bach-prelude-do/), [Beethoven: Für Elise](/opus/piano/tac-pham/fur-elise/), [Chopin: Prélude Mi thứ](/opus/piano/tac-pham/chopin-prelude-mi-thu/), [Satie: Gymnopédie số 1](/opus/piano/tac-pham/satie-gymnopedie/), [Chopin: Prélude La trưởng](/opus/piano/tac-pham/chopin-prelude-la-truong/), [Grieg: Arietta](/opus/piano/tac-pham/grieg-arietta/) và các *Lyric Pieces* khác trong Op. 12, [Beethoven: Sonata Op. 49 số 2](/opus/piano/tac-pham/beethoven-op49-2/). |
+| Tác phẩm | Bài học trên site: [trang chặng 4](/opus/piano/lo-trinh/chang-4/). Ngoài ra: Kuhlau: Sonatina Op. 55 số 1, các *Lyric Pieces* khác trong Op. 12 của Grieg. |
 | Nghe | [Bach: Goldberg Variations](/opus/nghe-nhac/bach-goldberg/), [Chopin: Études](/opus/nghe-nhac/chopin-etude/), [Liszt: Liebestraum số 3](/opus/nghe-nhac/liszt-liebestraum/). |
 | Biểu diễn | Một chương trình 10 phút, ba bài thuộc ba thời kỳ, học thuộc. |
 
@@ -139,7 +131,7 @@ Mục tiêu: chơi một chương sonata thật, giữ nhiều lớp âm thanh t
 | Đọc nhạc | Thị tấu ở mức Grade 3–4. Đệm cho người hát hoặc chơi nhạc cụ khác: đọc cùng lúc khuông giai điệu và hai khuông piano. |
 | Nhạc lý | [Bài 21: Hòa âm bốn bè](/opus/nhac-ly/21-hoa-am-bon-be/), [bài 22: Đối âm](/opus/nhac-ly/22-doi-am/) (rất có ích khi chơi Bach), bài 23–25, và [bài 26: Phân tích một tác phẩm](/opus/nhac-ly/26-phan-tich/); đọc [Hình thức sonata](/opus/hinh-thuc/sonata/). |
 | Tai | Nhận biết [hợp âm bảy](/opus/luyen-tai/nghe-hop-am/#luyen-voi-cong-cu) và các kiểu kết. |
-| Tác phẩm | [Mozart: Sonata K. 545, chương 1](/opus/piano/tac-pham/mozart-k545/), [Bach: Invention số 1](/opus/piano/tac-pham/bach-invention-1/), [Schumann: Träumerei](/opus/piano/tac-pham/schumann-traumerei/), [Beethoven: *Ánh trăng*, chương 1](/opus/piano/tac-pham/beethoven-anh-trang/), [Chopin: Valse Si thứ Op. 69 số 2](/opus/piano/tac-pham/chopin-valse-si-thu/), [Mendelssohn: Thuyền ca Venice](/opus/piano/tac-pham/mendelssohn-thuyen-ca/), Debussy: *The Little Shepherd*, Bartók: *Romanian Folk Dances*. |
+| Tác phẩm | Bài học trên site: [trang chặng 5](/opus/piano/lo-trinh/chang-5/). Ngoài ra: Debussy: *The Little Shepherd*, vài bài trong *Romanian Folk Dances* của Bartók. |
 | Nghe | [Brahms: Intermezzo Op. 118 số 2](/opus/nghe-nhac/brahms-intermezzo/), [Grieg: Concerto piano](/opus/nghe-nhac/grieg-concerto/), [Mussorgsky: Bức tranh triển lãm](/opus/nghe-nhac/mussorgsky-tranh/). |
 | Biểu diễn | Chương trình 15 phút. Thử song tấu bốn tay hoặc đệm cho một người bạn ([cách tập chung](/opus/piano/choi-cung-nguoi-khac/)). |
 
@@ -160,9 +152,9 @@ Mục tiêu: chơi những tác phẩm lớn được yêu thích nhất, với 
 | Tay | Tốc độ và sức bền. [Quãng tám, hợp âm lớn, nhảy xa](/opus/piano/quang-tam-buoc-nhay/). Nhiều lớp âm thanh cùng lúc. Rubato có kiểm soát. Bàn đạp theo phong cách: tiết kiệm với Mozart, theo hòa âm với Chopin, nửa bàn đạp và una corda với Debussy. Nốt hoa mỹ kiểu Chopin. Fugue ba bè. |
 | Gam, hợp âm | Toàn bộ gam và hợp âm rải ở tốc độ nhanh; gam cách quãng ba, quãng sáu nếu bạn định thi. |
 | Đọc nhạc | Thị tấu ở mức Grade 5. Chơi nhạc thính phòng: sonata cho violin hoặc cello với piano. |
-| Nhạc lý | [Bài 27](/opus/nhac-ly/27-ky-hieu-hop-am/) đến [bài 32](/opus/nhac-ly/32-ky-thuat-the-ky-20/) (kết cấu, chuỗi hòa âm, phát triển môtip, hình thức, kỹ thuật thế kỷ 20). Phân tích mọi bài mình chơi. |
+| Nhạc lý | [Bài 27](/opus/nhac-ly/27-ky-hieu-hop-am/) đến [bài 32](/opus/nhac-ly/32-ky-thuat-the-ky-20/) (ký hiệu hợp âm, kết cấu, chuỗi hòa âm, phát triển môtip, hình thức, kỹ thuật thế kỷ 20). Phân tích mọi bài mình chơi. |
 | Tai | Nghe và so sánh nhiều bản thu của cùng một tác phẩm, xem [nghệ sĩ và bản thu](/opus/piano/nghe-si/). |
-| Tác phẩm | [Beethoven: Pathétique, chương 2](/opus/piano/tac-pham/pathetique-adagio/), [Chopin: Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/), [Debussy: Clair de lune](/opus/piano/tac-pham/debussy-clair-de-lune/), [Schubert: Impromptu Sol♭ trưởng](/opus/piano/tac-pham/schubert-impromptu-sol-giang/) và các Impromptu khác trong Op. 90, Brahms: Intermezzo Op. 118 số 2, [Bach: Prelude và fugue Đô thứ BWV 847](/opus/piano/tac-pham/bach-prelude-fugue-do-thu/) và các Sinfonia, Mozart: Sonata K. 330. |
+| Tác phẩm | Bài học trên site: [trang chặng 6](/opus/piano/lo-trinh/chang-6/). Ngoài ra: các Impromptu khác trong Op. 90 của Schubert, Brahms: Intermezzo Op. 118 số 2, các Sinfonia của Bach, Mozart: Sonata K. 330. |
 | Nghe | [Beethoven: Pathétique](/opus/nghe-nhac/beethoven-pathetique/) (cả ba chương), [Rachmaninoff: Concerto số 2](/opus/nghe-nhac/rachmaninoff-2/), [Bach: Goldberg Variations](/opus/nghe-nhac/bach-goldberg/) trong hai bản thu khác nhau. |
 | Biểu diễn | Chương trình 20–30 phút thuộc lòng, nhiều phong cách. Biểu diễn trước khán giả không quen biết. |
 
@@ -180,9 +172,10 @@ Mục tiêu: chơi những tác phẩm lớn được yêu thích nhất, với 
 
 Những hướng đi:
 
+- **Bài học trên site**: [trang chặng 7](/opus/piano/lo-trinh/chang-7/).
 - **Những bài đầu tiên của chặng**: [Chopin: *Fantaisie-Impromptu*](/opus/piano/tac-pham/chopin-fantaisie-impromptu/) và [Liszt: *Liebestraum* số 3](/opus/piano/tac-pham/liszt-liebestraum/): kỹ thuật lớn (ba chọi bốn, quãng tám, cadenza) trong khuôn khổ năm phút.
-- **Mỗi năm một tác phẩm lớn**: [Chopin: Ballade số 1](/opus/piano/tac-pham/chopin-ballade-1/), một sonata giữa hoặc cuối đời của Beethoven, một Partita của Bach, *Kinderszenen* hay *Kreisleriana* của Schumann, *Préludes* của Debussy.
-- **Chơi cùng người khác**: song tấu bốn tay, sonata violin và piano, tam tấu, đệm hát. Đây là cách nhanh nhất để tiến bộ về nhịp và lắng nghe (xem [Chơi cùng người khác](/opus/piano/choi-cung-nguoi-khac/)).
+- **Mỗi năm một tác phẩm lớn**: [Chopin: Ballade số 1](/opus/piano/tac-pham/chopin-ballade-1/), một sonata giữa hoặc cuối đời của Beethoven, một Partita của Bach, trọn tập *Kinderszenen* hay *Kreisleriana* của Schumann, *Préludes* của Debussy.
+- **Chơi cùng người khác**: song tấu bốn tay, sonata violin và piano, tam tấu, đệm hát. Đây là một cách rất tốt để tiến bộ về nhịp và lắng nghe (xem [Chơi cùng người khác](/opus/piano/choi-cung-nguoi-khac/)).
 - **Concerto**: học một concerto Mozart với người chơi phần dàn nhạc trên piano thứ hai.
 - **Phong cách lịch sử**: nếu có dịp, thử fortepiano hoặc harpsichord để hiểu vì sao Mozart và Bach viết như vậy ([lịch sử cây đàn](/opus/piano/lich-su-dan/)).
 - **Học từ người khác**: masterclass, so sánh bản thu, đọc sách về diễn tấu ([nghệ sĩ và bản thu](/opus/piano/nghe-si/)).
@@ -196,7 +189,7 @@ Những hướng đi:
 
 ## Khi bị chững lại
 
-Gần như ai cũng có những tháng thấy mình "đứng yên"; thường đó là lúc tay đang tiêu hóa những gì đã học. Nếu kéo dài, đi qua danh sách kiểm tra ở [Cách tập: khi bị giậm chân tại chỗ](/opus/piano/cach-tap/#khi-bi-giam-chan-tai-cho), và nghe lại bản thu cũ của mình sau ba tháng: bạn sẽ thấy mình đã đi xa hơn mình nghĩ.
+Gần như ai cũng có những tháng thấy mình "đứng yên". Nếu kéo dài, đi qua danh sách kiểm tra ở [Cách tập: khi bị giậm chân tại chỗ](/opus/piano/cach-tap/#khi-bi-giam-chan-tai-cho), và nghe lại bản thu cũ của mình sau ba tháng: bạn sẽ thấy mình đã đi xa hơn mình nghĩ.
 
 ## Nguồn
 

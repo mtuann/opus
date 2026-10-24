@@ -6,12 +6,18 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { chromium } from 'playwright';
-import { DIST, TRINH_DUYET, dongMayChu, goc, nguCanh, trangCo } from './chung.mjs';
+import { DIST, TRANG, TRINH_DUYET, dongMayChu, goc, nguCanh, trangCo } from './chung.mjs';
 
 after(dongMayChu);
 const KHUONG = trangCo('oz-abc');
 const QUIZ = trangCo('oz-quiz');
 const VIEC = trangCo('task-list-item oz-viec');
+const PLACEMENT = trangCo('oz-placement');
+const MUC_DO = trangCo('oz-muc-do');
+/** Trang mẫu có menu bên (không phải trang splash, trang 404). */
+const CO_MENU = TRANG.filter((t) => !t.endsWith('.html') && fs.readFileSync(path.join(DIST, t, 'index.html'), 'utf8').includes('id="starlight__sidebar"'));
+/** Kho học trong trình duyệt (opus-zero:v1). */
+const kho = (p) => p.evaluate(() => JSON.parse(localStorage.getItem('opus-zero:v1') || '{}').store ?? {});
 const khongCo = (khoi) => `bản build không có trang nào có ${khoi}`;
 
 for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
@@ -155,6 +161,116 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 			assert.ok(await o.isChecked(), 'tải lại trang thì mất dấu');
 			await o.uncheck();
 			assert.equal(await p.evaluate(() => JSON.stringify(JSON.parse(localStorage.getItem('opus-zero:v1')).store.checks)), '{}', 'bỏ dấu mà kho còn');
+			await ctx.close();
+		} finally {
+			await trinhDuyet.close();
+		}
+	});
+
+	// D2-L1: bài kiểm tra đầu vào, phần nhạc lý (placement.js)
+	test(`${ten}: kiểm tra đầu vào, nhạc lý: trả lời hết thì có bảng kết quả và bài nên bắt đầu, lưu như site cũ, làm lại được`, { skip: !PLACEMENT.length && khongCo('bài kiểm tra nhạc lý') }, async () => {
+		const trinhDuyet = await loai.launch();
+		try {
+			const ctx = await nguCanh(trinhDuyet, ten, { w: 360, h: 780, camUng: true });
+			const p = await ctx.newPage();
+			await p.goto((await goc()) + PLACEMENT[0], { waitUntil: 'load' });
+			const hop = p.locator('.oz-placement').first();
+			await hop.scrollIntoViewIfNeeded();
+			await p.waitForFunction(() => document.querySelector('.oz-placement .oz-btn'), null, { timeout: 20000 });
+			const { bai } = JSON.parse(await hop.getAttribute('data-placement'));
+			// bài đầu: đúng hết; còn lại: "Tôi chưa biết"
+			for (let i = 0, k = 0; i < bai.length; i++)
+				for (const c of bai[i].cau) {
+					const t = i === 0 ? c.opts.find((o) => o.ok).t : 'Tôi chưa biết';
+					await hop.evaluate((el, t) => {
+						const mau = document.createElement('div');
+						mau.innerHTML = t;
+						[...el.querySelectorAll('.oz-btn')].find((b) => b.innerHTML === mau.innerHTML).click();
+					}, t);
+					k++;
+				}
+			await p.waitForFunction(() => document.querySelector('.oz-placement table'), null, { timeout: 5000 });
+			assert.equal(await hop.locator('tbody tr').count(), bai.length, 'mỗi bài một dòng kết quả');
+			assert.match(await hop.locator('.oz-feedback').innerText(), new RegExp(`bài ${bai[1].n}:`));
+			const luu = (await kho(p)).placement;
+			assert.equal(luu?.start, bai[1].n, `kho placement: ${JSON.stringify(luu)}`);
+			assert.match(luu?.date ?? '', /^\d{4}-\d{2}-\d{2}$/);
+			// link tới bài chưa lên site là chữ "sắp có", như link dựng lúc build
+			const sapCo = await hop.locator('.oz-sap-co').count();
+			const link = await hop.locator('tbody a').count();
+			assert.equal(sapCo + link, bai.length + 1, 'mỗi bài (và bài gợi ý) một link hay một chữ "sắp có"');
+			await hop.getByRole('button', { name: 'Làm lại' }).click();
+			assert.match(await hop.locator('.oz-pl-dau').innerText(), /^Câu 1\//);
+			await ctx.close();
+		} finally {
+			await trinhDuyet.close();
+		}
+	});
+
+	// D2-L1: chặng piano tự đánh giá (muc-do.js)
+	test(`${ten}: kiểm tra đầu vào, piano: đánh dấu hai trong ba việc của nhóm đầu thì ra chặng 2, lưu như site cũ`, { skip: !MUC_DO.length && khongCo('phần chặng piano') }, async () => {
+		const trinhDuyet = await loai.launch();
+		try {
+			const ctx = await nguCanh(trinhDuyet, ten, { w: 360, h: 780, camUng: true });
+			const p = await ctx.newPage();
+			await p.goto((await goc()) + MUC_DO[0], { waitUntil: 'load' });
+			await p.waitForFunction(() => document.querySelector('.oz-muc-do p'), null, { timeout: 20000 });
+			assert.match(await p.locator('.oz-muc-do').innerText(), /Chưa đánh dấu gì/);
+			const o = p.locator('.oz-piano-level ul').first().locator(':scope > li.oz-viec > .oz-viec-o');
+			for (const i of [0, 1]) {
+				await o.nth(i).scrollIntoViewIfNeeded();
+				await o.nth(i).tap();
+			}
+			await p.waitForFunction(() => /Chặng của bạn: 2\./.test(document.querySelector('.oz-muc-do')?.textContent ?? ''), null, { timeout: 5000 });
+			assert.equal((await kho(p)).pianoLevel?.stage, 2);
+			await ctx.close();
+		} finally {
+			await trinhDuyet.close();
+		}
+	});
+
+	// D2-L1 (d1.md, Việc còn mở): link của menu bên và mục lục "Trên trang này" trên cảm ứng cao từ 44 px
+	test(`${ten}: menu bên và mục lục "Trên trang này" trên cảm ứng: vùng bấm từ 44 px`, { skip: !CO_MENU.length && khongCo('menu bên') }, async () => {
+		const trinhDuyet = await loai.launch();
+		const thap = () =>
+			[...document.querySelectorAll('.sidebar-content a, .sidebar-content summary, .oz-menu-trong, mobile-starlight-toc .dropdown a, starlight-toc a')]
+				.filter((x) => x.getClientRects().length && getComputedStyle(x).visibility !== 'hidden')
+				.map((x) => [x.textContent.trim().slice(0, 30), Math.round(x.getBoundingClientRect().height)])
+				.filter(([, h]) => h < 43.5);
+		try {
+			for (const co of [{ w: 360, h: 780, camUng: true }, { w: 768, h: 1024, camUng: true }]) {
+				const ctx = await nguCanh(trinhDuyet, ten, co);
+				const p = await ctx.newPage();
+				await p.goto((await goc()) + CO_MENU[0], { waitUntil: 'load' });
+				await p.locator('.sl-menu-button').click();
+				await p.waitForFunction(() => document.querySelector('.sidebar-content a')?.getClientRects().length, null, { timeout: 5000 });
+				assert.deepEqual(await p.evaluate(thap), [], `${co.w} px, menu bên`);
+				await p.locator('.sl-menu-button').click();
+				const muc = p.locator('#starlight__mobile-toc > summary');
+				if (await muc.count()) {
+					await muc.click();
+					assert.deepEqual(await p.evaluate(thap), [], `${co.w} px, mục lục`);
+				}
+				await ctx.close();
+			}
+		} finally {
+			await trinhDuyet.close();
+		}
+	});
+
+	// D2-L1: trang splash (trang chủ) không có menu bên: ô chọn sáng, tối hiện ở thanh trên trên điện thoại
+	test(`${ten}: trang chủ trên điện thoại có ô chọn sáng, tối, đổi được`, async () => {
+		const trinhDuyet = await loai.launch();
+		try {
+			const ctx = await nguCanh(trinhDuyet, ten, { w: 360, h: 780, camUng: true });
+			const p = await ctx.newPage();
+			await p.goto(await goc(), { waitUntil: 'load' });
+			const chon = p.locator('header starlight-theme-select select');
+			assert.ok(await chon.isVisible(), 'ô chọn sáng, tối không hiện');
+			await chon.selectOption('light');
+			assert.equal(await p.evaluate(() => document.documentElement.dataset.theme), 'light');
+			await chon.selectOption('dark');
+			assert.equal(await p.evaluate(() => document.documentElement.dataset.theme), 'dark');
 			await ctx.close();
 		} finally {
 			await trinhDuyet.close();

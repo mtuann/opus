@@ -1,0 +1,560 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa piano/lo-trinh
+trang: src/content/docs/piano/lo-trinh.md
+nguon_cu: ../opus-zero/docs/piano/lo-trinh.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-24
+    nhanh: moi/d2-l1
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5 (D2-L1 lượt 1, phần A)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Lượt 1 kiểm mọi câu có thể đúng hay sai; câu điều hướng (link sang trang khác, "Năm đầu tiên được viết chi tiết ở…") và câu chỉ tả trang không tính. Lời khuyên (khuyen-tap) gom theo dòng bảng cùng loại của nhiều chặng. Hai thay đổi cấu trúc giao cho D2-L1: bảng Tổng quan (dữ liệu chặng viết tay) thay bằng sơ đồ ::hinh{ten="lo-trinh"} sinh từ cap-do.yml (D2-0 kiểm định, khóa cả bản ghi); dòng Tác phẩm của chặng 2–6 bỏ danh sách bài học trên site, thay bằng link tới trang chặng sinh từ tac-pham.yml (nên chặng của Valse La thứ, Valse Si thứ theo dữ liệu D2-0, không viết tay ở đây); chặng 1 và chặng 7 thêm link tới trang chặng. Đề cương ABRSM, RCM, Trinity và trang Henle đã tải và đọc ngày 24/10/2026. Open Music Theory chặn truy cập tự động (HTTP 403) nên hai câu nhạc lý dùng giáo trình mở khác.'
+nguon:
+  - id: abrsm-2526
+    bac: 2
+    ten: ABRSM, Practical Music Grades Piano Syllabus 2025 & 2026, Qualification Specification (đề cương chính thức)
+    link: https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20&%202026%20Prac%20syllabus%2020240524_access.pdf
+  - id: musicmark-abrsm
+    bac: 2
+    ten: Music Mark (hội giáo dục âm nhạc Anh), trang giới thiệu ABRSM
+    link: https://www.musicmark.org.uk/providers/abrsm/
+  - id: trinity-syll
+    bac: 2
+    ten: Trinity College London, Piano Syllabus, graded exams from 2023 (bản trực tuyến 2/2026)
+    link: https://www.trinitycollege.com/resource?id=9079
+  - id: trinity-dipl
+    bac: 2
+    ten: Trinity College London, Classical Performance Diplomas
+    link: https://trinitycollege.com/qualifications/music/diplomas/performance
+  - id: trinity-rep
+    bac: 2
+    ten: Trinity College London, Piano repertoire list, face-to-face and digital graded exams from 2023 (bản cập nhật 8/2026)
+    link: https://www.trinitycollege.com/resource?id=10125
+  - id: rcm-2022
+    bac: 2
+    ten: The Royal Conservatory (RCM), Piano Syllabus, 2022 Edition (Level 1–10, ARCT, LRCM)
+    link: https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf
+  - id: henle-levels
+    bac: 2
+    ten: G. Henle Verlag, Levels of Difficulty (thang 1–9)
+    link: https://www.henle.de/Levels-of-Difficulty/
+  - id: henle-hn1408
+    bac: 2
+    ten: G. Henle Verlag, HN 1408 Bartók, Mikrokosmos, Volumes I–II (mức khó từng bài)
+    link: https://www.henle.de/Mikrokosmos-Volumes-I-II/HN-1408
+  - id: henle-hn44
+    bac: 2
+    ten: G. Henle Verlag, HN 44 Schumann, Scenes from Childhood op. 15 (mức khó từng bài, gợi ý ABRSM)
+    link: https://www.henle.de/en/Scenes-from-Childhood-op.-15/HN-44
+  - id: henle-hn1062
+    bac: 2
+    ten: G. Henle Verlag, HN 1062 Beethoven, Piano Sonata no. 14 op. 27 no. 2 (Moonlight)
+    link: https://www.henle.de/en/Piano-Sonata-no.-14-c-sharp-minor-op.-27-no.-2-Moonlight/HN-1062
+  - id: henle-hn1402
+    bac: 2
+    ten: G. Henle Verlag, HN 1402 Bartók, Romanian Folk Dances (mức khó từng bài)
+    link: https://www.henle.de/Romanian-Folk-Dances/HN-1402
+  - id: henle-hn4
+    bac: 2
+    ten: G. Henle Verlag, HN 4 Schubert, Impromptus and Moments musicaux (mức khó từng bài)
+    link: https://www.henle.de/en/Impromptus-and-Moments-musicaux/HN-4
+  - id: henle-hn1377
+    bac: 2
+    ten: G. Henle Verlag, HN 1377 Brahms, Intermezzo A major op. 118 no. 2
+    link: https://www.henle.de/Intermezzo-A-major-op.-118-no.-2/HN-1377
+  - id: faber-adult
+    bac: 2
+    ten: Faber Piano Adventures (nhà xuất bản), Adult Piano Adventures
+    link: https://pianoadventures.com/piano-books/adult-piano-adventures/
+  - id: fabermusic-alfred
+    bac: 2
+    ten: Faber Music (nhà xuất bản, phân phối ở Anh), Alfred's Adult All-in-One Course Book 1 (Alfred USA)
+    link: https://www.fabermusic.com/shop/adult-all-in-one-course-book-1-p26994
+  - id: macewan-clefs
+    bac: 2
+    ten: Devin Hart, Introduction to Music Theory and Rudiments (MacEwan University OpenBooks, 2024), chương "The Staff, Grand Staff, and Clefs"
+    link: https://openbooks.macewan.ca/introtomusictheory/?p=54
+  - id: libretexts-clefs
+    bac: 2
+    ten: Jill Wilson, Natalie Steele Royston, Do You Want to Major in Music? (Iowa State University Digital Press, LibreTexts), mục 4.1 "Treble and Bass Clefs with Notation"
+    link: https://human.libretexts.org/Bookshelves/Music/Music_Education_and_Training/Do_You_Want_to_Major_in_Music_(Wilson_and_Royston)/04%3A_Music_Theory/4.01%3A_Treble_and_Bass_Clefs_with_Notation
+  - id: uwosh-clefs
+    bac: 3
+    ten: University of Wisconsin Oshkosh, trang giảng viên "The Staff and Clefs"
+    link: https://www.uwosh.edu/faculty_staff/atwell/music_theory/StaffClf2.htm
+  - id: libretexts-v7
+    bac: 2
+    ten: Andre Mount, Lee Rothfarb, Fundamentals, Function, and Form (LibreTexts), mục 2.9 "The Dominant Seventh Chord"
+    link: https://human.libretexts.org/Bookshelves/Music/Music_Theory/Fundamentals_Function_and_Form_(Mount)/02%3A_Diatonic_Polyphony_and_Functional_Harmony/2.09%3A_The_Dominant_Seventh_Chord
+  - id: wiki-dom7
+    bac: 3
+    ten: Wikipedia, Dominant seventh chord
+    link: https://en.wikipedia.org/wiki/Dominant_seventh_chord
+  - id: imslp-wfbach
+    bac: 1
+    ten: IMSLP, Klavierbüchlein für Wilhelm Friedemann Bach (bản thảo 1720; mục II "Explication unterschiedlicher Zeichen", bảng nốt hoa mỹ của Bach)
+    link: https://imslp.org/wiki/Klavierb%C3%BCchlein_f%C3%BCr_Wilhelm_Friedemann_Bach_(Bach,_Johann_Sebastian)
+  - id: bbc-trill
+    bac: 3
+    ten: BBC Music Magazine (classical-music.com), "What is a trill in music?"
+    link: https://www.classical-music.com/features/musical-terms/trill
+  - id: imslp-k331
+    bac: 1
+    ten: IMSLP, Piano Sonata No. 11 in A major, K. 331/300i (Mozart)
+    link: https://imslp.org/wiki/Piano_Sonata_No.11_in_A_major,_K.331/300i_(Mozart,_Wolfgang_Amadeus)
+  - id: imslp-op9
+    bac: 1
+    ten: IMSLP, Nocturnes, Op. 9 (Chopin)
+    link: https://imslp.org/wiki/Nocturnes,_Op.9_(Chopin,_Fr%C3%A9d%C3%A9ric)
+  - id: imslp-d899
+    bac: 1
+    ten: IMSLP, 4 Impromptus, D. 899 (Schubert)
+    link: https://imslp.org/wiki/4_Impromptus,_D.899_(Schubert,_Franz)
+  - id: imslp-op13
+    bac: 1
+    ten: IMSLP, Piano Sonata No. 8, Op. 13 (Beethoven)
+    link: https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)
+  - id: imslp-op118
+    bac: 1
+    ten: IMSLP, 6 Klavierstücke, Op. 118 (Brahms)
+    link: https://imslp.org/wiki/6_Klavierst%C3%BCcke,_Op.118_(Brahms,_Johannes)
+  - id: commons-op66
+    bac: 2
+    ten: Wikimedia Commons, bản thu Fantaisie-Impromptu Op. 66 (Frank Lévy, Musopen)
+    link: https://commons.wikimedia.org/wiki/File:Chopin_-_Impromptu_No._4_in_C-sharp_minor,_Op._66_%27Fantaisie-Impromptu%27_(Frank_Levy).flac
+  - id: commons-s541
+    bac: 2
+    ten: Wikimedia Commons, bản thu Liebestraum số 3 (Wilhelm Backhaus)
+    link: https://commons.wikimedia.org/wiki/File:PDP-CH_-_Wilhelm_Backhaus_-_Liebestraum_No._3_in_A-flat_major,_S.541-3_(Liszt)_-_Hmv-d788-05754.flac
+  - id: iupress-hinson
+    bac: 2
+    ten: Indiana University Press, Guide to the Pianist's Repertoire, Fourth Edition
+    link: https://iupress.org/9780253010223/guide-to-the-pianists-repertoire-fourth-edition/
+  - id: ol-hinson
+    bac: 2
+    ten: Open Library, Guide to the pianist's repertoire, Fourth edition (Indiana University Press, 2014)
+    link: https://openlibrary.org/books/OL27791123M
+  - id: ol-magrath
+    bac: 2
+    ten: Open Library, Jane Magrath, Pianist's Guide to Standard Teaching and Performance Literature
+    link: https://openlibrary.org/works/OL8421989W
+  - id: ol-klickstein
+    bac: 2
+    ten: Open Library, Gerald Klickstein, The Musician's Way
+    link: https://openlibrary.org/works/OL9202391W
+nhan_dinh:
+  - id: n1
+    cau: Mốc thời gian tính từ ngày bắt đầu, cho người lớn tập đều đặn và có người hướng dẫn; đây là con số rất thô (có người đi nhanh gấp đôi, có người mất gấp đôi thời gian), điều quyết định là có tiếp tục đi hay không.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên về cách đọc mốc thời gian (moc_thoi_gian của cap-do.yml, D2-0 xếp khuyen-tap). Khớp ../opus-zero/docs/bat-dau/lo-trinh-choi.md ("Thời gian chỉ là gợi ý. Đi chậm hơn một nửa vẫn hoàn toàn ổn"). Đổi chữ đầu câu "\* Tính từ ngày bắt đầu" thành "Mốc thời gian tính từ ngày bắt đầu" vì bảng có cột "Mốc thời gian*" đã thay bằng sơ đồ ::hinh{ten="lo-trinh"} sinh từ cap-do.yml (việc giao cho D2-L1); ý không đổi.
+  - id: n2
+    cau: Hàng Nhạc lý ở mỗi chặng là mức tối thiểu; lộ trình năm đầu học hết bài 1–15 ngay trong 12 tháng.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Khớp ../opus-zero/docs/bat-dau/lo-trinh-choi.md: tháng 1 bài 1–3, tháng 2 bài 4–5 và Ôn tập 1, tháng 3 bài 6–7, tháng 4 bài 8–9, tháng 5 Ôn tập 2 và bài 10, tháng 6 bài 11–12, tháng 7 bài 13, tháng 8 bài 14 và Ôn tập 3, tháng 9 bài 15 (và bài 31), tháng 10 bài 26.'
+  - id: n3
+    cau: Site dùng cấp (grade) của ABRSM làm thước đo độ khó, vì đây là hệ thống phổ biến nhất thế giới.
+    loai: so-lieu
+    nguon:
+      - musicmark-abrsm
+      - abrsm-2526
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ thêm vế "và gần như mọi danh sách tác phẩm đều tham chiếu nó": không kiểm được, và sai với các danh sách lớn dùng thang riêng (Henle 1–9, RCM Level 1–10, Magrath, Hinson), nên đã bỏ vế ấy. Vế còn lại: Music Mark: ABRSM là "the world''s leading provider of music exams, holding over 650,000 assessments in more than 90 countries every year"; đề cương ABRSM 2025–2026 (About ABRSM): "a global music education charity … we offer face-to-face and digital exams … across the world". Không ghi con số lên trang (số thí sinh đổi hằng năm).'
+  - id: n4
+    cau: ABRSM và Trinity College London (đều của Anh) có cấp Initial, rồi Grade 1 đến Grade 8, sau đó là các bằng diploma.
+    loai: cap-do
+    nguon:
+      - abrsm-2526
+      - trinity-syll
+      - trinity-dipl
+    ket_qua: dung
+    ghi_chu: 'ABRSM 2025–2026: "ABRSM Practical Music qualifications are available from Grade 1 to Grade 8, and in some subjects from Initial Grade"; có mục "Piano Initial Grade"; "progress to ABRSM''s diploma offer, beginning with the performance-only ARSM … The LRSM and FRSM Diplomas are progressive from the ARSM"; "a company registered in England and Wales … registered office … London". Trinity, Piano Syllabus from 2023: "details of graded exams from Initial to Grade 8"; "After Grade 8 … candidates can progress to diplomas at Associate (ATCL), Licentiate (LTCL) and Fellowship (FTCL) levels"; "Charity number England & Wales: 1014792", "regulated by Ofqual … in England".'
+  - id: n5
+    cau: Nhà xuất bản G. Henle có thang độ khó thứ hai, từ 1 đến 9, cho từng tác phẩm.
+    loai: cap-do
+    nguon:
+      - henle-levels
+    ket_qua: dung
+    ghi_chu: 'Henle, Levels of Difficulty: "I have settled on nine levels of difficulty", nhóm "1–3 (easy), 4–6 (medium), 7–9 (difficult)"; mỗi bản sonata hay mỗi bài trong một tập có mức riêng ("Bach''s ''Well-Tempered Clavier'' Part I comprises a total of 48 levels of difficulty").'
+  - id: n6
+    cau: Không cần đi thi để theo lộ trình; cấp chỉ là ngôn ngữ chung để nói bài khó cỡ nào.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Không trái ../opus-zero/docs/piano/thay-va-thi.md (thi cấp là lựa chọn, không bắt buộc với người tự học).
+  - id: n7
+    cau: Chặng chơi được các bài một cách thoải mái là chặng vừa hoàn thành; bắt đầu từ chặng kế tiếp và rà lại danh sách kiểm tra các chặng trước, vì người tự học thường mạnh về bài, yếu về gam, thị tấu, bàn đạp.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Khớp cách tính chặng ở ../opus-zero/docs/bat-dau/kiem-tra-dau-vao.md ("làm được hai trong ba là coi như xong chặng đó").
+  - id: n8
+    cau: 'Mục tiêu của bảy chặng (câu "Mục tiêu: …" đầu mỗi mục chặng 1–6 và đoạn đầu chặng 7).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên, khớp ../opus-zero/docs/bat-dau/lo-trinh-choi.md (năm đầu: chặng 1–2) và tiêu chí từng chặng ở ../opus-zero/docs/bat-dau/kiem-tra-dau-vao.md.'
+  - id: n9
+    cau: Dòng Tay của chặng 1–3 (tư thế, năm ngón, legato và staccato, luồn ngón cái, câu nhạc "thở", sắc thái, bàn đạp; Alberti, móc kép đều, staccato bằng cổ tay, đạp trễ, láy và appoggiatura, phát âm theo thời kỳ).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Khớp các trang lõi cũ: ../opus-zero/docs/piano/tu-the.md, nam-ngon.md, hai-tay.md, tieng-dan.md, ban-dap.md (mục "Bàn đạp nối": "bàn đạp nối (còn gọi là bàn đạp trễ; legato pedal, syncopated pedal)"), not-hoa-my.md. Không mâu thuẫn.'
+  - id: n10
+    cau: Dòng Gam, hợp âm của chặng 1–5 (năm ngón và gam Đô trưởng một quãng tám ở chặng 1; gam trưởng Đô, Sol, Rê, Fa và thứ hòa âm La, Mi, Rê ở chặng 2; đến 3 dấu hóa, ngược chiều, nửa cung một quãng tám ở chặng 3; mọi gam trưởng và thứ hai tay ở chặng 4; 3–4 quãng tám, hợp âm bảy át và bảy giảm rải ở chặng 5).
+    loai: khuyen-tap
+    nguon:
+      - abrsm-2526
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Mục tiêu tập của site, so với đề cương ABRSM 2025–2026 để chắc không lệch cấp: Initial Grade "C major 1 oct. hands separately"; Grade 1 C major hai tay, G, F majors, A, D minors; Grade 2 thêm D, A majors, E, G minors, "CHROMATIC SCALE starting on D 1 oct."; Grade 3 D, A majors và E, G minors hai tay, B♭, E♭ majors và B, C minors từng tay, "CONTRARY-MOTION SCALE E major"; Grade 4–5 hết các giọng còn lại, hai quãng tám hai tay; Grade 6 "4 oct.", "DOMINANT SEVENTHS", "DIMINISHED SEVENTHS". Không mâu thuẫn.'
+  - id: n11
+    cau: Ở Đô trưởng, hợp âm Đô là bậc I và hợp âm Sol bảy (Sol–Si–Rê–Fa) là V7.
+    loai: dinh-nghia
+    nguon:
+      - libretexts-v7
+      - wiki-dom7
+    ket_qua: dung
+    ghi_chu: 'LibreTexts (Mount, Rothfarb), 2.9: "a dominant seventh chord in C major", "the resolution of a V7 chord in C major". Wikipedia: "in the C major scale, G is the fifth note of the scale, and the seventh chord built on G is the dominant seventh chord of this scale, G7"; "G7 would be represented as V7 in the key of C major".'
+  - id: n12
+    cau: 'Các nốt mốc trên khuông kép: Đô giữa, Sol của khóa Sol, Fa của khóa Fa.'
+    loai: dinh-nghia
+    nguon:
+      - macewan-clefs
+      - libretexts-clefs
+      - uwosh-clefs
+    ket_qua: dung
+    ghi_chu: 'MacEwan (Hart): "The treble clef, also known as the G clef", "the bass clef, also known as the F clef". LibreTexts (Wilson, Royston): "usually a treble clef (G clef) on the top and a bass clef (F clef) on the bottom staff", "The C in between the two staves is called middle C". UW Oshkosh: "The line that is surrounded by the curved part at the bottom of the clef is the note G". Khớp ../opus-zero/docs/piano/ban-do-ban-phim.md.'
+  - id: n13
+    cau: 'Dòng Đọc nhạc của chặng 1–6 (bài 4–8 ô nhịp, thị tấu dễ hơn bài đang tập khoảng hai cấp: Grade 1–2 ở chặng 3, Grade 2–3 ở chặng 4, Grade 3–4 ở chặng 5, Grade 5 ở chặng 6; đọc theo hình dạng quãng; đọc trước; bốn tay, đệm, nhạc thính phòng).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Khớp ../opus-zero/docs/piano/thi-tau.md (thị tấu bài dễ hơn bài đang tập). Các mức thị tấu thấp hơn chặng khoảng hai cấp, nhất quán với nhau.
+  - id: n14
+    cau: 'Dòng Nhạc lý của chặng 1–6: bài 1–5 và Ôn tập 1; bài 6–9 (gam, hóa biểu, quãng) và Ôn tập 2; bài 10–14 (hợp âm, hòa âm chức năng, kết, ký hiệu biểu diễn) và Ôn tập 3; bài 15–19 (tiết tấu nâng cao, điệu thức, dịch giọng, âm ngoài hợp âm, át phụ và chuyển giọng) và bài 31 Hình thức nhỏ; bài 21–26; bài 27–32 (ký hiệu hợp âm, kết cấu, chuỗi hòa âm, phát triển môtip, hình thức, kỹ thuật thế kỷ 20).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Đối chiếu tiêu đề các bài cũ ../opus-zero/docs/nhac-ly/01…32 và on-tap-1…3 ("Ôn tập 1: Đọc nhạc (bài 1–5)", "Ôn tập 2: Gam và giọng (bài 6–9)", "Ôn tập 3: … (bài 10–14)"; 27 "Ký hiệu hợp âm pop và jazz", 28 "Kết cấu âm nhạc" … 32 "Kỹ thuật thế kỷ 20"). ĐÃ SỬA ở chặng 6: phần trong ngoặc của "Bài 27 đến bài 32" thiếu chủ đề của bài 27, thêm "ký hiệu hợp âm".'
+  - id: n15
+    cau: Dòng Tai của chặng 1–6 (hát lại, nghe quãng, hợp âm trưởng và thứ, gam, chơi theo tai, tiến trình I, IV, V và kết, chép giai điệu, hợp âm bảy, so sánh bản thu).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Khớp các trang luyện tai cũ (../opus-zero/docs/luyen-tai/) và lộ trình năm đầu. ĐÃ SỬA (agent chính, sau phần A): chặng 1 "nghe quãng 2, 3 và 5" thành "nghe quãng 3 trưởng, 5 đúng và 8 đúng", cho khớp trang Nghe quãng cũ (../opus-zero/docs/luyen-tai/nghe-quang.md: "1. Khởi động (3 trưởng, 5 đúng, 8 đúng)", quãng 2 ở bộ cuối "Mở rộng") và tháng 3 của lộ trình năm đầu (bat-dau/lo-trinh-choi, n12).'
+  - id: n16
+    cau: Có giáo trình piano cho người lớn mới học của Alfred và của Faber.
+    loai: ten
+    nguon:
+      - faber-adult
+      - fabermusic-alfred
+    ket_qua: dung
+    ghi_chu: 'Faber Piano Adventures: Adult Piano Adventures "Ideal for the beginning adult or as a refresher course for the returning Adult". Faber Music: "Adult All-in-one Course Book 1", publisher "Alfred USA", "built for adult beginners".'
+  - id: n17
+    cau: Các bài đầu trong Türk và trong Mikrokosmos của Bartók hợp chặng 1 (trước Grade 1).
+    loai: cap-do
+    nguon:
+      - abrsm-2526
+      - rcm-2022
+      - trinity-rep
+      - henle-hn1408
+    ket_qua: dung
+    ghi_chu: 'ABRSM 2025–2026, Grade 1: "Türk Arioso in F (No. 1 from 12 Handstücke)". RCM 2022: Türk, Handstücke für angehende Klavierspieler ở Preparatory A và B (trước Level 1). Trinity từ 2023: Türk (Spring Song) ở Initial; Bartók "Imitation and Inversion (no. 23 from Mikrokosmos, Sz 107, vol 1)" ở Initial. Henle HN 1408: Mikrokosmos tập I–II mức 1–3 ("easy"), "organised in ascending order of difficulty".'
+  - id: n18
+    cau: 'Bach: Prelude Đô trưởng, Schumann: Kinderszenen, Beethoven: Ánh trăng là những bài sẽ chơi trong vài năm tới (chặng 4–5).'
+    loai: cap-do
+    nguon:
+      - trinity-rep
+      - henle-hn44
+      - henle-hn1062
+    ket_qua: dung
+    ghi_chu: 'Trinity từ 2023: "Prelude in C, BWV 846" ở Grade 5. Henle HN 44: các bài op. 15 mức 4–5 (Träumerei mức 5); trang ghi ABRSM Grade 5 cho số 1 và Grade 7 cho số 12. Henle HN 1062: Ánh trăng mức 7. Dữ liệu D2-0 xếp bach-prelude-do chặng 4, schumann-traumerei và beethoven-anh-trang chặng 5 (mốc 2,5–5,5 năm).'
+  - id: n19
+    cau: Dòng Biểu diễn và danh sách "Sẵn sàng lên chặng tiếp khi…" của chặng 1–6 (thu âm, học thuộc, chương trình 10, 15, 20–30 phút, nhịp ♩ = 60–80, 9/10 nốt, gam theo chặng).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Khớp tiêu chí từng chặng ở ../opus-zero/docs/bat-dau/kiem-tra-dau-vao.md (ví dụ chặng 4 "Biểu diễn thuộc lòng một chương trình khoảng 10 phút"; chặng 6 "Chơi một prelude và fugue của Bach, các bè nghe rõ") và lộ trình năm đầu.
+  - id: n20
+    cau: Kabalevsky và Bartók, For Children hợp chặng 2 (Grade 1–2).
+    loai: cap-do
+    nguon:
+      - abrsm-2526
+      - trinity-rep
+      - rcm-2022
+    ket_qua: dung
+    ghi_chu: 'ABRSM 2025–2026: Grade 1 "Kabalevsky Galop/Hopping (No. 18 from 24 Little Pieces, Op. 39)"; Grade 2 "Kabalevsky A Little Song (No. 2 from 30 Children''s Pieces, Op. 27)" và "Bartók Sorrow (No. 7 from For Children, Vol. 2)". Trinity từ 2023: Bartók "Children at Play, no. 1, For Children vol 1" ở Grade 2; Kabalevsky ở Initial. RCM 2022: Kabalevsky Op. 39 ở Preparatory A, B và Level 1; For Children từ Level 2. Một số bài For Children khó hơn (ABRSM Grade 3–5), nên đây là các bài dễ của tập.'
+  - id: n21
+    cau: 'Mozart: Sonata K. 331; Chopin: Nocturne Op. 9 số 2.'
+    loai: danh-muc
+    nguon:
+      - imslp-k331
+      - imslp-op9
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Piano Sonata No.11 in A major, K.331/300i", 3 chương (chương 3 "Alla Turca"); "Nocturnes, Op.9", số 2 "Andante (E♭ major)".'
+  - id: n22
+    cau: 'Kuhlau: Sonatina Op. 55 số 1 hợp chặng 4 (Grade 4–5), không phải chặng 3 (Grade 3).'
+    loai: cap-do
+    nguon:
+      - rcm-2022
+      - trinity-rep
+      - abrsm-2526
+    ket_qua: da-sua
+    ghi_chu: 'Trang cũ ghi bài này ở dòng Tác phẩm của chặng 3; đã chuyển sang chặng 4. RCM 2022: Kuhlau Op. 55 số 1 (chương 1, 2) ở Level 5, trong khi Clementi Op. 36 số 1 (bài học chặng 3, Grade 3) ở Level 3, và Grieg Op. 12 số 2 (Waltz) cũng ở Level 5 mà ABRSM 2025–2026 xếp Grade 4. Trinity từ 2023: Kuhlau "Allegretto (from Sonatina in G, op. 55 no. 2)" ở Grade 4, "Sonatina in C, op. 55 no. 3" chương 1 ở Grade 5; ABRSM 2025–2026 cũng xếp Op. 55 số 3 chương 1 ở Grade 5. Không đề cương nào xếp Op. 55 số 1 ở Grade 3.'
+  - id: n23
+    cau: 'Schubert: Impromptu Op. 90 số 3; Beethoven: Pathétique (Op. 13).'
+    loai: danh-muc
+    nguon:
+      - imslp-d899
+      - imslp-op13
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "D.899 ; Op.90", số 3 "Andante (G-flat major)"; Piano Sonata No. 8, Op. 13 "Pathétique".'
+  - id: n24
+    cau: 'Dòng Tay của chặng 4–6 (phức điệu hai bè, cân bằng giai điệu và đệm trong một tay, rubato; hình thức sonata thật ở Mozart K. 545, ba lớp âm thanh ở Träumerei, đa tiết tấu hai chọi ba, quãng tám, nốt lặp và nốt kép; tốc độ, sức bền, bàn đạp theo phong cách: tiết kiệm với Mozart, theo hòa âm với Chopin, đạp nửa và una corda với Debussy, fugue ba bè).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Khớp các trang cũ: ../opus-zero/docs/piano/ban-dap.md (mục Mozart: fortepiano dùng cần gạt đầu gối, Mozart gần như không ghi bàn đạp; mục Chopin: "Chopin tự ghi bàn đạp kỹ"), piano/tac-pham/mozart-k545.md ("I: hình thức sonata"; "gần như không dùng bàn đạp"), schumann-traumerei.md (giai điệu, bè trong, bè trầm), debussy-clair-de-lune.md ("una corda, đạp nửa"), chopin-nocturne-op9-2.md ("bàn đạp theo hòa âm"), bach-prelude-fugue-do-thu.md ("Fugue ba bè").'
+  - id: n25
+    cau: 'Nốt hoa mỹ thời Baroque: láy rền bắt đầu từ nốt trên.'
+    loai: quy-tac
+    nguon:
+      - imslp-wfbach
+      - bbc-trill
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Klavierbüchlein für Wilhelm Friedemann Bach (1720) có mục "II. Explication unterschiedlicher Zeichen", bảng nốt hoa mỹ Bach viết cho con, trong đó láy rền (trillo) viết ra bắt đầu từ nốt trên. BBC Music Magazine: "the modern trill starts on the lower note; the high Baroque trill, however, began on the upper note". Khớp ../opus-zero/docs/piano/not-hoa-my.md.'
+  - id: n26
+    cau: Chuyền tay nhanh ở Für Elise; hợp âm chơi thật khẽ và đều ở Prélude Mi thứ của Chopin.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Ví dụ cho mục tiêu tập, khớp trang bài học cũ: ../opus-zero/docs/piano/tac-pham/fur-elise.md ("Chuyền tay liền mạch"; "dòng móc kép đi từ tay trái sang tay phải"), chopin-prelude-mi-thu.md ("Hợp âm lặp lại khẽ và đều"). Bài học kiểm định ở đợt 6.'
+  - id: n27
+    cau: Các Lyric Pieces khác trong Op. 12 của Grieg hợp chặng 4 (Grade 4–5).
+    loai: cap-do
+    nguon:
+      - abrsm-2526
+      - rcm-2022
+    ket_qua: dung
+    ghi_chu: 'ABRSM 2025–2026, Grade 4: "Grieg Waltz (No. 2 from Lyriske småstykker, Op. 12)". RCM 2022: Op. 12 số 2 ở Level 5, số 1 (Arietta, bài học chặng 4) và số 3 ở Level 6, số 4 và số 7 ở Level 7 (Level 8 tương đương bài học chặng 5 Mozart K. 545). Câu cũ ghi "và các Lyric Pieces khác trong Op. 12" sau link Arietta; nay viết "các Lyric Pieces khác trong Op. 12 của Grieg" vì link bài học đã chuyển sang trang chặng.'
+  - id: n28
+    cau: 'Debussy: The Little Shepherd hợp chặng 5 (Grade 6).'
+    loai: cap-do
+    nguon:
+      - abrsm-2526
+      - rcm-2022
+    ket_qua: dung
+    ghi_chu: 'ABRSM 2025–2026, Grade 6: "Debussy The Little Shepherd (No. 5 from Children''s Corner)". RCM 2022: "The Little Shepherd (no. 5)" ở Level 8, cùng mức với Mozart K. 545 (bài học chặng 5).'
+  - id: n29
+    cau: Vài bài trong Romanian Folk Dances của Bartók hợp chặng 5.
+    loai: cap-do
+    nguon:
+      - henle-hn1402
+      - rcm-2022
+      - trinity-rep
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Bartók: Romanian Folk Dances" (cả tập). Henle HN 1402 xếp từng bài mức 2–4: "Stick Dance 3 easy", "Sash Dance 2 easy", "In One Spot 3 easy", "Dance of Buchum 3 easy", "Romanian Polka 4 medium", "Fast Dance 4 medium". RCM 2022 xếp cả tập ("complete") ở Level 10, ngang các bài học chặng 6. Trinity từ 2023 chỉ dùng một bài ở Grade 5 ("Dance of Buchum (bars 1-18 only …)"). Hai nguồn lệch nhau khi nói về cả tập, nên viết chung lại: vài bài trong tập.'
+  - id: n30
+    cau: 'Brahms: Intermezzo Op. 118 số 2.'
+    loai: danh-muc
+    nguon:
+      - imslp-op118
+    ket_qua: dung
+    ghi_chu: 'IMSLP, 6 Klavierstücke Op. 118: "2. Intermezzo. Andante teneramente (A major)".'
+  - id: n31
+    cau: Gam cách quãng ba, quãng sáu là yêu cầu khi thi các cấp cao (chặng 6, Grade 7–8).
+    loai: cap-do
+    nguon:
+      - abrsm-2526
+    ket_qua: dung
+    ghi_chu: 'ABRSM 2025–2026: Grade 7 "SCALES A THIRD APART", "LEGATO SCALE IN THIRDS G major"; Grade 8 "SCALES A SIXTH APART", "STACCATO SCALE IN SIXTHS C major".'
+  - id: n32
+    cau: Các Impromptu khác trong Op. 90 của Schubert hợp chặng 6.
+    loai: cap-do
+    nguon:
+      - henle-hn4
+      - rcm-2022
+    ket_qua: dung
+    ghi_chu: 'Henle HN 4: "Impromptu C minor, op. 90,1 … 6, medium", số 2, 3, 4 cũng mức 6 (số 3 là bài học chặng 6). RCM 2022: số 2, 3, 4 ở Level 10; riêng số 1 ở danh sách ARCT (khó hơn một bậc). Câu cũ "và các Impromptu khác trong Op. 90" đứng sau link bài học; nay viết "các Impromptu khác trong Op. 90 của Schubert".'
+  - id: n33
+    cau: 'Brahms: Intermezzo Op. 118 số 2 hợp chặng 6.'
+    loai: cap-do
+    nguon:
+      - henle-hn1377
+      - rcm-2022
+    ket_qua: dung
+    ghi_chu: 'Henle HN 1377: "6 medium", "Due to its moderate level of difficulty, it also gives advanced students a foretaste of the cosmos of Brahms'' late work" (mức 6 như Impromptu Op. 90 và Nocturne Op. 9 số 2, bài học chặng 6). RCM 2022 đặt cặp Op. 118 số 1 và số 2 trong danh sách ARCT. Hai nguồn lệch; giữ theo Henle (nhà xuất bản Urtext của bài, xếp riêng số 2); ghi lại để review.'
+  - id: n34
+    cau: 'Các Sinfonia của Bach và Mozart: Sonata K. 330 hợp chặng 6.'
+    loai: cap-do
+    nguon:
+      - rcm-2022
+    ket_qua: dung
+    ghi_chu: 'RCM 2022, Level 9: "Sinfonias (Three-part Inventions)" (cả 15 bài, BWV 787–801) và "Sonata in C Major, K 330 (300h)" chương 1 hay 2, cùng Level với Prelude và fugue Đô thứ BWV 847 (bài học chặng 6).'
+  - id: n35
+    cau: 'Beethoven: Pathétique có ba chương.'
+    loai: so-lieu
+    nguon:
+      - imslp-op13
+    ket_qua: dung
+    ghi_chu: 'IMSLP, Piano Sonata No. 8 Op. 13: 3 chương "Grave - Allegro di molto e con brio", "Adagio cantabile", "Rondo: Allegro".'
+  - id: n36
+    cau: Sau Grade 8 có các bằng diploma của ABRSM (ARSM, LRSM, FRSM) và Trinity (ATCL, LTCL, FTCL).
+    loai: ten
+    nguon:
+      - abrsm-2526
+      - trinity-dipl
+    ket_qua: dung
+    ghi_chu: 'ABRSM 2025–2026: "beginning with the performance-only ARSM … The LRSM and FRSM Diplomas are progressive from the ARSM". Trinity, Classical Performance Diplomas: "They are offered at three levels: ATCL, LTCL and FTCL".'
+  - id: n37
+    cau: 'Fantaisie-Impromptu và Liebestraum số 3 là những bài đầu tiên của chặng 7: kỹ thuật lớn (ba chọi bốn, quãng tám, cadenza) trong khuôn khổ khoảng năm phút.'
+    loai: cap-do
+    nguon:
+      - rcm-2022
+      - commons-op66
+      - commons-s541
+    ket_qua: dung
+    ghi_chu: 'RCM 2022, danh sách ARCT (trên Level 10): "Fantaisie-Impromptu in C sharp Minor, op. 66", "Liebestraum No. 3, S 541/3"; Ballade số 1 ở danh sách LRCM (cao hơn). Thời lượng bản thu trên Commons: Fantaisie-Impromptu (Frank Lévy) "length 5 min 27 s", Liebestraum số 3 (Wilhelm Backhaus) "length 3 min 58 s". Ba chọi bốn, quãng tám, cadenza: khớp trang bài học cũ ../opus-zero/docs/piano/tac-pham/chopin-fantaisie-impromptu.md, liszt-liebestraum.md (bài học kiểm định ở đợt 6). Dữ liệu D2-0 xếp cả hai ở chặng 7.'
+  - id: n38
+    cau: 'Tác phẩm lớn cho chặng 7: Chopin: Ballade số 1, một sonata giữa hoặc cuối đời của Beethoven, một Partita của Bach, trọn tập Kinderszenen hay Kreisleriana của Schumann, Préludes của Debussy.'
+    loai: cap-do
+    nguon:
+      - rcm-2022
+      - henle-hn44
+    ket_qua: da-sua
+    ghi_chu: 'RCM 2022, danh sách LRCM (diploma sau ARCT): "Ballade No. 1 in G Minor, op. 23"; Beethoven "Sonata in C Major, op. 53", op. 57, 81a, 101, 109, 110, 111; Bach "Partita No. 1" đến "No. 6" (trọn bài); Schumann "Kinderszenen, op. 15", "Kreisleriana, op. 16" (trọn tập). Debussy: Level 10 và ARCT có từng prelude của hai tập Préludes. Đã sửa "Kinderszenen" thành "trọn tập Kinderszenen": từng bài của op. 15 chỉ ở mức Henle 4–5 (HN 44; Träumerei là bài học chặng 5), chỉ trọn tập mới ở mức diploma.'
+  - id: n39
+    cau: 'Lời khuyên chặng 7: chơi cùng người khác (một cách rất tốt để tiến bộ về nhịp và lắng nghe), học concerto Mozart với piano thứ hai, thử fortepiano hay harpsichord, masterclass và so sánh bản thu, nghỉ đều và tăng dần thời lượng; dấu hiệu đang tiến.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'ĐÃ SỬA: "Đây là cách nhanh nhất để tiến bộ về nhịp và lắng nghe" thành "Đây là một cách rất tốt …": so sánh nhất không kiểm được. Khớp ../opus-zero/docs/piano/choi-cung-nguoi-khac.md, suc-khoe.md, lich-su-dan.md.'
+  - id: n40
+    cau: Gần như ai cũng có những tháng thấy mình "đứng yên"; nếu kéo dài, rà danh sách ở Cách tập và nghe lại bản thu cũ sau ba tháng.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'ĐÃ SỬA: bỏ vế "thường đó là lúc tay đang tiêu hóa những gì đã học" (nói về nguyên nhân mà không có nguồn). Khớp ../opus-zero/docs/piano/cach-tap.md, mục "Khi bị giậm chân tại chỗ" (id khi-bi-giam-chan-tai-cho).'
+  - id: n41
+    cau: Thang mức độ khó 1–9 cho piano của G. Henle Verlag, "Levels of Difficulty" (Rolf Koenen).
+    loai: ten
+    nguon:
+      - henle-levels
+    ket_qua: dung
+    ghi_chu: 'Henle: Rolf Koenen lập thang chín mức ("I have settled on nine levels of difficulty"); người kế nhiệm Jacob Leuschner đang xếp mức ("I gladly assumed from my predecessor Rolf Koenen the honourable task…").'
+  - id: n42
+    cau: Jane Magrath, The Pianist's Guide to Standard Teaching and Performance Literature (Alfred, 1995).
+    loai: ten
+    nguon:
+      - ol-magrath
+    ket_qua: dung
+    ghi_chu: 'Open Library: tác giả Jane Magrath, nhà xuất bản Alfred Publishing Company, năm 1995.'
+  - id: n43
+    cau: Maurice Hinson và Wesley Roberts, Guide to the Pianist's Repertoire, ấn bản 4 (Indiana University Press, 2014).
+    loai: ten
+    nguon:
+      - iupress-hinson
+      - ol-hinson
+    ket_qua: dung
+    ghi_chu: 'Indiana University Press: "Guide to the Pianist''s Repertoire, Fourth Edition", Maurice Hinson and Wesley Roberts, ngày phát hành "December 2013". Open Library: Fourth edition, Indiana University Press, 2014. Năm 2014 là năm in trên bản ghi thư viện; nhà xuất bản phát hành từ 12/2013. Giữ 2014.'
+  - id: n44
+    cau: Gerald Klickstein, The Musician's Way (Oxford University Press, 2009).
+    loai: ten
+    nguon:
+      - ol-klickstein
+    ket_qua: dung
+    ghi_chu: 'Open Library: tác giả Gerald Klickstein, Oxford University Press, năm 2009.'
+khuong_nhac: []
+doi_chu:
+  - cu:
+      - Chặng
+      - Tương đương (≈ ABRSM)
+      - Mốc thời gian*
+      - Thời lượng tập gợi ý
+      - Tác phẩm tiêu biểu
+      - 1. Khởi đầu
+      - trước Grade 1
+      - 0–6 tháng
+      - 20–30 phút/ngày
+      - 10 bài đầu tiên
+      - 2. Sơ cấp
+      - Grade 1–2
+      - 6 tháng – 1,5 năm
+      - 30 phút
+      - Minuet Sol trưởng, Schumann Op. 68
+      - 3. Sơ trung cấp
+      - Grade 3
+      - 1,5–2,5 năm
+      - 30–45 phút
+      - Clementi Op. 36 số 1, Arabesque
+      - 4. Trung cấp
+      - Grade 4–5
+      - 2,5–4 năm
+      - 45 phút
+      - "Bach: Prelude Đô trưởng, Für Elise"
+      - 5. Trung cấp cao
+      - Grade 6
+      - 4–5,5 năm
+      - 45–60 phút
+      - Mozart K. 545, Invention số 1
+      - 6. Nâng cao
+      - Grade 7–8
+      - 5,5–9 năm
+      - 60–90 phút
+      - Pathétique, chương 2, Clair de lune
+      - 7. Sau Grade 8
+      - diploma trở lên
+      - không giới hạn
+      - 1–3 giờ, chia nhiều buổi
+      - Ballade số 1
+    moi: null
+    ly_do: 'Bảng tổng quan viết tay thay bằng sơ đồ 7 chặng sinh từ src/data/cap-do.yml (::hinh{ten="lo-trinh"}, D2-L1): thông tin chặng dùng ở nhiều trang lấy từ dữ liệu, không viết tay (AGENTS.md, Dữ liệu; plans/ben-vung/README.md, lớp dữ liệu: cap-do.yml thay bảng chặng của lo-trinh.md). Bốn cột đầu khớp cap-do.yml (D2-0 kiểm). Cột "Tác phẩm tiêu biểu" bỏ: bài học của từng chặng ở trang chặng, sinh từ dữ liệu.'
+  - cu: "* Tính từ ngày bắt đầu, cho người lớn tập đều đặn và có người hướng dẫn (thầy, hoặc ít nhất là người nghe và góp ý định kỳ). Đây là con số rất thô: có người đi nhanh gấp đôi, có người mất gấp đôi thời gian, và cả hai đều bình thường. Điều quyết định không phải tốc độ, mà là bạn có tiếp tục đi hay không."
+    moi: "Mốc thời gian tính từ ngày bắt đầu, cho người lớn tập đều đặn và có người hướng dẫn (thầy, hoặc ít nhất là người nghe và góp ý định kỳ). Đây là con số rất thô: có người đi nhanh gấp đôi, có người mất gấp đôi thời gian, và cả hai đều bình thường. Điều quyết định không phải tốc độ, mà là bạn có tiếp tục đi hay không."
+    ly_do: 'n1: không còn cột có dấu sao (bảng thay bằng sơ đồ), nên chú thích gọi thẳng tên "Mốc thời gian".'
+  - cu: Site dùng cấp (grade) của ABRSM làm thước đo độ khó, vì đây là hệ thống phổ biến nhất thế giới và gần như mọi danh sách tác phẩm đều tham chiếu nó.
+    moi: Site dùng cấp (grade) của ABRSM làm thước đo độ khó, vì đây là hệ thống phổ biến nhất thế giới.
+    ly_do: 'n3 (da-sua): vế "gần như mọi danh sách tác phẩm đều tham chiếu nó" không kiểm được và sai với Henle (thang 1–9 riêng) và RCM (Level riêng).'
+  - cu: Hát lại một nốt, nghe quãng 2, 3 và 5; gõ đúng tiết tấu đơn giản.
+    moi: Hát lại một nốt, nghe quãng 3 trưởng, 5 đúng và 8 đúng; gõ đúng tiết tấu đơn giản.
+    ly_do: "n15 (lời khuyên, đã sửa): khớp trang Nghe quãng (bộ Khởi động: 3 trưởng, 5 đúng, 8 đúng; quãng 2 ở bộ cuối) và tháng 3 của lộ trình năm đầu (bat-dau/lo-trinh-choi, n12), cùng chặng 1."
+  - cu: Hai tuần đầu tiên, 10 bài đầu tiên, một giáo trình cho người lớn (Alfred, Faber), các bài đầu trong Türk, Bartók Mikrokosmos. Xem chặng 1 trong danh mục.
+    moi: "Hai tuần đầu tiên, 10 bài đầu tiên, một giáo trình cho người lớn (Alfred, Faber), các bài đầu trong Türk, Bartók Mikrokosmos. Bài học trên site: trang chặng 1. Xem thêm chặng 1 trong danh mục."
+    ly_do: "Kế hoạch D2-L1: mỗi mục chặng dẫn sang trang chặng (trang sinh từ dữ liệu)."
+  - cu: "Mozart: Minuet Fa trưởng K. 2, Petzold: Minuet Sol trưởng và Sol thứ, Musette Rê trưởng, Schumann: Album für die Jugend (Melodie, Wilder Reiter, Fröhlicher Landmann), Burgmüller: La candeur, Tchaikovsky: Bài ca Pháp cổ, Kabalevsky, Bartók For Children."
+    moi: "Bài học trên site: trang chặng 2. Ngoài ra: Kabalevsky, Bartók For Children."
+    ly_do: "Danh sách bài học của chặng viết tay thay bằng link tới trang chặng, sinh từ tac-pham.yml (AGENTS.md, Mẫu trang: danh sách mọi bài của một chặng nằm ở trang chặng; plans/ben-vung/README.md: tac-pham.yml thay phần bài của site trong lo-trinh.md). Bài ngoài site giữ (n20)."
+  - cu: "Clementi: Sonatina Op. 36 số 1, Burgmüller: Arabesque, Chopin: Valse La thứ, Bach: Prelude nhỏ Đô trưởng BWV 939, Sonatina Sol trưởng Anh. 5 số 1, Tchaikovsky: Cầu nguyện buổi sáng, Kuhlau: Sonatina Op. 55 số 1."
+    moi: "Bài học trên site: trang chặng 3."
+    ly_do: "Như chặng 2: bài học của chặng ở trang chặng (Valse La thứ đã lên chặng 5, D2-0). Kuhlau Op. 55 số 1 chuyển sang chặng 4 (n22, da-sua: RCM xếp Level 5, Clementi Op. 36 số 1 ở Level 3; Trinity xếp Op. 55 số 2 ở Grade 4)."
+  - cu: "Bach: Prelude Đô trưởng, Beethoven: Für Elise, Chopin: Prélude Mi thứ, Satie: Gymnopédie số 1, Chopin: Prélude La trưởng, Grieg: Arietta và các Lyric Pieces khác trong Op. 12, Beethoven: Sonata Op. 49 số 2."
+    moi: "Bài học trên site: trang chặng 4. Ngoài ra: Kuhlau: Sonatina Op. 55 số 1, các Lyric Pieces khác trong Op. 12 của Grieg."
+    ly_do: "Như chặng 2: bài học của chặng ở trang chặng. Kuhlau Op. 55 số 1 từ chặng 3 sang (n22); các Lyric Pieces khác của Op. 12 giữ (n27)."
+  - cu: "Mozart: Sonata K. 545, chương 1, Bach: Invention số 1, Schumann: Träumerei, Beethoven: Ánh trăng, chương 1, Chopin: Valse Si thứ Op. 69 số 2, Mendelssohn: Thuyền ca Venice, Debussy: The Little Shepherd, Bartók: Romanian Folk Dances."
+    moi: "Bài học trên site: trang chặng 5. Ngoài ra: Debussy: The Little Shepherd, vài bài trong Romanian Folk Dances của Bartók."
+    ly_do: 'Như chặng 2: bài học của chặng ở trang chặng (Valse Si thứ đã lên chặng 6, D2-0). n29 (da-sua): Henle xếp từng bài của Romanian Folk Dances ở mức 2–4, RCM xếp cả tập ở Level 10, nên viết "vài bài trong".'
+  - cu: Bài 27 đến bài 32 (kết cấu, chuỗi hòa âm, phát triển môtip, hình thức, kỹ thuật thế kỷ 20). Phân tích mọi bài mình chơi.
+    moi: Bài 27 đến bài 32 (ký hiệu hợp âm, kết cấu, chuỗi hòa âm, phát triển môtip, hình thức, kỹ thuật thế kỷ 20). Phân tích mọi bài mình chơi.
+    ly_do: "n14: phần trong ngoặc thiếu chủ đề của bài 27 (Ký hiệu hợp âm pop và jazz)."
+  - cu: "Beethoven: Pathétique, chương 2, Chopin: Nocturne Op. 9 số 2, Debussy: Clair de lune, Schubert: Impromptu Sol♭ trưởng và các Impromptu khác trong Op. 90, Brahms: Intermezzo Op. 118 số 2, Bach: Prelude và fugue Đô thứ BWV 847 và các Sinfonia, Mozart: Sonata K. 330."
+    moi: "Bài học trên site: trang chặng 6. Ngoài ra: các Impromptu khác trong Op. 90 của Schubert, Brahms: Intermezzo Op. 118 số 2, các Sinfonia của Bach, Mozart: Sonata K. 330."
+    ly_do: "Như chặng 2: bài học của chặng ở trang chặng. Bài ngoài site giữ (n32–n34)."
+  - cu: null
+    moi: "Bài học trên site: trang chặng 7."
+    ly_do: "Kế hoạch D2-L1: mỗi mục chặng dẫn sang trang chặng."
+  - cu: "Mỗi năm một tác phẩm lớn: Chopin: Ballade số 1, một sonata giữa hoặc cuối đời của Beethoven, một Partita của Bach, Kinderszenen hay Kreisleriana của Schumann, Préludes của Debussy."
+    moi: "Mỗi năm một tác phẩm lớn: Chopin: Ballade số 1, một sonata giữa hoặc cuối đời của Beethoven, một Partita của Bach, trọn tập Kinderszenen hay Kreisleriana của Schumann, Préludes của Debussy."
+    ly_do: 'n38 (da-sua): Henle xếp từng bài của Kinderszenen ở mức 4–5; RCM đưa trọn tập vào danh sách diploma LRCM, nên ghi "trọn tập".'
+  - cu: "Chơi cùng người khác: song tấu bốn tay, sonata violin và piano, tam tấu, đệm hát. Đây là cách nhanh nhất để tiến bộ về nhịp và lắng nghe (xem Chơi cùng người khác)."
+    moi: "Chơi cùng người khác: song tấu bốn tay, sonata violin và piano, tam tấu, đệm hát. Đây là một cách rất tốt để tiến bộ về nhịp và lắng nghe (xem Chơi cùng người khác)."
+    ly_do: 'n39 (lời khuyên, đã sửa): so sánh nhất ("cách nhanh nhất") không kiểm được.'
+  - cu: 'Gần như ai cũng có những tháng thấy mình "đứng yên"; thường đó là lúc tay đang tiêu hóa những gì đã học. Nếu kéo dài, đi qua danh sách kiểm tra ở Cách tập: khi bị giậm chân tại chỗ, và nghe lại bản thu cũ của mình sau ba tháng: bạn sẽ thấy mình đã đi xa hơn mình nghĩ.'
+    moi: 'Gần như ai cũng có những tháng thấy mình "đứng yên". Nếu kéo dài, đi qua danh sách kiểm tra ở Cách tập: khi bị giậm chân tại chỗ, và nghe lại bản thu cũ của mình sau ba tháng: bạn sẽ thấy mình đã đi xa hơn mình nghĩ.'
+    ly_do: 'n40 (lời khuyên, đã sửa): bỏ vế nói nguyên nhân ("tay đang tiêu hóa những gì đã học"), không có nguồn.'

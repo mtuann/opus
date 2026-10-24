@@ -6,7 +6,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { chuyenTrang, doiLink, moTaTuHtml } from '../tools/chuyen/chuyen.mjs';
-import { SITE_CU, dat, docCu, docMoi, soTrang } from '../tools/chuyen/so-chu.mjs';
+import { parse } from 'yaml';
+import { SITE_CU, docCu, docMoi, soTrang } from '../tools/chuyen/so-chu.mjs';
 import { khongTrung, slugCu } from '../src/plugins/id-cu.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
@@ -185,18 +186,79 @@ const trangDaChuyen = fs.existsSync(path.join(ROOT, 'src/content/docs'))
 /** Trang không so được với bản cũ, kèm lý do (không có phần nội dung kiểu thường ở bản build cũ). */
 const KHONG_SO = { 'blog/index': 'bản cũ là trang danh sách bài do plugin blog của MkDocs tự sinh; blog làm lại ở đợt 7' };
 
+/**
+ * Bỏ khỏi HTML các phần tử có thuộc tính data-sinh (phần sinh từ dữ liệu, như sơ đồ 7 chặng): chữ của chúng đến từ dữ liệu
+ * đã kiểm định, không phải chữ của trang, nên không so với trang cũ.
+ */
+function boPhanSinh(html) {
+	let ra = html;
+	for (let m; (m = /<([a-z][a-z0-9-]*)\b[^>]*\sdata-sinh(?=[\s=>])[^>]*>/i.exec(ra)); ) {
+		const ten = m[1].toLowerCase();
+		const re = new RegExp(`<(/?)${ten}\\b[^>]*>`, 'gi');
+		re.lastIndex = m.index + m[0].length;
+		let sau = 1;
+		let het = ra.length;
+		for (let t; sau && (t = re.exec(ra)); ) if ((sau += t[1] ? -1 : 1) === 0) het = re.lastIndex;
+		ra = ra.slice(0, m.index) + ra.slice(het);
+	}
+	return ra;
+}
+
+/**
+ * Mọi "khối" so được của một trang, như so-chu tách: khối chữ (đoạn, mục danh sách, dòng bảng…), cộng tiêu đề, mô tả, id
+ * tiêu đề, khuông nhạc (tiêu đề và mã) và câu hỏi, mỗi thứ một dòng có tiền tố ("tiêu đề: …", "id: …").
+ */
+function khoiSo(trang, dist = DIST) {
+	const kq = soTrang(trang, dist);
+	const html = fs.readFileSync(path.join(dist, trang.replace(/\/index$/, ''), 'index.html'), 'utf8');
+	const cu = docCu(fs.readFileSync(path.join(SITE_CU, trang.replace(/\/index$/, ''), 'index.html'), 'utf8'));
+	const moi = docMoi(boPhanSinh(html));
+	const them = (k, i) => [`tiêu đề: ${kq.tieuDe[i]}`, `mô tả: ${kq.moTa[i]}`, ...kq.id[i].map((x) => `id: ${x}`), ...kq.abc[i].map((a) => `khuông: ${a.ten} | ${a.ma}`), ...kq.quiz[i].map((q) => `câu hỏi: ${q}`)];
+	return { cu: [...cu.khoi, ...them(kq, 0)], moi: [...moi.khoi, ...them(kq, 1)] };
+}
+
+/** Phần của dãy `a` không có trong dãy `b` (đếm cả số lần lặp). */
+const tru = (a, b) => {
+	const con = new Map();
+	for (const x of b) con.set(x, (con.get(x) ?? 0) + 1);
+	return a.filter((x) => (con.get(x) ? (con.set(x, con.get(x) - 1), false) : true));
+};
+
+test('boPhanSinh: bỏ phần tử data-sinh (kể cả lồng nhau cùng tên thẻ), giữ phần còn lại', () => {
+	assert.equal(boPhanSinh('<p>a</p><figure class="x" data-sinh><figure>b</figure><ol><li>c</li></ol></figure><p>d</p>'), '<p>a</p><p>d</p>');
+	assert.equal(boPhanSinh('<div data-sinh="1">x</div><div>y</div>'), '<div>y</div>');
+	assert.equal(boPhanSinh('<p data-sinhx>z</p>'), '<p data-sinhx>z</p>');
+});
+
 test(
-	'chữ hiển thị và id tiêu đề của mọi trang đã chuyển giống trang ở bản build cũ (cần .cache/site-cu/ và npm run build)',
+	'chữ của mọi trang đã chuyển giống trang ở bản build cũ, trừ chỗ hồ sơ ghi lý do (doi_chu; cần .cache/site-cu/ và npm run build)',
 	{ skip: !fs.existsSync(SITE_CU) && 'máy này chưa build site cũ ở .cache/site-cu/ (plans/lam-lai/README.md, Quy tắc chung)' },
 	() => {
-		const khac = [];
+		// Luật 6 (chữ chỉ đổi khi hồ sơ ghi lý do): khối bỏ, sửa hay thêm so với trang cũ phải đúng như doi_chu của hồ sơ
+		// kiem-dinh/<trang>.yml, mỗi mục { cu: khối cũ, moi: khối mới, ly_do } (cu, moi là một khối, danh sách khối, hay null:
+		// khối mới thêm, khối bỏ hẳn). Thiếu hay thừa đều hỏng.
+		const loi = [];
 		for (const t of trangDaChuyen.filter((t) => !KHONG_SO[t] && fs.existsSync(path.join(DIST, t.replace(/\/index$/, ''), 'index.html')))) {
+			let k;
 			try {
-				if (!dat(soTrang(t, DIST))) khac.push(t);
+				k = khoiSo(t);
 			} catch (e) {
-				khac.push(`${t}: không so được: ${e.message}`);
+				loi.push(`${t}: không so được: ${e.message}`);
+				continue;
 			}
+			const f = path.join(ROOT, 'kiem-dinh', `${t}.yml`);
+			const doi = (fs.existsSync(f) && parse(fs.readFileSync(f, 'utf8'))?.doi_chu) || [];
+			for (const [i, d] of doi.entries())
+				if (!d || (d.cu == null && d.moi == null) || !String(d.ly_do ?? '').trim()) loi.push(`${t}: doi_chu mục ${i + 1} cần cu hay moi, và ly_do`);
+			const ghiCu = doi.flatMap((d) => d?.cu ?? []);
+			const ghiMoi = doi.flatMap((d) => d?.moi ?? []);
+			const [bo, them] = [tru(k.cu, k.moi), tru(k.moi, k.cu)];
+			for (const x of tru(bo, ghiCu)) loi.push(`${t}: khối cũ đã bỏ hay sửa mà doi_chu chưa ghi (cu): ${JSON.stringify(x)}`);
+			for (const x of tru(them, ghiMoi)) loi.push(`${t}: khối mới mà doi_chu chưa ghi (moi): ${JSON.stringify(x)}`);
+			for (const x of tru(ghiCu, bo)) loi.push(`${t}: doi_chu ghi khối cũ không còn khác trang cũ (cu): ${JSON.stringify(x)}`);
+			for (const x of tru(ghiMoi, them)) loi.push(`${t}: doi_chu ghi khối mới không có trên trang (moi): ${JSON.stringify(x)}`);
 		}
-		assert.deepEqual(khac, [], 'xem chỗ khác bằng: node tools/chuyen/so-chu.mjs <trang>');
+		assert.deepEqual(loi, [], 'xem chỗ khác bằng: node tools/chuyen/so-chu.mjs <trang>');
 	},
 );
+
