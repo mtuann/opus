@@ -42,7 +42,7 @@ Chờ bạn. Mục "khuyên dùng" là lựa chọn mà kế hoạch đang giả
 | Đợt | Nội dung | Lô | Sau đợt này site mới có thêm | Trạng thái |
 |---|---|---|---|---|
 | 0 | Dựng repo mới | | Chưa đăng gì | Xong 23/10/2026 |
-| 1 | Nền kỹ thuật | D1.1–D1.8 | Trang chủ tạm và trang 404 ở `/opus/`; chưa có bài | Đang làm: D1.1, D1.2, D1.2b xong |
+| 1 | Nền kỹ thuật | D1.1–D1.8 | Trang chủ tạm và trang 404 ở `/opus/`; chưa có bài | Xong 24/10/2026: trang chủ tạm và trang 404 trên site thật; ba trang thử ở bản xem |
 | 2 | Khung cấp độ và lối vào | 1 | Trang chủ, Bắt đầu, lộ trình và 7 trang chặng, bài kiểm tra đầu vào | Chưa làm |
 | 3 | Nhạc lý và luyện tai | 6 | 45 trang, Từ điển | Chưa làm |
 | 4 | Piano nền tảng | 4 | 28 trang: bắt đầu bên phím, kỹ thuật, tập luyện, hòa âm bên phím, văn học piano | Chưa làm |
