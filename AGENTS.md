@@ -47,7 +47,7 @@ npm run lighthouse        # Lighthouse ở tối đa ba trang mẫu của dist/,
 
 ## Tìm kiếm
 
-- Pagefind (Starlight) bỏ dấu khi so: gõ "lam lai" ra "làm lại". Chữ "đ" là chữ riêng, nên lúc build `src/tim-kiem/tich-hop.mjs` bọc `dist/pagefind/pagefind.js`: mỗi từ bắt đầu bằng "d" được tìm thêm bản "đ", rồi gộp kết quả. Gõ "dan" ra "đàn", "do truong" ra "Đô trưởng".
+- Pagefind (Starlight) bỏ dấu khi so: gõ "lam lai" ra "làm lại". Chữ "đ" là chữ riêng, nên lúc build `src/tim-kiem/tich-hop.mjs` bọc `dist/pagefind/pagefind.js`: mỗi từ bắt đầu bằng "d" được tìm thêm bản "đ" (tối đa 3 từ như vậy, tức 8 biến thể), rồi gộp kết quả. Gõ "dan" ra "đàn", "do truong" ra "Đô trưởng". Phần bọc ở `src/tim-kiem/boc.js`.
 - Kiểm thử: `tests/tim-kiem.test.mjs` (biến thể, bản build có bản bọc); `tests/trinh-duyet/kiem-tim-kiem.mjs` (bộ truy vấn của site cũ trên trang có trong bản build; gõ "dan" qua API, và qua ô tìm kiếm trên Chromium, WebKit, Firefox).
 
 ## CI và đăng site
