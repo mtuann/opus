@@ -45,6 +45,11 @@ npm run lighthouse        # Lighthouse ở tối đa ba trang mẫu của dist/,
 - Bản ghi tác phẩm có thể có `hinh` (sơ đồ các đoạn, theo loại trang `bai-hoc`, `nghe`) và `ban_thu` (bản thu gợi ý cho khối nghe, cùng dạng `data-rec` của site cũ: `by`, `lic`, `licUrl`, `note`, `page`, `parts`; file mp3 của site viết `audio/x.mp3`). Mốc tham khảo theo bảng "Theo dõi khi nghe" của từng trang nên nằm trong trang (`::khoi-nghe{moc="…"}`), không ở dữ liệu.
 - `tools/du_lieu/tach.py` tách dữ liệu từ site cũ (D1.2; D1.3 thêm `hinh`, D1.4 thêm `ban_thu`); `src/data/` đã có dữ liệu thì phải thêm cờ `--ghi-de`, và chỉ chạy lại khi dữ liệu chưa kiểm định. Từ đợt 2, sửa `src/data/` bằng tay, theo hồ sơ kiểm định.
 
+## Tìm kiếm
+
+- Pagefind (Starlight) bỏ dấu khi so: gõ "lam lai" ra "làm lại". Chữ "đ" là chữ riêng, nên lúc build `src/tim-kiem/tich-hop.mjs` bọc `dist/pagefind/pagefind.js`: mỗi từ bắt đầu bằng "d" được tìm thêm bản "đ", rồi gộp kết quả. Gõ "dan" ra "đàn", "do truong" ra "Đô trưởng".
+- Kiểm thử: `tests/tim-kiem.test.mjs` (biến thể, bản build có bản bọc); `tests/trinh-duyet/kiem-tim-kiem.mjs` (bộ truy vấn của site cũ trên trang có trong bản build; gõ "dan" qua API, và qua ô tìm kiếm trên Chromium, WebKit, Firefox).
+
 ## CI và đăng site
 
 - `.github/workflows/test.yml`: nhánh `moi/**`, `mo/**`, `them/**`, pull request, hay bấm chạy tay. Build bản xem, chạy `npm test`, kiểm thử trình duyệt, Lighthouse. Không đăng gì.

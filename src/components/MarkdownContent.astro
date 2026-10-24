@@ -2,8 +2,10 @@
 // Nội dung trang của Starlight, thêm bộ tải thành phần (src/scripts/tai.js) chỉ ở trang có khối cần JavaScript:
 // khuông nhạc, câu hỏi kiểm tra nhanh, khối nghe. Dò trên HTML đã dựng (lớp do plugin đặt), nên khớp đúng những gì
 // plugin dựng, kể cả khối ~~~abc hay câu hỏi nằm trong trích dẫn. Trang khác không tải gì thêm.
+// Trang có bảng thì thêm script nhỏ cho bảng cuộn ngang (BangCuon.astro).
 import Default from '@astrojs/starlight/components/MarkdownContent.astro';
 import { canTaiScript } from '../plugins/thanh-phan.mjs';
+import BangCuon from './BangCuon.astro';
 import TaiThanhPhan from './TaiThanhPhan.astro';
 
 const html = await Astro.slots.render('default');
@@ -11,3 +13,4 @@ const html = await Astro.slots.render('default');
 
 <Default><Fragment set:html={html} /></Default>
 {canTaiScript(html) && <TaiThanhPhan />}
+{/<table[\s>]/.test(html) && <BangCuon />}

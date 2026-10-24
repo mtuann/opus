@@ -249,7 +249,9 @@
 	.oz-ref-toggle {
 		min-height: 44px;
 	}
-	.oz-piece-info > summary {
+	/* mọi dòng tiêu đề của khối thu gọn trong bài (hộp thông tin tác phẩm, khối <details> chuyển từ ??? của site cũ);
+	   flex giữ mũi tên ::before của Starlight cạnh chữ */
+	.sl-markdown-content summary {
 		display: flex;
 		align-items: center;
 		min-height: 44px;
@@ -356,15 +358,22 @@ html.oz-stand-open .main-pane {
 }
 
 /* ---------- Khối nghe ---------- */
-/* Giữ chỗ cho khối nghe chưa khởi tạo (khối rỗng tới khi nghe.js dựng) */
+/* Giữ chỗ cho khối nghe chưa khởi tạo (khối rỗng tới khi nghe.js dựng). Có bản thu gợi ý (data-rec) thì khối cao hơn:
+   thêm dòng bản thu, nút nghe, ô bật mốc tham khảo. Số đo ở D1.8 (Für Elise, Goldberg). */
 .oz-listen:empty {
 	min-height: 16.7rem;
 	border-radius: 10px;
 	background: var(--oz-card);
 }
+.oz-listen[data-rec]:empty {
+	min-height: 24.6rem;
+}
 @media (max-width: 40rem) {
 	.oz-listen:empty {
 		min-height: 25rem;
+	}
+	.oz-listen[data-rec]:empty {
+		min-height: 39.6rem;
 	}
 }
 .oz-listen.oz-tool .oz-stats {

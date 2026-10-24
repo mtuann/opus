@@ -1,0 +1,20 @@
+---
+// Bảng rộng hơn khung thì cuộn ngang (Starlight); người dùng bàn phím phải tới được bảng để cuộn (axe:
+// scrollable-region-focusable). Chỉ bảng đang tràn mới nhận focus, để bảng vừa khung không thành điểm dừng Tab thừa.
+// MarkdownContent.astro chỉ đưa thành phần này vào trang có bảng.
+---
+
+<script>
+	const gan = () =>
+		document.querySelectorAll<HTMLTableElement>('.sl-markdown-content table').forEach((b) => {
+			if (b.scrollWidth > b.clientWidth + 1) b.tabIndex = 0;
+			else b.removeAttribute('tabindex');
+		});
+	gan();
+	addEventListener('load', gan);
+	let hen = 0;
+	addEventListener('resize', () => {
+		clearTimeout(hen);
+		hen = window.setTimeout(gan, 150);
+	});
+</script>

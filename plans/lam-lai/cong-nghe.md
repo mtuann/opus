@@ -131,7 +131,7 @@ Cách làm (D1.6):
 | Khuông nhạc: cảnh báo ABC, đủ phách | `tests/khuong-nhac.test.mjs` (`tools/khuong-nhac.mjs`) | `tests/abc_warn.mjs`, `tests/abc_bars.py` |
 | Trợ năng trên các trang mẫu | `tests/trinh-duyet/kiem-tro-nang.mjs` (axe trên trình duyệt thật) | `tests/a11y.mjs` |
 | Trình duyệt: hiển thị, công cụ khởi tạo, in | `tests/trinh-duyet/kiem-hien-thi.mjs`, `kiem-thanh-phan.mjs`; ngoại tuyến từ đợt 7 | `tests/browser.mjs` |
-| Tìm kiếm: bộ truy vấn chuẩn | D1.8 | `tests/search.mjs` |
+| Tìm kiếm: bộ truy vấn chuẩn, gõ không dấu cả chữ "đ" | `tests/trinh-duyet/kiem-tim-kiem.mjs`, `tests/tim-kiem.test.mjs` | `tests/search.mjs` |
 | Lighthouse ở ba trang | `tools/lighthouse/kiem.mjs` | `tools/lighthouse/` |
 | Bản thu và mốc (từ đợt 6) | | `tools/audio/check_audio.py` (vẫn ở gốc, đổi đường dẫn) |
 

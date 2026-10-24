@@ -8,6 +8,7 @@ import { trangTrongBan } from './src/ban-build.mjs';
 import { idCu } from './src/plugins/id-cu.mjs';
 import { opusMarkdown } from './src/plugins/opus-markdown.mjs';
 import { sapCo } from './src/plugins/sap-co.mjs';
+import { timKiemKhongDau } from './src/tim-kiem/tich-hop.mjs';
 
 const site = 'https://mtuann.github.io';
 const base = '/opus';
@@ -72,5 +73,7 @@ export default defineConfig({
 				{ tag: 'link', attrs: { rel: 'apple-touch-icon', href: `${base}/icons/icon-192.png` } },
 			],
 		}),
+		// sau Starlight: bọc pagefind.js mà Starlight vừa dựng (gõ "d" thay "đ" vẫn tìm ra)
+		timKiemKhongDau(),
 	],
 });
