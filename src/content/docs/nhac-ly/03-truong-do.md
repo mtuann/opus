@@ -120,5 +120,6 @@ Tiếng piano tắt dần sau khi đánh, nhưng nốt trắng hay nốt tròn v
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- *Open Music Theory*: [Notating Rhythm](https://viva.pressbooks.pub/openmusictheory/chapter/notating-rhythm/); [Simple Meter and Time Signatures](https://viva.pressbooks.pub/openmusictheory/chapter/simple-meter-and-time-signatures/) (phách, gạch ngang nối nốt); [Other Aspects of Notation](https://viva.pressbooks.pub/openmusictheory/chapter/other-aspects-of-notation/) (dấu luyến).
+- Robert Hutchinson, *Music Theory for the 21st-Century Classroom*: [4.2 Durational Symbols](https://musictheory.pugetsound.edu/mt21c/DurationalSymbols.html), [4.3 Dots and Ties](https://musictheory.pugetsound.edu/mt21c/DotsAndTies.html) và [4.4 Meter](https://musictheory.pugetsound.edu/mt21c/meter.html); Gabriel Weinreich, [Motion of piano strings](https://www.speech.kth.se/music/5_lectures/weinreic/motion.html), trong *Five lectures on the acoustics of the piano* (Royal Swedish Academy of Music, 1990).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

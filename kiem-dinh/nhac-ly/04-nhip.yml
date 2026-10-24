@@ -1,0 +1,495 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/04-nhip
+trang: src/content/docs/nhac-ly/04-nhip.md
+nguon_cu: ../opus-zero/docs/nhac-ly/04-nhip.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-24
+    nhanh: moi/d3-l1
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D3-L1 lượt 1, phần 1/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Bài nhạc lý 4 (phách, ô nhịp, vạch nhịp, số chỉ nhịp 2/4, 3/4, 4/4, 6/8, nhịp đơn và nhịp kép). Nguồn chính: Open Music Theory (OMT), mở từng chương bằng curl ngày 24/10/2026 (WebFetch trả 403); bổ sung Mount (Fundamentals, Function, and Form ch. 1), MT21C (Puget Sound), Equipping the Musical Ear (Sierra College, LibreTexts) cho cảm giác mạnh nhẹ, Dolmetsch Online bài 3, 4, 15, Encyclopædia Britannica 1911 (Polka, Minuet, Barcarole; Wikisource) và Lumen Learning (gigue) cho điệu nhảy. Sửa chữ ở lượt 1: (1) n7: thêm gạch đầu dòng "Riêng 6/8: số trên đếm 6 nốt móc đơn trong ô (8 = nốt móc đơn); cứ ba nốt gộp thành một phách, nên mỗi ô có 2 phách", vì hai gạch đầu dòng cũ nói chung "số trên: mỗi ô nhịp có bao nhiêu phách; số dưới: hình nốt được tính là 1 phách (… 8 = nốt móc đơn)" mâu thuẫn với dòng 6/8 của bảng (ở 6/8 phách là nốt đen chấm dôi, số trên đếm phần chia): cách sửa theo hồ sơ bat-dau/tom-tat (n24); (2) n23: câu giới thiệu khối Ode to Joy nói rõ đây là 8 ô nhịp đầu, chuyển sang Đô trưởng, viết ở nhịp 4/4 (bản gốc ở Rê trưởng); (3) n39 (bài tập 3): "…khi nó xuất hiện lần đầu ở bè cello và contrabass" thành "…khi bè cello và contrabass trình bày nó đầy đủ lần đầu", vì kèn gỗ đã gợi hai ô nhịp đầu của giai điệu trước đó (xem n39); (4) mục ## Nguồn (link từng chương, thêm ấn bản bản nhạc đã đối chiếu, bỏ musictheory.net vì chưa đối chiếu nội dung). Ví dụ Ode to Joy (khuông 1) là trích đoạn tác phẩm thật: đối chiếu từng nốt với ba bản phổ công cộng, xem khuong_nhac khối 1. Hai khuông còn lại (3/4, 6/8) là ví dụ soạn cho trang. Không tính là nhận định: tiêu đề mục, bài tập 1 "Mở máy đếm nhịp…" (tính ở n34), nhãn "Cảm giác" khi chỉ nhắc lại (tính ở n9, n12, n15, n19). Chỗ cần review chú ý: n10, n13, n20 (điệu nhảy thường đi với số chỉ nhịp nào) dựa trên từ điển, không phải mọi bản của điệu đó đều ở nhịp ấy; n20 (gigue ở 6/8): Lumen chỉ nói "compound meter", Dolmetsch nói 6/8 dùng cho jig. Thuật ngữ tiếng Việt chưa có trong src/data/thuat-ngu.yml, ghi cho D3-L5: "nhịp đơn" / "nhịp kép" (simple / compound meter; giáo trình tiếng Việt novaspro.vn gọi "nhịp phức" hay "nhịp kép" là nhịp ghép từ hai nhịp đơn trở lên, gồm cả 4/4, nên khác trang ở 4/4: xem n27, n28), "vạch nhịp" và "vạch kép" (bar line, final double bar; giáo trình đó gọi "vạch nhịp đôi hay vạch nhịp kép", loại một nét đậm để kết tác phẩm: xem n3), "phách mạnh / nhẹ", "ô nhịp" đã có.'
+nguon:
+  - id: omt-simple
+    bac: 2
+    ten: Open Music Theory, Simple Meter and Time Signatures
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/simple-meter-and-time-signatures/
+  - id: fff1
+    bac: 2
+    ten: Andre Mount, Fundamentals, Function, and Form (SUNY Geneseo), ch. 1 Introduction to Rhythm and Meter
+    link: https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/1-introduction-to-rhythm-and-meter-2/
+  - id: dol4
+    bac: 2
+    ten: "Dolmetsch Online, Music Theory Online, bài 4: Time Signatures and Meter"
+    link: https://www.dolmetsch.com/musictheory4.htm
+  - id: dol3
+    bac: 2
+    ten: "Dolmetsch Online, Music Theory Online, bài 3: Measures & Bars"
+    link: https://www.dolmetsch.com/musictheory3.htm
+  - id: novas
+    bac: 3
+    ten: Giáo trình môn Lý thuyết âm nhạc cơ bản (tệp PDF trên novaspro.vn; không ghi tác giả, nhà xuất bản); chỉ dùng chứng thực cách gọi ở Việt Nam, không phải nguồn bậc 2
+    link: https://novaspro.vn/upload/files/giao_trinh_mon_ly_thuyet_am_nhac_co_ban.pdf
+  - id: mt21c-meter
+    bac: 2
+    ten: Robert Hutchinson, Music Theory for the 21st-Century Classroom, 4.4 Meter
+    link: https://musictheory.pugetsound.edu/mt21c/meter.html
+  - id: omt-compound
+    bac: 2
+    ten: Open Music Theory, Compound Meter and Time Signatures
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/compound-meters-and-time-signatures/
+  - id: dol15
+    bac: 2
+    ten: "Dolmetsch Online, Music Theory Online, bài 15: Note Groupings (Simple & Compound Time/Meter)"
+    link: https://www.dolmetsch.com/musictheory15.htm
+  - id: lt-stress
+    bac: 2
+    ten: Equipping the Musical Ear (Sierra College, giáo trình mở trên LibreTexts), 19.2 Natural Stress in Meter
+    link: https://human.libretexts.org/Courses/Sierra_College/Equipping_the_Musical_Ear/19%3A_Syncopated_Subdivisions/19.02%3A_Natural_Stress_in_Meter
+  - id: eb1911-polka
+    bac: 2
+    ten: Encyclopædia Britannica, ấn bản 1911, mục Polka (bản chép trên Wikisource)
+    link: https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Polka
+  - id: eb1911-minuet
+    bac: 2
+    ten: Encyclopædia Britannica, ấn bản 1911, mục Minuet (bản chép trên Wikisource)
+    link: https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Minuet
+  - id: mt21c-duration
+    bac: 2
+    ten: Robert Hutchinson, Music Theory for the 21st-Century Classroom, 4.2 Durational Symbols
+    link: https://musictheory.pugetsound.edu/mt21c/DurationalSymbols.html
+  - id: lt-compound
+    bac: 2
+    ten: Equipping the Musical Ear (Sierra College, giáo trình mở trên LibreTexts), 4.3 Compound Duple Meter
+    link: https://human.libretexts.org/Courses/Sierra_College/Equipping_the_Musical_Ear/04%3A_Compound_Meter/4.03%3A_Compound_Duple_Meter
+  - id: eb1911-barcarole
+    bac: 2
+    ten: Encyclopædia Britannica, ấn bản 1911, mục Barcarole (bản chép trên Wikisource)
+    link: https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Barcarole
+  - id: lumen-suite
+    bac: 2
+    ten: Lumen Learning, giáo trình mở Music Appreciation (MUS 121, Tidewater Community College), chương The Suite
+    link: https://courses.lumenlearning.com/vccs-tcc-mus121-1/chapter/suite/
+  - id: imslp-s9
+    bac: 2
+    ten: "IMSLP, trang tác phẩm Symphony No.9, Op.125 (Beethoven, Ludwig van): các chương, giọng, ngày sáng tác"
+    link: https://imslp.org/wiki/Symphony_No.9,_Op.125_(Beethoven,_Ludwig_van)
+  - id: s9-breitkopf
+    bac: 1
+    ten: 'Beethoven, Giao hưởng số 9, Op. 125, chương 4 (Presto): bản phổ có tấm bản "B.9" in ở chân từng trang, tức ấn bản Breitkopf & Härtel (Ludwig van Beethovens Werke, Serie 1 No. 9, khoảng 1864) theo IMSLP #516486; tệp "IV. Presto" của IMSLP #61853, đăng ở Wikimedia Commons'
+    link: https://commons.wikimedia.org/wiki/File:IMSLP61853-PMLP01607-Symphony_No.9,_Op.125_(Beethoven,_Ludwig_van),_IV._Presto.pdf
+  - id: s9-schott
+    bac: 1
+    ten: 'Beethoven, Sinfonie mit Schluss-Chor über Schillers Ode "An die Freude", Op. 125, Mainz: Schott, 1826 (bản in đầu tiên, tấm bản 2322; bản scan của Boston Public Library trên Internet Archive)'
+    link: https://archive.org/details/sinfoniemitschlu00beet
+  - id: s9-eulenburg
+    bac: 1
+    ten: 'Beethoven, Giao hưởng số 9, Op. 125, chương 4: bản phổ in lại, tấm bản E.E. 3611 (tệp "score modern" ở Wikimedia Commons, nguồn IMSLP)'
+    link: https://commons.wikimedia.org/wiki/File:Beethoven_op125,4_score_modern.pdf
+  - id: omt-rhythm
+    bac: 2
+    ten: Open Music Theory, Notating Rhythm
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/notating-rhythm/
+  - id: chopin-ditson
+    bac: 1
+    ten: "Chopin, Valse in C sharp Minor, Op. 64, No. 2, trong Forty Piano Compositions (hiệu đính James Huneker), Boston: Oliver Ditson, 1903, tr. 109; bản scan của Boston Public Library trên Internet Archive"
+    link: https://archive.org/details/fortypianocompos00chop
+nhan_dinh:
+  - id: n1
+    cau: Các phách trong âm nhạc thường được nhóm lại theo chu kỳ, trong đó phách đầu tiên nghe mạnh hơn.
+    loai: quy-tac
+    nguon:
+      - omt-simple
+      - fff1
+      - dol4
+    ket_qua: dung
+    ghi_chu: 'Mount, Fundamentals, Function, and Form ch. 1: "When we talk about meter, we refer to how the basic beats are grouped." OMT Simple Meter: "Beat 1 of each of these measures is considered a downbeat." OMT Simple Meter: "you may hear and feel that it has more "weight" or "heaviness" than the other beats." Dolmetsch bài 4: "By convention, the first beat in a bar is usually the strongest."'
+  - id: n2
+    cau: Mỗi nhóm phách như vậy được ghi trong một ô nhịp, ngăn cách bằng vạch nhịp (đường dọc cắt ngang khuông).
+    loai: dinh-nghia
+    nguon:
+      - omt-simple
+      - dol3
+    ket_qua: dung
+    ghi_chu: 'OMT Simple Meter: "In Western musical notation, beat groupings (duple, triple, quadruple, etc.) are shown using bar lines, which separate music into measures (also called bars)" ... OMT Simple Meter: "Each measure is equivalent to one beat grouping." Dolmetsch bài 3: "The end of each bar (measure) is marked usually with a single vertical line drawn from the top line to the bottom line of the staff or stave. This line is called a bar line (or bar)."'
+  - id: n3
+    cau: Bản nhạc kết thúc bằng vạch kép.
+    loai: quy-tac
+    nguon:
+      - dol3
+      - novas
+    ket_qua: dung
+    ghi_chu: 'Dolmetsch bài 3: "The final double bar line (final double bar), also known as a period double bar line (period double bar) or terminal double bar line (terminal double bar) (a thin line followed by a thick line), is used to mark the very end of a piece of music or of a particular movement within it." Đúng với "vạch kép kết" (nét mỏng rồi nét dày); vạch kép hai nét mỏng chỉ đánh dấu đoạn giữa bản nhạc. Câu của trang nói "vạch kép" ở nghĩa vạch kết; giữ. Cách gọi ở Việt Nam (chỉ để chứng thực tên gọi): Giáo trình Lý thuyết âm nhạc cơ bản (novaspro.vn): "được gọi là vạch nhịp đôi hay vạch nhịp kép" Giáo trình Lý thuyết âm nhạc cơ bản (novaspro.vn): "Vạch nhịp kép có một nét tô đậm thường dùng để kết thúc tác phẩm" (giáo trình chia "vạch nhịp kép" hai loại: hai nét như nhau, dùng khi đổi nhịp, đổi khóa hay kết một đoạn; và loại có một nét đậm, dùng để kết thúc tác phẩm). "Vạch kép" của trang là cách gọi tắt của "vạch nhịp kép" loại thứ hai: chưa có trong thuat-ngu.yml, ghi cho D3-L5.'
+  - id: n4
+    cau: Ở đầu bản nhạc, ngay sau khóa, có hai con số xếp chồng gọi là số chỉ nhịp.
+    loai: dinh-nghia
+    nguon:
+      - omt-simple
+      - dol4
+    ket_qua: dung
+    ghi_chu: 'OMT Simple Meter: "Time signatures are expressed by two numbers, one above the other, placed after the clef" Dolmetsch bài 4: "The time signature is written as two numbers, one set above the other, usually placed immediately before the first note" (nếu có hóa biểu thì số chỉ nhịp đứng sau hóa biểu; "ngay sau khóa" theo cách nói của OMT). "Số chỉ nhịp" đã có trong thuat-ngu.yml (time signature).'
+  - id: n5
+    cau: "Số trên của số chỉ nhịp: mỗi ô nhịp có bao nhiêu phách."
+    loai: dinh-nghia
+    nguon:
+      - omt-simple
+      - dol4
+      - mt21c-meter
+    ket_qua: dung
+    ghi_chu: 'OMT Simple Meter: "In simple meters, the top number of a time signature represents the number of beats in each measure, while the bottom number represents the beat unit." Dolmetsch bài 4: "The upper number tell us the number of beats in a bar." MT21C 4.4 Meter: "Meter describes the number of beats in a measure" Đúng với nhịp đơn; ở nhịp kép (6/8) số trên đếm phần chia, không phải phách: xem câu mới thêm ở n7.'
+  - id: n6
+    cau: "Số dưới của số chỉ nhịp: hình nốt nào được tính là 1 phách (4 = nốt đen, 2 = nốt trắng, 8 = nốt móc đơn)."
+    loai: dinh-nghia
+    nguon:
+      - omt-simple
+      - dol4
+    ket_qua: dung
+    ghi_chu: 'OMT Simple Meter: "2, which means the half note gets the beat." OMT Simple Meter: "4, which means the quarter note gets the beat." OMT Simple Meter: "8, which means the eighth note gets the beat." Đúng với nhịp đơn (xem n7 cho 6/8).'
+  - id: n7
+    cau: "Riêng 6/8: số trên đếm 6 nốt móc đơn trong ô (8 = nốt móc đơn); cứ ba nốt gộp thành một phách, nên mỗi ô có 2 phách."
+    loai: dinh-nghia
+    nguon:
+      - omt-compound
+      - dol15
+      - mt21c-meter
+    ket_qua: da-sua
+    ghi_chu: 'Câu mới thêm ở trang (không có ở trang cũ). Lý do: trang cũ nói chung "số trên: mỗi ô nhịp có bao nhiêu phách; số dưới: hình nốt nào được tính là 1 phách (… 8 = nốt móc đơn)", mâu thuẫn với dòng 6/8 của bảng ("6 nốt móc đơn, nhóm thành 2 phách") và với đoạn dưới ("2 phách lớn"): ở 6/8 phách là nốt đen chấm dôi, không phải móc đơn. OMT Compound Meter: "The top number of a time signature in compound meter expresses the number of divisions in a measure, while the bottom number expresses the division unit". OMT Compound Meter: "If 8 is the bottom number, the beat is a dotted quarter note (equivalent to three eighth notes)." OMT Compound Meter: "each measure has two beats (6÷3=2), indicating duple meter". Dolmetsch bài 15: "The beat is actually a dotted crotchet (dotted quarter note) but the beat is divided into three quavers (eighth notes). Therefore, each bar contains six quavers (eighth notes)." Cách sửa theo hồ sơ bat-dau/tom-tat (n24).'
+  - id: n8
+    cau: 2/4 nghĩa là 2 phách, mỗi phách là nốt đen.
+    loai: dinh-nghia
+    nguon:
+      - omt-simple
+    ket_qua: dung
+    ghi_chu: 'Số trên 2 = hai phách mỗi ô, số dưới 4 = nốt đen là một phách (n5, n6; OMT: "In simple meters, the top number is always 2, 3, or 4").'
+  - id: n9
+    cau: 2/4 có cảm giác MẠNH – nhẹ.
+    loai: quy-tac
+    nguon:
+      - lt-stress
+      - dol4
+      - fff1
+    ket_qua: dung
+    ghi_chu: 'LibreTexts Equipping the Musical Ear 19.2: "In a simple duple meter, the natural stress or accent is a strong beat on beat one and a weaker beat on beat two." Dolmetsch bài 4: "the meter comprises two beats; the first strong and the second weak." Mount, Fundamentals, Function, and Form ch. 1: "we saw and heard how every other beat was emphasized: strong-weak-strong-weak-strong, etc."'
+  - id: n10
+    cau: 2/4 thường gặp ở hành khúc, polka.
+    loai: quy-tac
+    nguon:
+      - dol4
+      - eb1911-polka
+      - omt-simple
+    ket_qua: dung
+    ghi_chu: 'Dolmetsch bài 4: "used for polkas or marches"; Britannica 1911, Polka: "a lively dance of Bohemian origin, danced to music written in 2/4 time." OMT Simple Meter: ""The Stars and Stripes Forever" (1896), written by John Philip Sousa, is in a simple duple meter." (OMT nói nhịp đơn hai, không nói 2/4). Là cách dùng thường gặp, không phải mọi hành khúc đều ở 2/4.'
+  - id: n11
+    cau: 3/4 nghĩa là 3 phách, mỗi phách là nốt đen.
+    loai: dinh-nghia
+    nguon:
+      - omt-simple
+    ket_qua: dung
+    ghi_chu: "Như n8: số trên 3 = ba phách mỗi ô, số dưới 4 = nốt đen là một phách."
+  - id: n12
+    cau: 3/4 có cảm giác MẠNH – nhẹ – nhẹ.
+    loai: quy-tac
+    nguon:
+      - lt-stress
+      - fff1
+    ket_qua: dung
+    ghi_chu: 'LibreTexts Equipping the Musical Ear 19.2: "In a simple triple meter, the natural stress or accent is a strong beat on beat one and weak beats on beats two and three." Mount, Fundamentals, Function, and Form ch. 1: "Listening to a different piece of music, we may find that every third beat is emphasized: strong-weak-weak-strong-weak-weak, etc."'
+  - id: n13
+    cau: 3/4 thường gặp ở valse (waltz), minuet.
+    loai: quy-tac
+    nguon:
+      - dol4
+      - eb1911-minuet
+      - fff1
+      - omt-simple
+    ket_qua: dung
+    ghi_chu: "Dolmetsch bài 4: \"used for waltzes, minuets and scherzi and country & western ballads\"; Britannica 1911, Minuet: \"a dance for two persons, in 3/4 time.\" OMT Simple Meter: \"Wolfgang Amadeus Mozart's \"Minuet in F major,\" K.2 (1774) is in a simple triple meter.\" Mount ch. 1 lấy một điệu waltz làm ví dụ nhịp ba: \"Example 1-5. Clara Greenwood, The Waldemere Waltzes, No. 1 in F major\" ngay sau câu \"every third beat is emphasized\". Là cách dùng thường gặp."
+  - id: n14
+    cau: 4/4 nghĩa là 4 phách, mỗi phách là nốt đen.
+    loai: dinh-nghia
+    nguon:
+      - omt-simple
+    ket_qua: dung
+    ghi_chu: "Như n8: số trên 4 = bốn phách mỗi ô, số dưới 4 = nốt đen là một phách."
+  - id: n15
+    cau: 4/4 có cảm giác MẠNH – nhẹ – vừa – nhẹ.
+    loai: quy-tac
+    nguon:
+      - lt-stress
+      - fff1
+    ket_qua: dung
+    ghi_chu: 'LibreTexts Equipping the Musical Ear 19.2: "In a simple quadruple meter, the natural stress or accent is a strong beat on beat one and a secondary strong beat on beat three (although beat three is not as strong as beat one)." Mount, Fundamentals, Function, and Form ch. 1: "The first beat of each group is generally the strongest. The third is also strong, but not quite as strong as the first. Beats two and four are relatively weak."'
+  - id: n16
+    cau: 4/4 là số chỉ nhịp phổ biến nhất.
+    loai: quy-tac
+    nguon:
+      - mt21c-duration
+      - fff1
+      - dol4
+    ket_qua: dung
+    ghi_chu: 'MT21C 4.2 Durational Symbols: "In the present day, the most common time signature is" 4/4 ("common time"). Mount, Fundamentals, Function, and Form ch. 1: "In fact, in Western music quadruple meter is the most common way of organizing the beat." Dolmetsch bài 4: "common time widely used in classical music; the usual time signature in rock, jazz, country, and bluegrass, and most modern pop or dance music"'
+  - id: n17
+    cau: 4/4 còn được ký hiệu là C.
+    loai: dinh-nghia
+    nguon:
+      - omt-simple
+    ket_qua: dung
+    ghi_chu: 'OMT Simple Meter: "There are two additional simple meter time signatures, which are 𝄴 (common time) and 𝄵 (cut time)." Common time (ký hiệu chữ C) tương đương 4/4; chữ C có vạch đứng là cut time, tương đương 2/2 (liên quan lựa chọn sai ở câu hỏi 4).'
+  - id: n18
+    cau: "6/8: 6 nốt móc đơn, nhóm thành 2 phách."
+    loai: dinh-nghia
+    nguon:
+      - omt-compound
+      - dol15
+    ket_qua: dung
+    ghi_chu: 'OMT Compound Meter: "This means that each measure in this time signature will contain six eighth notes" OMT Compound Meter: "each measure has two beats (6÷3=2), indicating duple meter" Dolmetsch bài 15: "The beat is actually a dotted crotchet (dotted quarter note) but the beat is divided into three quavers (eighth notes). Therefore, each bar contains six quavers (eighth notes)."'
+  - id: n19
+    cau: 6/8 có cảm giác MẠNH – nhẹ – nhẹ – vừa – nhẹ – nhẹ.
+    loai: quy-tac
+    nguon:
+      - lt-compound
+      - omt-compound
+      - omt-simple
+    ket_qua: dung
+    ghi_chu: 'LibreTexts Equipping the Musical Ear 4.3: "Duple meter has a pattern of a strong beat and a weak beat." LibreTexts Equipping the Musical Ear 4.3: "Within each of these beats, the first of the three eighth notes is the strongest of the group." OMT Compound Meter: "In compound meters, the beat divides into three parts, the first accented and the second and third non-accented." Phách 1 mạnh hơn phách 2 (OMT Simple Meter: "downbeat … more weight"), nên nốt 1 mạnh nhất, nốt 4 (đầu phách 2) "vừa", các nốt còn lại nhẹ: khớp.'
+  - id: n20
+    cau: 6/8 thường gặp ở barcarolle, gigue.
+    loai: quy-tac
+    nguon:
+      - eb1911-barcarole
+      - lumen-suite
+      - dol4
+    ket_qua: dung
+    ghi_chu: 'Britannica 1911, Barcarole: "generally in 6-8 time" (barcarolle: bài hát của người chèo thuyền gondola Venice). Lumen Learning, The Suite: "The gigue is an upbeat and lively baroque dance in compound meter, typically the concluding movement of an instrumental suite" (compound meter; 6/8 là nhịp kép hai phách phổ biến nhất). Dolmetsch bài 4: "used for light, double and triple jigs, fast waltzes or marches" (jig; "gigue" là dạng tiếng Pháp của jig). Là cách dùng thường gặp: gigue còn ở 12/8, 3/8, 9/8 (Dolmetsch: 9/8 hợp với gigue).'
+  - id: n21
+    cau: Giai điệu Ode to Joy nằm trong chương cuối (chương 4) của Giao hưởng số 9 của Beethoven.
+    loai: lich-su
+    nguon:
+      - imslp-s9
+      - s9-breitkopf
+    ket_qua: dung
+    ghi_chu: 'IMSLP: 4 movements; chương 4: IMSLP Symphony No.9: "Presto (D minor) - Allegro assai (D major)". Bản phổ Breitkopf (tệp "IV. Presto"): giai điệu có ở "Allegro assai" (tr. 181–182, bè Violoncello và Basso, trình bày đầy đủ lần đầu), rồi ở bè hát (tr. 198, "Freude, schöner Götterfunken"). IMSLP ghi "Ode to Joy" là tên khác của tác phẩm.'
+  - id: n22
+    cau: Giai điệu Ode to Joy ở bản gốc viết ở Rê trưởng.
+    loai: cau-truc
+    nguon:
+      - imslp-s9
+      - s9-breitkopf
+      - s9-schott
+      - s9-eulenburg
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Allegro assai ghi (D major). Ba bản phổ (Schott 1826 tr. 101; Breitkopf tr. 181; bản in lại E.E. 3611 tr. 271): hóa biểu hai dấu thăng (Fa♯, Đô♯) ở "Allegro assai", giai điệu bắt đầu ở Fa♯ (ô 1) và kết ở Rê (ô 8): Rê trưởng.'
+  - id: n23
+    cau: Khối nhạc là 8 ô nhịp đầu của giai điệu, chuyển sang Đô trưởng và viết ở nhịp 4/4 cho dễ đọc (bản gốc ở Rê trưởng).
+    loai: cau-truc
+    nguon:
+      - s9-breitkopf
+      - s9-schott
+      - s9-eulenburg
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Giai điệu *Ode to Joy* trong chương cuối Giao hưởng số 9 của Beethoven:" (không nói khối đã chuyển giọng và chỉ là một đoạn đầu). Câu mới: "Giai điệu *Ode to Joy* (8 ô nhịp đầu) trong chương cuối Giao hưởng số 9 của Beethoven, chuyển sang Đô trưởng và viết ở nhịp 4/4 cho dễ đọc (bản gốc ở Rê trưởng):". Lý do và đối chiếu: xem khuong_nhac khối 1 (bản gốc ở Rê trưởng, ghi nhịp alla breve; khối là 8 ô nhịp đầu của giai điệu, xuống một cung; mỗi ô vẫn bốn nốt đen như bản gốc).'
+  - id: n24
+    cau: Hãy đếm "1 – 2 – 3", nhấn vào số 1 (ví dụ 3/4).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập. Nhịp ba mạnh – nhẹ – nhẹ (n12); trang cũ ../opus-zero/docs/nhac-ly/04-nhip.md viết giống hệt; không trái.
+  - id: n25
+    cau: Nhịp 6/8 có 6 nốt móc đơn nhưng nghe như 2 phách lớn, mỗi phách chia ba.
+    loai: dinh-nghia
+    nguon:
+      - omt-compound
+      - lt-compound
+      - dol15
+    ket_qua: dung
+    ghi_chu: 'Như n18 và n19. LibreTexts Equipping the Musical Ear 4.3: "This gives compound meter a lilting feel (1-2-3 4-5-6)." Dolmetsch bài 4: "is most commonly felt as two beats to the bar"'
+  - id: n26
+    cau: Thử đếm "1-2-3-4-5-6", nhấn ở 1 và 4.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Mẹo đếm. Khớp LibreTexts 4.3: "a lilting feel (1-2-3 4-5-6)" với nốt 1 và 4 là đầu hai phách lớn (n19). Không trái trang lõi nào.'
+  - id: n27
+    cau: Nhịp đơn và nhịp kép là hai họ nhịp.
+    loai: dinh-nghia
+    nguon:
+      - omt-compound
+      - mt21c-meter
+      - dol15
+      - novas
+    ket_qua: dung
+    ghi_chu: 'MT21C 4.4 Meter: "If the beats are normally divided into two parts, the meter is described as simple. If the beats are normally divided into three parts, the meter is described as compound." OMT Compound Meter: "Compound meters are meters in which the beat divides into three and then further subdivides into six." "Nhịp đơn", "nhịp kép" là cách dịch simple / compound meter của site, chưa có trong thuat-ngu.yml: ghi cho D3-L5. Khác biệt cần D3-L5 biết: giáo trình tiếng Việt (novaspro.vn, bậc 3) chia theo số phách và trọng âm, không theo cách chia phách: Giáo trình Lý thuyết âm nhạc cơ bản (novaspro.vn): "Loại nhịp đơn là những loại nhịp có một, hai hoặc ba phách trong một ô nhịp" Giáo trình Lý thuyết âm nhạc cơ bản (novaspro.vn): "Nhịp phức được hình thành nhờ sự kết hợp từ hai hay nhiều nhịp đơn giống nhau." Mục "Loại nhịp phức" của giáo trình đó có cả 4/4 ("Nhịp 4/4 là loại nhịp có 4 phách", phách 3 là "phách mạnh vừa", tức hai nhịp 2/4 ghép lại theo định nghĩa của giáo trình; phân số trong PDF vỡ khi trích chữ nên chỉ đọc được phần mô tả), và bảng thuật ngữ cuối sách ghi "Compound time: nhịp kép, nhịp phức", "Simple time: nhịp đơn". Vậy chữ "nhịp đơn" của trang (gồm 4/4, theo OMT) rộng hơn "nhịp đơn" của giáo trình tiếng Việt (chỉ 1–3 phách), còn "nhịp kép" của trang (6/8, 9/8, 12/8) là một phần của "nhịp phức / nhịp kép" ở giáo trình đó. Theo chuẩn kiểm định mục 2 (sách gọi tên hay định nghĩa khác nhau thì theo OMT) giữ cách xếp của trang, kết quả dung; D3-L5 quyết có thêm chú thích cho người học đã gặp cách gọi ở giáo trình tiếng Việt hay không.'
+  - id: n28
+    cau: Ở nhịp đơn (2/4, 3/4, 4/4), mỗi phách chia đôi (một nốt đen = hai móc đơn).
+    loai: dinh-nghia
+    nguon:
+      - omt-simple
+      - omt-rhythm
+      - novas
+    ket_qua: dung
+    ghi_chu: 'OMT Simple Meter: "Simple meters are meters in which the beat divides into two, and then further subdivides into four." OMT Notating Rhythm: "a quarter note is equivalent in duration to two eighth notes". Số chỉ nhịp 2/4, 3/4, 4/4 đều là nhịp đơn (OMT Simple Meter: số trên là 2, 3 hoặc 4). Lưu ý (xem n27): giáo trình tiếng Việt (novaspro.vn) xếp 4/4 vào nhịp phức (2/4 + 2/4), không phải nhịp đơn; câu của trang đúng theo cách chia của OMT (phách chia đôi), giữ.'
+  - id: n29
+    cau: Ở nhịp kép (6/8, 9/8, 12/8), mỗi phách chia ba (một nốt đen chấm dôi = ba móc đơn).
+    loai: dinh-nghia
+    nguon:
+      - omt-compound
+      - omt-rhythm
+      - mt21c-meter
+    ket_qua: dung
+    ghi_chu: 'OMT Compound Meter: "Compound meters are meters in which the beat divides into three and then further subdivides into six." OMT Compound Meter: "If 8 is the bottom number, the beat is a dotted quarter note (equivalent to three eighth notes)." OMT Notating Rhythm: "a dotted quarter note would be equivalent to three eighth notes" MT21C 4.4 Meter: "Compound time signatures have a top number greater than four that is divisible by 3 (6, 9, 12)."'
+  - id: n30
+    cau: Vì thế 6/8 nghe như "2 phách lớn" chứ không phải 6 phách đều nhau.
+    loai: dinh-nghia
+    nguon:
+      - omt-compound
+      - lt-compound
+      - dol15
+    ket_qua: dung
+    ghi_chu: 'Hệ quả của n18, n25: OMT Compound Meter: "each measure has two beats (6÷3=2), indicating duple meter" Dolmetsch bài 4: "is most commonly felt as two beats to the bar" Sáu nốt móc đơn không đều về trọng âm (n19).'
+  - id: n31
+    cau: Bật máy đếm nhịp khi tập đàn và đếm to cùng nó.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập. Cùng ý piano/cach-tap.md cũ ("Đếm to, dùng máy đếm nhịp") và piano/nam-ngon.md cũ ("Đếm to, hoặc bật máy đếm nhịp"); không trái.
+  - id: n32
+    cau: Máy đếm nhịp có link /opus/luyen-tap/metronome/ (dùng ở hộp "Trên phím đàn", bài tập 1 và hộp "Luyện tập kèm theo").
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ: ../opus-zero/docs/luyen-tap/metronome.md tồn tại ("Máy đếm nhịp"), có công cụ oz-metronome (assets/js/metronome.js). Link hiện chữ "sắp có" ở site mới cho tới khi trang lên.'
+  - id: n33
+    cau: Bài 6 (nhịp 3/4) và bài 7 (nhịp 6/8) trong 10 bài đầu tiên (link /opus/piano/10-bai-dau-tien/) luyện đúng hai loại nhịp của bài này.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ: ../opus-zero/docs/piano/10-bai-dau-tien.md: bảng lộ trình "6 | Amazing Grace | Nhịp lấy đà, nhịp 3/4" và "7 | Greensleeves | Nhịp 6/8, giọng La thứ"; khối abc bài 6 có M:3/4 (dòng 198), bài 7 có M:6/8 (dòng 223). 3/4 và 6/8 đều nằm trong bảng số chỉ nhịp của bài này (2/4, 3/4, 4/4, 6/8). Link hiện "sắp có" ở site mới cho tới khi trang lên.'
+  - id: n34
+    cau: Máy đếm nhịp có ô chọn số phách mỗi ô nhịp (có 3) và ô "Nhấn phách đầu".
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Bản cũ ../opus-zero/docs/assets/js/metronome.js dòng 28–29: ô chọn "Số phách mỗi ô nhịp" có các giá trị 2, 3, 4 (mặc định), 6; hộp "Nhấn phách đầu" (mặc định bật). Câu bài tập "chọn 3 phách mỗi ô nhịp, bật Nhấn phách đầu" đúng với công cụ.'
+  - id: n35
+    cau: Vỗ tay theo ví dụ 3/4.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; "ví dụ 3/4" là khối abc 2 (mỗi ô 3 phách).
+  - id: n36
+    cau: Chopin có bản Valse Op. 64 số 2.
+    loai: danh-muc
+    nguon:
+      - chopin-ditson
+    ket_qua: dung
+    ghi_chu: 'Forty Piano Compositions (Boston: Oliver Ditson, 1903; hiệu đính James Huneker; scan của Boston Public Library), tr. 109: tiêu đề "VALSE, in C sharp Minor", "FRÉDÉRIC CHOPIN, Op. 64, No. 2", đề "Tempo giusto". (Mục lục của tập, theo bản OCR của Internet Archive, cũng ghi Op. 64, No. 2 ở tr. 109.)'
+  - id: n37
+    cau: Valse Op. 64 số 2 của Chopin viết ở nhịp 3/4, nên đếm "1 – 2 – 3".
+    loai: cau-truc
+    nguon:
+      - chopin-ditson
+    ket_qua: dung
+    ghi_chu: 'Cùng trang 109 của ấn bản Ditson 1903: số chỉ nhịp 3/4 ở cả hai khuông của hàng đầu (giọng Đô♯ thứ, bốn dấu thăng). Ba phách mỗi ô, đúng "1 – 2 – 3".'
+  - id: n38
+    cau: Nghe một bản valse bất kỳ và đếm "1 – 2 – 3".
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên nghe. Valse ở nhịp 3/4 (n13); không trái trang lõi nào.
+  - id: n39
+    cau: Bè cello và contrabass trình bày giai điệu Ode to Joy đầy đủ lần đầu (chương 4 của Giao hưởng số 9).
+    loai: lich-su
+    nguon:
+      - s9-breitkopf
+      - s9-schott
+      - s9-eulenburg
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ ở bài tập 3: "tìm giai điệu Ode to Joy khi nó xuất hiện lần đầu ở bè cello và contrabass". Mới: "…khi bè cello và contrabass trình bày nó đầy đủ lần đầu." Lý do: trước ô thứ 92 đã có một đoạn gợi ngắn ở kèn gỗ: bản Breitkopf tr. 180 (và Schott 1826 tr. 100), bốn ô nhịp đầu ghi "Allegro assai, trắng = 80", kèn gỗ chơi "dolce" hai ô nhịp đầu của giai điệu ở La trưởng (đọc từ ảnh: Đô♯ Đô♯ Rê Mi | Mi Rê Đô♯ Si, cùng bước nhảy với Fa♯ Fa♯ Sol La | La Sol Fa♯ Mi), rồi hai ô nhịp khác, sau đó "Tempo I" (3/4) cắt ngang; giai điệu chỉ được trình bày trọn vẹn từ "Allegro assai" (mm. 92–) ở bè Violoncello và Basso. Kiểm ba bản phổ: ở đó, trên cả trang chỉ hai khuông cuối "Violoncello" và "Basso" (bản in lại: một khuông "Vc. Cb.") mang giai điệu, mọi bè khác nghỉ; bè hát đến sau (Breitkopf tr. 198). Breitkopf tr. 181–182, Schott 1826 tr. 101–102, bản in lại tr. 271. Wikipedia (chỉ để tìm nguồn) cũng viết giai điệu "finally introduced by the cellos and double basses" sau các đoạn nhắc lại ba chương đầu. Lưu ý: ở bè cello và contrabass, hai nốt Fa♯ Fa♯ (và Rê Rê) đầu ô 1, 3, 5, 7 viết thành một nốt trắng; khối abc theo dạng lời hát (khuong_nhac khối 1).'
+  - id: n40
+    cau: Nghe Beethoven Giao hưởng số 9, chương 4, tìm giai điệu Ode to Joy khi bè cello và contrabass trình bày nó đầy đủ lần đầu.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên nghe (chỗ cần kiểm là n39, đã sửa chữ).
+  - id: n41
+    cau: 'Hộp "Luyện tập kèm theo": công cụ Tiết tấu (link /opus/luyen-tap/tiet-tau/) có cấp độ 2–3, và máy đếm nhịp (link /opus/luyen-tap/metronome/) có 2, 3, 4 và 6 phách.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Bản cũ ../opus-zero/docs/assets/js/rhythm.js dòng 62: ô Cấp độ có "2: thêm móc đơn, dấu lặng" và "3: chấm dôi, đảo phách"; metronome.js dòng 28: ô chọn số phách mỗi ô nhịp có 2, 3, 4, 6. Hai trang luyen-tap/tiet-tau.md và metronome.md tồn tại.'
+  - id: n42
+    cau: 'Câu hỏi: "Trong số chỉ nhịp 3/4, số 3 nghĩa là gì?" Đáp án đúng "Mỗi ô nhịp có 3 phách"; "Nốt móc ba được tính là 1 phách" và "Bản nhạc có 3 câu" sai; giải thích "Số dưới (4) cho biết nốt đen là 1 phách." đúng.'
+    loai: dinh-nghia
+    nguon:
+      - omt-simple
+    ket_qua: dung
+    ghi_chu: "Số trên 3 = số phách mỗi ô (n5, n11). Nốt được tính là một phách do số dưới quy định (n6), không phải số 3; số trên không nói về số câu nhạc: hai lựa chọn kia sai. Giải thích đúng: số dưới 4 = nốt đen (n6)."
+  - id: n43
+    cau: 'Câu hỏi: "Nhịp nào thường dùng cho điệu valse?" Đáp án đúng "3/4"; "2/4", "6/8" sai; giải thích "MẠNH – nhẹ – nhẹ." đúng.'
+    loai: quy-tac
+    nguon:
+      - dol4
+      - fff1
+    ket_qua: dung
+    ghi_chu: '3/4 (n13). 2/4 dùng cho polka, hành khúc (n10). 6/8: Dolmetsch cũng nói 6/8 dùng cho "fast waltzes", nhưng điệu valse thường dùng 3/4 ("used for waltzes, minuets…"); lựa chọn 6/8 sai ở chữ "thường". Giải thích khớp n12.'
+  - id: n44
+    cau: 'Câu hỏi: "Nhịp 6/8 thường được cảm nhận như thế nào?" Đáp án đúng "2 phách lớn, mỗi phách chia ba"; "6 phách đều nhau" và "3 phách lớn, mỗi phách chia đôi" sai; giải thích "Đếm 1-2-3-4-5-6, nhấn vào 1 và 4." đúng.'
+    loai: quy-tac
+    nguon:
+      - omt-compound
+      - lt-compound
+      - dol4
+    ket_qua: dung
+    ghi_chu: 'Đáp án đúng: n25, n30. "6 phách đều nhau" trái n19, n30; "3 phách lớn, mỗi phách chia đôi" là cảm giác của 3/4 (nhịp đơn ba, n11, n28), không phải 6/8. Giải thích: nhấn 1 và 4 (n19, n26).'
+  - id: n45
+    cau: 'Câu hỏi: "Ký hiệu C ở vị trí số chỉ nhịp nghĩa là gì?" Đáp án đúng "4/4"; "2/2" và "3/4" sai; giải thích "C là ký hiệu của nhịp 4/4." đúng.'
+    loai: dinh-nghia
+    nguon:
+      - omt-simple
+    ket_qua: dung
+    ghi_chu: "C (common time) = 4/4 (n17). 2/2 là ký hiệu cut time (chữ C có vạch đứng), không phải chữ C thường: sai. 3/4 không có ký hiệu chữ: sai."
+khuong_nhac:
+  - khoi: 1
+    loai: trich-doan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - not
+      - doi-chieu-an-ban
+    ket_qua: da-sua
+    ghi_chu: 'Trích đoạn tác phẩm thật: Beethoven, Giao hưởng số 9, chương 4, giai điệu Ode to Joy (8 ô nhịp đầu). Hai chỗ đối chiếu: (a) lần đầu trình bày đầy đủ ở bè Violoncello và Basso, mm. 92–99 (trước đó chỉ có một đoạn gợi ngắn ở kèn gỗ, xem n39) (số ô nhịp theo bản in lại tr. 271: số 100 in trên ô thứ chín kể từ "Allegro assai"); (b) bè hát (baritone, "Freude, schöner Götterfunken, Tochter aus Elysium; Wir betreten feuertrunken, Himmlische, dein Heiligthum"). Đối chiếu từng nốt (bằng mắt, trên trang dựng từ PDF bằng PyMuPDF rồi phóng to từng ô nhịp; không có lyrel.py, ozchk trong repo này) với ba bản phổ công cộng: (1) Breitkopf & Härtel, Ludwig van Beethovens Werke, Serie 1 No. 9, khoảng 1864, tấm bản B.9 (tệp "IV. Presto" của IMSLP #61853 ở Wikimedia Commons): bè Violoncello và Basso ở "Allegro assai" tr. 181 (mm. 92–100), bè hát "BARITONO" tr. 198 ("Freude, schöner Götterfunken, Tochter aus Elysium"); (2) Schott, Mainz, 1826, bản in đầu, tấm bản 2322 (Internet Archive, bản scan của Boston Public Library): tr. 101–102, tr. 114; (3) bản phổ in lại tấm bản E.E. 3611 (Wikimedia Commons): tr. 271, tr. 286–287. Bè cello và contrabass: ba bản giống nhau về cao độ, nhịp và giọng; bè hát: kiểm trên Breitkopf (tr. 198) và Schott (tr. 114), bản in lại có cùng chữ lời ở tr. 286–287. Giọng và nhịp bản gốc: Rê trưởng (hóa biểu Fa♯, Đô♯); số chỉ nhịp alla breve (chữ C có vạch đứng), thấy rõ ở bản Schott 1826 và bản Breitkopf (bản in lại cũng ghi dấu tương tự nhưng ảnh scan mờ); ghi "Allegro assai, trắng = 80" ở cả ba bản. Cao độ và nhịp của giai điệu như bè hát hát (mỗi âm tiết một nốt): Fa♯ Fa♯ Sol La | La Sol Fa♯ Mi | Rê Rê Mi Fa♯ | Fa♯. (đen chấm dôi) Mi (móc đơn) Mi (trắng) | Fa♯ Fa♯ Sol La | La Sol Fa♯ Mi | Rê Rê Mi Fa♯ | Mi. Rê Rê (ô 8). Hạ xuống một cung (Rê trưởng sang Đô trưởng) thành Mi Mi Fa Sol | Sol Fa Mi Rê | Đô Đô Rê Mi | Mi. Rê Rê | Mi Mi Fa Sol | Sol Fa Mi Rê | Đô Đô Rê Mi | Rê. Đô Đô, đúng từng nốt của khối abc (30 nốt, 8 ô, mỗi ô 4 phách: abcjs đọc E3/2 D/ D2 = 1½ + ½ + 2). Khác bản gốc, đã nói trên trang (n23): chuyển giọng (Rê trưởng sang Đô trưởng) và viết ở nhịp 4/4 (bản gốc alla breve; mỗi ô vẫn là bốn nốt đen); Q:1/4=100 là tốc độ nghe thử của trang, không phải của Beethoven (trắng = 80, tức khoảng đen = 160), trang không nói tốc độ. Ở bè cello và contrabass (mm. 92–99), hai nốt đầu của ô 1, 3, 5, 7 (Fa♯ Fa♯ và Rê Rê) viết thành một nốt trắng (Fa♯, Sol, La | La Sol Fa♯ Mi | Rê, Mi, Fa♯ | …); khối abc theo dạng lời hát (hai nốt đen lặp lại), trang chỉ nói "giai điệu" nên không sai. Trang cũ piano/10-bai-dau-tien.md (bài 3) cũng viết Ode to Joy ở Đô trưởng ("Beethoven, Giao hưởng số 9, chương 4 (1824). Đô trưởng."). Ấn bản đã ghi ở mục ## Nguồn của trang. Sửa trang: câu mở đầu ví dụ nói rõ 8 ô nhịp đầu, chuyển Đô trưởng, nhịp 4/4, bản gốc Rê trưởng (n23). abcjs (public/vendor/abcjs-basic-min.js, parseOnly) không cảnh báo; mỗi ô đủ độ dài theo tools/khuong-nhac.mjs.'
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+    ket_qua: dung
+    ghi_chu: 'Soạn cho trang này. M:3/4, L:1/4, Q:1/4=132, K:C. Tám ô: C E G | c2 G | A F D | G3 | C E G | c2 e | d B G | c3: mỗi ô đúng 3 phách (c2 G = 2 + 1; G3 = 3). Hòa âm: ô 1–2 Đô trưởng, ô 3 Rê thứ (D F A), ô 4 Sol, ô 5–6 Đô, ô 7 Sol (G B D), ô 8 Đô: I – I – ii – V – I – I – V – I, đơn giản. Minh họa đúng "đếm 1 – 2 – 3, nhấn vào số 1" ở 3/4 (n11, n12). abcjs (public/vendor/abcjs-basic-min.js, parseOnly) không cảnh báo; mỗi ô đủ độ dài theo tools/khuong-nhac.mjs.'
+  - khoi: 3
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+    ket_qua: dung
+    ghi_chu: 'Soạn cho trang này. M:6/8, L:1/8, Q:3/8=60, K:C. Bốn ô: C E G c G E | D F A d3 | B, D G B G D | C3 C3: mỗi ô sáu nốt móc đơn (d3 = 3, C3 C3 = 3 + 3), chia hai nhóm ba. Q:3/8=60 đặt phách là nốt đen chấm dôi = 60, khớp "2 phách lớn, mỗi phách chia ba" (n18, n25). Hòa âm: Đô trưởng (C E G c G E), Rê thứ (D F A d), Sol (B, D G B G D), Đô: I – ii – V – I. Minh họa đúng "thử đếm 1-2-3-4-5-6" (n26). abcjs (public/vendor/abcjs-basic-min.js, parseOnly) không cảnh báo; mỗi ô đủ độ dài theo tools/khuong-nhac.mjs.'
+doi_chu:
+  - cu: null
+    moi: "Riêng 6/8: số trên đếm 6 nốt móc đơn trong ô (8 = nốt móc đơn); cứ ba nốt gộp thành một phách, nên mỗi ô có 2 phách."
+    ly_do: 'n7 (da-sua, thêm một dòng): "số trên là số phách mỗi ô" chỉ đúng với nhịp đơn; ở 6/8 số trên đếm nốt móc đơn và phách là nốt đen chấm dôi (OMT Compound Meter and Time Signatures), như dòng 6/8 của bảng và đoạn "2 phách lớn" bên dưới. Lô D2-L1 đã sửa câu tương tự ở tờ tóm tắt (n24).'
+  - cu: "Giai điệu Ode to Joy trong chương cuối Giao hưởng số 9 của Beethoven:"
+    moi: "Giai điệu Ode to Joy (8 ô nhịp đầu) trong chương cuối Giao hưởng số 9 của Beethoven, chuyển sang Đô trưởng và viết ở nhịp 4/4 cho dễ đọc (bản gốc ở Rê trưởng):"
+    ly_do: "n23 (da-sua), khuông 1: khối là 8 ô nhịp đầu của giai điệu, hạ một cung (bản gốc Rê trưởng, nhịp alla breve), đối chiếu từng nốt với ba bản phổ (Breitkopf khoảng 1864, Schott 1826, bản in lại E.E. 3611); trang cũ không nói đã chuyển giọng."
+  - cu: Nghe Beethoven Giao hưởng số 9, chương 4, tìm giai điệu Ode to Joy khi nó xuất hiện lần đầu ở bè cello và contrabass.
+    moi: Nghe Beethoven Giao hưởng số 9, chương 4, tìm giai điệu Ode to Joy khi bè cello và contrabass trình bày nó đầy đủ lần đầu.
+    ly_do: 'n39 (da-sua): trước ô 92 đã có một đoạn gợi ngắn của giai điệu ở kèn gỗ (Breitkopf tr. 180, Schott 1826 tr. 100); lần trình bày đầy đủ đầu tiên là bè cello và contrabass ở "Allegro assai" (mm. 92–99).'
+  - cu: Open Music Theory; musictheory.net.
+    moi:
+      - "Open Music Theory: Simple Meter and Time Signatures; Compound Meter and Time Signatures."
+      - "Andre Mount, Fundamentals, Function, and Form: chương 1. Introduction to Rhythm and Meter; Dolmetsch Online, Music Theory Online: bài 3 (ô nhịp, vạch nhịp), bài 4 (số chỉ nhịp) và bài 15 (nhịp đơn và nhịp kép)."
+      - "Bản nhạc: Beethoven, Giao hưởng số 9, Op. 125, chương 4 (Breitkopf & Härtel, khoảng 1864, trên IMSLP); Chopin, Valse Op. 64 số 2, trong Forty Piano Compositions (hiệu đính James Huneker, Boston: Oliver Ditson, 1903; bản scan trên Internet Archive)."
+    ly_do: "Mục Nguồn: thay link chung tới Open Music Theory bằng link tới đúng các chương đã đọc khi kiểm định (lượt 1), thêm giáo trình mở và bản nhạc đã dùng; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, không đọc được chữ để kiểm."

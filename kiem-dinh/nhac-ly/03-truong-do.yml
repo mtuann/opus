@@ -1,0 +1,318 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/03-truong-do
+trang: src/content/docs/nhac-ly/03-truong-do.md
+nguon_cu: ../opus-zero/docs/nhac-ly/03-truong-do.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-24
+    nhanh: moi/d3-l1
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D3-L1 lượt 1, phần 1/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Bài nhạc lý 3 (trường độ, hình nốt, dấu lặng, chấm dôi, dấu nối). Nguồn chính: Open Music Theory (OMT), mở từng chương bằng curl ngày 24/10/2026 (WebFetch trả 403); bổ sung MT21C (Puget Sound, 4.2–4.4) và bài giảng Weinreich về âm học piano (Viện Hàn lâm Âm nhạc Hoàng gia Thụy Điển) cho n20. Không sửa chữ của trang (chỉ sửa mục ## Nguồn: thay link chung bằng link từng chương đã dùng, bỏ musictheory.net vì chưa đối chiếu nội dung). Không tính là nhận định: tiêu đề mục; câu hỏi của phần Bài tập (chỉ tính câu trả lời trong khối thu gọn). Câu "trường hợp phổ biến nhất" (n5): suy từ MT21C 4.2 (số chỉ nhịp phổ biến nhất hiện nay là 4/4, phách là nốt đen); OMT chỉ nói số dưới "usually" là 2, 4 hay 8. Thuật ngữ tiếng Việt chưa có trong src/data/thuat-ngu.yml, ghi cho D3-L5: "nốt tròn / trắng / đen / móc đơn / móc kép" (whole, half, quarter, eighth, sixteenth note), "dấu lặng" và "lặng đơn / lặng kép" (cách gọi tắt của lặng móc đơn / móc kép), "chấm dôi" (dot), "dấu nối" (tie), "dấu luyến" (slur), "gạch ngang" (beam), "đuôi" (stem) và "móc" (flag). Đối chiếu "Giáo trình môn Lý thuyết âm nhạc cơ bản" (tệp PDF https://novaspro.vn/upload/files/giao_trinh_mon_ly_thuyet_am_nhac_co_ban.pdf; không ghi tác giả, bậc 3, chỉ để chứng thực cách gọi ở Việt Nam): có "nốt tròn, nốt trắng, nốt đen, nốt móc đơn, nốt móc kép", "dấu lặng" (bảng lặng tròn, trắng, đen, móc đơn, móc kép; bảng thuật ngữ cuối sách: quaver rest = "lặng đơn", semiquaver rest = "lặng kép"), "dấu chấm dôi", "dấu nối", "dấu luyến", "đuôi nốt nhạc" và "nét móc ở đuôi nốt nhạc"; cái tương ứng với beam là "vạch nối đuôi nốt nhạc" (không có "gạch ngang"). Chú ý trùng chữ: thuat-ngu.yml mô tả dấu tenuto là "gạch ngang ngắn trên nốt", nên "gạch ngang" (beam) ở trang này dễ lẫn: D3-L5 chọn tên khác cho beam (như "vạch nối đuôi nốt") hay giữ và thêm "(beam)".'
+nguon:
+  - id: omt-notation
+    bac: 2
+    ten: Open Music Theory, Notation of Notes, Clefs, and Ledger Lines
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/notation-of-notes-clefs-and-ledger-lines/
+  - id: omt-rhythm
+    bac: 2
+    ten: Open Music Theory, Notating Rhythm
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/notating-rhythm/
+  - id: omt-simple
+    bac: 2
+    ten: Open Music Theory, Simple Meter and Time Signatures
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/simple-meter-and-time-signatures/
+  - id: mt21c-meter
+    bac: 2
+    ten: Robert Hutchinson, Music Theory for the 21st-Century Classroom, 4.4 Meter
+    link: https://musictheory.pugetsound.edu/mt21c/meter.html
+  - id: mt21c-duration
+    bac: 2
+    ten: Robert Hutchinson, Music Theory for the 21st-Century Classroom, 4.2 Durational Symbols
+    link: https://musictheory.pugetsound.edu/mt21c/DurationalSymbols.html
+  - id: mt21c-dots
+    bac: 2
+    ten: Robert Hutchinson, Music Theory for the 21st-Century Classroom, 4.3 Dots and Ties
+    link: https://musictheory.pugetsound.edu/mt21c/DotsAndTies.html
+  - id: omt-other
+    bac: 2
+    ten: Open Music Theory, Other Aspects of Notation (legato, dấu luyến)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/other-aspects-of-notation/
+  - id: kth-piano
+    bac: 2
+    ten: Gabriel Weinreich, Motion of piano strings, trong Five lectures on the acoustics of the piano (Royal Swedish Academy of Music, 1990), bản đăng ở speech.kth.se
+    link: https://www.speech.kth.se/music/5_lectures/weinreic/motion.html
+nhan_dinh:
+  - id: n1
+    cau: Cao độ cho biết nốt cao hay thấp.
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+    ket_qua: dung
+    ghi_chu: 'OMT Notation of Notes: "A note indicates both pitch and rhythm." Cao độ: nốt ở trên khuông là "higher", ở dưới là "lower" (OMT Notation of Notes). Như bài 1 (n1).'
+  - id: n2
+    cau: Trường độ cho biết nốt dài hay ngắn.
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - omt-rhythm
+    ket_qua: dung
+    ghi_chu: 'OMT Notating Rhythm: "Broadly speaking, rhythm refers to the duration of musical sounds and rests in time." Cùng chương: các giá trị nốt cho biết nốt dài bao nhiêu so với nốt khác.'
+  - id: n3
+    cau: "Trường độ được đo bằng phách: nhịp đều đặn mà bạn hay gõ chân theo khi nghe nhạc."
+    loai: dinh-nghia
+    nguon:
+      - omt-simple
+      - mt21c-meter
+    ket_qua: dung
+    ghi_chu: 'OMT Simple Meter: "What you are tapping along to is called a beat—a pulse in music that regularly recurs." MT21C 4.4 Meter: "Pulse and beat are synonymous." MT21C 4.4 dẫn Grove: phách là "the unit by which musical time is reckoned" (đơn vị đo thời gian trong nhạc), nên "đo bằng phách" đúng.'
+  - id: n4
+    cau: Mỗi hình nốt dài gấp đôi hình nốt nhỏ hơn kế tiếp.
+    loai: quy-tac
+    nguon:
+      - omt-rhythm
+    ket_qua: dung
+    ghi_chu: 'OMT Notating Rhythm: "Note values are hierarchical; in other words, their lengths are defined relative to one another. Each note value can be divided into two smaller values"; OMT Notating Rhythm: "a whole note divides into two half notes, four quarter notes, eight eighth notes, and so on"'
+  - id: n5
+    cau: Số phách trong bảng áp dụng khi nốt đen bằng 1 phách, trường hợp phổ biến nhất.
+    loai: quy-tac
+    nguon:
+      - mt21c-duration
+      - omt-simple
+    ket_qua: dung
+    ghi_chu: 'MT21C 4.2 Durational Symbols: "In the present day, the most common time signature is" 4/4 ("common time"); ở 4/4 nốt đen là một phách (OMT Simple Meter: "4, which means the quarter note gets the beat."). "Phổ biến nhất" suy từ câu MT21C; OMT chỉ nói số dưới "usually" là 2, 4 hay 8. Giữ.'
+  - id: n6
+    cau: "Tên các hình nốt: nốt tròn (whole note / semibreve), nốt trắng (half note / minim), nốt đen (quarter note / crotchet), nốt móc đơn (eighth note / quaver), nốt móc kép (sixteenth note / semiquaver)."
+    loai: ten
+    nguon:
+      - omt-rhythm
+    ket_qua: dung
+    ghi_chu: "OMT Notating Rhythm, bảng tên Mỹ / Anh: Whole note / Semibreve; Half note / Minim; Quarter note / Crotchet; Eighth note / Quaver; Sixteenth note / Semiquaver. Tên tiếng Việt (tròn, trắng, đen, móc đơn, móc kép) là từ vựng của site (quy tắc nội dung của site cũ), chưa có trong thuat-ngu.yml: ghi cho D3-L5."
+  - id: n7
+    cau: "Hình dạng: nốt tròn đầu rỗng, không đuôi; nốt trắng đầu rỗng, có đuôi; nốt đen đầu đặc, có đuôi; nốt móc đơn đầu đặc, đuôi có 1 móc; nốt móc kép đầu đặc, đuôi có 2 móc."
+    loai: dinh-nghia
+    nguon:
+      - omt-rhythm
+    ket_qua: dung
+    ghi_chu: 'OMT Notating Rhythm: "Noteheads can be filled in (black) or unfilled (white); quarter notes and shorter durations are filled in. Unfilled noteheads may or may not have a stem, but filled noteheads always have stems. Flags are only added to the stems of filled noteheads." Ba cách giảm nửa giá trị: "Adding a stem to a note (i.e., whole to half)", "Filling in a notehead (i.e., half to quarter)", "Adding a flag (i.e., quarter to eighth or eighth to sixteenth)". Suy ra: tròn rỗng, không đuôi; trắng rỗng, có đuôi; đen đặc, có đuôi; móc đơn thêm một móc; móc kép thêm móc nữa (hai móc). "Đuôi" là stem, "móc" là flag.'
+  - id: n8
+    cau: "Khi nốt đen bằng 1 phách: nốt tròn 4 phách, nốt trắng 2, nốt đen 1, nốt móc đơn ½, nốt móc kép ¼."
+    loai: so-lieu
+    nguon:
+      - omt-rhythm
+      - mt21c-dots
+    ket_qua: dung
+    ghi_chu: 'OMT Notating Rhythm: "a whole note divides into two half notes, four quarter notes, eight eighth notes, and so on" (tròn = 4 đen, trắng = 2 đen, móc đơn = ½ đen); mỗi móc thêm giảm một nửa (OMT Notating Rhythm: "Adding a flag (i.e., quarter to eighth or eighth to sixteenth)") nên móc kép = ½ móc đơn = ¼ đen. MT21C 4.3 Dots and Ties: "We have a whole note, which lasts for four beats, and a half note, which lasts for two beats"'
+  - id: n9
+    cau: 'Khuông ví dụ thứ nhất ("Nghe từng ô nhịp dưới đây") gồm bốn ô nhịp 4/4, mỗi ô dài 4 phách, chỉ khác cách chia: một nốt tròn; hai nốt trắng; bốn nốt đen; tám nốt móc đơn.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "abcjs đọc khối abc 1 (M:4/4, L:1/4): ô 1 C4 (4 phách), ô 2 C2 C2 (2+2), ô 3 C C C C (1+1+1+1), ô 4 tám nốt móc đơn C/ (8×½): mỗi ô đúng 4 phách. tools/khuong-nhac.mjs không báo ô sai độ dài."
+  - id: n10
+    cau: Khi nhiều nốt móc đứng cạnh nhau, đuôi móc thường được nối thành gạch ngang (beam) cho dễ đọc.
+    loai: dinh-nghia
+    nguon:
+      - omt-simple
+    ket_qua: dung
+    ghi_chu: 'OMT Simple Meter: "Beams connect notes together by beat." OMT Simple Meter: "Beaming makes rhythms easier to read by showing the beat unit." (Khi các nốt móc nối bằng gạch ngang thì không vẽ móc riêng cho từng nốt.)'
+  - id: n11
+    cau: Ô nhịp cuối của khuông ví dụ thứ nhất có các nốt móc đơn nối thành gạch ngang.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "abcjs parseOnly, khối abc 1, ô 4: tám nốt móc đơn (duration 0,125 nốt tròn) mang cờ startBeam / endBeam thành bốn cặp (C/C/ viết liền không cách), nên khi vẽ ra là bốn gạch ngang nối từng cặp. Review nên nhìn khuông đã vẽ ở bản chạy."
+  - id: n12
+    cau: Dấu lặng là khoảng im lặng có độ dài xác định.
+    loai: dinh-nghia
+    nguon:
+      - omt-rhythm
+    ket_qua: dung
+    ghi_chu: 'OMT Notating Rhythm: "Broadly speaking, rests refer to the duration of silences in music."'
+  - id: n13
+    cau: "Mỗi hình nốt có một dấu lặng tương ứng: lặng tròn (4 phách), lặng trắng (2), lặng đen (1), lặng đơn (½), lặng kép (¼)."
+    loai: quy-tac
+    nguon:
+      - omt-rhythm
+    ket_qua: dung
+    ghi_chu: 'OMT Notating Rhythm: "Each hierarchical note value has a corresponding rest value" (cũng chia đôi từng bậc như nốt); độ dài dấu lặng bằng độ dài nốt cùng tên nên các số phách như n8. "Lặng đơn", "lặng kép" là cách gọi tắt của lặng móc đơn, móc kép (ghi cho D3-L5).'
+  - id: n14
+    cau: Một chấm nhỏ bên phải nốt làm nốt dài thêm một nửa độ dài của chính nó.
+    loai: dinh-nghia
+    nguon:
+      - omt-rhythm
+      - mt21c-dots
+    ket_qua: dung
+    ghi_chu: 'OMT Notating Rhythm: "A dot is written immediately after a note or rest, and it increases its duration by half". MT21C 4.3 Dots and Ties: "A dot added to a note increases the duration of that note by half."'
+  - id: n15
+    cau: Nốt trắng chấm dôi = 2 + 1 = 3 phách.
+    loai: so-lieu
+    nguon:
+      - omt-rhythm
+      - mt21c-dots
+    ket_qua: dung
+    ghi_chu: 'OMT Notating Rhythm: "Another way to write this duration is as a dotted half note." (dài bằng ba nốt đen, ví dụ của chương về dấu nối); chấm dôi thêm một nửa của 2 phách là 1 phách (n14): 2 + 1 = 3. MT21C 4.3: không có giá trị nốt dài ba phách nên dùng chấm hay dấu nối.'
+  - id: n16
+    cau: Nốt đen chấm dôi = 1 + ½ = 1½ phách.
+    loai: so-lieu
+    nguon:
+      - omt-rhythm
+    ket_qua: dung
+    ghi_chu: 'OMT Notating Rhythm: "a quarter note is equivalent in duration to two eighth notes; therefore, a dotted quarter note would be equivalent to three eighth notes" = 3 × ½ = 1½ phách.'
+  - id: n17
+    cau: "Dấu nối là đường cong nối hai nốt cùng cao độ: chơi nốt đầu và giữ luôn sang nốt sau, không đánh lại."
+    loai: dinh-nghia
+    nguon:
+      - omt-rhythm
+      - mt21c-dots
+    ket_qua: dung
+    ghi_chu: 'OMT Notating Rhythm: "A tie is a curved line that connects two or more notes with the same pitch." OMT Notating Rhythm: "Tied-to notes are not rearticulated." OMT Notating Rhythm: "ties are used to combine the durations of multiple notes". MT21C 4.3 Dots and Ties: "A tie links two notes together to create a new duration. Ties occur between notes of the same pitch."'
+  - id: n18
+    cau: Dấu nối thường dùng khi một nốt kéo dài qua vạch nhịp.
+    loai: quy-tac
+    nguon:
+      - omt-simple
+    ket_qua: dung
+    ghi_chu: 'OMT Simple Meter: "We have already encountered ties that can be used to extend a note over a measure line." Nguồn nói "can be used" (dùng được), cùng chương nói thêm dấu nối còn dùng để làm rõ phách trong ô; "thường" ở mức nhẹ, khối abc 4 đúng trường hợp qua vạch nhịp. Giữ.'
+  - id: n19
+    cau: Dấu luyến (slur) là đường cong nối các nốt khác cao độ, nghĩa là chơi liền mạch.
+    loai: dinh-nghia
+    nguon:
+      - omt-rhythm
+      - omt-other
+      - mt21c-dots
+    ket_qua: dung
+    ghi_chu: 'OMT Other Aspects of Notation: "Legato means to play or sing smoothly or connected. This articulation is indicated by a curved slur marking." MT21C 4.3 Dots and Ties: "A slur, which looks like a tie, is placed over or under notes of different pitches and means to play them in a connected manner." OMT Notating Rhythm: "slurs connect notes of different pitches" (OMT Notating Rhythm viết thêm "tenuto" cho dấu luyến; Other Aspects of Notation và MT21C đều nói "smoothly or connected" nên theo hai nguồn này).'
+  - id: n20
+    cau: Tiếng piano tắt dần sau khi đánh.
+    loai: quy-tac
+    nguon:
+      - kth-piano
+    ket_qua: dung
+    ghi_chu: 'Weinreich, Motion of piano strings: "The typical decay of a piano tone is shown in Fig. 1, which displays the sound pressure level as a function of time." Weinreich, Motion of piano strings: "We see that the string is struck by the hammer at about t = 2 seconds, and the damper is released, stopping the vibration, at about t = 17 seconds." Mức âm giảm dần từ lúc búa đánh dây (đồ thị Fig. 1); khi còn giữ phím, dây còn rung nhưng yếu dần.'
+  - id: n21
+    cau: Nốt trắng hay nốt tròn vẫn phải giữ phím đủ số phách.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập. Cùng ý piano/nam-ngon.md cũ ("Giữ nốt dài đủ phách") và piano/hai-tuan-dau.md cũ ("giữ một nốt đủ 4, 2, rồi 1 phách"); không trái.
+  - id: n22
+    cau: Người mới hay nhấc tay sớm ở nốt dài.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Nhận xét sư phạm, không có nguồn ngoài; không đụng sức khỏe. Khớp piano/nam-ngon.md cũ ("người mới thường nhấc tay trái quá sớm khi tay phải đang bận"); không trái.
+  - id: n23
+    cau: Hãy đếm to khi tập 10 bài đầu tiên.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập. Cùng ý piano/hai-tuan-dau.md cũ ("Từ ngày 3, hãy đếm to…") và piano/cach-tap.md cũ ("Đếm to"); không trái.
+  - id: n24
+    cau: Trang 10 bài đầu tiên (link /opus/piano/10-bai-dau-tien/) có thật.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ: ../opus-zero/docs/piano/10-bai-dau-tien.md (tiêu đề "10 bài đầu tiên (hai tay)"). Link hiện chữ "sắp có" ở site mới cho tới khi trang lên.'
+  - id: n25
+    cau: Vỗ tay ví dụ đầu tiên, vừa vỗ vừa đếm to "1 – 2 – 3 – 4"; dùng máy đếm nhịp ở 60 BPM.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập. Cùng mức tốc độ trang cũ piano/hai-tuan-dau.md ("đếm to với máy đếm nhịp ♩ = 60") và piano/lo-trinh.md (♩ = 60–80); không trái. "Ví dụ đầu tiên" là khối abc 1 (ô nào cũng 4 phách, n9).
+  - id: n26
+    cau: Máy đếm nhịp (link /opus/luyen-tap/metronome/) đặt được 60 BPM.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ: ../opus-zero/docs/assets/js/metronome.js dòng 26: thanh trượt tốc độ min=30 max=240 (mặc định 80) và nút +/−, nên đặt được 60 BPM; ../opus-zero/docs/luyen-tap/metronome.md tồn tại ("Đơn vị là BPM").'
+  - id: n27
+    cau: Một nốt trắng chấm dôi cộng một nốt đen bằng 4 phách (3 + 1), vừa đủ một ô nhịp 4/4.
+    loai: so-lieu
+    nguon:
+      - omt-rhythm
+      - omt-simple
+    ket_qua: dung
+    ghi_chu: 'Câu trả lời của bài tập 2. Nốt trắng chấm dôi = 3 phách (n15), nốt đen = 1 (n8): 4 phách. OMT Simple Meter: "In simple meters, the top number of a time signature represents the number of beats in each measure, while the bottom number represents the beat unit." Ở 4/4: bốn phách mỗi ô, nốt đen là một phách.'
+  - id: n28
+    cau: Viết ra ba cách khác nhau để lấp đầy một ô nhịp 4 phách.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Đề bài tập; không có điều gì cần nguồn.
+  - id: n29
+    cau: 'Hộp "Luyện tập kèm theo": công cụ Tiết tấu (link /opus/luyen-tap/tiet-tau/) có cấp độ 1–2, và máy đếm nhịp (link /opus/luyen-tap/metronome/).'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ: ../opus-zero/docs/assets/js/rhythm.js dòng 62: ô Cấp độ có "1: tròn, trắng, đen", "2: thêm móc đơn, dấu lặng", "3: chấm dôi, đảo phách", "4: liên ba, móc kép"; cấp 1–2 khớp nội dung bài (hình nốt, dấu lặng). ../opus-zero/docs/luyen-tap/tiet-tau.md và metronome.md tồn tại. (Chấm dôi nằm ở cấp 3; câu chỉ nêu cấp 1–2 nên không sai.)'
+  - id: n30
+    cau: 'Câu hỏi: "Trong nhịp 4/4, nốt trắng dài bao nhiêu phách?" Đáp án đúng "2"; "1", "4" sai; giải thích "Nốt trắng bằng hai nốt đen." đúng.'
+    loai: so-lieu
+    nguon:
+      - omt-rhythm
+      - omt-simple
+      - mt21c-dots
+    ket_qua: dung
+    ghi_chu: 'Ở 4/4 nốt đen là một phách (OMT Simple Meter). Nốt trắng bằng hai nốt đen (OMT Notating Rhythm: "Each note value can be divided into two smaller values") nên 2 phách; MT21C 4.3: "a half note, which lasts for two beats". 1 là nốt đen, 4 là nốt tròn: sai.'
+  - id: n31
+    cau: 'Câu hỏi: "Một nốt đen chấm dôi dài bao nhiêu phách?" Đáp án đúng "1 rưỡi"; "1", "2" sai; giải thích "Chấm dôi thêm một nửa độ dài: 1 + ½." đúng.'
+    loai: so-lieu
+    nguon:
+      - omt-rhythm
+    ket_qua: dung
+    ghi_chu: "1½ phách (n16); giải thích khớp n14. 1 là nốt đen không chấm, 2 là nốt trắng: sai."
+  - id: n32
+    cau: 'Câu hỏi: "Dấu nối dùng để làm gì?" Đáp án đúng "Nối hai nốt cùng cao độ thành một nốt dài"; "Chơi các nốt khác cao độ liền mạch" và "Ngắt ngắn nốt nhạc" sai; giải thích "Nối các nốt khác cao độ là dấu luyến." đúng.'
+    loai: dinh-nghia
+    nguon:
+      - omt-rhythm
+      - mt21c-dots
+      - omt-other
+    ket_qua: dung
+    ghi_chu: 'Dấu nối: n17. "Chơi các nốt khác cao độ liền mạch" là dấu luyến (n19), không phải dấu nối; "ngắt ngắn nốt nhạc" là staccato, không phải dấu nối (dấu nối chỉ nối nốt cùng cao độ, n17): sai. Giải thích khớp n19.'
+  - id: n33
+    cau: 'Câu hỏi: "Bao nhiêu nốt móc kép bằng một nốt đen?" Đáp án đúng "4"; "2", "8" sai; giải thích "Mỗi nốt móc kép dài ¼ phách." đúng.'
+    loai: so-lieu
+    nguon:
+      - omt-rhythm
+    ket_qua: dung
+    ghi_chu: "Móc kép = ¼ đen (n8) nên 4 nốt móc kép bằng một nốt đen. 2 là số nốt móc đơn bằng một nốt đen, 8 là số nốt móc kép bằng một nốt trắng: sai."
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - truong-do
+      - nhip
+    ket_qua: dung
+    ghi_chu: 'M:4/4, L:1/4, Q:1/4=80, K:C, mọi nốt là C4. abcjs đọc: ô 1 C4 (nốt tròn, 4 phách) | ô 2 C2 C2 (hai nốt trắng) | ô 3 C C C C (bốn nốt đen) | ô 4 tám nốt móc đơn C/ (viết liền thành bốn cặp có gạch ngang): mỗi ô đúng 4 phách, khớp "mỗi ô đều dài 4 phách, chỉ khác cách chia" (n9) và các số phách ở n8. abcjs không cảnh báo.'
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - truong-do
+      - nhip
+    ket_qua: dung
+    ghi_chu: "M:4/4, L:1/4, K:C. Ô 1: C z C z (đen, lặng đen, đen, lặng đen = 4 phách). Ô 2: C2 z2 (trắng, lặng trắng = 4). Ô 3: C z/ C/ C z (đen, lặng móc đơn, móc đơn, đen, lặng đen = 1 + ½ + ½ + 1 + 1 = 4). Minh họa lặng đen (1 phách), lặng trắng (2) và lặng đơn (½) của n13; abcjs đọc z là lặng. Không có lặng tròn hay lặng kép (trang chỉ nêu chúng ở dòng chữ, không kèm ví dụ). abcjs không cảnh báo."
+  - khoi: 3
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - truong-do
+      - nhip
+    ket_qua: dung
+    ghi_chu: "M:4/4, L:1/4, K:C. Ô 1: E3 D = nốt trắng chấm dôi E4 (3 phách) + nốt đen D4 = 4. Ô 2: C3/2 D/ E2 = nốt đen chấm dôi C4 (1½) + móc đơn D4 (½) + nốt trắng E4 (2) = 4. Minh họa đúng nốt trắng chấm dôi = 3 phách và nốt đen chấm dôi = 1½ phách (n15, n16). abcjs không cảnh báo."
+  - khoi: 4
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - truong-do
+      - nhip
+    ket_qua: dung
+    ghi_chu: 'M:4/4, L:1/4, K:C. Ô 1: C D E G- (bốn nốt đen, G4 có dấu nối "-" sang ô sau) = 4. Ô 2: G4 (nốt tròn G4) = 4. abcjs đọc G4 ở cuối ô 1 có startTie, nối với G4 đầu ô 2: dấu nối giữa hai nốt cùng cao độ, qua vạch nhịp, đúng n17, n18. abcjs không cảnh báo.'
+doi_chu:
+  - cu: Open Music Theory; musictheory.net.
+    moi:
+      - "Open Music Theory: Notating Rhythm; Simple Meter and Time Signatures (phách, gạch ngang nối nốt); Other Aspects of Notation (dấu luyến)."
+      - "Robert Hutchinson, Music Theory for the 21st-Century Classroom: 4.2 Durational Symbols, 4.3 Dots and Ties và 4.4 Meter; Gabriel Weinreich, Motion of piano strings, trong Five lectures on the acoustics of the piano (Royal Swedish Academy of Music, 1990)."
+    ly_do: "Mục Nguồn: thay link chung tới Open Music Theory bằng link tới đúng các chương đã đọc khi kiểm định (lượt 1), thêm giáo trình mở và bản nhạc đã dùng; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, không đọc được chữ để kiểm."

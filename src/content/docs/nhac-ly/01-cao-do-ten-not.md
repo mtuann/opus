@@ -1,11 +1,11 @@
 ---
 title: 1. Cao độ và tên nốt
-description: "Mỗi âm thanh có một cao độ: âm cao hay thấp. Về mặt vật lý, cao độ phụ thuộc vào tần số dao động. Dây đàn rung càng nhanh, âm càng cao. Ví dụ, nốt La dùng để…"
+description: "Mỗi nốt nhạc có một cao độ: âm cao hay thấp. Về mặt vật lý, cao độ phụ thuộc vào tần số dao động. Dây đàn rung càng nhanh, âm càng cao. Ví dụ, nốt La dùng để…"
 ---
 
 ## Cao độ là gì?
 
-Mỗi âm thanh có một **cao độ**: âm cao hay thấp. Về mặt vật lý, cao độ phụ thuộc vào tần số dao động. Dây đàn rung càng nhanh, âm càng cao. Ví dụ, nốt La dùng để lên dây cho dàn nhạc dao động 440 lần mỗi giây (440 Hz).
+Mỗi nốt nhạc có một **cao độ**: âm cao hay thấp. Về mặt vật lý, cao độ phụ thuộc vào tần số dao động. Dây đàn rung càng nhanh, âm càng cao. Ví dụ, nốt La dùng để lên dây cho dàn nhạc thường dao động 440 lần mỗi giây (440 Hz).
 
 Âm nhạc phương Tây chia các cao độ thành một hệ thống có tên gọi cố định.
 
@@ -17,7 +17,7 @@ Chỉ có **7 tên nốt**, lặp đi lặp lại từ thấp đến cao:
 |---|---|---|---|---|---|---|---|
 | Hệ chữ cái | C | D | E | F | G | A | B |
 
-Ở Việt Nam, Pháp, Ý… người ta gọi tên nốt là Đô, Rê, Mi. Trong tài liệu tiếng Anh và trên phần mềm, tên nốt viết bằng chữ cái. Bạn nên thuộc cả hai, vì phần lớn tài liệu tốt bằng tiếng Anh.
+Ở Việt Nam, Pháp, Ý… người ta gọi tên nốt là Đô, Rê, Mi. Trong tài liệu tiếng Anh, tên nốt viết bằng chữ cái. Bạn nên thuộc cả hai, vì bạn sẽ gặp cả hai khi đọc tài liệu.
 
 :::tip[Mẹo nhớ hệ chữ cái]
 Bắt đầu từ La = A, rồi đi theo bảng chữ cái: La A, Si B, Đô C, Rê D, Mi E, Fa F, Sol G.
@@ -105,5 +105,6 @@ Sol = G, E = Mi, Si = B. Nốt ngay trên B4 là **C5**: tên quay lại Đô v�
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- *Open Music Theory*: [Reading Clefs](https://viva.pressbooks.pub/openmusictheory/chapter/clefs/); [The Keyboard and the Grand Staff](https://viva.pressbooks.pub/openmusictheory/chapter/the-keyboard-and-grand-staff/); [Half Steps, Whole Steps, and Accidentals](https://viva.pressbooks.pub/openmusictheory/chapter/half-and-whole-steps/); [American Standard Pitch Notation (ASPN)](https://viva.pressbooks.pub/openmusictheory/chapter/aspn/); [Major Scales, Scale Degrees, and Key Signatures](https://viva.pressbooks.pub/openmusictheory/chapter/major-scales/) (solfège cố định).
+- Robert Hutchinson, *Music Theory for the 21st-Century Classroom*: [1.1 Pitch](https://musictheory.pugetsound.edu/mt21c/Pitch.html) và [1.3 Octave Registers](https://musictheory.pugetsound.edu/mt21c/OctaveRegisters.html); University of Queensland, *Yet Another Guide to Music Theory*: [Pitch](https://uq.pressbooks.pub/music-theory/chapter/chapter-1/); Dolmetsch Online, [Music Theory Online, bài 1](https://www.dolmetsch.com/musictheory1.htm) (tên nốt ở các nước dùng tiếng Romance, ký hiệu khoa học, La4 = 440 Hz); ISO 16:1975, *Acoustics — Standard tuning frequency (Standard musical pitch)*.
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

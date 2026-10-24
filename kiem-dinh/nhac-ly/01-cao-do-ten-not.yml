@@ -1,0 +1,426 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/01-cao-do-ten-not
+trang: src/content/docs/nhac-ly/01-cao-do-ten-not.md
+nguon_cu: ../opus-zero/docs/nhac-ly/01-cao-do-ten-not.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-24
+    nhanh: moi/d3-l1
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D3-L1 lượt 1, phần 1/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Bài nhạc lý 1 (cao độ, tên nốt, quãng tám, bàn phím). Nguồn chính: Open Music Theory (OMT), mở từng chương bằng curl ngày 24/10/2026 (WebFetch trả 403); bổ sung MT21C (Puget Sound), giáo trình mở Yet Another Guide to Music Theory (University of Queensland), Dolmetsch Online bài 1, mục lục tiêu chuẩn ISO 16:1975 (qua ASN vì iso.org trả 403), UNSW Music Acoustics, LibreTexts. Sửa chữ ở lượt 1: n1 ("Mỗi âm thanh có một cao độ" thành "Mỗi nốt nhạc có một cao độ", cả đoạn mở đầu lẫn mô tả trang, vì âm không có cao độ xác định như tiếng gõ không phải "nốt"), n4 (thêm "thường": một số dàn nhạc lên dây cao hơn 440 Hz), n9 (bỏ "và trên phần mềm" và lý do "phần lớn tài liệu tốt bằng tiếng Anh", vì không kiểm được); mục ## Nguồn cuối trang (thay link chung bằng link từng chương đã dùng, bỏ musictheory.net vì chưa đối chiếu nội dung). Không tính là nhận định: tiêu đề mục; câu hỏi của phần Bài tập (chỉ tính câu trả lời trong khối thu gọn); tên người học. Thuật ngữ tiếng Việt chưa có trong src/data/thuat-ngu.yml, ghi cho D3-L5: "quãng tám" (octave), "ký hiệu khoa học" (scientific / American standard pitch notation, ASPN), "solfège" cố định (fixed do), "Đô giữa". Giáo trình tiếng Việt novaspro.vn (bậc 3, không ghi tác giả) có "quãng tám" nhưng không có "ký hiệu khoa học" hay "Đô giữa": sách đó đặt tên quãng tám theo cách khác (quãng tám cực trầm, trầm, lớn, nhỏ, quãng tám 1, 2, 3…, nốt Đô ở quãng tám 1 ghi c1, tức Đô giữa; ví dụ "từ Do1 đến Mi2"), còn C4 của trang là cách ghi của OMT. Đề xuất D3-L5: thêm một câu cho người học sẽ gặp "quãng tám 1" trong sách tiếng Việt. Chỗ còn yếu: n8 (Việt Nam gọi tên nốt là Đô, Rê, Mi) mới có nguồn tiếng Việt bậc 3; cần lượt 2 tìm nguồn bậc 2 (sách giáo khoa Âm nhạc, giáo trình nhạc viện).'
+nguon:
+  - id: omt-notation
+    bac: 2
+    ten: Open Music Theory, Notation of Notes, Clefs, and Ledger Lines
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/notation-of-notes-clefs-and-ledger-lines/
+  - id: uq-pitch
+    bac: 2
+    ten: The University of Queensland, Yet Another Guide to Music Theory (giáo trình mở trên Pressbooks), Pitch
+    link: https://uq.pressbooks.pub/music-theory/chapter/chapter-1/
+  - id: omt-clefs
+    bac: 2
+    ten: Open Music Theory, Reading Clefs
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/clefs/
+  - id: iso16
+    bac: 2
+    ten: ISO 16:1975, Acoustics — Standard tuning frequency (Standard musical pitch); mục lục tiêu chuẩn ở ASN (Association Sénégalaise de Normalisation), vì trang iso.org trả 403
+    link: https://asn.sn/en/content/acoustics-%E2%80%94-standard-tuning-frequency-standard-musical-pitch
+  - id: unsw-notes
+    bac: 2
+    ten: UNSW Music Acoustics, Note names, MIDI numbers and frequencies
+    link: https://newt.phys.unsw.edu.au/jw/notes.html
+  - id: physorg-oboe
+    bac: 3
+    ten: The Conversation, Why is the oboe used to tune an orchestra? And other questions about tuning, answered (đăng lại ở phys.org, 11/2024); bài báo phổ thông, chỉ dùng kèm nguồn bậc 2
+    link: https://phys.org/news/2024-11-oboe-tune-orchestra-tuning.html
+  - id: mt21c-octave
+    bac: 2
+    ten: Robert Hutchinson, Music Theory for the 21st-Century Classroom, 1.3 Octave Registers
+    link: https://musictheory.pugetsound.edu/mt21c/OctaveRegisters.html
+  - id: omt-steps
+    bac: 2
+    ten: Open Music Theory, Half Steps, Whole Steps, and Accidentals
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/half-and-whole-steps/
+  - id: omt-major
+    bac: 2
+    ten: "Open Music Theory, Major Scales, Scale Degrees, and Key Signatures (hình 1: gam Đô trưởng; bảng thuật ngữ: fixed do)"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/major-scales/
+  - id: dol1
+    bac: 2
+    ten: "Dolmetsch Online (The Dolmetsch Organisation), Music Theory Online, bài 1: Staffs, Clefs & Pitch Notation"
+    link: https://www.dolmetsch.com/musictheory1.htm
+  - id: novas
+    bac: 3
+    ten: Giáo trình môn Lý thuyết âm nhạc cơ bản (tệp PDF trên novaspro.vn; không ghi tác giả, nhà xuất bản); chỉ dùng chứng thực cách gọi ở Việt Nam, không phải nguồn bậc 2
+    link: https://novaspro.vn/upload/files/giao_trinh_mon_ly_thuyet_am_nhac_co_ban.pdf
+  - id: mt21c-notation
+    bac: 2
+    ten: Robert Hutchinson, Music Theory for the 21st-Century Classroom, 1.2 Notation
+    link: https://musictheory.pugetsound.edu/mt21c/Notation.html
+  - id: omt-keyboard
+    bac: 2
+    ten: Open Music Theory, The Keyboard and the Grand Staff
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/the-keyboard-and-grand-staff/
+  - id: omt-aspn
+    bac: 2
+    ten: Open Music Theory, American Standard Pitch Notation (ASPN)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/aspn/
+  - id: mt21c-pitch
+    bac: 2
+    ten: Robert Hutchinson, Music Theory for the 21st-Century Classroom (University of Puget Sound), 1.1 Pitch
+    link: https://musictheory.pugetsound.edu/mt21c/Pitch.html
+  - id: lt-wilson
+    bac: 2
+    ten: Wilson và Royston, Do You Want to Major in Music? (giáo trình mở trên LibreTexts), 4.2 The Music Alphabet and the Piano Keyboard
+    link: https://human.libretexts.org/Bookshelves/Music/Music_Education_and_Training/Do_You_Want_to_Major_in_Music_(Wilson_and_Royston)/04:_Music_Theory/4.02:_The_Music_Alphabet_and_the_Piano_Keyboard
+nhan_dinh:
+  - id: n1
+    cau: "Mỗi nốt nhạc có một cao độ: âm cao hay thấp."
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - uq-pitch
+      - omt-clefs
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ (cả đoạn mở đầu và mô tả trang): "Mỗi âm thanh có một cao độ: âm cao hay thấp." Mới: "Mỗi nốt nhạc có một cao độ: …". Lý do: không phải âm thanh nào cũng có cao độ xác định (tiếng gõ, tiếng ồn): OMT Reading Clefs: "because it is often used for percussion instruments with indefinite pitch" (khóa trung tính cho nhạc cụ gõ). Nốt nhạc thì có cao độ: OMT Notation of Notes: "Musicians use spatial metaphors to describe notes placed on a staff: notes appearing toward the top of the staff are said to be “higher” than those toward the bottom, which are said to be “lower.”". UQ, Pitch: "most humans (and human societies) attribute a notion of “height” to pitch, with notes whose fundamental frequency is faster being perceived as “higher.”"'
+  - id: n2
+    cau: Về mặt vật lý, cao độ phụ thuộc vào tần số dao động.
+    loai: quy-tac
+    nguon:
+      - omt-notation
+      - uq-pitch
+    ket_qua: dung
+    ghi_chu: 'OMT Notation of Notes: "Higher pitches are produced by sound waves with a shorter wavelength (and consequently a higher frequency); sound waves with a longer wavelength (lower frequency) produce lower pitches.". UQ, Pitch: "It is the fundamental frequency that determines our perception of a note’s pitch."'
+  - id: n3
+    cau: Dây đàn rung càng nhanh, âm càng cao.
+    loai: quy-tac
+    nguon:
+      - omt-notation
+      - uq-pitch
+    ket_qua: dung
+    ghi_chu: 'Rung nhanh hơn là tần số cao hơn: OMT Notation of Notes: "Higher pitches are produced by sound waves with a shorter wavelength (and consequently a higher frequency)". UQ, Pitch: "with notes whose fundamental frequency is faster being perceived as “higher.”"'
+  - id: n4
+    cau: Nốt La dùng để lên dây cho dàn nhạc thường dao động 440 lần mỗi giây (440 Hz).
+    loai: so-lieu
+    nguon:
+      - uq-pitch
+      - iso16
+      - unsw-notes
+      - physorg-oboe
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "nốt La dùng để lên dây cho dàn nhạc dao động 440 lần mỗi giây (440 Hz)". Câu mới thêm "thường". Lý do: UQ, Pitch: "This note is conventionally called “A” or, more precisely, “A440.”" (nốt oboe chơi cho dàn nhạc lên dây: UQ, Pitch: "it is the note to which the rest of the orchestra “tunes up.”"); UQ, Pitch: "When our oboist plays A440, there are 440 cycles per second of the fundamental frequency."; ISO 16:1975 (qua ASN): "Specifies the frequency for the note A in the treble stave and shall be 440 Hz.". Nhưng không phải dàn nhạc nào cũng lên dây đúng 440 Hz (bài báo phổ thông, bậc 3, chỉ để tìm nguồn): The Conversation (phys.org): "The New York Philharmonic tunes to A=442Hz, and the Vienna Philharmonic to A=443Hz." Nên viết "thường".'
+  - id: n5
+    cau: Âm nhạc phương Tây chia các cao độ thành một hệ thống có tên gọi cố định.
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+      - mt21c-octave
+    ket_qua: dung
+    ghi_chu: 'OMT Reading Clefs: "In Western musical notation, pitches are designated by the first seven letters of the Latin alphabet: A, B, C, D, E, F, and G.". MT21C 1.3 Octave Registers: "The note names used in music" là bảng chữ cái âm nhạc A–G, hết G thì quay lại A (xem n6).'
+  - id: n6
+    cau: Chỉ có 7 tên nốt, lặp đi lặp lại từ thấp đến cao.
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+      - mt21c-octave
+      - omt-steps
+    ket_qua: dung
+    ghi_chu: 'OMT Reading Clefs: "After G these letter names repeat in a loop". Đây là bảy tên chữ cái gốc; nốt có dấu hóa mang tên nốt gốc kèm thăng hay giáng (OMT Half Steps: "Black keys that are a half step above a white key take the name of the white key and add the word “sharp.”"), nên câu "chỉ có 7 tên nốt" đúng ở mức tên gốc; phím đen học ở bài 5 (n28).'
+  - id: n7
+    cau: Đô, Rê, Mi, Fa, Sol, La, Si lần lượt ứng với C, D, E, F, G, A, B.
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+      - dol1
+    ket_qua: dung
+    ghi_chu: 'OMT Major Scales: "A system of solfège in which do is always the pitch class C, re the pitch class D, etc., regardless of scale." (mục từ fixed do). OMT dùng "ti" cho nốt thứ bảy, tiếng Việt viết "Si". Dolmetsch bài 1: "In European and other countries whose main language is a Romance language, the pitch names are based on the solfeggio syllables: do (or ut), re, mi, fa, so (or sol), la, si (or ti)." Cách viết tiếng Việt (Đô, Rê, Mi, Fa, Sol, La, Si) theo quy ước của site; đối ứng này đã dùng ở trang đã khóa bat-dau/tom-tat (n6).'
+  - id: n8
+    cau: Ở Việt Nam, Pháp, Ý… người ta gọi tên nốt là Đô, Rê, Mi.
+    loai: ten
+    nguon:
+      - dol1
+      - novas
+    ket_qua: dung
+    ghi_chu: 'Pháp, Ý: Dolmetsch bài 1: "In European and other countries whose main language is a Romance language, the pitch names are based on the solfeggio syllables" (Pháp, Ý đều dùng tiếng Romance). Việt Nam: chỉ có tài liệu tiếng Việt bậc 3, giáo trình không ghi tác giả: Giáo trình Lý thuyết âm nhạc cơ bản (novaspro.vn): "Tên gọi các bậc cơ bản trong thang âm của hệ thống âm nhạc: Do, Re, Mi, Fa, Sol, La, Si.". Chưa chắc ở phần Việt Nam theo chuẩn bậc 2: cần lượt 2 tìm sách giáo khoa Âm nhạc của NXB Giáo dục Việt Nam hay giáo trình nhạc viện. Đây cũng là quy ước ngôn ngữ mà chính site dùng (bảng đầu trang "Hệ Việt Nam (solfège)").'
+  - id: n9
+    cau: Trong tài liệu tiếng Anh, tên nốt viết bằng chữ cái, nên bạn sẽ gặp cả hai hệ khi đọc tài liệu.
+    loai: ten
+    nguon:
+      - omt-clefs
+      - mt21c-notation
+      - uq-pitch
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Trong tài liệu tiếng Anh và trên phần mềm, tên nốt viết bằng chữ cái. Bạn nên thuộc cả hai, vì phần lớn tài liệu tốt bằng tiếng Anh." Mới: "Trong tài liệu tiếng Anh, tên nốt viết bằng chữ cái. Bạn nên thuộc cả hai, vì bạn sẽ gặp cả hai khi đọc tài liệu." Lý do: "trên phần mềm" không có nguồn chung (không thấy nguồn nào nói mọi phần mềm dùng chữ cái); "phần lớn tài liệu tốt bằng tiếng Anh" không kiểm được. Phần còn lại đúng: OMT Reading Clefs: "In Western musical notation, pitches are designated by the first seven letters of the Latin alphabet: A, B, C, D, E, F, and G."; MT21C 1.2 Notation: "In treble clef, the notes on the lines are" E–G–B–D–F (giáo trình tiếng Anh gọi nốt bằng chữ cái); UQ Pitch cũng viết A, A440, A880. Lời khuyên "nên thuộc cả hai" tách ở n10.'
+  - id: n10
+    cau: Bạn nên thuộc cả hai hệ tên nốt.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên học. Không trái trang lõi nào: bat-dau/tom-tat (đã khóa) dùng cả hai hệ ("Đô Rê Mi Fa Sol La Si = C D E F G A B"); bài nhạc lý 1 cũ (../opus-zero/docs/nhac-ly/01-cao-do-ten-not.md) viết giống hệt.'
+  - id: n11
+    cau: "Mẹo nhớ: bắt đầu từ La = A, rồi đi theo bảng chữ cái: La A, Si B, Đô C, Rê D, Mi E, Fa F, Sol G."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Mẹo nhớ. Cặp tương ứng khớp n7 (La=A, Si=B, Đô=C, Rê=D, Mi=E, Fa=F, Sol=G) và thứ tự A B C D E F G của OMT Reading Clefs ("After G these letter names repeat in a loop"); không trái trang lõi nào (bat-dau/tom-tat dùng cùng đối ứng).
+  - id: n12
+    cau: Khuông nhạc dưới "Nghe gam Đô trưởng đi lên, từ Đô đến Đô" đi lên từ Đô (C4) đến Đô (C5) bằng tám nốt không dấu hóa.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "abcjs (public/vendor/abcjs-basic-min.js, parseOnly) đọc khối abc 1: C4 D4 E4 F4 | G4 A4 B4 C5, nốt đen (L:1/4), M:4/4 nên mỗi ô đủ 4 phách, K:C không dấu hóa. tools/khuong-nhac.mjs không báo lỗi."
+  - id: n13
+    cau: Dãy Đô Rê Mi Fa Sol La Si Đô không dấu hóa là gam Đô trưởng.
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+    ket_qua: dung
+    ghi_chu: 'OMT Major Scales: "A major scale always starts and ends on notes of the same letter name, one octave apart, and this starting and ending note determines the name of the scale." (hình 1 của chương là gam C major); OMT Major Scales: "C major, which has nothing in its key signature (no sharps or flats)". Bài 6 dạy kỹ hơn.'
+  - id: n14
+    cau: Nốt thứ tám nghe "giống" nốt đầu tiên, chỉ cao hơn.
+    loai: quy-tac
+    nguon:
+      - uq-pitch
+      - dol1
+    ket_qua: dung
+    ghi_chu: 'UQ, Pitch: "You will hear when you click on these frequencies that there is a strong relationship between them; we perceive that they are alike.". Dolmetsch bài 1: "The human ear tends to hear notes an octave apart as being essentially "the same"." Trang đặt "giống" trong nháy kép: đúng mức này.'
+  - id: n15
+    cau: Hai nốt này cùng tên và cách nhau một quãng tám (octave).
+    loai: dinh-nghia
+    nguon:
+      - omt-keyboard
+      - mt21c-octave
+    ket_qua: dung
+    ghi_chu: 'OMT Keyboard and Grand Staff: "An interval of twelve half steps between two notes with the same letter name." (mục từ octave); MT21C 1.3 Octave Registers: "The distance from any note to a note of the same name in the next register above or below is called an octave".'
+  - id: n16
+    cau: Tần số của nốt trên gấp đôi nốt dưới.
+    loai: quy-tac
+    nguon:
+      - omt-keyboard
+      - uq-pitch
+      - unsw-notes
+    ket_qua: dung
+    ghi_chu: 'OMT Keyboard and Grand Staff: "The frequencies of two notes related by octave form a 2:1 ratio.". UQ, Pitch: "an octave is an interval that separates two notes whose fundamental frequencies expresses a ratio of 2:1". UNSW Music Acoustics: "An octave is a ratio of 2:1"'
+  - id: n17
+    cau: Vì 7 tên nốt lặp lại, ta cần số để biết nốt nằm ở quãng tám nào.
+    loai: dinh-nghia
+    nguon:
+      - omt-aspn
+      - mt21c-octave
+    ket_qua: dung
+    ghi_chu: 'OMT ASPN: "ASPN designates specific musical pitches by combining a note name (such as C) with a subscript octave designation (such as 4), creating a bipartite label (for example, C4)." Cùng ý: MT21C 1.3: số quãng tám ghi rõ "the exact register of a note".'
+  - id: n18
+    cau: Ký hiệu thông dụng (ký hiệu khoa học) ghi tên chữ cái kèm số.
+    loai: ten
+    nguon:
+      - omt-aspn
+      - dol1
+    ket_qua: dung
+    ghi_chu: "OMT gọi là American Standard Pitch Notation (ASPN): OMT ASPN: \"ASPN labels are very useful, since they can identify every possible musical note within human hearing range, from the lowest pitches to the highest.\". Dolmetsch bài 1: \"an alternative naming convention called 'Scientific Pitch Notation', 'Note-Octave Notation' or American Standard Pitch Notation\". \"Ký hiệu khoa học\" là cách dịch của site (Scientific Pitch Notation); chưa có trong thuat-ngu.yml: ghi cho D3-L5."
+  - id: n19
+    cau: C4 là Đô giữa (middle C), nằm gần giữa bàn phím piano.
+    loai: dinh-nghia
+    nguon:
+      - omt-aspn
+      - omt-keyboard
+    ket_qua: dung
+    ghi_chu: 'OMT ASPN: "Middle C is C4 in ASPN." OMT Keyboard and Grand Staff: "C₄; the C near the middle of the piano keyboard, written on the first ledger line below the treble clef staff or the first ledger line above the bass clef staff."'
+  - id: n20
+    cau: "Từ C4 đi lên: D4, E4, F4, G4, A4, B4, rồi đến C5. Số tăng lên ở nốt Đô."
+    loai: quy-tac
+    nguon:
+      - omt-aspn
+      - mt21c-octave
+    ket_qua: dung
+    ghi_chu: 'OMT ASPN: "This means that each new octave designation begins on the note C". OMT ASPN: "The notes C4, D4, E4, F4, G4, A4, and B4." (ví dụ 2).'
+  - id: n21
+    cau: A4 là nốt La 440 Hz.
+    loai: so-lieu
+    nguon:
+      - iso16
+      - uq-pitch
+      - dol1
+      - unsw-notes
+    ket_qua: dung
+    ghi_chu: 'ISO 16:1975 (qua ASN): "Specifies the frequency for the note A in the treble stave and shall be 440 Hz." (La trong khuông Sol, ngay trên Đô giữa = A4 theo ASPN). Dolmetsch bài 1, bảng tần số: A4 (a′ trong ký hiệu Helmholtz) = 440 Hz; UNSW Music Acoustics: "By convention, A4 is often set at 440 Hz." Đây là chuẩn quy ước; không phải mọi đàn hay dàn nhạc đều lên dây đúng 440 Hz (xem n4).'
+  - id: n22
+    cau: Piano tiêu chuẩn có 88 phím, gồm phím trắng và phím đen.
+    loai: so-lieu
+    nguon:
+      - mt21c-pitch
+      - lt-wilson
+      - omt-aspn
+    ket_qua: dung
+    ghi_chu: 'MT21C 1.1 Pitch: "On the piano there are 88 notes.". LibreTexts Wilson và Royston 4.2: "On the piano keyboard, there are a total of 88 keys.". OMT ASPN: "It also contains a small part of both octaves 0 and 8." (khớp khoảng A0–C8).'
+  - id: n23
+    cau: Phím đen xếp theo nhóm 2 phím và 3 phím xen kẽ, giúp bạn định vị.
+    loai: dinh-nghia
+    nguon:
+      - omt-keyboard
+      - omt-steps
+    ket_qua: dung
+    ghi_chu: 'OMT Keyboard and Grand Staff: "the sets of three and two black keys alternate throughout the entire length of a piano keyboard, repeating the pattern for each octave". OMT Half Steps: "Having the black keys grouped into sets of either two or three makes it easier for a keyboardist to see and feel them more quickly."'
+  - id: n24
+    cau: Nốt Đô là phím trắng ngay bên trái nhóm 2 phím đen.
+    loai: dinh-nghia
+    nguon:
+      - omt-keyboard
+    ket_qua: dung
+    ghi_chu: 'OMT Keyboard and Grand Staff: "On the piano keyboard, when the black keys appear as a set of two, the note to their immediate left is C."'
+  - id: n25
+    cau: Nốt Fa là phím trắng ngay bên trái nhóm 3 phím đen.
+    loai: dinh-nghia
+    nguon:
+      - omt-keyboard
+    ket_qua: dung
+    ghi_chu: 'OMT Keyboard and Grand Staff: "With a set of three black keys, the note to their immediate left is F."'
+  - id: n26
+    cau: Các phím trắng lần lượt là Đô Rê Mi Fa Sol La Si, rồi lặp lại.
+    loai: dinh-nghia
+    nguon:
+      - omt-keyboard
+      - omt-clefs
+    ket_qua: dung
+    ghi_chu: 'OMT Keyboard and Grand Staff: "Example 4 shows a piano keyboard with the letter names of the white key pitches labeled. The same letter names appear on different keys of the keyboard." Các tên A–G lặp theo vòng (OMT Reading Clefs); bắt đầu đếm từ Đô là cách trình bày của trang, tiện vì Đô nằm sát nhóm 2 phím đen (n24).'
+  - id: n27
+    cau: Phím đen dùng cho các nốt có dấu thăng hoặc giáng.
+    loai: dinh-nghia
+    nguon:
+      - omt-steps
+    ket_qua: dung
+    ghi_chu: 'OMT Half Steps: "Black keys that are a half step above a white key take the name of the white key and add the word “sharp.”" OMT Half Steps: "Black keys that are a half step below a white key take the name of the white key and add the word “flat.”"'
+  - id: n28
+    cau: Dấu thăng và dấu giáng sẽ học ở bài 5 (link /opus/nhac-ly/05-dau-hoa/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Bài 5 của site mới là src/content/docs/nhac-ly/05-dau-hoa.md, tiêu đề "5. Cung, nửa cung và dấu hóa", có mục "## Ba dấu hóa" (thăng, giáng, bình) và phần phím đen; địa chỉ /opus/nhac-ly/05-dau-hoa/ có trong bản build (dist/nhac-ly/05-dau-hoa/, menu "Nhạc lý và luyện tai").
+  - id: n29
+    cau: "Bàn phím trên trang: các phím được tô màu là ba nốt Đô (C3, C4, C5); bấm vào phím thì nghe và thấy tên nốt."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Chỉ thị ::cong-cu{ten="piano" range="C3-C5" notes="C3 C4 C5"}. Thành phần banPhim/docThongSoBanPhim (src/plugins/thanh-phan.mjs) tô đúng các nốt trong notes (phải nằm trong range); bản build lúc kiểm (dist/nhac-ly/01-cao-do-ten-not/index.html, 24/10/2026) có đúng ba phím class "oz-phim-trang to": data-m 48 "Đô (C3)", 60 "Đô (C4)", 72 "Đô (C5)", cả bàn phím có 25 phím từ C3 đến C5; dòng "Bấm vào phím để nghe và xem tên nốt." và nút "Nghe các nốt được tô"; phần bấm được do src/scripts/ban-phim.js. C3, C4, C5 cùng là nốt Đô (cùng tên chữ C, cách nhau quãng tám). Review nên bấm thử ở bản chạy.'
+  - id: n30
+    cau: Đô giữa (C4) là phím trắng ngay bên trái nhóm hai phím đen gần giữa bàn phím.
+    loai: dinh-nghia
+    nguon:
+      - omt-keyboard
+      - omt-aspn
+    ket_qua: dung
+    ghi_chu: 'Ghép n19 (C4 là Đô giữa, gần giữa bàn phím) và n24 (Đô ở ngay bên trái nhóm 2 phím đen). OMT Keyboard and Grand Staff: "middle C is the note that appears to be around the middle of a piano keyboard"'
+  - id: n31
+    cau: Các phím Đô cách nhau một quãng tám.
+    loai: dinh-nghia
+    nguon:
+      - omt-keyboard
+      - mt21c-octave
+    ket_qua: dung
+    ghi_chu: 'Như n15: các nốt cùng tên chữ cái là cách nhau một hay nhiều quãng tám (OMT Keyboard and Grand Staff: "A relationship between pitches that share a letter name but are separated by one or more octaves.").'
+  - id: n32
+    cau: Hãy tìm hết các phím Đô trên đàn của bạn.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Bài tập thực hành; cách tìm Đô theo nhóm 2 phím đen đúng n24; không trái trang lõi nào.
+  - id: n33
+    cau: Trang Bản đồ bàn phím (link /opus/piano/ban-do-ban-phim/) cho xem toàn bộ 88 phím.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển sang site mới, kiểm trên bản cũ: ../opus-zero/docs/piano/ban-do-ban-phim.md có mục "## 88 phím, hai nhóm phím đen" và hình bàn phím 88 phím từ A0 đến C8 (fig piano-88, aria-label "Bàn phím piano 88 phím từ A0 đến C8"). Số 88 là điều cần nguồn: xem n22. Trên site mới link hiện chữ "sắp có" cho tới khi trang lên.'
+  - id: n34
+    cau: Đọc to bảy tên nốt đi lên, rồi đi xuống, theo cả hai hệ (Đô Rê Mi… và C D E…).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Bài tập luyện thuộc; không trái trang lõi nào.
+  - id: n35
+    cau: "Nếu có piano hoặc app piano trên điện thoại: tìm tất cả các nốt Đô, rồi tất cả các nốt Fa."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Bài tập thực hành; cách tìm Đô, Fa theo n24, n25.
+  - id: n36
+    cau: Sol = G, E = Mi, Si = B.
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+      - dol1
+    ket_qua: dung
+    ghi_chu: "Câu trả lời của bài tập 2. Theo đối ứng cố định ở n7: Sol là G, E là Mi, Si là B."
+  - id: n37
+    cau: "Nốt ngay trên B4 là C5: tên quay lại Đô và số tăng lên 5."
+    loai: quy-tac
+    nguon:
+      - omt-aspn
+      - mt21c-octave
+    ket_qua: dung
+    ghi_chu: 'Câu trả lời của bài tập 4. OMT ASPN: "This means that each new octave designation begins on the note C": B4 liền sau là C5 (như n20).'
+  - id: n38
+    cau: Trang Bàn phím piano (link /opus/luyen-tap/ban-phim/) giúp tìm các nốt Đô.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ: ../opus-zero/docs/luyen-tap/ban-phim.md mô tả công cụ bàn phím: "tên nốt hiện bên trên … Bấm trực tiếp vào phím bất kỳ để nghe và xem tên" (khối oz-piano-explorer); bấm vào phím xem tên thì tìm được các phím Đô.'
+  - id: n39
+    cau: Mục "Luyện với công cụ" của trang Nghe quãng (link /opus/luyen-tai/nghe-quang/#luyen-voi-cong-cu) có bộ Khởi động để nghe quãng 8.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ: ../opus-zero/docs/luyen-tai/nghe-quang.md có "## Luyện với công cụ" (id luyen-voi-cong-cu theo luật id cũ) và dòng "Khởi động (3 trưởng, 5 đúng, 8 đúng)"; assets/js/interval-trainer.js dòng 22 có tùy chọn "Khởi động: 3 trưởng, 5 đúng, 8 đúng" (SETS.start). Quãng 8 đúng = quãng tám.'
+  - id: n40
+    cau: 'Câu hỏi: "Nốt Sol trong hệ chữ cái là gì?" Đáp án đúng "G"; "F" và "A" sai; giải thích "Bắt đầu từ La = A: La A, Si B, Đô C, Rê D, Mi E, Fa F, Sol G." đúng.'
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+      - dol1
+    ket_qua: dung
+    ghi_chu: Sol = G (n7). F là Fa, A là La nên hai lựa chọn sai thật sự sai. Giải thích khớp n11.
+  - id: n41
+    cau: 'Câu hỏi: "Đô giữa trên piano được ký hiệu là gì?" Đáp án đúng "C4"; "C3", "C5" sai; giải thích "Middle C là C4." đúng.'
+    loai: dinh-nghia
+    nguon:
+      - omt-aspn
+      - omt-keyboard
+    ket_qua: dung
+    ghi_chu: 'OMT ASPN: "Middle C is C4 in ASPN." C3 và C5 là hai nốt Đô cách C4 một quãng tám dưới và trên: sai.'
+  - id: n42
+    cau: 'Câu hỏi: "Trên piano, nốt Đô nằm ở đâu?" Đáp án đúng "Ngay bên trái nhóm 2 phím đen"; "Ngay bên trái nhóm 3 phím đen" và "Ngay bên phải nhóm 2 phím đen" sai; giải thích "Bên trái nhóm 3 phím đen là nốt Fa." đúng.'
+    loai: dinh-nghia
+    nguon:
+      - omt-keyboard
+    ket_qua: dung
+    ghi_chu: 'Đô: n24. Bên trái nhóm 3 phím đen là Fa (n25) nên giải thích đúng. Phím trắng ngay bên phải nhóm 2 phím đen là Mi (thứ tự C, D kẹp giữa hai phím đen, rồi E; xem bảng "Cách tìm" ở ../opus-zero/docs/piano/ban-do-ban-phim.md: "Mi (E): ngay bên phải nhóm 2"): lựa chọn đó sai.'
+  - id: n43
+    cau: 'Câu hỏi: "Hai nốt cách nhau một quãng tám thì có đặc điểm gì?" Đáp án đúng "Cùng tên, tần số nốt trên gấp đôi nốt dưới"; "Khác tên, tần số bằng nhau" và "Cùng tên, tần số nốt trên gấp ba nốt dưới" sai; giải thích "Ví dụ La4 = 440 Hz, La5 = 880 Hz." đúng.'
+    loai: quy-tac
+    nguon:
+      - omt-keyboard
+      - uq-pitch
+    ket_qua: dung
+    ghi_chu: 'Đáp án đúng: n15, n16. UQ, Pitch: "the fundamental frequency of this new “A” is 880Hz—exactly twice that of the earlier “A.”" Hai lựa chọn sai trái n15/n16 (khác tên; gấp ba).'
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - not
+      - nhip
+      - giong
+    ket_qua: dung
+    ghi_chu: "Gam Đô trưởng đi lên. abcjs đọc ra C4 D4 E4 F4 | G4 A4 B4 C5, nốt đen (L:1/4), M:4/4 nên hai ô đủ 4 phách, K:C không dấu hóa, Q:1/4=90. Minh họa đúng điều trang nói: gam Đô trưởng đi lên từ Đô đến Đô (n12, n13); nốt thứ tám (C5) cùng tên với nốt đầu (C4), cách một quãng tám (n14, n15). abcjs không cảnh báo."
+doi_chu:
+  - cu: "Mỗi âm thanh có một cao độ: âm cao hay thấp. Về mặt vật lý, cao độ phụ thuộc vào tần số dao động. Dây đàn rung càng nhanh, âm càng cao. Ví dụ, nốt La dùng để lên dây cho dàn nhạc dao động 440 lần mỗi giây (440 Hz)."
+    moi: "Mỗi nốt nhạc có một cao độ: âm cao hay thấp. Về mặt vật lý, cao độ phụ thuộc vào tần số dao động. Dây đàn rung càng nhanh, âm càng cao. Ví dụ, nốt La dùng để lên dây cho dàn nhạc thường dao động 440 lần mỗi giây (440 Hz)."
+    ly_do: 'n1 (da-sua): không phải âm thanh nào cũng có cao độ xác định (tiếng gõ, tiếng ồn; OMT Reading Clefs nói tới nhạc cụ gõ "with indefinite pitch"); nốt nhạc thì có. n4 (da-sua): thêm "thường": La4 = 440 Hz là cao độ chuẩn để lên dây (ISO 16:1975; University of Queensland, Yet Another Guide to Music Theory, Pitch), nhưng không phải dàn nhạc nào cũng lên dây đúng 440 Hz.'
+  - cu: Ở Việt Nam, Pháp, Ý… người ta gọi tên nốt là Đô, Rê, Mi. Trong tài liệu tiếng Anh và trên phần mềm, tên nốt viết bằng chữ cái. Bạn nên thuộc cả hai, vì phần lớn tài liệu tốt bằng tiếng Anh.
+    moi: Ở Việt Nam, Pháp, Ý… người ta gọi tên nốt là Đô, Rê, Mi. Trong tài liệu tiếng Anh, tên nốt viết bằng chữ cái. Bạn nên thuộc cả hai, vì bạn sẽ gặp cả hai khi đọc tài liệu.
+    ly_do: 'n9 (da-sua): "trên phần mềm" và "phần lớn tài liệu tốt bằng tiếng Anh" không kiểm được; giữ phần đúng: tài liệu tiếng Anh gọi nốt bằng chữ cái (OMT Reading Clefs; MT21C 1.2).'
+  - cu: Open Music Theory; musictheory.net.
+    moi:
+      - "Open Music Theory: Reading Clefs; The Keyboard and the Grand Staff; Half Steps, Whole Steps, and Accidentals; American Standard Pitch Notation (ASPN); Major Scales, Scale Degrees, and Key Signatures (solfège cố định)."
+      - "Robert Hutchinson, Music Theory for the 21st-Century Classroom: 1.1 Pitch và 1.3 Octave Registers; University of Queensland, Yet Another Guide to Music Theory: Pitch; Dolmetsch Online, Music Theory Online, bài 1 (tên nốt ở các nước dùng tiếng Romance, ký hiệu khoa học, La4 = 440 Hz); ISO 16:1975, Acoustics — Standard tuning frequency (Standard musical pitch)."
+    ly_do: "Mục Nguồn: thay link chung tới Open Music Theory bằng link tới đúng các chương đã đọc khi kiểm định (lượt 1), thêm giáo trình mở và bản nhạc đã dùng; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, không đọc được chữ để kiểm."
+  - cu: "mô tả: Mỗi âm thanh có một cao độ: âm cao hay thấp. Về mặt vật lý, cao độ phụ thuộc vào tần số dao động. Dây đàn rung càng nhanh, âm càng cao. Ví dụ, nốt La dùng để…"
+    moi: "mô tả: Mỗi nốt nhạc có một cao độ: âm cao hay thấp. Về mặt vật lý, cao độ phụ thuộc vào tần số dao động. Dây đàn rung càng nhanh, âm càng cao. Ví dụ, nốt La dùng để…"
+    ly_do: Mô tả trang là đoạn mở đầu cắt ngắn (cách site cũ làm), sửa theo n1.

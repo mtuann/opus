@@ -13,6 +13,7 @@ Các phách trong âm nhạc thường được nhóm lại theo chu kỳ, trong
 
 - **Số trên**: mỗi ô nhịp có **bao nhiêu phách**.
 - **Số dưới**: hình nốt nào **được tính là 1 phách** (4 = nốt đen, 2 = nốt trắng, 8 = nốt móc đơn).
+- Riêng **6/8**: số trên đếm 6 nốt móc đơn trong ô (8 = nốt móc đơn); cứ ba nốt gộp thành một phách, nên mỗi ô có 2 phách.
 
 | Số chỉ nhịp | Ý nghĩa | Cảm giác | Thường gặp ở |
 |---|---|---|---|
@@ -23,7 +24,7 @@ Các phách trong âm nhạc thường được nhóm lại theo chu kỳ, trong
 
 ### 4/4
 
-Giai điệu *Ode to Joy* trong chương cuối Giao hưởng số 9 của Beethoven:
+Giai điệu *Ode to Joy* (8 ô nhịp đầu) trong chương cuối Giao hưởng số 9 của Beethoven, chuyển sang Đô trưởng và viết ở nhịp 4/4 cho dễ đọc (bản gốc ở Rê trưởng):
 
 ```abc
 X:1
@@ -73,7 +74,7 @@ Bật [máy đếm nhịp](/opus/luyen-tap/metronome/) khi tập đàn và đế
 
 1. Mở [máy đếm nhịp](/opus/luyen-tap/metronome/), chọn 3 phách mỗi ô nhịp, bật "Nhấn phách đầu". Vỗ tay theo ví dụ 3/4.
 2. Nghe một bản valse bất kỳ (gợi ý: Chopin *Valse* Op. 64 số 2) và đếm "1 – 2 – 3".
-3. Nghe Beethoven Giao hưởng số 9, chương 4, tìm giai điệu *Ode to Joy* khi nó xuất hiện lần đầu ở bè cello và contrabass.
+3. Nghe Beethoven Giao hưởng số 9, chương 4, tìm giai điệu *Ode to Joy* khi bè cello và contrabass trình bày nó đầy đủ lần đầu.
 
 :::tip[Luyện tập kèm theo]
 [Tiết tấu](/opus/luyen-tap/tiet-tau/) cấp độ 2–3; vỗ tay theo [máy đếm nhịp](/opus/luyen-tap/metronome/) với 2, 3, 4 và 6 phách.
@@ -104,5 +105,7 @@ Bật [máy đếm nhịp](/opus/luyen-tap/metronome/) khi tập đàn và đế
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- *Open Music Theory*: [Simple Meter and Time Signatures](https://viva.pressbooks.pub/openmusictheory/chapter/simple-meter-and-time-signatures/); [Compound Meter and Time Signatures](https://viva.pressbooks.pub/openmusictheory/chapter/compound-meters-and-time-signatures/).
+- Andre Mount, *Fundamentals, Function, and Form*: chương [1. Introduction to Rhythm and Meter](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/1-introduction-to-rhythm-and-meter-2/); Dolmetsch Online, *Music Theory Online*: [bài 3](https://www.dolmetsch.com/musictheory3.htm) (ô nhịp, vạch nhịp), [bài 4](https://www.dolmetsch.com/musictheory4.htm) (số chỉ nhịp) và [bài 15](https://www.dolmetsch.com/musictheory15.htm) (nhịp đơn và nhịp kép).
+- Bản nhạc: Beethoven, Giao hưởng số 9, Op. 125, chương 4 (Breitkopf & Härtel, khoảng 1864, trên [IMSLP](https://imslp.org/wiki/Symphony_No.9,_Op.125_(Beethoven,_Ludwig_van))); Chopin, *Valse* Op. 64 số 2, trong *Forty Piano Compositions* (hiệu đính James Huneker, Boston: Oliver Ditson, 1903; bản scan trên [Internet Archive](https://archive.org/details/fortypianocompos00chop)).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

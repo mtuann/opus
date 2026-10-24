@@ -1,0 +1,418 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/02-khuong-nhac-khoa
+trang: src/content/docs/nhac-ly/02-khuong-nhac-khoa.md
+nguon_cu: ../opus-zero/docs/nhac-ly/02-khuong-nhac-khoa.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-24
+    nhanh: moi/d3-l1
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D3-L1 lượt 1, phần 1/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: "Bài nhạc lý 2 (khuông, khóa Sol, khóa Fa, dòng kẻ phụ, khuông kép). Nguồn chính: Open Music Theory (OMT), mở từng chương bằng curl ngày 24/10/2026 (WebFetch trả 403); bổ sung MT21C (Puget Sound) và Dolmetsch Online bài 1 (đánh số dòng và khe từ dưới lên, cách nhớ tên nốt), bài 29 (guitar). Bản phổ Beethoven (Breitkopf & Härtel, khoảng 1864) dùng để xác nhận contrabass viết ở khóa Fa (n14). Sửa chữ ở lượt 1: n8 (\"giọng nữ\" thành \"giọng nữ cao (soprano)\", vì OMT chỉ nêu soprano); n26 (bỏ \"giúp đọc nhanh hơn hẳn so với đếm dòng\", không kiểm được; thay bằng cách làm \"đếm từ nốt mốc gần nhất\", khớp trang cũ luyen-tap/doc-not.md); mục ## Nguồn (thay link chung bằng link từng chương đã dùng, bỏ musictheory.net vì chưa đối chiếu nội dung). Không tính là nhận định: tiêu đề mục; câu hỏi của phần Bài tập (chỉ tính câu trả lời trong khối thu gọn); chữ \"rất dễ nhớ\" sau \"FACE\" (ý kiến). Mẹo nhớ tiếng Anh (n17, n18): chữ cái đầu của từng cụm khớp tên nốt đã kiểm; cụm \"Every Good Boy Does Fine\", \"Good Boys Do Fine Always\", \"All Cows Eat Grass\" có ở Dolmetsch bài 1; OMT dùng \"Every Good Bird Does Fly\", \"Good Bikes Don't Fall Apart\", \"All Cows Eat Grass\". Thuật ngữ tiếng Việt chưa có trong src/data/thuat-ngu.yml, ghi cho D3-L5: \"khuông kép\" (grand staff), \"dòng kẻ phụ\" đã có (ledger line), \"khe\" (space), \"nốt mốc\" (landmark note), \"giọng nữ cao / nam trầm\" (soprano / bass). Đối chiếu \"Giáo trình môn Lý thuyết âm nhạc cơ bản\" (tệp PDF https://novaspro.vn/upload/files/giao_trinh_mon_ly_thuyet_am_nhac_co_ban.pdf; không ghi tác giả, bậc 3, chỉ để chứng thực cách gọi ở Việt Nam): có \"khe\" (\"Khoảng cách giữa hai dòng kẻ liền nhau được gọi là khe\", 5 dòng kẻ và 4 khe đánh số từ dưới lên) và \"dòng kẻ phụ\"; không thấy \"khuông kép\", \"nốt mốc\" hay \"giọng nữ cao\" (chưa tìm được nguồn tiếng Việt cho ba cách gọi này); thay cho \"khuông kép\", giáo trình đó viết \"dấu gộp (accolade)\": \"Dấu gộp cho hai khuông nhạc thường sử dụng để viết cho tác phẩm piano\"."
+nguon:
+  - id: omt-notation
+    bac: 2
+    ten: Open Music Theory, Notation of Notes, Clefs, and Ledger Lines
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/notation-of-notes-clefs-and-ledger-lines/
+  - id: omt-clefs
+    bac: 2
+    ten: Open Music Theory, Reading Clefs
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/clefs/
+  - id: dol1
+    bac: 2
+    ten: "Dolmetsch Online (The Dolmetsch Organisation), Music Theory Online, bài 1: Staffs, Clefs & Pitch Notation"
+    link: https://www.dolmetsch.com/musictheory1.htm
+  - id: mt21c-notation
+    bac: 2
+    ten: Robert Hutchinson, Music Theory for the 21st-Century Classroom, 1.2 Notation
+    link: https://musictheory.pugetsound.edu/mt21c/Notation.html
+  - id: omt-keyboard
+    bac: 2
+    ten: Open Music Theory, The Keyboard and the Grand Staff
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/the-keyboard-and-grand-staff/
+  - id: dol29
+    bac: 2
+    ten: "Dolmetsch Online, Music Theory Online, bài 29: Musical Instrument Ranges & Names"
+    link: https://www.dolmetsch.com/musictheory29.htm
+  - id: s9-breitkopf
+    bac: 1
+    ten: 'Beethoven, Giao hưởng số 9, Op. 125, chương 4 (Presto): bản phổ có tấm bản "B.9" in ở chân từng trang, tức ấn bản Breitkopf & Härtel (Ludwig van Beethovens Werke, Serie 1 No. 9, khoảng 1864) theo IMSLP #516486; tệp "IV. Presto" của IMSLP #61853, đăng ở Wikimedia Commons'
+    link: https://commons.wikimedia.org/wiki/File:IMSLP61853-PMLP01607-Symphony_No.9,_Op.125_(Beethoven,_Ludwig_van),_IV._Presto.pdf
+  - id: s9-schott
+    bac: 1
+    ten: 'Beethoven, Sinfonie mit Schluss-Chor über Schillers Ode "An die Freude", Op. 125, Mainz: Schott, 1826 (bản in đầu tiên, tấm bản 2322; bản scan của Boston Public Library trên Internet Archive)'
+    link: https://archive.org/details/sinfoniemitschlu00beet
+  - id: s9-eulenburg
+    bac: 1
+    ten: 'Beethoven, Giao hưởng số 9, Op. 125, chương 4: bản phổ in lại, tấm bản E.E. 3611 (tệp "score modern" ở Wikimedia Commons, nguồn IMSLP)'
+    link: https://commons.wikimedia.org/wiki/File:Beethoven_op125,4_score_modern.pdf
+  - id: omt-aspn
+    bac: 2
+    ten: Open Music Theory, American Standard Pitch Notation (ASPN)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/aspn/
+  - id: mt21c-octave
+    bac: 2
+    ten: Robert Hutchinson, Music Theory for the 21st-Century Classroom, 1.3 Octave Registers
+    link: https://musictheory.pugetsound.edu/mt21c/OctaveRegisters.html
+  - id: omt-satb
+    bac: 2
+    ten: Open Music Theory, Chords in SATB Style (mục Stem Direction)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/chords-in-satb-style/
+nhan_dinh:
+  - id: n1
+    cau: Khuông nhạc gồm 5 dòng kẻ song song và 4 khe giữa chúng.
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - omt-clefs
+      - dol1
+      - mt21c-notation
+    ket_qua: dung
+    ghi_chu: 'OMT Notation of Notes: "A staff consists of five horizontal lines, evenly spaced, and each note is placed on the line or space that corresponds to its pitch"; OMT Reading Clefs nêu bốn khe của khóa Sol (F, A, C, E). Dolmetsch bài 1: "today the most common staff format has five lines separated by four spaces". MT21C 1.2 Notation: "Notes are written on a five-line staff."'
+  - id: n2
+    cau: "Dòng và khe được đếm từ dưới lên: dòng 1 là dòng thấp nhất."
+    loai: quy-tac
+    nguon:
+      - dol1
+      - omt-clefs
+    ket_qua: dung
+    ghi_chu: 'Dolmetsch bài 1: "When numbering the lines, it is a widely used convention to number them from the bottom (1) to the top (5) of each staff." Dolmetsch bài 1: "The spaces between the lines are numbered too, again from the bottom (1) to the top (4)." OMT không nêu rõ cách đánh số nhưng nhất quán: nói "the second line from the bottom" cho dòng Sol, "the second line from the top" cho dòng Fa.'
+  - id: n3
+    cau: Mỗi nốt được đặt hoặc trên dòng (dòng kẻ chạy qua giữa nốt) hoặc trong khe.
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - dol1
+    ket_qua: dung
+    ghi_chu: 'OMT Notation of Notes: "Noteheads on a line should fill in half of each space above and below. Noteheads in a space should just touch the lines above and below." Dolmetsch bài 1: "may lie on a line (where the line passes through the note-head), in the space between two lines"'
+  - id: n4
+    cau: Nốt càng cao trên khuông thì âm càng cao.
+    loai: quy-tac
+    nguon:
+      - omt-notation
+      - dol1
+    ket_qua: dung
+    ghi_chu: 'OMT Notation of Notes: "Notes with a higher frequency (shorter wavelength) are written higher on the staff than notes with a lower frequency (longer wavelength). That is, higher notes are placed above lower ones." Dolmetsch bài 1: "The higher the pitch of the note, the higher vertically the note will be placed on the staff."'
+  - id: n5
+    cau: Đi từ một dòng lên khe ngay trên nó là đi lên một bậc tên nốt (ví dụ từ Mi lên Fa).
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+      - omt-notation
+    ket_qua: dung
+    ghi_chu: 'Khóa Sol: dòng từ dưới lên E G B D F, khe F A C E (OMT Reading Clefs): dòng 1 là Mi, khe 1 ngay trên là Fa, tức lên một bậc tên nốt; khóa Fa: dòng 1 Sol, khe 1 La. Tên nốt đi liên tiếp trên khuông: OMT Reading Clefs: "Notice that each space and line above the staff gets a letter name with ledger lines, as if the staff were simply continuing upwards." (cùng quy luật cho cả khuông). Khối abc 1 và 2 minh họa (E4 rồi F4).'
+  - id: n6
+    cau: Chỉ nhìn khuông thì chưa biết dòng nào là nốt gì. Khóa nhạc đặt ở đầu khuông cho biết điều đó.
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - omt-clefs
+    ket_qua: dung
+    ghi_chu: 'OMT Notation of Notes: "A clef indicates which pitches are assigned to the lines and spaces on a staff." OMT Notation of Notes: "A symbol placed on the left side of a staff that indicates which notes are assigned to different lines and spaces." ("ở đầu khuông" = bên trái khuông).'
+  - id: n7
+    cau: Khóa Sol (treble clef) có nét xoắn ôm lấy dòng 2, đánh dấu rằng nốt trên dòng 2 là Sol (G4); từ đó suy ra mọi nốt khác.
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - omt-clefs
+      - dol1
+    ket_qua: dung
+    ghi_chu: 'OMT Notation of Notes: "As a "G" clef, the treble clef designates the second-lowest line of a staff as G₄ by curling around it." OMT Reading Clefs: "the treble clef wraps around the G line (the second line from the bottom)". Dolmetsch bài 1: "The treble clef is also called the G clef or G2". "Suy ra mọi nốt khác": tên các dòng và khe còn lại đi theo thứ tự A–G (n5, n10, n11).'
+  - id: n8
+    cau: "Khóa Sol dùng cho âm cao: tay phải piano, violin, sáo, giọng nữ."
+    loai: quy-tac
+    nguon:
+      - omt-clefs
+      - omt-notation
+      - omt-keyboard
+      - omt-satb
+    ket_qua: dung
+    ghi_chu: 'Agent làm lô (24/10/2026): giữ chữ cũ "giọng nữ", không thu hẹp thành "giọng nữ cao (soprano)" như lượt 1 đề nghị: hai giọng nữ của hợp xướng (soprano, alto) đều viết ở khóa Sol. OMT Chords in SATB Style: "On a grand staff in SATB style, the soprano and alto are written in the treble clef (upper staff), while the tenor and bass are written in the bass clef (lower staff)." Lượt 1: đề nghị thu hẹp vì OMT Reading Clefs: "The treble clef is typically used for higher voices and instruments, such as a flute, violin, trumpet, or soprano voice." OMT Notation of Notes: "Higher notes, such as those played by a flute or sung by a soprano, are usually written in treble clef" OMT chỉ nêu soprano, không nêu mọi giọng nữ (mezzo, alto) nên thu hẹp cho đúng mức nguồn. Tay phải piano: OMT Keyboard and Grand Staff: "Typically, the pianist plays the lower notes (in the bass clef) with their left hand and the higher notes (in the treble clef) with their right hand."'
+  - id: n9
+    cau: Guitar cũng đọc khóa Sol, nhưng âm thực tế thấp hơn một quãng tám so với nốt viết.
+    loai: quy-tac
+    nguon:
+      - omt-clefs
+      - dol29
+    ket_qua: dung
+    ghi_chu: 'OMT Reading Clefs: "An octave treble clef with an “8” at the bottom of the clef indicates that notes should be sung or played an octave lower than written." OMT Reading Clefs: "Music for tenor vocalists, guitarists, and bassists often uses the octave treble clef." Dolmetsch bài 29: "Guitar | more ... sounds an octave below written pitch." Nhạc guitar ghi bằng khóa Sol (thường kèm số 8 dưới khóa) và nghe thấp hơn một quãng tám so với nốt viết.'
+  - id: n10
+    cau: "Các nốt trên dòng khóa Sol, từ dưới lên: Mi – Sol – Si – Rê – Fa (E G B D F)."
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+      - mt21c-notation
+    ket_qua: dung
+    ghi_chu: 'OMT Reading Clefs (hình 1): dòng khóa Sol từ dưới lên là E, G, B, D, F, nhớ bằng OMT Reading Clefs: "Every Good Bird Does Fly". MT21C 1.2: "In treble clef, the notes on the lines are" E–G–B–D–F "from lowest to highest". Khối abc 1: abcjs đọc E4 G4 B4 D5 F5 trên khóa Sol, khớp.'
+  - id: n11
+    cau: "Các nốt trong khe khóa Sol: Fa – La – Đô – Mi (F A C E)."
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+      - mt21c-notation
+    ket_qua: dung
+    ghi_chu: 'OMT Reading Clefs: khe khóa Sol (từ dưới lên) F, A, C, E. OMT Reading Clefs: "Remembering that these letter names spell the word “face” may make identifying these spaces easier." MT21C 1.2: "The spaces are" F–A–C–E "from lowest to highest". Khối abc 2: abcjs đọc F4 A4 C5 E5, khớp.'
+  - id: n12
+    cau: Trong tiếng Anh, các khe khóa Sol ghép lại thành chữ FACE.
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+      - dol1
+    ket_qua: dung
+    ghi_chu: 'OMT Reading Clefs: "Remembering that these letter names spell the word “face” may make identifying these spaces easier." Dolmetsch bài 1: "The four inner spaces of the treble clef read upwards spell the word FACE"'
+  - id: n13
+    cau: Khóa Fa (bass clef) có hai chấm nằm hai bên dòng 4, đánh dấu nốt trên dòng 4 là Fa (F3).
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - omt-clefs
+      - dol1
+      - mt21c-notation
+    ket_qua: dung
+    ghi_chu: 'OMT Notation of Notes: "As an "F" clef, the bass clef shows which line of the staff is F₃ by surrounding it with two dots." OMT Reading Clefs: "the dot of the bass clef begins on the F line (the second line from the top)" (dòng thứ hai từ trên xuống = dòng 4). Dolmetsch bài 1: "is also called the F clef or F4 because the two dots in the clef symbol lie above and below the horizontal line (4)". MT21C 1.2 Notation: "The F clef, when placed on a five-line staff with the dots surrounding the second line from the top, creates the bass clef."'
+  - id: n14
+    cau: "Khóa Fa dùng cho âm trầm: tay trái piano, cello, contrabass, giọng nam trầm."
+    loai: quy-tac
+    nguon:
+      - omt-clefs
+      - omt-keyboard
+      - s9-breitkopf
+      - s9-schott
+      - s9-eulenburg
+    ket_qua: dung
+    ghi_chu: 'OMT Reading Clefs: "The bass clef is usually utilized for lower voices and instruments, such as a bassoon, cello, trombone, or bass voice." OMT Keyboard and Grand Staff: "Typically, the pianist plays the lower notes (in the bass clef) with their left hand and the higher notes (in the treble clef) with their right hand." Contrabass không có trong OMT Reading Clefs; kiểm trên bản nhạc: bản phổ Breitkopf & Härtel (khoảng 1864) của Giao hưởng số 9, tr. 181 và tr. 198: hai khuông cuối trang ghi "Violoncello" và "Basso" (contrabass) đều ở khóa Fa. Bản Schott 1826 (tr. 101, 113) và bản in lại (tr. 271) cũng vậy.'
+  - id: n15
+    cau: "Các nốt trên dòng khóa Fa: Sol – Si – Rê – Fa – La (G B D F A)."
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+      - dol1
+    ket_qua: dung
+    ghi_chu: 'OMT Reading Clefs (hình 6): dòng khóa Fa từ dưới lên G, B, D, F, A (nhớ bằng OMT Reading Clefs: "Good Bikes Don’t Fall Apart"). Dolmetsch bài 1: dòng khóa Fa là "GBDFA". Khối abc 3 (K:C clef=bass): abcjs đọc G2 B2 D3 F3 A3, khớp (F3 ở dòng 4, n13).'
+  - id: n16
+    cau: "Các nốt trong khe khóa Fa: La – Đô – Mi – Sol (A C E G)."
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+      - dol1
+    ket_qua: dung
+    ghi_chu: 'OMT Reading Clefs (hình 7): khe khóa Fa A, C, E, G, nhớ bằng OMT Reading Clefs: "All Cows Eat Grass". Dolmetsch bài 1: khe khóa Fa là "ACEG". Khối abc 4: abcjs đọc A2 C3 E3 G3, khớp.'
+  - id: n17
+    cau: 'Mẹo nhớ: dòng khóa Sol "Every Good Boy Does Fine", khe khóa Sol "FACE".'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Mẹo nhớ. Chữ cái đầu khớp E G B D F (n10) và F A C E (n11). Cụm "Every Good Boy Does Fine" có ở MT21C 1.2 ("the traditional mnenomic “Every Good Boy Does Fine.”") và ở Dolmetsch bài 1; OMT dùng "Every Good Bird Does Fly". Không trái trang lõi nào.
+  - id: n18
+    cau: 'Mẹo nhớ: dòng khóa Fa "Good Boys Do Fine Always", khe khóa Fa "All Cows Eat Grass".'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Mẹo nhớ. Chữ cái đầu khớp G B D F A (n15) và A C E G (n16). Dolmetsch bài 1 liệt kê đúng hai cụm "Good Boys Do Fine Always" và "All Cows Eat Grass"; OMT dùng "Good Bikes Don’t Fall Apart" cho dòng và "All Cows Eat Grass" cho khe. Không trái trang lõi nào.
+  - id: n19
+    cau: Khi nốt cao hoặc thấp hơn khuông, ta vẽ thêm những đoạn dòng ngắn gọi là dòng kẻ phụ.
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - omt-clefs
+      - dol1
+    ket_qua: dung
+    ghi_chu: 'OMT Notation of Notes: "When notes are too high or low to be written on a staff, small lines called ledger lines are drawn to extend the staff." Dolmetsch bài 1: "supplementary lines, called leger (or ledger) lines". "Dòng kẻ phụ" đã có trong thuat-ngu.yml (ledger line).'
+  - id: n20
+    cau: Đọc dòng kẻ phụ giống như đọc tiếp dòng và khe bình thường.
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+    ket_qua: dung
+    ghi_chu: 'OMT Reading Clefs: "Notice that each space and line above the staff gets a letter name with ledger lines, as if the staff were simply continuing upwards." Cùng ý với phía dưới khuông.'
+  - id: n21
+    cau: Đô giữa (C4) nằm trên một dòng kẻ phụ ngay dưới khuông khóa Sol, và cũng là một dòng kẻ phụ ngay trên khuông khóa Fa.
+    loai: dinh-nghia
+    nguon:
+      - omt-keyboard
+      - omt-aspn
+      - mt21c-octave
+      - dol1
+    ket_qua: dung
+    ghi_chu: 'OMT Keyboard and Grand Staff: "C₄; the C near the middle of the piano keyboard, written on the first ledger line below the treble clef staff or the first ledger line above the bass clef staff." Dolmetsch bài 1: "lies one line below the five lines of the treble clef and lies one line above the five lines of the bass clef". MT21C 1.3 nói cùng ý (middle C ở dòng kẻ phụ dưới khuông Sol và dòng kẻ phụ trên khuông Fa). OMT ASPN: "Middle C is C4 in ASPN."'
+  - id: n22
+    cau: "Piano dùng hai khuông nối bằng dấu ngoặc: khóa Sol ở trên cho tay phải, khóa Fa ở dưới cho tay trái."
+    loai: dinh-nghia
+    nguon:
+      - omt-keyboard
+      - mt21c-octave
+    ket_qua: dung
+    ghi_chu: 'OMT Keyboard and Grand Staff: "Music for the piano is typically written in both the treble and bass clefs on a grand staff" ... OMT Keyboard and Grand Staff: "The two staves are connected on the left side with a line and a brace." OMT Keyboard and Grand Staff: "Typically, the pianist plays the lower notes (in the bass clef) with their left hand and the higher notes (in the treble clef) with their right hand." MT21C 1.3 Octave Registers: "The grand staff, which is a treble and bass clef joined together by a bracket, is how piano music is written."'
+  - id: n23
+    cau: Đô giữa nằm đúng ở giữa hai khuông.
+    loai: dinh-nghia
+    nguon:
+      - omt-keyboard
+      - mt21c-octave
+    ket_qua: dung
+    ghi_chu: 'OMT Keyboard and Grand Staff: "Middle C is the note that appears on the line between the two staves in a grand staff." MT21C 1.3 nói thêm Đô giữa luôn được ghi rõ ở khuông trên hoặc dưới (bằng dòng kẻ phụ), không "lơ lửng" giữa hai khuông: "ở giữa hai khuông" của trang hiểu là ngay ranh giới giữa hai khuông, trên dòng kẻ phụ chung (n21); đúng ý.'
+  - id: n24
+    cau: "Bản nhạc piano viết trên khuông kép: khóa Sol thường dành cho tay phải, khóa Fa cho tay trái, và Đô giữa nằm trên dòng kẻ phụ ở giữa hai khuông."
+    loai: dinh-nghia
+    nguon:
+      - omt-keyboard
+      - mt21c-octave
+    ket_qua: dung
+    ghi_chu: Ghép n21, n22, n23 (câu nhắc lại ở hộp "Trên phím đàn"); OMT dùng chữ "typically", khớp chữ "thường" của trang.
+  - id: n25
+    cau: Fa3 nằm trên dòng 4 khóa Fa; Sol4 nằm trên dòng 2 khóa Sol.
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+      - omt-notation
+    ket_qua: dung
+    ghi_chu: Như n7 (Sol4 ở dòng 2 khóa Sol) và n13 (Fa3 ở dòng 4 khóa Fa).
+  - id: n26
+    cau: Thuộc vài nốt mốc (Fa3 trên dòng 4 khóa Fa, Sol4 trên dòng 2 khóa Sol), rồi đếm từ nốt mốc gần nhất thay vì đếm từ dòng thấp nhất.
+    loai: khuyen-tap
+    nguon:
+      - omt-clefs
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Thuộc vài nốt mốc (…) giúp đọc nhanh hơn hẳn so với đếm dòng". "Nhanh hơn hẳn" không kiểm được bằng nguồn; câu mới giữ lời khuyên và ghi cách làm, khớp trang cũ luyen-tap/doc-not.md ("Dùng mốc, đừng đếm từ đầu. Thuộc vài nốt mốc: Sol trên dòng 2 (khóa Sol), Fa trên dòng 4 (khóa Fa), Đô giữa trên dòng kẻ phụ. Nốt khác thì đếm từ mốc gần nhất.") và piano/thi-tau.md ("Nốt mốc: vài nốt bạn nhận ra tức thì (Đô giữa, Sol trên dòng 2 khóa Sol, Fa trên dòng 4 khóa Fa…)"); không trái. Vị trí hai nốt mốc đúng: n25.'
+  - id: n27
+    cau: Trang Đọc nhạc và thị tấu (link /opus/piano/thi-tau/) nói về nốt mốc.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ: ../opus-zero/docs/piano/thi-tau.md (tiêu đề "Đọc nhạc và thị tấu trên đàn"), mục "Đọc hình dạng, đừng đánh vần từng nốt" có mục 1 "Nốt mốc: vài nốt bạn nhận ra tức thì (Đô giữa, Sol trên dòng 2 khóa Sol, Fa trên dòng 4 khóa Fa, các nốt Đô…)". Link hiện chữ "sắp có" ở site mới cho tới khi trang lên.'
+  - id: n28
+    cau: Công cụ đọc nốt (link /opus/luyen-tap/doc-not/) có lựa chọn khóa "Khóa Sol" và phạm vi "Trong khuông".
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ: ../opus-zero/docs/assets/js/note-reader.js dòng 39–40: ô chọn Khóa có <option value="treble">Khóa Sol</option> (và Khóa Fa, Sol và Fa, Khóa Đô alto, tenor), ô chọn Phạm vi có <option value="basic">Trong khuông</option> và <option value="ledger">Thêm dòng kẻ phụ</option>. Trang viết gộp hai ô chọn thành một cụm trong nháy kép ("Khóa Sol, Trong khuông"); đúng nghĩa (chọn khóa Sol và phạm vi Trong khuông), cùng ý với câu của trang cũ luyen-tap/doc-not.md ("Chọn khóa Sol, phạm vi "Trong khuông""). Giữ.'
+  - id: n29
+    cau: Luyện với công cụ đọc nốt đến khi đúng 9/10 lần.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập (ngưỡng 9/10). Không trái trang cũ ../opus-zero/docs/luyen-tap/doc-not.md: "Chỉ chuyển sang bước tiếp khi đúng ngay lần đầu khoảng 9/10."'
+  - id: n30
+    cau: Làm tương tự với khóa Fa.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; khớp thứ tự gợi ý trong luyen-tap/doc-not.md cũ ("khóa Sol trong khuông → khóa Fa trong khuông → …").
+  - id: n31
+    cau: Công cụ đọc nốt có lựa chọn "Thêm dòng kẻ phụ" để mở rộng phạm vi.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Bản cũ ../opus-zero/docs/assets/js/note-reader.js dòng 40: <option value="ledger">Thêm dòng kẻ phụ</option> trong ô Phạm vi; luyen-tap/doc-not.md cũ: "Thứ tự mở rộng gợi ý: … khóa Sol thêm dòng kẻ phụ → khóa Fa thêm dòng kẻ phụ → cả hai khóa".'
+  - id: n32
+    cau: Trong khóa Sol, nốt trên dòng 3 là Si (B4).
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+      - omt-notation
+    ket_qua: dung
+    ghi_chu: "Câu trả lời của bài tập 4. Dòng khóa Sol từ dưới lên E G B D F (n10): dòng 3 là B; dòng 2 là G4 (n7) nên dòng 3 là B4. Khối abc 1: B4 ở dòng 3 (E4 G4 B4 D5 F5)."
+  - id: n33
+    cau: Trong khóa Fa, nốt trong khe 1 là La (A2).
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+      - omt-notation
+      - omt-aspn
+    ket_qua: dung
+    ghi_chu: "Câu trả lời của bài tập 4. Khe khóa Fa từ dưới lên A C E G (n16): khe 1 là A. Dòng 4 là F3 (n13), nên dòng 3 là D3, dòng 2 là B2, dòng 1 là G2, và khe 1 (giữa dòng 1 và dòng 2) là A2. Khối abc 4: abcjs đọc A2 C3 E3 G3."
+  - id: n34
+    cau: 'Hộp "Luyện tập kèm theo": công cụ Đọc nốt (link /opus/luyen-tap/doc-not/) có khóa Sol và khóa Fa, và phiếu bài tập (link /opus/luyen-tap/phieu-bai-tap/) có phiếu "Gọi tên nốt".'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ: note-reader.js có ô chọn Khóa Sol và Khóa Fa (n28); ../opus-zero/docs/assets/js/worksheet.js dòng 11 và 14: phiếu "Gọi tên nốt khóa Sol" và "Gọi tên nốt khóa Fa"; ../opus-zero/docs/luyen-tap/phieu-bai-tap.md tồn tại.'
+  - id: n35
+    cau: 'Câu hỏi: "Khóa Sol đánh dấu nốt Sol ở dòng nào?" Đáp án đúng "Dòng 2"; "Dòng 1", "Dòng 3" sai; giải thích "Nét xoắn của khóa Sol ôm lấy dòng 2." đúng.'
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - omt-clefs
+    ket_qua: dung
+    ghi_chu: Dòng 2 (n7). Dòng 1 là E4, dòng 3 là B4 (n10) nên hai lựa chọn kia sai. Giải thích khớp n7.
+  - id: n36
+    cau: 'Câu hỏi: "Các nốt trong khe của khóa Sol (từ dưới lên) là gì?" Đáp án đúng "Fa – La – Đô – Mi"; "Mi – Sol – Si – Rê" và "La – Đô – Mi – Sol" sai; giải thích "Trong tiếng Anh ghép thành chữ FACE." đúng.'
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+    ket_qua: dung
+    ghi_chu: 'Fa – La – Đô – Mi là khe khóa Sol (n11), ghép thành FACE (n12). "Mi – Sol – Si – Rê" là bốn nốt đầu trên các dòng khóa Sol (n10), không phải khe; "La – Đô – Mi – Sol" là khe khóa Fa (n16): hai lựa chọn sai thật sự sai.'
+  - id: n37
+    cau: 'Câu hỏi: "Khóa Fa đánh dấu nốt Fa ở dòng nào?" Đáp án đúng "Dòng 4"; "Dòng 2", "Dòng 3" sai; giải thích "Hai chấm của khóa Fa nằm hai bên dòng 4." đúng.'
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - omt-clefs
+    ket_qua: dung
+    ghi_chu: Dòng 4 (n13); dòng 2 là B2, dòng 3 là D3 (n15). Giải thích khớp n13.
+  - id: n38
+    cau: 'Câu hỏi: "Đô giữa nằm ở đâu trên khuông khóa Sol?" Đáp án đúng "Dòng kẻ phụ ngay dưới khuông"; "Dòng 1", "Khe 1" sai; giải thích "Đô giữa cũng là dòng kẻ phụ ngay trên khuông khóa Fa." đúng.'
+    loai: dinh-nghia
+    nguon:
+      - omt-keyboard
+      - omt-aspn
+    ket_qua: dung
+    ghi_chu: "Đô giữa ở dòng kẻ phụ ngay dưới khuông khóa Sol (n21). Dòng 1 là E4 và khe 1 là F4 (n10, n11): sai. Giải thích khớp n21."
+  - id: n39
+    cau: 'Câu hỏi: "Các nốt trên dòng của khóa Fa (từ dưới lên) là gì?" Đáp án đúng "Sol – Si – Rê – Fa – La"; "Mi – Sol – Si – Rê – Fa" và "La – Đô – Mi – Sol – Si" sai; giải thích "Good Boys Do Fine Always." đúng.'
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+    ket_qua: dung
+    ghi_chu: 'Sol – Si – Rê – Fa – La là dòng khóa Fa (n15). "Mi – Sol – Si – Rê – Fa" là dòng khóa Sol (n10); "La – Đô – Mi – Sol – Si" không phải dòng của khóa nào (A C E G là khe khóa Fa, n16, cộng thêm Si): sai. Giải thích: chữ cái đầu G B D F A khớp (n18).'
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - khoa
+      - not
+    ket_qua: dung
+    ghi_chu: 'Khóa Sol, L:1/2, không M:. abcjs đọc ra E4 G4 B4 D5 F5: năm nốt trắng trên năm dòng từ dưới lên, khớp "Mi – Sol – Si – Rê – Fa (E G B D F)" (n10) và Sol4 ở dòng 2 (n7). abcjs (public/vendor/abcjs-basic-min.js, parseOnly) không cảnh báo.'
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - khoa
+      - not
+    ket_qua: dung
+    ghi_chu: 'Khóa Sol, L:1/2. abcjs đọc ra F4 A4 C5 E5: bốn nốt trắng trong bốn khe, khớp "Fa – La – Đô – Mi (F A C E)" (n11). abcjs (public/vendor/abcjs-basic-min.js, parseOnly) không cảnh báo.'
+  - khoi: 3
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - khoa
+      - not
+    ket_qua: dung
+    ghi_chu: 'Khóa Fa (K:C clef=bass), L:1/2. abcjs đọc ra G2 B2 D3 F3 A3: năm nốt trắng trên năm dòng khóa Fa, khớp "Sol – Si – Rê – Fa – La (G B D F A)" (n15); F3 ở dòng 4 (n13). abcjs (public/vendor/abcjs-basic-min.js, parseOnly) không cảnh báo.'
+  - khoi: 4
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - khoa
+      - not
+    ket_qua: dung
+    ghi_chu: 'Khóa Fa (clef=bass), L:1/2. abcjs đọc ra A2 C3 E3 G3: bốn nốt trắng trong bốn khe khóa Fa, khớp "La – Đô – Mi – Sol (A C E G)" (n16) và khe 1 là A2 (n33). abcjs (public/vendor/abcjs-basic-min.js, parseOnly) không cảnh báo.'
+  - khoi: 5
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - khoa
+      - not
+      - nhip
+    ket_qua: dung
+    ghi_chu: "Khuông kép (%%score {RH LH}, V:RH treble, V:LH bass), M:4/4, L:1/4. Tay phải C4 D4 E4 F4 | G4 (nốt tròn) ở khóa Sol, tay trái C3 D3 E3 F3 | G3 (nốt tròn) ở khóa Fa; mỗi bè hai ô đủ 4 phách. Minh họa đúng điều trang nói về khuông kép (khóa Sol ở trên cho tay phải, khóa Fa ở dưới cho tay trái: n22) và Đô giữa C4 trên dòng kẻ phụ dưới khuông Sol (n21); ví dụ không có C4 ở khuông Fa (tay trái bắt đầu ở C3, thấp hơn Đô giữa một quãng tám) nhưng trang không nói như vậy. abcjs (public/vendor/abcjs-basic-min.js, parseOnly) không cảnh báo."
+doi_chu:
+  - cu: "Bản nhạc piano viết trên khuông kép: khóa Sol thường dành cho tay phải, khóa Fa cho tay trái, và Đô giữa nằm trên dòng kẻ phụ ở giữa hai khuông. Thuộc vài nốt mốc (Fa3 trên dòng 4 khóa Fa, Sol4 trên dòng 2 khóa Sol) giúp đọc nhanh hơn hẳn so với đếm dòng: xem Đọc nhạc và thị tấu."
+    moi: "Bản nhạc piano viết trên khuông kép: khóa Sol thường dành cho tay phải, khóa Fa cho tay trái, và Đô giữa nằm trên dòng kẻ phụ ở giữa hai khuông. Thuộc vài nốt mốc (Fa3 trên dòng 4 khóa Fa, Sol4 trên dòng 2 khóa Sol), rồi đếm từ nốt mốc gần nhất thay vì đếm từ dòng thấp nhất: xem Đọc nhạc và thị tấu."
+    ly_do: 'n26 (da-sua): "nhanh hơn hẳn" không kiểm được; câu mới giữ lời khuyên và nói cách làm, khớp trang lõi cũ luyen-tap/doc-not và piano/thi-tau (đếm từ nốt mốc gần nhất).'
+  - cu: Open Music Theory; musictheory.net.
+    moi:
+      - "Open Music Theory: Notation of Notes, Clefs, and Ledger Lines; Reading Clefs; The Keyboard and the Grand Staff; American Standard Pitch Notation (ASPN)."
+      - "Robert Hutchinson, Music Theory for the 21st-Century Classroom: 1.2 Notation và 1.3 Octave Registers; Dolmetsch Online, Music Theory Online: bài 1 (đánh số dòng và khe, cách nhớ tên nốt) và bài 29 (âm vực nhạc cụ)."
+    ly_do: "Mục Nguồn: thay link chung tới Open Music Theory bằng link tới đúng các chương đã đọc khi kiểm định (lượt 1), thêm giáo trình mở và bản nhạc đã dùng; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, không đọc được chữ để kiểm."

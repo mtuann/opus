@@ -85,7 +85,7 @@ K:C
 ```
 
 :::tip[Trên phím đàn]
-Bản nhạc piano viết trên **khuông kép**: khóa Sol thường dành cho tay phải, khóa Fa cho tay trái, và Đô giữa nằm trên dòng kẻ phụ ở giữa hai khuông. Thuộc vài **nốt mốc** (Fa3 trên dòng 4 khóa Fa, Sol4 trên dòng 2 khóa Sol) giúp đọc nhanh hơn hẳn so với đếm dòng: xem [Đọc nhạc và thị tấu](/opus/piano/thi-tau/).
+Bản nhạc piano viết trên **khuông kép**: khóa Sol thường dành cho tay phải, khóa Fa cho tay trái, và Đô giữa nằm trên dòng kẻ phụ ở giữa hai khuông. Thuộc vài **nốt mốc** (Fa3 trên dòng 4 khóa Fa, Sol4 trên dòng 2 khóa Sol), rồi đếm từ nốt mốc gần nhất thay vì đếm từ dòng thấp nhất: xem [Đọc nhạc và thị tấu](/opus/piano/thi-tau/).
 :::
 
 ## Bài tập
@@ -136,5 +136,6 @@ Khóa Sol, dòng 3 là **Si (B4)**. Khóa Fa, khe 1 là **La (A2)**.
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- *Open Music Theory*: [Notation of Notes, Clefs, and Ledger Lines](https://viva.pressbooks.pub/openmusictheory/chapter/notation-of-notes-clefs-and-ledger-lines/); [Reading Clefs](https://viva.pressbooks.pub/openmusictheory/chapter/clefs/); [The Keyboard and the Grand Staff](https://viva.pressbooks.pub/openmusictheory/chapter/the-keyboard-and-grand-staff/); [American Standard Pitch Notation (ASPN)](https://viva.pressbooks.pub/openmusictheory/chapter/aspn/).
+- Robert Hutchinson, *Music Theory for the 21st-Century Classroom*: [1.2 Notation](https://musictheory.pugetsound.edu/mt21c/Notation.html) và [1.3 Octave Registers](https://musictheory.pugetsound.edu/mt21c/OctaveRegisters.html); Dolmetsch Online, *Music Theory Online*: [bài 1](https://www.dolmetsch.com/musictheory1.htm) (đánh số dòng và khe, cách nhớ tên nốt) và [bài 29](https://www.dolmetsch.com/musictheory29.htm) (âm vực nhạc cụ).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
