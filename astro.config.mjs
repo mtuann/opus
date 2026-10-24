@@ -5,6 +5,8 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { satteri } from '@astrojs/markdown-satteri';
 import { trangTrongBan } from './src/ban-build.mjs';
+import { bangHep } from './src/plugins/bang-hep.mjs';
+import { danhSachViec } from './src/plugins/danh-sach-viec.mjs';
 import { idCu } from './src/plugins/id-cu.mjs';
 import { opusMarkdown } from './src/plugins/opus-markdown.mjs';
 import { sapCo } from './src/plugins/sap-co.mjs';
@@ -37,8 +39,9 @@ export default defineConfig({
 		processor: satteri({
 			mdastPlugins: [opusMarkdown({ base: `${base}/`, docsDir: fileURLToPath(new URL('./src/content/docs/', import.meta.url)) })],
 			// id tiêu đề theo kiểu site cũ, để link #mục cũ vẫn đúng (D1.4), chạy trước plugin id của Starlight;
-			// link tới trang chưa có trong bản build thành chữ "sắp có" (D1.5)
-			hastPlugins: [idCu(), sapCo({ base: `${base}/`, trangCo: trangTrongBan })],
+			// link tới trang chưa có trong bản build thành chữ "sắp có" (D1.5); danh sách việc "- [ ]" có nhãn, bấm được; bảng
+			// nhiều cột không bị ép ở màn hình hẹp (D2-nền)
+			hastPlugins: [idCu(), sapCo({ base: `${base}/`, trangCo: trangTrongBan }), danhSachViec(), bangHep()],
 			features: {
 				smartPunctuation: false, // giữ nguyên dấu nháy, gạch ngang như chữ của site cũ (Astro mặc định bật)
 				headingAttributes: true, // ## Tiêu đề { #id }: id viết tay

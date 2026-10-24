@@ -133,3 +133,19 @@ test('mỗi trang trong src/content/docs/ có đúng một tầng trong src/data
 	const thieu = trang.filter((t) => !tang.has(t));
 	assert.deepEqual(thieu, [], 'trang chưa có tầng trong trang.yml');
 });
+
+test('trang tác phẩm khai đúng tac_pham: trang chính của mỗi bản ghi, và trang cap dùng chung bản ghi ấy', () => {
+	const tp = parse(fs.readFileSync(path.join(ROOT, 'src', 'data', 'tac-pham.yml'), 'utf8'));
+	const chinh = (r) => (r.loai === 'bai-hoc' ? 'piano/tac-pham/' : 'nghe-nhac/') + r.slug;
+	const cuaTrang = new Map(tp.map((r) => [chinh(r), r.slug]));
+	// trang cap không có bản ghi riêng: viết về đúng tác phẩm này, dùng chung bản ghi (AGENTS.md, mục Dữ liệu)
+	for (const r of tp) if (r.cap && !cuaTrang.has(r.cap)) cuaTrang.set(r.cap, r.slug);
+	const loi = [];
+	for (const [trang, slug] of cuaTrang) {
+		const f = path.join(ROOT, 'src', 'content', 'docs', `${trang}.md`);
+		if (!fs.existsSync(f)) continue; // trang chưa chuyển
+		const fm = parse(/^---\n([\s\S]*?)\n---/.exec(fs.readFileSync(f, 'utf8'))?.[1] ?? '') ?? {};
+		if (fm.tac_pham !== slug) loi.push(`${trang}.md: frontmatter phải có tac_pham: ${slug} (đang: ${fm.tac_pham ?? 'không có'})`);
+	}
+	assert.deepEqual(loi, []);
+});

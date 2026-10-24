@@ -6,6 +6,7 @@ import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { markdownToHtml } from 'satteri';
 import { duLieuDaKiem } from '../src/du-lieu.mjs';
+import { danhSachViec } from '../src/plugins/danh-sach-viec.mjs';
 import { opusMarkdown } from '../src/plugins/opus-markdown.mjs';
 import { canTaiScript, docMoc, docQuiz, hinhCauTruc, khoiNghe, md } from '../src/plugins/thanh-phan.mjs';
 import { kiemDinh, ngayViet } from '../src/kiem-dinh.mjs';
@@ -197,3 +198,33 @@ test('::hinh và ::cong-cu chưa có thành phần: build vẫn chạy, hiện �
 	assert.match(html, /<p class="oz-chua-co" data-pagefind-ignore>Công cụ "piano" chưa chuyển sang site mới\.<\/p>/);
 });
 
+test('danh sách việc "- [ ]": ô trong nhãn, có tên (aria-labelledby tới chữ của việc), không khóa; danh sách con nằm ngoài chữ', () => {
+	const dungViec = (md) => markdownToHtml(md, { hastPlugins: [danhSachViec()], features: { gfm: true } }).html;
+	const html = dungViec('- [ ] Việc [một](/opus/piano/gam/)\n- [x] Việc hai\n  - [ ] Việc con\n- Mục thường\n');
+	const muc = [...html.matchAll(/<li class="([^"]*)"[^>]*>/g)].map((m) => m[0]);
+	assert.deepEqual(muc, Array(3).fill('<li class="task-list-item oz-viec">'), 'mỗi mục một thuộc tính class');
+	assert.match(html, /<label class="oz-viec-o"><input type="checkbox" class="oz-viec-hop" aria-labelledby="oz-viec-1"><\/label><span class="oz-viec-chu" id="oz-viec-1">Việc <a href="\/opus\/piano\/gam\/">một<\/a><\/span>/);
+	assert.match(html, /<input type="checkbox" checked class="oz-viec-hop" aria-labelledby="oz-viec-2">/);
+	assert.match(html, /id="oz-viec-2">Việc hai\s*<\/span><ul class="contains-task-list">/, 'danh sách con sau chữ, không nằm trong tên của ô');
+	assert.doesNotMatch(html, /disabled/);
+	assert.match(html, /<li>Mục thường<\/li>/);
+	// mục thưa (dòng trống giữa các mục): chữ là các đoạn, bọc trong div
+	const thua = dungViec('- [ ] Một\n\n  Đoạn thêm.\n\n- [ ] Hai\n');
+	assert.match(thua, /<label class="oz-viec-o"><input type="checkbox" class="oz-viec-hop" aria-labelledby="oz-viec-1"><\/label><div class="oz-viec-chu" id="oz-viec-1"><p>Một<\/p>\s*<p>Đoạn thêm\.<\/p>/);
+	assert.ok(canTaiScript(html), 'trang có danh sách việc tải bộ tải thành phần (nhớ ô đã đánh dấu)');
+});
+
+test('trang đã khóa: chỉ thị đọc trường chưa khóa của bản ghi thì build hỏng; trang chưa khóa thì không chặn', () => {
+	const dungKhoa = (md, khoa) => {
+		const plugin = opusMarkdown({ base: '/opus/', docsDir: DOCS, khoa: () => khoa })({ fileURL: pathToFileURL(path.join(DOCS, 'piano/tac-pham/fur-elise.md')) });
+		return markdownToHtml(md, { mdastPlugins: [plugin], features: { directive: true, smartPunctuation: false } }).html;
+	};
+	const trang = trangTacPham('fur-elise', '::hop-tac-pham');
+	const khoaTrang = { 'piano/tac-pham/fur-elise': 'sha256:x' };
+	assert.throws(
+		() => dungKhoa(trang, { trang: khoaTrang, ban_ghi: { 'tac-pham/fur-elise#chang,ten': 'sha256:y' } }),
+		/fur-elise\.md: trang đã khóa piano\/tac-pham\/fur-elise \(::hop-tac-pham\) hiện trường chưa khóa du-lieu\/tac-pham\/fur-elise#/,
+	);
+	assert.match(dungKhoa(trang, { trang: khoaTrang, ban_ghi: { 'tac-pham/fur-elise': 'sha256:y' } }), /class="oz-piece/);
+	assert.match(dungKhoa(trang, { trang: {}, ban_ghi: {} }), /class="oz-piece/);
+});

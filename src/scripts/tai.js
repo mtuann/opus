@@ -8,6 +8,7 @@ const LUAT = [
 	['.abc-notation', () => import('./abc.js'), false],
 	['.oz-quiz', () => import('./quiz.js'), true],
 	['.oz-listen', () => import('./nghe.js'), false],
+	['.oz-viec', () => import('./viec.js'), true],
 ];
 const LE = 600;
 const cho = new Map(); // phần tử đang chờ tới gần màn hình -> hàm khởi tạo (trả về promise)

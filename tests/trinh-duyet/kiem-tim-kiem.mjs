@@ -102,6 +102,15 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET))
 			const loi = [];
 			p.on('pageerror', (e) => loi.push(String(e)));
 			p.on('console', (m) => m.type() === 'error' && loi.push(m.text()));
+			// Các file của Pagefind đã tải (mã, số byte): lần đăng site 9498fb2 hỏng vì Pagefind nhận chỉ mục rỗng trên máy
+			// của GitHub, mà trên máy khác không lặp lại được; hỏng lần sau thì biết file nào về rỗng
+			const pagefind = [];
+			p.on('response', async (r) => {
+				if (!r.url().includes('/pagefind/')) return;
+				const dai = await r.body().then((b) => b.length, () => '?');
+				pagefind.push(`${r.status()} ${dai} B ${r.url().replace(/^.*\/pagefind\//, '')}`);
+			});
+			p.on('requestfailed', (r) => r.url().includes('/pagefind/') && pagefind.push(`hỏng ${r.url().replace(/^.*\/pagefind\//, '')}: ${r.failure()?.errorText}`));
 			await p.goto(await goc(), { waitUntil: 'load' });
 			// Ô tìm kiếm chạy trước, như với người đọc thật: nó gọi options() trước khi Pagefind khởi tạo, lúc mà options()
 			// thay hết tùy chọn cũ. Gọi pagefind.js trước thì Pagefind đã khởi tạo đúng basePath, che mất lỗi này.
@@ -109,7 +118,7 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET))
 			await p.locator('.pagefind-ui__search-input').fill('dan');
 			await p
 				.waitForFunction(() => /\d+ kết quả/.test(document.querySelector('.pagefind-ui__message')?.textContent ?? ''), null, { timeout: 15000 })
-				.catch(() => assert.fail(`ô tìm kiếm không ra kết quả; lỗi: ${loi.join(' | ') || 'không có'}`));
+				.catch(() => assert.fail(`ô tìm kiếm không ra kết quả; lỗi: ${loi.join(' | ') || 'không có'}; file của Pagefind: ${pagefind.join(', ') || 'chưa tải file nào'}`));
 			const tin = await p.locator('.pagefind-ui__message').innerText();
 			const { so } = await tim(p, 'dan');
 			assert.equal(Number(/(\d+) kết quả/.exec(tin)[1]), so, `ô tìm kiếm báo "${tin}"`);

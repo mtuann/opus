@@ -6,9 +6,9 @@ import { markdownToHtml } from 'satteri';
 export const esc = (s) =>
 	String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 
-/** HTML đã dựng của trang có khối cần JavaScript (khuông nhạc, câu hỏi, khối nghe) không: MarkdownContent.astro chỉ
- * tải bộ tải thành phần ở những trang này. */
-export const canTaiScript = (html) => /\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen)[\s"]/.test(html);
+/** HTML đã dựng của trang có khối cần JavaScript (khuông nhạc, câu hỏi, khối nghe, danh sách việc) không:
+ * MarkdownContent.astro chỉ tải bộ tải thành phần ở những trang này. */
+export const canTaiScript = (html) => /\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec)[\s"]/.test(html);
 
 /**
  * Địa chỉ link được dùng trong dữ liệu: trên site (/…, không phải //máy-khác), #mục, http(s), mailto. Khác (như

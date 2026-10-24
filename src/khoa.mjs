@@ -95,6 +95,23 @@ export function docKhoa(goc = GOC) {
 }
 
 /**
+ * Hàm (bộ, id, trường) -> trường ấy của bản ghi đã khóa chưa, theo khoa.json: khóa cả bản ghi, hay một khóa từng phần có
+ * trường ấy. Trang chỉ hiện trường đã khóa (plans/lam-lai/README.md, Quy tắc chung): xem chiDaKhoa (src/du-lieu.mjs).
+ */
+export function truongDaKhoa(khoa = docKhoa()) {
+	const theo = new Map(); // "<bộ>/<id>" -> true (cả bản ghi) hay Set các trường đã khóa
+	for (const k of Object.keys(khoa.ban_ghi)) {
+		const { banGhi, truong } = tachKhoaBanGhi(k);
+		if (!truong) theo.set(banGhi, true);
+		else if (theo.get(banGhi) !== true) theo.set(banGhi, new Set([...(theo.get(banGhi) ?? []), ...truong]));
+	}
+	return (bo, id, ten) => {
+		const t = theo.get(`${bo}/${id}`);
+		return t === true || (t instanceof Set && t.has(ten));
+	};
+}
+
+/**
  * Kiểm mọi mục đã khóa: trang và bản ghi phải còn, mã băm phải khớp. Trả về danh sách lỗi (chuỗi); rỗng là đạt.
  * Build gọi hàm này ở cả bản thật và bản xem (src/content.config.ts): lệch thì build hỏng.
  */

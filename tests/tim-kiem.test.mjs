@@ -7,6 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { bienThe } from '../src/tim-kiem/bien-the.js';
 import { boc, gopKetQua } from '../src/tim-kiem/boc.js';
+import { thieuChiMuc } from '../src/tim-kiem/tich-hop.mjs';
 
 const DIST = path.resolve(import.meta.dirname, '../dist');
 
@@ -40,6 +41,31 @@ function gocGia(kq = {}) {
 		createInstance: (o) => (goi.push(['createInstance', o]), {}),
 	};
 }
+
+test('bản build: chỉ mục Pagefind đủ (pagefind-entry.json đọc được, có ngôn ngữ, không file nào rỗng)', () => {
+	// lần đăng site 9498fb2: pagefind-entry.json rỗng do Pagefind bị đóng khi đang ghi (src/tim-kiem/tich-hop.mjs)
+	assert.deepEqual(thieuChiMuc(path.join(DIST, 'pagefind')), []);
+});
+
+test('chỉ mục Pagefind thiếu thì thieuChiMuc báo đúng chỗ thiếu', () => {
+	const tam = fs.mkdtempSync(path.join(import.meta.dirname, '.tam-pagefind-'));
+	try {
+		fs.writeFileSync(path.join(tam, 'pagefind-entry.json'), '');
+		fs.mkdirSync(path.join(tam, 'index'));
+		fs.writeFileSync(path.join(tam, 'index', 'vi_1.pf_index'), '');
+		fs.writeFileSync(path.join(tam, 'pagefind.js'), 'x');
+		const thieu = thieuChiMuc(tam);
+		assert.equal(thieu.length, 3, thieu.join('; '));
+		assert.match(thieu[0], /^pagefind-entry\.json không đọc được/);
+		assert.ok(thieu.includes('pagefind-entry.json rỗng') && thieu.includes(path.join('index', 'vi_1.pf_index') + ' rỗng'), thieu.join('; '));
+		fs.writeFileSync(path.join(tam, 'pagefind-entry.json'), '{"languages":{}}');
+		fs.writeFileSync(path.join(tam, 'index', 'vi_1.pf_index'), 'x');
+		assert.deepEqual(thieuChiMuc(tam), ['pagefind-entry.json không có ngôn ngữ nào']);
+		assert.deepEqual(thieuChiMuc(path.join(tam, 'khong-co')), ['không có thư mục pagefind/']);
+	} finally {
+		fs.rmSync(tam, { recursive: true, force: true });
+	}
+});
 
 test('gộp kết quả các biến thể: mỗi trang một lần, giữ điểm cao nhất, xếp theo điểm, cùng điểm thì câu gốc trước', () => {
 	const kq = gopKetQua([

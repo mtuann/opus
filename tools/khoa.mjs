@@ -13,6 +13,11 @@
 //       --mau n: n nhận định chọn ngẫu nhiên, kèm nguồn,
 //       cho chủ repo kiểm mẫu. Lô ("D3-L2", trang lấy từ plans/lam-lai/anh-xa.md) thì mặc định ghi vào
 //       plans/lam-lai/bao-cao/d3-l2-nhan-dinh.yml (với --mau: d3-l2-kiem-mau.yml); trang thì in ra màn hình
+//   node tools/khoa.mjs nhap <file kết quả lượt 2>
+//       đưa kết quả lượt 2 (danh sách { trang, id, luot_2: dung|sai|khong-chac, nguon: [link], cau_dung?, ghi_chu? },
+//       chuan-kiem-dinh.md mục 8) vào hồ sơ: luot_2 của từng nhận định, kèm luot_2_nguon, luot_2_ghi_chu. Kiểm hết trước,
+//       một dòng sai thì không ghi gì. In các nhận định cần review (hai lượt khác nhau, lượt 1 đã sửa, bỏ hay chưa có kết quả)
+//       và số nhận định còn thiếu lượt 2 trong các hồ sơ ấy
 // <mục>: đường dẫn trang ("nhac-ly/10-hop-am-ba", "nhac-ly/index", "index", "404") hay bản ghi "du-lieu/<bộ>/<id>"
 // ("du-lieu/tac-pham/fur-elise"). Khóa từng phần bản ghi: "du-lieu/<bộ>/<id>#<trường>,<trường>" (chỉ các trường đã kiểm
 // định, chuan-kiem-dinh.md mục 6); khóa cả bản ghi thì thay các khóa từng phần của nó. Hồ sơ vẫn là một file cho mỗi
@@ -342,7 +347,53 @@ export function lenh(thamSo, goc = GOC, in_ = console.log) {
 		} else in_(chu.trimEnd());
 		return 0;
 	}
-	throw new Error('việc phải là mau, khoa, mo, tinh hay xuat (xem đầu file tools/khoa.mjs)');
+	if (viec === 'nhap') {
+		const [file] = con;
+		if (!file) throw new Error('cần file kết quả lượt 2, ví dụ plans/lam-lai/bao-cao/d3-l2-luot-2.yml');
+		const ds = parse(fs.readFileSync(path.resolve(goc, file), 'utf8'));
+		if (!Array.isArray(ds)) throw new Error(`${file}: phải là danh sách kết quả`);
+		const loi = [];
+		const hoSo = new Map(); // file hồ sơ -> { doc, dong: [[nhận định, dòng kết quả]] }
+		const daGap = new Set();
+		ds.forEach((d, i) => {
+			const ten = `dòng ${i + 1} (${d?.trang ?? '?'}, ${d?.id ?? '?'})`;
+			if (!d?.trang || !d?.id) return loi.push(`${ten}: thiếu trang hay id`);
+			if (!LUOT_2.includes(d.luot_2)) return loi.push(`${ten}: luot_2 phải là ${LUOT_2.join(', ')}`);
+			if (d.luot_2 !== 'khong-chac' && !d.nguon?.length) loi.push(`${ten}: ${d.luot_2} cần nguon (link đã mở)`);
+			if (d.luot_2 === 'sai' && !d.cau_dung && !d.ghi_chu) loi.push(`${ten}: sai cần cau_dung hay ghi_chu`);
+			if (daGap.has(`${d.trang}#${d.id}`)) return loi.push(`${ten}: trùng dòng trước`);
+			daGap.add(`${d.trang}#${d.id}`);
+			const f = fileHoSo(d.trang, goc);
+			if (!fs.existsSync(f)) return loi.push(`${ten}: chưa có hồ sơ ${path.relative(goc, f)}`);
+			if (!hoSo.has(f)) hoSo.set(f, { doc: parseDocument(fs.readFileSync(f, 'utf8')), dong: [] });
+			const { doc, dong } = hoSo.get(f);
+			const nd = doc.get('nhan_dinh')?.items?.find((x) => x.get('id') === d.id);
+			if (!nd) return loi.push(`${ten}: hồ sơ không có nhận định ${d.id}`);
+			dong.push([nd, d]);
+		});
+		if (loi.length) throw new Error(`${file}: chưa nhập gì, vì:\n- ${loi.join('\n- ')}`);
+		const dem = Object.fromEntries(LUOT_2.map((k) => [k, 0]));
+		const canReview = [];
+		let thieu = 0;
+		for (const [f, { doc, dong }] of hoSo) {
+			for (const [nd, d] of dong) {
+				nd.set('luot_2', d.luot_2);
+				if (d.nguon?.length) nd.set('luot_2_nguon', doc.createNode(d.nguon, { flow: true }));
+				const ghiChu = [d.cau_dung && `câu đúng: ${d.cau_dung}`, d.ghi_chu].filter(Boolean).join('; ');
+				if (ghiChu) nd.set('luot_2_ghi_chu', ghiChu);
+				dem[d.luot_2]++;
+				const kq = nd.get('ket_qua');
+				if (d.luot_2 !== 'dung' || kq !== 'dung') canReview.push(`${d.trang} ${d.id}: lượt 1 ${kq ?? 'chưa có kết quả'}, lượt 2 ${d.luot_2}`);
+			}
+			fs.writeFileSync(f, doc.toString({ lineWidth: 0 }));
+			thieu += (doc.get('nhan_dinh')?.items ?? []).filter((x) => !LUOT_2.includes(x.get('luot_2'))).length;
+		}
+		in_(`đã nhập ${ds.length} kết quả lượt 2 vào ${hoSo.size} hồ sơ: ${LUOT_2.map((k) => `${dem[k]} ${k}`).join(', ')}`);
+		if (thieu) in_(`còn ${thieu} nhận định trong các hồ sơ ấy chưa có lượt 2 (trang Đọc thêm chỉ cần mẫu)`);
+		if (canReview.length) in_(`cần review (${canReview.length}):\n  ${canReview.join('\n  ')}`);
+		return 0;
+	}
+	throw new Error('việc phải là mau, khoa, mo, tinh, xuat hay nhap (xem đầu file tools/khoa.mjs)');
 }
 
 // import.meta.main: đúng cả khi đường dẫn script đi qua liên kết tượng trưng (/tmp trên macOS)

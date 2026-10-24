@@ -37,7 +37,8 @@ npm run lighthouse        # Lighthouse ở tối đa ba trang mẫu của dist/,
 ## Dữ liệu
 
 - Năm bộ dữ liệu YAML trong `src/data/`: `cap-do.yml` (7 chặng), `tac-pham.yml`, `nha-soan-nhac.yml` (mọi người có năm sinh–mất trên site), `thuat-ngu.yml`, `trang.yml` (tầng của mọi trang). Trường, kiểu và các phép kiểm chéo: `src/du-lieu.mjs`; trong code Astro đọc bằng `getCollection('tac-pham')`…
-- Thông tin dùng ở nhiều trang (chặng, Grade, năm sinh–mất, số danh mục, danh sách tác phẩm) lấy từ dữ liệu, không viết tay. Trang tác phẩm chỉ khai `tac_pham: <slug>` ở frontmatter.
+- Thông tin dùng ở nhiều trang (chặng, Grade, năm sinh–mất, số danh mục, danh sách tác phẩm) lấy từ dữ liệu, không viết tay. Trang tác phẩm chỉ khai `tac_pham: <slug>` ở frontmatter; trang chính của mỗi bản ghi, và trang `cap` dùng chung bản ghi, phải khai đúng (`tests/du-lieu.test.mjs`).
+- Trang chỉ hiện trường đã khóa. Chỉ thị trong trang đã khóa đọc bản ghi qua `chiDaKhoa` (`src/du-lieu.mjs`). Đọc một trường chưa khóa, kể cả trường bản ghi chưa có, thì build hỏng, lỗi ghi `du-lieu/<bộ>/<id>#<trường>`. Trang luôn đăng mà lấy dữ liệu bằng code Astro (trang chặng, ô gợi ý tập) cũng phải đọc qua `chiDaKhoa`.
 - Một tác phẩm, một bản ghi. Trang chính của bản ghi là `piano/tac-pham/<slug>` (`loai: bai-hoc`) hay `nghe-nhac/<slug>` (`loai: nghe`). Trường `cap` có hai nghĩa:
   - trang `cap` không có bản ghi riêng: trang đó viết về đúng tác phẩm này và dùng chung bản ghi;
   - trang `cap` có bản ghi riêng (tác phẩm lớn hơn, như *Kinderszenen* của *Träumerei*): hai bản ghi trỏ `cap` sang nhau.
@@ -48,6 +49,7 @@ npm run lighthouse        # Lighthouse ở tối đa ba trang mẫu của dist/,
 ## Tìm kiếm
 
 - Pagefind (Starlight) bỏ dấu khi so: gõ "lam lai" ra "làm lại". Chữ "đ" là chữ riêng, nên lúc build `src/tim-kiem/tich-hop.mjs` bọc `dist/pagefind/pagefind.js`: mỗi từ bắt đầu bằng "d" được tìm thêm bản "đ" (tối đa 3 từ như vậy, tức 8 biến thể), rồi gộp kết quả. Gõ "dan" ra "đàn", "do truong" ra "Đô trưởng". Phần bọc ở `src/tim-kiem/boc.js`.
+- Trước khi bọc, `tich-hop.mjs` kiểm chỉ mục: `pagefind-entry.json` phải đọc được và không file nào rỗng. Starlight đóng Pagefind ngay khi Pagefind báo đã ghi xong, nên có lần file nằm lại rỗng; khi đó ô tìm kiếm báo "Failed to load Pagefind metadata". Thiếu thì build dựng lại chỉ mục, tối đa 2 lần; vẫn thiếu thì build hỏng.
 - Kiểm thử: `tests/tim-kiem.test.mjs` (biến thể, bản build có bản bọc); `tests/trinh-duyet/kiem-tim-kiem.mjs` (bộ truy vấn của site cũ trên trang có trong bản build; gõ "dan" qua API, và qua ô tìm kiếm trên Chromium, WebKit, Firefox).
 
 ## CI và đăng site
@@ -79,6 +81,7 @@ node tools/khoa.mjs khoa <mục>              # kiểm hồ sơ đủ, ghi mã b
 node tools/khoa.mjs tinh                    # kiểm mọi mục đã khóa; lệch thì thoát 1
 node tools/khoa.mjs mo <mục> --ly-do "…"    # mở khóa: ghi lý do, thêm một lần mới vào lan để điền
 node tools/khoa.mjs xuat D3-L2 [--mau 5]    # nhận định của lô cho lượt 2 (trang Đọc thêm: 5 nhận định ngẫu nhiên mỗi trang; --mau: mẫu cho chủ repo kiểm)
+node tools/khoa.mjs nhap <file lượt 2>      # đưa kết quả lượt 2 vào hồ sơ; in nhận định cần review
 ```
 
 - Khóa được khi mọi nhận định đã qua đủ lượt theo tầng (`plans/ben-vung/chuan-kiem-dinh.md` mục 3: trang Đọc thêm chỉ cần lượt 2 cho khoảng 5 nhận định mẫu) và có kết quả, chỗ sửa hay bỏ có ghi chú, chỗ hai lượt khác nhau đã giải quyết, mọi khuông nhạc (khối `abc`) đã kiểm, và lần cuối trong `lan` ghi đủ người (`luot_1`, `luot_2`, `review`, `kiem_mau`). Hồ sơ không có nhận định chỉ khóa được ở trang khung, hay khi có `ghi_chu` giải thích.
@@ -147,10 +150,12 @@ Frontmatter có `tac_pham`. Thứ tự các mục như mẫu ở `../opus-zero/A
 | Chú thích cuối trang | `chữ[^1]` … `[^1]: Chú thích.` | Danh sách cuối trang, tách bằng một đường kẻ |
 | Id cố định cho tiêu đề | `## Tiêu đề { #id }` | Tiêu đề có id đã chọn (giữ id cũ để link `#mục` cũ còn chạy) |
 | Danh sách định nghĩa | Dòng thuật ngữ, rồi dòng `: định nghĩa` | `<dl>` |
+| Danh sách việc | `- [ ] việc` (đã làm: `- [x]`) | Ô đánh dấu bấm được, nhãn 44 px, tên đọc được là chữ của việc. Ô đã đánh dấu được nhớ trong trình duyệt, cùng khóa và định dạng với site cũ (`src/plugins/danh-sach-viec.mjs`, `src/scripts/viec.js`) |
 
 - Chỉ thị `::…` đứng một mình trên một dòng, không có chữ, chỉ có thuộc tính ghi trong bảng (`::khoi-nghe` nhận `moc`; `::hinh`, `::cong-cu` cần `ten`; `::cong-cu` nhận thêm thông số của công cụ). Ba chỉ thị `::hop-tac-pham`, `::hinh-cau-truc`, `::hoc-tiep` cần `tac_pham` ở frontmatter; `::hinh-cau-truc` chỉ dùng ở trang bài học hay hướng dẫn nghe, và bản ghi phải có hình cho loại trang đó. Sai, kể cả gõ sai tên chỉ thị, thì build hỏng, lỗi ghi tên file.
 - Chữ trong chip, `thong_tin`, câu hỏi (dòng `?`, `+`, `-`, `>`) và tên tác phẩm là Markdown trong dòng: `*nghiêng*`, `**đậm**`, `[link](/opus/…/)`. Thẻ HTML thô không dùng được: hiện ra thành chữ. Link trong dữ liệu viết như link trong trang (mục "Link nội bộ").
 - Hình hay công cụ chưa có thành phần thì hiện ô "… chưa chuyển sang site mới": build vẫn chạy (có cảnh báo `[opus]`) để xem được trang ở bản xem, nhưng trang đã khóa có ô này thì kiểm thử hỏng (`tests/khoa.test.mjs`). Lô đầu tiên chuyển trang dùng hình hay công cụ ấy làm thành phần và thêm vào `HINH`, `CONG_CU` trong `src/plugins/thanh-phan.mjs`.
+- Bảng nhiều cột: ở màn hình hẹp, ô tiêu đề mỗi cột giữ độ rộng tối thiểu theo ô dài chữ nhất của cột (`src/plugins/bang-hep.mjs`). Bảng rộng hơn khung thì cuộn ngang trong khung, trang không tràn. Không viết gì thêm trong trang.
 - Plugin dựng các khối: `src/plugins/opus-markdown.mjs` (đọc trang) và `src/plugins/thanh-phan.mjs` (dựng HTML). JavaScript của khối nằm ở `src/scripts/` và chỉ tải ở trang có khuông nhạc, câu hỏi hay khối nghe (`src/components/MarkdownContent.astro`). CSS: `src/styles/thanh-phan.css`.
 - Tiến độ của người học (bài đã làm hết câu hỏi, mốc nghe) lưu trong trình duyệt ở khóa `opus-zero:v1` như site cũ, nên dữ liệu đã lưu ở site cũ vẫn đọc được.
 

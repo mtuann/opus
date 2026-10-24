@@ -11,6 +11,7 @@ import { DIST, TRINH_DUYET, dongMayChu, goc, nguCanh, trangCo } from './chung.mj
 after(dongMayChu);
 const KHUONG = trangCo('oz-abc');
 const QUIZ = trangCo('oz-quiz');
+const VIEC = trangCo('task-list-item oz-viec');
 const khongCo = (khoi) => `bản build không có trang nào có ${khoi}`;
 
 for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
@@ -53,9 +54,9 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 				for (const co of [{ w: 360, h: 780, camUng: true }, { w: 1280, h: 800, camUng: false }]) {
 					const ctx = await nguCanh(trinhDuyet, ten, co);
 					const p = await ctx.newPage();
-					// tiêu đề cuối của bài: phía trên có mọi khối của trang
+					// tiêu đề cuối của bài: phía trên có mọi khối của trang. Tiêu đề h2 đến h4: có trang chỉ có h3 (bat-dau/tom-tat)
 					await p.goto((await goc()) + trang, { waitUntil: 'load' });
-					const id = await p.evaluate(() => [...document.querySelectorAll('.sl-markdown-content h2[id]')].at(-1).id);
+					const id = await p.evaluate(() => [...document.querySelectorAll('.sl-markdown-content :is(h2, h3, h4)[id]')].at(-1).id);
 					await p.goto((await goc()) + trang + '#' + encodeURIComponent(id), { waitUntil: 'load' });
 					await p.waitForTimeout(3000);
 					const truoc = await p.evaluate((id) => document.getElementById(id).getBoundingClientRect().top, id);
@@ -78,7 +79,7 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 			const ctx = await nguCanh(trinhDuyet, ten, { w: 1280, h: 800, camUng: false });
 			const xem = await ctx.newPage();
 			await xem.goto((await goc()) + trang, { waitUntil: 'domcontentloaded' });
-			const ids = await xem.evaluate(() => [...document.querySelectorAll('.sl-markdown-content h2[id]')].map((h) => h.id));
+			const ids = await xem.evaluate(() => [...document.querySelectorAll('.sl-markdown-content :is(h2, h3, h4)[id]')].map((h) => h.id));
 			await xem.close();
 			const [dau, cuoi] = [ids[0], ids.at(-1)];
 			const p = await ctx.newPage();
@@ -125,6 +126,35 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 			}
 			await bam(dung.t);
 			assert.match(await hop.locator('.oz-feedback').innerText(), /^Đúng\./);
+			await ctx.close();
+		} finally {
+			await trinhDuyet.close();
+		}
+	});
+
+	// D2-nền: chạm cả vùng nhãn (không chỉ ô 20 px) thì đánh dấu; lưu như site cũ (store.checks[trang][mã] = ngày), nên tải
+	// lại trang, hay mở site cũ cùng tên miền, vẫn thấy
+	test(`${ten}: danh sách việc: chạm góc nhãn thì đánh dấu, lưu như site cũ, tải lại vẫn còn`, { skip: !VIEC.length && khongCo('danh sách việc') }, async () => {
+		const trinhDuyet = await loai.launch();
+		try {
+			const ctx = await nguCanh(trinhDuyet, ten, { w: 360, h: 780, camUng: true });
+			const p = await ctx.newPage();
+			await p.goto((await goc()) + VIEC[0], { waitUntil: 'load' });
+			const nhan = p.locator('li.oz-viec > .oz-viec-o').first();
+			const o = nhan.locator('input');
+			await nhan.scrollIntoViewIfNeeded();
+			await p.waitForFunction(() => document.querySelector('.oz-viec-hop')?.dataset.viec, null, { timeout: 20000 });
+			const h = await nhan.boundingBox();
+			await p.touchscreen.tap(h.x + 4, h.y + 4);
+			assert.ok(await o.isChecked(), 'chạm góc nhãn mà ô không đánh dấu');
+			const ma = await o.getAttribute('data-viec');
+			const kho = await p.evaluate(() => JSON.parse(localStorage.getItem('opus-zero:v1')).store.checks);
+			assert.match(kho[VIEC[0]]?.[ma] ?? '', /^\d{4}-\d{2}-\d{2}$/, `kho checks: ${JSON.stringify(kho)}`);
+			await p.reload({ waitUntil: 'load' });
+			await p.waitForFunction(() => document.querySelector('.oz-viec-hop')?.dataset.viec, null, { timeout: 20000 });
+			assert.ok(await o.isChecked(), 'tải lại trang thì mất dấu');
+			await o.uncheck();
+			assert.equal(await p.evaluate(() => JSON.stringify(JSON.parse(localStorage.getItem('opus-zero:v1')).store.checks)), '{}', 'bỏ dấu mà kho còn');
 			await ctx.close();
 		} finally {
 			await trinhDuyet.close();

@@ -51,7 +51,9 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 						const tran = await p.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
 						assert.ok(tran <= 0, `tràn ngang ${tran} px`);
 						if (co.camUng) assert.deepEqual(await p.evaluate(nhoHon44), [], 'vùng bấm dưới 44 px');
-						// Ô trống ở thanh trên vẫn chiếm chỗ (ô link mạng xã hội kèm vạch ngăn, khi không có link)
+						// Ô trống ở thanh trên vẫn chiếm chỗ (ô link mạng xã hội kèm vạch ngăn, khi không có link). Xét display của
+						// chính ô, ở mọi cỡ màn hình (dưới 50rem cả nhóm bị ẩn, ô vẫn phải ẩn để lên màn rộng không hiện)
+						assert.ok(await p.evaluate(() => document.querySelector('header.header .right-group')), 'thanh trên không còn .right-group: sửa phép thử');
 						const oTrong = await p.evaluate(() =>
 							[...document.querySelectorAll('header.header .right-group > :not(script)')]
 								.filter((e) => !e.childElementCount && !e.textContent.trim() && getComputedStyle(e).display !== 'none')

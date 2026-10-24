@@ -142,3 +142,29 @@ test('phần chỉ để in (.oz-print-only, giữ từ site cũ khi chuyển tr
 	assert.ok(khiIn.some((k) => /(^|[},])\.oz-print-only\{display:block\}/.test(k)), 'khi in: thiếu .oz-print-only{display:block} trong @media print');
 });
 
+
+test('mỗi trang đã dựng mang nhãn nhóm của nó (tên, màu nhóm) phía trên tiêu đề, như src/nhom.mjs', (t) => {
+	const DOCS = path.join(ROOT, 'src', 'content', 'docs');
+	const DIST = path.join(ROOT, 'dist');
+	const tang = new Map((parse(fs.readFileSync(path.join(ROOT, 'src', 'data', 'trang.yml'), 'utf8')) ?? []).map((r) => [r.id, r.tang]));
+	const loi = [];
+	let co = 0;
+	for (const f of fs.readdirSync(DOCS, { recursive: true }).filter((x) => /\.mdx?$/.test(x))) {
+		const trang = f.replace(/\\/g, '/').replace(/\.mdx?$/, '');
+		const ra = path.join(DIST, trang === 'index' ? '' : trang.replace(/(^|\/)index$/, ''), trang === '404' ? '../404.html' : 'index.html');
+		if (!fs.existsSync(ra)) continue; // trang không có trong bản build này (bản thật: chưa khóa)
+		const html = fs.readFileSync(ra, 'utf8');
+		const nhom = nhomCuaTrang(trang, tang.get(trang));
+		const nhan = /<p class="oz-nhom" style="--c: var\(--oz-c-([\w-]+)\)"[^>]*>[\s\S]*?<\/span>\s*([^<]*?)\s*<\/p>/.exec(html);
+		if (!nhom) {
+			if (nhan) loi.push(`${trang}: không thuộc nhóm nào mà có nhãn "${nhan[2]}"`);
+			continue;
+		}
+		co++;
+		if (!nhan) loi.push(`${trang}: thiếu nhãn nhóm "${nhom.ten}"`);
+		else if (nhan[1] !== nhom.id || nhan[2] !== nhom.ten) loi.push(`${trang}: nhãn "${nhan[2]}" (màu ${nhan[1]}), phải là "${nhom.ten}" (màu ${nhom.id})`);
+	}
+	assert.deepEqual(loi, []);
+	// bản thật đầu đợt 2 chỉ có trang chủ và trang 404, không thuộc nhóm nào
+	if (!co) t.skip('bản build chưa có trang nào thuộc một nhóm');
+});

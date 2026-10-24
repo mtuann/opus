@@ -10,7 +10,7 @@ import { fileURLToPath } from 'node:url';
 import { parse } from 'yaml';
 import { z } from 'astro/zod';
 import { trangTrongBan } from './ban-build.mjs';
-import { ban, docKhoa } from './khoa.mjs';
+import { ban, docKhoa, truongDaKhoa } from './khoa.mjs';
 
 /** Tên bộ dữ liệu -> file trong thư mục dữ liệu. */
 export const TEP = {
@@ -177,6 +177,26 @@ export const schema = {
 
 /** Khóa (id) của một bản ghi: tac-pham dùng slug, các bộ khác dùng id. */
 export const khoa = (ten, r) => String(ten === 'tac-pham' ? r?.slug : r?.id);
+
+/**
+ * Bản ghi chỉ cho đọc trường đã khóa (trang chỉ hiện trường đã khóa: plans/lam-lai/README.md, Quy tắc chung). Đọc một
+ * trường chưa khóa, kể cả trường bản ghi chưa có, thì ném lỗi ghi rõ bản ghi và trường: build hỏng. Đọc id (slug, id)
+ * luôn được; hỏi bản ghi có trường không (`in`) thì không chặn. Dùng ở chỗ dựng trang đã khóa (chỉ thị trong trang:
+ * src/plugins/opus-markdown.mjs) và trang luôn đăng (trang chặng, ô gợi ý tập ở trang chủ).
+ * @param {string} noi chỗ đọc, cho thông báo lỗi, ví dụ "trang đã khóa piano/tac-pham/fur-elise"
+ */
+export function chiDaKhoa(banGhi, bo, noi, daKhoa = truongDaKhoa()) {
+	const id = khoa(bo, banGhi);
+	const truong = new Set(Object.keys(schema[bo].shape));
+	const truongId = bo === 'tac-pham' ? 'slug' : 'id';
+	return new Proxy(banGhi, {
+		get(t, k, r) {
+			if (typeof k === 'string' && k !== truongId && truong.has(k) && !daKhoa(bo, id, k))
+				throw new Error(`${noi} hiện trường chưa khóa du-lieu/${bo}/${id}#${k}: kiểm định và khóa trường ấy (node tools/khoa.mjs khoa du-lieu/${bo}/${id}#…), hay đừng hiện nó`);
+			return Reflect.get(t, k, r);
+		},
+	});
+}
 
 /** Thư mục gốc của dự án: thư mục cha của src/, nơi có file này. */
 const GOC = fileURLToPath(new URL('../', import.meta.url));

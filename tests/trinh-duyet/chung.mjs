@@ -61,8 +61,8 @@ function khoiCho(ten) {
  * Cuộn hết trang (để các khối ở xa khởi tạo), rồi chờ khuông vẽ xong, câu hỏi và khối nghe dựng xong. Máy chậm (WebKit
  * trên máy của GitHub) có thể bỏ lỡ một khối khi cuộn nhanh qua nó: IntersectionObserver chỉ xét lúc trình duyệt vẽ lại,
  * mà trình duyệt đang bận (như lúc nạp abcjs). Người đọc cuộn tới gần khối thì khối khởi tạo; lúc chờ, phép thử cũng
- * cuộn tới khối đầu tiên còn chờ, như người đọc. Chờ quá lâu thì lỗi ghi khối nào còn chờ, kèm `loi` (lỗi trên trang mà
- * phép thử gom được).
+ * cuộn tới từng khối còn chờ (khuông, rồi câu hỏi, rồi khối nghe), như người đọc. Chờ quá lâu thì lỗi ghi khối nào còn
+ * chờ, kèm `loi` (lỗi trên trang mà phép thử gom được); lỗi khác (trang đóng, trình duyệt hỏng) giữ nguyên.
  */
 export async function cuonHet(p, loi = []) {
 	const cao = await p.evaluate(() => document.documentElement.scrollHeight);
@@ -71,7 +71,8 @@ export async function cuonHet(p, loi = []) {
 		await p.waitForTimeout(40);
 	}
 	await p.waitForFunction(khoiCho, false, { timeout: 20000, polling: 250 }).catch(async (e) => {
-		const cho = await p.evaluate(khoiCho, true);
+		if (e.name !== 'TimeoutError') throw e;
+		const cho = await p.evaluate(khoiCho, true).catch(() => ['(không đọc được trang)']);
 		throw new Error(`khối chưa dựng xong sau 20 giây: ${cho.join('; ')}; lỗi trên trang: ${loi.join(' | ') || 'không có'}`, { cause: e });
 	});
 	await p.evaluate(() => scrollTo(0, 0));

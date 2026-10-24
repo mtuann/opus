@@ -543,6 +543,51 @@ html.oz-stand-open .main-pane {
 	background: var(--sl-color-gray-6);
 }
 
+/* ---------- Bảng nhiều cột ở màn hình hẹp (src/plugins/bang-hep.mjs) ---------- */
+/* Ô tiêu đề giữ độ rộng tối thiểu của cột theo ô dài chữ nhất; bảng rộng hơn khung thì cuộn ngang (Starlight) */
+.sl-markdown-content th[style*='--oz-cot'] {
+	min-width: var(--oz-cot);
+}
+
+/* ---------- Danh sách việc "- [ ]" (src/plugins/danh-sach-viec.mjs, src/scripts/viec.js) ---------- */
+/* Cột ô và cột chữ: ô 1,25rem giữa một nhãn 44 px (vùng bấm, AGENTS.md); nhãn tràn lên xuống 0,5rem để dòng đầu không
+   cao thêm, tâm ô ngang tâm dòng chữ đầu. Danh sách con nằm ở cột chữ. */
+.sl-markdown-content li.oz-viec {
+	list-style: none;
+	display: grid;
+	grid-template-columns: 2.75rem minmax(0, 1fr);
+	margin-inline-start: -2rem;
+}
+.sl-markdown-content li.oz-viec > * {
+	grid-column: 2;
+	margin-top: 0;
+}
+.sl-markdown-content li.oz-viec > .oz-viec-o {
+	grid-column: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.75rem;
+	height: 2.75rem;
+	margin-block: -0.5rem;
+	cursor: pointer;
+}
+.sl-markdown-content .oz-viec-hop {
+	width: 1.25rem;
+	height: 1.25rem;
+	margin: 0;
+	accent-color: var(--oz-accent);
+	cursor: pointer;
+}
+/* Việc đã làm: gạch ngang, giữ màu chữ (đổi sang màu nhạt thì dưới 4,5:1) */
+.sl-markdown-content li.oz-viec:has(> .oz-viec-o > .oz-viec-hop:checked) > .oz-viec-chu {
+	text-decoration: line-through;
+	text-decoration-thickness: 1px;
+}
+.sl-markdown-content li.oz-viec > .oz-viec-chu > p:first-child {
+	margin-top: 0;
+}
+
 /* ---------- Học tiếp ---------- */
 .sl-markdown-content .oz-hoc-tiep li + li {
 	margin-top: 0.4rem;

@@ -6,11 +6,13 @@
 //   một ô "chưa chuyển" khi lô đầu tiên dùng nó chưa làm thành phần (D1.4).
 // Cú pháp: AGENTS.md, mục "Khối đặc biệt". Chỉ thị khối (aside :::note của Starlight…) để nguyên cho Starlight.
 // Viết sai (chỉ thị một dòng không có tên trong CHI_THI, thiếu tac_pham, thuộc tính lạ, quiz không có đáp án đúng, hình
-// chưa có dữ liệu) thì ném lỗi: build hỏng.
+// chưa có dữ liệu) thì ném lỗi: build hỏng. Trang đã khóa mà chỉ thị hiện một trường dữ liệu chưa khóa cũng vậy (D2-nền):
+// bản ghi đưa cho chỉ thị chỉ cho đọc trường đã khóa (chiDaKhoa).
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse } from 'yaml';
-import { duLieuDaKiem } from '../du-lieu.mjs';
+import { chiDaKhoa, duLieuDaKiem } from '../du-lieu.mjs';
+import { docKhoa, truongDaKhoa } from '../khoa.mjs';
 import { congCu, docMoc, hinh, hinhCauTruc, hocTiep, hopTacPham, khoiNghe, khuongAbc, quiz } from './thanh-phan.mjs';
 
 /** Loại của trang tác phẩm theo đường dẫn: bai-hoc (piano/tac-pham/), nghe (nghe-nhac/). */
@@ -51,10 +53,11 @@ function loiThuocTinh(ten, { thuocTinh = [] }, tt) {
 }
 
 /**
- * @param {{ base: string, docsDir: string }} opts base: đường dẫn gốc của site, có / ở cuối (ví dụ "/opus/");
- *   docsDir: thư mục trang (src/content/docs), để biết đường dẫn của trang đang dựng.
+ * @param {{ base: string, docsDir: string, khoa?: () => object }} opts base: đường dẫn gốc của site, có / ở cuối (ví dụ
+ *   "/opus/"); docsDir: thư mục trang (src/content/docs), để biết đường dẫn của trang đang dựng; khoa: đọc khoa.json
+ *   (kiểm thử thay bằng bản giả).
  */
-export function opusMarkdown({ base, docsDir }) {
+export function opusMarkdown({ base, docsDir, khoa = docKhoa }) {
 	return ({ fileURL, data }) => {
 		const file = fileURLToPath(fileURL);
 		const trang = path.relative(docsDir, file).replace(/\\/g, '/').replace(/\.mdx?$/, '');
@@ -102,11 +105,16 @@ export function opusMarkdown({ base, docsDir }) {
 				const sai = loiThuocTinh(node.name, muc, tt);
 				if (sai) throw loi(sai);
 				const duLieu = duLieuDaKiem();
-				const rec = fm.tac_pham ? duLieu['tac-pham'].find((r) => r.slug === fm.tac_pham) : undefined;
+				// trang đã khóa: chỉ thị chỉ được đọc trường đã khóa của bản ghi
+				const k = khoa();
+				const daKhoa = k.trang[trang] ? truongDaKhoa(k) : null;
+				const boc = (bo) => (r) => (daKhoa ? chiDaKhoa(r, bo, `trang đã khóa ${trang} (::${node.name})`, daKhoa) : r);
+				const tacPham = duLieu['tac-pham'].map(boc('tac-pham'));
+				const rec = fm.tac_pham ? tacPham.find((r) => r.slug === fm.tac_pham) : undefined;
 				if (muc.tacPham && !rec) throw loi(`::${node.name} cần trường tac_pham ở frontmatter (slug trong src/data/tac-pham.yml)`);
-				const nguoi = new Map(duLieu['nha-soan-nhac'].map((r) => [r.id, r]));
+				const nguoi = new Map(duLieu['nha-soan-nhac'].map((r) => [r.id, boc('nha-soan-nhac')(r)]));
 				try {
-					const html = muc.ve({ rec, tt, base, trang, nguoi, tacPham: duLieu['tac-pham'] });
+					const html = muc.ve({ rec, tt, base, trang, nguoi, tacPham });
 					if (node.name === 'khoi-nghe' && choMoc) throw new Error(`khối nghe trước có moc mà chưa gặp bảng "${TIEU_DE_MOC}"`);
 					if (node.name === 'khoi-nghe' && tt.moc !== undefined) choMoc = { so: docMoc(tt.moc).length, trongMuc: false };
 					return { type: 'html', value: html };

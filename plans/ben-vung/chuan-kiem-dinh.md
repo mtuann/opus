@@ -101,6 +101,8 @@ khuong_nhac:
 
 Giá trị `ket_qua`: `dung`, `da-sua` (kèm `ghi_chu`), `da-bo` (đã bỏ câu khỏi trang, kèm `ghi_chu`), `khong-can-nguon` (chỉ cho `khuyen-tap`).
 
+Kết quả lượt 2 vào hồ sơ bằng `node tools/khoa.mjs nhap <file lượt 2>`, không chép tay. Mỗi nhận định có thêm `luot_2`, `luot_2_nguon` (link lượt 2 đã mở) và `luot_2_ghi_chu` (câu đúng, ghi chú). Lệnh in các nhận định cần review: hai lượt khác nhau, hay lượt 1 đã sửa, đã bỏ, chưa có kết quả. Hồ sơ bản ghi dữ liệu nên ghi thêm `truong` ở mỗi nhận định (các trường mà nhận định nói tới), để biết khóa trường nào.
+
 Link trong `nguon` phải là trang đã mở và đọc, không phải kết quả tìm kiếm. Sách in ghi tên sách, lần in, số trang.
 
 ## 6. Khóa
@@ -128,6 +130,6 @@ Bản ghi khóa từng phần thì mở đúng khóa ấy (`du-lieu/<bộ>/<id>#
 
 Lượt 1 nằm trong lời giao lô ở `plans/lam-lai/README.md` (mục "Lời giao việc mẫu").
 
-> Bạn làm **kiểm định lượt 2** cho lô **D<đợt>-L<lô>** của repo opus. Chỉ đọc `plans/ben-vung/chuan-kiem-dinh.md` và file `plans/lam-lai/bao-cao/d<đợt>-l<lô>-nhan-dinh.yml` (danh sách nhận định, không có nguồn và kết quả). Không mở hồ sơ trong `kiem-dinh/` và báo cáo của lượt 1. Với mỗi nhận định, tự tìm nguồn theo mục 2, ghi `dung`, `sai` (kèm nguồn và câu đúng) hoặc `khong-chac`, kèm link đã mở. Ghi kết quả vào `plans/lam-lai/bao-cao/d<đợt>-l<lô>-luot-2.yml`. Không sửa trang. Không push.
+> Bạn làm **kiểm định lượt 2** cho lô **D<đợt>-L<lô>** của repo opus. Chỉ đọc `plans/ben-vung/chuan-kiem-dinh.md` và file `plans/lam-lai/bao-cao/d<đợt>-l<lô>-nhan-dinh.yml` (danh sách nhận định, không có nguồn và kết quả). Không mở hồ sơ trong `kiem-dinh/` và báo cáo của lượt 1. Với mỗi nhận định, tự tìm nguồn theo mục 2, ghi `dung`, `sai` (kèm nguồn và câu đúng) hoặc `khong-chac`, kèm link đã mở. Ghi kết quả vào `plans/lam-lai/bao-cao/d<đợt>-l<lô>-luot-2.yml`: danh sách `{ trang, id, luot_2, nguon: [link], cau_dung, ghi_chu }` (`trang` và `id` chép từ danh sách nhận định; `cau_dung` khi `sai`), để `node tools/khoa.mjs nhap` đọc được. Không sửa trang. Không push.
 
 > Bạn **mở khóa và sửa** trang `<đường dẫn>` của repo opus vì `<lý do: lỗi được báo, nguồn đổi>`. Đọc `AGENTS.md` và `plans/ben-vung/chuan-kiem-dinh.md` mục 7. Tạo nhánh `mo/<tên ngắn>` từ `main`. Chạy `node tools/khoa.mjs mo <trang> --ly-do "..."`, sửa, kiểm định lại những nhận định bị chạm và các nhận định cùng đoạn, điền mục mới trong `lan` của hồ sơ, khóa lại. Liệt kê trong báo cáo các trang link tới đoạn đã sửa. Khi xong: `npm run build` và `npm test` đạt; commit; báo cáo `plans/ben-vung/bao-cao/mo-<tên ngắn>.md`. Không push.

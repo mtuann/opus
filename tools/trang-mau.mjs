@@ -20,6 +20,7 @@ export const KHOI = {
 	'khối thu gọn': '<details',
 	'chữ "sắp có"': 'class="oz-sap-co"',
 	'ô "chưa chuyển"': 'class="oz-chua-co',
+	'danh sách việc': 'class="task-list-item oz-viec',
 };
 
 /** File HTML của một trang mẫu ("" là trang chủ, "404.html", "nhac-ly/x/"). */

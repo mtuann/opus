@@ -10,8 +10,8 @@ import os from 'node:os';
 import path from 'node:path';
 import { parse } from 'yaml';
 import { locTheoBan } from '../src/ban-build.mjs';
-import { schema } from '../src/du-lieu.mjs';
-import { chuanHoaTrang, docKhoa, jsonChuan, kiemKhoa, maBamBanGhi, maBamTrang } from '../src/khoa.mjs';
+import { chiDaKhoa, schema } from '../src/du-lieu.mjs';
+import { chuanHoaTrang, docKhoa, jsonChuan, kiemKhoa, maBamBanGhi, maBamTrang, truongDaKhoa } from '../src/khoa.mjs';
 import { MAU_NGOAI_VI, lenh, loiHoSo } from '../tools/khoa.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
@@ -313,4 +313,74 @@ test('bản build: trang đã khóa không có dải "Chưa kiểm định" hay 
 		if (!(t in khoa) && !coDai) loi.push(`${t}: chưa khóa mà không có dải "Chưa kiểm định" (bản thật không được có trang này)`);
 	}
 	assert.deepEqual(loi, []);
+});
+
+test('nhap: đưa kết quả lượt 2 vào hồ sơ (kèm link, câu đúng); có dòng sai thì không ghi gì; in nhận định cần review', () => {
+	const goc = fs.mkdtempSync(path.join(os.tmpdir(), 'opus-nhap-'));
+	try {
+		const ghi = (f, chu) => {
+			fs.mkdirSync(path.dirname(path.join(goc, f)), { recursive: true });
+			fs.writeFileSync(path.join(goc, f), chu);
+		};
+		ghi('src/data/nha-soan-nhac.yml', '- id: a\n  ten: A\n  sinh: 1900\n  mat: 1950\n');
+		const chay = (...ts) => {
+			const ra = [];
+			lenh([...ts, '--goc', goc], ROOT, (x) => ra.push(x));
+			return ra.join('\n');
+		};
+		chay('mau', 'du-lieu/nha-soan-nhac/a');
+		const f = path.join(goc, 'kiem-dinh/du-lieu/nha-soan-nhac/a.yml');
+		fs.writeFileSync(
+			f,
+			fs
+				.readFileSync(f, 'utf8')
+				.replace('nguon: []', 'nguon:\n  - { id: s, bac: 2, ten: S, link: "https://x" }')
+				.replace('nhan_dinh: []', 'nhan_dinh:\n  - { id: n1, cau: A sinh 1900., loai: nam, nguon: [s], ket_qua: dung }\n  - { id: n2, cau: Tên là A., loai: ten, nguon: [s], ket_qua: da-sua, ghi_chu: x }\n  - { id: n3, cau: A mất 1950., loai: nam, nguon: [s], ket_qua: dung }'),
+		);
+		const truoc = fs.readFileSync(f, 'utf8');
+		const dong = (id, luot2, them = '') => `- { trang: du-lieu/nha-soan-nhac/a, id: ${id}, luot_2: ${luot2}${them} }\n`;
+		ghi('l2.yml', dong('n1', 'dung', ', nguon: ["https://y"]') + dong('n9', 'dung', ', nguon: ["https://y"]'));
+		assert.throws(() => chay('nhap', 'l2.yml'), /dòng 2 .*hồ sơ không có nhận định n9/);
+		ghi('l2.yml', dong('n1', 'co', ', nguon: ["https://y"]') + dong('n2', 'sai', ', nguon: ["https://z"]') + dong('n3', 'dung'));
+		const loi = (() => {
+			try {
+				chay('nhap', 'l2.yml');
+			} catch (e) {
+				return e.message;
+			}
+		})();
+		assert.match(loi, /dòng 1 .*luot_2 phải là dung, sai, khong-chac/);
+		assert.match(loi, /dòng 2 .*sai cần cau_dung hay ghi_chu/);
+		assert.match(loi, /dòng 3 .*dung cần nguon/);
+		assert.equal(fs.readFileSync(f, 'utf8'), truoc, 'có dòng sai thì không ghi gì');
+		ghi('l2.yml', dong('n1', 'dung', ', nguon: ["https://y"]') + dong('n2', 'sai', ', nguon: ["https://z"], cau_dung: Tên là B.'));
+		const ra = chay('nhap', 'l2.yml');
+		const hs = parse(fs.readFileSync(f, 'utf8'));
+		assert.equal(hs.nhan_dinh[0].luot_2, 'dung');
+		assert.deepEqual(hs.nhan_dinh[0].luot_2_nguon, ['https://y']);
+		assert.equal(hs.nhan_dinh[1].luot_2, 'sai');
+		assert.equal(hs.nhan_dinh[1].luot_2_ghi_chu, 'câu đúng: Tên là B.');
+		assert.equal(hs.nhan_dinh[2].luot_2, undefined);
+		assert.match(fs.readFileSync(f, 'utf8'), /^# Hồ sơ kiểm định/, 'giữ dòng chú thích đầu hồ sơ');
+		assert.match(ra, /đã nhập 2 kết quả lượt 2 vào 1 hồ sơ: 1 dung, 1 sai, 0 khong-chac/);
+		assert.match(ra, /còn 1 nhận định trong các hồ sơ ấy chưa có lượt 2/);
+		assert.match(ra, /cần review \(1\):\n {2}du-lieu\/nha-soan-nhac\/a n2: lượt 1 da-sua, lượt 2 sai/);
+	} finally {
+		fs.rmSync(goc, { recursive: true, force: true });
+	}
+});
+
+test('chiDaKhoa: đọc id và trường đã khóa được; trường chưa khóa, kể cả trường chưa có, thì lỗi ghi rõ bản ghi và trường', () => {
+	const daKhoa = truongDaKhoa({ trang: {}, ban_ghi: { 'tac-pham/x#ten': 'a', 'tac-pham/x#chang,grade': 'b', 'nha-soan-nhac/y': 'c' } });
+	const r = chiDaKhoa({ slug: 'x', ten: 'X', chang: 2, chip: ['a'] }, 'tac-pham', 'trang thử', daKhoa);
+	assert.equal(r.slug, 'x');
+	assert.equal(r.ten, 'X');
+	assert.equal(r.chang, 2, 'các khóa từng phần của một bản ghi cộng dồn');
+	assert.equal(r.grade, undefined, 'trường đã khóa mà bản ghi chưa có: đọc được (khóa giữ trường ấy chưa có)');
+	assert.throws(() => r.chip, /^Error: trang thử hiện trường chưa khóa du-lieu\/tac-pham\/x#chip/);
+	assert.throws(() => r.danh_muc, /#danh_muc/, 'trường chưa có mà chưa khóa: thêm vào dữ liệu thì sẽ hiện mà chưa kiểm định');
+	assert.ok('chip' in r, 'hỏi có trường không thì không chặn');
+	assert.throws(() => JSON.stringify(r), /#chip/, 'chép cả bản ghi ra trang là hiện mọi trường');
+	assert.equal(chiDaKhoa({ id: 'y', ten: 'Y', sinh: 1 }, 'nha-soan-nhac', 'trang thử', daKhoa).sinh, 1, 'khóa cả bản ghi');
+	assert.throws(() => chiDaKhoa({ id: 'z', ten: 'Z' }, 'nha-soan-nhac', 'trang thử', daKhoa).ten, /nha-soan-nhac\/z#ten/);
 });
