@@ -1,0 +1,437 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa bat-dau/kiem-tra-dau-vao
+trang: src/content/docs/bat-dau/kiem-tra-dau-vao.md
+nguon_cu: ../opus-zero/docs/bat-dau/kiem-tra-dau-vao.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-24
+    nhanh: moi/d2-l1
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5 (D2-L1 lượt 1, phần D)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: >-
+  Trang không đổi chữ. 28 câu hỏi nhạc lý kiểm theo Open Music Theory (chương ghi trong nguon) và bài nhạc lý cũ cùng số;
+  thuật ngữ tiếng Việt theo bài cũ (giọng thứ song song là relative minor, giọng cùng tên là parallel; hạ át là
+  subdominant, OMT gọi nhóm này là predominant; kết lừa là deceptive cadence). Tiêu chí từng chặng so với danh sách "Sẵn
+  sàng lên chặng tiếp khi…" của trang cũ piano/lo-trinh.md; bài nêu làm ví dụ so với dữ liệu D2-0 và đề cương ABRSM,
+  trang Henle. Các câu về cách bài kiểm tra chạy (lưu kết quả, "Tôi chưa biết", trang chủ dùng kết quả) đúng với site cũ
+  (placement.js, practice.js, plan.js) và đúng ở site mới khi hai thành phần placement, piano-level và ô gợi ý tập ở trang
+  chủ làm như vậy (agent chính làm trong D2-L1): review kiểm trên bản build trước khi khóa.
+nguon:
+  - id: placement-js-cu
+    bac: 1
+    ten: Site cũ, docs/assets/js/placement.js (bài kiểm tra nhạc lý)
+    link: ../opus-zero/docs/assets/js/placement.js
+  - id: practice-js-cu
+    bac: 1
+    ten: Site cũ, docs/assets/js/practice.js (mountLevel, tự đánh giá chặng piano)
+    link: ../opus-zero/docs/assets/js/practice.js
+  - id: plan-js-cu
+    bac: 1
+    ten: Site cũ, docs/assets/js/plan.js (khối "Hôm nay" ở trang chủ đọc pianoLevel)
+    link: ../opus-zero/docs/assets/js/plan.js
+  - id: lo-trinh-cu
+    bac: 1
+    ten: Trang cũ "Lộ trình piano", các danh sách "Sẵn sàng lên chặng tiếp khi…"
+    link: ../opus-zero/docs/piano/lo-trinh.md
+  - id: bai-nhac-ly-cu
+    bac: 1
+    ten: Bài nhạc lý cũ 1–14 (tiêu đề, đường dẫn, thuật ngữ tiếng Việt)
+    link: ../opus-zero/docs/nhac-ly/
+  - id: khoi-placement
+    bac: 1
+    ten: Khối ```placement của chính trang (14 dòng @, 28 câu ?)
+    link: src/content/docs/bat-dau/kiem-tra-dau-vao.md
+  - id: du-lieu-d20
+    bac: 1
+    ten: 'Dữ liệu của site: src/data/cap-do.yml và src/data/tac-pham.yml ở nhánh moi/d2-0-du-lieu (đã kiểm lượt 1 ở D2-0)'
+    link: src/data/cap-do.yml
+  - id: thuat-ngu
+    bac: 1
+    ten: src/data/thuat-ngu.yml, bản ghi allegro (chưa khóa; khóa dần ở đợt 3)
+    link: src/data/thuat-ngu.yml
+  - id: abrsm-2526
+    bac: 2
+    ten: ABRSM, Practical Music Grades Piano Syllabus 2025 & 2026, Qualification Specification
+    link: https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20&%202026%20Prac%20syllabus%2020240524_access.pdf
+  - id: abrsm-2324
+    bac: 2
+    ten: ABRSM, Practical Music Grades Piano Syllabus 2023 & 2024, Qualification Specification
+    link: https://www.abrsm.org/sites/default/files/2023-10/Piano%202023%20&%202024%20Prac%20syllabus%2020230807.pdf
+  - id: henle-hn349
+    bac: 2
+    ten: G. Henle Verlag, HN 349 Notebook for Anna Magdalena Bach (mức khó từng bài)
+    link: https://www.henle.de/en/Notebook-for-Anna-Magdalena-Bach/HN-349
+  - id: henle-hn591
+    bac: 2
+    ten: G. Henle Verlag, HN 591 Two Part Inventions (mức khó từng bài)
+    link: https://www.henle.de/en/Two-Part-Inventions/HN-591
+  - id: omt-major
+    bac: 2
+    ten: Open Music Theory, "Major Scales, Scale Degrees, and Key Signatures"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/major-scales/
+  - id: omt-aspn
+    bac: 2
+    ten: Open Music Theory, "American Standard Pitch Notation (ASPN)"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/aspn/
+  - id: omt-keyboard
+    bac: 2
+    ten: Open Music Theory, "The Keyboard and the Grand Staff"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/the-keyboard-and-grand-staff/
+  - id: omt-clefs
+    bac: 2
+    ten: Open Music Theory, "Reading Clefs"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/clefs/
+  - id: omt-rhythm
+    bac: 2
+    ten: Open Music Theory, "Notating Rhythm"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/notating-rhythm/
+  - id: omt-simple
+    bac: 2
+    ten: Open Music Theory, "Simple Meter and Time Signatures"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/simple-meter-and-time-signatures/
+  - id: omt-compound
+    bac: 2
+    ten: Open Music Theory, "Compound Meter and Time Signatures"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/compound-meters-and-time-signatures/
+  - id: omt-half-whole
+    bac: 2
+    ten: Open Music Theory, "Half Steps, Whole Steps, and Accidentals"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/half-and-whole-steps/
+  - id: ou-accidentals
+    bac: 2
+    ten: The Open University, OpenLearn, "An introduction to music theory", mục 6.2 Accidentals in practice
+    link: https://www.open.edu/openlearn/history-the-arts/music/an-introduction-music-theory/content-section-6.2
+  - id: omt-minor
+    bac: 2
+    ten: Open Music Theory, "Minor Scales, Scale Degrees, and Key Signatures"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/
+  - id: omt-intervals
+    bac: 2
+    ten: Open Music Theory, "Intervals"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/intervals/
+  - id: omt-triads
+    bac: 2
+    ten: Open Music Theory, "Triads"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/triads/
+  - id: omt-roman
+    bac: 2
+    ten: Open Music Theory, "Roman Numerals"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/roman-numerals/
+  - id: omt-inversion
+    bac: 2
+    ten: Open Music Theory, "Inversion"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/inversion/
+  - id: omt-seventh
+    bac: 2
+    ten: Open Music Theory, "Seventh Chords"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/seventh-chords/
+  - id: omt-harmony
+    bac: 2
+    ten: Open Music Theory, "Introduction to Harmony, Cadences, and Phrase Endings"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/
+  - id: omt-la-bass
+    bac: 2
+    ten: Open Music Theory, "La (6̂) in the Bass at Beginnings, Middles, and Endings" (mục Deceptive motion; Deceptive motion vs. Deceptive cadence)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/la-in-the-bass/
+  - id: omt-other
+    bac: 2
+    ten: Open Music Theory, "Other Aspects of Notation" (mục Dynamics, Tempo)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/other-aspects-of-notation/
+  - id: oxford-allegro
+    bac: 2
+    ten: Oxford Learner's Dictionaries, "allegro"
+    link: https://www.oxfordlearnersdictionaries.com/definition/english/allegro
+nhan_dinh:
+  - id: n1
+    cau: Bài kiểm tra có hai phần, làm phần nào trước cũng được.
+    loai: so-lieu
+    nguon: [placement-js-cu, practice-js-cu]
+    ket_qua: dung
+    ghi_chu: 'Nhận định về site. Hai phần là hai thành phần độc lập (site cũ: practice.js tính chặng từ các ô đánh dấu; placement.js chạy câu hỏi nhạc lý), không phần nào cần kết quả của phần kia.'
+  - id: n2
+    cau: Phần piano mất khoảng 2 phút.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Ước lượng của site cho 18 việc cần đánh dấu (6 nhóm, mỗi nhóm 3 việc). Bài 0 dùng cùng con số.
+  - id: n3
+    cau: Phần piano cho biết bạn đang ở chặng nào của lộ trình piano; phần nhạc lý cho biết nên bắt đầu từ bài nhạc lý nào.
+    loai: so-lieu
+    nguon: [practice-js-cu, placement-js-cu]
+    ket_qua: dung
+    ghi_chu: 'Nhận định về site. Site cũ: practice.js hiện "Chặng của bạn: …" từ các ô đã đánh dấu; placement.js kết thúc bằng "Gợi ý: bắt đầu từ bài …" (bài đầu tiên chưa đúng cả hai câu). Site mới: đúng khi thành phần piano-level và placement làm như vậy (agent chính, D2-L1).'
+  - id: n4
+    cau: Kết quả được lưu trong trình duyệt và dùng để gợi ý buổi tập hôm nay ở trang chủ.
+    loai: so-lieu
+    nguon: [practice-js-cu, placement-js-cu, plan-js-cu]
+    ket_qua: dung
+    ghi_chu: 'Nhận định về site. Site cũ: practice.js ghi store.pianoLevel { stage, date }, placement.js ghi store.placement { date, start }, cùng khóa opus-zero:v1; plan.js (khối "Hôm nay" ở trang chủ) đọc pianoLevel để gợi ý gam và bài. Site mới: đúng khi hai thành phần lưu cùng chỗ và ô gợi ý tập ở trang chủ đọc kết quả (agent chính, D2-L1). Nếu lúc gộp ô gợi ý tập chưa đọc kết quả thì phải sửa câu này.'
+  - id: n5
+    cau: Mỗi nhóm có ba việc; làm được hai trong ba là coi như xong chặng đó.
+    loai: so-lieu
+    nguon: [practice-js-cu, khoi-placement]
+    ket_qua: dung
+    ghi_chu: 'Trang có 6 nhóm, mỗi nhóm đúng 3 việc (18 ô). Site cũ, practice.js, hàm stage(): một nhóm xong khi số ô đánh dấu từ ceil(3 × 2/3) = 2; chặng là nhóm đầu tiên chưa xong. Site mới: thành phần piano-level phải giữ luật này (agent chính, D2-L1).'
+  - id: n6
+    cau: 'Sáu nhóm mang tên và Grade của chặng 1–6: Khởi đầu; Sơ cấp, ≈ Grade 1–2; Sơ trung cấp, ≈ Grade 3; Trung cấp, ≈ Grade 4–5; Trung cấp cao, ≈ Grade 6; Nâng cao, ≈ Grade 7–8.'
+    loai: cap-do
+    nguon: [du-lieu-d20, abrsm-2526]
+    ket_qua: dung
+    ghi_chu: 'Khớp cap-do.yml (ten, nhan_grade của chặng 1–6; D2-0 đã kiểm). ABRSM 2025 & 2026: "ABRSM Practical Music qualifications are available from Grade 1 to Grade 8, and in some subjects from Initial Grade". Tên chặng là lựa chọn của site.'
+  - id: n7
+    cau: 'Xong chặng 1: chơi được bằng hai tay vài bài đơn giản, như 10 bài đầu tiên, không dừng, ở tốc độ chậm vừa; đọc được nốt ở cả khóa Sol lẫn khóa Fa; chơi gam Đô trưởng một quãng tám từng tay, luồn ngón cái không giật.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Khớp trang cũ lo-trinh.md, chặng 1, "Sẵn sàng lên chặng tiếp khi…": "Chơi trọn 10 bài đầu tiên bằng hai tay, không dừng, ở tốc độ chậm vừa", "Đọc đúng ít nhất 9/10 nốt ở cả khóa Sol lẫn khóa Fa…", "Chơi gam Đô trưởng một quãng tám từng tay, luồn ngón cái không giật". 10 bài đầu tiên là bài của chặng 1 (lo-trinh.md, dòng Tác phẩm của chặng 1).'
+  - id: n8
+    cau: 'Xong chặng 2: chơi trọn vẹn vài bài cấp 1–2, có sắc thái, không dừng khi lỡ sai; chơi các gam trưởng và thứ đã học bằng hai tay, hai quãng tám; đổi bàn đạp theo hợp âm mà tiếng không bị nhòe.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Khớp lo-trinh.md, chặng 2: "Chơi trọn vẹn 4–6 bài cấp 1–2, có sắc thái, không dừng khi lỡ sai", "Gam trưởng và thứ đã học: hai tay, hai quãng tám…", "Đổi bàn đạp theo hợp âm mà âm thanh không bị nhòe".'
+  - id: n9
+    cau: Minuet Sol trưởng là một bài cấp 1–2 (chặng 2).
+    loai: cap-do
+    nguon: [henle-hn349, du-lieu-d20]
+    ket_qua: dung
+    ghi_chu: 'Henle HN 349: "Menuet BWV Anhang 114" mức 1 (easy). Dữ liệu D2-0: minuet-sol chặng 2, grade "Grade 1–2" (D2-0 đối chiếu thêm RCM Level 3 và minuet Sol thứ Anh. 115 ở ABRSM Grade 2).'
+  - id: n10
+    cau: 'Xong chặng 3: chơi trọn một sonatina, nhịp ổn định từ đầu đến cuối; đệm Alberti đều và nhỏ hơn giai điệu; chơi gam đến 3 dấu hóa, hai tay, hai quãng tám.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Khớp lo-trinh.md, chặng 3: "Chơi một sonatina trọn vẹn, nhịp ổn định từ đầu đến cuối", "Đệm Alberti đều và nhỏ hơn giai điệu", "Gam đến 3 dấu hóa, hai tay, hai quãng tám".'
+  - id: n11
+    cau: Sonatina Op. 36 số 1 của Clementi là bài của chặng 3 (≈ Grade 3).
+    loai: cap-do
+    nguon: [abrsm-2324, du-lieu-d20]
+    ket_qua: dung
+    ghi_chu: 'ABRSM 2023 & 2024, Grade 3, danh sách A, số 2: "Clementi Vivace (3rd movt from Sonatina in C, Op. 36 No. 1)". Dữ liệu D2-0: clementi-sonatina chặng 3, Grade 3.'
+  - id: n12
+    cau: 'Xong chặng 4: chơi hai bè độc lập, một bè to, một bè nhỏ, theo ý mình; chơi mọi gam trưởng và thứ, hai tay, hai quãng tám; biểu diễn thuộc lòng một chương trình khoảng 10 phút cho người khác nghe.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Khớp lo-trinh.md, chặng 4: "Chơi hai bè độc lập: một bè to, một bè nhỏ, theo ý mình", "Mọi gam trưởng và thứ, hai tay, hai quãng tám", "Biểu diễn thuộc lòng một chương trình 10 phút cho người khác nghe".'
+  - id: n13
+    cau: 'Xong chặng 5: chơi trọn một chương sonata Cổ điển ở tốc độ gần với chỉ dẫn; làm nổi được giai điệu nằm ở giữa hoặc ở tay trái; hai bè của Bach rõ ràng.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Khớp lo-trinh.md, chặng 5: "Chơi trọn một chương sonata Cổ điển ở tốc độ gần với chỉ dẫn", "Làm nổi được giai điệu nằm ở giữa hoặc ở tay trái", "Hai bè của Bach rõ ràng, cách phát âm nhất quán từ đầu đến cuối".'
+  - id: n14
+    cau: Invention số 1 của Bach là bài của chặng 5 (≈ Grade 6).
+    loai: cap-do
+    nguon: [henle-hn591, abrsm-2526, du-lieu-d20]
+    ket_qua: dung
+    ghi_chu: 'Henle HN 591: "Invention 1 C major BWV 772" mức 3 (easy), bằng "Invention 6 E major BWV 777" (mức 3); ABRSM 2025 & 2026 xếp "J. S. Bach Invention No. 6 in E, BWV 777" ở Grade 6 và Invention No. 8 (Henle mức 4) ở Grade 5. Không đề cương nào liệt kê đúng số 1, nên Grade 6 là ước lượng theo bài cùng bộ, như D2-0 ghi. Dữ liệu D2-0: bach-invention-1 chặng 5, Grade 6.'
+  - id: n15
+    cau: 'Xong chặng 6: chơi thuộc lòng một chương trình 20–30 phút gồm ít nhất ba thời kỳ; chơi một prelude và fugue của Bach, các bè nghe rõ; tự quyết định ngón bấm, sắc thái và tốc độ cho một bài mới, và giải thích được vì sao.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Khớp lo-trinh.md, chặng 6: "Một chương trình 20–30 phút gồm ít nhất ba thời kỳ, thuộc lòng", "Một prelude và fugue của Bach, các bè nghe rõ", "Tự quyết định ngón bấm, sắc thái và tốc độ cho một bài mới, và giải thích được vì sao".'
+  - id: n16
+    cau: Phần nhạc lý gồm 28 câu, mỗi bài nhạc lý có 2 câu.
+    loai: so-lieu
+    nguon: [khoi-placement]
+    ket_qua: dung
+    ghi_chu: Khối placement có 14 dòng @ (bài 1–14), mỗi bài đúng 2 câu ?, mỗi câu đúng một đáp án +.
+  - id: n17
+    cau: Phần nhạc lý mất khoảng 5–10 phút.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Ước lượng của site; 28 câu, mỗi câu khoảng 10–20 giây.
+  - id: n18
+    cau: 'Nếu không biết, hãy chọn "Tôi chưa biết" thay vì đoán: kết quả sẽ chính xác hơn.'
+    loai: so-lieu
+    nguon: [placement-js-cu]
+    ket_qua: dung
+    ghi_chu: 'Nhận định về site. Site cũ: placement.js thêm lựa chọn { t: "Tôi chưa biết", ok: false } sau các đáp án; chọn nó tính là chưa nắm, nên không bị tính đúng nhờ đoán may. Site mới: thành phần placement phải giữ lựa chọn này (agent chính, D2-L1).'
+  - id: n19
+    cau: Cuối bài, site gợi ý bài nên bắt đầu và lưu kết quả lại.
+    loai: so-lieu
+    nguon: [placement-js-cu]
+    ket_qua: dung
+    ghi_chu: 'Nhận định về site. Site cũ: finish() hiện "Gợi ý: bắt đầu từ bài …" (hay "Bạn đã nắm chắc phần nền tảng…") và ghi store.placement { date, start }. Site mới: như n18.'
+  - id: n20
+    cau: Tên bài và đường dẫn ở 14 dòng @ của khối câu hỏi khớp bài nhạc lý 1–14.
+    loai: ten
+    nguon: [bai-nhac-ly-cu]
+    ket_qua: dung
+    ghi_chu: 'Tiêu đề bài cũ: 1 Cao độ và tên nốt, 2 Khuông nhạc và khóa, 3 Trường độ và dấu lặng, 4 Nhịp và số chỉ nhịp, 5 Cung, nửa cung và dấu hóa, 6 Gam trưởng, 7 Gam thứ, 8 Hóa biểu và vòng quãng năm, 9 Quãng, 10 Hợp âm ba, 11 Hợp âm bảy và thể đảo, 12 Hòa âm chức năng, 13 Kết và câu nhạc, 14 Ký hiệu biểu diễn; đường dẫn nhac-ly/01-cao-do-ten-not/ … nhac-ly/14-ky-hieu-bieu-dien/ đúng tên file. Bài nhạc lý lên site ở đợt 3.'
+  - id: n21
+    cau: Nốt Sol trong hệ chữ cái là G (không phải F hay A).
+    loai: dinh-nghia
+    nguon: [omt-major, omt-keyboard]
+    ket_qua: dung
+    ghi_chu: 'OMT, Major Scales: "a fixed do solmization system, in which do is always the pitch class C"; các âm tiết "do, re, mi, fa, sol, la, and ti" ứng với bảy bậc của gam trưởng, nên với Đô cố định: Sol là bậc 5 của Đô trưởng, tức G. OMT, Keyboard: tên nốt "A, B, C, D, E, F, and G".'
+  - id: n22
+    cau: Ký hiệu C4 chỉ Đô giữa trên piano (không phải nốt Đô thấp nhất trên piano, cũng không phải một hợp âm).
+    loai: dinh-nghia
+    nguon: [omt-aspn, omt-keyboard]
+    ket_qua: dung
+    ghi_chu: 'OMT, ASPN: "Middle C is C4 in ASPN". OMT, Keyboard: Đô giữa "is the note that appears to be around the middle of a piano keyboard", nên không phải nốt Đô thấp nhất. C4 là tên một nốt, không phải hợp âm.'
+  - id: n23
+    cau: Trong khóa Sol, nốt trên dòng 2 là Sol (không phải Mi hay Si).
+    loai: dinh-nghia
+    nguon: [omt-clefs]
+    ket_qua: dung
+    ghi_chu: 'OMT, Reading Clefs: các dòng của khóa Sol là "E, G, B, D, F" (từ dưới lên); "the treble clef wraps around the G line (the second line from the bottom)". Mi là dòng 1, Si là dòng 3.'
+  - id: n24
+    cau: Trong khóa Fa, nốt trên dòng 4 là Fa (không phải Rê hay La).
+    loai: dinh-nghia
+    nguon: [omt-clefs]
+    ket_qua: dung
+    ghi_chu: 'OMT, Reading Clefs: các dòng của khóa Fa là "G, B, D, F, A" (từ dưới lên); "the dot of the bass clef begins on the F line (the second line from the top)", tức dòng 4. Rê là dòng 3, La là dòng 5.'
+  - id: n25
+    cau: Một nốt trắng bằng 2 nốt đen (không phải 4 hay ½).
+    loai: dinh-nghia
+    nguon: [omt-rhythm]
+    ket_qua: dung
+    ghi_chu: 'OMT, Notating Rhythm: "a whole note divides into two half notes, four quarter notes", nên một nốt trắng bằng hai nốt đen. 4 nốt đen là nốt tròn; ½ nốt đen là nốt móc đơn.'
+  - id: n26
+    cau: Khi nốt đen là 1 phách, nốt đen chấm dôi dài 1 phách rưỡi (không phải 2, hay 1 và ¼).
+    loai: dinh-nghia
+    nguon: [omt-rhythm]
+    ket_qua: dung
+    ghi_chu: 'OMT, Notating Rhythm: "A dot … increases its duration by half"; "a quarter note is equivalent in duration to two eighth notes; therefore, a dotted quarter note would be equivalent to three eighth notes" (một phách rưỡi).'
+  - id: n27
+    cau: 'Số chỉ nhịp 3/4 nghĩa là mỗi ô nhịp 3 phách, nốt đen là 1 phách (không phải 4 phách với nốt móc ba là 1 phách, cũng không phải chơi với 3/4 tốc độ).'
+    loai: dinh-nghia
+    nguon: [omt-simple]
+    ket_qua: dung
+    ghi_chu: 'OMT, Simple Meter: "the top number of a time signature represents the number of beats in each measure, while the bottom number represents the beat unit"; số 4 ở dưới là nốt đen. "A time signature is not a fraction", nên không phải tỉ lệ tốc độ.'
+  - id: n28
+    cau: Nhịp 6/8 thường được cảm nhận thành 2 phách lớn (không phải 3 hay 6).
+    loai: dinh-nghia
+    nguon: [omt-compound]
+    ket_qua: dung
+    ghi_chu: 'OMT, Compound Meter: với 6/8 "each measure has two beats (6÷3=2), indicating duple meter. Each dotted quarter note (the beat) gets a count". 6 là số nốt móc đơn, 3 là số móc đơn mỗi phách.'
+  - id: n29
+    cau: Si – Đô cách nhau nửa cung tự nhiên; La – Si và Fa – Sol cách nhau một cung.
+    loai: dinh-nghia
+    nguon: [omt-half-whole]
+    ket_qua: dung
+    ghi_chu: 'OMT, Half Steps, Whole Steps, and Accidentals: "Two pairs of white keys—E/F and B/C—do not have black keys in between them … E–F and B–C are both half steps"; Example 2 ghi A–B là một cung. Fa – Sol có phím đen Fa♯ ở giữa, cũng là một cung.'
+  - id: n30
+    cau: Dấu hóa bất thường có hiệu lực đến hết ô nhịp (không phải hết bản nhạc, cũng không phải chỉ một nốt).
+    loai: quy-tac
+    nguon: [ou-accidentals]
+    ket_qua: dung
+    ghi_chu: 'OpenLearn 6.2: "Accidentals, unless cancelled, last throughout a bar". Mục 6.1 cùng khóa học: dấu hóa ở hóa biểu mới có hiệu lực cả bản ("throughout a piece"). OMT không có câu nói thẳng luật này nên dùng nguồn của Open University.'
+  - id: n31
+    cau: Gam Sol trưởng có dấu hóa Fa♯ (không phải Si♭ hay Đô♯).
+    loai: dinh-nghia
+    nguon: [omt-major]
+    ket_qua: dung
+    ghi_chu: 'OMT, Major Scales: thứ tự dấu thăng "F, C, G, D, A, E, B"; "In sharp key signatures, the last sharp is a half step below the tonic", nên một dấu thăng (Fa♯) là Sol trưởng. Si♭ là hóa biểu Fa trưởng; Đô♯ là dấu thăng thứ hai.'
+  - id: n32
+    cau: Bậc V của gam trưởng gọi là át âm (bậc I là chủ âm, bậc VII là cảm âm).
+    loai: dinh-nghia
+    nguon: [omt-major]
+    ket_qua: dung
+    ghi_chu: 'OMT, Major Scales: "tonic, supertonic, mediant, subdominant, dominant, submediant, and leading tone" cho bậc 1–7. Tiếng Việt: chủ âm, át âm, cảm âm như bài cũ 6.'
+  - id: n33
+    cau: Giọng thứ song song của Đô trưởng là La thứ (Đô thứ là giọng thứ cùng tên).
+    loai: dinh-nghia
+    nguon: [omt-minor, bai-nhac-ly-cu]
+    ket_qua: dung
+    ghi_chu: 'OMT, Minor Scales: "C major is the relative major of A minor, and A minor is the relative minor of C major"; "C major and C minor … are parallel keys". Thuật ngữ tiếng Việt theo bài cũ 7: "Giọng thứ song song (relative minor) dùng chung hóa biểu"; "Giọng thứ cùng tên (parallel minor)". Lưu ý: "song song" tiếng Việt ứng với relative, không phải parallel của tiếng Anh.'
+  - id: n34
+    cau: Gam thứ hòa âm nâng bậc 7 (không phải bậc 3 hay bậc 6).
+    loai: dinh-nghia
+    nguon: [omt-minor]
+    ket_qua: dung
+    ghi_chu: 'OMT, Minor Scales: "In harmonic minor, ti (↑7̂) replaces te (7̂)"; bảng thuật ngữ: harmonic minor là "Like natural minor, but with a raised leading tone". Nâng bậc 6 và 7 là thể giai điệu khi đi lên.'
+  - id: n35
+    cau: Hóa biểu 3 dấu giáng là của Mi♭ trưởng (La♭ trưởng có 4 dấu giáng, Si♭ trưởng có 2).
+    loai: dinh-nghia
+    nguon: [omt-major]
+    ket_qua: dung
+    ghi_chu: 'OMT, Major Scales: thứ tự dấu giáng "B, E, A, D, G, C, F"; "In flat key signatures, the second-to-last flat is the tonic": ba dấu giáng Si♭, Mi♭, La♭ cho chủ âm Mi♭. Cùng luật: hai dấu giáng là Si♭ trưởng, bốn dấu giáng là La♭ trưởng.'
+  - id: n36
+    cau: Thứ tự dấu thăng bắt đầu bằng Fa – Đô – Sol (Si – Mi – La là thứ tự dấu giáng).
+    loai: dinh-nghia
+    nguon: [omt-major]
+    ket_qua: dung
+    ghi_chu: 'OMT, Major Scales: "The order of sharps in key signatures is F, C, G, D, A, E, B, while the order of flats is the opposite: B, E, A, D, G, C, F".'
+  - id: n37
+    cau: Đô – Sol là quãng 5 đúng (không phải 5 trưởng hay 4 đúng).
+    loai: dinh-nghia
+    nguon: [omt-intervals]
+    ket_qua: dung
+    ghi_chu: 'OMT, Intervals: cách "Major Scale": quãng từ nốt dưới, nếu nốt trên thuộc gam trưởng của nốt dưới thì quãng 5 là đúng (perfect); Sol thuộc Đô trưởng và Đô–Sol là quãng 5 (Đô, Rê, Mi, Fa, Sol). Quãng 5 không có loại trưởng.'
+  - id: n38
+    cau: Đảo quãng 3 trưởng thì được quãng 6 thứ (không phải 6 trưởng hay 5 đúng).
+    loai: quy-tac
+    nguon: [omt-intervals]
+    ket_qua: dung
+    ghi_chu: 'OMT, Intervals: "Thirds invert to sixths (3 + 6 = 9)"; "Major intervals invert to minor intervals"; Example 10: "A ma3 from C3 to E3 inverts to a mi6 from E3 to C4".'
+  - id: n39
+    cau: Hợp âm Rê – Fa – La là hợp âm thứ (không phải trưởng hay giảm).
+    loai: dinh-nghia
+    nguon: [omt-triads]
+    ket_qua: dung
+    ghi_chu: 'OMT, Triads: "a minor triad''s third is minor and its fifth is perfect". Rê–Fa là quãng 3 thứ (3 nửa cung), Rê–La là quãng 5 đúng.'
+  - id: n40
+    cau: Trong giọng trưởng, hợp âm bậc vii là hợp âm giảm (không phải thứ hay tăng).
+    loai: dinh-nghia
+    nguon: [omt-roman]
+    ket_qua: dung
+    ghi_chu: 'OMT, Roman Numerals: "Lowercase Roman numerals followed by a superscript o (such as viio) represent diminished triads"; bảng hợp âm của giọng trưởng có viio.'
+  - id: n41
+    cau: Hợp âm Đô trưởng có Mi ở bè trầm là thể đảo 1 (không phải thể gốc hay đảo 2).
+    loai: dinh-nghia
+    nguon: [omt-inversion]
+    ket_qua: dung
+    ghi_chu: 'OMT, Inversion: "When the third is in the bass, we say the chord is in first inversion, when the fifth is in the bass we say the chord is in second inversion". Mi là quãng 3 của Đô trưởng.'
+  - id: n42
+    cau: G7 (Sol – Si – Rê – Fa) là hợp âm bảy át (không phải bảy trưởng hay bảy thứ).
+    loai: dinh-nghia
+    nguon: [omt-seventh]
+    ket_qua: dung
+    ghi_chu: 'OMT, Seventh Chords: "the major-minor seventh chord is also often called the dominant seventh chord"; hợp âm bảy trên sol (5̂) của giọng trưởng "have a major triad and a minor seventh (a dominant seventh chord)". Sol–Si–Rê là hợp âm trưởng, Sol–Fa là quãng 7 thứ.'
+  - id: n43
+    cau: Hợp âm IV thuộc chức năng hạ át (không phải chủ hay át).
+    loai: dinh-nghia
+    nguon: [omt-harmony, bai-nhac-ly-cu]
+    ket_qua: dung
+    ghi_chu: 'OMT, Introduction to Harmony: "Predominant (PD): Chords that transition away from tonic function toward dominant function … Strong predominants … IV and ii". Bài cũ 12 dùng tên "Hạ át (Subdominant / tiền át, S): IV, ii", tức nhóm OMT gọi là predominant.'
+  - id: n44
+    cau: Hợp âm vi có thể thay thế I vì cùng chức năng chủ (V thuộc chức năng át, ii thuộc chức năng hạ át).
+    loai: dinh-nghia
+    nguon: [omt-harmony]
+    ket_qua: dung
+    ghi_chu: 'OMT, Introduction to Harmony, bảng thuật ngữ: "The I chord is the paradigmatic tonic-function chord, but vi and iii occasionally have tonic function"; ii là predominant (hạ át). Bài cũ 12: "vi (La – Đô – Mi) chung hai nốt với I … nên có thể thay thế nhau".'
+  - id: n45
+    cau: Kết thúc câu nhạc ở hợp âm V gọi là kết nửa (không phải kết trọn hay kết lừa).
+    loai: dinh-nghia
+    nguon: [omt-harmony]
+    ket_qua: dung
+    ghi_chu: 'OMT, Introduction to Harmony: "Half cadences involve the progression x–V"; "Authentic cadences involve the progression V–I".'
+  - id: n46
+    cau: V – vi là kết lừa (không phải kết plagal hay kết trọn).
+    loai: dinh-nghia
+    nguon: [omt-la-bass, bai-nhac-ly-cu]
+    ket_qua: dung
+    ghi_chu: 'OMT, La in the Bass: "Deceptive motion most commonly occurs when V(7) moves to vi rather than I"; "Some people use the term ''deceptive cadence'' to describe what we refer to as ''deceptive motion''". Bài cũ 13 dùng "Kết lừa (deceptive): V – vi". Đáp án đúng theo tên trong bài 13; OMT thích gọi là "chuyển động lừa" vì V–vi tránh kết chứ không tạo kết: lô D3 của bài 13 quyết tên gọi, nếu đổi thì sửa câu này theo.'
+  - id: n47
+    cau: '"Allegro" nghĩa là nhanh, vui tươi (không phải chậm, thong thả, cũng không phải to dần).'
+    loai: dinh-nghia
+    nguon: [omt-other, oxford-allegro, thuat-ngu]
+    ket_qua: dung
+    ghi_chu: 'OMT, Other Aspects of Notation: "Fast tempi: vivace, presto, allegro, allegretto". Oxford Learner''s: allegro "(music) in a fast and lively manner". thuat-ngu.yml: "Allegro: Nhanh, vui tươi". To dần là crescendo.'
+  - id: n48
+    cau: Ký hiệu "p" nghĩa là nhỏ (piano), không phải to (forte) hay ngắt ngắn.
+    loai: dinh-nghia
+    nguon: [omt-other]
+    ket_qua: dung
+    ghi_chu: 'OMT, Other Aspects of Notation: "The dynamic marking forte means loud, while piano means quiet"; "Dynamics are often abbreviated" (p, f). Ngắt ngắn là staccato (một cách phát âm, không phải cường độ).'
+khuong_nhac: []

@@ -9,12 +9,12 @@ Dành cho bạn muốn **hiểu và tận hưởng** nhạc cổ điển, hoặc
 
 Nhạc cổ điển khác nhạc phổ thông ở vài điểm; biết trước giúp bạn đỡ ngợp.
 
-- **Được ghi lại bằng bản nhạc**, nhưng mỗi người chơi diễn giải một khác. Vì thế một tác phẩm có hàng trăm bản thu, và so sánh chúng là một phần niềm vui.
+- **Được ghi lại bằng bản nhạc**, nhưng mỗi người chơi diễn giải một khác. Vì thế một tác phẩm có nhiều bản thu, và so sánh chúng là một phần niềm vui.
 - **Dài hơn và có kiến trúc.** Một bản giao hưởng có thể dài 40 phút, chia thành các chương; ý tưởng được giới thiệu, phát triển, biến đổi rồi quay lại. Hãy nghe từng chương một, tìm giai điệu chính và để ý khi nó trở lại.
 - **Dải âm lượng rất rộng**, từ tiếng thì thầm của một cây violin đến tiếng gầm của cả dàn nhạc. Đừng chỉnh âm lượng theo đoạn to nhất; hãy để đoạn nhỏ đủ nghe được. Tai nghe hoặc loa tử tế giúp nhiều hơn bạn nghĩ: loa điện thoại làm mất gần hết âm trầm.
-- **Thường không có lời.** Âm nhạc tự kể chuyện bằng giai điệu, hòa âm và màu sắc nhạc cụ. Đọc vài dòng về bối cảnh trước khi nghe cho bạn một điểm bám, và lần thứ ba nghe một tác phẩm luôn hay hơn lần đầu.
+- **Thường không có lời.** Âm nhạc tự kể chuyện bằng giai điệu, hòa âm và màu sắc nhạc cụ. Đọc vài dòng về bối cảnh trước khi nghe cho bạn một điểm bám, và lần thứ ba nghe một tác phẩm thường hay hơn lần đầu.
 
-Thấy chán thường không phải do "không hợp", mà do chưa biết nghe cái gì; [phương pháp 4 lần nghe](/opus/nghe-nhac/) giải quyết đúng chuyện này. YouTube là đủ để bắt đầu; các dịch vụ chuyên nhạc cổ điển có ở [Tài nguyên](/opus/tai-nguyen/).
+Thấy chán thường không phải do "không hợp", mà do chưa biết nghe cái gì; [phương pháp 4 lần nghe](/opus/nghe-nhac/) giải quyết đúng chuyện này. Bản thu miễn phí trên mạng là đủ để bắt đầu; các dịch vụ chuyên nhạc cổ điển có ở [Tài nguyên](/opus/tai-nguyen/).
 
 ## Tháng 1: Tai làm quen
 
@@ -55,8 +55,8 @@ Thấy chán thường không phải do "không hợp", mà do chưa biết nghe
 ## Sau 6 tháng: đi sâu hơn
 
 - [ ] Đọc trang riêng của từng [thời kỳ](/opus/lich-su/), mỗi trang có 10 tác phẩm để nghe.
-- [ ] Nghe các hướng dẫn còn lại: [Bach cello](/opus/nghe-nhac/bach-cello-1/), [Mozart *Requiem*](/opus/nghe-nhac/mozart-requiem/), [Schubert *Con cá hồi*](/opus/nghe-nhac/schubert-ca-hoi/), [Brahms 4](/opus/nghe-nhac/brahms-4/), [Ravel *Boléro*](/opus/nghe-nhac/ravel-bolero/), [Shostakovich 5](/opus/nghe-nhac/shostakovich-5/), [Beethoven Op. 132](/opus/nghe-nhac/beethoven-op132/).
-- [ ] Nghe trọn mục **Nhạc piano** (16 hướng dẫn, theo thứ tự thời gian từ [Scarlatti](/opus/nghe-nhac/scarlatti-sonata/) đến [Gershwin](/opus/nghe-nhac/gershwin-rhapsody/)), kèm [Các thể loại nhạc piano](/opus/piano/the-loai/) và [Nghệ sĩ piano và bản thu](/opus/piano/nghe-si/). Muốn tự chơi: [Lộ trình piano năm đầu](/opus/bat-dau/lo-trinh-choi/).
+- [ ] Nghe thêm các hướng dẫn khác: [Bach cello](/opus/nghe-nhac/bach-cello-1/), [Mozart *Requiem*](/opus/nghe-nhac/mozart-requiem/), [Schubert *Con cá hồi*](/opus/nghe-nhac/schubert-ca-hoi/), [Brahms 4](/opus/nghe-nhac/brahms-4/), [Shostakovich 5](/opus/nghe-nhac/shostakovich-5/), [Beethoven Op. 132](/opus/nghe-nhac/beethoven-op132/).
+- [ ] Nghe trọn các hướng dẫn nghe **nhạc piano**, từ [Scarlatti](/opus/nghe-nhac/scarlatti-sonata/) đến [Gershwin](/opus/nghe-nhac/gershwin-rhapsody/), kèm [Các thể loại nhạc piano](/opus/piano/the-loai/) và [Nghệ sĩ piano và bản thu](/opus/piano/nghe-si/). Muốn tự chơi: [Lộ trình piano năm đầu](/opus/bat-dau/lo-trinh-choi/).
 - [ ] Đọc các trang hình thức chi tiết: [sonata](/opus/hinh-thuc/sonata/), [fugue](/opus/hinh-thuc/fugue/), [biến tấu](/opus/hinh-thuc/bien-tau/).
 - [ ] Học mục [Nhận diện](/opus/nhan-dien/): bảng so sánh các thời kỳ, luyện nghe nhận diện, rồi nghe mù.
 - [ ] Bài [28: Kết cấu](/opus/nhac-ly/28-ket-cau/), [29: Chuỗi hòa âm](/opus/nhac-ly/29-chuoi-hoa-am/), [31: Hình thức nhỏ](/opus/nhac-ly/31-hinh-thuc-nho/).

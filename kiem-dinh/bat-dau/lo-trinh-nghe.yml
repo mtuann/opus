@@ -1,0 +1,449 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa bat-dau/lo-trinh-nghe
+trang: src/content/docs/bat-dau/lo-trinh-nghe.md
+nguon_cu: ../opus-zero/docs/bat-dau/lo-trinh-nghe.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-24
+    nhanh: moi/d2-l1
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5 (D2-L1 lượt 1, phần D)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: >-
+  Tên tác phẩm, giọng, năm sáng tác, độ dài đối chiếu trang tác phẩm trên IMSLP (link lấy từ hồ sơ D2-0 của cùng bản ghi, mở lại ở lượt này); tác phẩm còn bản quyền (Pärt, Britten) đối chiếu cơ sở dữ liệu IRCAM và chương trình hòa nhạc của Utah Symphony. Câu về nội dung site (bài nhạc lý, công cụ, trang thời kỳ, mục Nhận diện) đối chiếu trang cũ trong ../opus-zero/docs/ và mkdocs.yml cũ; các trang ấy chưa lên site lúc D2-L1 gộp nên link hiện "sắp có". Đổi chữ: bỏ tên YouTube (chi tiết mau cũ, d2-bang-tang.md mục 4), bỏ hai con số viết tay ("hàng trăm bản thu", "16 hướng dẫn"), sửa "luôn hay hơn" và danh sách "các hướng dẫn còn lại". Hai mục việc - [ ] đổi chữ nên mã việc lưu trong trình duyệt của hai mục ấy đổi theo (dấu đã đánh ở site cũ cho hai mục này không còn hiện).
+nguon:
+  - id: omt-notation
+    bac: 2
+    ten: Open Music Theory, "Introduction to Western Musical Notation"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/introduction-to-western-musical-notation/
+  - id: omt-sonata
+    bac: 2
+    ten: Open Music Theory, "Sonata Form"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/sonata-form/
+  - id: omt-other
+    bac: 2
+    ten: Open Music Theory, "Other Aspects of Notation" (mục Dynamics)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/other-aspects-of-notation/
+  - id: omt-minor
+    bac: 2
+    ten: Open Music Theory, "Minor Scales, Scale Degrees, and Key Signatures"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/
+  - id: patent-harman
+    bac: 2
+    ten: 'Bằng sáng chế US10805754B2, "Audio reproduction systems and methods" (đo đáp tuyến tần số của loa điện thoại)'
+    link: https://patents.google.com/patent/US10805754B2/en
+  - id: szpunar-2004
+    bac: 2
+    ten: 'K. K. Szpunar, E. G. Schellenberg, P. Pliner (2004), "Liking and memory for musical stimuli as a function of exposure", Journal of Experimental Psychology: Learning, Memory, and Cognition 30(2)'
+    link: https://europepmc.org/article/MED/14979811
+  - id: holm-hudson
+    bac: 2
+    ten: 'K. Holm-Hudson, Music Theory Remixed (Oxford University Press), Web Feature 21.1 "Sonata form in context: Mozart''s Symphony no. 40 in G Minor, K. 550 (1st mvt.)"'
+    link: https://oup-arc.com/protected/files/content/file/585d7d2c8fdce80f005ad199-1482522460268-edited_Web_Feature_21_1.pdf
+  - id: imslp-b5
+    bac: 2
+    ten: IMSLP, Symphony No.5, Op.67 (Beethoven)
+    link: https://imslp.org/wiki/Symphony_No.5,_Op.67_(Beethoven,_Ludwig_van)
+  - id: imslp-brahms4
+    bac: 2
+    ten: IMSLP, Symphony No.4, Op.98 (Brahms)
+    link: https://imslp.org/wiki/Symphony_No.4,_Op.98_(Brahms,_Johannes)
+  - id: imslp-vivaldi
+    bac: 2
+    ten: IMSLP, Violin Concerto in E major, RV 269 (Vivaldi), "La primavera" trong Le quattro stagioni
+    link: https://imslp.org/wiki/Violin_Concerto_in_E_major,_RV_269_(Vivaldi,_Antonio)
+  - id: imslp-eine
+    bac: 2
+    ten: IMSLP, Eine kleine Nachtmusik, K.525 (Mozart)
+    link: https://imslp.org/wiki/Eine_kleine_Nachtmusik,_K.525_(Mozart,_Wolfgang_Amadeus)
+  - id: imslp-haydn94
+    bac: 2
+    ten: IMSLP, Symphony No.94 in G major, Hob.I:94 (Haydn)
+    link: https://imslp.org/wiki/Symphony_No.94_in_G_major,_Hob.I:94_(Haydn,_Joseph)
+  - id: imslp-k331
+    bac: 2
+    ten: IMSLP, Piano Sonata No.11 in A major, K.331/300i (Mozart)
+    link: https://imslp.org/wiki/Piano_Sonata_No.11_in_A_major,_K.331/300i_(Mozart,_Wolfgang_Amadeus)
+  - id: imslp-nocturnes
+    bac: 2
+    ten: IMSLP, Nocturnes, Op.9 (Chopin)
+    link: https://imslp.org/wiki/Nocturnes,_Op.9_(Chopin,_Fr%C3%A9d%C3%A9ric)
+  - id: imslp-peter
+    bac: 2
+    ten: IMSLP, Peter and the Wolf, Op.67 (Prokofiev)
+    link: https://imslp.org/wiki/Peter_and_the_Wolf,_Op.67_(Prokofiev,_Sergey)
+  - id: usuo-britten
+    bac: 2
+    ten: Utah Symphony | Utah Opera, ghi chú chương trình "Britten – Young Person's Guide to the Orchestra, op. 34"
+    link: https://usuo.org/explore/2013/11/young-person-s-guide-to-the-orchestra-op-34-variations-and-fugue-on-a-theme-by-purcell/
+  - id: imslp-bergamasque
+    bac: 2
+    ten: IMSLP, Suite bergamasque, CD 82 (Debussy)
+    link: https://imslp.org/wiki/Suite_bergamasque,_CD_82_(Debussy,_Claude)
+  - id: imslp-bolero
+    bac: 2
+    ten: IMSLP, Boléro (Ravel)
+    link: https://imslp.org/wiki/Bol%C3%A9ro_(Ravel,_Maurice)
+  - id: imslp-swan
+    bac: 2
+    ten: IMSLP, Swan Lake (ballet), Op.20 (Tchaikovsky)
+    link: https://imslp.org/wiki/Swan_Lake_(ballet),_Op.20_(Tchaikovsky,_Pyotr)
+  - id: imslp-m40
+    bac: 2
+    ten: IMSLP, Symphony No.40 in G minor, K.550 (Mozart)
+    link: https://imslp.org/wiki/Symphony_No.40_in_G_minor,_K.550_(Mozart,_Wolfgang_Amadeus)
+  - id: imslp-wtc1
+    bac: 2
+    ten: IMSLP, Das wohltemperierte Klavier I, BWV 846-869 (Bach)
+    link: https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)
+  - id: imslp-erlkonig
+    bac: 2
+    ten: IMSLP, Erlkönig, D.328 (Schubert)
+    link: https://imslp.org/wiki/Erlk%C3%B6nig,_D.328_(Schubert,_Franz)
+  - id: imslp-zauberflote
+    bac: 2
+    ten: IMSLP, Die Zauberflöte, K.620 (Mozart)
+    link: https://imslp.org/wiki/Die_Zauberfl%C3%B6te,_K.620_(Mozart,_Wolfgang_Amadeus)
+  - id: imslp-carmen
+    bac: 2
+    ten: IMSLP, Carmen (Bizet)
+    link: https://imslp.org/wiki/Carmen_(Bizet,_Georges)
+  - id: imslp-preludes
+    bac: 2
+    ten: IMSLP, Préludes, Livre 1, CD 125 (Debussy)
+    link: https://imslp.org/wiki/Pr%C3%A9ludes,_Livre_1,_CD_125_(Debussy,_Claude)
+  - id: imslp-sacre
+    bac: 2
+    ten: IMSLP, The Rite of Spring, K015 (Stravinsky)
+    link: https://imslp.org/wiki/The_Rite_of_Spring,_K015_(Stravinsky,_Igor)
+  - id: ircam-spiegel
+    bac: 2
+    ten: IRCAM, cơ sở dữ liệu Brahms, "Spiegel im Spiegel (1978)" (Arvo Pärt)
+    link: https://brahms.ircam.fr/en/works/work/30209
+  - id: imslp-cello1
+    bac: 2
+    ten: IMSLP, Cello Suite No.1 in G major, BWV 1007 (Bach)
+    link: https://imslp.org/wiki/Cello_Suite_No.1_in_G_major,_BWV_1007_(Bach,_Johann_Sebastian)
+  - id: imslp-requiem
+    bac: 2
+    ten: IMSLP, Requiem, K.626 (Mozart)
+    link: https://imslp.org/wiki/Requiem,_K.626_(Mozart,_Wolfgang_Amadeus)
+  - id: imslp-trout
+    bac: 2
+    ten: IMSLP, Piano Quintet in A major, D.667 (Schubert)
+    link: https://imslp.org/wiki/Piano_Quintet_in_A_major,_D.667_(Schubert,_Franz)
+  - id: imslp-shost5
+    bac: 2
+    ten: IMSLP, Symphony No.5, Op.47 (Shostakovich)
+    link: https://imslp.org/wiki/Symphony_No.5,_Op.47_(Shostakovich,_Dmitry)
+  - id: imslp-op132
+    bac: 2
+    ten: IMSLP, String Quartet No.15, Op.132 (Beethoven)
+    link: https://imslp.org/wiki/String_Quartet_No.15,_Op.132_(Beethoven,_Ludwig_van)
+  - id: imslp-scarlatti
+    bac: 2
+    ten: IMSLP, Keyboard Sonata in E major, K.380 (Scarlatti)
+    link: https://imslp.org/wiki/Keyboard_Sonata_in_E_major,_K.380_(Scarlatti,_Domenico)
+  - id: imslp-rhapsody
+    bac: 2
+    ten: IMSLP, Rhapsody in Blue (Gershwin)
+    link: https://imslp.org/wiki/Rhapsody_in_Blue_(Gershwin,_George)
+  - id: d2-bang-tang
+    bac: 2
+    ten: Báo cáo duyệt bảng tầng, mục 4 "Giữ tầng, có chi tiết mau cũ" (câu YouTube của trang này)
+    link: plans/lam-lai/bao-cao/d2-bang-tang.md
+  - id: tai-nguyen-cu
+    bac: 1
+    ten: Trang cũ "Tài nguyên", mục "Nghe nhạc trực tuyến" (dịch vụ chuyên nhạc cổ điển)
+    link: ../opus-zero/docs/tai-nguyen.md
+  - id: nghe-nhac-cu
+    bac: 1
+    ten: Trang cũ "Nghe nhạc", mục "Phương pháp 4 lần nghe"
+    link: ../opus-zero/docs/nghe-nhac/index.md
+  - id: bai-nhac-ly-cu
+    bac: 1
+    ten: Bài nhạc lý cũ (tiêu đề bài 1–32, Âm học cơ bản; bài 26 có "Quy trình 6 bước")
+    link: ../opus-zero/docs/nhac-ly/
+  - id: thoi-ky-cu
+    bac: 1
+    ten: Sáu trang thời kỳ cũ lich-su/thoi-ky/*.md, mỗi trang có mục "10 tác phẩm để nghe"
+    link: ../opus-zero/docs/lich-su/thoi-ky/
+  - id: cong-cu-cu
+    bac: 1
+    ten: 'Công cụ của site cũ: luyen-tai/nghe-quang.md (bộ "Khởi động"), assets/js/rhythm.js (cấp độ 1–4), assets/js/sight-reading.js (cấp độ 1–3), luyen-tai/nghe-hop-am.md'
+    link: ../opus-zero/docs/luyen-tai/nghe-quang.md
+  - id: nav-cu
+    bac: 1
+    ten: mkdocs.yml cũ, mục nav (Nhận diện, Hình thức & thể loại, Nhạc piano)
+    link: ../opus-zero/mkdocs.yml
+  - id: du-lieu-d20
+    bac: 1
+    ten: 'Dữ liệu của site: src/data/tac-pham.yml ở nhánh moi/d2-0-du-lieu (39 hướng dẫn nghe; haydn-94, mozart-40 có hinh.nghe)'
+    link: src/data/tac-pham.yml
+nhan_dinh:
+  - id: n1
+    cau: Phần chính là lộ trình nghe khoảng 6 tháng, mỗi ngày 20 phút, chỉ dùng phần nhạc lý thật sự cần cho việc nghe.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Cách site xếp lộ trình. Không trái trang cũ Thói quen mỗi ngày (thêm 10 phút nghe chủ động hay một bài nhạc lý ngoài giờ ngồi đàn).
+  - id: n2
+    cau: Nhạc cổ điển được ghi lại bằng bản nhạc, nhưng mỗi người chơi diễn giải một khác.
+    loai: dinh-nghia
+    nguon: [ omt-notation ]
+    ket_qua: dung
+    ghi_chu: 'OMT, Introduction to Western Musical Notation: "No system of notation could capture every aspect of sound in full detail and still be useful or readable, so only some musical elements can be depicted" (phần không ghi được do người chơi quyết định).'
+  - id: n3
+    cau: Vì thế một tác phẩm có nhiều bản thu, và so sánh chúng là một phần niềm vui.
+    loai: so-lieu
+    nguon: [ imslp-b5 ]
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "một tác phẩm có hàng trăm bản thu". Không tìm được nguồn bậc 2 đếm số bản thu (Presto, Gramophone chặn truy cập; Wikipedia chỉ là nguồn bậc 3), nên bỏ con số. IMSLP, trang Giao hưởng số 5 của Beethoven: mục Recordings có nhiều bản thu trọn bản của các dàn nhạc khác nhau.'
+  - id: n4
+    cau: Một bản giao hưởng có thể dài 40 phút, chia thành các chương.
+    loai: so-lieu
+    nguon: [ imslp-brahms4, imslp-b5 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Giao hưởng số 4 của Brahms "Average Duration 40 minutes"; Giao hưởng số 5 của Beethoven "4 movements", "Average Duration 30 minutes".'
+  - id: n5
+    cau: Ý tưởng được giới thiệu, phát triển, biến đổi rồi quay lại.
+    loai: dinh-nghia
+    nguon: [ omt-sonata ]
+    ket_qua: dung
+    ghi_chu: 'OMT, Sonata Form: "The first reprise is called the exposition, and the second reprise contains the development and recapitulation"; "The recapitulation involves the restatement of material from the exposition". Câu của trang tả chung, ví dụ rõ nhất là hình thức sonata.'
+  - id: n6
+    cau: Hãy nghe từng chương một, tìm giai điệu chính và để ý khi nó trở lại.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Khớp trang cũ Nghe nhạc, "Phương pháp 4 lần nghe": "Chọn một tác phẩm (hoặc một chương)", "Lần 2 — Tìm giai điệu chính", "Lần 3 — Theo dõi cấu trúc. Giai điệu chính quay lại khi nào?".'
+  - id: n7
+    cau: Dải âm lượng rất rộng, từ tiếng thì thầm của một cây violin đến tiếng gầm của cả dàn nhạc.
+    loai: dinh-nghia
+    nguon: [ omt-other ]
+    ket_qua: dung
+    ghi_chu: 'OMT, Dynamics: sắc thái đi từ pianissimo ("very quiet") đến fortissimo ("very loud"), có thể thêm nữa (pianississimo, fortississimo); Example 1 xếp tám mức "from quietest to loudest".'
+  - id: n8
+    cau: Đừng chỉnh âm lượng theo đoạn to nhất; hãy để đoạn nhỏ đủ nghe được.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên nghe; không trái trang lõi nào.
+  - id: n9
+    cau: 'Tai nghe hoặc loa tử tế giúp nhiều hơn bạn nghĩ: loa điện thoại làm mất gần hết âm trầm.'
+    loai: so-lieu
+    nguon: [ patent-harman ]
+    ket_qua: dung
+    ghi_chu: 'US10805754B2 (đo loa sau của một điện thoại): "smartphone speakers exhibit poor response in low-frequency regions"; "Although smartphone speakers have a limited frequency response, they can still render signals above approximately 600 Hz"; "the spectrum has uniform characteristics from about 700 Hz onwards". Câu nói chung về loa điện thoại, không nêu thiết bị cụ thể, nên không phải chi tiết mau cũ.'
+  - id: n10
+    cau: 'Nhạc cổ điển thường không có lời: âm nhạc tự kể chuyện bằng giai điệu, hòa âm và màu sắc nhạc cụ.'
+    loai: dinh-nghia
+    nguon: [ imslp-b5, imslp-brahms4, imslp-k331 ]
+    ket_qua: dung
+    ghi_chu: 'Các thể loại chính trang này cho nghe đều là nhạc không lời: giao hưởng (IMSLP xếp vào "Symphonies; For orchestra"), sonata cho piano, concerto, tứ tấu; nhạc có lời (opera, lied, requiem) có riêng ở tháng 5 và mục "Sau 6 tháng". "Thường" không có nghĩa là luôn luôn.'
+  - id: n11
+    cau: Đọc vài dòng về bối cảnh trước khi nghe cho bạn một điểm bám, và lần thứ ba nghe một tác phẩm thường hay hơn lần đầu.
+    loai: quy-tac
+    nguon: [ szpunar-2004 ]
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "lần thứ ba nghe một tác phẩm luôn hay hơn lần đầu". Szpunar và cộng sự 2004: nghe kỹ thì độ thích "followed an inverted U-shaped function of exposure for the most ecologically valid stimuli (initial increases followed by decreases)": mấy lần nghe đầu thường làm thích hơn, nhưng không phải luôn luôn, nên "luôn" thành "thường".'
+  - id: n12
+    cau: Thấy chán thường không phải do "không hợp", mà do chưa biết nghe cái gì; phương pháp 4 lần nghe giải quyết đúng chuyện này.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Khớp trang cũ Nghe nhạc, "Phương pháp 4 lần nghe" (mỗi lần nghe một việc cụ thể).
+  - id: n13
+    cau: Bản thu miễn phí trên mạng là đủ để bắt đầu; các dịch vụ chuyên nhạc cổ điển có ở Tài nguyên.
+    loai: khuyen-tap
+    nguon: [ d2-bang-tang, tai-nguyen-cu ]
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "YouTube là đủ để bắt đầu; …". Trang Lõi không giữ tên dịch vụ (chuan-kiem-dinh.md mục 3; d2-bang-tang.md mục 4: "Giữ câu trỏ sang Tài nguyên, bỏ tên YouTube"). Tài nguyên cũ, mục "Nghe nhạc trực tuyến", có dịch vụ chuyên nhạc cổ điển; trang ấy là Tham chiếu có hạn (D8-L1), link hiện "sắp có".'
+  - id: n14
+    cau: 'Tháng 1 nghe Vivaldi Mùa xuân, Mozart Eine kleine Nachtmusik, Haydn Surprise, và một tác phẩm piano: Mozart Sonata K. 331, chương 3 Alla turca.'
+    loai: ten
+    nguon: [ imslp-vivaldi, imslp-eine, imslp-haydn94, imslp-k331 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: RV 269 "La primavera (Spring) from Le quattro stagioni (The Four Seasons)"; "Eine kleine Nachtmusik, K.525"; Hob.I:94, tên khác "Surprise"; K.331, chương 3 "Rondo: Alla Turca (No.3)".'
+  - id: n15
+    cau: 'Nhạc lý tháng 1: bài 1 và bài 4, đủ để hiểu cao độ và nhịp.'
+    loai: ten
+    nguon: [ bai-nhac-ly-cu ]
+    ket_qua: dung
+    ghi_chu: 'Bài cũ 1 "Cao độ và tên nốt", bài 4 "Nhịp và số chỉ nhịp".'
+  - id: n16
+    cau: Mỗi ngày 5 phút nhận biết quãng ở bộ Khởi động.
+    loai: so-lieu
+    nguon: [ cong-cu-cu ]
+    ket_qua: dung
+    ghi_chu: 'Nhận định về site. luyen-tai/nghe-quang.md cũ: "Khởi động (3 trưởng, 5 đúng, 8 đúng)" là bộ đầu của công cụ nhận biết quãng. Trang và công cụ lên site ở đợt 3; link hiện "sắp có".'
+  - id: n17
+    cau: 'Nhạc lý tháng 2: bài 6, bài 7; hiểu vì sao giọng thứ nghe buồn.'
+    loai: dinh-nghia
+    nguon: [ omt-minor, bai-nhac-ly-cu ]
+    ket_qua: dung
+    ghi_chu: 'Bài cũ 6 "Gam trưởng", 7 "Gam thứ". OMT, Minor Scales: "Minor is often (but not always!) used to depict negative emotions, such as sadness, in Western music". Câu của trang là mục tiêu học (hiểu vì sao), không nói giọng thứ lúc nào cũng buồn.'
+  - id: n18
+    cau: 'Luyện tai hợp âm: phân biệt trưởng và thứ.'
+    loai: so-lieu
+    nguon: [ cong-cu-cu ]
+    ket_qua: dung
+    ghi_chu: 'Nhận định về site: luyen-tai/nghe-hop-am.md cũ có công cụ nhận biết hợp âm (mục "Luyện với công cụ"). Lên site ở đợt 3.'
+  - id: n19
+    cau: Beethoven Giao hưởng số 5 đi từ Đô thứ đến Đô trưởng.
+    loai: cau-truc
+    nguon: [ imslp-b5 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Key "C minor"; "Allegro con brio (C minor, 502 bars)", …, chương 4 "Allegro (C major, 446 bars)".'
+  - id: n20
+    cau: Nghe Chopin Nocturne Op. 9 số 2.
+    loai: ten
+    nguon: [ imslp-nocturnes ]
+    ket_qua: dung
+    ghi_chu: IMSLP, "Nocturnes, Op.9" của Chopin (ba bài; số 2 ở Mi♭ trưởng, như dữ liệu chopin-nocturne-op9-2).
+  - id: n21
+    cau: Đọc Dàn nhạc giao hưởng, nghe Peter và chó sói và Britten Young Person's Guide.
+    loai: ten
+    nguon: [ imslp-peter, usuo-britten ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Peter and the Wolf, Op.67" (Prokofiev), "For narrator, orchestra". Utah Symphony: Britten viết Young Person''s Guide to the Orchestra, op. 34 cho phim giáo dục "Instruments of the Orchestra"; tác phẩm "highlight the sonic capabilities of each of the ensemble''s large sections. From there the individual instrument types get their due in turn". Hai bài hợp với việc đọc về dàn nhạc.'
+  - id: n22
+    cau: 'Nghe Debussy Clair de lune, Ravel Boléro, Tchaikovsky Hồ thiên nga.'
+    loai: ten
+    nguon: [ imslp-bergamasque, imslp-bolero, imslp-swan ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Suite bergamasque (Debussy) có chương Clair de lune; "Boléro" (Ravel); "Swan Lake (ballet), Op.20" (Tchaikovsky).'
+  - id: n23
+    cau: 'Nhạc lý tháng 4: bài 12 và bài 13 (đọc để hiểu, không cần làm hết bài tập).'
+    loai: ten
+    nguon: [ bai-nhac-ly-cu ]
+    ket_qua: dung
+    ghi_chu: 'Bài cũ 12 "Hòa âm chức năng", 13 "Kết và câu nhạc" (hợp với chủ đề "Kiến trúc âm nhạc"). Phần trong ngoặc là lời khuyên.'
+  - id: n24
+    cau: Nghe Mozart Giao hưởng số 40 (hình thức sonata).
+    loai: cau-truc
+    nguon: [ holm-hudson, imslp-m40 ]
+    ket_qua: dung
+    ghi_chu: 'Holm-Hudson (OUP), Web Feature 21.1: "Sonata form in context—Mozart''s Symphony no. 40 in G Minor, K. 550 (1st mvt.)"; "three of its four movements are in G minor and three … are in sonata form". IMSLP: 4 chương, chương 1 "Molto allegro". Link dẫn tới hướng dẫn nghe chương 1 (dữ liệu: "Giao hưởng số 40, chương 1").'
+  - id: n25
+    cau: Nghe Bach Prelude (Đô trưởng, BWV 846).
+    loai: ten
+    nguon: [ imslp-wtc1 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Das wohltemperierte Klavier I, BWV 846-869"; BWV 846 là prelude và fugue Đô trưởng mở đầu tập 1. Link dẫn tới bài học bach-prelude-do.'
+  - id: n26
+    cau: 'Tháng 5 nghe Schubert Erlkönig, Mozart Nữ hoàng bóng đêm, Bizet Habanera.'
+    loai: ten
+    nguon: [ imslp-erlkonig, imslp-zauberflote, imslp-carmen ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Erlkönig, D.328" (Schubert); Die Zauberflöte, K.620: "Aria (Königin der Nacht): Der Hölle Rache kocht in meinem Herzen (Act II, No.14)"; Carmen: "Habanera: L''amour est un oiseau rebelle (Act I, No.5)".'
+  - id: n27
+    cau: 'Tháng 6 (thế kỷ 20 và hôm nay) nghe Debussy Préludes quyển 1, Stravinsky Le Sacre du printemps, Pärt Spiegel im Spiegel.'
+    loai: nam
+    nguon: [ imslp-preludes, imslp-sacre, ircam-spiegel ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Préludes, Livre 1 sáng tác 1909–10; "Le sacre du printemps; The Rite of Spring" sáng tác 1910–13. IRCAM: "Spiegel im Spiegel (1978) for violin and piano by Arvo Pärt (1935)". Cả ba thuộc thế kỷ 20.'
+  - id: n28
+    cau: Đi xem một buổi hòa nhạc trực tiếp.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên; trang trỏ sang "nhạc cổ điển ở Việt Nam" (Tham chiếu có hạn, D8-L1) thay vì nêu sự kiện cụ thể.
+  - id: n29
+    cau: Trang riêng của từng thời kỳ có 10 tác phẩm để nghe.
+    loai: so-lieu
+    nguon: [ thoi-ky-cu ]
+    ket_qua: dung
+    ghi_chu: 'Nhận định về site. Sáu trang cũ trung-co, phuc-hung, baroque, co-dien, lang-man, the-ky-20 đều có mục "## 10 tác phẩm để nghe". Lô D5-L1 (các trang thời kỳ) giữ mục ấy, hay báo để sửa câu này.'
+  - id: n30
+    cau: 'Nghe thêm các hướng dẫn khác: Bach cello, Mozart Requiem, Schubert Con cá hồi, Brahms 4, Shostakovich 5, Beethoven Op. 132.'
+    loai: ten
+    nguon: [ imslp-cello1, imslp-requiem, imslp-trout, imslp-brahms4, imslp-shost5, imslp-op132, du-lieu-d20 ]
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Nghe các hướng dẫn còn lại: …, Ravel Boléro, …". Sai hai chỗ: danh sách không phải phần còn lại (site có 39 hướng dẫn nghe, dữ liệu D2-0) và Boléro đã ở tháng 3. Sửa thành "Nghe thêm các hướng dẫn khác", bỏ Boléro. Tên đúng theo IMSLP: Cello Suite No.1, BWV 1007; Requiem, K.626; Piano Quintet in A major, D.667 (con cá hồi); Brahms Symphony No.4, Op.98; Shostakovich Symphony No.5, Op.47; Beethoven String Quartet No.15, Op.132.'
+  - id: n31
+    cau: Nghe trọn các hướng dẫn nghe nhạc piano, từ Scarlatti đến Gershwin.
+    loai: so-lieu
+    nguon: [ du-lieu-d20, imslp-scarlatti, imslp-rhapsody ]
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Nghe trọn mục **Nhạc piano** (16 hướng dẫn, theo thứ tự thời gian từ Scarlatti đến Gershwin)". Bỏ "16 hướng dẫn": con số về nội dung site sẽ đổi khi thêm bài (con số tính lúc build, plans/ben-vung/README.md). Bỏ "theo thứ tự thời gian" và tên mục "Nhạc piano" của menu cũ: thứ tự và tên mục ở danh mục mới do đợt 6 quyết. Hai đầu vẫn đúng: Scarlatti (sonata K. 380, thế kỷ 18) và Gershwin (Rhapsody in Blue, IMSLP ghi năm 1924, muộn nhất trong các hướng dẫn nghe nhạc piano của dữ liệu).'
+  - id: n32
+    cau: 'Học mục Nhận diện: bảng so sánh các thời kỳ, luyện nghe nhận diện, rồi nghe mù.'
+    loai: so-lieu
+    nguon: [ nav-cu ]
+    ket_qua: dung
+    ghi_chu: 'Nhận định về site. Menu cũ, mục Nhận diện: "So sánh các thời kỳ", "Luyện nghe nhận diện", "Nghe mù" (theo thứ tự ấy). Nghe mù ở tầng Tham chiếu có hạn (D8); các trang này chưa lên site lúc D2-L1 gộp.'
+  - id: n33
+    cau: 'Bài 28: Kết cấu, 29: Chuỗi hòa âm, 31: Hình thức nhỏ; Âm học cơ bản; Nhạc truyền thống Việt Nam và nhạc cổ điển.'
+    loai: ten
+    nguon: [ bai-nhac-ly-cu ]
+    ket_qua: dung
+    ghi_chu: 'Tiêu đề cũ: "28. Kết cấu âm nhạc", "29. Chuỗi hòa âm", "31. Hình thức nhỏ", "Âm học cơ bản"; lich-su/nhac-truyen-thong-viet-nam.md: "Nhạc truyền thống Việt Nam và nhạc cổ điển".'
+  - id: n34
+    cau: Nhánh nhạc lý đi song song với lộ trình nghe, mỗi ngày thêm 20–30 phút; thời gian chỉ là gợi ý.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Cách site xếp lộ trình; không trái trang Thói quen mỗi ngày.
+  - id: n35
+    cau: 'Tháng 1–2, bài 1–4: đọc được tên nốt và đếm được nhịp; đúng 90% nốt khóa Sol và khóa Fa ở công cụ đọc nốt.'
+    loai: so-lieu
+    nguon: [ bai-nhac-ly-cu ]
+    ket_qua: dung
+    ghi_chu: 'Bài cũ 1–4: Cao độ và tên nốt; Khuông nhạc và khóa; Trường độ và dấu lặng; Nhịp và số chỉ nhịp. Mức 90% là mục tiêu của site (lời khuyên).'
+  - id: n36
+    cau: 'Tháng 3–4, bài 5–9: dấu hóa, gam, hóa biểu và quãng; đọc hóa biểu đến 4 dấu hóa, nghe ra 3 trưởng, 5 đúng, 8 đúng, gõ đúng tiết tấu cấp độ 2.'
+    loai: so-lieu
+    nguon: [ bai-nhac-ly-cu, cong-cu-cu ]
+    ket_qua: dung
+    ghi_chu: 'Bài cũ 5–9: Cung, nửa cung và dấu hóa; Gam trưởng; Gam thứ; Hóa biểu và vòng quãng năm; Quãng. Công cụ cũ: rhythm.js có "Cấp độ" 1–4 (cấp 2: "thêm móc đơn, dấu lặng"); bộ "Khởi động" của nghe-quang là 3 trưởng, 5 đúng, 8 đúng. Các mức là mục tiêu của site.'
+  - id: n37
+    cau: 'Tháng 5–7, bài 10–14: hợp âm, hòa âm chức năng, kết và ký hiệu biểu diễn; phân biệt hợp âm trưởng và thứ, thị tấu giai điệu cấp độ 1, ôn thuật ngữ.'
+    loai: so-lieu
+    nguon: [ bai-nhac-ly-cu, cong-cu-cu ]
+    ket_qua: dung
+    ghi_chu: 'Bài cũ 10–14: Hợp âm ba; Hợp âm bảy và thể đảo; Hòa âm chức năng; Kết và câu nhạc; Ký hiệu biểu diễn. sight-reading.js cũ có "Cấp độ" 1–3 (cấp 1: "đen, trắng, bước gần").'
+  - id: n38
+    cau: 'Tháng 8–10, Hình thức & thể loại: nghe một tác phẩm dài mà không bị lạc; nghe Haydn 94 và Mozart 40 với sơ đồ.'
+    loai: so-lieu
+    nguon: [ du-lieu-d20, nav-cu ]
+    ket_qua: dung
+    ghi_chu: 'Nhận định về site. Dữ liệu D2-0: bản ghi haydn-94 và mozart-40 có hinh.nghe (sơ đồ cấu trúc ở hướng dẫn nghe). Menu cũ, mục Hình thức & thể loại: sonata, fugue, chủ đề và biến tấu, rondo… Hướng dẫn nghe lên site ở đợt 6.'
+  - id: n39
+    cau: 'Tháng 11–12, bài 15–20: tiết tấu nâng cao, điệu thức, khóa Đô, âm ngoài hợp âm, át phụ và chuyển giọng, đọc tổng phổ.'
+    loai: ten
+    nguon: [ bai-nhac-ly-cu ]
+    ket_qua: dung
+    ghi_chu: 'Bài cũ 15–20: Tiết tấu nâng cao; Điệu thức và gam ngũ cung; Khóa Đô và dịch giọng; Âm ngoài hợp âm; Át phụ và chuyển giọng; Đọc tổng phổ.'
+  - id: n40
+    cau: 'Năm thứ hai: Âm học, bài 21–32 từ Hòa âm bốn bè; mỗi tháng phân tích một tác phẩm theo quy trình 6 bước.'
+    loai: ten
+    nguon: [ bai-nhac-ly-cu ]
+    ket_qua: dung
+    ghi_chu: 'Bài cũ 21 "Hòa âm bốn bè" mở phần bài 21–32; bài 26 "Phân tích một tác phẩm" có mục "## Quy trình 6 bước" (sáu bước đánh số).'
+  - id: n41
+    cau: 'Suốt năm: luyện tập gần như mỗi ngày và ghi nhật ký luyện tập; nếu có thể, học piano song song theo Lộ trình piano năm đầu.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên; khớp trang Thói quen mỗi ngày và Lộ trình piano năm đầu.
+khuong_nhac: []
+doi_chu:
+  - cu: Được ghi lại bằng bản nhạc, nhưng mỗi người chơi diễn giải một khác. Vì thế một tác phẩm có hàng trăm bản thu, và so sánh chúng là một phần niềm vui.
+    moi: Được ghi lại bằng bản nhạc, nhưng mỗi người chơi diễn giải một khác. Vì thế một tác phẩm có nhiều bản thu, và so sánh chúng là một phần niềm vui.
+    ly_do: 'n3 (da-sua): "hàng trăm bản thu" không có nguồn bậc 2 đếm số bản thu, viết "nhiều bản thu".'
+  - cu: Thường không có lời. Âm nhạc tự kể chuyện bằng giai điệu, hòa âm và màu sắc nhạc cụ. Đọc vài dòng về bối cảnh trước khi nghe cho bạn một điểm bám, và lần thứ ba nghe một tác phẩm luôn hay hơn lần đầu.
+    moi: Thường không có lời. Âm nhạc tự kể chuyện bằng giai điệu, hòa âm và màu sắc nhạc cụ. Đọc vài dòng về bối cảnh trước khi nghe cho bạn một điểm bám, và lần thứ ba nghe một tác phẩm thường hay hơn lần đầu.
+    ly_do: 'n11 (da-sua): "luôn hay hơn" thành "thường hay hơn": độ thích theo số lần nghe theo đường chữ U ngược, không phải lúc nào cũng tăng (Szpunar 2004).'
+  - cu: Thấy chán thường không phải do "không hợp", mà do chưa biết nghe cái gì; phương pháp 4 lần nghe giải quyết đúng chuyện này. YouTube là đủ để bắt đầu; các dịch vụ chuyên nhạc cổ điển có ở Tài nguyên.
+    moi: Thấy chán thường không phải do "không hợp", mà do chưa biết nghe cái gì; phương pháp 4 lần nghe giải quyết đúng chuyện này. Bản thu miễn phí trên mạng là đủ để bắt đầu; các dịch vụ chuyên nhạc cổ điển có ở Tài nguyên.
+    ly_do: "n13 (da-sua): chi tiết mau cũ trên trang Lõi (tên dịch vụ): bỏ tên YouTube, giữ phần trỏ sang Tài nguyên (bao-cao/d2-bang-tang.md, mục 4)."
+  - cu: "Nghe các hướng dẫn còn lại: Bach cello, Mozart Requiem, Schubert Con cá hồi, Brahms 4, Ravel Boléro, Shostakovich 5, Beethoven Op. 132."
+    moi: "Nghe thêm các hướng dẫn khác: Bach cello, Mozart Requiem, Schubert Con cá hồi, Brahms 4, Shostakovich 5, Beethoven Op. 132."
+    ly_do: 'n30 (da-sua): danh sách không phải "các hướng dẫn còn lại" (site có 39 hướng dẫn nghe); Boléro đã có ở tháng 3 nên bỏ ở đây.'
+  - cu: "Nghe trọn mục Nhạc piano (16 hướng dẫn, theo thứ tự thời gian từ Scarlatti đến Gershwin), kèm Các thể loại nhạc piano và Nghệ sĩ piano và bản thu. Muốn tự chơi: Lộ trình piano năm đầu."
+    moi: "Nghe trọn các hướng dẫn nghe nhạc piano, từ Scarlatti đến Gershwin, kèm Các thể loại nhạc piano và Nghệ sĩ piano và bản thu. Muốn tự chơi: Lộ trình piano năm đầu."
+    ly_do: 'n31 (da-sua): bỏ con số viết tay ("16 hướng dẫn": con số về site tính lúc build, plans/ben-vung/README.md) và thứ tự của mục cũ (danh mục mới làm ở đợt 6).'
