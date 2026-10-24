@@ -191,6 +191,8 @@ export function docCu(html) {
 
 /** Khối chữ, khuông nhạc, câu hỏi của trang ở bản build mới. */
 export function docMoi(html) {
+	// nhãn "sắp có" (src/plugins/sap-co.mjs) không phải chữ của trang: bỏ cả nhãn lẫn dấu cách plugin đặt trước nó
+	html = html.replaceAll(' <span class="oz-sap-co-nhan"', '<span class="oz-sap-co-nhan"');
 	const the = catNoiDung(html, (ten, tt) => ten === 'div' && coLop(tt, 'sl-markdown-content'), 'div.sl-markdown-content của bản mới');
 	const bo = (ten, tt) =>
 		ten === 'script' || ten === 'style' || coLop(tt, 'sl-anchor-link') || coLop(tt, 'sr-only') || coLop(tt, 'oz-abc') || coLop(tt, 'oz-quiz') ||
