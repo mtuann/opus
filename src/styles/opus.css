@@ -201,6 +201,38 @@ header.header {
 	.sl-markdown-content .sl-anchor-link::after {
 		inset: min(-0.25rem, calc(50% - 22px)) min(-0.5rem, calc(50% - 22px));
 	}
+	/* Menu bên và mục lục "Trên trang này" (cột phải, và bản thu gọn dưới thanh trên): Starlight để link cao 32–36 px */
+	.sidebar-content a,
+	.sidebar-content summary,
+	.oz-menu-trong,
+	starlight-toc a,
+	mobile-starlight-toc .dropdown a {
+		display: flex;
+		align-items: center;
+		min-height: 44px;
+	}
+	/* ô chọn sáng, tối (thanh trên ở trang không có menu bên, và cuối menu trên điện thoại) */
+	starlight-theme-select select {
+		min-height: 44px;
+	}
+}
+
+/* Trang không có menu bên (mẫu splash: trang chủ, trang 404): trên điện thoại Starlight để ô chọn sáng, tối trong menu,
+   nên trang này không đổi được. Hiện ô ấy ở thanh trên. */
+@media (max-width: 49.99rem) {
+	:root:not([data-has-sidebar]) header.header .right-group {
+		display: flex;
+	}
+}
+
+/* Trình duyệt chưa có Popover API (Safari dưới 17): Starlight không ẩn được menu bên trên điện thoại, nó phủ cả trang.
+   Ẩn menu, nút menu bật, tắt lớp oz-menu-mo (script ở src/components/Sidebar.astro). */
+@supports not selector(:popover-open) {
+	@media (max-width: 49.99rem) {
+		#starlight__sidebar:not(.oz-menu-mo) {
+			display: none;
+		}
+	}
 }
 /* Không có link mạng xã hội (social trong astro.config.mjs) thì Starlight vẫn để ô trống, kèm vạch ngăn (::after) đứng
    lẻ bên trái ô chọn giao diện. Ẩn ô khi trống; có link lại thì vạch tự hiện lại. */
@@ -346,8 +378,13 @@ starlight-theme-select select {
 .sl-markdown-content .oz-muc > li {
 	margin: 0;
 }
-/* Thẻ: trên điện thoại biểu tượng nằm bên trái cho thẻ thấp, đỡ cuộn; từ 2 cột, biểu tượng nằm trên tên */
+/* Thẻ: cả thẻ là link tới trang mở đầu của nhóm (nhóm chưa lên site: chữ kèm nhãn "sắp có", src/plugins/sap-co.mjs).
+   Trên điện thoại biểu tượng nằm bên trái cho thẻ thấp, đỡ cuộn; từ 2 cột, biểu tượng nằm trên tên */
 .oz-the {
+	display: flex;
+}
+.oz-the > :is(a, .oz-sap-co) {
+	flex: 1;
 	display: grid;
 	grid-template-columns: auto 1fr;
 	align-items: center;
@@ -357,6 +394,12 @@ starlight-theme-select select {
 	border-top: 4px solid var(--c);
 	border-radius: 12px;
 	background: var(--oz-card);
+	color: inherit;
+	text-decoration: none;
+}
+.oz-the > a:hover {
+	border-color: var(--c);
+	background: color-mix(in srgb, var(--c) 6%, var(--oz-card));
 }
 .oz-the .oz-icon {
 	grid-row: span 2;
@@ -366,17 +409,21 @@ starlight-theme-select select {
 	line-height: 1.35;
 	color: var(--sl-color-white);
 }
-.oz-the > span:last-child {
+.oz-the b + span {
 	font-size: var(--sl-text-sm);
 	line-height: 1.5;
 	color: var(--sl-color-gray-2);
+}
+.oz-the .oz-sap-co-nhan {
+	grid-column: 2;
+	justify-self: start;
 }
 @media (min-width: 32rem) {
 	.oz-muc {
 		grid-template-columns: repeat(2, 1fr);
 		gap: 1rem;
 	}
-	.oz-the {
+	.oz-the > :is(a, .oz-sap-co) {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -387,6 +434,78 @@ starlight-theme-select select {
 @media (min-width: 64rem) {
 	.oz-muc {
 		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+/* ---------- Trang chủ: ba lối vào theo người đọc (src/content/docs/index.md) ---------- */
+/* Mỗi lối vào là một thẻ có màu của nhóm; các bước đánh số nối nhau bằng một đường dọc */
+.oz-loi-vao {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+}
+.sl-markdown-content .oz-loi-vao > .oz-loi {
+	margin: 0;
+	padding: 0.9rem 1rem 1rem;
+	border: 1px solid var(--sl-color-gray-5);
+	border-top: 4px solid var(--c);
+	border-radius: 12px;
+	background: var(--oz-card);
+}
+.sl-markdown-content .oz-loi > p:first-child {
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
+	margin: 0;
+	font-size: var(--sl-text-lg);
+	line-height: 1.35;
+	color: var(--sl-color-white);
+}
+.sl-markdown-content .oz-loi > ol {
+	margin: 0.8rem 0 0;
+	padding: 0;
+	list-style: none;
+	counter-reset: oz-buoc;
+}
+.sl-markdown-content .oz-loi > ol > li {
+	position: relative;
+	margin: 0;
+	padding: 0 0 0.85rem 2.4rem;
+	counter-increment: oz-buoc;
+}
+.sl-markdown-content .oz-loi > ol > li:last-child {
+	padding-bottom: 0;
+}
+/* số bước trong vòng tròn màu nhóm, đường nối xuống bước sau */
+.oz-loi > ol > li::before {
+	content: counter(oz-buoc);
+	position: absolute;
+	inset-inline-start: 0;
+	top: 0;
+	display: grid;
+	place-items: center;
+	width: 1.7rem;
+	height: 1.7rem;
+	border-radius: 50%;
+	background: var(--sl-color-gray-6);
+	background: color-mix(in srgb, var(--c) 16%, transparent);
+	color: var(--c);
+	font-family: var(--oz-heading);
+	font-weight: 600;
+	font-size: var(--sl-text-sm);
+}
+.oz-loi > ol > li:not(:last-child)::after {
+	content: '';
+	position: absolute;
+	inset-inline-start: calc(0.85rem - 1px);
+	top: 1.85rem;
+	bottom: 0.15rem;
+	width: 2px;
+	background: color-mix(in srgb, var(--c) 35%, transparent);
+}
+@media (min-width: 50rem) {
+	.oz-loi-vao {
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
 

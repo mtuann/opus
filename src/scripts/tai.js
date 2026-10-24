@@ -9,6 +9,9 @@ const LUAT = [
 	['.oz-quiz', () => import('./quiz.js'), true],
 	['.oz-listen', () => import('./nghe.js'), false],
 	['.oz-viec', () => import('./viec.js'), true],
+	['.oz-placement', () => import('./placement.js'), false],
+	// khởi tạo ngay: người học đánh dấu ở danh sách phía trên trước khi cuộn tới ô kết quả, chặng vẫn được lưu
+	['.oz-muc-do', () => import('./muc-do.js'), true],
 ];
 const LE = 600;
 const cho = new Map(); // phần tử đang chờ tới gần màn hình -> hàm khởi tạo (trả về promise)

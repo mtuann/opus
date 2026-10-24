@@ -4,7 +4,9 @@ import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { satteri } from '@astrojs/markdown-satteri';
-import { trangTrongBan } from './src/ban-build.mjs';
+import { DUONG_GOC, chiTrangTrongBan, trangTrongBan } from './src/ban-build.mjs';
+import { duLieuDaKiem } from './src/du-lieu.mjs';
+import { menu } from './src/nhom.mjs';
 import { bangHep } from './src/plugins/bang-hep.mjs';
 import { danhSachViec } from './src/plugins/danh-sach-viec.mjs';
 import { idCu } from './src/plugins/id-cu.mjs';
@@ -13,7 +15,10 @@ import { sapCo } from './src/plugins/sap-co.mjs';
 import { timKiemKhongDau } from './src/tim-kiem/tich-hop.mjs';
 
 const site = 'https://mtuann.github.io';
-const base = '/opus';
+// Tầng của trang (src/data/trang.yml): trang Đọc thêm xếp nhóm theo tầng. Dữ liệu sai thì báo lỗi ngay ở đây, như khi nạp
+// bộ dữ liệu (src/du-lieu.mjs).
+const tang = new Map(duLieuDaKiem().trang.map((r) => [r.id, r.tang]));
+const base = DUONG_GOC.replace(/\/$/, ''); // '/opus'
 
 // Font của màn hình đầu (chữ thường và tiêu đề, bộ latin và vietnamese): nạp trước để chữ hiện đúng font
 // ngay lần vẽ đầu, như overrides/main.html của site cũ.
@@ -37,7 +42,8 @@ export default defineConfig({
 		// Sätteri, bộ xử lý Markdown mặc định của Astro 7 (plans/lam-lai/cong-nghe.md mục 2), cộng plugin của dự án:
 		// khối ```abc, ```quiz và các chỉ thị ::hop-tac-pham… (cú pháp: AGENTS.md, mục "Khối đặc biệt").
 		processor: satteri({
-			mdastPlugins: [opusMarkdown({ base: `${base}/`, docsDir: fileURLToPath(new URL('./src/content/docs/', import.meta.url)) })],
+			// bản thật: trang chưa khóa không qua plugin của dự án (chiTrangTrongBan)
+			mdastPlugins: [chiTrangTrongBan(opusMarkdown({ base: `${base}/`, docsDir: fileURLToPath(new URL('./src/content/docs/', import.meta.url)) }))],
 			// id tiêu đề theo kiểu site cũ, để link #mục cũ vẫn đúng (D1.4), chạy trước plugin id của Starlight;
 			// link tới trang chưa có trong bản build thành chữ "sắp có" (D1.5); danh sách việc "- [ ]" có nhãn, bấm được; bảng
 			// nhiều cột không bị ép ở màn hình hẹp (D2-nền)
@@ -59,6 +65,9 @@ export default defineConfig({
 			// Logo khuông nhạc: bản mực cho nền sáng, bản kem cho nền tối
 			logo: { light: './src/assets/logo-muc.svg', dark: './src/assets/logo.svg' },
 			favicon: '/favicon.svg',
+			// Menu đủ 9 nhóm (src/nhom.mjs), chỉ trang có trong bản build này; nhóm chưa có trang hiện "sắp có"
+			// (src/components/Sidebar.astro). Đang chạy npm run dev mà thêm, xóa trang thì khởi động lại để menu cập nhật.
+			sidebar: menu(trangTrongBan(), tang),
 			// Biểu tượng GitHub (link tới repo): bỏ tạm khi repo còn riêng tư, vì người đọc mở ra trang 404 (chủ repo chọn
 			// 24/10/2026). Repo công khai thì thêm lại: social: [{ icon: 'github', label: 'Mã nguồn trên GitHub', href: … }]
 			customCss: ['./src/styles/fonts.css', './src/styles/opus.css', './src/styles/thanh-phan.css'],
@@ -68,6 +77,7 @@ export default defineConfig({
 				Hero: './src/components/Hero.astro',
 				MarkdownContent: './src/components/MarkdownContent.astro',
 				PageTitle: './src/components/PageTitle.astro',
+				Sidebar: './src/components/Sidebar.astro',
 			},
 			head: [
 				...preloadFonts,
@@ -75,6 +85,12 @@ export default defineConfig({
 				{ tag: 'meta', attrs: { name: 'theme-color', content: '#fbfbf9', media: '(prefers-color-scheme: light)' } },
 				{ tag: 'meta', attrs: { name: 'theme-color', content: '#12161d', media: '(prefers-color-scheme: dark)' } },
 				{ tag: 'link', attrs: { rel: 'apple-touch-icon', href: `${base}/icons/icon-192.png` } },
+				// Ảnh khi chia sẻ link (Facebook, Zalo, X…), như site cũ: tên site trên khuông nhạc, dải phím đàn (public/og.png,
+				// 1200×630; Starlight đã có og:title, og:description, twitter:card)
+				{ tag: 'meta', attrs: { property: 'og:image', content: `${site}${base}/og.png` } },
+				{ tag: 'meta', attrs: { property: 'og:image:width', content: '1200' } },
+				{ tag: 'meta', attrs: { property: 'og:image:height', content: '630' } },
+				{ tag: 'meta', attrs: { property: 'og:image:alt', content: 'Opus: học piano cổ điển từ con số 0' } },
 			],
 		}),
 		// sau Starlight: bọc pagefind.js mà Starlight vừa dựng (gõ "d" thay "đ" vẫn tìm ra)

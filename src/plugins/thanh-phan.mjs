@@ -1,14 +1,20 @@
 // Dựng HTML cho các thành phần trong trang (D1.3), chạy lúc build. Plugin opus-markdown.mjs gọi các hàm ở đây khi gặp
 // khối ```abc, ```quiz hay một chỉ thị (::hop-tac-pham…). Chữ lấy từ dữ liệu và chữ trong câu hỏi là Markdown trong
 // dòng (*nghiêng*, [link](…)), dựng bằng chính Sätteri để giống phần còn lại của trang; thẻ HTML thô không dùng được.
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { markdownToHtml } from 'satteri';
+import { DUONG_GOC, trangCuaDiaChi, trangTrongBan } from '../ban-build.mjs';
+import { chiDaKhoa, duLieuDaKiem } from '../du-lieu.mjs';
+import { docKhoa, truongDaKhoa } from '../khoa.mjs';
 
 export const esc = (s) =>
 	String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 
 /** HTML đã dựng của trang có khối cần JavaScript (khuông nhạc, câu hỏi, khối nghe, danh sách việc) không:
  * MarkdownContent.astro chỉ tải bộ tải thành phần ở những trang này. */
-export const canTaiScript = (html) => /\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec)[\s"]/.test(html);
+export const canTaiScript = (html) => /\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec|oz-placement|oz-muc-do|oz-goi-y)[\s"]/.test(html);
 
 /**
  * Địa chỉ link được dùng trong dữ liệu: trên site (/…, không phải //máy-khác), #mục, http(s), mailto. Khác (như
@@ -232,20 +238,208 @@ function chuaChuyen(loai, ten, trang) {
 	return `<p class="oz-chua-co" data-pagefind-ignore>${esc(loai[0].toUpperCase() + loai.slice(1))} "${esc(ten)}" chưa chuyển sang site mới.</p>`;
 }
 
-/** Hình đã có thành phần: tên (như vùng <!-- fig:tên --> của site cũ) -> hàm dựng HTML. */
-const HINH = {};
+// ---------- Dữ liệu cho thành phần dựng từ dữ liệu ----------
+
+/**
+ * Dữ liệu cho hình, công cụ và trang sinh từ dữ liệu: chặng (cap-do, xếp theo id), tác phẩm, người (theo id). Ở trang đã
+ * khóa, hay với thứ luôn đăng (`luonKhoa`: trang chặng, ô gợi ý tập ở trang chủ), bản ghi chỉ cho đọc trường đã khóa
+ * (chiDaKhoa, src/du-lieu.mjs): đọc trường chưa khóa thì build hỏng (plans/lam-lai/README.md, Quy tắc chung).
+ * @param {string} noi trang đang dựng ("piano/lo-trinh"), hay tên chỗ luôn đăng ("trang chặng 3")
+ */
+export function duLieuCho(noi, { luonKhoa = false, khoa = docKhoa() } = {}) {
+	const daKhoa = luonKhoa || khoa.trang[noi] ? truongDaKhoa(khoa) : null;
+	const ten = luonKhoa ? noi : `trang đã khóa ${noi}`;
+	const boc = (bo) => (r) => (daKhoa ? chiDaKhoa(r, bo, ten, daKhoa) : r);
+	const d = duLieuDaKiem();
+	return {
+		capDo: d['cap-do'].map(boc('cap-do')).sort((a, b) => a.id - b.id),
+		tacPham: d['tac-pham'].map(boc('tac-pham')),
+		nguoi: new Map(d['nha-soan-nhac'].map((r) => [r.id, boc('nha-soan-nhac')(r)])),
+	};
+}
+
+/**
+ * Tên tác phẩm trong danh sách (trang chặng, gợi ý tập): "Tác giả: tên" như các bảng danh sách cũ. Tên giữ nguyên trường
+ * ten, kể cả số danh mục khi ten có (35 bản ghi; số danh mục không ghi thêm lần nữa). Bài khuyết danh, hay gán cho (ten đã
+ * ghi "(gán cho …)"): chỉ tên. Markdown trong dòng, như mọi chữ của dữ liệu.
+ */
+export function tenTrongDanhSach(rec, nguoi) {
+	return rec.khuyet_danh || rec.gan_cho ? rec.ten : tenTacPham(rec, nguoi);
+}
+
+/** Trang chính của bản ghi tác phẩm: bài học (piano/tac-pham/…) hay hướng dẫn nghe (nghe-nhac/…). */
+export const trangTacPham = (rec) => (rec.loai === 'bai-hoc' ? 'piano/tac-pham/' : 'nghe-nhac/') + rec.slug;
+
+/** Grade tương đương của chặng, như trong trang: "≈ Grade 3"; "trước Grade 1", "diploma trở lên" giữ nguyên. */
+export const gradeChang = (c) => (/^Grade/.test(c.tuong_duong) ? `≈ ${c.tuong_duong}` : c.tuong_duong);
+
+/** Địa chỉ trang chặng (sinh ở src/pages/piano/lo-trinh/[chang].astro). */
+export const diaChiChang = (id, base = DUONG_GOC) => `${base}piano/lo-trinh/chang-${id}/`;
+
+/** Trang (địa chỉ /opus/…/) có trong bản build này không; dùng cho link do JavaScript dựng ("sắp có" như sap-co.mjs). */
+export const coTrongBan = (href, trang = trangTrongBan()) => !!trangCuaDiaChi(href, DUONG_GOC, trang);
+
+const TITLE_SAP_CO = 'Trang này sẽ lên site sau khi được kiểm tra lại';
+
+/**
+ * Link dựng ngoài plugin Markdown (trang sinh trong src/pages/): trang chưa có trong bản build thành chữ kèm nhãn "sắp có",
+ * cùng HTML với src/plugins/sap-co.mjs (tests/thanh-phan.test.mjs so hai bên). `chu` là HTML (đã thoát).
+ */
+export function lienKet(href, chu, co = true) {
+	return co
+		? `<a href="${esc(href)}">${chu}</a>`
+		: `<span class="oz-sap-co" data-href="${esc(href)}" title="${TITLE_SAP_CO}">${chu} <span class="oz-sap-co-nhan" data-pagefind-ignore>sắp có</span></span>`;
+}
+
+// ---------- Hình: lộ trình 7 chặng ----------
+
+/**
+ * Sơ đồ 7 chặng (::hinh{ten="lo-trinh"} ở trang lộ trình; đầu mỗi trang chặng), sinh từ cap-do.yml: số, tên, Grade tương
+ * đương, mốc thời gian, thời lượng tập; mỗi chặng dẫn sang trang chặng. Màn hình rộng: bậc thang đi lên; hẹp: danh sách
+ * dọc nối bằng một đường. `hienTai`: chặng của trang đang xem (aria-current). data-sinh: phần sinh từ dữ liệu (so chữ với
+ * site cũ bỏ qua, tests/chuyen.test.mjs).
+ */
+export function hinhLoTrinh(capDo, { hienTai, base = DUONG_GOC } = {}) {
+	const muc = capDo
+		.map(
+			(c) =>
+				`<li style="--i:${c.id}"><a href="${diaChiChang(c.id, base)}"${c.id === hienTai ? ' aria-current="page"' : ''}>` +
+				`<span class="oz-chang-so" aria-hidden="true">${c.id}</span>` +
+				`<span class="oz-chang-chu"><b><span class="oz-chang-n">Chặng ${c.id}. </span>${esc(c.ten)}</b>` +
+				`<span class="oz-chang-grade">${esc(gradeChang(c))}</span>` +
+				`<span class="oz-chang-tg"><span>${esc(c.moc_thoi_gian)}</span> <span>${esc(c.thoi_luong)}</span></span></span></a></li>`,
+		)
+		.join('');
+	return (
+		`<figure class="oz-chang-hinh" data-sinh><ol>${muc}</ol>` +
+		`<figcaption>Mỗi chặng: Grade tương đương (ABRSM), mốc thời gian, thời lượng tập gợi ý.</figcaption></figure>`
+	);
+}
+
+/** Hình đã có thành phần: tên (như vùng <!-- fig:tên --> của site cũ, hay hình mới) -> hàm dựng HTML (trang đang dựng). */
+const HINH = {
+	'lo-trinh': (trang) => hinhLoTrinh(duLieuCho(trang).capDo),
+};
 
 /** ::hinh{ten="…"}: hình minh họa không thuộc bản ghi tác phẩm (vùng <!-- fig:… --> của trang cũ, trừ hình cấu trúc). */
 export function hinh(ten, trang) {
-	return HINH[ten] ? HINH[ten]() : chuaChuyen('hình', ten, trang);
+	return HINH[ten] ? HINH[ten](trang) : chuaChuyen('hình', ten, trang);
 }
 
-/** Công cụ đã có thành phần: tên (như khối <div class="oz-tên"> của site cũ) -> hàm dựng HTML từ thông số. */
-const CONG_CU = {};
+// ---------- Công cụ: bài kiểm tra đầu vào ----------
+
+const DOCS = fileURLToPath(new URL('../content/docs/', import.meta.url));
+
+/**
+ * Khối ```placement của trang (bài kiểm tra nhạc lý, như site cũ): "@ số | tên bài | đường dẫn trong site", rồi các câu
+ * "? câu hỏi", "+ đáp án đúng", "- đáp án sai". Plugin chỉ báo tên công cụ (src/plugins/opus-markdown.mjs), nên đọc khối từ
+ * nguồn của trang; mỗi trang một khối.
+ */
+export function docPlacement(src) {
+	const bai = [];
+	let b = null;
+	let q = null;
+	for (const raw of src.split(/\r?\n/)) {
+		const line = raw.trim();
+		if (!line) continue;
+		const [tag, text] = [line[0], line.slice(1).trim()];
+		if (tag === '@') {
+			const [n, ten, duongDan, ...thua] = text.split('|').map((x) => x.trim());
+			if (!/^\d+$/.test(n ?? '') || !ten || !/^[a-z0-9-]+(\/[a-z0-9-]+)*\/$/.test(duongDan ?? '') || thua.length)
+				throw new Error(`khối placement: dòng "${line}" phải dạng "@ số | tên bài | đường/dẫn/"`);
+			bai.push((b = { n: Number(n), ten, duong_dan: duongDan, cau: [] }));
+			q = null;
+		} else if (tag === '?' && b) b.cau.push((q = { q: text, opts: [] }));
+		else if (q && (tag === '+' || tag === '-')) q.opts.push({ t: text, ok: tag === '+' });
+		else throw new Error(`khối placement: dòng không hiểu "${line}" (dòng mở bằng @, ?, + hoặc -)`);
+	}
+	if (!bai.length) throw new Error('khối placement rỗng');
+	for (const x of bai) {
+		if (!x.cau.length) throw new Error(`khối placement: bài ${x.n} không có câu hỏi`);
+		for (const c of x.cau) if (!c.opts.some((o) => o.ok)) throw new Error(`khối placement: câu "${c.q}" không có đáp án đúng (+)`);
+	}
+	return bai;
+}
+
+/** Khối ```placement của trang `trang` (đọc từ src/content/docs/); trang phải có đúng một khối. */
+function khoiPlacement(trang) {
+	const nguon = fs.readFileSync(path.join(DOCS, `${trang}.md`), 'utf8');
+	const khoi = [...nguon.matchAll(/^```placement[ \t]*\n([\s\S]*?)^```[ \t]*$/gm)].map((m) => m[1]);
+	if (khoi.length !== 1) throw new Error(`trang có ${khoi.length} khối placement; mỗi trang chỉ một khối`);
+	return khoi[0];
+}
+
+/** Bài nhạc lý gợi ý khi đã nắm hết phần nền tảng (như placement.js cũ). */
+const BAI_NANG_CAO = 'nhac-ly/15-tiet-tau-nang-cao/';
+
+/**
+ * Công cụ placement: hỏi lần lượt từng câu (thứ tự lựa chọn trộn, thêm "Tôi chưa biết"), cuối bài có bảng kết quả theo bài
+ * và bài nên bắt đầu; kết quả lưu như site cũ (store.placement). src/scripts/placement.js dựng giao diện từ data-placement:
+ * chữ đã dựng thành HTML, link tới bài kèm cờ có trong bản build chưa (link chưa có hiện "sắp có").
+ */
+export function placement(src) {
+	const ds = trangTrongBan();
+	const lk = (duongDan) => ({ href: DUONG_GOC + duongDan, co: coTrongBan(DUONG_GOC + duongDan, ds) });
+	const data = {
+		bai: docPlacement(src).map((b) => ({
+			n: b.n,
+			ten: md(b.ten),
+			...lk(b.duong_dan),
+			cau: b.cau.map((c) => ({ q: md(c.q), opts: c.opts.map((o) => ({ t: md(o.t), ok: o.ok })) })),
+		})),
+		nang_cao: lk(BAI_NANG_CAO),
+	};
+	return `<div class="oz-placement oz-tool" data-placement="${esc(JSON.stringify(data))}"></div>`;
+}
+
+// ---------- Công cụ: chặng piano của bạn (tự đánh giá ở trang kiểm tra đầu vào) ----------
+
+/** Bài nên bắt đầu ở chặng 1 (trang của site, không phải bản ghi tác phẩm), như SUGGEST[1] của practice.js cũ. */
+const BAT_DAU_CHANG_1 = [
+	['piano/hai-tuan-dau/', 'Hai tuần đầu tiên'],
+	['piano/10-bai-dau-tien/', '10 bài đầu tiên (hai tay)'],
+];
+
+/**
+ * Mỗi chặng: số, tên, Grade, trang chặng, và các bài nên bắt đầu (bản ghi bài học có goi_y ở chặng ấy; chặng 1: Hai tuần
+ * đầu tiên, 10 bài đầu tiên). Dùng cho công cụ chặng piano và ô gợi ý tập ở trang chủ.
+ */
+export function goiYTheoChang({ capDo, tacPham, nguoi }, ds = trangTrongBan()) {
+	const lk = (href, ten) => ({ href, ten, co: coTrongBan(href, ds) });
+	return capDo.map((c) => ({
+		id: c.id,
+		ten: esc(c.ten),
+		grade: esc(gradeChang(c)),
+		trang: lk(diaChiChang(c.id), ''),
+		goi_y:
+			c.id === 1
+				? BAT_DAU_CHANG_1.map(([d, t]) => lk(DUONG_GOC + d, esc(t)))
+				: tacPham.filter((r) => r.loai === 'bai-hoc' && r.chang === c.id && r.goi_y).map((r) => lk(`${DUONG_GOC}${trangTacPham(r)}/`, md(tenTrongDanhSach(r, nguoi)))),
+	}));
+}
+
+/**
+ * Công cụ piano-level (khối oz-piano-level của trang kiểm tra đầu vào, như practice.js cũ): đếm việc đã đánh dấu ở các
+ * danh sách "- [ ]" trong khối; làm được hai trong ba việc của một nhóm là xong chặng ấy. Hiện chặng của bạn và bài nên bắt
+ * đầu; lưu chặng (store.pianoLevel, như site cũ) để trang chủ gợi ý. src/scripts/muc-do.js dựng từ data-chang.
+ */
+export function mucDoPiano(duLieu) {
+	const data = { chang: goiYTheoChang(duLieu), lo_trinh: { href: `${DUONG_GOC}piano/lo-trinh/`, co: coTrongBan(`${DUONG_GOC}piano/lo-trinh/`) } };
+	return `<div class="oz-muc-do oz-tool" aria-live="polite" data-chang="${esc(JSON.stringify(data))}"></div>`;
+}
+
+/** Công cụ đã có thành phần: tên (như khối <div class="oz-tên"> của site cũ) -> hàm dựng HTML (thông số, trang). */
+const CONG_CU = {
+	placement: (_, trang) => placement(khoiPlacement(trang)),
+	'piano-level': (_, trang) => mucDoPiano(duLieuCho(trang)),
+};
 
 /** ::cong-cu{ten="…" …}: công cụ luyện tập; thuộc tính khác là thông số (data-* của khối oz- cũ). */
 export function congCu({ ten, ...thongSo }, trang) {
-	return CONG_CU[ten] ? CONG_CU[ten](thongSo) : chuaChuyen('công cụ', ten, trang);
+	if (!CONG_CU[ten]) return chuaChuyen('công cụ', ten, trang);
+	if ((ten === 'placement' || ten === 'piano-level') && Object.keys(thongSo).length)
+		throw new Error(`công cụ "${ten}" không nhận thông số (${Object.keys(thongSo).join(', ')})`);
+	return CONG_CU[ten](thongSo, trang);
 }
 
 /**

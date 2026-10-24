@@ -1,0 +1,145 @@
+---
+// Thanh bên (menu) của Starlight, dựng lại phần nhóm (D2-L1): 9 nhóm của src/nhom.mjs theo thứ tự menu, mỗi nhóm có biểu
+// tượng và màu của nhóm; nhóm chưa có trang nào trong bản build hiện tên kèm nhãn "sắp có" (không bấm được). Trang trong
+// nhóm do Starlight dựng (SidebarSublist), cấu hình ở astro.config.mjs (menu() của src/nhom.mjs).
+// Thêm: menu trên điện thoại cần Popover API (Safari 17, Chrome 114, Firefox 125); trình duyệt cũ hơn thì nút menu bật,
+// tắt một lớp (oz-menu-mo) và CSS ở src/styles/opus.css hiện, ẩn thanh bên.
+import MobileMenuFooter from 'virtual:starlight/components/MobileMenuFooter';
+import { Icon } from '@astrojs/starlight/components';
+import SidebarPersister from '@astrojs/starlight/components/SidebarPersister.astro';
+import SidebarRestorePoint from '@astrojs/starlight/components/SidebarRestorePoint.astro';
+import SidebarSublist from '@astrojs/starlight/components/SidebarSublist.astro';
+import { NHOM, NHOM_THEM, svgNhom } from '../nhom.mjs';
+
+const { sidebar } = Astro.locals.starlightRoute;
+const theoTen = new Map([...NHOM, NHOM_THEM].map((n) => [n.ten, n]));
+/** Nhóm (hay nhóm con) có trang đang xem. */
+const coTrangDangXem = (e: any): boolean => (e.type === 'link' ? e.isCurrent : e.entries.some(coTrangDangXem));
+---
+
+<SidebarPersister>
+	<ul class="top-level oz-menu">
+		{
+			sidebar.map((e) => {
+				const n = e.type === 'group' ? theoTen.get(e.label) : undefined;
+				if (!n || e.type !== 'group') return <li><SidebarSublist sublist={[e]} nested /></li>;
+				const mau = n.id === 'them' ? '--c: var(--sl-color-gray-3)' : `--c: var(--oz-c-${n.id})`;
+				const ten = (
+					<span class="oz-menu-ten">
+						<span class="oz-icon" set:html={svgNhom(n)} />
+						<span>{n.ten}</span>
+					</span>
+				);
+				return (
+					<li class="oz-menu-nhom" style={mau}>
+						{e.entries.length ? (
+							<details open={coTrangDangXem(e) || !e.collapsed}>
+								<summary>
+									{ten}
+									<Icon name="right-caret" class="caret" size="1.25rem" />
+								</summary>
+								<SidebarRestorePoint />
+								<SidebarSublist sublist={e.entries} nested />
+							</details>
+						) : (
+							<p class="oz-menu-trong" title="Mục này sẽ lên site sau khi được kiểm tra lại">
+								{ten}
+								<span class="oz-sap-co-nhan">sắp có</span>
+							</p>
+						)}
+					</li>
+				);
+			})
+		}
+	</ul>
+</SidebarPersister>
+
+<div class="md:sl-hidden">
+	<MobileMenuFooter />
+</div>
+
+<script>
+	// Trình duyệt chưa có Popover API: nút menu (popovertarget) không làm gì, nên tự bật, tắt thanh bên bằng một lớp
+	if (!HTMLElement.prototype.hasOwnProperty('popover')) {
+		const nut = document.querySelector<HTMLButtonElement>('.sl-menu-button');
+		const ben = document.getElementById('starlight__sidebar');
+		nut?.addEventListener('click', () => {
+			const mo = !ben?.classList.contains('oz-menu-mo');
+			ben?.classList.toggle('oz-menu-mo', mo);
+			nut.setAttribute('aria-expanded', String(mo));
+			document.querySelectorAll<HTMLElement>('.main-frame, .sl-skip-link').forEach((x) => x.toggleAttribute('inert', mo));
+		});
+	}
+</script>
+
+<style>
+	.oz-menu {
+		list-style: none;
+		padding: 0;
+	}
+	.oz-menu > li + li {
+		margin-top: 0.75rem;
+	}
+	.oz-menu summary,
+	.oz-menu-trong {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.5rem;
+		margin: 0;
+		padding: 0.2em 0.5rem;
+		line-height: 1.4;
+	}
+	.oz-menu summary {
+		cursor: pointer;
+		user-select: none;
+	}
+	.oz-menu summary::marker,
+	.oz-menu summary::-webkit-details-marker {
+		display: none;
+	}
+	.oz-menu-ten {
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		font-size: var(--sl-text-lg);
+		font-weight: 600;
+		color: var(--sl-color-white);
+	}
+	.oz-menu .oz-icon {
+		width: 2rem;
+		height: 2rem;
+	}
+	/* Nhóm chưa có trang: chữ nhạt hơn, không bấm được */
+	.oz-menu-trong .oz-menu-ten {
+		color: var(--sl-color-gray-2);
+		font-weight: 500;
+	}
+	.oz-menu .caret {
+		flex-shrink: 0;
+		transition: transform 0.2s ease-in-out;
+	}
+	.oz-menu [open] > summary .caret {
+		transform: rotateZ(90deg);
+	}
+	/* Trang trong nhóm: lùi vào dưới tên nhóm, đường kẻ bên trái theo màu nhóm */
+	.oz-menu details > :global(ul) {
+		margin: 0.25rem 0 0 1.45rem;
+	}
+	.oz-menu details > :global(ul > li) {
+		border-inline-start: 2px solid color-mix(in srgb, var(--c) 40%, transparent);
+		padding-inline-start: 0.5rem;
+	}
+	@media (min-width: 50rem) {
+		.oz-menu > li + li {
+			margin-top: 0.5rem;
+		}
+		.oz-menu-ten {
+			font-size: var(--sl-text-base);
+		}
+		.oz-menu .oz-icon {
+			width: 1.75rem;
+			height: 1.75rem;
+		}
+	}
+</style>

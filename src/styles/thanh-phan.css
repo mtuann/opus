@@ -588,6 +588,249 @@ html.oz-stand-open .main-pane {
 	margin-top: 0;
 }
 
+/* ---------- Lộ trình 7 chặng (::hinh{ten="lo-trinh"}, đầu trang chặng; hinhLoTrinh trong src/plugins/thanh-phan.mjs) ---------- */
+/* Hẹp: danh sách dọc, các số nối bằng một đường. Rộng (khung từ 38rem): bảy bậc thang đi lên, bậc sau cao hơn bậc trước.
+   Nền mỗi chặng đậm dần theo màu của nhóm Lộ trình (--i: số chặng). */
+.sl-markdown-content .oz-chang-hinh,
+.oz-chang-hinh {
+	margin-block: 1rem 1.5rem;
+	container-type: inline-size;
+}
+.oz-chang-hinh ol {
+	display: grid;
+	gap: 0.5rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sl-markdown-content .oz-chang-hinh li {
+	position: relative;
+	margin: 0;
+	max-width: none;
+}
+/* đường nối các số (danh sách dọc) */
+.oz-chang-hinh li + li::before {
+	content: '';
+	position: absolute;
+	inset-block-start: -0.5rem;
+	inset-inline-start: calc(0.75rem + 1.2rem - 1px);
+	width: 2px;
+	height: 0.5rem;
+	background: var(--oz-c-lo-trinh);
+}
+.oz-chang-hinh li > :is(a, .oz-sap-co) {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	gap: 0.15rem 0.8rem;
+	height: 100%;
+	padding: 0.6rem 0.75rem;
+	border: 1px solid color-mix(in srgb, var(--oz-c-lo-trinh) 35%, var(--sl-color-gray-5));
+	border-radius: 12px;
+	background: var(--oz-card);
+	background: color-mix(in srgb, var(--oz-c-lo-trinh) calc(2% + var(--i) * 3.5%), var(--oz-card));
+	color: var(--sl-color-white);
+	text-decoration: none;
+}
+.oz-chang-hinh li > a:hover {
+	border-color: var(--oz-c-lo-trinh);
+}
+.oz-chang-hinh li > a[aria-current='page'] {
+	outline: 3px solid var(--oz-c-lo-trinh);
+	outline-offset: 1px;
+}
+.oz-chang-so {
+	display: grid;
+	place-items: center;
+	width: 2.4rem;
+	height: 2.4rem;
+	border-radius: 50%;
+	background: var(--oz-c-lo-trinh);
+	color: var(--sl-color-black);
+	font-family: var(--oz-heading);
+	font-weight: 600;
+	font-size: var(--sl-text-lg);
+}
+.oz-chang-chu {
+	display: flex;
+	flex-direction: column;
+	gap: 0.1rem;
+	line-height: 1.35;
+}
+.oz-chang-chu b {
+	font-weight: 700;
+}
+.oz-chang-grade {
+	font-weight: 600;
+	font-size: var(--sl-text-sm);
+}
+.oz-chang-tg {
+	font-size: var(--sl-text-sm);
+	color: var(--sl-color-gray-2);
+}
+.oz-chang-tg > span + span::before {
+	content: '· ';
+}
+/* trang chặng chưa lên site (link thành chữ "sắp có"): nhãn nằm ở cột chữ */
+.oz-chang-hinh .oz-sap-co-nhan {
+	grid-column: 2;
+	justify-self: start;
+}
+.sl-markdown-content .oz-chang-hinh figcaption,
+.oz-chang-hinh figcaption {
+	margin-top: 0.5rem;
+	font-size: var(--sl-text-sm);
+	color: var(--sl-color-gray-3);
+}
+@container (min-width: 38rem) {
+	.oz-chang-hinh ol {
+		grid-template-columns: repeat(7, minmax(0, 1fr));
+		align-items: end;
+		gap: 0.35rem;
+	}
+	.oz-chang-hinh li + li::before {
+		display: none;
+	}
+	.oz-chang-hinh li > :is(a, .oz-sap-co) {
+		grid-template-columns: 1fr;
+		align-content: start;
+		align-items: start;
+		min-height: calc(6.5rem + var(--i) * 1.6rem);
+		padding: 0.55rem 0.5rem 0.7rem;
+		border-radius: 10px 10px 4px 4px;
+	}
+	.oz-chang-hinh .oz-sap-co-nhan {
+		grid-column: 1;
+	}
+	/* số chặng đã ở vòng tròn: chữ "Chặng N." chỉ còn cho máy đọc màn hình */
+	.oz-chang-n {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+		white-space: nowrap;
+	}
+	.oz-chang-chu b {
+		font-size: var(--sl-text-sm);
+	}
+	.oz-chang-grade,
+	.oz-chang-tg {
+		font-size: var(--sl-text-xs);
+	}
+	.oz-chang-tg > span {
+		display: block;
+	}
+	.oz-chang-tg > span + span::before {
+		content: none;
+	}
+	.oz-chang-so {
+		width: 2rem;
+		height: 2rem;
+		font-size: var(--sl-text-base);
+	}
+}
+@media print {
+	.oz-chang-hinh li > :is(a, .oz-sap-co) {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+}
+
+/* ---------- Bài kiểm tra đầu vào: phần nhạc lý (src/scripts/placement.js) và chặng piano (src/scripts/muc-do.js) ---------- */
+/* Giữ chỗ trước khi script dựng (tránh xô bố cục): một câu hỏi và hàng nút */
+.oz-placement:empty {
+	min-height: 12rem;
+}
+.oz-muc-do:empty {
+	min-height: 7rem;
+}
+.oz-pl-tien {
+	display: block;
+	width: 100%;
+	height: 0.5rem;
+	margin: 0.3rem 0 0.6rem;
+	accent-color: var(--oz-accent);
+}
+.sl-markdown-content .oz-pl-cau {
+	margin: 0.4rem 0 0;
+	font-size: var(--sl-text-lg);
+}
+.oz-pl-cau:focus {
+	outline: none;
+}
+.oz-pl-nam {
+	color: var(--sl-color-green-high);
+	font-weight: 700;
+}
+.sl-markdown-content .oz-placement table {
+	margin-block: 0.8rem;
+}
+.sl-markdown-content .oz-muc-do {
+	margin-top: 1rem;
+}
+.sl-markdown-content .oz-muc-do > p {
+	margin: 0.3rem 0 0;
+	max-width: none;
+}
+
+/* ---------- Tóm tắt một tờ (bat-dau/tom-tat): hình, và hai mặt A4 khi in như site cũ ---------- */
+.oz-fig {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0.4rem 0;
+}
+.sl-markdown-content .oz-fig-circle {
+	max-width: 300px;
+	margin-inline: auto;
+}
+.oz-sheet .oz-cell {
+	break-inside: avoid;
+}
+/* Hình bàn phím của tờ tóm tắt: ngoặc và chữ "½" vẽ màu nhựa thông #b5832a (3,4:1 trên nền giấy): đổi sang màu nhóm Lộ
+   trình, đủ 4,5:1 ở cả hai chế độ (CSS thắng thuộc tính fill, stroke của SVG) */
+.oz-fig text[fill='#b5832a'] {
+	fill: var(--oz-c-lo-trinh);
+}
+.oz-fig path[stroke='#b5832a'] {
+	stroke: var(--oz-c-lo-trinh);
+}
+@media print {
+	/* mỗi mặt hai cột; mỗi ô là một khối liền, không bị chia đôi giữa hai cột; mặt thứ hai sang trang mới */
+	.oz-sheet-page {
+		columns: 2;
+		column-gap: 8mm;
+		font-size: 8.6pt;
+		line-height: 1.35;
+	}
+	.oz-sheet .oz-cell {
+		display: inline-block;
+		width: 100%;
+		vertical-align: top;
+	}
+	.oz-sheet-page + .oz-sheet-page {
+		break-before: page;
+	}
+	.sl-markdown-content .oz-sheet .oz-cell :is(h2, .sl-heading-wrapper) {
+		margin: 0 0 0.2rem;
+		font-size: 10.5pt;
+	}
+	.sl-markdown-content .oz-sheet .oz-cell * + * {
+		margin-top: 0.2rem;
+	}
+	.sl-markdown-content .oz-sheet table {
+		margin: 0.2rem 0;
+		font-size: 8pt;
+	}
+	.sl-markdown-content .oz-sheet .oz-abc {
+		margin-block: 0.2rem;
+	}
+	.sl-markdown-content .oz-fig-circle {
+		max-width: 62mm;
+	}
+}
+
 /* ---------- Học tiếp ---------- */
 .sl-markdown-content .oz-hoc-tiep li + li {
 	margin-top: 0.4rem;

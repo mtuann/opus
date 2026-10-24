@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { parse } from 'yaml';
-import { NHOM, nhomCuaTrang, svgNhom } from '../src/nhom.mjs';
+import { NHOM, NHOM_THEM, diaChiVao, menu, nhomCuaTrang, nhomMenu, svgNhom } from '../src/nhom.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const CSS = fs.readFileSync(path.join(ROOT, 'src', 'styles', 'opus.css'), 'utf8');
@@ -94,14 +94,60 @@ const trangChu = () => {
 	return fs.readFileSync(f, 'utf8');
 };
 
-test('trang chủ có đủ thẻ nhóm, đúng thứ tự, tên, mô tả, màu và biểu tượng của src/nhom.mjs', () => {
+test('trang chủ có đủ thẻ nhóm, đúng thứ tự, tên, mô tả, màu và biểu tượng của src/nhom.mjs; thẻ dẫn tới trang mở đầu của nhóm', () => {
 	const html = trangChu();
-	const the = [...html.matchAll(/<li class="oz-the" style="--c: var\(--oz-c-([\w-]+)\)"><span class="oz-icon">(.*?)<\/span><b>(.*?)<\/b> <span>(.*?)<\/span><\/li>/g)];
+	// cả thẻ là link; trang mở đầu chưa có trong bản build thì link thành chữ "sắp có" (src/plugins/sap-co.mjs)
+	const the = [
+		...html.matchAll(
+			/<li class="oz-the" style="--c: var\(--oz-c-([\w-]+)\)"><(?:a href="([^"]+)"|span class="oz-sap-co" data-href="([^"]+)"[^>]*)><span class="oz-icon">(.*?)<\/span><b>(.*?)<\/b> <span>(.*?)<\/span>/g,
+		),
+	];
 	assert.deepEqual(
-		the.map((m) => ({ id: m[1], svg: m[2], ten: m[3], mo_ta: m[4] })),
-		NHOM.map((n) => ({ id: n.id, svg: svgNhom(n), ten: n.ten, mo_ta: n.mo_ta })),
+		the.map((m) => ({ id: m[1], href: m[2] ?? m[3], svg: m[4], ten: m[5], mo_ta: m[6] })),
+		NHOM.map((n) => ({ id: n.id, href: diaChiVao(n), svg: svgNhom(n), ten: n.ten, mo_ta: n.mo_ta })),
 		'thẻ ở src/content/docs/index.md khác src/nhom.mjs',
 	);
+	// trang mở đầu của mỗi nhóm thuộc chính nhóm ấy
+	const tang = new Map(parse(fs.readFileSync(path.join(ROOT, 'src', 'data', 'trang.yml'), 'utf8')).map((r) => [r.id, r.tang]));
+	for (const n of NHOM) assert.equal(nhomCuaTrang(n.vao, tang.get(n.vao))?.id, n.id, `trang mở đầu ${n.vao} không thuộc nhóm ${n.id}`);
+	assert.ok(NHOM.every((n) => tang.has(n.vao)), 'trang mở đầu của nhóm phải có trong src/data/trang.yml');
+});
+
+test('menu đủ 9 nhóm theo thứ tự (8 nhóm nội dung và Thêm); trang vào đúng nhóm, theo thứ tự menu cũ; nhóm chưa có trang vẫn có', () => {
+	const m = menu(
+		['nhac-ly/10-hop-am-ba', 'bat-dau/tom-tat', 'bat-dau/index', 'bat-dau/bai-0', 'piano/lo-trinh', 'cap-nhat', 'nhac-cu/violin', 'nhac-cu/dan-nhac', 'index', '404', 'blog/index'],
+		new Map([['nhac-cu/violin', 'ngoai-vi'], ['nhac-cu/dan-nhac', 'loi']]),
+		{ 'lo-trinh': { sau: 'piano/lo-trinh', muc: [{ link: '/piano/lo-trinh/chang-1/', label: 'Chặng 1' }] } },
+	);
+	assert.deepEqual(m.map((g) => g.label), [...NHOM, NHOM_THEM].map((n) => n.ten));
+	const theo = Object.fromEntries(m.map((g) => [g.label, g.items.map((x) => x.slug ?? x.link)]));
+	assert.deepEqual(theo['Bắt đầu'], ['bat-dau', 'bat-dau/bai-0', 'bat-dau/tom-tat'], 'thứ tự như menu cũ; trang mục lục là "Tổng quan"');
+	assert.equal(m[0].items[0].label, 'Tổng quan');
+	assert.deepEqual(theo['Lộ trình 7 chặng'], ['piano/lo-trinh', '/piano/lo-trinh/chang-1/']);
+	assert.deepEqual(theo['Đọc thêm'], ['nhac-cu/violin']);
+	assert.deepEqual(theo['Nhạc cổ điển'], ['nhac-cu/dan-nhac']);
+	assert.deepEqual(theo['Thêm'], ['blog', 'cap-nhat']);
+	assert.deepEqual(theo['Piano'], [], 'nhóm chưa có trang: items rỗng');
+	assert.equal(nhomMenu('index'), undefined);
+	assert.ok(m.every((g) => g.collapsed));
+});
+
+test('thanh bên của bản build: đủ 9 nhóm, nhóm chưa có trang hiện "sắp có", nhóm có trang có link', (t) => {
+	const f = fs.readdirSync(DIST, { recursive: true }).find((x) => x.endsWith('.html') && fs.readFileSync(path.join(DIST, x), 'utf8').includes('id="starlight__sidebar"'));
+	if (!f) return t.skip('bản build chưa có trang nào có menu bên');
+	const html = fs.readFileSync(path.join(DIST, f), 'utf8');
+	// Astro thêm lớp của phạm vi CSS (astro-…) vào mọi thẻ của thành phần
+	const menuBen = html.slice(html.indexOf('<ul class="top-level oz-menu'), html.indexOf('</sl-sidebar-state-persist>'));
+	const nhom = menuBen
+		.split(/<li class="oz-menu-nhom[ "]/)
+		.slice(1)
+		.map((m) => ({
+			ten: /<span class="oz-menu-ten[^"]*">[\s\S]*?<\/svg><\/span><span[^>]*>([^<]+)<\/span>/.exec(m)?.[1],
+			sapCo: /class="oz-menu-trong[ "]/.test(m) && m.includes('sắp có'),
+			link: (m.match(/<a href=/g) ?? []).length,
+		}));
+	assert.deepEqual(nhom.map((n) => n.ten), [...NHOM, NHOM_THEM].map((n) => n.ten));
+	for (const n of nhom) assert.ok(n.sapCo !== n.link > 0, `nhóm ${n.ten}: ${n.link} link mà ${n.sapCo ? 'có' : 'không có'} nhãn "sắp có"`);
 });
 
 test('thanh trên có logo hai bản: mực cho nền sáng, kem cho nền tối', () => {

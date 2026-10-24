@@ -2,10 +2,14 @@
 // bản xem (npm run build:xem, npm run dev): mọi trang trong src/content/docs/. Link tới trang không có trong bản build
 // hiện chữ "sắp có" (src/plugins/sap-co.mjs).
 import fs from 'node:fs';
+import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { ban, docKhoa } from './khoa.mjs';
 
 const DOCS = fileURLToPath(new URL('./content/docs/', import.meta.url));
+
+/** Đường dẫn gốc của site, có "/" ở cuối (base của astro.config.mjs): link do thành phần dựng lúc build viết từ đây. */
+export const DUONG_GOC = '/opus/';
 
 /** Mọi trang trong src/content/docs/, như "nhac-ly/10-hop-am-ba", "nhac-ly/index", "index", kể cả "404". */
 export function tatCaTrang() {
@@ -54,5 +58,26 @@ export function locTheoBan(loader) {
 				if (t && !(t in khoa)) ctx.store.delete(id);
 			}
 		},
+	};
+}
+
+/**
+ * Bọc plugin Markdown (mdast) của dự án: ở bản thật, trang chưa khóa không qua plugin. Bộ nạp của Starlight dựng mọi trang
+ * rồi locTheoBan mới bỏ trang chưa khóa, nên không bọc thì lỗi cú pháp ở một trang chưa khóa (không lên site) làm hỏng
+ * bản build đăng lên site, và log in cảnh báo [opus] của trang ấy (review cuối đợt 1, d1.md "Việc còn mở"; D2-L1 làm).
+ * Trang không đọc được đường dẫn (gọi thẳng Sätteri, như trong kiểm thử) thì vẫn qua plugin.
+ * @param {(ctx: { fileURL?: URL }) => object} plugin
+ */
+const BO = () => ({ type: 'html', value: '' });
+
+export function chiTrangTrongBan(plugin, docsDir = DOCS) {
+	return (ctx) => {
+		if (ban() !== 'xem' && ctx?.fileURL) {
+			const trang = path.relative(docsDir, fileURLToPath(ctx.fileURL)).replace(/\\/g, '/').replace(/\.mdx?$/, '');
+			// trang sẽ bị bỏ: khối mã và chỉ thị thành chỗ trống, để Expressive Code không dựng khối ```abc, ```quiz (và báo
+			// "không có ngôn ngữ") cho trang không đăng
+			if (!(trang in docKhoa().trang)) return { name: 'opus-bo-qua-trang-chua-khoa', code: BO, leafDirective: BO };
+		}
+		return plugin(ctx);
 	};
 }
