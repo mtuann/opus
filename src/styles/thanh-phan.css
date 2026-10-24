@@ -730,11 +730,112 @@ html.oz-stand-open .main-pane {
 		font-size: var(--sl-text-base);
 	}
 }
+/* Trang chặng, khung hẹp: một hàng 7 vòng số nối bằng một đường, chặng đang xem có viền; tên và số liệu của từng chặng
+   chỉ còn cho máy đọc màn hình (số liệu của chặng đang xem nằm ngay dưới hình) */
+@container (width < 38rem) {
+	.oz-chang-hinh--gon ol {
+		grid-template-columns: repeat(7, minmax(0, 1fr));
+		gap: 0.2rem;
+		background: linear-gradient(var(--oz-c-lo-trinh), var(--oz-c-lo-trinh)) center / calc(100% - 2.75rem) 2px no-repeat;
+	}
+	.oz-chang-hinh--gon li + li::before {
+		display: none;
+	}
+	/* link đúng bằng vòng số (44 px): viền của chặng đang xem và viền khi chọn bằng bàn phím là một vòng tròn */
+	.oz-chang-hinh--gon li > :is(a, .oz-sap-co) {
+		display: grid;
+		grid-template-columns: 1fr;
+		place-items: center;
+		margin-inline: auto;
+		width: 2.75rem;
+		height: 2.75rem;
+		padding: 0;
+		border: 0;
+		border-radius: 50%;
+		background: none;
+	}
+	.oz-chang-hinh--gon .oz-chang-so {
+		width: 2.75rem;
+		height: 2.75rem;
+	}
+	/* chặng khác nhạt hơn chặng đang xem */
+	.oz-chang-hinh--gon li > a:not([aria-current]) .oz-chang-so {
+		background: color-mix(in srgb, var(--oz-c-lo-trinh) 35%, var(--oz-card));
+		color: var(--sl-color-white);
+	}
+	.oz-chang-hinh--gon :is(.oz-chang-chu, figcaption) {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+		white-space: nowrap;
+	}
+}
 @media print {
 	.oz-chang-hinh li > :is(a, .oz-sap-co) {
 		-webkit-print-color-adjust: exact;
 		print-color-adjust: exact;
 	}
+}
+
+/* ---------- Trang chặng (src/pages/piano/lo-trinh/[chang].astro): ba số liệu của chặng, danh sách bài ---------- */
+.sl-markdown-content .oz-chang-so-lieu {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin: 1rem 0 0;
+	padding: 0;
+}
+.sl-markdown-content .oz-chang-so-lieu > div {
+	flex: 1 1 8.5rem;
+	margin: 0;
+	padding: 0.45rem 0.75rem;
+	border-inline-start: 4px solid var(--oz-c-lo-trinh);
+	border-radius: 4px;
+	background: var(--oz-card);
+	background: color-mix(in srgb, var(--oz-c-lo-trinh) 10%, var(--oz-card));
+}
+.sl-markdown-content .oz-chang-so-lieu :is(dt, dd) {
+	margin: 0;
+	padding: 0;
+}
+.sl-markdown-content .oz-chang-so-lieu dt {
+	font-size: var(--sl-text-sm);
+	font-weight: 400;
+	color: var(--sl-color-gray-2);
+}
+.sl-markdown-content .oz-chang-so-lieu dd {
+	font-weight: 600;
+}
+.sl-markdown-content .oz-chang-bai > li + li {
+	margin-top: 0.4rem;
+}
+.oz-chang-bai-grade {
+	white-space: nowrap;
+	font-size: var(--sl-text-sm);
+	color: var(--sl-color-gray-2);
+}
+
+/* ---------- Ô gợi ý tập ở trang chủ (goiYTap trong src/plugins/thanh-phan.mjs, src/scripts/goi-y.js) ---------- */
+.sl-markdown-content .oz-goi-y {
+	border-inline-start: 4px solid var(--oz-c-lo-trinh);
+}
+.sl-markdown-content .oz-goi-y > * {
+	margin: 0;
+	max-width: none;
+}
+.sl-markdown-content .oz-goi-y > * + * {
+	margin-top: 0.45rem;
+}
+.sl-markdown-content .oz-goi-y > .oz-goi-y-bai {
+	margin-top: 0.2rem;
+}
+.sl-markdown-content .oz-goi-y-bai > li + li {
+	margin-top: 0.3rem;
+}
+.oz-khong-ngat {
+	white-space: nowrap;
 }
 
 /* ---------- Bài kiểm tra đầu vào: phần nhạc lý (src/scripts/placement.js) và chặng piano (src/scripts/muc-do.js) ---------- */

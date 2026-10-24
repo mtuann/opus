@@ -1,12 +1,14 @@
 // Kiểm thử thành phần của lô D2-L1: sơ đồ 7 chặng (::hinh{ten="lo-trinh"}), bài kiểm tra đầu vào (khối ```placement), chặng
-// piano tự đánh giá (::cong-cu{ten="piano-level"}), tên tác phẩm trong danh sách, link do JavaScript dựng ("sắp có" như link
-// dựng lúc build), và bọc plugin ở bản thật (trang chưa khóa không qua plugin). Chạy thẳng hàm và Sätteri, không cần build.
+// piano tự đánh giá (::cong-cu{ten="piano-level"}), ô gợi ý tập ở trang chủ (::cong-cu{ten="goi-y-tap"}), tên tác phẩm trong
+// danh sách, link do JavaScript dựng ("sắp có" như link dựng lúc build), trang chặng trong danh sách trang của bản build, và
+// bọc plugin ở bản thật (trang chưa khóa không qua plugin). Chạy thẳng hàm và Sätteri, không cần build; trang chặng và ô gợi ý
+// trên bản build: tests/trang-chang.test.mjs.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { markdownToHtml } from 'satteri';
-import { chiTrangTrongBan } from '../src/ban-build.mjs';
+import { chiTrangTrongBan, trangChang, trangDocsTrongBan, trangTrongBan } from '../src/ban-build.mjs';
 import { chiDaKhoa, duLieuDaKiem } from '../src/du-lieu.mjs';
 import { sapCo } from '../src/plugins/sap-co.mjs';
 import { opusMarkdown } from '../src/plugins/opus-markdown.mjs';
@@ -15,6 +17,8 @@ import {
 	congCu,
 	docPlacement,
 	duLieuCho,
+	ganDung,
+	goiYTap,
 	goiYTheoChang,
 	gradeChang,
 	hinh,
@@ -24,6 +28,7 @@ import {
 	tenTrongDanhSach,
 } from '../src/plugins/thanh-phan.mjs';
 import { lienKet as lienKetJs } from '../src/scripts/lien-ket.js';
+import { dungGoiY } from '../src/scripts/goi-y.js';
 import { tinhChang } from '../src/scripts/muc-do.js';
 import { ketQua } from '../src/scripts/placement.js';
 
@@ -53,6 +58,26 @@ test('Grade của chặng như trong trang: "≈ Grade 3"; trước Grade 1 và 
 	assert.equal(gradeChang({ tuong_duong: 'Grade 3' }), '≈ Grade 3');
 	assert.equal(gradeChang({ tuong_duong: 'trước Grade 1' }), 'trước Grade 1');
 	assert.equal(gradeChang({ tuong_duong: 'diploma trở lên' }), 'diploma trở lên');
+	// Grade của bài (trường grade của tac-pham.yml) như chip cấp độ của bài học
+	assert.equal(ganDung('Grade 8 trở lên'), '≈ Grade 8 trở lên');
+	assert.equal(ganDung('Sau Grade 8'), 'Sau Grade 8');
+});
+
+test('trang chặng có trong danh sách trang của mọi bản build (link tới trang chặng không thành "sắp có"); menu đọc trang docs riêng', () => {
+	const chang = duLieuDaKiem()['cap-do'].map((c) => `piano/lo-trinh/chang-${c.id}`).sort();
+	assert.deepEqual(trangChang(), chang);
+	const cu = process.env.OPUS_BAN;
+	try {
+		for (const b of [undefined, 'xem']) {
+			if (b === undefined) delete process.env.OPUS_BAN;
+			else process.env.OPUS_BAN = b;
+			assert.deepEqual(trangTrongBan(), [...trangDocsTrongBan(), ...chang]);
+			assert.ok(!trangDocsTrongBan().some((t) => t.includes('/chang-')));
+		}
+	} finally {
+		if (cu === undefined) delete process.env.OPUS_BAN;
+		else process.env.OPUS_BAN = cu;
+	}
 });
 
 test('sơ đồ 7 chặng: mỗi chặng tên, Grade, mốc thời gian, thời lượng từ cap-do.yml, dẫn sang trang chặng; chặng đang xem có aria-current', () => {
@@ -65,6 +90,9 @@ test('sơ đồ 7 chặng: mỗi chặng tên, Grade, mốc thời gian, thời 
 	);
 	assert.match(html, /^<figure class="oz-chang-hinh" data-sinh>/, 'data-sinh: so chữ với site cũ bỏ qua phần sinh từ dữ liệu');
 	assert.equal(hinh('lo-trinh', 'piano/lo-trinh'), hinhLoTrinh(capDo));
+	// trang chặng: bản gọn (màn hẹp: một hàng vòng số), cùng nội dung
+	const gon = hinhLoTrinh(capDo, { hienTai: 3, gon: true });
+	assert.equal(gon.replace(' oz-chang-hinh--gon', ''), html);
 });
 
 test('trang đã khóa: hình và công cụ dựng từ dữ liệu chỉ đọc trường đã khóa; thứ luôn đăng (luonKhoa) thì luôn chặn', () => {
@@ -137,6 +165,47 @@ test('công cụ piano-level: mỗi chặng tên, Grade, trang chặng, bài nê
 	assert.equal(chang[2].trang.href, '/opus/piano/lo-trinh/chang-3/');
 	assert.equal(lo_trinh.href, '/opus/piano/lo-trinh/');
 	assert.ok(canTaiScript(html));
+});
+
+test('ô gợi ý tập: dữ liệu theo chặng (goi_y, chang), luôn đăng nên chỉ đọc trường đã khóa; phần dựng sẵn mời làm bài kiểm tra', () => {
+	const ds = ['bat-dau/kiem-tra-dau-vao', 'nhac-ly/index', 'nhac-ly/10-hop-am-ba', 'piano/lo-trinh/chang-3'];
+	const html = goiYTap(duLieuCho('thử', { luonKhoa: true }), ds);
+	assert.match(html, /^<div class="oz-goi-y oz-tool" data-goi-y="/);
+	assert.ok(canTaiScript(html));
+	assert.match(html, /<strong>Chưa có chặng của bạn\.<\/strong> Làm <a href="\/opus\/bat-dau\/kiem-tra-dau-vao\/">bài kiểm tra đầu vào<\/a>/);
+	const d = json(html, 'data-goi-y');
+	assert.deepEqual(d.chang, goiYTheoChang(duLieuCho('thử'), ds));
+	assert.deepEqual([d.kiem_tra, d.nhac_ly, d.nang_cao], [
+		{ href: '/opus/bat-dau/kiem-tra-dau-vao/', co: true },
+		{ href: '/opus/nhac-ly/', co: true },
+		{ href: '/opus/nhac-ly/15-tiet-tau-nang-cao/', co: false },
+	]);
+	assert.deepEqual(d.bai_nhac_ly, ['/opus/nhac-ly/10-hop-am-ba/']);
+	// luôn đăng: bản ghi chưa khóa thì build hỏng, dù không có trang nào khóa
+	const caCapDo = Object.fromEntries(duLieuDaKiem()['cap-do'].map((c) => [`cap-do/${c.id}`, 'x']));
+	assert.throws(() => goiYTap(duLieuCho('ô gợi ý tập ở trang chủ', { luonKhoa: true, khoa: { trang: {}, ban_ghi: caCapDo } }), ds), /ô gợi ý tập ở trang chủ hiện trường chưa khóa du-lieu\/tac-pham\//);
+	assert.equal(congCu({ ten: 'goi-y-tap' }, 'index'), goiYTap());
+	assert.throws(() => congCu({ ten: 'goi-y-tap', chang: '3' }, 'index'), /không nhận thông số/);
+});
+
+test('ô gợi ý tập trong trình duyệt: chặng và bài nhạc lý đã lưu (site mới, site cũ); dữ liệu hỏng thì bỏ qua', () => {
+	const d = json(goiYTap(duLieuCho('thử', { luonKhoa: true }), ['nhac-ly/index', 'nhac-ly/04-nhip', 'piano/lo-trinh/chang-3']), 'data-goi-y');
+	assert.equal(dungGoiY(d, null, null), null, 'chưa lưu gì: giữ phần dựng sẵn');
+	assert.equal(dungGoiY(d, { stage: '3' }, { start: 'x' }), null, 'chặng không phải số, bài không phải số');
+	assert.equal(dungGoiY(d, { stage: 9 }, null), null, 'chặng ngoài 1–7');
+	const c3 = dungGoiY(d, { stage: 3, date: '2026-10-20' }, null);
+	assert.match(c3, /Chặng của bạn: <a href="\/opus\/piano\/lo-trinh\/chang-3\/">3\. Sơ trung cấp<\/a><\/strong> \(<span class="oz-khong-ngat">≈ Grade 3<\/span>\)/);
+	const goiY = d.chang[2].goi_y;
+	assert.ok(goiY.length > 0);
+	for (const x of goiY) assert.ok(c3.includes(lienKetJs(x.href, x.ten, x.co)), `thiếu bài nên bắt đầu ${x.href}`);
+	assert.doesNotMatch(c3, /Nhạc lý:/);
+	// bài nhạc lý lưu ở site mới: tên và địa chỉ; có trong bản build thì là link, chưa có thì "sắp có"
+	assert.match(dungGoiY(d, null, { start: 4, ten: 'Nhịp <b>', href: '/opus/nhac-ly/04-nhip/' }), /Chưa có chặng piano của bạn[\s\S]*<strong>Nhạc lý:<\/strong> bắt đầu từ <a href="\/opus\/nhac-ly\/04-nhip\/">bài 4: Nhịp &lt;b&gt;<\/a>\./);
+	assert.match(dungGoiY(d, null, { start: 5, ten: 'Quãng', href: '/opus/nhac-ly/05-quang/' }), /<span class="oz-sap-co" data-href="\/opus\/nhac-ly\/05-quang\/"[^>]*>bài 5: Quãng <span class="oz-sap-co-nhan"/);
+	// site cũ chỉ lưu số bài; địa chỉ lạ thì không dùng
+	for (const lop of [{ start: 4 }, { start: 4, href: 'javascript:alert(1)' }, { start: 4, href: '/opus/piano/gam/' }, { start: 4, href: '/opus/nhac-ly/../x/' }])
+		assert.match(dungGoiY(d, null, lop), /bắt đầu từ bài 4 \(<a href="\/opus\/nhac-ly\/">các bài nhạc lý<\/a>\)\./, JSON.stringify(lop));
+	assert.match(dungGoiY(d, { stage: 7 }, { start: 'done' }), /bạn đã nắm phần nền tảng; tiếp với <span class="oz-sap-co" data-href="\/opus\/nhac-ly\/15-tiet-tau-nang-cao\/"/);
 });
 
 test('bản thật: trang chưa khóa không qua plugin của dự án (lỗi cú pháp không làm hỏng bản build đăng lên site); bản xem thì có', () => {

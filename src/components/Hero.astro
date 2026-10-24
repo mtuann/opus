@@ -2,11 +2,21 @@
 // Phần đầu của trang có `hero` (trang chủ và trang 404, src/content/docs/404.md): tên site nằm trên khuông nhạc như
 // .oz-hero của site cũ, dưới là dải phím đàn như ảnh chia sẻ cũ (og.png), tất cả trên một dải màu mực tràn ngang, ở
 // cả hai chế độ. Đọc hero.title, hero.tagline, hero.actions; bỏ qua hero.image.
+import { getCollection } from 'astro:content';
 import { LinkButton } from '@astrojs/starlight/components';
 import DraftContentNotice from '@astrojs/starlight/components/DraftContentNotice.astro';
+import { laFile, trangCuaDiaChi, trangCuaMuc } from '../ban-build.mjs';
 
 const { data } = Astro.locals.starlightRoute.entry;
-const { title = data.title, tagline, actions = [] } = data.hero || {};
+const { title = data.title, tagline, actions: tatCaNut = [] } = data.hero || {};
+// Nút trỏ tới trang chưa có trong bản build (bản thật: trang chưa khóa) thì không hiện, như link "sắp có" trong nội dung:
+// trang chủ có thể lên site trước các trang mà nút dẫn tới. Trang có trong bản build: bộ docs và 7 trang chặng.
+const goc = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const trangCo = [
+	...(await getCollection('docs')).map(trangCuaMuc).filter(Boolean),
+	...(await getCollection('cap-do')).map((c) => `piano/lo-trinh/chang-${c.data.id}`),
+];
+const actions = tatCaNut.filter(({ link }) => !link.startsWith(goc) || laFile(link) || trangCuaDiaChi(link, goc, trangCo));
 
 // Bàn phím 88 phím, từ A0 đến C8: 52 phím trắng, phím đen nằm sau các phím trắng A, C, D, F, G.
 const W = 24;

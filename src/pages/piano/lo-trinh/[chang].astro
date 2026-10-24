@@ -1,0 +1,101 @@
+---
+// Trang chặng (D2-L1): 7 trang /opus/piano/lo-trinh/chang-1/ … chang-7/, sinh từ dữ liệu, có ở mọi bản build (luôn đăng):
+// sơ đồ 7 chặng có chặng đang xem; Grade tương đương, mốc thời gian, thời lượng tập (cap-do.yml); các bài học tác phẩm của
+// chặng (tac-pham.yml: bài học có chang này, bài nên bắt đầu theo goi_y; chặng 1 chưa có bài học tác phẩm: Hai tuần đầu
+// tiên, 10 bài đầu tiên), bài chưa lên site hiện "sắp có"; link tới mục của chặng ở trang lộ trình (mục tiêu từng mảng,
+// danh sách kiểm tra). Luôn đăng nên chỉ đọc trường đã khóa (chiDaKhoa): đọc trường chưa khóa thì build hỏng. Không có
+// nhận định: chữ cố định là nhãn, mọi thông tin lấy từ dữ liệu đã kiểm định.
+// Trước, sau: Starlight tự dựng theo menu (trang chặng nằm ngay sau trang lộ trình: menu() trong src/nhom.mjs).
+// Trang được Vite gói lại khi build, nên không đọc file theo đường dẫn: dữ liệu và trang lấy từ content collections,
+// khoa.json qua import.meta.glob (như PageTitle.astro).
+import { getCollection, render } from 'astro:content';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { DUONG_GOC, trangCuaMuc } from '../../../ban-build.mjs';
+import { chiDaKhoa } from '../../../du-lieu.mjs';
+import { truongDaKhoa } from '../../../khoa.mjs';
+import {
+	BAT_DAU_CHANG_1,
+	coTrongBan,
+	esc,
+	ganDung,
+	gradeChang,
+	hinhLoTrinh,
+	lienKet,
+	md,
+	tenTrongDanhSach,
+	trangTacPham,
+} from '../../../plugins/thanh-phan.mjs';
+
+export async function getStaticPaths() {
+	return (await getCollection('cap-do')).map((c) => ({ params: { chang: `chang-${c.data.id}` }, props: { id: c.data.id } }));
+}
+
+const { id } = Astro.props;
+const KHOA = Object.values(import.meta.glob('/kiem-dinh/khoa.json', { eager: true, import: 'default' }))[0] ?? {};
+const daKhoa = truongDaKhoa({ trang: KHOA.trang ?? {}, ban_ghi: KHOA.ban_ghi ?? {} });
+const noi = `trang chặng ${id}`;
+const boc = (bo) => (e) => chiDaKhoa(e.data, bo, noi, daKhoa);
+const capDo = (await getCollection('cap-do')).map(boc('cap-do')).sort((a, b) => a.id - b.id);
+const tacPham = (await getCollection('tac-pham')).map(boc('tac-pham'));
+const nguoi = new Map((await getCollection('nha-soan-nhac')).map((e) => [e.data.id, boc('nha-soan-nhac')(e)]));
+const c = capDo.find((x) => x.id === id);
+const bai = tacPham.filter((r) => r.loai === 'bai-hoc' && r.chang === id);
+const nenBatDau = bai.filter((r) => r.goi_y);
+const khac = bai.filter((r) => !r.goi_y);
+
+// Trang có trong bản build này: trang của bộ docs (bản thật đã bỏ trang chưa khóa) và 7 trang chặng
+const docs = await getCollection('docs');
+const trangCo = [...docs.map(trangCuaMuc).filter(Boolean), ...capDo.map((x) => `piano/lo-trinh/chang-${x.id}`)];
+const lk = (href, chu) => lienKet(href, chu, coTrongBan(href, trangCo));
+
+/** Một bài học: link (hay "sắp có" khi trang chưa lên site) và Grade tương đương. */
+const dong = (r) => `<li>${lk(`${DUONG_GOC}${trangTacPham(r)}/`, md(tenTrongDanhSach(r, nguoi)))} <span class="oz-chang-bai-grade">${esc(ganDung(r.grade))}</span></li>`;
+
+// Mục của chặng ở trang lộ trình: id của tiêu đề "Chặng N. …" như trang ấy dựng (trang chưa lên thì "sắp có")
+const loTrinh = docs.find((e) => trangCuaMuc(e) === 'piano/lo-trinh');
+const muc = loTrinh && (await render(loTrinh)).headings.find((h) => h.depth === 2 && h.text.startsWith(`Chặng ${id}.`));
+const lienKetMuc = lienKet(`${DUONG_GOC}piano/lo-trinh/${muc ? `#${muc.slug}` : ''}`, `mục chặng ${id} của lộ trình piano`, !!loTrinh);
+
+const title = `Chặng ${id}. ${c.ten}`;
+const description =
+	`Chặng ${id} của lộ trình piano: ${c.ten}, ${gradeChang(c)} (ABRSM), ${c.moc_thoi_gian}, tập ${c.thoi_luong}. ` +
+	(bai.length ? 'Các bài học tác phẩm của chặng và bài nên bắt đầu.' : 'Bài nên bắt đầu.');
+---
+
+<StarlightPage frontmatter={{ title, description, tableOfContents: false }}>
+	<Fragment set:html={hinhLoTrinh(capDo, { hienTai: id, gon: true })} />
+	<dl class="oz-chang-so-lieu">
+		<div><dt>Tương đương (ABRSM)</dt><dd>{gradeChang(c)}</dd></div>
+		<div><dt>Mốc thời gian</dt><dd>{c.moc_thoi_gian}</dd></div>
+		<div><dt>Thời lượng tập</dt><dd>{c.thoi_luong}</dd></div>
+	</dl>
+	<p set:html={`Tay, gam, đọc nhạc, nhạc lý và tai cần học gì, khi nào sẵn sàng đi tiếp: ${lienKetMuc}.`} />
+	{
+		bai.length === 0 ? (
+			<>
+				<h2 id="nen-bat-dau">Nên bắt đầu</h2>
+				{id === 1 ? (
+					<ul class="oz-chang-bai" set:html={BAT_DAU_CHANG_1.map(([d, t]) => `<li>${lk(DUONG_GOC + d, esc(t))}</li>`).join('')} />
+				) : (
+					<p>Chặng này chưa có bài học tác phẩm.</p>
+				)}
+			</>
+		) : (
+			<>
+				<h2 id="bai-hoc">Bài học tác phẩm</h2>
+				{nenBatDau.length > 0 && (
+					<>
+						<h3 id="nen-bat-dau">Nên bắt đầu</h3>
+						<ul class="oz-chang-bai" set:html={nenBatDau.map(dong).join('')} />
+					</>
+				)}
+				{khac.length > 0 && (
+					<>
+						<h3 id="bai-khac">{nenBatDau.length ? 'Bài khác của chặng' : 'Các bài của chặng'}</h3>
+						<ul class="oz-chang-bai" set:html={khac.map(dong).join('')} />
+					</>
+				)}
+			</>
+		)
+	}
+</StarlightPage>

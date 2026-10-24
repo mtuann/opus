@@ -14,6 +14,7 @@ const QUIZ = trangCo('oz-quiz');
 const VIEC = trangCo('task-list-item oz-viec');
 const PLACEMENT = trangCo('oz-placement');
 const MUC_DO = trangCo('oz-muc-do');
+const GOI_Y = trangCo('oz-goi-y');
 /** Trang mẫu có menu bên (không phải trang splash, trang 404). */
 const CO_MENU = TRANG.filter((t) => !t.endsWith('.html') && fs.readFileSync(path.join(DIST, t, 'index.html'), 'utf8').includes('id="starlight__sidebar"'));
 /** Kho học trong trình duyệt (opus-zero:v1). */
@@ -223,6 +224,48 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 			}
 			await p.waitForFunction(() => /Chặng của bạn: 2\./.test(document.querySelector('.oz-muc-do')?.textContent ?? ''), null, { timeout: 5000 });
 			assert.equal((await kho(p)).pianoLevel?.stage, 2);
+			// trang chủ đọc chặng vừa lưu
+			if (GOI_Y.includes('')) {
+				await p.goto(await goc(), { waitUntil: 'load' });
+				await p.waitForFunction(() => /Chặng của bạn: 2\./.test(document.querySelector('.oz-goi-y')?.textContent ?? ''), null, { timeout: 20000 });
+			}
+			await ctx.close();
+		} finally {
+			await trinhDuyet.close();
+		}
+	});
+
+	// D2-L1: ô gợi ý tập ở trang chủ (goi-y.js)
+	test(`${ten}: ô gợi ý tập: chưa lưu gì thì mời làm bài kiểm tra; có chặng, bài nhạc lý đã lưu thì gợi ý theo chặng, mục lên đầu`, { skip: !GOI_Y.length && khongCo('ô gợi ý tập') }, async () => {
+		const trinhDuyet = await loai.launch();
+		// ô đứng trước các lối vào ("Bạn đang ở đâu?") không; tiêu đề của mục đứng ngay trước ô
+		const viTri = () =>
+			[...document.querySelectorAll('.oz-goi-y')].map((o) => [
+				!!(o.compareDocumentPosition(document.querySelector('.oz-loi-vao')) & Node.DOCUMENT_POSITION_FOLLOWING),
+				o.previousElementSibling?.querySelector('h2')?.textContent,
+			])[0];
+		try {
+			const ctx = await nguCanh(trinhDuyet, ten, { w: 360, h: 780, camUng: true });
+			const p = await ctx.newPage();
+			await p.goto((await goc()) + GOI_Y[0], { waitUntil: 'load' });
+			await p.waitForFunction(() => document.querySelector('.oz-goi-y')?.dataset.ready, null, { timeout: 20000 });
+			assert.match(await p.locator('.oz-goi-y').innerText(), /Chưa có chặng của bạn/);
+			assert.deepEqual(await p.evaluate(viTri), [false, 'Hôm nay tập gì?'], 'người mới: mục ở sau các lối vào');
+			// lưu như site mới: chặng 3, bài nhạc lý 4 (tên và địa chỉ)
+			await p.evaluate(() =>
+				localStorage.setItem(
+					'opus-zero:v1',
+					JSON.stringify({ days: {}, store: { pianoLevel: { stage: 3, date: '2026-10-20' }, placement: { date: '2026-10-20', start: 4, ten: 'Bài thử', href: '/opus/nhac-ly/04-thu/' } } }),
+				),
+			);
+			await p.reload({ waitUntil: 'load' });
+			await p.waitForFunction(() => document.querySelector('.oz-goi-y.oz-goi-y--rieng'), null, { timeout: 20000 });
+			const chu = await p.locator('.oz-goi-y').innerText();
+			assert.match(chu, /Chặng của bạn: 3\. /);
+			assert.match(chu, /Nhạc lý: bắt đầu từ bài 4: Bài thử/);
+			const d = JSON.parse(await p.locator('.oz-goi-y').getAttribute('data-goi-y'));
+			assert.equal(await p.locator('.oz-goi-y-bai > li').count(), d.chang[2].goi_y.length);
+			assert.deepEqual(await p.evaluate(viTri), [true, 'Hôm nay tập gì?'], 'có gợi ý riêng: mục lên trước các lối vào');
 			await ctx.close();
 		} finally {
 			await trinhDuyet.close();

@@ -1,9 +1,11 @@
 // Trang nào có trong bản build hiện tại. Bản thật (npm run build): chỉ trang đã khóa trong kiem-dinh/khoa.json (D1.6);
-// bản xem (npm run build:xem, npm run dev): mọi trang trong src/content/docs/. Link tới trang không có trong bản build
-// hiện chữ "sắp có" (src/plugins/sap-co.mjs).
+// bản xem (npm run build:xem, npm run dev): mọi trang trong src/content/docs/. Cả hai bản đều có 7 trang chặng sinh từ
+// dữ liệu (src/pages/piano/lo-trinh/[chang].astro, D2-L1). Link tới trang không có trong bản build hiện chữ "sắp có"
+// (src/plugins/sap-co.mjs).
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { parse } from 'yaml';
 import { ban, docKhoa } from './khoa.mjs';
 
 const DOCS = fileURLToPath(new URL('./content/docs/', import.meta.url));
@@ -20,10 +22,30 @@ export function tatCaTrang() {
 		.sort();
 }
 
-/** Trang trong bản build hiện tại (theo ban()), không tính trang 404. */
-export function trangTrongBan() {
+/** Trang trong src/content/docs/ có trong bản build hiện tại (theo ban()), không tính trang 404. */
+export function trangDocsTrongBan() {
 	const khoa = docKhoa().trang;
 	return tatCaTrang().filter((t) => t !== '404' && (ban() === 'xem' || t in khoa));
+}
+
+/**
+ * 7 trang chặng ("piano/lo-trinh/chang-1"…), sinh từ cap-do.yml ở mọi bản build. Chỉ đọc id của chặng (đọc thẳng YAML,
+ * vì src/du-lieu.mjs dùng file này); thư mục dữ liệu như OPUS_DU_LIEU. Dữ liệu hỏng thì không có trang nào: bộ nạp dữ
+ * liệu báo lỗi đúng chỗ.
+ */
+export function trangChang() {
+	try {
+		const f = path.resolve(fileURLToPath(new URL('../', import.meta.url)), process.env.OPUS_DU_LIEU || 'src/data', 'cap-do.yml');
+		const ds = parse(fs.readFileSync(f, 'utf8'));
+		return Array.isArray(ds) ? ds.map((c) => Number(c?.id)).filter(Number.isInteger).sort((a, b) => a - b).map((id) => `piano/lo-trinh/chang-${id}`) : [];
+	} catch {
+		return [];
+	}
+}
+
+/** Trang trong bản build hiện tại: trang của src/content/docs/ (theo ban()) và 7 trang chặng; không tính trang 404. */
+export function trangTrongBan() {
+	return [...trangDocsTrongBan(), ...trangChang()];
 }
 
 /** Địa chỉ trỏ tới file (.txt, .mp3…): đoạn cuối của đường dẫn (bỏ ?… và #…) có đuôi, không có "/" ở cuối. */

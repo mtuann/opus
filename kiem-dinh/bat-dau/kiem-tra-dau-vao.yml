@@ -171,7 +171,7 @@ nhan_dinh:
     loai: so-lieu
     nguon: [ practice-js-cu, placement-js-cu, plan-js-cu ]
     ket_qua: dung
-    ghi_chu: 'Nhận định về site. Site cũ: practice.js ghi store.pianoLevel { stage, date }, placement.js ghi store.placement { date, start }, cùng khóa opus-zero:v1; plan.js (khối "Hôm nay" ở trang chủ) đọc pianoLevel để gợi ý gam và bài. Site mới: đúng khi hai thành phần lưu cùng chỗ và ô gợi ý tập ở trang chủ đọc kết quả (agent chính, D2-L1). Nếu lúc gộp ô gợi ý tập chưa đọc kết quả thì phải sửa câu này.'
+    ghi_chu: 'Nhận định về site. Site cũ: practice.js ghi store.pianoLevel { stage, date }, placement.js ghi store.placement { date, start }, cùng khóa opus-zero:v1; plan.js (khối "Hôm nay" ở trang chủ) đọc pianoLevel để gợi ý gam và bài. Site mới (D2-L1): piano-level lưu store.pianoLevel, placement lưu store.placement, cùng khóa opus-zero:v1 (src/scripts/muc-do.js, placement.js); ô gợi ý tập ở trang chủ (mục "Hôm nay tập gì?", src/scripts/goi-y.js) đọc cả hai: chặng và bài nên bắt đầu, bài nhạc lý nên bắt đầu. Kiểm trong trình duyệt (tests/trinh-duyet/kiem-thanh-phan.mjs).'
   - id: n5
     cau: Mỗi nhóm có ba việc; làm được hai trong ba là coi như xong chặng đó.
     loai: so-lieu

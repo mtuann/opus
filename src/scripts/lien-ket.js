@@ -3,7 +3,7 @@
 // Bản build ghi sẵn, cho từng link, trang đích đã có chưa (cờ `co` trong dữ liệu của thành phần), nên không cần tải thêm gì.
 
 const TITLE = 'Trang này sẽ lên site sau khi được kiểm tra lại';
-const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+export const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 
 /** `chu`: HTML đã thoát (dựng lúc build); `co`: trang đích có trong bản build. */
 export function lienKet(href, chu, co = true) {

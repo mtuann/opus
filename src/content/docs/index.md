@@ -63,6 +63,10 @@ Opus đang được làm lại; từng phần sẽ lên sau khi được kiểm 
 
 </div>
 
+## Hôm nay tập gì?
+
+::cong-cu{ten="goi-y-tap"}
+
 ## Lộ trình 7 chặng
 
 ::hinh{ten="lo-trinh"}

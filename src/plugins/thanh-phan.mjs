@@ -270,8 +270,11 @@ export function tenTrongDanhSach(rec, nguoi) {
 /** Trang chính của bản ghi tác phẩm: bài học (piano/tac-pham/…) hay hướng dẫn nghe (nghe-nhac/…). */
 export const trangTacPham = (rec) => (rec.loai === 'bai-hoc' ? 'piano/tac-pham/' : 'nghe-nhac/') + rec.slug;
 
-/** Grade tương đương của chặng, như trong trang: "≈ Grade 3"; "trước Grade 1", "diploma trở lên" giữ nguyên. */
-export const gradeChang = (c) => (/^Grade/.test(c.tuong_duong) ? `≈ ${c.tuong_duong}` : c.tuong_duong);
+/** Grade tương đương (ABRSM) như trong trang: "≈ Grade 3"; "trước Grade 1", "diploma trở lên", "Sau Grade 8" giữ nguyên. */
+export const ganDung = (grade) => (/^Grade/.test(grade) ? `≈ ${grade}` : grade);
+
+/** Grade tương đương của chặng (trường tuong_duong của cap-do.yml). */
+export const gradeChang = (c) => ganDung(c.tuong_duong);
 
 /** Địa chỉ trang chặng (sinh ở src/pages/piano/lo-trinh/[chang].astro). */
 export const diaChiChang = (id, base = DUONG_GOC) => `${base}piano/lo-trinh/chang-${id}/`;
@@ -296,10 +299,11 @@ export function lienKet(href, chu, co = true) {
 /**
  * Sơ đồ 7 chặng (::hinh{ten="lo-trinh"} ở trang lộ trình; đầu mỗi trang chặng), sinh từ cap-do.yml: số, tên, Grade tương
  * đương, mốc thời gian, thời lượng tập; mỗi chặng dẫn sang trang chặng. Màn hình rộng: bậc thang đi lên; hẹp: danh sách
- * dọc nối bằng một đường. `hienTai`: chặng của trang đang xem (aria-current). data-sinh: phần sinh từ dữ liệu (so chữ với
- * site cũ bỏ qua, tests/chuyen.test.mjs).
+ * dọc nối bằng một đường, hay (`gon`, ở trang chặng) một hàng 7 vòng số, để phần của chặng đang xem không bị đẩy xuống
+ * dưới màn hình đầu. `hienTai`: chặng của trang đang xem (aria-current). data-sinh: phần sinh từ dữ liệu (so chữ với site
+ * cũ bỏ qua, tests/chuyen.test.mjs).
  */
-export function hinhLoTrinh(capDo, { hienTai, base = DUONG_GOC } = {}) {
+export function hinhLoTrinh(capDo, { hienTai, base = DUONG_GOC, gon = false } = {}) {
 	const muc = capDo
 		.map(
 			(c) =>
@@ -311,7 +315,7 @@ export function hinhLoTrinh(capDo, { hienTai, base = DUONG_GOC } = {}) {
 		)
 		.join('');
 	return (
-		`<figure class="oz-chang-hinh" data-sinh><ol>${muc}</ol>` +
+		`<figure class="oz-chang-hinh${gon ? ' oz-chang-hinh--gon' : ''}" data-sinh><ol>${muc}</ol>` +
 		`<figcaption>Mỗi chặng: Grade tương đương (ABRSM), mốc thời gian, thời lượng tập gợi ý.</figcaption></figure>`
 	);
 }
@@ -395,7 +399,7 @@ export function placement(src) {
 // ---------- Công cụ: chặng piano của bạn (tự đánh giá ở trang kiểm tra đầu vào) ----------
 
 /** Bài nên bắt đầu ở chặng 1 (trang của site, không phải bản ghi tác phẩm), như SUGGEST[1] của practice.js cũ. */
-const BAT_DAU_CHANG_1 = [
+export const BAT_DAU_CHANG_1 = [
 	['piano/hai-tuan-dau/', 'Hai tuần đầu tiên'],
 	['piano/10-bai-dau-tien/', '10 bài đầu tiên (hai tay)'],
 ];
@@ -428,16 +432,47 @@ export function mucDoPiano(duLieu) {
 	return `<div class="oz-muc-do oz-tool" aria-live="polite" data-chang="${esc(JSON.stringify(data))}"></div>`;
 }
 
+// ---------- Công cụ: ô gợi ý tập ở trang chủ ----------
+
+/**
+ * Ô gợi ý tập (::cong-cu{ten="goi-y-tap"} ở trang chủ), như khối "Hôm nay" của trang chủ cũ, chọn bài theo chặng như
+ * practice.js cũ. Dựng sẵn lúc build cho người chưa có kết quả: lời mời làm bài kiểm tra đầu vào. Người đã có chặng
+ * (store.pianoLevel, lưu ở trang kiểm tra đầu vào của site mới hay site cũ) thấy chặng của mình, bài nên bắt đầu (goi_y và
+ * chang của dữ liệu; chặng 1: Hai tuần đầu tiên, 10 bài đầu tiên) và trang chặng; có kết quả phần nhạc lý
+ * (store.placement) thì thấy bài nhạc lý nên bắt đầu. src/scripts/goi-y.js dựng phần riêng ấy từ data-goi-y. Trang chủ
+ * luôn đăng, nên chỉ đọc trường đã khóa (luonKhoa). Link kèm cờ "có trong bản build" (co); bài nhạc lý lưu trong trình
+ * duyệt thì so với danh sách bài nhạc lý của bản build (bai_nhac_ly), nên link tới bài chưa lên vẫn hiện "sắp có".
+ */
+export function goiYTap(duLieu = duLieuCho('ô gợi ý tập ở trang chủ', { luonKhoa: true }), ds = trangTrongBan()) {
+	const lk = (d) => ({ href: DUONG_GOC + d, co: coTrongBan(DUONG_GOC + d, ds) });
+	const data = {
+		chang: goiYTheoChang(duLieu, ds),
+		kiem_tra: lk('bat-dau/kiem-tra-dau-vao/'),
+		nhac_ly: lk('nhac-ly/'),
+		nang_cao: lk(BAI_NANG_CAO),
+		bai_nhac_ly: ds.filter((t) => /^nhac-ly\/[^/]+$/.test(t) && t !== 'nhac-ly/index').map((t) => `${DUONG_GOC}${t}/`),
+	};
+	return (
+		`<div class="oz-goi-y oz-tool" data-goi-y="${esc(JSON.stringify(data))}">` +
+		`<p><strong>Chưa có chặng của bạn.</strong> Làm ${lienKet(data.kiem_tra.href, 'bài kiểm tra đầu vào', data.kiem_tra.co)}: ` +
+		`ô này sẽ gợi ý bài nên tập theo chặng của bạn.</p>` +
+		`<p class="oz-stats">Kết quả chỉ lưu trong trình duyệt trên máy của bạn.</p></div>`
+	);
+}
+
 /** Công cụ đã có thành phần: tên (như khối <div class="oz-tên"> của site cũ) -> hàm dựng HTML (thông số, trang). */
 const CONG_CU = {
 	placement: (_, trang) => placement(khoiPlacement(trang)),
 	'piano-level': (_, trang) => mucDoPiano(duLieuCho(trang)),
+	'goi-y-tap': () => goiYTap(),
 };
+/** Công cụ không có thông số: viết thêm thuộc tính thì build hỏng (gõ nhầm, hay chép từ khối cũ). */
+const KHONG_THONG_SO = new Set(['placement', 'piano-level', 'goi-y-tap']);
 
 /** ::cong-cu{ten="…" …}: công cụ luyện tập; thuộc tính khác là thông số (data-* của khối oz- cũ). */
 export function congCu({ ten, ...thongSo }, trang) {
 	if (!CONG_CU[ten]) return chuaChuyen('công cụ', ten, trang);
-	if ((ten === 'placement' || ten === 'piano-level') && Object.keys(thongSo).length)
+	if (KHONG_THONG_SO.has(ten) && Object.keys(thongSo).length)
 		throw new Error(`công cụ "${ten}" không nhận thông số (${Object.keys(thongSo).join(', ')})`);
 	return CONG_CU[ten](thongSo, trang);
 }

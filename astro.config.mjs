@@ -4,9 +4,10 @@ import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { satteri } from '@astrojs/markdown-satteri';
-import { DUONG_GOC, chiTrangTrongBan, trangTrongBan } from './src/ban-build.mjs';
+import { DUONG_GOC, chiTrangTrongBan, trangDocsTrongBan, trangTrongBan } from './src/ban-build.mjs';
 import { duLieuDaKiem } from './src/du-lieu.mjs';
 import { menu } from './src/nhom.mjs';
+import { duLieuCho } from './src/plugins/thanh-phan.mjs';
 import { bangHep } from './src/plugins/bang-hep.mjs';
 import { danhSachViec } from './src/plugins/danh-sach-viec.mjs';
 import { idCu } from './src/plugins/id-cu.mjs';
@@ -18,6 +19,9 @@ const site = 'https://mtuann.github.io';
 // Tầng của trang (src/data/trang.yml): trang Đọc thêm xếp nhóm theo tầng. Dữ liệu sai thì báo lỗi ngay ở đây, như khi nạp
 // bộ dữ liệu (src/du-lieu.mjs).
 const tang = new Map(duLieuDaKiem().trang.map((r) => [r.id, r.tang]));
+// Trang chặng trong menu, ngay sau trang lộ trình: "Chặng 3. Sơ trung cấp". Menu có ở mọi trang (luôn đăng), nên tên chặng
+// chỉ đọc trường đã khóa (chiDaKhoa).
+const trangChangMenu = duLieuCho('menu bên', { luonKhoa: true }).capDo.map((c) => ({ link: `/piano/lo-trinh/chang-${c.id}/`, label: `Chặng ${c.id}. ${c.ten}` }));
 const base = DUONG_GOC.replace(/\/$/, ''); // '/opus'
 
 // Font của màn hình đầu (chữ thường và tiêu đề, bộ latin và vietnamese): nạp trước để chữ hiện đúng font
@@ -67,7 +71,7 @@ export default defineConfig({
 			favicon: '/favicon.svg',
 			// Menu đủ 9 nhóm (src/nhom.mjs), chỉ trang có trong bản build này; nhóm chưa có trang hiện "sắp có"
 			// (src/components/Sidebar.astro). Đang chạy npm run dev mà thêm, xóa trang thì khởi động lại để menu cập nhật.
-			sidebar: menu(trangTrongBan(), tang),
+			sidebar: menu(trangDocsTrongBan(), tang, { 'lo-trinh': { sau: 'piano/lo-trinh', muc: trangChangMenu } }),
 			// Biểu tượng GitHub (link tới repo): bỏ tạm khi repo còn riêng tư, vì người đọc mở ra trang 404 (chủ repo chọn
 			// 24/10/2026). Repo công khai thì thêm lại: social: [{ icon: 'github', label: 'Mã nguồn trên GitHub', href: … }]
 			customCss: ['./src/styles/fonts.css', './src/styles/opus.css', './src/styles/thanh-phan.css'],
