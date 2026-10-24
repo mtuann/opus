@@ -3,8 +3,10 @@
 // vẫn có đủ khuông nhạc; câu hỏi báo sai rồi đúng. Chỉ chạy khi bản build có trang dùng các khối này (bản xem, từ D1.8).
 import { after, test } from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
 import { chromium } from 'playwright';
-import { TRINH_DUYET, dongMayChu, goc, nguCanh, trangCo } from './chung.mjs';
+import { DIST, TRINH_DUYET, dongMayChu, goc, nguCanh, trangCo } from './chung.mjs';
 
 after(dongMayChu);
 const KHUONG = trangCo('oz-abc');
@@ -61,6 +63,37 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 					assert.ok(Math.abs(truoc - dung) <= 3, `${trang}, ${co.w} px: #${id} ở ${Math.round(truoc)} px, đúng chỗ là ${Math.round(dung)} px`);
 					await ctx.close();
 				}
+		} finally {
+			await trinhDuyet.close();
+		}
+	});
+
+	// review D1.3: mạng chậm, mở link #mục rồi sang mục khác (như bấm mục lục) khi khuông còn đang tải: khi abcjs về, không
+	// bị kéo về đích cũ. Trang có nhiều khuông nhất, abcjs về trễ 3 giây.
+	test(`${ten}: mở link #mục rồi sang mục khác khi khuông còn đang tải thì không bị kéo về đích cũ`, { skip: !KHUONG.length && khongCo('khuông nhạc') }, async () => {
+		const soKhuong = (t) => fs.readFileSync(path.join(DIST, t, 'index.html'), 'utf8').split('class="oz-abc"').length;
+		const trang = [...KHUONG].sort((a, b) => soKhuong(b) - soKhuong(a))[0];
+		const trinhDuyet = await loai.launch();
+		try {
+			const ctx = await nguCanh(trinhDuyet, ten, { w: 1280, h: 800, camUng: false });
+			const xem = await ctx.newPage();
+			await xem.goto((await goc()) + trang, { waitUntil: 'domcontentloaded' });
+			const ids = await xem.evaluate(() => [...document.querySelectorAll('.sl-markdown-content h2[id]')].map((h) => h.id));
+			await xem.close();
+			const [dau, cuoi] = [ids[0], ids.at(-1)];
+			const p = await ctx.newPage();
+			await p.route('**/abcjs-basic-min.js', async (r) => {
+				await new Promise((ok) => setTimeout(ok, 3000));
+				await r.continue();
+			});
+			await p.goto((await goc()) + trang + '#' + encodeURIComponent(cuoi), { waitUntil: 'domcontentloaded' });
+			await p.waitForTimeout(500);
+			await p.evaluate((id) => (location.hash = id), dau);
+			await p.waitForTimeout(5000);
+			const truoc = await p.evaluate((id) => document.getElementById(id).getBoundingClientRect().top, dau);
+			const dung = await p.evaluate((id) => (document.getElementById(id).scrollIntoView(), document.getElementById(id).getBoundingClientRect().top), dau);
+			assert.ok(Math.abs(truoc - dung) <= 3, `${trang}: #${dau} ở ${Math.round(truoc)} px, đúng chỗ là ${Math.round(dung)} px (bị kéo về #${cuoi}?)`);
+			await ctx.close();
 		} finally {
 			await trinhDuyet.close();
 		}

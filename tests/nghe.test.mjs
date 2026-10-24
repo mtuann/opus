@@ -59,7 +59,8 @@ test('bản đồ nghe chọn đúng dòng đang nghe', () => {
 
 test('tiến độ lưu ở khóa opus-zero:v1 như site cũ; ghi thêm không làm mất dữ liệu cũ', () => {
 	assert.equal(KHOA, 'opus-zero:v1');
-	const kho = new Map([[KHOA, JSON.stringify({ days: { '2026-10-01': { quizzes: 2 } }, lessons: { '/opus-zero/nhac-ly/10-hop-am-ba/': '2026-10-01' }, repertoire: { a: 1 } })]]);
+	// cùng dạng dữ liệu thật của site cũ (progress.js, data.js): bài đã học, bài đang tập nằm trong store
+	const kho = new Map([[KHOA, JSON.stringify({ days: { '2026-10-01': { quizzes: 2 } }, store: { lessons: { '/opus-zero/nhac-ly/10-hop-am-ba/': '2026-10-01' }, repertoire: { a: 1 } } })]]);
 	const cu = { localStorage: globalThis.localStorage, document: globalThis.document };
 	try {
 		globalThis.localStorage = { getItem: (k) => kho.get(k) ?? null, setItem: (k, v) => kho.set(k, v) };
@@ -67,8 +68,8 @@ test('tiến độ lưu ở khóa opus-zero:v1 như site cũ; ghi thêm không l
 		ghiNgay('quizzes', 1);
 		const data = JSON.parse(kho.get(KHOA));
 		assert.equal(data.days['2026-10-01'].quizzes, 2);
-		assert.deepEqual(data.lessons, { '/opus-zero/nhac-ly/10-hop-am-ba/': '2026-10-01' });
-		assert.deepEqual(data.repertoire, { a: 1 });
+		assert.deepEqual(data.store.lessons, { '/opus-zero/nhac-ly/10-hop-am-ba/': '2026-10-01' });
+		assert.deepEqual(data.store.repertoire, { a: 1 });
 		assert.equal(Object.values(data.days).at(-1).quizzes, 1);
 	} finally {
 		globalThis.localStorage = cu.localStorage;

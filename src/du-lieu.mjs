@@ -383,7 +383,7 @@ export const tepDauVet = () => [
  * Dấu vết của những gì HTML đã dựng của trang phụ thuộc, ngoài chính trang: dữ liệu, các file ở tepDauVet(), bản build
  * (thật hay xem), khóa và danh sách trang trong bản build.
  */
-function dauVet() {
+export function dauVet() {
 	const h = createHash('sha256');
 	for (const tep of Object.values(TEP)) {
 		const f = path.join(thuMuc(), tep);

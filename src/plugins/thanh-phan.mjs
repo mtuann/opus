@@ -10,9 +10,16 @@ export const esc = (s) =>
  * tải bộ tải thành phần ở những trang này. */
 export const canTaiScript = (html) => /\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen)[\s"]/.test(html);
 
-/** Markdown trong dòng -> HTML (bỏ thẻ <p> bao ngoài). Dấu < được thoát trước, nên thẻ HTML thô hiện thành chữ. */
+/**
+ * Markdown trong dòng -> HTML (bỏ thẻ <p> bao ngoài). Dấu < được thoát trước, nên thẻ HTML thô hiện thành chữ; trừ trong
+ * đoạn mã `…` (bộ dựng tự thoát) và trong link tự động <https://…>.
+ */
 export function md(s) {
-	const { html } = markdownToHtml(String(s).replace(/</g, '&lt;'), { features: { smartPunctuation: false } });
+	const chu = String(s)
+		.split(/(`+[^`]*`+)/)
+		.map((phan, i) => (i % 2 ? phan : phan.replace(/<(?!https?:\/\/[^\s<>]+>)/g, '&lt;')))
+		.join('');
+	const { html } = markdownToHtml(chu, { features: { smartPunctuation: false } });
 	return html.trim().replace(/^<p>([\s\S]*)<\/p>$/, '$1');
 }
 
@@ -160,14 +167,15 @@ export function hinhCauTruc(rec, loai) {
 
 /** moc="3 61 - 73": số giây của mốc tham khảo cho từng dòng bảng "Theo dõi khi nghe"; "-" là dòng chưa có mốc. */
 export function docMoc(chu) {
+	if (!chu.trim()) throw new Error('::khoi-nghe: moc rỗng (không có mốc thì bỏ cả thuộc tính moc)');
 	return chu
 		.trim()
 		.split(/\s+/)
 		.map((x) => {
 			if (x === '-') return null;
-			const n = Number(x);
-			if (!Number.isFinite(n) || n < 0) throw new Error(`::khoi-nghe: mốc "${x}" không phải số giây (dòng chưa có mốc ghi "-")`);
-			return n;
+			// chỉ số giây viết thường (12, 12.5): không nhận 0x10, 1e2, số âm
+			if (!/^\d+(\.\d+)?$/.test(x)) throw new Error(`::khoi-nghe: mốc "${x}" không phải số giây (dòng chưa có mốc ghi "-")`);
+			return Number(x);
 		});
 }
 
@@ -176,7 +184,8 @@ export function docMoc(chu) {
  * kèm mốc tham khảo `moc` của trang (nếu có); không có thì người học tự dán link hay chọn file. Bảng "Theo dõi khi
  * nghe" ngay sau khối là nơi ghi mốc. Dữ liệu cho script cùng dạng data-rec của site cũ.
  * Mốc nằm ở trang, không ở bản ghi: bài học và hướng dẫn nghe dùng chung bản ghi (và bản thu) nhưng mỗi trang có bảng
- * "Theo dõi khi nghe" riêng.
+ * "Theo dõi khi nghe" riêng. Mốc đi theo bản thu: không mốc nào quá độ dài bản thu (số mốc so với số dòng của bảng thì
+ * src/plugins/opus-markdown.mjs kiểm), để đổi bản thu hay sửa bảng mà quên mốc thì build hỏng.
  */
 export function khoiNghe(rec, base, moc) {
 	const ban = rec?.ban_thu?.[0];
@@ -185,7 +194,11 @@ export function khoiNghe(rec, base, moc) {
 		return `<div class="oz-listen"></div>`;
 	}
 	const parts = ban.parts.map((p) => (p.mp3 && !/^https?:/.test(p.mp3) ? { ...p, mp3: base + p.mp3 } : p));
-	const rec2 = { ...ban, parts, ...(moc !== undefined && { ref: docMoc(moc) }) };
+	const ref = moc !== undefined ? docMoc(moc) : undefined;
+	const dai = parts.every((p) => typeof p.d === 'number') ? parts.reduce((t, p) => t + p.d, 0) : undefined;
+	const qua = ref?.find((x) => x !== null && dai !== undefined && x > dai);
+	if (qua !== undefined) throw new Error(`::khoi-nghe: mốc ${qua} giây quá độ dài bản thu (${dai} giây)`);
+	const rec2 = { ...ban, parts, ...(ref && { ref }) };
 	return `<div class="oz-listen" data-rec="${esc(JSON.stringify(rec2))}"></div>`;
 }
 

@@ -48,9 +48,13 @@ test('khối ```quiz: câu hỏi dựng sẵn bằng HTML, dữ liệu cho scrip
 	assert.doesNotMatch(the, /<b>|<img/);
 });
 
-test('Markdown trong dòng của dữ liệu: nghiêng, link; HTML thô thành chữ', () => {
+test('Markdown trong dòng của dữ liệu: nghiêng, link; HTML thô thành chữ; đoạn mã và link tự động giữ đúng', () => {
 	assert.equal(md('*Für Elise*, [Bàn đạp](/opus/piano/ban-dap/)'), '<em>Für Elise</em>, <a href="/opus/piano/ban-dap/">Bàn đạp</a>');
 	assert.equal(md('<script>x</script> 1 < 2'), '&lt;script&gt;x&lt;/script&gt; 1 &lt; 2');
+	// review D1.3: trước đây `c<d` hiện thành "c&lt;d", link tự động thành link tới "…%3E"
+	assert.equal(md('`c<d`'), '<code>c&lt;d</code>');
+	assert.equal(md('<https://imslp.org/>'), '<a href="https://imslp.org/">https://imslp.org/</a>');
+	assert.equal(md('<https://x.org/><b>y</b>'), '<a href="https://x.org/">https://x.org/</a>&lt;b&gt;y&lt;/b&gt;');
 });
 
 test('::hop-tac-pham: chip và bảng thông tin đúng như bản ghi', () => {
@@ -121,7 +125,18 @@ test('::khoi-nghe: không có bản thu trong dữ liệu thì để người h�
 	assert.deepEqual(docRec(khoiNghe(banGhi, '/opus/', '3 61 - 73')).ref, [3, 61, null, 73]);
 	assert.deepEqual(docMoc(' 0  12.5 -'), [0, 12.5, null]);
 	assert.throws(() => docMoc('3 1:05'), /mốc "1:05" không phải số giây/);
+	// chỉ số giây viết thường; moc rỗng là lỗi (review D1.3)
+	for (const x of ['0x10', '1e2', '-3', '+4', '.5']) assert.throws(() => docMoc(x), /không phải số giây/, x);
+	assert.throws(() => docMoc('  '), /moc rỗng/);
 	assert.throws(() => khoiNghe({}, '/opus/', '3 4'), /có moc nhưng bản ghi không có ban_thu/);
+	// mốc không quá độ dài bản thu (60 + 30 giây)
+	assert.throws(() => khoiNghe(banGhi, '/opus/', '3 91'), /mốc 91 giây quá độ dài bản thu \(90 giây\)/);
+	assert.deepEqual(docRec(khoiNghe(banGhi, '/opus/', '3 90')).ref, [3, 90]);
+	// số mốc không quá số dòng của bảng "Theo dõi khi nghe" ngay sau
+	const bang = (moc, ...dong) => trangTacPham('fur-elise', `::khoi-nghe{moc="${moc}"}\n\n## Theo dõi khi nghe\n\n| Mốc | Nghe gì |\n|---|---|\n${dong.map((d) => `| … | ${d} |`).join('\n')}\n`);
+	assert.doesNotThrow(() => dung(bang('2 12', 'chủ đề', 'đoạn B')));
+	assert.doesNotThrow(() => dung(bang('2', 'chủ đề', 'đoạn B')), 'ít mốc hơn số dòng: được (dòng cuối chưa có mốc)');
+	assert.throws(() => dung(bang('2 12 23', 'chủ đề', 'đoạn B')), /có 3 mốc mà bảng "Theo dõi khi nghe" ngay sau chỉ có 2 dòng/);
 });
 
 test('chỉ thị viết sai thì báo lỗi kèm tên file, kể cả gõ sai tên; chỉ thị khối để nguyên cho Starlight', () => {

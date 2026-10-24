@@ -11,7 +11,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse } from 'yaml';
 import { duLieuDaKiem } from '../du-lieu.mjs';
-import { congCu, hinh, hinhCauTruc, hocTiep, hopTacPham, khoiNghe, khuongAbc, quiz } from './thanh-phan.mjs';
+import { congCu, docMoc, hinh, hinhCauTruc, hocTiep, hopTacPham, khoiNghe, khuongAbc, quiz } from './thanh-phan.mjs';
 
 /** Loại của trang tác phẩm theo đường dẫn: bai-hoc (piano/tac-pham/), nghe (nghe-nhac/). */
 function loaiTrang(trang) {
@@ -55,6 +55,8 @@ export function opusMarkdown({ base, docsDir }) {
 		const loi = (msg) => new Error(`${path.relative(process.cwd(), file)}: ${msg}`);
 		// Astro tách frontmatter trước khi gọi Sätteri và đưa vào data.astro; chạy thẳng Sätteri (kiểm thử) thì đọc nút yaml
 		let fm = data?.astro?.frontmatter ?? {};
+		// số mốc của ::khoi-nghe{moc} vừa gặp, chờ bảng "Theo dõi khi nghe" ngay sau (Sätteri duyệt theo thứ tự trong trang)
+		let choMoc = null;
 		return {
 			name: 'opus-markdown',
 			yaml(node) {
@@ -70,6 +72,13 @@ export function opusMarkdown({ base, docsDir }) {
 					throw loi(e.message);
 				}
 			},
+			// mốc đi theo dòng của bảng "Theo dõi khi nghe": nhiều mốc hơn số dòng là mốc thừa (bảng đã sửa, hay bản thu đã đổi)
+			table(node) {
+				if (choMoc === null) return;
+				const [so, soDong] = [choMoc, node.children.length - 1];
+				choMoc = null;
+				if (so > soDong) throw loi(`::khoi-nghe có ${so} mốc mà bảng "Theo dõi khi nghe" ngay sau chỉ có ${soDong} dòng`);
+			},
 			leafDirective(node) {
 				const muc = CHI_THI[node.name];
 				// Starlight không dùng chỉ thị một dòng; tên lạ là gõ sai, để nguyên thì trang hiện dòng "::tên"
@@ -83,7 +92,9 @@ export function opusMarkdown({ base, docsDir }) {
 				if (muc.tacPham && !rec) throw loi(`::${node.name} cần trường tac_pham ở frontmatter (slug trong src/data/tac-pham.yml)`);
 				const nguoi = new Map(duLieu['nha-soan-nhac'].map((r) => [r.id, r]));
 				try {
-					return { type: 'html', value: muc.ve({ rec, tt, base, trang, nguoi, tacPham: duLieu['tac-pham'] }) };
+					const html = muc.ve({ rec, tt, base, trang, nguoi, tacPham: duLieu['tac-pham'] });
+					if (node.name === 'khoi-nghe' && tt.moc !== undefined) choMoc = docMoc(tt.moc).length;
+					return { type: 'html', value: html };
 				} catch (e) {
 					throw loi(e.message);
 				}

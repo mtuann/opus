@@ -124,7 +124,7 @@ Frontmatter có `tac_pham`. Thứ tự các mục như mẫu ở `../opus-zero/A
 
 | Khối | Cách viết | Dựng thành |
 |---|---|---|
-| Khuông nhạc | Khối ` ```abc ` theo "Quy ước ABC" của `../opus-zero/AGENTS.md`; dòng `T:` ở phần đầu (trước `K:`) thành tiêu đề | Khuông và trình phát (abcjs 6.7.1 trong `public/vendor/`): tốc độ, lặp, nghe từng tay, gõ nhịp, chế độ giá nhạc. Vẽ khi khối tới gần màn hình; trước khi in thì vẽ hết. abcjs tải sẵn lúc trình duyệt rảnh, khoảng một giây sau khi mở trang; in sớm hơn thì chỗ khuông chưa vẽ in dòng nhắc |
+| Khuông nhạc | Khối ` ```abc ` theo "Quy ước ABC" của `../opus-zero/AGENTS.md`; dòng `T:` ở phần đầu (trước `K:`) thành tiêu đề | Khuông và trình phát (abcjs 6.7.1 trong `public/vendor/`): tốc độ, lặp, nghe từng tay, gõ nhịp, chế độ giá nhạc. Vẽ khi khối tới gần màn hình; trước khi in thì vẽ hết. abcjs tải sẵn lúc trình duyệt rảnh sau khi trang tải xong (Chromium, Firefox: gần như ngay; Safari: sau 3 giây); in sớm hơn thì chỗ khuông chưa vẽ in dòng nhắc |
 | Câu hỏi kiểm tra nhanh | Khối ` ```quiz `: dòng `? câu hỏi`, `+ đáp án đúng`, `- đáp án sai`, `> giải thích` | Câu hỏi bấm được, thứ tự lựa chọn trộn mỗi lần. Thiếu đáp án đúng hay có dòng lạ thì build hỏng |
 | Hộp thông tin tác phẩm | `::hop-tac-pham` | Chip (giọng · nhịp, tốc độ, cấp độ, hình thức) và bảng "Thông tin tác phẩm và bản nhạc nên dùng" thu gọn |
 | Hình cấu trúc | `::hinh-cau-truc` | Sơ đồ các đoạn từ `hinh` của bản ghi: `hinh.bai-hoc` ở trang bài học, `hinh.nghe` ở hướng dẫn nghe |

@@ -7,7 +7,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { parse } from 'yaml';
-import { dungLaiKhiDoi, kiemTra, tepDauVet } from '../src/du-lieu.mjs';
+import { dauVet, dungLaiKhiDoi, kiemTra, tepDauVet } from '../src/du-lieu.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 
@@ -103,6 +103,18 @@ test('bộ nạp trang xóa HTML đã dựng khi dữ liệu đổi, giữ nguy�
 
 test('dấu vết dựng lại tính schema và mọi plugin Markdown; dữ liệu không còn link .md của site cũ', () => {
 	const tep = tepDauVet();
+	// dấu vết đổi khi nội dung một file trong danh sách đổi (đọc qua fs.readFileSync, thay tạm để thử)
+	const goc = fs.readFileSync;
+	const truoc = dauVet();
+	try {
+		for (const f of [tep.find((x) => x.startsWith('src/plugins/')), 'src/du-lieu.mjs']) {
+			fs.readFileSync = (p, ...r) => (String(p).endsWith(f) ? Buffer.from('đã sửa') : goc(p, ...r));
+			assert.notEqual(dauVet(), truoc, `${f} đổi mà dấu vết không đổi`);
+		}
+	} finally {
+		fs.readFileSync = goc;
+	}
+	assert.equal(dauVet(), truoc);
 	assert.ok(tep.includes('src/du-lieu.mjs'));
 	for (const f of fs.readdirSync(path.join(ROOT, 'src/plugins'))) assert.ok(tep.includes(`src/plugins/${f}`), f);
 	for (const f of fs.readdirSync(path.join(ROOT, 'src/data')))

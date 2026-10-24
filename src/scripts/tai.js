@@ -33,11 +33,14 @@ function oTruoc(el) {
 let lanCuon = 0;
 for (const ev of ['wheel', 'touchmove', 'keydown']) addEventListener(ev, () => lanCuon++, { passive: true });
 
-/** Sau khi các khối phía trên khởi tạo xong: đích của link #mục bị đẩy đi thì cuộn lại cho đúng. */
+/**
+ * Sau khi các khối phía trên khởi tạo xong: đích của link #mục bị đẩy đi thì cuộn lại cho đúng. Người đọc đã tự cuộn,
+ * hay đã sang đích khác (bấm mục lục khi các khối còn đang tải), thì thôi, không kéo về đích cũ.
+ */
 function giuDich(viec, t, tren) {
 	const lan = lanCuon;
 	Promise.all(viec).then(() => {
-		if (t && lan === lanCuon && Math.abs(t.getBoundingClientRect().top - tren) > 2) t.scrollIntoView();
+		if (t && lan === lanCuon && dich() === t && Math.abs(t.getBoundingClientRect().top - tren) > 2) t.scrollIntoView();
 	});
 }
 
