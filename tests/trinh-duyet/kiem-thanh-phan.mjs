@@ -21,6 +21,28 @@ const CO_MENU = TRANG.filter((t) => !t.endsWith('.html') && fs.readFileSync(path
 const kho = (p) => p.evaluate(() => JSON.parse(localStorage.getItem('opus-zero:v1') || '{}').store ?? {});
 const khongCo = (khoi) => `bản build không có trang nào có ${khoi}`;
 
+/**
+ * Trong trang: mọi khối nằm trước phần tử `id` đã dựng xong: khuông đã vẽ, câu hỏi có nút, khối nghe có con. Không chờ một
+ * khoảng cố định: máy chậm (WebKit trên máy của GitHub) vẽ khuông lâu hơn mọi khoảng ấy.
+ */
+function khoiTruocDaDung(id) {
+	const t = document.getElementById(id);
+	return ![
+		...[...document.querySelectorAll('.abc-notation')].filter((e) => !e.dataset.rendered),
+		...[...document.querySelectorAll('.oz-quiz')].filter((e) => !e.querySelector('button')),
+		...[...document.querySelectorAll('.oz-listen')].filter((e) => !e.childElementCount),
+	].filter((e) => e.compareDocumentPosition(t) & Node.DOCUMENT_POSITION_FOLLOWING).length;
+}
+
+/**
+ * Chờ các khối trước đích dựng xong, font đã nạp, rồi hai khung hình: lúc ấy phần giữ đích của src/scripts/tai.js (chạy
+ * sau khi các khối phía trên khởi tạo xong, và lại khi font tải xong) đã chạy, bố cục đã yên, mới đo vị trí đích.
+ */
+async function choBoCucYen(p, id) {
+	await p.waitForFunction(khoiTruocDaDung, id, { timeout: 30000, polling: 100 });
+	await p.evaluate(() => document.fonts.ready.then(() => new Promise((ok) => requestAnimationFrame(() => requestAnimationFrame(ok)))));
+}
+
 for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 	test(`${ten}: giá nhạc mở được, chạm nút "Thoát giá nhạc" thì thoát (360 px, cảm ứng)`, { skip: !KHUONG.length && khongCo('khuông nhạc') }, async () => {
 		const trinhDuyet = await loai.launch();
@@ -65,7 +87,7 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 					await p.goto((await goc()) + trang, { waitUntil: 'load' });
 					const id = await p.evaluate(() => [...document.querySelectorAll('.sl-markdown-content :is(h2, h3, h4)[id]')].at(-1).id);
 					await p.goto((await goc()) + trang + '#' + encodeURIComponent(id), { waitUntil: 'load' });
-					await p.waitForTimeout(3000);
+					await choBoCucYen(p, id);
 					const truoc = await p.evaluate((id) => document.getElementById(id).getBoundingClientRect().top, id);
 					const dung = await p.evaluate((id) => (document.getElementById(id).scrollIntoView(), document.getElementById(id).getBoundingClientRect().top), id);
 					assert.ok(Math.abs(truoc - dung) <= 3, `${trang}, ${co.w} px: #${id} ở ${Math.round(truoc)} px, đúng chỗ là ${Math.round(dung)} px`);
@@ -97,7 +119,9 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 			await p.goto((await goc()) + trang + '#' + encodeURIComponent(cuoi), { waitUntil: 'domcontentloaded' });
 			await p.waitForTimeout(500);
 			await p.evaluate((id) => (location.hash = id), dau);
-			await p.waitForTimeout(5000);
+			// các khối trước đích cũ (khởi tạo ngay khi mở trang) dựng xong sau khi abcjs về: lúc ấy trang có bị kéo về đích cũ
+			// thì đã bị kéo
+			await choBoCucYen(p, cuoi);
 			const truoc = await p.evaluate((id) => document.getElementById(id).getBoundingClientRect().top, dau);
 			const dung = await p.evaluate((id) => (document.getElementById(id).scrollIntoView(), document.getElementById(id).getBoundingClientRect().top), dau);
 			assert.ok(Math.abs(truoc - dung) <= 3, `${trang}: #${dau} ở ${Math.round(truoc)} px, đúng chỗ là ${Math.round(dung)} px (bị kéo về #${cuoi}?)`);

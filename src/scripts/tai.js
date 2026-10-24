@@ -40,15 +40,20 @@ let lanCuon = 0;
 for (const ev of ['wheel', 'touchmove', 'keydown']) addEventListener(ev, () => lanCuon++, { passive: true });
 
 /**
- * Sau khi các khối phía trên khởi tạo xong: đích của link #mục bị đẩy đi thì cuộn lại cho đúng. Thôi, không kéo về đích
- * cũ, khi người đọc đã cuộn bằng bánh xe, chạm hay bàn phím (lanCuon), hay đã sang đích khác (bấm mục lục khi các khối
- * còn đang tải). Kéo thanh cuộn hay tìm chữ (Ctrl+F) lúc đang tải thì chưa nhận ra: vẫn bị kéo về đích cũ.
+ * Sau khi các khối phía trên khởi tạo xong: đích của link #mục bị đẩy đi thì cuộn lại cho đúng. Làm lại một lần nữa khi
+ * font tải xong: font về sau các khối (mạng chậm) làm chữ phía trên xuống dòng khác, đích lại bị đẩy đi, ở cả trình duyệt
+ * có overflow-anchor (đo ở bản build: font về trễ 2,5 giây thì đích lệch tới hàng trăm px, ở cả ba trình duyệt). Thôi,
+ * không kéo về đích cũ, khi người đọc đã cuộn bằng bánh xe, chạm hay bàn phím (lanCuon), hay đã sang đích khác (bấm mục
+ * lục khi các khối còn đang tải). Kéo thanh cuộn hay tìm chữ (Ctrl+F) lúc đang tải thì chưa nhận ra: vẫn bị kéo về đích cũ.
  */
 function giuDich(viec, t, tren) {
 	const lan = lanCuon;
-	Promise.all(viec).then(() => {
+	const giu = () => {
 		if (t && lan === lanCuon && dich() === t && Math.abs(t.getBoundingClientRect().top - tren) > 2) t.scrollIntoView();
-	});
+	};
+	const xong = Promise.all(viec);
+	xong.then(giu);
+	Promise.all([xong, document.fonts?.ready]).then(giu);
 }
 
 // Trình duyệt có overflow-anchor tự giữ chỗ đang đọc khi phần phía trên cao lên; trình duyệt không có thì tự cuộn bù
