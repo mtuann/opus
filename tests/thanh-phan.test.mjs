@@ -6,7 +6,8 @@ import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { markdownToHtml } from 'satteri';
 import { duLieuDaKiem } from '../src/du-lieu.mjs';
-import { danhSachViec } from '../src/plugins/danh-sach-viec.mjs';
+import { bam, danhSachViec } from '../src/plugins/danh-sach-viec.mjs';
+import { sapCo } from '../src/plugins/sap-co.mjs';
 import { opusMarkdown } from '../src/plugins/opus-markdown.mjs';
 import { canTaiScript, docMoc, docQuiz, hinhCauTruc, khoiNghe, md } from '../src/plugins/thanh-phan.mjs';
 import { kiemDinh, ngayViet } from '../src/kiem-dinh.mjs';
@@ -203,22 +204,24 @@ test('danh sách việc "- [ ]": ô trong nhãn, có tên (aria-labelledby tới
 	const html = dungViec('- [ ] Việc [một](/opus/piano/gam/)\n- [x] Việc hai\n  - [ ] Việc con\n- Mục thường\n');
 	const muc = [...html.matchAll(/<li class="([^"]*)"[^>]*>/g)].map((m) => m[0]);
 	assert.deepEqual(muc, Array(3).fill('<li class="task-list-item oz-viec">'), 'mỗi mục một thuộc tính class');
-	assert.match(html, /<label class="oz-viec-o"><input type="checkbox" class="oz-viec-hop" aria-labelledby="oz-viec-1"><\/label><span class="oz-viec-chu" id="oz-viec-1">Việc <a href="\/opus\/piano\/gam\/">một<\/a><\/span>/);
-	assert.match(html, /<input type="checkbox" checked class="oz-viec-hop" aria-labelledby="oz-viec-2">/);
+	assert.match(html, /<label class="oz-viec-o"><input type="checkbox" class="oz-viec-hop" aria-labelledby="oz-viec-1" data-viec="[^"]+"><\/label><span class="oz-viec-chu" id="oz-viec-1">Việc <a href="\/opus\/piano\/gam\/">một<\/a><\/span>/);
+	assert.match(html, /<input type="checkbox" checked class="oz-viec-hop" aria-labelledby="oz-viec-2" data-viec="[^"]+">/);
 	assert.match(html, /id="oz-viec-2">Việc hai\s*<\/span><ul class="contains-task-list">/, 'danh sách con sau chữ, không nằm trong tên của ô');
 	assert.doesNotMatch(html, /disabled/);
 	assert.match(html, /<li>Mục thường<\/li>/);
 	// mục thưa (dòng trống giữa các mục): chữ là các đoạn, bọc trong div
 	const thua = dungViec('- [ ] Một\n\n  Đoạn thêm.\n\n- [ ] Hai\n');
-	assert.match(thua, /<label class="oz-viec-o"><input type="checkbox" class="oz-viec-hop" aria-labelledby="oz-viec-1"><\/label><div class="oz-viec-chu" id="oz-viec-1"><p>Một<\/p>\s*<p>Đoạn thêm\.<\/p>/);
+	assert.match(thua, /<label class="oz-viec-o"><input type="checkbox" class="oz-viec-hop" aria-labelledby="oz-viec-1" data-viec="[^"]+"><\/label><div class="oz-viec-chu" id="oz-viec-1"><p>Một<\/p>\s*<p>Đoạn thêm\.<\/p>/);
 	assert.ok(canTaiScript(html), 'trang có danh sách việc tải bộ tải thành phần (nhớ ô đã đánh dấu)');
 });
 
+/** Dựng như trang `trang` với khoa.json giả `khoa`. */
+const dungKhoa = (md, khoa, trang = 'piano/tac-pham/fur-elise') => {
+	const plugin = opusMarkdown({ base: '/opus/', docsDir: DOCS, khoa: () => khoa })({ fileURL: pathToFileURL(path.join(DOCS, trang + '.md')) });
+	return markdownToHtml(md, { mdastPlugins: [plugin], features: { directive: true, smartPunctuation: false } }).html;
+};
+
 test('trang đã khóa: chỉ thị đọc trường chưa khóa của bản ghi thì build hỏng; trang chưa khóa thì không chặn', () => {
-	const dungKhoa = (md, khoa) => {
-		const plugin = opusMarkdown({ base: '/opus/', docsDir: DOCS, khoa: () => khoa })({ fileURL: pathToFileURL(path.join(DOCS, 'piano/tac-pham/fur-elise.md')) });
-		return markdownToHtml(md, { mdastPlugins: [plugin], features: { directive: true, smartPunctuation: false } }).html;
-	};
 	const trang = trangTacPham('fur-elise', '::hop-tac-pham');
 	const khoaTrang = { 'piano/tac-pham/fur-elise': 'sha256:x' };
 	assert.throws(
@@ -227,4 +230,38 @@ test('trang đã khóa: chỉ thị đọc trường chưa khóa của bản ghi
 	);
 	assert.match(dungKhoa(trang, { trang: khoaTrang, ban_ghi: { 'tac-pham/fur-elise': 'sha256:y' } }), /class="oz-piece/);
 	assert.match(dungKhoa(trang, { trang: {}, ban_ghi: {} }), /class="oz-piece/);
+});
+
+test('danh sách việc: mã việc (data-viec) như site cũ, không đổi khi trang được link tới lên site; trùng thì thêm -2', () => {
+	const dungViec = (md, trangCo) =>
+		markdownToHtml(md, { hastPlugins: [sapCo({ base: '/opus/', trangCo: () => trangCo }), danhSachViec()], features: { gfm: true } }).html;
+	const md = '- [ ] [Âm nhạc hôm nay](/opus/piano/gam/): cập nhật\n- [ ] Lặp lại\n- [ ] Lặp lại\n';
+	const ma = (html) => [...html.matchAll(/data-viec="([^"]+)"/g)].map((m) => m[1]);
+	const chuaLen = dungViec(md, []);
+	assert.match(chuaLen, /class="oz-sap-co"/, 'trang đích chưa có: link thành chữ "sắp có"');
+	const daLen = dungViec(md, ['piano/gam']);
+	assert.doesNotMatch(daLen, /class="oz-sap-co"/);
+	// site cũ: djb2 của chữ mục (textContent, gộp khoảng trắng): "Âm nhạc hôm nay: cập nhật"
+	assert.deepEqual(ma(chuaLen), [bam('Âm nhạc hôm nay: cập nhật'), bam('Lặp lại'), `${bam('Lặp lại')}-2`]);
+	assert.deepEqual(ma(daLen), ma(chuaLen), 'mã không đổi khi trang đích lên site');
+});
+
+test('trang đã khóa: ::hoc-tiep đọc trường của mọi bản ghi tác phẩm và tên tác giả; khóa từng phần đủ các trường ấy thì qua', () => {
+	const du = duLieuDaKiem();
+	// các trường ::hoc-tiep đọc (review D2-nền): loai, chang của mọi bản ghi; cap, ten, tac_gia, khuyet_danh; tên tác giả
+	const TRUONG = 'cap,chang,khuyet_danh,loai,tac_gia,ten';
+	const ban_ghi = Object.fromEntries([
+		...du['tac-pham'].map((r) => [`tac-pham/${r.slug}#${TRUONG}`, 'x']),
+		...du['nha-soan-nhac'].map((r) => [`nha-soan-nhac/${r.id}#ten`, 'x']),
+	]);
+	// Liebestraum: bài học có hướng dẫn nghe dùng chung bản ghi (cap), nên link sang đó kèm tên tác giả
+	const TRANG = 'piano/tac-pham/liszt-liebestraum';
+	const khoa = { trang: { [TRANG]: 'x' }, ban_ghi };
+	const trang = trangTacPham('liszt-liebestraum', '::hoc-tiep');
+	assert.match(dungKhoa(trang, khoa, TRANG), /<a href="\/opus\//, 'khóa đủ thì dựng được');
+	const { ['nha-soan-nhac/liszt#ten']: _, ...thieuTen } = ban_ghi;
+	assert.throws(() => dungKhoa(trang, { ...khoa, ban_ghi: thieuTen }, TRANG), /du-lieu\/nha-soan-nhac\/liszt#ten/);
+	const thieuChang = { ...ban_ghi, 'tac-pham/fur-elise#cap,khuyet_danh,loai,tac_gia,ten': 'x' };
+	delete thieuChang[`tac-pham/fur-elise#${TRUONG}`];
+	assert.throws(() => dungKhoa(trang, { ...khoa, ban_ghi: thieuChang }, TRANG), /du-lieu\/tac-pham\/fur-elise#chang/, 'đọc chang của bài học khác để tìm bài cùng chặng');
 });

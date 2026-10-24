@@ -53,14 +53,19 @@ test('chỉ mục Pagefind thiếu thì thieuChiMuc báo đúng chỗ thiếu', 
 		fs.writeFileSync(path.join(tam, 'pagefind-entry.json'), '');
 		fs.mkdirSync(path.join(tam, 'index'));
 		fs.writeFileSync(path.join(tam, 'index', 'vi_1.pf_index'), '');
-		fs.writeFileSync(path.join(tam, 'pagefind.js'), 'x');
 		const thieu = thieuChiMuc(tam);
-		assert.equal(thieu.length, 3, thieu.join('; '));
-		assert.match(thieu[0], /^pagefind-entry\.json không đọc được/);
+		assert.equal(thieu.length, 4, thieu.join('; '));
+		assert.ok(thieu.includes('không có pagefind.js'), thieu.join('; '));
+		assert.ok(thieu.some((x) => /^pagefind-entry\.json không đọc được/.test(x)), thieu.join('; '));
 		assert.ok(thieu.includes('pagefind-entry.json rỗng') && thieu.includes(path.join('index', 'vi_1.pf_index') + ' rỗng'), thieu.join('; '));
+		fs.writeFileSync(path.join(tam, 'pagefind.js'), 'x');
 		fs.writeFileSync(path.join(tam, 'pagefind-entry.json'), '{"languages":{}}');
 		fs.writeFileSync(path.join(tam, 'index', 'vi_1.pf_index'), 'x');
 		assert.deepEqual(thieuChiMuc(tam), ['pagefind-entry.json không có ngôn ngữ nào']);
+		fs.writeFileSync(path.join(tam, 'pagefind-entry.json'), '{"languages":{"vi":{"hash":"vi_1"}}}');
+		assert.deepEqual(thieuChiMuc(tam), ['không có pagefind.vi_1.pf_meta']);
+		fs.writeFileSync(path.join(tam, 'pagefind.vi_1.pf_meta'), 'x');
+		assert.deepEqual(thieuChiMuc(tam), []);
 		assert.deepEqual(thieuChiMuc(path.join(tam, 'khong-co')), ['không có thư mục pagefind/']);
 	} finally {
 		fs.rmSync(tam, { recursive: true, force: true });

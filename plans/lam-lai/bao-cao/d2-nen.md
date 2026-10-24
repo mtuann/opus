@@ -56,13 +56,39 @@ Trên `main`, chưa trang nào có danh sách việc, nên phép thử trình du
 - Phép thử `#mục` không còn hỏng ở trang chỉ có `h3`. Cấp tiêu đề của `bat-dau/tom-tat` (axe `heading-order`) vẫn do lô sửa, ghi lý do vào hồ sơ.
 - Phạm vi file của D2-L1 trong `tests/pham-vi.test.mjs` đã đủ cho trang chặng, menu và trang chủ: không phải thêm gì.
 
+## Review (Claude Sonnet 5.5, mức lớn)
+
+Review đọc diff của `d86704d`, chạy từng file kiểm thử, viết script thử. Script đột biến 29.596 lần trên dữ liệu và không thấy trường nào ảnh hưởng tới HTML mà lọt qua `chiDaKhoa`, trừ id. Ba chỗ phải sửa, đã sửa ở commit sau:
+
+1. **Mã việc đổi khi trang được link tới lên site.** Chữ "sắp có" có dấu cách thật đứng trước; bỏ nhãn mà để dấu cách thì "Âm nhạc hôm nay : cập nhật" khác "Âm nhạc hôm nay: cập nhật". Có 36 trong 48 mục việc có link ở site cũ là kiểu link liền dấu câu. Hậu quả: dấu đã đánh ở site cũ không hiện, và dấu đánh trên site mới mất khi trang đích lên.
+   - Sửa: mã việc tính lúc build (`data-viec`, `src/plugins/danh-sach-viec.mjs`), bỏ nhãn cùng dấu cách trước nó.
+   - Kiểm thử: dựng cùng danh sách khi trang đích chưa có và khi đã có thì ra cùng mã, và mã bằng mã băm của chữ như site cũ.
+2. **`nhap` nhập lại thì còn sót `luot_2_ghi_chu`, `luot_2_nguon` của lần trước.** Sửa: xóa hai khóa trước khi ghi.
+3. **`nhap` không thật sự "một dòng sai thì không ghi gì".** Hồ sơ hỏng YAML làm lệnh dừng giữa chừng, khi đã ghi xong vài hồ sơ. Sửa: kiểm `doc.errors` lúc kiểm tra; dựng hết chuỗi rồi mới ghi.
+
+Chỗ nên sửa, cũng đã sửa:
+- `nhap` từ chối:
+  - `nguon` không phải danh sách;
+  - hồ sơ đã khóa (lần cuối trong `lan` có mã băm);
+  - hai nhận định cùng id.
+- `nhap` nhận lời khuyên tập (`khuyen-tap`) không có nguồn, và không xếp nhận định `khong-can-nguon` mà lượt 2 `dung` vào "cần review".
+- Thêm kiểm thử cho `::hoc-tiep` với khóa từng phần. Kiểm thử này cho thấy chỉ thị đọc `loai`, `chang` của các bài học khác, `cap`, `ten`, `tac_gia`, `khuyet_danh`, và tên tác giả khi có trang cùng tác phẩm. Đợt 6 cần khóa các trường ấy trước khi khóa trang có `::hoc-tiep`.
+- `khoa`: cảnh báo "bản ghi của trang chưa khóa" tính cả khóa từng phần.
+- `thieuChiMuc` bắt cả file thiếu hẳn: `pagefind.js`, và file `pf_meta` của từng ngôn ngữ.
+
+Vòng kiểm lại: chính người review xem các chỗ sửa (mức lớn).
+
 ## Kiểm thử
 
-Trên máy (macOS), sau khi xóa trang chuyển tạm:
+Trên máy (macOS), sau khi xóa trang chuyển tạm. Số đếm là của commit đầu; sau khi sửa theo review thì như ghi ở cuối mục.
 
 | Bản | `npm test` | Kiểm thử trình duyệt |
 |---|---|---|
 | Bản xem | 91: 90 đạt, 0 hỏng, 1 bỏ qua (so chữ với site cũ, phạm vi lô) | 93: 90 đạt, 0 hỏng, 3 bỏ qua (danh sách việc: chưa trang nào có) |
 | Bản thật | 91: 89 đạt, 0 hỏng, 2 bỏ qua (thêm: nhãn nhóm, vì bản thật chỉ có trang chủ và trang 404, không thuộc nhóm nào) | 51: 34 đạt, 0 hỏng, 17 bỏ qua |
 
-`npm run build` và `npm run build:xem` đều thoát 0.
+`test.yml` trên GitHub cho commit đầu (`d86704d`) đạt cả ba phần: `npm test`, kiểm thử trình duyệt, Lighthouse.
+
+Sau khi sửa theo review:
+- `npm test`: 93 phép thử. Bản xem: 92 đạt, 1 bỏ qua. Bản thật: 91 đạt, 2 bỏ qua.
+- `kiem-thanh-phan`: 16/16 đạt, có trang chuyển tạm, phép thử danh sách việc chạy trên ba trình duyệt.

@@ -17,15 +17,19 @@ const LAN_DUNG_LAI = 2;
 const moiFile = (thuMuc) => fs.readdirSync(thuMuc, { recursive: true }).map((f) => path.join(thuMuc, f)).filter((f) => fs.statSync(f).isFile());
 
 /**
- * Chỗ thiếu của chỉ mục Pagefind ở thư mục `pf` (đường dẫn): pagefind-entry.json đọc được và có ít nhất một ngôn ngữ,
- * không file nào rỗng. Trả về danh sách chỗ thiếu (rỗng là đủ). Dùng lại trong tests/tim-kiem.test.mjs.
+ * Chỗ thiếu của chỉ mục Pagefind ở thư mục `pf` (đường dẫn): có pagefind.js; pagefind-entry.json đọc được, có ít nhất
+ * một ngôn ngữ và file pf_meta của từng ngôn ngữ; không file nào rỗng. Trả về danh sách chỗ thiếu (rỗng là đủ). Dùng lại
+ * trong tests/tim-kiem.test.mjs.
  */
 export function thieuChiMuc(pf) {
 	if (!fs.existsSync(pf)) return ['không có thư mục pagefind/'];
 	const thieu = [];
+	if (!fs.existsSync(path.join(pf, 'pagefind.js'))) thieu.push('không có pagefind.js');
 	try {
 		const entry = JSON.parse(fs.readFileSync(path.join(pf, 'pagefind-entry.json'), 'utf8'));
-		if (!Object.keys(entry.languages ?? {}).length) thieu.push('pagefind-entry.json không có ngôn ngữ nào');
+		const ngonNgu = Object.values(entry.languages ?? {});
+		if (!ngonNgu.length) thieu.push('pagefind-entry.json không có ngôn ngữ nào');
+		for (const { hash } of ngonNgu) if (!fs.existsSync(path.join(pf, `pagefind.${hash}.pf_meta`))) thieu.push(`không có pagefind.${hash}.pf_meta`);
 	} catch (e) {
 		thieu.push(`pagefind-entry.json không đọc được (${e.message})`);
 	}

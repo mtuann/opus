@@ -270,7 +270,9 @@ export function lenh(thamSo, goc = GOC, in_ = console.log) {
 			if (!bg) {
 				const fm = /^---\n([\s\S]*?)\n---/.exec(fs.readFileSync(fileTrang(muc, goc), 'utf8'));
 				const slug = fm && parse(fm[1])?.tac_pham;
-				if (slug && !khoa.ban_ghi[`tac-pham/${slug}`]) in_(`  chú ý: bản ghi tac-pham/${slug} của trang chưa khóa (node tools/khoa.mjs khoa du-lieu/tac-pham/${slug})`);
+				// khóa từng phần cũng tính: chỉ thị đọc trường chưa khóa thì build báo (chiDaKhoa, src/du-lieu.mjs)
+				if (slug && !Object.keys(khoa.ban_ghi).some((k) => k.split('#')[0] === `tac-pham/${slug}`))
+					in_(`  chú ý: bản ghi tac-pham/${slug} của trang chưa khóa trường nào (node tools/khoa.mjs khoa du-lieu/tac-pham/${slug}…)`);
 			}
 		}
 		return 0;
@@ -353,41 +355,63 @@ export function lenh(thamSo, goc = GOC, in_ = console.log) {
 		const ds = parse(fs.readFileSync(path.resolve(goc, file), 'utf8'));
 		if (!Array.isArray(ds)) throw new Error(`${file}: phải là danh sách kết quả`);
 		const loi = [];
-		const hoSo = new Map(); // file hồ sơ -> { doc, dong: [[nhận định, dòng kết quả]] }
+		const hoSo = new Map(); // file hồ sơ -> { doc, dong: [[nhận định, dòng kết quả]] }, hay null nếu hồ sơ không nhập được
 		const daGap = new Set();
 		ds.forEach((d, i) => {
 			const ten = `dòng ${i + 1} (${d?.trang ?? '?'}, ${d?.id ?? '?'})`;
 			if (!d?.trang || !d?.id) return loi.push(`${ten}: thiếu trang hay id`);
 			if (!LUOT_2.includes(d.luot_2)) return loi.push(`${ten}: luot_2 phải là ${LUOT_2.join(', ')}`);
-			if (d.luot_2 !== 'khong-chac' && !d.nguon?.length) loi.push(`${ten}: ${d.luot_2} cần nguon (link đã mở)`);
+			if (d.nguon !== undefined && (!Array.isArray(d.nguon) || d.nguon.some((x) => typeof x !== 'string')))
+				return loi.push(`${ten}: nguon phải là danh sách link`);
 			if (d.luot_2 === 'sai' && !d.cau_dung && !d.ghi_chu) loi.push(`${ten}: sai cần cau_dung hay ghi_chu`);
 			if (daGap.has(`${d.trang}#${d.id}`)) return loi.push(`${ten}: trùng dòng trước`);
 			daGap.add(`${d.trang}#${d.id}`);
 			const f = fileHoSo(d.trang, goc);
-			if (!fs.existsSync(f)) return loi.push(`${ten}: chưa có hồ sơ ${path.relative(goc, f)}`);
-			if (!hoSo.has(f)) hoSo.set(f, { doc: parseDocument(fs.readFileSync(f, 'utf8')), dong: [] });
-			const { doc, dong } = hoSo.get(f);
-			const nd = doc.get('nhan_dinh')?.items?.find((x) => x.get('id') === d.id);
+			if (!hoSo.has(f)) {
+				// hồ sơ hỏng hay đã khóa thì không nhập vào (báo một lần cho mỗi hồ sơ)
+				let doc = null;
+				if (!fs.existsSync(f)) loi.push(`${ten}: chưa có hồ sơ ${path.relative(goc, f)}`);
+				else {
+					doc = parseDocument(fs.readFileSync(f, 'utf8'));
+					if (doc.errors.length) loi.push(`${ten}: hồ sơ ${path.relative(goc, f)} đọc YAML lỗi (${doc.errors[0].message})`), (doc = null);
+					else if (doc.get('lan')?.items?.at(-1)?.get('ma_bam'))
+						loi.push(`${ten}: hồ sơ ${path.relative(goc, f)} đã khóa (lần cuối trong lan có mã băm): mở khóa trước`), (doc = null);
+				}
+				hoSo.set(f, doc && { doc, dong: [] });
+			}
+			const hs = hoSo.get(f);
+			if (!hs) return;
+			const trungId = (hs.doc.get('nhan_dinh')?.items ?? []).filter((x) => x.get('id') === d.id);
+			if (trungId.length > 1) return loi.push(`${ten}: hồ sơ có ${trungId.length} nhận định cùng id ${d.id}`);
+			const nd = trungId[0];
 			if (!nd) return loi.push(`${ten}: hồ sơ không có nhận định ${d.id}`);
-			dong.push([nd, d]);
+			// lời khuyên tập (khuyen-tap) không cần nguồn
+			if (d.luot_2 !== 'khong-chac' && !d.nguon?.length && nd.get('loai') !== 'khuyen-tap') loi.push(`${ten}: ${d.luot_2} cần nguon (link đã mở)`);
+			hs.dong.push([nd, d]);
 		});
 		if (loi.length) throw new Error(`${file}: chưa nhập gì, vì:\n- ${loi.join('\n- ')}`);
 		const dem = Object.fromEntries(LUOT_2.map((k) => [k, 0]));
 		const canReview = [];
 		let thieu = 0;
+		// dựng hết rồi mới ghi: lỗi lúc dựng thì chưa file nào bị ghi
+		const ghiRa = [];
 		for (const [f, { doc, dong }] of hoSo) {
 			for (const [nd, d] of dong) {
 				nd.set('luot_2', d.luot_2);
+				// nhập lại thì thay hẳn phần của lượt 2, không để sót link hay ghi chú của lần trước
+				nd.delete('luot_2_nguon');
+				nd.delete('luot_2_ghi_chu');
 				if (d.nguon?.length) nd.set('luot_2_nguon', doc.createNode(d.nguon, { flow: true }));
 				const ghiChu = [d.cau_dung && `câu đúng: ${d.cau_dung}`, d.ghi_chu].filter(Boolean).join('; ');
 				if (ghiChu) nd.set('luot_2_ghi_chu', ghiChu);
 				dem[d.luot_2]++;
 				const kq = nd.get('ket_qua');
-				if (d.luot_2 !== 'dung' || kq !== 'dung') canReview.push(`${d.trang} ${d.id}: lượt 1 ${kq ?? 'chưa có kết quả'}, lượt 2 ${d.luot_2}`);
+				if (d.luot_2 !== 'dung' || !['dung', 'khong-can-nguon'].includes(kq)) canReview.push(`${d.trang} ${d.id}: lượt 1 ${kq ?? 'chưa có kết quả'}, lượt 2 ${d.luot_2}`);
 			}
-			fs.writeFileSync(f, doc.toString({ lineWidth: 0 }));
+			ghiRa.push([f, doc.toString({ lineWidth: 0 })]);
 			thieu += (doc.get('nhan_dinh')?.items ?? []).filter((x) => !LUOT_2.includes(x.get('luot_2'))).length;
 		}
+		for (const [f, chu] of ghiRa) fs.writeFileSync(f, chu);
 		in_(`đã nhập ${ds.length} kết quả lượt 2 vào ${hoSo.size} hồ sơ: ${LUOT_2.map((k) => `${dem[k]} ${k}`).join(', ')}`);
 		if (thieu) in_(`còn ${thieu} nhận định trong các hồ sơ ấy chưa có lượt 2 (trang Đọc thêm chỉ cần mẫu)`);
 		if (canReview.length) in_(`cần review (${canReview.length}):\n  ${canReview.join('\n  ')}`);

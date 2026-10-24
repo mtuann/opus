@@ -8,7 +8,7 @@ import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { parse } from 'yaml';
+import { parse, stringify } from 'yaml';
 import { locTheoBan } from '../src/ban-build.mjs';
 import { chiDaKhoa, schema } from '../src/du-lieu.mjs';
 import { chuanHoaTrang, docKhoa, jsonChuan, kiemKhoa, maBamBanGhi, maBamTrang, truongDaKhoa } from '../src/khoa.mjs';
@@ -365,6 +365,45 @@ test('nhap: đưa kết quả lượt 2 vào hồ sơ (kèm link, câu đúng); 
 		assert.match(ra, /đã nhập 2 kết quả lượt 2 vào 1 hồ sơ: 1 dung, 1 sai, 0 khong-chac/);
 		assert.match(ra, /còn 1 nhận định trong các hồ sơ ấy chưa có lượt 2/);
 		assert.match(ra, /cần review \(1\):\n {2}du-lieu\/nha-soan-nhac\/a n2: lượt 1 da-sua, lượt 2 sai/);
+
+		// nhập lại: phần của lượt 2 thay hẳn, không sót câu đúng hay link của lần trước
+		ghi('l2.yml', dong('n2', 'dung', ', nguon: ["https://w"]'));
+		chay('nhap', 'l2.yml');
+		const lai = parse(fs.readFileSync(f, 'utf8')).nhan_dinh[1];
+		assert.equal(lai.luot_2, 'dung');
+		assert.deepEqual(lai.luot_2_nguon, ['https://w']);
+		assert.equal(lai.luot_2_ghi_chu, undefined);
+
+		// lời khuyên tập: không cần nguồn, khong-can-nguon mà lượt 2 dung thì không phải review
+		const them = parse(fs.readFileSync(f, 'utf8'));
+		them.nhan_dinh.push({ id: 'n4', cau: 'Tập chậm.', loai: 'khuyen-tap', ket_qua: 'khong-can-nguon' });
+		fs.writeFileSync(f, stringify(them));
+		ghi('l2.yml', dong('n4', 'dung'));
+		assert.doesNotMatch(chay('nhap', 'l2.yml'), /cần review/);
+
+		// nguon không phải danh sách; hai nhận định cùng id; hồ sơ đã khóa; hồ sơ thứ hai hỏng YAML: không ghi file nào
+		ghi('src/data/nha-soan-nhac.yml', '- id: a\n  ten: A\n  sinh: 1900\n  mat: 1950\n- id: b\n  ten: B\n  sinh: 1800\n  mat: 1850\n- id: c\n  ten: C\n  sinh: 1700\n  mat: 1750\n');
+		chay('mau', 'du-lieu/nha-soan-nhac/b', 'du-lieu/nha-soan-nhac/c');
+		const fb = path.join(goc, 'kiem-dinh/du-lieu/nha-soan-nhac/b.yml');
+		const fc = path.join(goc, 'kiem-dinh/du-lieu/nha-soan-nhac/c.yml');
+		fs.writeFileSync(fb, fs.readFileSync(fb, 'utf8').replace('nhan_dinh: []', 'nhan_dinh: [{ id: n1, cau: x, loai: ten }, { id: n1, cau: y, loai: ten }]').replace('ma_bam: null', 'ma_bam: sha256:x'));
+		fs.writeFileSync(fc, fs.readFileSync(fc, 'utf8') + 'nhan_dinh: [\n');
+		const giuA = fs.readFileSync(f, 'utf8');
+		ghi('l2.yml', dong('n1', 'dung', ', nguon: "https://y"') + dong('n3', 'dung', ', nguon: ["https://y"]').replace('/a,', '/b,') + dong('n1', 'dung', ', nguon: ["https://y"]').replace('/a,', '/c,') + dong('n3', 'dung', ', nguon: ["https://y"]'));
+		const loi2 = (() => {
+			try {
+				chay('nhap', 'l2.yml');
+			} catch (e) {
+				return e.message;
+			}
+		})();
+		assert.match(loi2, /dòng 1 .*nguon phải là danh sách link/);
+		assert.match(loi2, /dòng 2 .*b\.yml đã khóa/);
+		assert.match(loi2, /dòng 3 .*c\.yml đọc YAML lỗi/);
+		assert.equal(fs.readFileSync(f, 'utf8'), giuA, 'dòng 4 đúng mà vẫn không ghi, vì có dòng sai');
+		fs.writeFileSync(fb, fs.readFileSync(fb, 'utf8').replace('ma_bam: sha256:x', 'ma_bam: null'));
+		ghi('l2.yml', dong('n1', 'dung', ', nguon: ["https://y"]').replace('/a,', '/b,'));
+		assert.throws(() => chay('nhap', 'l2.yml'), /hồ sơ có 2 nhận định cùng id n1/);
 	} finally {
 		fs.rmSync(goc, { recursive: true, force: true });
 	}

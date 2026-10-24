@@ -143,7 +143,7 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 			const nhan = p.locator('li.oz-viec > .oz-viec-o').first();
 			const o = nhan.locator('input');
 			await nhan.scrollIntoViewIfNeeded();
-			await p.waitForFunction(() => document.querySelector('.oz-viec-hop')?.dataset.viec, null, { timeout: 20000 });
+			await p.waitForFunction(() => document.querySelector('li.oz-viec')?.hasAttribute('data-san'), null, { timeout: 20000 });
 			const h = await nhan.boundingBox();
 			await p.touchscreen.tap(h.x + 4, h.y + 4);
 			assert.ok(await o.isChecked(), 'chạm góc nhãn mà ô không đánh dấu');
@@ -151,7 +151,7 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 			const kho = await p.evaluate(() => JSON.parse(localStorage.getItem('opus-zero:v1')).store.checks);
 			assert.match(kho[VIEC[0]]?.[ma] ?? '', /^\d{4}-\d{2}-\d{2}$/, `kho checks: ${JSON.stringify(kho)}`);
 			await p.reload({ waitUntil: 'load' });
-			await p.waitForFunction(() => document.querySelector('.oz-viec-hop')?.dataset.viec, null, { timeout: 20000 });
+			await p.waitForFunction(() => document.querySelector('li.oz-viec')?.hasAttribute('data-san'), null, { timeout: 20000 });
 			assert.ok(await o.isChecked(), 'tải lại trang thì mất dấu');
 			await o.uncheck();
 			assert.equal(await p.evaluate(() => JSON.stringify(JSON.parse(localStorage.getItem('opus-zero:v1')).store.checks)), '{}', 'bỏ dấu mà kho còn');
