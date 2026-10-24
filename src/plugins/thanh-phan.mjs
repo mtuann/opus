@@ -12,8 +12,8 @@ import { docKhoa, truongDaKhoa } from '../khoa.mjs';
 export const esc = (s) =>
 	String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 
-/** HTML đã dựng của trang có khối cần JavaScript (khuông nhạc, câu hỏi, khối nghe, danh sách việc) không:
- * MarkdownContent.astro chỉ tải bộ tải thành phần ở những trang này. */
+/** HTML đã dựng của trang có khối cần JavaScript (khuông nhạc, câu hỏi, khối nghe, danh sách việc, bài kiểm tra đầu vào,
+ * chặng piano, ô gợi ý tập) không: MarkdownContent.astro chỉ tải bộ tải thành phần ở những trang này. */
 export const canTaiScript = (html) => /\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec|oz-placement|oz-muc-do|oz-goi-y)[\s"]/.test(html);
 
 /**
@@ -283,7 +283,7 @@ const TITLE_SAP_CO = 'Trang này sẽ lên site sau khi được kiểm tra lạ
 
 /**
  * Link dựng ngoài plugin Markdown (trang sinh trong src/pages/): trang chưa có trong bản build thành chữ kèm nhãn "sắp có",
- * cùng HTML với src/plugins/sap-co.mjs (tests/thanh-phan.test.mjs so hai bên). `chu` là HTML (đã thoát).
+ * cùng HTML với src/plugins/sap-co.mjs và src/scripts/lien-ket.js (tests/khung-d2.test.mjs so ba bên). `chu` là HTML (đã thoát).
  */
 export function lienKet(href, chu, co = true) {
 	return co
