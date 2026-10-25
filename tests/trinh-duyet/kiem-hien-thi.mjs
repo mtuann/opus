@@ -10,7 +10,8 @@ after(dongMayChu);
 /**
  * Hàng (flex, grid) trong bài có con dính lề trên của Starlight (phần tử liền sau phần tử khác trong bài cách 1rem, kể cả
  * nút trong một hàng) mà con khác thì không: các con lệch nhau theo chiều dọc. Cả nút của thanh phát abcjs tràn khỏi thanh
- * (abcjs mặc định cho nút cao hơn thanh).
+ * (abcjs mặc định cho nút cao hơn thanh), và phần tử trong thanh phát dính lề ấy, kể cả hình chưa hiện (Pause, đang tải
+ * hiện khi bấm Play; lề vẫn tính khi phần tử ẩn).
  */
 const hangLech = () => {
 	const bai = document.querySelector('.sl-markdown-content');
@@ -40,7 +41,11 @@ const hangLech = () => {
 			return n.getClientRects().length && (r.top < t.top - 0.5 || r.bottom > t.bottom + 0.5);
 		})
 		.map((n) => `${ten(n)} tràn khỏi thanh phát`);
-	return [...new Set(lech), ...tran];
+	// phần tử bên trong hình SVG (đường, nhóm) thì bỏ qua: lề không có tác dụng ở đó
+	const trongThanh = [...bai.querySelectorAll('.abcjs-inline-audio *')]
+		.filter((x) => !x.ownerSVGElement && getComputedStyle(x).marginTop === khoang)
+		.map((x) => `${ten(x)} trong thanh phát`);
+	return [...new Set(lech), ...tran, ...trongThanh];
 };
 
 /**

@@ -4,8 +4,10 @@
 
 /* ---------- Nút, hàng nút, phản hồi (dùng chung cho các công cụ) ---------- */
 /* Starlight cách phần tử liền sau phần tử khác trong bài 1rem (margin-top), kể cả nút trong một hàng, làm các nút
-   lệch nhau: trong hàng của thành phần, khoảng cách do gap lo; trong thanh phát của abcjs, do CSS của abcjs. */
-.sl-markdown-content :is(.oz-row, .oz-hands, .oz-abc-tools, .oz-chips, .abcjs-inline-audio) > * {
+   lệch nhau: trong hàng của thành phần, khoảng cách do gap lo. Thanh phát của abcjs thì bỏ cho mọi phần tử, kể cả hình
+   trong nút: hình Pause và hình đang tải nằm sau hình Play (đang ẩn), nên khi bấm Play thì rơi xuống dưới thanh. */
+.sl-markdown-content :is(.oz-row, .oz-hands, .oz-abc-tools, .oz-chips) > *,
+.sl-markdown-content .abcjs-inline-audio * {
 	margin-top: 0;
 }
 .oz-tool {
