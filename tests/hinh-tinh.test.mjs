@@ -10,8 +10,8 @@ const ROOT = path.resolve(import.meta.dirname, '..');
 const FILE = fs.readdirSync(THU_MUC_HINH).filter((f) => f.endsWith('.html'));
 /** Màu viết cứng còn được giữ: nền sáng (ô, phím, dải) và chữ tối trên nền ấy, trắng của vòng tròn chứa chữ tối. */
 const MAU_GIU = new Set([
-	// màu của vật được vẽ (D4-L1): phím trắng, phím đen và viền phím, da tay, thân đàn, ghế, áo; nằm trên nền sáng của chính vật
-	'#ffffff', '#1b1d22', '#4a4a4a', '#f3d27a', '#bcd6f2', '#f1d3b8', '#d9c9a3', '#b0a48a', '#9fb5cf', '#4a5d73',
+	// màu của vật được vẽ (D4-L1; D4-L2: vòng số ngón nền sáng, chữ mực, hình luon-ngon): phím trắng, phím đen và viền phím, da tay, thân đàn, ghế, áo; nằm trên nền sáng của chính vật
+	'#ffffff', '#1b1d22', '#4a4a4a', '#1f3a5f', '#e8eef5', '#f3d27a', '#bcd6f2', '#f1d3b8', '#d9c9a3', '#b0a48a', '#9fb5cf', '#4a5d73',
 	'#1b1b1b', '#fff', '#a9c7e8', '#f1d9a0', '#c9b6dd', '#7aa6d6', '#9fd0d0', '#8cc49a', '#e0b45e', '#c9a0dc', '#e98f7a', '#f3e3b8', '#e9b3a6', '#b6dcc1', '#d6d6d6']);
 
 test('chuyenHinh: bỏ xmlns, font-family; màu đậm thành biến; figure có not-content và data-sinh; chữ giữ nguyên', () => {
@@ -38,7 +38,10 @@ test('mỗi hình tĩnh: figure not-content, data-sinh, có chú thích; SVG có
 		const la = [...s.matchAll(/(?:fill|stroke)="(#[0-9a-f]{3,6})"/gi)].map((m) => m[1].toLowerCase()).filter((m) => !MAU_GIU.has(m));
 		assert.deepEqual(la, [], `${f}: màu đậm phải là biến (${Object.keys(MAU).join(', ')})`);
 		assert.doesNotMatch(s, /<[^>]* style="[^"]*"[^>]* style="/, `${f}: một thẻ hai thuộc tính style`);
-		assert.doesNotMatch(s, / id="/, `${f}: không id (trùng khi hai hình trên một trang)`);
+		// id (như marker mũi tên) phải mang tên hình, để hai hình trên một trang không trùng id
+		const ten = f.slice(0, -5);
+		const id = [...s.matchAll(/ id="([^"]*)"/g)].map((m) => m[1]).filter((x) => !x.startsWith(`oz-${ten}-`));
+		assert.deepEqual(id, [], `${f}: id phải bắt đầu bằng oz-${ten}-`);
 	}
 });
 
