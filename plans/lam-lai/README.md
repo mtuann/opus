@@ -67,6 +67,15 @@ Thêm, chốt ngày 24/10/2026:
   - Kiểm thử chờ điều kiện, không chờ cố định.
   - Không làm: dùng chung trang nguồn đã tải giữa hai lượt (để giữ độc lập); chạy song song hai lô (các lô làm lần lượt).
 - [x] Đợt 3: **làm thử D3-L1 trọn vẹn, rồi gom D3-L2 đến D3-L6** (chủ repo chọn ngày 24/10/2026; cách làm ở mục Đợt 3). Mục đích: kiểm định cả loạt bài nhạc lý một lượt (bài dẫn chéo nhau, dùng chung thuật ngữ) và bớt phần việc lặp lại của từng lô, nhưng vẫn thử thành phần dùng chung và cách làm mới ở một lô trước.
+- [x] **Thuật ngữ tiếng Việt** (chủ repo giao agent quyết, 27/10/2026; D3-L5 làm theo khi chốt `thuat-ngu.yml` và trang Từ điển). Nguyên tắc: giữ cách gọi đã dùng ở các trang đã khóa, chỉ thêm, không đổi tên đang có; tên tiếng Việt (`nghia`) là lựa chọn của site, không phải nhận định.
+  - Nhịp đơn, nhịp kép theo Open Music Theory (chia phách đôi hay ba), như bài 4 đã khóa. Mục Từ điển của *simple meter*, *compound meter* thêm một câu: một số giáo trình tiếng Việt gọi 4/4 là "nhịp phức" (nhịp ghép từ hai nhịp đơn). Không mở khóa bài 4.
+  - Chức năng hòa âm: "chủ", "hạ át", "át" (T, PD, D), như giáo trình tiếng Việt gọi nhóm hạ át; tiếng Anh ghi *predominant* (OMT), cũng gọi *subdominant function*. "Hạ át âm" chỉ bậc IV (bản ghi `subdominant`). Từ điển ghi rõ hai nghĩa.
+  - Bậc của gam viết số Ả Rập trong câu ("bậc 7"); số La Mã dành cho hợp âm (I, IV, V7), như OMT. Bảng bậc ở bài 6 (đã khóa, ghi cả hai cách) giữ nguyên.
+  - Dấu thăng kép, giáng kép viết × và ♭♭ như bài 5 đã khóa (phông thường thiếu 𝄪, 𝄫).
+  - "Hòa âm" (gam thứ hòa âm, hòa âm chức năng), không dùng "hòa thanh"; lô chuyển `luyen-tai/nghe-gam` sửa theo, ghi `doi_chu`.
+  - "Dấu hóa" là tên chung của ♯, ♭, ♮; "dấu hóa bất thường" là dấu viết trong bài (bản ghi `accidental`). D3-L5 thêm mục "dấu hóa" nếu cần.
+  - *Period* là "đoạn nhạc"; *section* (phần của hình thức) là "phần". Lô sau gặp chỗ lẫn thì ghi trong hồ sơ, không sửa trang đã khóa.
+
 
 Câu hỏi nhỏ còn chờ (từ review nhánh quyết định, `bao-cao/d2-bang-tang.md`); hỏi chủ repo trước lô ghi bên cạnh:
 
