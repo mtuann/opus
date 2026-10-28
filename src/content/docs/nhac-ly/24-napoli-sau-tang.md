@@ -3,11 +3,11 @@ title: 24. Hợp âm Napoli và hợp âm sáu tăng
 description: 'Hai loại hợp âm nửa cung (chromatic) này là "gia vị mạnh" của thời Cổ điển và Lãng mạn. Cả hai đều có chức năng tiền át: chúng đứng ngay trước hợp âm V và làm…'
 ---
 
-Hai loại hợp âm **nửa cung** (chromatic) này là "gia vị mạnh" của thời Cổ điển và Lãng mạn. Cả hai đều có chức năng **tiền át**: chúng đứng ngay trước hợp âm V và làm cho V nghe căng thẳng hơn bao giờ hết. Ví dụ dưới đây ở **Đô thứ**, nơi chúng hay xuất hiện nhất.
+Hai loại hợp âm **nửa cung** (chromatic) này là "gia vị mạnh" của thời Cổ điển và Lãng mạn. Cả hai đều có chức năng **tiền át**: chúng đứng ngay trước hợp âm V và làm cho V nghe căng thẳng hơn. Ví dụ dưới đây ở **Đô thứ**, nơi chúng hay xuất hiện nhất.
 
 ## Hợp âm Napoli (N6)
 
-**Hợp âm Napoli** là hợp âm **trưởng** trên **bậc 2 bị hạ nửa cung** (♭II), thường ở **đảo 1**, nên được ký hiệu **N6** hoặc **♭II6**. Tên gọi gắn với các nhà soạn opera thế kỷ 18 ở Napoli.
+**Hợp âm Napoli** là hợp âm **trưởng** trên **bậc 2 bị hạ nửa cung** (♭II), thường ở **đảo 1**, nên được ký hiệu **N6** hoặc **♭II6**. Tên gọi nhắc tới Napoli (nhóm nhà soạn nhạc thế kỷ 18 quanh thành phố này), nhưng ít có cơ sở lịch sử: hợp âm đã được dùng từ trước đó và ở nhiều nơi khác.
 
 Trong Đô thứ: ♭II = **Rê♭ trưởng** (Rê♭ – Fa – La♭). Ở đảo 1, nốt **Fa** ở bè trầm.
 
@@ -21,7 +21,7 @@ L:1/2
 M:3/2
 Q:1/2=60
 K:Cm
-[F,A_df] [G,=Bdg] [C,ceg] |]
+[F,FA_d] [G,DG=B] [C,EGc] |]
 ```
 
 ## Hợp âm sáu tăng (+6)
@@ -33,7 +33,7 @@ Có ba loại, đặt tên theo quốc gia (tên gọi quy ước, không liên 
 | Loại | Nốt (trong Đô thứ) | Đặc điểm |
 |---|---|---|
 | **Ý** (It+6) | La♭ – Đô – Fa♯ | Ba nốt, gọn nhất |
-| **Pháp** (Fr+6) | La♭ – Đô – Rê – Fa♯ | Thêm Rê; nghe gần với gam toàn cung |
+| **Pháp** (Fr+6) | La♭ – Đô – Rê – Fa♯ | Thêm Rê; cả bốn nốt cùng thuộc một gam toàn cung |
 | **Đức** (Ger+6) | La♭ – Đô – Mi♭ – Fa♯ | Thêm Mi♭; nghe **giống hệt** hợp âm La♭7, nhưng giải quyết khác |
 
 ```abc
@@ -55,7 +55,7 @@ Hợp âm sáu Đức thường đi qua **i6/4** trước khi đến V, để tr
 ## Nghe trong tác phẩm thật
 
 - Beethoven, chương 1 Sonata *"Ánh trăng"* Op. 27 số 2: hợp âm Napoli xuất hiện ngay ở ô nhịp thứ 3.
-- Hợp âm sáu tăng có mặt ở rất nhiều đoạn chuẩn bị cho cao trào trong nhạc Mozart, Beethoven, Schubert. Khi nghe một hợp âm "nhói" ngay trước một hợp âm át lớn, rất có thể đó là +6.
+- Hợp âm sáu tăng có mặt trong nhạc của Mozart, Beethoven, Schubert, thường ngay trước hợp âm át. Khi nghe một hợp âm "nhói" ngay trước một hợp âm át lớn, rất có thể đó là +6.
 
 ## Bài tập viết
 
@@ -95,5 +95,9 @@ Hợp âm sáu Đức thường đi qua **i6/4** trước khi đến V, để tr
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- Open Music Theory: [Neapolitan Sixth Chords (♭II⁶)](https://viva.pressbooks.pub/openmusictheory/chapter/bii6/); [Augmented Sixth Chords](https://viva.pressbooks.pub/openmusictheory/chapter/augmented-sixth-chords/); [Collections](https://viva.pressbooks.pub/openmusictheory/chapter/collections/) (gam toàn cung).
+- Andre Mount, *Fundamentals, Function, and Form*: [31. The Neapolitan Chord](https://milnepublishing.geneseo.edu/fundamentals-function-form/?p=12006); [32. Augmented Sixth Sonorities](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/32-augmented-sixth-sonorities/).
+- Robert Hutchinson, *Music Theory for the 21st-Century Classroom*: [Types of Augmented Sixth Chords](https://musictheory.pugetsound.edu/mt21c/TypesOfAugmentedSixthChords.html).
+- *The Concise Oxford Dictionary of Music* (Encyclopedia.com): [Neapolitan sixth](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/neapolitan-sixth).
+- IMSLP: Beethoven, [Piano Sonata No.14, Op.27 No.2](https://imslp.org/wiki/Piano_Sonata_No.14,_Op.27_No.2_(Beethoven,_Ludwig_van)).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

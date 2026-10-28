@@ -1,15 +1,15 @@
 ---
 title: 17. Khóa Đô và dịch giọng
-description: "Ngoài khóa Sol và khóa Fa, còn một khóa thứ ba: khóa Đô. Hình của nó giống hai chữ C quay lưng vào nhau, và điểm giữa của khóa chỉ vào dòng nào thì dòng đó là…"
+description: "Ngoài khóa Sol và khóa Fa, còn một khóa thứ ba: khóa Đô. Hình của nó vẽ cách điệu từ chữ C, và điểm giữa của khóa chỉ vào dòng nào thì dòng đó là…"
 ---
 
 ## Khóa Đô
 
-Ngoài khóa Sol và khóa Fa, còn một khóa thứ ba: **khóa Đô**. Hình của nó giống hai chữ C quay lưng vào nhau, và **điểm giữa của khóa chỉ vào dòng nào thì dòng đó là Đô giữa (C4)**. Khóa Đô có thể đặt ở nhiều dòng, nhưng hai vị trí còn dùng ngày nay là:
+Ngoài khóa Sol và khóa Fa, còn một khóa thứ ba: **khóa Đô**. Hình của nó vẽ cách điệu từ chữ C, và **điểm giữa của khóa chỉ vào dòng nào thì dòng đó là Đô giữa (C4)**. Khóa Đô có thể đặt ở nhiều dòng, nhưng hai vị trí còn dùng ngày nay là:
 
 | Khóa | Đô giữa ở | Dùng cho |
 |---|---|---|
-| **Khóa Đô alto** | Dòng 3 (dòng giữa) | **Viola**; đôi khi trombone alto |
+| **Khóa Đô alto** | Dòng 3 (dòng giữa) | **Viola** |
 | **Khóa Đô tenor** | Dòng 4 | Âm vực cao của **cello**, **bassoon**, **trombone** |
 
 ```abc
@@ -40,7 +40,7 @@ L:1/4
 M:4/4
 Q:1/4=90
 K:C clef=alto
-E E F G | G F E D | E E F G | E D D2 |]
+E E F G | G F E D | C C D E | E3/2 D/ D2 |]
 ```
 
 ## Dịch giọng
@@ -67,18 +67,18 @@ Ca sĩ thường dịch giọng để vừa âm vực; người đệm đàn ph�
 
 ## Nhạc cụ dịch giọng
 
-Một số nhạc cụ được viết bản nhạc ở cao độ **khác** với âm thanh thật vang lên. Lý do chủ yếu là lịch sử (kích thước ống kèn) và để người chơi dùng cùng một thế bấm khi đổi giữa các loại nhạc cụ trong cùng họ.
+Một số nhạc cụ được viết bản nhạc ở cao độ **khác** với âm thanh thật vang lên. Lý do chủ yếu là lịch sử (kèn horn, kèn trumpet thời chưa có van chỉ chơi được các nốt của một âm gốc, nên phải đổi ống nối để đổi âm gốc) và để người chơi dùng cùng một thế bấm khi đổi giữa các loại nhạc cụ trong cùng họ.
 
 | Nhạc cụ | Viết Đô thì vang lên | Ghi chú |
 |---|---|---|
-| Clarinet in B♭, trumpet in B♭ | **Si♭** (thấp hơn 2 trưởng) | Phổ biến nhất |
+| Clarinet in B♭, trumpet in B♭ | **Si♭** (thấp hơn 2 trưởng) | |
 | Clarinet in A | **La** (thấp hơn 3 thứ) | Hay dùng ở giọng có nhiều dấu thăng |
 | Kèn horn in F | **Fa** (thấp hơn 5 đúng) | |
 | Saxophone alto in E♭ | **Mi♭** (thấp hơn 6 trưởng) | |
 | Guitar, contrabass | **Đô** thấp hơn một quãng tám | Để tránh quá nhiều dòng kẻ phụ dưới khuông |
 | Piccolo | **Đô** cao hơn một quãng tám | |
 
-Khi đọc **tổng phổ** (bài 20), bè clarinet in B♭ có hóa biểu khác với các bè còn lại: đó không phải lỗi in, mà là nhạc cụ dịch giọng. Một số tổng phổ hiện đại in ở "cao độ thật" (concert pitch) để dễ đọc.
+Khi đọc **tổng phổ** (bài 20), bè clarinet in B♭ có hóa biểu khác với các bè còn lại: đó không phải lỗi in, mà là nhạc cụ dịch giọng.
 
 ## Bài tập viết
 
@@ -125,5 +125,8 @@ Khi đọc **tổng phổ** (bài 20), bè clarinet in B♭ có hóa biểu khá
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- *Open Music Theory*: [Clefs](https://viva.pressbooks.pub/openmusictheory/chapter/clefs/); [Major Scales, Scale Degrees, and Key Signatures](https://viva.pressbooks.pub/openmusictheory/chapter/major-scales/).
+- *Encyclopaedia Britannica*: [Clef](https://www.britannica.com/print/article/120899).
+- José Rodríguez Alvira, teoria.com: [bảng nhạc cụ dịch giọng](https://www.teoria.com/en/articles/transposing/03.php). *The Oxford Dictionary of Music* (qua encyclopedia.com): [transposing instruments](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/transposing-instruments), [transposition](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/transposition). *LilyPond Music Glossary*: [transposing instrument](https://lilypond.org/doc/v2.25/Documentation/music-glossary/transposing-instrument).
+- Beethoven, *Ode to Joy*: [bản Mutopia](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=528) (Sol trưởng, dịch xuống Đô trưởng); giai điệu gốc ở Giao hưởng số 9, chương 4 (Rê trưởng).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

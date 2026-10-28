@@ -7,22 +7,22 @@ description: Tổng phổ (full score) là bản nhạc ghi mọi bè của dàn
 
 ## Thứ tự các bè
 
-Từ trên xuống dưới, các bè được xếp theo bộ, trong mỗi bộ từ cao xuống thấp:
+Từ trên xuống dưới, các bè được xếp theo bộ, trong mỗi bộ thường từ cao xuống thấp:
 
 | Vị trí | Bộ | Nhạc cụ (viết tắt thường gặp) |
 |---|---|---|
-| Trên cùng | **Bộ gỗ** | Sáo (Fl., Picc.), Oboe (Ob.), Clarinet (Cl., Klar.), Bassoon (Fg., Bsn.) |
-| | **Bộ đồng** | Horn (Hn., Cor., Cr.), Trumpet (Tpt., Tr.), Trombone (Tbn., Pos.), Tuba (Tba.) |
+| Trên cùng | **Bộ gỗ** | Sáo (Fl., Picc.), Oboe (Ob.), Clarinet (Cl., Kl.), Bassoon (Fg., Bsn.) |
+| | **Bộ đồng** | Horn (Hn., Cor.), Trumpet (Tpt., Tr.), Trombone (Tbn., Pos.), Tuba |
 | | **Bộ gõ** | Timpani (Timp., Pk.), các nhạc cụ gõ khác |
-| | Đàn hạc, piano, celesta | Hp., Pf. |
+| | Đàn hạc, piano, celesta | Hp., Pno. |
 | | Độc tấu, hợp xướng | (nếu có) |
-| Dưới cùng | **Bộ dây** | Violin I, Violin II (Vl., Vn.), Viola (Vla., Br.), Cello (Vc.), Contrabass (Cb., Kb.) |
+| Dưới cùng | **Bộ dây** | Violin I, Violin II (Vn., Vln.), Viola (Vla., Br.), Cello (Vc.), Contrabass (Cb., Kb.) |
 
 Viết tắt có thể bằng tiếng Ý, Đức hoặc Pháp tùy nhà xuất bản (ví dụ *Pauken* là timpani trong tiếng Đức, *Bratsche* là viola).
 
 Lưu ý hai điều đã học ở [bài 17](/opus/nhac-ly/17-khoa-do-dich-giong/): bè viola dùng **khóa Đô alto**, và các bè clarinet, horn, trumpet có thể là **nhạc cụ dịch giọng**, nên hóa biểu của chúng khác các bè khác.
 
-Thứ tự từ trên xuống trong tổng phổ (gỗ – đồng – gõ – dây) gần giống thứ tự từ **sau ra trước** trên sân khấu, chỉ khác là bộ gỗ được ghi lên trên cùng:
+Thứ tự trong tổng phổ không giống chỗ ngồi trên sân khấu. Trên sân khấu, từ **trước ra sau** là bộ dây, bộ gỗ, bộ đồng, bộ gõ; trong tổng phổ, bộ gỗ ở trên cùng và bộ dây ở dưới cùng:
 
 ::hinh{ten="seating"}
 
@@ -47,7 +47,7 @@ Thứ tự từ trên xuống trong tổng phổ (gỗ – đồng – gõ – d
 ## Tìm tổng phổ ở đâu?
 
 - **[IMSLP](https://imslp.org/)**: tổng phổ miễn phí của các tác phẩm thuộc phạm vi công cộng. Tìm tên tác phẩm, chọn mục "Full Scores".
-- **Video "score"** trên YouTube: tìm tên tác phẩm kèm chữ *score*. Tổng phổ chạy theo âm thanh, rất hợp khi mới tập.
+- **Video "score"** trên các trang chia sẻ video: tìm tên tác phẩm kèm chữ *score*. Tổng phổ chạy theo âm thanh, rất hợp khi mới tập.
 - Tổng phổ khổ nhỏ (*study score*) của các nhà xuất bản như Bärenreiter, Henle, Eulenburg nếu muốn sở hữu bản in.
 
 ## Thử ngay
@@ -61,8 +61,8 @@ L:1/2
 M:2/2
 Q:1/2=50
 %%score [V1 V2 V3 V4]
-V:V1 name="Vl. I"
-V:V2 name="Vl. II"
+V:V1 name="Vn. I"
+V:V2 name="Vn. II"
 V:V3 name="Vla." clef=alto
 V:V4 name="Vc." clef=bass
 K:D
@@ -103,5 +103,8 @@ K:D
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- *Encyclopaedia Britannica*: [Score](https://www.britannica.com/art/score-music). Dolmetsch Online: [Music Theory Online, bài 26 (khuôn dạng tổng phổ)](https://dolmetsch.com/musictheory26.htm).
+- Berliner Philharmoniker: [Who decides the seating arrangement of the musicians on stage](https://www.berliner-philharmoniker.de/en/stories/who-decides-the-seating-arrangement-of-the-musicians-on-stage/). Frans Absil: [tên và viết tắt nhạc cụ](https://fransabsil.nl/htm/instrum.htm).
+- Haydn, Giao hưởng số 94: [Understanding Music, bản hướng dẫn nghe](https://sites.google.com/email.vccs.edu/music/listening-guides/symphony-no-94-in-g-major-surprise-ii-andante).
+- Beethoven, Giao hưởng số 5: lời giới thiệu của [Indianapolis Symphony Orchestra](https://www.indianapolissymphony.org/?p=2831) và [Burgess Hill Symphony Orchestra](https://www.bhso.org.uk/work/beethoven-symphony-no-5/).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

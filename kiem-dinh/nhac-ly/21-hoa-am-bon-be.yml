@@ -1,0 +1,424 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/21-hoa-am-bon-be
+trang: src/content/docs/nhac-ly/21-hoa-am-bon-be.md
+nguon_cu: ../opus-zero/docs/nhac-ly/21-hoa-am-bon-be.md
+tang: loi
+lan:
+  - so: 1
+    ngay: '2026-10-28'
+    nhanh: moi/d3-l3
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D3-L3 lượt 1, phần 2/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Trang hòa âm bốn bè (tầng lõi), hai hình dẫn bè (::hinh{ten="voice-leading"}, hai hình SVG) và hình âm vực (::hinh{ten="ranges-satb"}); file src/components/hinh/*.html. Nguồn chính: Open Music Theory (OMT), Chords in SATB style và First-Species Counterpoint; Mount, Fundamentals, Function, and Form (ch. 14 và Guide to SATB part-writing của workbook); Iowa State, Comprehensive Musicianship 10.1; MT21C 26.7; RWU (chỉ để thấy nguồn lệch về âm vực bass); COD qua Encyclopedia.com; IMSLP. WebFetch ngày 28/10/2026 (bản tóm tắt chữ, đã hỏi lại để lấy nguyên văn chỗ quan trọng). NGƯỜI GIAO PHẢI SỬA HÌNH: (1) ranges-satb: bass phải là Fa2–Rê4 theo OMT, số px ở n8; (2) voice-leading hình 1: điểm bass "Fa" ở cột IV phải ở Fa2 (cy=208), nay vẽ ở Fa3, số ở n24. Chưa sửa nên n8, n24, n42 để null. Chữ đã sửa trên trang: âm vực bass (n7), bỏ nửa câu "mọi khóa học sáng tác" (n3), gạch đầu dòng I → IV (n30), mục Nguồn (thay link chung bằng các chương đã đọc; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, không đọc được chữ để kiểm). Câu ve-site: n1 (nhac-ly/index chưa chuyển: giữ "Phần 5: Hòa âm mở rộng và phân tích" và phạm vi bài 21–27), n41 (tai-lieu-tham-khao chưa chuyển). Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): voice leading (dẫn bè), doubling (nhân đôi), SATB, parallel fifths/octaves (quãng 5/8 song song), chorale (thánh ca), common tone (nốt chung), voice crossing (bắt chéo bè), contrary motion (chuyển động ngược), tendency tone; đã có bản ghi: chord, triad, inversion, leading-tone, interval, tonic, dominant, cadence. Hình dùng chữ cái (C, Dm) ở hình 2 trong khi trang viết Đô, Rê: nhắc người giao.'
+nguon:
+  - id: omt-satb
+    bac: 2
+    ten: Open Music Theory, Chords in SATB style
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/chords-in-satb-style/
+  - id: omt-inversion
+    bac: 2
+    ten: Open Music Theory, Inversion
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/inversion/
+  - id: omt-first
+    bac: 2
+    ten: Open Music Theory, First-Species Counterpoint (Mark Gotham, Kris Shaffer)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/first-species-counterpoint/
+  - id: fff-14
+    bac: 2
+    ten: Andre Mount, Fundamentals, Function, and Form (Milne Publishing, SUNY Geneseo, giáo trình mở), 14. Three- and Four-Voice Progressions
+    link: https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/14-three-and-four-voice-progressions/
+  - id: fff-guide
+    bac: 2
+    ten: Andre Mount, Fundamentals, Function, and Form Workbook, Guide to SATB part-writing
+    link: https://milnepublishing.geneseo.edu/fundamentals-function-form-workbook/front-matter/guide-to-satb-part-writing/
+  - id: iastate
+    bac: 2
+    ten: 'Iowa State University, Comprehensive Musicianship, 10.1 Chord Voicing and Voice Leading: General Principles (Tutorial)'
+    link: https://iastate.pressbooks.pub/comprehensivemusicianship/chapter/10-1-chord-voicing-and-voice-leading-general-principles-tutorial/
+  - id: mt21c-voice
+    bac: 2
+    ten: Robert Hutchinson, Music Theory for the 21st-Century Classroom, 26.7 Voice Leading Root Position Triads in Four Parts
+    link: https://musictheory.pugetsound.edu/mt21c/VoiceLeadingFourPartsRootPosition.html
+  - id: rwu
+    bac: 2
+    ten: 'Roger Williams University, Western Harmonic Practice I: Diatonic Tonality, Spacing, voicing, and doubling of chord tones in SATB style'
+    link: https://rwu.pressbooks.pub/musictheory/chapter/spacing-voicing-and-doubling-of-chord-tones-in-satb-style/
+  - id: cod-soprano
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục soprano, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/soprano
+  - id: cod-alto
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục alto, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/alto
+  - id: cod-tenor
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục tenor, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/tenor
+  - id: cod-bass
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục bass, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/bass
+  - id: imslp-371
+    bac: 2
+    ten: IMSLP, 371 Vierstimmige Choralgesänge (Bach, Johann Sebastian)
+    link: https://imslp.org/wiki/371_Vierstimmige_Choralges%C3%A4nge_(Bach,_Johann_Sebastian)
+nhan_dinh:
+  - id: n1
+    cau: Phần Hòa âm mở rộng và phân tích gồm bài 21–27 và dành cho bạn đã vững các bài trước.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Kiểm trên site cũ: ../opus-zero/docs/nhac-ly/index.md, mục "## Phần 5: Hòa âm mở rộng và phân tích" ("Dành cho bạn đã vững các phần trước"), liệt kê bài 21 đến 27 (21 Hòa âm bốn bè, 22 Đối âm, 23 Hợp âm mượn, 24 Hợp âm Napoli và hợp âm sáu tăng, 25 Bè trầm số, 26 Phân tích một tác phẩm, 27 Ký hiệu hợp âm pop và jazz); ../opus-zero/mkdocs.yml dòng 255 cùng tên mục. Trang nhac-ly/index chưa chuyển: lô chuyển nó giữ tên Phần 5 và phạm vi bài 21–27.'
+  - id: n2
+    cau: Bach viết hàng trăm bài thánh ca (chorale) bốn bè.
+    loai: lich-su
+    nguon:
+      - imslp-371
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "371 Vierstimmige Choralgesänge", BWV 253–438, 371 bài hòa âm thánh ca (tên khác: "Choräle für vier Singstimmen"); bản in đầu Breitkopf, Leipzig, 1784–87, do C. P. E. Bach và Kirnberger biên soạn. "Hàng trăm" đúng (371).'
+  - id: n3
+    cau: Viết bốn bè là bài tập nền tảng của mọi khóa học sáng tác.
+    loai: lich-su
+    nguon:
+      - omt-satb
+    ket_qua: da-bo
+    ghi_chu: Đã bỏ nửa câu ", và là bài tập nền tảng của mọi khóa học sáng tác". OMT chỉ nói đây là SATB style; "mọi khóa học sáng tác" là mức độ không kiểm được.
+  - id: n4
+    cau: Bốn bè của hợp âm là soprano (S, cao nhất), alto (A), tenor (T), bass (B, thấp nhất).
+    loai: dinh-nghia
+    nguon:
+      - omt-satb
+    ket_qua: dung
+    ghi_chu: 'OMT, Chords in SATB style (glossary): SATB là "A musical texture with soprano (S), alto (A), tenor (T), and bass (B) parts"; soprano "The highest part", alto "The second-highest", tenor "The second lowest", bass "The lowest voice".'
+  - id: n5
+    cau: 'Giọng hát của bốn bè: soprano nữ cao, alto nữ trầm, tenor nam cao, bass nam trầm.'
+    loai: dinh-nghia
+    nguon:
+      - cod-soprano
+      - cod-alto
+      - cod-tenor
+      - cod-bass
+    ket_qua: dung
+    ghi_chu: 'COD: soprano "The highest register of female (or artificial male) v."; alto: một nghĩa là giọng nữ trầm (thường gọi contralto), nghĩa khác là giọng nam falsetto cao; tenor "Highest normal male v."; bass "Lowest male voice". OMT chỉ mô tả bằng âm vực, không nói nam hay nữ.'
+  - id: n6
+    cau: 'Âm vực thường dùng: soprano Đô4 – Sol5, alto Sol3 – Rê5, tenor Đô3 – Sol4.'
+    loai: quy-tac
+    nguon:
+      - omt-satb
+      - fff-guide
+      - rwu
+    ket_qua: dung
+    ghi_chu: 'OMT: "Soprano – C4 to G5", "Alto – G3 to D5", "Tenor – C3 to G4" ("a generally accepted range for each voice"). Mount (Guide, "approximate"): S C4–A5, A F3–D5, T C3–A4; RWU: S C4–G5, A G3–D5, T C3–F4. Ba nguồn lệch nhau vài nửa cung ở đầu cao hay thấp; theo OMT (nguồn chính đã chốt).'
+  - id: n7
+    cau: 'Âm vực thường dùng của bass: Fa2 – Rê4.'
+    loai: quy-tac
+    nguon:
+      - omt-satb
+      - fff-guide
+      - rwu
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Mi2 – Đô4". Chữ mới: "Fa2 – Rê4". Lý do: OMT: "Bass – F2 to D4" (glossary: "generally accepted range is F2–D4"); Mount (Guide to SATB part-writing): bass "F2 to E4". Chỉ RWU ghi E2–C4 (nguồn bậc 2 mâu thuẫn): viết theo OMT, nguồn chính; ghi cả hai ở đây. Ví dụ I–IV–V–I của trang dùng bass thấp nhất Fa2: vẫn trong âm vực. Hình ranges-satb phải sửa theo (n8).'
+  - id: n8
+    cau: 'Hình ranges-satb: thanh âm vực soprano Đô4–Sol5, alto Sol3–Rê5, tenor Đô3–Sol4, bass Fa2–Rê4; chú thích ghi đúng bốn âm vực ấy.'
+    loai: dinh-nghia
+    nguon:
+      - omt-satb
+    ket_qua: da-sua
+    ghi_chu: 'Hình sai, người giao sửa (không sửa file hình): chú thích (figcaption) "bass Mi2–Đô4" và thanh bass. Cần sửa: figcaption thành "bass Fa2–Rê4"; thanh bass bắt đầu ở Fa2 (x = 112 + 5 x 11.125 = 167.6; nay Mi2 ở x=156.5), rộng 21 nửa cung = 233.6 px (nay 222.5), nhãn đầu "F2" (nay "E2", x=153.5, sau sửa x=164.6), nhãn cuối "D4" (nay "C4" ở x=382.0; sau sửa x=167.6+233.6+3=404.2). Ba thanh S, A, T đã kiểm theo tỉ lệ 11.125 px mỗi nửa cung (C2 ở x=112, C3 ở 245.5, C4 ở 379): đúng. Nhãn C2, C3, C4 (Đô giữa), C5, C6 đúng. Nguồn số: src/components/hinh/ranges-satb.html. Người giao (agent làm lô) đã sửa src/components/hinh/ranges-satb.html theo đúng số trên: thanh bass x=167.6, rộng 233.6, nhãn F2 và D4; chú thích "bass Fa2–Rê4".'
+  - id: n9
+    cau: 'Khuông của bốn bè: soprano và alto khóa Sol; tenor và bass khóa Fa; đuôi nốt soprano và tenor hướng lên, alto và bass hướng xuống.'
+    loai: dinh-nghia
+    nguon:
+      - omt-satb
+    ket_qua: dung
+    ghi_chu: 'OMT: soprano "treble clef with an up-stem"; alto "treble clef with a down-stem"; tenor "bass clef with an up-stem"; bass "bass clef with a down-stem".'
+  - id: n10
+    cau: Hợp âm ba có 3 nốt mà có 4 bè, nên phải nhân đôi một nốt.
+    loai: quy-tac
+    nguon:
+      - omt-satb
+    ket_qua: dung
+    ghi_chu: 'OMT: với hợp âm ba, nốt ở bass thường được nhân đôi ở một bè trên; hợp âm bảy có bốn nốt nên không nhân đôi ("Seventh chords don''t have any notes doubled because they contain four notes, one for each voice part").'
+  - id: n11
+    cau: Bè bass chơi nốt quyết định thể (thể gốc, thể đảo) của hợp âm.
+    loai: dinh-nghia
+    nguon:
+      - omt-inversion
+    ket_qua: dung
+    ghi_chu: 'OMT, Inversion: "The bass voice of triadic harmonies, often simply called the "bass," determines inversion"; ở thể gốc bass là nốt gốc, ở đảo 1 bass là nốt ba.'
+  - id: n12
+    cau: Với hợp âm ba thể gốc, thường nhân đôi nốt gốc.
+    loai: quy-tac
+    nguon:
+      - omt-satb
+      - fff-guide
+      - mt21c-voice
+    ket_qua: dung
+    ghi_chu: 'OMT: "the note in the bass is usually doubled in an upper voice" (thể gốc: bass là nốt gốc). Mount (Guide): "Root-position triads double the bass". MT21C 26.7: "Always double the root in root position triads."'
+  - id: n13
+    cau: Không bao giờ nhân đôi cảm âm (bậc 7).
+    loai: quy-tac
+    nguon:
+      - omt-satb
+      - fff-guide
+      - iastate
+    ket_qua: dung
+    ghi_chu: 'OMT: "the leading tone is never doubled". Mount (Guide): "The leading tone should never be doubled, regardless of where it appears in the chord". Iowa State: "Do not double tendency tones (leading tone, altered tones, the chordal seventh ...)".'
+  - id: n14
+    cau: 'Lý do không nhân đôi cảm âm: nó phải đi lên chủ âm, nhân đôi sẽ sinh quãng 8 song song.'
+    loai: quy-tac
+    nguon:
+      - fff-14
+      - fff-guide
+    ket_qua: dung
+    ghi_chu: 'Mount 14: nhân đôi cảm âm (Si trong V) "will lead to a parallel unison" khi Si giải quyết lên Đô; Mount (Guide): cảm âm trong hợp âm át "almost always resolves by step up to the tonic". Hai bè cách nhau một quãng 8 (hay trùng âm) cùng đi lên chủ âm tạo quãng 8 (hay đồng âm) song song.'
+  - id: n15
+    cau: 'Khoảng cách: soprano–alto và alto–tenor không quá một quãng 8; tenor–bass có thể xa hơn.'
+    loai: quy-tac
+    nguon:
+      - omt-satb
+      - fff-guide
+      - iastate
+      - rwu
+    ket_qua: dung
+    ghi_chu: 'OMT: "There should be no more than an octave between adjacent upper voices"; tenor và bass tới quãng 12. Mount (Guide): "Neighboring upper voices are rarely more than an octave apart"; Iowa State: "Adjacent pairs of upper voices must remain within an octave of each other"; RWU: bass có thể xa tenor, tối đa một quãng 12.'
+  - id: n16
+    cau: Các bè không bắt chéo nhau (alto không cao hơn soprano, ...).
+    loai: quy-tac
+    nguon:
+      - omt-satb
+      - iastate
+      - fff-guide
+    ket_qua: dung
+    ghi_chu: 'OMT: "the soprano must always be higher than the alto" (và các cặp bè liền kề); crossing = "When a higher voice part moves below a lower voice part". Iowa State, Mount (Guide): bắt chéo bè bị tránh.'
+  - id: n17
+    cau: 'Dẫn bè, quy tắc 1: giữ nốt chung giữa hai hợp âm ở cùng một bè, nếu có.'
+    loai: quy-tac
+    nguon:
+      - iastate
+      - mt21c-voice
+    ket_qua: dung
+    ghi_chu: 'Iowa State: "Sustained motion between chords (using common tones) are always a good choice to connect chords". MT21C 26.7: bass đi quãng 3 hay 6 thì "retain the two common tones", bass đi quãng 4 hay 5 thì "retain the common tone".'
+  - id: n18
+    cau: 'Dẫn bè, quy tắc 2: các bè trên đi bước liền hoặc bước nhảy nhỏ; bè bass được nhảy.'
+    loai: quy-tac
+    nguon:
+      - fff-14
+      - fff-guide
+      - iastate
+    ket_qua: dung
+    ghi_chu: 'Mount 14: bè trên "tend to have smooth, often repetitive melodic lines", bass nhảy quãng 4, 5; Mount (Guide): "Melodies should be mostly conjunct"; Iowa State: "Move each voice primarily by sustained or stepwise motion".'
+  - id: n19
+    cau: 'Dẫn bè, quy tắc 3: cấm quãng 5 và quãng 8 song song: hai bè đang cách nhau quãng 5 (hoặc 8) không được cùng chuyển sang một quãng 5 (hoặc 8) khác.'
+    loai: quy-tac
+    nguon:
+      - fff-guide
+      - iastate
+      - fff-14
+    ket_qua: dung
+    ghi_chu: 'Mount (Guide): "Parallel unisons, fifths, and octaves are forbidden"; Iowa State: lỗi khi "Voices move from a P5, P8, or PU to the same interval using similar motion"; Mount 14: "parallel octaves are not permitted in this style".'
+  - id: n20
+    cau: Quãng 5 và 8 song song làm hai bè "dính" vào nhau, mất tính độc lập.
+    loai: quy-tac
+    nguon:
+      - omt-first
+    ket_qua: dung
+    ghi_chu: 'OMT, First-Species Counterpoint: "Parallel fifths and octaves promote tonal fusion at the expense of melodic independence."'
+  - id: n21
+    cau: 'Dẫn bè, quy tắc 4: cảm âm đi lên chủ âm; nốt 7 của hợp âm bảy đi xuống bước liền.'
+    loai: quy-tac
+    nguon:
+      - fff-14
+      - fff-guide
+      - iastate
+    ket_qua: dung
+    ghi_chu: 'Mount 14: bậc 7 "generally moves up by step to the tonic"; Mount (Guide): ở hợp âm át "almost always resolves by step up". Iowa State: "The leading tone should resolve to tonic" (ở bè giữa có thể đi xuống bậc 5, nhưng về chủ âm vẫn tốt hơn) và "The chordal seventh of a seventh chord resolves down by step." Trang nói quy tắc chung, không nêu ngoại lệ ở bè giữa: chấp nhận được ở bài nhập môn.'
+  - id: n22
+    cau: Ưu tiên chuyển động ngược (một bè lên, bè kia xuống) giữa bè ngoài cùng (soprano và bass).
+    loai: quy-tac
+    nguon:
+      - fff-14
+      - omt-first
+    ket_qua: dung
+    ghi_chu: 'Mount 14: nên dùng chuyển động ngược giữa bass và các bè trên để tránh quãng 5, 8 song song (một thực hành tốt, không phải luật cứng). OMT, First-Species: "Contrary motion is best for variety and preserving the independence of the lines, so it should be preferred where possible."'
+  - id: n23
+    cau: 'Hình voice-leading (hình 1): bốn bè I – IV – V – I ở Đô trưởng: soprano Đô – Đô – Si – Đô, alto Mi – Fa – Rê – Mi, tenor Sol – La – Sol – Sol, bass Đô – Fa – Sol – Đô.'
+    loai: so-lieu
+    nguon:
+      - fff-14
+    ket_qua: dung
+    ghi_chu: 'Chữ trong hình (src/components/hinh/voice-leading.html, hình đầu) khớp khối abc 1 của trang: S Đô5 Đô5 Si4 Đô5; A Mi4 Fa4 Rê4 Mi4; T Sol3 La3 Sol3 Sol3; B Đô3 Fa2 Sol2 Đô3. Nhãn I, IV, V, I và S, A, T, B đúng. Chiều cao S, A, T đúng với 6 px mỗi nửa cung (Đô3 ở y=166). Chiều cao bass sai: n24.'
+  - id: n24
+    cau: 'Hình voice-leading (hình 1): đường bass đi từ Đô xuống Fa (quãng 5), lên Sol (bước liền), rồi lên Đô.'
+    loai: so-lieu
+    nguon:
+      - fff-14
+    ket_qua: da-sua
+    ghi_chu: 'Hình sai, người giao sửa (không sửa file hình): điểm bass "Fa" ở cột IV vẽ cao (y=136, tức Fa3, lên quãng 4 từ Đô3), mà trang và khối abc đều là bass nhảy xuống quãng 5 tới Fa2 (Đô3 ở y=166 thì Fa2 ở y=166+42=208; Sol2 ở y=196 đúng). Cần sửa: ở cột IV, vòng tròn bass (cy) và nhãn "Fa" đặt ở cy=208, nhãn y=211 (nay 136 và 139); polyline bass thành "60.0,166.0 180.0,208.0 300.0,196.0 420.0,166.0" (nay "60.0,166.0 180.0,136.0 300.0,196.0 420.0,166.0"). Sau sửa Fa2 (208) lên Sol2 (196) là bước liền, khớp câu "IV → V: bass đi lên bước liền (Fa → Sol)"; hiện hình vẽ bass nhảy xuống 10 nửa cung từ Fa3 xuống Sol2. Người giao (agent làm lô) đã sửa src/components/hinh/voice-leading.html: điểm Fa của bass ở cột IV đặt cy=208 (Fa2), nhãn y=211, đường bass 60,166 180,208 300,196 420,166.'
+  - id: n25
+    cau: 'Chú thích hình 1: "Mỗi đường là một bè (S soprano, A alto, T tenor, B bass). Dẫn bè tốt: các đường đi gần, ít nhảy; nốt chung được giữ nguyên."'
+    loai: quy-tac
+    nguon:
+      - fff-14
+      - iastate
+    ket_qua: dung
+    ghi_chu: 'Khớp quy tắc 1 và 2 (n17, n18): soprano giữ Đô (I → IV), tenor giữ Sol (V → I); bass nhảy (được phép, n18). aria-label của hình 1 cũng nói "bốn đường gần như đi ngang hoặc bước liền": đúng với S, A, T; bass có một bước nhảy quãng 5 (không sai, "gần như").'
+  - id: n26
+    cau: 'Hình voice-leading (hình 2): Đô – Sol – Mi – Đô (bass, tenor, alto, soprano) của hợp âm C chuyển song song sang Rê – La – Fa – Rê của hợp âm Dm; bass–tenor cách quãng 5 trước và sau, bass–soprano cách quãng 8 trước và sau.'
+    loai: so-lieu
+    nguon:
+      - fff-guide
+    ket_qua: dung
+    ghi_chu: 'Kiểm trong src/components/hinh/voice-leading.html (hình thứ hai): B Đô → Rê, T Sol → La, A Mi → Fa, S Đô → Rê; chiều cao theo 6 px mỗi nửa cung đúng (Đô–Sol 7 nửa cung, Rê–La 7). C = Đô–Mi–Sol, Dm = Rê–Fa–La: đúng hợp âm. Bass–soprano: Đô – Đô hai quãng 8 rồi Rê – Rê (tính là quãng 8 song song). Cả hai cặp là quãng 5 và 8 song song: đúng điều hình minh họa. Hình ghi tên hợp âm bằng chữ (C, Dm) khác cách trang viết (Đô, Rê): nhắc người giao, không sai.'
+  - id: n27
+    cau: 'Chú thích hình 2: "Lỗi cần tránh (vạch đỏ): bass–tenor đi quãng 5 song song, bass–soprano đi quãng 8 song song. Cả bốn bè cùng đi lên cũng làm mất tính độc lập."'
+    loai: quy-tac
+    nguon:
+      - fff-guide
+      - omt-first
+    ket_qua: dung
+    ghi_chu: 'Đúng với n26, n19, n20. Cả bốn bè cùng đi lên (Đô→Rê, Sol→La, Mi→Fa, Đô→Rê). Mount (Guide): chuyển động ngược giữa các bè hỗ trợ tính độc lập ("An abundance of contrary motion between voices"). Hình vẽ vạch đỏ cho bass, tenor, soprano (đường bass vẽ hai lần, không ảnh hưởng).'
+  - id: n28
+    cau: 'Khuông I – IV – V – I ở Đô trưởng: [Ec] [Fc] [DB] [Ec] (soprano, alto) và [C,G,] [F,,A,] [G,,G,] [C,G,] (tenor, bass), đúng dẫn bè.'
+    loai: so-lieu
+    nguon:
+      - fff-14
+      - omt-satb
+    ket_qua: dung
+    ghi_chu: Xem khuong_nhac khối 1.
+  - id: n29
+    cau: 'Đọc từ dưới lên ở mỗi hợp âm: bass – tenor (khuông dưới), alto – soprano (khuông trên).'
+    loai: dinh-nghia
+    nguon:
+      - omt-satb
+    ket_qua: dung
+    ghi_chu: 'Khối abc 1: khuông dưới (khóa Fa) chứa bass và tenor, khuông trên chứa alto và soprano (n9).'
+  - id: n30
+    cau: 'I → IV: soprano giữ Đô (nốt chung); alto và tenor đi lên bước liền, bass nhảy xuống quãng 5 tới Fa.'
+    loai: so-lieu
+    nguon:
+      - fff-14
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "soprano giữ Đô (nốt chung); các bè trên đi lên bước nhỏ, bass nhảy xuống quãng 5 tới Fa." Chữ mới như trên. Lý do: soprano giữ nguyên (không đi lên), nên "các bè trên đi lên" trong câu cũ tự mâu thuẫn với nửa trước. Kiểm abc: alto Mi4 → Fa4, tenor Sol3 → La3 (lên bước liền); bass Đô3 → Fa2 (xuống quãng 5).'
+  - id: n31
+    cau: 'IV → V: bass đi lên bước liền (Fa → Sol), ba bè trên đi xuống ngược chiều; không có quãng song song cấm.'
+    loai: so-lieu
+    nguon:
+      - fff-14
+      - fff-guide
+    ket_qua: dung
+    ghi_chu: 'Abc: bass Fa2 → Sol2 (lên bước liền); tenor La3 → Sol3, alto Fa4 → Rê4 (xuống quãng 3), soprano Đô5 → Si4 (xuống). Đã kiểm mọi cặp bè ở ba lần chuyển (I–IV, IV–V, V–I): không có quãng 5 hay 8 song song; bass–soprano V → I là chuyển động cùng chiều tới quãng 8 nhưng soprano đi bước liền (Mount, Guide: với chuyển động cùng chiều tới quãng đúng ở bè ngoài, soprano nên đi bước liền).'
+  - id: n32
+    cau: 'V → I: cảm âm Si đi lên Đô ở soprano; tenor giữ Sol (nốt chung).'
+    loai: so-lieu
+    nguon:
+      - fff-14
+    ket_qua: dung
+    ghi_chu: 'Abc: soprano Si4 → Đô5; tenor Sol3 giữ; alto Rê4 → Mi4; bass Sol2 → Đô3.'
+  - id: n33
+    cau: 'Khuông "Sai: quãng 5 song song (Đô–Sol rồi Rê–La)": [C,G,] [D,A,] ở khuông khóa Fa.'
+    loai: so-lieu
+    nguon:
+      - fff-guide
+    ket_qua: dung
+    ghi_chu: 'Xem khuong_nhac khối 2: Đô3–Sol3 rồi Rê3–La3: hai quãng 5 đúng liền nhau, song song.'
+  - id: n34
+    cau: 'Bài tập 1: viết I – V – I ở Sol trưởng cho bốn bè (bass: Sol – Rê – Sol).'
+    loai: so-lieu
+    nguon:
+      - omt-satb
+    ket_qua: dung
+    ghi_chu: 'Sol trưởng: I = Sol, V = Rê; bass Sol – Rê – Sol đúng bậc I, V, I.'
+  - id: n35
+    cau: 'Bài tập 2: viết I – vi – IV – V – I ở Đô trưởng; kiểm tra từng cặp bè xem có quãng 5 hoặc 8 song song không.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Bài tập viết; khớp quy tắc 3 (n19).
+  - id: n36
+    cau: 'Bài tập 3: lấy một bài thánh ca của Bach trong IMSLP (tìm "371 Chorales"), chọn 4 ô nhịp và gọi tên từng hợp âm.'
+    loai: so-lieu
+    nguon:
+      - imslp-371
+    ket_qua: dung
+    ghi_chu: 'IMSLP có trang "371 Vierstimmige Choralgesänge (Bach, Johann Sebastian)" (371 bài, BWV 253–438) và trang "371 Harmonized Chorales and 69 Chorale Melodies": từ khóa "371 Chorales" tìm ra các trang này (kết quả tìm kiếm ngày 28/10/2026). Phần "gọi tên hợp âm" là bài tập.'
+  - id: n37
+    cau: 'Câu hỏi 1: với hợp âm ba thể gốc, nên nhân đôi nốt gốc; giải thích: "Nhân đôi nốt gốc cho âm thanh vững nhất."'
+    loai: quy-tac
+    nguon:
+      - omt-satb
+      - fff-guide
+    ket_qua: dung
+    ghi_chu: Đáp án đúng (n12). "Vững nhất" là diễn đạt về âm thanh; nguồn chỉ nói thông lệ nhân đôi bass, nốt gốc; chấp nhận được. Lời giải thích không dựa vào vị trí lựa chọn.
+  - id: n38
+    cau: 'Câu hỏi 2: không nhân đôi cảm âm vì nó phải đi lên chủ âm, nhân đôi sẽ gây quãng 8 song song; giải thích: "Cả hai bè sẽ cùng đi lên chủ âm."'
+    loai: quy-tac
+    nguon:
+      - fff-14
+    ket_qua: dung
+    ghi_chu: Khớp n14. Hai lựa chọn sai ("nghe không hay", "quá cao") không phải lý do.
+  - id: n39
+    cau: 'Câu hỏi 3: khoảng cách giữa tenor và bass được phép lớn hơn một quãng 8; giải thích: "Các bè trên giữ gần nhau."'
+    loai: quy-tac
+    nguon:
+      - omt-satb
+    ket_qua: dung
+    ghi_chu: Khớp n15.
+  - id: n40
+    cau: 'Câu hỏi 4: trong V7 → I, nốt 7 của hợp âm bảy đi xuống bước liền (Fa xuống Mi trong G7 → C).'
+    loai: quy-tac
+    nguon:
+      - iastate
+    ket_qua: dung
+    ghi_chu: 'Iowa State: chordal seventh resolves down by step; G7 = Sol–Si–Rê–Fa: Fa → Mi (nốt ba của C). Đúng.'
+  - id: n41
+    cau: Liên kết tới bài 11 (/opus/nhac-ly/11-hop-am-bay/) cho thể của hợp âm, và tới tài liệu tham khảo (/opus/tai-lieu-tham-khao/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Bài 11 có trên site mới: src/content/docs/nhac-ly/11-hop-am-bay.md, tiêu đề "11. Hợp âm bảy và thể đảo". Tài liệu tham khảo chưa chuyển: ../opus-zero/docs/tai-lieu-tham-khao.md (tiêu đề "Tài liệu tham khảo"); anh-xa.md: trang lõi nhóm Thêm. Lô chuyển giữ đường dẫn /opus/tai-lieu-tham-khao/.'
+  - id: n42
+    cau: Hình ranges-satb hiện đúng bảng âm vực ở trên trang.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Chưa chắc: chưa khớp cho tới khi người giao sửa hình (n8, bass Fa2–Rê4). Review kiểm lại khi đã sửa src/components/hinh/ranges-satb.html. Người giao đã sửa hình (n8): hình và bảng cùng ghi bass Fa2–Rê4.'
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - giong
+      - hop-am
+      - nhip
+      - dan-be
+    ket_qua: dung
+    ghi_chu: 'K:C, M:4/2, L:1/2: bốn hợp âm nốt trắng, đủ 4 phách nốt trắng. Hợp âm: I = Đô3 Sol3 Mi4 Đô5 (gốc nhân đôi), IV = Fa2 La3 Fa4 Đô5, V = Sol2 Sol3 Rê4 Si4, I = Đô3 Sol3 Mi4 Đô5. Âm vực trong khoảng của OMT (soprano Đô4–Sol5, alto Sol3–Rê5, tenor Đô3–Sol4, bass Fa2–Rê4). Khoảng cách S–A và A–T trong một quãng 8. Dẫn bè: không có quãng 5 hay 8 song song ở mọi cặp bè (kiểm đủ 6 cặp, 3 lần chuyển); không bắt chéo; cảm âm Si lên Đô, nốt chung được giữ (soprano I → IV, tenor V → I). Khớp tiêu đề "I – IV – V – I, dẫn bè đúng" và các gạch đầu dòng.'
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - giong
+      - hop-am
+      - nhip
+    ket_qua: dung
+    ghi_chu: 'K:C clef=bass, M:2/2, L:1/2: hai hợp âm nốt trắng [C,G,] [D,A,]: Đô3–Sol3 rồi Rê3–La3: quãng 5 đúng liền nhau; đúng ví dụ "Sai: quãng 5 song song". Đủ 2 phách nốt trắng.'
+doi_chu:
+  - cu: Phần Hòa âm mở rộng và phân tích (bài 21–27) dành cho bạn đã vững các bài trước. Bài đầu tiên dạy cách viết hợp âm cho bốn giọng hát, cách mà Bach viết hàng trăm bài thánh ca (chorale), và là bài tập nền tảng của mọi khóa học sáng tác.
+    moi: Phần Hòa âm mở rộng và phân tích (bài 21–27) dành cho bạn đã vững các bài trước. Bài đầu tiên dạy cách viết hợp âm cho bốn giọng hát, cách mà Bach viết hàng trăm bài thánh ca (chorale).
+    ly_do: 'n3 (da-bo): "mọi khóa học sáng tác" không kiểm được; OMT chỉ nói SATB style.'
+  - cu: Mi2 – Đô4
+    moi: Fa2 – Rê4
+    ly_do: 'n7 (da-sua): OMT, Chords in SATB style: "Bass – F2 to D4"; Mount (Guide to SATB part-writing): F2 to E4; chỉ RWU ghi E2–C4.'
+  - cu: "I → IV: soprano giữ Đô (nốt chung); các bè trên đi lên bước nhỏ, bass nhảy xuống quãng 5 tới Fa."
+    moi: "I → IV: soprano giữ Đô (nốt chung); alto và tenor đi lên bước liền, bass nhảy xuống quãng 5 tới Fa."
+    ly_do: 'n30 (da-sua): soprano giữ nguyên nên không thuộc "các bè trên đi lên"; kiểm bằng khối abc 1.'
+  - cu: Open Music Theory; musictheory.net.
+    moi:
+      - "Open Music Theory: Chords in SATB style; First-Species Counterpoint."
+      - "Andre Mount, Fundamentals, Function, and Form: 14. Three- and Four-Voice Progressions; sách bài tập, Guide to SATB part-writing."
+      - "Iowa State University, Comprehensive Musicianship: 10.1 Chord Voicing and Voice Leading: General Principles."
+      - "The Concise Oxford Dictionary of Music (Encyclopedia.com): soprano, alto, tenor, bass."
+      - "IMSLP: Bach, 371 Vierstimmige Choralgesänge."
+    ly_do: "Mục Nguồn (n2 đến n40): thay link chung tới OMT và musictheory.net bằng các chương đã đọc khi kiểm định; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, không đọc được chữ để kiểm."

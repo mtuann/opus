@@ -20,15 +20,15 @@ Năm 1725, nhà soạn nhạc Áo Johann Joseph Fux xuất bản *Gradus ad Parn
 ## Quy tắc của loại 1
 
 1. Chỉ dùng quãng **thuận**: 1, 3, 5, 6, 8 (trưởng, thứ hoặc đúng). Quãng 4 tính là nghịch khi đứng trên bè dưới.
-2. **Bắt đầu và kết thúc** bằng quãng đúng (1, 5 hoặc 8); kết thúc bằng quãng 8 hoặc đồng âm.
+2. **Bắt đầu** bằng quãng đúng (1, 5 hoặc 8; nếu bè đối âm nằm dưới thì chỉ 1 hoặc 8) và **kết thúc** bằng quãng 8 hoặc đồng âm.
 3. **Cấm quãng 5 và quãng 8 song song**; tránh đi tới quãng đúng bằng chuyển động cùng chiều.
-4. Ưu tiên **chuyển động ngược** và quãng 3, quãng 6 (nhưng không quá ba quãng 3 hoặc 6 liên tiếp).
+4. Ưu tiên **chuyển động ngược** và quãng 3, quãng 6 (nhưng không quá ba quãng 3 liên tiếp, hay ba quãng 6 liên tiếp).
 5. Giai điệu chủ yếu đi **bước liền**; bước nhảy lớn nên đổi hướng ngay sau đó.
 6. Gần cuối, nâng cảm âm để tạo kết (ở điệu Dorian trên Rê: Đô thành **Đô♯**).
 
 ## Ví dụ: đối âm loại 1 trên cantus firmus của Fux
 
-Cantus firmus bên dưới là giai điệu ở điệu Dorian trên Rê mà Fux dùng làm ví dụ đầu tiên trong sách. Bè trên do site viết theo các quy tắc ở trên.
+Cantus firmus bên dưới là giai điệu ở điệu Dorian trên Rê mà Fux dùng trong sách. Bè trên do site viết theo các quy tắc ở trên.
 
 ```abc
 X:1
@@ -73,13 +73,15 @@ Cùng ví dụ trên, vẽ thành hai đường để thấy quãng và kiểu c
 - Mozart
 > Giáo trình đối âm kinh điển.
 ? Đối âm loại 1 nên bắt đầu và kết thúc bằng quãng gì?
-+ Quãng đúng (1, 5, 8)
++ Quãng đúng
 - Quãng 3
 - Quãng 6
-> Kết thúc bằng quãng 8 hoặc đồng âm.
+> Bắt đầu bằng quãng 1, 5 hoặc 8; kết thúc bằng quãng 8 hoặc đồng âm.
 ```
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- Open Music Theory: [Species Counterpoint](https://viva.pressbooks.pub/openmusictheory/chapter/species-counterpoint/); [First-Species](https://viva.pressbooks.pub/openmusictheory/chapter/first-species-counterpoint/), [Second-Species](https://viva.pressbooks.pub/openmusictheory/chapter/second-species-counterpoint/), [Third-Species](https://viva.pressbooks.pub/openmusictheory/chapter/third-species-counterpoint/), [Fourth-Species](https://viva.pressbooks.pub/openmusictheory/chapter/fourth-species-counterpoint/) và [Fifth-Species Counterpoint](https://viva.pressbooks.pub/openmusictheory/chapter/fifth-species-counterpoint/); [Gradus ad Parnassum Exercises](https://viva.pressbooks.pub/openmusictheory/chapter/gradus-ad-parnassum-exercises/); [16th-Century Contrapuntal Style](https://viva.pressbooks.pub/openmusictheory/chapter/16th-century-contrapuntal-style/).
+- Robert Hutchinson, *Music Theory for the 21st-Century Classroom*: [First Species](https://musictheory.pugetsound.edu/mt21c/FirstSpecies.html), [Fifth Species](https://musictheory.pugetsound.edu/mt21c/FifthSpecies.html).
+- *The Concise Oxford Dictionary of Music* (Encyclopedia.com): [Counterpoint](https://www.encyclopedia.com/literature-and-arts/performing-arts/music-theory-forms-and-instruments/counterpoint), [Gradus ad Parnassum](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/gradus-ad-parnassum); *Encyclopedia of World Biography*: [Johann Joseph Fux](https://www.encyclopedia.com/people/literature-and-arts/music-history-composers-and-performers-biographies/johann-joseph-fux); *Encyclopaedia Britannica*: [Steps to Parnassus](https://www.britannica.com/topic/Steps-to-Parnassus).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

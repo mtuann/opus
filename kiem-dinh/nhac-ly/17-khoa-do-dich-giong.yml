@@ -1,0 +1,466 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/17-khoa-do-dich-giong
+trang: src/content/docs/nhac-ly/17-khoa-do-dich-giong.md
+nguon_cu: ../opus-zero/docs/nhac-ly/17-khoa-do-dich-giong.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-28
+    nhanh: moi/d3-l3
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D3-L3 lượt 1, phần 1/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Trang khóa Đô và dịch giọng (tầng lõi), ba khối abc, không có hình. Nguồn: OMT, Clefs (khóa alto, tenor); Britannica, Clef (bản in; Britannica mở được qua đường /print/article/…); Harmony and Musicianship (Pressbooks) về khóa alto, tenor; bảng khoảng dịch của teoria.com (Alvira), LilyPond Music Glossary, Oxford Dictionary of Music (encyclopedia.com), Met Museum (clarinet in A), Radius Music và Wikipedia (bậc 3, chỉ để đối chiếu); giai điệu Ode to Joy đối chiếu Mutopia ode.ly và hồ sơ 04-nhip.yml. WebFetch ngày 28/10/2026 (bản tóm tắt chữ, không phải HTML thô; chỗ quan trọng đã hỏi lại để lấy nguyên văn). Chỗ sửa trang: (1) hình khóa Đô "hai chữ C quay lưng vào nhau" thành "vẽ cách điệu từ chữ C"; (2) bỏ "đôi khi trombone alto"; (3) khối abc 2: ô 3 sai (E E F G thành C C D E) và ô 4 thêm nhịp chấm dôi; (4) lý do dịch giọng của nhạc cụ ("kích thước ống kèn" thành chuyện kèn đồng chưa có van); (5) bỏ "Phổ biến nhất" ở bảng và câu về tổng phổ concert pitch (chỉ bậc 3); (6) mục Nguồn. Chưa chắc: n22 (người đệm đàn dịch ngay khi chơi; nhãn khuyen-tap, review soát nhãn); n21 chỉ có nguồn bậc 3 (Radius). Trang đích chưa chuyển: /opus/luyen-tap/doc-not/ (n14: công cụ có hai lựa chọn "Khóa Đô (alto)", "Khóa Đô (tenor)"), /opus/tai-lieu-tham-khao/. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): C clef / alto clef / tenor clef (khóa Đô, Đô alto, Đô tenor), transposition (dịch giọng; trang dùng "dịch giọng" còn site gọi modulation là "chuyển giọng", cần phân biệt trong Từ điển), transposing instrument (nhạc cụ dịch giọng), concert pitch (cao độ thật), ledger line (đã có), viola, woodwinds/brass (xem 20). Đã có: clef, key-signature, interval, pitch.'
+nguon:
+  - id: brit-clef
+    bac: 2
+    ten: Encyclopaedia Britannica, Clef (bản in)
+    link: https://www.britannica.com/print/article/120899
+  - id: omt-clefs
+    bac: 2
+    ten: Open Music Theory, Clefs
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/clefs/
+  - id: pb-alto-tenor
+    bac: 2
+    ten: Harmony and Musicianship with Solfège (Pressbooks), The Alto and Tenor Clefs
+    link: https://pressbooks.pub/harmonyandmusicianshipwithsolfege/chapter/the-alto-and-tenor-clefs
+  - id: wiki-clef
+    bac: 3
+    ten: Wikipedia, Clef (bậc 3, chỉ đối chiếu)
+    link: https://en.wikipedia.org/wiki/Clef
+  - id: oxford-transposition
+    bac: 2
+    ten: The Oxford Dictionary of Music (qua encyclopedia.com), transposition
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/transposition
+  - id: teoria-transposing
+    bac: 2
+    ten: José Rodríguez Alvira, teoria.com, bài về nhạc cụ dịch giọng (bảng khoảng dịch, mục 3)
+    link: https://www.teoria.com/en/articles/transposing/03.php
+  - id: omt-major
+    bac: 2
+    ten: Open Music Theory, Major Scales, Scale Degrees, and Key Signatures
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/major-scales/
+  - id: radius-range
+    bac: 3
+    ten: Radius Music, Range, transposition, and clefs
+    link: https://www.radiusmusic.org/study/range-transposition-and-clefs/
+  - id: lilypond-ti
+    bac: 2
+    ten: LilyPond Music Glossary, transposing instrument
+    link: https://lilypond.org/doc/v2.25/Documentation/music-glossary/transposing-instrument
+  - id: oxford-ti
+    bac: 2
+    ten: The Oxford Dictionary of Music (qua encyclopedia.com), transposing instruments
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/transposing-instruments
+  - id: wiki-ti
+    bac: 3
+    ten: Wikipedia, Transposing instrument (bậc 3, chỉ đối chiếu)
+    link: https://en.wikipedia.org/wiki/Transposing_instrument
+  - id: mymusictheory-ti
+    bac: 3
+    ten: mymusictheory.com, Transposing instruments (bảng khoảng dịch)
+    link: https://mymusictheory.com/transposition/transposing-instruments/
+  - id: met-clar-a
+    bac: 2
+    ten: The Metropolitan Museum of Art, Clarinet in A (hiện vật 506851)
+    link: https://metmuseum.org/art/collection/search/506851
+  - id: mutopia-ode
+    bac: 1
+    ten: Mutopia, Beethoven, Ode to Joy (SATB, Sol trưởng; Mutopia-2009/08/05-528)
+    link: https://www.mutopiaproject.org/ftp/BeethovenLv/ode/ode.ly
+nhan_dinh:
+  - id: n1
+    cau: 'Ngoài khóa Sol và khóa Fa, còn một khóa thứ ba: khóa Đô.'
+    loai: dinh-nghia
+    nguon:
+      - brit-clef
+      - omt-clefs
+    ket_qua: dung
+    ghi_chu: 'Britannica, Clef: "stylized form of the letter C", cùng với khóa Sol và khóa Fa; OMT, Clefs: khóa alto và khóa tenor là khóa Đô (C clef).'
+  - id: n2
+    cau: Hình của khóa Đô vẽ cách điệu từ chữ C.
+    loai: dinh-nghia
+    nguon:
+      - brit-clef
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Hình của nó giống hai chữ C quay lưng vào nhau". Chữ mới: câu trên. Lý do: không nguồn nào mô tả như vậy. Britannica, Clef: khóa Đô là "stylized form" của chữ C (như khóa Sol, khóa Fa); Wikipedia, Clef (bậc 3) nói bản viết tay thành hình chữ K, bản in thế kỷ 16–17 có dạng "ladder-like", không nhắc hai chữ C.'
+  - id: n3
+    cau: Điểm giữa của khóa Đô chỉ vào dòng nào thì dòng đó là Đô giữa (C4).
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+      - brit-clef
+    ket_qua: dung
+    ghi_chu: 'OMT, Clefs: "the center of the alto clef is indented around the C line (the middle line)"; mục từ: khóa "shows that C4 is the middle line of the staff by centering on it". Khóa tenor: "the center of the clef is indented around the second line from the top". Britannica: alto "the middle line carries C"; tenor "middle C occurs on the second line from the top".'
+  - id: n4
+    cau: Khóa Đô có thể đặt ở nhiều dòng, nhưng hai vị trí còn dùng ngày nay là alto và tenor.
+    loai: dinh-nghia
+    nguon:
+      - brit-clef
+      - pb-alto-tenor
+      - wiki-clef
+    ket_qua: dung
+    ghi_chu: 'Britannica: hai vị trí chính ngày nay là alto và tenor; soprano và mezzo-soprano "Formerly common". Harmony and Musicianship with Solfège: Đô giữa có thể gán cho "the first, second, third, or fourth lines". Wikipedia (bậc 3, chỉ đối chiếu): chỉ alto và tenor còn dùng thường xuyên.'
+  - id: n5
+    cau: Khóa Đô alto đặt Đô giữa ở dòng 3 (dòng giữa của khuông).
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+      - brit-clef
+    ket_qua: dung
+    ghi_chu: Xem n3. Ba dòng giữa tính từ dưới lên là dòng 3 (khuông năm dòng).
+  - id: n6
+    cau: Khóa Đô alto dùng cho viola.
+    loai: ten
+    nguon:
+      - omt-clefs
+      - brit-clef
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ (bảng, cột "Dùng cho"): "Viola; đôi khi trombone alto". Chữ mới: "Viola". Lý do: OMT, Clefs: khóa alto "primarily used for the viola"; Britannica: alto clef (viola). Trombone alto chỉ thấy ở Wikipedia, Clef (bậc 3: "alto trombone"); Oxford, alto trombone (đã mở) chỉ ghi "Obsolete type of trombone, written for by Mozart, later replaced by ten. tb." và không nhắc khóa; Britannica không nhắc. Không có nguồn bậc 1–2 nên bỏ.'
+  - id: n7
+    cau: Khóa Đô tenor đặt Đô giữa ở dòng 4 (dòng thứ hai kể từ trên xuống).
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+      - brit-clef
+    ket_qua: dung
+    ghi_chu: 'Xem n3: OMT "indented around the second line from the top"; năm dòng, dòng thứ hai từ trên xuống là dòng 4.'
+  - id: n8
+    cau: Khóa Đô tenor dùng cho âm vực cao của cello, bassoon và trombone.
+    loai: ten
+    nguon:
+      - omt-clefs
+      - pb-alto-tenor
+      - brit-clef
+    ket_qua: dung
+    ghi_chu: 'OMT: khóa tenor "sometimes employed in cello, bassoon, and trombone music", khóa chính của các nhạc cụ này là khóa Fa. Harmony and Musicianship: tenor dùng "occasionally" cho cello, bassoon, trombone ở đoạn có nốt quanh và trên Đô giữa. Britannica: tenor "used by the trombone, cello, and bassoon". Wikipedia (bậc 3): "upper ranges of bass-clef instruments".'
+  - id: n9
+    cau: Các nốt Đô3 – Đô4 – Sol4 viết ở khóa Sol, khóa Đô alto và khóa Fa là cùng ba cao độ.
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+    ket_qua: dung
+    ghi_chu: 'Xem khuong_nhac khối 1: abcjs (public/vendor/abcjs-basic-min.js, parseOnly) đọc C3 C4 G4 ở cả ba khóa; "C," là Đô3 theo quy ước ABC của site (C = Đô giữa).'
+  - id: n10
+    cau: Khóa Đô alto giúp nốt của viola nằm gọn trong khuông, ít dòng kẻ phụ.
+    loai: quy-tac
+    nguon:
+      - brit-clef
+      - wiki-clef
+    ket_qua: dung
+    ghi_chu: 'Britannica: "Music for instruments and voices is written in the clef corresponding most closely to the range of their parts." Wikipedia (bậc 3, đối chiếu): các khóa cho phép viết mỗi bè "on a staff with a minimum of ledger lines".'
+  - id: n11
+    cau: Âm vực viola nằm giữa violin và cello.
+    loai: so-lieu
+    nguon:
+      - omt-clefs
+    ket_qua: dung
+    ghi_chu: 'OMT, Clefs: viola "a mid-ranged instrument". Thứ tự âm vực violin cao hơn viola cao hơn cello là hiển nhiên theo kích thước. "Vừa khít vào 5 dòng kẻ" là cách nói hình ảnh.'
+  - id: n12
+    cau: 'Các nốt trên dòng của khóa alto, từ dưới lên: Fa – La – Đô – Mi – Sol (F3 A3 C4 E4 G4).'
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+    ket_qua: dung
+    ghi_chu: 'OMT: câu nhớ "Fat Alley Cats Eat Garbage" cho các dòng F A C E G. Đô giữa C4 ở dòng 3 (n3), nên dòng 1 là F3, dòng 2 là A3, dòng 4 là E4, dòng 5 là G4.'
+  - id: n13
+    cau: 'Các nốt trên dòng của khóa tenor, từ dưới lên: Rê – Fa – La – Đô – Mi (D3 F3 A3 C4 E4).'
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+    ket_qua: dung
+    ghi_chu: 'Đô giữa C4 ở dòng 4 (n7); đi xuống cách một nốt: dòng 3 là A3, dòng 2 là F3, dòng 1 là D3; dòng 5 là E4.'
+  - id: n14
+    cau: Có công cụ đọc nốt (/opus/luyen-tap/doc-not/) với lựa chọn "Khóa Đô (alto)" và "Khóa Đô (tenor)".
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Chưa chuyển: ../opus-zero/docs/luyen-tap/doc-not.md; công cụ dựng bằng ../opus-zero/docs/assets/js/note-reader.js dòng 39: <option value="alto">Khóa Đô (alto)</option><option value="tenor">Khóa Đô (tenor)</option>. src/data/trang.yml có mục luyen-tap/doc-not (dòng 110). Lô chuyển công cụ đọc nốt (đợt 7) giữ đường dẫn này và hai lựa chọn ấy với đúng hai nhãn.'
+  - id: n15
+    cau: 'Khối ví dụ thứ hai có nút phát: bấm phát thì nghe giai điệu và theo dõi từng nốt trên khuông.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Kiểm trong src/scripts/abc.js (đầu file: "Vẽ khối ```abc thành khuông nhạc kèm trình phát luyện tập (abcjs)"; displayPlay: true, con trỏ tô sáng nốt đang phát qua lớp oz-playing); bản dựng dist/nhac-ly/17-khoa-do-dich-giong/index.html có ba khối class "oz-abc".'
+  - id: n16
+    cau: Dịch giọng (transposition) là chuyển toàn bộ bản nhạc lên hoặc xuống một quãng cố định, giữ nguyên giai điệu.
+    loai: dinh-nghia
+    nguon:
+      - oxford-transposition
+      - teoria-transposing
+    ket_qua: dung
+    ghi_chu: 'Oxford (qua encyclopedia.com), transposition: "Changing of the pitch of a comp. without other change", ví dụ chuyển từ C sang D. teoria.com: mỗi nốt đọc thành nốt cách một quãng cố định (ví dụ "a major second lower"). "Quãng cố định" suy từ "without other change".'
+  - id: n17
+    cau: 'Bước 1 của dịch giọng: chọn quãng dịch, ví dụ lên 2 trưởng (Đô → Rê).'
+    loai: quy-tac
+    nguon:
+      - oxford-transposition
+    ket_qua: dung
+    ghi_chu: 'Đô lên quãng 2 trưởng là Rê (Oxford: ví dụ C sang D).'
+  - id: n18
+    cau: 'Bước 2: đổi hóa biểu sang giọng mới (Đô trưởng → Rê trưởng: thêm Fa♯, Đô♯).'
+    loai: quy-tac
+    nguon:
+      - omt-major
+    ket_qua: dung
+    ghi_chu: 'Rê trưởng có hai dấu thăng Fa♯ và Đô♯: đã kiểm ở kiem-dinh/nhac-ly/08-hoa-bieu.yml (OMT, Major Scales: 2♯ là D major).'
+  - id: n19
+    cau: 'Bước 3: dịch mọi nốt lên cùng số bậc (Đô → Rê, Mi → Fa♯ theo hóa biểu, Sol → La…).'
+    loai: quy-tac
+    nguon:
+      - teoria-transposing
+    ket_qua: dung
+    ghi_chu: 'Mỗi nốt đi lên cùng một quãng 2 (teoria.com: đọc từng nốt "looking for the note that is a major second lower", chiều ngược lại). Trong Rê trưởng Mi lên 2 là Fa♯ (có sẵn trong hóa biểu, n18), Sol lên 2 là La.'
+  - id: n20
+    cau: 'Bước 4: kiểm tra lại dấu hóa bất thường: một dấu thăng có thể thành dấu bình hoặc thăng kép tùy giọng mới.'
+    loai: quy-tac
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Suy ra từ hóa biểu của giọng mới (không cần nguồn riêng). Ví dụ dấu bình: Đô trưởng có Fa♯ bất thường; dịch lên quãng 4 đúng sang Fa trưởng (có Si♭) thì Fa♯ thành Si bình. Ví dụ thăng kép: La thứ có Sol♯ (cảm âm); dịch sang Sol♯ thứ (5♯ gồm Fa♯) thì cảm âm là Fa thăng kép (Fa×).'
+  - id: n21
+    cau: Ca sĩ thường dịch giọng để vừa âm vực.
+    loai: lich-su
+    nguon:
+      - radius-range
+    ket_qua: dung
+    ghi_chu: 'Radius Music (bậc 3), Range, transposition, and clefs: "It is quite common to transpose vocal music in order to make the music fit a different singer''s range." Bậc 3: câu nhẹ, không quan trọng; lượt 2 có thể dùng nguồn khác.'
+  - id: n22
+    cau: Người đệm đàn phải đọc và dịch ngay khi chơi.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Nói về kỹ năng của người đệm đàn, không phải con số hay sự kiện. Không nguồn nào đã mở nói điều này (Oxford, Radius chỉ nói về ca sĩ và người chơi horn); review soát nhãn: nếu coi là điều cần nguồn thì đổi thành "có khi phải dịch" hay bỏ.'
+  - id: n23
+    cau: Một số nhạc cụ được viết bản nhạc ở cao độ khác với âm thanh thật vang lên.
+    loai: dinh-nghia
+    nguon:
+      - lilypond-ti
+      - oxford-ti
+    ket_qua: dung
+    ghi_chu: 'LilyPond Music Glossary: nhạc cụ dịch giọng là nhạc cụ mà "notated pitch is different from their sounded pitch". Oxford: "not notated at their true pitch".'
+  - id: n24
+    cau: Lý do chủ yếu là lịch sử (kèn horn, kèn trumpet thời chưa có van chỉ chơi được các nốt của một âm gốc, nên phải đổi ống nối để đổi âm gốc) và để người chơi dùng cùng một thế bấm khi đổi giữa các loại nhạc cụ trong cùng họ.
+    loai: lich-su
+    nguon:
+      - radius-range
+      - wiki-ti
+      - oxford-ti
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Lý do chủ yếu là lịch sử (kích thước ống kèn) và để người chơi dùng cùng một thế bấm...". Chữ mới: phần trong ngoặc. Lý do: "kích thước ống kèn" không có nguồn. Radius (bậc 3): "Historically, the horn did not have keys or valves"; "the saxophones all use the same fingering". Wikipedia (bậc 3): trước khi có van, horn và trumpet chỉ chơi các nốt của một âm gốc; ống nối (crook) đổi âm gốc; "the fingerings correspond to the same written notes for any instrument in the family". Oxford: clarinet B♭ và A "reduce the number of flats or sharps" cho người chơi (thêm một lý do cho clarinet, chưa đưa lên trang). Chưa chắc ở mức "chủ yếu": các nguồn đều nói lý do nhưng không xếp hạng; câu giữ "chủ yếu" theo chữ cũ.'
+  - id: n25
+    cau: 'Clarinet in B♭ và trumpet in B♭: viết nốt Đô thì vang lên Si♭, thấp hơn quãng 2 trưởng.'
+    loai: so-lieu
+    nguon:
+      - teoria-transposing
+      - lilypond-ti
+      - mymusictheory-ti
+    ket_qua: dung
+    ghi_chu: 'teoria.com (bảng): clarinet in B♭ và trumpet in B♭ "Major 2nd Descending", giọng dịch B♭. LilyPond Glossary: clarinet B♭, nốt Đô giữa viết ra vang lên B♭, thấp hơn "one whole tone". mymusictheory.com (bậc 3): Major 2nd.'
+  - id: n26
+    cau: Cột "Ghi chú" của hàng clarinet và trumpet in B♭ (chữ cũ "Phổ biến nhất") để trống.
+    loai: so-lieu
+    nguon: []
+    ket_qua: da-bo
+    ghi_chu: 'Chữ cũ: "Phổ biến nhất". Bỏ vì không kiểm được: không nguồn nào đã mở xếp hạng độ phổ biến của các nhạc cụ trong bảng (Oxford chỉ nói clarinet B♭ và A "most used" trong họ clarinet).'
+  - id: n27
+    cau: 'Clarinet in A: viết Đô thì vang lên La, thấp hơn quãng 3 thứ.'
+    loai: so-lieu
+    nguon:
+      - teoria-transposing
+      - lilypond-ti
+    ket_qua: dung
+    ghi_chu: 'teoria.com: "Minor 3rd Descending", giọng A. LilyPond: "A clarinet, the same written note sounds A, a minor third lower".'
+  - id: n28
+    cau: Clarinet in A hay dùng ở giọng có nhiều dấu thăng.
+    loai: quy-tac
+    nguon:
+      - oxford-ti
+      - met-clar-a
+    ket_qua: dung
+    ghi_chu: 'Oxford: clarinet B♭ và A "reduce the number of flats or sharps with which the player has to cope" (B♭ giảm dấu giáng, A giảm dấu thăng). The Met: "it is easier to play music in flat keys on a B-flat clarinet and sharp keys on an A".'
+  - id: n29
+    cau: 'Kèn horn in F: viết Đô thì vang lên Fa, thấp hơn quãng 5 đúng.'
+    loai: so-lieu
+    nguon:
+      - teoria-transposing
+      - mymusictheory-ti
+    ket_qua: dung
+    ghi_chu: 'teoria.com: "Perfect 5th Descending", giọng F. mymusictheory.com (bậc 3): Perfect 5th.'
+  - id: n30
+    cau: 'Saxophone alto in E♭: viết Đô thì vang lên Mi♭, thấp hơn quãng 6 trưởng.'
+    loai: so-lieu
+    nguon:
+      - teoria-transposing
+      - wiki-ti
+    ket_qua: dung
+    ghi_chu: 'teoria.com: Alto Saxophone (Eb) "Major 6th Descending", giọng E♭. Wikipedia (bậc 3): "on an E♭ alto saxophone ... sounds as a concert E♭". Đô xuống 6 trưởng là Mi♭ (Mi♭ lên 6 trưởng là Đô).'
+  - id: n31
+    cau: 'Guitar và contrabass: vang lên thấp hơn nốt viết một quãng tám, để tránh quá nhiều dòng kẻ phụ dưới khuông.'
+    loai: so-lieu
+    nguon:
+      - wiki-ti
+      - radius-range
+      - lilypond-ti
+    ket_qua: dung
+    ghi_chu: 'Radius: guitar và double bass "(sounds one octave lower)". Wikipedia (bậc 3): "sound an octave lower than written". LilyPond Glossary: nhạc cụ dịch giọng cách một hay nhiều quãng tám không đặt tên theo âm gốc, lý do là để giảm số dòng kẻ phụ.'
+  - id: n32
+    cau: Piccolo vang lên cao hơn nốt viết một quãng tám.
+    loai: so-lieu
+    nguon:
+      - radius-range
+      - wiki-ti
+    ket_qua: dung
+    ghi_chu: 'Radius: "the piccolo sounds an octave higher than written". Wikipedia (bậc 3): "sound an octave above the written note".'
+  - id: n33
+    cau: Khi đọc tổng phổ, bè clarinet in B♭ có hóa biểu khác các bè còn lại; đó không phải lỗi in mà là nhạc cụ dịch giọng.
+    loai: quy-tac
+    nguon:
+      - teoria-transposing
+    ket_qua: dung
+    ghi_chu: 'Suy từ n25: bè clarinet in B♭ được viết cao hơn âm thanh một quãng 2 trưởng, nên hóa biểu của bè khác các bè không dịch giọng (ví dụ cả dàn nhạc ở Si♭ trưởng thì bè clarinet in B♭ viết ở Đô trưởng). teoria.com: khi đọc nhạc cho nhạc cụ dịch giọng phải nhớ "the transposing key" khác giọng thật.'
+  - id: n34
+    cau: Bài 20 của site nói về tổng phổ (cách tham chiếu "tổng phổ (bài 20)").
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Bài 20: src/content/docs/nhac-ly/20-doc-tong-pho.md, tiêu đề "20. Đọc tổng phổ" (cùng lô).'
+  - id: n35
+    cau: Câu "Một số tổng phổ hiện đại in ở cao độ thật (concert pitch) để dễ đọc."
+    loai: lich-su
+    nguon: []
+    ket_qua: da-bo
+    ghi_chu: 'Chữ cũ ở cuối đoạn "Nhạc cụ dịch giọng". Bỏ vì chỉ có Wikipedia (bậc 3: "some composers have written orchestral scores entirely in concert pitch", ví dụ Prokofiev, Piano Concerto No. 1) xác nhận; Britannica, Score, LilyPond (concert pitch) và Oxford không nhắc tổng phổ ở cao độ thật.'
+  - id: n36
+    cau: Giai điệu Ode to Joy bắt đầu Mi Mi Fa Sol ở Đô trưởng.
+    loai: cau-truc
+    nguon:
+      - mutopia-ode
+    ket_qua: dung
+    ghi_chu: 'Mutopia ode.ly (Sol trưởng): si si đô rê (B B C D) | rê đô si la | sol sol la si | si. la la. Dịch xuống một quãng 5 đúng sang Đô trưởng: Mi Mi Fa Sol. Giai điệu gốc ở Giao hưởng số 9, chương 4, Rê trưởng; D3-L1 (04-nhip.yml) đã đối chiếu với bản phổ Breitkopf và Schott.'
+  - id: n37
+    cau: 'Đáp án bài tập 1: Fa trưởng La La Si♭ Đô; Si♭ trưởng Rê Rê Mi♭ Fa.'
+    loai: so-lieu
+    nguon:
+      - teoria-transposing
+    ket_qua: dung
+    ghi_chu: 'Mi Mi Fa Sol lên quãng 4 đúng: La La Si♭ Đô (Fa trưởng có Si♭); xuống quãng 2 trưởng: Rê Rê Mi♭ Fa (Si♭ trưởng có Mi♭). Đã kiểm bằng cách đếm quãng và hóa biểu.'
+  - id: n38
+    cau: 'Đáp án bài tập 2: clarinet in B♭ đọc nốt Rê, âm thanh thật là Đô (thấp hơn Rê một quãng 2 trưởng).'
+    loai: so-lieu
+    nguon:
+      - teoria-transposing
+    ket_qua: dung
+    ghi_chu: Theo n25.
+  - id: n39
+    cau: 'Đáp án bài tập 3: muốn clarinet in B♭ phát ra Đô thật, phải viết nốt Rê (cao hơn 2 trưởng).'
+    loai: so-lieu
+    nguon:
+      - teoria-transposing
+    ket_qua: dung
+    ghi_chu: Theo n25.
+  - id: n40
+    cau: 'Câu hỏi: khóa Đô alto đặt Đô giữa ở dòng 3; lời giải thích "dòng giữa của khuông".'
+    loai: dinh-nghia
+    nguon:
+      - omt-clefs
+    ket_qua: dung
+    ghi_chu: Theo n5. Lời giải thích không dựa vào vị trí lựa chọn.
+  - id: n41
+    cau: 'Câu hỏi: nhạc cụ đọc khóa Đô alto là viola; giải thích "có âm vực giữa violin và cello".'
+    loai: ten
+    nguon:
+      - omt-clefs
+    ket_qua: dung
+    ghi_chu: Theo n6, n11.
+  - id: n42
+    cau: 'Câu hỏi: clarinet in B♭ viết Đô thì âm thanh thật là Si♭ thấp hơn, thấp hơn một quãng 2 trưởng.'
+    loai: so-lieu
+    nguon:
+      - teoria-transposing
+    ket_qua: dung
+    ghi_chu: Theo n25.
+  - id: n43
+    cau: 'Câu hỏi: dịch giọng từ Đô trưởng lên Rê trưởng cần thêm Fa♯ và Đô♯; giải thích "Rê trưởng có 2 dấu thăng".'
+    loai: so-lieu
+    nguon:
+      - omt-major
+    ket_qua: dung
+    ghi_chu: Theo n18.
+  - id: n44
+    cau: 'Câu hỏi: guitar được viết cao hơn âm thanh thật một quãng tám; giải thích "âm thanh thật thấp hơn nốt viết một quãng tám".'
+    loai: so-lieu
+    nguon:
+      - radius-range
+      - wiki-ti
+    ket_qua: dung
+    ghi_chu: Theo n31; đáp án và giải thích khớp nhau.
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - khoa-nhac
+      - not
+    ket_qua: dung
+    ghi_chu: K:C, M:none, L:1/2; ba dòng cùng "C, C G |]" ở K:C clef=treble, clef=alto, clef=bass. abcjs đọc C3 C4 G4 ở cả ba khóa (cùng cao độ; ABC giữ cao độ khi đổi khóa). Đúng điều trang nói (n9, tên khối "Cùng các nốt Đô3 – Đô4 – Sol4"). Không cảnh báo abcjs; không có vạch ô giữa (M:none).
+  - khoi: 2
+    loai: trich-doan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - not
+      - doi-chieu-an-ban
+    ket_qua: da-sua
+    ghi_chu: 'Trích đoạn tác phẩm thật: Beethoven, Giao hưởng số 9, chương 4, giai điệu Ode to Joy (8 ô đầu của giai điệu, trang chỉ viết 4 ô), viết ở Đô trưởng, khóa Đô alto. Chữ cũ: E E F G | G F E D | E E F G | E D D2 |]. Chữ mới: E E F G | G F E D | C C D E | E3/2 D/ D2 |]. Lý do: ô 3 sai (lặp ô 1; giai điệu là Đô Đô Rê Mi) và ô 4 thiếu nhịp chấm dôi (Mi chấm dôi, Rê móc đơn, Rê trắng). Đối chiếu Mutopia ode.ly (Sol trưởng: b b c d | d c b a | g g a b | b4. a8 a2), dịch xuống một quãng 5 đúng sang Đô trưởng; khớp khối abc của 04-nhip.yml (D3-L1: E E F G | G F E D | C C D E | E3/2 D/ D2) đã đối chiếu với bản phổ Breitkopf & Härtel và Schott (mm. 92–99). abcjs đọc E4 E4 F4 G4 | G4 F4 E4 D4 | C4 C4 D4 E4 | E4(3/8) D4(1/8) D4(1/2): mỗi ô đủ 4 phách (khuong-nhac.mjs không lỗi).'
+  - khoi: 3
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - giong
+      - not
+      - dau-hoa
+    ket_qua: dung
+    ghi_chu: 'Hai dòng: K:C: E E F G | G F E D; K:D: F F G A | A G F E. abcjs đọc dòng 1 là E4 E4 F4 G4 | G4 F4 E4 D4; dòng 2 viết F F G A | A G F E với hóa biểu F♯ C♯, tức F♯ F♯ G A | A G F♯ E: đúng là dịch lên quãng 2 trưởng (Mi → Fa♯, Fa → Sol, Sol → La, Rê → Mi). Đúng bước 3 của trang (n19). Không cảnh báo abcjs.'
+doi_chu:
+  - cu: "Ngoài khóa Sol và khóa Fa, còn một khóa thứ ba: khóa Đô. Hình của nó giống hai chữ C quay lưng vào nhau, và điểm giữa của khóa chỉ vào dòng nào thì dòng đó là Đô giữa (C4). Khóa Đô có thể đặt ở nhiều dòng, nhưng hai vị trí còn dùng ngày nay là:"
+    moi: "Ngoài khóa Sol và khóa Fa, còn một khóa thứ ba: khóa Đô. Hình của nó vẽ cách điệu từ chữ C, và điểm giữa của khóa chỉ vào dòng nào thì dòng đó là Đô giữa (C4). Khóa Đô có thể đặt ở nhiều dòng, nhưng hai vị trí còn dùng ngày nay là:"
+    ly_do: 'n2 (da-sua): Britannica, Clef: khóa Đô là "stylized form of the letter C"; không nguồn nào mô tả "hai chữ C quay lưng vào nhau".'
+  - cu: Viola; đôi khi trombone alto
+    moi: Viola
+    ly_do: "n6 (da-sua): trombone alto chỉ có nguồn bậc 3 (Wikipedia, Clef); OMT, Britannica chỉ nêu viola."
+  - cu: Một số nhạc cụ được viết bản nhạc ở cao độ khác với âm thanh thật vang lên. Lý do chủ yếu là lịch sử (kích thước ống kèn) và để người chơi dùng cùng một thế bấm khi đổi giữa các loại nhạc cụ trong cùng họ.
+    moi: Một số nhạc cụ được viết bản nhạc ở cao độ khác với âm thanh thật vang lên. Lý do chủ yếu là lịch sử (kèn horn, kèn trumpet thời chưa có van chỉ chơi được các nốt của một âm gốc, nên phải đổi ống nối để đổi âm gốc) và để người chơi dùng cùng một thế bấm khi đổi giữa các loại nhạc cụ trong cùng họ.
+    ly_do: 'n24 (da-sua): "kích thước ống kèn" không có nguồn; Wikipedia, Radius (bậc 3): kèn đồng chưa có van, ống nối đổi âm gốc.'
+  - cu: Phổ biến nhất
+    ly_do: 'n26 (da-bo): "Phổ biến nhất" không kiểm được.'
+  - cu: 'Khi đọc tổng phổ (bài 20), bè clarinet in B♭ có hóa biểu khác với các bè còn lại: đó không phải lỗi in, mà là nhạc cụ dịch giọng. Một số tổng phổ hiện đại in ở "cao độ thật" (concert pitch) để dễ đọc.'
+    moi: "Khi đọc tổng phổ (bài 20), bè clarinet in B♭ có hóa biểu khác với các bè còn lại: đó không phải lỗi in, mà là nhạc cụ dịch giọng."
+    ly_do: "n35 (da-bo): chỉ có Wikipedia (bậc 3)."
+  - cu: Open Music Theory; musictheory.net.
+    moi:
+      - "Open Music Theory: Clefs; Major Scales, Scale Degrees, and Key Signatures."
+      - "Encyclopaedia Britannica: Clef."
+      - "José Rodríguez Alvira, teoria.com: bảng nhạc cụ dịch giọng. The Oxford Dictionary of Music (qua encyclopedia.com): transposing instruments, transposition. LilyPond Music Glossary: transposing instrument."
+      - "Beethoven, Ode to Joy: bản Mutopia (Sol trưởng, dịch xuống Đô trưởng); giai điệu gốc ở Giao hưởng số 9, chương 4 (Rê trưởng)."
+    ly_do: "Mục Nguồn: thay link chung bằng link tới đúng các chương và trang đã đọc khi kiểm định (lượt 1); bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, không đọc được chữ để kiểm."
+  - cu: "mô tả: Ngoài khóa Sol và khóa Fa, còn một khóa thứ ba: khóa Đô. Hình của nó giống hai chữ C quay lưng vào nhau, và điểm giữa của khóa chỉ vào dòng nào thì dòng đó là…"
+    moi: "mô tả: Ngoài khóa Sol và khóa Fa, còn một khóa thứ ba: khóa Đô. Hình của nó vẽ cách điệu từ chữ C, và điểm giữa của khóa chỉ vào dòng nào thì dòng đó là…"
+    ly_do: 'Mô tả trang lấy từ đoạn đầu, đổi theo n3.'
+  - cu: |-
+      khuông: Ode to Joy ở khóa Đô alto | X:2
+      L:1/4
+      M:4/4
+      Q:1/4=90
+      K:C clef=alto
+      E E F G | G F E D | E E F G | E D D2 |]
+    moi: |-
+      khuông: Ode to Joy ở khóa Đô alto | X:2
+      L:1/4
+      M:4/4
+      Q:1/4=90
+      K:C clef=alto
+      E E F G | G F E D | C C D E | E3/2 D/ D2 |]
+    ly_do: "khuông 2 (da-sua): Mutopia ode.ly và D3-L1 (04-nhip.yml): ô 3 là Đô Đô Rê Mi, ô 4 là Mi chấm dôi, Rê móc đơn, Rê trắng."

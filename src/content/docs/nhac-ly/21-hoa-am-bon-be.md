@@ -3,7 +3,7 @@ title: 21. Hòa âm bốn bè
 description: Phần Hòa âm mở rộng và phân tích (bài 21–27) dành cho bạn đã vững các bài trước. Bài đầu tiên dạy cách viết hợp âm cho bốn giọng hát, cách mà Bach viết hàng…
 ---
 
-Phần **Hòa âm mở rộng và phân tích** (bài 21–27) dành cho bạn đã vững các bài trước. Bài đầu tiên dạy cách **viết** hợp âm cho bốn giọng hát, cách mà Bach viết hàng trăm bài thánh ca (chorale), và là bài tập nền tảng của mọi khóa học sáng tác.
+Phần **Hòa âm mở rộng và phân tích** (bài 21–27) dành cho bạn đã vững các bài trước. Bài đầu tiên dạy cách **viết** hợp âm cho bốn giọng hát, cách mà Bach viết hàng trăm bài thánh ca (chorale).
 
 ## Bốn bè và âm vực
 
@@ -12,7 +12,7 @@ Phần **Hòa âm mở rộng và phân tích** (bài 21–27) dành cho bạn �
 | **S** (soprano) | Nữ cao | Đô4 – Sol5 | Khóa Sol, đuôi nốt hướng lên |
 | **A** (alto) | Nữ trầm | Sol3 – Rê5 | Khóa Sol, đuôi nốt hướng xuống |
 | **T** (tenor) | Nam cao | Đô3 – Sol4 | Khóa Fa, đuôi nốt hướng lên |
-| **B** (bass) | Nam trầm | Mi2 – Đô4 | Khóa Fa, đuôi nốt hướng xuống |
+| **B** (bass) | Nam trầm | Fa2 – Rê4 | Khóa Fa, đuôi nốt hướng xuống |
 
 
 ::hinh{ten="ranges-satb"}
@@ -58,7 +58,7 @@ K:C
 
 Đọc từ dưới lên ở mỗi hợp âm: bass – tenor (khuông dưới), alto – soprano (khuông trên).
 
-- I → IV: soprano **giữ** Đô (nốt chung); các bè trên đi lên bước nhỏ, bass nhảy xuống quãng 5 tới Fa.
+- I → IV: soprano **giữ** Đô (nốt chung); alto và tenor đi lên bước liền, bass nhảy xuống quãng 5 tới Fa.
 - IV → V: bass đi **lên** bước liền (Fa → Sol), ba bè trên đi xuống ngược chiều; không có quãng song song cấm.
 - V → I: **cảm âm Si đi lên Đô** ở soprano; tenor giữ Sol (nốt chung).
 
@@ -104,5 +104,9 @@ K:C clef=bass
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- Open Music Theory: [Chords in SATB style](https://viva.pressbooks.pub/openmusictheory/chapter/chords-in-satb-style/); [First-Species Counterpoint](https://viva.pressbooks.pub/openmusictheory/chapter/first-species-counterpoint/).
+- Andre Mount, *Fundamentals, Function, and Form*: [14. Three- and Four-Voice Progressions](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/14-three-and-four-voice-progressions/); sách bài tập, [Guide to SATB part-writing](https://milnepublishing.geneseo.edu/fundamentals-function-form-workbook/front-matter/guide-to-satb-part-writing/).
+- Iowa State University, *Comprehensive Musicianship*: [10.1 Chord Voicing and Voice Leading: General Principles](https://iastate.pressbooks.pub/comprehensivemusicianship/chapter/10-1-chord-voicing-and-voice-leading-general-principles-tutorial/).
+- *The Concise Oxford Dictionary of Music* (Encyclopedia.com): [soprano](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/soprano), [alto](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/alto), [tenor](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/tenor), [bass](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/bass).
+- IMSLP: Bach, [371 Vierstimmige Choralgesänge](https://imslp.org/wiki/371_Vierstimmige_Choralges%C3%A4nge_(Bach,_Johann_Sebastian)).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

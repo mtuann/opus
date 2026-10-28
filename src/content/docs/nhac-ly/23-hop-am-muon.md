@@ -3,7 +3,7 @@ title: 23. Hợp âm mượn
 description: "Một bản nhạc ở Đô trưởng không bắt buộc chỉ dùng hợp âm của Đô trưởng. Nhà soạn nhạc thường mượn hợp âm từ giọng thứ cùng tên (Đô thứ) để tạo màu sắc: một…"
 ---
 
-Một bản nhạc ở Đô trưởng không bắt buộc chỉ dùng hợp âm của Đô trưởng. Nhà soạn nhạc thường **mượn hợp âm từ giọng thứ cùng tên** (Đô thứ) để tạo màu sắc: một thoáng buồn, một bóng mây giữa trời trong. Kỹ thuật này gọi là **hòa âm hỗn hợp** (modal mixture), rất đặc trưng của Schubert, Brahms, và cả nhạc phim, nhạc pop ngày nay.
+Một bản nhạc ở Đô trưởng không bắt buộc chỉ dùng hợp âm của Đô trưởng. Nhà soạn nhạc thường **mượn hợp âm từ giọng thứ cùng tên** (Đô thứ) để tạo màu sắc: một thoáng buồn, một bóng mây giữa trời trong. Kỹ thuật này gọi là **hòa âm hỗn hợp** (modal mixture).
 
 ## Các hợp âm mượn phổ biến (trong Đô trưởng)
 
@@ -31,7 +31,7 @@ K:C
 [C,EGc] [F,FAc] [F,F_Ac] [C,EGc] |]
 ```
 
-**♭VI – ♭VII – I**: tiến trình hào hùng, rất phổ biến trong nhạc phim và nhạc pop.
+**♭VI – ♭VII – I**: hai hợp âm mượn liên tiếp, rồi về chủ âm.
 
 ```abc
 X:2
@@ -45,12 +45,12 @@ K:C
 
 ## Chiều ngược lại: giọng thứ mượn từ giọng trưởng
 
-Bản nhạc ở giọng thứ có thể **kết thúc bằng hợp âm trưởng** của chủ âm: đó là **quãng 3 Picardy** đã gặp ở [Fugue](/opus/hinh-thuc/fugue/). Và như đã học ở [bài 10](/opus/nhac-ly/10-hop-am-ba/), hợp âm V trong giọng thứ vốn đã "mượn" cảm âm.
+Bản nhạc ở giọng thứ có thể **kết thúc bằng hợp âm trưởng** của chủ âm: đó là **quãng 3 Picardy** đã gặp ở [Fugue](/opus/hinh-thuc/fugue/). Và như đã học ở [bài 10](/opus/nhac-ly/10-hop-am-ba/), hợp âm V trong giọng thứ vốn đã dùng cảm âm được nâng (nốt này trùng với bậc 7 của giọng trưởng cùng tên).
 
 ## Nghe trong tác phẩm thật
 
-- **Schubert** nổi tiếng với những chỗ chuyển đột ngột giữa trưởng và thứ trên cùng một chủ âm, như mây che mặt trời. Nghe chương 2 Ngũ tấu đàn dây cung Đô trưởng, D. 956.
-- Chuỗi **♭VI – ♭VII – I** xuất hiện ở rất nhiều đoạn kết hùng tráng trong nhạc phim và nhạc rock.
+- **Saint-Saëns**, opera *Samson et Dalila*, màn II, aria "Mon cœur s'ouvre à ta voix": hợp âm ii bán giảm mượn nốt ♭6 từ giọng thứ cùng tên.
+- **Catalani**, opera *La Wally*, màn I, aria "Ebben? Ne andrò lontana": một đoạn nhạc mở đầu ở Mi trưởng rồi chuyển sang Mi thứ trên cùng chủ âm Mi.
 
 ## Bài tập viết
 
@@ -86,5 +86,6 @@ Bản nhạc ở giọng thứ có thể **kết thúc bằng hợp âm trưởn
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- Open Music Theory: [Modal Mixture](https://viva.pressbooks.pub/openmusictheory/chapter/modal-mixture/); [Minor Scales, Scale Degrees, and Key Signatures](https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/).
+- *The Concise Oxford Dictionary of Music* (Encyclopedia.com): [plagal cadence](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/plagal-cadence).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

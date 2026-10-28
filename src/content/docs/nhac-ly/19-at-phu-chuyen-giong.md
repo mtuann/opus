@@ -1,9 +1,9 @@
 ---
 title: 19. Át phụ và chuyển giọng
-description: 'Ở bài 12, hợp âm V kéo mạnh về I. Bài này mở rộng ý tưởng đó: mọi hợp âm đều có thể có một "hợp âm V của riêng nó", và từ đó âm nhạc có thể chuyển hẳn sang…'
+description: 'Ở bài 12, hợp âm V kéo mạnh về I. Bài này mở rộng ý tưởng đó: mọi hợp âm ba trưởng hay thứ trong giọng đều có thể có một "hợp âm V của riêng nó"…'
 ---
 
-Ở [bài 12](/opus/nhac-ly/12-hoa-am-chuc-nang/), hợp âm V kéo mạnh về I. Bài này mở rộng ý tưởng đó: **mọi hợp âm** đều có thể có một "hợp âm V của riêng nó", và từ đó âm nhạc có thể **chuyển hẳn sang giọng mới**.
+Ở [bài 12](/opus/nhac-ly/12-hoa-am-chuc-nang/), hợp âm V kéo mạnh về I. Bài này mở rộng ý tưởng đó: **mọi hợp âm ba trưởng hay thứ** trong giọng đều có thể có một "hợp âm V của riêng nó", và từ đó âm nhạc có thể **chuyển hẳn sang giọng mới**.
 
 ## Át phụ
 
@@ -36,7 +36,7 @@ Ngoài hợp âm V, **hợp âm vii°** (hoặc vii°7) cũng có thể làm "á
 
 ## Chuyển giọng
 
-Khi giọng mới được **khẳng định đủ lâu**, thường bằng một kết trọn ở giọng mới, ta nói bản nhạc đã **chuyển giọng** (modulation).
+Khi giọng mới được **khẳng định đủ lâu**, thường bằng một kết ở giọng mới, ta nói bản nhạc đã **chuyển giọng** (modulation).
 
 ### Giọng gần
 
@@ -44,7 +44,7 @@ Các giọng **chỉ khác 0–1 dấu hóa** là giọng gần, chuyển qua l�
 
 ### Chuyển giọng qua hợp âm chung
 
-Cách mượt nhất: tìm một hợp âm **thuộc cả hai giọng** làm "bản lề" (pivot chord).
+Một cách thường dùng, mượt hơn đổi giọng đột ngột: tìm một hợp âm **thuộc cả hai giọng** làm "bản lề" (pivot chord).
 
 Ví dụ Đô trưởng → Sol trưởng: hợp âm **Am** là vi của Đô trưởng và cũng là ii của Sol trưởng.
 
@@ -67,7 +67,7 @@ K:C
 
 ### Chuyển giọng trực tiếp
 
-Đôi khi nhạc đổi giọng **đột ngột**, không cần bản lề, thường ở chỗ bắt đầu câu mới. Ví dụ nổi tiếng: nhiều bài hát pop "nâng tông" lên nửa cung ở điệp khúc cuối. Trong nhạc cổ điển, đầu phần phát triển của [Mozart Giao hưởng số 40](/opus/nghe-nhac/mozart-40/) chuyển đột ngột sang một giọng rất xa.
+Đôi khi nhạc đổi giọng **đột ngột**, không cần bản lề, thường ở chỗ bắt đầu câu mới. Ví dụ trong nhạc cổ điển: đầu phần phát triển của [Mozart Giao hưởng số 40](/opus/nghe-nhac/mozart-40/) chuyển đột ngột sang Fa♯ thứ, một giọng xa giọng chính.
 
 ## Bản đồ giọng gần
 
@@ -75,7 +75,7 @@ K:C
 
 ## Chuyển giọng trong hình thức sonata
 
-Đây là lý do hình thức sonata vận hành được: phần trình bày **chuyển sang giọng át** (hoặc giọng trưởng song song nếu ở giọng thứ) cho chủ đề 2, tạo xung đột giữa hai giọng; phần tái hiện đưa chủ đề 2 **về giọng chính**, giải quyết xung đột đó.
+Trong hình thức sonata, phần trình bày **chuyển sang giọng át** (hoặc giọng trưởng song song nếu ở giọng thứ) cho chủ đề 2, tạo xung đột giữa hai giọng; phần tái hiện đưa chủ đề 2 **về giọng chính**, giải quyết xung đột đó.
 
 ## Bài tập viết
 
@@ -117,5 +117,6 @@ K:C
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- *Open Music Theory*: [Introduction to Harmony, Cadences, and Phrase Endings](https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/); [Tonicization](https://viva.pressbooks.pub/openmusictheory/chapter/tonicization/); [Extended Tonicization and Modulation to Closely Related Keys](https://viva.pressbooks.pub/openmusictheory/chapter/extended-tonicization-and-modulation-to-closely-related-keys/); [Sonata Form](https://viva.pressbooks.pub/openmusictheory/chapter/sonata-form/).
+- San Francisco Conservatory of Music, [Sonata form developments](https://sfcm.edu/sites/default/files/sfcm-theory/analysis_lectures/18_sonata_form_devo/sonata_form_developments.pdf). Hollywood Bowl, [Symphony No. 40 in G Minor, K. 550](https://www.hollywoodbowl.com/musicdb/pieces/5203/symphony-no-40). Indianapolis Symphony Orchestra, [lời giới thiệu Giao hưởng số 40 của Mozart](https://www.indianapolissymphony.org/backstage/program-notes/mozart-symphony-no-40/).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

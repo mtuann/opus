@@ -13,7 +13,7 @@ Nếu giai điệu chỉ dùng các nốt thuộc hợp âm đang vang, nó sẽ
 | **Nốt thêu** (neighbor tone) | Bước liền | Bước liền, **quay lại** | Mi – **Fa** – Mi |
 | **Nốt treo** (suspension) | Giữ nguyên từ hợp âm trước | Bước liền **xuống** | Fa (giữ từ F) – xuống Mi |
 | **Nốt dựa** (appoggiatura) | **Nhảy** đến, ở phách mạnh | Bước liền | **Rê** (nhảy tới) – Đô |
-| **Nốt đón trước** (anticipation) | Bước liền | Giữ nguyên sang hợp âm sau | Nốt của hợp âm sau vang lên sớm |
+| **Nốt đón trước** (anticipation) | Không có quy định | Giữ nguyên sang hợp âm sau | Nốt của hợp âm sau vang lên sớm |
 | **Âm nền** (pedal point) | Một nốt **giữ dài** ở bè trầm | Trong khi hợp âm bên trên thay đổi | Sol giữ ở bè trầm qua nhiều hợp âm |
 
 ## Nghe từng loại
@@ -47,7 +47,7 @@ K:C
 [G,DFB]2 [C,FGc]2- | [C,FGc] [C,EGc]3 |]
 ```
 
-**Nốt dựa**: giai điệu nhảy tới một nốt ngoài hợp âm ở phách mạnh, rồi bước về nốt hợp âm, giống một tiếng thở dài. Đây là "chữ ký" của âm nhạc thời Cổ điển và Lãng mạn.
+**Nốt dựa**: giai điệu nhảy tới một nốt ngoài hợp âm ở phách mạnh, rồi bước về nốt hợp âm, giống một tiếng thở dài.
 
 ```abc
 X:3
@@ -87,7 +87,7 @@ Nốt Đô xuất hiện từ giữa ô đầu, khi hòa âm vẫn là Sol7 (lú
 
 ## Vì sao quan trọng khi nghe nhạc?
 
-Nghịch tai rồi giải quyết là **động cơ cảm xúc** của nhạc tonal. Nốt treo và nốt dựa tạo cảm giác "đau rồi dịu", đó là lý do các chương chậm của Mozart hay Bach chạm vào người nghe đến thế. Khi bạn nghe một hòa âm "nhói lên" rồi tan ra, rất có thể đó là một nốt treo.
+Nốt treo và nốt dựa rơi vào phách mạnh: ở đó chúng nghe nghịch tai với hợp âm, rồi giải quyết bằng một bước liền. Khi bạn nghe một hòa âm "nhói lên" rồi tan ra, rất có thể đó là một nốt treo hay nốt dựa.
 
 ## Bài tập viết
 
@@ -129,5 +129,7 @@ Nghịch tai rồi giải quyết là **động cơ cảm xúc** của nhạc to
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- *Open Music Theory*: [Embellishing Tones](https://viva.pressbooks.pub/openmusictheory/chapter/embellishing-tones/).
+- Sierra College, *Equipping the Musical Ear*: [13.06 Suspensions](https://human.libretexts.org/Courses/Sierra_College/Equipping_the_Musical_Ear/13%3A_Melodic_Embellishments/13.06%3A_Suspensions). *The Oxford Dictionary of Music* (qua encyclopedia.com): [appoggiatura](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/appoggiatura).
+- Bach, *Prelude cung Đô trưởng*, BWV 846: [bản Mutopia](https://www.mutopiaproject.org/ftp/BachJS/BWV846/wtk1-prelude1/wtk1-prelude1.ly).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

@@ -1,0 +1,378 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/22-doi-am
+trang: src/content/docs/nhac-ly/22-doi-am.md
+nguon_cu: ../opus-zero/docs/nhac-ly/22-doi-am.md
+tang: loi
+lan:
+  - so: 1
+    ngay: '2026-10-28'
+    nhanh: moi/d3-l3
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D3-L3 lượt 1, phần 2/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Trang đối âm (tầng lõi), hình ::hinh{ten="counterpoint"} (src/components/hinh/counterpoint.html). Nguồn chính: Open Music Theory (OMT), chương Species Counterpoint và các chương First đến Fifth-Species, Gradus ad Parnassum Exercises, 16th-Century Contrapuntal Style, High Baroque Fugal Exposition; MT21C (First Species, Fifth Species); COD, Encyclopedia of World Biography (Fux), Britannica (Steps to Parnassus), Beethoven-Haus. WebFetch ngày 28/10/2026 (bản tóm tắt chữ, hỏi lại để lấy nguyên văn chỗ quan trọng). Hình counterpoint: kiểm từng nốt, quãng, kiểu chuyển động, chú thích: ĐÚNG, không có lỗi (n27 đến n30). Chữ đã sửa trên trang: quy tắc 2 (n18, không kết bằng quãng 5; bắt đầu theo vị trí bè), quy tắc 4 (n20, "ba quãng cùng loại": chữ cũ trái ví dụ của trang), cantus firmus "ví dụ đầu tiên" (n23), đáp án câu hỏi 4 (n37), mục Nguồn (bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, không đọc được chữ để kiểm). Chưa chắc: không còn. Câu ve-site trỏ trang chưa chuyển: n4 (hinh-thuc/fugue: giữ đường dẫn; xem cả hồ sơ bài 23: trang Fugue phải giữ đoạn về quãng 3 Picardy), n6 (luyen-tap/ban-phim, tai-lieu-tham-khao). Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): counterpoint (đối âm), cantus firmus, species (loại đối âm), consonance/dissonance đã có; passing tone (nốt lướt), neighbor tone (nốt thêu), suspension (nốt treo), contrary/parallel motion (chuyển động ngược, song song), clausula; đã có bản ghi: fugue (lô này), polyphony, consonance, dissonance, interval, cadence, leading-tone. Ghi chú nhỏ cho người giao: OMT (First-Species) ghi quãng 4 đúng đôi khi tính là thuận; trang theo OMT, Species Counterpoint (nghịch ở hai bè).'
+nguon:
+  - id: omt-species
+    bac: 2
+    ten: Open Music Theory, Species Counterpoint (introduction)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/species-counterpoint/
+  - id: omt-first
+    bac: 2
+    ten: Open Music Theory, First-Species Counterpoint (Mark Gotham, Kris Shaffer)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/first-species-counterpoint/
+  - id: omt-second
+    bac: 2
+    ten: Open Music Theory, Second-Species Counterpoint
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/second-species-counterpoint/
+  - id: omt-third
+    bac: 2
+    ten: Open Music Theory, Third-Species Counterpoint
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/third-species-counterpoint/
+  - id: omt-fourth
+    bac: 2
+    ten: Open Music Theory, Fourth-Species Counterpoint
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/fourth-species-counterpoint/
+  - id: omt-fifth
+    bac: 2
+    ten: Open Music Theory, Fifth-Species Counterpoint
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/fifth-species-counterpoint/
+  - id: omt-gradus
+    bac: 2
+    ten: Open Music Theory, Gradus ad Parnassum Exercises
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/gradus-ad-parnassum-exercises/
+  - id: omt-16c
+    bac: 2
+    ten: Open Music Theory, 16th-Century Contrapuntal Style
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/16th-century-contrapuntal-style/
+  - id: omt-fugal
+    bac: 2
+    ten: Open Music Theory, High Baroque Fugal Exposition
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/high-baroque-fugal-exposition/
+  - id: mt21c-first
+    bac: 2
+    ten: Robert Hutchinson, Music Theory for the 21st-Century Classroom, First Species
+    link: https://musictheory.pugetsound.edu/mt21c/FirstSpecies.html
+  - id: mt21c-fifth
+    bac: 2
+    ten: Robert Hutchinson, Music Theory for the 21st-Century Classroom, Fifth Species
+    link: https://musictheory.pugetsound.edu/mt21c/FifthSpecies.html
+  - id: cod-counterpoint
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục counterpoint, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/literature-and-arts/performing-arts/music-theory-forms-and-instruments/counterpoint
+  - id: cod-gradus
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục Gradus ad Parnassum, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/gradus-ad-parnassum
+  - id: ewb-fux
+    bac: 2
+    ten: Encyclopedia of World Biography (Encyclopedia.com), Johann Joseph Fux; có đoạn trích The Concise Oxford Dictionary of Music (Austrian composer, organist, and theorist)
+    link: https://www.encyclopedia.com/people/literature-and-arts/music-history-composers-and-performers-biographies/johann-joseph-fux
+  - id: brit-steps
+    bac: 2
+    ten: Encyclopaedia Britannica, Steps to Parnassus
+    link: https://www.britannica.com/topic/Steps-to-Parnassus
+  - id: beethoven-haus
+    bac: 2
+    ten: Beethoven-Haus Bonn, mục về bản chép Gradus ad Parnassum của Beethoven
+    link: https://www.beethoven.de/en/media/view/5555065024675840
+nhan_dinh:
+  - id: n1
+    cau: Đối âm (counterpoint) là nghệ thuật viết nhiều giai điệu độc lập cùng lúc mà vẫn hòa hợp.
+    loai: dinh-nghia
+    nguon:
+      - cod-counterpoint
+      - omt-16c
+    ket_qua: dung
+    ghi_chu: 'COD, Counterpoint: "The ability, unique to mus., to say two things at once comprehensibly"; các bè cùng lúc "each of significance in itself", tạo "a coherent texture". OMT (glossary, 16th-Century Contrapuntal Style): đối âm là cách học nghĩ về âm nhạc theo chiều ngang (giai điệu) và đồng thời chiều dọc. Từ "độc lập" cũng là chữ của OMT (First-Species: "melodic independence").'
+  - id: n2
+    cau: Hòa âm bốn bè nghĩ theo chiều dọc (hợp âm); đối âm nghĩ theo chiều ngang (từng giai điệu).
+    loai: dinh-nghia
+    nguon:
+      - cod-counterpoint
+      - omt-16c
+    ket_qua: dung
+    ghi_chu: 'COD: đối âm tuyến tính chú ý "the individual strands of the texture", "Linear harmony is the opposite of vertical harmony". OMT glossary: "thinking of music horizontally (melodically)".'
+  - id: n3
+    cau: Đối âm là ngôn ngữ của nhạc Phục hưng và của fugue.
+    loai: lich-su
+    nguon:
+      - omt-16c
+      - omt-fugal
+    ket_qua: dung
+    ghi_chu: 'OMT, 16th-Century Contrapuntal Style: "16th-century imitative choral polyphony (especially in the style of Palestrina)"; OMT, High Baroque Fugal Exposition: fugue là "contrapuntal compositions ... defined by the strict use of a certain number of independent voices". Lưu ý OMT: đối âm loại của Fux là "the later, 18th-century notion of species counterpoint", gần nhưng không đồng nhất với phong cách thế kỷ 16; câu của trang nói về đối âm nói chung.'
+  - id: n4
+    cau: 'Có trang Fugue (/opus/hinh-thuc/fugue/): trang về hình thức fugue, nơi trang này dẫn tới.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Chưa chuyển: ../opus-zero/docs/hinh-thuc/fugue.md (tiêu đề "Fugue", mở đầu "Fugue là hình thức phức điệu đỉnh cao của thời Baroque: nhiều bè độc lập lần lượt đuổi theo nhau bằng cùng một chủ đề"). anh-xa.md: `hinh-thuc/fugue`, tầng lõi, D5. Lô chuyển giữ đường dẫn /opus/hinh-thuc/fugue/ và nội dung giải thích fugue. Bài 23 cũng dẫn tới trang này vì đoạn về quãng 3 Picardy (xem hồ sơ bài 23).'
+  - id: n5
+    cau: Hòa âm bốn bè ở bài 21 (/opus/nhac-ly/21-hoa-am-bon-be/) và nốt treo ở bài 18 (/opus/nhac-ly/18-am-ngoai-hop-am/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Site mới: src/content/docs/nhac-ly/21-hoa-am-bon-be.md (tiêu đề "21. Hòa âm bốn bè", dạy viết hợp âm cho bốn bè); src/content/docs/nhac-ly/18-am-ngoai-hop-am.md (tiêu đề "18. Âm ngoài hợp âm", bảng có "Nốt treo (suspension)" ở dòng 14 và mục nốt treo 4–3).'
+  - id: n6
+    cau: Có trang Bàn phím piano (/opus/luyen-tap/ban-phim/) và tài liệu tham khảo (/opus/tai-lieu-tham-khao/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Chưa chuyển: ../opus-zero/docs/luyen-tap/ban-phim.md (tiêu đề "Bàn phím piano": chọn nốt gốc và loại gam hay hợp âm để tô phím, bấm Nghe); anh-xa.md: `luyen-tap/ban-phim`, tầng khung, D7-L1. ../opus-zero/docs/tai-lieu-tham-khao.md (tiêu đề "Tài liệu tham khảo"; tầng lõi, nhóm Thêm). Lô chuyển giữ hai đường dẫn này.'
+  - id: n7
+    cau: Năm 1725, nhà soạn nhạc Áo Johann Joseph Fux xuất bản Gradus ad Parnassum.
+    loai: ten
+    nguon:
+      - cod-gradus
+      - ewb-fux
+      - omt-species
+    ket_qua: dung
+    ghi_chu: 'COD (qua Encyclopedia.com): Gradus ad Parnassum, "a work on counterpoint by Johann Joseph Fux, published in 1725"; Fux là "Austrian composer, organist, and theorist". OMT, Species Counterpoint: "Gradus ad Parnassum (Steps to Parnassus, 1725)".'
+  - id: n8
+    cau: Gradus ad Parnassum là giáo trình đối âm viết dưới dạng đối thoại thầy trò.
+    loai: lich-su
+    nguon:
+      - ewb-fux
+    ket_qua: dung
+    ghi_chu: 'Encyclopedia of World Biography (Fux): "The Gradus is written as a dialogue between Palestrina as master and Fux as pupil." (Wikipedia, bậc 3 chỉ để tìm: phần Musica Pratica là đối thoại giữa Aloysius và Josephus; không dùng làm nguồn.)'
+  - id: n9
+    cau: Haydn, Mozart, Beethoven đều học từ Gradus ad Parnassum.
+    loai: lich-su
+    nguon:
+      - brit-steps
+      - ewb-fux
+      - beethoven-haus
+    ket_qua: dung
+    ghi_chu: 'Britannica, Steps to Parnassus: "was studied by Wolfgang A. Mozart, Joseph Haydn, and other 18th-century composers". Encyclopedia of World Biography: "which Haydn and Beethoven, among many others, studied". Beethoven-Haus: "Beethoven had also studied the work and had a copy of his own." Hai nguồn đầu, mỗi nguồn nêu hai trong ba người; ba người được phủ đủ.'
+  - id: n10
+    cau: Đến nay Gradus ad Parnassum vẫn được dùng.
+    loai: lich-su
+    nguon:
+      - cod-counterpoint
+      - omt-species
+    ket_qua: dung
+    ghi_chu: 'COD, Counterpoint: Gradus của Fux "still shows its influence in modern textbooks of strict counterpoint". OMT, Species Counterpoint: "Many composers from the 18th to the 21st centuries have used this method, or some variation on it" (các chương đối âm của OMT dựa trên Fux).'
+  - id: n11
+    cau: 'Phương pháp của Fux: cho sẵn một giai điệu chậm, nốt tròn, gọi là cantus firmus (CF), rồi viết thêm một bè, tăng dần độ phức tạp qua năm loại (species).'
+    loai: dinh-nghia
+    nguon:
+      - omt-species
+      - cod-counterpoint
+    ket_qua: dung
+    ghi_chu: 'OMT: "a step-by-step method for learning to write melodies and to combine them", năm loại cho hai bè; COD: đối âm chặt chẽ được dạy qua năm loại; "A fixed melody, the cantus firmus, serves as the base for the student''s added line". OMT, Third-Species: cantus firmus ở nốt tròn.'
+  - id: n12
+    cau: 'Loại 1: một nốt chống một nốt; chỉ dùng quãng thuận; học chuyển động giữa hai bè.'
+    loai: dinh-nghia
+    nguon:
+      - omt-first
+      - mt21c-first
+    ket_qua: dung
+    ghi_chu: 'OMT, First-Species: "Harmonically, the intervals between the two voices are all consonances." MT21C: "Create consonant harmonic intervals in each measure".'
+  - id: n13
+    cau: 'Loại 2: hai nốt chống một; nốt lướt nghịch tai ở phách yếu.'
+    loai: dinh-nghia
+    nguon:
+      - omt-second
+    ket_qua: dung
+    ghi_chu: 'OMT, Second-Species: "This 2:1 rhythmic ratio"; "Strong beats (downbeats) in second species are always consonant"; "All dissonant weak beats in second species are dissonant passing tones."'
+  - id: n14
+    cau: 'Loại 3: bốn nốt chống một; giai điệu linh hoạt, nốt thêu, nốt lướt.'
+    loai: dinh-nghia
+    nguon:
+      - omt-third
+    ket_qua: dung
+    ghi_chu: 'OMT, Third-Species: "the counterpoint line moves in quarter notes against a cantus firmus in whole notes" (4:1); dissonance gồm passing tone, neighbor tone (upper/lower), double neighbor, nota cambiata. "Nốt thêu" là cách gọi neighbor tone của site (bài 18).'
+  - id: n15
+    cau: 'Loại 4: nốt lệch phách, nối qua vạch nhịp; học nốt treo.'
+    loai: dinh-nghia
+    nguon:
+      - omt-fourth
+    ket_qua: dung
+    ghi_chu: 'OMT, Fourth-Species: "characterized by use of the suspension"; "with each weak-beat half note tied across the bar line to the following strong beat"; suspension giải quyết xuống bước liền.'
+  - id: n16
+    cau: 'Loại 5: tự do (florid), kết hợp tất cả; giai điệu như một bè thật.'
+    loai: dinh-nghia
+    nguon:
+      - mt21c-fifth
+      - omt-fifth
+    ket_qua: dung
+    ghi_chu: 'MT21C: "Fifth species (also know as "florid counterpoint") is a free mixture of first through fourth species." OMT: "primarily involves combining the tricks we''ve learned so far".'
+  - id: n17
+    cau: 'Quy tắc loại 1, điều 1: chỉ dùng quãng thuận 1, 3, 5, 6, 8 (trưởng, thứ hoặc đúng); quãng 4 tính là nghịch khi đứng trên bè dưới.'
+    loai: quy-tac
+    nguon:
+      - omt-species
+      - omt-first
+      - mt21c-first
+    ket_qua: dung
+    ghi_chu: 'OMT, Species Counterpoint: quãng thuận đúng là 1, 5, 8, thuận không đúng là 3 và 6 (trưởng, thứ); quãng 4 đúng "dissonant when it involves the lowest voice", nên ở hai bè mọi quãng 4 là nghịch. MT21C: "Dissonances (2nds, 4ths, 7ths) are not allowed in first species". Lưu ý: OMT, First-Species (bảng thuật ngữ) ghi quãng 4 đúng đôi khi tính là thuận, tùy ngữ cảnh; ở hai bè thì nghịch, khớp trang. Quãng 1 (đồng âm) chỉ ở đầu và cuối (OMT): trang không nêu, không sai.'
+  - id: n18
+    cau: 'Quy tắc loại 1, điều 2: bắt đầu bằng quãng đúng (1, 5 hoặc 8; nếu bè đối âm nằm dưới thì chỉ 1 hoặc 8) và kết thúc bằng quãng 8 hoặc đồng âm.'
+    loai: quy-tac
+    nguon:
+      - omt-first
+      - omt-species
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Bắt đầu và kết thúc bằng quãng đúng (1, 5 hoặc 8); kết thúc bằng quãng 8 hoặc đồng âm." Chữ mới như trên. Lý do: OMT, First-Species: bè đối âm ở trên: "the first note of the counterpoint should be do or sol" (P1, P5, P8); bè đối âm ở dưới: "must always be on the modal final, do" (chỉ P1, P8); "End with a perfect unison or octave" (OMT, Species Counterpoint: "not a fifth"). Chữ cũ cho phép kết bằng quãng 5; chữ mới khớp bài tập 1 của trang ("bè dưới bắt đầu bằng Rê, quãng 8 hoặc đồng âm"). MT21C chặt hơn ("Begin with an octave or unison").'
+  - id: n19
+    cau: 'Quy tắc loại 1, điều 3: cấm quãng 5 và 8 song song; tránh đi tới quãng đúng bằng chuyển động cùng chiều.'
+    loai: quy-tac
+    nguon:
+      - omt-first
+      - omt-species
+    ket_qua: dung
+    ghi_chu: 'OMT, First-Species: "Never use two perfect consonances of the same size in a row: P5–P5 or P8–P8." "Never move into a perfect consonance by similar motion (this is called direct fifths/octaves."'
+  - id: n20
+    cau: 'Quy tắc loại 1, điều 4: ưu tiên chuyển động ngược và quãng 3, quãng 6, nhưng không quá ba quãng 3 liên tiếp, hay ba quãng 6 liên tiếp.'
+    loai: quy-tac
+    nguon:
+      - omt-first
+      - mt21c-first
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "(nhưng không quá ba quãng 3 hoặc 6 liên tiếp)". Chữ mới: "(nhưng không quá ba quãng 3 liên tiếp, hay ba quãng 6 liên tiếp)". Lý do: OMT, First-Species: "Do not use more than three of the same imperfect consonance type in a row (e.g., three thirds in a row)" (cùng loại). Chữ cũ đọc được là "ba quãng 3 hoặc 6 xen kẽ" nên ví dụ của chính trang (3 – 6 – 3 – 6 – 6 – 6: sáu quãng không thuận đúng liền nhau, nhưng chỉ ba quãng 6 liền) bị trái điều ấy. MT21C viết "Do not use more than three consecutive 3rds or 6ths" (đọc theo nghĩa xen kẽ thì ví dụ trái): hai nguồn lệch nhau ở cách đọc; theo OMT. Ưu tiên chuyển động ngược: OMT "Contrary motion is best for variety and preserving the independence of the lines, so it should be preferred where possible"; quãng 3, 6 ưu tiên: "Imperfect consonances are preferable to perfect consonances for all intervals other than the first and last dyads" (OMT, First-Species, bản libretexts).'
+  - id: n21
+    cau: 'Quy tắc loại 1, điều 5: giai điệu chủ yếu đi bước liền; bước nhảy lớn nên đổi hướng ngay sau đó.'
+    loai: quy-tac
+    nguon:
+      - omt-species
+    ket_qua: dung
+    ghi_chu: 'OMT, Species Counterpoint: "any large leaps (fourth or larger) are followed by step in opposite direction"; First-Species: "prefer stepwise motion and leap only occasionally".'
+  - id: n22
+    cau: 'Quy tắc loại 1, điều 6: gần cuối nâng cảm âm để tạo kết; ở điệu Dorian trên Rê, Đô thành Đô♯.'
+    loai: quy-tac
+    nguon:
+      - omt-first
+      - mt21c-first
+    ket_qua: dung
+    ghi_chu: 'MT21C: ở cuối, một bè kết bằng 7–8: "In G mixolydian, D dorian, or A aeolian, use a sharp to create the leading tone" (F♯, C♯, G♯). OMT, First-Species: nếu cantus kết re–do thì bè đối âm kết ti–do, bằng chuyển động ngược (cantus kết ti–do thì bè đối âm kết re–do); Dorian trên Rê: CF kết Mi–Rê (re–do), bè đối âm kết Đô♯–Rê (ti–do).'
+  - id: n23
+    cau: 'Cantus firmus của ví dụ là giai điệu ở điệu Dorian trên Rê mà Fux dùng trong sách: Rê Fa Mi Rê Sol Fa La Sol Fa Mi Rê.'
+    loai: ten
+    nguon:
+      - omt-gradus
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "mà Fux dùng làm ví dụ đầu tiên trong sách". Chữ mới: "mà Fux dùng trong sách". Lý do: OMT, Gradus ad Parnassum Exercises: bảng cantus firmus: hàng Dorian "D4–F4–E4–D4–G4–F4–A4–G4–F4–E4–D4" ("Fux basically uses one cantus firmus for each modal final throughout"); OMT không nói đó là ví dụ đầu tiên của sách (chỉ là cantus đầu tiên của bảng và ví dụ loại 1 đầu), nên bỏ "đầu tiên". Dãy nốt khớp CF của khối abc.'
+  - id: n24
+    cau: Bè trên của ví dụ do site viết theo các quy tắc ở trên.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Câu nói về chính site: khối abc là ví dụ soạn riêng (cantus firmus của Fux, bè trên do site viết), không chép từ bản nhạc nào. Review kiểm khối theo khuong_nhac khối 1.'
+  - id: n25
+    cau: 'Quãng giữa hai bè của ví dụ, từ trái sang phải: 5 – 6 – 6 – 8 – 3 – 6 – 3 – 6 – 6 – 6 – 8.'
+    loai: so-lieu
+    nguon:
+      - omt-first
+    ket_qua: dung
+    ghi_chu: 'Tính từ khối abc (bè trên La4 Rê5 Đô5 Rê5 Si4 Rê5 Đô5 Mi5 Rê5 Đô♯5 Rê5; CF Rê4 Fa4 Mi4 Rê4 Sol4 Fa4 La4 Sol4 Fa4 Mi4 Rê4): La4/Rê4 = 5, Rê5/Fa4 = 6, Đô5/Mi4 = 6, Rê5/Rê4 = 8, Si4/Sol4 = 3, Rê5/Fa4 = 6, Đô5/La4 = 3, Mi5/Sol4 = 6, Rê5/Fa4 = 6, Đô♯5/Mi4 = 6, Rê5/Rê4 = 8. Đúng.'
+  - id: n26
+    cau: 'Ví dụ: quãng đúng ở đầu và cuối, giữa bài chủ yếu là quãng 3 và 6, và các quãng 8 đều được đến bằng chuyển động ngược.'
+    loai: quy-tac
+    nguon:
+      - omt-first
+    ket_qua: dung
+    ghi_chu: 'Đầu 5 (CP ở trên, hợp lệ), cuối 8; giữa bài có 8 quãng 3 hoặc 6 trong 9 quãng (còn lại là 8 ở ô 4). Quãng 8 ô 4: CP Đô5 → Rê5 (lên), CF Mi4 → Rê4 (xuống): ngược; quãng 8 cuối: CP Đô♯5 → Rê5 (lên), CF Mi4 → Rê4 (xuống): ngược. Không có 5, 8 song song; không có chuyển động cùng chiều tới quãng đúng. Nhảy của CP: La4 → Rê5 (quãng 4, đổi hướng ngay), Rê5 → Si4 (3), Si4 → Rê5 (3), Đô5 → Mi5 (3); còn lại bước liền. Chỉ có một đỉnh (Mi5), không phải nốt cuối. Ba quãng 6 liền (ô 8–10) và không có hơn ba quãng cùng loại liền (OMT).'
+  - id: n27
+    cau: 'Hình counterpoint: bè đối âm (đỏ) La – Rê – Đô – Rê – Si – Rê – Đô – Mi – Rê – Đô♯ – Rê trên CF (xanh) Rê – Fa – Mi – Rê – Sol – Fa – La – Sol – Fa – Mi – Rê.'
+    loai: so-lieu
+    nguon:
+      - omt-gradus
+    ket_qua: dung
+    ghi_chu: 'Kiểm trong src/components/hinh/counterpoint.html: chữ trong từng vòng tròn khớp khối abc; chiều cao đúng 7 px mỗi nửa cung (La4 ở y=77, Rê5 y=42, Rê4 y=126, Đô♯5 y=49, v.v.): đối âm và CF đúng từng nốt.'
+  - id: n28
+    cau: 'Hình counterpoint: số quãng giữa hai bè: 5, 6, 6, 8, 3, 6, 3, 6, 6, 6, 8; quãng đúng (5, 8, 8) tô vàng.'
+    loai: so-lieu
+    nguon:
+      - omt-first
+    ket_qua: dung
+    ghi_chu: Số trong hình khớp n25; chỉ ba quãng 5, 8, 8 (đầu, ô 4, cuối) dùng màu vàng, đúng "quãng đúng".
+  - id: n29
+    cau: 'Hình counterpoint, hàng dưới: kiểu chuyển động giữa hai nốt liền: cùng chiều, cùng chiều, ngược, ngược, ngược, ngược, ngược, cùng chiều, cùng chiều, ngược.'
+    loai: so-lieu
+    nguon:
+      - omt-first
+    ket_qua: dung
+    ghi_chu: 'Kiểm từng cặp nốt liền: 1→2 CP lên, CF lên (cùng chiều); 2→3 xuống, xuống (cùng chiều); 3→4 lên, xuống (ngược); 4→5 xuống, lên (ngược); 5→6 lên, xuống (ngược); 6→7 xuống, lên (ngược); 7→8 lên, xuống (ngược); 8→9 xuống, xuống (cùng chiều); 9→10 xuống, xuống (cùng chiều); 10→11 lên, xuống (ngược). Khớp 10 nhãn của hình (7 ngược, 3 cùng chiều; không có chuyển động nghịch hay song song).'
+  - id: n30
+    cau: 'Chú thích hình counterpoint: "Số giữa hai bè: quãng (vàng = quãng đúng, chỉ ở đầu, cuối và khi đến bằng chuyển động ngược). Hàng dưới: kiểu chuyển động; chuyển động ngược (xanh lá) chiếm phần lớn."'
+    loai: quy-tac
+    nguon:
+      - omt-first
+    ket_qua: dung
+    ghi_chu: Đúng với n28, n29 (quãng đúng ở đầu, ô 4 đến bằng chuyển động ngược 3→4, và cuối đến bằng chuyển động ngược 10→11; ngược chiếm 7 trên 10).
+  - id: n31
+    cau: 'Bài tập 1: viết một bè đối âm loại 1 dưới cantus firmus trên (bè dưới bắt đầu bằng Rê, quãng 8 hoặc đồng âm).'
+    loai: quy-tac
+    nguon:
+      - omt-first
+    ket_qua: dung
+    ghi_chu: 'OMT, First-Species: bè đối âm ở dưới: "the first note of the counterpoint must always be on the modal final, do" (P1 hay P8 dưới).'
+  - id: n32
+    cau: 'Bài tập 2: đối âm loại 2 (hai nốt trắng chống một nốt tròn); nốt ở phách yếu có thể nghịch nếu là nốt lướt.'
+    loai: quy-tac
+    nguon:
+      - omt-second
+    ket_qua: dung
+    ghi_chu: 'OMT, Second-Species: 2:1; nghịch chỉ ở phách yếu và phải là passing tone.'
+  - id: n33
+    cau: 'Bài tập 3: hát một bè trong khi chơi bè kia trên bàn phím piano (/opus/luyen-tap/ban-phim/).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; liên kết xem n6.
+  - id: n34
+    cau: 'Câu hỏi 1: trong đối âm loại 1, quãng 4 được tính là nghịch so với bè dưới; giải thích: "Quãng 4 nghịch khi bè dưới là nền."'
+    loai: quy-tac
+    nguon:
+      - omt-species
+    ket_qua: dung
+    ghi_chu: Khớp n17. Lời giải thích không dựa vào vị trí lựa chọn.
+  - id: n35
+    cau: 'Câu hỏi 2: đối âm loại 4 dạy về nốt treo; giải thích: "Nốt lệch phách, nối qua vạch nhịp, rồi giải quyết xuống."'
+    loai: quy-tac
+    nguon:
+      - omt-fourth
+    ket_qua: dung
+    ghi_chu: 'OMT, Fourth-Species: suspension: chuẩn bị bằng quãng thuận, giữ thành nghịch ở phách mạnh, rồi "moves down by step to a consonant resolution". Khớp n15.'
+  - id: n36
+    cau: 'Câu hỏi 3: Johann Joseph Fux viết Gradus ad Parnassum (1725); giải thích: "Giáo trình đối âm kinh điển."'
+    loai: ten
+    nguon:
+      - cod-gradus
+    ket_qua: dung
+    ghi_chu: 'Khớp n7. "Kinh điển": Britannica: "long the standard textbook on counterpoint".'
+  - id: n37
+    cau: 'Câu hỏi 4: đối âm loại 1 bắt đầu bằng quãng 1, 5 hoặc 8 và kết thúc bằng quãng 8 hoặc đồng âm (đáp án "Quãng đúng").'
+    loai: quy-tac
+    nguon:
+      - omt-first
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: đáp án "Quãng đúng (1, 5, 8)", giải thích "Kết thúc bằng quãng 8 hoặc đồng âm." Chữ mới: đáp án "Quãng đúng", giải thích "Bắt đầu bằng quãng 1, 5 hoặc 8; kết thúc bằng quãng 8 hoặc đồng âm." Lý do: nhất quán với n18 (không kết bằng quãng 5).'
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - giong
+      - nhip
+      - doi-am
+      - quang
+    ket_qua: dung
+    ghi_chu: 'K:C (không hóa biểu, đúng điệu Dorian trên Rê: các phím trắng), M:2/2, L:1/1, mười một nốt tròn mỗi bè; mỗi ô một nốt tròn đủ 2 phách nốt trắng. CF: Rê4 Fa4 Mi4 Rê4 Sol4 Fa4 La4 Sol4 Fa4 Mi4 Rê4 (khớp OMT, Fux). Bè trên: La4 Rê5 Đô5 Rê5 Si4 Rê5 Đô5 Mi5 Rê5 Đô♯5 Rê5. Kiểm theo quy tắc OMT: quãng đủ thuận (5 6 6 8 3 6 3 6 6 6 8), bắt đầu 5 và kết 8; không 5/8 song song; quãng đúng chỉ đến bằng chuyển động ngược (ô 4, 11) ngoài đầu bài; bước nhảy lớn nhất là quãng 4 (La4 → Rê5) rồi đổi hướng; một đỉnh (Mi5, khác nốt cuối); không hơn ba quãng cùng loại liền (ba quãng 6); cảm âm nâng Đô♯ ở ô áp chót.'
+doi_chu:
+  - cu: Bắt đầu và kết thúc bằng quãng đúng (1, 5 hoặc 8); kết thúc bằng quãng 8 hoặc đồng âm.
+    moi: Bắt đầu bằng quãng đúng (1, 5 hoặc 8; nếu bè đối âm nằm dưới thì chỉ 1 hoặc 8) và kết thúc bằng quãng 8 hoặc đồng âm.
+    ly_do: 'n18 (da-sua): OMT, First-Species: bè đối âm ở trên bắt đầu P1, P5 hay P8, ở dưới chỉ P1 hay P8; "End with a perfect unison or octave" (không phải quãng 5).'
+  - cu: Ưu tiên chuyển động ngược và quãng 3, quãng 6 (nhưng không quá ba quãng 3 hoặc 6 liên tiếp).
+    moi: Ưu tiên chuyển động ngược và quãng 3, quãng 6 (nhưng không quá ba quãng 3 liên tiếp, hay ba quãng 6 liên tiếp).
+    ly_do: 'n20 (da-sua): OMT, First-Species: "Do not use more than three of the same imperfect consonance type in a row"; chữ cũ trái ví dụ của trang (3 – 6 – 3 – 6 – 6 – 6).'
+  - cu: Cantus firmus bên dưới là giai điệu ở điệu Dorian trên Rê mà Fux dùng làm ví dụ đầu tiên trong sách. Bè trên do site viết theo các quy tắc ở trên.
+    moi: Cantus firmus bên dưới là giai điệu ở điệu Dorian trên Rê mà Fux dùng trong sách. Bè trên do site viết theo các quy tắc ở trên.
+    ly_do: "n23 (da-sua): OMT, Gradus ad Parnassum Exercises có giai điệu ấy trong bảng cantus firmus của Fux nhưng không nói là ví dụ đầu tiên của sách."
+  - cu: Open Music Theory; musictheory.net.
+    moi:
+      - "Open Music Theory: Species Counterpoint; First-Species, Second-Species, Third-Species, Fourth-Species và Fifth-Species Counterpoint; Gradus ad Parnassum Exercises; 16th-Century Contrapuntal Style."
+      - "Robert Hutchinson, Music Theory for the 21st-Century Classroom: First Species, Fifth Species."
+      - "The Concise Oxford Dictionary of Music (Encyclopedia.com): Counterpoint, Gradus ad Parnassum; Encyclopedia of World Biography: Johann Joseph Fux; Encyclopaedia Britannica: Steps to Parnassus."
+    ly_do: "Mục Nguồn (n1 đến n37): thay link chung tới OMT và musictheory.net bằng các chương đã đọc khi kiểm định; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, không đọc được chữ để kiểm."
+  - cu: "câu hỏi: Đối âm loại 1 nên bắt đầu và kết thúc bằng quãng gì? | ✓ Quãng đúng (1, 5, 8) | Quãng 3 | Quãng 6 | Kết thúc bằng quãng 8 hoặc đồng âm."
+    moi: "câu hỏi: Đối âm loại 1 nên bắt đầu và kết thúc bằng quãng gì? | ✓ Quãng đúng | Quãng 3 | Quãng 6 | Bắt đầu bằng quãng 1, 5 hoặc 8; kết thúc bằng quãng 8 hoặc đồng âm."
+    ly_do: "n37 (da-sua): nhất quán với n18: không kết bằng quãng 5."

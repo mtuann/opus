@@ -1,0 +1,369 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/24-napoli-sau-tang
+trang: src/content/docs/nhac-ly/24-napoli-sau-tang.md
+nguon_cu: ../opus-zero/docs/nhac-ly/24-napoli-sau-tang.md
+tang: loi
+lan:
+  - so: 1
+    ngay: '2026-10-28'
+    nhanh: moi/d3-l3
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D3-L3 lượt 1, phần 2/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Trang hợp âm Napoli và hợp âm sáu tăng (tầng lõi). Nguồn chính: Open Music Theory (OMT), Neapolitan Sixth Chords (♭II6), Augmented Sixth Chords, Collections, Introduction to Harmony; Mount, Fundamentals, Function, and Form ch. 31 (The Neapolitan Chord) và ch. 32 (Augmented Sixth Sonorities); MT21C, Types of Augmented Sixth Chords; COD (Neapolitan sixth) qua Encyclopedia.com; IMSLP (Sonata Op. 27 số 2). WebFetch ngày 28/10/2026 (bản tóm tắt chữ, đã hỏi lại để lấy nguyên văn chỗ quan trọng). Chữ đã sửa trên trang: bỏ "hơn bao giờ hết" (n4); nguồn gốc tên Napoli (n7, bỏ "nhà soạn opera"); "gần với gam toàn cung" thành "cùng thuộc một gam toàn cung" (n17); câu về hợp âm sáu tăng trong Mozart, Beethoven, Schubert (n24); khối abc 1 soạn lại cho Rê♭ đi xuống Si (n11, khối 1); mục Nguồn (bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, không đọc được chữ để kiểm). Chưa chuyển: tai-lieu-tham-khao (n32). Số ô của Sonata Ánh trăng (n23): hai nguồn (Mount 31; Mellers qua Wikipedia, bậc 3) cùng nêu ô 3; chưa đối chiếu với bản nhạc (PDF IMSLP bị chặn): review có thể mở bản nhạc nếu muốn chắc hơn. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): Neapolitan chord (hợp âm Napoli), augmented sixth chord (hợp âm sáu tăng; Italian/French/German sixth), predominant (tiền át), chromatic (nửa cung), enharmonic (đồng âm khác tên; xem n30), cadential 6/4. Đã có bản ghi: whole-tone-scale (lô này), sonata (lô này; trang chỉ dùng "Sonata" ở tên tác phẩm Op. 27 số 2), chord, inversion, leading-tone, dominant, key.'
+nguon:
+  - id: omt-bii6
+    bac: 2
+    ten: Open Music Theory, Neapolitan Sixth Chords (♭II6) (Brian Jarvis)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/bii6/
+  - id: omt-aug6
+    bac: 2
+    ten: Open Music Theory, Augmented Sixth Chords
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/augmented-sixth-chords/
+  - id: omt-collections
+    bac: 2
+    ten: Open Music Theory, Collections (gam toàn cung)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/collections/
+  - id: fff-31
+    bac: 2
+    ten: Andre Mount, Fundamentals, Function, and Form (Milne Publishing, SUNY Geneseo, giáo trình mở), 31. The Neapolitan Chord
+    link: https://milnepublishing.geneseo.edu/fundamentals-function-form/?p=12006
+  - id: fff-32
+    bac: 2
+    ten: Andre Mount, Fundamentals, Function, and Form (Milne Publishing, SUNY Geneseo, giáo trình mở), 32. Augmented Sixth Sonorities
+    link: https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/32-augmented-sixth-sonorities/
+  - id: mt21c-types
+    bac: 2
+    ten: Robert Hutchinson, Music Theory for the 21st-Century Classroom, Types of Augmented Sixth Chords
+    link: https://musictheory.pugetsound.edu/mt21c/TypesOfAugmentedSixthChords.html
+  - id: cod-neap
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục Neapolitan sixth, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/neapolitan-sixth
+  - id: imslp-moonlight
+    bac: 2
+    ten: IMSLP, Piano Sonata No.14, Op.27 No.2 (Beethoven, Ludwig van)
+    link: https://imslp.org/wiki/Piano_Sonata_No.14,_Op.27_No.2_(Beethoven,_Ludwig_van)
+  - id: wiki-neap
+    bac: 3
+    ten: 'Wikipedia, Neapolitan chord (nguồn bậc 3, chỉ để đối chiếu: trích Mellers về "bar 3" của Sonata Ánh trăng)'
+    link: https://en.wikipedia.org/wiki/Neapolitan_chord
+  - id: omt-intro
+    bac: 2
+    ten: Open Music Theory, Introduction to Harmony, Cadences, and Phrase Endings
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/
+nhan_dinh:
+  - id: n1
+    cau: Hợp âm Napoli và hợp âm sáu tăng là hai loại hợp âm nửa cung (chromatic).
+    loai: dinh-nghia
+    nguon:
+      - omt-bii6
+      - omt-aug6
+    ket_qua: dung
+    ghi_chu: 'OMT: "The Neapolitan sixth (♭II6) is a chromatic predominant chord"; hợp âm sáu tăng chứa nốt hóa chromatic (♭6 và ♯4).'
+  - id: n2
+    cau: Hợp âm Napoli và hợp âm sáu tăng là "gia vị mạnh" của thời Cổ điển và Lãng mạn.
+    loai: lich-su
+    nguon:
+      - omt-bii6
+      - fff-32
+    ket_qua: dung
+    ghi_chu: 'OMT, Neapolitan: dùng ở nhiều thành phố châu Âu thế kỷ 18 và 19 (Chopin, Schubert "Erlkönig" 1815); Mount 32: ví dụ hợp âm sáu tăng của Mozart, Beethoven, Mendelssohn, Schubert. Hai hợp âm cũng gặp ở Baroque (Mount 31 có ví dụ Bach BWV 2; COD: có từ thế kỷ 17): "của thời Cổ điển và Lãng mạn" không loại trừ, chấp nhận được. "Gia vị mạnh" là hình ảnh.'
+  - id: n3
+    cau: 'Cả hai đều có chức năng tiền át: chúng đứng ngay trước hợp âm V.'
+    loai: quy-tac
+    nguon:
+      - omt-bii6
+      - omt-aug6
+      - fff-31
+      - fff-32
+    ket_qua: dung
+    ghi_chu: 'OMT, Neapolitan: "a chromatic predominant chord"; OMT, Augmented Sixth: "mostly used as a predominant harmony" và "lead directly to root-position V at a cadence point". Mount 31: N "keeps the pre-dominant function ... leads to some form of dominant", thường đi thẳng tới V hay V7; Mount 32: "chromatic pre-dominants that usually lead to V". Có khi i6/4 chen giữa (n9, n21).'
+  - id: n4
+    cau: Hợp âm N6 và +6 làm cho V nghe căng thẳng hơn.
+    loai: quy-tac
+    nguon:
+      - fff-32
+      - omt-intro
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "làm cho V nghe căng thẳng hơn bao giờ hết." Chữ mới: "làm cho V nghe căng thẳng hơn." Lý do: "hơn bao giờ hết" là mức không kiểm được. Mount 32: hợp âm sáu tăng "emphasize the arrival of the dominant"; OMT, Introduction to Harmony : "Strong predominants signal that a dominant function chord is imminent".'
+  - id: n5
+    cau: Hợp âm N6 và +6 hay xuất hiện nhất ở giọng thứ (ví dụ của trang ở Đô thứ).
+    loai: lich-su
+    nguon:
+      - omt-bii6
+      - omt-aug6
+      - fff-31
+    ket_qua: dung
+    ghi_chu: 'OMT, Neapolitan: "is more common in minor keys"; OMT, Augmented Sixth: "can occur in both major and minor keys, but they''re more common in minor"; Mount 31: Napoli "more common in minor keys".'
+  - id: n6
+    cau: Hợp âm Napoli là hợp âm trưởng trên bậc 2 bị hạ nửa cung (♭II), thường ở đảo 1, nên ký hiệu N6 hoặc ♭II6.
+    loai: dinh-nghia
+    nguon:
+      - omt-bii6
+      - fff-31
+      - cod-neap
+    ket_qua: dung
+    ghi_chu: 'OMT: major triad on lowered 2, usually first inversion, ký hiệu ♭II6. Mount 31: "a major triad built on the lowered second scale degree"; "we label the chord N6", "Other texts use the abbreviation bII6". COD: "a major common chord on the flattened supertonic in its 1st inversion, e.g. in key C it comprises F–A♭–D♭".'
+  - id: n7
+    cau: 'Tên gọi Napoli nhắc tới Napoli (nhóm nhà soạn nhạc thế kỷ 18 quanh thành phố này), nhưng ít có cơ sở lịch sử: hợp âm đã được dùng từ trước đó và ở nhiều nơi khác.'
+    loai: lich-su
+    nguon:
+      - omt-bii6
+      - fff-31
+      - cod-neap
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Tên gọi gắn với các nhà soạn opera thế kỷ 18 ở Napoli." Chữ mới như trên. Lý do: OMT: tên nhắc tới Napoli nhưng "the historical connection is quite shallow", hợp âm dùng ở nhiều thành phố; Mount 31: tên liên hệ tới "a group of 18th-century composers around Naples", "little historical justification for this" (hợp âm có trước, và ở cả nước Anh); COD: "Reason for its name is unknown, since it occurs in 17th-cent. mus. before the so-called Neapolitan sch. existed". "Nhà soạn opera" không có trong nguồn nào. Ba nguồn bậc 2 nhất trí: tên không có cơ sở lịch sử chắc chắn.'
+  - id: n8
+    cau: 'Trong Đô thứ: ♭II = Rê♭ trưởng (Rê♭ – Fa – La♭); ở đảo 1, nốt Fa ở bè trầm.'
+    loai: so-lieu
+    nguon:
+      - fff-31
+      - cod-neap
+    ket_qua: dung
+    ghi_chu: 'Mount 31 (đáp án bài tập 31-3a): Napoli ở Đô thứ có bậc 4 (Fa) ở bass, với Rê♭, Fa, La♭ ở các bè trên. COD: "in key C it comprises F–A♭–D♭" (Fa – La♭ – Rê♭).'
+  - id: n9
+    cau: Hợp âm Napoli đi tới V, thường qua i6/4 hoặc trực tiếp.
+    loai: quy-tac
+    nguon:
+      - omt-bii6
+      - fff-31
+    ket_qua: dung
+    ghi_chu: 'OMT: "often goes directly to V, with or without a cadential 6/4"; Mount 31: "an applied chord or cadential 6/4 intervenes" (Mendelssohn Op. 102 số 4), thường đi thẳng tới V hay V7. Chuẩn gọi i6/4 ở đây là cadential 6/4 (chức năng át).'
+  - id: n10
+    cau: 'Nốt Rê♭ của hợp âm Napoli thường đi xuống qua Đô hoặc thẳng xuống Si (cảm âm): một bước quãng 3 giảm rất đặc trưng.'
+    loai: quy-tac
+    nguon:
+      - omt-bii6
+      - fff-31
+    ket_qua: dung
+    ghi_chu: 'OMT: ♭2 "resolve down to the closest member of the dominant triad, which is ti"; "do often sits between them (ra–do–ti)", nhất là khi có cadential 6/4. Mount 31: ♭2 "leaps down a diminished third to the leading tone"; "the melodic resolution of b2 occurs with the arrival of the leading tone over V"; đi xuống Đô thì là "false resolution"; bè giữa đôi khi đi lên bậc 2 tự nhiên. Rê♭ → Si là quãng 3 giảm: đúng. Chữ "thường" đúng.'
+  - id: n11
+    cau: 'Khuông "N6 – V – i trong Đô thứ": N6 = Fa – Fa – La♭ – Rê♭ (Rê♭ trưởng đảo 1), V = Sol – Rê – Sol – Si, i = Đô – Mi♭ – Sol – Đô; Rê♭ đi xuống Si.'
+    loai: so-lieu
+    nguon:
+      - omt-bii6
+      - fff-31
+    ket_qua: da-sua
+    ghi_chu: 'Khối abc đã soạn lại: xem khuong_nhac khối 1 (chữ cũ [F,A_df] [G,=Bdg] [C,ceg]; chữ mới [F,FA_d] [G,DG=B] [C,EGc]). Lý do: ở bản cũ Rê♭5 đi lên Rê5 (nốt nằm giữa hợp âm), không minh họa câu "Rê♭ đi xuống ... thẳng xuống Si" ngay phía trên (Mount 31 cho phép bè giữa đi lên bậc 2, nhưng trang nói điều ngược lại); bản mới Rê♭5 → Si4 (quãng 3 giảm xuống) và các bè trên đi xuống ngược chiều bass.'
+  - id: n12
+    cau: 'Hợp âm sáu tăng có hai nốt cách nhau quãng 6 tăng: La♭ (bậc 6 của Đô thứ) ở bè trầm và Fa♯ (bậc 4 được nâng) ở trên.'
+    loai: dinh-nghia
+    nguon:
+      - omt-aug6
+      - fff-32
+    ket_qua: dung
+    ghi_chu: 'OMT: nhận ra hợp âm sáu tăng bởi quãng "between le and fi" (↓6̂–↑4̂), không theo nốt gốc; Mount 32: "a dissonant augmented sixth between b6 and #4". La♭ – Fa♯ = 10 nửa cung = quãng 6 tăng ✓ (La♭ thấp, Fa♯ cao).'
+  - id: n13
+    cau: 'Hai nốt của quãng 6 tăng giải quyết ra ngoài về quãng 8 trên Sol (bậc 5): La♭ đi xuống Sol, Fa♯ đi lên Sol.'
+    loai: quy-tac
+    nguon:
+      - omt-aug6
+      - fff-32
+    ket_qua: dung
+    ghi_chu: 'Mount 32: "Both outer voices move by semitone outward to scale degree 5"; OMT: "both notes of the augmented sixth are active and each moves to sol by a half step". La♭ → Sol (xuống), Fa♯ → Sol (lên): ra ngoài về quãng 8.'
+  - id: n14
+    cau: Vì thế hợp âm sáu tăng kéo về V mạnh.
+    loai: quy-tac
+    nguon:
+      - fff-32
+      - omt-aug6
+    ket_qua: dung
+    ghi_chu: 'Mount 32: hợp âm sáu tăng "emphasize the arrival of the dominant"; OMT: "lead directly to root-position V at a cadence point". "Mạnh đến vậy" là diễn đạt.'
+  - id: n15
+    cau: Hợp âm sáu tăng có ba loại (Ý, Pháp, Đức); tên đặt theo quốc gia là tên gọi quy ước, không liên quan đến lịch sử thật.
+    loai: ten
+    nguon:
+      - omt-aug6
+      - fff-32
+      - mt21c-types
+    ket_qua: dung
+    ghi_chu: 'OMT: tên Italian, French, German "more colorful than historical". Mount 32: "none of which is historically or geographically justifiable". MT21C: "no reasoning has been found for these designations".'
+  - id: n16
+    cau: 'Hợp âm sáu Ý (It+6) trong Đô thứ: La♭ – Đô – Fa♯; ba nốt, gọn nhất.'
+    loai: so-lieu
+    nguon:
+      - omt-aug6
+      - fff-32
+      - mt21c-types
+    ket_qua: dung
+    ghi_chu: 'MT21C: ba loại đều có ♭6 và ♯4; Ý thêm 1̂: La♭ (♭6), Đô (1̂), Fa♯ (♯4). Mount 32: Italian "adds scale degree 1". "Gọn nhất": ba nốt, ít nốt nhất.'
+  - id: n17
+    cau: 'Hợp âm sáu Pháp (Fr+6) trong Đô thứ: La♭ – Đô – Rê – Fa♯ (thêm Rê); cả bốn nốt cùng thuộc một gam toàn cung.'
+    loai: so-lieu
+    nguon:
+      - omt-aug6
+      - mt21c-types
+      - omt-collections
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Thêm Rê; nghe gần với gam toàn cung". Chữ mới: "Thêm Rê; cả bốn nốt cùng thuộc một gam toàn cung". Lý do: OMT (Augmented Sixth) không nói về gam toàn cung, Mount 32 chỉ nói âm "piercing"; "nghe gần với" là cảm giác không kiểm được. Phần kiểm được: OMT, Collections: gam toàn cung "C–D–E–F♯–G♯–A♯" (một trong hai gam toàn cung): Đô, Rê, Fa♯, Sol♯ (= La♭) đều thuộc gam này. MT21C: Pháp thêm 2̂ vào hợp âm Ý: La♭ – Đô – Rê – Fa♯ ✓.'
+  - id: n18
+    cau: 'Hợp âm sáu Đức (Ger+6) trong Đô thứ: La♭ – Đô – Mi♭ – Fa♯ (thêm Mi♭).'
+    loai: so-lieu
+    nguon:
+      - omt-aug6
+      - fff-32
+      - mt21c-types
+    ket_qua: dung
+    ghi_chu: 'Mount 32: Đức thêm 1̂ và ♭3 (3̂ của giọng thứ); MT21C: Đức thêm ♭3. Đô thứ: Mi♭ ✓.'
+  - id: n19
+    cau: Hợp âm sáu Đức nghe giống hệt hợp âm La♭7, nhưng giải quyết khác.
+    loai: dinh-nghia
+    nguon:
+      - fff-32
+    ket_qua: dung
+    ghi_chu: 'Mount 32: Đức "its sound is close to a dominant seventh"; có thể viết lại thành hợp âm bảy át ở giọng cách nửa cung. Đô thứ: La♭ – Đô – Mi♭ – Fa♯ viết lại La♭ – Đô – Mi♭ – Sol♭ = La♭7 (đồng âm trong hòa âm bình quân); Fa♯ giải quyết lên Sol, Sol♭ của La♭7 giải quyết xuống Fa.'
+  - id: n20
+    cau: 'Khuông "Ger+6 – i6/4 – V – i trong Đô thứ": bass La♭2 Sol2 Sol2 Đô3; trên: [Đô Mi♭ Fa♯] [Đô Mi♭ Sol] [Si Rê Sol] [Đô Mi♭ Sol].'
+    loai: so-lieu
+    nguon:
+      - fff-32
+      - omt-aug6
+    ket_qua: dung
+    ghi_chu: Xem khuong_nhac khối 2.
+  - id: n21
+    cau: Hợp âm sáu Đức thường đi qua i6/4 trước khi đến V, để tránh quãng 5 song song giữa La♭–Mi♭ và Sol–Rê.
+    loai: quy-tac
+    nguon:
+      - fff-32
+      - omt-aug6
+    ket_qua: dung
+    ghi_chu: 'Mount 32: "Because b3 forms a perfect fifth with b6, resolving it directly to V can cause parallel fifths, which composers usually avoid with an intervening cadential 6/4". OMT: Ger+6 "typically followed by a cadential 6/4, which offsets the parallel fifths".'
+  - id: n22
+    cau: 'Beethoven, chương 1 Sonata "Ánh trăng" Op. 27 số 2: tên và số hiệu.'
+    loai: ten
+    nguon:
+      - imslp-moonlight
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Piano Sonata No.14, Op.27 No.2", gọi là "Moonlight Sonata" (nhãn tên trong các bản thu), cung Đô thăng thứ; chương I: Adagio sostenuto. "Ánh trăng" là cách dịch của site.'
+  - id: n23
+    cau: Hợp âm Napoli xuất hiện ngay ở ô nhịp thứ 3 của chương 1 Sonata "Ánh trăng".
+    loai: cau-truc
+    nguon:
+      - fff-31
+      - wiki-neap
+    ket_qua: dung
+    ghi_chu: 'Mount 31 (bài tập 31-4): Napoli của Beethoven, Sonata "Moonlight" Op. 27 số 2, chương I, ở nửa sau ô 3. Wikipedia (bậc 3, chỉ để đối chiếu): Mellers nói "bar 3". Chưa đối chiếu với bản nhạc IMSLP (PDF bị chặn): hai nguồn khớp "ô 3".'
+  - id: n24
+    cau: Hợp âm sáu tăng có mặt trong nhạc của Mozart, Beethoven, Schubert, thường ngay trước hợp âm át.
+    loai: lich-su
+    nguon:
+      - fff-32
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Hợp âm sáu tăng có mặt ở rất nhiều đoạn chuẩn bị cho cao trào trong nhạc Mozart, Beethoven, Schubert." Chữ mới như trên. Lý do: Mount 32 dẫn ví dụ của Beethoven (Op. 18 số 2, "Pathétique" Op. 13, "Waldstein" Op. 53), Mozart (K. 332, K. 284), Schubert (D. 845, D. 957), Mendelssohn; "ngay trước hợp âm át" khớp "lead to V". "Rất nhiều đoạn ... cao trào" không kiểm được.'
+  - id: n25
+    cau: Khi nghe một hợp âm "nhói" ngay trước một hợp âm át lớn, rất có thể đó là +6.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên nghe, có "rất có thể"; khớp n3 (N6 cũng là tiền át nên "rất có thể" là đúng chỗ).
+  - id: n26
+    cau: 'Bài tập 1: hợp âm N6 trong La thứ; ♭II của La thứ là Si♭ trưởng (Si♭ – Rê – Fa); đảo 1 nên Rê ở bè trầm.'
+    loai: so-lieu
+    nguon:
+      - omt-bii6
+      - fff-31
+    ket_qua: dung
+    ghi_chu: 'La thứ: bậc 2 Si hạ nửa cung thành Si♭; hợp âm trưởng Si♭ – Rê – Fa; thể đảo 1 có nốt ba (Rê) ở bass ✓.'
+  - id: n27
+    cau: 'Bài tập 2: ở La thứ, bậc 6 là Fa, bậc 4 nâng là Rê♯; It+6: Fa – La – Rê♯; Fr+6: Fa – La – Si – Rê♯; Ger+6: Fa – La – Đô – Rê♯.'
+    loai: so-lieu
+    nguon:
+      - omt-aug6
+      - mt21c-types
+    ket_qua: dung
+    ghi_chu: 'La thứ: ♭6̂ = Fa, 1̂ = La, 2̂ = Si, ♭3̂ = Đô, ♯4̂ = Rê♯. Ý = ♭6, 1, ♯4 ✓; Pháp = ♭6, 1, 2, ♯4 ✓; Đức = ♭6, 1, ♭3, ♯4 ✓.'
+  - id: n28
+    cau: 'Câu hỏi 1: hợp âm Napoli trong Đô thứ là Rê♭ trưởng; giải thích: "Hợp âm trưởng trên bậc 2 bị hạ."'
+    loai: so-lieu
+    nguon:
+      - omt-bii6
+      - cod-neap
+    ket_qua: dung
+    ghi_chu: Khớp n6, n8. Lời giải thích không dựa vào vị trí lựa chọn.
+  - id: n29
+    cau: 'Câu hỏi 2: hai nốt của quãng 6 tăng giải quyết ra ngoài, về quãng 8 trên bậc 5; giải thích: "La♭ xuống Sol, Fa♯ lên Sol."'
+    loai: quy-tac
+    nguon:
+      - fff-32
+    ket_qua: dung
+    ghi_chu: Khớp n13.
+  - id: n30
+    cau: 'Câu hỏi 3: hợp âm sáu Đức nghe giống hệt một hợp âm bảy át; giải thích: "Ger+6 đồng âm với La♭7 trong Đô thứ."'
+    loai: dinh-nghia
+    nguon:
+      - fff-32
+    ket_qua: dung
+    ghi_chu: 'Khớp n19. "Đồng âm" ở đây là nghĩa enharmonic (viết khác tên, nghe như nhau); chữ này cũng có nghĩa unison ở chỗ khác của site: nhắc người giao khi chốt thuật ngữ (D3-L5).'
+  - id: n31
+    cau: 'Câu hỏi 4: chức năng của N6 và +6 là tiền át, đứng trước V; giải thích: "Chúng làm hợp âm V thêm căng thẳng."'
+    loai: quy-tac
+    nguon:
+      - omt-bii6
+      - omt-aug6
+    ket_qua: dung
+    ghi_chu: Khớp n3, n4.
+  - id: n32
+    cau: Có trang tài liệu tham khảo (/opus/tai-lieu-tham-khao/) ở cuối trang.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Chưa chuyển: ../opus-zero/docs/tai-lieu-tham-khao.md (tiêu đề "Tài liệu tham khảo"; anh-xa.md: tầng lõi, nhóm Thêm). Lô chuyển giữ đường dẫn.'
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - giong
+      - hop-am
+      - nhip
+      - dan-be
+    ket_qua: da-sua
+    ghi_chu: 'K:Cm (hóa biểu Si♭ Mi♭ La♭), M:3/2, L:1/2: ba hợp âm nốt trắng, đủ 3 phách nốt trắng. Chữ cũ: [F,A_df] [G,=Bdg] [C,ceg] (bè giữa Rê♭5 đi lên Rê5, trái câu "Rê♭ đi xuống"). Chữ mới: [F,FA_d] [G,DG=B] [C,EGc]: N6 = Fa3 Fa4 La♭4 Rê♭5 (Rê♭ trưởng đảo 1, nốt ba Fa ở bè trầm và nhân đôi); V = Sol3 Rê4 Sol4 Si4; i = Đô3 Mi♭4 Sol4 Đô5. Dẫn bè: bass Fa3 → Sol3 (lên) → Đô3 (xuống quãng 5); Rê♭5 → Si4 (xuống quãng 3 giảm, tới cảm âm) → Đô5; La♭4 → Sol4 → Sol4; Fa4 → Rê4 → Mi♭4. Không có quãng 5, 8 song song (đã kiểm các cặp bè qua hai lần chuyển); Si4 (cảm âm) lên Đô5 ở V → i. Khớp tiêu đề "N6 – V – i trong Đô thứ" và hai gạch đầu dòng: đi tới V trực tiếp, Rê♭ xuống Si.'
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - giong
+      - hop-am
+      - nhip
+      - dan-be
+    ket_qua: dung
+    ghi_chu: 'K:Cm, M:4/2, L:1/2; bass A,, G,, G,, C, (La♭2 Sol2 Sol2 Đô3) và trên [CE^F] [CEG] [=B,DG] [CEG] (Mi♭ do hóa biểu; ^F là Fa♯). Ger+6 = La♭2 Đô4 Mi♭4 Fa♯4 ✓; i6/4 = Sol2 Đô4 Mi♭4 Sol4 ✓; V = Sol2 Si3 Rê4 Sol4 ✓; i = Đô3 Đô4 Mi♭4 Sol4 ✓. Dẫn bè: La♭2 → Sol2 (xuống), Fa♯4 → Sol4 (lên): ra ngoài về Sol; Đô4, Mi♭4 giữ ở i6/4 (tránh quãng 5 song song La♭–Mi♭ → Sol–Rê); i6/4 → V: Đô4 → Si3, Mi♭4 → Rê4 (6 → 5, 4 → 3 của cadential 6/4). Đủ 4 phách nốt trắng. Khớp tiêu đề và đoạn văn.'
+doi_chu:
+  - cu: 'Hai loại hợp âm nửa cung (chromatic) này là "gia vị mạnh" của thời Cổ điển và Lãng mạn. Cả hai đều có chức năng tiền át: chúng đứng ngay trước hợp âm V và làm cho V nghe căng thẳng hơn bao giờ hết. Ví dụ dưới đây ở Đô thứ, nơi chúng hay xuất hiện nhất.'
+    moi: 'Hai loại hợp âm nửa cung (chromatic) này là "gia vị mạnh" của thời Cổ điển và Lãng mạn. Cả hai đều có chức năng tiền át: chúng đứng ngay trước hợp âm V và làm cho V nghe căng thẳng hơn. Ví dụ dưới đây ở Đô thứ, nơi chúng hay xuất hiện nhất.'
+    ly_do: 'n4 (da-sua): "hơn bao giờ hết" không kiểm được; Mount 32: hợp âm sáu tăng nhấn mạnh sự đến của át.'
+  - cu: Hợp âm Napoli là hợp âm trưởng trên bậc 2 bị hạ nửa cung (♭II), thường ở đảo 1, nên được ký hiệu N6 hoặc ♭II6. Tên gọi gắn với các nhà soạn opera thế kỷ 18 ở Napoli.
+    moi: "Hợp âm Napoli là hợp âm trưởng trên bậc 2 bị hạ nửa cung (♭II), thường ở đảo 1, nên được ký hiệu N6 hoặc ♭II6. Tên gọi nhắc tới Napoli (nhóm nhà soạn nhạc thế kỷ 18 quanh thành phố này), nhưng ít có cơ sở lịch sử: hợp âm đã được dùng từ trước đó và ở nhiều nơi khác."
+    ly_do: 'n7 (da-sua): OMT: "the historical connection is quite shallow"; Mount 31: "little historical justification"; COD: "Reason for its name is unknown, since it occurs in 17th-cent. mus. before the so-called Neapolitan sch. existed".'
+  - cu: Thêm Rê; nghe gần với gam toàn cung
+    moi: Thêm Rê; cả bốn nốt cùng thuộc một gam toàn cung
+    ly_do: 'n17 (da-sua): "nghe gần với" không có nguồn; OMT, Collections: gam toàn cung Đô–Rê–Mi–Fa♯–Sol♯–La♯ chứa cả bốn nốt (La♭ = Sol♯).'
+  - cu: Hợp âm sáu tăng có mặt ở rất nhiều đoạn chuẩn bị cho cao trào trong nhạc Mozart, Beethoven, Schubert. Khi nghe một hợp âm "nhói" ngay trước một hợp âm át lớn, rất có thể đó là +6.
+    moi: Hợp âm sáu tăng có mặt trong nhạc của Mozart, Beethoven, Schubert, thường ngay trước hợp âm át. Khi nghe một hợp âm "nhói" ngay trước một hợp âm át lớn, rất có thể đó là +6.
+    ly_do: 'n24 (da-sua): Mount 32 dẫn ví dụ của Mozart, Beethoven, Schubert; "rất nhiều đoạn chuẩn bị cho cao trào" không kiểm được.'
+  - cu: Open Music Theory; musictheory.net.
+    moi:
+      - "Open Music Theory: Neapolitan Sixth Chords (♭II⁶); Augmented Sixth Chords; Collections (gam toàn cung)."
+      - "Andre Mount, Fundamentals, Function, and Form: 31. The Neapolitan Chord; 32. Augmented Sixth Sonorities."
+      - "Robert Hutchinson, Music Theory for the 21st-Century Classroom: Types of Augmented Sixth Chords."
+      - "The Concise Oxford Dictionary of Music (Encyclopedia.com): Neapolitan sixth."
+      - "IMSLP: Beethoven, Piano Sonata No.14, Op.27 No.2."
+    ly_do: "Mục Nguồn (n1 đến n31): thay link chung tới OMT và musictheory.net bằng các chương đã đọc khi kiểm định; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, không đọc được chữ để kiểm."
+  - cu: |-
+      khuông: N6 – V – i trong Đô thứ | X:1
+      L:1/2
+      M:3/2
+      Q:1/2=60
+      K:Cm
+      [F,A_df] [G,=Bdg] [C,ceg] |]
+    moi: |-
+      khuông: N6 – V – i trong Đô thứ | X:1
+      L:1/2
+      M:3/2
+      Q:1/2=60
+      K:Cm
+      [F,FA_d] [G,DG=B] [C,EGc] |]
+    ly_do: 'n11, khuong_nhac khối 1 (da-sua): ở bản cũ Rê♭5 đi lên Rê5, trái câu "Rê♭ thường đi xuống ... thẳng xuống Si" ngay phía trên; bản mới Rê♭5 → Si4 (quãng 3 giảm, Mount 31) và các bè trên đi xuống ngược chiều bass.'
