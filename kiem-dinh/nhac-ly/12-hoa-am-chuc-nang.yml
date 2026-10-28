@@ -4,14 +4,14 @@ nguon_cu: ../opus-zero/docs/nhac-ly/12-hoa-am-chuc-nang.md
 tang: loi
 lan:
   - so: 1
-    ngay: 2026-10-27
-    nhanh: moi/d3-l2
-    ma_bam: null
+    ngay: 2026-10-28
+    nhanh: moi/d3-gom
+    ma_bam: sha256:7696120b79a467abb675420558d1fb334cfe18a10d1a54c42a42c8500e9b72bb
     nguoi:
       luot_1: Claude Sonnet 5.5 (D3-L2 lượt 1, phần 1/2)
-      luot_2: null
+      luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 3, 28/10/2026; bổ sung sau review)
       review: Claude (review D3-gom, nhóm A, 28/10/2026)
-      kiem_mau: null
+      kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 3 (D3-L2 đến D3-L6): 6 đúng, 4 câu về site và lời khuyên tập không kiểm độc lập được (người gom kiểm lại trên repo, đúng), 0 sai (bao-cao/d3-gom/kiem-mau-ket-qua.yml)"
 ghi_chu: 'Trang hòa âm chức năng (tầng lõi), có hình vòng chức năng (::hinh{ten="functions"}, src/scripts/ve.js, veChucNang). Nguồn chính: Open Music Theory (OMT), Introduction to Harmony, Cadences, and Phrase Endings (T–PD–D–T, chức năng của từng hợp âm, giọng thứ), Four-Chord Schemas (doo-wop), Minor Scales; đối chiếu MT21C 9.4 Harmonic Function và Standard Chord Progressions, Mount (FFF) ch. 22 (chức năng chủ, át; vi thay I; kết trọn), ch. 24 workbook (pre-dominant), ch. 26 (Pachelbel Canon P. 37, sáu hợp âm đầu). WebFetch ngày 27/10/2026 (bản tóm tắt chữ, không phải HTML thô). Chỗ sửa trang: tên chức năng "Subdominant/S" thành "Predominant/PD" (OMT, MT21C 9.4 gọi là predominant; "subdominant" chỉ là tên bậc IV, và bản ghi subdominant ở thuat-ngu.yml là bậc IV, khớp); "thay thế nhau" thành "thường dùng thay cho I (yếu hơn)"; bỏ "phần lớn âm nhạc từ Bach đến Brahms"; "mạnh nhất" thành "kết trọn"; ba ô cột "Gặp ở đâu" của bảng vòng hợp âm theo nguồn; bỏ "của phần lớn các bài bạn sẽ tập"; mục Nguồn. Mục doi_chu tự viết (không build được); người giao chạy lại so-chu --doi-chu để chuẩn hóa dấu nháy. Chưa chắc (ket_qua null): n18, n19, n20: hai hợp âm cuối IV – V của vòng Canon chỉ có Wikipedia (bậc 3) ở ngoài Mount 26 (sáu hợp âm đầu); cần đối chiếu bản nhạc Mutopia/IMSLP; máy chủ repo không ra mạng, và Mutopia/IMSLP PDF bị chặn với agent. Cần người giao biết: tên tiếng Việt "Hạ át" giữ nguyên (site cũ, bat-dau/tom-tat.md và kiem-tra-dau-vao.md đều dùng); chỉ đổi chữ tiếng Anh và viết tắt trong ngoặc. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): tonic function (chức năng chủ), predominant (hạ át/tiền át), dominant function, harmonic function, phrase model T–PD–D–T, Roman numeral, voice leading (dẫn bè), harmonic minor (gam thứ hòa âm), common tone (nốt chung); đã có: tonic, dominant, subdominant (bậc IV), leading tone, chord, cadence.'
 nguon:
   - id: omt-intro-harmony
@@ -346,7 +346,7 @@ nhan_dinh:
     cau: Công cụ vòng quãng năm (/opus/luyen-tap/hoa-bieu/#vong-quang-nam) có nút "Nghe I – IV – V – I" khi chọn giọng trưởng.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Site mới: src/scripts/ve.js dòng 274 (nút "Nghe I – IV – V – I", chỉ khi giọng không phải thứ); ../opus-zero/docs/assets/js/circle.js dòng 106 (cùng nút, không hiện ở giọng thứ); ../opus-zero/docs/luyen-tap/hoa-bieu.md có mục "## Vòng quãng năm" (neo vong-quang-nam). Lô chuyển trang luyen-tap/hoa-bieu giữ mục và neo ấy. Review: src/scripts/ve.js dòng 277: nút "Nghe I – IV – V – I" chỉ hiện khi không phải giọng thứ; trang đích chưa chuyển: ../opus-zero/docs/luyen-tap/hoa-bieu.md dòng 13 "## Vòng quãng năm" (neo vong-quang-nam).'
+    ghi_chu: 'Site mới: src/scripts/ve.js dòng 274 (nút "Nghe I – IV – V – I", chỉ khi giọng không phải thứ); ../opus-zero/docs/assets/js/circle.js dòng 106 (cùng nút, không hiện ở giọng thứ); ../opus-zero/docs/luyen-tap/hoa-bieu.md có mục "## Vòng quãng năm" (neo vong-quang-nam). Lô chuyển trang luyen-tap/hoa-bieu giữ mục và neo ấy. Review: src/scripts/ve.js dòng 277: nút "Nghe I – IV – V – I" chỉ hiện khi không phải giọng thứ; trang đích chưa chuyển: ../opus-zero/docs/luyen-tap/hoa-bieu.md dòng 13 "## Vòng quãng năm" (neo vong-quang-nam). Kiểm mẫu (28/10/2026): số dòng trong ghi chú cũ lệch (274/277); đúng là hàm vẽ vòng quãng năm bấm được trong src/scripts/ve.js: nút "Nghe I – IV – V – I" chỉ thêm khi giọng không phải thứ (biểu thức `thu ? '''' : <button …>`), đã kiểm lại 28/10/2026.'
     review: dung
   - id: n31
     cau: Trong Đô trưởng, hợp âm có chức năng át là G (bậc V).

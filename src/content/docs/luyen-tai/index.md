@@ -28,7 +28,7 @@ Sau 6 bài trên, bước tiếp theo là nghe **kết cấu** và **phong cách
 
 ## Gắn quãng với giai điệu quen thuộc
 
-Cách nhanh nhất để nhớ một quãng là gắn nó với **hai nốt liền nhau** ở đầu một bài hát bạn đã biết. Cột thứ ba dùng các giai điệu phổ biến; cột cuối lấy ví dụ từ những bài bạn tập trên site, ở [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/) và các [bài học tác phẩm](/opus/piano/tac-pham/). Hãy thay bằng bài bạn quen hơn.
+Một cách dễ nhớ một quãng là gắn nó với **hai nốt liền nhau** ở đầu một bài hát bạn đã biết. Cột thứ ba dùng các giai điệu phổ biến; cột cuối lấy ví dụ từ những bài bạn tập trên site, ở [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/) và các [bài học tác phẩm](/opus/piano/tac-pham/). Hãy thay bằng bài bạn quen hơn.
 
 | Quãng (đi lên) | Số nửa cung | Giai điệu gợi nhớ | Trong bài bạn tập trên site |
 |---|---|---|---|

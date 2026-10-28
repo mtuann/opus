@@ -68,7 +68,7 @@ Thêm, chốt ngày 24/10/2026:
   - Không làm: dùng chung trang nguồn đã tải giữa hai lượt (để giữ độc lập); chạy song song hai lô (các lô làm lần lượt).
 - [x] Đợt 3: **làm thử D3-L1 trọn vẹn, rồi gom D3-L2 đến D3-L6** (chủ repo chọn ngày 24/10/2026; cách làm ở mục Đợt 3). Mục đích: kiểm định cả loạt bài nhạc lý một lượt (bài dẫn chéo nhau, dùng chung thuật ngữ) và bớt phần việc lặp lại của từng lô, nhưng vẫn thử thành phần dùng chung và cách làm mới ở một lô trước.
 - [x] **Thuật ngữ tiếng Việt** (chủ repo giao agent quyết, 27/10/2026; D3-L5 làm theo khi chốt `thuat-ngu.yml` và trang Từ điển). Nguyên tắc: giữ cách gọi đã dùng ở các trang đã khóa, chỉ thêm, không đổi tên đang có; tên tiếng Việt (`nghia`) là lựa chọn của site, không phải nhận định.
-  - Nhịp đơn, nhịp kép theo Open Music Theory (chia phách đôi hay ba), như bài 4 đã khóa. Mục Từ điển của *simple meter*, *compound meter* thêm một câu: một số giáo trình tiếng Việt gọi 4/4 là "nhịp phức" (nhịp ghép từ hai nhịp đơn). Không mở khóa bài 4.
+  - Nhịp đơn, nhịp kép theo Open Music Theory (chia phách đôi hay ba), như bài 4 đã khóa. Từ điển có mục *simple meter*, *compound meter*. Câu "một số giáo trình tiếng Việt gọi 4/4 là nhịp phức" đã bỏ ở review nhánh gom (28/10/2026): không có nguồn bậc 1–2 đọc được. Không mở khóa bài 4.
   - Chức năng hòa âm: "chủ", "hạ át", "át" (T, PD, D), như giáo trình tiếng Việt gọi nhóm hạ át; tiếng Anh ghi *predominant* (OMT), cũng gọi *subdominant function*. "Hạ át âm" chỉ bậc IV (bản ghi `subdominant`). Từ điển ghi rõ hai nghĩa.
   - Bậc của gam viết số Ả Rập trong câu ("bậc 7"); số La Mã dành cho hợp âm (I, IV, V7), như OMT. Bảng bậc ở bài 6 (đã khóa, ghi cả hai cách) giữ nguyên.
   - Dấu thăng kép, giáng kép viết × và ♭♭ như bài 5 đã khóa (phông thường thiếu 𝄪, 𝄫).
@@ -91,7 +91,7 @@ Câu hỏi nhỏ còn chờ (từ review nhánh quyết định, `bao-cao/d2-ban
 | 0 | Dựng repo mới | | Chưa đăng gì | Xong 23/10/2026 |
 | 1 | Nền kỹ thuật | D1.1–D1.8 | Trang chủ tạm và trang 404 ở `/opus/`; chưa có bài | Xong 24/10/2026: trang chủ tạm và trang 404 trên site thật; ba trang thử ở bản xem |
 | 2 | Khung cấp độ và lối vào | 1 | Trang chủ, Bắt đầu, lộ trình và 7 trang chặng, bài kiểm tra đầu vào | Xong 24/10/2026: D2-nền (chuẩn bị kỹ thuật), D2-0 (khóa 223 bản ghi), D2-L1 (khóa 9 trang; 17 trang trên site thật: trang chủ mới, 7 trang Bắt đầu, lộ trình piano, 7 trang chặng, 404) |
-| 3 | Nhạc lý và luyện tai | 6 | 45 trang, Từ điển | Đang làm: D3-L1 xong 24/10/2026 (khóa 8 trang, 24 bản ghi thuật ngữ từng phần; 25 trang trên site thật); nhánh chuẩn bị `moi/d3-chuan-bi` 27/10; D3-L2 lượt 1 |
+| 3 | Nhạc lý và luyện tai | 6 | 45 trang, Từ điển | Xong 28/10/2026: D3-L1 (khóa 24/10), D3-L2 đến D3-L6 lượt 1 và nhánh gom (lượt 2, review, kiểm mẫu, khóa 37 trang và cả 154 bản ghi `thuat-ngu.yml`); 62 trang trên site thật |
 | 4 | Piano nền tảng | 4 | 28 trang: bắt đầu bên phím, kỹ thuật, tập luyện, hòa âm bên phím, văn học piano | Chưa làm |
 | 5 | Nhạc cổ điển nền tảng | 3 | 27 trang: thời kỳ, hình thức, nhận diện; đủ 101 trang lõi | Chưa làm |
 | 7 | Công cụ, sách in, blog, Cập nhật | 3 | 17 công cụ luyện tập, sách in, blog, dùng khi mất mạng | Chưa làm |

@@ -24,9 +24,18 @@ Bốn câu `sai`: bài 19 n30 (aria-label hình keymap: Sol trưởng và Fa tr�
 
 Ghi chú về chất lượng lượt 2: WebSearch có hạn mức mỗi lượt làm việc và đã hết ở các phần sau; nhiều câu `khong-chac` là do không mở được nguồn (chương OMT, bản nhạc IMSLP), không phải vì câu sai. Danh sách xuất có cả câu `da-bo` (chữ đã bỏ khỏi trang): kết quả lượt 2 của chúng không cần xử lý.
 
-## Còn lại
+## Review
 
-1. Làm lại lượt 2 phần `thuat-ngu-1` (149 câu) khi có lại hạn mức tìm kiếm; nhập.
-2. Review (`can-review.txt`, 321 mục): chỗ hai lượt khác nhau, chỗ lượt 1 sửa hay bỏ, 47 câu lượt 1 chưa quyết (`ket_qua: null`), mọi câu `ve-site` (ghi `review`), soát nhãn; sửa trang và hình theo kết luận; câu `khong-chac` vì thiếu nguồn: tìm thêm nguồn hay viết lại cho kiểm được.
-3. Chủ repo kiểm mẫu khoảng 10 nhận định (`node tools/khoa.mjs xuat D3-L2 D3-L3 D3-L4 D3-L5 D3-L6 --mau 10`).
-4. Khóa 37 trang và 154 bản ghi thuật ngữ (đủ các trường trang Từ điển hiện: `thuat_ngu`, `nghia`, `ghi_chu`, `nhom`); gộp vào `main`.
+Bốn agent review (Claude Opus 5.5), không làm lượt 1 hay lượt 2 của các trang: nhóm A (bài 9–20), nhóm B (bài 21–32), nhóm C (âm học, ôn tập, mục lục, Từ điển, luyện tai), thuật ngữ. Mọi mục ở `can-review.txt` đã xử lý; không còn câu `ket_qua: null`; 190 câu `ve-site` có `review: dung` và nơi đã kiểm; soát nhãn đổi loại vài câu. Chữ đổi sau lượt 2 (54 câu) qua **lượt 2 bổ sung** (`bo-sung.yml`, `ket-qua-bo-sung.yml`): 49 dung, 2 sai, 3 khong-chac; người gom giải quyết 5 câu ấy (bài 9 n30 viết lại; bài 20 n6, bài 31 n28, luyện tai `nghe-tien-trinh` n14 giữ kèm lý do; `grave` bỏ ghi chú vì nguồn mâu thuẫn).
+
+Chỗ sửa chính của review: bảng viết tắt nhạc cụ bài 20 chỉ giữ viết tắt có ở Dolmetsch; chú thích hình keymap (Sol trưởng và Fa trưởng ở hai bên Đô trưởng); láy trên là *upper mordent*; vòng Canon tám hợp âm (OMT 1e); Romanesca hai dạng (Gjerdingen) thống nhất giữa bài 29 và trang luyện tai; "hạ át" thay "tiền át" ở bài 24, 27 theo quyết định thuật ngữ; ba đoạn (OMT: đoạn có thể đóng hay mở) ở bài 31 và hình `form-small`; bỏ hay viết lại các câu cảm giác nghe ở trang luyện tai; bỏ số BPM của sáu thuật ngữ tốc độ (Dolmetsch: các nguồn lệch nhau nhiều); bỏ câu "nhịp phức" (không có nguồn bậc 1–2). Câu đàn bầu (bài Âm học) chỉ dựa vào báo Nhân Dân (báo chính thức, dùng khi không có nguồn tốt hơn).
+
+## Kiểm mẫu
+
+Chủ repo kiểm 10 nhận định ngẫu nhiên (`kiem-mau.yml`, kết quả `kiem-mau-ket-qua.yml`): 6 đúng, 4 câu về site và lời khuyên tập không kiểm độc lập được trên máy của chủ repo, 0 sai. Người gom kiểm lại 4 câu ấy trên repo (khối abc ghi ngón, tọa độ hình đối âm, `ve.js`): đúng. Theo góp ý: "Cách nhanh nhất" thành "Một cách dễ nhớ" (mục lục Luyện tai); link Dolmetsch của *maestoso* sửa thành trang từ điển M; ghi chú số dòng của `ve.js` sửa.
+
+## Khóa
+
+- 37 trang (bài nhạc lý 9–32, âm học, ôn tập 1–3, Từ điển, mục lục Nhạc lý, 7 trang luyện tai).
+- 154 bản ghi `thuat-ngu.yml`, cả bản ghi (24 bản ghi khóa từng phần ở D3-L1 nay khóa cả bản ghi, thêm `nghia`, `nhom`).
+- `npm run build` (bản thật): 62 trang; `npm test` đạt; `node tools/khoa.mjs tinh` khớp. Kiểm thử trình duyệt và Lighthouse chạy ở CI khi push.
