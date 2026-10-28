@@ -20,14 +20,15 @@ test('chuyenHinh: bỏ xmlns, font-family; màu đậm thành biến; figure có
 });
 
 test('mỗi hình tĩnh: figure not-content, data-sinh, có chú thích; SVG có tên cho máy đọc màn hình; không phông, không màu đậm viết cứng', () => {
-	assert.ok(FILE.length >= 5);
+	assert.ok(FILE.length >= 7);
 	for (const f of FILE) {
 		const s = fs.readFileSync(path.join(THU_MUC_HINH, f), 'utf8');
 		const fig = s.match(/<figure[^>]*>/g) ?? [];
 		assert.ok(fig.length && fig.every((x) => x === '<figure class="oz-figure not-content" data-sinh>'), f);
 		assert.equal((s.match(/<figcaption>/g) ?? []).length, fig.length, `${f}: mỗi hình một chú thích`);
+		// hình SVG: mỗi SVG có tên cho máy đọc màn hình; hình HTML (sơ đồ ô như hình cấu trúc) đọc thẳng chữ trong ô
 		const svg = s.match(/<svg[^>]*>/g) ?? [];
-		assert.ok(svg.length === fig.length && svg.every((x) => / role="img" aria-label="[^"]{10,}"/.test(x)), f);
+		assert.ok(svg.every((x) => / role="img" aria-label="[^"]{10,}"/.test(x)), f);
 		assert.doesNotMatch(s, /font-family|xmlns=|<script|\son[a-z]+=/i, f);
 		const la = [...s.matchAll(/(?:fill|stroke)="(#[0-9a-f]{3,6})"/gi)].map((m) => m[1].toLowerCase()).filter((m) => !MAU_GIU.has(m));
 		assert.deepEqual(la, [], `${f}: màu đậm phải là biến (${Object.keys(MAU).join(', ')})`);
