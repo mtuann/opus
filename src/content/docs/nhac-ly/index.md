@@ -3,7 +3,7 @@ title: Nhạc lý
 description: 'Nhạc lý là "ngữ pháp" của âm nhạc: cách ghi lại âm thanh lên giấy và cách các âm thanh kết hợp với nhau. 14 bài nền tảng đi từ con số 0, sau mỗi phần có một…'
 ---
 
-Nhạc lý là "ngữ pháp" của âm nhạc: cách ghi lại âm thanh lên giấy và cách các âm thanh kết hợp với nhau. 14 bài **nền tảng** đi từ con số 0, sau mỗi phần có một bài **ôn tập**; tiếp theo là ba phần mở rộng: tiết tấu, điệu thức và chuyển giọng (bài 15–20), hòa âm mở rộng và phân tích (bài 21–27, cùng bài Âm học), nghe hiểu cấu trúc (bài 28–32). Mỗi bài có ví dụ bấm nghe được và một quiz ngắn ở cuối; các bài nền tảng có thêm phần **Trên phím đàn**, bài tập và công cụ luyện tập đi kèm. Làm xong quiz thì bài được đánh dấu "đã học".
+Nhạc lý là "ngữ pháp" của âm nhạc: cách ghi lại âm thanh lên giấy và cách các âm thanh kết hợp với nhau. 14 bài **nền tảng** đi từ con số 0, sau mỗi phần có một bài **ôn tập**; tiếp theo là ba phần mở rộng: tiết tấu, điệu thức và chuyển giọng (bài 15–20), hòa âm mở rộng và phân tích (bài 21–27, cùng bài Âm học), nghe hiểu cấu trúc (bài 28–32). Hầu hết bài có ví dụ bấm nghe được, và mỗi bài có một quiz ngắn ở cuối; các bài nền tảng có thêm phần **Trên phím đàn**, bài tập và công cụ luyện tập đi kèm. Làm xong quiz thì bài được đánh dấu "đã học".
 
 Chưa biết bắt đầu từ đâu? Làm [bài kiểm tra đầu vào](/opus/bat-dau/kiem-tra-dau-vao/).
 

@@ -17,6 +17,8 @@ test('chuyenHinh: bỏ xmlns, font-family; màu đậm thành biến; figure có
 		chuyenHinh(cu),
 		'<figure class="oz-figure not-content" data-sinh><svg class="oz-fig" viewBox="0 0 10 10" role="img" aria-label="A"><line style="stroke:var(--oz-h-xanh)"/><text fill="#1b1b1b">Đô</text><text style="fill:var(--oz-h-nhat)">b</text></svg><figcaption>C</figcaption></figure>',
 	);
+	// fill và stroke cùng đổi thành biến: một thuộc tính style (D3-L5, hình beats)
+	assert.equal(chuyenHinh('<polygon fill="#2E7D4F" fill-opacity=".35" stroke="#2e7d4f"/>'), '<polygon style="fill:var(--oz-h-luc);stroke:var(--oz-h-luc)" fill-opacity=".35"/>');
 });
 
 test('mỗi hình tĩnh: figure not-content, data-sinh, có chú thích; SVG có tên cho máy đọc màn hình; không phông, không màu đậm viết cứng', () => {
@@ -32,6 +34,7 @@ test('mỗi hình tĩnh: figure not-content, data-sinh, có chú thích; SVG có
 		assert.doesNotMatch(s, /font-family|xmlns=|<script|\son[a-z]+=/i, f);
 		const la = [...s.matchAll(/(?:fill|stroke)="(#[0-9a-f]{3,6})"/gi)].map((m) => m[1].toLowerCase()).filter((m) => !MAU_GIU.has(m));
 		assert.deepEqual(la, [], `${f}: màu đậm phải là biến (${Object.keys(MAU).join(', ')})`);
+		assert.doesNotMatch(s, /<[^>]* style="[^"]*"[^>]* style="/, `${f}: một thẻ hai thuộc tính style`);
 		assert.doesNotMatch(s, / id="/, `${f}: không id (trùng khi hai hình trên một trang)`);
 	}
 });

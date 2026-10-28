@@ -7,7 +7,7 @@ Bài này trả lời những câu hỏi "vì sao" mà các bài trước bỏ n
 
 ## Âm thanh là gì?
 
-Âm thanh là **dao động** truyền qua không khí. Một nốt nhạc có ba đặc tính:
+Âm thanh là **dao động** truyền đi trong không khí (hay vật chất khác). Một nốt nhạc có ba đặc tính:
 
 | Đặc tính | Vật lý | Ta nghe thấy |
 |---|---|---|
@@ -19,7 +19,7 @@ Tai người nghe được khoảng 20 Hz đến 20.000 Hz. Phím thấp nhất 
 
 ## Chuỗi bồi âm
 
-Khi một dây đàn rung, nó không chỉ rung cả dây (âm **cơ bản**), mà đồng thời rung từng nửa dây, từng một phần ba dây, từng một phần tư dây… Mỗi kiểu rung tạo ra một tần số gấp **2, 3, 4, 5… lần** âm cơ bản. Đó là các **bồi âm** (overtones, harmonics). Ta không nghe chúng như những nốt riêng, nhưng chúng hòa vào nhau thành âm thanh ta nghe.
+Khi một dây đàn rung, nó không chỉ rung cả dây (âm **cơ bản**), mà đồng thời rung từng nửa dây, từng một phần ba dây, từng một phần tư dây… Mỗi kiểu rung tạo ra một tần số gấp **2, 3, 4, 5… lần** âm cơ bản. Đó là các **bồi âm** (*harmonics*). Bài này đánh số từ âm cơ bản, như các giáo trình vật lý: âm cơ bản là bồi âm số 1, gấp đôi tần số là số 2, và cứ thế. (Một số tài liệu dùng *overtones* cho các bồi âm trên âm cơ bản và đánh số lệch một: overtone thứ nhất là bồi âm số 2.) Ta không nghe chúng như những nốt riêng, nhưng chúng hòa vào nhau thành âm thanh ta nghe.
 
 Chuỗi bồi âm trên nốt Đô2:
 
@@ -46,7 +46,7 @@ w: 1 2 3 4 5 6 7 8 9 10
 ```
 
 
-Hãy để ý: **các bồi âm 4, 5, 6 chính là hợp âm Đô trưởng** (Đô – Mi – Sol). Hợp âm trưởng có sẵn trong tự nhiên, bên trong mỗi nốt nhạc.
+Hãy để ý: **các bồi âm 4, 5, 6 chính là hợp âm Đô trưởng** (Đô – Mi – Sol, tỉ lệ tần số 4 : 5 : 6). Hợp âm trưởng nằm sẵn trong chuỗi bồi âm của nốt.
 
 Nghe từng bồi âm và thử ghép chúng lại:
 
@@ -54,18 +54,18 @@ Nghe từng bồi âm và thử ghép chúng lại:
 
 ## Vì sao có quãng "hòa hợp"?
 
-Hai nốt có tỉ lệ tần số **đơn giản** thì có nhiều bồi âm trùng nhau, nên tai nghe chúng "hòa" vào nhau:
+Theo cách giải thích cổ điển của Helmholtz, hai nốt có tỉ lệ tần số **đơn giản** thì có nhiều bồi âm trùng nhau, nên tai nghe chúng "hòa" vào nhau:
 
-| Quãng | Tỉ lệ (thuần) | Cảm giác |
+| Quãng | Tỉ lệ (thuần) | Phân loại (bài 9) |
 |---|---|---|
-| 8 đúng | 2 : 1 | Gần như một nốt |
-| 5 đúng | 3 : 2 | Rất vững, rỗng |
-| 4 đúng | 4 : 3 | Vững |
-| 3 trưởng | 5 : 4 | Ngọt, sáng |
-| 3 thứ | 6 : 5 | Ngọt, tối |
-| 2 thứ | 16 : 15 | Chói, nghịch |
+| 8 đúng | 2 : 1 | Thuận hoàn toàn |
+| 5 đúng | 3 : 2 | Thuận hoàn toàn |
+| 4 đúng | 4 : 3 | Tùy ngữ cảnh: thuận giữa hai bè trên, nghịch khi có bè trầm |
+| 3 trưởng | 5 : 4 | Thuận không hoàn toàn |
+| 3 thứ | 6 : 5 | Thuận không hoàn toàn |
+| 2 thứ | 16 : 15 | Nghịch |
 
-Đây là lời giải thích vật lý cho bảng [thuận tai và nghịch tai](/opus/nhac-ly/09-quang/) ở bài 9. Nhưng cảm giác "thuận" và "nghịch" còn phụ thuộc vào văn hóa và thói quen nghe: âm nhạc thế kỷ 20 dùng nghịch tai như màu sắc, và nhiều nền âm nhạc khác có quan niệm hòa hợp riêng.
+Đây là lời giải thích vật lý cho bảng [thuận tai và nghịch tai](/opus/nhac-ly/09-quang/) ở bài 9. Nhưng quan niệm quãng nào là "thuận" đã đổi nhiều qua lịch sử và khác nhau giữa các nền văn hóa; một số nhà soạn nhạc thế kỷ 20 còn dùng quãng nghịch tai ngang hàng với thuận tai.
 
 ## Âm sắc
 
@@ -76,26 +76,26 @@ Nhìn bồi âm bằng mắt: bấm các nút để so phổ của sóng sin, â
 1. **Phát Đô3: sóng sin**: chỉ có **một** đỉnh, vì sóng sin không có bồi âm. Âm thanh "trơn", nhạt.
 2. **Phát Đô3: âm tổng hợp**: có vài đỉnh ở bồi âm 1, 2, 3…
 3. **Phát Đô3: piano mẫu**: rất nhiều đỉnh, mạnh yếu khác nhau, và chúng **tắt dần** theo thời gian khác nhau. Đó là âm sắc của cây đàn piano thật.
-4. **Bật micro** rồi hát hoặc huýt sáo: huýt sáo cho phổ gần như sóng sin; giọng hát nguyên âm "a" có nhiều bồi âm hơn "u". Nếu có đàn cơ, chơi một nốt trầm rồi một nốt cao và so số đỉnh bồi âm.
+4. **Bật micro** rồi hát hoặc huýt sáo: huýt sáo cho phổ chỉ có một đỉnh trội, các bồi âm yếu; giọng hát có nhiều bồi âm hơn, và mỗi nguyên âm ("a", "u"…) cho các đỉnh mạnh yếu khác nhau. Nếu có đàn cơ, chơi một nốt trầm rồi một nốt cao và so số đỉnh bồi âm.
 
-Sáo gần như chỉ có âm cơ bản và vài bồi âm yếu, nên nghe tròn và trong. Clarinet có các bồi âm **lẻ** (1, 3, 5, 7) mạnh hơn hẳn các bồi âm chẵn, tạo âm sắc "rỗng" đặc trưng. Violin và oboe có rất nhiều bồi âm mạnh, nên nghe sáng và giàu. Thử chọn chỉ các ô lẻ (1, 3, 5, 7) trong công cụ ở trên rồi nghe cùng lúc.
+Sáo, ở âm vực trung, gần như chỉ có âm cơ bản và rất ít bồi âm khác, nên nghe tròn và trong. Clarinet ở âm vực trầm có các bồi âm **lẻ** (1, 3, 5, 7) mạnh hơn hẳn các bồi âm chẵn, tạo âm sắc "rỗng" đặc trưng. Sáo và oboe chơi cùng một nốt vẫn nghe khác nhau vì tỉ lệ bồi âm khác nhau; âm sắc càng "sáng" thì các bồi âm cao càng mạnh. Thử chọn chỉ các ô lẻ (1, 3, 5, 7) trong công cụ ở trên rồi nghe cùng lúc.
 
 Bồi âm còn là cách **chơi** một số nhạc cụ:
 
-- **Kèn đồng không có van** (như kèn trumpet tự nhiên thời Bach) chỉ chơi được các nốt trong chuỗi bồi âm. Người chơi đổi nốt bằng cách thay đổi môi; người chơi kèn horn thời Mozart còn bịt bàn tay vào loa kèn để có thêm những nốt nằm giữa.
-- **Đàn bầu** của Việt Nam dùng một dây duy nhất, và gần như mọi nốt đều là **bồi âm**: người chơi chạm nhẹ cạnh bàn tay vào các điểm chia dây trong khi gảy, còn cần đàn uốn cao độ lên xuống.
+- **Kèn đồng không có van** (như kèn trumpet tự nhiên thời Bach) chỉ chơi được các nốt trong chuỗi bồi âm của ống kèn. Người chơi đổi nốt bằng cách thay đổi môi; người chơi kèn horn thời Mozart còn đặt bàn tay vào loa kèn để chỉnh cao độ một số nốt.
+- **Đàn bầu** của Việt Nam chỉ có một dây và được chơi bằng **bồi âm**: người chơi chạm nhẹ bàn tay vào các điểm chia dây trong khi gảy, còn cần đàn (vòi đàn) uốn cao độ lên xuống.
 - Nghệ sĩ violin, cello, guitar dùng **bồi âm** (harmonics) để tạo những nốt cao trong veo như tiếng sáo.
 
 ## Hệ thống lên dây
 
-Nếu lên dây sao cho mọi quãng 5 đều thuần (3 : 2) rồi đi hết vòng 12 quãng 5, ta **không quay về đúng** nốt ban đầu: dư ra khoảng 23,5 cent, gọi là **dấu phẩy Pythagore**. Không có cách nào để mọi quãng đều thuần ở mọi giọng. Lịch sử âm nhạc phương Tây là lịch sử của các cách thỏa hiệp:
+Nếu lên dây sao cho mọi quãng 5 đều thuần (3 : 2) rồi đi hết vòng 12 quãng 5, ta **không quay về đúng** nốt ban đầu: dư ra khoảng 23,5 cent, gọi là **dấu phẩy Pythagore**. Không có cách nào để mọi quãng đều thuần ở mọi giọng. Lịch sử các hệ lên dây ở phương Tây là lịch sử của những cách thỏa hiệp:
 
 | Hệ thống | Ý tưởng | Thời kỳ |
 |---|---|---|
-| **Pythagore** | Mọi quãng 5 thuần; quãng 3 trưởng rất chói | Trung cổ |
+| **Pythagore** | Mọi quãng 5 thuần; quãng 3 trưởng rất chói | Trung cổ, còn dùng đến Phục hưng |
 | **Mean-tone** | Quãng 3 trưởng thuần; một vài giọng chơi được rất hay, các giọng xa thì không dùng được | Phục hưng, Baroque |
-| **Bình quân cải tiến** (well temperament) | Mọi giọng đều chơi được, nhưng mỗi giọng có "màu" hơi khác | Cuối Baroque; *Bình quân luật* của Bach dành cho kiểu lên dây này |
-| **Bình quân** (equal temperament) | Chia quãng 8 thành 12 nửa cung **bằng hệt nhau**: mỗi nửa cung = 100 cent, tỉ lệ ¹²√2 ≈ 1,0595 | Chuẩn cho piano từ thế kỷ 19 đến nay |
+| **Bình quân cải tiến** (well temperament) | Mọi giọng đều chơi được, nhưng mỗi giọng có "màu" hơi khác | Thế kỷ 18–19, bắt đầu từ cuối Baroque; *Bình quân luật* của Bach thường được cho là viết cho kiểu lên dây này (Bach dùng hệ chính xác nào thì còn tranh cãi) |
+| **Bình quân** (equal temperament) | Chia quãng 8 thành 12 nửa cung **bằng hệt nhau**: mỗi nửa cung = 100 cent, tỉ lệ ¹²√2 ≈ 1,0595 | Chuẩn cho piano từ khoảng giữa thế kỷ 19 đến nay |
 
 Hệ bình quân cho phép chơi ở mọi giọng và chuyển giọng tự do, đổi lại mọi quãng (trừ quãng 8) đều lệch một chút so với quãng thuần. Quãng 5 bình quân chỉ lệch 2 cent, gần như không nghe ra; quãng 3 trưởng bình quân **rộng hơn 14 cent** so với quãng thuần, và tai luyện tốt nghe thấy tiếng "rung" (phách) của nó:
 
@@ -105,14 +105,14 @@ Nhìn thấy "phách" (bản in được của thí nghiệm trên):
 
 ::hinh{ten="beats"}
 
-Ca sĩ, dàn dây và kèn không cố định cao độ nên thường tự điều chỉnh về phía quãng thuần khi hát hoặc chơi hợp âm. Đó là một lý do một tứ tấu đàn dây hay dàn hợp xướng giỏi nghe "trong" đến vậy.
+Ca sĩ, nhạc công kèn và nhiều nhạc cụ dây không cố định cao độ nên khi hát hoặc chơi hợp âm họ thường điều chỉnh về phía quãng thuần. Đó có thể là một lý do dàn hợp xướng không nhạc đệm hay một dàn dây giỏi nghe "trong" đến vậy.
 
 ## Chuẩn cao độ: La = 440 Hz?
 
 Cao độ của nốt La4 không phải lúc nào cũng là 440 Hz:
 
 - **440 Hz** được một hội nghị quốc tế ở London khuyến nghị năm 1939, và trở thành tiêu chuẩn ISO 16. Đây là chuẩn phổ biến nhất hiện nay, cũng là chuẩn của [máy lên dây](/opus/luyen-tap/hat-lai/#may-len-day) trên site này.
-- Nhiều dàn nhạc châu Âu lên dây cao hơn một chút, khoảng **442–443 Hz**, cho âm thanh sáng hơn.
+- Nhiều dàn nhạc châu Âu lên dây cao hơn một chút, khoảng **442–444 Hz**.
 - Các nhóm chơi nhạc Baroque bằng nhạc cụ cổ thường dùng **415 Hz**, thấp hơn gần đúng nửa cung. Đó là lý do khi nghe một bản thu Bach "theo phong cách lịch sử", bạn có thể thấy nó thấp hơn bản nhạc in nửa cung (xem [Đọc tên tác phẩm và bản thu](/opus/nghe-nhac/doc-ten-tac-pham/)).
 
 ## Tự kiểm tra
@@ -147,5 +147,7 @@ Cao độ của nốt La4 không phải lúc nào cũng là 440 Hz:
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- Quãng thuận tai và nghịch tai: [Open Music Theory, Intervals](https://viva.pressbooks.pub/openmusictheory/chapter/intervals/) và [Introduction to Species Counterpoint](https://viva.pressbooks.pub/openmusictheory/chapter/species-counterpoint/).
+- Vật lý của âm thanh và bồi âm: [OpenStax, College Physics 2e, 17.5](https://openstax.org/books/college-physics-2e/pages/17-5-sound-interference-and-resonance-standing-waves-in-air-columns) và [17.6](https://openstax.org/books/college-physics-2e/pages/17-6-hearing); Schmidt-Jones, *Understanding Basic Music Theory* ([5.3](https://human.libretexts.org/Bookshelves/Music/Music_Theory/Understanding_Basic_Music_Theory_%28Schmidt-Jones%29/05%3A_The_Physical_Basis/5.03%3A_Harmonic_Series_I-_Timbre_and_Octaves), [6.6](https://human.libretexts.org/Bookshelves/Music/Music_Theory/Understanding_Basic_Music_Theory_%28Schmidt-Jones%29/06%3A_Notes_and_Scales/6.06%3A_Harmonic_Series_II-_Harmonics_Intervals_and_Instruments), [8.2](https://human.libretexts.org/Bookshelves/Music/Music_Theory/Understanding_Basic_Music_Theory_%28Schmidt-Jones%29/08%3A_Challenges/8.02%3A_Tuning_System)).
+- Chuẩn cao độ: [ISO 16:1975](https://www.iso.org/standard/3601.html).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

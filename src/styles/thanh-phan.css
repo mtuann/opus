@@ -1412,7 +1412,8 @@ html.oz-stand-open .main-pane {
 }
 /* Ô chọn tự vẽ (appearance: none, mũi tên bằng gradient theo màu chữ): ô chọn gốc của WebKit trên điện thoại giữ chiều cao
    khoảng 23 px, không theo min-height */
-.oz-lhb select {
+.oz-lhb select,
+.oz-boi-am select {
 	appearance: none;
 	-webkit-appearance: none;
 	font: inherit;
@@ -1429,7 +1430,8 @@ html.oz-stand-open .main-pane {
 	background-repeat: no-repeat;
 }
 @media (pointer: coarse) {
-	.oz-lhb select {
+	.oz-lhb select,
+	.oz-boi-am select {
 		min-height: 44px;
 		min-width: 44px;
 	}
@@ -1565,4 +1567,188 @@ html.oz-stand-open .main-pane {
 	.abc-notation svg {
 		color: #000 !important;
 	}
+}
+
+/* ---------- Công cụ âm học (D3-L5; src/scripts/am-hoc.js): chuỗi bồi âm, phổ âm, so sánh hệ lên dây ---------- */
+.oz-boi-am > .oz-row label {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	font-size: var(--sl-text-sm);
+}
+.oz-boi-am-luoi {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(8.5rem, 100%), 1fr));
+	gap: 0.5rem;
+	margin: 0.8rem 0;
+}
+.oz-boi-am-o {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	min-width: 0;
+	padding: 0.4rem;
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 8px;
+	font-size: var(--sl-text-xs);
+}
+.sl-markdown-content :is(.oz-boi-am-luoi, .oz-boi-am-o) > * {
+	margin-top: 0;
+}
+.oz-boi-am-o label {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+	min-height: 1.8rem;
+	cursor: pointer;
+}
+.oz-boi-am-o input {
+	width: 1.1rem;
+	height: 1.1rem;
+	margin: 0;
+	accent-color: var(--sl-color-accent-high);
+}
+.oz-boi-am-o .oz-btn {
+	font-size: var(--sl-text-xs);
+	padding: 0.3rem 0.4rem;
+	min-width: 0;
+}
+.oz-boi-am-o small {
+	color: var(--sl-color-gray-3);
+}
+.oz-len-day .oz-btn small {
+	color: var(--sl-color-gray-3);
+}
+/* Phổ: hình co giãn theo khung (SVG không giữ tỉ lệ, nét không dày lên); nhãn trục là chữ HTML nên không nhỏ lại */
+.oz-pho-khung {
+	position: relative;
+	max-width: 45rem;
+	aspect-ratio: 3 / 1;
+	min-height: 8rem;
+	margin: 0.6rem 0;
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 8px;
+	overflow: hidden;
+}
+.sl-markdown-content .oz-pho-khung > * {
+	margin-top: 0;
+}
+.oz-pho-hinh {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+}
+.oz-pho-hinh line,
+.oz-pho-hinh path {
+	vector-effect: non-scaling-stroke;
+	fill: none;
+}
+.oz-pho-vach {
+	stroke: var(--sl-color-gray-4);
+	stroke-width: 1;
+}
+.oz-pho-boi line {
+	stroke: var(--oz-accent);
+	stroke-opacity: 0.6;
+	stroke-dasharray: 3 3;
+	stroke-width: 1;
+}
+.oz-pho-duong {
+	stroke: var(--oz-accent);
+	stroke-width: 1.5;
+}
+.oz-pho-nhan {
+	position: absolute;
+	top: 0.15rem;
+	padding-left: 0.2rem;
+	font-size: var(--sl-text-xs);
+	line-height: 1.2;
+	color: var(--sl-color-gray-3);
+}
+@media (pointer: coarse) {
+	.oz-boi-am-o label {
+		min-height: 44px;
+	}
+	.oz-boi-am-o .oz-btn {
+		min-height: 44px;
+	}
+}
+
+/* ---------- Thẻ ghi nhớ (D3-L5; src/scripts/the-nho.js) ---------- */
+.oz-the-nho:focus-visible {
+	outline: 2px solid var(--sl-color-accent-high);
+	outline-offset: 2px;
+}
+.oz-tn-so {
+	min-height: 1.5em;
+	margin: 0;
+}
+.oz-tn-the {
+	min-height: 9rem;
+	padding: 1rem 1.2rem;
+	margin: 0.8rem 0;
+	border: 1px solid var(--sl-color-gray-4);
+	border-radius: 12px;
+	overflow-wrap: anywhere;
+}
+.oz-tn-truoc {
+	font-size: var(--sl-text-2xl);
+	font-weight: 600;
+	line-height: 1.3;
+}
+.oz-tn-sau {
+	margin-top: 0.8rem;
+	font-size: var(--sl-text-sm);
+}
+.sl-markdown-content .oz-tn-sau p {
+	margin: 0.25rem 0;
+}
+.oz-tn-nut {
+	min-height: 2.5rem;
+}
+
+/* ---------- Trạng thái bài đã học ở mục lục Nhạc lý (D3-L5; src/scripts/trang-thai-bai.js) ---------- */
+.oz-lesson-bar {
+	min-height: 3.4em;
+	margin: 0;
+}
+.oz-progress {
+	display: block;
+	height: 6px;
+	max-width: 22.5rem;
+	margin-top: 0.4rem;
+	border-radius: 3px;
+	background: var(--sl-color-gray-5);
+	overflow: hidden;
+}
+.oz-progress > span {
+	display: block;
+	height: 100%;
+	background: var(--oz-accent);
+}
+.oz-done {
+	margin-left: 0.5rem;
+	padding: 0.05rem 0.45rem;
+	border-radius: 999px;
+	font-size: var(--sl-text-xs);
+	white-space: nowrap;
+	background: color-mix(in srgb, var(--oz-ok) 15%, transparent);
+	color: var(--oz-ok);
+}
+
+/* Chưa có JavaScript: giữ phần đọc được (bảng bồi âm), ẩn nút không chạy */
+@media (scripting: none) {
+	.oz-boi-am > .oz-row,
+	.oz-boi-am > .oz-stats,
+	.oz-boi-am-o input,
+	.oz-len-day > :not(noscript),
+	.oz-pho > :not(noscript),
+	.oz-the-nho > :not(noscript),
+	.oz-trang-thai-bai {
+		display: none;
+	}
+}
+:is(.oz-boi-am, .oz-len-day, .oz-pho, .oz-the-nho) noscript p {
+	margin: 0;
 }

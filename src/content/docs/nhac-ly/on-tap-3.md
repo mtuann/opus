@@ -47,7 +47,7 @@ description: Trước khi làm quiz, hãy làm phiếu bài tập gọi tên h�
 - Trở lại tốc độ cũ
 > ritardando.
 ? "sfz" nghĩa là gì?
-+ Nhấn mạnh đột ngột
++ Nhấn mạnh rõ
 - Rất nhỏ
 - Ngân dài tùy ý
 > sforzando.

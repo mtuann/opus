@@ -1,0 +1,109 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/on-tap-2
+trang: src/content/docs/nhac-ly/on-tap-2.md
+nguon_cu: ../opus-zero/docs/nhac-ly/on-tap-2.md
+tang: loi
+lan:
+  - so: 1
+    ngay: '2026-10-28'
+    nhanh: moi/d3-l5
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Sonnet 5.5 (D3-L5 lượt 1, trang)"
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: "Bài ôn tập 2 (bài 6–9), tầng lõi: quiz 10 câu (n4 đến n13) và các câu về trang (n1 đến n3). Nguồn: Open Music Theory (Major Scales, Minor Scales, Intervals, Species Counterpoint). Không có chữ nào phải sửa. n8 dùng \"giọng thứ song song\" theo bài 7; OMT dùng relative cho quan hệ chung hóa biểu và parallel cho quan hệ chung chủ âm, nên tên tiếng Việt cần Từ điển ghi rõ. Lời giải thích trong quiz không dựa vào vị trí lựa chọn. Không có khuông nhạc. Câu ve-site trỏ trang chưa chuyển: n2 (luyen-tap/phieu-bai-tap: giữ phiếu \"Đọc hóa biểu\" và \"Gọi tên quãng\"; luyen-tap/xay-hop-am: giữ công cụ xây gam và hợp âm). Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): relative key (giọng song song), parallel key (giọng cùng tên), harmonic minor scale (gam thứ hòa âm), circle of fifths (vòng quãng năm), tritone, augmented fourth (quãng 4 tăng), perfect consonance và imperfect consonance (thuận hoàn toàn, thuận không hoàn toàn). Đã có: key-signature, leading-tone, interval, semitone, consonance, dissonance, accidental."
+nguon:
+  - id: omt-major
+    bac: 2
+    ten: "Open Music Theory, Major Scales, Scale Degrees, and Key Signatures"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/major-scales/"
+  - id: omt-minor
+    bac: 2
+    ten: "Open Music Theory, Minor Scales, Scale Degrees, and Key Signatures"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/"
+  - id: omt-intervals
+    bac: 2
+    ten: "Open Music Theory, Intervals"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/intervals/"
+  - id: omt-species
+    bac: 2
+    ten: "Open Music Theory, Introduction to Species Counterpoint"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/species-counterpoint/"
+nhan_dinh:
+  - id: n1
+    cau: "Bài ôn gồm kiến thức của Phần 2 (bài 6–9: gam trưởng, gam thứ, hóa biểu và vòng quãng năm, quãng)."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Kiểm trên src/content/docs/nhac-ly/index.md: Phần 2 gồm bài 6 đến 9 rồi \"Ôn tập 2: Gam và giọng\"; các câu hỏi dùng nội dung bốn bài ấy."
+  - id: n2
+    cau: "Trước khi làm quiz nên làm phiếu bài tập \"đọc hóa biểu\" và \"gọi tên quãng\" ra giấy (trang luyen-tap/phieu-bai-tap), rồi dùng công cụ xây gam và hợp âm (trang luyen-tap/xay-hop-am) để tự kiểm tra."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Kiểm trên site cũ: assets/js/worksheet.js có loại phiếu \"Đọc hóa biểu\" và \"Gọi tên quãng (hòa âm)\"; luyen-tap/xay-hop-am.md và assets/js/build.js: công cụ \"Xây gam và hợp âm\" (gam trưởng, ba dạng gam thứ, hợp âm ba và bảy). Hai trang đích chưa chuyển: lô chuyển chúng giữ các loại phiếu và công cụ ấy."
+  - id: n3
+    cau: "Nên tự làm bài tập viết ra giấy trước khi làm quiz."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: "Lời khuyên học tập, không thuộc loại sức khỏe."
+  - id: n4
+    cau: "Gam Rê trưởng có Fa♯ và Đô♯ (không phải Sol♯): Rê – Mi – Fa♯ – Sol – La – Si – Đô♯ – Rê."
+    loai: quy-tac
+    nguon: [omt-major]
+    ket_qua: dung
+    ghi_chu: "OMT: \"The order of sharps is always F, C, G, D, A, E, B\"; Rê trưởng có hai dấu thăng đầu tiên là Fa♯ và Đô♯ (OMT không viết riêng Rê trưởng; kiểm bằng công thức cung, nửa cung: Rê, Mi, Fa♯, Sol, La, Si, Đô♯)."
+  - id: n5
+    cau: "Mi thứ dùng chung hóa biểu với Sol trưởng (1 dấu thăng)."
+    loai: quy-tac
+    nguon: [omt-minor]
+    ket_qua: dung
+    ghi_chu: "OMT Minor Scales: \"relative keys have the same key signature\"; Mi thứ và Sol trưởng đều có một dấu thăng (Fa♯); chủ âm thứ thấp hơn chủ âm trưởng 3 nửa cung."
+  - id: n6
+    cau: "Trong gam La thứ hòa âm, nốt bị nâng là Sol thành Sol♯ (bậc 7), không phải Fa hay Đô."
+    loai: quy-tac
+    nguon: [omt-minor]
+    ket_qua: dung
+    ghi_chu: "OMT: gam thứ hòa âm là \"Like natural minor, but with a raised leading tone\"; nốt bậc 7 của La thứ là Sol, nâng thành Sol♯ tạo cảm âm."
+  - id: n7
+    cau: "Hóa biểu 5 dấu thăng là của giọng Si trưởng; dấu thăng thứ năm là La♯, nửa cung trên là Si."
+    loai: quy-tac
+    nguon: [omt-major]
+    ket_qua: dung
+    ghi_chu: "OMT: \"B major ... five sharps\"; thứ tự dấu thăng F, C, G, D, A: dấu thứ năm là A♯; cảm âm (bậc 7) cách chủ âm nửa cung (\"the leading tone is a half step below the tonic\"): chủ âm là Si."
+  - id: n8
+    cau: "Hóa biểu 2 dấu giáng là của giọng thứ Sol thứ (giọng trưởng Si♭ trưởng có Sol thứ là giọng thứ song song)."
+    loai: quy-tac
+    nguon: [omt-minor]
+    ket_qua: dung
+    ghi_chu: "OMT Minor Scales: \"G minor and B♭ major both have two flats (B♭ and E♭)\"; quan hệ \"relative\" là chung hóa biểu. \"Giọng thứ song song\" là cách gọi của bài 7 (relative minor); OMT gọi quan hệ cùng chủ âm là parallel. Không phải lỗi: bài 7 đã khóa dùng cùng cách gọi và có \"giọng thứ cùng tên\" cho parallel."
+  - id: n9
+    cau: "Fa – Si là quãng 4 tăng (tritone), 6 nửa cung và 4 tên nốt; không phải 4 đúng hay 5 giảm."
+    loai: dinh-nghia
+    nguon: [omt-intervals]
+    ket_qua: dung
+    ghi_chu: "OMT Intervals: \"All of the fourths are perfect except for one: F–B, which is an augmented fourth (a tritone)\"; bảng số nửa cung: quãng 4 tăng 6 nửa cung."
+  - id: n10
+    cau: "Mi – Đô (đi lên) là quãng 6 thứ (không phải 6 trưởng hay 5 tăng); đảo của Đô – Mi (3 trưởng) là 6 thứ."
+    loai: dinh-nghia
+    nguon: [omt-intervals]
+    ket_qua: dung
+    ghi_chu: "OMT Intervals: \"Thirds invert to sixths\", \"Major intervals invert to minor intervals\"; sáu thứ 8 nửa cung (Mi lên Đô: Mi, Fa, Sol, La, Si, Đô; 8 nửa cung)."
+  - id: n11
+    cau: "Trên vòng quãng năm, giọng nằm ngay bên phải (chiều kim đồng hồ) Rê trưởng là La trưởng; lên quãng 5 đúng thì thêm một dấu thăng."
+    loai: quy-tac
+    nguon: [omt-major]
+    ket_qua: dung
+    ghi_chu: "OMT: \"If you continue clockwise, sharp key signatures appear, each subsequent key signature adding one more sharp.\" Rê trưởng (2 dấu thăng) sang La trưởng (3 dấu thăng) là lên quãng 5 đúng."
+  - id: n12
+    cau: "Bậc VII của gam trưởng cách chủ âm nửa cung (dưới chủ âm): đó là cảm âm."
+    loai: dinh-nghia
+    nguon: [omt-major]
+    ket_qua: dung
+    ghi_chu: "OMT: \"the leading tone is a half step below the tonic\"."
+  - id: n13
+    cau: "Quãng 3 trưởng là thuận tai không hoàn toàn (không phải 5 đúng, là thuận hoàn toàn; không phải 2 thứ, là nghịch); quãng 3 và 6 là thuận tai không hoàn toàn."
+    loai: dinh-nghia
+    nguon: [omt-species]
+    ket_qua: dung
+    ghi_chu: "OMT Species Counterpoint: \"perfect consonances: perfect unisons, fifths, and octaves\"; \"imperfect consonances: major and minor thirds and sixths\"; \"dissonances: all seconds, sevenths ...\"."
+khuong_nhac: []

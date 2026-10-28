@@ -18,6 +18,11 @@ const LUAT = [
 	['.oz-ban-phim', () => import('./ban-phim.js'), false],
 	['.oz-vong', () => import('./vong-quang-nam.js'), false],
 	['.oz-lhb', () => import('./luyen-hoa-bieu.js'), false],
+	// công cụ âm học, thẻ ghi nhớ (D3-L5): ô đã dựng sẵn lúc build
+	['.oz-boi-am, .oz-pho, .oz-len-day', () => import('./am-hoc.js'), false],
+	['.oz-the-nho', () => import('./the-nho.js'), false],
+	// khởi tạo ngay: dấu "đã học" ở mục lục, người đọc thấy ngay khi mở trang
+	['.oz-trang-thai-bai', () => import('./trang-thai-bai.js'), true],
 ];
 const LE = 600;
 const cho = new Map(); // phần tử đang chờ tới gần màn hình -> hàm khởi tạo (trả về promise)

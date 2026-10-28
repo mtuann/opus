@@ -5,6 +5,7 @@
 //   - bỏ xmlns và font-family (chữ theo phông của site);
 //   - màu đậm viết cứng (xanh mực, xanh lá, vàng nhựa thông, đỏ, xám) thành biến --oz-h-* (thanh-phan.css), có bản tối;
 //     màu nền sáng (ô, phím tô màu) và chữ tối #1b1b1b trên nền ấy giữ nguyên vì đọc được ở cả hai chế độ;
+//   - thẻ có nhiều style (fill và stroke cùng đổi) gộp làm một;
 //   - <figure> thêm not-content và data-sinh (so chữ với site cũ bỏ qua, như vùng hình cũ).
 //   node src/components/hinh/chuyen-hinh-cu.mjs <tên> […]  (chạy ở gốc repo, cần ../opus-zero/)
 import fs from 'node:fs';
@@ -27,7 +28,16 @@ export function chuyenHinh(html) {
 		.replace(/ xmlns="http:\/\/www\.w3\.org\/2000\/svg"/g, '')
 		.replace(/ font-family="[^"]*"/g, '')
 		.replace(/<figure class="oz-figure">/g, '<figure class="oz-figure not-content" data-sinh>')
-		.replace(/ (fill|stroke)="(#[0-9a-f]{3,6})"/gi, (m, thuoc, mau) => (MAU[mau.toLowerCase()] ? ` style="${thuoc}:${MAU[mau.toLowerCase()]}"` : m));
+		.replace(/ (fill|stroke)="(#[0-9a-f]{3,6})"/gi, (m, thuoc, mau) => (MAU[mau.toLowerCase()] ? ` style="${thuoc}:${MAU[mau.toLowerCase()]}"` : m))
+		.replace(/<[a-z][^>]*>/gi, gopStyle);
+}
+
+/** Thẻ có cả fill và stroke đổi thành biến thì có hai thuộc tính style (trình duyệt chỉ đọc cái đầu): gộp làm một. */
+function gopStyle(the) {
+	const ds = [...the.matchAll(/ style="([^"]*)"/g)].map((m) => m[1]);
+	if (ds.length < 2) return the;
+	let mot = false;
+	return the.replace(/ style="[^"]*"/g, () => (mot ? '' : ((mot = true), ` style="${ds.join(';')}"`)));
 }
 
 function tim(ten) {

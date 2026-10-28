@@ -54,6 +54,8 @@ function khoiCho(ten) {
 		...[...document.querySelectorAll('.oz-listen')].filter((e) => !e.childElementCount),
 		// bàn phím, vòng quãng năm, luyện hóa biểu (D3-L1): hình dựng sẵn, script gắn phần bấm được rồi đặt data-san
 		...document.querySelectorAll('.oz-ban-phim:not([data-san]), .oz-vong:not([data-san]), .oz-lhb:not([data-san])'),
+		// công cụ âm học, thẻ ghi nhớ, trạng thái bài đã học (D3-L5): như trên
+		...document.querySelectorAll(':is(.oz-boi-am, .oz-pho, .oz-len-day, .oz-the-nho, .oz-trang-thai-bai):not([data-san])'),
 	];
 	if (ten) return cho.map((e) => `${e.className} "${e.textContent.trim().slice(0, 30)}"`);
 	cho[0]?.scrollIntoView({ block: 'center' });

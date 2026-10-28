@@ -14,7 +14,7 @@ lan:
   - thuat_ngu
   - nghia
   - ghi_chu
-ghi_chu: Ghi_chu hiện tại thiếu kiểu homorhythmic, xem n2. Nhóm ("nhom") và lời dịch tiếng Việt ("nghia") là lựa chọn của site; kiểm khái niệm khớp với nguồn, không kiểm cách dịch từng chữ. Dùng ở bài 28 (kết cấu). Chỉ đọc nguồn bậc 2 qua WebFetch ngày 28/10/2026.
+ghi_chu: 'Ghi_chu hiện tại thiếu kiểu homorhythmic, xem n2. Nhóm ("nhom") và lời dịch tiếng Việt ("nghia") là lựa chọn của site; kiểm khái niệm khớp với nguồn, không kiểm cách dịch từng chữ. Dùng ở bài 28 (kết cấu). Chỉ đọc nguồn bậc 2 qua WebFetch ngày 28/10/2026. D3-L5 (28/10/2026): ghi_chu n2 (ket_qua null của lô D3-L4) bổ sung kiểu homorhythm.'
 nguon:
 - id: omt-tex
   bac: 2
@@ -28,6 +28,10 @@ nguon:
   bac: 2
   ten: 'Clark et al., Understanding Music: Past and Present, 1.8 Texture'
   link: https://human.libretexts.org/Courses/Sauk_Valley_Community_College/Book:_Understanding_Music_-_Past_and_Present_(Clark_et_al.)/01:_Music_Fundamentals/1.08:_Texture
+- id: omt-glossary
+  bac: 2
+  ten: Open Music Theory, Glossary
+  link: https://viva.pressbooks.pub/openmusictheory/back-matter/glossary/
 nhan_dinh:
 - id: n1
   cau: 'homophony: Chủ điệu'
@@ -41,12 +45,13 @@ nhan_dinh:
   - nghia
   ket_qua: dung
 - id: n2
-  cau: 'homophony, ghi chú: Một giai điệu chính với bè đệm'
+  cau: "homophony, ghi chú: Một giai điệu chính với bè đệm, hay các bè cùng tiết tấu."
   loai: dinh-nghia
   nguon:
   - omt-tex
+  - omt-glossary
   - clark-tex
   truong:
   - ghi_chu
-  ket_qua: null
-  ghi_chu: 'Chưa đủ: OMT chia chủ điệu thành hai kiểu, giai điệu có đệm và các bè cùng tiết tấu (homorhythmic, như thánh ca bốn bè); trang 28 đã nêu cả hai kiểu. Đề xuất ghi_chu mới: "Một giai điệu chính với bè đệm, hay các bè cùng tiết tấu". Chưa sửa vì không được sửa src/data/.'
+  ket_qua: da-sua
+  ghi_chu: 'Cũ: "Một giai điệu chính với bè đệm". Mới: "Một giai điệu chính với bè đệm, hay các bè cùng tiết tấu". Lý do: OMT, Texture: homophony "sometimes further divided into two subcategories, homorhythm and melody and accompaniment"; melody and accompaniment: giai điệu rõ rệt cùng các bè nâng đỡ; homorhythm: "all voices move in an extremely similar or completely unison rhythm", "most often seen in chorale-like compositions"; Glossary: homophony = "one melodic part (usually the topmost) and other subordinate accompanying parts"; homorhythm = "Rhythmic unison among multiple parts".'

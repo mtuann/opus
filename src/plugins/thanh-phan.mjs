@@ -11,15 +11,17 @@ import { docKhoa, truongDaKhoa } from '../khoa.mjs';
 import { GIONG, midiCua, soDauGon, tenVietCua } from '../scripts/nhac-ly.js';
 import { khoangPhim, thongTinGiong, veBanPhim, veChucNang, veDieuThuc, veHoaBieu, veVongChon, veVongQuangNam } from '../scripts/ve.js';
 import { CAU_HOI, nutTraLoi } from '../scripts/luyen-hoa-bieu.js';
+import { veBoiAm, veLenDay, vePho } from '../scripts/am-hoc.js';
+import { bangHep } from './bang-hep.mjs';
 
 export const esc = (s) =>
 	String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 
 /** HTML đã dựng của trang có khối cần JavaScript (khuông nhạc, câu hỏi, khối nghe, danh sách việc, bài kiểm tra đầu vào,
- * chặng piano, ô gợi ý tập, bàn phím, vòng quãng năm, luyện hóa biểu) không: MarkdownContent.astro chỉ tải bộ tải thành
- * phần ở những trang này. */
+ * chặng piano, ô gợi ý tập, bàn phím, vòng quãng năm, luyện hóa biểu, công cụ âm học, thẻ ghi nhớ, trạng thái bài đã học)
+ * không: MarkdownContent.astro chỉ tải bộ tải thành phần ở những trang này. */
 export const canTaiScript = (html) =>
-	/\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec|oz-placement|oz-muc-do|oz-goi-y|oz-ban-phim|oz-vong|oz-lhb)[\s"]/.test(html);
+	/\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec|oz-placement|oz-muc-do|oz-goi-y|oz-ban-phim|oz-vong|oz-lhb|oz-boi-am|oz-pho|oz-len-day|oz-the-nho|oz-trang-thai-bai)[\s"]/.test(html);
 
 /** HTML đã dựng có hình hóa biểu (vẽ bằng <use href="#oz-kh-…">) không: MarkdownContent.astro thêm định nghĩa ký hiệu một lần. */
 export const canKyHieu = (html) => html.includes('href="#oz-kh-');
@@ -274,6 +276,7 @@ export function duLieuCho(noi, { luonKhoa = false, khoa = docKhoa() } = {}) {
 		capDo: d['cap-do'].map(boc('cap-do')).sort((a, b) => a.id - b.id),
 		tacPham: d['tac-pham'].map(boc('tac-pham')),
 		nguoi: new Map(d['nha-soan-nhac'].map((r) => [r.id, boc('nha-soan-nhac')(r)])),
+		thuatNgu: d['thuat-ngu'].map(boc('thuat-ngu')),
 	};
 }
 
@@ -616,6 +619,32 @@ export function congCuLuyenHoaBieu() {
 	);
 }
 
+// ---------- Công cụ: âm học, thẻ ghi nhớ, trạng thái bài đã học (D3-L5) ----------
+
+/**
+ * Ô công cụ âm học (::cong-cu overtones, spectrum, tuning; như các khối oz-overtones, oz-spectrum, oz-tuning của
+ * acoustics.js, spectrum.js cũ): nút, bảng bồi âm, trục của phổ dựng sẵn (src/scripts/am-hoc.js); script thêm tiếng và hình
+ * phổ. data-sinh: chữ do thành phần dựng (trang cũ dựng bằng JavaScript nên bản build cũ không có chữ này).
+ */
+const congCuAmHoc = (lop, than, canJsChu) =>
+	`<div class="${lop} oz-tool not-content" data-sinh data-pagefind-ignore>${than}${canJs(canJsChu)}</div>`;
+
+/**
+ * Thẻ ghi nhớ (::cong-cu{ten="flashcards"}, như khối oz-flashcards của flashcards.js cũ): khung thẻ dựng sẵn để giữ chỗ;
+ * src/scripts/the-nho.js đọc thẻ từ các bảng "Thuật ngữ" của trang.
+ */
+export const theNho = () =>
+	`<div class="oz-the-nho oz-tool not-content" data-sinh data-pagefind-ignore role="group" aria-label="Thẻ ghi nhớ (phím cách: lật thẻ; phím 1: chưa nhớ; phím 2: nhớ)">` +
+	`<p class="oz-stats oz-tn-so"></p><div class="oz-tn-the" aria-live="polite"><div class="oz-tn-truoc"></div><div class="oz-tn-sau" hidden></div></div>` +
+	`<div class="oz-row oz-tn-nut"></div>${canJs('Thẻ ghi nhớ cần JavaScript: bật JavaScript trong trình duyệt để ôn.')}</div>`;
+
+/**
+ * Trạng thái bài đã học (::cong-cu{ten="lesson-status"}, đặt trong khối <div class="oz-lesson-status"> bọc mục lục, như
+ * quiz.js cũ): dòng số bài đã xong và thanh tiến độ; src/scripts/trang-thai-bai.js điền và thêm dấu "đã học" cạnh link bài.
+ */
+export const trangThaiBai = () =>
+	`<div class="oz-trang-thai-bai not-content" data-sinh data-pagefind-ignore><p class="oz-lesson-bar oz-stats"></p></div>`;
+
 /** Công cụ đã có thành phần: tên (như khối <div class="oz-tên"> của site cũ) -> hàm dựng HTML (thông số, trang). */
 const CONG_CU = {
 	placement: (_, trang) => placement(khoiPlacement(trang)),
@@ -624,9 +653,14 @@ const CONG_CU = {
 	piano: (thongSo) => banPhim(thongSo),
 	circle: () => congCuVongQuangNam(),
 	'keysig-quiz': () => congCuLuyenHoaBieu(),
+	overtones: () => congCuAmHoc('oz-boi-am', veBoiAm(), 'Bật JavaScript trong trình duyệt để nghe các bồi âm.'),
+	spectrum: () => congCuAmHoc('oz-pho', vePho(), 'Phổ âm cần JavaScript: bật JavaScript trong trình duyệt để xem.'),
+	tuning: () => congCuAmHoc('oz-len-day', veLenDay(), 'Bật JavaScript trong trình duyệt để nghe so sánh các quãng.'),
+	flashcards: () => theNho(),
+	'lesson-status': () => trangThaiBai(),
 };
 /** Công cụ không có thông số: viết thêm thuộc tính thì build hỏng (gõ nhầm, hay chép từ khối cũ). */
-const KHONG_THONG_SO = new Set(['placement', 'piano-level', 'goi-y-tap', 'circle', 'keysig-quiz']);
+const KHONG_THONG_SO = new Set(['placement', 'piano-level', 'goi-y-tap', 'circle', 'keysig-quiz', 'overtones', 'spectrum', 'tuning', 'flashcards', 'lesson-status']);
 
 /** ::cong-cu{ten="…" …}: công cụ luyện tập; thuộc tính khác là thông số (data-* của khối oz- cũ). */
 export function congCu({ ten, ...thongSo }, trang) {
@@ -634,6 +668,31 @@ export function congCu({ ten, ...thongSo }, trang) {
 	if (KHONG_THONG_SO.has(ten) && Object.keys(thongSo).length)
 		throw new Error(`công cụ "${ten}" không nhận thông số (${Object.keys(thongSo).join(', ')})`);
 	return CONG_CU[ten](thongSo, trang);
+}
+
+// ---------- Từ điển thuật ngữ (D3-L5) ----------
+
+/** Ô bảng Markdown: Markdown trong dòng của dữ liệu, | thoát, xuống dòng thành khoảng trắng. */
+const oBang = (s) => String(s ?? '').replace(/\s*\n\s*/g, ' ').replace(/\|/g, '\\|');
+
+/**
+ * ::tu-dien{nhom="…"}: bảng | Thuật ngữ | Nghĩa | Ghi chú | của một nhóm trong src/data/thuat-ngu.yml (thuat_ngu, nghia,
+ * ghi_chu; theo thứ tự trong file). Dựng như một bảng Markdown viết tay (cùng Sätteri, cùng plugin bảng hẹp), nên HTML
+ * giống hệt bảng cũ: so chữ với site cũ và tìm kiếm thấy chữ (không data-sinh), thẻ ghi nhớ đọc được. Chữ là Markdown
+ * trong dòng như các trường dữ liệu khác (thẻ HTML thô hiện thành chữ). Nhóm không có thuật ngữ nào thì build hỏng.
+ * @param {string} nhom tên nhóm (trường nhom)
+ * @param {object[]} thuatNgu bản ghi thuật ngữ (duLieuCho(trang).thuatNgu: trang đã khóa chỉ đọc trường đã khóa)
+ */
+export function tuDien(nhom, thuatNgu) {
+	if (!String(nhom ?? '').trim()) throw new Error('::tu-dien cần nhom, ví dụ ::tu-dien{nhom="Tốc độ"}');
+	const ds = thuatNgu.filter((r) => r.nhom === nhom);
+	if (!ds.length) {
+		const co = [...new Set(thuatNgu.map((r) => r.nhom))];
+		throw new Error(`::tu-dien: không có thuật ngữ nào thuộc nhóm "${nhom}" trong src/data/thuat-ngu.yml (có: ${co.join('; ')})`);
+	}
+	const bang = ['| Thuật ngữ | Nghĩa | Ghi chú |', '|---|---|---|', ...ds.map((r) => `| ${oBang(r.thuat_ngu)} | ${oBang(r.nghia)} | ${oBang(r.ghi_chu)} |`)].join('\n');
+	const { html } = markdownToHtml(bang, { mdastPlugins: [chuAnToan], hastPlugins: [bangHep()], features: { smartPunctuation: false } });
+	return html.trim();
 }
 
 /**

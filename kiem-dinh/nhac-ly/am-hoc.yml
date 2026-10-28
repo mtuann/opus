@@ -1,0 +1,647 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/am-hoc
+trang: src/content/docs/nhac-ly/am-hoc.md
+nguon_cu: ../opus-zero/docs/nhac-ly/am-hoc.md
+tang: loi
+lan:
+  - so: 1
+    ngay: '2026-10-28'
+    nhanh: moi/d3-l5
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Sonnet 5.5 (D3-L5 lượt 1, trang)"
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: "Trang Âm học cơ bản (tầng lõi), ba công cụ (overtones, spectrum, tuning; src/scripts/am-hoc.js) và hình beats (src/components/hinh/beats.html). Nguồn chính: OpenStax College Physics 2e 17.1, 17.2, 17.5, 17.6; Schmidt-Jones (LibreTexts) 5.1 đến 5.3, 6.6, 8.2; Open Music Theory (Intervals, Species Counterpoint); Handbook for Acoustic Ecology của SFU; UNSW Music Acoustics; HyperPhysics; ISO 16; COD qua Encyclopedia.com; Early Music America, Eastman (415 Hz). Đọc qua WebFetch ngày 28/10/2026 (bản tóm tắt chữ, đã hỏi lại để lấy nguyên văn chỗ quan trọng); các số cent, tần số, tỉ lệ đều tính lại bằng Python. CHƯA CHẮC (null): n61 (dàn nhạc 442–444 Hz, chỉ nguồn bậc 3). Nguồn mỏng, nên lượt 2 xem kỹ: n40 (đàn bầu: báo và Wikipedia), n49 (bình quân chuẩn cho piano từ khoảng 1850: một sách chỉnh đàn), n57 (hội nghị 1939: Nature bị chặn, chỉ có Lead Stories dẫn lại), n33 và n34 (sáo và clarinet theo âm vực). Công cụ và hình: chữ và số của ba công cụ và của hình beats đều đúng (n17, n27, n29, n36, n54, n55); chỉ có lỗi nhỏ cho người giao ở n55: chữ trong hình beats dùng dấu chấm thập phân (\"10.4 Hz\", \"0.0 s\", \"0.1 s\"…), chú thích dưới hình dùng dấu phẩy; nên đổi sang dấu phẩy. Câu ve-site trỏ trang chưa chuyển: n60 (luyen-tap/hat-lai: máy lên dây ở La4 = 440 Hz, id #may-len-day), n64 (nghe-nhac/doc-ten-tac-pham: đoạn về bản thu theo phong cách lịch sử và 415 Hz, link ngược về am-hoc), n70 (tai-lieu-tham-khao). Link vào trang này từ trang chưa chuyển: #am-sac (piano/tieng-dan, cap-nhat), #chuan-cao-o-la-440-hz (luyen-tap/hat-lai); id do plugin id-cu.mjs sinh từ tiêu đề, giữ nguyên tiêu đề \"Âm sắc\" và \"Chuẩn cao độ: La = 440 Hz?\" là còn khớp. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): harmonic và harmonic series (bồi âm, chuỗi bồi âm), overtone (cách đánh số lệch một, xem n10), fundamental (âm cơ bản), timbre (âm sắc), frequency (tần số), amplitude (biên độ), cent, just intonation (quãng thuần), Pythagorean comma (dấu phẩy Pythagore), Pythagorean tuning, mean-tone, well temperament (bình quân cải tiến), equal temperament (bình quân), beats (phách: đã có bản ghi beat nghĩa phách của nhịp, nên cần phân biệt phách âm học với phách của nhịp), concert pitch. Đã có bản ghi: consonance (thuận tai), dissonance (nghịch tai), pitch, interval. Quiz: lời giải thích không dựa vào vị trí lựa chọn."
+nguon:
+  - id: os-hearing
+    bac: 2
+    ten: "OpenStax, College Physics 2e, 17.6 Hearing"
+    link: "https://openstax.org/books/college-physics-2e/pages/17-6-hearing"
+  - id: os-pitch
+    bac: 2
+    ten: "OpenStax, College Physics 2e, 17.2 Speed of Sound, Frequency, and Wavelength"
+    link: "https://openstax.org/books/college-physics-2e/pages/17-2-speed-of-sound-frequency-and-wavelength"
+  - id: os-sound
+    bac: 2
+    ten: "OpenStax, College Physics 2e, 17.1 Sound"
+    link: "https://openstax.org/books/college-physics-2e/pages/17-1-sound"
+  - id: os-columns
+    bac: 2
+    ten: "OpenStax, College Physics 2e, 17.5 Sound Interference and Resonance: Standing Waves in Air Columns"
+    link: "https://openstax.org/books/college-physics-2e/pages/17-5-sound-interference-and-resonance-standing-waves-in-air-columns"
+  - id: sj-acoustics
+    bac: 2
+    ten: "Schmidt-Jones, Understanding Basic Music Theory (LibreTexts), 5.1 Acoustics for Music Theory"
+    link: "https://human.libretexts.org/Bookshelves/Music/Music_Theory/Understanding_Basic_Music_Theory_%28Schmidt-Jones%29/05%3A_The_Physical_Basis/5.01%3A_Acoustics_for_Music_Theory"
+  - id: sj-standing
+    bac: 2
+    ten: "Schmidt-Jones, Understanding Basic Music Theory (LibreTexts), 5.2 Standing Waves and Musical Instruments"
+    link: "https://human.libretexts.org/Bookshelves/Music/Music_Theory/Understanding_Basic_Music_Theory_%28Schmidt-Jones%29/05%3A_The_Physical_Basis/5.02%3A_Standing_Waves_and_Musical_Instruments"
+  - id: sj-timbre
+    bac: 2
+    ten: "Schmidt-Jones, Understanding Basic Music Theory (LibreTexts), 5.3 Harmonic Series I: Timbre and Octaves"
+    link: "https://human.libretexts.org/Bookshelves/Music/Music_Theory/Understanding_Basic_Music_Theory_%28Schmidt-Jones%29/05%3A_The_Physical_Basis/5.03%3A_Harmonic_Series_I-_Timbre_and_Octaves"
+  - id: sj-harm2
+    bac: 2
+    ten: "Schmidt-Jones, Understanding Basic Music Theory (LibreTexts), 6.6 Harmonic Series II: Harmonics, Intervals and Instruments"
+    link: "https://human.libretexts.org/Bookshelves/Music/Music_Theory/Understanding_Basic_Music_Theory_%28Schmidt-Jones%29/06%3A_Notes_and_Scales/6.06%3A_Harmonic_Series_II-_Harmonics_Intervals_and_Instruments"
+  - id: sj-tuning
+    bac: 2
+    ten: "Schmidt-Jones, Understanding Basic Music Theory (LibreTexts), 8.2 Tuning System"
+    link: "https://human.libretexts.org/Bookshelves/Music/Music_Theory/Understanding_Basic_Music_Theory_(Schmidt-Jones)/08%3A_Challenges/8.02%3A_Tuning_System"
+  - id: hp-piano
+    bac: 2
+    ten: "HyperPhysics (Georgia State University), Piano Frequencies"
+    link: "https://hyperphysics.gsu.edu/hbase/Music/pianof.html"
+  - id: unsw-notes
+    bac: 2
+    ten: "UNSW Music Acoustics, Note names, MIDI numbers and frequencies"
+    link: "https://newt.phys.unsw.edu.au/jw/notes.html"
+  - id: unsw-clarinet
+    bac: 2
+    ten: "UNSW Music Acoustics, Acoustics of the clarinet (B4)"
+    link: "https://newt.phys.unsw.edu.au/music/clarinet/B4.html"
+  - id: unsw-woodwind
+    bac: 2
+    ten: "UNSW, Something about sound: woodwind"
+    link: "https://phys.unsw.edu.au/jw/woodwind.html"
+  - id: unsw-voice
+    bac: 2
+    ten: "UNSW Music Acoustics, The voice"
+    link: "https://newt.phys.unsw.edu.au/jw/voice.html"
+  - id: eiu-flute
+    bac: 2
+    ten: "Eastern Illinois University, Adventures in Physical Science (chương 12): so sánh sóng của sáo, piano, kèn trumpet"
+    link: "https://www.ux1.eiu.edu/~addavis/3050/Adventures/chapter_12/ch12_3.htm"
+  - id: hamilton
+    bac: 2
+    ten: "Physics of Musical Sound (SophSem 210), Class 11 Timbre handout, bảng từ về âm sắc (bright, hollow)"
+    link: "https://physerver.hamilton.edu/courses/Fall13/Phy175/ClassNotes/Class11_F13TimbreHandout.pdf"
+  - id: omt-intervals
+    bac: 2
+    ten: "Open Music Theory, Intervals"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/intervals/"
+  - id: omt-species
+    bac: 2
+    ten: "Open Music Theory, Introduction to Species Counterpoint"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/species-counterpoint/"
+  - id: sfu-consonance
+    bac: 2
+    ten: "Handbook for Acoustic Ecology (Simon Fraser University), Consonance"
+    link: "https://www.sfu.ca/sonic-studio-webdav/cmns/Handbook/Consonance.html"
+  - id: sfu-harmonic
+    bac: 2
+    ten: "Handbook for Acoustic Ecology (Simon Fraser University), Harmonic"
+    link: "https://www.sfu.ca/sonic-studio-webdav/cmns/Handbook/Harmonic.html"
+  - id: schoenberg
+    bac: 2
+    ten: "Arnold Schoenberg, Composition with Twelve Tones (bản đăng ở Rowan University)"
+    link: "https://users.rowan.edu/~clowney/Aesthetics/philos_artists_onart/Schoenberg_writings.htm"
+  - id: hp-mussca
+    bac: 2
+    ten: "HyperPhysics (Georgia State University), Musical scales: just intervals"
+    link: "https://hyperphysics.gsu.edu/hbase/Music/mussca.html"
+  - id: lynn
+    bac: 2
+    ten: "Ben Lynn (Stanford), Musical Scales and Tuning"
+    link: "https://crypto.stanford.edu/~blynn/sound/tuning.html"
+  - id: rush
+    bac: 2
+    ten: "Toby Rush, Fundamentals of Tonal Theory, Twelve-Tone Equal Temperament"
+    link: "https://tobyrush.com/book/text/ftt/ftt01.html"
+  - id: pianofund
+    bac: 2
+    ten: "Piano Fundamentals (giáo trình kỹ thuật viên chỉnh đàn), 2.2.3 Pythagorean, Meantone, Equal, and Well Temperaments"
+    link: "https://mail.pianofundamentals.com/book/en/2.2.3"
+  - id: iso16
+    bac: 1
+    ten: "ISO 16:1975, Acoustics — Standard tuning frequency (Standard musical pitch)"
+    link: "https://www.iso.org/standard/3601.html"
+  - id: leadstories
+    bac: 3
+    ten: "Lead Stories, kiểm chứng về chuẩn A = 440 Hz (dẫn Nature 27/5/1939, G. W. C. Kaye, International Standard of Concert Pitch)"
+    link: "https://leadstories.com/hoax-alert/2022/10/fact-check-tuning-standard-of-a-440-hz-was-not-driven-by-nazi-and-rockefeller-desire-for-discord.html"
+  - id: cod-pitch
+    bac: 2
+    ten: "The Concise Oxford Dictionary of Music, mục pitch, qua Encyclopedia.com"
+    link: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-theory-forms-and-instruments/pitch-music"
+  - id: esm415
+    bac: 2
+    ten: "Eastman School of Music, Baroque Ensemble: Historic Instruments"
+    link: "https://www.esm.rochester.edu/community/course/baroque-chamber-historic/"
+  - id: ema415
+    bac: 2
+    ten: "Early Music America, The Modern World of Early Brass"
+    link: "https://www.earlymusicamerica.org/emag-feature/the-modern-world-of-early-brass/"
+  - id: wiki-a440
+    bac: 3
+    ten: "Wikipedia, A440 (pitch standard) (bậc 3, chỉ để tìm; dẫn Nistl, Klavierstimmung)"
+    link: "https://en.wikipedia.org/wiki/A440_(pitch_standard)"
+  - id: mentalfloss
+    bac: 3
+    ten: "Mental Floss, Why Do Orchestras Tune to an A Note? (bậc 3)"
+    link: "https://www.mentalfloss.com/article/547437/why-orchestras-tune-to-440-hertz-a-note"
+  - id: cod-horn
+    bac: 2
+    ten: "The Concise Oxford Dictionary of Music, mục horn family (natural horn), qua Encyclopedia.com"
+    link: "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/horn-family"
+  - id: cod-fhorn
+    bac: 2
+    ten: "The Concise Oxford Dictionary of Music, mục French horn (natural horn, bàn tay trong loa kèn), qua Encyclopedia.com"
+    link: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-theory-forms-and-instruments/french-horn"
+  - id: cod-trumpet
+    bac: 2
+    ten: "The Concise Oxford Dictionary of Music, mục trumpet, qua Encyclopedia.com"
+    link: "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/trumpet"
+  - id: cod-harm
+    bac: 2
+    ten: "The Concise Oxford Dictionary of Music, mục harmonics, qua Encyclopedia.com"
+    link: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-history/harmonics"
+  - id: nhandan-bau
+    bac: 3
+    ten: "Báo Nhân Dân, Đàn bầu - \"đại sứ âm nhạc\" độc đáo của Việt Nam (báo chính thức, không có nguồn tốt hơn)"
+    link: "https://nhandan.vn/post-279091.html"
+  - id: wiki-bau
+    bac: 3
+    ten: "Wikipedia, Đàn bầu (bậc 3; dẫn Randy Raine-Reusch, Play the World, tr. 38)"
+    link: "https://en.wikipedia.org/wiki/%C4%90%C3%A0n_b%E1%BA%A7u"
+  - id: cheng
+    bac: 2
+    ten: "Tian Cheng, Simon Dixon, Matthias Mauch (Queen Mary University of London), Modelling the Decay of Piano Sounds"
+    link: "https://webspace.eecs.qmul.ac.uk/s.e.dixon/pub/2015/ChengDixonMauch-ICASSP2015-Decay.pdf"
+  - id: uiuc-whistle
+    bac: 2
+    ten: "University of Illinois, Physics 406 (báo cáo cuối kỳ của sinh viên, mùa xuân 2016), Human whistling"
+    link: "https://courses.physics.illinois.edu/phys406/sp2017/Student_Projects/Spring16/J_Mirabelli_X_Xu_I_Allali_Physics_406_Final_Report_Sp16.pdf"
+  - id: howard
+    bac: 2
+    ten: "Howard và Overy, Influences on pitching (nghiên cứu về hát hợp xướng không đệm)"
+    link: "https://abcd.org.uk/wp-content/uploads/2024/06/Influences-on-pitching-Howard-and-Overy.pdf"
+nhan_dinh:
+  - id: n1
+    cau: "Bài trả lời các câu hỏi \"vì sao\": vì sao quãng 8 và quãng 5 nghe hòa hợp, vì sao violin và sáo chơi cùng một nốt mà nghe khác nhau, và vì sao dàn nhạc Baroque lên dây thấp hơn dàn nhạc hiện đại."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Kiểm trên trang: các mục \"Vì sao có quãng hòa hợp?\", \"Âm sắc\", \"Chuẩn cao độ\" trả lời ba câu ấy (mục chuẩn cao độ nêu 415 Hz của nhạc Baroque)."
+  - id: n2
+    cau: "Nên đọc bài này sau bài 9: Quãng."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Kiểm trên trang: nhac-ly/09-quang đã chuyển, có mục \"Thuận tai và nghịch tai\" mà bài này dựa vào; nhac-ly/index viết \"đọc lúc nào cũng được, sau bài 9\"."
+  - id: n3
+    cau: "Âm thanh là dao động truyền đi trong không khí (hay vật chất khác)."
+    loai: dinh-nghia
+    nguon: [os-sound]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: \"Âm thanh là dao động truyền qua không khí\". Chữ mới thêm \"(hay vật chất khác)\". OpenStax 17.1: \"The physical phenomenon of sound is defined to be a disturbance of matter that is transmitted from its source outward.\""
+  - id: n4
+    cau: "Cao độ ứng với tần số (số dao động mỗi giây, đơn vị Hz): cao hay thấp."
+    loai: dinh-nghia
+    nguon: [os-pitch, sj-acoustics]
+    ket_qua: dung
+    ghi_chu: "OpenStax 17.2: \"Perception of frequency is called pitch.\" Schmidt-Jones 5.1: \"The word that musicians use for frequency is pitch.\""
+  - id: n5
+    cau: "Độ to nhỏ của âm thanh ứng với biên độ dao động (bảng gọi là \"cường độ\")."
+    loai: dinh-nghia
+    nguon: [sj-acoustics]
+    ket_qua: dung
+    ghi_chu: "Schmidt-Jones 5.1: \"For sound waves, the bigger the amplitude, the louder the sound.\" Chú ý: trong vật lý cường độ âm (W/m2) tỉ lệ với bình phương biên độ và khác độ to; ở mức giới thiệu của bài, giữ cách nói này."
+  - id: n6
+    cau: "Âm sắc, \"giọng\" riêng của từng nhạc cụ, phụ thuộc vào tỉ lệ các bồi âm trong âm thanh."
+    loai: dinh-nghia
+    nguon: [sj-timbre, os-columns]
+    ket_qua: dung
+    ghi_chu: "Schmidt-Jones 5.3: yếu tố chính của âm sắc là \"the relative loudness of all the different harmonics compared to each other\". OpenStax 17.5: sự pha trộn các bồi âm \"gives various musical instruments (and human voices) their distinctive characteristics\". Cách bắt đầu và tắt dần của âm cũng góp phần; bài nhắc phần tắt dần ở mục Âm sắc."
+  - id: n7
+    cau: "Tai người nghe được khoảng 20 Hz đến 20.000 Hz."
+    loai: so-lieu
+    nguon: [os-hearing]
+    ket_qua: dung
+    ghi_chu: "OpenStax 17.6: \"Normal human hearing encompasses frequencies from 20 to 20,000 Hz\". Schmidt-Jones 5.1 ghi 20 đến khoảng 17.000 Hz; bài dùng số phổ biến."
+  - id: n8
+    cau: "Phím thấp nhất của piano (La0) khoảng 27,5 Hz, phím cao nhất (Đô8) khoảng 4.186 Hz."
+    loai: so-lieu
+    nguon: [hp-piano, unsw-notes]
+    ket_qua: dung
+    ghi_chu: "HyperPhysics: \"The piano has 88 keys which span the frequency range 27.5 Hz (A0) to 4186 Hz (C8).\" UNSW: công thức f = 440 x 2^((m-69)/12), C8 là MIDI 108: 4186,0 Hz."
+  - id: n9
+    cau: "Dây đàn rung không chỉ cả dây (âm cơ bản) mà đồng thời rung từng nửa dây, một phần ba, một phần tư dây…; mỗi kiểu rung cho tần số gấp 2, 3, 4, 5… lần âm cơ bản."
+    loai: quy-tac
+    nguon: [sj-standing, sfu-harmonic]
+    ket_qua: dung
+    ghi_chu: "Schmidt-Jones 5.2: dây có thể rung \"in halves ... or in thirds, fourths, and so on\". Handbook SFU: các bồi âm \"are integer multiples of the fundamental\"."
+  - id: n10
+    cau: "Các kiểu rung ấy là bồi âm (harmonics); đánh số từ âm cơ bản thì âm cơ bản là bồi âm số 1, gấp đôi tần số là số 2; một số tài liệu dùng overtones cho các bồi âm trên âm cơ bản và đánh số lệch một (overtone thứ nhất là bồi âm số 2)."
+    loai: dinh-nghia
+    nguon: [os-columns, sj-timbre, sfu-harmonic, cod-harm]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: \"(overtones, harmonics)\", rồi bảng ghi \"bồi âm số 1 = âm cơ bản\": lẫn hai cách đánh số. OpenStax 17.5: \"The fundamental is the first harmonic, the first overtone is the second harmonic, and so on.\" Schmidt-Jones 5.3: \"That is the fundamental, or first harmonic.\"; Handbook SFU: \"the first numbered overtone is the second harmonic\". Chữ mới nói rõ cách đánh số của bài và cách đánh số của overtones."
+  - id: n11
+    cau: "Ta không nghe các bồi âm như những nốt riêng; chúng hòa vào nhau thành âm thanh ta nghe."
+    loai: dinh-nghia
+    nguon: [sj-timbre]
+    ket_qua: dung
+    ghi_chu: "Schmidt-Jones 5.3: \"they are blended together so well that you do not hear them as separate notes at all\"."
+  - id: n12
+    cau: "Chuỗi bồi âm trên Đô2: bồi âm 1 là Đô2, 2 là Đô3, 3 là Sol3, 4 là Đô4, 6 là Sol4, 8 là Đô5 (nốt gần nhất; 5 và 7 ở hai câu sau)."
+    loai: so-lieu
+    nguon: [unsw-notes]
+    ket_qua: dung
+    ghi_chu: "Tính: Đô2 = 65,406 Hz; x2 = 130,8 (Đô3), x3 = 196,2 (Sol3 = 196,0), x4 = 261,6 (Đô4), x6 = 392,4 (Sol4 = 392,0), x8 = 523,3 (Đô5). Tên nốt theo công thức MIDI của UNSW (Đô giữa = Đô4)."
+  - id: n13
+    cau: "Bồi âm số 5 của Đô2 gần nhất với Mi4 và thấp hơn Mi4 khoảng 14 cent."
+    loai: so-lieu
+    nguon: [unsw-notes, hp-mussca, rush]
+    ket_qua: dung
+    ghi_chu: "Tính: 5/4 = 386,31 cent so với 400 cent của Mi bình quân: thấp hơn 13,7 cent. Tỉ lệ 5:4 theo HyperPhysics; cent = 1/1200 quãng 8 theo Toby Rush."
+  - id: n14
+    cau: "Bồi âm số 7 của Đô2 gần nhất với Si♭4 và thấp hơn Si♭4 khoảng 31 cent."
+    loai: so-lieu
+    nguon: [unsw-notes, rush]
+    ket_qua: dung
+    ghi_chu: "Tính: 1200 log2(7/4) = 968,83 cent so với 1000 cent của Si♭ bình quân: thấp hơn 31,2 cent."
+  - id: n15
+    cau: "Giữa các bồi âm liên tiếp: 1-2 là quãng 8, 2-3 quãng 5, 3-4 quãng 4, 4-5 quãng 3 trưởng, 5-6 quãng 3 thứ."
+    loai: quy-tac
+    nguon: [sj-harm2, hp-mussca]
+    ket_qua: dung
+    ghi_chu: "Schmidt-Jones 6.6: bồi âm 2-3 là quãng 5 đúng, bồi âm 3 và 4 là quãng 4; HyperPhysics: quãng 8 là 2:1, 5 đúng 3:2, 4 đúng 4:3, 3 trưởng 5:4, 3 thứ 6:5. Các tỉ lệ ấy chính là n/(n-1) của bồi âm liên tiếp."
+  - id: n16
+    cau: "Các bồi âm 4, 5, 6 tạo thành hợp âm Đô trưởng (Đô – Mi – Sol) với tỉ lệ tần số 4 : 5 : 6; hợp âm trưởng nằm sẵn trong chuỗi bồi âm của nốt."
+    loai: quy-tac
+    nguon: [hp-mussca]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: \"Hợp âm trưởng có sẵn trong tự nhiên, bên trong mỗi nốt nhạc.\" Sửa vì \"mỗi nốt nhạc\" nói quá (nốt không có bồi âm thì không); thêm tỉ lệ 4:5:6 suy từ 5:4 (Mi/Đô) và 6:5 (Sol/Mi) của HyperPhysics; Mi của bồi âm 5 thấp hơn Mi bình quân (n13)."
+  - id: n17
+    cau: "Công cụ chuỗi bồi âm cho chọn âm cơ bản Đô2 (65,4 Hz), La2 (110 Hz) hay Đô3 (130,8 Hz), hiện 16 bồi âm, có nút nghe lần lượt 1–16 và nghe các bồi âm đã chọn cùng lúc."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Kiểm trong src/scripts/am-hoc.js (AM_CO_BAN, oBoiAm, veBoiAm) và acoustics.js cũ. 65,406 / 110 / 130,81 Hz là tần số của Đô2, La2, Đô3 (công thức UNSW)."
+  - id: n18
+    cau: "Theo cách giải thích cổ điển của Helmholtz, hai nốt có tỉ lệ tần số đơn giản thì có nhiều bồi âm trùng nhau, nên tai nghe chúng \"hòa\" vào nhau."
+    loai: quy-tac
+    nguon: [sfu-consonance]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ nói như chắc chắn, không nêu tên lý thuyết. Handbook SFU: giải thích của Helmholtz là \"the coincidence of partials resulted in consonance\"; nên thêm \"theo cách giải thích cổ điển của Helmholtz\"."
+  - id: n19
+    cau: "Tỉ lệ tần số của các quãng thuần: 8 đúng 2:1, 5 đúng 3:2, 4 đúng 4:3, 3 trưởng 5:4, 3 thứ 6:5, 2 thứ 16:15."
+    loai: so-lieu
+    nguon: [hp-mussca, lynn]
+    ket_qua: dung
+    ghi_chu: "HyperPhysics: 2:1, 3:2, 4:3, 5:4, 6:5 (just intervals). Ben Lynn: \"diatonic = 16/15\" (nửa cung thuần)."
+  - id: n20
+    cau: "Quãng 8 đúng và quãng 5 đúng là thuận tai hoàn toàn."
+    loai: dinh-nghia
+    nguon: [omt-species]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ ở cột \"Cảm giác\": 8 đúng \"Gần như một nốt\", 5 đúng \"Rất vững, rỗng\"; thay bằng cột \"Phân loại (bài 9)\" vì cảm giác không có nguồn. OMT: \"perfect consonances: perfect unisons, fifths, and octaves\"."
+  - id: n21
+    cau: "Quãng 4 đúng tùy ngữ cảnh: thuận giữa hai bè trên, nghịch khi có bè trầm."
+    loai: dinh-nghia
+    nguon: [omt-species]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: \"Vững\". OMT: quãng 4 đúng \"dissonant when it involves the lowest voice\" và \"consonant when it occurs between two upper voices\". Khớp bảng ở bài 9 (đã khóa)."
+  - id: n22
+    cau: "Quãng 3 trưởng và 3 thứ là thuận tai không hoàn toàn."
+    loai: dinh-nghia
+    nguon: [omt-species]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: 3 trưởng \"Ngọt, sáng\", 3 thứ \"Ngọt, tối\". OMT: \"imperfect consonances: major and minor thirds and sixths\"."
+  - id: n23
+    cau: "Quãng 2 thứ là nghịch tai."
+    loai: dinh-nghia
+    nguon: [omt-species]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: \"Chói, nghịch\". OMT: dissonances gồm \"all seconds, sevenths, and diminished and augmented intervals\"."
+  - id: n24
+    cau: "Quan niệm quãng nào là thuận tai đã đổi nhiều qua lịch sử và khác nhau giữa các nền văn hóa."
+    loai: lich-su
+    nguon: [sfu-consonance, omt-intervals]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: \"cảm giác thuận và nghịch còn phụ thuộc vào văn hóa và thói quen nghe\". Handbook SFU: \"The definition of which intervals are consonant has changed remarkably throughout history, and varies among cultures.\" OMT Intervals: \"These categorizations have varied with milieu.\""
+  - id: n25
+    cau: "Một số nhà soạn nhạc thế kỷ 20 dùng quãng nghịch tai ngang hàng với thuận tai."
+    loai: lich-su
+    nguon: [schoenberg]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: \"âm nhạc thế kỷ 20 dùng nghịch tai như màu sắc\": \"như màu sắc\" không có nguồn, \"âm nhạc thế kỷ 20\" nói chung quá rộng. Schoenberg: \"emancipation of the dissonance\" là coi nghịch âm dễ hiểu ngang thuận âm: \"treats dissonances like consonances\"."
+  - id: n26
+    cau: "Bảng \"thuận tai và nghịch tai\" nằm ở bài 9."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Kiểm trên src/content/docs/nhac-ly/09-quang.md, mục \"## Thuận tai và nghịch tai\" (bảng Loại, Quãng, Độ ổn định); các cách phân loại ở n20 đến n23 khớp bảng ấy."
+  - id: n27
+    cau: "Công cụ phổ có bốn nút: \"Bật micro\", \"Phát Đô3: piano mẫu\", \"Phát Đô3: âm tổng hợp\", \"Phát Đô3: sóng sin\"; phổ vẽ trục tần số 50–5000 Hz (thang log)."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Kiểm trong src/scripts/am-hoc.js (vePho, PHO_GOI_Y) và spectrum.js cũ. Nút phát nốt MIDI 48 = Đô3 (sóng sin 130,81 Hz). Các bước 1 đến 4 của trang đúng thứ tự nút. Nút micro mới bật và tắt được (\"Tắt micro\")."
+  - id: n28
+    cau: "Sóng sin chỉ có một đỉnh trong phổ vì không có bồi âm; âm nghe trơn, nhạt."
+    loai: quy-tac
+    nguon: [sj-timbre, uiuc-whistle]
+    ket_qua: dung
+    ghi_chu: "Sóng sin có một tần số duy nhất nên phổ một đỉnh. Schmidt-Jones 5.3: \"Sounds that have only one frequency are not very interesting or pretty.\""
+  - id: n29
+    cau: "Âm tổng hợp của công cụ có vài đỉnh ở bồi âm 1, 2, 3…"
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Kiểm trong src/scripts/am-thanh.js (dòng 258–259): sóng tam giác (bồi âm lẻ) cộng sóng sin ở 2 lần tần số, nên có bồi âm 1, 2, 3, 5, 7…"
+  - id: n30
+    cau: "Piano mẫu cho rất nhiều đỉnh, mạnh yếu khác nhau, và các bồi âm tắt dần theo thời gian khác nhau."
+    loai: quy-tac
+    nguon: [cheng]
+    ket_qua: dung
+    ghi_chu: "Cheng, Dixon, Mauch: \"high frequency partials decay faster\", tốc độ tắt dần thay đổi theo tần số. Piano mẫu của site là bản thu Salamander Grand Piano (audio.js cũ, dòng 2)."
+  - id: n31
+    cau: "Huýt sáo cho phổ chỉ có một đỉnh trội, các bồi âm yếu; giọng hát có nhiều bồi âm hơn, và mỗi nguyên âm (\"a\", \"u\"…) cho các đỉnh mạnh yếu khác nhau."
+    loai: quy-tac
+    nguon: [uiuc-whistle, unsw-voice]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: \"huýt sáo cho phổ gần như sóng sin; giọng hát nguyên âm a có nhiều bồi âm hơn u\". Không tìm được nguồn nói \"a\" nhiều bồi âm hơn \"u\". Báo cáo Illinois Physics 406: tiếng huýt \"display a single, dominant frequency and ... weaker overtone harmonics\". UNSW voice: với hai nguyên âm khác nhau \"the resonances occur at different frequencies\", chen lẫn các \"voice harmonics\"."
+  - id: n32
+    cau: "Với đàn cơ, chơi một nốt trầm rồi một nốt cao và so số đỉnh bồi âm trong phổ."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: "Hướng dẫn dùng công cụ, không phải nhận định về sự kiện."
+  - id: n33
+    cau: "Sáo, ở âm vực trung, gần như chỉ có âm cơ bản và rất ít bồi âm khác, nên nghe tròn và trong."
+    loai: quy-tac
+    nguon: [eiu-flute, unsw-woodwind]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: \"Sáo gần như chỉ có âm cơ bản và vài bồi âm yếu\". EIU: \"A flute has a strong fundamental frequency of 262 Hz and practically no other harmonics or overtones\" (Đô giữa); chỉ có nguồn cho âm vực trung, nên thêm \"ở âm vực trung\". \"Tròn và trong\" là mô tả cảm nhận."
+  - id: n34
+    cau: "Clarinet ở âm vực trầm có các bồi âm lẻ (1, 3, 5, 7) mạnh hơn hẳn các bồi âm chẵn, tạo âm sắc \"rỗng\" đặc trưng."
+    loai: quy-tac
+    nguon: [unsw-clarinet, unsw-woodwind, sj-timbre, hamilton]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ không nêu âm vực. UNSW: ở quãng thấp \"the first and third harmonics are strong, and the second is weak. This preponderance of odd harmonics gives the clarinet in its low range the characteristic hollow sound\"; ở âm vực cao các bồi âm chẵn khá mạnh trở lại. Hamilton: \"hollow\" ứng với \"missing the even numbered low partials\"."
+  - id: n35
+    cau: "Sáo và oboe chơi cùng một nốt vẫn nghe khác nhau vì tỉ lệ bồi âm khác nhau; âm sắc càng \"sáng\" thì các bồi âm cao càng mạnh."
+    loai: dinh-nghia
+    nguon: [sj-timbre, hamilton]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: \"Violin và oboe có rất nhiều bồi âm mạnh, nên nghe sáng và giàu.\" Không tìm được nguồn đọc được nêu độ mạnh bồi âm của violin và oboe, nên viết lại điều có nguồn. Schmidt-Jones 5.3: \"an oboe sounds different from a flute\", khác ở độ lớn tương đối của các bồi âm; Hamilton: \"Bright\" là \"possessing a lot of high frequency partials with significant amplitude\"."
+  - id: n36
+    cau: "Trong công cụ chuỗi bồi âm có thể chọn chỉ các ô lẻ (1, 3, 5, 7) rồi nghe cùng lúc."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Kiểm trong src/scripts/am-hoc.js: ô đánh dấu cho từng bồi âm 1–16 và nút \"Nghe các bồi âm đã chọn cùng lúc\"."
+  - id: n37
+    cau: "Kèn đồng không có van (như kèn trumpet tự nhiên thời Bach) chỉ chơi được các nốt trong chuỗi bồi âm của ống kèn."
+    loai: quy-tac
+    nguon: [sj-harm2, cod-trumpet, cod-horn]
+    ket_qua: dung
+    ghi_chu: "Schmidt-Jones 6.6: \"A brass instrument could play only the notes of one harmonic series.\" COD (trumpet): kèn không van chỉ có các \"natural notes of harmonic series\"; COD (horn family): kèn horn tự nhiên bị giới hạn ở một cao độ của chuỗi bồi âm tại mỗi thời điểm. \"Thời Bach\" vì COD nói kèn trumpet Baroque (clarino) chơi trong chuỗi ấy."
+  - id: n38
+    cau: "Người chơi kèn đồng không van đổi nốt bằng cách thay đổi môi."
+    loai: quy-tac
+    nguon: [sj-harm2]
+    ket_qua: dung
+    ghi_chu: "Schmidt-Jones 6.6: \"By vibrating the lips at different speeds, the player can cause a harmonic of the air column to sound\"."
+  - id: n39
+    cau: "Người chơi kèn horn thời Mozart còn đặt bàn tay vào loa kèn để chỉnh cao độ một số nốt."
+    loai: quy-tac
+    nguon: [cod-fhorn]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: \"bịt bàn tay vào loa kèn để có thêm những nốt nằm giữa\". COD (French horn): \"Certain notes not in tune with the modern tempered scale were modified by the insertion of a hand in the bell\"; không nói rõ \"thêm nốt\", nên sửa theo nguồn. COD: kèn tự nhiên là \"the instr. for which the older classical composers wrote\"."
+  - id: n40
+    cau: "Đàn bầu của Việt Nam chỉ có một dây và được chơi bằng bồi âm: người chơi chạm nhẹ bàn tay vào các điểm chia dây trong khi gảy, còn cần đàn (vòi đàn) uốn cao độ lên xuống."
+    loai: quy-tac
+    nguon: [nhandan-bau, wiki-bau]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: \"dùng một dây duy nhất, và gần như mọi nốt đều là bồi âm: ... chạm nhẹ cạnh bàn tay\". Báo Nhân Dân: đàn một dây \"duy nhất phát ra âm bồi\", người chơi uốn vòi đàn để đổi sức căng dây, bàn tay chạm vào thân dây. Wikipedia (bậc 3, dẫn Raine-Reusch): các nút dây là bồi âm 1 đến 7; một ngón của bàn tay phải đặt nhẹ trên dây; cần đàn đẩy vào hay kéo ra để hạ hay nâng cao độ. Bỏ \"gần như mọi nốt\" và \"cạnh\" vì không nguồn nào nói thế. Nguồn tiếng Việt chỉ là báo chính thức; chưa có nguồn học thuật đọc được."
+  - id: n41
+    cau: "Nghệ sĩ violin, cello, guitar dùng bồi âm (harmonics) để tạo những nốt cao trong veo như tiếng sáo."
+    loai: quy-tac
+    nguon: [cod-harm, sj-harm2]
+    ket_qua: dung
+    ghi_chu: "COD (harmonics): trên đàn dây, tạo bồi âm \"by touching the string lightly at various points (nodes)\", cho âm \"flute-like\". Schmidt-Jones 6.6: \"the string is touched very, very lightly\"."
+  - id: n42
+    cau: "Nếu lên dây sao cho mọi quãng 5 đều thuần (3:2) rồi đi hết vòng 12 quãng 5, ta không quay về đúng nốt ban đầu: dư ra khoảng 23,5 cent, gọi là dấu phẩy Pythagore."
+    loai: so-lieu
+    nguon: [lynn, pianofund, rush]
+    ket_qua: dung
+    ghi_chu: "Tính: (3/2)^12 / 2^7 = 3^12/2^19 = 531441/524288 = 1,01364, tức 23,46 cent (Ben Lynn: \"3^12/2^19\"). Piano Fundamentals: \"the Pythagorean comma, which is about 23 cents\"."
+  - id: n43
+    cau: "Không có cách nào để mọi quãng đều thuần ở mọi giọng; các hệ lên dây của phương Tây là những cách thỏa hiệp."
+    loai: quy-tac
+    nguon: [sj-tuning, sj-harm2]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: \"Lịch sử âm nhạc phương Tây là lịch sử của các cách thỏa hiệp\" (quá rộng: không phải cả lịch sử âm nhạc). Schmidt-Jones 6.6: trong hệ bình quân \"all intervals except for octaves are slightly out of tune\"; 8.2: hệ Pythagore để lại quãng 5 \"wolf\", mean-tone có \"wolf intervals\"."
+  - id: n44
+    cau: "Hệ Pythagore: mọi quãng 5 thuần, quãng 3 trưởng rất chói; dùng ở thời Trung cổ, còn dùng đến thời Phục hưng."
+    loai: lich-su
+    nguon: [sj-tuning]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: chỉ \"Trung cổ\". Schmidt-Jones 8.2: hệ Pythagore \"widely used in medieval and Renaissance times\"; quãng 3 \"simply too far away from the pure major and minor thirds\", thành \"a dissonance\"."
+  - id: n45
+    cau: "Hệ mean-tone: quãng 3 trưởng thuần; một vài giọng chơi được rất hay, các giọng xa thì không dùng được; dùng ở thời Phục hưng và Baroque."
+    loai: lich-su
+    nguon: [sj-tuning]
+    ket_qua: dung
+    ghi_chu: "Schmidt-Jones 8.2: mean-tone \"uses the pure major third\", \"problem with wolf intervals\", rất phổ biến ở châu Âu từ thế kỷ 16 đến 18; một cây đàn lên dây thuần chơi \"badly out of tune in a distant key\"."
+  - id: n46
+    cau: "Hệ bình quân cải tiến (well temperament): mọi giọng đều chơi được nhưng mỗi giọng có \"màu\" hơi khác; phổ biến ở thế kỷ 18–19, bắt đầu từ cuối Baroque."
+    loai: lich-su
+    nguon: [sj-tuning]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: \"Cuối Baroque\". Schmidt-Jones 8.2: \"well temperament tunings that were very popular in the 18th and 19th centuries\"; \"tuning would be noticeably different in each key, but every key would still be pleasant-sounding and usable\"; các giọng \"aligned with specific colors and emotions\"."
+  - id: n47
+    cau: "Bình quân luật (Das Wohltemperierte Klavier) của Bach thường được cho là viết cho kiểu lên dây well temperament; Bach dùng hệ chính xác nào thì còn tranh cãi."
+    loai: lich-su
+    nguon: [sj-tuning, pianofund]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: \"Bình quân luật của Bach dành cho kiểu lên dây này\" (nói chắc hơn nguồn). Schmidt-Jones 8.2: Bach viết nó \"partly to promote switching to a well temperament\"; Piano Fundamentals: chưa ngã ngũ Bach dùng hệ nào (đề xuất của Kellner 1975 bị đa số thợ chỉnh đàn bác; đề xuất của Lehman còn bàn)."
+  - id: n48
+    cau: "Hệ bình quân (equal temperament) chia quãng 8 thành 12 nửa cung bằng hệt nhau: mỗi nửa cung 100 cent, tỉ lệ 2^(1/12) ≈ 1,0595."
+    loai: dinh-nghia
+    nguon: [sj-tuning, rush]
+    ket_qua: dung
+    ghi_chu: "Schmidt-Jones 8.2: \"The octave is divided into twelve equally spaced half steps\", tỉ lệ là căn bậc 12 của 2. Toby Rush: một cent là 1/1200 quãng 8; trong hệ bình quân mọi nốt cách nhau đúng 100 cent. Tính: 2^(1/12) = 1,059463."
+  - id: n49
+    cau: "Hệ bình quân là chuẩn cho piano từ khoảng giữa thế kỷ 19 đến nay."
+    loai: lich-su
+    nguon: [pianofund]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: \"từ thế kỷ 19\". Piano Fundamentals: \"Since about 1850, ET had been almost universally accepted\". Chỉ có một nguồn bậc 2 (sách kỹ thuật chỉnh đàn); nên nhờ lượt 2 tìm nguồn thứ hai."
+  - id: n50
+    cau: "Hệ bình quân cho phép chơi ở mọi giọng và chuyển giọng tự do, đổi lại mọi quãng (trừ quãng 8) đều lệch một chút so với quãng thuần."
+    loai: quy-tac
+    nguon: [sj-tuning, sj-harm2]
+    ket_qua: dung
+    ghi_chu: "Schmidt-Jones 8.2: bình quân \"does not require retuning for key changes\"; 6.6: \"all intervals except for octaves are slightly out of tune\"."
+  - id: n51
+    cau: "Quãng 5 bình quân chỉ lệch khoảng 2 cent so với quãng 5 thuần."
+    loai: so-lieu
+    nguon: [lynn, rush]
+    ket_qua: dung
+    ghi_chu: "Tính: 700 cent (bình quân) so với 1200 log2(3/2) = 701,96 cent: lệch 1,96 cent. Schmidt-Jones 8.2 cũng ghi quãng 5 thuần là 702 cent."
+  - id: n52
+    cau: "Quãng 3 trưởng bình quân rộng hơn quãng 3 trưởng thuần khoảng 14 cent."
+    loai: so-lieu
+    nguon: [lynn, rush]
+    ket_qua: dung
+    ghi_chu: "Tính: 400 so với 1200 log2(5/4) = 386,31 cent: rộng hơn 13,69 cent."
+  - id: n53
+    cau: "Quãng 3 trưởng bình quân có tiếng \"rung\" (phách) mà tai luyện tốt nghe thấy."
+    loai: quy-tac
+    nguon: [sj-tuning]
+    ket_qua: dung
+    ghi_chu: "Schmidt-Jones 8.2: các hệ lệch quãng thuần cho \"regular beats\". Với bồi âm 5 của Đô4 và bồi âm 4 của Mi4 bình quân, phách khoảng 10,4 lần mỗi giây (n55): dễ nghe."
+  - id: n54
+    cau: "Công cụ lên dây có bốn nút (5 đúng bình quân 700 cent, 5 đúng thuần 3:2 702,0 cent, 3 trưởng bình quân 400 cent, 3 trưởng thuần 5:4 386,3 cent), mỗi nút phát Đô4 cùng nốt trên trong 3 giây."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Kiểm trong src/scripts/am-hoc.js (QUANG_LEN_DAY, veLenDay, mountLenDay: dai 3, sóng răng cưa) và acoustics.js cũ. Các số cent kiểm ở n48, n51, n52 (701,96 làm tròn 702,0; 386,31 làm tròn 386,3)."
+  - id: n55
+    cau: "Hình \"phách\" cho thấy: bồi âm 5 của Đô4 là 1308,1 Hz; bồi âm 4 của Mi4 bình quân là 1318,5 Hz; hai bồi âm lệch nhau khoảng 10,4 Hz nên âm lượng dâng lên hạ xuống khoảng 10 lần mỗi giây; ở quãng 3 thuần (5:4) hai bồi âm trùng nhau nên âm thanh đứng yên."
+    loai: so-lieu
+    nguon: [unsw-notes, hp-mussca]
+    ket_qua: dung
+    ghi_chu: "Tính với La4 = 440 Hz: Đô4 = 261,626 Hz, x5 = 1308,13; Mi4 bình quân = 329,628 Hz, x4 = 1318,51; hiệu 10,38 Hz. Quãng thuần: Mi4 = 261,626 x 5/4 = 327,03 Hz, x4 = 1308,13 trùng. Kiểm đường bao trong src/components/hinh/beats.html: các chỗ lõm cách nhau khoảng 0,098 giây, đúng 10,4 Hz. LỖI NHỎ CHO NGƯỜI GIAO: chữ trong hình dùng dấu chấm thập phân (\"10.4 Hz\", \"0.1 s\") khi chú thích dưới hình viết dấu phẩy (\"10,4 Hz\"); nên đổi chữ trong hình (và aria-label) sang dấu phẩy cho khớp quy ước số của site (am-hoc.js đã dùng dấu phẩy)."
+  - id: n56
+    cau: "Ca sĩ, nhạc công kèn và nhiều nhạc cụ dây không cố định cao độ nên khi hát hoặc chơi hợp âm họ thường điều chỉnh về phía quãng thuần; đó có thể là một lý do dàn hợp xướng không nhạc đệm hay một dàn dây giỏi nghe \"trong\"."
+    loai: quy-tac
+    nguon: [sj-tuning, sj-harm2, howard]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: \"Ca sĩ, dàn dây và kèn ... thường tự điều chỉnh về phía quãng thuần ... Đó là một lý do một tứ tấu đàn dây hay dàn hợp xướng giỏi nghe trong\". Schmidt-Jones 8.2: chỉnh cao độ lúc chơi \"comes naturally\" với \"vocalists, most wind instruments, and many string instruments\"; 6.6: \"musicians have a tendency to revert to true harmonics when they can\" (hợp xướng không đệm, dàn kèn đồng); Howard và Overy: ba tứ ca nhóm bán chuyên hát gần với dự đoán của just intonation. Không tìm được nguồn cho tứ tấu dây, và vế \"là một lý do\" là suy đoán nên viết \"có thể\"."
+  - id: n57
+    cau: "440 Hz cho La4 được một hội nghị quốc tế ở London khuyến nghị năm 1939."
+    loai: nam
+    nguon: [leadstories, cod-pitch]
+    ket_qua: dung
+    ghi_chu: "Lead Stories (dẫn Nature 27/5/1939 của G. W. C. Kaye): họp 11–12/5/1939 ở London, đại biểu \"unanimously agreed to recommend 440 cycles per second\". COD (pitch): \"int. agreement of 1939\". Nature đọc không được (chặn), nên nguồn trực tiếp chưa mở; lượt 2 nên tìm nguồn bậc 2 về hội nghị."
+  - id: n58
+    cau: "440 Hz trở thành tiêu chuẩn ISO 16."
+    loai: danh-muc
+    nguon: [iso16]
+    ket_qua: dung
+    ghi_chu: "Trang iso.org/standard/3601.html: \"Acoustics — Standard tuning frequency (Standard musical pitch)\": \"Specifies the frequency for the note A in the treble stave and shall be 440 Hz\", ấn bản 1975-01."
+  - id: n59
+    cau: "440 Hz là chuẩn phổ biến nhất hiện nay."
+    loai: so-lieu
+    nguon: [iso16, cod-pitch]
+    ket_qua: dung
+    ghi_chu: "ISO 16 quy định 440 Hz; COD: \"the A directly above middle C has 440 ... vibrations per second\", chuẩn quốc tế thay chuẩn 435 của Paris (1859). \"Phổ biến nhất\" là diễn đạt chung; không có số đo."
+  - id: n60
+    cau: "440 Hz là chuẩn của máy lên dây trên site này."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Kiểm trên site cũ ../opus-zero/docs/luyen-tap/hat-lai.md dòng 23: \"Máy dựa trên La4 = 440 Hz\"; mục \"## Máy lên dây { #may-len-day }\" (dòng 17) là đích của link. Trang luyen-tap/hat-lai chưa chuyển: lô chuyển nó phải giữ máy lên dây ở La4 = 440 Hz và id #may-len-day. Ngược lại hat-lai.md cũ link tới am-hoc.md#chuan-cao-o-la-440-hz (id cũ do plugin id-cu.mjs sinh tự động, giữ nguyên); tieng-dan.md và cap-nhat.md link tới #am-sac (cũng giữ)."
+  - id: n61
+    cau: "Nhiều dàn nhạc châu Âu lên dây cao hơn một chút, khoảng 442–444 Hz."
+    loai: so-lieu
+    nguon: [wiki-a440, mentalfloss]
+    ket_qua: null
+    ghi_chu: "chưa chắc: chỉ nguồn bậc 3. Chữ cũ: \"khoảng 442–443 Hz, cho âm thanh sáng hơn\" (đã bỏ \"sáng hơn\", ý kiến của nhạc công, và nới thành 442–444). Wikipedia (dẫn Franz Nistl, Klavierstimmung): ở châu Âu lục địa La4 thường 440 đến 444 Hz; Mental Floss: Vienna Philharmonic lên dây 443 Hz. Không tìm được nguồn bậc 1–2 mở được; đề nghị bỏ câu nếu lượt 2 cũng không tìm được."
+  - id: n62
+    cau: "Các nhóm chơi nhạc Baroque bằng nhạc cụ cổ thường dùng 415 Hz, thấp hơn gần đúng nửa cung."
+    loai: so-lieu
+    nguon: [esm415, ema415, cod-pitch]
+    ket_qua: dung
+    ghi_chu: "Eastman: nhạc cụ cổ \"at low pitch (A=415)\"; Early Music America: \"a baroque orchestra tuned to a' = 415hz\". COD (pitch): giữa 1700 và 1850 La biến thiên giữa 415 và 429. Tính: 1200 log2(440/415) = 101,3 cent, tức khoảng một nửa cung."
+  - id: n63
+    cau: "Khi nghe một bản thu Bach \"theo phong cách lịch sử\", bạn có thể thấy nó thấp hơn bản nhạc in nửa cung."
+    loai: quy-tac
+    nguon: [esm415, ema415]
+    ket_qua: dung
+    ghi_chu: "Hệ quả của n62: 415 Hz thấp hơn 440 Hz khoảng 101 cent. Early Music America: kèn horn 415 và 440 lệch nhau một nửa cung (\"415 F\" so với \"440 E\")."
+  - id: n64
+    cau: "Trang nghe-nhac/doc-ten-tac-pham nói về bản thu theo phong cách lịch sử và La = 415 Hz của nhạc Baroque."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Kiểm trên site cũ ../opus-zero/docs/nghe-nhac/doc-ten-tac-pham.md, dòng 81: \"biểu diễn theo phong cách lịch sử ... lên dây thấp hơn (thường A = 415 Hz cho nhạc Baroque, xem Âm học)\". Trang đích chưa chuyển: lô chuyển nó giữ đoạn ấy và link ngược về nhac-ly/am-hoc."
+  - id: n65
+    cau: "Bồi âm số 3 của nốt Đô2 là Sol3 (không phải Mi3 hay Đô3): gấp 3 lần tần số, cao hơn bồi âm số 2 (Đô3) một quãng 5."
+    loai: so-lieu
+    nguon: [unsw-notes, hp-mussca]
+    ket_qua: dung
+    ghi_chu: "Tính: 65,406 x 3 = 196,2 Hz = Sol3 (196,0 Hz); 3/2 là quãng 5 đúng (HyperPhysics) nên cao hơn Đô3 một quãng 5."
+  - id: n66
+    cau: "Tỉ lệ tần số của quãng 5 thuần là 3 : 2 (2 : 1 là quãng 8, 5 : 4 là quãng 3 trưởng)."
+    loai: so-lieu
+    nguon: [hp-mussca]
+    ket_qua: dung
+    ghi_chu: "HyperPhysics: octave 2:1, fifth 3:2, major third 5:4."
+  - id: n67
+    cau: "Trong hệ bình quân, một nửa cung bằng 100 cent; quãng 8 = 1200 cent chia đều cho 12 nửa cung."
+    loai: so-lieu
+    nguon: [rush, sj-tuning]
+    ket_qua: dung
+    ghi_chu: "Toby Rush: 1 cent = 1/1200 quãng 8, hệ bình quân mọi nốt cách nhau 100 cent."
+  - id: n68
+    cau: "Âm sắc của nhạc cụ do tỉ lệ các bồi âm quyết định (không phải tần số âm cơ bản hay âm lượng); cùng cao độ, khác tỉ lệ bồi âm thì khác \"giọng\"."
+    loai: dinh-nghia
+    nguon: [sj-timbre, os-columns]
+    ket_qua: dung
+    ghi_chu: "Như n6; tần số cơ bản là cao độ (n4), âm lượng là biên độ (n5). Cách bắt đầu và tắt dần cũng góp phần vào âm sắc nhưng không nằm trong các lựa chọn."
+  - id: n69
+    cau: "Nhạc Baroque bằng nhạc cụ cổ thường lên dây La4 ở 415 Hz (không phải 440 hay 443), thấp hơn chuẩn hiện đại gần đúng nửa cung."
+    loai: so-lieu
+    nguon: [esm415, ema415]
+    ket_qua: dung
+    ghi_chu: "Như n62; n57 cho 440 Hz và n61 cho các mức cao hơn."
+  - id: n70
+    cau: "Mục \"Nguồn\": các tài liệu liệt kê (Open Music Theory Intervals và Species Counterpoint, OpenStax 17.5 và 17.6, Schmidt-Jones 5.3, 6.6, 8.2, ISO 16:1975) đã được mở và nói điều bài dùng; link tài liệu tham khảo trỏ trang tai-lieu-tham-khao."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Các link đã mở ngày 28/10/2026 (xem phần nguon). Chữ cũ: \"[Open Music Theory](trang chủ); [musictheory.net](lessons)\": bỏ vì musictheory.net không có bài về âm học đọc được (bài giảng chạy bằng JavaScript) và trang chủ OMT không dẫn tới chương nào. Link /opus/tai-lieu-tham-khao/: trang chưa chuyển; site cũ ../opus-zero/docs/tai-lieu-tham-khao.md có tồn tại; lô chuyển nó giữ đúng đường dẫn."
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem: [cu-phap, cao-do, khoa]
+    ket_qua: dung
+    ghi_chu: "Khối duy nhất: mười bồi âm đầu của Đô2 (Đô2, Đô3, Sol3, Đô4, Mi4, Sol4, Si♭4, Đô5, Rê5, Mi5), ba nốt đầu khóa Fa (C,, C, G,), bảy nốt sau khóa Sol; số 1 đến 10 ghi dưới nốt; 10 nốt, 10 chữ số. Si♭ ghi _B đúng; trang đã nói bồi âm 7 thực tế thấp hơn Si♭ khá nhiều. M:none, không có ô nhịp. Kiểm bằng tính tần số và node tools/khuong-nhac.mjs."
+doi_chu:
+  - cu: "Âm thanh là dao động truyền qua không khí. Một nốt nhạc có ba đặc tính:"
+    moi: "Âm thanh là dao động truyền đi trong không khí (hay vật chất khác). Một nốt nhạc có ba đặc tính:"
+    ly_do: "n3 (da-sua): OpenStax 17.1: sóng âm truyền qua vật chất nói chung."
+  - cu: "Đó là các bồi âm (overtones, harmonics). Ta không nghe chúng như những nốt riêng, nhưng chúng hòa vào nhau thành âm thanh ta nghe."
+    moi: "Đó là các bồi âm (harmonics). Bài này đánh số từ âm cơ bản, như các giáo trình vật lý: âm cơ bản là bồi âm số 1, gấp đôi tần số là số 2, và cứ thế. (Một số tài liệu dùng overtones cho các bồi âm trên âm cơ bản và đánh số lệch một: overtone thứ nhất là bồi âm số 2.) Ta không nghe chúng như những nốt riêng, nhưng chúng hòa vào nhau thành âm thanh ta nghe."
+    ly_do: "n10 (da-sua): cách đánh số của bảng (âm cơ bản là số 1) là cách của harmonics; overtone thứ nhất là bồi âm số 2 (OpenStax 17.5)."
+  - cu: "Hãy để ý: các bồi âm 4, 5, 6 chính là hợp âm Đô trưởng (Đô – Mi – Sol). Hợp âm trưởng có sẵn trong tự nhiên, bên trong mỗi nốt nhạc."
+    moi: "Hãy để ý: các bồi âm 4, 5, 6 chính là hợp âm Đô trưởng (Đô – Mi – Sol, tỉ lệ tần số 4 : 5 : 6). Hợp âm trưởng nằm sẵn trong chuỗi bồi âm của nốt."
+    ly_do: "n16 (da-sua): bỏ \"mỗi nốt nhạc\" (nói quá), thêm tỉ lệ 4:5:6."
+  - cu: "Hai nốt có tỉ lệ tần số đơn giản thì có nhiều bồi âm trùng nhau, nên tai nghe chúng \"hòa\" vào nhau:"
+    moi: "Theo cách giải thích cổ điển của Helmholtz, hai nốt có tỉ lệ tần số đơn giản thì có nhiều bồi âm trùng nhau, nên tai nghe chúng \"hòa\" vào nhau:"
+    ly_do: "n18 (da-sua): đây là giải thích của Helmholtz (Handbook SFU), không phải điều chắc chắn."
+  - cu: "Quãng | Tỉ lệ (thuần) | Cảm giác (8 đúng: Gần như một nốt; 5 đúng: Rất vững, rỗng; 4 đúng: Vững; 3 trưởng: Ngọt, sáng; 3 thứ: Ngọt, tối; 2 thứ: Chói, nghịch)"
+    moi: "Quãng | Tỉ lệ (thuần) | Phân loại (bài 9) (8 đúng: Thuận hoàn toàn; 5 đúng: Thuận hoàn toàn; 4 đúng: Tùy ngữ cảnh: thuận giữa hai bè trên, nghịch khi có bè trầm; 3 trưởng: Thuận không hoàn toàn; 3 thứ: Thuận không hoàn toàn; 2 thứ: Nghịch)"
+    ly_do: "n20 đến n23 (da-sua): cột cảm giác không có nguồn; thay bằng phân loại của OMT, khớp bảng ở bài 9."
+  - cu: "Nhưng cảm giác \"thuận\" và \"nghịch\" còn phụ thuộc vào văn hóa và thói quen nghe: âm nhạc thế kỷ 20 dùng nghịch tai như màu sắc, và nhiều nền âm nhạc khác có quan niệm hòa hợp riêng."
+    moi: "Nhưng quan niệm quãng nào là \"thuận\" đã đổi nhiều qua lịch sử và khác nhau giữa các nền văn hóa; một số nhà soạn nhạc thế kỷ 20 còn dùng quãng nghịch tai ngang hàng với thuận tai."
+    ly_do: "n24 và n25 (da-sua): theo Handbook SFU, OMT và Schoenberg."
+  - cu: "huýt sáo cho phổ gần như sóng sin; giọng hát nguyên âm \"a\" có nhiều bồi âm hơn \"u\"."
+    moi: "huýt sáo cho phổ chỉ có một đỉnh trội, các bồi âm yếu; giọng hát có nhiều bồi âm hơn, và mỗi nguyên âm (\"a\", \"u\"…) cho các đỉnh mạnh yếu khác nhau."
+    ly_do: "n31 (da-sua): không có nguồn cho \"a\" nhiều bồi âm hơn \"u\"; viết theo UNSW và báo cáo Illinois."
+  - cu: "Sáo gần như chỉ có âm cơ bản và vài bồi âm yếu, nên nghe tròn và trong. Clarinet có các bồi âm lẻ (1, 3, 5, 7) mạnh hơn hẳn các bồi âm chẵn, tạo âm sắc \"rỗng\" đặc trưng. Violin và oboe có rất nhiều bồi âm mạnh, nên nghe sáng và giàu."
+    moi: "Sáo, ở âm vực trung, gần như chỉ có âm cơ bản và rất ít bồi âm khác, nên nghe tròn và trong. Clarinet ở âm vực trầm có các bồi âm lẻ (1, 3, 5, 7) mạnh hơn hẳn các bồi âm chẵn, tạo âm sắc \"rỗng\" đặc trưng. Sáo và oboe chơi cùng một nốt vẫn nghe khác nhau vì tỉ lệ bồi âm khác nhau; âm sắc càng \"sáng\" thì các bồi âm cao càng mạnh."
+    ly_do: "n33, n34, n35 (da-sua): thêm âm vực theo EIU và UNSW; câu về violin và oboe thay bằng điều có nguồn (Schmidt-Jones, Hamilton)."
+  - cu: "Kèn đồng không có van (như kèn trumpet tự nhiên thời Bach) chỉ chơi được các nốt trong chuỗi bồi âm. Người chơi đổi nốt bằng cách thay đổi môi; người chơi kèn horn thời Mozart còn bịt bàn tay vào loa kèn để có thêm những nốt nằm giữa."
+    moi: "Kèn đồng không có van (như kèn trumpet tự nhiên thời Bach) chỉ chơi được các nốt trong chuỗi bồi âm của ống kèn. Người chơi đổi nốt bằng cách thay đổi môi; người chơi kèn horn thời Mozart còn đặt bàn tay vào loa kèn để chỉnh cao độ một số nốt."
+    ly_do: "n37 và n39 (da-sua): COD nói bàn tay trong loa kèn để chỉnh các nốt không khớp thang bình quân, không nói \"thêm nốt nằm giữa\"."
+  - cu: "Đàn bầu của Việt Nam dùng một dây duy nhất, và gần như mọi nốt đều là bồi âm: người chơi chạm nhẹ cạnh bàn tay vào các điểm chia dây trong khi gảy, còn cần đàn uốn cao độ lên xuống."
+    moi: "Đàn bầu của Việt Nam chỉ có một dây và được chơi bằng bồi âm: người chơi chạm nhẹ bàn tay vào các điểm chia dây trong khi gảy, còn cần đàn (vòi đàn) uốn cao độ lên xuống."
+    ly_do: "n40 (da-sua): bỏ \"gần như mọi nốt\" và \"cạnh\", không nguồn nào nói thế."
+  - cu: "Lịch sử âm nhạc phương Tây là lịch sử của các cách thỏa hiệp:"
+    moi: "Lịch sử các hệ lên dây ở phương Tây là lịch sử của những cách thỏa hiệp:"
+    ly_do: "n43 (da-sua): \"lịch sử âm nhạc\" nói quá rộng; câu nói về hệ lên dây."
+  - cu: "Pythagore | Mọi quãng 5 thuần; quãng 3 trưởng rất chói | Trung cổ"
+    moi: "Pythagore | Mọi quãng 5 thuần; quãng 3 trưởng rất chói | Trung cổ, còn dùng đến Phục hưng"
+    ly_do: "n44 (da-sua): Schmidt-Jones 8.2: \"widely used in medieval and Renaissance times\"."
+  - cu: "Bình quân cải tiến (well temperament) | Mọi giọng đều chơi được, nhưng mỗi giọng có \"màu\" hơi khác | Cuối Baroque; Bình quân luật của Bach dành cho kiểu lên dây này"
+    moi: "Bình quân cải tiến (well temperament) | Mọi giọng đều chơi được, nhưng mỗi giọng có \"màu\" hơi khác | Thế kỷ 18–19, bắt đầu từ cuối Baroque; Bình quân luật của Bach thường được cho là viết cho kiểu lên dây này (Bach dùng hệ chính xác nào thì còn tranh cãi)"
+    ly_do: "n46 và n47 (da-sua): Schmidt-Jones 8.2 (thế kỷ 18–19; Bach viết để cổ vũ well temperament) và Piano Fundamentals (chưa ngã ngũ Bach dùng hệ nào)."
+  - cu: "Chuẩn cho piano từ thế kỷ 19 đến nay"
+    moi: "Chuẩn cho piano từ khoảng giữa thế kỷ 19 đến nay"
+    ly_do: "n49 (da-sua): Piano Fundamentals: \"Since about 1850, ET had been almost universally accepted\"."
+  - cu: "Ca sĩ, dàn dây và kèn không cố định cao độ nên thường tự điều chỉnh về phía quãng thuần khi hát hoặc chơi hợp âm. Đó là một lý do một tứ tấu đàn dây hay dàn hợp xướng giỏi nghe \"trong\" đến vậy."
+    moi: "Ca sĩ, nhạc công kèn và nhiều nhạc cụ dây không cố định cao độ nên khi hát hoặc chơi hợp âm họ thường điều chỉnh về phía quãng thuần. Đó có thể là một lý do dàn hợp xướng không nhạc đệm hay một dàn dây giỏi nghe \"trong\" đến vậy."
+    ly_do: "n56 (da-sua): không có nguồn cho tứ tấu dây; \"là một lý do\" là suy đoán."
+  - cu: "Nhiều dàn nhạc châu Âu lên dây cao hơn một chút, khoảng 442–443 Hz, cho âm thanh sáng hơn."
+    moi: "Nhiều dàn nhạc châu Âu lên dây cao hơn một chút, khoảng 442–444 Hz."
+    ly_do: "n61 (chưa chắc): bỏ \"cho âm thanh sáng hơn\" (ý kiến của nhạc công); nới 442–443 thành 442–444 theo Wikipedia (Nistl) và nhạc công Berlin."
+  - cu: "Open Music Theory; musictheory.net. Xem tài liệu tham khảo."
+    moi: "Quãng thuận tai và nghịch tai: Open Music Theory, Intervals và Introduction to Species Counterpoint. Vật lý của âm thanh và bồi âm: OpenStax, College Physics 2e, 17.5 và 17.6; Schmidt-Jones, Understanding Basic Music Theory (5.3, 6.6, 8.2). Chuẩn cao độ: ISO 16:1975. Xem tài liệu tham khảo."
+    ly_do: "n70 (da-sua): thay link chung bằng các tài liệu đã mở; bỏ musictheory.net vì không có bài âm học đọc được."

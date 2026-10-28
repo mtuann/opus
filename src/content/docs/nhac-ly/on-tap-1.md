@@ -28,11 +28,11 @@ Bài ôn trộn kiến thức của cả phần. Làm sau khi xong bài 5, và l
 - 3
 - 3 rưỡi
 > 3 + 1 = 4.
-? Trong một ô nhịp có Fa♯ ở đầu, nốt Fa thứ hai (không có dấu) cùng ô nhịp là gì?
+? Trong một ô nhịp, nốt Fa đầu tiên có dấu thăng (Fa♯); nốt Fa thứ hai cùng quãng tám, không có dấu, trong ô nhịp ấy là gì?
 + Fa♯
 - Fa tự nhiên
 - Tùy người chơi
-> Dấu hóa bất thường còn hiệu lực đến hết ô nhịp.
+> Dấu hóa bất thường còn hiệu lực đến hết ô nhịp, với các nốt cùng vị trí trên khuông.
 ? Mi♯ trên piano là phím nào?
 + Phím trắng Fa
 - Phím đen giữa Mi và Fa

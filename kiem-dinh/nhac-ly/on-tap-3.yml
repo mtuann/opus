@@ -1,0 +1,140 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/on-tap-3
+trang: src/content/docs/nhac-ly/on-tap-3.md
+nguon_cu: ../opus-zero/docs/nhac-ly/on-tap-3.md
+tang: loi
+lan:
+  - so: 1
+    ngay: '2026-10-28'
+    nhanh: moi/d3-l5
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Sonnet 5.5 (D3-L5 lượt 1, trang)"
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: "Bài ôn tập 3 (bài 10–14), tầng lõi: quiz 10 câu (n3 đến n12) và các câu về trang (n1, n2). Nguồn: Open Music Theory (Triads, Seventh Chords, Inversion, Figured Bass, Roman Numerals, Intro to Harmony, Plagal Motion, Other Aspects of Notation), COD (cadence, sforzando, ritardando). Đã sửa một chỗ: đáp án đúng của câu sfz (\"Nhấn mạnh đột ngột\" thành \"Nhấn mạnh rõ\", n11). Lời giải thích trong quiz không dựa vào vị trí lựa chọn. Không có khuông nhạc. Câu ve-site trỏ trang chưa chuyển: n2 (luyen-tap/phieu-bai-tap: giữ phiếu \"Gọi tên hợp âm ba\"; luyen-tap/xay-hop-am: giữ bộ hợp âm bảy). Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): seventh chord (hợp âm bảy), dominant seventh (bảy át), fully diminished seventh (bảy giảm), half-diminished seventh (bảy nửa giảm), diminished triad (hợp âm ba giảm), second inversion (đảo 2, 6/4), figured bass (bè trầm số), Roman numeral (số La Mã), plagal cadence (kết plagal; OMT gọi plagal motion), half cadence (kết nửa), deceptive/interrupted cadence (kết lừa), ii–V–I, rit./ritardando đã có (ritardando, sforzando, cadence, triad, inversion, subdominant)."
+nguon:
+  - id: omt-triads
+    bac: 2
+    ten: "Open Music Theory, Triads"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/triads/"
+  - id: omt-seventh
+    bac: 2
+    ten: "Open Music Theory, Seventh Chords"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/seventh-chords/"
+  - id: omt-harmony
+    bac: 2
+    ten: "Open Music Theory, Introduction to Harmony, Cadences, and Phrase Endings"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/"
+  - id: omt-inversion
+    bac: 2
+    ten: "Open Music Theory, Inversion"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/inversion/"
+  - id: omt-figured
+    bac: 2
+    ten: "Open Music Theory, Figured Bass and Roman Numerals with Figures"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/figured-bass/"
+  - id: omt-roman
+    bac: 2
+    ten: "Open Music Theory, Roman Numerals"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/roman-numerals/"
+  - id: omt-minor
+    bac: 2
+    ten: "Open Music Theory, Minor Scales, Scale Degrees, and Key Signatures"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/"
+  - id: omt-plagal
+    bac: 2
+    ten: "Open Music Theory, Plagal Motion as a Form of Prolongation"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/plagal-motion/"
+  - id: omt-notation
+    bac: 2
+    ten: "Open Music Theory, Other Aspects of Notation"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/other-aspects-of-notation/"
+  - id: cod-cadence
+    bac: 2
+    ten: "The Concise Oxford Dictionary of Music, mục cadence, qua Encyclopedia.com"
+    link: "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/cadence"
+  - id: cod-sforz
+    bac: 2
+    ten: "The Concise Oxford Dictionary of Music, mục sforzando, qua Encyclopedia.com"
+    link: "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/sforzando"
+  - id: cod-rit
+    bac: 2
+    ten: "The Concise Oxford Dictionary of Music, mục ritardando, qua Encyclopedia.com"
+    link: "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/ritardando"
+nhan_dinh:
+  - id: n1
+    cau: "Bài ôn gồm kiến thức của Phần 3 (bài 10–14: hợp âm ba, hợp âm bảy và thể đảo, hòa âm chức năng, kết và câu nhạc, ký hiệu biểu diễn)."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Kiểm trên src/content/docs/nhac-ly/index.md: Phần 3 gồm bài 10 đến 14 rồi \"Ôn tập 3: Hợp âm, hòa âm và biểu diễn\"; các câu hỏi dùng nội dung năm bài ấy."
+  - id: n2
+    cau: "Trước khi làm quiz nên làm phiếu bài tập \"gọi tên hợp âm ba\" (trang luyen-tap/phieu-bai-tap) và dùng công cụ xây hợp âm (trang luyen-tap/xay-hop-am) với các hợp âm bảy."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Kiểm trên site cũ: assets/js/worksheet.js có loại phiếu \"Gọi tên hợp âm ba\"; assets/js/build.js có bộ \"Hợp âm bảy (5 loại)\" (maj7, dom7, min7, hdim7, dim7) trong công cụ \"Xây gam và hợp âm\". Hai trang đích chưa chuyển: lô chuyển chúng giữ phiếu hợp âm ba và công cụ xây hợp âm bảy."
+  - id: n3
+    cau: "Hợp âm Si – Rê – Fa là hợp âm ba giảm (3 thứ + 3 thứ), không phải thứ hay trưởng."
+    loai: dinh-nghia
+    nguon: [omt-triads]
+    ket_qua: dung
+    ghi_chu: "OMT Triads: hợp âm ba giảm là \"A triad whose third is minor and fifth is diminished\"; Si – Rê (3 thứ), Rê – Fa (3 thứ), Si – Fa (5 giảm)."
+  - id: n4
+    cau: "Trong Fa trưởng, hợp âm V7 là Đô – Mi – Sol – Si♭ (bậc V là Đô; hợp âm bảy át có quãng 7 thứ), không phải Đô – Mi – Sol – Si hay Sol – Si – Rê – Fa."
+    loai: quy-tac
+    nguon: [omt-seventh]
+    ket_qua: dung
+    ghi_chu: "OMT Seventh Chords: hợp âm bảy át (dominant seventh) là \"A seventh chord with a major triad and a minor seventh\"; \"V7 in the key of C is spelled G-B-D-F\". Trong Fa trưởng V là Đô: Đô – Mi – Sol, cộng 7 thứ trên Đô là Si♭."
+  - id: n5
+    cau: "Hợp âm G7 giải quyết về hợp âm C trong Đô trưởng (V7 → I), không phải F hay Am."
+    loai: quy-tac
+    nguon: [omt-harmony, omt-seventh]
+    ket_qua: dung
+    ghi_chu: "OMT Intro to Harmony: \"An authentic cadence occurs when the harmonic progression V–I (or V–i in minor) marks the end of a phrase\"; G7 là V7 của Đô trưởng (OMT Seventh Chords). Chương OMT không viết riêng \"V7 giải quyết về I\": suy từ V–I và định nghĩa V7. Về Am (vi) là kết lừa (COD: interrupted cadence là V rồi vi), F là IV."
+  - id: n6
+    cau: "Hợp âm Sol trưởng với Rê ở bè trầm là thể đảo 2 (6/4), nốt năm ở bè trầm; không phải đảo 1 hay thể gốc."
+    loai: dinh-nghia
+    nguon: [omt-inversion, omt-figured]
+    ket_qua: dung
+    ghi_chu: "OMT Inversion: thể đảo 2 là \"A triadic harmony with the fifth in the bass\"; OMT Figured Bass: \"a second inversion triad has a fourth and a sixth above the bass\" (6/4). Rê là nốt năm của Sol – Si – Rê."
+  - id: n7
+    cau: "Chuỗi ii – V – I trong Sol trưởng là Am – D – G (bậc ii là La thứ, bậc V là Rê trưởng)."
+    loai: quy-tac
+    nguon: [omt-roman]
+    ket_qua: dung
+    ghi_chu: "OMT Roman Numerals: số La Mã hoa là hợp âm trưởng, thường là hợp âm thứ (\"Uppercase Roman numerals denote major triads, and lowercase ... minor triads\"); hợp âm ba dựng trên mỗi bậc của gam. Gam Sol trưởng: bậc II là La, ii = La – Đô – Mi (Am); V = Rê – Fa♯ – La (D); I = G."
+  - id: n8
+    cau: "Trong giọng La thứ, hợp âm át có nốt đặc biệt Sol♯ (cảm âm từ gam thứ hòa âm), không phải Fa♯ hay Đô♯."
+    loai: quy-tac
+    nguon: [omt-roman, omt-harmony, omt-minor]
+    ket_qua: dung
+    ghi_chu: "OMT Roman Numerals: \"the minor v chord becomes a major V chord\" nhờ cảm âm nâng; OMT Intro to Harmony: ở giọng thứ hợp âm V dùng \"the leading-tone, ti\"; OMT Minor Scales: gam thứ hòa âm nâng cảm âm. Hợp âm át của La thứ là Mi – Sol♯ – Si."
+  - id: n9
+    cau: "Câu nhạc kết bằng IV – I là kết plagal (\"Amen\"), không phải kết nửa hay kết lừa."
+    loai: dinh-nghia
+    nguon: [cod-cadence, omt-plagal]
+    ket_qua: dung
+    ghi_chu: "COD (cadence): \"Plagal cadence (also called Amen cadence): Chord of the subdominant followed by that of tonic\"; kết nửa (imperfect) kết ở V, kết lừa (interrupted) là V rồi vi. OMT dùng \"plagal motion\" thay cho \"plagal cadence\" (glossary: \"Occurs when IV moves to I\") vì nó thường kéo dài chủ âm hơn là kết câu; tên \"kết plagal\" theo COD và bài 13 (đã khóa)."
+  - id: n10
+    cau: "\"rit.\" nghĩa là chậm dần (ritardando), không phải nhanh dần hay trở lại tốc độ cũ."
+    loai: dinh-nghia
+    nguon: [cod-rit]
+    ket_qua: dung
+    ghi_chu: "COD: \"ritardando ... (It.). Holding back ... (gradually, i.e. same as rallentando)\"; viết tắt \"rit.\". Giải thích của quiz \"ritardando\" đúng."
+  - id: n11
+    cau: "\"sfz\" (sforzando) nghĩa là nhấn mạnh rõ (một nốt hay hợp âm nhấn mạnh), không phải rất nhỏ hay ngân dài tùy ý."
+    loai: dinh-nghia
+    nguon: [cod-sforz]
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ của đáp án đúng: \"Nhấn mạnh đột ngột\". COD: \"sforzando ... Direction that a note or chord be strongly accented or played in a forced manner. Usually found in abbreviation sf. or sfz.\"; OMT Notation: sfz \"slightly more forceful (i.e., louder) than regular accents\". Không nguồn nào nói \"đột ngột\", nên đổi thành \"Nhấn mạnh rõ\"."
+  - id: n12
+    cau: "Hợp âm bảy có cấu tạo hợp âm giảm + quãng 7 giảm là hợp âm bảy giảm, không phải bảy nửa giảm hay bảy thứ; ví dụ Si – Rê – Fa – La♭."
+    loai: dinh-nghia
+    nguon: [omt-seventh]
+    ket_qua: dung
+    ghi_chu: "OMT Seventh Chords: hợp âm bảy giảm là \"A seventh chord whose triad is diminished and whose seventh is diminished\"; bảy nửa giảm: \"triad quality is diminished and the seventh quality is minor\". Ví dụ Si – Rê – Fa – La♭: Si – La♭ là quãng 7 giảm (Si lên La♭ 9 nửa cung = 7 giảm), hợp âm ba Si – Rê – Fa giảm; ví dụ này không có nguyên văn ở OMT (kiểm bằng tính)."
+khuong_nhac: []
+doi_chu:
+  - cu: "Nhấn mạnh đột ngột"
+    moi: "Nhấn mạnh rõ"
+    ly_do: "n11 (da-sua): COD: sforzando là \"strongly accented\"; không nguồn nào nói \"đột ngột\"."

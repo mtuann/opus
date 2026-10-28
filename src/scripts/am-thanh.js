@@ -105,7 +105,8 @@ export function layNgCanh() {
 	if (ngCanh.state !== 'running') ngCanh.resume?.()?.catch?.(() => {});
 	return ngCanh;
 }
-const dauRa = () => (layNgCanh(), chinh);
+/** Nút đầu ra chung (GainNode, trước bộ nén) mà mọi tiếng của site đi qua; công cụ phổ âm (src/scripts/am-hoc.js) nghe ở đây. */
+export const dauRa = () => (layNgCanh(), chinh);
 
 /** Số giây giữ lại của mỗi mẫu: đủ cho nốt dài nhất các công cụ phát (khoảng 2,5 giây), cả khi phát chậm hơn một nửa cung. */
 export const DAI_MAU = 4;
@@ -227,6 +228,16 @@ export function taiTruoc(nots, tam = nots[0]) {
 	return Promise.all(can.map((m, i) => taiMau(m, lan - i)));
 }
 
+/**
+ * Tải mẫu piano cho các nốt (số MIDI) dù người học đang chọn âm tổng hợp, chờ tối đa `cho` mili giây: công cụ so âm sắc
+ * (phổ âm, src/scripts/am-hoc.js) phát đúng tiếng piano bằng choiNot(m, luc, dai, am, 'piano') mà không đổi lựa chọn đã lưu.
+ */
+export function chuanBiPiano(nots, cho = 2000) {
+	const can = [...new Set(nots.map(mauCan).filter((x) => x !== null))];
+	const lan = ++lanGoi * 100;
+	return Promise.race([Promise.all(can.map((m) => taiMau(m, lan))), new Promise((ok) => setTimeout(ok, cho))]);
+}
+
 /** Tải trước các mẫu cần cho các nốt sắp phát (số MIDI), như taiTruoc; chờ tối đa `cho` mili giây. */
 export function chuanBi(nots, cho = 2000) {
 	if (cheDo() !== 'piano') return Promise.resolve();
@@ -263,11 +274,11 @@ function amTongHop(c, m, t, d, dinh) {
  * Phát một nốt: số MIDI, lúc bắt đầu (giây theo AudioContext; bỏ trống là ngay), độ dài (giây, đến khoảng 3 giây: mẫu chỉ
  * giữ DAI_MAU giây), âm lượng 0–1 (playNote). Mẫu của nốt chưa có thì tải (lần sau có tiếng piano), lần này phát âm tổng hợp.
  */
-export function choiNot(m, luc, dai = 1, am = 0.22) {
+export function choiNot(m, luc, dai = 1, am = 0.22, che = cheDo()) {
 	const c = layNgCanh();
 	if (!c) return;
 	const t = (luc ?? c.currentTime) + 0.02;
-	const mau = cheDo() === 'piano' ? mauCan(m) : null;
+	const mau = che === 'piano' ? mauCan(m) : null;
 	const buf = mau === null ? undefined : layMau(mau);
 	if (mau !== null && !buf) taiMau(mau); // lần sau có tiếng piano
 	if (!buf) return amTongHop(c, m, t, dai, am);
@@ -283,6 +294,28 @@ export function choiNot(m, luc, dai = 1, am = 0.22) {
 	g.connect(dauRa());
 	src.start(t);
 	src.stop(t + dai + 0.4);
+}
+
+/**
+ * Một âm đơn theo tần số (Hz), dạng sóng `loai` (sine, sawtooth…), như hàm tone() của acoustics.js cũ: lên trong 30 ms, giữ,
+ * tắt trong 150 ms cuối. Dùng cho công cụ âm học (bồi âm, so sánh hệ lên dây, sóng sin của phổ âm).
+ */
+export function phatTanSo(f, { luc, dai = 1, am = 0.2, loai = 'sine' } = {}) {
+	const c = layNgCanh();
+	if (!c) return;
+	const t = luc ?? c.currentTime + 0.05;
+	const o = c.createOscillator();
+	const g = c.createGain();
+	o.type = loai;
+	o.frequency.value = f;
+	g.gain.setValueAtTime(0.0001, t);
+	g.gain.exponentialRampToValueAtTime(am, t + 0.03);
+	g.gain.setValueAtTime(am, t + Math.max(0.05, dai - 0.15));
+	g.gain.exponentialRampToValueAtTime(0.0001, t + dai);
+	o.connect(g);
+	g.connect(dauRa());
+	o.start(t);
+	o.stop(t + dai + 0.05);
 }
 
 /** Tiếng gõ nhịp ngắn (máy đếm nhịp); `nhan`: phách mạnh (click). */

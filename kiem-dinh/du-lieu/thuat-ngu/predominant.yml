@@ -1,0 +1,83 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/thuat-ngu/predominant
+ban_ghi: thuat-ngu/predominant
+lan:
+  - so: 1
+    ngay: 2026-10-28
+    nhanh: moi/d3-l5
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D3-L5 lượt 1, thuật ngữ)
+      luot_2: null
+      review: null
+      kiem_mau: null
+    truong:
+      - ghi_chu
+      - nghia
+      - thuat_ngu
+ghi_chu: 'Thuật ngữ predominant, nhóm Nhạc lý (Anh – Việt). Bản ghi mới (D3-L5), theo quyết định thuật ngữ 27/10/2026: "hạ át" là tên chức năng, "hạ át âm" chỉ bậc IV (bản ghi subdominant). OMT viết chức năng chủ là Tb/Te trong mô hình câu; ghi_chu của site không dùng chữ T. MT21C gọi là pre-dominant và nói subdominant chỉ là tên bậc 4; OMT Glossary lại gọi subdominant là một chức năng hòa âm: vì vậy ghi_chu viết "cũng gọi". Nhóm (nhom) và lời dịch tiếng Việt (nghia) là lựa chọn của site, không phải nhận định; kiểm khái niệm khớp với nguồn, không kiểm cách dịch từng chữ. Chỉ đọc nguồn bậc 2 qua WebFetch ngày 28/10/2026 (lô D3-L5).'
+nguon:
+  - id: omtharm
+    bac: 2
+    ten: Open Music Theory, Introduction to Harmony, Cadences, and Phrase Endings (chức năng tonic, predominant, dominant)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/
+  - id: omtgloss
+    bac: 2
+    ten: Open Music Theory, Glossary
+    link: https://viva.pressbooks.pub/openmusictheory/back-matter/glossary/
+  - id: mt21c
+    bac: 2
+    ten: Robert Hutchinson, Music Theory for the 21st-Century Classroom, Harmonic Function
+    link: https://musictheory.pugetsound.edu/mt21c/HarmonicFunction.html
+  - id: omtphrase
+    bac: 2
+    ten: Open Music Theory, Performing Harmonic Analysis Using the Phrase Model
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/performing-harmonic-analysis-using-the-phrase-model/
+nhan_dinh:
+  - id: n1
+    cau: "predominant: chức năng hạ át, chuyển từ chủ sang át."
+    loai: dinh-nghia
+    truong:
+      - thuat_ngu
+      - nghia
+    nguon:
+      - omtharm
+      - omtgloss
+      - mt21c
+    ket_qua: dung
+    ghi_chu: 'OMT: "Predominant: Chords that transition away from tonic function toward dominant function."; Glossary: "Predominant function chords are those that transition away from tonic function toward dominant function."'
+  - id: n2
+    cau: Hợp âm IV và ii có chức năng hạ át.
+    loai: dinh-nghia
+    truong: &a1
+      - ghi_chu
+    nguon:
+      - omtharm
+      - mt21c
+    ket_qua: dung
+    ghi_chu: "OMT: IV và ii là strong predominants (ở thứ: iv và iio); MT21C: các hợp âm predominant là IV và ii."
+  - id: n3
+    cau: Chức năng hạ át viết tắt PD.
+    loai: ten
+    truong: *a1
+    nguon:
+      - omtphrase
+    ket_qua: dung
+    ghi_chu: 'OMT, phrase model: nhãn "Tb–PD–D–Te" (Tonic beginning, Predominant, Dominant, Tonic ending).'
+  - id: n4
+    cau: Chức năng hạ át cũng gọi subdominant function.
+    loai: ten
+    truong: *a1
+    nguon:
+      - omtgloss
+      - mt21c
+    ket_qua: dung
+    ghi_chu: 'OMT Glossary: "subdominant: A harmonic function that may either lead toward a dominant-function chord or back to a tonic-function chord." MT21C không dùng "subdominant" làm tên chức năng (chỉ bậc 4): hai nguồn lệch về cách gọi; ghi_chu ghi "cũng gọi".'
+  - id: n5
+    cau: '"Hạ át âm" (subdominant) là tên bậc IV, khác "hạ át" là tên chức năng.'
+    loai: ten
+    truong: *a1
+    nguon:
+      - omtharm
+      - mt21c
+    ket_qua: dung
+    ghi_chu: 'MT21C: subdominant là tên bậc 4; chức năng của IV và ii là pre-dominant. Cách phân biệt "hạ át âm" và "hạ át" là lựa chọn của site (README, Quyết định thuật ngữ 27/10/2026).'

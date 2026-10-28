@@ -1,0 +1,126 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/tu-dien
+trang: src/content/docs/nhac-ly/tu-dien.md
+nguon_cu: ../opus-zero/docs/nhac-ly/tu-dien.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-28
+    nhanh: moi/d3-l5
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D3-L5 lượt 1, thuật ngữ)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: "Trang Từ điển (tầng lõi). Các hàng của bảng (150 mục cũ, 154 sau D3-L5) dựng từ src/data/thuat-ngu.yml bằng chỉ thị ::tu-dien (agent khác đang làm); mọi nhận định về nghĩa, ghi chú của hàng nằm ở hồ sơ từng bản ghi kiem-dinh/du-lieu/thuat-ngu/<id>.yml, không lặp ở đây. Tên nhóm (Tốc độ, Piano, Nhạc lý (Anh – Việt)…) và cột Nghĩa là lựa chọn của site. Hồ sơ trang này chỉ có chữ ngoài bảng: mô tả, đoạn mở đầu, đoạn mô tả thẻ ghi nhớ (câu ve-site: kiểm trên src/scripts/the-nho.js, bản chuyển từ ../opus-zero/docs/assets/js/flashcards.js, và trên tu-dien.md). Mục doi_chu liệt kê mọi ô bảng đổi chữ do D3-L5 sửa src/data/thuat-ngu.yml (cu = ô cũ của tu-dien.md, moi = ô mới sinh từ dữ liệu; cu null = hàng mới; moi null = ô bỏ trống). Chữ cần người giao sửa ở tu-dien.md: không có; tu-dien.md chưa đổi bảng sang chỉ thị nên khi gộp phải dựng lại từ dữ liệu, không giữ bảng cũ. Id thẻ ghi nhớ là chữ ô đầu (thuat_ngu): D3-L5 không đổi chữ nào ở cột đó, nên tiến độ ôn thẻ đã lưu vẫn khớp."
+nguon: []
+nhan_dinh:
+  - id: n1
+    cau: Các thuật ngữ âm nhạc thường gặp trên bản nhạc và trong tài liệu tiếng Anh.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Câu ở description (frontmatter) và đoạn mở đầu. Đã kiểm trên tu-dien.md và src/data/thuat-ngu.yml: bảng gồm thuật ngữ Ý, Pháp, Đức dùng trên bản nhạc (nhóm Tốc độ, Thay đổi tốc độ, Cường độ, Cách diễn tấu, Tính cách, Chỉ đường trên bản nhạc, Piano) và nhóm Nhạc lý (Anh – Việt) cho tài liệu tiếng Anh. Câu mô tả chung, không có con số."
+  - id: n2
+    cau: Dùng ô tìm kiếm của site để tra nhanh.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: astro.config.mjs (dòng 100: bọc pagefind.js mà Starlight dựng) cho thấy site dùng ô tìm kiếm Pagefind của Starlight. Kiểm trên cấu hình, chưa mở trang dựng.
+  - id: n3
+    cau: Ôn bằng thẻ ghi nhớ ngay dưới đoạn mở đầu (::cong-cu{ten="flashcards"}).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Mục "Ôn bằng thẻ ghi nhớ" nằm ngay dưới đoạn mở đầu của tu-dien.md và chứa chỉ thị ::cong-cu{ten="flashcards"}; thành phần là src/scripts/the-nho.js (thẻ lấy từ các bảng có cột đầu "Thuật ngữ" trên trang).
+  - id: n4
+    cau: Mỗi ngày site đưa ra tối đa 10 thẻ mới và các thẻ đến hạn ôn.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "the-nho.js: MOI_NGAY = 10 (số thẻ mới mỗi ngày); thẻ đến hạn (due <= hôm nay) được đưa vào hàng đợi. Cũ: ../opus-zero/docs/assets/js/flashcards.js, NEW_PER_DAY = 10 (dòng 6)."
+  - id: n5
+    cau: Thẻ nhớ tốt sẽ được hỏi thưa dần sau 1, 3, 7, 16 rồi 35 ngày.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "the-nho.js: KHOANG = [0, 1, 3, 7, 16, 35] và cham(): box + 1 khi nhớ, hẹn lại sau KHOANG[box] ngày (box 1..5 = 1, 3, 7, 16, 35 ngày). Cũ: flashcards.js, INTERVALS cùng dãy (dòng 5)."
+  - id: n6
+    cau: Thẻ quên sẽ quay lại từ đầu.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'the-nho.js, cham(): bấm "Chưa nhớ" thì box = 0 và hẹn lại ngay hôm nay; chamThe(): thẻ quên còn bị đưa xuống cuối hàng đợi của buổi. Cũ: flashcards.js, grade() làm giống.'
+  - id: n7
+    cau: 'Phím tắt: Space để lật thẻ, 1 là "Chưa nhớ", 2 là "Nhớ".'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'the-nho.js: Space lật thẻ (khi thẻ chưa lật), 1 và 2 chấm thẻ (2 = nhớ) khi ô công cụ đang được chọn; nút ghi "Chưa nhớ" và "Nhớ" (hàm latThe). Cũ: flashcards.js cùng phím.'
+khuong_nhac: []
+doi_chu:
+  - cu: Khoảng 40–60 BPM
+    moi: Khoảng 40–66 BPM
+    ly_do: "Hàng Largo, cột Ghi chú. Dolmetsch, Tempo: Largo 42-66 bpm (hồ sơ du-lieu/thuat-ngu/largo, n2)."
+  - cu: Khoảng 108–120 BPM
+    moi: null
+    ly_do: "Hàng Moderato, cột Ghi chú: bỏ vì không nguồn bậc 1-2 ghi khoảng ấy; Dolmetsch ghi 66-126 (hồ sơ moderato, n2)."
+  - cu: Khoảng 120–156 BPM
+    moi: null
+    ly_do: "Hàng Allegro, cột Ghi chú: bỏ vì không nguồn bậc 1-2 ghi khoảng ấy; Dolmetsch ghi 84-144 (hồ sơ allegro, n2)."
+  - cu: Khoảng 168–200 BPM
+    moi: Khoảng 168–208 BPM
+    ly_do: 'Hàng Presto, cột Ghi chú. Dolmetsch: "some sources suggest 168-208 bpm" (hồ sơ presto, n2).'
+  - cu: Hơi nhanh hơn Andante
+    moi: "Gần Andante: hơi nhanh hơn hay hơi chậm hơn tùy nguồn"
+    ly_do: Hàng Andantino, cột Nghĩa. Trinity nói nhanh hơn Andante, Dolmetsch nói chậm hơn (hồ sơ andantino, n1).
+  - cu: Đặc trưng khi chơi Chopin
+    moi: 'Nghĩa đen: "thời gian bị lấy"; lấy ở nốt này, trả lại ở nốt khác'
+    ly_do: "Hàng rubato, cột Ghi chú. COD: cách dùng rubato ở Chopin còn tranh cãi (hồ sơ rubato, n2)."
+  - cu: Hình con mắt
+    moi: Vòng cung có chấm, đặt trên hoặc dưới nốt hay dấu lặng
+    ly_do: 'Hàng fermata, cột Ghi chú. Dolmetsch: "a semicircle containing a dot" (hồ sơ fermata, n2).'
+  - cu: Với đàn dây và kèn; âm thanh mờ, nhỏ. Trên piano, xem mục Piano bên dưới
+    moi: Với đàn dây và kèn; âm thanh nhỏ hơn. Trên piano, xem mục Piano bên dưới
+    ly_do: 'Hàng con sordino, cột Ghi chú: bỏ "mờ" (không có trong COD, mục mute; hồ sơ con-sordino, n2).'
+  - cu: Dùng bàn đạp trái (làm tiếng nhỏ và mờ hơn)
+    moi: Dùng bàn đạp trái (làm tiếng nhỏ hơn và đổi màu âm)
+    ly_do: 'Hàng una corda, cột Nghĩa. Britannica, Soft pedal: "a softer tone and a different tonal color" (hồ sơ una-corda, n1).'
+  - cu: 'Nghĩa đen: "ba dây"; viết tắt t.c.'
+    moi: 'Nghĩa đen: "ba dây"'
+    ly_do: 'Hàng tre corde, cột Ghi chú: bỏ "viết tắt t.c." vì không nguồn bậc 1-2 ghi (hồ sơ tre-corde, n3).'
+  - cu: "Ở nhiều nhà soạn nhạc về sau (Debussy, Ravel…): dùng bàn đạp trái *una corda*"
+    moi: "Ở một số nhà soạn nhạc về sau (như Scriabin): dùng bàn đạp trái *una corda*"
+    ly_do: Hàng con sordino, con sordina, cột Nghĩa. Henle Blog nêu Scriabin, không nhắc Debussy hay Ravel (hồ sơ con-sordino-con-sordina, n1).
+  - cu: Tiếng Ý *mano destra* / *mano sinistra*; tiếng Pháp m.d. / m.g.; tiếng Anh r.h. / l.h.
+    moi: Tiếng Ý *mano destra* / *mano sinistra*; tiếng Pháp *main droite* / *main gauche*; tiếng Anh r.h. / l.h.
+    ly_do: 'Hàng m.d. / m.s., cột Ghi chú: không nguồn đã mở ghi viết tắt "m.g." (hồ sơ m-d-m-s, n2).'
+  - cu: Hay gặp ở các đoạn chạy nhanh
+    moi: null
+    ly_do: "Hàng leggiero, cột Ghi chú: bỏ vì không nguồn (hồ sơ leggiero, n2)."
+  - cu: Cách chơi thường dùng cho nhạc Baroque trên piano
+    moi: Nhạc thế kỷ 18 thường được chơi tách hơn nhạc Lãng mạn muộn
+    ly_do: Hàng non legato, cột Ghi chú. Dolmetsch, Phrasing & Articulation (hồ sơ non-legato, n2).
+  - cu: Đặc trưng trong nhạc Chopin
+    moi: null
+    ly_do: "Hàng fioritura, cột Ghi chú: bỏ vì không nguồn (hồ sơ fioritura, n2)."
+  - cu: Thường để người chơi tự quyết định chỗ đổi
+    moi: null
+    ly_do: "Hàng con pedale, cột Ghi chú: bỏ vì không nguồn (hồ sơ con-pedale, n2)."
+  - cu: Như opera nhưng không dàn dựng
+    moi: Như opera nhưng thường biểu diễn không bối cảnh, không phục trang
+    ly_do: 'Hàng oratorio, cột Ghi chú. COD: "usually perf. without scenery or costumes" (hồ sơ oratorio, n2).'
+  - cu: Nhóm nhỏ, mỗi bè một người
+    moi: Nhóm nhỏ, thường mỗi bè một người
+    ly_do: 'Hàng chamber music, cột Ghi chú. Britannica: "often permits no more than one player to a part" (hồ sơ chamber-music, n2).'
+  - cu: Một giai điệu chính với bè đệm
+    moi: Một giai điệu chính với bè đệm, hay các bè cùng tiết tấu
+    ly_do: "Hàng homophony, cột Ghi chú. OMT, Texture: homorhythm là một kiểu của homophony (hồ sơ homophony, n2)."
+  - cu: Bậc IV
+    moi: 'Bậc IV (bậc 4) của gam. "Hạ át" (không có chữ "âm") là tên chức năng của IV và ii: xem predominant'
+    ly_do: Hàng subdominant, cột Ghi chú. Quyết định thuật ngữ 27/10/2026 (hồ sơ subdominant, n2).
+  - cu: null
+    moi: simple meter | Nhịp đơn | Phách chia đôi, như 2/4 và 4/4
+    ly_do: Hàng mới, nhóm Nhạc lý (Anh – Việt), sau hàng time signature (hồ sơ simple-meter).
+  - cu: null
+    moi: compound meter | Nhịp kép | Phách chia ba, như 6/8, 9/8, 12/8. Một số giáo trình tiếng Việt gọi 4/4 là "nhịp phức" (nhịp ghép từ hai nhịp đơn)
+    ly_do: 'Hàng mới, sau hàng simple meter. Câu "nhịp phức" chưa có nguồn kiểm được (ket_qua null ở hồ sơ compound-meter, n3): người giao quyết giữ hay bỏ.'
+  - cu: null
+    moi: enharmonic | Đồng âm khác tên | Hai nốt cùng cao độ nhưng viết khác nhau, như C♯ và D♭
+    ly_do: Hàng mới, sau hàng accidental (hồ sơ enharmonic).
+  - cu: null
+    moi: 'predominant | Hạ át (chức năng) | Chức năng của hợp âm IV và ii, nằm giữa chủ và át (PD); cũng gọi *subdominant function*. Khác "hạ át âm", tên bậc IV: xem subdominant'
+    ly_do: Hàng mới, sau hàng subdominant (hồ sơ predominant).
