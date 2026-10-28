@@ -35,7 +35,8 @@ const THEM = {
 	// trang chủ thật, 7 trang chặng sinh từ dữ liệu, menu đủ 9 nhóm
 	'D2-L1': ['astro.config.mjs', 'src/nhom.mjs', 'src/styles/opus.css', 'src/pages/', 'src/ban-build.mjs'],
 	// trang Từ điển sinh từ thuat-ngu.yml
-	'D3-L5': ['src/pages/', 'src/ban-build.mjs'],
+	// chỉ thị ::tu-dien đăng ký trong plugin đọc trang
+	'D3-L5': ['src/pages/', 'src/ban-build.mjs', 'src/plugins/opus-markdown.mjs'],
 };
 
 /** File `file` (đường dẫn từ gốc repo) có thuộc phạm vi của lô `lo` ("D3-L2"), với các trang `trangLo`, không. */

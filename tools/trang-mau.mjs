@@ -31,6 +31,13 @@ export const KHOI = {
 	'vòng quãng năm tĩnh': 'oz-vong-tinh',
 	'vòng quãng năm bấm được': 'class="oz-vong oz-tool',
 	'luyện hóa biểu': 'class="oz-lhb',
+	'vòng chức năng': 'class="oz-fig oz-chuc-nang"',
+	'bảy điệu thức': 'class="oz-fig oz-dieu-thuc"',
+	'hình tĩnh SVG': '<figure class="oz-figure not-content" data-sinh><svg',
+	'hình tĩnh lưới': '<figure class="oz-figure not-content" data-sinh><div class="oz-fig-grid',
+	'công cụ âm học': 'oz-boi-am',
+	'thẻ ghi nhớ': 'class="oz-the-nho',
+	'trạng thái bài': 'class="oz-trang-thai-bai',
 };
 
 /** Số trang đã đổi của nhánh được lấy làm mẫu: một lô của đợt 3 có tới 8 trang. */
