@@ -51,7 +51,7 @@ Bảng viết cho một cậu bé chín tuổi nên rất gọn: nó không nói
 
 | Thời kỳ | Thường bắt đầu từ | Ghi chú |
 |---|---|---|
-| Baroque (Bach, Handel) | nốt trên, đúng phách | C. P. E. Bach (1753): láy rền "luôn bắt đầu từ nốt trên". Ngoại lệ: nốt trên vừa vang ngay trước đó (giai điệu đi xuống liền bậc) thì được nối sang, không đánh lại |
+| Baroque (Bach, Handel) | nốt trên, đúng phách | C. P. E. Bach (1753): láy rền thường (*ordentlicher Triller*) "luôn bắt đầu từ nốt trên"; ông còn tả những kiểu láy khác, như láy đi lên từ dưới. Ngoại lệ: nốt trên vừa vang ngay trước đó (giai điệu đi xuống liền bậc) thì được nối sang, không đánh lại |
 | Cổ điển (Haydn, Mozart) | phần lớn vẫn từ nốt trên | Một nốt nhỏ đứng ngay trước dấu *tr* cho biết rõ nốt bắt đầu |
 | Đầu thế kỷ 19 (Beethoven, Schubert) | vùng chuyển tiếp | Đọc chú giải của bản Urtext, xét từng chỗ |
 | Lãng mạn (Chopin, Schumann, Liszt) | cả hai cách | Hummel, trong bộ sách dạy piano in ở Vienna năm 1827–1828, khuyên bắt đầu mọi láy rền từ nốt chính. Với Chopin, các nguồn chưa thống nhất: có nhà nghiên cứu cho rằng ông nhìn chung vẫn bắt đầu từ nốt trên, còn chú giải của ấn bản Quốc gia Ba Lan chỉ ra nhiều chỗ nên bắt đầu từ nốt chính; đọc chú giải của từng bản |

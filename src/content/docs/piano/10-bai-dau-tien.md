@@ -149,7 +149,7 @@ K:C
 
 ## 5. Frère Jacques
 
-*Dân ca Pháp; Mahler dùng giai điệu này ở giọng thứ trong Giao hưởng số 1.* Đô trưởng. **Học được:** đổi thế tay giữa câu, và (thử thách) chơi **canon**: hai tay hát cùng một giai điệu, lệch nhau hai ô nhịp.
+*Bài hát Pháp truyền thống; Mahler dùng giai điệu này ở giọng thứ trong Giao hưởng số 1.* Đô trưởng. **Học được:** đổi thế tay giữa câu, và (thử thách) chơi **canon**: hai tay hát cùng một giai điệu, lệch nhau hai ô nhịp.
 
 Tay phải chơi ở quãng tám trên Đô giữa (ngón 1 trên Đô5). Ô 5–6 mở tay: ngón 5 vươn lên La. Ô 7–8 dời tay xuống để ngón 1 bắt Sol4. Tay trái giữ quãng 5 Đô–Sol (ngón 5 và 1) như một âm nền ngân dài.
 
