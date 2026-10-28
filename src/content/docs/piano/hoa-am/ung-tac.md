@@ -7,12 +7,12 @@ description: "Ứng tác theo phong cách cổ điển không phải là chơi b
 
 ## Trang trí một giai điệu
 
-Mọi ứng tác cổ điển bắt đầu từ một **khung**: mỗi ô một nốt giai điệu thuộc hợp âm của ô ấy, như Mi – Fa – Rê – Đô trên I – IV – V – I. Giữa các nốt khung, bạn thêm hai loại nốt ngoài hợp âm ([bài 18](/opus/nhac-ly/18-am-ngoai-hop-am/)):
+Ứng tác cổ điển thường bắt đầu từ một **khung**: mỗi ô một nốt giai điệu thuộc hợp âm của ô ấy, như Mi – Fa – Rê – Đô trên I – IV – V – I. Giữa các nốt khung, bạn thêm hai loại nốt ngoài hợp âm ([bài 18](/opus/nhac-ly/18-am-ngoai-hop-am/)):
 
 - **Nốt lướt** đi bậc liền từ một nốt hợp âm sang một nốt hợp âm khác, theo một hướng: Sol – **Fa** – Mi.
 - **Nốt thêu** rời một nốt hợp âm một bậc rồi quay về chính nó: Mi – **Rê** – Mi.
 
-Đến kết, thêm một nốt hoa mỹ: láy rền trên bậc 2 khi bass ở át âm là một dấu hiệu rất quen của nhạc thế kỷ 18. Cách chơi láy rền, appoggiatura và láy quanh có ở trang [nốt hoa mỹ](/opus/piano/not-hoa-my/).
+Đến kết, bạn có thể thêm một nốt hoa mỹ: láy rền trên bậc 2 khi bass ở át âm. Cách chơi láy rền, appoggiatura và láy quanh có ở trang [nốt hoa mỹ](/opus/piano/not-hoa-my/).
 
 ```abc
 X:1
@@ -34,10 +34,10 @@ K:C
 
 1. Chơi dòng khung, ♩ = 72, tay trái giữ bass. Hát khung.
 2. Chỉ thêm nốt thêu, mỗi ô một lần; rồi chỉ thêm nốt lướt.
-3. Chơi dòng trang trí như ghi. Theo lệ thời Cổ điển, láy rền bắt đầu từ nốt trên (Mi).
+3. Chơi dòng trang trí như ghi. Theo C. P. E. Bach (*Versuch*, 1753), láy rền bắt đầu từ nốt trên (Mi).
 4. Ứng tác: giữ nốt khung ở phách 1, phần còn lại tự chọn nốt hợp âm, nốt lướt, nốt thêu. Mỗi lần chơi một kiểu khác, không dừng.
 
-Hai quy tắc giữ trang trí đúng phong cách. Phách 1 luôn là nốt hợp âm, thường chính là nốt khung. Và đừng để hai ô liền nhau cùng mở đầu bằng quãng 8 (hay cùng bằng quãng 5) với bass khi cả hai bè cùng chuyển: đó vẫn là quãng 8, quãng 5 song song, chỉ bị các nốt trang trí che đi.
+Hai lời khuyên để trang trí gọn. Trong bài tập này, phách 1 giữ một nốt hợp âm, thường chính là nốt khung; nốt ngoài hợp âm đặt ở phách yếu. Và đừng để các nốt trang trí che một quãng 8 hay quãng 5 song song giữa giai điệu và bass: thêm một vài nốt không làm mất lỗi ấy.
 
 :::tip[Khi lỡ một nốt]
 Đừng dừng. Một nốt lạc trên phách yếu, nếu đi tiếp bằng bậc liền, sẽ nghe như nốt lướt. Bass và kết là xương sống: giữ chúng đúng thì người nghe vẫn theo được bạn.
@@ -45,9 +45,9 @@ Hai quy tắc giữ trang trí đúng phong cách. Phách 1 luôn là nốt hợ
 
 ## Biến tấu một chủ đề
 
-Mozart viết 12 biến tấu trên giai điệu Pháp *Ah! vous dirai-je, maman* (in lần đầu năm 1761), giai điệu bạn đã chơi ở [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/). Tác phẩm mang số K. 265 (300e). Người ta từng cho rằng nó được viết ở Paris năm 1778; phân tích bản thảo của Wolfgang Plath cho thấy khoảng 1781–1782 mới đúng hơn. Bản in đầu tiên ra năm 1785 ở Vienna.
+Mozart viết 12 biến tấu trên giai điệu Pháp *Ah! vous dirai-je, maman*, giai điệu bạn đã chơi ở [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/). Tác phẩm mang số K. 265 (300e). Người ta từng cho rằng nó được viết ở Paris năm 1778; phân tích bản thảo của Wolfgang Plath cho thấy khoảng 1781–1782 mới đúng hơn. Bản in đầu tiên ra năm 1785 ở Vienna.
 
-Chủ đề ở Đô trưởng, gồm ba đoạn tám ô (A–B–A). Mỗi biến tấu giữ khung ấy và đổi tiết tấu, kết cấu hay hòa âm: biến tấu 1 phủ giai điệu bằng chuỗi móc kép ở tay phải, biến tấu 2 chuyển chuyển động nhanh xuống tay trái, biến tấu 8 là biến tấu duy nhất ở giọng thứ (Đô thứ), biến tấu 11 là Adagio, còn biến tấu 12 (Allegro) đổi sang nhịp 3/4 và khép lại bằng một coda.
+Chủ đề ở Đô trưởng, gồm ba đoạn A–B–A, mỗi đoạn tám ô nhịp 2/4 trong bản của Mozart (viết lại ở nhịp 4/4 như bên dưới, mỗi đoạn bốn ô, cả chủ đề mười hai ô). Mỗi biến tấu giữ khung ấy và đổi tiết tấu, kết cấu hay hòa âm: biến tấu 1 phủ giai điệu bằng chuỗi móc kép ở tay phải, biến tấu 2 chuyển chuyển động nhanh xuống tay trái, biến tấu 8 là biến tấu duy nhất ở giọng thứ (Đô thứ), biến tấu 11 là Adagio, còn biến tấu 12 (Allegro) đổi sang nhịp 3/4 và khép lại bằng một coda.
 
 Bạn làm theo đúng cách ấy: giữ khung, mỗi lần đổi một thứ. Dưới đây là bốn ô đầu của chủ đề, theo bản ở trang 10 bài đầu tiên, và ba biến tấu soạn cho trang này. **A** đưa móc đơn vào tay phải bằng nốt thêu và nốt hợp âm. **B** giữ nguyên giai điệu và giao chuyển động cho tay trái, bằng hình Alberti ở trang [hợp âm và hình đệm](/opus/piano/hop-am-rai/). **C** sang Đô thứ: La♭ và Mi♭ thay cho La và Mi, tay trái thành một bè đối nhỏ.
 
@@ -74,7 +74,7 @@ X:3
 T:Biến tấu C: sang Đô thứ (soạn cho trang này)
 M:4/4
 L:1/8
-Q:1/4=72
+Q:1/4=80
 %%score {RH LH}
 V:RH clef=treble
 V:LH clef=bass
@@ -91,14 +91,14 @@ K:Cm
 
 ## Câu hỏi và câu trả lời
 
-Câu nhạc cổ điển hay đi thành cặp. **Câu hỏi** dừng ở át âm bằng một kết nửa; **câu trả lời** bắt đầu giống hệt, rồi rẽ về chủ âm bằng một kết trọn. Hai câu tạo thành một **đoạn nhạc** (period, xem [hình thức nhỏ](/opus/nhac-ly/31-hinh-thuc-nho/)). Ví dụ dưới đây xây trên các [mẫu galant](/opus/piano/hoa-am/mau-galant/): cả hai câu mở bằng Do–Re–Mi; câu hỏi dừng bằng kết hội tụ, câu trả lời về nhà qua I6/4 – V – I.
+Câu nhạc cổ điển hay đi thành cặp. **Câu hỏi** thường dừng ở át âm bằng một kết nửa; **câu trả lời** thường bắt đầu giống câu hỏi, rồi rẽ về chủ âm bằng một kết trọn. Hai câu tạo thành một **đoạn nhạc** (period, xem [bài 13](/opus/nhac-ly/13-ket/#cau-nhac-va-oan-nhac)). Ví dụ dưới đây xây trên các [mẫu galant](/opus/piano/hoa-am/mau-galant/): cả hai câu mở bằng Do–Re–Mi; câu hỏi dừng bằng kết hội tụ, câu trả lời về nhà qua I6/4 – V – I.
 
 ```abc
 X:4
 T:Câu hỏi và câu trả lời (soạn cho trang này)
 M:3/4
 L:1/8
-Q:1/4=96
+Q:1/4=80
 %%score {RH LH}
 V:RH clef=treble
 V:LH clef=bass
@@ -156,7 +156,7 @@ K:C
 
 ## Dạo đầu trước một bản nhạc
 
-Thế kỷ 18 và 19, nghệ sĩ đàn phím thường không vào bài một cách đột ngột. Họ **dạo đầu** (preluding): vài hợp âm, một đường rải hay gam, một kết, đủ để báo giọng cho người nghe, thử cây đàn và căn phòng, làm ấm tay, hoặc nối hai bài khác giọng trong cùng một chương trình. Carl Czerny in cả một tập 120 đoạn dạo đầu mẫu, *Die Kunst des Präludierens* (Nghệ thuật dạo đầu), Op. 300, nhiều đoạn chưa đến một phút. Sang thế kỷ 20, thói quen này thưa dần trên sân khấu hòa nhạc; ở nhà, ở lớp hay khi chơi cho bạn bè, bạn vẫn dùng được nó.
+Thế kỷ 18 và 19, nghệ sĩ đàn phím thường không vào bài một cách đột ngột. Họ **dạo đầu** (preluding): vài hợp âm, một đường rải hay gam, một kết, đủ để báo giọng cho người nghe, thử cây đàn và căn phòng, làm ấm tay, hoặc nối hai bài khác giọng trong cùng một chương trình. Carl Czerny in cả một tập 120 ví dụ gồm đoạn dạo đầu, chuyển giọng, kết và fantasia, *Die Kunst des Präludierens* (Nghệ thuật dạo đầu), Op. 300. Sang thế kỷ 20, thói quen này thưa dần trên sân khấu hòa nhạc; ở nhà, ở lớp hay khi chơi cho bạn bè, bạn vẫn dùng được nó.
 
 Một đoạn dạo đầu ngắn chỉ cần ba việc: lập giọng (hợp âm chủ, rải lên), giữ tai ở lại trong giọng (một mẫu trên âm nền chủ âm như Quiescenza ở trang [mẫu galant](/opus/piano/hoa-am/mau-galant/)), và dẫn vào bài (một kết). Ví dụ dưới đây ở Sol trưởng, để dạo trước [Minuet Sol trưởng](/opus/piano/tac-pham/minuet-sol/).
 
@@ -248,7 +248,7 @@ Sẵn sàng đi tiếp khi:
 + Báo giọng, thử đàn và phòng, làm ấm tay hoặc nối hai bài khác giọng
 - Thay cho phần coda của bản nhạc
 - Đọc tên bản nhạc cho khán giả
-> Czerny in cả một tập 120 đoạn dạo đầu mẫu, Op. 300.
+> Czerny in cả một tập 120 ví dụ về dạo đầu, Op. 300.
 ? Khi ứng tác trên bè bass cho sẵn, phách 1 của mỗi ô nên là gì?
 + Một nốt hợp âm, thường là nốt khung của mẫu
 - Một nốt lướt

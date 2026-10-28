@@ -7,7 +7,7 @@ Phần này dạy bạn chơi hòa âm bằng hai bàn tay chứ không chỉ hi
 
 ## Vì sao người chơi cổ điển cần hòa âm bên phím
 
-Nhiều người học piano cổ điển đọc từng nốt, tập từng ô và chưa bao giờ chơi một hợp âm mà bản nhạc không ghi. **Hòa âm bên phím** (keyboard harmony) là chơi các tiến trình hợp âm bằng tay, không cần bản nhạc, trong mọi giọng. Nó cho bạn bốn thứ:
+Nhiều người học piano cổ điển đọc từng nốt, tập từng ô và chưa bao giờ chơi một hợp âm mà bản nhạc không ghi. **Hòa âm bên phím** (keyboard harmony) là chơi các tiến trình hợp âm bằng tay, kể cả những nốt không ghi sẵn trên bản nhạc, và chuyển chúng sang các giọng khác. Nó cho bạn bốn thứ:
 
 | Bạn được gì | Vì sao |
 |---|---|
@@ -16,7 +16,7 @@ Nhiều người học piano cổ điển đọc từng nốt, tập từng ô v
 | **Hiểu bản nhạc** | Biết câu nhạc đang rời nhà hay sắp về nhà giúp bạn chọn sắc thái, chỗ thở và rubato. |
 | **Tự do ứng tác** | Có sẵn vốn tiến trình và mẫu, bạn dạo được một đoạn mở đầu, biến tấu một giai điệu, tự nối hai bài trong một buổi chơi đàn. |
 
-Đây cũng là cách người chơi đàn phím được đào tạo trong nhiều thế kỷ. Thời Baroque, người chơi đàn phím trong dàn nhạc thường chỉ có trước mặt một bè bass, đôi khi kèm các con số ([bè trầm số](/opus/nhac-ly/25-be-tram-so/)), và tự chơi hợp âm bên trên. Ở các nhạc viện Napoli thế kỷ 18, học trò luyện **partimento**: những bè bass được hoàn thiện thành nhạc ngay trên bàn phím. Carl Philipp Emanuel Bach dành phần hai cuốn *Versuch über die wahre Art das Clavier zu spielen* (Tiểu luận về cách chơi đàn phím đúng đắn, 1762) cho việc đệm, và kết thúc bằng fantasia tự do, tức ứng tác. Mozart và Beethoven đều nổi tiếng là những người ứng tác xuất sắc trước công chúng.
+Đây cũng là cách người chơi đàn phím được đào tạo trong nhiều thế kỷ. Thời Baroque, người chơi đàn phím khi đệm thường chỉ có trước mặt một bè bass, đôi khi kèm các con số ([bè trầm số](/opus/nhac-ly/25-be-tram-so/)), và tự chơi hợp âm bên trên. Ở các nhạc viện Napoli thế kỷ 18, học trò luyện **partimento**: những bè bass được hoàn thiện thành nhạc ngay trên bàn phím. Carl Philipp Emanuel Bach dành phần hai cuốn *Versuch über die wahre Art das Clavier zu spielen* (Tiểu luận về cách chơi đàn phím đúng đắn, 1762) cho việc đệm, và kết thúc bằng fantasia tự do, tức ứng tác. Mozart và Beethoven đều nổi tiếng là những người ứng tác xuất sắc trước công chúng.
 
 Bạn không cần trở thành nhà soạn nhạc. Mục tiêu là một vốn từ nhỏ mà chắc, chơi được trong mọi giọng, đủ để nghe ra và hiểu những gì bạn đang tập.
 
@@ -35,7 +35,7 @@ Nếu còn thiếu phần nhạc lý, bạn vẫn bắt đầu được trang đ
 |---|---|
 | [Kết ở mọi giọng](/opus/piano/hoa-am/ket/) | Bốn loại kết; tay trái bè bass, tay phải ba nốt ở ba vị trí; I–IV–V–I, I–IV–I6/4–V–I, I–ii6–V7–I; giọng thứ; vòng 12 giọng trưởng và 12 giọng thứ |
 | [Đệm cho một giai điệu](/opus/piano/hoa-am/dem-giai-dieu/) | Chọn hợp âm dưới một giai điệu, quyết định nhịp hòa âm, viết bè bass, lắp hình đệm |
-| [Mẫu galant](/opus/piano/hoa-am/mau-galant/) | Những công thức hai bè quen thuộc của âm nhạc thế kỷ 18 mà nhà nghiên cứu Robert Gjerdingen hệ thống hóa: Romanesca, Prinner, Monte, Fonte… (vài tên có từ thế kỷ 18, như Monte và Fonte của Joseph Riepel; vài tên do Gjerdingen đặt, như Prinner). Đó là vốn từ có sẵn cho ứng tác |
+| [Mẫu galant](/opus/piano/hoa-am/mau-galant/) | Những công thức hai bè quen thuộc của âm nhạc thế kỷ 18 mà nhà nghiên cứu Robert Gjerdingen hệ thống hóa: Romanesca, Prinner, Monte, Fonte… (vài tên có từ thế kỷ 18, như Monte và Fonte của Joseph Riepel; vài tên đặt theo nhà lý thuyết, như Meyer). Đó là vốn từ có sẵn cho ứng tác |
 | [Ứng tác](/opus/piano/hoa-am/ung-tac/) | Ghép kết, tiến trình và mẫu thành những đoạn ứng tác ngắn theo phong cách cổ điển |
 
 Thứ tự này có chủ ý. Kết là dấu chấm câu; đệm giai điệu là đặt câu; mẫu galant là thành ngữ; ứng tác là tự nói.
@@ -63,7 +63,7 @@ Lịch chỉ là gợi ý: điều kiện để sang tuần sau là đạt mục
 
 ## Mỗi ngày 10 phút
 
-Mười phút đều đặn mỗi ngày hiệu quả hơn một giờ dồn vào cuối tuần. Đặt khối này ở đầu buổi tập, trước bài đang học.
+Mười phút mỗi ngày là một khối nhỏ, dễ giữ đều. Đặt khối này ở đầu buổi tập, trước bài đang học.
 
 | Phút | Việc | Cách làm |
 |---|---|---|
@@ -87,4 +87,7 @@ Nghe ra kết nửa hay kết trọn là nửa đầu của việc tự đệm. 
 - Giorgio Sanguinetti, *The Art of Partimento: History, Theory, and Practice* (Oxford University Press, 2012).
 - John J. Mortensen, *The Pianist's Guide to Historic Improvisation* (Oxford University Press, 2020).
 - Stefan Kostka, Dorothy Payne, *Tonal Harmony* (McGraw-Hill).
+- [Gjerdingen, *Music in the Galant Style*, chương 2 (bản trích, Đại học California Irvine)](https://music.arts.uci.edu/abauer/5.2/readings/Gjerdingen%20_Music_in_the_Galant_Style_Ch_2.pdf); Open Music Theory, [Galant Schemas](https://viva.pressbooks.pub/openmusictheory/chapter/galant-schemas/).
+- *The Concise Oxford Dictionary of Music* (qua Encyclopedia.com): [continuo](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/continuo), [partimento](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/partimento), [improvisation](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/improvisation).
+- [IMSLP, Versuch über die wahre Art das Clavier zu spielen](https://imslp.org/wiki/Versuch_%C3%BCber_die_wahre_Art_das_Clavier_zu_spielen_(Bach,_Carl_Philipp_Emanuel)); College Music Society, [A Re-Evaluation of Keyboard Harmony](https://symposium.music.org/volume-22/articles-1752877059/a-re-evaluation-of-keyboard-harmony).
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

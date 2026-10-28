@@ -56,7 +56,7 @@ K:C
 - Đừng đổi ở phách yếu rồi giữ qua phách mạnh kế tiếp: tai nghe như hụt chân.
 - Đừng đổi cho mỗi nốt: quá nhiều hợp âm làm giai điệu mất hướng.
 
-Trong *Ode to Joy* (Khúc ca niềm vui), ô 1–3 và 5–7 mỗi ô chỉ cần một hợp âm; ô 4 và 8 có hai. Ở ô 4, Mi chấm dôi thuộc I nên I giữ hai phách đầu; Rê móc đơn vang sớm nửa phách so với V (**nốt đón trước**), rồi V giữ hai phách cuối: kết nửa. Ở ô 8 là V rồi I, kết trọn, và Đô móc đơn cũng là nốt đón trước. Ở ô 2 và 6, giai điệu đi qua Fa nên V thành V7. Tay trái dưới đây chính là các nốt bass bạn đã chơi ở bài 3 của [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/); giờ bạn biết vì sao chúng đúng.
+Trong *Ode to Joy* (Khúc ca niềm vui), ô 1–3 và 5–7 mỗi ô chỉ cần một hợp âm; ô 4 và 8 có hai. Ở ô 4, Mi chấm dôi thuộc I nên I giữ hai phách đầu; Rê móc đơn vang sớm nửa phách so với V (**nốt đón trước**), rồi V giữ hai phách cuối: kết nửa. Ở ô 8 là V rồi I, kết trọn, và Đô móc đơn cũng là nốt đón trước. Ở ô 2 và 6, giai điệu đi qua Fa nên V thành V7. Tay trái dưới đây dùng đúng hai nốt bass bạn đã chơi ở bài 3 của [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/), Đô và Sol, chỉ khác là Sol đặt thấp hơn một quãng tám; giờ bạn biết vì sao chúng đúng.
 
 ```abc
 X:2
@@ -86,7 +86,7 @@ Bass chỉ gồm nốt gốc thì nhảy liên tục: Đô–Sol–Đô–Sol. M
 
 - **V6** (Sol–Si–Rê, Si ở bass) thay V khi bass cần đi Đô–Si.
 - **vi** (La–Đô–Mi) thay I: chung hai nốt Đô, Mi, mang màu thứ.
-- **ii6** (Rê–Fa–La, Fa ở bass) thay IV: chung Fa, La, hướng về V rõ hơn.
+- **ii6** (Rê–Fa–La, Fa ở bass) thay IV: chung hai nốt Fa, La.
 - **I6/4–V** ở kết nửa, như ở trang [Kết ở mọi giọng](/opus/piano/hoa-am/ket/).
 
 Giữa bass và giai điệu có hai quy tắc. Đi **ngược hướng**, hoặc song song quãng 3, quãng 6, quãng 10. Không đi song song quãng 5 hay quãng 8. Phiên bản dưới đây chỉ có hai bè, nhưng tai tự điền phần còn lại: bass đi xuống từng bậc Đô–Si–La–Sol, ngược với những đoạn giai điệu đi lên. Cả bè nằm gọn trong một thế tay trái, ngón 5 trên Fa2 và ngón 1 trên Đô3.
@@ -127,7 +127,7 @@ Khi đã có hợp âm và bè bass, chọn một hình đệm ở trang [hợp 
 Đổi hình đệm nhưng giữ nguyên ba điều:
 
 - Nốt đầu mỗi nhóm của tay trái là nốt bass đã chọn. Hình đệm chỉ trải hợp âm ra theo thời gian, không đổi hòa âm.
-- Tay trái nhỏ hơn tay phải khoảng hai bậc sắc thái, và không leo lên âm vực của giai điệu.
+- Tay trái nhỏ hơn tay phải vài bậc sắc thái, và không leo lên âm vực của giai điệu.
 - Tay trái không nhân đôi nốt giai điệu đang chuyển động. Nếu giai điệu hát La–Sol trên IV–I mà tay trái cũng có La–Sol, hai bè chạy song song quãng 8; bỏ nốt trùng khỏi tay trái (Đô–Fa thay cho Đô–Fa–La).
 
 Dưới đây là câu đầu *Au clair de la lune* với bass Alberti, cùng hai hợp âm như ví dụ đầu tiên.
@@ -262,6 +262,8 @@ Sẵn sàng sang [mẫu galant](/opus/piano/hoa-am/mau-galant/) khi:
 - E. L. Lancaster, Kenon D. Renfrow, *Alfred's Group Piano for Adults* (Alfred): bài tập đệm giai điệu bằng các hợp âm chính và ứng tác.
 - Stefan Kostka, Dorothy Payne, *Tonal Harmony* (McGraw-Hill): nhịp hòa âm, âm ngoài hợp âm, dẫn bè.
 - Edward Aldwell, Carl Schachter, *Harmony and Voice Leading*: bè bass và giai điệu như một khung hai bè.
-- Bản nhạc: [IMSLP](https://imslp.org/) (tìm "Symphony No.9, Op.125" của Beethoven; "Ah vous dirai-je, Maman, K.265" của Mozart).
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/).
+- Bản nhạc đã đối chiếu: [Mutopia, Ode to Joy](https://www.mutopiaproject.org/ftp/BeethovenLv/ode/ode.ly) (giai điệu chương 4 của [Giao hưởng số 9, Op. 125 ở IMSLP](https://imslp.org/wiki/Symphony_No.9,_Op.125_(Beethoven,_Ludwig_van))); [Mutopia, Au clair de la lune](https://www.mutopiaproject.org/ftp/HoretzkyF/horetzky21/horetzky21.ly); [Britannica, Twelve Variations on "Ah, vous dirai-je, Maman", K 265](https://www.britannica.com/topic/Twelve-Variations-on-Ah-vous-dirai-je-Maman).
+- Open Music Theory: [Introduction to Harmony, Cadences, and Phrase Endings](https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/), [Embellishing Tones](https://viva.pressbooks.pub/openmusictheory/chapter/embellishing-tones/), [Inversion and Figured Bass](https://viva.pressbooks.pub/openmusictheory/chapter/inversion-and-figured-bass/), [First-Species Counterpoint](https://viva.pressbooks.pub/openmusictheory/chapter/first-species-counterpoint/).
+- Andre Mount, *Fundamentals, Function, and Form* (Milne Publishing): [14. Three- and Four-Voice Progressions](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/14-three-and-four-voice-progressions/), [24. The Pre-Dominant Function](https://milnepublishing.geneseo.edu/fundamentals-function-form-workbook/chapter/24-the-pre-dominant-function/).
+- Nhịp hòa âm: [Bach Cantatas Website, Harmonic Rhythm](http://www.bach-cantatas.com/Topics/Harmonic-Rhythm.htm).
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

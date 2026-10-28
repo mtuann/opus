@@ -1,19 +1,19 @@
 ---
 title: Các mẫu hòa âm thời Cổ điển (schemata)
-description: "Âm nhạc thế kỷ 18 được ghép từ những khung hai bè quen thuộc: một chuỗi bậc ở bass đi cùng một chuỗi bậc ở giai điệu. Trang này dạy tám khung thông dụng nhất…"
+description: "Âm nhạc thế kỷ 18 được ghép từ những khung hai bè quen thuộc: một chuỗi bậc ở bass đi cùng một chuỗi bậc ở giai điệu. Trang này dạy tám khung quen thuộc…"
 ---
 
-Âm nhạc thế kỷ 18 được ghép từ những khung hai bè quen thuộc: một chuỗi bậc ở bass đi cùng một chuỗi bậc ở giai điệu. Trang này dạy tám khung thông dụng nhất và các kiểu kết chúng dẫn tới, như những hình tay chơi được ở mọi giọng. Học xong, bạn có sẵn vốn từ để [ứng tác](/opus/piano/hoa-am/ung-tac/), và nhận ra chúng trong minuet, sonatina, sonata bạn đang tập.
+Âm nhạc thế kỷ 18 được ghép từ những khung hai bè quen thuộc: một chuỗi bậc ở bass đi cùng một chuỗi bậc ở giai điệu. Trang này dạy tám khung quen thuộc và các kiểu kết chúng dẫn tới, như những hình tay chơi được ở mọi giọng. Học xong, bạn có sẵn vốn từ để [ứng tác](/opus/piano/hoa-am/ung-tac/), và nhận ra chúng trong minuet, sonatina, sonata bạn đang tập.
 
 ## Mẫu là gì, và từ đâu ra
 
-**Mẫu** (schema, số nhiều schemata) là một khung hai bè: bass đi theo một chuỗi bậc, giai điệu theo một chuỗi bậc khác, khớp nhau từng bước. Nhà âm nhạc học Robert Gjerdingen, trong cuốn *Music in the Galant Style* (2007), đã gom và đặt tên cho vài chục khung như thế trong **phong cách galant**, ngôn ngữ âm nhạc giữa thế kỷ 18 mà Haydn và Mozart lớn lên cùng. Ông gọi chúng là những "câu nhạc có sẵn"; với người học đàn, chúng giống thành ngữ của một ngôn ngữ.
+**Mẫu** (schema, số nhiều schemata) là một khung hai bè: bass đi theo một chuỗi bậc, giai điệu theo một chuỗi bậc khác, khớp nhau từng bước. Nhà âm nhạc học Robert Gjerdingen, trong cuốn *Music in the Galant Style* (2007), đã gom và đặt tên cho nhiều khung như thế trong **phong cách galant**, lối viết thanh nhã của thế kỷ 18 mà Mozart thời trẻ cũng viết theo. Ông gọi chúng là những "câu nhạc có sẵn"; với người học đàn, chúng giống thành ngữ của một ngôn ngữ.
 
-Vài cái tên có từ thế kỷ 18: **Fonte** (suối), **Monte** (núi) và **Ponte** (cầu) là cách gọi của nhà lý luận người Áo Joseph Riepel. Fonte và Monte là những [chuỗi hòa âm](/opus/nhac-ly/29-chuoi-hoa-am/) (sequence) ngắn. Những tên khác do Gjerdingen đặt: **Meyer** theo nhà âm nhạc học Leonard Meyer; **Romanesca** mượn tên một công thức bass thế kỷ 16–17, dùng để hát thơ và làm nền cho biến tấu.
+Vài cái tên có từ thế kỷ 18: **Fonte** (suối), **Monte** (núi) và **Ponte** (cầu) là cách gọi của nhà lý luận Joseph Riepel, tác giả các sách lý luận in từ năm 1752. Fonte và Monte là những [chuỗi hòa âm](/opus/nhac-ly/29-chuoi-hoa-am/) (sequence) ngắn. Có tên đặt theo người nghiên cứu: **Meyer**, theo nhà âm nhạc học Leonard Meyer. **Romanesca** mượn tên một công thức bass đã được nhắc đến từ thế kỷ 16 và phổ biến trong thế kỷ 17.
 
-Vì sao cả một thế hệ nhạc sĩ dùng chung những khung này? Gjerdingen tìm câu trả lời ở lối dạy **partimento** tại các nhạc viện Napoli. Các nhạc viện ấy vốn là nơi nuôi trẻ mồ côi (*conservatorio* gốc nghĩa là nơi gìn giữ), và trong thế kỷ 18 đã đào tạo nhiều nhạc sĩ làm việc khắp châu Âu. Một partimento là một bè bass viết trên một khuông, có khi kèm số ([bè trầm số](/opus/nhac-ly/25-be-tram-so/)), có khi không; học trò ngồi vào đàn và biến nó thành nhạc hoàn chỉnh, tự thêm hòa âm và giai điệu. Các em học thuộc cách hòa âm cho từng bậc của bass (quy tắc quãng tám, *regola dell'ottava*), các kiểu kết và những chuỗi bass hay gặp, rồi làm thật nhiều partimento của các thầy như Francesco Durante hay Fedele Fenaroli. Đến lúc ấy, một chuỗi bass quen tự gọi ra một giai điệu quen: đó chính là các mẫu dưới đây.
+Vì sao cả một thế hệ nhạc sĩ dùng chung những khung này? Gjerdingen tìm câu trả lời ở lối dạy **partimento** tại các nhạc viện Napoli. *Conservatorio* là trường ở Napoli, Venezia và vài thành phố Ý khác, nơi trẻ em được "gìn giữ" (*conserved*) và học nhạc; lối dạy partimento nở rộ ở đó trong thế kỷ 17–18. Một partimento là một bè bass viết trên một khuông, có khi kèm số ([bè trầm số](/opus/nhac-ly/25-be-tram-so/)), có khi không; học trò ngồi vào đàn và biến nó thành nhạc hoàn chỉnh, tự thêm hòa âm và giai điệu. Các em học thuộc cách hòa âm cho từng bậc của bass (quy tắc quãng tám, *regola dell'ottava*), các kiểu kết và những chuỗi bass hay gặp, rồi làm các partimento của những thầy như Francesco Durante hay Fedele Fenaroli. Đến lúc ấy, một chuỗi bass quen tự gọi ra một giai điệu quen: đó chính là các mẫu dưới đây.
 
-Trong các ví dụ, số trong vòng tròn là bậc: phía trên khuông là giai điệu, phía dưới là bass. Ví dụ viết ba bè (tay phải giai điệu và một bè giữa, tay trái bass), mỗi bước của mẫu một ô 3/4 như trong minuet; trong nhạc thật, một mẫu có thể gọn hơn hay giãn ra.
+Trong các ví dụ, số trong vòng tròn là bậc: phía trên khuông là giai điệu, phía dưới là bass. Ví dụ viết ba bè (tay phải giai điệu và một bè giữa, tay trái bass), mỗi bước của mẫu một ô 3/4 như trong minuet (riêng bốn kết ở mục Kết, mỗi bước một phách trong nhịp 4/4); trong nhạc thật, một mẫu có thể gọn hơn hay giãn ra.
 
 | Mẫu | Giai điệu | Bass | Hòa âm ở Đô trưởng | Thường đứng ở |
 |---|---|---|---|---|
@@ -23,14 +23,14 @@ Trong các ví dụ, số trong vòng tròn là bậc: phía trên khuông là g
 | Prinner | 6–5–4–3 | 4–3–2–1 | IV – I6 – vii°6 – I | trả lời một mẫu mở đầu |
 | Fonte | 5–4 … 4–3 | ♯1–2 … 7–1 | V6/5 của ii – ii … V6/5 – I | sau vạch nhắc lại, đi xuống |
 | Monte | ♭7–6 … 1–7 | 3–4 … ♯4–5 | V6/5 của IV – IV … V6/5 của V – V | sau vạch nhắc lại, đi lên |
-| Ponte | 5–7–2(–4) | 5 giữ nguyên | V, V7 kéo dài | sau vạch nhắc lại, chờ trên át âm |
+| Ponte | 5–7–2 | 5 giữ nguyên | V, V7 kéo dài | sau vạch nhắc lại, chờ trên át âm |
 | Quiescenza | ♭7–6–♮7–1 | 1 giữ nguyên | V7 của IV – IV6/4 – V7 – I, trên âm nền chủ âm | sau kết cuối |
 
 ## Ba cách mở đầu
 
 ### Romanesca
 
-**Romanesca** là mẫu mở đầu nổi tiếng nhất. Bass đi xuống 1–7–6 rồi nhảy về 3; giai điệu 1–5–1–1. Hòa âm I – V6 – vi – I6 xen kẽ hợp âm thể gốc và thể đảo 1, nên dù bass tuột dần, câu nhạc vẫn vững. Gjerdingen gọi nó là một "nước khai cuộc" (opening gambit), như trong cờ.
+**Romanesca** là một mẫu mở đầu. Bass đi xuống 1–7–6 rồi nhảy về 3; giai điệu 1–5–1–1. Hòa âm I – V6 – vi – I6 xen kẽ hợp âm thể gốc và thể đảo 1. Bảng tóm tắt của OMT xếp nó vào nhóm "nước khai cuộc" (*opening gambit*), như trong cờ.
 
 ```abc
 X:1
@@ -52,12 +52,12 @@ K:C
 2. Tay phải riêng: ngón 1 trên bè giữa (Mi – Rê – Mi – Sol), ngón 4 hoặc 5 trên giai điệu. Hát giai điệu.
 3. Hai tay, ♩ = 88, rồi nối thẳng sang Prinner ở mục sau: Mi3 của bass đi lên Fa3, thành một câu tám ô.
 
-**Giọng khác:** ở Sol trưởng, bass Sol – Fa♯ – Mi – Si, giai điệu Sol – Rê – Sol – Sol; ở Fa trưởng, bass Fa – Mi – Rê – La. Ngoài bản galant này còn bản "nhảy" (bass 1–5–6–3: Đô – Sol – La – Mi) và bản "đi liền" (bass 1–7–6–5); bản galant lấy phần đầu của bản đi liền và cú nhảy cuối của bản kia.
+**Giọng khác:** ở Sol trưởng, bass Sol – Fa♯ – Mi – Si, giai điệu Sol – Rê – Sol – Sol; ở Fa trưởng, bass Fa – Mi – Rê – La. Romanesca còn hai dạng bass cũ hơn: dạng "nhảy" (xuống quãng 4 rồi lên một bậc, xen nhau: 1–5–6–3, như Đô – Sol – La – Mi) và dạng "đi liền" (bass đi bậc xuống). Theo Gjerdingen, dạng nhảy đặc trưng cho thế kỷ 17 và đầu thế kỷ 18, dạng đi liền cho cuối thế kỷ 18; bass galant 1–7–6–3 là dạng lai, phần đầu giống dạng đi liền, phần sau giống dạng nhảy. Canon của Pachelbel mở đầu bằng dạng nhảy ([bài 29](/opus/nhac-ly/29-chuoi-hoa-am/)).
 **Gặp ở đâu:** đầu bài hay đầu câu, thường được một Prinner trả lời. Minuet ở trang [Ứng tác](/opus/piano/hoa-am/ung-tac/) mở đầu đúng như thế.
 
 ### Do–Re–Mi
 
-**Do–Re–Mi** là mẫu ngắn nhất: giai điệu đi lên 1–2–3 trên bass 1–7–1, tức I – V6 – I. Bass cũng có thể đi 1–5–1, như hai ô sau của ví dụ.
+**Do–Re–Mi** là một mẫu ngắn, ba bước: giai điệu đi lên 1–2–3 trên bass 1–7–1, tức I – V6 – I. Hai ô sau của ví dụ là một biến thể soạn riêng cho trang này, bass đi 1–5–1.
 
 ```abc
 X:2
@@ -107,11 +107,11 @@ K:C
 3. Hát cặp đầu, đàn cặp sau; rồi đổi lại.
 
 **Giọng khác:** ở Sol trưởng, giai điệu Sol – Fa♯ … Đô – Si, bass Sol – La … Fa♯ – Sol.
-**Gặp ở đâu:** mở đầu. Gjerdingen gọi một biến thể có giai điệu 1–2–4–3 là **Jupiter**, theo bốn nốt Đô – Rê – Fa – Mi ở chương cuối Giao hưởng số 41 "Jupiter" của Mozart.
+**Gặp ở đâu:** mở đầu. Cùng nhóm với Meyer, OMT kể thêm **Pastorella**, **Jupiter** và **Aprile**: mẫu nào cũng bắt đầu ở chủ âm, rời đi hai bước rồi về chủ âm. Jupiter có giai điệu 1–2–4–3 trên bass 1–7–5–1.
 
 ## Câu trả lời: Prinner
 
-**Prinner** là mẫu trả lời thông dụng nhất: giai điệu đi xuống 6–5–4–3, bass đi xuống 4–3–2–1, hai bè song song quãng 10 suốt bốn bước. Gjerdingen gọi nó là đòn đáp trả (riposte, như trong đấu kiếm): một mẫu mở đầu nêu ý, Prinner đáp lại và đưa nhạc về chủ âm một cách nhẹ nhàng, chưa phải kết trọn. Hợp âm Rê – Fa – Si ở ô 3 có thể thay bằng V4/3. Prinner cũng có thể chen một át âm trước nốt cuối (bass 4–3–2–5–1) để thành một kết.
+**Prinner** là một mẫu trả lời điển hình: giai điệu đi xuống 6–5–4–3, bass đi xuống 4–3–2–1, hai bè song song quãng 10 suốt bốn bước. Một mẫu mở đầu nêu ý, Prinner đáp lại bằng một đường đi xuống dẫn tới kết; giai điệu dừng ở bậc 3 nên chưa phải kết trọn. OMT còn nêu một biến thể chen một át âm thể gốc trước nốt cuối (bass 4–3–2–5–1).
 
 **Prinner chuyển giọng** dời cả hình ấy lên một quãng 5: giai điệu 3–2–1–7 trên bass 1–7–6–5 của Đô trưởng, nghe như 6–5–4–3 trên 4–3–2–1 của Sol trưởng. Nốt Fa♯ ở ô 7 là cánh cửa sang giọng át.
 
@@ -138,7 +138,7 @@ K:C
 3. Chơi Romanesca + Prinner thành câu tám ô; rồi Prinner chuyển giọng + cadenza semplice ở Sol trưởng.
 
 **Giọng khác:** ở Sol trưởng, Mi – Rê – Đô – Si trên Đô – Si – La – Sol; ở Fa trưởng, Rê – Đô – Si♭ – La trên Si♭ – La – Sol – Fa.
-**Gặp ở đâu:** ngay sau một mẫu mở đầu. Bản chuyển giọng hay được dùng để đưa nửa đầu một minuet, hay một bài hai đoạn, sang giọng át.
+**Gặp ở đâu:** ngay sau một mẫu mở đầu. Bản chuyển giọng đưa nhạc từ giọng chủ sang giọng át.
 
 ## Sau vạch nhắc lại: Fonte, Monte, Ponte
 
@@ -166,7 +166,7 @@ K:C
 
 1. Tay phải giữ một hình: ngón 1 ở bè giữa (La – La – Sol – Sol), ngón 5 ở giai điệu (Sol – Fa – Fa – Mi). Chỉ có hai quãng, 7 và 6, lặp lại.
 2. Tay trái Đô♯3 – Rê3 – Si2 – Đô3, ngón 2 – 1 – 3 – 2. Nói "thứ – thứ, trưởng – trưởng".
-3. Nghe giai điệu và bass tạo quãng 5 giảm (Sol trên Đô♯) rồi mở ra quãng 10 (Fa trên Rê): đó là "chữ ký" của Fonte.
+3. Nghe giai điệu và bass tạo quãng 5 giảm (Sol trên Đô♯) rồi mở ra quãng 3 (Fa trên Rê): đó là "chữ ký" của Fonte.
 
 **Giọng khác:** ở Sol trưởng, bass Sol♯ – La … Fa♯ – Sol, giai điệu Rê – Đô … Đô – Si.
 **Gặp ở đâu:** ngay sau vạch nhắc lại của minuet và các điệu múa hai đoạn.
@@ -196,11 +196,11 @@ K:C
 3. Monte dừng ở át âm: nối tiếp bằng Ponte hoặc một kết để về nhà.
 
 **Giọng khác:** ở Sol trưởng, bass Si – Đô … Đô♯ – Rê, giai điệu Fa♮ – Mi … Sol – Fa♯.
-**Gặp ở đâu:** sau vạch nhắc lại, hay bất cứ chỗ nào nhạc cần dâng lên.
+**Gặp ở đâu:** sau vạch nhắc lại.
 
 ### Ponte
 
-**Ponte** đứng yên trên át âm: bass giữ bậc 5, giai điệu leo theo hợp âm át 5–7–2, có thể thêm 4 (nốt 7 của V7), rồi rơi xuống 3 khi chủ âm trở về. Giữ càng lâu, người nghe càng mong được về nhà.
+**Ponte** đứng yên trên át âm: bass giữ bậc 5, giai điệu leo theo hợp âm át 5–7–2. Trong ví dụ, giai điệu còn thêm 4 (nốt 7 của V7) rồi rơi xuống 3 khi chủ âm trở về.
 
 ```abc
 X:7
@@ -227,7 +227,7 @@ K:C
 
 ## Kết và sau kết
 
-Các mẫu trên đều dẫn đến **kết**, dấu chấm câu bạn đã tập ở trang [Kết ở mọi giọng](/opus/piano/hoa-am/ket/). Sách dạy partimento phân biệt kết đơn, kết ghép và kết kép theo độ dài của át âm; Gjerdingen đặt thêm tên cho một kết nửa rất hay gặp, kết hội tụ.
+Các mẫu trên đều dẫn đến **kết**, dấu chấm câu bạn đã tập ở trang [Kết ở mọi giọng](/opus/piano/hoa-am/ket/). Bảng tóm tắt của OMT liệt kê ba kết trọn khác nhau ở độ dài của át âm (*cadenza semplice*, *composta*, *doppia*: kết đơn, kết ghép, kết kép) và một kết nửa, kết hội tụ (còn gọi là kết nửa fa–fi–sol theo đường bass).
 
 | Kết | Bass | Giai điệu | Ghi chú |
 |---|---|---|---|
@@ -288,7 +288,7 @@ K:C
 2. Chơi cadenza composta rồi Quiescenza hai lần liền, nhanh gấp đôi (hai bước mỗi ô), lần sau nhỏ hơn.
 
 **Giọng khác:** ở Sol trưởng, giai điệu Fa♮ – Mi – Fa♯ – Sol, bè giữa Si – Đô – Đô – Si trên âm nền Sol. Bạn sẽ dùng đúng hình này để dạo đầu ở trang [Ứng tác](/opus/piano/hoa-am/ung-tac/).
-**Gặp ở đâu:** sau kết cuối của một đoạn hay cả bài, như một lời chào.
+**Gặp ở đâu:** sau kết cuối của một đoạn hay cả bài.
 
 ## Ghép mẫu thành câu
 
@@ -321,8 +321,8 @@ K:C
 Một mẫu chỉ thật sự là của bạn khi bạn chơi được nó ở giọng bất kỳ mà không phải dò từng nốt.
 
 1. **Bắt đầu từ bass và nói bậc.** "Một – bảy – sáu – ba", không phải "Đô – Si – La – Mi". Tìm chủ âm, đếm ra nốt bass, rồi mới đặt tay phải.
-2. **Nhớ hình quãng giữa hai bè.** Prinner luôn là quãng 10; Fonte và Monte là quãng 5 giảm mở ra quãng 10, hai lần. Đặt đúng bass, tay phải tự tìm ra giai điệu; ngón và hình tay giữ nguyên ở mọi giọng.
-3. **Đi theo vòng quãng 5**, xen kẽ phía thăng và phía giáng như ở trang [Kết ở mọi giọng](/opus/piano/hoa-am/ket/). Học giọng trưởng trước. Romanesca, Do–Re–Mi, Prinner và các kết cũng dùng được ở giọng thứ, nhớ nâng cảm âm: ở La thứ, Romanesca có bass La – Sol♯ – Fa – Đô.
+2. **Nhớ hình quãng giữa hai bè.** Prinner luôn là quãng 10; Fonte và Monte là quãng 5 giảm mở ra quãng 3, hai lần. Đặt đúng bass, tay phải tự tìm ra giai điệu; ngón và hình tay giữ nguyên ở mọi giọng.
+3. **Đi theo vòng quãng 5**, xen kẽ phía thăng và phía giáng như ở trang [Kết ở mọi giọng](/opus/piano/hoa-am/ket/). Học giọng trưởng trước. Romanesca, Do–Re–Mi, Prinner và các kết bạn cũng có thể thử ở giọng thứ, nhớ nâng cảm âm: ở La thứ, Romanesca có bass La – Sol♯ – Fa – Đô.
 
 | Tuần | Giọng trưởng | Giọng thứ (Romanesca, Prinner, các kết) |
 |---|---|---|

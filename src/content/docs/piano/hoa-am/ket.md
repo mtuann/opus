@@ -3,7 +3,7 @@ title: Kết ở mọi giọng
 description: Kết là dấu chấm câu của âm nhạc (bài 13); trang này biến nó thành phản xạ của hai bàn tay. Tay trái chơi bè bass, tay phải chơi ba nốt dẫn bè gần nhất, ở ba vị…
 ---
 
-Kết là dấu chấm câu của âm nhạc ([bài 13](/opus/nhac-ly/13-ket/)); trang này biến nó thành phản xạ của hai bàn tay. Tay trái chơi bè bass, tay phải chơi ba nốt dẫn bè gần nhất, ở ba vị trí và trong cả 24 giọng. Học xong, bạn chơi được bốn loại kết và ba tiến trình kết thông dụng nhất mà không cần nhìn bản nhạc.
+Kết là dấu chấm câu của âm nhạc ([bài 13](/opus/nhac-ly/13-ket/)); trang này biến nó thành phản xạ của hai bàn tay. Tay trái chơi bè bass, tay phải chơi ba nốt dẫn bè gần nhất, ở ba vị trí và trong cả 24 giọng. Học xong, bạn chơi được bốn loại kết và ba tiến trình kết mà không cần nhìn bản nhạc.
 
 ## Hai tay, bốn bè
 
@@ -14,7 +14,7 @@ Khi đổi hợp âm, dùng **dẫn bè** gần nhất ([bài 12](/opus/nhac-ly/
 1. Nốt chung của hai hợp âm giữ nguyên.
 2. Các nốt khác đi đến nốt gần nhất của hợp âm mới, thường là một bước liền.
 3. Cảm âm (Si ở Đô trưởng) đi lên chủ âm; nốt 7 của V7 (Fa) đi xuống.
-4. Không để hai bè đi song song quãng 5 hoặc quãng 8: hai bè nhập làm một và hòa âm nghe rỗng. Giữ quy tắc 1 và 2 thì hầu như tự tránh được.
+4. Không để hai bè đi song song quãng 5 hoặc quãng 8: hai bè nhập làm một và mất tính độc lập. Giữ quy tắc 1 và 2 thì hầu như tự tránh được.
 
 Cùng một hợp âm, tay phải có ba cách xếp. Ta gọi tên **vị trí** theo nốt trên cùng của hợp âm I: **vị trí quãng 8** (chủ âm ở trên: Mi–Sol–Đô), **vị trí quãng 3** (Sol–Đô–Mi) và **vị trí quãng 5** (Đô–Mi–Sol). Hãy tập cả ba, vì khi đệm cho một giai điệu, nốt giai điệu nằm trên cùng sẽ chọn vị trí cho bạn.
 
@@ -47,7 +47,7 @@ Tay trái giữ một thế cho cả trang: ngón 1 trên Đô3, ngón 5 trên F
 
 **Tập ở đàn**
 
-1. Đọc to bè trên cùng của từng vị trí: Đô–Đô–Si–Đô, Mi–Fa–Rê–Mi, Sol–La–Sol–Sol. Bè này chỉ đi bước liền hoặc đứng yên.
+1. Đọc to bè trên cùng của từng vị trí: Đô–Đô–Si–Đô, Mi–Fa–Rê–Mi, Sol–La–Sol–Sol. Bè này đi bước liền hoặc đứng yên, trừ một chỗ: Fa xuống Rê ở vị trí quãng 3.
 2. Tay phải riêng, mỗi hợp âm hai phách, ♩ = 60. Nói tên hợp âm khi chơi.
 3. Tay trái riêng: Đô3–Fa2–Sol2–Đô3, mắt không nhìn xuống tay.
 4. Hai tay. Mỗi vị trí ba lần liền không lỗi rồi mới sang vị trí sau; từ lần thứ ba, không nhìn bản nhạc.
@@ -114,9 +114,9 @@ K:C
 
 ## ii6 và V7: kết đầy đủ
 
-**ii6** là Rê–Fa–La với Fa ở bass. Nó chung hai nốt với IV (Fa, La) nên thay được IV, còn nốt Rê làm nó hướng về V rõ hơn. Ở cả ba vị trí, nốt Fa của tay phải giữ nguyên sang V7 và trở thành nốt 7, rồi đi xuống Mi: tai nghe nốt nghịch ấy đã được "chuẩn bị" từ trước.
+**ii6** là Rê–Fa–La với Fa ở bass. Nó chung hai nốt với IV (Fa, La) nên thay được IV; chỗ khác duy nhất là nốt Rê thay cho nốt Đô. Ở cả ba vị trí, nốt Fa của tay phải giữ nguyên sang V7 và trở thành nốt 7, rồi đi xuống Mi: nốt Fa đã có sẵn từ hợp âm trước.
 
-Ở vị trí quãng 5, đi thẳng từ Đô–Mi–Sol lên Rê–Fa–La sẽ tạo quãng 5 song song (Đô–Sol lên Rê–La). Vì vậy tay phải đi xuống: bè trên hát Sol–Fa–Fa–Mi và kết ở nốt ba, một kết chưa trọn rất thường gặp.
+Ở vị trí quãng 5, đi thẳng từ Đô–Mi–Sol lên Rê–Fa–La sẽ tạo quãng 5 song song (Đô–Sol lên Rê–La). Vì vậy tay phải đi xuống: bè trên hát Sol–Fa–Fa–Mi và kết ở nốt ba, một kết chưa trọn.
 
 ```abc
 X:4
@@ -178,7 +178,7 @@ K:Am
 
 1. **Nghĩ bằng bậc.** Tay trái luôn là chủ âm (ngón 1), hạ át âm thấp hơn một quãng 5 (ngón 5), át âm (ngón 4). Đặt chủ âm trong khoảng Sol2–Fa♯3 để bass không quá đục.
 2. **Giữ hình tay phải.** Hình và ngón của mỗi vị trí giống nhau ở mọi giọng, chỉ phím đen thay đổi. Gặp phím đen, đẩy cả bàn tay vào sâu giữa các phím đen; khi chơi hợp âm, ngón cái đặt trên phím đen là bình thường.
-3. **Nói cảm âm trước khi chơi giọng thứ.** Quên nâng cảm âm là lỗi thường gặp nhất, nhất là ở những giọng có cảm âm "lạ" như Mi♯ (Fa♯ thứ) hay Fa thăng kép (Sol♯ thứ).
+3. **Nói cảm âm trước khi chơi giọng thứ.** Quên nâng cảm âm thì V thành hợp âm thứ, nhất là ở những giọng có cảm âm "lạ" như Mi♯ (Fa♯ thứ) hay Fa thăng kép (Sol♯ thứ).
 
 Thứ tự dưới đây đi quanh [vòng quãng 5](/opus/luyen-tap/hoa-bieu/#vong-quang-nam), xen kẽ phía thăng và phía giáng, mỗi lần thêm một dấu hóa. Mỗi tuần một cặp giọng trưởng và thứ cùng hóa biểu, cộng với ôn các cặp đã học. Trong 4 tuần của trang này bạn đi bốn cặp đầu; từ tuần 5, ba phút khởi động mỗi ngày tiếp tục vòng này trong khi bạn học các trang sau (xem [lộ trình 12 tuần](/opus/piano/hoa-am/)).
 
@@ -249,5 +249,8 @@ Sẵn sàng sang [Đệm cho một giai điệu](/opus/piano/hoa-am/dem-giai-die
 - Willard A. Palmer, Morton Manus, Amanda Vick Lethco, *The Complete Book of Scales, Chords, Arpeggios & Cadences* (Alfred): gam, hợp âm và kết ở mọi giọng trưởng và thứ.
 - Stefan Kostka, Dorothy Payne, *Tonal Harmony* (McGraw-Hill): các loại kết, hợp âm 6/4 ở kết, dẫn bè.
 - Edward Aldwell, Carl Schachter, *Harmony and Voice Leading*: dẫn bè, ii6, V7, kết lừa.
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- Open Music Theory: [Introduction to Harmony, Cadences, and Phrase Endings](https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/), [Strengthening Endings with Cadential 6/4](https://viva.pressbooks.pub/openmusictheory/chapter/cadential-64/), [Plagal Motion](https://viva.pressbooks.pub/openmusictheory/chapter/plagal-motion/), [Roman Numerals](https://viva.pressbooks.pub/openmusictheory/chapter/roman-numerals/), [First-Species Counterpoint](https://viva.pressbooks.pub/openmusictheory/chapter/first-species-counterpoint/), [Minor Scales, Scale Degrees, and Key Signatures](https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/).
+- Andre Mount, *Fundamentals, Function, and Form* (Milne Publishing): [16. Minor Scale Variants](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/16-minor-scale-variants/), [19. The Dominant Seventh Chord](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/19-the-dominant-seventh-chord/), [24. The Pre-Dominant Function](https://milnepublishing.geneseo.edu/fundamentals-function-form-workbook/chapter/24-the-pre-dominant-function/), [Guide to SATB part-writing](https://milnepublishing.geneseo.edu/fundamentals-function-form-workbook/front-matter/guide-to-satb-part-writing/).
+- *The Concise Oxford Dictionary of Music* (qua Encyclopedia.com): [cadence](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/cadence), [cadenza](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/cadenza).
+- Robert Hutchinson, *Music Theory for the 21st-Century Classroom*: [Minor Key Signatures](https://musictheory.pugetsound.edu/mt21c/MinorKeySignatures.html).
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

@@ -1,0 +1,505 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa piano/hoa-am/dem-giai-dieu
+trang: src/content/docs/piano/hoa-am/dem-giai-dieu.md
+nguon_cu: ../opus-zero/docs/piano/hoa-am/dem-giai-dieu.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-28
+    nhanh: moi/d4-l4
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D4-L4 lượt 1, phần A)
+      luot_2: null
+      review: null
+      kiem_mau: null
+nguon:
+  - id: omt-intro
+    bac: 2
+    ten: Open Music Theory, Introduction to Harmony, Cadences, and Phrase Endings (PAC, IAC, HC; chức năng chủ, hạ át, át; V trưởng ở giọng thứ nhờ cảm âm nâng)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/
+  - id: omt-embell
+    bac: 2
+    ten: Open Music Theory, Embellishing Tones (nốt lướt, nốt thêu, nốt đón trước)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/embellishing-tones/
+  - id: omt-figbass
+    bac: 2
+    ten: Open Music Theory, Inversion and Figured Bass (số 6 cho đảo 1, 6/4 cho đảo 2; 6/5, 4/3, 4/2 cho hợp âm bảy)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/inversion-and-figured-bass/
+  - id: omt-roman
+    bac: 2
+    ten: Open Music Theory, Roman Numerals (chữ hoa trưởng, chữ thường thứ; ở giọng thứ V dùng cảm âm nâng)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/roman-numerals/
+  - id: omt-triads
+    bac: 2
+    ten: Open Music Theory, Triads (nốt gốc, ba, năm; trưởng, thứ, giảm)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/triads/
+  - id: omt-first
+    bac: 2
+    ten: Open Music Theory, First-Species Counterpoint (quãng 5 và 8 song song; chuyển động ngược; không hai quãng hoàn hảo cùng cỡ liền nhau)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/first-species-counterpoint/
+  - id: omt-minor
+    bac: 2
+    ten: Open Music Theory, Minor Scales, Scale Degrees, and Key Signatures (gam thứ hòa âm, cảm âm; quan hệ song song, tương ứng)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/
+  - id: omt-c64
+    bac: 2
+    ten: Open Music Theory, Strengthening Endings with Cadential 6/4 (6/4 ở kết là tô điểm của V; 6-5 và 4-3 trên nốt trầm Sol)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/cadential-64/
+  - id: mount14
+    bac: 2
+    ten: Andre Mount, Fundamentals, Function, and Form, 14. Three- and Four-Voice Progressions (quãng 8 song song bị cấm; nên chuyển động ngược giữa bass và các bè trên)
+    link: https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/14-three-and-four-voice-progressions/
+  - id: mount19
+    bac: 2
+    ten: Andre Mount, Fundamentals, Function, and Form, 19. The Dominant Seventh Chord (cảm âm lên chủ âm, nốt 7 xuống bậc liền; V7 thiếu nốt năm)
+    link: https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/19-the-dominant-seventh-chord/
+  - id: mount24w
+    bac: 2
+    ten: "Andre Mount, Fundamentals, Function, and Form (workbook), 24. The Pre-Dominant Function (IV, ii6, ii6/5 chung hai nốt: bậc 4 và 6)"
+    link: https://milnepublishing.geneseo.edu/fundamentals-function-form-workbook/chapter/24-the-pre-dominant-function/
+  - id: mountguide
+    bac: 2
+    ten: Andre Mount, Fundamentals, Function, and Form (workbook), Guide to SATB part-writing (quãng 5, 8 song song bị tránh; cảm âm lên chủ âm; bass nhảy nhiều hơn; nhiều chuyển động ngược giữ tính độc lập)
+    link: https://milnepublishing.geneseo.edu/fundamentals-function-form-workbook/front-matter/guide-to-satb-part-writing/
+  - id: mutopia-ode
+    bac: 1
+    ten: Mutopia Project, Beethoven, Ode to Joy (tệp LilyPond ode.ly, bản SATB cho giọng, viết ở Sol trưởng; giai điệu soprano ô 1–16)
+    link: https://www.mutopiaproject.org/ftp/BeethovenLv/ode/ode.ly
+  - id: mutopia-auclair
+    bac: 1
+    ten: Mutopia Project, F. Horetzky, Au Clair De la Lune (tệp LilyPond horetzky21.ly, giọng Đô trưởng, nhịp 2/4)
+    link: https://www.mutopiaproject.org/ftp/HoretzkyF/horetzky21/horetzky21.ly
+  - id: imslp-sym9
+    bac: 1
+    ten: 'IMSLP, Symphony No.9, Op.125 (Beethoven, Ludwig van): trang tác phẩm, chương 4 "An die Freude"'
+    link: https://imslp.org/wiki/Symphony_No.9,_Op.125_(Beethoven,_Ludwig_van)
+  - id: brit-k265
+    bac: 2
+    ten: Encyclopaedia Britannica, Twelve Variations on "Ah, vous dirai-je, Maman", K 265
+    link: https://www.britannica.com/topic/Twelve-Variations-on-Ah-vous-dirai-je-Maman
+  - id: bach-cantatas-hr
+    bac: 3
+    ten: "Bach Cantatas Website, Harmonic Rhythm (bậc 3: bài viết trên trang web, không phải giáo trình)"
+    link: http://www.bach-cantatas.com/Topics/Harmonic-Rhythm.htm
+nhan_dinh:
+  - id: d1
+    cau: Trang dạy chọn hợp âm cho giai điệu, quyết định đổi hợp âm khi nào, viết bè bass và lắp hình đệm.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Khớp các mục ## của trang: Nốt giai điệu nằm trong hợp âm nào; Nhịp hòa âm; Bè bass biết hát; Lắp hình đệm; Đến lượt bạn. Lô trước (hop-am-rai) yêu cầu giữ mục "Lắp hình đệm": còn nguyên.'
+  - id: d2
+    cau: Các ví dụ dùng những giai điệu bạn đã chơi trong 10 bài đầu tiên; hình đệm đã học ở hợp âm và hình đệm; muốn tìm giai điệu và bass bằng tai thì xem Chơi theo tai bên phím đàn.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Đã kiểm: piano/10-bai-dau-tien.md có Au clair de la lune (bài 1), Ode to Joy (bài 3), và bài Twinkle (Mozart K. 265, Đô trưởng); piano/hop-am-rai.md có "Bốn kiểu hình đệm"; luyen-tai/choi-bang-tai.md (title "Chơi theo tai bên phím đàn") có.'
+  - id: d3
+    cau: Ở Đô trưởng mỗi nốt của gam nằm trong ít nhất một trong ba hợp âm chính I, IV, V; bảng bậc, nốt, hợp âm chính và hợp âm khác (vi, ii, V7).
+    loai: cau-truc
+    nguon:
+      - omt-triads
+      - omt-roman
+    ket_qua: dung
+    ghi_chu: "Đã kiểm từng hàng: Đô ∈ I, IV (và vi); Rê ∈ V (ii, V7); Mi ∈ I (vi); Fa ∈ IV (ii, V7); Sol ∈ I, V (V7); La ∈ IV (ii, vi); Si ∈ V (V7)."
+  - id: d4
+    cau: Câu dừng ở bậc 2, 5 hoặc 7 thường là kết nửa (V); câu về chủ âm sau bậc 2 hoặc 7 là kết trọn (V–I).
+    loai: quy-tac
+    nguon:
+      - omt-intro
+    ket_qua: dung
+    ghi_chu: 'OMT: HC kết ở V; PAC là V–I với bè trên về chủ âm. Bậc 2, 5, 7 là các nốt của V. "Thường" giữ nguyên.'
+  - id: d5
+    cau: "Nốt ngắn ở phách yếu, đi liền bậc, thường là nốt lướt hoặc nốt thêu: bỏ qua, giữ hợp âm cũ."
+    loai: quy-tac
+    nguon:
+      - omt-embell
+    ket_qua: dung
+    ghi_chu: "OMT Embellishing Tones: nốt lướt và nốt thêu là nốt ngoài hợp âm đi liền bậc, thường ở phách yếu."
+  - id: d6
+    cau: "Khi một nốt thuộc hai hợp âm, chọn theo chức năng: chủ → hạ át → át → chủ; tránh đi từ V sang IV."
+    loai: quy-tac
+    nguon:
+      - omt-intro
+    ket_qua: dung
+    ghi_chu: "OMT: tiến trình chủ – hạ át – át – chủ; V–IV là đi ngược chiều thông thường. Khớp bài 12."
+  - id: d7
+    cau: "Au clair de la lune, câu đầu: ô 1 Đô–Đô–Đô là I, Rê ở phách 4 là nốt lướt lên Mi; ô 2 Mi (I) rồi Rê (V); ô 3 Đô–Mi (I) rồi Rê–Rê (V); ô 4 Đô (I), kết trọn."
+    loai: cau-truc
+    nguon:
+      - mutopia-auclair
+      - omt-embell
+    ket_qua: dung
+    ghi_chu: "Giai điệu C C C D | E2 D2 | C E D D | C4 khớp bản Mutopia (Horetzky, Đô trưởng, 2/4 trong bản gốc; trang ghi 4/4 gộp đôi). Phân tích hòa âm là của trang, đã kiểm: Rê phách 4 đi Đô→Rê→Mi là nốt lướt."
+  - id: d8
+    cau: "Tay trái dùng hai hình đã quen từ bài Hänschen klein: Đô–Mi–Sol (5-3-1) và Si–Fa–Sol (5-2-1)."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'piano/10-bai-dau-tien.md bài 4 "Hänschen klein": hợp âm chủ Đô–Mi–Sol (ngón 5-3-1) và át bảy Si–Fa–Sol (ngón 5-2-1).'
+  - id: d9
+    cau: "Si–Fa–Sol cộng với Rê của giai điệu là đủ bốn nốt của V7, và cả câu tay trái chỉ đổi hai nốt: Đô với Si, Mi với Fa."
+    loai: quy-tac
+    nguon:
+      - mount19
+    ket_qua: dung
+    ghi_chu: "V7 ở Đô trưởng là Sol–Si–Rê–Fa; Si–Fa–Sol thiếu Rê (nốt năm, được bỏ), Rê có ở giai điệu. Từ Đô–Mi–Sol sang Si–Fa–Sol: Đô→Si, Mi→Fa, Sol giữ. Đúng."
+  - id: d10
+    cau: "Đệm cả bài 16 ô ở 10 bài đầu tiên: câu này dùng cho ô 1–8 và 13–16; ô 9–12 để tay trái hát như cũ."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "piano/10-bai-dau-tien.md, bài 1: ô 9–12 tay phải nghỉ, tay trái hát (dòng 76); bài gồm 16 ô."
+  - id: d11
+    cau: Nhịp hòa âm là tốc độ đổi hợp âm.
+    loai: dinh-nghia
+    nguon:
+      - bach-cantatas-hr
+    ket_qua: null
+    ghi_chu: "Chưa chắc: chỉ có nguồn bậc 3 (Bach Cantatas Website, Harmonic Rhythm); chưa tìm được định nghĩa bậc 1–2 (OMT, Mount không có mục riêng đã mở được). Bậc 3 không đủ làm nguồn duy nhất; lượt 2 tìm giáo trình."
+  - id: d12
+    cau: Trong nhạc cổ điển nhịp hòa âm thường đều (một hợp âm mỗi ô, hoặc mỗi nửa ô) và nhanh lên ở cuối câu, nơi kết cần hai hợp âm liền nhau.
+    loai: quy-tac
+    nguon:
+      - bach-cantatas-hr
+    ket_qua: null
+    ghi_chu: 'Chưa chắc: chỉ có nguồn bậc 3 cho "nhanh lên ở cuối câu". Quiz 3 dựa vào câu này (xem q3).'
+  - id: d13
+    cau: Đổi hợp âm ở phách mạnh (phách 1, hoặc phách 3 trong 4/4); đừng đổi ở phách yếu rồi giữ qua phách mạnh kế tiếp; đừng đổi cho mỗi nốt.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên; hai câu giải thích bằng cảm giác nghe ("hụt chân", "mất hướng") giữ như lời khuyên.
+  - id: d14
+    cau: "Ode to Joy: ô 1–3 và 5–7 mỗi ô một hợp âm, ô 4 và 8 có hai; ở ô 4 Mi chấm dôi thuộc I, Rê móc đơn vang sớm nửa phách so với V, rồi V giữ hai phách cuối (kết nửa); ô 8 là V rồi I (kết trọn), Đô móc đơn cũng là nốt đón trước; ô 2 và 6 giai điệu đi qua Fa nên V thành V7."
+    loai: cau-truc
+    nguon:
+      - mutopia-ode
+      - imslp-sym9
+      - omt-embell
+    ket_qua: dung
+    ghi_chu: 'Giai điệu E E F G | G F E D | C C D E | E. D D (ô 8: D. C C) khớp bản Mutopia (SATB, Sol trưởng, giai điệu soprano ô 1–16) khi hạ xuống Đô trưởng; IMSLP: chương 4 "An die Freude" của Giao hưởng số 9, Op. 125. Nhịp: E3/2 D/ D2 = 4 phách, Rê móc đơn nằm nửa phách trước phách 3: đúng. Ô 2 và 6 có Fa (nốt 7 của V7); ô 4 và 8 hai hợp âm như nói.'
+  - id: d15
+    cau: Nốt đón trước là nốt thuộc hợp âm kế tiếp nhưng vang sớm hơn.
+    loai: dinh-nghia
+    nguon:
+      - omt-embell
+    ket_qua: dung
+    ghi_chu: "OMT Embellishing Tones: anticipation là nốt đến trước hợp âm mà nó thuộc về."
+  - id: d16
+    cau: Tay trái dưới đây dùng đúng hai nốt bass bạn đã chơi ở bài 3 của 10 bài đầu tiên, Đô và Sol, chỉ khác là Sol đặt thấp hơn một quãng tám; giờ bạn biết vì sao chúng đúng.
+    loai: ve-site
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "chính là các nốt bass bạn đã chơi ở bài 3". Sai ở chi tiết: bài 3 (piano/10-bai-dau-tien.md) viết bass C, và G, (Đô3, Sol3); ví dụ ở đây viết C, và G,, (Đô3, Sol2): Sol thấp hơn một quãng tám. Đã sửa câu.'
+  - id: d17
+    cau: 'Thí nghiệm: giữ I suốt ô 4, bỏ V; câu hỏi không còn "hỏi" nữa; trả V về phách 3 và nghe lại. Tay trái ngón 1 trên Đô3, ngón 4 trên Sol2; tập riêng rồi ghép ở ♩ = 72, sau đó 88.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập. Ngón khớp khối abc 2 (!1!C, và !4!G,,).
+  - id: d18
+    cau: "Bass chỉ gồm nốt gốc thì nhảy liên tục: Đô–Sol–Đô–Sol; một bè bass tốt đi liền bậc khi có thể, nhờ hợp âm đảo và các hợp âm thay thế."
+    loai: quy-tac
+    nguon:
+      - mountguide
+      - mount14
+    ket_qua: dung
+    ghi_chu: 'Mount (Guide to SATB part-writing): bass nhảy nhiều hơn các bè trên; đảo hợp âm cho bass đi bước. "Một bè bass tốt đi liền bậc khi có thể" là cách nói của trang.'
+  - id: d19
+    cau: V6 là Sol–Si–Rê với Si ở bass.
+    loai: dinh-nghia
+    nguon:
+      - omt-figbass
+    ket_qua: dung
+    ghi_chu: "OMT: số 6 là thể đảo 1, nốt ba (Si) ở bass."
+  - id: d20
+    cau: V6 thay V khi bass cần đi Đô–Si.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên chọn hợp âm; khối abc 3 ô 2 đúng như nói.
+  - id: d21
+    cau: "vi (La–Đô–Mi) thay I: chung hai nốt Đô, Mi, mang màu thứ."
+    loai: quy-tac
+    nguon:
+      - omt-roman
+      - omt-triads
+    ket_qua: dung
+    ghi_chu: "vi = La–Đô–Mi, chung Đô, Mi với I (Đô–Mi–Sol); vi là hợp âm thứ. OMT: vi thay thế I (hợp âm chủ thay thế)."
+  - id: d22
+    cau: "ii6 (Rê–Fa–La, Fa ở bass) thay IV: chung hai nốt Fa, La."
+    loai: quy-tac
+    nguon:
+      - mount24w
+      - omt-figbass
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "chung Fa, La, hướng về V rõ hơn". Mount 24: ii và IV cùng chức năng hạ át, chung bậc 4 và 6. "Hướng về V rõ hơn" là nhận xét nghe không có nguồn; bỏ (cùng sửa ở ket.md n35).'
+  - id: d23
+    cau: I6/4–V ở kết nửa, như ở trang Kết ở mọi giọng.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'piano/hoa-am/ket.md có mục "I6/4 trước át âm". Trang đó dạy I6/4–V trong kết trọn; ở đây I6/4–V dừng ở V (kết nửa): cùng cặp hợp âm, chỉ khác có I sau hay không. Ghi cho người giao.'
+  - id: d24
+    cau: Cadential 6/4 có thể đứng trước V ở kết nửa.
+    loai: quy-tac
+    nguon:
+      - omt-c64
+    ket_qua: dung
+    ghi_chu: "OMT Strengthening Endings with Cadential 6/4: 6/4 ở kết dùng cả ở PAC và HC."
+  - id: d25
+    cau: "Giữa bass và giai điệu: đi ngược hướng, hoặc song song quãng 3, 6, 10; không song song quãng 5 hay quãng 8."
+    loai: quy-tac
+    nguon:
+      - omt-first
+      - mountguide
+      - mount14
+    ket_qua: dung
+    ghi_chu: "OMT First-Species: chuyển động ngược ưu tiên; quãng 3, 6 song song chấp nhận; quãng 5, 8 song song tránh. Quãng 10 là quãng 3 mở rộng."
+  - id: d26
+    cau: Bass đi xuống từng bậc Đô–Si–La–Sol, ngược với những đoạn giai điệu đi lên; cả bè nằm gọn trong một thế tay trái, ngón 5 trên Fa2 và ngón 1 trên Đô3.
+    loai: cau-truc
+    nguon:
+      - mountguide
+    ket_qua: dung
+    ghi_chu: "Khối abc 3: bass C,–B,,–A,,–G,, ở dòng 1; dòng 2 có thêm F,, (ii6). Ngón !1!C, !2!B,, !3!A,, !4!G,, !5!F,, khớp. Ô 1→2 và 3→4: giai điệu đi lên trong khi bass đi xuống (ngược hướng); ô 2→3 cả hai đi xuống. Giữ câu."
+  - id: d27
+    cau: "Chuyển sang Sol trưởng: bass Sol–Fa♯–Mi–Rê, rồi Sol–Fa♯–Mi–Đô–Rê–Sol."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: "Đã kiểm: dời bass khối abc 3 (Đô–Si–La–Sol; Đô–Si–La+Fa–Sol+Đô) lên quãng 5 cho Sol–Fa♯–Mi–Rê và Sol–Fa♯–Mi–Đô–Rê–Sol. Đúng."
+  - id: d28
+    cau: "So với phiên bản trước: ô 3 có màu thứ (vi), ô 4 có tiếng thở dài của I6/4, ô 7 mềm hơn nhờ ii6."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Khối abc 3: ô 3 là vi (A,,4), ô 4 là I6/4–V, ô 7 beats 3–4 là ii6. Khớp."
+  - id: d29
+    cau: "Bảng chọn hình đệm theo tính chất giai điệu: hợp âm khối cho nhạc chậm trang nghiêm, nốt trầm và hợp âm cho nhịp 3/4 nhún nhảy, bass Alberti cho giai điệu vừa phải trong trẻo, hợp âm rải rộng với bàn đạp cho nhạc chậm ngân dài."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Gợi ý chọn. Bốn tên hình đệm khớp bốn mục "###" của hop-am-rai ("Hợp âm khối", "Nốt trầm và hợp âm: điệu valse", "Bass Alberti", "Hợp âm rải rộng tay trái"). Các tên bài (Amazing Grace, Largo, Going Home) là ví dụ, không có điều cần nguồn.'
+  - id: d30
+    cau: Nốt đầu mỗi nhóm của tay trái là nốt bass đã chọn; hình đệm chỉ trải hợp âm ra theo thời gian, không đổi hòa âm.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: "Lời khuyên; khối abc 4: nốt đầu mỗi nhóm là C, hay B,,, đúng."
+  - id: d31
+    cau: Tay trái nhỏ hơn tay phải vài bậc sắc thái, và không leo lên âm vực của giai điệu.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "nhỏ hơn tay phải khoảng hai bậc sắc thái". Số cụ thể ("hai bậc") không kiểm được; đổi thành "vài bậc". Ví dụ ghi mf tay phải, p tay trái (khối abc 1, 4).'
+  - id: d32
+    cau: "Tay trái không nhân đôi nốt giai điệu đang chuyển động: nếu giai điệu hát La–Sol trên IV–I mà tay trái cũng có La–Sol, hai bè chạy song song quãng 8; bỏ nốt trùng khỏi tay trái (Đô–Fa thay cho Đô–Fa–La)."
+    loai: quy-tac
+    nguon:
+      - omt-first
+      - mountguide
+    ket_qua: dung
+    ghi_chu: IV = Fa–La–Đô, I = Đô–Mi–Sol; La→Sol ở tay trái và giai điệu cùng đi là quãng 8 song song (cùng nốt). Khớp quiz 5.
+  - id: d33
+    cau: Câu đầu Au clair de la lune với bass Alberti dùng cùng hai hợp âm như ví dụ đầu tiên.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Khối abc 4: I và V7 (Si–Fa–Sol); khớp khối abc 1."
+  - id: d34
+    cau: 'Tập: tay trái ♩ = 60, xoay nhẹ cẳng tay; ghép hai tay tăng dần đến 80; hình "bass – hợp âm – bass – hợp âm": Đô3, Mi–Sol, Đô3, Mi–Sol; với V7 là Si2, Fa–Sol.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; nốt khớp khối abc 4.
+  - id: d35
+    cau: Ah! vous dirai-je, maman (Mẹ ơi, con kể mẹ nghe; tiếng Anh là Twinkle, Twinkle, Little Star).
+    loai: ten
+    nguon:
+      - brit-k265
+    ket_qua: dung
+    ghi_chu: 'Britannica: Twelve Variations on "Ah, vous dirai-je, Maman", K 265. "Mẹ ơi, con kể mẹ nghe" là cách dịch của trang (nghĩa đen "Ah! I shall tell you, Mama"). Trang chỉ nhắc tên bài.'
+  - id: d36
+    cau: "Giai điệu Ah! vous dirai-je ở Sol trưởng: G G d d | e e d2 | c c B B | A A G2 | d d c c | B B A2 | d d c c | B B A2 | G G d d | e e d2 | c c B B | A A G2."
+    loai: cau-truc
+    nguon:
+      - brit-k265
+    ket_qua: null
+    ghi_chu: "Chưa chắc: giai điệu là bài hát quen thuộc và khớp chuỗi nốt thường biết, nhưng lượt 1 chưa đối chiếu được bản nhạc (IMSLP K. 265 không mở được); Britannica chỉ xác nhận tên tác phẩm. Lượt 2 đối chiếu bản nhạc bậc 1."
+  - id: d37
+    cau: "Ở Sol trưởng: I = Sol–Si–Rê, IV = Đô–Mi–Sol, V = Rê–Fa♯–La (V7 thêm Đô)."
+    loai: cau-truc
+    nguon:
+      - omt-triads
+      - omt-roman
+    ket_qua: dung
+    ghi_chu: "Bậc 1, 4, 5 của Sol trưởng: Sol, Đô, Rê; Fa♯ là cảm âm. Đúng."
+  - id: d38
+    cau: "Gợi ý đáp án: hợp âm và bass từng ô của 12 ô (ô 1 I; 2–3 IV–I; 4 V–I; 5 I–V7; 6 I–V; 7 I6–IV; 8 I–V; 9–12 như 1–4); nhịp hòa âm đều hai hợp âm mỗi ô, trừ ô 1 và 9."
+    loai: cau-truc
+    nguon:
+      - omt-roman
+      - omt-intro
+    ket_qua: dung
+    ghi_chu: 'Đã kiểm từng ô với giai điệu khối abc 5: mọi nốt giai điệu ở phách mạnh là nốt của hợp âm gợi ý; ô 4 và 12 kết trọn (A trên V, G trên I), ô 8 kết nửa (A trên V). Đáp án nói thêm "ô 5 chọn IV (bass Sol–Đô) cũng đúng": Đô thuộc IV (Đô–Mi–Sol) đúng.'
+  - id: d39
+    cau: Mi ở ô 2 chỉ có trong IV (trong ba hợp âm chính), nên ô 2 phải là IV–I; ở ô 5, Đô là nốt 7 của V7.
+    loai: quy-tac
+    nguon:
+      - omt-triads
+      - mount19
+    ket_qua: dung
+    ghi_chu: Mi ∉ I (Sol–Si–Rê), ∉ V (Rê–Fa♯–La), ∈ IV; Đô là nốt 7 của V7 = Rê–Fa♯–La–Đô.
+  - id: d40
+    cau: "Ô 7 không lặp ô 5: nếu bass về Sol, giai điệu La–Rê và bass Rê–Sol tạo hai quãng 5 liền nhau; bass Si (I6) rồi Đô (IV) tránh được và cho bè bass đi liền bậc."
+    loai: quy-tac
+    nguon:
+      - omt-first
+      - mountguide
+    ket_qua: dung
+    ghi_chu: "Giai điệu La→Rê (ô 6 cuối, ô 7 đầu) với bass Rê→Sol: cả hai lên một quãng 4, giữ quãng 5 (Rê–La rồi Sol–Rê): song song quãng 5. Bass Rê→Si: ngược chiều. Đúng."
+  - id: d41
+    cau: "Tay trái ở thế Sol: ngón 5 trên Sol2, ngón 3 trên Si2, ngón 2 trên Đô3, ngón 1 trên Rê3."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Ngón bấm; khớp thế Sol của 10-bai-dau-tien (ngón 5 trên Sol2, ngón 1 trên Rê3).
+  - id: d42
+    cau: "Giọng khác với bản bạn đã chơi, để bạn nghĩ bằng bậc thay vì chép lại; ba bước: tìm các kết, chọn hợp âm từng nửa ô, viết bè bass rồi lắp hình đệm."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Bản đã chơi: bài Twinkle ở Đô trưởng trong 10-bai-dau-tien; ở đây Sol trưởng. Ba bước khớp các mục trước của trang."
+  - id: d43
+    cau: "Viết giai điệu bằng số (Ode to Joy: 3 3 4 5 | 5 4 3 2 | 1 1 2 3 | 3 2 2) và hợp âm bằng số La Mã (I | V7 | I | I V), rồi đặt vào giọng mới."
+    loai: cau-truc
+    nguon:
+      - mutopia-ode
+    ket_qua: dung
+    ghi_chu: "Giai điệu khối abc 2: E E F G, G F E D, C C D E, E D D = 3 3 4 5, 5 4 3 2, 1 1 2 3, 3 2 2 ở Đô trưởng. Hợp âm khối abc 2: I | V7 | I | I V. Đúng."
+  - id: d44
+    cau: Ở La thứ, Ode to Joy bắt đầu bằng Đô–Đô–Rê–Mi; I thành i (La–Đô–Mi); V vẫn là hợp âm trưởng Mi–Sol♯–Si, dù giai điệu không có Sol♯.
+    loai: quy-tac
+    nguon:
+      - omt-minor
+      - omt-roman
+    ket_qua: dung
+    ghi_chu: Bậc 3 3 4 5 của La thứ là Đô Đô Rê Mi; giai điệu 3 3 4 5 | 5 4 3 2 | 1 1 2 3 | 3 2 2 không chứa bậc 7 nâng (Sol♯). V trưởng nhờ cảm âm nâng.
+  - id: d45
+    cau: "Bảng tuần: đệm các giai điệu ở Đô, Sol; Fa, Rê; Si♭, La; La thứ, Mi thứ; khởi động kết (vòng 12 giọng) Si♭/Sol thứ; La/Fa♯ thứ; Mi♭/Đô thứ; Mi/Đô♯ thứ."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Khởi động khớp tuần 5–8 của bảng vòng 12 giọng ở ket.md và bảng 12 tuần ở index.md. Các giọng đệm (Đô, Sol; Fa, Rê; Si♭, La; La thứ, Mi thứ) là kế hoạch của trang, không trái ket.md.
+  - id: d46
+    cau: Bốn tuần này là tuần 5–8 của lộ trình 12 tuần; kế hoạch 4 tuần và danh sách "Sẵn sàng sang mẫu galant".
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'index.md: tuần 5–8 là các tuần "Đệm". Link /opus/piano/hoa-am/ và /opus/piano/hoa-am/mau-galant/ có (mau-galant.md ở lô cùng đợt). Lưu ý nhẹ: index tuần 7 ghi "ii, vi, I6/4; lắp hình đệm" nhưng trang này dạy ii, vi, I6/4 ở tuần 2 (bè bass) và lắp hình đệm ở tuần 3; không sai, nhưng hai bảng chia việc hơi khác.'
+  - id: q1
+    cau: "Quiz 1: ở Đô trưởng, nốt Rê nằm trong hợp âm chính V (Sol–Si–Rê); Rê cũng có trong ii và V7."
+    loai: quy-tac
+    nguon:
+      - omt-triads
+    ket_qua: dung
+    ghi_chu: Khớp d3.
+  - id: q2
+    cau: "Quiz 2: Au clair de la lune ô 1, Rê ở phách 4 là nốt lướt, giữ hợp âm I; Rê ngắn, ở phách yếu, đi liền bậc từ Đô lên Mi."
+    loai: quy-tac
+    nguon:
+      - omt-embell
+    ket_qua: dung
+    ghi_chu: Khớp d5, d7.
+  - id: q3
+    cau: "Quiz 3: nhịp hòa âm thường nhanh hơn ở cuối câu, thường hai hợp âm trong ô kết, như ô 4 (I–V) và ô 8 (V–I) của Ode to Joy."
+    loai: quy-tac
+    nguon:
+      - bach-cantatas-hr
+    ket_qua: null
+    ghi_chu: "Cùng lý do d12: chỉ có nguồn bậc 3. Ví dụ ô 4 (I–V) và ô 8 (V–I) đúng với khối abc 2."
+  - id: q4
+    cau: "Quiz 4: trong bản đệm Ode to Joy với bass Đô–Si–La–Sol, hợp âm ở ô 2 là V6 (Sol–Si–Rê, Si ở bass); Si là nốt ba của V, đặt ở bass để bass đi liền bậc."
+    loai: quy-tac
+    nguon:
+      - omt-figbass
+    ket_qua: dung
+    ghi_chu: Khớp d19 và khối abc 3.
+  - id: q5
+    cau: "Quiz 5: giai điệu hát La–Sol trên IV–I, tay trái đang chơi Đô–Fa–La: nên bỏ La khỏi tay trái, vì nếu tay trái cũng đi La–Sol nó chạy song song quãng 8 với giai điệu."
+    loai: quy-tac
+    nguon:
+      - omt-first
+    ket_qua: dung
+    ghi_chu: Khớp d32.
+  - id: d47
+    cau: "Nguồn: Lancaster, Renfrow, Alfred's Group Piano for Adults (Alfred); Kostka, Payne, Tonal Harmony (McGraw-Hill); Aldwell, Schachter, Harmony and Voice Leading, kèm điều từng sách đóng góp."
+    loai: ten
+    nguon:
+      - omt-intro
+    ket_qua: null
+    ghi_chu: "Chưa chắc: ba sách in không mở được ở lượt 1; chưa xác nhận từng tên, nhà xuất bản và điều mỗi sách đóng góp. Nguồn mở đã bổ sung cuối trang (xem nguon)."
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+      - dan-be
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: 'Au clair de la lune: 4/4, L:1/4, 4 ô đủ 4 phách. Giai điệu C C C D | E2 D2 | C E D D | C4 khớp Mutopia. Tay trái [C,E,G,] (I, ngón 5-3-1), [B,,F,G,] (V7 thiếu nốt năm, ngón 5-2-1): ô 1 I; ô 2 I rồi V7; ô 3 I rồi V7; ô 4 I. Nhãn đúng. Chỉ đổi hai nốt (Đô→Si, Mi→Fa). Rê phách 4 ô 1 là nốt lướt (nhãn "nốt lướt"). Giai điệu với bass: không quãng 5 hay 8 song song (tay trái là khối). Q:1/4=80 khớp ♩ = 80; !mf! tay phải, !p! tay trái khớp lời.'
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+      - dan-be
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: 'Ode to Joy, nhịp hòa âm: 4/4, L:1/4, 8 ô, ô 4 và 8: E3/2 D/ D2 và D3/2 C/ C2 (1,5+0,5+2 = 4 phách). Bass C,4 | G,,4 | C,4 | C,2 G,,2 và G,,2 C,2 ở ô 8: nhãn I, V7, I, I–V, rồi V–I đúng; Rê móc đơn ở nửa phách 2,5 là nốt đón trước của V (ô 4) và Đô móc đơn của I (ô 8). Ngón !3!E, !1!C,, !4!G,, khớp lời ("ngón 1 trên Đô3, ngón 4 trên Sol2"). Giai điệu khớp Mutopia (hạ xuống Đô). Q:1/4=88 khớp.'
+  - khoi: 3
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+      - dan-be
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: "Ode to Joy, bè bass liền bậc: 4/4, L:1/4, 8 ô đủ phách. Bass C,–B,,–A,,–G,, (dây nối G,,2- G,,2: I6/4 rồi V); dòng 2 C,–B,,–A,,2 F,,2–G,,2 C,2. Nhãn I, V6 (Si ở bass), vi, I6/4–V, I, V6, vi–ii6, V–I đều đúng so với giai điệu (nốt giai điệu ở phách mạnh thuộc hợp âm hoặc là nốt qua). Bass với giai điệu không song song quãng 5, 8 (kiểm theo cặp nốt ở phách mạnh). Ngón !1!C, !2!B,, !3!A,, !4!G,, !5!F,, nằm gọn thế Đô tay trái, khớp lời."
+  - khoi: 4
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: "Au clair với bass Alberti: 4/4, L:1/8, mỗi ô 8 móc đơn; tay phải C2 C2 C2 D2 | E4 D4 | C2 E2 D2 D2 | C8; tay trái mẫu C,G,E,G, (Đô3–Sol3–Mi3–Sol3) ở I và B,,G,F,G, (Si2–Sol3–Fa3–Sol3) ở V7, ô 4 C,G,E,G, C,4. Cùng hai hợp âm như khối 1: đúng. Ngón 5-1-3-1 và 5-1-2-1 hợp với nhóm. Q:1/4=80 với L:1/8: khớp ♩ = 80."
+  - khoi: 5
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+    ket_qua: dung
+    ghi_chu: "Ah! vous dirai-je ở Sol trưởng (K:G): 4/4, L:1/4, hai dòng 6 ô, 12 ô đủ phách; Fa♯ theo hóa biểu (không ghi trong bài). Tay trái toàn nghỉ z4 (đề bài để bạn tự đệm). Số ô và độ dài khớp gợi ý đáp án 12 ô. Giai điệu: xem d36 (chưa đối chiếu bản nhạc)."
+ghi_chu: 'Đệm cho một giai điệu (piano/hoa-am/dem-giai-dieu, lõi). Nguồn mở: Mutopia (Ode to Joy, Au clair de la lune), IMSLP (Giao hưởng số 9), Britannica (K. 265), OMT (Intro to Harmony, Embellishing Tones, Inversion and Figured Bass, First-Species, Cadential 6/4, Minor Scales), Mount ch. 14/19/24 và Guide to SATB, Bach Cantatas (bậc 3, Harmonic Rhythm). Sửa trang: d16 (nốt bass bài 3: Sol thấp hơn một quãng tám), d22 ("hướng về V rõ hơn"), d31 ("hai bậc sắc thái"); thay dòng Nguồn bằng nguồn đã mở (bản nhạc IMSLP, Mutopia). Chưa chắc: d11, d12, q3 (nhịp hòa âm: chỉ có nguồn bậc 3); d36 (giai điệu Ah! vous dirai-je chưa đối chiếu bản nhạc); d47 (ba sách in). Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5; lượt 1 không tạo hồ sơ thuật ngữ): harmonic rhythm (nhịp hòa âm), anticipation (nốt đón trước), passing tone (nốt lướt), neighbor tone (nốt thêu), cadential 6/4, voice leading (dẫn bè), parallel fifths/octaves, accompaniment pattern (hình đệm); đã có: Alberti bass, inversion, cadence, leading tone. Lô trước yêu cầu giữ: KHỚP (hop-am-rai: mục "Lắp hình đệm" và đệm giai điệu bằng cùng hợp âm; luyen-tai/choi-bang-tai: dem-giai-dieu có; nhac-ly/index: trang có). Câu ve-site trỏ tới trang chưa chuyển: không có (hop-am-rai, 10-bai-dau-tien, choi-bang-tai, nhac-ly/10, 12, 13, 18, piano/hoa-am đã có trên site mới). Lưu ý cho người giao: nhãn I6/4 (site) và V6/4 (OMT); index tuần 7 chia việc khác dem tuần 2–3 (d46); "Đến lượt bạn" dùng melody Twinkle chưa đối chiếu bản nhạc (d36).'
+doi_chu:
+  - cu: "Trong Ode to Joy (Khúc ca niềm vui), ô 1–3 và 5–7 mỗi ô chỉ cần một hợp âm; ô 4 và 8 có hai. Ở ô 4, Mi chấm dôi thuộc I nên I giữ hai phách đầu; Rê móc đơn vang sớm nửa phách so với V (nốt đón trước), rồi V giữ hai phách cuối: kết nửa. Ở ô 8 là V rồi I, kết trọn, và Đô móc đơn cũng là nốt đón trước. Ở ô 2 và 6, giai điệu đi qua Fa nên V thành V7. Tay trái dưới đây chính là các nốt bass bạn đã chơi ở bài 3 của 10 bài đầu tiên; giờ bạn biết vì sao chúng đúng."
+    moi: "Trong Ode to Joy (Khúc ca niềm vui), ô 1–3 và 5–7 mỗi ô chỉ cần một hợp âm; ô 4 và 8 có hai. Ở ô 4, Mi chấm dôi thuộc I nên I giữ hai phách đầu; Rê móc đơn vang sớm nửa phách so với V (nốt đón trước), rồi V giữ hai phách cuối: kết nửa. Ở ô 8 là V rồi I, kết trọn, và Đô móc đơn cũng là nốt đón trước. Ở ô 2 và 6, giai điệu đi qua Fa nên V thành V7. Tay trái dưới đây dùng đúng hai nốt bass bạn đã chơi ở bài 3 của 10 bài đầu tiên, Đô và Sol, chỉ khác là Sol đặt thấp hơn một quãng tám; giờ bạn biết vì sao chúng đúng."
+    ly_do: 'd16 (da-sua): bài 3 viết Sol3 (G,), ví dụ ở đây viết Sol2 (G,,): không "chính là" cùng nốt.'
+  - cu: "ii6 (Rê–Fa–La, Fa ở bass) thay IV: chung Fa, La, hướng về V rõ hơn."
+    moi: "ii6 (Rê–Fa–La, Fa ở bass) thay IV: chung hai nốt Fa, La."
+    ly_do: 'd22 (da-sua): "hướng về V rõ hơn" là nhận xét nghe không có nguồn; Mount 24 chỉ nói cùng chức năng hạ át.'
+  - cu: Tay trái nhỏ hơn tay phải khoảng hai bậc sắc thái, và không leo lên âm vực của giai điệu.
+    moi: Tay trái nhỏ hơn tay phải vài bậc sắc thái, và không leo lên âm vực của giai điệu.
+    ly_do: 'd31 (da-sua): "khoảng hai bậc" là số cụ thể không kiểm được; đổi thành "vài bậc".'
+  - cu:
+      - 'Bản nhạc: IMSLP (tìm "Symphony No.9, Op.125" của Beethoven; "Ah vous dirai-je, Maman, K.265" của Mozart).'
+      - Open Music Theory.
+    moi:
+      - 'Bản nhạc đã đối chiếu: Mutopia, Ode to Joy (giai điệu chương 4 của Giao hưởng số 9, Op. 125 ở IMSLP); Mutopia, Au clair de la lune; Britannica, Twelve Variations on "Ah, vous dirai-je, Maman", K 265.'
+      - "Open Music Theory: Introduction to Harmony, Cadences, and Phrase Endings, Embellishing Tones, Inversion and Figured Bass, First-Species Counterpoint."
+      - "Andre Mount, Fundamentals, Function, and Form (Milne Publishing): 14. Three- and Four-Voice Progressions, 24. The Pre-Dominant Function."
+      - "Nhịp hòa âm: Bach Cantatas Website, Harmonic Rhythm."
+    ly_do: "Mục Nguồn: thay bằng các bản nhạc và nguồn lượt 1 đã đối chiếu (Mutopia, IMSLP, Britannica K. 265, OMT, Mount)."
