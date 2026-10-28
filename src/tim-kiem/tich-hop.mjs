@@ -4,10 +4,14 @@
 //
 // Trước khi bọc, kiểm chỉ mục đủ: Starlight gọi pagefind.close() ngay khi Pagefind báo đã ghi xong, mà close() dừng
 // tiến trình ghi, nên có lần file ghi dở nằm lại rỗng (lần đăng site 9498fb2: pagefind-entry.json rỗng, ô tìm kiếm báo
-// "Failed to load Pagefind metadata"). Thiếu thì dựng lại chỉ mục, chờ ghi xong mới đóng; vẫn thiếu thì build hỏng.
+// "Failed to load Pagefind metadata"), hay bị cắt ở ranh giới 4 KiB (lần chạy 40705500055: pagefind.js 40960 B thay vì
+// 45555 B, Firefox báo "can't access property options"). Thiếu thì dựng lại chỉ mục, chờ ghi xong mới đóng; vẫn thiếu
+// thì build hỏng.
+import { spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import zlib from 'node:zlib';
 import * as pagefind from 'pagefind';
 
 const NGUON = new URL('./', import.meta.url);
@@ -16,10 +20,26 @@ const LAN_DUNG_LAI = 2;
 /** Mọi file trong thư mục (đệ quy). */
 const moiFile = (thuMuc) => fs.readdirSync(thuMuc, { recursive: true }).map((f) => path.join(thuMuc, f)).filter((f) => fs.statSync(f).isFile());
 
+/** File gzip của Pagefind (siêu dữ liệu, chỉ mục, mảnh trang, wasm): ghi dở thì không giải nén được. */
+const NEN = /\.(pf_meta|pf_index|pf_fragment|pagefind)$/;
+
+/** File ghi dở: file gzip không giải nén được, file JavaScript không đọc được (node --check). */
+function ghiDo(f) {
+	if (NEN.test(f)) {
+		try {
+			zlib.gunzipSync(fs.readFileSync(f));
+			return false;
+		} catch {
+			return true;
+		}
+	}
+	return f.endsWith('.js') && spawnSync(process.execPath, ['--check', f], { stdio: 'ignore' }).status !== 0;
+}
+
 /**
  * Chỗ thiếu của chỉ mục Pagefind ở thư mục `pf` (đường dẫn): có pagefind.js; pagefind-entry.json đọc được, có ít nhất
- * một ngôn ngữ và file pf_meta của từng ngôn ngữ; không file nào rỗng. Trả về danh sách chỗ thiếu (rỗng là đủ). Dùng lại
- * trong tests/tim-kiem.test.mjs.
+ * một ngôn ngữ và file pf_meta của từng ngôn ngữ; không file nào rỗng hay ghi dở. Trả về danh sách chỗ thiếu (rỗng là
+ * đủ). Dùng lại trong tests/tim-kiem.test.mjs.
  */
 export function thieuChiMuc(pf) {
 	if (!fs.existsSync(pf)) return ['không có thư mục pagefind/'];
@@ -33,7 +53,10 @@ export function thieuChiMuc(pf) {
 	} catch (e) {
 		thieu.push(`pagefind-entry.json không đọc được (${e.message})`);
 	}
-	for (const f of moiFile(pf)) if (fs.statSync(f).size === 0) thieu.push(`${path.relative(pf, f)} rỗng`);
+	for (const f of moiFile(pf)) {
+		if (fs.statSync(f).size === 0) thieu.push(`${path.relative(pf, f)} rỗng`);
+		else if (ghiDo(f)) thieu.push(`${path.relative(pf, f)} ghi dở`);
+	}
 	return thieu;
 }
 

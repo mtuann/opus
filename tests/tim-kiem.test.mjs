@@ -5,6 +5,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import zlib from 'node:zlib';
 import { bienThe } from '../src/tim-kiem/bien-the.js';
 import { boc, gopKetQua } from '../src/tim-kiem/boc.js';
 import { thieuChiMuc } from '../src/tim-kiem/tich-hop.mjs';
@@ -42,7 +43,7 @@ function gocGia(kq = {}) {
 	};
 }
 
-test('bản build: chỉ mục Pagefind đủ (pagefind-entry.json đọc được, có ngôn ngữ, không file nào rỗng)', () => {
+test('bản build: chỉ mục Pagefind đủ (pagefind-entry.json đọc được, có ngôn ngữ, không file nào rỗng hay ghi dở)', () => {
 	// lần đăng site 9498fb2: pagefind-entry.json rỗng do Pagefind bị đóng khi đang ghi (src/tim-kiem/tich-hop.mjs)
 	assert.deepEqual(thieuChiMuc(path.join(DIST, 'pagefind')), []);
 });
@@ -60,12 +61,16 @@ test('chỉ mục Pagefind thiếu thì thieuChiMuc báo đúng chỗ thiếu', 
 		assert.ok(thieu.includes('pagefind-entry.json rỗng') && thieu.includes(path.join('index', 'vi_1.pf_index') + ' rỗng'), thieu.join('; '));
 		fs.writeFileSync(path.join(tam, 'pagefind.js'), 'x');
 		fs.writeFileSync(path.join(tam, 'pagefind-entry.json'), '{"languages":{}}');
-		fs.writeFileSync(path.join(tam, 'index', 'vi_1.pf_index'), 'x');
+		fs.writeFileSync(path.join(tam, 'index', 'vi_1.pf_index'), zlib.gzipSync('x'));
 		assert.deepEqual(thieuChiMuc(tam), ['pagefind-entry.json không có ngôn ngữ nào']);
 		fs.writeFileSync(path.join(tam, 'pagefind-entry.json'), '{"languages":{"vi":{"hash":"vi_1"}}}');
 		assert.deepEqual(thieuChiMuc(tam), ['không có pagefind.vi_1.pf_meta']);
-		fs.writeFileSync(path.join(tam, 'pagefind.vi_1.pf_meta'), 'x');
+		fs.writeFileSync(path.join(tam, 'pagefind.vi_1.pf_meta'), zlib.gzipSync('x'));
 		assert.deepEqual(thieuChiMuc(tam), []);
+		// ghi dở (bị cắt ở ranh giới 4 KiB, lần chạy 40705500055): gzip không giải nén được, JavaScript không đọc được
+		fs.writeFileSync(path.join(tam, 'pagefind.vi_1.pf_meta'), zlib.gzipSync('x'.repeat(5000)).subarray(0, 10));
+		fs.writeFileSync(path.join(tam, 'pagefind.js'), 'export function f() {');
+		assert.deepEqual(thieuChiMuc(tam).sort(), ['pagefind.js ghi dở', 'pagefind.vi_1.pf_meta ghi dở']);
 		assert.deepEqual(thieuChiMuc(path.join(tam, 'khong-co')), ['không có thư mục pagefind/']);
 	} finally {
 		fs.rmSync(tam, { recursive: true, force: true });
