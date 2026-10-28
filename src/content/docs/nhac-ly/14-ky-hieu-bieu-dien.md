@@ -96,7 +96,7 @@ K:C
 | Ký hiệu | Tên | Cách chơi |
 |---|---|---|
 | *tr* | Láy rền (trill) | Đổi nhanh liên tục giữa nốt chính và nốt trên |
-| Răng cưa ngắn, không gạch | Láy trên (pralltriller) | Nốt chính – nốt trên – nốt chính, rất nhanh |
+| Răng cưa ngắn, không gạch | Láy trên (upper mordent) | Nốt chính – nốt trên – nốt chính, rất nhanh |
 | Răng cưa ngắn, có gạch dọc | Láy dưới (mordent) | Nốt chính – nốt dưới – nốt chính, rất nhanh |
 | Hình chữ S nằm ngang | Láy quanh (turn) | Nốt trên – nốt chính – nốt dưới – nốt chính |
 | Nốt nhỏ có gạch chéo | Acciaccatura | Nốt luyến cực nhanh ngay trước nốt chính |
@@ -149,4 +149,5 @@ Vài ký hiệu hay gặp trên bản nhạc piano: *Ped.* và \* (nhấn và nh
 - *Open Music Theory*, [Glossary](https://viva.pressbooks.pub/openmusictheory/back-matter/glossary/).
 - *The Concise Oxford Dictionary of Music* (Kennedy, Bourne) qua [Encyclopedia.com](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/rubato): các mục rubato, ritardando, accelerando, fermata, da capo, dal segno, coda, acciaccatura, appoggiatura, mordent, turn…
 - Trinity College London, bảng thuật ngữ và ký hiệu (cấp độ 1-2); Dolmetsch Online, *Music Theory Online: Musical Terms*.
+- Catherine Schmidt-Jones, *Understanding Basic Music Theory*: [Repeats and Other Musical Road Map Signs](https://human.libretexts.org/Bookshelves/Music/Music_Theory/Understanding_Basic_Music_Theory_(Schmidt-Jones)/02%3A_Notation_-_Time/2.09%3A_Repeats_and_Other_Musical_Road_Map_Signs).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

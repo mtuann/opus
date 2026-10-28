@@ -10,7 +10,7 @@ lan:
     nguoi:
       luot_1: Claude Sonnet 5.5 (D3-L2 lượt 1, phần 1/2)
       luot_2: null
-      review: null
+      review: Claude (review D3-gom, nhóm A, 28/10/2026)
       kiem_mau: null
 ghi_chu: 'Trang hợp âm ba (tầng lõi). Nguồn chính: Open Music Theory (OMT), Triads, Roman Numerals, Chord Symbols; đối chiếu Mount (FFF) ch. 13 (xếp chồng quãng 3 cho từng loại), 16 (gam thứ hòa âm), 17 (vii°). WebFetch ngày 27/10/2026 (trả bản tóm tắt chữ, không phải HTML thô; chữ trích đã hỏi lại nhiều chiều). Chỗ sửa trang: mô tả và đoạn mở đầu ("cơ bản nhất" thành "ít nốt nhất"); cột Cảm giác của bảng bốn loại theo OMT Triads; mục giọng thứ (gam tự nhiên, riêng V và vii° nâng bậc 7; ghi chú về III+); câu hỏi kiểm tra cuối trang; mục Nguồn. Mục doi_chu tự viết (không build được); người giao chạy lại so-chu --doi-chu để chuẩn hóa dấu nháy. Chưa chắc: không có. Nguồn không nói thẳng: bảng La thứ suy ra từ định nghĩa chất lượng hợp âm của OMT/Mount và gam La thứ tự nhiên/hòa âm (nguồn không liệt kê đủ bảy hợp âm của giọng thứ). Câu về site: các trang chưa chuyển (luyen-tap/ban-phim, luyen-tai/nghe-hop-am, luyen-tap/xay-hop-am, piano/hop-am-rai) kiểm trên ../opus-zero/docs/ và JavaScript cũ. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): root (nốt gốc), third, fifth (nốt ba, nốt năm), major/minor/diminished/augmented triad (hợp âm trưởng, thứ, giảm, tăng), Roman numeral (số La Mã), harmonic minor (gam thứ hòa âm), natural minor (gam thứ tự nhiên); đã có: chord, triad, leading tone.'
 nguon:
@@ -73,7 +73,7 @@ nhan_dinh:
     loai: dinh-nghia
     nguon: *a1
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Hợp âm cơ bản nhất là hợp âm ba (triad)". Chữ mới: "Hợp âm ít nốt nhất là hợp âm ba (triad)". Lý do: "cơ bản nhất" là nhận xét không kiểm được; "ít nốt nhất" suy ra từ định nghĩa: hợp âm có từ ba nốt trở lên (n1) và hợp âm ba có đúng ba nốt. Sửa cả đoạn mở đầu lẫn mô tả (description) của trang.'
+    ghi_chu: 'Chữ cũ: "Hợp âm cơ bản nhất là hợp âm ba (triad)". Chữ mới: "Hợp âm ít nốt nhất là hợp âm ba (triad)". Lý do: "cơ bản nhất" là nhận xét không kiểm được; "ít nốt nhất" suy ra từ định nghĩa: hợp âm có từ ba nốt trở lên (n1) và hợp âm ba có đúng ba nốt. Sửa cả đoạn mở đầu lẫn mô tả (description) của trang. Review D3-gom: chữ mới có ở đoạn mở đầu và description; giữ.'
     luot_2: dung
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/triads/" ]
     luot_2_ghi_chu: Khớp nguồn.
@@ -82,10 +82,9 @@ nhan_dinh:
     loai: dinh-nghia
     nguon:
       - omt-triads
-      - omt-inversion
       - omt-chord-symbols
     ket_qua: dung
-    ghi_chu: 'OMT, Triads (bảng thuật ngữ): root "The lowest note of a triad or seventh chord when the chord is stacked in thirds." OMT, Inversion: "the root of the chord is always A, regardless of its inversion and bass note"; OMT, Chord Symbols: ký hiệu hợp âm mang tên nốt gốc (C, Cm…).'
+    ghi_chu: 'OMT, Triads (bảng thuật ngữ): root "The lowest note of a triad or seventh chord when the chord is stacked in thirds." OMT, Inversion: "the root of the chord is always A, regardless of its inversion and bass note"; OMT, Chord Symbols: ký hiệu hợp âm mang tên nốt gốc (C, Cm…). Review D3-gom: bỏ id "omt-inversion" khỏi nguon (không có trong danh sách nguồn của hồ sơ); định nghĩa đủ dựa vào OMT Triads (bảng thuật ngữ, root) và Chord Symbols; hai lượt cùng dung.'
     luot_2: dung
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/triads/" ]
     luot_2_ghi_chu: Khớp nguồn.
@@ -120,7 +119,8 @@ nhan_dinh:
     cau: Bàn phím ngay dưới đoạn mở đầu tô ba phím Đô – Mi – Sol (C4 E4 G4) và có nút "Nghe hợp âm".
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm trên trang: ::cong-cu{ten="piano" range="C4-C5" notes="C4 E4 G4" play="chord"}; src/plugins/thanh-phan.mjs, hàm banPhim: nốt trong notes được tô, play="chord" thì nút ghi "Nghe hợp âm" và phát cùng lúc.'
+    ghi_chu: 'Kiểm trên trang: ::cong-cu{ten="piano" range="C4-C5" notes="C4 E4 G4" play="chord"}; src/plugins/thanh-phan.mjs, hàm banPhim: nốt trong notes được tô, play="chord" thì nút ghi "Nghe hợp âm" và phát cùng lúc. Review: đã kiểm dist/nhac-ly/10-hop-am-ba/index.html: bàn phím C4–C5, aria-label "các phím được tô: Đô (C4), Mi (E4), Sol (G4)", ba phím có lớp "to"; nút "Nghe hợp âm" do src/plugins/thanh-phan.mjs (banPhim, play="chord") dựng.'
+    review: dung
   - id: n9
     cau: "Hợp âm trưởng: 3 trưởng + 3 thứ (từ dưới lên); ví dụ từ Đô: Đô – Mi – Sol; ký hiệu C."
     loai: dinh-nghia
@@ -174,7 +174,7 @@ nhan_dinh:
     loai: dinh-nghia
     nguon: *a1
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ (cột Cảm giác): trưởng "Sáng, vững"; thứ "Tối, buồn"; giảm "Căng, bất ổn"; tăng "Lơ lửng, lạ". Chữ mới (cột "Cảm giác thường được mô tả"): "Vui", "Buồn", "Đáng sợ", "Huyền ảo". Lý do: OMT, Triads: "You might think of major triads as sounding "happy," minor triads as "sad," diminished triads as "scary," and augmented triads as having a "fantasy" or "mystical" sound."; các từ cũ ngoài đó không có nguồn. Cảm giác là cách mô tả quen dùng, không phải sự thật khách quan; tiêu đề cột đã nói "thường được mô tả".'
+    ghi_chu: 'Chữ cũ (cột Cảm giác): trưởng "Sáng, vững"; thứ "Tối, buồn"; giảm "Căng, bất ổn"; tăng "Lơ lửng, lạ". Chữ mới (cột "Cảm giác thường được mô tả"): "Vui", "Buồn", "Đáng sợ", "Huyền ảo". Lý do: OMT, Triads: "You might think of major triads as sounding "happy," minor triads as "sad," diminished triads as "scary," and augmented triads as having a "fantasy" or "mystical" sound."; các từ cũ ngoài đó không có nguồn. Cảm giác là cách mô tả quen dùng, không phải sự thật khách quan; tiêu đề cột đã nói "thường được mô tả". Review D3-gom: lượt 2 khong-chac ("không có nguồn bậc 2"). Đã mở lại OMT Triads (28/10/2026): "You might think of major triads as sounding \"happy,\" minor triads as \"sad,\" diminished triads as \"scary,\" and augmented triads as having a \"fantasy\" or \"mystical\" sound." Câu trang chỉ nói đó là cách "thường được mô tả", khớp nguồn bậc 2; giữ dung.'
     luot_2: khong-chac
     luot_2_ghi_chu: Mô tả cảm tính (vui, buồn, đáng sợ, huyền ảo) không có nguồn bậc 2 xác nhận; nên xếp khuyen-tap. Không sai là dạy phổ biến.
   - id: n14
@@ -182,7 +182,7 @@ nhan_dinh:
     loai: so-lieu
     nguon: *a2
     ket_qua: dung
-    ghi_chu: "Khối abc 1: [CEG] [C_EG] [C_E_G] [CE^G], khớp bảng trên. Xem khuong_nhac."
+    ghi_chu: "Khối abc 1: [CEG] [C_EG] [C_E_G] [CE^G], khớp bảng trên. Xem khuong_nhac. Review D3-gom: lượt 2 khong-chac vì không thấy khối nhạc. Đã đọc khối abc 1 (dòng 25–33): [CEG]4 | [C_EG]4 | [C_E_G]4 | [CE^G]4, đúng bốn hợp âm câu nêu; giữ."
     luot_2: khong-chac
     luot_2_ghi_chu: Nội dung khối khuông nhạc của site, không thấy khối nhạc. Bốn hợp âm nêu đúng cấu tạo (3M+3m, 3m+3M, 3m+3m, 3M+3M).
   - id: n15
@@ -257,7 +257,7 @@ nhan_dinh:
       - omt-roman
       - omt-triads
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Giọng thứ dùng gam thứ hòa âm khi xây hợp âm, để bậc V có cảm âm và trở thành hợp âm trưởng:". Chữ mới: câu trên. Lý do: Mount 16: gam thứ hòa âm cung cấp bậc 7 nâng "only for chords built on scale degrees 5 and 7"; các hợp âm khác dùng gam thứ tự nhiên; OMT, Roman Numerals: "the minor v chord becomes a major V chord, and the subtonic VII chord becomes a diminished viio chord" khi dùng cảm âm. Chữ cũ nói chung chung cả gam hòa âm cho mọi bậc (trái bậc III, xem câu bên dưới).'
+    ghi_chu: 'Chữ cũ: "Giọng thứ dùng gam thứ hòa âm khi xây hợp âm, để bậc V có cảm âm và trở thành hợp âm trưởng:". Chữ mới: câu trên. Lý do: Mount 16: gam thứ hòa âm cung cấp bậc 7 nâng "only for chords built on scale degrees 5 and 7"; các hợp âm khác dùng gam thứ tự nhiên; OMT, Roman Numerals: "the minor v chord becomes a major V chord, and the subtonic VII chord becomes a diminished viio chord" khi dùng cảm âm. Chữ cũ nói chung chung cả gam hòa âm cho mọi bậc (trái bậc III, xem câu bên dưới). Review D3-gom: chữ mới có trên trang; giữ.'
     luot_2: dung
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/triads/", "https://viva.pressbooks.pub/openmusictheory/chapter/roman-numerals/" ]
     luot_2_ghi_chu: Khớp nguồn.
@@ -280,7 +280,7 @@ nhan_dinh:
     nguon:
       - fff-minor-variants
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "(Hợp âm bậc III trong gam hòa âm thực ra là hợp âm tăng C+, nhưng trong thực tế người ta thường dùng C trưởng từ gam tự nhiên.)". Chữ mới: câu trên. Lý do: Mount 16: bậc 7 nâng "applies only to the chords built on scale degrees" 5 và 7; hợp âm III là chủ âm của giọng trưởng song song nên giữ diatonic, "Having an augmented triad here would subvert this important relationship and is therefore not permitted." C E G♯ là hợp âm tăng (hai quãng 3 trưởng: C–E, E–G♯). Chữ "thường" cũ yếu hơn nguồn (nguồn: không được dùng); chữ mới nói "không dùng".'
+    ghi_chu: 'Chữ cũ: "(Hợp âm bậc III trong gam hòa âm thực ra là hợp âm tăng C+, nhưng trong thực tế người ta thường dùng C trưởng từ gam tự nhiên.)". Chữ mới: câu trên. Lý do: Mount 16: bậc 7 nâng "applies only to the chords built on scale degrees" 5 và 7; hợp âm III là chủ âm của giọng trưởng song song nên giữ diatonic, "Having an augmented triad here would subvert this important relationship and is therefore not permitted." C E G♯ là hợp âm tăng (hai quãng 3 trưởng: C–E, E–G♯). Chữ "thường" cũ yếu hơn nguồn (nguồn: không được dùng); chữ mới nói "không dùng". Review D3-gom: chữ mới có trên trang; lượt 2 ghi III+ rất hiếm, Mount 16 nói "not permitted" trong bối cảnh hợp âm diatonic của giọng thứ; câu trang theo nguồn bậc 2; giữ.'
     luot_2: dung
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/triads/", "https://viva.pressbooks.pub/openmusictheory/chapter/roman-numerals/" ]
     luot_2_ghi_chu: "III+ có thật trên gam thứ hòa âm; thực hành chuẩn dùng III (hoặc III+ rất hiếm). OMT: chỉ nâng bậc 7 ở V và vii°."
@@ -288,12 +288,14 @@ nhan_dinh:
     cau: Có trang Bàn phím piano (/opus/luyen-tap/ban-phim/) để khám phá mọi hợp âm.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Chưa chuyển: ../opus-zero/docs/luyen-tap/ban-phim.md; công cụ piano.js, mountExplorer: chọn nốt gốc và loại ("Hợp âm" gồm các hợp âm trong theory.js). Lô chuyển giữ công cụ chọn nốt gốc và loại hợp âm.'
+    ghi_chu: 'Chưa chuyển: ../opus-zero/docs/luyen-tap/ban-phim.md; công cụ piano.js, mountExplorer: chọn nốt gốc và loại ("Hợp âm" gồm các hợp âm trong theory.js). Lô chuyển giữ công cụ chọn nốt gốc và loại hợp âm. Review: trang đích chưa chuyển; ../opus-zero/docs/luyen-tap/ban-phim.md có; trên bản xem link hiện "sắp có" (oz-sap-co, data-href /opus/luyen-tap/ban-phim/).'
+    review: dung
   - id: n26
     cau: Trang Nghe hợp âm có công cụ nhận biết hợp âm ở mục "Luyện với công cụ" (link /opus/luyen-tai/nghe-hop-am/#luyen-voi-cong-cu).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Chưa chuyển: ../opus-zero/docs/luyen-tai/nghe-hop-am.md có "## Luyện với công cụ" (dòng 67). Lô chuyển giữ mục và neo.'
+    ghi_chu: 'Chưa chuyển: ../opus-zero/docs/luyen-tai/nghe-hop-am.md có "## Luyện với công cụ" (dòng 67). Lô chuyển giữ mục và neo. Review: trang đích đã chuyển: src/content/docs/luyen-tai/nghe-hop-am.md dòng 70 "## Luyện với công cụ" với ::cong-cu{ten="chord-trainer"}; dist có id="luyen-voi-cong-cu".'
+    review: dung
   - id: n27
     cau: "Hợp âm ba ở thế gốc: tay phải ngón 1-3-5, tay trái 5-3-1. Chơi khối, rồi rải từng nốt, rồi thử các hình đệm (Alberti, valse)."
     loai: khuyen-tap
@@ -306,7 +308,8 @@ nhan_dinh:
     cau: Trang "Hợp âm, hợp âm rải và hình đệm" (/opus/piano/hop-am-rai/) có hình đệm Alberti và valse.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Chưa chuyển: ../opus-zero/docs/piano/hop-am-rai.md, mục "### 2. Nốt trầm và hợp âm: điệu valse" và "### 3. Bass Alberti". Lô chuyển giữ hai hình đệm này và bảng ngón bấm thể gốc 1-3-5 / 5-3-1.'
+    ghi_chu: 'Chưa chuyển: ../opus-zero/docs/piano/hop-am-rai.md, mục "### 2. Nốt trầm và hợp âm: điệu valse" và "### 3. Bass Alberti". Lô chuyển giữ hai hình đệm này và bảng ngón bấm thể gốc 1-3-5 / 5-3-1. Review: trang đích chưa chuyển; ../opus-zero/docs/piano/hop-am-rai.md tiêu đề "Hợp âm, hợp âm rải và hình đệm", mục "2. Nốt trầm và hợp âm: điệu valse" và "3. Bass Alberti".'
+    review: dung
   - id: n29
     cau: "Các hợp âm: Sol trưởng là Sol – Si – Rê; Rê thứ là Rê – Fa – La; Si giảm là Si – Rê – Fa; Fa tăng là Fa – La – Đô♯."
     loai: so-lieu
@@ -329,7 +332,8 @@ nhan_dinh:
     cau: 'Mục Luyện tập kèm theo: công cụ nhận biết hợp âm có bộ "4 loại hợp âm ba" và có trang xây hợp âm (/opus/luyen-tap/xay-hop-am/).'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Chưa chuyển: ../opus-zero/docs/assets/js/chord-trainer.js dòng 20: lựa chọn "Trưởng và thứ", "4 loại hợp âm ba", "5 loại hợp âm bảy"; ../opus-zero/docs/luyen-tap/xay-hop-am.md ("Xây gam và hợp âm") có sẵn. Lô chuyển giữ bộ "4 loại hợp âm ba".'
+    ghi_chu: 'Chưa chuyển: ../opus-zero/docs/assets/js/chord-trainer.js dòng 20: lựa chọn "Trưởng và thứ", "4 loại hợp âm ba", "5 loại hợp âm bảy"; ../opus-zero/docs/luyen-tap/xay-hop-am.md ("Xây gam và hợp âm") có sẵn. Lô chuyển giữ bộ "4 loại hợp âm ba". Review: công cụ mới src/scripts/luyen-tai.js dòng 134 có bộ "4 loại hợp âm ba"; trang /opus/luyen-tap/xay-hop-am/ chưa chuyển, có ở ../opus-zero/docs/luyen-tap/xay-hop-am.md.'
+    review: dung
   - id: n32
     cau: "Hợp âm thứ gồm (từ dưới lên) 3 thứ + 3 trưởng; ví dụ La thứ: La – Đô (3 thứ), Đô – Mi (3 trưởng)."
     loai: so-lieu
@@ -367,7 +371,7 @@ nhan_dinh:
       - omt-intro-harmony
       - omt-minor
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: câu hỏi "Vì sao giọng thứ dùng gam hòa âm để xây hợp âm bậc V?"; giải thích "Cảm âm (bậc 7 được nâng) tạo lực kéo mạnh về chủ âm." Chữ mới: câu hỏi "Vì sao giọng thứ nâng bậc 7 khi xây hợp âm bậc V?"; giải thích "Bậc 7 được nâng thành cảm âm, nên bậc V thành hợp âm trưởng và có đà đi về chủ âm." Lý do: khớp câu sửa ở mục Hợp âm trong giọng thứ (thu-hoa-am); OMT, Roman Numerals: "the minor v chord becomes a major V chord"; OMT, Introduction to Harmony: dùng ti "to give it momentum toward the tonic"; OMT, Minor Scales: gam thứ hòa âm nâng bậc 7 để có "the sense of closure". "Lực kéo mạnh" đổi thành "đà đi về chủ âm" theo chữ nguồn (momentum).'
+    ghi_chu: 'Chữ cũ: câu hỏi "Vì sao giọng thứ dùng gam hòa âm để xây hợp âm bậc V?"; giải thích "Cảm âm (bậc 7 được nâng) tạo lực kéo mạnh về chủ âm." Chữ mới: câu hỏi "Vì sao giọng thứ nâng bậc 7 khi xây hợp âm bậc V?"; giải thích "Bậc 7 được nâng thành cảm âm, nên bậc V thành hợp âm trưởng và có đà đi về chủ âm." Lý do: khớp câu sửa ở mục Hợp âm trong giọng thứ (thu-hoa-am); OMT, Roman Numerals: "the minor v chord becomes a major V chord"; OMT, Introduction to Harmony: dùng ti "to give it momentum toward the tonic"; OMT, Minor Scales: gam thứ hòa âm nâng bậc 7 để có "the sense of closure". "Lực kéo mạnh" đổi thành "đà đi về chủ âm" theo chữ nguồn (momentum). Review D3-gom: chữ mới có ở câu hỏi cuối bài; lời giải thích không dựa vào vị trí lựa chọn; giữ.'
     luot_2: dung
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/triads/", "https://viva.pressbooks.pub/openmusictheory/chapter/roman-numerals/" ]
     luot_2_ghi_chu: Khớp nguồn.
@@ -392,7 +396,7 @@ khuong_nhac:
 doi_chu:
   - cu: "Hợp âm là ba nốt trở lên vang lên cùng lúc. Hợp âm cơ bản nhất là hợp âm ba (triad): ba nốt xếp chồng quãng 3."
     moi: "Hợp âm là ba nốt trở lên vang lên cùng lúc. Hợp âm ít nốt nhất là hợp âm ba (triad): ba nốt xếp chồng quãng 3."
-    ly_do: 'n3 (da-sua): "cơ bản nhất" không kiểm được; "ít nốt nhất" suy ra từ định nghĩa hợp âm (từ ba nốt trở lên). Sửa cả mô tả (description) và đoạn mở đầu.'
+    ly_do: 'n3 (da-sua): "cơ bản nhất" không kiểm được; "ít nốt nhất" suy ra từ định nghĩa hợp âm (từ ba nốt trở lên). Sửa cả mô tả (description) và đoạn mở đầu.; Mô tả trang lấy từ đoạn đầu, đổi theo n3 ("cơ bản nhất" thành "ít nốt nhất").'
   - cu: Cảm giác
     moi: Cảm giác thường được mô tả
     ly_do: 'n13 (da-sua): các từ trong cột Cảm giác (sáng, vững, tối, căng, bất ổn, lơ lửng, lạ) không có nguồn; thay bằng cách mô tả của OMT, Triads ("happy", "sad", "scary", "fantasy/mystical"); tiêu đề cột thành "Cảm giác thường được mô tả".'

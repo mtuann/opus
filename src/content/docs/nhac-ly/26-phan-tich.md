@@ -8,7 +8,7 @@ Phân tích là **ghép tất cả những gì đã học** vào một bản nh�
 ## Quy trình 6 bước
 
 1. **Nghe trước**, ít nhất hai lần, không nhìn bản nhạc. Ghi lại cảm nhận và những chỗ nổi bật.
-2. **Thông tin chung**: giọng chính (nhìn hóa biểu và hợp âm cuối), số chỉ nhịp, tốc độ, biên chế.
+2. **Thông tin chung**: giọng chính (nhìn hóa biểu, nốt đầu và nốt kết thúc), số chỉ nhịp, tốc độ, biên chế.
 3. **Hình thức lớn**: chia tác phẩm thành các phần (A, B…; trình bày, phát triển…) bằng cách tìm chỗ **kết** và chỗ chủ đề **quay lại** (xem [Hình thức & thể loại](/opus/hinh-thuc/)).
 4. **Giọng** của từng phần: tìm các dấu hóa bất thường lặp lại để nhận ra chuyển giọng (xem [bài 19](/opus/nhac-ly/19-at-phu-chuyen-giong/)).
 5. **Hòa âm** ở những chỗ quan trọng: đầu và cuối mỗi phần, các kết. Ghi số La Mã dưới bè trầm.
@@ -52,7 +52,7 @@ K:C
 |---|---|
 | Mozart Sonata K. 545, chương 1 | Làm theo bảng ở trang [Hình thức sonata](/opus/hinh-thuc/sonata/), rồi thêm hợp âm ở mỗi kết |
 | Một thánh ca bốn bè của Bach | Gọi tên mọi hợp âm và mọi kết; tìm nốt treo, nốt lướt |
-| Schumann *Träumerei* | Tìm các át phụ và hợp âm mượn |
+| Schumann *Träumerei* | Tìm các át phụ |
 | Chopin Prélude Op. 28 số 4 (Mi thứ) | Bè trầm đi xuống gần như từng nửa cung (Sol – Fa♯ – Fa – Mi – Rê♯ – Rê – Đô – Si): hợp âm thay đổi thế nào? |
 
 ```quiz
@@ -75,6 +75,6 @@ K:C
 
 ## Nguồn
 
-- Open Music Theory: [Tonicization](https://viva.pressbooks.pub/openmusictheory/chapter/tonicization/); [Extended Tonicization and Modulation to Closely Related Keys](https://viva.pressbooks.pub/openmusictheory/chapter/extended-tonicization-and-modulation-to-closely-related-keys/); [Figured Bass and Roman Numerals with Figures](https://viva.pressbooks.pub/openmusictheory/chapter/figured-bass/).
+- Open Music Theory: [Tonicization](https://viva.pressbooks.pub/openmusictheory/chapter/tonicization/); [Extended Tonicization and Modulation to Closely Related Keys](https://viva.pressbooks.pub/openmusictheory/chapter/extended-tonicization-and-modulation-to-closely-related-keys/); [Figured Bass and Roman Numerals with Figures](https://viva.pressbooks.pub/openmusictheory/chapter/figured-bass/); [Minor Scales, Scale Degrees, and Key Signatures](https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/) (nốt đầu và nốt cuối của bản nhạc thường là chủ âm).
 - Bản nhạc: Bach, *Das wohltemperierte Klavier I* (BWV 846): [IMSLP](https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)), [Mutopia Project](https://www.mutopiaproject.org/cgibin/make-table.cgi?searchingfor=BWV+846) (bản gõ lại, ô nhịp 1–11 và bè trầm); Mozart, [Sonata K. 545](https://imslp.org/wiki/Piano_Sonata_No.16,_K.545_(Mozart,_Wolfgang_Amadeus)); Chopin, [Preludes Op. 28](https://imslp.org/wiki/Preludes,_Op.28_(Chopin,_Fr%C3%A9d%C3%A9ric)) ([Mutopia](https://www.mutopiaproject.org/cgibin/make-table.cgi?searchingfor=Chopin+Prelude+Op+28)); Schumann, [Kinderszenen Op. 15](https://imslp.org/wiki/Kinderszenen,_Op.15_(Schumann,_Robert)) ([Mutopia](https://www.mutopiaproject.org/cgibin/make-table.cgi?Composer=SchumannR)).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

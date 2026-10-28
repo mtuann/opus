@@ -42,7 +42,7 @@ Quy tắc chung:
 - Quãng **1, 4, 5, 8** có dạng **đúng** (perfect). Rộng hơn nửa cung là **tăng**, hẹp hơn nửa cung là **giảm**.
 - Quãng **2, 3, 6, 7** có dạng **trưởng** và **thứ** (thứ hẹp hơn trưởng nửa cung). Rộng hơn trưởng là **tăng**, hẹp hơn thứ là **giảm**.
 
-Quãng 6 nửa cung (4 tăng hoặc 5 giảm) chia đôi quãng tám, gọi là **tritone** (ba cung nguyên). Tritone được xếp vào quãng nghịch. Từ thời trung đại, việc dùng tritone từng bị cấm; có câu *mi contra fa diabolus est in musica* ("mi đối với fa là quỷ dữ trong âm nhạc") nói về quãng này.
+Quãng 6 nửa cung (4 tăng hoặc 5 giảm) chia đôi quãng tám, gọi là **tritone** (ba cung nguyên). Tritone được xếp vào quãng nghịch. Thời trung đại, tritone thường bị tránh; có câu *mi contra fa diabolus est in musica* ("mi đối với fa là quỷ dữ trong âm nhạc") nói về quãng này.
 
 ## Mẹo nhanh: dùng gam trưởng của nốt dưới
 

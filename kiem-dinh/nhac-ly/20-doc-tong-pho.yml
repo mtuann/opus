@@ -10,7 +10,7 @@ lan:
     nguoi:
       luot_1: Claude Sonnet 5.5 (D3-L3 lượt 1, phần 1/2)
       luot_2: null
-      review: null
+      review: Claude (review D3-gom, nhóm A, 28/10/2026)
       kiem_mau: null
 ghi_chu: 'Trang đọc tổng phổ (tầng lõi), hình ::hinh{ten="seating"} (src/components/hinh/seating.html) và một khối abc. Nguồn chính: Britannica (Score), Dolmetsch lesson 26, Berlin Phil (xếp chỗ), Absil và Blake (viết tắt, bậc 3), sơ đồ dàn nhạc của một trường và của bsolive (bậc 3; không rõ dàn nhạc), Understanding Music (Haydn 94), Burgess Hill SO và Indianapolis SO (Beethoven 5). WebFetch ngày 28/10/2026 (bản tóm tắt chữ; chỗ quan trọng đã hỏi lại nguyên văn). Chỗ sửa trang: (1) "từ cao xuống thấp" thành "thường từ cao xuống thấp"; (2) viết tắt: Klar. thành Kl., bỏ Cr., Tba. thành Tuba, Pf. thành Pno., Vl. thành Vln. (cũng đổi "Vl. I/II" trong abc thành "Vn. I/II"); (3) câu về chỗ ngồi trên sân khấu viết lại vì chữ cũ tự mâu thuẫn (n11); (4) "YouTube" thành "các trang chia sẻ video"; (5) mục Nguồn (thêm Haydn 94). Hình seating: không sửa; vị trí chi tiết (horn, trumpet, hạc, timpani) thay đổi giữa các dàn nhạc, chú thích dưới hình đã dè dặt; người giao nên đọc lại n12 và quyết có đổi chữ aria-label "bộ đồng phía sau" không (thứ tự các bộ khớp ba nguồn). Chưa chắc: n4 (viết tắt chủ yếu từ nguồn bậc 3; lượt 2 nên đối chiếu một bảng viết tắt của nhà xuất bản), n24 (Bärenreiter chưa mở), n25 (hai hợp âm cuối của vòng Canon chưa đối chiếu bản nhạc, như bài 12). Trang đích chưa chuyển: /opus/nghe-nhac/haydn-94/, /opus/nghe-nhac/mozart-40/, /opus/nghe-nhac/beethoven-5/ (n21; beethoven-5 cũ cần giữ câu "chủ đề 2 được kèn horn giới thiệu" cho bài tập 3), /opus/tai-lieu-tham-khao/. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): score / full score (tổng phổ), study score (tổng phổ khổ nhỏ), woodwind (bộ gỗ), brass (bộ đồng), percussion (bộ gõ), strings (bộ dây), transposing instrument (nhạc cụ dịch giọng), contrabass, conductor (nhạc trưởng); các tên nhạc cụ (violin, viola, cello, timpani, oboe...) chưa kiểm có trong từ điển hay không. Bản ghi string-quartet đã có hồ sơ riêng (cùng phần 1/2).'
 nguon:
@@ -86,6 +86,14 @@ nguon:
     bac: 2
     ten: Open Music Theory, Clefs
     link: https://viva.pressbooks.pub/openmusictheory/chapter/clefs/
+  - id: yale-names
+    bac: 2
+    ten: Yale University Library (Music Cataloging), The names of instruments and voices in English, French, German, Italian, Russian, and Spanish
+    link: https://web.library.yale.edu/printpdf/book/export/html/3376
+  - id: omt1-pachelbel
+    bac: 2
+    ten: "Open Music Theory (bản 1), Pachelbel's Canon schema: \"||: I – V – VI – III – IV – I – IV – V :||\""
+    link: https://openmusictheory.github.io/popRockHarmony-pachelbel.html
 nhan_dinh:
   - id: n1
     cau: Tổng phổ (full score) là bản nhạc ghi mọi bè của dàn nhạc, xếp chồng lên nhau, để nhạc trưởng nhìn thấy toàn bộ.
@@ -116,61 +124,54 @@ nhan_dinh:
       - brit-score
       - dolmetsch-26
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "trong mỗi bộ từ cao xuống thấp". Chữ mới: "thường từ cao xuống thấp". Lý do: Dolmetsch và Britannica nêu thứ tự trong bộ (sáo, oboe, clarinet, bassoon; horn, trumpet, trombone, tuba; violin I, II, viola, cello, bass) nhưng có ngoại lệ (ví dụ horn thường ghi trên trumpet, dù trầm hơn); thêm "thường" cho đúng.'
+    ghi_chu: 'Chữ cũ: "trong mỗi bộ từ cao xuống thấp". Chữ mới: "thường từ cao xuống thấp". Lý do: Dolmetsch và Britannica nêu thứ tự trong bộ (sáo, oboe, clarinet, bassoon; horn, trumpet, trombone, tuba; violin I, II, viola, cello, bass) nhưng có ngoại lệ (ví dụ horn thường ghi trên trumpet, dù trầm hơn); thêm "thường" cho đúng. Review D3-gom: chữ mới có trên trang; Dolmetsch bài 26 (mở lại 28/10/2026): trong mỗi bộ bè cao ở trên, horn ghi trên trumpet; giữ.'
     luot_2: dung
     luot_2_nguon: [ "https://s2.smu.edu/robfrank/MOLA.pdf" ]
     luot_2_ghi_chu: "MOLA: trong mỗi nhóm xếp theo âm cao đến thấp 'for the most part'. Có ngoại lệ (horn thường đặt trên trumpet) nên chữ 'thường' là đúng."
   - id: n4
-    cau: 'Bảng: bộ gỗ gồm Sáo (Fl., Picc.), Oboe (Ob.), Clarinet (Cl., Kl.), Bassoon (Fg., Bsn.).'
+    cau: 'Bảng: bộ gỗ gồm Sáo (Fl.), Oboe (Ob.), Clarinet (Cl.), Bassoon (Bsn.).'
     loai: danh-muc
     nguon:
-      - absil-abbrev
-      - blake-abbrev
       - dolmetsch-26
-    ket_qua: dung
-    ghi_chu: 'Absil và Blake: Fl., Picc.; Ob.; Cl. (Ý, Anh, Pháp: Cl.; Đức: Klar., Kl. cũng gặp); Fg. (Ý/Đức: Fagotto, Fagott) và Bsn. (Anh). Chữ cũ "Klar." sửa thành "Kl." (n9). Nguồn viết tắt đa phần bậc 3 (Absil, Blake) cộng Dolmetsch (bậc 2): chưa có từ điển viết tắt chuẩn; lượt 2 nên đối chiếu với bảng viết tắt của một nhà xuất bản (ví dụ Eulenburg, Henle).'
+    ket_qua: da-sua
+    ghi_chu: 'Absil và Blake: Fl., Picc.; Ob.; Cl. (Ý, Anh, Pháp: Cl.; Đức: Klar., Kl. cũng gặp); Fg. (Ý/Đức: Fagotto, Fagott) và Bsn. (Anh). Chữ cũ "Klar." sửa thành "Kl." (n9). Nguồn viết tắt đa phần bậc 3 (Absil, Blake) cộng Dolmetsch (bậc 2): chưa có từ điển viết tắt chuẩn; lượt 2 nên đối chiếu với bảng viết tắt của một nhà xuất bản (ví dụ Eulenburg, Henle). Review D3-gom: lượt 2 khong-chac (không có nguồn bậc 2 cho các viết tắt). Đã mở lại Dolmetsch, Music Theory Online bài 26 (28/10/2026): viết tắt tiếng Anh "Fl or Fls", "Ob or Obs", "Cl or Cls", "Bsn or Bsns"; Picc., Kl., Fg. chỉ có ở Absil, Blake (bậc 3). Chữ cũ: "Sáo (Fl., Picc.), Oboe (Ob.), Clarinet (Cl., Kl.), Bassoon (Fg., Bsn.)". Chữ mới: "Sáo (Fl.), Oboe (Ob.), Clarinet (Cl.), Bassoon (Bsn.)"; tiêu đề cột thành "Nhạc cụ (viết tắt tiếng Anh)".'
     luot_2: khong-chac
     luot_2_ghi_chu: Không mở được nguồn bậc 2 liệt kê viết tắt (Fl., Picc., Ob., Cl., Kl., Fg., Bsn.); các trang thử đều không có hoặc không mở được. Theo hiểu biết thông dụng thì đúng (Kl. = Klarinette, Fg. = Fagott) nhưng chưa có link đã mở để dẫn. Bộ gỗ còn có cor anglais, clarinet bass, contrabassoon (câu chỉ liệt kê một phần).
   - id: n5
-    cau: 'Bảng: bộ đồng gồm Horn (Hn., Cor.), Trumpet (Tpt., Tr.), Trombone (Tbn., Pos.), Tuba.'
+    cau: 'Bảng: bộ đồng gồm Horn (Hn.), Trumpet (Tpt.), Trombone (Trb.), Tuba.'
     loai: danh-muc
     nguon:
-      - absil-abbrev
-      - blake-abbrev
       - dolmetsch-26
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Horn (Hn., Cor., Cr.) ... Tuba (Tba.)". Chữ mới: bỏ "Cr." và "Tba.". Lý do: Cr. không thấy trong Absil, Blake hay Dolmetsch; "Tba." cũng không (các nguồn ghi Tuba hoặc Tb.). Hn. (Anh), Cor. (Pháp, Ý corno), Tpt. (Anh), Tr. (Đức Trp. hay Tr.), Tbn. (Anh), Pos. (Đức Posaune) có trong nguồn.'
+    ghi_chu: 'Chữ cũ: "Horn (Hn., Cor., Cr.) ... Tuba (Tba.)". Chữ mới: bỏ "Cr." và "Tba.". Lý do: Cr. không thấy trong Absil, Blake hay Dolmetsch; "Tba." cũng không (các nguồn ghi Tuba hoặc Tb.). Hn. (Anh), Cor. (Pháp, Ý corno), Tpt. (Anh), Tr. (Đức Trp. hay Tr.), Tbn. (Anh), Pos. (Đức Posaune) có trong nguồn. Review D3-gom: lượt 2 khong-chac. Dolmetsch bài 26: "Hn or Hns", "Tpt or Tpts", "Trb or Trbs", "Tuba". Chữ cũ: "Horn (Hn., Cor.), Trumpet (Tpt., Tr.), Trombone (Tbn., Pos.), Tuba". Chữ mới: "Horn (Hn.), Trumpet (Tpt.), Trombone (Trb.), Tuba" (Cor. ở Dolmetsch là cornet của ban nhạc kèn, không phải horn).'
     luot_2: khong-chac
     luot_2_ghi_chu: "Như n4: chưa mở được nguồn bậc 2 cho viết tắt Hn., Cor., Tpt., Tr., Tbn., Pos. Theo hiểu biết thông dụng thì đúng (Cor. Pháp/Ý cho horn, Tr. = Tromba/Trompete, Pos. = Posaune)."
   - id: n6
-    cau: 'Bảng: timpani viết tắt Timp., Pk. (Pauken trong tiếng Đức); đàn hạc Hp.; piano Pno.'
+    cau: 'Bảng: timpani viết tắt Timp., các nhạc cụ gõ khác Perc.; đàn hạc, piano, celesta không ghi viết tắt.'
     loai: danh-muc
     nguon:
-      - absil-abbrev
-      - blake-abbrev
+      - dolmetsch-26
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Hp., Pf.". Chữ mới: "Hp., Pno.". Lý do: Pno. là viết tắt trong Absil và Blake; Pf. (Ý pianoforte) có gặp nhưng ít; chọn Pno. cho nhất quán với các viết tắt tiếng Anh khác trong bảng. Timp. và Pk. (Pauken) có trong nguồn.'
+    ghi_chu: 'Chữ cũ: "Hp., Pf.". Chữ mới: "Hp., Pno.". Lý do: Pno. là viết tắt trong Absil và Blake; Pf. (Ý pianoforte) có gặp nhưng ít; chọn Pno. cho nhất quán với các viết tắt tiếng Anh khác trong bảng. Timp. và Pk. (Pauken) có trong nguồn. Review D3-gom: lượt 2 khong-chac. Dolmetsch bài 26: "Timp", "Perc"; không có viết tắt cho đàn hạc, phím. Chữ cũ: "Timpani (Timp., Pk.)", "Hp., Pno.". Chữ mới: "Timpani (Timp.), các nhạc cụ gõ khác (Perc.)"; ô viết tắt của hàng đàn hạc, piano, celesta để trống.'
     luot_2: khong-chac
     luot_2_ghi_chu: Chưa mở được nguồn bậc 2 liệt kê Timp., Pk., Hp., Pno. Wikipedia (Timpani) xác nhận tiếng Đức là Pauken nhưng không ghi viết tắt Timp.; chỉ là nguồn phổ thông nên không dùng làm nguồn.
   - id: n7
-    cau: 'Bảng: bộ dây gồm Violin I, Violin II (Vn., Vln.), Viola (Vla., Br.), Cello (Vc.), Contrabass (Cb., Kb.).'
+    cau: 'Bảng: bộ dây gồm Violin I, Violin II (Vln.), Viola (Vla.), Cello (Vcl.), Contrabass (DB).'
     loai: danh-muc
     nguon:
-      - absil-abbrev
-      - blake-abbrev
+      - dolmetsch-26
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "(Vl., Vn.)". Chữ mới: "(Vn., Vln.)". Lý do: Vl. dễ nhầm với Vla. (viola) nên nhiều nhà xuất bản tránh; Absil và Blake ghi Vn. và Vln. cho violin. Vla. và Br. (Bratsche), Vc., Cb. và Kb. (Kontrabass) có trong nguồn. Trong khối abc cũng đổi "Vl. I", "Vl. II" thành "Vn. I", "Vn. II".'
+    ghi_chu: 'Chữ cũ: "(Vl., Vn.)". Chữ mới: "(Vn., Vln.)". Lý do: Vl. dễ nhầm với Vla. (viola) nên nhiều nhà xuất bản tránh; Absil và Blake ghi Vn. và Vln. cho violin. Vla. và Br. (Bratsche), Vc., Cb. và Kb. (Kontrabass) có trong nguồn. Trong khối abc cũng đổi "Vl. I", "Vl. II" thành "Vn. I", "Vn. II". Review D3-gom: lượt 2 khong-chac. Dolmetsch bài 26: "Vlns", "Vla", "Vcl", "DB". Chữ cũ: "(Vn., Vln.)", "(Vla., Br.)", "(Vc.)", "(Cb., Kb.)". Chữ mới: "(Vln.)", "(Vla.)", "(Vcl.)", "(DB)". Khối abc đổi tên bè cho khớp: "Vn. I", "Vn. II", "Vc." thành "Vln. I", "Vln. II", "Vcl.".'
     luot_2: khong-chac
     luot_2_ghi_chu: Chưa mở được nguồn bậc 2 cho Vn./Vln., Vla./Br., Vc., Cb./Kb. Theo hiểu biết thông dụng thì đúng.
   - id: n8
-    cau: Viết tắt có thể bằng tiếng Ý, Đức hoặc Pháp tùy nhà xuất bản; Pauken là timpani trong tiếng Đức, Bratsche là viola.
+    cau: "Tổng phổ có thể ghi tên nhạc cụ bằng tiếng Ý, Đức hay Pháp; ví dụ tên tiếng Đức: Fagott (bassoon), Posaune (trombone), Pauken (timpani), Bratsche (viola), Kontrabass (contrabass)."
     loai: danh-muc
     nguon:
-      - absil-abbrev
-      - blake-abbrev
+      - yale-names
       - dolmetsch-26
-    ket_qua: dung
-    ghi_chu: 'Các nguồn liệt kê tên nhạc cụ theo Ý, Đức, Pháp, Anh: Pauken = timpani (Đức), Bratsche = viola (Đức). Nhà xuất bản dùng ngôn ngữ riêng: Dolmetsch lesson 26 nêu việc tên nhạc cụ trong tổng phổ viết bằng nhiều thứ tiếng.'
+    ket_qua: da-sua
+    ghi_chu: 'Các nguồn liệt kê tên nhạc cụ theo Ý, Đức, Pháp, Anh: Pauken = timpani (Đức), Bratsche = viola (Đức). Nhà xuất bản dùng ngôn ngữ riêng: Dolmetsch lesson 26 nêu việc tên nhạc cụ trong tổng phổ viết bằng nhiều thứ tiếng. Review D3-gom: lượt 2 khong-chac (phần "tùy nhà xuất bản" không có nguồn). Đã mở Yale University Library, The names of instruments and voices (28/10/2026): tiếng Đức Fagott, Posaune, Pauken, Bratsche (cùng Viola), Kontrabass; Dolmetsch bài 26 dùng tên Đức trong tổng phổ (Tuben; B, H trong tên horn). Chữ cũ: "Viết tắt có thể bằng tiếng Ý, Đức hoặc Pháp tùy nhà xuất bản (ví dụ Pauken là timpani trong tiếng Đức, Bratsche là viola)." Chữ mới: câu trên (bỏ "viết tắt ... tùy nhà xuất bản").'
     luot_2: khong-chac
     luot_2_ghi_chu: Phần Pauken = timpani, Bratsche = viola đúng (Wikipedia Timpani, Viola xác nhận, nhưng chỉ là nguồn phổ thông); phần 'tùy nhà xuất bản dùng Ý/Đức/Pháp' chưa có nguồn bậc 2 đã mở.
   - id: n9
@@ -188,7 +189,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: 'src/content/docs/nhac-ly/17-khoa-do-dich-giong.md (cùng lô, phần 1/2): có mục khóa Đô alto và nhạc cụ dịch giọng; trang cũ cùng tên.'
+    ghi_chu: 'src/content/docs/nhac-ly/17-khoa-do-dich-giong.md (cùng lô, phần 1/2): có mục khóa Đô alto và nhạc cụ dịch giọng; trang cũ cùng tên. Review: src/content/docs/nhac-ly/17-khoa-do-dich-giong.md (nhánh này) có mục Khóa Đô (alto: viola) và "Nhạc cụ dịch giọng".'
+    review: dung
   - id: n11
     cau: 'Thứ tự trên sân khấu, từ trước ra sau: bộ dây, bộ gỗ, bộ đồng, bộ gõ; trong tổng phổ gỗ ở trên cùng, dây ở dưới cùng.'
     loai: quy-tac
@@ -197,7 +199,7 @@ nhan_dinh:
       - school-layout
       - bso-layout
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Thứ tự từ trên xuống trong tổng phổ (gỗ – đồng – gõ – dây) gần giống thứ tự từ sau ra trước trên sân khấu, chỉ khác là bộ gỗ được ghi lên trên cùng". Chữ mới: câu trên. Lý do: chữ cũ tự mâu thuẫn. Thứ tự gỗ – đồng – gõ – dây từ trên xuống không "gần giống" sau ra trước (sau ra trước trên sân khấu là gõ, đồng, gỗ, dây, tức đảo hẳn): dây trước, gỗ giữa, đồng sau, gõ sau cùng (Berlin Phil, sơ đồ trường học, sơ đồ bsolive). Chữ mới nói đúng sự khác nhau.'
+    ghi_chu: 'Chữ cũ: "Thứ tự từ trên xuống trong tổng phổ (gỗ – đồng – gõ – dây) gần giống thứ tự từ sau ra trước trên sân khấu, chỉ khác là bộ gỗ được ghi lên trên cùng". Chữ mới: câu trên. Lý do: chữ cũ tự mâu thuẫn. Thứ tự gỗ – đồng – gõ – dây từ trên xuống không "gần giống" sau ra trước (sau ra trước trên sân khấu là gõ, đồng, gỗ, dây, tức đảo hẳn): dây trước, gỗ giữa, đồng sau, gõ sau cùng (Berlin Phil, sơ đồ trường học, sơ đồ bsolive). Chữ mới nói đúng sự khác nhau. Review D3-gom: lượt 2 khong-chac (không mở được nguồn). Đã mở lại Berliner Philharmoniker (28/10/2026): "the softer strings sit at the front", "followed by the more powerful woodwinds", "then the louder brass", "finally the percussion at the back". Thứ tự tổng phổ theo Dolmetsch bài 26. Giữ dung.'
     luot_2: khong-chac
     luot_2_ghi_chu: Cách xếp chỗ phổ biến (dây phía trước, gỗ, đồng, gõ phía sau) đúng theo hiểu biết thông dụng, nhưng các trang đã mở (Wikipedia Symphony orchestra, Second violin) không mô tả bố cục; chưa có nguồn bậc 2 đã mở. Phần 'trong tổng phổ gỗ trên cùng, dây dưới cùng' đúng (MOLA).
   - id: n12
@@ -208,7 +210,7 @@ nhan_dinh:
       - school-layout
       - bso-layout
     ket_qua: dung
-    ghi_chu: 'src/components/hinh/seating.html (::hinh{ten="seating"}), chữ trong hình và aria-label. Thứ tự các bộ khớp ba nguồn: Berlin Phil (dây quanh nhạc trưởng, gỗ giữa, đồng và gõ phía sau), sơ đồ trường học Cirencester Kingshill và sơ đồ bsolive. Trong hình: violin 1 ở bên trái, rồi violin 2, viola, cello, contrabass sang phải; sáo/oboe bên trái, clarinet/bassoon bên phải; horn trái, trumpet giữa, trombone/tuba phải; hạc bên trái; timpani sau cùng ở giữa: khớp bố cục Mỹ phổ biến (violin 1 trái, contrabass phải) trong sơ đồ trường học và bsolive. Vị trí chi tiết của horn, trumpet, hạc, timpani thay đổi theo dàn nhạc (Berlin Phil nói thẳng mỗi nhạc trưởng xếp theo ý): chú thích dưới hình đã dè dặt ("một cách xếp chỗ thường gặp; mỗi dàn nhạc có thể bố trí khác"). Không sửa hình.'
+    ghi_chu: 'src/components/hinh/seating.html (::hinh{ten="seating"}), chữ trong hình và aria-label. Thứ tự các bộ khớp ba nguồn: Berlin Phil (dây quanh nhạc trưởng, gỗ giữa, đồng và gõ phía sau), sơ đồ trường học Cirencester Kingshill và sơ đồ bsolive. Trong hình: violin 1 ở bên trái, rồi violin 2, viola, cello, contrabass sang phải; sáo/oboe bên trái, clarinet/bassoon bên phải; horn trái, trumpet giữa, trombone/tuba phải; hạc bên trái; timpani sau cùng ở giữa: khớp bố cục Mỹ phổ biến (violin 1 trái, contrabass phải) trong sơ đồ trường học và bsolive. Vị trí chi tiết của horn, trumpet, hạc, timpani thay đổi theo dàn nhạc (Berlin Phil nói thẳng mỗi nhạc trưởng xếp theo ý): chú thích dưới hình đã dè dặt ("một cách xếp chỗ thường gặp; mỗi dàn nhạc có thể bố trí khác"). Không sửa hình. Review D3-gom: lượt 2 khong-chac. Thứ tự các bộ theo Berliner Philharmoniker (như n11); hình src/components/hinh/seating.html, aria-label "bộ dây phía trước, bộ gỗ ở giữa, bộ đồng phía sau, bộ gõ sau cùng" và chú thích dè dặt ("mỗi dàn nhạc có thể bố trí khác"). Giữ dung.'
     luot_2: khong-chac
     luot_2_ghi_chu: Chỉ phần nhạc lý của câu (bố cục dây-gỗ-đồng-gõ từ trước ra sau) đúng theo thông lệ, nhưng chưa mở được nguồn xác nhận; hình cụ thể trên site không kiểm được từ đây.
   - id: n13
@@ -222,13 +224,13 @@ nhan_dinh:
     luot_2_nguon: [ "https://en.wikipedia.org/wiki/Second_violin" ]
     luot_2_ghi_chu: "Câu rào đón (mỗi dàn nhạc bố trí khác). Wikipedia Second violin: bố cục thế kỷ 19 đặt violin 1 và 2 hai bên đối diện nhau (violin 2 bên phải nhạc trưởng); chỉ là nguồn phổ thông nhưng câu rất nhẹ."
   - id: n14
-    cau: 'Cách theo dõi: bám vào bè violin I (dòng đầu của bộ dây), phần lớn thời gian giai điệu chính ở đây.'
+    cau: 'Cách theo dõi: bám vào bè violin I (dòng đầu tiên của bộ dây): dòng này dễ tìm trên mỗi trang, và khi nó chơi giai điệu thì bạn theo được ngay.'
     loai: khuyen-tap
     nguon:
       - brit-score
       - dolmetsch-26
     ket_qua: khong-can-nguon
-    ghi_chu: 'Lời khuyên học tập, đã hạ giọng ("phần lớn thời gian"). Nguồn không đo được tỉ lệ; Britannica Score không nói. Ghi: khuyen-tap, người review xem có giữ cụm "phần lớn thời gian" không.'
+    ghi_chu: 'Lời khuyên học tập, đã hạ giọng ("phần lớn thời gian"). Nguồn không đo được tỉ lệ; Britannica Score không nói. Ghi: khuyen-tap, người review xem có giữ cụm "phần lớn thời gian" không. Review D3-gom (soát nhãn): câu cũ "Phần lớn thời gian, giai điệu chính nằm ở đây" là nhận định tần suất cần nguồn, không có nguồn bậc 1–2 (lượt 1 cũng ghi Britannica không nói). Viết lại thành lời khuyên không kèm nhận định: chữ mới như cau. Giữ khuyen-tap, khong-can-nguon.'
     luot_2: dung
     luot_2_ghi_chu: "Khuyên tập hợp lý: violin I thường mang giai điệu chính, hợp cách dạy phổ biến."
   - id: n15
@@ -239,20 +241,20 @@ nhan_dinh:
     ghi_chu: 'Bốn lời khuyên học tập, phần sự kiện đúng: nốt cao trên khuông ứng với âm cao; khuông có nhiều nốt thường là đoạn nhiều nốt trong một ô (nhanh hoặc dày); dấu lặng dài là bè nghỉ.'
   - id: n16
     cau: 'Bảng cấp độ: 1 sonata piano (Mozart, Beethoven), chỉ 2 khuông.'
-    loai: cap-do
+    loai: so-lieu
     nguon:
       - omt-grand-staff
     ket_qua: dung
-    ghi_chu: 'OMT, The Keyboard and the Grand Staff: nhạc piano ghi trên khuông liên (grand staff) hai khuông.'
+    ghi_chu: 'OMT, The Keyboard and the Grand Staff: nhạc piano ghi trên khuông liên (grand staff) hai khuông. Review D3-gom: lượt 2 khong-chac vì "cấp độ" là thang của site. Soát nhãn: thứ tự cấp độ là lời khuyên của site (không cần nguồn), điều cần nguồn chỉ là "chỉ 2 khuông": đổi loai cap-do (dành cho Grade, chương trình thi) thành so-lieu; nguồn OMT khuông liên hai khuông; lượt 2 xác nhận phần ấy. Giữ dung.'
     luot_2: khong-chac
     luot_2_ghi_chu: Phần nhạc lý hiển nhiên đúng (sonata piano viết trên 2 khuông). 'Cấp độ 1' là thang riêng của site, không nguồn ngoài nào kiểm được.
   - id: n17
     cau: 'Bảng cấp độ: 2 tứ tấu đàn dây của Haydn, 4 khuông.'
-    loai: cap-do
+    loai: so-lieu
     nguon:
       - oxford-string-quartet
     ket_qua: dung
-    ghi_chu: 'Oxford Dictionary of Music, string quartet: hai violin, viola, cello (bốn bè, mỗi bè một khuông); Haydn là người đặt nền cho thể loại (cũng kiểm ở hồ sơ thuật ngữ string-quartet).'
+    ghi_chu: 'Oxford Dictionary of Music, string quartet: hai violin, viola, cello (bốn bè, mỗi bè một khuông); Haydn là người đặt nền cho thể loại (cũng kiểm ở hồ sơ thuật ngữ string-quartet). Review D3-gom: như n16: đổi cap-do thành so-lieu; điều cần nguồn là tứ tấu đàn dây có 4 bè (4 khuông), Oxford Dictionary of Music, string quartet; lượt 2 xác nhận. Giữ dung.'
     luot_2: khong-chac
     luot_2_ghi_chu: Tứ tấu đàn dây có 4 bè nên 4 khuông là hiển nhiên, nhưng 'cấp độ 2' là thang riêng của site, không có nguồn ngoài.
   - id: n18
@@ -267,12 +269,12 @@ nhan_dinh:
     luot_2_ghi_chu: Chương 2 giao hưởng 94 là Andante, chủ đề và biến tấu, chủ đề đơn giản; dàn nhạc cổ điển (dây, flute, oboe, bassoon, horn, trumpet, timpani) nhỏ hơn Beethoven 5. Thang 'cấp độ 3' là của site.
   - id: n19
     cau: 'Bảng cấp độ: 4 Mozart Giao hưởng số 40, hình thức sonata rõ ràng.'
-    loai: cap-do
+    loai: cau-truc
     nguon:
       - indy-mozart40
       - omt-sonata
     ket_qua: dung
-    ghi_chu: 'Indianapolis Symphony: chương 1 ở hình thức sonata (chủ đề 1, chủ đề 2 ở Si♭ trưởng, phát triển, tái hiện); OMT, Sonata Form mô tả hình thức. Kiểm cùng bài 19 (n38).'
+    ghi_chu: 'Indianapolis Symphony: chương 1 ở hình thức sonata (chủ đề 1, chủ đề 2 ở Si♭ trưởng, phát triển, tái hiện); OMT, Sonata Form mô tả hình thức. Kiểm cùng bài 19 (n38). Review D3-gom: như n16: đổi cap-do thành cau-truc; điều cần nguồn là chương 1 Giao hưởng số 40 ở hình thức sonata (Indianapolis Symphony; kiểm cùng bài 19 n37). Giữ dung.'
     luot_2: khong-chac
     luot_2_ghi_chu: IMSLP xác nhận Giao hưởng số 40 K.550 sol thứ, 4 chương; OMT không dùng K.550 làm ví dụ sonata. Chưa mở được nguồn nói riêng về sonata form của chương 1 (thực tế đúng theo hiểu biết). 'Cấp độ 4' là thang của site.
   - id: n20
@@ -291,7 +293,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: 'Chưa chuyển: ../opus-zero/docs/nghe-nhac/haydn-94.md, mozart-40.md, beethoven-5.md (đều có, lô chuyển đợt 5 giữ đường dẫn). beethoven-5.md cũ (dòng 46): "chủ đề 2 ... được kèn horn giới thiệu", cần giữ vì bài tập 3 của bài 20 dựa vào đó; haydn-94.md cũ có chương 2 (Andante); mozart-40.md cũ có chương 1 hình thức sonata.'
+    ghi_chu: 'Chưa chuyển: ../opus-zero/docs/nghe-nhac/haydn-94.md, mozart-40.md, beethoven-5.md (đều có, lô chuyển đợt 5 giữ đường dẫn). beethoven-5.md cũ (dòng 46): "chủ đề 2 ... được kèn horn giới thiệu", cần giữ vì bài tập 3 của bài 20 dựa vào đó; haydn-94.md cũ có chương 2 (Andante); mozart-40.md cũ có chương 1 hình thức sonata. Review: ba trang đích chưa chuyển; ../opus-zero/docs/nghe-nhac/haydn-94.md, mozart-40.md, beethoven-5.md có. Bài tập 3 nay viết "horn dẫn vào chủ đề 2" (n28); trang cũ beethoven-5.md ghi "được kèn horn giới thiệu": lô chuyển đợt 5 xem lại cho khớp.'
+    review: dung
   - id: n22
     cau: IMSLP có tổng phổ miễn phí của các tác phẩm thuộc phạm vi công cộng; tìm tên tác phẩm, chọn mục "Full Scores".
     loai: so-lieu
@@ -306,26 +309,28 @@ nhan_dinh:
     cau: 'Video "score" trên các trang chia sẻ video: tìm tên tác phẩm kèm chữ score; tổng phổ chạy theo âm thanh.'
     loai: khuyen-tap
     nguon: []
-    ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Video "score" trên YouTube". Chữ mới: "trên các trang chia sẻ video". Lý do: bỏ tên thương hiệu để câu không phụ thuộc vào một nền tảng; phần còn lại là lời khuyên. Không cần nguồn.'
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Chữ cũ: "Video "score" trên YouTube". Chữ mới: "trên các trang chia sẻ video". Lý do: bỏ tên thương hiệu để câu không phụ thuộc vào một nền tảng; phần còn lại là lời khuyên. Không cần nguồn. Review D3-gom: câu khuyen-tap; ket_qua đổi da-sua thành khong-can-nguon (công cụ khóa đòi nguồn cho da-sua); lịch sử sửa ở ghi_chu và doi_chu.'
     luot_2: dung
     luot_2_ghi_chu: Khuyên tập hợp lý.
   - id: n24
-    cau: Tổng phổ khổ nhỏ (study score) của các nhà xuất bản như Bärenreiter, Henle, Eulenburg.
+    cau: Tổng phổ khổ nhỏ (study score) của các nhà xuất bản như Henle, Eulenburg.
     loai: danh-muc
     nguon:
       - henle-study
       - schott-eulenburg
-    ket_qua: dung
-    ghi_chu: 'Henle có dòng "Study Scores"; Eulenburg (Schott) có dòng miniature/study scores. Bärenreiter: chưa mở trang nhà xuất bản (chưa chắc, ghi để lượt 2); cụm "như" cho phép liệt kê không đủ.'
+    ket_qua: da-sua
+    ghi_chu: 'Henle có dòng "Study Scores"; Eulenburg (Schott) có dòng miniature/study scores. Bärenreiter: chưa mở trang nhà xuất bản (chưa chắc, ghi để lượt 2); cụm "như" cho phép liệt kê không đủ. Review D3-gom: lượt 2 khong-chac (Bärenreiter, Eulenburg). Đã mở lại trang Eulenburg của Schott (28/10/2026): "The Eulenburg Edition comprises reasonably-priced pocket scores, study scores..."; Henle có trang Study Scores (lượt 2 đã mở). Không mở được trang Bärenreiter: bỏ khỏi trang. Chữ cũ: "như Bärenreiter, Henle, Eulenburg". Chữ mới: "như Henle, Eulenburg".'
     luot_2: khong-chac
     luot_2_ghi_chu: Henle có study score (khổ bỏ túi 17x24 cm, Urtext; henle.de/en/Study-Scores/). Chưa mở được trang xác nhận cho Bärenreiter và Eulenburg (trang trả rỗng hoặc bị chặn robot); theo hiểu biết thông dụng cả hai đều có.
   - id: n25
     cau: Khung 4 bè rút gọn (2 violin, viola, cello) của vòng hợp âm Canon (bài 12); bè viola khóa Đô alto.
     loai: so-lieu
-    nguon: []
+    nguon:
+      - omt-clefs
+      - omt1-pachelbel
     ket_qua: dung
-    ghi_chu: 'Xem khuong_nhac 1. Vòng hợp âm: D, A, Bm, F♯m, G, D, G, A (Canon, Pachelbel); khung chỉ ghi rút gọn, các hợp âm khớp hồ sơ bài 12. Hai hợp âm cuối chưa đối chiếu bản nhạc (như bài 12).'
+    ghi_chu: 'Xem khuong_nhac 1. Vòng hợp âm: D, A, Bm, F♯m, G, D, G, A (Canon, Pachelbel); khung chỉ ghi rút gọn, các hợp âm khớp hồ sơ bài 12. Hai hợp âm cuối chưa đối chiếu bản nhạc (như bài 12). Review D3-gom: lượt 2 khong-chac vì không xem được khối nhạc; thiếu nguon. Đã đọc khối abc (dòng 57–73): bốn bè, V3 clef=alto; hợp âm mỗi nửa ô D, A, Bm, F♯m, G, D, G, A, khớp vòng Canon của bài 12 (đã quyết ở 12-hoa-am-chuc-nang.yml n18, n19 theo OMT bản 1). Thêm nguon: OMT Clefs (viola khóa alto), OMT bản 1 Pachelbel''s Canon schema. Giữ dung.'
     luot_2: khong-chac
     luot_2_ghi_chu: "Câu về hình trên site (khung 4 bè rút gọn của vòng Canon, 'bài 12'): không xem được hình; 'bài 12' là về site. Phần nhạc lý duy nhất kiểm được (viola khóa Đô alto) đúng theo OMT Clefs."
   - id: n26
@@ -333,7 +338,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: 'src/content/docs/nhac-ly/12-hoa-am-chuc-nang.md (cùng lô D3-L2): có vòng hợp âm Canon.'
+    ghi_chu: 'src/content/docs/nhac-ly/12-hoa-am-chuc-nang.md (cùng lô D3-L2): có vòng hợp âm Canon. Review: src/content/docs/nhac-ly/12-hoa-am-chuc-nang.md (nhánh này) có bảng vòng hợp âm và khối "Pachelbel – vòng hợp âm của Canon".'
+    review: dung
   - id: n27
     cau: 'Bài tập 1: mở tổng phổ Giao hưởng số 5 của Beethoven trên IMSLP; trang đầu có những nhạc cụ nào?'
     loai: khuyen-tap
@@ -344,12 +350,12 @@ nhan_dinh:
     luot_2: dung
     luot_2_ghi_chu: Khuyên tập hợp lý; IMSLP có tổng phổ Giao hưởng số 5 (mục Full Scores).
   - id: n28
-    cau: 'Bài tập 3: tìm chỗ kèn horn giới thiệu chủ đề 2 trong chương 1 Giao hưởng số 5 của Beethoven.'
+    cau: 'Bài tập 3: tìm chỗ kèn horn dẫn vào chủ đề 2 trong chương 1 Giao hưởng số 5 của Beethoven.'
     loai: cau-truc
     nguon:
       - bhso-beethoven5
-    ket_qua: dung
-    ghi_chu: 'Burgess Hill SO: "a horn call – an expanded version of the motto – introduces the second subject"; khớp trang cũ nghe-nhac/beethoven-5.md.'
+    ket_qua: da-sua
+    ghi_chu: 'Burgess Hill SO: "a horn call – an expanded version of the motto – introduces the second subject"; khớp trang cũ nghe-nhac/beethoven-5.md. Review D3-gom: lượt 2 khong-chac: tiếng horn (khoảng ô 59–62) là đoạn chuyển dẫn vào chủ đề 2 do dây trình bày; Burgess Hill SO viết "introduces the second subject". Chữ cũ: "kèn horn giới thiệu chủ đề 2". Chữ mới: "kèn horn dẫn vào chủ đề 2" (đúng theo cả hai cách hiểu).'
     luot_2: khong-chac
     luot_2_ghi_chu: "Chương 1 Beethoven 5: tiếng horn (ô 59-62) là đoạn cầu nối (bridge) dẫn vào chủ đề 2 do dây trình bày ngay sau đó (Macmillan: 'horn-call bridge'; chủ đề 2 vào sau). 'Horn giới thiệu chủ đề 2' hiểu rộng thì đúng, hiểu chặt thì không; nên viết 'horn dẫn vào chủ đề 2'."
   - id: n29
@@ -364,11 +370,11 @@ nhan_dinh:
     luot_2_nguon: [ "https://s2.smu.edu/robfrank/MOLA.pdf" ]
     luot_2_ghi_chu: "MOLA: thứ tự phổ biến bắt đầu bằng woodwind ở trên cùng."
   - id: n30
-    cau: 'Câu hỏi: khi mới tập, nên bám vào bè violin I; giải thích "Giai điệu chính thường ở violin I".'
+    cau: 'Câu hỏi: khi mới tập, nên bám vào bè violin I; giải thích "Violin I là dòng đầu tiên của bộ dây, dễ tìm trên mỗi trang; khi violin I nghỉ, tìm bè khác đang chơi giai điệu."'
     loai: khuyen-tap
     nguon: []
-    ket_qua: dung
-    ghi_chu: Theo n14 (đã dè dặt "thường").
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Theo n14 (đã dè dặt "thường"). Review D3-gom (soát nhãn): lời giải thích cũ "Giai điệu chính thường ở violin I" là nhận định tần suất không có nguồn bậc 1–2 (như n14); viết lại không kèm nhận định; ket_qua dung (thiếu nguon) đổi thành khong-can-nguon. Lời giải thích không dựa vào vị trí lựa chọn.'
   - id: n31
     cau: 'Câu hỏi: hóa biểu của clarinet khác vì là nhạc cụ dịch giọng; giải thích "Âm thanh thật vẫn cùng giọng với cả dàn nhạc".'
     loai: quy-tac
@@ -399,36 +405,55 @@ khuong_nhac:
       - khoa-nhac
       - hop-am
     ket_qua: dung
-    ghi_chu: 'K:D, M:2/2, L:1/2, bốn bè: V1 (khóa Sol): f e | d c | B A | B c (Fa♯5 Mi5 Rê5 Đô♯5 Si4 La4 Si4 Đô♯5); V2 (Sol): d c | B A | G F | G A; V3 (viola, khóa Đô alto): A A | F F | D D | D E; V4 (cello, khóa Fa): D, A,, | B,, F,, | G,, D, | G,, A,,. Hợp âm mỗi ô: D (Rê–Fa♯–La), A (La–Đô♯–Mi), Bm (Si–Rê–Fa♯), F♯m (Fa♯–La–Đô♯), G (Sol–Si–Rê), D, G, A: đủ hợp âm ba (đã dùng abcjs xuất cao độ tuyệt đối; khóa Đô alto giữ cao độ). Chữ "Vn. I", "Vn. II" sửa theo n7. Mỗi ô 2 nửa-nốt trắng (2/2): đủ. Hai hợp âm cuối (G, A thay vì kết) giống khung bài 12: chưa đối chiếu bản Pachelbel (chưa chắc, như hồ sơ bài 12).'
+    ghi_chu: 'K:D, M:2/2, L:1/2, bốn bè: V1 (khóa Sol): f e | d c | B A | B c (Fa♯5 Mi5 Rê5 Đô♯5 Si4 La4 Si4 Đô♯5); V2 (Sol): d c | B A | G F | G A; V3 (viola, khóa Đô alto): A A | F F | D D | D E; V4 (cello, khóa Fa): D, A,, | B,, F,, | G,, D, | G,, A,,. Hợp âm mỗi ô: D (Rê–Fa♯–La), A (La–Đô♯–Mi), Bm (Si–Rê–Fa♯), F♯m (Fa♯–La–Đô♯), G (Sol–Si–Rê), D, G, A: đủ hợp âm ba (đã dùng abcjs xuất cao độ tuyệt đối; khóa Đô alto giữ cao độ). Chữ "Vn. I", "Vn. II" sửa theo n7. Mỗi ô 2 nửa-nốt trắng (2/2): đủ. Hai hợp âm cuối (G, A thay vì kết) giống khung bài 12: chưa đối chiếu bản Pachelbel (chưa chắc, như hồ sơ bài 12). Review D3-gom: tên bè đổi "Vn. I", "Vn. II", "Vc." thành "Vln. I", "Vln. II", "Vcl." cho khớp bảng viết tắt (n7, theo Dolmetsch bài 26); nốt không đổi. Hai hợp âm cuối G, A đã quyết theo OMT bản 1 (12-hoa-am-chuc-nang.yml n18).'
 doi_chu:
   - cu: "Từ trên xuống dưới, các bè được xếp theo bộ, trong mỗi bộ từ cao xuống thấp:"
     moi: "Từ trên xuống dưới, các bè được xếp theo bộ, trong mỗi bộ thường từ cao xuống thấp:"
     ly_do: "n3 (da-sua): có ngoại lệ (horn thường ghi trên trumpet)."
+  - cu: Nhạc cụ (viết tắt thường gặp)
+    moi: Nhạc cụ (viết tắt tiếng Anh)
+    ly_do: 'n4 (da-sua, review D3-gom): bảng chỉ giữ viết tắt tiếng Anh có ở Dolmetsch bài 26; tiêu đề cột ghi rõ.'
   - cu: Sáo (Fl., Picc.), Oboe (Ob.), Clarinet (Cl., Klar.), Bassoon (Fg., Bsn.)
-    moi: Sáo (Fl., Picc.), Oboe (Ob.), Clarinet (Cl., Kl.), Bassoon (Fg., Bsn.)
-    ly_do: 'n4, n5 (da-sua): "Klar." thành "Kl." theo các nguồn viết tắt ghi ở n4.'
+    moi: Sáo (Fl.), Oboe (Ob.), Clarinet (Cl.), Bassoon (Bsn.)
+    ly_do: 'n4, n5 (da-sua): "Klar." thành "Kl." theo các nguồn viết tắt ghi ở n4.; n4 (da-sua, review D3-gom): chỉ giữ viết tắt có nguồn bậc 2 (Dolmetsch, Music Theory Online bài 26: Fl, Ob, Cl, Bsn); Picc., Kl., Fg. chỉ có ở nguồn bậc 3 (Absil, Blake).'
   - cu: Horn (Hn., Cor., Cr.), Trumpet (Tpt., Tr.), Trombone (Tbn., Pos.), Tuba (Tba.)
-    moi: Horn (Hn., Cor.), Trumpet (Tpt., Tr.), Trombone (Tbn., Pos.), Tuba
-    ly_do: "n5 (da-sua): Cr. và Tba. không thấy trong nguồn. Clarinet (Cl., Klar.) thành (Cl., Kl.): n4."
+    moi: Horn (Hn.), Trumpet (Tpt.), Trombone (Trb.), Tuba
+    ly_do: "n5 (da-sua): Cr. và Tba. không thấy trong nguồn. Clarinet (Cl., Klar.) thành (Cl., Kl.): n4.; n5 (da-sua, review D3-gom): Dolmetsch bài 26: Hn, Tpt, Trb, Tuba; Cor., Tr., Tbn., Pos. chỉ có ở nguồn bậc 3."
+  - cu: Timpani (Timp., Pk.), các nhạc cụ gõ khác
+    moi: Timpani (Timp.), các nhạc cụ gõ khác (Perc.)
+    ly_do: "n6 (da-sua, review D3-gom): Dolmetsch bài 26: Timp, Perc; Pk., Hp., Pno. không có nguồn bậc 1–2."
   - cu: Hp., Pf.
-    moi: Hp., Pno.
     ly_do: "n6 (da-sua): Pno. là viết tắt của Absil và Blake."
-  - cu: Violin I, Violin II (Vl., Vn.), Viola (Vla., Br.), Cello (Vc.), Contrabass (Cb., Kb.)
-    moi: Violin I, Violin II (Vn., Vln.), Viola (Vla., Br.), Cello (Vc.), Contrabass (Cb., Kb.)
-    ly_do: 'n7 (da-sua): Vl. dễ nhầm với Vla.; trong khối abc "Vl. I", "Vl. II" thành "Vn. I", "Vn. II".'
+  - cu:
+      - Violin I, Violin II (Vl., Vn.), Viola (Vla., Br.), Cello (Vc.), Contrabass (Cb., Kb.)
+      - Viết tắt có thể bằng tiếng Ý, Đức hoặc Pháp tùy nhà xuất bản (ví dụ Pauken là timpani trong tiếng Đức, Bratsche là viola).
+    moi:
+      - Violin I, Violin II (Vln.), Viola (Vla.), Cello (Vcl.), Contrabass (DB)
+      - "Tổng phổ có thể ghi tên nhạc cụ bằng tiếng Ý, Đức hay Pháp. Ví dụ tên tiếng Đức: Fagott (bassoon), Posaune (trombone), Pauken (timpani), Bratsche (viola), Kontrabass (contrabass)."
+    ly_do: 'n7 (da-sua): Vl. dễ nhầm với Vla.; trong khối abc "Vl. I", "Vl. II" thành "Vn. I", "Vn. II".; n7 (da-sua, review D3-gom): Dolmetsch bài 26: Vlns, Vla, Vcl, DB; Vn., Vc., Br., Cb., Kb. chỉ có ở nguồn bậc 3.; n8 (da-sua, review D3-gom): câu "tùy nhà xuất bản" về viết tắt không có nguồn bậc 1–2; tên nhạc cụ tiếng Đức theo Yale University Library (Music Cataloging), The names of instruments and voices.'
   - cu: "Thứ tự từ trên xuống trong tổng phổ (gỗ – đồng – gõ – dây) gần giống thứ tự từ sau ra trước trên sân khấu, chỉ khác là bộ gỗ được ghi lên trên cùng:"
     moi: "Thứ tự trong tổng phổ không giống chỗ ngồi trên sân khấu. Trên sân khấu, từ trước ra sau là bộ dây, bộ gỗ, bộ đồng, bộ gõ; trong tổng phổ, bộ gỗ ở trên cùng và bộ dây ở dưới cùng:"
     ly_do: "n11 (da-sua): chữ cũ tự mâu thuẫn."
-  - cu: 'Video "score" trên YouTube: tìm tên tác phẩm kèm chữ score. Tổng phổ chạy theo âm thanh, rất hợp khi mới tập.'
-    moi: 'Video "score" trên các trang chia sẻ video: tìm tên tác phẩm kèm chữ score. Tổng phổ chạy theo âm thanh, rất hợp khi mới tập.'
-    ly_do: "n23 (da-sua): bỏ tên nền tảng."
+  - cu: Bám vào bè violin I (dòng đầu tiên của bộ dây). Phần lớn thời gian, giai điệu chính nằm ở đây.
+    moi: "Bám vào bè violin I (dòng đầu tiên của bộ dây): dòng này dễ tìm trên mỗi trang, và khi nó chơi giai điệu thì bạn theo được ngay."
+    ly_do: 'n14 (soát nhãn, review D3-gom): "Phần lớn thời gian, giai điệu chính nằm ở đây" là điều cần nguồn, không có nguồn bậc 1–2; viết lại lời khuyên không kèm nhận định tần suất.'
+  - cu:
+      - 'Video "score" trên YouTube: tìm tên tác phẩm kèm chữ score. Tổng phổ chạy theo âm thanh, rất hợp khi mới tập.'
+      - Tổng phổ khổ nhỏ (study score) của các nhà xuất bản như Bärenreiter, Henle, Eulenburg nếu muốn sở hữu bản in.
+    moi:
+      - 'Video "score" trên các trang chia sẻ video: tìm tên tác phẩm kèm chữ score. Tổng phổ chạy theo âm thanh, rất hợp khi mới tập.'
+      - Tổng phổ khổ nhỏ (study score) của các nhà xuất bản như Henle, Eulenburg nếu muốn sở hữu bản in.
+    ly_do: "n23 (da-sua): bỏ tên nền tảng.; n24 (da-sua, review D3-gom): chưa mở được trang nhà xuất bản Bärenreiter xác nhận dòng study score; Henle (Study Scores) và Eulenburg (Schott, Eulenburg Miniature Scores) đã mở."
+  - cu: Tìm chỗ kèn horn giới thiệu chủ đề 2 trên tổng phổ.
+    moi: Tìm chỗ kèn horn dẫn vào chủ đề 2 trên tổng phổ.
+    ly_do: 'n28 (da-sua, review D3-gom): tiếng horn ở chương 1 là đoạn chuyển dẫn vào chủ đề 2 (lượt 2); Burgess Hill SO: "a horn call ... introduces the second subject"; "dẫn vào" đúng theo cả hai cách hiểu.'
   - cu: Open Music Theory; musictheory.net.
     moi:
       - "Encyclopaedia Britannica: Score. Dolmetsch Online: Music Theory Online, bài 26 (khuôn dạng tổng phổ)."
-      - "Berliner Philharmoniker: Who decides the seating arrangement of the musicians on stage. Frans Absil: tên và viết tắt nhạc cụ."
+      - "Berliner Philharmoniker: Who decides the seating arrangement of the musicians on stage. Yale University Library: The names of instruments and voices in English, French, German, Italian, Russian, and Spanish."
       - "Haydn, Giao hưởng số 94: Understanding Music, bản hướng dẫn nghe."
       - "Beethoven, Giao hưởng số 5: lời giới thiệu của Indianapolis Symphony Orchestra và Burgess Hill Symphony Orchestra."
-    ly_do: "Mục Nguồn: thay link chung bằng link tới đúng các trang đã đọc khi kiểm định (lượt 1); bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, không đọc được chữ để kiểm."
+    ly_do: "Mục Nguồn: thay link chung bằng link tới đúng các trang đã đọc khi kiểm định (lượt 1); bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, không đọc được chữ để kiểm.; Mục Nguồn (review D3-gom): Absil là nguồn bậc 3, không còn dùng; thêm Yale University Library cho tên nhạc cụ tiếng Đức (n8)."
   - cu: |-
       khuông: Bốn bè đàn dây (rút gọn) | X:1
       L:1/2
@@ -450,13 +475,16 @@ doi_chu:
       M:2/2
       Q:1/2=50
       %%score [V1 V2 V3 V4]
-      V:V1 name="Vn. I"
-      V:V2 name="Vn. II"
+      V:V1 name="Vln. I"
+      V:V2 name="Vln. II"
       V:V3 name="Vla." clef=alto
-      V:V4 name="Vc." clef=bass
+      V:V4 name="Vcl." clef=bass
       K:D
       [V:V1] f e | d c | B A | B c |]
       [V:V2] d c | B A | G F | G A |]
       [V:V3] A A | F F | D D | D E |]
       [V:V4] D, A,, | B,, F,, | G,, D, | G,, A,, |]
     ly_do: 'n7 (da-sua): "Vl. I", "Vl. II" trong khối abc thành "Vn. I", "Vn. II" (Vl. dễ nhầm với Vla.).'
+  - cu: "câu hỏi: Khi mới tập theo dõi tổng phổ, nên bám vào bè nào? | ✓ Violin I | Contrabass | Timpani | Giai điệu chính thường ở violin I."
+    moi: "câu hỏi: Khi mới tập theo dõi tổng phổ, nên bám vào bè nào? | ✓ Violin I | Contrabass | Timpani | Violin I là dòng đầu tiên của bộ dây, dễ tìm trên mỗi trang; khi violin I nghỉ, tìm bè khác đang chơi giai điệu."
+    ly_do: "n30 (soát nhãn, review D3-gom): bỏ nhận định tần suất không có nguồn khỏi lời giải thích câu hỏi."

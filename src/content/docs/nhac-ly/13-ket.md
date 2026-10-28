@@ -81,7 +81,7 @@ K:C
 "C"E E F G | "G"G F E D | "C"C C D E | "G"D3/2 "C"C/ C2 |]
 ```
 
-Bạn sẽ gặp cấu trúc câu hỏi – câu trả lời thường xuyên trong nhạc cổ điển phương Tây trước năm 1900.
+Bạn sẽ gặp cấu trúc câu hỏi – câu trả lời thường xuyên trong nhạc cổ điển phương Tây.
 
 :::tip[Trên phím đàn]
 Khi tập một bản nhạc, đánh dấu các **kết** bằng bút chì. Chúng là ranh giới tự nhiên để chia đoạn khi tập ([Cách tập hiệu quả](/opus/piano/cach-tap/)) và là điểm bám khi [học thuộc](/opus/piano/hoc-thuoc-bieu-dien/). Muốn tự chơi các loại kết ở mọi giọng, xem [Kết ở mọi giọng](/opus/piano/hoa-am/ket/).

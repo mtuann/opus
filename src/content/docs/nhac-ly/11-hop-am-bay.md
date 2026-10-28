@@ -51,7 +51,7 @@ K:C
 
 ## Hợp âm bảy át (V7)
 
-Hợp âm bảy át được xây trên **bậc V** và có hai nốt "muốn đi tiếp":
+Hợp âm bảy át được xây trên **bậc 5** và có hai nốt "muốn đi tiếp":
 
 - **Cảm âm** (Si trong Đô trưởng) muốn đi **lên** nửa cung về chủ âm Đô.
 - **Nốt bảy** (Fa) muốn đi **xuống** về Mi.
@@ -108,9 +108,9 @@ Thể đảo giúp tay di chuyển ít: từ Đô–Mi–Sol sang Đô–Fa–La
 - Đảo 2
 > Nốt ba ở bè trầm là đảo 1, ký hiệu C/E hoặc số 6.
 ? Hợp âm bảy át được xây trên bậc nào?
-- I
-- IV
-+ V
+- Bậc 1
+- Bậc 4
++ Bậc 5
 > Ví dụ G7 trong Đô trưởng.
 ? Hai nốt nào trong G7 tạo thành tritone?
 + Si và Fa

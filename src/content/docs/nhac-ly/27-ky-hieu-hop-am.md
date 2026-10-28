@@ -47,7 +47,7 @@ Nhạc cổ điển dùng **số La Mã** (I, ii, V7…) để chỉ chức năn
 | Vòng | Pop/jazz | Cổ điển |
 |---|---|---|
 | **I – V – vi – IV** | Vòng hợp âm quen thuộc của nhạc pop, thường lặp suốt cả bài | Ba hợp âm đầu giống vòng hợp âm *Canon* của Pachelbel (I – V – vi – iii – IV…) |
-| **ii – V – I** | Nền tảng của hòa âm jazz | Kết trọn có tiền át (xem [bài 12](/opus/nhac-ly/12-hoa-am-chuc-nang/)) |
+| **ii – V – I** | Nền tảng của hòa âm jazz | Kết trọn có hợp âm hạ át (ii) đứng trước V (xem [bài 12](/opus/nhac-ly/12-hoa-am-chuc-nang/)) |
 | **Blues 12 ô nhịp** | I I I I – IV IV I I – V IV I I | Một vòng hợp âm cố định lặp lại cho mỗi khổ thơ, cùng ý tưởng lặp một khuôn cố định như passacaglia |
 | **♭VI – ♭VII – I** | Kết hoành tráng trong nhạc phim (cadence Aeolian, còn gọi là *Mario cadence*) | Hòa âm hỗn hợp (xem [bài 23](/opus/nhac-ly/23-hop-am-muon/)) |
 

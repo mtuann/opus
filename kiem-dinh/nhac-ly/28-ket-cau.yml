@@ -10,7 +10,7 @@ lan:
     nguoi:
       luot_1: Claude Sonnet 5.5 (D3-L4 lượt 1, phần 1/2)
       luot_2: null
-      review: null
+      review: Claude (review D3-gom, nhóm B, 28/10/2026)
       kiem_mau: null
 ghi_chu: 'Hình texture-rolls (src/components/hinh/texture-rolls.html) đã đối chiếu: 14 nốt giai điệu đúng (C D E C C D E C E F G(dài) E F G(dài)), cao độ tỉ lệ đúng; chủ điệu có tam hợp C-C-C-C-C-G-C-G dưới giai điệu; canon bè 2 vào sau hai ô ở thấp hơn một quãng tám; dị âm bè 2 cao hơn một quãng tám có láy. Không có lỗi sai kiến thức. Khác ví dụ abc: canon vẽ ở quãng 8, chủ điệu vẽ tam hợp trong khi abc dùng dyad, dị âm bè 2 có láy khác chữ abc; các điểm này chấp nhận được vì hình chỉ minh họa kết cấu. Chưa chắc: Frère Jacques (n5), dị âm hiếm ở phương Tây (n22), Érudit chỉ đọc tóm tắt.'
 nguon:
@@ -86,6 +86,10 @@ nguon:
     bac: 3
     ten: Wikipedia, Texture (music) (bậc 3, chỉ làm nguồn bổ sung)
     link: https://en.wikipedia.org/wiki/Texture_%28music%29
+  - id: mw-texture
+    bac: 2
+    ten: Merriam-Webster Dictionary, texture (nguồn gốc từ và nghĩa)
+    link: https://www.merriam-webster.com/dictionary/texture
 nhan_dinh:
   - id: n1
     cau: Kết cấu mô tả có bao nhiêu đường nét âm nhạc vang cùng lúc và chúng liên hệ nhau thế nào
@@ -101,9 +105,10 @@ nhan_dinh:
   - id: n2
     cau: 'So sánh với cách dệt của tấm vải: một sợi, nhiều sợi song song, hay đan chéo'
     loai: dinh-nghia
-    nguon: []
-    ket_qua: khong-can-nguon
-    ghi_chu: Phép ví von, không phải nhận định.
+    nguon:
+      - mw-texture
+    ket_qua: dung
+    ghi_chu: 'Phép ví von, không phải nhận định. Review D3-gom: sửa hồ sơ: khong-can-nguon chỉ cho khuyen-tap. Phép so sánh dựa trên nghĩa gốc của từ: Merriam-Webster (đã mở): texture từ "Latin textura, from textus, past participle of texere to weave"; nghĩa 4b "the structure formed by the threads of a fabric", nghĩa âm nhạc 2b "a pattern of musical sound created by tones or lines played or sung together". Lượt 2 đúng.'
     luot_2: dung
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/texture/" ]
     luot_2_ghi_chu: Phép so sánh dệt vải chỉ là hình ảnh minh họa, không sai; OMT không bàn nguồn gốc từ.
@@ -114,8 +119,11 @@ nhan_dinh:
       - omt-tex
       - clark-tex
       - lumen-tex
+      - ithaca
+      - cod-poly
+      - macm
     ket_qua: da-sua
-    ghi_chu: Bản gốc "manh mối nhanh nhất ... đoán được chỉ sau vài giây" (cường điệu); thay bằng gắn kết cấu với thời kỳ, đúng ở mức khuynh hướng.
+    ghi_chu: 'Bản gốc "manh mối nhanh nhất ... đoán được chỉ sau vài giây" (cường điệu); thay bằng gắn kết cấu với thời kỳ, đúng ở mức khuynh hướng. Review D3-gom: lượt 2 (khong-chac) thiếu nguồn bậc 2 cho vế chủ điệu ở Cổ điển và Lãng mạn. Review mở lại: Ithaca College, IC Theory: Texture (ithaca): giai điệu có đệm "is used in all musical periods and was especially prominent in the Classic and Romantic eras"; "imitative polyphony was most prevalent in the Renaissance and especially Baroque periods"; Lumen Texture (lumen-tex): đơn âm "is used very little in music of the Western European tradition after the Middle Ages", "Much late Baroque music is contrapuntal"; COD polyphony (cod-poly): "polyphonic era is defined as 13th–16th cents."; Macmillan Listen (macm): "The rise of homophony in the Classical period". Câu chỉ nói "thường gặp" (khuynh hướng), khớp các nguồn; giữ chữ trang.'
     luot_2: khong-chac
     luot_2_ghi_chu: Từng vế có nguồn (Gregorian đơn âm, đa âm thế kỷ 16, Bach đa âm) nhưng không mở được nguồn bậc 2 nói chủ điệu là kết cấu nổi bật của Cổ điển và Lãng mạn; Baroque cũng có nhiều chủ điệu (monody, bè trầm liên tục), nên chỉ là khái quát thô.
   - id: n4
@@ -130,13 +138,13 @@ nhan_dinh:
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/texture/" ]
     luot_2_ghi_chu: "OMT liệt kê đúng bốn loại: monophony, heterophony, homophony, polyphony."
   - id: n5
-    cau: Tất cả ví dụ dùng cùng giai điệu Frère Jacques
-    loai: dinh-nghia
-    nguon: []
-    ket_qua: null
-    ghi_chu: 'Chưa chắc: không có nguồn bậc 1-2 đọc được cho giai điệu; ví dụ dùng C D E C, C D E C, E F G, E F G đúng như bài hát quen thuộc. Chủ repo cân nhắc nguồn.'
+    cau: Tất cả ví dụ dưới đây (bốn khối abc) dùng cùng một giai điệu ngắn.
+    loai: ve-site
+    ket_qua: da-sua
+    ghi_chu: 'Chưa chắc: không có nguồn bậc 1-2 đọc được cho giai điệu; ví dụ dùng C D E C, C D E C, E F G, E F G đúng như bài hát quen thuộc. Chủ repo cân nhắc nguồn. Review D3-gom: lượt 1 chưa quyết, lượt 2 khong-chac. Tên bài Frère Jacques cần nguồn ngoài mà không có nguồn bậc 1–2 đọc được (IMSLP chỉ có PDF, Mutopia không có bài này; Wikipedia là bậc 3). Chữ cũ: "Tất cả ví dụ dưới đây dùng cùng một giai điệu (*Frère Jacques*) để bạn chỉ chú ý đến kết cấu." Chữ mới: "Tất cả ví dụ dưới đây dùng cùng một giai điệu ngắn để bạn chỉ chú ý đến kết cấu." Phần còn lại chỉ nói về chính trang: đổi loai thành ve-site. Review: đã đọc bốn khối abc: giai điệu C2D2 E2C2 | C2D2 E2C2 | E2F2 G4 | E2F2 G4 có ở khối 1, bè trên khối 2, bè 1 (và bè 2 vào sau hai ô) khối 3, bè 1 khối 4 (bè 2 là bản trang trí ở quãng 8 trên); hình texture-rolls cũng vẽ đúng giai điệu này.'
     luot_2: khong-chac
     luot_2_ghi_chu: Câu chỉ nói về chữ của hình trên site (cùng giai điệu Frère Jacques); không kiểm được bằng nguồn ngoài, cần review xem hình.
+    review: dung
   - id: n6
     cau: 'Đơn âm: một giai điệu duy nhất, không đệm'
     loai: dinh-nghia
@@ -230,7 +238,7 @@ nhan_dinh:
       - omt-tex
       - clark-tex
     ket_qua: da-sua
-    ghi_chu: Bản gốc "phần lớn ... gần như mọi bài pop" cường điệu; đổi thành "nhiều ... rất nhiều".
+    ghi_chu: 'Bản gốc "phần lớn ... gần như mọi bài pop" cường điệu; đổi thành "nhiều ... rất nhiều". Review D3-gom: chữ mới có trên trang; thêm nguồn đã mở lại: Ithaca (giai điệu có đệm "especially prominent in the Classic and Romantic eras"), Clark ("A lot of rock and popular music has a homophonic texture").'
     luot_2: dung
     luot_2_nguon: [ "https://courses.lumenlearning.com/suny-musicapp-medieval-modern/chapter/texture/" ]
     luot_2_ghi_chu: "Lumen (SUNY): homophony là một giai điệu rõ có đệm hợp âm, gồm thánh ca Tin Lành và nhạc pop/đời sau; Cổ điển, Lãng mạn là khái quát chuẩn."
@@ -252,7 +260,7 @@ nhan_dinh:
       - cod-can
       - omt-fug
     ket_qua: da-sua
-    ghi_chu: Bản gốc "loại phổ biến nhất" không có nguồn; đổi thành "một loại quen thuộc".
+    ghi_chu: 'Bản gốc "loại phổ biến nhất" không có nguồn; đổi thành "một loại quen thuộc". Review D3-gom: chữ mới có trên trang (mục Phức điệu).'
     luot_2: dung
     luot_2_nguon: [ "https://www.britannica.com/art/fugue", "https://viva.pressbooks.pub/openmusictheory/chapter/texture/" ]
     luot_2_ghi_chu: "Britannica: fugue là mô phỏng có hệ thống chủ đề trong các tuyến đồng thời; OMT xếp canon và fugue vào polyphony."
@@ -263,9 +271,11 @@ nhan_dinh:
       - omt-tex
       - omt-fug
       - macm
+      - ithaca
     ket_qua: dung
     luot_2: khong-chac
     luot_2_ghi_chu: "Phục hưng (Britannica Baroque: phong cách đa âm thế kỷ 16) và Bach (fugue) có nguồn; vế phần phát triển trong giao hưởng không có nguồn bậc 2 mở được."
+    ghi_chu: 'Review D3-gom: lượt 2 (khong-chac) không mở được nguồn cho vế phần phát triển. Review mở lại Macmillan Listen (macm, sách giáo khoa của nhà xuất bản): "the development section, whose basic function is to build up tension, typically involves contrapuntal textures"; Ithaca: phức điệu mô phỏng "most prevalent in the Renaissance and especially Baroque periods". Giữ.'
   - id: n18
     cau: 'Dị âm: cùng một giai điệu, mỗi người chơi một phiên bản hơi khác (thường là trang trí thêm), vang cùng lúc'
     loai: dinh-nghia
@@ -273,7 +283,7 @@ nhan_dinh:
       - omt-tex
       - cod-het
     ket_qua: da-sua
-    ghi_chu: Bản gốc "có người trang trí thêm, có người giản lược"; nguồn chỉ nói biến thể/trang trí, nên rút gọn.
+    ghi_chu: 'Bản gốc "có người trang trí thêm, có người giản lược"; nguồn chỉ nói biến thể/trang trí, nên rút gọn. Review D3-gom: chữ mới có trên trang (mục Dị âm).'
     luot_2: dung
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/texture/" ]
     luot_2_ghi_chu: "OMT: heterophony là nhiều biến thể đồng thời của một giai điệu."
@@ -312,19 +322,18 @@ nhan_dinh:
     loai: lich-su
     nguon:
       - wiki-tex
-    ket_qua: null
-    ghi_chu: 'Chưa chắc: chỉ có nguồn bậc 3; OMT không nói tần suất. Chủ repo cân nhắc bỏ vế này hay tìm nguồn bậc 2.'
+    ket_qua: da-bo
+    ghi_chu: 'Chưa chắc: chỉ có nguồn bậc 3; OMT không nói tần suất. Chủ repo cân nhắc bỏ vế này hay tìm nguồn bậc 2. Review D3-gom: lượt 1 chưa quyết, lượt 2 khong-chac. Không có nguồn bậc 1–2: COD heterophony chỉ nói thuật ngữ "Also applied to vocal mus. of Near and Far East"; OMT Texture, Hunter ch. 1 không nói tần suất trong nhạc phương Tây; chỉ Wikipedia (bậc 3). Đã bỏ vế "; trong nhạc cổ điển phương Tây thì hiếm" khỏi dòng "Gặp ở" của mục Dị âm (chữ mới: "…, gamelan, nhạc Ả Rập.").'
     luot_2: khong-chac
     luot_2_ghi_chu: Britannica (Heterophony) không có câu nào về nhạc cổ điển phương Tây; đúng như khái quát nhưng chưa có nguồn bậc 2 xác nhận.
   - id: n23
     cau: 'Hình texture-rolls: cùng giai điệu (xanh) trong bốn kết cấu dạng piano roll; màu vàng là phần thêm vào'
-    loai: cau-truc
-    nguon:
-      - omt-tex
+    loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Đã đối chiếu file src/components/hinh/texture-rolls.html: xem ghi_chu cấp hồ sơ.'
+    ghi_chu: 'Đã đối chiếu file src/components/hinh/texture-rolls.html: xem ghi_chu cấp hồ sơ. Review D3-gom (soát nhãn): câu chỉ tả hình của site (màu, dạng piano roll), không có điều cần nguồn ngoài: đổi loai cau-truc thành ve-site (lượt 2 khong-chac vì lẽ ấy). Review: đã đọc src/components/hinh/texture-rolls.html: bốn khung Đơn âm, Chủ điệu, Phức điệu (canon), Dị âm; 14 nốt xanh giống nhau ở cả bốn (Đô Rê Mi Đô, Đô Rê Mi Đô, Mi Fa Sol, Mi Fa Sol, khoảng 2,07 px mỗi nửa cung); vàng: hợp âm đệm (Đô trưởng, Sol trưởng ở ô 3, 4), bè thứ hai vào sau hai ô (thấp hơn một quãng 8), bản trang trí ở quãng 8 trên; chú thích "Cùng một giai điệu (xanh) trong bốn kết cấu, vẽ dạng piano roll … Màu vàng là phần thêm vào". Khác khối abc ở cách xếp (canon vẽ thấp quãng 8, hợp âm đệm đủ ba nốt, nốt láy khác), hình không nói là chép khối abc: chấp nhận.'
     luot_2: khong-chac
     luot_2_ghi_chu: Câu chỉ nói về chữ của hình (màu xanh, vàng, piano roll), không có phần nhạc lý để kiểm.
+    review: dung
   - id: n24
     cau: 'Mẹo nghe: đếm số đường nét độc lập (một: đơn âm; một rõ ràng, còn lại đứng sau: chủ điệu; hai trở lên ngang hàng: phức điệu)'
     loai: khuyen-tap
@@ -360,6 +369,7 @@ nhan_dinh:
     ket_qua: dung
     luot_2: khong-chac
     luot_2_ghi_chu: Không mở được nguồn bậc 2 nói phần phát triển giao hưởng chuyển sang phức điệu; có thể đúng ở một số tác phẩm.
+    ghi_chu: 'Review D3-gom: lượt 2 (khong-chac) không mở được nguồn. Review mở lại Macmillan Listen (macm): "the development section … typically involves contrapuntal textures"; "The more intense, artificial texture of polyphony stood out against natural homophonic texture"; OMT Texture: "Most music does not conform to a single texture; rather, it can move between them." Câu nói "có thể"; giữ.'
   - id: n28
     cau: 'Dày hay mỏng: bao nhiêu nhạc cụ, bao nhiêu nốt vang cùng lúc'
     loai: dinh-nghia
@@ -375,17 +385,18 @@ nhan_dinh:
     cau: 'Âm vực: các bè dồn sát hay trải rộng từ rất trầm đến rất cao'
     loai: dinh-nghia
     nguon:
-      - clark-tex
+      - ithaca
       - wiki-tex
     ket_qua: dung
     luot_2: khong-chac
     luot_2_ghi_chu: OMT không coi âm vực/khoảng cách bè là yếu tố của texture; cách dùng này có trong giáo trình khác nhưng chưa mở được nguồn.
+    ghi_chu: 'Review D3-gom: lượt 2 (khong-chac) chưa mở được nguồn. Review mở Ithaca College, IC Theory: Texture (ithaca, bậc 2, đã có trong danh sách nguồn và trên trang): "The register (low, middle, high) and the spacing (close, average, wide) of the different parts are also significant." Giữ.'
   - id: n30
     cau: Dàn nhạc Lãng mạn cuối thế kỷ 19 thường trải âm vực rất rộng
     loai: lich-su
     nguon: []
     ket_qua: da-bo
-    ghi_chu: Không nguồn; bỏ vế trong ngoặc.
+    ghi_chu: "Không nguồn; bỏ vế trong ngoặc. Review D3-gom: chữ đã bỏ không còn trên trang (mục Ngoài loại kết cấu)."
     luot_2: khong-chac
     luot_2_ghi_chu: Khái quát về dàn nhạc Lãng mạn cuối thế kỷ 19; không mở được nguồn bậc 2 xác nhận.
   - id: n31
@@ -407,7 +418,7 @@ nhan_dinh:
     nguon:
       - omt-tex
     ket_qua: da-sua
-    ghi_chu: Bản gốc ghi "Samuel Brady, Chelsey Hamm"; sai.
+    ghi_chu: 'Bản gốc ghi "Samuel Brady, Chelsey Hamm"; sai. Review D3-gom: OMT Texture ghi tác giả Mark Gotham và Samuel Brady (mở lại); chữ mới có ở mục Nguồn.'
     luot_2: dung
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/texture/" ]
     luot_2_ghi_chu: Trang OMT Texture ghi tác giả Mark Gotham và Samuel Brady.
@@ -417,7 +428,7 @@ nhan_dinh:
     nguon:
       - erudit
     ket_qua: da-sua
-    ghi_chu: 'Bỏ "(2021), tr. 69-86": trang chưa xác nhận được vì Érudit chặn robot.'
+    ghi_chu: 'Bỏ "(2021), tr. 69-86": trang chưa xác nhận được vì Érudit chặn robot. Review D3-gom: chữ mới có ở mục Nguồn (không còn năm, số trang).'
     luot_2: dung
     luot_2_nguon: [ "https://researchcatalogue.net/view/1301475/2015608?c=3" ]
     luot_2_ghi_chu: "Bài Claiming Space: Structural aspects of heterophony in the Vietnamese tradition of Vọng Cổ Performance, của Nguyễn Thanh Thủy và Stefan Östersjö, Intersections 41(1); trang Érudit bị chặn nên dùng trang researchcatalogue."
@@ -425,7 +436,8 @@ nhan_dinh:
     cau: Liên kết nhan-dien/, nhan-dien/luyen-nghe/, lich-su/nhac-truyen-thong-viet-nam/, tai-lieu-tham-khao/
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Chưa chuyển: (1) nhan-dien/index, cần giữ hàng "2. Kết cấu" trỏ tới bài 28 trong bảng 7 yếu tố; (2) nhan-dien/luyen-nghe, cần giữ mục "2. Nhận biết kết cấu": Frère Jacques phát theo bốn kết cấu, tốc độ và giọng đổi ngẫu nhiên, và bộ luyện oz-texture-trainer; (3) lich-su/nhac-truyen-thong-viet-nam, cần giữ hàng Hòa âm nêu dị âm (các nhạc cụ cùng chơi một giai điệu theo cách riêng); (4) tai-lieu-tham-khao, cần giữ danh sách nguồn.'
+    ghi_chu: 'Chưa chuyển: (1) nhan-dien/index, cần giữ hàng "2. Kết cấu" trỏ tới bài 28 trong bảng 7 yếu tố; (2) nhan-dien/luyen-nghe, cần giữ mục "2. Nhận biết kết cấu": Frère Jacques phát theo bốn kết cấu, tốc độ và giọng đổi ngẫu nhiên, và bộ luyện oz-texture-trainer; (3) lich-su/nhac-truyen-thong-viet-nam, cần giữ hàng Hòa âm nêu dị âm (các nhạc cụ cùng chơi một giai điệu theo cách riêng); (4) tai-lieu-tham-khao, cần giữ danh sách nguồn. Review: bốn trang đích chưa chuyển (bản xem: "sắp có"); đã kiểm bản cũ: ../opus-zero/docs/nhan-dien/index.md dòng 18 (hàng "2. Kết cấu" trỏ bài 28); nhan-dien/luyen-nghe.md dòng 13–17 ("## 2. Nhận biết kết cấu", cùng một giai điệu phát theo bốn kết cấu, khối oz-texture-trainer); lich-su/nhac-truyen-thong-viet-nam.md dòng 14 (hàng Hòa âm: "các nhạc cụ cùng chơi một giai điệu theo cách riêng của mình (dị âm, heterophony)"); tai-lieu-tham-khao.md. Lô chuyển giữ các điều ấy.'
+    review: dung
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -460,15 +472,22 @@ doi_chu:
   - cu: "Kết cấu (texture) mô tả có bao nhiêu đường nét âm nhạc vang lên cùng lúc và chúng liên hệ với nhau thế nào. Nó giống như cách dệt của một tấm vải: một sợi, nhiều sợi song song, hay nhiều sợi đan chéo. Đây là một trong những manh mối nhanh nhất để nhận diện thời kỳ: nghe kết cấu, bạn thường đoán được nhạc thuộc Trung cổ, Baroque hay Cổ điển chỉ sau vài giây."
     moi: "Kết cấu (texture) mô tả có bao nhiêu đường nét âm nhạc vang lên cùng lúc và chúng liên hệ với nhau thế nào. Nó giống như cách dệt của một tấm vải: một sợi, nhiều sợi song song, hay nhiều sợi đan chéo. Đây là một trong những manh mối để nhận diện thời kỳ: đơn âm thường gặp ở nhạc Trung cổ, phức điệu ở nhạc Phục hưng và Baroque, chủ điệu ở nhạc Cổ điển và Lãng mạn."
     ly_do: 'n3 (da-sua): bỏ lời hứa "sau vài giây", giữ khuynh hướng có nguồn.'
+  - cu: Tất cả ví dụ dưới đây dùng cùng một giai điệu (Frère Jacques) để bạn chỉ chú ý đến kết cấu.
+    moi: Tất cả ví dụ dưới đây dùng cùng một giai điệu ngắn để bạn chỉ chú ý đến kết cấu.
+    ly_do: "n5 (da-sua, review D3-gom): tên bài Frère Jacques không có nguồn bậc 1–2 đọc được; câu còn lại chỉ nói về các ví dụ của trang."
   - cu: "Gặp ở: phần lớn nhạc Cổ điển và Lãng mạn, thánh ca, gần như mọi bài hát pop."
     moi: "Gặp ở: nhiều nhạc Cổ điển và Lãng mạn, thánh ca, rất nhiều bài hát pop."
     ly_do: "n14 (da-sua): cường điệu."
   - cu: "Nhiều giai điệu độc lập vang cùng lúc, bè nào cũng quan trọng. Loại phổ biến nhất là phức điệu mô phỏng: các bè lần lượt bắt chước cùng một giai điệu, như canon và fugue."
     moi: "Nhiều giai điệu độc lập vang cùng lúc, bè nào cũng quan trọng. Một loại quen thuộc là phức điệu mô phỏng: các bè lần lượt bắt chước cùng một giai điệu, như canon và fugue."
     ly_do: 'n16 (da-sua): "phổ biến nhất" không có nguồn.'
-  - cu: Cùng một giai điệu, nhưng mỗi người chơi một phiên bản hơi khác, có người trang trí thêm, có người giản lược, vang lên cùng lúc. Các bè lúc trùng nhau, lúc tách ra.
-    moi: Cùng một giai điệu, nhưng mỗi người chơi một phiên bản hơi khác (thường là trang trí thêm), vang lên cùng lúc. Các bè lúc trùng nhau, lúc tách ra.
-    ly_do: "n18 (da-sua): nguồn chỉ nói biến thể hay trang trí."
+  - cu:
+      - Cùng một giai điệu, nhưng mỗi người chơi một phiên bản hơi khác, có người trang trí thêm, có người giản lược, vang lên cùng lúc. Các bè lúc trùng nhau, lúc tách ra.
+      - "Gặp ở: nhạc truyền thống Việt Nam (đờn ca tài tử: các nhạc cụ cùng chơi một bài bản theo cách riêng, xem trang này), gamelan, nhạc Ả Rập; trong nhạc cổ điển phương Tây thì hiếm."
+    moi:
+      - Cùng một giai điệu, nhưng mỗi người chơi một phiên bản hơi khác (thường là trang trí thêm), vang lên cùng lúc. Các bè lúc trùng nhau, lúc tách ra.
+      - "Gặp ở: nhạc truyền thống Việt Nam (đờn ca tài tử: các nhạc cụ cùng chơi một bài bản theo cách riêng, xem trang này), gamelan, nhạc Ả Rập."
+    ly_do: 'n18 (da-sua): nguồn chỉ nói biến thể hay trang trí.; n22 (da-bo, review D3-gom): "hiếm trong nhạc cổ điển phương Tây" chỉ có nguồn bậc 3 (Wikipedia).'
   - cu: "Âm vực: các bè dồn sát nhau hay trải rộng từ rất trầm đến rất cao (dàn nhạc Lãng mạn cuối thế kỷ 19 thường trải rất rộng)."
     moi: "Âm vực: các bè dồn sát nhau hay trải rộng từ rất trầm đến rất cao."
     ly_do: "n30 (da-bo): không nguồn."
@@ -480,7 +499,7 @@ doi_chu:
       - "The Concise Oxford Dictionary of Music (Encyclopedia.com): Alberti bass, monophony, polyphony, heterophony, canon."
       - "Macmillan Learning, Listen: Classical Counterpoint (phần phát triển thường có kết cấu đối âm)."
       - "Bản nhạc: IMSLP, Syrinx (Debussy); Mutopia, Mozart Sonata K. 545 và Chopin Nocturne Op. 9 (bè đệm tay trái)."
-    ly_do: 'Mục Nguồn: thay bằng các nguồn đã mở khi kiểm định (lượt 1 D3-L4); bỏ nguồn không đọc được chữ (musictheory.net).'
+    ly_do: "Mục Nguồn: thay bằng các nguồn đã mở khi kiểm định (lượt 1 D3-L4); bỏ nguồn không đọc được chữ (musictheory.net)."
   - cu: 'Nguyễn Thanh Thủy, Stefan Östersjö, "Claiming Space: Structural aspects of heterophony in the Vietnamese tradition of Vọng Cổ Performance", Intersections 41, số 1 (2021), tr. 69–86 (tóm tắt trên Érudit): đờn ca tài tử được phân tích như một lối dị âm trang trí giữa các nghệ nhân.'
     moi: 'Nguyễn Thanh Thủy, Stefan Östersjö, "Claiming Space: Structural aspects of heterophony in the Vietnamese tradition of Vọng Cổ Performance", Intersections 41, số 1 (tóm tắt trên Érudit): đờn ca tài tử được phân tích như một lối dị âm trang trí giữa các nghệ nhân.'
     ly_do: "n33 (da-bo): trang chưa xác nhận được."

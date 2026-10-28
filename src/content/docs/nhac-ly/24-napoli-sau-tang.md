@@ -1,9 +1,9 @@
 ---
 title: 24. Hợp âm Napoli và hợp âm sáu tăng
-description: 'Hai loại hợp âm nửa cung (chromatic) này là "gia vị mạnh" của thời Cổ điển và Lãng mạn. Cả hai đều có chức năng tiền át: chúng đứng ngay trước hợp âm V và làm…'
+description: 'Hai loại hợp âm nửa cung (chromatic) này là "gia vị mạnh" của thời Cổ điển và Lãng mạn. Cả hai đều có chức năng hạ át: chúng đứng ngay trước hợp âm V và làm…'
 ---
 
-Hai loại hợp âm **nửa cung** (chromatic) này là "gia vị mạnh" của thời Cổ điển và Lãng mạn. Cả hai đều có chức năng **tiền át**: chúng đứng ngay trước hợp âm V và làm cho V nghe căng thẳng hơn. Ví dụ dưới đây ở **Đô thứ**, nơi chúng hay xuất hiện nhất.
+Hai loại hợp âm **nửa cung** (chromatic) này là "gia vị mạnh" của thời Cổ điển và Lãng mạn. Cả hai đều có chức năng **hạ át** (predominant): chúng đứng ngay trước hợp âm V và làm cho V nghe căng thẳng hơn. Ví dụ dưới đây ở **Đô thứ**, nơi chúng hay xuất hiện nhất.
 
 ## Hợp âm Napoli (N6)
 
@@ -87,7 +87,7 @@ Hợp âm sáu Đức thường đi qua **i6/4** trước khi đến V, để tr
 + Đức
 > Ger+6 đồng âm với La♭7 trong Đô thứ.
 ? Chức năng của N6 và +6 là gì?
-+ Tiền át, đứng trước V
++ Hạ át, đứng trước V
 - Chủ
 - Át
 > Chúng làm hợp âm V thêm căng thẳng.

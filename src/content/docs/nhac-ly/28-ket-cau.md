@@ -7,7 +7,7 @@ description: "Kết cấu (texture) mô tả có bao nhiêu đường nét âm n
 
 ## Bốn loại kết cấu
 
-Tất cả ví dụ dưới đây dùng cùng một giai điệu (*Frère Jacques*) để bạn chỉ chú ý đến kết cấu.
+Tất cả ví dụ dưới đây dùng cùng một giai điệu ngắn để bạn chỉ chú ý đến kết cấu.
 
 ### Đơn âm (monophony)
 
@@ -83,7 +83,7 @@ K:C
 [V:V2] cd d/e/d e2dc | cd d/e/d e2dc | ef f/g/f g4 | ef f/g/f g4 |]
 ```
 
-*Gặp ở:* **nhạc truyền thống Việt Nam** (đờn ca tài tử: các nhạc cụ cùng chơi một bài bản theo cách riêng, xem [trang này](/opus/lich-su/nhac-truyen-thong-viet-nam/)), gamelan, nhạc Ả Rập; trong nhạc cổ điển phương Tây thì hiếm.
+*Gặp ở:* **nhạc truyền thống Việt Nam** (đờn ca tài tử: các nhạc cụ cùng chơi một bài bản theo cách riêng, xem [trang này](/opus/lich-su/nhac-truyen-thong-viet-nam/)), gamelan, nhạc Ả Rập.
 
 ## Nhìn thấy kết cấu
 

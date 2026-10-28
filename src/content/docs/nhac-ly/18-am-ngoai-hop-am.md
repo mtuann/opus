@@ -35,7 +35,7 @@ K:C
 
 Rê và Fa không thuộc hợp âm Đô (Đô – Mi – Sol); chúng **nối** các nốt hợp âm theo một hướng đi lên.
 
-**Nốt treo 4–3** (rất phổ biến): nốt Fa của hợp âm G7 được **giữ lại** khi bè trầm đã chuyển sang Đô, tạo nghịch tai, rồi **rơi xuống** Mi.
+**Nốt treo 4–3**: nốt Fa của hợp âm G7 được **giữ lại** khi bè trầm đã chuyển sang Đô, tạo nghịch tai, rồi **rơi xuống** Mi.
 
 ```abc
 X:2
