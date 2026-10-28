@@ -36,11 +36,9 @@ Cách nhanh nhất để nhớ một quãng là gắn nó với **hai nốt li�
 | 2 trưởng | 2 | *Happy Birthday* (từ "py" sang "birth") | *Frère Jacques*: Đô–Rê ([bài 5](/opus/piano/10-bai-dau-tien/#5-frere-jacques)) |
 | 3 thứ | 3 | *Greensleeves* | *Greensleeves*: La–Đô ([bài 7](/opus/piano/10-bai-dau-tien/#7-greensleeves)); Largo "Going Home": Mi–Sol ([bài 8](/opus/piano/10-bai-dau-tien/#8-largo-going-home)) |
 | 3 trưởng | 4 | *When the Saints Go Marching In* | [Mozart: Sonata K. 545](/opus/piano/tac-pham/mozart-k545/): Đô–Mi |
-| 4 đúng | 5 | *Here Comes the Bride* (hành khúc cưới của Wagner) | *Amazing Grace*, từ nốt lấy đà: Sol–Đô ([bài 6](/opus/piano/10-bai-dau-tien/#6-amazing-grace)); [Tchaikovsky: Bài ca Pháp cổ](/opus/piano/tac-pham/tchaikovsky-bai-ca-phap-co/), từ nốt lấy đà: Rê–Sol |
-| 4 tăng / 5 giảm | 6 | *Maria* (vở *West Side Story*) | |
+| 4 đúng | 5 | *Here Comes the Bride* | *Amazing Grace*, từ nốt lấy đà: Sol–Đô ([bài 6](/opus/piano/10-bai-dau-tien/#6-amazing-grace)); [Tchaikovsky: Bài ca Pháp cổ](/opus/piano/tac-pham/tchaikovsky-bai-ca-phap-co/), từ nốt lấy đà: Rê–Sol |
 | 5 đúng | 7 | *Twinkle Twinkle Little Star* (từ "kle" đầu tiên sang "twin" thứ hai) | *Ah! vous dirai-je, maman*, cùng giai điệu ấy: Đô–Sol ([bài 2](/opus/piano/10-bai-dau-tien/#2-ah-vous-dirai-je-maman-twinkle-twinkle)) |
 | 6 trưởng | 9 | *My Bonnie Lies over the Ocean* | [Chopin: Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/), từ nốt lấy đà: Si♭–Sol |
-| 8 đúng | 12 | *Somewhere over the Rainbow* | |
 
 Quãng đi xuống cũng có trong những bài bạn tập: [*Für Elise*](/opus/piano/tac-pham/fur-elise/) mở đầu bằng quãng 2 thứ (Mi–Rê♯), *Hänschen klein* ([bài 4](/opus/piano/10-bai-dau-tien/#4-hanschen-klein)) bằng quãng 3 thứ (Sol–Mi), [Minuet Sol trưởng](/opus/piano/tac-pham/minuet-sol/) bằng quãng 5 đúng (Rê–Sol). Muốn dùng bảng này bên phím đàn, xem [Chơi theo tai bên phím đàn](/opus/luyen-tai/choi-bang-tai/).
 

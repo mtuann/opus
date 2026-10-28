@@ -83,7 +83,7 @@ Sáo, ở âm vực trung, gần như chỉ có âm cơ bản và rất ít bồ
 Bồi âm còn là cách **chơi** một số nhạc cụ:
 
 - **Kèn đồng không có van** (như kèn trumpet tự nhiên thời Bach) chỉ chơi được các nốt trong chuỗi bồi âm của ống kèn. Người chơi đổi nốt bằng cách thay đổi môi; người chơi kèn horn thời Mozart còn đặt bàn tay vào loa kèn để chỉnh cao độ một số nốt.
-- **Đàn bầu** của Việt Nam chỉ có một dây và được chơi bằng **bồi âm**: người chơi chạm nhẹ bàn tay vào các điểm chia dây trong khi gảy, còn cần đàn (vòi đàn) uốn cao độ lên xuống.
+- **Đàn bầu** của Việt Nam chỉ có một dây, không có phím bấm, và được chơi bằng **bồi âm**; người chơi uốn vòi đàn để dây căng hay chùng, đổi cao độ lên xuống.
 - Nghệ sĩ violin, cello, guitar dùng **bồi âm** (harmonics) để tạo những nốt cao trong veo như tiếng sáo.
 
 ## Hệ thống lên dây
@@ -94,7 +94,7 @@ Nếu lên dây sao cho mọi quãng 5 đều thuần (3 : 2) rồi đi hết v�
 |---|---|---|
 | **Pythagore** | Mọi quãng 5 thuần; quãng 3 trưởng rất chói | Trung cổ, còn dùng đến Phục hưng |
 | **Mean-tone** | Quãng 3 trưởng thuần; một vài giọng chơi được rất hay, các giọng xa thì không dùng được | Phục hưng, Baroque |
-| **Bình quân cải tiến** (well temperament) | Mọi giọng đều chơi được, nhưng mỗi giọng có "màu" hơi khác | Thế kỷ 18–19, bắt đầu từ cuối Baroque; *Bình quân luật* của Bach thường được cho là viết cho kiểu lên dây này (Bach dùng hệ chính xác nào thì còn tranh cãi) |
+| **Bình quân cải tiến** (well temperament) | Mọi giọng đều chơi được, nhưng mỗi giọng có "màu" hơi khác | Thế kỷ 18–19, bắt đầu từ cuối Baroque; *Bình quân luật* của Bach thường được cho là viết cho kiểu lên dây này (hệ chính xác Bach dùng thì đã có nhiều đề xuất khác nhau) |
 | **Bình quân** (equal temperament) | Chia quãng 8 thành 12 nửa cung **bằng hệt nhau**: mỗi nửa cung = 100 cent, tỉ lệ ¹²√2 ≈ 1,0595 | Chuẩn cho piano từ khoảng giữa thế kỷ 19 đến nay |
 
 Hệ bình quân cho phép chơi ở mọi giọng và chuyển giọng tự do, đổi lại mọi quãng (trừ quãng 8) đều lệch một chút so với quãng thuần. Quãng 5 bình quân chỉ lệch 2 cent, gần như không nghe ra; quãng 3 trưởng bình quân **rộng hơn 14 cent** so với quãng thuần, và tai luyện tốt nghe thấy tiếng "rung" (phách) của nó:
@@ -112,7 +112,6 @@ Ca sĩ, nhạc công kèn và nhiều nhạc cụ dây không cố định cao �
 Cao độ của nốt La4 không phải lúc nào cũng là 440 Hz:
 
 - **440 Hz** được một hội nghị quốc tế ở London khuyến nghị năm 1939, và trở thành tiêu chuẩn ISO 16. Đây là chuẩn phổ biến nhất hiện nay, cũng là chuẩn của [máy lên dây](/opus/luyen-tap/hat-lai/#may-len-day) trên site này.
-- Nhiều dàn nhạc châu Âu lên dây cao hơn một chút, khoảng **442–444 Hz**.
 - Các nhóm chơi nhạc Baroque bằng nhạc cụ cổ thường dùng **415 Hz**, thấp hơn gần đúng nửa cung. Đó là lý do khi nghe một bản thu Bach "theo phong cách lịch sử", bạn có thể thấy nó thấp hơn bản nhạc in nửa cung (xem [Đọc tên tác phẩm và bản thu](/opus/nghe-nhac/doc-ten-tac-pham/)).
 
 ## Tự kiểm tra

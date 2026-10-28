@@ -13,7 +13,7 @@ Lý thuyết đầy đủ: [bài 9: Quãng](/opus/nhac-ly/09-quang/). Công cụ
 
 | Nhóm | Các quãng | Nghe như thế nào |
 |---|---|---|
-| Quãng đúng | 1, 4, 5, 8 | Vang, rỗng, vững chãi. Quãng 5 đúng nghe "trống" một cách đẹp đẽ; quãng 4 đúng nghe hơi lửng lơ, muốn đi tiếp. |
+| Quãng đúng | 1, 4, 5, 8 | Nhiều người nghe thấy vang, rỗng, vững chãi; quãng 4 đúng hơi lửng lơ, muốn đi tiếp. |
 | Quãng 3 và 6 | 3 trưởng/thứ, 6 trưởng/thứ | Có "màu": trưởng sáng, thứ tối. |
 | Quãng 2 và 7 | 2 trưởng/thứ, 7 trưởng/thứ | Căng, xít nhau (quãng 2) hoặc chênh vênh (quãng 7); đây là các quãng nghịch, tai muốn chúng "giải quyết" sang quãng êm hơn. |
 | Tritone | 4 tăng / 5 giảm | Căng, chia đôi quãng tám (6 nửa cung). Nghe gai gai, bất ổn — có mặt trong hợp âm át bảy (V7). |

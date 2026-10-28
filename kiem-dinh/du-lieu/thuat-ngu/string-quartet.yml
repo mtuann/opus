@@ -8,11 +8,12 @@ lan:
     nguoi:
       luot_1: Claude Sonnet 5.5 (D3-L3 lượt 1, phần 1/2)
       luot_2: null
-      review: null
+      review: Claude (review D3-gom, thuật ngữ, 28/10/2026)
       kiem_mau: null
-    truong: &id001
+    truong:
       - thuat_ngu
       - nghia
+      - ghi_chu
 ghi_chu: Thuật ngữ string quartet, nhóm Hình thức và thể loại. Nhóm ("nhom") và lời dịch tiếng Việt ("nghia") là lựa chọn của site; kiểm khái niệm khớp với nguồn, không kiểm cách dịch từng chữ. Dùng ở bài 20 (tứ tấu của Haydn). Ghi chú "2 violin, viola, cello" của site khớp nguồn. OMT Glossary không có mục này (đã tra). Oxford chỉ cho trích dẫn ngắn nên câu định nghĩa dưới đây lấy từ phần mở đầu. Chỉ đọc nguồn bậc 2 qua WebFetch ngày 28/10/2026.
 nguon:
   - id: oxford-string-quartet
@@ -23,7 +24,9 @@ nhan_dinh:
   - id: n1
     cau: 'string quartet: Tứ tấu đàn dây'
     loai: dinh-nghia
-    truong: *id001
+    truong:
+      - thuat_ngu
+      - nghia
     nguon:
       - oxford-string-quartet
     ket_qua: dung
@@ -31,3 +34,13 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/string-quartet" ]
     luot_2_ghi_chu: 2 vn, va, vc.
+  - id: n2
+    cau: string quartet gồm 2 violin, viola, cello.
+    loai: dinh-nghia
+    truong:
+      - ghi_chu
+    nguon:
+      - oxford-string-quartet
+    ket_qua: dung
+    ghi_chu: 'Review D3-gom: nhận định mới cho trường ghi_chu (trước chỉ ghi ở ghi_chu của n1). Concise Oxford Dictionary of Music (qua encyclopedia.com): "Group of 4 players (almost always 2 vn., va., vc.)". Cần lượt 2.'
+    luot_2: null

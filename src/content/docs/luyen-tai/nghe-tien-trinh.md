@@ -38,7 +38,7 @@ Nghe kỹ nốt trầm mỗi ô: Đô… Fa… Sol… Đô. Cảm giác "đi xa 
 | Tiến trình (giọng Đô) | Nghe bè trầm thế nào | Gặp ở đâu trên site |
 |---|---|---|
 | I – IV – V – I | Đô – Fa – Sol – Đô | Hợp âm tay trái trong [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/); [Hợp âm và hình đệm](/opus/piano/hop-am-rai/) |
-| I – IV – I6/4 – V – I | Sol đứng yên qua hai hợp âm, rồi về Đô | Kết của rất nhiều bản Cổ điển; tập ở [Kết ở mọi giọng](/opus/piano/hoa-am/ket/#i64-truoc-at-am) |
+| I – IV – I6/4 – V – I | Sol đứng yên qua hai hợp âm, rồi về Đô | Cách trang trí thường gặp của hợp âm V ở kết; tập ở [Kết ở mọi giọng](/opus/piano/hoa-am/ket/#i64-truoc-at-am) |
 | I – ii6 – V7 – I | Đô – Fa – Sol – Đô, nhưng hợp âm trên Fa là Rê–Fa–La | [Kết đầy đủ](/opus/piano/hoa-am/ket/#ii6-va-v7-ket-ay-u) |
 | Chuỗi quãng năm đi xuống | Mỗi bước xuống một quãng năm (hoặc lên một quãng bốn) | [Bài 29: Chuỗi hòa âm](/opus/nhac-ly/29-chuoi-hoa-am/) |
 | Romanesca, Prinner | Prinner: Fa – Mi – Rê – Đô (xuống từng bậc). Romanesca: Đô – Si – La – Mi | [Các mẫu hòa âm thời Cổ điển](/opus/piano/hoa-am/mau-galant/) |
@@ -58,7 +58,7 @@ V:LH clef=bass
 [V:LH] C, F, | G,2 | C,2 |]
 ```
 
-Một vòng bè trầm nổi tiếng, *Canon* của Pachelbel: bass cứ **xuống quãng bốn rồi lên một bậc** (Đô – Sol – La – Mi – Fa – Đô), rồi Fa – Sol. Gjerdingen nhận ra ở đó một mẫu Romanesca.
+Một vòng bè trầm nổi tiếng, *Canon* của Pachelbel: bass cứ **xuống quãng bốn rồi lên một bậc** (Đô – Sol – La – Mi – Fa – Đô), rồi Fa – Sol.
 
 ```abc
 X:3
@@ -107,7 +107,7 @@ Bốn hợp âm; hai hợp âm cuối tạo thành một trong bốn loại kế
 
 ## Nghe trong bài bạn đang tập
 
-- [*Ode to Joy*](/opus/piano/10-bai-dau-tien/): câu đầu dừng lửng (kết nửa), câu sau giống hệt nhưng về nhà (kết trọn).
+- [*Ode to Joy*](/opus/piano/10-bai-dau-tien/): câu đầu dừng lửng (kết nửa), câu sau bắt đầu giống câu đầu nhưng về nhà (kết trọn).
 - [Mozart: Minuet Fa trưởng K. 2](/opus/piano/tac-pham/mozart-minuet-k2/): nghe từng câu nhạc và thử gọi tên chỗ kết ở cuối mỗi câu.
 - [Bach: Prelude Đô trưởng](/opus/piano/tac-pham/bach-prelude-do/): chỉ nghe nốt thấp nhất mỗi ô; gần cuối, bè trầm giữ Sol suốt nhiều ô (âm nền át) trước khi về Đô.
 - Bài bạn đang tập: chơi chậm riêng bè trầm và hát theo, rồi đánh dấu bằng bút chì mỗi chỗ kết và gọi tên.

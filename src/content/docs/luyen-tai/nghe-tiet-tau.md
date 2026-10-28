@@ -9,7 +9,7 @@ Lý thuyết đầy đủ: [bài 3: Trường độ](/opus/nhac-ly/03-truong-do/
 
 ## Nghe phách mạnh để đoán nhịp
 
-Nhạc có nhịp đều đặn có **phách mạnh** (accent) lặp lại — thường được nhấn bằng tiếng trầm hơn (trống cái, nốt bass). Đếm số phách giữa hai lần mạnh:
+Nhạc có nhịp đều đặn có **phách mạnh** (strong beat) lặp lại. Hãy để ý tiếng trầm (trống cái, nốt bass): ở nhiều bản nhạc, chúng rơi vào phách mạnh. Đếm số phách giữa hai lần mạnh:
 
 - Mạnh – nhẹ – Mạnh – nhẹ… → **nhịp 2** (polka, hành khúc nhanh).
 - Mạnh – nhẹ – nhẹ – Mạnh… → **nhịp 3** (valse, minuet).
@@ -21,8 +21,10 @@ Kỹ thuật: **gõ chân theo phách mạnh, vỗ tay theo phách nhẹ**. Khi 
 
 Mỗi phách còn được **chia nhỏ** — và cách chia tạo ra hai họ nhịp:
 
-- **Nhịp đơn** (2/4, 3/4, 4/4): mỗi phách chia 2 — đếm "1 **và** 2 **và**…". Nghe gọn, bước đi.
-- **Nhịp kép** (6/8, 9/8, 12/8): mỗi phách chia 3 — đếm "1 **la li** 2 **la li**…". Nghe đu đưa, lênh đênh.
+- **Nhịp đơn** (2/4, 3/4, 4/4): mỗi phách chia 2 — đếm "1 **và** 2 **và**…".
+- **Nhịp kép** (6/8, 9/8, 12/8): mỗi phách chia 3 — đếm "1 **la li** 2 **la li**…".
+
+Nhiều người nghe nhịp đơn gọn, như bước đi, còn nhịp kép đu đưa.
 
 Mẹo: giữa hai phách, đếm "và" một lần (nhịp đơn) hay "la li" hai lần (nhịp kép)? Tai phân biệt được ngay khi bạn đếm thành tiếng.
 
@@ -39,7 +41,7 @@ Ví dụ câu "đen – móc đơn móc đơn – đen" trong nhịp 4/4: đếm
 
 ## Syncopation: nốt rơi vào chỗ yếu
 
-**Syncopation** (đảo phách) là khi nốt nhấn rơi vào phách yếu hoặc vào "và" — tạo cảm giác nảy, bất ngờ, rất phổ biến trong jazz. Nghe dấu hiệu:
+**Syncopation** (đảo phách) là khi nốt nhấn rơi vào phách yếu hoặc vào "và", làm lệch chỗ nhấn đều đặn của nhịp; rất phổ biến trong jazz. Nghe dấu hiệu:
 
 - Có nốt **dài** bắt đầu ở chỗ yếu và "treo" qua phách mạnh.
 - Chân bạn muốn gõ lệch khỏi tiếng trống.
@@ -67,7 +69,7 @@ Ví dụ câu "đen – móc đơn móc đơn – đen" trong nhịp 4/4: đếm
 > Nhịp đơn chia phách làm 2, nhịp kép chia làm 3 — đếm thành tiếng là thấy ngay.
 ? Syncopation là gì?
 - Nốt rất dài cuối bản nhạc
-+ Nốt nhấn rơi vào phách yếu hoặc vào "và", tạo cảm giác nảy và bất ngờ
++ Nốt nhấn rơi vào phách yếu hoặc vào "và", làm lệch chỗ nhấn đều đặn của nhịp
 - Nhịp đổi liên tục giữa 3/4 và 4/4
 > Đảo phách: năng lượng dồn vào chỗ yếu thay vì chỗ mạnh như thường lệ.
 ? Khi gõ lại một câu tiết tấu lạ, bước đầu tiên nên làm gì?

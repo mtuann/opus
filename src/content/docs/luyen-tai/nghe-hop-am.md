@@ -38,7 +38,7 @@ Luôn tập **rải trước, chập sau**. Khi nghe chập mà bí, hãy tưở
 
 ## Nghe nốt trầm để đoán thể đảo
 
-Cùng một hợp âm Đô trưởng nhưng nốt trầm khác nhau thì nghe khác nhau:
+Cùng một hợp âm Đô trưởng nhưng nốt trầm khác nhau thì nghe khác nhau. Hãy để ý cảm giác của từng thế; nhiều người nghe thấy như sau:
 
 - Trầm là **Đô** (gốc): vững nhất — thế gốc.
 - Trầm là **Mi** (bậc 3): bồng bềnh hơn — thể đảo 1.
@@ -61,9 +61,9 @@ K:C
 |---|---|---|
 | Trưởng bảy (Maj7) | Đô–Mi–Sol–Si | Sang, mơ màng, "nhạc jazz êm". |
 | Át bảy (7) | Đô–Mi–Sol–Si♭ | Muốn đi tiếp! Chứa tritone Mi–Si♭ (bậc 3 và bậc 7) nên nghe "thúc" về hợp âm chủ. |
-| Thứ bảy (m7) | Đô–Mi♭–Sol–Si♭ | Êm, buồn nhẹ, thư giãn. |
+| Thứ bảy (m7) | Đô–Mi♭–Sol–Si♭ | Buồn, màu jazz. |
 | Nửa giảm (ø7) | Đô–Mi♭–Sol♭–Si♭ | Căng, u ám — gặp ở bậc 7 của giọng trưởng và bậc 2 của giọng thứ. |
-| Giảm bảy (o7) | Đô–Mi♭–Sol♭–Si𝄫 | Căng tột độ, chênh vênh — hay dùng trước khi chuyển giọng. |
+| Giảm bảy (o7) | Đô–Mi♭–Sol♭–Si♭♭ | Rất căng, "đáng sợ" — có thể làm hợp âm bản lề khi chuyển giọng. |
 
 Hợp âm bảy khó hơn hợp âm ba nhiều. Chỉ tập khi đã phân biệt trưởng/thứ thành thạo — [công cụ cuối bài](#luyen-voi-cong-cu) cũng để bộ hợp âm bảy ở sau cùng.
 
@@ -75,7 +75,7 @@ Công cụ phát một hợp âm, bạn chọn loại hợp âm. Chế độ r�
 
 Thứ tự luyện:
 
-1. **Trưởng vs thứ** (rải): phân biệt quan trọng nhất, đa số nghe được sau vài ngày.
+1. **Trưởng vs thứ** (rải): phân biệt quan trọng nhất.
 2. **Trưởng vs thứ** (chập).
 3. Chuyển sang bộ **4 loại hợp âm ba**: nghe giảm "co lại" so với thứ, tăng "giãn ra" so với trưởng.
 4. **Thể đảo**: nghe nốt trầm (công cụ này chưa có phần thể đảo; tập với đàn hay với bạn tập).

@@ -11,7 +11,7 @@ lan:
     nguoi:
       luot_1: "Claude Sonnet 5.5 (D3-L5 lượt 1, trang)"
       luot_2: null
-      review: null
+      review: Claude (review D3-gom, nhóm C, 28/10/2026)
       kiem_mau: null
 nguon:
   - id: omt
@@ -24,55 +24,64 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Khớp các bài trong thư mục nhac-ly (bài 01–14, ôn tập 1–3)."
+    ghi_chu: "Khớp các bài trong thư mục nhac-ly (bài 01–14, ôn tập 1–3). Review: đã kiểm src/content/docs/nhac-ly/index.md: bài 1–14 trong Phần 1–3, mỗi phần có một link Ôn tập (on-tap-1, 2, 3, đều có trong src/content/docs/nhac-ly/)."
+    review: dung
   - id: n2
     cau: "Ba phần mở rộng: bài 15–20, bài 21–27 cùng Âm học, và bài 28–32."
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Khớp tiêu đề và số bài trong các trang bài."
+    ghi_chu: "Khớp tiêu đề và số bài trong các trang bài. Review: đã kiểm mục lục: Phần 4 bài 15–20, Phần 5 bài 21–27 và dòng Âm học (dòng 54), Phần 6 bài 28–32."
+    review: dung
   - id: n3
     cau: "Hầu hết bài có ví dụ bấm nghe được, và mỗi bài có một quiz ngắn ở cuối."
     loai: ve-site
     nguon: []
     ket_qua: da-sua
-    ghi_chu: "Chữ cũ: \"Mỗi bài có ví dụ bấm nghe được và một quiz ngắn ở cuối;\". Kiểm cả 32 bài: 30 bài có khối abc, bài 08 chỉ có công cụ vòng tròn, bài 31 không có ví dụ nghe được; cả 32 bài có đúng một quiz."
+    ghi_chu: "Chữ cũ: \"Mỗi bài có ví dụ bấm nghe được và một quiz ngắn ở cuối;\". Kiểm cả 32 bài: 30 bài có khối abc, bài 08 chỉ có công cụ vòng tròn, bài 31 không có ví dụ nghe được; cả 32 bài có đúng một quiz. Review: đã đếm khối abc và quiz trong 32 bài (grep): bài 08 và 31 không có khối abc, 30 bài còn lại có; mỗi bài đúng một khối quiz; chữ mới \"Hầu hết bài có ví dụ bấm nghe được, và mỗi bài có một quiz ngắn ở cuối\" có ở dòng 6."
+    review: dung
   - id: n4
     cau: "Bài 1–14 có mục \"Trên phím đàn\", bài tập và công cụ đi kèm."
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Bài 1–14 đều có mục \"Trên phím đàn\" và liên kết luyen-tap hoặc luyen-tai. Các trang luyen-tap chưa chuyển."
+    ghi_chu: "Bài 1–14 đều có mục \"Trên phím đàn\" và liên kết luyen-tap hoặc luyen-tai. Các trang luyen-tap chưa chuyển. Review: đã grep \"Trên phím đàn\" trong bài 01–14: mỗi bài một mục; bài 15–32 không có (khớp chữ \"các bài nền tảng\")."
+    review: dung
   - id: n5
     cau: "Làm xong quiz thì bài được đánh dấu \"đã học\"."
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Theo src/scripts/trang-thai-bai.js: đánh dấu sau khi hoàn tất quiz."
+    ghi_chu: "Theo src/scripts/trang-thai-bai.js: đánh dấu sau khi hoàn tất quiz. Review: đã kiểm src/scripts/trang-thai-bai.js dòng 1–46: dấu \"đã học\" cạnh link bài khi đã làm hết quiz cuối bài (\"Một bài được tính là xong khi bạn làm hết quiz cuối bài\")."
+    review: dung
   - id: n6
     cau: "Bạn chưa chắc nên bắt đầu từ đâu thì làm bài kiểm tra đầu vào."
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Liên kết bat-dau/kiem-tra-dau-vao tồn tại ở site cũ; trang chưa chuyển."
+    ghi_chu: "Liên kết bat-dau/kiem-tra-dau-vao tồn tại ở site cũ; trang chưa chuyển. Review: đã kiểm: src/content/docs/bat-dau/kiem-tra-dau-vao.md đã có ở site mới (link /opus/bat-dau/kiem-tra-dau-vao/ sống)."
+    review: dung
   - id: n7
     cau: "Số bài, tên bài và các ghi chú trong ngoặc ở danh sách bài khớp với trang từng bài."
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Đã đối chiếu cả 32 liên kết với tiêu đề và số bài; ghi chú \"sau bài 9\" khớp."
+    ghi_chu: "Đã đối chiếu cả 32 liên kết với tiêu đề và số bài; ghi chú \"sau bài 9\" khớp. Review: đã đối chiếu 32 link và số bài với tiêu đề các file 01–32 và on-tap-1..3; ghi chú trong ngoặc (bài 20 tùy chọn, bài 27 tra cứu, Âm học sau bài 9) khớp nội dung các bài."
+    review: dung
   - id: n8
     cau: "Phần 6 (bài 28–32) là nền lý thuyết cho mục Nhận diện."
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Liên kết nhan-dien chưa chuyển. nhan-dien/index cũ liên kết bài 28, 30, 31, 32, 12, 23, 14, 15, không có bài 29; bài 29 có một liên kết sang nhan-dien. Khi chuyển nhan-dien cần giữ các liên kết này."
+    ghi_chu: "Liên kết nhan-dien chưa chuyển. nhan-dien/index cũ liên kết bài 28, 30, 31, 32, 12, 23, 14, 15, không có bài 29; bài 29 có một liên kết sang nhan-dien. Khi chuyển nhan-dien cần giữ các liên kết này. Review: đã kiểm ../opus-zero/docs/nhan-dien/index.md: có link tới các bài 28, 30, 31, 32 (4 dòng khớp); trang đích chưa chuyển."
+    review: dung
   - id: n9
     cau: "Mục \"Sau 32 bài này\" trỏ đúng tới các trang tiếp theo; quy trình 6 bước nằm ở bài 26."
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Đích liên kết tồn tại ở site cũ nhưng chưa chuyển: piano/hoa-am/ket, dem-giai-dieu, mau-galant, ung-tac; piano/tac-pham/bach-invention-1 và bach-prelude-fugue-do-thu; hinh-thuc/fugue; nghe-nhac/mozart-concerto-21, grieg-concerto, rachmaninoff-2. Bài 26 có mục \"Quy trình 6 bước\"."
+    ghi_chu: "Đích liên kết tồn tại ở site cũ nhưng chưa chuyển: piano/hoa-am/ket, dem-giai-dieu, mau-galant, ung-tac; piano/tac-pham/bach-invention-1 và bach-prelude-fugue-do-thu; hinh-thuc/fugue; nghe-nhac/mozart-concerto-21, grieg-concerto, rachmaninoff-2. Bài 26 có mục \"Quy trình 6 bước\". Review: đã kiểm các file đích ở ../opus-zero/docs/ (piano/hoa-am/ket, dem-giai-dieu, mau-galant, ung-tac; piano/tac-pham/bach-invention-1, bach-prelude-fugue-do-thu; hinh-thuc/fugue; nghe-nhac/mozart-concerto-21, grieg-concerto, rachmaninoff-2) đều có; bài 26 có mục \"## Quy trình 6 bước\" (dòng 8)."
+    review: dung
   - id: n10
     cau: "Open Music Theory có phần phân tích nhạc vô điệu tính và lý thuyết tập hợp."
     loai: cau-truc
