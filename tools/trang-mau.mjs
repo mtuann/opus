@@ -38,6 +38,7 @@ export const KHOI = {
 	'công cụ âm học': 'oz-boi-am',
 	'thẻ ghi nhớ': 'class="oz-the-nho',
 	'trạng thái bài': 'class="oz-trang-thai-bai',
+	'luyện tai': 'class="oz-lt oz-tool',
 };
 
 /** Số trang đã đổi của nhánh được lấy làm mẫu: một lô của đợt 3 có tới 8 trang. */
