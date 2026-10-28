@@ -55,22 +55,22 @@ Trong tiếng Đức, **B** là Si♭ còn **H** là Si thường. Vì thế Bac
 
 ## Các vùng âm
 
-| Vùng | Khoảng | Âm thanh | Thường do tay nào |
-|---|---|---|---|
-| Trầm sâu | A0–B1 | Rền, nhiều bồi âm; rất dễ "đục" khi giữ bàn đạp | Tay trái: nốt trầm, quãng tám |
-| Trầm | C2–B2 | Nền móng của hòa âm | Tay trái |
-| Giữa thấp | C3–B3 | Ấm, gần giọng nam hay cello | Tay trái đệm, đôi khi giai điệu |
-| Giữa | C4–B4 | Rõ, "hát" tốt; vùng của hầu hết bài cho người mới | Cả hai tay, quanh Đô giữa |
-| Cao | C5–B6 | Sáng, trong | Tay phải: giai điệu |
-| Rất cao | C7–C8 | Lấp lánh, tắt rất nhanh | Tay phải: trang trí, hiệu ứng |
+| Vùng | Khoảng | Thường do tay nào |
+|---|---|---|
+| Trầm sâu | A0–B1 | Tay trái |
+| Trầm | C2–B2 | Tay trái |
+| Giữa thấp | C3–B3 | Tay trái |
+| Giữa | C4–B4 | Cả hai tay, quanh Đô giữa; vùng của hầu hết bài cho người mới |
+| Cao | C5–B6 | Tay phải |
+| Rất cao | C7–C8 | Tay phải |
 
 Ở vùng rất cao, dây ngắn và tiếng tắt nhanh đến mức đàn không cần bộ giảm âm (*damper*): những phím cao nhất không có damper, nên các nốt ở đó tự ngân cho đến khi tắt, dù bạn không giữ bàn đạp.
 
-Trên bản nhạc piano, khuông khóa Sol thường dành cho tay phải và khuông khóa Fa cho tay trái. Đó là quy ước, không phải luật: tay trái có thể chơi trên khuông khóa Sol và ngược lại, và khóa có thể đổi giữa chừng. Hãy luôn nhìn khóa ở đầu khuông.
+Trên bản nhạc piano, khuông khóa Sol thường dành cho tay phải và khuông khóa Fa cho tay trái. Đó là quy ước, không phải luật: khóa có thể đổi giữa chừng, và tay trái có khi chơi trên khuông khóa Sol. Hãy luôn nhìn khóa ở đầu khuông.
 
 ## Nốt mốc để đọc nhạc nhanh
 
-Thay vì đếm dòng kẻ từ đầu mỗi lần, hãy thuộc lòng vài **nốt mốc**, vừa trên khuông vừa trên phím, rồi đọc các nốt khác theo khoảng cách tới mốc gần nhất: "trên G4 một bậc là La4", "dưới C5 một quãng ba là La4". Cách đọc theo mốc và theo quãng này nhanh hơn nhiều so với đọc từng nốt, và là nền tảng của [đọc thị tấu](/opus/piano/thi-tau/).
+Thay vì đếm dòng kẻ từ đầu mỗi lần, hãy thuộc lòng vài **nốt mốc**, vừa trên khuông vừa trên phím, rồi đọc các nốt khác theo khoảng cách tới mốc gần nhất: "trên G4 một bậc là La4", "dưới C5 một quãng ba là La4". Cách đọc theo mốc và theo quãng này là nền tảng của [đọc thị tấu](/opus/piano/thi-tau/).
 
 | Nốt mốc | Trên khuông | Trên phím |
 |---|---|---|

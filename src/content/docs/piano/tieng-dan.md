@@ -70,7 +70,7 @@ K:C
 | Portato (mezzo-staccato) | chấm dưới dấu luyến | Hơi tách, mỗi nốt có trọng lượng riêng | Giai điệu trầm ngâm, nốt lặp cần "nói" |
 | Tenuto | gạch ngang trên nốt | Giữ đủ giá trị, nhấn nhẹ bằng trọng lượng | Nốt quan trọng trong câu |
 | Accent | > | Nhấn rõ hơn các nốt xung quanh | Phách mạnh, nốt nghịch |
-| Sforzando | *sf*, *sfz* | Nhấn đột ngột so với ngữ cảnh | Beethoven dùng rất nhiều |
+| Sforzando | *sf*, *sfz* | Nhấn mạnh, đột ngột | Beethoven dùng rất nhiều |
 
 ```abc
 X:2
@@ -82,19 +82,19 @@ K:C
 ("^legato"!1!c d e f) | "^staccato".c .d .e .f | ("^portato".c .d .e .f) | "^tenuto"!tenuto!c !tenuto!d !tenuto!e !tenuto!f | "^accent"!accent!c d !accent!e f | !5!!fermata!g4 |]
 ```
 
-Khi nghe ví dụ, hãy chú ý rằng staccato không phải là "đánh mạnh rồi giật tay": nốt staccato thường **nhẹ hơn** nốt legato cùng ký hiệu sắc thái, vì nó ngắn và không có thời gian vang.
+Khi nghe ví dụ, hãy chú ý rằng staccato không phải là "đánh mạnh rồi giật tay": nốt staccato **không nên to hơn** các nốt xung quanh.
 
 :::note[Dấu chấm hay dấu nêm?]
 Trong nhạc thế kỷ 18, dấu chấm và dấu nêm không phải lúc nào cũng được phân biệt rõ; nhà soạn nhạc, người chép và nhà in dùng không thống nhất. Hãy tin bản Urtext (phần chú thích thường nói nguồn gốc dùng dấu nào) và ngữ cảnh: một dấu nêm trong đoạn *p* của Mozart thường chỉ là staccato rõ ràng, không phải tiếng gõ mạnh.
 :::
 
-:::caution[*sf* trong đoạn *p* không có nghĩa là *ff*]
-*sf* là nhấn **tương đối**. Trong một câu *p*, *sf* có khi chỉ to cỡ *mf*. Đừng đánh mọi *sf* như *ff*, nhất là khi chơi Beethoven.
+:::caution[*sf* trong đoạn *p*]
+*sf* đòi nhấn mạnh, đột ngột một nốt hay hợp âm. Trong một câu *p*, hãy nghe xem nốt ấy cần nổi lên đến đâu so với câu nhạc; đừng mặc định đánh mọi *sf* như *ff*, nhất là khi chơi Beethoven.
 :::
 
 ## Dấu luyến và cách tạo câu
 
-Trong nhạc Cổ điển, dấu luyến trước hết là **dấu phát âm**: các nốt dưới dấu luyến được nối liền, nốt đầu hơi nặng hơn, nốt cuối nhẹ và hơi ngắn lại, rồi có một khoảng ngắt nhỏ trước nốt tiếp theo. Nốt đầu dưới dấu luyến được nhấn hơn, các nốt sau nhạt dần.
+Trong nhạc Cổ điển, dấu luyến trước hết là **dấu phát âm**: các nốt dưới dấu luyến được nối liền, nốt đầu hơi nặng hơn, nốt cuối nhẹ và hơi ngắn lại, rồi có một khoảng ngắt nhỏ trước nốt tiếp theo.
 
 Với dấu luyến hai nốt (rất hay gặp ở dạng "tiếng thở dài", nốt nghịch đi xuống nốt thuận), dùng động tác **thả – lăn**:
 
@@ -126,7 +126,7 @@ Với câu nhạc dài hơn (dấu luyến dài kiểu Lãng mạn, gần với 
 
 Bạn có thể có trong tay năm, sáu mức to nhỏ khác nhau, nhưng chỉ khi tập có chủ đích:
 
-- ***pp***: đặt đầu ngón **sẵn trên mặt phím**, đẩy phím xuống chậm nhưng dứt khoát. Chậm quá thì búa không tới dây và nốt "câm". Tập ranh giới ấy: nốt nhỏ nhất mà vẫn kêu.
+- ***pp***: đặt đầu ngón **sẵn trên mặt phím**, đẩy phím xuống chậm nhưng dứt khoát. Đẩy chậm quá thì nốt không kêu; hãy tập tìm ranh giới ấy: nốt nhỏ nhất mà vẫn kêu.
 - ***mf***: trọng lượng bàn tay và cẳng tay, ngón chắc, cổ tay mềm.
 - ***ff***: trọng lượng cả cánh tay rơi từ một khoảng cách nhỏ phía trên phím, đầu ngón chắc như cột trụ, và **nhả lực ngay** khi nốt đã kêu.
 
@@ -199,26 +199,26 @@ K:C
 [V:LH] !p!C,8 | C,4 G,,4 | C,8 |]
 ```
 
-Ở ví dụ trên, tay phải dùng ngón 1–3–5 cho hợp âm thể gốc và thể đảo hai (Đô – Fa – La), ngón 1–2–4 cho Si – Rê – Fa. Kỹ năng này là cốt lõi của những bản như [Träumerei](/opus/piano/tac-pham/schumann-traumerei/) hay [Prélude Mi thứ](/opus/piano/tac-pham/chopin-prelude-mi-thu/) của Chopin, nơi giai điệu và hòa âm nằm chung trong một bàn tay.
+Ở ví dụ trên, tay phải dùng ngón 1–3–5 cho hợp âm thể gốc và thể đảo hai (Đô – Fa – La), ngón 1–2–4 cho Si – Rê – Fa. Kỹ năng này là cốt lõi của những bản như [Träumerei](/opus/piano/tac-pham/schumann-traumerei/), nơi một bàn tay thường phải vừa hát vừa đệm; ở [Prélude Mi thứ](/opus/piano/tac-pham/chopin-prelude-mi-thu/) của Chopin, tay trái phải nghe được các bè trong những hợp âm lặp lại.
 
 ### Bè giữa
 
-Ở trình độ cao hơn, đôi khi chính **bè giữa** mới là giai điệu (ngón cái tay phải, hoặc ngón cái tay trái). Cách tập giống hệt: tách riêng bè đó, chơi to, các bè khác bấm câm, rồi dần trả lại cân bằng. Nhạc Bach là trường luyện tốt nhất, vì mọi bè đều quan trọng (xem [Invention số 1](/opus/piano/tac-pham/bach-invention-1/)).
+Ở trình độ cao hơn, đôi khi chính **bè giữa** mới là giai điệu (ngón cái tay phải, hoặc ngón cái tay trái). Cách tập giống hệt: tách riêng bè đó, chơi to, các bè khác bấm câm, rồi dần trả lại cân bằng. Nhạc Bach là chỗ luyện tốt, vì các bè thường quan trọng ngang nhau (xem [Invention số 1](/opus/piano/tac-pham/bach-invention-1/)).
 
 ## Phát âm theo phong cách
 
-Mỗi thời kỳ viết cho một loại đàn khác và có thói quen nghe khác. Bảng dưới đây là **xu hướng chung**, không phải luật; bản nhạc và bản Urtext luôn có tiếng nói cuối cùng.
+Mỗi thời kỳ viết cho một loại đàn khác và có thói quen nghe khác. Bảng dưới đây là **gợi ý xuất phát khi tập**, không phải luật; bản nhạc và bản Urtext luôn có tiếng nói cuối cùng.
 
-| Phong cách | Mặc định của nốt | Legato | Sắc thái | Bàn đạp |
+| Phong cách | Gợi ý chung | Legato | Sắc thái | Bàn đạp |
 |---|---|---|---|---|
 | Baroque (Bach, Handel, Scarlatti) | Nhiều nốt hơi tách; phát âm làm rõ môtip | Có, nhưng không phải mặc định; các bè phải tách bạch | Theo câu và kết cấu, ít "phồng" từng nốt | Rất ít; nối bằng ngón trước |
 | Cổ điển (Haydn, Mozart, Beethoven thời trẻ) | Rõ, nhẹ; dấu luyến ngắn khép lại bằng nhấc tay | Đúng theo dấu luyến ghi | Tương phản nhanh (*fp*, *sf*); đệm Alberti rất nhẹ | Ngắn, nhẹ, để nối và tô màu |
-| Lãng mạn (Chopin, Schumann, Brahms, Liszt) | Legato hát (*cantabile*) | Dài, nhiều tầng | Dải rộng, rubato, cân bằng nhiều lớp | Gần như liên tục, đổi theo hòa âm |
+| Lãng mạn (Chopin, Schumann, Brahms, Liszt) | Legato hát (*cantabile*) | Dài, nhiều tầng | Dải rộng, rubato, cân bằng nhiều lớp | Nhiều, thay theo hòa âm |
 | Ấn tượng (Debussy, Ravel) | Mềm, không "gõ" | Hòa vào bàn đạp | Rất nhiều sắc độ của *p*; lớp âm thanh gần, xa | Nhiều, đạp nửa, *una corda* |
-| Thế kỷ 20 (Bartók, Prokofiev) | Thường sắc, nhịp nhàng như máy | Tương phản với staccato khô | Nhấn mạnh tiết tấu | Theo ký hiệu, thường khô |
+| Thế kỷ 20 (Bartók, Prokofiev) | Thường sắc, tiết tấu rõ | Tương phản với staccato khô | Nhấn mạnh tiết tấu | Theo ký hiệu, thường khô |
 
 :::note[Về "móc đơn tách, móc kép liền" khi chơi Bach]
-Nhiều giáo viên khuyên tạm chơi nốt móc đơn hơi tách và nốt móc kép liền trong các bản nhanh của Bach. Đây là một **điểm xuất phát tập luyện** hữu ích, không phải quy tắc lịch sử. Khi đã quen, hãy để môtip và cấu trúc câu quyết định phát âm.
+Nhiều giáo viên khuyên tạm chơi nốt móc đơn hơi tách và nốt móc kép liền trong các bản nhanh của Bach. Đây là một **điểm xuất phát tập luyện** hữu ích, không phải quy tắc. Khi đã quen, hãy để môtip và cấu trúc câu quyết định phát âm.
 :::
 
 ## Mười phút mỗi ngày cho tiếng đàn
@@ -255,11 +255,11 @@ Nhiều giáo viên khuyên tạm chơi nốt móc đơn hơi tách và nốt m�
 + Nhẹ hơn và hơi ngắn lại
 - Dài gấp đôi giá trị ghi
 > Động tác thả – lăn: nặng ở nốt đầu, nhẹ và nhấc tay ở nốt sau.
-? *sf* trong một đoạn *p* nghĩa là gì?
-- Chơi *ff*
-+ Nhấn rõ so với xung quanh, không nhất thiết to như *f*
+? *sf* (sforzando) yêu cầu gì?
 - Chơi nhỏ đột ngột
-> sforzando là nhấn tương đối, theo ngữ cảnh.
++ Nhấn mạnh, đột ngột một nốt hay hợp âm
+- Giữ nốt thêm một phách
+> sforzando, viết tắt sf hay sfz: nhấn mạnh một nốt hay hợp âm. Trong đoạn *p*, nhấn đến đâu thì nghe theo câu nhạc.
 ? Muốn nốt trên của một hợp âm tay phải nổi lên, bạn làm gì?
 - Đánh cả hợp âm thật to
 + Dồn trọng lượng về ngón chơi nốt trên, các ngón kia nhẹ

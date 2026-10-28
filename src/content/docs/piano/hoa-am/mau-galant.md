@@ -9,11 +9,11 @@ description: "Âm nhạc thế kỷ 18 được ghép từ những khung hai bè
 
 **Mẫu** (schema, số nhiều schemata) là một khung hai bè: bass đi theo một chuỗi bậc, giai điệu theo một chuỗi bậc khác, khớp nhau từng bước. Nhà âm nhạc học Robert Gjerdingen, trong cuốn *Music in the Galant Style* (2007), đã gom và đặt tên cho nhiều khung như thế trong **phong cách galant**, lối viết thanh nhã của thế kỷ 18 mà Mozart thời trẻ cũng viết theo. Ông gọi chúng là những "câu nhạc có sẵn"; với người học đàn, chúng giống thành ngữ của một ngôn ngữ.
 
-Vài cái tên có từ thế kỷ 18: **Fonte** (suối), **Monte** (núi) và **Ponte** (cầu) là cách gọi của nhà lý luận Joseph Riepel, tác giả các sách lý luận in từ năm 1752. Fonte và Monte là những [chuỗi hòa âm](/opus/nhac-ly/29-chuoi-hoa-am/) (sequence) ngắn. Có tên đặt theo người nghiên cứu: **Meyer**, theo nhà âm nhạc học Leonard Meyer. **Romanesca** mượn tên một công thức bass đã được nhắc đến từ thế kỷ 16 và phổ biến trong thế kỷ 17.
+Vài cái tên có từ thế kỷ 18: **Fonte** (giếng, nguồn nước), **Monte** (núi) và **Ponte** (cầu) là cách gọi của nhà lý luận Joseph Riepel, tác giả các sách lý luận in từ năm 1752. Fonte và Monte là những [chuỗi hòa âm](/opus/nhac-ly/29-chuoi-hoa-am/) (sequence) ngắn. Có tên đặt theo người nghiên cứu: **Meyer**, theo nhà âm nhạc học Leonard Meyer. **Romanesca** mượn tên một công thức bass đã được nhắc đến từ thế kỷ 16 và phổ biến trong thế kỷ 17.
 
-Vì sao cả một thế hệ nhạc sĩ dùng chung những khung này? Gjerdingen tìm câu trả lời ở lối dạy **partimento** tại các nhạc viện Napoli. *Conservatorio* là trường ở Napoli, Venezia và vài thành phố Ý khác, nơi trẻ em được "gìn giữ" (*conserved*) và học nhạc; lối dạy partimento nở rộ ở đó trong thế kỷ 17–18. Một partimento là một bè bass viết trên một khuông, có khi kèm số ([bè trầm số](/opus/nhac-ly/25-be-tram-so/)), có khi không; học trò ngồi vào đàn và biến nó thành nhạc hoàn chỉnh, tự thêm hòa âm và giai điệu. Các em học thuộc cách hòa âm cho từng bậc của bass (quy tắc quãng tám, *regola dell'ottava*), các kiểu kết và những chuỗi bass hay gặp, rồi làm các partimento của những thầy như Francesco Durante hay Fedele Fenaroli. Đến lúc ấy, một chuỗi bass quen tự gọi ra một giai điệu quen: đó chính là các mẫu dưới đây.
+Vì sao cả một thế hệ nhạc sĩ dùng chung những khung này? Gjerdingen tìm câu trả lời ở lối dạy **partimento** tại các nhạc viện Napoli. *Conservatorio* là trường ở Napoli, Venezia và những nơi khác, nơi trẻ em được "gìn giữ" (*conserved*) và học nhạc; lối dạy partimento nở rộ ở đó trong thế kỷ 17–18. Một partimento là một bè bass viết trên một khuông, có khi kèm số ([bè trầm số](/opus/nhac-ly/25-be-tram-so/)), có khi không; học trò ngồi vào đàn và biến nó thành nhạc hoàn chỉnh, tự thêm hòa âm và giai điệu. Các em học thuộc cách hòa âm cho từng bậc của bass (quy tắc quãng tám, *regola dell'ottava*), các kiểu kết và những chuỗi bass hay gặp, rồi làm các partimento của những thầy như Francesco Durante hay Fedele Fenaroli. Đến lúc ấy, một chuỗi bass quen tự gọi ra một giai điệu quen: đó chính là các mẫu dưới đây.
 
-Trong các ví dụ, số trong vòng tròn là bậc: phía trên khuông là giai điệu, phía dưới là bass. Ví dụ viết ba bè (tay phải giai điệu và một bè giữa, tay trái bass), mỗi bước của mẫu một ô 3/4 như trong minuet (riêng bốn kết ở mục Kết, mỗi bước một phách trong nhịp 4/4); trong nhạc thật, một mẫu có thể gọn hơn hay giãn ra.
+Trong các ví dụ, số trong vòng tròn là bậc: phía trên khuông là giai điệu, phía dưới là bass. Ví dụ viết ba bè (tay phải giai điệu và một bè giữa, tay trái bass), mỗi bước của mẫu thường là một ô 3/4 như trong minuet (Do–Re–Mi gói hai bước đầu vào một ô; riêng bốn kết ở mục Kết, mỗi bước một phách trong nhịp 4/4); trong nhạc thật, một mẫu có thể gọn hơn hay giãn ra.
 
 | Mẫu | Giai điệu | Bass | Hòa âm ở Đô trưởng | Thường đứng ở |
 |---|---|---|---|---|
@@ -52,8 +52,8 @@ K:C
 2. Tay phải riêng: ngón 1 trên bè giữa (Mi – Rê – Mi – Sol), ngón 4 hoặc 5 trên giai điệu. Hát giai điệu.
 3. Hai tay, ♩ = 88, rồi nối thẳng sang Prinner ở mục sau: Mi3 của bass đi lên Fa3, thành một câu tám ô.
 
-**Giọng khác:** ở Sol trưởng, bass Sol – Fa♯ – Mi – Si, giai điệu Sol – Rê – Sol – Sol; ở Fa trưởng, bass Fa – Mi – Rê – La. Romanesca còn hai dạng bass cũ hơn: dạng "nhảy" (xuống quãng 4 rồi lên một bậc, xen nhau: 1–5–6–3, như Đô – Sol – La – Mi) và dạng "đi liền" (bass đi bậc xuống). Theo Gjerdingen, dạng nhảy đặc trưng cho thế kỷ 17 và đầu thế kỷ 18, dạng đi liền cho cuối thế kỷ 18; bass galant 1–7–6–3 là dạng lai, phần đầu giống dạng đi liền, phần sau giống dạng nhảy. Canon của Pachelbel mở đầu bằng dạng nhảy ([bài 29](/opus/nhac-ly/29-chuoi-hoa-am/)).
-**Gặp ở đâu:** đầu bài hay đầu câu, thường được một Prinner trả lời. Minuet ở trang [Ứng tác](/opus/piano/hoa-am/ung-tac/) mở đầu đúng như thế.
+**Giọng khác:** ở Sol trưởng, bass Sol – Fa♯ – Mi – Si, giai điệu Sol – Rê – Sol – Sol; ở Fa trưởng, bass Fa – Mi – Rê – La. Romanesca còn hai dạng bass chính: dạng "nhảy" (xuống quãng 4 rồi lên một bậc, xen nhau: 1–5–6–3, như Đô – Sol – La – Mi) và dạng "đi liền" (bass đi bậc xuống). Theo Gjerdingen, dạng nhảy đặc trưng cho thế kỷ 17 và đầu thế kỷ 18, dạng đi liền cho cuối thế kỷ 18; bass galant 1–7–6–3 là dạng lai, phần đầu giống dạng đi liền, phần sau giống dạng nhảy. Canon của Pachelbel mở đầu bằng dạng nhảy ([bài 29](/opus/nhac-ly/29-chuoi-hoa-am/)).
+**Gặp ở đâu:** đầu bài hay đầu câu; theo sau thường là một mẫu trả lời như Prinner. Minuet ở trang [Ứng tác](/opus/piano/hoa-am/ung-tac/) mở đầu đúng như thế.
 
 ### Do–Re–Mi
 
@@ -233,10 +233,10 @@ Các mẫu trên đều dẫn đến **kết**, dấu chấm câu bạn đã t�
 |---|---|---|---|
 | **Cadenza semplice** (kết đơn) | 3–4–5–1 | 1–2–2–1 | Át âm chỉ một bước |
 | **Cadenza composta** (kết ghép) | 3–4–5–5–1 | 1–2–3–2–1 | Bass giữ 5 hai bước: hợp âm 6/4 ở kết, rồi V |
-| **Cadenza doppia** (kết kép) | 5 giữ nguyên – 1 | 4–3–2–2–1 | Bass giữ 5 bốn bước; bè giữa đi 5–4–4–3 |
+| **Cadenza doppia** (kết kép) | 5 giữ nguyên – 1 | 4–3–2–2–1 | Bass giữ 5 bốn bước; bè giữa cách bass quãng 5–4–4–3 (Rê – Đô – Đô – Si ở Đô trưởng) |
 | **Kết hội tụ** (converging cadence) | 3–4–♯4–5 | 3–2–1–7 | Kết nửa: bass đi lên, giai điệu đi xuống, gặp nhau ở át âm |
 
-Cadenza composta chính là I – IV – I6/4 – V – I bạn đã biết, với ii6/5 thay cho IV.
+Cadenza composta gần với I – IV – I6/4 – V – I bạn đã biết: ii6/5 thay cho IV, và hợp âm I đầu ở thể đảo 1 (bass bậc 3).
 
 ```abc
 X:8
@@ -266,7 +266,7 @@ K:C
 
 ### Quiescenza
 
-**Quiescenza** (sự lắng yên) đến sau kết: bass giữ chủ âm, giai điệu ♭7–6–♮7–1, bè giữa 3–4–4–3. Si♭ thoáng nghiêng về hạ át âm, Si♮ kéo trở lại, nhạc như thở ra trước khi dừng hẳn.
+**Quiescenza** đến sau kết: bass giữ chủ âm, giai điệu ♭7–6–♮7–1, bè giữa 3–4–4–3. Si♭ thoáng nghiêng về hạ át âm, Si♮ kéo trở lại, nhạc như thở ra trước khi dừng hẳn.
 
 ```abc
 X:9

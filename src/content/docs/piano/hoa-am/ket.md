@@ -14,7 +14,7 @@ Khi đổi hợp âm, dùng **dẫn bè** gần nhất ([bài 12](/opus/nhac-ly/
 1. Nốt chung của hai hợp âm giữ nguyên.
 2. Các nốt khác đi đến nốt gần nhất của hợp âm mới, thường là một bước liền.
 3. Cảm âm (Si ở Đô trưởng) đi lên chủ âm; nốt 7 của V7 (Fa) đi xuống.
-4. Không để hai bè đi song song quãng 5 hoặc quãng 8: hai bè nhập làm một và mất tính độc lập. Giữ quy tắc 1 và 2 thì hầu như tự tránh được.
+4. Không để hai bè đi song song quãng 5 hoặc quãng 8: hai bè nhập làm một và mất tính độc lập.
 
 Cùng một hợp âm, tay phải có ba cách xếp. Ta gọi tên **vị trí** theo nốt trên cùng của hợp âm I: **vị trí quãng 8** (chủ âm ở trên: Mi–Sol–Đô), **vị trí quãng 3** (Sol–Đô–Mi) và **vị trí quãng 5** (Đô–Mi–Sol). Hãy tập cả ba, vì khi đệm cho một giai điệu, nốt giai điệu nằm trên cùng sẽ chọn vị trí cho bạn.
 
@@ -54,7 +54,7 @@ Tay trái giữ một thế cho cả trang: ngón 1 trên Đô3, ngón 5 trên F
 
 ## Bốn loại kết
 
-Vị trí quãng 8 ở ví dụ trên kết bằng **kết trọn**: V và I đều ở thể gốc, bè trên về chủ âm. Hai vị trí kia có cùng các hợp âm, nhưng bè trên dừng ở nốt ba hoặc nốt năm, nên là **kết chưa trọn**: đã kết nhưng còn hơi mở. Ba loại kết còn lại, cũng ở vị trí quãng 8:
+Bốn loại kết ở trang này là kết trọn, kết nửa, kết plagal và kết lừa, như ở [công cụ nhận biết kết](/opus/luyen-tai/nghe-tien-trinh/#luyen-voi-cong-cu). Vị trí quãng 8 ở ví dụ trên kết bằng **kết trọn**: V và I đều ở thể gốc, bè trên về chủ âm. Hai vị trí kia có cùng các hợp âm, nhưng bè trên dừng ở nốt ba hoặc nốt năm, nên là **kết chưa trọn**: vẫn là kết V–I, đã kết nhưng còn hơi mở. Trang này tính kết trọn và kết chưa trọn là hai dạng của cùng một loại kết V–I; [bài 13](/opus/nhac-ly/13-ket/) xếp chúng thành hai dòng riêng. Ba loại kết còn lại, cũng ở vị trí quãng 8:
 
 - **Kết nửa** dừng ở V, như một dấu phẩy hay một câu hỏi. Ở đây là I–vi–IV–V: Mi và Đô giữ nguyên khi sang vi (La–Đô–Mi), rồi Mi lên Fa ở IV.
 - **Kết plagal** IV–I, tiếng "A-men" cuối thánh ca. Nốt Đô trên cùng giữ suốt; chỉ hai nốt dưới đổi.
@@ -84,7 +84,7 @@ K:C
 
 ## I6/4 trước át âm
 
-Trong **I–IV–I6/4–V–I**, tay phải chơi lại đúng hình hợp âm I, nhưng tay trái đã sang át âm. Đô–Mi–Sol với Sol ở bass (I6/4, thể đảo 2) nghe như một V còn đang "treo", và chỉ yên khi Mi xuống Rê, Đô xuống Si. Đây là **hợp âm 6/4 ở kết** (cadential 6/4); trong concerto thời Cổ điển, cadenza của nghệ sĩ độc tấu thường bắt đầu từ chính hợp âm này.
+Trong **I–IV–I6/4–V–I**, tay phải chơi lại đúng hình hợp âm I, nhưng tay trái đã sang át âm. Đô–Mi–Sol với Sol ở bass (I6/4, thể đảo 2) nghe như một V còn đang "treo", và chỉ yên khi Mi xuống Rê, Đô xuống Si. Đây là **hợp âm 6/4 ở kết** (cadential 6/4); trong concerto, cadenza của nghệ sĩ độc tấu chen vào kết và bắt đầu từ chính hợp âm này.
 
 Hai quy tắc: I6/4 đứng ở phách mạnh hơn V theo sau nó, và bass giữ nguyên Sol từ I6/4 sang V.
 
@@ -211,7 +211,7 @@ Khi đã đủ 12 cặp, ôn bằng một vòng liền: I–IV–V–I ở Đô,
 Sẵn sàng sang [Đệm cho một giai điệu](/opus/piano/hoa-am/dem-giai-dieu/) khi:
 
 - [ ] Chơi được ba tiến trình ở Đô, Sol, Fa, Rê trưởng, đủ ba vị trí, không nhìn bản nhạc
-- [ ] Chơi được i–iv–V–i và i–ii°6–V7–i ở La, Mi, Rê thứ
+- [ ] Chơi được ba tiến trình i–iv–V–i, i–iv–i6/4–V–i, i–ii°6–V7–i ở La, Mi, Rê thứ
 - [ ] Nghe và gọi đúng tên bốn loại kết ([công cụ nhận biết kết](/opus/luyen-tai/nghe-tien-trinh/#luyen-voi-cong-cu))
 
 ## Kiểm tra nhanh

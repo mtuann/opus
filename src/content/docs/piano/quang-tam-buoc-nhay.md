@@ -74,9 +74,9 @@ K:C
 
 Ngón cái không nối được hai quãng tám liền nhau, nên legato quãng tám là một ảo giác dựng từ ba thứ:
 
-1. **Bè trên nối bằng ngón**: ngón 5 trên phím trắng, ngón 4 trên phím đen. Vì phím đen cao và nằm sâu, ngón 4 vắt qua ngón 5 lên phím đen, hay ngón 5 luồn dưới ngón 4 xuống phím trắng, đều khá dễ. Tay lớn dùng thêm ngón 3 trên phím đen.
+1. **Bè trên nối bằng ngón**, luân phiên ngón 5 và 4: ngón 4 thường nhận phím đen, ngón 5 phím trắng; hai phím trắng liền nhau thì một phím dùng ngón 4 (như Sol – La ở bài 3). Vì phím đen cao và nằm sâu, ngón 4 vắt qua ngón 5 lên phím đen, hay ngón 5 luồn dưới ngón 4 xuống phím trắng, đều khá dễ. Tay lớn dùng thêm ngón 3 trên phím đen.
 2. **Ngón cái trượt** từ phím đen xuống phím trắng ngay cạnh; giữa hai phím trắng nó buộc phải nhấc, nên giữ khoảng hở thật ngắn.
-3. **Tai và bàn đạp**: người nghe theo bè trên; [bàn đạp](/opus/piano/ban-dap/) lấp chỗ hở bên dưới khi phong cách cho phép. Ở bè trầm, legato quãng tám gần như hoàn toàn nhờ bàn đạp, như các quãng tám trầm của [*Ánh trăng*](/opus/piano/tac-pham/beethoven-anh-trang/).
+3. **Tai và bàn đạp**: tai người nghe có xu hướng ưu tiên bè cao nhất (Trainor và cộng sự, 2014; xem Nguồn); [bàn đạp](/opus/piano/ban-dap/) lấp chỗ hở bên dưới khi phong cách cho phép. Ở bè trầm, legato quãng tám gần như hoàn toàn nhờ bàn đạp, như các quãng tám trầm của [*Ánh trăng*](/opus/piano/tac-pham/beethoven-anh-trang/).
 
 Tay trái thì ngược lại: bè dưới (ngón 5, 4, 3) nối bằng ngón, ngón cái ở bè trên trượt.
 
@@ -152,7 +152,7 @@ Cách tập:
 
 ## Bước nhảy tay trái: valse và stride
 
-Hình đệm **nốt trầm – hợp âm** (xem [Hợp âm và hình đệm](/opus/piano/hop-am-rai/)) là bước nhảy gặp nhiều nhất: valse ở nhịp 3/4, nhịp chèo của barcarolle ở 6/8, và kiểu **stride** ở 2/4 như trong ragtime, khi tay nhảy đi nhảy về trên từng phách.
+Hình đệm **nốt trầm – hợp âm** (xem [Hợp âm và hình đệm](/opus/piano/hop-am-rai/)) là một dạng bước nhảy hay gặp của tay trái: valse ở nhịp 3/4, nhịp chèo 6/8 của [Thuyền ca Venice](/opus/piano/tac-pham/mendelssohn-thuyen-ca/), và kiểu **stride** của jazz (lớn lên từ ragtime), khi nốt trầm ở phách mạnh xen với hợp âm và tay nhảy đi nhảy về trên từng phách.
 
 - **Nốt trầm sâu, hợp âm nhẹ.** Ngón 5 mang trọng lượng; hợp âm chỉ chạm phím.
 - **Rời nốt trầm ngay.** Bàn đạp giữ nốt trầm, ngón 5 không cần giữ phím.
@@ -206,7 +206,7 @@ K:D
 
 ## Sức bền và sức khỏe
 
-Quãng tám lặp và bước nhảy dễ làm mỏi tay nếu tập lâu hoặc gồng, nên giảm gồng giữa các quãng tám (xem [Giữ đôi tay khỏe](/opus/piano/suc-khoe/)). Tập quãng tám thành các đợt ngắn xen nghỉ (một gợi ý thường gặp là 20 phút tập, 10 phút nghỉ); tập *mf* cho tới khi tay thả lỏng hẳn rồi mới thêm *f*. Đau, tê hay căng ở cẳng tay, cổ tay, khuỷu: **dừng ngay**, không chơi xuyên cơn đau; đau trở lại thì đi khám.
+Quãng tám lặp và bước nhảy dễ làm mỏi tay nếu tập lâu hoặc gồng, nên giảm gồng giữa các quãng tám (xem [Giữ đôi tay khỏe](/opus/piano/suc-khoe/)). Tập quãng tám thành các đợt ngắn xen nghỉ (BAPAM gợi ý các đợt 20 phút tập xen 10 phút nghỉ); tập *mf* cho tới khi tay thả lỏng hẳn rồi mới thêm *f*. Đau, tê hay căng ở cẳng tay, cổ tay, khuỷu: **dừng ngay**, không chơi xuyên cơn đau; đau trở lại thì đi khám.
 
 ## Tập theo chặng
 
@@ -214,7 +214,7 @@ Quãng tám lặp và bước nhảy dễ làm mỏi tay nếu tập lâu hoặc
 |---|---|---|
 | 4 (≈ Grade 4–5) | Khung tay (bài 1); nốt trầm – hợp âm chậm (bài 5, ô 1–4) | Tay trái của [Gymnopédie số 1](/opus/piano/tac-pham/satie-gymnopedie/); [Op. 49 số 2](/opus/piano/tac-pham/beethoven-op49-2/) ô 15–19; [Prélude Mi thứ](/opus/piano/tac-pham/chopin-prelude-mi-thu/) ô 16–18 |
 | 5 (≈ Grade 6) | Staccato cổ tay (bài 2); quãng tám trầm nối bằng bàn đạp; bài 5, 6 | [*Ánh trăng*](/opus/piano/tac-pham/beethoven-anh-trang/): quãng tám Sol♯ trầm ô 28–39; [Thuyền ca Venice](/opus/piano/tac-pham/mendelssohn-thuyen-ca/) ô 36–39; [Valse Si thứ](/opus/piano/tac-pham/chopin-valse-si-thu/) ô 97 |
-| 6 (≈ Grade 7–8) | Quãng tám legato, quãng tám lặp (bài 3, 4); gam quãng tám hai tay; nhảy nhanh | Tay trái của [Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/); bè trầm [Impromptu Sol♭](/opus/piano/tac-pham/schubert-impromptu-sol-giang/) ô 25–52 |
+| 6 (≈ Grade 7–8) | Quãng tám legato, quãng tám lặp (bài 3, 4); gam quãng tám hai tay; nhảy nhanh | Tay trái của [Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/) |
 | 7 (sau Grade 8) | Quãng tám nhanh, *ff*, sức bền; nhảy xa ở tốc độ cao | [Fantaisie-Impromptu](/opus/piano/tac-pham/chopin-fantaisie-impromptu/) ô 7 và ô 37–40; [Liebestraum số 3](/opus/piano/tac-pham/liszt-liebestraum/) ô 37–60; [Ballade số 1](/opus/piano/tac-pham/chopin-ballade-1/) (đoạn *agitato*, coda) |
 
 Xa hơn nữa: Czerny, *6 Octave Studies* (Sáu étude quãng tám) Op. 553; Theodor Kullak, *Die Schule des Octavenspiels* (Giáo trình chơi quãng tám) Op. 48; Étude Op. 25 số 10 của Chopin, étude quãng tám cho cả hai tay. Chủ đề Étude Op. 10 số 12 cũng đi bằng quãng tám ở tay phải ([hướng dẫn nghe](/opus/nghe-nhac/chopin-etude/)).
@@ -246,7 +246,7 @@ Xa hơn nữa: Czerny, *6 Octave Studies* (Sáu étude quãng tám) Op. 553; The
 + Bè trên, luân phiên ngón 4 và 5 (đôi khi 3)
 - Bè dưới, bằng ngón cái
 - Cả hai bè, bằng ngón 1 và 5
-> Ngón cái không nối được; nó trượt từ phím đen xuống phím trắng, còn tai người nghe theo bè trên.
+> Ngón cái không nối được; nó trượt từ phím đen xuống phím trắng, còn tai người nghe có xu hướng ưu tiên bè cao nhất.
 ? Đang tập quãng tám thì thấy đau cẳng tay. Nên làm gì?
 - Chơi chậm lại và tập tiếp cho quen
 + Dừng ngay, nghỉ, rồi quay lại bằng buổi ngắn, nhỏ tiếng
@@ -261,7 +261,9 @@ Xa hơn nữa: Czerny, *6 Octave Studies* (Sáu étude quãng tám) Op. 553; The
 - Heinrich Neuhaus, *The Art of Piano Playing* (bản tiếng Nga in lần đầu năm 1958): chương về kỹ thuật.
 - Seymour Fink, *Mastering Piano Technique* (Amadeus Press).
 - Thomas Mark, *What Every Pianist Needs to Know About the Body* (GIA Publications, 2003).
-- British Association for Performing Arts Medicine (BAPAM), [The Healthy Pianist](https://crosseyedpianist.com/wp-content/uploads/2016/08/thehealthypianist_bapamfactsheet.pdf): tờ thông tin về tập đàn an toàn.
+- British Association for Performing Arts Medicine (BAPAM), [The Healthy Pianist](https://www.bapam.org.uk/?p=59585): tờ thông tin về tập đàn an toàn.
+- L. J. Trainor, C. Marie, I. C. Bruce, G. M. Bidelman, ["Explaining the high voice superiority effect in polyphonic music"](https://doi.org/10.1016/j.heares.2013.07.014), *Hearing Research* 308 (2014): 60–70.
+- Carnegie Hall, Timeline of African American Music: [Stride Piano](https://timeline.carnegiehall.org/genres/stride-piano).
 - Graham Fitch, [Practising the Piano](https://practisingthepiano.com/).
 - Các bài trên site: [Tư thế, thế tay](/opus/piano/tu-the/), [Giữ đôi tay khỏe](/opus/piano/suc-khoe/), [Bản đồ bàn phím](/opus/piano/ban-do-ban-phim/), [Nốt lặp và nốt kép](/opus/piano/not-lap-not-kep/).
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

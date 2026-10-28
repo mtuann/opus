@@ -87,7 +87,7 @@ Bass chỉ gồm nốt gốc thì nhảy liên tục: Đô–Sol–Đô–Sol. M
 - **V6** (Sol–Si–Rê, Si ở bass) thay V khi bass cần đi Đô–Si.
 - **vi** (La–Đô–Mi) thay I: chung hai nốt Đô, Mi, mang màu thứ.
 - **ii6** (Rê–Fa–La, Fa ở bass) thay IV: chung hai nốt Fa, La.
-- **I6/4–V** ở kết nửa, như ở trang [Kết ở mọi giọng](/opus/piano/hoa-am/ket/).
+- **I6/4–V** ở kết nửa: cùng hợp âm 6/4 ở kết bạn đã tập trong I–IV–I6/4–V–I ở trang [Kết ở mọi giọng](/opus/piano/hoa-am/ket/#i64-truoc-at-am), nhưng dừng ở V.
 
 Giữa bass và giai điệu có hai quy tắc. Đi **ngược hướng**, hoặc song song quãng 3, quãng 6, quãng 10. Không đi song song quãng 5 hay quãng 8. Phiên bản dưới đây chỉ có hai bè, nhưng tai tự điền phần còn lại: bass đi xuống từng bậc Đô–Si–La–Sol, ngược với những đoạn giai điệu đi lên. Cả bè nằm gọn trong một thế tay trái, ngón 5 trên Fa2 và ngón 1 trên Đô3.
 

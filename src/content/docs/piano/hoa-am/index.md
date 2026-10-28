@@ -3,18 +3,18 @@ title: Hòa âm bên phím và ứng tác
 description: "Phần này dạy bạn chơi hòa âm bằng hai bàn tay chứ không chỉ hiểu nó trên giấy: kết ở mọi giọng, tự đệm cho một giai điệu, rồi ứng tác những đoạn ngắn theo…"
 ---
 
-Phần này dạy bạn chơi hòa âm bằng hai bàn tay chứ không chỉ hiểu nó trên giấy: kết ở mọi giọng, tự đệm cho một giai điệu, rồi ứng tác những đoạn ngắn theo phong cách cổ điển. Dành cho người lớn đã xong chặng sơ cấp, từ khoảng Grade 2 đến trung cấp.
+Phần này dạy bạn chơi hòa âm bằng hai bàn tay chứ không chỉ hiểu nó trên giấy: kết ở mọi giọng, tự đệm cho một giai điệu, rồi ứng tác những đoạn ngắn theo phong cách cổ điển. Dành cho người lớn đã xong chặng sơ cấp (chặng 2 của [lộ trình](/opus/piano/lo-trinh/), khoảng Grade 1–2), cho đến hết chặng trung cấp.
 
 ## Vì sao người chơi cổ điển cần hòa âm bên phím
 
-Nhiều người học piano cổ điển đọc từng nốt, tập từng ô và chưa bao giờ chơi một hợp âm mà bản nhạc không ghi. **Hòa âm bên phím** (keyboard harmony) là chơi các tiến trình hợp âm bằng tay, kể cả những nốt không ghi sẵn trên bản nhạc, và chuyển chúng sang các giọng khác. Nó cho bạn bốn thứ:
+Nhiều người học piano cổ điển đọc từng nốt, tập từng ô và chưa bao giờ chơi một hợp âm mà bản nhạc không ghi. **Hòa âm bên phím** (keyboard harmony) là chơi các tiến trình hợp âm bằng tay, kể cả những nốt không ghi sẵn trên bản nhạc, và chuyển chúng sang các giọng khác. Nó gắn với bốn việc của người chơi đàn:
 
-| Bạn được gì | Vì sao |
+| Việc | Hòa âm bên phím góp gì |
 |---|---|
-| **Đọc nhạc nhanh hơn** | Mắt nhận ra cả một khối như I–IV–V–I hay một kết, và tay đã quen hình. [Thị tấu](/opus/piano/thi-tau/) bớt đoán mò. |
-| **Học thuộc chắc hơn** | "Câu này đi I–V, dừng ở kết nửa" bền hơn một chuỗi nốt rời. Khi lỡ quên, bạn vẫn có điểm bám ([học thuộc và biểu diễn](/opus/piano/hoc-thuoc-bieu-dien/)). |
-| **Hiểu bản nhạc** | Biết câu nhạc đang rời nhà hay sắp về nhà giúp bạn chọn sắc thái, chỗ thở và rubato. |
-| **Tự do ứng tác** | Có sẵn vốn tiến trình và mẫu, bạn dạo được một đoạn mở đầu, biến tấu một giai điệu, tự nối hai bài trong một buổi chơi đàn. |
+| **Đọc nhạc** | Một phần lớn của đọc nhanh là nhận ra hình mẫu ([Thị tấu](/opus/piano/thi-tau/)); I–IV–V–I hay một kết là những hình mẫu như thế, và tay bạn đã quen chúng. |
+| **Học thuộc** | Hiểu khung hòa âm ("câu này đi I–V, dừng ở kết nửa") là phần trí nhớ phân tích, cho bạn chỗ để bám lại khi lỡ quên ([học thuộc và biểu diễn](/opus/piano/hoc-thuoc-bieu-dien/)). |
+| **Hiểu bản nhạc** | Chơi tiến trình bằng tay luyện cả tai lẫn đầu óc, không chỉ ngón tay: bạn nghe ra câu nhạc đang rời nhà hay sắp về nhà. |
+| **Ứng tác** | Có sẵn vốn tiến trình và mẫu, bạn dạo được một đoạn mở đầu, biến tấu một giai điệu, tự nối hai bài trong một buổi chơi đàn. |
 
 Đây cũng là cách người chơi đàn phím được đào tạo trong nhiều thế kỷ. Thời Baroque, người chơi đàn phím khi đệm thường chỉ có trước mặt một bè bass, đôi khi kèm các con số ([bè trầm số](/opus/nhac-ly/25-be-tram-so/)), và tự chơi hợp âm bên trên. Ở các nhạc viện Napoli thế kỷ 18, học trò luyện **partimento**: những bè bass được hoàn thiện thành nhạc ngay trên bàn phím. Carl Philipp Emanuel Bach dành phần hai cuốn *Versuch über die wahre Art das Clavier zu spielen* (Tiểu luận về cách chơi đàn phím đúng đắn, 1762) cho việc đệm, và kết thúc bằng fantasia tự do, tức ứng tác. Mozart và Beethoven đều nổi tiếng là những người ứng tác xuất sắc trước công chúng.
 
@@ -51,8 +51,8 @@ Mỗi trang có kế hoạch 4 tuần riêng; bảng dưới ghép chúng lại.
 | 3 | Kết | I–ii6–V7–I | Fa / Rê thứ |
 | 4 | Kết | Giọng thứ; tự kiểm tra | Rê / Si thứ |
 | 5 | Đệm | Chọn I hay V7 dưới giai điệu | Si♭ / Sol thứ |
-| 6 | Đệm | Nhịp hòa âm; bè bass liền bậc | La / Fa♯ thứ |
-| 7 | Đệm | ii, vi, I6/4; lắp hình đệm | Mi♭ / Đô thứ |
+| 6 | Đệm | Nhịp hòa âm; bè bass liền bậc (V6, vi, ii6, I6/4) | La / Fa♯ thứ |
+| 7 | Đệm | Lắp hình đệm: bass Alberti, "bass – hợp âm" | Mi♭ / Đô thứ |
 | 8 | Đệm | Tự đệm một giai điệu mới | Mi / Đô♯ thứ |
 | 9 | Mẫu galant, ứng tác | Mẫu đầu tiên; ứng tác trên I–IV–V–I | La♭ / Fa thứ |
 | 10 | Mẫu galant, ứng tác | Thêm mẫu; biến tấu một giai điệu đã đệm | Si / Sol♯ thứ |

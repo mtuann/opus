@@ -126,7 +126,7 @@ K:C
 
 ## 4. Hänschen klein
 
-*Dân ca Đức (tiếng Anh: Lightly Row).* Đô trưởng. **Học được:** **hợp âm ba nốt** ở tay trái và đổi giữa hai hình: hợp âm chủ **Đô – Mi – Sol** (ngón 5-3-1) và hợp âm át bảy **Si – Fa – Sol** (ngón 5-2-1). Ngón cái giữ nguyên trên Sol; ngón 5 dời xuống Si, ngón 2 đặt lên Fa.
+*Bài hát thiếu nhi Đức.* Đô trưởng. **Học được:** **hợp âm ba nốt** ở tay trái và đổi giữa hai hình: hợp âm chủ **Đô – Mi – Sol** (ngón 5-3-1) và hợp âm bảy át **Si – Fa – Sol** (ngón 5-2-1). Ngón cái giữ nguyên trên Sol; ngón 5 dời xuống Si, ngón 2 đặt lên Fa.
 
 ```abc
 X:4
@@ -329,6 +329,6 @@ Chơi được 10 bài này ở tốc độ vừa phải, không dừng, nghĩa 
 
 ## Nguồn
 
-- Giai điệu: dân ca Pháp, Đức, Anh; thánh ca "New Britain"; Beethoven, Giao hưởng số 9 và Bagatelle WoO 59; Dvořák, Giao hưởng số 9; Petzold, Minuet BWV Anh. 114.
+- Giai điệu: dân ca Pháp, Anh; bài hát thiếu nhi Đức; thánh ca "New Britain"; Beethoven, Giao hưởng số 9 và Bagatelle WoO 59; Dvořák, Giao hưởng số 9; Petzold, Minuet BWV Anh. 114.
 - Bản nhạc đã đối chiếu: Mutopia Project (*Ode to Joy*, Minuet BWV Anh. 114, *Für Elise*, *Greensleeves*, *New Britain*) và IMSLP (Minuet BWV Anh. 114, *Für Elise*).
 - Phần soạn hai tay và số ngón: Opus. Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

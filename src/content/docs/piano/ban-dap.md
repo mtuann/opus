@@ -10,19 +10,19 @@ Bàn đạp nối những gì ngón tay không nối được, làm tiếng đà
 | Vị trí | Tên | Trên đàn cánh (đàn đại) | Trên đàn đứng |
 |---|---|---|---|
 | Phải | **Bàn đạp vang** (damper, sustain) | Nhấc mọi bộ giảm âm khỏi dây | Như đàn cánh |
-| Trái | **Una corda** (soft pedal) | Dịch cả bàn phím và bộ máy sang phải: ở âm vực mỗi nốt có ba dây, búa chỉ gõ hai, bằng phần nỉ chưa bị dây in rãnh. Tiếng nhỏ hơn, mềm và tối lại | Đưa cả hàng búa lại gần dây; búa đi quãng ngắn hơn nên tiếng nhỏ hơn, nhưng màu tiếng gần như không đổi và cảm giác phím hơi khác |
-| Giữa | **Bàn đạp giữ âm** (*sostenuto*) | Chỉ giữ nhấc những bộ giảm âm đang được nhấc vào lúc nhấn bàn đạp, tức của những phím đang giữ | Thường là **bàn đạp tập**: hạ một dải nỉ vào giữa búa và dây để giảm tiếng (nhiều đàn gạt sang bên để khóa). Một số đàn đứng có sostenuto thật, hoặc bàn đạp chỉ nhấc bộ giảm âm phần trầm |
+| Trái | **Una corda** (soft pedal) | Dịch cả bàn phím và bộ máy sang bên, để búa gõ ít dây hơn ở mỗi nốt. Tiếng nhỏ hơn và đổi màu | Đưa cả hàng búa lại gần dây; búa đi quãng ngắn hơn nên tiếng nhỏ hơn |
+| Giữa | **Bàn đạp giữ âm** (*sostenuto*) | Chỉ giữ nhấc những bộ giảm âm đang được nhấc vào lúc nhấn bàn đạp, tức của những phím đang giữ | Một số đàn đứng có sostenuto thật. Nếu bàn đạp giữa của đàn bạn không phải sostenuto, xem sách hướng dẫn của đàn để biết nó làm gì |
 
-Tên *una corda* ("một dây") có từ thời đàn của Cristofori, khi bộ máy dịch sang bên để búa chỉ gõ một dây; trong Concerto số 4, Beethoven còn ghi cả *una corda*, *due corde* và *tre corde*. Lịch sử của bàn đạp, từ cần gạt bằng đầu gối đến sostenuto, ở trang [lịch sử cây đàn](/opus/piano/lich-su-dan/).
+*Una corda* nghĩa là "một dây". Hai cây đàn còn lại của Cristofori (1722 và 1726) có bàn phím trượt được sang bên, để búa chỉ gõ một trong hai dây của mỗi nốt. Lịch sử của bàn đạp, từ cần gạt bằng đầu gối đến sostenuto, ở trang [lịch sử cây đàn](/opus/piano/lich-su-dan/).
 
-**Piano điện.** Bàn đạp đi kèm nhiều đàn là loại **công tắc**: chỉ có bật và tắt, không có nửa bàn đạp. Loại tốt hơn có **cảm biến liên tục** đọc được độ sâu, nên dùng được nửa bàn đạp. Nhiều đàn có **bộ ba bàn đạp** gắn vào chân đàn hoặc bán rời; khi đó bàn đạp giữa thường là sostenuto, bàn đạp trái làm tiếng nhỏ và tối đi. Đàn tốt còn mô phỏng cộng hưởng dây khi nhấn bàn đạp. Nếu bạn định học đến trình độ trung cấp, bàn đạp liên tục là khoản đáng đầu tư (xem [chọn đàn](/opus/piano/chon-dan/)).
+**Piano điện.** Có bàn đạp chỉ là **công tắc** bật – tắt, và có bàn đạp dùng được **nửa bàn đạp** (*half-damper*). Nếu bạn định học đến trình độ trung cấp, bàn đạp dùng được nửa bàn đạp là khoản đáng đầu tư (xem [chọn đàn](/opus/piano/chon-dan/)).
 
 ## Bàn đạp vang hoạt động thế nào
 
 - Mỗi nốt có một **bộ giảm âm** bọc nỉ nằm sẵn trên dây. Bấm phím, bộ giảm âm của nốt đó nhấc lên; nhả phím, nó rơi xuống chặn dây và tiếng tắt.
-- Bàn đạp vang nhấc **tất cả** bộ giảm âm cùng lúc. Nốt vẫn ngân sau khi nhả phím, và mọi dây khác cũng được tự do rung: đó là **cộng hưởng giao cảm**. Dây nào trùng tần số với một bồi âm của nốt đang vang sẽ rung khẽ theo, tạo một quầng âm thanh ấm quanh nốt. Vì vậy một nốt có bàn đạp nghe khác hẳn cùng nốt ấy giữ bằng ngón, dù dài như nhau.
-- Các nốt cao nhất (cỡ quãng tám trên cùng, tùy đàn) không có bộ giảm âm: dây ngắn, tự tắt nhanh.
-- Bàn đạp không phải công tắc. Độ sâu quyết định bộ giảm âm nhấc cao hay thấp; nhả nhanh hay chậm quyết định tiếng tắt gọn hay có đuôi. Phần lớn nghệ thuật bàn đạp nằm ở những chuyển động nhỏ quanh điểm bộ giảm âm vừa rời dây.
+- Bàn đạp vang nhấc **tất cả** bộ giảm âm cùng lúc. Nốt vẫn ngân sau khi nhả phím, và mọi dây khác cũng được tự do rung theo những nốt đang chơi: đó là **cộng hưởng giao cảm**. Vì vậy một nốt có bàn đạp nghe khác hẳn cùng nốt ấy giữ bằng ngón, dù dài như nhau.
+- Các nốt ở âm vực cao nhất (cỡ hai quãng tám trên cùng, tùy đàn) không có bộ giảm âm.
+- Bàn đạp không phải công tắc: có thể đạp nông hay sâu (như nửa bàn đạp, khi bộ giảm âm chỉ chạm nhẹ dây) và nhả nhanh hay chậm. Hãy tập cho chân quen những chuyển động nhỏ quanh điểm bộ giảm âm vừa rời dây.
 
 :::tip[Nghe cộng hưởng giao cảm]
 Bấm câm (không cho kêu) hợp âm Đô4–Mi4–Sol4 và giữ phím. Tay kia đánh mạnh rồi nhả ngay nốt Đô2. Bạn sẽ nghe hợp âm vang khẽ lên: các dây không bị chặn rung theo bồi âm của nốt Đô trầm. Bàn đạp vang làm điều đó với mọi dây cùng lúc. Về bồi âm, xem [âm học](/opus/nhac-ly/am-hoc/).
@@ -32,10 +32,8 @@ Bấm câm (không cho kêu) hợp âm Đô4–Mi4–Sol4 và giữ phím. Tay k
 
 | Ký hiệu | Nghĩa |
 |---|---|
-| *Ped.* … ✱ (dấu sao) | Nhấn bàn đạp vang ở *Ped.*, nhả ở dấu sao. Một chữ *Ped.* mới mà không có dấu sao trước đó nghĩa là đổi bàn đạp: nhả rồi nhấn lại |
-| Đường kẻ dưới khuông, có móc ở hai đầu | Nhấn ở đầu đường kẻ, nhả ở cuối; mỗi chỗ gãy nhọn (∧) là một lần nhả rồi nhấn lại ngay |
-| *con pedale*, *con Ped.* | Dùng bàn đạp; người chơi tự quyết chỗ đổi |
-| *senza pedale*, *senza Ped.* | Không dùng bàn đạp |
+| *Ped.* … ✱ (dấu sao) | Nhấn bàn đạp vang ở *Ped.*, nhả ở dấu sao. Trong các bài trên site này, một chữ *Ped.* mới mà không có dấu sao trước đó nghĩa là đổi bàn đạp: nhả rồi nhấn lại |
+| Đường kẻ dưới khuông, có vạch dọc ở hai đầu | Nhấn ở đầu đường kẻ, giữ đến vạch dọc ở cuối thì nhả; chỗ gãy nhọn (∧) trên đường kẻ là nửa bàn đạp: nhả một phần rồi nhấn lại |
 | *Ped. simile* | Tiếp tục đạp như các ô trước |
 | *una corda* (*u.c.*) | Nhấn bàn đạp trái |
 | *tre corde* (*t.c.*), *tutte le corde* | Nhả bàn đạp trái |
@@ -105,15 +103,15 @@ K:C
 [V:LH] !5!C,-"_Ped."C, [E,G,]2 [E,G,]2 | "_*"F,,-"_Ped."F,, [F,A,]2 [F,A,]2 | "_*"G,,-"_Ped."G,, [F,B,]2 [F,B,]2 | "_*"C,-"_Ped."C, [E,G,]2 [E,G,]2 | "_*"A,,-"_Ped."A,, [E,A,]2 [E,A,]2 | "_*"D,-"_Ped."D, [F,A,]2 [F,A,]2 | "_*"G,,-"_Ped."G,, [F,B,]2 [F,B,]2 | "_*"C,-"_Ped."C, [E,G,]4 |]
 ```
 
-Ô 6 là chỗ cần nghe: giai điệu Fa–Mi–Rê đi bậc liền trên cùng một hợp âm, nên dưới bàn đạp, Mi và Rê chồng lên nhau. Nếu nghe nhòe, đổi hẳn bàn đạp ở phách 3 sẽ làm mất nốt trầm Rê. Thử cách khác: đạp nông hơn ngay từ đầu ô, hoặc nhả **một nửa** rồi nhấn lại thật nhanh ở phách 3 (nửa bàn đạp, xem dưới): dây cao tắt trước, dây trầm còn ngân.
+Ô 6 là chỗ cần nghe: giai điệu Fa–Mi–Rê đi bậc liền trên cùng một hợp âm, nên dưới bàn đạp, Mi và Rê chồng lên nhau. Nếu nghe nhòe, đổi hẳn bàn đạp ở phách 3 sẽ làm mất nốt trầm Rê. Thử cách khác: đạp nông hơn ngay từ đầu ô, hoặc nhả **một nửa** rồi nhấn lại thật nhanh ở phách 3 (nửa bàn đạp, xem dưới), rồi nghe xem nốt trầm Rê còn ngân không.
 
 ## Các kiểu đạp khác
 
 | Kiểu | Cách làm | Dùng khi |
 |---|---|---|
-| **Đạp cùng lúc** (đạp theo nhịp) | Nhấn bàn đạp cùng lúc với phím, nhả trước nốt sau | Hợp âm ngắn cần vang; nhấn phách mạnh trong valse, mazurka |
+| **Đạp cùng lúc** (đạp theo nhịp, *direct* hay *rhythmic pedal*) | Nhấn bàn đạp cùng lúc với phím, nhả trước nốt sau | Hợp âm ngắn cần vang; nhấn phách mạnh trong valse, mazurka |
 | **Đạp trước** | Nhấn bàn đạp trước khi chơi | Mở đầu một bài hay sau dấu lặng, để nốt đầu có cộng hưởng ngay |
-| **Nửa bàn đạp** | Hoặc chỉ nhấn nông, bộ giảm âm vừa rời dây; hoặc khi đổi, chỉ nhả một nửa rồi nhấn lại: dây cao (ngắn, nhẹ) tắt, dây trầm (dài, nặng) còn ngân | Giữ nốt trầm qua những thay đổi ở âm vực cao; làm mờ vừa phải |
+| **Nửa bàn đạp** | Hoặc chỉ nhấn nông, bộ giảm âm chạm nhẹ dây; hoặc khi đổi, chỉ nhả một nửa rồi nhấn lại | Làm mờ vừa phải; thử giữ nốt trầm qua những thay đổi ở âm vực cao, nghe xem nốt trầm còn ngân không |
 | **Rung bàn đạp** (*flutter pedal*) | Nhả và nhấn rất nhanh, nông, liên tục | Bớt dần độ vang mà không cắt hẳn; đoạn chạy nhanh có bàn đạp |
 | **Bàn đạp giữ âm** | Bấm nốt (thường là nốt trầm), nhấn bàn đạp giữa trong khi giữ phím, rồi nhả phím | Giữ một nốt trầm dài trong khi phía trên chơi staccato hoặc đổi bàn đạp vang |
 | **Una corda** | Nhấn bàn đạp trái, có thể giữ suốt một đoạn | Màu tiếng mềm, xa; không thay cho kỹ thuật chơi nhỏ bằng ngón |
@@ -121,8 +119,8 @@ K:C
 ## Khi nào đổi bàn đạp
 
 - **Khi hòa âm đổi.** Đây là quy tắc gốc, thường trùng với nốt trầm mới. Đổi theo hòa âm, không theo vạch nhịp: có ô nhịp chứa hai hòa âm, có hòa âm kéo dài nhiều ô.
-- **Khi giai điệu đi bậc liền** trong cùng một hòa âm, các nốt chồng lên nhau và nhòe, nhất là ở âm vực giữa và khi chơi chậm. Ở âm vực cao, tiếng tắt nhanh nên nhòe ít hơn. Không quy tắc nào thay được tai: nghe, rồi chọn đổi thêm, đạp nông hay nửa bàn đạp.
-- **Ở âm vực trầm**, cùng một độ sâu bàn đạp nghe đục hơn nhiều: đổi thường hơn hoặc đạp nông.
+- **Khi giai điệu đi bậc liền** trong cùng một hòa âm, các nốt chồng lên nhau và nhòe, nhất là khi chơi chậm. Không quy tắc nào thay được tai: nghe, rồi chọn đổi thêm, đạp nông hay nửa bàn đạp.
+- **Ở âm vực trầm**, nghe kỹ xem có đục không; nếu có, đổi thường hơn hoặc đạp nông.
 - **Ở dấu lặng và cuối câu**, nhả bàn đạp cùng lúc nhấc tay; nếu không, dấu lặng không còn là lặng và câu nhạc không "thở".
 - **Theo đàn và phòng.** Đàn ngân dài, phòng vang: dùng ít hơn. Phòng khô, đàn nhỏ: có thể dùng nhiều hơn. Mỗi cây đàn mới cần được "đạp thử" lại.
 
@@ -134,11 +132,11 @@ Phần lớn nhạc phím của Bach viết cho harpsichord, clavichord và orga
 
 - **Legato bằng ngón trước hết**: đổi ngón trên phím, luồn ngón, vắt ngón (xem [tạo tiếng đàn](/opus/piano/tieng-dan/)). Mỗi bè phải nghe rõ đường đi của mình.
 - Nếu dùng bàn đạp, dùng **ít, ngắn và nông**: làm ấm một hợp âm, nối một bước nhảy mà ngón không nối được, giữ nốt trầm ở chỗ kết. Đừng để nó làm nhòe hai bè đang đi bậc liền.
-- Những bản viết bằng hợp âm rải như [Prelude Đô trưởng BWV 846](/opus/piano/tac-pham/bach-prelude-do/) là trường hợp riêng: có người đổi bàn đạp mỗi ô nhịp theo hòa âm, có người chỉ giữ nốt bằng ngón đúng như bản nhạc ghi.
+- Với những bản viết bằng hợp âm rải như [Prelude Đô trưởng BWV 846](/opus/piano/tac-pham/bach-prelude-do/), bạn có thể đổi bàn đạp mỗi ô nhịp theo hòa âm, hoặc chỉ giữ nốt bằng ngón đúng như bản nhạc ghi; bài học Prelude bàn hai cách này.
 
 ### Mozart
 
-Đàn fortepiano thời Mozart nhấc bộ giảm âm bằng **cần gạt bằng đầu gối** chứ chưa có bàn đạp; cây đàn Anton Walter của Mozart có loại cần gạt này. Mozart gần như không ghi bàn đạp vào bản nhạc, nhưng điều đó không có nghĩa là ông không dùng. Trên piano hiện đại:
+Đàn fortepiano của Stein, mà Mozart rất khen năm 1777, nhấc bộ giảm âm bằng **cần gạt bằng đầu gối**; trong thư, Mozart viết rằng cơ cấu điều khiển bằng đầu gối của đàn này tốt hơn ở các đàn khác. Mozart ít ghi bàn đạp vào bản nhạc (chương 1 Sonata K. 545, chẳng hạn, không có ký hiệu bàn đạp nào), nhưng điều đó không có nghĩa là ông không dùng. Trên piano hiện đại:
 
 - Bàn đạp **ngắn và nông**, như một chút ánh sáng: làm ấm nốt dài của một giai điệu hát, giữ nốt trầm của bass Alberti qua vài phách, nối hai hợp âm.
 - Không để bàn đạp xóa staccato, dấu luyến hai nốt và các chỗ ngắt: đó là "lời nói" của nhạc Mozart.
@@ -146,15 +144,13 @@ Phần lớn nhạc phím của Bach viết cho harpsichord, clavichord và orga
 
 ### Beethoven
 
-Beethoven ghi bàn đạp thường xuyên hơn hẳn Mozart, và nhiều chỉ dẫn của ông là một phần của ý tưởng âm thanh. Ví dụ nổi tiếng nhất là chương 1 Sonata *Ánh trăng* (Op. 27 số 2): đầu chương, ông ghi *senza sordino*, "không có bộ giảm âm". Thời đó *sordini* là bộ giảm âm, nên chỉ dẫn này nghĩa là giữ bộ giảm âm nhấc lên, tức giữ bàn đạp vang, suốt chương.
+Theo *Concise Oxford Dictionary of Music*, Beethoven là người đầu tiên tận dụng trọn vẹn bàn đạp vang. Một ví dụ nổi tiếng là chương 1 Sonata *Ánh trăng* (Op. 27 số 2): đầu chương, ông ghi *senza sordino*, "không có bộ giảm âm". Thời đó *sordini* là bộ giảm âm, nên chỉ dẫn này nghĩa là giữ bộ giảm âm nhấc lên, tức giữ bàn đạp vang, suốt chương.
 
-Trên đàn Vienna đầu thế kỷ 19, tiếng tắt nhanh và âm vực trầm nhẹ, nên giữ bàn đạp suốt chỉ tạo một lớp sương mỏng; trên đàn hiện đại, giữ nguyên bàn đạp qua các lần đổi hòa âm sẽ thành một khối âm thanh hỗn độn. Nguyên văn chỉ dẫn, ba cách đọc thường gặp và cách tập bàn đạp cho chương này nằm ở bài học [Sonata *Ánh trăng*, chương 1](/opus/piano/tac-pham/beethoven-anh-trang/#ban-ap-senza-sordino).
+Trên đàn thời Beethoven, tiếng ngân ngắn hơn đàn hiện đại, nên giữ bàn đạp suốt chỉ tạo một lớp sương mỏng; trên đàn hiện đại, giữ nguyên bàn đạp qua các lần đổi hòa âm sẽ thành một khối âm thanh hỗn độn. Nguyên văn chỉ dẫn, ba cách đọc thường gặp và cách tập bàn đạp cho chương này nằm ở bài học [Sonata *Ánh trăng*, chương 1](/opus/piano/tac-pham/beethoven-anh-trang/#ban-ap-senza-sordino).
 
 ### Chopin
 
-Chopin tự ghi bàn đạp kỹ: *Ped.* và dấu sao xuất hiện thường xuyên trong bản thảo và các bản in đầu tiên của ông.
-
-- **Bắt đầu từ ký hiệu của chính Chopin**, trong một bản Urtext. Trong Wydanie Narodowe (bản Ekier), chỉ dẫn do người biên tập thêm vào được đặt trong ngoặc vuông; phương án khác cũng có nguồn gốc từ tác giả thì đặt trong ngoặc tròn.
+- **Bắt đầu từ ký hiệu bàn đạp của chính Chopin**, trong một bản Urtext. Trong Wydanie Narodowe (bản Ekier), chỉ dẫn do người biên tập thêm vào được đặt trong ngoặc vuông; phương án khác cũng có nguồn gốc từ tác giả thì đặt trong ngoặc tròn.
 - **Nhiều chỗ Chopin giữ bàn đạp dài hơn bạn nghĩ.** Ở bốn ô cuối Nocturne Op. 27 số 2 (Rê♭ trưởng), ông ghi một lần đạp duy nhất; phần bình giải của Wydanie Narodowe khuyên giữ đúng như vậy, vì hiệu quả vẫn rất đẹp trên đàn hiện đại.
 - **Legato hòa âm**: bàn đạp của Chopin thường đi cùng việc ngón giữ các nốt của hòa âm trong lúc chân đổi bàn đạp, nên âm thanh không bị hở.
 - Trên đàn hiện đại, ở âm vực trầm hoặc khi giai điệu đi bậc liền, có thể phải đổi thêm, đạp nông hay rung bàn đạp. Điều chỉnh để giữ ý định của ông (nốt trầm ngân, hòa âm hòa quyện), không phải để xóa nó.
@@ -163,9 +159,9 @@ Chopin tự ghi bàn đạp kỹ: *Ped.* và dấu sao xuất hiện thường x
 
 ### Debussy
 
-Debussy ghi rất ít bàn đạp và để việc ấy cho người chơi, nhưng bàn đạp là một phần màu âm thanh của ông: các hòa âm hòa vào nhau như những lớp màu nước, nốt trầm ngân dài dưới những hợp âm đổi phía trên, tiếng ngân được để tự tan.
+Khi chơi Debussy, hãy coi bàn đạp là một phần màu âm thanh: để các hòa âm hòa vào nhau như những lớp màu nước, nốt trầm ngân dài dưới những hợp âm đổi phía trên, tiếng ngân tự tan.
 
-- **Nửa bàn đạp** và đổi một phần: làm sạch âm vực cao mà nốt trầm vẫn ngân.
+- **Nửa bàn đạp** và đổi một phần: thử làm sạch âm vực cao mà vẫn giữ nốt trầm.
 - **Rung bàn đạp** khi độ vang dồn lên quá nhiều, thay vì đổi hẳn.
 - **Đạp trước** khi bắt đầu một đoạn *pp*, để tiếng có quầng ngay từ nốt đầu.
 - **Una corda** để đổi màu (mờ, xa), không chỉ để nhỏ.
@@ -210,10 +206,10 @@ Debussy ghi rất ít bàn đạp và để việc ấy cho người chơi, như
 - Sau khi hợp âm mới đã ngân hết
 > Tay xuống thì chân lên: hợp âm cũ tắt, hợp âm mới vẫn kêu vì ngón đang giữ phím.
 ? Trên đàn cánh, bàn đạp una corda làm gì?
-- Hạ một dải nỉ vào giữa búa và dây
+- Giữ nhấc bộ giảm âm của những phím đang giữ
 + Dịch bộ máy sang bên để búa gõ ít dây hơn
 - Đưa búa lại gần dây
-> Hạ dải nỉ là bàn đạp tập của đàn đứng; đưa búa lại gần dây là bàn đạp trái của đàn đứng.
+> Giữ nhấc bộ giảm âm của những phím đang giữ là việc của bàn đạp giữa (sostenuto); đưa búa lại gần dây là bàn đạp trái của đàn đứng.
 ? Chỉ dẫn senza sordino ở đầu chương 1 Sonata Ánh trăng nghĩa là gì?
 - Không dùng una corda
 + Không có bộ giảm âm, tức giữ bàn đạp vang
@@ -235,5 +231,11 @@ Debussy ghi rất ít bàn đạp và để việc ấy cho người chơi, như
 
 - Graham Fitch, Practising the Piano: [bàn đạp trong Sonata *Ánh trăng*](https://practisingthepiano.com/pedalling-moonlight-sonata/).
 - Fryderyk Chopin, *Nocturnes*, Wydanie Narodowe (Jan Ekier biên tập): [phần bình giải](https://www.chopin-nationaledition.com/wp-content/uploads/2017/05/nocturnes_commentaries.pdf).
-- Wikipedia, [Piano pedals](https://en.wikipedia.org/wiki/Piano_pedals): đối chiếu cấu tạo ba bàn đạp, lịch sử sostenuto, đàn đứng và piano điện.
+- *Concise Oxford Dictionary of Music* (qua Encyclopedia.com): các mục [piano](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/piano), [corda](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/corda), [sordino](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/sordino).
+- Encyclopaedia Britannica, [Piano](https://www.britannica.com/art/piano): ba bàn đạp.
+- Michael Clark, *Baylor Piano Basics*, [chương 28: Pedal](https://openbooks.library.baylor.edu/pianobasics/?p=434): bàn đạp nối ("play-up-down"), ba bàn đạp.
+- Hannah Creviston, ["Piano Pedagogy: Pedaling"](https://hub.yamaha.com/music-educators/instruments/piano/piano-pedagogy-pedaling), Yamaha Music Educators Hub: bàn đạp nối, đạp theo nhịp, nửa bàn đạp, rung bàn đạp, đặt chân.
+- OnMusic Dictionary: [damper pedal](https://dev-dictionary.onmusic.org/terms/1020-damper_pedal), [pedal](https://dev-dictionary.onmusic.org/terms/2537-pedal); Dolmetsch Online, [Chart of Musical Symbols](https://www.dolmetsch.com/musicalsymbols.htm): ký hiệu bàn đạp.
+- A. Schutz và cộng sự, ["Piano 'Forte Pedal' Analysis and Detection"](https://eurecom.fr/publication/2478/download/cm-schuan-080517.pdf), AES 124th Convention (2008): cộng hưởng giao cảm, nốt cao không có bộ giảm âm.
+- The Metropolitan Museum of Art, [The Pianofortes of Bartolomeo Cristofori](https://www.metmuseum.org/toah/hd/cris/hd_cris.htm); Early Music Studio, [Fortepiano after Johann Andreas Stein 1785](https://earlymusicstudio.com/library/fortepiano-after-johann-andreas-stein-1785/) (thư của Mozart về cần đầu gối).
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

@@ -55,7 +55,7 @@ Một quãng tám có bảy nốt khác nhau, chia thành một **nhóm ba ngón
 
 1. **Ngón cái không đặt lên phím đen.** Phím đen cao và nằm sâu; ngón cái ngắn, đặt lên đó thì cả bàn tay phải đẩy vào và việc luồn trở nên vụng. Trong các ngón bấm chuẩn của gam trưởng và gam thứ hòa âm, ngón cái chỉ chơi phím trắng.
 2. **Các ngón dài (2, 3, 4) nhận phím đen.** Một nhóm ngón trùm lên cụm hai hoặc ba phím đen là hình tay tự nhiên nhất.
-3. **Ngón 4 chỉ dùng một lần trong mỗi quãng tám.** Vì vậy chỉ cần nhớ **ngón 4 rơi vào nốt nào**, phần còn lại tự suy ra.
+3. **Ngón 4 chỉ dùng một lần trong mỗi quãng tám**, không kể nốt mở đầu của gam: tay trái Si trưởng bắt đầu bằng ngón 4 trên Si rồi dùng ngón 4 lần nữa ở Fa♯ (từ quãng tám thứ hai, Si là ngón 1). Vì vậy chỉ cần nhớ **ngón 4 rơi vào nốt nào**, phần còn lại tự suy ra.
 
 Hai mẹo nhớ:
 
@@ -86,7 +86,7 @@ Cách đọc bảng:
 - **Số trong ngoặc** chỉ dùng ở đầu mút của gam: nốt cao nhất của tay phải, nốt thấp nhất của tay trái. Khi gam đi tiếp sang quãng tám khác, nốt ấy do ngón 1 chơi.
 - Năm giọng đầu (Đô, Sol, Rê, La, Mi) dùng chung một ngón bấm: học một là có năm.
 - **Si trưởng**: tay phải như Đô trưởng; tay trái bắt đầu bằng ngón 4 (xem bài mẫu bên dưới).
-- **Si♭ trưởng**: nhiều sách cho nốt Si♭ đầu tiên của tay phải dùng ngón 2 (2 1 2 3 1 2 3 4); từ quãng tám thứ hai trở đi, Si♭ luôn là ngón 4.
+- **Si♭ trưởng**: một số bảng ngón bấm (như PianoScales) cho nốt Si♭ đầu tiên của tay phải dùng ngón 2 (2 1 2 3 1 2 3 4); từ quãng tám thứ hai trở đi, Si♭ luôn là ngón 4.
 - Rê♭ trưởng cùng phím với Đô♯ trưởng, Sol♭ trưởng cùng phím với Fa♯ trưởng: cùng ngón bấm.
 
 ## Gam thứ hòa âm
@@ -104,7 +104,7 @@ Gam thứ hòa âm nâng bậc 7 lên nửa cung để có cảm âm (xem [gam t
 | Mi♭ thứ = Rê♯ thứ | 3 1 2 3 4 1 2 3 | 2 1 4 3 2 1 3 2 |
 | Si♭ thứ | 4 1 2 3 1 2 3 4 | 2 1 3 2 1 4 3 2 |
 
-Một số sách cho tay phải Fa♯ thứ và Sol♯ thứ bắt đầu bằng 2 3 thay vì 3 4, và Si♭ thứ bắt đầu bằng ngón 2: chỉ khác ở nốt đầu tiên. Gam thứ giai điệu (đi lên khác đi xuống) đổi ngón ở vài giọng; khi học đến, hãy theo sách gam bạn đang dùng.
+Một số bảng ngón bấm (như PianoScales) cho tay phải Fa♯ thứ và Sol♯ thứ bắt đầu bằng 2 3 thay vì 3 4, và Si♭ thứ bắt đầu bằng ngón 2: chỉ khác ở hai nốt đầu (Si♭ thứ: nốt đầu). Trang này chưa đưa ngón bấm gam thứ giai điệu (đi lên khác đi xuống); khi học đến, hãy theo bảng của sách gam bạn đang dùng.
 
 ## Gam nửa cung
 

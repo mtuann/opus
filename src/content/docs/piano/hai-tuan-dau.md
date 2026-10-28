@@ -111,7 +111,7 @@ Nếu hai tay "giành nhau", dừng ở phách 1 của ô nhịp khó: đặt c�
 
 ### Khởi động 2: Tay trái giữ nhịp
 
-Tay trái chơi nốt trắng, đánh vào phách 1 và phách 3; tay phải chủ yếu đi từng phách. Đây chính là cách hai tay phối hợp trong bài 2.
+Tay trái chơi nốt trắng ở phách 1 và phách 3 (ô cuối mỗi câu là nốt tròn); tay phải chủ yếu đi từng phách. Đây chính là cách hai tay phối hợp trong bài 2.
 
 ```abc
 X:2
@@ -198,7 +198,7 @@ Kế hoạch theo từng tháng cho cả năm đầu nằm ở [Lộ trình pian
 + Phím trắng ngay bên trái nhóm hai phím đen nằm gần giữa đàn
 - Phím trắng ngay bên trái nhóm ba phím đen ở giữa đàn
 - Phím trắng đầu tiên bên trái của đàn
-> Mọi nốt Đô đều nằm ngay bên trái nhóm 2 phím đen; Đô giữa là nốt Đô gần giữa đàn nhất, nốt Đô thứ tư tính từ dưới lên.
+> Mọi nốt Đô (trừ Đô8 ở đầu cao của đàn) đều nằm ngay bên trái nhóm 2 phím đen; Đô giữa là nốt Đô gần giữa đàn nhất, nốt Đô thứ tư tính từ dưới lên.
 ? Ở thế Đô, ngón nào của tay trái đặt trên Đô3?
 + Ngón 5
 - Ngón 1

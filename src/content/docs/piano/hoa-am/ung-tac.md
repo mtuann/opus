@@ -45,9 +45,9 @@ Hai lời khuyên để trang trí gọn. Trong bài tập này, phách 1 giữ 
 
 ## Biến tấu một chủ đề
 
-Mozart viết 12 biến tấu trên giai điệu Pháp *Ah! vous dirai-je, maman*, giai điệu bạn đã chơi ở [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/). Tác phẩm mang số K. 265 (300e). Người ta từng cho rằng nó được viết ở Paris năm 1778; phân tích bản thảo của Wolfgang Plath cho thấy khoảng 1781–1782 mới đúng hơn. Bản in đầu tiên ra năm 1785 ở Vienna.
+Mozart viết 12 biến tấu trên giai điệu Pháp *Ah! vous dirai-je, maman*, giai điệu bạn đã chơi ở [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/). Tác phẩm mang số K. 265 (300e). Người ta từng cho rằng nó được viết ở Paris năm 1778; nghiên cứu chữ viết và giấy của bản thảo cho thấy khoảng 1781–1782 mới đúng hơn. Bản in đầu tiên ra năm 1785 ở Vienna.
 
-Chủ đề ở Đô trưởng, gồm ba đoạn A–B–A, mỗi đoạn tám ô nhịp 2/4 trong bản của Mozart (viết lại ở nhịp 4/4 như bên dưới, mỗi đoạn bốn ô, cả chủ đề mười hai ô). Mỗi biến tấu giữ khung ấy và đổi tiết tấu, kết cấu hay hòa âm: biến tấu 1 phủ giai điệu bằng chuỗi móc kép ở tay phải, biến tấu 2 chuyển chuyển động nhanh xuống tay trái, biến tấu 8 là biến tấu duy nhất ở giọng thứ (Đô thứ), biến tấu 11 là Adagio, còn biến tấu 12 (Allegro) đổi sang nhịp 3/4 và khép lại bằng một coda.
+Chủ đề ở Đô trưởng, gồm ba đoạn A–B–A, mỗi đoạn tám ô nhịp 2/4 trong bản của Mozart (viết lại ở nhịp 4/4 như bên dưới, mỗi đoạn bốn ô, cả chủ đề mười hai ô). Mỗi biến tấu giữ khung ấy và đổi tiết tấu, kết cấu hay hòa âm: biến tấu 1 phủ giai điệu bằng chuỗi móc kép ở tay phải, biến tấu 2 chuyển chuyển động nhanh xuống tay trái, biến tấu 8 là biến tấu duy nhất ở giọng thứ (Đô thứ), còn biến tấu 12 đổi sang nhịp 3/4 và khép lại bằng một coda.
 
 Bạn làm theo đúng cách ấy: giữ khung, mỗi lần đổi một thứ. Dưới đây là bốn ô đầu của chủ đề, theo bản ở trang 10 bài đầu tiên, và ba biến tấu soạn cho trang này. **A** đưa móc đơn vào tay phải bằng nốt thêu và nốt hợp âm. **B** giữ nguyên giai điệu và giao chuyển động cho tay trái, bằng hình Alberti ở trang [hợp âm và hình đệm](/opus/piano/hop-am-rai/). **C** sang Đô thứ: La♭ và Mi♭ thay cho La và Mi, tay trái thành một bè đối nhỏ.
 
@@ -149,14 +149,14 @@ K:C
 
 **Tập ở đàn**
 
-1. Chơi riêng bè bass, ♩ = 80, và hát giai điệu khung bên trên.
+1. Chơi riêng bè bass, ♩ = 80, và hát giai điệu khung bên trên. Bản nghe ở trên chạy ở ♩ = 96, tốc độ mục tiêu của tuần 12.
 2. Chơi nửa đầu như ghi, rồi thay bằng giai điệu của bạn, giữ nốt khung ở phách 1.
-3. Trang trí nửa sau theo cùng cách. Mỗi nửa chơi hai lần, lần nhắc lại trang trí khác đi. Thời ấy, đổi khác khi nhắc lại là chuyện bình thường; C. P. E. Bach còn in cả những sonata ghi sẵn các lần nhắc lại đã được biến đổi.
+3. Trang trí nửa sau theo cùng cách. Mỗi nửa chơi hai lần, lần nhắc lại trang trí khác đi. C. P. E. Bach đã in cả những sonata ghi sẵn các lần nhắc lại được biến đổi (*Sechs Sonaten für Clavier mit veränderten Reprisen*, 1760).
 4. Khi đã quen, đổi mẫu: Do–Re–Mi (bass Đô – Si – Đô – Mi) hoặc Meyer thay Romanesca; Monte (bass Mi – Fa – Fa♯ – Sol) thay Fonte. Monte dừng ở át âm, và ô 13 vẫn nối tiếp được.
 
 ## Dạo đầu trước một bản nhạc
 
-Thế kỷ 18 và 19, nghệ sĩ đàn phím thường không vào bài một cách đột ngột. Họ **dạo đầu** (preluding): vài hợp âm, một đường rải hay gam, một kết, đủ để báo giọng cho người nghe, thử cây đàn và căn phòng, làm ấm tay, hoặc nối hai bài khác giọng trong cùng một chương trình. Carl Czerny in cả một tập 120 ví dụ gồm đoạn dạo đầu, chuyển giọng, kết và fantasia, *Die Kunst des Präludierens* (Nghệ thuật dạo đầu), Op. 300. Sang thế kỷ 20, thói quen này thưa dần trên sân khấu hòa nhạc; ở nhà, ở lớp hay khi chơi cho bạn bè, bạn vẫn dùng được nó.
+Ở thế kỷ 19, **dạo đầu** (preluding) trước một bản nhạc là một kỹ năng được dạy hẳn hoi: Carl Czerny in cả một tập 120 ví dụ gồm đoạn dạo đầu, chuyển giọng, kết và fantasia, *Die Kunst des Präludierens* (Nghệ thuật dạo đầu), Op. 300. Một đoạn dạo đầu ngắn có thể chỉ là vài hợp âm, một đường rải hay gam và một kết, đủ để báo giọng cho người nghe, làm quen cây đàn, làm ấm tay, hoặc nối hai bài khác giọng. Ở nhà, ở lớp hay khi chơi cho bạn bè, bạn vẫn dùng được nó.
 
 Một đoạn dạo đầu ngắn chỉ cần ba việc: lập giọng (hợp âm chủ, rải lên), giữ tai ở lại trong giọng (một mẫu trên âm nền chủ âm như Quiescenza ở trang [mẫu galant](/opus/piano/hoa-am/mau-galant/)), và dẫn vào bài (một kết). Ví dụ dưới đây ở Sol trưởng, để dạo trước [Minuet Sol trưởng](/opus/piano/tac-pham/minuet-sol/).
 
@@ -238,17 +238,17 @@ Sẵn sàng đi tiếp khi:
 + Biến tấu 8, ở Đô thứ
 - Biến tấu 1
 - Biến tấu 12
-> Biến tấu 11 là Adagio; biến tấu 12 đổi sang nhịp 3/4 và có coda.
+> Các biến tấu khác ở Đô trưởng; biến tấu 12 đổi sang nhịp 3/4 và có coda.
 ? Câu hỏi và câu trả lời thường kết thế nào?
 + Câu hỏi dừng ở V (kết nửa), câu trả lời về I (kết trọn)
 - Câu hỏi về I, câu trả lời dừng ở V
 - Cả hai đều dừng ở V
 > Câu trả lời thường bắt đầu giống câu hỏi rồi rẽ về chủ âm.
-? Nghệ sĩ đàn phím thế kỷ 18–19 dạo đầu trước một bản nhạc để làm gì?
-+ Báo giọng, thử đàn và phòng, làm ấm tay hoặc nối hai bài khác giọng
+? Một đoạn dạo đầu ngắn trước bản nhạc giúp bạn làm gì?
++ Báo giọng, làm quen cây đàn, làm ấm tay hoặc nối hai bài khác giọng
 - Thay cho phần coda của bản nhạc
 - Đọc tên bản nhạc cho khán giả
-> Czerny in cả một tập 120 ví dụ về dạo đầu, Op. 300.
+> Czerny in cả một tập 120 ví dụ dạo đầu, chuyển giọng, kết và fantasia, Op. 300.
 ? Khi ứng tác trên bè bass cho sẵn, phách 1 của mỗi ô nên là gì?
 + Một nốt hợp âm, thường là nốt khung của mẫu
 - Một nốt lướt
@@ -258,11 +258,9 @@ Sẵn sàng đi tiếp khi:
 
 ## Nguồn
 
-- Wolfgang Amadeus Mozart, 12 biến tấu về *Ah, vous dirai-je, maman*, K. 265 (300e): bản nhạc trên [IMSLP](https://imslp.org/) (tìm "Ah vous dirai-je maman K.265"); bản Urtext của [G. Henle Verlag](https://www.henle.de/).
-- [Twelve Variations on "Ah vous dirai-je, Maman"](https://en.wikipedia.org/wiki/Twelve_Variations_on_%22Ah_vous_dirai-je,_Maman%22) (Wikipedia): niên đại, bản in đầu và cấu trúc các biến tấu.
+- Wolfgang Amadeus Mozart, 12 biến tấu về *Ah, vous dirai-je, maman*, K. 265 (300e): bản nhạc trên [IMSLP](https://imslp.org/wiki/12_Variations_on_'Ah,_vous_dirai-je_maman',_K.265/300e_(Mozart,_Wolfgang_Amadeus)); bản cho hai guitar theo ấn bản Porro trên [Mutopia](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2236) (nhịp và giọng của chủ đề và các biến tấu); lời nói đầu của ấn bản Urtext G. Henle Verlag, HN 116 ([PDF](https://henle.de/media/4c/7b/a4/1690886062/0165-1690886062-sync.pdf)): niên đại, bản in đầu.
 - Carl Philipp Emanuel Bach, *Versuch über die wahre Art das Clavier zu spielen*, phần 2 (1762): đệm và fantasia tự do.
 - Carl Czerny, *Systematische Anleitung zum Fantasieren auf dem Pianoforte*, Op. 200; *Die Kunst des Präludierens*, Op. 300.
-- Kenneth Hamilton, *After the Golden Age: Romantic Pianism and Modern Performance* (Oxford University Press, 2008): thói quen dạo đầu của nghệ sĩ piano thế kỷ 19.
 - John J. Mortensen, *The Pianist's Guide to Historic Improvisation* (Oxford University Press, 2020).
 - Robert O. Gjerdingen, *Music in the Galant Style* (Oxford University Press, 2007).
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

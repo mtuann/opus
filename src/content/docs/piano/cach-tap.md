@@ -80,17 +80,17 @@ Lặp lại một lỗi mười lần là đang luyện chính lỗi đó. Khi v
 
 ## Mẫu buổi tập
 
-Số trong bảng là phút. Buổi dài cần nghỉ thường hơn dòng "Nghỉ" ghi: BAPAM khuyên tập khoảng 20 phút rồi nghỉ 10 phút (xem [Giữ đôi tay khỏe](/opus/piano/suc-khoe/)).
+Số trong bảng là phút. Dòng "Nghỉ" theo lời khuyên của BAPAM: tập khoảng 20 phút rồi nghỉ 10 phút (xem [Giữ đôi tay khỏe](/opus/piano/suc-khoe/)).
 
 | Phần | 20 phút | 45 phút | 90 phút |
 |---|---|---|---|
-| Khởi động: gam, hợp âm rải chậm và nhẹ | 2 | 5 | 5 |
+| Khởi động: gam, hợp âm rải chậm và nhẹ | 2 | 3 | 5 |
 | Kỹ thuật: [gam](/opus/piano/gam/), [hợp âm rải](/opus/piano/hop-am-rai/), [bài tập ngón hoặc étude](/opus/piano/bai-tap-ngon/) | 3 | 7 | 15 |
-| Bài chính: các điểm nóng, xen kẽ nhau | 10 | 20 | 30 |
-| Nghỉ: đứng dậy, thả tay, xoay vai | | | 5–10 |
-| Bài thứ hai (phong cách khác) hoặc bài ôn | | 5 | 15 |
-| [Thị tấu](/opus/piano/thi-tau/) | 3 | 5 | 10 |
-| Chơi trọn bài, thu âm, ghi nhật ký | 2 | 3 | 5–10 |
+| Bài chính: các điểm nóng, xen kẽ nhau | 10 | 15 | 20 |
+| Nghỉ: đứng dậy, thả tay, xoay vai | | 10 (một lần) | 30 (ba lần) |
+| Bài thứ hai (phong cách khác) hoặc bài ôn | | 5 | 10 |
+| [Thị tấu](/opus/piano/thi-tau/) | 3 | 3 | 5 |
+| Chơi trọn bài, thu âm, ghi nhật ký | 2 | 2 | 5 |
 
 Ngày bận chỉ có 10 phút? Chọn **một** điểm nóng và tập nó cho thật đúng. Mười phút tập trung vẫn giữ được mạch tiến bộ, và quan trọng hơn là giữ được thói quen. Khuôn buổi 30 phút cho năm đầu và một lịch tuần mẫu ở [Thói quen mỗi ngày](/opus/bat-dau/moi-ngay/).
 
@@ -182,5 +182,5 @@ Gần như ai cũng có những tuần thấy mình không tiến bộ. Thườn
 
 - K. Anders Ericsson, Ralf Th. Krampe, Clemens Tesch-Römer, "The role of deliberate practice in the acquisition of expert performance", *Psychological Review* 100(3), 1993.
 - Chuan C. Chang, [Fundamentals of Piano Practice](https://fundamentals-of-piano-practice.readthedocs.io/): sách điện tử về cách tập piano.
-- BAPAM, *The Healthy Pianist* (tờ thông tin cho người chơi piano): [bản PDF](https://crosseyedpianist.com/wp-content/uploads/2016/08/thehealthypianist_bapamfactsheet.pdf).
+- BAPAM, [*The Healthy Pianist*](https://www.bapam.org.uk/the-healthy-pianist/) (tờ thông tin cho người chơi piano).
 - [Practising the Piano](https://practisingthepiano.com/): bài viết và video về cách tập.

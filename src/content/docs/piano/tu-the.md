@@ -213,7 +213,7 @@ Mỗi tuần quay một đoạn video một phút **từ bên cạnh** (thấy v
 - György Sándor, *On Piano Playing: Motion, Sound and Expression*, Schirmer Books, 1981.
 - Seymour Bernstein, *With Your Own Two Hands*, Schirmer Books, 1981.
 - Graham Fitch, [Practising the Piano](https://practisingthepiano.com/).
-- British Association for Performing Arts Medicine (BAPAM), [The Healthy Pianist](https://crosseyedpianist.com/wp-content/uploads/2016/08/thehealthypianist_bapamfactsheet.pdf) (tờ thông tin cho người chơi piano).
+- British Association for Performing Arts Medicine (BAPAM), [The Healthy Pianist](https://www.bapam.org.uk/the-healthy-pianist/) (tờ thông tin cho người chơi piano).
 - Lee University, [Pianist Health and Injury Prevention](https://www.leeuniversity.edu/wp-content/uploads/Pianist-Health-and-Injury-Prevention-1.pdf).
 - Werner Goebl, Roberto Bresin, Alexander Galembo, "Once again: The perception of piano touch and tone", ISMA 2004 (tiếng đàn và vận tốc búa).
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

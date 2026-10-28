@@ -54,9 +54,9 @@ Bảng viết cho một cậu bé chín tuổi nên rất gọn: nó không nói
 | Baroque (Bach, Handel) | nốt trên, đúng phách | C. P. E. Bach (1753): láy rền "luôn bắt đầu từ nốt trên". Ngoại lệ: nốt trên vừa vang ngay trước đó (giai điệu đi xuống liền bậc) thì được nối sang, không đánh lại |
 | Cổ điển (Haydn, Mozart) | phần lớn vẫn từ nốt trên | Một nốt nhỏ đứng ngay trước dấu *tr* cho biết rõ nốt bắt đầu |
 | Đầu thế kỷ 19 (Beethoven, Schubert) | vùng chuyển tiếp | Đọc chú giải của bản Urtext, xét từng chỗ |
-| Lãng mạn (Chopin, Schumann, Liszt) | ngày càng thường từ nốt chính | Hummel, trong bộ sách dạy piano in ở Vienna năm 1827–1828, khuyên bắt đầu mọi láy rền từ nốt chính |
+| Lãng mạn (Chopin, Schumann, Liszt) | cả hai cách | Hummel, trong bộ sách dạy piano in ở Vienna năm 1827–1828, khuyên bắt đầu mọi láy rền từ nốt chính. Với Chopin, các nguồn chưa thống nhất: có nhà nghiên cứu cho rằng ông nhìn chung vẫn bắt đầu từ nốt trên, còn chú giải của ấn bản Quốc gia Ba Lan chỉ ra nhiều chỗ nên bắt đầu từ nốt chính; đọc chú giải của từng bản |
 
-Lý do của quy tắc Baroque: nốt trên rơi đúng phách là một **nốt nghịch** tựa vào nốt chính, giống một appoggiatura được nhắc lại thật nhanh. Bắt đầu từ nốt chính, láy rền mất đi sức nặng ấy và chỉ còn là một tiếng rung.
+Theo cách đọc Baroque, nốt trên rơi đúng phách là một **nốt nghịch** tựa vào nốt chính, nên láy rền nghe như một chuỗi appoggiatura nối nhau thật nhanh.
 
 ### Nốt kết
 
@@ -160,15 +160,15 @@ K:C
 
 | Ký hiệu | Tên khác | Chơi trong nhạc từ thế kỷ 19 | Chơi trong nhạc Baroque |
 |---|---|---|---|
-| Răng cưa ngắn, **không gạch**: **láy trên** | *Pralltriller*, *Schneller*, upper mordent | chính–trên–chính, rất nhanh, đúng phách | một láy rền ngắn (*Trillo* của Bach), thường từ nốt trên: trên–chính–trên–chính |
+| Răng cưa ngắn, **không gạch**: **láy trên** | *Pralltriller*, *Schneller*, upper mordent | chính–trên–chính, rất nhanh, đúng phách | một láy rền (*Trillo* của Bach), thường từ nốt trên, đúng phách; trên nốt ngắn chỉ còn bốn nốt: trên–chính–trên–chính |
 | Răng cưa ngắn, **có gạch dọc**: **láy dưới** | mordent, *Mordant* | chính–dưới–chính | chính–dưới–chính, đúng phách |
 
 Với láy trên trong nhạc Baroque, có hai trường hợp đáng nhớ:
 
 - **Giai điệu đi xuống liền bậc** tới nốt có ký hiệu (rất hay gặp): nốt trên vừa vang ngay trước, nên được nối sang mà không đánh lại. Kết quả nghe gần giống chính–trên–chính. C. P. E. Bach gọi kiểu này là *Pralltriller*, "láy rền nửa", và nhấn mạnh rằng nó phải sắc và ngắn.
-- **Giai điệu đi lên** tới nốt có ký hiệu: C. P. E. Bach không dùng Pralltriller ở chỗ này; ký hiệu thường được đọc như một láy rền ngắn của bảng Bach 1720, bắt đầu từ nốt trên, đúng phách.
+- **Giai điệu đi lên** tới nốt có ký hiệu: C. P. E. Bach không dùng Pralltriller ở chỗ này; ký hiệu thường được đọc như *Trillo* của bảng Bach 1720: láy rền bắt đầu từ nốt trên, đúng phách.
 
-Trong bản Bach-Gesellschaft của [Invention số 1](/opus/piano/tac-pham/bach-invention-1/), nốt Si móc đơn ở ô 1 mang ký hiệu không gạch và đi xuống từ nốt Đô ngay trước nó: đúng trường hợp thứ nhất. Bài này cũng có ký hiệu có gạch, còn Aria mở đầu [Biến khúc Goldberg](/opus/nghe-nhac/bach-goldberg/) gần như ô nào cũng có nốt hoa mỹ: hai nơi tốt để luyện mắt. Một dấu hóa nhỏ đặt trên hoặc dưới ký hiệu láy áp dụng cho nốt phụ.
+Trong bản Bach-Gesellschaft của [Invention số 1](/opus/piano/tac-pham/bach-invention-1/), nốt Si móc đơn ở ô 1 mang ký hiệu không gạch và đi xuống từ nốt Đô ngay trước nó: đúng trường hợp thứ nhất. Bài này cũng có ký hiệu có gạch, còn Aria mở đầu [Biến khúc Goldberg](/opus/nghe-nhac/bach-goldberg/) có nốt hoa mỹ ở phần lớn các ô: hai nơi tốt để luyện mắt. Một dấu hóa nhỏ đặt trên hoặc dưới ký hiệu láy áp dụng cho nốt phụ.
 
 **Ví dụ 3.** (a) Giai điệu đi xuống tới nốt có láy trên; (b) đi lên tới nốt có láy trên; (c) láy dưới.
 
@@ -194,7 +194,7 @@ K:C
 
 ```abc
 X:8
-T:Chơi theo bảng của Bach
+T:Chơi theo cách đọc Baroque (láy rền ngắn, bốn nốt)
 M:2/4
 L:1/8
 Q:1/4=60
@@ -209,8 +209,8 @@ Nghe trường hợp (a) ở hai khối "chơi": các nốt gần như giống h
 **Láy quanh** (turn), ký hiệu như chữ S nằm ngang (∽), gồm bốn nốt quanh nốt chính: **trên – chính – dưới – chính**. Cách chơi phụ thuộc vào vị trí của ký hiệu:
 
 - **Đặt ngay trên nốt:** láy quanh bắt đầu ngay, đúng phách. Đây là *Cadence* trong bảng của Bach.
-- **Đặt giữa hai nốt:** chơi nốt chính trước, rồi láy quanh ở cuối giá trị của nốt đó và nối thẳng vào nốt sau. Kiểu này rất hay gặp trong giai điệu Cổ điển và Lãng mạn.
-- **Láy quanh ngược** (ký hiệu có gạch dọc, hoặc lộn ngược): bắt đầu từ nốt dưới: dưới – chính – trên – chính.
+- **Đặt giữa hai nốt:** chơi nốt chính trước, rồi láy quanh ở cuối giá trị của nốt đó và nối thẳng vào nốt sau.
+- **Láy quanh ngược**: bắt đầu từ nốt dưới: dưới – chính – trên – chính.
 
 Dấu hóa nhỏ phía trên ký hiệu áp dụng cho nốt trên, phía dưới cho nốt dưới. Láy quanh là một nét luyến của câu hát: ở tốc độ chậm, đừng chơi bốn nốt nhanh như một cú giật ngón, hãy hát chúng.
 
@@ -245,7 +245,7 @@ Cả hai được viết bằng một nốt nhỏ trước nốt chính, nhưng 
 - trước một nốt chia đôi được (nốt đen, nốt trắng…): lấy **một nửa**;
 - trước một **nốt có chấm dôi**: lấy **hai phần ba**, nốt chính chỉ còn lại giá trị của dấu chấm.
 
-Không phải nốt nhỏ không gạch nào cũng dài: trước nốt nhanh, trước nốt lặp lại, hoặc ở tốc độ nhanh, nhiều nốt dựa được chơi ngắn. Chú giải của bản Urtext và tai bạn sẽ quyết định.
+Không phải nốt nhỏ không gạch nào cũng dài: C. P. E. Bach nêu những nốt dựa luôn ngắn, thường đứng trước một nốt ngắn, có khi trước một nốt được nhắc lại nhiều lần. Chú giải của bản Urtext và tai bạn sẽ quyết định.
 
 **Acciaccatura** (tiếng Ý: "giập, nghiền") là nốt nhỏ có gạch chéo, ngắn hết mức có thể; trọng âm rơi vào **nốt chính**. Trong nhạc đàn phím thế kỷ 18, nó có khi còn được đánh cùng lúc với nốt chính rồi nhả ngay. Đặt nó đúng phách hay ngay trước phách là chuyện phong cách và vẫn còn được tranh luận; hãy đọc chú giải của bản Urtext và nghe các bản thu tốt.
 
@@ -291,10 +291,10 @@ K:C
 Một đường lượn sóng thẳng đứng trước hợp âm nghĩa là **rải** hợp âm: chơi lần lượt từ nốt thấp nhất lên, rất nhanh, và **giữ** các nốt lại.
 
 - Đường lượn sóng **liền một mạch qua cả hai khuông**: rải một lần, từ nốt thấp nhất của tay trái lên nốt cao nhất của tay phải.
-- **Hai đường riêng** cho hai tay: hai tay rải cùng lúc.
+- **Hai đường riêng** cho hai tay: không nhất thiết là hai tay rải cùng lúc. Chú giải của ấn bản Quốc gia Ba Lan cho các nocturne của Chopin ghi rằng hai đường riêng không nhất thiết là rải đồng thời, có chỗ chỉ cho biết cách chia hợp âm giữa hai tay.
 - Có mũi tên chỉ xuống: rải từ trên xuống.
 
-Trong nhạc Baroque và Cổ điển, nốt thấp nhất thường rơi đúng phách. Với Chopin, chú giải của ấn bản Quốc gia Ba Lan khuyên bắt đầu hợp âm rải cùng lúc với nốt tương ứng của tay trái. Trong nhiều bản nhạc Lãng mạn khác, khi nốt trên cùng là giai điệu, người chơi có thể rải sớm một chút để nốt giai điệu rơi đúng phách; các nghệ sĩ không làm giống nhau.
+Với Chopin, chú giải của ấn bản Quốc gia Ba Lan khuyên bắt đầu hợp âm rải cùng lúc với nốt tương ứng của tay trái. Trong nhiều bản nhạc Lãng mạn khác, khi nốt trên cùng là giai điệu, người chơi có thể rải sớm một chút để nốt giai điệu rơi đúng phách; các nghệ sĩ không làm giống nhau.
 
 Tốc độ rải tùy tính cách: chậm như đàn harp trong một đoạn mơ màng, nhanh và gọn trong một đoạn mạnh mẽ. Hợp âm quá rộng so với bàn tay (chẳng hạn quãng mười) thường cũng được rải dù không có ký hiệu, nhưng đừng biến việc rải mọi hợp âm thành thói quen.
 
@@ -322,7 +322,7 @@ E-[EG]-[EGc]6 | F-[FA]-[FAc]6 | D-[DG]-[DGB]6 | [EGc]8 |]
 
 ## Fioritura của Chopin
 
-**Fioritura** (tiếng Ý: "nở hoa"; số nhiều *fioriture*) là những chùm nốt trang trí dài, viết bằng nốt nhỏ hoặc thành những nhóm không chia đều (7, 11, 22 nốt… trên một phách của tay trái), bắt chước lối luyến láy của ca sĩ bel canto. Chopin thường đổi chúng mỗi lần chơi; một số biến thể do chính ông viết còn được giữ lại (xem [Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/)).
+**Fioritura** (tiếng Ý: "nở hoa"; số nhiều *fioriture*) là những chùm nốt trang trí dài, viết bằng nốt nhỏ hoặc thành những nhóm không chia đều theo phách của tay trái, bắt chước lối luyến láy của ca sĩ bel canto. Chopin còn viết thêm biến thể vào bản nhạc của học trò; [Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/) có cả một bộ biến thể như thế.
 
 Câu hỏi muôn thuở: nốt đầu của chùm vào đúng phách, cùng nốt trầm, hay trước phách? Chú giải của ấn bản Quốc gia Ba Lan trả lời theo từng trường hợp: hợp âm rải và những nốt nhỏ tạo thành hợp âm rải hay quãng rải, theo lệ chung, bắt đầu đúng phách; một nhóm vài nốt nhỏ có thể chơi đúng phách hoặc trước phách; với láy rền, một nốt nhỏ đứng ngay trước dấu *tr* cho biết láy bắt đầu từ nốt nào (nốt nhỏ cùng cao độ với nốt chính thì láy bắt đầu từ nốt chính). Với những chùm dài, điều quan trọng hơn cả là **những điểm gặp nhau** với tay trái:
 

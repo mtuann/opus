@@ -85,13 +85,13 @@ Tay trái riêng trước: phím chỉ trồi lên một phần, ngón không r�
 
 ## Nốt kép
 
-**Nốt kép** là hai nốt chơi cùng lúc bằng một tay, thường là quãng ba hoặc quãng sáu (xem [Quãng](/opus/nhac-ly/09-quang/)). Có ba cái khó: hai nốt phải vào cùng lúc, hai bè phải nối (khi legato), và nốt trên, thường là giai điệu, phải to hơn nốt dưới trong cùng một cú đánh.
+Trang này gọi hai nốt chơi cùng lúc bằng một tay là **nốt kép**, và bàn về hai loại: quãng ba và quãng sáu (xem [Quãng](/opus/nhac-ly/09-quang/)). Có ba cái khó: hai nốt phải vào cùng lúc, hai bè phải nối (khi legato), và nốt trên, thường là giai điệu, phải to hơn nốt dưới trong cùng một cú đánh.
 
 ### Quãng ba legato
 
 Tay phải có ba cặp ngón cơ bản: **1–3, 2–4, 3–5** (ngón bè dưới ghi trước). Tay trái: **5–3, 4–2, 3–1**. Trong một thế tay, ba cặp nối nhau dễ dàng (bài 3). Khi đường đi dài hơn, phải **đổi nhóm**, và ở chỗ đổi nhóm hai bè không thể cùng nối bằng ngón. Khi ấy:
 
-- **Bè trên được ưu tiên.** Giữ bè trên legato bằng ngón; bè dưới (thường là ngón cái) được hở một chút. Tai người nghe theo bè trên.
+- **Bè trên được ưu tiên.** Giữ bè trên legato bằng ngón; bè dưới (thường là ngón cái) được hở một chút. Tai người nghe có xu hướng ưu tiên bè cao nhất (Trainor và cộng sự, 2014; xem Nguồn).
 - **Thay ngón trên phím** (*substitution*): trên một quãng ba ngân, lặng lẽ đổi sang cặp ngón khác (ví dụ 3–5 sang 2–4) để có chỗ cho các nốt tiếp theo (bài 4).
 - **Vắt ngón ở bè trên**: một ngón dài vắt qua ngón ngắn hơn (3 qua 4, 4 qua 5), dễ nhất khi nốt đến là phím đen.
 - **Gam quãng ba** hai, ba quãng tám có nhiều hệ thống ngón bấm, mỗi sách một kiểu. Chọn một hệ thống, ghi bằng bút chì và giữ nguyên.
@@ -144,7 +144,7 @@ K:G
 ### Quãng sáu
 
 - **Ngón cái ở bè dưới** gần như mọi nốt. Nó trượt từ phím đen xuống phím trắng ngay cạnh; giữa hai phím trắng thì nhấc lên thật nhanh.
-- **Bè trên luân phiên 4 và 5**: 5 trên phím trắng, 4 trên phím đen, như quãng tám legato (xem [Quãng tám và bước nhảy](/opus/piano/quang-tam-buoc-nhay/)). Tay lớn dùng thêm 3.
+- **Bè trên luân phiên 4 và 5**: 4 thường nhận phím đen, 5 phím trắng; hai phím trắng liền nhau thì một phím dùng 4 (như Rê – Mi ở bài 5), như quãng tám legato (xem [Quãng tám và bước nhảy](/opus/piano/quang-tam-buoc-nhay/)). Tay lớn dùng thêm 3.
 - **Tay mở vừa đủ.** Quãng sáu đã khá rộng: giữa hai quãng sáu, để bàn tay khép lại một chút. Tay nhỏ tập ngắn, dừng khi thấy căng.
 
 ### Bài 5. Quãng sáu: bè trên 4–5, ngón cái trượt
@@ -189,7 +189,7 @@ K:C
 
 ### Quãng ba nửa cung: để dành về sau
 
-**Quãng ba nửa cung** là một trong những kỹ thuật khó nhất của piano: ngón bấm đặc biệt, mỗi sách một kiểu, và đòi hỏi bàn tay đã thật thả lỏng ở quãng ba thường. Đừng tập trước khi gam quãng ba đã trôi chảy. Đích đến nổi tiếng là Étude Op. 25 số 6 (Sol♯ thứ) của Chopin, một étude về quãng ba; cùng tập ấy, số 8 (Rê♭ trưởng) là étude về quãng sáu. Trong 12 Études, Debussy cũng viết riêng *Pour les tierces* (cho quãng ba), *Pour les sixtes* (cho quãng sáu) và *Pour les notes répétées* (cho nốt lặp).
+**Quãng ba nửa cung** cần ngón bấm riêng (Graham Fitch có một mục về quãng ba thứ nửa cung trong bài "Nimble Chromatics") và đòi hỏi bàn tay đã thật thả lỏng ở quãng ba thường. Đừng tập trước khi gam quãng ba đã trôi chảy. Đích đến nổi tiếng là Étude Op. 25 số 6 (Sol♯ thứ) của Chopin, một étude về quãng ba; cùng tập ấy, số 8 (Rê♭ trưởng) là étude về quãng sáu. Trong 12 Études, Debussy cũng viết riêng *Pour les tierces* (cho quãng ba), *Pour les sixtes* (cho quãng sáu) và *Pour les notes répétées* (cho nốt lặp).
 
 ## Tập theo chặng
 
@@ -233,9 +233,9 @@ K:C
 + Giữ bè trên legato, cho bè dưới hở một chút
 - Giữ bè dưới legato vì ngón cái khỏe hơn
 - Bỏ legato, chơi tất cả staccato
-> Bè trên thường là giai điệu, và tai người nghe theo bè trên.
+> Bè trên thường là giai điệu, và tai người nghe có xu hướng ưu tiên bè cao nhất.
 ? Trong quãng sáu legato, bè trên thường được nối bằng gì?
-+ Ngón 4 và 5 luân phiên: 5 trên phím trắng, 4 trên phím đen
++ Ngón 4 và 5 luân phiên, ngón 4 thường trên phím đen
 - Ngón cái trượt
 - Bàn đạp, không cần ngón
 > Ngón cái giữ bè dưới và chỉ trượt được từ phím đen xuống phím trắng.
@@ -250,6 +250,7 @@ K:C
 - Carl Czerny, *Die Schule der Geläufigkeit* Op. 299.
 - Heinrich Neuhaus, *The Art of Piano Playing* (bản tiếng Nga in lần đầu năm 1958).
 - Seymour Fink, *Mastering Piano Technique* (Amadeus Press).
-- Graham Fitch, [Practising the Piano](https://practisingthepiano.com/).
+- Graham Fitch, [Practising the Piano](https://practisingthepiano.com/); bài ["Nimble Chromatics"](https://practisingthepiano.com/nimble-chromatics/) (gam nửa cung, quãng ba thứ nửa cung).
+- L. J. Trainor, C. Marie, I. C. Bruce, G. M. Bidelman, ["Explaining the high voice superiority effect in polyphonic music"](https://doi.org/10.1016/j.heares.2013.07.014), *Hearing Research* 308 (2014): 60–70.
 - Bản nhạc các étude: [IMSLP](https://imslp.org/) (tìm "Chopin Etudes Op.25", "Debussy Etudes").
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

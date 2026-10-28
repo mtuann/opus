@@ -45,10 +45,9 @@ Các nghiên cứu chưa thống nhất yếu tố nào quan trọng nhất (ch�
 
 Hãy khởi động nhẹ vài phút; mục đích là làm ấm chứ không phải kéo giãn:
 
-1. Làm ấm tay: rửa tay bằng nước ấm, nhất là những ngày lạnh.
-2. Xoay vai, lắc nhẹ hai tay buông thõng, xoay cổ tay vài vòng.
-3. Vài lần [thả rơi cánh tay](/opus/piano/tu-the/) lên phím, mỗi tay.
-4. Năm ngón hoặc [gam](/opus/piano/gam/) chậm, nhỏ, legato, để ý từng ngón nhả lực sau khi chơi.
+1. Xoay vai, lắc nhẹ hai tay buông thõng, xoay cổ tay vài vòng.
+2. Vài lần [thả rơi cánh tay](/opus/piano/tu-the/) lên phím, mỗi tay.
+3. Năm ngón hoặc [gam](/opus/piano/gam/) chậm, nhỏ, legato, để ý từng ngón nhả lực sau khi chơi.
 
 Đừng kéo giãn mạnh, bẻ ngón tay ra sau hay cố "dang tay cho rộng" trước khi chơi. Đoạn khó nhất để sau khi tay đã ấm, không phải ngay đầu buổi.
 
@@ -80,16 +79,15 @@ Nếu tay bạn nhỏ:
 - **Đừng giữ bàn tay mở căng.** Giữa hai quãng tám, để bàn tay khép lại một chút; di chuyển bằng cả cánh tay thay vì dang ngón.
 - **Sắp xếp lại hợp âm rộng**: bỏ một nốt bị nhân đôi, chuyển một nốt sang tay kia, hoặc rải hợp âm khi phong cách cho phép. Hỏi thầy để chọn cách không làm hỏng âm nhạc.
 - **Chọn bài hợp tay**: để dành những bài dày đặc quãng tám và hợp âm rộng cho sau này; nhạc Baroque và Cổ điển có rất nhiều bài hay không đòi hỏi bàn tay lớn ([Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/)).
-- **Bàn phím hẹp**: có những bàn phím piano hẹp hơn chuẩn, như loại DS5.5 (thường gọi là bàn phím "7/8") và DS6.0 ("15/16"); tổ chức PASK (Pianists for Alternatively Sized Keyboards) vận động để chúng phổ biến hơn. Theo PASK (tính đến 2026), chúng chỉ có từ một số ít nguồn, giá cao và người mua thường phải chờ lâu.
+- **Bàn phím hẹp**: có những bàn phím piano hẹp hơn chuẩn, như loại DS5.5 và DS6.0 (quãng tám rộng 5,5 và 6 inch); tổ chức PASK (Pianists for Alternatively Sized Keyboards) vận động để chúng phổ biến hơn và giữ danh sách những nơi làm loại bàn phím này.
 
 ### Ghế, tư thế, cây đàn
 
 Những điều cơ bản đã có ở [Tư thế, thế tay và cách dùng lực](/opus/piano/tu-the/): ghế đúng độ cao, cổ tay mềm, vai thả, dùng trọng lượng cánh tay. Thêm vài điều hay bị quên: đàn điện có chân chắc, không rung; và độ nặng phím hợp với tay bạn, vì BAPAM nhắc nên cân nhắc phím nhẹ hay nặng hợp hơn cho việc tập thường xuyên ([Chọn đàn](/opus/piano/chon-dan/)).
 
-### Vận động và giữ ấm { #ngu-van-dong-giu-am }
+### Vận động { #ngu-van-dong-giu-am }
 
-- **Vận động toàn thân**: BAPAM khuyên giữ thể lực bằng vận động nhịp điệu đều như bơi, đi bộ hay chạy; các môn dùng tạ và nắm tay chặt không hợp với người chơi piano.
-- **Giữ ấm**: những ngày rét, làm ấm tay trước khi tập, như rửa tay nước ấm.
+BAPAM khuyên giữ thể lực bằng vận động nhịp điệu đều như bơi, đi bộ hay chạy; các môn dùng tạ và nắm tay chặt không hợp với người chơi piano.
 
 ## Dấu hiệu cảnh báo
 
@@ -165,7 +163,7 @@ Khi bác sĩ đã cho phép chơi lại, nhờ thầy xem kỹ thuật ở đo�
 - P. Bragge, A. Bialocerkowski, J. McMeeken, "A systematic review of prevalence and risk factors associated with playing-related musculoskeletal disorders in pianists", *Occupational Medicine* 56(1), 2006, tr. 28–38.
 - N. Sakai, "Hand pain attributed to overuse among professional pianists: a study of 200 cases", *Medical Problems of Performing Artists* 17(4), 2002, tr. 178–180.
 - E. Altenmüller, H.-C. Jabusch, "Focal dystonia in musicians: phenomenology, pathophysiology, triggering factors, and treatment", *Medical Problems of Performing Artists* 25(1), 2010, tr. 3–9.
-- BAPAM, *The Healthy Pianist* (tờ thông tin cho người chơi piano): [bản PDF](https://crosseyedpianist.com/wp-content/uploads/2016/08/thehealthypianist_bapamfactsheet.pdf); [Musicians' Focal Dystonia](https://www.bapam.org.uk/musicians-focal-dystonia/); [Returning to Playing](https://www.bapam.org.uk/return-to-play/).
+- BAPAM, [*The Healthy Pianist*](https://www.bapam.org.uk/the-healthy-pianist/) (tờ thông tin cho người chơi piano); [Musicians' Focal Dystonia](https://www.bapam.org.uk/musicians-focal-dystonia/); [Returning to Playing](https://www.bapam.org.uk/return-to-play/).
 - PASK, các trang [How many sizes?](https://paskpiano.org/how-many-sizes/), [What is PASK?](https://paskpiano.org/about/), [Pianists' hand spans vary greatly](https://paskpiano.org/pianists-hand-spans-vary-greatly/) và [Epidemiological and clinical studies](https://paskpiano.org/epidemiological-and-clinical-studies/).
 - [BAPAM](https://www.bapam.org.uk/) (Anh) và [PAMA](https://artsmed.org/) (Mỹ).
 - NHS (Anh), [Repetitive strain injury (RSI)](https://www.nhs.uk/conditions/repetitive-strain-injury-rsi/).

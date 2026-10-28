@@ -3,7 +3,7 @@ title: "Bài tập ngón và étude: dùng thế nào cho đúng"
 description: "Hanon, Czerny, Burgmüller: gần như ai học piano cũng gặp những cái tên này. Dùng đúng, chúng giúp tay bạn nhanh, đều và bền hơn; dùng sai, chúng ngốn thời…"
 ---
 
-Hanon, Czerny, Burgmüller: gần như ai học piano cũng gặp những cái tên này. Dùng đúng, chúng giúp tay bạn nhanh, đều và bền hơn; dùng sai, chúng ngốn thời gian, làm cùn tai và có thể làm đau tay. Trang này nói chúng để làm gì, cuốn nào hợp trình độ nào, và cách dành mười phút kỹ thuật mỗi ngày cho có ích.
+Hanon, Czerny, Burgmüller: gần như ai học piano cũng gặp những cái tên này. Dùng đúng, chúng giúp tay bạn nhanh, đều và bền hơn; dùng sai, chúng ngốn thời gian, làm cùn tai và có thể làm đau tay. Trang này nói chúng để làm gì, nên đi qua các cuốn theo thứ tự nào, và cách dành mười phút kỹ thuật mỗi ngày cho có ích.
 
 ## Bài tập ngón và étude
 
@@ -44,35 +44,35 @@ Có tác giả còn khuyên bỏ hẳn Hanon và dành thời gian ấy cho bả
 
 ## Tổng quan theo cấp độ
 
-Cấp độ trong bảng là ước lượng thô, quy về [cấp ABRSM](/opus/piano/lo-trinh/); trong cùng một tuyển tập, bài đầu và bài cuối có thể cách nhau vài cấp. Bản nhạc của phần lớn các tác phẩm thế kỷ 19 có trên [IMSLP](https://imslp.org/).
+Bảng dưới xếp các tuyển tập gần đúng từ dễ đến khó. Đây là ước lượng thô của trang này, không phải xếp hạng của ABRSM hay của nhà xuất bản, nên trang không ghi Grade cho từng tập; muốn biết một bài hợp chặng nào, xem [lộ trình](/opus/piano/lo-trinh/) và [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/). Bản nhạc của phần lớn các tác phẩm thế kỷ 19 có trên [IMSLP](https://imslp.org/).
 
 ### Étude và tuyển tập
 
-| Tác phẩm | Cấp độ (khoảng) | Luyện gì |
-|---|---|---|
-| Bartók, *Mikrokosmos* (153 bài, 6 quyển) | quyển 1–2: từ những tháng đầu đến Grade 2; quyển 3–4: Grade 3–5; quyển 5–6: Grade 6 trở lên | Đọc nhạc, độc lập hai tay, nhịp lẻ, điệu thức, âm thanh thế kỷ 20 |
-| Kabalevsky, *24 Pieces for Children* (24 bài cho thiếu nhi) Op. 39 | Grade 1–3 | Tính cách, phát âm, sắc thái trong những bài rất ngắn |
-| Czerny, Op. 599 (cho người mới bắt đầu) | Grade 1–3 | Thế năm ngón, luồn ngón cái, phối hợp hai tay, đọc nhạc |
-| Burgmüller, *25 Études faciles et progressives* Op. 100 | Grade 2–5 | Mỗi bài một kỹ năng gắn với một tính cách: chạy nốt, staccato, luyến, hợp âm rải. Bài số 2 là [Arabesque](/opus/piano/tac-pham/burgmuller-arabesque/) |
-| Czerny, *30 Études de mécanisme* Op. 849 | Grade 4–6 | Ngón đều; gam và hợp âm rải ở tốc độ vừa |
-| Czerny, Op. 636 (24 bài; tên gốc *Vorschule der Fingerfertigkeit*) | Grade 4–6 | Ngón nhẹ và nhanh |
-| Heller, *25 Études* Op. 47, *25 Études* Op. 45, *30 Études* Op. 46 | Grade 4–7 | Câu nhạc, tiết tấu, hát giai điệu. Tên gốc của Op. 47 là "để rèn cảm giác tiết tấu và biểu cảm"; Op. 45 là tập chuẩn bị cho *L'art de phraser* Op. 16 ("nghệ thuật phân câu") |
-| Burgmüller, *18 Études* Op. 109 và *12 Études* Op. 105 | Grade 5–7 | Tốc độ, nhiều lớp âm thanh, tính cách |
-| Czerny, *Die Schule der Geläufigkeit* Op. 299 (40 bài) | Grade 6–8 | Tốc độ: gam, hợp âm rải, nốt lặp, ở cả hai tay |
-| Cramer, 60 étude do Hans von Bülow chọn | Grade 7–8 | Độc lập ngón, nhiều bè trong một tay, legato. Cramer viết 84 étude (Op. 30 và Op. 40) |
-| Clementi, *Gradus ad Parnassum* Op. 44 (100 bài, in 1817–1826) | Grade 8 trở lên | Ngón đều và bền; có cả fugue và canon. Đừng nhầm với sách đối âm cùng tên của Fux ([bài 22](/opus/nhac-ly/22-doi-am/)) |
-| Czerny, *Die Kunst der Fingerfertigkeit* Op. 740 (50 bài) | Grade 8 đến diploma | Tốc độ và sức bền ở trình độ cao |
-| Moszkowski, *15 Études de virtuosité* Op. 72 | diploma | Kỹ thuật biểu diễn trong những bài rất giàu nhạc tính |
-| Chopin, 12 Études Op. 10 (1833) và 12 Études Op. 25 (1837) | diploma trở lên | Mỗi bài một vấn đề kỹ thuật, đồng thời là tác phẩm hòa nhạc ([hướng dẫn nghe](/opus/nghe-nhac/chopin-etude/)) |
-| Liszt, *Études d'exécution transcendante* (bản cuối 1852) | hòa nhạc | Kỹ thuật biểu diễn ở mức cao nhất |
-| Debussy, *12 Études* (1915) | hòa nhạc | Đề tặng tưởng nhớ Chopin; mỗi bài một quãng hoặc một kỹ thuật. Bài đầu tiên mang tên *Pour les cinq doigts, d'après Monsieur Czerny* ("cho năm ngón, theo ông Czerny") |
+| Tác phẩm | Luyện gì |
+|---|---|
+| Bartók, *Mikrokosmos* (153 bài, 6 quyển) | Đọc nhạc, độc lập hai tay, nhịp lẻ, điệu thức, âm thanh thế kỷ 20 |
+| Kabalevsky, *24 Pieces for Children* (24 bài cho thiếu nhi) Op. 39 | Tính cách, phát âm, sắc thái trong những bài rất ngắn |
+| Czerny, Op. 599 (cho người mới bắt đầu) | Thế năm ngón, luồn ngón cái, phối hợp hai tay, đọc nhạc |
+| Burgmüller, *25 Études faciles et progressives* Op. 100 | Mỗi bài một kỹ năng gắn với một tính cách: chạy nốt, staccato, luyến, hợp âm rải. Bài số 2 là [Arabesque](/opus/piano/tac-pham/burgmuller-arabesque/) |
+| Czerny, *30 Études de mécanisme* Op. 849 | Ngón đều; gam và hợp âm rải ở tốc độ vừa |
+| Czerny, Op. 636 (24 bài; tên gốc *Vorschule der Fingerfertigkeit*) | Ngón nhẹ và nhanh |
+| Heller, *25 Études* Op. 47, *25 Études* Op. 45, *30 Études* Op. 46 | Câu nhạc, tiết tấu, hát giai điệu. Tên gốc của Op. 47 là "để rèn cảm giác tiết tấu và biểu cảm"; Op. 45 là tập chuẩn bị cho *L'art de phraser* Op. 16 ("nghệ thuật phân câu") |
+| Burgmüller, *18 Études* Op. 109 và *12 Études* Op. 105 | Tốc độ, nhiều lớp âm thanh, tính cách |
+| Czerny, *Die Schule der Geläufigkeit* Op. 299 (40 bài) | Tốc độ: gam, hợp âm rải, nốt lặp, ở cả hai tay |
+| Cramer, 60 étude do Hans von Bülow chọn | Độc lập ngón, nhiều bè trong một tay, legato. Cramer viết 84 étude (Op. 30 và Op. 40) |
+| Clementi, *Gradus ad Parnassum* Op. 44 (100 bài, in 1817–1826) | Ngón đều và bền; có cả fugue và canon. Đừng nhầm với sách đối âm cùng tên của Fux ([bài 22](/opus/nhac-ly/22-doi-am/)) |
+| Czerny, *Die Kunst der Fingerfertigkeit* Op. 740 (50 bài) | Tốc độ và sức bền ở trình độ cao |
+| Moszkowski, *15 Études de virtuosité* Op. 72 | Kỹ thuật biểu diễn trong những bài rất giàu nhạc tính |
+| Chopin, 12 Études Op. 10 (1833) và 12 Études Op. 25 (1837) | Mỗi bài một vấn đề kỹ thuật, đồng thời là tác phẩm hòa nhạc ([hướng dẫn nghe](/opus/nghe-nhac/chopin-etude/)) |
+| Liszt, *Études d'exécution transcendante* (bản cuối 1852) | Kỹ thuật biểu diễn ở mức cao nhất |
+| Debussy, *12 Études* (1915) | Đề tặng tưởng nhớ Chopin; mỗi bài một quãng hoặc một kỹ thuật. Bài đầu tiên mang tên *Pour les cinq doigts, d'après Monsieur Czerny* ("cho năm ngón, theo ông Czerny") |
 
 ### Sách bài tập ngón
 
-| Sách | Dành cho | Ghi chú |
+| Sách | Gợi ý của trang | Ghi chú |
 |---|---|---|
 | Hanon, *Le Pianiste virtuose* (1873, 60 bài) | từ chặng sơ cấp (phần 1) | Xem phần riêng bên dưới |
-| Brahms, *51 Übungen* WoO 6 (in năm 1893) | nâng cao | Những mẫu ngắn, khó, cô đọng mà Brahms tích lũy qua nhiều năm |
+| Brahms, *51 Übungen* WoO 6 (in năm 1893) | nâng cao | Những mẫu ngắn Brahms viết trong khoảng 1850–1893 (theo IMSLP) |
 | Dohnányi, *Essential Finger Exercises* (1929) | nâng cao | Tập bài tập ngắn cho người đã có kỹ thuật nền |
 | Cortot, *Principes rationnels de la technique pianistique* | trung cấp cao trở lên | Nhiều bài tập ngón cho từng khía cạnh của kỹ thuật, kèm lời giải thích |
 
@@ -254,5 +254,5 @@ Danh sách bài cho từng chặng nằm ở [Tác phẩm theo cấp độ](/opu
 - Bản nhạc và danh mục tác phẩm: trang tác phẩm trên [IMSLP](https://imslp.org/) (Hanon, Brahms WoO 6, Dohnányi, Cortot, Czerny, Burgmüller, Heller, Cramer, Clementi, Moszkowski, Liszt, Debussy); bản Urtext của [G. Henle Verlag](https://www.henle.de/) cho Burgmüller Op. 100 và các étude của Chopin.
 - Charles-Louis Hanon, *Le Pianiste virtuose en 60 exercices* (Boulogne, 1873); bản tiếng Anh *The Virtuoso Pianist* (G. Schirmer, 1900), [bản số hóa trên Internet Archive](https://archive.org/details/hanonvirtuosopia00hano).
 - Chuan C. Chang, [*Fundamentals of Piano Practice*, mục Exercises](https://fundamentals-of-piano-practice.readthedocs.io/chapter1/ch1_topics/III.7.html).
-- BAPAM, [*The Healthy Pianist*](https://crosseyedpianist.com/wp-content/uploads/2016/08/thehealthypianist_bapamfactsheet.pdf).
+- BAPAM, [*The Healthy Pianist*](https://www.bapam.org.uk/?p=59585).
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

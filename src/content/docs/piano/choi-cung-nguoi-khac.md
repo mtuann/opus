@@ -24,7 +24,7 @@ Nếu thầy chơi bè kia, bạn có thể bắt đầu rất sớm với nhữ
 
 ## Piano bốn tay
 
-**Piano bốn tay** là hai người chung một đàn; lịch sử và danh sách nghe thử có ở [Các thể loại nhạc piano](/opus/piano/the-loai/).
+**Piano bốn tay** là hai người chung một đàn; danh sách nghe thử có ở [Các thể loại nhạc piano](/opus/piano/the-loai/).
 
 ### Primo và secondo
 
@@ -36,7 +36,7 @@ Nếu thầy chơi bè kia, bạn có thể bắt đầu rất sớm với nhữ
 | Bàn đạp | Thường không | Thường có |
 | Lo chính về | Phân câu, sắc thái của giai điệu | Nhịp, hòa âm, độ cân bằng |
 
-Nhiều ấn bản in secondo ở trang trái, primo ở trang phải, cùng một đoạn nhạc. Hãy đọc lướt cả bè người kia để biết khi nào mình phải nhường. Và đừng chỉ giành primo: cả bài đứng trên bè trầm, nên secondo là chỗ rất tốt để học hòa âm và giữ nhịp.
+Hãy đọc lướt cả bè người kia để biết khi nào mình phải nhường. Và đừng chỉ giành primo: cả bài đứng trên bè trầm, nên secondo là chỗ rất tốt để học hòa âm và giữ nhịp.
 
 ### Bàn đạp: thường là secondo
 
@@ -113,11 +113,11 @@ Chỉ gồm tác phẩm **viết gốc cho bốn tay**. Cấp độ ước lư�
 | 3–5 | Ravel, *Ma mère l'Oye* (Mẹ Ngỗng, 1910) | "Năm bài cho trẻ em", viết cho Mimie và Jean Godebski, 6 và 7 tuổi. *Pavane* chậm, ít nốt; các bài sau khó hơn |
 | 4–5 | Bizet, *Jeux d'enfants* (Trò chơi trẻ em) Op. 22 (1871) | 12 bức tranh nhỏ về trò chơi trẻ con |
 | 4–5 | Fauré, *Dolly* Op. 56 | Sáu bài cho cô bé Hélène Bardac, biệt danh Dolly |
-| 5–6 | Schubert, *Trois marches militaires* D. 733 | In năm 1826 thành Op. 51; số 1 Rê trưởng nổi tiếng nhất |
+| 5–6 | Schubert, *Trois marches militaires* D. 733 | In năm 1826 thành Op. 51; số 1 ở giọng Rê trưởng |
 | 5–6 | Mozart, Sonata Rê trưởng K. 381 (123a), Sonata Đô trưởng K. 521 (1787) | Hai bè ngang nhau; K. 521 khó hơn hẳn |
 | 5–6 | Brahms, *Ungarische Tänze* (Vũ khúc Hungary) WoO 1 | 21 bài, bốn tập (1869 và 1880); viết cho bốn tay trước khi thành bản dàn nhạc |
 | 6 | Dvořák, *Slavonic Dances* (Vũ khúc Slav) Op. 46 (1878), Op. 72 (1886) | Cũng viết cho bốn tay trước; secondo rất nặng |
-| 7 | Schubert, Fantasia Fa thứ D. 940 (1828) | Bốn phần chơi liền, phần cuối có một fugue ([Schubert](/opus/piano/nha-soan-nhac/)) |
+| 7 | Schubert, Fantasia Fa thứ D. 940 (1828) | Bốn phần: Allegro molto moderato, Largo, Allegro vivace, Tempo I ([Schubert](/opus/piano/nha-soan-nhac/)) |
 
 ## Hai đàn piano
 
@@ -127,7 +127,7 @@ Hai đàn cũng là cách **học concerto**: trong giờ học và các kỳ th
 
 ## Đệm hát
 
-Trong **ca khúc nghệ thuật** (*Lied* tiếng Đức, *mélodie* tiếng Pháp), piano cùng kể chuyện với giọng hát: trong [*Erlkönig*](/opus/nghe-nhac/schubert-erlkonig/) của Schubert, piano là tiếng vó ngựa phi suốt bài, rồi im bặt trước câu cuối. Phần **dạo đầu** đặt tốc độ và không khí; phần **kết** thường nói nốt điều lời ca để ngỏ.
+Trong **ca khúc nghệ thuật** (*Lied* tiếng Đức, *mélodie* tiếng Pháp), piano cùng kể chuyện với giọng hát: trong [*Erlkönig*](/opus/nghe-nhac/schubert-erlkonig/) của Schubert, piano là tiếng vó ngựa phi suốt bài, đến câu cuối mới dừng để giọng hát kể như nói (*recitative*). Phần **dạo đầu** đặt tốc độ và không khí; phần **kết** thường nói nốt điều lời ca để ngỏ.
 
 | Việc | Cách làm |
 |---|---|
@@ -136,7 +136,6 @@ Trong **ca khúc nghệ thuật** (*Lied* tiếng Đức, *mélodie* tiếng Ph�
 | **Đi theo tốc độ** | *Colla voce* (theo giọng hát) là piano đi theo; *a tempo* là trở lại tốc độ cũ. Ở dấu ngân, nhả hợp âm khi ca sĩ dứt tiếng. Nhưng khi ca sĩ hồi hộp mà vội dần, hãy giữ nhịp vững làm chỗ dựa |
 | **Đúng giọng** | Ca khúc nghệ thuật thường in nhiều bản cho giọng cao, trung, trầm (*hohe*, *mittlere*, *tiefe Stimme*). Hỏi trước ca sĩ dùng bản nào; dịch giọng khi đang chơi là kỹ năng khó ([Khóa Đô và dịch giọng](/opus/nhac-ly/17-khoa-do-dich-giong/)) |
 | **Cân bằng** | Bè trầm đầy đặn, hợp âm ở giữa nhẹ đi, vì giọng hát dễ bị lấp ở đó. Phòng nhỏ thì chống nắp đàn ở nấc ngắn hoặc đóng hẳn |
-| **Giữ giọng cho ca sĩ** | Buổi tập ngắn, có nghỉ; ca sĩ được hát nhẹ, chỉ hát hết sức khi chạy bài |
 
 Bài 3 (soạn cho trang này): giai điệu cho giọng hát hoặc nhạc cụ trên hình đệm valse ([Hợp âm và hình đệm](/opus/piano/hop-am-rai/)). Piano dạo đầu hai ô; ô 6 là chỗ thở; ô 9 piano đi theo giai điệu; dấu ngân cuối hai bên nhả cùng lúc.
 
@@ -183,7 +182,7 @@ Bài để bắt đầu (phần piano khoảng chặng 4–5): ba *Sonatina* cho
 
 ## Nhạc thính phòng
 
-**Tam tấu piano** gồm piano, violin, cello; **tứ tấu piano** thêm viola; **ngũ tấu piano** thường là piano với bốn đàn dây. [*Con cá hồi*](/opus/nghe-nhac/schubert-ca-hoi/) của Schubert là ngoại lệ, có contrabass thay violin thứ hai: nghe chương 4, để ý khi nào piano dẫn, khi nào nó im hẳn. Trong bè piano, các bè đàn dây thường in nhỏ phía trên, nên bạn là người duy nhất thấy cả tổng phổ ([Đọc tổng phổ](/opus/nhac-ly/20-doc-tong-pho/)) và hay được trông vào để gọi chỗ bắt đầu lại. Bắt đầu với tam tấu của Haydn, nơi piano nổi bật và cello phần lớn đi cùng bè trầm của piano.
+**Tam tấu piano** gồm piano, violin, cello; **tứ tấu piano** thêm viola; **ngũ tấu piano** thường là piano với bốn đàn dây. [*Con cá hồi*](/opus/nghe-nhac/schubert-ca-hoi/) của Schubert là ngoại lệ, có contrabass thay violin thứ hai: nghe chương 4 (chủ đề và biến tấu), để ý khi nào piano dẫn, khi nào nó lùi lại. Trong bè piano, các bè đàn dây thường in nhỏ phía trên, nên bạn là người duy nhất thấy cả tổng phổ ([Đọc tổng phổ](/opus/nhac-ly/20-doc-tong-pho/)) và hay được trông vào để gọi chỗ bắt đầu lại. Bắt đầu với tam tấu của Haydn, nơi piano nổi bật và cello phần lớn đi cùng bè trầm của piano.
 
 ## Tập chung cho hiệu quả
 
@@ -221,7 +220,7 @@ Một buổi tập 60 phút: 5 phút chuẩn bị và đưa nốt La; 10 phút c
 
 Ngày nay người ta hay nói **nghệ sĩ piano hợp tác** (*collaborative pianist*) thay cho "người đệm đàn" (*accompanist*), để nhấn mạnh vai bạn diễn ngang hàng. Nghề này gồm đệm cho ca sĩ và nhạc công, làm **répétiteur** ở nhà hát opera (người tập vở cùng ca sĩ) và chơi nhạc thính phòng.
 
-Người góp phần lớn thay đổi cách nhìn ấy là **Gerald Moore** (1899–1987), nghệ sĩ piano người Anh. Ông nhắc lại, với ý không đồng tình, lời "khen" của một ca sĩ dành cho người đệm đàn Coenraad V. Bos: "Hôm nay chắc anh chơi hay lắm, vì tôi chẳng để ý thấy anh." Moore chơi cùng Dietrich Fischer-Dieskau (bản thu *Erlkönig* gợi ý trong [hướng dẫn nghe](/opus/nghe-nhac/schubert-erlkonig/)), Elisabeth Schwarzkopf, Victoria de los Ángeles; Fischer-Dieskau viết rằng với Moore, bên phím đàn không còn "cái bóng nhợt nhạt" nữa. Buổi hòa nhạc chia tay của ông năm 1967 ở Royal Festival Hall (London) có cả ba ca sĩ ấy, và khép lại khi Moore chơi một mình bản chuyển soạn cho piano của *An die Musik* (Gửi âm nhạc) của Schubert. Tên hồi ký của ông cũng là câu người đệm nên tự hỏi: *Am I Too Loud?* (Tôi có to quá không?, 1962).
+Một trong những người góp phần lớn thay đổi cách nhìn ấy là **Gerald Moore** (1899–1987), nghệ sĩ piano người Anh. Ông dẫn lại, với ý không đồng tình, lời "khen" mà giọng tenor Raimund von zur Mühlen viết cho người đệm đàn Coenraad V. Bos: "Tối qua chắc anh chơi hay lắm, vì suốt buổi tôi chẳng để ý thấy tiếng đàn của anh." Moore chơi cùng Dietrich Fischer-Dieskau (bản thu *Erlkönig* gợi ý trong [hướng dẫn nghe](/opus/nghe-nhac/schubert-erlkonig/)), Elisabeth Schwarzkopf, Victoria de los Ángeles; Fischer-Dieskau viết rằng với Moore, bên phím đàn không còn "cái bóng nhợt nhạt" nữa. Buổi hòa nhạc chia tay của ông năm 1967 ở Royal Festival Hall (London) có cả ba ca sĩ ấy, và khép lại khi Moore chơi một mình bản chuyển soạn cho piano của *An die Musik* (Gửi âm nhạc) của Schubert. Tên hồi ký của ông cũng là câu người đệm nên tự hỏi: *Am I Too Loud?* (Tôi có to quá không?, 1962).
 
 ## Kiểm tra nhanh
 
@@ -259,5 +258,5 @@ Người góp phần lớn thay đổi cách nhìn ấy là **Gerald Moore** (18
 - Martin Katz, *The Complete Collaborator: The Pianist as Partner* (Oxford University Press, 2009).
 - Cameron McGraw, *Piano Duet Repertoire: Music Originally Written for One Piano, Four Hands* (Indiana University Press).
 - *The Concise Oxford Dictionary of Music* (Oxford University Press), qua [Encyclopedia.com](https://www.encyclopedia.com/): các mục *piano trio*, *piano quartet*, *piano quintet*, *lied*, *mélodie*, *colla voce*, *répétiteur*.
-- Bản nhạc: [IMSLP](https://imslp.org/) (tìm "Diabelli Op.149", "Jeux d'enfants", "Dolly Suite, Op.56", "Ma mère l'Oye (suite)", "Fantasie D.940"); Diabelli Op. 149 có bản của Edition Peters (EP 2442); ấn bản Urtext: [G. Henle Verlag](https://www.henle.de/), Bärenreiter, Wiener Urtext.
+- Bản nhạc: [IMSLP](https://imslp.org/) (tìm "Diabelli Op.149", "Jeux d'enfants", "Dolly Suite, Op.56", "Ma mère l'Oye (suite)", "Fantasie D.940"); Diabelli Op. 149 có bản của Edition Peters (EP 2442).
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

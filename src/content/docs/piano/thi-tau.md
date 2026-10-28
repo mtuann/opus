@@ -7,7 +7,7 @@ description: "Đọc nhạc piano khó hơn đọc một bè: hai khuông, nhi�
 
 ## Đọc hình dạng, đừng đánh vần từng nốt
 
-Người mới đọc nhạc như trẻ con đánh vần: gọi tên từng nốt rồi mới đi tìm phím. Người đọc giỏi nhìn **khoảng cách** giữa các nốt và **hình dạng** của cả nhóm nốt, giống như ta đọc cả chữ chứ không đọc từng chữ cái. Có ba cách nhận ra một nốt, và người đọc giỏi dùng cả ba cùng lúc:
+Người mới đọc nhạc như trẻ con đánh vần: gọi tên từng nốt rồi mới đi tìm phím. Người đọc giỏi nhìn **khoảng cách** giữa các nốt và **hình dạng** của cả nhóm nốt, giống như ta đọc cả chữ chứ không đọc từng chữ cái. Có ba cách nhận ra một nốt; hãy tập cả ba:
 
 1. **Nốt mốc**: vài nốt bạn nhận ra tức thì (Đô giữa, Sol trên dòng 2 khóa Sol, Fa trên dòng 4 khóa Fa, các nốt Đô…). Xem [Bản đồ bàn phím](/opus/piano/ban-do-ban-phim/).
 2. **Quãng tính từ nốt trước**: nốt này cao hơn hay thấp hơn nốt trước bao nhiêu bậc.
@@ -40,7 +40,7 @@ C "^3"E "^2"D "^4"G | "^4"c "^4"G "^3"E "^3"C | "^5"G2 "^5"C2 |]
 ## Đọc hai khuông cùng lúc
 
 - Đọc theo **chiều dọc**: những nốt thẳng hàng trên hai khuông vang cùng lúc. Mắt đi theo từng "cột" phách, không đọc hết dòng tay phải rồi mới quay lại đọc tay trái.
-- Đọc **bè trầm** trước: nốt thấp nhất cho biết hòa âm và thường đi chậm hơn giai điệu.
+- Đọc **bè trầm** trước: nốt thấp nhất cho biết hợp âm đang ở thế gốc hay thể đảo.
 - Tìm **mô thức tay trái**: nốt trầm rồi hai hợp âm (điệu valse), bè Alberti (trầm–cao–giữa–cao), hợp âm rải. Nhận ra mô thức là đọc một lần cho cả ô nhịp. Xem [Hợp âm, hợp âm rải và hình đệm](/opus/piano/hop-am-rai/).
 - Đọc **hợp âm bằng hình dạng**: ba nốt nằm trên ba dòng liên tiếp (hoặc ba khe liên tiếp) là hợp âm ba ở thế gốc; thấy một quãng 4 "hở" trong chồng nốt là thể đảo. Xem [Hợp âm ba](/opus/nhac-ly/10-hop-am-ba/) và [Hợp âm bảy và thể đảo](/opus/nhac-ly/11-hop-am-bay/).
 - **Dòng kẻ phụ**: thuộc lòng ba nốt Đô làm mốc: Đô giữa (C4) trên một dòng kẻ phụ giữa hai khuông, Đô trên hai dòng kẻ phụ phía trên khóa Sol (C6), Đô trên hai dòng kẻ phụ phía dưới khóa Fa (C2).
@@ -176,7 +176,7 @@ K:Am
 
 | Trình độ | Tài liệu | Ghi chú |
 |---|---|---|
-| Mới bắt đầu | [Đọc nốt](/opus/luyen-tap/doc-not/), [Thị tấu một bè](/opus/luyen-tap/thi-tau/), [Phiếu bài tập](/opus/luyen-tap/phieu-bai-tap/) trên site; Bartók, *Mikrokosmos* quyển 1–2 | *Mikrokosmos* bắt đầu bằng những bài ngắn và tăng độ khó từng chút |
+| Mới bắt đầu | [Đọc nốt](/opus/luyen-tap/doc-not/), [Thị tấu một bè](/opus/luyen-tap/thi-tau/), [Phiếu bài tập](/opus/luyen-tap/phieu-bai-tap/) trên site; Bartók, *Mikrokosmos* quyển 1–2 | *Mikrokosmos* gồm 153 bài xếp theo độ khó tăng dần; quyển 1–2 là những bài đầu |
 | Theo cấp thi | Paul Harris, *Improve your sight-reading!* (Faber Music) | Mỗi cấp một quyển, có bài tập tiết tấu và giai điệu, bài mẫu kèm câu hỏi, và bài đọc ngắn |
 | Đọc cùng người khác | Song tấu bốn tay, ví dụ Anton Diabelli, *Melodious Exercises* Op. 149 | Bè của học trò chỉ dùng năm nốt; chơi cùng người khác buộc bạn không được dừng |
 | Trung cấp | Tuyển tập dễ: minuet trong *Notebook for Anna Magdalena Bach*, sonatina, *Album for the Young* của Schumann | Chọn bài dễ hơn bài đang tập |
@@ -222,7 +222,7 @@ K:Am
 
 - Andreas C. Lehmann, Victoria McArthur, "Sight-reading", trong Richard Parncutt, Gary E. McPherson (chủ biên), *The Science and Psychology of Music Performance* (Oxford University Press, 2002).
 - Paul Harris, *Improve your sight-reading!* (Faber Music), loạt sách piano theo cấp.
-- Béla Bartók, *Mikrokosmos* (Boosey & Hawkes).
+- Béla Bartók, *Mikrokosmos*: 153 bài trong sáu quyển, in lần đầu năm 1940 ([G. Henle Verlag, quyển 1–2, HN 1408](https://www.henle.de/Mikrokosmos-Volumes-I-II/HN-1408)).
 - Anton Diabelli, *Melodious Exercises* Op. 149 cho piano bốn tay.
 - [ABRSM](https://www.abrsm.org/): đề mẫu thị tấu; [Trinity College London](https://www.trinitycollege.com/): đề cương thi piano.
 - [Sight Reading Factory](https://www.sightreadingfactory.com/).

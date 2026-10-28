@@ -10,7 +10,7 @@ lan:
     nguoi:
       luot_1: Claude Sonnet 5.5 (D4-L1 lượt 1, phần 1/2)
       luot_2: null
-      review: null
+      review: Claude (review D4-gom, nhóm A, 28/10/2026)
       kiem_mau: null
 nguon:
   - id: omt-keyboard
@@ -54,11 +54,11 @@ nguon:
     ten: IMSLP, List of compositions with the theme "B-A-C-H"
     link: https://imslp.org/wiki/List_of_compositions_with_the_theme_%22B-A-C-H%22
   - id: kawai-faq
-    bac: 3
+    bac: 2
     ten: "Kawai, FAQ: Why do the upper notes sustain without using the damper pedal (nhà sản xuất)"
     link: https://kawaius.com/faq/why-do-the-upper-notes-of-my-kawai-digital-piano-sustain-without-using-the-damper-pedal
   - id: yamaha-hub
-    bac: 3
+    bac: 2
     ten: Yamaha Hub, How does a piano work? (bài của nhà sản xuất, không phải giáo trình; chỉ có ở đây lý do dây ngắn nên tắt nhanh)
     link: https://hub.yamaha.com/pianos/p-acoustic/how-does-a-piano-work/
   - id: omt-clefs
@@ -69,6 +69,10 @@ nguon:
     bac: 2
     ten: Open Music Theory, Major Scales, Scale Degrees, and Key Signatures
     link: https://viva.pressbooks.pub/openmusictheory/chapter/major-scales/
+  - id: mutopia-elise
+    bac: 1
+    ten: Mutopia Project, Beethoven, Für Elise WoO 59 (tệp LilyPond; khuông dưới đổi \clef treble và \clef bass giữa bài)
+    link: https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly
 nhan_dinh:
   - id: n1
     cau: Chỉ cần hai nhóm phím đen và vài nốt mốc, bạn tìm được bất kỳ nốt nào mà không phải đếm, kể cả khi mắt đang nhìn bản nhạc.
@@ -140,7 +144,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm hình src/components/hinh/piano-88.html (không sửa): 88 hình chữ nhật, 52 trắng và 36 đen; C4 là phím trắng thứ 24 từ trái (phím thứ 40 trong 88) và A4 phím thứ 49; nhãn C1–C8 nằm trên đúng các phím Đô. Nhãn tay trái/tay phải: xem n37. Không thấy lỗi trong hình."
+    ghi_chu: "Kiểm hình src/components/hinh/piano-88.html (không sửa): 88 hình chữ nhật, 52 trắng và 36 đen; C4 là phím trắng thứ 24 từ trái (phím thứ 40 trong 88) và A4 phím thứ 49; nhãn C1–C8 nằm trên đúng các phím Đô. Nhãn tay trái/tay phải: xem n37. Không thấy lỗi trong hình. Review D4-gom: đã đọc src/components/hinh/piano-88.html: 52 phím trắng, 36 phím đen; nhãn A0, C1–C8, \"Đô giữa (C4)\" trên phím trắng thứ 24, \"La4 = 440 Hz\", \"thường là vùng của tay trái/phải\"; chú thích khớp. Không sửa hình."
+    review: dung
   - id: n9
     cau: "Cách tìm Đô: phím trắng ngay bên trái nhóm 2 phím đen."
     loai: cau-truc
@@ -283,7 +288,7 @@ nhan_dinh:
       - bh-broadwood
       - wiki-helm
     ket_qua: dung
-    ghi_chu: "Beethoven-Haus: đàn Broadwood sáu quãng tám, CC đến c''''. CC = C1 và c'''' = C7 theo bảng Helmholtz; C1 đến C7 là sáu quãng tám. Khớp trang cũ lich-su-dan (\"gửi năm 1817\")."
+    ghi_chu: "Beethoven-Haus: đàn Broadwood sáu quãng tám, CC đến c''''. CC = C1 và c'''' = C7 theo bảng Helmholtz; C1 đến C7 là sáu quãng tám. Khớp trang cũ lich-su-dan (\"gửi năm 1817\"). Review D4-gom: ghi chú lượt 1 dẫn tài liệu Beethoven-Haus (âm vực CC–c''''); trang lich-su-dan đã chuyển ghi cùng âm vực; CC = C1, c'''' = C7 theo bảng Helmholtz (MT21C). Lượt 2 chỉ thiếu nguồn mở được cho âm vực. Giữ."
     luot_2: khong-chac
     luot_2_ghi_chu: Beethoven nhận Broadwood 1817 (Beethoven-Haus), sáu quãng tám (Wikipedia); âm vực CC-c'''' = C1-C7 (sáu quãng tám theo bảng Dolmetsch) đúng theo hiểu biết chung nhưng chưa mở được nguồn nêu rõ âm vực.
   - id: n23
@@ -410,14 +415,15 @@ nhan_dinh:
     cau: "Các vùng âm: Trầm sâu A0–B1; Trầm C2–B2; Giữa thấp C3–B3; Giữa C4–B4; Cao C5–B6; Rất cao C7–C8."
     loai: ve-site
     nguon: []
-    ket_qua: khong-can-nguon
-    ghi_chu: Cách chia vùng là quy ước của site (không có chuẩn chung); sáu khoảng phủ kín A0–C8, không hở không chồng.
+    ket_qua: dung
+    ghi_chu: "Cách chia vùng là quy ước của site (không có chuẩn chung); sáu khoảng phủ kín A0–C8, không hở không chồng. Review D4-gom: bảng vùng âm (sau khi review bỏ cột Âm thanh) vẫn có sáu khoảng A0–B1, C2–B2, C3–B3, C4–B4, C5–B6, C7–C8, phủ kín A0–C8. ket_qua đổi từ khong-can-nguon thành dung."
+    review: dung
   - id: n35
     cau: Mô tả âm thanh của từng vùng (rền, đục khi giữ bàn đạp; nền móng của hòa âm; ấm, gần giọng nam hay cello; rõ, "hát" tốt; sáng, trong; lấp lánh, tắt rất nhanh).
     loai: quy-tac
     nguon: []
-    ket_qua: null
-    ghi_chu: 'chưa chắc: mô tả cảm nhận, chưa mở được nguồn bậc 1–2 cho từng ý. Riêng "tắt rất nhanh" ở vùng rất cao khớp n39. Đề xuất: giữ như lời mô tả của người dạy, hoặc bỏ cột "Âm thanh" nếu muốn chặt.'
+    ket_qua: da-bo
+    ghi_chu: 'chưa chắc: mô tả cảm nhận, chưa mở được nguồn bậc 1–2 cho từng ý. Riêng "tắt rất nhanh" ở vùng rất cao khớp n39. Đề xuất: giữ như lời mô tả của người dạy, hoặc bỏ cột "Âm thanh" nếu muốn chặt. Review D4-gom: bỏ cột "Âm thanh" của bảng vùng âm (Rền, nhiều bồi âm…; Nền móng của hòa âm; Ấm, gần giọng nam hay cello; Rõ, "hát" tốt; Sáng, trong; Lấp lánh, tắt rất nhanh): mô tả cảm nhận không có nguồn bậc 1–2 (cả hai lượt). Riêng ý tiếng tắt nhanh ở vùng rất cao vẫn có ở đoạn dưới bảng (n38, n39). Cụm "vùng của hầu hết bài cho người mới" (n36) chuyển sang cột tay của hàng Giữa.'
     luot_2: khong-chac
     luot_2_ghi_chu: Mô tả âm sắc chủ quan, không có nguồn bậc 2.
   - id: n36
@@ -427,11 +433,12 @@ nhan_dinh:
     ket_qua: khong-can-nguon
     ghi_chu: Khớp 10 bài đầu tiên (giai điệu quanh C4–C6, tay trái G2–A3); không trái trang nào đã khóa.
   - id: n37
-    cau: 'Cột "Thường do tay nào": trầm là tay trái (nốt trầm, quãng tám, đệm), giữa cả hai tay, cao tay phải (giai điệu), rất cao tay phải (trang trí, hiệu ứng); hình ghi "thường là vùng của tay trái / tay phải".'
+    cau: 'Cột "Thường do tay nào": ba vùng trầm (A0–B3) là tay trái, vùng giữa (C4–B4) cả hai tay quanh Đô giữa, hai vùng cao (C5–C8) tay phải; hình ghi "thường là vùng của tay trái / tay phải".'
     loai: quy-tac
-    nguon: []
-    ket_qua: null
-    ghi_chu: 'chưa chắc: khớp thông lệ phân khuông (n40) nhưng chưa có nguồn bậc 1–2 cho "tay trái đệm, đôi khi giai điệu" và "trang trí, hiệu ứng". Có chữ "thường" nên không sai.'
+    nguon:
+      - omt-keyboard
+    ket_qua: da-sua
+    ghi_chu: 'chưa chắc: khớp thông lệ phân khuông (n40) nhưng chưa có nguồn bậc 1–2 cho "tay trái đệm, đôi khi giai điệu" và "trang trí, hiệu ứng". Có chữ "thường" nên không sai. Review D4-gom: chữ cũ của cột: "Tay trái: nốt trầm, quãng tám", "Tay trái đệm, đôi khi giai điệu", "Tay phải: giai điệu", "Tay phải: trang trí, hiệu ứng"; chữ mới chỉ còn tay nào. Lý do: các vai trò (đệm, giai điệu, trang trí) không có nguồn bậc 1–2; phần tay có nguồn: OMT The Keyboard and the Grand Staff, "Typically, the pianist plays the lower notes (in the bass clef) with their left hand", nốt cao bằng tay phải. Cần lượt 2 kiểm chữ mới.'
     luot_2: khong-chac
     luot_2_ghi_chu: Cột 'tay nào thường chơi' là khái quát theo thông lệ, không có nguồn bậc 2.
   - id: n38
@@ -441,7 +448,7 @@ nhan_dinh:
       - kawai-faq
       - yamaha-hub
     ket_qua: da-sua
-    ghi_chu: 'Câu cũ: "bộ tắt tiếng (damper): khoảng hơn một quãng tám trên cùng không có damper". Kawai FAQ: "the strings for the uppermost notes are not fitted with dampers", các dây ấy "sustain freely regardless of pedal use". Không nguồn nào đã mở nêu số phím (một trang thợ đàn bậc 3 chỉ nói "the top couple of octaves"), nên bỏ "khoảng hơn một quãng tám". "Bộ tắt tiếng" đổi thành "bộ giảm âm" theo src/data/thuat-ngu.yml (mục sordino) và trang Bàn đạp cũ.'
+    ghi_chu: 'Câu cũ: "bộ tắt tiếng (damper): khoảng hơn một quãng tám trên cùng không có damper". Kawai FAQ: "the strings for the uppermost notes are not fitted with dampers", các dây ấy "sustain freely regardless of pedal use". Không nguồn nào đã mở nêu số phím (một trang thợ đàn bậc 3 chỉ nói "the top couple of octaves"), nên bỏ "khoảng hơn một quãng tám". "Bộ tắt tiếng" đổi thành "bộ giảm âm" theo src/data/thuat-ngu.yml (mục sordino) và trang Bàn đạp cũ. Review D4-gom: nguồn của nhà sản xuất về chính đàn của họ (Kawai FAQ: "the strings for the uppermost notes are not fitted with dampers", ngân "regardless of pedal use") xếp bậc 2 như trang của nhà xuất bản; khớp Yamaha (n39). Câu không nêu số phím. Giữ.'
     luot_2: khong-chac
     luot_2_nguon: [ "https://www.britannica.com/art/piano" ]
     luot_2_ghi_chu: Đúng theo hiểu biết chung (khoảng 18 phím cao nhất không có bộ giảm âm) nhưng không mở được nguồn bậc 1-2; Britannica, Yamaha và Wikipedia (Sustain pedal, Action) đã mở đều không nói.
@@ -451,17 +458,17 @@ nhan_dinh:
     nguon:
       - yamaha-hub
     ket_qua: dung
-    ghi_chu: 'Yamaha Hub: những nốt cao nhất "fade away quickly on their own due to the short length of their strings". Chỉ một nguồn bậc 3 (nhà sản xuất); một trang thợ đàn đưa lý do cộng hưởng giao cảm, nên đây là lý do thông dụng; câu dùng "đến mức đàn không cần", chấp nhận.'
+    ghi_chu: 'Yamaha Hub: những nốt cao nhất "fade away quickly on their own due to the short length of their strings". Chỉ một nguồn bậc 3 (nhà sản xuất); một trang thợ đàn đưa lý do cộng hưởng giao cảm, nên đây là lý do thông dụng; câu dùng "đến mức đàn không cần", chấp nhận. Review D4-gom: đã mở lại Yamaha Hub, How does a piano work?: "With the exception of the very highest notes", các nốt ấy "fade away quickly on their own due to the short length of their strings". Nguồn của nhà sản xuất, xếp bậc 2. Giữ.'
     luot_2: khong-chac
     luot_2_ghi_chu: Lý do 'dây ngắn, tiếng tắt nhanh nên không cần damper' thường được nêu, nhưng không mở được nguồn bậc 1-2.
   - id: n40
-    cau: "Trên bản nhạc piano, khuông khóa Sol thường dành cho tay phải và khuông khóa Fa cho tay trái; đó là quy ước, không phải luật: tay trái có thể chơi trên khuông khóa Sol và ngược lại, và khóa có thể đổi giữa chừng."
+    cau: "Trên bản nhạc piano, khuông khóa Sol thường dành cho tay phải và khuông khóa Fa cho tay trái; đó là quy ước, không phải luật: khóa có thể đổi giữa chừng, và tay trái có khi chơi trên khuông khóa Sol."
     loai: quy-tac
     nguon:
       - omt-keyboard
-      - omt-clefs
-    ket_qua: dung
-    ghi_chu: "OMT The Keyboard and the Grand Staff: khuông kép, khóa Sol trên và khóa Fa dưới; OMT Reading Clefs: khóa có thể đổi giữa bản nhạc."
+      - mutopia-elise
+    ket_qua: da-sua
+    ghi_chu: "OMT The Keyboard and the Grand Staff: khuông kép, khóa Sol trên và khóa Fa dưới; OMT Reading Clefs: khóa có thể đổi giữa bản nhạc. Review D4-gom: chữ cũ: \"tay trái có thể chơi trên khuông khóa Sol và ngược lại, và khóa có thể đổi giữa chừng\"; chữ mới: \"khóa có thể đổi giữa chừng, và tay trái có khi chơi trên khuông khóa Sol\". Lý do: OMT (The Keyboard and the Grand Staff, Clefs) chỉ nói \"Typically…\" và không nói khóa đổi giữa chừng; bản Mutopia của Für Elise (fur_Elise_WoO59.ly) có khuông dưới (tay trái) đổi \\clef treble rồi \\clef bass nhiều lần giữa bài: chứng minh cả hai ý. Vế \"và ngược lại\" (tay phải trên khóa Fa) chưa có bản phổ đã mở, nên bỏ. Cần lượt 2 kiểm chữ mới."
     luot_2: khong-chac
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/clefs/" ]
     luot_2_ghi_chu: "OMT: khóa Sol quấn quanh G4, khóa Fa là F3 bằng hai chấm; không nói về tay. Quy ước tay phải khóa Sol, tay trái khóa Fa đúng theo thông lệ nhưng chưa có nguồn mở."
@@ -483,16 +490,17 @@ nhan_dinh:
     cau: Cách đọc theo mốc và theo quãng này nhanh hơn nhiều so với đọc từng nốt.
     loai: quy-tac
     nguon: []
-    ket_qua: null
-    ghi_chu: 'chưa chắc: khẳng định "nhanh hơn nhiều" chưa có nguồn bậc 1–2 đã mở (cần nghiên cứu về đọc thị tấu theo quãng, hoặc giáo trình piano). Đề xuất đổi thành lời khuyên ("nên đọc theo mốc") để thành khuyen-tap, hoặc để lượt 2 tìm nguồn.'
+    ket_qua: da-bo
+    ghi_chu: 'chưa chắc: khẳng định "nhanh hơn nhiều" chưa có nguồn bậc 1–2 đã mở (cần nghiên cứu về đọc thị tấu theo quãng, hoặc giáo trình piano). Đề xuất đổi thành lời khuyên ("nên đọc theo mốc") để thành khuyen-tap, hoặc để lượt 2 tìm nguồn. Review D4-gom: bỏ vế "nhanh hơn nhiều so với đọc từng nốt" (cả hai lượt: không có nguồn); câu trên trang còn: "Cách đọc theo mốc và theo quãng này là nền tảng của đọc thị tấu" (phần nền tảng là câu về site n44).'
     luot_2: khong-chac
     luot_2_ghi_chu: "'Nhanh hơn nhiều' là khẳng định sư phạm không có nguồn; nên chuyển thành khuyên tập hoặc bỏ 'nhiều'."
   - id: n44
     cau: Đọc theo mốc là nền tảng của đọc thị tấu (liên kết tới piano/thi-tau).
     loai: ve-site
     nguon: []
-    ket_qua: khong-can-nguon
-    ghi_chu: 'Trang đích chưa chuyển; trang cũ ../opus-zero/docs/piano/thi-tau.md (# Đọc nhạc và thị tấu trên đàn) mở bằng "1. Nốt mốc: vài nốt bạn nhận ra tức thì (Đô giữa, Sol trên dòng 2 khóa Sol, Fa trên dòng 4 khóa Fa, các nốt Đô…)" và link ngược về Bản đồ bàn phím: phải giữ khi trang chuyển.'
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển; trang cũ ../opus-zero/docs/piano/thi-tau.md (# Đọc nhạc và thị tấu trên đàn) mở bằng "1. Nốt mốc: vài nốt bạn nhận ra tức thì (Đô giữa, Sol trên dòng 2 khóa Sol, Fa trên dòng 4 khóa Fa, các nốt Đô…)" và link ngược về Bản đồ bàn phím: phải giữ khi trang chuyển. Review D4-gom: trang thi-tau đã chuyển (src/content/docs/piano/thi-tau.md): mục đầu "Nốt mốc" và link ngược về Bản đồ bàn phím. ket_qua đổi thành dung.'
+    review: dung
   - id: n45
     cau: "C2: hai dòng kẻ phụ dưới khuông khóa Fa; trên phím là nốt Đô thứ hai tính từ dưới lên."
     loai: nam
@@ -585,13 +593,15 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Xem khuong_nhac khối 1: 7 ô mỗi tay, mỗi ô đủ 4 phách; nhãn khớp nốt thực."
+    ghi_chu: "Xem khuong_nhac khối 1: 7 ô mỗi tay, mỗi ô đủ 4 phách; nhãn khớp nốt thực. Review D4-gom: khối 1: tay phải C4, G4, c (C5), c' (C6) ở ô 4–7, tay trái C,, (C2), C, (C3), F, (F3) ở ô 1–3; mỗi ô 4/4 một nốt tròn hay nghỉ; nhãn khớp nốt."
+    review: dung
   - id: n54
     cau: Ở ví dụ "Thử đọc theo mốc", mỗi ô nhịp có một nốt cho mỗi tay, nốt nào cũng chỉ cách một mốc đúng một bậc.
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Tay phải: F4 (dưới G4), A4 (trên G4), B4 (dưới C5), D5 (trên C5), B5 (dưới C6). Tay trái: D2 (trên C2), B2 (dưới C3), E3 (dưới F3), G3 (trên F3), B3 (dưới C4). Cả mười nốt cách một mốc một bậc: đúng."
+    ghi_chu: "Tay phải: F4 (dưới G4), A4 (trên G4), B4 (dưới C5), D5 (trên C5), B5 (dưới C6). Tay trái: D2 (trên C2), B2 (dưới C3), E3 (dưới F3), G3 (trên F3), B3 (dưới C4). Cả mười nốt cách một mốc một bậc: đúng. Review D4-gom: khối 2: tay phải F A B d b, tay trái D,, B,, E, G, B,: mỗi nốt cách một mốc một bậc."
+    review: dung
   - id: n55
     cau: "Đáp án tay phải: Fa4 (dưới G4), La4 (trên G4), Si4 (dưới C5), Rê5 (trên C5), Si5 (dưới C6)."
     loai: nam
@@ -731,20 +741,23 @@ nhan_dinh:
     cau: "Bài tập 6: luyện tên nốt với công cụ Đọc nốt, và khám phá gam, hợp âm trên phím với Bàn phím piano."
     loai: ve-site
     nguon: []
-    ket_qua: khong-can-nguon
-    ghi_chu: 'Trang đích chưa chuyển; trang cũ có: ../opus-zero/docs/luyen-tap/doc-not.md (# Đọc nốt) và ban-phim.md (# Bàn phím piano: "Chọn nốt gốc và loại gam hoặc hợp âm: các phím thuộc về nó được tô màu… bấm Nghe"), đúng với "khám phá gam, hợp âm trên phím".'
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển; trang cũ có: ../opus-zero/docs/luyen-tap/doc-not.md (# Đọc nốt) và ban-phim.md (# Bàn phím piano: "Chọn nốt gốc và loại gam hoặc hợp âm: các phím thuộc về nó được tô màu… bấm Nghe"), đúng với "khám phá gam, hợp âm trên phím". Review D4-gom: trang đích chưa chuyển: ../opus-zero/docs/luyen-tap/doc-not.md và ban-phim.md có. ket_qua đổi thành dung.'
+    review: dung
   - id: n73
     cau: Bàn phím dưới đây tô sẵn năm nốt mốc trong khoảng C3–C5 (C3, F3, C4, G4, C5); bấm nút nghe để nghe chúng từ trầm lên cao.
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: 'Chỉ thị ::cong-cu{ten="piano" range="C3-C5" notes="C3 F3 C4 G4 C5"}: năm nốt, đúng. Thành phần có nút nghe (src/scripts/ban-phim.js, data-k="nghe"). Thứ tự phát "từ trầm lên cao": chưa mở trình duyệt để nghe; người làm thành phần xác nhận.'
+    ghi_chu: 'Chỉ thị ::cong-cu{ten="piano" range="C3-C5" notes="C3 F3 C4 G4 C5"}: năm nốt, đúng. Thành phần có nút nghe (src/scripts/ban-phim.js, data-k="nghe"). Thứ tự phát "từ trầm lên cao": chưa mở trình duyệt để nghe; người làm thành phần xác nhận. Review D4-gom: chỉ thị ::cong-cu{ten="piano" range="C3-C5" notes="C3 F3 C4 G4 C5"}; src/scripts/ban-phim.js: nút nghe xếp các nốt tô theo cao độ tăng dần (sort((a,b)=>a-b)) rồi phát lần lượt, nên phát từ trầm lên cao.'
+    review: dung
   - id: n74
     cau: "Học tiếp: ôn Cao độ và tên nốt và Khuông nhạc và khóa, rồi đặt tay vào Vị trí năm ngón."
     loai: ve-site
     nguon: []
-    ket_qua: khong-can-nguon
-    ghi_chu: nhac-ly/01 và 02 đã chuyển (tiêu đề khớp trang cũ). Vị trí năm ngón chưa chuyển; trang cũ ../opus-zero/docs/piano/nam-ngon.md (# Vị trí năm ngón và những bài hai tay đầu tiên) có.
+    ket_qua: dung
+    ghi_chu: "nhac-ly/01 và 02 đã chuyển (tiêu đề khớp trang cũ). Vị trí năm ngón chưa chuyển; trang cũ ../opus-zero/docs/piano/nam-ngon.md (# Vị trí năm ngón và những bài hai tay đầu tiên) có. Review D4-gom: nhac-ly/01, 02 và piano/nam-ngon đã chuyển; link sống. ket_qua đổi thành dung."
+    review: dung
   - id: n75
     cau: "Câu hỏi 1: Nốt Đô (C) nằm ngay bên trái nhóm hai phím đen; giải thích: giữa hai phím đen của nhóm hai là Rê, bên trái nhóm ba là Fa."
     loai: cau-truc
@@ -812,7 +825,7 @@ nhan_dinh:
     loai: lich-su
     nguon: []
     ket_qua: da-bo
-    ghi_chu: 'Đã bỏ khỏi mục Nguồn: không mở được sách (hoặc nguồn bậc 1–2) nói cuốn sách này làm phổ biến cách ghi; lượt 1 chỉ xác nhận có "ký hiệu Helmholtz" (n21).'
+    ghi_chu: 'Đã bỏ khỏi mục Nguồn: không mở được sách (hoặc nguồn bậc 1–2) nói cuốn sách này làm phổ biến cách ghi; lượt 1 chỉ xác nhận có "ký hiệu Helmholtz" (n21). Review D4-gom: đã kiểm mục Nguồn của trang: không còn sách Helmholtz.'
     luot_2: khong-chac
     luot_2_ghi_chu: Helmholtz, Die Lehre von den Tonempfindungen, 1863 đúng theo hiểu biết chung; chưa mở nguồn bậc 1-2.
   - id: n82
@@ -820,21 +833,23 @@ nhan_dinh:
     loai: lich-su
     nguon: []
     ket_qua: da-bo
-    ghi_chu: "Đã bỏ: Grove Music Online thu phí, không mở được để đối chiếu. Thay bằng các trang đã mở (OMT, MT21C, Beethoven-Haus, Yamaha)."
+    ghi_chu: "Đã bỏ: Grove Music Online thu phí, không mở được để đối chiếu. Thay bằng các trang đã mở (OMT, MT21C, Beethoven-Haus, Yamaha). Review D4-gom: đã kiểm mục Nguồn của trang: không còn Grove."
     luot_2: khong-chac
     luot_2_ghi_chu: Grove Music Online có mục 'Pitch nomenclature' theo hiểu biết chung; không truy cập được.
   - id: n83
     cau: Xem thêm tài liệu tham khảo (liên kết tới tai-lieu-tham-khao).
     loai: ve-site
     nguon: []
-    ket_qua: khong-can-nguon
-    ghi_chu: Trang đích chưa chuyển; có ở ../opus-zero/docs/tai-lieu-tham-khao.md (# Tài liệu tham khảo).
+    ket_qua: dung
+    ghi_chu: "Trang đích chưa chuyển; có ở ../opus-zero/docs/tai-lieu-tham-khao.md (# Tài liệu tham khảo). Review D4-gom: trang đích chưa chuyển: ../opus-zero/docs/tai-lieu-tham-khao.md có. ket_qua đổi thành dung."
+    review: dung
   - id: n84
     cau: Liên kết "Lịch sử cây đàn piano" (ở mục ký hiệu Helmholtz).
     loai: ve-site
     nguon: []
-    ket_qua: khong-can-nguon
-    ghi_chu: "Trang đích chưa chuyển; ../opus-zero/docs/piano/lich-su-dan.md có đoạn \"Một cây Broadwood từ London (gửi năm 1817, đến tay ông năm 1818): sáu quãng tám, từ CC đến c'''' (Đô1–Đô7)\", khớp n22; phải giữ khi chuyển."
+    ket_qua: dung
+    ghi_chu: "Trang đích chưa chuyển; ../opus-zero/docs/piano/lich-su-dan.md có đoạn \"Một cây Broadwood từ London (gửi năm 1817, đến tay ông năm 1818): sáu quãng tám, từ CC đến c'''' (Đô1–Đô7)\", khớp n22; phải giữ khi chuyển. Review D4-gom: trang lich-su-dan đã chuyển (src/content/docs/piano/lich-su-dan.md, dòng 53): \"Một cây Broadwood … sáu quãng tám, từ CC đến c'''' (Đô1–Đô7)\", khớp n22. ket_qua đổi thành dung."
+    review: dung
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -856,9 +871,43 @@ khuong_nhac:
     ghi_chu: "Soạn cho trang: năm cặp nốt, mỗi nốt cách một mốc một bậc. M:4/4, L:1/4, K:C. Tay phải F4, A4, B4, d = D5, b = B5; tay trái D,, = D2, B,, = B2, E, = E3, G, = G3, B, = B3; mỗi ô một nốt dài 4 phách, 5 ô, đủ nhịp. Tên nốt khớp đáp án trong khối thu gọn (n55, n56). Đối chiếu từng nốt với khuông Sol/Fa: đúng."
 ghi_chu: "Bản đồ bàn phím (piano/ban-do-ban-phim). Nguồn chính: Open Music Theory (The Keyboard and the Grand Staff, Reading Clefs, Half Steps, ASPN), MT21C 1.3 Octave Registers, Beethoven-Haus (Broadwood CC–c''''), ISO 16 (mục lục), Humdrum Tonh và danh sách B-A-C-H của IMSLP (B/H); trang nhà sản xuất (Yamaha, Kawai) cho damper. Mở ngày 28/10/2026. Sửa chữ ở lượt 1: n38 (bỏ số phím không damper; \"bộ tắt tiếng\" thành \"bộ giảm âm\"), n60 (𝄪, 𝄫 thành ×, ♭♭), n81 và n82 (mục Nguồn: bỏ Helmholtz 1863 và Grove, không đối chiếu được; thay bằng trang đã mở). Chưa chắc (ket_qua null): n35 (mô tả âm thanh từng vùng), n37 (tay trái, tay phải theo vùng), n43 (\"nhanh hơn nhiều\" khi đọc theo mốc). Không tính là nhận định: tiêu đề mục; câu mở đầu mang tính hình ảnh (\"hàng rào\"); mô tả trang (cắt từ câu mở đầu). Hai khối abc đúng (khuong_nhac). Hình piano-88 (src/components/hinh/piano-88.html, không sửa): 88 phím (52 trắng, 36 đen), nhãn A0, C1–C8, \"Đô giữa (C4)\", \"La4 = 440 Hz\" và hai nhãn tay trái/tay phải; không thấy lỗi. ve-site trỏ trang chưa chuyển (kiểm trên ../opus-zero/docs/): piano/thi-tau (n44: phải giữ \"Nốt mốc\" và link về Bản đồ bàn phím), piano/lich-su-dan (n84: phải giữ đoạn Broadwood CC–c''''), piano/nam-ngon, luyen-tap/doc-not, luyen-tap/ban-phim, tai-lieu-tham-khao. Hồ sơ đã khóa trỏ tới trang này đều khớp (nhac-ly/01 n19–n25, nhac-ly/05 n12 và n24, nhac-ly/03, nhac-ly/04, piano/lo-trinh, bat-dau/lo-trinh-choi, bat-dau/moi-ngay, luyen-tai/*): không thấy chỗ lệch. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có, ghi cho D3-L5: \"ký hiệu khoa học\" (scientific / ASPN), \"ký hiệu Helmholtz\", \"nốt mốc\", \"Đô giữa\", \"nhóm 2 / nhóm 3 phím đen\", \"trùng âm\", \"dấu thăng kép / giáng kép\" (×, ♭♭); \"bộ giảm âm\" đã có (mục sordino) nhưng chưa có mục \"damper\" riêng."
 doi_chu:
-  - cu: "Ở vùng rất cao, dây ngắn và tiếng tắt nhanh đến mức đàn không cần bộ tắt tiếng (damper): khoảng hơn một quãng tám trên cùng không có damper, nên các nốt ở đó tự ngân cho đến khi tắt, dù bạn không giữ bàn đạp."
-    moi: "Ở vùng rất cao, dây ngắn và tiếng tắt nhanh đến mức đàn không cần bộ giảm âm (damper): những phím cao nhất không có damper, nên các nốt ở đó tự ngân cho đến khi tắt, dù bạn không giữ bàn đạp."
-    ly_do: 'n38 (da-sua): không nguồn nào đã mở nêu số phím không có damper (Kawai FAQ, Yamaha Hub, một trang thợ đàn chỉ nói "những nốt cao nhất" hay "top couple of octaves"), nên bỏ "khoảng hơn một quãng tám trên cùng"; "bộ tắt tiếng" đổi thành "bộ giảm âm" theo src/data/thuat-ngu.yml (mục sordino) và trang Bàn đạp cũ.'
+  - cu: Âm thanh
+    ly_do: "n35 (da-bo, review D4-gom): bỏ cột Âm thanh, không có nguồn bậc 1–2; n37 (da-sua, review D4-gom): cột tay chỉ giữ phần có nguồn (OMT)."
+  - cu:
+      - Rền, nhiều bồi âm; rất dễ "đục" khi giữ bàn đạp
+      - "Tay trái: nốt trầm, quãng tám"
+    moi: Tay trái
+    ly_do: "n35, n37 (review D4-gom): bỏ cột Âm thanh (mô tả cảm nhận, không nguồn); cột tay chỉ còn tay chơi theo OMT."
+  - cu: Nền móng của hòa âm
+    ly_do: "n35 (da-bo, review D4-gom): bỏ cột Âm thanh của bảng vùng âm."
+  - cu:
+      - Ấm, gần giọng nam hay cello
+      - Tay trái đệm, đôi khi giai điệu
+    moi: Tay trái
+    ly_do: "n35, n37 (review D4-gom): bỏ cột Âm thanh; cột tay theo OMT."
+  - cu:
+      - Rõ, "hát" tốt; vùng của hầu hết bài cho người mới
+      - Cả hai tay, quanh Đô giữa
+    moi: Cả hai tay, quanh Đô giữa; vùng của hầu hết bài cho người mới
+    ly_do: 'n35, n37 (review D4-gom): bỏ cột Âm thanh; ý "vùng của hầu hết bài cho người mới" chuyển sang cột tay.'
+  - cu:
+      - Sáng, trong
+      - "Tay phải: giai điệu"
+    moi: Tay phải
+    ly_do: "n35, n37 (review D4-gom): bỏ cột Âm thanh; cột tay theo OMT."
+  - cu:
+      - Lấp lánh, tắt rất nhanh
+      - "Tay phải: trang trí, hiệu ứng"
+      - "Ở vùng rất cao, dây ngắn và tiếng tắt nhanh đến mức đàn không cần bộ tắt tiếng (damper): khoảng hơn một quãng tám trên cùng không có damper, nên các nốt ở đó tự ngân cho đến khi tắt, dù bạn không giữ bàn đạp."
+      - "Trên bản nhạc piano, khuông khóa Sol thường dành cho tay phải và khuông khóa Fa cho tay trái. Đó là quy ước, không phải luật: tay trái có thể chơi trên khuông khóa Sol và ngược lại, và khóa có thể đổi giữa chừng. Hãy luôn nhìn khóa ở đầu khuông."
+    moi:
+      - Tay phải
+      - "Ở vùng rất cao, dây ngắn và tiếng tắt nhanh đến mức đàn không cần bộ giảm âm (damper): những phím cao nhất không có damper, nên các nốt ở đó tự ngân cho đến khi tắt, dù bạn không giữ bàn đạp."
+      - "Trên bản nhạc piano, khuông khóa Sol thường dành cho tay phải và khuông khóa Fa cho tay trái. Đó là quy ước, không phải luật: khóa có thể đổi giữa chừng, và tay trái có khi chơi trên khuông khóa Sol. Hãy luôn nhìn khóa ở đầu khuông."
+    ly_do: 'n38 (da-sua): không nguồn nào đã mở nêu số phím không có damper (Kawai FAQ, Yamaha Hub, một trang thợ đàn chỉ nói "những nốt cao nhất" hay "top couple of octaves"), nên bỏ "khoảng hơn một quãng tám trên cùng"; "bộ tắt tiếng" đổi thành "bộ giảm âm" theo src/data/thuat-ngu.yml (mục sordino) và trang Bàn đạp cũ.; n40 (da-sua, review D4-gom): bỏ "và ngược lại" (chưa có nguồn); khóa đổi giữa chừng và tay trái trên khóa Sol theo bản Mutopia Für Elise.'
+  - cu: 'Thay vì đếm dòng kẻ từ đầu mỗi lần, hãy thuộc lòng vài nốt mốc, vừa trên khuông vừa trên phím, rồi đọc các nốt khác theo khoảng cách tới mốc gần nhất: "trên G4 một bậc là La4", "dưới C5 một quãng ba là La4". Cách đọc theo mốc và theo quãng này nhanh hơn nhiều so với đọc từng nốt, và là nền tảng của đọc thị tấu.'
+    moi: 'Thay vì đếm dòng kẻ từ đầu mỗi lần, hãy thuộc lòng vài nốt mốc, vừa trên khuông vừa trên phím, rồi đọc các nốt khác theo khoảng cách tới mốc gần nhất: "trên G4 một bậc là La4", "dưới C5 một quãng ba là La4". Cách đọc theo mốc và theo quãng này là nền tảng của đọc thị tấu.'
+    ly_do: 'n43 (da-bo, review D4-gom): bỏ "nhanh hơn nhiều so với đọc từng nốt", không có nguồn.'
   - cu: "Dấu thăng kép (𝄪) và giáng kép (𝄫): Fa𝄪 là phím Sol (gặp trong gam Sol♯ thứ hòa âm), Si𝄫 là phím La."
     moi: "Dấu thăng kép (×) và giáng kép (♭♭): Fa× là phím Sol (gặp trong gam Sol♯ thứ hòa âm), Si♭♭ là phím La."
     ly_do: "n60 (da-sua): đổi ký hiệu sang × và ♭♭ theo quyết định thuật ngữ trong README (27/10/2026) và nhac-ly/05-dau-hoa đã khóa; nội dung đúng, không đổi."
