@@ -1,15 +1,15 @@
 ---
 title: Học thuộc và biểu diễn
-description: Chơi thuộc lòng và chơi cho người khác nghe đều là kỹ năng tập được, không phải năng khiếu trời cho. Trang này giải thích các loại trí nhớ mà người chơi đàn…
+description: Chơi thuộc lòng và chơi cho người khác nghe đều là kỹ năng có thể tập. Trang này giải thích các loại trí nhớ mà người chơi đàn…
 ---
 
-Chơi thuộc lòng và chơi cho người khác nghe đều là kỹ năng tập được, không phải năng khiếu trời cho. Trang này giải thích các loại trí nhớ mà người chơi đàn dùng, vì sao "thuộc tay" thôi là chưa đủ, cách xây và kiểm tra một trí nhớ bền, rồi cách chuẩn bị cho buổi diễn và sống chung với hồi hộp.
+Chơi thuộc lòng và chơi cho người khác nghe đều là kỹ năng có thể tập. Trang này giải thích các loại trí nhớ mà người chơi đàn dùng, vì sao "thuộc tay" thôi là chưa đủ, cách xây và kiểm tra một trí nhớ bền, rồi cách chuẩn bị cho buổi diễn và sống chung với hồi hộp.
 
 ## Có nhất thiết phải chơi thuộc lòng?
 
-Không. Trong kỳ thi ABRSM, chơi thuộc các tác phẩm là tùy chọn và không được cộng điểm trực tiếp (chỉ gam và hợp âm rải là bắt buộc chơi thuộc). Trong nhạc thính phòng, nghệ sĩ gần như luôn đặt bản nhạc trên giá; những năm cuối sự nghiệp, Sviatoslav Richter biểu diễn trong khán phòng gần như tối, chỉ một ngọn đèn nhỏ chiếu lên bản nhạc trước mặt.
+Không. Trong kỳ thi Practical Grades của ABRSM (theo chương trình hiện hành), chơi thuộc các tác phẩm là tùy chọn và không được cộng điểm riêng; chỉ gam và hợp âm rải là bắt buộc chơi thuộc (xem [Học với thầy và thi cấp](/opus/piano/thay-va-thi/)). Có những nghệ sĩ lớn vẫn chơi với bản nhạc trên giá: những năm cuối sự nghiệp, Sviatoslav Richter biểu diễn trong khán phòng gần như tối, chỉ một ngọn đèn nhỏ chiếu lên bản nhạc trước mặt.
 
-Dù vậy, vẫn nên học thuộc ít nhất vài bài. Khi mắt không bận đọc, **tai** nghe tiếng đàn của chính mình rõ hơn hẳn và **mắt** theo được tay ở những bước nhảy xa. Quan trọng hơn, muốn thuộc bền thì phải **hiểu** bài được xây thế nào, và hiểu biết ấy vẫn cứu bạn khi chơi với bản nhạc mà mắt lạc dòng. [Lộ trình piano](/opus/piano/lo-trinh/) gợi ý học thuộc bài đầu tiên ở chặng 2.
+Dù vậy, vẫn nên học thuộc ít nhất vài bài. Khi mắt không bận đọc, bạn có thể dành chú ý cho **tai** nghe tiếng đàn của chính mình và cho **mắt** nhìn tay ở những bước nhảy xa. Quan trọng hơn, muốn thuộc bền thì phải **hiểu** bài được xây thế nào, và hiểu biết ấy vẫn cứu bạn khi chơi với bản nhạc mà mắt lạc dòng. [Lộ trình piano](/opus/piano/lo-trinh/) gợi ý học thuộc bài đầu tiên ở chặng 2.
 
 ## Bốn loại trí nhớ
 
@@ -22,17 +22,16 @@ Khi chơi thuộc, bạn dùng nhiều loại trí nhớ cùng lúc. Người ch
 | **Thị giác** | Hình ảnh trang nhạc, hoặc hình bàn tay trên phím | "Thấy" đoạn đó ở cuối trang 2, thấy hình hợp âm dưới tay | Nhìn kỹ từng trang rồi nhắm mắt hình dung |
 | **Phân tích** | Hiểu cấu trúc: đoạn, giọng, hợp âm, chỗ lặp, chỗ khác | Nói được "đây là A', lần này sang Sol trưởng" | Đặt tên các đoạn, viết khung hòa âm |
 
-Người tự học thường chỉ dùng loại đầu tiên mà không biết. Mục tiêu là có cả bốn, với trí nhớ phân tích làm bộ khung.
+Dễ chỉ dựa vào loại đầu tiên mà không biết. Mục tiêu là có cả bốn, với trí nhớ phân tích làm bộ khung.
 
 ## Vì sao "thuộc tay" thôi là mong manh
 
-Trí nhớ vận động giống một **chuỗi mắt xích**: mỗi chuyển động gọi chuyển động tiếp theo. Nó nhanh và không tốn sự chú ý, nên không thể thiếu, nhưng có ba điểm yếu:
+Trí nhớ vận động giống một **chuỗi mắt xích**: mỗi chuyển động gọi chuyển động tiếp theo. Nó nhanh và không tốn sự chú ý, nên không thể thiếu, nhưng có hai điểm yếu:
 
 1. **Đứt một mắt là đứt cả chuỗi.** Một nốt sai, một tiếng ho, một ý nghĩ "đoạn sau là gì nhỉ?", và tay dừng lại. Chuỗi chỉ chạy từ những chỗ bắt đầu quen thuộc, nên bạn phải quay lại đầu câu, có khi đầu bài.
-2. **Nó không chịu được sự soi xét.** Khi hồi hộp, bạn bắt đầu để ý từng ngón tay, đúng điều mà chuỗi tự động không chịu nổi.
-3. **Nó phụ thuộc hoàn cảnh.** Đàn lạ, ghế lạ, tốc độ khác (thường nhanh hơn vì hồi hộp) đều làm chuỗi dễ trật đường.
+2. **Nó phụ thuộc hoàn cảnh.** Đàn lạ, ghế lạ, tốc độ khác (thường nhanh hơn vì hồi hộp) đều làm chuỗi dễ trật đường.
 
-Nhóm của nhà tâm lý học Roger Chaffin đã ghi lại và phân tích quá trình nghệ sĩ piano Gabriela Imreh học chương cuối (Presto) của *Italienisches Konzert* (Concerto Ý), BWV 971, của Bach. Người chơi chuyên nghiệp mang trong đầu một **bản đồ** của tác phẩm với những **điểm mốc** (performance cues) được chọn có chủ ý trong lúc tập: mốc **cấu trúc** (ranh giới các đoạn), mốc **diễn tả** (cảm xúc muốn truyền đến người nghe), mốc **diễn tấu** (tốc độ, sắc thái, phân câu) và mốc **kỹ thuật** (một ngón bấm then chốt). Ngón tay chạy tự động, còn đầu óc đi theo bản đồ; khi có sự cố, các điểm mốc là chỗ để bám lại. Khoảng hai năm sau, những gì Imreh còn nhớ về bản nhạc vẫn xoay quanh các mốc cấu trúc và diễn tả.
+Nhà tâm lý học Roger Chaffin và nghệ sĩ piano Gabriela Imreh đã ghi lại và phân tích quá trình Imreh học chương cuối (Presto) của *Italienisches Konzert* (Concerto Ý), BWV 971, của Bach. Bà ghi lại việc tập, rồi mô tả cấu trúc bản nhạc và các quyết định về ngón bấm, phân câu và những **điểm mốc** (performance cues) bà chú ý tới trong lúc biểu diễn; các chỗ bà ngập ngừng khi chơi thuộc, và những chỗ bà còn nhớ hai năm sau, đều gắn với các điểm mốc ấy. Với các điểm mốc, người chơi mang trong đầu một **bản đồ** của tác phẩm: chẳng hạn ranh giới các đoạn, cảm xúc muốn truyền đến người nghe, cách phân câu, một ngón bấm then chốt. Ngón tay chạy tự động, còn đầu óc đi theo bản đồ; khi có sự cố, các điểm mốc là chỗ để bám lại.
 
 Dấu hiệu bạn đang chỉ "thuộc tay": chỉ chơi được từ đầu và ở tốc độ quen thuộc; chơi chậm lại thì quên; không chơi được từng tay riêng; không trả lời được "ô nhịp này đang ở hợp âm nào?".
 
@@ -101,7 +100,7 @@ Ngồi xa đàn, mở bản nhạc rồi gấp lại: nghe từng nốt trong đ
 
 ### 8. Tự kiểm tra, rồi giãn cách
 
-Gấp bản nhạc, chơi một đoạn, rồi mở ra đối chiếu ngay; thỉnh thoảng thử **viết lại** vài ô đầu của mỗi đoạn mà không nhìn. Các nghiên cứu về học tập cho thấy chủ động *gợi lại* từ trí nhớ giúp nhớ lâu hơn đọc lại, gọi là **hiệu ứng kiểm tra** (Roediger và Karpicke, 2006). Kiểm tra ngay đầu buổi, khi chưa chơi bài lần nào, và giãn cách các lần ôn: sau 1 ngày, 3 ngày, 1 tuần.
+Gấp bản nhạc, chơi một đoạn, rồi mở ra đối chiếu ngay; thỉnh thoảng thử **viết lại** vài ô đầu của mỗi đoạn mà không nhìn. Trong các thí nghiệm với đoạn văn xuôi, Roediger và Karpicke (2006) thấy rằng tự kiểm tra bằng cách *gợi lại* từ trí nhớ giúp nhớ lâu hơn đọc lại (sau 2 ngày và sau 1 tuần), gọi là **hiệu ứng kiểm tra**. Kiểm tra ngay đầu buổi, khi chưa chơi bài lần nào, và giãn cách các lần ôn: sau 1 ngày, 3 ngày, 1 tuần.
 
 ### Bạn đã thuộc thật chưa?
 
@@ -125,13 +124,13 @@ Gấp bản nhạc, chơi một đoạn, rồi mở ra đối chiếu ngay; th�
 
 **Diễn thử** là biểu diễn thật với ít khán giả hơn: bước ra, cúi chào, chỉnh ghế, ngồi yên vài giây, nghe câu đầu trong đầu ở đúng tốc độ, rồi chơi một lượt **không dừng**, dù có chuyện gì. Thỉnh thoảng diễn thử khi chưa chơi bài lần nào trong ngày, vì trên sân khấu bạn chỉ có một lần đầu tiên. Nâng áp lực từ từ: tự [thu âm](/opus/luyen-tap/thu-am/), gọi video cho một người bạn, chơi cho gia đình, rồi cho vài người ít quen.
 
-**Thử nhiều cây đàn.** Mỗi cây có độ nặng phím, độ sâu bàn đạp và độ sáng tiếng khác nhau; nếu chỉ tập trên đàn điện, hãy tìm dịp chơi đàn cơ trước buổi diễn. Khi thử đàn ở nơi diễn, đừng chơi đoạn khó nhất mà kiểm tra: chơi thật nhỏ có ra tiếng không, bàn đạp bắt đầu "ăn" ở độ sâu nào, bè trầm có lấn giai điệu không ([Bàn đạp](/opus/piano/ban-dap/), [Tạo tiếng đàn](/opus/piano/tieng-dan/)).
+**Thử nhiều cây đàn.** Mỗi cây có thể khác nhau về độ nặng phím, độ sâu bàn đạp và độ sáng tiếng khác nhau; nếu chỉ tập trên đàn điện, hãy tìm dịp chơi đàn cơ trước buổi diễn. Khi thử đàn ở nơi diễn, đừng chơi đoạn khó nhất mà kiểm tra: chơi thật nhỏ có ra tiếng không, bàn đạp bắt đầu "ăn" ở độ sâu nào, bè trầm có lấn giai điệu không ([Bàn đạp](/opus/piano/ban-dap/), [Tạo tiếng đàn](/opus/piano/tieng-dan/)).
 
 **Khởi động**: làm ấm tay, xoay vai, vài gam và hợp âm rải chậm ở giọng của bài, rồi chơi thật chậm phần mở đầu của từng đoạn. Đừng chơi cả chương trình ở tốc độ diễn ngay trước giờ lên sân khấu, và đừng kiểm tra đi kiểm tra lại đoạn khó nhất: mỗi lần vấp trong phòng chờ chỉ làm bạn lo thêm.
 
 ### Kế hoạch "chơi tiếp"
 
-Quy tắc số một khi biểu diễn: **giữ nhịp, không quay lại**. Phần lớn người nghe không nhận ra một nốt sai, nhưng ai cũng nhận ra khi nhạc dừng.
+Quy tắc số một khi biểu diễn: **giữ nhịp, không quay lại**. Nhạc dừng giữa chừng làm hỏng cả mạch bài nhiều hơn một nốt sai.
 
 | Nếu… | Thì… |
 |---|---|
@@ -144,30 +143,29 @@ Kế hoạch này cũng phải tập: trong một lần diễn thử, nhờ ai �
 
 ## Hồi hộp khi biểu diễn
 
-Hồi hộp trước khi biểu diễn rất phổ biến, kể cả ở nghệ sĩ chuyên nghiệp; nó cho thấy bạn coi trọng việc mình làm. Cơ thể đọc tình huống "nhiều người đang nghe mình" như một mối đe dọa và bật phản ứng **chiến hay chạy**: adrenaline tăng, tim đập nhanh, thở nông, tay run hoặc lạnh, đầu óc dễ trống rỗng. Phản ứng ấy có ích khi cần chạy trốn, nhưng không hợp với mười ngón tay cần điều khiển tinh tế: nhịp bị vội, khó chơi nhỏ, tiếng cứng.
+Hồi hộp trước khi biểu diễn rất phổ biến. Nó gắn với adrenaline, chất giúp con người thoát khỏi nguy hiểm: tim có thể đập nhanh và cơ căng lên. Người ít kinh nghiệm hay chơi nhanh hơn mức bài chịu được vì hồi hộp.
 
-### Những điều có bằng chứng giúp
+### Những điều có thể giúp { #nhung-ieu-co-bang-chung-giup }
 
-1. **Chuẩn bị kỹ và diễn thử nhiều lần.** Không kỹ thuật thở nào thay được việc biết chắc rằng bạn đã chơi trọn bài này trước người khác nhiều lần.
-2. **Thở ra chậm.** Hít vào bằng mũi khoảng 4 nhịp đếm, thở ra từ từ khoảng 6 nhịp, trong vài phút trước khi lên sân khấu. Trong một thử nghiệm ngẫu nhiên với 46 nhạc công, chỉ một buổi tập thở chậm dài 30 phút đã giúp điều hòa phản ứng sinh lý khi chờ biểu diễn; những người vốn rất lo âu thì giảm lo âu nhiều hơn nhóm không tập (Wells và cộng sự, 2012).
+1. **Chuẩn bị kỹ và diễn thử nhiều lần.** Diễn thử cho bạn thêm kinh nghiệm và sự tự tin, và hai thứ ấy làm bớt nỗi sợ điều chưa biết.
+2. **Thở ra chậm.** Hít vào khoảng 4 nhịp đếm, thở ra từ từ khoảng 6 nhịp (khoảng sáu nhịp thở mỗi phút), trong vài phút trước khi lên sân khấu. Trong một thử nghiệm ngẫu nhiên với 46 nhạc công, chỉ một buổi tập thở chậm dài 30 phút đã giúp điều hòa phản ứng sinh lý khi chờ biểu diễn; những người vốn rất lo âu thì giảm lo âu nhiều hơn nhóm không tập (Wells và cộng sự, 2012).
 3. **Gọi cảm giác bằng một cái tên khác.** Trong các thí nghiệm của Alison Wood Brooks (2014) với hát karaoke, nói trước người khác và làm toán, những người tự nhủ "Tôi đang hào hứng" làm tốt hơn những người cố tự trấn an "Bình tĩnh lại". Tim đập nhanh là năng lượng: đừng cố dập nó, hãy dùng nó.
-4. **Đặt sự chú ý vào âm nhạc.** Trước mỗi đoạn, nghĩ đến tính cách của nó bằng một hai chữ ("dịu dàng", "rộn ràng"), giống các mốc diễn tả của Chaffin. Nghĩ về âm thanh muốn tạo ra, không phải về ngón tay.
-5. **Một nghi thức cố định**: cùng một bài khởi động, cùng một chuỗi việc trước khi đặt tay lên phím (chỉnh ghế, thở ra, nghe câu đầu). Nghi thức quen làm tình huống lạ bớt lạ.
+4. **Đặt sự chú ý vào âm nhạc.** Trước mỗi đoạn, nghĩ đến tính cách của nó bằng một hai chữ ("dịu dàng", "rộn ràng"), giống các điểm mốc ở phần trên. Nghĩ về âm thanh muốn tạo ra, không phải về ngón tay.
+5. **Một nghi thức cố định**: cùng một bài khởi động, cùng một chuỗi việc trước khi đặt tay lên phím (chỉnh ghế, thở ra, nghe câu đầu).
 
 ### Những điều nên tránh
 
-- **Uống rượu bia "cho bớt run"**: rượu làm giảm khả năng điều khiển tinh và phán đoán.
 - **Tự dùng thuốc chẹn beta** hay xin của người khác. Một số nhạc công dùng loại thuốc này theo đơn bác sĩ, nhưng đó là thuốc kê đơn, không dùng được cho một số người (chẳng hạn người bị hen suyễn).
-- **Thay đổi vào phút chót**, tập quá nhiều trong ngày diễn, quá nhiều cà phê, bỏ bữa.
-- **Tự nhủ "đừng sai", "đừng run"**: câu đó hướng sự chú ý đúng vào lỗi. Hãy nói điều bạn *muốn* làm: "hát câu đầu", "giữ nhịp".
+- **Thay đổi vào phút chót**, tập quá nhiều trong ngày diễn, quá nhiều cà phê.
+- **Tự nhủ "đừng sai", "đừng run"**: hãy nói điều bạn *muốn* làm: "hát câu đầu", "giữ nhịp".
 
 :::note[Khi nào nên tìm hỗ trợ]
-Nếu hồi hộp khiến bạn né mọi dịp chơi cho người khác nghe trong nhiều tháng, mất ngủ nhiều ngày trước buổi diễn, hoặc có những cơn hoảng sợ, hãy nói chuyện với chuyên gia tâm lý. Liệu pháp nhận thức – hành vi (CBT) là một hướng thường được dùng cho lo âu biểu diễn.
+Nếu hồi hộp khiến bạn khổ sở, né mọi dịp chơi cho người khác nghe, mất ngủ hoặc có những cơn hoảng sợ, hãy nói chuyện với bác sĩ hoặc chuyên gia tâm lý. Liệu pháp nhận thức – hành vi (CBT) là một hướng điều trị thường dùng cho lo âu.
 :::
 
 ## Sau buổi diễn: nhìn lại
 
-Trong vòng 24 giờ, ghi vào [nhật ký luyện tập](/opus/luyen-tap/nhat-ky/): **ba điều làm tốt, hai điều cần cải thiện, một thay đổi cho lần sau**. Hôm sau mới nghe bản ghi: thường bạn chơi tốt hơn mình tưởng. Rồi tách các loại vấn đề, vì mỗi loại cần một cách sửa khác:
+Trong vòng 24 giờ, ghi vào [nhật ký luyện tập](/opus/luyen-tap/nhat-ky/): **ba điều làm tốt, hai điều cần cải thiện, một thay đổi cho lần sau**. Hôm sau mới nghe bản ghi. Rồi tách các loại vấn đề, vì mỗi loại cần một cách sửa khác:
 
 | Chuyện đã xảy ra | Thường do | Lần sau |
 |---|---|---|
@@ -183,8 +181,8 @@ Biểu diễn là kỹ năng, và kỹ năng cần nhiều lần thực hành �
 1. **Thu âm cho riêng mình**, rồi gửi cho một người bạn tử tế và thật lòng.
 2. **Chơi cho gia đình**: hẹn giờ trước, xếp chỗ ngồi, cúi chào như thật.
 3. **Hòa nhạc tại gia**: 4–8 người, mỗi người chơi 5–10 phút; luân phiên làm chủ nhà với những người cùng học.
-4. **Cộng đồng trực tuyến**: nhiều diễn đàn và nhóm của người lớn học piano có chủ đề chia sẻ bản thu, một số tổ chức cả buổi độc tấu trực tuyến định kỳ.
-5. **Buổi biểu diễn của lớp, của trung tâm**: học trò người lớn thường được chào đón; hãy hỏi thầy ([Học với thầy và thi cấp](/opus/piano/thay-va-thi/)).
+4. **Cộng đồng trực tuyến**: chia sẻ bản thu ở các diễn đàn và nhóm của người lớn học piano.
+5. **Buổi biểu diễn của lớp, của trung tâm**: hãy hỏi xem học trò người lớn có tham gia được không, và hỏi thầy ([Học với thầy và thi cấp](/opus/piano/thay-va-thi/)).
 6. **Không gian cộng đồng**: viện dưỡng lão, sự kiện ở trường học, quán cà phê có đàn (xin phép trước). Rồi đến kỳ thi và những buổi hòa nhạc thật sự.
 
 ## Kiểm tra nhanh
@@ -214,19 +212,18 @@ Biểu diễn là kỹ năng, và kỹ năng cần nhiều lần thực hành �
 - Dừng lại và chơi lại từ đầu bài
 + Giữ nhịp, nhảy đến điểm xuất phát gần nhất phía sau và chơi tiếp
 - Xin lỗi khán giả rồi xin chơi lại
-> Người nghe ít khi nhận ra một nốt sai, nhưng ai cũng nhận ra khi nhạc dừng.
+> Nhạc dừng giữa chừng làm hỏng cả mạch bài nhiều hơn một nốt sai.
 ```
 
 ## Nguồn
 
-- Roger Chaffin, Gabriela Imreh, Mary Crawford, *Practicing Perfection: Memory and Piano Performance* (Lawrence Erlbaum Associates, 2002).
-- Roger Chaffin, T. Logan, "Practicing perfection: How concert soloists prepare for performance", *Advances in Cognitive Psychology* 2(2–3), 2006, tr. 113–130.
+- Roger Chaffin, Gabriela Imreh, "Practicing perfection: Piano performance as expert memory", *Psychological Science* 13(4), 2002, tr. 342–349.
+- Chuan C. Chang, [Fundamentals of Piano Practice](https://fundamentals-of-piano-practice.readthedocs.io/), mục III.6 (học thuộc), III.14 (chuẩn bị biểu diễn) và III.15 (hồi hộp).
 - Henry L. Roediger III, Jeffrey D. Karpicke, "Test-enhanced learning: Taking memory tests improves long-term retention", *Psychological Science* 17(3), 2006.
-- Dianna T. Kenny, *The Psychology of Music Performance Anxiety* (Oxford University Press, 2011).
 - Alison Wood Brooks, "Get excited: Reappraising pre-performance anxiety as excitement", *Journal of Experimental Psychology: General* 143(3), 2014, tr. 1144–1158.
 - R. Wells, T. Outhred, J. A. J. Heathers, D. S. Quintana, A. H. Kemp, "Matter over mind: A randomised-controlled trial of single-session biofeedback training on performance anxiety and heart rate variability in musicians", *PLoS ONE* 7(10), 2012, e46597.
-- Gerald Klickstein, *The Musician's Way: A Guide to Practice, Performance, and Wellness* (Oxford University Press, 2009).
-- Molly Gebrian, *Learn Faster, Perform Better: A Musician's Guide to the Neuroscience of Practicing* (Oxford University Press, 2024).
-- ABRSM, *Practical Music Grades: Piano Syllabus 2025 & 2026*, phần quy định về chơi thuộc: [ABRSM](https://www.abrsm.org/).
+- ABRSM, chương trình thi piano Practical Grades hiện hành, phần quy định về chơi thuộc: [ABRSM](https://www.abrsm.org/).
+- NHS (Anh), [Cognitive behavioural therapy (CBT)](https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/cognitive-behavioural-therapy-cbt/) và [Beta blockers](https://www.nhs.uk/conditions/beta-blockers/).
+- Open Music Theory, [Sonata form](https://viva.pressbooks.pub/openmusictheory/chapter/sonata-form/).
 - Stephen Plaistow, cáo phó Sviatoslav Richter, *Gramophone*, tháng 10/1997.
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

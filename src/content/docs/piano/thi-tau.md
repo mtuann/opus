@@ -1,9 +1,9 @@
 ---
 title: Đọc nhạc và thị tấu trên đàn
-description: "Đọc nhạc piano khó hơn đọc một bè: hai khuông, nhiều nốt vang cùng lúc, hai tay làm hai việc khác nhau. Tin tốt là đọc nhanh thực chất là kỹ năng nhận ra hình…"
+description: "Đọc nhạc piano khó hơn đọc một bè: hai khuông, nhiều nốt vang cùng lúc, hai tay làm hai việc khác nhau. Tin tốt là một phần lớn của đọc nhanh là kỹ năng nhận…"
 ---
 
-Đọc nhạc piano khó hơn đọc một bè: hai khuông, nhiều nốt vang cùng lúc, hai tay làm hai việc khác nhau. Tin tốt là đọc nhanh thực chất là kỹ năng **nhận ra hình mẫu**, và nó tăng đều nếu bạn đọc một chút mỗi ngày. Trang này nói cách đọc, cách luyện **thị tấu** (sight-reading: chơi một bản nhạc ngay lần đầu nhìn thấy), và tài liệu cho từng trình độ.
+Đọc nhạc piano khó hơn đọc một bè: hai khuông, nhiều nốt vang cùng lúc, hai tay làm hai việc khác nhau. Tin tốt là một phần lớn của đọc nhanh là kỹ năng **nhận ra hình mẫu**, và nó có thể tiến bộ nếu bạn đọc một chút mỗi ngày. Trang này nói cách đọc, cách luyện **thị tấu** (sight-reading: chơi một bản nhạc ngay lần đầu nhìn thấy), và tài liệu cho từng trình độ.
 
 ## Đọc hình dạng, đừng đánh vần từng nốt
 
@@ -55,7 +55,7 @@ C "^3"E "^2"D "^4"G | "^4"c "^4"G "^3"E "^3"C | "^5"G2 "^5"C2 |]
 
 ## Nhìn trước
 
-Người đọc giỏi luôn nhìn trước chỗ đang chơi một quãng: từ vài nốt ở người mới đến khoảng một ô nhịp hoặc hơn ở người đọc thành thạo. Các nhà nghiên cứu gọi đó là **khoảng mắt–tay** (eye-hand span), và nó dài dần khi bạn luyện.
+Người đọc giỏi nhìn trước chỗ đang chơi một quãng. Các nhà nghiên cứu gọi đó là **khoảng mắt–tay** (eye-hand span): trong các nghiên cứu được tổng hợp, khoảng này chỉ vài nốt, từ chừng 0,5–3,7 nốt ở người mới đến chừng 1,7–6,8 nốt ở người đọc giỏi (tùy cách đo), và hiếm khi tới trọn một ô nhịp. Một vài thí nghiệm cho thấy luyện tập giúp kéo dài nó ở người đọc yếu, nhưng bằng chứng còn ít.
 
 - **Thẻ che**: nhờ người khác (hoặc tự dùng một tấm bìa) che dần ô nhịp đang chơi, buộc mắt phải ở phía trước.
 - **Chơi một, nhìn một**: chơi ô nhịp này trong khi mắt đã đọc ô nhịp tiếp theo; lúc đầu chậm như rùa cũng được.
@@ -109,7 +109,7 @@ K:C
 
 ### Bài 2: Sol trưởng, nhịp 3/4
 
-Hóa biểu một dấu thăng. Hai câu bốn ô nhịp giống nhau ở phần cuối: nhận ra điều đó khi quét là bạn chỉ phải đọc một nửa.
+Hóa biểu một dấu thăng. Hai câu bốn ô nhịp chỉ khác nhau ở ô thứ nhất và thứ ba; ô thứ hai và thứ tư giống hệt. Nhận ra điều đó khi quét, bạn chỉ phải đọc kỹ hai ô của câu thứ hai.
 
 ```abc
 X:3
@@ -176,13 +176,13 @@ K:Am
 
 | Trình độ | Tài liệu | Ghi chú |
 |---|---|---|
-| Mới bắt đầu | [Đọc nốt](/opus/luyen-tap/doc-not/), [Thị tấu một bè](/opus/luyen-tap/thi-tau/), [Phiếu bài tập](/opus/luyen-tap/phieu-bai-tap/) trên site; Bartók, *Mikrokosmos* quyển 1–2 | *Mikrokosmos* bắt đầu bằng những bài rất ngắn và tăng độ khó từng chút |
-| Theo cấp thi | Paul Harris, *Improve your sight-reading!* (Faber Music) | Mỗi cấp một quyển, có bài luyện tiết tấu, nhận dạng và bài đọc ngắn |
+| Mới bắt đầu | [Đọc nốt](/opus/luyen-tap/doc-not/), [Thị tấu một bè](/opus/luyen-tap/thi-tau/), [Phiếu bài tập](/opus/luyen-tap/phieu-bai-tap/) trên site; Bartók, *Mikrokosmos* quyển 1–2 | *Mikrokosmos* bắt đầu bằng những bài ngắn và tăng độ khó từng chút |
+| Theo cấp thi | Paul Harris, *Improve your sight-reading!* (Faber Music) | Mỗi cấp một quyển, có bài tập tiết tấu và giai điệu, bài mẫu kèm câu hỏi, và bài đọc ngắn |
 | Đọc cùng người khác | Song tấu bốn tay, ví dụ Anton Diabelli, *Melodious Exercises* Op. 149 | Bè của học trò chỉ dùng năm nốt; chơi cùng người khác buộc bạn không được dừng |
 | Trung cấp | Tuyển tập dễ: minuet trong *Notebook for Anna Magdalena Bach*, sonatina, *Album for the Young* của Schumann | Chọn bài dễ hơn bài đang tập |
 | Nâng cao | Hợp xướng bốn bè (chorale) của Bach; đệm cho ca sĩ hoặc nhạc cụ khác; song tấu bốn tay của Schubert, Dvořák, Brahms | Đọc bốn bè trên hai khuông là cách luyện đọc hòa âm rất tốt |
-| Chuẩn bị thi | Đề mẫu thị tấu của ABRSM và Trinity | Xem [Học với thầy và thi cấp](/opus/piano/thay-va-thi/) |
-| Trực tuyến | Sight Reading Factory (trả phí) | Tạo bài đọc mới theo cấp độ, không bao giờ hết bài |
+| Chuẩn bị thi | Đề mẫu thị tấu của ABRSM; đề cương thi piano của Trinity (thị tấu là một trong các bài thi phụ) | Xem [Học với thầy và thi cấp](/opus/piano/thay-va-thi/) |
+| Trực tuyến | Sight Reading Factory | Tạo bài đọc mới theo cấp độ |
 
 ## Luyện trên site
 
@@ -190,7 +190,7 @@ K:Am
 - [Thị tấu hai tay](/opus/luyen-tap/thi-tau-hai-tay/): bài 4 ô nhịp cho hai tay trên khuông kép, bốn cấp gần với kế hoạch bốn tuần ở trên; chơi trên đàn thật rồi tự chấm.
 - [Thị tấu một bè](/opus/luyen-tap/thi-tau/): mỗi lần một giai điệu 4 ô nhịp mới; với đàn MIDI, site chấm cả cao độ lẫn nhịp.
 - [Tiết tấu](/opus/luyen-tap/tiet-tau/): đọc và gõ tiết tấu.
-- [Phiếu bài tập](/opus/luyen-tap/phieu-bai-tap/): đề đọc nốt, tiết tấu để làm trên giấy.
+- [Phiếu bài tập](/opus/luyen-tap/phieu-bai-tap/): đề đọc nốt, quãng, hợp âm, hóa biểu để làm trên giấy.
 - [Kết nối đàn MIDI](/opus/luyen-tap/ket-noi-midi/): dùng phím thật thay cho chuột.
 
 ## Kiểm tra nhanh
@@ -224,5 +224,5 @@ K:Am
 - Paul Harris, *Improve your sight-reading!* (Faber Music), loạt sách piano theo cấp.
 - Béla Bartók, *Mikrokosmos* (Boosey & Hawkes).
 - Anton Diabelli, *Melodious Exercises* Op. 149 cho piano bốn tay.
-- [ABRSM](https://www.abrsm.org/) và [Trinity College London](https://www.trinitycollege.com/): đề mẫu thị tấu.
+- [ABRSM](https://www.abrsm.org/): đề mẫu thị tấu; [Trinity College London](https://www.trinitycollege.com/): đề cương thi piano.
 - [Sight Reading Factory](https://www.sightreadingfactory.com/).

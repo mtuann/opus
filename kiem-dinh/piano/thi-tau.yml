@@ -1,0 +1,547 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa piano/thi-tau
+trang: src/content/docs/piano/thi-tau.md
+nguon_cu: ../opus-zero/docs/piano/thi-tau.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-28
+    nhanh: moi/d4-l3
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D4-L3 lượt 1, phần C)
+      luot_2: null
+      review: null
+      kiem_mau: null
+nguon:
+  - id: omt-grand
+    bac: 2
+    ten: "Open Music Theory, The Keyboard and Grand Staff: tên dòng, khe, dòng kẻ phụ, nhóm phím đen hai và ba"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/the-keyboard-and-grand-staff/
+  - id: omt-clefs
+    bac: 2
+    ten: "Open Music Theory, Clefs: khóa Sol (Sol4 trên dòng 2), khóa Fa (Fa3 trên dòng 4), Đô giữa"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/clefs/
+  - id: omt-intervals
+    bac: 2
+    ten: "Open Music Theory, Intervals: quãng gọi theo số bậc; quãng lẻ nối dòng với dòng hoặc khe với khe"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/intervals/
+  - id: omt-triads
+    bac: 2
+    ten: "Open Music Theory, Triads: hợp âm ba ở thế gốc là ba nốt chồng quãng ba"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/triads/
+  - id: baylor-inv
+    bac: 2
+    ten: "Baylor Open Books, Piano Basics, Triad Inversions: thể đảo có quãng bốn trong chồng nốt"
+    link: https://openbooks.library.baylor.edu/pianobasics/chapter/triad-inversions/
+  - id: omt-minor
+    bac: 2
+    ten: "Open Music Theory, Minor Scales: gam thứ hòa âm nâng bậc 7 (La thứ có Sol♯)"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/
+  - id: omt-major
+    bac: 2
+    ten: "Open Music Theory, Major Scales (link đã dùng ở các hồ sơ khác của repo): Sol trưởng một dấu thăng"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/major-scales/
+  - id: wiki-octave
+    bac: 3
+    ten: "Wikipedia, Octave sign (bậc 3, chỉ để tìm nguồn): 8va, 8vb, loco"
+    link: https://en.wikipedia.org/wiki/Octave_sign
+  - id: brit-alberti
+    bac: 2
+    ten: "Britannica, Alberti bass (link lấy từ kiem-dinh/nhac-ly/28-ket-cau.yml, lượt 2 đã mở): hình đệm rải trầm–cao–giữa–cao"
+    link: https://www.britannica.com/art/Alberti-bass
+  - id: lehmann
+    bac: 2
+    ten: Crossref, bản ghi chương Sight-Reading (Andreas C. Lehmann, Victoria McArthur), trong The Science & Psychology of Music Performance (Parncutt, McPherson biên tập), Oxford University Press, 2002, tr. 135–150, DOI 10.1093/acprof:oso/9780195138108.003.0009
+    link: https://doi.org/10.1093/acprof:oso/9780195138108.003.0009
+  - id: perra
+    bac: 2
+    ten: Perra và cộng sự, Review on eye-hand span in sight-reading of music, Journal of Eye Movement Research 14(4), 2021 (mdpi.com/1995-8692/14/4/21), DOI 10.16910/jemr.14.4.4
+    link: https://www.mdpi.com/1995-8692/14/4/21
+  - id: faber-g1
+    bac: 2
+    ten: "Faber Music, Improve your sight-reading! Piano Grade 1 (Paul Harris): bài tập tiết tấu và giai điệu, bài mẫu kèm câu hỏi, bài đọc chấm điểm, bản thu trực tuyến"
+    link: https://www.fabermusic.com/shop/improve-your-sight-reading-piano-grade-1-p96
+  - id: faber-g3
+    bac: 2
+    ten: "Faber Music, Improve your sight-reading! Piano Grade 3 (Paul Harris): cùng cấu trúc; mục liên quan có các Grade 1, 2, 4, 5; cửa hàng liệt kê riêng Grade 1, 2, 3, 6, 7"
+    link: https://www.fabermusic.com/shop/improve-your-sight-reading-piano-grade-3-p98
+  - id: srf
+    bac: 2
+    ten: "Sight Reading Factory (trang chủ): bài đọc tạo mới mỗi lần theo nhiều cấp độ; trang không nêu giá"
+    link: https://www.sightreadingfactory.com/
+  - id: trinity
+    bac: 2
+    ten: "Trinity College London, Piano grade exams (trang HTML): đề cương thi piano; các bài thi phụ (supporting tests)"
+    link: https://www.trinitycollege.com/qualifications/music/grade-exams/piano
+  - id: abrsm
+    bac: 2
+    ten: ABRSM, Piano Syllabus 2025 & 2026 (PDF)
+    link: https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20&%202026%20Prac%20syllabus%2020240524_access.pdf
+  - id: henle-anna
+    bac: 2
+    ten: G. Henle Verlag HN 349, Notebook for Anna Magdalena Bach
+    link: https://www.henle.de/en/Notebook-for-Anna-Magdalena-Bach/HN-349
+  - id: imslp-album
+    bac: 2
+    ten: "IMSLP, Album für die Jugend, Op.68 (Schumann): 43 bài, 1848"
+    link: https://imslp.org/wiki/Album_f%C3%BCr_die_Jugend,_Op.68_(Schumann,_Robert)
+  - id: imslp-diabelli
+    bac: 2
+    ten: "IMSLP, 28 Melodische Übungsstücke, Op.149 (Diabelli): 28 bài, piano bốn tay"
+    link: https://imslp.org/wiki/Melodische_%C3%9Cbungsst%C3%BCcke,_Op.149_(Diabelli,_Anton)
+  - id: alfred-diabelli
+    bac: 2
+    ten: "Alfred, Melodious Pieces on Five Notes, Op. 149 (qua trang bán lẻ Performers Music): primo giữ cả hai tay trong thế năm ngón"
+    link: https://performersmusicchicago.com/melodious-pieces-on-five-notes-op-149-alf-00-4837
+  - id: imslp-hd
+    bac: 2
+    ten: "IMSLP, 21 Hungarian Dances (Piano), WoO 1 (Brahms): bốn tay"
+    link: https://imslp.org/wiki/21_Hungarian_Dances_(Piano),_WoO_1_(Brahms,_Johannes)
+  - id: imslp-sd46
+    bac: 2
+    ten: "IMSLP, Slavonic Dances, Op.46 (Dvořák): bốn tay"
+    link: https://imslp.org/wiki/Slavonic_Dances,_Op.46_(Dvo%C5%99%C3%A1k,_Anton%C3%ADn)
+  - id: imslp-d940
+    bac: 2
+    ten: "IMSLP, Fantasie in F minor, D.940 (Schubert): bốn tay"
+    link: https://imslp.org/wiki/Fantasie_in_F_minor,_D.940_(Schubert,_Franz)
+  - id: imslp-marches
+    bac: 2
+    ten: "IMSLP, 3 Marches militaires, D.733 (Schubert): bốn tay"
+    link: https://imslp.org/wiki/3_Marches_militaires,_D.733_(Schubert,_Franz)
+nhan_dinh:
+  - id: n1
+    cau: Tin tốt là một phần lớn của đọc nhanh là kỹ năng nhận ra hình mẫu, và nó có thể tiến bộ nếu bạn đọc một chút mỗi ngày.
+    loai: quy-tac
+    nguon:
+      - perra
+      - lehmann
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "đọc nhanh thực chất là kỹ năng nhận ra hình mẫu, và nó tăng đều nếu bạn đọc một chút mỗi ngày." "Thực chất", "tăng đều" quá chắc. Perra (2021) tóm tắt: khoảng mắt–tay tăng theo trình độ; nhận dạng hình mẫu là một phần của kỹ năng đọc. Chữ mới giữ ý ở mức "một phần lớn", "có thể". Chưa trích được câu nào nói "một phần lớn"; lượt 2 xem lại. Cùng sửa description ở frontmatter (cùng câu).'
+  - id: n2
+    cau: Thị tấu (sight-reading) là chơi một bản nhạc ngay lần đầu nhìn thấy.
+    loai: dinh-nghia
+    nguon:
+      - lehmann
+    ket_qua: null
+    ghi_chu: "chưa chắc: chỉ có bản ghi Crossref của chương Sight-reading, chưa mở nội dung; định nghĩa phổ thông (Wikipedia, Sight reading, bậc 3, cùng nghĩa). Cần trích bậc 1–2."
+  - id: n3
+    cau: "Đọc nhạc piano khó hơn đọc một bè: hai khuông, nhiều nốt vang cùng lúc, hai tay làm hai việc khác nhau."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Mô tả chung để mở bài, không phải số liệu.
+  - id: n4
+    cau: Người đọc giỏi nhìn khoảng cách giữa các nốt và hình dạng cả nhóm nốt, giống như ta đọc cả chữ chứ không đọc từng chữ cái; có ba cách nhận ra một nốt (nốt mốc, quãng tính từ nốt trước, hình mẫu), và người đọc giỏi dùng cả ba cùng lúc.
+    loai: cau-truc
+    nguon: []
+    ket_qua: null
+    ghi_chu: 'chưa chắc: ý "đọc theo khoảng cách và hình dạng" khớp tổng quan của Perra và Lehmann (chunking, nhận dạng hình mẫu), nhưng vế "ba cách" và "dùng cả ba cùng lúc" là cách chia của trang, chưa có nguồn bậc 1–2 đã mở. Giữ như cách dạy; đề xuất bỏ "người đọc giỏi dùng cả ba cùng lúc" hoặc tìm nguồn.'
+  - id: n5
+    cau: "Nốt mốc: Đô giữa, Sol trên dòng 2 khóa Sol, Fa trên dòng 4 khóa Fa."
+    loai: quy-tac
+    nguon:
+      - omt-clefs
+      - omt-grand
+    ket_qua: dung
+    ghi_chu: "Open Music Theory (Clefs): khóa Sol quấn quanh dòng 2 (Sol4); khóa Fa đặt Fa3 trên dòng 4; Đô giữa (C4) trên dòng kẻ phụ giữa hai khuông."
+  - id: n6
+    cau: "Bảng quãng trên khuông: dòng sang khe sát bên (hoặc khe sang dòng sát bên) là quãng 2, phím ngay cạnh; dòng sang dòng kế tiếp (hoặc khe sang khe kế tiếp) là quãng 3, bỏ qua một phím; dòng sang khe cách một là quãng 4, bỏ qua hai phím; dòng sang dòng cách một là quãng 5, ngón 1 và ngón 5 của thế tay năm ngón; nốt trên dòng và nốt trong khe cùng tên là quãng 8, hai phím cùng tên."
+    loai: quy-tac
+    nguon:
+      - omt-intervals
+      - omt-grand
+    ket_qua: dung
+    ghi_chu: 'Đối chiếu từng hàng bằng tên nốt. Quãng 2: Mi4 (dòng 1) sang Fa4 (khe 1). Quãng 3: Mi4 sang Sol4 (dòng 2), bỏ qua một phím trắng (Fa). Quãng 4: Mi4 sang La4 (khe 2), bỏ qua hai phím (Fa, Sol). Quãng 5: Mi4 sang Si4 (dòng 3), ngón 1 và 5 của thế tay Mi–Si. Quãng 8: Mi4 (dòng 1) sang Mi5 (khe 4). Đúng cả năm hàng. Cột "Trên phím trắng" đúng với các phím trắng liền nhau.'
+  - id: n7
+    cau: "Quy tắc dễ nhớ: quãng lẻ (3, 5, 7) nối dòng với dòng hoặc khe với khe; quãng chẵn (2, 4, 6, 8) nối dòng với khe."
+    loai: quy-tac
+    nguon:
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "Open Music Theory (Intervals): các nốt cách nhau số bậc lẻ nằm cùng loại (dòng–dòng, khe–khe); chẵn thì khác loại. Đúng."
+  - id: n8
+    cau: 'Ví dụ "Đọc bằng quãng": nốt đầu là Đô giữa, các nốt sau đọc bằng quãng ghi trên nốt (3, 2, 4 | 4, 4, 3, 3 | 5, 5).'
+    loai: cau-truc
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối abc 1: C E D G | c G E C | G2 C2: C→E quãng 3, E→D quãng 2, D→G quãng 4; G→c quãng 4, c→G quãng 4 (xuống), G→E quãng 3, E→C quãng 3; C→G quãng 5, G→C quãng 5. Khớp các số ghi trên nốt. Xem khuong_nhac khối 1."
+  - id: n9
+    cau: Ôn lại Quãng nếu cần (liên kết nhac-ly/09-quang).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'src/content/docs/nhac-ly/09-quang.md tồn tại, tiêu đề "9. Quãng". Các liên kết đã chuyển khác của trang: piano/ban-do-ban-phim ("Bản đồ bàn phím"), piano/hop-am-rai ("Hợp âm, hợp âm rải và hình đệm"), nhac-ly/03-truong-do ("3. Trường độ và dấu lặng"), 04-nhip ("4. Nhịp và số chỉ nhịp"), 07-gam-thu ("7. Gam thứ"), 10-hop-am-ba ("10. Hợp âm ba"), 11-hop-am-bay ("11. Hợp âm bảy và thể đảo"): đều tồn tại ở src/content/docs.'
+  - id: n10
+    cau: "Đọc theo chiều dọc: những nốt thẳng hàng trên hai khuông vang cùng lúc; đọc bè trầm trước vì nốt thấp nhất cho biết hòa âm và thường đi chậm hơn giai điệu."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên đọc; "thường" giữ.
+  - id: n11
+    cau: "Mô thức tay trái: nốt trầm rồi hai hợp âm (điệu valse), bè Alberti (trầm–cao–giữa–cao), hợp âm rải."
+    loai: dinh-nghia
+    nguon:
+      - brit-alberti
+    ket_qua: dung
+    ghi_chu: 'Bè Alberti: hình đệm rải ba nốt hợp âm theo thứ tự thấp, cao, giữa, cao (Britannica; COD ở hồ sơ nhac-ly/28). "Điệu valse" cho hình trầm–hợp âm–hợp âm: chưa chắc về tên, như ghi chú ở kiem-dinh/piano/hop-am-rai.yml.'
+  - id: n12
+    cau: Hợp âm ba ở thế gốc là ba nốt trên ba dòng liên tiếp (hoặc ba khe liên tiếp); một quãng bốn "hở" trong chồng nốt là thể đảo.
+    loai: quy-tac
+    nguon:
+      - omt-triads
+      - baylor-inv
+    ket_qua: dung
+    ghi_chu: 'Open Music Theory (Triads): hợp âm ba thế gốc xếp chồng quãng ba, nên ba nốt nằm cách nhau một dòng hoặc một khe. Baylor (Triad Inversions): thể đảo có quãng bốn trong chồng nốt (thể 6: quãng bốn giữa hai nốt trên; thể 6/4: quãng bốn giữa hai nốt dưới). "Hở" là cách nói của trang.'
+  - id: n13
+    cau: "Dòng kẻ phụ: Đô giữa (C4) trên một dòng kẻ phụ giữa hai khuông, Đô trên hai dòng kẻ phụ phía trên khóa Sol (C6), Đô trên hai dòng kẻ phụ phía dưới khóa Fa (C2)."
+    loai: quy-tac
+    nguon:
+      - omt-grand
+      - omt-clefs
+    ket_qua: dung
+    ghi_chu: "Suy từ tên dòng khuông (Open Music Theory, Grand Staff): khóa Sol dòng trên cùng Fa5, dòng kẻ phụ 1 phía trên La5, dòng kẻ phụ 2 Đô6; khóa Fa dòng dưới cùng Sol2, dòng kẻ phụ 1 phía dưới Mi2, dòng kẻ phụ 2 Đô2. Đúng."
+  - id: n14
+    cau: 8va phía trên nốt là chơi cao hơn một quãng tám so với nốt viết; 8vb (hoặc 8va phía dưới nốt) là thấp hơn một quãng tám; loco là trở về chơi như viết.
+    loai: quy-tac
+    nguon:
+      - wiki-octave
+    ket_qua: null
+    ghi_chu: "chưa chắc: chỉ Wikipedia (bậc 3, Octave sign) mở được; chưa có trích Open Music Theory cho ký hiệu 8va, 8vb, loco. Nội dung đúng với thực hành ghi nhạc chung."
+  - id: n15
+    cau: Khi thị tấu, giữ nhịp quan trọng hơn đúng từng nốt; chọn tốc độ đủ chậm để không phải dừng; đếm suốt bài; nhận ra nhanh các hình tiết tấu quen thuộc.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập. Khớp luyen-tap/thi-tau-hai-tay cũ ("giữ nhịp quan trọng hơn đúng từng nốt").
+  - id: n16
+    cau: "Khoảng mắt–tay (eye-hand span): trong các nghiên cứu được tổng hợp, khoảng này chỉ vài nốt, từ chừng 0,5–3,7 nốt ở người mới đến chừng 1,7–6,8 nốt ở người đọc giỏi (tùy cách đo), và hiếm khi tới trọn một ô nhịp. Một vài thí nghiệm cho thấy luyện tập giúp kéo dài nó ở người đọc yếu, nhưng bằng chứng còn ít."
+    loai: so-lieu
+    nguon:
+      - perra
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "từ vài nốt ở người mới đến khoảng một ô nhịp hoặc hơn ở người đọc thành thạo ... và nó dài dần khi bạn luyện." Perra và cộng sự (2021, tổng quan): EHS tăng theo trình độ và giảm khi bản nhạc phức tạp hơn; các khoảng số nốt theo cách đo khác nhau; "hơn một ô nhịp" không được các nghiên cứu ủng hộ. Chữ mới theo các khoảng ấy. Chỉ đọc bản tóm tắt trên mdpi.com; số liệu 0,5–3,7 và 1,7–6,8 lấy từ đó. Cần lượt 2 xác nhận từng con số và vế "luyện tập giúp kéo dài".'
+  - id: n17
+    cau: Thẻ che; chơi một nhìn một; tập với máy đếm nhịp chậm.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập.
+  - id: n18
+    cau: 'Bàn phím có "chữ nổi": nhóm hai và nhóm ba phím đen.'
+    loai: dinh-nghia
+    nguon:
+      - omt-grand
+    ket_qua: dung
+    ghi_chu: 'Open Music Theory (Keyboard): phím đen xếp thành nhóm hai và nhóm ba. "Chữ nổi" là ẩn dụ.'
+  - id: n19
+    cau: Chạm đầu ngón vào phím đen để biết tay đang ở đâu; học cảm giác quãng 5 và quãng 8 trong bàn tay; khi nhảy xa chỉ liếc nhanh; bài tập nhắm mắt tìm mọi nốt Đô, rồi mọi nốt Fa; chơi gam năm ngón khi mắt chỉ nhìn bản nhạc.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập.
+  - id: n20
+    cau: "Quét 30 giây trước khi chơi: giọng (hóa biểu có mấy dấu, trưởng hay thứ; nhìn nốt cuối bè trầm; để ý dấu hóa bất thường như Sol♯ trong La thứ), số chỉ nhịp và tốc độ, hình mẫu, dấu hóa bất thường, vị trí tay, tiết tấu khó, chỉ đường (dấu nhắc lại, khung thứ nhất và thứ hai, D.C., fermata), sắc thái chính."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên (danh sách kiểm). Phần có thể kiểm: Sol♯ là dấu hóa bất thường của La thứ (nhận định riêng ngay dưới). Mục này giữ nguyên tiêu đề "Quét 30 giây trước khi chơi" vì luyen-tap/thi-tau-hai-tay cũ trỏ tới anchor #quet-30-giay-truoc-khi-choi; lô chuyển luyen-tap/thi-tau-hai-tay phải giữ.'
+  - id: n21
+    cau: Sol♯ là dấu hóa bất thường trong La thứ.
+    loai: quy-tac
+    nguon:
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: "Open Music Theory (Minor Scales): La thứ hòa âm nâng bậc 7 (Sol thành Sol♯); hóa biểu La thứ không có dấu."
+  - id: n22
+    cau: 'Khi chơi: không quay lại sửa nốt sai; nếu lạc, tìm phách 1 của ô nhịp tiếp theo và vào lại; khi quá nhiều nốt thì giản lược có chủ đích (giữ giai điệu và nốt trầm, bỏ nốt giữa của hợp âm; tay trái chỉ nốt trầm ở phách đầu ô nhịp); để giai điệu tay phải dẫn đường, "hát" nó trong đầu.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập.
+  - id: n23
+    cau: Các bài đọc mẫu đều được soạn cho trang này (5 khối nhạc).
+    loai: lich-su
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Cả năm khối nhạc là ví dụ soạn (không trích tác phẩm). Xem khuong_nhac.
+  - id: n24
+    cau: "Bài 1: Đô trưởng, tay phải giữ nguyên thế tay Đô–Sol, tay trái chỉ có hai nốt Đô và Sol."
+    loai: cau-truc
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối abc 2 (X:2): 4/4, 4 ô. Tay phải: E D C E | F E D2 | E G F D | C4, toàn trong Đô4–Sol4 (thế tay Đô–Sol, ngón 3 ở Mi đầu). Tay trái: C,4 | G,4 | C,2 G,2 | C,4, chỉ có Đô và Sol. Mỗi ô đủ 4 phách. Xem khuong_nhac khối 2."
+  - id: n25
+    cau: "Bài 2: Sol trưởng, nhịp 3/4, hóa biểu một dấu thăng. Hai câu bốn ô nhịp chỉ khác nhau ở ô thứ nhất và thứ ba; ô thứ hai và thứ tư giống hệt."
+    loai: cau-truc
+    nguon:
+      - omt-major
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Hai câu bốn ô nhịp giống nhau ở phần cuối: nhận ra điều đó khi quét là bạn chỉ phải đọc một nửa." Khối abc 3 (X:3): tay phải ô 1 "G B d", ô 2 "c2 A", ô 3 "B c A", ô 4 "G3"; câu 2: "d B G", "c2 A", "c B A", "G3". Ô 1 khác (G B d / d B G), ô 3 khác (B c A / c B A), ô 2 và 4 giống hệt. Chữ cũ sai (câu 2 không giống phần cuối ở ô 1 và 3 theo nghĩa "một nửa"). Sol trưởng một dấu thăng: Open Music Theory.'
+  - id: n26
+    cau: "Bài 3: La thứ, tay trái nốt trầm và hợp âm; Sol♯ có trong bài; tay phải đổi thế tay; tay trái lặp mô thức nốt trầm rồi ba hợp âm (Đô–Mi ở ô 1 và 3; Sol♯–Rê ở ô 2)."
+    loai: cau-truc
+    nguon:
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: 'Khối abc 4 (X:4): 4/4, L:1/8, La thứ; tay phải có ^G ở ô 2 và 4 (Sol♯ nhờ E7). Tay trái: A,,2 [C,E,]2 ×3; E,,2 [^G,,D,]2 ×3 (ô 2), A,,2 [C,E,]2... (ô 3), ô 4 E,,2 [^G,,D,]2 A,,4. "Mô thức nốt trầm rồi ba hợp âm" đúng với nhịp bát phân: nốt trầm 2 + ba hợp âm 2+2+2. Xem khuong_nhac khối 4.'
+  - id: n27
+    cau: "Bài 3 giản lược: tay trái chỉ còn nốt trầm (A,,8 | E,,8 | A,,8 | E,,4 A,,4); hòa âm vẫn rõ, nhịp vẫn giữ được."
+    loai: cau-truc
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối abc 5 (X:5): tay phải giống khối 4, tay trái chỉ có nốt trầm La và Mi, mỗi ô đủ 8 nốt móc. Xem khuong_nhac khối 5."
+  - id: n28
+    cau: "Kế hoạch 5–10 phút mỗi ngày: đọc dễ hơn bài đang tập khoảng hai cấp; 3–5 đoạn ngắn mới mỗi ngày; ghi nhật ký; bảng bốn tuần (từng tay riêng, hai tay tay trái nốt dài, tay trái hợp âm và rải, thêm giọng thứ và chấm dôi)."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập. Khớp piano/lo-trinh (dễ hơn bài đang tập khoảng hai cấp). Trang lo-trinh (lô trước) còn có hàng "Đọc nhạc" ghi "Đọc trước nửa ô nhịp" (chặng 3) và "Đọc trước một ô nhịp" (chặng 4), mâu thuẫn với nhận định về khoảng mắt–tay ở trang này: xem ghi_chu cuối hồ sơ.'
+  - id: n29
+    cau: "Bartók, Mikrokosmos quyển 1–2: bắt đầu bằng những bài ngắn và tăng độ khó từng chút."
+    loai: cau-truc
+    nguon: []
+    ket_qua: null
+    ghi_chu: 'chưa chắc: nguồn đã đọc (trang mô tả, không phải IMSLP hay nhà xuất bản; trang IMSLP gõ tên lỗi) nói 153 bài, sáu quyển, 1926–1939, "progressive pieces for pianoforte", không nói rõ "ngắn". Chữ cũ: "những bài rất ngắn"; bỏ "rất" vì không kiểm được. Cần nguồn bậc 1–2 (IMSLP hoặc Boosey & Hawkes) cho "ngắn" và cho "quyển 1–2".'
+  - id: n30
+    cau: Paul Harris, Improve your sight-reading! (Faber Music), mỗi cấp một quyển, có bài tập tiết tấu và giai điệu, bài mẫu kèm câu hỏi, và bài đọc ngắn.
+    loai: cau-truc
+    nguon:
+      - faber-g1
+      - faber-g3
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "có bài luyện tiết tấu, nhận dạng và bài đọc ngắn". Faber (Grade 1, 3): "rhythmic and melodic exercises related to specific technical issues", "prepared pieces with associated questions", "graded sight-reading pieces", có bản thu trực tuyến; trang không nói "bài luyện nhận dạng". Cửa hàng liệt kê mỗi Grade một quyển. Chữ mới theo trang. "Bài đọc ngắn": Faber nói "pieces"; "ngắn" là suy luận.'
+  - id: n31
+    cau: Song tấu bốn tay, ví dụ Diabelli Melodious Exercises Op. 149; bè của học trò chỉ dùng năm nốt; chơi cùng người khác buộc bạn không được dừng.
+    loai: cau-truc
+    nguon:
+      - alfred-diabelli
+      - imslp-diabelli
+    ket_qua: dung
+    ghi_chu: 'Alfred: Op. 149 là "Melodious Pieces on Five Notes", primo giữ cả hai tay trong thế năm ngón. Khớp với "chỉ dùng năm nốt" ở mức thế tay năm ngón của mỗi tay. "Buộc không được dừng" là lời khuyên. Trang choi-cung-nguoi-khac (cùng lô) dùng chữ "thế tay năm ngón".'
+  - id: n32
+    cau: "Trung cấp: minuet trong Notebook for Anna Magdalena Bach, sonatina, Album for the Young của Schumann."
+    loai: danh-muc
+    nguon:
+      - henle-anna
+      - imslp-album
+    ket_qua: dung
+    ghi_chu: 'Henle HN 349 và IMSLP (Wikipedia mô tả): sổ tay có minuet; Schumann, Album für die Jugend Op. 68, 43 bài, 1848. "Trung cấp", "chọn bài dễ hơn bài đang tập" là lời khuyên.'
+  - id: n33
+    cau: "Nâng cao: hợp xướng bốn bè (chorale) của Bach; đệm cho ca sĩ hoặc nhạc cụ khác; song tấu bốn tay của Schubert, Dvořák, Brahms; đọc bốn bè trên hai khuông là cách luyện đọc hòa âm rất tốt."
+    loai: khuyen-tap
+    nguon:
+      - imslp-d940
+      - imslp-sd46
+      - imslp-hd
+    ket_qua: khong-can-nguon
+    ghi_chu: "Gợi ý tài liệu và lời khuyên. Song tấu bốn tay của ba nhà soạn nhạc: IMSLP (Schubert D. 940, 733; Dvořák Op. 46; Brahms WoO 1) đều bốn tay."
+  - id: n34
+    cau: "Chuẩn bị thi: Đề mẫu thị tấu của ABRSM; đề cương thi piano của Trinity (thị tấu là một trong các bài thi phụ)."
+    loai: cau-truc
+    nguon:
+      - abrsm
+      - trinity
+    ket_qua: null
+    ghi_chu: 'chưa chắc: chữ cũ "Đề mẫu thị tấu của ABRSM và Trinity". Trinity: piano grade exams có các bài thi phụ (supporting tests); trang tài nguyên Trinity chỉ hiện ví dụ ứng tác (improvisation), không hiện ví dụ thị tấu; ABRSM có phần thị tấu trong syllabus nhưng chưa mở được trang đề mẫu riêng. Chữ mới hẹp hơn: ABRSM "đề mẫu", Trinity "đề cương" và "thị tấu là một trong các bài thi phụ" (Trinity gọi supporting tests). Lượt 2 xác nhận từ trang syllabus Trinity và trang ABRSM sight-reading samples.'
+  - id: n35
+    cau: "Sight Reading Factory: tạo bài đọc mới theo cấp độ."
+    loai: cau-truc
+    nguon:
+      - srf
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "(trả phí) ... Tạo bài đọc mới theo cấp độ, không bao giờ hết bài". Trang chủ SRF: "unlimited sight reading exercises", nhiều cấp độ, nhưng không nêu giá ("Sight Read for Free" có nút, trang Pricing không đọc được): bỏ "(trả phí)"; bỏ "không bao giờ hết bài" vì "unlimited" là lời quảng cáo.'
+  - id: n36
+    cau: 'Các liên kết "Luyện trên site": Đọc nốt, Thị tấu hai tay, Thị tấu một bè, Tiết tấu, Phiếu bài tập, Kết nối đàn MIDI (luyen-tap/doc-not, thi-tau-hai-tay, thi-tau, tiet-tau, phieu-bai-tap, ket-noi-midi), cùng luyen-tap/metronome ("Máy đếm nhịp"), luyen-tap/nhat-ky ("Nhật ký luyện tập") và piano/thay-va-thi ("Học với thầy và thi cấp").'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Chưa chuyển; đã kiểm ở ../opus-zero/docs: luyen-tap/doc-not.md "Đọc nốt", thi-tau-hai-tay.md "Thị tấu hai tay", thi-tau.md "Thị tấu một bè", tiet-tau.md "Tiết tấu", phieu-bai-tap.md "Phiếu bài tập và giấy kẻ khuông", ket-noi-midi.md "Kết nối đàn MIDI", metronome.md "Máy đếm nhịp", nhat-ky.md "Nhật ký luyện tập", piano/thay-va-thi.md "Học với thầy và thi cấp". Điều cần giữ: các trang ở đúng đường dẫn ấy.'
+  - id: n37
+    cau: "Đọc nốt: phản xạ tên nốt trên cả hai khóa."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Chưa chuyển: luyen-tap/doc-not.md (cũ): "Bấm tên của nốt trên khuông", có phạm vi khóa Sol, khóa Fa và "cả hai khóa". Điều cần giữ: công cụ ôn tên nốt ở cả hai khóa.'
+  - id: n38
+    cau: "Thị tấu hai tay: bài 4 ô nhịp cho hai tay trên khuông kép, bốn cấp gần với kế hoạch bốn tuần ở trên; chơi trên đàn thật rồi tự chấm."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Chưa chuyển: luyen-tap/thi-tau-hai-tay.md (cũ): "bài bốn ô nhịp cho hai tay trên khuông kép", bảng "Bốn cấp" (1: Đô trưởng lần lượt hai tay; 2: tay trái nốt trầm dài; 3: tay trái hai nốt theo hợp âm, thêm La thứ, Rê thứ; 4: tay trái rải, thêm giọng thứ và nốt đen chấm dôi), mục "Tự chấm cho thật". Khớp kế hoạch bốn tuần của trang này. Điều cần giữ: bốn cấp, bài 4 ô nhịp, tự chấm; anchor #quet-30-giay-truoc-khi-choi của trang này.'
+  - id: n39
+    cau: "Thị tấu một bè: mỗi lần một giai điệu 4 ô nhịp mới; với đàn MIDI, site chấm cả cao độ lẫn nhịp."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Chưa chuyển: luyen-tap/thi-tau.md (cũ): "tạo một giai điệu 4 ô nhịp ngẫu nhiên"; chấm bằng đàn MIDI do ../opus-zero/docs/assets/js/sight-reading.js gọi OZAssess.assessMidi, so cao độ (có tùy chọn bỏ qua quãng tám) và thời điểm (offset theo mili giây) từng nốt. Điều cần giữ: giai điệu 4 ô nhịp, chấm bằng MIDI có cả cao độ và nhịp.'
+  - id: n40
+    cau: "Tiết tấu: đọc và gõ tiết tấu."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Chưa chuyển: luyen-tap/tiet-tau.md (cũ): "Đọc tiết tấu 2 ô nhịp ... gõ theo từng nốt". Điều cần giữ: công cụ đọc và gõ tiết tấu.'
+  - id: n41
+    cau: "Phiếu bài tập: đề đọc nốt, quãng, hợp âm, hóa biểu để làm trên giấy."
+    loai: ve-site
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Chưa chuyển: luyen-tap/phieu-bai-tap.md (cũ): bộ tạo phiếu ("Chọn loại bài, bấm Đề mới ... In phiếu") và bài viết thêm về gam, hợp âm, hóa biểu. Chữ cũ: "đề đọc nốt, tiết tấu để làm trên giấy"; thay "tiết tấu" bằng "quãng, hợp âm, hóa biểu" vì phiếu không có đề tiết tấu (đã sửa theo trang cũ). Các loại đề cụ thể do thành phần dựng ra: review kiểm lại trên bản xem. Điều cần giữ: phiếu có các loại đề đọc nốt, quãng, hợp âm, hóa biểu.'
+  - id: n42
+    cau: "Kết nối đàn MIDI: dùng phím thật thay cho chuột."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Chưa chuyển: luyen-tap/ket-noi-midi.md (cũ): "dùng phím thật thay cho chuột trong các công cụ luyện tập". Đúng.'
+  - id: n43
+    cau: "Câu hỏi 1: hai nốt cùng nằm trên dòng kẻ, giữa chúng có đúng một dòng khác: quãng 5 (dòng sang dòng kế tiếp là quãng 3; dòng sang dòng cách một là quãng 5)."
+    loai: quy-tac
+    nguon:
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "Ví dụ Mi4 (dòng 1) và Si4 (dòng 3): giữa có Sol4 (dòng 2): quãng 5. Giải thích khớp bảng quãng. Không dựa vào vị trí lựa chọn."
+  - id: n44
+    cau: "Câu hỏi 2: khi thị tấu, điều quan trọng nhất là giữ nhịp, không dừng lại."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập.
+  - id: n45
+    cau: "Câu hỏi 3: nên chọn tài liệu thị tấu dễ hơn bài đang tập khoảng hai cấp và đọc thật nhiều bài mới."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập.
+  - id: n46
+    cau: "Câu hỏi 4: ô nhịp có quá nhiều nốt khi thị tấu thì giữ giai điệu và nốt trầm, bỏ bớt nốt giữa."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập.
+  - id: n47
+    cau: Andreas C. Lehmann, Victoria McArthur, "Sight-reading", trong Richard Parncutt, Gary E. McPherson (chủ biên), The Science and Psychology of Music Performance (Oxford University Press, 2002).
+    loai: ten
+    nguon:
+      - lehmann
+    ket_qua: dung
+    ghi_chu: 'Crossref: chương "Sight-Reading", Lehmann và McArthur, tr. 135–150; sách The Science & Psychology of Music Performance, Parncutt và McPherson, Oxford University Press, 2002. Đúng.'
+  - id: n48
+    cau: Paul Harris, Improve your sight-reading! (Faber Music), loạt sách piano theo cấp.
+    loai: ten
+    nguon:
+      - faber-g1
+      - faber-g3
+    ket_qua: dung
+    ghi_chu: 'Faber Music: "Improve your sight-reading! Piano Grade 1/3 (Piano Solo)", Paul Harris.'
+  - id: n49
+    cau: Béla Bartók, Mikrokosmos (Boosey & Hawkes).
+    loai: ten
+    nguon: []
+    ket_qua: null
+    ghi_chu: "chưa chắc: tên và tác giả đúng; nhà xuất bản Boosey & Hawkes chưa xác nhận trên trang nhà xuất bản (trang IMSLP gõ tên lỗi không mở được). Lượt 2 mở trang Boosey."
+  - id: n50
+    cau: Anton Diabelli, Melodious Exercises Op. 149 cho piano bốn tay.
+    loai: ten
+    nguon:
+      - imslp-diabelli
+      - alfred-diabelli
+    ket_qua: dung
+    ghi_chu: 'IMSLP: 28 Melodische Übungsstücke Op. 149, bốn tay; "Melodious Exercises" (Peters), "Melodious Pieces on Five Notes" (Alfred).'
+  - id: n51
+    cau: "ABRSM: đề mẫu thị tấu; Trinity College London: đề cương thi piano."
+    loai: cau-truc
+    nguon:
+      - abrsm
+      - trinity
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "ABRSM và Trinity College London: đề mẫu thị tấu." Chữ mới tách theo từng tổ chức; vẫn chưa chắc về "đề mẫu thị tấu" của ABRSM, xem nhận định "Chuẩn bị thi".'
+  - id: n52
+    cau: Sight Reading Factory (liên kết).
+    loai: ten
+    nguon:
+      - srf
+    ket_qua: dung
+    ghi_chu: Trang chủ sightreadingfactory.com đã mở.
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - quang
+    ket_qua: dung
+    ghi_chu: 'Đọc bằng quãng: 4/4, L:1/4, Đô trưởng, 3 ô đủ 4 phách. Nốt: C E D G | c G E C | G2 C2. Quãng ghi trên nốt: E 3, D 2, G 4; c 4, G 4, E 3, C 3; G2 5, C2 5. Đối chiếu từng cặp: Đô4–Mi4 quãng 3, Mi4–Rê4 quãng 2, Rê4–Sol4 quãng 4, Sol4–Đô5 quãng 4, Đô5–Sol4 quãng 4, Sol4–Mi4 quãng 3, Mi4–Đô4 quãng 3, Đô4–Sol4 quãng 5, Sol4–Đô4 quãng 5. Khớp. Câu trên khối nói "nốt đầu là Đô giữa": đúng (C = Đô4).'
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: 'Bài đọc 1: 4/4, L:1/4, Đô trưởng, 4 ô, mỗi ô đủ 4 phách ở cả hai bè. Tay phải: E D C E | F E D2 | E G F D | C4 (Đô4–Sol4, thế tay Đô–Sol; !3! ở Mi đầu). Tay trái: C,4 | G,4 | C,2 G,2 | C,4 chỉ có Đô và Sol (ngón !5! ở Đô, !1! ở Sol). Khớp câu "Tay phải giữ nguyên thế tay Đô–Sol, tay trái chỉ có hai nốt Đô và Sol". Ngón: Mi4 với ngón 3 trong thế tay Đô–Sol là đúng (ngón 1 Đô, 2 Rê, 3 Mi, 4 Fa, 5 Sol).'
+  - khoi: 3
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: "Bài đọc 2: 3/4, L:1/4, Sol trưởng (một dấu thăng), 8 ô đủ 3 phách. Tay phải: G B d | c2 A | B c A | G3 | d B G | c2 A | c B A | G3. Tay trái: G,,3 | A,,3 | D,3 | G,,3 | G,,3 | A,,3 | D,3 | G,,3. Hòa âm I | ii (Am, La–Đô–La) | V (Rê, La trong hợp âm, Si và Đô qua) | I; lặp lại. Câu 1 và câu 2 khác nhau ở ô 1 (G B d / d B G) và ô 3 (B c A / c B A), giống ở ô 2 và 4. Khớp câu trang viết sau khi sửa."
+  - khoi: 4
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: 'Bài đọc 3: 4/4, L:1/8, La thứ (không dấu hóa biểu; ^G là Sol♯ bậc 7 nâng), 4 ô, mỗi ô đủ 8 nốt móc. Tay phải: e2 c2 A2 c2 | B2 ^G2 E2 ^G2 | A2 c2 e2 c2 | B2 ^G2 A4: Am, E, Am, E–Am. Tay trái: A,,2 [C,E,]2 ×3 (Am: La, Đô–Mi); E,,2 [^G,,D,]2 ×3 (E7 rút gọn: Sol♯–Rê, tức quãng 3 và 7); ô 4 E,,2 [^G,,D,]2 A,,4. Hòa âm i–V7–i–V7–i khớp tay phải (B, ^G, E là nốt của E7). Ngón: !5! ở e, B; !1! ở A; !4!, !2!, !3! ở ô 4 hợp lý cho thế tay Mi–Sol♯–La. Khớp câu "vì sao có Sol♯ (Gam thứ)".'
+  - khoi: 5
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+    ket_qua: dung
+    ghi_chu: 'Bài đọc 3 giản lược: cùng giai điệu tay phải với khối 4, tay trái chỉ nốt trầm (A,,8 | E,,8 | A,,8 | E,,4 A,,4), mỗi ô đủ 8 móc. Khớp câu "tay trái chỉ còn nốt trầm; hòa âm vẫn rõ".'
+ghi_chu: 'Đọc nhạc và thị tấu (piano/thi-tau, lõi, D4-L3 phần C). Nguồn: Open Music Theory (clefs, grand staff, intervals, triads, minor/major scales), Baylor Piano Basics, Britannica (Alberti bass); Crossref (Lehmann và McArthur 2002); Perra và cộng sự 2021 (mdpi, tóm tắt tổng quan khoảng mắt–tay); Faber Music (Harris Grade 1, 3); trang chủ Sight Reading Factory; Henle và IMSLP (Schumann Op. 68, Anna Magdalena); Alfred (Diabelli Op. 149); trang Trinity (HTML). Công cụ web: WebFetch ngày 28/10/2026; WebSearch hết hạn mức; PubMed, PDF Trinity không đọc được. SỬA TRANG (đã ghi doi_chu): mở đầu và description ("thực chất", "tăng đều"); khoảng mắt–tay (bỏ "một ô nhịp hoặc hơn", "dài dần khi luyện"; thêm khoảng số nốt theo tổng quan 2021); Bài đọc 2 ("giống ở phần cuối" thành "khác ô 1 và 3, giống ô 2 và 4"); Mikrokosmos bỏ "rất"; Harris (mô tả theo Faber); hàng "Chuẩn bị thi" và bullet ABRSM, Trinity; SRF bỏ "(trả phí)" và "không bao giờ hết bài"; Phiếu bài tập ("tiết tấu" thành "quãng, hợp âm, hóa biểu"). GIỮ NGUYÊN: tiêu đề "Quét 30 giây trước khi chơi" (anchor quet-30-giay-truoc-khi-choi, luyen-tap/thi-tau-hai-tay cũ trỏ tới). CHƯA CHẮC (ket_qua null): định nghĩa thị tấu (chỉ Crossref); "ba cách nhận ra nốt, dùng cả ba cùng lúc"; 8va/8vb/loco (chỉ Wikipedia); Mikrokosmos "ngắn", quyển 1–2, nhà xuất bản Boosey & Hawkes; đề mẫu thị tấu ABRSM/Trinity. Số liệu 0,5–3,7 và 1,7–6,8 nốt lấy từ bản tóm tắt Perra (2021), cần lượt 2 xác nhận. LỆCH VỚI TRANG LÔ TRƯỚC (người giao quyết): piano/lo-trinh hàng "Đọc nhạc" chặng 3 ghi "Đọc trước nửa ô nhịp", chặng 4 ghi "Đọc trước một ô nhịp"; nhận định khoảng mắt–tay của trang này nói hiếm khi tới trọn một ô nhịp; đề xuất sửa lo-trinh ("đọc trước vài nốt") hoặc bỏ. Lô trước yêu cầu giữ: lo-trinh trỏ tới piano/thi-tau (bài hai tay 4–8 ô nhịp, ít dấu hóa, dễ hơn bài đang tập khoảng hai cấp; "danh sách quét" không nêu): KHỚP ở phần "dễ hơn khoảng hai cấp"; hàng "Đọc trước" lệch như trên. quang-tam-buoc-nhay, hop-am-rai, ban-do-ban-phim: trang này chỉ trỏ tới, không nêu điều cần giữ: KHỚP. Câu ve-site trỏ trang chưa chuyển: luyen-tap/doc-not, thi-tau, thi-tau-hai-tay, tiet-tau, phieu-bai-tap, ket-noi-midi, metronome, nhat-ky; piano/thay-va-thi: đã kiểm ở ../opus-zero/docs, điều cần giữ ghi ở nhận định (anchor quet-30-giay-truoc-khi-choi; bốn cấp của thi-tau-hai-tay; chấm MIDI cả cao độ lẫn nhịp ở thi-tau). Thuật ngữ trang dùng mà src/data/thuat-ngu.yml có thể chưa có (cho D3-L5; lượt 1 không lập hồ sơ thuật ngữ): sight-reading (thị tấu), eye-hand span (khoảng mắt–tay), nốt mốc, dòng kẻ phụ (ledger line), 8va/8vb/loco, mô thức tay trái, bè Alberti, thể đảo, thế tay năm ngón, chorale. Ghi chú cho người giao: các nhận định phụ thuộc Perra cần lượt 2 kiểm số liệu; trang có 5 khối abc, tất cả ví dụ soạn, đã đối chiếu bằng tay.'
+doi_chu:
+  - cu: "Đọc nhạc piano khó hơn đọc một bè: hai khuông, nhiều nốt vang cùng lúc, hai tay làm hai việc khác nhau. Tin tốt là đọc nhanh thực chất là kỹ năng nhận ra hình mẫu, và nó tăng đều nếu bạn đọc một chút mỗi ngày. Trang này nói cách đọc, cách luyện thị tấu (sight-reading: chơi một bản nhạc ngay lần đầu nhìn thấy), và tài liệu cho từng trình độ."
+    moi: "Đọc nhạc piano khó hơn đọc một bè: hai khuông, nhiều nốt vang cùng lúc, hai tay làm hai việc khác nhau. Tin tốt là một phần lớn của đọc nhanh là kỹ năng nhận ra hình mẫu, và nó có thể tiến bộ nếu bạn đọc một chút mỗi ngày. Trang này nói cách đọc, cách luyện thị tấu (sight-reading: chơi một bản nhạc ngay lần đầu nhìn thấy), và tài liệu cho từng trình độ."
+    ly_do: 'n1 (da-sua): "thực chất", "tăng đều" quá chắc, không có nguồn.; n1 (da-sua): description theo câu mở đầu đã sửa, cắt lại ở ranh giới từ.'
+  - cu: "Người đọc giỏi luôn nhìn trước chỗ đang chơi một quãng: từ vài nốt ở người mới đến khoảng một ô nhịp hoặc hơn ở người đọc thành thạo. Các nhà nghiên cứu gọi đó là khoảng mắt–tay (eye-hand span), và nó dài dần khi bạn luyện."
+    moi: "Người đọc giỏi nhìn trước chỗ đang chơi một quãng. Các nhà nghiên cứu gọi đó là khoảng mắt–tay (eye-hand span): trong các nghiên cứu được tổng hợp, khoảng này chỉ vài nốt, từ chừng 0,5–3,7 nốt ở người mới đến chừng 1,7–6,8 nốt ở người đọc giỏi (tùy cách đo), và hiếm khi tới trọn một ô nhịp. Một vài thí nghiệm cho thấy luyện tập giúp kéo dài nó ở người đọc yếu, nhưng bằng chứng còn ít."
+    ly_do: 'n16 (da-sua): "một ô nhịp hoặc hơn" không có trong các nghiên cứu tổng hợp (Perra 2021); "dài dần khi bạn luyện" quá chắc. Cần lượt 2 xác nhận số liệu.'
+  - cu: "Hóa biểu một dấu thăng. Hai câu bốn ô nhịp giống nhau ở phần cuối: nhận ra điều đó khi quét là bạn chỉ phải đọc một nửa."
+    moi: Hóa biểu một dấu thăng. Hai câu bốn ô nhịp chỉ khác nhau ở ô thứ nhất và thứ ba; ô thứ hai và thứ tư giống hệt. Nhận ra điều đó khi quét, bạn chỉ phải đọc kỹ hai ô của câu thứ hai.
+    ly_do: 'n25 (da-sua): khối abc 3: hai câu khác nhau ở ô 1 và ô 3, giống ở ô 2 và ô 4; "đọc một nửa" không đúng.'
+  - cu: Mikrokosmos bắt đầu bằng những bài rất ngắn và tăng độ khó từng chút
+    moi: Mikrokosmos bắt đầu bằng những bài ngắn và tăng độ khó từng chút
+    ly_do: 'n29 (chưa chắc): bỏ "rất", không kiểm được; vẫn cần nguồn cho "ngắn".'
+  - cu: Mỗi cấp một quyển, có bài luyện tiết tấu, nhận dạng và bài đọc ngắn
+    moi: Mỗi cấp một quyển, có bài tập tiết tấu và giai điệu, bài mẫu kèm câu hỏi, và bài đọc ngắn
+    ly_do: 'n30 (da-sua): Faber mô tả bài tập tiết tấu và giai điệu, bài mẫu kèm câu hỏi, bài đọc chấm điểm; không nói "bài luyện nhận dạng".'
+  - cu: Đề mẫu thị tấu của ABRSM và Trinity
+    moi: Đề mẫu thị tấu của ABRSM; đề cương thi piano của Trinity (thị tấu là một trong các bài thi phụ)
+    ly_do: 'n34 (chưa chắc): trang Trinity cho thấy đề cương và bài thi phụ, không thấy "đề mẫu thị tấu" riêng; tách hai tổ chức.'
+  - cu:
+      - Sight Reading Factory (trả phí)
+      - Tạo bài đọc mới theo cấp độ, không bao giờ hết bài
+    moi:
+      - Sight Reading Factory
+      - Tạo bài đọc mới theo cấp độ
+    ly_do: 'n35 (da-sua): trang chủ SRF không nêu giá; "không bao giờ hết bài" là lời quảng cáo.'
+  - cu: "Phiếu bài tập: đề đọc nốt, tiết tấu để làm trên giấy."
+    moi: "Phiếu bài tập: đề đọc nốt, quãng, hợp âm, hóa biểu để làm trên giấy."
+    ly_do: "n41 (da-sua): trang Phiếu bài tập (cũ) không có đề tiết tấu; có đề đọc nốt, quãng, hợp âm, hóa biểu."
+  - cu: "ABRSM và Trinity College London: đề mẫu thị tấu."
+    moi: "ABRSM: đề mẫu thị tấu; Trinity College London: đề cương thi piano."
+    ly_do: 'n51 (da-sua): tách theo từng tổ chức, như hàng "Chuẩn bị thi".'
+  - cu: "mô tả: Đọc nhạc piano khó hơn đọc một bè: hai khuông, nhiều nốt vang cùng lúc, hai tay làm hai việc khác nhau. Tin tốt là đọc nhanh thực chất là kỹ năng nhận ra hình…"
+    moi: "mô tả: Đọc nhạc piano khó hơn đọc một bè: hai khuông, nhiều nốt vang cùng lúc, hai tay làm hai việc khác nhau. Tin tốt là một phần lớn của đọc nhanh là kỹ năng nhận…"
+    ly_do: "n1: mô tả đổi theo câu mở đầu, bỏ \"thực chất\" (nghiên cứu chỉ nói nhận ra hình mẫu là một phần của đọc nhanh)."

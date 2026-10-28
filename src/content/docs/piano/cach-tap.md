@@ -1,13 +1,13 @@
 ---
 title: Cách tập piano hiệu quả
-description: Ba mươi phút tập đúng cách có ích hơn hai giờ "chơi đi chơi lại từ đầu". Trang này gom lại những điều mà giáo viên giỏi và các nghiên cứu về học kỹ năng đều…
+description: "Ba mươi phút tập đúng cách có ích hơn hai giờ \"chơi đi chơi lại từ đầu\". Trang này gom lại một cách tập: quy trình học một bài mới từ trang nhạc đầu tiên đến lúc chơi được cho người khác…"
 ---
 
-Ba mươi phút tập đúng cách có ích hơn hai giờ "chơi đi chơi lại từ đầu". Trang này gom lại những điều mà giáo viên giỏi và các nghiên cứu về học kỹ năng đều đồng ý: quy trình học một bài mới từ trang nhạc đầu tiên đến lúc chơi được cho người khác nghe, cách sửa một lỗi cho dứt điểm, và các mẫu buổi tập 20, 45, 90 phút.
+Ba mươi phút tập đúng cách có ích hơn hai giờ "chơi đi chơi lại từ đầu". Trang này gom lại một cách tập: quy trình học một bài mới từ trang nhạc đầu tiên đến lúc chơi được cho người khác nghe, cách sửa một lỗi cho dứt điểm, và các mẫu buổi tập 20, 45, 90 phút.
 
 ## Tập có chủ đích
 
-Nhà tâm lý học K. Anders Ericsson gọi cách tập của người giỏi là **tập có chủ đích** (deliberate practice): mỗi lần tập có **một mục tiêu cụ thể**, bạn **tập trung hoàn toàn**, nhận **phản hồi** ngay (từ tai mình, máy đếm nhịp, bản ghi âm, thầy), và làm việc ở mức **hơi khó hơn** khả năng hiện tại. Trái ngược với nó là "chơi cho vui từ đầu đến cuối": dễ chịu, nhưng tiến bộ chậm.
+Nhà tâm lý học K. Anders Ericsson và đồng nghiệp gọi những hoạt động đòi hỏi nỗ lực và được thiết kế để cải thiện thành tích là **tập có chủ đích** (deliberate practice). Trang này mượn tinh thần ấy làm khuôn cho buổi tập: mỗi lần tập có **một mục tiêu cụ thể**, bạn **tập trung hoàn toàn**, nhận **phản hồi** ngay (từ tai mình, máy đếm nhịp, bản ghi âm, thầy), và làm việc ở mức **hơi khó hơn** khả năng hiện tại. Trái ngược với nó là "chơi cho vui từ đầu đến cuối": dễ chịu, nhưng ít tiến bộ.
 
 Trước mỗi buổi, viết **một dòng mục tiêu**:
 
@@ -23,12 +23,12 @@ Chơi cho vui vẫn rất quan trọng: hãy để dành vài phút cuối buổ
 2. **Phân tích nhanh (10 phút).** Giọng, số chỉ nhịp, tốc độ; bài chia mấy đoạn (A–B–A? rondo?); đoạn nào lặp lại nguyên văn (chỉ phải học một lần!); chuyển giọng ở đâu; chỗ nào khó về kỹ thuật. Xem [Phân tích một tác phẩm](/opus/nhac-ly/26-phan-tich/) và [Hình thức nhỏ](/opus/nhac-ly/31-hinh-thuc-nho/).
 3. **Chọn ngón bấm và ghi bằng bút chì.** Lấy ngón bấm của người biên tập làm điểm xuất phát, thử, quyết định, ghi lại, rồi **giữ nguyên** mỗi lần tập. Ngón bấm cố định là nền của trí nhớ vận động; đổi ngón mỗi lần là tự tạo ra một bài mới mỗi ngày.
 4. **Chia đoạn.** Chia theo câu nhạc, mỗi đoạn 2–8 ô nhịp; đánh số hoặc chữ cái lên bản nhạc. Khoanh tròn các **điểm nóng**: những chỗ một hai ô nhịp khó nhất.
-5. **Tập từng tay, thật chậm.** Đúng nốt, đúng ngón, đúng nhịp, **đúng dấu luyến, staccato và sắc thái ngay từ đầu**. Đếm to. Học sai rồi sửa tốn gấp nhiều lần học đúng ngay lần đầu.
+5. **Tập từng tay, thật chậm.** Đúng nốt, đúng ngón, đúng nhịp, **đúng dấu luyến, staccato và sắc thái ngay từ đầu**. Đếm to. Học đúng ngay từ đầu thì đỡ phải sửa về sau.
 6. **Ghép hai tay, chậm hơn nữa.** Tốc độ ghép tay thường chỉ bằng khoảng một nửa tốc độ tay riêng. Coi mỗi phách hai tay cùng đánh là một **điểm neo**. Chi tiết ở [Phối hợp hai tay](/opus/piano/hai-tay/).
 7. **Biến thể tiết tấu** cho các đoạn chạy nốt đều (ví dụ bên dưới): dài–ngắn, ngắn–dài, đổi trọng âm. Mỗi biến thể buộc ngón tay chuẩn bị nốt tiếp theo theo một cách khác, nên khi trở về tiết tấu gốc, đoạn chạy đều và chắc hơn hẳn.
 8. **Thang máy đếm nhịp.** Bắt đầu ở tốc độ bạn chơi đúng hoàn toàn mà vẫn thoải mái. Đúng ba lần liên tiếp thì tăng 2–4 nhịp mỗi phút; sai thì lùi một nấc. Hôm sau bắt đầu thấp hơn mức cao nhất hôm qua vài nấc. Dùng [máy đếm nhịp](/opus/luyen-tap/metronome/).
 9. **Nối đoạn.** Nối đoạn 1 với 2, rồi 1–2–3… Thử cả **nối ngược** (backward chaining): học đoạn cuối trước, rồi nối đoạn áp cuối vào đoạn cuối…; nhờ vậy phần cuối bài, nơi bạn hay mệt và hồi hộp nhất, lại là phần chắc nhất. Luôn tập riêng các **mối nối**: hai ô cuối của đoạn trước cộng hai ô đầu của đoạn sau.
-10. **Xen kẽ và giãn cách.** Trong một buổi, luân phiên 2–3 điểm nóng thay vì tập một chỗ 30 phút liền; ôn lại sau 1 ngày, 3 ngày, 1 tuần. Cảm giác khó hơn và có vẻ "kém hơn" ngay trong buổi, nhưng các nghiên cứu về học kỹ năng vận động cho thấy cách này giúp nhớ lâu hơn.
+10. **Xen kẽ và giãn cách.** Trong một buổi, luân phiên 2–3 điểm nóng thay vì tập một chỗ 30 phút liền; ôn lại sau 1 ngày, 3 ngày, 1 tuần. Cách này tạo cảm giác khó hơn và có vẻ "kém hơn" ngay trong buổi; hãy thử vài tuần rồi tự so sánh.
 11. **Chơi trọn bài.** Mỗi buổi một hai lần, không dừng, như đang biểu diễn. Ghi lại chỗ vấp, mai tập đúng chỗ đó. Mỗi tuần [thu âm](/opus/luyen-tap/thu-am/) một lần và nghe lại như một khán giả: tai khi đang chơi và tai khi nghe lại là hai cái tai rất khác nhau.
 12. **Lên tốc độ biểu diễn và bảo trì.** Lên tốc độ thật dần dần. Khi bài đã chắc, mỗi tuần vẫn chơi **chậm** một lần để giữ độ chính xác, và đưa bài vào danh sách "bài bảo trì" chơi lại theo vòng.
 
@@ -54,7 +54,7 @@ Mỗi biến thể chơi 3–5 lần, chậm, thả lỏng, rồi mới quay v�
 |---|---|---|---|
 | 1 | ♩ = 60 | ♩ = 68 | Đúng ba lần liền ở mỗi nấc mới tăng |
 | 2 | ♩ = 64 | ♩ = 72 | Bắt đầu thấp hơn mức cao nhất hôm qua |
-| 3 | ♩ = 66 | ♩ = 76 | Ở 76 bắt đầu căng tay: dừng, không cố |
+| 3 | ♩ = 66 | ♩ = 76 | Ở 76 bắt đầu căng tay: dừng tăng tốc độ và xem lại cách chơi |
 | 4 | ♩ = 68 | ♩ = 76 | Ổn định ở 76 rồi mới đi tiếp |
 
 Tốc độ không tăng đều mỗi ngày, và điều đó hoàn toàn bình thường.
@@ -80,7 +80,7 @@ Lặp lại một lỗi mười lần là đang luyện chính lỗi đó. Khi v
 
 ## Mẫu buổi tập
 
-Số trong bảng là phút.
+Số trong bảng là phút. Buổi dài cần nghỉ thường hơn dòng "Nghỉ" ghi: BAPAM khuyên tập khoảng 20 phút rồi nghỉ 10 phút (xem [Giữ đôi tay khỏe](/opus/piano/suc-khoe/)).
 
 | Phần | 20 phút | 45 phút | 90 phút |
 |---|---|---|---|
@@ -109,9 +109,9 @@ Xem thêm [Học với thầy và thi cấp](/opus/piano/thay-va-thi/).
 
 ## Khi bị giậm chân tại chỗ
 
-Gần như ai cũng có những tuần thấy mình không tiến bộ. Thường đó là dấu hiệu bạn đang tập lặp lại theo cùng một cách, hoặc tay đang tiêu hóa những gì đã học. Nếu kéo dài, đi qua danh sách này:
+Gần như ai cũng có những tuần thấy mình không tiến bộ. Thường đó là dấu hiệu bạn đang tập lặp lại theo cùng một cách. Nếu kéo dài, đi qua danh sách này:
 
-- **Bài có quá khó không?** Một bài vượt hai chặng tốn thời gian gấp nhiều lần và dễ làm căng tay. Lùi lại, học nhiều bài vừa sức: số bài đã chơi trọn là thứ làm bạn tiến nhanh nhất (xem [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/)).
+- **Bài có quá khó không?** Một bài vượt hai chặng thường tốn nhiều thời gian hơn hẳn. Lùi lại, học nhiều bài vừa sức: số bài đã chơi trọn là thứ làm bạn tiến nhanh nhất (xem [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/)).
 - **Bạn đang tập hay chỉ đang chơi?** Chơi đi chơi lại từ đầu dễ chịu nhưng ít tiến bộ. Đổi cách tập: biến thể tiết tấu, đổi sắc thái (chơi đoạn *f* thành *p*), tập chậm hẳn, tập tay trái một mình.
 - **Kỹ thuật gốc có vấn đề không?** Vai nhô, cổ tay cứng, khớp ngón gãy làm mọi thứ chậm lại. Quay video tay mình và đối chiếu với [tư thế và thế tay](/opus/piano/tu-the/).
 - **Bạn có bỏ qua gam và thị tấu không?** Hai mảng này nhàm nhưng là "từ vựng" và "khả năng đọc" của bạn; 10 phút mỗi ngày là đủ ([gam](/opus/piano/gam/), [thị tấu](/opus/piano/thi-tau/)).
@@ -119,16 +119,16 @@ Gần như ai cũng có những tuần thấy mình không tiến bộ. Thườn
 - **Học song song một bài dễ hơn.** Bài khó dạy bạn từng chi tiết, bài dễ giúp bạn chơi được nhiều nhạc; cần cả hai.
 - **Bạn có người nghe không?** Một buổi học với thầy, một người bạn, một buổi chơi nhỏ ở nhà đều tạo hạn chót và góc nhìn mới ([học với thầy](/opus/piano/thay-va-thi/), [biểu diễn](/opus/piano/hoc-thuoc-bieu-dien/)).
 - **Bạn còn nghe nhạc không?** Nghe một nghệ sĩ lớn chơi bài của mình thường mở ra ngay hai, ba ý tưởng mới.
-- **Nghỉ một hai ngày.** Nhiều nghiên cứu về học kỹ năng vận động cho thấy giấc ngủ giúp củng cố những gì đã tập; đôi khi bài "tự nhiên" chắc hơn sau một ngày nghỉ.
+- **Nghỉ một hai ngày.** Có khi quay lại sau một hai ngày nghỉ, bài thấy chắc hơn.
 - **Nhìn lại ba tháng trước**: bản thu cũ và [nhật ký luyện tập](/opus/luyen-tap/nhat-ky/) cho thấy bạn đã đi xa hơn cảm giác của mình.
 
 ## Tập khi không có đàn
 
-- **Tập trong đầu**: nhìn bản nhạc, nghe nhạc trong đầu, tưởng tượng cảm giác từng ngón trên phím. Trong một nghiên cứu nổi tiếng năm 1995, nhóm của Alvaro Pascual-Leone cho thấy người chỉ tập *trong tưởng tượng* một bài tập năm ngón trên piano cũng có những thay đổi ở vùng não điều khiển vận động; tuy vậy, hiệu quả rõ nhất vẫn là khi kết hợp với tập thật.
+- **Tập trong đầu**: nhìn bản nhạc, nghe nhạc trong đầu, tưởng tượng cảm giác từng ngón trên phím. Muốn thuộc bền, hãy tập đến khi chơi được cả bài trong đầu (xem [Học thuộc và biểu diễn](/opus/piano/hoc-thuoc-bieu-dien/)).
 - **Phân tích**: viết tên hợp âm dưới bè trầm, tìm các đoạn lặp lại và mô phỏng.
 - **Tiết tấu**: gõ và đếm to những ô khó; luyện thêm ở [Tiết tấu](/opus/luyen-tap/tiet-tau/).
 - **Nghe**: nghe nhiều bản thu khác nhau của bài đang tập, mắt theo bản nhạc.
-- **Đọc nốt và luyện tai** bằng các công cụ của site trên điện thoại.
+- **Đọc nốt và luyện tai** bằng các công cụ của site.
 
 ## Công cụ trên site
 
@@ -136,9 +136,9 @@ Gần như ai cũng có những tuần thấy mình không tiến bộ. Thườn
 |---|---|
 | [Máy đếm nhịp](/opus/luyen-tap/metronome/) | Thang tốc độ, giữ nhịp khi ghép tay |
 | [Thu âm buổi tập](/opus/luyen-tap/thu-am/) | Nghe lại như khán giả; so sánh tuần này với tháng trước |
-| [Chơi theo](/opus/luyen-tap/choi-theo/) | Chơi giai điệu một tay theo nhịp, site chấm cao độ và nhịp |
+| [Chơi theo](/opus/luyen-tap/choi-theo/) | Chơi giai điệu một tay theo nhịp, site chấm từng nốt: đúng, cao, thấp hay thiếu |
 | [Kết nối đàn MIDI](/opus/luyen-tap/ket-noi-midi/) | Đàn điện cắm máy tính: chấm chính xác hơn micro |
-| [Nhật ký luyện tập](/opus/luyen-tap/nhat-ky/) | Chuỗi ngày tập, mục tiêu, ghi chú |
+| [Nhật ký luyện tập](/opus/luyen-tap/nhat-ky/) | Lịch các ngày đã tập, bài đang tập, ghi chú |
 
 ## Những lỗi thường gặp
 
@@ -150,7 +150,7 @@ Gần như ai cũng có những tuần thấy mình không tiến bộ. Thườn
 - **"Để sắc thái và dấu luyến sau."** Học không có sắc thái là học một bài khác; sau này phải học lại.
 - **Không nghe chính mình.** Tai bận với ngón tay và bản nhạc; hãy thu âm mỗi tuần.
 - **Chỉ tập bài, bỏ gam, kỹ thuật và thị tấu.** Gam là từ vựng của ngón tay; thị tấu quyết định bạn học bài mới nhanh hay chậm.
-- **Tập liền một mạch hàng giờ.** Nghỉ 5 phút sau mỗi 25–30 phút; đau là tín hiệu dừng lại.
+- **Tập liền một mạch hàng giờ.** BAPAM khuyên tập khoảng 20 phút rồi nghỉ 10 phút; đau là tín hiệu dừng lại (xem [Giữ đôi tay khỏe](/opus/piano/suc-khoe/)).
 - **Chọn bài quá khó so với trình độ.** Xem [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
 
 ## Kiểm tra nhanh
@@ -181,7 +181,6 @@ Gần như ai cũng có những tuần thấy mình không tiến bộ. Thườn
 ## Nguồn
 
 - K. Anders Ericsson, Ralf Th. Krampe, Clemens Tesch-Römer, "The role of deliberate practice in the acquisition of expert performance", *Psychological Review* 100(3), 1993.
-- Alvaro Pascual-Leone và cộng sự, "Modulation of muscle responses evoked by transcranial magnetic stimulation during the acquisition of new fine motor skills", *Journal of Neurophysiology* 74(3), 1995.
-- Gerald Klickstein, *The Musician's Way: A Guide to Practice, Performance, and Wellness* (Oxford University Press, 2009).
-- Molly Gebrian, *Learn Faster, Perform Better: A Musician's Guide to the Neuroscience of Practicing* (Oxford University Press, 2024).
-- Graham Fitch, [Practising the Piano](https://practisingthepiano.com/): bài viết và sách điện tử về cách tập.
+- Chuan C. Chang, [Fundamentals of Piano Practice](https://fundamentals-of-piano-practice.readthedocs.io/): sách điện tử về cách tập piano.
+- BAPAM, *The Healthy Pianist* (tờ thông tin cho người chơi piano): [bản PDF](https://crosseyedpianist.com/wp-content/uploads/2016/08/thehealthypianist_bapamfactsheet.pdf).
+- [Practising the Piano](https://practisingthepiano.com/): bài viết và video về cách tập.

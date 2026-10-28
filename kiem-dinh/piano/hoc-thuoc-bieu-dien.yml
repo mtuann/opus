@@ -1,0 +1,691 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa piano/hoc-thuoc-bieu-dien
+trang: src/content/docs/piano/hoc-thuoc-bieu-dien.md
+nguon_cu: ../opus-zero/docs/piano/hoc-thuoc-bieu-dien.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-28
+    nhanh: moi/d4-l3
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D4-L3 lượt 1, phần A)
+      luot_2: null
+      review: null
+      kiem_mau: null
+nguon:
+  - id: abrsm
+    bac: 2
+    ten: "ABRSM, Qualification Specification: Practical Music Piano 2025 & 2026 (PDF; mục Playing from memory, tr. 13; bản PDF do nhà bán nhạc caswells-strings.co.uk đăng, đúng mã nguồn ABRSM, © 2024 ABRSM)"
+    link: https://caswells-strings.co.uk/wp-content/uploads/2025/07/ABRSM-Piano-syllabus-2025-2026.pdf
+  - id: gramophone
+    bac: 2
+    ten: Stephen Plaistow, "Sviatoslav Richter, Obituary", Gramophone, 10/1997
+    link: https://gramophone.co.uk/features/article/sviatoslav-richter-obituary-gramophone-october-1997-by-stephen-plaistow
+  - id: dg-richter
+    bac: 2
+    ten: "Deutsche Grammophon, Sviatoslav Richter: tiểu sử"
+    link: https://www.deutschegrammophon.com/en/artists/sviatoslav-richter/biography
+  - id: chaffin
+    bac: 2
+    ten: 'R. Chaffin, G. Imreh, "Practicing Perfection: Piano Performance as Expert Memory", Psychological Science 13(4), 2002, tr. 342–349 (bản ghi OpenAlex có tóm tắt; DOI 10.1111/j.0956-7976.2002.00462.x)'
+    link: https://api.openalex.org/works/doi:10.1111/j.0956-7976.2002.00462.x
+  - id: imslp-bwv971
+    bac: 1
+    ten: IMSLP, Italian Concerto, BWV 971 (Bach, Johann Sebastian)
+    link: https://imslp.org/wiki/Italian_Concerto,_BWV_971_(Bach,_Johann_Sebastian)
+  - id: chang
+    bac: 2
+    ten: Chuan C. Chang, Fundamentals of Piano Practice, III.6 Memorizing (đã đọc)
+    link: https://fundamentals-of-piano-practice.readthedocs.io/chapter1/ch1_topics/III.6.html
+  - id: chang-14
+    bac: 2
+    ten: Chuan C. Chang, Fundamentals of Piano Practice, III.14 Preparing for Performances and Recitals (đã đọc)
+    link: https://fundamentals-of-piano-practice.readthedocs.io/chapter1/ch1_topics/III.14.html
+  - id: chang-15
+    bac: 2
+    ten: Chuan C. Chang, Fundamentals of Piano Practice, III.15 Origin and Control of Nervousness (đã đọc)
+    link: https://fundamentals-of-piano-practice.readthedocs.io/chapter1/ch1_topics/III.15.html
+  - id: omt-sonata
+    bac: 2
+    ten: Open Music Theory, Sonata form (recapitulation)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/sonata-form/
+  - id: roediger
+    bac: 2
+    ten: H. L. Roediger III, J. D. Karpicke, "Test-Enhanced Learning", Psychological Science 17(3), 2006, tr. 249–255 (OpenAlex, có tóm tắt; DOI 10.1111/j.1467-9280.2006.01693.x)
+    link: https://api.openalex.org/works/doi:10.1111/j.1467-9280.2006.01693.x
+  - id: brooks
+    bac: 2
+    ten: 'A. W. Brooks, "Get excited: Reappraising pre-performance anxiety as excitement", Journal of Experimental Psychology: General 143(3), 2014, tr. 1144–1158 (OpenAlex, có tóm tắt; DOI 10.1037/a0035325; đăng trực tuyến 12/2013)'
+    link: https://api.openalex.org/works/doi:10.1037/a0035325
+  - id: wells
+    bac: 2
+    ten: 'R. Wells, T. Outhred, J. A. J. Heathers, D. S. Quintana, A. H. Kemp, "Matter Over Mind: A Randomised-Controlled Trial of Single-Session Biofeedback Training on Performance Anxiety and Heart Rate Variability in Musicians", PLoS ONE 7(10), 2012, e46597'
+    link: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0046597
+  - id: nhs-cbt
+    bac: 2
+    ten: NHS, Cognitive behavioural therapy (CBT)
+    link: https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/cognitive-behavioural-therapy-cbt/
+  - id: nhs-beta
+    bac: 2
+    ten: NHS, Beta blockers
+    link: https://www.nhs.uk/conditions/beta-blockers/
+  - id: nhs-gad
+    bac: 2
+    ten: "NHS, Generalised anxiety disorder: symptoms"
+    link: https://www.nhs.uk/mental-health/conditions/generalised-anxiety-disorder/symptoms/
+  - id: bapam-hr
+    bac: 2
+    ten: "BAPAM, Health resources (danh sách tờ thông tin: Managing Performance Anxiety, Psychological Self-Care, Mental Health Support…) và trang chủ"
+    link: https://www.bapam.org.uk/health-resources/
+nhan_dinh:
+  - id: n1
+    cau: Chơi thuộc lòng và chơi cho người khác nghe đều là kỹ năng có thể tập.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "…đều là kỹ năng tập được, không phải năng khiếu trời cho." Vế "không phải năng khiếu trời cho" là khẳng định về bản chất kỹ năng, không có nguồn trực tiếp về chơi thuộc hay biểu diễn (tóm tắt Ericsson 1993 nói về chuyên môn nói chung); bỏ vế ấy, giữ lời trấn an. Sửa cả mô tả (description).'
+  - id: n2
+    cau: Trang giải thích các loại trí nhớ của người chơi đàn, vì sao "thuộc tay" chưa đủ, cách xây và kiểm tra trí nhớ bền, cách chuẩn bị cho buổi diễn và sống chung với hồi hộp.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Đã kiểm trên trang: "Bốn loại trí nhớ", "Vì sao thuộc tay thôi là mong manh", "Tám cách xây trí nhớ bền", "Chuẩn bị cho buổi biểu diễn", "Hồi hộp khi biểu diễn".'
+  - id: n3
+    cau: Trong kỳ thi Practical Grades của ABRSM (theo chương trình hiện hành), chơi thuộc các tác phẩm là tùy chọn và không được cộng điểm riêng; chỉ gam và hợp âm rải là bắt buộc chơi thuộc.
+    loai: cap-do
+    nguon:
+      - abrsm
+    ket_qua: da-sua
+    ghi_chu: 'ABRSM Qualification Specification: Practical Music Piano 2025 & 2026, mục Playing from memory (tr. 13): "Candidates may perform any of their pieces from memory"; "No extra marks are directly awarded for playing from memory."; "Memory: All requirements must be played from memory." (scales and arpeggios). Câu cũ chỉ nói "Trong kỳ thi ABRSM" và "không được cộng điểm trực tiếp"; theo ghi chú bảng tầng, bỏ tên chương trình 2025 & 2026, thêm "Practical Grades" (hình thức thi trực tiếp: đã đối chiếu ở đề cương Practical; Performance Grades chưa kiểm) và trỏ sang trang Học với thầy và thi cấp. "Hiện hành" đúng đến khi ABRSM đổi chương trình: người giao nhớ rà khi đổi kỳ.'
+  - id: n4
+    cau: "Liên kết Học với thầy và thi cấp (/opus/piano/thay-va-thi/): trang ấy có mục ABRSM nói về chơi thuộc."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Trang đích chưa chuyển; đã kiểm ../opus-zero/docs/piano/thay-va-thi.md ("# Học với thầy và thi cấp"; mục "### ABRSM" có dòng "Chơi thuộc các tác phẩm là tùy chọn và không được cộng điểm trực tiếp; gam và hợp âm rải thì phải chơi thuộc"). Lô chuyển giữ đúng điều ấy (và đổi tên chương trình thành "hiện hành" cho nhất quán với n3); trang ấy còn nhắc 2025 & 2026 ở mục Nguồn.
+  - id: n5
+    cau: "Có những nghệ sĩ lớn vẫn chơi với bản nhạc trên giá: những năm cuối sự nghiệp, Sviatoslav Richter biểu diễn trong khán phòng gần như tối, chỉ một ngọn đèn nhỏ chiếu lên bản nhạc trước mặt."
+    loai: lich-su
+    nguon:
+      - gramophone
+      - dg-richter
+    ket_qua: da-sua
+    ghi_chu: 'Gramophone (Plaistow, 10/1997), nói về các buổi diễn cuối ở London: "By then he had retreated into darkness and was almost invisible as he played"; ông chỉnh "an angle poise lamp at his side so that the only light on the platform fell on the music-rest". Deutsche Grammophon: "In his last years he preferred to play in darkness, with just one lamp on the piano to light the music"; "always playing from the score". Câu cũ có thêm "Trong nhạc thính phòng, nghệ sĩ gần như luôn đặt bản nhạc trên giá": không có nguồn, bỏ; thay bằng câu nói chung về nghệ sĩ lớn. Nguồn nói "bóng tối" và "một ngọn đèn", không nói "khán phòng", nên "khán phòng gần như tối" là cách diễn đạt gần nghĩa.'
+  - id: n6
+    cau: Vẫn nên học thuộc ít nhất vài bài. Khi mắt không bận đọc, bạn có thể dành chú ý cho tai nghe tiếng đàn của mình và cho mắt nhìn tay ở những bước nhảy xa.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "…tai nghe tiếng đàn của chính mình rõ hơn hẳn và mắt theo được tay ở những bước nhảy xa." "Rõ hơn hẳn" là khẳng định không có nguồn; viết lại thành khả năng, giữ lời khuyên.'
+  - id: n7
+    cau: Muốn thuộc bền thì phải hiểu bài được xây thế nào.
+    loai: quy-tac
+    nguon:
+      - chang
+    ket_qua: dung
+    ghi_chu: 'Chang III.6, mục j: "theoretical memory has deeper associations because theory leads to a better understanding of the music" (đã đọc, qua tóm tắt công cụ đọc web).'
+  - id: n8
+    cau: Hiểu biết về cấu trúc bài vẫn cứu bạn khi chơi với bản nhạc mà mắt lạc dòng.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập.
+  - id: n9
+    cau: Lộ trình piano gợi ý học thuộc bài đầu tiên ở chặng 2 (/opus/piano/lo-trinh/).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Đã kiểm src/content/docs/piano/lo-trinh.md: mục "Chặng 2. Sơ cấp (≈ Grade 1–2)", bảng, hàng "Biểu diễn": "Học thuộc một bài. Quay video chơi trọn 3 bài như một buổi hòa nhạc nhỏ."'
+  - id: n10
+    cau: Khi chơi thuộc, người chơi dùng nhiều loại trí nhớ cùng lúc; người chơi chắc có nhiều đường dẫn đến cùng một nốt nhạc, một đường bị chặn thì còn đường khác.
+    loai: dinh-nghia
+    nguon:
+      - chang
+      - chaffin
+    ket_qua: dung
+    ghi_chu: 'Chang III.6, mục j: "Practically everybody uses a combination of them"; các liên tưởng khiến "even if some of them are forgotten there are enough left"; "hand memory is always a good backup". Chaffin và Imreh 2002 (tóm tắt): trí nhớ của nghệ sĩ gồm "conceptual, motor, and auditory memory".'
+  - id: n11
+    cau: 'Bốn loại trí nhớ: vận động ("thuộc tay": chuỗi chuyển động của ngón và tay, hình thành qua lặp lại), thính giác (nghe trước trong đầu điều sắp vang lên), thị giác (hình ảnh trang nhạc hoặc hình bàn tay trên phím), phân tích (hiểu cấu trúc: đoạn, giọng, hợp âm, chỗ lặp, chỗ khác).'
+    loai: dinh-nghia
+    nguon:
+      - chang
+      - chaffin
+    ket_qua: dung
+    ghi_chu: 'Chang III.6 mục j liệt kê năm cách: hand memory ("acquired by simple repetition until the music is in the hands"), music memory (aural: "based on the music: the melody, rhythm, expression…"), photographic memory (visual: "picture the sheet music"), keyboard memory ("the sequence of keys and hand motions"), theoretical memory (hiểu lý thuyết). Bảng của site gom thành bốn (vận động, thính giác, thị giác, phân tích): đúng nghĩa các nhóm; tên "phân tích" là của site (Chang: "theoretical"; Chaffin và Imreh: "conceptual"). Thuật ngữ "trí nhớ vận động/thính giác/thị giác/phân tích" chưa có bản ghi thuat-ngu.yml (cho người giao).'
+  - id: n12
+    cau: 'Cột "Dấu hiệu" và "Cách củng cố" của bảng bốn loại trí nhớ: ngón bấm cố định, tập chậm đúng đều; hát hai bè, nghe bản thu mắt theo bản nhạc; nhìn kỹ từng trang rồi nhắm mắt hình dung; đặt tên các đoạn, viết khung hòa âm.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập (khớp các cách 1, 5, 6 và Chang III.6).
+  - id: n13
+    cau: Dễ chỉ dựa vào loại trí nhớ đầu tiên mà không biết; mục tiêu là có cả bốn, với trí nhớ phân tích làm bộ khung.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Người tự học thường chỉ dùng loại đầu tiên mà không biết." "Người tự học thường" là khẳng định về một nhóm người, không có nguồn; viết lại thành lời cảnh báo.'
+  - id: n14
+    cau: "Trí nhớ vận động giống một chuỗi mắt xích: mỗi chuyển động gọi chuyển động tiếp theo; nó nhanh và không tốn sự chú ý nên không thể thiếu, nhưng có hai điểm yếu."
+    loai: dinh-nghia
+    nguon:
+      - chang
+    ket_qua: da-sua
+    ghi_chu: "Chang III.6: hand memory \"is a reflex motion plus a brain reflex triggered by the piano's sound\", \"mostly hand memory which bypasses the brain\", \"always a good backup\". \"Chuỗi mắt xích\" là ví dụ so sánh của site. Câu cũ nói \"ba điểm yếu\": đã bỏ điểm yếu thứ hai (n16), nên sửa thành \"hai\"."
+  - id: n15
+    cau: 'Đứt một mắt là đứt cả chuỗi: một nốt sai, một tiếng ho, một ý nghĩ "đoạn sau là gì nhỉ?" và tay dừng; chuỗi chỉ chạy từ những chỗ bắt đầu quen thuộc nên phải quay lại đầu câu, có khi đầu bài.'
+    loai: quy-tac
+    nguon:
+      - chang
+      - chang-14
+    ket_qua: dung
+    ghi_chu: "Chang III.6 mục e: \"practice the art of starting play from anywhere in the piece\" (vì thường không bắt đầu được giữa bài); Chang III.14: sau khi quên, \"don't try to restart from where you blacked out unless you know exactly how to restart\". Ý chính khớp; \"tiếng ho\", \"ý nghĩ\" là minh họa của site."
+  - id: n16
+    cau: "Nó không chịu được sự soi xét: khi hồi hộp, bạn bắt đầu để ý từng ngón tay, đúng điều mà chuỗi tự động không chịu nổi."
+    loai: quy-tac
+    nguon: []
+    ket_qua: da-bo
+    ghi_chu: 'Bỏ điểm yếu thứ hai: khẳng định về tâm lý (chú ý có ý thức làm hỏng chuỗi tự động) không có nguồn mở được (Chang không nói; các nghiên cứu về "choking under pressure" không mở được).'
+  - id: n17
+    cau: "Trí nhớ vận động phụ thuộc hoàn cảnh: đàn lạ, ghế lạ, tốc độ khác (thường nhanh hơn vì hồi hộp) đều làm chuỗi dễ trật đường."
+    loai: quy-tac
+    nguon:
+      - chang-14
+    ket_qua: dung
+    ghi_chu: 'Chang III.14: "Can you adjust to a different piano – especially one that is out of tune or difficult to play?"; "Inexperienced performers often play too fast for their skill level because of nervousness during the recital." "Ghế lạ" là minh họa của site; nguồn nói về đàn lạ và tốc độ.'
+  - id: n18
+    cau: Nhà tâm lý học Roger Chaffin và nghệ sĩ piano Gabriela Imreh đã ghi lại và phân tích quá trình Imreh học chương cuối (Presto) của Italienisches Konzert (Concerto Ý), BWV 971, của Bach.
+    loai: lich-su
+    nguon:
+      - chaffin
+      - imslp-bwv971
+    ket_qua: da-sua
+    ghi_chu: "OpenAlex (tóm tắt Chaffin và Imreh 2002): \"A concert pianist recorded her practice while learning the third movement (Presto) of J.S. Bach's Italian Concerto.\" IMSLP: Italienisches Konzert, BWV 971, ba chương, chương 3 Presto. Câu cũ: \"Nhóm của nhà tâm lý học Roger Chaffin đã ghi lại…\": đổi thành tên hai tác giả bài báo (Chaffin và Imreh); không kiểm được vai trò \"nhóm\"."
+  - id: n19
+    cau: Imreh ghi lại việc tập, rồi mô tả cấu trúc bản nhạc và các quyết định về ngón bấm, phân câu và những điểm mốc (performance cues) bà chú ý tới lúc biểu diễn; các chỗ bà ngập ngừng khi chơi thuộc, và những chỗ bà còn nhớ hai năm sau, đều gắn với các điểm mốc ấy.
+    loai: lich-su
+    nguon:
+      - chaffin
+    ket_qua: da-sua
+    ghi_chu: "Tóm tắt (OpenAlex): bà \"recorded her practice\", \"described the piece's formal structure and explained her decisions about fingering, phrasing, and the cues she attended to during performance\"; các báo cáo cho biết \"which spots caused hesitations when she first played from memory, and which affected her recall two years later\"; \"retrieval depended on performance cues\". Câu cũ: Người chơi chuyên nghiệp mang một bản đồ với bốn loại mốc (cấu trúc, diễn tả, diễn tấu, kỹ thuật), \"được chọn có chủ ý trong lúc tập\", và hai năm sau Imreh còn nhớ \"các mốc cấu trúc và diễn tả\". Không mở được toàn văn (Psychological Science, PubMed bị chặn), nên bỏ phân loại bốn mốc, \"chọn có chủ ý trong lúc tập\" và \"cấu trúc và diễn tả\"; chỉ giữ điều tóm tắt xác nhận."
+  - id: n20
+    cau: "Với các điểm mốc, người chơi mang trong đầu một bản đồ của tác phẩm: chẳng hạn ranh giới các đoạn, cảm xúc muốn truyền đến người nghe, cách phân câu, một ngón bấm then chốt; ngón tay chạy tự động, còn đầu óc đi theo bản đồ; khi có sự cố, các điểm mốc là chỗ để bám lại."
+    loai: quy-tac
+    nguon:
+      - chaffin
+      - chang
+    ket_qua: da-sua
+    ghi_chu: Ý chính khớp tóm tắt Chaffin và Imreh ("her retrieval depended on performance cues", chuyên gia nhớ nhanh và tự động qua "conceptual, motor, and auditory memory") và Chang III.6/III.14 (khi quên, vào lại từ chỗ biết rõ). Các ví dụ về mốc (ranh giới đoạn, cảm xúc, phân câu, ngón bấm then chốt) là minh họa của site, không còn gán thành bốn loại của Chaffin. "Người chơi chuyên nghiệp" đã đổi thành "người chơi". Chưa mở được toàn văn nên không khẳng định phân loại của tác giả.
+  - id: n21
+    cau: 'Dấu hiệu bạn đang chỉ "thuộc tay": chỉ chơi được từ đầu và ở tốc độ quen thuộc; chơi chậm lại thì quên; không chơi được từng tay riêng; không trả lời được "ô nhịp này đang ở hợp âm nào?".'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập (chẩn đoán); Chang III.6, mục h: "If you only practiced at speed, you could be reinforcing hand memory and losing true memory"; mục e: bắt đầu từ bất kỳ chỗ nào; mục l: chơi từng tay không nhìn nhạc.'
+  - id: n22
+    cau: "Cách 1: chia bài thành đoạn đặt tên bằng chữ cái (A, B, A'…), ghi giọng từng đoạn, khoanh tròn các kết; tìm chỗ lặp nguyên văn (chỉ học một lần) và chỗ rẽ nhánh; tô màu và tập hai phiên bản liền nhau."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: "Lời khuyên tập; Chang III.6: nhớ theo cụm, hiểu cấu trúc."
+  - id: n23
+    cau: Chỗ rẽ nhánh (hai đoạn mở đầu giống nhau nhưng đi tiếp theo hai hướng khác nhau) rất hay gặp giữa phần trình bày và phần tái hiện của hình thức sonata.
+    loai: quy-tac
+    nguon:
+      - omt-sonata
+    ket_qua: dung
+    ghi_chu: 'OMT, Sonata form: phần tái hiện nhắc lại chất liệu phần trình bày, chỉnh để "the secondary theme and closing sections are now in the tonic"; phần chuyển (transition) "is often recomposed" (nếu phần chuyển cũ không kết ở nửa kết trong giọng chủ thì viết lại để kết ở nửa kết trong giọng chủ). Như vậy hai đoạn bắt đầu giống nhau rồi rẽ khác nhau là chuyện thường gặp; "rất hay" là cách nói của site, nguồn nói "often".'
+  - id: n24
+    cau: "Liên kết trong các cách xây trí nhớ: Kết (/opus/nhac-ly/13-ket/), Phân tích một tác phẩm (/opus/nhac-ly/26-phan-tich/), Hình thức nhỏ (/opus/nhac-ly/31-hinh-thuc-nho/), hợp âm ba (/opus/nhac-ly/10-hop-am-ba/), hòa âm chức năng (/opus/nhac-ly/12-hoa-am-chuc-nang/)."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Đã kiểm trong src/content/docs/nhac-ly/: 13-ket.md ("13. Kết và câu nhạc"), 26-phan-tich.md, 31-hinh-thuc-nho.md, 10-hop-am-ba.md, 12-hoa-am-chuc-nang.md; tất cả có trên site.'
+  - id: n25
+    cau: "Cách 2: cứ 4–8 ô nhịp, ở đầu một câu nhạc, chọn một điểm xuất phát và đánh số lên bản nhạc; tập bắt đầu ngay tại mỗi điểm, không lấy đà vài ô trước; khi biểu diễn, đó là điểm nhảy: lỡ quên, bạn vào lại ở điểm gần nhất phía sau."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập; Chang III.6 mục e ("starting play from anywhere"), III.14 ("restart from a section you know well, preferably a later one"). Điều các hồ sơ trước: bat-dau/lo-trinh-choi.yml trích đúng câu "Khi biểu diễn, chính những điểm này là điểm nhảy: lỡ quên, bạn vào lại ở điểm gần nhất phía sau": KHỚP, giữ nguyên.'
+  - id: n26
+    cau: 'Bài tập chuẩn bị "Tám ô nhịp, bốn điểm xuất phát": tám ô nhịp chia hai câu; ô 1–2 và ô 5–6 giống hệt nhau; ô 3 và ô 7 rẽ hai hướng; bốn điểm xuất phát đánh số trên khuông; ở điểm 2 giai điệu đi Sol–Mi–Sol–Đô trên hợp âm I rồi dừng lửng ở V, ở điểm 4 đi Sol–Si–Rê trên hợp âm V rồi kết hẳn về I.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Đã kiểm trên khối abc số 1 (xem khuong_nhac): tay phải ô 1 = ô 5 (E2 G2 c3 B), ô 2 = ô 6 (A2 F2 A2 c2); ô 3 (G2 E2 G2 c2 trên C,G,E,G, = I) khác ô 7 (G2 B2 d2 B2 trên G,,D,B,,D, = V); nhãn ^1 (A), ^2, ^3 (A'), ^4 ở ô 1, 3, 5, 7; ô 4 kết ở G trên V (dừng lửng), ô 8 kết ở c trên [C,E,G,] (kết hẳn về I)."
+  - id: n27
+    cau: 'Tay chỉ nhớ theo chuỗi rất dễ chơi ô 7 thành ô 3 rồi lặp vòng mãi; hãy tập liền ô 2 sang ô 3, rồi ô 6 sang ô 7, cho đến khi nói được trước khi chơi: "lần này lên V".'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập.
+  - id: n28
+    cau: 'Cách 3: viết số các điểm xuất phát lên mẩu giấy, bốc ngẫu nhiên, bắt đầu ngay và chơi đến điểm tiếp theo, hoặc nhờ ai đó gọi số; làm được ở mọi điểm thì không còn phụ thuộc "đà" từ đầu bài.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập; Chang III.6 mục e: "practice the art of starting play from anywhere in the piece".'
+  - id: n29
+    cau: "Cách 4: chơi riêng từng tay, không nhìn bản nhạc, ở tốc độ chậm; không chơi được tay trái một mình nghĩa là chưa thuộc tay trái."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập; Chang III.6 mục l: "return to the LH and see if you can play it without the score, and similarly with the RH".'
+  - id: n30
+    cau: "Cách 5: rút gọn phần đệm tay trái thành hợp âm khối, ghi tên hợp âm hoặc số La Mã, rồi chơi trong khi hát giai điệu; khi đã thuộc khung, hình đệm chỉ là cách trang trí lên khung."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; Chang III.6 (theoretical memory).
+  - id: n31
+    cau: 'Khối nhạc "Khung hòa âm tay trái (rút gọn)" là khung hòa âm rút gọn của ví dụ trên: I | IV | I | V | I | IV | V | I, mỗi ô một hợp âm khối ba nốt.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên khối abc số 2 và khối 1: LH của khối 1 ô 1–8 là I, IV, I, V, I, IV, V, I; khối 2 viết cùng chuỗi, mỗi ô [C,E,G,]2 [C,E,G,]2 (và tương tự) = 4 phách. Khớp."
+  - id: n32
+    cau: "Khung hòa âm còn là tấm lưới an toàn khi biểu diễn: lỡ tay phải lạc đường, tay trái vẫn giữ hợp âm khối đúng nhịp cho đến khi tay phải tìm lại được."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập; Chang III.6/III.14 (khi quên, tay trái hay một tay giữ tiếp: "play through mistakes… keep the rhythm", "memorize it HS" để hồi phục).'
+  - id: n33
+    cau: "Cách 6: chơi ở nửa tốc độ hoặc chậm hơn, vẫn đủ sắc thái và phân câu; ở tốc độ này chuỗi vận động không tự chạy được, và các loại trí nhớ khác phải làm việc."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập; Chang III.6 mục h: "If you only practiced at speed, you could be reinforcing hand memory and losing true memory."'
+  - id: n34
+    cau: 'Cách 7: chạy bài trong đầu: ngồi xa đàn, mở bản nhạc rồi gấp lại, nghe từng nốt trong đầu, thấy tay mình trên phím; chỗ nào trong đầu bị "trống", chỗ đó trên sân khấu cũng sẽ trống.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập; Chang III.6 mục j: "You have not really memorized until you can play the piece in your mind."'
+  - id: n35
+    cau: Liên kết "Tập khi không có đàn" ở Cách tập (/opus/piano/cach-tap/).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Đã kiểm src/content/docs/piano/cach-tap.md: mục "## Tập khi không có đàn" (cùng lô).'
+  - id: n36
+    cau: Trong các thí nghiệm với đoạn văn xuôi, Roediger và Karpicke (2006) thấy rằng tự kiểm tra bằng cách gợi lại từ trí nhớ giúp nhớ lâu hơn đọc lại (sau 2 ngày và sau 1 tuần), gọi là hiệu ứng kiểm tra.
+    loai: so-lieu
+    nguon:
+      - roediger
+    ket_qua: da-sua
+    ghi_chu: 'Tóm tắt (OpenAlex): hai thí nghiệm với đoạn văn xuôi; kiểm tra sau 5 phút thì đọc lại tốt hơn, sau 2 ngày hoặc 1 tuần thì đã kiểm tra trước đó nhớ tốt hơn hẳn; "testing effect". Câu cũ: "Các nghiên cứu về học tập cho thấy chủ động gợi lại từ trí nhớ giúp nhớ lâu hơn đọc lại": quá tổng quát và bỏ qua rằng thí nghiệm là về văn xuôi, nên viết đúng phạm vi.'
+  - id: n37
+    cau: "Cách 8: gấp bản nhạc, chơi một đoạn rồi mở ra đối chiếu ngay; thỉnh thoảng viết lại vài ô đầu của mỗi đoạn không nhìn; kiểm tra ngay đầu buổi khi chưa chơi bài lần nào; giãn cách các lần ôn: sau 1 ngày, 3 ngày, 1 tuần."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; Chang III.6 mục f ("forget and re-memorize three or four times") và g ("Practicing Cold").
+  - id: n38
+    cau: 'Danh sách "Bạn đã thuộc thật chưa?": bắt đầu được ngay ở mọi điểm xuất phát; chơi được từng tay riêng không nhìn nhạc; chơi cả bài ở nửa tốc độ không vấp vì quên; nói được giọng và hợp âm chính từng đoạn; chạy cả bài trong đầu; chơi thuộc sau một ngày không tập và trên một cây đàn khác.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập (tổng hợp các cách 2–7).
+  - id: n39
+    cau: "Bảng chuẩn bị cho buổi biểu diễn: 6–8 tuần trước chọn bài đã chơi chắc, thấp hơn khả năng hiện tại; 4 tuần trước diễn thử lần đầu, quay video, đánh dấu điểm nhảy; 2–3 tuần trước diễn thử 2–3 lần mỗi tuần có người nghe, thử một cây đàn khác; 1 tuần trước chốt ngón bấm, tốc độ, sắc thái, tập chậm nhiều hơn, tổng duyệt; ngày trước tập nhẹ, chạy bài trong đầu, ngủ đủ; ngày diễn ăn nhẹ, làm ấm tay, khởi động 10–15 phút, đến sớm thử đàn và chỉnh ghế."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập; Chang III.14: không thêm bài hay sửa ngón bấm trong tuần cuối ("within the last week, adding new material or making changes… is not recommended"), thử đàn khác, khởi động nhẹ ("mild warm-up… can be beneficial"). Các mốc tuần là gợi ý của site. Câu "ngủ đủ" là lời khuyên chung, không nêu số liệu.'
+  - id: n40
+    cau: "Diễn thử là biểu diễn thật với ít khán giả hơn: bước ra, cúi chào, chỉnh ghế, ngồi yên vài giây, nghe câu đầu trong đầu ở đúng tốc độ, rồi chơi một lượt không dừng; thỉnh thoảng diễn thử khi chưa chơi bài lần nào trong ngày; nâng áp lực từ từ: tự thu âm, gọi video cho bạn, chơi cho gia đình, rồi cho vài người ít quen."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; Chang III.15 ("Mock recitals will give you more experience and confidence").
+  - id: n41
+    cau: 'Thử nhiều cây đàn: mỗi cây có thể khác nhau về độ nặng phím, độ sâu bàn đạp và độ sáng tiếng; nếu chỉ tập trên đàn điện, hãy tìm dịp chơi đàn cơ trước buổi diễn; khi thử đàn ở nơi diễn, đừng chơi đoạn khó nhất để kiểm tra mà xem chơi thật nhỏ có ra tiếng không, bàn đạp "ăn" ở độ sâu nào, bè trầm có lấn giai điệu không.'
+    loai: khuyen-tap
+    nguon:
+      - chang-14
+    ket_qua: da-sua
+    ghi_chu: 'Chang III.14: "Can you adjust to a different piano – especially one that is out of tune or difficult to play?"; đàn lớn thường dễ chơi hơn đàn nhỏ. Câu cũ: "Mỗi cây có độ nặng phím…": đổi thành "có thể khác nhau" để khỏi là khẳng định tuyệt đối.'
+  - id: n42
+    cau: Liên kết Bàn đạp (/opus/piano/ban-dap/) và Tạo tiếng đàn (/opus/piano/tieng-dan/), Thu âm (/opus/luyen-tap/thu-am/), Nhật ký luyện tập (/opus/luyen-tap/nhat-ky/), Máy đếm nhịp (/opus/luyen-tap/metronome/).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Đã có trên site: ban-dap.md ("Bàn đạp"), tieng-dan.md. Chưa chuyển, đã kiểm ../opus-zero/docs/luyen-tap/: thu-am.md ("# Thu âm buổi tập"), nhat-ky.md ("# Nhật ký luyện tập"), metronome.md ("# Máy đếm nhịp"). Lô chuyển giữ các trang ấy.'
+  - id: n43
+    cau: "Khởi động trước biểu diễn: làm ấm tay, xoay vai, vài gam và hợp âm rải chậm ở giọng của bài, chơi thật chậm phần mở đầu từng đoạn; đừng chơi cả chương trình ở tốc độ diễn ngay trước giờ lên sân khấu, đừng kiểm tra đi kiểm tra lại đoạn khó nhất."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; Chang III.14 ("mild warm-up exercises… can be beneficial"; tránh gắng sức nặng trước).
+  - id: n44
+    cau: "Quy tắc số một khi biểu diễn: giữ nhịp, không quay lại; nhạc dừng giữa chừng làm hỏng cả mạch bài nhiều hơn một nốt sai."
+    loai: khuyen-tap
+    nguon:
+      - chang-14
+    ket_qua: da-sua
+    ghi_chu: 'Chang III.14: "Another way to play through mistakes is to at least keep the rhythm." Câu cũ: "Phần lớn người nghe không nhận ra một nốt sai, nhưng ai cũng nhận ra khi nhạc dừng." Khẳng định về cảm nhận của người nghe, Chang không nói (đã đọc III.15: "Not covered"); viết lại thành lời khuyên và sửa cả lời giải thích câu hỏi 5 (n68).'
+  - id: n45
+    cau: 'Bảng "Nếu… thì…": sai một nốt thì bỏ qua đi tiếp; tay phải lạc đường thì tay trái giữ khung hòa âm đúng nhịp; quên hẳn thì nhảy đến điểm xuất phát gần nhất phía sau và vào lại đúng nhịp; nhịp bị vội thì nghĩ đến phách mạnh, thở ra, chơi câu kế tiếp nhỏ hơn và rộng hơn.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập; Chang III.14: khi quên "restart from a section you know well, preferably a later one", "keep the rhythm"; nhịp vội vì hồi hộp: "Inexperienced performers often play too fast…".'
+  - id: n46
+    cau: 'Kế hoạch "chơi tiếp" cũng phải tập: trong một lần diễn thử, nhờ ai đó vỗ tay bất chợt; nghe tiếng vỗ tay thì nhảy ngay đến điểm xuất phát kế tiếp và chơi tiếp, giữ nguyên nhịp.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập.
+  - id: n47
+    cau: "Hồi hộp trước khi biểu diễn rất phổ biến; nó gắn với adrenaline, chất giúp con người thoát khỏi nguy hiểm: tim có thể đập nhanh và cơ căng lên."
+    loai: dinh-nghia
+    nguon:
+      - chang-15
+      - brooks
+      - nhs-gad
+    ket_qua: da-sua
+    ghi_chu: "Brooks 2014 (tóm tắt): \"People often feel nervous before tasks like public speaking\". Chang III.15: hồi hộp gắn với \"a flow of adrenalin\"; \"fear helps us to escape danger\". NHS (lo âu nói chung): triệu chứng gồm \"a more noticeable or unusual heartbeat (palpitations)\" và \"feeling tense\". Nguồn không chuyên về nhạc công; câu đã bỏ các vế không có nguồn. Câu cũ: \"Hồi hộp… rất phổ biến, kể cả ở nghệ sĩ chuyên nghiệp; nó cho thấy bạn coi trọng việc mình làm. Cơ thể đọc tình huống 'nhiều người đang nghe mình' như một mối đe dọa và bật phản ứng chiến hay chạy: adrenaline tăng, tim đập nhanh, thở nông, tay run hoặc lạnh, đầu óc dễ trống rỗng. Phản ứng ấy có ích khi cần chạy trốn, nhưng không hợp với mười ngón tay…\": \"kể cả ở nghệ sĩ chuyên nghiệp\", \"coi trọng việc mình làm\", \"chiến hay chạy\", \"thở nông, tay run hoặc lạnh, đầu óc trống rỗng\", \"không hợp với mười ngón tay\" đều bỏ (không có nguồn mở được; NHS không nhắc \"fight or flight\" và không nhắc thở hay run)."
+  - id: n48
+    cau: Người ít kinh nghiệm hay chơi nhanh hơn mức bài chịu được vì hồi hộp.
+    loai: quy-tac
+    nguon:
+      - chang-14
+    ket_qua: dung
+    ghi_chu: 'Chang III.14: "Inexperienced performers often play too fast for their skill level because of nervousness during the recital." (Câu cũ có thêm "khó chơi nhỏ, tiếng cứng": đã bỏ, xem n47.)'
+  - id: n49
+    cau: "Chuẩn bị kỹ và diễn thử nhiều lần: diễn thử cho bạn thêm kinh nghiệm và sự tự tin, và hai thứ ấy làm bớt nỗi sợ điều chưa biết."
+    loai: quy-tac
+    nguon:
+      - chang-15
+    ket_qua: da-sua
+    ghi_chu: 'Chang III.15: "Mock recitals will give you more experience and confidence; both will reduce the fear of the unknown." Câu cũ: "Không kỹ thuật thở nào thay được việc biết chắc rằng bạn đã chơi trọn bài này trước người khác nhiều lần." Là ý kiến, không có nguồn; thay bằng ý của Chang.'
+  - id: n50
+    cau: Trong một thử nghiệm ngẫu nhiên với 46 nhạc công, chỉ một buổi tập thở chậm dài 30 phút đã giúp điều hòa phản ứng sinh lý khi chờ biểu diễn; những người vốn rất lo âu thì giảm lo âu nhiều hơn nhóm không tập (Wells và cộng sự, 2012).
+    loai: so-lieu
+    nguon:
+      - wells
+    ket_qua: dung
+    ghi_chu: 'PLOS ONE: 46 nhạc công, thiết kế ngẫu nhiên có đối chứng, một buổi 30 phút, hai nhóm thở chậm (6 nhịp thở/phút) và nhóm không can thiệp; nhóm thở chậm cải thiện chỉ số biến thiên nhịp tim (HF, LF/HF) trong 5 phút chờ biểu diễn; chung cả nhóm không giảm lo âu tự báo, nhưng ở người lo âu nền cao thì nhóm can thiệp giảm lo âu nhiều hơn nhóm chứng ("slow breathing is particularly helpful for musicians with high levels of anxiety"). Tác giả ghi hạn chế: mẫu nhỏ, một buổi.'
+  - id: n51
+    cau: "Thở ra chậm: hít vào khoảng 4 nhịp đếm, thở ra từ từ khoảng 6 nhịp (khoảng sáu nhịp thở mỗi phút), trong vài phút trước khi lên sân khấu."
+    loai: khuyen-tap
+    nguon:
+      - wells
+    ket_qua: da-sua
+    ghi_chu: 'Lời khuyên; 4+6 nhịp là một chu kỳ khoảng 10 giây, tức khoảng sáu nhịp thở mỗi phút, đúng tốc độ thở chậm của thử nghiệm Wells (6 nhịp/phút). Câu cũ có "bằng mũi": thử nghiệm không nói; bỏ.'
+  - id: n52
+    cau: Trong các thí nghiệm của Alison Wood Brooks (2014) với hát karaoke, nói trước người khác và làm toán, những người tự nhủ "Tôi đang hào hứng" làm tốt hơn những người cố tự trấn an "Bình tĩnh lại".
+    loai: so-lieu
+    nguon:
+      - brooks
+    ket_qua: dung
+    ghi_chu: 'Tóm tắt (OpenAlex): nhiều nghiên cứu về hát karaoke, nói trước đám đông và làm toán; người "recast their arousal as excitement" thấy hào hứng hơn và làm tốt hơn người cố bình tĩnh; thậm chí chỉ cần nói "I am excited" thành tiếng. Tóm tắt không có chữ "I am calm" mà chỉ nói "trying to calm down": câu "Bình tĩnh lại" là cách diễn đạt gần nghĩa. Năm: JEP General 143(3), 2014 (đăng trực tuyến 12/2013).'
+  - id: n53
+    cau: "Tim đập nhanh là năng lượng: đừng cố dập nó, hãy dùng nó."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên; ý của Brooks (n52).
+  - id: n54
+    cau: 'Đặt sự chú ý vào âm nhạc: trước mỗi đoạn, nghĩ đến tính cách của nó bằng một hai chữ ("dịu dàng", "rộn ràng"), giống các điểm mốc ở phần trên; nghĩ về âm thanh muốn tạo ra, không phải về ngón tay.'
+    loai: khuyen-tap
+    nguon:
+      - chang-15
+    ket_qua: da-sua
+    ghi_chu: 'Chang III.15: "Playing musically, of course, is always the answer" (tập trung vào biểu cảm âm nhạc). Câu cũ: "…giống các mốc diễn tả của Chaffin": đã bỏ phân loại bốn mốc của Chaffin (n19), nên đổi thành "các điểm mốc ở phần trên".'
+  - id: n55
+    cau: "Một nghi thức cố định: cùng một bài khởi động, cùng một chuỗi việc trước khi đặt tay lên phím (chỉnh ghế, thở ra, nghe câu đầu)."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ có thêm: "Nghi thức quen làm tình huống lạ bớt lạ." Là giải thích tâm lý không có nguồn; bỏ.'
+  - id: n56
+    cau: 'Uống rượu bia "cho bớt run": rượu làm giảm khả năng điều khiển tinh và phán đoán.'
+    loai: quy-tac
+    nguon: []
+    ket_qua: da-bo
+    ghi_chu: 'Bỏ khỏi mục "Những điều nên tránh": khẳng định về tác động của rượu không có nguồn (NHS "risks of drinking too much" chỉ nói "misjudging risky situations", không nói điều khiển tinh hay lo âu; Chang III.15 không nói tới rượu). Lời khuyên sức khỏe nên không xếp khuyen-tap.'
+  - id: n57
+    cau: "Không nên tự dùng thuốc chẹn beta hay xin của người khác: một số nhạc công dùng theo đơn bác sĩ, nhưng đó là thuốc kê đơn, không dùng được cho một số người (chẳng hạn người bị hen suyễn)."
+    loai: quy-tac
+    nguon:
+      - nhs-beta
+      - chang-15
+    ket_qua: dung
+    ghi_chu: 'NHS Beta blockers: "They are only available on prescription"; liệt kê vấn đề hô hấp như hen suyễn là lý do thuốc "may not be suitable"; dùng cho cả lo âu. Chang III.15: có người cho rằng Inderal, Atenolol làm dịu hồi hộp khi có bác sĩ giám sát. NHS không nhắc "lo âu biểu diễn" riêng.'
+  - id: n58
+    cau: Nên tránh thay đổi vào phút chót, tập quá nhiều trong ngày diễn, quá nhiều cà phê.
+    loai: khuyen-tap
+    nguon:
+      - chang-14
+      - chang-15
+    ket_qua: da-sua
+    ghi_chu: 'Chang III.14: "within the last week, adding new material or making changes in the piece (such as fingering) is not recommended"; III.15: cà phê, trà làm hồi hộp tệ hơn. "Tập quá nhiều trong ngày diễn" là lời khuyên của site. Câu cũ có thêm "bỏ bữa": bỏ (không có nguồn, lời khuyên dinh dưỡng).'
+  - id: n59
+    cau: 'Thay vì tự nhủ "đừng sai", "đừng run", hãy nói điều bạn muốn làm: "hát câu đầu", "giữ nhịp".'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ có thêm: "câu đó hướng sự chú ý đúng vào lỗi." Giải thích tâm lý không có nguồn; bỏ, giữ lời khuyên.'
+  - id: n60
+    cau: Nếu hồi hộp khiến bạn khổ sở, né mọi dịp chơi cho người khác nghe, mất ngủ hoặc có những cơn hoảng sợ, hãy nói chuyện với bác sĩ hoặc chuyên gia tâm lý.
+    loai: quy-tac
+    nguon:
+      - bapam-hr
+      - nhs-gad
+    ket_qua: da-sua
+    ghi_chu: 'BAPAM liệt kê tài liệu "Managing Performance Anxiety", "Psychological Self-Care", "Mental Health Support" cho người biểu diễn; NHS: mất ngủ ("difficulty sleeping") là triệu chứng lo âu. Câu cũ: "…né mọi dịp… trong nhiều tháng, mất ngủ nhiều ngày trước buổi diễn… hãy nói chuyện với chuyên gia tâm lý": ngưỡng "nhiều tháng", "nhiều ngày" không có nguồn, bỏ; thêm "bác sĩ" vì BAPAM và NHS đều đưa người có triệu chứng tới bác sĩ trước. Lời khuyên sức khỏe nên không xếp khuyen-tap.'
+  - id: n61
+    cau: Liệu pháp nhận thức – hành vi (CBT) là một hướng điều trị thường dùng cho lo âu.
+    loai: quy-tac
+    nguon:
+      - nhs-cbt
+    ket_qua: da-sua
+    ghi_chu: 'NHS CBT: "anxiety, including social anxiety, phobias and obsessive compulsive disorder (OCD)". Câu cũ: "…thường được dùng cho lo âu biểu diễn": NHS không nhắc lo âu biểu diễn; bỏ chữ "biểu diễn".'
+  - id: n62
+    cau: Trong vòng 24 giờ sau buổi diễn, ghi vào nhật ký luyện tập ba điều làm tốt, hai điều cần cải thiện, một thay đổi cho lần sau; hôm sau mới nghe bản ghi.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ có thêm: "thường bạn chơi tốt hơn mình tưởng." Khẳng định không có nguồn; bỏ.'
+  - id: n63
+    cau: "Bảng sau buổi diễn: quên ở chỗ rẽ nhánh (đoạn chỉ có trí nhớ vận động; phân tích chỗ rẽ, tập hai phiên bản liền nhau); vấp ở đoạn khó cả khi tập một mình (bài chưa chắc; chuẩn bị lâu hơn hay chọn bài vừa sức hơn); chỉ vấp khi có người nghe (chưa quen áp lực; diễn thử nhiều hơn); nhanh hơn hẳn lúc tập (adrenaline; bật máy đếm nhịp vài giây trước mỗi lần diễn thử rồi tắt)."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập (chẩn đoán); Chang III.14 về tốc độ vì hồi hộp.
+  - id: n64
+    cau: "Những sân khấu nhỏ, đi từng bậc: thu âm cho riêng mình rồi gửi bạn; chơi cho gia đình (hẹn giờ, xếp chỗ, cúi chào); hòa nhạc tại gia 4–8 người, mỗi người 5–10 phút; chia sẻ bản thu ở diễn đàn và nhóm người lớn học piano; buổi biểu diễn của lớp, của trung tâm (hỏi xem học trò người lớn có tham gia được không, hỏi thầy); không gian cộng đồng (viện dưỡng lão, trường học, quán cà phê có đàn, xin phép trước), rồi kỳ thi và hòa nhạc thật."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Lời khuyên; hai câu cũ đã viết lại vì khẳng định về tình hình bên ngoài không kiểm được và dễ đổi: "nhiều diễn đàn và nhóm của người lớn học piano có chủ đề chia sẻ bản thu, một số tổ chức cả buổi độc tấu trực tuyến định kỳ" (chi tiết mau cũ) và "học trò người lớn thường được chào đón".'
+  - id: n65
+    cau: Liên kết Học với thầy và thi cấp ở mục "Những sân khấu nhỏ" (/opus/piano/thay-va-thi/).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Trang đích chưa chuyển; xem n4 (đã kiểm ../opus-zero/docs/piano/thay-va-thi.md).
+  - id: n66
+    cau: 'Câu hỏi 1: "thuộc tay" mong manh vì đó là một chuỗi, đứt một mắt xích thì rất khó bắt lại giữa chừng; cần thêm trí nhớ thính giác, thị giác và phân tích làm đường dự phòng.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: "Khớp n14–n15; lời giải thích độc lập vị trí lựa chọn. Sửa nhỏ: không đổi."
+  - id: n67
+    cau: 'Câu hỏi 2: điểm xuất phát là một chỗ đầu câu đã chọn và tập trước, từ đó bạn bắt đầu chơi được ngay; khi biểu diễn trở thành điểm nhảy nếu lỡ quên. Câu hỏi 3: cách cho biết rõ nhất không chỉ "thuộc tay" là chơi từng tay riêng, ở nửa tốc độ, bắt đầu từ một điểm bất kỳ.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Khớp n25, n21, n28–n29, n33; lời giải thích độc lập vị trí lựa chọn.
+  - id: n68
+    cau: 'Câu hỏi 4: theo nghiên cứu của Brooks (2014), trước giờ lên sân khấu nên tự nhủ "Mình đang hào hứng" (hơn là "Bình tĩnh lại" hay "Đừng sai"); gọi cảm giác ấy là hào hứng giúp làm tốt hơn so với cố tự trấn an.'
+    loai: so-lieu
+    nguon:
+      - brooks
+    ket_qua: dung
+    ghi_chu: Khớp n52. "Đừng sai" không có trong nghiên cứu; là lựa chọn sai của câu hỏi.
+  - id: n69
+    cau: "Câu hỏi 5: đang diễn mà quên mất đoạn tiếp theo thì giữ nhịp, nhảy đến điểm xuất phát gần nhất phía sau và chơi tiếp; giải thích: nhạc dừng giữa chừng làm hỏng cả mạch bài nhiều hơn một nốt sai."
+    loai: khuyen-tap
+    nguon:
+      - chang-14
+    ket_qua: da-sua
+    ghi_chu: 'Chang III.14: restart từ chỗ biết rõ, "keep the rhythm". Lời giải thích cũ: "Người nghe ít khi nhận ra một nốt sai, nhưng ai cũng nhận ra khi nhạc dừng." (không có nguồn) đổi thành cùng câu với n44; độc lập vị trí lựa chọn.'
+  - id: n70
+    cau: 'Mục Nguồn: Roger Chaffin, Gabriela Imreh, "Practicing perfection: Piano performance as expert memory", Psychological Science 13(4), 2002, tr. 342–349.'
+    loai: ten
+    nguon:
+      - chaffin
+    ket_qua: da-sua
+    ghi_chu: "Thay hai dòng cũ: sách Chaffin, Imreh, Crawford, Practicing Perfection (Lawrence Erlbaum, 2002) và bài Chaffin, Logan 2006 (Advances in Cognitive Psychology 2(2–3), 113–130): chưa mở được nội dung của cả hai. Bài mới là bài đã mở bản ghi (OpenAlex: tên, hai tác giả, Psychological Science 13(4), 342–349, 2002) và là bài nói về Imreh học Presto của Concerto Ý."
+  - id: n71
+    cau: "Mục Nguồn: thêm Chuan C. Chang, Fundamentals of Piano Practice (mục III.6, III.14, III.15); NHS (CBT, Beta blockers); Open Music Theory (Sonata form)."
+    loai: ten
+    nguon:
+      - chang
+      - nhs-cbt
+      - nhs-beta
+      - omt-sonata
+    ket_qua: da-sua
+    ghi_chu: 'Ba dòng thêm vào mục Nguồn theo các nguồn đã mở. Chang: tác giả ghi ở dòng bản quyền "Chuan C. Chang".'
+  - id: n72
+    cau: 'Mục Nguồn: Henry L. Roediger III, Jeffrey D. Karpicke, "Test-enhanced learning: Taking memory tests improves long-term retention", Psychological Science 17(3), 2006; Alison Wood Brooks, "Get excited…", J. Exp. Psychol.: General 143(3), 2014, tr. 1144–1158; Wells và cộng sự, PLoS ONE 7(10), 2012, e46597; Stephen Plaistow, Gramophone, 10/1997.'
+    loai: ten
+    nguon:
+      - roediger
+      - brooks
+      - wells
+      - gramophone
+    ket_qua: dung
+    ghi_chu: 'Đối chiếu với OpenAlex, PLOS ONE, Gramophone: tên bài, tác giả, tạp chí, tập, số, trang đúng. Tên bài Roediger và Karpicke trong mục Nguồn ("Test-enhanced learning: Taking memory tests improves long-term retention") là phụ đề bài tái bản; OpenAlex ghi tựa "Test-Enhanced Learning" (bài gốc: "Test-enhanced learning: taking memory tests improves long-term retention", đúng tên đầy đủ).'
+  - id: n73
+    cau: "Mục Nguồn: ABRSM, chương trình thi piano Practical Grades hiện hành, phần quy định về chơi thuộc."
+    loai: ten
+    nguon:
+      - abrsm
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "ABRSM, Practical Music Grades: Piano Syllabus 2025 & 2026, phần quy định về chơi thuộc". Theo ghi chú bảng tầng, bỏ tên chương trình và năm; tên tài liệu thật của bản PDF đã mở là "Qualification Specification: Practical Music Piano 2025 & 2026" (khác tên cũ).'
+  - id: n74
+    cau: "Mục Nguồn: Dianna T. Kenny, The Psychology of Music Performance Anxiety (OUP, 2011); Gerald Klickstein, The Musician's Way (OUP, 2009); Molly Gebrian, Learn Faster, Perform Better (OUP, 2024)."
+    loai: ten
+    nguon: []
+    ket_qua: da-bo
+    ghi_chu: "Bỏ ba sách in chưa mở được nội dung (chuẩn mục 2: sách in chỉ là nguồn phụ); không câu nào của trang dựa riêng vào chúng."
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - khoa
+      - nhip
+      - not
+      - so-ngon
+      - hop-am
+    ket_qua: dung
+    ghi_chu: "Tám ô nhịp, bốn điểm xuất phát: 4/4 L:1/8, hai khuông (RH treble, LH bass), K:C. Tay phải ô 1 E2 G2 c3 B = 8; ô 2 A2 F2 A2 c2 = 8; ô 3 G2 E2 G2 c2 = 8; ô 4 d2 B2 G4 = 8; ô 5 = ô 1; ô 6 = ô 2; ô 7 G2 B2 d2 B2 = 8; ô 8 c8 = 8. Tay trái ô 1, 3, 5 C, G, E, G, C, G, E, G, (I, tám móc); ô 2, 6 C, A, F, A, … (IV); ô 4, 7 G,, D, B,, D, … (V); ô 8 [C,E,G,]8. Hòa âm khớp lời dẫn: ô 3 trên I (Sol–Mi–Sol–Đô), ô 4 dừng lửng ở Sol trên V, ô 7 Sol–Si–Rê trên V, ô 8 Đô trên I. Ô 1–2 và 5–6 giống hệt (cả ngón bấm); nhãn ^1 (A), ^2, ^3 (A'), ^4 ở ô 1, 3, 5, 7. Ngón bấm chơi được: tay phải ô 1 E(1) G(2) c(5) B(4) (quãng ba 1–2 hơi chật nhưng chơi được), ô 2 A(3) F(1) A c(5), ô 4 d(5) B(3) G(1); tay trái ngón 5–3–1 (hoặc 5–2–1 ở ô IV) đúng với thế tay ba nốt. Lời dẫn nói đúng: ô 2 → 3 và 6 → 7 là chỗ rẽ nhánh. Bài chơi được ở mức chặng 2–3."
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - khoa
+      - nhip
+      - not
+      - hop-am
+    ket_qua: dung
+    ghi_chu: "Khung hòa âm tay trái rút gọn: 4/4 L:1/4, K:C clef=bass, mỗi ô hai hợp âm khối nốt đen kép ([..]2 [..]2 = 4 phách), 8 ô: I [C,E,G,], IV [C,F,A,], I, V [G,,B,,D,], I, IV, V, I (ô cuối [C,E,G,]4). Khớp bè tay trái của khối 1 ô 1–8 và nhãn I/IV/V ở trang. Không ngón bấm (khung hợp âm)."
+ghi_chu: 'Lượt 1 trang Học thuộc và biểu diễn (lô D4-L3, phần A). Nguồn đã mở: ABRSM Qualification Specification Practical Music Piano 2025 & 2026 (PDF, tr. 13), Gramophone (Plaistow, 10/1997) và trang Deutsche Grammophon, Crossref và OpenAlex (Chaffin và Imreh 2002; Roediger, Karpicke 2006; Brooks 2014), PLOS ONE (Wells 2012), IMSLP (BWV 971), Chang III.6, III.14, III.15, OMT Sonata form, NHS (CBT, Beta blockers, GAD symptoms), BAPAM health-resources. Không mở được toàn văn Chaffin và Imreh, Brooks, Roediger (PubMed, tạp chí chặn): dùng tóm tắt của OpenAlex và chỉ giữ điều tóm tắt xác nhận. Đã sửa (da-sua): n1, n3 (ABRSM: "theo chương trình hiện hành", thêm Practical Grades, trỏ sang trang Học với thầy và thi cấp), n5 (Richter), n6, n13, n14, n18, n19, n20, n36, n41, n44, n47, n49, n51, n54, n55, n58, n59, n60, n61, n62, n64, n69, n70, n71, n73. Đã bỏ (da-bo): n16 (điểm yếu thứ hai của trí nhớ vận động), n56 (rượu bia), n74 (ba sách in ở mục Nguồn). Đổi tiêu đề ### "Những điều có bằng chứng giúp" thành "Những điều có thể giúp" (id cũ giữ: { #nhung-ieu-co-bang-chung-giup }, slug của site cũ): khi dịch chuyển, người giao ghi doi_chu cho tiêu đề này nếu công cụ báo. Điều các lô trước yêu cầu giữ: mục "Bốn loại trí nhớ" (neo #bon-loai-tri-nho, luyen-tai/choi-bang-tai.md trỏ tới): KHỚP, có thính giác; mục "Chuẩn bị cho buổi biểu diễn" (diễn thử): KHỚP; "7. Chạy bài trong đầu": KHỚP (n34); "khoanh tròn các kết" và điểm mốc cấu trúc là chỗ để bám lại (13-ket.yml, lo-trinh-choi.yml): KHỚP một phần: còn "khoanh tròn các kết" (n22) và "chỗ để bám lại" (n20), nhưng nhóm "mốc cấu trúc" ở dạng bốn loại đã bỏ khỏi trang (n19) vì không mở được toàn văn Chaffin; lo-trinh-choi.yml trích đúng "Chọn điểm xuất phát… Khi biểu diễn, chính những điểm này là điểm nhảy: lỡ quên, bạn vào lại ở điểm gần nhất phía sau": còn nguyên (n25). "Học thuộc bằng phân tích, điểm xuất phát" (lo-trinh-choi.yml): KHỚP (n22, n25). Câu ve-site trỏ trang chưa chuyển (đã kiểm ../opus-zero/docs/): thay-va-thi (n4, n65), thu-am, nhat-ky, metronome (n42). Thuật ngữ chưa có bản ghi thuat-ngu.yml: trí nhớ vận động, trí nhớ thính giác, trí nhớ thị giác, trí nhớ phân tích, điểm mốc (performance cue), điểm xuất phát, điểm nhảy, diễn thử, hiệu ứng kiểm tra (testing effect), loạn trương lực… (cho D3-L5/người giao). Người giao quyết: (1) trang thay-va-thi khi chuyển phải đồng bộ câu chơi thuộc của ABRSM (n4); (2) có muốn khôi phục phân loại bốn mốc của Chaffin nếu mở được toàn văn bài 2002 hay chương sách; (3) tên "Practical Grades" chưa kiểm cho Performance Grades (video).'
+doi_chu:
+  - cu: Chơi thuộc lòng và chơi cho người khác nghe đều là kỹ năng tập được, không phải năng khiếu trời cho. Trang này giải thích các loại trí nhớ mà người chơi đàn dùng, vì sao "thuộc tay" thôi là chưa đủ, cách xây và kiểm tra một trí nhớ bền, rồi cách chuẩn bị cho buổi diễn và sống chung với hồi hộp.
+    moi: Chơi thuộc lòng và chơi cho người khác nghe đều là kỹ năng có thể tập. Trang này giải thích các loại trí nhớ mà người chơi đàn dùng, vì sao "thuộc tay" thôi là chưa đủ, cách xây và kiểm tra một trí nhớ bền, rồi cách chuẩn bị cho buổi diễn và sống chung với hồi hộp.
+    ly_do: 'n1 (da-sua): Câu cũ: "…đều là kỹ năng tập được, không phải năng khiếu trời cho." Vế "không phải năng khiếu trời cho" là khẳng định về bản chất kỹ năng, không có nguồn trực tiếp về chơi thuộc hay biểu diễn (tóm tắt Ericsson 1993 nói về chuyên môn nói chung); bỏ vế ấy, giữ lời trấn an. Sửa cả mô tả (description).'
+  - cu:
+      - Không. Trong kỳ thi ABRSM, chơi thuộc các tác phẩm là tùy chọn và không được cộng điểm trực tiếp (chỉ gam và hợp âm rải là bắt buộc chơi thuộc). Trong nhạc thính phòng, nghệ sĩ gần như luôn đặt bản nhạc trên giá; những năm cuối sự nghiệp, Sviatoslav Richter biểu diễn trong khán phòng gần như tối, chỉ một ngọn đèn nhỏ chiếu lên bản nhạc trước mặt.
+      - Dù vậy, vẫn nên học thuộc ít nhất vài bài. Khi mắt không bận đọc, tai nghe tiếng đàn của chính mình rõ hơn hẳn và mắt theo được tay ở những bước nhảy xa. Quan trọng hơn, muốn thuộc bền thì phải hiểu bài được xây thế nào, và hiểu biết ấy vẫn cứu bạn khi chơi với bản nhạc mà mắt lạc dòng. Lộ trình piano gợi ý học thuộc bài đầu tiên ở chặng 2.
+    moi:
+      - "Không. Trong kỳ thi Practical Grades của ABRSM (theo chương trình hiện hành), chơi thuộc các tác phẩm là tùy chọn và không được cộng điểm riêng; chỉ gam và hợp âm rải là bắt buộc chơi thuộc (xem Học với thầy và thi cấp). Có những nghệ sĩ lớn vẫn chơi với bản nhạc trên giá: những năm cuối sự nghiệp, Sviatoslav Richter biểu diễn trong khán phòng gần như tối, chỉ một ngọn đèn nhỏ chiếu lên bản nhạc trước mặt."
+      - Dù vậy, vẫn nên học thuộc ít nhất vài bài. Khi mắt không bận đọc, bạn có thể dành chú ý cho tai nghe tiếng đàn của chính mình và cho mắt nhìn tay ở những bước nhảy xa. Quan trọng hơn, muốn thuộc bền thì phải hiểu bài được xây thế nào, và hiểu biết ấy vẫn cứu bạn khi chơi với bản nhạc mà mắt lạc dòng. Lộ trình piano gợi ý học thuộc bài đầu tiên ở chặng 2.
+    ly_do: 'n3 (da-sua): ABRSM Qualification Specification: Practical Music Piano 2025 & 2026, mục Playing from memory (tr. 13): "Candidates may perform any of their pieces from memory"; "No extra marks are directly awarded for playing from memory."; "Memory: All requirements must be played from memory." (scales and arpeggios). Câu cũ chỉ nói "Trong kỳ thi ABRSM" và "không được cộng điểm trực tiếp"; theo ghi chú bảng tầng, bỏ tên chương trình 2025 & 2026, thêm "Practical Grades" (hình thức thi trực tiếp: đã đối chiếu ở đề cương Practical; Performance Grades chưa kiểm) và trỏ sang trang Học với thầy và thi cấp. "Hiện hành" đúng đến khi ABRSM đổi chương trình: người giao nhớ rà khi đổi kỳ.; n5 (da-sua): Gramophone (Plaistow, 10/1997), nói về các buổi diễn cuối ở London: "By then he had retreated into darkness and was almost invisible as he played"; ông chỉnh "an angle poise lamp at his side so that the only light on the platform fell on the music-rest". Deutsche Grammophon: "In his last years he preferred to play in darkness, with just one lamp on the piano to light the music"; "always playing from the score". Câu cũ có thêm "Trong nhạc thính phòng, nghệ sĩ gần như luôn đặt bản nhạc trên giá": không có nguồn, bỏ; thay bằng câu nói chung về nghệ sĩ lớn. Nguồn nói "bóng tối" và "một ngọn đèn", không nói "khán phòng", nên "khán phòng gần như tối" là cách diễn đạt gần nghĩa.; n6 (da-sua): Câu cũ: "…tai nghe tiếng đàn của chính mình rõ hơn hẳn và mắt theo được tay ở những bước nhảy xa." "Rõ hơn hẳn" là khẳng định không có nguồn; viết lại thành khả năng, giữ lời khuyên.'
+  - cu: Người tự học thường chỉ dùng loại đầu tiên mà không biết. Mục tiêu là có cả bốn, với trí nhớ phân tích làm bộ khung.
+    moi: Dễ chỉ dựa vào loại đầu tiên mà không biết. Mục tiêu là có cả bốn, với trí nhớ phân tích làm bộ khung.
+    ly_do: 'n13 (da-sua): Câu cũ: "Người tự học thường chỉ dùng loại đầu tiên mà không biết." "Người tự học thường" là khẳng định về một nhóm người, không có nguồn; viết lại thành lời cảnh báo.'
+  - cu: "Trí nhớ vận động giống một chuỗi mắt xích: mỗi chuyển động gọi chuyển động tiếp theo. Nó nhanh và không tốn sự chú ý, nên không thể thiếu, nhưng có ba điểm yếu:"
+    moi: "Trí nhớ vận động giống một chuỗi mắt xích: mỗi chuyển động gọi chuyển động tiếp theo. Nó nhanh và không tốn sự chú ý, nên không thể thiếu, nhưng có hai điểm yếu:"
+    ly_do: "n14 (da-sua): Chang III.6: hand memory \"is a reflex motion plus a brain reflex triggered by the piano's sound\", \"mostly hand memory which bypasses the brain\", \"always a good backup\". \"Chuỗi mắt xích\" là ví dụ so sánh của site. Câu cũ nói \"ba điểm yếu\": đã bỏ điểm yếu thứ hai (n16), nên sửa thành \"hai\"."
+  - cu: Nó không chịu được sự soi xét. Khi hồi hộp, bạn bắt đầu để ý từng ngón tay, đúng điều mà chuỗi tự động không chịu nổi.
+    ly_do: 'n16 (da-bo): Bỏ điểm yếu thứ hai: khẳng định về tâm lý (chú ý có ý thức làm hỏng chuỗi tự động) không có nguồn mở được (Chang không nói; các nghiên cứu về "choking under pressure" không mở được).'
+  - cu: "Nhóm của nhà tâm lý học Roger Chaffin đã ghi lại và phân tích quá trình nghệ sĩ piano Gabriela Imreh học chương cuối (Presto) của Italienisches Konzert (Concerto Ý), BWV 971, của Bach. Người chơi chuyên nghiệp mang trong đầu một bản đồ của tác phẩm với những điểm mốc (performance cues) được chọn có chủ ý trong lúc tập: mốc cấu trúc (ranh giới các đoạn), mốc diễn tả (cảm xúc muốn truyền đến người nghe), mốc diễn tấu (tốc độ, sắc thái, phân câu) và mốc kỹ thuật (một ngón bấm then chốt). Ngón tay chạy tự động, còn đầu óc đi theo bản đồ; khi có sự cố, các điểm mốc là chỗ để bám lại. Khoảng hai năm sau, những gì Imreh còn nhớ về bản nhạc vẫn xoay quanh các mốc cấu trúc và diễn tả."
+    moi: "Nhà tâm lý học Roger Chaffin và nghệ sĩ piano Gabriela Imreh đã ghi lại và phân tích quá trình Imreh học chương cuối (Presto) của Italienisches Konzert (Concerto Ý), BWV 971, của Bach. Bà ghi lại việc tập, rồi mô tả cấu trúc bản nhạc và các quyết định về ngón bấm, phân câu và những điểm mốc (performance cues) bà chú ý tới trong lúc biểu diễn; các chỗ bà ngập ngừng khi chơi thuộc, và những chỗ bà còn nhớ hai năm sau, đều gắn với các điểm mốc ấy. Với các điểm mốc, người chơi mang trong đầu một bản đồ của tác phẩm: chẳng hạn ranh giới các đoạn, cảm xúc muốn truyền đến người nghe, cách phân câu, một ngón bấm then chốt. Ngón tay chạy tự động, còn đầu óc đi theo bản đồ; khi có sự cố, các điểm mốc là chỗ để bám lại."
+    ly_do: "n18 (da-sua): OpenAlex (tóm tắt Chaffin và Imreh 2002): \"A concert pianist recorded her practice while learning the third movement (Presto) of J.S. Bach's Italian Concerto.\" IMSLP: Italienisches Konzert, BWV 971, ba chương, chương 3 Presto. Câu cũ: \"Nhóm của nhà tâm lý học Roger Chaffin đã ghi lại…\": đổi thành tên hai tác giả bài báo (Chaffin và Imreh); không kiểm được vai trò \"nhóm\".; n19 (da-sua): Tóm tắt (OpenAlex): bà \"recorded her practice\", \"described the piece's formal structure and explained her decisions about fingering, phrasing, and the cues she attended to during performance\"; các báo cáo cho biết \"which spots caused hesitations when she first played from memory, and which affected her recall two years later\"; \"retrieval depended on performance cues\". Câu cũ: Người chơi chuyên nghiệp mang một bản đồ với bốn loại mốc (cấu trúc, diễn tả, diễn tấu, kỹ thuật), \"được chọn có chủ ý trong lúc tập\", và hai năm sau Imreh còn nhớ \"các mốc cấu trúc và diễn tả\". Không mở được toàn văn (Psychological Science, PubMed bị chặn), nên bỏ phân loại bốn mốc, \"chọn có chủ ý trong lúc tập\" và \"cấu trúc và diễn tả\"; chỉ giữ điều tóm tắt xác nhận.; n20 (da-sua): Ý chính khớp tóm tắt Chaffin và Imreh (\"her retrieval depended on performance cues\", chuyên gia nhớ nhanh và tự động qua \"conceptual, motor, and auditory memory\") và Chang III.6/III.14 (khi quên, vào lại từ chỗ biết rõ). Các ví dụ về mốc (ranh giới đoạn, cảm xúc, phân câu, ngón bấm then chốt) là minh họa của site, không còn gán thành bốn loại của Chaffin. \"Người chơi chuyên nghiệp\" đã đổi thành \"người chơi\". Chưa mở được toàn văn nên không khẳng định phân loại của tác giả."
+  - cu: "Gấp bản nhạc, chơi một đoạn, rồi mở ra đối chiếu ngay; thỉnh thoảng thử viết lại vài ô đầu của mỗi đoạn mà không nhìn. Các nghiên cứu về học tập cho thấy chủ động gợi lại từ trí nhớ giúp nhớ lâu hơn đọc lại, gọi là hiệu ứng kiểm tra (Roediger và Karpicke, 2006). Kiểm tra ngay đầu buổi, khi chưa chơi bài lần nào, và giãn cách các lần ôn: sau 1 ngày, 3 ngày, 1 tuần."
+    moi: "Gấp bản nhạc, chơi một đoạn, rồi mở ra đối chiếu ngay; thỉnh thoảng thử viết lại vài ô đầu của mỗi đoạn mà không nhìn. Trong các thí nghiệm với đoạn văn xuôi, Roediger và Karpicke (2006) thấy rằng tự kiểm tra bằng cách gợi lại từ trí nhớ giúp nhớ lâu hơn đọc lại (sau 2 ngày và sau 1 tuần), gọi là hiệu ứng kiểm tra. Kiểm tra ngay đầu buổi, khi chưa chơi bài lần nào, và giãn cách các lần ôn: sau 1 ngày, 3 ngày, 1 tuần."
+    ly_do: 'n36 (da-sua): Tóm tắt (OpenAlex): hai thí nghiệm với đoạn văn xuôi; kiểm tra sau 5 phút thì đọc lại tốt hơn, sau 2 ngày hoặc 1 tuần thì đã kiểm tra trước đó nhớ tốt hơn hẳn; "testing effect". Câu cũ: "Các nghiên cứu về học tập cho thấy chủ động gợi lại từ trí nhớ giúp nhớ lâu hơn đọc lại": quá tổng quát và bỏ qua rằng thí nghiệm là về văn xuôi, nên viết đúng phạm vi.'
+  - cu: 'Thử nhiều cây đàn. Mỗi cây có độ nặng phím, độ sâu bàn đạp và độ sáng tiếng khác nhau; nếu chỉ tập trên đàn điện, hãy tìm dịp chơi đàn cơ trước buổi diễn. Khi thử đàn ở nơi diễn, đừng chơi đoạn khó nhất mà kiểm tra: chơi thật nhỏ có ra tiếng không, bàn đạp bắt đầu "ăn" ở độ sâu nào, bè trầm có lấn giai điệu không (Bàn đạp, Tạo tiếng đàn).'
+    moi: 'Thử nhiều cây đàn. Mỗi cây có thể khác nhau về độ nặng phím, độ sâu bàn đạp và độ sáng tiếng khác nhau; nếu chỉ tập trên đàn điện, hãy tìm dịp chơi đàn cơ trước buổi diễn. Khi thử đàn ở nơi diễn, đừng chơi đoạn khó nhất mà kiểm tra: chơi thật nhỏ có ra tiếng không, bàn đạp bắt đầu "ăn" ở độ sâu nào, bè trầm có lấn giai điệu không (Bàn đạp, Tạo tiếng đàn).'
+    ly_do: 'n41 (da-sua): Chang III.14: "Can you adjust to a different piano – especially one that is out of tune or difficult to play?"; đàn lớn thường dễ chơi hơn đàn nhỏ. Câu cũ: "Mỗi cây có độ nặng phím…": đổi thành "có thể khác nhau" để khỏi là khẳng định tuyệt đối.'
+  - cu: "Quy tắc số một khi biểu diễn: giữ nhịp, không quay lại. Phần lớn người nghe không nhận ra một nốt sai, nhưng ai cũng nhận ra khi nhạc dừng."
+    moi: "Quy tắc số một khi biểu diễn: giữ nhịp, không quay lại. Nhạc dừng giữa chừng làm hỏng cả mạch bài nhiều hơn một nốt sai."
+    ly_do: 'n44 (da-sua): Chang III.14: "Another way to play through mistakes is to at least keep the rhythm." Câu cũ: "Phần lớn người nghe không nhận ra một nốt sai, nhưng ai cũng nhận ra khi nhạc dừng." Khẳng định về cảm nhận của người nghe, Chang không nói (đã đọc III.15: "Not covered"); viết lại thành lời khuyên và sửa cả lời giải thích câu hỏi 5 (n68).'
+  - cu:
+      - 'Hồi hộp trước khi biểu diễn rất phổ biến, kể cả ở nghệ sĩ chuyên nghiệp; nó cho thấy bạn coi trọng việc mình làm. Cơ thể đọc tình huống "nhiều người đang nghe mình" như một mối đe dọa và bật phản ứng chiến hay chạy: adrenaline tăng, tim đập nhanh, thở nông, tay run hoặc lạnh, đầu óc dễ trống rỗng. Phản ứng ấy có ích khi cần chạy trốn, nhưng không hợp với mười ngón tay cần điều khiển tinh tế: nhịp bị vội, khó chơi nhỏ, tiếng cứng.'
+      - Những điều có bằng chứng giúp
+      - Chuẩn bị kỹ và diễn thử nhiều lần. Không kỹ thuật thở nào thay được việc biết chắc rằng bạn đã chơi trọn bài này trước người khác nhiều lần.
+      - Thở ra chậm. Hít vào bằng mũi khoảng 4 nhịp đếm, thở ra từ từ khoảng 6 nhịp, trong vài phút trước khi lên sân khấu. Trong một thử nghiệm ngẫu nhiên với 46 nhạc công, chỉ một buổi tập thở chậm dài 30 phút đã giúp điều hòa phản ứng sinh lý khi chờ biểu diễn; những người vốn rất lo âu thì giảm lo âu nhiều hơn nhóm không tập (Wells và cộng sự, 2012).
+    moi:
+      - "Hồi hộp trước khi biểu diễn rất phổ biến. Nó gắn với adrenaline, chất giúp con người thoát khỏi nguy hiểm: tim có thể đập nhanh và cơ căng lên. Người ít kinh nghiệm hay chơi nhanh hơn mức bài chịu được vì hồi hộp."
+      - Những điều có thể giúp
+      - Chuẩn bị kỹ và diễn thử nhiều lần. Diễn thử cho bạn thêm kinh nghiệm và sự tự tin, và hai thứ ấy làm bớt nỗi sợ điều chưa biết.
+      - Thở ra chậm. Hít vào khoảng 4 nhịp đếm, thở ra từ từ khoảng 6 nhịp (khoảng sáu nhịp thở mỗi phút), trong vài phút trước khi lên sân khấu. Trong một thử nghiệm ngẫu nhiên với 46 nhạc công, chỉ một buổi tập thở chậm dài 30 phút đã giúp điều hòa phản ứng sinh lý khi chờ biểu diễn; những người vốn rất lo âu thì giảm lo âu nhiều hơn nhóm không tập (Wells và cộng sự, 2012).
+    ly_do: "n47 (da-sua): Brooks 2014 (tóm tắt): \"People often feel nervous before tasks like public speaking\". Chang III.15: hồi hộp gắn với \"a flow of adrenalin\"; \"fear helps us to escape danger\". NHS (lo âu nói chung): triệu chứng gồm \"a more noticeable or unusual heartbeat (palpitations)\" và \"feeling tense\". Nguồn không chuyên về nhạc công; câu đã bỏ các vế không có nguồn. Câu cũ: \"Hồi hộp… rất phổ biến, kể cả ở nghệ sĩ chuyên nghiệp; nó cho thấy bạn coi trọng việc mình làm. Cơ thể đọc tình huống 'nhiều người đang nghe mình' như một mối đe dọa và bật phản ứng chiến hay chạy: adrenaline tăng, tim đập nhanh, thở nông, tay run hoặc lạnh, đầu óc dễ trống rỗng. Phản ứng ấy có ích khi cần chạy trốn, nhưng không hợp với mười ngón tay…\": \"kể cả ở nghệ sĩ chuyên nghiệp\", \"coi trọng việc mình làm\", \"chiến hay chạy\", \"thở nông, tay run hoặc lạnh, đầu óc trống rỗng\", \"không hợp với mười ngón tay\" đều bỏ (không có nguồn mở được; NHS không nhắc \"fight or flight\" và không nhắc thở hay run).; n49 (da-sua): Chang III.15: \"Mock recitals will give you more experience and confidence; both will reduce the fear of the unknown.\" Câu cũ: \"Không kỹ thuật thở nào thay được việc biết chắc rằng bạn đã chơi trọn bài này trước người khác nhiều lần.\" Là ý kiến, không có nguồn; thay bằng ý của Chang.; n51 (da-sua): Lời khuyên; 4+6 nhịp là một chu kỳ khoảng 10 giây, tức khoảng sáu nhịp thở mỗi phút, đúng tốc độ thở chậm của thử nghiệm Wells (6 nhịp/phút). Câu cũ có \"bằng mũi\": thử nghiệm không nói; bỏ."
+  - cu:
+      - Đặt sự chú ý vào âm nhạc. Trước mỗi đoạn, nghĩ đến tính cách của nó bằng một hai chữ ("dịu dàng", "rộn ràng"), giống các mốc diễn tả của Chaffin. Nghĩ về âm thanh muốn tạo ra, không phải về ngón tay.
+      - "Một nghi thức cố định: cùng một bài khởi động, cùng một chuỗi việc trước khi đặt tay lên phím (chỉnh ghế, thở ra, nghe câu đầu). Nghi thức quen làm tình huống lạ bớt lạ."
+    moi:
+      - Đặt sự chú ý vào âm nhạc. Trước mỗi đoạn, nghĩ đến tính cách của nó bằng một hai chữ ("dịu dàng", "rộn ràng"), giống các điểm mốc ở phần trên. Nghĩ về âm thanh muốn tạo ra, không phải về ngón tay.
+      - "Một nghi thức cố định: cùng một bài khởi động, cùng một chuỗi việc trước khi đặt tay lên phím (chỉnh ghế, thở ra, nghe câu đầu)."
+    ly_do: 'n54 (da-sua): Chang III.15: "Playing musically, of course, is always the answer" (tập trung vào biểu cảm âm nhạc). Câu cũ: "…giống các mốc diễn tả của Chaffin": đã bỏ phân loại bốn mốc của Chaffin (n19), nên đổi thành "các điểm mốc ở phần trên".; n55 (da-sua): Câu cũ có thêm: "Nghi thức quen làm tình huống lạ bớt lạ." Là giải thích tâm lý không có nguồn; bỏ.'
+  - cu: 'Uống rượu bia "cho bớt run": rượu làm giảm khả năng điều khiển tinh và phán đoán.'
+    ly_do: 'n56 (da-bo): Bỏ khỏi mục "Những điều nên tránh": khẳng định về tác động của rượu không có nguồn (NHS "risks of drinking too much" chỉ nói "misjudging risky situations", không nói điều khiển tinh hay lo âu; Chang III.15 không nói tới rượu). Lời khuyên sức khỏe nên không xếp khuyen-tap.'
+  - cu:
+      - Thay đổi vào phút chót, tập quá nhiều trong ngày diễn, quá nhiều cà phê, bỏ bữa.
+      - 'Tự nhủ "đừng sai", "đừng run": câu đó hướng sự chú ý đúng vào lỗi. Hãy nói điều bạn muốn làm: "hát câu đầu", "giữ nhịp".'
+    moi:
+      - Thay đổi vào phút chót, tập quá nhiều trong ngày diễn, quá nhiều cà phê.
+      - 'Tự nhủ "đừng sai", "đừng run": hãy nói điều bạn muốn làm: "hát câu đầu", "giữ nhịp".'
+    ly_do: 'n58 (da-sua): Chang III.14: "within the last week, adding new material or making changes in the piece (such as fingering) is not recommended"; III.15: cà phê, trà làm hồi hộp tệ hơn. "Tập quá nhiều trong ngày diễn" là lời khuyên của site. Câu cũ có thêm "bỏ bữa": bỏ (không có nguồn, lời khuyên dinh dưỡng).; n59 (da-sua): Câu cũ có thêm: "câu đó hướng sự chú ý đúng vào lỗi." Giải thích tâm lý không có nguồn; bỏ, giữ lời khuyên.'
+  - cu: Nếu hồi hộp khiến bạn né mọi dịp chơi cho người khác nghe trong nhiều tháng, mất ngủ nhiều ngày trước buổi diễn, hoặc có những cơn hoảng sợ, hãy nói chuyện với chuyên gia tâm lý. Liệu pháp nhận thức – hành vi (CBT) là một hướng thường được dùng cho lo âu biểu diễn.
+    moi: Nếu hồi hộp khiến bạn khổ sở, né mọi dịp chơi cho người khác nghe, mất ngủ hoặc có những cơn hoảng sợ, hãy nói chuyện với bác sĩ hoặc chuyên gia tâm lý. Liệu pháp nhận thức – hành vi (CBT) là một hướng điều trị thường dùng cho lo âu.
+    ly_do: 'n60 (da-sua): BAPAM liệt kê tài liệu "Managing Performance Anxiety", "Psychological Self-Care", "Mental Health Support" cho người biểu diễn; NHS: mất ngủ ("difficulty sleeping") là triệu chứng lo âu. Câu cũ: "…né mọi dịp… trong nhiều tháng, mất ngủ nhiều ngày trước buổi diễn… hãy nói chuyện với chuyên gia tâm lý": ngưỡng "nhiều tháng", "nhiều ngày" không có nguồn, bỏ; thêm "bác sĩ" vì BAPAM và NHS đều đưa người có triệu chứng tới bác sĩ trước. Lời khuyên sức khỏe nên không xếp khuyen-tap.; n61 (da-sua): NHS CBT: "anxiety, including social anxiety, phobias and obsessive compulsive disorder (OCD)". Câu cũ: "…thường được dùng cho lo âu biểu diễn": NHS không nhắc lo âu biểu diễn; bỏ chữ "biểu diễn".'
+  - cu: "Trong vòng 24 giờ, ghi vào nhật ký luyện tập: ba điều làm tốt, hai điều cần cải thiện, một thay đổi cho lần sau. Hôm sau mới nghe bản ghi: thường bạn chơi tốt hơn mình tưởng. Rồi tách các loại vấn đề, vì mỗi loại cần một cách sửa khác:"
+    moi: "Trong vòng 24 giờ, ghi vào nhật ký luyện tập: ba điều làm tốt, hai điều cần cải thiện, một thay đổi cho lần sau. Hôm sau mới nghe bản ghi. Rồi tách các loại vấn đề, vì mỗi loại cần một cách sửa khác:"
+    ly_do: 'n62 (da-sua): Câu cũ có thêm: "thường bạn chơi tốt hơn mình tưởng." Khẳng định không có nguồn; bỏ.'
+  - cu:
+      - "Cộng đồng trực tuyến: nhiều diễn đàn và nhóm của người lớn học piano có chủ đề chia sẻ bản thu, một số tổ chức cả buổi độc tấu trực tuyến định kỳ."
+      - "Buổi biểu diễn của lớp, của trung tâm: học trò người lớn thường được chào đón; hãy hỏi thầy (Học với thầy và thi cấp)."
+    moi:
+      - "Cộng đồng trực tuyến: chia sẻ bản thu ở các diễn đàn và nhóm của người lớn học piano."
+      - "Buổi biểu diễn của lớp, của trung tâm: hãy hỏi xem học trò người lớn có tham gia được không, và hỏi thầy (Học với thầy và thi cấp)."
+    ly_do: 'n64 (da-sua): Lời khuyên; hai câu cũ đã viết lại vì khẳng định về tình hình bên ngoài không kiểm được và dễ đổi: "nhiều diễn đàn và nhóm của người lớn học piano có chủ đề chia sẻ bản thu, một số tổ chức cả buổi độc tấu trực tuyến định kỳ" (chi tiết mau cũ) và "học trò người lớn thường được chào đón".'
+  - cu:
+      - "Roger Chaffin, Gabriela Imreh, Mary Crawford, Practicing Perfection: Memory and Piano Performance (Lawrence Erlbaum Associates, 2002)."
+      - 'Roger Chaffin, T. Logan, "Practicing perfection: How concert soloists prepare for performance", Advances in Cognitive Psychology 2(2–3), 2006, tr. 113–130.'
+    moi:
+      - 'Roger Chaffin, Gabriela Imreh, "Practicing perfection: Piano performance as expert memory", Psychological Science 13(4), 2002, tr. 342–349.'
+      - Chuan C. Chang, Fundamentals of Piano Practice, mục III.6 (học thuộc), III.14 (chuẩn bị biểu diễn) và III.15 (hồi hộp).
+    ly_do: "n70 (da-sua): Thay hai dòng cũ: sách Chaffin, Imreh, Crawford, Practicing Perfection (Lawrence Erlbaum, 2002) và bài Chaffin, Logan 2006 (Advances in Cognitive Psychology 2(2–3), 113–130): chưa mở được nội dung của cả hai. Bài mới là bài đã mở bản ghi (OpenAlex: tên, hai tác giả, Psychological Science 13(4), 342–349, 2002) và là bài nói về Imreh học Presto của Concerto Ý."
+  - cu: Dianna T. Kenny, The Psychology of Music Performance Anxiety (Oxford University Press, 2011).
+    ly_do: "n74 (da-bo): Bỏ ba sách in chưa mở được nội dung (chuẩn mục 2: sách in chỉ là nguồn phụ); không câu nào của trang dựa riêng vào chúng."
+  - cu:
+      - "Gerald Klickstein, The Musician's Way: A Guide to Practice, Performance, and Wellness (Oxford University Press, 2009)."
+      - "Molly Gebrian, Learn Faster, Perform Better: A Musician's Guide to the Neuroscience of Practicing (Oxford University Press, 2024)."
+      - "ABRSM, Practical Music Grades: Piano Syllabus 2025 & 2026, phần quy định về chơi thuộc: ABRSM."
+    moi:
+      - "ABRSM, chương trình thi piano Practical Grades hiện hành, phần quy định về chơi thuộc: ABRSM."
+      - NHS (Anh), Cognitive behavioural therapy (CBT) và Beta blockers.
+      - Open Music Theory, Sonata form.
+    ly_do: 'n71 (da-sua): Ba dòng thêm vào mục Nguồn theo các nguồn đã mở. Chang: tác giả ghi ở dòng bản quyền "Chuan C. Chang".; n73 (da-sua): Câu cũ: "ABRSM, Practical Music Grades: Piano Syllabus 2025 & 2026, phần quy định về chơi thuộc". Theo ghi chú bảng tầng, bỏ tên chương trình và năm; tên tài liệu thật của bản PDF đã mở là "Qualification Specification: Practical Music Piano 2025 & 2026" (khác tên cũ).'
+  - cu: "mô tả: Chơi thuộc lòng và chơi cho người khác nghe đều là kỹ năng tập được, không phải năng khiếu trời cho. Trang này giải thích các loại trí nhớ mà người chơi đàn…"
+    moi: "mô tả: Chơi thuộc lòng và chơi cho người khác nghe đều là kỹ năng có thể tập. Trang này giải thích các loại trí nhớ mà người chơi đàn…"
+    ly_do: "n1: mô tả đổi theo câu mở đầu, bỏ \"không phải năng khiếu trời cho\"."
+  - cu: "câu hỏi: Đang diễn thì quên mất đoạn tiếp theo. Nên làm gì? | Dừng lại và chơi lại từ đầu bài | ✓ Giữ nhịp, nhảy đến điểm xuất phát gần nhất phía sau và chơi tiếp | Xin lỗi khán giả rồi xin chơi lại | Người nghe ít khi nhận ra một nốt sai, nhưng ai cũng nhận ra khi nhạc dừng."
+    moi: "câu hỏi: Đang diễn thì quên mất đoạn tiếp theo. Nên làm gì? | Dừng lại và chơi lại từ đầu bài | ✓ Giữ nhịp, nhảy đến điểm xuất phát gần nhất phía sau và chơi tiếp | Xin lỗi khán giả rồi xin chơi lại | Nhạc dừng giữa chừng làm hỏng cả mạch bài nhiều hơn một nốt sai."
+    ly_do: 'n69 (da-sua): Chang III.14: restart từ chỗ biết rõ, "keep the rhythm". Lời giải thích cũ: "Người nghe ít khi nhận ra một nốt sai, nhưng ai cũng nhận ra khi nhạc dừng." (không có nguồn) đổi thành cùng câu với n44; độc lập vị trí lựa chọn.'

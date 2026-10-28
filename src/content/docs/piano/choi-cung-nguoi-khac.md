@@ -16,7 +16,7 @@ Tập một mình, bạn có thể chậm lại ở chỗ khó, dừng lại đ�
 | **Thị tấu** | Có thể dừng để đọc | Đọc trước và đi tiếp; không kịp thì bỏ nốt, không bỏ phách |
 | **Động lực** | Hoàn toàn tự giác | Có lịch hẹn, có người chờ, có niềm vui làm nhạc cùng nhau |
 
-Sau vài tháng chơi bốn tay, nhiều người thấy bài độc tấu của mình cũng vững nhịp hơn.
+Chơi bốn tay đều đặn, bài độc tấu của bạn cũng có thể vững nhịp hơn.
 
 ### Khi nào bắt đầu
 
@@ -36,7 +36,7 @@ Nếu thầy chơi bè kia, bạn có thể bắt đầu rất sớm với nhữ
 | Bàn đạp | Thường không | Thường có |
 | Lo chính về | Phân câu, sắc thái của giai điệu | Nhịp, hòa âm, độ cân bằng |
 
-Nhiều ấn bản in secondo ở trang trái, primo ở trang phải, cùng một đoạn nhạc. Hãy đọc lướt cả bè người kia để biết khi nào mình phải nhường. Và đừng chỉ giành primo: cả bài đứng trên bè trầm, nên secondo là chỗ học hòa âm và giữ nhịp tốt nhất.
+Nhiều ấn bản in secondo ở trang trái, primo ở trang phải, cùng một đoạn nhạc. Hãy đọc lướt cả bè người kia để biết khi nào mình phải nhường. Và đừng chỉ giành primo: cả bài đứng trên bè trầm, nên secondo là chỗ rất tốt để học hòa âm và giữ nhịp.
 
 ### Bàn đạp: thường là secondo
 
@@ -83,7 +83,7 @@ K:C
 [V:S] C, [E,G,C] G,, [E,G,C] | G,, [F,G,B,] D, [F,G,B,] | C, [E,G,C] G,, [D,G,B,] | [C,,C,E,G,]4 |]
 ```
 
-Mỗi người tập bè mình với máy đếm nhịp, rồi chơi cùng nhau (secondo đếm thầm một ô trước khi vào), rồi **đổi bè**. Secondo nhỏ hơn primo một bậc sắc thái: nốt trầm rõ, hợp âm nhẹ.
+Mỗi người tập bè mình với máy đếm nhịp, rồi chơi cùng nhau (secondo đếm thầm một ô trước khi vào), rồi **đổi bè**. Secondo chơi nhẹ hơn primo (p so với mf): nốt trầm rõ, hợp âm nhẹ.
 
 Bài 2 (soạn cho trang này) cố ý cho hai người va chạm: primo chơi hai tay cách nhau một quãng tám, tay trái quanh Đô giữa, đúng chỗ tay phải secondo chơi hợp âm.
 
@@ -109,7 +109,7 @@ Chỉ gồm tác phẩm **viết gốc cho bốn tay**. Cấp độ ước lư�
 
 | Chặng | Tác phẩm | Ghi chú |
 |---|---|---|
-| 1–3 | Diabelli, *Melodische Übungsstücke* Op. 149 | 28 bài ngắn, khó dần. Bè học trò (primo) nằm trong năm nốt, hai tay thường cách nhau một quãng tám; secondo dành cho thầy. Từ chặng 3, thử chơi secondo |
+| 1–3 | Diabelli, *Melodische Übungsstücke* Op. 149 | 28 bài ngắn, khó dần. Bè học trò (primo) giữ mỗi tay trong một thế tay năm ngón; secondo dành cho thầy. Từ chặng 3, thử chơi secondo |
 | 3–5 | Ravel, *Ma mère l'Oye* (Mẹ Ngỗng, 1910) | "Năm bài cho trẻ em", viết cho Mimie và Jean Godebski, 6 và 7 tuổi. *Pavane* chậm, ít nốt; các bài sau khó hơn |
 | 4–5 | Bizet, *Jeux d'enfants* (Trò chơi trẻ em) Op. 22 (1871) | 12 bức tranh nhỏ về trò chơi trẻ con |
 | 4–5 | Fauré, *Dolly* Op. 56 | Sáu bài cho cô bé Hélène Bardac, biệt danh Dolly |
@@ -117,7 +117,7 @@ Chỉ gồm tác phẩm **viết gốc cho bốn tay**. Cấp độ ước lư�
 | 5–6 | Mozart, Sonata Rê trưởng K. 381 (123a), Sonata Đô trưởng K. 521 (1787) | Hai bè ngang nhau; K. 521 khó hơn hẳn |
 | 5–6 | Brahms, *Ungarische Tänze* (Vũ khúc Hungary) WoO 1 | 21 bài, bốn tập (1869 và 1880); viết cho bốn tay trước khi thành bản dàn nhạc |
 | 6 | Dvořák, *Slavonic Dances* (Vũ khúc Slav) Op. 46 (1878), Op. 72 (1886) | Cũng viết cho bốn tay trước; secondo rất nặng |
-| 7 | Schubert, Fantasia Fa thứ D. 940 (1828) | Bốn phần chơi liền, kết bằng một fugue; một đỉnh cao của nhạc bốn tay ([Schubert](/opus/piano/nha-soan-nhac/)) |
+| 7 | Schubert, Fantasia Fa thứ D. 940 (1828) | Bốn phần chơi liền, phần cuối có một fugue ([Schubert](/opus/piano/nha-soan-nhac/)) |
 
 ## Hai đàn piano
 
@@ -163,7 +163,7 @@ Tập với một người hát, mỗi lượt một tình huống: lượt mộ
 
 ## Song tấu với một nhạc cụ
 
-Trong sonata cho violin, cello hay sáo, piano là bạn diễn ngang hàng: Beethoven và Brahms đều đặt tên các sonata ấy là sonata **cho piano và violin** (hay cello), piano đứng trước. Xem thêm [violin](/opus/nhac-cu/violin/), [cello](/opus/nhac-cu/cello/), [sáo](/opus/nhac-cu/sao/).
+Trong sonata cho violin, cello hay sáo, piano là bạn diễn ngang hàng: tên nhiều sonata ấy ghi piano trước, như Op. 24 của Beethoven và Op. 38 của Brahms: *Sonate für Pianoforte und Violine* (hay *Violoncello*), tức sonata **cho piano và violin** (hay cello). Xem thêm [violin](/opus/nhac-cu/violin/), [cello](/opus/nhac-cu/cello/), [sáo](/opus/nhac-cu/sao/).
 
 - **Đưa nốt La.** Piano không chỉnh được cao độ tại chỗ, nên nhạc cụ kia chỉnh theo piano: chơi **La4 (A4)** rõ, đủ dài, lặp lại khi được hỏi. Sáo và kèn chỉ chỉnh được trong khoảng hẹp, nên đàn lâu chưa lên dây thì gọi thợ trước buổi tập.
 - **Chỗ đứng.** Violin hay sáo đứng ở khúc cong của đàn cánh, hơi chếch về phía trước người chơi piano, để hai người thấy nhau bằng khóe mắt.
@@ -179,7 +179,7 @@ Trong sonata cho violin, cello hay sáo, piano là bạn diễn ngang hàng: Bee
 
 **Ra hiệu** là một phách chuẩn bị: cử động lên ở phách trước, xuống ở phách vào; nhanh hay chậm cho biết tốc độ, lớn hay nhỏ cho biết sắc thái. Tập riêng việc này: chỉ chơi nốt đầu của từng đoạn, nhiều lần, đến khi hai người vào cùng lúc tuyệt đối.
 
-Bài để bắt đầu (phần piano khoảng Grade 5–6): ba *Sonatina* cho violin D. 384, 385, 408 của Schubert; *Sicilienne* Op. 78 cho cello của Fauré; sonata cho sáo của Handel, phần piano viết ra từ [bè trầm số](/opus/nhac-ly/25-be-tram-so/). Khi vững hơn: Mozart, Sonata Mi thứ K. 304 và Beethoven, Sonata Fa trưởng Op. 24 cho violin; Brahms, Sonata Mi thứ Op. 38 cho cello; Fauré, *Fantaisie* Op. 79 cho sáo.
+Bài để bắt đầu (phần piano khoảng chặng 4–5): ba *Sonatina* cho violin D. 384, 385, 408 của Schubert; *Sicilienne* Op. 78 cho cello của Fauré; sonata cho sáo của Handel, phần piano viết ra từ [bè trầm số](/opus/nhac-ly/25-be-tram-so/). Khi vững hơn: Mozart, Sonata Mi thứ K. 304 và Beethoven, Sonata Fa trưởng Op. 24 cho violin; Brahms, Sonata Mi thứ Op. 38 cho cello; Fauré, *Fantaisie* Op. 79 cho sáo.
 
 ## Nhạc thính phòng
 
@@ -215,13 +215,13 @@ Một buổi tập 60 phút: 5 phút chuẩn bị và đưa nốt La; 10 phút c
 - **Bạn cùng học**: một người lớn cùng trình độ là bạn bốn tay lý tưởng; đổi bè sau mỗi bài.
 - **Trường âm nhạc**: sinh viên violin, cello, thanh nhạc luôn cần người đệm để tập và thi.
 - **Nhóm nghiệp dư**: hợp xướng ở nhà thờ, trường học, cộng đồng thường thiếu người đệm đàn; nhóm thính phòng nghiệp dư; hòa nhạc tại gia.
-- **Trực tuyến**: diễn đàn và nhóm của người lớn chơi nhạc cổ điển thường có chủ đề tìm bạn chơi theo thành phố. Độ trễ khiến không chơi cùng lúc được qua mạng, nhưng có thể **song tấu từ xa**: một người thu bè mình theo máy đếm nhịp, người kia đeo tai nghe chơi theo, rồi ghép hai bản thu.
+- **Trực tuyến**: diễn đàn và nhóm của người lớn chơi nhạc cổ điển thường có chủ đề tìm bạn chơi theo thành phố. Độ trễ thường làm việc chơi cùng lúc qua mạng rất khó, nhưng có thể **song tấu từ xa**: một người thu bè mình theo máy đếm nhịp, người kia đeo tai nghe chơi theo, rồi ghép hai bản thu.
 
 ## Nghệ sĩ piano hợp tác
 
-Ngày nay người ta hay nói **nghệ sĩ piano hợp tác** (*collaborative pianist*) thay cho "người đệm đàn" (*accompanist*), để nhấn mạnh vai bạn diễn ngang hàng. Nghề này gồm đệm cho ca sĩ, nhạc công trong hòa nhạc, kỳ thi, lớp học; làm **répétiteur** ở nhà hát opera (đệm cho ca sĩ tập, thay dàn nhạc); đệm lớp múa ba lê; và nhạc thính phòng. Nhiều nhạc viện có chương trình đào tạo riêng.
+Ngày nay người ta hay nói **nghệ sĩ piano hợp tác** (*collaborative pianist*) thay cho "người đệm đàn" (*accompanist*), để nhấn mạnh vai bạn diễn ngang hàng. Nghề này gồm đệm cho ca sĩ và nhạc công, làm **répétiteur** ở nhà hát opera (người tập vở cùng ca sĩ) và chơi nhạc thính phòng.
 
-Người góp phần lớn thay đổi cách nhìn ấy là **Gerald Moore** (1899–1987), nghệ sĩ piano người Anh. Ông nhắc lại, với ý không đồng tình, lời "khen" của một ca sĩ dành cho người đệm đàn Coenraad V. Bos: "Hôm nay chắc anh chơi hay lắm, vì tôi chẳng để ý thấy anh." Moore chơi cùng Dietrich Fischer-Dieskau (bản thu *Erlkönig* gợi ý trong [hướng dẫn nghe](/opus/nghe-nhac/schubert-erlkonig/)), Elisabeth Schwarzkopf, Victoria de los Ángeles; Fischer-Dieskau viết rằng với Moore, bên phím đàn không còn "cái bóng nhợt nhạt" nữa. Buổi hòa nhạc chia tay của ông năm 1967 ở Royal Festival Hall (London) có cả ba ca sĩ ấy, và khép lại khi Moore chơi một mình bản chuyển soạn cho piano của *An die Musik* (Gửi âm nhạc) của Schubert. Câu người đệm nên tự hỏi nhiều nhất chính là tên hồi ký của ông: *Am I Too Loud?* (Tôi có to quá không?, 1962).
+Người góp phần lớn thay đổi cách nhìn ấy là **Gerald Moore** (1899–1987), nghệ sĩ piano người Anh. Ông nhắc lại, với ý không đồng tình, lời "khen" của một ca sĩ dành cho người đệm đàn Coenraad V. Bos: "Hôm nay chắc anh chơi hay lắm, vì tôi chẳng để ý thấy anh." Moore chơi cùng Dietrich Fischer-Dieskau (bản thu *Erlkönig* gợi ý trong [hướng dẫn nghe](/opus/nghe-nhac/schubert-erlkonig/)), Elisabeth Schwarzkopf, Victoria de los Ángeles; Fischer-Dieskau viết rằng với Moore, bên phím đàn không còn "cái bóng nhợt nhạt" nữa. Buổi hòa nhạc chia tay của ông năm 1967 ở Royal Festival Hall (London) có cả ba ca sĩ ấy, và khép lại khi Moore chơi một mình bản chuyển soạn cho piano của *An die Musik* (Gửi âm nhạc) của Schubert. Tên hồi ký của ông cũng là câu người đệm nên tự hỏi: *Am I Too Loud?* (Tôi có to quá không?, 1962).
 
 ## Kiểm tra nhanh
 
@@ -255,9 +255,9 @@ Người góp phần lớn thay đổi cách nhìn ấy là **Gerald Moore** (18
 
 ## Nguồn
 
-- Gerald Moore, *The Unashamed Accompanist* (London: Ascherberg, Hopwood & Crew, 1943); *Singer and Accompanist: The Performance of Fifty Songs* (London: Macmillan, 1953); *Am I Too Loud? Memoirs of an Accompanist* (London: Macmillan, 1962); *The Schubert Song Cycles: With Thoughts on Performance* (London: Hamish Hamilton, 1975).
+- Gerald Moore, *The Unashamed Accompanist* (London: Ascherberg, Hopwood & Crew, 1943); *Singer and Accompanist: The Performance of Fifty Songs* (London: Methuen, 1953); *Am I Too Loud? Memoirs of an Accompanist* (1962); *The Schubert Song Cycles: With Thoughts on Performance* (London: Hamish Hamilton, 1975).
 - Martin Katz, *The Complete Collaborator: The Pianist as Partner* (Oxford University Press, 2009).
 - Cameron McGraw, *Piano Duet Repertoire: Music Originally Written for One Piano, Four Hands* (Indiana University Press).
-- Wikipedia tiếng Anh: [List of compositions for piano duo](https://en.wikipedia.org/wiki/List_of_compositions_for_piano_duo), [Ma mère l'Oye](https://en.wikipedia.org/wiki/Ma_m%C3%A8re_l%27Oye), [Gerald Moore](https://en.wikipedia.org/wiki/Gerald_Moore).
-- Bản nhạc: [IMSLP](https://imslp.org/) (tìm "Diabelli Op.149", "Jeux d'enfants", "Dolly, Op.56", "Ma mère l'oye", "Fantasie D.940"); Diabelli Op. 149 có bản của Universal Edition (UE 35); ấn bản Urtext: [G. Henle Verlag](https://www.henle.de/), Bärenreiter, Wiener Urtext.
+- *The Concise Oxford Dictionary of Music* (Oxford University Press), qua [Encyclopedia.com](https://www.encyclopedia.com/): các mục *piano trio*, *piano quartet*, *piano quintet*, *lied*, *mélodie*, *colla voce*, *répétiteur*.
+- Bản nhạc: [IMSLP](https://imslp.org/) (tìm "Diabelli Op.149", "Jeux d'enfants", "Dolly Suite, Op.56", "Ma mère l'Oye (suite)", "Fantasie D.940"); Diabelli Op. 149 có bản của Edition Peters (EP 2442); ấn bản Urtext: [G. Henle Verlag](https://www.henle.de/), Bärenreiter, Wiener Urtext.
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

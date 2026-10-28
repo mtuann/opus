@@ -15,23 +15,23 @@ Mức độ ở cột "Chơi thử" theo thang bảy chặng của site, từ ch
 |---|---|---|---|---|
 | Tổ khúc (*suite*) | Baroque | Chuỗi điệu nhảy cùng giọng | Bach, *French Suite* số 5 BWV 816 | [Minuet Sol trưởng](/opus/piano/tac-pham/minuet-sol/) (chặng 2) |
 | Prelude và fugue | Baroque và sau đó | Một phần tự do, một phần phức điệu | Bach, *Bình quân luật* | [Bach, Prelude Đô trưởng](/opus/piano/tac-pham/bach-prelude-do/) (chặng 4) |
-| Invention | Baroque | Hai bè đối đáp quanh một môtip | Bach, Invention số 1 và số 8 | [Invention số 1](/opus/piano/tac-pham/bach-invention-1/) (chặng 5) |
+| Invention | Baroque | Hai bè đối đáp quanh một môtip | Bach, Invention số 1 và số 8 | [Invention số 1](/opus/piano/tac-pham/bach-invention-1/) (chặng 4) |
 | Biến tấu | Mọi thời kỳ | Một chủ đề, nhiều lần biến đổi | Bach, *Goldberg*; Beethoven, *Diabelli* | Beethoven, 6 biến tấu trên một bài ca Thụy Sĩ WoO 64 (chặng 2–3) |
 | Sonata một chương | Baroque | Hai phần, mỗi phần nhắc lại | Scarlatti, K. 141, K. 380 | Scarlatti, K. 32 (chặng 4) |
 | Sonata, sonatina | Cổ điển trở đi | Nhiều chương, chương đầu thường ở hình thức sonata | Mozart, K. 331; Beethoven, *Pathétique* | [Clementi, Sonatina Op. 36 số 1](/opus/piano/tac-pham/clementi-sonatina/) (chặng 3) |
 | Rondo | Cổ điển trở đi | Đoạn chính quay lại xen các đoạn khác | Mozart, Rondo La thứ K. 511 | [Für Elise](/opus/piano/tac-pham/fur-elise/) (chặng 4) |
 | Fantasia | Cổ điển, Lãng mạn | Tự do như đang ứng tác | Mozart, Fantasia Rê thứ K. 397; Chopin, *Fantaisie* Op. 49 | Mozart, K. 397 (chặng 6) |
-| Bagatelle, impromptu, moment musical | Lãng mạn | Bản ngắn, một tâm trạng | Beethoven, Op. 126; Schubert, D. 899 | Schubert, Moment musical số 3 (chặng 4) |
+| Bagatelle, impromptu, moment musical | Lãng mạn | Bản ngắn, một tâm trạng | Beethoven, Op. 126; Schubert, D. 899 | Schubert, Moment musical số 3 (chặng 5) |
 | Nocturne | Lãng mạn | Giai điệu hát trên bè đệm rải rộng | Chopin, Op. 9 số 2 | Chopin, Nocturne Đô♯ thứ (di cảo) (chặng 5) |
 | Étude | Lãng mạn trở đi | Một bài toán kỹ thuật thành tác phẩm | Chopin, Op. 10 và Op. 25 | [Burgmüller, Arabesque](/opus/piano/tac-pham/burgmuller-arabesque/) (chặng 3) |
 | Prelude (độc lập) | Lãng mạn trở đi | Ngắn, chỉ một ý | Chopin, Op. 28; Debussy, [*Préludes*](/opus/nghe-nhac/debussy-preludes/) | [Chopin, Prélude Mi thứ](/opus/piano/tac-pham/chopin-prelude-mi-thu/) (chặng 4) |
-| Mazurka, polonaise, valse | Lãng mạn | Điệu nhảy nhịp ba | Chopin | [Chopin, Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/) (chặng 3) |
+| Mazurka, polonaise, valse | Lãng mạn | Điệu nhảy nhịp ba | Chopin | [Chopin, Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/) (chặng 5) |
 | Ballade, scherzo | Lãng mạn | Lớn, kịch tính, như kể chuyện | Chopin, Ballade số 1 | [Ballade số 1](/opus/piano/tac-pham/chopin-ballade-1/) (chặng 7) |
 | Bài hát không lời | Lãng mạn | Giai điệu như ca khúc | Mendelssohn, *Lieder ohne Worte* | [Mendelssohn, Op. 19 số 6](/opus/piano/tac-pham/mendelssohn-thuyen-ca/) (chặng 5) |
 | Chu trình tiểu phẩm | Lãng mạn | Nhiều bản ngắn thành một chuỗi | Schumann, *Kinderszenen*, *Carnaval* | [Schumann, *Album für die Jugend*](/opus/piano/tac-pham/schumann-album/) (chặng 2) |
 | Intermezzo | Cuối Lãng mạn | Ngắn, trầm tư, nội tâm | Brahms, Op. 117, Op. 118 | Brahms, Valse Op. 39 số 15, bản rút gọn của Brahms (chặng 5) |
 | Tiểu phẩm trữ tình | Lãng mạn | Bức tranh nhỏ có tên gợi hình | Grieg, *Lyric Pieces* | Grieg, [*Arietta* Op. 12 số 1](/opus/piano/tac-pham/grieg-arietta/) (chặng 4) |
-| Prelude, tổ khúc thế kỷ 20 | Thế kỷ 20 | Màu sắc và hòa âm mới | Debussy, *Estampes*; Ravel, *Gaspard de la nuit* | Debussy, *The Little Shepherd* (chặng 5) |
+| Prelude, tổ khúc thế kỷ 20 | Thế kỷ 20 | Màu sắc và hòa âm mới | Debussy, *Estampes*; Ravel, *Gaspard de la nuit* | Debussy, *The Little Shepherd* (chặng 6) |
 | Toccata | Baroque đến thế kỷ 20 | Ngón nhanh, phô diễn | Bach, BWV 911; Prokofiev, Op. 11 | Kabalevsky, *Toccatina* Op. 27 số 12 (chặng 3) |
 | Bốn tay, hai đàn | Mọi thời kỳ | Hai người cùng chơi | Schubert, Fantasia Fa thứ D. 940 | [Diabelli, Op. 149](/opus/piano/choi-cung-nguoi-khac/) (chặng 1) |
 

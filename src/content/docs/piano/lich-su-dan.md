@@ -12,16 +12,16 @@ Trước năm 1700, người chơi nhạc phím có ba lựa chọn chính. Khô
 | Nhạc cụ | Cách tạo tiếng | To nhỏ theo lực ngón? | Ghi chú |
 |---|---|---|---|
 | **Clavichord** | Một lưỡi đồng nhỏ (*tangent*) gõ vào dây và **nằm lại trên dây** cho đến khi nhả phím | Có, nhưng rất nhỏ tiếng | Rung nhẹ ngón trên phím tạo tiếng rung (*Bebung*). Nhạc cụ để tập và chơi ở nhà; C. P. E. Bach rất yêu thích nó |
-| **Harpsichord** | Miếng gảy gắn trên con đẩy (*jack*) **gảy** dây | Không | Đổi màu tiếng bằng các bộ dây (*register*) và hai tầng phím. Nhạc cụ phím chính của thời [Baroque](/opus/lich-su/thoi-ky/baroque/) |
+| **Harpsichord** | Miếng gảy gắn trên con đẩy (*jack*) **gảy** dây | Không | Đổi màu tiếng bằng các bộ dây (*register*) và hai tầng phím. Một trong những nhạc cụ phím quan trọng nhất của thời [Baroque](/opus/lich-su/thoi-ky/baroque/) |
 | **Organ** | Hơi thổi qua ống | Không | Tiếng giữ nguyên chừng nào còn giữ phím; đổi màu bằng các bộ ống. Xem [các nhạc cụ khác](/opus/nhac-cu/nhac-cu-khac/) |
 
 Ước mơ của người chơi thế kỷ 17 là một nhạc cụ có sức vang của harpsichord nhưng lại "nói" theo ngón tay như clavichord.
 
 ## Cristofori: chiếc đàn "có nhỏ có to" (khoảng năm 1700)
 
-**Bartolomeo Cristofori** (1655–1731) phụ trách nhạc cụ cho hoàng tử Ferdinando de' Medici ở Florence. Bản kiểm kê nhạc cụ nhà Medici năm **1700** đã ghi một chiếc *arpicimbalo* "mới được Bartolomeo Cristofori phát minh", có búa và bộ giảm âm, âm vực bốn quãng tám. Vì vậy năm 1700 thường được coi là năm sinh của piano.
+**Bartolomeo Cristofori** (1655–1732) phụ trách nhạc cụ cho hoàng tử Ferdinando de' Medici ở Florence. Bản kiểm kê nhạc cụ nhà Medici năm **1700** đã ghi một chiếc *arpicimbalo* "mới được Bartolomeo Cristofori phát minh", có búa và bộ giảm âm, âm vực bốn quãng tám. Vì vậy năm 1700 thường được coi là năm sinh của piano.
 
-Năm **1711**, nhà văn Scipione Maffei viết một bài báo nhiệt tình về chiếc đàn, gọi nó là *gravicembalo col piano, e forte*: "harpsichord có nhỏ và có to". Từ đó sinh ra hai chữ **pianoforte** và **piano**.
+Năm **1711**, nhà văn Scipione Maffei viết bài mô tả chiếc đàn, gọi nó là *gravicembalo col piano, e forte*: "harpsichord có nhỏ và có to". Từ đó sinh ra hai chữ **pianoforte** và **piano**.
 
 Điều thiên tài của Cristofori nằm ở **bộ máy** (*action*), phần nối phím với dây:
 
@@ -33,7 +33,7 @@ Ba cây đàn của Cristofori còn tồn tại đến nay: cây năm 1720 ở B
 
 ## Thế kỷ 18: Silbermann, Bach và hai trường phái
 
-Bài báo của Maffei được dịch sang tiếng Đức năm 1725. Đọc nó, thợ làm đàn **Gottfried Silbermann** bắt đầu làm piano theo thiết kế của Cristofori từ những năm 1730. **J. S. Bach** chê một cây đàn Silbermann đời đầu vì phím nặng và âm cao yếu; về sau ông khen những cây đã cải tiến và còn giúp bán đàn Silbermann. Vua Frederick Đại đế nước Phổ mua nhiều cây đàn này, và Bach đã chơi chúng khi đến cung điện của nhà vua ở Potsdam năm 1747, chuyến thăm sinh ra tác phẩm *Musikalisches Opfer* (Lễ vật âm nhạc).
+Bài viết của Maffei được dịch sang tiếng Đức năm 1725. Đọc nó, thợ làm đàn **Gottfried Silbermann** bắt đầu làm piano theo thiết kế của Cristofori từ những năm 1730. **J. S. Bach** chê một cây đàn Silbermann đời đầu vì phím nặng và âm cao yếu; về sau ông khen những cây đã cải tiến và còn giúp bán đàn Silbermann. Vua Frederick Đại đế nước Phổ mua nhiều cây đàn này, và Bach đã chơi chúng khi đến cung điện của nhà vua ở Potsdam năm 1747, chuyến thăm sinh ra tác phẩm *Musikalisches Opfer* (Lễ vật âm nhạc).
 
 Dù vậy, phần lớn nhạc phím của Bach được viết cho harpsichord, clavichord hoặc organ. Chơi Bach trên piano là một lựa chọn diễn giải, không có gì sai, nhưng nên biết điều đó khi quyết định dùng bàn đạp hay chơi luyến (xem [Bàn đạp](/opus/piano/ban-dap/)).
 
@@ -43,16 +43,16 @@ Cuối thế kỷ 18, piano tách thành hai trường phái:
 
 Năm 1777, ở Augsburg, Mozart thử đàn của Stein rồi viết thư kể cho cha: chạm phím cách nào thì tiếng vẫn luôn đều, đàn giảm âm tốt hơn hẳn những cây ông từng chơi, và có cơ cấu thoát. Khoảng năm 1783 Mozart mua một cây đàn của Walter; cây đàn này nay ở Bảo tàng Mozart tại Salzburg.
 
-**Bộ máy Anh.** Ở London, Johannes Zumpe làm **piano vuông** (*square piano*) nhỏ gọn từ những năm 1760, loại đàn gia đình rất được ưa chuộng. Các xưởng London, nổi bật là **Broadwood**, làm đàn cánh với bộ máy nặng hơn, tiếng to và ngân hơn đàn Vienna.
+**Bộ máy Anh.** Ở London, Johannes Zumpe làm **piano vuông** (*square piano*) nhỏ gọn từ những năm 1760, loại đàn gia đình rất được ưa chuộng. Các xưởng London, nổi bật là **Broadwood**, làm đàn cánh với bộ máy Anh (*English action*), khác hẳn bộ máy Vienna.
 
-Cả hai loại đàn thời này đều có âm vực khoảng **năm quãng tám**. Mozart viết nhạc phím trong khoảng FF–f''' (Fa1–Fa6) suốt đời mình.
+Cả hai loại đàn thời này đều có âm vực khoảng **năm quãng tám**; đàn Stein, chẳng hạn, chạy từ FF đến f''' (Fa1–Fa6).
 
 ## Beethoven và cây đàn lớn dần
 
 Beethoven liên tục đòi hỏi nhiều hơn những gì cây đàn đang có: to hơn, ngân hơn, rộng hơn. Ông lần lượt có:
 
 - Một cây đàn **Érard** từ Paris năm 1803.
-- Một cây **Broadwood** từ London (gửi năm 1817, đến tay ông năm 1818): sáu quãng tám, từ CC đến c'''' (Đô1–Đô7).
+- Một cây **Broadwood** từ London (Thomas Broadwood tặng năm 1818): sáu quãng tám, từ CC đến c'''' (Đô1–Đô7).
 - Một cây của **Conrad Graf** ở Vienna năm 1825: sáu quãng tám rưỡi, từ CC đến f'''' (Đô1–Fa7).
 
 Hình dưới so âm vực các cây đàn này với bàn phím 88 phím ngày nay.
@@ -69,12 +69,12 @@ Thời Lãng mạn, piano thành nhạc cụ của những nghệ sĩ biểu di�
 |---|---|---|
 | **Cơ cấu thoát kép** (*double escapement*) | Érard, bằng sáng chế ở Anh năm 1821 | Đánh lại một nốt khi phím mới nhả lên một phần, nên lặp nốt và láy rền nhanh được. Đây là nền tảng bộ máy đàn cánh hiện đại |
 | **Khung sắt đúc** | Alpheus Babcock (Mỹ) năm 1825 cho đàn vuông; Jonas Chickering được cấp bằng sáng chế năm 1843 cho đàn cánh | Chịu lực căng dây lớn, nên dùng được dây dày hơn, tiếng to hơn và giữ cao độ lâu hơn |
-| **Búa bọc nỉ** | Dần thay búa bọc da trong nửa đầu thế kỷ 19 | Tiếng tròn hơn, dải sắc thái rộng hơn |
+| **Búa bọc nỉ** | Jean-Henri Pape (Paris) lấy bằng sáng chế năm 1826; búa bọc nỉ thay dần búa bọc da, chỉ phổ biến hẳn sau năm 1855 | Tiếng tròn hơn, dải sắc thái rộng hơn |
 | **Dây bắt chéo** (*overstringing*) | Steinway, bằng sáng chế cho đàn cánh năm 1859 | Dây trầm dài chạy chéo phía trên dây cao, nằm gần giữa bảng cộng hưởng, cho tiếng trầm đầy hơn |
-| **Bàn đạp giữ âm** (*sostenuto*) | Steinway, bằng sáng chế năm 1874 | Chỉ giữ ngân những nốt đang được giữ phím lúc nhấn bàn đạp |
-| **88 phím**, từ La0 đến Đô8 | Steinway cuối những năm 1880; các hãng khác làm theo | Âm vực chuẩn đến ngày nay |
+| **Bàn đạp giữ âm** (*sostenuto*) | Claude Montal làm cơ cấu giữ âm năm 1862; Albert Steinway được cấp bằng sáng chế năm 1874 | Chỉ giữ ngân những nốt đang được giữ phím lúc nhấn bàn đạp |
+| **88 phím**, từ La0 đến Đô8 | Chuẩn của đàn piano hiện đại | Âm vực chuẩn đến ngày nay |
 
-Mỗi nghệ sĩ có cây đàn mình thích. Chopin gắn bó với đàn **Pleyel** ở Paris, tiếng mềm và nhạy với những sắc thái nhỏ; Liszt thường chơi đàn **Érard**, mạnh mẽ và lặp nốt nhanh. Nhiều hãng đàn lớn ra đời trong giai đoạn này: **Bösendorfer** (Vienna, 1828), **Steinway & Sons** (New York, 1853, do Heinrich Engelhard Steinweg lập; xưởng Hamburg mở năm 1880), **C. Bechstein** (Berlin, 1853) và **Blüthner** (Leipzig, 1853).
+Mỗi nghệ sĩ có cây đàn mình thích. Chopin gắn bó với đàn **Pleyel** ở Paris, tiếng mềm và nhạy với những sắc thái nhỏ; Liszt thường chơi đàn **Érard**, mạnh mẽ và lặp nốt nhanh. Nhiều hãng đàn lớn ra đời trong giai đoạn này: **Bösendorfer** (Vienna, 1828), **Steinway & Sons** (New York, 1853, do Henry Engelhard Steinway lập; xưởng Hamburg mở năm 1880), **C. Bechstein** (Berlin, 1853) và **Blüthner** (Leipzig, 1853).
 
 Song song là **đàn đứng** (*upright*). Khoảng năm 1800, nhiều thợ làm đàn thử dựng dây theo chiều đứng, như kiểu "đàn hươu cao cổ" (*giraffe piano*) ở Vienna. Đến giữa thế kỷ 19, đàn đứng nhỏ gọn đã thành món đồ quen thuộc trong các gia đình. Vì thế thế kỷ 19 có rất nhiều nhạc dễ chơi cho người học, những bản chuyển soạn giao hưởng và opera cho piano, và nhạc **bốn tay** để chơi cùng nhau ở nhà (xem [Các thể loại nhạc piano](/opus/piano/the-loai/)).
 
@@ -97,7 +97,7 @@ Hiểu cây đàn hoạt động thế nào giúp bạn hiểu vì sao có nhữ
 2. **Con đẩy hất búa lên rồi thoát ra.** Ngay trước khi búa chạm dây, con đẩy trượt ra khỏi búa; búa bay tự do, gõ vào dây rồi rơi xuống. Bạn không thể "giữ búa trên dây" hay "nắn" nốt sau khi đã gõ.
 3. **Cần lặp** (*repetition lever*) đỡ búa ở lưng chừng, nên bạn đánh lại được nốt khi phím mới nhả lên một phần. Đó là cơ cấu thoát kép của Érard.
 4. **Bộ giảm âm** của mỗi nốt nhấc khỏi dây khi bạn bấm phím và rơi xuống khi bạn nhả phím. Bàn đạp vang nhấc **tất cả** bộ giảm âm cùng lúc.
-5. **Dây đàn.** Ở vùng trầm nhất, mỗi nốt có một dây quấn đồng; lên cao một chút là hai dây; phần lớn bàn phím mỗi nốt có ba dây. Một cây đàn cánh có khoảng hơn hai trăm dây, với tổng lực căng thường được ước tính vào khoảng 20 tấn, do khung gang gánh chịu.
+5. **Dây đàn.** Ở vùng trầm nhất, mỗi nốt có một dây quấn đồng; lên cao một chút là hai dây; phần lớn bàn phím mỗi nốt có ba dây. Một cây piano có thể có tới 230 dây; tổng lực căng là 16 tấn vào năm 1862 và có thể lên tới 30 tấn ở đàn hiện đại, do khung gang gánh chịu.
 6. **Bảng cộng hưởng** (*soundboard*) bằng gỗ vân sam nhận rung động từ dây qua cầu ngựa. Chính bảng gỗ lớn này đẩy không khí và tạo ra âm lượng ta nghe được.
 
 Ba bàn đạp (vang, *una corda*, *sostenuto*) và chỗ chúng khác nhau giữa đàn cánh và đàn đứng được giải thích ở trang [Bàn đạp](/opus/piano/ban-dap/#ba-ban-ap).
