@@ -6,7 +6,8 @@
 //                                                    chưa ghi; điền ly_do rồi chép vào hồ sơ
 // Phần do thành phần dựng khác cách thì so riêng: khuông nhạc (tiêu đề và trọn mã ABC), câu hỏi (chữ từng câu, lựa
 // chọn kèm đáp án đúng, giải thích); so cả tiêu đề, mô tả trang và id tiêu đề. Bỏ hình chưa chuyển, chữ chỉ dành cho
-// máy đọc màn hình và link #mục cạnh tiêu đề.
+// máy đọc màn hình và link #mục cạnh tiêu đề. Phần tử có data-sinh (chữ sinh từ dữ liệu hay do thành phần dựng) bỏ hẳn,
+// cả tiêu đề, khuông nhạc, câu hỏi nằm trong nó: đừng đặt data-sinh bọc chữ của trang.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -204,7 +205,10 @@ export function docMoi(html) {
 }
 
 /** Các khối khác nhau giữa hai dãy (so theo dãy con chung dài nhất): [{ cu, moi }] với cu, moi là khối hay null. */
-export function khacNhau(a, b) {
+export const khacNhau = (a, b) => buoc(a, b).filter((d) => !d.giong);
+
+/** Mọi bước của phép so (LCS): khối giống nhau ({giong: true}) và khối khác ({cu, moi}, một trong hai là null). */
+function buoc(a, b) {
 	const n = a.length;
 	const m = b.length;
 	const L = Array.from({ length: n + 1 }, () => new Uint16Array(m + 1));
@@ -214,6 +218,7 @@ export function khacNhau(a, b) {
 	let j = 0;
 	while (i < n || j < m) {
 		if (i < n && j < m && a[i] === b[j]) {
+			ra.push({ giong: true });
 			i++;
 			j++;
 		} else if (j < m && (i === n || L[i][j + 1] >= L[i + 1][j])) ra.push({ cu: null, moi: b[j++] });
@@ -271,13 +276,16 @@ export function khungDoiChu(trang, daGhi = [], dist = path.join(GOC, 'dist')) {
 		for (const x of ds) m.set(x, (m.get(x) ?? 0) + 1);
 		return m;
 	};
+	if (!Array.isArray(daGhi)) throw new Error('doi_chu của hồ sơ phải là danh sách');
 	const conCu = dem(daGhi.flatMap((d) => d?.cu ?? []));
 	const conMoi = dem(daGhi.flatMap((d) => d?.moi ?? []));
 	const lay = (m, x) => (m.get(x) ? (m.set(x, m.get(x) - 1), true) : false);
 	const ra = [];
 	let muc = null;
 	let truoc = -2;
-	khacNhau(k.cu, k.moi).forEach((d, i) => {
+	// khối khác liền nhau trên trang (không có khối giống xen giữa) gộp thành một mục
+	buoc(k.cu, k.moi).forEach((d, i) => {
+		if (d.giong) return;
 		const cu = d.cu !== null && !lay(conCu, d.cu) ? d.cu : null;
 		const moi = d.moi !== null && !lay(conMoi, d.moi) ? d.moi : null;
 		if (cu === null && moi === null) return;
@@ -328,57 +336,58 @@ if (import.meta.main) {
 	if (ts.includes('--doi-chu')) {
 		for (const trang of trangs) {
 			const f = path.join(GOC, 'kiem-dinh', `${trang}.yml`);
-			const daGhi = (fs.existsSync(f) && parse(fs.readFileSync(f, 'utf8'))?.doi_chu) || [];
 			let khung;
 			try {
+				const daGhi = (fs.existsSync(f) && parse(fs.readFileSync(f, 'utf8'))?.doi_chu) || [];
 				khung = khungDoiChu(trang, daGhi, dist);
 			} catch (e) {
+				process.exitCode = 1;
 				console.log(`# ${trang}: KHÔNG SO ĐƯỢC: ${e.message}`);
 				continue;
 			}
 			console.log(`# ${trang}: ${khung.length ? `${khung.length} mục chưa ghi` : 'doi_chu đã đủ'}`);
 			if (khung.length) process.stdout.write(stringify({ doi_chu: khung }, { lineWidth: 0 }));
 		}
-		process.exit(0);
-	}
-	let hong = 0;
-	for (const trang of trangs) {
-		let kq;
-		try {
-			kq = soTrang(trang, dist);
-		} catch (e) {
-			hong++;
-			console.log(`${trang}: KHÔNG SO ĐƯỢC: ${e.message}`);
-			continue;
-		}
-		if (dat(kq)) {
-			console.log(`${trang}: chữ giống nhau`);
-			continue;
-		}
-		hong++;
-		console.log(`${trang}: KHÁC`);
-		if (kq.tieuDe[0] !== kq.tieuDe[1]) console.log(`  tiêu đề: "${kq.tieuDe[0]}" / "${kq.tieuDe[1]}"`);
-		if (kq.moTa[0] !== kq.moTa[1]) console.log(`  mô tả: "${kq.moTa[0]}" / "${kq.moTa[1]}"`);
-		const [abcCu, abcMoi] = kq.abc;
-		if (abcCu.length !== abcMoi.length) console.log(`  khuông nhạc: cũ ${abcCu.length} khối, mới ${abcMoi.length} khối`);
-		abcCu.forEach((a, i) => {
-			const b = abcMoi[i];
-			if (!b) return;
-			if (a.ten !== b.ten) console.log(`  khuông ${i + 1}, tiêu đề: "${a.ten}" / "${b.ten}"`);
-			if (a.ma !== b.ma) {
-				const [x, y] = [a.ma.split('\n'), b.ma.split('\n')];
-				const j = x.findIndex((l, k) => l !== y[k]);
-				const k = j < 0 ? x.length : j;
-				console.log(`  khuông ${i + 1}, mã ABC dòng ${k + 1}: "${x[k] ?? ''}" / "${y[k] ?? ''}"`);
+	} else {
+		let hong = 0;
+		for (const trang of trangs) {
+			let kq;
+			try {
+				kq = soTrang(trang, dist);
+			} catch (e) {
+				hong++;
+				console.log(`${trang}: KHÔNG SO ĐƯỢC: ${e.message}`);
+				continue;
 			}
-		});
-		const [qCu, qMoi] = kq.quiz;
-		if (qCu.length !== qMoi.length) console.log(`  câu hỏi: cũ ${qCu.length} câu, mới ${qMoi.length} câu`);
-		qCu.forEach((q, i) => qMoi[i] !== undefined && q !== qMoi[i] && console.log(`  câu hỏi ${i + 1}:\n    cũ:  ${q}\n    mới: ${qMoi[i]}`));
-		const idKhac = kq.id[0].filter((x, i) => x !== kq.id[1][i]);
-		if (idKhac.length || kq.id[0].length !== kq.id[1].length) console.log(`  id tiêu đề: cũ ${JSON.stringify(kq.id[0])} / mới ${JSON.stringify(kq.id[1])}`);
-		for (const { cu, moi } of kq.khac.slice(0, 20)) console.log(cu !== null ? `  - cũ: ${cu.slice(0, 200)}` : `  + mới: ${moi.slice(0, 200)}`);
-		if (kq.khac.length > 20) console.log(`  … còn ${kq.khac.length - 20} khối khác`);
+			if (dat(kq)) {
+				console.log(`${trang}: chữ giống nhau`);
+				continue;
+			}
+			hong++;
+			console.log(`${trang}: KHÁC`);
+			if (kq.tieuDe[0] !== kq.tieuDe[1]) console.log(`  tiêu đề: "${kq.tieuDe[0]}" / "${kq.tieuDe[1]}"`);
+			if (kq.moTa[0] !== kq.moTa[1]) console.log(`  mô tả: "${kq.moTa[0]}" / "${kq.moTa[1]}"`);
+			const [abcCu, abcMoi] = kq.abc;
+			if (abcCu.length !== abcMoi.length) console.log(`  khuông nhạc: cũ ${abcCu.length} khối, mới ${abcMoi.length} khối`);
+			abcCu.forEach((a, i) => {
+				const b = abcMoi[i];
+				if (!b) return;
+				if (a.ten !== b.ten) console.log(`  khuông ${i + 1}, tiêu đề: "${a.ten}" / "${b.ten}"`);
+				if (a.ma !== b.ma) {
+					const [x, y] = [a.ma.split('\n'), b.ma.split('\n')];
+					const j = x.findIndex((l, k) => l !== y[k]);
+					const k = j < 0 ? x.length : j;
+					console.log(`  khuông ${i + 1}, mã ABC dòng ${k + 1}: "${x[k] ?? ''}" / "${y[k] ?? ''}"`);
+				}
+			});
+			const [qCu, qMoi] = kq.quiz;
+			if (qCu.length !== qMoi.length) console.log(`  câu hỏi: cũ ${qCu.length} câu, mới ${qMoi.length} câu`);
+			qCu.forEach((q, i) => qMoi[i] !== undefined && q !== qMoi[i] && console.log(`  câu hỏi ${i + 1}:\n    cũ:  ${q}\n    mới: ${qMoi[i]}`));
+			const idKhac = kq.id[0].filter((x, i) => x !== kq.id[1][i]);
+			if (idKhac.length || kq.id[0].length !== kq.id[1].length) console.log(`  id tiêu đề: cũ ${JSON.stringify(kq.id[0])} / mới ${JSON.stringify(kq.id[1])}`);
+			for (const { cu, moi } of kq.khac.slice(0, 20)) console.log(cu !== null ? `  - cũ: ${cu.slice(0, 200)}` : `  + mới: ${moi.slice(0, 200)}`);
+			if (kq.khac.length > 20) console.log(`  … còn ${kq.khac.length - 20} khối khác`);
+		}
+		process.exitCode = hong ? 1 : 0;
 	}
-	process.exit(hong ? 1 : 0);
 }

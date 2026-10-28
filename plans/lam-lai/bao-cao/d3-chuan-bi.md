@@ -28,3 +28,12 @@ Nhánh `moi/d3-chuan-bi`, ngày 27/10/2026, Claude Opus 5.5 (phiên Cowork). M�
 - `npm test`: 133 phép thử, 132 đạt, 1 bỏ qua (kiểm thử phạm vi: nhánh này không phải nhánh lô), 0 hỏng.
 - `node tools/chuyen/so-chu.mjs nhac-ly/08-hoa-bieu nhac-ly/11-hop-am-bay --doi-chu`: bài 8 "doi_chu đã đủ"; bài 11 (chưa chuyển) "KHÔNG SO ĐƯỢC".
 - Kiểm thử trình duyệt và Lighthouse: chạy ở `test.yml` khi push nhánh.
+
+## Sửa theo review mã
+
+Review (Claude Sonnet 5.5, mức Vừa, chỉ đọc diff): không có chỗ phải sửa; đã sửa các chỗ nên sửa sau.
+
+- `khungDoiChu` gộp khối khác theo vị trí trong danh sách khối khác, nên hai chỗ khác cách xa nhau trên trang có thể bị gộp làm một mục. Nay gộp theo bước của phép so (`buoc`): chỉ gộp khi không có khối giống xen giữa. `khacNhau` giữ nguyên kết quả.
+- `--doi-chu`: không gọi `process.exit` ngay sau khi ghi ra (có thể cắt chữ khi ghi vào ống); trang không so được thì mã thoát 1; hồ sơ có `doi_chu` không phải danh sách, hay YAML hỏng, thì báo ở trang ấy thay vì dừng cả lệnh.
+- Đầu file `so-chu.mjs` ghi rõ: phần tử `data-sinh` bị bỏ hẳn, kể cả tiêu đề, khuông, câu hỏi nằm trong nó.
+- Không sửa: bộ nhận dạng `oz-ks-hinh`, `oz-vong-tinh` của `KHOI` (đã kiểm: chỉ có trong HTML của khối ấy; CSS nằm ở file riêng, không trong HTML trang).
