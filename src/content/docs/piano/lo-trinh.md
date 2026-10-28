@@ -82,7 +82,7 @@ Mục tiêu: chơi trọn một sonatina Cổ điển, ngón chạy đều, và 
 |---|---|
 | Tay | Hình đệm Alberti và đệm valse, nhỏ hơn giai điệu. Chuỗi nốt móc kép đều. Staccato bằng cổ tay. Kỹ thuật **đạp trễ** (legato pedal) thành thạo. [Nốt hoa mỹ](/opus/piano/not-hoa-my/) đơn giản: láy, appoggiatura. Bắt đầu phân biệt cách phát âm của Baroque, Cổ điển và Lãng mạn. |
 | Gam, hợp âm | Gam trưởng và thứ đến 3 dấu hóa, hai tay, hai quãng tám; gam ngược chiều; [hợp âm rải](/opus/piano/hop-am-rai/) hai quãng tám từng tay; gam nửa cung một quãng tám. [Đệm cho một giai điệu](/opus/piano/hoa-am/dem-giai-dieu/) bằng I, IV, V. Étude đầu tiên: xem [Bài tập ngón và étude](/opus/piano/bai-tap-ngon/). |
-| Đọc nhạc | Thị tấu ở mức Grade 1–2. Nhận ra hợp âm ba ở mọi thể đảo chỉ bằng một cái nhìn. Đọc trước nửa ô nhịp. |
+| Đọc nhạc | Thị tấu ở mức Grade 1–2. Nhận ra hợp âm ba ở mọi thể đảo chỉ bằng một cái nhìn. Tập [nhìn trước](/opus/piano/thi-tau/#nhin-truoc) vài nốt. |
 | Nhạc lý | [Bài 10](/opus/nhac-ly/10-hop-am-ba/) đến [bài 14](/opus/nhac-ly/14-ky-hieu-bieu-dien/) (hợp âm, hòa âm chức năng, kết, ký hiệu biểu diễn), rồi [Ôn tập 3](/opus/nhac-ly/on-tap-3/). |
 | Tai | [Nghe tiến trình hòa âm](/opus/luyen-tai/nghe-tien-trinh/): nghe ra I, IV, V và các kết. |
 | Tác phẩm | Bài học trên site: [trang chặng 3](/opus/piano/lo-trinh/chang-3/). |
@@ -105,7 +105,7 @@ Mục tiêu: chơi phức điệu, làm nổi giai điệu trong cùng một tay
 |---|---|
 | Tay | **Phức điệu hai bè** kiểu Bach: mỗi tay một giọng độc lập, đôi khi hai giọng trong một tay. Cân bằng giai điệu và phần đệm trong cùng một tay. Rubato nhẹ. Nốt hoa mỹ Baroque (láy rền thường bắt đầu từ nốt trên). Chuyền tay nhanh (Für Elise), hợp âm chơi thật khẽ và đều (Chopin, Prélude Mi thứ). |
 | Gam, hợp âm | Mọi gam trưởng và thứ (hòa âm, giai điệu), hai tay, 2–3 quãng tám; gam ngược chiều; hợp âm rải hai tay hai quãng tám; gam nửa cung hai tay. [Các mẫu hòa âm thời Cổ điển](/opus/piano/hoa-am/mau-galant/) và [ứng tác](/opus/piano/hoa-am/ung-tac/) trên các mẫu ấy. |
-| Đọc nhạc | Thị tấu ở mức Grade 2–3. Đọc trước một ô nhịp. Bắt đầu đọc nhạc [bốn tay](/opus/piano/choi-cung-nguoi-khac/) cùng người khác. |
+| Đọc nhạc | Thị tấu ở mức Grade 2–3. Nhìn trước xa hơn, dù hiếm khi tới trọn một ô nhịp. Bắt đầu đọc nhạc [bốn tay](/opus/piano/choi-cung-nguoi-khac/) cùng người khác. |
 | Nhạc lý | [Bài 15](/opus/nhac-ly/15-tiet-tau-nang-cao/) đến [bài 20](/opus/nhac-ly/20-doc-tong-pho/) (tiết tấu nâng cao, điệu thức và gam ngũ cung, khóa Đô và dịch giọng, âm ngoài hợp âm, át phụ và chuyển giọng, đọc tổng phổ) và [bài 31: Hình thức nhỏ](/opus/nhac-ly/31-hinh-thuc-nho/); đọc [Rondo](/opus/hinh-thuc/rondo/). |
 | Tai | [Chép giai điệu](/opus/luyen-tap/chep-giai-dieu/) ngắn; nghe tiến trình có hợp âm thứ. |
 | Tác phẩm | Bài học trên site: [trang chặng 4](/opus/piano/lo-trinh/chang-4/). Ngoài ra: Kuhlau: Sonatina Op. 55 số 1, các *Lyric Pieces* khác trong Op. 12 của Grieg. |

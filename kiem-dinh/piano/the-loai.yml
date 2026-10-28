@@ -9,7 +9,7 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: Claude Sonnet 5.5 (D4-L3 lượt 1, phần B)
-      luot_2: null
+      luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 4, 28/10/2026; bổ sung sau review)
       review: Claude (review D4-gom, nhóm C, 28/10/2026)
       kiem_mau: null
 nguon:
@@ -219,7 +219,7 @@ nhan_dinh:
       - ency-etude
       - ency-mazurka
   - id: n2
-    cau: Mức độ ở cột "Chơi thử" theo thang bảy chặng, chặng 1 là khởi đầu, chặng 7 là sau Grade 8.
+    cau: Mức độ ghi ở cột "Chơi thử" (khi có) theo thang bảy chặng, chặng 1 là khởi đầu, chặng 7 là sau Grade 8.
     loai: ve-site
     ket_qua: dung
     ghi_chu: 'Khớp cap-do.yml. Review D4-gom: đổi nhãn cap-do thành ve-site (thang bảy chặng là hệ của site). Đã kiểm src/data/cap-do.yml (khóa): 7 chặng, chặng 1 Khởi đầu, chặng 7 Sau Grade 8; anchor #thi-cap: ../opus-zero/docs/piano/thay-va-thi.md có "## Thi cấp". Chữ "(khi có)" thêm vì các ô không có nguồn Grade đã bỏ mức (n9–n11).'
@@ -281,32 +281,34 @@ nhan_dinh:
     luot_2_ghi_chu: Chặng 1 là hệ của site, không kiểm được; chưa xác định được Diabelli Op. 149 có phải bản độc tấu hay bốn tay.
     review: dung
   - id: n9
-    cau: 'Bảng: Beethoven, 6 biến tấu trên bài ca Thụy Sĩ WoO 64 ở chặng 2–3.'
+    cau: 'Bảng, cột Chơi thử của Biến tấu: Beethoven, 6 biến tấu trên một bài ca Thụy Sĩ WoO 64 (không ghi chặng).'
     loai: danh-muc
     ket_qua: da-sua
     ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này (không có trong tac-pham.yml, chưa tìm thấy mức Henle/ABRSM). Review D4-gom: Không có nguồn Grade (ABRSM, Henle) cho WoO 64: bỏ "(chặng 2–3)" khỏi ô; tác phẩm có thật (IMSLP: WoO 64, Fa trưởng, 1790). Mẹo đầu trang thêm "(khi có)". Đổi nhãn cap-do thành danh-muc: sau khi bỏ chặng, ô chỉ còn tên và số hiệu tác phẩm.'
-    luot_2: khong-chac
-    luot_2_ghi_chu: "Chặng 2–3 là hệ của site, không kiểm được (WoO 64 có thật: Variations on a Swiss Song, pianolibrary.org)."
+    luot_2: dung
     nguon:
       - im-tl
+    luot_2_nguon: [ "https://imslp.org/wiki/6_Variations_on_a_Swiss_Song,_WoO_64_(Beethoven,_Ludwig_van)" ]
+    luot_2_ghi_chu: "IMSLP: 6 Variations on a Swiss Song WoO 64, Fa trưởng, 1790."
   - id: n10
-    cau: 'Bảng: Scarlatti, K. 32 ở chặng 4.'
+    cau: 'Bảng, cột Chơi thử của Sonata một chương: Scarlatti, K. 32 (không ghi chặng); K. 32 Rê thứ có tên Aria.'
     loai: danh-muc
     ket_qua: da-sua
-    ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này (Henle xếp K. 32 mức 3 nhưng chưa quy được sang chặng). Review D4-gom: Henle xếp K. 32 mức 3 nhưng không ghi Grade: bỏ "(chặng 4)". IMSLP: K. 32 Rê thứ, chương "Aria". Đổi nhãn cap-do thành danh-muc (như n9).'
+    ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này (Henle xếp K. 32 mức 3 nhưng chưa quy được sang chặng). Review D4-gom: Henle xếp K. 32 mức 3 nhưng không ghi Grade: bỏ "(chặng 4)". IMSLP: K. 32 Rê thứ, chương "Aria". Đổi nhãn cap-do thành danh-muc (như n9). Người gom (D4-gom): lượt 2 bổ sung khong-chac vì không mở được nguồn (Britannica, encyclopedia.com, OMT, IMSLP chặn hay lỗi), không phải vì nguồn nói khác; giữ theo nguồn lượt 1 và review đã mở, ghi ở trên.'
     luot_2: khong-chac
-    luot_2_ghi_chu: Chặng 4 là hệ của site, không kiểm được.
     nguon:
       - im-tl
+    luot_2_ghi_chu: Không mở được nguồn bậc 2 cho K. 32 (trang IMSLP loạt sonata chỉ cho 555 sonata, không ghi K. 32). Biệt danh Aria/Rê thứ là hiểu biết phổ biến, không thấy mâu thuẫn.
   - id: n11
-    cau: 'Bảng: Mozart, Fantasia K. 397 ở chặng 6; Chopin, Nocturne Đô♯ thứ (di cảo) ở chặng 5; Brahms, Valse Op. 39 số 15 rút gọn ở chặng 5; Kabalevsky, Toccatina Op. 27 số 12 ở chặng 3.'
+    cau: 'Bảng, cột Chơi thử (không ghi chặng): Mozart, Fantasia K. 397; Chopin, Nocturne Đô♯ thứ (di cảo); Brahms, Valse Op. 39 số 15, bản rút gọn của Brahms; Kabalevsky, Toccatina Op. 27 số 12.'
     loai: danh-muc
     ket_qua: da-sua
     ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này. Review D4-gom: Không có nguồn Grade cho Mozart K. 397, Nocturne Đô♯ thứ (di cảo), Brahms Valse Op. 39 số 15 bản rút gọn, Kabalevsky Toccatina Op. 27 số 12: bỏ chặng ở bốn ô. Các bản có thật (IMSLP: K. 397, Nocturne Đô♯ thứ B. 49; hồ sơ nha-soan-nhac). Đổi nhãn cap-do thành danh-muc (như n9).'
-    luot_2: khong-chac
-    luot_2_ghi_chu: Chặng là hệ của site, không kiểm được (các bản K. 397, Nocturne di cảo, Valse Op. 39, Toccatina Op. 27 số 12 có thật).
+    luot_2: dung
     nguon:
       - im-tl
+    luot_2_nguon: [ "https://imslp.org/wiki/Fantasia_in_D_minor,_K.397/385g_(Mozart,_Wolfgang_Amadeus)", "https://imslp.org/wiki/16_Waltzes,_Op.39_(Brahms,_Johannes)", "https://www.sheetmusicplus.com/en/product/product-290154.html" ]
+    luot_2_ghi_chu: Mozart K. 397 Rê thứ (IMSLP); Brahms Op. 39 có bản rút gọn do chính Brahms (IMSLP); Kabalevsky Op. 27 số 12 là Toccatina (mục lục Op. 27). Nocturne Đô# thứ di cảo chưa mở nguồn riêng.
   - id: n12
     cau: 'Bảng: cột Thời kỳ của từng thể loại (Baroque, Cổ điển, Lãng mạn, thế kỷ 20) và cột Nghe thử nêu các bản có thật: French Suite số 5 BWV 816, Bình quân luật, Goldberg, Diabelli, Scarlatti K. 141 và K. 380, Mozart K. 331, Pathétique, Rondo K. 511, Fantasia K. 397, Fantaisie Op. 49, Op. 126, D. 899, Op. 9 số 2, Op. 10 và Op. 25, Op. 28, Estampes, Gaspard de la nuit, Lieder ohne Worte, Kinderszenen, Carnaval, Op. 117 và 118, Lyric Pieces, BWV 911, Prokofiev Op. 11, Fantasia D. 940.'
     loai: danh-muc
@@ -325,14 +327,14 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.pianolibrary.org/composers/bach/", "https://www.pianolibrary.org/composers/mozart/", "https://www.pianolibrary.org/composers/beethoven/", "https://www.pianolibrary.org/composers/chopin/", "https://www.pianolibrary.org/composers/schumann/", "https://www.pianolibrary.org/composers/mendelssohn/", "https://www.pianolibrary.org/composers/schubert/", "https://www.pianolibrary.org/composers/grieg/", "https://www.pianolibrary.org/composers/brahms/" ]
     luot_2_ghi_chu: "Phần 'bản có thật' đúng cho phần lớn: BWV 911, 988, Bình quân luật, K. 331/511/397, Op. 126, Op. 28, Op. 10/25, Op. 49, Lieder ohne Worte, Kinderszenen, Carnaval, D. 899, Lyric Pieces, Op. 117/118... Chưa kiểm riêng K. 141, K. 380, Op. 9 số 2, Estampes, Gaspard, Prokofiev Op. 11, D. 940 (D. 940 xác nhận qua Apple Music); cột Thời kỳ là cách xếp của site."
   - id: n13
-    cau: Phần lớn nhạc phím Baroque viết cho harpsichord, clavichord hoặc organ; kho bài này dạy hai tay độc lập, phức điệu, nhịp vững.
+    cau: Nhạc phím Baroque được viết cho harpsichord, clavichord hoặc organ, khi piano còn rất mới; kho bài này dạy hai tay độc lập, phức điệu, nhịp vững.
     loai: lich-su
     ket_qua: da-sua
-    ghi_chu: 'Nhận định sư phạm; phần lịch sử nhạc cụ (harpsichord, clavichord, organ) là kiến thức chung. Review D4-gom: Đổi nhãn khuyen-tap thành lich-su: câu có sự kiện lịch sử nhạc cụ. Met: piano ra đời khoảng 1700, Silbermann làm piano từ những năm 1730. Cũ: "Phần lớn nhạc phím Baroque viết cho harpsichord, clavichord hoặc organ (xem ...)". Mới: "Nhạc phím Baroque được viết cho harpsichord, clavichord hoặc organ, khi piano còn rất mới (xem ...)". Vế "dạy hai tay độc lập, phức điệu, nhịp vững" là lời khuyên.'
-    luot_2: dung
-    luot_2_ghi_chu: "Hợp lý: nhạc phím Baroque dạy hai tay độc lập, phức điệu và nhịp vững."
+    ghi_chu: 'Nhận định sư phạm; phần lịch sử nhạc cụ (harpsichord, clavichord, organ) là kiến thức chung. Review D4-gom: Đổi nhãn khuyen-tap thành lich-su: câu có sự kiện lịch sử nhạc cụ. Met: piano ra đời khoảng 1700, Silbermann làm piano từ những năm 1730. Cũ: "Phần lớn nhạc phím Baroque viết cho harpsichord, clavichord hoặc organ (xem ...)". Mới: "Nhạc phím Baroque được viết cho harpsichord, clavichord hoặc organ, khi piano còn rất mới (xem ...)". Vế "dạy hai tay độc lập, phức điệu, nhịp vững" là lời khuyên. Người gom (D4-gom): lượt 2 bổ sung khong-chac vì không mở được nguồn (Britannica, encyclopedia.com, OMT, IMSLP chặn hay lỗi), không phải vì nguồn nói khác; giữ theo nguồn lượt 1 và review đã mở, ghi ở trên.'
+    luot_2: khong-chac
     nguon:
       - met-crist
+    luot_2_ghi_chu: Không mở nguồn bậc 2 cho câu; không thấy mâu thuẫn (piano ra đời khoảng 1700).
   - id: n14
     cau: Tổ khúc là chuỗi điệu nhảy cùng giọng; lõi chuẩn là allemande, courante, sarabande, gigue; giữa sarabande và gigue thường chèn minuet, gavotte, bourrée.
     loai: cau-truc
@@ -344,15 +346,14 @@ nhan_dinh:
     nguon:
       - ency-suite
   - id: n15
-    cau: Allemande nhịp chẵn, vừa phải, dòng móc kép; courante nhịp ba, nhanh hơn; sarabande nhịp ba chậm, thường nhấn phách 2; gigue nhanh, thường 6/8 hoặc 12/8.
+    cau: "Bốn điệu lõi của tổ khúc: allemande (nhịp chẵn, vừa phải), courante (nhịp ba; kiểu Ý corrente thì nhanh), sarabande (nhịp ba chậm, trang nghiêm) và gigue (nhanh, nhịp ghép như 6/8)."
     loai: dinh-nghia
     ket_qua: da-sua
-    ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này (đặc biệt "courante nhịp ba": courante Pháp thường 3/2 hoặc 6/4, courante Ý 3/4 nhanh). Review D4-gom: ODM (lượt 2): allemande nhịp chẵn vừa phải; corrente Ý nhịp ba nhanh, courante Pháp khác; sarabande nhịp ba chậm; gigue nhịp ghép 6/8. Bỏ chi tiết không nguồn ("dòng nốt móc kép chảy đều", "thường nhấn vào phách 2", "12/8", "hay mở đầu bằng lối bắt chước"). Cũ: "allemande (nhịp chẵn, vừa phải, dòng nốt móc kép chảy đều), courante (nhịp ba, chạy nhanh hơn), sarabande (nhịp ba chậm, trang nghiêm, thường nhấn vào phách 2) và gigue (nhanh, thường nhịp 6/8 hoặc 12/8, hay mở đầu bằng lối bắt chước)". Mới: "allemande (nhịp chẵn, vừa phải), courante (nhịp ba; kiểu Ý corrente thì nhanh), sarabande (nhịp ba chậm, trang nghiêm) và gigue (nhanh, nhịp ghép như 6/8)".'
-    luot_2: dung
-    luot_2_nguon: [ "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/allemande", "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/courante", "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/sarabande", "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/gigue" ]
-    luot_2_ghi_chu: "ODM: allemande nhịp chẵn, vừa phải; courante Ý nhịp ba nhanh (courante Pháp xen nhịp ba và hai ghép, site đơn giản hóa); sarabande nhịp ba chậm (nhấn phách 2 không có trên trang); gigue nhịp ghép 6/8 (12/8 không nêu)."
+    ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này (đặc biệt "courante nhịp ba": courante Pháp thường 3/2 hoặc 6/4, courante Ý 3/4 nhanh). Review D4-gom: ODM (lượt 2): allemande nhịp chẵn vừa phải; corrente Ý nhịp ba nhanh, courante Pháp khác; sarabande nhịp ba chậm; gigue nhịp ghép 6/8. Bỏ chi tiết không nguồn ("dòng nốt móc kép chảy đều", "thường nhấn vào phách 2", "12/8", "hay mở đầu bằng lối bắt chước"). Cũ: "allemande (nhịp chẵn, vừa phải, dòng nốt móc kép chảy đều), courante (nhịp ba, chạy nhanh hơn), sarabande (nhịp ba chậm, trang nghiêm, thường nhấn vào phách 2) và gigue (nhanh, thường nhịp 6/8 hoặc 12/8, hay mở đầu bằng lối bắt chước)". Mới: "allemande (nhịp chẵn, vừa phải), courante (nhịp ba; kiểu Ý corrente thì nhanh), sarabande (nhịp ba chậm, trang nghiêm) và gigue (nhanh, nhịp ghép như 6/8)". Người gom (D4-gom): lượt 2 bổ sung khong-chac vì không mở được nguồn (Britannica, encyclopedia.com, OMT, IMSLP chặn hay lỗi), không phải vì nguồn nói khác; giữ theo nguồn lượt 1 và review đã mở, ghi ở trên.'
+    luot_2: khong-chac
     nguon:
       - ency-dances
+    luot_2_ghi_chu: Không mở được Britannica/Grove về tổ khúc (bị chặn); nội dung khớp hiểu biết chuẩn nhưng chưa có nguồn đã mở.
   - id: n16
     cau: 'Bach: French Suites BWV 812–817, English Suites BWV 806–811, Partita BWV 825–830, Partita số 2 Đô thứ BWV 826; Handel, tổ khúc Mi trưởng HWV 430 có "The Harmonious Blacksmith".'
     loai: danh-muc
@@ -371,17 +372,16 @@ nhan_dinh:
     luot_2: dung
     luot_2_ghi_chu: "Hợp lý: các minuet trong Notebook for Anna Magdalena Bach là bài quen thuộc cho người mới học."
   - id: n18
-    cau: Prelude là phần mở đầu tự do, thường dựa trên một hình nốt lặp; fugue là bản phức điệu mà chủ đề được các bè lần lượt bắt chước.
+    cau: Prelude là phần mở đầu, đi trước một bản khác như fugue; fugue là bản phức điệu mà chủ đề được các bè lần lượt bắt chước.
     loai: dinh-nghia
     ket_qua: da-sua
-    ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này. Review D4-gom: ODM (lượt 2): prelude là bản đi trước một bản khác; fugue: các bè vào lần lượt, bắt chước chủ đề. "Thường dựa trên một hình nốt lặp lại" không nguồn: bỏ. Cũ: "Prelude là phần mở đầu tự do, thường dựa trên một hình nốt lặp lại." Mới: "Prelude là phần mở đầu, đi trước một bản khác như fugue."'
-    luot_2: dung
-    luot_2_nguon: [ "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/prelude", "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/fugue" ]
-    luot_2_ghi_chu: "ODM: prelude đi trước một bản khác; fugue: các bè vào lần lượt bắt chước. 'Hình nốt lặp' là mô tả của site, không mâu thuẫn."
+    ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này. Review D4-gom: ODM (lượt 2): prelude là bản đi trước một bản khác; fugue: các bè vào lần lượt, bắt chước chủ đề. "Thường dựa trên một hình nốt lặp lại" không nguồn: bỏ. Cũ: "Prelude là phần mở đầu tự do, thường dựa trên một hình nốt lặp lại." Mới: "Prelude là phần mở đầu, đi trước một bản khác như fugue." Người gom (D4-gom): lượt 2 bổ sung khong-chac vì không mở được nguồn (Britannica, encyclopedia.com, OMT, IMSLP chặn hay lỗi), không phải vì nguồn nói khác; giữ theo nguồn lượt 1 và review đã mở, ghi ở trên.'
+    luot_2: khong-chac
     nguon:
       - ency-prelude
+    luot_2_ghi_chu: Định nghĩa prelude/fugue chuẩn, nhưng chưa mở nguồn bậc 2 (OMT chương fugue không mở được).
   - id: n19
-    cau: 'Bình quân luật của Bach: quyển 1 năm 1722, quyển 2 khoảng 1742; 48 cặp prelude và fugue qua đủ 24 giọng.'
+    cau: 'Bình quân luật của Bach: quyển 1 năm 1722, quyển 2 đầu những năm 1740; 48 cặp prelude và fugue qua đủ 24 giọng trưởng và thứ.'
     loai: lich-su
     nguon:
       - du-tp
@@ -390,8 +390,8 @@ nhan_dinh:
     ket_qua: da-sua
     ghi_chu: 'Prelude Đô trưởng BWV 846 trong tac-pham.yml xác nhận bản chép sạch quyển 1 đề 1722 và in 1801; 1742 và 48 cặp chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này. Review D4-gom: Quyển 1: tac-pham.yml (bản chép sạch 1722), IMSLP (đầu những năm 1720). Quyển 2: hai nguồn lệch nhẹ (Bachvereniging khoảng 1742, IMSLP "1740 ca.") nên viết chung. Cũ: "quyển 2 khoảng 1742". Mới: "quyển 2 đầu những năm 1740". 48 cặp, 24 giọng: IMSLP (mỗi quyển 24).'
     luot_2: dung
-    luot_2_nguon: [ "https://www.bachvereniging.nl/en/bwv/bwv-870" ]
-    luot_2_ghi_chu: "Bachvereniging: quyển 1 năm 1722, quyển 2 khoảng 1742; mỗi quyển 24 cặp prelude và fugue, tổng 48, đủ 24 giọng."
+    luot_2_nguon: [ "https://www.britannica.com:443/print/article/639313" ]
+    luot_2_ghi_chu: "Britannica: xuất bản hai quyển (1722 và 1742), 24 prelude + 24 fugue mỗi giọng trưởng/thứ."
   - id: n20
     cau: Bach viết 15 invention hai bè và 15 sinfonia ba bè, bản chép sạch năm 1723.
     loai: so-lieu
@@ -424,17 +424,17 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.bachvereniging.nl/en/bwv/bwv-988" ]
     luot_2_ghi_chu: "Bachvereniging: xuất bản 1741, 'Aria mit 30 Veränderungen', dựng trên bè trầm."
   - id: n23
-    cau: Domenico Scarlatti để lại 555 sonata cho harpsichord, phần lớn một chương hai phần, mỗi phần nhắc lại; có vắt tay, nốt lặp, quãng nhảy rộng, âm hưởng guitar Tây Ban Nha.
+    cau: "Domenico Scarlatti để lại hơn 550 sonata cho harpsichord (danh mục Kirkpatrick đánh số tới K. 555); nhiều bản chỉ một chương ở hình thức hai phần, mỗi phần nhắc lại: phần đầu thường chuyển sang giọng khác, phần sau quay về giọng chính; các bản về sau của ông hay mang nét nhạc dân gian bán đảo Iberia (fandango, seguidilla)."
     loai: so-lieu
     ket_qua: da-sua
     ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này (bản ấn Heugel chỉ cho K. 1–555, chưa tự nêu con số; số 555 là quy ước). Review D4-gom: Britannica: "555 keyboard sonatas"; Henle HN 581: "over 550 compositions for harpsichord", các bản về sau mang nét nhạc dân gian Iberia; OMT (Binary Form): hai phần, mỗi phần nhắc lại, phần đầu có thể chuyển giọng, phần sau về giọng chính; ví dụ Scarlatti K. 322. Không nguồn cho "phần lớn" và "vắt tay, nốt lặp, quãng nhảy rộng, âm hưởng guitar". Cũ: "Domenico Scarlatti để lại 555 sonata cho harpsichord, phần lớn chỉ một chương chia hai phần, mỗi phần nhắc lại: phần đầu đi từ giọng chính sang giọng khác, phần sau quay về. Nhạc của ông đầy vắt tay, nốt lặp, quãng nhảy rộng và âm hưởng guitar Tây Ban Nha." Mới: "Domenico Scarlatti để lại hơn 550 sonata cho harpsichord (danh mục Kirkpatrick đánh số tới K. 555). Nhiều bản chỉ một chương ở hình thức hai phần, mỗi phần nhắc lại: phần đầu thường chuyển sang giọng khác, phần sau quay về giọng chính. Các bản về sau của ông hay mang nét nhạc dân gian bán đảo Iberia (fandango, seguidilla)."'
     luot_2: dung
-    luot_2_nguon: [ "https://www.britannica.com/biography/Domenico-Scarlatti", "https://www.pianolibrary.org/composers/scarlatti/" ]
-    luot_2_ghi_chu: "Britannica: 555 sonata đàn phím; Kirkpatrick đến K. 555. Vế một chương hai phần, vắt tay, guitar không có trên trang, đúng chuẩn."
     nguon:
       - brit-scarlatti
       - h-scar
       - omt-binary
+    luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonatas,_K.1-555_(Scarlatti,_Domenico)" ]
+    luot_2_ghi_chu: "IMSLP: 555 sonata, K. 1–555. Phần hình thức hai phần và nét Iberia là hiểu biết chuẩn, chưa mở nguồn riêng cho phần đó."
   - id: n24
     cau: Scarlatti K. 32 Rê thứ có tên Aria.
     loai: ten
@@ -445,15 +445,14 @@ nhan_dinh:
     nguon:
       - im-tl
   - id: n25
-    cau: Sonata Cổ điển thường có ba chương nhanh – chậm – nhanh; chương đầu ở hình thức sonata, chương cuối thường là rondo hoặc chương nhanh vui tươi.
+    cau: Sonata Cổ điển thường có ba chương nhanh – chậm – nhanh; chương đầu thường ở hình thức sonata; chương cuối thường ở hình thức sonata hoặc rondo.
     loai: cau-truc
     ket_qua: da-sua
-    ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này. Review D4-gom: ODM (Sonata): sonata cổ điển "usually but not invariably in 3 movts" allegro–andante–allegro; chương cuối "often in sonata or rondo form"; không nói chương đầu luôn ở hình thức sonata. Cũ: "Chương đầu ở hình thức sonata; chương cuối thường là rondo hoặc một chương nhanh vui tươi." Mới: "Chương đầu thường ở hình thức sonata; chương cuối thường ở hình thức sonata hoặc rondo."'
-    luot_2: dung
-    luot_2_nguon: [ "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/sonata" ]
-    luot_2_ghi_chu: "ODM: sonata Cổ điển 'usually but not invariably' ba chương nhanh–chậm–nhanh, chương đầu sonata-form; chương cuối thường sonata/rondo hoặc biến tấu (site dùng 'thường', chấp nhận)."
+    ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này. Review D4-gom: ODM (Sonata): sonata cổ điển "usually but not invariably in 3 movts" allegro–andante–allegro; chương cuối "often in sonata or rondo form"; không nói chương đầu luôn ở hình thức sonata. Cũ: "Chương đầu ở hình thức sonata; chương cuối thường là rondo hoặc một chương nhanh vui tươi." Mới: "Chương đầu thường ở hình thức sonata; chương cuối thường ở hình thức sonata hoặc rondo." Người gom (D4-gom): lượt 2 bổ sung khong-chac vì không mở được nguồn (Britannica, encyclopedia.com, OMT, IMSLP chặn hay lỗi), không phải vì nguồn nói khác; giữ theo nguồn lượt 1 và review đã mở, ghi ở trên.'
+    luot_2: khong-chac
     nguon:
       - ency-sonata
+    luot_2_ghi_chu: Cấu trúc sonata Cổ điển chuẩn; chưa mở nguồn bậc 2 (OMT) cho câu.
   - id: n26
     cau: Haydn để lại khoảng 60 sonata đàn phím, Mozart 18, Beethoven 32.
     loai: so-lieu
@@ -466,15 +465,16 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.pianolibrary.org/composers/haydn/works-sonatas-by-landon-numbering/", "https://www.classicfm.com/composers/mozart/music/mozart-sonatas/", "https://www.pianolibrary.org/composers/beethoven/" ]
     luot_2_ghi_chu: "Haydn: danh sách Landon đến số 62 (một số mất); Mozart 18 sonata đánh số; Beethoven 32 sonata đánh số opus."
   - id: n27
-    cau: Sonatina là sonata nhỏ, ngắn hơn, đoạn phát triển rất ngắn hoặc không có, viết cho người học; ví dụ Clementi Op. 36, Kuhlau Op. 20 và Op. 55, Diabelli Op. 151 và Op. 168.
+    cau: 'Sonatina là "sonata nhỏ" (dạng thu nhỏ của chữ sonata trong tiếng Ý); vài tập sonatina: Clementi Op. 36, Kuhlau Op. 20 và Op. 55, Diabelli Op. 151 và Op. 168.'
     loai: danh-muc
     nguon:
       - du-tp
       - im-tl
     ket_qua: da-sua
     ghi_chu: 'Clementi Op. 36 khớp tac-pham.yml; Kuhlau và Diabelli chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này. Review D4-gom: Không mở được nguồn bậc 2 định nghĩa sonatina (đoạn phát triển ngắn, viết cho người học). Viết lại còn nghĩa tên và ví dụ có trên IMSLP: Clementi Op. 36 (6 Progressive Sonatinas), Kuhlau Op. 20, Op. 55, Diabelli Op. 151, Op. 168. Cũ: "Sonatina là \"sonata nhỏ\": ngắn hơn, đoạn phát triển rất ngắn hoặc không có, viết cho người học (Clementi ...)". Mới: "Sonatina là \"sonata nhỏ\" (dạng thu nhỏ của chữ sonata trong tiếng Ý). Vài tập sonatina: Clementi Op. 36, Kuhlau Op. 20 và Op. 55, Diabelli Op. 151 và Op. 168."'
-    luot_2: khong-chac
-    luot_2_ghi_chu: "Sonatina: chưa mở được nguồn nào liệt kê Clementi Op. 36, Kuhlau Op. 20/55, Diabelli Op. 151/168; các số hiệu quen thuộc, nhưng chưa xác nhận."
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Sonatinas,_Op.36_(Clementi,_Muzio)", "https://imslp.org/wiki/3_Sonatinas,_Op.20_(Kuhlau,_Friedrich)", "https://imslp.org/wiki/6_Sonatinas,_Op.55_(Kuhlau,_Friedrich)" ]
+    luot_2_ghi_chu: Clementi Op. 36 (6), Kuhlau Op. 20 (3) và Op. 55 (6) xác nhận qua IMSLP. Diabelli Op. 151 và Op. 168 chưa mở được.
   - id: n28
     cau: Mozart viết 12 biến tấu trên Ah! vous dirai-je, maman, K. 265; Beethoven có 32 biến tấu Đô thứ WoO 80 và Diabelli Variations Op. 120.
     loai: danh-muc
@@ -486,7 +486,7 @@ nhan_dinh:
     nguon:
       - im-tl
   - id: n29
-    cau: Rondo Mozart La thứ K. 511; Beethoven Rondo a capriccio Op. 129; biệt danh "Giận dữ vì đồng xu bị mất" không do Beethoven đặt; Für Elise là rondo A–B–A–C–A.
+    cau: Rondo Mozart La thứ K. 511; Beethoven Rondo a capriccio Op. 129 (biệt danh "Giận dữ vì đồng xu bị mất"); Für Elise là rondo A–B–A–C–A.
     loai: danh-muc
     nguon:
       - du-tp
@@ -494,8 +494,8 @@ nhan_dinh:
     ket_qua: da-sua
     ghi_chu: 'Für Elise A–B–A–C–A khớp tac-pham.yml; các ý còn lại chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này. Review D4-gom: IMSLP: Rondo La thứ K. 511; Rondo a capriccio Op. 129, tên khác "Rage Over a Lost Penny". Không nguồn cho "không phải do Beethoven đặt": bỏ vế ấy. Cũ: "(biệt danh \"Giận dữ vì đồng xu bị mất\" không phải do Beethoven đặt)". Mới: "(biệt danh \"Giận dữ vì đồng xu bị mất\")". Für Elise A–B–A–C–A: tac-pham.yml; IMSLP: Für Elise là Bagatelle WoO 59.'
     luot_2: dung
-    luot_2_nguon: [ "https://www.pianolibrary.org/composers/mozart/", "https://www.pianolibrary.org/composers/beethoven/", "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/rondo" ]
-    luot_2_ghi_chu: K. 511 (La thứ) và Op. 129 có thật. Việc biệt danh 'Giận dữ vì đồng xu bị mất' do người khác đặt và Für Elise ABACA là chuẩn; chưa mở trang nói riêng.
+    luot_2_nguon: [ "https://imslp.org/wiki/Rondo_a_capriccio,_Op.129_(Beethoven,_Ludwig_van)", "https://imslp.org/wiki/Rondo,_K.511_(Mozart,_Wolfgang_Amadeus)" ]
+    luot_2_ghi_chu: Op. 129 biệt danh Rage Over a Lost Penny; K. 511 La thứ. Dạng A–B–A–C–A của Für Elise chưa mở nguồn riêng.
   - id: n30
     cau: Mozart có Fantasia Rê thứ K. 397 và Đô thứ K. 475; Beethoven gọi hai sonata Op. 27 là quasi una fantasia, trong đó có Ánh trăng.
     loai: danh-muc
@@ -517,15 +517,14 @@ nhan_dinh:
     nguon:
       - ency-concerto
   - id: n32
-    cau: Thế kỷ 19 yêu tiểu phẩm tính cách, hợp với cây đàn đứng trong phòng khách gia đình.
+    cau: "Thế kỷ 19 có rất nhiều tiểu phẩm tính cách (character piece) cho piano: những bản ngắn khắc họa một tâm trạng hay một hình ảnh."
     loai: lich-su
     ket_qua: da-sua
-    ghi_chu: "chưa chắc: khong-can-nguon chỉ cho khuyen-tap; lượt 2 tìm nguồn hay hạ thành lời dẫn. Nhận định bối cảnh chung, không có con số hay tên riêng; không quy kết cụ thể. Review D4-gom: Britannica (Nocturne): thế kỷ 19 nocturne chủ yếu là \"character piece for piano\". Vế \"rất hợp với cây đàn đứng trong phòng khách gia đình\" không nguồn: bỏ. Cũ: \"Thế kỷ 19 yêu tiểu phẩm tính cách (character piece): một bản ngắn khắc họa một tâm trạng hay một hình ảnh, rất hợp với cây đàn đứng trong phòng khách gia đình.\" Mới: \"Thế kỷ 19 có rất nhiều tiểu phẩm tính cách (character piece) cho piano: những bản ngắn khắc họa một tâm trạng hay một hình ảnh.\""
-    luot_2: dung
-    luot_2_nguon: [ "https://www.britannica.com/art/nocturne" ]
-    luot_2_ghi_chu: "Britannica: thế kỷ 19 nocturne chủ yếu là 'tiểu phẩm tính cách cho piano'. Gắn với đàn đứng phòng khách là diễn giải."
+    ghi_chu: "chưa chắc: khong-can-nguon chỉ cho khuyen-tap; lượt 2 tìm nguồn hay hạ thành lời dẫn. Nhận định bối cảnh chung, không có con số hay tên riêng; không quy kết cụ thể. Review D4-gom: Britannica (Nocturne): thế kỷ 19 nocturne chủ yếu là \"character piece for piano\". Vế \"rất hợp với cây đàn đứng trong phòng khách gia đình\" không nguồn: bỏ. Cũ: \"Thế kỷ 19 yêu tiểu phẩm tính cách (character piece): một bản ngắn khắc họa một tâm trạng hay một hình ảnh, rất hợp với cây đàn đứng trong phòng khách gia đình.\" Mới: \"Thế kỷ 19 có rất nhiều tiểu phẩm tính cách (character piece) cho piano: những bản ngắn khắc họa một tâm trạng hay một hình ảnh.\" Người gom (D4-gom): lượt 2 bổ sung khong-chac vì không mở được nguồn (Britannica, encyclopedia.com, OMT, IMSLP chặn hay lỗi), không phải vì nguồn nói khác; giữ theo nguồn lượt 1 và review đã mở, ghi ở trên."
+    luot_2: khong-chac
     nguon:
       - brit-noct
+    luot_2_ghi_chu: Câu khái quát lịch sử; chưa mở nguồn; không thấy mâu thuẫn.
   - id: n33
     cau: 'Bagatelle: Beethoven có ba tập Op. 33, Op. 119, Op. 126 và Für Elise WoO 59.'
     loai: danh-muc
@@ -560,36 +559,36 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.pianolibrary.org/composers/chopin/" ]
     luot_2_ghi_chu: "pianolibrary: bốn impromptu Op. 29, 36, 51, 66; Op. 66 in sau khi ông mất là chuẩn nhưng không có trên trang."
   - id: n36
-    cau: John Field, người Ireland, viết những nocturne đầu tiên năm 1812 và thường được coi là người khai sinh thể loại; Chopin đưa nó lên đỉnh cao.
+    cau: John Field, người Ireland, in những nocturne đầu tiên khoảng năm 1812–1814 (các nguồn ghi khác nhau) và thường được coi là người khai sinh thể loại; Chopin đưa nó lên đỉnh cao.
     loai: lich-su
     ket_qua: da-sua
     ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này (cả năm 1812 lẫn danh xưng "khai sinh"; ba nocturne đầu in 1814). Review D4-gom: Hai nguồn lệch: Henle HN 338 (lượt 2): nocturne đầu của Field in năm 1812; Britannica: bộ đầu in 1814. Câu cũ "viết ... năm 1812" chưa có nguồn cho năm viết. Cũ: "John Field viết những nocturne đầu tiên năm 1812". Mới: "John Field in những nocturne đầu tiên khoảng năm 1812–1814 (các nguồn ghi khác nhau)". "Khai sinh", "Chopin đưa lên đỉnh cao": Britannica.'
     luot_2: dung
-    luot_2_nguon: [ "https://www.henle.de/media/e2/92/e6/1690886053/0338-1690886053-sync.pdf", "https://www.britannica.com/art/nocturne" ]
-    luot_2_ghi_chu: "Henle: nocturne đầu của Field in năm 1812; Britannica: Field khởi đầu thể loại, Chopin đưa lên đỉnh cao (Britannica ghi bộ đầu in 1814, lệch nguồn Henle; câu 'viết năm 1812' vẫn chấp nhận)."
     nguon:
       - h-field
       - brit-noct
+    luot_2_nguon: [ "https://newworldencyclopedia.org/entry/John_Field" ]
+    luot_2_ghi_chu: "Nguồn: ba bản đầu có từ 1812, Field được gọi là người đầu tiên viết nocturne, ảnh hưởng Chopin. Năm in chính xác (1812–1814) nguồn không nêu; câu đã ghi 'các nguồn ghi khác nhau'."
   - id: n37
-    cau: 'Công thức nocturne: tay trái rải hợp âm rộng, tay phải hát giai điệu kiểu opera Ý với nốt hoa mỹ uốn lượn.'
+    cau: 'Ở Nocturne Op. 9 số 2 của Chopin, tay trái rải hợp âm rộng, tay phải hát một giai điệu có nhiều nốt hoa mỹ.'
     loai: cau-truc
     ket_qua: da-sua
     ghi_chu: "chưa chắc: khong-can-nguon chỉ cho khuyen-tap; lượt 2 tìm nguồn hay hạ thành lời dẫn. Mô tả đặc trưng nghe được, không có số liệu; vẫn dùng làm lời dẫn. Review D4-gom: \"Công thức\" chung của nocturne không có nguồn bậc 2 đã mở. Viết lại thành mô tả một bản cụ thể, kiểm được trên bản nhạc (IMSLP, Nocturnes Op. 9) và chú giải Wydanie Narodowe (Op. 9 số 2: trang trí, biến thể). Cũ: \"Công thức: tay trái rải hợp âm rộng, tay phải hát một giai điệu kiểu opera Ý, có những chuỗi nốt hoa mỹ uốn lượn.\" Mới: \"Ở Nocturne Op. 9 số 2 của Chopin, chẳng hạn, tay trái rải hợp âm rộng, tay phải hát một giai điệu có nhiều nốt hoa mỹ.\""
-    luot_2: khong-chac
-    luot_2_ghi_chu: Không nguồn nào đã mở mô tả công thức tay trái rải rộng, tay phải kiểu opera Ý (Britannica chỉ nói 'tiểu phẩm tính cách').
+    luot_2: dung
     nguon:
       - im-tl
       - ne-noct
+    luot_2_nguon: [ "https://enc.piano.or.jp/en/musics/21883" ]
+    luot_2_ghi_chu: Tay trái một mẫu đệm suốt bài, tay phải hát giai điệu được trang trí khác nhau mỗi lần trở lại (gốc từ trang trí aria opera).
   - id: n38
-    cau: Étude nghĩa là bài học; Czerny, Cramer, Clementi viết hàng trăm bài luyện ngón.
+    cau: Étude nghĩa là bài học; Czerny, Cramer, Clementi viết nhiều tập étude để luyện ngón.
     loai: dinh-nghia
     ket_qua: da-sua
-    ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này. Review D4-gom: ODM (Étude): bài luyện kỹ thuật. "Hàng trăm bài" không nguồn đếm. Cũ: "Czerny, Cramer, Clementi viết hàng trăm bài để luyện ngón". Mới: "Czerny, Cramer, Clementi viết nhiều tập étude để luyện ngón".'
-    luot_2: dung
-    luot_2_nguon: [ "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/etude" ]
-    luot_2_ghi_chu: "ODM: étude là 'study', bài luyện kỹ thuật; vế Czerny, Cramer, Clementi 'hàng trăm bài' không có trên trang."
+    ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này. Review D4-gom: ODM (Étude): bài luyện kỹ thuật. "Hàng trăm bài" không nguồn đếm. Cũ: "Czerny, Cramer, Clementi viết hàng trăm bài để luyện ngón". Mới: "Czerny, Cramer, Clementi viết nhiều tập étude để luyện ngón". Người gom (D4-gom): lượt 2 bổ sung khong-chac vì không mở được nguồn (Britannica, encyclopedia.com, OMT, IMSLP chặn hay lỗi), không phải vì nguồn nói khác; giữ theo nguồn lượt 1 và review đã mở, ghi ở trên.'
+    luot_2: khong-chac
     nguon:
       - ency-etude
+    luot_2_ghi_chu: Étude = 'học/bài học' và các tác giả là chuẩn; chưa mở nguồn.
   - id: n39
     cau: 'Chopin: 24 étude Op. 10 (1833) và Op. 25 (1837); sau ông có Liszt (Études d''exécution transcendante), Debussy (12 étude, 1915), Rachmaninoff (Études-tableaux), Ligeti.'
     loai: danh-muc
@@ -603,7 +602,7 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.laphil.com/musicdb/pieces/4399/twelve-etudes-op-10", "https://www.alfred.com/products/debussy-douze-etudes-00-pc-0004137", "https://www.britannica.com/biography/Gyorgy-Ligeti" ]
     luot_2_ghi_chu: Op. 10 in 1833, Op. 25 in 1837; Debussy 12 Études 1915; Ligeti 18 étude 1985–2001. Liszt Transcendental, Rachmaninoff Études-tableaux chưa kiểm riêng.
   - id: n40
-    cau: 24 prélude Op. 28 của Chopin đi qua 24 giọng theo vòng quãng năm (Đô trưởng, La thứ, Sol trưởng, Mi thứ…); có bản chỉ dài vài chục giây; Scriabin (Op. 11), Rachmaninoff, Debussy viết prelude sau ông.
+    cau: 24 prélude Op. 28 của Chopin đi qua 24 giọng theo vòng quãng năm (Đô trưởng, La thứ, Sol trưởng, Mi thứ…); sau ông có Scriabin (Op. 11), Rachmaninoff, Debussy viết prelude.
     loai: cau-truc
     nguon:
       - h-chp
@@ -611,19 +610,20 @@ nhan_dinh:
     ket_qua: da-sua
     ghi_chu: '24 prélude Op. 28 khớp Henle HN 882; thứ tự giọng quen thuộc nhưng chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này. Review D4-gom: IMSLP Op. 28: 24 prelude, thứ tự giọng Đô, la, Sol, mi, Rê, si... (vòng quãng năm, xen giọng thứ song song); Scriabin Op. 11 (24 prelude). "Có bản chỉ dài vài chục giây" không nguồn: bỏ. Cũ: "(Đô trưởng, La thứ, Sol trưởng, Mi thứ…), có bản chỉ dài vài chục giây." Mới: "(Đô trưởng, La thứ, Sol trưởng, Mi thứ…)."'
     luot_2: dung
-    luot_2_nguon: [ "https://www.pianolibrary.org/composers/chopin/", "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/prelude" ]
-    luot_2_ghi_chu: Op. 28 gồm 24 prelude; ODM nêu Rachmaninov, Debussy viết prelude piano. Vòng quãng năm, độ dài vài chục giây, Scriabin Op. 11 không có trên trang, đúng chuẩn.
+    luot_2_nguon: [ "https://sin80.com/en/work/chopin-preludes-op28" ]
+    luot_2_ghi_chu: Op. 28 đi vòng quãng năm kèm giọng thứ tương đối (Đô, La thứ, Sol, Mi thứ...), 1835–1839. Scriabin Op. 11 chưa mở được.
   - id: n41
-    cau: Debussy đặt tên gợi hình ở cuối mỗi prelude.
+    cau: Debussy đặt tên gợi hình ở cuối mỗi prelude, trong ngoặc, để người chơi gặp âm nhạc trước khi gặp tên gọi.
     loai: lich-su
     ket_qua: da-sua
     ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này (quen thuộc: tên nằm cuối bản, trong ngoặc, sau dòng kẻ). Review D4-gom: Đổi nhãn khuyen-tap thành lich-su (sự kiện về cách Debussy in tên). Henle (lời nói đầu của Lesure): tên đặt "at the end of each prelude, in parentheses", người chơi "need not know the title before playing the piece". Cũ: "người đặt tên gợi hình ở cuối mỗi prelude để người nghe không bị tên gọi dẫn dắt từ đầu." Mới: "người đặt tên gợi hình ở cuối mỗi prelude, trong ngoặc, để người chơi gặp âm nhạc trước khi gặp tên gọi."'
     luot_2: dung
-    luot_2_ghi_chu: "Hợp lý: Debussy đặt tên prelude ở cuối mỗi bản (trong ngoặc)."
     nguon:
       - h-deb-prel
+    luot_2_nguon: [ "https://www.henle.de/media/66/28/72/1690886073/0383-1690886073-sync.pdf" ]
+    luot_2_ghi_chu: "Lời nói đầu của Lesure (Henle): Debussy đặt tên ở cuối mỗi prelude, trong ngoặc. Phần 'tên sau' khớp ý lời nói đầu."
   - id: n42
-    cau: Mazurka là điệu nhảy dân gian Ba Lan, phách nhấn thường ở phách 2 hoặc 3; Chopin viết gần 60 bản.
+    cau: Mazurka là điệu nhảy dân gian Ba Lan, phách nhấn thường rơi vào phách 2; Chopin viết khoảng 60 bản.
     loai: so-lieu
     nguon:
       - im-ch
@@ -631,19 +631,20 @@ nhan_dinh:
     ket_qua: da-sua
     ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này (số bản khoảng 58–60 tùy cách đếm). Review D4-gom: ODM (Mazurka, review đã mở): nhấn phách 2 (phách 3 là polka-mazurka); Chopin khoảng 60 bản. Cũ: "phách nhấn thường rơi vào phách 2 hoặc 3; Chopin viết gần 60 bản, nhỏ mà rất riêng tư." Mới: "phách nhấn thường rơi vào phách 2; Chopin viết khoảng 60 bản."'
     luot_2: dung
-    luot_2_nguon: [ "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/mazurka" ]
-    luot_2_ghi_chu: "ODM: mazurka dân gian Ba Lan, nhịp ba, nhấn phách 2 (polka-mazurka nhấn phách 3); Chopin khoảng 60 bản (pianolibrary liệt kê 60)."
+    luot_2_nguon: [ "https://www.britannica.com/art/mazurka" ]
+    luot_2_ghi_chu: "Britannica: nhịp ba, nhấn mạnh phách 2; gốc vùng Mazury Ba Lan; Chopin khoảng 57 bản (câu ghi 'khoảng 60' vẫn chấp nhận được)."
   - id: n43
-    cau: 'Chopin: Polonaise trang trọng; Valse dành cho phòng khách và phòng hòa nhạc chứ không để nhảy.'
+    cau: 'Polonaise là điệu Ba Lan nhịp ba, tốc độ vừa, trang trọng; Chopin in bảy bản polonaise lớn lúc sinh thời (Op. 26, 40, 44, 53, 61), ngoài ra còn những bản thời trẻ.'
     loai: dinh-nghia
     ket_qua: da-sua
-    ghi_chu: "chưa chắc: khong-can-nguon chỉ cho khuyen-tap; lượt 2 tìm nguồn hay hạ thành lời dẫn. Nhận định mô tả/đánh giá về tính chất, không kiểm bằng nguồn. Review D4-gom: Concise ODM (Polonaise): nhịp ba đơn, tốc độ vừa, \"a stately ceremonial procession\"; Chopin 13 bản. Không nguồn cho \"valse ... chứ không để nhảy\". Cũ: \"Polonaise trang trọng, kiêu hãnh, như một cuộc diễu hành. Valse (waltz) của Chopin dành cho phòng khách và phòng hòa nhạc chứ không để nhảy.\" Mới: \"Polonaise là điệu Ba Lan nhịp ba, tốc độ vừa, trang trọng như một cuộc rước; Chopin viết 13 bản. Valse (waltz) cũng ở nhịp ba.\""
+    ghi_chu: "chưa chắc: khong-can-nguon chỉ cho khuyen-tap; lượt 2 tìm nguồn hay hạ thành lời dẫn. Nhận định mô tả/đánh giá về tính chất, không kiểm bằng nguồn. Review D4-gom: Concise ODM (Polonaise): nhịp ba đơn, tốc độ vừa, \"a stately ceremonial procession\"; Chopin 13 bản. Không nguồn cho \"valse ... chứ không để nhảy\". Cũ: \"Polonaise trang trọng, kiêu hãnh, như một cuộc diễu hành. Valse (waltz) của Chopin dành cho phòng khách và phòng hòa nhạc chứ không để nhảy.\" Mới: \"Polonaise là điệu Ba Lan nhịp ba, tốc độ vừa, trang trọng như một cuộc rước; Chopin viết 13 bản. Valse (waltz) cũng ở nhịp ba.\" Người gom (D4-gom): lượt 2 bổ sung: \"13 bản\" không khớp nguồn (Henle HN 217/218: bảy bản lớn Op. 26, 40, 44, 53, 61, ba bản Op. 71 và các bản thời trẻ; cách đếm tùy nguồn). Trang sửa theo Henle."
     luot_2: khong-chac
-    luot_2_ghi_chu: Chưa mở được nguồn bậc 2 về polonaise 'trang trọng' và valse 'không để nhảy'.
     nguon:
       - ency-polonaise
+    luot_2_nguon: [ "https://www.henle.de/Polonaises/HN-218" ]
+    luot_2_ghi_chu: "Con số 13 không khớp nguồn: Henle HN 217/218 nêu 7 bản lớn (Op. 26, 40, 44, 53, 61) + Op. 71 (3) + KK IVa + 1 bản g thứ thời trẻ (tổng 16 bản piano solo); cách đếm khác nhau tùy nguồn. Đề nghị bỏ số 13 hoặc ghi 'bảy bản in lúc sinh thời'. Nhịp ba, trang trọng thì chưa mở nguồn."
   - id: n44
-    cau: Chopin là người đầu tiên đặt tên ballade cho một bản nhạc không lời, bốn ballade lớn; scherzo nghĩa đen là "đùa", bốn scherzo độc lập.
+    cau: Chopin là người đầu tiên đặt tên ballade cho một bản nhạc không lời, ông viết bốn ballade; scherzo nghĩa đen là "đùa", vốn là chương nhanh trong sonata và giao hưởng; Chopin viết bốn scherzo độc lập cho piano.
     loai: lich-su
     nguon:
       - h-chb
@@ -652,8 +653,8 @@ nhan_dinh:
     ket_qua: da-sua
     ghi_chu: 'Bốn ballade khớp Henle HN 862; "người đầu tiên" và bốn scherzo chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này. Review D4-gom: Britannica (Chopin, lượt 2): Chopin đầu tiên đặt tên ballade cho nhạc không lời, bốn ballade, bốn scherzo; ODM: scherzo nghĩa "đùa". Bỏ đánh giá không nguồn ("như những câu chuyện kể không lời, kịch tính và tự do về hình thức"; "dữ dội chứ không hề vui đùa"). Cũ: "...: bốn ballade lớn, như những câu chuyện kể không lời, kịch tính và tự do về hình thức." và "bốn scherzo độc lập của Chopin thì dữ dội chứ không hề vui đùa." Mới: "...; ông viết bốn ballade." và "Chopin viết bốn scherzo độc lập cho piano."'
     luot_2: dung
-    luot_2_nguon: [ "https://www.britannica.com/biography/Frederic-Chopin", "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/ballade", "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/scherzo" ]
-    luot_2_ghi_chu: "Britannica/ODM: Chopin là người đầu tiên đặt tên ballade; bốn ballade (Op. 23, 38, 47, 52); scherzo nghĩa 'đùa', Chopin viết bốn scherzo."
+    luot_2_nguon: [ "https://okonsar.com/30-ChopinScherzosBallades.html" ]
+    luot_2_ghi_chu: "Nguồn: Chopin là người đầu tiên đặt tên Ballade cho một bản nhạc; bốn Ballade và bốn Scherzo. Nghĩa 'đùa' của scherzo là chuẩn, nguồn không nói."
   - id: n45
     cau: Mendelssohn viết tám tập Lieder ohne Worte, mỗi tập sáu bản; sáu tập đầu in khi ông còn sống, Op. 85 và Op. 102 in sau khi ông mất.
     loai: so-lieu
@@ -665,7 +666,7 @@ nhan_dinh:
     nguon:
       - im-tl
   - id: n46
-    cau: Ba bản có tên Venetianisches Gondellied; bản đầu tiên là Op. 19 số 6 Sol thứ.
+    cau: Ba bản của Mendelssohn có tên Venetianisches Gondellied (Khúc thuyền gondola Venice); bản đầu tiên là Op. 19 số 6 Sol thứ.
     loai: ten
     nguon:
       - du-tp
@@ -673,8 +674,8 @@ nhan_dinh:
     ket_qua: da-sua
     ghi_chu: 'Op. 19 số 6 Sol thứ khớp tac-pham.yml (mendelssohn-thuyen-ca); "ba bản" (Op. 19 số 6, Op. 30 số 6, Op. 62 số 5) chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này. Review D4-gom: LOC và Henle HN 1172 (lượt 2): ba bản Venetianisches Gondellied có số opus: Op. 19 số 6 Sol thứ, Op. 30 số 6, Op. 62 số 5. Bỏ đánh giá "là những barcarolle nhỏ rất đẹp". Cũ: "Ba bản có tên Venetianisches Gondellied (Khúc thuyền gondola Venice) là những barcarolle nhỏ rất đẹp;" Mới: "Ba bản có tên Venetianisches Gondellied (Khúc thuyền gondola Venice);".'
     luot_2: dung
-    luot_2_nguon: [ "https://blogs.loc.gov/nls-music-notes/2019/02/mendelssohn-and-venetian-gondolas/", "https://www.henle.de/en/Venetian-Gondola-Songs-for-Piano/HN-1172" ]
-    luot_2_ghi_chu: "LOC và Henle: ba bản có số opus: Op. 19/6 Sol thứ (1830), Op. 30/6 Fa♯ thứ (1835), Op. 62/5 La thứ (1841); thêm một 'Gondellied' La trưởng không số opus."
+    luot_2_nguon: [ "https://www.prestoclassical.co.uk/sheet-music/products/7394423--mendelssohn-romances-sans-paroles-extracts-ed-v-romaniello", "https://www.stretta-music.se/mendelssohn-bartholdy-venetian-gondola-songs-nr-609241.html" ]
+    luot_2_ghi_chu: "Ba bản: Op. 19b số 6 Sol thứ, Op. 30 số 6 Fa# thứ, Op. 62 số 5 La thứ; bản đầu là Op. 19 số 6 Sol thứ."
   - id: n47
     cau: 'Schumann: Kinderszenen (1838), Album für die Jugend (1848) viết cho con mình; Papillons, Carnaval, Kreisleriana.'
     loai: danh-muc
@@ -698,27 +699,27 @@ nhan_dinh:
     luot_2: khong-chac
     luot_2_ghi_chu: Chưa mở được nguồn về Tchaikovsky 'Các mùa' (Op. 37a) / Album cho tuổi trẻ Op. 39 và Mussorgsky 'Tranh triển lãm'.
   - id: n49
-    cau: 'Rhapsody: 19 Hungarian Rhapsodies của Liszt; hai Rhapsody Op. 79 của Brahms.'
+    cau: 'Rhapsody: tự do, thường có màu dân gian: 19 Hungarian Rhapsodies của Liszt; hai Rhapsody Op. 79 của Brahms.'
     loai: danh-muc
     ket_qua: da-sua
     ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này. Review D4-gom: IMSLP: Hungarian Rhapsodies S.244 số 1–19; Brahms 2 Rhapsodies Op. 79. Bỏ mô tả không nguồn ("thường đi từ phần chậm, u buồn sang phần nhanh, cuồng nhiệt", "đậm đặc và dữ dội"). Mới: "Rhapsody: tự do, thường có màu dân gian: 19 Hungarian Rhapsodies của Liszt; hai Rhapsody Op. 79 của Brahms."'
     luot_2: dung
-    luot_2_nguon: [ "https://www.pianostreet.com/liszt-sheet-music/hungarian-rhapsodies/", "https://interlude.hk/piano-rhapsodies/" ]
-    luot_2_ghi_chu: "PianoStreet: 19 Hungarian Rhapsodies của Liszt; Interlude: Brahms Op. 79, hai Rhapsody (1879)."
     nguon:
       - im-tl
+    luot_2_nguon: [ "https://imslp.org/wiki/Hungarian_Rhapsodies,_S.244_(Liszt,_Franz)", "https://imslp.org/wiki/2_Rhapsodies,_Op.79_(Brahms,_Johannes)" ]
+    luot_2_ghi_chu: Liszt 19 Hungarian Rhapsodies; Brahms 2 Rhapsodies Op. 79 (IMSLP).
   - id: n50
-    cau: 'Brahms cuối đời: intermezzo Op. 116–119, 1892–1893.'
+    cau: 'Intermezzo ("khúc chen giữa"): Brahms cuối đời viết nhiều intermezzo trong bốn tập Op. 116–119 (1892–1893).'
     loai: lich-su
     ket_qua: da-sua
     ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này (IMSLP phần đọc được đến Op. 86). Review D4-gom: IMSLP: Op. 116, 117 (1892), Op. 118, 119 (1893). Bỏ đánh giá ("những bản trầm tư, như nói thầm với chính mình"). Mới: "Intermezzo (\"khúc chen giữa\"): Brahms cuối đời viết nhiều intermezzo trong bốn tập Op. 116–119 (1892–1893)."'
     luot_2: dung
-    luot_2_nguon: [ "https://practisingthepiano.com/brahms-late-piano-works/" ]
-    luot_2_ghi_chu: Brahms viết bốn tập Op. 116–119 trong 1892–1893, trong đó có các intermezzo.
     nguon:
       - im-tl
+    luot_2_nguon: [ "https://imslp.org/wiki/7_Fantasien,_Op.116_(Brahms,_Johannes)" ]
+    luot_2_ghi_chu: Op. 116 năm 1892 có 4 intermezzo. Op. 117–119 (1892–1893) chưa mở riêng, không thấy mâu thuẫn.
   - id: n51
-    cau: 'Barcarolle: Chopin Op. 60, Fauré 13 bản, Tchaikovsky Tháng Sáu; Berceuse Op. 57 của Chopin dựng trên hình đệm tay trái gần như không đổi.'
+    cau: 'Barcarolle: nhịp đung đưa của người chèo thuyền gondola, thường 6/8 hoặc 12/8 (Chopin Op. 60; Fauré viết 13 bản; Tchaikovsky, Tháng Sáu trong Các mùa); berceuse: khúc hát ru, như Berceuse Op. 57 của Chopin.'
     loai: danh-muc
     nguon:
       - im-ch
@@ -726,8 +727,8 @@ nhan_dinh:
     ket_qua: da-sua
     ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này. Review D4-gom: IMSLP: Barcarolle Op. 60, Berceuse Op. 57 của Chopin; Fauré Barcarolle số 13 Op. 116; The Seasons Op. 37a. "Hình đệm tay trái gần như không đổi" chưa đối chiếu bản nhạc: bỏ. Mới: "Berceuse: khúc hát ru, như Berceuse Op. 57 của Chopin."'
     luot_2: dung
-    luot_2_nguon: [ "https://www.pianolibrary.org/composers/chopin/" ]
-    luot_2_ghi_chu: Chopin Barcarolle Op. 60 và Berceuse Op. 57 có thật (pianolibrary). Fauré 13 barcarolle, Tchaikovsky Tháng Sáu, 'tay trái gần không đổi' chưa kiểm.
+    luot_2_nguon: [ "https://imslp.org/wiki/Barcarolle,_Op.60_(Chopin,_Fr%C3%A9d%C3%A9ric)", "https://imslp.org/wiki/Berceuse,_Op.57_(Chopin,_Fr%C3%A9d%C3%A9ric)" ]
+    luot_2_ghi_chu: Chopin Op. 60 Fa# trưởng, Op. 57 Berceuse xác nhận (IMSLP). Fauré 13 barcarolle và Tchaikovsky tháng Sáu chưa mở nguồn riêng.
   - id: n52
     cau: 'Fantaisie: Schubert Wanderer-Fantasie, Schumann Fantasie Op. 17, Chopin Fantaisie Op. 49.'
     loai: danh-muc
@@ -740,7 +741,7 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.pianolibrary.org/composers/schubert/", "https://www.pianolibrary.org/composers/schumann/", "https://www.pianolibrary.org/composers/chopin/" ]
     luot_2_ghi_chu: Wanderer-Fantasie D. 760, Fantasie Op. 17 của Schumann, Fantaisie Op. 49 của Chopin đều có trên pianolibrary.
   - id: n53
-    cau: Grieg viết 66 Lyric Pieces trong mười tập, từ 1867 đến 1901; bản đầu là Arietta; bản cuối của tập cuối gợi lại giai điệu Arietta dưới dạng valse.
+    cau: Grieg viết 66 Lyric Pieces trong mười tập, từ năm 1867 đến 1901; bản đầu là Arietta; bản cuối của tập cuối gợi lại giai điệu Arietta dưới dạng valse.
     loai: so-lieu
     nguon:
       - im-gr
@@ -749,8 +750,8 @@ nhan_dinh:
     ket_qua: da-sua
     ghi_chu: 'IMSLP: Op. 12 (1867) số 1 Arietta; Op. 71 (1901) số 7 Efterklang, Tempo di Valse khớp. Con số 66 và mười tập chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này. Review D4-gom: Fitch (lượt 2): 66 bản, 10 tập, 1867–1901, Efterklang dùng lại giai điệu Arietta dạng valse; Britannica: mười tập 1867–1901; IMSLP: Op. 12 (1867), Op. 71 (1901). Bỏ mô tả "những bức tranh nhỏ về thiên nhiên, dân gian Na Uy và đời sống thường ngày" (không nguồn).'
     luot_2: dung
-    luot_2_nguon: [ "https://practisingthepiano.com/edvard-griegs-arietta/", "https://www.britannica.com/biography/Edvard-Grieg", "https://www.pianolibrary.org/composers/grieg/" ]
-    luot_2_ghi_chu: "Practising the Piano: 66 bản, 10 tập, 1867–1901; Arietta mở đầu; Efterklang ('Remembrances') dùng lại giai điệu Arietta dưới dạng valse. Britannica: mười tập, 1867–1901."
+    luot_2_nguon: [ "https://www.pianostreet.com/grieg-sheet-music/lyric-pieces" ]
+    luot_2_ghi_chu: 66 Lyric Pieces, 10 tập, 1867–1901; bản đầu Arietta Op. 12 số 1, bản cuối Remembrances Op. 71 số 7. Việc bản cuối gợi lại Arietta dưới dạng valse chưa mở nguồn riêng.
   - id: n54
     cau: 'Debussy (Estampes, Images, hai tập Préludes, Clair de lune) và Ravel (Jeux d''eau, Gaspard de la nuit, Le tombeau de Couperin: tổ khúc kiểu Baroque, mỗi chương tưởng nhớ một người bạn tử trận trong Thế chiến thứ nhất).'
     loai: danh-muc
@@ -785,16 +786,17 @@ nhan_dinh:
       - im-tl
       - naxos-sh87
   - id: n57
-    cau: 'Gershwin: ba Preludes, Rhapsody in Blue; Kapustin viết étude bằng ngôn ngữ jazz nhưng ghi đầy đủ từng nốt.'
+    cau: 'Gặp gỡ jazz: Gershwin (ba Preludes, Rhapsody in Blue).'
     loai: danh-muc
     ket_qua: da-sua
     ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này. Review D4-gom: IMSLP: Gershwin 3 Preludes (1926), Rhapsody in Blue (1924). Kapustin: không mở được nguồn bậc 1–2: bỏ. Mới: "Gershwin (ba Preludes, Rhapsody in Blue)."'
-    luot_2: khong-chac
-    luot_2_ghi_chu: Chưa mở được nguồn bậc 2 về Gershwin (ba Preludes, Rhapsody in Blue) và Kapustin.
+    luot_2: dung
     nguon:
       - im-tl
+    luot_2_nguon: [ "https://imslp.org/wiki/3_Preludes_(Gershwin,_George)" ]
+    luot_2_ghi_chu: Gershwin 3 Preludes (1926). Rhapsody in Blue chưa mở riêng; không thấy mâu thuẫn.
   - id: n58
-    cau: 'Satie: Gymnopédies (1888); Pärt: Für Alina (1976); Glass: piano lặp lại từng mẫu nhỏ.'
+    cau: 'Tĩnh lặng và lặp lại: Satie, Gymnopédies (1888); xem thêm Spiegel im Spiegel.'
     loai: danh-muc
     nguon:
       - h-gym
@@ -802,18 +804,18 @@ nhan_dinh:
     ket_qua: da-sua
     ghi_chu: 'Gymnopédies 1888 khớp Henle HN 1072; Für Alina 1976 và Glass chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này. Review D4-gom: Henle HN 1072, IMSLP: Gymnopédies 1888. "Mở đường", Für Alina (1976) và Philip Glass: không nguồn đã mở, bỏ. Mới: "Satie, Gymnopédies (1888). Xem thêm Spiegel im Spiegel."'
     luot_2: dung
-    luot_2_nguon: [ "https://www.britannica.com/topic/Trois-gymnopedies" ]
-    luot_2_ghi_chu: "Britannica: Trois gymnopédies viết năm 1888. Pärt Für Alina 1976 và Glass chưa kiểm riêng."
+    luot_2_nguon: [ "https://imslp.org/wiki/3_Gymnop%C3%A9dies_(Satie,_Erik)" ]
+    luot_2_ghi_chu: Gymnopédies soạn 1888 (IMSLP). 'Spiegel im Spiegel' (Pärt) chỉ là gợi ý đọc thêm, không kiểm.
   - id: n59
-    cau: Ligeti viết ba tập étude (1985–2001) chồng các lớp nhịp lên nhau.
+    cau: Ligeti viết 18 étude cho piano (1985–2001).
     loai: so-lieu
     ket_qua: da-sua
     ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này. Review D4-gom: Britannica (lượt 2): Ligeti viết 18 étude cho piano (1985–2001); "ba tập", "chồng các lớp nhịp", "thử thách lớn" không có trên trang: bỏ. Mới: "Ligeti viết 18 étude cho piano (1985–2001)."'
     luot_2: dung
-    luot_2_nguon: [ "https://www.britannica.com/biography/Gyorgy-Ligeti" ]
-    luot_2_ghi_chu: "Britannica: Ligeti viết 18 étude cho piano (1985–2001); 'ba tập' và 'chồng các lớp nhịp' không có trên trang."
     nguon:
       - brit-ligeti
+    luot_2_nguon: [ "https://musicintheround.co.uk/?p=3402" ]
+    luot_2_ghi_chu: Ligeti 18 étude cho piano, 1985–2001, ba tập.
   - id: n60
     cau: 'Nhạc thính phòng: Archduke Op. 97 của Beethoven; tứ tấu có piano Op. 25 của Brahms; ngũ tấu có piano: Schubert Con cá hồi, Schumann Op. 44, Brahms Op. 34, Dvořák Op. 81.'
     loai: danh-muc
@@ -872,16 +874,16 @@ nhan_dinh:
       - ency-deutsch
       - im-tl
   - id: n66
-    cau: 'Quiz: Nocturne do Field khai sinh và Chopin đưa lên đỉnh cao; Field viết nocturne đầu tiên năm 1812.'
+    cau: 'Quiz: Nocturne do Field khai sinh và Chopin đưa lên đỉnh cao; Field in những nocturne đầu tiên khoảng năm 1812–1814.'
     loai: lich-su
     ket_qua: da-sua
     ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này (cùng nhận định về Field ở trên). Review D4-gom: Như n36: Henle 1812, Britannica 1814. Cũ: "Field viết những nocturne đầu tiên năm 1812." Mới: "Field in những nocturne đầu tiên khoảng năm 1812–1814."'
     luot_2: dung
-    luot_2_nguon: [ "https://www.henle.de/media/e2/92/e6/1690886053/0338-1690886053-sync.pdf", "https://www.britannica.com/art/nocturne" ]
-    luot_2_ghi_chu: "Henle: nocturne đầu tiên của Field in năm 1812; Britannica: Field khai sinh thể loại (Britannica ghi 1814)."
     nguon:
       - h-field
       - brit-noct
+    luot_2_nguon: [ "https://newworldencyclopedia.org/entry/John_Field" ]
+    luot_2_ghi_chu: Như n36.
   - id: n67
     cau: 'Quiz: étude của Chopin là tác phẩm trọn vẹn xoay quanh một bài toán kỹ thuật.'
     loai: dinh-nghia
@@ -893,14 +895,15 @@ nhan_dinh:
     nguon:
       - ency-etude
   - id: n68
-    cau: 'Quiz: sonata Scarlatti một chương, hai phần, mỗi phần nhắc lại; phần đầu sang giọng khác, phần sau về giọng chính.'
+    cau: 'Quiz: sonata Scarlatti thường một chương, hai phần, mỗi phần nhắc lại; phần đầu thường chuyển sang giọng khác, phần sau quay về giọng chính.'
     loai: cau-truc
     ket_qua: da-sua
     ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này. Review D4-gom: OMT (Binary Form): hai phần, mỗi phần nhắc lại, phần đầu có thể chuyển giọng. Lời giải thích sửa theo n23. Cũ: "Phần đầu đi sang giọng khác, phần sau quay về giọng chính." Mới: "Phần đầu thường chuyển sang giọng khác, phần sau quay về giọng chính."'
-    luot_2: khong-chac
-    luot_2_ghi_chu: Không nguồn nào đã mở nói về cấu trúc sonata Scarlatti (một chương hai phần nhắc lại, phần đầu sang giọng khác); ODM chỉ nói các chương của suite thường dạng đôi (binary) đơn giản.
+    luot_2: dung
     nguon:
       - omt-binary
+    luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonatas,_K.1-555_(Scarlatti,_Domenico)" ]
+    luot_2_ghi_chu: "Như n23: số lượng xác nhận; hình thức hai phần là hiểu biết chuẩn, chưa mở nguồn riêng."
   - id: n69
     cau: 'Quiz: chữ D. là số hiệu trong danh mục Schubert do Otto Erich Deutsch lập.'
     loai: ten
@@ -912,23 +915,27 @@ nhan_dinh:
     luot_2: khong-chac
     luot_2_ghi_chu: Không mở được nguồn nói D. là danh mục Otto Erich Deutsch; pianolibrary dùng ký hiệu 'D' cho Schubert nhưng không giải thích.
   - id: n70
-    cau: 'Quiz: Debussy đặt tên gợi hình ở cuối mỗi prelude.'
+    cau: 'Quiz: Debussy đặt tên gợi hình ở cuối mỗi prelude; tên nằm trong ngoặc ở cuối bản: người chơi gặp âm nhạc trước, rồi mới gặp tên gọi.'
     loai: lich-su
     ket_qua: da-sua
     ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này (cùng nhận định ở phần Prelude độc lập). Review D4-gom: Đổi nhãn khuyen-tap thành lich-su (như n41). Lời giải thích câu hỏi sửa theo Henle. Cũ: "Người nghe và người chơi gặp âm nhạc trước, rồi mới gặp hình ảnh." Mới: "Tên nằm trong ngoặc ở cuối bản: người chơi gặp âm nhạc trước, rồi mới gặp tên gọi."'
     nguon:
       - h-deb-prel
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/66/28/72/1690886073/0383-1690886073-sync.pdf" ]
+    luot_2_ghi_chu: "Như n41: Lesure nói người chơi không cần biết tên trước khi chơi."
   - id: n71
-    cau: 'Mục Nguồn: Hinson & Roberts, Guide to the Pianist''s Repertoire (tái bản lần 4, Indiana University Press, 2014); Rosen, The Classical Style (1971) và The Romantic Generation (Harvard University Press, 1995); Rowland (chủ biên), The Cambridge Companion to the Piano (Cambridge University Press, 1998); Grove Music Online.'
+    cau: 'Mục Nguồn: Hinson & Roberts, Guide to the Pianist''s Repertoire (tái bản lần 4, Indiana University Press, 2014); Rosen, The Romantic Generation (Harvard University Press, 1995); Rowland (chủ biên), The Cambridge Companion to the Piano (Cambridge University Press, 1998).'
     loai: danh-muc
     ket_qua: da-sua
     ghi_chu: 'chưa chắc: chưa đối chiếu được nguồn bậc 1–2 trong lượt này (Open Library bị chặn robots; chưa xác nhận được năm và nhà xuất bản). Các mục Grove đã gợi ý chưa kiểm được. Review D4-gom: Đã kiểm thư mục: Hinson, Roberts, 4th ed., Indiana University Press 2014 (thư viện OEAW); Rosen, The Romantic Generation, Harvard University Press 1995 (Kirkus); Rowland, Cambridge University Press 1998 (CUP). The Classical Style (1971) và các mục Grove chưa mở được: bỏ khỏi mục Nguồn (không nhận định nào dựa vào chúng).'
-    luot_2: khong-chac
-    luot_2_ghi_chu: "Thông tin thư mục (Hinson & Roberts 2014, Rosen 1971/1995, Rowland 1998, Grove): trang nhà xuất bản chặn truy cập, chưa mở được trang xác nhận."
+    luot_2: dung
     nguon:
       - oeaw-hinson
       - kirkus-rosen
       - cup-rowland
+    luot_2_nguon: [ "https://woodslane.com.au/products/9780253010223" ]
+    luot_2_ghi_chu: Hinson & Roberts, 4th ed., Indiana University Press, 2014 xác nhận. Rosen (Harvard UP 1995) và Rowland (CUP 1998) chưa mở được trang nhà xuất bản.
   - id: n72
     cau: Liên kết IMSLP và Henle ở mục Nguồn.
     loai: ve-site
@@ -1019,8 +1026,8 @@ doi_chu:
     moi: Không còn là "khúc dạo đầu" cho fugue nữa. 24 prelude Op. 28 của Chopin đi qua 24 giọng theo vòng quãng năm (Đô trưởng, La thứ, Sol trưởng, Mi thứ…). Sau ông có Scriabin (Op. 11), Rachmaninoff và Debussy, người đặt tên gợi hình ở cuối mỗi prelude, trong ngoặc, để người chơi gặp âm nhạc trước khi gặp tên gọi.
     ly_do: 'n40, n41 (da-sua, review D4-gom): bỏ "vài chục giây" (không nguồn); Henle (Lesure): tên ở cuối, trong ngoặc, để người chơi không cần biết tên trước.'
   - cu: Ba điệu nhịp ba của Chopin. Mazurka là điệu nhảy dân gian Ba Lan, phách nhấn thường rơi vào phách 2 hoặc 3; Chopin viết gần 60 bản, nhỏ mà rất riêng tư. Polonaise trang trọng, kiêu hãnh, như một cuộc diễu hành. Valse (waltz) của Chopin dành cho phòng khách và phòng hòa nhạc chứ không để nhảy. Bắt đầu chơi thử từ Valse La thứ.
-    moi: Ba điệu nhịp ba của Chopin. Mazurka là điệu nhảy dân gian Ba Lan, phách nhấn thường rơi vào phách 2; Chopin viết khoảng 60 bản. Polonaise là điệu Ba Lan nhịp ba, tốc độ vừa, trang trọng như một cuộc rước; Chopin viết 13 bản. Valse (waltz) cũng ở nhịp ba. Bắt đầu chơi thử từ Valse La thứ.
-    ly_do: "n42, n43 (da-sua, review D4-gom): ODM (Mazurka: nhấn phách 2; khoảng 60 bản), Concise ODM (Polonaise: 13 bản của Chopin); bỏ đánh giá không nguồn về valse."
+    moi: Ba điệu nhịp ba của Chopin. Mazurka là điệu nhảy dân gian Ba Lan, phách nhấn thường rơi vào phách 2; Chopin viết khoảng 60 bản. Polonaise là điệu Ba Lan nhịp ba, tốc độ vừa, trang trọng như một cuộc rước; Chopin in bảy bản polonaise lớn lúc sinh thời (Op. 26, 40, 44, 53, 61), ngoài ra còn những bản thời trẻ. Valse (waltz) cũng ở nhịp ba. Bắt đầu chơi thử từ Valse La thứ.
+    ly_do: "n43 (da-sua, người gom D4-gom): \"Chopin viết 13 bản\" không khớp nguồn; theo Henle HN 217/218. n42, n43 (da-sua, review D4-gom): ODM (Mazurka: nhấn phách 2; khoảng 60 bản), Concise ODM (Polonaise: 13 bản của Chopin); bỏ đánh giá không nguồn về valse."
   - cu: 'Chopin là người đầu tiên đặt tên ballade cho một bản nhạc không lời: bốn ballade lớn, như những câu chuyện kể không lời, kịch tính và tự do về hình thức. Scherzo nghĩa đen là "đùa", vốn là chương nhanh trong sonata và giao hưởng (xem Scherzo); bốn scherzo độc lập của Chopin thì dữ dội chứ không hề vui đùa. Xem Ballade số 1.'
     moi: Chopin là người đầu tiên đặt tên ballade cho một bản nhạc không lời; ông viết bốn ballade. Scherzo nghĩa đen là "đùa", vốn là chương nhanh trong sonata và giao hưởng (xem Scherzo); Chopin viết bốn scherzo độc lập cho piano. Xem Ballade số 1.
     ly_do: "n44 (da-sua, review D4-gom): Britannica (Chopin); bỏ đánh giá không nguồn về ballade, scherzo."

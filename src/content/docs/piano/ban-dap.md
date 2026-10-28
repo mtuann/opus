@@ -33,7 +33,7 @@ Bấm câm (không cho kêu) hợp âm Đô4–Mi4–Sol4 và giữ phím. Tay k
 | Ký hiệu | Nghĩa |
 |---|---|
 | *Ped.* … ✱ (dấu sao) | Nhấn bàn đạp vang ở *Ped.*, nhả ở dấu sao. Trong các bài trên site này, một chữ *Ped.* mới mà không có dấu sao trước đó nghĩa là đổi bàn đạp: nhả rồi nhấn lại |
-| Đường kẻ dưới khuông, có vạch dọc ở hai đầu | Nhấn ở đầu đường kẻ, giữ đến vạch dọc ở cuối thì nhả; chỗ gãy nhọn (∧) trên đường kẻ là nửa bàn đạp: nhả một phần rồi nhấn lại |
+| Đường kẻ dưới khuông, có vạch dọc ở hai đầu | Nhấn ở đầu đường kẻ, giữ đến vạch dọc ở cuối thì nhả; chỗ gãy nhọn (∧) trên đường kẻ là nhả rồi nhấn lại ngay (đổi bàn đạp); vài ấn bản dùng nó cho nửa bàn đạp (chỉ nhả một phần) |
 | *Ped. simile* | Tiếp tục đạp như các ô trước |
 | *una corda* (*u.c.*) | Nhấn bàn đạp trái |
 | *tre corde* (*t.c.*), *tutte le corde* | Nhả bàn đạp trái |

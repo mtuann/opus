@@ -258,7 +258,7 @@ Sẵn sàng đi tiếp khi:
 
 ## Nguồn
 
-- Wolfgang Amadeus Mozart, 12 biến tấu về *Ah, vous dirai-je, maman*, K. 265 (300e): bản nhạc trên [IMSLP](https://imslp.org/wiki/12_Variations_on_'Ah,_vous_dirai-je_maman',_K.265/300e_(Mozart,_Wolfgang_Amadeus)); bản cho hai guitar theo ấn bản Porro trên [Mutopia](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2236) (nhịp và giọng của chủ đề và các biến tấu); lời nói đầu của ấn bản Urtext G. Henle Verlag, HN 116 ([PDF](https://henle.de/media/4c/7b/a4/1690886062/0165-1690886062-sync.pdf)): niên đại, bản in đầu.
+- Wolfgang Amadeus Mozart, 12 biến tấu về *Ah, vous dirai-je, maman*, K. 265 (300e): bản nhạc trên [IMSLP](https://imslp.org/wiki/12_Variations_on_'Ah,_vous_dirai-je_maman',_K.265/300e_(Mozart,_Wolfgang_Amadeus)); bản cho hai guitar theo ấn bản Porro trên [Mutopia](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2236) (nhịp và giọng của chủ đề và các biến tấu); lời nói đầu của ấn bản Urtext G. Henle Verlag, HN 165 ([PDF](https://henle.de/media/4c/7b/a4/1690886062/0165-1690886062-sync.pdf)): niên đại, bản in đầu.
 - Carl Philipp Emanuel Bach, *Versuch über die wahre Art das Clavier zu spielen*, phần 2 (1762): đệm và fantasia tự do.
 - Carl Czerny, *Systematische Anleitung zum Fantasieren auf dem Pianoforte*, Op. 200; *Die Kunst des Präludierens*, Op. 300.
 - John J. Mortensen, *The Pianist's Guide to Historic Improvisation* (Oxford University Press, 2020).

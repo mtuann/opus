@@ -106,7 +106,7 @@ Không còn là "khúc dạo đầu" cho fugue nữa. 24 prelude Op. 28 của Ch
 
 ### Mazurka, polonaise, valse
 
-Ba điệu nhịp ba của Chopin. **Mazurka** là điệu nhảy dân gian Ba Lan, phách nhấn thường rơi vào phách 2; Chopin viết khoảng 60 bản. **Polonaise** là điệu Ba Lan nhịp ba, tốc độ vừa, trang trọng như một cuộc rước; Chopin viết 13 bản. **Valse** (waltz) cũng ở nhịp ba. Bắt đầu chơi thử từ [Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/).
+Ba điệu nhịp ba của Chopin. **Mazurka** là điệu nhảy dân gian Ba Lan, phách nhấn thường rơi vào phách 2; Chopin viết khoảng 60 bản. **Polonaise** là điệu Ba Lan nhịp ba, tốc độ vừa, trang trọng như một cuộc rước; Chopin in bảy bản polonaise lớn lúc sinh thời (Op. 26, 40, 44, 53, 61), ngoài ra còn những bản thời trẻ. **Valse** (waltz) cũng ở nhịp ba. Bắt đầu chơi thử từ [Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/).
 
 ### Ballade và scherzo
 

@@ -74,7 +74,7 @@ Thời Lãng mạn, piano thành nhạc cụ của những nghệ sĩ biểu di�
 
 Mỗi nghệ sĩ có cây đàn mình thích. Chopin gắn bó với đàn **Pleyel** ở Paris, tiếng mềm và nhạy với những sắc thái nhỏ; Liszt thường chơi đàn **Érard**, mạnh mẽ và lặp nốt nhanh. Nhiều hãng đàn lớn ra đời trong giai đoạn này: **Bösendorfer** (Vienna, 1828), **Steinway & Sons** (New York, 1853, do Henry Engelhard Steinway lập; xưởng Hamburg mở năm 1880), **C. Bechstein** (Berlin, 1853) và **Blüthner** (Leipzig, 1853).
 
-Song song là **đàn đứng** (*upright*): dây dựng theo chiều đứng để cây đàn gọn hơn. Kiểu "đàn hươu cao cổ" (*giraffe piano*) xuất hiện ở Vienna khoảng năm 1798; năm 1800, John Isaac Hawkins làm cây piano đứng thực thụ đầu tiên, ở Philadelphia. Về nhạc **bốn tay** và các thể loại khác cho piano, xem [Các thể loại nhạc piano](/opus/piano/the-loai/).
+Song song là **đàn đứng** (*upright*): dây dựng theo chiều đứng để cây đàn gọn hơn. Kiểu "đàn hươu cao cổ" (*giraffe piano*) xuất hiện ở Vienna đầu thế kỷ 19; năm 1800, John Isaac Hawkins làm cây đàn thường được coi là piano đứng thực thụ đầu tiên, ở Philadelphia. Về nhạc **bốn tay** và các thể loại khác cho piano, xem [Các thể loại nhạc piano](/opus/piano/the-loai/).
 
 ## Thế kỷ 20 đến nay
 

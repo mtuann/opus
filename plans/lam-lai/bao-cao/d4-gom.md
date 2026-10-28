@@ -39,3 +39,19 @@ Quyết định chung:
 Chỗ trang và dữ liệu đã khóa cần sửa theo (làm ở nhánh này, trước khi khóa): `piano/lo-trinh` "đọc trước nửa ô nhịp / một ô nhịp" (chặng 3, 4); `thuat-ngu.yml` mục `con-sordino-con-sordina`; ba trang luyện tai còn "hợp âm át bảy"; ghi chú cũ trong `bat-dau/moi-ngay.yml`.
 
 Chữ đổi sau lượt 2 và câu mới: 156 câu ở `bo-sung.yml` (145 câu đổi chữ, 9 câu mới hay đổi nhãn, 2 mẫu lời khuyên tập) cho lượt 2 bổ sung.
+
+### Lượt 2 bổ sung
+
+220 câu (`bo-sung-1..3.yml`, `ket-qua-bo-sung-1..3.yml`): 195 dung, 1 sai, 24 khong-chac. Trước đó nhóm C cập nhật `cau` của 79 câu theo chữ mới trên trang (lượt 2 bổ sung chỉ đọc `cau`). Người gom giải quyết:
+
+- ung-tac n59 (sai): ấn bản Henle của K. 265 là HN 165, không phải HN 116.
+- the-loai n43: "Chopin viết 13 bản polonaise" không khớp nguồn; theo Henle (HN 217/218): bảy bản lớn in lúc sinh thời, cùng những bản thời trẻ.
+- lich-su-dan n44: bỏ mốc "khoảng 1798" của đàn hươu cao cổ (Britannica: 1804), viết "đầu thế kỷ 19"; Hawkins "thường được coi là".
+- ban-dap n19: ∧ trên đường kẻ bàn đạp đọc là nhả rồi nhấn lại (MEI), vài ấn bản dùng cho nửa bàn đạp.
+- Các câu khong-chac còn lại: do lượt 2 bổ sung không mở được nguồn (Britannica, encyclopedia.com, OMT, IMSLP chặn hay lỗi), không phải nguồn nói khác; giữ theo nguồn lượt 1 và review đã ghi trong hồ sơ.
+
+### Sửa trang đã khóa
+
+- `piano/lo-trinh`: mở khóa, dòng Đọc nhạc chặng 3, 4 thành "tập nhìn trước vài nốt" và "nhìn trước xa hơn, dù hiếm khi tới trọn một ô nhịp", dẫn sang Thị tấu `#nhin-truoc`.
+- `bat-dau/moi-ngay.yml`: ghi chú hai nhận định cập nhật theo bảng Mẫu buổi tập và bảng cảnh báo mới (chữ trang không đổi).
+- Giữ nguyên: bản ghi `thuat-ngu.yml` `con-sordino-con-sordina` (nghĩa una corda ở Scriabin có nguồn Henle Blog; link `#ky-hieu` vẫn có); ba trang luyện tai còn "hợp âm át bảy" (đã khóa, chỉ khác cách gọi; để lần sửa sau).
