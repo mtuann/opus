@@ -1623,12 +1623,17 @@ html.oz-stand-open .main-pane {
 .oz-pho-khung {
 	position: relative;
 	max-width: 45rem;
+	/* không đặt min-height: cùng aspect-ratio, nó kéo rộng khung quá màn hình 360 px */
 	aspect-ratio: 3 / 1;
-	min-height: 8rem;
 	margin: 0.6rem 0;
 	border: 1px solid var(--sl-color-gray-5);
 	border-radius: 8px;
 	overflow: hidden;
+}
+@media (max-width: 40rem) {
+	.oz-pho-khung {
+		aspect-ratio: 2 / 1;
+	}
 }
 .sl-markdown-content .oz-pho-khung > * {
 	margin-top: 0;

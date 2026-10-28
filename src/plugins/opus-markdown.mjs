@@ -13,7 +13,7 @@ import { fileURLToPath } from 'node:url';
 import { parse } from 'yaml';
 import { chiDaKhoa, duLieuDaKiem } from '../du-lieu.mjs';
 import { docKhoa, truongDaKhoa } from '../khoa.mjs';
-import { congCu, docMoc, hinh, hinhCauTruc, hocTiep, hopTacPham, khoiNghe, khuongAbc, quiz } from './thanh-phan.mjs';
+import { congCu, docMoc, duLieuCho, hinh, hinhCauTruc, hocTiep, hopTacPham, khoiNghe, khuongAbc, quiz, tuDien } from './thanh-phan.mjs';
 
 /** Loại của trang tác phẩm theo đường dẫn: bai-hoc (piano/tac-pham/), nghe (nghe-nhac/). */
 function loaiTrang(trang) {
@@ -34,6 +34,8 @@ const CHI_THI = {
 	hinh: { thuocTinh: ['ten*'], ve: ({ tt, trang }) => hinh(tt.ten, trang) },
 	// thuộc tính khác của ::cong-cu là thông số của công cụ (data-* của khối oz- ở site cũ)
 	'cong-cu': { thuocTinh: ['ten*', '…'], ve: ({ tt, trang }) => congCu(tt, trang) },
+	// bảng thuật ngữ của một nhóm, dựng từ src/data/thuat-ngu.yml (D3-L5, trang Từ điển)
+	'tu-dien': { thuocTinh: ['nhom*'], ve: ({ tt, trang }) => tuDien(tt.nhom, duLieuCho(trang).thuatNgu) },
 };
 
 /** Tiêu đề mục chứa bảng mốc, ngay sau ::khoi-nghe{moc}. */
