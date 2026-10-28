@@ -218,6 +218,10 @@ Từ đợt này, mỗi lô gộp vào `main` là trang của lô lên site th�
 
 ## Đợt 4. Piano nền tảng (D4-L1 đến D4-L4)
 
+- **Cách làm (chủ repo chọn ngày 28/10/2026): như đợt 3.** Lượt 1 của D4-L1 đến D4-L4 lần lượt, mỗi lô một nhánh `moi/d4-l<lô>` từ `main`, gộp vào `main` sau khi kiểm thử đạt (trang chưa khóa chỉ có ở bản xem); rồi nhánh gom `moi/d4-gom`: lượt 2 chung, review, chủ repo kiểm mẫu khoảng 10 nhận định, khóa cả 28 trang một lần.
+- Các trang piano phải giữ điều mà câu `ve-site` của đợt 3 trỏ tới (tìm: `grep -rn "piano/" kiem-dinh/nhac-ly/ kiem-dinh/luyen-tai/`); lời giao lượt 1 nhắc kiểm.
+- Trước hay trong D4-L1 (đàn 88 phím, báo cáo D3-L1): `giuMau` bỏ mẫu âm có yêu cầu cũ nhất; chờ lâu dần khi tải mẫu hỏng liên tục.
+
 **Xong khi:** 28 trang của 4 lô đã khóa; 10 bài đầu tiên phát và vẽ khuông đúng.
 
 ## Đợt 5. Nhạc cổ điển nền tảng (D5-L1 đến D5-L3)
