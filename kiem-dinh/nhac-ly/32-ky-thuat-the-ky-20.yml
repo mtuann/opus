@@ -1,0 +1,574 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/32-ky-thuat-the-ky-20
+trang: src/content/docs/nhac-ly/32-ky-thuat-the-ky-20.md
+nguon_cu: ../opus-zero/docs/nhac-ly/32-ky-thuat-the-ky-20.md
+tang: loi
+lan:
+  - so: 1
+    ngay: '2026-10-28'
+    nhanh: moi/d3-l4
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D3-L4 lượt 1, phần 2/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Trang kỹ thuật thế kỷ 20 (tầng lõi), 5 khối abc soạn riêng. Nguồn chính: OMT (Collections, Twelve-Tone), Hutchinson (Polychords), Britannica, COD (minimalism), Reich (1968), IRCAM, Berliner Philharmoniker, lizhogg, BBC Music Magazine; WebFetch ngày 28/10/2026. CHƯA CHẮC (null): n7 phần "quyển 1" (bậc 3), n14 (Rimsky-Korsakov, Stravinsky với bát cung), n17 đến n20 (hợp âm quãng 4, Hindemith, jazz: chỉ Wikipedia), n39 (cơ chế lệch pha), n43 (đồng xu, xúc xắc, Kinh Dịch), n46 (Pärt, chỉ bậc 3). Thuật ngữ trang dùng, có hồ sơ riêng ở lô này: octatonic-scale, polytonality, twelve-tone, minimalism. Chưa có ở thuat-ngu.yml (cho D3-L5): ostinato, phasing (lệch pha), additive process (cộng dồn), aleatoric/chance music (nhạc ngẫu nhiên), quartal harmony (hợp âm quãng 4), polychord (hợp âm kép), whole-tone scale (gam toàn cung), row (dãy 12 âm).'
+nguon:
+  - id: omt-col
+    bac: 2
+    ten: Open Music Theory, Collections (Gotham, Lavengood, Moseley, Shaffer)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/collections/
+  - id: omt-12
+    bac: 2
+    ten: Open Music Theory, Basics of Twelve-Tone Theory (Gotham, Moseley)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/basics-of-twelve-tone-theory/
+  - id: mt21c-poly
+    bac: 2
+    ten: Hutchinson, Music Theory for the 21st-Century Classroom, Polychords, LibreTexts
+    link: https://human.libretexts.org/Bookshelves/Music/Music_Theory/Music_Theory_for_the_21st-Century_Classroom_%28Hutchinson%29/32%3A_Impressionism_and_Extended_Tonality/32.04%3A_Polychords
+  - id: brit-wt
+    bac: 2
+    ten: Encyclopaedia Britannica, Whole-tone scale
+    link: https://www.britannica.com/art/whole-tone-scale
+  - id: brit-poly
+    bac: 2
+    ten: Encyclopaedia Britannica, Polytonality
+    link: https://www.britannica.com/art/polytonality
+  - id: brit-12
+    bac: 2
+    ten: Encyclopaedia Britannica, 12-tone music
+    link: https://www.britannica.com/art/12-tone-music
+  - id: brit-ost
+    bac: 2
+    ten: Encyclopaedia Britannica, Ostinato
+    link: https://www.britannica.com/art/ostinato
+  - id: cod-min
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục minimalism, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/minimalism
+  - id: reich
+    bac: 2
+    ten: Steve Reich, Music as a Gradual Process (1968), đoạn trích
+    link: https://sites.nd.edu/choral-lit/files/2018/10/Reich-Music-as-Gradual-Process-II.pdf
+  - id: ircam-berg
+    bac: 2
+    ten: IRCAM BRAHMS, Berg, Violinkonzert
+    link: https://brahms.ircam.fr/en/work/violinkonzert-6
+  - id: berl
+    bac: 2
+    ten: Berliner Philharmoniker, lời giới thiệu Concerto violin của Berg
+    link: https://www.berliner-philharmoniker.de/en/programme-notes/alban-berg-concerto-for-violin-and-orchestra-to-the-memory-of-an-angel
+  - id: lizhogg
+    bac: 2
+    ten: Bài giảng MUS347W (lizhogg.com), dãy 12 âm của Berg
+    link: https://lizhogg.com/wp-content/uploads/2015/08/MUS347W-7.pdf
+  - id: ircam-sch
+    bac: 2
+    ten: IRCAM BRAHMS, Arnold Schoenberg
+    link: https://brahms.ircam.fr/en/arnold-schoenberg
+  - id: ircam-pp
+    bac: 2
+    ten: IRCAM BRAHMS, Piano Phase (Steve Reich)
+    link: https://brahms.ircam.fr/en/works/work/11267/
+  - id: bbc-433
+    bac: 2
+    ten: BBC Music Magazine (classical-music.com), What is the point of John Cage's 4'33"? (2024)
+    link: https://www.classical-music.com/features/works/john-cage-433
+  - id: wiki-oct
+    bac: 3
+    ten: Wikipedia, Octatonic scale (bậc 3, chỉ để tìm nguồn)
+    link: https://en.wikipedia.org/wiki/Octatonic_scale
+  - id: wiki-quart
+    bac: 3
+    ten: Wikipedia, Quartal and quintal harmony (bậc 3, chỉ để tìm nguồn)
+    link: https://en.wikipedia.org/wiki/Quartal_and_quintal_harmony
+  - id: wiki-rite
+    bac: 3
+    ten: Wikipedia, The Rite of Spring (bậc 3, chỉ để tìm nguồn)
+    link: https://en.wikipedia.org/wiki/The_Rite_of_Spring
+  - id: wiki-12
+    bac: 3
+    ten: Wikipedia, Twelve-tone technique (bậc 3, chỉ để tìm nguồn)
+    link: https://en.wikipedia.org/wiki/Twelve-tone_technique
+  - id: wiki-berg
+    bac: 3
+    ten: Wikipedia, Violin Concerto (Berg) (bậc 3, chỉ để tìm nguồn)
+    link: https://en.wikipedia.org/wiki/Violin_Concerto_(Berg)
+  - id: wiki-min
+    bac: 3
+    ten: Wikipedia, Minimalism (music) (bậc 3, chỉ để tìm nguồn)
+    link: https://en.wikipedia.org/wiki/Minimalism_(music)
+  - id: wiki-aleat
+    bac: 3
+    ten: Wikipedia, Aleatoric music (bậc 3, chỉ để tìm nguồn)
+    link: https://en.wikipedia.org/wiki/Aleatoric_music
+  - id: wiki-part
+    bac: 3
+    ten: Wikipedia, Spiegel im Spiegel (bậc 3, chỉ để tìm nguồn)
+    link: https://en.wikipedia.org/wiki/Spiegel_im_Spiegel
+  - id: listeners
+    bac: 3
+    ten: The Listeners' Club, Debussy's Voiles (bậc 3)
+    link: https://thelistenersclub.com/2022/09/16/debussys-voiles-preludes-book-1-sailing-on-a-whole-tone-sea/
+nhan_dinh:
+  - id: n1
+    cau: Từ đầu thế kỷ 20, nhiều nhà soạn nhạc rời bỏ hệ thống trưởng, thứ và hòa âm chức năng.
+    loai: lich-su
+    nguon:
+      - brit-12
+      - brit-wt
+      - omt-col
+    ket_qua: dung
+    ghi_chu: 'Cả bài là ví dụ: gam toàn cung, nhạc 12 âm, đa điệu tính (n3, n10, n13, n17). Câu mở nhẹ, không số liệu.'
+  - id: n2
+    cau: 'Link [Trang lịch sử](/opus/lich-su/thoi-ky/the-ky-20/): kể chuyện gì đã xảy ra.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển. Site cũ ../opus-zero/docs/lich-su/thoi-ky/the-ky-20.md có tồn tại và có gam toàn cung, nhạc 12 âm, tối giản, ngẫu nhiên. Điều cần giữ: trang lịch sử nhắc các phong trào trên; bài 32 gọi nó là chỗ "chuyện gì đã xảy ra".'
+  - id: n3
+    cau: 'Gam toàn cung chỉ gồm các cung, không có nửa cung: 6 nốt chia đều quãng 8.'
+    loai: dinh-nghia
+    nguon:
+      - omt-col
+      - brit-wt
+    ket_qua: dung
+    ghi_chu: 'Britannica: sáu nốt cách nhau một cung. OMT: chỉ một cỡ bước.'
+  - id: n4
+    cau: Chỉ có hai gam toàn cung khác nhau.
+    loai: so-lieu
+    nguon:
+      - omt-col
+    ket_qua: dung
+    ghi_chu: 'OMT Collections: hai gam toàn cung.'
+  - id: n5
+    cau: Gam toàn cung không có chủ âm rõ ràng, không có cảm giác "về nhà".
+    loai: quy-tac
+    nguon:
+      - omt-col
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "không có chủ âm". OMT: "rotationally ambiguous, since there is only one size of step", tức không nốt nào nổi bật; không nói "không có chủ âm". Chữ mới: "không có chủ âm rõ ràng".'
+  - id: n6
+    cau: Âm thanh gam toàn cung mơ hồ, lơ lửng, như trong mơ; gắn với Debussy.
+    loai: lich-su
+    nguon:
+      - brit-wt
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "đặc trưng của Debussy". Britannica: Debussy, Dukas và những người khác dùng khoảng năm 1900; không nói "đặc trưng". Chữ mới: "gắn với Debussy". Phần "như trong mơ" là mô tả cảm giác.'
+  - id: n7
+    cau: Voiles, trong tập Préludes quyển 1 của Debussy, dùng gam toàn cung.
+    loai: nam
+    nguon:
+      - brit-wt
+    ket_qua: dung
+    ghi_chu: 'Britannica (Whole-tone scale): Voiles là ví dụ. CHƯA CHẮC phần "quyển 1": chỉ The Listeners'' Club (bậc 3) nói Voiles là bản thứ hai của quyển 1 (1910); chưa tìm được nguồn bậc 1-2.'
+  - id: n8
+    cau: Link [Préludes quyển 1](/opus/nghe-nhac/debussy-preludes/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển. Site cũ ../opus-zero/docs/nghe-nhac/debussy-preludes.md có tồn tại và nói về Préludes quyển 1. Điều cần giữ: trang có Voiles hoặc ít nhất tập quyển 1.'
+  - id: n9
+    cau: 'Khối abc 1: gam toàn cung từ Đô trên hợp âm tăng (C D E F♯ G♯ A♯ c).'
+    loai: cau-truc
+    nguon:
+      - brit-wt
+    ket_qua: dung
+    ghi_chu: Xem khuong_nhac khối 1. Bảy nốt, đều cách nhau một cung, từ Đô đến Đô quãng 8 (Si♯ viết là A♯ rồi c).
+  - id: n10
+    cau: Gam bát cung xen kẽ nửa cung và cung, 8 nốt.
+    loai: dinh-nghia
+    nguon:
+      - omt-col
+    ket_qua: dung
+    ghi_chu: 'OMT Collections: octatonic xen kẽ cung và nửa cung, tám nốt.'
+  - id: n11
+    cau: Chỉ có ba gam bát cung khác nhau.
+    loai: so-lieu
+    nguon:
+      - omt-col
+    ket_qua: dung
+    ghi_chu: 'OMT: ba gam bát cung.'
+  - id: n12
+    cau: Messiaen gọi gam bát cung là "điệu thức chuyển vị hạn chế số 2".
+    loai: ten
+    nguon:
+      - omt-col
+    ket_qua: dung
+    ghi_chu: 'OMT: các điệu thức chuyển vị hạn chế của Messiaen, trong đó số 2 tương ứng gam bát cung.'
+  - id: n13
+    cau: Gam bát cung xuất hiện trong nhạc của Bartók và Messiaen.
+    loai: lich-su
+    nguon:
+      - omt-col
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "được dùng nhiều bởi Rimsky-Korsakov, Stravinsky, Bartók, Messiaen". OMT nối Bartók (mô hình khoảng cách, có 1:2) và Messiaen. Chữ mới: "xuất hiện trong nhạc của…" (bỏ "nhiều").'
+  - id: n14
+    cau: Gam bát cung xuất hiện trong nhạc của Rimsky-Korsakov và Stravinsky.
+    loai: lich-su
+    nguon:
+      - wiki-oct
+    ket_qua: null
+    ghi_chu: 'CHƯA CHẮC: chỉ Wikipedia Octatonic scale (bậc 3); OMT không nêu hai người này cho octatonic (chỉ Stravinsky ở pandiatonic, Petrushka). Giữ chữ trang, lượt 2 tìm nguồn bậc 1-2.'
+  - id: n15
+    cau: Gam bát cung có âm thanh căng, kỳ ảo.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Mô tả cảm giác nghe, dùng ở bài tập nhận diện.
+  - id: n16
+    cau: 'Khối abc 2: gam bát cung từ Đô (nửa cung, cung): C D♭ E♭ E F♯ G A B♭ c.'
+    loai: cau-truc
+    nguon:
+      - omt-col
+    ket_qua: dung
+    ghi_chu: 'Xem khuong_nhac khối 2. Các bước: nửa, cung, nửa, cung, nửa, cung, nửa, cung.'
+  - id: n17
+    cau: Hợp âm quãng 4 chồng quãng 4 thay vì quãng 3.
+    loai: dinh-nghia
+    nguon:
+      - wiki-quart
+    ket_qua: null
+    ghi_chu: 'CHƯA CHẮC về bậc nguồn: chỉ Wikipedia (bậc 3); định nghĩa đơn giản, hiển nhiên đúng. Ghi null nếu theo luật "bậc 3 không là nguồn duy nhất".'
+  - id: n18
+    cau: Hợp âm quãng 4 mơ hồ, không có âm gốc rõ ràng, không trưởng không thứ.
+    loai: dinh-nghia
+    nguon:
+      - wiki-quart
+    ket_qua: da-sua
+    ghi_chu: 'CHƯA CHẮC bậc nguồn: chỉ Wikipedia (không có âm gốc rõ ràng). Chữ cũ: "rỗng, hiện đại"; đó là cảm giác không kiểm được nên bỏ. Lượt 2 tìm nguồn bậc 1-2.'
+  - id: n19
+    cau: Hindemith dùng hợp âm quãng 4 trong Mathis der Maler.
+    loai: lich-su
+    nguon:
+      - wiki-quart
+    ket_qua: null
+    ghi_chu: 'CHƯA CHẮC: chỉ Wikipedia (bậc 3). Chữ cũ "Hindemith dùng nhiều" đổi thành một tác phẩm cụ thể theo Wikipedia.'
+  - id: n20
+    cau: Jazz cũng dùng hợp âm quãng 4.
+    loai: lich-su
+    nguon:
+      - wiki-quart
+    ket_qua: null
+    ghi_chu: 'CHƯA CHẮC bậc nguồn: Wikipedia và vài trang dạy jazz (bậc 3). Hiển nhiên đúng nhưng chưa có nguồn bậc 1-2.'
+  - id: n21
+    cau: 'Khối abc 3: ba hợp âm quãng 4 [C F B♭ E♭] [D G c f] [E A d g] rồi lặp lại, nhịp 4/2.'
+    loai: cau-truc
+    nguon:
+      - wiki-quart
+    ket_qua: dung
+    ghi_chu: 'Xem khuong_nhac khối 3: mỗi hợp âm gồm các quãng 4 đúng liên tiếp.'
+  - id: n22
+    cau: 'Đa điệu tính: hai giọng (hoặc hai hợp âm) khác nhau cùng lúc.'
+    loai: dinh-nghia
+    nguon:
+      - brit-poly
+      - mt21c-poly
+    ket_qua: da-sua
+    ghi_chu: 'Britannica: đa điệu tính là hai hay nhiều giọng cùng lúc. Hutchinson tách polychord (hai hợp âm chồng nhau) khỏi đa điệu tính, nên câu cũ "Hợp âm nổi tiếng nhất" đổi thành "Một hợp âm rất nổi tiếng thuộc loại này (hợp âm kép, polychord)". Cách nói "hai giọng (hoặc hai hợp âm)" gộp hai khái niệm; lượt 2 cân nhắc tách.'
+  - id: n23
+    cau: 'Một hợp âm rất nổi tiếng thuộc loại này nằm ở Les Augures printaniers trong Le Sacre du printemps: Mi♭7 chồng lên Fa♭ trưởng (nghe như Mi trưởng).'
+    loai: nam
+    nguon:
+      - mt21c-poly
+      - wiki-rite
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Hợp âm nổi tiếng nhất". Hutchinson: Mi♭7 chồng Fa♭ trưởng ở "Dance of the Adolescents" (tên khác của Augurs of Spring). Fa♭ = Mi nên "nghe như Mi trưởng" đúng về cao độ. Không có nguồn xếp "nổi tiếng nhất".'
+  - id: n24
+    cau: Hợp âm ấy dậm đi dậm lại.
+    loai: cau-truc
+    nguon:
+      - wiki-rite
+    ket_qua: dung
+    ghi_chu: 'Wikipedia (bậc 3): hợp âm dậm đi dậm lại ở Augurs of Spring; mô tả tiết tấu hiển nhiên khi nghe.'
+  - id: n25
+    cau: Link [Le Sacre du printemps](/opus/nghe-nhac/stravinsky-sacre/) (hai lần).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển. Site cũ ../opus-zero/docs/nghe-nhac/stravinsky-sacre.md có tồn tại và có đoạn Augurs. Điều cần giữ: trang có Les Augures printaniers (bài tập 2 gọi đúng đoạn này).'
+  - id: n26
+    cau: 'Khối abc 4: Mi♭7 [E♭ G B♭ D♭] trên Fa♭ trưởng [F♭ A♭ C♭], nhịp 2/4.'
+    loai: cau-truc
+    nguon:
+      - mt21c-poly
+    ket_qua: dung
+    ghi_chu: 'Xem khuong_nhac khối 4. Hutchinson: Mi♭7 trên Fa♭ trưởng.'
+  - id: n27
+    cau: Schoenberg phát triển phương pháp 12 âm (khoảng đầu thập niên 1920) để tổ chức âm nhạc vô điệu tính.
+    loai: lich-su
+    nguon:
+      - ircam-sch
+      - brit-12
+      - omt-12
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "khoảng 1921–1923". IRCAM: áp dụng kỹ thuật chuỗi năm 1923; Wikipedia (bậc 3): đã dùng từ 1921 (nhớ). Không có nguồn bậc 1-2 cho 1921 nên đổi thành "khoảng đầu thập niên 1920". Britannica: Schoenberg được coi là người phát minh.'
+  - id: n28
+    cau: 'Bước 1: sắp xếp cả 12 nốt của quãng 8 thành một dãy (row), mỗi nốt một lần, theo thứ tự nhà soạn nhạc chọn.'
+    loai: dinh-nghia
+    nguon:
+      - omt-12
+    ket_qua: dung
+    ghi_chu: 'OMT: dãy gồm đủ 12 nốt theo một thứ tự.'
+  - id: n29
+    cau: 'Bước 2: mọi giai điệu và hợp âm đều lấy từ dãy đó, theo đúng thứ tự.'
+    loai: quy-tac
+    nguon:
+      - omt-12
+    ket_qua: dung
+    ghi_chu: 'OMT: nhạc 12 âm lấy chất liệu từ dãy. "Mọi" là định nghĩa cơ bản của phương pháp; thực hành có nới lỏng.'
+  - id: n30
+    cau: 'Dãy có bốn dạng: nguyên bản (P), đảo (I), ngược (R), ngược đảo (RI), chuyển lên bất kỳ cao độ nào: tổng cộng 48 dạng.'
+    loai: so-lieu
+    nguon:
+      - omt-12
+    ket_qua: dung
+    ghi_chu: 'OMT: bốn dạng, mỗi dạng dịch lên 12 cao độ thành 48 dạng (4 x 12).'
+  - id: n31
+    cau: 'Mục đích: không nốt nào được "ưu tiên", nên không có chủ âm.'
+    loai: quy-tac
+    nguon:
+      - omt-12
+    ket_qua: dung
+    ghi_chu: 'OMT: nhạc 12 âm dùng cả 12 cao độ gần như ngang nhau nên giọng, chủ âm không còn như nhạc tonal.'
+  - id: n32
+    cau: Dãy 12 âm của Concerto violin của Alban Berg (1935) chứa nhiều hợp âm ba ẩn bên trong.
+    loai: lich-su
+    nguon:
+      - berl
+      - ircam-berg
+      - lizhogg
+    ket_qua: dung
+    ghi_chu: 'IRCAM: viết năm 1935. Berliner Phil.: dãy dựng từ các hợp âm ba xen nhau. lizhogg: dãy G B♭ D F♯ A C E G♯ B C♯ E♭ F.'
+  - id: n33
+    cau: Dãy ấy nghe gần với nhạc tonal hơn.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Chữ cũ: "nghe có phần trữ tình" (da-sua về chữ, xem doi_chu). Cảm nhận nghe; chữ mới bám việc dãy dựng từ hợp âm ba (Berliner Phil.).'
+  - id: n34
+    cau: 'Khối abc 5: dãy 12 âm Sol, Si♭, Rê, Fa♯, La, Đô, Mi, Sol♯, Si, Đô♯, Mi♭, Fa.'
+    loai: cau-truc
+    nguon:
+      - lizhogg
+      - berl
+    ket_qua: dung
+    ghi_chu: 'Xem khuong_nhac khối 5: mười hai lớp cao độ khác nhau, đúng thứ tự lizhogg.'
+  - id: n35
+    cau: Sol, Si♭, Rê (Sol thứ); Rê, Fa♯, La (Rê trưởng); La, Đô, Mi (La thứ); Mi, Sol♯, Si (Mi trưởng); rồi bốn nốt cuối đi lên từng cung.
+    loai: cau-truc
+    nguon:
+      - berl
+      - lizhogg
+    ket_qua: dung
+    ghi_chu: 'G B♭ D = Sol thứ; D F♯ A = Rê trưởng; A C E = La thứ; E G♯ B = Mi trưởng; bốn nốt cuối Si, Đô♯, Mi♭, Fa cách nhau từng cung. Berliner Phil.: kết bằng ba bước một cung.'
+  - id: n36
+    cau: Các nhà soạn nhạc tối giản là Reich, Glass, Riley.
+    loai: danh-muc
+    nguon:
+      - cod-min
+    ket_qua: dung
+    ghi_chu: 'COD: Glass, Riley, Reich là những nhà tối giản tiêu biểu.'
+  - id: n37
+    cau: Ostinato là một mẫu ngắn lặp đi lặp lại rất nhiều lần.
+    loai: dinh-nghia
+    nguon:
+      - brit-ost
+    ket_qua: dung
+    ghi_chu: 'Britannica: một câu giai điệu ngắn lặp suốt tác phẩm.'
+  - id: n38
+    cau: 'Quá trình cộng dồn (additive process): mẫu được thêm dần từng nốt (hay từng đơn vị nhỏ) qua mỗi lần lặp.'
+    loai: dinh-nghia
+    nguon:
+      - reich
+      - wiki-min
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "thêm từng nốt một". Reich (rhythmic construction): "gradually substituting beats for rests within a constantly repeating rhythmic cycle", tức cộng dồn từng phách; nên thêm "(hay từng đơn vị nhỏ)". Tên "additive process" chỉ có ở Wikipedia (bậc 3, gắn với Glass); đề xuất thuật ngữ cho D3-L5.'
+  - id: n39
+    cau: 'Lệch pha (phasing): hai người chơi cùng một mẫu, một người nhanh hơn rất ít, nên hai mẫu dần lệch nhau và tạo ra tiết tấu mới.'
+    loai: dinh-nghia
+    nguon:
+      - reich
+      - ircam-pp
+      - wiki-min
+    ket_qua: null
+    ghi_chu: 'CHƯA CHẮC: Reich: phasing dịch thời gian giữa hai dòng giống nhau, nghe rõ nhất khi cùng âm sắc; IRCAM không mô tả cách làm. Chi tiết "một người nhanh hơn rất ít" chỉ có Wikipedia (bậc 3).'
+  - id: n40
+    cau: Reich, Piano Phase, 1967.
+    loai: nam
+    nguon:
+      - ircam-pp
+    ket_qua: dung
+    ghi_chu: 'IRCAM: 1967, hai piano hoặc hai marimba.'
+  - id: n41
+    cau: Âm nhạc tối giản biến đổi rất chậm; người nghe tập trung vào những thay đổi nhỏ trong một bề mặt gần như đứng yên.
+    loai: quy-tac
+    nguon:
+      - reich
+    ket_qua: dung
+    ghi_chu: 'Reich: quá trình nên diễn ra "extremely gradually", như xem kim phút đồng hồ.'
+  - id: n42
+    cau: Cage và những người cùng thời để một phần âm nhạc cho sự ngẫu nhiên quyết định.
+    loai: dinh-nghia
+    nguon:
+      - bbc-433
+    ket_qua: dung
+    ghi_chu: 'BBC: 4′33″ "titled for its chance-determined total duration".'
+  - id: n43
+    cau: 'Các cách dùng ngẫu nhiên: tung đồng xu, gieo xúc xắc hay tra Kinh Dịch để chọn các yếu tố; hay để người chơi tự chọn thứ tự các đoạn.'
+    loai: danh-muc
+    nguon:
+      - wiki-aleat
+    ket_qua: null
+    ghi_chu: 'CHƯA CHẮC: BBC không nhắc đồng xu, xúc xắc, Kinh Dịch; chỉ Wikipedia (Cage dùng Kinh Dịch; người chơi quyết định thứ tự). Chữ cũ chỉ "tung đồng xu"; chữ mới thêm ví dụ nhưng nguồn bậc 3.'
+  - id: n44
+    cau: Một tác phẩm nổi tiếng của Cage, 4′33″ (1952).
+    loai: lich-su
+    nguon:
+      - bbc-433
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Tác phẩm nổi tiếng nhất của Cage". BBC: công diễn 29/8/1952, David Tudor, Maverick Concert Hall, Woodstock; không xếp hạng.'
+  - id: n45
+    cau: '4′33″ là 4 phút 33 giây người biểu diễn không chơi gì: "âm nhạc" là mọi âm thanh trong khán phòng.'
+    loai: dinh-nghia
+    nguon:
+      - bbc-433
+    ket_qua: dung
+    ghi_chu: 'BBC: ba chương, tổng 4′33″ (33″, 2′40″, 1′20″), người biểu diễn không chơi nốt nào.'
+  - id: n46
+    cau: 'Spiegel im Spiegel của Pärt: điểm chung với tối giản là lặp lại và biến đổi rất chậm.'
+    loai: lich-su
+    nguon:
+      - wiki-part
+    ket_qua: null
+    ghi_chu: 'CHƯA CHẮC: chỉ Wikipedia (bậc 3): Pärt, 1978, một ví dụ nhạc tối giản; giai điệu violin thêm một nốt mỗi câu. Chưa có nguồn bậc 1-2 gắn Pärt với tối giản; bài tập chỉ là gợi ý cho người học.'
+  - id: n47
+    cau: Link [Spiegel im Spiegel](/opus/nghe-nhac/part-spiegel/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển. Site cũ ../opus-zero/docs/nghe-nhac/part-spiegel.md có tồn tại. Điều cần giữ: trang nói về Spiegel im Spiegel của Pärt, lặp và biến đổi chậm.'
+  - id: n48
+    cau: 'Bài tập 1: bấm phát hai gam ở đầu bài, nhắm mắt nghe lại.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; khối abc có nút "Phát" (src/scripts/abc.js).
+  - id: n49
+    cau: 'Bài tập 2 và 3: nghe Sacre và Spiegel im Spiegel.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên nghe. Link ở n25, n47.
+  - id: n50
+    cau: 'Quiz 1: có 2 gam toàn cung khác nhau (gam từ Đô và từ Đô♯).'
+    loai: so-lieu
+    nguon:
+      - omt-col
+    ket_qua: dung
+    ghi_chu: Khớp n4. Mỗi gam toàn cung dùng 6 trong 12 lớp cao độ nên có đúng hai.
+  - id: n51
+    cau: 'Quiz 2: gam bát cung xây từ nửa cung và cung xen kẽ; 8 nốt; chỉ 3 gam khác nhau.'
+    loai: dinh-nghia
+    nguon:
+      - omt-col
+    ket_qua: dung
+    ghi_chu: Khớp n10, n11.
+  - id: n52
+    cau: 'Quiz 3: dãy có 4 dạng cơ bản; nhân 12 cao độ thành 48 dạng.'
+    loai: so-lieu
+    nguon:
+      - omt-12
+    ket_qua: dung
+    ghi_chu: Khớp n30.
+  - id: n53
+    cau: 'Quiz 4: lệch pha là kỹ thuật của Steve Reich; ví dụ Piano Phase (1967).'
+    loai: lich-su
+    nguon:
+      - reich
+      - ircam-pp
+    ket_qua: dung
+    ghi_chu: Reich viết về phasing; Piano Phase 1967 (IRCAM).
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - giong
+      - not
+      - nhip
+    ket_qua: dung
+    ghi_chu: 'Soạn cho trang. K:C, M:4/4, L:1/4: C D E ^F | ^G ^A c2 |] trên [C,E,^G,]4- | [C,E,^G,]4. Các nốt cách nhau một cung (A♯ rồi c cũng cách một cung); mỗi ô đủ 4 phách (^G ^A c2 = 1+1+2). Tay trái Đô, Mi, Sol♯ là hợp âm tăng (n9).'
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - giong
+      - not
+      - nhip
+    ket_qua: dung
+    ghi_chu: 'Soạn cho trang. K:C, M:4/4, L:1/4: C _D _E =E | ^F G A _B | c4 |]. Các bước: nửa, cung, nửa, cung, nửa, cung, nửa, cung. Cần "=E" vì _E đứng trước trong cùng ô. Ba ô đủ 4 phách (n16).'
+  - khoi: 3
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - giong
+      - not
+      - nhip
+    ket_qua: dung
+    ghi_chu: 'Soạn cho trang. K:C, M:4/2, L:1/2: [CF_B_e] [DGcf] [EAdg] [CF_B_e]. Mỗi hợp âm là các quãng 4 đúng liên tiếp: C-F, F-B♭, B♭-E♭; D-G, G-c, c-f; E-A, A-d, d-g. Bốn nốt trắng đủ ô 4/2 (n21).'
+  - khoi: 4
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - giong
+      - not
+      - nhip
+    ket_qua: dung
+    ghi_chu: 'Soạn cho trang (minh họa, không trích đoạn). K:C, M:2/4, L:1/8, hai bè: tay phải [E♭ G B♭ D♭] = Mi♭7, tay trái [F♭ A♭ C♭] = Fa♭ trưởng; hai ô đủ 2 phách. Hợp âm khớp Hutchinson (n26). Tiết tấu và quãng tám của bản gốc không đối chiếu được.'
+  - khoi: 5
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - giong
+      - not
+      - nhip
+    ket_qua: dung
+    ghi_chu: 'Soạn cho trang. K:C, M:none, L:1/4: G, _B, D ^F A c e ^g =b ^c'' _e'' =f''. Mười hai nốt, mười hai lớp cao độ khác nhau, đúng thứ tự dãy lizhogg (n34).'
+doi_chu:
+  - cu: 'Vì mọi khoảng cách đều bằng nhau, gam này không có chủ âm, không có cảm giác "về nhà". Âm thanh mơ hồ, lơ lửng, như trong mơ: đặc trưng của Debussy (Voiles, trong tập Préludes quyển 1).'
+    moi: 'Vì mọi khoảng cách đều bằng nhau, gam này không có chủ âm rõ ràng, không có cảm giác "về nhà". Âm thanh mơ hồ, lơ lửng, như trong mơ: gắn với Debussy (Voiles, trong tập Préludes quyển 1).'
+    ly_do: 'n5 (da-sua): OMT nói "rotationally ambiguous".; n6 (da-sua): Britannica không nói "đặc trưng".'
+  - cu: Nửa cung và cung xen kẽ, 8 nốt. Chỉ có ba gam bát cung khác nhau. Âm thanh căng, kỳ ảo; được dùng nhiều bởi Rimsky-Korsakov, Stravinsky, Bartók, và Messiaen (ông gọi là "điệu thức chuyển vị hạn chế số 2").
+    moi: Nửa cung và cung xen kẽ, 8 nốt. Chỉ có ba gam bát cung khác nhau. Âm thanh căng, kỳ ảo; xuất hiện trong nhạc của Rimsky-Korsakov, Stravinsky, Bartók và Messiaen (ông gọi là "điệu thức chuyển vị hạn chế số 2").
+    ly_do: 'n13 (da-sua): không có nguồn đếm "nhiều".'
+  - cu: Thay vì chồng quãng 3 (hòa âm truyền thống), chồng quãng 4. Âm thanh "rỗng", hiện đại, không trưởng không thứ. Hindemith dùng nhiều; jazz cũng vậy.
+    moi: Thay vì chồng quãng 3 (hòa âm truyền thống), chồng quãng 4. Âm thanh mơ hồ, không có âm gốc rõ ràng, không trưởng không thứ. Hindemith dùng trong Mathis der Maler; jazz cũng vậy.
+    ly_do: 'n18, n19 (da-sua): "rỗng, hiện đại" không kiểm được; "dùng nhiều" không có nguồn đếm.'
+  - cu: "Hai giọng (hoặc hai hợp âm) khác nhau cùng lúc. Hợp âm nổi tiếng nhất là ở đoạn Les Augures printaniers trong Le Sacre du printemps: hợp âm Mi♭7 chồng lên hợp âm Fa♭ trưởng (nghe như Mi trưởng), dậm đi dậm lại."
+    moi: "Hai giọng (hoặc hai hợp âm) khác nhau cùng lúc. Một hợp âm rất nổi tiếng thuộc loại này (hợp âm kép, polychord) nằm ở đoạn Les Augures printaniers trong Le Sacre du printemps: hợp âm Mi♭7 chồng lên hợp âm Fa♭ trưởng (nghe như Mi trưởng), dậm đi dậm lại."
+    ly_do: "n22, n23 (da-sua): không có nguồn xếp hạng; polychord khác đa điệu tính theo Hutchinson."
+  - cu: "Schoenberg phát triển phương pháp 12 âm (khoảng 1921–1923) để tổ chức âm nhạc vô điệu tính:"
+    moi: "Schoenberg phát triển phương pháp 12 âm (khoảng đầu thập niên 1920) để tổ chức âm nhạc vô điệu tính:"
+    ly_do: "n27 (da-sua): IRCAM nói 1923; 1921 chỉ có bậc 3."
+  - cu: 'Mục đích: không nốt nào được "ưu tiên", nên không có chủ âm. Dãy 12 âm nổi tiếng trong Concerto violin của Alban Berg (1935) lại chứa nhiều hợp âm ba ẩn bên trong, nên nghe có phần trữ tình:'
+    moi: 'Mục đích: không nốt nào được "ưu tiên", nên không có chủ âm. Dãy 12 âm nổi tiếng trong Concerto violin của Alban Berg (1935) lại chứa nhiều hợp âm ba ẩn bên trong, nên nghe gần với nhạc tonal hơn:'
+    ly_do: "n33: bám việc dãy dựng từ hợp âm ba (Berliner Phil.)."
+  - cu: "Quá trình cộng dồn (additive process): mẫu được thêm từng nốt một qua mỗi lần lặp."
+    moi: "Quá trình cộng dồn (additive process): mẫu được thêm dần từng nốt (hay từng đơn vị nhỏ) qua mỗi lần lặp."
+    ly_do: "n38 (da-sua): Reich nói cộng dồn từng phách."
+  - cu: 'John Cage và những người cùng thời để một phần âm nhạc cho sự ngẫu nhiên quyết định: tung đồng xu chọn nốt, hay để người chơi tự chọn thứ tự các đoạn. Tác phẩm nổi tiếng nhất của Cage, 4′33″ (1952), là 4 phút 33 giây người biểu diễn không chơi gì: "âm nhạc" là mọi âm thanh trong khán phòng.'
+    moi: 'John Cage và những người cùng thời để một phần âm nhạc cho sự ngẫu nhiên quyết định: tung đồng xu, gieo xúc xắc hay tra Kinh Dịch để chọn các yếu tố của bản nhạc, hay để người chơi tự chọn thứ tự các đoạn. Một tác phẩm nổi tiếng của Cage, 4′33″ (1952), là 4 phút 33 giây người biểu diễn không chơi gì: "âm nhạc" là mọi âm thanh trong khán phòng.'
+    ly_do: "n43 (null): thêm ví dụ theo Wikipedia, bậc 3, chưa chắc.; n44 (da-sua): không có nguồn xếp hạng."
+  - cu:
+      - "Open Music Theory: chương Collections (Mark Gotham, Megan Lavengood, Brian Moseley, Kris Shaffer): chỉ có hai gam toàn cung và ba gam bát cung; gam toàn cung gây cảm giác chênh vênh, không rõ chủ âm; điệu thức chuyển vị hạn chế của Messiaen, trong đó số 2 là gam bát cung; chương Basics of Twelve-Tone Theory (Mark Gotham, Brian Moseley): dãy gồm đủ 12 nốt theo một thứ tự; bốn dạng nguyên bản, đảo, ngược, ngược đảo, mỗi dạng dịch lên 12 cao độ thành 48 dạng; chương Graphic Notation and Scores (Zach Gist, Chelsey Hamm): nhạc ngẫu nhiên (tung đồng xu, gieo xúc xắc), John Cage và 4′33″, nơi tiếng động trong phòng hòa nhạc là một phần của buổi diễn."
+      - 'Wikipedia: Whole-tone scale (Voiles trong quyển 1 Préludes của Debussy gần như chỉ dùng một gam toàn cung), Octatonic scale (Rimsky-Korsakov, Stravinsky, Bartók, Messiaen), Quartal and quintal harmony (hợp âm quãng 4 không có âm gốc rõ ràng; Hindemith trong Mathis der Maler; jazz), Polytonality, The Rite of Spring (hợp âm dậm đi dậm lại ở "Augurs of Spring": Mi♭7 chồng lên Fa♭ trưởng), Twelve-tone technique (Schoenberg nhớ đã dùng phương pháp này từ 1921 và giới thiệu với học trò hai năm sau), Violin Concerto (Berg) (viết năm 1935; dãy chứa các hợp âm Sol thứ, Rê trưởng, La thứ, Mi trưởng, bốn nốt cuối thuộc gam toàn cung), Minimal music (lệch pha của Reich, quá trình cộng dồn của Glass), Piano Phase, Aleatoric music (để người chơi quyết định thứ tự các đoạn; Cage dùng Kinh Dịch để chọn trường độ, tốc độ, sắc thái), 4′33″.'
+      - "Cơ sở dữ liệu BRAHMS của IRCAM: Arnold Schoenberg (dùng kỹ thuật chuỗi từ năm 1923), Violinkonzert của Berg (1935), Piano Phase (1967, cho hai piano hoặc hai marimba)."
+    moi:
+      - "Open Music Theory: chương Collections (Mark Gotham, Megan Lavengood, Brian Moseley, Kris Shaffer): chỉ có hai gam toàn cung và ba gam bát cung; gam toàn cung chỉ có một cỡ bước nên không nốt nào rõ ràng là chủ âm; gam bát cung xen kẽ cung và nửa cung, tám nốt; điệu thức chuyển vị hạn chế của Messiaen, trong đó số 2 tương ứng gam bát cung; chương Basics of Twelve-Tone Theory (Mark Gotham, Brian Moseley): dãy gồm đủ 12 nốt theo một thứ tự; bốn dạng nguyên bản, đảo, ngược, ngược đảo, mỗi dạng dịch lên 12 cao độ thành 48 dạng; nhạc 12 âm dùng cả 12 cao độ gần như ngang nhau nên các yếu tố như giọng, chủ âm thường không áp dụng; chương Graphic Notation and Scores (Zach Gist, Chelsey Hamm): ngẫu nhiên (chance) gồm tung đồng xu, gieo xúc xắc; John Cage và 4′33″; trong phòng hòa nhạc có thể nghe tiếng điện thoại hay tiếng ho."
+      - 'Robert Hutchinson, Music Theory for the 21st-Century Classroom, mục Polychords trên LibreTexts: hợp âm Mi♭7 chồng lên hợp âm Fa♭ trưởng trong Le Sacre du printemps, ở "Dance of the Adolescents".'
+      - "Encyclopaedia Britannica: Whole-tone scale (sáu nốt cách nhau một cung; Debussy, Dukas và những người khác dùng khoảng năm 1900; Voiles là ví dụ), Polytonality (hai hay nhiều giọng cùng lúc), 12-tone music (Schoenberg được coi là người phát minh), Ostinato (một câu giai điệu ngắn lặp suốt tác phẩm)."
+      - 'The Concise Oxford Dictionary of Music, mục minimalism, qua Encyclopedia.com: phong cách từ thập niên 1960, lặp lại các môtip ngắn; Glass, Riley, Reich là những nhà tối giản tiêu biểu. Steve Reich, "Music as a Gradual Process" (1968), đoạn trích: quá trình âm nhạc "should happen extremely gradually".'
+      - "Berg, Concerto violin: IRCAM, BRAHMS (viết năm 1935); Berliner Philharmoniker, lời giới thiệu (dãy dựng từ các hợp âm ba xen nhau, kết bằng ba bước một cung); bài giảng MUS347W (dãy Sol – Si♭ – Rê – Fa♯ – La – Đô – Mi – Sol♯ – Si – Đô♯ – Mi♭ – Fa)."
+      - "IRCAM, BRAHMS: Arnold Schoenberg (áp dụng kỹ thuật chuỗi năm 1923), Piano Phase (Steve Reich, 1967, cho hai piano hoặc hai marimba)."
+    ly_do: 'Mục Nguồn: thay bằng các nguồn đã mở khi kiểm định (lượt 1 D3-L4); bỏ nguồn không đọc được chữ (musictheory.net).'
+  - moi:
+      - 'Wikipedia: Octatonic scale (Rimsky-Korsakov, Stravinsky, Bartók, Messiaen), Quartal and quintal harmony (hợp âm quãng 4 không có âm gốc rõ ràng; Hindemith trong Mathis der Maler; jazz), Polytonality, The Rite of Spring (hợp âm dậm đi dậm lại ở "Augurs of Spring": Mi♭7 chồng lên Fa♭ trưởng), Twelve-tone technique (Schoenberg phát triển năm 1923, nhớ đã dùng từ 1921), Violin Concerto (Berg) (dãy chứa các hợp âm Sol thứ, Rê trưởng, La thứ, Mi trưởng; bốn nốt cuối đi lên từng cung), Minimalism (music) (lệch pha của Reich, quá trình cộng dồn của Glass), Piano Phase, Aleatoric music (để người chơi quyết định thứ tự các đoạn; Cage dùng Kinh Dịch để chọn trường độ, tốc độ, sắc thái), Spiegel im Spiegel (Pärt, 1978; một ví dụ của nhạc tối giản; giai điệu violin thêm một nốt mỗi câu).'
+      - "The Listeners' Club, \"Debussy's Voiles\": Voiles là bản thứ hai của quyển 1 Préludes, xuất bản năm 1910, dựa trên gam toàn cung."
+    ly_do: 'Mục Nguồn: thay bằng các nguồn đã mở khi kiểm định (lượt 1 D3-L4); bỏ nguồn không đọc được chữ (musictheory.net).'

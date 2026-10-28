@@ -1,0 +1,562 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/31-hinh-thuc-nho
+trang: src/content/docs/nhac-ly/31-hinh-thuc-nho.md
+nguon_cu: ../opus-zero/docs/nhac-ly/31-hinh-thuc-nho.md
+tang: loi
+lan:
+  - so: 1
+    ngay: '2026-10-28'
+    nhanh: moi/d3-l4
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D3-L4 lượt 1, phần 2/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Trang hình thức nhỏ (tầng lõi), không có khối abc (chỉ quiz và hình form-small). Nguồn chính: OMT (Binary, Ternary, Sonata; bản 1 Minuet Form), COD (suite, minuet, trio, scherzo, aria, strophic), Britannica, Listen 8e (Erlkönig), tệp LilyPond Mutopia của Minuet BWV Anh. 114, 115, Musette 126, La candeur (đọc qua WebFetch ngày 28/10/2026). CHƯA CHẮC (null): n14 (Petzold, chỉ Wikipedia), n23 (Giọt mưa ba đoạn), n25 (trang trí ở lần A thứ hai), n28 (Musette da capo), n39 (Heidenröslein theo khổ), n53 và n55 (lỗi nhỏ trong hình). Thuật ngữ trang dùng có hồ sơ ở lô này: suite, scherzo, aria. Chưa có ở thuat-ngu.yml (cho D3-L5): binary (hai đoạn), rounded binary (hai đoạn có tái hiện), ternary (ba đoạn), strophic (theo khổ), through-composed (xuyên suốt).'
+nguon:
+  - id: omt-bin
+    bac: 2
+    ten: Open Music Theory, Binary Form (Brian Jarvis)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/binary-form/
+  - id: omt-ter
+    bac: 2
+    ten: Open Music Theory, Ternary Form (Brian Jarvis)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/ternary-form/
+  - id: omt-son
+    bac: 2
+    ten: Open Music Theory, Sonata Form (Brian Jarvis)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/sonata-form/
+  - id: omt1-min
+    bac: 2
+    ten: Open Music Theory bản 1 (Wharton, Shaffer), Minuet Form, LibreTexts
+    link: https://human.libretexts.org/Bookshelves/Music/Music_Theory/Open_Music_Theory_1e_%28Wharton_and_Shaffer_Eds%29/05%3A_Form_%28II%29_-_Other_Forms_and_Thematic_Structures/5.12%3A_Other_Formal_Structures_in_the_Classical_Style_-_Minuet_Form
+  - id: mt21c-ter
+    bac: 2
+    ten: Hutchinson, Music Theory for the 21st-Century Classroom, Ternary Form, LibreTexts
+    link: https://human.libretexts.org/Bookshelves/Music/Music_Theory/Music_Theory_for_the_21st-Century_Classroom_%28Hutchinson%29/24%3A_Binary_and_Ternary_Forms/24.07%3A_Ternary_Form
+  - id: brit-bin
+    bac: 2
+    ten: Encyclopaedia Britannica, Binary form
+    link: https://www.britannica.com/art/binary-form
+  - id: brit-ter
+    bac: 2
+    ten: Encyclopaedia Britannica, Ternary form
+    link: https://www.britannica.com/art/ternary-form
+  - id: cod-suite
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục suite, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/suite
+  - id: cod-minuet
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục minuet, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/minuet
+  - id: cod-trio
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục trio, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/trio
+  - id: cod-scherzo
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục scherzo, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/scherzo
+  - id: cod-aria
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục aria, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/aria
+  - id: cod-stroph
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục strophic, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/strophic
+  - id: listen-erl
+    bac: 2
+    ten: Listen, bản 8 (Macmillan Learning), Schubert, Erlkönig
+    link: https://digfir-published.macmillanusa.com/listen8e/listen8e_ch17_13.html
+  - id: lumen-art
+    bac: 2
+    ten: Lumen Learning (VCCS), Art song
+    link: https://courses.lumenlearning.com/vccs-tcc-music-rford/chapter/art-song
+  - id: yu-brahms
+    bac: 2
+    ten: 'Yung-Ching Yu, A New Model of Interpreting Modified Strophic Design: Brahms''s Late Viennese Solo Lieder, luận án University of Kentucky (2021)'
+    link: https://uknowledge.uky.edu/music_etds/193/
+  - id: imslp-126
+    bac: 2
+    ten: IMSLP, Musette in D major, BWV Anh. 126
+    link: https://imslp.org/wiki/Musette_in_D_major,_BWV_Anh.126_%28Bach,_Johann_Sebastian%29
+  - id: mut-114
+    bac: 1
+    ten: Mutopia Project, Minuet BWV Anh. 114 (Sol trưởng), tệp LilyPond, theo Bach-Gesellschaft
+    link: https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=75
+  - id: mut-115
+    bac: 1
+    ten: Mutopia Project, Minuet BWV Anh. 115 (Sol thứ), tệp LilyPond, theo Bach-Gesellschaft
+    link: https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=76
+  - id: mut-126
+    bac: 1
+    ten: Mutopia Project, Musette BWV Anh. 126, tệp LilyPond, theo Bach-Gesellschaft
+    link: https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=79
+  - id: mut-cand
+    bac: 1
+    ten: Mutopia Project, Burgmüller, La candeur, tệp LilyPond, ấn bản Litolff
+    link: https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=202
+  - id: wiki-bin
+    bac: 3
+    ten: Wikipedia, Binary form (bậc 3, chỉ để tìm nguồn)
+    link: https://en.wikipedia.org/wiki/Binary_form
+  - id: wiki-ter
+    bac: 3
+    ten: Wikipedia, Ternary form (bậc 3, chỉ để tìm nguồn)
+    link: https://en.wikipedia.org/wiki/Ternary_form
+  - id: wiki-dca
+    bac: 3
+    ten: Wikipedia, Da capo aria (bậc 3, chỉ để tìm nguồn)
+    link: https://en.wikipedia.org/wiki/Da_capo_aria
+  - id: wiki-str
+    bac: 3
+    ten: Wikipedia, Strophic form (bậc 3, chỉ để tìm nguồn)
+    link: https://en.wikipedia.org/wiki/Strophic_form
+  - id: wiki-nab
+    bac: 3
+    ten: Wikipedia, Notebook for Anna Magdalena Bach (bậc 3, chỉ để tìm nguồn)
+    link: https://en.wikipedia.org/wiki/Notebook_for_Anna_Magdalena_Bach
+nhan_dinh:
+  - id: n1
+    cau: Các hình thức lớn như sonata và rondo được xây từ những khối nhỏ hơn.
+    loai: cau-truc
+    nguon:
+      - omt-son
+      - omt-bin
+    ket_qua: dung
+    ghi_chu: 'OMT: hình thức sonata là dạng phức tạp của hai đoạn có tái hiện. Rondo chưa có nguồn riêng ở trang này; cách nói "xây từ khối nhỏ" là lời dẫn của site. Chữ cũ có "fugue": bỏ vì fugue là kỹ thuật/thể loại đối vị, không xây từ các hình thức nhỏ này.'
+  - id: n2
+    cau: 'Link [hình thức lớn](/opus/hinh-thuc/): trang tổng quan các hình thức lớn.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển. Site cũ ../opus-zero/docs/hinh-thuc/index.md có tồn tại và liệt kê sonata, rondo, minuet-trio, scherzo. Điều cần giữ: trang đích là mục lục hình thức lớn.'
+  - id: n3
+    cau: 'Hình thức hai đoạn (binary) là A B, thường với dấu nhắc lại cho mỗi phần: ‖: A :‖ ‖: B :‖.'
+    loai: dinh-nghia
+    nguon:
+      - omt-bin
+      - brit-bin
+    ket_qua: dung
+    ghi_chu: 'OMT: hai đoạn, mỗi đoạn thường nhắc lại. Britannica: có dấu nhắc lại.'
+  - id: n4
+    cau: Phần A bắt đầu ở giọng chính và thường chuyển sang giọng át; ở giọng thứ thì sang giọng trưởng song song.
+    loai: quy-tac
+    nguon:
+      - brit-bin
+      - omt-bin
+    ket_qua: dung
+    ghi_chu: 'Britannica: đoạn đầu của bài giọng trưởng thường sang giọng át, của bài giọng thứ sang giọng trưởng song song. Wikipedia (bậc 3) khớp, nói thêm "hoặc ở lại giọng chính".'
+  - id: n5
+    cau: Phần lớn các điệu nhảy Baroque ở hình thức hai đoạn có phần A chuyển sang giọng át.
+    loai: danh-muc
+    nguon:
+      - brit-bin
+      - cod-suite
+    ket_qua: dung
+    ghi_chu: 'Câu cũ viết "như phần lớn các điệu nhảy Baroque" gắn với A sang giọng át. Britannica: điệu nhảy của Bach dùng hai đoạn, A thường sang giọng át; COD: hầu hết chương của tổ khúc ở hai đoạn đơn giản. Không có nguồn đếm "phần lớn" cho riêng chuyện sang giọng át; chữ "phần lớn" là đánh giá của site, nhẹ.'
+  - id: n6
+    cau: 'Minuet Sol thứ: phần A kết ở Si♭ trưởng.'
+    loai: nam
+    nguon:
+      - mut-115
+    ket_qua: dung
+    ghi_chu: 'Kiểm tệp LilyPond Mutopia (BWV Anh. 115): phần A kết ở Si♭ trưởng (giọng trưởng song song của Sol thứ). Khớp n4.'
+  - id: n7
+    cau: Link [Minuet Sol thứ](/opus/piano/tac-pham/minuet-sol-thu/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển. Site cũ ../opus-zero/docs/piano/tac-pham/minuet-sol-thu.md có tồn tại, là bài Minuet Sol thứ BWV Anh. 115. Điều cần giữ: bài này có A kết ở Si♭ trưởng.'
+  - id: n8
+    cau: Phần A có thể dừng ở kết nửa trên hợp âm át, như La candeur.
+    loai: cau-truc
+    nguon:
+      - omt-bin
+      - mut-cand
+    ket_qua: dung
+    ghi_chu: 'OMT: mỗi đoạn thường kết bằng một kết chuẩn, kể cả kết nửa. Tệp LilyPond La candeur: phần A (8 ô) dừng trên Sol (hợp âm át của Đô trưởng).'
+  - id: n9
+    cau: Link [La candeur](/opus/piano/tac-pham/burgmuller-la-candeur/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển. Site cũ ../opus-zero/docs/piano/tac-pham/burgmuller-la-candeur.md có tồn tại. Điều cần giữ: bài là La candeur của Burgmüller, phần A kết nửa.'
+  - id: n10
+    cau: Phần A cũng có thể kết trọn ngay ở giọng chính, như Minuet Sol trưởng, nơi chỉ phần B mới sang Rê trưởng.
+    loai: cau-truc
+    nguon:
+      - mut-114
+      - wiki-bin
+    ket_qua: dung
+    ghi_chu: 'Tệp LilyPond BWV Anh. 114: A kết Sol trưởng, B sang Rê trưởng (kết ở ô 24). Wikipedia Binary form (bậc 3): A có thể ở lại giọng chính.'
+  - id: n11
+    cau: Link [Minuet Sol trưởng](/opus/piano/tac-pham/minuet-sol/) (xuất hiện hai lần ở bài).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển. Site cũ ../opus-zero/docs/piano/tac-pham/minuet-sol.md có tồn tại. Điều cần giữ: bài là Minuet Sol trưởng BWV Anh. 114, A kết trọn Sol trưởng, B sang Rê trưởng.'
+  - id: n12
+    cau: Phần B bắt đầu từ giọng mà phần A vừa kết, đi qua vài giọng khác, rồi trở về giọng chính để kết.
+    loai: quy-tac
+    nguon:
+      - brit-bin
+      - omt-bin
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Phần B bắt đầu ở giọng mới". Sai với trường hợp A kết ở giọng chính (n10, Minuet Sol trưởng, B vẫn có thể bắt đầu từ Sol rồi sang Rê). Britannica: đoạn hai bắt đầu ở giọng mới rồi về giọng chính, nói về bài A sang giọng khác; câu mới đúng cho cả hai trường hợp.'
+  - id: n13
+    cau: Gần như mọi điệu nhảy trong tổ khúc Baroque (allemande, courante, sarabande, gigue) đều ở hình thức hai đoạn.
+    loai: danh-muc
+    nguon:
+      - cod-suite
+      - brit-bin
+    ket_qua: dung
+    ghi_chu: 'COD (suite): tổ khúc Baroque gồm allemande, courante, sarabande, gigue; hầu hết các chương ở hai đoạn đơn giản. Câu của trang dùng "gần như mọi", gần COD "nearly all".'
+  - id: n14
+    cau: Minuet cung Sol trưởng trong sổ tay Anna Magdalena Bach (Petzold) là ví dụ dễ nghe.
+    loai: lich-su
+    nguon:
+      - wiki-nab
+      - mut-114
+    ket_qua: null
+    ghi_chu: 'CHƯA CHẮC: tác giả Petzold chỉ có Wikipedia (bậc 3, "thường được cho là"); chưa tìm được nguồn bậc 1-2. Mutopia có bản BWV Anh. 114 trong sổ tay. Người giao/lượt 2 cân nhắc giữ hoặc bỏ "(Petzold)".'
+  - id: n15
+    cau: 'Link [Tổ khúc cello số 1](/opus/nghe-nhac/bach-cello-1/): các điệu nhảy.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển. Site cũ ../opus-zero/docs/nghe-nhac/bach-cello-1.md có tồn tại, nói về các chương điệu nhảy của tổ khúc. Điều cần giữ: bài nghe tổ khúc Bach cho cello.'
+  - id: n16
+    cau: 'Hai đoạn có tái hiện (rounded binary) là A B A, với hai dấu nhắc lại ‖: A :‖ ‖: B A'' :‖; phần hai kết bằng việc đưa chủ đề đầu trở lại, giờ ở giọng chính.'
+    loai: dinh-nghia
+    nguon:
+      - omt-bin
+      - omt1-min
+    ket_qua: dung
+    ghi_chu: 'OMT: hai đoạn có tái hiện, đầu đoạn A trở lại ở giọng chính giữa/cuối đoạn hai. Chú ý: OMT tách "rounded binary" (A trở lại ở giọng chính) khỏi ternary.'
+  - id: n17
+    cau: Hai đoạn có tái hiện là "mầm mống" của hình thức sonata.
+    loai: lich-su
+    nguon:
+      - omt-son
+    ket_qua: dung
+    ghi_chu: 'OMT Sonata Form: hình thức sonata là dạng phức tạp của hai đoạn có tái hiện. "Mầm mống" là cách nói của site, ý khớp.'
+  - id: n18
+    cau: Link [hình thức sonata](/opus/hinh-thuc/sonata/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển. Site cũ ../opus-zero/docs/hinh-thuc/sonata.md có tồn tại, bàn trình bày, phát triển, tái hiện. Điều cần giữ: trang nói sonata là hình thức lớn có phần tái hiện.'
+  - id: n19
+    cau: Hai đoạn có tái hiện là hình thức điển hình của minuet thời Cổ điển.
+    loai: danh-muc
+    nguon:
+      - omt1-min
+      - brit-ter
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "hình thức của hầu hết các minuet". OMT 1e: minuet điển hình là hai đoạn có tái hiện. "Hầu hết" không có nguồn đếm.'
+  - id: n20
+    cau: Hình thức ba đoạn (ternary) là A B A, trong đó mỗi đoạn trọn vẹn và tự kết ở giọng của nó.
+    loai: dinh-nghia
+    nguon:
+      - omt-ter
+      - brit-ter
+    ket_qua: dung
+    ghi_chu: 'OMT: A B A, mỗi đoạn tự kết. Britannica: mỗi phần của minuet đứng khá trọn vẹn, kết bằng kết trọn. Wikipedia khớp.'
+  - id: n21
+    cau: Trong ba đoạn, B tương phản rõ với A (giọng khác, tính chất khác); B là một thế giới riêng, không chỉ là đoạn chuyển tiếp.
+    loai: quy-tac
+    nguon:
+      - omt-ter
+      - brit-ter
+    ket_qua: dung
+    ghi_chu: 'OMT: đoạn B thường chứa chất liệu tương phản ở giọng mới. Phần "không chỉ là chuyển tiếp" là cách phân biệt của site với hai đoạn có tái hiện, khớp OMT.'
+  - id: n22
+    cau: Nhiều tiểu phẩm piano Lãng mạn như nocturne, mazurka ở hình thức ba đoạn.
+    loai: danh-muc
+    nguon:
+      - mt21c-ter
+      - omt-ter
+    ket_qua: dung
+    ghi_chu: 'Hutchinson: các tiểu phẩm Lãng mạn như nocturne thường ba đoạn. OMT: ví dụ Mazurka La thứ Op. 17 số 4 của Chopin.'
+  - id: n23
+    cau: Chopin Prélude Op. 28 số 15 "Giọt mưa" ở hình thức ba đoạn.
+    loai: nam
+    nguon:
+      - wiki-ter
+    ket_qua: null
+    ghi_chu: 'CHƯA CHẮC: chỉ có Wikipedia (bậc 3, Ternary form nhắc Prélude "Giọt mưa"). Chưa mở được nguồn bậc 1-2 cho tác phẩm này. Chữ trang giữ nguyên.'
+  - id: n24
+    cau: 'Aria da capo trong opera Baroque: A, B, rồi "da capo" quay lại A.'
+    loai: dinh-nghia
+    nguon:
+      - cod-aria
+      - brit-ter
+      - mt21c-ter
+    ket_qua: dung
+    ghi_chu: 'COD: aria da capo ở hình thức A B A. Britannica và Hutchinson nêu aria da capo là ba đoạn.'
+  - id: n25
+    cau: Ở lần A thứ hai của aria da capo, ca sĩ thêm trang trí.
+    loai: quy-tac
+    nguon:
+      - wiki-dca
+    ket_qua: null
+    ghi_chu: 'CHƯA CHẮC: chỉ có Wikipedia Da capo aria (bậc 3, ca sĩ ứng tác trang trí). Chưa mở được nguồn bậc 1-2.'
+  - id: n26
+    cau: 'Musette Rê trưởng: đoạn A và B đều có dấu nhắc lại như hình thức hai đoạn.'
+    loai: cau-truc
+    nguon:
+      - mut-126
+    ket_qua: dung
+    ghi_chu: 'Tệp LilyPond BWV Anh. 126: A 8 ô, B 12 ô, cả hai có dấu nhắc lại.'
+  - id: n27
+    cau: 'Musette Rê trưởng: đoạn B kết ở giọng át (La trưởng).'
+    loai: nam
+    nguon:
+      - mut-126
+    ket_qua: dung
+    ghi_chu: 'Tệp LilyPond: A kết Rê trưởng (có dấu ngân), B kết La trưởng.'
+  - id: n28
+    cau: 'Do đó đoạn A được chơi lại từ đầu (da capo): A B A.'
+    loai: cau-truc
+    nguon:
+      - imslp-126
+      - mut-126
+    ket_qua: null
+    ghi_chu: 'CHƯA CHẮC: trong tệp LilyPond không có chữ D.C. hay "da capo"; IMSLP không mở ra chi tiết này. Chỉ site cũ (musette-re.md) nói da capo, không phải nguồn độc lập. Kết ở La trưởng (át) làm da capo hợp lý, nhưng "được chơi lại" cần bản in gốc. Lượt 2 xem bản gốc hay chọn nói "thường được chơi lại".'
+  - id: n29
+    cau: Link [Musette Rê trưởng](/opus/piano/tac-pham/musette-re/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển. Site cũ ../opus-zero/docs/piano/tac-pham/musette-re.md có tồn tại và nói bài là Musette Rê trưởng với da capo. Điều cần giữ: A và B có dấu nhắc lại, B kết ở La trưởng; câu da capo xem n28.'
+  - id: n30
+    cau: Chương 3 tiêu chuẩn của giao hưởng thời Cổ điển, cũng dùng trong nhiều thể loại khác, là minuet và trio.
+    loai: lich-su
+    nguon:
+      - cod-minuet
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Chương 3 của rất nhiều giao hưởng, tứ tấu, sonata thời Cổ điển". COD: minuet là chương 3 tiêu chuẩn của giao hưởng thế kỷ 18; không nêu tứ tấu, sonata. Cách nói mới bám COD.'
+  - id: n31
+    cau: Minuet và trio ghép thành một A B A lớn; mỗi khối là một hình thức hai đoạn, thường có tái hiện.
+    loai: cau-truc
+    nguon:
+      - omt1-min
+      - brit-ter
+      - cod-minuet
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "mà mỗi khối lại là một hình thức hai đoạn có tái hiện". OMT 1e: minuet điển hình là hai đoạn có tái hiện; trio theo OMT là rounded hoặc simple binary, nên "thường". COD: thường A B A, B là trio.'
+  - id: n32
+    cau: 'Bảng: minuet là điệu nhảy nhịp 3/4.'
+    loai: dinh-nghia
+    nguon:
+      - cod-minuet
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Điệu nhảy nhịp 3/4, đĩnh đạc". COD: điệu nhảy nhịp ba; "đĩnh đạc" không có nguồn nên bỏ.'
+  - id: n33
+    cau: 'Bảng: trio tương phản, thường nhẹ nhàng hơn, thường ở giọng khác.'
+    loai: dinh-nghia
+    nguon:
+      - cod-trio
+      - brit-ter
+      - omt1-min
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "nhẹ hơn, ít nhạc cụ hơn". COD: trio thường tương phản nhẹ nhàng hơn. Britannica: trio thường sang giọng khác. "Ít nhạc cụ hơn" không có nguồn, và là lời giải thích sai về tên "trio" ở site cũ (COD nói gốc từ hòa âm ba bè).'
+  - id: n34
+    cau: 'Bảng: sau trio, minuet được chơi lại (da capo), thường bỏ các dấu nhắc lại.'
+    loai: quy-tac
+    nguon:
+      - omt1-min
+      - wiki-ter
+    ket_qua: dung
+    ghi_chu: 'OMT 1e: minuet chơi lại sau trio thường bỏ dấu nhắc lại. Wikipedia khớp.'
+  - id: n35
+    cau: 'Link [Minuet và Trio](/opus/hinh-thuc/minuet-trio/): nguồn gốc, tên gọi và bài nghe chương 3 Eine kleine Nachtmusik.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển. Site cũ ../opus-zero/docs/hinh-thuc/minuet-trio.md có tồn tại và có bài nghe Eine kleine Nachtmusik. LƯU Ý khi chuyển: trang cũ giải thích trio là "mỏng hơn, ít nhạc cụ hơn" và tên từ "ba nhạc cụ", trái COD (trio gốc từ hòa âm ba bè); và nói Beethoven thay minuet bằng scherzo "từ Giao hưởng số 2" (chưa kiểm). Điều cần giữ: nguồn gốc, tên gọi, bài nghe; sửa hai chỗ trên khi chuyển.'
+  - id: n36
+    cau: 'Từ Beethoven, minuet thường được thay bằng scherzo: nhanh hơn nhiều, nhưng giữ khung scherzo, trio, scherzo.'
+    loai: lich-su
+    nguon:
+      - cod-scherzo
+      - cod-minuet
+    ket_qua: dung
+    ghi_chu: 'COD (scherzo): kế thừa minuet và trio; Beethoven là người thật sự tạo ra scherzo; khung scherzo, trio, scherzo. Mức "nhanh hơn nhiều": COD nói scherzo nhanh, năng động hơn minuet.'
+  - id: n37
+    cau: Link [scherzo](/opus/hinh-thuc/scherzo/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển. Site cũ ../opus-zero/docs/hinh-thuc/scherzo.md có tồn tại. Điều cần giữ: trang nói scherzo thay minuet, khung scherzo-trio-scherzo.'
+  - id: n38
+    cau: 'Bảng ca khúc: theo khổ (strophic): mọi khổ lời hát cùng một giai điệu.'
+    loai: dinh-nghia
+    nguon:
+      - cod-stroph
+      - lumen-art
+    ket_qua: dung
+    ghi_chu: 'COD: cùng nhạc lặp cho mỗi khổ thơ, đôi khi chỉ khác rất ít. Lumen: nếu mọi khổ hát cùng một nhạc thì là strophic.'
+  - id: n39
+    cau: 'Ví dụ theo khổ: Schubert Heidenröslein.'
+    loai: nam
+    nguon:
+      - wiki-str
+    ket_qua: null
+    ghi_chu: 'CHƯA CHẮC: chỉ có Wikipedia Strophic form (bậc 3). Hai nguồn bậc 2 mở được không nhắc Heidenröslein.'
+  - id: n40
+    cau: 'Ví dụ theo khổ: nhiều dân ca, thánh ca.'
+    loai: danh-muc
+    nguon:
+      - cod-stroph
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "hầu hết dân ca, thánh ca". COD nói strophic "as in folk song"; không có nguồn đếm "hầu hết". Câu quiz 3 giải thích cũng sửa ("Ví dụ phần lớn dân ca" thành "Ví dụ nhiều dân ca và thánh ca"). Phần "thánh ca" chưa có nguồn bậc 1-2 riêng, nhưng là ví dụ, không phải số liệu.'
+  - id: n41
+    cau: 'Theo khổ có biến đổi: cùng giai điệu nhưng có khổ được thay đổi; ví dụ nhiều ca khúc của Brahms.'
+    loai: danh-muc
+    nguon:
+      - cod-stroph
+      - yu-brahms
+    ket_qua: dung
+    ghi_chu: 'COD: strophic "sometimes with very slight changes". Yu (luận án) nghiên cứu mô hình theo khổ có biến đổi trong các ca khúc Vienna cuối đời của Brahms. "Nhiều" khớp.'
+  - id: n42
+    cau: 'Xuyên suốt (through-composed): nhạc mới cho mỗi đoạn lời, đi theo câu chuyện.'
+    loai: dinh-nghia
+    nguon:
+      - cod-stroph
+      - lumen-art
+      - listen-erl
+    ket_qua: dung
+    ghi_chu: 'Lumen: mỗi đoạn lời nhận nhạc mới. Listen: khổ sau được gán nhạc khác hay biến đổi thì gọi là through-composed. COD: nhạc cứ phát triển thay vì lặp.'
+  - id: n43
+    cau: Schubert Erlkönig là ví dụ xuyên suốt.
+    loai: nam
+    nguon:
+      - lumen-art
+      - listen-erl
+    ket_qua: dung
+    ghi_chu: 'Lumen: "It is through-composed in form." Listen: các khổ không cùng một nhạc nên không phải strophic.'
+  - id: n44
+    cau: Link [Erlkönig](/opus/nghe-nhac/schubert-erlkonig/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển. Site cũ ../opus-zero/docs/nghe-nhac/schubert-erlkonig.md có tồn tại. Điều cần giữ: bài là Erlkönig, xuyên suốt.'
+  - id: n45
+    cau: 'Mẹo nghe 1: nghe cùng một đoạn vang hai lần liên tiếp là dấu hiệu của hình thức hai đoạn.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Mẹo nghe, khớp dấu nhắc lại ở n3.
+  - id: n46
+    cau: 'Mẹo nghe 2: chủ đề đầu quay lại ở cuối phần hai thì là hai đoạn có tái hiện hoặc ba đoạn.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Mẹo nghe; khớp n16, n20. (Chữ trang: "chủ đề đầu quay lại ở cuối phần hai → hai đoạn có tái hiện hoặc ba đoạn".)'
+  - id: n47
+    cau: 'Mẹo nghe 3: tìm đoạn giữa tương phản rõ (giọng khác, tính chất khác) thì là ba đoạn, hoặc minuet, trio.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Chữ cũ có "nhạc cụ ít hơn"; bỏ (n33). Còn lại là mẹo nghe.
+  - id: n48
+    cau: 'Quiz 1: trong hai đoạn ở giọng trưởng, phần A thường kết ở giọng át; giải thích: phần B mới đưa nhạc về giọng chính.'
+    loai: quy-tac
+    nguon:
+      - brit-bin
+    ket_qua: dung
+    ghi_chu: Khớp n4, n12.
+  - id: n49
+    cau: 'Quiz 2: minuet và trio tạo thành A B A; giải thích: minuet, trio, minuet da capo.'
+    loai: cau-truc
+    nguon:
+      - cod-minuet
+      - brit-ter
+    ket_qua: dung
+    ghi_chu: Khớp n31.
+  - id: n50
+    cau: 'Quiz 3: ca khúc mà mọi khổ cùng một giai điệu là theo khổ; giải thích: ví dụ nhiều dân ca và thánh ca.'
+    loai: dinh-nghia
+    nguon:
+      - cod-stroph
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Ví dụ phần lớn dân ca." Xem n40.'
+  - id: n51
+    cau: 'Quiz 4: từ Beethoven, chương minuet thường được thay bằng scherzo; giải thích: nhanh hơn, nhiều năng lượng hơn.'
+    loai: lich-su
+    nguon:
+      - cod-scherzo
+    ket_qua: dung
+    ghi_chu: 'Khớp n36; COD: scherzo nhanh, năng động.'
+  - id: n52
+    cau: 'Hình form-small, sơ đồ 1 (hai đoạn): ‖: A :‖ ‖: B :‖.'
+    loai: cau-truc
+    nguon:
+      - omt-bin
+    ket_qua: dung
+    ghi_chu: 'Khớp n3. LỖI BỐ TRÍ: một ::hinh{ten="form-small"} hiện cả bốn sơ đồ liền nhau ngay dưới mục "Hình thức hai đoạn", trước cả đoạn văn; ba sơ đồ sau thuộc các mục sau. Không sửa file hình; báo người giao. Người giao: giữ bố trí như site cũ (vùng fig:form-small cũ đặt cả bốn sơ đồ một chỗ, đầu mục Hai đoạn, như bản đồ chung của các hình thức nhỏ); tách hình theo mục là việc giao diện, để sau.'
+  - id: n53
+    cau: 'Hình form-small, sơ đồ 2 (hai đoạn có tái hiện): ‖: A (thường → giọng át) :‖ ‖: B A'' :‖.'
+    loai: cau-truc
+    nguon:
+      - omt-bin
+      - brit-bin
+    ket_qua: da-sua
+    ghi_chu: 'CHƯA ĐÚNG HOÀN TOÀN: sơ đồ vẽ cứng "A → giọng át" trong khi trang nói A có thể kết nửa hay ở giọng chính (n4, n8, n10). Không sửa file hình; báo người giao. Người giao (agent làm lô) sửa src/components/hinh/form-small.html: "→ giọng át" thành "thường → giọng át", khớp trang (n4, n8, n10).'
+  - id: n54
+    cau: 'Hình form-small, sơ đồ 3 (ba đoạn): A B A, mỗi đoạn trọn vẹn.'
+    loai: cau-truc
+    nguon:
+      - omt-ter
+    ket_qua: dung
+    ghi_chu: Khớp n20.
+  - id: n55
+    cau: 'Hình form-small, sơ đồ 4 (minuet-trio): minuet ‖:a:‖ ‖:b a'':‖, trio ‖:c:‖ ‖:d (c''):‖, minuet da capo; chú thích: mỗi khối là hai đoạn, thường có tái hiện.'
+    loai: cau-truc
+    nguon:
+      - omt1-min
+    ket_qua: da-sua
+    ghi_chu: 'CHƯA ĐÚNG HOÀN TOÀN: sơ đồ vẽ trio luôn có tái hiện c'' trong khi OMT 1e nói trio là rounded hoặc simple binary (trang đã sửa thành "thường có tái hiện", n31). Không sửa file hình; báo người giao. Người giao (agent làm lô) sửa hình: c'' của trio trong ngoặc, chú thích "mỗi khối là hai đoạn, thường có tái hiện", khớp trang và OMT 1e.'
+khuong_nhac: []
+doi_chu:
+  - cu: "Các hình thức lớn như sonata, fugue, rondo được xây từ những khối nhỏ hơn. Bài này dạy những hình thức nhỏ mà bạn gặp hằng ngày: trong một điệu nhảy Baroque, một minuet của Mozart, một ca khúc của Schubert."
+    moi: "Các hình thức lớn như sonata và rondo được xây từ những khối nhỏ hơn. Bài này dạy những hình thức nhỏ mà bạn gặp hằng ngày: trong một điệu nhảy Baroque, một minuet của Mozart, một ca khúc của Schubert."
+    ly_do: "n1 (da-sua): fugue không phải hình thức xây từ hình thức nhỏ; áp cho description và câu mở đầu."
+  - cu: Phần B bắt đầu ở giọng mới, đi qua vài giọng khác, rồi trở về giọng chính để kết.
+    moi: Phần B bắt đầu từ giọng mà phần A vừa kết, đi qua vài giọng khác, rồi trở về giọng chính để kết.
+    ly_do: "n12 (da-sua): đúng cả khi A kết ở giọng chính."
+  - cu: "A B A', vẫn với hai dấu nhắc lại: ‖: A :‖ ‖: B A' :‖. Phần thứ hai kết thúc bằng việc đưa chủ đề đầu trở lại, giờ ở giọng chính. Đây chính là \"mầm mống\" của hình thức sonata, và là hình thức của hầu hết các minuet thời Cổ điển."
+    moi: "A B A', vẫn với hai dấu nhắc lại: ‖: A :‖ ‖: B A' :‖. Phần thứ hai kết thúc bằng việc đưa chủ đề đầu trở lại, giờ ở giọng chính. Đây chính là \"mầm mống\" của hình thức sonata, và là hình thức điển hình của minuet thời Cổ điển."
+    ly_do: 'n19 (da-sua): không có nguồn đếm "hầu hết".'
+  - cu: "Chương 3 của rất nhiều giao hưởng, tứ tấu, sonata thời Cổ điển là minuet và trio: ba khối ghép thành một A B A lớn, mà mỗi khối lại là một hình thức hai đoạn có tái hiện."
+    moi: "Chương 3 tiêu chuẩn của giao hưởng thời Cổ điển, cũng dùng trong nhiều thể loại khác, là minuet và trio: ba khối ghép thành một A B A lớn, mà mỗi khối lại là một hình thức hai đoạn, thường có tái hiện."
+    ly_do: "n30 (da-sua): COD chỉ nêu giao hưởng.; n31 (da-sua): OMT 1e nói trio là rounded hoặc simple binary."
+  - cu: Điệu nhảy nhịp 3/4, đĩnh đạc
+    moi: Điệu nhảy nhịp 3/4
+    ly_do: 'n32 (da-sua): "đĩnh đạc" không có nguồn.'
+  - cu:
+      - Hai đoạn có tái hiện, có nhắc lại
+      - "Tương phản: nhẹ hơn, ít nhạc cụ hơn"
+    moi:
+      - Hai đoạn, thường có tái hiện, có nhắc lại
+      - "Tương phản: thường nhẹ nhàng hơn, thường ở giọng khác"
+    ly_do: 'n33 (da-sua): COD và Britannica; "ít nhạc cụ hơn" không có nguồn.; n31 (da-sua): ô Trio trong bảng.'
+  - cu: Schubert Heidenröslein; hầu hết dân ca, thánh ca
+    moi: Schubert Heidenröslein; nhiều dân ca, thánh ca
+    ly_do: "n40 (da-sua): không có nguồn đếm."
+  - cu: Tìm đoạn giữa tương phản rõ (giọng khác, nhạc cụ ít hơn, tính chất khác) → ba đoạn, hoặc minuet – trio.
+    moi: Tìm đoạn giữa tương phản rõ (giọng khác, tính chất khác) → ba đoạn, hoặc minuet – trio.
+    ly_do: 'n47 (da-sua): bỏ "nhạc cụ ít hơn".'
+  - cu: "Open Music Theory: chương Binary Form (Brian Jarvis): hai đoạn, mỗi đoạn thường nhắc lại, dùng nhiều trong nhạc nhảy; mỗi đoạn thường kết bằng một kết chuẩn, kể cả kết nửa; hai đoạn có tái hiện (đầu đoạn A trở lại ở giọng chính giữa đoạn hai); đoạn hai kết bằng kết trọn ở giọng chính; chương Ternary Form (Brian Jarvis): A B A, đoạn B tương phản, thường ở giọng mới; minuet và trio là ba đoạn kép; ví dụ Mazurka La thứ Op. 17 số 4 của Chopin; chương Sonata Form (Brian Jarvis): hình thức sonata là một dạng phức tạp của hai đoạn có tái hiện."
+    moi: "Open Music Theory: chương Binary Form (Brian Jarvis): hai đoạn, mỗi đoạn thường nhắc lại, dùng nhiều trong nhạc nhảy; mỗi đoạn thường kết bằng một kết chuẩn, kể cả kết nửa; hai đoạn có tái hiện (đầu đoạn A trở lại ở giọng chính giữa đoạn hai); chương Ternary Form (Brian Jarvis): A B A, đoạn B thường chứa chất liệu tương phản ở giọng mới; minuet và trio là ba đoạn kép; ví dụ Mazurka La thứ Op. 17 số 4 của Chopin; chương Sonata Form (Brian Jarvis): hình thức sonata là một dạng phức tạp của hai đoạn có tái hiện."
+    ly_do: 'Mục Nguồn: thay bằng các nguồn đã mở khi kiểm định (lượt 1 D3-L4); bỏ nguồn không đọc được chữ (musictheory.net).'
+  - cu: 'Wikipedia: Binary form (phần A ở giọng trưởng thường sang giọng át, ở giọng thứ thường sang giọng trưởng song song; phần A cũng có thể kết trọn ngay ở giọng chính; khác biệt giữa hai đoạn có tái hiện và ba đoạn), Ternary form (mỗi đoạn tự kết; Prélude "Giọt mưa" của Chopin; minuet chơi lại không nhắc lại), Da capo aria (ca sĩ ứng tác trang trí ở lần A thứ hai), Sarabande (tổ khúc Baroque gồm các điệu nhảy ở hình thức hai đoạn), Strophic form (Heidenröslein của Schubert; hình thức theo khổ có biến đổi), Through-composed music (Erlkönig).'
+    moi:
+      - "Encyclopaedia Britannica: Binary form (đoạn đầu của bài giọng trưởng thường sang giọng át, của bài giọng thứ sang giọng trưởng song song; đoạn hai bắt đầu ở giọng mới rồi về giọng chính; có dấu nhắc lại; các điệu nhảy của J. S. Bach dùng hình thức này), Ternary form (A B A; minuet và trio, aria da capo; mỗi phần của minuet đứng khá trọn vẹn, kết bằng kết trọn; trio thường sang giọng khác)."
+      - "The Concise Oxford Dictionary of Music, qua Encyclopedia.com: mục suite (tổ khúc Baroque gồm allemande, courante, sarabande, gigue; hầu hết các chương ở hình thức hai đoạn đơn giản), minuet (điệu nhảy nhịp ba; chương 3 tiêu chuẩn của giao hưởng thế kỷ 18; thường A B A, đoạn B là trio), trio (đoạn giữa của minuet hay scherzo, thường tương phản nhẹ nhàng hơn), scherzo (kế thừa minuet và trio, Beethoven là người thật sự tạo ra scherzo), aria (aria da capo ở hình thức A B A)."
+      - 'Wikipedia: Binary form (phần A ở giọng trưởng thường sang giọng át, ở giọng thứ thường sang giọng trưởng song song, hoặc ở lại giọng chính; khác biệt giữa hai đoạn có tái hiện và ba đoạn), Ternary form (mỗi đoạn tự kết bằng kết trọn; Prélude "Giọt mưa" của Chopin; minuet chơi lại không nhắc lại), Da capo aria (ca sĩ ứng tác trang trí ở lần A thứ hai), Sarabande (tổ khúc Baroque gồm các điệu nhảy ở hình thức hai đoạn), Strophic form (Heidenröslein của Schubert; hình thức theo khổ có biến đổi), Through-composed music (Erlkönig), Notebook for Anna Magdalena Bach (Minuet Sol trưởng thường được cho là của Christian Petzold; sổ tay năm 1725).'
+      - "IMSLP, Musette in D major, BWV Anh. 126: số 22 trong sổ tay Anna Magdalena Bach, 1725; quyền tác giả của J. S. Bach không chắc chắn."
+    ly_do: 'Mục Nguồn: thay bằng các nguồn đã mở khi kiểm định (lượt 1 D3-L4); bỏ nguồn không đọc được chữ (musictheory.net).'
+  - cu: "Bản nhạc của các ví dụ, bản dàn trang công cộng của Mutopia Project: Minuet Sol trưởng BWV Anh. 114 và Sol thứ BWV Anh. 115 theo Bach-Gesellschaft (đoạn A của bài Sol trưởng kết trọn ở Sol trưởng, đoạn B sang Rê trưởng; đoạn A của bài Sol thứ kết ở Si♭ trưởng), Musette BWV Anh. 126 theo Bach-Gesellschaft (đoạn A kết ở Rê trưởng với dấu ngân, đoạn B kết ở La trưởng), La candeur theo ấn bản Litolff (đoạn A dừng trên hợp âm Sol), Tổ khúc cello số 1 theo ấn bản Schirmer 1916 (mọi điệu nhảy đều có hai đoạn nhắc lại)."
+    moi: "Bản nhạc của các ví dụ, bản dàn trang công cộng của Mutopia Project: Minuet Sol trưởng BWV Anh. 114 và Sol thứ BWV Anh. 115 theo Bach-Gesellschaft (đoạn A của bài Sol trưởng kết trọn ở Sol trưởng, đoạn B sang Rê trưởng; đoạn A của bài Sol thứ kết ở Si♭ trưởng), Musette BWV Anh. 126 theo Bach-Gesellschaft (đoạn A kết ở Rê trưởng với dấu ngân, đoạn B kết ở La trưởng; cả hai đoạn có dấu nhắc lại), La candeur theo ấn bản Litolff (đoạn A dừng trên hợp âm Sol)."
+    ly_do: 'Mục Nguồn: thay bằng các nguồn đã mở khi kiểm định (lượt 1 D3-L4); bỏ nguồn không đọc được chữ (musictheory.net).'
+  - cu: "mô tả: Các hình thức lớn như sonata, fugue, rondo được xây từ những khối nhỏ hơn. Bài này dạy những hình thức nhỏ mà bạn gặp hằng ngày: trong một điệu nhảy Baroque…"
+    moi: "mô tả: Các hình thức lớn như sonata và rondo được xây từ những khối nhỏ hơn. Bài này dạy những hình thức nhỏ mà bạn gặp hằng ngày: trong một điệu nhảy Baroque…"
+    ly_do: 'Mô tả trang lấy từ đoạn mở đầu, đổi theo chỗ sửa ở đoạn ấy (lượt 1 D3-L4, xem nhận định của đoạn mở đầu).'
+  - cu: "câu hỏi: Ca khúc mà mọi khổ lời hát cùng một giai điệu có hình thức gì? | ✓ Theo khổ | Xuyên suốt | Ba đoạn | Ví dụ phần lớn dân ca."
+    moi: "câu hỏi: Ca khúc mà mọi khổ lời hát cùng một giai điệu có hình thức gì? | ✓ Theo khổ | Xuyên suốt | Ba đoạn | Ví dụ nhiều dân ca và thánh ca."
+    ly_do: "n50 (da-sua): theo n40."

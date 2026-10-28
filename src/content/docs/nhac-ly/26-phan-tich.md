@@ -39,12 +39,12 @@ K:C
 | 5 | Đô – Mi – La – Mi – La | Am / Đô | **vi6** | |
 | 6 | Đô – Rê – Fa♯ – La – Rê | D7 / Đô | **V4/2 của V** | **Fa♯** xuất hiện: át phụ |
 | 7 | Si – Rê – Sol – Rê – Sol | G / Si | **V6** | |
-| 8 | Si – Đô – Mi – Sol – Đô | Cmaj7 / Si | | Bass tiếp tục đi xuống |
+| 8 | Si – Đô – Mi – Sol – Đô | Cmaj7 / Si | | Bass vẫn là Si (nốt 7 của Cmaj7) |
 | 9 | La – Đô – Mi – Sol – Đô | Am7 | | |
 | 10 | Rê – La – Rê – Fa♯ – Đô | D7 | **V7 của V** | |
 | 11 | Sol – Si – Rê – Sol – Si | G | | **Chủ âm hóa Sol trưởng**: nhạc đã "đi xa nhà" |
 
-**Kết luận:** chỉ trong 11 ô nhịp, Bach đi từ Đô trưởng sang vùng **Sol trưởng** (giọng át), bằng át phụ D7 có nốt Fa♯. Bè trầm đi xuống dần từng bước (Đô – Si – La…), một kỹ thuật làm âm nhạc trôi chảy liên tục. Phần sau của prelude sẽ đưa nhạc trở về Đô trưởng qua một **âm nền át** dài.
+**Kết luận:** chỉ trong 11 ô nhịp, Bach đi từ Đô trưởng sang vùng **Sol trưởng** (giọng át), bằng át phụ D7 có nốt Fa♯. Từ ô 6 đến ô 9, bè trầm đi xuống từng bước (Đô – Si – La). Phần sau của prelude sẽ đưa nhạc trở về Đô trưởng qua một **âm nền át** dài.
 
 ## Tác phẩm tiếp theo để tự phân tích
 
@@ -53,7 +53,7 @@ K:C
 | Mozart Sonata K. 545, chương 1 | Làm theo bảng ở trang [Hình thức sonata](/opus/hinh-thuc/sonata/), rồi thêm hợp âm ở mỗi kết |
 | Một thánh ca bốn bè của Bach | Gọi tên mọi hợp âm và mọi kết; tìm nốt treo, nốt lướt |
 | Schumann *Träumerei* | Tìm các át phụ và hợp âm mượn |
-| Chopin Prélude Op. 28 số 4 (Mi thứ) | Bè trầm đi xuống từng nửa cung: hợp âm thay đổi thế nào? |
+| Chopin Prélude Op. 28 số 4 (Mi thứ) | Bè trầm đi xuống gần như từng nửa cung (Sol – Fa♯ – Fa – Mi – Rê♯ – Rê – Đô – Si): hợp âm thay đổi thế nào? |
 
 ```quiz
 ? Bước đầu tiên của phân tích là gì?
@@ -75,5 +75,6 @@ K:C
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- Open Music Theory: [Tonicization](https://viva.pressbooks.pub/openmusictheory/chapter/tonicization/); [Extended Tonicization and Modulation to Closely Related Keys](https://viva.pressbooks.pub/openmusictheory/chapter/extended-tonicization-and-modulation-to-closely-related-keys/); [Figured Bass and Roman Numerals with Figures](https://viva.pressbooks.pub/openmusictheory/chapter/figured-bass/).
+- Bản nhạc: Bach, *Das wohltemperierte Klavier I* (BWV 846): [IMSLP](https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)), [Mutopia Project](https://www.mutopiaproject.org/cgibin/make-table.cgi?searchingfor=BWV+846) (bản gõ lại, ô nhịp 1–11 và bè trầm); Mozart, [Sonata K. 545](https://imslp.org/wiki/Piano_Sonata_No.16,_K.545_(Mozart,_Wolfgang_Amadeus)); Chopin, [Preludes Op. 28](https://imslp.org/wiki/Preludes,_Op.28_(Chopin,_Fr%C3%A9d%C3%A9ric)) ([Mutopia](https://www.mutopiaproject.org/cgibin/make-table.cgi?searchingfor=Chopin+Prelude+Op+28)); Schumann, [Kinderszenen Op. 15](https://imslp.org/wiki/Kinderszenen,_Op.15_(Schumann,_Robert)) ([Mutopia](https://www.mutopiaproject.org/cgibin/make-table.cgi?Composer=SchumannR)).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

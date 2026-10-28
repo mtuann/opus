@@ -1,0 +1,368 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/29-chuoi-hoa-am
+trang: src/content/docs/nhac-ly/29-chuoi-hoa-am.md
+nguon_cu: ../opus-zero/docs/nhac-ly/29-chuoi-hoa-am.md
+tang: loi
+lan:
+  - so: 1
+    ngay: '2026-10-28'
+    nhanh: moi/d3-l4
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D3-L4 lượt 1, phần 2/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Trang chuỗi hòa âm (tầng lõi), 2 khối abc soạn riêng. Nguồn chính: OMT (Diatonic Sequences in Middles, Chromatic Sequences, ii-V-I), COD (sequence), Listen 8e chương 9, Gjerdingen chương 2; Wikipedia chỉ bậc 3 và không là nguồn duy nhất. WebFetch ngày 28/10/2026 (bản tóm tắt chữ, đã hỏi lại để lấy nguyên văn chỗ quan trọng). Chỗ sai đã sửa: câu mở đầu (n2, n3), quan hệ át – chủ (n8), quãng Fa – Si (n10), cột Gặp ở và cột Bè trầm của hàng bảng (n13, n15, n21), câu Pachelbel – Romanesca (n17), câu hỏi 3 (n34). Đã bỏ: ba ví dụ nghe (Vivaldi Mùa xuân, Handel Hallelujah, Bach Prelude BWV 847; n26–n28), thay bằng ba ví dụ của OMT (n22, n24, n25). Câu ve-site trỏ tới trang chưa chuyển: nhan-dien/so-sanh-thoi-ky (n4), piano/hoa-am/mau-galant (n18), nghe-nhac/vivaldi-mua-dong (n23), luyen-tap/ban-phim (n31), tai-lieu-tham-khao (n35). Chỗ người giao cần biết: trang piano/hoa-am/mau-galant (đợt 4) ghi Romanesca galant với bè trầm 1–7–6–3 trong khi bài 29 nói bè trầm Pachelbel mở đầu bằng công thức Romanesca 1–5–6–3: nên ghi rõ hai dạng. Thuật ngữ trang dùng: sequence (có hồ sơ riêng, lô này). Thuật ngữ chưa có ở thuat-ngu.yml (cho D3-L5): Romanesca, descending fifths sequence (chuỗi quãng 5 đi xuống), 5–6 sequence (chuỗi 5–6), Pachelbel sequence.'
+nguon:
+  - id: omt-diat
+    bac: 2
+    ten: Open Music Theory, Diatonic Sequences in Middles (John Peterson)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/diatonic-sequences/
+  - id: omt-chrom
+    bac: 2
+    ten: Open Music Theory, Chromatic Sequences (Bryn Hughes)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/chromatic-sequences/
+  - id: omt-251
+    bac: 2
+    ten: Open Music Theory, ii-V-I (Megan Lavengood)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/ii-v-i/
+  - id: cod-seq
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục sequence, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/sequence
+  - id: listen-bq
+    bac: 2
+    ten: Listen, bản 8 (Macmillan Learning), chương 9, phần nghe Bach Brandenburg số 5
+    link: https://digfir-published.macmillanusa.com/listen8e/listen8e_ch9_16.html
+  - id: gjerdingen2
+    bac: 2
+    ten: Robert Gjerdingen, Music in the Galant Style (2007), chương 2 (bản trích của UC Irvine)
+    link: https://music.arts.uci.edu/abauer/5.2/readings/Gjerdingen%20_Music_in_the_Galant_Style_Ch_2.pdf
+  - id: wiki-seq
+    bac: 3
+    ten: Wikipedia, Sequence (music) (bậc 3, chỉ để tìm nguồn)
+    link: https://en.wikipedia.org/wiki/Sequence_(music)
+  - id: wiki-pach
+    bac: 3
+    ten: Wikipedia, Pachelbel Canon (bậc 3, chỉ để tìm nguồn)
+    link: https://en.wikipedia.org/wiki/Pachelbel%27s_Canon
+  - id: wiki-rom
+    bac: 3
+    ten: Wikipedia, Romanesca (bậc 3, chỉ để tìm nguồn)
+    link: https://en.wikipedia.org/wiki/Romanesca
+nhan_dinh:
+  - id: n1
+    cau: Chuỗi (sequence) là một mẫu nhạc ngắn được lặp lại liên tiếp ở các cao độ khác nhau, đi lên hoặc đi xuống đều đặn như những bậc cầu thang.
+    loai: dinh-nghia
+    nguon:
+      - omt-diat
+      - cod-seq
+    ket_qua: dung
+    ghi_chu: 'OMT: "A sequence is a pattern that has been repeated and transposed". COD: "the more or less exact repetition of a passage at a higher or lower level of pitch". "Đều đặn": các ví dụ OMT dịch cả mẫu xuống hay lên một bậc mỗi lần.'
+  - id: n2
+    cau: Chuỗi rất hay gặp trong nhạc tonal, nhất là thời Baroque.
+    loai: lich-su
+    nguon:
+      - listen-bq
+      - wiki-seq
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Đây là một trong những khuôn mẫu phổ biến nhất của nhạc tonal, đặc biệt thời Baroque". Chữ mới: "Chuỗi rất hay gặp trong nhạc tonal, nhất là thời Baroque." Lý do: không tìm được nguồn xếp hạng "một trong những khuôn mẫu phổ biến nhất". Listen 8e: "One easily recognized feature of Baroque melodies is their frequent use of sequence"; "Sequences provide Baroque music with one of its most effective means of forward motion". Wikipedia (bậc 3): "widespread throughout Western music history", "stereotypically associated with Baroque music". Phần description của trang bị cắt giữa chừng ("Đây là một trong…") nên bỏ phần cắt.'
+  - id: n3
+    cau: Nghe thấy chuỗi là một manh mối để nhận diện nhạc Baroque, như nhạc Bach và Vivaldi.
+    loai: lich-su
+    nguon:
+      - listen-bq
+      - omt-diat
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "nghe thấy chuỗi là một manh mối mạnh để nhận diện nhạc Vivaldi, Bach, Handel". Chữ mới: "…một manh mối để nhận diện nhạc Baroque, như nhạc Bach và Vivaldi." Lý do: Listen 8e nêu chuỗi ở chủ đề chương 1 Brandenburg số 5 của Bach; OMT nêu một chuỗi 5–6 đi lên ở Vivaldi, Op. 8 số 4, chương 2, ô 11–13. Không tìm được nguồn nào nói Handel; "mạnh" là mức đánh giá không có nguồn.'
+  - id: n4
+    cau: 'Link [nhận diện](/opus/nhan-dien/so-sanh-thoi-ky/): trang ấy nói về chuỗi như một đặc điểm của nhạc Baroque.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển (có trong src/data/trang.yml, id nhan-dien/so-sanh-thoi-ky). Kiểm trên site cũ ../opus-zero/docs/nhan-dien/so-sanh-thoi-ky.md: bảng so sánh ghi giai điệu Baroque có "chuỗi" (dòng 16), hòa âm Baroque có "chuỗi quãng 5" (dòng 17), và so sánh "Tối giản và Baroque" nói Baroque "đi đâu đó (chuỗi, chuyển giọng, kết)" (dòng 64). Lô chuyển trang đích phải giữ chuỗi trong cột Baroque; tìm bằng grep -rn "29-chuoi-hoa-am" kiem-dinh/.'
+  - id: n5
+    cau: Môtip Mi – Rê – Mi – Đô được nhắc lại ba lần, mỗi lần thấp hơn một bậc.
+    loai: cau-truc
+    nguon:
+      - omt-diat
+    ket_qua: dung
+    ghi_chu: 'Khối abc 1: e d e c | d c d B | c B c A. Mi Rê Mi Đô, rồi Rê Đô Rê Si, rồi Đô Si Đô La: ba lần, mỗi lần dịch xuống một bậc trong giọng Đô (chuỗi giọng, quãng thay đổi chút ít để ở trong giọng). B4 cuối là nốt kết.'
+  - id: n6
+    cau: Một môtip được nhắc lại, mỗi lần thấp hơn (hoặc cao hơn) một bậc, là chuỗi giai điệu.
+    loai: dinh-nghia
+    nguon:
+      - omt-diat
+      - cod-seq
+    ket_qua: dung
+    ghi_chu: COD phân biệt chuỗi thật (giữ nguyên quãng) và chuỗi giọng (quãng thay đổi chút ít để ở trong giọng); khối abc 1 là chuỗi giọng, hợp với chữ "bậc".
+  - id: n7
+    cau: Chuỗi hòa âm tiêu biểu là bè trầm đi xuống quãng 5 (hoặc lên quãng 4) liên tục, đi qua mọi hợp âm của giọng.
+    loai: dinh-nghia
+    nguon:
+      - omt-diat
+      - wiki-seq
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Chuỗi hòa âm quan trọng nhất là…". Chữ mới: "tiêu biểu". Lý do: không có nguồn xếp hạng "quan trọng nhất"; OMT chỉ nêu chuỗi quãng 5 đầu tiên trong các chuỗi diatonic. OMT: "each successive chord root descends by fifth (or ascends by fourth)". "Mọi hợp âm của giọng": trong giọng Đô trưởng, gốc đi Đô Fa Si Mi La Rê Sol Đô, đủ bảy hợp âm (Wikipedia, bậc 3: gốc Đô, Fa, Si, Mi, La, Rê).'
+  - id: n8
+    cau: Gốc của mỗi hợp âm cách gốc hợp âm tiếp theo một quãng 5, như quan hệ át – chủ (riêng cặp Fa – Si là quãng 5 giảm), nên chuỗi tạo lực kéo về phía trước.
+    loai: quy-tac
+    nguon:
+      - omt-diat
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Mỗi hợp âm như một "át âm" của hợp âm tiếp theo, tạo lực kéo không ngừng về phía trước." Chữ mới như trên. Lý do: trong gam trưởng, cặp Fa – Si (IV – vii°) là quãng 5 giảm, không phải át – chủ; chữ cũ nói "mỗi hợp âm" nên sai ở chỗ này. "Lực kéo về phía trước" là cách tả cảm giác nghe; Listen 8e nói chuỗi cho nhạc Baroque "one of its most effective means of forward motion".'
+  - id: n9
+    cau: 'Chuỗi quãng 5 đi xuống trong Đô trưởng: I – IV – vii° – iii – vi – ii – V – I.'
+    loai: cau-truc
+    nguon:
+      - omt-diat
+      - wiki-seq
+    ket_qua: dung
+    ghi_chu: 'Tính từ định nghĩa OMT: gốc đi xuống quãng 5 trong giọng, bắt đầu ở Đô: Đô, Fa, Si, Mi, La, Rê, Sol, Đô = I, IV, vii°, iii, vi, ii, V, I. Khớp Wikipedia (bậc 3): "Starting on C in C major, the roots go C, F, B, E, A, D". Khớp khối abc 2.'
+  - id: n10
+    cau: Bè trầm Đô – Fa – Si – Mi – La – Rê – Sol – Đô cứ xuống quãng 5 rồi lên quãng 4 xen kẽ (riêng Fa xuống Si là quãng 5 giảm).
+    loai: cau-truc
+    nguon:
+      - omt-diat
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "cứ xuống 5 lên 4 xen kẽ". Chữ mới thêm chú thích quãng 5 giảm. Lý do: Fa xuống Si (F3 xuống B2 trên khối abc 2) là quãng 5 giảm. Các bước còn lại đúng: Đô lên Fa (4), Si lên Mi (4), Mi xuống La (5), La lên Rê (4), Rê xuống Sol (5), Sol lên Đô (4).'
+  - id: n11
+    cau: Bạn sẽ nghe thấy cái "đi tới" không cưỡng lại được của chuỗi này.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Mô tả cảm giác nghe, không phải sự kiện kiểm được; không trái với trang lõi khác.
+  - id: n12
+    cau: 'Bảng: chuỗi quãng 5 đi xuống: bè trầm xuống 5, lên 4; C – F – B° – Em – Am – Dm – G – C.'
+    loai: cau-truc
+    nguon:
+      - omt-diat
+      - wiki-seq
+    ket_qua: dung
+    ghi_chu: Khớp n9, n10.
+  - id: n13
+    cau: 'Bảng: chuỗi quãng 5 đi xuống thường gặp trong nhạc tonal; nhạc jazz nối các vòng ii – V – I.'
+    loai: lich-su
+    nguon:
+      - omt-diat
+      - omt-chrom
+      - omt-251
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Khắp nơi trong Baroque; nhạc jazz (vòng ii – V – I nối nhau)". Chữ mới: "Thường gặp trong nhạc tonal; nhạc jazz (vòng ii – V – I nối nhau)". Lý do: không có nguồn nói riêng chuỗi quãng 5 ở "khắp nơi trong Baroque"; OMT trình bày chuỗi quãng 5 là chuỗi diatonic cơ bản (ví dụ Albéniz), và (Chromatic Sequences) chuỗi quãng 5 có hợp âm át nối nhau dùng suốt thế kỷ 19. Jazz: OMT ii–V–I, "Ceora" của Lee Morgan "is entirely composed of ii–V–Is"; chuỗi ii–V–I ở nhiều giọng (như "Afternoon in Paris": Si♭ rồi La♭).'
+  - id: n14
+    cau: 'Bảng: chuỗi quãng 3 đi xuống: bè trầm xuống 3; C – Am – F – Dm.'
+    loai: cau-truc
+    nguon:
+      - omt-diat
+      - wiki-seq
+    ket_qua: dung
+    ghi_chu: 'Wikipedia (bậc 3): "Root notes descend by a third each sequential repetition". OMT: mô hình hai hợp âm được dịch xuống một quãng 3, thường dùng các hợp âm thể gốc hoặc xen thể gốc và thể đảo 1. Dãy gốc C – A – F – D ghi trên bảng là dạng thể gốc mỗi bước, khớp.'
+  - id: n15
+    cau: 'Bảng: kiểu Pachelbel: bè trầm xuống 4, lên một bậc (lặp lại), rồi kết; C – G – Am – Em – F – C – F – G.'
+    loai: cau-truc
+    nguon:
+      - wiki-seq
+      - wiki-pach
+      - omt-diat
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Xuống 4, lên 2". Chữ mới: "Xuống 4, lên một bậc (lặp lại), rồi kết". Lý do: Canon có bè trầm Rê La Si Fa♯ Sol Rê Sol La (Wikipedia, từ nguồn LilyPond); ở Đô: Đô Sol La Mi Fa Đô Fa Sol. Đô–Sol xuống 4, Sol–La lên bậc; La–Mi xuống 4, Mi–Fa lên bậc; Fa–Đô xuống 4; còn Đô – Fa – Sol cuối không theo mẫu (Đô lên Fa là lên 4), nên chữ cũ "lên 2" không đúng cho cả dãy. Wikipedia: bè trầm "moves down a fourth, and then up stepwise". OMT: chuỗi quãng 3 đi xuống còn gọi là "Pachelbel" theo Canon.'
+  - id: n16
+    cau: 'Link [bài 12](/opus/nhac-ly/12-hoa-am-chuc-nang/): bài ấy có nhắc Pachelbel Canon.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Kiểm trên src/content/docs/nhac-ly/12-hoa-am-chuc-nang.md: dòng 44 bảng vòng hợp âm "I – V – vi – iii – IV – I – IV – V | C – G – Am – Em – F – C – F – G | Pachelbel Canon", dòng 83 bài tập nghe Pachelbel Canon. Khớp dãy ở bảng của bài 29.'
+  - id: n17
+    cau: Bè trầm của Canon Pachelbel đi bậc 1–5–6–3–4–1–4–5, mở đầu bằng công thức bè trầm Romanesca.
+    loai: cau-truc
+    nguon:
+      - gjerdingen2
+      - wiki-pach
+      - wiki-rom
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "bè trầm đi bậc 1–5–6–3, gần với bè trầm 1–7–6–3 của mẫu Romanesca, chỉ khác nốt thứ hai nhảy xuống quãng 4 thay vì đi một bậc". Chữ mới: "bè trầm đi bậc 1–5–6–3–4–1–4–5, mở đầu bằng công thức bè trầm Romanesca". Lý do: Gjerdingen (chương 2, bản trích): bè trầm Romanesca được gọi theo "prima di tono, quinta di tono, sesta di tono" (bậc 1, 5, 6) và "Pachelbel Canon (ca. 1680) … first three-voice combination, in measure 5, presents an obvious Romanesca"; Wikipedia Romanesca: bè trầm III–VII–i–V (ở giọng trưởng song song: 1–5–6–3). Dạng 1–7–6–3 là mẫu Romanesca của phong cách galant (chỉ có Wikipedia, bậc 3, bảng Galant Schemata); chưa mở được nguồn bậc 2 cho dạng ấy, nên bỏ phép so sánh khỏi trang. Chữ "1–5–6–3–4–1–4–5": Wikipedia Pachelbel Canon, bảng tám hợp âm D A Bm F♯m G D G A.'
+  - id: n18
+    cau: 'Link [các mẫu hòa âm thời Cổ điển](/opus/piano/hoa-am/mau-galant/): trang ấy nói về Romanesca và chuỗi.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển (src/data/trang.yml: piano/hoa-am/mau-galant). Kiểm trên site cũ ../opus-zero/docs/piano/hoa-am/mau-galant.md: dòng 9 "Fonte và Monte là những chuỗi hòa âm (sequence)" (link ngược bài 29), bảng và mục ### Romanesca (dòng 17, 28–30). Lô chuyển trang đích cần giữ: mục Romanesca và liên kết ngược bài 29; nên nói rõ hai dạng: trang ấy ghi Romanesca galant với bè trầm 1–7–6–3, còn bài 29 nói bè trầm Canon Pachelbel mở đầu bằng công thức bè trầm Romanesca 1–5–6–3.'
+  - id: n19
+    cau: 'Bảng: chuỗi 5 – 6 đi lên: bè trầm lên từng bậc, bè trên đổi quãng 5 thành quãng 6 trên mỗi nốt bass; C – Am/C – Dm – B°/D – Em….'
+    loai: cau-truc
+    nguon:
+      - omt-diat
+      - wiki-seq
+    ket_qua: dung
+    ghi_chu: 'OMT: "a voice that is a fifth above the bass moves to a sixth above the bass". Wikipedia (bậc 3): gốc đi xuống một quãng 3 (thường tới hợp âm thể đảo 1 cùng nốt bass) rồi lên một quãng 4: C, Am/C, Dm, B°/D, Em. Bass: Đô Đô Rê Rê Mi (lên bậc). Trên bass Đô: Sol (quãng 5) rồi La (quãng 6); trên bass Rê: La rồi Si.'
+  - id: n20
+    cau: Chuỗi 5 – 6 đi lên tạo cảm giác dâng lên, tích tụ.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Mô tả cảm giác nghe.
+  - id: n21
+    cau: 'Bảng: chuỗi nửa cung: bè trầm đi xuống từng nửa cung; gặp trong nhạc Lãng mạn, ví dụ Chopin.'
+    loai: lich-su
+    nguon:
+      - omt-chrom
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Đi lên hoặc xuống từng nửa cung". Chữ mới: "Đi xuống từng nửa cung". Lý do: OMT (Hughes) chỉ nêu dạng đi xuống: "a chromatic bass line descending in semitones", "a succession of dominant-seventh chords descending by semitone"; Chopin, Impromptu La♭ trưởng: các hợp âm ba được dịch xuống nửa cung. Chuỗi cromatic đi lên (Example 7, "chromatic ascending step sequence") có gốc đi lên cung, không phải nửa cung. OMT: "These techniques were used by composers throughout the nineteenth century". Ví dụ Chopin khác: Mazurka Đô♯ thứ Op. 30 số 4.'
+  - id: n22
+    cau: 'Vivaldi, Concerto Mùa đông (Op. 8 số 4), chương 2, ô 11–13: một chuỗi 5–6 đi lên.'
+    loai: cau-truc
+    nguon:
+      - omt-diat
+    ket_qua: da-sua
+    ghi_chu: 'Thay bullet cũ về Mùa xuân (n26). OMT, Example 5: "An ascending 5-6 sequence in Antonio Vivaldi''s Violin Concerto Op. 8, No. 4, II, mm. 11–13." Op. 8 số 4 là Concerto Fa thứ L''inverno (Mùa đông): theo trang site cũ nghe-nhac/vivaldi-mua-dong.md dòng 6.'
+  - id: n23
+    cau: Link [Vivaldi Mùa đông](/opus/nghe-nhac/vivaldi-mua-dong/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển (src/data/trang.yml có nghe-nhac/vivaldi-mua-dong). Site cũ ../opus-zero/docs/nghe-nhac/vivaldi-mua-dong.md: Concerto Fa thứ, Op. 8 số 4, RV 297 (dòng 6); chương 1 có "chuỗi nốt chạy rất nhanh của violin độc tấu… mỗi đợt lên cao hơn đợt trước" (dòng 16, 31). Trang ấy không nói về chuỗi 5–6 ở chương 2: bài 29 chỉ cần nó là trang hướng dẫn nghe bản này.'
+  - id: n24
+    cau: 'Albéniz, Catalonia (số 34–36 trong tổng phổ): một chuỗi quãng 5 đi xuống.'
+    loai: cau-truc
+    nguon:
+      - omt-diat
+    ket_qua: da-sua
+    ghi_chu: 'Thêm mới, thay bullet Hallelujah (n27). OMT, Example 3: "A descending fifths sequence in Isaac Albéniz''s Catalonia, Rehearsal 34–36." "Rehearsal" là số tập trong tổng phổ.'
+  - id: n25
+    cau: 'Amanda Maier, Sáu tiểu phẩm cho violin, số 6, ô 162–169: một chuỗi quãng 3 đi xuống.'
+    loai: cau-truc
+    nguon:
+      - omt-diat
+    ket_qua: da-sua
+    ghi_chu: 'Thêm mới. OMT, Example 4: "A descending Thirds sequence in Amanda Maier''s Six Pieces for Violin, No. 6, mm. 162–169."'
+  - id: n26
+    cau: 'Vivaldi Mùa xuân: các đoạn độc tấu violin đầy chuỗi giai điệu.'
+    loai: lich-su
+    nguon:
+      - listen-bq
+    ket_qua: da-bo
+    ghi_chu: 'Đã bỏ khỏi trang (và link nghe-nhac/vivaldi-mua-xuan). Không kiểm được: Listen 8e (chương 10, Spring, Op. 8 số 1) chỉ nói chương 1 và 3 có đoạn violin độc tấu tả chim hót ("require three violins") và không nói tới chuỗi; tệp LilyPond của Mutopia (id 301) chỉ có dạng zip, không đọc được nốt. Site cũ dùng "chuỗi nốt" theo nghĩa dãy nốt chạy, không phải sequence.'
+  - id: n27
+    cau: 'Handel Messiah, Hallelujah: nhiều chuỗi tạo cảm giác hân hoan dâng lên.'
+    loai: lich-su
+    nguon: []
+    ket_qua: da-bo
+    ghi_chu: Đã bỏ khỏi trang. Wikipedia Messiah Part II (bậc 3) chỉ nói đoạn "King of Kings" được "raised higher and higher in the sopranos and trumpets" trên nốt lặp, không nói chuỗi; không có nguồn bậc 1–2; Mutopia (id 459) chỉ có dạng zip.
+  - id: n28
+    cau: 'Bach, Prelude cung Đô thứ BWV 847: những hình nốt lặp lại trên chuỗi hợp âm.'
+    loai: lich-su
+    nguon: []
+    ket_qua: da-bo
+    ghi_chu: 'Đã bỏ khỏi trang (cùng link piano/tac-pham/bach-prelude-fugue-do-thu và link Fugue). Đọc tệp LilyPond Mutopia (bwv847a.ly, Breitkopf & Härtel 1866) qua WebFetch: mỗi ô là một hình tám nốt móc kép lặp hai lần (đúng điều "hình nốt lặp lại"), nhưng chú thích ở mục Nguồn cũ ("ô 6–11 là một chuỗi quãng 5 đi xuống… mẫu hai ô, mỗi lần thấp hơn một bậc") không khớp: nốt đầu của bè trầm ô 6–11 là Đô, Si♭, Si♭, La♭, La♭, Sol (đi bậc, không phải quãng 5). Không có nguồn bậc 1–2 nói bài này dùng chuỗi, nên bỏ.'
+  - id: n29
+    cau: 'Bài tập 1: viết chuỗi quãng 5 đi xuống trong Sol trưởng (bè trầm: Sol – Đô – Fa♯ – Si – Mi – La – Rê – Sol).'
+    loai: so-lieu
+    nguon:
+      - omt-diat
+    ket_qua: dung
+    ghi_chu: 'Cùng quy tắc n9, n10 ở Sol trưởng: Sol, Đô, Fa♯, Si, Mi, La, Rê, Sol (Fa♯ – Si là quãng 5 giảm, như Fa – Si ở Đô).'
+  - id: n30
+    cau: 'Bài tập 2: hát (hoặc chơi trên bàn phím) chuỗi giai điệu ở trên, rồi tự sáng tác một môtip 4 nốt và nhắc lại ba lần, mỗi lần thấp hơn một bậc.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Không trái trang lõi khác.
+  - id: n31
+    cau: 'Link [bàn phím](/opus/luyen-tap/ban-phim/): có công cụ bàn phím để chơi.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển (src/data/trang.yml: luyen-tap/ban-phim, tầng khung). Site cũ ../opus-zero/docs/luyen-tap/ban-phim.md có tồn tại. Điều cần giữ: công cụ bàn phím chơi được trên trang.'
+  - id: n32
+    cau: 'Câu hỏi 1: "Chuỗi hòa âm là gì?" Đáp án: một mẫu nhạc lặp lại liên tiếp ở các cao độ khác nhau (giải thích: giống như các bậc cầu thang).'
+    loai: dinh-nghia
+    nguon:
+      - omt-diat
+      - cod-seq
+    ket_qua: dung
+    ghi_chu: Khớp n1. Giải thích không dựa vị trí lựa chọn.
+  - id: n33
+    cau: 'Câu hỏi 2: trong chuỗi quãng 5 đi xuống, bè trầm xuống quãng 5 và lên quãng 4 xen kẽ (giải thích: Đô – Fa – Si – Mi…).'
+    loai: dinh-nghia
+    nguon:
+      - omt-diat
+    ket_qua: dung
+    ghi_chu: Khớp n10 (Fa xuống Si là 5 giảm, ngoại lệ không làm sai đáp án vì hai lựa chọn kia là "lên từng nửa cung" và "đứng yên").
+  - id: n34
+    cau: 'Câu hỏi 3: "Chuỗi thường được nhắc tới nhiều nhất khi nói về nhạc của thời kỳ nào?" Đáp án: Baroque (giải thích: chuỗi có mặt ở mọi thời, nhưng đặc biệt dễ nghe thấy trong nhạc Baroque, như Bach và Vivaldi).'
+    loai: lich-su
+    nguon:
+      - listen-bq
+      - wiki-seq
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Chuỗi hòa âm là đặc trưng nổi bật của thời kỳ nào?" ... "Vivaldi, Bach, Handel dùng rất nhiều." Lý do: "đặc trưng nổi bật" và "Handel" như n2, n3; Wikipedia: chuỗi "widespread throughout Western music history", "stereotypically associated with Baroque". Các lựa chọn sai (Trung cổ, tối giản thế kỷ 20) vẫn sai.'
+  - id: n35
+    cau: Link [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển (src/data/trang.yml: tai-lieu-tham-khao). Site cũ ../opus-zero/docs/tai-lieu-tham-khao.md có tồn tại. Điều cần giữ: là trang danh mục tài liệu tham khảo.'
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - giong
+      - not
+      - nhip
+    ket_qua: dung
+    ghi_chu: 'Soạn cho trang. K:C, M:4/4, L:1/8: e d e c d c d B | c B c A B4: ba lần môtip Mi Rê Mi Đô dịch xuống một bậc (n5), ô 2 đủ 8 móc đơn (c B c A và B4 = nửa). Không cảnh báo abcjs (node tools/khuong-nhac.mjs: 92 khối, 0 lỗi).'
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - giong
+      - hop-am
+      - nhip
+      - dan-be
+    ket_qua: dung
+    ghi_chu: 'Soạn cho trang. K:C, M:4/4, L:1/4, hai khuông (S, B). Hợp âm: [EGc]=C, [FAc]=F, [FBd]=B° (Si Rê Fa, bass Si), [EGB]=Em, [EAc]=Am, [DFA]=Dm, [DGB]=G, [EGc]=C; bass C, F | B, E | A, D | G, C: đúng I – IV – vii° – iii – vi – ii – V – I (n9). Bước bass: Đô lên Fa (4), Fa xuống Si (5 giảm), Si lên Mi (4), Mi xuống La (5), La lên Rê (4), Rê xuống Sol (5), Sol lên Đô (4) (n10). Mỗi ô hai nốt trắng, đủ 4 phách. Không kiểm số ngón (ví dụ nghe, không phải bài tập chơi).'
+doi_chu:
+  - cu: "Chuỗi (sequence) là một mẫu nhạc ngắn được lặp lại liên tiếp ở các cao độ khác nhau, đi lên hoặc đi xuống đều đặn như những bậc cầu thang. Đây là một trong những khuôn mẫu phổ biến nhất của nhạc tonal, đặc biệt thời Baroque: nghe thấy chuỗi là một manh mối mạnh để nhận diện nhạc Vivaldi, Bach, Handel."
+    moi: "Chuỗi (sequence) là một mẫu nhạc ngắn được lặp lại liên tiếp ở các cao độ khác nhau, đi lên hoặc đi xuống đều đặn như những bậc cầu thang. Chuỗi rất hay gặp trong nhạc tonal, nhất là thời Baroque: nghe thấy chuỗi là một manh mối để nhận diện nhạc Baroque, như nhạc Bach và Vivaldi."
+    ly_do: 'n2 (da-sua): phần description bị cắt giữa chừng "Đây là một trong…"; bỏ phần cắt theo n2.; n2, n3 (da-sua): không có nguồn xếp hạng "phổ biến nhất"; Handel không có nguồn; Listen 8e (Bach), OMT (Vivaldi).'
+  - cu: Chuỗi hòa âm quan trọng nhất là bè trầm đi xuống quãng 5 (hoặc lên quãng 4) liên tục, đi qua mọi hợp âm của giọng. Mỗi hợp âm như một "át âm" của hợp âm tiếp theo, tạo lực kéo không ngừng về phía trước.
+    moi: Chuỗi hòa âm tiêu biểu là bè trầm đi xuống quãng 5 (hoặc lên quãng 4) liên tục, đi qua mọi hợp âm của giọng. Gốc của mỗi hợp âm cách gốc hợp âm tiếp theo một quãng 5, như quan hệ át – chủ (riêng cặp Fa – Si là quãng 5 giảm), nên chuỗi tạo lực kéo về phía trước.
+    ly_do: 'n7 (da-sua): không có nguồn xếp hạng "quan trọng nhất".; n8 (da-sua): Fa – Si là quãng 5 giảm, không phải át – chủ; chữ cũ nói "mỗi hợp âm".'
+  - cu: 'Nghe bè trầm: Đô – Fa – Si – Mi – La – Rê – Sol – Đô, cứ xuống 5 lên 4 xen kẽ. Bạn sẽ nghe thấy cái "đi tới" không cưỡng lại được của chuỗi này.'
+    moi: 'Nghe bè trầm: Đô – Fa – Si – Mi – La – Rê – Sol – Đô, cứ xuống quãng 5 rồi lên quãng 4 xen kẽ (riêng Fa xuống Si là quãng 5 giảm). Bạn sẽ nghe thấy cái "đi tới" không cưỡng lại được của chuỗi này.'
+    ly_do: "n10 (da-sua): Fa xuống Si là quãng 5 giảm (khối abc 2)."
+  - cu: Khắp nơi trong Baroque; nhạc jazz (vòng ii – V – I nối nhau)
+    moi: Thường gặp trong nhạc tonal; nhạc jazz (vòng ii – V – I nối nhau)
+    ly_do: 'n13 (da-sua): "khắp nơi trong Baroque" là cường điệu, không có nguồn riêng cho chuỗi quãng 5.'
+  - cu: Xuống 4, lên 2
+    moi: Xuống 4, lên một bậc (lặp lại), rồi kết
+    ly_do: 'n15 (da-sua): chỉ sáu nốt đầu của bè trầm theo "xuống 4, lên một bậc"; Đô – Fa – Sol cuối là phần kết.'
+  - cu: Pachelbel Canon (xem bài 12); bè trầm đi bậc 1–5–6–3, gần với bè trầm 1–7–6–3 của mẫu Romanesca, chỉ khác nốt thứ hai nhảy xuống quãng 4 thay vì đi một bậc, xem các mẫu hòa âm thời Cổ điển
+    moi: Pachelbel Canon (xem bài 12); bè trầm đi bậc 1–5–6–3–4–1–4–5, mở đầu bằng công thức bè trầm Romanesca; xem các mẫu hòa âm thời Cổ điển
+    ly_do: 'n17 (da-sua): Gjerdingen gọi ô 5 của Canon là "an obvious Romanesca"; công thức bè trầm Romanesca là 1–5–6–3; dạng 1–7–6–3 chỉ có nguồn bậc 3.'
+  - cu: Đi lên hoặc xuống từng nửa cung
+    moi: Đi xuống từng nửa cung
+    ly_do: "n21 (da-sua): OMT chỉ nêu dạng đi xuống từng nửa cung."
+  - cu:
+      - "Vivaldi Mùa xuân: các đoạn độc tấu violin đầy chuỗi giai điệu."
+      - "Handel Messiah, Hallelujah: nhiều chuỗi tạo cảm giác hân hoan dâng lên."
+      - "Bach, Prelude cung Đô thứ BWV 847 (cặp với Fugue): những hình nốt lặp lại trên chuỗi hợp âm."
+    moi:
+      - "Vivaldi Mùa đông (Concerto violin Op. 8 số 4), chương 2, ô 11–13: một chuỗi 5–6 đi lên."
+      - "Albéniz, Catalonia (số 34–36 trong tổng phổ): một chuỗi quãng 5 đi xuống."
+      - "Amanda Maier, Sáu tiểu phẩm cho violin, số 6, ô 162–169: một chuỗi quãng 3 đi xuống."
+    ly_do: "n26, n27, n28 (da-bo) và n22, n24, n25 (da-sua): ba ví dụ cũ không kiểm được; ba ví dụ mới theo chú thích của OMT."
+  - cu:
+      - "Open Music Theory: chương Diatonic Sequences in Middles (John Peterson): chuỗi là một mẫu được nhắc lại và dịch cao độ; chuỗi quãng 5 đi xuống, chuỗi quãng 3 đi xuống (còn gọi là chuỗi Pachelbel), chuỗi 5–6 đi lên; chương Chromatic Sequences (Bryn Hughes): chuỗi quãng 5 có các hợp âm át nối nhau, chuỗi đi xuống từng nửa cung (ví dụ của Chopin), được dùng suốt thế kỷ 19; chương ii–V–I (Megan Lavengood): nhạc jazz nối các vòng ii–V–I ở nhiều giọng thành chuỗi."
+      - "Wikipedia, Sequence (music): định nghĩa; chuỗi thường gắn với nhạc Baroque, nhất là Vivaldi; bè trầm của chuỗi quãng 5 Đô – Fa – Si – Mi – La – Rê…; chuỗi quãng 3 đi xuống và dạng Pachelbel (bè trầm xuống quãng 4 rồi lên một bậc); chuỗi 5–6 đi lên."
+      - "Wikipedia, Pachelbel's Canon: vòng tám hợp âm trên bè trầm lặp lại, theo mẫu Romanesca mà Robert Gjerdingen coi là khuôn mẫu phổ biến ở thế kỷ 17–18."
+      - 'Wikipedia, Messiah Part II: ở đoạn "King of Kings" của Hallelujah, bè soprano và kèn trumpet được đẩy lên cao dần.'
+      - 'Bản nhạc của các ví dụ, bản dàn trang công cộng của Mutopia Project: Prelude Đô thứ BWV 847 theo ấn bản Breitkopf & Härtel 1866 (ô 6–11 là một chuỗi quãng 5 đi xuống trên cùng một hình nốt lặp lại: mẫu hai ô, mỗi lần thấp hơn một bậc), Hallelujah (bè soprano ngân Rê, Mi, Fa♯, Sol trên lời "King of Kings, and Lord of Lords"), La primavera (các đoạn violin độc tấu ở chương 1 và 3 lặp một hình nhạc ở nhiều cao độ).'
+    moi:
+      - "Open Music Theory: chương Diatonic Sequences in Middles (John Peterson): chuỗi là một mẫu được nhắc lại và dịch cao độ; chuỗi quãng 5 đi xuống (gốc hợp âm đi xuống quãng 5 hay lên quãng 4; ví dụ Albéniz, Catalonia), chuỗi quãng 3 đi xuống (còn gọi là chuỗi Pachelbel; ví dụ Amanda Maier, Sáu tiểu phẩm cho violin số 6), chuỗi 5–6 đi lên (ví dụ Vivaldi, Concerto violin Op. 8 số 4, chương 2, ô 11–13); chương Chromatic Sequences (Bryn Hughes): chuỗi quãng 5 có các hợp âm át nối nhau, chuỗi đi xuống từng nửa cung (ví dụ của Chopin), được dùng suốt thế kỷ 19; chương ii–V–I (Megan Lavengood): nhạc jazz nối các vòng ii–V–I ở nhiều giọng thành chuỗi."
+      - "The Concise Oxford Dictionary of Music, mục sequence, qua Encyclopedia.com: chuỗi là sự lặp lại gần như chính xác một đoạn nhạc ở cao độ cao hơn hay thấp hơn."
+      - "Listen, bản 8 (Macmillan Learning), chương 9: chuỗi là một đặc điểm dễ nhận ra của giai điệu Baroque, ví dụ ở chủ đề chương 1 của Bach, Brandenburg số 5."
+      - 'Robert Gjerdingen, Music in the Galant Style (2007), chương 2 (bản trích): Canon của Pachelbel ở ô 5 "presents an obvious Romanesca"; Romanesca là một công thức bè trầm Ý, được chú ý từ thế kỷ 16 và phổ biến trong thế kỷ 17.'
+      - "Wikipedia, Sequence (music): chuỗi quãng 5 có gốc Đô – Fa – Si – Mi – La – Rê; chuỗi quãng 3 đi xuống; dạng Pachelbel (bè trầm xuống quãng 4 rồi lên một bậc); chuỗi 5–6 đi lên. Pachelbel's Canon: bè trầm Rê – La – Si – Fa♯ – Sol – Rê – Sol – La, tám hợp âm lặp lại."
+    ly_do: "n17, n26, n27, n28: chỉ ghi nguồn đã mở và có nói điều ấy."
+  - cu: "mô tả: Chuỗi (sequence) là một mẫu nhạc ngắn được lặp lại liên tiếp ở các cao độ khác nhau, đi lên hoặc đi xuống đều đặn như những bậc cầu thang. Đây là một trong…"
+    moi: "mô tả: Chuỗi (sequence) là một mẫu nhạc ngắn được lặp lại liên tiếp ở các cao độ khác nhau, đi lên hoặc đi xuống đều đặn như những bậc cầu thang."
+    ly_do: 'Mô tả trang lấy từ đoạn mở đầu, đổi theo chỗ sửa ở đoạn ấy (lượt 1 D3-L4, xem nhận định của đoạn mở đầu).'
+  - cu: "câu hỏi: Chuỗi hòa âm là đặc trưng nổi bật của thời kỳ nào? | ✓ Baroque | Trung cổ | Tối giản thế kỷ 20 | Vivaldi, Bach, Handel dùng rất nhiều."
+    moi: "câu hỏi: Chuỗi thường được nhắc tới nhiều nhất khi nói về nhạc của thời kỳ nào? | ✓ Baroque | Trung cổ | Tối giản thế kỷ 20 | Chuỗi có mặt ở mọi thời, nhưng đặc biệt dễ nghe thấy trong nhạc Baroque, như Bach và Vivaldi."
+    ly_do: "n34 (da-sua): như n2, n3."

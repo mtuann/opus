@@ -3,11 +3,11 @@ title: 25. Bè trầm số
 description: Thời Baroque, nhạc công đàn phím không có bản nhạc đầy đủ. Họ chỉ có bè trầm kèm những con số nhỏ bên dưới, và phải tự chơi hợp âm bên trên ngay khi biểu diễn.…
 ---
 
-Thời Baroque, nhạc công đàn phím không có bản nhạc đầy đủ. Họ chỉ có **bè trầm** kèm những **con số** nhỏ bên dưới, và phải tự chơi hợp âm bên trên ngay khi biểu diễn. Đó là **bè trầm số** (figured bass), xương sống của bè trầm liên tục (basso continuo, xem [Baroque](/opus/lich-su/thoi-ky/baroque/)). Biết đọc nó, bạn hiểu cách nhạc sĩ thời Bach nghĩ về hòa âm.
+Thời Baroque, nhạc công đàn phím không có bản nhạc đầy đủ. Họ chỉ có **bè trầm** kèm những **con số** nhỏ bên dưới, và phải tự chơi hợp âm bên trên ngay khi biểu diễn. Đó là **bè trầm số** (figured bass), cách ghi hợp âm của bè trầm liên tục (basso continuo, xem [Baroque](/opus/lich-su/thoi-ky/baroque/)). Biết đọc nó, bạn đọc được cách nhạc sĩ Baroque ghi hòa âm.
 
 ## Nguyên tắc
 
-Các con số chỉ **quãng tính từ nốt bè trầm lên**, theo **hóa biểu**, không phân biệt quãng tám. Người chơi tự chọn cách xếp các nốt đó.
+Các con số chỉ **quãng tính từ nốt bè trầm lên**, theo **hóa biểu**. Người chơi tự chọn cách xếp các nốt đó.
 
 | Ký hiệu | Đầy đủ | Nghĩa | Ví dụ (Đô trưởng) |
 |---|---|---|---|
@@ -33,15 +33,15 @@ Q:1/2=60
 V:S clef=treble
 V:B clef=bass
 K:C
-[V:S] [Gc] [Gc] [Ac] [FB] | [Ec]4 |]
+[V:S] [EG] [Gc] [Ac] [FB] | [Ec]4 |]
 [V:B] C, "_6"E, F, "_7"G, | C,4 |]
 ```
 
-Đọc bè trầm: **Đô** (không số: Đô trưởng thể gốc) – **Mi 6** (Đô trưởng đảo 1) – **Fa** (Fa trưởng) – **Sol 7** (G7) – **Đô**. Khuông trên là một cách "giải" bằng hai bè: ở hợp âm G7, nốt 7 (Fa) đi xuống Mi và cảm âm Si đi lên Đô, đúng như [bài 21](/opus/nhac-ly/21-hoa-am-bon-be/). Người chơi có thể chọn cách xếp khác, miễn đúng các quãng.
+Đọc bè trầm: **Đô** (không số: Đô trưởng thể gốc) – **Mi 6** (Đô trưởng đảo 1) – **Fa** (Fa trưởng) – **Sol 7** (G7) – **Đô**. Khuông trên là một cách "giải" bằng hai bè: ở hợp âm G7, nốt 7 (Fa) đi xuống Mi và cảm âm Si đi lên Đô, đúng như [bài 21](/opus/nhac-ly/21-hoa-am-bon-be/). Người chơi có thể chọn cách xếp khác. Hai bè trên ở đây chỉ giữ nốt 3 và nốt 7 của G7 (Si, Fa); số 7 ngầm có cả nốt 5 (Rê).
 
 ## Ngày nay dùng ở đâu?
 
-- Các nghệ sĩ harpsichord, organ, lute trong nhóm nhạc Baroque vẫn ứng tác từ bè trầm số mỗi buổi diễn.
+- Nhiều nghệ sĩ harpsichord, organ, lute trong nhóm nhạc Baroque vẫn ứng tác hợp âm từ bè trầm số khi biểu diễn.
 - Các con số 6, 6/4, 6/5… vẫn dùng trong **phân tích hòa âm** hiện đại (bạn đã gặp ở [bài 11](/opus/nhac-ly/11-hop-am-bay/)).
 - Ký hiệu hợp âm kiểu C/E trong nhạc pop (xem [bài 27](/opus/nhac-ly/27-ky-hieu-hop-am/)) là "họ hàng" hiện đại của bè trầm số.
 
@@ -65,7 +65,7 @@ K:C
 + Quãng tính từ nốt bè trầm lên
 - Số ngón tay
 - Số phách
-> Theo hóa biểu, không phân biệt quãng tám.
+> Tính theo hóa biểu, từ nốt bè trầm lên.
 ? Số 6 dưới một nốt bass nghĩa là gì?
 + Hợp âm ba đảo 1
 - Hợp âm bảy
@@ -80,5 +80,9 @@ K:C
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- Open Music Theory: [Figured Bass and Roman Numerals with Figures](https://viva.pressbooks.pub/openmusictheory/chapter/figured-bass/).
+- Iowa State University, *Comprehensive Musicianship*: [5.4 Figured Bass Notation: Tutorial](https://iastate.pressbooks.pub/comprehensivemusicianship/chapter/5-4-figured-bass-notation-tutorial/).
+- *Harmony and Musicianship with Solfege*: [Figured Bass and Commercial Chord Symbols](https://pressbooks.pub/harmonyandmusicianshipwithsolfege/chapter/figured-bass-updated/).
+- Lumen Learning, *Music 101*: [Basso Continuo](https://courses.lumenlearning.com/vccs-tcc-mus121-1/chapter/basso-continuo-e).
+- *The Concise Oxford Dictionary of Music* (Encyclopedia.com): [basso continuo](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/basso-continuo), [figured bass](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/figured-bass).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

@@ -1,9 +1,9 @@
 ---
 title: 27. Ký hiệu hợp âm pop và jazz
-description: "Nhiều người đến với nhạc cổ điển từ guitar đệm hát hoặc piano pop, và đã quen những ký hiệu như Am, G7, Cmaj7, F/A. Bài này nối hai thế giới: mỗi ký hiệu pop…"
+description: "Guitar đệm hát và piano pop ghi hợp âm bằng những ký hiệu như Am, G7, Cmaj7, F/A. Bài này nối hai thế giới: mỗi ký hiệu pop tương ứng với khái niệm nào đã…"
 ---
 
-Nhiều người đến với nhạc cổ điển từ guitar đệm hát hoặc piano pop, và đã quen những ký hiệu như *Am*, *G7*, *Cmaj7*, *F/A*. Bài này nối hai thế giới: mỗi ký hiệu pop tương ứng với khái niệm nào đã học, và ngược lại.
+Guitar đệm hát và piano pop ghi hợp âm bằng những ký hiệu như *Am*, *G7*, *Cmaj7*, *F/A*. Bài này nối hai thế giới: mỗi ký hiệu pop tương ứng với khái niệm nào đã học, và ngược lại.
 
 ## Bảng tra nhanh (nốt gốc Đô)
 
@@ -46,15 +46,15 @@ Nhạc cổ điển dùng **số La Mã** (I, ii, V7…) để chỉ chức năn
 
 | Vòng | Pop/jazz | Cổ điển |
 |---|---|---|
-| **I – V – vi – IV** | Hàng nghìn bài hát pop từ thập niên 2000 | Gần giống nửa đầu vòng hợp âm *Canon* của Pachelbel (I – V – vi – iii – IV…) |
+| **I – V – vi – IV** | Vòng hợp âm quen thuộc của nhạc pop, thường lặp suốt cả bài | Ba hợp âm đầu giống vòng hợp âm *Canon* của Pachelbel (I – V – vi – iii – IV…) |
 | **ii – V – I** | Nền tảng của hòa âm jazz | Kết trọn có tiền át (xem [bài 12](/opus/nhac-ly/12-hoa-am-chuc-nang/)) |
-| **Blues 12 ô nhịp** | I I I I – IV IV I I – V IV I I | Một dạng biến tấu trên vòng hợp âm cố định, giống tinh thần passacaglia |
-| **♭VI – ♭VII – I** | Kết hoành tráng trong nhạc rock, nhạc phim | Hòa âm hỗn hợp (xem [bài 23](/opus/nhac-ly/23-hop-am-muon/)) |
+| **Blues 12 ô nhịp** | I I I I – IV IV I I – V IV I I | Một vòng hợp âm cố định lặp lại cho mỗi khổ thơ, cùng ý tưởng lặp một khuôn cố định như passacaglia |
+| **♭VI – ♭VII – I** | Kết hoành tráng trong nhạc phim (cadence Aeolian, còn gọi là *Mario cadence*) | Hòa âm hỗn hợp (xem [bài 23](/opus/nhac-ly/23-hop-am-muon/)) |
 
 ## Khác biệt về cách nghĩ
 
 - Ký hiệu pop cho biết **hợp âm**, người chơi tự quyết định cách xếp nốt (giống [bè trầm số](/opus/nhac-ly/25-be-tram-so/) thời Baroque!). Bản nhạc cổ điển thường ghi **từng nốt** của từng bè.
-- Jazz coi hợp âm bảy, chín, mười một là **bình thường** và ổn định; nhạc Cổ điển coi hợp âm bảy là **căng thẳng cần giải quyết**.
+- Jazz dùng hợp âm bảy, chín, mười một một cách **thường xuyên**, và hợp âm bảy trưởng hay thứ có thể thay cho hợp âm ba; nhạc Cổ điển coi nốt bảy là một **nốt nghịch tai cần giải quyết**.
 
 ## Bài tập
 
@@ -94,5 +94,12 @@ Nhạc cổ điển dùng **số La Mã** (I, ii, V7…) để chỉ chức năn
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- Open Music Theory: [Chord Symbols](https://viva.pressbooks.pub/openmusictheory/chapter/chord-symbols/); [Figured Bass and Roman Numerals with Figures](https://viva.pressbooks.pub/openmusictheory/chapter/figured-bass/); [4-Chord Schemas](https://viva.pressbooks.pub/openmusictheory/chapter/4-chord-schemas/); [Blues Harmony](https://viva.pressbooks.pub/openmusictheory/chapter/blues-harmony/); [Modal Mixture](https://viva.pressbooks.pub/openmusictheory/chapter/modal-mixture/); [Popular Music, chương về mode trong nhạc pop](https://pressbooks.nebraska.edu/openmusictheory/?p=558) (bản đặt tại Đại học Nebraska); [Altered and Extended Chords](https://viva.pressbooks.pub/openmusictheory/chapter/altered-and-extended-dominant-chords/).
+- Andre Mount, *Fundamentals, Function, and Form*: [26. Other Diatonic Sequences](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/26-other-diatonic-sequences/).
+- Robert Hutchinson, *Music Theory for the 21st-Century Classroom*: [12.4 The 12-Bar Blues](https://musictheory.pugetsound.edu/mt21c/TwelveBarBlues.html).
+- Roger Williams University, *Western Harmonic Practice I*: [Harmonic Dissonance II: The Seventh Chord](https://rwu.pressbooks.pub/musictheory/chapter/harmonic-dissonance-ii-the-seventh-chord/).
+- Iowa State University, *Comprehensive Musicianship*: [5.4 Figured Bass Notation: Tutorial](https://iastate.pressbooks.pub/comprehensivemusicianship/chapter/5-4-figured-bass-notation-tutorial/).
+- The Open University, *Discovering music: the blues*: [12.3 12-bar blues](https://www.open.edu/openlearn/history-the-arts/discovering-music-the-blues/content-section-12.3).
+- Trevor De Clercq, "[The Nashville Number System: A Framework for Teaching Harmony in Popular Music](https://digitalcollections.lipscomb.edu/jmtp/vol33/iss1/1/)", *Journal of Music Theory Pedagogy* 33 (2019).
+- *The Concise Oxford Dictionary of Music* (Encyclopedia.com): [chaconne](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/chaconne).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
