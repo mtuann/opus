@@ -28,7 +28,7 @@ import {
 	tenPhim,
 	tenViet,
 } from '../src/scripts/nhac-ly.js';
-import { khoangPhim, soPhimTrang, veBanPhim } from '../src/scripts/ve.js';
+import { DIEU_THUC, khoangPhim, soPhimTrang, veBanPhim, veChucNang, veDieuThuc } from '../src/scripts/ve.js';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DOCS = path.join(ROOT, 'src/content/docs');
@@ -344,13 +344,38 @@ test('lưu kỹ năng như site cũ (skill của progress.js): số lần, số 
 	}
 });
 
-test('bản build: không trang nào còn ô "chưa chuyển" của bàn phím, hình hóa biểu, vòng quãng năm, luyện hóa biểu (cả trang thử bài 10)', (t) => {
+test('bản build: không trang nào còn ô "chưa chuyển" của bàn phím, hình hóa biểu, vòng quãng năm, luyện hóa biểu, vòng chức năng, bảy điệu thức (cả trang thử bài 10)', (t) => {
 	const DIST = path.join(ROOT, 'dist');
 	if (!fs.existsSync(path.join(DIST, 'index.html'))) return t.skip('chưa có dist/: chạy npm run build (hay build:xem) trước');
 	const con = [];
 	for (const f of fs.readdirSync(DIST, { recursive: true }).filter((x) => x.endsWith('.html'))) {
 		const html = fs.readFileSync(path.join(DIST, f), 'utf8');
-		for (const m of html.matchAll(/<p class="oz-chua-co"[^>]*>(?:Hình|Công cụ) "(piano|keysigs|circle|keysig-quiz)"/g)) con.push(`${f}: ${m[1]}`);
+		for (const m of html.matchAll(/<p class="oz-chua-co"[^>]*>(?:Hình|Công cụ) "(piano|keysigs|circle|keysig-quiz|functions|modes)"/g)) con.push(`${f}: ${m[1]}`);
 	}
 	assert.deepEqual(con, []);
+});
+
+test('vòng chức năng (bài 12): ba ô Chủ, Hạ át, Át với các hợp âm, ba mũi tên có chữ; tên cho máy đọc màn hình như hình cũ', () => {
+	const svg = veChucNang();
+	const chu = [...svg.matchAll(/<text[^>]*>([^<]*)<\/text>/g)].map((m) => m[1]);
+	assert.deepEqual(chu.sort(), ['CHỦ', 'HẠ ÁT', 'I · vi', 'IV · ii', 'V · V7 · vii°', 'chuẩn bị', 'rời nhà', 'về nhà', 'ÁT'].sort());
+	assert.match(svg, /role="img" aria-label="Vòng chức năng hòa âm: Chủ \(I, vi\) rời nhà sang Hạ át \(IV, ii\), chuẩn bị cho Át \(V, V7, vii°\), rồi về nhà ở Chủ"/);
+	assert.equal((svg.match(/marker-end=/g) ?? []).length, 3);
+	assert.doesNotMatch(svg, /fill="#|font-family/, 'màu và phông theo CSS của site');
+});
+
+test('bảy điệu thức (bài 16): tám phím trắng Đô–Đô, năm phím đen đúng chỗ, mỗi điệu thức ghi dưới phím bắt đầu của nó', () => {
+	const svg = veDieuThuc();
+	const trang = [...svg.matchAll(/<rect x="([\d.]+)" y="1" width="54"[^>]*class="([^"]*)"\/><text[^>]*>([^<]*)</g)];
+	assert.deepEqual(trang.map((m) => m[3]), ['Đô', 'Rê', 'Mi', 'Fa', 'Sol', 'La', 'Si', 'Đô']);
+	assert.ok(trang.slice(0, 7).every((m, i) => m[2].includes(`oz-dt-${i}`)) && !/oz-dt-\d/.test(trang[7][2]), 'bảy phím đầu tô màu, Đô trên không tô');
+	// phím đen nằm giữa Đô–Rê, Rê–Mi, Fa–Sol, Sol–La, La–Si: tâm ở ranh giới hai phím trắng
+	const den = [...svg.matchAll(/<rect x="([\d.]+)" y="1" width="30"/g)].map((m) => (Number(m[1]) + 15 - 1) / 54);
+	assert.deepEqual(den, [1, 2, 4, 5, 6]);
+	const ten = [...svg.matchAll(/<line x1="([\d.]+)"[^>]*\/><text[^>]*class="oz-dt-ten">([^<]*)</g)].map((m) => [m[2], (Number(m[1]) - 28) / 54]);
+	assert.deepEqual(ten, DIEU_THUC.map((t, i) => [t, i]));
+	assert.ok(
+		svg.includes('aria-label="Bảy điệu thức trên phím trắng: Ionian bắt đầu từ Đô, Dorian từ Rê, Phrygian từ Mi, Lydian từ Fa, Mixolydian từ Sol, Aeolian từ La, Locrian từ Si"'),
+		'tên cho máy đọc màn hình như hình cũ',
+	);
 });

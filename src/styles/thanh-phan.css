@@ -1203,6 +1203,74 @@ html.oz-stand-open .main-pane {
 	stroke: var(--sl-color-gray-5);
 }
 
+/* ---------- Vòng chức năng hòa âm, bảy điệu thức (::hinh functions, modes; veChucNang, veDieuThuc trong src/scripts/ve.js) ----------
+   Nền ô và phím tô màu sáng ở cả hai chế độ, nên chữ trên chúng luôn tối (như sơ đồ cấu trúc); chữ ngoài ô theo màu chữ. */
+.oz-chuc-nang,
+.oz-dieu-thuc {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.oz-chuc-nang {
+	max-width: 30rem;
+}
+.oz-dieu-thuc {
+	max-width: 38rem;
+}
+.oz-chuc-nang text,
+.oz-dieu-thuc text {
+	text-anchor: middle;
+}
+.oz-chuc-nang g text {
+	font-size: 10px;
+	fill: #1b1b1b;
+}
+.oz-chuc-nang g rect {
+	stroke: #1b1b1b;
+	stroke-opacity: 0.3;
+}
+.oz-cn-chu rect { fill: #f3e3b8; }
+.oz-cn-ha-at rect { fill: #8cc49a; }
+.oz-cn-at rect { fill: #e98f7a; }
+.oz-cn-mui {
+	stroke: currentColor;
+	stroke-width: 1.6;
+}
+.oz-cn-dau {
+	fill: currentColor;
+}
+.oz-chuc-nang .oz-cn-mui-chu {
+	font-size: 9px;
+	fill: currentColor;
+}
+.oz-dt-phim {
+	fill: #fff;
+	stroke: #444;
+}
+.oz-dt-0 { fill: #f3e3b8; }
+.oz-dt-1 { fill: #7aa6d6; }
+.oz-dt-2 { fill: #c9a0dc; }
+.oz-dt-3 { fill: #8cc49a; }
+.oz-dt-4 { fill: #e0b45e; }
+.oz-dt-5 { fill: #e98f7a; }
+.oz-dt-6 { fill: #b0b0b0; }
+.oz-dt-den {
+	fill: #222;
+}
+.oz-dieu-thuc .oz-dt-not {
+	font-size: 10px;
+	fill: #1b1b1b;
+}
+.oz-dt-ke {
+	stroke: currentColor;
+	stroke-opacity: 0.4;
+}
+.oz-dieu-thuc .oz-dt-ten {
+	font-size: 10px;
+	font-weight: 600;
+	fill: currentColor;
+}
+
 /* ---------- Vòng quãng năm bấm được (::cong-cu{ten="circle"}; src/scripts/vong-quang-nam.js) ---------- */
 /* Mỗi ô hình quạt: ở 360 px, khung hình còn khoảng 290 px, ô nhỏ nhất (vòng trong) vẫn rộng và cao từ 44 px */
 .oz-vong-luoi {

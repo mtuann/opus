@@ -9,7 +9,7 @@ import { DUONG_GOC, trangCuaDiaChi, trangTrongBan } from '../ban-build.mjs';
 import { chiDaKhoa, duLieuDaKiem } from '../du-lieu.mjs';
 import { docKhoa, truongDaKhoa } from '../khoa.mjs';
 import { GIONG, midiCua, soDauGon, tenVietCua } from '../scripts/nhac-ly.js';
-import { khoangPhim, thongTinGiong, veBanPhim, veHoaBieu, veVongChon, veVongQuangNam } from '../scripts/ve.js';
+import { khoangPhim, thongTinGiong, veBanPhim, veChucNang, veDieuThuc, veHoaBieu, veVongChon, veVongQuangNam } from '../scripts/ve.js';
 import { CAU_HOI, nutTraLoi } from '../scripts/luyen-hoa-bieu.js';
 
 export const esc = (s) =>
@@ -363,11 +363,21 @@ export function hinhHoaBieu() {
 export const hinhVongQuangNam = () =>
 	`<figure class="oz-figure not-content" data-sinh>${veVongQuangNam()}<figcaption>Theo chiều kim đồng hồ: thêm một dấu thăng; ngược chiều: thêm một dấu giáng.</figcaption></figure>`;
 
+/** Vòng chức năng hòa âm (::hinh{ten="functions"}, bài 12); data-sinh như trên. */
+export const hinhChucNang = () =>
+	`<figure class="oz-figure not-content" data-sinh>${veChucNang()}<figcaption>Câu chuyện cơ bản của hòa âm: ổn định → rời đi → căng thẳng → trở về.</figcaption></figure>`;
+
+/** Bảy điệu thức trên phím trắng (::hinh{ten="modes"}, bài 16); data-sinh như trên. */
+export const hinhDieuThuc = () =>
+	`<figure class="oz-figure not-content" data-sinh>${veDieuThuc()}<figcaption>Mỗi điệu thức là gam phím trắng bắt đầu từ một nốt khác. Phím tô màu là nốt bắt đầu.</figcaption></figure>`;
+
 /** Hình đã có thành phần: tên (như vùng <!-- fig:tên --> của site cũ, hay hình mới) -> hàm dựng HTML (trang đang dựng). */
 const HINH = {
 	'lo-trinh': (trang) => hinhLoTrinh(duLieuCho(trang).capDo),
 	keysigs: () => hinhHoaBieu(),
 	circle: () => hinhVongQuangNam(),
+	functions: () => hinhChucNang(),
+	modes: () => hinhDieuThuc(),
 };
 
 /** ::hinh{ten="…"}: hình minh họa không thuộc bản ghi tác phẩm (vùng <!-- fig:… --> của trang cũ, trừ hình cấu trúc). */

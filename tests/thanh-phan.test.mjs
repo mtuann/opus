@@ -194,9 +194,9 @@ test('huy hiệu "Đã kiểm định": chỉ khi trang có trong khoa.json; ng�
 });
 
 test('::hinh và ::cong-cu chưa có thành phần: build vẫn chạy, hiện ô "chưa chuyển" (kiểm thử chặn ô này trong bản thật)', () => {
-	// tên của hình và công cụ chưa lô nào làm (site cũ có: fig:functions của bài 12, khối oz-metronome)
-	const html = dung('::hinh{ten="functions"}\n\n::cong-cu{ten="metronome" bpm="60"}', 'nhac-ly/12-hoa-am-chuc-nang');
-	assert.match(html, /<p class="oz-chua-co" data-pagefind-ignore>Hình "functions" chưa chuyển sang site mới\.<\/p>/);
+	// tên của hình và công cụ chưa lô nào làm (site cũ có: fig:counterpoint, khối oz-metronome)
+	const html = dung('::hinh{ten="counterpoint"}\n\n::cong-cu{ten="metronome" bpm="60"}', 'nhac-ly/12-hoa-am-chuc-nang');
+	assert.match(html, /<p class="oz-chua-co" data-pagefind-ignore>Hình "counterpoint" chưa chuyển sang site mới\.<\/p>/);
 	assert.match(html, /<p class="oz-chua-co" data-pagefind-ignore>Công cụ "metronome" chưa chuyển sang site mới\.<\/p>/);
 });
 

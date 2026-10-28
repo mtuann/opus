@@ -276,3 +276,61 @@ export function thongTinGiong({ giong, thu }) {
 	);
 	return p.join('');
 }
+
+/**
+ * Vòng chức năng hòa âm (::hinh{ten="functions"}, bài 12; như vùng <!-- fig:functions --> cũ): ba ô Chủ, Hạ át, Át và
+ * ba mũi tên rời nhà, chuẩn bị, về nhà. Chỉ dựng lúc build. Màu ô theo lớp (src/styles/thanh-phan.css), chữ trong ô
+ * luôn tối vì nền ô sáng ở cả hai chế độ.
+ */
+export function veChucNang() {
+	const o = [
+		['oz-cn-chu', 130, 10, 'CHỦ', 'I · vi'],
+		['oz-cn-ha-at', 250, 120, 'HẠ ÁT', 'IV · ii'],
+		['oz-cn-at', 10, 120, 'ÁT', 'V · V7 · vii°'],
+	];
+	const ten = (x, y, s, anchor) => `<text x="${x}" y="${y}" text-anchor="${anchor}" class="oz-cn-mui-chu">${s}</text>`;
+	const mui = [
+		[215, 48, 275, 112, ten(268, 70, 'rời nhà', 'start')],
+		[245, 155, 110, 155, ten(177, 172, 'chuẩn bị', 'middle')],
+		[70, 112, 130, 48, ten(72, 70, 'về nhà', 'end')],
+	].map(([x1, y1, x2, y2, chu]) => `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" class="oz-cn-mui" marker-end="url(#oz-cn-dau)"/>${chu}`);
+	const hop = o.map(
+		([lop, x, y, a, b]) =>
+			`<g class="${lop}"><rect x="${x}" y="${y}" width="80" height="40" rx="10"/>` +
+			`<text x="${x + 40}" y="${y + 17}" font-weight="700">${a}</text><text x="${x + 40}" y="${y + 32}" font-size="9">${b}</text></g>`,
+	);
+	return (
+		`<svg class="oz-fig oz-chuc-nang" viewBox="0 0 340 182" role="img" ` +
+		`aria-label="Vòng chức năng hòa âm: Chủ (I, vi) rời nhà sang Hạ át (IV, ii), chuẩn bị cho Át (V, V7, vii°), rồi về nhà ở Chủ">` +
+		`<defs><marker id="oz-cn-dau" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">` +
+		`<path d="M0 0L10 5L0 10z" class="oz-cn-dau"/></marker></defs>${mui.join('')}${hop.join('')}</svg>`
+	);
+}
+
+/**
+ * Bảy điệu thức trên phím trắng (::hinh{ten="modes"}, bài 16; như vùng <!-- fig:modes --> cũ): tám phím trắng Đô–Đô,
+ * mỗi phím từ Đô đến Si tô một màu và ghi tên điệu thức bắt đầu ở đó, nhãn so le hai hàng cho khỏi chồng nhau.
+ */
+export const DIEU_THUC = ['Ionian', 'Dorian', 'Phrygian', 'Lydian', 'Mixolydian', 'Aeolian', 'Locrian'];
+export function veDieuThuc() {
+	const w = 54;
+	const p = [];
+	for (let i = 0; i < 8; i++) {
+		const x = 1 + i * w;
+		p.push(
+			`<rect x="${x}" y="1" width="${w}" height="100" rx="2" class="oz-dt-phim${i < 7 ? ` oz-dt-${i}` : ''}"/>` +
+				`<text x="${x + w / 2}" y="92" class="oz-dt-not">${SOLFEGE[i % 7]}</text>`,
+		);
+	}
+	// phím đen sau Đô, Rê, Fa, Sol, La
+	for (const i of [0, 1, 3, 4, 5]) p.push(`<rect x="${1 + (i + 1) * w - 15}" y="1" width="30" height="60" rx="1.5" class="oz-dt-den"/>`);
+	DIEU_THUC.forEach((ten, i) => {
+		const x = 1 + i * w + w / 2;
+		const y = i % 2 ? 124 : 110;
+		p.push(`<line x1="${x}" y1="102" x2="${x}" y2="${y}" class="oz-dt-ke"/><text x="${x}" y="${y + 10}" class="oz-dt-ten">${ten}</text>`);
+	});
+	return (
+		`<svg class="oz-fig oz-dieu-thuc" viewBox="0 0 434 142" role="img" ` +
+		`aria-label="Bảy điệu thức trên phím trắng: ${DIEU_THUC.map((t, i) => `${t} ${i ? '' : 'bắt đầu '}từ ${SOLFEGE[i]}`).join(', ')}">${p.join('')}</svg>`
+	);
+}
