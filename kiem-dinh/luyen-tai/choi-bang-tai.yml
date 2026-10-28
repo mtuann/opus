@@ -1,0 +1,432 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa luyen-tai/choi-bang-tai
+trang: src/content/docs/luyen-tai/choi-bang-tai.md
+nguon_cu: ../opus-zero/docs/luyen-tai/choi-bang-tai.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-28
+    nhanh: moi/d3-l6
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Sonnet 5.5 (D3-L6 lượt 1)"
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: "Trang chơi theo tai (tầng lõi). Nguồn: OMT Major Scales, Collections, Intervals, Seventh Chords; COD cadence; Wikipedia (Ah! vous dirai-je Maman, Hänschen klein, Frère Jacques, Amazing Grace, Au clair de la lune, Greensleeves, Dvořák 9, Gordon music learning theory; bậc 3); Trần Thanh Hà (thang năm âm); UCL IOE và nhà sách Canterbury (Lucy Green, Hear, Listen, Play!, OUP 2014). Bản nhạc: ba khuông soạn cho trang, kiểm bằng cách đọc nốt, nhịp, khóa, số ngón và hợp âm với bản của site (10-bai-dau-tien). Câu về site (bảng 'Nốt đầu', bước đệm, Hát lại, Chép giai điệu, Trí nhớ thính giác, vòng kết) kiểm trên các bản cũ ở ../opus-zero/docs/; hầu hết trang đích chưa chuyển (piano/*, luyen-tap/*, lich-su/*, nhan-dien/*). Câu giữ cho lô trước: Ode to Joy bắt đầu ở bậc 3 và 'ba nốt trầm Đô, Fa, Sol ... đủ cho mọi giai điệu trong bảng trên' (lo-trinh-choi trích): cả hai còn đúng theo bè trầm của site. Không kiểm được: nốt đầu của Largo 'Going Home' bản gốc (chỉ khớp bản Đô trưởng của site). Giai điệu thật của Hänschen klein, Frère Jacques, Amazing Grace, Ah vous dirai-je chỉ kiểm bằng Wikipedia (bậc 3), không có bản nhạc mở. Sửa trang: bỏ câu 'Đó là nền của chơi theo tai ...'; viết lại câu về dân ca Việt Nam và thang năm âm; thêm năm 2007 cho sách Gordon; thêm Greensleeves vào danh mục nguồn giai điệu. Thuật ngữ chưa có trong src/data/thuat-ngu.yml: chơi theo tai (playing by ear), audiation, bậc (scale degree), dịch giọng (transposition) nếu chưa có, hợp âm khối, bass Alberti, hình đệm, thế tay năm ngón, nốt lấy đà (pickup), gam ngũ cung."
+nguon:
+  - id: omt-major
+    bac: 2
+    ten: "Open Music Theory, Major Scales, Scale Degrees, and Key Signatures"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/major-scales/"
+  - id: wiki-clair
+    bac: 3
+    ten: "Wikipedia, Au clair de la lune"
+    link: "https://en.wikipedia.org/wiki/Au_clair_de_la_lune"
+  - id: wiki-frere
+    bac: 3
+    ten: "Wikipedia, Frère Jacques"
+    link: "https://en.wikipedia.org/wiki/Fr%C3%A8re_Jacques"
+  - id: wiki-ah-vous
+    bac: 3
+    ten: "Wikipedia, Ah! vous dirai-je, Maman"
+    link: "https://en.wikipedia.org/wiki/Ah!_vous_dirai-je,_Maman"
+  - id: omt-intervals
+    bac: 2
+    ten: "Open Music Theory, Intervals"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/intervals/"
+  - id: wiki-hanschen
+    bac: 3
+    ten: "Wikipedia, Hänschen klein"
+    link: "https://en.wikipedia.org/wiki/H%C3%A4nschen_klein"
+  - id: wiki-amazing
+    bac: 3
+    ten: "Wikipedia, Amazing Grace"
+    link: "https://en.wikipedia.org/wiki/Amazing_Grace"
+  - id: wiki-dvorak9
+    bac: 3
+    ten: "Wikipedia, Symphony No. 9 (Dvořák)"
+    link: "https://en.wikipedia.org/wiki/Symphony_No._9_(Dvo%C5%99%C3%A1k)"
+  - id: wiki-green
+    bac: 3
+    ten: "Wikipedia, Greensleeves"
+    link: "https://en.wikipedia.org/wiki/Greensleeves"
+  - id: tran-thanh-ha
+    bac: 2
+    ten: "Trần Thanh Hà, Thang năm âm người Việt dưới góc nhìn văn hóa học, Tạp chí Khoa học Xã hội, số 1 (173), 2013, tr. 43-50"
+    link: "https://vjol.info.vn/khxh/article/download/15034/13490/"
+  - id: omt-collections
+    bac: 2
+    ten: "Open Music Theory, Collections (gam ngũ cung, gam toàn cung)"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/collections/"
+  - id: cod-cadence
+    bac: 2
+    ten: "The Concise Oxford Dictionary of Music, mục cadence (qua encyclopedia.com)"
+    link: "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/cadence"
+  - id: omt-species
+    bac: 2
+    ten: "Open Music Theory, Species Counterpoint (mục về quãng nghịch)"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/species-counterpoint/"
+  - id: green
+    bac: 2
+    ten: "Lucy Green, Hear, Listen, Play! (Oxford University Press, 2014), qua trang của UCL Institute of Education và nhà sách Canterbury"
+    link: "https://www.ucl.ac.uk/ioe/people/academic-staff/lucy-green"
+  - id: omt-seventh
+    bac: 2
+    ten: "Open Music Theory, Seventh Chords"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/seventh-chords/"
+  - id: gordon
+    bac: 2
+    ten: "Edwin E. Gordon, Learning Sequences in Music: A Contemporary Music Learning Theory (GIA Publications, 2007), qua Wikipedia, Gordon music learning theory"
+    link: "https://en.wikipedia.org/wiki/Gordon_music_learning_theory"
+  - id: omt-inversion
+    bac: 2
+    ten: "Open Music Theory, Inversion"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/inversion/"
+nhan_dinh:
+  - id: n1
+    cau: "Chơi theo tai là tìm lại trên phím đàn một giai điệu bạn hát được, không cần bản nhạc, rồi đệm cho nó bằng vài hợp âm."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n2
+    cau: "Bài bắt đầu bằng những giai điệu đã chơi ở 10 bài đầu tiên."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "piano/10-bai-dau-tien.md (bản cũ) có Au clair de la lune, Ah vous dirai-je maman, Ode to Joy, Hänschen klein, Frère Jacques, Amazing Grace, Greensleeves, Largo. Trang chưa chuyển."
+  - id: n3
+    cau: "Điều kiện trước: thế tay năm ngón Đô, Sol, Fa; vòng kết I–IV–I–V7–I; đó là khoảng chặng 2 của lộ trình piano."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "piano/nam-ngon.md và piano/hop-am-rai.md (cũ; neo #hoa-am-ban-phim-vong-ket-iiviv7i có); piano/lo-trinh.md (mới) hàng 'Tai' chặng 2 nhắc Chơi theo tai, I, IV, V, Sol/Fa trưởng. Hai trang đầu chưa chuyển."
+  - id: n4
+    cau: "Công cụ dùng trong bài: Hát lại, Chép giai điệu và bàn phím ngay trên trang."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "luyen-tap/hat-lai.md và chep-giai-dieu.md (cũ) có; chưa chuyển. Bàn phím ngay trên trang là thành phần piano của lô này."
+  - id: n5
+    cau: "Mục 1 (các bước): hát trước; định giọng; xác định nốt đầu so với chủ âm; tìm từng bước; nốt sai cho biết hướng sửa."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n6
+    cau: "Các giai điệu trong bảng đều ở Đô trưởng, nên chủ âm là Đô."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Bản cũ piano/10-bai-dau-tien.md: các bài 1–6 và 8 ở K:C. Greensleeves (bài 7) ở K:Am, đã nêu riêng trong trang."
+  - id: n7
+    cau: "Chủ âm là nốt 'nhà' của giọng; Ode to Joy bắt đầu ở Mi, đếm ngược 3 – 2 – 1 từ Mi xuống Đô nên Mi là bậc 3."
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+    ket_qua: dung
+    ghi_chu: "OMT Major Scales: bậc 1 là chủ âm; Đô Rê Mi = 1, 2, 3."
+  - id: n8
+    cau: "Ode to Joy (bài 3) bắt đầu ở Mi."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Bản cũ 10-bai-dau-tien: [V:RH] !3!E E !4!F !5!G | ...; câu đầu Mi Mi Fa Sol Sol Fa Mi Rê Đô Đô Rê Mi (giai điệu quen: Mi Mi Fa Sol)."
+  - id: n9
+    cau: "Ode to Joy gần như chỉ đi liền bậc, nốt đầu lặp lại."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Bản cũ bài 3: E E F G | G F E D | C C D E | E. D D, toàn liền bậc."
+  - id: n10
+    cau: "Au clair de la lune (bài 1) bắt đầu ở Đô: ba nốt đứng yên, rồi đi lên liền bậc."
+    loai: so-lieu
+    nguon:
+      - wiki-clair
+    ket_qua: dung
+    ghi_chu: "Giai điệu thật: C C C D E, D, C D E D C. Bản của site: bài 1 trong 10-bai-dau-tien (ve-site)."
+  - id: n11
+    cau: "Frère Jacques (bài 5) bắt đầu ở Đô: Đô – Rê – Mi – Đô; câu cuối nhảy xuống Sol rồi lên lại."
+    loai: so-lieu
+    nguon:
+      - wiki-frere
+    ket_qua: dung
+    ghi_chu: "Giai điệu thật: C D E C | C D E C | E F G | ... | C G C. Dòng cuối Đô–Sol–Đô."
+  - id: n12
+    cau: "Ah! vous dirai-je, maman (bài 2) bắt đầu ở Đô; có bước nhảy quãng 5 lên Sol ngay trong ô đầu."
+    loai: so-lieu
+    nguon:
+      - wiki-ah-vous
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "Giai điệu thật: C C G G A A G. Đô–Sol = 7 nửa cung = 5 đúng (OMT Intervals)."
+  - id: n13
+    cau: "Hänschen klein (bài 4) bắt đầu ở Sol; nhảy quãng 3 xuống Mi."
+    loai: so-lieu
+    nguon:
+      - wiki-hanschen
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "Giai điệu thật: G E E, F D D. Sol–Mi = 3 nửa cung = 3 thứ (OMT Intervals)."
+  - id: n14
+    cau: "Amazing Grace (bài 6) bắt đầu ở Sol, thấp hơn Đô, nhịp lấy đà; nhảy quãng 4 lên Đô."
+    loai: so-lieu
+    nguon:
+      - wiki-amazing
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "Giai điệu thật mở bằng nốt lấy đà bậc 5 rồi nhảy lên bậc 1; Sol–Đô = 5 nửa cung = 4 đúng."
+  - id: n15
+    cau: "Largo 'Going Home' (bài 8) bắt đầu ở Mi, nhảy quãng 3 lên Sol; nốt dài, nhịp chậm."
+    loai: so-lieu
+    nguon:
+      - wiki-dvorak9
+    ket_qua: null
+    ghi_chu: "chưa chắc: Mi–Sol chỉ kiểm được với bản Đô trưởng của chính site (10-bai-dau-tien bài 8); bản gốc ở Rê♭ trưởng, hai nốt đầu của chủ đề gốc chưa kiểm trên bản nhạc mở."
+  - id: n16
+    cau: "Mỗi dòng 'Nốt đầu' trong bảng khớp với bài tương ứng ở 10 bài đầu tiên."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Bản cũ 10-bai-dau-tien: Ode E; Au clair C; Frère C; Ah vous C; Hänschen G; Amazing Grace G thấp (lấy đà) rồi C; Largo E rồi G."
+  - id: n17
+    cau: "Greensleeves (bài 7) ở giọng La thứ, chủ âm La, gần cuối câu có Sol♯."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Bản cũ bài 7: K:Am, có ^G ở ô 3 và ô 4; ^G ở dòng cuối. Greensleeves là dân ca Anh (Wikipedia Greensleeves); giọng của site là của bản chuyển ấy."
+  - id: n18
+    cau: "Greensleeves là dân ca Anh, đã có một ballad cùng tên đăng ký ở London năm 1580."
+    loai: lich-su
+    nguon:
+      - wiki-green
+    ket_qua: dung
+    ghi_chu: "Wikipedia Greensleeves (bậc 3): traditional English folk song; broadside ballad đăng ký ở London tháng 9/1580."
+  - id: n19
+    cau: "Nhiều bài dân ca Việt Nam xây trên thang năm âm, cùng cấu trúc khoảng cách với gam ngũ cung."
+    loai: lich-su
+    nguon:
+      - tran-thanh-ha
+      - omt-collections
+    ket_qua: da-sua
+    ghi_chu: "Trần Thanh Hà: 'phổ biến là thang 5 âm'; OMT Collections: pentatonic năm nốt, không nửa cung. Cũ: 'chỉ dùng năm nốt của gam ngũ cung' (không nguồn)."
+  - id: n20
+    cau: "Độ cao các âm trong thang năm âm của người Việt không cố định như trên phím đàn, nên giọng hát không chơi trọn được trên phím."
+    loai: lich-su
+    nguon:
+      - tran-thanh-ha
+    ket_qua: da-sua
+    ghi_chu: "Trần Thanh Hà: 'độ cao các âm ... không được xác định'. Cũ: 'những chỗ luyến láy, nhấn nhá của giọng hát thì không chơi trọn được'."
+  - id: n21
+    cau: "Liên kết: lịch sử nhạc truyền thống Việt Nam, bài 16 gam ngũ cung."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "lich-su/nhac-truyen-thong-viet-nam chưa chuyển (bản cũ có); nhac-ly/16-dieu-thuc-ngu-cung có neo #gam-ngu-cung."
+  - id: n22
+    cau: "Mục 2 (các bước đệm): tìm chỗ đổi theo phách mạnh và nốt dài; giữ Đô và nghe chỗ chói; thử Sol rồi Fa; kiểm tra bằng bè trầm; thay bằng hình đệm."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n23
+    cau: "Ở Đô trưởng, ba nốt trầm Đô, Fa, Sol (của I, IV, V) đủ cho mọi giai điệu trong bảng trên."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Đối chiếu bè trầm tay trái của chính các bài trong bản cũ 10-bai-dau-tien: bài 1–6 và 8 chỉ dùng C, F, G (bài 8 có thể dùng thêm âm khác, bản site dùng C, F, G). Greensleeves ở La thứ, không thuộc câu này ('bảng trên' là các giai điệu Đô trưởng)."
+  - id: n24
+    cau: "Câu dừng lửng thường kết ở V; câu về nhà thường đi V rồi I."
+    loai: quy-tac
+    nguon:
+      - cod-cadence
+    ket_qua: dung
+    ghi_chu: "COD cadence: kết nửa ở V, kết trọn V–I."
+  - id: n25
+    cau: "Bốn kiểu hình đệm: hợp âm khối, nốt trầm và hợp âm, bass Alberti (và một kiểu nữa); Đệm cho một giai điệu."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Bản cũ piano/hop-am-rai.md, mục 'Bốn kiểu hình đệm' (khối, trầm và hợp âm valse, Alberti, rải rộng); neo #bon-kieu-hinh-em có. piano/hoa-am/dem-giai-dieu chưa chuyển."
+  - id: n26
+    cau: "Ví dụ 1 (soạn cho trang): ở ô 3 của lần đầu, Fa của giai điệu cọ vào Mi của hợp âm Đô, tai nghe ra ngay."
+    loai: so-lieu
+    nguon:
+      - omt-intervals
+      - omt-species
+    ket_qua: dung
+    ghi_chu: "Fa–Mi là quãng 2 thứ, một quãng nghịch (OMT Intervals, Species Counterpoint). Khuông nhạc: xem khuong_nhac khối 1."
+  - id: n27
+    cau: "Đến lượt bạn: đệm Amazing Grace bằng ba nốt trầm Đô, Fa, Sol mỗi ô một nốt, rồi so với tay trái bài 6."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n28
+    cau: "Mục 3 (hát, chơi lại): Hát lại phát một nốt hoặc một quãng, bạn hát lại, kim cho biết cao hay thấp."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Bản cũ luyen-tap/hat-lai.md: phát một nốt hay một quãng, kim chỉ cao thấp, ±50 cent."
+  - id: n29
+    cau: "Chép giai điệu: mọi câu ở Đô trưởng, bắt đầu từ Đô4; cấp 1 gồm bốn nốt đi liền bậc."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Bản cũ luyen-tap/chep-giai-dieu.md và dictation.js: mọi câu K:C bắt đầu C4; cấp 1 = 4 nốt bước liền; chuyển cấp khi chép đúng 4 trên 5 câu."
+  - id: n30
+    cau: "Nhiều nhạc công nhạc phổ thông học nghề bằng cách chơi lại theo bản thu; Lucy Green đã đưa cách học ấy vào giờ học nhạc cụ, kể cả giờ học riêng một thầy một trò."
+    loai: lich-su
+    nguon:
+      - green
+    ket_qua: dung
+    ghi_chu: "UCL IOE: Green nghiên cứu cách nhạc công nhạc phổ thông sao chép bản thu bằng tai; nhà sách Canterbury (OUP, 2014): Hear, Listen, Play! 'first tackles one-to-one specialist instrumental lessons'."
+  - id: n31
+    cau: "Giai điệu là chuỗi bậc: câu đầu Ode to Joy là 3 3 4 5 | 5 4 3 2 | 1 1 2 3 | 3 2 2 ở bất kỳ giọng nào."
+    loai: so-lieu
+    nguon:
+      - omt-major
+    ket_qua: dung
+    ghi_chu: "Mi Mi Fa Sol | Sol Fa Mi Rê | Đô Đô Rê Mi | Mi Rê Rê ở Đô trưởng (OMT Major Scales: bậc 1 = Đô ...)."
+  - id: n32
+    cau: "Dịch giọng là chơi cùng giai điệu từ một chủ âm khác; chuỗi bậc đặt lên chỗ khác của bàn phím."
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+    ket_qua: dung
+    ghi_chu: "OMT Major Scales: bậc của gam không đổi khi đổi giọng."
+  - id: n33
+    cau: "Hát giai điệu bằng tên bậc: bậc không đổi khi giọng đổi."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n34
+    cau: "Thế Sol: ngón 1 tay phải trên Sol4; thế Fa: ngón 1 trên Fa4; bậc 1 ngón 1, bậc 3 ngón 3."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Bản cũ piano/nam-ngon.md: thế Đô, Sol, Fa; các thế dùng ngón 1 cho chủ âm."
+  - id: n35
+    cau: "Ở Fa trưởng bậc 4 là Si♭; ở Sol trưởng bậc 7 là Fa♯."
+    loai: cau-truc
+    nguon:
+      - omt-major
+    ket_qua: dung
+    ghi_chu: "OMT Major Scales: Fa trưởng có một giáng (Si♭, bậc 4); Sol trưởng có một thăng (Fa♯, bậc 7)."
+  - id: n36
+    cau: "Hợp âm I và V7 giữ nguyên hình bàn tay (ngón 5-3-1 và 5-2-1, như ở Hänschen klein), chỉ dời chỗ đặt."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Bản cũ bài 4 Hänschen klein: tay trái dùng I (ngón 5-3-1) và V7 (5-2-1)."
+  - id: n37
+    cau: "Ở thế Fa tay phải, ngón 4 rơi vào phím đen Si♭."
+    loai: so-lieu
+    nguon:
+      - omt-major
+    ket_qua: dung
+    ghi_chu: "Fa1 Sol2 La3 Si♭4 Đô5."
+  - id: n38
+    cau: "Ode to Joy ở Sol trưởng: giai điệu không có phím đen; hợp âm V7 của tay trái có Fa♯."
+    loai: so-lieu
+    nguon:
+      - omt-major
+      - omt-seventh
+    ket_qua: dung
+    ghi_chu: "Sol Si Đô Rê... đều là phím trắng; V7 của Sol = Rê–Fa♯–La–Đô; khối 2 dùng Fa♯, Đô, Rê. Xem khuong_nhac khối 2."
+  - id: n39
+    cau: "Ode to Joy ở Fa trưởng: nốt thứ ba của giai điệu là Si♭."
+    loai: so-lieu
+    nguon:
+      - omt-major
+    ket_qua: dung
+    ghi_chu: "La La Si♭ Đô ...; khối 3."
+  - id: n40
+    cau: "Vị trí năm ngón: cùng một bài ở ba thế tay; Đệm cho một giai điệu: bài 'Đến lượt bạn' là Ah! vous dirai-je, maman ở Sol trưởng; bài 17: Dịch giọng."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Bản cũ piano/nam-ngon.md (mục 6, neo #6-chuyen-giong-cung-bai-o-the-sol-va-the-fa), hoa-am/dem-giai-dieu.md (neo #tap-trong-moi-giong); nhac-ly/17-khoa-do-dich-giong có neo #dich-giong."
+  - id: n41
+    cau: "Audiation là khả năng nghe được âm nhạc khi nó không vang lên thật; thuật ngữ do Edwin E. Gordon đặt."
+    loai: dinh-nghia
+    nguon:
+      - gordon
+    ket_qua: da-sua
+    ghi_chu: "Wikipedia Gordon music learning theory: audiation 'comprehension and internal realization of music', do Gordon đặt năm 1975. Cũ có thêm: 'Đó là nền của chơi theo tai, và cũng là thứ giữ bạn vững khi biểu diễn' (đã bỏ; nguồn không nói điều ấy)."
+  - id: n42
+    cau: "Bài tập: nghe trong đầu câu đầu của bài đang tập, hát khẽ nốt đầu, bấm phím để kiểm tra; thói quen nghe trong đầu hai ô đầu trước khi chơi."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n43
+    cau: "Nghe trong đầu là trí nhớ thính giác trong bốn loại trí nhớ của người chơi thuộc lòng; nên làm trước mỗi lần diễn thử; chạy cả bài trong đầu."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Bản cũ piano/hoc-thuoc-bieu-dien.md: 'Bốn loại trí nhớ' (có thính giác), 'Chuẩn bị cho buổi biểu diễn' (diễn thử), '7. Chạy bài trong đầu'. Chưa chuyển."
+  - id: n44
+    cau: "Mỗi ngày 10 phút: bảng 1–2, 3–5, 6–8, 9–10 phút (định giọng và hát, tìm giai điệu, đệm hoặc dịch giọng, chơi lại câu vừa nghe)."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n45
+    cau: "Kế hoạch 4 tuần và danh sách tự kiểm cuối tuần 4."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n46
+    cau: "Chép đúng hoàn toàn 4 trên 5 câu cấp 1 ở Chép giai điệu là mục tự kiểm."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "dictation.js (cũ): chuyển cấp khi chép đúng hoàn toàn 4 trên 5 câu."
+  - id: n47
+    cau: "Quiz: trước khi tìm giai điệu trên phím, hát nó cho thật chắc."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n48
+    cau: "Quiz: ở Đô trưởng Ode to Joy bắt đầu bằng Mi, là bậc 3."
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+    ket_qua: dung
+    ghi_chu: "Như trên."
+  - id: n49
+    cau: "Quiz: tay trái giữ Đô–Mi–Sol, giai điệu đến Fa nghe chói thì thử Fa (IV) hoặc Sol (V); Fa nằm trong IV (Fa–La–Đô) và V7 (Sol–Si–Rê–Fa)."
+    loai: quy-tac
+    nguon:
+      - omt-seventh
+      - omt-inversion
+    ket_qua: dung
+    ghi_chu: "Fa là nốt của IV và của V7; OMT Seventh Chords."
+  - id: n50
+    cau: "Quiz: Ode to Joy sang Fa trưởng, bậc 4 (Fa) trở thành Si♭, phím đen dưới ngón 4 ở thế Fa."
+    loai: quy-tac
+    nguon:
+      - omt-major
+    ket_qua: dung
+    ghi_chu: "Như trên."
+  - id: n51
+    cau: "Quiz: trước khi chơi, nghe trong đầu tốc độ, sắc thái và nốt đầu của câu đầu."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - not
+      - nhip
+      - giong
+      - hop-am
+    ket_qua: dung
+    ghi_chu: "Hai lần câu đầu Ah! vous dirai-je, maman ở Đô trưởng, M:4/4, L:1/4, K:C, hai khuông. Tay phải C C G G | A A G2 | F F E E | D D C2, hai lần, mỗi ô 4 phách; tay trái lần đầu [C,E,G,]4 cả bốn ô, lần sau I | IV–I | IV–I | V7–I (C,F,A,; B,,F,G,). Số ngón khớp bản của site (bài 2). Giai điệu khớp bài thật (Wikipedia Ah! vous dirai-je, Maman). Tám ô tổng cộng. Ô 3 lần đầu: Fa (F) trên hợp âm Đô: Fa cọ Mi như câu mô tả."
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - not
+      - nhip
+      - giong
+      - hop-am
+    ket_qua: dung
+    ghi_chu: "Ode to Joy ở Sol trưởng, K:G (một thăng Fa♯), M:4/4. RH B B c d | d c B A | G G A B | B3/2 A/ A2: bậc 3 3 4 5 | 5 4 3 2 | 1 1 2 3 | 3. 2 2 (khớp n về chuỗi bậc); không có dấu hóa lạ. LH [G,,B,,D,]4 | [F,,C,D,]4 | [G,,B,,D,]4 | I2 V7 2; F,, trong K:G là Fa♯ nên V7 = Fa♯–Đô–Rê (không có La). Bốn ô, ô cuối 4 phách (1,5+0,5+2)."
+  - khoi: 3
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - not
+      - nhip
+      - giong
+      - hop-am
+    ket_qua: dung
+    ghi_chu: "Ode to Joy ở Fa trưởng, K:F (một giáng Si♭), M:4/4. RH A A B c | c B A G | F F G A | A3/2 G/ G2: bậc 3 3 4 5 | 5 4 3 2 | 1 1 2 3 | 3. 2 2; nốt thứ ba của giai điệu là Si♭ (khớp mục 4). LH [F,,A,,C,]4 | [E,,B,,C,]4 | [F,,A,,C,]4 | I2 V7 2; V7 = Mi–Si♭–Đô (E,, B,, C,, với Si♭ theo khóa). Bốn ô đủ 4 phách."
+doi_chu:
+  - cu: "Khi đã quen giọng trưởng, thử Greensleeves (bài 7): giọng La thứ, chủ âm là La, và gần cuối câu có Sol♯ (ba dạng gam thứ). Rồi chọn những bài bạn thuộc từ nhỏ. Nhiều bài dân ca Việt Nam chỉ dùng năm nốt của gam ngũ cung; phím đàn cho bạn khung giai điệu, còn những chỗ luyến láy, nhấn nhá của giọng hát thì không chơi trọn được (Nhạc truyền thống Việt Nam)."
+    moi: "Khi đã quen giọng trưởng, thử Greensleeves (bài 7): giọng La thứ, chủ âm là La, và gần cuối câu có Sol♯ (ba dạng gam thứ). Rồi chọn những bài bạn thuộc từ nhỏ. Nhiều bài dân ca Việt Nam xây trên thang năm âm, cùng cấu trúc khoảng cách với gam ngũ cung; phím đàn cho bạn khung giai điệu, còn độ cao các âm trong thang năm âm của người Việt không cố định như trên phím đàn, nên giọng hát không chơi trọn được (Nhạc truyền thống Việt Nam)."
+    ly_do: "n19 và n20 (da-sua): viết lại theo Trần Thanh Hà và OMT Collections; bản cũ nói 'chỉ dùng năm nốt của gam ngũ cung' (không nguồn; nguồn nói thang năm âm của người Việt có độ cao không cố định) và 'luyến láy, nhấn nhá'."
+  - cu: "Trước khi chạm phím, người chơi có kinh nghiệm đã nghe câu đầu trong đầu: đúng tốc độ, đúng sắc thái, đúng nốt đầu. Nhà giáo dục âm nhạc Edwin E. Gordon gọi khả năng nghe được âm nhạc khi nó không vang lên thật là audiation. Đó là nền của chơi theo tai, và cũng là thứ giữ bạn vững khi biểu diễn."
+    moi: "Trước khi chạm phím, người chơi có kinh nghiệm đã nghe câu đầu trong đầu: đúng tốc độ, đúng sắc thái, đúng nốt đầu. Nhà giáo dục âm nhạc Edwin E. Gordon gọi khả năng nghe được âm nhạc khi nó không vang lên thật là audiation."
+    ly_do: "n41 (da-sua): Wikipedia Gordon music learning theory không nói audiation là nền của chơi theo tai hay giữ bạn vững khi biểu diễn."
+  - cu: "Edwin E. Gordon, Learning Sequences in Music: A Contemporary Music Learning Theory (GIA Publications): khái niệm audiation."
+    moi: "Edwin E. Gordon, Learning Sequences in Music: A Contemporary Music Learning Theory (GIA Publications, 2007): khái niệm audiation."
+    ly_do: "n41 (nguồn): thêm năm xuất bản 2007 theo Wikipedia."
+  - cu:
+      - "Open Music Theory: bậc trong gam, hợp âm chức năng."
+      - 'Giai điệu: dân ca Pháp và Đức; thánh ca "New Britain"; Beethoven, Giao hưởng số 9; Dvořák, Giao hưởng số 9 (xem 10 bài đầu tiên). Ba khuông nhạc trên trang soạn cho trang này.'
+    moi:
+      - 'Trần Thanh Hà, "Thang năm âm người Việt dưới góc nhìn văn hóa học", Tạp chí Khoa học Xã hội, số 1 (173), 2013 (bản trực tuyến): thang năm âm trong nhạc truyền thống Việt Nam.'
+      - "Open Music Theory, Collections: gam ngũ cung."
+      - 'Giai điệu: dân ca Pháp, Đức và Anh (Greensleeves); thánh ca "New Britain"; Beethoven, Giao hưởng số 9; Dvořák, Giao hưởng số 9 (xem 10 bài đầu tiên). Ba khuông nhạc trên trang soạn cho trang này.'
+    ly_do: "n41 (nguồn): thiếu Greensleeves (dân ca Anh) trong danh mục nguồn giai điệu."

@@ -31,7 +31,7 @@ Thử lần lượt từ trên xuống. Cột "Nốt đầu" là đáp án cho b
 | *Amazing Grace* ([bài 6](/opus/piano/10-bai-dau-tien/#6-amazing-grace)) | Sol, bậc 5, thấp hơn Đô | Nhịp lấy đà; nhảy quãng 4 lên Đô |
 | Largo, "Going Home" ([bài 8](/opus/piano/10-bai-dau-tien/#8-largo-going-home)) | Mi, bậc 3 | Nhảy quãng 3 lên Sol; nốt dài, nhịp chậm |
 
-Khi đã quen giọng trưởng, thử *Greensleeves* ([bài 7](/opus/piano/10-bai-dau-tien/#7-greensleeves)): giọng La thứ, chủ âm là La, và gần cuối câu có Sol♯ ([ba dạng gam thứ](/opus/luyen-tai/nghe-gam/#ba-dang-gam-thu-nghe-hai-not-cuoi)). Rồi chọn những bài bạn thuộc từ nhỏ. Nhiều bài dân ca Việt Nam chỉ dùng năm nốt của [gam ngũ cung](/opus/nhac-ly/16-dieu-thuc-ngu-cung/#gam-ngu-cung); phím đàn cho bạn khung giai điệu, còn những chỗ luyến láy, nhấn nhá của giọng hát thì không chơi trọn được ([Nhạc truyền thống Việt Nam](/opus/lich-su/nhac-truyen-thong-viet-nam/)).
+Khi đã quen giọng trưởng, thử *Greensleeves* ([bài 7](/opus/piano/10-bai-dau-tien/#7-greensleeves)): giọng La thứ, chủ âm là La, và gần cuối câu có Sol♯ ([ba dạng gam thứ](/opus/luyen-tai/nghe-gam/#ba-dang-gam-thu-nghe-hai-not-cuoi)). Rồi chọn những bài bạn thuộc từ nhỏ. Nhiều bài dân ca Việt Nam xây trên thang năm âm, cùng cấu trúc khoảng cách với [gam ngũ cung](/opus/nhac-ly/16-dieu-thuc-ngu-cung/#gam-ngu-cung); phím đàn cho bạn khung giai điệu, còn độ cao các âm trong thang năm âm của người Việt không cố định như trên phím đàn, nên giọng hát không chơi trọn được ([Nhạc truyền thống Việt Nam](/opus/lich-su/nhac-truyen-thong-viet-nam/)).
 
 ## 2. Đệm bằng I, IV, V: nghe bè trầm { #dem-bang-tai }
 
@@ -118,7 +118,7 @@ Muốn tập thêm: cùng một bài ở ba thế tay trong [Vị trí năm ngó
 
 ## 5. Nghe trong đầu trước khi chơi { #nghe-trong-dau }
 
-Trước khi chạm phím, người chơi có kinh nghiệm đã nghe câu đầu trong đầu: đúng tốc độ, đúng sắc thái, đúng nốt đầu. Nhà giáo dục âm nhạc Edwin E. Gordon gọi khả năng nghe được âm nhạc khi nó không vang lên thật là **audiation**. Đó là nền của chơi theo tai, và cũng là thứ giữ bạn vững khi biểu diễn.
+Trước khi chạm phím, người chơi có kinh nghiệm đã nghe câu đầu trong đầu: đúng tốc độ, đúng sắc thái, đúng nốt đầu. Nhà giáo dục âm nhạc Edwin E. Gordon gọi khả năng nghe được âm nhạc khi nó không vang lên thật là **audiation**.
 
 **Bài tập.** Chọn một bài bạn đang tập. Chơi hợp âm chủ của bài, rồi không nhìn bản nhạc, nghe trong đầu câu đầu tiên và hát khẽ nốt đầu. Bấm phím ấy để kiểm tra. Làm tương tự với nốt đầu của câu thứ hai, câu thứ ba.
 
@@ -186,10 +186,11 @@ Cuối tuần 4, tự kiểm:
 
 ## Nguồn
 
-- Edwin E. Gordon, *Learning Sequences in Music: A Contemporary Music Learning Theory* (GIA Publications): khái niệm audiation.
+- Edwin E. Gordon, *Learning Sequences in Music: A Contemporary Music Learning Theory* (GIA Publications, 2007): khái niệm audiation.
 - Lucy Green, *Hear, Listen, Play! How to Free Your Students' Aural, Improvisation, and Performance Skills* (Oxford University Press, 2014): cách nhạc công nhạc phổ thông học bằng tai, đưa vào giờ học nhạc cụ.
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/): bậc trong gam, hợp âm chức năng.
-- Giai điệu: dân ca Pháp và Đức; thánh ca "New Britain"; Beethoven, Giao hưởng số 9; Dvořák, Giao hưởng số 9 (xem [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/)). Ba khuông nhạc trên trang soạn cho trang này.
+- Trần Thanh Hà, "Thang năm âm người Việt dưới góc nhìn văn hóa học", *Tạp chí Khoa học Xã hội*, số 1 (173), 2013 ([bản trực tuyến](https://vjol.info.vn/khxh/article/download/15034/13490/)): thang năm âm trong nhạc truyền thống Việt Nam.
+- [Open Music Theory, Collections](https://viva.pressbooks.pub/openmusictheory/chapter/collections/): gam ngũ cung.
+- Giai điệu: dân ca Pháp, Đức và Anh (*Greensleeves*); thánh ca "New Britain"; Beethoven, Giao hưởng số 9; Dvořák, Giao hưởng số 9 (xem [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/)). Ba khuông nhạc trên trang soạn cho trang này.
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
 
 Luyện tiếp: [Luyện nghe nhận diện](/opus/nhan-dien/luyen-nghe/) và [Nghe mù](/opus/nhan-dien/nghe-mu/).

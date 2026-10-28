@@ -1,0 +1,372 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa luyen-tai/nghe-gam
+trang: src/content/docs/luyen-tai/nghe-gam.md
+nguon_cu: ../opus-zero/docs/luyen-tai/nghe-gam.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-28
+    nhanh: moi/d3-l6
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Sonnet 5.5 (D3-L6 lượt 1)"
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: "Trang nghe gam và điệu thức (tầng lõi). Nguồn: OMT Minor Scales, Intro to Diatonic Modes, Diatonic Modes, Collections, Seventh Chords; Trần Thanh Hà (thang năm âm Việt). Câu về công cụ kiểm trên scale-trainer.js cũ: bốn bộ 'Trưởng và thứ tự nhiên', 'Ba dạng gam thứ', 'Điệu thức thường gặp', 'Ngũ cung và gam 7 nốt'; hướng 'Đi lên' và 'Lên rồi xuống'; gợi ý HINT của từng điệu thức. Bộ 'Điệu thức thường gặp' không có Locrian. Cần người giao quyết: 'Thứ hòa âm' (đã đổi từ 'Thứ hòa thanh'); bài 7 và công cụ cũ dùng 'gam thứ hòa âm'. Câu ket_qua null: chủ âm 'thường là nốt kết', '2 tăng nghe gai', Lydian mơ màng, ngũ cung thoáng. Thuật ngữ chưa có trong src/data/thuat-ngu.yml: điệu thức (mode) và Dorian, Phrygian, Lydian, Mixolydian, Locrian; gam thứ tự nhiên/hòa âm/giai điệu; gam trưởng, gam thứ; gam ngũ cung (pentatonic); quãng 2 tăng (augmented second); bậc (scale degree); chủ âm đã có (tonic), nốt dẫn đã có (leading-tone), gam toàn cung đã có (whole-tone-scale)."
+nguon:
+  - id: omt-minor
+    bac: 2
+    ten: "Open Music Theory, Minor Scales, Scale Degrees, and Key Signatures"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/"
+  - id: omt-major
+    bac: 2
+    ten: "Open Music Theory, Major Scales, Scale Degrees, and Key Signatures"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/major-scales/"
+  - id: omt-intervals
+    bac: 2
+    ten: "Open Music Theory, Intervals"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/intervals/"
+  - id: omt-seventh
+    bac: 2
+    ten: "Open Music Theory, Seventh Chords"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/seventh-chords/"
+  - id: omt-modes
+    bac: 2
+    ten: "Open Music Theory, Diatonic Modes"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/diatonic-modes/"
+  - id: omt-intro-modes
+    bac: 2
+    ten: "Open Music Theory, Intro to Diatonic Modes and the Chromatic Scale"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-diatonic-modes-and-the-chromatic-scale/"
+  - id: omt-collections
+    bac: 2
+    ten: "Open Music Theory, Collections (gam ngũ cung, gam toàn cung)"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/collections/"
+  - id: tran-thanh-ha
+    bac: 2
+    ten: "Trần Thanh Hà, Thang năm âm người Việt dưới góc nhìn văn hóa học, Tạp chí Khoa học Xã hội, số 1 (173), 2013, tr. 43-50"
+    link: "https://vjol.info.vn/khxh/article/download/15034/13490/"
+nhan_dinh:
+  - id: n1
+    cau: "Nghe gam là nghe 'bản đồ' của một bài nhạc: nốt nào là nhà (chủ âm), đường đi có những bậc thang nào; nghe được gam thì đoán được nốt tiếp theo của giai điệu."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n2
+    cau: "Lý thuyết đầy đủ ở bài 6 (Gam trưởng), bài 7 (Gam thứ), bài 16 (Điệu thức và gam ngũ cung); bài luyện ở #luyen-voi-cong-cu."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Ba trang nhac-ly/06-gam-truong, 07-gam-thu, 16-dieu-thuc-ngu-cung đã chuyển; neo #luyen-voi-cong-cu có trong trang."
+  - id: n3
+    cau: "Phân biệt trưởng hay thứ chỉ cần một nốt: bậc 3."
+    loai: quy-tac
+    nguon:
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: "OMT Minor Scales: gam thứ khác trưởng cùng chủ âm ở bậc 3 (và 6, 7); như n10 của D3-L1 (bậc 3 hạ có ở cả ba dạng gam thứ). 'Chỉ cần một nốt' đúng theo nghĩa bậc 3 đủ phân biệt."
+  - id: n4
+    cau: "Bậc 3 cao (Mi trong giọng Đô) thì trưởng; bậc 3 thấp nửa cung (Mi♭) thì thứ."
+    loai: quy-tac
+    nguon:
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: "OMT Minor Scales."
+  - id: n5
+    cau: "Nốt chủ là nốt nghe như 'nhà', thường là nốt kết."
+    loai: dinh-nghia
+    nguon:
+      - omt-major
+    ket_qua: null
+    ghi_chu: "chưa chắc: 'chủ âm là nốt nghe như nhà' là cách nói thường gặp; riêng 'thường là nốt kết' không có đoạn nguồn mở được nói trực tiếp."
+  - id: n6
+    cau: "Nhận ra sáng hay tối ở bậc 3 là đủ để đoán trưởng/thứ trong đa số trường hợp."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n7
+    cau: "Gam thứ có ba dạng: tự nhiên, hòa âm, giai điệu, khác nhau ở bậc 6 và 7 khi đi lên."
+    loai: danh-muc
+    nguon:
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: "OMT Minor Scales; Mount 16."
+  - id: n8
+    cau: "Thứ tự nhiên (từ La): bậc 6 và 7 là Fa – Sol."
+    loai: cau-truc
+    nguon:
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: "A B C D E F G."
+  - id: n9
+    cau: "Thứ hòa âm (từ La): bậc 6 và 7 là Fa – Sol♯."
+    loai: cau-truc
+    nguon:
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: "OMT Minor Scales: harmonic minor nâng bậc 7. Cũ viết 'Thứ hòa thanh'."
+  - id: n10
+    cau: "Quãng Fa–Sol♯ là quãng 2 tăng, gồm 3 nửa cung."
+    loai: so-lieu
+    nguon:
+      - omt-intervals
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: "Fa–Sol♯ = 3 nửa cung; OMT Intervals: 2 tăng = 3 nửa cung."
+  - id: n11
+    cau: "Quãng 2 tăng Fa–Sol♯ nghe 'gai', rất đặc trưng."
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+    ket_qua: null
+    ghi_chu: "chưa chắc: không mở được nguồn nào nói 'gai'; OMT chỉ nói quãng 2 tăng đặc trưng của gam thứ hòa âm ở mức cấu trúc."
+  - id: n12
+    cau: "Thứ giai điệu: Fa♯ – Sol♯ khi đi lên, Fa – Sol khi đi xuống."
+    loai: cau-truc
+    nguon:
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: "OMT Minor Scales: melodic minor lên nâng bậc 6 và 7, xuống trở về tự nhiên."
+  - id: n13
+    cau: "Thứ giai điệu đi lên nghe gần như gam trưởng, chỉ khác nốt 3; đi xuống trở về thứ tự nhiên."
+    loai: dinh-nghia
+    nguon:
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: "Đi lên chỉ còn bậc 3 thấp (OMT Minor Scales)."
+  - id: n14
+    cau: "Thứ hòa âm đặc trưng bởi quãng 2 tăng; Sol♯ là nốt dẫn, nâng nửa cung để giọng thứ có hợp âm át bảy (V7) như giọng trưởng."
+    loai: quy-tac
+    nguon:
+      - omt-minor
+      - omt-seventh
+    ket_qua: da-sua
+    ghi_chu: "OMT Minor Scales và Seventh Chords: át trong giọng thứ dùng nốt dẫn nâng. Cũ: 'gần như luôn có nghĩa là thứ hòa âm'; mới: 'thường là dấu hiệu'. Thêm vế Sol♯ nốt dẫn."
+  - id: n15
+    cau: "Điệu thức Dorian là gam thứ tự nhiên với bậc 6 trưởng."
+    loai: cau-truc
+    nguon:
+      - omt-modes
+      - omt-intro-modes
+    ket_qua: dung
+    ghi_chu: "OMT Diatonic Modes."
+  - id: n16
+    cau: "Dorian nghe thứ nhưng sáng hơn thứ tự nhiên."
+    loai: dinh-nghia
+    nguon:
+      - omt-modes
+      - omt-intro-modes
+    ket_qua: dung
+    ghi_chu: "OMT Intro to Diatonic Modes: sắp xếp từ sáng đến tối; Dorian sáng hơn natural minor."
+  - id: n17
+    cau: "Điệu thức Phrygian là gam thứ tự nhiên với bậc 2 thứ; bước đầu tiên của gam chỉ nửa cung."
+    loai: cau-truc
+    nguon:
+      - omt-modes
+      - omt-intro-modes
+    ket_qua: dung
+    ghi_chu: "OMT Diatonic Modes."
+  - id: n18
+    cau: "Phrygian nghe tối."
+    loai: dinh-nghia
+    nguon:
+      - omt-modes
+      - omt-intro-modes
+    ket_qua: dung
+    ghi_chu: "OMT Intro to Diatonic Modes: Phrygian là điệu thức tối hơn minor."
+  - id: n19
+    cau: "Điệu thức Lydian là gam trưởng với bậc 4 tăng."
+    loai: cau-truc
+    nguon:
+      - omt-modes
+      - omt-intro-modes
+    ket_qua: dung
+    ghi_chu: "OMT Diatonic Modes."
+  - id: n20
+    cau: "Lydian nghe trưởng nhưng mơ màng, lơ lửng."
+    loai: dinh-nghia
+    nguon:
+      - omt-modes
+      - omt-intro-modes
+    ket_qua: null
+    ghi_chu: "chưa chắc: OMT chỉ xếp Lydian là điệu thức sáng nhất; 'mơ màng, lơ lửng' là cảm nhận chủ quan."
+  - id: n21
+    cau: "Điệu thức Mixolydian là gam trưởng với bậc 7 thứ."
+    loai: cau-truc
+    nguon:
+      - omt-modes
+      - omt-intro-modes
+    ket_qua: dung
+    ghi_chu: "OMT Diatonic Modes."
+  - id: n22
+    cau: "Mixolydian nghe trưởng nhưng bớt chói."
+    loai: dinh-nghia
+    nguon:
+      - omt-modes
+      - omt-intro-modes
+    ket_qua: dung
+    ghi_chu: "OMT Intro to Diatonic Modes: Mixolydian tối hơn Ionian một bậc."
+  - id: n23
+    cau: "Điệu thức Locrian là gam thứ tự nhiên với bậc 2 thứ và bậc 5 giảm."
+    loai: cau-truc
+    nguon:
+      - omt-modes
+      - omt-intro-modes
+    ket_qua: dung
+    ghi_chu: "OMT Intro to Diatonic Modes: Locrian = natural minor hạ bậc 2 và 5."
+  - id: n24
+    cau: "Locrian bất ổn nhất, vì hợp âm ba trên chủ âm của nó là hợp âm giảm."
+    loai: dinh-nghia
+    nguon:
+      - omt-modes
+      - omt-intro-modes
+    ket_qua: da-sua
+    ghi_chu: "Cũ: 'Bất ổn nhất, không có hợp âm chủ vững'; mới nêu lý do kiểm được: Locrian có 5 giảm nên hợp âm ba trên chủ âm là giảm (OMT Diatonic Modes). 'Bất ổn nhất' là cách nói của trang."
+  - id: n25
+    cau: "Gam thứ từ La mà có Fa♯ thay cho Fa là Dorian; gam trưởng từ Đô mà có Si♭ thay cho Si là Mixolydian."
+    loai: cau-truc
+    nguon:
+      - omt-modes
+      - omt-intro-modes
+    ket_qua: da-sua
+    ghi_chu: "A B C D E F♯ G = La Dorian; C D E F G A B♭ = Đô Mixolydian (OMT Diatonic Modes). Cũ không ghi gốc 'từ La', 'từ Đô'."
+  - id: n26
+    cau: "Đừng học thuộc lòng 7 điệu thức: so với gam trưởng/thứ gần nhất và tìm đúng một nốt khác."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n27
+    cau: "Gợi ý dưới mỗi nút của công cụ cuối bài chính là 'một nốt khác biệt' này."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "scale-trainer.js: HINT của từng điệu thức nêu một nốt khác biệt (Dorian bậc 6 trưởng ...)."
+  - id: n28
+    cau: "Gam ngũ cung chỉ có 5 nốt và không có nửa cung."
+    loai: dinh-nghia
+    nguon:
+      - omt-collections
+    ket_qua: da-sua
+    ghi_chu: "OMT Collections: pentatonic = năm nốt, không có nửa cung. Cũ: 'không có nửa cung' lẫn với 'không có nửa cung nào kề nhau' trong quiz; mới thống nhất."
+  - id: n29
+    cau: "Gam ngũ cung nghe thoáng, trống trải, không căng thẳng."
+    loai: dinh-nghia
+    nguon:
+      - omt-collections
+    ket_qua: null
+    ghi_chu: "chưa chắc: hệ quả cảm nhận của việc không có nửa cung, không nguồn nào mở được nói thẳng 'thoáng, trống trải'."
+  - id: n30
+    cau: "Gam ngũ cung có mặt trong nhạc của nhiều nơi trên thế giới, kể cả nhạc truyền thống Việt Nam."
+    loai: lich-su
+    nguon:
+      - omt-collections
+      - tran-thanh-ha
+    ket_qua: da-sua
+    ghi_chu: "OMT Collections: 'prevalent in music across the globe'; Trần Thanh Hà: 'phổ biến là thang 5 âm'. Cũ: 'màu Trung Đông / Tây Ban Nha', 'dân gian' ... đã bỏ (không nguồn)."
+  - id: n31
+    cau: "Gam toàn cung có 6 nốt và cũng không có nửa cung."
+    loai: dinh-nghia
+    nguon:
+      - omt-collections
+    ket_qua: dung
+    ghi_chu: "OMT Collections: gam toàn cung chỉ có một kích thước bước (toàn cung)."
+  - id: n32
+    cau: "Gam ngũ cung, nếu thấy chỗ nào 'xít' (nửa cung) thì không phải ngũ cung."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n33
+    cau: "Nghe được bậc trong gam là nền tảng của chép giai điệu: chép '3–2–1' rồi dịch ra nốt nhạc."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n34
+    cau: "Các bước tập bậc trong gam: nghe gam Đô trưởng, nghe một nốt, hát từ chủ âm đếm 1–2–3, rồi bỏ bước hát."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n35
+    cau: "Công cụ phát một gam, bạn chọn tên gam; hướng 'Lên rồi xuống' nghe rõ thứ giai điệu."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "scale-trainer.js: hướng 'Đi lên' / 'Lên rồi xuống'; trên gam thứ giai điệu, lên và xuống khác nhau."
+  - id: n36
+    cau: "Bộ 'Trưởng và thứ tự nhiên', 'Ba dạng gam thứ', 'Điệu thức thường gặp', 'Ngũ cung và gam 7 nốt' có trong công cụ."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "scale-trainer.js: SETS có đúng bốn tên này. Bộ 'Điệu thức thường gặp' gồm trưởng, thứ tự nhiên, Dorian, Mixolydian, Lydian, Phrygian, không có Locrian, trong khi bảng trang có Locrian."
+  - id: n37
+    cau: "Công cụ này chưa có phần luyện nghe bậc trong gam."
+    loai: ve-site
+    ket_qua: da-sua
+    ghi_chu: "scale-trainer.js: không có chế độ nghe bậc. Cũ: bước 5 nói 'nghe nốt lẻ trên đàn' như phần của công cụ."
+  - id: n38
+    cau: "Quiz: muốn phân biệt nhanh trưởng hay thứ thì nghe bậc 3."
+    loai: quy-tac
+    nguon:
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: "Như n3."
+  - id: n39
+    cau: "Quiz: quãng 2 tăng Fa–Sol♯ ở cuối gam thứ đi lên là dấu hiệu của thứ hòa âm; Sol♯ là nốt dẫn tạo át bảy (V7)."
+    loai: quy-tac
+    nguon:
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: "OMT Minor Scales."
+  - id: n40
+    cau: "Quiz: gam thứ có bậc 6 trưởng thay vì thứ là Dorian."
+    loai: quy-tac
+    nguon:
+      - omt-modes
+      - omt-intro-modes
+    ket_qua: dung
+    ghi_chu: "OMT Diatonic Modes."
+  - id: n41
+    cau: "Quiz: ngũ cung chỉ có 5 nốt với toàn cung và quãng 3 thứ, không chỗ nào xít."
+    loai: dinh-nghia
+    nguon:
+      - omt-collections
+    ket_qua: dung
+    ghi_chu: "Ngũ cung trưởng Đô–Rê–Mi–Sol–La: bước toàn, toàn, 3 thứ, toàn, 3 thứ (OMT Collections)."
+khuong_nhac: []
+doi_chu:
+  - cu:
+      - Nghe thuần "thứ", hơi cổ điển.
+      - Thứ hòa thanh
+    moi:
+      - Nghe thuần "thứ".
+      - Thứ hòa âm
+    ly_do: 'n9 (da-sua): "Thứ hòa thanh" thành "Thứ hòa âm" theo quyết định thuật ngữ (README, 27/10/2026) và bài 7; bỏ "hơi cổ điển" (không nguồn).'
+  - cu: 'Quãng Fa–Sol♯ là 2 tăng (3 nửa cung): nghe "gai", rất đặc trưng — màu Trung Đông / Tây Ban Nha.'
+    moi: 'Quãng Fa–Sol♯ là 2 tăng (3 nửa cung): nghe "gai", rất đặc trưng.'
+    ly_do: 'n28, n30 (da-sua): bỏ các câu màu văn hóa, phong cách không nguồn (Trung Đông, Tây Ban Nha, flamenco, jazzy, dân gian).'
+  - cu: 'Mẹo: dấu hiệu 2 tăng (nghe như quãng 3 thứ nhưng "gai" hơn) gần như luôn có nghĩa là thứ hòa thanh. Đây là gam của vô số bản nhạc cổ điển viết ở giọng thứ khi cần át bảy (V7).'
+    moi: 'Mẹo: dấu hiệu 2 tăng (nghe như quãng 3 thứ nhưng "gai" hơn) thường là dấu hiệu của thứ hòa âm. Sol♯ là nốt dẫn, nâng lên nửa cung để giọng thứ có hợp âm át bảy (V7) như giọng trưởng.'
+    ly_do: "n14 (da-sua): 'gần như luôn' quá mạnh; thêm lý do V7."
+  - cu: Thứ nhưng sáng hơn, jazzy.
+    moi: Thứ nhưng sáng hơn.
+    ly_do: 'n28, n30 (da-sua): bỏ các câu màu văn hóa, phong cách không nguồn (Trung Đông, Tây Ban Nha, flamenco, jazzy, dân gian).'
+  - cu: Tối, "Tây Ban Nha", flamenco.
+    moi: Tối; bước đầu tiên của gam chỉ nửa cung.
+    ly_do: 'n28, n30 (da-sua): bỏ các câu màu văn hóa, phong cách không nguồn (Trung Đông, Tây Ban Nha, flamenco, jazzy, dân gian).'
+  - cu: Trưởng nhưng "dân gian", bớt chói.
+    moi: Trưởng nhưng bớt chói.
+    ly_do: 'n28, n30 (da-sua): bỏ các câu màu văn hóa, phong cách không nguồn (Trung Đông, Tây Ban Nha, flamenco, jazzy, dân gian).'
+  - cu:
+      - Bất ổn nhất, hiếm dùng.
+      - "Ví dụ: nghe một gam thứ mà nốt Fa nghe cao bất thường (Fa♯ thay vì Fa) → đó là Dorian. Nghe gam trưởng mà nốt Si thấp bất thường (Si♭) → Mixolydian."
+    moi:
+      - "Bất ổn nhất: hợp âm ba trên chủ âm của nó là hợp âm giảm."
+      - "Ví dụ: nghe một gam thứ từ La mà nốt Fa nghe cao bất thường (Fa♯ thay vì Fa) → đó là Dorian. Nghe một gam trưởng từ Đô mà nốt Si thấp bất thường (Si♭) → Mixolydian."
+    ly_do: "n24 (da-sua): nêu lý do kiểm được.; n25 (da-sua): thêm gốc 'từ La', 'từ Đô' để khẳng định đúng."
+  - cu: Gam ngũ cung chỉ có 5 nốt, không có nửa cung kề nhau. Nghe thoáng, trống trải, không căng thẳng — màu của nhạc dân gian nhiều nước (kể cả Việt Nam) và nhiều bản nhạc phim. Nếu nghe một gam mà không thấy chỗ nào "xít" (nửa cung), hãy nghĩ đến ngũ cung.
+    moi: Gam ngũ cung chỉ có 5 nốt và không có nửa cung. Nghe thoáng, trống trải, không căng thẳng. Gam này có mặt trong nhạc của nhiều nơi trên thế giới, kể cả nhạc truyền thống Việt Nam. Nếu nghe một gam mà không thấy chỗ nào "xít" (nửa cung), hãy nghĩ đến ngũ cung (gam toàn cung, 6 nốt, cũng không có nửa cung).
+    ly_do: "n30 và n28 (da-sua): các câu về màu văn hóa, flamenco, jazz, mức độ hiếm dùng và số bản nhạc không có nguồn; thay bằng OMT Collections và Trần Thanh Hà."
+  - cu: "Bậc trong gam: nghe nốt lẻ và gọi tên bậc."
+    moi: "Bậc trong gam (công cụ này chưa có phần ấy): nghe nốt lẻ trên đàn và gọi tên bậc."
+    ly_do: "n37 (ve-site, da-sua): scale-trainer.js không có phần bậc."
+  - cu: Open Music Theory; musictheory.net.
+    moi:
+      - "Open Music Theory: Minor Scales, Intro to Diatonic Modes and the Chromatic Scale, Diatonic Modes, Collections (ngũ cung, gam toàn cung), Seventh Chords."
+      - Trần Thanh Hà, "Thang năm âm người Việt dưới góc nhìn văn hóa học", Tạp chí Khoa học Xã hội, số 1 (173), 2013, tr. 43–50 (bản trực tuyến).
+    ly_do: 'Mục Nguồn: thay bằng các nguồn đã mở khi kiểm định (lượt 1 D3-L6); bỏ link chung.'
+  - cu:
+      - 'câu hỏi: Nghe thấy quãng "gai" 2 tăng ở cuối gam thứ đi lên — đó là dạng nào? | Thứ tự nhiên | ✓ Thứ hòa thanh | Thứ giai điệu | Fa–Sol♯ (3 nửa cung) là dấu hiệu của thứ hòa thanh, tạo át bảy (V7) cho giọng thứ.'
+      - "câu hỏi: Nghe một gam thứ mà bậc 6 nghe cao bất thường (trưởng thay vì thứ) — điệu thức nào? | ✓ Dorian | Phrygian | Locrian | Dorian = thứ tự nhiên với bậc 6 trưởng: thứ nhưng sáng và jazzy hơn."
+    moi:
+      - 'câu hỏi: Nghe thấy quãng "gai" 2 tăng ở cuối gam thứ đi lên — đó là dạng nào? | Thứ tự nhiên | ✓ Thứ hòa âm | Thứ giai điệu | Fa–Sol♯ (3 nửa cung) là dấu hiệu của thứ hòa âm: Sol♯ là nốt dẫn, tạo át bảy (V7) cho giọng thứ.'
+      - "câu hỏi: Nghe một gam thứ mà bậc 6 nghe cao bất thường (trưởng thay vì thứ) — điệu thức nào? | ✓ Dorian | Phrygian | Locrian | Dorian = thứ tự nhiên với bậc 6 trưởng: thứ nhưng sáng hơn."
+    ly_do: 'n9 (da-sua): "Thứ hòa thanh" thành "Thứ hòa âm" trong câu hỏi, như bảng.'

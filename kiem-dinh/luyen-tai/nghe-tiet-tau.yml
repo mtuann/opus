@@ -1,0 +1,269 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa luyen-tai/nghe-tiet-tau
+trang: src/content/docs/luyen-tai/nghe-tiet-tau.md
+nguon_cu: ../opus-zero/docs/luyen-tai/nghe-tiet-tau.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-28
+    nhanh: moi/d3-l6
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Sonnet 5.5 (D3-L6 lượt 1)"
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: "Trang nghe tiết tấu (tầng lõi). Nguồn: OMT Simple Meter, Compound Meters, Other Rhythmic Essentials; Iowa State 1.2 (thứ tự mạnh nhẹ); COD (syncopation, waltz, minuet, polka, march); Wikipedia Common time (bậc 3). Câu về site: bản cũ luyen-tap/tiet-tau.md ('Nghe mẫu', 2 ô 4/4) và luyen-tap/metronome.md (30–240 BPM); cả hai trang chưa chuyển. Các ví dụ còn lại trong bước 4 'jazz/Latin' là lời khuyên tập, không tính là nhận định. Câu ket_qua null: phách mạnh 'thường nhấn bằng tiếng trầm', nhịp đơn 'gọn' và nhịp kép 'đu đưa', syncopation 'nảy, bất ngờ'. Thuật ngữ chưa có trong src/data/thuat-ngu.yml: syncopation (đảo phách), accent (phách mạnh), polka, waltz (valse), march (hành khúc), nhịp 2/3/4 (duple, triple, quadruple); đã có simple-meter, compound-meter, beat, measure, minuet, tempo."
+nguon:
+  - id: iowa-meter
+    bac: 2
+    ten: "Iowa State University, Comprehensive Musicianship, 1.2 Basics of Meter: Tutorial"
+    link: "https://iastate.pressbooks.pub/comprehensivemusicianship/chapter/1-2-basics-of-meter-tutorial/"
+  - id: cod-polka
+    bac: 2
+    ten: "The Concise Oxford Dictionary of Music, mục polka (qua encyclopedia.com)"
+    link: "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/polka"
+  - id: cod-march
+    bac: 2
+    ten: "The Concise Oxford Dictionary of Music, mục march (qua encyclopedia.com)"
+    link: "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/march"
+  - id: cod-waltz
+    bac: 2
+    ten: "The Concise Oxford Dictionary of Music, mục waltz (qua encyclopedia.com)"
+    link: "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/waltz"
+  - id: cod-minuet
+    bac: 2
+    ten: "The Concise Oxford Dictionary of Music, mục minuet (qua encyclopedia.com)"
+    link: "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/minuet"
+  - id: wiki-common-time
+    bac: 3
+    ten: "Wikipedia, Common time"
+    link: "https://en.wikipedia.org/wiki/Common_time"
+  - id: omt-simple
+    bac: 2
+    ten: "Open Music Theory, Simple Meter and Time Signatures"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/simple-meter-and-time-signatures/"
+  - id: omt-compound
+    bac: 2
+    ten: "Open Music Theory, Compound Meters and Time Signatures"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/compound-meters-and-time-signatures/"
+  - id: omt-rhythm
+    bac: 2
+    ten: "Open Music Theory, Other Rhythmic Essentials (đảo phách)"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/other-rhythmic-essentials/"
+  - id: cod-syncopation
+    bac: 2
+    ten: "The Concise Oxford Dictionary of Music, mục syncopation (qua encyclopedia.com)"
+    link: "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/syncopation"
+nhan_dinh:
+  - id: n1
+    cau: "Nghe tiết tấu là nghe thời gian trong âm nhạc: phách ở đâu, nhịp mấy, nốt nào rơi vào chỗ mạnh, chỗ nào bị 'lệch'."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n2
+    cau: "Lý thuyết đầy đủ ở bài 3 (Trường độ), bài 4 (Nhịp), bài 15 (Tiết tấu nâng cao); bài luyện với công cụ Tiết tấu và Máy đếm nhịp."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Ba trang nhac-ly đã chuyển. luyen-tap/tiet-tau và luyen-tap/metronome chưa chuyển ('sắp có'); bản cũ ../opus-zero/docs/luyen-tap/ có cả hai."
+  - id: n3
+    cau: "Nhạc có nhịp đều đặn có phách mạnh lặp lại; đếm số phách giữa hai lần mạnh thì biết nhịp."
+    loai: dinh-nghia
+    nguon:
+      - iowa-meter
+    ket_qua: da-sua
+    ghi_chu: "Iowa State 1.2: các phách trong ô nhịp có độ mạnh khác nhau (mạnh, yếu...). Cũ: 'Mọi bản nhạc đều có phách mạnh' (sai với nhạc không nhịp, nhạc tự do)."
+  - id: n4
+    cau: "Phách mạnh thường được nhấn bằng tiếng trầm hơn, như trống cái hay nốt bass."
+    loai: dinh-nghia
+    nguon:
+      - iowa-meter
+    ket_qua: null
+    ghi_chu: "chưa chắc: không nguồn mở được nói phách mạnh 'thường nhấn bằng tiếng trầm'; mới đổi từ 'được nhấn bằng' sang 'thường được nhấn bằng'."
+  - id: n5
+    cau: "Nhịp 2: mạnh – nhẹ, lặp lại."
+    loai: cau-truc
+    nguon:
+      - iowa-meter
+    ket_qua: dung
+    ghi_chu: "Iowa State 1.2: duple = mạnh, yếu."
+  - id: n6
+    cau: "Nhịp 2 gặp ở polka và hành khúc nhanh."
+    loai: dinh-nghia
+    nguon:
+      - cod-polka
+      - cod-march
+    ket_qua: da-sua
+    ghi_chu: "COD: polka là 'quick duple time'; march có 'quick 2/4 or 6/8'. Cũ ghi 'hành khúc' không rõ nhịp; mới chỉ rõ 'nhanh'."
+  - id: n7
+    cau: "Nhịp 3: mạnh – nhẹ – nhẹ, lặp lại; gặp ở valse và minuet."
+    loai: cau-truc
+    nguon:
+      - iowa-meter
+      - cod-waltz
+      - cod-minuet
+    ket_qua: dung
+    ghi_chu: "Iowa State 1.2: triple = mạnh, yếu, yếu nhất. COD: waltz 3/4, minuet 'triple time'."
+  - id: n8
+    cau: "Nhịp 4: mạnh – nhẹ – vừa – nhẹ, lặp lại."
+    loai: cau-truc
+    nguon:
+      - iowa-meter
+    ket_qua: dung
+    ghi_chu: "Iowa State 1.2: quadruple = mạnh, yếu, trung bình, yếu nhất."
+  - id: n9
+    cau: "Nhịp 4 rất phổ biến, nhất là trong nhạc pop, rock."
+    loai: dinh-nghia
+    nguon:
+      - wiki-common-time
+    ket_qua: da-sua
+    ghi_chu: "Wikipedia Common time: 4/4 là nhịp phổ biến nhất trong nhạc đại chúng phương Tây (bậc 3, chỉ phụ trợ). Cũ: 'nhịp phổ biến nhất' không giới hạn."
+  - id: n10
+    cau: "Khi nghe: gõ chân theo phách mạnh, vỗ tay theo phách nhẹ; khi khớp đều thì đã bắt được nhịp, rồi đếm 1–2, 1–2–3 hay 1–2–3–4."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n11
+    cau: "Nhịp đơn (2/4, 3/4, 4/4): mỗi phách chia 2, đếm 1 và 2 và."
+    loai: dinh-nghia
+    nguon:
+      - omt-simple
+    ket_qua: dung
+    ghi_chu: "OMT Simple Meter: phách nhịp đơn chia hai."
+  - id: n12
+    cau: "Nhịp kép (6/8, 9/8, 12/8): mỗi phách chia 3, đếm 1 la li 2 la li."
+    loai: dinh-nghia
+    nguon:
+      - omt-compound
+    ket_qua: da-sua
+    ghi_chu: "OMT Compound Meters: phách chia ba, đếm 'la li'. Cũ: 'và–a' (đếm kiểu tiếng Anh '1 and a'); mới theo OMT. Đổi ở đoạn chính, mẹo, bước 2 và quiz."
+  - id: n13
+    cau: "Nhịp đơn nghe gọn, bước đi; nhịp kép nghe đu đưa, lênh đênh."
+    loai: dinh-nghia
+    nguon:
+      - omt-simple
+      - omt-compound
+    ket_qua: null
+    ghi_chu: "chưa chắc: cấu trúc (chia 2 hay 3) đã kiểm; các tính từ là cảm nhận chủ quan."
+  - id: n14
+    cau: "Giữa hai phách, đếm 'và' một lần (nhịp đơn) hay 'la li' hai lần (nhịp kép): tai phân biệt được khi đếm thành tiếng."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n15
+    cau: "Khi gõ lại tiết tấu lạ: tìm phách, đếm to, gắn nốt vào vị trí, gõ lại."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n16
+    cau: "Câu 'đen – móc đơn móc đơn – đen' trong 4/4 đếm '1 và 2–và 3 và 4 và', nốt rơi vào 1, 2, 'và' của 2, 3."
+    loai: so-lieu
+    nguon:
+      - omt-simple
+    ket_qua: dung
+    ghi_chu: "Nốt đen = 1 phách (ở 1), hai móc đơn = hai nửa phách (ở 2 và 'và'), nốt đen (ở 3)."
+  - id: n17
+    cau: "Công cụ Tiết tấu có nút 'Nghe mẫu' và ô nhịp 4/4 hai ô."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Bản cũ luyen-tap/tiet-tau.md và JavaScript cũ: có 'Nghe mẫu', 2 ô nhịp 4/4."
+  - id: n18
+    cau: "Syncopation (đảo phách) là khi nốt nhấn rơi vào phách yếu hoặc vào 'và'."
+    loai: dinh-nghia
+    nguon:
+      - omt-rhythm
+      - cod-syncopation
+    ket_qua: dung
+    ghi_chu: "OMT Other Rhythmic Essentials: nhấn bằng nối, chấm, nghỉ hoặc cường độ; COD: nhấn phách yếu, hoặc kéo dài qua phách mạnh."
+  - id: n19
+    cau: "Syncopation rất phổ biến trong jazz."
+    loai: lich-su
+    nguon:
+      - cod-syncopation
+    ket_qua: dung
+    ghi_chu: "COD syncopation: jazz đã phát triển mạnh kỹ thuật này."
+  - id: n20
+    cau: "Syncopation tạo cảm giác nảy, bất ngờ."
+    loai: dinh-nghia
+    nguon:
+      - cod-syncopation
+    ket_qua: null
+    ghi_chu: "chưa chắc: COD nói về vị trí nhấn, không nói 'nảy, bất ngờ'."
+  - id: n21
+    cau: "Dấu hiệu nghe syncopation: có nốt dài bắt đầu ở chỗ yếu và treo qua phách mạnh."
+    loai: dinh-nghia
+    nguon:
+      - cod-syncopation
+    ket_qua: dung
+    ghi_chu: "COD syncopation: 'sustaining across a strong beat'."
+  - id: n22
+    cau: "Khi nghe syncopation, giữ chân gõ đều và để tay gõ theo nốt lệch."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n23
+    cau: "Thứ tự luyện: đoán nhịp 2/3/4; phân biệt nhịp đơn/kép; gõ lại với công cụ; syncopation (tìm trong jazz/Latin); Máy đếm nhịp."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n24
+    cau: "Máy đếm nhịp cho bật 60 BPM và tăng dần tốc độ."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Bản cũ luyen-tap/metronome.md: dải 30–240 BPM nên 60 nằm trong dải; tăng dần có."
+  - id: n25
+    cau: "Quiz: 'Mạnh – nhẹ – nhẹ' lặp lại là nhịp 3 (valse, minuet)."
+    loai: cau-truc
+    nguon:
+      - iowa-meter
+      - cod-waltz
+      - cod-minuet
+    ket_qua: dung
+    ghi_chu: "Như trên."
+  - id: n26
+    cau: "Quiz: phân biệt nhịp đơn/kép bằng cách đếm giữa hai phách: một tiếng 'và' là đơn, hai tiếng ('la li') là kép."
+    loai: dinh-nghia
+    nguon:
+      - omt-simple
+      - omt-compound
+    ket_qua: da-sua
+    ghi_chu: "Cũ: hai tiếng 'và–a'; mới 'la li' (OMT)."
+  - id: n27
+    cau: "Quiz: syncopation là nốt nhấn rơi vào phách yếu hoặc vào 'và', tạo cảm giác nảy và bất ngờ."
+    loai: dinh-nghia
+    nguon:
+      - omt-rhythm
+      - cod-syncopation
+    ket_qua: dung
+    ghi_chu: "Phần định nghĩa đúng (như câu định nghĩa syncopation); vế 'nảy, bất ngờ' như câu 'nảy, bất ngờ' ở trên (chưa chắc)."
+  - id: n28
+    cau: "Quiz: khi gõ lại một câu tiết tấu lạ, bước đầu là tìm phách, gõ chân đều."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+khuong_nhac: []
+doi_chu:
+  - cu:
+      - "Mọi bản nhạc đều có phách mạnh (accent) lặp lại đều đặn — thường là tiếng trầm nhất (trống cái, nốt bass). Đếm số phách giữa hai lần mạnh:"
+      - Mạnh – nhẹ – Mạnh – nhẹ… → nhịp 2 (hành khúc, polka).
+    moi:
+      - "Nhạc có nhịp đều đặn có phách mạnh (accent) lặp lại — thường được nhấn bằng tiếng trầm hơn (trống cái, nốt bass). Đếm số phách giữa hai lần mạnh:"
+      - Mạnh – nhẹ – Mạnh – nhẹ… → nhịp 2 (polka, hành khúc nhanh).
+    ly_do: "n3 (da-sua): không phải mọi bản nhạc có phách mạnh. n4: 'thường' thay vì khẳng định.; n6 (da-sua): COD ghi polka nhịp đôi nhanh, march có 2/4 nhanh."
+  - cu: Mạnh – nhẹ – vừa – nhẹ – Mạnh… → nhịp 4 (đa số nhạc pop, rock, giao hưởng).
+    moi: Mạnh – nhẹ – vừa – nhẹ – Mạnh… → nhịp 4 (rất phổ biến, nhất là trong nhạc pop, rock).
+    ly_do: "n9 (da-sua): bỏ 'nhất' và 'Latin' (không nguồn)."
+  - cu:
+      - 'Nhịp kép (6/8, 9/8, 12/8): mỗi phách chia 3 — đếm "1 và–a 2 và–a…". Nghe đu đưa, lênh đênh (barcarolle, jig Ireland).'
+      - 'Mẹo: hát "và" một lần giữa hai phách (nhịp đơn) hay hai lần "và–a" (nhịp kép)? Tai phân biệt được ngay khi bạn đếm thành tiếng.'
+    moi:
+      - 'Nhịp kép (6/8, 9/8, 12/8): mỗi phách chia 3 — đếm "1 la li 2 la li…". Nghe đu đưa, lênh đênh.'
+      - 'Mẹo: giữa hai phách, đếm "và" một lần (nhịp đơn) hay "la li" hai lần (nhịp kép)? Tai phân biệt được ngay khi bạn đếm thành tiếng.'
+    ly_do: "n12 và n26 (da-sua): OMT Compound Meters dùng la li."
+  - cu: 'Syncopation (đảo phách) là khi nốt nhấn rơi vào phách yếu hoặc vào "và" — tạo cảm giác nảy, bất ngờ, rất phổ biến trong jazz, nhạc Latin và nhạc phim. Nghe dấu hiệu:'
+    moi: 'Syncopation (đảo phách) là khi nốt nhấn rơi vào phách yếu hoặc vào "và" — tạo cảm giác nảy, bất ngờ, rất phổ biến trong jazz. Nghe dấu hiệu:'
+    ly_do: 'n9 (da-sua): bỏ "nhạc Latin", "nhạc phim" (không nguồn).'
+  - cu: 'Phân biệt nhịp đơn/kép: đếm "và" một lần hay hai lần giữa hai phách.'
+    moi: 'Phân biệt nhịp đơn/kép: đếm một tiếng "và" hay hai tiếng "la li" giữa hai phách.'
+    ly_do: 'n12 (da-sua): OMT Compound Meters đếm "la li" cho nhịp kép.'
+  - cu: Open Music Theory; musictheory.net.
+    moi:
+      - "Open Music Theory: Simple Meter and Time Signatures, Compound Meters and Time Signatures, Other Rhythmic Essentials (đảo phách)."
+      - "Iowa State University, Comprehensive Musicianship, 1.2 Basics of Meter: Tutorial (thứ tự mạnh nhẹ của các phách)."
+      - The Concise Oxford Dictionary of Music, mục syncopation, waltz, minuet, polka, march.
+    ly_do: 'Mục Nguồn: thay bằng các nguồn đã mở khi kiểm định (lượt 1 D3-L6); bỏ link chung.'
+  - cu: 'câu hỏi: Phân biệt nhịp đơn và nhịp kép bằng cách nào nhanh nhất? | ✓ Đếm "và" giữa hai phách: một lần là đơn, hai lần ("và–a") là kép | Nghe xem bản nhạc nhanh hay chậm | Đếm tổng số nốt trong một ô nhịp | Nhịp đơn chia phách làm 2, nhịp kép chia làm 3 — đếm thành tiếng là thấy ngay.'
+    moi: 'câu hỏi: Phân biệt nhịp đơn và nhịp kép bằng cách nào nhanh nhất? | ✓ Đếm giữa hai phách: một tiếng "và" là nhịp đơn, hai tiếng ("la li") là nhịp kép | Nghe xem bản nhạc nhanh hay chậm | Đếm tổng số nốt trong một ô nhịp | Nhịp đơn chia phách làm 2, nhịp kép chia làm 3 — đếm thành tiếng là thấy ngay.'
+    ly_do: 'n26 (da-sua): câu hỏi sửa theo cách đếm "la li" của OMT.'

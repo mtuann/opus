@@ -9,12 +9,12 @@ Lý thuyết đầy đủ: [bài 12: Hòa âm chức năng](/opus/nhac-ly/12-hoa
 
 ## Chìa khóa: nghe bè trầm
 
-Trong đa số bản nhạc, **nốt trầm nhất (bass) chính là gốc của hợp âm** đang vang. Nghe được đường đi của bè trầm là nghe được tiến trình:
+Nốt trầm nhất (bass) quyết định thể của hợp âm; khi hợp âm ở thể gốc, **nốt trầm nhất chính là gốc của hợp âm** đang vang. Nghe được đường đi của bè trầm là nghe được phần lớn tiến trình:
 
-- Trầm đi **Đô – Fa – Sol – Đô** → tiến trình I – IV – V – I ở giọng Đô trưởng.
+- Trầm đi **Đô – Fa – Sol – Đô** → thường là tiến trình I – IV – V – I ở giọng Đô trưởng.
 - Trầm **đứng yên** ở Sol trong khi hợp âm bên trên đổi → thường là I6/4 rồi V ngay trước kết (xem bên dưới).
 
-Kỹ thuật: khi nghe, **hạ tai xuống nốt thấp nhất**. Hát nốt trầm lên, rồi hỏi nó là bậc mấy của giọng. Chuỗi các bậc trầm chính là tiến trình hòa âm.
+Kỹ thuật: khi nghe, **hạ tai xuống nốt thấp nhất**. Hát nốt trầm lên, rồi hỏi nó là bậc mấy của giọng. Chuỗi các bậc trầm cho bạn khung của tiến trình hòa âm (hợp âm ở thể đảo thì nốt trầm không phải gốc).
 
 Nghe thử tiến trình I – IV – V – I, mỗi hợp âm một ô nhịp; tay trái chơi nốt gốc:
 
@@ -41,7 +41,7 @@ Nghe kỹ nốt trầm mỗi ô: Đô… Fa… Sol… Đô. Cảm giác "đi xa 
 | I – IV – I6/4 – V – I | Sol đứng yên qua hai hợp âm, rồi về Đô | Kết của rất nhiều bản Cổ điển; tập ở [Kết ở mọi giọng](/opus/piano/hoa-am/ket/#i64-truoc-at-am) |
 | I – ii6 – V7 – I | Đô – Fa – Sol – Đô, nhưng hợp âm trên Fa là Rê–Fa–La | [Kết đầy đủ](/opus/piano/hoa-am/ket/#ii6-va-v7-ket-ay-u) |
 | Chuỗi quãng năm đi xuống | Mỗi bước xuống một quãng năm (hoặc lên một quãng bốn) | [Bài 29: Chuỗi hòa âm](/opus/nhac-ly/29-chuoi-hoa-am/) |
-| Romanesca, Prinner | Bass đi xuống từng bậc hoặc xuống bốn, lên hai | [Các mẫu hòa âm thời Cổ điển](/opus/piano/hoa-am/mau-galant/) |
+| Romanesca, Prinner | Prinner: Fa – Mi – Rê – Đô (xuống từng bậc). Romanesca: Đô – Si – La – Mi | [Các mẫu hòa âm thời Cổ điển](/opus/piano/hoa-am/mau-galant/) |
 
 Nghe thử **I – IV – I6/4 – V – I**. Ở ô 2, tay phải chơi lại đúng hợp âm Đô trưởng nhưng tay trái đã sang Sol: hai nốt trên trượt xuống ("sáu xuống năm, bốn xuống ba") rồi mới về nhà.
 
@@ -58,7 +58,7 @@ V:LH clef=bass
 [V:LH] C, F, | G,2 | C,2 |]
 ```
 
-Một vòng bè trầm nổi tiếng, *Canon* của Pachelbel: bass **xuống bốn, lên hai** lặp đi lặp lại (Đô – Sol – La – Mi – Fa – Đô – Fa – Sol), họ hàng gần của mẫu Romanesca thời Cổ điển.
+Một vòng bè trầm nổi tiếng, *Canon* của Pachelbel: bass cứ **xuống quãng bốn rồi lên một bậc** (Đô – Sol – La – Mi – Fa – Đô), rồi Fa – Sol. Gjerdingen nhận ra ở đó một mẫu Romanesca.
 
 ```abc
 X:3
@@ -75,7 +75,7 @@ V:LH clef=bass
 
 ## Nghe kết: dấu chấm câu của âm nhạc
 
-**Kết** (*cadence*) là hai hợp âm cuối một câu nhạc, như dấu chấm, dấu phẩy trong văn. Ví dụ dưới đây lần lượt là kết trọn, kết plagal, kết lừa và kết nửa:
+**Kết** (*cadence*) là chuỗi hợp âm ở cuối một câu nhạc, như dấu chấm, dấu phẩy trong văn. Ví dụ dưới đây lần lượt là kết trọn, kết plagal, kết lừa và kết nửa:
 
 ```abc
 X:4
@@ -108,7 +108,7 @@ Bốn hợp âm; hai hợp âm cuối tạo thành một trong bốn loại kế
 ## Nghe trong bài bạn đang tập
 
 - [*Ode to Joy*](/opus/piano/10-bai-dau-tien/): câu đầu dừng lửng (kết nửa), câu sau giống hệt nhưng về nhà (kết trọn).
-- [Mozart: Minuet Fa trưởng K. 2](/opus/piano/tac-pham/mozart-minuet-k2/): những câu bốn ô; nghe chỗ nào kết nửa, chỗ nào kết trọn.
+- [Mozart: Minuet Fa trưởng K. 2](/opus/piano/tac-pham/mozart-minuet-k2/): nghe từng câu nhạc và thử gọi tên chỗ kết ở cuối mỗi câu.
 - [Bach: Prelude Đô trưởng](/opus/piano/tac-pham/bach-prelude-do/): chỉ nghe nốt thấp nhất mỗi ô; gần cuối, bè trầm giữ Sol suốt nhiều ô (âm nền át) trước khi về Đô.
 - Bài bạn đang tập: chơi chậm riêng bè trầm và hát theo, rồi đánh dấu bằng bút chì mỗi chỗ kết và gọi tên.
 
@@ -145,7 +145,8 @@ Bốn hợp âm; hai hợp âm cuối tạo thành một trong bốn loại kế
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- Open Music Theory: [Inversion](https://viva.pressbooks.pub/openmusictheory/chapter/inversion/), [6/4 Chords as Forms of Prolongation](https://viva.pressbooks.pub/openmusictheory/chapter/64-chords-as-prolongations/), [Galant Schemas](https://viva.pressbooks.pub/openmusictheory/chapter/galant-schemas/) và [bản tóm tắt](https://viva.pressbooks.pub/openmusictheory/chapter/galant-schemas-summary/), [Diatonic Sequences](https://viva.pressbooks.pub/openmusictheory/chapter/diatonic-sequences/).
+- *The Concise Oxford Dictionary of Music*, mục [cadence](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/cadence).
 - Robert O. Gjerdingen, *Music in the Galant Style* (Oxford University Press, 2007): Romanesca, Prinner và các mẫu khác.
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
 

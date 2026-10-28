@@ -22,11 +22,11 @@ Gam thứ có ba dạng, khác nhau ở bậc 6 và 7 khi **đi lên**:
 
 | Dạng | Bậc 6 – 7 (từ La) | Dấu hiệu khi nghe |
 |---|---|---|
-| Thứ tự nhiên | Fa – Sol | Nghe thuần "thứ", hơi cổ điển. |
-| Thứ hòa thanh | Fa – Sol♯ | Quãng Fa–Sol♯ là **2 tăng** (3 nửa cung): nghe "gai", rất đặc trưng — màu Trung Đông / Tây Ban Nha. |
+| Thứ tự nhiên | Fa – Sol | Nghe thuần "thứ". |
+| Thứ hòa âm | Fa – Sol♯ | Quãng Fa–Sol♯ là **2 tăng** (3 nửa cung): nghe "gai", rất đặc trưng. |
 | Thứ giai điệu | Fa♯ – Sol♯ (lên); Fa – Sol (xuống) | Đi lên nghe gần như gam trưởng (chỉ khác nốt 3); đi xuống trở về thứ tự nhiên. |
 
-Mẹo: **dấu hiệu 2 tăng** (nghe như quãng 3 thứ nhưng "gai" hơn) gần như luôn có nghĩa là thứ hòa thanh. Đây là gam của vô số bản nhạc cổ điển viết ở giọng thứ khi cần át bảy (V7).
+Mẹo: **dấu hiệu 2 tăng** (nghe như quãng 3 thứ nhưng "gai" hơn) thường là dấu hiệu của thứ hòa âm. Sol♯ là nốt dẫn, nâng lên nửa cung để giọng thứ có hợp âm át bảy (V7) như giọng trưởng.
 
 ## Điệu thức: tìm một nốt khác biệt
 
@@ -34,19 +34,19 @@ Mẹo: **dấu hiệu 2 tăng** (nghe như quãng 3 thứ nhưng "gai" hơn) g�
 
 | Điệu thức | So với | Nốt khác duy nhất | Màu sắc |
 |---|---|---|---|
-| Dorian | Thứ tự nhiên | Bậc 6 **trưởng** (thay vì thứ) | Thứ nhưng sáng hơn, jazzy. |
-| Phrygian | Thứ tự nhiên | Bậc 2 **thứ** | Tối, "Tây Ban Nha", flamenco. |
+| Dorian | Thứ tự nhiên | Bậc 6 **trưởng** (thay vì thứ) | Thứ nhưng sáng hơn. |
+| Phrygian | Thứ tự nhiên | Bậc 2 **thứ** | Tối; bước đầu tiên của gam chỉ nửa cung. |
 | Lydian | Trưởng | Bậc 4 **tăng** | Trưởng nhưng mơ màng, lơ lửng. |
-| Mixolydian | Trưởng | Bậc 7 **thứ** | Trưởng nhưng "dân gian", bớt chói. |
-| Locrian | Thứ tự nhiên | Bậc 2 thứ **và** bậc 5 giảm | Bất ổn nhất, hiếm dùng. |
+| Mixolydian | Trưởng | Bậc 7 **thứ** | Trưởng nhưng bớt chói. |
+| Locrian | Thứ tự nhiên | Bậc 2 thứ **và** bậc 5 giảm | Bất ổn nhất: hợp âm ba trên chủ âm của nó là hợp âm giảm. |
 
-Ví dụ: nghe một gam thứ mà nốt Fa nghe cao bất thường (Fa♯ thay vì Fa) → đó là Dorian. Nghe gam trưởng mà nốt Si thấp bất thường (Si♭) → Mixolydian.
+Ví dụ: nghe một gam thứ từ La mà nốt Fa nghe cao bất thường (Fa♯ thay vì Fa) → đó là Dorian. Nghe một gam trưởng từ Đô mà nốt Si thấp bất thường (Si♭) → Mixolydian.
 
 Trong [công cụ cuối bài](#luyen-voi-cong-cu), gợi ý dưới mỗi nút chính là "một nốt khác biệt" này — hãy đọc gợi ý trước khi đoán.
 
 ## Ngũ cung: nghe sự "thoáng"
 
-Gam ngũ cung chỉ có 5 nốt, **không có nửa cung** kề nhau. Nghe thoáng, trống trải, không căng thẳng — màu của nhạc dân gian nhiều nước (kể cả Việt Nam) và nhiều bản nhạc phim. Nếu nghe một gam mà không thấy chỗ nào "xít" (nửa cung), hãy nghĩ đến ngũ cung.
+Gam ngũ cung chỉ có 5 nốt và **không có nửa cung**. Nghe thoáng, trống trải, không căng thẳng. Gam này có mặt trong nhạc của nhiều nơi trên thế giới, kể cả nhạc truyền thống Việt Nam. Nếu nghe một gam mà không thấy chỗ nào "xít" (nửa cung), hãy nghĩ đến ngũ cung (gam toàn cung, 6 nốt, cũng không có nửa cung).
 
 ## Nghe bậc trong gam (scale degrees)
 
@@ -70,7 +70,7 @@ Thứ tự luyện:
 2. **Ba dạng thứ**: nghe hai nốt cuối khi đi lên; để ý dấu hiệu 2 tăng.
 3. **Điệu thức**: mỗi lần chỉ thêm một điệu, so với gam gần nhất.
 4. **Ngũ cung**: nghe sự thoáng, không nửa cung.
-5. **Bậc trong gam**: nghe nốt lẻ và gọi tên bậc.
+5. **Bậc trong gam** (công cụ này chưa có phần ấy): nghe nốt lẻ trên đàn và gọi tên bậc.
 
 ```quiz
 ? Muốn phân biệt nhanh gam trưởng hay thứ, nghe nốt nào?
@@ -80,14 +80,14 @@ Thứ tự luyện:
 > Bậc 3 quyết định sáng/tối: Mi (trưởng) hay Mi♭ (thứ) trong giọng Đô.
 ? Nghe thấy quãng "gai" 2 tăng ở cuối gam thứ đi lên — đó là dạng nào?
 - Thứ tự nhiên
-+ Thứ hòa thanh
++ Thứ hòa âm
 - Thứ giai điệu
-> Fa–Sol♯ (3 nửa cung) là dấu hiệu của thứ hòa thanh, tạo át bảy (V7) cho giọng thứ.
+> Fa–Sol♯ (3 nửa cung) là dấu hiệu của thứ hòa âm: Sol♯ là nốt dẫn, tạo át bảy (V7) cho giọng thứ.
 ? Nghe một gam thứ mà bậc 6 nghe cao bất thường (trưởng thay vì thứ) — điệu thức nào?
 + Dorian
 - Phrygian
 - Locrian
-> Dorian = thứ tự nhiên với bậc 6 trưởng: thứ nhưng sáng và jazzy hơn.
+> Dorian = thứ tự nhiên với bậc 6 trưởng: thứ nhưng sáng hơn.
 ? Gam ngũ cung nghe khác gam thường ở điểm nào dễ nhận nhất?
 - Có nhiều nửa cung hơn
 + Không có nửa cung kề nhau, nghe thoáng và trống trải
@@ -97,7 +97,8 @@ Thứ tự luyện:
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- Open Music Theory: [Minor Scales](https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/), [Intro to Diatonic Modes and the Chromatic Scale](https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-diatonic-modes-and-the-chromatic-scale/), [Diatonic Modes](https://viva.pressbooks.pub/openmusictheory/chapter/diatonic-modes/), [Collections](https://viva.pressbooks.pub/openmusictheory/chapter/collections/) (ngũ cung, gam toàn cung), [Seventh Chords](https://viva.pressbooks.pub/openmusictheory/chapter/seventh-chords/).
+- Trần Thanh Hà, "Thang năm âm người Việt dưới góc nhìn văn hóa học", *Tạp chí Khoa học Xã hội*, số 1 (173), 2013, tr. 43–50 ([bản trực tuyến](https://vjol.info.vn/khxh/article/download/15034/13490/)).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
 
 Bài tiếp theo: [Nghe tiết tấu](/opus/luyen-tai/nghe-tiet-tau/).

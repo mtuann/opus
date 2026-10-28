@@ -21,6 +21,8 @@ const LUAT = [
 	// công cụ âm học, thẻ ghi nhớ (D3-L5): ô đã dựng sẵn lúc build
 	['.oz-boi-am, .oz-pho, .oz-len-day', () => import('./am-hoc.js'), false],
 	['.oz-the-nho', () => import('./the-nho.js'), false],
+	// bốn công cụ luyện tai (D3-L6): ô dựng sẵn lúc build
+	['.oz-lt', () => import('./luyen-tai.js'), false],
 	// khởi tạo ngay: dấu "đã học" ở mục lục, người đọc thấy ngay khi mở trang
 	['.oz-trang-thai-bai', () => import('./trang-thai-bai.js'), true],
 ];

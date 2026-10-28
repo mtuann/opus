@@ -12,25 +12,27 @@ import { GIONG, midiCua, soDauGon, tenVietCua } from '../scripts/nhac-ly.js';
 import { khoangPhim, thongTinGiong, veBanPhim, veChucNang, veDieuThuc, veHoaBieu, veVongChon, veVongQuangNam } from '../scripts/ve.js';
 import { CAU_HOI, nutTraLoi } from '../scripts/luyen-hoa-bieu.js';
 import { veBoiAm, veLenDay, vePho } from '../scripts/am-hoc.js';
+import { veLuyenTai } from '../scripts/luyen-tai.js';
 import { bangHep } from './bang-hep.mjs';
 
 export const esc = (s) =>
 	String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 
 /** HTML đã dựng của trang có khối cần JavaScript (khuông nhạc, câu hỏi, khối nghe, danh sách việc, bài kiểm tra đầu vào,
- * chặng piano, ô gợi ý tập, bàn phím, vòng quãng năm, luyện hóa biểu, công cụ âm học, thẻ ghi nhớ, trạng thái bài đã học)
+ * chặng piano, ô gợi ý tập, bàn phím, vòng quãng năm, luyện hóa biểu, công cụ âm học, thẻ ghi nhớ, trạng thái bài đã học,
+ * luyện tai)
  * không: MarkdownContent.astro chỉ tải bộ tải thành phần ở những trang này. */
 export const canTaiScript = (html) =>
-	/\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec|oz-placement|oz-muc-do|oz-goi-y|oz-ban-phim|oz-vong|oz-lhb|oz-boi-am|oz-pho|oz-len-day|oz-the-nho|oz-trang-thai-bai)[\s"]/.test(html);
+	/\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec|oz-placement|oz-muc-do|oz-goi-y|oz-ban-phim|oz-vong|oz-lhb|oz-boi-am|oz-pho|oz-len-day|oz-the-nho|oz-trang-thai-bai|oz-lt)[\s"]/.test(html);
 
 /** HTML đã dựng có hình hóa biểu (vẽ bằng <use href="#oz-kh-…">) không: MarkdownContent.astro thêm định nghĩa ký hiệu một lần. */
 export const canKyHieu = (html) => html.includes('href="#oz-kh-');
 
 /**
- * Trang có công cụ phát tiếng piano (bàn phím, vòng quãng năm) không: MarkdownContent.astro ghi nguồn của mẫu âm (CC BY 3.0
+ * Trang có công cụ phát tiếng piano (bàn phím, vòng quãng năm, luyện tai) không: MarkdownContent.astro ghi nguồn của mẫu âm (CC BY 3.0
  * đòi ghi tác giả) một lần ở cuối bài, cạnh mục Nguồn.
  */
-export const coAmPiano = (html) => /\sclass="(?:[^"]*\s)?(?:oz-ban-phim|oz-vong)[\s"]/.test(html);
+export const coAmPiano = (html) => /\sclass="(?:[^"]*\s)?(?:oz-ban-phim|oz-vong|oz-lt)[\s"]/.test(html);
 
 /** Dòng ghi nguồn mẫu âm piano (public/mau-am/piano/LICENSE.txt); data-sinh: không phải chữ của trang. */
 export const nguonAmPiano = (base = DUONG_GOC) =>
@@ -658,9 +660,29 @@ const CONG_CU = {
 	tuning: () => congCuAmHoc('oz-len-day', veLenDay(), 'Bật JavaScript trong trình duyệt để nghe so sánh các quãng.'),
 	flashcards: () => theNho(),
 	'lesson-status': () => trangThaiBai(),
+	// luyện tai (D3-L6): src/scripts/luyen-tai.js
+	'interval-trainer': () => veLuyenTai('interval-trainer'),
+	'chord-trainer': () => veLuyenTai('chord-trainer'),
+	'scale-trainer': () => veLuyenTai('scale-trainer'),
+	'cadence-trainer': () => veLuyenTai('cadence-trainer'),
 };
 /** Công cụ không có thông số: viết thêm thuộc tính thì build hỏng (gõ nhầm, hay chép từ khối cũ). */
-const KHONG_THONG_SO = new Set(['placement', 'piano-level', 'goi-y-tap', 'circle', 'keysig-quiz', 'overtones', 'spectrum', 'tuning', 'flashcards', 'lesson-status']);
+const KHONG_THONG_SO = new Set([
+	'placement',
+	'piano-level',
+	'goi-y-tap',
+	'circle',
+	'keysig-quiz',
+	'overtones',
+	'spectrum',
+	'tuning',
+	'flashcards',
+	'lesson-status',
+	'interval-trainer',
+	'chord-trainer',
+	'scale-trainer',
+	'cadence-trainer',
+]);
 
 /** ::cong-cu{ten="…" …}: công cụ luyện tập; thuộc tính khác là thông số (data-* của khối oz- cũ). */
 export function congCu({ ten, ...thongSo }, trang) {

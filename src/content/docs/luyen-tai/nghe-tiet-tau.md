@@ -9,11 +9,11 @@ Lý thuyết đầy đủ: [bài 3: Trường độ](/opus/nhac-ly/03-truong-do/
 
 ## Nghe phách mạnh để đoán nhịp
 
-Mọi bản nhạc đều có **phách mạnh** (accent) lặp lại đều đặn — thường là tiếng trầm nhất (trống cái, nốt bass). Đếm số phách giữa hai lần mạnh:
+Nhạc có nhịp đều đặn có **phách mạnh** (accent) lặp lại — thường được nhấn bằng tiếng trầm hơn (trống cái, nốt bass). Đếm số phách giữa hai lần mạnh:
 
-- Mạnh – nhẹ – Mạnh – nhẹ… → **nhịp 2** (hành khúc, polka).
+- Mạnh – nhẹ – Mạnh – nhẹ… → **nhịp 2** (polka, hành khúc nhanh).
 - Mạnh – nhẹ – nhẹ – Mạnh… → **nhịp 3** (valse, minuet).
-- Mạnh – nhẹ – vừa – nhẹ – Mạnh… → **nhịp 4** (đa số nhạc pop, rock, giao hưởng).
+- Mạnh – nhẹ – vừa – nhẹ – Mạnh… → **nhịp 4** (rất phổ biến, nhất là trong nhạc pop, rock).
 
 Kỹ thuật: **gõ chân theo phách mạnh, vỗ tay theo phách nhẹ**. Khi chân và tay "khớp" đều đặn, bạn đã bắt được nhịp. Sau đó đếm: "1–2", "1–2–3" hay "1–2–3–4"?
 
@@ -22,9 +22,9 @@ Kỹ thuật: **gõ chân theo phách mạnh, vỗ tay theo phách nhẹ**. Khi 
 Mỗi phách còn được **chia nhỏ** — và cách chia tạo ra hai họ nhịp:
 
 - **Nhịp đơn** (2/4, 3/4, 4/4): mỗi phách chia 2 — đếm "1 **và** 2 **và**…". Nghe gọn, bước đi.
-- **Nhịp kép** (6/8, 9/8, 12/8): mỗi phách chia 3 — đếm "1 **và–a** 2 **và–a**…". Nghe đu đưa, lênh đênh (barcarolle, jig Ireland).
+- **Nhịp kép** (6/8, 9/8, 12/8): mỗi phách chia 3 — đếm "1 **la li** 2 **la li**…". Nghe đu đưa, lênh đênh.
 
-Mẹo: hát "và" một lần giữa hai phách (nhịp đơn) hay hai lần "và–a" (nhịp kép)? Tai phân biệt được ngay khi bạn đếm thành tiếng.
+Mẹo: giữa hai phách, đếm "và" một lần (nhịp đơn) hay "la li" hai lần (nhịp kép)? Tai phân biệt được ngay khi bạn đếm thành tiếng.
 
 ## Gõ lại tiết tấu: chia nhỏ và đếm to
 
@@ -39,7 +39,7 @@ Ví dụ câu "đen – móc đơn móc đơn – đen" trong nhịp 4/4: đếm
 
 ## Syncopation: nốt rơi vào chỗ yếu
 
-**Syncopation** (đảo phách) là khi nốt nhấn rơi vào phách yếu hoặc vào "và" — tạo cảm giác nảy, bất ngờ, rất phổ biến trong jazz, nhạc Latin và nhạc phim. Nghe dấu hiệu:
+**Syncopation** (đảo phách) là khi nốt nhấn rơi vào phách yếu hoặc vào "và" — tạo cảm giác nảy, bất ngờ, rất phổ biến trong jazz. Nghe dấu hiệu:
 
 - Có nốt **dài** bắt đầu ở chỗ yếu và "treo" qua phách mạnh.
 - Chân bạn muốn gõ lệch khỏi tiếng trống.
@@ -49,7 +49,7 @@ Ví dụ câu "đen – móc đơn móc đơn – đen" trong nhịp 4/4: đếm
 ## Thứ tự luyện
 
 1. **Đoán nhịp 2/3/4** của các bản nhạc quen thuộc: gõ chân, đếm số phách giữa hai lần mạnh.
-2. **Phân biệt nhịp đơn/kép**: đếm "và" một lần hay hai lần giữa hai phách.
+2. **Phân biệt nhịp đơn/kép**: đếm một tiếng "và" hay hai tiếng "la li" giữa hai phách.
 3. **Gõ lại** với [công cụ tiết tấu](/opus/luyen-tap/tiet-tau/): bắt đầu 2 ô nhịp đơn giản, đếm to khi đọc.
 4. **Syncopation**: tìm trong nhạc jazz/Latin, tập chân–tay tách nhau.
 5. **[Máy đếm nhịp](/opus/luyen-tap/metronome/)**: bật 60 BPM, gõ đúng từng tiếng; tăng dần tốc độ.
@@ -61,7 +61,7 @@ Ví dụ câu "đen – móc đơn móc đơn – đen" trong nhịp 4/4: đếm
 - Nhịp 4
 > Cứ 3 phách lại có một phách mạnh: nhịp 3 (valse, minuet).
 ? Phân biệt nhịp đơn và nhịp kép bằng cách nào nhanh nhất?
-+ Đếm "và" giữa hai phách: một lần là đơn, hai lần ("và–a") là kép
++ Đếm giữa hai phách: một tiếng "và" là nhịp đơn, hai tiếng ("la li") là nhịp kép
 - Nghe xem bản nhạc nhanh hay chậm
 - Đếm tổng số nốt trong một ô nhịp
 > Nhịp đơn chia phách làm 2, nhịp kép chia làm 3 — đếm thành tiếng là thấy ngay.
@@ -79,7 +79,9 @@ Ví dụ câu "đen – móc đơn móc đơn – đen" trong nhịp 4/4: đếm
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- Open Music Theory: [Simple Meter and Time Signatures](https://viva.pressbooks.pub/openmusictheory/chapter/simple-meter-and-time-signatures/), [Compound Meters and Time Signatures](https://viva.pressbooks.pub/openmusictheory/chapter/compound-meters-and-time-signatures/), [Other Rhythmic Essentials](https://viva.pressbooks.pub/openmusictheory/chapter/other-rhythmic-essentials/) (đảo phách).
+- Iowa State University, *Comprehensive Musicianship*, [1.2 Basics of Meter: Tutorial](https://iastate.pressbooks.pub/comprehensivemusicianship/chapter/1-2-basics-of-meter-tutorial/) (thứ tự mạnh nhẹ của các phách).
+- *The Concise Oxford Dictionary of Music*, mục [syncopation](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/syncopation), [waltz](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/waltz), [minuet](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/minuet), [polka](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/polka), [march](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/march).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
 
 Bài tiếp theo: [Nghe tiến trình hòa âm](/opus/luyen-tai/nghe-tien-trinh/).

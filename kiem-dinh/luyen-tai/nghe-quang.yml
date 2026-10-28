@@ -1,0 +1,276 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa luyen-tai/nghe-quang
+trang: src/content/docs/luyen-tai/nghe-quang.md
+nguon_cu: ../opus-zero/docs/luyen-tai/nghe-quang.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-28
+    nhanh: moi/d3-l6
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Sonnet 5.5 (D3-L6 lượt 1)"
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: "Trang nghe quãng (tầng lõi). Nguồn: OMT (Intervals, Species Counterpoint, Intro to Diatonic Modes, Triads, Minor Scales), Mount ch. 19 (V7), Soundfly và MacEwan (bài hát gợi nhớ, bậc 3). Câu về công cụ kiểm trên interval-trainer.js cũ (../opus-zero/docs/assets/js/): bộ Khởi động/Cơ bản/Mở rộng/Tất cả 12 quãng; kiểu lần lượt đi lên, đi xuống, cùng lúc. Sửa trang (xem doi_chu): bộ Cơ bản và Mở rộng trong lộ trình; 'quãng 2 và 7'; tritone; đáp án nhiễu quiz; câu bài hát gợi nhớ. Phần 'Nguồn' cuối trang: bỏ link chung musictheory.net, ghi đúng chương OMT đã mở. Lưu ý cho người giao: kiem-dinh/piano/lo-trinh.yml n15 viết 'quãng 2 ở bộ cuối Mở rộng' nhưng bộ Mở rộng chỉ có 2 trưởng; 2 thứ chỉ có ở 'Tất cả 12 quãng'. Neo #luyen-voi-cong-cu và câu 'Mỗi ngày 10 phút đều đặn hiệu quả hơn một buổi 1 tiếng mỗi tuần' (moi-ngay n7 trích) còn nguyên. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có: tritone, quãng đúng (perfect interval), quãng trưởng/thứ, quãng tăng/giảm, bậc (scale degree), quãng nghịch (đã có dissonance), arpeggio không dùng ở trang này."
+nguon:
+  - id: omt-intervals
+    bac: 2
+    ten: "Open Music Theory, Intervals"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/intervals/"
+  - id: omt-species
+    bac: 2
+    ten: "Open Music Theory, Species Counterpoint (mục về quãng nghịch)"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/species-counterpoint/"
+  - id: omt-intro-modes
+    bac: 2
+    ten: "Open Music Theory, Intro to Diatonic Modes and the Chromatic Scale"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-diatonic-modes-and-the-chromatic-scale/"
+  - id: omt-triads
+    bac: 2
+    ten: "Open Music Theory, Triads"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/triads/"
+  - id: fff-v7
+    bac: 2
+    ten: "Andre Mount, Fundamentals, Function, and Form (giáo trình mở, SUNY Geneseo), 19. The Dominant Seventh Chord"
+    link: "https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/19-the-dominant-seventh-chord/"
+  - id: omt-minor
+    bac: 2
+    ten: "Open Music Theory, Minor Scales, Scale Degrees, and Key Signatures"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/"
+  - id: soundfly
+    bac: 3
+    ten: "Soundfly, Interval Cheat Sheet: Songs to Help You Remember Common Intervals"
+    link: "https://flypaper.soundfly.com/write/interval-cheat-sheet-songs-to-help-you-remember-common-intervals/"
+  - id: macewan
+    bac: 3
+    ten: "MacEwan University, Introduction to Ear Training (giáo trình mở)"
+    link: "https://openbooks.macewan.ca/introtoeartraining/?p=95"
+nhan_dinh:
+  - id: n1
+    cau: "Nghe quãng là nghe khoảng cách giữa hai nốt."
+    loai: dinh-nghia
+    nguon:
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "OMT Intervals: quãng là khoảng cách giữa hai cao độ."
+  - id: n2
+    cau: "Giai điệu là chuỗi các quãng nối nhau."
+    loai: dinh-nghia
+    nguon:
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "OMT Intervals: quãng giai điệu là hai nốt vang lần lượt; giai điệu là các nốt nối nhau nên là chuỗi quãng giai điệu."
+  - id: n3
+    cau: "Nghe quãng là kỹ năng nền của mọi luyện tai: nghe được quãng thì hát đúng cao độ và chép lại được nhạc mình nghe."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: "Lời khuyên học tập; không cần nguồn."
+  - id: n4
+    cau: "Lý thuyết đầy đủ ở bài 9: Quãng (nhac-ly/09-quang)."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Trang đích đã chuyển: src/content/docs/nhac-ly/09-quang.md."
+  - id: n5
+    cau: "Công cụ luyện ở cuối bài (#luyen-voi-cong-cu)."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Tiêu đề 'Luyện với công cụ' có trong trang; neo #luyen-voi-cong-cu giữ nguyên theo yêu cầu của lô trước."
+  - id: n6
+    cau: "Quãng đúng gồm quãng 1, 4, 5 và 8."
+    loai: danh-muc
+    nguon:
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "OMT Intervals: quãng đúng (perfect) là quãng 1, 4, 5, 8."
+  - id: n7
+    cau: "Quãng đúng nghe vang, rỗng, vững chãi; quãng 5 đúng nghe trống một cách đẹp đẽ; quãng 4 đúng nghe hơi lửng lơ, muốn đi tiếp."
+    loai: dinh-nghia
+    nguon:
+      - omt-species
+    ket_qua: null
+    ghi_chu: "chưa chắc: các tính từ là cảm nhận chủ quan. OMT Species Counterpoint chỉ xác nhận phần cấu trúc (quãng 1, 5, 8 là consonance hoàn hảo; quãng 4 đúng được xếp riêng); không nguồn nào mở được gán 'vang, rỗng' hay 'trống'."
+  - id: n8
+    cau: "Quãng 3 và quãng 6 đều có hai loại: trưởng và thứ."
+    loai: danh-muc
+    nguon:
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "OMT Intervals: 3 trưởng/thứ (4 và 3 nửa cung), 6 trưởng/thứ (9 và 8 nửa cung)."
+  - id: n9
+    cau: "Quãng trưởng nghe sáng, quãng thứ nghe tối."
+    loai: dinh-nghia
+    nguon:
+      - omt-intro-modes
+      - omt-triads
+    ket_qua: dung
+    ghi_chu: "Liên tưởng thường gặp, như câu n1 của D3-L1 (OMT Intro to Diatonic Modes: 'darker modes sound more like a minor scale'; OMT Triads: hợp âm thứ gắn với 'sad'). Cột 'Nghe như thế nào' đã bỏ vế 'quyết định cảm xúc' (n10)."
+  - id: n10
+    cau: "Quãng 3 và 6 là nhóm quyết định cảm xúc của giai điệu và hợp âm."
+    loai: dinh-nghia
+    ket_qua: da-bo
+    ghi_chu: "Cũ: 'Đây là nhóm quyết định cảm xúc của giai điệu và hợp âm.' Đã bỏ: không nguồn nào nói hai quãng 3 và 6 'quyết định' cảm xúc; mức chắc chắn của vế này quá cao."
+  - id: n11
+    cau: "Quãng 2 và quãng 7 đều có hai loại: trưởng và thứ."
+    loai: danh-muc
+    nguon:
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "OMT Intervals: 2 thứ/trưởng (1 và 2 nửa cung), 7 thứ/trưởng (10 và 11 nửa cung)."
+  - id: n12
+    cau: "Quãng 2 và 7 là các quãng nghịch; tai muốn chúng 'giải quyết' sang quãng êm hơn."
+    loai: quy-tac
+    nguon:
+      - omt-species
+    ket_qua: da-sua
+    ghi_chu: "OMT Species Counterpoint: 'Dissonances: all seconds, sevenths, and diminished and augmented intervals'. Cũ: 'tai muốn chúng giải quyết về quãng gần nhất' (không có nguồn cho 'gần nhất'); mới: 'đây là các quãng nghịch, ... sang quãng êm hơn'."
+  - id: n13
+    cau: "Tritone là quãng 4 tăng hoặc 5 giảm."
+    loai: ten
+    nguon:
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "OMT Intervals: tritone = A4/d5."
+  - id: n14
+    cau: "Tritone gồm 6 nửa cung, chia đôi quãng tám."
+    loai: so-lieu
+    nguon:
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "OMT Intervals: A4/d5 = 6 nửa cung; 12/2 = 6."
+  - id: n15
+    cau: "Tritone nghe căng, bất ổn."
+    loai: dinh-nghia
+    nguon:
+      - omt-species
+    ket_qua: dung
+    ghi_chu: "OMT Species Counterpoint xếp mọi quãng tăng và giảm vào nhóm nghịch (dissonance)."
+  - id: n16
+    cau: "Tritone có mặt trong hợp âm át bảy (V7)."
+    loai: dinh-nghia
+    nguon:
+      - fff-v7
+    ket_qua: da-sua
+    ghi_chu: "Mount ch. 19: giữa nốt dẫn và nốt bảy của V7 có tritone (Si–Fa trong Sol7). Cũ: 'Căng nhất ... dấu hiệu của át bảy'; mới: 'Căng ... có mặt trong hợp âm át bảy (V7)'. 'Căng nhất' và 'dấu hiệu của' không có nguồn."
+  - id: n17
+    cau: "Nên phân biệt trưởng/thứ trước, đếm số sau: nghe 'sáng hay tối' dễ hơn đếm 3 hay 6, và khi đã biết trưởng/thứ chỉ còn 2–3 ứng viên."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n18
+    cau: "Kỹ thuật 1: hát lại cả hai nốt khi nghe quãng giai điệu."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n19
+    cau: "Kỹ thuật 2: với quãng hòa âm, nghe nốt trầm trước, hát nó lên rồi tìm nốt cao."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n20
+    cau: "Quãng 3 trưởng là bậc 3 của gam trưởng; quãng 3 thứ là bậc 3 của gam thứ (tính từ chủ âm)."
+    loai: dinh-nghia
+    nguon:
+      - omt-intervals
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: "Đô–Mi = 4 nửa cung = 3 trưởng, Đô–Mi♭ = 3 nửa cung = 3 thứ (OMT Intervals); bậc 3 của gam thứ hạ nửa cung so với gam trưởng (OMT Minor Scales)."
+  - id: n21
+    cau: "Nhiều quãng có một bài hát quen gợi nhớ (bảng ở trang Luyện tai)."
+    loai: ve-site
+    ket_qua: da-sua
+    ghi_chu: "Bảng ở luyen-tai/index có bài gợi nhớ cho 9 loại quãng (2 thứ, 2 trưởng, 3 thứ, 3 trưởng, 4 đúng, tritone, 5 đúng, 6 trưởng, 8 đúng); chưa có 6 thứ, 7 thứ, 7 trưởng. Cũ: 'Mỗi quãng có ít nhất một bài hát mở đầu bằng nó', sai với chính bảng."
+  - id: n22
+    cau: "Quãng 4 đúng gợi nhớ bằng 'Here Comes the Bride', quãng 5 đúng bằng 'Twinkle Twinkle'."
+    loai: so-lieu
+    nguon:
+      - soundfly
+      - macewan
+    ket_qua: dung
+    ghi_chu: "Soundfly và MacEwan Intro to Ear Training đều xếp 'Here Comes the Bride' vào 4 đúng đi lên và 'Twinkle Twinkle' vào 5 đúng đi lên; trùng bảng ở luyen-tai/index."
+  - id: n23
+    cau: "Bộ Khởi động của công cụ gồm 3 trưởng, 5 đúng, 8 đúng, kiểu lần lượt đi lên."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "interval-trainer.js (cũ): SETS start=[4,7,12], nhãn 'Khởi động: 3 trưởng, 5 đúng, 8 đúng'; chế độ 'Lần lượt, đi lên'."
+  - id: n24
+    cau: "Bộ Cơ bản thêm 3 thứ và 4 đúng."
+    loai: ve-site
+    ket_qua: da-sua
+    ghi_chu: "interval-trainer.js: basic 'Cơ bản: thêm 3 thứ, 4 đúng'. Cũ: 'Thêm 3 thứ, 6 trưởng, 4 đúng (bộ Cơ bản)'; 6 trưởng thuộc bộ Mở rộng."
+  - id: n25
+    cau: "Công cụ có kiểu đi xuống và kiểu cùng lúc (quãng hòa âm)."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "interval-trainer.js: chế độ 'Lần lượt, đi lên', 'Lần lượt, đi xuống', 'Cùng lúc'."
+  - id: n26
+    cau: "Bộ Mở rộng thêm 2 trưởng và 6 trưởng; chọn Tất cả 12 quãng thì gặp thêm 2 thứ, 6 thứ, 7 thứ, 7 trưởng và tritone."
+    loai: ve-site
+    ket_qua: da-sua
+    ghi_chu: "interval-trainer.js: more 'Mở rộng: thêm 2 trưởng, 6 trưởng'; all 'Tất cả 12 quãng'. Cũ: bộ Mở rộng bị tả như thể có cả 2 thứ; thực tế 2 thứ chỉ có ở 'Tất cả'."
+  - id: n27
+    cau: "Mỗi ngày 10 phút đều đặn hiệu quả hơn một buổi 1 tiếng mỗi tuần."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n28
+    cau: "Khi đạt đúng khoảng 80% ở một bộ, nên lên bộ tiếp theo."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n29
+    cau: "Lỗi thường gặp: nhầm 4 đúng với 5 đúng; nhầm 3 trưởng với 3 thứ khi đi xuống; đoán mò khi nghe cùng lúc. Cách chữa: giai điệu gợi nhớ, tập riêng bộ đi xuống, tách nốt."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n30
+    cau: "Quiz: nghe quãng 'sáng' thì nghĩ đến quãng 3 hoặc 6 trưởng, không phải quãng đúng hay quãng 2."
+    loai: dinh-nghia
+    nguon:
+      - omt-intro-modes
+      - omt-triads
+    ket_qua: dung
+    ghi_chu: "Như n9."
+  - id: n31
+    cau: "Quiz: lý do nên phân biệt trưởng/thứ trước là cảm giác sáng/tối dễ nghe hơn, giúp loại bớt ứng viên; không phải vì trưởng và thứ có cùng số nửa cung."
+    loai: dinh-nghia
+    nguon:
+      - omt-intervals
+    ket_qua: da-sua
+    ghi_chu: "Cũ, đáp án nhiễu: 'Vì quãng trưởng luôn rộng hơn quãng thứ'. Câu đó thật ra đúng (cùng số, trưởng hơn thứ 1 nửa cung, OMT Intervals), nên không là đáp án sai tốt. Mới: 'Vì quãng trưởng và quãng thứ có cùng số nửa cung', sai hẳn (3 trưởng 4 nửa cung, 3 thứ 3)."
+  - id: n32
+    cau: "Quiz: quãng gồm 6 nửa cung và có mặt trong hợp âm át bảy (V7) là tritone; ví dụ Si–Fa trong Sol7 (Sol–Si–Rê–Fa) ở giọng Đô trưởng."
+    loai: so-lieu
+    nguon:
+      - omt-intervals
+      - fff-v7
+    ket_qua: da-sua
+    ghi_chu: "Cũ: 'Quãng nào căng nhất ... dấu hiệu của át bảy?'. Mới hỏi theo số nửa cung và V7, kiểm được. Si–Fa = 6 nửa cung (OMT Intervals); Sol7 = Sol–Si–Rê–Fa."
+  - id: n33
+    cau: "Quiz: khi nghe quãng hòa âm mà bí, tách hai nốt: nghe nốt trầm trước, hát nó lên, rồi tìm nốt cao."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+khuong_nhac: []
+doi_chu:
+  - cu: 'Có "màu": trưởng sáng, thứ tối. Đây là nhóm quyết định cảm xúc của giai điệu và hợp âm.'
+    moi: 'Có "màu": trưởng sáng, thứ tối.'
+    ly_do: "n10 (da-bo): vế 'quyết định cảm xúc' không có nguồn."
+  - cu: Căng, xít nhau (quãng 2) hoặc chênh vênh (quãng 7); tai muốn chúng "giải quyết" về quãng gần nhất.
+    moi: Căng, xít nhau (quãng 2) hoặc chênh vênh (quãng 7); đây là các quãng nghịch, tai muốn chúng "giải quyết" sang quãng êm hơn.
+    ly_do: "n12 (da-sua): theo OMT Species Counterpoint, quãng 2 và 7 là quãng nghịch; 'gần nhất' không có nguồn."
+  - cu: Căng nhất, chia đôi quãng tám (6 nửa cung). Nghe gai gai, bất ổn — dấu hiệu của át bảy (V7).
+    moi: Căng, chia đôi quãng tám (6 nửa cung). Nghe gai gai, bất ổn — có mặt trong hợp âm át bảy (V7).
+    ly_do: "n16 (da-sua): 'căng nhất' là so sánh không nguồn; 'dấu hiệu của át bảy' thành 'có mặt trong V7' (Mount ch. 19)."
+  - cu: 4. Gắn với giai điệu quen thuộc. Mỗi quãng có ít nhất một bài hát mở đầu bằng nó — xem bảng ở trang Luyện tai. Khi phân vân giữa 4 đúng và 5 đúng, hát thầm "Here Comes the Bride" (4 đúng) rồi "Twinkle Twinkle" (5 đúng), cái nào khớp thì đó là đáp án.
+    moi: 4. Gắn với giai điệu quen thuộc. Nhiều quãng có một bài hát quen gợi nhớ — xem bảng ở trang Luyện tai. Khi phân vân giữa 4 đúng và 5 đúng, hát thầm "Here Comes the Bride" (4 đúng) rồi "Twinkle Twinkle" (5 đúng), cái nào khớp thì đó là đáp án.
+    ly_do: "n21 (ve-site, da-sua): chính bảng ở trang Luyện tai không có bài cho 6 thứ, 7 thứ và 7 trưởng."
+  - cu: Thêm 3 thứ, 6 trưởng, 4 đúng (bộ Cơ bản).
+    moi: Thêm 3 thứ và 4 đúng (bộ Cơ bản).
+    ly_do: "n24 (ve-site, da-sua): bộ Cơ bản của công cụ là 3 thứ và 4 đúng; 6 trưởng ở bộ Mở rộng."
+  - cu: Cuối cùng mới thêm 2 thứ/trưởng, 7 thứ/trưởng và tritone (bộ Mở rộng).
+    moi: "Thêm 2 trưởng và 6 trưởng (bộ Mở rộng), rồi chọn Tất cả 12 quãng để gặp nốt các quãng còn lại: 2 thứ, 6 thứ, 7 thứ, 7 trưởng và tritone."
+    ly_do: "n26 (ve-site, da-sua): theo interval-trainer.js, 2 thứ chỉ có ở 'Tất cả 12 quãng'."
+  - cu: Open Music Theory; musictheory.net.
+    moi: "Open Music Theory: Intervals (tên, số nửa cung, tritone); Species Counterpoint (quãng nghịch)."
+    ly_do: 'Mục Nguồn: thay bằng các nguồn đã mở khi kiểm định (lượt 1 D3-L6); bỏ link chung.'
+  - cu:
+      - 'câu hỏi: Vì sao nên phân biệt trưởng/thứ trước khi đếm số quãng? | ✓ Vì cảm giác sáng/tối dễ nghe hơn đếm số, giúp loại bớt ứng viên | Vì quãng trưởng luôn rộng hơn quãng thứ | Vì số quãng không quan trọng | Nghe "sáng hay tối" là phản xạ nhanh; từ đó chỉ còn 2–3 quãng cùng tính chất để chọn.'
+      - "câu hỏi: Quãng nào căng nhất và thường báo hiệu hợp âm át bảy (V7)? | 5 đúng | 7 trưởng | ✓ Tritone (4 tăng / 5 giảm) | Tritone gồm 6 nửa cung, ví dụ Si–Fa trong hợp âm Sol7 (Sol–Si–Rê–Fa) ở giọng Đô trưởng."
+    moi:
+      - 'câu hỏi: Vì sao nên phân biệt trưởng/thứ trước khi đếm số quãng? | ✓ Vì cảm giác sáng/tối dễ nghe hơn đếm số, giúp loại bớt ứng viên | Vì quãng trưởng và quãng thứ có cùng số nửa cung | Vì số quãng không quan trọng | Nghe "sáng hay tối" là phản xạ nhanh; từ đó chỉ còn 2–3 quãng cùng tính chất để chọn.'
+      - "câu hỏi: Quãng nào gồm 6 nửa cung và có mặt trong hợp âm át bảy (V7)? | 5 đúng | 7 trưởng | ✓ Tritone (4 tăng / 5 giảm) | Tritone gồm 6 nửa cung, ví dụ Si–Fa trong hợp âm Sol7 (Sol–Si–Rê–Fa) ở giọng Đô trưởng."
+    ly_do: "n31 (da-sua): đáp án nhiễu cũ là câu đúng.; n32 (da-sua): hỏi theo điều kiểm được."

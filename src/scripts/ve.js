@@ -116,13 +116,14 @@ export function soPhimTrang(thap, cao) {
  * Bàn phím piano bằng SVG, từ phím `thap` đến `cao` (số MIDI, hai đầu là phím trắng), tô các phím trong `to`. Phím trắng
  * ghi tên hai hệ (Đô, Rê… và chữ cái; phím Đô ghi cả số quãng tám: C4). Mỗi phím mang data-m (số MIDI) và
  * data-ten (tên đọc lên khi bấm). Hình dựng sẵn lúc build để hiện ngay, không xô bố cục; src/scripts/ban-phim.js thêm
- * phần bấm được (vai trò nút, phím mũi tên) khi trang chạy JavaScript.
+ * phần bấm được (vai trò nút, phím mũi tên) khi trang chạy JavaScript. Hình phím của công cụ luyện tai (src/scripts/luyen-tai.js)
+ * tô thêm nhóm phím thứ hai `to2` (lớp to-2, màu khác; phím có cả trong `to` thì theo `to`) và đặt nhãn riêng `nhan`.
  */
-export function veBanPhim({ thap, cao, to = [] }) {
+export function veBanPhim({ thap, cao, to = [], to2 = [], nhan: nhanRieng }) {
 	const trang = [];
 	const den = [];
 	let x = 1;
-	const coTo = (m) => (to.includes(m) ? ' to' : '');
+	const coTo = (m) => (to.includes(m) ? ' to' : to2.includes(m) ? ' to-2' : '');
 	for (let m = thap; m <= cao; m++) {
 		if (laPhimDen(m)) continue;
 		const pc = ((m % 12) + 12) % 12;
@@ -141,7 +142,9 @@ export function veBanPhim({ thap, cao, to = [] }) {
 		x += PHIM_RONG;
 	}
 	const soTrang = trang.length;
-	const nhan = `Bàn phím piano từ ${tenPhim(thap)} đến ${tenPhim(cao)}` + (to.length ? `; các phím được tô: ${to.map(tenPhim).join(', ')}` : '');
+	const nhan = nhanRieng
+		? `${nhanRieng}: ${[...new Set([...to2, ...to])].map(tenPhim).join(', ')}`
+		: `Bàn phím piano từ ${tenPhim(thap)} đến ${tenPhim(cao)}` + (to.length ? `; các phím được tô: ${to.map(tenPhim).join(', ')}` : '');
 	return {
 		soTrang,
 		svg:

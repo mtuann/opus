@@ -15,13 +15,26 @@ export const GAM = {
 	natural: { ten: 'Gam thứ tự nhiên', buoc: [0, 2, 3, 5, 7, 8, 10] },
 	harmonic: { ten: 'Gam thứ hòa âm', buoc: [0, 2, 3, 5, 7, 8, 11] },
 	melodic: { ten: 'Gam thứ giai điệu (đi lên)', buoc: [0, 2, 3, 5, 7, 9, 11] },
+	dorian: { ten: 'Điệu Dorian', buoc: [0, 2, 3, 5, 7, 9, 10] },
+	phrygian: { ten: 'Điệu Phrygian', buoc: [0, 1, 3, 5, 7, 8, 10] },
+	lydian: { ten: 'Điệu Lydian', buoc: [0, 2, 4, 6, 7, 9, 11] },
+	mixolydian: { ten: 'Điệu Mixolydian', buoc: [0, 2, 4, 5, 7, 9, 10] },
+	locrian: { ten: 'Điệu Locrian', buoc: [0, 1, 3, 5, 6, 8, 10] },
+	// gam năm nốt: `chu` là bậc chữ cái của từng nốt (letters), để viết đúng tên (ngũ cung trưởng bỏ bậc 4 và 7)
+	pentaMajor: { ten: 'Ngũ cung trưởng', buoc: [0, 2, 4, 7, 9], chu: [0, 1, 2, 4, 5] },
+	pentaMinor: { ten: 'Ngũ cung thứ', buoc: [0, 3, 5, 7, 10], chu: [0, 2, 3, 4, 6] },
 };
-/** Hợp âm ba: [bậc chữ cái tính từ nốt gốc, số nửa cung] (CHORDS, phần hợp âm ba). */
+/** Hợp âm ba và hợp âm bảy: [bậc chữ cái tính từ nốt gốc, số nửa cung] (CHORDS). */
 export const HOP_AM = {
 	maj: { ten: 'Hợp âm trưởng', ky_hieu: '', not: [[0, 0], [2, 4], [4, 7]] },
 	min: { ten: 'Hợp âm thứ', ky_hieu: 'm', not: [[0, 0], [2, 3], [4, 7]] },
 	dim: { ten: 'Hợp âm giảm', ky_hieu: '°', not: [[0, 0], [2, 3], [4, 6]] },
 	aug: { ten: 'Hợp âm tăng', ky_hieu: '+', not: [[0, 0], [2, 4], [4, 8]] },
+	maj7: { ten: 'Hợp âm bảy trưởng', ky_hieu: 'maj7', not: [[0, 0], [2, 4], [4, 7], [6, 11]] },
+	dom7: { ten: 'Hợp âm bảy át', ky_hieu: '7', not: [[0, 0], [2, 4], [4, 7], [6, 10]] },
+	min7: { ten: 'Hợp âm bảy thứ', ky_hieu: 'm7', not: [[0, 0], [2, 3], [4, 7], [6, 10]] },
+	hdim7: { ten: 'Hợp âm bảy nửa giảm', ky_hieu: 'ø7', not: [[0, 0], [2, 3], [4, 6], [6, 10]] },
+	dim7: { ten: 'Hợp âm bảy giảm', ky_hieu: '°7', not: [[0, 0], [2, 3], [4, 6], [6, 9]] },
 };
 
 /**
@@ -81,8 +94,8 @@ export function viet(goc, congThuc) {
 	});
 }
 /** Gam từ chủ âm, kèm nốt thứ tám (scale). */
-export const gam = (goc, loai) => viet(goc, GAM[loai].buoc.map((b, i) => [i, b]).concat([[7, 12]]));
-/** Hợp âm ba từ nốt gốc (chord). */
+export const gam = (goc, loai) => viet(goc, GAM[loai].buoc.map((b, i) => [GAM[loai].chu?.[i] ?? i, b]).concat([[7, 12]]));
+/** Hợp âm ba hay hợp âm bảy từ nốt gốc (chord). */
 export const hopAm = (goc, loai) => viet(goc, HOP_AM[loai].not);
 
 /** Giọng theo chủ âm của giọng trưởng ("Bb") (keyByTonic). */

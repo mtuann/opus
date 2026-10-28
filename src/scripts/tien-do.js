@@ -38,6 +38,9 @@ export function ghiNgay(truong, soLuong = 1) {
 	bao();
 }
 
+/** Số đã ghi hôm nay của một hoạt động (days[hôm nay][trường], như getDay của site cũ), ví dụ soHomNay("intervals"). */
+export const soHomNay = (truong) => doc().days[homNay()]?.[truong] || 0;
+
 /** Kho dài hạn (không theo ngày): bài đã học, mốc nghe… */
 export function layKho(ten, macDinh) {
 	const data = doc();

@@ -1,0 +1,336 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa luyen-tai/index
+trang: src/content/docs/luyen-tai/index.md
+nguon_cu: ../opus-zero/docs/luyen-tai/index.md
+tang: khung
+lan:
+  - so: 1
+    ngay: 2026-10-28
+    nhanh: moi/d3-l6
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Sonnet 5.5 (D3-L6 lượt 1)"
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: "Trang chỉ mục Luyện tai (tầng khung). Hầu hết là câu về site (lộ trình, link, bảng bài tập): kiểm trên trang trong repo hay bản cũ ../opus-zero/docs/ và JavaScript cũ; giai điệu gợi nhớ kiểm bằng Soundfly và MacEwan (bậc 3), quãng của tác phẩm kiểm bằng Mutopia (K. 545, Tchaikovsky Op. 39/16, Chopin Op. 9/2). Câu giữ cho lô trước: bảng giai điệu gợi nhớ (có), câu 'Luyện tai hiệu quả nhất khi bạn phát ra âm thanh, không chỉ nghe' (bat-dau/bai-0 trích): còn nguyên. Trang trỏ tới nhiều trang chưa chuyển (piano/*, luyen-tap/*, nhan-dien/*, lich-su). Sửa trang: 'hai nốt mở đầu' thành 'hai nốt liền nhau ở đầu một bài hát'; bỏ K. 2 Fa–La; bỏ thông tin giá của ba công cụ khác. Không kiểm được: Largo 'Going Home' Mi–Sol theo bản gốc (chỉ bản của site); xung đột nguồn về Maria (MacEwan nói 7 trưởng, Soundfly và Wikipedia nói tritone). Thuật ngữ chưa có trong src/data/thuat-ngu.yml: ear training (luyện tai), quãng giai điệu, 2 thứ/2 trưởng/3 thứ/3 trưởng/4 đúng/tritone/5 đúng/6 trưởng/8 đúng, nốt lấy đà (pickup), chơi theo tai."
+nguon:
+  - id: wiki-ear
+    bac: 3
+    ten: "Wikipedia, Ear training"
+    link: "https://en.wikipedia.org/wiki/Ear_training"
+  - id: omt-intervals
+    bac: 2
+    ten: "Open Music Theory, Intervals"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/intervals/"
+  - id: soundfly
+    bac: 3
+    ten: "Soundfly, Interval Cheat Sheet: Songs to Help You Remember Common Intervals"
+    link: "https://flypaper.soundfly.com/write/interval-cheat-sheet-songs-to-help-you-remember-common-intervals/"
+  - id: macewan
+    bac: 3
+    ten: "MacEwan University, Introduction to Ear Training (giáo trình mở)"
+    link: "https://openbooks.macewan.ca/introtoeartraining/?p=95"
+  - id: wiki-maria
+    bac: 3
+    ten: "Wikipedia, Maria (West Side Story song)"
+    link: "https://en.wikipedia.org/wiki/Maria_(West_Side_Story_song)"
+  - id: mutopia-mozart
+    bac: 2
+    ten: "Mutopia Project, Mozart, Sonata K. 545, chương 1 (bản LilyPond)"
+    link: "https://www.mutopiaproject.org/ftp/MozartWA/KV545/K545-1/K545-1.ly"
+  - id: mutopia-tchai
+    bac: 2
+    ten: "Mutopia Project, Tchaikovsky, Old French Song, Op. 39 số 16 (bản LilyPond)"
+    link: "https://www.mutopiaproject.org/ftp/TchaikovskyPI/O39/16OldFrenchSong/16OldFrenchSong.ly"
+  - id: wiki-amazing
+    bac: 3
+    ten: "Wikipedia, Amazing Grace"
+    link: "https://en.wikipedia.org/wiki/Amazing_Grace"
+  - id: wiki-ah-vous
+    bac: 3
+    ten: "Wikipedia, Ah! vous dirai-je, Maman"
+    link: "https://en.wikipedia.org/wiki/Ah!_vous_dirai-je,_Maman"
+  - id: mutopia-chopin
+    bac: 2
+    ten: "Mutopia Project, Chopin, Nocturne Op. 9 số 2 (bản LilyPond)"
+    link: "https://www.mutopiaproject.org/ftp/ChopinFF/O9/chopin_nocturne_op9_n2/chopin_nocturne_op9_n2.ly"
+  - id: wiki-hanschen
+    bac: 3
+    ten: "Wikipedia, Hänschen klein"
+    link: "https://en.wikipedia.org/wiki/H%C3%A4nschen_klein"
+nhan_dinh:
+  - id: n1
+    cau: "Luyện tai (ear training) là tập nhận ra bằng tai những gì ta học bằng mắt trong nhạc lý: quãng, hợp âm, gam, tiết tấu."
+    loai: dinh-nghia
+    nguon:
+      - wiki-ear
+    ket_qua: dung
+    ghi_chu: "Wikipedia Ear training (bậc 3): kỹ năng nhận ra cao độ, quãng, hợp âm, tiết tấu bằng tai."
+  - id: n2
+    cau: "Luyện tai giúp bạn 'nghe ra' cấu trúc của nhạc cổ điển thay vì chỉ nghe thấy một khối âm thanh."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n3
+    cau: "Lộ trình 6 bài: Nghe quãng, Nghe hợp âm, Nghe gam và điệu thức, Nghe tiết tấu, Nghe tiến trình hòa âm, Chơi theo tai bên phím đàn, theo thứ tự đó."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Sáu trang luyen-tai/* đã chuyển, đúng tên và thứ tự trong src/data/trang.yml."
+  - id: n4
+    cau: "Bài 1 nghe quãng là nền tảng của mọi thứ: nghe được quãng thì nghe được giai điệu."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n5
+    cau: "Nghe hợp âm có màu trưởng/thứ/giảm/tăng, nghe nốt trầm để đoán thể đảo, hợp âm bảy."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "nghe-hop-am: 'Bốn màu của hợp âm ba', 'Nghe nốt trầm để đoán thể đảo', 'Hợp âm bảy: năm sắc thái'."
+  - id: n6
+    cau: "Nghe gam: dấu hiệu nốt 3, ba dạng gam thứ, tìm 'một nốt khác biệt' của điệu thức, nghe bậc trong gam."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "nghe-gam có đủ bốn mục ấy."
+  - id: n7
+    cau: "Nghe tiết tấu: đoán nhịp qua phách mạnh, nhịp đơn/kép, gõ lại tiết tấu, syncopation."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "nghe-tiet-tau có đủ bốn mục ấy."
+  - id: n8
+    cau: "Nghe tiến trình hòa âm: nghe bè trầm, những tiến trình gặp khi tập đàn, bốn loại kết."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "nghe-tien-trinh có đủ ba mục ấy."
+  - id: n9
+    cau: "Chơi theo tai: tìm lại một giai điệu quen trên phím, đệm bằng I, IV, V, dịch sang Sol trưởng và Fa trưởng, nghe câu đầu trong đầu trước khi chơi."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "choi-bang-tai có đủ các mục 1 đến 5."
+  - id: n10
+    cau: "Bài 1, 2, 3 và 5 có công cụ luyện ngay trong trang: nhận biết quãng, hợp âm, gam và kết."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "nghe-quang (interval-trainer), nghe-hop-am (chord-trainer), nghe-gam (scale-trainer), nghe-tien-trinh (cadence-trainer) mỗi trang có công cụ; nghe-tiet-tau không có (đúng với 'bài 4')."
+  - id: n11
+    cau: "Bài 4 luyện với công cụ Tiết tấu và máy đếm nhịp; bài 6 làm ở đàn, kèm Hát lại và Chép giai điệu."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "luyen-tap/tiet-tau, metronome, hat-lai, chep-giai-dieu có ở bản cũ ../opus-zero/docs/luyen-tap/; chưa chuyển ('sắp có')."
+  - id: n12
+    cau: "Mỗi ngày 10 phút đều đặn hiệu quả hơn một buổi dài mỗi tuần."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n13
+    cau: "Luyện tai hiệu quả nhất khi bạn phát ra âm thanh, không chỉ nghe."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: "Câu giữ nguyên theo yêu cầu của bat-dau/bai-0 (trích)."
+  - id: n14
+    cau: "Hát lại chấm cao độ giọng hát của bạn qua micro."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "luyen-tap/hat-lai.md và pitch.js (cũ): phát một nốt hay quãng, đo cao độ qua micro, kim, ±50 cent."
+  - id: n15
+    cau: "Chơi theo luyện khớp cao độ theo thời gian thực."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "luyen-tap/choi-theo.md (cũ): chấm từng nốt qua micro hay MIDI."
+  - id: n16
+    cau: "Chép giai điệu luyện biến âm thanh thành nốt nhạc."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "luyen-tap/chep-giai-dieu.md (cũ)."
+  - id: n17
+    cau: "Bước tiếp theo là nghe kết cấu và phong cách: Luyện nghe nhận diện và Nghe mù."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "nhan-dien/luyen-nghe và nhan-dien/nghe-mu: giữ nguyên như lô trước yêu cầu; hai trang chưa chuyển."
+  - id: n18
+    cau: "Cách nhanh nhất để nhớ một quãng là gắn nó với hai nốt liền nhau ở đầu một bài hát đã biết."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: "Cũ: 'hai nốt mở đầu'; mới: 'hai nốt liền nhau ở đầu một bài hát' (đúng nghĩa cho quãng giai điệu)."
+  - id: n19
+    cau: "Cột thứ ba dùng các giai điệu phổ biến; cột cuối lấy ví dụ từ bài tập trên site."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Cột 3 và 4 của bảng; link tới 10-bai-dau-tien và tac-pham/*."
+  - id: n20
+    cau: "Quãng 2 thứ: 1 nửa cung; 2 trưởng: 2; 3 thứ: 3; 3 trưởng: 4; 4 đúng: 5; 4 tăng/5 giảm: 6; 5 đúng: 7; 6 trưởng: 9; 8 đúng: 12."
+    loai: so-lieu
+    nguon:
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "OMT Intervals, bảng số nửa cung."
+  - id: n21
+    cau: "Giai điệu gợi nhớ 2 thứ: nhạc phim Jaws."
+    loai: so-lieu
+    nguon:
+      - soundfly
+      - macewan
+    ket_qua: dung
+    ghi_chu: "Soundfly và MacEwan xếp Jaws vào 2 thứ đi lên."
+  - id: n22
+    cau: "2 trưởng: Happy Birthday (từ 'py' sang 'birth')."
+    loai: so-lieu
+    nguon:
+      - soundfly
+      - macewan
+    ket_qua: dung
+    ghi_chu: "Soundfly/MacEwan: Happy Birthday = 2 trưởng đi lên (hai chữ 'py' → 'birth')."
+  - id: n23
+    cau: "3 thứ: Greensleeves."
+    loai: so-lieu
+    nguon:
+      - soundfly
+      - macewan
+    ket_qua: dung
+    ghi_chu: "Soundfly/MacEwan: Greensleeves = 3 thứ đi lên."
+  - id: n24
+    cau: "3 trưởng: When the Saints Go Marching In."
+    loai: so-lieu
+    nguon:
+      - soundfly
+      - macewan
+    ket_qua: dung
+    ghi_chu: "Soundfly/MacEwan: Saints = 3 trưởng đi lên."
+  - id: n25
+    cau: "4 đúng: Here Comes the Bride (hành khúc cưới của Wagner)."
+    loai: so-lieu
+    nguon:
+      - soundfly
+      - macewan
+    ket_qua: dung
+    ghi_chu: "Soundfly/MacEwan: Bridal Chorus = 4 đúng đi lên; Wagner (Lohengrin) là tác giả."
+  - id: n26
+    cau: "4 tăng/5 giảm: Maria (West Side Story)."
+    loai: so-lieu
+    nguon:
+      - soundfly
+      - wiki-maria
+      - macewan
+    ket_qua: dung
+    ghi_chu: "Soundfly và Wikipedia Maria (West Side Story song): tritone ở chủ đề chính. MacEwan lại xếp Maria vào 7 trưởng; theo hai nguồn kia và theo bản nhạc, tritone đúng. Đề nghị bỏ qua mâu thuẫn của MacEwan."
+  - id: n27
+    cau: "5 đúng: Twinkle Twinkle Little Star (từ 'kle' đầu tiên sang 'twin' thứ hai)."
+    loai: so-lieu
+    nguon:
+      - soundfly
+      - macewan
+    ket_qua: dung
+    ghi_chu: "Soundfly/MacEwan: Twinkle Twinkle = 5 đúng đi lên."
+  - id: n28
+    cau: "6 trưởng: My Bonnie Lies over the Ocean."
+    loai: so-lieu
+    nguon:
+      - soundfly
+      - macewan
+    ket_qua: dung
+    ghi_chu: "Soundfly/MacEwan: My Bonnie = 6 trưởng đi lên."
+  - id: n29
+    cau: "8 đúng: Somewhere over the Rainbow."
+    loai: so-lieu
+    nguon:
+      - soundfly
+      - macewan
+    ket_qua: dung
+    ghi_chu: "Soundfly/MacEwan: Somewhere over the Rainbow = 8 đúng đi lên."
+  - id: n30
+    cau: "Ode to Joy, nốt thứ hai sang nốt thứ ba: Mi–Fa (bài 3) là quãng 2 thứ."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Bản cũ bài 3: E E F G: Mi→Fa (bước thứ hai→thứ ba) = 1 nửa cung. Câu 'nốt thứ hai sang nốt thứ ba' đúng (Mi, Mi, Fa)."
+  - id: n31
+    cau: "Frère Jacques: Đô–Rê (bài 5) là quãng 2 trưởng."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Bản cũ bài 5: C D."
+  - id: n32
+    cau: "Greensleeves: La–Đô (bài 7) và Largo 'Going Home': Mi–Sol (bài 8) là quãng 3 thứ."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Bản cũ bài 7: nốt lấy đà A rồi c (La–Đô); bài 8: E rồi G (Mi–Sol). Cả hai bằng 3 nửa cung."
+  - id: n33
+    cau: "Mozart: Sonata K. 545: Đô–Mi là quãng 3 trưởng."
+    loai: so-lieu
+    nguon:
+      - mutopia-mozart
+    ket_qua: dung
+    ghi_chu: "Mutopia K545-1 (LilyPond): 'c2 e4 g' = C5–E5, 4 nửa cung. Trang tac-pham/mozart-k545 chưa chuyển."
+  - id: n34
+    cau: "Amazing Grace, từ nốt lấy đà: Sol–Đô (bài 6) và Tchaikovsky: Bài ca Pháp cổ, từ nốt lấy đà: Rê–Sol, là quãng 4 đúng."
+    loai: so-lieu
+    nguon:
+      - mutopia-tchai
+      - wiki-amazing
+    ket_qua: dung
+    ghi_chu: "Mutopia Tchaikovsky Op. 39/16: nốt lấy đà d8 rồi g8 (Rê–Sol, 5 nửa cung); Amazing Grace: nốt lấy đà bậc 5 rồi bậc 1; bài 6 của site: G rồi c."
+  - id: n35
+    cau: "Ah! vous dirai-je, maman (bài 2): Đô–Sol là quãng 5 đúng."
+    loai: so-lieu
+    nguon:
+      - wiki-ah-vous
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "Giai điệu thật C C G G; Đô–Sol = 7 nửa cung."
+  - id: n36
+    cau: "Chopin: Nocturne Op. 9 số 2, từ nốt lấy đà: Si♭–Sol là quãng 6 trưởng."
+    loai: so-lieu
+    nguon:
+      - mutopia-chopin
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "Mutopia Chopin Op. 9/2: \\partial 8 bf8 rồi g'4.: Si♭4–Sol5, 9 nửa cung."
+  - id: n37
+    cau: "Các cột 'bài bạn tập trên site' trỏ tới 10-bai-dau-tien, mozart-k545, tchaikovsky-bai-ca-phap-co, chopin-nocturne-op9-2, fur-elise, minuet-sol."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Neo #3-ode-to-joy, #5-frere-jacques, #7-greensleeves, #8-largo-going-home, #6-amazing-grace, #2-ah-vous-dirai-je-maman-twinkle-twinkle, #4-hanschen-klein có ở bản cũ 10-bai-dau-tien. Chỉ fur-elise đã chuyển; các trang còn lại chưa chuyển ('sắp có')."
+  - id: n38
+    cau: "Mozart: Minuet Fa trưởng K. 2: Fa–La là quãng 3 trưởng."
+    loai: ve-site
+    ket_qua: da-bo
+    ghi_chu: "Hàng 3 trưởng bản cũ nêu 'Mozart: Minuet Fa trưởng K. 2: Fa–La'; đã bỏ vì không kiểm được trên bản nhạc mở (chỉ còn K. 545: Đô–Mi)."
+  - id: n39
+    cau: "Für Elise mở đầu bằng quãng 2 thứ (Mi–Rê♯), đi xuống."
+    loai: so-lieu
+    nguon:
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "Giai điệu thật E–D♯ (Mi–Rê♯) = 1 nửa cung xuống; trang fur-elise của site (đã chuyển) cũng ghi e rồi ^d."
+  - id: n40
+    cau: "Hänschen klein (bài 4) mở đầu bằng quãng 3 thứ (Sol–Mi), đi xuống."
+    loai: so-lieu
+    nguon:
+      - wiki-hanschen
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: "Giai điệu thật G E E; Sol–Mi = 3 nửa cung xuống."
+  - id: n41
+    cau: "Minuet Sol trưởng mở đầu bằng quãng 5 đúng (Rê–Sol), đi xuống."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Bản cũ 10-bai-dau-tien (bài 9, Minuet Sol) và piano/tac-pham/minuet-sol.md: d rồi G (Rê–Sol xuống) = 7 nửa cung; chưa chuyển."
+  - id: n42
+    cau: "Công cụ khác: musictheory.net Exercises (quãng, hợp âm, gam), teoria.com (bài giảng, bài luyện tai), ToneGym (bài luyện tai dạng trò chơi)."
+    loai: dinh-nghia
+    nguon:
+      - wiki-ear
+    ket_qua: da-sua
+    ghi_chu: "Cũ có thêm 'miễn phí', 'bản miễn phí giới hạn' và dòng tên ứng dụng (thông tin mau: giá, bản miễn phí); đã bỏ. Ba trang tồn tại và đúng loại bài theo các mục kiểm trên site; mô tả ngắn không nêu giá."
+khuong_nhac: []
+doi_chu:
+  - cu: Cách nhanh nhất để nhớ một quãng là gắn nó với hai nốt mở đầu của một bài hát bạn đã biết. Cột thứ ba dùng các giai điệu phổ biến; cột cuối lấy ví dụ từ những bài bạn tập trên site, ở 10 bài đầu tiên và các bài học tác phẩm. Hãy thay bằng bài bạn quen hơn.
+    moi: Cách nhanh nhất để nhớ một quãng là gắn nó với hai nốt liền nhau ở đầu một bài hát bạn đã biết. Cột thứ ba dùng các giai điệu phổ biến; cột cuối lấy ví dụ từ những bài bạn tập trên site, ở 10 bài đầu tiên và các bài học tác phẩm. Hãy thay bằng bài bạn quen hơn.
+    ly_do: "n18 (da-sua): 'hai nốt mở đầu' mơ hồ (mở đầu bài hay mở đầu câu)."
+  - cu: "Mozart: Minuet Fa trưởng K. 2: Fa–La; Mozart: Sonata K. 545: Đô–Mi"
+    moi: "Mozart: Sonata K. 545: Đô–Mi"
+    ly_do: "n38 (da-bo): không kiểm được Fa–La của K. 2 trên bản nhạc mở."
+  - cu:
+      - "musictheory.net – Exercises: luyện quãng, hợp âm, gam; miễn phí."
+      - "teoria.com: bài luyện tai có giải thích."
+      - "ToneGym: bài luyện dạng trò chơi; có bản miễn phí giới hạn."
+      - "Ứng dụng điện thoại: Functional Ear Trainer, Complete Musician, Tenuto."
+    moi:
+      - "musictheory.net – Exercises: luyện quãng, hợp âm, gam."
+      - "teoria.com: bài giảng và bài luyện tai."
+      - "ToneGym: bài luyện tai dạng trò chơi."
+    ly_do: 'n42 (da-sua): bỏ thông tin giá, bản miễn phí và tên ứng dụng (chi tiết mau cũ, không thuộc trang Lõi).'

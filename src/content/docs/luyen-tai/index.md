@@ -28,14 +28,14 @@ Sau 6 bài trên, bước tiếp theo là nghe **kết cấu** và **phong cách
 
 ## Gắn quãng với giai điệu quen thuộc
 
-Cách nhanh nhất để nhớ một quãng là gắn nó với **hai nốt mở đầu** của một bài hát bạn đã biết. Cột thứ ba dùng các giai điệu phổ biến; cột cuối lấy ví dụ từ những bài bạn tập trên site, ở [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/) và các [bài học tác phẩm](/opus/piano/tac-pham/). Hãy thay bằng bài bạn quen hơn.
+Cách nhanh nhất để nhớ một quãng là gắn nó với **hai nốt liền nhau** ở đầu một bài hát bạn đã biết. Cột thứ ba dùng các giai điệu phổ biến; cột cuối lấy ví dụ từ những bài bạn tập trên site, ở [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/) và các [bài học tác phẩm](/opus/piano/tac-pham/). Hãy thay bằng bài bạn quen hơn.
 
 | Quãng (đi lên) | Số nửa cung | Giai điệu gợi nhớ | Trong bài bạn tập trên site |
 |---|---|---|---|
 | 2 thứ | 1 | Nhạc phim *Jaws* | *Ode to Joy*, nốt thứ hai sang nốt thứ ba: Mi–Fa ([bài 3](/opus/piano/10-bai-dau-tien/#3-ode-to-joy)) |
 | 2 trưởng | 2 | *Happy Birthday* (từ "py" sang "birth") | *Frère Jacques*: Đô–Rê ([bài 5](/opus/piano/10-bai-dau-tien/#5-frere-jacques)) |
 | 3 thứ | 3 | *Greensleeves* | *Greensleeves*: La–Đô ([bài 7](/opus/piano/10-bai-dau-tien/#7-greensleeves)); Largo "Going Home": Mi–Sol ([bài 8](/opus/piano/10-bai-dau-tien/#8-largo-going-home)) |
-| 3 trưởng | 4 | *When the Saints Go Marching In* | [Mozart: Minuet Fa trưởng K. 2](/opus/piano/tac-pham/mozart-minuet-k2/): Fa–La; [Mozart: Sonata K. 545](/opus/piano/tac-pham/mozart-k545/): Đô–Mi |
+| 3 trưởng | 4 | *When the Saints Go Marching In* | [Mozart: Sonata K. 545](/opus/piano/tac-pham/mozart-k545/): Đô–Mi |
 | 4 đúng | 5 | *Here Comes the Bride* (hành khúc cưới của Wagner) | *Amazing Grace*, từ nốt lấy đà: Sol–Đô ([bài 6](/opus/piano/10-bai-dau-tien/#6-amazing-grace)); [Tchaikovsky: Bài ca Pháp cổ](/opus/piano/tac-pham/tchaikovsky-bai-ca-phap-co/), từ nốt lấy đà: Rê–Sol |
 | 4 tăng / 5 giảm | 6 | *Maria* (vở *West Side Story*) | |
 | 5 đúng | 7 | *Twinkle Twinkle Little Star* (từ "kle" đầu tiên sang "twin" thứ hai) | *Ah! vous dirai-je, maman*, cùng giai điệu ấy: Đô–Sol ([bài 2](/opus/piano/10-bai-dau-tien/#2-ah-vous-dirai-je-maman-twinkle-twinkle)) |
@@ -46,7 +46,6 @@ Quãng đi xuống cũng có trong những bài bạn tập: [*Für Elise*](/opu
 
 ## Công cụ khác
 
-- [musictheory.net – Exercises](https://www.musictheory.net/exercises): luyện quãng, hợp âm, gam; miễn phí.
-- [teoria.com](https://www.teoria.com/): bài luyện tai có giải thích.
-- [ToneGym](https://www.tonegym.co/): bài luyện dạng trò chơi; có bản miễn phí giới hạn.
-- Ứng dụng điện thoại: *Functional Ear Trainer*, *Complete Musician*, *Tenuto*.
+- [musictheory.net – Exercises](https://www.musictheory.net/exercises): luyện quãng, hợp âm, gam.
+- [teoria.com](https://www.teoria.com/): bài giảng và bài luyện tai.
+- [ToneGym](https://www.tonegym.co/): bài luyện tai dạng trò chơi.

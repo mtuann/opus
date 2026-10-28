@@ -1,0 +1,364 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa luyen-tai/nghe-tien-trinh
+trang: src/content/docs/luyen-tai/nghe-tien-trinh.md
+nguon_cu: ../opus-zero/docs/luyen-tai/nghe-tien-trinh.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-28
+    nhanh: moi/d3-l6
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Sonnet 5.5 (D3-L6 lượt 1)"
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: "Trang nghe tiến trình hòa âm (tầng lõi). Nguồn: OMT Inversion, 6/4 Chords, Galant Schemas và bản tóm tắt, Diatonic Sequences; COD (cadence); Wikipedia Pachelbel's Canon (bậc 3, bè trầm); Gjerdingen (Romanesca và Pachelbel, chương 2 bản UCI). Câu về site: bản cũ piano/10-bai-dau-tien.md (Ode to Joy kết nửa rồi kết trọn), piano/hoa-am/ket.md (neo #i64-truoc-at-am, #ii6-va-v7-ket-ay-u), piano/hop-am-rai.md, piano/hoa-am/mau-galant.md, piano/tac-pham/bach-prelude-do.md, recognition.js (cadence trainer). Neo #luyen-voi-cong-cu viết {#luyen-voi-cong-cu} như lô trước yêu cầu. Chưa chuyển: piano/*, luyen-tap/nhat-ky, nhan-dien/*. Không kiểm được: cấu trúc câu của Mozart K. 2 (đã bỏ). Nguồn 'Gjerdingen' là sách, kiểm bằng chương 2 bản UCI (PDF). Thuật ngữ chưa có trong src/data/thuat-ngu.yml: bè trầm (bass line), thế gốc/thể đảo (inversion đã có), cadential 6/4, I6/4, ii6, V7, kết trọn (perfect cadence), kết plagal, kết lừa (deceptive), kết nửa (half cadence), Romanesca, Prinner, mẫu galant (galant schema), âm nền (pedal point), chuỗi quãng năm (sequence đã có), tiến trình hòa âm (chord progression), hợp âm rải; đã có: cadence, inversion, sequence, phrase."
+nguon:
+  - id: omt-seq
+    bac: 2
+    ten: "Open Music Theory, Diatonic Sequences"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/diatonic-sequences/"
+  - id: omt-inversion
+    bac: 2
+    ten: "Open Music Theory, Inversion"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/inversion/"
+  - id: omt-64
+    bac: 2
+    ten: "Open Music Theory, 6/4 Chords as Forms of Prolongation"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/64-chords-as-prolongations/"
+  - id: cod-cadence
+    bac: 2
+    ten: "The Concise Oxford Dictionary of Music, mục cadence (qua encyclopedia.com)"
+    link: "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/cadence"
+  - id: omt-galant
+    bac: 2
+    ten: "Open Music Theory, Galant Schemas"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/galant-schemas/"
+  - id: omt-galant-sum
+    bac: 2
+    ten: "Open Music Theory, Galant Schemas (bản tóm tắt)"
+    link: "https://viva.pressbooks.pub/openmusictheory/chapter/galant-schemas-summary/"
+  - id: wiki-pachelbel
+    bac: 3
+    ten: "Wikipedia, Pachelbel's Canon (bè trầm d A B F# G D G A)"
+    link: "https://en.wikipedia.org/wiki/Pachelbel%27s_Canon"
+  - id: gjerdingen
+    bac: 2
+    ten: "Robert O. Gjerdingen, Music in the Galant Style (Oxford University Press, 2007); chương 2 bản UCI: Pachelbel, Romanesca"
+    link: "https://en.wikipedia.org/wiki/Robert_Gjerdingen"
+nhan_dinh:
+  - id: n1
+    cau: "Tiến trình hòa âm (chord progression) là chuỗi hợp âm nâng đỡ cả bản nhạc."
+    loai: dinh-nghia
+    nguon:
+      - omt-seq
+    ket_qua: dung
+    ghi_chu: "OMT Diatonic Sequences dùng 'chord progression' cho chuỗi hợp âm; định nghĩa phổ thông."
+  - id: n2
+    cau: "Nghe được tiến trình thì nghe ra khung xương của bài, đoán câu nhạc sắp đi về đâu và nhận ra khi bấm sai nốt trầm."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n3
+    cau: "Lý thuyết ở bài 12 (Hòa âm chức năng) và bài 13 (Kết); chơi các tiến trình ở mọi giọng ở trang Kết ở mọi giọng; ôn lại ở Nghe hợp âm."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "nhac-ly/12-hoa-am-chuc-nang, 13-ket và luyen-tai/nghe-hop-am đã chuyển. piano/hoa-am/ket chưa chuyển; bản cũ ../opus-zero/docs/piano/hoa-am/ket.md có trang."
+  - id: n4
+    cau: "Nốt trầm nhất quyết định thể của hợp âm; khi hợp âm ở thể gốc, nốt trầm chính là gốc của hợp âm."
+    loai: quy-tac
+    nguon:
+      - omt-inversion
+    ket_qua: da-sua
+    ghi_chu: "OMT Inversion: thể hợp âm xác định theo nốt trầm; thế gốc có gốc ở bè trầm. Cũ: 'Trong đa số bản nhạc, nốt trầm nhất (bass) chính là gốc của hợp âm đang vang' (sai với thể đảo)."
+  - id: n5
+    cau: "Nghe được đường đi của bè trầm là nghe được phần lớn tiến trình."
+    loai: quy-tac
+    nguon:
+      - omt-inversion
+    ket_qua: da-sua
+    ghi_chu: "Cũ: 'là nghe được tiến trình'; mới thêm 'phần lớn', vì thể đảo làm bè trầm khác gốc (OMT Inversion)."
+  - id: n6
+    cau: "Bè trầm đi Đô – Fa – Sol – Đô thường là tiến trình I – IV – V – I ở giọng Đô trưởng."
+    loai: quy-tac
+    nguon:
+      - omt-inversion
+    ket_qua: da-sua
+    ghi_chu: "Gốc hợp âm trùng nốt trầm ở thế gốc (OMT Inversion); nếu có thể đảo thì khác. Cũ: '→ tiến trình I – IV – V – I'; mới thêm 'thường'."
+  - id: n7
+    cau: "Nốt trầm đứng yên ở Sol trong khi hợp âm bên trên đổi thường là I6/4 rồi V ngay trước kết."
+    loai: quy-tac
+    nguon:
+      - omt-64
+    ket_qua: dung
+    ghi_chu: "OMT 6/4 Chords: cadential 6/4 làm hợp âm I thể 6/4 trước V, chung nốt trầm. Câu cũ đã có 'thường'."
+  - id: n8
+    cau: "Kỹ thuật: hạ tai xuống nốt thấp nhất, hát nó lên và hỏi nó là bậc mấy của giọng."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n9
+    cau: "Chuỗi các bậc trầm cho khung của tiến trình hòa âm; hợp âm ở thể đảo thì nốt trầm không phải gốc."
+    loai: quy-tac
+    nguon:
+      - omt-inversion
+    ket_qua: da-sua
+    ghi_chu: "Thêm vế thể đảo (OMT Inversion)."
+  - id: n10
+    cau: "Khối nhạc 1: I – IV – V – I (hợp âm Đô, Fa, Sol, Đô), tay trái chơi nốt gốc Đô, Fa, Sol, Đô."
+    loai: cau-truc
+    nguon:
+      - omt-inversion
+    ket_qua: dung
+    ghi_chu: "Xem khuong_nhac khối 1."
+  - id: n11
+    cau: "Cảm giác 'đi xa rồi về nhà' chính là V – I cuối cùng."
+    loai: dinh-nghia
+    nguon:
+      - cod-cadence
+    ket_qua: dung
+    ghi_chu: "COD cadence: V–I là kết trọn (perfect cadence)."
+  - id: n12
+    cau: "Tiến trình I – IV – V – I có bè trầm Đô – Fa – Sol – Đô; hợp âm tay trái trong 10 bài đầu tiên và trang Hợp âm và hình đệm."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "piano/10-bai-dau-tien.md (bản cũ): tay trái bài 2, 3, 6... dùng I, IV, V7; piano/hop-am-rai.md (cũ) có vòng I–IV–I–V7–I. Cả hai trang chưa chuyển."
+  - id: n13
+    cau: "Tiến trình I – IV – I6/4 – V – I có bè trầm Sol đứng yên qua hai hợp âm rồi về Đô."
+    loai: cau-truc
+    nguon:
+      - omt-64
+    ket_qua: dung
+    ghi_chu: "OMT 6/4 Chords."
+  - id: n14
+    cau: "I – IV – I6/4 – V – I là kết của rất nhiều bản Cổ điển."
+    loai: lich-su
+    nguon:
+      - omt-64
+    ket_qua: dung
+    ghi_chu: "OMT 6/4 Chords: cadential 6/4 là cách đệm thường gặp trước V cuối câu (phong cách Cổ điển)."
+  - id: n15
+    cau: "Tiến trình I – ii6 – V7 – I có bè trầm Đô – Fa – Sol – Đô, hợp âm trên Fa là Rê – Fa – La."
+    loai: cau-truc
+    nguon:
+      - omt-inversion
+    ket_qua: dung
+    ghi_chu: "ii6 = Rê–Fa–La với Fa ở trầm (OMT Inversion)."
+  - id: n16
+    cau: "Chuỗi quãng năm đi xuống: mỗi bước xuống một quãng năm (hoặc lên một quãng bốn)."
+    loai: dinh-nghia
+    nguon:
+      - omt-seq
+    ket_qua: dung
+    ghi_chu: "OMT Diatonic Sequences: 'each successive chord root descends by fifth (or ascends by fourth)'."
+  - id: n17
+    cau: "Prinner có bè trầm Fa – Mi – Rê – Đô (xuống từng bậc, bậc 4–3–2–1)."
+    loai: cau-truc
+    nguon:
+      - omt-galant
+    ket_qua: da-sua
+    ghi_chu: "OMT Galant Schemas: bè trầm Prinner 4–3–2–1. Cũ: 'Bass đi xuống từng bậc hoặc xuống bốn, lên hai' (gộp hai mẫu, không nêu nốt); mới nêu bè trầm từng mẫu."
+  - id: n18
+    cau: "Romanesca có bè trầm Đô – Si – La – Mi (bậc 1–7–6–3)."
+    loai: cau-truc
+    nguon:
+      - omt-galant-sum
+    ket_qua: da-sua
+    ghi_chu: "OMT Galant Schemas (bản tóm tắt): bè trầm Romanesca 1–7–6–3; trang mau-galant cũng ghi 1–7–6–3. Cũ: 'Bass đi xuống từng bậc hoặc xuống bốn, lên hai'."
+  - id: n19
+    cau: "Các tiến trình trên được tập ở trang Kết ở mọi giọng, Kết đầy đủ, Bài 29: Chuỗi hòa âm, Các mẫu hòa âm thời Cổ điển."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Neo #i64-truoc-at-am, #ii6-va-v7-ket-ay-u có ở piano/hoa-am/ket.md (cũ); mau-galant.md (cũ) có Romanesca 1–7–6–3 và Prinner 4–3–2–1; nhac-ly/29-chuoi-hoa-am đã chuyển. Ba trang piano chưa chuyển."
+  - id: n20
+    cau: "Ở ô 2 của ví dụ I – IV – I6/4 – V – I, tay phải chơi lại hợp âm Đô trưởng nhưng bè trầm đã sang Sol; hai nốt trên trượt xuống 'sáu xuống năm, bốn xuống ba' rồi mới về nhà."
+    loai: cau-truc
+    nguon:
+      - omt-64
+    ket_qua: dung
+    ghi_chu: "Trên trầm Sol: Mi (6) → Rê (5), Đô (4) → Si (3), Sol giữ (OMT 6/4 Chords)."
+  - id: n21
+    cau: "Bè trầm trong Canon của Pachelbel xuống quãng bốn rồi lên một bậc (Đô – Sol – La – Mi – Fa – Đô), rồi Fa – Sol."
+    loai: so-lieu
+    nguon:
+      - wiki-pachelbel
+      - omt-seq
+    ket_qua: da-sua
+    ghi_chu: "Wikipedia Pachelbel's Canon: bè trầm D A B F♯ G D G A; chuyển sang Đô: C G A E F C F G. Cũ: 'bass xuống bốn, lên hai lặp đi lặp lại (Đô – Sol – La – Mi – Fa – Đô – Fa – Sol), họ hàng gần của mẫu Romanesca'; mới nêu bước nhỏ và nguồn Gjerdingen. Bậc 3, dùng cùng OMT Diatonic Sequences ('Descending thirds, a.k.a. Pachelbel')."
+  - id: n22
+    cau: "Gjerdingen nhận ra ở bè trầm Pachelbel một mẫu Romanesca."
+    loai: lich-su
+    nguon:
+      - gjerdingen
+    ket_qua: dung
+    ghi_chu: "Gjerdingen, Music in the Galant Style, ch. 2: Pachelbel 'an obvious Romanesca'."
+  - id: n23
+    cau: "Kết (cadence) là chuỗi hợp âm ở cuối một câu nhạc, như dấu chấm, dấu phẩy trong văn."
+    loai: dinh-nghia
+    nguon:
+      - cod-cadence
+    ket_qua: da-sua
+    ghi_chu: "COD cadence: chuỗi hợp âm (ít nhất hai) kết một câu. Cũ: 'hai hợp âm cuối một câu nhạc'; mới: 'chuỗi hợp âm ở cuối một câu nhạc'."
+  - id: n24
+    cau: "Có bốn loại kết trong ví dụ: kết trọn (V – I), kết plagal (IV – I), kết lừa (V – vi) và kết nửa (dừng ở V)."
+    loai: danh-muc
+    nguon:
+      - cod-cadence
+    ket_qua: dung
+    ghi_chu: "COD cadence: perfect (V–I), plagal (IV–I, 'Amen'), imperfect/half (kết ở V), interrupted/deceptive (V–vi)."
+  - id: n25
+    cau: "Mẹo: chỉ nghe hai hợp âm cuối câu và hỏi có về nhà (I) không."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n26
+    cau: "Tên gọi và các biến thể khác của kết ở bài 13."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "nhac-ly/13-ket đã chuyển."
+  - id: n27
+    cau: "Công cụ có bốn hợp âm, hai hợp âm cuối tạo thành một trong bốn loại kết, giọng thay đổi ngẫu nhiên mỗi câu, kết quả tính vào nhật ký luyện tập."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "recognition.js (cũ), phần cadence trainer: 4 hợp âm, 4 loại kết, dịch giọng ngẫu nhiên mỗi câu, OZProgress.record('chords', 1); nhat-ky (cũ) đếm '10 quãng hoặc hợp âm nhận đúng'. luyen-tap/nhat-ky chưa chuyển."
+  - id: n28
+    cau: "Kết trọn nghe dừng hẳn, trọn vẹn, như dấu chấm."
+    loai: dinh-nghia
+    nguon:
+      - cod-cadence
+    ket_qua: dung
+    ghi_chu: "COD: perfect cadence như dấu chấm."
+  - id: n29
+    cau: "Kết nửa nghe lơ lửng, chờ câu tiếp, như dấu phẩy."
+    loai: dinh-nghia
+    nguon:
+      - cod-cadence
+    ket_qua: dung
+    ghi_chu: "COD: imperfect/half cadence kết ở V, chờ câu tiếp."
+  - id: n30
+    cau: "Kết plagal nghe êm, trang nghiêm, 'A-men'."
+    loai: dinh-nghia
+    nguon:
+      - cod-cadence
+    ket_qua: dung
+    ghi_chu: "COD: plagal cadence = IV–I, 'Amen cadence'."
+  - id: n31
+    cau: "Kết lừa nghe tưởng về nhà nhưng rẽ sang hợp âm buồn hơn."
+    loai: dinh-nghia
+    nguon:
+      - cod-cadence
+    ket_qua: dung
+    ghi_chu: "COD: interrupted/deceptive, V–vi; vi là hợp âm thứ."
+  - id: n32
+    cau: "Trong Ode to Joy, câu đầu dừng lửng (kết nửa), câu sau giống hệt nhưng về nhà (kết trọn)."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "piano/10-bai-dau-tien.md (bản cũ), bài 3: tay trái C,4 G,4 C,4 C,2 G,2 (ô 4 dừng ở V); lần sau ... G,2 C,2 (ô 8 về I)."
+  - id: n33
+    cau: "Mozart: Minuet Fa trưởng K. 2: nghe từng câu nhạc và thử gọi tên chỗ kết ở cuối mỗi câu."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: "Cũ: 'Mozart: Minuet Fa trưởng K. 2: câu đầu kết nửa, ...' (không kiểm được cấu trúc trên bản nhạc mở); mới chỉ lời khuyên tập."
+  - id: n34
+    cau: "Bach: Prelude Đô trưởng: gần cuối, bè trầm giữ Sol suốt nhiều ô (âm nền át) trước khi về Đô."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "piano/tac-pham/bach-prelude-do.md (cũ): 'Âm nền át (ô 24–31): nốt Sol trầm giữ suốt tám ô'; teoria.com (BWV 846): dominant pedal từ ô 24, tonic pedal từ ô 32."
+  - id: n35
+    cau: "Bài bạn đang tập: chơi chậm riêng bè trầm, hát theo, đánh dấu mỗi chỗ kết và gọi tên."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n36
+    cau: "Thứ tự luyện: bè trầm; I–IV–V–I; bốn loại kết với công cụ; I6/4–V và ii6–V7–I; chuỗi và mẫu."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n37
+    cau: "Quiz: để nghe ra tiến trình hòa âm, tập trung vào bè trầm nhất, thường là gốc hợp âm."
+    loai: quy-tac
+    nguon:
+      - omt-inversion
+    ket_qua: dung
+    ghi_chu: "Như mục bè trầm."
+  - id: n38
+    cau: "Quiz: trong I – IV – I6/4 – V – I, bè trầm đứng yên ở Sol khi đi từ I6/4 sang V."
+    loai: cau-truc
+    nguon:
+      - omt-64
+    ket_qua: dung
+    ghi_chu: "I6/4 và V chung nốt trầm Sol (OMT 6/4 Chords)."
+  - id: n39
+    cau: "Quiz: hai hợp âm cuối Sol – La thứ (V – vi) là kết lừa."
+    loai: quy-tac
+    nguon:
+      - cod-cadence
+    ket_qua: dung
+    ghi_chu: "COD."
+  - id: n40
+    cau: "Quiz: kết nửa nghe như dấu phẩy, dừng ở V mà chưa về I."
+    loai: quy-tac
+    nguon:
+      - cod-cadence
+    ket_qua: dung
+    ghi_chu: "COD."
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - not
+      - nhip
+      - hop-am
+    ket_qua: dung
+    ghi_chu: "I–IV–V–I, M:4/4, L:1/2, K:C, hai khuông. Mỗi ô một hợp âm (nốt trắng kép = 4 phách): tay phải [EGc] [FAc] [DGB] [EGc], tay trái C, F, G, C,. Khớp bảng: nốt trầm Đô – Fa – Sol – Đô, mỗi hợp âm có gốc ở trầm. Ô nào cũng đủ 4 phách."
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - not
+      - nhip
+      - hop-am
+    ket_qua: dung
+    ghi_chu: "I–IV–I6/4–V–I. Ô 1: [EGc] trên C, rồi [FAc] trên F (mỗi hợp âm 2 phách); ô 2: [EGc] rồi [DGB], nhưng tay trái giữ G, nguyên ô (nốt trắng kép) nên hợp âm I trên trầm Sol là I6/4 và V chung nốt trầm Sol; ô 3: [EGc] trên C, (4 phách). Khớp lời mô tả ô 2 (E→D, c→B, G giữ)."
+  - khoi: 3
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - not
+      - nhip
+      - hop-am
+    ket_qua: dung
+    ghi_chu: "Vòng bè trầm Pachelbel ở Đô: bè trầm C, G,, A,, E,, F,, C,, F,, G,, (Đô Sol La Mi Fa Đô Fa Sol), mỗi hợp âm 2 phách, hai hợp âm một ô 4/4: C, G, Am, Em, F, C, F, G. Khớp mô tả Pachelbel và Wikipedia (D A B F♯ G D G A chuyển sang Đô). Mọi ô đủ 4 phách."
+  - khoi: 4
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - not
+      - nhip
+      - hop-am
+    ket_qua: dung
+    ghi_chu: "Bốn kết nối tiếp, mỗi ô hai hợp âm: ô 1 [DGB]→[EGc] trên G, C, = V–I (kết trọn); ô 2 [FAc]→[EGc] trên F, C, = IV–I (plagal); ô 3 [DGB]→[CEc] trên G, A, = V–vi (kết lừa; [CEc] trên A là Am); ô 4 [EGc]→[DGB] trên C, G, = I–V (dừng ở V, kết nửa). Khớp thứ tự 'kết trọn, plagal, lừa, nửa' trong lời dẫn."
+doi_chu:
+  - cu:
+      - "Trong đa số bản nhạc, nốt trầm nhất (bass) chính là gốc của hợp âm đang vang. Nghe được đường đi của bè trầm là nghe được tiến trình:"
+      - Trầm đi Đô – Fa – Sol – Đô → tiến trình I – IV – V – I ở giọng Đô trưởng.
+    moi:
+      - "Nốt trầm nhất (bass) quyết định thể của hợp âm; khi hợp âm ở thể gốc, nốt trầm nhất chính là gốc của hợp âm đang vang. Nghe được đường đi của bè trầm là nghe được phần lớn tiến trình:"
+      - Trầm đi Đô – Fa – Sol – Đô → thường là tiến trình I – IV – V – I ở giọng Đô trưởng.
+    ly_do: "n4 (da-sua): thể đảo thì nốt trầm không phải gốc (OMT Inversion).; n6 (da-sua): thể đảo có thể làm bè trầm khác gốc.; n5 (da-sua): thể đảo làm bè trầm khác gốc."
+  - cu: "Kỹ thuật: khi nghe, hạ tai xuống nốt thấp nhất. Hát nốt trầm lên, rồi hỏi nó là bậc mấy của giọng. Chuỗi các bậc trầm chính là tiến trình hòa âm."
+    moi: "Kỹ thuật: khi nghe, hạ tai xuống nốt thấp nhất. Hát nốt trầm lên, rồi hỏi nó là bậc mấy của giọng. Chuỗi các bậc trầm cho bạn khung của tiến trình hòa âm (hợp âm ở thể đảo thì nốt trầm không phải gốc)."
+    ly_do: "n9 (da-sua): thêm giới hạn thể đảo."
+  - cu: Bass đi xuống từng bậc hoặc xuống bốn, lên hai
+    moi: "Prinner: Fa – Mi – Rê – Đô (xuống từng bậc). Romanesca: Đô – Si – La – Mi"
+    ly_do: "n17 và n18 (da-sua): theo OMT Galant Schemas (Prinner 4–3–2–1, Romanesca 1–7–6–3) và trang mau-galant của site."
+  - cu: "Một vòng bè trầm nổi tiếng, Canon của Pachelbel: bass xuống bốn, lên hai lặp đi lặp lại (Đô – Sol – La – Mi – Fa – Đô – Fa – Sol), họ hàng gần của mẫu Romanesca thời Cổ điển."
+    moi: "Một vòng bè trầm nổi tiếng, Canon của Pachelbel: bass cứ xuống quãng bốn rồi lên một bậc (Đô – Sol – La – Mi – Fa – Đô), rồi Fa – Sol. Gjerdingen nhận ra ở đó một mẫu Romanesca."
+    ly_do: "n21 (da-sua): theo Wikipedia (bè trầm D A B F♯ G D G A) và Gjerdingen ch. 2."
+  - cu: "Kết (cadence) là hai hợp âm cuối một câu nhạc, như dấu chấm, dấu phẩy trong văn. Ví dụ dưới đây lần lượt là kết trọn, kết plagal, kết lừa và kết nửa:"
+    moi: "Kết (cadence) là chuỗi hợp âm ở cuối một câu nhạc, như dấu chấm, dấu phẩy trong văn. Ví dụ dưới đây lần lượt là kết trọn, kết plagal, kết lừa và kết nửa:"
+    ly_do: "n23 (da-sua): theo định nghĩa COD và bài 13-ket."
+  - cu: "Mozart: Minuet Fa trưởng K. 2: những câu bốn ô; nghe chỗ nào kết nửa, chỗ nào kết trọn."
+    moi: "Mozart: Minuet Fa trưởng K. 2: nghe từng câu nhạc và thử gọi tên chỗ kết ở cuối mỗi câu."
+    ly_do: "n33 (da-sua): không kiểm được cấu trúc câu của K. 2 trên bản nhạc mở."
+  - cu: Open Music Theory; musictheory.net.
+    moi:
+      - "Open Music Theory: Inversion, 6/4 Chords as Forms of Prolongation, Galant Schemas và bản tóm tắt, Diatonic Sequences."
+      - The Concise Oxford Dictionary of Music, mục cadence.
+    ly_do: 'Mục Nguồn: thay bằng các nguồn đã mở khi kiểm định (lượt 1 D3-L6); bỏ link chung.'

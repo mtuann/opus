@@ -1067,6 +1067,13 @@ html.oz-stand-open .main-pane {
 .oz-phim-den.to {
 	fill: var(--oz-phim-to-den);
 }
+/* nhóm phím tô thứ hai (hợp âm áp chót ở công cụ nghe kết): màu xanh như phím đang bấm */
+.oz-phim-trang.to-2 {
+	fill: var(--oz-phim-bam-trang);
+}
+.oz-phim-den.to-2 {
+	fill: var(--oz-phim-bam-den);
+}
 .oz-phim-trang.bam {
 	fill: var(--oz-phim-bam-trang);
 }
@@ -1111,11 +1118,12 @@ html.oz-stand-open .main-pane {
 	.oz-ban-phim .oz-phim-ten,
 	.oz-ban-phim .oz-row,
 	.oz-vong .oz-row,
-	.oz-lhb > :not(noscript) {
+	.oz-lhb > :not(noscript),
+	.oz-lt > :not(noscript) {
 		display: none;
 	}
 }
-:is(.oz-ban-phim, .oz-vong, .oz-lhb) noscript p {
+:is(.oz-ban-phim, .oz-vong, .oz-lhb, .oz-lt) noscript p {
 	margin: 0.4rem 0 0;
 	font-size: var(--sl-text-sm);
 	color: var(--sl-color-gray-2);
@@ -1413,7 +1421,8 @@ html.oz-stand-open .main-pane {
 /* Ô chọn tự vẽ (appearance: none, mũi tên bằng gradient theo màu chữ): ô chọn gốc của WebKit trên điện thoại giữ chiều cao
    khoảng 23 px, không theo min-height */
 .oz-lhb select,
-.oz-boi-am select {
+.oz-boi-am select,
+.oz-lt select {
 	appearance: none;
 	-webkit-appearance: none;
 	font: inherit;
@@ -1431,7 +1440,8 @@ html.oz-stand-open .main-pane {
 }
 @media (pointer: coarse) {
 	.oz-lhb select,
-	.oz-boi-am select {
+	.oz-boi-am select,
+	.oz-lt select {
 		min-height: 44px;
 		min-width: 44px;
 	}
@@ -1755,5 +1765,59 @@ html.oz-stand-open .main-pane {
 	}
 }
 :is(.oz-boi-am, .oz-len-day, .oz-pho, .oz-the-nho) noscript p {
+	margin: 0;
+}
+
+/* ---------- Luyện tai: nghe quãng, hợp âm, gam, kết (::cong-cu interval-trainer…; src/scripts/luyen-tai.js) ---------- */
+.oz-lt label {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.4rem;
+	font-size: var(--sl-text-sm);
+}
+/* ô chọn dài (tên bộ quãng) co theo khung hẹp, không làm trang tràn; min-width 44 px của màn hình cảm ứng vẫn giữ */
+.oz-lt label {
+	max-width: 100%;
+	min-width: 0;
+}
+.oz-lt select {
+	max-width: 100%;
+}
+/* gợi ý dưới tên đáp án (hợp âm, gam), như bản cũ */
+.oz-lt .oz-answers small {
+	display: block;
+	font-size: var(--sl-text-xs);
+	color: var(--sl-color-gray-3);
+}
+.oz-lt .oz-answers :is(.is-correct, .is-wrong) small {
+	color: inherit;
+}
+/* đáp án đã chọn sai: không khóa hẳn (aria-disabled) để tiêu điểm bàn phím không mất, nhìn như nút khóa */
+.oz-lt .oz-btn[aria-disabled='true'] {
+	opacity: 0.6;
+	cursor: default;
+}
+.oz-lt .oz-feedback {
+	margin-bottom: 0;
+}
+.oz-lt-hinh:empty {
+	display: none;
+}
+.oz-lt-hinh {
+	margin: 0.4rem 0 0.6rem;
+}
+.sl-markdown-content .oz-lt-hinh > * {
+	margin-top: 0;
+}
+.oz-lt-hinh p {
+	margin: 0 0 0.3rem;
+}
+/* hình phím đàn chỉ để xem (không bấm): nhỏ như hình cũ, tối đa 360 px, co theo khung */
+.oz-lt-hinh .oz-phim {
+	width: min(100%, 360px, calc(var(--phim) * 26px + 4px));
+}
+.oz-lt-so {
+	min-height: 1.5em;
 	margin: 0;
 }

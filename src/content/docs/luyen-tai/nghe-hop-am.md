@@ -3,7 +3,7 @@ title: Nghe hợp âm
 description: 'Nghe hợp âm là nghe "màu" của một khối âm thanh: sáng hay tối, căng hay êm, muốn đứng yên hay muốn đi tiếp. Đây là kỹ năng để nghe ra hòa âm của một bản nhạc —…'
 ---
 
-Nghe hợp âm là nghe **"màu" của một khối âm thanh**: sáng hay tối, căng hay êm, muốn đứng yên hay muốn đi tiếp. Đây là kỹ năng để nghe ra hòa âm của một bản nhạc — điều làm nên cảm xúc của nhạc cổ điển, nhạc phim và nhạc pop.
+Nghe hợp âm là nghe **"màu" của một khối âm thanh**: sáng hay tối, căng hay êm, muốn đứng yên hay muốn đi tiếp. Đây là kỹ năng để nghe ra hòa âm của một bản nhạc — từ nhạc cổ điển đến nhạc phim và nhạc pop.
 
 Lý thuyết đầy đủ: [bài 10: Hợp âm ba](/opus/nhac-ly/10-hop-am-ba/), [bài 11: Hợp âm bảy](/opus/nhac-ly/11-hop-am-bay/). Công cụ luyện ở [cuối bài](#luyen-voi-cong-cu).
 
@@ -20,7 +20,7 @@ K:C
 
 | Hợp âm | Cấu tạo (từ Đô) | Màu sắc |
 |---|---|---|
-| Trưởng | Đô – Mi – Sol | Sáng, vui, vững chãi. Âm thanh "mặc định" của nhạc vui. |
+| Trưởng | Đô – Mi – Sol | Sáng, vui, vững chãi. |
 | Thứ | Đô – Mi♭ – Sol | Tối, buồn, dịu. Khác trưởng đúng một nốt: nốt giữa (bậc 3). |
 | Giảm | Đô – Mi♭ – Sol♭ | Căng, co lại, bất ổn. Nghe như đang "nhíu mày". |
 | Tăng | Đô – Mi – Sol♯ | Lơ lửng, mơ màng, không biết đi đâu. Hiếm gặp nhất. |
@@ -44,7 +44,7 @@ Cùng một hợp âm Đô trưởng nhưng nốt trầm khác nhau thì nghe kh
 - Trầm là **Mi** (bậc 3): bồng bềnh hơn — thể đảo 1.
 - Trầm là **Sol** (bậc 5): lửng lơ nhất — thể đảo 2.
 
-Kỹ thuật: **luôn tìm nốt trầm trước**. Hát nốt trầm lên, rồi hỏi: đây có phải nốt "nhà" (gốc) không? Nếu nốt trầm nghe như muốn "rơi" về một nốt khác thấp hơn, thì đó là thể đảo.
+Kỹ thuật: **luôn tìm nốt trầm trước**. Hát nốt trầm lên, rồi hỏi: đây có phải nốt "nhà" (gốc) không? Nếu nốt trầm nghe như muốn "rơi" về một nốt khác thấp hơn, thì nhiều khả năng đó là thể đảo.
 
 ## Hợp âm bảy: năm sắc thái
 
@@ -62,10 +62,10 @@ K:C
 | Trưởng bảy (Maj7) | Đô–Mi–Sol–Si | Sang, mơ màng, "nhạc jazz êm". |
 | Át bảy (7) | Đô–Mi–Sol–Si♭ | Muốn đi tiếp! Chứa tritone Mi–Si♭ (bậc 3 và bậc 7) nên nghe "thúc" về hợp âm chủ. |
 | Thứ bảy (m7) | Đô–Mi♭–Sol–Si♭ | Êm, buồn nhẹ, thư giãn. |
-| Nửa giảm (ø7) | Đô–Mi♭–Sol♭–Si♭ | Căng, u ám — màu của nhạc tiền lãng mạn. |
+| Nửa giảm (ø7) | Đô–Mi♭–Sol♭–Si♭ | Căng, u ám — gặp ở bậc 7 của giọng trưởng và bậc 2 của giọng thứ. |
 | Giảm bảy (o7) | Đô–Mi♭–Sol♭–Si𝄫 | Căng tột độ, chênh vênh — hay dùng trước khi chuyển giọng. |
 
-Hợp âm bảy khó hơn hợp âm ba nhiều. Chỉ tập khi đã phân biệt trưởng/thứ thành thạo — đúng như gợi ý ở [công cụ cuối bài](#luyen-voi-cong-cu).
+Hợp âm bảy khó hơn hợp âm ba nhiều. Chỉ tập khi đã phân biệt trưởng/thứ thành thạo — [công cụ cuối bài](#luyen-voi-cong-cu) cũng để bộ hợp âm bảy ở sau cùng.
 
 ## Luyện với công cụ
 
@@ -77,10 +77,9 @@ Thứ tự luyện:
 
 1. **Trưởng vs thứ** (rải): phân biệt quan trọng nhất, đa số nghe được sau vài ngày.
 2. **Trưởng vs thứ** (chập).
-3. Thêm **giảm**: nghe "co lại" so với thứ.
-4. Thêm **tăng**: nghe "giãn ra" so với trưởng.
-5. **Thể đảo**: nghe nốt trầm.
-6. **Hợp âm bảy**: bắt đầu từ Maj7 vs 7 (sáng–mơ vs thúc–đi).
+3. Chuyển sang bộ **4 loại hợp âm ba**: nghe giảm "co lại" so với thứ, tăng "giãn ra" so với trưởng.
+4. **Thể đảo**: nghe nốt trầm (công cụ này chưa có phần thể đảo; tập với đàn hay với bạn tập).
+5. **Hợp âm bảy** (bộ **5 loại hợp âm bảy**): bắt đầu từ Maj7 vs 7 (sáng–mơ vs thúc–đi).
 
 ```quiz
 ? Nghe một hợp âm "tối, buồn" — khả năng cao nhất là gì?
@@ -98,7 +97,7 @@ Thứ tự luyện:
 - Nốt cao nhất
 - Nốt giữa
 > Nốt trầm cho biết đảo mấy: gốc (thế gốc), bậc 3 (đảo 1) hay bậc 5 (đảo 2).
-? Hợp âm bảy nào "muốn đi tiếp" mạnh nhất, hay dùng làm át?
+? Hợp âm bảy nào thường dùng làm hợp âm át, nghe "muốn đi tiếp" về chủ?
 - Trưởng bảy (Maj7)
 + Át bảy (7)
 - Thứ bảy (m7)
@@ -107,7 +106,8 @@ Thứ tự luyện:
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- Open Music Theory: [Triads](https://viva.pressbooks.pub/openmusictheory/chapter/triads/), [Inversion](https://viva.pressbooks.pub/openmusictheory/chapter/inversion/), [Seventh Chords](https://viva.pressbooks.pub/openmusictheory/chapter/seventh-chords/).
+- Robert Hutchinson, *Music Theory for the 21st-Century Classroom*, [23.3: The Fully Diminished Seventh as Pivot Chord](https://human.libretexts.org/Bookshelves/Music/Music_Theory/Music_Theory_for_the_21st-Century_Classroom_%28Hutchinson%29/23%3A_Enharmonic_Modulation/23.03%3A_The_Fully_Diminished_Seventh_as_Pivot_Chord) (hợp âm giảm bảy khi chuyển giọng).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
 
 Bài tiếp theo: [Nghe gam và điệu thức](/opus/luyen-tai/nghe-gam/).
