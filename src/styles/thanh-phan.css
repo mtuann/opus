@@ -1203,6 +1203,39 @@ html.oz-stand-open .main-pane {
 	stroke: var(--sl-color-gray-5);
 }
 
+/* ---------- Hình tĩnh chép từ site cũ (src/components/hinh/*.html) ----------
+   Màu đậm của hình cũ thành biến; như opus.css, :root là chế độ tối, chế độ sáng và khi in ghi lại. Nền sáng (ô, phím
+   tô màu) và chữ tối #1b1b1b trên nền ấy giữ như cũ, đọc được ở cả hai chế độ. */
+:root {
+	--oz-h-xanh: #7fb0ea;
+	--oz-h-luc: #6cc28f;
+	--oz-h-vang: #e0b45e;
+	--oz-h-do: #e48b78;
+	--oz-h-nhat: #a3a3a3;
+}
+:root[data-theme='light'] {
+	--oz-h-xanh: #2f5582;
+	--oz-h-luc: #2e7d4f;
+	--oz-h-vang: #946716;
+	--oz-h-do: #b3412e;
+	--oz-h-nhat: #6b6b6b;
+}
+@media print {
+	:root {
+		--oz-h-xanh: #2f5582;
+		--oz-h-luc: #2e7d4f;
+		--oz-h-vang: #946716;
+		--oz-h-do: #b3412e;
+		--oz-h-nhat: #6b6b6b;
+	}
+}
+.sl-markdown-content .oz-figure > svg.oz-fig-mid {
+	max-width: 32rem;
+}
+.sl-markdown-content .oz-figure > svg.oz-fig-wide {
+	max-width: 40rem;
+}
+
 /* ---------- Vòng chức năng hòa âm, bảy điệu thức (::hinh functions, modes; veChucNang, veDieuThuc trong src/scripts/ve.js) ----------
    Nền ô và phím tô màu sáng ở cả hai chế độ, nên chữ trên chúng luôn tối (như sơ đồ cấu trúc); chữ ngoài ô theo màu chữ. */
 .oz-chuc-nang,

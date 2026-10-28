@@ -382,7 +382,19 @@ const HINH = {
 
 /** ::hinh{ten="…"}: hình minh họa không thuộc bản ghi tác phẩm (vùng <!-- fig:… --> của trang cũ, trừ hình cấu trúc). */
 export function hinh(ten, trang) {
-	return HINH[ten] ? HINH[ten](trang) : chuaChuyen('hình', ten, trang);
+	if (HINH[ten]) return HINH[ten](trang);
+	const tinh = hinhTinh(ten);
+	return tinh ?? chuaChuyen('hình', ten, trang);
+}
+
+/** Thư mục hình tĩnh chép từ site cũ (src/components/hinh/chuyen-hinh-cu.mjs). */
+export const THU_MUC_HINH = fileURLToPath(new URL('../components/hinh/', import.meta.url));
+
+/** Hình tĩnh <tên>.html (nguyên SVG của hình cũ, màu theo biến của site); không có thì null. */
+export function hinhTinh(ten) {
+	if (!/^[a-z0-9-]+$/.test(ten)) return null;
+	const f = path.join(THU_MUC_HINH, `${ten}.html`);
+	return fs.existsSync(f) ? fs.readFileSync(f, 'utf8').trim() : null;
 }
 
 // ---------- Công cụ: bài kiểm tra đầu vào ----------
