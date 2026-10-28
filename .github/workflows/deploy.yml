@@ -1,7 +1,7 @@
 name: Đăng site lên GitHub Pages
 
 # Mỗi lần push lên main (hay bấm chạy tay): build bản thật (chỉ trang đã khóa trong kiem-dinh/khoa.json), kiểm thử; kiểm
-# thử trình duyệt và Lighthouse chạy song song ở job trinh-duyet. Đạt hết thì đăng dist/. Hỏng bước nào thì không đăng:
+# thử trình duyệt và Lighthouse chạy song song ở job trinh-duyet (commit đã qua test.yml ở nhánh: chỉ chromium và Lighthouse). Đạt hết thì đăng dist/. Hỏng bước nào thì không đăng:
 # site giữ bản trước.
 on:
   push:
@@ -31,20 +31,23 @@ jobs:
       contents: read
       actions: read
     outputs:
-      chay-trinh-duyet: ${{ steps.da-kiem.outputs.chay }}
+      cac-phan: ${{ steps.da-kiem.outputs.cac-phan }}
     steps:
       - uses: actions/checkout@v7
-      # Lô gộp vào main kiểu fast-forward: commit này đã qua test.yml ở nhánh (bản xem có mọi trang của bản thật, cùng mã),
-      # nên không chạy lại kiểm thử trình duyệt và Lighthouse. Build bản thật và npm test (khóa, link "sắp có" của bản thật)
-      # vẫn chạy. Push thẳng lên main, hay test.yml chưa đạt ở commit này, thì chạy đủ.
+      # Lô gộp vào main kiểu fast-forward: commit này đã qua test.yml ở nhánh (lần chạy do push, kiểm đúng commit này; lần
+      # chạy của pull request kiểm bản gộp nên không tính), trên ba trình duyệt với bản xem. Bản thật dựng khác bản xem (link
+      # tới trang chưa khóa thành "sắp có", nút của dải mực tự ẩn, không có dải "Chưa kiểm định", trang mẫu khác), nên vẫn
+      # kiểm trên Chromium (axe, hiển thị, thành phần) và Lighthouse; chỉ bỏ WebKit và Firefox. Push thẳng lên main, hay
+      # test.yml chưa đạt ở commit này, thì chạy đủ bốn phần.
       - name: Đã kiểm ở nhánh?
         id: da-kiem
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          n=$(gh api "repos/${{ github.repository }}/actions/workflows/test.yml/runs?head_sha=${{ github.sha }}&status=success" -q .total_count || echo 0)
+          n=$(gh api "repos/${{ github.repository }}/actions/workflows/test.yml/runs?head_sha=${{ github.sha }}&event=push&status=success" -q .total_count || echo 0)
           echo "test.yml đã đạt ở ${{ github.sha }}: $n lần"
-          echo "chay=$([ "${n:-0}" -gt 0 ] && echo false || echo true)" >> "$GITHUB_OUTPUT"
+          if [ "${n:-0}" -gt 0 ]; then p='["chromium","lighthouse"]'; else p='["chromium","webkit","firefox","lighthouse"]'; fi
+          echo "cac-phan=$p" >> "$GITHUB_OUTPUT"
         shell: bash
       - uses: ./.github/actions/kiem-thu
         with:
@@ -57,12 +60,12 @@ jobs:
   trinh-duyet:
     name: Kiểm thử (bản thật, ${{ matrix.phan }})
     needs: build
-    if: needs.build.outputs.chay-trinh-duyet == 'true'
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        phan: [chromium, webkit, firefox, lighthouse]
+        # các phần do bước "Đã kiểm ở nhánh?" chọn; đầu ra rỗng hay hỏng thì job hỏng, không đăng
+        phan: ${{ fromJSON(needs.build.outputs.cac-phan) }}
     # phần lâu nhất thường khoảng 4 phút
     timeout-minutes: 30
     steps:
@@ -76,8 +79,6 @@ jobs:
   deploy:
     name: Đăng
     needs: [build, trinh-duyet]
-    # trinh-duyet bị bỏ qua (commit đã qua test.yml ở nhánh) thì vẫn đăng; hỏng hay bị hủy thì không
-    if: ${{ !cancelled() && needs.build.result == 'success' && (needs.trinh-duyet.result == 'success' || needs.trinh-duyet.result == 'skipped') }}
     runs-on: ubuntu-latest
     # deploy-pages tự chờ tối đa 10 phút: để dư
     timeout-minutes: 15

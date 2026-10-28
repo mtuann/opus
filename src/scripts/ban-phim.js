@@ -118,7 +118,7 @@ export function mount(goc) {
 	const nhac = goc.querySelector('.oz-phim-ten');
 	if (khung) {
 		// các phím đã nhận tiêu điểm (ganBanPhim): khung thôi là một điểm dừng của Tab; khung đang giữ tiêu điểm thì chuyển
-		// sang phím đầu
+		// sang phím nhận Tab (phím được tô đầu tiên, không có thì phím đầu)
 		const dangGiu = document.activeElement === khung;
 		for (const a of ['tabindex', 'role', 'aria-label']) khung.removeAttribute(a);
 		if (dangGiu) svg.querySelector('[tabindex="0"]')?.focus();
