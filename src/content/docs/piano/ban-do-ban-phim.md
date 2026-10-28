@@ -64,7 +64,7 @@ Trong tiếng Đức, **B** là Si♭ còn **H** là Si thường. Vì thế Bac
 | Cao | C5–B6 | Sáng, trong | Tay phải: giai điệu |
 | Rất cao | C7–C8 | Lấp lánh, tắt rất nhanh | Tay phải: trang trí, hiệu ứng |
 
-Ở vùng rất cao, dây ngắn và tiếng tắt nhanh đến mức đàn không cần bộ tắt tiếng (*damper*): khoảng hơn một quãng tám trên cùng không có damper, nên các nốt ở đó tự ngân cho đến khi tắt, dù bạn không giữ bàn đạp.
+Ở vùng rất cao, dây ngắn và tiếng tắt nhanh đến mức đàn không cần bộ giảm âm (*damper*): những phím cao nhất không có damper, nên các nốt ở đó tự ngân cho đến khi tắt, dù bạn không giữ bàn đạp.
 
 Trên bản nhạc piano, khuông khóa Sol thường dành cho tay phải và khuông khóa Fa cho tay trái. Đó là quy ước, không phải luật: tay trái có thể chơi trên khuông khóa Sol và ngược lại, và khóa có thể đổi giữa chừng. Hãy luôn nhìn khóa ở đầu khuông.
 
@@ -129,7 +129,7 @@ K:C
 
 - Mỗi phím đen có hai tên **trùng âm**: Đô♯ = Rê♭, Rê♯ = Mi♭, Fa♯ = Sol♭, Sol♯ = La♭, La♯ = Si♭.
 - Phím trắng cũng có tên khác: **Mi♯ = Fa, Si♯ = Đô, Fa♭ = Mi, Đô♭ = Si**. Chúng xuất hiện ở các giọng nhiều dấu hóa: gam Fa♯ trưởng có Mi♯ (bạn chơi phím Fa), gam Sol♭ trưởng có Đô♭ (phím Si), gam Đô♯ thứ hòa âm có Si♯ (phím Đô).
-- Dấu thăng kép (𝄪) và giáng kép (𝄫): Fa𝄪 là phím Sol (gặp trong gam Sol♯ thứ hòa âm), Si𝄫 là phím La.
+- Dấu thăng kép (×) và giáng kép (♭♭): Fa× là phím Sol (gặp trong gam Sol♯ thứ hòa âm), Si♭♭ là phím La.
 
 Tên một nốt phụ thuộc vào giọng và hòa âm, không phụ thuộc vào phím. Xem [Cung, nửa cung và dấu hóa](/opus/nhac-ly/05-dau-hoa/) và [Hóa biểu](/opus/nhac-ly/08-hoa-bieu/).
 
@@ -188,6 +188,7 @@ Bàn phím dưới đây tô sẵn năm nốt mốc trong khoảng C3–C5; bấ
 ## Nguồn
 
 - ISO 16:1975, *Acoustics — Standard tuning frequency (Standard musical pitch)*: chuẩn A4 = 440 Hz.
-- Hermann von Helmholtz, *Die Lehre von den Tonempfindungen* (1863), cuốn sách làm phổ biến cách ghi quãng tám mang tên ông.
-- Grove Music Online, mục "Pitch nomenclature".
+- Open Music Theory, *The Keyboard and the Grand Staff*, *Clefs* và *American Standard Pitch Notation*; Robert Hutchinson, *Music Theory for the 21st-Century Classroom*, 1.3 Octave Registers (tên quãng tám).
+- Beethoven-Haus Bonn, *Historische Hammerflügel im Musikzimmer* (âm vực cây đàn Broadwood của Beethoven).
+- Yamaha, *How does a piano work?* (các nốt cao nhất không có bộ giảm âm).
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

@@ -13,6 +13,9 @@ import { khoangPhim, thongTinGiong, veBanPhim, veChucNang, veDieuThuc, veHoaBieu
 import { CAU_HOI, nutTraLoi } from '../scripts/luyen-hoa-bieu.js';
 import { veBoiAm, veLenDay, vePho } from '../scripts/am-hoc.js';
 import { veLuyenTai } from '../scripts/luyen-tai.js';
+import { veMayDemNhip } from '../scripts/may-dem-nhip.js';
+import { TRANG_KE_HOACH, dungKeHoach, tinhKeHoach } from '../scripts/ke-hoach.js';
+import { dungBaiDangTap } from '../scripts/bai-dang-tap.js';
 import { bangHep } from './bang-hep.mjs';
 
 export const esc = (s) =>
@@ -20,10 +23,10 @@ export const esc = (s) =>
 
 /** HTML đã dựng của trang có khối cần JavaScript (khuông nhạc, câu hỏi, khối nghe, danh sách việc, bài kiểm tra đầu vào,
  * chặng piano, ô gợi ý tập, bàn phím, vòng quãng năm, luyện hóa biểu, công cụ âm học, thẻ ghi nhớ, trạng thái bài đã học,
- * luyện tai)
+ * luyện tai, máy đếm nhịp, bài đang tập, kế hoạch tập)
  * không: MarkdownContent.astro chỉ tải bộ tải thành phần ở những trang này. */
 export const canTaiScript = (html) =>
-	/\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec|oz-placement|oz-muc-do|oz-goi-y|oz-ban-phim|oz-vong|oz-lhb|oz-boi-am|oz-pho|oz-len-day|oz-the-nho|oz-trang-thai-bai|oz-lt)[\s"]/.test(html);
+	/\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec|oz-placement|oz-muc-do|oz-goi-y|oz-ban-phim|oz-vong|oz-lhb|oz-boi-am|oz-pho|oz-len-day|oz-the-nho|oz-trang-thai-bai|oz-lt|oz-may-dem-nhip|oz-bai-dang-tap|oz-ke-hoach)[\s"]/.test(html);
 
 /** HTML đã dựng có hình hóa biểu (vẽ bằng <use href="#oz-kh-…">) không: MarkdownContent.astro thêm định nghĩa ký hiệu một lần. */
 export const canKyHieu = (html) => html.includes('href="#oz-kh-');
@@ -647,6 +650,47 @@ export const theNho = () =>
 export const trangThaiBai = () =>
 	`<div class="oz-trang-thai-bai not-content" data-sinh data-pagefind-ignore><p class="oz-lesson-bar oz-stats"></p></div>`;
 
+// ---------- Công cụ: máy đếm nhịp, bài đang tập, kế hoạch tập (D4-L1) ----------
+
+/** Trang dạng trangTrongBan ("piano/gam", "piano/index", "index") -> đường dẫn trong site có / ở cuối ("piano/gam/", "piano/", ""). */
+export const duongDanTrang = (t) => (t === 'index' ? '' : t.replace(/\/index$/, '') + '/');
+
+/**
+ * Link cho bài đang tập và kế hoạch tập (dựng trên trình duyệt từ dữ liệu đã lưu): gốc site và các trang có trong bản build
+ * mà hai công cụ có thể dẫn tới (trang của kế hoạch, bài học tác phẩm, hướng dẫn nghe: khóa của store.repertoire), để
+ * trang chưa có hiện "sắp có".
+ */
+export function lienKetCongCuTap(ds = trangTrongBan()) {
+	const co = new Set(ds.map(duongDanTrang));
+	const them = [...co].filter((t) => /^(piano\/tac-pham|nghe-nhac)\/[a-z0-9-]+\/$/.test(t));
+	return { goc: DUONG_GOC, trang: [...TRANG_KE_HOACH.filter((t) => co.has(t)), ...(co.has('piano/tac-pham/') ? ['piano/tac-pham/'] : []), ...them] };
+}
+
+/**
+ * Bài đang tập (::cong-cu{ten="repertoire"}, như khối oz-repertoire của practice.js cũ; src/scripts/bai-dang-tap.js đọc
+ * store.repertoire). compact="" (data-compact cũ): chưa có bài nào thì ẩn cả ô, nên dựng sẵn ô ẩn; không compact thì dựng sẵn
+ * lời nhắc của danh sách rỗng. Thông số khác thì build hỏng.
+ */
+export function baiDangTap({ compact, ...thua }, ds = trangTrongBan()) {
+	const la = Object.keys(thua);
+	if (la.length) throw new Error(`công cụ "repertoire" không nhận thông số ${la.join(', ')} (nhận: compact)`);
+	if (compact !== undefined && compact !== '') throw new Error(`công cụ "repertoire": compact không nhận giá trị (viết compact="", gặp "${compact}")`);
+	const gon = compact !== undefined;
+	const data = { ...lienKetCongCuTap(ds), muc_luc: 'piano/tac-pham/' };
+	const html = gon ? '' : dungBaiDangTap({}, { compact: false, today: '', data });
+	return `<div class="oz-bai-dang-tap oz-tool not-content" data-sinh data-pagefind-ignore${gon ? ' data-compact hidden' : ''} data-bai-dang-tap="${esc(JSON.stringify(data))}">${html}</div>`;
+}
+
+/**
+ * Kế hoạch tập hôm nay (::cong-cu{ten="plan"}, như khối oz-plan của plan.js cũ; src/scripts/ke-hoach.js): dựng sẵn kế hoạch
+ * của người chưa lưu gì (không phụ thuộc ngày), script tính lại theo dữ liệu đã lưu.
+ */
+export function keHoach(ds = trangTrongBan()) {
+	const data = lienKetCongCuTap(ds);
+	const html = dungKeHoach(tinhKeHoach({ today: '2000-01-01' }), data);
+	return `<div class="oz-ke-hoach oz-tool not-content" data-sinh data-pagefind-ignore data-ke-hoach="${esc(JSON.stringify(data))}">${html}</div>`;
+}
+
 /** Công cụ đã có thành phần: tên (như khối <div class="oz-tên"> của site cũ) -> hàm dựng HTML (thông số, trang). */
 const CONG_CU = {
 	placement: (_, trang) => placement(khoiPlacement(trang)),
@@ -665,6 +709,10 @@ const CONG_CU = {
 	'chord-trainer': () => veLuyenTai('chord-trainer'),
 	'scale-trainer': () => veLuyenTai('scale-trainer'),
 	'cadence-trainer': () => veLuyenTai('cadence-trainer'),
+	// máy đếm nhịp, bài đang tập, kế hoạch tập (D4-L1)
+	metronome: () => veMayDemNhip(),
+	repertoire: (thongSo) => baiDangTap(thongSo),
+	plan: () => keHoach(),
 };
 /** Công cụ không có thông số: viết thêm thuộc tính thì build hỏng (gõ nhầm, hay chép từ khối cũ). */
 const KHONG_THONG_SO = new Set([
@@ -682,6 +730,8 @@ const KHONG_THONG_SO = new Set([
 	'chord-trainer',
 	'scale-trainer',
 	'cadence-trainer',
+	'metronome',
+	'plan',
 ]);
 
 /** ::cong-cu{ten="…" …}: công cụ luyện tập; thuộc tính khác là thông số (data-* của khối oz- cũ). */

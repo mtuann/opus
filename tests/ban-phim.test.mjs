@@ -10,7 +10,7 @@ import { pathToFileURL } from 'node:url';
 import { markdownToHtml } from 'satteri';
 import { opusMarkdown } from '../src/plugins/opus-markdown.mjs';
 import { banPhim, canTaiScript, coAmPiano, docThongSoBanPhim, nguonAmPiano } from '../src/plugins/thanh-phan.mjs';
-import { DAI_MAU, GIAI_MA_CUNG_LUC, GIOI_HAN_MAU, MAU, catMau, mauDaGiu, mauGanNhat, taiTruoc, tanSo, trangThai } from '../src/scripts/am-thanh.js';
+import { DAI_MAU, GIAI_MA_CUNG_LUC, GIOI_HAN_MAU, MAU, catMau, choThuLai, mauDaGiu, mauGanNhat, taiTruoc, tanSo, trangThai } from '../src/scripts/am-thanh.js';
 import { VUNG_TAI, vungQuanh } from '../src/scripts/ban-phim.js';
 import {
 	GIONG,
@@ -237,7 +237,7 @@ test('mẫu âm đã giải mã chỉ giữ 4 giây đầu (bộ nhớ), chép �
 	assert.equal(catMau(c, ngan), ngan, 'mẫu ngắn hơn 4 giây giữ nguyên');
 });
 
-test('tải mẫu theo vùng: vùng ±12 nửa cung quanh phím; lần gọi sau và mẫu gần trước; giải mã tối đa 2 mẫu một lúc; giữ tối đa 12 mẫu, bỏ mẫu lâu không dùng; hỏng thì thử lại', async () => {
+test('tải mẫu theo vùng: vùng ±12 nửa cung quanh phím; lần gọi sau và mẫu gần trước; giải mã tối đa 2 mẫu một lúc; giữ tối đa 12 mẫu, bỏ mẫu có yêu cầu cũ nhất; hỏng thì chờ lâu dần rồi thử lại', async () => {
 	const cac = Array.from({ length: 25 }, (_, i) => 48 + i); // Đô3–Đô5
 	assert.equal(VUNG_TAI, 12);
 	assert.deepEqual(vungQuanh(48, cac), cac.slice(0, 13));
@@ -291,7 +291,9 @@ test('tải mẫu theo vùng: vùng ±12 nửa cung quanh phím; lần gọi sau
 		assert.deepEqual(giai, [48, 51, 72, 69, 66, 63, 60, 54, 57], 'thứ tự giải mã');
 		assert.deepEqual([...lay].sort((a, b) => a - b), [48, 51, 54, 57, 60, 63, 66, 69, 72], 'mỗi mẫu tải một lần');
 		assert.equal(trangThai().da_tai, 9);
-		assert.equal(mauDaGiu()[0], 48);
+		// thứ tự giữ theo lần yêu cầu, không theo lúc giải mã xong (D4-L1): Đô3 giải mã đầu tiên nhưng vùng của nó được yêu cầu
+		// trước, mẫu xa Đô3 nhất (57) là yêu cầu cũ nhất; vùng Đô5 yêu cầu sau, dù 60, 63… giải mã sau 48, 51
+		assert.deepEqual(mauDaGiu(), [57, 54, 51, 48, 60, 63, 66, 69, 72]);
 		// dùng lại Đô3: thành mẫu vừa dùng
 		await taiTruoc([48]);
 		assert.equal(mauDaGiu().at(-1), 48);
@@ -301,16 +303,36 @@ test('tải mẫu theo vùng: vùng ±12 nửa cung quanh phím; lần gọi sau
 		await taiTruoc(vungQuanh(96, dan88), 96);
 		assert.equal(GIOI_HAN_MAU, 12);
 		assert.equal(trangThai().da_tai, 12);
-		assert.deepEqual(mauDaGiu().slice(0, 3), [54, 57, 48], 'còn các mẫu dùng gần đây nhất');
-		assert.ok(!mauDaGiu().includes(51), 'mẫu lâu không dùng đã bỏ');
+		assert.deepEqual(mauDaGiu().slice(0, 3), [69, 72, 48], 'còn các mẫu yêu cầu hay dùng gần đây nhất');
+		for (const m of [51, 54, 57, 60, 63, 66]) assert.ok(!mauDaGiu().includes(m), `mẫu ${m} (yêu cầu cũ nhất) đã bỏ`);
 		// tải hỏng (HTTP 404) hay giải mã hỏng: không lỗi lọt ra ngoài, không giữ mẫu; lần sau tải lại
 		await taiTruoc([75, 78], 75);
 		assert.ok(!mauDaGiu().includes(75) && !mauDaGiu().includes(78));
-		hongTai.clear();
-		hongGiai.clear();
-		await taiTruoc([75, 78], 75);
+		// hỏng liền nhau thì chờ lâu dần (1, 2, 4… giây, tối đa 60) trước khi tải lại: trong lúc chờ không tải
+		assert.deepEqual([1, 2, 3, 7, 20].map(choThuLai), [1000, 2000, 4000, 60_000, 60_000]);
+		const bayGio = Date.now();
+		const dongHo = Date.now;
+		try {
+			await taiTruoc([75], 75);
+			assert.equal(lay.filter((m) => m === 75).length, 1, 'chưa tới lúc thử lại');
+			Date.now = () => bayGio + 1100;
+			await taiTruoc([75], 75);
+			assert.equal(lay.filter((m) => m === 75).length, 2, 'sau 1 giây: thử lại');
+			Date.now = () => bayGio + 2500;
+			await taiTruoc([75], 75);
+			assert.equal(lay.filter((m) => m === 75).length, 2, 'hỏng lần hai: chờ 2 giây');
+			hongTai.clear();
+			hongGiai.clear();
+			Date.now = () => bayGio + 3200;
+			await taiTruoc([75], 75);
+			assert.equal(lay.filter((m) => m === 75).length, 3, 'sau 2 giây: thử lại');
+			Date.now = () => bayGio + 5000;
+			await taiTruoc([75, 78], 75);
+		} finally {
+			Date.now = dongHo;
+		}
 		assert.ok(mauDaGiu().includes(75) && mauDaGiu().includes(78), 'thử lại sau khi hỏng');
-		assert.equal(lay.filter((m) => m === 75).length, 2);
+		assert.equal(lay.filter((m) => m === 75).length, 3);
 		assert.equal(GIAI_MA_CUNG_LUC, 2);
 		assert.equal(toiDa, 2, 'giải mã tối đa 2 mẫu một lúc');
 		await new Promise((ok) => setTimeout(ok, 10));

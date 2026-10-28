@@ -9,7 +9,7 @@ Kế hoạch 14 ngày, mỗi ngày 20–30 phút, cho người lớn chưa từn
 
 Bạn cần ít thứ hơn bạn nghĩ:
 
-- [ ] Một cây đàn: piano cơ, hoặc piano điện 88 phím có **phím nặng** (mô phỏng cơ chế búa của đàn cơ). Đàn phím nhẹ dùng tạm được vài tuần, nhưng tay sẽ quen với lực sai. Xem [Chọn đàn và góc tập](/opus/piano/chon-dan/).
+- [ ] Một cây đàn: piano cơ, hoặc piano điện 88 phím có **phím nặng** (mô phỏng cơ chế búa của đàn cơ). Đàn phím nhẹ dùng tạm được, nhưng cảm giác phím khác đàn cơ. Xem [Chọn đàn và góc tập](/opus/piano/chon-dan/).
 - [ ] Một chiếc ghế chỉnh được độ cao, hoặc ghế cứng kèm gối lót.
 - [ ] Điện thoại để thu âm, đặt trên giá hoặc một chồng sách.
 - [ ] [Máy đếm nhịp](/opus/luyen-tap/metronome/) của site, hoặc bất kỳ ứng dụng nào.
@@ -17,7 +17,7 @@ Bạn cần ít thứ hơn bạn nghĩ:
 - [ ] Một khung giờ cố định. Tập lúc nào cũng được, miễn là **ngày nào cũng tập**.
 
 :::tip[Vì sao 20 phút mỗi ngày hơn 3 tiếng cuối tuần]
-Một phần lớn việc học động tác diễn ra *sau* buổi tập, kể cả trong giấc ngủ. Bảy buổi ngắn cho bảy lần như vậy; một buổi dài chỉ cho một lần, kèm theo đôi tay mỏi.
+Việc học động tác còn tiếp tục tiến bộ *sau* buổi tập, trong lúc nghỉ. Bảy buổi ngắn cho bảy quãng nghỉ như vậy; một buổi dài chỉ cho một.
 :::
 
 ## Một buổi tập trong hai tuần này
@@ -30,7 +30,7 @@ Một phần lớn việc học động tác diễn ra *sau* buổi tập, kể 
 | 8–15 | Bài khởi động và bài đang tập | Chậm, đếm to |
 | 2–3 | Chơi một lượt trọn vẹn, ghi vài dòng | [Nhật ký luyện tập](/opus/luyen-tap/nhat-ky/) |
 
-Nếu chỉ có 20 phút, rút ngắn phần bài đang tập nhưng đừng bỏ phần đọc nốt: đọc nhạc là kỹ năng người tự học hay bỏ qua nhất.
+Nếu chỉ có 20 phút, rút ngắn phần bài đang tập nhưng đừng bỏ phần đọc nốt.
 
 ## Tuần 1: bàn phím, đôi tay và bài đầu tiên
 
@@ -44,13 +44,13 @@ Nếu chỉ có 20 phút, rút ngắn phần bài đang tập nhưng đừng b�
 | 6 | *Au clair de la lune* trọn bài | Nối từng câu hai ô nhịp; ♩ = 60, đếm to; 5 phút đọc nốt |
 | 7 | Ôn và thu âm lần đầu | Khởi động 1 và bài 1; [thu âm](/opus/luyen-tap/thu-am/); nghe lại một lần; ghi vào nhật ký một điều làm tốt, một điều cần sửa |
 
-**Ngày 1.** Chưa vội chơi bài. Chỉnh ghế để cẳng tay gần song song với mặt phím, khuỷu tay ngang hoặc hơi cao hơn phím; ngồi ở nửa trước của ghế, hai bàn chân đặt phẳng. Thả rơi cánh tay xuống đùi vài lần để cảm nhận sức nặng của nó: đó là nguồn lực bạn sẽ dùng thay cho việc ép ngón. Rồi tìm **Đô giữa (C4)**: phím trắng ngay bên trái nhóm hai phím đen nằm gần giữa đàn, thường gần chỗ in tên hãng đàn.
+**Ngày 1.** Chưa vội chơi bài. Chỉnh ghế để cẳng tay gần song song với mặt phím, hai bàn chân đặt phẳng. Thả rơi cánh tay xuống đùi vài lần để cảm nhận sức nặng của nó: đó là nguồn lực bạn sẽ dùng thay cho việc ép ngón. Rồi tìm **Đô giữa (C4)**: phím trắng ngay bên trái nhóm hai phím đen nằm gần giữa đàn.
 
 ::cong-cu{ten="piano" range="C3-C5" notes="C4"}
 
-**Ngày 2–3.** Hai tay được đánh số giống nhau: **ngón cái là 1**, ngón út là 5. Đặt tay phải vào **thế Đô**: ngón 1 trên Đô giữa, mỗi ngón một phím trắng, ngón 5 trên Sol4. Tay trái là ảnh gương: ngón 5 trên Đô3, ngón 1 trên Sol3 ([Vị trí năm ngón](/opus/piano/nam-ngon/)). Chơi thật chậm, nối mỗi nốt liền vào nốt sau (**legato**), và nghe xem năm nốt có to đều nhau không. Ngón 4 và 5 sẽ yếu hơn: chuyện bình thường, đừng bù bằng cách ép mạnh.
+**Ngày 2–3.** Hai tay được đánh số giống nhau: **ngón cái là 1**, ngón út là 5. Đặt tay phải vào **thế Đô**: ngón 1 trên Đô giữa, mỗi ngón một phím trắng, ngón 5 trên Sol4. Tay trái là ảnh gương: ngón 5 trên Đô3, ngón 1 trên Sol3 ([Vị trí năm ngón](/opus/piano/nam-ngon/)). Chơi thật chậm, nối mỗi nốt liền vào nốt sau (**legato**), và nghe xem năm nốt có to đều nhau không. Nếu ngón 4 và 5 chưa đều bằng các ngón khác, đó là chuyện bình thường khi mới tập: đừng bù bằng cách ép mạnh.
 
-Từ ngày 3, hãy **đếm to** "một – hai – ba – bốn" thành tiếng, và giữ tiếng đếm cả khi đang chơi. Nghe có vẻ trẻ con, nhưng thói quen này phân biệt người giữ được nhịp với người không. **Nốt tròn** ngân 4 phách, **nốt trắng** 2 phách, **nốt đen** 1 phách.
+Từ ngày 3, hãy **đếm to** "một – hai – ba – bốn" thành tiếng, và giữ tiếng đếm cả khi đang chơi. **Nốt tròn** ngân 4 phách, **nốt trắng** 2 phách, **nốt đen** 1 phách.
 
 ::cong-cu{ten="metronome"}
 
@@ -62,7 +62,7 @@ Từ ngày 3, hãy **đếm to** "một – hai – ba – bốn" thành tiếng
 
 ### Khởi động 1: Hỏi và đáp
 
-Cả hai tay ở thế Đô. Tay phải "hỏi" hai ô nhịp, tay trái "đáp" bằng cùng năm nốt, thấp hơn một quãng tám; rồi lại đổi vai. Ô cuối cùng, hai tay chơi Đô cùng lúc: lần "hai tay" đầu tiên của bạn.
+Cả hai tay ở thế Đô. Tay phải "hỏi" hai ô nhịp, tay trái "đáp" bằng cùng năm nốt, thấp hơn một quãng tám; rồi cả hai tay chơi lại theo chiều đi xuống, vẫn tay phải trước. Ô cuối cùng, hai tay chơi Đô cùng lúc: lần "hai tay" đầu tiên của bạn.
 
 ```abc
 X:1
@@ -111,7 +111,7 @@ Nếu hai tay "giành nhau", dừng ở phách 1 của ô nhịp khó: đặt c�
 
 ### Khởi động 2: Tay trái giữ nhịp
 
-Tay trái chơi nốt trắng, đổi nốt ở phách 1 và phách 3; tay phải đi từng phách. Đây chính là cách hai tay phối hợp trong bài 2.
+Tay trái chơi nốt trắng, đánh vào phách 1 và phách 3; tay phải chủ yếu đi từng phách. Đây chính là cách hai tay phối hợp trong bài 2.
 
 ```abc
 X:2
@@ -151,9 +151,9 @@ K:C
 [V:LH] !5!C,4 | !1!G,4 | G,4 | !5!C,4 |]
 ```
 
-Tay trái gần như đứng yên, để toàn bộ sự chú ý dồn vào tiết tấu của tay phải. Nốt móc đơn thường bị chơi quá sớm: hãy để nốt chấm dôi ngân đủ.
+Tay trái gần như đứng yên, để toàn bộ sự chú ý dồn vào tiết tấu của tay phải. Hãy để nốt chấm dôi ngân đủ, đừng chơi nốt móc đơn quá sớm.
 
-**Ngày 13–14: buổi biểu diễn nhỏ.** Chọn thứ tự (bài chắc nhất trước) và một tốc độ thoải mái, không phải tốc độ nhanh nhất bạn từng chơi được. Ngày 13, chạy thử một lần như thật. Ngày 14, mời một người thân nghe, hoặc đặt điện thoại quay như thể có khán giả. Trước mỗi bài, đặt tay vào thế, đếm thầm một ô nhịp, rồi mới bắt đầu. Lỡ sai thì đi tiếp: đó là kỹ năng biểu diễn đầu tiên và quan trọng nhất ([Học thuộc và biểu diễn](/opus/piano/hoc-thuoc-bieu-dien/)). Sau đó nghe hai bản thu liền nhau, và viết vào nhật ký ba điều đã khác đi.
+**Ngày 13–14: buổi biểu diễn nhỏ.** Chọn thứ tự (bài chắc nhất trước) và một tốc độ thoải mái, không phải tốc độ nhanh nhất bạn từng chơi được. Ngày 13, chạy thử một lần như thật. Ngày 14, mời một người thân nghe, hoặc đặt điện thoại quay như thể có khán giả. Trước mỗi bài, đặt tay vào thế, đếm thầm một ô nhịp, rồi mới bắt đầu. Lỡ sai thì đi tiếp: đó là kỹ năng biểu diễn đầu tiên cần tập ([Học thuộc và biểu diễn](/opus/piano/hoc-thuoc-bieu-dien/)). Sau đó nghe hai bản thu liền nhau, và viết vào nhật ký ba điều đã khác đi.
 
 **Cuối tuần 2, bạn có thể…**
 
@@ -165,28 +165,28 @@ Tay trái gần như đứng yên, để toàn bộ sự chú ý dồn vào ti�
 
 ## Nếu tuần đầu thấy khó…
 
-Hầu như ai cũng thấy vậy. Người lớn hiểu rất nhanh *điều phải làm*, nhưng đôi tay học với tốc độ như của mọi người; cảm giác "sao mình vụng thế" nằm ở khoảng cách đó, và nó thu hẹp dần sau vài tuần tập đều.
+Nếu thấy "sao mình vụng thế", đó là bình thường ở người mới tập: hãy tập đều và cho đôi tay thời gian.
 
 | Dấu hiệu | Thử cách này |
 |---|---|
 | Phải đếm phím từ một nốt Đô mới tìm ra nốt cần chơi | Mỗi ngày 2 phút tìm phím khi nhắm mắt: chạm nhóm 2 hoặc nhóm 3 phím đen, rồi trượt sang phím cần tìm ([Bản đồ bàn phím](/opus/piano/ban-do-ban-phim/)) |
-| Đọc nốt chậm, hay quên tên nốt | Bám vào ba nốt mốc; đọc theo **bước** (sang dòng hoặc khe kề bên) và **nhảy** (cách một dòng); hai lần đọc nốt 5 phút tốt hơn một lần 10 phút |
+| Đọc nốt chậm, hay quên tên nốt | Bám vào ba nốt mốc; đọc theo **bước** (sang dòng hoặc khe kề bên) và **nhảy** (cách một dòng); thử chia thành hai lần đọc nốt 5 phút thay vì một lần 10 phút |
 | Hai tay không chịu chơi cùng lúc | Thu lại còn một ô nhịp; chơi tay trái trong khi hát giai điệu tay phải; hạ máy đếm nhịp xuống ♩ = 50 |
 | Khớp đầu ngón 4, 5 gập vào khi chơi | Chơi chậm và nhẹ hơn, giữ ngón cong tự nhiên; tập bài "cầu tay" ở trang [Tư thế](/opus/piano/tu-the/) |
 | Nhịp chậm lại ở chỗ khó | Chọn tốc độ theo chỗ khó nhất của bài, không theo chỗ dễ nhất |
-| Mỏi vai, đau cổ tay | Dừng lại. Kiểm tra độ cao ghế, thả rơi cánh tay, nghỉ hẳn một ngày nếu cần; đọc [Giữ đôi tay khỏe](/opus/piano/suc-khoe/) |
+| Mỏi vai, đau cổ tay | Dừng lại và nghỉ. Kiểm tra độ cao ghế, thả rơi cánh tay; đọc [Giữ đôi tay khỏe](/opus/piano/suc-khoe/) |
 | Không có đủ 20 phút | 10 phút mỗi ngày vẫn hơn hẳn không tập. Giữ phần đọc nốt và bài đang tập, bỏ phần còn lại |
 | Chậm hơn kế hoạch | Kéo mỗi "tuần" thành 10 ngày, hay hai tuần. Kế hoạch phục vụ bạn, không phải ngược lại |
 
 :::note[Một vài buổi với thầy, ngay từ đầu]
-Nếu có điều kiện, hai, ba buổi học với một giáo viên trong tháng đầu đáng giá hơn nhiều buổi về sau: thói quen tư thế hình thành rất nhanh, và sửa sớm dễ hơn sửa muộn. Xem [Học với thầy và thi cấp](/opus/piano/thay-va-thi/).
+Nếu có điều kiện, hai, ba buổi học với một giáo viên trong tháng đầu giúp bạn được sửa tư thế và thế tay ngay từ đầu. Xem [Học với thầy và thi cấp](/opus/piano/thay-va-thi/).
 :::
 
 ## Sau hai tuần
 
 Bạn đang ở những tuần đầu của **chặng 1, Khởi đầu** trong [lộ trình 7 chặng](/opus/piano/lo-trinh/). Từ tuần thứ ba:
 
-- Tiếp tục [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/) từ bài 4. *Hänschen klein* đưa vào hai hợp âm đầu tiên của tay trái, **hợp âm chủ (I)** và **hợp âm bảy át (V7)**; *Frère Jacques* có thử thách chơi canon với một người bạn.
+- Tiếp tục [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/) từ bài 4. *Hänschen klein* đưa vào hai hợp âm đầu tiên của tay trái, **hợp âm chủ (I)** và **hợp âm bảy át (V7)**; *Frère Jacques* có thử thách chơi canon bằng hai tay.
 - Mở rộng sang thế Sol và thế Fa ([Vị trí năm ngón](/opus/piano/nam-ngon/)), rồi bắt đầu [gam Đô trưởng](/opus/piano/gam/) một quãng tám, từng tay.
 - Học tiếp nhạc lý: [bài 4: Nhịp](/opus/nhac-ly/04-nhip/) và [bài 5: Dấu hóa](/opus/nhac-ly/05-dau-hoa/).
 - Giữ nhịp tập: thu âm mỗi tuần, ghi nhật ký mỗi ngày, mỗi ngày 5 phút đọc nốt.
@@ -208,17 +208,17 @@ Kế hoạch theo từng tháng cho cả năm đầu nằm ở [Lộ trình pian
 + Chơi chậm bằng khoảng nửa tốc độ từng tay, mỗi lần một câu ngắn, đếm to
 - Chơi đúng tốc độ của từng tay để hai tay quen nhau
 - Chơi cả bài từ đầu đến cuối nhiều lần cho thuộc
-> Đoạn ngắn và tốc độ chậm cho não đủ thời gian điều khiển hai tay cùng lúc.
+> Đoạn ngắn và tốc độ chậm giúp mỗi lần ghép chỉ có một việc mới để theo dõi, như các bước ghép tay ở trên.
 ? Trong nhịp 4/4, nốt đen chấm dôi dài bao nhiêu phách?
 + Một phách rưỡi
 - Hai phách
 - Ba phách
 > Dấu chấm dôi thêm một nửa độ dài của nốt: 1 + ½ = 1½ phách.
 ? Vì sao nên thu âm vào ngày 7 và ngày 14?
-+ Để nghe ra những điều không nhận thấy khi đang chơi, và so sánh tiến bộ
++ Để nghe lại chính mình và so sánh hai bản thu
 - Để gửi đi thi
 - Vì máy đếm nhịp không đủ chính xác
-> Lúc chơi, tai bận theo dõi tay; khi nghe lại, bạn nghe được nhịp và âm thanh thật của mình.
+> Nghe hai bản thu liền nhau cho bạn một cách so sánh cụ thể giữa tuần 1 và tuần 2.
 ```
 
 ## Nguồn

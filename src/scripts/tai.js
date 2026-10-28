@@ -25,6 +25,12 @@ const LUAT = [
 	['.oz-lt', () => import('./luyen-tai.js'), false],
 	// khởi tạo ngay: dấu "đã học" ở mục lục, người đọc thấy ngay khi mở trang
 	['.oz-trang-thai-bai', () => import('./trang-thai-bai.js'), true],
+	// máy đếm nhịp (D4-L1): ô dựng sẵn, script thêm phần bấm được
+	['.oz-may-dem-nhip', () => import('./may-dem-nhip.js'), false],
+	// khởi tạo ngay: bài đang tập (đầu mục lục Piano: ô ẩn hiện ra khi có bài) và kế hoạch tập theo dữ liệu đã lưu, để ô đổi
+	// trước khi người đọc cuộn tới
+	['.oz-bai-dang-tap', () => import('./bai-dang-tap.js'), true],
+	['.oz-ke-hoach', () => import('./ke-hoach.js'), true],
 ];
 const LE = 600;
 const cho = new Map(); // phần tử đang chờ tới gần màn hình -> hàm khởi tạo (trả về promise)

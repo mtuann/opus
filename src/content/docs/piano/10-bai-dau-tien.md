@@ -6,7 +6,7 @@ description: "Mười giai điệu quen thuộc, soạn lại cho hai tay trên 
 Mười giai điệu quen thuộc, soạn lại cho **hai tay** trên khuông kép, có ghi **số ngón**. Mỗi bài thêm đúng một kỹ năng hai tay mới: chuyền giai điệu qua lại giữa hai tay, giữ nốt trầm, hợp âm tay trái, canon, nhịp 3/4 và 6/8, bàn đạp, rồi đến đoạn mở đầu *Für Elise* đúng như Beethoven viết.
 
 :::note[Về các bản soạn]
-Giai điệu là dân ca hoặc tác phẩm đã thuộc phạm vi công cộng. Phần tay trái (trừ bài 10) do Opus Zero soạn cho người mới, giữ hòa âm đơn giản nhất có thể. Bài 9 giữ nguyên giai điệu của Petzold nhưng giản lược tay trái; bản gốc đầy đủ hai tay có ở [bài học Minuet Sol trưởng](/opus/piano/tac-pham/minuet-sol/).
+Giai điệu là dân ca hoặc tác phẩm đã thuộc phạm vi công cộng. Phần tay trái (trừ bài 10) do Opus soạn cho người mới, giữ hòa âm đơn giản nhất có thể. Bài 9 giữ nguyên giai điệu của Petzold nhưng giản lược tay trái; bản gốc đầy đủ hai tay có ở [bài học Minuet Sol trưởng](/opus/piano/tac-pham/minuet-sol/).
 :::
 
 ## Trước khi bắt đầu
@@ -31,10 +31,10 @@ Nếu chưa, hãy theo [Hai tuần đầu tiên](/opus/piano/hai-tuan-dau/): k�
 2. **Tay phải riêng**, thật chậm, đếm to "một – hai – ba – bốn".
 3. **Tay trái riêng**. Phần tay trái thường dễ hơn; hãy chơi nó thật đều.
 4. **Hai tay thật chậm** (♩ = 50–60 với [máy đếm nhịp](/opus/luyen-tap/metronome/)). Dừng ở mỗi chỗ hai tay cùng đánh để kiểm tra: đó là các **điểm neo** (cách ghép tay đầy đủ ở [Sáu bậc ghép hai tay](/opus/piano/hai-tay/#sau-bac-ghep-hai-tay)).
-5. Tăng tốc độ một nấc (khoảng 4 nhịp/phút) chỉ khi đã chơi đúng ba lần liên tiếp.
+5. Tăng tốc độ một nấc (2–4 nhịp/phút) chỉ khi đã chơi đúng ba lần liên tiếp.
 6. Xong một bài: [thu âm](/opus/luyen-tap/thu-am/), nghe lại và ghi vào [nhật ký](/opus/luyen-tap/nhat-ky/).
 
-Mỗi bài mất vài ngày đến vài tuần tùy người; [Lộ trình piano năm đầu](/opus/bat-dau/lo-trinh-choi/) trải mười bài trong khoảng năm tháng đầu. Đừng sang bài mới khi bài cũ còn phải dừng giữa chừng: dừng lại nghĩa là tay chưa biết đường, và bài sau sẽ khó gấp đôi.
+Mỗi bài mất vài ngày đến vài tuần tùy người; [Lộ trình piano năm đầu](/opus/bat-dau/lo-trinh-choi/) trải mười bài trong khoảng năm tháng đầu. Đừng sang bài mới khi bài cũ còn phải dừng giữa chừng: dừng lại nghĩa là tay chưa biết đường, và bài sau sẽ khó hơn.
 
 ## Lộ trình 10 bài
 
@@ -53,7 +53,7 @@ Mỗi bài mất vài ngày đến vài tuần tùy người; [Lộ trình piano
 
 ## 1. Au clair de la lune
 
-*Dân ca Pháp, thế kỷ 18.* Đô trưởng. **Học được:** chơi hai tay mà mỗi lúc chỉ một tay "hát": tay phải hát đoạn đầu và đoạn cuối, **tay trái hát đoạn giữa**.
+*Dân ca Pháp.* Đô trưởng. **Học được:** chơi hai tay mà mỗi lúc chỉ một tay "hát": tay phải hát đoạn đầu và đoạn cuối, **tay trái hát đoạn giữa**.
 
 Tay phải ở thế Đô (ngón 1 trên Đô giữa). Tay trái ở **thế Sol**: ngón 5 trên Sol2, ngón 1 trên Rê3. Ở các đoạn tay phải hát, tay trái chỉ giữ nốt trầm Đô (ngón 2) và Sol (ngón 5).
 
@@ -78,7 +78,7 @@ K:C
 
 ## 2. Ah! vous dirai-je, maman (Twinkle, Twinkle)
 
-*Giai điệu Pháp thế kỷ 18; Mozart viết 12 biến tấu trên giai điệu này (K. 265).* Đô trưởng. **Học được:** tay trái đổi nốt trầm theo hòa âm, với ba nốt Đô – Fa – Sol (chủ âm, hạ át âm, át âm).
+*Dân ca Pháp; Mozart viết 12 biến tấu trên giai điệu này (K. 265).* Đô trưởng. **Học được:** tay trái đổi nốt trầm theo hòa âm, với ba nốt Đô – Fa – Sol (chủ âm, hạ át âm, át âm).
 
 Ở ô 1–2, tay phải **mở rộng**: ngón 4 trên Sol, ngón 5 trên La. Sang ô 3, thu tay về thế Đô (ngón 4 trên Fa). Tay trái ở thế Đô: Đô3 ngón 5, Fa3 ngón 2, Sol3 ngón 1.
 
@@ -103,7 +103,7 @@ K:C
 
 ## 3. Ode to Joy
 
-*Beethoven, Giao hưởng số 9, chương 4 (1824).* Đô trưởng. **Học được:** nhịp **đen chấm dôi – móc đơn**, và một nốt giai điệu do tay trái chơi.
+*Beethoven, Giao hưởng số 9, chương 4 (1824); ở đây hạ một cung từ Rê trưởng của bản gốc.* Đô trưởng. **Học được:** nhịp **đen chấm dôi – móc đơn**, và một nốt giai điệu do tay trái chơi.
 
 ```abc
 X:3
@@ -121,7 +121,7 @@ K:C
 [V:LH] G,2 C,2 | G,2 C,2 | G,4 | C,2 "^giai điệu"G,2 | C,4 | G,4 | C,4 | G,2 C,2 |]
 ```
 
-- Ở ô 12, nốt Sol trầm của giai điệu nằm ở **tay trái** (ngón 1). Tay phải nghỉ; nghe cho nốt ấy nối liền câu hát.
+- Ở phách 3–4 của ô 12, nốt Sol trầm của giai điệu nằm ở **tay trái** (ngón 1), trong lúc tay phải nghỉ; nghe cho nốt ấy nối liền câu hát.
 - Đếm to ô 4 và ô 8: "một – hai – và – ba – bốn". Nốt chấm dôi bắt đầu ở "một" và ngân qua "hai"; nốt móc đơn rơi đúng vào chữ "và" ngay sau "hai".
 
 ## 4. Hänschen klein
@@ -151,7 +151,7 @@ K:C
 
 *Dân ca Pháp; Mahler dùng giai điệu này ở giọng thứ trong Giao hưởng số 1.* Đô trưởng. **Học được:** đổi thế tay giữa câu, và (thử thách) chơi **canon**: hai tay hát cùng một giai điệu, lệch nhau hai ô nhịp.
 
-Tay phải chơi ở quãng tám trên Đô giữa (ngón 1 trên Đô5). Ô 5–6 mở tay: ngón 5 vươn lên La. Ô 7–8 dời tay xuống để ngón 1 bắt Sol4. Tay trái giữ quãng 5 Đô–Sol (ngón 5 và 1) như tiếng kèn túi.
+Tay phải chơi ở quãng tám trên Đô giữa (ngón 1 trên Đô5). Ô 5–6 mở tay: ngón 5 vươn lên La. Ô 7–8 dời tay xuống để ngón 1 bắt Sol4. Tay trái giữ quãng 5 Đô–Sol (ngón 5 và 1) như một âm nền ngân dài.
 
 ```abc
 X:5
@@ -194,7 +194,7 @@ K:C
 
 *Giai điệu thánh ca "New Britain", được ghép với lời Amazing Grace từ năm 1835.* Đô trưởng, nhịp 3/4. **Học được:** **nhịp lấy đà** (bài bắt đầu ở phách 3) và **đổi thế tay theo từng câu**.
 
-Tay phải có ba thế: thế Sol (ngón 1 trên Sol4) cho câu 1 và câu 4, thế Đô (ngón 1 trên Đô5) cho câu 2, và đầu câu 3 dời tay để ngón 5 ở Sol5, ngón 2 ở Đô5. Đổi thế ở nốt dài, khi tay có thời gian chuẩn bị. Tay trái: một nốt trầm mỗi ô (Đô, Fa, Sol).
+Tay phải đổi thế ba lần: câu 1 và câu 4 mở đầu bằng ngón 1 trên Sol4, rồi dời tay lên một nấc để ngón 3 rơi vào Đô5 và ngón 5 vào Mi5; câu 2 ở thế Đô (ngón 1 trên Đô5); đầu câu 3 dời tay để ngón 5 ở Sol5, ngón 2 ở Đô5. Đổi thế ở nốt dài, khi tay có thời gian chuẩn bị. Tay trái: một nốt trầm mỗi ô (Đô, Fa, Sol).
 
 ```abc
 X:7
@@ -217,7 +217,7 @@ K:C
 
 ## 7. Greensleeves
 
-*Giai điệu dân gian Anh, thế kỷ 16.* La thứ, nhịp 6/8. **Học được:** cảm nhịp 6/8 (hai phách lớn, mỗi phách ba móc đơn) và **dấu hóa bất thường**: Sol♯ và Fa♯ không có trong hóa biểu mà ghi ngay trước nốt (xem [Gam thứ](/opus/nhac-ly/07-gam-thu/)).
+*Dân ca Anh; bài ca được đăng ký ở London năm 1580.* La thứ, nhịp 6/8. **Học được:** cảm nhịp 6/8 (hai phách lớn, mỗi phách ba móc đơn) và **dấu hóa bất thường**: Sol♯ và Fa♯ không có trong hóa biểu mà ghi ngay trước nốt (xem [Gam thứ](/opus/nhac-ly/07-gam-thu/)).
 
 Tay trái đi xuống từng bậc La – Sol – Fa – Mi (ngón 1-2-3-4), mỗi nốt giữ trọn ô nhịp.
 
@@ -238,11 +238,12 @@ K:Am
 ```
 
 - Đếm "**một** hai ba **bốn** năm sáu", nhấn nhẹ ở 1 và 4; đừng đếm thành ba phách.
-- Ô 7: Fa♯ và Sol♯ là **gam thứ giai điệu** đi lên. Ô 4 và ô 7–8 có ba chỗ đổi thế tay; tập riêng từng chỗ.
+- Ô 7: Fa♯ và Sol♯ là bậc 6 và bậc 7 được nâng lên của gam La thứ (**gam thứ giai điệu**).
+- Các chỗ đổi thế tay: cuối ô 1 sang ô 2 và cuối ô 5 sang ô 6 (ngón 4 trên Mi, rồi ngón 5 xuống Rê); ô 4 (ngón cái nhảy từ Mi lên La); cuối ô 6 sang ô 7 (ngón 5 trên Đô). Tập riêng từng chỗ.
 
 ## 8. Largo ("Going Home")
 
-*Dvořák, Giao hưởng số 9 "Từ Thế giới mới", chương 2 (1893), chủ đề chính, bản rút gọn.* Đô trưởng. **Học được:** chơi **legato** chậm như hát, và dùng **bàn đạp vang** lần đầu: mỗi ô nhịp đổi bàn đạp một lần.
+*Dvořák, Giao hưởng số 9 "Từ Thế giới mới", chương 2 (1893), chủ đề chính, bản rút gọn và hạ nửa cung từ Rê♭ trưởng.* Đô trưởng. **Học được:** chơi **legato** chậm như hát, và dùng **bàn đạp vang** lần đầu: mỗi ô nhịp đổi bàn đạp một lần.
 
 Chữ *Ped.* dưới khuông là chỗ đổi bàn đạp: **nhả đúng lúc hợp âm mới vang, rồi nhấn lại ngay sau đó** (bàn đạp nối, có hình minh họa ở trang [Bàn đạp](/opus/piano/ban-dap/)). Dấu \* ở cuối là nhả hẳn. Tay trái chơi quãng 5 bằng ngón 5 và 1.
 
@@ -289,7 +290,7 @@ K:G
 ```
 
 - Móc đơn chơi **đều như hạt chuỗi**, hơi tách (không quá liền) theo phong cách Baroque; nốt đen ở đầu ô rõ hơn một chút.
-- Ô 3 và ô 7 là hai chỗ đổi thế tay: tập riêng "ô 2 → ô 3" và "ô 6 → ô 7" cho đến khi tay tự tìm đường.
+- Ô 3, ô 5 và ô 7 là các chỗ đổi thế tay: tập riêng "ô 2 → ô 3", "ô 4 → ô 5" và "ô 6 → ô 7" cho đến khi tay tự tìm đường.
 
 ## 10. Für Elise, 8 ô nhịp đầu
 
@@ -329,5 +330,5 @@ Chơi được 10 bài này ở tốc độ vừa phải, không dừng, nghĩa 
 ## Nguồn
 
 - Giai điệu: dân ca Pháp, Đức, Anh; thánh ca "New Britain"; Beethoven, Giao hưởng số 9 và Bagatelle WoO 59; Dvořák, Giao hưởng số 9; Petzold, Minuet BWV Anh. 114.
-- Bản nhạc gốc: [IMSLP](https://imslp.org/).
-- Phần soạn hai tay và số ngón: Opus Zero. Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
+- Bản nhạc đã đối chiếu: Mutopia Project (*Ode to Joy*, Minuet BWV Anh. 114, *Für Elise*, *Greensleeves*, *New Britain*) và IMSLP (Minuet BWV Anh. 114, *Für Elise*).
+- Phần soạn hai tay và số ngón: Opus. Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

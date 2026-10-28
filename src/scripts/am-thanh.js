@@ -5,7 +5,9 @@
 // Khác bản cũ: không tải cả 30 mẫu (khoảng 2 MB, giải mã ra khoảng 170 MB) ngay lần phát đầu, mà tải theo vùng: công cụ
 // gọi taiTruoc với các nốt sắp dùng (bàn phím: các phím quanh chỗ người học bắt đầu bấm, src/scripts/ban-phim.js), mẫu
 // gần nốt đang bấm giải mã trước. Bộ nhớ có giới hạn: mẫu đã giải mã chỉ giữ 4 giây đầu (catMau), giữ tối đa GIOI_HAN_MAU
-// mẫu (bỏ mẫu lâu không dùng nhất), giải mã tối đa GIAI_MA_CUNG_LUC mẫu một lúc (mỗi mẫu đầy đủ chiếm khoảng 6 MB khi giải mã).
+// mẫu (bỏ mẫu có lần yêu cầu hay dùng gần nhất cũ nhất, không theo thứ tự giải mã xong: D4-L1), giải mã tối đa
+// GIAI_MA_CUNG_LUC mẫu một lúc (mỗi mẫu đầy đủ chiếm khoảng 6 MB khi giải mã). Mẫu tải hỏng liên tục (mất mạng) thì chờ
+// lâu dần trước khi thử lại (choThuLai), trong lúc chờ nốt ấy phát âm tổng hợp.
 // Giải mã bằng OfflineAudioContext, không cần thao tác của người dùng, nên tải trước được cả khi chưa bấm (rê chuột, chạm).
 // Module chỉ đụng tới trình duyệt khi được gọi (tạo AudioContext trong lúc người dùng bấm, như trình duyệt đòi). Không tạo
 // được AudioContext thì mọi hàm phát im lặng bỏ qua: công cụ vẫn chạy phần hình (tên nốt, phím nháy).
@@ -36,7 +38,9 @@ const mauCan = (m) => mauGanNhat(m);
 let ngCanh = null;
 let chinh = null;
 let giaiMa = null; // OfflineAudioContext chỉ dùng để giải mã mẫu
-const bo = new Map(); // số MIDI của mẫu -> AudioBuffer; thứ tự là thứ tự dùng (đầu: lâu không dùng nhất)
+const bo = new Map(); // số MIDI của mẫu -> AudioBuffer
+const moc = new Map(); // số MIDI của mẫu -> mức ưu tiên của lần yêu cầu (taiTruoc…) hay lần dùng gần nhất: nhỏ nhất bị bỏ trước
+const hongLan = new Map(); // số MIDI của mẫu -> { n: số lần hỏng liền nhau, den: lúc được thử lại (Date.now()) }
 const dangTai = new Map(); // số MIDI của mẫu -> { p: promise, uuTien }
 const hang = []; // mẫu đã tải, chờ giải mã: { viec, ab, ok, hong }
 let dangGiai = 0;
@@ -59,8 +63,11 @@ export function datCheDo(v) {
 	baoTin();
 }
 export const trangThai = () => ({ che_do: cheDo(), da_tai: bo.size, tong: MAU.length });
-/** Các mẫu đang giữ (số MIDI), từ mẫu lâu không dùng nhất đến mẫu vừa dùng. */
-export const mauDaGiu = () => [...bo.keys()];
+/** Các mẫu đang giữ (số MIDI), từ mẫu có lần yêu cầu hay dùng cũ nhất đến mới nhất. */
+export const mauDaGiu = () => [...bo.keys()].sort((a, b) => moc.get(a) - moc.get(b));
+
+/** Thời gian chờ trước khi thử tải lại một mẫu đã hỏng n lần liền nhau: 1, 2, 4… giây, tối đa 60 giây. */
+export const choThuLai = (n) => Math.min(60_000, 1000 * 2 ** (n - 1));
 export const khiDoi = (f) => nghe.push(f);
 const baoTin = () => nghe.forEach((f) => f(trangThai()));
 
@@ -142,20 +149,26 @@ function ngCanhGiaiMa() {
 	return giaiMa;
 }
 
-/** Mẫu m đã giải mã (đánh dấu vừa dùng), hay undefined. */
-function layMau(m) {
+/** Mẫu m đã giải mã, hay undefined; có thì nâng mốc lên `uuTien` (lần yêu cầu hay lần dùng này). */
+function layMau(m, uuTien) {
 	const buf = bo.get(m);
-	if (buf) {
-		bo.delete(m);
-		bo.set(m, buf);
-	}
+	if (buf) moc.set(m, Math.max(moc.get(m), uuTien));
 	return buf;
 }
-/** Giữ mẫu vừa giải mã; quá GIOI_HAN_MAU mẫu thì bỏ mẫu lâu không dùng nhất (nốt đang phát vẫn giữ mẫu của nó tới hết). */
-function giuMau(m, buf) {
-	bo.delete(m);
+/**
+ * Giữ mẫu vừa giải mã với mốc `uuTien` (ưu tiên của lần yêu cầu gần nhất); quá GIOI_HAN_MAU mẫu thì bỏ mẫu có mốc nhỏ nhất,
+ * tức mẫu được yêu cầu hay dùng cũ nhất, dù nó vừa giải mã xong (nốt đang phát vẫn giữ mẫu của nó tới hết). Bỏ theo thứ tự
+ * giải mã xong thì sai: mẫu của lần bấm trước, giải mã sau (ưu tiên thấp hơn), lại được giữ thay cho mẫu của lần bấm sau.
+ */
+function giuMau(m, buf, uuTien) {
 	bo.set(m, buf);
-	while (bo.size > GIOI_HAN_MAU) bo.delete(bo.keys().next().value);
+	moc.set(m, uuTien);
+	while (bo.size > GIOI_HAN_MAU) {
+		let cu = null;
+		for (const k of bo.keys()) if (cu === null || moc.get(k) < moc.get(cu)) cu = k;
+		bo.delete(cu);
+		moc.delete(cu);
+	}
 }
 
 /** Giải mã lần lượt (tối đa GIAI_MA_CUNG_LUC mẫu một lúc), mẫu ưu tiên cao trước. */
@@ -180,10 +193,10 @@ function giaiTiep() {
 
 /**
  * Tải và giải mã một mẫu (một lần), ưu tiên `uuTien` (lớn hơn: giải mã trước). Đã có thì đánh dấu vừa dùng; đang tải thì
- * nâng ưu tiên. Hỏng (mất mạng, file lỗi) thì lần sau thử lại, nốt ấy phát âm tổng hợp.
+ * nâng ưu tiên. Hỏng (mất mạng, file lỗi) thì nốt ấy phát âm tổng hợp; thử lại sau choThuLai(số lần hỏng liền nhau).
  */
 function taiMau(m, uuTien = ++lanGoi * 100) {
-	if (layMau(m)) return Promise.resolve();
+	if (layMau(m, uuTien)) return Promise.resolve();
 	const dang = dangTai.get(m);
 	if (dang) {
 		dang.uuTien = Math.max(dang.uuTien, uuTien);
@@ -191,6 +204,8 @@ function taiMau(m, uuTien = ++lanGoi * 100) {
 	}
 	const ten = MAU.find(([x]) => x === m)?.[1];
 	if (!ten || !ngCanhGiaiMa() || typeof fetch !== 'function') return Promise.resolve();
+	// hỏng liền mấy lần (mất mạng): chưa tới lúc thử lại thì thôi, nốt phát âm tổng hợp
+	if (Date.now() < (hongLan.get(m)?.den ?? 0)) return Promise.resolve();
 	const viec = { uuTien };
 	viec.p = fetch(`${NGUON}${ten}.mp3`)
 		.then((r) => {
@@ -205,10 +220,14 @@ function taiMau(m, uuTien = ++lanGoi * 100) {
 				}),
 		)
 		.then((buf) => {
-			giuMau(m, buf);
+			hongLan.delete(m);
+			giuMau(m, buf, viec.uuTien);
 			baoTin();
 		})
-		.catch(() => {})
+		.catch(() => {
+			const n = (hongLan.get(m)?.n ?? 0) + 1;
+			hongLan.set(m, { n, den: Date.now() + choThuLai(n) });
+		})
 		.finally(() => dangTai.delete(m));
 	dangTai.set(m, viec);
 	return viec.p;
@@ -279,7 +298,7 @@ export function choiNot(m, luc, dai = 1, am = 0.22, che = cheDo()) {
 	if (!c) return;
 	const t = (luc ?? c.currentTime) + 0.02;
 	const mau = che === 'piano' ? mauCan(m) : null;
-	const buf = mau === null ? undefined : layMau(mau);
+	const buf = mau === null ? undefined : layMau(mau, ++lanGoi * 100);
 	if (mau !== null && !buf) taiMau(mau); // lần sau có tiếng piano
 	if (!buf) return amTongHop(c, m, t, dai, am);
 	const src = c.createBufferSource();

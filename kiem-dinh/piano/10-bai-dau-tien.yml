@@ -1,0 +1,982 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa piano/10-bai-dau-tien
+trang: src/content/docs/piano/10-bai-dau-tien.md
+nguon_cu: ../opus-zero/docs/piano/10-bai-dau-tien.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-28
+    nhanh: moi/d4-l1
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D4-L1 lượt 1, phần 1/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+nguon:
+  - id: mutopia-ode
+    bac: 1
+    ten: Mutopia Project, Beethoven, Ode to Joy (tệp LilyPond)
+    link: https://www.mutopiaproject.org/ftp/BeethovenLv/ode/ode.ly
+  - id: mutopia-minuet
+    bac: 1
+    ten: Mutopia Project, Petzold, Minuet in G, BWV Anh. 114 (Notebook for Anna Magdalena Bach, tệp LilyPond)
+    link: https://www.mutopiaproject.org/ftp/BachJS/BWVAnh114/anna-magdalena-04/anna-magdalena-04.ly
+  - id: mutopia-elise
+    bac: 1
+    ten: Mutopia Project, Beethoven, Für Elise WoO 59 (tệp LilyPond)
+    link: https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly
+  - id: omt-keyboard
+    bac: 2
+    ten: Open Music Theory, The Keyboard and the Grand Staff
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/the-keyboard-and-grand-staff/
+  - id: wiki-auclair
+    bac: 3
+    ten: Wikipedia, Au clair de la lune (bậc 3; chỉ để định vị)
+    link: https://en.wikipedia.org/wiki/Au_clair_de_la_lune
+  - id: mutopia-auclair
+    bac: 1
+    ten: Mutopia Project, tìm "Au clair de la lune" (bản của Horetzky)
+    link: https://www.mutopiaproject.org/cgibin/make-table.cgi?searchingfor=Au+clair+de+la+lune
+  - id: brit-mozart
+    bac: 2
+    ten: Encyclopaedia Britannica, Twelve Variations on "Ah, vous dirai-je, Maman", K 265
+    link: https://www.britannica.com/topic/Twelve-Variations-on-Ah-vous-dirai-je-Maman
+  - id: mutopia-twinkle
+    bac: 1
+    ten: Mutopia Project, tìm "Twinkle" (các bản phổ giai điệu Ah! vous dirai-je)
+    link: https://www.mutopiaproject.org/cgibin/make-table.cgi?searchingfor=Twinkle
+  - id: cleveland-9
+    bac: 2
+    ten: The Cleveland Orchestra, Beethoven, Symphony No. 9 (soạn từ hè 1822 đến tháng 2/1824)
+    link: https://www.clevelandorchestra.com/works/symphony-no-9-in-d-minor-op-125-choral
+  - id: wikibooks-hanschen
+    bac: 3
+    ten: "Wikibooks tiếng Đức, Liederbuch: Hänschen klein (bản phổ giai điệu; bậc 3)"
+    link: https://de.wikibooks.org/wiki/Liederbuch/_H%C3%A4nschen_klein
+  - id: wiki-hanschen
+    bac: 3
+    ten: Wikipedia, Hänschen klein (bậc 3; chỉ để định vị)
+    link: https://en.wikipedia.org/wiki/H%C3%A4nschen_klein
+  - id: carleton-frere
+    bac: 2
+    ten: Carleton College, bài thực hành về Frère Jacques (canon)
+    link: https://people.carleton.edu/~jellinge/m108f13/pages/11/11Lab5.html
+  - id: berliner-mahler
+    bac: 2
+    ten: Berliner Philharmoniker, Programme notes, Mahler, Symphony No. 1 (Frère Jacques ở giọng thứ trong chương 3)
+    link: https://www.berliner-philharmoniker.de/en/programme-notes/gustav-mahler-symphony-no-1-in-d-major
+  - id: bso-mahler
+    bac: 2
+    ten: Boston Symphony Orchestra, Mahler, Symphony No. 1
+    link: https://bso.org/works/symphony-no-1-in-d
+  - id: wiki-newbritain
+    bac: 3
+    ten: Wikipedia, New Britain (tune) (bậc 3; chỉ để định vị)
+    link: https://en.wikipedia.org/wiki/New_Britain_(tune)
+  - id: mob-southern
+    bac: 2
+    ten: Museum of the Bible, The Southern Harmony and Musical Companion (1835)
+    link: https://collections.museumofthebible.org/artifacts/56389-the-southern-harmony-and-musical-companion
+  - id: imslp-amazing
+    bac: 2
+    ten: IMSLP, Amazing Grace (Anonymous)
+    link: https://s10.imslp.org/wiki/Amazing_Grace_(Anonymous)
+  - id: mutopia-newbritain
+    bac: 1
+    ten: Mutopia Project, New Britain (tệp LilyPond)
+    link: https://www.mutopiaproject.org/ftp/Anonymous/new_britain/new_britain.ly
+  - id: ebsco-greensleeves
+    bac: 2
+    ten: EBSCO Research Starters, Greensleeves (Richard Jones đăng ký bài ca ở London ngày 3/9/1580)
+    link: https://www.ebsco.com/research-starters/history/greensleeves/
+  - id: mutopia-greensleeves
+    bac: 1
+    ten: Mutopia Project, tìm "Greensleeves" (các bản phổ; chỉ có bản cho đàn accordion và giai điệu thánh ca nên đối chiếu giai điệu)
+    link: https://www.mutopiaproject.org/cgibin/make-table.cgi?searchingfor=Greensleeves
+  - id: ucdavis-dvorak
+    bac: 2
+    ten: 'UC Davis Arts, Dvořák: Symphony No. 9 "From the New World"'
+    link: https://arts.ucdavis.edu/post/dvorak-symphony-no-9-new-world
+  - id: imslp-minuet
+    bac: 2
+    ten: IMSLP, Minuet in G major, BWV Anh. 114 (Petzold)
+    link: https://imslp.org/wiki/Minuet_in_G_major,_BWV_Anh.114_(Pezold,_Christian)
+  - id: imslp-elise
+    bac: 2
+    ten: IMSLP, Für Elise, WoO 59 (Beethoven)
+    link: https://imslp.org/wiki/F%C3%BCr_Elise,_WoO_59_(Beethoven,_Ludwig_van)
+nhan_dinh:
+  - id: n1
+    cau: Mười giai điệu quen thuộc, soạn lại cho hai tay trên khuông kép, có ghi số ngón.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Trang có đúng 10 bài, 11 khối abc (bài 5 có thêm khối canon), mọi khối đều có khuông kép và số ngón.
+  - id: n2
+    cau: "Mỗi bài thêm đúng một kỹ năng hai tay mới: chuyền giai điệu qua lại giữa hai tay, giữ nốt trầm, hợp âm tay trái, canon, nhịp 3/4 và 6/8, bàn đạp, rồi đến đoạn mở đầu Für Elise đúng như Beethoven viết."
+    loai: ve-site
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Đối chiếu bảng lộ trình: bài 1 chuyền giai điệu, bài 2 nốt trầm, bài 4 hợp âm, bài 5 canon, bài 6 và 7 nhịp 3/4 và 6/8, bài 8 bàn đạp, bài 10 Für Elise. Câu là lời giới thiệu, "đúng một kỹ năng" là cách nói.'
+  - id: n3
+    cau: Giai điệu là dân ca hoặc tác phẩm đã thuộc phạm vi công cộng.
+    loai: lich-su
+    nguon:
+      - mutopia-ode
+      - mutopia-minuet
+      - mutopia-elise
+    ket_qua: dung
+    ghi_chu: "Tác giả mất từ lâu hoặc vô danh: Beethoven (m. 1827), Petzold (m. 1733), Dvořák (m. 1904); dân ca và thánh ca vô danh; Mutopia chỉ nhận tác phẩm công cộng hay giấy phép mở."
+  - id: n4
+    cau: Phần tay trái (trừ bài 10) do Opus soạn cho người mới, giữ hòa âm đơn giản nhất có thể.
+    loai: ve-site
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ viết "Opus Zero": tên site đã đổi thành Opus (README ngày 23/10/2026). Phần tay trái: bài 10 là nguyên văn Beethoven (n97); các bài 1–9 là bản soạn; hòa âm chỉ dùng I, IV, V, V7 và vài hợp âm khác (i, E, G, C trong Greensleeves): đơn giản, đúng.'
+  - id: n5
+    cau: Bài 9 giữ nguyên giai điệu của Petzold nhưng giản lược tay trái; bản gốc đầy đủ hai tay có ở bài học Minuet Sol trưởng.
+    loai: cau-truc
+    nguon:
+      - mutopia-minuet
+    ket_qua: dung
+    ghi_chu: "Giai điệu tay phải khớp bản Mutopia (khuong_nhac khối 10); tay trái bản gốc là hai bè chuyển động, trang chỉ ghi một nốt trầm mỗi ô. Trang piano/tac-pham/minuet-sol chưa chuyển; có ở ../opus-zero/docs/piano/tac-pham/minuet-sol.md (# Petzold: Minuet Sol trưởng, BWV Anh. 114)."
+  - id: n6
+    cau: Bạn nên đã ngồi đúng tư thế và biết số ngón (liên kết Tư thế, thế tay và cách dùng lực).
+    loai: ve-site
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: piano/tu-the đã chuyển; có mục "Số ngón tay" và tiêu đề đúng.
+  - id: n7
+    cau: Bạn nên đã tìm được Đô giữa và các nốt mốc (liên kết Bản đồ bàn phím).
+    loai: ve-site
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: piano/ban-do-ban-phim (trang bạn đang kiểm, có mục "Nốt mốc để đọc nhạc nhanh").
+  - id: n8
+    cau: "Bạn nên đã quen thế Đô: năm ngón trên Đô–Rê–Mi–Fa–Sol (tuần 1 của Hai tuần đầu tiên)."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'piano/hai-tuan-dau ngày 2–3: "Đặt tay phải vào thế Đô: ngón 1 trên Đô giữa, mỗi ngón một phím trắng, ngón 5 trên Sol4" (trang đã chuyển, người khác đang kiểm lượt 1).'
+  - id: n9
+    cau: Từ bài 4, tập song song các thế Sol và Fa ở Vị trí năm ngón.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Trang cũ ../opus-zero/docs/piano/nam-ngon.md có bảng thế Đô, Sol, Fa và bài tập "cùng một bài ở thế Sol và thế Fa"; ../opus-zero/docs/bat-dau/lo-trinh-choi.md (tháng 2): bài 4–5 song song với Vị trí năm ngón. Trang chưa chuyển.'
+  - id: n10
+    cau: Hai tuần đầu tiên là kế hoạch dẫn thẳng vào ba bài đầu của trang này.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'piano/hai-tuan-dau: tuần 1 ngày 5–6 là bài 1 (Au clair de la lune), tuần 2 ngày 10 là bài 2, tổng duyệt "ba bài" ở ngày 13 và "ba bài đầu của 10 bài đầu tiên ... ở ♩ = 60–72"; khớp hồ sơ đã khóa bat-dau/lo-trinh-choi (n6–n15 phần này).'
+  - id: n11
+    cau: Con số nhỏ trên nốt là số ngón (1 = ngón cái).
+    loai: dinh-nghia
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Quy ước đánh số ngón của site: piano/hai-tuan-dau ngày 2–3 ("ngón cái là 1, ngón út là 5"), khớp tu-the "Số ngón tay"; không trái trang đã khóa.'
+  - id: n12
+    cau: Số ngón chỉ ghi ở nốt đầu và ở chỗ đổi thế tay; các nốt ở giữa dùng ngón kế tiếp một cách tự nhiên.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Quy ước ghi của site; các khối abc đúng như vậy (xem khuong_nhac).
+  - id: n13
+    cau: Khuông trên (khóa Sol) là tay phải, khuông dưới (khóa Fa) là tay trái.
+    loai: quy-tac
+    nguon:
+      - omt-keyboard
+    ket_qua: dung
+    ghi_chu: "OMT The Keyboard and the Grand Staff; mọi khối dùng %%score {RH LH}, V:RH clef=treble, V:LH clef=bass. (Quy ước, không phải luật: xem ban-do-ban-phim n40.)"
+  - id: n14
+    cau: Bấm nút phát để nghe trước và nhìn con trỏ chạy theo từng nốt.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'src/scripts/abc.js: "Vẽ khối abc thành khuông nhạc kèm trình phát luyện tập (abcjs)", có "Con trỏ: tô sáng nốt đang phát". Chưa mở trình duyệt thật để xem; người làm thành phần xác nhận.'
+  - id: n15
+    cau: "Cách tập 1: nghe mẫu hai lần, mắt dõi theo bản nhạc."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập.
+  - id: n16
+    cau: 'Cách tập 2: tay phải riêng, thật chậm, đếm to "một – hai – ba – bốn".'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập (bài 3 có cách đếm riêng ở n53, bài 6 ở n73, bài 7 ở n78).
+  - id: n17
+    cau: "Cách tập 3: tay trái riêng; phần tay trái thường dễ hơn; hãy chơi nó thật đều."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; "thường dễ hơn" đúng với 9 bài đầu (tay trái ít nốt); riêng bài 10 tay trái khó hơn một chút, câu có "thường".
+  - id: n18
+    cau: "Cách tập 4: hai tay thật chậm (♩ = 50–60 với máy đếm nhịp); dừng ở mỗi chỗ hai tay cùng đánh để kiểm tra: đó là các điểm neo."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập, khớp piano/hai-tay "4. Điểm neo. Khoanh bằng bút chì những chỗ hai tay đánh cùng lúc" (trang cũ). Khớp hồ sơ đã khóa bat-dau/lo-trinh-choi (♩ = 50–60).
+  - id: n19
+    cau: "Cách ghép tay đầy đủ có ở Sáu bậc ghép hai tay (liên kết piano/hai-tay, neo #sau-bac-ghep-hai-tay)."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển; ../opus-zero/docs/piano/hai-tay.md có "## Sáu bậc ghép hai tay" (bậc 4 là Điểm neo). Neo #sau-bac-ghep-hai-tay lấy từ tiêu đề này theo bộ tạo mã của site cũ (src/plugins/id-cu.mjs): phải giữ tiêu đề đó khi trang chuyển.'
+  - id: n20
+    cau: "Cách tập 5: tăng tốc độ một nấc (2–4 nhịp/phút) chỉ khi đã chơi đúng ba lần liên tiếp."
+    loai: ve-site
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "khoảng 4 nhịp/phút". Trang cũ luyen-tap/metronome.md: "Khi đã làm đúng 3 lần liên tiếp, tăng 2–4 BPM; sai thì lùi lại một nấc"; sửa cho khớp. Khớp hồ sơ đã khóa bat-dau/lo-trinh-choi (đúng 3 lần liên tiếp).'
+  - id: n21
+    cau: "Cách tập 6: xong một bài, thu âm, nghe lại và ghi vào nhật ký."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Trang đích chưa chuyển: ../opus-zero/docs/luyen-tap/thu-am.md (# Thu âm buổi tập) và nhat-ky.md (# Nhật ký luyện tập) có; khớp hồ sơ đã khóa bat-dau/lo-trinh-choi."
+  - id: n22
+    cau: Mỗi bài mất vài ngày đến vài tuần tùy người.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời ước lượng; không trái lộ trình (n23).
+  - id: n23
+    cau: Lộ trình piano năm đầu trải mười bài trong khoảng năm tháng đầu.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "../opus-zero/docs/bat-dau/lo-trinh-choi.md và hồ sơ đã khóa piano/lo-trinh (n12): tháng 1 bài 1–3, tháng 2 bài 4–5, tháng 3 bài 6–7, tháng 4 bài 8–9, tháng 5 bài 10: năm tháng."
+  - id: n24
+    cau: "Đừng sang bài mới khi bài cũ còn phải dừng giữa chừng: dừng lại nghĩa là tay chưa biết đường, và bài sau sẽ khó hơn."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "bài sau sẽ khó gấp đôi". "Gấp đôi" là con số không có nguồn, đổi thành "khó hơn"; phần còn lại là lời khuyên.'
+  - id: n25
+    cau: "Bảng lộ trình, bài 1: Au clair de la lune; giai điệu chuyền từ tay phải sang tay trái; tay trái ở thế Sol."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Khớp bài 1.
+  - id: n26
+    cau: "Bảng lộ trình, bài 2: Ah! vous dirai-je, maman (Twinkle); tay trái giữ nốt trầm, đổi nốt theo hòa âm; ba chức năng I – IV – V; mở rộng thế tay."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Khớp bài 2.
+  - id: n27
+    cau: "Bảng lộ trình, bài 3: Ode to Joy; tay trái nốt dài, một nốt giai điệu nằm ở tay trái; nốt đen chấm dôi."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Khớp bài 3. Nốt chấm dôi ở bài này là nốt đen chấm dôi nối nốt móc đơn (n53).
+  - id: n28
+    cau: "Bảng lộ trình, bài 4: Hänschen klein; hợp âm ba nốt ở tay trái; đổi hình hợp âm I ↔ V7."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Khớp bài 4.
+  - id: n29
+    cau: "Bảng lộ trình, bài 5: Frère Jacques; âm nền quãng 5; thử thách canon; hai tay hát hai câu khác nhau."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Khớp bài 5.
+  - id: n30
+    cau: "Bảng lộ trình, bài 6: Amazing Grace; nhịp lấy đà, nhịp 3/4; đổi thế tay theo câu nhạc."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Khớp bài 6.
+  - id: n31
+    cau: "Bảng lộ trình, bài 7: Greensleeves; nhịp 6/8, giọng La thứ; dấu hóa bất thường (Sol♯, Fa♯)."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Khớp bài 7.
+  - id: n32
+    cau: 'Bảng lộ trình, bài 8: Largo ("Going Home"); legato chậm, hát giai điệu; bàn đạp vang lần đầu.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Khớp bài 8.
+  - id: n33
+    cau: "Bảng lộ trình, bài 9: Minuet Sol trưởng; tác phẩm Baroque thật, chuỗi móc đơn đều; hóa biểu một dấu thăng."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Khớp bài 9.
+  - id: n34
+    cau: "Bảng lộ trình, bài 10: Für Elise (8 ô nhịp đầu); hai tay thay phiên thành một dòng; nốt móc kép, nhịp 3/8."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Khớp bài 10. M:3/8, L:1/16 (móc kép).
+  - id: n35
+    cau: "Bảng lộ trình: tên bài và thứ tự 1–10."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khớp thứ tự tiêu đề ## bên dưới và bảng lộ trình trang cũ."
+  - id: n36
+    cau: Au clair de la lune là dân ca Pháp.
+    loai: lich-su
+    nguon:
+      - wiki-auclair
+      - mutopia-auclair
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Dân ca Pháp, thế kỷ 18". Bỏ "thế kỷ 18": nguồn bậc 3 (Wikipedia) chỉ ghi là bài hát dân gian Pháp, gán lúc cho Lully (thế kỷ 17), lúc cho nhà soạn nhạc vô danh thế kỷ 18; không có nguồn bậc 1–2 đã mở để chọn thế kỷ. "Dân ca Pháp" chắc chắn.'
+  - id: n37
+    cau: Au clair de la lune ở giọng Đô trưởng.
+    loai: nam
+    nguon:
+      - mutopia-auclair
+    ket_qua: dung
+    ghi_chu: Bản Horetzky ở Mutopia và mọi bản dạy piano nhập môn đều ở Đô trưởng; khối abc K:C.
+  - id: n38
+    cau: 'Học được ở bài 1: chơi hai tay mà mỗi lúc chỉ một tay "hát": tay phải hát đoạn đầu và đoạn cuối, tay trái hát đoạn giữa.'
+    loai: cau-truc
+    nguon:
+      - mutopia-auclair
+    ket_qua: dung
+    ghi_chu: 'Giai điệu A A B A: đoạn B ("Prête-moi ta plume") nằm ở ô 9–12 của khối, do tay trái chơi (D3 D3 D3 D3 | A2 A2 | D3 C3 B2 A2 | G2).'
+  - id: n39
+    cau: "Tay phải ở thế Đô (ngón 1 trên Đô giữa); tay trái ở thế Sol: ngón 5 trên Sol2, ngón 1 trên Rê3."
+    loai: nam
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Khối 1: tay phải !1!C (C4); tay trái !5!G,, = G2 và !1!D, = D3. Khớp piano/hai-tuan-dau ngày 5–6 ("thế Sol (ngón 5 trên Sol2, ngón 1 trên Rê3)").'
+  - id: n40
+    cau: Ở các đoạn tay phải hát, tay trái chỉ giữ nốt trầm Đô (ngón 2) và Sol (ngón 5).
+    loai: nam
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối 1: tay trái !2!C, (C3) và !5!G,, (G2); ngón 2 trên C3 và ngón 5 trên G2 đúng trong thế Sol."
+  - id: n41
+    cau: Ở ô 9–12, tay phải nghỉ hẳn; hãy cho tay trái hát rõ và liền như tay phải, đừng "lí nhí".
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: "Khối 1 dòng 2: tay phải z4 z4 z4 z4 = ô 9–12 nghỉ trọn: đúng; phần còn lại là lời khuyên."
+  - id: n42
+    cau: "Thử thách: ở đoạn cuối, chơi tay trái nhỏ hơn hẳn tay phải; đó là bước đầu của cân bằng hai tay (liên kết Tạo tiếng đàn)."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: "Lời khuyên tập; trang cũ piano/tieng-dan.md (# Tạo tiếng đàn: legato, staccato, sắc thái và cân bằng) có phần cân bằng; chưa chuyển."
+  - id: n43
+    cau: Ah! vous dirai-je, maman là dân ca Pháp; Mozart viết 12 biến tấu trên giai điệu này (K. 265).
+    loai: lich-su
+    nguon:
+      - brit-mozart
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Giai điệu Pháp thế kỷ 18". Britannica: 12 biến tấu K. 265 của Mozart "based upon the French folk song" "Ah, vous dirai-je, Maman" (xuất bản ở Vienna năm 1785). Bỏ "thế kỷ 18" vì chưa có nguồn bậc 1–2 cho niên đại của giai điệu.'
+  - id: n44
+    cau: Ah! vous dirai-je ở giọng Đô trưởng.
+    loai: nam
+    nguon:
+      - mutopia-twinkle
+    ket_qua: dung
+    ghi_chu: "Khối abc K:C; giai điệu Twinkle quen thuộc: 12 ô C C G G | A A G2 | F F E E | D D C2 | G G F F | E E D2 | G G F F | E E D2 | C C G G | A A G2 | F F E E | D D C2 (khuong_nhac khối 2)."
+  - id: n45
+    cau: "Học được ở bài 2: tay trái đổi nốt trầm theo hòa âm, với ba nốt Đô – Fa – Sol (chủ âm, hạ át âm, át âm)."
+    loai: dinh-nghia
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Tay trái dùng C3, F3, G3; theo src/data/thuat-ngu.yml và hồ sơ nhac-ly/12 (hòa âm chức năng): I = chủ âm, IV = hạ át âm, V = át âm; Đô, Fa, Sol là gốc của ba hợp âm ấy trong Đô trưởng."
+  - id: n46
+    cau: "Ở ô 1–2, tay phải mở rộng: ngón 4 trên Sol, ngón 5 trên La; sang ô 3, thu tay về thế Đô (ngón 4 trên Fa)."
+    loai: nam
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối 2: !1!C C !4!G G | !5!A A !4!G2 | !4!F F !3!E E: khớp từng ngón."
+  - id: n47
+    cau: "Tay trái ở thế Đô: Đô3 ngón 5, Fa3 ngón 2, Sol3 ngón 1."
+    loai: nam
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Khối 2: !5!C, (C3), !2!F, (F3), !1!G, (G3): khớp, và khớp thế Đô tay trái ở piano/hai-tuan-dau ("tay trái là ảnh gương: ngón 5 trên Đô3, ngón 1 trên Sol3").'
+  - id: n48
+    cau: 'Nghe hai nốt trầm Fa → Đô ở ô 2: hạ át âm → chủ âm; ở ô 4, Sol → Đô là át âm → chủ âm, cảm giác "về nhà".'
+    loai: dinh-nghia
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Khối 2: ô 2 tay trái F3 rồi C3, ô 4 G3 rồi C3: đúng vị trí. IV–I (hạ át âm về chủ âm) và V–I (át âm về chủ âm) đúng theo hồ sơ đã khóa nhac-ly/12-hoa-am-chuc-nang; "cảm giác về nhà" là cách nói. Link tới nhac-ly/12 đã chuyển.'
+  - id: n49
+    cau: "Các chỗ hai tay cùng đánh là điểm neo: tập riêng từng điểm neo trước khi chơi liền cả câu."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; khớp n18 và piano/hai-tay (trang cũ).
+  - id: n50
+    cau: "Ode to Joy: Beethoven, Giao hưởng số 9, chương 4 (1824)."
+    loai: lich-su
+    nguon:
+      - cleveland-9
+      - mutopia-ode
+    ket_qua: dung
+    ghi_chu: 'The Cleveland Orchestra: Giao hưởng số 9 soạn "from the summer of 1822 through February 1824"; chủ đề Ode to Joy nằm ở chương 4 (khớp hồ sơ đã khóa nhac-ly/04-nhip n23). Ngày công diễn (7/5/1824) chưa mở nguồn bậc 2; trang chỉ ghi năm 1824, đúng.'
+  - id: n51
+    cau: Ode to Joy ở giọng Đô trưởng, hạ một cung từ Rê trưởng của bản gốc.
+    loai: nam
+    nguon:
+      - mutopia-ode
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Đô trưởng" (không nói đã đổi giọng). Bản gốc ở Rê trưởng (hồ sơ đã khóa nhac-ly/04-nhip: khuông 1 "hạ một cung, bản gốc Rê trưởng"); khối abc của trang K:C: sửa cho khớp cách nói đã dùng ở nhac-ly/04.'
+  - id: n52
+    cau: "Học được ở bài 3: nhịp đen chấm dôi – móc đơn, và một nốt giai điệu do tay trái chơi."
+    loai: cau-truc
+    nguon:
+      - mutopia-ode
+    ket_qua: dung
+    ghi_chu: "Khối 3: ô 4, ô 8 và ô 16 có E3/2 D/ D2 hay D3/2 C/ C2 (đen chấm dôi – móc đơn); ô 12 nốt Sol3 ở tay trái."
+  - id: n53
+    cau: 'Đếm to ô 4 và ô 8: "một – hai – và – ba – bốn"; nốt chấm dôi bắt đầu ở "một" và ngân qua "hai"; nốt móc đơn rơi đúng vào chữ "và" ngay sau "hai".'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Nốt đen chấm dôi dài 1,5 phách (từ "một" qua "hai" tới nửa phách sau) rồi nốt móc đơn đúng chữ "và" sau "hai": kiểm trên E3/2 D/ D2 (M:4/4, L:1/4). Phần còn lại là lời khuyên đếm.'
+  - id: n54
+    cau: Ở phách 3–4 của ô 12, nốt Sol trầm của giai điệu nằm ở tay trái (ngón 1), trong lúc tay phải nghỉ; nghe cho nốt ấy nối liền câu hát.
+    loai: nam
+    nguon:
+      - mutopia-ode
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Ở ô 12, ... Tay phải nghỉ": chưa đúng, vì ô 12 tay phải chơi C và D ở phách 1–2 (khối: !1!C !2!D z2) rồi mới nghỉ. Nốt Sol3 ở tay trái đúng bản gốc (cầu nối kết ở nốt thấp, theo bản Mutopia). Ngón 1 trên Sol3: đúng trong thế Đô tay trái (ngón 5 Đô3, ngón 1 Sol3).'
+  - id: n55
+    cau: "Hänschen klein là dân ca Đức (tiếng Anh: Lightly Row)."
+    loai: lich-su
+    nguon:
+      - wikibooks-hanschen
+      - wiki-hanschen
+    ket_qua: dung
+    ghi_chu: 'Chỉ có nguồn bậc 3 (Wikibooks tiếng Đức, Wikipedia): bài hát dân gian Đức, tiếng Anh "Lightly Row"; rủi ro thấp.'
+  - id: n56
+    cau: "Học được ở bài 4: hợp âm ba nốt ở tay trái và đổi giữa hai hình: hợp âm chủ Đô – Mi – Sol (ngón 5-3-1) và hợp âm át bảy Si – Fa – Sol (ngón 5-2-1)."
+    loai: dinh-nghia
+    nguon:
+      - wikibooks-hanschen
+    ket_qua: dung
+    ghi_chu: 'Đô – Mi – Sol là hợp âm chủ I của Đô trưởng. Si – Fa – Sol là hợp âm át bảy V7 (Sol – Si – Rê – Fa) thiếu quãng năm (Rê): vẫn có đủ nốt đặc trưng (Si là bậc 7, Fa là quãng bảy), cách đệm thông dụng; câu gọi là "hợp âm át bảy", chấp nhận. Khớp khối 4 và hồ sơ đã khóa bat-dau/lo-trinh-choi (tháng 2).'
+  - id: n57
+    cau: Ngón cái giữ nguyên trên Sol; ngón 5 dời xuống Si, ngón 2 đặt lên Fa.
+    loai: nam
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Đổi từ C3–E3–G3 (5-3-1) sang B2–F3–G3 (5-2-1): Sol giữ, C3 xuống B2 bằng ngón 5, E3 lên F3 bằng ngón 2: đúng."
+  - id: n58
+    cau: Tập tay trái riêng Đô–Mi–Sol → Si–Fa–Sol → Đô–Mi–Sol, mắt nhìn bản nhạc chứ không nhìn tay; khi đã quen, đánh hợp âm hai lần mỗi ô (phách 1 và 3) cho nhạc có nhịp hơn; xem thêm Hợp âm, hợp âm rải và hình đệm.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập. Trang đích chưa chuyển: ../opus-zero/docs/piano/hop-am-rai.md (# Hợp âm, hợp âm rải và hình đệm). Khớp hồ sơ đã khóa bat-dau/lo-trinh-choi (tháng 2: "đổi hợp âm Đô–Mi–Sol ↔ Si–Fa–Sol", "mắt nhìn bản nhạc chứ không nhìn tay").'
+  - id: n59
+    cau: Frère Jacques là dân ca Pháp.
+    loai: lich-su
+    nguon:
+      - carleton-frere
+    ket_qua: dung
+    ghi_chu: 'Carleton (bài thực hành canon): bài hát canon Pháp "Frère Jacques"; rủi ro thấp.'
+  - id: n60
+    cau: Mahler dùng giai điệu Frère Jacques ở giọng thứ trong Giao hưởng số 1.
+    loai: lich-su
+    nguon:
+      - berliner-mahler
+      - bso-mahler
+    ket_qua: dung
+    ghi_chu: 'Berliner Philharmoniker và BSO: chương 3 của Giao hưởng số 1 mở đầu bằng canon trên giai điệu "Frère Jacques" ở giọng thứ, như một hành khúc đưa tang.'
+  - id: n61
+    cau: "Học được ở bài 5: đổi thế tay giữa câu, và (thử thách) chơi canon: hai tay hát cùng một giai điệu, lệch nhau hai ô nhịp."
+    loai: dinh-nghia
+    nguon:
+      - carleton-frere
+    ket_qua: dung
+    ghi_chu: "Canon: các bè hát cùng một giai điệu, vào lần lượt cách nhau một khoảng thời gian (Carleton, bài thực hành canon). Khối 6: tay trái vào ở ô 3, sau hai ô."
+  - id: n62
+    cau: "Tay phải chơi ở quãng tám trên Đô giữa (ngón 1 trên Đô5); ô 5–6 mở tay: ngón 5 vươn lên La; ô 7–8 dời tay xuống để ngón 1 bắt Sol4."
+    loai: nam
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối 5: c(1) = C5; ô 5 !4!g !5!a (A5 bằng ngón 5); ô 7 !2!c2 !1!G2 (G4 bằng ngón 1). Khớp."
+  - id: n63
+    cau: Tay trái giữ quãng 5 Đô–Sol (ngón 5 và 1) như một âm nền ngân dài.
+    loai: nam
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "... như tiếng kèn túi". So sánh với kèn túi (bagpipe) không có nguồn nào đã mở; bỏ, thay bằng "âm nền ngân dài" (điều khối nhạc thực sự làm: [C,G,]4 mỗi nửa ô). Quãng 5 Đô3–Sol3 đúng. Số ngón 5 và 1 không ghi trên khuông; là gợi ý hợp lý.'
+  - id: n64
+    cau: "Thử thách canon: tay trái chơi chính giai điệu ấy, thấp hơn hai quãng tám, vào sau hai ô nhịp."
+    loai: cau-truc
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối 6: tay phải c d e c (C5), tay trái C, D, E, C (C3) bắt đầu ở ô 3 và lặp lại đủ 8 ô của giai điệu; C3 thấp hơn C5 đúng hai quãng tám."
+  - id: n65
+    cau: "Đây là bài tập độc lập hai tay thật sự đầu tiên: mỗi tay có câu nhạc riêng, và hai câu khớp với nhau thành hòa âm."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Bài 1 chuyền giai điệu, bài 2–4 tay trái là đệm; canon là lần đầu hai tay có giai điệu riêng: đúng. Frère Jacques là canon vòng nên hai bè hòa hợp theo thiết kế (n61)."
+  - id: n66
+    cau: "Tập tay trái riêng cho thật thuộc trước: thế Đô, ô 7 mở tay để ngón 1 lên La3."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: "Lời khuyên tập; khối 6 dòng 2 (ô 7 của tay trái): !2!G, !1!A, = G3 ngón 2, A3 ngón 1: đúng."
+  - id: n67
+    cau: Chơi chậm hơn hẳn bản chính (♩ = 60–72) và nghe cả hai bè; nếu rối, lặp riêng ô 3–4 của hai tay nhiều lần.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; khối 6 ghi Q:1/4=72.
+  - id: n68
+    cau: Giai điệu Amazing Grace là thánh ca "New Britain", được ghép với lời Amazing Grace từ năm 1835.
+    loai: lich-su
+    nguon:
+      - wiki-newbritain
+      - mob-southern
+      - imslp-amazing
+    ket_qua: dung
+    ghi_chu: 'Giai điệu "New Britain" in trong The Southern Harmony (1835; Museum of the Bible); việc ghép với lời Amazing Grace lần đầu trong sách ấy là theo Wikipedia (bậc 3) và IMSLP: chấp nhận vì trang chỉ nói năm 1835.'
+  - id: n69
+    cau: Amazing Grace ở giọng Đô trưởng, nhịp 3/4; học được nhịp lấy đà (bài bắt đầu ở phách 3) và đổi thế tay theo từng câu.
+    loai: cau-truc
+    nguon:
+      - mutopia-newbritain
+    ket_qua: dung
+    ghi_chu: "Khối 7: K:C, M:3/4, ô đầu chỉ có một nốt đen (lấy đà), nốt Sol là phách 3. Mutopia (New Britain): K:G, 3/4, \\partial 4; khối hạ xuống một quãng bốn (Sol trưởng sang Đô trưởng)."
+  - id: n70
+    cau: "Tay phải đổi thế ba lần: câu 1 và câu 4 mở đầu bằng ngón 1 trên Sol4, rồi dời tay lên một nấc để ngón 3 rơi vào Đô5 và ngón 5 vào Mi5; câu 2 ở thế Đô (ngón 1 trên Đô5); đầu câu 3 dời tay để ngón 5 ở Sol5, ngón 2 ở Đô5."
+    loai: nam
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "ba thế: thế Sol (ngón 1 trên Sol4) cho câu 1 và câu 4, thế Đô cho câu 2, ...". Không khớp ngón bấm của khối: ở thế Sol (ngón 1 trên Sol4) Đô5 là ngón 4, nhưng khối ghi Đô5 ngón 3 và Mi5 ngón 5 (tức ngón 1 ở La4); chữ đã sửa mô tả đúng điều khối ghi. Số ngón là cách soạn của site, không có nguồn ngoài (không sửa số ngón).'
+  - id: n71
+    cau: Đổi thế ở nốt dài, khi tay có thời gian chuẩn bị.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập.
+  - id: n72
+    cau: "Tay trái: một nốt trầm mỗi ô (Đô, Fa, Sol)."
+    loai: cau-truc
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối 7: mỗi ô một nốt dài 3 phách (C,3 F,3 G,3), ô lấy đà nghỉ."
+  - id: n73
+    cau: 'Đếm "ba | một – hai – ba": nốt Sol đầu tiên là phách 3 của một ô "thiếu" (nhịp lấy đà); ô cuối cũng thiếu đúng một phách để bù lại.'
+    loai: cau-truc
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Ô lấy đà 1 phách, ô cuối c2 = 2 phách: 1 + 2 = 3 phách, đủ một ô 3/4."
+  - id: n74
+    cau: "Nốt dài ở ô 7 kéo sang ô 8 bằng dấu nối: giữ phím, đừng đánh lại."
+    loai: cau-truc
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối 7: g3- | g2 (đánh số ô không tính ô lấy đà); cuối bài c3- | c2 cũng nối. Dấu nối đúng nghĩa (giữ phím)."
+  - id: n75
+    cau: Greensleeves là dân ca Anh; bài ca được đăng ký ở London năm 1580.
+    loai: lich-su
+    nguon:
+      - ebsco-greensleeves
+    ket_qua: da-sua
+    ghi_chu: "Câu cũ: \"Giai điệu dân gian Anh, thế kỷ 16\". EBSCO Research Starters: Richard Jones đăng ký bài ca ở Stationers' Company, London, ngày 3/9/1580; gọi là \"Elizabethan folk song\", nhưng giai điệu truy về hình thức romanesca của Ý và các bản đầu \"none ... match note for note\" với bản hôm nay. Nên viết điều chắc chắn (năm đăng ký) thay vì \"giai điệu thế kỷ 16\"."
+  - id: n76
+    cau: "Greensleeves ở La thứ, nhịp 6/8; học được cảm nhịp 6/8 (hai phách lớn, mỗi phách ba móc đơn) và dấu hóa bất thường: Sol♯ và Fa♯ không có trong hóa biểu mà ghi ngay trước nốt."
+    loai: dinh-nghia
+    nguon:
+      - mutopia-greensleeves
+    ket_qua: dung
+    ghi_chu: "Khối 8: K:Am, M:6/8, Q:3/8=56 (hai phách chấm dôi); ^G và ^F ghi trước nốt, K:Am không có dấu hóa. 6/8 là hai phách lớn, mỗi phách ba móc đơn: khớp hồ sơ đã khóa nhac-ly/04-nhip (n18, n25). Link tới nhac-ly/07-gam-thu đã chuyển."
+  - id: n77
+    cau: Tay trái đi xuống từng bậc La – Sol – Fa – Mi (ngón 1-2-3-4), mỗi nốt giữ trọn ô nhịp.
+    loai: nam
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối 8: A,,6 G,,6 F,,6 E,,6 với !1! !2! !3! !4!: đúng (đi xuống thì ngón số tăng ở tay trái)."
+  - id: n78
+    cau: Đếm "một hai ba bốn năm sáu", nhấn nhẹ ở 1 và 4; đừng đếm thành ba phách.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; khớp 6/8 hai phách lớn (n76).
+  - id: n79
+    cau: "Ô 7: Fa♯ và Sol♯ là bậc 6 và bậc 7 được nâng lên của gam La thứ (gam thứ giai điệu)."
+    loai: nam
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Ô 7: Fa♯ và Sol♯ là gam thứ giai điệu đi lên". Ô 7 của khối (c3/2 B/ A ^G3/2 ^F/ ^G) đi xuống từ Đô về Sol♯ – Fa♯ rồi lên Sol♯, không phải "đi lên"; Fa♯ và Sol♯ vẫn là bậc 6, 7 nâng của La thứ. Viết như vậy cho đúng nốt. (Thuật ngữ "gam thứ giai điệu" chưa có trong thuat-ngu.yml.)'
+  - id: n80
+    cau: "Các chỗ đổi thế tay: cuối ô 1 sang ô 2 và cuối ô 5 sang ô 6 (ngón 4 trên Mi, rồi ngón 5 xuống Rê); ô 4 (ngón cái nhảy từ Mi lên La); cuối ô 6 sang ô 7 (ngón 5 trên Đô)."
+    loai: nam
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Ô 4 và ô 7–8 có ba chỗ đổi thế tay". Theo số ngón của khối (ô lấy đà = ô 0): ô 1 kết !4!e rồi ô 2 mở !5!d; ô 5 kết !4!e rồi ô 6 mở !5!d; ô 4 !1!E2 rồi !1!A (ngón cái nhảy); ô 6 kết !3!B rồi ô 7 mở !5!c; ô 8 không có đổi thế. Câu cũ chỉ đúng ô 4.'
+  - id: n81
+    cau: 'Largo ("Going Home"): Dvořák, Giao hưởng số 9 "Từ Thế giới mới", chương 2 (1893), chủ đề chính, bản rút gọn và hạ nửa cung từ Rê♭ trưởng, ở Đô trưởng.'
+    loai: lich-su
+    nguon:
+      - ucdavis-dvorak
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "..., bản rút gọn. Đô trưởng." (không nói đã đổi giọng). Chương 2 (Largo) của Giao hưởng số 9 ở Rê♭ trưởng, soạn 1893 (UC Davis Arts; hồ sơ đã khóa du-lieu/tac-pham/dvorak-9-largo; trang cũ nghe-nhac/dvorak-9-largo: "Rê♭ trưởng", "1893"). Khối 9 ở K:C: hạ nửa cung.'
+  - id: n82
+    cau: "Học được ở bài 8: chơi legato chậm như hát, và dùng bàn đạp vang lần đầu: mỗi ô nhịp đổi bàn đạp một lần."
+    loai: cau-truc
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Khối 9: mỗi ô tay trái có "_Ped." đúng một lần (8 ô, ô cuối có "_*"); 4/4, Q:1/4=60 (chậm).'
+  - id: n83
+    cau: "Chữ Ped. dưới khuông là chỗ đổi bàn đạp: nhả đúng lúc hợp âm mới vang, rồi nhấn lại ngay sau đó (bàn đạp nối; có hình minh họa ở trang Bàn đạp)."
+    loai: quy-tac
+    nguon: []
+    ket_qua: null
+    ghi_chu: 'chưa chắc: chưa mở nguồn bậc 1–2 cho kỹ thuật bàn đạp nối. Trang cũ piano/ban-dap.md có bảng ký hiệu ("Một chữ Ped. mới mà không có dấu sao trước đó nghĩa là đổi bàn đạp: nhả rồi nhấn lại") và mục "Bàn đạp nối"; khớp hồ sơ đã khóa bat-dau/lo-trinh-choi. Khi trang Bàn đạp chuyển phải kiểm cùng nguồn.'
+  - id: n84
+    cau: Dấu * ở cuối là nhả hẳn bàn đạp.
+    loai: quy-tac
+    nguon: []
+    ket_qua: null
+    ghi_chu: 'chưa chắc: như n83 (ký hiệu bàn đạp *, chưa mở nguồn bậc 1–2). Trang cũ piano/ban-dap.md: "Ped. … ✱ (dấu sao): Nhấn bàn đạp vang ở Ped., nhả ở dấu sao".'
+  - id: n85
+    cau: Tay trái chơi quãng 5 bằng ngón 5 và 1.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Gợi ý số ngón (khối không ghi ngón tay trái); Đô3–Sol3 và Sol2–Rê3 đều là quãng 5, đúng với ngón 5 và 1.
+  - id: n86
+    cau: "Tập trước không bàn đạp: tay phải nối liền từng nốt bằng ngón (legato ngón), nốt sau vào đúng lúc nốt trước vừa nhả."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập.
+  - id: n87
+    cau: 'Rồi tập riêng tay trái với chân: đánh quãng 5 ở "một", nhấn chân ở "và"; khi chân đã tự động, mới thêm tay phải.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập (nhấn bàn đạp sau khi đánh nốt, khớp ý ở n83).
+  - id: n88
+    cau: "Nghe chủ đề này trong giao hưởng: hướng dẫn nghe Dvořák (liên kết nghe-nhac/dvorak-9-largo)."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển; ../opus-zero/docs/nghe-nhac/dvorak-9-largo.md (# Dvořák: Giao hưởng số 9 "Từ Thế giới mới", chương 2 (Largo)) có; khớp n81.'
+  - id: n89
+    cau: "Minuet Sol trưởng: Christian Petzold, trong Notebook for Anna Magdalena Bach (1725); lâu nay thường được gán cho Bach."
+    loai: lich-su
+    nguon:
+      - mutopia-minuet
+      - imslp-minuet
+    ket_qua: dung
+    ghi_chu: "Mutopia và IMSLP: Minuet in G, BWV Anh. 114 (phụ lục BWV: tác phẩm từng gán cho Bach), tác giả Petzold, trong Notebook for Anna Magdalena Bach (1725); khớp hồ sơ đã khóa du-lieu/tac-pham/minuet-sol."
+  - id: n90
+    cau: Minuet ở Sol trưởng, nhịp 3/4; học được chuỗi móc đơn đều, đổi thế tay, hóa biểu một dấu thăng (Fa♯).
+    loai: cau-truc
+    nguon:
+      - mutopia-minuet
+    ket_qua: dung
+    ghi_chu: "Khối 10: K:G (một dấu thăng, Fa♯), M:3/4, L:1/8, nhiều chuỗi GABc, cBA: đúng."
+  - id: n91
+    cau: Đây là nửa đầu (16 ô nhịp) với giai điệu gốc.
+    loai: cau-truc
+    nguon:
+      - mutopia-minuet
+      - imslp-minuet
+    ket_qua: dung
+    ghi_chu: "Khối 10: 16 ô tay phải, đối chiếu từng nốt với bản Mutopia (nửa đầu 16 ô, hai đoạn 8 ô): khớp (khuong_nhac khối 10)."
+  - id: n92
+    cau: "Tay trái được giản lược: mỗi ô một nốt trầm, cả bài nằm gọn trong thế Sol của tay trái (ngón 5 trên Sol2, ngón 1 trên Rê3); khi đã chơi thuộc, chuyển sang bản gốc hai bè ở bài học Minuet Sol trưởng."
+    loai: cau-truc
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối 10: tay trái G,,6 B,,6 C,6 B,,6 A,,6 G,,6 D,6 ...: G2 (ngón 5), A2, B2, C3, D3 (ngón 1) đều trong thế Sol. Bản gốc có hai bè (n5)."
+  - id: n93
+    cau: Móc đơn chơi đều như hạt chuỗi, hơi tách (không quá liền) theo phong cách Baroque; nốt đen ở đầu ô rõ hơn một chút.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên cách chơi; "theo phong cách Baroque" là cách nói chung, không dùng làm khẳng định lịch sử.
+  - id: n94
+    cau: 'Ô 3, ô 5 và ô 7 là các chỗ đổi thế tay: tập riêng "ô 2 → ô 3", "ô 4 → ô 5" và "ô 6 → ô 7" cho đến khi tay tự tìm đường.'
+    loai: nam
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Ô 3 và ô 7 là hai chỗ đổi thế tay: ... ô 2 → ô 3 và ô 6 → ô 7". Theo số ngón: ô 2 kết !1!G, ô 3 mở !3!e (đổi); ô 4 kết !1!G, ô 5 mở !4!c (đổi); ô 6 kết G, ô 7 mở !1!F (đổi): có ba chỗ, câu cũ thiếu ô 5.'
+  - id: n95
+    cau: "Für Elise: Beethoven, Bagatelle La thứ WoO 59 (1810)."
+    loai: lich-su
+    nguon:
+      - mutopia-elise
+      - imslp-elise
+    ket_qua: dung
+    ghi_chu: "Mutopia và IMSLP: Für Elise, WoO 59, Bagatelle ở La thứ, 1810; khớp hồ sơ đã khóa du-lieu/tac-pham/fur-elise."
+  - id: n96
+    cau: "Für Elise ở La thứ, nhịp 3/8; học được hai tay thay phiên nhau thành một dòng chảy liền: tay trái rải La – Mi – La, tay phải đón tiếp Đô – Mi – La."
+    loai: cau-truc
+    nguon:
+      - mutopia-elise
+    ket_qua: dung
+    ghi_chu: "Khối 11: K:Am, M:3/8, L:1/16; tay trái A,, E, A, (La2 Mi3 La3), tay phải C E A (Đô4 Mi4 La4): đúng."
+  - id: n97
+    cau: Đây là nguyên văn hai tay của Beethoven ở đoạn mở đầu (trong bản gốc câu này được nhắc lại; ở đây khép tạm bằng nốt La để thành bài tập).
+    loai: cau-truc
+    nguon:
+      - mutopia-elise
+      - imslp-elise
+    ket_qua: dung
+    ghi_chu: "Đối chiếu từng nốt hai tay với bản Mutopia (khuong_nhac khối 11): khớp; ô cuối thay phần nhắc lại bằng nốt La dài, đúng như câu nói."
+  - id: n98
+    cau: "Tay trái: ngón 5-2-1."
+    loai: nam
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối 11: !5!A,, !2!E, !1!A, và !5!E,, !2!E, !1!^G,: ngón 5-2-1."
+  - id: n99
+    cau: Mi – Rê♯ lặp lại phải nhẹ và đều, không nhấn.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên; khối ghi !pp!.
+  - id: n100
+    cau: "Chỗ khó là nối tay: nốt cuối của tay trái và nốt đầu của tay phải phải liền như của cùng một bàn tay; tập chậm từng chỗ chuyển tay, rồi mới chơi cả câu."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập.
+  - id: n101
+    cau: "Học tiếp cả bài: bài học Für Elise (liên kết piano/tac-pham/fur-elise)."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Trang đích đã chuyển (src/content/docs/piano/tac-pham/fur-elise.md).
+  - id: n102
+    cau: Chơi được 10 bài này ở tốc độ vừa phải, không dừng, nghĩa là bạn đã đi gần hết chặng đầu của lộ trình piano.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'piano/lo-trinh (đã chuyển, đã khóa): chặng 1 có mục "Chơi trọn 10 bài đầu tiên bằng hai tay, không dừng, ở tốc độ chậm vừa".'
+  - id: n103
+    cau: "Tác phẩm thật đầu tiên: Minuet Sol trưởng (bản gốc), Album für die Jugend."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Trang đích chưa chuyển; ../opus-zero/docs/piano/tac-pham/minuet-sol.md và schumann-album.md (# Schumann: Album für die Jugend, Op. 68) có."
+  - id: n104
+    cau: "Danh sách mở rộng: Tác phẩm theo cấp độ."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Trang đích chưa chuyển; ../opus-zero/docs/piano/tac-pham-theo-cap.md (# Tác phẩm theo cấp độ) có.
+  - id: n105
+    cau: "Muốn được chấm điểm phần giai điệu của các bài 1–4 qua micro hoặc đàn MIDI: Chơi theo."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển; ../opus-zero/docs/luyen-tap/choi-theo.md: "Các bài trong công cụ là giai điệu (phần tay phải) của các bài trong 10 bài đầu tiên: Twinkle, Hänschen klein, Au clair de la lune, Ode to Joy" (bài 1–4) và "Site nghe bạn qua micro hoặc đàn MIDI và chấm từng nốt": phải giữ khi chuyển.'
+  - id: n106
+    cau: Song song, học tiếp nhạc lý từ bài 4 đến bài 9 và gam đầu tiên.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "../opus-zero/docs/bat-dau/lo-trinh-choi.md: nhạc lý bài 4–5 (tháng 2), 6–7 (tháng 3), 8–9 (tháng 4); gam Đô trưởng một quãng tám ở tháng 3 (piano/gam, # Gam và ngón bấm, chưa chuyển). Các bài nhạc lý 04, 07, 09 đã chuyển."
+  - id: n107
+    cau: 'Nguồn: giai điệu từ dân ca Pháp, Đức, Anh; thánh ca "New Britain"; Beethoven, Giao hưởng số 9 và Bagatelle WoO 59; Dvořák, Giao hưởng số 9; Petzold, Minuet BWV Anh. 114.'
+    loai: lich-su
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khớp từng bài: Pháp (bài 1, 2, 5), Đức (4), Anh (7), New Britain (6), Beethoven (3, 10), Dvořák (8), Petzold (9)."
+  - id: n108
+    cau: "Nguồn: bản nhạc đã đối chiếu: Mutopia Project (Ode to Joy, Minuet BWV Anh. 114, Für Elise, Greensleeves, New Britain) và IMSLP (Minuet BWV Anh. 114, Für Elise)."
+    loai: lich-su
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Bản nhạc gốc: [IMSLP](https://imslp.org/)." (liên kết chung tới trang chủ). Thay bằng danh sách bản nhạc thực sự đã mở khi kiểm khối nhạc.'
+  - id: n109
+    cau: "Nguồn: phần soạn hai tay và số ngón: Opus."
+    loai: ve-site
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Opus Zero"; tên site đã đổi thành Opus (README ngày 23/10/2026).'
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - not
+      - hop-am
+      - so-ngon
+      - doi-chieu-an-ban
+    ket_qua: dung
+    ghi_chu: 'Au clair de la lune, 4/4, L:1/4, K:C, Q:1/4=80; 16 ô, mỗi ô đủ 4 phách (khuong-nhac.mjs không lỗi). Giai điệu A A B A: ô 1–8 và ô 13–16 do tay phải (C C C D | E2 D2 | C E D D | C4, lặp hai lần), ô 9–12 do tay trái (D3 D3 D3 D3 | A2 A2 | D3 C3 B2 A2 | G2), đúng giai điệu bài hát; đối chiếu với Mutopia (Horetzky, "Au clair de la lune"). Chỗ khác với bản Horetzky: ô 10 bản đó lặp nốt La ba lần, khối ghi hai nốt trắng La (nhiều bản dạy piano viết như khối); cao độ giống nhau, không đổi. Hòa âm tay trái: Đô và Sol trong thế Sol (G2, C3, D3), phù hợp giai điệu; số ngón thế Sol (ngón 5 Sol2, 4 La2, 3 Si2, 2 Đô3, 1 Rê3) khớp n39, n40 và piano/hai-tuan-dau.'
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - not
+      - hop-am
+      - so-ngon
+      - doi-chieu-an-ban
+    ket_qua: dung
+    ghi_chu: "Ah! vous dirai-je, 4/4, L:1/4, K:C, Q:1/4=88; 12 ô, đủ nhịp. Giai điệu: C C G G | A A G2 | F F E E | D D C2 | G G F F | E E D2 | G G F F | E E D2 | C C G G | A A G2 | F F E E | D D C2: đúng giai điệu Twinkle / Ah! vous dirai-je (Mutopia, bản K. 265 cho guitar). Tay trái: nốt trầm C3, F3, G3, mỗi ô hai nốt trắng hoặc một nốt tròn, khớp hòa âm I – IV – I – V – I – V – I – V... với giai điệu (ô 5, 7: Fa trên Sol3 là nốt qua; ô 6, 8 Rê trên Sol3 là quãng 5 của V). Số ngón khớp n46, n47."
+  - khoi: 3
+    loai: trich-doan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - not
+      - hop-am
+      - so-ngon
+      - doi-chieu-an-ban
+    ket_qua: dung
+    ghi_chu: "Ode to Joy, 16 ô, 4/4, L:1/4, K:C. Giai điệu tay phải: E E F G | G F E D | C C D E | E. D D2 | E E F G | G F E D | C C D E | D. C C2 | D D E C | D E/F/ E C | D E/F/ E D | C D z2 | E E F G | G F E D | C C D E | D. C C2: đúng giai điệu Beethoven (hạ một cung từ Rê trưởng; Mutopia ode.ly, hồ sơ đã khóa nhac-ly/04-nhip đối chiếu 8 ô đầu với ba bản phổ). Ô 9–12 (cầu nối): D D E C | D E/F/ E C | D E/F/ E D | C D rồi nốt Sol thấp: đúng bản gốc; nốt Sol thấp do tay trái chơi (phách 3–4 ô 12), đúng ý trang (n54). Mỗi ô đủ 4 phách. Tay trái đệm I – V – I: C3, G3 (nốt thấp), hòa âm đơn giản, hợp với giai điệu."
+  - khoi: 4
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - not
+      - hop-am
+      - so-ngon
+      - doi-chieu-an-ban
+    ket_qua: dung
+    ghi_chu: "Hänschen klein, 4/4, L:1/4, K:C, Q:1/4=88; 16 ô. Giai điệu: G E E2 | F D D2 | C D E F | G G G2 | G E E2 | F D D2 | C E G G | C4 | D D D D | D E F2 | E E E E | E F G2 | G E E2 | F D D2 | C E G G | C4: đúng giai điệu Hänschen klein (Wikibooks Liederbuch). Tay trái: [C,E,G,] (C3–E3–G3) và [B,,F,G,] (B2–F3–G3): khớp n56, n57; chọn hình theo giai điệu (Rê, Fa trên hình Si–Fa–Sol; Đô, Mi trên hình Đô–Mi–Sol): hợp lý. Ô 2 (F D D2 trên Si–Fa–Sol) và ô 6, 9–10 dùng V7 không quãng 5, chấp nhận (n56). Số ngón khớp."
+  - khoi: 5
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - not
+      - hop-am
+      - so-ngon
+      - doi-chieu-an-ban
+    ket_qua: dung
+    ghi_chu: "Frère Jacques, 4/4, L:1/8, K:C, Q:1/4=96; 8 ô, mỗi ô đủ 8 móc đơn. Giai điệu: c2 d2 e2 c2 (x2) | e2 f2 g4 (x2) | g a g f e2 c2 (x2) | c2 G2 c4 (x2): đúng giai điệu Frère Jacques (Carleton, bài thực hành canon). Tay trái: quãng 5 Đô3–Sol3 liên tục: hòa âm chủ (I), phù hợp vì giai điệu toàn bộ nằm trong các nốt Đô trưởng (ô 5–6 và ô 7–8 dùng Fa, La là nốt qua). Số ngón khớp n62."
+  - khoi: 6
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - not
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: "Canon Frère Jacques, 4/4, L:1/8, Q:1/4=72; 10 ô mỗi tay, mỗi ô đủ 8 móc đơn. Tay phải: giai điệu 8 ô rồi nghỉ 2 ô (z8 z8); tay trái: nghỉ 2 ô rồi cùng giai điệu thấp hơn hai quãng tám (C,2 D,2 E,2 C,2 ... C,2 G,,2 C,4), đủ 8 ô. Đối chiếu từng nốt tay trái với tay phải thấp hai quãng tám: khớp. Hòa âm giữa hai bè (ô 3–8) hòa hợp vì là canon vòng: vẫn có chỗ va (ví dụ ô 5: Sol5 với Mi3), chấp nhận. Ngón: ô 7 tay trái !2!G,!1!A,: khớp n66."
+  - khoi: 7
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - not
+      - hop-am
+      - so-ngon
+      - doi-chieu-an-ban
+    ket_qua: null
+    ghi_chu: "Amazing Grace, 3/4, L:1/4, K:C, Q:1/4=80; ô lấy đà 1 phách, 16 ô, ô cuối 2 phách, đủ nhịp. Giai điệu khối: G | c2 e/c/ | e2 d | c2 A | G2 G | c2 e/c/ | e2 d/e/ | g3- | g2 e/g/ | g2 e/c/ | e2 d | c2 A | G2 G | c2 e/c/ | e2 d | c3- | c2. Đối chiếu bản Mutopia (New Britain, K:G, 3/4, \\partial 4; WebFetch hai lần cho cùng văn bản gốc): ô 1–5 khớp sau khi hạ một quãng bốn (d g2 b8 g | b2 a | g2 e | d2 d | g2 b8 g), nhưng ô 6–9 của bản Mutopia viết nhịp khác (b2 a4 | d''2. | b4 d''4. b8 | ...) so với khối (e2 d/e/ | g3- | g2 e/g/ ...). Giai điệu New Britain có nhiều dị bản; chưa có bản phổ thứ hai đọc được để quyết. chưa chắc: nhịp điệu ô 6–9 và các dấu nối của khối so với một bản chuẩn. Hòa âm tay trái I – IV – V đơn giản, khớp giai điệu. Số ngón: xem n70."
+  - khoi: 8
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - not
+      - hop-am
+      - so-ngon
+      - doi-chieu-an-ban
+    ket_qua: dung
+    ghi_chu: "Greensleeves, 6/8, L:1/8, K:Am, Q:3/8=56; ô lấy đà 1 móc đơn, 8 ô, ô cuối 5 móc đơn, đủ nhịp. Giai điệu khối: A | c2 d e3/2 f/ e | d2 B G3/2 A/ B | c2 A A3/2 ^G/ A | B2 ^G E2 A | c2 d e3/2 f/ e | d2 B G3/2 A/ B | c3/2 B/ A ^G3/2 ^F/ ^G | A3 A2: đối chiếu giai điệu Greensleeves (Mutopia, bản accordion và hymntune): khớp các cao độ và hình nhịp chấm dôi; Sol♯ và Fa♯ ghi bằng dấu hóa bất thường (^G, ^F). Hòa âm tay trái: A, G, F, E rồi A, G, A–E, A (i – VII – VI – V – i – VII – i – V – i), phù hợp giai điệu Greensleeves. Số ngón: xem n77, n80."
+  - khoi: 9
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+      - so-ngon
+    ket_qua: null
+    ghi_chu: 'Largo, 4/4, L:1/8, Q:1/4=60, K:C; 8 ô, mỗi ô đủ 8 móc đơn, có chữ "Ped." và dấu * ở ô cuối. Giai điệu khối: E3 G G4 | E3 D C4 | D3 E G3 E | D8 | E3 G G4 | E3 D C4 | D3 E D3 C | C8. Hòa âm tay trái: C5, C5, G5, G5, C5, C5, G5, C5 (I – I – V – V – I – I – V – I), hợp với giai điệu. chưa chắc: không có bản phổ đọc được để đối chiếu giai điệu chủ đề (Mutopia không có bản piano của Largo; IMSLP chỉ có bản dàn nhạc dạng ảnh PDF, không đọc được từng nốt). Khối là bản rút gọn của trang, giai điệu đúng đặc trưng chủ đề (âm giai ngũ cung Đô: Mi, Sol, Rê, Đô) nhưng chưa đối chiếu từng nốt.'
+  - khoi: 10
+    loai: trich-doan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - not
+      - hop-am
+      - so-ngon
+      - doi-chieu-an-ban
+    ket_qua: dung
+    ghi_chu: "Minuet BWV Anh. 114, 3/4, L:1/8, K:G, Q:1/4=96; 16 ô, mỗi ô đủ 6 móc đơn. Tay phải: d2 GABc | d2 G2 G2 | e2 cdef | g2 G2 G2 | c2 dcBA | B2 cBAG | F2 GABG | A6 (lặp: ô 15–16: A2 BAGF | G6): đối chiếu từng nốt với bản Mutopia (anna-magdalena-04) và IMSLP: khớp; F là Fa♯ theo K:G. Tay trái giản lược (đã nói trên trang, n92): G,,6 B,,6 C,6 B,,6 A,,6 G,,6 D,6 D,6 | ... G,,6: các nốt trầm là gốc hoặc quãng ba của hòa âm bản gốc (G, B, C, B, A, G, D): hợp lý. Số ngón: xem n94; thế Sol tay trái khớp n92."
+  - khoi: 11
+    loai: trich-doan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - not
+      - hop-am
+      - so-ngon
+      - doi-chieu-an-ban
+    ket_qua: dung
+    ghi_chu: "Für Elise, 3/8, L:1/16, K:Am, Q:3/8=40; ô lấy đà 2 móc kép, 8 ô, ô cuối một nốt La 6 móc kép; mỗi ô đủ 6 móc kép (3/8). Tay phải: e ^d | e ^d e B =d c | A2 z C E A | B2 z E ^G B | c2 z E e ^d | e ^d e B =d c | A2 z C E A | B2 z E c B | A6: đối chiếu từng nốt hai tay với bản Mutopia và IMSLP (câu mở đầu và câu nhắc lại): khớp, ô cuối khép bằng La (n97). Tay trái: A,, E, A, (La2 Mi3 La3), E,, E, ^G, (Mi2 Mi3 Sol♯3): đúng bản gốc. Dấu =d (Rê tự nhiên) ghi để hủy ^d trước đó: đúng. Số ngón khớp n98."
+ghi_chu: '10 bài đầu tiên (hai tay), piano/10-bai-dau-tien. Nguồn chính: bản phổ Mutopia Project (Ode to Joy, Minuet BWV Anh. 114, Für Elise, New Britain, Greensleeves) và IMSLP (Minuet, Für Elise) cho các khối nhạc; The Cleveland Orchestra, EBSCO, Britannica, UC Davis, Berliner Philharmoniker và BSO, Carleton cho niên đại và xuất xứ; bài hát dân gian chỉ có Wikibooks và Wikipedia (bậc 3, chấp nhận vì rủi ro thấp). Mở ngày 28/10/2026. Sửa chữ ở lượt 1 (da-sua): n4 và n109 ("Opus Zero" thành "Opus"), n20 (nấc tăng tốc 2–4 nhịp/phút), n24 ("khó gấp đôi" thành "khó hơn"), n36 và n43 (bỏ "thế kỷ 18"), n51 và n81 (ghi bản gốc ở Rê trưởng, Rê♭ trưởng), n54 (ô 12 tay phải còn chơi hai nốt), n63 (bỏ "tiếng kèn túi"), n70 (mô tả thế tay bài 6 đúng số ngón), n75 (Greensleeves: năm đăng ký 1580), n79 và n80 (bài 7: bậc 6, 7 nâng; các chỗ đổi thế), n94 (bài 9: ba chỗ đổi thế), n108 (mục Nguồn: danh sách bản nhạc đã đối chiếu). Chưa chắc (ket_qua null): n83, n84 (ký hiệu và kỹ thuật bàn đạp nối; trang Bàn đạp chưa chuyển, chưa có nguồn bậc 2) và hai khối nhạc: khối 7 (Amazing Grace, ô 6–9 khác bản Mutopia ở nhịp điệu) và khối 9 (Largo, không có bản phổ đọc được). Không tính là nhận định: tiêu đề mục; câu "Về các bản soạn" tính ở n3–n5; mô tả trang (cắt từ câu mở đầu). Khối abc: 11/11 qua tools/khuong-nhac.mjs; khối 1–6, 8, 10, 11 đúng; 7 và 9 chưa chắc. Điểm cần dispatcher quyết: (1) khối 7, 9 nên đối chiếu bằng bản phổ khác hoặc ghi "bản rút gọn" rõ hơn; (2) bài 4 gọi Si–Fa–Sol là "hợp âm át bảy" (thiếu quãng 5), đúng nhưng nên cân nhắc ghi chú; (3) bài 5 canon có chỗ va nhẹ giữa hai bè (n65). Hồ sơ đã khóa trỏ tới trang này (nhac-ly/04, bat-dau/lo-trinh-choi, bat-dau/moi-ngay, piano/lo-trinh, luyen-tai/choi-bang-tai, luyen-tai/nghe-tien-trinh, luyen-tai/index, nhac-ly/01, nhac-ly/03, nhac-ly/05): các chỗ đã kiểm đều khớp (tiêu đề từng bài, bảng lộ trình, số ngón khối 4 "5-3-1" và "5-2-1", Q: của ba bài đầu 80, 88, 88, khối bài 3 và bài 8, hợp âm bài 4): không thấy lệch. ve-site trỏ trang chưa chuyển (kiểm trên ../opus-zero/docs/): luyen-tap/choi-theo (n105), luyen-tap/metronome (n20), luyen-tap/thu-am và nhat-ky (n21), nghe-nhac/dvorak-9-largo (n88), piano/ban-dap (n83, n84), piano/gam, piano/hai-tay (n19: giữ tiêu đề "Sáu bậc ghép hai tay"), piano/hop-am-rai (n58), piano/nam-ngon (n9), piano/tac-pham/minuet-sol, schumann-album, piano/tac-pham-theo-cap, piano/tieng-dan (n42), tai-lieu-tham-khao. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có, ghi cho D3-L5: "canon", "nhịp lấy đà", "dấu nối", "thế tay" và tên các thế (thế Đô, thế Sol, thế Fa), "điểm neo", "gam thứ giai điệu", "hợp âm át bảy", "nốt đen chấm dôi", "nốt móc đơn", "nốt móc kép", "dấu hóa bất thường" (đã có), "hạ át âm" (đã có), "legato" (đã có), "bàn đạp vang" (đã có).'
+doi_chu:
+  - cu: Giai điệu là dân ca hoặc tác phẩm đã thuộc phạm vi công cộng. Phần tay trái (trừ bài 10) do Opus Zero soạn cho người mới, giữ hòa âm đơn giản nhất có thể. Bài 9 giữ nguyên giai điệu của Petzold nhưng giản lược tay trái; bản gốc đầy đủ hai tay có ở bài học Minuet Sol trưởng.
+    moi: Giai điệu là dân ca hoặc tác phẩm đã thuộc phạm vi công cộng. Phần tay trái (trừ bài 10) do Opus soạn cho người mới, giữ hòa âm đơn giản nhất có thể. Bài 9 giữ nguyên giai điệu của Petzold nhưng giản lược tay trái; bản gốc đầy đủ hai tay có ở bài học Minuet Sol trưởng.
+    ly_do: "n4 (da-sua): tên site đã đổi từ Opus Zero thành Opus (README, 23/10/2026)."
+  - cu: Tăng tốc độ một nấc (khoảng 4 nhịp/phút) chỉ khi đã chơi đúng ba lần liên tiếp.
+    moi: Tăng tốc độ một nấc (2–4 nhịp/phút) chỉ khi đã chơi đúng ba lần liên tiếp.
+    ly_do: 'n20 (da-sua): khớp trang cũ luyen-tap/metronome ("tăng 2–4 BPM").'
+  - cu: "Mỗi bài mất vài ngày đến vài tuần tùy người; Lộ trình piano năm đầu trải mười bài trong khoảng năm tháng đầu. Đừng sang bài mới khi bài cũ còn phải dừng giữa chừng: dừng lại nghĩa là tay chưa biết đường, và bài sau sẽ khó gấp đôi."
+    moi: "Mỗi bài mất vài ngày đến vài tuần tùy người; Lộ trình piano năm đầu trải mười bài trong khoảng năm tháng đầu. Đừng sang bài mới khi bài cũ còn phải dừng giữa chừng: dừng lại nghĩa là tay chưa biết đường, và bài sau sẽ khó hơn."
+    ly_do: 'n24 (da-sua): "khó gấp đôi" là con số không có nguồn.'
+  - cu: 'Dân ca Pháp, thế kỷ 18. Đô trưởng. Học được: chơi hai tay mà mỗi lúc chỉ một tay "hát": tay phải hát đoạn đầu và đoạn cuối, tay trái hát đoạn giữa.'
+    moi: 'Dân ca Pháp. Đô trưởng. Học được: chơi hai tay mà mỗi lúc chỉ một tay "hát": tay phải hát đoạn đầu và đoạn cuối, tay trái hát đoạn giữa.'
+    ly_do: 'n36 (da-sua): chưa có nguồn bậc 1–2 cho "thế kỷ 18" (có nguồn gán cho Lully, thế kỷ 17).'
+  - cu: "Giai điệu Pháp thế kỷ 18; Mozart viết 12 biến tấu trên giai điệu này (K. 265). Đô trưởng. Học được: tay trái đổi nốt trầm theo hòa âm, với ba nốt Đô – Fa – Sol (chủ âm, hạ át âm, át âm)."
+    moi: "Dân ca Pháp; Mozart viết 12 biến tấu trên giai điệu này (K. 265). Đô trưởng. Học được: tay trái đổi nốt trầm theo hòa âm, với ba nốt Đô – Fa – Sol (chủ âm, hạ át âm, át âm)."
+    ly_do: 'n43 (da-sua): Britannica chỉ xác nhận "French folk song"; bỏ "thế kỷ 18" vì chưa có nguồn bậc 1–2 cho niên đại giai điệu.'
+  - cu:
+      - "Beethoven, Giao hưởng số 9, chương 4 (1824). Đô trưởng. Học được: nhịp đen chấm dôi – móc đơn, và một nốt giai điệu do tay trái chơi."
+      - Ở ô 12, nốt Sol trầm của giai điệu nằm ở tay trái (ngón 1). Tay phải nghỉ; nghe cho nốt ấy nối liền câu hát.
+    moi:
+      - "Beethoven, Giao hưởng số 9, chương 4 (1824); ở đây hạ một cung từ Rê trưởng của bản gốc. Đô trưởng. Học được: nhịp đen chấm dôi – móc đơn, và một nốt giai điệu do tay trái chơi."
+      - Ở phách 3–4 của ô 12, nốt Sol trầm của giai điệu nằm ở tay trái (ngón 1), trong lúc tay phải nghỉ; nghe cho nốt ấy nối liền câu hát.
+    ly_do: "n51 (da-sua): bản gốc ở Rê trưởng; khớp cách nói ở nhac-ly/04-nhip (đã khóa).; n54 (da-sua): ô 12 tay phải còn chơi C và D ở phách 1–2; chỉ phách 3–4 tay phải nghỉ."
+  - cu: "Tay phải chơi ở quãng tám trên Đô giữa (ngón 1 trên Đô5). Ô 5–6 mở tay: ngón 5 vươn lên La. Ô 7–8 dời tay xuống để ngón 1 bắt Sol4. Tay trái giữ quãng 5 Đô–Sol (ngón 5 và 1) như tiếng kèn túi."
+    moi: "Tay phải chơi ở quãng tám trên Đô giữa (ngón 1 trên Đô5). Ô 5–6 mở tay: ngón 5 vươn lên La. Ô 7–8 dời tay xuống để ngón 1 bắt Sol4. Tay trái giữ quãng 5 Đô–Sol (ngón 5 và 1) như một âm nền ngân dài."
+    ly_do: "n63 (da-sua): so sánh với kèn túi không có nguồn; giữ điều khối nhạc làm (quãng 5 ngân dài)."
+  - cu: "Tay phải có ba thế: thế Sol (ngón 1 trên Sol4) cho câu 1 và câu 4, thế Đô (ngón 1 trên Đô5) cho câu 2, và đầu câu 3 dời tay để ngón 5 ở Sol5, ngón 2 ở Đô5. Đổi thế ở nốt dài, khi tay có thời gian chuẩn bị. Tay trái: một nốt trầm mỗi ô (Đô, Fa, Sol)."
+    moi: "Tay phải đổi thế ba lần: câu 1 và câu 4 mở đầu bằng ngón 1 trên Sol4, rồi dời tay lên một nấc để ngón 3 rơi vào Đô5 và ngón 5 vào Mi5; câu 2 ở thế Đô (ngón 1 trên Đô5); đầu câu 3 dời tay để ngón 5 ở Sol5, ngón 2 ở Đô5. Đổi thế ở nốt dài, khi tay có thời gian chuẩn bị. Tay trái: một nốt trầm mỗi ô (Đô, Fa, Sol)."
+    ly_do: "n70 (da-sua): số ngón của khối (Đô5 ngón 3, Mi5 ngón 5) không phải thế Sol như câu cũ nói; câu mới mô tả đúng số ngón đã ghi."
+  - cu: "Giai điệu dân gian Anh, thế kỷ 16. La thứ, nhịp 6/8. Học được: cảm nhịp 6/8 (hai phách lớn, mỗi phách ba móc đơn) và dấu hóa bất thường: Sol♯ và Fa♯ không có trong hóa biểu mà ghi ngay trước nốt (xem Gam thứ)."
+    moi: "Dân ca Anh; bài ca được đăng ký ở London năm 1580. La thứ, nhịp 6/8. Học được: cảm nhịp 6/8 (hai phách lớn, mỗi phách ba móc đơn) và dấu hóa bất thường: Sol♯ và Fa♯ không có trong hóa biểu mà ghi ngay trước nốt (xem Gam thứ)."
+    ly_do: 'n75 (da-sua): EBSCO Research Starters: Richard Jones đăng ký bài ca ngày 3/9/1580; giai điệu hôm nay khác các bản đầu nên không khẳng định "giai điệu thế kỷ 16".'
+  - cu: "Ô 7: Fa♯ và Sol♯ là gam thứ giai điệu đi lên. Ô 4 và ô 7–8 có ba chỗ đổi thế tay; tập riêng từng chỗ."
+    moi:
+      - "Ô 7: Fa♯ và Sol♯ là bậc 6 và bậc 7 được nâng lên của gam La thứ (gam thứ giai điệu)."
+      - "Các chỗ đổi thế tay: cuối ô 1 sang ô 2 và cuối ô 5 sang ô 6 (ngón 4 trên Mi, rồi ngón 5 xuống Rê); ô 4 (ngón cái nhảy từ Mi lên La); cuối ô 6 sang ô 7 (ngón 5 trên Đô). Tập riêng từng chỗ."
+    ly_do: 'n79, n80 (da-sua): ô 7 đi xuống rồi lên chứ không "đi lên"; các chỗ đổi thế theo số ngón của khối không phải "ô 4 và ô 7–8".'
+  - cu: 'Dvořák, Giao hưởng số 9 "Từ Thế giới mới", chương 2 (1893), chủ đề chính, bản rút gọn. Đô trưởng. Học được: chơi legato chậm như hát, và dùng bàn đạp vang lần đầu: mỗi ô nhịp đổi bàn đạp một lần.'
+    moi: 'Dvořák, Giao hưởng số 9 "Từ Thế giới mới", chương 2 (1893), chủ đề chính, bản rút gọn và hạ nửa cung từ Rê♭ trưởng. Đô trưởng. Học được: chơi legato chậm như hát, và dùng bàn đạp vang lần đầu: mỗi ô nhịp đổi bàn đạp một lần.'
+    ly_do: "n81 (da-sua): chương 2 gốc ở Rê♭ trưởng; khối viết ở Đô trưởng."
+  - cu: 'Ô 3 và ô 7 là hai chỗ đổi thế tay: tập riêng "ô 2 → ô 3" và "ô 6 → ô 7" cho đến khi tay tự tìm đường.'
+    moi: 'Ô 3, ô 5 và ô 7 là các chỗ đổi thế tay: tập riêng "ô 2 → ô 3", "ô 4 → ô 5" và "ô 6 → ô 7" cho đến khi tay tự tìm đường.'
+    ly_do: "n94 (da-sua): theo số ngón, ô 5 cũng đổi thế (ô 4 kết ngón 1, ô 5 mở ngón 4)."
+  - cu:
+      - "Bản nhạc gốc: IMSLP."
+      - "Phần soạn hai tay và số ngón: Opus Zero. Xem tài liệu tham khảo."
+    moi:
+      - "Bản nhạc đã đối chiếu: Mutopia Project (Ode to Joy, Minuet BWV Anh. 114, Für Elise, Greensleeves, New Britain) và IMSLP (Minuet BWV Anh. 114, Für Elise)."
+      - "Phần soạn hai tay và số ngón: Opus. Xem tài liệu tham khảo."
+    ly_do: "n108 (da-sua): liên kết chung tới trang chủ IMSLP thay bằng các bản nhạc đã thực sự đối chiếu.; n109 (da-sua): như trên."

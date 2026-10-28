@@ -1,11 +1,11 @@
 ---
 title: Piano
-description: Piano là nhạc cụ tốt nhất để hiểu nhạc cổ điển. Một người với mười ngón tay chơi được cùng lúc giai điệu, hòa âm và bè trầm; bàn phím là tấm bản đồ nhìn thấy…
+description: Trên piano, một người với mười ngón tay chơi được cùng lúc giai điệu, hòa âm và bè trầm; bàn phím là tấm bản đồ nhìn thấy được của các khái niệm nhạc lý; và…
 ---
 
-Piano là nhạc cụ tốt nhất để hiểu nhạc cổ điển. Một người với mười ngón tay chơi được cùng lúc giai điệu, hòa âm và bè trầm; bàn phím là tấm bản đồ nhìn thấy được của mọi khái niệm nhạc lý; và kho tác phẩm viết cho piano phong phú hơn bất kỳ nhạc cụ nào khác, từ Bach, Mozart, Beethoven, Chopin đến Debussy và các nhà soạn nhạc hôm nay.
+Trên piano, một người với mười ngón tay chơi được cùng lúc giai điệu, hòa âm và bè trầm; bàn phím là tấm bản đồ nhìn thấy được của các khái niệm nhạc lý; và kho tác phẩm chơi được trên piano rất phong phú, từ Bach, Mozart, Beethoven, Chopin đến Debussy và các nhà soạn nhạc hôm nay.
 
-Mục này là trung tâm của Opus Zero: một con đường cho **người lớn** đi từ lần đầu chạm phím đến những tác phẩm lớn, chia thành những bước nhỏ tập được mỗi ngày. Gần như trang nào cũng có ví dụ bấm nghe được ngay, nhiều trang có **khuông nhạc hai tay kèm số ngón**, và mọi thứ nối với phần nhạc lý, luyện tai và nghe nhạc của site.
+Mục này là trung tâm của Opus: một con đường cho **người lớn** đi từ lần đầu chạm phím đến những tác phẩm lớn, chia thành những bước nhỏ tập được mỗi ngày. Nhiều trang có ví dụ bấm nghe được ngay, nhiều trang có **khuông nhạc hai tay kèm số ngón**, và mọi thứ nối với phần nhạc lý, luyện tai và nghe nhạc của site.
 
 ::cong-cu{ten="repertoire" compact=""}
 
@@ -120,7 +120,7 @@ Bảy chặng, từ lần đầu chạm phím đến sau Grade 8: [1. Khởi đ�
 
 Khuôn buổi tập 30 phút, ngày bận 10 phút và lịch tuần ở [Thói quen mỗi ngày](/opus/bat-dau/moi-ngay/); buổi 20, 45 và 90 phút ở [Cách tập hiệu quả](/opus/piano/cach-tap/#mau-buoi-tap). Ngoài giờ ngồi đàn, hãy dành 10 phút nghe một bản thu của tác phẩm bạn đang tập, hoặc một [hướng dẫn nghe](/opus/nghe-nhac/).
 
-### Phần đọc nhạc và luyện tai hôm nay
+### Buổi tập hôm nay { #phan-oc-nhac-va-luyen-tai-hom-nay }
 
 Site tự gợi ý dựa trên kết quả các công cụ bạn đã dùng:
 
@@ -128,15 +128,15 @@ Site tự gợi ý dựa trên kết quả các công cụ bạn đã dùng:
 
 ## Học piano cùng các phần khác của site
 
-- **Nhạc lý** giải thích những gì tay bạn đang chơi. [Gam trưởng](/opus/nhac-ly/06-gam-truong/) và [gam thứ](/opus/nhac-ly/07-gam-thu/) là nền của ngón bấm; [hóa biểu](/opus/nhac-ly/08-hoa-bieu/) cho biết bài ở giọng nào; [hợp âm ba](/opus/nhac-ly/10-hop-am-ba/), [hòa âm chức năng](/opus/nhac-ly/12-hoa-am-chuc-nang/) và [kết](/opus/nhac-ly/13-ket/) giúp học thuộc nhanh hơn hẳn; [ký hiệu biểu diễn](/opus/nhac-ly/14-ky-hieu-bieu-dien/) dạy đọc pedal, sắc thái và nốt hoa mỹ. Toàn bộ chương trình ở [Nhạc lý](/opus/nhac-ly/).
-- **Luyện tai**: khi nghe ra [hợp âm](/opus/luyen-tai/nghe-hop-am/) và [tiến trình hòa âm](/opus/luyen-tai/nghe-tien-trinh/), bạn tự phát hiện nốt sai, học thuộc bằng tai và đệm được cho người khác hát. Bài [Chơi theo tai bên phím đàn](/opus/luyen-tai/choi-bang-tai/) đưa những kỹ năng ấy lên phím: tìm giai điệu, đệm, dịch giọng.
+- **Nhạc lý** giải thích những gì tay bạn đang chơi. [Gam trưởng](/opus/nhac-ly/06-gam-truong/) và [gam thứ](/opus/nhac-ly/07-gam-thu/) là nền của các gam bạn tập; [hóa biểu](/opus/nhac-ly/08-hoa-bieu/) cho biết bài ở giọng nào; [hợp âm ba](/opus/nhac-ly/10-hop-am-ba/), [hòa âm chức năng](/opus/nhac-ly/12-hoa-am-chuc-nang/) và [kết](/opus/nhac-ly/13-ket/) giúp bạn hiểu hòa âm của bài đang tập; [ký hiệu biểu diễn](/opus/nhac-ly/14-ky-hieu-bieu-dien/) dạy đọc pedal, sắc thái và nốt hoa mỹ. Toàn bộ chương trình ở [Nhạc lý](/opus/nhac-ly/).
+- **Luyện tai**: luyện nghe [hợp âm](/opus/luyen-tai/nghe-hop-am/) và [tiến trình hòa âm](/opus/luyen-tai/nghe-tien-trinh/). Bài [Chơi theo tai bên phím đàn](/opus/luyen-tai/choi-bang-tai/) đưa những kỹ năng ấy lên phím: tìm giai điệu, đệm, dịch giọng.
 - **Site nghe bạn**: cắm đàn điện qua [MIDI](/opus/luyen-tap/ket-noi-midi/) để dùng phím thật trong các công cụ và được [chấm điểm khi chơi theo](/opus/luyen-tap/choi-theo/); [thu âm](/opus/luyen-tap/thu-am/) để nghe lại chính mình.
-- **Nghe nhạc**: các hướng dẫn nghe tác phẩm piano, như [Bach: Biến tấu Goldberg](/opus/nghe-nhac/bach-goldberg/), [Beethoven: Ánh trăng](/opus/nghe-nhac/beethoven-moonlight/), [Beethoven: Pathétique](/opus/nghe-nhac/beethoven-pathetique/), [Chopin: Étude](/opus/nghe-nhac/chopin-etude/), [Schumann: Kinderszenen](/opus/nghe-nhac/schumann-kinderszenen/) và [Rachmaninoff: Concerto số 2](/opus/nghe-nhac/rachmaninoff-2/); mỗi bài học tác phẩm cũng có bản thu và bảng theo dõi khi nghe. Danh sách đầy đủ ở [Nghe nhạc](/opus/nghe-nhac/).
+- **Nghe nhạc**: các hướng dẫn nghe tác phẩm piano, như [Bach: Biến tấu Goldberg](/opus/nghe-nhac/bach-goldberg/), [Beethoven: Ánh trăng](/opus/nghe-nhac/beethoven-moonlight/), [Beethoven: Pathétique](/opus/nghe-nhac/beethoven-pathetique/), [Chopin: Étude](/opus/nghe-nhac/chopin-etude/), [Schumann: Kinderszenen](/opus/nghe-nhac/schumann-kinderszenen/) và [Rachmaninoff: Concerto số 2](/opus/nghe-nhac/rachmaninoff-2/); mỗi bài học tác phẩm cũng có bảng theo dõi khi nghe, kèm bản thu gợi ý khi có. Danh sách đầy đủ ở [Nghe nhạc](/opus/nghe-nhac/).
 - **Lịch sử**: đặt mỗi tác phẩm vào thời kỳ của nó ở [Lịch sử](/opus/lich-su/) và [chân dung nhà soạn nhạc](/opus/lich-su/nha-soan-nhac/).
 
 ## Bốn nguyên tắc của mục này
 
-1. **Chậm và đều thắng nhanh và thất thường.** 30 phút mỗi ngày hiệu quả hơn 3 tiếng vào cuối tuần. Ngón tay học bằng lặp lại đúng, không phải bằng cố gắng.
-2. **Nghe trước khi chơi.** Biết mình đang hướng tới âm thanh nào thì tay học nhanh hơn. Mỗi bài học tác phẩm đều bắt đầu bằng phần "Nghe trước".
-3. **Thả lỏng.** Căng cứng làm chậm và gây đau; đau là tín hiệu dừng lại, không phải để cố thêm. Xem [giữ đôi tay khỏe](/opus/piano/suc-khoe/).
-4. **Hiểu điều mình chơi.** Mỗi bài là dịp ôn nhạc lý: đang ở giọng nào, hợp âm gì, câu nhạc kết ở đâu. Bài hiểu được thì thuộc lâu và chơi có hồn.
+1. **Chậm và đều thắng nhanh và thất thường.** Tập ngắn mỗi ngày tốt hơn dồn 3 tiếng vào cuối tuần.
+2. **Nghe trước khi chơi.** Hãy biết mình đang hướng tới âm thanh nào. Mỗi bài học tác phẩm đều có phần "Nghe trước khi tập".
+3. **Thả lỏng.** Tập với động tác không gồng cứng. Đau, tê hoặc ngứa ran là tín hiệu dừng lại, không phải để cố thêm. Xem [giữ đôi tay khỏe](/opus/piano/suc-khoe/).
+4. **Hiểu điều mình chơi.** Mỗi bài là dịp ôn nhạc lý: đang ở giọng nào, hợp âm gì, câu nhạc kết ở đâu.

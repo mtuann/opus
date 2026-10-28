@@ -58,6 +58,8 @@ function khoiCho(ten) {
 		...document.querySelectorAll(':is(.oz-boi-am, .oz-pho, .oz-len-day, .oz-the-nho, .oz-trang-thai-bai):not([data-san])'),
 		// bốn công cụ luyện tai (D3-L6): như trên
 		...document.querySelectorAll('.oz-lt:not([data-san])'),
+		// máy đếm nhịp, bài đang tập, kế hoạch tập (D4-L1): như trên
+		...document.querySelectorAll(':is(.oz-may-dem-nhip, .oz-bai-dang-tap, .oz-ke-hoach):not([data-san])'),
 	];
 	if (ten) return cho.map((e) => `${e.className} "${e.textContent.trim().slice(0, 30)}"`);
 	cho[0]?.scrollIntoView({ block: 'center' });

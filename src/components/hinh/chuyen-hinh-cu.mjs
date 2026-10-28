@@ -3,7 +3,7 @@
 // thành src/components/hinh/<tên>.html, để ::hinh{ten="<tên>"} chèn nguyên hình lúc build (src/plugins/thanh-phan.mjs).
 // Giữ nguyên chữ, hình và tên cho máy đọc màn hình; đổi cho hợp site mới:
 //   - bỏ xmlns và font-family (chữ theo phông của site);
-//   - màu đậm viết cứng (xanh mực, xanh lá, vàng nhựa thông, đỏ, xám) thành biến --oz-h-* (thanh-phan.css), có bản tối;
+//   - màu đậm viết cứng (xanh mực, xanh lá, vàng nhựa thông, đỏ, xám, nâu gỗ) thành biến --oz-h-* (thanh-phan.css), có bản tối;
 //     màu nền sáng (ô, phím tô màu) và chữ tối #1b1b1b trên nền ấy giữ nguyên vì đọc được ở cả hai chế độ;
 //   - thẻ có nhiều style (fill và stroke cùng đổi) gộp làm một;
 //   - <figure> thêm not-content và data-sinh (so chữ với site cũ bỏ qua, như vùng hình cũ).
@@ -21,6 +21,9 @@ export const MAU = {
 	'#b5832a': 'var(--oz-h-vang)',
 	'#b3412e': 'var(--oz-h-do)',
 	'#999': 'var(--oz-h-nhat)',
+	// gỗ và viền nâu của hình tư thế, thế tay, số ngón (D4-L1): chế độ tối sáng hơn, kẻo chân đàn, gầm phím chìm vào nền
+	'#5b4636': 'var(--oz-h-go)',
+	'#8a6a55': 'var(--oz-h-nau)',
 };
 
 export function chuyenHinh(html) {

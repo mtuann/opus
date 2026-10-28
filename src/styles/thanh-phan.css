@@ -1213,13 +1213,16 @@ html.oz-stand-open .main-pane {
 
 /* ---------- Hình tĩnh chép từ site cũ (src/components/hinh/*.html) ----------
    Màu đậm của hình cũ thành biến; như opus.css, :root là chế độ tối, chế độ sáng và khi in ghi lại. Nền sáng (ô, phím
-   tô màu) và chữ tối #1b1b1b trên nền ấy giữ như cũ, đọc được ở cả hai chế độ. */
+   tô màu) và chữ tối #1b1b1b trên nền ấy giữ như cũ, đọc được ở cả hai chế độ; cũng vậy với màu vật được vẽ nằm trên
+   nền sáng (phím đen, viền phím, da tay, áo: D4-L1). */
 :root {
 	--oz-h-xanh: #7fb0ea;
 	--oz-h-luc: #6cc28f;
 	--oz-h-vang: #e0b45e;
 	--oz-h-do: #e48b78;
 	--oz-h-nhat: #a3a3a3;
+	--oz-h-go: #9c7c63;
+	--oz-h-nau: #b89a82;
 }
 :root[data-theme='light'] {
 	--oz-h-xanh: #2f5582;
@@ -1227,6 +1230,8 @@ html.oz-stand-open .main-pane {
 	--oz-h-vang: #946716;
 	--oz-h-do: #b3412e;
 	--oz-h-nhat: #6b6b6b;
+	--oz-h-go: #5b4636;
+	--oz-h-nau: #8a6a55;
 }
 @media print {
 	:root {
@@ -1235,6 +1240,8 @@ html.oz-stand-open .main-pane {
 		--oz-h-vang: #946716;
 		--oz-h-do: #b3412e;
 		--oz-h-nhat: #6b6b6b;
+		--oz-h-go: #5b4636;
+		--oz-h-nau: #8a6a55;
 	}
 }
 /* nhiều hình nhỏ trong một khung (texture-rolls), như site cũ: hai cột khi đủ chỗ */
@@ -1820,4 +1827,133 @@ html.oz-stand-open .main-pane {
 .oz-lt-so {
 	min-height: 1.5em;
 	margin: 0;
+}
+
+/* ---------- Mục lục Piano (D4-L1): bốn ô "Bắt đầu từ đâu?" (lớp oz-paths, oz-path trong trang, như site cũ) ----------
+   Lưới tự xếp: một cột ở màn hình hẹp, hai cột khi đủ chỗ (mỗi ô từ 220 px như bản cũ). Viền như thẻ của site; tiêu đề ô
+   nhỏ hơn h3 thường, đoạn chữ cỡ nhỏ như bản cũ. */
+.sl-markdown-content .oz-paths {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+	gap: 1rem;
+	margin-block: 1rem 1.6rem;
+}
+.sl-markdown-content .oz-paths > .oz-path {
+	margin: 0;
+	min-width: 0;
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 12px;
+	padding: 0.2rem 1rem 0.7rem;
+	background: var(--oz-card);
+}
+.sl-markdown-content .oz-path > :first-child {
+	margin-top: 0.8rem;
+}
+.sl-markdown-content .oz-path h3 {
+	font-size: var(--sl-text-lg);
+}
+.sl-markdown-content .oz-path p {
+	margin-top: 0.5rem;
+	font-size: var(--sl-text-sm);
+}
+
+/* ---------- Máy đếm nhịp (::cong-cu{ten="metronome"}; src/scripts/may-dem-nhip.js), như site cũ ---------- */
+.oz-bpm {
+	font-family: var(--oz-heading);
+	font-size: 2.4rem;
+	font-weight: 600;
+	line-height: 1.1;
+	min-width: 4ch;
+	text-align: center;
+	font-variant-numeric: tabular-nums;
+}
+.oz-may-dem-nhip label {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	font-size: var(--sl-text-sm);
+}
+.sl-markdown-content .oz-may-dem-nhip > * {
+	margin-top: 0;
+}
+.oz-may-dem-nhip select {
+	appearance: none;
+	-webkit-appearance: none;
+	font: inherit;
+	padding: 0.3rem 1.8rem 0.3rem 0.55rem;
+	border: 1px solid var(--sl-color-gray-4);
+	border-radius: 8px;
+	color: var(--sl-color-white);
+	background-color: var(--sl-color-black);
+	background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+	background-position:
+		calc(100% - 0.95rem) 55%,
+		calc(100% - 0.6rem) 55%;
+	background-size: 0.35rem 0.35rem;
+	background-repeat: no-repeat;
+}
+.oz-may-dem-nhip input[type='checkbox'] {
+	width: 1.1rem;
+	height: 1.1rem;
+	margin: 0;
+	accent-color: var(--sl-color-accent-high);
+}
+.oz-mdn-keo {
+	display: block;
+	width: 100%;
+	margin: 0.2rem 0;
+	accent-color: var(--sl-color-accent-high);
+}
+.oz-beats {
+	display: flex;
+	gap: 0.5rem;
+	margin: 0.8rem 0;
+}
+.oz-beat {
+	width: 1.1rem;
+	height: 1.1rem;
+	border-radius: 50%;
+	border: 2px solid var(--sl-color-gray-4);
+}
+.oz-beat.on {
+	background: var(--sl-color-accent-high);
+	border-color: var(--sl-color-accent-high);
+}
+.oz-beat.on.accent {
+	background: var(--oz-accent);
+	border-color: var(--oz-accent);
+}
+@media (pointer: coarse) {
+	.oz-may-dem-nhip select,
+	.oz-may-dem-nhip label:has(input[type='checkbox']) {
+		min-height: 44px;
+		min-width: 44px;
+	}
+	.oz-mdn-keo {
+		height: 44px;
+	}
+}
+
+/* ---------- Bài đang tập, kế hoạch tập (::cong-cu repertoire, plan; src/scripts/bai-dang-tap.js, ke-hoach.js) ---------- */
+.oz-bai-dang-tap[hidden] {
+	display: none;
+}
+.sl-markdown-content :is(.oz-bai-dang-tap, .oz-ke-hoach) > * {
+	margin: 0;
+	max-width: none;
+}
+.sl-markdown-content :is(.oz-bai-dang-tap, .oz-ke-hoach) > * + * {
+	margin-top: 0.4rem;
+}
+.oz-tool-title {
+	font-weight: 600;
+}
+.sl-markdown-content :is(.oz-rep-list, .oz-plan-list) {
+	padding-inline-start: 1.4rem;
+}
+.sl-markdown-content :is(.oz-rep-list, .oz-plan-list) > li + li {
+	margin-top: 0.3rem;
+}
+.sl-markdown-content .oz-plan-list {
+	margin-bottom: 0;
 }
