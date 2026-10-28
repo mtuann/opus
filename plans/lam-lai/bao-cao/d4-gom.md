@@ -1,4 +1,4 @@
-# D4, nhánh gom: lượt 2, review, khóa (đang làm)
+# D4, nhánh gom: lượt 2, review, khóa
 
 Nhánh `moi/d4-gom` từ `main` (`82e33f5`), Claude Opus 5.5 (phiên Cowork), 28/10/2026.
 
@@ -55,3 +55,17 @@ Chữ đổi sau lượt 2 và câu mới: 156 câu ở `bo-sung.yml` (145 câu 
 - `piano/lo-trinh`: mở khóa, dòng Đọc nhạc chặng 3, 4 thành "tập nhìn trước vài nốt" và "nhìn trước xa hơn, dù hiếm khi tới trọn một ô nhịp", dẫn sang Thị tấu `#nhin-truoc`.
 - `bat-dau/moi-ngay.yml`: ghi chú hai nhận định cập nhật theo bảng Mẫu buổi tập và bảng cảnh báo mới (chữ trang không đổi).
 - Giữ nguyên: bản ghi `thuat-ngu.yml` `con-sordino-con-sordina` (nghĩa una corda ở Scriabin có nguồn Henle Blog; link `#ky-hieu` vẫn có); ba trang luyện tai còn "hợp âm át bảy" (đã khóa, chỉ khác cách gọi; để lần sửa sau).
+
+## Kiểm mẫu
+
+Chủ repo kiểm 10 nhận định ngẫu nhiên (`kiem-mau.yml`, kết quả `kiem-mau-ket-qua.yml`): 10 đúng, 3 trong đó có điều kiện, 0 sai. Sửa theo góp ý:
+
+- not-hoa-my: nguồn của câu Trillo là Versuch §5 (không phải §13); chữ "luôn bắt đầu từ nốt trên" giới hạn cho láy rền thường (*ordentlicher Triller*), C. P. E. Bach còn tả kiểu láy đi lên từ dưới.
+- 10-bai-dau-tien: Frère Jacques "Bài hát Pháp truyền thống" thay "Dân ca Pháp" (có giả thuyết giai điệu của Rameau).
+- mau-galant: gợi ý ngón của Fonte và Monte ghi rõ quãng tám (La4, Sol5…; Đô4, Si♭4…); Monte "ngón 5 (hay 4 nếu tay nhỏ)", quãng 7 và 6.
+
+## Khóa
+
+29 trang: 28 trang của D4-L1 đến D4-L4 và `piano/lo-trinh` (mở khóa sửa dòng Đọc nhạc, khóa lại). `node tools/khoa.mjs tinh`: mọi mục khớp. Bản build thật: 90 trang. `npm test`: 168/168.
+
+Để lại cho sau: ba trang luyện tai đã khóa còn gọi "hợp âm át bảy" (các trang khác dùng "hợp âm bảy át" như bài 11); hai bài trong 10 bài đầu tiên vẫn ghi "Dân ca Pháp" (Au clair de la lune, Ah! vous dirai-je).

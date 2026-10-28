@@ -92,7 +92,7 @@ Câu hỏi nhỏ còn chờ (từ review nhánh quyết định, `bao-cao/d2-ban
 | 1 | Nền kỹ thuật | D1.1–D1.8 | Trang chủ tạm và trang 404 ở `/opus/`; chưa có bài | Xong 24/10/2026: trang chủ tạm và trang 404 trên site thật; ba trang thử ở bản xem |
 | 2 | Khung cấp độ và lối vào | 1 | Trang chủ, Bắt đầu, lộ trình và 7 trang chặng, bài kiểm tra đầu vào | Xong 24/10/2026: D2-nền (chuẩn bị kỹ thuật), D2-0 (khóa 223 bản ghi), D2-L1 (khóa 9 trang; 17 trang trên site thật: trang chủ mới, 7 trang Bắt đầu, lộ trình piano, 7 trang chặng, 404) |
 | 3 | Nhạc lý và luyện tai | 6 | 45 trang, Từ điển | Xong 28/10/2026: D3-L1 (khóa 24/10), D3-L2 đến D3-L6 lượt 1 và nhánh gom (lượt 2, review, kiểm mẫu, khóa 37 trang và cả 154 bản ghi `thuat-ngu.yml`); 62 trang trên site thật |
-| 4 | Piano nền tảng | 4 | 28 trang: bắt đầu bên phím, kỹ thuật, tập luyện, hòa âm bên phím, văn học piano | Chưa làm |
+| 4 | Piano nền tảng | 4 | 28 trang: bắt đầu bên phím, kỹ thuật, tập luyện, hòa âm bên phím, văn học piano | Xong 28/10/2026: D4-L1 đến D4-L4 lượt 1 và nhánh gom (lượt 2, review, lượt 2 bổ sung, kiểm mẫu, khóa 28 trang; mở khóa và khóa lại `piano/lo-trinh`); 90 trang trên site thật |
 | 5 | Nhạc cổ điển nền tảng | 3 | 27 trang: thời kỳ, hình thức, nhận diện; đủ 101 trang lõi | Chưa làm |
 | 7 | Công cụ, sách in, blog, Cập nhật | 3 | 17 công cụ luyện tập, sách in, blog, dùng khi mất mạng | Chưa làm |
 | 8 | Tham chiếu có hạn và Đọc thêm | 3 | 20 trang | Chưa làm |

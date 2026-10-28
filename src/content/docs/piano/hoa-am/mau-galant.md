@@ -164,7 +164,7 @@ K:C
 
 **Tập ở đàn**
 
-1. Tay phải giữ một hình: ngón 1 ở bè giữa (La – La – Sol – Sol), ngón 5 ở giai điệu (Sol – Fa – Fa – Mi). Chỉ có hai quãng, 7 và 6, lặp lại.
+1. Tay phải giữ một hình: ngón 1 ở bè giữa (La4 – La4 – Sol4 – Sol4), ngón 5 ở giai điệu (Sol5 – Fa5 – Fa5 – Mi5). Chỉ có hai quãng, 7 và 6, lặp lại.
 2. Tay trái Đô♯3 – Rê3 – Si2 – Đô3, ngón 2 – 1 – 3 – 2. Nói "thứ – thứ, trưởng – trưởng".
 3. Nghe giai điệu và bass tạo quãng 5 giảm (Sol trên Đô♯) rồi mở ra quãng 3 (Fa trên Rê): đó là "chữ ký" của Fonte.
 
@@ -192,7 +192,7 @@ K:C
 **Tập ở đàn**
 
 1. Tay trái Mi3 – Fa3 – Fa♯3 – Sol3, ngón 4 – 3 – 2 – 1.
-2. Tay phải ngón 1 trên Đô – Đô – Rê – Rê, ngón 5 hoặc 4 trên Si♭ – La – Đô – Si.
+2. Tay phải ngón 1 trên Đô4 – Đô4 – Rê4 – Rê4, ngón 5 (hay 4 nếu tay nhỏ) trên Si♭4 – La4 – Đô5 – Si4: quãng 7 rồi quãng 6, lặp lại.
 3. Monte dừng ở át âm: nối tiếp bằng Ponte hoặc một kết để về nhà.
 
 **Giọng khác:** ở Sol trưởng, bass Si – Đô … Đô♯ – Rê, giai điệu Fa♮ – Mi … Sol – Fa♯.
