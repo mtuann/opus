@@ -12,7 +12,7 @@ description: Âm nhạc cũng có "dấu chấm câu". Kết (cadence) là chu�
 | **Kết trọn** (authentic cadence hoàn toàn) | V – I, cả hai ở thể gốc, bè trên kết ở chủ âm | Dấu chấm hết | Kết thúc trọn vẹn |
 | **Kết chưa trọn** (authentic cadence không hoàn toàn) | V – I, nhưng có thể đảo hoặc bè trên không ở chủ âm | Dấu chấm phẩy | Kết nhưng còn hơi mở |
 | **Kết nửa** (half cadence) | ... – V | Dấu phẩy, dấu hỏi | Dừng lơ lửng, chờ câu sau |
-| **Kết plagal** | IV – I | "Amen" cuối thánh ca | Êm, trang nghiêm |
+| **Kết plagal** | IV – I | "Amen" cuối thánh ca | Về chủ âm thẳng từ IV, không qua V |
 | **Kết lừa** (deceptive) | V – vi | Bất ngờ | Tưởng về nhà nhưng rẽ hướng khác |
 
 ## Nghe từng loại (Đô trưởng)
@@ -63,12 +63,12 @@ K:C
 
 ## Câu nhạc và đoạn nhạc
 
-Một **câu nhạc** (phrase) thường dài 4 ô nhịp và kết thúc bằng một kết. Hai câu ghép lại thành một **đoạn nhạc** (period):
+Một **câu nhạc** (phrase) thường dài 4, 8 hoặc 16 ô nhịp và thường kết thúc bằng một kết. Hai câu ghép lại thành một **đoạn nhạc** (period):
 
-- **Câu hỏi** (antecedent): kết thúc bằng **kết nửa**, tạo cảm giác chưa xong.
-- **Câu trả lời** (consequent): bắt đầu giống câu hỏi, nhưng kết thúc bằng **kết trọn**.
+- **Câu hỏi** (antecedent): thường kết thúc bằng **kết nửa**, tạo cảm giác chưa xong.
+- **Câu trả lời** (consequent): thường bắt đầu giống câu hỏi, nhưng kết thúc bằng kết mạnh hơn, thường là **kết trọn**.
 
-*Ode to Joy* của Beethoven là ví dụ hoàn hảo: câu đầu dừng ở Rê (thuộc hợp âm V, kết nửa), câu sau giống hệt nhưng kết ở Đô (chủ âm, kết trọn).
+*Ode to Joy* của Beethoven là một ví dụ: câu đầu dừng ở Rê (thuộc hợp âm V, kết nửa), câu sau giống câu đầu ở ba ô nhịp đầu nhưng kết ở Đô (chủ âm, kết trọn).
 
 ```abc
 X:1
@@ -81,7 +81,7 @@ K:C
 "C"E E F G | "G"G F E D | "C"C C D E | "G"D3/2 "C"C/ C2 |]
 ```
 
-Bạn sẽ gặp cấu trúc câu hỏi – câu trả lời ở khắp nơi trong nhạc thời kỳ Cổ điển, đặc biệt ở Mozart và Haydn.
+Bạn sẽ gặp cấu trúc câu hỏi – câu trả lời thường xuyên trong nhạc cổ điển phương Tây trước năm 1900.
 
 :::tip[Trên phím đàn]
 Khi tập một bản nhạc, đánh dấu các **kết** bằng bút chì. Chúng là ranh giới tự nhiên để chia đoạn khi tập ([Cách tập hiệu quả](/opus/piano/cach-tap/)) và là điểm bám khi [học thuộc](/opus/piano/hoc-thuoc-bieu-dien/). Muốn tự chơi các loại kết ở mọi giọng, xem [Kết ở mọi giọng](/opus/piano/hoa-am/ket/).
@@ -117,10 +117,12 @@ Khi tập một bản nhạc, đánh dấu các **kết** bằng bút chì. Chú
 + Kết nửa
 - Kết trọn
 - Kết plagal
-> Câu trả lời mới kết thúc bằng kết trọn.
+> Câu trả lời thường kết thúc bằng kết mạnh hơn, thường là kết trọn.
 ```
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- *Open Music Theory*: [Introduction to Harmony, Cadences, and Phrase Endings](https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/); [The Phrase, Archetypes, and Unique Forms](https://viva.pressbooks.pub/openmusictheory/chapter/phrase-archetypes-unique-forms/); [Glossary](https://viva.pressbooks.pub/openmusictheory/back-matter/glossary/).
+- Britannica, [Cadence](https://www.britannica.com/art/cadence-music); *The Concise Oxford Dictionary of Music* (Kennedy, Bourne), mục [cadence](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/cadence) (qua Encyclopedia.com).
+- Bản nhạc: Beethoven, *Ode to Joy* (Mutopia Project, [bản LilyPond](https://sca.uwaterloo.ca/Mutopia/ftp/BeethovenLv/ode/ode.ly), phổ công cộng); Mozart, Concerto piano số 21, K. 467, chương 2 ([IMSLP](https://imslp.org/wiki/Piano_Concerto_No.21,_K.467_(Mozart,_Wolfgang_Amadeus))).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

@@ -1,0 +1,382 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/15-tiet-tau-nang-cao
+trang: src/content/docs/nhac-ly/15-tiet-tau-nang-cao.md
+nguon_cu: ../opus-zero/docs/nhac-ly/15-tiet-tau-nang-cao.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-27
+    nhanh: moi/d3-l2
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D3-L2 lượt 1, phần 2/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Bài nhạc lý 15 (tiết tấu nâng cao). Nguồn chính: Open Music Theory (Glossary, Other Rhythmic Essentials, Compound Meter, Metrical Dissonance, Twentieth-Century Rhythmic Techniques), Concise Oxford Dictionary of Music (syncopation, hemiola, qua Encyclopedia.com), Dolmetsch Online (bài 4, bài 20, từ điển), IMSLP (Holst, Planets), BSO (Tchaikovsky 6), Woodruff MTO 6.12. Sửa ở lượt 1: (1) bỏ Chopin, Brahms, "nhạc Lãng mạn" ở liên ba nốt đen; (2) đảo phách "từ Bach đến Beethoven" thành "từ thời Ars Nova, jazz phát triển rộng rãi" (COD); (3) hemiola "phanh lại, minuet, courante, aria, Brahms" thành "thường ở các kết quan trọng của nhạc nhịp ba, vd. Water Music Tổ khúc 2 chương II" (OMT); (4) bài tập Happy Birthday thành "giai điệu quen thuộc" (vị trí phách không kiểm được); (5) bỏ "từ thế kỷ 20 xuất hiện thường xuyên hơn" và "Stravinsky đổi nhịp gần như mỗi ô" (Woodruff nói ngược); (6) mục Nguồn. Không sai nhưng cần người giao biết: trong khối abc 3 ô 2 và ô 3 nghe giống hệt nhau. Gạch đầu dòng OMT thứ hai ở Nguồn có thể gộp với gạch đầu. Thuật ngữ tiếng Việt chưa có trong src/data/thuat-ngu.yml (cho D3-L5): "nhịp lấy đà", "đảo phách", "liên ba", "hemiola", "nhịp đơn / nhịp kép".'
+nguon:
+  - id: omt-gloss
+    bac: 2
+    ten: Open Music Theory, Glossary (triplet, simple meter, compound meter, anacrusis, syncopation, hemiola)
+    link: https://viva.pressbooks.pub/openmusictheory/back-matter/glossary/
+  - id: omt-rhythm
+    bac: 2
+    ten: 'Open Music Theory, Other Rhythmic Essentials (triplet, syncopation: ghi bằng số 3 phía trên)'
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/other-rhythmic-essentials/
+  - id: omt-compound
+    bac: 2
+    ten: Open Music Theory, Compound Meter and Time Signatures (6/8 hai phách, 9/8 ba, 12/8 bốn, phách là nốt đen chấm dôi)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/compound-meters-and-time-signatures/
+  - id: omt-metdis
+    bac: 2
+    ten: Open Music Theory, Metrical Dissonance (hemiola)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/metrical-dissonance/
+  - id: omt-20c
+    bac: 2
+    ten: Open Music Theory, Twentieth-Century Rhythmic Techniques (nhịp không đối xứng, 7/8 nhóm 2+2+3 / 3+2+2)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/twentieth-century-rhythmic-techniques/
+  - id: cod-sync
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music (Kennedy, Bourne), mục syncopation (qua Encyclopedia.com)
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/syncopation
+  - id: cod-hemiola
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục hemiola
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/hemiola
+  - id: dol4
+    bac: 2
+    ten: 'Dolmetsch Online, Music Theory Online, bài 4: Time Signatures and Meter (nhịp lấy đà, 5/4 của Tchaikovsky)'
+    link: https://www.dolmetsch.com/musictheory4.htm
+  - id: dol20
+    bac: 2
+    ten: Dolmetsch Online, Music Theory Online, bài 20 (triplet, hemiola, syncopation)
+    link: https://www.dolmetsch.com/musictheory20.htm
+  - id: dol-anac
+    bac: 2
+    ten: Dolmetsch Online, Music Dictionary, mục anacrusis
+    link: https://www.dolmetsch.com/defsa7.htm
+  - id: imslp-planets
+    bac: 2
+    ten: 'IMSLP, The Planets, Op.32 (Holst): đoạn trích "Mars" có \time 5/4'
+    link: https://imslp.org/wiki/The_Planets,_Op.32_(Holst,_Gustav)
+  - id: bso
+    bac: 2
+    ten: 'Boston Symphony Orchestra, Tchaikovsky: Symphony No. 6 (lời giới thiệu tác phẩm)'
+    link: https://www.bso.org/works/tchaikovsky-symphony-no-6
+  - id: mto-woodruff
+    bac: 2
+    ten: Music Theory Online 6.12, Woodruff, bài phân tích nhịp trong The Rite of Spring (Sacrificial Dance)
+    link: https://mtosmt.org/issues/mto.06.12.1/mto.06.12.1.woodruff.php
+nhan_dinh:
+  - id: n1
+    cau: Phần Tiết tấu, điệu thức và chuyển giọng (bài 15–20) dành cho bạn đã xong 14 bài nền tảng và 3 bài ôn tập. Bài đầu tiên lấp những lỗ hổng về tiết tấu mà bạn sẽ gặp ngay khi đọc bản nhạc thật.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Bản cũ ../opus-zero/mkdocs.yml dòng 248-255: mục "Tiết tấu, điệu thức, chuyển giọng" gồm bài 15-20 (15 là bài đầu tiên); nhac-ly/index.md dòng 38 "Phần 4: Tiết tấu, điệu thức và chuyển giọng"; trước đó là bài 1-14 và "Ôn tập 1, 2, 3" (mkdocs.yml dòng 226-247). Dòng này cũng là mô tả trang (frontmatter). "Lấp lỗ hổng... ngay khi đọc bản nhạc thật" là lời giới thiệu.'
+  - id: n2
+    cau: Thông thường một phách chia đôi (hai móc đơn) hoặc chia bốn (bốn móc kép).
+    loai: dinh-nghia
+    nguon:
+      - omt-gloss
+      - omt-compound
+    ket_qua: dung
+    ghi_chu: 'OMT Glossary: "simple meter: A meter that divides the beat into two parts"; OMT: phách nhịp đơn chia hai rồi chia tiếp thành bốn (compound: "the beat divides into three and then further subdivides into six"). Phách nốt đen chia hai móc đơn hay bốn móc kép: suy từ độ dài nốt.'
+  - id: n3
+    cau: Liên ba (triplet) chia một phách thành ba phần bằng nhau; viết bằng ba nốt có số 3 bên trên.
+    loai: dinh-nghia
+    nguon:
+      - omt-gloss
+      - omt-rhythm
+      - dol20
+    ket_qua: dung
+    ghi_chu: 'OMT Glossary: "A tuplet that involves dividing a beat in simple meter into three parts."; OMT Other Rhythmic Essentials: "Notate a triplet by writing a ''3'' above the appropriate rhythm." Dolmetsch bài 20: "three notes in the time of two". "Bằng nhau": ba nốt cùng độ dài là cách dùng thông thường.'
+  - id: n4
+    cau: Hãy đếm "1 và 2 và" cho móc đơn, "1-trip-let 2-trip-let" cho liên ba, và "1 e và a 2 e và a" cho móc kép.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập (cách đếm quen dùng trong tài liệu tiếng Anh, trang đã nói). Không nguồn bậc 1-2 đã mở ghi nguyên văn các âm tiết này (Dolmetsch bài 20 có bảng âm tiết đếm nhưng bản đọc được không liệt kê đủ), nên chỉ coi là khuyên tập; không trái nguồn nào.
+  - id: n5
+    cau: Liên ba có thể chia hai phách thành ba nốt đen (liên ba nốt đen).
+    loai: dinh-nghia
+    nguon:
+      - omt-gloss
+      - omt-rhythm
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Liên ba cũng có thể chia hai phách thành ba nốt đen (liên ba nốt đen), rất hay gặp trong nhạc Lãng mạn. Chopin và Brahms thường chồng liên ba ở một tay lên nhịp chia đôi ở tay kia (''ba chọi hai'')." Chữ mới giữ phần đầu. OMT Other Rhythmic Essentials: triplet là "a beat (or subdivision, or multiple beats) in simple meter is divided into three parts", nên ba nốt trong hai phách đúng.'
+  - id: n6
+    cau: Liên ba rất hay gặp trong nhạc Lãng mạn; Chopin và Brahms thường chồng liên ba ở một tay lên nhịp chia đôi ở tay kia ("ba chọi hai").
+    loai: lich-su
+    nguon:
+      - omt-rhythm
+    ket_qua: da-bo
+    ghi_chu: 'Bỏ khỏi trang. Không nguồn bậc 1-2 đã mở nào nói: OMT không nhắc Chopin, Brahms hay "ba chọi hai"; OMT, Metrical Dissonance, chỉ bàn 3 chọi 4. Wikipedia (bậc 3, chỉ để tìm nguồn) nhắc Chopin Étude op. 10 số 10 (ba nốt rồi hai nốt) và Brahms Sonata violin op. 78 (3+3 và 2+2+2), không khớp nguyên câu.'
+  - id: n7
+    cau: 'Nhiều giai điệu không bắt đầu ở phách mạnh mà bắt đầu bằng một vài nốt trước vạch nhịp đầu tiên: nhịp lấy đà (anacrusis, upbeat).'
+    loai: dinh-nghia
+    nguon:
+      - omt-gloss
+      - dol4
+      - dol-anac
+    ket_qua: dung
+    ghi_chu: 'OMT Glossary: "Anacrusis: Notes on an upbeat that lead into the first downbeat of a phrase."; Dolmetsch bài 4: "An opening that begins on a weak beat is called an anacrusis."; Dolmetsch (từ điển): "a single note, ... up-beat or pickup note, or a group of notes, that occurs before the first strong beat".'
+  - id: n8
+    cau: Ô nhịp đầu khi đó không đủ phách; ô nhịp cuối thường bù lại phần thiếu.
+    loai: dinh-nghia
+    nguon:
+      - dol4
+    ket_qua: dung
+    ghi_chu: 'Dolmetsch bài 4: ô đầu thiếu phách khi bài bắt đầu ở phách yếu; "the two bars taken together should have the same number of beats as an inner bar"; "good practice to balance the incomplete bar at the beginning of the piece with a truncated or short bar at the end".'
+  - id: n9
+    cau: 'Đảo phách (syncopation) là đặt trọng âm vào chỗ "đáng lẽ yếu": giữa phách, hoặc phách nhẹ, thường bằng một nốt dài bắt đầu lệch khỏi phách mạnh.'
+    loai: dinh-nghia
+    nguon:
+      - cod-sync
+      - omt-gloss
+      - omt-rhythm
+    ket_qua: dung
+    ghi_chu: 'COD: syncopation đạt được "by accenting a weak instead of a strong beat, by putting rests on strong beats, by holding on over strong beats..."; OMT Glossary: "A rhythmic phenomenon in which the hierarchy of the underlying meter is contradicted through surface rhythms"; OMT: nảy sinh từ nối, chấm dôi, dấu lặng và/hoặc động lực.'
+  - id: n10
+    cau: Ô nhịp 2 và 3 của ví dụ đảo phách có cùng các nốt như ô 1, nhưng lệch nửa phách; dấu nối làm nốt "đè" lên phách mạnh.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Khối abc 3 (L:1/8, M:4/4): ô 1 C2 E2 G2 c2; ô 2 C E2 G2 c2 z (cùng nốt C E G c, mỗi nốt dịch nửa phách); ô 3 C E- E G- G c2 z (E và G nối qua phách 2 và phách 3). Đúng. Lưu ý cho người giao: ô 2 và ô 3 nghe giống hệt nhau (E2 và E- E cùng độ dài, bắt đầu cùng chỗ); chỉ khác cách viết, nên ô 3 minh họa cách ghi bằng dấu nối chứ không thêm âm thanh mới. Không sai nên chưa sửa.'
+  - id: n11
+    cau: Đảo phách đã có từ thời Ars Nova và được nhạc jazz phát triển rộng rãi.
+    loai: lich-su
+    nguon:
+      - cod-sync
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Đảo phách có mặt từ Bach đến Beethoven, và là linh hồn của ragtime, jazz." COD: "First used at time of ars nova, and exploited to fullest capabilities by jazz musicians, often in improvisation." COD không nhắc Bach, Beethoven hay ragtime.'
+  - id: n12
+    cau: Trong nhịp đơn (2/4, 3/4, 4/4), mỗi phách chia đôi. Trong nhịp kép, mỗi phách là nốt đen chấm dôi và chia ba.
+    loai: dinh-nghia
+    nguon:
+      - omt-gloss
+      - omt-compound
+    ket_qua: dung
+    ghi_chu: 'OMT Glossary: "simple meter: divides the beat into two parts", "compound meter: divides the beat into three parts"; OMT Compound Meter: "If 8 is the bottom number, the beat is a dotted quarter note (equivalent to three eighth notes)." Nốt đen chấm dôi là phách khi số dưới là 8 (6/8, 9/8, 12/8); với 6/4 thì khác, nhưng trang chỉ bàn x/8.'
+  - id: n13
+    cau: 6/8 có 2 phách lớn, mỗi phách 3 móc đơn.
+    loai: dinh-nghia
+    nguon:
+      - omt-compound
+    ket_qua: dung
+    ghi_chu: 'OMT: 6/8 là compound duple, 2 phách mỗi ô, phách là nốt đen chấm dôi.'
+  - id: n14
+    cau: 9/8 có 3 phách lớn, mỗi phách 3 móc đơn.
+    loai: dinh-nghia
+    nguon:
+      - omt-compound
+    ket_qua: dung
+    ghi_chu: 'OMT: 9/8 là compound triple, 3 phách mỗi ô.'
+  - id: n15
+    cau: 12/8 có 4 phách lớn, mỗi phách 3 móc đơn.
+    loai: dinh-nghia
+    nguon:
+      - omt-compound
+    ket_qua: dung
+    ghi_chu: 'OMT: 12/8 là compound quadruple, 4 phách mỗi ô.'
+  - id: n16
+    cau: 'Hemiola là khi hai ô nhịp 3/4 được nhấn như ba nhóm 2 phách (nghe như một ô 3/2): MẠNH-nhẹ MẠNH-nhẹ MẠNH-nhẹ thay vì MẠNH-nhẹ-nhẹ MẠNH-nhẹ-nhẹ.'
+    loai: dinh-nghia
+    nguon:
+      - omt-gloss
+      - omt-metdis
+      - cod-hemiola
+      - dol20
+    ket_qua: dung
+    ghi_chu: 'OMT Glossary: "Hemiola: A grouping dissonance between a 2-layer and a 3-layer"; "Hemiolas commonly occur in triple-meter pieces by grouping six beats". COD: "superimposing 2 notes in the time of 3, or 3 in the time of 2." Dolmetsch bài 20: hemiola là hai ô nhịp ba tạo ba phách (nhóm hai). "Nghe như một ô 3/2": cách nói tương đương (OMT dùng 3/2 khi nói ví dụ Stravinsky, không nói cho hemiola; tương đương toán học).'
+  - id: n17
+    cau: Hemiola thường xuất hiện ở các kết quan trọng của nhạc nhịp ba, chẳng hạn trong Water Music, Tổ khúc số 2, chương II của Handel.
+    loai: dinh-nghia
+    nguon:
+      - omt-metdis
+      - cod-hemiola
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Nó tạo cảm giác ''phanh lại'' và rất hay xuất hiện ngay trước kết trong nhạc Baroque (các minuet, courante, aria của Handel), rồi được Brahms dùng như dấu ấn riêng." OMT, Metrical Dissonance: "This sort of hemiola is often found at important cadences of pieces in triple meter", ví dụ "G.F. Handel''s Water Music Suite No. 2, mvt. II"; COD, mục hemiola: dùng nhiều trong các mẫu kết cho đến hết Baroque.'
+  - id: n18
+    cau: Hemiola tạo cảm giác "phanh lại"; được dùng trong các minuet, courante, aria của Handel; rồi được Brahms dùng như dấu ấn riêng.
+    loai: lich-su
+    nguon:
+      - omt-metdis
+      - cod-hemiola
+    ket_qua: da-bo
+    ghi_chu: Bỏ khỏi trang. "Phanh lại" là cảm nhận chủ quan; OMT và COD không nhắc minuet, courante, aria; Brahms chỉ có trong OMT cho bài "Lullaby" (loại bất đồng nhịp khác).
+  - id: n19
+    cau: Ô nhịp 3–4 của ví dụ hemiola có trọng âm mỗi 2 phách (Si – La – Sol), chồng lên nhịp 3/4 bình thường.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Khối abc 5 (M:3/4, L:1/4, K:G): G A B | c B A | !>!B2 !>!A- | A !>!G2 | G3: ô 3-4 có ba nốt nhấn, mỗi nốt cách nhau hai phách (B ở ô 3 phách 1, A ở ô 3 phách 3 nối sang ô 4, G ở ô 4 phách 2); Si – La – Sol đúng. Ô 5 G3 là ô kết. Đúng.'
+  - id: n20
+    cau: Có những bản dùng số chỉ nhịp không đều như 5/4 hay 7/8.
+    loai: dinh-nghia
+    nguon:
+      - omt-20c
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Từ thế kỷ 20, nhịp 5/4 hay 7/8 xuất hiện thường xuyên hơn. ... Stravinsky trong Le Sacre du printemps đổi nhịp gần như mỗi ô." Chữ mới: "Có những bản dùng số chỉ nhịp không đều như 5/4 hay 7/8. ..." OMT, Twentieth-Century Rhythmic Techniques, có ví dụ nhịp 5/4 và 7/8 (nhịp không đối xứng); chỉ nói có, không nói "thường xuyên hơn từ thế kỷ 20".'
+  - id: n21
+    cau: Từ thế kỷ 20, nhịp 5/4 hay 7/8 xuất hiện thường xuyên hơn.
+    loai: lich-su
+    nguon:
+      - omt-20c
+    ket_qua: da-bo
+    ghi_chu: Bỏ khỏi trang. Không nguồn bậc 1-2 đã mở có so sánh tần suất trước và sau thế kỷ 20 (Tchaikovsky đã viết 5/4 năm 1893).
+  - id: n22
+    cau: Stravinsky trong Le Sacre du printemps đổi nhịp gần như mỗi ô.
+    loai: lich-su
+    nguon:
+      - mto-woodruff
+    ket_qua: da-bo
+    ghi_chu: 'Bỏ khỏi trang. Woodruff (MTO 6.12) phân tích Sacrificial Dance và lập luận ngược lại: nhịp đều ngầm bên dưới nhịp đổi, nên "gần như mỗi ô" không được nguồn ủng hộ.'
+  - id: n23
+    cau: 7/8 thường được nhóm thành 2+2+3 hoặc 3+2+2.
+    loai: dinh-nghia
+    nguon:
+      - omt-20c
+    ket_qua: dung
+    ghi_chu: 'OMT, Twentieth-Century Rhythmic Techniques: nhóm 2+2+3 và 3+2+2 cho 7/8.'
+  - id: n24
+    cau: 'Holst The Planets: Mars dùng 5/4.'
+    loai: lich-su
+    nguon:
+      - imslp-planets
+    ket_qua: dung
+    ghi_chu: 'IMSLP, The Planets, Op.32: bản phổ "Mars" ghi \time 5/4.'
+  - id: n25
+    cau: Tchaikovsky viết một chương valse 5/4 trong Giao hưởng số 6.
+    loai: lich-su
+    nguon:
+      - bso
+      - dol4
+    ket_qua: dung
+    ghi_chu: 'BSO: chương II của Giao hưởng số 6 là valse nhịp 5/4; Dolmetsch bài 4 cũng nêu ví dụ 5/4 của Tchaikovsky.'
+  - id: n26
+    cau: 'Công cụ tiết tấu, cấp độ 4: liên ba và móc kép (link /opus/luyen-tap/tiet-tau/).'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Bản cũ ../opus-zero/docs/luyen-tap/tiet-tau.md và assets/js: công cụ tiết tấu có cấp độ 4 gồm liên ba và móc kép (assets/js/rhythm*.js dòng 62: "4: liên ba, móc kép"). luyen-tap/tiet-tau.md tồn tại ở bản cũ.'
+  - id: n27
+    cau: Vỗ tay ba ví dụ đầu bài này với máy đếm nhịp ở 60 BPM, rồi tăng dần.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập. Link /opus/luyen-tap/metronome/ có ở bản cũ (luyen-tap/metronome.md).
+  - id: n28
+    cau: 'Bài tập 1: viết một ô 4/4 gồm một liên ba móc đơn, hai móc kép + một móc đơn, một nốt đen, một dấu lặng đen.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Bài tập. Kiểm số học: liên ba móc đơn = 3 móc đơn trong thời gian 2 móc đơn = 1 phách; hai móc kép + một móc đơn = (1/4 + 1/4) + 1/2 = 1 phách (tính theo phách nốt đen: 0,25+0,25+0,5); nốt đen 1 phách; lặng đen 1 phách; tổng 4 phách = đủ một ô 4/4.'
+  - id: n29
+    cau: 'Bài tập 2: chọn một giai điệu quen thuộc bắt đầu bằng nhịp lấy đà và viết lại đoạn đầu cho đúng chỗ vạch nhịp.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Viết lại giai điệu Happy Birthday với nhịp lấy đà (bài hát bắt đầu ở phách 3 của nhịp 3/4)." Chữ mới không nêu bài cụ thể. Không có bản phổ công cộng đã mở xác nhận vị trí phách của Happy Birthday, nên bỏ chi tiết đó.'
+  - id: n30
+    cau: Một ô nhịp 9/8 có 18 móc kép (9 móc đơn = 18 móc kép).
+    loai: so-lieu
+    nguon:
+      - omt-compound
+    ket_qua: dung
+    ghi_chu: 'Số học: ô 9/8 = 9 móc đơn (OMT: 8 ở dưới là nốt móc đơn), mỗi móc đơn = 2 móc kép, nên 18.'
+  - id: n31
+    cau: 'Quiz 1: liên ba móc đơn chia một phách nốt đen thành 3 phần (giải thích: ba nốt bằng nhau trong thời gian của hai móc đơn).'
+    loai: dinh-nghia
+    nguon:
+      - omt-gloss
+      - omt-rhythm
+    ket_qua: dung
+    ghi_chu: 'Xem nhận định về liên ba. Lựa chọn sai: 2, 4.'
+  - id: n32
+    cau: 'Quiz 2: nhịp lấy đà là những nốt đứng trước vạch nhịp đầu tiên (giải thích: giai điệu bắt đầu ở phách yếu).'
+    loai: dinh-nghia
+    nguon:
+      - omt-gloss
+      - dol4
+    ket_qua: dung
+    ghi_chu: 'OMT Glossary: "Notes on an upbeat that lead into the first downbeat". Lựa chọn sai: ô cuối, tăng tốc.'
+  - id: n33
+    cau: 'Quiz 3: nhịp 12/8 có 4 phách lớn (giải thích: mỗi phách là nốt đen chấm dôi).'
+    loai: dinh-nghia
+    nguon:
+      - omt-compound
+    ket_qua: dung
+    ghi_chu: 'OMT: 12/8 compound quadruple. Lựa chọn sai: 12, 3.'
+  - id: n34
+    cau: 'Quiz 4: đảo phách là đặt trọng âm vào chỗ đáng lẽ yếu (giải thích: thường dùng nốt dài bắt đầu lệch khỏi phách mạnh).'
+    loai: dinh-nghia
+    nguon:
+      - cod-sync
+      - omt-gloss
+    ket_qua: dung
+    ghi_chu: 'COD, OMT Glossary: xem nhận định về đảo phách. Lựa chọn sai: đổi số chỉ nhịp giữa bài, chơi ngược tiết tấu.'
+  - id: n35
+    cau: 'Mục Nguồn: OMT (simple, compound, metrical dissonance, twentieth-century), COD (syncopation, hemiola), bản phổ IMSLP và Dolmetsch bài 4; link /opus/tai-lieu-tham-khao/.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Các link nguồn đã mở khi kiểm định (xem nguon). Bản cũ ../opus-zero/docs/tai-lieu-tham-khao.md tồn tại; trang đích chưa chuyển. Gợi ý: gộp gạch đầu dòng OMT thứ hai với gạch thứ nhất. Mục Nguồn đổi ở lượt này (xem doi_chu).'
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+    ket_qua: dung
+    ghi_chu: 'Soạn cho trang này. M:4/4, L:1/8, K:C: ô 1 CC CC (3CCC (3CCC = 2+2+... 8 móc đơn (hai cặp móc đơn + hai liên ba mỗi liên ba bằng 2 móc đơn); ô 2 C/C/C/C/ C/C/C/C/ (3CCC C2 = 8 móc đơn. Mỗi ô đủ 8 móc đơn, không cảnh báo abcjs.'
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+    ket_qua: dung
+    ghi_chu: 'Soạn cho trang này. K:G, "D | G G A B | c2 B A | G G F A | G3": nốt lấy đà D (1 phách) + ô cuối G3 (3 phách) = một ô 4/4 đủ; các ô giữa đủ 4 phách. Khớp n7, n8.'
+  - khoi: 3
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+    ket_qua: dung
+    ghi_chu: Soạn cho trang này. M:4/4, L:1/8, 3 ô, mỗi ô đủ 8 móc đơn; ô 2 và ô 3 nghe giống hệt nhau (chỉ khác cách viết). Xem nhận định về ô 2 và 3.
+  - khoi: 4
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+    ket_qua: dung
+    ghi_chu: 'Soạn cho trang này. M:12/8, L:1/8, Q:3/8=60: mỗi ô 12 móc đơn (CEG cGE CEG c3 = 12; B,DG BGD CEG c3 = 12), bốn nhóm ba = bốn phách lớn.'
+  - khoi: 5
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+    ket_qua: dung
+    ghi_chu: 'Soạn cho trang này. M:3/4, L:1/4, K:G: 5 ô, mỗi ô đủ 3 phách; trọng âm trên B, A, G cách nhau hai phách, A nối qua vạch nhịp. Xem nhận định về ô 3-4.'
+doi_chu:
+  - cu: Liên ba cũng có thể chia hai phách thành ba nốt đen (liên ba nốt đen), rất hay gặp trong nhạc Lãng mạn. Chopin và Brahms thường chồng liên ba ở một tay lên nhịp chia đôi ở tay kia ("ba chọi hai").
+    moi: Liên ba cũng có thể chia hai phách thành ba nốt đen (liên ba nốt đen).
+    ly_do: 'n5, n6 (da-bo/da-sua): "rất hay gặp trong nhạc Lãng mạn" và "Chopin và Brahms thường chồng liên ba lên nhịp chia đôi (ba chọi hai)" không có nguồn bậc 1-2 đã mở; bỏ cả hai. Giữ câu liên ba nốt đen chia hai phách thành ba phần.'
+  - cu: Ô nhịp 2 và 3 có cùng các nốt như ô 1, nhưng lệch nửa phách; dấu nối làm nốt "đè" lên phách mạnh. Đảo phách có mặt từ Bach đến Beethoven, và là linh hồn của ragtime, jazz.
+    moi: Ô nhịp 2 và 3 có cùng các nốt như ô 1, nhưng lệch nửa phách; dấu nối làm nốt "đè" lên phách mạnh. Đảo phách đã có từ thời Ars Nova và được nhạc jazz phát triển rộng rãi.
+    ly_do: 'n11 (da-sua): Concise Oxford Dictionary of Music, mục syncopation: "First used at time of ars nova, and exploited to fullest capabilities by jazz musicians, often in improvisation." Câu cũ "có mặt từ Bach đến Beethoven, và là linh hồn của ragtime, jazz" không nguồn nào đọc được xác nhận (COD không nhắc Bach, Beethoven hay ragtime). Không ghi năm cho Ars Nova vì COD không ghi.'
+  - cu: 'Hemiola là khi hai ô nhịp 3/4 được nhấn như ba nhóm 2 phách (nghe như một ô 3/2): MẠNH-nhẹ MẠNH-nhẹ MẠNH-nhẹ thay vì MẠNH-nhẹ-nhẹ MẠNH-nhẹ-nhẹ. Nó tạo cảm giác "phanh lại" và rất hay xuất hiện ngay trước kết trong nhạc Baroque (các minuet, courante, aria của Handel), rồi được Brahms dùng như dấu ấn riêng.'
+    moi: "Hemiola là khi hai ô nhịp 3/4 được nhấn như ba nhóm 2 phách (nghe như một ô 3/2): MẠNH-nhẹ MẠNH-nhẹ MẠNH-nhẹ thay vì MẠNH-nhẹ-nhẹ MẠNH-nhẹ-nhẹ. Nó thường xuất hiện ở các kết quan trọng của nhạc nhịp ba, chẳng hạn trong Water Music, Tổ khúc số 2, chương II của Handel."
+    ly_do: "n17, n18 (da-bo/da-sua): OMT, Metrical Dissonance: \"This sort of hemiola is often found at important cadences of pieces in triple meter\", ví dụ \"G.F. Handel's Water Music Suite No. 2, mvt. II\"; Concise Oxford Dictionary of Music, mục hemiola: dùng nhiều trong các mẫu kết cho đến hết Baroque. Bỏ: cảm giác \"phanh lại\", \"minuet, courante\" (không nguồn nào đọc được nhắc), \"dấu ấn riêng của Brahms\" (OMT chỉ nhắc Brahms Lullaby cho một loại bất đồng nhịp khác)."
+  - cu: "Từ thế kỷ 20, nhịp 5/4 hay 7/8 xuất hiện thường xuyên hơn. 7/8 thường được nhóm thành 2+2+3 hoặc 3+2+2. Holst The Planets: Mars dùng 5/4, Tchaikovsky viết một chương valse 5/4 trong Giao hưởng số 6. Stravinsky trong Le Sacre du printemps đổi nhịp gần như mỗi ô."
+    moi: "Có những bản dùng số chỉ nhịp không đều như 5/4 hay 7/8. 7/8 thường được nhóm thành 2+2+3 hoặc 3+2+2. Holst The Planets: Mars dùng 5/4, Tchaikovsky viết một chương valse 5/4 trong Giao hưởng số 6."
+    ly_do: 'n20, n21, n22 (da-bo/da-sua): "Từ thế kỷ 20 ... thường xuyên hơn" bỏ: OMT, Twentieth-Century Rhythmic Techniques, chỉ nói các kỹ thuật tiết tấu "ít truyền thống" được nhạc sĩ phương Tây dùng thường xuyên hơn sau năm 1900, không riêng 5/4 hay 7/8. Câu "Stravinsky đổi nhịp gần như mỗi ô" bỏ: bài Woodruff (Music Theory Online 6.12) nói ngược lại cho điệu Sacrificial Dance. Giữ: nhóm 2+2+3 / 3+2+2 cho 7/8 (OMT, cùng chương), Holst Mars 5/4 (bản phổ IMSLP, khối LilyPond "\time 5/4"), Tchaikovsky chương 2 Giao hưởng số 6 ở 5/4 (Dolmetsch Online, Music Theory Online bài 4: "five over four... two plus three"; Boston Symphony Orchestra: "stuttering waltz in unexpected 5/4 meter").'
+  - cu: Viết lại giai điệu Happy Birthday với nhịp lấy đà (bài hát bắt đầu ở phách 3 của nhịp 3/4).
+    moi: Chọn một giai điệu quen thuộc bắt đầu bằng nhịp lấy đà và viết lại đoạn đầu cho đúng chỗ vạch nhịp.
+    ly_do: 'n29 (da-sua): "Happy Birthday bắt đầu ở phách 3 của nhịp 3/4" không kiểm được bằng bản phổ công cộng đã mở; đổi thành bài tập không nêu sự kiện nhạc cụ thể.'
+  - cu: Open Music Theory; musictheory.net.
+    moi:
+      - "Open Music Theory: Simple Meter and Time Signatures; Compound Meter and Time Signatures."
+      - "The Concise Oxford Dictionary of Music (Kennedy, Bourne) qua Encyclopedia.com: mục syncopation, hemiola."
+      - "Open Music Theory: Metrical Dissonance; Twentieth-Century Rhythmic Techniques."
+      - "Bản phổ trên IMSLP: Holst, The Planets; Tchaikovsky, Giao hưởng số 6. Dolmetsch Online, Music Theory Online, bài 4."
+    ly_do: "Mục Nguồn: thay link chung bằng các nguồn đã mở khi kiểm định (lượt 1); bỏ musictheory.net."

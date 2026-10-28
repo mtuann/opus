@@ -1,9 +1,9 @@
 ---
 title: 10. Hợp âm ba
-description: "Hợp âm là ba nốt trở lên vang lên cùng lúc. Hợp âm cơ bản nhất là hợp âm ba (triad): ba nốt xếp chồng quãng 3."
+description: "Hợp âm là ba nốt trở lên vang lên cùng lúc. Hợp âm ít nốt nhất là hợp âm ba (triad): ba nốt xếp chồng quãng 3."
 ---
 
-**Hợp âm** là ba nốt trở lên vang lên cùng lúc. Hợp âm cơ bản nhất là **hợp âm ba** (triad): ba nốt xếp **chồng quãng 3**.
+**Hợp âm** là ba nốt trở lên vang lên cùng lúc. Hợp âm ít nốt nhất là **hợp âm ba** (triad): ba nốt xếp **chồng quãng 3**.
 
 - **Nốt gốc** (root): nốt dưới cùng khi xếp chồng quãng 3, đặt tên cho hợp âm.
 - **Nốt ba** (third): cách nốt gốc quãng 3.
@@ -15,12 +15,12 @@ Ví dụ hợp âm Đô trưởng: Đô – Mi – Sol.
 
 ## Bốn loại hợp âm ba
 
-| Loại | Cấu tạo (từ dưới lên) | Ví dụ từ Đô | Ký hiệu | Cảm giác |
+| Loại | Cấu tạo (từ dưới lên) | Ví dụ từ Đô | Ký hiệu | Cảm giác thường được mô tả |
 |---|---|---|---|---|
-| Trưởng | 3 trưởng + 3 thứ | Đô – Mi – Sol | C | Sáng, vững |
-| Thứ | 3 thứ + 3 trưởng | Đô – Mi♭ – Sol | Cm | Tối, buồn |
-| Giảm | 3 thứ + 3 thứ | Đô – Mi♭ – Sol♭ | C° hoặc Cdim | Căng, bất ổn |
-| Tăng | 3 trưởng + 3 trưởng | Đô – Mi – Sol♯ | C+ hoặc Caug | Lơ lửng, lạ |
+| Trưởng | 3 trưởng + 3 thứ | Đô – Mi – Sol | C | Vui |
+| Thứ | 3 thứ + 3 trưởng | Đô – Mi♭ – Sol | Cm | Buồn |
+| Giảm | 3 thứ + 3 thứ | Đô – Mi♭ – Sol♭ | C° hoặc Cdim | Đáng sợ |
+| Tăng | 3 trưởng + 3 trưởng | Đô – Mi – Sol♯ | C+ hoặc Caug | Huyền ảo |
 
 ```abc
 X:1
@@ -57,13 +57,13 @@ K:C
 
 ## Hợp âm trong giọng thứ
 
-Giọng thứ dùng **gam thứ hòa âm** khi xây hợp âm, để bậc V có cảm âm và trở thành hợp âm trưởng:
+Giọng thứ xây hợp âm từ gam thứ tự nhiên, riêng bậc V và vii° dùng **cảm âm được nâng** (như ở gam thứ hòa âm), để bậc V có cảm âm và trở thành hợp âm trưởng:
 
 | Bậc | i | ii° | III | iv | V | VI | vii° |
 |---|---|---|---|---|---|---|---|
 | Trong La thứ | Am | B° | C | Dm | **E** | F | **G♯°** |
 
-(Hợp âm bậc III trong gam hòa âm thực ra là hợp âm tăng C+, nhưng trong thực tế người ta thường dùng C trưởng từ gam tự nhiên.)
+(Nếu xếp chồng quãng 3 hoàn toàn trên gam thứ hòa âm, bậc III là hợp âm tăng C+. Người ta không dùng nó mà dùng C trưởng, vì cảm âm chỉ được nâng ở bậc V và vii°.)
 
 Khám phá mọi hợp âm trên [bàn phím piano](/opus/luyen-tap/ban-phim/) và luyện nghe với [công cụ nhận biết hợp âm](/opus/luyen-tai/nghe-hop-am/#luyen-voi-cong-cu).
 
@@ -104,14 +104,15 @@ Hợp âm ba ở thế gốc: tay phải ngón **1-3-5**, tay trái **5-3-1**. C
 + Tăng
 - Giảm
 > Hai quãng 3 trưởng chồng lên nhau: hợp âm tăng.
-? Vì sao giọng thứ dùng gam hòa âm để xây hợp âm bậc V?
+? Vì sao giọng thứ nâng bậc 7 khi xây hợp âm bậc V?
 + Để bậc V có cảm âm và trở thành hợp âm trưởng
 - Để hợp âm bậc I trở thành trưởng
 - Vì gam tự nhiên không có bậc V
-> Cảm âm (bậc 7 được nâng) tạo lực kéo mạnh về chủ âm.
+> Bậc 7 được nâng thành cảm âm, nên bậc V thành hợp âm trưởng và có đà đi về chủ âm.
 ```
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- *Open Music Theory*: [Triads](https://viva.pressbooks.pub/openmusictheory/chapter/triads/); [Chord Symbols](https://viva.pressbooks.pub/openmusictheory/chapter/chord-symbols/); [Roman Numerals](https://viva.pressbooks.pub/openmusictheory/chapter/roman-numerals/); [Minor Scales, Scale Degrees, and Key Signatures](https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/); [Introduction to Harmony, Cadences, and Phrase Endings](https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/).
+- Andre Mount, *Fundamentals, Function, and Form*: chương [13. Triads](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/13-triads/), [16. Minor Scale Variants](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/16-minor-scale-variants/) và [17. The vii° Chord](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/17-the-viio-chord/).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

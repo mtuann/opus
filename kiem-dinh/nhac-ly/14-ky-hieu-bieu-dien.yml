@@ -1,0 +1,651 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/14-ky-hieu-bieu-dien
+trang: src/content/docs/nhac-ly/14-ky-hieu-bieu-dien.md
+nguon_cu: ../opus-zero/docs/nhac-ly/14-ky-hieu-bieu-dien.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-27
+    nhanh: moi/d3-l2
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D3-L2 lượt 1, phần 2/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Bài nhạc lý 14 (ký hiệu biểu diễn: tốc độ, cường độ, cách diễn tấu, thuật ngữ tính cách, dấu nhắc lại và chỉ đường, nốt hoa mỹ, 8va/Ped./pizz.). Nguồn chính: Open Music Theory, Other Aspects of Notation và Glossary (động lực, tốc độ, articulation, D.C., D.S., fermata, coda); Trinity College London, "Musical terms and directions for performance" (bảng thuật ngữ, dùng cho thuật ngữ tính cách, volta, pizz., una corda, M.D./M.S.); Dolmetsch Online (Music Theory Online bài 5, 21, 23, Musical Symbols, vần O/F/P); Concise Oxford Dictionary of Music qua Encyclopedia.com (rubato, trill, mordent, gruppetto, appoggiatura, acciaccatura, fermata); Britannica (Musical expression); Met Museum (Cristofori). WebFetch ngày 27/10/2026 (bản tóm tắt chữ, không phải HTML thô). Sửa chữ ở lượt 1: (1) câu mở đầu: "ngôn ngữ chung của âm nhạc từ thời Baroque" thành "loại thuật ngữ được đưa vào từ thế kỷ 17" (Britannica); (2) "Tất cả thuật ngữ trong bài đều có trong từ điển" thành "Hầu hết" (thiếu pralltriller, 8va/8vb, decresc., segno, al Coda); (3) rubato: bỏ "rất phổ biến khi chơi Chopin" (COD: "particularly contentious"); (4) piano: bỏ "mà vẫn đủ vang"; (5) fermata: "hình con mắt" thành mô tả "vòng cung có chấm"; (6) D.S.: bỏ mô tả hình dấu segno; (7) láy trên: bỏ vế trong ngoặc về nhạc Baroque; (8) mục Nguồn; (9) mô tả trang (frontmatter) đổi theo (1). Chưa chắc (ket_qua null): hình "vạch kép có hai chấm" của dấu nhắc lại (nghĩa đúng), và tên "pralltriller" cho láy trên (cấu trúc nốt chính-trên-chính đúng theo Dolmetsch). Lưu ý cho người giao: hộp "Trên phím đàn" nói Ped. "chỉ gặp trên bản nhạc piano" (Ped. còn dùng cho organ) và trang Nốt hoa mỹ có ba loại láy chứ không hai; không sai nên chưa sửa. src/data/thuat-ngu.yml còn ghi_chu rubato "Đặc trưng khi chơi Chopin" và tre corde "viết tắt t.c." (xem hồ sơ thuật ngữ). Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): pralltriller (láy trên), 8va / 8vb, decresc. (decrescendo), segno, al Coda, dấu nhắc lại (repeat sign), tên "dấu luyến" (slur); đã có: legato, staccato, tenuto, accent, fermata, trill, mordent, turn, appoggiatura, acciaccatura, ped., una corda, tre corde, da capo, dal segno, fine, coda, prima/seconda volta, m.d. / m.s., ottava. Khối abc: ba khối soạn, không có trích đoạn tác phẩm. Không tính là nhận định: tiêu đề mục và cột bảng. Mỗi dòng bảng là một nhận định.'
+nguon:
+  - id: omt-notation
+    bac: 2
+    ten: Open Music Theory, Other Aspects of Notation (động lực, tốc độ, cách diễn tấu, dấu nhắc lại, D.C./D.S., fermata)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/other-aspects-of-notation/
+  - id: omt-gloss
+    bac: 2
+    ten: Open Music Theory, Glossary
+    link: https://viva.pressbooks.pub/openmusictheory/back-matter/glossary/
+  - id: omt-notating
+    bac: 2
+    ten: Open Music Theory, Notating Rhythm (dấu chấm dôi tăng thêm một nửa, đặt ngay sau nốt)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/notating-rhythm/
+  - id: brit-expr
+    bac: 2
+    ten: Encyclopaedia Britannica, Musical expression
+    link: https://www.britannica.com/print/article/399165
+  - id: trinity
+    bac: 2
+    ten: Trinity College London, Musical terms and directions for performance (James Murray Brown, A Handbook of Musical Knowledge, bản sửa 1987)
+    link: https://trinitycollege.com/resource?id=785
+  - id: dol5
+    bac: 2
+    ten: Dolmetsch Online, Music Theory Online, bài 5 (thuật ngữ tốc độ)
+    link: https://www.dolmetsch.com/musictheory5.htm
+  - id: dol21
+    bac: 2
+    ten: 'Dolmetsch Online, Music Theory Online, bài 21 (cách diễn tấu: staccato, tenuto, accent, slur, pizzicato, arco)'
+    link: https://www.dolmetsch.com/musictheory21.htm
+  - id: dol23
+    bac: 2
+    ten: 'Dolmetsch Online, Music Theory Online, bài 23: Ornamentation'
+    link: https://www.dolmetsch.com/musictheory23.htm
+  - id: dol-sym
+    bac: 2
+    ten: Dolmetsch Online, Musical Symbols
+    link: https://www.dolmetsch.com/musicalsymbols.htm
+  - id: dol-oct
+    bac: 2
+    ten: Dolmetsch Online, Music Dictionary, vần O (ottava alta, ottava bassa, 8va, 8vb)
+    link: https://www.dolmetsch.com/defso.htm
+  - id: dol-fp
+    bac: 2
+    ten: Dolmetsch Online, Music Dictionary, vần F (fp, fortepiano)
+    link: https://www.dolmetsch.com/defsf3.htm
+  - id: dol-ped
+    bac: 2
+    ten: Dolmetsch Online, Music Dictionary, vần P (Ped.)
+    link: https://www.dolmetsch.com/defsp1.htm
+  - id: cod-rubato
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music (Kennedy, Bourne), mục rubato (qua Encyclopedia.com)
+    link: https://encyclopedia.com/literature-and-arts/performing-arts/music-history/rubato
+  - id: cod-trill
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục trill
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/trill
+  - id: cod-mordent
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục mordent
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/mordent
+  - id: cod-gruppetto
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục gruppetto (turn là tên khác)
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/gruppetto
+  - id: cod-appog
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục appoggiatura
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/appoggiatura
+  - id: cod-acciac
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục acciaccatura
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/acciaccatura
+  - id: cod-fermata
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục fermata
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/fermata
+  - id: met
+    bac: 2
+    ten: 'The Metropolitan Museum of Art, Heilbrunn Timeline: The Piano: The Pianofortes of Bartolomeo Cristofori (1655-1731)'
+    link: https://www.metmuseum.org/essays/the-piano-the-pianofortes-of-bartolomeo-cristofori-1655-1731
+  - id: ieee1599
+    bac: 2
+    ten: Tài liệu chuẩn IEEE 1599 (Laboratorio di Informatica Musicale, Đại học Milan), mục turn
+    link: https://ieee1599.lim.di.unimi.it/documentation/1.0/turn.php
+nhan_dinh:
+  - id: n1
+    cau: Ngoài cao độ và trường độ, bản nhạc còn cho biết chơi nhanh hay chậm, to hay nhỏ, liền hay ngắt.
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+    ket_qua: dung
+    ghi_chu: 'OMT, Other Aspects of Notation: có các mục Dynamics (loudness), Articulation (connection or separation between notes), Tempo (how fast or slow). Dòng này cũng là mô tả trang (frontmatter).'
+  - id: n2
+    cau: Phần lớn các ký hiệu này dùng tiếng Ý, loại thuật ngữ được đưa vào từ thế kỷ 17 và dùng đến nay.
+    loai: lich-su
+    nguon:
+      - brit-expr
+      - omt-notation
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "... dùng tiếng Ý, ngôn ngữ chung của âm nhạc từ thời Baroque." Chữ mới như trên. Britannica, Musical expression: "The 17th century saw the introduction of the Italian terms that have been in use ever since" và "Italian remains the dominant language for such indications"; OMT: "many tempo markings are in Italian or another non-English language". Không nguồn nào gọi tiếng Ý là "ngôn ngữ chung".'
+  - id: n3
+    cau: Hầu hết thuật ngữ trong bài đều có trong từ điển thuật ngữ (/opus/nhac-ly/tu-dien/), kèm thẻ ghi nhớ để ôn.
+    loai: ve-site
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Tất cả thuật ngữ trong bài đều có trong từ điển thuật ngữ". Chữ mới: "Hầu hết". src/data/thuat-ngu.yml (150 mục) không có mục riêng cho pralltriller, 8va / 8vb, decresc., segno, al Coda. Bản cũ ../opus-zero/docs/nhac-ly/tu-dien.md có thẻ ghi nhớ (oz-flashcards); trang tu-dien chưa chuyển ở site mới. Ghi cho D3-L5: thêm các mục còn thiếu.'
+  - id: n4
+    cau: Thuật ngữ tốc độ chính đã có ở trang máy đếm nhịp (/opus/luyen-tap/metronome/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Bản cũ ../opus-zero/docs/luyen-tap/metronome.md có bảng thuật ngữ tốc độ (Largo, Adagio, Andante, Allegro, Presto… kèm khoảng BPM, dòng 22-27). Trang đích chưa chuyển ("sắp có").
+  - id: n5
+    cau: 'accelerando (accel.): nhanh dần.'
+    loai: dinh-nghia
+    nguon:
+      - omt-gloss
+      - omt-notation
+      - trinity
+      - dol5
+    ket_qua: dung
+    ghi_chu: 'OMT Glossary: "A gradual increase in speed (tempo)"; OMT: "accelerando (accel.) for a gradual increase". Trinity: "Accelerando (accel.) Getting gradually faster". Dolmetsch bài 5: "accelerando, accel. | getting steadily faster".'
+  - id: n6
+    cau: 'ritardando (rit.), rallentando (rall.): chậm dần.'
+    loai: dinh-nghia
+    nguon:
+      - omt-gloss
+      - omt-notation
+      - trinity
+      - dol5
+    ket_qua: dung
+    ghi_chu: 'OMT Glossary: "Ritardando: A gradual decrease in speed"; OMT: "ritardando (rit.) for a gradual decrease". Dolmetsch bài 5: "ritardando, rit., ritard. | getting gradually slower", "rallentando, rall. | getting gradually slower". Trinity có Rallentando (rall.) cùng nghĩa.'
+  - id: n7
+    cau: 'a tempo: trở lại tốc độ ban đầu.'
+    loai: dinh-nghia
+    nguon:
+      - omt-gloss
+      - omt-notation
+      - dol5
+    ket_qua: dung
+    ghi_chu: 'OMT Glossary: "Used after tempo alterations, such as ritardando or accelerando. Indicates a return to the original tempo." Dolmetsch: "a tempo | returning to a previous tempo".'
+  - id: n8
+    cau: 'rubato: co giãn tốc độ tự do để diễn cảm.'
+    loai: dinh-nghia
+    nguon:
+      - cod-rubato
+      - trinity
+      - dol5
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Co giãn tốc độ tự do để diễn cảm, rất phổ biến khi chơi Chopin". Chữ mới bỏ vế sau (xem câu kế). Concise Oxford Dictionary of Music: "Robbed time. A feature of perf. in which strict time is for a while disregarded"; Trinity: "Rubato Robbed (flexible in time)". Lưu ý: Dolmetsch bài 5 mô tả rubato là chỉ dẫn về hình dáng nhịp điệu chứ không đổi tốc độ tổng thể ("the overall tempo remains unchanged"); "co giãn tốc độ" hiểu là co giãn tạm thời quanh một tốc độ không đổi, không mâu thuẫn.'
+  - id: n9
+    cau: 'rubato: rất phổ biến khi chơi Chopin.'
+    loai: lich-su
+    nguon:
+      - cod-rubato
+    ket_qua: da-bo
+    ghi_chu: 'Bỏ khỏi trang. Concise Oxford Dictionary of Music: "The question of rubato in Chopin is particularly contentious" và ghi lại rằng Chopin (và Mozart) giữ tay trái đúng nhịp; không nguồn bậc 1-2 nào nói "rất phổ biến khi chơi Chopin". Ghi cho D3-L5: bản ghi rubato ở src/data/thuat-ngu.yml còn ghi_chu "Đặc trưng khi chơi Chopin", cần xem lại.'
+  - id: n10
+    cau: 'più mosso / meno mosso: nhanh hơn / chậm hơn.'
+    loai: dinh-nghia
+    nguon:
+      - trinity
+      - dol5
+    ket_qua: dung
+    ghi_chu: 'Trinity: "Più mosso Quicker at once", "Meno mosso Slower at once". Dolmetsch bài 5: "take the new section at a faster (slower) steady pace than the preceding section".'
+  - id: n11
+    cau: 'pp, pianissimo: rất nhỏ.'
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - brit-expr
+    ket_qua: dung
+    ghi_chu: 'OMT: mezzo, -issimo và hậu tố chồng tạo thang từ rất nhỏ đến rất to; Britannica: piano (p) và forte (f), thang từ pianissimo (pp) đến fortissimo (ff).'
+  - id: n12
+    cau: 'p, piano: nhỏ.'
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - omt-gloss
+    ket_qua: dung
+    ghi_chu: 'OMT: "The dynamic marking forte means loud, while piano means quiet"; Glossary "piano: Quiet."'
+  - id: n13
+    cau: 'mp, mezzo piano: hơi nhỏ.'
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - omt-gloss
+    ket_qua: dung
+    ghi_chu: 'OMT Glossary: "mezzo: Moderately", nên mezzo piano là "vừa nhỏ", tức hơi nhỏ.'
+  - id: n14
+    cau: 'mf, mezzo forte: hơi to.'
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - omt-gloss
+    ket_qua: dung
+    ghi_chu: 'Như trên: mezzo forte là "vừa to", tức hơi to.'
+  - id: n15
+    cau: 'f, forte: to.'
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - omt-gloss
+    ket_qua: dung
+    ghi_chu: 'OMT: "forte means loud"; Glossary "forte: Loud."'
+  - id: n16
+    cau: 'ff, fortissimo: rất to.'
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - brit-expr
+    ket_qua: dung
+    ghi_chu: OMT và Britannica như câu pp.
+  - id: n17
+    cau: 'cresc. hoặc dấu < (crescendo): to dần.'
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - omt-gloss
+    ket_qua: dung
+    ghi_chu: 'OMT: "Crescendo (cresc.) means to get louder" và có thể viết bằng hairpin; Glossary: "Getting gradually louder; sometimes represented in notated scores with a hairpin symbol."'
+  - id: n18
+    cau: 'dim., decresc. hoặc dấu > (diminuendo): nhỏ dần.'
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - omt-gloss
+    ket_qua: dung
+    ghi_chu: 'OMT: "decrescendo (decresc.) and diminuendo (dim.) both mean to get quieter" và có thể viết bằng hairpin.'
+  - id: n19
+    cau: 'sfz (sforzando): nhấn mạnh đột ngột một nốt.'
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - brit-expr
+    ket_qua: dung
+    ghi_chu: 'OMT: sfz, sf, fz là dấu nhấn mạnh hơn accent, đặt như dấu động lực. Britannica: sforzato (sfz) là "a sudden, sharp accent", sforzando (sf) nhẹ hơn một chút.'
+  - id: n20
+    cau: 'fp (forte-piano): to rồi nhỏ ngay.'
+    loai: dinh-nghia
+    nguon:
+      - dol-fp
+    ket_qua: dung
+    ghi_chu: 'Dolmetsch Online, Music Dictionary: "fp., fpp.: fortepiano, ''loud, then immediately p. or pp.''"'
+  - id: n21
+    cau: Cây đàn piano có tên đầy đủ là pianoforte, nghĩa là "nhỏ – to".
+    loai: ten
+    nguon:
+      - met
+    ket_qua: dung
+    ghi_chu: 'Metropolitan Museum: Maffei gọi nhạc cụ là "gravicembalo col piano, e forte" (harpsichord with soft and loud); "The pianoforte, more commonly called the piano". "Tên đầy đủ" hiểu là dạng dài của tên đàn.'
+  - id: n22
+    cau: Khác harpsichord, piano chơi to hay nhỏ theo lực ngón.
+    loai: dinh-nghia
+    nguon:
+      - met
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "... theo lực ngón mà vẫn đủ vang (clavichord cũng làm được, nhưng rất nhỏ tiếng)". Chữ mới bỏ "mà vẫn đủ vang". Met: harpsichord "a louder and more brilliant instrument, but lacked the ability to respond to the strength of the player''s touch".'
+  - id: n23
+    cau: Clavichord cũng chơi to nhỏ theo lực ngón, nhưng rất nhỏ tiếng.
+    loai: dinh-nghia
+    nguon:
+      - met
+    ket_qua: dung
+    ghi_chu: 'Met: clavichord "is also capable of detailed gradations of loud and soft controlled by the player''s touch" nhưng "so soft that it can barely be heard a few feet away".'
+  - id: n24
+    cau: Trang Lịch sử cây đàn piano (/opus/piano/lich-su-dan/) tồn tại.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Bản cũ ../opus-zero/docs/piano/lich-su-dan.md tồn tại (so sánh clavichord, harpsichord, piano, Maffei 1711 "gravicembalo col piano, e forte"). Trang đích chưa chuyển ("sắp có").
+  - id: n25
+    cau: 'Staccato: chấm trên hoặc dưới nốt, ngắt ngắn.'
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - dol-sym
+      - dol21
+    ket_qua: dung
+    ghi_chu: 'OMT: "Staccato means to play or sing notes more separated, leaving space between notes." Dolmetsch Musical Symbols: staccato "usually appearing as a stroke, dot or wedge" đặt trên hoặc dưới đầu nốt.'
+  - id: n26
+    cau: 'Legato (dấu luyến): đường cong nối các nốt, chơi liền mạch.'
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+    ket_qua: dung
+    ghi_chu: 'OMT: "Legato means to play or sing smoothly or connected." Ghi bằng dấu luyến (slur). Tên "dấu luyến" là lựa chọn của site.'
+  - id: n27
+    cau: 'Accent (>): nhấn.'
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - omt-gloss
+    ket_qua: dung
+    ghi_chu: 'OMT: "An accent (a sideways V) means to play or sing a note with extra stress or emphasis."'
+  - id: n28
+    cau: 'Tenuto (gạch ngang ngắn): giữ đủ độ dài, hơi nhấn.'
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - dol-sym
+      - dol21
+      - trinity
+    ket_qua: dung
+    ghi_chu: 'Dolmetsch Musical Symbols: "note held to its written length, i.e. not detached", đặt trên hoặc dưới đầu nốt; Dolmetsch bài 21: "Tenuto can mean either hold the note in question its full length" hoặc chơi hơi to hơn; Trinity: "Tenuto (Ten.) Held or sustained". OMT: "smooth, connected playing marked by a small line above or below the notes". Vế "hơi nhấn" là một trong hai cách hiểu của Dolmetsch.'
+  - id: n29
+    cau: 'Fermata (vòng cung có chấm): ngân dài tùy ý.'
+    loai: dinh-nghia
+    nguon:
+      - cod-fermata
+      - dol-sym
+      - omt-notation
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Hình con mắt (vòng cung có chấm)". Chữ mới bỏ "hình con mắt". COD: "fermata (It.)... A pause" kèm dấu vòng cung có chấm; Dolmetsch: "a musical symbol placed over a note or rest to be extended beyond its normal duration"; OMT: "A fermata indicates that a note should be held longer than its regular duration". "Tùy ý": nguồn chỉ nói "longer than regular duration" (một từ điển khác ghi "at performer''s discretion"); giữ "tùy ý", ghi để D3-L5 xem.'
+  - id: n30
+    cau: 'dolce: ngọt ngào.'
+    loai: dinh-nghia
+    nguon:
+      - trinity
+    ket_qua: dung
+    ghi_chu: 'Trinity: "Dolce Sweetly, gently".'
+  - id: n31
+    cau: 'cantabile: như hát.'
+    loai: dinh-nghia
+    nguon:
+      - trinity
+    ket_qua: dung
+    ghi_chu: 'Trinity: "Cantabile; Cantando In a singing style".'
+  - id: n32
+    cau: 'espressivo: diễn cảm.'
+    loai: dinh-nghia
+    nguon:
+      - trinity
+    ket_qua: dung
+    ghi_chu: 'Trinity: "Espressivo Expressively".'
+  - id: n33
+    cau: 'con brio: sôi nổi.'
+    loai: dinh-nghia
+    nguon:
+      - trinity
+    ket_qua: dung
+    ghi_chu: 'Trinity: "Con brio With vivacity, brilliance".'
+  - id: n34
+    cau: 'maestoso: trang trọng.'
+    loai: dinh-nghia
+    nguon:
+      - trinity
+      - dol-sym
+    ket_qua: dung
+    ghi_chu: 'Trinity: "Maestoso Majestic"; Dolmetsch (từ điển vần M): "maestoso (Italian) majestic, dignified, noble".'
+  - id: n35
+    cau: 'agitato: kích động.'
+    loai: dinh-nghia
+    nguon:
+      - trinity
+    ket_qua: dung
+    ghi_chu: 'Trinity: "Agitato In an agitated manner".'
+  - id: n36
+    cau: 'grazioso: duyên dáng.'
+    loai: dinh-nghia
+    nguon:
+      - trinity
+    ket_qua: dung
+    ghi_chu: 'Trinity: "Grazioso Gracefully; daintily".'
+  - id: n37
+    cau: 'sostenuto: ngân giữ.'
+    loai: dinh-nghia
+    nguon:
+      - trinity
+    ket_qua: dung
+    ghi_chu: 'Trinity: "Sostenuto Sustained".'
+  - id: n38
+    cau: 'sotto voce: khẽ khàng.'
+    loai: dinh-nghia
+    nguon:
+      - trinity
+    ket_qua: dung
+    ghi_chu: 'Trinity: "Sotto voce In a subdued manner; in an undertone".'
+  - id: n39
+    cau: 'Dấu nhắc lại (vạch kép có hai chấm, ở đầu và cuối đoạn): nhắc lại đoạn giữa hai dấu.'
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - dol-sym
+    ket_qua: null
+    ghi_chu: 'chưa chắc: nghĩa đúng (OMT: "Repeat signs indicate that a section of music should be repeated"; Dolmetsch: "the ''repetition'' signs indicates that a section of a piece of music is to be played a second time"). Hình "vạch kép có hai chấm" không nằm trong chữ của nguồn nào đã đọc (Dolmetsch: không nhắc hai chấm).'
+  - id: n40
+    cau: 'Ngoặc 1., 2. (prima/seconda volta): lần 1 chơi ngoặc 1, lần nhắc lại bỏ qua ngoặc 1, chơi ngoặc 2.'
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - dol-sym
+      - trinity
+    ket_qua: dung
+    ghi_chu: 'OMT: "First and second endings ... handle differing endings"; Dolmetsch: ngoặc 1 là "a section performed only the first time it is reached", ngoặc 2 đánh dấu tương tự với "2."; Trinity: "1ma volta (1st time) and 2da volta (2nd time)".'
+  - id: n41
+    cau: 'D.C. (Da Capo): quay lại từ đầu.'
+    loai: dinh-nghia
+    nguon:
+      - omt-gloss
+      - omt-notation
+      - trinity
+      - dol-sym
+    ket_qua: dung
+    ghi_chu: 'OMT Glossary: "Da capo al fine means to go back to the beginning of the work..."; Trinity: "Da Capo From the beginning."; Dolmetsch: "D.C. (Italian: from the beginning)".'
+  - id: n42
+    cau: 'D.S. (Dal Segno): quay lại từ dấu Segno.'
+    loai: dinh-nghia
+    nguon:
+      - omt-gloss
+      - omt-notation
+      - trinity
+      - dol-sym
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Quay lại từ dấu Segno (chữ S có gạch chéo và hai chấm)". Chữ mới bỏ phần mô tả dấu. OMT Glossary: "Dal segno al fine means to go back to the sign and play or sing to the Fine."; Trinity: "Dal Segno From the sign"; Dolmetsch: "D.S. (abbrev.): (Italian) from the sign".'
+  - id: n43
+    cau: Dấu Segno có hình chữ S có gạch chéo và hai chấm.
+    loai: dinh-nghia
+    nguon:
+      - dol-sym
+    ket_qua: da-bo
+    ghi_chu: 'Bỏ khỏi trang: Dolmetsch Musical Symbols chỉ ghi "the sign or segno (Italian: sign)"; COD chỉ ghi "The ''sign''"; không nguồn bậc 1-2 nào đọc được mô tả hình.'
+  - id: n44
+    cau: 'Fine: kết thúc ở đây (sau khi quay lại).'
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - omt-gloss
+      - trinity
+    ket_qua: dung
+    ghi_chu: 'OMT: "D.C. al Fine: play from the beginning and stop at the Fine"; Trinity: "Fine The end."'
+  - id: n45
+    cau: 'al Coda và dấu Coda (vòng tròn có dấu cộng): nhảy tới phần Coda.'
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - dol-sym
+    ket_qua: dung
+    ghi_chu: 'OMT: D.C. al Coda: chơi từ đầu đến khi gặp D.C. al Coda, rồi nhảy tới dấu "to Coda" và tiếp tục sang Coda. Dolmetsch: dấu coda là "a circle or oval with a cross inside it".'
+  - id: n46
+    cau: 'tr: láy rền (trill), đổi nhanh liên tục giữa nốt chính và nốt trên.'
+    loai: dinh-nghia
+    nguon:
+      - cod-trill
+    ket_qua: dung
+    ghi_chu: 'COD: "trill (shake). Ornament comprising rapid alternation of main note and note above"; ký hiệu là chữ "tr" và đường lượn sóng.'
+  - id: n47
+    cau: 'Răng cưa ngắn, không gạch: láy trên (pralltriller), nốt chính – nốt trên – nốt chính, rất nhanh.'
+    loai: dinh-nghia
+    nguon:
+      - dol23
+      - cod-mordent
+    ket_qua: null
+    ghi_chu: 'chưa chắc: chữ cũ có thêm "(trong nhạc Baroque thường bắt đầu từ nốt trên)", đã bỏ. Dolmetsch bài 23: mordent trên (upper mordent, Schneller) viết bằng dấu láy không gạch, ba nốt: nốt viết, nốt trên, nốt viết; COD, mục mordent: có "upper and lower mordents". Tên "pralltriller" không có trong COD, và Dolmetsch không nói thẳng pralltriller = upper mordent; chưa có nguồn bậc 1-2 xác nhận cái tên đó cho láy trên.'
+  - id: n48
+    cau: 'Răng cưa ngắn có gạch dọc: láy dưới (mordent), nốt chính – nốt dưới – nốt chính, rất nhanh.'
+    loai: dinh-nghia
+    nguon:
+      - dol23
+      - cod-mordent
+    ket_qua: dung
+    ghi_chu: 'Dolmetsch bài 23: mordent "written as a shake sign crossed by a vertical line", ba nốt: nốt viết, nốt dưới, nốt viết. COD, mục mordent: có upper và lower mordent; "In Ger. Mordent means only the lower mordent" và khuyên dùng "upper/lower" để khỏi nhầm.'
+  - id: n49
+    cau: 'Hình chữ S nằm ngang: láy quanh (turn), nốt trên – nốt chính – nốt dưới – nốt chính.'
+    loai: dinh-nghia
+    nguon:
+      - cod-gruppetto
+      - omt-gloss
+      - dol23
+      - ieee1599
+    ket_qua: dung
+    ghi_chu: 'COD, mục gruppetto: "a 4-note figure, the note above, the note itself, the note below, and the note itself"; OMT Glossary: turn "decorate a note with its upper and lower neighbor, in that order"; Dolmetsch bài 23: "the note above, the note itself, the note below, then the note itself again". Hình dạng: tài liệu IEEE 1599: "a mirrored S-shape lying on its side above the staff".'
+  - id: n50
+    cau: 'Nốt nhỏ có gạch chéo: acciaccatura, nốt luyến cực nhanh ngay trước nốt chính.'
+    loai: dinh-nghia
+    nguon:
+      - cod-acciac
+      - dol-sym
+      - dol23
+    ket_qua: dung
+    ghi_chu: 'COD: "A species of grace note, indicated by a small note with its stem crossed through"; nốt chính "retains its accent and almost all its time-value"; Dolmetsch: "''crushed'' note, grace note (written with a diagonal line through the note stem)", "very short".'
+  - id: n51
+    cau: 'Nốt nhỏ không gạch: appoggiatura, nốt dựa, chiếm một phần độ dài nốt chính.'
+    loai: dinh-nghia
+    nguon:
+      - cod-appog
+      - dol-sym
+      - dol23
+    ket_qua: dung
+    ghi_chu: 'COD: "Leaning note"; thường chiếm khoảng nửa giá trị nốt nó dựa vào (hai phần ba nếu nốt chấm dôi); Dolmetsch: "''leaning'' note, ornamental note (written without a diagonal line through the note stem)".'
+  - id: n52
+    cau: '8va: chơi cao hơn một quãng tám so với nốt viết; 8vb: thấp hơn một quãng tám.'
+    loai: dinh-nghia
+    nguon:
+      - dol-oct
+    ket_qua: dung
+    ghi_chu: 'Dolmetsch (vần O): "the notation 8va is sometimes seen in sheet music, meaning ''play this an octave higher than written''", "the similar notation 8vb (ottava bassa)"; ottava alta/bassa: "play notes under this sign one octave higher (lower) than written".'
+  - id: n53
+    cau: 'Ped. và dấu *: nhấn và nhả bàn đạp vang của piano.'
+    loai: dinh-nghia
+    nguon:
+      - trinity
+      - dol-ped
+    ket_qua: dung
+    ghi_chu: 'Trinity: "In piano music it indicates that the right pedal is to be pressed down with the foot, and kept in that position until the * (or a change of harmony) occurs, when the pedal should be raised." Dolmetsch: "Ped.... indicating the use of the right or damper pedal".'
+  - id: n54
+    cau: 'pizz. (pizzicato): đàn dây gảy bằng ngón tay; arco: trở lại kéo vĩ.'
+    loai: dinh-nghia
+    nguon:
+      - trinity
+      - dol21
+    ket_qua: dung
+    ghi_chu: 'Trinity: "Pizzicato (pizz.) Plucked. Direction to string player to pluck the strings instead of playing them with the bow"; "Col arco With the bow". Dolmetsch bài 21: pizzicato "plucking the string with the tip of the finger or thumb", arco "bowing as opposed to pizzicato".'
+  - id: n55
+    cau: 'Luyện tập kèm theo: Thẻ thuật ngữ (/opus/nhac-ly/tu-dien/) mỗi ngày, và máy đếm nhịp để cảm nhận các tốc độ Adagio, Allegro…'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Bản cũ ../opus-zero/docs/nhac-ly/tu-dien.md: "Mỗi ngày site đưa ra tối đa 10 thẻ mới" (oz-flashcards); luyen-tap/metronome.md có bảng Adagio, Allegro (dòng 22-26). Trang đích chưa chuyển ("sắp có"). "Mỗi ngày" là lời khuyên tập.'
+  - id: n56
+    cau: 'Hộp "Trên phím đàn": Ped. và * (nhấn và nhả bàn đạp vang), una corda / tre corde (bàn đạp trái), m.d. / m.s. (tay phải / tay trái): vài ký hiệu hay gặp trên bản nhạc piano.'
+    loai: dinh-nghia
+    nguon:
+      - trinity
+      - dol-ped
+    ket_qua: da-sua
+    ghi_chu: 'Trinity: "In modern music the words Una Corda indicate the use of the left pedal; and the words Tre Corde show where it should be raised"; "Mano Destra (It.) M.D. = R.H.", "Mano Sinistra (It.) M.S. = L.H.". Vế "chỉ gặp trên bản nhạc piano": Dolmetsch (vần P) ghi Ped. còn dùng trong nhạc organ (nốt chơi bằng bàn đạp chân), nên "chỉ" quá chặt. Người giao (agent làm lô) sửa: "chỉ gặp" thành "hay gặp".'
+  - id: n57
+    cau: Trang Bàn đạp (/opus/piano/ban-dap/) và Nốt hoa mỹ (/opus/piano/not-hoa-my/) tồn tại; Nốt hoa mỹ giải thích kỹ các loại láy.
+    loai: ve-site
+    ket_qua: da-sua
+    ghi_chu: 'Bản cũ ../opus-zero/docs/piano/ban-dap.md ("Bàn đạp"; bảng Ký hiệu có una corda (u.c.), tre corde (t.c.)) và piano/not-hoa-my.md ("Nốt hoa mỹ: láy rền, láy, láy quanh, appoggiatura"; có mục Láy rền và bảng ký hiệu có Trillo, Mordant). Trang đích chưa chuyển ("sắp có"). "Hai loại láy": trang cũ nói kỹ láy rền và láy dưới (và cả láy quanh); người giao (agent làm lô) sửa "hai loại láy" thành "các loại láy" cho khớp trang đích.'
+  - id: n58
+    cau: 'Câu hỏi 1: Ký hiệu mf nghĩa là gì? Đáp án: hơi to (mezzo forte).'
+    loai: dinh-nghia
+    nguon:
+      - omt-gloss
+      - omt-notation
+    ket_qua: dung
+    ghi_chu: 'Như câu mf ở bảng Cường độ. Lựa chọn sai: Rất to, Hơi nhỏ.'
+  - id: n59
+    cau: 'Câu hỏi 2: "a tempo" nghĩa là gì? Đáp án: trở lại tốc độ ban đầu; giải thích: thường xuất hiện sau rit. hoặc rall.'
+    loai: dinh-nghia
+    nguon:
+      - omt-gloss
+      - omt-notation
+    ket_qua: dung
+    ghi_chu: 'OMT Glossary: "Used after tempo alterations, such as ritardando or accelerando." Lựa chọn sai: chậm dần, tự do về tốc độ.'
+  - id: n60
+    cau: 'Câu hỏi 3: Chấm nhỏ trên nốt nhạc nghĩa là staccato, ngắt ngắn; chấm dôi nằm bên phải nốt, staccato nằm trên hoặc dưới đầu nốt.'
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - omt-notating
+      - dol-sym
+    ket_qua: dung
+    ghi_chu: 'OMT, Notating Rhythm: dấu chấm dôi tăng độ dài thêm một nửa và đặt "immediately after a note or rest"; staccato: Dolmetsch, Musical Symbols, đặt trên hoặc dưới đầu nốt. Lựa chọn sai: chấm dôi, fermata.'
+  - id: n61
+    cau: 'Câu hỏi 4: D.C. al Fine nghĩa là quay lại từ đầu và dừng ở chữ Fine; Da Capo: "từ đầu".'
+    loai: dinh-nghia
+    nguon:
+      - omt-notation
+      - omt-gloss
+      - trinity
+    ket_qua: dung
+    ghi_chu: 'OMT: "D.C. al Fine: play from the beginning and stop at the Fine." Lựa chọn sai: nhảy tới Coda (đó là D.C. al Coda), nhắc lại giữa hai dấu nhắc lại.'
+  - id: n62
+    cau: 'Câu hỏi 5: Pizzicato là kỹ thuật của đàn dây như violin, cello (gảy dây bằng ngón tay thay vì kéo vĩ).'
+    loai: dinh-nghia
+    nguon:
+      - trinity
+      - dol21
+    ket_qua: dung
+    ghi_chu: 'Như câu pizzicato ở mục Một số ký hiệu khác. Lựa chọn sai: Piano, Kèn đồng.'
+  - id: n63
+    cau: 'Mục Nguồn: link tới /opus/tai-lieu-tham-khao/.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Bản cũ ../opus-zero/docs/tai-lieu-tham-khao.md tồn tại. Trang đích chưa chuyển ("sắp có").
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+    ket_qua: dung
+    ghi_chu: 'Soạn cho trang này. M:4/4, L:1/4, Q:1/4=90, K:C: !p! C D E F | !crescendo(! G A B c !crescendo)! | !f! c B A G | !diminuendo(! F E D C !diminuendo)! |]: bốn ô, mỗi ô bốn nốt đen; p, crescendo, f, diminuendo đúng như tiêu đề "nhỏ, to dần, to, nhỏ dần" và các ký hiệu ở bảng Cường độ. abcjs (public/vendor/abcjs-basic-min.js, parseOnly) không cảnh báo; ô đủ độ dài theo tools/khuong-nhac.mjs (15 khối của bốn trang, 0 lỗi).'
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+    ket_qua: dung
+    ghi_chu: 'Soạn cho trang này. M:4/4, L:1/4, K:C: .C .D .E .F | (G A B c) | !>!c !>!G !tenuto!E !tenuto!C | !fermata!C4 |]: ô 1 staccato (chấm), ô 2 legato (dấu luyến), ô 3 hai accent rồi hai tenuto, ô 4 nốt tròn với fermata; khớp tiêu đề "Staccato – legato – accent – tenuto – fermata" và bảng Cách diễn tấu. Mỗi ô đủ 4 phách; không cảnh báo abcjs.'
+  - khoi: 3
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+    ket_qua: dung
+    ghi_chu: 'Soạn cho trang này. M:4/4, L:1/4, Q:1/4=110, K:C: |: C D E F |[1 G F E D :|[2 G G c2 |]: đoạn nhắc lại với ngoặc 1 (G F E D :|) và ngoặc 2 (G G c2 |]), ô nào cũng đủ 4 phách (c2 = 2 phách). Đúng với dòng "Ngoặc 1., 2." của bảng Dấu nhắc lại. Không cảnh báo abcjs.'
+doi_chu:
+  - cu:
+      - Ngoài cao độ và trường độ, bản nhạc còn cho biết chơi nhanh hay chậm, to hay nhỏ, liền hay ngắt. Phần lớn các ký hiệu này dùng tiếng Ý, ngôn ngữ chung của âm nhạc từ thời Baroque.
+      - Tất cả thuật ngữ trong bài đều có trong từ điển thuật ngữ, kèm thẻ ghi nhớ để ôn.
+    moi:
+      - Ngoài cao độ và trường độ, bản nhạc còn cho biết chơi nhanh hay chậm, to hay nhỏ, liền hay ngắt. Phần lớn các ký hiệu này dùng tiếng Ý, loại thuật ngữ được đưa vào từ thế kỷ 17 và dùng đến nay.
+      - Hầu hết thuật ngữ trong bài đều có trong từ điển thuật ngữ, kèm thẻ ghi nhớ để ôn.
+    ly_do: 'Mô tả trang (frontmatter) lấy từ đoạn đầu, nên đổi theo n2: đoạn đầu không còn vế "ngôn ngữ chung của âm nhạc từ thời Baroque".; n2 (da-sua): Britannica, Musical expression: "The 17th century saw the introduction of the Italian terms that have been in use ever since" và "Italian remains the dominant language for such indications". Câu cũ "ngôn ngữ chung của âm nhạc từ thời Baroque" nói quá (OMT, Other Aspects of Notation, xếp Baroque c. 1600-1750, khớp thế kỷ 17 nhưng "ngôn ngữ chung" thì không nguồn nào nói); viết lại sát nguồn.; n3 (da-sua): src/data/thuat-ngu.yml không có mục riêng cho pralltriller, 8va / 8vb, decresc., segno, al Coda; nên "tất cả" sai.'
+  - cu: Co giãn tốc độ tự do để diễn cảm, rất phổ biến khi chơi Chopin
+    moi: Co giãn tốc độ tự do để diễn cảm
+    ly_do: 'n8, n9 (da-bo/da-sua): nghĩa rubato có nguồn (Concise Oxford Dictionary of Music); câu "rất phổ biến khi chơi Chopin" không có nguồn bậc 1-2 đã mở, bỏ.'
+  - cu: 'Cây đàn piano có tên đầy đủ là pianoforte, nghĩa là "nhỏ – to": khác harpsichord, nó chơi to hay nhỏ theo lực ngón mà vẫn đủ vang (clavichord cũng làm được, nhưng rất nhỏ tiếng). Xem Lịch sử cây đàn piano.'
+    moi: 'Cây đàn piano có tên đầy đủ là pianoforte, nghĩa là "nhỏ – to": khác harpsichord, nó chơi to hay nhỏ theo lực ngón (clavichord cũng làm được, nhưng rất nhỏ tiếng). Xem Lịch sử cây đàn piano.'
+    ly_do: "n22 (da-sua): Metropolitan Museum of Art, The Pianofortes of Bartolomeo Cristofori: harpsichord \"lacked the ability to respond to the strength of the player's touch\"; clavichord có độ to nhỏ theo lực ngón nhưng \"so soft that it can barely be heard a few feet away\". Vế \"mà vẫn đủ vang\" của piano không có trong phần đã đọc, bỏ."
+  - cu: Hình con mắt (vòng cung có chấm)
+    moi: Vòng cung có chấm
+    ly_do: 'n29 (da-sua): "hình con mắt" là cách ví von, không nguồn nào dùng; Concise Oxford Dictionary of Music vẽ dấu fermata là vòng cung có chấm (A pause, ký hiệu ⩀). Giữ phần mô tả hình dạng có nguồn.'
+  - cu: Quay lại từ dấu Segno (chữ S có gạch chéo và hai chấm)
+    moi: Quay lại từ dấu Segno
+    ly_do: "n42, n43 (da-bo/da-sua): mô tả hình dáng dấu segno không có nguồn đọc được; giữ nghĩa dal segno (Concise Oxford Dictionary of Music)."
+  - cu: Nốt chính – nốt trên – nốt chính, rất nhanh (trong nhạc Baroque thường bắt đầu từ nốt trên)
+    moi: Nốt chính – nốt trên – nốt chính, rất nhanh
+    ly_do: "n47 (da-sua): vế trong ngoặc về nhạc Baroque không có nguồn bậc 1-2 đã mở, bỏ."
+  - cu: Open Music Theory; musictheory.net.
+    moi:
+      - Open Music Theory, Glossary.
+      - "The Concise Oxford Dictionary of Music (Kennedy, Bourne) qua Encyclopedia.com: các mục rubato, ritardando, accelerando, fermata, da capo, dal segno, coda, acciaccatura, appoggiatura, mordent, turn…"
+      - "Trinity College London, bảng thuật ngữ và ký hiệu (cấp độ 1-2); Dolmetsch Online, Music Theory Online: Musical Terms."
+    ly_do: "Mục Nguồn: thay link chung bằng các nguồn đã mở khi kiểm định (lượt 1); bỏ musictheory.net vì không đọc được chữ."
+  - cu: "mô tả: Ngoài cao độ và trường độ, bản nhạc còn cho biết chơi nhanh hay chậm, to hay nhỏ, liền hay ngắt. Phần lớn các ký hiệu này dùng tiếng Ý, ngôn ngữ chung của âm…"
+    moi: "mô tả: Ngoài cao độ và trường độ, bản nhạc còn cho biết chơi nhanh hay chậm, to hay nhỏ, liền hay ngắt. Phần lớn các ký hiệu này dùng tiếng Ý, loại thuật ngữ được đưa…"
+    ly_do: 'Mô tả trang lấy từ đoạn đầu, đổi theo n2.'
+  - cu: "Vài ký hiệu chỉ gặp trên bản nhạc piano: Ped. và * (nhấn và nhả bàn đạp vang), una corda / tre corde (bàn đạp trái), m.d. / m.s. (tay phải / tay trái). Xem Bàn đạp và Nốt hoa mỹ, nơi giải thích kỹ hai loại láy."
+    moi: "Vài ký hiệu hay gặp trên bản nhạc piano: Ped. và * (nhấn và nhả bàn đạp vang), una corda / tre corde (bàn đạp trái), m.d. / m.s. (tay phải / tay trái). Xem Bàn đạp và Nốt hoa mỹ, nơi giải thích kỹ các loại láy."
+    ly_do: "n56, n57 (da-sua): Ped. còn dùng trong nhạc organ (Dolmetsch), nên \"chỉ gặp\" thành \"hay gặp\"; trang Nốt hoa mỹ cũ giải thích láy rền, láy dưới và láy quanh, nên \"hai loại\" thành \"các loại\"."

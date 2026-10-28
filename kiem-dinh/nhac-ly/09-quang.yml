@@ -1,0 +1,477 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/09-quang
+trang: src/content/docs/nhac-ly/09-quang.md
+nguon_cu: ../opus-zero/docs/nhac-ly/09-quang.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-27
+    nhanh: moi/d3-l2
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D3-L2 lượt 1, phần 1/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Trang quãng (tầng lõi). Nguồn chính: Open Music Theory (OMT), Intervals; Mount (FFF) ch. 11 đối chiếu bảng nửa cung, quy tắc đảo, quãng ghép; quãng thuận/nghịch theo OMT Introduction to Species Counterpoint; tritone: Concise Oxford Dictionary of Music (qua encyclopedia.com, như D3-L1). Trang đọc bằng WebFetch của agent ngày 27/10/2026 (máy chủ repo không ra mạng); công cụ này trả bản tóm tắt chữ của trang, không phải HTML thô, nên chữ trích đã đối chiếu bằng nhiều câu hỏi; riêng bảng Example 13 (quãng thuận hòa âm) của OMT Intervals, bản tóm tắt có chỗ không khớp quy tắc (xếp 7 trưởng/thứ vào cột thuận), nên trang theo OMT Species Counterpoint. Chỗ sửa trang: tritone (bỏ "rất căng", "gọi đùa", thêm câu Oxford), mẹo nhanh (bỏ "giảm" ở quãng 1), quãng ghép (bỏ "giữa bè trầm với bè cao" và C13), bảng thuận/nghịch (cột Cảm giác thành Độ ổn định; quãng 4 đúng nói rõ điều kiện), mục Nguồn; mục doi_chu tự viết (không build được), người giao chạy lại so-chu --doi-chu để chuẩn hóa dấu nháy. Chưa chắc: n46 (OMT Intervals và Species Counterpoint xếp quãng 4 đúng khác nhau, xem ghi_chu) và n32 (Mount 11 tự mâu thuẫn về quãng 1 giảm). Câu về site: link sang các trang chưa chuyển (luyen-tai, luyen-tap, piano, tai-lieu-tham-khao, nhac-ly/27) đều kiểm trên ../opus-zero/docs/. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): melodic interval, harmonic interval (quãng giai điệu, quãng hòa âm), compound interval (quãng ghép), perfect, major, minor, augmented, diminished (đúng, trưởng, thứ, tăng, giảm), tritone, interval inversion (đảo quãng), unison, octave; đã có: interval, semitone, consonance, dissonance.'
+nguon:
+  - id: omt-intervals
+    bac: 2
+    ten: Open Music Theory, Intervals (cả bảng nửa cung ở Example 16, mục Consonance and Dissonance, tritone, inversion, compound intervals)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/intervals/
+  - id: omt-counterpoint
+    bac: 2
+    ten: Open Music Theory, Introduction to Species Counterpoint (mục Consonances and dissonances)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/species-counterpoint/
+  - id: omt-extended
+    bac: 2
+    ten: Open Music Theory, Altered and Extended Chords
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/altered-and-extended-dominant-chords/
+  - id: fff-intervals
+    bac: 2
+    ten: Andre Mount, Fundamentals, Function, and Form (Milne Publishing, SUNY Geneseo, giáo trình mở), 11. Intervals (cả Table 11-2)
+    link: https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/11-intervals/
+  - id: oxford-tritone
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục tritone (đọc qua encyclopedia.com)
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/tritone
+nhan_dinh:
+  - id: n1
+    cau: Quãng là khoảng cách cao độ giữa hai nốt.
+    loai: dinh-nghia
+    nguon: &a1
+      - omt-intervals
+      - fff-intervals
+    ket_qua: dung
+    ghi_chu: 'OMT, Intervals: "Two pitches form an interval, which is usually defined as the distance between two notes." Câu này lặp ở mô tả (description) của trang.'
+  - id: n2
+    cau: "Mỗi quãng có hai phần tên: con số (2, 3, 4…) và tính chất (trưởng, thứ, đúng, tăng, giảm)."
+    loai: dinh-nghia
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: "OMT, Intervals: kích thước (generic size: unison, second, third…) và chất lượng (perfect, major, minor, augmented, diminished). Mount 11: cùng cách chia."
+  - id: n3
+    cau: 'Ví dụ: "quãng 3 trưởng", "quãng 5 đúng".'
+    loai: ten
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: "Hai tên đều có trong bảng nửa cung (OMT Example 16: ma3 ở 4 nửa cung, P5 ở 7; Mount Table 11-2)."
+  - id: n4
+    cau: Hai nốt vang lên lần lượt tạo quãng giai điệu; vang lên cùng lúc tạo quãng hòa âm.
+    loai: dinh-nghia
+    nguon: &a2
+      - omt-intervals
+    ket_qua: dung
+    ghi_chu: 'OMT, Intervals, bảng thuật ngữ: melodic interval "whose notes are sounded separately (one note after another)"; harmonic interval "whose notes sound together (simultaneously)".'
+  - id: n5
+    cau: "Con số của quãng: đếm số tên nốt, tính cả nốt đầu và nốt cuối."
+    loai: quy-tac
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: 'OMT, Intervals: "Always begin with "one" when counting size." (đếm bao gồm nốt đầu: F đến chính nó là 1). Mount 11: đếm "starting with one" từ nốt dưới đến nốt trên.'
+  - id: n6
+    cau: "Đô → Mi: Đô, Rê, Mi = 3 tên → quãng 3."
+    loai: so-lieu
+    nguon: *a2
+    ket_qua: dung
+    ghi_chu: Áp quy tắc đếm bao gồm (C D E = 3).
+  - id: n7
+    cau: "Đô → Sol: Đô, Rê, Mi, Fa, Sol = 5 tên → quãng 5."
+    loai: so-lieu
+    nguon: *a2
+    ket_qua: dung
+    ghi_chu: C D E F G = 5.
+  - id: n8
+    cau: "Hai nốt cùng tên, cùng cao độ: quãng 1 (đồng âm). Cách một quãng tám: quãng 8."
+    loai: dinh-nghia
+    nguon: *a2
+    ket_qua: dung
+    ghi_chu: 'OMT, Intervals: "the interval between two notes on the same line or space is called a "unison""; "notes eight lines and spaces apart are said to be an "octave"". Tên tiếng Việt "đồng âm" là lựa chọn của site.'
+  - id: n9
+    cau: "Con số không phụ thuộc vào dấu hóa: Đô → Mi, Đô → Mi♭ và Đô♯ → Mi♭ đều là quãng 3."
+    loai: quy-tac
+    nguon: *a2
+    ket_qua: dung
+    ghi_chu: "OMT, Intervals: kích thước tính trên tên nốt (generic), chất lượng mới tính dấu hóa. C-E, C-E♭, C♯-E♭ đều đếm C D E = 3."
+  - id: n10
+    cau: Tính chất được xác định bằng số nửa cung chính xác.
+    loai: quy-tac
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: 'OMT, Intervals Example 16 và Mount Table 11-2: mỗi chất lượng ứng với một số nửa cung cho từng kích thước. Cần đọc cùng con số: 6 nửa cung có thể là 4 tăng hay 5 giảm (bảng của trang xử lý bằng một hàng "4 tăng / 5 giảm").'
+  - id: n11
+    cau: "Quãng 1 đúng có 0 nửa cung (ví dụ từ Đô: Đô – Đô)."
+    loai: so-lieu
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: "OMT, Intervals Example 16 (0 nửa cung: P1) và Mount Table 11-2 (cùng số nửa cung). Ví dụ đếm trên phím: Đô – Đô."
+  - id: n12
+    cau: "Quãng 2 thứ có 1 nửa cung (ví dụ từ Đô: Đô – Rê♭)."
+    loai: so-lieu
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: "OMT, Intervals Example 16 (1 nửa cung: mi2) và Mount Table 11-2 (cùng số nửa cung). Ví dụ đếm trên phím: Đô – Rê♭."
+  - id: n13
+    cau: "Quãng 2 trưởng có 2 nửa cung (ví dụ từ Đô: Đô – Rê)."
+    loai: so-lieu
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: "OMT, Intervals Example 16 (2 nửa cung: ma2) và Mount Table 11-2 (cùng số nửa cung). Ví dụ đếm trên phím: Đô – Rê."
+  - id: n14
+    cau: "Quãng 3 thứ có 3 nửa cung (ví dụ từ Đô: Đô – Mi♭)."
+    loai: so-lieu
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: "OMT, Intervals Example 16 (3 nửa cung: mi3) và Mount Table 11-2 (cùng số nửa cung). Ví dụ đếm trên phím: Đô – Mi♭."
+  - id: n15
+    cau: "Quãng 3 trưởng có 4 nửa cung (ví dụ từ Đô: Đô – Mi)."
+    loai: so-lieu
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: "OMT, Intervals Example 16 (4 nửa cung: ma3) và Mount Table 11-2 (cùng số nửa cung). Ví dụ đếm trên phím: Đô – Mi."
+  - id: n16
+    cau: "Quãng 4 đúng có 5 nửa cung (ví dụ từ Đô: Đô – Fa)."
+    loai: so-lieu
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: "OMT, Intervals Example 16 (5 nửa cung: P4) và Mount Table 11-2 (cùng số nửa cung). Ví dụ đếm trên phím: Đô – Fa."
+  - id: n17
+    cau: "Quãng 4 tăng / 5 giảm có 6 nửa cung (ví dụ từ Đô: Đô – Fa♯ / Đô – Sol♭)."
+    loai: so-lieu
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: "OMT, Intervals Example 16 (6 nửa cung: A4/d5) và Mount Table 11-2 (cùng số nửa cung). Ví dụ đếm trên phím: Đô – Fa♯ / Đô – Sol♭."
+  - id: n18
+    cau: "Quãng 5 đúng có 7 nửa cung (ví dụ từ Đô: Đô – Sol)."
+    loai: so-lieu
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: "OMT, Intervals Example 16 (7 nửa cung: P5) và Mount Table 11-2 (cùng số nửa cung). Ví dụ đếm trên phím: Đô – Sol."
+  - id: n19
+    cau: "Quãng 6 thứ có 8 nửa cung (ví dụ từ Đô: Đô – La♭)."
+    loai: so-lieu
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: "OMT, Intervals Example 16 (8 nửa cung: mi6) và Mount Table 11-2 (cùng số nửa cung). Ví dụ đếm trên phím: Đô – La♭."
+  - id: n20
+    cau: "Quãng 6 trưởng có 9 nửa cung (ví dụ từ Đô: Đô – La)."
+    loai: so-lieu
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: "OMT, Intervals Example 16 (9 nửa cung: ma6) và Mount Table 11-2 (cùng số nửa cung). Ví dụ đếm trên phím: Đô – La."
+  - id: n21
+    cau: "Quãng 7 thứ có 10 nửa cung (ví dụ từ Đô: Đô – Si♭)."
+    loai: so-lieu
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: "OMT, Intervals Example 16 (10 nửa cung: mi7) và Mount Table 11-2 (cùng số nửa cung). Ví dụ đếm trên phím: Đô – Si♭."
+  - id: n22
+    cau: "Quãng 7 trưởng có 11 nửa cung (ví dụ từ Đô: Đô – Si)."
+    loai: so-lieu
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: "OMT, Intervals Example 16 (11 nửa cung: ma7) và Mount Table 11-2 (cùng số nửa cung). Ví dụ đếm trên phím: Đô – Si."
+  - id: n23
+    cau: "Quãng 8 đúng có 12 nửa cung (ví dụ từ Đô: Đô – Đô)."
+    loai: so-lieu
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: "OMT, Intervals Example 16 (12 nửa cung: P8) và Mount Table 11-2 (cùng số nửa cung). Ví dụ đếm trên phím: Đô – Đô."
+  - id: n24
+    cau: Quãng 1, 4, 5, 8 có dạng đúng (perfect).
+    loai: quy-tac
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: 'OMT, Intervals: "Unisons, fourths, fifths, and octaves form perfect intervals". Mount 11 cùng ý.'
+  - id: n25
+    cau: "Quãng 1, 4, 5, 8: rộng hơn nửa cung (so với quãng đúng) là tăng, hẹp hơn nửa cung là giảm."
+    loai: quy-tac
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: 'OMT: "Augmented intervals are one half step larger than a perfect or major interval." "Diminished intervals are one half step smaller than a perfect or minor interval." Mount 11: perfect "may also be diminished (a semitone smaller than perfect) or augmented". Riêng quãng 1 giảm không tồn tại (xem câu mẹo nhanh bên dưới); câu này nói về nhóm quãng đúng nói chung, giữ nguyên.'
+  - id: n26
+    cau: Quãng 2, 3, 6, 7 có dạng trưởng và thứ (thứ hẹp hơn trưởng nửa cung).
+    loai: quy-tac
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: 'OMT: "seconds, thirds, sixths, and sevenths form major and minor intervals." Mount 11: "A minor interval is always a semitone smaller than the major interval of the same size."'
+  - id: n27
+    cau: "Quãng 2, 3, 6, 7: rộng hơn trưởng là tăng, hẹp hơn thứ là giảm."
+    loai: quy-tac
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: 'OMT: augmented = half step larger than major; diminished = half step smaller than minor. Mount 11: "diminished (a semitone smaller than minor) or augmented (a semitone larger than major)".'
+  - id: n28
+    cau: Quãng 6 nửa cung (4 tăng hoặc 5 giảm) chia đôi quãng tám, gọi là tritone (ba cung nguyên).
+    loai: dinh-nghia
+    nguon:
+      - omt-intervals
+      - fff-intervals
+      - oxford-tritone
+    ket_qua: dung
+    ghi_chu: 'OMT, Intervals, bảng thuật ngữ: tritone "An augmented fourth or diminished fifth." và "The name reflects that the two notes of a tritone are three (tri-) whole steps (tones) apart." Mount 11: sáu nửa cung là tritone, thường viết 4 tăng hay 5 giảm. Oxford: "Interval of augmented 4th which comprises 3 whole tones". "Chia đôi quãng tám": 6 = 12/2 (bảng nửa cung: quãng 8 đúng = 12). Cụm "(ba cung nguyên)" thêm theo nguồn.'
+  - id: n29
+    cau: Tritone được xếp vào quãng nghịch.
+    loai: quy-tac
+    nguon:
+      - omt-intervals
+      - omt-counterpoint
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Nó nghe rất căng, từng bị gọi đùa là "quỷ dữ trong âm nhạc"." Chữ mới: "Tritone được xếp vào quãng nghịch." (và câu lịch sử bên dưới). Lý do: "rất căng" là cảm giác không kiểm được; OMT, Intervals xếp quãng tăng và giảm vào nhóm dissonant; OMT Species Counterpoint: "Dissonances (all seconds, sevenths, and diminished and augmented intervals)".'
+  - id: n30
+    cau: Từ thời trung đại, việc dùng tritone từng bị cấm; có câu mi contra fa diabolus est in musica ("mi đối với fa là quỷ dữ trong âm nhạc") nói về quãng này.
+    loai: lich-su
+    nguon:
+      - oxford-tritone
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: \"từng bị gọi đùa là \"quỷ dữ trong âm nhạc\"\". Chữ mới: câu trên. Lý do: Concise Oxford Dictionary of Music, mục tritone: \"Mi contra fa diabolus est in musica ... 'Mi against fa is the devil in music'\" và, theo cùng mục, thời trung đại việc dùng quãng này \"was prohibited\"; không nguồn nào nói câu ấy là lời \"gọi đùa\". Không nguồn đọc được ghi năm của câu nói, nên trang không gán năm. Chưa chắc: mục Oxford không nói rõ câu ấy có từ thời trung đại; trang chỉ gắn thời trung đại với việc cấm."
+  - id: n31
+    cau: Nếu nốt trên nằm trong gam trưởng của nốt dưới, thì quãng đó là trưởng (với 2, 3, 6, 7) hoặc đúng (với 1, 4, 5, 8).
+    loai: quy-tac
+    nguon: *a2
+    ket_qua: dung
+    ghi_chu: 'OMT, Intervals: "Imagine that the bottom note of the interval is the tonic of a major scale." Trong gam trưởng, quãng 2, 3, 6, 7 từ chủ âm là trưởng và 4, 5, 8 là đúng (Example 16).'
+  - id: n32
+    cau: Nếu nốt trên thấp hơn nửa cung so với nốt trong gam, quãng đó là thứ (hoặc giảm với 4, 5, 8).
+    loai: quy-tac
+    nguon: *a1
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "(hoặc giảm với 1, 4, 5, 8)". Chữ mới: "(hoặc giảm với 4, 5, 8)". Lý do: quãng 1 giảm không tồn tại: Mount 11: "By definition, an interval cannot be smaller than a unison."; OMT Example 16 có d2 (0 nửa cung), d8 (11) nhưng không có d1. Chưa chắc về chữ nguồn: Mount 11 cũng viết perfect intervals (kể cả unison) "may also be diminished", mâu thuẫn trong chính chương; theo câu "cannot be smaller than a unison".'
+  - id: n33
+    cau: Rê → Fa. Gam Rê trưởng có Fa♯. Fa thấp hơn Fa♯ nửa cung, nên Rê → Fa là quãng 3 thứ.
+    loai: so-lieu
+    nguon: *a2
+    ket_qua: dung
+    ghi_chu: Gam Rê trưởng có F♯ (hóa biểu hai dấu thăng F♯ C♯ là D major, OMT Major Scales); D → F = 3 nửa cung = 3 thứ (Example 16).
+  - id: n34
+    cau: Quãng lớn hơn quãng 8 gọi là quãng ghép.
+    loai: dinh-nghia
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: 'OMT, Intervals: "Any interval larger than an octave is a compound interval." Mount 11: "Intervals that are greater than an octave are called compound intervals."'
+  - id: n35
+    cau: "Trừ đi 7 để được quãng đơn tương ứng: quãng 9 là quãng 2 cộng một quãng 8, quãng 10 là quãng 3 cộng một quãng 8, quãng 11 là quãng 4, quãng 12 là quãng 5, quãng 13 là quãng 6."
+    loai: quy-tac
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: 'OMT: "If you want to make a simple interval a compound interval, add 7 to its size." (ngược lại: trừ 7). Mount 11: "Compound intervals are usually named after their simple versions", ví dụ quãng 9 là quãng 2 ghép.'
+  - id: n36
+    cau: "Tính chất của quãng ghép giữ nguyên quãng đơn: Đô4 – Rê5 là 9 trưởng (14 nửa cung)."
+    loai: so-lieu
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: "Mount 11: quãng ghép gọi theo quãng đơn tương ứng; C4 → D5 = 12 + 2 = 14 nửa cung, quãng 2 trưởng cộng một quãng tám."
+  - id: n37
+    cau: Quãng ghép có mặt trong tên hợp âm (như C9).
+    loai: quy-tac
+    nguon:
+      - omt-extended
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Quãng ghép thường gặp trong tên hợp âm (C9, C13, xem bài 27) và giữa bè trầm với bè cao." Chữ mới: "Quãng ghép có mặt trong tên hợp âm (như C9, xem bài 27)." Lý do: (1) "thường gặp ... giữa bè trầm với bè cao" không kiểm được, đã bỏ; (2) C13 không có ở bài 27 cũ (xem câu ve-site về bài 27). OMT, Altered and Extended Chords: "chord members beyond the seventh are referred to as extensions"; "this is a 9th, and not a 2nd"; có 9th, 11th, 13th.'
+  - id: n38
+    cau: Bài 27 (Ký hiệu hợp âm pop và jazz) có hợp âm C9.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Chưa chuyển: kiểm trên site cũ ../opus-zero/docs/nhac-ly/27-ky-hieu-hop-am.md, dòng bảng "| **C9** | C nine | Đô – Mi – Sol – Si♭ – Rê | Hợp âm bảy át thêm quãng 9 |". Bài 27 cũ không có C13: đã bỏ "C13" khỏi câu trang 9. Lô chuyển bài 27 cần giữ hợp âm C9 (link /opus/nhac-ly/27-ky-hieu-hop-am/).'
+  - id: n39
+    cau: Đưa nốt dưới lên một quãng tám (hoặc nốt trên xuống một quãng tám) là đảo quãng.
+    loai: dinh-nghia
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: 'OMT, Intervals: "Intervallic inversion occurs when two notes are "flipped."" và ví dụ "an interval with C on the bottom and E on the top is inverted by moving the C up by an octave." OMT chỉ nêu ví dụ đưa nốt dưới lên; đưa nốt trên xuống một quãng tám cho cùng cặp nốt đảo (cùng hai tên nốt, đổi thứ tự).'
+  - id: n40
+    cau: "Đảo quãng: con số mới = 9 − con số cũ (quãng 3 đảo thành quãng 6, quãng 2 thành quãng 7)."
+    loai: quy-tac
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: 'OMT: "the size of inverted pairs always adds up to 9". Mount 11 cùng ý.'
+  - id: n41
+    cau: "Đảo quãng: tính chất đổi trưởng ↔ thứ, tăng ↔ giảm, đúng vẫn là đúng."
+    loai: quy-tac
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: 'OMT: "Perfect intervals invert to perfect intervals.", "Major intervals invert to minor intervals (and minor intervals to major intervals).", augmented ↔ diminished. Mount 11 cùng ý.'
+  - id: n42
+    cau: Đô – Mi (3 trưởng) đảo thành Mi – Đô (6 thứ).
+    loai: so-lieu
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: "E → C: E F G A B C = 6 tên; E → C = 8 nửa cung = 6 thứ (Example 16); 3 trưởng ↔ 6 thứ theo quy tắc đảo."
+  - id: n43
+    cau: Quãng 1, 5, 8 đúng là thuận hoàn toàn; ổn định, không cần giải quyết.
+    loai: quy-tac
+    nguon:
+      - omt-counterpoint
+      - omt-intervals
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ (cột Cảm giác): "Rỗng, rất vững". Chữ mới (cột Độ ổn định): "Ổn định, không cần giải quyết". Lý do: "rỗng, rất vững" không có nguồn; OMT Species Counterpoint: "Perfect consonances (perfect unisons, fifths, and octaves)"; OMT Intervals: consonant "are considered more stable, as if they do not need to resolve".'
+  - id: n44
+    cau: Quãng 3 và 6 (trưởng, thứ) là thuận không hoàn toàn; ổn định, không cần giải quyết.
+    loai: quy-tac
+    nguon:
+      - omt-counterpoint
+      - omt-intervals
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ (cột Cảm giác): "Ấm, ngọt". Chữ mới: "Ổn định, không cần giải quyết". Lý do: "ấm, ngọt" không có nguồn; OMT Species Counterpoint: "Imperfect consonances (major and minor thirds and sixths)".'
+  - id: n45
+    cau: Quãng 2, 7 và tritone là nghịch; kém ổn định, như cần được giải quyết.
+    loai: quy-tac
+    nguon:
+      - omt-counterpoint
+      - omt-intervals
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Căng, muốn được giải quyết". Chữ mới: "Kém ổn định, như cần được giải quyết". Lý do: OMT Intervals: "dissonant intervals are considered less stable, as if they do need to resolve"; OMT Species Counterpoint: "Dissonances (all seconds, sevenths, and diminished and augmented intervals)" (tritone là tăng 4/giảm 5). OMT lưu ý "These categorizations have varied with milieu" (cách xếp đổi theo thời kỳ).'
+  - id: n46
+    cau: "Quãng 4 đúng tùy ngữ cảnh: thuận giữa hai bè trên, nghịch khi có bè trầm."
+    loai: quy-tac
+    nguon:
+      - omt-counterpoint
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Thuận khi đứng trên, nghịch khi đứng ở bè trầm". Chữ mới: "Thuận giữa hai bè trên, nghịch khi có bè trầm". Lý do: OMT Species Counterpoint: quãng 4 đúng "is dissonant when it involves the lowest voice in the texture" và "consonant when it occurs between two upper voices"; chữ cũ "đứng trên" mơ hồ. Hai chương OMT khác nhau: bản tóm tắt công cụ đọc web của chương Intervals (Example 13) xếp P4 vào cột thuận hòa âm không kèm điều kiện; trang theo chương Species Counterpoint vì nói rõ điều kiện; chưa đối chiếu được chữ thật của Example 13 (công cụ đọc chỉ trả bản tóm tắt). Review nên xem lại.'
+  - id: n47
+    cau: 'Khuông nhạc "Các quãng từ Đô (lần lượt rồi cùng lúc)": các quãng 3 trưởng, 5 đúng, 6 trưởng, 8 đúng từ Đô, mỗi quãng phát lần lượt rồi cùng lúc.'
+    loai: so-lieu
+    nguon: *a2
+    ket_qua: dung
+    ghi_chu: "Khối abc 1: C–E (3 trưởng, 4 nửa cung), C–G (5 đúng, 7), C–A (6 trưởng, 9), C–c (8 đúng, 12), theo bảng nửa cung. Xem mục khuong_nhac."
+  - id: n48
+    cau: Trang "Nghe quãng" có công cụ nhận biết quãng ở mục "Luyện với công cụ" (link /opus/luyen-tai/nghe-quang/#luyen-voi-cong-cu).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Chưa chuyển: kiểm trên site cũ ../opus-zero/docs/luyen-tai/nghe-quang.md: có mục "## Luyện với công cụ" (neo luyen-voi-cong-cu) với bộ nhận biết quãng. Lô chuyển trang này cần giữ mục và neo ấy.'
+  - id: n49
+    cau: Trang Luyện tai (/opus/luyen-tai/) có bảng giai điệu gợi nhớ cho từng quãng.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Chưa chuyển: ../opus-zero/docs/luyen-tai/index.md có bảng "Quãng (đi lên) | Số nửa cung | Giai điệu gợi nhớ | Trong bài bạn tập trên site". Lô chuyển giữ bảng.'
+  - id: n50
+    cau: Công cụ nhận biết quãng có bộ Cơ bản rồi bộ Mở rộng (câu "bộ Cơ bản rồi Mở rộng" ở mục Luyện tập kèm theo).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Chưa chuyển: ../opus-zero/docs/assets/js/interval-trainer.js dòng 22–25: các lựa chọn "Khởi động", "Cơ bản: thêm 3 thứ, 4 đúng", "Mở rộng: thêm 2 trưởng, 6 trưởng", "Tất cả 12 quãng" (theo thứ tự đó); ../opus-zero/docs/luyen-tai/nghe-quang.md dùng cùng tên bộ. Lô chuyển công cụ giữ tên và thứ tự các bộ.'
+  - id: n51
+    cau: Phiếu bài tập (/opus/luyen-tap/phieu-bai-tap/) có bài "Gọi tên quãng".
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Chưa chuyển: ../opus-zero/docs/assets/js/worksheet.js dòng 17: bài "Gọi tên quãng (hòa âm)"; trang ../opus-zero/docs/luyen-tap/phieu-bai-tap.md có phiếu. Lô chuyển giữ bài tên "Gọi tên quãng".'
+  - id: n52
+    cau: Trang "Đọc nhạc và thị tấu trên đàn" (/opus/piano/thi-tau/) nói về đọc theo quãng.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Chưa chuyển: ../opus-zero/docs/piano/thi-tau.md: tiêu đề "Đọc nhạc và thị tấu trên đàn", mục "Quãng trên khuông và trên phím" và ví dụ "Đọc bằng quãng". Lô chuyển giữ mục này.'
+  - id: n53
+    cau: Có trang tài liệu tham khảo (/opus/tai-lieu-tham-khao/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Kiểm: ../opus-zero/docs/tai-lieu-tham-khao.md có; trang mới thuộc lô chuyển trang khung (chưa có ở src/content/docs/ nhánh này)."
+  - id: n54
+    cau: "Trên đàn, quãng thành độ mở của bàn tay: quãng 2 là hai ngón liền nhau, quãng 5 là ngón 1 và 5 ở thế năm ngón, quãng 8 là gần cả bàn tay."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: "Mô tả cách cảm nhận quãng trên phím, không trái trang lõi nào: ../opus-zero/docs/piano/nam-ngon.md (thế năm ngón: ngón 1 và 5 cách quãng 5)."
+  - id: n55
+    cau: Đọc theo quãng (nhìn khoảng cách) thay vì gọi tên từng nốt giúp thị tấu nhanh hơn.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập, khớp ../opus-zero/docs/piano/thi-tau.md ("Quãng tính từ nốt trước: nốt này cao hơn hay thấp hơn nốt trước bao nhiêu bậc").'
+  - id: n56
+    cau: Mi – Sol là quãng 3 thứ (3 nửa cung).
+    loai: so-lieu
+    nguon: *a2
+    ket_qua: dung
+    ghi_chu: "E F G = 3 tên; E → G = 3 nửa cung (Example 16: mi3)."
+  - id: n57
+    cau: Fa – Si là quãng 4 tăng (6 nửa cung).
+    loai: so-lieu
+    nguon: *a2
+    ket_qua: dung
+    ghi_chu: "F G A B = 4 tên; F → B = 6 nửa cung (Example 16: 6 nửa cung = A4/d5; theo số tên nốt là 4 tăng)."
+  - id: n58
+    cau: La – Fa (đi lên) là quãng 6 thứ (8 nửa cung).
+    loai: so-lieu
+    nguon: *a2
+    ket_qua: dung
+    ghi_chu: A B C D E F = 6 tên; A → F lên = 8 nửa cung (mi6).
+  - id: n59
+    cau: Rê – Rê♯ là quãng 1 tăng (1 nửa cung).
+    loai: so-lieu
+    nguon: *a2
+    ket_qua: dung
+    ghi_chu: "Cùng tên nốt (quãng 1) và tăng một nửa cung (Example 16: A1 ở 1 nửa cung)."
+  - id: n60
+    cau: Đảo quãng 6 thứ được quãng 3 trưởng (9 − 6 = 3, thứ đổi thành trưởng).
+    loai: quy-tac
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: "Quy tắc đảo (OMT, Mount 11): 9 − 6 = 3, minor ↔ major."
+  - id: n61
+    cau: Đô – Mi♭ là quãng 3 thứ (ba tên nốt Đô, Rê, Mi và 3 nửa cung).
+    loai: so-lieu
+    nguon: *a2
+    ket_qua: dung
+    ghi_chu: C D E = 3 tên; 3 nửa cung = mi3.
+  - id: n62
+    cau: Quãng 5 đúng có 7 nửa cung (Đô – Sol).
+    loai: so-lieu
+    nguon: *a2
+    ket_qua: dung
+    ghi_chu: "Example 16: 7 nửa cung = P5."
+  - id: n63
+    cau: Đảo quãng 2 trưởng được quãng 7 thứ (9 − 2 = 7, trưởng đổi thành thứ).
+    loai: quy-tac
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: "Quy tắc đảo; ví dụ D → C: 10 nửa cung = mi7."
+  - id: n64
+    cau: Tritone (4 tăng hay 5 giảm) gồm 6 nửa cung, chia đôi quãng tám.
+    loai: dinh-nghia
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: "Như câu về tritone: 6 nửa cung, A4/d5; 6 = 12/2."
+  - id: n65
+    cau: Rê – Fa♯ là quãng 3 trưởng (Fa♯ nằm trong gam Rê trưởng, 4 nửa cung).
+    loai: so-lieu
+    nguon: *a2
+    ket_qua: dung
+    ghi_chu: D → F♯ = 4 nửa cung = ma3; F♯ là bậc 3 của Rê trưởng.
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - hop-am
+      - nhip
+    ket_qua: dung
+    ghi_chu: "K:C, M:4/4, L:1/4, Q:1/4=100. Bốn ô, mỗi ô: nốt dưới, nốt trên, rồi cả hai cùng lúc ([CE]2). C–E (3 trưởng, 4 nửa cung), C–G (5 đúng, 7), C–A (6 trưởng, 9), C–c (8 đúng, 12), khớp bảng nửa cung và tiêu đề khuông. Mỗi ô đủ 4 phách (1+1+2). Số ngón: không áp dụng (ví dụ để nghe). Đã đọc mã ABC; chưa chạy abcjs (không build trong lượt này), kiểm thử khuông nhạc của site chạy tự động."
+doi_chu:
+  - cu: Quãng 6 nửa cung (4 tăng hoặc 5 giảm) chia đôi quãng tám, gọi là tritone. Nó nghe rất căng, từng bị gọi đùa là "quỷ dữ trong âm nhạc".
+    moi: Quãng 6 nửa cung (4 tăng hoặc 5 giảm) chia đôi quãng tám, gọi là tritone (ba cung nguyên). Tritone được xếp vào quãng nghịch. Từ thời trung đại, việc dùng tritone từng bị cấm; có câu mi contra fa diabolus est in musica ("mi đối với fa là quỷ dữ trong âm nhạc") nói về quãng này.
+    ly_do: 'n29 và n30 (da-sua): "rất căng" là cảm giác không kiểm được; câu về "quỷ dữ" theo Concise Oxford Dictionary of Music (mục tritone): "Mi contra fa diabolus est in musica", và việc dùng tritone bị cấm thời trung đại; không nguồn nào nói đó là lời "gọi đùa".'
+  - cu: Nếu nốt trên nằm trong gam trưởng của nốt dưới, thì quãng đó là trưởng (với 2, 3, 6, 7) hoặc đúng (với 1, 4, 5, 8). Nếu nốt trên thấp hơn nửa cung so với nốt trong gam, quãng đó là thứ (hoặc giảm với 1, 4, 5, 8).
+    moi: Nếu nốt trên nằm trong gam trưởng của nốt dưới, thì quãng đó là trưởng (với 2, 3, 6, 7) hoặc đúng (với 1, 4, 5, 8). Nếu nốt trên thấp hơn nửa cung so với nốt trong gam, quãng đó là thứ (hoặc giảm với 4, 5, 8).
+    ly_do: 'n32 (da-sua): quãng 1 giảm không tồn tại (Mount 11: "an interval cannot be smaller than a unison").'
+  - cu: "Quãng lớn hơn quãng 8 gọi là quãng ghép. Trừ đi 7 để được quãng đơn tương ứng: quãng 9 là quãng 2 cộng một quãng 8, quãng 10 là quãng 3 cộng một quãng 8, quãng 11 là quãng 4, quãng 12 là quãng 5, quãng 13 là quãng 6. Tính chất giữ nguyên: Đô4 – Rê5 là 9 trưởng (14 nửa cung). Quãng ghép thường gặp trong tên hợp âm (C9, C13, xem bài 27) và giữa bè trầm với bè cao."
+    moi: "Quãng lớn hơn quãng 8 gọi là quãng ghép. Trừ đi 7 để được quãng đơn tương ứng: quãng 9 là quãng 2 cộng một quãng 8, quãng 10 là quãng 3 cộng một quãng 8, quãng 11 là quãng 4, quãng 12 là quãng 5, quãng 13 là quãng 6. Tính chất giữ nguyên: Đô4 – Rê5 là 9 trưởng (14 nửa cung). Quãng ghép có mặt trong tên hợp âm (như C9, xem bài 27)."
+    ly_do: 'n37 (da-sua): bỏ "thường gặp ... giữa bè trầm với bè cao" (không kiểm được) và C13 (bài 27 cũ không có C13); OMT Altered and Extended Chords: 9, 11, 13 là phần mở rộng của hợp âm.'
+  - cu: Cảm giác
+    moi: Độ ổn định
+    ly_do: 'n43, n44, n45, n46 (da-sua): cột "Cảm giác" (rỗng, ấm, căng…) không có nguồn; thay bằng "Độ ổn định" theo OMT Intervals (consonant "more stable", dissonant "less stable") và OMT Species Counterpoint.'
+  - cu: Rỗng, rất vững
+    moi: Ổn định, không cần giải quyết
+    ly_do: 'n43 (da-sua): "rỗng, rất vững" không có nguồn; OMT Intervals: quãng thuận "more stable, as if they do not need to resolve".'
+  - cu: Ấm, ngọt
+    moi: Ổn định, không cần giải quyết
+    ly_do: 'n44 (da-sua): "ấm, ngọt" không có nguồn; OMT Species Counterpoint xếp 3 và 6 là quãng thuận không hoàn toàn (vẫn là quãng thuận, ổn định).'
+  - cu: Căng, muốn được giải quyết
+    moi: Kém ổn định, như cần được giải quyết
+    ly_do: 'n45 (da-sua): OMT Intervals: quãng nghịch "less stable, as if they do need to resolve"; bỏ "căng" (cảm giác không kiểm được).'
+  - cu: Thuận khi đứng trên, nghịch khi đứng ở bè trầm
+    moi: Thuận giữa hai bè trên, nghịch khi có bè trầm
+    ly_do: "n46 (da-sua): OMT Species Counterpoint: quãng 4 đúng nghịch khi có bè trầm, thuận giữa hai bè trên."
+  - cu: Open Music Theory; musictheory.net.
+    moi:
+      - "Open Music Theory: Intervals; Introduction to Species Counterpoint; Altered and Extended Chords."
+      - "Andre Mount, Fundamentals, Function, and Form: chương 11. Intervals."
+      - The Concise Oxford Dictionary of Music, mục tritone (đọc qua encyclopedia.com).
+    ly_do: "Mục Nguồn: thay link chung tới Open Music Theory bằng các chương đã đọc khi kiểm định (lượt 1), thêm Mount ch. 11 và Concise Oxford Dictionary of Music (tritone); bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, agent không đọc được chữ để kiểm."

@@ -23,9 +23,9 @@ K:C
 [CEG]2 [EGc]2 [Gce]2 |]
 ```
 
-Các con số "6" và "6/4" đến từ **bè trầm số** (figured bass) thời Baroque: chúng ghi các quãng tính từ nốt trầm. Ký hiệu kiểu C/E (hợp âm C, bè trầm Mi) phổ biến trong nhạc nhẹ và jazz.
+Các con số "6" và "6/4" đến từ **bè trầm số** (figured bass) thời Baroque: chúng ghi các quãng tính từ nốt trầm. Ký hiệu kiểu C/E (hợp âm C, bè trầm Mi) thuộc hệ ký hiệu hợp âm của jazz và nhạc pop.
 
-Thể đảo không đổi **tên** hợp âm, nhưng đổi **màu sắc**: thể gốc vững nhất, đảo 1 nhẹ và linh hoạt hơn, đảo 2 kém vững và thường chỉ dùng trong vài tình huống đặc biệt (như ngay trước kết).
+Thể đảo không đổi **tên** hợp âm (nốt gốc vẫn là nốt gốc), chỉ đổi nốt ở bè trầm. Thể đảo 2 được xử lý đặc biệt: nốt năm ở bè trầm tạo quãng 4 nghịch với bè trầm. Dạng thường gặp là **6/4 kết**, trang trí cho hợp âm V ở chỗ kết.
 
 ## Hợp âm bảy
 
@@ -34,7 +34,7 @@ Chồng thêm một quãng 3 lên hợp âm ba, ta được **hợp âm bảy**:
 | Loại | Cấu tạo | Ví dụ | Ký hiệu | Thường gặp ở |
 |---|---|---|---|---|
 | Bảy trưởng | Hợp âm trưởng + 7 trưởng | Đô – Mi – Sol – Si | Cmaj7 | I, IV trong giọng trưởng |
-| **Bảy át** | Hợp âm trưởng + 7 thứ | Sol – Si – Rê – Fa | G7 | **V7**, quan trọng nhất |
+| **Bảy át** | Hợp âm trưởng + 7 thứ | Sol – Si – Rê – Fa | G7 | **V7** |
 | Bảy thứ | Hợp âm thứ + 7 thứ | Rê – Fa – La – Đô | Dm7 | ii, iii, vi |
 | Bảy nửa giảm | Hợp âm giảm + 7 thứ | Si – Rê – Fa – La | Bø7 | vii trong giọng trưởng |
 | Bảy giảm | Hợp âm giảm + 7 giảm | Si – Rê – Fa – La♭ | B°7 | vii trong giọng thứ |
@@ -56,7 +56,7 @@ Hợp âm bảy át được xây trên **bậc V** và có hai nốt "muốn đ
 - **Cảm âm** (Si trong Đô trưởng) muốn đi **lên** nửa cung về chủ âm Đô.
 - **Nốt bảy** (Fa) muốn đi **xuống** về Mi.
 
-Si và Fa cách nhau một **tritone**, quãng căng nhất. Khi chúng giải quyết về Đô và Mi, ta nghe cảm giác "về nhà" rất rõ:
+Si và Fa cách nhau một **tritone**, một quãng nghịch cần được giải quyết. Khi chúng giải quyết về Đô và Mi, ta nghe cảm giác "về nhà":
 
 ```abc
 X:1
@@ -126,5 +126,6 @@ Thể đảo giúp tay di chuyển ít: từ Đô–Mi–Sol sang Đô–Fa–La
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- *Open Music Theory*: [Triads](https://viva.pressbooks.pub/openmusictheory/chapter/triads/); [Intervals](https://viva.pressbooks.pub/openmusictheory/chapter/intervals/); [Introduction to Harmony, Cadences, and Phrase Endings](https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/); [Inversion](https://viva.pressbooks.pub/openmusictheory/chapter/inversion/); [Figured Bass and Roman Numerals with Figures](https://viva.pressbooks.pub/openmusictheory/chapter/figured-bass/); [Chord Symbols](https://viva.pressbooks.pub/openmusictheory/chapter/chord-symbols/); [Seventh Chords](https://viva.pressbooks.pub/openmusictheory/chapter/seventh-chords/); [6/4 Chords as Forms of Prolongation](https://viva.pressbooks.pub/openmusictheory/chapter/64-chords-as-prolongations/); [Introduction to Species Counterpoint](https://viva.pressbooks.pub/openmusictheory/chapter/species-counterpoint/).
+- Andre Mount, *Fundamentals, Function, and Form*: chương [13. Triads](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/13-triads/), [18. Seventh Chords](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/18-seventh-chords/), [19. The Dominant Seventh Chord](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/19-the-dominant-seventh-chord/) và [21. Figured Bass](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/21-figured-bass/).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

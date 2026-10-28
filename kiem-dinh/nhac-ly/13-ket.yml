@@ -1,0 +1,383 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/13-ket
+trang: src/content/docs/nhac-ly/13-ket.md
+nguon_cu: ../opus-zero/docs/nhac-ly/13-ket.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-27
+    nhanh: moi/d3-l2
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D3-L2 lượt 1, phần 2/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Bài nhạc lý 13 (kết và câu nhạc). Nguồn chính: Open Music Theory (OMT), Introduction to Harmony, Cadences, and Phrase Endings (bản Pressbooks, đối chiếu LibreTexts 4.1 vì Pressbooks lúc đầu không mở được), The Phrase, Archetypes, and Unique Forms (đọc từng câu trích), Plagal Motion, Glossary; Encyclopaedia Britannica (Cadence) và Concise Oxford Dictionary of Music (qua Encyclopedia.com) cho plagal, "Amen", deceptive/interrupted; tài liệu Theme Form của Đại học California Irvine cho kết của câu trả lời; bản Mutopia ode.ly và IMSLP K. 467 cho ví dụ. WebFetch ngày 27/10/2026 (bản tóm tắt chữ, không phải HTML thô). Sửa chữ ở lượt 1: (1) ô "Êm, trang nghiêm" của kết plagal thành "Về chủ âm thẳng từ IV, không qua V" (cảm nhận chủ quan); (2) "câu nhạc thường dài 4 ô nhịp và kết thúc bằng một kết" thành "dài 4, 8 hoặc 16 ... thường kết thúc bằng một kết"; (3) câu hỏi, câu trả lời: thêm "thường", câu trả lời "kết mạnh hơn, thường là kết trọn" (sửa cả phần giải thích câu quiz 4); (4) câu về Ode to Joy: bỏ "hoàn hảo" và "giống hệt" (ô cuối của hai câu khác nhau); (5) "ở khắp nơi trong nhạc thời kỳ Cổ điển, đặc biệt ở Mozart và Haydn" thành "thường xuyên trong nhạc cổ điển phương Tây trước năm 1900"; (6) mục Nguồn (thay link chung và musictheory.net bằng các nguồn đã mở). Hai chữ lớn không kiểm được tới tận gốc mà giữ lại vì là cách ví của site, ghi rõ ở n4, n6, n8, n14: ví từng loại kết với dấu chấm hết, chấm phẩy, phẩy hay hỏi, và "như một câu hỏi". Khối abc: bốn khối soạn (I–IV–V–I; I–vi–IV–V; I–V–IV–I; I–V–V7–vi), một trích đoạn Ode to Joy; khối 4 dùng V7 chứ không phải V thuần (không sai kết lừa). Không tính là nhận định: tiêu đề mục, tiêu đề cột bảng "Loại, Hợp âm, Giống dấu câu, Cảm giác" (gộp vào n2-n16), chữ "Kết trọn:", "Kết nửa —" ... đứng trước khối abc đã tính ở n14-n16. Thuật ngữ tiếng Việt chưa có trong src/data/thuat-ngu.yml (cho D3-L5): "kết trọn / kết chưa trọn / kết nửa / kết plagal / kết lừa", "câu hỏi / câu trả lời" (antecedent / consequent), "đoạn nhạc" (period); đã có: cadence ("Kết"), phrase ("Câu nhạc"). Việc trang gọi hai câu ghép là "đoạn nhạc (period)" trùng chữ "đoạn" với section/period dùng ở trang khác (cần D3-L5 xem).'
+nguon:
+  - id: omt-intro
+    bac: 2
+    ten: Open Music Theory, Introduction to Harmony, Cadences, and Phrase Endings (đọc cả bản LibreTexts 4.1)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/
+  - id: omt-phrase
+    bac: 2
+    ten: Open Music Theory, The Phrase, Archetypes, and Unique Forms
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/phrase-archetypes-unique-forms/
+  - id: omt-gloss
+    bac: 2
+    ten: Open Music Theory, Glossary
+    link: https://viva.pressbooks.pub/openmusictheory/back-matter/glossary/
+  - id: omt-plagal
+    bac: 2
+    ten: Open Music Theory, Plagal Motion
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/plagal-motion/
+  - id: brit-cadence
+    bac: 2
+    ten: Encyclopaedia Britannica, Cadence
+    link: https://www.britannica.com/art/cadence-music
+  - id: cod-cadence
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music (Kennedy, Bourne), mục cadence (qua Encyclopedia.com)
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/cadence
+  - id: mutopia-ode
+    bac: 2
+    ten: Mutopia Project, Beethoven, Ode to Joy (bản LilyPond ode.ly, phổ công cộng; bản này viết ở Sol trưởng, ô nhịp và nốt đối chiếu theo bậc)
+    link: https://sca.uwaterloo.ca/Mutopia/ftp/BeethovenLv/ode/ode.ly
+  - id: imslp-k467
+    bac: 2
+    ten: 'IMSLP, Piano Concerto No.21, K.467 (Mozart): các chương, tốc độ ghi trên bản phổ'
+    link: https://imslp.org/wiki/Piano_Concerto_No.21,_K.467_(Mozart,_Wolfgang_Amadeus)
+  - id: uci-theme
+    bac: 2
+    ten: 'Theme Form (tài liệu khóa học, Đại học California Irvine, PDF): period gồm antecedent và consequent; consequent "usually a perfect authentic cadence"'
+    link: https://music.arts.uci.edu/abauer/5.3/downloads/Theme_Form.pdf
+nhan_dinh:
+  - id: n1
+    cau: Kết (cadence) là chuỗi hợp âm ở cuối một câu nhạc, cho người nghe biết câu đã xong hay còn tiếp.
+    loai: dinh-nghia
+    nguon:
+      - omt-intro
+      - brit-cadence
+      - cod-cadence
+    ket_qua: dung
+    ghi_chu: 'OMT, Introduction to Harmony: cadences là "melodic and harmonic patterns that create goals, kind of like punctuation marks in literary sentences"; Glossary: "A melodic and harmonic goal." Britannica: "the ending of a phrase, perceived as a rhythmic or melodic articulation or a harmonic change or all of these." Concise Oxford Dictionary of Music: "Any melodic or harmonic progression which has come to possess a conventional association with the ending of a comp." Trang chỉ nói phần hợp âm (đủ trong phạm vi bài, vì Britannica và COD cũng gọi cadence hòa âm là loại điển hình); Dòng này cũng là mô tả trang (frontmatter). Vế "xong hay còn tiếp": OMT nói PAC có "sense of finality", HC có "unfinished sound".'
+  - id: n2
+    cau: 'Tên năm loại kết trong bảng: kết trọn (perfect authentic cadence), kết chưa trọn (imperfect authentic cadence), kết nửa (half cadence), kết plagal (plagal cadence), kết lừa (deceptive cadence).'
+    loai: ten
+    nguon:
+      - omt-gloss
+      - brit-cadence
+      - cod-cadence
+    ket_qua: dung
+    ghi_chu: 'OMT Glossary có perfect authentic, imperfect authentic, half, plagal cadence; Britannica có "deceptive" (V–VI); COD ghi deceptive là tên khác của interrupted cadence. Tên tiếng Việt là lựa chọn của site, không có giáo trình tiếng Việt đọc được để đối chiếu (ghi cho D3-L5: "kết trọn / kết chưa trọn / kết nửa / kết plagal / kết lừa"). Câu trong ngoặc "authentic cadence hoàn toàn / không hoàn toàn" là cách dịch perfect / imperfect.'
+  - id: n3
+    cau: 'Kết trọn: V – I, cả hai ở thể gốc, bè trên kết ở chủ âm.'
+    loai: quy-tac
+    nguon:
+      - omt-intro
+      - omt-gloss
+      - cod-cadence
+    ket_qua: dung
+    ghi_chu: 'OMT Glossary: "A V–I cadence that ends with do (1̂) in the melody. Both harmonies must be in root position." COD: perfect cadence "Chord of the dominant followed by that of tonic", đảo hợp âm thì bớt trọn vẹn.'
+  - id: n4
+    cau: Kết trọn giống dấu chấm hết, cảm giác kết thúc trọn vẹn.
+    loai: dinh-nghia
+    nguon:
+      - omt-intro
+      - brit-cadence
+    ket_qua: dung
+    ghi_chu: 'OMT: "PACs are the strongest kind of cadence available to a composer because of the sense of finality they can create"; Britannica gọi perfect cadence là "the strongest type of authentic cadence". Việc ví cụ thể với "dấu chấm hết" là cách ví của site; OMT chỉ ví chung với dấu câu.'
+  - id: n5
+    cau: 'Kết chưa trọn: V – I, nhưng có thể đảo hoặc bè trên không ở chủ âm.'
+    loai: quy-tac
+    nguon:
+      - omt-intro
+      - omt-gloss
+    ket_qua: dung
+    ghi_chu: 'OMT Glossary: "A V–I cadence in which V, I, or both harmonies are inverted, and/or do (1̂) is not in the soprano over the tonic triad."'
+  - id: n6
+    cau: 'Kết chưa trọn giống dấu chấm phẩy: kết nhưng còn hơi mở.'
+    loai: dinh-nghia
+    nguon:
+      - omt-intro
+    ket_qua: dung
+    ghi_chu: 'OMT: "IACs are special because they occupy the space between HCs and PACs in terms of cadential strength", tức mạnh hơn kết nửa, yếu hơn kết trọn. "Dấu chấm phẩy" là cách ví của site.'
+  - id: n7
+    cau: 'Kết nửa: chuỗi "... – V" (dừng ở V).'
+    loai: quy-tac
+    nguon:
+      - omt-intro
+      - omt-gloss
+      - brit-cadence
+    ket_qua: dung
+    ghi_chu: 'OMT: "Half cadences involve the progression x–V, where x is any of a variety of harmonies"; Glossary: "A kind of inconclusive cadence that occurs when a phrase ends on V." Britannica: phrase ends on the dominant chord.'
+  - id: n8
+    cau: 'Kết nửa giống dấu phẩy hay dấu hỏi: dừng lơ lửng, chờ câu sau.'
+    loai: dinh-nghia
+    nguon:
+      - omt-intro
+      - brit-cadence
+    ket_qua: dung
+    ghi_chu: 'OMT: HCs "are the weakest kind of cadence because of their unfinished sound"; Britannica: half cadence "usually implies that another phrase will follow". Ví với dấu phẩy, dấu hỏi là cách ví của site.'
+  - id: n9
+    cau: 'Kết plagal: IV – I.'
+    loai: quy-tac
+    nguon:
+      - omt-gloss
+      - omt-plagal
+      - brit-cadence
+      - cod-cadence
+    ket_qua: dung
+    ghi_chu: 'OMT Glossary: "A plagal cadence uses the harmonies IV–I." Britannica: subdominant triad leads to tonic; COD: "Chord of the subdominant followed by that of tonic." OMT, Plagal Motion, lưu ý chỉ chuỗi (IV)–I kết câu mới là cadence: "would inaccurately imply that (IV)–I always ends a phrase".'
+  - id: n10
+    cau: Kết plagal giống "Amen" cuối thánh ca.
+    loai: dinh-nghia
+    nguon:
+      - brit-cadence
+      - cod-cadence
+    ket_qua: dung
+    ghi_chu: 'Britannica: cách dùng "most characteristic and formulaic usage in the West is with the final amen at the end of a Christian hymn"; COD: "Plagal (Amen) cadence".'
+  - id: n11
+    cau: 'Kết plagal: về chủ âm thẳng từ IV, không qua V.'
+    loai: dinh-nghia
+    nguon:
+      - omt-gloss
+      - brit-cadence
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Êm, trang nghiêm". Chữ mới: "Về chủ âm thẳng từ IV, không qua V". Lý do: cảm nhận "êm, trang nghiêm" không nguồn nào nói; chữ mới suy trực tiếp từ định nghĩa IV–I (OMT Glossary, Britannica).'
+  - id: n12
+    cau: 'Kết lừa: V – vi.'
+    loai: quy-tac
+    nguon:
+      - brit-cadence
+      - cod-cadence
+    ket_qua: dung
+    ghi_chu: 'Britannica: deceptive cadence (V–VI): "starts on V but does not end on the tonic", the submediant often substitutes. COD: interrupted cadence "Chord of the dominant followed by that of submediant", "Deceptive cadence" là tên khác. OMT Glossary chỉ có "deceptive motion: A cadence-like resolution from V to a non-tonic harmony." (V–vi ở giọng trưởng viết vi thường.)'
+  - id: n13
+    cau: 'Kết lừa giống sự bất ngờ: tưởng về nhà nhưng rẽ hướng khác.'
+    loai: dinh-nghia
+    nguon:
+      - brit-cadence
+      - omt-gloss
+    ket_qua: dung
+    ghi_chu: 'Cùng nguồn n12: cadence bắt đầu từ V nhưng không về chủ âm (Britannica); OMT: "cadence-like resolution from V to a non-tonic harmony". Cách nói "tưởng về nhà" là hình ảnh của site.'
+  - id: n14
+    cau: Kết nửa — dừng ở V, nghe như một câu hỏi.
+    loai: dinh-nghia
+    nguon:
+      - omt-intro
+      - brit-cadence
+    ket_qua: dung
+    ghi_chu: 'Cùng nguồn n7, n8: kết nửa dừng ở V và còn chờ câu sau. "Như một câu hỏi" là hình ảnh của site (OMT gọi antecedent là phrase kết bằng kết yếu).'
+  - id: n15
+    cau: Kết plagal — "A-men".
+    loai: dinh-nghia
+    nguon:
+      - brit-cadence
+    ket_qua: dung
+    ghi_chu: 'Xem n10 (Britannica: amen ở cuối thánh ca).'
+  - id: n16
+    cau: Kết lừa — V đi về vi thay vì I.
+    loai: quy-tac
+    nguon:
+      - brit-cadence
+      - cod-cadence
+    ket_qua: dung
+    ghi_chu: Xem n12.
+  - id: n17
+    cau: Một câu nhạc (phrase) thường dài 4, 8 hoặc 16 ô nhịp.
+    loai: so-lieu
+    nguon:
+      - omt-phrase
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Một câu nhạc (phrase) thường dài 4 ô nhịp và kết thúc bằng một kết." Chữ mới: "... thường dài 4, 8 hoặc 16 ô nhịp và thường kết thúc bằng một kết." OMT, The Phrase, Archetypes, and Unique Forms: "A phrase can be any length, but phrases of 4, 8, or 16 measures are particularly common."'
+  - id: n18
+    cau: Một câu nhạc thường kết thúc bằng một kết.
+    loai: dinh-nghia
+    nguon:
+      - omt-gloss
+      - omt-phrase
+    ket_qua: da-sua
+    ghi_chu: 'OMT Glossary: phrase là "A relatively complete musical thought that exhibits trajectory toward a goal (often a cadence)"; OMT: "In tonal classical music, that goal is almost always one of the traditional cadence types". Chữ cũ nói câu nhạc "kết thúc bằng một kết" không có "thường"; đã thêm "thường".'
+  - id: n19
+    cau: Hai câu ghép lại thành một đoạn nhạc (period).
+    loai: dinh-nghia
+    nguon:
+      - omt-gloss
+      - omt-phrase
+    ket_qua: dung
+    ghi_chu: 'OMT Glossary: "Period: A phrase-level form that consists of two phrases: an antecedent and a consequent."'
+  - id: n20
+    cau: 'Câu hỏi (antecedent): thường kết thúc bằng kết nửa, tạo cảm giác chưa xong.'
+    loai: dinh-nghia
+    nguon:
+      - omt-phrase
+      - omt-gloss
+      - uci-theme
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "kết thúc bằng kết nửa, tạo cảm giác chưa xong". Chữ mới thêm "thường". OMT: antecedent "ends with a weaker cadence, usually a half cadence" (Glossary: "ends with a weak cadence"). Tài liệu UCI: antecedent dẫn tới "a weak cadence of some kind".'
+  - id: n21
+    cau: 'Câu trả lời (consequent): thường bắt đầu giống câu hỏi, nhưng kết thúc bằng kết mạnh hơn, thường là kết trọn.'
+    loai: dinh-nghia
+    nguon:
+      - omt-phrase
+      - omt-gloss
+      - uci-theme
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "bắt đầu giống câu hỏi, nhưng kết thúc bằng kết trọn". Chữ mới thêm "thường" hai chỗ và "kết mạnh hơn". OMT: consequent "ends with a stronger cadence, usually a perfect authentic cadence (PAC)"; chú thích 3: chỉ period "song song" mới có câu sau bắt đầu giống câu trước, còn "contrasting period" bắt đầu khác nhưng rất hiếm. UCI: "usually a perfect authentic cadence".'
+  - id: n22
+    cau: 'Ode to Joy của Beethoven là một ví dụ: câu đầu dừng ở Rê (thuộc hợp âm V, kết nửa), câu sau giống câu đầu ở ba ô nhịp đầu nhưng kết ở Đô (chủ âm, kết trọn).'
+    loai: dinh-nghia
+    nguon:
+      - mutopia-ode
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "... là ví dụ hoàn hảo: câu đầu dừng ở Rê (thuộc hợp âm V, kết nửa), câu sau giống hệt nhưng kết ở Đô (chủ âm, kết trọn)." Đối chiếu bản Mutopia ode.ly (Sol trưởng; soprano: B B C D | D C B A | G G A B | B. A A2 || B B C D | D C B A | G G A B | A. G G2): ba ô đầu hai câu giống nhau, ô cuối khác (câu đầu dừng ở bậc 2, la; câu sau về chủ âm, sol), tức Rê và Đô sau khi chuyển về Đô trưởng. "Giống hệt" sai; "ví dụ hoàn hảo" là lời khen không kiểm được. Hợp âm: bản Mutopia có đủ bè SATB; ở cuối câu đầu soprano a, alto fis, tenor d (D – Fa♯ – A, tức hợp âm V của Sol trưởng): kết nửa; ở cuối câu sau soprano g, alto d, tenor b (G – Si – Rê, tức I): kết trọn. Xem thêm khuong_nhac khối 5.'
+  - id: n23
+    cau: Bạn sẽ gặp cấu trúc câu hỏi – câu trả lời thường xuyên trong nhạc cổ điển phương Tây trước năm 1900.
+    loai: so-lieu
+    nguon:
+      - omt-phrase
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "... ở khắp nơi trong nhạc thời kỳ Cổ điển, đặc biệt ở Mozart và Haydn." OMT: "Phrase-level forms belonging to both categories appear frequently in common-practice music"; OMT, Diatonic Modes: nhạc trưởng-thứ thống trị "for the 200 years or so prior" đến khoảng 1900. OMT không nhắc Mozart (Haydn chỉ trong chú thích hình về dạng khác).'
+  - id: n24
+    cau: Khi tập một bản nhạc, đánh dấu các kết bằng bút chì; chúng là ranh giới tự nhiên để chia đoạn khi tập và là điểm bám khi học thuộc.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập. Khớp trang cũ piano/cach-tap.md ("Chia theo câu nhạc") và piano/hoc-thuoc-bieu-dien.md (khoanh tròn các kết, "điểm mốc" cấu trúc là chỗ để bám lại); không trái.
+  - id: n25
+    cau: Trang [Cách tập hiệu quả](/opus/piano/cach-tap/), [học thuộc](/opus/piano/hoc-thuoc-bieu-dien/) và [Kết ở mọi giọng](/opus/piano/hoa-am/ket/) có nội dung nói trong hộp "Trên phím đàn".
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển, kiểm trên bản cũ ../opus-zero/docs/: piano/cach-tap.md ("Cách tập piano hiệu quả", mục Chia đoạn: "Chia theo câu nhạc"), piano/hoc-thuoc-bieu-dien.md (dòng 40: "khoanh tròn các kết"; dòng 32: điểm mốc cấu trúc là chỗ để bám lại), piano/hoa-am/ket.md ("Kết ở mọi giọng", chơi bốn loại kết ở 24 giọng). Link hiện "sắp có" ở site mới cho tới khi trang lên.'
+  - id: n26
+    cau: 'Bài tập 1: nghe một chương nhạc chậm của Mozart (gợi ý: Concerto piano số 21, chương 2); mỗi khi nhạc "dừng lại", đoán kết trọn hay kết nửa.'
+    loai: khuyen-tap
+    nguon:
+      - imslp-k467
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập. Sự kiện kèm theo: K. 467 chương 2 là "Andante" (IMSLP: 1. Allegro maestoso, 2. Andante, 3. Allegro vivace assai; sáng tác 1785), tức chương chậm hơn hai chương kia; không sai.'
+  - id: n27
+    cau: 'Bài tập 2: hát giai điệu Ode to Joy và dừng lại ở cuối câu đầu; cảm giác có khác dừng ở cuối câu thứ hai không?'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; khớp n22 (câu đầu kết nửa, câu sau kết trọn).
+  - id: n28
+    cau: 'Bài tập 3: mỗi ngày 10 câu với công cụ nhận biết kết: bốn hợp âm, đoán loại kết của hai hợp âm cuối.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Bản cũ ../opus-zero/docs/assets/js/recognition.js dòng 119-126 (mountCadence, .oz-cadence-trainer): "Nghe 4 hợp âm và đoán loại kết ở hai hợp âm cuối." Công cụ ở luyen-tai/nghe-tien-trinh.md, mục "Luyện với công cụ { #luyen-voi-cong-cu }" (dòng 92), nên link #luyen-voi-cong-cu đúng. Trang đích chưa chuyển ("sắp có"). "10 câu mỗi ngày" là lời khuyên tập, không phải thuộc tính công cụ.'
+  - id: n29
+    cau: 'Hộp "Luyện tập kèm theo": Thị tấu một bè: mọi giai điệu đều kết bằng bậc 2 hoặc 7 về chủ âm; hát và cảm nhận lực kéo của kết.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Bản cũ ../opus-zero/docs/assets/js/sight-reading.js dòng 28-33: ô cuối có nốt áp chót là k.v+1 (bậc 2) hoặc k.v-1 (bậc 7), rồi chủ âm (k.v); luyen-tap/thi-tau.md dòng 3: "giai điệu 4 ô nhịp ngẫu nhiên, kết thúc ở chủ âm". "Lực kéo của kết" là lời khuyên tập.'
+  - id: n30
+    cau: 'Câu hỏi 1: Kết nửa kết thúc ở hợp âm nào? Đáp án V (câu giải thích: kết nửa dừng ở hợp âm át, nghe lơ lửng).'
+    loai: dinh-nghia
+    nguon:
+      - omt-gloss
+      - omt-intro
+    ket_qua: dung
+    ghi_chu: 'OMT Glossary: "...a phrase ends on V." V là hợp âm át (dominant). Hai lựa chọn sai: I, IV.'
+  - id: n31
+    cau: 'Câu hỏi 2: Chuỗi IV – I là kết plagal (còn gọi là kết "Amen").'
+    loai: dinh-nghia
+    nguon:
+      - omt-gloss
+      - brit-cadence
+    ket_qua: dung
+    ghi_chu: 'OMT Glossary và Britannica, xem n9, n10. Hai lựa chọn sai: kết lừa, kết nửa.'
+  - id: n32
+    cau: 'Câu hỏi 3: Kết lừa thường đi từ V đến vi (thay vì về chủ, nhạc rẽ sang vi).'
+    loai: dinh-nghia
+    nguon:
+      - brit-cadence
+      - cod-cadence
+    ket_qua: dung
+    ghi_chu: 'Xem n12. Lựa chọn sai: I, IV.'
+  - id: n33
+    cau: 'Câu hỏi 4: Trong một đoạn nhạc, câu hỏi thường kết thúc bằng kết nửa (đáp án); câu trả lời thường kết thúc bằng kết mạnh hơn, thường là kết trọn.'
+    loai: dinh-nghia
+    nguon:
+      - omt-phrase
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ của phần giải thích: "Câu trả lời mới kết thúc bằng kết trọn." Chữ mới: "Câu trả lời thường kết thúc bằng kết mạnh hơn, thường là kết trọn." Lý do như n21. Đáp án + (Kết nửa) khớp OMT: antecedent "usually a half cadence".'
+  - id: n34
+    cau: 'Mục Nguồn: link tới /opus/tai-lieu-tham-khao/.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Bản cũ ../opus-zero/docs/tai-lieu-tham-khao.md tồn tại. Trang đích chưa chuyển ("sắp có"). Các link nguồn trong mục Nguồn đã đổi ở lượt này (xem doi_chu).
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+    ket_qua: dung
+    ghi_chu: 'Soạn cho trang này. M:2/2, L:1/2, K:C, bốn hợp âm: [C,EGc] [F,FAc] | [G,DGB] [C,EGc] = I – IV – V – I; mỗi ô hai hợp âm nốt trắng. Hai hợp âm cuối V – I: cả hai ở thể gốc (bass G rồi C), nốt trên cùng đi B rồi c (chủ âm) nên đúng định nghĩa kết trọn (n3). abcjs (public/vendor/abcjs-basic-min.js, parseOnly) không cảnh báo; mỗi ô đủ độ dài theo tools/khuong-nhac.mjs (15 khối của bốn trang, 0 lỗi).'
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+    ket_qua: dung
+    ghi_chu: 'Soạn cho trang này. [C,EGc] [A,EAc] | [F,FAc] [G,DGB] = I – vi – IV – V: câu dừng ở V (nốt trên cùng B, hợp âm G B D), đúng kết nửa (n7); nghe như câu hỏi (n14). Không cảnh báo abcjs; ô đủ độ dài.'
+  - khoi: 3
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+    ket_qua: dung
+    ghi_chu: 'Soạn cho trang này. [C,EGc] [G,DGB] | [F,FAc] [C,EGc] = I – V – IV – I: hai hợp âm cuối IV – I, bass F rồi C, đúng kết plagal (n9, n15). Không cảnh báo abcjs; ô đủ độ dài.'
+  - khoi: 4
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+    ket_qua: dung
+    ghi_chu: 'Soạn cho trang này. [C,EGc] [G,DGB] | [G,DFB] [A,EAc]: ô 2 có V7 (G B D F; ghi [G,DFB]) rồi vi (A C E) ở hợp âm cuối, bass G rồi A: V – vi thay vì I, đúng kết lừa (n12, n16). Hợp âm [G,DFB] là V7, không phải V thuần như chữ "V đi về vi" của trang; V7 – vi vẫn là kết lừa (Britannica: cadence bắt đầu từ chức năng dominant mà không về chủ). Không cảnh báo abcjs; ô đủ độ dài.'
+  - khoi: 5
+    loai: trich-doan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - not
+      - doi-chieu-an-ban
+    ket_qua: dung
+    ghi_chu: 'Trích đoạn tác phẩm thật: Beethoven, Giao hưởng số 9, chương 4, giai điệu Ode to Joy (8 ô nhịp đầu), đối chiếu với bản Mutopia ode.ly (L. V. Beethoven, public domain; bản này ở Sol trưởng, giai điệu soprano B B C D | D C B A | G G A B | B. A A2 || B B C D | D C B A | G G A B | A. G G2). Khối abc ở Đô trưởng, M:4/4, L:1/4: E E F G | G F E D | C C D E | E3/2 D/ D2 | E E F G | G F E D | C C D E | D3/2 C/ C2: dịch xuống từ Sol về Đô, đúng từng nốt và độ dài (30 nốt, 8 ô). Hợp âm ghi trên khối (C, G, C, G | C, G, C, G rồi C): ô 4 hợp âm G khi giai điệu dừng ở Rê = bậc V, kết nửa; ô 8 về C ở nốt Đô = chủ âm, kết trọn; khớp các bè alto, tenor của bản Mutopia (cuối câu đầu: soprano a, alto fis, tenor d = hợp âm V của Sol trưởng; cuối câu sau: soprano g, alto d, tenor b = I). Hồ sơ 04-nhip.yml (lượt D3-L1) đã đối chiếu chính giai điệu này với ba bản phổ gốc. Khác bản gốc: chuyển Rê trưởng sang Đô trưởng, viết nhịp 4/4 (bản gốc alla breve); trang này không nói tốc độ. Không cảnh báo abcjs.'
+doi_chu:
+  - cu: Êm, trang nghiêm
+    moi: Về chủ âm thẳng từ IV, không qua V
+    ly_do: 'n11 (da-sua): "Êm, trang nghiêm" là cảm nhận chủ quan, không nguồn nào nói; thay bằng điều kiểm được từ định nghĩa kết plagal IV–I (Concise Oxford Dictionary of Music, Britannica, OMT).'
+  - cu:
+      - "Một câu nhạc (phrase) thường dài 4 ô nhịp và kết thúc bằng một kết. Hai câu ghép lại thành một đoạn nhạc (period):"
+      - "Câu hỏi (antecedent): kết thúc bằng kết nửa, tạo cảm giác chưa xong."
+      - "Câu trả lời (consequent): bắt đầu giống câu hỏi, nhưng kết thúc bằng kết trọn."
+      - "Ode to Joy của Beethoven là ví dụ hoàn hảo: câu đầu dừng ở Rê (thuộc hợp âm V, kết nửa), câu sau giống hệt nhưng kết ở Đô (chủ âm, kết trọn)."
+      - Bạn sẽ gặp cấu trúc câu hỏi – câu trả lời ở khắp nơi trong nhạc thời kỳ Cổ điển, đặc biệt ở Mozart và Haydn.
+    moi:
+      - "Một câu nhạc (phrase) thường dài 4, 8 hoặc 16 ô nhịp và thường kết thúc bằng một kết. Hai câu ghép lại thành một đoạn nhạc (period):"
+      - "Câu hỏi (antecedent): thường kết thúc bằng kết nửa, tạo cảm giác chưa xong."
+      - "Câu trả lời (consequent): thường bắt đầu giống câu hỏi, nhưng kết thúc bằng kết mạnh hơn, thường là kết trọn."
+      - "Ode to Joy của Beethoven là một ví dụ: câu đầu dừng ở Rê (thuộc hợp âm V, kết nửa), câu sau giống câu đầu ở ba ô nhịp đầu nhưng kết ở Đô (chủ âm, kết trọn)."
+      - Bạn sẽ gặp cấu trúc câu hỏi – câu trả lời thường xuyên trong nhạc cổ điển phương Tây trước năm 1900.
+    ly_do: 'n17, n18 (da-sua): OMT, The Phrase, Archetypes, and Unique Forms: "phrases of 4, 8, or 16 measures are particularly common"; Glossary: phrase là ý nhạc có hướng tới một đích, "often a cadence". Không nguồn nào nói câu nhạc luôn 4 ô hay luôn kết bằng kết.; n20 (da-sua): OMT: antecedent kết bằng kết yếu hơn, "usually a half cadence"; không phải lúc nào cũng vậy (có khi là kết chưa trọn).; n21 (da-sua): OMT: consequent kết bằng kết mạnh hơn, "usually a perfect authentic cadence"; chú thích 3: chỉ đoạn nhạc "song song" mới có câu sau bắt đầu giống câu trước, còn "contrasting period" (hiếm) thì khác.; n23 (da-sua): OMT nói các hình thức cấp câu "appear frequently in common-practice music" (khoảng hai trăm năm trước năm 1900); không nguồn nào đọc được nói riêng về Mozart và Haydn, nên bỏ tên hai người.; n22 (da-sua): ô nhịp cuối của hai câu khác nhau (câu đầu Mi – Rê – Rê, câu sau Rê – Đô – Đô; đối chiếu bản Mutopia ode.ly và khối abc), nên "giống hệt" sai: chỉ ba ô đầu giống nhau. "ví dụ hoàn hảo" là lời khen, không kiểm được; đổi thành "một ví dụ".'
+  - cu: Open Music Theory; musictheory.net.
+    moi:
+      - "Open Music Theory: Introduction to Harmony, Cadences, and Phrase Endings; The Phrase, Archetypes, and Unique Forms; Glossary."
+      - Britannica, Cadence; The Concise Oxford Dictionary of Music (Kennedy, Bourne), mục cadence (qua Encyclopedia.com).
+      - "Bản nhạc: Beethoven, Ode to Joy (Mutopia Project, bản LilyPond, phổ công cộng); Mozart, Concerto piano số 21, K. 467, chương 2 (IMSLP)."
+    ly_do: "Mục Nguồn: thay link chung tới Open Music Theory và musictheory.net bằng các chương, từ điển và bản nhạc đã đọc khi kiểm định (lượt 1); bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, không đọc được chữ để kiểm."
+  - cu: "câu hỏi: Trong một đoạn nhạc, câu hỏi thường kết thúc bằng gì? | ✓ Kết nửa | Kết trọn | Kết plagal | Câu trả lời mới kết thúc bằng kết trọn."
+    moi: "câu hỏi: Trong một đoạn nhạc, câu hỏi thường kết thúc bằng gì? | ✓ Kết nửa | Kết trọn | Kết plagal | Câu trả lời thường kết thúc bằng kết mạnh hơn, thường là kết trọn."
+    ly_do: "n33 (da-sua): cùng lý do n21."

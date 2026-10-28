@@ -297,7 +297,7 @@ export function veChucNang() {
 	const hop = o.map(
 		([lop, x, y, a, b]) =>
 			`<g class="${lop}"><rect x="${x}" y="${y}" width="80" height="40" rx="10"/>` +
-			`<text x="${x + 40}" y="${y + 17}" font-weight="700">${a}</text><text x="${x + 40}" y="${y + 32}" font-size="9">${b}</text></g>`,
+			`<text x="${x + 40}" y="${y + 17}" font-weight="700">${a}</text><text x="${x + 40}" y="${y + 32}" class="oz-cn-phu">${b}</text></g>`,
 	);
 	return (
 		`<svg class="oz-fig oz-chuc-nang" viewBox="0 0 340 182" role="img" ` +

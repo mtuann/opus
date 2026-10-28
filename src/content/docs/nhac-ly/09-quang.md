@@ -42,11 +42,11 @@ Quy tắc chung:
 - Quãng **1, 4, 5, 8** có dạng **đúng** (perfect). Rộng hơn nửa cung là **tăng**, hẹp hơn nửa cung là **giảm**.
 - Quãng **2, 3, 6, 7** có dạng **trưởng** và **thứ** (thứ hẹp hơn trưởng nửa cung). Rộng hơn trưởng là **tăng**, hẹp hơn thứ là **giảm**.
 
-Quãng 6 nửa cung (4 tăng hoặc 5 giảm) chia đôi quãng tám, gọi là **tritone**. Nó nghe rất căng, từng bị gọi đùa là "quỷ dữ trong âm nhạc".
+Quãng 6 nửa cung (4 tăng hoặc 5 giảm) chia đôi quãng tám, gọi là **tritone** (ba cung nguyên). Tritone được xếp vào quãng nghịch. Từ thời trung đại, việc dùng tritone từng bị cấm; có câu *mi contra fa diabolus est in musica* ("mi đối với fa là quỷ dữ trong âm nhạc") nói về quãng này.
 
 ## Mẹo nhanh: dùng gam trưởng của nốt dưới
 
-Nếu nốt trên **nằm trong gam trưởng của nốt dưới**, thì quãng đó là **trưởng** (với 2, 3, 6, 7) hoặc **đúng** (với 1, 4, 5, 8). Nếu nốt trên thấp hơn nửa cung so với nốt trong gam, quãng đó là **thứ** (hoặc **giảm** với 1, 4, 5, 8).
+Nếu nốt trên **nằm trong gam trưởng của nốt dưới**, thì quãng đó là **trưởng** (với 2, 3, 6, 7) hoặc **đúng** (với 1, 4, 5, 8). Nếu nốt trên thấp hơn nửa cung so với nốt trong gam, quãng đó là **thứ** (hoặc **giảm** với 4, 5, 8).
 
 Ví dụ: Rê → Fa. Gam Rê trưởng có Fa♯. Fa thấp hơn Fa♯ nửa cung, nên Rê → Fa là **quãng 3 thứ**.
 
@@ -64,7 +64,7 @@ C E [CE]2 | C G [CG]2 | C A [CA]2 | C c [Cc]2 |]
 
 ## Quãng ghép
 
-Quãng **lớn hơn quãng 8** gọi là **quãng ghép**. Trừ đi 7 để được quãng đơn tương ứng: quãng **9** là quãng 2 cộng một quãng 8, quãng **10** là quãng 3 cộng một quãng 8, quãng 11 là quãng 4, quãng 12 là quãng 5, quãng 13 là quãng 6. Tính chất giữ nguyên: Đô4 – Rê5 là **9 trưởng** (14 nửa cung). Quãng ghép thường gặp trong tên hợp âm (C9, C13, xem [bài 27](/opus/nhac-ly/27-ky-hieu-hop-am/)) và giữa bè trầm với bè cao.
+Quãng **lớn hơn quãng 8** gọi là **quãng ghép**. Trừ đi 7 để được quãng đơn tương ứng: quãng **9** là quãng 2 cộng một quãng 8, quãng **10** là quãng 3 cộng một quãng 8, quãng 11 là quãng 4, quãng 12 là quãng 5, quãng 13 là quãng 6. Tính chất giữ nguyên: Đô4 – Rê5 là **9 trưởng** (14 nửa cung). Quãng ghép có mặt trong tên hợp âm (như C9, xem [bài 27](/opus/nhac-ly/27-ky-hieu-hop-am/)).
 
 ## Đảo quãng
 
@@ -77,12 +77,12 @@ Ví dụ: Đô – Mi (3 trưởng) đảo thành Mi – Đô (6 thứ).
 
 ## Thuận tai và nghịch tai
 
-| Loại | Quãng | Cảm giác |
+| Loại | Quãng | Độ ổn định |
 |---|---|---|
-| Thuận hoàn toàn | 1, 5, 8 đúng | Rỗng, rất vững |
-| Thuận không hoàn toàn | 3 và 6 (trưởng, thứ) | Ấm, ngọt |
-| Nghịch | 2, 7, tritone | Căng, muốn được giải quyết |
-| Tùy ngữ cảnh | 4 đúng | Thuận khi đứng trên, nghịch khi đứng ở bè trầm |
+| Thuận hoàn toàn | 1, 5, 8 đúng | Ổn định, không cần giải quyết |
+| Thuận không hoàn toàn | 3 và 6 (trưởng, thứ) | Ổn định, không cần giải quyết |
+| Nghịch | 2, 7, tritone | Kém ổn định, như cần được giải quyết |
+| Tùy ngữ cảnh | 4 đúng | Thuận giữa hai bè trên, nghịch khi có bè trầm |
 
 Luyện tai các quãng với [công cụ nhận biết quãng](/opus/luyen-tai/nghe-quang/#luyen-voi-cong-cu) và [bảng giai điệu gợi nhớ](/opus/luyen-tai/).
 
@@ -137,5 +137,7 @@ Trên đàn, quãng thành **độ mở của bàn tay**: quãng 2 là hai ngón
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- *Open Music Theory*: [Intervals](https://viva.pressbooks.pub/openmusictheory/chapter/intervals/); [Introduction to Species Counterpoint](https://viva.pressbooks.pub/openmusictheory/chapter/species-counterpoint/); [Altered and Extended Chords](https://viva.pressbooks.pub/openmusictheory/chapter/altered-and-extended-dominant-chords/).
+- Andre Mount, *Fundamentals, Function, and Form*: chương [11. Intervals](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/11-intervals/).
+- *The Concise Oxford Dictionary of Music*, mục tritone (đọc qua [encyclopedia.com](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/tritone)).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

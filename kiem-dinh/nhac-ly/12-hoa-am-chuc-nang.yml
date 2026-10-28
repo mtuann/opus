@@ -1,0 +1,363 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/12-hoa-am-chuc-nang
+trang: src/content/docs/nhac-ly/12-hoa-am-chuc-nang.md
+nguon_cu: ../opus-zero/docs/nhac-ly/12-hoa-am-chuc-nang.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-27
+    nhanh: moi/d3-l2
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D3-L2 lượt 1, phần 1/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Trang hòa âm chức năng (tầng lõi), có hình vòng chức năng (::hinh{ten="functions"}, src/scripts/ve.js, veChucNang). Nguồn chính: Open Music Theory (OMT), Introduction to Harmony, Cadences, and Phrase Endings (T–PD–D–T, chức năng của từng hợp âm, giọng thứ), Four-Chord Schemas (doo-wop), Minor Scales; đối chiếu MT21C 9.4 Harmonic Function và Standard Chord Progressions, Mount (FFF) ch. 22 (chức năng chủ, át; vi thay I; kết trọn), ch. 24 workbook (pre-dominant), ch. 26 (Pachelbel Canon P. 37, sáu hợp âm đầu). WebFetch ngày 27/10/2026 (bản tóm tắt chữ, không phải HTML thô). Chỗ sửa trang: tên chức năng "Subdominant/S" thành "Predominant/PD" (OMT, MT21C 9.4 gọi là predominant; "subdominant" chỉ là tên bậc IV, và bản ghi subdominant ở thuat-ngu.yml là bậc IV, khớp); "thay thế nhau" thành "thường dùng thay cho I (yếu hơn)"; bỏ "phần lớn âm nhạc từ Bach đến Brahms"; "mạnh nhất" thành "kết trọn"; ba ô cột "Gặp ở đâu" của bảng vòng hợp âm theo nguồn; bỏ "của phần lớn các bài bạn sẽ tập"; mục Nguồn. Mục doi_chu tự viết (không build được); người giao chạy lại so-chu --doi-chu để chuẩn hóa dấu nháy. Chưa chắc (ket_qua null): n18, n19, n20: hai hợp âm cuối IV – V của vòng Canon chỉ có Wikipedia (bậc 3) ở ngoài Mount 26 (sáu hợp âm đầu); cần đối chiếu bản nhạc Mutopia/IMSLP; máy chủ repo không ra mạng, và Mutopia/IMSLP PDF bị chặn với agent. Cần người giao biết: tên tiếng Việt "Hạ át" giữ nguyên (site cũ, bat-dau/tom-tat.md và kiem-tra-dau-vao.md đều dùng); chỉ đổi chữ tiếng Anh và viết tắt trong ngoặc. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): tonic function (chức năng chủ), predominant (hạ át/tiền át), dominant function, harmonic function, phrase model T–PD–D–T, Roman numeral, voice leading (dẫn bè), harmonic minor (gam thứ hòa âm), common tone (nốt chung); đã có: tonic, dominant, subdominant (bậc IV), leading tone, chord, cadence.'
+nguon:
+  - id: omt-intro-harmony
+    bac: 2
+    ten: Open Music Theory, Introduction to Harmony, Cadences, and Phrase Endings
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/
+  - id: omt-4chord
+    bac: 2
+    ten: Open Music Theory, Four-Chord Schemas
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/4-chord-schemas/
+  - id: omt-minor
+    bac: 2
+    ten: Open Music Theory, Minor Scales, Scale Degrees, and Key Signatures (gam thứ hòa âm, tên các bậc)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/
+  - id: fff-phrases
+    bac: 2
+    ten: Andre Mount, Fundamentals, Function, and Form (Milne Publishing, SUNY Geneseo, giáo trình mở), 22. Phrases, Cadences, and Harmonic Function
+    link: https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/22-phrases-cadences-and-harmonic-function/
+  - id: fff-predom
+    bac: 2
+    ten: Andre Mount, Fundamentals, Function, and Form Workbook, 24. The Pre-Dominant Function
+    link: https://milnepublishing.geneseo.edu/fundamentals-function-form-workbook/chapter/24-the-pre-dominant-function/
+  - id: fff-seq26
+    bac: 2
+    ten: "Andre Mount, Fundamentals, Function, and Form (Milne Publishing, SUNY Geneseo, giáo trình mở), 26. Other Diatonic Sequences (Example 26-6: Pachelbel, Canon and Gigue in D major, P. 37, mm. 1-2)"
+    link: https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/26-other-diatonic-sequences/
+  - id: mt21c-function
+    bac: 2
+    ten: Robert Hutchinson, Music Theory for the 21st-Century Classroom (giáo trình mở, University of Puget Sound), 9.4 Harmonic Function
+    link: https://musictheory.pugetsound.edu/mt21c/HarmonicFunction.html
+  - id: mt21c-progressions
+    bac: 2
+    ten: Robert Hutchinson, Music Theory for the 21st-Century Classroom, Standard Chord Progressions (mục ii-V-I)
+    link: https://musictheory.pugetsound.edu/mt21c/StandardChordProgressions.html
+  - id: mt21c-voice
+    bac: 2
+    ten: Robert Hutchinson, Music Theory for the 21st-Century Classroom, 26.7 Voice Leading Root Position Triads in Four Parts
+    link: https://musictheory.pugetsound.edu/mt21c/VoiceLeadingFourPartsRootPosition.html
+  - id: imslp-pachelbel
+    bac: 2
+    ten: "IMSLP, Canon and Gigue in D major, P.37 (Pachelbel, Johann): trang tác phẩm (giọng Rê trưởng, số P.37)"
+    link: https://imslp.org/wiki/Canon_and_Gigue_in_D_major,_P.37_(Pachelbel,_Johann)
+  - id: wiki-pachelbel
+    bac: 3
+    ten: "Wikipedia, Pachelbel's Canon (nguồn bậc 3, chỉ để tìm: dòng bè trầm D A B F♯ G D G A, \"eight chords\")"
+    link: https://en.wikipedia.org/wiki/Pachelbel%27s_Canon
+nhan_dinh:
+  - id: n1
+    cau: Mỗi hợp âm trong giọng có một vai trò (chức năng).
+    loai: dinh-nghia
+    nguon: &a1
+      - omt-intro-harmony
+      - mt21c-function
+    ket_qua: dung
+    ghi_chu: 'OMT, Introduction to Harmony: các hợp âm có chức năng hòa âm (tonic, predominant, dominant). MT21C 9.4: "harmonic function". Phần "giống như các nhân vật trong một câu chuyện" là so sánh minh họa.'
+  - id: n2
+    cau: Hiểu chức năng giúp biết vì sao một chuỗi hợp âm nghe "hợp lý" và tiếp theo nó sẽ đi đâu.
+    loai: quy-tac
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: 'OMT, Introduction to Harmony: câu nhạc đi từ trái sang phải theo chức năng (tonic, predominant, dominant); MT21C 9.4: hợp âm hạ át "tend to progress to chords of dominant function". Suy ra: biết chức năng thì biết hợp âm thường đi tới đâu.'
+  - id: n3
+    cau: "Chức năng Chủ (Tonic, T): hợp âm chính I, hợp âm cùng nhóm vi và (iii); vai trò nhà: ổn định, nghỉ ngơi."
+    loai: dinh-nghia
+    nguon: &a2
+      - omt-intro-harmony
+      - mt21c-function
+      - fff-phrases
+    ket_qua: dung
+    ghi_chu: 'OMT, Introduction to Harmony: tonic = "Chords that sound stable, providing a sense of home or center"; chỉ I (i), glossary: "vi and iii occasionally have tonic function". MT21C 9.4: tonic I "a state of stability and rest"; vi và iii (tonic prolongation) chung hai nốt với tonic. Mount 22: tonic function "conveys a sense of stability". Lưu ý: OMT phần chính xếp iii là predominant yếu, glossary nói iii thỉnh thoảng có chức năng chủ; trang ghi iii trong ngoặc là hợp.'
+  - id: n4
+    cau: "Chức năng Hạ át (Predominant / tiền át, PD): hợp âm chính IV, hợp âm cùng nhóm ii; vai trò rời nhà, chuẩn bị."
+    loai: dinh-nghia
+    nguon:
+      - omt-intro-harmony
+      - mt21c-function
+      - fff-predom
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Hạ át (Subdominant / tiền át, S)". Chữ mới: "Hạ át (Predominant / tiền át, PD)". Lý do: OMT và MT21C 9.4 gọi chức năng này là predominant, viết tắt PD ("Chords that transition away from tonic function toward dominant function"; IV và ii là strong predominants); "subdominant" ở OMT/MT21C chỉ là tên bậc IV (OMT, Minor Scales: "Subdominant (4̂, fa)"); Mount (workbook ch. 24) dùng "pre-dominant", không dùng "subdominant". Chữ viết tắt "S" không có ở các nguồn nên bỏ. Tên tiếng Việt "Hạ át" giữ (lựa chọn của site, cùng tờ tóm tắt bat-dau/tom-tat.md). Chưa đối chiếu: nguồn bậc 2 ngoài ba giáo trình này có dùng "subdominant" làm tên chức năng (Riemann, nhiều sách Anh); không đọc được.'
+  - id: n5
+    cau: "Chức năng Át (Dominant, D): hợp âm chính V, V7, hợp âm cùng nhóm vii°; vai trò căng thẳng, đòi trở về nhà."
+    loai: dinh-nghia
+    nguon: *a2
+    ket_qua: dung
+    ghi_chu: 'OMT, Introduction to Harmony: dominant = "Chords that provide a sense of urgency to resolve toward the tonic chord"; V và vii° là dominant. Mount 22: dominant function "usually performed by a V or V7 chord", "a sense of urgency"; viio6 là "weak dominant substitute". "Căng thẳng" diễn đạt lại "urgency"; giữ.'
+  - id: n6
+    cau: 'Hợp âm cùng nhóm dùng chung nhiều nốt: vi (La – Đô – Mi) chung hai nốt với I (Đô – Mi – Sol), nên vi thường được dùng thay cho I (một hợp âm chủ "yếu" hơn).'
+    loai: quy-tac
+    nguon:
+      - mt21c-function
+      - fff-phrases
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "... nên có thể thay thế nhau." Chữ mới: "... nên vi thường được dùng thay cho I (một hợp âm chủ "yếu" hơn)." Lý do: Mount 22: "A vi chord may be seen as a weak tonic substitute", "The vi chord shares two out of the three scale degrees that make up a tonic triad"; chữ cũ "thay thế nhau" hai chiều mạnh hơn nguồn. MT21C 9.4: vi, iii "share two common tones with the tonic triad". Kiểm các cặp cùng nhóm: ii (Rê–Fa–La) và IV (Fa–La–Đô) chung Fa, La; vii° (Si–Rê–Fa) và V (Sol–Si–Rê) chung Si, Rê; iii (Mi–Sol–Si) và I chung Mi, Sol: "nhiều nốt" (hai trên ba) đúng cho mọi cặp.'
+  - id: n7
+    cau: 'Hình vòng chức năng: ô CHỦ ghi "I · vi".'
+    loai: dinh-nghia
+    nguon: *a2
+    ket_qua: dung
+    ghi_chu: 'Chữ trong hình: src/scripts/ve.js, veChucNang (mảng o: "CHỦ", "I · vi"). Khớp hàng Chủ của bảng (n3).'
+  - id: n8
+    cau: 'Hình vòng chức năng: ô HẠ ÁT ghi "IV · ii".'
+    loai: dinh-nghia
+    nguon:
+      - omt-intro-harmony
+      - mt21c-function
+    ket_qua: dung
+    ghi_chu: 'Chữ trong hình: src/scripts/ve.js, veChucNang ("HẠ ÁT", "IV · ii"). IV và ii là predominant (OMT, MT21C).'
+  - id: n9
+    cau: 'Hình vòng chức năng: ô ÁT ghi "V · V7 · vii°".'
+    loai: dinh-nghia
+    nguon: *a2
+    ket_qua: dung
+    ghi_chu: 'Chữ trong hình: src/scripts/ve.js, veChucNang ("ÁT", "V · V7 · vii°"). V, V7, vii° là dominant (OMT, Mount 22).'
+  - id: n10
+    cau: 'Hình vòng chức năng: mũi tên đi từ Chủ sang Hạ át ("rời nhà"), từ Hạ át sang Át ("chuẩn bị"), từ Át về Chủ ("về nhà").'
+    loai: quy-tac
+    nguon:
+      - omt-intro-harmony
+      - mt21c-function
+    ket_qua: dung
+    ghi_chu: 'Chữ và chiều mũi tên: veChucNang: mui = [chủ→hạ át "rời nhà"], [hạ át→át "chuẩn bị"], [át→chủ "về nhà"]. Khớp mẫu T → PD → D → T (OMT: "tonic–predominant–dominant(–tonic)"; MT21C 9.4: T–PD–D–T). Aria-label của hình mô tả cùng thứ tự.'
+  - id: n11
+    cau: 'Hình dưới bảng ba chức năng (::hinh{ten="functions"}) hiện đúng các chữ của bảng: Chủ I · vi, Hạ át IV · ii, Át V · V7 · vii°.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Kiểm trong module dựng hình: src/scripts/ve.js, hàm veChucNang (mảng o và mui, aria-label "Vòng chức năng hòa âm: Chủ (I, vi) rời nhà sang Hạ át (IV, ii), chuẩn bị cho Át (V, V7, vii°), rồi về nhà ở Chủ"). Chữ trong hình khớp chữ hình cũ (lô chuyển đã so).'
+  - id: n12
+    cau: Nhiều bản nhạc, từ nhạc cổ điển đến nhạc pop, có câu nhạc đi theo vòng ổn định → rời đi → căng thẳng → trở về (chủ, hạ át, át, chủ).
+    loai: quy-tac
+    nguon:
+      - omt-intro-harmony
+      - mt21c-function
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: \"Phần lớn âm nhạc từ Bach đến Brahms (và cả nhạc pop hôm nay) đi theo vòng ...\". Chữ mới: \"Nhiều bản nhạc, từ nhạc cổ điển đến nhạc pop, có câu nhạc đi theo vòng ...\". Lý do: \"phần lớn ... từ Bach đến Brahms\" là mức độ không kiểm được; OMT, Introduction to Harmony: phạm vi là \"common-practice Western classical music\" (\"we'll focus on how composers of common-practice Western classical music use harmony in a phrase\"); MT21C 9.4: mẫu T–PD–D–T có ví dụ từ Bach, Mozart, Chopin và bài hát phổ thông. Đổi tên \"S\" thành \"PD\" ở tiêu đề mục (xem ha-at)."
+  - id: n13
+    cau: 'Khuông nhạc "I – IV – V7 – I trong Đô trưởng": [C,EGc] [F,FAc] [G,DFB] [C,EGc].'
+    loai: so-lieu
+    nguon: *a1
+    ket_qua: dung
+    ghi_chu: "Khối abc 1: C, F, G7 (Sol–Si–Rê–Fa), C. Xem khuong_nhac."
+  - id: n14
+    cau: Bè trầm V → I (đi xuống quãng 5, hay lên quãng 4) là chuyển động của kết trọn (V – I), loại kết nghe dứt khoát nhất trong nhạc cổ điển phương Tây.
+    loai: quy-tac
+    nguon:
+      - fff-phrases
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "là chuyển động mạnh nhất trong hòa âm phương Tây." Chữ mới: câu trên. Lý do: "mạnh nhất trong hòa âm" không có nguồn; Mount 22: kết đúng (authentic) là "the most conclusive sounding cadences in tonal Western art music"; PAC = "a root-position V(7) chord moving to a root-position I chord". V → I ở bè trầm: Sol → Đô là xuống quãng 5 đúng hay lên quãng 4 đúng (đếm nửa cung: 7 xuống, 5 lên). Chưa chắc: "kết trọn" của site (bài 13) là PAC; câu này nói rộng hơn một chút ("kết đúng" gồm cả kết đúng không hoàn toàn), nhưng chữ trang chỉ nói V – I.'
+  - id: n15
+    cau: Vòng I – IV – V – I (C – F – G – C) là một cách đi hết vòng T → PD → D → T.
+    loai: quy-tac
+    nguon:
+      - mt21c-function
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ (cột Gặp ở đâu): "Thánh ca, dân ca, kết bài". Chữ mới: "Một cách đi hết vòng T → PD → D → T". Lý do: "thánh ca, dân ca" không có nguồn; MT21C 9.4: mẫu T–PD–D–T "can be realized in four possible ways: I–ii–V–I, I–IV–V–I, I–IV–vii°–I, and I–ii–vii°–I". Ghi chú: chữ "cách đơn giản nhất" trong bản nháp đã bỏ vì không kiểm được.'
+  - id: n16
+    cau: 'Vòng I – vi – IV – V (C – Am – F – G): vòng "doo-wop" của nhạc pop thập niên 1950–60, vẫn được dùng đến nay.'
+    loai: lich-su
+    nguon:
+      - omt-4chord
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Rất nhiều bài hát thập niên 1950 đến nay". Chữ mới: "Vòng "doo-wop" của nhạc pop thập niên 1950–60, vẫn được dùng đến nay". Lý do: OMT, Four-Chord Schemas: tên "50s doo-wop" từ "common use in rock ballads from the 1950s and early 1960s" (Duke of Earl, 1962), và "has continued to be used frequently ever since" (Total Eclipse of the Heart 1983, Friday 2011); "rất nhiều bài" không kiểm được.'
+  - id: n17
+    cau: "Vòng ii – V – I (Dm – G – C): hạ át ii, át V rồi chủ I; một trong những vòng thường gặp nhất của jazz."
+    loai: lich-su
+    nguon:
+      - mt21c-progressions
+      - mt21c-function
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Kết câu trong nhạc cổ điển, nền tảng của jazz". Chữ mới: "Hạ át ii, át V rồi chủ I; một trong những vòng thường gặp nhất của jazz". Lý do: MT21C, Standard Chord Progressions: "The II–V–I is one of most common progressions in jazz"; "nền tảng của jazz" không kiểm được; "kết câu trong nhạc cổ điển": MT21C 9.4 cho I–ii–V–I là một cách thực hiện T–PD–D–T (nhưng không nói "kết câu").'
+  - id: n18
+    cau: Vòng hợp âm của Pachelbel Canon là I – V – vi – iii – IV – I – IV – V (C – G – Am – Em – F – C – F – G trong Đô trưởng).
+    loai: cau-truc
+    nguon:
+      - fff-seq26
+      - imslp-pachelbel
+      - wiki-pachelbel
+    ket_qua: null
+    ghi_chu: 'chưa chắc: sáu hợp âm đầu I–V–vi–iii–IV–I được Mount 26 xác nhận ("the order of harmonies (I–V–vi–iii–IV–I)", Example 26-6: Pachelbel, Canon and Gigue in D major, P. 37, mm. 1–2; các hợp âm "all appear in root position"); hai hợp âm cuối IV – V chỉ thấy ở Wikipedia (bậc 3: bè cello D, A, B, F♯, G, D, G, A, "implying a progression of eight chords", dẫn Beckmann 1918–19, tr. 271), chưa đối chiếu bản nhạc: Mutopia (Canon per 3 Violini e Basso, id 2047) và IMSLP đều không mở được từ môi trường lượt này (PDF IMSLP chặn bot; Mutopia bị chặn). Việc cần: người giao hay lượt 2/review mở bản Mutopia hay IMSLP (P.37) và đọc bè basso 8 nốt đầu. Cách chuyển sang Đô trưởng là phép chuyển giọng (Rê → Đô): D A B F♯ G D G A thành C G A E F C F G, đúng.'
+  - id: n19
+    cau: "Vòng hợp âm của Canon, giọng Rê trưởng: D – A – Bm – F♯m – G – D – G – A."
+    loai: cau-truc
+    nguon:
+      - fff-seq26
+      - imslp-pachelbel
+      - wiki-pachelbel
+    ket_qua: null
+    ghi_chu: "chưa chắc: cùng điều kiện với câu trên (hai hợp âm cuối). Giọng Rê trưởng: IMSLP, Canon and Gigue in D major, P.37 (Key: D major) và Mount 26 (Canon and Gigue in D major). Chuyển giọng đúng: I = D, V = A, vi = Bm, iii = F♯m, IV = G."
+  - id: n20
+    cau: Khuông nhạc "Pachelbel – vòng hợp âm của Canon" gồm D, A, Bm, F♯m, G, D, G, A (K:D) như câu trên.
+    loai: so-lieu
+    nguon:
+      - fff-seq26
+    ket_qua: null
+    ghi_chu: "chưa chắc: khuông soạn lại theo vòng hợp âm của câu trên; đúng theo câu ấy (xem khuong_nhac), nên theo kết quả của nó."
+  - id: n21
+    cau: Nghe Pachelbel Canon và thử nhận ra lúc vòng hợp âm quay lại từ đầu.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: "Bài tập nghe; điều ngầm hiểu: vòng hợp âm của Canon lặp lại (Wikipedia, bậc 3: ostinato ở bè trầm; Mount 26: sequence trên bè trầm). Không trái trang lõi nào."
+  - id: n22
+    cau: "Giọng thứ có cùng ba chức năng: i (chủ), iv và ii° (hạ át), V và vii° (át)."
+    loai: quy-tac
+    nguon:
+      - omt-intro-harmony
+    ket_qua: dung
+    ghi_chu: 'OMT, Introduction to Harmony: tonic i; strong predominants IV và ii (iv và iio trong giọng thứ); dominant V và viio, "the same chords are dominant in minor".'
+  - id: n23
+    cau: Hợp âm át của giọng thứ phải dùng cảm âm từ gam thứ hòa âm (Sol♯ trong La thứ) để có lực kéo về chủ âm.
+    loai: quy-tac
+    nguon:
+      - omt-intro-harmony
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: 'OMT, Introduction to Harmony: "you need to use the leading-tone, ti, in your V chord ... to give it momentum toward the tonic" (giọng thứ); OMT, Minor Scales: gam thứ hòa âm "Like natural minor, but with a raised leading tone"; A harmonic minor: A B C D E F G♯.'
+  - id: n24
+    cau: 'Khuông nhạc "i – iv – V7 – i trong La thứ": [A,,EAc] [D,DFA] [E,D^GB] [A,,EAc].'
+    loai: so-lieu
+    nguon:
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: "Khối abc: La thứ (Am), Rê thứ (Dm), Mi7 (Mi – Sol♯ – Si – Rê, có G♯ của gam hòa âm), La thứ. Xem khuong_nhac."
+  - id: n25
+    cau: "Khi chuyển hợp âm, mỗi bè nên đi gần nhất có thể: giữ nguyên nốt chung, các nốt khác đi bước liền; đây là nguyên tắc dẫn bè (voice leading), giúp hòa âm nghe mượt mà."
+    loai: quy-tac
+    nguon:
+      - mt21c-voice
+    ket_qua: dung
+    ghi_chu: 'MT21C 26.7: "retain the two common tones and move the other voice by step" (bè trầm đi quãng 3 hay 6); "Retain the common tone and move the other two voices by step" (bè trầm đi quãng 4 hay 5). Chưa tìm được câu nguồn dùng đúng tên "voice leading" kèm định nghĩa chung (trang MT21C 26.7 là hướng dẫn cụ thể); đúng nguyên tắc. "Giúp nghe mượt mà" là hệ quả diễn đạt lại, không kiểm riêng.'
+  - id: n26
+    cau: Trong các ví dụ I – IV – V7 – I (Đô trưởng), vòng Canon (Rê trưởng) và i – iv – V7 – i (La thứ), bè trên cùng hầu như chỉ đi bước nhỏ.
+    loai: so-lieu
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Kiểm từ mã ABC: bè trên I–IV–V7–I: Đô, Đô, Si, Đô (giữ rồi bước nửa cung); Canon: Rê, Đô♯, Rê, Đô♯, Rê, Rê, Rê, Đô♯ (bước nửa cung); La thứ: Đô (Đô5) xuống La (Đô → La, quãng 3), La → Si → Đô (bước liền). Một bước nhảy quãng 3 trong mười lăm nốt: "hầu như" đúng.'
+  - id: n27
+    cau: Chơi chuỗi I – IV – I – V7 – I bằng hai tay (tay trái nốt gốc, tay phải ba nốt) ở vài giọng quen; đó là "vốn từ" hòa âm cơ bản.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập; khớp bat-dau/lo-trinh-choi.md (bước "chuỗi I–IV–I–V7–I ở Đô, Sol, Fa" cùng ../opus-zero/docs/piano/hop-am-rai.md). Chữ cũ "của phần lớn các bài bạn sẽ tập" đã bỏ: mức độ không kiểm được.'
+  - id: n28
+    cau: Có trang Hợp âm, hợp âm rải và hình đệm (/opus/piano/hop-am-rai/) và trang Hòa âm bên phím (/opus/piano/hoa-am/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Chưa chuyển: ../opus-zero/docs/piano/hop-am-rai.md (tiêu đề "Hợp âm, hợp âm rải và hình đệm") và ../opus-zero/docs/piano/hoa-am/index.md (tiêu đề "Hòa âm bên phím và ứng tác"). Lô chuyển giữ hai trang ở đường dẫn này.'
+  - id: n29
+    cau: "Trong Sol trưởng: Chủ là G (I) và Em (vi); Hạ át là C (IV) và Am (ii); Át là D7 (V7)."
+    loai: so-lieu
+    nguon: *a2
+    ket_qua: dung
+    ghi_chu: "Gam Sol trưởng: I = G, ii = Am, iii = Bm, IV = C, V = D (D7 = D F♯ A C), vi = Em; xếp theo bảng ba chức năng (n3, n4, n5)."
+  - id: n30
+    cau: Công cụ vòng quãng năm (/opus/luyen-tap/hoa-bieu/#vong-quang-nam) có nút "Nghe I – IV – V – I" khi chọn giọng trưởng.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Site mới: src/scripts/ve.js dòng 274 (nút "Nghe I – IV – V – I", chỉ khi giọng không phải thứ); ../opus-zero/docs/assets/js/circle.js dòng 106 (cùng nút, không hiện ở giọng thứ); ../opus-zero/docs/luyen-tap/hoa-bieu.md có mục "## Vòng quãng năm" (neo vong-quang-nam). Lô chuyển trang luyen-tap/hoa-bieu giữ mục và neo ấy.'
+  - id: n31
+    cau: Trong Đô trưởng, hợp âm có chức năng át là G (bậc V).
+    loai: dinh-nghia
+    nguon: *a2
+    ket_qua: dung
+    ghi_chu: Bậc V của Đô trưởng = G; V là dominant (OMT, Mount 22).
+  - id: n32
+    cau: Hợp âm vi có thể thay cho I vì cùng chức năng chủ (vi chung hai nốt với I).
+    loai: quy-tac
+    nguon:
+      - mt21c-function
+      - fff-phrases
+    ket_qua: dung
+    ghi_chu: "Như câu về vi và I: Mount 22: weak tonic substitute; MT21C 9.4: two common tones."
+  - id: n33
+    cau: Thứ tự chức năng điển hình là Chủ → Hạ át → Át → Chủ (ổn định → rời đi → căng thẳng → trở về).
+    loai: quy-tac
+    nguon:
+      - omt-intro-harmony
+      - mt21c-function
+    ket_qua: dung
+    ghi_chu: 'OMT: "tonic–predominant–dominant(–tonic)"; MT21C 9.4: T–PD–D–T.'
+  - id: n34
+    cau: Trong La thứ, hợp âm át (V) gồm Mi – Sol♯ – Si, dùng cảm âm Sol♯ từ gam thứ hòa âm.
+    loai: so-lieu
+    nguon:
+      - omt-intro-harmony
+      - omt-minor
+    ket_qua: dung
+    ghi_chu: 'A harmonic minor: A B C D E F G♯; V = E G♯ B (trưởng); OMT, Roman Numerals: "the minor v chord becomes a major V chord".'
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - giong
+      - hop-am
+      - nhip
+    ket_qua: dung
+    ghi_chu: 'K:C, M:4/2, L:1/2. Bốn hợp âm nốt trắng: [C,EGc] (I), [F,FAc] (IV), [G,DFB] (V7: Sol–Rê–Fa–Si), [C,EGc] (I). Đủ 4 phách nốt trắng. Khớp tiêu đề "I – IV – V7 – I trong Đô trưởng". Bè trên: Đô, Đô, Si, Đô.'
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - giong
+      - hop-am
+      - nhip
+    ket_qua: dung
+    ghi_chu: "K:D (hóa biểu F♯, C♯), M:2/2, L:1/2. Bốn ô, mỗi ô hai hợp âm nốt trắng: D ([D,FAd]), A ([A,,EAc]: A–C♯–E), Bm ([B,,FBd]: B–D–F♯), F♯m ([F,,FAc]: F♯–A–C♯), G ([G,,GBd]), D, G, A: đúng vòng I V vi iii IV I IV V của Rê trưởng. Kết quả theo câu về vòng Canon (chưa chắc ở hai hợp âm cuối). Đủ 2 phách mỗi ô."
+  - khoi: 3
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - giong
+      - hop-am
+      - nhip
+    ket_qua: dung
+    ghi_chu: "K:Am (không hóa biểu), M:4/2, L:1/2. Bốn hợp âm nốt trắng: [A,,EAc] (Am), [D,DFA] (Dm), [E,D^GB] (E7: Mi–Sol♯–Si–Rê, G♯ do ^G), [A,,EAc]: i – iv – V7 – i của La thứ, khớp tiêu đề. Đủ 4 phách nốt trắng."
+doi_chu:
+  - cu: Hạ át (Subdominant / tiền át, S)
+    moi: Hạ át (Predominant / tiền át, PD)
+    ly_do: 'n4 (da-sua): OMT, MT21C 9.4 gọi chức năng là predominant (PD); "subdominant" chỉ là tên bậc IV; bỏ viết tắt "S" (không nguồn nào dùng).'
+  - cu:
+      - "Hợp âm cùng nhóm dùng chung nhiều nốt: vi (La – Đô – Mi) chung hai nốt với I (Đô – Mi – Sol), nên có thể thay thế nhau."
+      - "Câu chuyện cơ bản: T → S → D → T"
+      - "Phần lớn âm nhạc từ Bach đến Brahms (và cả nhạc pop hôm nay) đi theo vòng ổn định → rời đi → căng thẳng → trở về:"
+      - Bè trầm V → I (đi xuống quãng 5, hay lên quãng 4) là chuyển động mạnh nhất trong hòa âm phương Tây.
+    moi:
+      - 'Hợp âm cùng nhóm dùng chung nhiều nốt: vi (La – Đô – Mi) chung hai nốt với I (Đô – Mi – Sol), nên vi thường được dùng thay cho I (một hợp âm chủ "yếu" hơn).'
+      - "Câu chuyện cơ bản: T → PD → D → T"
+      - "Nhiều bản nhạc, từ nhạc cổ điển đến nhạc pop, có câu nhạc đi theo vòng ổn định → rời đi → căng thẳng → trở về:"
+      - Bè trầm V → I (đi xuống quãng 5, hay lên quãng 4) là chuyển động của kết trọn (V – I), loại kết nghe dứt khoát nhất trong nhạc cổ điển phương Tây.
+    ly_do: 'n6 (da-sua): Mount 22: vi là "weak tonic substitute"; chữ cũ "thay thế nhau" hai chiều mạnh hơn nguồn.; n4, n12 (da-sua): tên chức năng PD thay S, theo OMT và MT21C 9.4.; n12 (da-sua): "phần lớn ... từ Bach đến Brahms" không kiểm được; OMT giới hạn ở common-practice, MT21C 9.4 có ví dụ cả nhạc phổ thông.; n14 (da-sua): "mạnh nhất trong hòa âm phương Tây" không có nguồn; Mount 22 nói kết đúng là kết nghe dứt khoát nhất trong nhạc cổ điển.'
+  - cu: Thánh ca, dân ca, kết bài
+    moi: Một cách đi hết vòng T → PD → D → T
+    ly_do: 'n15 (da-sua): "thánh ca, dân ca, kết bài" không có nguồn; MT21C 9.4: I–IV–V–I là một cách thực hiện T–PD–D–T.'
+  - cu: Rất nhiều bài hát thập niên 1950 đến nay
+    moi: Vòng "doo-wop" của nhạc pop thập niên 1950–60, vẫn được dùng đến nay
+    ly_do: 'n16 (da-sua): OMT, Four-Chord Schemas: tên "50s doo-wop", dùng trong rock ballads 1950–đầu 1960, tiếp tục được dùng; bỏ "rất nhiều bài" (không kiểm được).'
+  - cu: Kết câu trong nhạc cổ điển, nền tảng của jazz
+    moi: Hạ át ii, át V rồi chủ I; một trong những vòng thường gặp nhất của jazz
+    ly_do: 'n17 (da-sua): MT21C, Standard Chord Progressions: ii–V–I "one of most common progressions in jazz"; bỏ "nền tảng của jazz" (không kiểm được).'
+  - cu: 'Chơi chuỗi I – IV – I – V7 – I bằng hai tay (tay trái nốt gốc, tay phải ba nốt) ở vài giọng quen. Đó là "vốn từ" hòa âm của phần lớn các bài bạn sẽ tập: xem Hợp âm, hợp âm rải và hình đệm, rồi Hòa âm bên phím.'
+    moi: 'Chơi chuỗi I – IV – I – V7 – I bằng hai tay (tay trái nốt gốc, tay phải ba nốt) ở vài giọng quen. Đó là "vốn từ" hòa âm cơ bản: xem Hợp âm, hợp âm rải và hình đệm, rồi Hòa âm bên phím.'
+    ly_do: 'n27: bỏ "của phần lớn các bài bạn sẽ tập" (mức độ không kiểm được).'
+  - cu: Open Music Theory; musictheory.net.
+    moi:
+      - "Open Music Theory: Introduction to Harmony, Cadences, and Phrase Endings; Four-Chord Schemas; Minor Scales, Scale Degrees, and Key Signatures."
+      - "Andre Mount, Fundamentals, Function, and Form: chương 22. Phrases, Cadences, and Harmonic Function và 26. Other Diatonic Sequences; workbook, 24. The Pre-Dominant Function."
+      - "Robert Hutchinson, Music Theory for the 21st-Century Classroom: 9.4 Harmonic Function, Standard Chord Progressions, 26.7 Voice Leading Root Position Triads in Four Parts."
+      - "Pachelbel, Canon and Gigue in D major, P. 37: trang tác phẩm trên IMSLP."
+    ly_do: "Mục Nguồn: thay link chung tới Open Music Theory bằng các chương đã đọc khi kiểm định (lượt 1), thêm Mount ch. 22, 24 (workbook), 26, MT21C 9.4, Standard Chord Progressions và 26.7, trang IMSLP của Canon P. 37; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, agent không đọc được chữ để kiểm."

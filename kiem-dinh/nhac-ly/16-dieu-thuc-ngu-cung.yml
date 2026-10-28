@@ -1,0 +1,468 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-ly/16-dieu-thuc-ngu-cung
+trang: src/content/docs/nhac-ly/16-dieu-thuc-ngu-cung.md
+nguon_cu: ../opus-zero/docs/nhac-ly/16-dieu-thuc-ngu-cung.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-27
+    nhanh: moi/d3-l2
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D3-L2 lượt 1, phần 2/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Bài nhạc lý 16 (điệu thức và ngũ cung). Nguồn chính: OMT Diatonic Modes, COD (Modes), Britannica (Pentatonic scale; Mode chỉ đọc được đề mục), Johnson (Royal Holloway, Pagodes), Trần Thanh Hà 2013, Keefe 1991 (qua bản tóm tắt), Folkways, UNESCO. Sửa ở lượt 1: lời giới thiệu; cột "Màu sắc" thành "Quãng ba trên chủ âm"; Mẹo; đoạn "Nghe điệu thức ở đâu?" (chỉ giữ Gregorian); "Dạng quen thuộc nhất"; "không có quãng 2 thứ hay tritone" thay "hài hòa"; đoạn ngũ cung phân bố (bỏ Dvořák, blues...); mục Việt Nam (bỏ công xích và Sol–La–Đô–Rê–Mi, đàn bầu/đàn kìm, bộ khung/phần hồn; thêm Keefe, Folkways); câu 4 trắc nghiệm; tên bộ luyện tai; mục Nguồn. Chưa chắc: không. Thuật ngữ tiếng Việt chưa có trong src/data/thuat-ngu.yml (cho D3-L5): "điệu thức", "ngũ cung", "Hò Xự Xang Xê Cống".'
+nguon:
+  - id: omt-modes
+    bac: 2
+    ten: Open Music Theory, Diatonic Modes (bảy điệu thức; "major-ish / minor-ish"; công thức khoảng cách)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/diatonic-modes/
+  - id: cod-modes
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục Modes (qua Encyclopedia.com)
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/modes
+  - id: brit-mode
+    bac: 2
+    ten: Encyclopaedia Britannica, Mode (chỉ đọc được các đề mục)
+    link: https://www.britannica.com/art/mode-music
+  - id: brit-pent
+    bac: 2
+    ten: Encyclopaedia Britannica, Pentatonic scale
+    link: https://www.britannica.com/art/pentatonic-scale
+  - id: johnson
+    bac: 2
+    ten: 'Julian Johnson (Royal Holloway, Đại học London), Claude Debussy: His Musical Style and Influences, Estampes and Nocturnes (mục Pagodes: gamelan Java, Triển lãm Paris 1889, năm nốt B C# D# F# G#)'
+    link: https://royalholloway.ac.uk/media/19430/debussy%20teachinghub.pdf
+  - id: tth2013
+    bac: 2
+    ten: Trần Thanh Hà, Thang năm âm người Việt dưới góc nhìn văn hóa học, Tạp chí Khoa học Xã hội số 1(173), 2013
+    link: https://vjol.info.vn/khxh/article/download/15034/13490/
+  - id: keefe
+    bac: 2
+    ten: Keefe, Burns, Nguyen, Vietnamese Modal Scales of the Dan Tranh, Music Perception, 1991 (qua bản tóm tắt của labs.sonicfield.org)
+    link: https://labs.sonicfield.org/library/vietnamese-modal-scales-of-the-dan-tranh
+  - id: folkways
+    bac: 2
+    ten: 'Vietnam: Tradition of the South, lời giới thiệu đĩa, UNESCO / Smithsonian Folkways (hơi Bắc vui; Oán buồn; Ai u sầu)'
+    link: https://folkways-media.si.edu/docs/folkways/artwork/UNES08049.pdf
+  - id: unesco-ctr
+    bac: 2
+    ten: UNESCO, Ca trù singing (ghi danh 2009, Urgent Safeguarding List)
+    link: https://ich.unesco.org/en/USL/ca-tru-singing-00309
+  - id: unesco-dctt
+    bac: 2
+    ten: UNESCO, Art of Đờn ca tài tử music and song in Southern Viet Nam (ghi danh 2013, Representative List)
+    link: https://ich.unesco.org/en/RL/art-of-n-ca-tai-t-music-and-song-in-southern-viet-nam-00733
+nhan_dinh:
+  - id: n1
+    cau: Gam trưởng và gam thứ là hai thang âm bạn đã học. Nhưng trong âm nhạc phương Tây cổ hơn, và trong rất nhiều nền âm nhạc khác, kể cả âm nhạc Việt Nam, người ta dùng những thang âm khác.
+    loai: lich-su
+    nguon:
+      - cod-modes
+      - brit-pent
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Gam trưởng và gam thứ thống trị âm nhạc phương Tây từ khoảng năm 1600. Nhưng trước đó, ..." Chữ mới bỏ mốc "khoảng năm 1600" (không nguồn đã mở ghi mốc này) và nói theo thứ đã học. COD, Modes: điệu thức có trước hệ trưởng/thứ; Britannica, Pentatonic scale: thang năm âm có ở nhiều nền âm nhạc.'
+  - id: n2
+    cau: Lấy các phím trắng của piano, nhưng bắt đầu từ những nốt khác nhau, ta được 7 điệu thức (mode).
+    loai: dinh-nghia
+    nguon:
+      - omt-modes
+    ket_qua: dung
+    ghi_chu: 'OMT, Diatonic Modes: bảy điệu thức là bảy cách bắt đầu gam diatonic (phím trắng) từ bảy nốt; Ionian trên Đô, Dorian trên Rê...'
+  - id: n3
+    cau: Tên các điệu thức mượn từ Hy Lạp cổ (nhưng không giống hệ thống Hy Lạp thật).
+    loai: lich-su
+    nguon:
+      - cod-modes
+    ket_qua: dung
+    ghi_chu: 'COD, Modes: tên Hy Lạp được dùng cho điệu thức thời Trung đại, "though incorrect, have become accepted"; tức không trùng hệ thống Hy Lạp cổ.'
+  - id: n4
+    cau: 'Đô – Ionian: chính là gam trưởng; quãng ba trên chủ âm trưởng.'
+    loai: dinh-nghia
+    nguon:
+      - omt-modes
+    ket_qua: dung
+    ghi_chu: 'OMT: Ionian giống gam trưởng; "major-ish".'
+  - id: n5
+    cau: 'Rê – Dorian: gam thứ nhưng bậc 6 nâng; quãng ba trên chủ âm thứ.'
+    loai: dinh-nghia
+    nguon:
+      - omt-modes
+    ket_qua: dung
+    ghi_chu: 'OMT: Dorian là natural minor với bậc 6 nâng ("minor-ish"). Suy kiểm: Rê Dorian có Si tự nhiên, F (thứ ba) thứ.'
+  - id: n6
+    cau: 'Mi – Phrygian: thứ, bậc 2 hạ; quãng ba thứ.'
+    loai: dinh-nghia
+    nguon:
+      - omt-modes
+    ket_qua: dung
+    ghi_chu: 'OMT: Phrygian là natural minor với bậc 2 hạ.'
+  - id: n7
+    cau: 'Fa – Lydian: trưởng, bậc 4 nâng; quãng ba trưởng.'
+    loai: dinh-nghia
+    nguon:
+      - omt-modes
+    ket_qua: dung
+    ghi_chu: 'OMT: Lydian là major với bậc 4 nâng.'
+  - id: n8
+    cau: 'Sol – Mixolydian: trưởng, bậc 7 hạ; quãng ba trưởng.'
+    loai: dinh-nghia
+    nguon:
+      - omt-modes
+    ket_qua: dung
+    ghi_chu: 'OMT: Mixolydian là major với bậc 7 hạ.'
+  - id: n9
+    cau: 'La – Aeolian: chính là gam thứ tự nhiên; quãng ba thứ.'
+    loai: dinh-nghia
+    nguon:
+      - omt-modes
+    ket_qua: dung
+    ghi_chu: 'OMT: Aeolian = natural minor.'
+  - id: n10
+    cau: 'Si – Locrian: thứ, bậc 2 và 5 hạ; quãng ba thứ.'
+    loai: dinh-nghia
+    nguon:
+      - omt-modes
+    ket_qua: dung
+    ghi_chu: 'OMT: Locrian là natural minor với bậc 2 và 5 hạ (công thức khoảng cách N-C-C-N-C-C-C, suy kiểm trên phím trắng Si–Si).'
+  - id: n11
+    cau: Cột "Quãng ba trên chủ âm" (Trưởng/Thứ) thay cho cột "Màu sắc" (Sáng, ...).
+    loai: dinh-nghia
+    nguon:
+      - omt-modes
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: cột "Màu sắc" (Sáng, ...). Chữ mới: quãng ba trên chủ âm, đo được theo cấu trúc (OMT chia thành "major-ish" và "minor-ish"); "màu sắc" là cảm nhận chủ quan.'
+  - id: n12
+    cau: 'Mẹo: so mỗi điệu thức với gam trưởng hoặc thứ gần nhất để thấy bậc nào khác, rồi tìm bậc đó khi nghe.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Mẹo: mỗi điệu thức có một nốt đặc trưng ... Khi nghe, hãy tìm nốt đó." Chữ mới dựa vào cột "So với gam trưởng/thứ" của chính bảng; bỏ khái niệm "nốt đặc trưng" (không nguồn đã mở dùng cách gọi này).'
+  - id: n13
+    cau: 'Muốn có điệu thức trên nốt gốc khác, chỉ cần áp công thức khoảng cách của nó. Ví dụ Dorian từ La: La – Si – Đô – Rê – Mi – Fa♯ – Sol – La.'
+    loai: quy-tac
+    nguon:
+      - omt-modes
+    ket_qua: dung
+    ghi_chu: 'OMT: điệu thức xây trên mọi nốt bằng công thức khoảng cách. La Dorian: C N C C C N C từ La = A B C D E F♯ G A ✓.'
+  - id: n14
+    cau: Thánh ca Gregorian dùng các điệu thức này, nên chúng còn được gọi là điệu thức Gregorian (hay điệu thức nhà thờ).
+    loai: lich-su
+    nguon:
+      - cod-modes
+      - brit-mode
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Thánh ca Gregorian và nhạc Phục hưng (trước khi có trưởng/thứ). Debussy và Ravel dùng điệu thức để tạo màu sắc cổ xưa hoặc kỳ ảo. Dân ca Celtic, Bartók, Vaughan Williams..." Chữ mới giữ Gregorian: COD, Modes, nêu "Gregorian modes"/"church modes" là cách gọi hệ điệu thức của thánh ca.'
+  - id: n15
+    cau: Nhạc Phục hưng; Debussy và Ravel dùng điệu thức để tạo màu sắc cổ xưa hoặc kỳ ảo; dân ca Celtic, Bartók, Vaughan Williams có điệu thức.
+    loai: lich-su
+    nguon:
+      - cod-modes
+    ket_qua: da-bo
+    ghi_chu: Bỏ khỏi trang. Không nguồn bậc 1-2 đã mở nào xác nhận từng câu (Britannica Mode chỉ đọc được đề mục; COD không nêu các nhà soạn nhạc này); "màu sắc cổ xưa hoặc kỳ ảo" là cảm nhận chủ quan.
+  - id: n16
+    cau: Hình "modes" (veDieuThuc) minh họa điệu thức.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Thành phần ::hinh{ten="modes"} có trong bộ hình của site (hàm veDieuThuc), kiểm trên mã thành phần.
+  - id: n17
+    cau: Gam ngũ cung (pentatonic) chỉ có 5 nốt.
+    loai: dinh-nghia
+    nguon:
+      - brit-pent
+    ket_qua: dung
+    ghi_chu: 'Britannica, Pentatonic scale: thang năm âm.'
+  - id: n18
+    cau: Dạng quen thuộc nhất bỏ hai nốt tạo nửa cung (bậc 4 và 7) khỏi gam trưởng.
+    loai: dinh-nghia
+    nguon:
+      - brit-pent
+      - omt-modes
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Dạng phổ biến nhất ..." Chữ mới "quen thuộc nhất" (không nguồn nào xếp hạng tần suất). Suy kiểm: gam Đô trưởng bỏ Fa và Si còn Đô Rê Mi Sol La; nửa cung ở Mi–Fa và Si–Đô nên bỏ bậc 4, 7 loại hết nửa cung.'
+  - id: n19
+    cau: 'Ngũ cung trưởng: Đô – Rê – Mi – Sol – La; toàn bộ là cung và quãng 3 thứ, không có nửa cung nào.'
+    loai: dinh-nghia
+    nguon:
+      - brit-pent
+    ket_qua: dung
+    ghi_chu: 'Britannica: thang năm âm không nửa cung (anhemitonic) gồm cung và quãng ba thứ. Suy kiểm: C-D, D-E, E-G (3 thứ), G-A, A-C (3 thứ).'
+  - id: n20
+    cau: Giữa hai nốt bất kỳ của ngũ cung trưởng không có quãng 2 thứ hay tritone.
+    loai: dinh-nghia
+    nguon:
+      - brit-pent
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "nên mọi tổ hợp nốt đều nghe hài hòa" (cảm nhận chủ quan). Chữ mới: kiểm bằng tính toán trên Đô Rê Mi Sol La: các quãng có thể là 2 trưởng, 3 thứ, 3 trưởng, 4 đúng, 5 đúng, 6 trưởng..., không có 2 thứ, tritone.'
+  - id: n21
+    cau: 'Thử chơi chỉ trên 5 phím đen của piano: đó là một gam ngũ cung.'
+    loai: dinh-nghia
+    nguon:
+      - brit-pent
+    ket_qua: dung
+    ghi_chu: 'Suy kiểm: năm phím đen Fa♯ Sol♯ La♯ Đô♯ Rê♯ cách nhau cung, quãng 3 thứ, cung, cung, quãng 3 thứ: cùng mẫu ngũ cung. Britannica nêu ví dụ phím đen.'
+  - id: n22
+    cau: 'Ngũ cung thứ: La – Đô – Rê – Mi – Sol. Cùng 5 nốt, bắt đầu từ La.'
+    loai: dinh-nghia
+    nguon:
+      - brit-pent
+    ket_qua: dung
+    ghi_chu: 'Suy kiểm: La Đô Rê Mi Sol là cùng năm nốt của Đô Rê Mi Sol La, bắt đầu từ La (một cách xoay thang). Britannica nêu thang năm âm có các cách xoay.'
+  - id: n23
+    cau: Công cụ piano C4–C5 tô các nốt ngũ cung C4 D4 E4 G4 A4 C5.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Thành phần ::cong-cu{ten="piano" range="C4-C5" notes="C4 D4 E4 G4 A4 C5"} tô đúng sáu nốt này (kiểm trên mã thành phần).
+  - id: n24
+    cau: 'Ngũ cung có mặt trong âm nhạc của nhiều nơi: Đông Á và Đông Nam Á (như thang slendro của gamelan Java), nhiều dân ca châu Âu.'
+    loai: danh-muc
+    nguon:
+      - brit-pent
+      - johnson
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Ngũ cung có mặt ở khắp thế giới: dân ca Việt Nam, Trung Quốc, Nhật Bản, Scotland, nhạc blues." Chữ mới theo Britannica (ngũ cung có ở Đông Á, Đông Nam Á, nhiều dân ca châu Âu) và Johnson (slendro của gamelan).'
+  - id: n25
+    cau: Debussy dùng gam ngũ cung trong Pagodes (tập Estampes), nơi tiếng gamelan Java được gợi lại; ông từng nghe gamelan ở Triển lãm Paris năm 1889.
+    loai: lich-su
+    nguon:
+      - johnson
+    ket_qua: dung
+    ghi_chu: 'Johnson: Pagodes dùng thang năm nốt (B C♯ D♯ F♯ G♯), gợi gamelan; Debussy nghe gamelan ở Triển lãm Paris 1889.'
+  - id: n26
+    cau: Dvořák dùng gam ngũ cung.
+    loai: lich-su
+    nguon:
+      - brit-pent
+    ket_qua: da-bo
+    ghi_chu: Bỏ khỏi trang (nằm trong câu cũ về ngũ cung khắp thế giới). Không nguồn bậc 1-2 đã mở xác nhận từng câu về Dvořák.
+  - id: n27
+    cau: Nhạc truyền thống Việt Nam xây trên các thang năm âm, gọi tên theo hệ thống Hò – Xự – Xang – Xê – Cống.
+    loai: dinh-nghia
+    nguon:
+      - tth2013
+      - keefe
+    ket_qua: dung
+    ghi_chu: tth2013 và Keefe nói thang năm âm của người Việt và tên Hò Xự Xang Xê Cống.
+  - id: n28
+    cau: Khi ghi lên khuông nhạc phương Tây, năm âm này được đối chiếu với Đô – Rê – Fa – Sol – La.
+    loai: dinh-nghia
+    nguon:
+      - tth2013
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "(cùng nguồn gốc với ký âm công xích của Trung Quốc)", và đối chiếu Sol – La – Đô – Rê – Mi. Chữ mới: Trần Thanh Hà 2013 đối chiếu Hò–Xự–Xang–Xê–Cống với Đô–Rê–Fa–Sol–La; nguồn gốc công xích không nguồn đã mở nào xác nhận nên bỏ.'
+  - id: n29
+    cau: Cùng nguồn gốc với ký âm công xích của Trung Quốc; đối chiếu với Sol – La – Đô – Rê – Mi.
+    loai: lich-su
+    nguon:
+      - tth2013
+    ket_qua: da-bo
+    ghi_chu: Bỏ khỏi trang. Nguồn gốc gongche không được nguồn bậc 1-2 đã mở xác nhận, và phép đối chiếu Sol–La–Đô–Rê–Mi trái với Trần Thanh Hà 2013.
+  - id: n30
+    cau: Đô – Rê – Fa – Sol – La chính là gam ngũ cung trưởng từ Fa, viết bắt đầu từ bậc 5 (Đô); khoảng cách cung – quãng 3 thứ – cung – cung.
+    loai: dinh-nghia
+    nguon:
+      - brit-pent
+    ket_qua: dung
+    ghi_chu: 'Suy kiểm: C-D cung, D-F 3 thứ, F-G cung, G-A cung, A-C 3 thứ; là Fa Sol La Đô Rê xoay để bắt đầu từ Đô (bậc 5 của gam Fa).'
+  - id: n31
+    cau: 'Cao độ không cố định tuyệt đối: một nghiên cứu nói độ cao các âm trong thang này "không được xác định"; trên đàn tranh tay trái ấn dây làm đổi cao độ.'
+    loai: dinh-nghia
+    nguon:
+      - tth2013
+      - keefe
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Đặc biệt ở điệu Nam (sắc thái buồn, như hơi Ai, hơi Oán trong nhạc tài tử Nam Bộ), một số âm được nhấn, rung, hoặc nằm ... đàn bầu, đàn kìm." Chữ mới: trích Trần Thanh Hà (độ cao "không được xác định") và Keefe (ấn dây tay trái đổi độ căng, đổi cao độ).'
+  - id: n32
+    cau: 'Luyến láy góp phần tạo nên điệu: trên đàn tranh nhấn dây để uốn cao độ là lối trang trí quan trọng; hơi Bắc diễn tả niềm vui, hơi Ai và hơi Oán diễn tả nỗi buồn.'
+    loai: dinh-nghia
+    nguon:
+      - keefe
+      - folkways
+    ket_qua: dung
+    ghi_chu: 'Keefe: uốn cao độ (pitch bend) quan trọng trên đàn tranh. Folkways: hơi Bắc vui, Oán buồn, Ai u sầu.'
+  - id: n33
+    cau: Khuông nhạc phương Tây không ghi hết cách nhấn nhá và uốn cao độ.
+    loai: dinh-nghia
+    nguon:
+      - keefe
+      - tth2013
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "gam ngũ cung chỉ là bộ khung; phần hồn nằm ở những cao độ uốn lượn..." Chữ mới bỏ ẩn dụ bộ khung/phần hồn, giữ ý đã có nguồn (Keefe, Trần Thanh Hà: cao độ uốn, không cố định).'
+  - id: n34
+    cau: Nhạc tài tử Nam Bộ và ca trù đều là Di sản văn hóa phi vật thể được UNESCO công nhận (Ca trù 2009; Đờn ca tài tử Nam Bộ 2013).
+    loai: lich-su
+    nguon:
+      - unesco-ctr
+      - unesco-dctt
+    ket_qua: dung
+    ghi_chu: 'UNESCO: Ca trù ghi danh 2009 (Urgent Safeguarding List); Đờn ca tài tử ghi danh 2013 (Representative List).'
+  - id: n35
+    cau: 'Luyện tai gam và điệu thức (link /opus/luyen-tai/nghe-gam/#luyen-voi-cong-cu): bộ "Điệu thức thường gặp" và "Ngũ cung và gam 7 nốt".'
+    loai: ve-site
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: bộ "Ngũ cung". Chữ mới theo tên bộ thật trong build.js ("Ngũ cung và gam 7 nốt"). Trang luyen-tai/nghe-gam.md có mục "Luyện với công cụ".'
+  - id: n36
+    cau: 'Bàn phím piano (link /opus/luyen-tap/ban-phim/): chọn "Điệu Dorian", "Ngũ cung trưởng"... để xem và nghe.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Tên các chế độ có trong công cụ bàn phím bản cũ (luyen-tap/ban-phim.md).
+  - id: n37
+    cau: 'Xây gam và hợp âm (link /opus/luyen-tap/xay-hop-am/): bài "Điệu thức và ngũ cung".'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Bộ bài "Điệu thức và ngũ cung" có trong build.js; trang luyen-tap/xay-hop-am.md chỉ nêu tên công cụ.
+  - id: n38
+    cau: 'Bài tập 1: viết điệu Dorian bắt đầu từ Mi (gợi ý công thức C N C C C N C). Đáp án: Mi – Fa♯ – Sol – La – Si – Đô♯ – Rê – Mi.'
+    loai: quy-tac
+    nguon:
+      - omt-modes
+    ket_qua: dung
+    ghi_chu: Dorian = C N C C C N C ✓; E Dorian = E F♯ G A B C♯ D E ✓ (hai dấu thăng).
+  - id: n39
+    cau: 'Bài tập 2: viết điệu Mixolydian từ Rê; khác Rê trưởng ở bậc 7: Đô thay vì Đô♯. Đáp án: Rê – Mi – Fa♯ – Sol – La – Si – Đô – Rê.'
+    loai: quy-tac
+    nguon:
+      - omt-modes
+    ket_qua: dung
+    ghi_chu: Mixolydian = major với bậc 7 hạ ✓.
+  - id: n40
+    cau: 'Bài tập 3: ngũ cung trưởng từ Sol: Sol – La – Si – Rê – Mi; từ Fa: Fa – Sol – La – Đô – Rê.'
+    loai: quy-tac
+    nguon:
+      - brit-pent
+    ket_qua: dung
+    ghi_chu: Bậc 1, 2, 3, 5, 6 của Sol trưởng và Fa trưởng ✓.
+  - id: n41
+    cau: 'Quiz 1: Dorian khác gam thứ tự nhiên ở bậc 6 được nâng (ví dụ Rê Dorian có Si tự nhiên thay vì Si♭).'
+    loai: dinh-nghia
+    nguon:
+      - omt-modes
+    ket_qua: dung
+    ghi_chu: 'OMT: Dorian = natural minor với bậc 6 nâng. Lựa chọn sai: bậc 7 nâng, bậc 2 hạ.'
+  - id: n42
+    cau: 'Quiz 2: điệu thức chính là gam trưởng là Ionian (bắt đầu từ Đô trên phím trắng).'
+    loai: dinh-nghia
+    nguon:
+      - omt-modes
+    ket_qua: dung
+    ghi_chu: 'OMT: Ionian = major. Lựa chọn sai: Lydian, Mixolydian.'
+  - id: n43
+    cau: 'Quiz 3: ngũ cung trưởng từ Đô gồm Đô – Rê – Mi – Sol – La (bỏ bậc 4 và 7 của gam trưởng).'
+    loai: dinh-nghia
+    nguon:
+      - brit-pent
+    ket_qua: dung
+    ghi_chu: Xem nhận định ngũ cung. Lựa chọn sai là hai tập năm nốt khác.
+  - id: n44
+    cau: 'Quiz 4: giữa hai nốt bất kỳ của ngũ cung trưởng không bao giờ có quãng 2 thứ (nửa cung) và tritone; có quãng 3 thứ (Mi – Sol) và quãng 5 đúng (Rê – La).'
+    loai: dinh-nghia
+    nguon:
+      - brit-pent
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Vì sao mọi tổ hợp nốt đều nghe hài hòa? Vì không có quãng nửa cung nào." Chữ mới hỏi khách quan, kiểm bằng tính toán: E–G là 3 thứ, D–A là 5 đúng ✓.'
+  - id: n45
+    cau: 'Quiz 5: năm âm Hò – Xự – Xang – Xê – Cống có cấu trúc khoảng cách giống ngũ cung trưởng (cung – quãng 3 thứ – cung – cung, bắt đầu từ một bậc khác).'
+    loai: dinh-nghia
+    nguon:
+      - tth2013
+      - brit-pent
+    ket_qua: dung
+    ghi_chu: 'Xem nhận định Đô – Rê – Fa – Sol – La. Lựa chọn sai: gam thứ hòa âm, Locrian.'
+  - id: n46
+    cau: 'Mục Nguồn: Britannica (Pentatonic scale, Mode), Johnson (Pagodes), Trần Thanh Hà 2013, Keefe 1991, Folkways, UNESCO (Ca trù, Đờn ca tài tử); link /opus/tai-lieu-tham-khao/.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Các link nguồn đã mở khi kiểm định; bản cũ ../opus-zero/docs/tai-lieu-tham-khao.md tồn tại; trang đích chưa chuyển. Mục Nguồn đổi ở lượt này (xem doi_chu).
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - not
+    ket_qua: dung
+    ghi_chu: 'Soạn cho trang này. K:D dorian: D E F G A B c d (toàn phím trắng, Rê Dorian ✓); rồi K:G mixolydian: G A B c d e f g (phím trắng ✓, Sol Mixolydian). Mỗi ô 8 móc đơn ở 4/4, không cảnh báo abcjs.'
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - not
+    ket_qua: dung
+    ghi_chu: 'Soạn cho trang này. K:C: ngũ cung trưởng C D E G A c A G | E D C4 z2 và ngũ cung thứ A, C D E G A G E | D C A,4 z2; mỗi ô đủ 8 móc đơn; chỉ dùng các nốt của thang đã nêu.'
+doi_chu:
+  - cu: Gam trưởng và gam thứ thống trị âm nhạc phương Tây từ khoảng năm 1600. Nhưng trước đó, và trong rất nhiều nền âm nhạc khác, kể cả âm nhạc Việt Nam, người ta dùng những thang âm khác. Bài này mở ra hai thế giới đó.
+    moi: Gam trưởng và gam thứ là hai thang âm bạn đã học. Nhưng trong âm nhạc phương Tây cổ hơn, và trong rất nhiều nền âm nhạc khác, kể cả âm nhạc Việt Nam, người ta dùng những thang âm khác. Bài này mở ra hai thế giới đó.
+    ly_do: 'n1 (da-sua): mô tả trang lấy từ đoạn đầu, đổi theo câu mở đầu mới.; n1 (da-sua): "thống trị âm nhạc phương Tây từ khoảng năm 1600" và "trước đó" không nguồn bậc 1-2 đã mở nào chốt được mốc năm (Britannica, mục Mode, chỉ có phần "Gradual emergence of major and minor tonality" trong mục Plainchant); bỏ mốc và bỏ cả mức "quen thuộc nhất", chỉ nhắc lại rằng người học đã học hai gam này.'
+  - cu: Màu sắc
+    moi: Quãng ba trên chủ âm
+    ly_do: 'n11 (da-sua): cột "Màu sắc" (sáng, tối, Tây Ban Nha, kỳ ảo, bất ổn, hiếm dùng) là cảm nhận chủ quan hoặc khẳng định văn hóa không nguồn nào xác nhận; thay bằng cột kiểm được "Quãng ba trên chủ âm" (suy ra từ cấu trúc gam, đối chiếu bằng abcjs/khuông: Đô-Mi trưởng, Rê-Fa thứ, Mi-Sol thứ, Fa-La trưởng, Sol-Si trưởng, La-Đô thứ, Si-Rê thứ).'
+  - cu: Sáng
+    moi: Trưởng
+    ly_do: 'n11 (da-sua): ô của cột "Màu sắc" thành tính chất quãng ba trên chủ âm (OMT Diatonic Modes: major-ish, minor-ish).'
+  - cu: Thứ mà vẫn sáng, hơi dân gian
+    moi: Thứ
+    ly_do: 'n11 (da-sua): ô của cột "Màu sắc" thành tính chất quãng ba trên chủ âm (OMT Diatonic Modes: major-ish, minor-ish).'
+  - cu: Tối, mang hơi hướng Tây Ban Nha
+    moi: Thứ
+    ly_do: 'n11 (da-sua): ô của cột "Màu sắc" thành tính chất quãng ba trên chủ âm (OMT Diatonic Modes: major-ish, minor-ish).'
+  - cu: Lơ lửng, kỳ ảo
+    moi: Trưởng
+    ly_do: 'n11 (da-sua): ô của cột "Màu sắc" thành tính chất quãng ba trên chủ âm (OMT Diatonic Modes: major-ish, minor-ish).'
+  - cu: Trưởng nhưng thoải mái, không "đòi" về chủ âm
+    moi: Trưởng
+    ly_do: 'n11 (da-sua): ô của cột "Màu sắc" thành tính chất quãng ba trên chủ âm (OMT Diatonic Modes: major-ish, minor-ish).'
+  - cu: Tối
+    moi: Thứ
+    ly_do: 'n11 (da-sua): ô của cột "Màu sắc" thành tính chất quãng ba trên chủ âm (OMT Diatonic Modes: major-ish, minor-ish).'
+  - cu:
+      - Bất ổn, hiếm dùng
+      - "Mẹo: mỗi điệu thức có một nốt đặc trưng làm nó khác gam trưởng hoặc thứ quen thuộc. Khi nghe, hãy tìm nốt đó."
+    moi:
+      - Thứ
+      - 'Mẹo: so mỗi điệu thức với gam trưởng hoặc thứ gần nhất để thấy bậc nào khác (cột "So với gam trưởng/thứ"), rồi tìm bậc đó khi nghe.'
+    ly_do: 'n12 (da-sua): "mỗi điệu thức có một nốt đặc trưng" sai với Ionian, Aeolian (trùng gam trưởng, thứ) và Locrian (khác gam thứ ở hai bậc); viết lại thành lời khuyên so sánh, không còn khẳng định chung.'
+  - cu: Nghe điệu thức ở đâu? Thánh ca Gregorian và nhạc Phục hưng (trước khi có trưởng/thứ). Debussy và Ravel dùng điệu thức để tạo màu sắc cổ xưa hoặc kỳ ảo. Dân ca Celtic, Anh và Đông Âu dùng nhiều Dorian và Mixolydian; Bartók và Vaughan Williams đưa chúng vào nhạc giao hưởng.
+    moi: Nghe điệu thức ở đâu? Thánh ca Gregorian dùng các điệu thức này, nên chúng còn được gọi là điệu thức Gregorian (hay điệu thức nhà thờ).
+    ly_do: 'n14, n15 (da-bo/da-sua): Debussy và Ravel "màu sắc cổ xưa hoặc kỳ ảo", dân ca Celtic/Anh/Đông Âu dùng nhiều Dorian và Mixolydian, Bartók và Vaughan Williams đưa điệu thức vào nhạc giao hưởng, và "nhạc Phục hưng": không nguồn bậc 1-2 đã mở nào xác nhận đủ ý (bài của Julian Johnson về Debussy không nhắc điệu thức hay Ravel; OMT Diatonic Modes không nhắc Phục hưng, Debussy, Ravel, dân ca, Bartók, Vaughan Williams; Concise Oxford Dictionary of Music, mục Modes, nhắc Vaughan Williams, Bartók, Kodály nhưng không nhắc Debussy). Giữ phần OMT nói rõ: "This collection of modes is often called church, white-note, or Gregorian modes."'
+  - cu:
+      - "Gam ngũ cung (pentatonic) chỉ có 5 nốt. Dạng phổ biến nhất bỏ hai nốt tạo nửa cung (bậc 4 và 7) khỏi gam trưởng:"
+      - "Ngũ cung trưởng: Đô – Rê – Mi – Sol – La. Toàn bộ là cung và quãng 3 thứ, không có nửa cung nào, nên mọi tổ hợp nốt đều nghe hài hòa. Thử chơi chỉ trên 5 phím đen của piano: đó là một gam ngũ cung."
+    moi:
+      - "Gam ngũ cung (pentatonic) chỉ có 5 nốt. Dạng quen thuộc nhất bỏ hai nốt tạo nửa cung (bậc 4 và 7) khỏi gam trưởng:"
+      - "Ngũ cung trưởng: Đô – Rê – Mi – Sol – La. Toàn bộ là cung và quãng 3 thứ, không có nửa cung nào, nên giữa hai nốt bất kỳ không có quãng 2 thứ hay tritone. Thử chơi chỉ trên 5 phím đen của piano: đó là một gam ngũ cung."
+    ly_do: 'n18 (da-sua): Britannica, Pentatonic scale: "The most widely known form is anhemitonic" (quen thuộc nhất), không nói "phổ biến nhất".; n20 (da-sua): "mọi tổ hợp nốt đều nghe hài hòa" là cảm nhận chủ quan; thay bằng hệ quả kiểm được: giữa hai nốt bất kỳ của Đô-Rê-Mi-Sol-La không có quãng 2 thứ hay tritone (các quãng có là 2 trưởng, 3 thứ, 3 trưởng, 4 đúng, 5 đúng, 6 trưởng).'
+  - cu: "Ngũ cung có mặt ở khắp thế giới: dân ca Việt Nam, Trung Quốc, Nhật Bản, Scotland, nhạc blues. Debussy dùng gam ngũ cung trong Pagodes (tập Estampes), sau khi nghe dàn nhạc gamelan Java ở Hội chợ Thế giới Paris năm 1889. Dvořák dùng nó trong chủ đề chương 2 Giao hưởng Từ Thế giới mới."
+    moi: "Ngũ cung có mặt trong âm nhạc của nhiều nơi: Đông Á và Đông Nam Á (như thang slendro của gamelan Java), nhiều dân ca châu Âu. Debussy dùng gam ngũ cung trong Pagodes (tập Estampes), nơi tiếng gamelan Java được gợi lại; ông từng nghe gamelan ở Triển lãm Paris năm 1889."
+    ly_do: 'n24, n26 (da-bo/da-sua): Britannica, Pentatonic scale: ngũ cung có ở Đông Á, Đông Nam Á (slendro Java), nhiều dân ca châu Âu; không nhắc Scotland, Nhật Bản, Trung Quốc, blues. Julian Johnson (Royal Holloway) về Pagodes: gamelan, Triển lãm Paris 1889, tập hợp ngũ cung B C# D# F# G#. Chương 2 Giao hưởng Từ Thế giới mới của Dvořák: nguồn đọc được chỉ nói "có lẽ" gợi từ thang năm âm của spiritual, nên bỏ.'
+  - cu: Nhạc truyền thống Việt Nam xây trên các thang năm âm, gọi tên theo hệ thống Hò – Xự – Xang – Xê – Cống (cùng nguồn gốc với ký âm công xích của Trung Quốc). Theo cách đối chiếu phổ biến với ký âm phương Tây, năm âm này tương ứng Sol – La – Đô – Rê – Mi (theo Đô di động). Khoảng cách giữa chúng (cung – quãng 3 thứ – cung – cung) giống hệt gam ngũ cung trưởng ở trên, chỉ bắt đầu từ một bậc khác; vì vậy nhiều sách dạy đàn tranh, đàn bầu viết chúng là Đô – Rê – Fa – Sol – La.
+    moi: "Nhạc truyền thống Việt Nam xây trên các thang năm âm, gọi tên theo hệ thống Hò – Xự – Xang – Xê – Cống. Khi ghi lên khuông nhạc phương Tây, năm âm này được đối chiếu với Đô – Rê – Fa – Sol – La. Khoảng cách giữa chúng (cung – quãng 3 thứ – cung – cung) là chuỗi khoảng cách của gam ngũ cung trưởng ở trên, chỉ bắt đầu từ một bậc khác: Đô – Rê – Fa – Sol – La chính là gam ngũ cung trưởng từ Fa, viết bắt đầu từ bậc 5 (Đô)."
+    ly_do: 'n28, n29 (da-bo/da-sua): Trần Thanh Hà, "Thang năm âm người Việt dưới góc nhìn văn hóa học" (Tạp chí Khoa học Xã hội, số 1(173), 2013): tên Hò, Xự, Xang, Xê, Cống được dùng rộng rãi hơn; thang năm âm người Việt "tương ứng với các nốt Do, Re, Fa, Sol, La". Bài đó không nhắc công xích và không có ánh xạ Sol-La-Đô-Rê-Mi; trang cũ ghi ánh xạ Sol-La-Đô-Rê-Mi (cùng chuỗi khoảng cách nhưng khác tên nốt) và bỏ câu "cùng nguồn gốc công xích" (không kiểm được). Kiểm bằng khuông: {Đô, Rê, Fa, Sol, La} là tập nốt của ngũ cung trưởng từ Fa.'
+  - cu:
+      - Cao độ không cố định tuyệt đối. Đặc biệt ở điệu Nam (sắc thái buồn, như hơi Ai, hơi Oán trong nhạc tài tử Nam Bộ), một số âm được nhấn, rung, hoặc nằm giữa hai phím đàn piano.
+      - Kỹ thuật luyến láy là một phần của nốt nhạc. Rung, nhấn, vuốt trên đàn tranh, đàn bầu, đàn kìm không phải là "trang trí thêm" như nốt hoa mỹ phương Tây, mà là bản sắc của chính âm đó.
+      - Vì thế, khi nghe nhạc truyền thống Việt Nam bằng "tai nhạc lý phương Tây", hãy nhớ rằng gam ngũ cung chỉ là bộ khung; phần hồn nằm ở những cao độ uốn lượn mà khuông nhạc không vẽ ra được. Muốn đi sâu, hãy tìm hiểu nhạc tài tử Nam Bộ và ca trù, cả hai đều là Di sản văn hóa phi vật thể được UNESCO công nhận.
+    moi:
+      - Cao độ không cố định tuyệt đối. Một nghiên cứu về thang năm âm người Việt nói độ cao các âm trong thang này "không được xác định". Trên đàn tranh, tay trái ấn dây làm đổi độ căng dây, tức đổi cao độ nốt, nên nốt nghe được có thể lệch khỏi phím đàn piano.
+      - Luyến láy góp phần tạo nên điệu. Trên đàn tranh, nhấn dây để uốn cao độ là một lối trang trí quan trọng; cùng với thang âm, những kiểu luyến láy đặc trưng làm nên từng điệu và tâm trạng của nó (hơi Bắc diễn tả niềm vui, hơi Ai và hơi Oán diễn tả nỗi buồn).
+      - Vì thế, khi nghe nhạc truyền thống Việt Nam bằng "tai nhạc lý phương Tây", hãy nhớ rằng khuông nhạc phương Tây không ghi hết cách nhấn nhá và uốn cao độ. Muốn đi sâu, hãy tìm hiểu nhạc tài tử Nam Bộ và ca trù, cả hai đều là Di sản văn hóa phi vật thể được UNESCO công nhận.
+    ly_do: 'n31 (da-sua): "điệu Nam sắc thái buồn", "rung, nhấn, vuốt trên đàn tranh, đàn bầu, đàn kìm không phải trang trí mà là bản sắc của âm" không nguồn nào xác nhận nguyên văn. Nguồn đã mở: Trần Thanh Hà 2013 ("độ cao các âm trong thang năm âm người Việt là không được xác định"); Keefe, Burns, Nguyen, "Vietnamese Modal Scales of the Dan Tranh", Music Perception 1991 ("ornamentation using pitch bends is an important embellishment"; mỗi điệu gồm một cách lên dây và một sắc thái riêng); lời giới thiệu đĩa "Vietnam: Tradition of the South" (UNESCO, Smithsonian Folkways, qua folkways-media.si.edu): hơi Bắc diễn tả niềm vui, hơi Oán diễn tả nỗi buồn và khá giống hơi Ai, hơi Ai diễn tả sầu muộn; ấn dây tay trái đổi cao độ; các kiểu luyến láy đặc trưng định nghĩa điệu. Đàn bầu, đàn kìm không có trong nguồn nào đã mở nên bỏ.; n33 (da-sua): "gam ngũ cung chỉ là bộ khung, phần hồn nằm ở cao độ uốn lượn" là cách nói văn chương, không kiểm được; giữ phần kiểm được (khuông nhạc không ghi hết cách nhấn nhá, uốn cao độ: Keefe và cộng sự 1991, Trần Thanh Hà 2013).'
+  - cu: 'Luyện tai gam và điệu thức: bộ "Điệu thức thường gặp" và "Ngũ cung".'
+    moi: 'Luyện tai gam và điệu thức: bộ "Điệu thức thường gặp" và "Ngũ cung và gam 7 nốt".'
+    ly_do: 'n35 (da-sua): tên bộ trong công cụ bản cũ (assets/js/scale-trainer.js dòng 7-8) là "Điệu thức thường gặp" và "Ngũ cung và gam 7 nốt", không phải "Ngũ cung".'
+  - cu: Open Music Theory; musictheory.net.
+    moi:
+      - "Encyclopaedia Britannica: Pentatonic scale; Mode."
+      - "Julian Johnson (Royal Holloway, Đại học London), Claude Debussy: His Musical Style and Influences – Estampes and Nocturnes, mục Pagodes."
+      - "Trần Thanh Hà, Thang năm âm người Việt dưới góc nhìn văn hóa học, Tạp chí Khoa học Xã hội, số 1(173), 2013; Keefe, Burns, Nguyen, Vietnamese Modal Scales of the Dan Tranh, Music Perception, 1991; Vietnam: Tradition of the South (lời giới thiệu đĩa, UNESCO, Smithsonian Folkways)."
+      - "UNESCO, Danh sách Di sản văn hóa phi vật thể: Ca trù (2009), Đờn ca tài tử Nam Bộ (2013)."
+    ly_do: "Mục Nguồn: thay link chung bằng các nguồn đã mở khi kiểm định (lượt 1); bỏ musictheory.net."
+  - cu: "mô tả: Gam trưởng và gam thứ thống trị âm nhạc phương Tây từ khoảng năm 1600. Nhưng trước đó, và trong rất nhiều nền âm nhạc khác, kể cả âm nhạc Việt Nam, người ta…"
+    moi: "mô tả: Gam trưởng và gam thứ là hai thang âm bạn đã học. Nhưng trong âm nhạc phương Tây cổ hơn, và trong rất nhiều nền âm nhạc khác, kể cả âm nhạc Việt Nam, người ta…"
+    ly_do: 'Mô tả trang lấy từ đoạn đầu, đổi theo n1.'
+  - cu: "câu hỏi: Vì sao mọi tổ hợp nốt trong gam ngũ cung trưởng đều nghe hài hòa? | ✓ Vì không có quãng nửa cung nào | Vì chỉ có quãng 5 đúng | Vì nó là gam thứ | Không có nửa cung nên không có quãng 2 thứ hay tritone."
+    moi: "câu hỏi: Giữa hai nốt bất kỳ của gam ngũ cung trưởng không bao giờ có quãng nào? | ✓ Quãng 2 thứ (nửa cung) và tritone | Quãng 3 thứ | Quãng 5 đúng | Đô – Rê – Mi – Sol – La có quãng 3 thứ (Mi – Sol) và quãng 5 đúng (Rê – La), nhưng không có hai nốt nào cách nhau nửa cung hay tritone."
+    ly_do: 'n44 (da-sua): câu hỏi cũ "vì sao mọi tổ hợp nốt đều nghe hài hòa" dựa trên khẳng định chủ quan (xem n27); viết lại thành câu hỏi kiểm được từ cấu trúc gam.'

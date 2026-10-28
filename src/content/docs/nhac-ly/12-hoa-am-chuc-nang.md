@@ -10,17 +10,17 @@ Mỗi hợp âm trong giọng có một **vai trò** (chức năng), giống nh�
 | Chức năng | Hợp âm chính | Hợp âm cùng nhóm | Vai trò |
 |---|---|---|---|
 | **Chủ** (Tonic, T) | I | vi, (iii) | Nhà: ổn định, nghỉ ngơi |
-| **Hạ át** (Subdominant / tiền át, S) | IV | ii | Rời nhà, chuẩn bị |
+| **Hạ át** (Predominant / tiền át, PD) | IV | ii | Rời nhà, chuẩn bị |
 | **Át** (Dominant, D) | V, V7 | vii° | Căng thẳng, đòi trở về nhà |
 
-Hợp âm cùng nhóm dùng chung nhiều nốt: vi (La – Đô – Mi) chung hai nốt với I (Đô – Mi – Sol), nên có thể thay thế nhau.
+Hợp âm cùng nhóm dùng chung nhiều nốt: vi (La – Đô – Mi) chung hai nốt với I (Đô – Mi – Sol), nên vi thường được dùng thay cho I (một hợp âm chủ "yếu" hơn).
 
 
 ::hinh{ten="functions"}
 
-## Câu chuyện cơ bản: T → S → D → T
+## Câu chuyện cơ bản: T → PD → D → T { #cau-chuyen-co-ban-t-s-d-t }
 
-Phần lớn âm nhạc từ Bach đến Brahms (và cả nhạc pop hôm nay) đi theo vòng **ổn định → rời đi → căng thẳng → trở về**:
+Nhiều bản nhạc, từ nhạc cổ điển đến nhạc pop, có câu nhạc đi theo vòng **ổn định → rời đi → căng thẳng → trở về**:
 
 ```abc
 X:1
@@ -32,15 +32,15 @@ K:C
 [C,EGc] [F,FAc] [G,DFB] [C,EGc] |]
 ```
 
-Bè trầm **V → I** (đi xuống quãng 5, hay lên quãng 4) là chuyển động mạnh nhất trong hòa âm phương Tây.
+Bè trầm **V → I** (đi xuống quãng 5, hay lên quãng 4) là chuyển động của **kết trọn** (V – I), loại kết nghe dứt khoát nhất trong nhạc cổ điển phương Tây.
 
 ## Các vòng hợp âm thường gặp
 
 | Vòng | Trong Đô trưởng | Gặp ở đâu |
 |---|---|---|
-| I – IV – V – I | C – F – G – C | Thánh ca, dân ca, kết bài |
-| I – vi – IV – V | C – Am – F – G | Rất nhiều bài hát thập niên 1950 đến nay |
-| ii – V – I | Dm – G – C | Kết câu trong nhạc cổ điển, nền tảng của jazz |
+| I – IV – V – I | C – F – G – C | Một cách đi hết vòng T → PD → D → T |
+| I – vi – IV – V | C – Am – F – G | Vòng "doo-wop" của nhạc pop thập niên 1950–60, vẫn được dùng đến nay |
+| ii – V – I | Dm – G – C | Hạ át ii, át V rồi chủ I; một trong những vòng thường gặp nhất của jazz |
 | I – V – vi – iii – IV – I – IV – V | C – G – Am – Em – F – C – F – G | Pachelbel *Canon* |
 
 Vòng hợp âm của *Canon* (giọng Rê trưởng: D – A – Bm – F♯m – G – D – G – A):
@@ -74,7 +74,7 @@ K:Am
 Khi chuyển hợp âm, mỗi bè (giọng) nên đi **gần nhất có thể**: giữ nguyên nốt chung, các nốt khác đi bước liền. Đây là nguyên tắc **dẫn bè** (voice leading), giúp hòa âm nghe mượt mà. Hãy để ý trong các ví dụ trên: bè trên cùng hầu như chỉ đi bước nhỏ.
 
 :::tip[Trên phím đàn]
-Chơi chuỗi **I – IV – I – V7 – I** bằng hai tay (tay trái nốt gốc, tay phải ba nốt) ở vài giọng quen. Đó là "vốn từ" hòa âm của phần lớn các bài bạn sẽ tập: xem [Hợp âm, hợp âm rải và hình đệm](/opus/piano/hop-am-rai/), rồi [Hòa âm bên phím](/opus/piano/hoa-am/).
+Chơi chuỗi **I – IV – I – V7 – I** bằng hai tay (tay trái nốt gốc, tay phải ba nốt) ở vài giọng quen. Đó là "vốn từ" hòa âm cơ bản: xem [Hợp âm, hợp âm rải và hình đệm](/opus/piano/hop-am-rai/), rồi [Hòa âm bên phím](/opus/piano/hoa-am/).
 :::
 
 ## Bài tập
@@ -118,5 +118,8 @@ Chủ: **G** (I), **Em** (vi). Hạ át: **C** (IV), **Am** (ii). Át: **D7** (V
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- *Open Music Theory*: [Introduction to Harmony, Cadences, and Phrase Endings](https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/); [Four-Chord Schemas](https://viva.pressbooks.pub/openmusictheory/chapter/4-chord-schemas/); [Minor Scales, Scale Degrees, and Key Signatures](https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/).
+- Andre Mount, *Fundamentals, Function, and Form*: chương [22. Phrases, Cadences, and Harmonic Function](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/22-phrases-cadences-and-harmonic-function/) và [26. Other Diatonic Sequences](https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/26-other-diatonic-sequences/); workbook, [24. The Pre-Dominant Function](https://milnepublishing.geneseo.edu/fundamentals-function-form-workbook/chapter/24-the-pre-dominant-function/).
+- Robert Hutchinson, *Music Theory for the 21st-Century Classroom*: [9.4 Harmonic Function](https://musictheory.pugetsound.edu/mt21c/HarmonicFunction.html), [Standard Chord Progressions](https://musictheory.pugetsound.edu/mt21c/StandardChordProgressions.html), [26.7 Voice Leading Root Position Triads in Four Parts](https://musictheory.pugetsound.edu/mt21c/VoiceLeadingFourPartsRootPosition.html).
+- Pachelbel, *Canon and Gigue in D major*, P. 37: [trang tác phẩm trên IMSLP](https://imslp.org/wiki/Canon_and_Gigue_in_D_major,_P.37_%28Pachelbel,_Johann%29).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

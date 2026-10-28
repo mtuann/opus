@@ -1,11 +1,11 @@
 ---
 title: 14. Ký hiệu biểu diễn
-description: Ngoài cao độ và trường độ, bản nhạc còn cho biết chơi nhanh hay chậm, to hay nhỏ, liền hay ngắt. Phần lớn các ký hiệu này dùng tiếng Ý, ngôn ngữ chung của âm…
+description: Ngoài cao độ và trường độ, bản nhạc còn cho biết chơi nhanh hay chậm, to hay nhỏ, liền hay ngắt. Phần lớn các ký hiệu này dùng tiếng Ý, loại thuật ngữ được đưa…
 ---
 
-Ngoài cao độ và trường độ, bản nhạc còn cho biết **chơi nhanh hay chậm, to hay nhỏ, liền hay ngắt**. Phần lớn các ký hiệu này dùng tiếng Ý, ngôn ngữ chung của âm nhạc từ thời Baroque.
+Ngoài cao độ và trường độ, bản nhạc còn cho biết **chơi nhanh hay chậm, to hay nhỏ, liền hay ngắt**. Phần lớn các ký hiệu này dùng tiếng Ý, loại thuật ngữ được đưa vào từ thế kỷ 17 và dùng đến nay.
 
-Tất cả thuật ngữ trong bài đều có trong [từ điển thuật ngữ](/opus/nhac-ly/tu-dien/), kèm thẻ ghi nhớ để ôn.
+Hầu hết thuật ngữ trong bài đều có trong [từ điển thuật ngữ](/opus/nhac-ly/tu-dien/), kèm thẻ ghi nhớ để ôn.
 
 ## Tốc độ
 
@@ -16,7 +16,7 @@ Thuật ngữ tốc độ chính đã có ở trang [máy đếm nhịp](/opus/l
 | *accelerando* (accel.) | Nhanh dần |
 | *ritardando* (rit.), *rallentando* (rall.) | Chậm dần |
 | *a tempo* | Trở lại tốc độ ban đầu |
-| *rubato* | Co giãn tốc độ tự do để diễn cảm, rất phổ biến khi chơi Chopin |
+| *rubato* | Co giãn tốc độ tự do để diễn cảm |
 | *più mosso* / *meno mosso* | Nhanh hơn / chậm hơn |
 
 ## Cường độ (sắc thái)
@@ -34,7 +34,7 @@ Thuật ngữ tốc độ chính đã có ở trang [máy đếm nhịp](/opus/l
 | **sfz** | sforzando | Nhấn mạnh đột ngột một nốt |
 | **fp** | forte-piano | To rồi nhỏ ngay |
 
-Cây đàn piano có tên đầy đủ là *pianoforte*, nghĩa là "nhỏ – to": khác harpsichord, nó chơi to hay nhỏ theo lực ngón mà vẫn đủ vang (clavichord cũng làm được, nhưng rất nhỏ tiếng). Xem [Lịch sử cây đàn piano](/opus/piano/lich-su-dan/).
+Cây đàn piano có tên đầy đủ là *pianoforte*, nghĩa là "nhỏ – to": khác harpsichord, nó chơi to hay nhỏ theo lực ngón (clavichord cũng làm được, nhưng rất nhỏ tiếng). Xem [Lịch sử cây đàn piano](/opus/piano/lich-su-dan/).
 
 ```abc
 X:1
@@ -54,7 +54,7 @@ K:C
 | Đường cong nối các nốt | legato (dấu luyến) | Chơi liền mạch |
 | > | accent | Nhấn |
 | Gạch ngang ngắn | tenuto | Giữ đủ độ dài, hơi nhấn |
-| Hình con mắt (vòng cung có chấm) | fermata | Ngân dài tùy ý |
+| Vòng cung có chấm | fermata | Ngân dài tùy ý |
 
 ```abc
 X:1
@@ -77,7 +77,7 @@ K:C
 | Vạch kép có hai chấm, ở đầu và cuối đoạn | Nhắc lại đoạn giữa hai dấu |
 | Ngoặc 1., 2. (prima/seconda volta) | Lần 1 chơi ngoặc 1, lần nhắc lại bỏ qua ngoặc 1, chơi ngoặc 2 |
 | *D.C.* (Da Capo) | Quay lại từ đầu |
-| *D.S.* (Dal Segno) | Quay lại từ dấu Segno (chữ S có gạch chéo và hai chấm) |
+| *D.S.* (Dal Segno) | Quay lại từ dấu Segno |
 | *Fine* | Kết thúc ở đây (sau khi quay lại) |
 | *al Coda* và dấu Coda (vòng tròn có dấu cộng) | Nhảy tới phần Coda |
 
@@ -96,7 +96,7 @@ K:C
 | Ký hiệu | Tên | Cách chơi |
 |---|---|---|
 | *tr* | Láy rền (trill) | Đổi nhanh liên tục giữa nốt chính và nốt trên |
-| Răng cưa ngắn, không gạch | Láy trên (pralltriller) | Nốt chính – nốt trên – nốt chính, rất nhanh (trong nhạc Baroque thường bắt đầu từ nốt trên) |
+| Răng cưa ngắn, không gạch | Láy trên (pralltriller) | Nốt chính – nốt trên – nốt chính, rất nhanh |
 | Răng cưa ngắn, có gạch dọc | Láy dưới (mordent) | Nốt chính – nốt dưới – nốt chính, rất nhanh |
 | Hình chữ S nằm ngang | Láy quanh (turn) | Nốt trên – nốt chính – nốt dưới – nốt chính |
 | Nốt nhỏ có gạch chéo | Acciaccatura | Nốt luyến cực nhanh ngay trước nốt chính |
@@ -113,7 +113,7 @@ K:C
 :::
 
 :::tip[Trên phím đàn]
-Vài ký hiệu chỉ gặp trên bản nhạc piano: *Ped.* và \* (nhấn và nhả bàn đạp vang), *una corda* / *tre corde* (bàn đạp trái), *m.d.* / *m.s.* (tay phải / tay trái). Xem [Bàn đạp](/opus/piano/ban-dap/) và [Nốt hoa mỹ](/opus/piano/not-hoa-my/), nơi giải thích kỹ hai loại láy.
+Vài ký hiệu hay gặp trên bản nhạc piano: *Ped.* và \* (nhấn và nhả bàn đạp vang), *una corda* / *tre corde* (bàn đạp trái), *m.d.* / *m.s.* (tay phải / tay trái). Xem [Bàn đạp](/opus/piano/ban-dap/) và [Nốt hoa mỹ](/opus/piano/not-hoa-my/), nơi giải thích kỹ các loại láy.
 :::
 
 ```quiz
@@ -146,5 +146,7 @@ Vài ký hiệu chỉ gặp trên bản nhạc piano: *Ped.* và \* (nhấn và 
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/); [musictheory.net](https://www.musictheory.net/lessons).
+- *Open Music Theory*, [Glossary](https://viva.pressbooks.pub/openmusictheory/back-matter/glossary/).
+- *The Concise Oxford Dictionary of Music* (Kennedy, Bourne) qua [Encyclopedia.com](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/rubato): các mục rubato, ritardando, accelerando, fermata, da capo, dal segno, coda, acciaccatura, appoggiatura, mordent, turn…
+- Trinity College London, bảng thuật ngữ và ký hiệu (cấp độ 1-2); Dolmetsch Online, *Music Theory Online: Musical Terms*.
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
