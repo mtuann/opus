@@ -44,13 +44,14 @@ Danh sách YAML ở `<file kết quả>`, đúng thứ tự đầu vào:
 - trang: <trang>
   id: n12
   luot_2: dung
-  nguon: [https://viva.pressbooks.pub/openmusictheory/chapter/intervals/]
+  nguon: ["https://viva.pressbooks.pub/openmusictheory/chapter/intervals/"]
   ghi_chu: "…"
 ```
 
 - `nguon` (link đã mở) bắt buộc, trừ khi `khong-chac` hay câu là `khuyen-tap`.
 - `cau_dung` bắt buộc khi `sai`.
-- Kiểm file đọc được: `python3 -c "import yaml,sys; print(len(yaml.safe_load(open(sys.argv[1]))))" <file>`.
+- Link viết trong nháy kép (link có `?` mà không nháy thì một số trình đọc YAML hiểu sai).
+- Kiểm file đọc được bằng thư viện YAML của repo, chạy ở thư mục repo: `node -e "import('yaml').then(y=>console.log(y.parse(require('fs').readFileSync(process.argv[1],'utf8')).length))" <file>`.
 
 ## Quy tắc
 

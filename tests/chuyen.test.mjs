@@ -7,7 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { chuyenTrang, doiLink, moTaTuHtml } from '../tools/chuyen/chuyen.mjs';
 import { parse } from 'yaml';
-import { SITE_CU, docCu, docMoi, soTrang } from '../tools/chuyen/so-chu.mjs';
+import { SITE_CU, boPhanSinh, docCu, docMoi, khoiSo, soTrang, tru } from '../tools/chuyen/so-chu.mjs';
 import { khongTrung, slugCu } from '../src/plugins/id-cu.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
@@ -185,44 +185,6 @@ const trangDaChuyen = fs.existsSync(path.join(ROOT, 'src/content/docs'))
 
 /** Trang không so được với bản cũ, kèm lý do (không có phần nội dung kiểu thường ở bản build cũ). */
 const KHONG_SO = { 'blog/index': 'bản cũ là trang danh sách bài do plugin blog của MkDocs tự sinh; blog làm lại ở đợt 7' };
-
-/**
- * Bỏ khỏi HTML các phần tử có thuộc tính data-sinh (phần sinh từ dữ liệu, như sơ đồ 7 chặng; chữ do thành phần dựng, như
- * lời nhắc bật JavaScript trong <noscript>): chữ của chúng không phải chữ của trang, nên không so với trang cũ.
- */
-function boPhanSinh(html) {
-	let ra = html;
-	for (let m; (m = /<([a-z][a-z0-9-]*)\b[^>]*\sdata-sinh(?=[\s=>])[^>]*>/i.exec(ra)); ) {
-		const ten = m[1].toLowerCase();
-		const re = new RegExp(`<(/?)${ten}\\b[^>]*>`, 'gi');
-		re.lastIndex = m.index + m[0].length;
-		let sau = 1;
-		let het = ra.length;
-		for (let t; sau && (t = re.exec(ra)); ) if ((sau += t[1] ? -1 : 1) === 0) het = re.lastIndex;
-		ra = ra.slice(0, m.index) + ra.slice(het);
-	}
-	return ra;
-}
-
-/**
- * Mọi "khối" so được của một trang, như so-chu tách: khối chữ (đoạn, mục danh sách, dòng bảng…), cộng tiêu đề, mô tả, id
- * tiêu đề, khuông nhạc (tiêu đề và mã) và câu hỏi, mỗi thứ một dòng có tiền tố ("tiêu đề: …", "id: …").
- */
-function khoiSo(trang, dist = DIST) {
-	const kq = soTrang(trang, dist);
-	const html = fs.readFileSync(path.join(dist, trang.replace(/\/index$/, ''), 'index.html'), 'utf8');
-	const cu = docCu(fs.readFileSync(path.join(SITE_CU, trang.replace(/\/index$/, ''), 'index.html'), 'utf8'));
-	const moi = docMoi(boPhanSinh(html));
-	const them = (k, i) => [`tiêu đề: ${kq.tieuDe[i]}`, `mô tả: ${kq.moTa[i]}`, ...kq.id[i].map((x) => `id: ${x}`), ...kq.abc[i].map((a) => `khuông: ${a.ten} | ${a.ma}`), ...kq.quiz[i].map((q) => `câu hỏi: ${q}`)];
-	return { cu: [...cu.khoi, ...them(kq, 0)], moi: [...moi.khoi, ...them(kq, 1)] };
-}
-
-/** Phần của dãy `a` không có trong dãy `b` (đếm cả số lần lặp). */
-const tru = (a, b) => {
-	const con = new Map();
-	for (const x of b) con.set(x, (con.get(x) ?? 0) + 1);
-	return a.filter((x) => (con.get(x) ? (con.set(x, con.get(x) - 1), false) : true));
-};
 
 test('boPhanSinh: bỏ phần tử data-sinh (kể cả lồng nhau cùng tên thẻ), giữ phần còn lại', () => {
 	assert.equal(boPhanSinh('<p>a</p><figure class="x" data-sinh><figure>b</figure><ol><li>c</li></ol></figure><p>d</p>'), '<p>a</p><p>d</p>');

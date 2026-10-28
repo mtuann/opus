@@ -360,6 +360,7 @@ test('nhap: đưa kết quả lượt 2 vào hồ sơ (kèm link, câu đúng); 
 		const hs = parse(fs.readFileSync(f, 'utf8'));
 		assert.equal(hs.nhan_dinh[0].luot_2, 'dung');
 		assert.deepEqual(hs.nhan_dinh[0].luot_2_nguon, ['https://y']);
+		assert.match(fs.readFileSync(f, 'utf8'), /luot_2_nguon: \[ "https:\/\/y" \]/, 'link của lượt 2 trong nháy kép (PyYAML đọc được link có ?)');
 		assert.equal(hs.nhan_dinh[1].luot_2, 'sai');
 		assert.equal(hs.nhan_dinh[1].luot_2_ghi_chu, 'câu đúng: Tên là B.');
 		assert.equal(hs.nhan_dinh[2].luot_2, undefined);

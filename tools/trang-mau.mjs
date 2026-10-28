@@ -1,5 +1,5 @@
 // Trang mẫu cho kiểm thử trình duyệt và Lighthouse (D1.7, sửa theo review): lấy từ chính bản build, để trang của mọi lô
-// đều được kiểm. Thứ tự: trang chủ, trang 404, các trang nhánh đang làm đã đổi so với main (tối đa 6: trang của lô), rồi
+// đều được kiểm. Thứ tự: trang chủ, trang 404, các trang nhánh đang làm đã đổi so với main (tối đa TOI_DA_TRANG_DOI: trang của lô), rồi
 // với mỗi loại khối, trang đầu tiên (theo thứ tự chữ cái) có khối ấy; cộng trang ghi trong biến môi trường OPUS_TRANG
 // ("nhac-ly/10-hop-am-ba/,piano/gam/").
 import { execFileSync } from 'node:child_process';
@@ -25,7 +25,16 @@ export const KHOI = {
 	'bài kiểm tra đầu vào': 'class="oz-placement',
 	'chọn chặng piano': 'class="oz-muc-do',
 	'ô gợi ý tập': 'class="oz-goi-y',
+	'bàn phím': 'class="oz-ban-phim',
+	'hóa biểu': 'class="oz-hb"',
+	'mười lăm hóa biểu': 'oz-ks-hinh',
+	'vòng quãng năm tĩnh': 'oz-vong-tinh',
+	'vòng quãng năm bấm được': 'class="oz-vong oz-tool',
+	'luyện hóa biểu': 'class="oz-lhb',
 };
+
+/** Số trang đã đổi của nhánh được lấy làm mẫu: một lô của đợt 3 có tới 8 trang. */
+export const TOI_DA_TRANG_DOI = 8;
 
 /** File HTML của một trang mẫu ("" là trang chủ, "404.html", "nhac-ly/x/"). */
 export const fileCua = (dist, t) => path.join(dist, t.endsWith('.html') ? t : path.join(t, 'index.html'));
@@ -69,7 +78,7 @@ export function trangMau(dist, goc = GOC) {
 	const co = tatCa(dist);
 	const html = new Map(co.map((t) => [t, fs.readFileSync(fileCua(dist, t), 'utf8')]));
 	const ra = ['', ...(fs.existsSync(path.join(dist, '404.html')) ? ['404.html'] : [])];
-	ra.push(...trangDaDoi(goc).filter((t) => html.has(t)).slice(0, 6));
+	ra.push(...trangDaDoi(goc).filter((t) => html.has(t)).slice(0, TOI_DA_TRANG_DOI));
 	for (const dau of Object.values(KHOI)) {
 		const t = co.find((x) => x && html.get(x).includes(dau));
 		if (t !== undefined) ra.push(t);

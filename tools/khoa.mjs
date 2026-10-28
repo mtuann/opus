@@ -450,7 +450,12 @@ export function lenh(thamSo, goc = GOC, in_ = console.log) {
 				// nhập lại thì thay hẳn phần của lượt 2, không để sót link hay ghi chú của lần trước
 				nd.delete('luot_2_nguon');
 				nd.delete('luot_2_ghi_chu');
-				if (d.nguon?.length) nd.set('luot_2_nguon', doc.createNode(d.nguon, { flow: true }));
+				if (d.nguon?.length) {
+					// link trong nháy kép: link có "?" mà không nháy thì PyYAML (YAML 1.1) đọc không được
+					const ds = doc.createNode(d.nguon, { flow: true });
+					for (const x of ds.items) if (typeof x.value === 'string') x.type = 'QUOTE_DOUBLE';
+					nd.set('luot_2_nguon', ds);
+				}
 				const ghiChu = [d.cau_dung && `câu đúng: ${d.cau_dung}`, d.ghi_chu].filter(Boolean).join('; ');
 				if (ghiChu) nd.set('luot_2_ghi_chu', ghiChu);
 				dem[d.luot_2]++;

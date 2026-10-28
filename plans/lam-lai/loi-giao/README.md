@@ -5,6 +5,7 @@ Rút từ đợt 2: D2-0 (dữ liệu) và D2-L1 (lô trang). Dùng lại cho m�
 | File | Giao cho | Model |
 |---|---|---|
 | `lo.md` | agent làm lô: chuyển trang, thành phần, kiểm định lượt 1, hồ sơ, báo cáo | Opus nếu lô có thành phần hay công cụ mới (như bàn phím ở D3-L1); Sonnet nếu lô chủ yếu chuyển chữ và kiểm định |
+| `luot-1-trang.md` | lượt 1 cho một phần trang của lô, khi agent làm lô giao cho agent con | Sonnet; Opus nếu trang cần đọc bản nhạc |
 | `luot-2-trang.md` | lượt 2 cho nhận định của trang | Sonnet |
 | `luot-1-du-lieu.md` | lượt 1 cho bản ghi dữ liệu (việc dữ liệu riêng như D2-0) | Sonnet |
 | `luot-2-du-lieu.md` | lượt 2 cho bản ghi dữ liệu | Sonnet |

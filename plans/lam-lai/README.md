@@ -82,7 +82,7 @@ Câu hỏi nhỏ còn chờ (từ review nhánh quyết định, `bao-cao/d2-ban
 | 0 | Dựng repo mới | | Chưa đăng gì | Xong 23/10/2026 |
 | 1 | Nền kỹ thuật | D1.1–D1.8 | Trang chủ tạm và trang 404 ở `/opus/`; chưa có bài | Xong 24/10/2026: trang chủ tạm và trang 404 trên site thật; ba trang thử ở bản xem |
 | 2 | Khung cấp độ và lối vào | 1 | Trang chủ, Bắt đầu, lộ trình và 7 trang chặng, bài kiểm tra đầu vào | Xong 24/10/2026: D2-nền (chuẩn bị kỹ thuật), D2-0 (khóa 223 bản ghi), D2-L1 (khóa 9 trang; 17 trang trên site thật: trang chủ mới, 7 trang Bắt đầu, lộ trình piano, 7 trang chặng, 404) |
-| 3 | Nhạc lý và luyện tai | 6 | 45 trang, Từ điển | Chưa làm |
+| 3 | Nhạc lý và luyện tai | 6 | 45 trang, Từ điển | Đang làm: D3-L1 xong 24/10/2026 (khóa 8 trang, 24 bản ghi thuật ngữ từng phần; 25 trang trên site thật); nhánh chuẩn bị `moi/d3-chuan-bi` 27/10; D3-L2 lượt 1 |
 | 4 | Piano nền tảng | 4 | 28 trang: bắt đầu bên phím, kỹ thuật, tập luyện, hòa âm bên phím, văn học piano | Chưa làm |
 | 5 | Nhạc cổ điển nền tảng | 3 | 27 trang: thời kỳ, hình thức, nhận diện; đủ 101 trang lõi | Chưa làm |
 | 7 | Công cụ, sách in, blog, Cập nhật | 3 | 17 công cụ luyện tập, sách in, blog, dùng khi mất mạng | Chưa làm |
@@ -287,6 +287,7 @@ Một phiên một việc, mở trong thư mục `opus/`. Đổi các chỗ tron
 
 **Một lô (đợt 2 đến 8), lượt 2, review mã:** dùng các file ở `loi-giao/`:
 - `lo.md`;
+- `luot-1-trang.md` (agent làm lô giao cho agent con);
 - `luot-2-trang.md`;
 - `luot-1-du-lieu.md`, `luot-2-du-lieu.md` (việc dữ liệu riêng như D2-0);
 - `review-ma.md`.

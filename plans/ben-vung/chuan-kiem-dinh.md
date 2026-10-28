@@ -22,6 +22,9 @@ Nhận định là mọi câu có thể đúng hoặc sai. Mỗi nhận định 
 
 - Câu viết chung chung đến mức không kiểm được ("bài này rất hay") thì viết lại cho cụ thể hoặc bỏ.
 - **Lời khuyên dính tới sức khỏe** (đau, chấn thương, tư thế gây hại, thính lực) không xếp `khuyen-tap`. Xếp loại cần nguồn (`quy-tac`, `so-lieu`), nên vẫn đủ hai lượt.
+- Câu `ve-site` trỏ tới trang chưa chuyển (rút từ D3-L1): review kiểm trên site cũ; `ghi_chu` ghi trang đích và điều câu nói về trang ấy. Lô chuyển trang đích phải giữ đúng điều ấy, hay sửa câu ở trang trỏ tới theo thủ tục mở khóa. Lô đó tìm các câu này bằng `grep -rn "<trang đích>" kiem-dinh/`.
+- Câu `ve-site` nói về phần do thành phần sinh ra (chữ trong hình, nút, kết quả của công cụ): review kiểm trên bản xem và trong module dựng phần ấy, ghi tên module ở `ghi_chu`.
+- Lời giải thích của câu hỏi kiểm tra không được dựa vào vị trí lựa chọn ("đáp án thứ hai"): thứ tự lựa chọn trộn mỗi lần.
 - Câu về chính site có kèm điều kiểm được từ bên ngoài thì tách đôi. Ví dụ "bài Für Elise ở chặng 4, khoảng Grade 4–5": phần chặng là `ve-site` (khớp dữ liệu đã khóa); phần Grade là `cap-do`, cần nguồn.
 
 Hai loại sau do chủ repo chọn ngày 24/10/2026, sau đợt 2. Lý do: ở D2-L1, khoảng 30 câu về chính site làm lượt 2 ghi "chưa chắc" và review phải gỡ từng câu.
@@ -42,8 +45,10 @@ Ghi từ đợt 2, để lô sau khỏi mò lại. Thấy cách mới thì thêm
 
 | Nguồn | Cách đọc được |
 |---|---|
-| Open Music Theory | Mở thẳng từng chương, dạng `https://viva.pressbooks.pub/openmusictheory/chapter/<tên>/`. Mục lục ở trang đầu |
-| IMSLP | Trang tác phẩm và trang `Category:<Họ>, <Tên>` mở được; cuối trang có thể loại "People from the X era" (thời kỳ). File PDF trên IMSLP bị chặn bot: lấy bản nhạc ở Mutopia hay Wikimedia Commons |
+| Open Music Theory | Từng chương ở `https://viva.pressbooks.pub/openmusictheory/chapter/<tên>/`; mục lục ở trang đầu. Công cụ đọc web hay bị trả 403: mở bằng User-Agent của trình duyệt phổ thông, hay đọc bản lưu `web.archive.org/web/2026/<link>`. Hồ sơ vẫn ghi link gốc |
+| IMSLP | Trang tác phẩm và trang `Category:<Họ>, <Tên>` mở được; cuối trang có thể loại "People from the X era" (thời kỳ). File PDF trên IMSLP bị chặn bot, và trang tải có bước chờ: không vòng qua bước ấy; lấy bản nhạc ở Mutopia, Wikimedia Commons hay Internet Archive |
+| Internet Archive | Bản scan sách cũ (như Hanon, G. Schirmer 1928) tải được dạng PDF từ `archive.org/download/<mã>/…`. Ghi lần in và số trang |
+| Britannica, ISO, Carleton | Cloudflare chặn công cụ: dùng nguồn khác cùng bậc, hay bản lưu Wayback Machine |
 | Library of Congress | Trang HTML trả 403. Bản `.json` đọc được: `https://id.loc.gov/authorities/names/<mã>.json` |
 | GND (thư viện Đức) | d-nb.info và lobid.org hay chặn: đọc qua `https://www.deutsche-biographie.de/pnd<mã GND>.html` |
 | BnF | `https://data.bnf.fr/…` mở được; năm sinh, mất ở tiêu đề bản ghi. Người còn sống thường không ghi năm |
@@ -55,6 +60,7 @@ Ghi từ đợt 2, để lô sau khỏi mò lại. Thấy cách mới thì thêm
 | PubMed | Trang web chặn bot: đọc bản ghi qua NCBI E-utilities, dẫn link PubMed |
 | Nhạc sĩ Việt Nam | `hoinhacsi.vn` (Hội Nhạc sĩ Việt Nam); báo chính thức (Nhân Dân) khi không có nguồn tốt hơn, ghi rõ loại nguồn. Vài trang cơ quan lỗi chứng chỉ |
 
+- Hết lượt tìm kiếm của công cụ (WebSearch) thì tìm tạm qua `https://html.duckduckgo.com/html/?q=<từ khóa>`; vẫn chỉ ghi vào hồ sơ trang đã mở, không ghi trang kết quả tìm kiếm.
 - Trang dài (IMSLP, đề cương): bản tóm tắt của công cụ đọc web có khi sai hay thiếu. Chỗ quan trọng thì đọc chữ thật của trang, ví dụ `curl -sL <link> | sed 's/<[^>]*>//g' | grep -i …`, hay đọc PDF bằng thư viện.
 - **Không đưa email hay thông tin cá nhân của chủ repo vào yêu cầu gửi ra ngoài** (header User-Agent, tham số, nội dung). Dịch vụ nào đòi thông tin liên hệ thì dùng `opus-kiem-dinh/1.0 (https://mtuann.github.io/opus/)`, hay bỏ dịch vụ ấy.
 

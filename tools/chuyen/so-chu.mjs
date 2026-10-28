@@ -2,12 +2,15 @@
 // So chữ hiển thị của một trang ở bản build cũ (.cache/site-cu/) và bản build mới (dist/), theo từng khối (đoạn, mục
 // danh sách, ô bảng…), để biết việc chuyển cú pháp (tools/chuyen/chuyen.mjs) không làm mất hay đổi chữ (D1.4).
 //   node tools/chuyen/so-chu.mjs <trang> [<trang>…] [--dist <thư mục build mới>]
+//   node tools/chuyen/so-chu.mjs <trang> --doi-chu   in khung doi_chu (YAML) cho các khối khác mà hồ sơ kiem-dinh/<trang>.yml
+//                                                    chưa ghi; điền ly_do rồi chép vào hồ sơ
 // Phần do thành phần dựng khác cách thì so riêng: khuông nhạc (tiêu đề và trọn mã ABC), câu hỏi (chữ từng câu, lựa
 // chọn kèm đáp án đúng, giải thích); so cả tiêu đề, mô tả trang và id tiêu đề. Bỏ hình chưa chuyển, chữ chỉ dành cho
 // máy đọc màn hình và link #mục cạnh tiêu đề.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { parse, stringify } from 'yaml';
 
 const GOC = fileURLToPath(new URL('../../', import.meta.url));
 export const SITE_CU = path.join(GOC, '.cache', 'site-cu');
@@ -219,12 +222,80 @@ export function khacNhau(a, b) {
 	return ra;
 }
 
+/**
+ * Bỏ khỏi HTML các phần tử có thuộc tính data-sinh (phần sinh từ dữ liệu, như sơ đồ 7 chặng; chữ do thành phần dựng, như
+ * lời nhắc bật JavaScript trong <noscript>): chữ của chúng không phải chữ của trang, nên không so với trang cũ.
+ */
+export function boPhanSinh(html) {
+	let ra = html;
+	for (let m; (m = /<([a-z][a-z0-9-]*)\b[^>]*\sdata-sinh(?=[\s=>])[^>]*>/i.exec(ra)); ) {
+		const ten = m[1].toLowerCase();
+		const re = new RegExp(`<(/?)${ten}\\b[^>]*>`, 'gi');
+		re.lastIndex = m.index + m[0].length;
+		let sau = 1;
+		let het = ra.length;
+		for (let t; sau && (t = re.exec(ra)); ) if ((sau += t[1] ? -1 : 1) === 0) het = re.lastIndex;
+		ra = ra.slice(0, m.index) + ra.slice(het);
+	}
+	return ra;
+}
+
+/**
+ * Mọi "khối" so được của một trang, như so-chu tách: khối chữ (đoạn, mục danh sách, dòng bảng…), cộng tiêu đề, mô tả, id
+ * tiêu đề, khuông nhạc (tiêu đề và mã) và câu hỏi, mỗi thứ một dòng có tiền tố ("tiêu đề: …", "id: …").
+ */
+export function khoiSo(trang, dist = path.join(GOC, 'dist')) {
+	const kq = soTrang(trang, dist);
+	const html = fs.readFileSync(path.join(dist, trang.replace(/\/index$/, ''), 'index.html'), 'utf8');
+	const cu = docCu(fs.readFileSync(path.join(SITE_CU, trang.replace(/\/index$/, ''), 'index.html'), 'utf8'));
+	const moi = docMoi(boPhanSinh(html));
+	const them = (k, i) => [`tiêu đề: ${kq.tieuDe[i]}`, `mô tả: ${kq.moTa[i]}`, ...kq.id[i].map((x) => `id: ${x}`), ...kq.abc[i].map((a) => `khuông: ${a.ten} | ${a.ma}`), ...kq.quiz[i].map((q) => `câu hỏi: ${q}`)];
+	return { cu: [...cu.khoi, ...them(kq, 0)], moi: [...moi.khoi, ...them(kq, 1)] };
+}
+
+/** Phần của dãy `a` không có trong dãy `b` (đếm cả số lần lặp). */
+export const tru = (a, b) => {
+	const con = new Map();
+	for (const x of b) con.set(x, (con.get(x) ?? 0) + 1);
+	return a.filter((x) => (con.get(x) ? (con.set(x, con.get(x) - 1), false) : true));
+};
+
+/**
+ * Khung doi_chu cho các khối khác trang cũ mà `daGhi` (doi_chu đang có trong hồ sơ) chưa ghi. Các khối khác liền nhau (theo
+ * dãy con chung dài nhất) gộp thành một mục { cu, moi, ly_do: '' }; cu, moi là một khối, danh sách khối, hay null.
+ */
+export function khungDoiChu(trang, daGhi = [], dist = path.join(GOC, 'dist')) {
+	const k = khoiSo(trang, dist);
+	const dem = (ds) => {
+		const m = new Map();
+		for (const x of ds) m.set(x, (m.get(x) ?? 0) + 1);
+		return m;
+	};
+	const conCu = dem(daGhi.flatMap((d) => d?.cu ?? []));
+	const conMoi = dem(daGhi.flatMap((d) => d?.moi ?? []));
+	const lay = (m, x) => (m.get(x) ? (m.set(x, m.get(x) - 1), true) : false);
+	const ra = [];
+	let muc = null;
+	let truoc = -2;
+	khacNhau(k.cu, k.moi).forEach((d, i) => {
+		const cu = d.cu !== null && !lay(conCu, d.cu) ? d.cu : null;
+		const moi = d.moi !== null && !lay(conMoi, d.moi) ? d.moi : null;
+		if (cu === null && moi === null) return;
+		if (!muc || i !== truoc + 1) ra.push((muc = { cu: [], moi: [] }));
+		if (cu !== null) muc.cu.push(cu);
+		if (moi !== null) muc.moi.push(moi);
+		truoc = i;
+	});
+	const gon = (ds) => (ds.length === 0 ? null : ds.length === 1 ? ds[0] : ds);
+	return ra.map((m) => ({ cu: gon(m.cu), moi: gon(m.moi), ly_do: '' }));
+}
+
 const fileTrang = (goc, trang) => path.join(goc, trang === 'index' ? '' : trang.replace(/\/index$/, ''), 'index.html');
 
 /** So một trang. Trả về { khac, abc, quiz, id, tieuDe } (mỗi mục là cặp [cũ, mới]); khac rỗng và các cặp bằng nhau là đạt. */
 export function soTrang(trang, dist = path.join(GOC, 'dist')) {
 	const cuHtml = fs.readFileSync(fileTrang(SITE_CU, trang), 'utf8');
-	const moiHtml = fs.readFileSync(fileTrang(dist, trang), 'utf8');
+	const moiHtml = boPhanSinh(fs.readFileSync(fileTrang(dist, trang), 'utf8'));
 	const cu = docCu(cuHtml);
 	const moi = docMoi(moiHtml);
 	const h1 = (html, re) =>
@@ -254,6 +325,22 @@ if (import.meta.main) {
 	const iDist = ts.indexOf('--dist');
 	const dist = iDist >= 0 ? path.resolve(ts[iDist + 1]) : undefined;
 	const trangs = ts.filter((t, i) => !t.startsWith('--') && (iDist < 0 || i !== iDist + 1));
+	if (ts.includes('--doi-chu')) {
+		for (const trang of trangs) {
+			const f = path.join(GOC, 'kiem-dinh', `${trang}.yml`);
+			const daGhi = (fs.existsSync(f) && parse(fs.readFileSync(f, 'utf8'))?.doi_chu) || [];
+			let khung;
+			try {
+				khung = khungDoiChu(trang, daGhi, dist);
+			} catch (e) {
+				console.log(`# ${trang}: KHÔNG SO ĐƯỢC: ${e.message}`);
+				continue;
+			}
+			console.log(`# ${trang}: ${khung.length ? `${khung.length} mục chưa ghi` : 'doi_chu đã đủ'}`);
+			if (khung.length) process.stdout.write(stringify({ doi_chu: khung }, { lineWidth: 0 }));
+		}
+		process.exit(0);
+	}
 	let hong = 0;
 	for (const trang of trangs) {
 		let kq;

@@ -16,12 +16,12 @@ Bạn làm lô **<D…-L…>** trong `plans/lam-lai/README.md` của repo opus.
 
 ## Việc
 
-- Chuyển từng trang bằng `tools/chuyen/`, rồi so chữ (`tools/chuyen/so-chu.mjs`). Chữ khác trang cũ phải ghi `doi_chu` trong hồ sơ.
+- Chuyển từng trang bằng `tools/chuyen/`, rồi so chữ (`tools/chuyen/so-chu.mjs`). Chữ khác trang cũ phải ghi `doi_chu` trong hồ sơ (`so-chu.mjs <trang> --doi-chu` in sẵn khung).
 - Thành phần, hình, công cụ mà trang cần lần đầu:
   - làm và đăng ký trong `src/plugins/thanh-phan.mjs`;
   - CSS ở `src/styles/thanh-phan.css`;
   - kiểm thử trong `tests/`.
-- Kiểm định lượt 1 theo mức của tầng, ghi hồ sơ (`node tools/khoa.mjs mau <trang>`):
+- Kiểm định lượt 1 theo mức của tầng, ghi hồ sơ (`node tools/khoa.mjs mau <trang>`). Lô nhiều trang thì chia phần cho tối đa 2 agent con theo `loi-giao/luot-1-trang.md`, rồi đọc lại hồ sơ của chúng:
   - Mỗi nhận định một loại đúng. Câu về chính site là `ve-site`, có `ghi_chu` ghi đã kiểm ở đâu.
   - Lời khuyên dính tới sức khỏe không xếp `khuyen-tap`.
   - Trang Lõi không giữ chi tiết mau cũ.
