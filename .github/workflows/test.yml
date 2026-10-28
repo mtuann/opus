@@ -21,12 +21,12 @@ jobs:
   kiem-thu:
     name: Kiểm thử (bản xem, ${{ matrix.phan }})
     runs-on: ubuntu-latest
-    # năm phần chạy song song (.github/actions/kiem-thu): npm test, kiểm thử trình duyệt trên từng trình duyệt, Lighthouse.
-    # Một phần hỏng thì các phần khác vẫn chạy tới cuối, để thấy hết lỗi trong một lần
+    # sáu phần chạy song song (.github/actions/kiem-thu): npm test, kiểm thử trình duyệt trên từng trình duyệt, Lighthouse,
+    # ảnh chụp cho review. Một phần hỏng thì các phần khác vẫn chạy tới cuối, để thấy hết lỗi trong một lần
     strategy:
       fail-fast: false
       matrix:
-        phan: [npm-test, chromium, webkit, firefox, lighthouse]
+        phan: [npm-test, chromium, webkit, firefox, lighthouse, anh-chup]
     # chặn đường treo (mặc định của GitHub là 6 giờ); phần lâu nhất thường khoảng 4 phút
     timeout-minutes: 30
     steps:
@@ -40,13 +40,13 @@ jobs:
           phan: ${{ matrix.phan }}
       # ảnh chụp các trang nhánh đã đổi và trang mẫu, 360 và 1280 px, để review xem (tools/chup-anh.mjs); không commit vào
       # repo. Tải về: gh run download <số lần chạy> -n anh-chup
-      # chỉ ở phần chromium (đã cài Chromium); ảnh chỉ để xem: bước này hỏng thì không làm hỏng lần chạy
+      # phần riêng (khoảng 2 phút), song song với kiểm thử; ảnh chỉ để xem: bước này hỏng thì không làm hỏng lần chạy
       - name: Chụp ảnh trang cho review
-        if: ${{ !cancelled() && matrix.phan == 'chromium' }}
+        if: ${{ !cancelled() && matrix.phan == 'anh-chup' }}
         continue-on-error: true
         run: node tools/chup-anh.mjs anh-chup
       - uses: actions/upload-artifact@v7
-        if: ${{ !cancelled() && matrix.phan == 'chromium' }}
+        if: ${{ !cancelled() && matrix.phan == 'anh-chup' }}
         continue-on-error: true
         with:
           name: anh-chup
