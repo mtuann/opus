@@ -1,17 +1,17 @@
 ---
 title: Phối hợp hai tay và đa tiết tấu
-description: "Gần như ai mới học piano cũng có lúc nghĩ: cho hai tay làm hai việc khác nhau là không thể. Đó là một kỹ năng, và như mọi kỹ năng, nó có cách tập. Trang này…"
+description: "Nhiều người mới học piano có lúc nghĩ: cho hai tay làm hai việc khác nhau là không thể. Đó là một kỹ năng, và như mọi kỹ năng, nó có cách tập. Trang này…"
 ---
 
-Gần như ai mới học piano cũng có lúc nghĩ: cho hai tay làm hai việc khác nhau là không thể. Đó là một kỹ năng, và như mọi kỹ năng, nó có cách tập. Trang này đưa ra một quy trình sáu bậc, sáu kiểu phối hợp hay gặp kèm bài tập, rồi đến đa tiết tấu: hai chọi ba và ba chọi bốn.
+Nhiều người mới học piano có lúc nghĩ: cho hai tay làm hai việc khác nhau là không thể. Đó là một kỹ năng, và như mọi kỹ năng, nó có cách tập. Trang này đưa ra một quy trình sáu bậc, sáu kiểu phối hợp hay gặp kèm bài tập, rồi đến đa tiết tấu: hai chọi ba và ba chọi bốn.
 
 ## Vì sao khó, và vì sao học được
 
 Hai tay của chúng ta có xu hướng bắt chước nhau. Chuyển động **đối xứng gương**, khi hai tay dùng các ngón tương ứng cùng lúc, là dễ và ổn định nhất. Các thí nghiệm kinh điển của nhà khoa học vận động J. A. Scott Kelso, và mô hình Haken–Kelso–Bunz (1985) rút ra từ đó, cho thấy khi tăng tốc, hai tay đang chuyển động lệch nhau có xu hướng tự "trượt" về đối xứng. Vì thế chơi [ngược chiều với cùng số ngón](/opus/piano/nam-ngon/) dễ hơn chơi song song, và một tay hay bị tay kia "kéo theo": nhả nốt cùng lúc, nhấn cùng lúc, staccato cùng lúc.
 
-Cái khó thứ hai là **sự chú ý**. Không ai chủ động điều khiển được từng nốt của hai dòng nhạc khác nhau cùng một lúc. Người chơi giỏi cũng không làm vậy: một phần việc (thường là phần đệm) đã trở thành **tự động**, và tai họ nghe hai tay như một hình tiết tấu chung, rồi như hai giọng.
+Cái khó thứ hai là **sự chú ý**. Khi chưa quen, rất khó theo dõi từng nốt của hai dòng nhạc khác nhau cùng một lúc. Lối ra không phải là cố chú ý nhiều hơn, mà là làm cho một phần việc (thường là phần đệm) trở thành **tự động**; khi ấy tai nghe hai tay như một hình tiết tấu chung, rồi như hai giọng.
 
-Tin tốt là cả hai cái khó đều giảm rất nhanh khi tập đúng cách. Những buổi đầu ghép tay một bài mới luôn vụng về; sau vài ngày, phần lớn mọi người thấy hai tay "tự nhiên khớp".
+Tin tốt là cả hai cái khó đều giảm dần khi tập đúng cách. Những buổi đầu ghép tay một bài mới thường vụng về; sau vài ngày tập đúng cách, hai tay dần "tự nhiên khớp".
 
 ## Sáu bậc ghép hai tay
 
@@ -99,7 +99,7 @@ X:4
 T:Giai điệu f, đệm p
 M:4/4
 L:1/8
-Q:1/4=66
+Q:1/4=60
 %%score {RH LH}
 V:RH clef=treble
 V:LH clef=bass
@@ -108,7 +108,7 @@ K:C
 [V:LH] !p!!5!C,!3!E,!1!G,E, C,E,G,E, | !5!B,,!3!D,!1!G,D, !5!C,E,G,E, | C,E,G,E, !5!A,,!3!C,!1!F,C, | !5!B,,D,G,D, !5!C,4 |]
 ```
 
-Giai điệu to hơn phần đệm khoảng hai bậc sắc thái. Tay trái: ngón sát phím, phím đi xuống chậm; tay phải: trọng lượng cánh tay đi vào từng nốt. Nếu khó, thử bấm "câm" tay trái (phím xuống mà không ra tiếng) trong khi tay phải hát, rồi cho tay trái kêu dần lên (xem [Tạo tiếng đàn](/opus/piano/tieng-dan/)).
+Giai điệu to hơn phần đệm vài bậc sắc thái. Tay trái: ngón sát phím, phím đi xuống chậm; tay phải: trọng lượng cánh tay đi vào từng nốt. Nếu khó, thử bấm "câm" tay trái (phím xuống mà không ra tiếng) trong khi tay phải hát, rồi cho tay trái kêu dần lên (xem [Tạo tiếng đàn](/opus/piano/tieng-dan/)).
 
 ### 5. Bass Alberti và giai điệu
 
@@ -119,7 +119,7 @@ X:5
 T:Bass Alberti và giai điệu
 M:4/4
 L:1/8
-Q:1/4=66
+Q:1/4=60
 %%score {RH LH}
 V:RH clef=treble
 V:LH clef=bass
@@ -148,11 +148,11 @@ K:C
 [V:LH] !5!C,2 z6 | !5!F,,2 z6 | !5!G,,2 z6 | !5!C,8 |]
 ```
 
-Mắt nhìn đích trước. Tay trái rời phím ngay sau khi đánh nốt trầm; khuỷu tay và vai dẫn đường, đừng để bàn tay "bay" một mình. Tay phải hơi hạ thấp để chừa chỗ. Khi đã quen, thêm [bàn đạp](/opus/piano/ban-dap/) để nốt trầm ngân dưới nốt cao. Các sonata của Scarlatti đầy những bước bắt chéo như thế (xem [hướng dẫn nghe](/opus/nghe-nhac/scarlatti-sonata/)).
+Mắt nhìn đích trước. Tay trái rời phím ngay sau khi đánh nốt trầm; khuỷu tay và vai dẫn đường, đừng để bàn tay "bay" một mình. Tay phải hơi hạ thấp để chừa chỗ. Khi đã quen, thêm [bàn đạp](/opus/piano/ban-dap/) để nốt trầm ngân dưới nốt cao. Nhiều sonata của Scarlatti có những bước bắt chéo như thế (xem [hướng dẫn nghe](/opus/nghe-nhac/scarlatti-sonata/)).
 
 ## Hai chọi ba
 
-**Đa tiết tấu** là khi hai tay chia cùng một khoảng thời gian theo hai cách khác nhau. Phổ biến nhất là **hai chọi ba**: một tay chơi hai nốt đều, tay kia chơi ba nốt đều trong cùng một phách (ôn lại [liên ba](/opus/nhac-ly/15-tiet-tau-nang-cao/)). Chopin và Brahms dùng nó rất thường xuyên, Arabesque số 1 của Debussy có rất nhiều đoạn hai chọi ba, và [Clair de lune](/opus/piano/tac-pham/debussy-clair-de-lune/) xen những nhóm hai nốt (liên hai) vào nhịp 9/8 vốn chia ba.
+**Đa tiết tấu** là khi hai tay chia cùng một khoảng thời gian theo hai cách khác nhau. Một dạng phổ biến là **hai chọi ba**: một tay chơi hai nốt đều, tay kia chơi ba nốt đều trong cùng một phách (ôn lại [liên ba](/opus/nhac-ly/15-tiet-tau-nang-cao/)). Nó thường gặp ở Brahms, Arabesque số 1 của Debussy có nhiều đoạn hai chọi ba, và [Clair de lune](/opus/piano/tac-pham/debussy-clair-de-lune/) xen những nhóm hai nốt (liên hai) vào nhịp 9/8 vốn chia ba.
 
 Mẹo là tìm một **lưới chung**. Bội số chung nhỏ nhất của 2 và 3 là 6, nên chia phách thành sáu phần đều nhau:
 
@@ -200,7 +200,7 @@ K:C
 [V:LH] !5!C,,!2!G,, !1!C,!2!G,, | !5!F,,!2!C, !1!F,!2!C, | !5!G,,!2!D, !1!G,!2!D, | [C,,C,]4 |]
 ```
 
-Lỗi hay gặp nhất: nốt thứ hai của tay chơi hai bị kéo trùng vào một nốt của tay kia, biến hai chọi ba thành một nhịp lắc dài – ngắn. Nốt ấy phải rơi đúng giữa "ly" và "phê", tức đúng vào chữ "cà".
+Lỗi hay gặp: nốt thứ hai của tay chơi hai bị kéo trùng vào một nốt của tay kia, biến hai chọi ba thành một nhịp lắc dài – ngắn. Nốt ấy phải rơi đúng giữa "ly" và "phê", tức đúng vào chữ "cà".
 
 ## Ba chọi bốn
 
@@ -213,7 +213,7 @@ Ba chọi bốn khó hơn vì lưới chung có **mười hai** phần:
 
 Đọc mười hai phần thành bốn nhóm ba tiếng đều nhau: "**một** hai ba, **một** hai ba, **một** hai ba, **một** hai ba". Tay chơi bốn đánh ở mỗi chữ "một"; tay chơi ba đánh ở chữ "một" đầu tiên, chữ "hai" của nhóm thứ hai và chữ "ba" của nhóm thứ ba. Hình chung, tính theo phần lưới, là 3 – 1 – 2 – 2 – 1 – 3; người học tiếng Anh hay dùng câu "pass the golden butter" cho hình này.
 
-Tập theo đúng các bước của hai chọi ba: gõ trên bàn thật chậm, rồi bài 9 (viết chính xác trên lưới 12), rồi bài 10 (liên ba chọi móc kép). [Fantaisie-Impromptu Op. 66](/opus/piano/tac-pham/chopin-fantaisie-impromptu/) của Chopin là ví dụ nổi tiếng: ở hai phần nhanh, tay phải chơi bốn nốt trong khi tay trái chơi ba nốt ở mỗi phách.
+Tập theo đúng các bước của hai chọi ba: gõ trên bàn thật chậm, rồi bài 9 (viết chính xác trên lưới 12), rồi bài 10 (liên ba chọi móc kép). [Fantaisie-Impromptu Op. 66](/opus/piano/tac-pham/chopin-fantaisie-impromptu/) của Chopin là ví dụ nổi tiếng: ở hai phần nhanh, tay phải chơi bốn nốt trong khi tay trái chơi ba nốt trong mỗi phách đen.
 
 ```abc
 X:9

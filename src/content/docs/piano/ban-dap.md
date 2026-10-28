@@ -13,7 +13,7 @@ Bàn đạp nối những gì ngón tay không nối được, làm tiếng đà
 | Trái | **Una corda** (soft pedal) | Dịch cả bàn phím và bộ máy sang phải: ở âm vực mỗi nốt có ba dây, búa chỉ gõ hai, bằng phần nỉ chưa bị dây in rãnh. Tiếng nhỏ hơn, mềm và tối lại | Đưa cả hàng búa lại gần dây; búa đi quãng ngắn hơn nên tiếng nhỏ hơn, nhưng màu tiếng gần như không đổi và cảm giác phím hơi khác |
 | Giữa | **Bàn đạp giữ âm** (*sostenuto*) | Chỉ giữ nhấc những bộ giảm âm đang được nhấc vào lúc nhấn bàn đạp, tức của những phím đang giữ | Thường là **bàn đạp tập**: hạ một dải nỉ vào giữa búa và dây để giảm tiếng (nhiều đàn gạt sang bên để khóa). Một số đàn đứng có sostenuto thật, hoặc bàn đạp chỉ nhấc bộ giảm âm phần trầm |
 
-Tên *una corda* ("một dây") có từ thời bộ máy dịch được tới mức búa chỉ gõ một dây; trong Concerto số 4, Beethoven còn ghi cả *una corda*, *due corde* và *tre corde*. Lịch sử của bàn đạp, từ cần gạt bằng đầu gối đến sostenuto, ở trang [lịch sử cây đàn](/opus/piano/lich-su-dan/).
+Tên *una corda* ("một dây") có từ thời đàn của Cristofori, khi bộ máy dịch sang bên để búa chỉ gõ một dây; trong Concerto số 4, Beethoven còn ghi cả *una corda*, *due corde* và *tre corde*. Lịch sử của bàn đạp, từ cần gạt bằng đầu gối đến sostenuto, ở trang [lịch sử cây đàn](/opus/piano/lich-su-dan/).
 
 **Piano điện.** Bàn đạp đi kèm nhiều đàn là loại **công tắc**: chỉ có bật và tắt, không có nửa bàn đạp. Loại tốt hơn có **cảm biến liên tục** đọc được độ sâu, nên dùng được nửa bàn đạp. Nhiều đàn có **bộ ba bàn đạp** gắn vào chân đàn hoặc bán rời; khi đó bàn đạp giữa thường là sostenuto, bàn đạp trái làm tiếng nhỏ và tối đi. Đàn tốt còn mô phỏng cộng hưởng dây khi nhấn bàn đạp. Nếu bạn định học đến trình độ trung cấp, bàn đạp liên tục là khoản đáng đầu tư (xem [chọn đàn](/opus/piano/chon-dan/)).
 
@@ -40,11 +40,9 @@ Bấm câm (không cho kêu) hợp âm Đô4–Mi4–Sol4 và giữ phím. Tay k
 | *una corda* (*u.c.*) | Nhấn bàn đạp trái |
 | *tre corde* (*t.c.*), *tutte le corde* | Nhả bàn đạp trái |
 | *laissez vibrer* (*l.v.*) | Để tiếng tự tan, không chặn |
-| *Sost. Ped.* | Bàn đạp giữ âm (giữa) |
 | *senza sordino* (thời Beethoven) | "Không có bộ giảm âm": giữ bàn đạp vang |
-| *con sordino* (về sau), *mit Verschiebung* (Schumann) | Thường chỉ bàn đạp una corda |
 
-Hai dòng cuối là một cái bẫy: cùng chữ *sordino*, ở Beethoven là bộ giảm âm, còn ở nhiều nhà soạn nhạc về sau là una corda. Bản Urtext tốt giữ nguyên chữ của tác giả và giải thích trong chú thích. Cũng nhớ rằng phần lớn ký hiệu bàn đạp trong các bản in phổ thông là của người biên tập. Các ký hiệu biểu diễn khác ở bài [ký hiệu biểu diễn](/opus/nhac-ly/14-ky-hieu-bieu-dien/).
+Chữ *senza sordino* của Beethoven là chỉ dẫn về bộ giảm âm (bàn đạp vang), không phải bàn đạp trái. Các ký hiệu biểu diễn khác ở bài [ký hiệu biểu diễn](/opus/nhac-ly/14-ky-hieu-bieu-dien/).
 
 ## Đặt chân
 
@@ -159,8 +157,7 @@ Chopin tự ghi bàn đạp kỹ: *Ped.* và dấu sao xuất hiện thường x
 - **Bắt đầu từ ký hiệu của chính Chopin**, trong một bản Urtext. Trong Wydanie Narodowe (bản Ekier), chỉ dẫn do người biên tập thêm vào được đặt trong ngoặc vuông; phương án khác cũng có nguồn gốc từ tác giả thì đặt trong ngoặc tròn.
 - **Nhiều chỗ Chopin giữ bàn đạp dài hơn bạn nghĩ.** Ở bốn ô cuối Nocturne Op. 27 số 2 (Rê♭ trưởng), ông ghi một lần đạp duy nhất; phần bình giải của Wydanie Narodowe khuyên giữ đúng như vậy, vì hiệu quả vẫn rất đẹp trên đàn hiện đại.
 - **Legato hòa âm**: bàn đạp của Chopin thường đi cùng việc ngón giữ các nốt của hòa âm trong lúc chân đổi bàn đạp, nên âm thanh không bị hở.
-- Ông rất hiếm khi ghi una corda.
-- Đàn Pleyel mà ông ưa chuộng tắt tiếng nhanh hơn đàn hiện đại. Ở âm vực trầm hoặc khi giai điệu đi bậc liền, có thể phải đổi thêm, đạp nông hay rung bàn đạp. Điều chỉnh để giữ ý định của ông (nốt trầm ngân, hòa âm hòa quyện), không phải để xóa nó.
+- Trên đàn hiện đại, ở âm vực trầm hoặc khi giai điệu đi bậc liền, có thể phải đổi thêm, đạp nông hay rung bàn đạp. Điều chỉnh để giữ ý định của ông (nốt trầm ngân, hòa âm hòa quyện), không phải để xóa nó.
 
 Áp dụng vào [Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/).
 
@@ -236,11 +233,7 @@ Debussy ghi rất ít bàn đạp và để việc ấy cho người chơi, như
 
 ## Nguồn
 
-- Joseph Banowetz, *The Pianist's Guide to Pedaling* (Indiana University Press, 1985).
-- David Rowland, *A History of Pianoforte Pedalling* (Cambridge University Press, 1993).
-- Karl Ulrich Schnabel, *Modern Technique of the Pedal*.
-- Heinrich Neuhaus, *The Art of Piano Playing*: chương về bàn đạp.
-- Graham Fitch, Practising the Piano: [bàn đạp trong Sonata *Ánh trăng*](https://practisingthepiano.com/pedalling-moonlight-sonata/) và [gợi ý cho *Voiles* của Debussy](https://practisingthepiano.com/some-practical-suggestions-for-debussys-voiles/).
+- Graham Fitch, Practising the Piano: [bàn đạp trong Sonata *Ánh trăng*](https://practisingthepiano.com/pedalling-moonlight-sonata/).
 - Fryderyk Chopin, *Nocturnes*, Wydanie Narodowe (Jan Ekier biên tập): [phần bình giải](https://www.chopin-nationaledition.com/wp-content/uploads/2017/05/nocturnes_commentaries.pdf).
-- Bản nhạc: [IMSLP](https://imslp.org/) (tìm "Op.27 No.2" cho Beethoven); bản Urtext của [G. Henle Verlag](https://www.henle.de/).
+- Wikipedia, [Piano pedals](https://en.wikipedia.org/wiki/Piano_pedals): đối chiếu cấu tạo ba bàn đạp, lịch sử sostenuto, đàn đứng và piano điện.
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

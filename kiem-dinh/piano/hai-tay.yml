@@ -1,0 +1,788 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa piano/hai-tay
+trang: src/content/docs/piano/hai-tay.md
+nguon_cu: ../opus-zero/docs/piano/hai-tay.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-28
+    nhanh: moi/d4-l2
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D4-L2 lượt 1, phần B)
+      luot_2: null
+      review: null
+      kiem_mau: null
+nguon:
+  - id: hkb
+    bac: 2
+    ten: Haken, Kelso, Bunz (1985), "A theoretical model of phase transitions in human hand movements", Biological Cybernetics 51(5), 347–356 (trang nhà xuất bản Springer; tóm tắt)
+    link: https://link.springer.com/article/10.1007/BF00336922
+  - id: fau-biophys
+    bac: 2
+    ten: Tài liệu của nhóm Kelso (Florida Atlantic University), biophys2000.pdf, tóm tắt các thí nghiệm của Kelso và mô hình HKB (trích Jirsa và cộng sự 2000)
+    link: https://www.fau.edu/science/psychology/documents/biophys2000.pdf
+  - id: fau-surf23
+    bac: 2
+    ten: "Florida Atlantic University, SURF 2023 poster (nhóm Kelso): phối hợp ngón tay cùng pha và ngược pha; trích Kelso 1984, Am. J. Physiol. 246(6), R1000–R1004"
+    link: https://ccs.fau.edu/hbblab/SURF23_Poster.pdf
+  - id: fau-kelso
+    bac: 2
+    ten: "Florida Atlantic University, bản tin về J. A. Scott Kelso (chức danh, lĩnh vực: coordination dynamics, motor control)"
+    link: https://www.fau.edu/newsdesk/articles/kelso-global-chair-award.php
+  - id: hook-mto
+    bac: 2
+    ten: Julian Hook, "How to Perform Impossible Rhythms", Music Theory Online 17(4), 2011 (Society for Music Theory)
+    link: https://www.mtosmt.org/issues/mto.11.17.4/mto.11.17.4.hook.php
+  - id: cod-polyrhythm
+    bac: 2
+    ten: Concise Oxford Dictionary of Music (encyclopedia.com), polyrhythm
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/polyrhythm
+  - id: omt-compound
+    bac: 2
+    ten: Open Music Theory, Compound Meters and Time Signatures
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/compound-meters-and-time-signatures/
+  - id: omt-rhythm-essentials
+    bac: 2
+    ten: Open Music Theory, Other Rhythmic Essentials (liên ba, liên hai)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/other-rhythmic-essentials/
+  - id: mathworld-lcm
+    bac: 2
+    ten: Wolfram MathWorld, Least Common Multiple
+    link: https://mathworld.wolfram.com/LeastCommonMultiple.html
+  - id: evansville-scales
+    bac: 2
+    ten: University of Evansville, Scale and Arpeggio Fingerings (ngón bấm gam Đô trưởng)
+    link: https://faculty.evansville.edu/gu2/Scales.htm
+  - id: cod-alberti
+    bac: 2
+    ten: Concise Oxford Dictionary of Music (encyclopedia.com), Alberti bass
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/alberti-bass
+  - id: mutopia-k545
+    bac: 1
+    ten: Mutopia Project, Mozart, Sonata Facile K 545, chương 1 (tệp LilyPond)
+    link: https://www.mutopiaproject.org/ftp/MozartWA/KV545/K545-1/K545-1.ly
+  - id: mutopia-elise
+    bac: 1
+    ten: Mutopia Project, Beethoven, Für Elise WoO 59 (tệp LilyPond)
+    link: https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly
+  - id: mutopia-fi
+    bac: 1
+    ten: Mutopia Project, Chopin, Fantaisie-Impromptu Op. 66, bản hiệu đính của Herrmann Scholtz (tệp LilyPond)
+    link: https://www.mutopiaproject.org/ftp/ChopinFF/O66/chopin_fantaisie-impromptu/chopin_fantaisie-impromptu.ly
+  - id: mutopia-arabesque
+    bac: 1
+    ten: Mutopia Project, Debussy, Première Arabesque L 66 No. 1, ấn bản Durand 1904 (tệp LilyPond)
+    link: https://www.mutopiaproject.org/ftp/DebussyC/L66/debussy_Arabesque_1/debussy_Arabesque_1.ly
+  - id: mutopia-clair
+    bac: 1
+    ten: "Mutopia Project, Debussy, Suite bergamasque: Clair de lune L 75, ấn bản Fromont 1905 (tệp LilyPond)"
+    link: https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly
+  - id: enc-scarlatti
+    bac: 2
+    ten: Encyclopedia.com, Scarlatti, Domenico (bắt chéo tay, nốt lặp nhanh)
+    link: https://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/scarlatti-domenico
+  - id: onmusic-ms
+    bac: 2
+    ten: Dolmetsch/onmusic dictionary, mano sinistra (M.s.)
+    link: https://dictionary.onmusic.org/terms/2088-mano_sinistra
+  - id: wiki-polyrhythm
+    bac: 3
+    ten: Wikipedia, Polyrhythm (bậc 3; chỉ cho câu gợi nhớ "pass the golden butter", dẫn Slenczynska 1976, tr. 43)
+    link: https://en.wikipedia.org/wiki/Polyrhythm
+  - id: crosseyed
+    bac: 3
+    ten: Cross-Eyed Pianist, "Cross-Rhythms Without Fear?" (bậc 3; câu gợi nhớ "Nice Cup of Tea", lưới 12)
+    link: https://crosseyedpianist.com/2011/01/18/cross-rhythms-without-fear/
+  - id: chang-ii25
+    bac: 2
+    ten: "Chuan C. Chang, Fundamentals of Piano Practice (sách mở), II.25 Hands Together and Mental Play (Fantaisie-Impromptu: 4 chọi 3)"
+    link: https://fundamentals-of-piano-practice.readthedocs.io/chapter1/ch1_procedures/II.25.html
+  - id: chang-site
+    bac: 2
+    ten: pianopractice.org, trang của Chuan C. Chang (bản in lần thứ ba tải miễn phí; bản thứ hai vẫn còn)
+    link: https://www.pianopractice.org/
+  - id: fitch-about
+    bac: 2
+    ten: Practising the Piano, trang About (Graham Fitch là người lập blog và tác giả chính)
+    link: https://practisingthepiano.com/about/
+  - id: bernstein-ecu
+    bac: 2
+    ten: "Thư viện ĐH East Carolina, biểu ghi With your own two hands: self-discovery through music (Seymour Bernstein, Schirmer Books, New York, 1981)"
+    link: https://librarycatalog.ecu.edu/catalog/183591
+nhan_dinh:
+  - id: n1
+    cau: "Nhiều người mới học piano có lúc nghĩ: cho hai tay làm hai việc khác nhau là không thể. Đó là một kỹ năng, và như mọi kỹ năng, nó có cách tập."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Câu cũ: "Gần như ai mới học piano cũng có lúc nghĩ". "Gần như ai" là khái quát không kiểm được; đổi thành "Nhiều người" (cả mô tả của trang). Phần còn lại là lời mở đầu, không trái trang nào.'
+  - id: n2
+    cau: "Trang đưa ra một quy trình sáu bậc, sáu kiểu phối hợp hay gặp kèm bài tập, rồi đến đa tiết tấu: hai chọi ba và ba chọi bốn."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Đã kiểm trên trang: mục "Sáu bậc ghép hai tay" (6 mục đánh số), "Sáu kiểu phối hợp" (6 tiêu đề ### đánh số 1–6, mỗi kiểu một khối abc), "Hai chọi ba", "Ba chọi bốn".'
+  - id: n3
+    cau: Hai tay của chúng ta có xu hướng bắt chước nhau. Chuyển động đối xứng gương, khi hai tay dùng các ngón tương ứng cùng lúc, là dễ và ổn định nhất.
+    loai: quy-tac
+    nguon:
+      - hkb
+      - fau-surf23
+      - fau-biophys
+    ket_qua: dung
+    ghi_chu: 'HKB (Springer, tóm tắt): "a symmetrical, in-phase mode involving simultaneous activation of homologous muscle groups"; nhóm Kelso (FAU, biophys2000 tr. 85): "Beyond this frequency only the inphase state is stable"; SURF23: "the more stable in-phase pattern". Nguồn nói "ổn định hơn", không có chữ "dễ nhất": chữ "dễ" là cách nói của người dạy. Giữ nguyên, vì khớp nam-ngon (chuyển động ngược chiều là cách dễ nhất để bắt đầu).'
+  - id: n4
+    cau: Mô hình Haken–Kelso–Bunz (1985).
+    loai: ten
+    nguon:
+      - hkb
+    ket_qua: dung
+    ghi_chu: Haken, H., Kelso, J.A.S., Bunz, H. (1985), Biological Cybernetics 51(5), 347–356, DOI 10.1007/BF00336922 (trang Springer).
+  - id: n5
+    cau: Các thí nghiệm kinh điển của nhà khoa học vận động J. A. Scott Kelso, và mô hình Haken–Kelso–Bunz rút ra từ đó, cho thấy khi tăng tốc, hai tay đang chuyển động lệch nhau có xu hướng tự "trượt" về đối xứng.
+    loai: quy-tac
+    nguon:
+      - hkb
+      - fau-biophys
+      - fau-surf23
+      - fau-kelso
+    ket_qua: dung
+    ghi_chu: 'HKB (Springer): "the originally prepared out-of-phase, antisymmetric mode is replaced by a symmetrical, in-phase mode" khi tăng tần số; mô hình "reproduces ... the dramatic change in coordinative pattern observed between the hands" trong thí nghiệm của Kelso (Kelso 1984, Am. J. Physiol. 246(6), R1000–R1004, qua SURF23). Kelso: FAU mô tả lĩnh vực coordination dynamics, nghiên cứu điều khiển và phát triển vận động, nên "nhà khoa học vận động" chấp nhận được.'
+  - id: n6
+    cau: 'Vì thế chơi ngược chiều với cùng số ngón dễ hơn chơi song song, và một tay hay bị tay kia "kéo theo": nhả nốt cùng lúc, nhấn cùng lúc, staccato cùng lúc.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Nhận xét sư phạm suy từ n3: ngược chiều từ hai ngón cái dùng cùng số ngón (cơ tương ứng, mẫu đối xứng), còn song song là cùng hướng (không đối xứng). Khớp nam-ngon (ngược chiều là cách dễ nhất để bắt đầu hai tay) và bảng lỗi cùng trang ("Lây" phát âm). Không có nghiên cứu piano trực tiếp: giữ ở mức lời khuyên.'
+  - id: n7
+    cau: Cái khó thứ hai là sự chú ý. Khi chưa quen, rất khó theo dõi từng nốt của hai dòng nhạc khác nhau cùng một lúc. Lối ra không phải là cố chú ý nhiều hơn, mà là làm cho một phần việc (thường là phần đệm) trở thành tự động; khi ấy tai nghe hai tay như một hình tiết tấu chung, rồi như hai giọng.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Chữ cũ: "Không ai chủ động điều khiển được từng nốt của hai dòng nhạc khác nhau cùng một lúc. Người chơi giỏi cũng không làm vậy: một phần việc ... đã trở thành tự động". "Không ai" và mô tả người chơi giỏi là khẳng định quá rộng, không có nguồn; viết lại thành mô tả cách tập (lời khuyên). Không trái bậc 1 và 5 của trang.'
+  - id: n8
+    cau: Tin tốt là cả hai cái khó đều giảm dần khi tập đúng cách. Những buổi đầu ghép tay một bài mới thường vụng về; sau vài ngày tập đúng cách, hai tay dần "tự nhiên khớp".
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Chữ cũ: "giảm rất nhanh"; "luôn vụng về; sau vài ngày, phần lớn mọi người thấy hai tay tự nhiên khớp". "Rất nhanh", "luôn", "phần lớn mọi người" không có nguồn; viết lại cho vừa với điều kiểm được (lời động viên, không số liệu).'
+  - id: n9
+    cau: 'Mục "Sáu bậc ghép hai tay" có sáu bậc đánh số; bậc 4 là "Điểm neo"; neo của mục là #sau-bac-ghep-hai-tay.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Lô trước yêu cầu giữ (kiem-dinh/piano/10-bai-dau-tien.yml n19 và n18; nhac-ly/10 và 11 không liên quan). Đã kiểm: src/content/docs/piano/hai-tay.md có "## Sáu bậc ghép hai tay", mục 4 là "**Điểm neo.**"; dist/piano/hai-tay/index.html có id="sau-bac-ghep-hai-tay"; link ở 10-bai-dau-tien trỏ đúng neo này. KHỚP.'
+  - id: n10
+    cau: "Bậc 1: Tay riêng cho đến khi tự động. Đúng nốt, đúng ngón, đúng phát âm và sắc thái. Phép thử: bạn chơi được tay đó trong khi đếm to, hoặc trong khi nhìn đi chỗ khác. Tập tay riêng ở đúng tốc độ chậm mà bạn sẽ dùng khi ghép, không phải ở tốc độ nhanh nhất mình đạt được."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập. Chang (II.7, II.13) khuyên tập tay riêng lên nhanh hơn tốc độ cuối: khác trường phái, nhưng trang này khớp cách dạy chậm của Bernstein/Fitch; không trái trang lõi nào của site (piano/cach-tap bước "Ghép hai tay, chậm hơn nữa").'
+  - id: n11
+    cau: "Bậc 2: Hai tay thật chậm. Thường chỉ bằng khoảng một nửa tốc độ tay riêng. Đếm to, bật máy đếm nhịp. Nếu phải dừng giữa chừng, tốc độ vẫn còn quá nhanh."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; khớp ../opus-zero/docs/piano/cach-tap.md bước 6 ("Tốc độ ghép tay thường chỉ bằng khoảng một nửa tốc độ tay riêng").
+  - id: n12
+    cau: Bậc 2 trỏ tới trang Cách tập (/opus/piano/cach-tap/) cho điều "hai tay chỉ bằng khoảng một nửa tốc độ tay riêng" và tới Máy đếm nhịp (/opus/luyen-tap/metronome/).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Chưa chuyển cả hai: ../opus-zero/docs/piano/cach-tap.md (dòng 24: "6. Ghép hai tay, chậm hơn nữa. Tốc độ ghép tay thường chỉ bằng khoảng một nửa tốc độ tay riêng", có "Ví dụ một thang máy đếm nhịp"); ../opus-zero/docs/luyen-tap/metronome.md ("# Máy đếm nhịp"; "Khi đã làm đúng 3 lần liên tiếp, tăng 2–4 BPM"). Lô chuyển giữ đúng hai điều ấy (và mục "Ví dụ một thang máy đếm nhịp" của cach-tap, được bảng Lỗi thường gặp nhắc).'
+  - id: n13
+    cau: "Bậc 3: Ghép từng khúc. Một phách, rồi hai phách, một ô, một câu. Mỗi khúc dừng ở nốt đầu của phách sau, để mối nối cũng được tập."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập.
+  - id: n14
+    cau: "Bậc 4: Điểm neo. Khoanh bằng bút chì những chỗ hai tay đánh cùng lúc. Chơi từ điểm neo này tới điểm neo kia: đầu óc nhắm tới điểm neo, các nốt ở giữa tự đi. Khi hai tay đan xen mà không có điểm chung, hãy hát hình tiết tấu chung của cả hai tay."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập; "điểm neo" là cách gọi của site (khớp piano/cach-tap cũ: "Coi mỗi phách hai tay cùng đánh là một điểm neo" và 10-bai-dau-tien n18). Thuật ngữ này chưa có bản ghi thuat-ngu.yml.'
+  - id: n15
+    cau: Ở chủ đề của Für Elise, dòng móc kép chuyền từ tay trái sang tay phải.
+    loai: cau-truc
+    nguon:
+      - mutopia-elise
+    ket_qua: dung
+    ghi_chu: "Mutopia (3/8): ô thứ ba của chủ đề, tay trái A,16 e a (ba móc kép đầu ô) rồi tay phải c' e' a' (ba móc kép cuối ô): dòng móc kép A–E–A–C–E–A chuyền từ tay trái sang tay phải. Phần giai điệu A (móc đơn) ở tay phải ngân song song là chuyện khác."
+  - id: n16
+    cau: Bậc 4 trỏ tới trang Für Elise (/opus/piano/tac-pham/fur-elise/).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: src/content/docs/piano/tac-pham/fur-elise.md đã có.
+  - id: n17
+    cau: "Bậc 5: Một tay tự động, chú ý vào tay kia, rồi đổi. Chơi hai tay nhưng chỉ lắng nghe tay trái; lượt sau chỉ nghe tay phải; lượt sau nữa nghe cả hai. Biến thể: chơi một tay, tay kia gõ tiết tấu của nó lên đùi; hoặc chơi tay trái và hát giai điệu tay phải."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập.
+  - id: n18
+    cau: "Bậc 6: Lên tốc độ từng nấc nhỏ, như với một đoạn chạy nốt bình thường."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; khớp luyen-tap/metronome cũ (tăng 2–4 BPM mỗi nấc).
+  - id: n19
+    cau: "Khi vấp mãi ở cùng một chỗ: thường là một tay chưa thật sự tự động. Chơi riêng tay đó, đúng chỗ đó, trong khi đếm to. Nếu bạn ngập ngừng, hãy quay lại bậc 1 cho riêng ô nhịp ấy, đừng tập lại cả bài."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập (hộp tip); khớp bảng Lỗi thường gặp cùng trang.
+  - id: n20
+    cau: Các bài tập (bài 1–10) soạn cho trang này; ba kiểu đầu nối tiếp các bài tập cùng loại ở Vị trí năm ngón, khó hơn một bậc.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'src/content/docs/piano/nam-ngon.md có "Một tay giữ, một tay đi" (bài 3), "Song song" và "Ngược chiều" (bài 1, 2), "Legato một tay, staccato tay kia" (bài 4): đúng ba loại ở ba kiểu đầu của trang này (1 giữ/đi, 2 song song/ngược chiều, 3 legato/staccato); mỗi bài ở đây thêm một chiều (gam, nhịp, nhớ ngón). Khớp. "Soạn cho trang này": các khối là bản soạn của site, không trích tác phẩm.'
+  - id: n21
+    cau: "Mỗi bài: tay phải riêng, tay trái riêng, rồi hai tay ở ♩ = 50–60; chỉ tăng tốc khi chơi đúng ba lần liền."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; khớp lo-trinh-choi và 10-bai-dau-tien n18/n20 (♩ = 50–60; đúng ba lần liên tiếp). Đã đổi Q của khối 4 và 5 từ 66 về 60 cho khớp (xem khuong_nhac khối 4, 5).
+  - id: n22
+    cau: "Kiểu 1: bốn ô đầu tay trái giữ nốt tròn trong khi tay phải đi móc đơn; bốn ô sau đổi vai."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối abc 1 (4/4, L:1/8): ô 1–4 tay trái C,8 | F,,8 | G,,8 | C,8 (nốt tròn), tay phải cdef g2e2 | fede f2d2 | defe dc d2 | e2d2 c4 (móc đơn và đen); ô 5–8 tay phải e8 | f8 | d8 | c8, tay trái C,D,E,F, G,2E,2 | F,E,D,E, F,2D,2 | D,E,F,E, D,C, D,2 | E,2D,2 C,4. Đúng như câu nói."
+  - id: n23
+    cau: 'Giữ nốt dài đủ giá trị nhưng giữ nhẹ, chỉ đủ lực để phím không bật lên. Lắng nghe nốt dài tắt dần bên dưới giai điệu: nếu nó tắt "đột ngột" trước vạch nhịp, bạn đã nhả sớm.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; khớp nam-ngon ("Giữ nốt dài đủ phách").
+  - id: n24
+    cau: "Kiểu 2: gam Đô trưởng một quãng tám, hai ô song song rồi hai ô ngược chiều; ngược chiều thì hai tay luồn ngón cái cùng lúc và dùng cùng số ngón."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối abc 2: ô 1–2 tay phải C D E F G A B c | B A G F E D C2, tay trái C, … C (cùng hướng); ô 3–4 tay phải như cũ, tay trái đi xuống rồi lên (C, B,, A,, G,, F,, E,, D,, C,, | D,, … C,): ngón tay phải 1-2-3-1-2-3-4-5 và tay trái 1-2-3-1-2-3-4-5 (mirror), thumb ở nốt 4 (Fa/Sol,,) cùng lúc. Đúng."
+  - id: n25
+    cau: Khi đi lên gam Đô trưởng song song, tay phải luồn ngón cái ở nốt thứ tư (Fa) còn tay trái vắt ngón 3 ở nốt thứ sáu (La), nên hai tay đổi thế tay ở hai thời điểm khác nhau.
+    loai: quy-tac
+    nguon:
+      - evansville-scales
+    ket_qua: dung
+    ghi_chu: "Evansville, gam Đô trưởng một quãng tám: tay phải 1 2 3 1 2 3 4 1 (ngón cái luồn sau ngón 3, tới nốt thứ 4); tay trái 5 4 3 2 1 3 2 1 (ngón 3 vắt qua ngón cái ở nốt thứ 6: 1 rồi 3). Khớp khối abc 2."
+  - id: n26
+    cau: Tập riêng hai chỗ luồn/vắt ngón ấy cho thật êm rồi mới chơi cả gam.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập.
+  - id: n27
+    cau: Kiểu 2 trỏ tới trang Gam (/opus/piano/gam/).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: src/content/docs/piano/gam.md đã có (lô D4-L2 phần A).
+  - id: n28
+    cau: "Kiểu 3: hai ô đầu tay phải hát legato trên nền tay trái staccato; hai ô sau đổi vai."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối abc 3: ô 1–2 tay phải (e2 f2 g2 e2 | d2 e2 c4) legato, tay trái .C,2 .G,2 .E,2 .G,2 | .G,,2 .D,2 .C,2 z2 staccato; ô 3–4 tay phải .g2 .e2 .d2 .c2 | .f2 .d2 c4 staccato, tay trái (C,D,E,F, G,2E,2 | D,E,F,D, C,4) legato. Đúng."
+  - id: n29
+    cau: 'Lỗi điển hình: tay legato bị "lây" staccato, hoặc tay staccato bị kéo dài theo. Tập tay staccato đến mức tự động trước; khi ghép, đặt sự chú ý vào tay legato.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; khớp bảng Lỗi thường gặp ("Lây" phát âm).
+  - id: n30
+    cau: 'Kiểu 4: giai điệu to hơn phần đệm vài bậc sắc thái. Tay trái: ngón sát phím, phím đi xuống chậm; tay phải: trọng lượng cánh tay đi vào từng nốt. Nếu khó, thử bấm "câm" tay trái (phím xuống mà không ra tiếng) trong khi tay phải hát, rồi cho tay trái kêu dần lên.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập. Chữ cũ "khoảng hai bậc sắc thái": khối abc dùng f (giai điệu) và p (đệm), cách nhau ba bậc, nên viết "vài bậc" (da-sua nhỏ, không đổi ý). Không trái piano/tieng-dan.'
+  - id: n31
+    cau: Kiểu 4 trỏ tới trang Tạo tiếng đàn (/opus/piano/tieng-dan/).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: src/content/docs/piano/tieng-dan.md đã có.
+  - id: n32
+    cau: Bass Alberti là hình đệm thấp – cao – giữa – cao.
+    loai: dinh-nghia
+    nguon:
+      - cod-alberti
+    ket_qua: dung
+    ghi_chu: 'COD (encyclopedia.com): "broken triads of which the notes are played in the order: lowest, highest, middle, highest." Tên gọi dùng trên trang: "Bass Alberti"; bản ghi thuat-ngu.yml là "Alberti bass" (nghia: "Hình đệm rải hợp âm: trầm – cao – giữa – cao"). Ghi cho nhánh gom để thống nhất cách gọi.'
+  - id: n33
+    cau: Bass Alberti là hình đệm mở đầu Sonata K. 545 của Mozart.
+    loai: cau-truc
+    nguon:
+      - mutopia-k545
+    ket_qua: dung
+    ghi_chu: "Mutopia, K 545 chương 1, tay trái ô 1: c,8-5 g'-1 e-3 g (Đô–Sol–Mi–Sol, ngón 5-1-3-1) rồi c, g' e g; ô 2: d g f g ... (Rê–Sol–Fa–Sol). Đúng là Alberti ngay từ ô đầu."
+  - id: n34
+    cau: "Kiểu 5 trỏ tới cách tập riêng tay trái ở trang Hợp âm và hình đệm, neo #3-bass-alberti (/opus/piano/hop-am-rai/#3-bass-alberti), và tới trang Mozart K. 545 (/opus/piano/tac-pham/mozart-k545/)."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: dist/piano/hop-am-rai/index.html có id="3-bass-alberti" (từ "### 3. Bass Alberti"). Chữ link "Hợp âm và hình đệm" khớp tên trong menu (src/nhom.mjs), tiêu đề trang là "Hợp âm, hợp âm rải và hình đệm". mozart-k545 chưa chuyển; ../opus-zero/docs/piano/tac-pham/mozart-k545.md nói "Đệm Alberti (hợp âm rải theo thứ tự trầm – cao – giữa – cao)". Lô chuyển giữ điều ấy.
+  - id: n35
+    cau: "Kiểu 5: khối abc 5 đặt bass Alberti ở tay trái cùng một giai điệu ở tay phải."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối abc 5: tay trái Đô–Sol–Mi–Sol (5-1-3-1), Đô–La–Fa–La (5-1-2-1), Si,–Sol–Rê–Sol (5-1-3-1), tay phải c4 e2 g2 | f2 e2 d4 | g2 f2 e2 d2 | c8. Đúng."
+  - id: n36
+    cau: "Đừng đánh từng ngón một: để cổ tay xoay nhẹ qua lại. Nốt lặp lại ở ngón 1 là nốt nhẹ nhất. Nghe tay trái như một tiếng rì rầm đều, giai điệu nổi lên phía trên."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập. Chú ý: hop-am-rai viết "cẳng tay xoay nhẹ qua lại" cho cùng hình đệm; hai trang nói hơi khác (cổ tay, cẳng tay). Người giao quyết có thống nhất không.'
+  - id: n37
+    cau: "Kiểu 6, bắt chéo tay: tay trái đánh nốt trầm rồi vượt lên phía trên tay phải để đánh nốt cao; nốt ấy được ghi trên khuông tay phải với chữ m.s. (mano sinistra: tay trái)."
+    loai: dinh-nghia
+    nguon:
+      - onmusic-ms
+    ket_qua: dung
+    ghi_chu: 'onmusic dictionary: "Italian term used in piano music indicating that a specific passage is to be played by the left hand" (viết tắt M.s.). Khối abc 6: nốt g, a, b ghi trên khuông trên, nhãn m.s., ngón 2, tay trái chỉ có nốt trầm ô đầu mỗi ô.'
+  - id: n38
+    cau: Mắt nhìn đích trước. Tay trái rời phím ngay sau khi đánh nốt trầm; khuỷu tay và vai dẫn đường, đừng để bàn tay "bay" một mình. Tay phải hơi hạ thấp để chừa chỗ. Khi đã quen, thêm bàn đạp để nốt trầm ngân dưới nốt cao.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập.
+  - id: n39
+    cau: Kiểu 6 trỏ tới trang Bàn đạp (/opus/piano/ban-dap/) và hướng dẫn nghe Scarlatti (/opus/nghe-nhac/scarlatti-sonata/).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'src/content/docs/piano/ban-dap.md đã có. scarlatti-sonata chưa chuyển; ../opus-zero/docs/nghe-nhac/scarlatti-sonata.md ("Scarlatti: Ba sonata cho đàn phím (K. 380, K. 141, K. 466)") nói Scarlatti "cũng là bậc thầy của kỹ thuật bắt chéo tay" và K. 141 có bắt chéo tay. Lô chuyển giữ điều ấy.'
+  - id: n40
+    cau: Nhiều sonata của Scarlatti có những bước bắt chéo tay.
+    loai: lich-su
+    nguon:
+      - enc-scarlatti
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Các sonata của Scarlatti đầy những bước bắt chéo như thế". Encyclopedia.com: Scarlatti là người dùng sớm nhất "the crossing of hands, fast repeated notes, and passages in parallel thirds and sixths"; "đầy" là cường điệu, đổi thành "Nhiều sonata ... có". '
+  - id: n41
+    cau: Đa tiết tấu là khi hai tay chia cùng một khoảng thời gian theo hai cách khác nhau.
+    loai: dinh-nghia
+    nguon:
+      - cod-polyrhythm
+    ket_qua: dung
+    ghi_chu: 'COD: polyrhythm = "Several different rhythms perf. simultaneously". Câu của trang là trường hợp hai tay (hai nhịp); không trái.'
+  - id: n42
+    cau: "Hai chọi ba: một tay chơi hai nốt đều, tay kia chơi ba nốt đều trong cùng một phách."
+    loai: dinh-nghia
+    nguon:
+      - cod-polyrhythm
+      - omt-rhythm-essentials
+    ket_qua: dung
+    ghi_chu: 'Định nghĩa của trang cho "hai chọi ba" (2 nốt đều ở tay này, 3 nốt đều ở tay kia, trong cùng một khoảng thời gian); khớp khối abc 7 và 8 (một phách: tay trái 2 nốt, tay phải 3 nốt, liên ba). OMT: liên ba chia phách đơn thành ba phần; liên hai chia phách của nhịp kép thành hai phần.'
+  - id: n43
+    cau: Hai chọi ba thuộc chặng 5 trong lộ trình; chặng 5 khoảng Grade 6.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'src/content/docs/piano/lo-trinh.md dòng 129 (hàng Tay, chặng 5: "Đa tiết tấu hai chọi ba"); dòng 123 "## Chặng 5. Trung cấp cao (≈ Grade 6)"; src/data/cap-do.yml id 5: nhan_grade "Grade 6" (hồ sơ kiem-dinh/du-lieu/cap-do/5.yml). Khớp.'
+  - id: n44
+    cau: Ba chọi bốn đến muộn hơn hai chọi ba. Riêng việc gõ trên mặt bàn thì bạn có thể bắt đầu từ bất cứ lúc nào, và nó giúp cả cảm giác nhịp nói chung.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: "Lời khuyên tập; lo-trinh chỉ nêu hai chọi ba ở chặng 5, không nêu ba chọi bốn: không trái."
+  - id: n45
+    cau: Hai chọi ba thường gặp ở Brahms.
+    loai: lich-su
+    nguon:
+      - hook-mto
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Chopin và Brahms dùng nó rất thường xuyên". Hook (MTO): "Two-against-three polyrhythms are commonplace in Brahms". Không có nguồn bậc 1–2 cho "Chopin ... rất thường xuyên" (Chopin chỉ có Wikipedia, dẫn Walker, nói chung về nhịp chéo); bỏ Chopin ở câu này (Chopin vẫn xuất hiện ở mục ba chọi bốn).'
+  - id: n46
+    cau: Arabesque số 1 của Debussy có nhiều đoạn hai chọi ba.
+    loai: cau-truc
+    nguon:
+      - mutopia-arabesque
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "rất nhiều". Mutopia (Durand 1904, 4/4): từ ô 6 tay phải \times 2/3 (liên ba) trên nhóm tám móc đơn thẳng của tay trái; tay trái có liên ba ở ô 1–3; công cụ chỉ cho thấy liên ba ở một tay trong khoảng một nửa số ô (ước lượng, chưa đếm), nên bỏ "rất".'
+  - id: n47
+    cau: Clair de lune xen những nhóm hai nốt (liên hai) vào nhịp 9/8 vốn chia ba.
+    loai: cau-truc
+    nguon:
+      - mutopia-clair
+      - omt-compound
+      - omt-rhythm-essentials
+    ket_qua: dung
+    ghi_chu: "Mutopia (Fromont 1905): \\time 9/8, các nhóm \\times 3/2 {df f~} (hai nốt trong thời giá ba móc đơn = liên hai) ở ô đầu và nhiều ô sau; OMT: 9/8 là nhịp kép ba phách, mỗi phách chia ba; duplet chia phách nhịp kép thành hai."
+  - id: n48
+    cau: Phần nhắc Clair de lune trỏ tới /opus/piano/tac-pham/debussy-clair-de-lune/.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Chưa chuyển: ../opus-zero/docs/piano/tac-pham/debussy-clair-de-lune.md có "Nhịp mơ hồ, nhóm hai nốt trong 9/8" và "Rê♭ trưởng · 9/8". Lô chuyển giữ điều ấy.'
+  - id: n49
+    cau: Hai chọi ba trỏ tới Tiết tấu nâng cao (/opus/nhac-ly/15-tiet-tau-nang-cao/) để ôn liên ba.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: src/content/docs/nhac-ly/15-tiet-tau-nang-cao.md đã có, dòng 22 và 24 nói về liên ba.
+  - id: n50
+    cau: Bội số chung nhỏ nhất của 2 và 3 là 6, nên có thể chia phách thành sáu phần đều nhau để làm lưới chung của hai chọi ba.
+    loai: quy-tac
+    nguon:
+      - mathworld-lcm
+    ket_qua: dung
+    ghi_chu: BCNN(2, 3) = 6 (tính trực tiếp theo định nghĩa MathWorld).
+  - id: n51
+    cau: Trên lưới 6, tay chơi ba nốt đánh ở các phần 1, 3, 5, tay chơi hai nốt ở 1 và 4; hình tiết tấu chung là dài – ngắn – ngắn – dài.
+    loai: quy-tac
+    nguon:
+      - mathworld-lcm
+    ket_qua: dung
+    ghi_chu: "Khoảng cách giữa các nốt ba: 6/3 = 2 phần (1, 3, 5); giữa các nốt hai: 6/2 = 3 phần (1, 4); các điểm đánh chung 1, 3, 4, 5 cách nhau 2, 1, 1, 2 (rồi 2 tới phần 1 của nhóm sau): dài – ngắn – ngắn – dài. Bảng lưới 6 trên trang khớp từng ô."
+  - id: n52
+    cau: 'Câu gợi nhớ cho hai chọi ba: "Một – ly cà phê" (hay "nice cup of tea" của người học tiếng Anh); nếu hay nhầm tay, đọc "Cả – phải – trái – phải".'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Câu gợi nhớ do người dạy dùng; khớp lưới 6 (một–ly–cà–phê ở 1, 3, 4, 5). "Nice cup of tea" có ở Cross-Eyed Pianist (bậc 3; ngoài ra Wikipedia Polyrhythm ghi "cold cup of tea"): chỉ đối chiếu cho vui, không cần nguồn.'
+  - id: n53
+    cau: "Gõ trên mặt bàn. Đếm to từ 1 đến 6 thật đều; tay phải gõ ở 1, 3, 5, tay trái ở 1, 4. Rồi đổi vai hai tay. Bỏ số, đọc câu, vẫn gõ; khi câu đã trôi chảy, thử gõ mà không đọc. Lên đàn với bài 7, rồi bài 8. Tăng tốc: ở tốc độ nhanh, thôi đếm; nghe hình tiết tấu chung như một giai điệu nhỏ; cuối cùng nghe hai tay như hai dòng nhạc độc lập."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập (năm bước); khớp lưới 6.
+  - id: n54
+    cau: Bài 7 viết chính xác trên lưới 6 (nhịp 6/8, chưa dùng liên ba); bài 8 cùng hình ấy viết bằng liên ba.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Khối abc 7: M:6/8, tay phải 3 nốt đen/ô (G2 G2 G2: phần 1, 3, 5), tay trái 2 nốt đen chấm/ô (C,3 C,3: phần 1, 4), không có (3. Kiểm tra đúng. Khối abc 8: M:2/4, tay phải (3CEG (3cGE = hai liên ba mỗi ô, tay trái bốn móc đơn mỗi ô: 2 chọi 3 trong mỗi phách; đúng "cùng hình ấy" với phần 1, 3, 5 và 1, 4.'
+  - id: n55
+    cau: "Lỗi hay gặp: nốt thứ hai của tay chơi hai bị kéo trùng vào một nốt của tay kia, biến hai chọi ba thành một nhịp lắc dài – ngắn."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập; chữ cũ "Lỗi hay gặp nhất": "nhất" không kiểm được, bỏ (da-sua nhỏ).'
+  - id: n56
+    cau: Nốt thứ hai của tay chơi hai phải rơi đúng giữa "ly" và "phê", tức đúng vào chữ "cà".
+    loai: quy-tac
+    nguon:
+      - mathworld-lcm
+    ket_qua: dung
+    ghi_chu: 'Lưới 6: "ly" ở phần 3, "cà" ở phần 4, "phê" ở phần 5. Đúng.'
+  - id: n57
+    cau: Ba chọi bốn có lưới chung mười hai phần (bội số chung nhỏ nhất của 3 và 4).
+    loai: quy-tac
+    nguon:
+      - mathworld-lcm
+      - crosseyed
+    ket_qua: dung
+    ghi_chu: "BCNN(3, 4) = 12 (MathWorld: cách lấy số mũ lớn nhất); Cross-Eyed Pianist cũng dùng lưới đếm 1 đến 12 cho ba chọi bốn."
+  - id: n58
+    cau: 'Trên lưới 12, tay chơi bốn nốt đánh ở 1, 4, 7, 10; tay chơi ba nốt ở 1, 5, 9. Đọc mười hai phần thành bốn nhóm ba: tay chơi bốn đánh ở mỗi chữ "một", tay chơi ba ở chữ "một" đầu tiên, chữ "hai" của nhóm thứ hai và chữ "ba" của nhóm thứ ba; hình chung tính theo phần lưới là 3 – 1 – 2 – 2 – 1 – 3.'
+    loai: quy-tac
+    nguon:
+      - mathworld-lcm
+    ket_qua: dung
+    ghi_chu: 'Nốt bốn cách nhau 12/4 = 3; nốt ba cách nhau 12/3 = 4. Điểm đánh chung 1, 4, 5, 7, 9, 10: khoảng cách 3, 1, 2, 2, 1, 3. Nhóm ba: 1–3, 4–6, 7–9, 10–12: phần 5 là "hai" của nhóm 2 (4, 5, 6), phần 9 là "ba" của nhóm 3 (7, 8, 9). Đúng.'
+  - id: n59
+    cau: Câu gợi nhớ "pass the golden butter" cho hình 3 – 1 – 2 – 2 – 1 – 3 của ba chọi bốn, người học tiếng Anh hay dùng.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Câu gợi nhớ; Wikipedia (Polyrhythm, bậc 3) ghi "pass the golden butter" dẫn Slenczynska (1976), Music at Your Fingertips tr. 43. Sáu âm tiết khớp sáu điểm đánh; không cần nguồn.
+  - id: n60
+    cau: "Ba chọi bốn: tập theo các bước của hai chọi ba, rồi bài 9 (lưới 12) và bài 10 (liên ba chọi móc kép)."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối abc 9: M:12/8, tay phải 4 nốt (G3 ×4: phần 1, 4, 7, 10), tay trái 3 nốt (C,4 ×3: phần 1, 5, 9), chưa dùng liên ba. Khối abc 10: M:2/4 L:1/16, tay phải móc kép 4 nốt mỗi phách, tay trái (3 liên ba móc đơn mỗi phách: 3 chọi 4. Đúng."
+  - id: n61
+    cau: Fantaisie-Impromptu Op. 66 của Chopin.
+    loai: ten
+    nguon:
+      - mutopia-fi
+    ket_qua: dung
+    ghi_chu: 'Mutopia: title "Fantaisie-Impromptu", opus "Op. 66", composer "Frédéric Chopin".'
+  - id: n62
+    cau: Ở hai phần nhanh của Fantaisie-Impromptu, tay phải chơi bốn nốt trong khi tay trái chơi ba nốt trong mỗi phách đen.
+    loai: cau-truc
+    nguon:
+      - mutopia-fi
+      - chang-ii25
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "ở mỗi phách" (trong nhịp alla breve phách là nốt trắng nên chữ dễ hiểu sai). Mutopia (Scholtz): 4/4 (\tempo 2 = 84), tay phải móc kép, tay trái \times 4/6 (sáu móc đơn thay cho bốn: 3 nốt mỗi nốt đen) ở phần mở đầu (ô 5 trở đi) và phần Presto (ô 83), ở giữa Largo (ô 41) rồi Moderato cantabile (Rê♭ trưởng). Chang II.25: "4-against-3". Đổi thành "trong mỗi phách đen", khớp trang cũ chopin-fantaisie-impromptu ("mỗi phách đen có bốn móc kép tay phải trên ba nốt liên ba tay trái").'
+  - id: n63
+    cau: Fantaisie-Impromptu trỏ tới trang /opus/piano/tac-pham/chopin-fantaisie-impromptu/.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Chưa chuyển: ../opus-zero/docs/piano/tac-pham/chopin-fantaisie-impromptu.md ("hai phần nhanh trong đó tay phải chơi bốn nốt trên mỗi ba nốt của tay trái"; "mỗi phách đen có bốn móc kép tay phải trên ba nốt liên ba tay trái"). Lô chuyển giữ đúng điều ấy.'
+  - id: n64
+    cau: Mỗi ngày 10–15 phút, đặt sau phần khởi động. Chỉ sang tuần mới khi cột cuối đã đạt.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập.
+  - id: n65
+    cau: "Bảng tập: tuần 1 bài 1 và 2; tuần 2 bài 3 và 4, bài 7; tuần 3 bài 5 và 6, bài 8; tuần 4 ôn bài 1–8 và bài 9; tuần 5–6 bài 10; tốc độ ♩ = 50–60 (tuần 1), 60–72 (tuần 2; bài 7: ♩. = 40), 60–80 (tuần 3; bài 8: ♩ = 50–60)."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khớp khối abc: bài 1, 2: Q:1/4=60; bài 3, 4: 60 (đã đổi, xem khuong_nhac); bài 5: 60 (đã đổi); bài 6: 60; bài 7: Q:3/8=40; bài 8: Q:1/4=50; bài 9: Q:3/8=40; bài 10: Q:1/4=40 (bài 10 và 9 không có khoảng riêng trong bảng). Số bài đúng: 10 bài."
+  - id: n66
+    cau: 'Tăng tốc mỗi lần 2–4 nhịp (cột Máy đếm nhịp tuần 4; hàng "Tăng tốc quá sớm": "Thang máy đếm nhịp, mỗi nấc 2–4 nhịp").'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập; khớp luyen-tap/metronome cũ ("tăng 2–4 BPM") và 10-bai-dau-tien n20. Chú ý: "Thang máy đếm nhịp" là tên một ví dụ ở ../opus-zero/docs/piano/cach-tap.md ("### Ví dụ một thang máy đếm nhịp"): lô chuyển cach-tap giữ tên mục này, hay đổi cả hai chỗ.'
+  - id: n67
+    cau: 'Bảng Lỗi thường gặp: ghép tay khi một tay chưa tự động (quay lại bậc 1 cho riêng chỗ đó); tay đệm to bằng giai điệu (bấm câm tay đệm, rồi cho kêu ở pp); nhả nốt dài quá sớm (đếm to trong lúc giữ, nghe nốt tắt dần); "lây" phát âm (tập tay dễ đến tự động, chú ý vào tay khó); hai chọi ba thành nhịp lắc (về lưới 6, đọc "Một – ly cà phê"); tăng tốc quá sớm (thang máy đếm nhịp, mỗi nấc 2–4 nhịp).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; mỗi hàng nhắc lại một mục trên trang, không trái.
+  - id: n68
+    cau: "Câu hỏi 1: gam ngược chiều bắt đầu từ hai ngón cái dễ hơn song song vì hai tay dùng cùng số ngón cùng lúc, chuyển động đối xứng gương; đáp án sai: tay trái khỏe hơn, ngược chiều luôn chơi chậm hơn."
+    loai: quy-tac
+    nguon:
+      - hkb
+      - fau-surf23
+    ket_qua: dung
+    ghi_chu: Xem n3 và n6. Lời giải thích không dựa vào vị trí lựa chọn.
+  - id: n69
+    cau: 'Câu hỏi 2: trên lưới 6 của hai chọi ba, tay chơi hai nốt đánh ở 1 và 4 (tay chơi ba đánh ở 1, 3, 5; chữ "cà").'
+    loai: quy-tac
+    nguon:
+      - mathworld-lcm
+    ket_qua: dung
+    ghi_chu: Khớp bảng lưới 6.
+  - id: n70
+    cau: 'Câu hỏi 3: "Điểm neo" là chỗ hai tay đánh cùng lúc; chơi từ điểm neo này tới điểm neo kia giúp hai tay luôn gặp nhau đúng chỗ. (Sai: nốt dài nhất của bài, chỗ đổi bàn đạp.)'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Khớp bậc 4 (n11); khái niệm là của site.
+  - id: n71
+    cau: "Câu hỏi 4: lưới chung của ba chọi bốn có 12 phần (bội số chung nhỏ nhất của 3 và 4)."
+    loai: quy-tac
+    nguon:
+      - mathworld-lcm
+    ket_qua: dung
+    ghi_chu: BCNN(3, 4) = 12.
+  - id: n72
+    cau: "Câu hỏi 5: khi bắt đầu ghép hai tay một đoạn mới nên chơi khoảng một nửa tốc độ tay riêng; ghép chậm giúp cả hai tay không phải dừng và không học sai. (Sai: bằng tốc độ tay riêng; nhanh để lấy đà rồi chậm lại.)"
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; khớp bậc 2 (n8).
+  - id: n73
+    cau: 'Nguồn: H. Haken, J. A. S. Kelso, H. Bunz, "A theoretical model of phase transitions in human hand movements", Biological Cybernetics 51 (1985).'
+    loai: ten
+    nguon:
+      - hkb
+    ket_qua: dung
+    ghi_chu: "Springer: Biological Cybernetics 51(5), 347–356."
+  - id: n74
+    cau: "Nguồn: Seymour Bernstein, With Your Own Two Hands (1981)."
+    loai: ten
+    nguon:
+      - bernstein-ecu
+    ket_qua: dung
+    ghi_chu: "Biểu ghi thư viện: With your own two hands: self-discovery through music, Schirmer Books (New York), Collier Macmillan (London), 1981."
+  - id: n75
+    cau: "Nguồn: Chuan C. Chang, Fundamentals of Piano Practice (sách mở, nhiều lần tái bản)."
+    loai: ten
+    nguon:
+      - chang-site
+    ket_qua: dung
+    ghi_chu: 'pianopractice.org: bản in lần thứ ba tải miễn phí (cũng còn bản lần thứ hai): đúng "sách mở, nhiều lần tái bản".'
+  - id: n76
+    cau: "Nguồn: Graham Fitch, Practising the Piano (practisingthepiano.com)."
+    loai: ten
+    nguon:
+      - fitch-about
+    ket_qua: dung
+    ghi_chu: "Trang About: Graham Fitch là người lập blog Practising the Piano và tác giả chính."
+  - id: n77
+    cau: Phần Nguồn trỏ tới Vị trí năm ngón, Cách tập, Tiết tấu nâng cao và Tài liệu tham khảo.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "nam-ngon, 15-tiet-tau-nang-cao đã có. cach-tap, tai-lieu-tham-khao chưa chuyển: ../opus-zero/docs/piano/cach-tap.md và ../opus-zero/docs/tai-lieu-tham-khao.md có."
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: "Một tay giữ, một tay đi: 4/4, L:1/8, Q:1/4=60, K:C; 8 ô, mỗi ô đủ 8 móc đơn (tay trái ô 1–4 một nốt tròn). Hòa âm I – IV – V – I (ô 2 tay phải f e d e f d trên Fa; ô 3 d e f e d c d trên Sol): hợp. Ngón: tay phải c(1) … g(5), tay trái C,(5) D,E,F, G,(1): đúng thế Đô (5 ở Đô3, 1 ở Sol3). Chơi được."
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: 'Song song và ngược chiều: 4/4, gam Đô trưởng một quãng tám, hai ô song song rồi hai ô ngược chiều. Ngón song song: tay phải 1-2-3-1-2-3-4-5, tay trái 5-4-3-2-1-3-2-1 (đúng Evansville); ngược chiều: cả hai tay 1-2-3-1-2-3-4-5, đúng "cùng số ngón". Đúng điều trang nói (ngón cái luồn ở nốt thứ 4 tay phải, ngón 3 vắt ở nốt thứ 6 tay trái).'
+  - khoi: 3
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: "Legato một tay, staccato tay kia: 4/4, 4 ô; ô 1–2 tay phải legato (luyến ô) trên nền tay trái staccato (dấu chấm), ô 3–4 đổi vai. Mỗi ô đủ 8 móc đơn. Ngón trong thế Đô, chơi được."
+  - khoi: 4
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+      - so-ngon
+    ket_qua: da-sua
+    ghi_chu: 'Giai điệu f, đệm p: 4/4, 4 ô đủ 8 móc đơn; tay trái hợp âm rải C-E-G-E (I), B,,-D,-G,-D, (V ở thể đảo 1), A,,-C,-F,-C, (IV ở thể đảo 1), ngón 5-3-1 mỗi nhóm; tay phải e4 f2 g2 | d2 e2 c4 | g4 f4 | d4 c4. Hòa âm hợp. Đã đổi Q:1/4=66 thành Q:1/4=60 để khớp câu "hai tay ở ♩ = 50–60" của trang (và bảng tập 60–72/60–80).'
+  - khoi: 5
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+      - so-ngon
+    ket_qua: da-sua
+    ghi_chu: "Bass Alberti và giai điệu: 4/4, Alberti ở tay trái: Đô–Sol–Mi–Sol (5-1-3-1), Đô–La–Fa–La (5-1-2-1, IV ở thể đảo 2), Si,–Sol–Rê–Sol (5-1-3-1, V ở thể đảo 1), đúng bảng ngón bấm của hop-am-rai. Q đổi 66 thành 60 như khối 4."
+  - khoi: 6
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: "Bắt chéo tay: 4/4; tay phải C-E-G-E (I), C-F-A-F (IV), D-G-B-G (V), rồi [CEGc]; tay trái nốt trầm C,, F,, G,, (ô đầu mỗi ô) rồi vượt lên đánh g, a, b ghi trên khuông trên (nhãn m.s., ngón 2): nốt vượt là nốt hợp âm (Sol của I, La của IV, Si của V). Đúng điều trang nói. Chơi được ở ♩ = 60 (tay trái có một phách rưỡi để vượt)."
+  - khoi: 7
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: "Bài 7: 6/8, L:1/8, Q:3/8=40; tay phải 3 nốt (đen) mỗi ô, tay trái 2 nốt (đen chấm): hai chọi ba trên lưới 6, không dùng liên ba. Hòa âm I – V – I. Ngón: E(1) G(3) c(5); B(4) G(3) F(2) (hơi rộng giữa G và B nhưng chơi được). Đúng."
+  - khoi: 8
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: "Bài 8: 2/4, L:1/8, Q:1/4=50; mỗi ô tay phải hai liên ba (3 mỗi phách), tay trái bốn móc đơn (2 mỗi phách): 2 chọi 3, cùng hình lưới 6 của bài 7. Hòa âm C – F – G – C (tay phải C-E-G, C-F-A, B,-D-G). Ngón: tay phải 1…5 trải một quãng tám (Đô4 ngón 1 – Đô5 ngón 5), tay trái 5…2 (Đô2 – Sol2): chơi được với tay trung bình nhưng cần mở tay: ghi cho người dạy. Đúng điều trang nói."
+  - khoi: 9
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: "Bài 9: 12/8, L:1/8, Q:3/8=40; tay phải 4 nốt (G3 ×4) và tay trái 3 nốt (C,4 ×3) mỗi ô: ba chọi bốn trên lưới 12; chú thích 1, 4, 7, 10 và 1, 5, 9 đúng. Ô 3–4 tay phải C D E F | G F E D (1-2-3-4 | 5-4-3-2), tay trái C E G | G F E (5-3-1 | 1-2-3), kết ô 5 Đô. Mỗi ô đủ 12 móc đơn. Đúng."
+  - khoi: 10
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: "Bài 10: 2/4, L:1/16, Q:1/4=40; tay phải 4 móc kép mỗi phách (c d e f g f e d), tay trái 3 móc đơn liên ba mỗi phách (C, E, G,): ba chọi bốn, đủ 8/16 mỗi ô. Ngón tay phải 1-2-3-4-5-4-3-2, tay trái 5-3-1. Đúng."
+ghi_chu: 'Phối hợp hai tay và đa tiết tấu (piano/hai-tay, lõi). Nguồn chính: Haken–Kelso–Bunz và nhóm Kelso (FAU) cho phần khoa học; Mutopia (Für Elise, K 545, Fantaisie-Impromptu, Arabesque 1, Clair de lune) cho trích tác phẩm; COD, OMT, Hook (MTO), Evansville cho định nghĩa, ngón bấm; Chang (II.25) cho 4 chọi 3 của Chopin. Mở ngày 28/10/2026. Sửa chữ: n1, n9, n8 (cũ: "không ai điều khiển được"), n6 (Chopin bỏ khỏi câu Brahms), Arabesque ("rất nhiều" bỏ "rất"), Scarlatti ("đầy" thành "nhiều ... có"), Fantaisie-Impromptu ("mỗi phách" thành "mỗi phách đen"), "Lỗi hay gặp nhất" bỏ "nhất", "Phổ biến nhất" thành "Một dạng phổ biến", ngắt khối 4: "khoảng hai bậc" thành "vài bậc"; đổi Q của khối 4 và 5 (66 thành 60). Lô trước yêu cầu giữ: neo #sau-bac-ghep-hai-tay, tiêu đề "Sáu bậc ghép hai tay", bậc 4 "Điểm neo" (10-bai-dau-tien n18, n19): KHỚP. Còn: link tới trang chưa chuyển (cach-tap, metronome, scarlatti-sonata, mozart-k545, chopin-fantaisie-impromptu, debussy-clair-de-lune, tai-lieu-tham-khao): xem các câu ve-site. Thuật ngữ chưa có ở thuat-ngu.yml: đa tiết tấu (polyrhythm), hai chọi ba, ba chọi bốn, liên ba (triplet), liên hai (duplet), bắt chéo tay (hand crossing), ngược chiều / song song (contrary / parallel motion), luồn ngón cái, vắt ngón, điểm neo, bass Alberti (dữ liệu là "Alberti bass"). Chưa chắc: "dễ" trong "dễ và ổn định nhất" (nguồn nói ổn định hơn); "nhà khoa học vận động" cho Kelso (FAU: coordination dynamics, motor control).'
+doi_chu:
+  - cu: "Gần như ai mới học piano cũng có lúc nghĩ: cho hai tay làm hai việc khác nhau là không thể. Đó là một kỹ năng, và như mọi kỹ năng, nó có cách tập. Trang này đưa ra một quy trình sáu bậc, sáu kiểu phối hợp hay gặp kèm bài tập, rồi đến đa tiết tấu: hai chọi ba và ba chọi bốn."
+    moi: "Nhiều người mới học piano có lúc nghĩ: cho hai tay làm hai việc khác nhau là không thể. Đó là một kỹ năng, và như mọi kỹ năng, nó có cách tập. Trang này đưa ra một quy trình sáu bậc, sáu kiểu phối hợp hay gặp kèm bài tập, rồi đến đa tiết tấu: hai chọi ba và ba chọi bốn."
+    ly_do: 'n1 (khong-can-nguon): "gần như ai cũng" là số liệu về người học mà không nguồn nào cho; đổi thành "nhiều người", là nhận xét hợp lý không đòi nguồn.'
+  - cu:
+      - "Cái khó thứ hai là sự chú ý. Không ai chủ động điều khiển được từng nốt của hai dòng nhạc khác nhau cùng một lúc. Người chơi giỏi cũng không làm vậy: một phần việc (thường là phần đệm) đã trở thành tự động, và tai họ nghe hai tay như một hình tiết tấu chung, rồi như hai giọng."
+      - Tin tốt là cả hai cái khó đều giảm rất nhanh khi tập đúng cách. Những buổi đầu ghép tay một bài mới luôn vụng về; sau vài ngày, phần lớn mọi người thấy hai tay "tự nhiên khớp".
+    moi:
+      - Cái khó thứ hai là sự chú ý. Khi chưa quen, rất khó theo dõi từng nốt của hai dòng nhạc khác nhau cùng một lúc. Lối ra không phải là cố chú ý nhiều hơn, mà là làm cho một phần việc (thường là phần đệm) trở thành tự động; khi ấy tai nghe hai tay như một hình tiết tấu chung, rồi như hai giọng.
+      - Tin tốt là cả hai cái khó đều giảm dần khi tập đúng cách. Những buổi đầu ghép tay một bài mới thường vụng về; sau vài ngày tập đúng cách, hai tay dần "tự nhiên khớp".
+    ly_do: 'n7 (khong-can-nguon): "không ai", "người chơi giỏi cũng không làm vậy" là khẳng định tuyệt đối về nhận thức mà không nguồn nào kiểm được; viết lại thành lời khuyên về cách tập (khuyen-tap tương đương).; n8 (khong-can-nguon): "rất nhanh", "luôn", "phần lớn mọi người" là số liệu không nguồn; làm nhẹ thành "dần", "thường".'
+  - cu: 'Giai điệu to hơn phần đệm khoảng hai bậc sắc thái. Tay trái: ngón sát phím, phím đi xuống chậm; tay phải: trọng lượng cánh tay đi vào từng nốt. Nếu khó, thử bấm "câm" tay trái (phím xuống mà không ra tiếng) trong khi tay phải hát, rồi cho tay trái kêu dần lên (xem Tạo tiếng đàn).'
+    moi: 'Giai điệu to hơn phần đệm vài bậc sắc thái. Tay trái: ngón sát phím, phím đi xuống chậm; tay phải: trọng lượng cánh tay đi vào từng nốt. Nếu khó, thử bấm "câm" tay trái (phím xuống mà không ra tiếng) trong khi tay phải hát, rồi cho tay trái kêu dần lên (xem Tạo tiếng đàn).'
+    ly_do: 'n30 (khong-can-nguon): "khoảng hai bậc" là con số cụ thể mà không nguồn nào cho; đổi thành "vài bậc".'
+  - cu: Mắt nhìn đích trước. Tay trái rời phím ngay sau khi đánh nốt trầm; khuỷu tay và vai dẫn đường, đừng để bàn tay "bay" một mình. Tay phải hơi hạ thấp để chừa chỗ. Khi đã quen, thêm bàn đạp để nốt trầm ngân dưới nốt cao. Các sonata của Scarlatti đầy những bước bắt chéo như thế (xem hướng dẫn nghe).
+    moi: Mắt nhìn đích trước. Tay trái rời phím ngay sau khi đánh nốt trầm; khuỷu tay và vai dẫn đường, đừng để bàn tay "bay" một mình. Tay phải hơi hạ thấp để chừa chỗ. Khi đã quen, thêm bàn đạp để nốt trầm ngân dưới nốt cao. Nhiều sonata của Scarlatti có những bước bắt chéo như thế (xem hướng dẫn nghe).
+    ly_do: 'n40 (da-sua): bắt chéo tay là nét nổi tiếng của sonata Scarlatti (encyclopedia.com), nhưng "đầy" là mức độ không kiểm được; đổi thành "nhiều".'
+  - cu: "Đa tiết tấu là khi hai tay chia cùng một khoảng thời gian theo hai cách khác nhau. Phổ biến nhất là hai chọi ba: một tay chơi hai nốt đều, tay kia chơi ba nốt đều trong cùng một phách (ôn lại liên ba). Chopin và Brahms dùng nó rất thường xuyên, Arabesque số 1 của Debussy có rất nhiều đoạn hai chọi ba, và Clair de lune xen những nhóm hai nốt (liên hai) vào nhịp 9/8 vốn chia ba."
+    moi: "Đa tiết tấu là khi hai tay chia cùng một khoảng thời gian theo hai cách khác nhau. Một dạng phổ biến là hai chọi ba: một tay chơi hai nốt đều, tay kia chơi ba nốt đều trong cùng một phách (ôn lại liên ba). Nó thường gặp ở Brahms, Arabesque số 1 của Debussy có nhiều đoạn hai chọi ba, và Clair de lune xen những nhóm hai nốt (liên hai) vào nhịp 9/8 vốn chia ba."
+    ly_do: 'n45 (da-sua): "phổ biến nhất" là xếp hạng không kiểm được; đổi thành "một dạng phổ biến".; n45 (da-sua): Hook (MTO) nêu Brahms với hai chọi ba; "Chopin" và "rất thường xuyên" không có nguồn kiểm được nên bỏ.; n46 (da-sua): bản Mutopia cho thấy các đoạn hai chọi ba; "rất nhiều" không đếm được nên đổi thành "nhiều".'
+  - cu: 'Lỗi hay gặp nhất: nốt thứ hai của tay chơi hai bị kéo trùng vào một nốt của tay kia, biến hai chọi ba thành một nhịp lắc dài – ngắn. Nốt ấy phải rơi đúng giữa "ly" và "phê", tức đúng vào chữ "cà".'
+    moi: 'Lỗi hay gặp: nốt thứ hai của tay chơi hai bị kéo trùng vào một nốt của tay kia, biến hai chọi ba thành một nhịp lắc dài – ngắn. Nốt ấy phải rơi đúng giữa "ly" và "phê", tức đúng vào chữ "cà".'
+    ly_do: 'n55 (khong-can-nguon): "hay gặp nhất" là xếp hạng không kiểm được; bỏ "nhất".'
+  - cu: "Tập theo đúng các bước của hai chọi ba: gõ trên bàn thật chậm, rồi bài 9 (viết chính xác trên lưới 12), rồi bài 10 (liên ba chọi móc kép). Fantaisie-Impromptu Op. 66 của Chopin là ví dụ nổi tiếng: ở hai phần nhanh, tay phải chơi bốn nốt trong khi tay trái chơi ba nốt ở mỗi phách."
+    moi: "Tập theo đúng các bước của hai chọi ba: gõ trên bàn thật chậm, rồi bài 9 (viết chính xác trên lưới 12), rồi bài 10 (liên ba chọi móc kép). Fantaisie-Impromptu Op. 66 của Chopin là ví dụ nổi tiếng: ở hai phần nhanh, tay phải chơi bốn nốt trong khi tay trái chơi ba nốt trong mỗi phách đen."
+    ly_do: 'n62 (da-sua): bản Mutopia ghi nhịp alla breve (phách là nốt trắng), nên "ở mỗi phách" dễ hiểu sai; tay phải bốn nốt và tay trái ba nốt tính trong mỗi nốt đen, nên viết "phách đen".'
+  - cu: "mô tả: Gần như ai mới học piano cũng có lúc nghĩ: cho hai tay làm hai việc khác nhau là không thể. Đó là một kỹ năng, và như mọi kỹ năng, nó có cách tập. Trang này…"
+    moi: "mô tả: Nhiều người mới học piano có lúc nghĩ: cho hai tay làm hai việc khác nhau là không thể. Đó là một kỹ năng, và như mọi kỹ năng, nó có cách tập. Trang này…"
+    ly_do: "n1: mô tả đổi theo câu mở đầu, \"gần như ai\" thành \"nhiều người\" vì không có nguồn cho mức tuyệt đối."
+  - cu:
+      - |-
+        khuông: Giai điệu f, đệm p | X:4
+        M:4/4
+        L:1/8
+        Q:1/4=66
+        %%score {RH LH}
+        V:RH clef=treble
+        V:LH clef=bass
+        K:C
+        [V:RH] !f!!3!e4 !4!f2 !5!g2 | !2!d2 !3!e2 !1!c4 | !5!g4 !4!f4 | !2!d4 !1!c4 |]
+        [V:LH] !p!!5!C,!3!E,!1!G,E, C,E,G,E, | !5!B,,!3!D,!1!G,D, !5!C,E,G,E, | C,E,G,E, !5!A,,!3!C,!1!F,C, | !5!B,,D,G,D, !5!C,4 |]
+      - |-
+        khuông: Bass Alberti và giai điệu | X:5
+        M:4/4
+        L:1/8
+        Q:1/4=66
+        %%score {RH LH}
+        V:RH clef=treble
+        V:LH clef=bass
+        K:C
+        [V:RH] !mf!!1!c4 !3!e2 !5!g2 | !4!f2 !3!e2 !2!d4 | !5!g2 !4!f2 !3!e2 !2!d2 | !1!c8 |]
+        [V:LH] !p!!5!C,!1!G,!3!E,!1!G, C,G,E,G, | !5!C,!1!A,!2!F,A, !5!B,,!1!G,!3!D,G, | !5!C,G,E,G, B,,G,D,G, | C,G,E,G, C,4 |]
+    moi:
+      - |-
+        khuông: Giai điệu f, đệm p | X:4
+        M:4/4
+        L:1/8
+        Q:1/4=60
+        %%score {RH LH}
+        V:RH clef=treble
+        V:LH clef=bass
+        K:C
+        [V:RH] !f!!3!e4 !4!f2 !5!g2 | !2!d2 !3!e2 !1!c4 | !5!g4 !4!f4 | !2!d4 !1!c4 |]
+        [V:LH] !p!!5!C,!3!E,!1!G,E, C,E,G,E, | !5!B,,!3!D,!1!G,D, !5!C,E,G,E, | C,E,G,E, !5!A,,!3!C,!1!F,C, | !5!B,,D,G,D, !5!C,4 |]
+      - |-
+        khuông: Bass Alberti và giai điệu | X:5
+        M:4/4
+        L:1/8
+        Q:1/4=60
+        %%score {RH LH}
+        V:RH clef=treble
+        V:LH clef=bass
+        K:C
+        [V:RH] !mf!!1!c4 !3!e2 !5!g2 | !4!f2 !3!e2 !2!d4 | !5!g2 !4!f2 !3!e2 !2!d2 | !1!c8 |]
+        [V:LH] !p!!5!C,!1!G,!3!E,!1!G, C,G,E,G, | !5!C,!1!A,!2!F,A, !5!B,,!1!G,!3!D,G, | !5!C,G,E,G, B,,G,D,G, | C,G,E,G, C,4 |]
+    ly_do: "khuong_nhac 4 và 5 (da-sua): trang ghi bài tập ở ♩ = 50–60; tempo 66 vượt khoảng ấy nên đưa về 60."

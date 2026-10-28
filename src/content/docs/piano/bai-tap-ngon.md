@@ -21,15 +21,15 @@ Nhưng kỹ thuật là phương tiện, không phải đích. Trong [các mẫu
 
 ## Rủi ro
 
-- **Lặp vô thức.** Tay chạy, đầu ở chỗ khác. Khi ấy bạn đang luyện chính sự lơ đễnh, và tai cùn dần. Nhiều nhà sư phạm coi đây là tác hại lớn nhất của bài tập ngón.
-- **Căng cơ.** Nâng ngón thật cao rồi đập xuống, khóa cổ tay, ấn đáy phím sau khi nốt đã kêu (xem [Tạo tiếng đàn](/opus/piano/tieng-dan/)). Cố luyện cho ngón 4 nhấc lên độc lập hoàn toàn là đi ngược giải phẫu: gân duỗi của ngón 4 được nối với gân của các ngón bên cạnh, nên nó không bao giờ nhấc lên tự do như ngón 2.
-- **Quá tải.** Cùng một chuyển động lặp hàng trăm lần, to, nhanh, với bàn tay mở rộng (quãng tám, hợp âm lớn), không nghỉ: đó là công thức của chấn thương do lặp lại. Xem [Giữ đôi tay khỏe](/opus/piano/suc-khoe/).
+- **Lặp vô thức.** Tay chạy, đầu ở chỗ khác. Khi ấy bạn đang luyện chính sự lơ đễnh, và tai cùn dần. Tập mà không nghe không chỉ vô ích mà còn có hại.
+- **Căng cơ.** Tránh nâng ngón thật cao rồi đập xuống, khóa cổ tay, ấn đáy phím sau khi nốt đã kêu (xem [Tạo tiếng đàn](/opus/piano/tieng-dan/)). Cố luyện cho ngón 4 nhấc lên hoàn toàn độc lập là đi ngược giải phẫu: gân duỗi của ngón 4 có sợi nối sang gân của ngón 3 và ngón 5, và nhấc ngón 4 quá cao dễ làm ngón 3 và 5 căng theo.
+- **Quá tải.** Nên tránh lặp một kỹ thuật liền quá một thời gian ngắn và tránh căng tay quá mức (như quãng tám hay hợp âm lớn liên tục). Xem [Giữ đôi tay khỏe](/opus/piano/suc-khoe/).
 - **Không chuyển sang bản nhạc.** Chạy Hanon nhanh không tự động giúp bạn chơi nhanh một đoạn Mozart. Kỹ năng chuyển sang được khi bài tập giống đoạn nhạc thật về hình nốt, ngón bấm và cách nghe.
 
-Một số trường phái sư phạm, như của Dorothy Taubman, còn cho rằng bài tập ngón rời rạc hại nhiều hơn lợi. Bạn không cần đi xa đến vậy, nhưng nên dùng chúng ít, ngắn và có chủ đích.
+Có tác giả còn khuyên bỏ hẳn Hanon và dành thời gian ấy cho bản nhạc thật. Bạn không cần đi xa đến vậy, nhưng nên dùng bài tập ngón ít, ngắn và có chủ đích.
 
 :::caution[Đau là tín hiệu dừng]
-Đau, tê, ngứa ran, hoặc mỏi không hết sau một đêm nghỉ: dừng bài tập ngay, nghỉ, và đọc [Giữ đôi tay khỏe](/opus/piano/suc-khoe/). Nếu kéo dài, hãy đi khám. Không bài tập nào đáng để đổi lấy đôi tay.
+Đau, tê hoặc ngứa ran: dừng bài tập ngay, nghỉ, và đọc [Giữ đôi tay khỏe](/opus/piano/suc-khoe/). Nếu lo ngại hay kéo dài, hãy đi khám. Không bài tập nào đáng để đổi lấy đôi tay.
 :::
 
 ## Dùng an toàn
@@ -55,11 +55,11 @@ Cấp độ trong bảng là ước lượng thô, quy về [cấp ABRSM](/opus/
 | Czerny, Op. 599 (cho người mới bắt đầu) | Grade 1–3 | Thế năm ngón, luồn ngón cái, phối hợp hai tay, đọc nhạc |
 | Burgmüller, *25 Études faciles et progressives* Op. 100 | Grade 2–5 | Mỗi bài một kỹ năng gắn với một tính cách: chạy nốt, staccato, luyến, hợp âm rải. Bài số 2 là [Arabesque](/opus/piano/tac-pham/burgmuller-arabesque/) |
 | Czerny, *30 Études de mécanisme* Op. 849 | Grade 4–6 | Ngón đều; gam và hợp âm rải ở tốc độ vừa |
-| Czerny, Op. 636 (24 bài; tên tiếng Anh *Preliminary School of Finger Dexterity*) | Grade 4–6 | Ngón nhẹ và nhanh |
-| Heller, *25 Études* Op. 47, *25 Études* Op. 45, *30 Études* Op. 46 | Grade 4–7 (thường xếp từ dễ đến khó: Op. 47, 45, 46) | Câu nhạc, tiết tấu, hát giai điệu. Tên gốc của Op. 47 là "để rèn cảm giác tiết tấu và biểu cảm", của Op. 45 là "nhập môn nghệ thuật phân câu" |
+| Czerny, Op. 636 (24 bài; tên gốc *Vorschule der Fingerfertigkeit*) | Grade 4–6 | Ngón nhẹ và nhanh |
+| Heller, *25 Études* Op. 47, *25 Études* Op. 45, *30 Études* Op. 46 | Grade 4–7 | Câu nhạc, tiết tấu, hát giai điệu. Tên gốc của Op. 47 là "để rèn cảm giác tiết tấu và biểu cảm"; Op. 45 là tập chuẩn bị cho *L'art de phraser* Op. 16 ("nghệ thuật phân câu") |
 | Burgmüller, *18 Études* Op. 109 và *12 Études* Op. 105 | Grade 5–7 | Tốc độ, nhiều lớp âm thanh, tính cách |
 | Czerny, *Die Schule der Geläufigkeit* Op. 299 (40 bài) | Grade 6–8 | Tốc độ: gam, hợp âm rải, nốt lặp, ở cả hai tay |
-| Cramer, tuyển étude do Hans von Bülow chọn và chú giải | Grade 7–8 | Độc lập ngón, nhiều bè trong một tay, legato. Cramer viết 84 étude (Op. 30 và Op. 40) |
+| Cramer, 60 étude do Hans von Bülow chọn | Grade 7–8 | Độc lập ngón, nhiều bè trong một tay, legato. Cramer viết 84 étude (Op. 30 và Op. 40) |
 | Clementi, *Gradus ad Parnassum* Op. 44 (100 bài, in 1817–1826) | Grade 8 trở lên | Ngón đều và bền; có cả fugue và canon. Đừng nhầm với sách đối âm cùng tên của Fux ([bài 22](/opus/nhac-ly/22-doi-am/)) |
 | Czerny, *Die Kunst der Fingerfertigkeit* Op. 740 (50 bài) | Grade 8 đến diploma | Tốc độ và sức bền ở trình độ cao |
 | Moszkowski, *15 Études de virtuosité* Op. 72 | diploma | Kỹ thuật biểu diễn trong những bài rất giàu nhạc tính |
@@ -78,14 +78,14 @@ Cấp độ trong bảng là ước lượng thô, quy về [cấp ABRSM](/opus/
 
 ## Hanon: được, mất và cách dùng
 
-Charles-Louis Hanon in *Le Pianiste virtuose* ("nghệ sĩ piano điêu luyện") ở Boulogne năm 1873. Sách có ba phần: bài 1–20 là bài chuẩn bị, mỗi bài một mẫu tám nốt được nhắc lại từ từng bậc, đi lên hai quãng tám rồi đi xuống; bài 21–43 thêm gam và hợp âm rải; bài 44–60 gồm nốt lặp, nốt kép, gam quãng ba, quãng tám và tremolo.
+Charles-Louis Hanon in *Le Pianiste virtuose* ("nghệ sĩ piano điêu luyện") ở Boulogne năm 1873. Sách có ba phần: bài 1–20 là bài chuẩn bị (ngón độc lập, giãn ngón, chuẩn bị cho trill), trong đó bài 1 là một mẫu tám nốt được nhắc lại từ từng bậc, đi lên hai quãng tám rồi đi xuống; bài 21–43 thêm gam ở mọi giọng và hợp âm rải; bài 44–60 gồm nốt lặp, nốt kép (quãng ba, quãng sáu), gam quãng ba, gam quãng tám và tremolo.
 
 | Được | Mất |
 |---|---|
-| Mẫu đơn giản, thuộc ngay: đầu óc rảnh để nghe và để ý cơ thể | Phần 1 toàn phím trắng ở Đô trưởng: không luyện được địa hình phím đen |
+| Mẫu đơn giản, thuộc ngay: đầu óc rảnh để nghe và để ý cơ thể | Bài 1 chỉ có phím trắng ở Đô trưởng: không luyện được địa hình phím đen |
 | Cả năm ngón đều phải làm việc | Mọi ngón làm cùng một chuyển động, trong khi bàn tay vốn không đối xứng |
 | Dễ biến hóa: tiết tấu, sắc thái, chuyển giọng | Rất dễ thành lặp vô thức |
-| Khởi động nhanh | Tập to, nhanh và lâu là đường ngắn nhất tới quá tải |
+| Khởi động nhanh | Tập to, nhanh và lâu mà không nghỉ dễ dẫn tới quá tải |
 | | Tên sách hứa hẹn "điêu luyện"; thực tế không bài tập nào thay được bản nhạc |
 
 Cách dùng Hanon cho có ích:
@@ -112,7 +112,7 @@ Sau 4–6 tuần, đổi bộ bài: thay bài 1–2 bằng [hợp âm rải](/op
 
 ## Năm bài tập
 
-Các bài dưới đây soạn cho trang này; riêng bài 4 là mẫu bài số 1 của Hanon (sách đã hết bản quyền), rút gọn. Bắt đầu ở ♩ = 60 hoặc chậm hơn.
+Các bài dưới đây soạn cho trang này; bài 4 dùng mẫu của bài số 1 của Hanon, rút gọn. Bắt đầu ở ♩ = 60 hoặc chậm hơn.
 
 ### 1. Năm ngón đều, năm cách chơi
 
@@ -232,14 +232,14 @@ Danh sách bài cho từng chặng nằm ở [Tác phẩm theo cấp độ](/opu
 - Ít nhất một giờ
 - Càng nhiều càng tốt
 > Phần lớn thời gian tập nên dành cho âm nhạc.
-? Vì sao không nên cố luyện cho ngón 4 nhấc lên độc lập như ngón 2?
+? Vì sao không nên cố luyện cho ngón 4 nhấc lên hoàn toàn độc lập?
 + Gân duỗi của ngón 4 nối với gân các ngón bên cạnh
 - Vì ngón 4 là ngón ngắn nhất
 - Vì sách Hanon không có bài nào cho ngón 4
-> Đây là giới hạn giải phẫu; cố vượt qua nó chỉ gây căng cơ.
-? Phần 1 (bài 1–20) của Hanon có hạn chế gì?
+> Đây là giới hạn giải phẫu; cố vượt qua nó dễ làm ngón 3 và 5 căng theo.
+? Bài 1 của Hanon có hạn chế gì?
 - Có quá nhiều phím đen
-+ Toàn phím trắng ở Đô trưởng
++ Chỉ có phím trắng ở Đô trưởng
 - Không có phần cho tay trái
 > Hãy chuyển giọng để luyện thêm địa hình phím đen.
 ? Nên chọn étude thế nào?
@@ -251,12 +251,8 @@ Danh sách bài cho từng chặng nằm ở [Tác phẩm theo cấp độ](/opu
 
 ## Nguồn
 
-- Charles-Louis Hanon, *Le Pianiste virtuose en 60 exercices* (Boulogne, 1873).
-- Carl Czerny, Op. 599, 636, 299, 740, 849; Friedrich Burgmüller, Op. 100, 105, 109; Stephen Heller, Op. 45, 46, 47; Muzio Clementi, *Gradus ad Parnassum* Op. 44; Johann Baptist Cramer; Johannes Brahms, *51 Übungen* WoO 6 (Berlin: Simrock, 1893): bản nhạc trên [IMSLP](https://imslp.org/).
-- Béla Bartók, *Mikrokosmos* (Boosey & Hawkes).
-- Ernő Dohnányi, *Essential Finger Exercises* (Budapest: Rózsavölgyi, 1929).
-- Alfred Cortot, *Principes rationnels de la technique pianistique* (bản tiếng Anh: *Rational Principles of Pianoforte Technique*).
-- Thomas Mark, *What Every Pianist Needs to Know About the Body* (2003).
-- Reginald R. Gerig, *Famous Pianists and Their Technique* (1974).
-- Seymour Bernstein, *With Your Own Two Hands* (1981).
+- Bản nhạc và danh mục tác phẩm: trang tác phẩm trên [IMSLP](https://imslp.org/) (Hanon, Brahms WoO 6, Dohnányi, Cortot, Czerny, Burgmüller, Heller, Cramer, Clementi, Moszkowski, Liszt, Debussy); bản Urtext của [G. Henle Verlag](https://www.henle.de/) cho Burgmüller Op. 100 và các étude của Chopin.
+- Charles-Louis Hanon, *Le Pianiste virtuose en 60 exercices* (Boulogne, 1873); bản tiếng Anh *The Virtuoso Pianist* (G. Schirmer, 1900), [bản số hóa trên Internet Archive](https://archive.org/details/hanonvirtuosopia00hano).
+- Chuan C. Chang, [*Fundamentals of Piano Practice*, mục Exercises](https://fundamentals-of-piano-practice.readthedocs.io/chapter1/ch1_topics/III.7.html).
+- BAPAM, [*The Healthy Pianist*](https://crosseyedpianist.com/wp-content/uploads/2016/08/thehealthypianist_bapamfactsheet.pdf).
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

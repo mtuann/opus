@@ -1,0 +1,445 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa piano/ban-dap
+trang: src/content/docs/piano/ban-dap.md
+nguon_cu: ../opus-zero/docs/piano/ban-dap.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-28
+    nhanh: moi/d4-l2
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D4-L2 lượt 1, phần A)
+      luot_2: null
+      review: null
+      kiem_mau: null
+nguon:
+  - id: wiki-pedals
+    bac: 3
+    ten: Wikipedia, Piano pedals (đọc để tìm nguồn; chỉ dùng cho điều ít rủi ro, ghi rõ trong ghi_chu)
+    link: https://en.wikipedia.org/wiki/Piano_pedals
+  - id: wiki-glossary
+    bac: 3
+    ten: Wikipedia, Glossary of musical terminology (mục una corda, tre corde, laissez vibrer, simile, Ped.)
+    link: https://en.wikipedia.org/wiki/Glossary_of_musical_terminology
+  - id: fitch-moonlight
+    bac: 2
+    ten: Graham Fitch, Pedalling the Moonlight Sonata, Practising the Piano (giáo viên piano, bài viết về senza sordino)
+    link: https://practisingthepiano.com/pedalling-moonlight-sonata/
+  - id: ne-nocturnes
+    bac: 2
+    ten: "Wydanie Narodowe (Chopin National Edition, Jan Ekier), Nocturnes: phần bình giải (Commentaries)"
+    link: https://www.chopin-nationaledition.com/wp-content/uploads/2017/05/nocturnes_commentaries.pdf
+nhan_dinh:
+  - id: n1
+    cau: "Bàn đạp phải là bàn đạp vang (damper, sustain): nhấc mọi bộ giảm âm khỏi dây, trên đàn đứng cũng vậy."
+    loai: dinh-nghia
+    nguon:
+      - wiki-pedals
+    ket_qua: dung
+    ghi_chu: 'Wikipedia Piano pedals: sustain pedal "raises all the dampers off the strings". Nguồn bậc 3 (Wikipedia), chấp nhận vì rủi ro thấp; người giao có thể xin lượt 2 đối chiếu thêm.'
+  - id: n2
+    cau: "Bàn đạp trái trên đàn cánh là una corda (soft pedal): dịch bộ máy, ở âm vực mỗi nốt có ba dây búa chỉ gõ hai; tiếng nhỏ hơn, mềm và tối lại."
+    loai: dinh-nghia
+    nguon:
+      - wiki-pedals
+    ket_qua: dung
+    ghi_chu: "Wikipedia: ở âm cao búa gõ hai dây thay vì ba; đổi màu tiếng, không chỉ giảm to. Nguồn bậc 3 (Wikipedia), chấp nhận vì rủi ro thấp; người giao có thể xin lượt 2 đối chiếu thêm."
+  - id: n3
+    cau: Trên đàn cánh bàn đạp una corda dịch cả bàn phím và bộ máy sang phải, và búa gõ bằng phần nỉ chưa bị dây in rãnh.
+    loai: dinh-nghia
+    ket_qua: null
+    ghi_chu: 'chưa chắc: Wikipedia không nói chiều dịch ("sang phải") và phần nỉ chưa in rãnh; chưa mở nguồn nhà chế tạo. Người giao quyết định bỏ hai chi tiết này hay xin nguồn.'
+  - id: n4
+    cau: Trên đàn đứng, bàn đạp trái đưa cả hàng búa lại gần dây; búa đi quãng ngắn hơn nên tiếng nhỏ hơn.
+    loai: dinh-nghia
+    nguon:
+      - wiki-pedals
+    ket_qua: dung
+    ghi_chu: "Wikipedia: half-blow pedal, búa lại gần dây, quãng đánh ngắn hơn, nhỏ hơn. Nguồn bậc 3 (Wikipedia), chấp nhận vì rủi ro thấp; người giao có thể xin lượt 2 đối chiếu thêm."
+  - id: n5
+    cau: Trên đàn đứng, màu tiếng gần như không đổi và cảm giác phím hơi khác khi dùng bàn đạp trái.
+    loai: dinh-nghia
+    ket_qua: null
+    ghi_chu: 'chưa chắc: Wikipedia chỉ nói bàn đạp trái đàn đứng không phải una corda thật; "màu tiếng gần như không đổi", "cảm giác phím" chưa có nguồn.'
+  - id: n6
+    cau: "Bàn đạp giữa trên đàn cánh là bàn đạp giữ âm (sostenuto): chỉ giữ nhấc những bộ giảm âm đang được nhấc vào lúc nhấn bàn đạp, tức của những phím đang giữ."
+    loai: dinh-nghia
+    nguon:
+      - wiki-pedals
+    ket_qua: dung
+    ghi_chu: "Wikipedia: sostenuto giữ các nốt đã đang được giữ phím khi nhấn. Nguồn bậc 3 (Wikipedia), chấp nhận vì rủi ro thấp; người giao có thể xin lượt 2 đối chiếu thêm."
+  - id: n7
+    cau: "Bàn đạp giữa của đàn đứng thường là bàn đạp tập: hạ một dải nỉ vào giữa búa và dây để giảm tiếng; một số đàn đứng có sostenuto thật, hoặc bàn đạp chỉ nhấc bộ giảm âm phần trầm."
+    loai: dinh-nghia
+    nguon:
+      - wiki-pedals
+    ket_qua: dung
+    ghi_chu: 'Wikipedia: practice rail (dải nỉ giữa búa và dây); sostenuto thật hiếm ở đàn đứng; có thể chỉ điều khiển bộ giảm âm bass. Nguồn bậc 3 (Wikipedia), chấp nhận vì rủi ro thấp; người giao có thể xin lượt 2 đối chiếu thêm. Vế "nhiều đàn gạt sang bên để khóa" không có trong nguồn (n8).'
+  - id: n8
+    cau: Nhiều đàn đứng gạt bàn đạp tập sang bên để khóa.
+    loai: dinh-nghia
+    ket_qua: null
+    ghi_chu: "chưa chắc: Wikipedia không nói; chưa có nguồn."
+  - id: n9
+    cau: Tên una corda ("một dây") có từ thời đàn của Cristofori, khi bộ máy dịch sang bên để búa chỉ gõ một dây; trong Concerto số 4, Beethoven còn ghi cả una corda, due corde và tre corde.
+    loai: lich-su
+    nguon:
+      - wiki-pedals
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "có từ thời bộ máy dịch được tới mức búa chỉ gõ một dây". Thêm tên Cristofori (Wikipedia: trên đàn Cristofori bộ máy dịch để búa gõ một dây thay vì hai) cho rõ nghĩa. Beethoven Concerto số 4: Wikipedia ghi una corda, due corde, tre corde. Nguồn bậc 3 (Wikipedia), chấp nhận vì rủi ro thấp; người giao có thể xin lượt 2 đối chiếu thêm.'
+  - id: n10
+    cau: "Piano điện: bàn đạp đi kèm nhiều đàn là loại công tắc (bật, tắt, không nửa bàn đạp); loại tốt hơn có cảm biến liên tục đọc được độ sâu nên dùng được nửa bàn đạp."
+    loai: dinh-nghia
+    nguon:
+      - wiki-pedals
+    ket_qua: dung
+    ghi_chu: 'Wikipedia: trên piano điện bàn đạp "usually a simple switch", loại tinh vi hơn "can detect and transmit a signal for half-pedaling". Nguồn bậc 3 (Wikipedia), chấp nhận vì rủi ro thấp; người giao có thể xin lượt 2 đối chiếu thêm.'
+  - id: n11
+    cau: Nhiều piano điện có bộ ba bàn đạp gắn vào chân đàn hoặc bán rời, bàn đạp giữa thường là sostenuto, bàn đạp trái làm tiếng nhỏ và tối đi; đàn tốt còn mô phỏng cộng hưởng dây khi nhấn bàn đạp.
+    loai: dinh-nghia
+    ket_qua: null
+    ghi_chu: "chưa chắc: chưa có nguồn bậc 1–2 cho cấu hình bàn đạp piano điện và tính năng mô phỏng cộng hưởng dây (hãng sản xuất). Cũng dựa vào ../opus-zero/docs/piano/chon-dan.md, chưa chuyển."
+  - id: n12
+    cau: Nếu định học đến trình độ trung cấp, bàn đạp liên tục là khoản đáng đầu tư.
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên mua đàn; không có sự kiện sức khỏe. Khớp ../opus-zero/docs/piano/chon-dan.md (bàn đạp vang loại liên tục; nâng cấp ở Grade 4–5).
+  - id: n13
+    cau: Mỗi nốt có một bộ giảm âm bọc nỉ nằm trên dây; bấm phím thì bộ giảm âm nhấc lên, nhả phím thì rơi xuống chặn dây.
+    loai: dinh-nghia
+    nguon:
+      - wiki-pedals
+    ket_qua: dung
+    ghi_chu: Cơ chế cơ bản của bộ giảm âm theo Wikipedia (pedal nhấc tất cả bộ giảm âm khỏi dây); cùng nội dung ../opus-zero/docs/piano/lich-su-dan.md dòng 98. Nguồn bậc 3 (Wikipedia), chấp nhận vì rủi ro thấp; người giao có thể xin lượt 2 đối chiếu thêm.
+  - id: n14
+    cau: "Bàn đạp vang nhấc tất cả bộ giảm âm cùng lúc; nốt ngân sau khi nhả phím, mọi dây khác cũng rung tự do: cộng hưởng giao cảm. Dây trùng tần số với một bồi âm của nốt đang vang rung theo, tạo quầng âm ấm."
+    loai: dinh-nghia
+    nguon:
+      - wiki-pedals
+    ket_qua: dung
+    ghi_chu: 'Wikipedia: nhấn bàn đạp "makes every string on the piano a sympathetic string". Cơ chế bồi âm trùng tần số là vật lý chuẩn, cũng ở nhac-ly/am-hoc (đã chuyển). Nguồn bậc 3 (Wikipedia), chấp nhận vì rủi ro thấp; người giao có thể xin lượt 2 đối chiếu thêm.'
+  - id: n15
+    cau: "Các nốt cao nhất (cỡ quãng tám trên cùng, tùy đàn) không có bộ giảm âm: dây ngắn, tự tắt nhanh."
+    loai: so-lieu
+    ket_qua: null
+    ghi_chu: "chưa chắc: chưa mở nguồn nhà chế tạo cho số nốt không có bộ giảm âm; kết quả tìm kiếm chỉ có trang hỗ trợ piano điện (Roland, Kawai) nói đúng hiện tượng ở đàn điện."
+  - id: n16
+    cau: Độ sâu bàn đạp quyết định bộ giảm âm nhấc cao hay thấp; nhả nhanh hay chậm quyết định tiếng tắt gọn hay có đuôi; nghệ thuật nằm ở những chuyển động nhỏ quanh điểm bộ giảm âm vừa rời dây.
+    loai: quy-tac
+    ket_qua: null
+    ghi_chu: "chưa chắc: Wikipedia chỉ nhắc nửa bàn đạp ở piano điện; chưa có nguồn bậc 1–2 cho mô tả độ sâu, chuyển động nhỏ."
+  - id: n17
+    cau: "Thử nghiệm nghe cộng hưởng giao cảm: bấm câm hợp âm Đô4–Mi4–Sol4, đánh mạnh rồi nhả ngay Đô2, sẽ nghe hợp âm vang khẽ lên."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: "Bài thử tại nhà, không khẳng định số liệu. (Cơ chế: n14.)"
+  - id: n18
+    cau: "Ký hiệu Ped.: nhấn bàn đạp vang; dấu sao ✱ là chỗ nhả; một chữ Ped. mới mà không có dấu sao trước đó nghĩa là đổi bàn đạp: nhả rồi nhấn lại."
+    loai: quy-tac
+    nguon:
+      - wiki-glossary
+    ket_qua: null
+    ghi_chu: 'chưa chắc: Wikipedia glossary xác nhận "Ped." = nhấn bàn đạp vang; chưa mở nguồn cho dấu sao và quy ước "Ped. mới = đổi". Trùng với n83, n84 của kiem-dinh/piano/10-bai-dau-tien.yml (cũng chưa chắc): trang Bàn đạp là nơi chuẩn bị nguồn cho cả hai.'
+  - id: n19
+    cau: "Đường kẻ dưới khuông có móc ở hai đầu: nhấn ở đầu, nhả ở cuối; mỗi chỗ gãy nhọn (∧) là một lần nhả rồi nhấn lại ngay."
+    loai: quy-tac
+    ket_qua: null
+    ghi_chu: "chưa chắc: chưa mở nguồn cho ký hiệu đường kẻ bàn đạp."
+  - id: n20
+    cau: "con pedale, con Ped.: dùng bàn đạp (người chơi tự quyết chỗ đổi); senza pedale, senza Ped.: không dùng bàn đạp."
+    loai: quy-tac
+    ket_qua: null
+    ghi_chu: "chưa chắc: Wikipedia glossary không có con pedale/senza pedale; nghĩa đen tiếng Ý, nhưng chưa có nguồn từ điển."
+  - id: n21
+    cau: "Ped. simile: tiếp tục đạp như các ô trước."
+    loai: quy-tac
+    nguon:
+      - wiki-glossary
+    ket_qua: dung
+    ghi_chu: 'Glossary: simile = "continue applying the preceding directive … to the following passage". Nguồn bậc 3 (Wikipedia), chấp nhận vì rủi ro thấp; người giao có thể xin lượt 2 đối chiếu thêm.'
+  - id: n22
+    cau: "una corda (u.c.): nhấn bàn đạp trái; tre corde (t.c.), tutte le corde: nhả bàn đạp trái."
+    loai: quy-tac
+    nguon:
+      - wiki-glossary
+      - wiki-pedals
+    ket_qua: dung
+    ghi_chu: 'Glossary: una corda = nhấn bàn đạp mềm; tre corde (tc) = nhả. Wikipedia Piano pedals ghi Beethoven Op. 106 "due ed allora tutte le corde" (tutte le corde = mọi dây). Nguồn bậc 3 (Wikipedia), chấp nhận vì rủi ro thấp; người giao có thể xin lượt 2 đối chiếu thêm. Khớp yêu cầu của kiem-dinh/nhac-ly/14-ky-hieu-bieu-dien.yml (bảng ký hiệu có u.c., t.c.).'
+  - id: n23
+    cau: "laissez vibrer (l.v.): để tiếng tự tan, không chặn."
+    loai: quy-tac
+    nguon:
+      - wiki-glossary
+    ket_qua: dung
+    ghi_chu: 'Glossary: l.v. = "let vibrate". Nguồn bậc 3 (Wikipedia), chấp nhận vì rủi ro thấp; người giao có thể xin lượt 2 đối chiếu thêm.'
+  - id: n24
+    cau: Sost. Ped. là ký hiệu của bàn đạp giữ âm (giữa).
+    loai: quy-tac
+    ket_qua: da-bo
+    ghi_chu: 'Bỏ hàng: không có nguồn cho chữ viết tắt "Sost. Ped." (Wikipedia xác nhận không nói); thuat-ngu.yml đã có "sostenuto (bàn đạp)" nên thuật ngữ vẫn còn ở dữ liệu.'
+  - id: n25
+    cau: 'senza sordino (thời Beethoven): "không có bộ giảm âm", tức giữ bàn đạp vang.'
+    loai: quy-tac
+    nguon:
+      - fitch-moonlight
+    ket_qua: dung
+    ghi_chu: 'Fitch: "Senza sordini … without mutes, the dampers are lifted off the strings and the sustain pedal is effectively held down." Wikipedia Piano pedals không nhắc, nhưng Fitch đủ.'
+  - id: n26
+    cau: "con sordino (về sau), mit Verschiebung (Schumann): thường chỉ bàn đạp una corda."
+    loai: quy-tac
+    ket_qua: da-bo
+    ghi_chu: 'Bỏ hàng: Wikipedia glossary chỉ nói "con sordino" là dạng sai của con sordina (mute) và không có "mit Verschiebung" (Schumann); không nguồn nào xác nhận nghĩa "una corda". Câu "Hai dòng cuối là một cái bẫy…" đã sửa (n27). Hệ quả cho dữ liệu: src/data/thuat-ngu.yml còn mục con-sordino-con-sordina ("Ở một số nhà soạn nhạc về sau (như Scriabin): dùng bàn đạp trái una corda") và ghi "Xem Bàn đạp: ký hiệu"; trang không còn nói điều đó: người giao phải sửa hoặc bỏ mục này (không sửa ở đây).'
+  - id: n27
+    cau: Chữ senza sordino của Beethoven là chỉ dẫn về bộ giảm âm (bàn đạp vang), không phải bàn đạp trái.
+    loai: quy-tac
+    nguon:
+      - fitch-moonlight
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Hai dòng cuối là một cái bẫy: cùng chữ sordino, ở Beethoven là bộ giảm âm, còn ở nhiều nhà soạn nhạc về sau là una corda. Bản Urtext tốt giữ nguyên chữ của tác giả và giải thích trong chú thích." Phần "về sau là una corda" và "Urtext tốt…" không có nguồn nên bỏ; giữ phần Beethoven (Fitch).'
+  - id: n28
+    cau: Phần lớn ký hiệu bàn đạp trong các bản in phổ thông là của người biên tập.
+    loai: quy-tac
+    ket_qua: da-bo
+    ghi_chu: 'Bỏ: "phần lớn" không có nguồn. Điều đã kiểm (ở Chopin, n50): Wydanie Narodowe đặt chỉ dẫn do biên tập thêm trong ngoặc vuông.'
+  - id: n29
+    cau: "Đặt chân: gót chân phải trên sàn, mũi bàn chân đặt lên bàn đạp; chuyển động từ cổ chân; chân luôn chạm bàn đạp; chân trái phẳng; giày đế mỏng không trơn."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên kỹ thuật; không khẳng định nguyên nhân chấn thương. Ghi chú "tránh giày cao gót và dép" cũng là lời khuyên.
+  - id: n30
+    cau: "Tìm điểm bắt: bấm lặp một nốt staccato trong khi nhấn bàn đạp thật chậm; tới một độ sâu nốt bắt đầu ngân sau khi nhả phím, đó là điểm bộ giảm âm rời dây."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: Bài tập nghe; phần mô tả hiện tượng ("điểm bộ giảm âm rời dây") là nghĩa của chính bộ giảm âm (n14).
+  - id: n31
+    cau: "Bàn đạp nối (bàn đạp trễ, legato pedal, syncopated pedal): nhấn bàn đạp sau khi chơi hợp âm, nhả đúng lúc hợp âm mới vang rồi nhấn lại ngay; chân đi lệch nhịp với tay."
+    loai: quy-tac
+    ket_qua: null
+    ghi_chu: 'chưa chắc: chưa mở nguồn bậc 1–2 (Banowetz, Rowland, Schnabel, Neuhaus chỉ có thông tin xuất bản, không đọc được nội dung). Wikipedia chỉ nói bàn đạp vang giúp nối nốt (legato); không có tên "syncopated pedal" hay các bước. Cùng tình trạng với n83, n84 của 10-bai-dau-tien.yml.'
+  - id: n32
+    cau: Nếu nhấn bàn đạp cùng lúc với phím, giữa hai hợp âm có khe hở (nhả quá sớm) hoặc vệt nhòe (nhả quá muộn).
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: Mô tả lỗi nghe được của kỹ thuật, đi cùng n31.
+  - id: n33
+    cau: "Hình pedal-timing: chân nhả đúng lúc hợp âm mới vang (tay xuống, chân lên) rồi nhấn lại ngay; hợp âm nối liền mà không lẫn."
+    loai: quy-tac
+    ket_qua: null
+    ghi_chu: 'chưa chắc: cùng n31. Hình tĩnh src/components/hinh/pedal-timing.html khớp lời văn năm bước: aria-label, nhãn "chân nhả", "chân nhấn", "Hợp âm 1–3", ① nhả đúng lúc hợp âm mới vang, ② nhấn lại ngay sau đó, chú thích. Không có lỗi chữ nào cần sửa; hình không sửa ở đây.'
+  - id: n34
+    cau: "Bài khởi động: chơi Đô–Rê–Mi–Fa–Sol thật chậm chỉ bằng ngón 3, đổi bàn đạp ở mỗi nốt; không bàn đạp các nốt hở vì ngón phải nhấc lên."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: Bài tập.
+  - id: n35
+    cau: "Bài 1 (chuỗi hợp âm): tay phải 1-3-5 cho Đô–Mi–Sol và Đô–Fa–La, 1-2-5 cho Đô–Mi–La và Si–Rê–Sol, 1-4-5 cho Si–Fa–Sol; ở hợp âm cuối nhả bàn đạp cùng lúc nhấc tay; kiểm tra bằng tai."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: Ngón bấm chơi được và khớp khối abc 1.
+  - id: n36
+    cau: "Bài 2: tay trái kiểu valse (nốt trầm ngón 5 rồi hai hợp âm nhẹ), bàn đạp đổi ngay sau mỗi nốt trầm; ô 6 giai điệu Fa–Mi–Rê đi bậc liền trên cùng một hợp âm nên Mi và Rê chồng nhau; đổi hẳn bàn đạp ở phách 3 sẽ mất nốt trầm Rê; thử đạp nông hoặc nửa bàn đạp."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: "Khớp khối abc 2 (ô 6: tay phải F E D trên Rê–Fa–La ở tay trái). Phần nửa bàn đạp thuộc n37."
+  - id: n37
+    cau: "Các kiểu đạp khác: đạp cùng lúc, đạp trước, nửa bàn đạp (nhả một nửa: dây cao tắt, dây trầm ngân), rung bàn đạp (flutter pedal)."
+    loai: dinh-nghia
+    ket_qua: null
+    ghi_chu: "chưa chắc: chưa mở nguồn bậc 1–2 (Banowetz, Rowland, Schnabel, Neuhaus chỉ có thông tin xuất bản, không đọc được nội dung). Wikipedia không định nghĩa nửa bàn đạp ở đàn cơ hay flutter pedal."
+  - id: n38
+    cau: "Bàn đạp giữ âm: bấm nốt (thường là nốt trầm), nhấn bàn đạp giữa trong khi giữ phím, rồi nhả phím; una corda: nhấn bàn đạp trái, có thể giữ suốt một đoạn."
+    loai: dinh-nghia
+    nguon:
+      - wiki-pedals
+    ket_qua: dung
+    ghi_chu: Khớp n6 và n2. Nguồn bậc 3 (Wikipedia), chấp nhận vì rủi ro thấp; người giao có thể xin lượt 2 đối chiếu thêm.
+  - id: n39
+    cau: "Khi nào đổi bàn đạp: khi hòa âm đổi; khi giai điệu đi bậc liền trong cùng hòa âm; ở dấu lặng và cuối câu; theo đàn và phòng."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên (đổi theo hòa âm, nhả ở dấu lặng).
+  - id: n40
+    cau: Ở âm vực cao tiếng tắt nhanh nên nhòe ít hơn; ở âm vực trầm cùng độ sâu bàn đạp nghe đục hơn nhiều.
+    loai: quy-tac
+    ket_qua: null
+    ghi_chu: "chưa chắc: chưa có nguồn bậc 1–2 cho hai nhận xét âm học này."
+  - id: n41
+    cau: "Bach: phần lớn nhạc phím của Bach viết cho harpsichord, clavichord và organ, những đàn không có bàn đạp vang (bàn đạp organ là bàn phím cho chân)."
+    loai: lich-su
+    ket_qua: null
+    ghi_chu: "chưa chắc: chưa mở nguồn bậc 1–2; cùng ý ở ../opus-zero/docs/piano/lich-su-dan.md dòng 35. Harpsichord/clavichord không có bàn đạp vang kiểu piano là kiến thức chuẩn nhưng chưa kèm nguồn."
+  - id: n42
+    cau: "Bach: legato bằng ngón trước hết; nếu dùng bàn đạp thì ít, ngắn, nông; đừng để làm nhòe hai bè."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên diễn tấu.
+  - id: n43
+    cau: "Prelude Đô trưởng BWV 846: có người đổi bàn đạp mỗi ô nhịp theo hòa âm, có người chỉ giữ nốt bằng ngón đúng như bản nhạc ghi."
+    loai: lich-su
+    ket_qua: null
+    ghi_chu: "chưa chắc: chưa mở nguồn; trang bài học ../opus-zero/docs/piano/tac-pham/bach-prelude-do.md (mục Giữ nốt và bàn đạp, dòng 206–207) nói cùng hai lựa chọn."
+  - id: n44
+    cau: "Mozart: fortepiano thời ông nhấc bộ giảm âm bằng cần gạt bằng đầu gối chứ chưa có bàn đạp; đàn Anton Walter của Mozart có loại cần gạt này; Mozart gần như không ghi bàn đạp vào bản nhạc."
+    loai: lich-su
+    ket_qua: null
+    ghi_chu: "chưa chắc: chưa mở nguồn bậc 1–2. Cùng ý ở ../opus-zero/docs/piano/lich-su-dan.md dòng 39 (Stein, Walter, cần đầu gối). Hồ sơ lo-trinh.yml đã khóa dựa trên đúng câu này (mục Mozart): giữ nguyên chữ khi chuyển."
+  - id: n45
+    cau: "Mozart: bàn đạp ngắn và nông, không xóa staccato và dấu luyến, nhả ở mọi dấu lặng."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên.
+  - id: n46
+    cau: Beethoven ghi bàn đạp thường xuyên hơn hẳn Mozart.
+    loai: lich-su
+    ket_qua: null
+    ghi_chu: 'chưa chắc: chưa có nguồn bậc 1–2 cho mức độ "thường xuyên hơn hẳn".'
+  - id: n47
+    cau: "Chương 1 Sonata Ánh trăng (Op. 27 số 2): đầu chương Beethoven ghi senza sordino; thời đó sordini là bộ giảm âm nên nghĩa là giữ bộ giảm âm nhấc, tức giữ bàn đạp vang, suốt chương."
+    loai: quy-tac
+    nguon:
+      - fitch-moonlight
+    ket_qua: dung
+    ghi_chu: 'Fitch: "Senza sordini… dampers lifted, sustain pedal effectively held down"; Beethoven ghi hai lần trong chương 1. Cũng khớp ../opus-zero/docs/piano/tac-pham/beethoven-anh-trang.md ("Si deve suonare tutto questo pezzo delicatissimamente e senza sordino").'
+  - id: n48
+    cau: Trên đàn Vienna đầu thế kỷ 19 tiếng tắt nhanh và âm vực trầm nhẹ, giữ bàn đạp suốt chỉ tạo lớp sương mỏng; trên đàn hiện đại, giữ nguyên bàn đạp qua các lần đổi hòa âm thành một khối âm thanh hỗn độn.
+    loai: quy-tac
+    nguon:
+      - fitch-moonlight
+    ket_qua: dung
+    ghi_chu: 'Fitch: trên đàn cổ sustain ngắn nên tiếng bàn đạp tinh tế; trên đàn hiện đại làm đúng chữ "unacceptable" vì sustain dài. "Đàn Vienna" và "âm vực trầm nhẹ" là chi tiết thêm, cùng ý ở beethoven-anh-trang cũ; không kiểm riêng.'
+  - id: n49
+    cau: "Chopin tự ghi bàn đạp kỹ: Ped. và dấu sao xuất hiện thường xuyên trong bản thảo và các bản in đầu tiên."
+    loai: lich-su
+    nguon:
+      - ne-nocturnes
+    ket_qua: null
+    ghi_chu: 'chưa chắc: commentary Wydanie Narodowe nói về bàn đạp "authentic" của Chopin ở Op. 27 số 2; chưa kiểm câu "thường xuyên … bản thảo và bản in đầu". Khớp hồ sơ lo-trinh.yml ("Chopin tự ghi bàn đạp kỹ").'
+  - id: n50
+    cau: Trong Wydanie Narodowe (bản Ekier), chỉ dẫn do người biên tập thêm vào được đặt trong ngoặc vuông; phương án khác cũng có nguồn gốc từ tác giả thì đặt trong ngoặc tròn.
+    loai: quy-tac
+    nguon:
+      - ne-nocturnes
+    ket_qua: dung
+    ghi_chu: "NE Nocturnes commentary: authentic variants (kể cả pedal) trong ngoặc tròn ( ), bổ sung của biên tập trong ngoặc vuông [ ]."
+  - id: n51
+    cau: Ở bốn ô cuối Nocturne Op. 27 số 2 (Rê♭ trưởng) Chopin ghi một lần đạp duy nhất; phần bình giải của Wydanie Narodowe khuyên giữ đúng như vậy, vì hiệu quả vẫn rất đẹp trên đàn hiện đại.
+    loai: quy-tac
+    nguon:
+      - ne-nocturnes
+    ket_qua: dung
+    ghi_chu: 'NE commentary (tr. 63, ô 74): "one pedal held over the final four bars … produces a beautiful effect even on a modern piano". Giọng Rê♭ trưởng theo kiến thức chung (rủi ro thấp).'
+  - id: n52
+    cau: "Chopin: legato hòa âm (ngón giữ nốt hòa âm trong lúc chân đổi); trên đàn hiện đại, ở âm vực trầm hoặc khi giai điệu đi bậc liền, có thể phải đổi thêm, đạp nông hay rung bàn đạp; điều chỉnh để giữ ý định của ông."
+    loai: khuyen-tap
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Ông rất hiếm khi ghi una corda. Đàn Pleyel mà ông ưa chuộng tắt tiếng nhanh hơn đàn hiện đại." Cả hai khẳng định không có nguồn nên bỏ (n53 da-bo cho câu una corda); giữ phần lời khuyên.'
+  - id: n53
+    cau: Chopin rất hiếm khi ghi una corda.
+    loai: lich-su
+    ket_qua: da-bo
+    ghi_chu: "Bỏ: không có nguồn."
+  - id: n54
+    cau: Debussy ghi rất ít bàn đạp và để việc ấy cho người chơi, nhưng bàn đạp là một phần màu âm thanh của ông.
+    loai: lich-su
+    ket_qua: null
+    ghi_chu: 'chưa chắc: chưa mở nguồn bậc 1–2 (kiểm tra Fitch Voiles không đọc được). Cùng ý với ../opus-zero/docs/piano/tac-pham/debussy-clair-de-lune.md ("una corda, đạp nửa").'
+  - id: n55
+    cau: "Debussy: nửa bàn đạp, rung bàn đạp, đạp trước ở đoạn pp, una corda để đổi màu."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên diễn tấu.
+  - id: n56
+    cau: Lỗi thường gặp (bảng 8 hàng) và thứ tự học bàn đạp (6 bước, 5 mục tự kiểm).
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập và tự kiểm; không khẳng định sự kiện ngoài các nhận định đã tách.
+  - id: n57
+    cau: "Quiz 1: trong bàn đạp nối, nhả bàn đạp đúng lúc hợp âm mới vang rồi nhấn lại ngay."
+    loai: quy-tac
+    ket_qua: null
+    ghi_chu: "chưa chắc: cùng n31."
+  - id: n58
+    cau: "Quiz 2: trên đàn cánh una corda dịch bộ máy sang bên để búa gõ ít dây hơn; hạ dải nỉ là bàn đạp tập của đàn đứng; đưa búa lại gần dây là bàn đạp trái của đàn đứng."
+    loai: dinh-nghia
+    nguon:
+      - wiki-pedals
+    ket_qua: dung
+    ghi_chu: Cùng n2, n4, n7.
+  - id: n59
+    cau: "Quiz 3: senza sordino ở đầu chương 1 Ánh trăng nghĩa là không có bộ giảm âm, tức giữ bàn đạp vang; trên đàn hiện đại vẫn đổi bàn đạp kín đáo theo hòa âm."
+    loai: quy-tac
+    nguon:
+      - fitch-moonlight
+    ket_qua: dung
+    ghi_chu: Cùng n47; Fitch khuyên nửa bàn đạp và đổi trễ trên đàn hiện đại.
+  - id: n60
+    cau: "Quiz 4: bàn đạp sostenuto giữ những nốt đang giữ phím vào lúc nhấn; các nốt chơi sau không bị giữ."
+    loai: dinh-nghia
+    nguon:
+      - wiki-pedals
+    ket_qua: dung
+    ghi_chu: Cùng n6.
+  - id: n61
+    cau: "Quiz 5: tập không bàn đạp đến khi legato ngón rõ rồi mới thêm bàn đạp; ghi âm để nghe lại."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập.
+  - id: n62
+    cau: "Link: Tư thế, Hợp âm rải, Tạo tiếng đàn, Ký hiệu biểu diễn, Âm học đã có; Thu âm, Chọn đàn, Lịch sử cây đàn, Bach Prelude, Beethoven Ánh trăng (#ban-ap-senza-sordino), Chopin Nocturne Op. 9 số 2, Debussy Clair de lune, Mozart K. 545, Tài liệu tham khảo chưa chuyển."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Đã có: piano/tu-the, hop-am-rai, tieng-dan, nhac-ly/14-ky-hieu-bieu-dien, nhac-ly/am-hoc. Chưa chuyển, đã kiểm ở ../opus-zero/docs/: luyen-tap/thu-am; piano/chon-dan (bàn đạp liên tục, bàn đạp giữa sostenuto/đàn đứng là bàn đạp tập, nâng cấp ở Grade 4–5); piano/lich-su-dan (cần đầu gối của Stein, Walter; ba bàn đạp; senza sordino; bảng sáng chế nói Steinway 1874 cho sostenuto, trong khi Wikipedia Piano pedals ghi Boisselot 1844, Debain 1860, Montal 1862, Steinway hoàn thiện và đăng ký 1874: người giao xem lại câu ở lich-su-dan khi chuyển); piano/tac-pham/beethoven-anh-trang (mục "### Bàn đạp: *senza sordino*", slug ban-ap-senza-sordino: có, khớp anchor); bach-prelude-do (giữ nốt và bàn đạp); mozart-k545 (gần như không bàn đạp); chopin-nocturne-op9-2 (đổi bàn đạp theo nốt trầm); debussy-clair-de-lune (una corda, đạp nửa); tai-lieu-tham-khao. Lô chuyển các trang đó phải giữ các nội dung ấy. Mục thuat-ngu.yml trỏ tới ban-dap/#beethoven và #ky-hieu: hai tiêu đề này có ("### Beethoven", "## Ký hiệu").'
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - khoa
+      - nhip
+      - not
+      - so-ngon
+      - hop-am
+    ket_qua: dung
+    ghi_chu: "Bài 1 chuỗi hợp âm: 4/4 L:1/8, 4 ô, mỗi ô hai hợp âm nốt trắng (I vi | IV V | I IV | V7 I) ở tay phải; tay trái nốt trầm ngón 5 viết thành hai nốt nối cho ký hiệu Ped./✱ đúng chỗ. Mỗi ô đủ 4 phách. Chuỗi hòa âm khớp nhãn I, vi, IV, V, I, IV, V7, I; Si–Fa–Sol (1-4-5) cho V7 (bỏ quãng năm, chấp nhận được trong bài tập). Ngón bấm lời dẫn chơi được. Ký hiệu Ped. và ✱ theo quy ước đã nêu ở n18 (chưa chắc nguồn)."
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - khoa
+      - nhip
+      - not
+      - so-ngon
+      - hop-am
+    ket_qua: dung
+    ghi_chu: 'Bài 2 giai điệu: 3/4 L:1/8, 8 ô; tay trái valse (nốt trầm rồi hai hợp âm), tay phải giai điệu; ô 6 Fa–Mi–Rê trên Rê–Fa–La khớp lời dẫn "đi bậc liền trên cùng một hợp âm". Mỗi ô đủ 3 phách. Ngón bấm tay phải chơi được. Bàn đạp đổi sau nốt trầm mỗi ô (đã nêu ở lời dẫn).'
+ghi_chu: 'Lượt 1 trang Bàn đạp (lô D4-L2, phần A). Nguồn đã mở: Wikipedia Piano pedals và Glossary of musical terminology (bậc 3, chỉ dùng cho điều ít rủi ro), Fitch Pedalling the Moonlight Sonata, Wydanie Narodowe Nocturnes commentary. Không mở được nội dung các sách in (Banowetz, Rowland, Schnabel, Neuhaus) nên mục Nguồn viết lại theo bốn nguồn trên (bỏ các sách in và bài Fitch về Voiles, chưa đọc). Đã sửa (da-sua): n9 (Cristofori), n27 (câu senza sordino), n52 (Chopin: bỏ vế una corda và Pleyel). Đã bỏ (da-bo): n24 (hàng Sost. Ped.), n26 (hàng con sordino/mit Verschiebung), n28 (câu "phần lớn ký hiệu… do biên tập"), n53 (Chopin hiếm khi ghi una corda). Chưa chắc (ket_qua null): n3, n5, n8, n11, n15, n16, n18, n19, n20, n31, n33, n37, n40, n41, n43, n44, n46, n49, n54, n57; người giao quyết định bỏ hay xin lượt 2 tìm nguồn bậc 1–2 (nhất là bàn đạp nối và ký hiệu Ped./✱, còn tồn từ 10-bai-dau-tien n83, n84). So hồ sơ khóa trước: lo-trinh-choi.yml (mục "Bàn đạp nối": giữ, có), 10-bai-dau-tien.yml n83/n84 (bảng ký hiệu và mục Bàn đạp nối: giữ, có), 14-ky-hieu-bieu-dien.yml (bảng ký hiệu có u.c. và t.c.: giữ, có), lo-trinh.yml (Mozart cần gạt đầu gối và gần như không ghi bàn đạp; Chopin tự ghi bàn đạp kỹ: giữ, có), hai-tay.yml (trang tồn tại, kiểu 6 trỏ tới Bàn đạp: khớp). Thuật ngữ có sẵn trong thuat-ngu.yml: una corda, senza sordino, con sordino, sostenuto (bàn đạp), bàn đạp vang, bộ giảm âm; chưa có: bàn đạp nối (legato/syncopated pedal), cộng hưởng giao cảm, nửa bàn đạp, rung bàn đạp (flutter pedal), bàn đạp tập, laissez vibrer, simile, damper. MỤC thuat-ngu "con-sordino-con-sordina" nói điều trang đã bỏ (xem n26). Hình tĩnh pedal-timing.html: không lỗi. Không còn chi tiết mau cũ (tên ứng dụng, giá, thiết bị) trên trang lõi này; "bộ ba bàn đạp gắn vào chân đàn" là mô tả loại đàn, không gắn hãng.'
+doi_chu:
+  - cu: Tên una corda ("một dây") có từ thời bộ máy dịch được tới mức búa chỉ gõ một dây; trong Concerto số 4, Beethoven còn ghi cả una corda, due corde và tre corde. Lịch sử của bàn đạp, từ cần gạt bằng đầu gối đến sostenuto, ở trang lịch sử cây đàn.
+    moi: Tên una corda ("một dây") có từ thời đàn của Cristofori, khi bộ máy dịch sang bên để búa chỉ gõ một dây; trong Concerto số 4, Beethoven còn ghi cả una corda, due corde và tre corde. Lịch sử của bàn đạp, từ cần gạt bằng đầu gối đến sostenuto, ở trang lịch sử cây đàn.
+    ly_do: 'n9 (da-sua): Câu cũ: "có từ thời bộ máy dịch được tới mức búa chỉ gõ một dây". Thêm tên Cristofori (Wikipedia: trên đàn Cristofori bộ máy dịch để búa gõ một dây thay vì hai) cho rõ nghĩa. Beethoven Concerto số 4: Wikipedia ghi una corda, due corde, tre corde. Nguồn bậc 3 (Wikipedia), chấp nhận vì rủi ro thấp; người giao có thể xin lượt 2 đối chiếu thêm.'
+  - cu:
+      - Sost. Ped.
+      - Bàn đạp giữ âm (giữa)
+    ly_do: 'n24 (da-bo): Bỏ hàng: không có nguồn cho chữ viết tắt "Sost. Ped." (Wikipedia xác nhận không nói); thuat-ngu.yml đã có "sostenuto (bàn đạp)" nên thuật ngữ vẫn còn ở dữ liệu.'
+  - cu:
+      - con sordino (về sau), mit Verschiebung (Schumann)
+      - Thường chỉ bàn đạp una corda
+      - "Hai dòng cuối là một cái bẫy: cùng chữ sordino, ở Beethoven là bộ giảm âm, còn ở nhiều nhà soạn nhạc về sau là una corda. Bản Urtext tốt giữ nguyên chữ của tác giả và giải thích trong chú thích. Cũng nhớ rằng phần lớn ký hiệu bàn đạp trong các bản in phổ thông là của người biên tập. Các ký hiệu biểu diễn khác ở bài ký hiệu biểu diễn."
+    moi: Chữ senza sordino của Beethoven là chỉ dẫn về bộ giảm âm (bàn đạp vang), không phải bàn đạp trái. Các ký hiệu biểu diễn khác ở bài ký hiệu biểu diễn.
+    ly_do: 'n26 (da-bo): Bỏ hàng: Wikipedia glossary chỉ nói "con sordino" là dạng sai của con sordina (mute) và không có "mit Verschiebung" (Schumann); không nguồn nào xác nhận nghĩa "una corda". Câu "Hai dòng cuối là một cái bẫy…" đã sửa (n27). Hệ quả cho dữ liệu: src/data/thuat-ngu.yml còn mục con-sordino-con-sordina ("Ở một số nhà soạn nhạc về sau (như Scriabin): dùng bàn đạp trái una corda") và ghi "Xem Bàn đạp: ký hiệu"; trang không còn nói điều đó: người giao phải sửa hoặc bỏ mục này (không sửa ở đây).; n27 (da-sua) và n28 (da-bo): Câu cũ: "Hai dòng cuối là một cái bẫy: cùng chữ sordino, ở Beethoven là bộ giảm âm, còn ở nhiều nhà soạn nhạc về sau là una corda. Bản Urtext tốt giữ nguyên chữ của tác giả và giải thích trong chú thích." Phần "về sau là una corda" và "Urtext tốt…" không có nguồn nên bỏ; giữ phần Beethoven (Fitch).'
+  - cu:
+      - Ông rất hiếm khi ghi una corda.
+      - Đàn Pleyel mà ông ưa chuộng tắt tiếng nhanh hơn đàn hiện đại. Ở âm vực trầm hoặc khi giai điệu đi bậc liền, có thể phải đổi thêm, đạp nông hay rung bàn đạp. Điều chỉnh để giữ ý định của ông (nốt trầm ngân, hòa âm hòa quyện), không phải để xóa nó.
+    moi: Trên đàn hiện đại, ở âm vực trầm hoặc khi giai điệu đi bậc liền, có thể phải đổi thêm, đạp nông hay rung bàn đạp. Điều chỉnh để giữ ý định của ông (nốt trầm ngân, hòa âm hòa quyện), không phải để xóa nó.
+    ly_do: 'n53 (da-bo): Bỏ: không có nguồn.; n52 (da-sua): Câu cũ: "Ông rất hiếm khi ghi una corda. Đàn Pleyel mà ông ưa chuộng tắt tiếng nhanh hơn đàn hiện đại." Cả hai khẳng định không có nguồn nên bỏ (n53 da-bo cho câu una corda); giữ phần lời khuyên.'
+  - cu:
+      - Joseph Banowetz, The Pianist's Guide to Pedaling (Indiana University Press, 1985).
+      - David Rowland, A History of Pianoforte Pedalling (Cambridge University Press, 1993).
+      - Karl Ulrich Schnabel, Modern Technique of the Pedal.
+      - "Heinrich Neuhaus, The Art of Piano Playing: chương về bàn đạp."
+      - "Graham Fitch, Practising the Piano: bàn đạp trong Sonata Ánh trăng và gợi ý cho Voiles của Debussy."
+    moi: "Graham Fitch, Practising the Piano: bàn đạp trong Sonata Ánh trăng."
+    ly_do: "Mục Nguồn: bỏ các sách in chưa mở được nội dung (Banowetz, Rowland, Schnabel, Neuhaus); Fitch chỉ giữ phần Ánh trăng đã đối chiếu."
+  - cu: 'Bản nhạc: IMSLP (tìm "Op.27 No.2" cho Beethoven); bản Urtext của G. Henle Verlag.'
+    moi: "Wikipedia, Piano pedals: đối chiếu cấu tạo ba bàn đạp, lịch sử sostenuto, đàn đứng và piano điện."
+    ly_do: "Mục Nguồn: thay dòng IMSLP/Henle chung bằng Wikipedia Piano pedals, nguồn thật sự dùng để đối chiếu cấu tạo và lịch sử bàn đạp."

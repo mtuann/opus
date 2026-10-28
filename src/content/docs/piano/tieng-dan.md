@@ -12,7 +12,7 @@ Khi bạn bấm phím, bộ máy đàn **ném** chiếc búa bọc nỉ vào dâ
 Từ đó có ba hệ quả rất thực tế:
 
 - **Độ to phụ thuộc vào tốc độ búa, tức là tốc độ phím đi xuống**, không phải lực bạn ấn vào đáy phím. Ấn thêm sau khi nốt đã kêu không làm nốt to hơn, chỉ làm tay căng.
-- **Nốt càng to càng sáng.** Búa đập càng nhanh, nỉ càng "cứng" lại khi chạm dây và tạo nhiều bồi âm cao. Vì vậy một tiếng *ff* gõ thô nghe chói, còn *ff* đẹp cần trọng lượng cánh tay và cổ tay mềm. Bạn có thể nhìn thấy bồi âm, và đọc lý thuyết về chúng, ở bài [Âm học cơ bản](/opus/nhac-ly/am-hoc/#am-sac).
+- **Nốt càng to càng sáng.** Búa đập càng nhanh, nỉ càng "cứng" lại khi chạm dây và tạo nhiều bồi âm cao. Vì vậy muốn một tiếng *ff* đầy, hãy dùng trọng lượng cánh tay và cổ tay mềm. Bạn có thể nhìn thấy bồi âm, và đọc lý thuyết về chúng, ở bài [Âm học cơ bản](/opus/nhac-ly/am-hoc/#am-sac).
 - **Mọi nốt piano đều nhỏ dần** ngay sau khi đánh. Một "giai điệu hát" trên piano thực chất là một ảo giác được dựng lên: mỗi nốt sau được đánh vừa khớp với độ vang còn lại của nốt trước, các nốt nối nhau không hở, và khoảng thời gian giữa chúng được co giãn rất tinh tế.
 
 | Bạn điều khiển | Người nghe nhận ra |
@@ -24,7 +24,7 @@ Từ đó có ba hệ quả rất thực tế:
 | Bàn đạp | Độ vang, độ nối, màu âm thanh |
 
 :::tip[Đáy phím không phải nơi để ấn]
-Khi nốt đã kêu, chỉ giữ phím bằng lực vừa đủ để phím không bật lên. Bấm thử một nốt *f* rồi để ý khoảnh khắc ngay sau khi chạm đáy: tay bạn có còn ấn không? Nếu có, nhả lực đó ra. Đây là thói quen quan trọng nhất để chơi lâu mà không mỏi (xem [Giữ đôi tay khỏe](/opus/piano/suc-khoe/) và [Tư thế, thế tay](/opus/piano/tu-the/)).
+Khi nốt đã kêu, chỉ giữ phím bằng lực vừa đủ để phím không bật lên. Bấm thử một nốt *f* rồi để ý khoảnh khắc ngay sau khi chạm đáy: tay bạn có còn ấn không? Nếu có, nhả lực đó ra. Thói quen này giúp tay đỡ gồng khi chơi lâu (xem [Giữ đôi tay khỏe](/opus/piano/suc-khoe/) và [Tư thế, thế tay](/opus/piano/tu-the/)).
 :::
 
 ## Legato: nối liền bằng ngón
@@ -43,7 +43,7 @@ Legato bắt đầu từ ngón bấm: bạn chỉ nối được hai nốt nếu
 
 1. **Luồn ngón cái và vắt ngón**, như khi chơi [gam](/opus/piano/gam/): đi tiếp mà không phải nhấc tay.
 2. **Đổi ngón trên phím đang giữ** (*finger substitution*): đang giữ một nốt bằng ngón này, lặng lẽ thay bằng ngón khác mà phím không bật lên, để giải phóng ngón cần cho nốt tiếp theo. Rất hay gặp trong nhạc nhiều bè của Bach và trong các chuỗi hợp âm cần hát liền.
-3. **Trượt ngón** từ phím đen xuống phím trắng liền kề bằng cùng một ngón, một cách nối mà Chopin dùng nhiều.
+3. **Trượt ngón** từ phím đen xuống phím trắng liền kề bằng cùng một ngón, một cách nối mà Chopin cũng dùng.
 
 Tập đổi ngón "câm" trước: giữ phím Sol bằng ngón 1, rồi lần lượt thay bằng ngón 2, 3, 4, 5 mà phím không bật lên và không kêu lại. Sau đó thử trong ngữ cảnh: bài dưới đây đi hết một quãng tám legato mà không luồn ngón cái, nhờ đổi ngón 4 thành ngón 1 trên nốt Fa đang ngân.
 
@@ -89,12 +89,12 @@ Trong nhạc thế kỷ 18, dấu chấm và dấu nêm không phải lúc nào 
 :::
 
 :::caution[*sf* trong đoạn *p* không có nghĩa là *ff*]
-*sf* là nhấn **tương đối**. Trong một câu *p*, *sf* có khi chỉ to cỡ *mf*. Đánh mọi *sf* như *ff* là lỗi rất phổ biến khi chơi Beethoven.
+*sf* là nhấn **tương đối**. Trong một câu *p*, *sf* có khi chỉ to cỡ *mf*. Đừng đánh mọi *sf* như *ff*, nhất là khi chơi Beethoven.
 :::
 
 ## Dấu luyến và cách tạo câu
 
-Trong nhạc Cổ điển, dấu luyến trước hết là **dấu phát âm**: các nốt dưới dấu luyến được nối liền, nốt đầu hơi nặng hơn, nốt cuối nhẹ và hơi ngắn lại, rồi có một khoảng ngắt nhỏ trước nốt tiếp theo. Türk mô tả điều này trong sách dạy đàn phím năm 1789: nốt mở đầu dấu luyến được nhấn rất nhẹ, gần như không nhận ra.
+Trong nhạc Cổ điển, dấu luyến trước hết là **dấu phát âm**: các nốt dưới dấu luyến được nối liền, nốt đầu hơi nặng hơn, nốt cuối nhẹ và hơi ngắn lại, rồi có một khoảng ngắt nhỏ trước nốt tiếp theo. Nốt đầu dưới dấu luyến được nhấn hơn, các nốt sau nhạt dần.
 
 Với dấu luyến hai nốt (rất hay gặp ở dạng "tiếng thở dài", nốt nghịch đi xuống nốt thuận), dùng động tác **thả – lăn**:
 
@@ -178,7 +178,7 @@ K:C
 
 ### Trong cùng một tay
 
-Khó hơn: cùng một bàn tay chơi một hợp âm mà nốt trên phải nổi lên. Kỹ thuật là **dồn trọng lượng về phía ngón chơi giai điệu** (thường là ngón 4 hoặc 5), ngón ấy chắc và đi trước một phần nghìn giây, còn các ngón kia nhẹ như chỉ chạm phím. Các bước tập:
+Khó hơn: cùng một bàn tay chơi một hợp âm mà nốt trên phải nổi lên. Kỹ thuật là **dồn trọng lượng về phía ngón chơi giai điệu** (thường là ngón 4 hoặc 5), ngón ấy chắc, còn các ngón kia nhẹ như chỉ chạm phím. Các bước tập:
 
 1. Chơi riêng dòng giai điệu, dùng đúng ngón sẽ dùng trong hợp âm.
 2. Chơi cả hợp âm nhưng chỉ cho nốt trên kêu; các nốt dưới **bấm câm** (đẩy phím xuống chậm đến mức không kêu).
@@ -272,7 +272,7 @@ Nhiều giáo viên khuyên tạm chơi nốt móc đơn hơi tách và nốt m�
 - Heinrich Neuhaus, *The Art of Piano Playing* (nguyên bản tiếng Nga 1958, bản tiếng Anh 1973): các chương về âm thanh và kỹ thuật.
 - György Sándor, *On Piano Playing: Motion, Sound and Expression* (1981).
 - Seymour Bernstein, *With Your Own Two Hands* (1981).
-- Daniel Gottlob Türk, *Klavierschule* (1789): về dấu luyến và cách nhấn nốt đầu.
+- Daniel Gottlob Türk, *Klavierschule* (1789): về cách phát âm các nốt.
 - Neville H. Fletcher, Thomas D. Rossing, *The Physics of Musical Instruments* (1991; tái bản 1998); Anders Askenfelt (chủ biên), *Five Lectures on the Acoustics of the Piano* (Royal Swedish Academy of Music, 1990): về búa, dây và bồi âm.
 - Graham Fitch, [Practising the Piano](https://practisingthepiano.com/).
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

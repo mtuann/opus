@@ -12,7 +12,7 @@ Quãng tám và bước nhảy là hai mặt của cùng một kỹ năng: di ch
 - **Ngón bấm.** Phím trắng: 1–5. Phím đen: 1–4 nếu tay đủ rộng, vì ngón 4 dài hơn và với tới phím đen (nằm sâu hơn) dễ hơn ngón 5. Nếu ngón 4 phải căng mới tới, cứ dùng 1–5.
 - **Khung bàn tay.** Hai điểm chạm là cạnh đầu ngón cái và đầu ngón 5 (hoặc 4). Ngón 2, 3, 4 hơi cong, nổi trên mặt phím mà không bấm; bàn tay hơi vòm, không duỗi phẳng.
 - **Vị trí trên phím.** Đoạn quãng tám có cả phím trắng và phím đen: đặt bàn tay sâu vào trong một chút ở mọi nốt, để tay không phải liên tục đi vào, đi ra.
-- **Khép tay giữa hai quãng tám.** Sau mỗi cú đánh, bàn tay khép lại một chút trong lúc di chuyển, rồi mới mở ra ở nốt sau. Giữ tay mở căng suốt một đoạn dài là nguyên nhân mỏi tay hàng đầu.
+- **Khép tay giữa hai quãng tám.** Sau mỗi cú đánh, bàn tay khép lại một chút trong lúc di chuyển, rồi mới mở ra ở nốt sau. Giữ tay mở căng suốt một đoạn dài làm mỏi tay.
 
 ::cong-cu{ten="piano" range="C4-C6" notes="C4 C5 F#4 F#5"}
 
@@ -28,7 +28,7 @@ Ngón tay chỉ là **điểm chạm**: sức nặng đến từ cánh tay, đ�
 
 - **Rơi và nảy.** Cánh tay thả rơi từ vài phân trên phím, hai ngón chạm đáy phím cùng lúc, rồi cổ tay nảy lên như lò xo. Phần "nảy" quan trọng ngang phần "rơi": nó nhả lực ngay khi nốt đã kêu (xem [Tạo tiếng đàn](/opus/piano/tieng-dan/)).
 - **Xoay cẳng tay.** Lăn qua lại giữa ngón cái và ngón út như vặn nắm cửa (xem [Tư thế, thế tay](/opus/piano/tu-the/)). Đây là động tác của **quãng tám gãy**, khi hai nốt chơi luân phiên.
-- **Không bao giờ khóa cổ tay.** Cổ tay là bộ giảm xóc; cổ tay cứng thì mọi cú đánh dội ngược lên cẳng tay và vai, tiếng đàn gắt và bước nhảy trượt.
+- **Không bao giờ khóa cổ tay.** Cổ tay là bộ giảm xóc: hãy giữ nó linh hoạt, không gồng khuỷu, vai và cổ tay.
 
 ### Bài 1. Rơi và nảy
 
@@ -206,7 +206,7 @@ K:D
 
 ## Sức bền và sức khỏe
 
-Quãng tám và bước nhảy là lúc nhiều người bắt đầu đau tay (xem [Giữ đôi tay khỏe](/opus/piano/suc-khoe/)). Tập quãng tám thành vài đợt 3–5 phút xen việc nhẹ tay; tập *mf* cho tới khi tay thả lỏng hẳn rồi mới thêm *f*. Đau, tê hay căng ở cẳng tay, cổ tay, khuỷu: **dừng ngay**, không chơi xuyên cơn đau; đau trở lại thì đi khám.
+Quãng tám lặp và bước nhảy dễ làm mỏi tay nếu tập lâu hoặc gồng, nên giảm gồng giữa các quãng tám (xem [Giữ đôi tay khỏe](/opus/piano/suc-khoe/)). Tập quãng tám thành các đợt ngắn xen nghỉ (một gợi ý thường gặp là 20 phút tập, 10 phút nghỉ); tập *mf* cho tới khi tay thả lỏng hẳn rồi mới thêm *f*. Đau, tê hay căng ở cẳng tay, cổ tay, khuỷu: **dừng ngay**, không chơi xuyên cơn đau; đau trở lại thì đi khám.
 
 ## Tập theo chặng
 
@@ -217,7 +217,7 @@ Quãng tám và bước nhảy là lúc nhiều người bắt đầu đau tay (
 | 6 (≈ Grade 7–8) | Quãng tám legato, quãng tám lặp (bài 3, 4); gam quãng tám hai tay; nhảy nhanh | Tay trái của [Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/); bè trầm [Impromptu Sol♭](/opus/piano/tac-pham/schubert-impromptu-sol-giang/) ô 25–52 |
 | 7 (sau Grade 8) | Quãng tám nhanh, *ff*, sức bền; nhảy xa ở tốc độ cao | [Fantaisie-Impromptu](/opus/piano/tac-pham/chopin-fantaisie-impromptu/) ô 7 và ô 37–40; [Liebestraum số 3](/opus/piano/tac-pham/liszt-liebestraum/) ô 37–60; [Ballade số 1](/opus/piano/tac-pham/chopin-ballade-1/) (đoạn *agitato*, coda) |
 
-Xa hơn nữa: Czerny, *6 Octave Studies* (Sáu étude quãng tám) Op. 553; Theodor Kullak, *Die Schule des Octavenspiels* (Trường phái chơi quãng tám) Op. 48; Étude Op. 25 số 10 của Chopin, étude quãng tám cho cả hai tay. Chủ đề Étude Op. 10 số 12 cũng đi bằng quãng tám ở tay phải ([hướng dẫn nghe](/opus/nghe-nhac/chopin-etude/)).
+Xa hơn nữa: Czerny, *6 Octave Studies* (Sáu étude quãng tám) Op. 553; Theodor Kullak, *Die Schule des Octavenspiels* (Giáo trình chơi quãng tám) Op. 48; Étude Op. 25 số 10 của Chopin, étude quãng tám cho cả hai tay. Chủ đề Étude Op. 10 số 12 cũng đi bằng quãng tám ở tay phải ([hướng dẫn nghe](/opus/nghe-nhac/chopin-etude/)).
 
 ## Lỗi thường gặp
 
@@ -256,11 +256,12 @@ Xa hơn nữa: Czerny, *6 Octave Studies* (Sáu étude quãng tám) Op. 553; The
 
 ## Nguồn
 
-- Theodor Kullak, *Die Schule des Octavenspiels* Op. 48 (hai tập); bản nhạc trên [IMSLP](https://imslp.org/) (tìm "Kullak Octavenspiels").
+- Theodor Kullak, *Die Schule des Octavenspiels* Op. 48 (ba phần); bản nhạc trên [IMSLP](https://imslp.org/) (tìm "Kullak Octavenspiels").
 - Carl Czerny, *6 Octave Studies* Op. 553.
 - Heinrich Neuhaus, *The Art of Piano Playing* (bản tiếng Nga in lần đầu năm 1958): chương về kỹ thuật.
-- Seymour Fink, *Mastering Piano Technique* (Amadeus Press, 1992).
+- Seymour Fink, *Mastering Piano Technique* (Amadeus Press).
 - Thomas Mark, *What Every Pianist Needs to Know About the Body* (GIA Publications, 2003).
+- British Association for Performing Arts Medicine (BAPAM), [The Healthy Pianist](https://crosseyedpianist.com/wp-content/uploads/2016/08/thehealthypianist_bapamfactsheet.pdf): tờ thông tin về tập đàn an toàn.
 - Graham Fitch, [Practising the Piano](https://practisingthepiano.com/).
 - Các bài trên site: [Tư thế, thế tay](/opus/piano/tu-the/), [Giữ đôi tay khỏe](/opus/piano/suc-khoe/), [Bản đồ bàn phím](/opus/piano/ban-do-ban-phim/), [Nốt lặp và nốt kép](/opus/piano/not-lap-not-kep/).
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

@@ -9,14 +9,13 @@ description: Nốt hoa mỹ là những nốt trang trí được ghi tắt bằ
 
 Nốt hoa mỹ không phải đồ trang sức gắn thêm cho đẹp. Chúng làm những việc rất cụ thể:
 
-- **Nhấn.** Một láy rền hay một appoggiatura rơi vào phách mạnh tạo ra một nốt nghịch rồi mới giải quyết, như một từ được nhấn giọng. Trên đàn harpsichord, vốn gần như không đổi được độ to, đây là một trong những cách nhấn chủ yếu.
-- **Giữ cho nốt dài còn sống.** Tiếng harpsichord và piano thời đầu tắt nhanh; một láy rền làm nốt dài tiếp tục rung.
+- **Nhấn.** Một láy rền hay một appoggiatura rơi vào phách mạnh tạo ra một nốt nghịch rồi mới giải quyết, như một từ được nhấn giọng. Trên đàn harpsichord, nốt hoa mỹ là một cách để nhấn và làm rõ phát âm.
 - **Báo hiệu chỗ kết.** Láy rền ở nốt áp chót của câu là dấu hiệu quen thuộc của [kết](/opus/nhac-ly/13-ket/) trong nhạc Baroque và Cổ điển.
 - **Hát.** Nhạc piano thế kỷ 19, nhất là của Chopin, bắt chước những đường luyến láy của ca sĩ opera.
 
 Vì là một kiểu tốc ký, ý nghĩa của ký hiệu phụ thuộc vào **phong cách**. Thời Baroque, người chơi được trông đợi tự thêm nốt hoa mỹ, và quy ước khác nhau theo từng nước, có khi theo từng nhà soạn nhạc; nhiều tập nhạc Pháp in kèm bảng giải thích ký hiệu ngay ở đầu. Càng về sau, nhà soạn nhạc càng ghi chính xác hơn, nhiều khi viết đủ từng nốt.
 
-Vì vậy hãy học nốt hoa mỹ từ một **bản Urtext**. Lời nói đầu và phần chú giải của G. Henle, Wiener Urtext hay Bärenreiter thường bàn về nốt hoa mỹ của tác giả, và tách bạch ký hiệu có trong nguồn gốc với gợi ý của người biên tập (thường in trong ngoặc hoặc in nhỏ). Các ấn bản "có hướng dẫn" kiểu cũ hay thêm, bớt hoặc viết lại nốt hoa mỹ mà không nói rõ. Bảng tóm tắt ở [bài 14](/opus/nhac-ly/14-ky-hieu-bieu-dien/) là điểm xuất phát; trang này đi sâu hơn.
+Vì vậy hãy học nốt hoa mỹ từ một **bản Urtext**. Ấn bản Urtext tách bạch ký hiệu có trong nguồn gốc với gợi ý của người biên tập (thường in trong ngoặc hoặc in nhỏ), và lời nói đầu của nhà xuất bản như G. Henle nêu cách hiểu các dấu của tác giả. Các ấn bản "có hướng dẫn" thêm cách hiểu của người biên tập vào bản nhạc. Bảng tóm tắt ở [bài 14](/opus/nhac-ly/14-ky-hieu-bieu-dien/) là điểm xuất phát; trang này đi sâu hơn.
 
 | Chặng trong [lộ trình](/opus/piano/lo-trinh/) | Nốt hoa mỹ cần học |
 |---|---|
@@ -38,11 +37,11 @@ Ngày 22 tháng 1 năm 1720, ở Köthen, Johann Sebastian Bach bắt đầu m�
 | *Doppelt-Cadence* (hai kiểu) | láy quanh, từ trên hoặc từ dưới, nối vào láy rền | láy quanh nối láy rền |
 | *Doppelt-Cadence und Mordant* (hai kiểu) | như trên, kết bằng Si–Đô | |
 | *Accent steigend*, *Accent fallend* | Si rồi Đô; Rê rồi Đô (nốt phụ rơi vào phách) | appoggiatura từ dưới, từ trên |
-| *Accent und Mordant*, *Accent und Trillo* (hai kiểu) | appoggiatura nối vào láy dưới hoặc láy rền | |
+| *Accent und Mordant*; *Accent und Trillo* (hai dạng) | appoggiatura nối vào láy dưới; appoggiatura nối vào láy rền | |
 
 Ba điều rút ra, dùng cho cả phần còn lại của trang: láy rền **bắt đầu từ nốt trên**; ký hiệu răng cưa **không gạch** là một láy rền ngắn, còn **có gạch** là chính–dưới–chính; láy quanh đặt trên nốt **bắt đầu từ nốt trên**.
 
-Bảng viết cho một cậu bé chín tuổi nên rất gọn: nó không nói chơi bao nhiêu nốt, nhanh đến đâu, khi nào được phép làm khác. Giới nghiên cứu vẫn tranh luận về những chỗ trống ấy. Frederick Neumann (1978), chẳng hạn, cho rằng các quy tắc kiểu "luôn bắt đầu từ nốt trên, luôn đúng phách" đã bị áp dụng cứng nhắc hơn nhiều so với cách nhạc công thời đó thực sự chơi.
+Bảng viết cho một cậu bé chín tuổi nên rất gọn: nó không nói chơi bao nhiêu nốt, nhanh đến đâu, khi nào được phép làm khác. Giới nghiên cứu vẫn tranh luận về những chỗ trống ấy. Frederick Neumann (1978), chẳng hạn, đặt câu hỏi về các quy tắc cứng nhắc trong cách chơi nốt hoa mỹ Baroque, vì nhạc công thời đó có nhiều tự do hơn.
 
 ## Láy rền
 
@@ -167,7 +166,7 @@ K:C
 Với láy trên trong nhạc Baroque, có hai trường hợp đáng nhớ:
 
 - **Giai điệu đi xuống liền bậc** tới nốt có ký hiệu (rất hay gặp): nốt trên vừa vang ngay trước, nên được nối sang mà không đánh lại. Kết quả nghe gần giống chính–trên–chính. C. P. E. Bach gọi kiểu này là *Pralltriller*, "láy rền nửa", và nhấn mạnh rằng nó phải sắc và ngắn.
-- **Giai điệu đi lên** tới nốt có ký hiệu: không có gì để nối, nên láy bắt đầu từ nốt trên, đúng phách.
+- **Giai điệu đi lên** tới nốt có ký hiệu: C. P. E. Bach không dùng Pralltriller ở chỗ này; ký hiệu thường được đọc như một láy rền ngắn của bảng Bach 1720, bắt đầu từ nốt trên, đúng phách.
 
 Trong bản Bach-Gesellschaft của [Invention số 1](/opus/piano/tac-pham/bach-invention-1/), nốt Si móc đơn ở ô 1 mang ký hiệu không gạch và đi xuống từ nốt Đô ngay trước nó: đúng trường hợp thứ nhất. Bài này cũng có ký hiệu có gạch, còn Aria mở đầu [Biến khúc Goldberg](/opus/nghe-nhac/bach-goldberg/) gần như ô nào cũng có nốt hoa mỹ: hai nơi tốt để luyện mắt. Một dấu hóa nhỏ đặt trên hoặc dưới ký hiệu láy áp dụng cho nốt phụ.
 
@@ -295,7 +294,7 @@ Một đường lượn sóng thẳng đứng trước hợp âm nghĩa là **r�
 - **Hai đường riêng** cho hai tay: hai tay rải cùng lúc.
 - Có mũi tên chỉ xuống: rải từ trên xuống.
 
-Trong nhạc Baroque và Cổ điển, nốt thấp nhất thường rơi đúng phách. Với Chopin, chú giải của ấn bản Quốc gia Ba Lan (biên tập Jan Ekier) cũng khuyên theo lệ chung bắt đầu hợp âm rải đúng phách, nốt thấp nhất vang cùng tay trái; ngoại lệ là khi hòa âm đã được bàn đạp giữ sẵn, lúc ấy thời điểm bắt đầu không còn quan trọng lắm. Trong nhiều bản nhạc Lãng mạn khác, khi nốt trên cùng là giai điệu, người chơi có thể rải sớm một chút để nốt giai điệu rơi đúng phách; các nghệ sĩ không làm giống nhau.
+Trong nhạc Baroque và Cổ điển, nốt thấp nhất thường rơi đúng phách. Với Chopin, chú giải của ấn bản Quốc gia Ba Lan khuyên bắt đầu hợp âm rải cùng lúc với nốt tương ứng của tay trái. Trong nhiều bản nhạc Lãng mạn khác, khi nốt trên cùng là giai điệu, người chơi có thể rải sớm một chút để nốt giai điệu rơi đúng phách; các nghệ sĩ không làm giống nhau.
 
 Tốc độ rải tùy tính cách: chậm như đàn harp trong một đoạn mơ màng, nhanh và gọn trong một đoạn mạnh mẽ. Hợp âm quá rộng so với bàn tay (chẳng hạn quãng mười) thường cũng được rải dù không có ký hiệu, nhưng đừng biến việc rải mọi hợp âm thành thói quen.
 
@@ -325,7 +324,7 @@ E-[EG]-[EGc]6 | F-[FA]-[FAc]6 | D-[DG]-[DGB]6 | [EGc]8 |]
 
 **Fioritura** (tiếng Ý: "nở hoa"; số nhiều *fioriture*) là những chùm nốt trang trí dài, viết bằng nốt nhỏ hoặc thành những nhóm không chia đều (7, 11, 22 nốt… trên một phách của tay trái), bắt chước lối luyến láy của ca sĩ bel canto. Chopin thường đổi chúng mỗi lần chơi; một số biến thể do chính ông viết còn được giữ lại (xem [Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/)).
 
-Câu hỏi muôn thuở: nốt đầu của chùm vào đúng phách, cùng nốt trầm, hay trước phách? Chú giải của ấn bản Quốc gia Ba Lan trả lời theo từng trường hợp: hợp âm rải và những nốt nhỏ tạo thành hợp âm rải hay quãng rải, theo lệ chung, bắt đầu đúng phách; có những nhóm vài nốt nhỏ chơi trước phách lại thuận hơn; với láy rền, một nốt nhỏ đứng ngay trước dấu *tr* cho biết láy bắt đầu từ nốt nào (cùng cao độ với nốt chính thì bắt đầu từ nốt chính, ở trên thì từ nốt trên). Với những chùm dài, điều quan trọng hơn cả là **những điểm gặp nhau** với tay trái:
+Câu hỏi muôn thuở: nốt đầu của chùm vào đúng phách, cùng nốt trầm, hay trước phách? Chú giải của ấn bản Quốc gia Ba Lan trả lời theo từng trường hợp: hợp âm rải và những nốt nhỏ tạo thành hợp âm rải hay quãng rải, theo lệ chung, bắt đầu đúng phách; một nhóm vài nốt nhỏ có thể chơi đúng phách hoặc trước phách; với láy rền, một nốt nhỏ đứng ngay trước dấu *tr* cho biết láy bắt đầu từ nốt nào (nốt nhỏ cùng cao độ với nốt chính thì láy bắt đầu từ nốt chính). Với những chùm dài, điều quan trọng hơn cả là **những điểm gặp nhau** với tay trái:
 
 1. Học giai điệu "khung" trước, bỏ hết trang trí.
 2. Đánh dấu nốt nào của chùm rơi cùng nốt nào của tay trái; ít nhất là nốt đầu và nốt đích.
@@ -370,7 +369,7 @@ Trang [Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/) có m
 + Láy rền bắt đầu từ nốt chính
 - Láy rền bắt đầu từ nốt trên
 - Phải chơi nốt nhỏ thật dài
-> Nốt nhỏ trước dấu tr cho biết điểm bắt đầu; nếu nó là nốt trên thì láy bắt đầu từ nốt trên.
+> Nốt nhỏ trước dấu tr cùng cao độ với nốt chính cho biết láy bắt đầu từ nốt chính.
 ```
 
 ## Nguồn

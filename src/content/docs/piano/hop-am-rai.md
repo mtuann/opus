@@ -1,9 +1,9 @@
 ---
 title: Hợp âm, hợp âm rải và hình đệm
-description: Hợp âm là "từ vựng" của tay trái và là khung của hầu hết mọi bản nhạc bạn sẽ chơi. Trang này đi từ hợp âm ba ở các thể đảo, qua hợp âm rải gãy và hợp âm rải…
+description: Hợp âm là "từ vựng" của tay trái và là khung hòa âm của nhiều bản nhạc bạn sẽ chơi. Trang này đi từ hợp âm ba ở các thể đảo, qua hợp âm rải gãy và hợp âm rải…
 ---
 
-Hợp âm là "từ vựng" của tay trái và là khung của hầu hết mọi bản nhạc bạn sẽ chơi. Trang này đi từ hợp âm ba ở các thể đảo, qua hợp âm rải gãy và hợp âm rải, đến bốn kiểu hình đệm cơ bản và vòng kết I–IV–I–V7–I ở nhiều giọng. Phần lý thuyết nằm ở bài [hợp âm ba](/opus/nhac-ly/10-hop-am-ba/) và [hợp âm bảy](/opus/nhac-ly/11-hop-am-bay/).
+Hợp âm là "từ vựng" của tay trái và là khung hòa âm của nhiều bản nhạc bạn sẽ chơi. Trang này đi từ hợp âm ba ở các thể đảo, qua hợp âm rải gãy và hợp âm rải, đến bốn kiểu hình đệm cơ bản và vòng kết I–IV–I–V7–I ở nhiều giọng. Phần lý thuyết nằm ở bài [hợp âm ba](/opus/nhac-ly/10-hop-am-ba/) và [hợp âm bảy](/opus/nhac-ly/11-hop-am-bay/).
 
 ## Hợp âm ba ở các thể đảo
 
@@ -70,10 +70,10 @@ Mỗi nhóm bốn nốt là một thế tay, ngón bấm giống hệt hợp âm
 | La thứ (La–Đô–Mi) | 1 2 3 1 2 3 5 | 5 4 2 1 4 2 1 |
 
 - **Tay phải đi lên**: ngón cái luồn từ ngón 3 sang nốt gốc kế tiếp, cách một quãng 4. Ngón cái bắt đầu di chuyển ngay khi chơi xong; khuỷu và cẳng tay dẫn bàn tay sang ngang, cổ tay giữ ngang, không gập lên xuống ở mỗi lần luồn.
-- **Tay trái đi lên**: ngón 4 vắt qua ngón cái. Nhóm đầu thường là 5-4-2-1; một số sách cho 5-3-2-1.
+- **Tay trái đi lên**: ngón 4 vắt qua ngón cái. Nhóm đầu ở Đô trưởng là 5-4-2-1; theo giáo trình Baylor, ngón 4 dùng khi giữa nốt gốc và nốt ba có một phím trắng, ngón 3 khi có hai phím trắng.
 - **Đi xuống**: ngược lại. Tay phải vắt ngón 3 qua ngón cái, tay trái luồn ngón cái sau ngón 4.
 
-Hợp âm rải có phím đen dùng ngón bấm khác, vì ngón cái vẫn tránh phím đen. Ví dụ Mi♭ trưởng (Mi♭–Sol–Si♭): ngón cái tay phải đặt trên Sol, phím trắng duy nhất của hợp âm, nên nhóm ngón phải bắt đầu bằng ngón 2 hoặc 4 trên Mi♭. Ngón bấm hợp âm rải ở các thể đảo và ở các giọng phím đen khác nhau giữa các sách; hãy theo sách gam và hợp âm rải bạn dùng, và ghi lại bằng bút chì.
+Hợp âm rải có phím đen dùng ngón bấm khác, vì ngón cái vẫn tránh phím đen. Ví dụ Mi♭ trưởng (Mi♭–Sol–Si♭): ngón cái tay phải đặt trên Sol, phím trắng duy nhất của hợp âm, nên nhóm ngón bắt đầu bằng ngón 2, 3 hoặc 4 trên Mi♭ (tùy tay và tùy sách). Ngón bấm hợp âm rải ở các thể đảo và ở các giọng phím đen khác nhau giữa các sách; hãy theo sách gam và hợp âm rải bạn dùng, và ghi lại bằng bút chì.
 
 ::cong-cu{ten="piano" range="C4-C6" notes="C4 E4 G4 C5 E5 G5 C6"}
 
@@ -97,7 +97,7 @@ Tập như gam: từng tay, chậm, rồi nhấn nhẹ nốt đầu mỗi nhóm 
 
 Bốn ví dụ dưới đây (soạn cho trang này) dùng cùng vòng hòa âm I–IV–V–I ở Đô trưởng. Ba ví dụ ở nhịp 4/4 dùng chung một giai điệu, để bạn nghe rõ cách đệm thay đổi tính chất của cùng một câu nhạc. Tay phải nằm gọn trong thế năm ngón từ Đô5 (ngón 1) đến Sol5 (ngón 5).
 
-Với mọi kiểu đệm: tập tay trái riêng đến khi tự động, rồi ghép, và giữ tay trái nhỏ hơn tay phải khoảng hai bậc sắc thái.
+Với mọi kiểu đệm: tập tay trái riêng đến khi tự động, rồi ghép, và giữ tay trái nhỏ hơn tay phải vài bậc sắc thái.
 
 ### 1. Hợp âm khối
 
@@ -155,7 +155,7 @@ K:C
 
 ### 4. Hợp âm rải rộng tay trái
 
-Tay trái trải hợp âm trên một quãng rộng: nốt gốc, quãng 5, rồi quãng 10 (nốt ba ở quãng tám trên), và nhờ [bàn đạp](/opus/piano/ban-dap/) mà mọi nốt hòa thành một nền âm thanh. Đây là kết cấu quen thuộc của nocturne và các bài hát không lời thời Lãng mạn. Bàn tay mở ra và khép lại như chiếc quạt, cổ tay xoay theo hướng các nốt; nếu tay nhỏ, thay nốt quãng 10 bằng quãng 8 (Đô–Sol–Đô). Mỗi chữ *Ped.* là một lần đổi bàn đạp ngay sau nốt trầm mới.
+Tay trái trải hợp âm trên một quãng rộng: nốt gốc, quãng 5, rồi quãng 10 (nốt ba ở quãng tám trên), và nhờ [bàn đạp](/opus/piano/ban-dap/) mà mọi nốt hòa thành một nền âm thanh. Đây là kết cấu quen thuộc của nocturne thời Lãng mạn. Bàn tay mở ra và khép lại như chiếc quạt, cổ tay xoay theo hướng các nốt; nếu tay nhỏ, thay nốt quãng 10 bằng quãng 8 (Đô–Sol–Đô). Mỗi chữ *Ped.* là một lần đổi bàn đạp ngay sau nốt trầm mới.
 
 ```abc
 X:7
@@ -171,18 +171,18 @@ K:C
 [V:LH] "_Ped."!5!C,, !2!G,, !1!E, G,, C,, G,, E, G,, | "_Ped."!5!F,, !2!C, !1!A, C, F,, C, A, C, | "_Ped."!5!G,, !2!D, !1!B, D, G,, D, B, D, | "_Ped."!5!C,, !2!G,, !1!E, G,, C,,4 |]
 ```
 
-| Kiểu đệm | Tính chất | Hay gặp ở |
-|---|---|---|
-| Hợp âm khối | Vững, đơn giản, như hợp xướng | Thánh ca, bài hát, các bài đầu tiên |
-| Nốt trầm và hợp âm | Nhịp nhàng, có bước nhún | Valse, minuet, nhạc khiêu vũ |
-| Bass Alberti | Chuyển động đều, trong trẻo | Sonata và sonatina thời Cổ điển |
-| Hợp âm rải rộng | Ngân vang, tràn đầy | Nocturne, bài hát không lời, nhạc Lãng mạn |
+| Kiểu đệm | Tính chất |
+|---|---|
+| Hợp âm khối | Vững, đơn giản, như hợp xướng |
+| Nốt trầm và hợp âm | Nhịp nhàng, có bước nhún |
+| Bass Alberti | Chuyển động đều, trong trẻo |
+| Hợp âm rải rộng | Ngân vang, tràn đầy |
 
 ## Hòa âm bàn phím: vòng kết I–IV–I–V7–I
 
-**Hòa âm bàn phím** là chơi được các tiến trình hợp âm cơ bản ở mọi giọng mà không cần nhìn bản nhạc. Bài nền tảng là vòng kết I–IV–I–V7–I: tay trái chơi nốt gốc, tay phải chơi ba nốt với **dẫn giọng gần nhất** (mỗi nốt đi ít nhất có thể, nốt chung giữ nguyên). Đây là [kết](/opus/nhac-ly/13-ket/) bạn sẽ gặp ở cuối vô số câu nhạc, và là cách nhanh nhất để tay và tai hiểu [chức năng hòa âm](/opus/nhac-ly/12-hoa-am-chuc-nang/).
+**Hòa âm bàn phím** (keyboard harmony) là chơi các tiến trình hợp âm cơ bản và chuyển chúng sang các giọng khác ngay trên bàn phím. Bài nền tảng là vòng kết I–IV–I–V7–I: tay trái chơi nốt gốc, tay phải chơi ba nốt với **dẫn giọng gần nhất** (mỗi nốt đi ít nhất có thể, nốt chung giữ nguyên). Đây là [kết](/opus/nhac-ly/13-ket/) bạn sẽ gặp ở cuối nhiều câu nhạc, và là một cách để tay và tai hiểu [chức năng hòa âm](/opus/nhac-ly/12-hoa-am-chuc-nang/).
 
-Ở Đô trưởng, tay phải chơi Đô–Mi–Sol, Đô–Fa–La, Đô–Mi–Sol, Si–Fa–Sol, Đô–Mi–Sol; tay trái chơi Đô, Fa, Đô, Sol, Đô. Hợp âm V7 ở tay phải chỉ có ba nốt: Si (nốt ba, cũng là cảm âm), Fa (nốt bảy) và Sol (nốt gốc); nốt năm Rê được bỏ, điều rất thường gặp khi chơi hợp âm bảy bằng ba nốt. Khi về I, Si đi lên Đô, Fa đi xuống Mi, Sol giữ nguyên.
+Ở Đô trưởng, tay phải chơi Đô–Mi–Sol, Đô–Fa–La, Đô–Mi–Sol, Si–Fa–Sol, Đô–Mi–Sol; tay trái chơi Đô, Fa, Đô, Sol, Đô. Hợp âm V7 ở tay phải chỉ có ba nốt: Si (nốt ba, cũng là cảm âm), Fa (nốt bảy) và Sol (nốt gốc); nốt năm Rê được bỏ, điều thường gặp khi chơi hợp âm bảy bằng ba nốt. Khi về I, Si đi lên Đô, Fa đi xuống Mi, Sol giữ nguyên.
 
 Ngón bấm tay phải: 1-3-5 cho I và IV, 1-4-5 cho V7. Tay trái đặt ngón 1 trên Đô3, ngón 5 trên Fa2, ngón 4 trên Sol2: cả vòng kết không phải dời tay.
 
@@ -236,7 +236,7 @@ K:C
 "^C, gốc"[CEG]2 "^Dm, gốc"[DFA]2 | "^C, đảo 1"[EGc]2 "^C, đảo 2"[Gce]2 | "^G7, gốc"[GBdf]2 "^G7, đảo 1"[Bdfg]2 |]
 ```
 
-Bài tập hằng ngày: mở một bài thánh ca hay một bản nhạc dễ, chỉ đọc hợp âm của tay trái thành tên (C, G7, Am) mà không chơi, rồi chơi lại bằng hợp âm khối. Kỹ năng này giúp rất nhiều cho [thị tấu](/opus/piano/thi-tau/) và học thuộc.
+Bài tập hằng ngày: mở một bài thánh ca hay một bản nhạc dễ, chỉ đọc hợp âm của tay trái thành tên (C, G7, Am) mà không chơi, rồi chơi lại bằng hợp âm khối. Kỹ năng này giúp ích cho [thị tấu](/opus/piano/thi-tau/) và học thuộc.
 
 ## Lỗi thường gặp
 

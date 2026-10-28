@@ -1,0 +1,568 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa piano/not-lap-not-kep
+trang: src/content/docs/piano/not-lap-not-kep.md
+nguon_cu: ../opus-zero/docs/piano/not-lap-not-kep.md
+tang: loi
+lan:
+  - so: 1
+    ngay: "2026-10-28"
+    nhanh: moi/d4-l2
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D4-L2 lượt 1, phần C)
+      luot_2: null
+      review: null
+      kiem_mau: null
+nguon:
+  - id: yamaha-mech
+    bac: 2
+    ten: Yamaha, The Structure of the Piano (cơ cấu lặp của Érard)
+    link: https://www.yamaha.com/en/musical_instrument_guide/piano/mechanism/mechanism003.html
+  - id: wiki-action
+    bac: 3
+    ten: Wikipedia, Piano action (back check, repetition lever, jack)
+    link: https://en.wikipedia.org/wiki/Piano_action
+  - id: steinert
+    bac: 3
+    ten: M. Steinert & Sons, The Grand vs. Upright piano action (chỉ để định vị)
+    link: https://msteinert.com/blog/grand-vs-upright-piano-actions
+  - id: finchcocks
+    bac: 2
+    ten: Finchcocks (Richard Burnett Collection), trang Érard (bằng sáng chế 1821 do Pierre Érard đăng ký ở London)
+    link: https://www.finchcocks.co.uk/Richard-Burnett-Collection/file/erard.php
+  - id: horniman
+    bac: 2
+    ten: Horniman Museum, đàn Érard M99-1983 ("In 1821 Erard patented ... the double escapement")
+    link: https://www.horniman.ac.uk/object/M99-1983
+  - id: squarepianos
+    bac: 3
+    ten: squarepianos.com, trang Érard (cơ cấu thoát kép đăng ký tháng 12/1821)
+    link: https://www.squarepianos.com/erard.html
+  - id: mutopia-op49
+    bac: 1
+    ten: Mutopia Project, Beethoven, Sonata Op. 49 số 2 chương 1 (Breitkopf & Härtel, bản chép LilyPond)
+    link: https://www.mutopiaproject.org/ftp/BeethovenLv/O49/LVB_Sonate_49no2_1/LVB_Sonate_49no2_1.ly
+  - id: bapam
+    bac: 2
+    ten: British Association for Performing Arts Medicine (BAPAM), The Healthy Pianist (tờ thông tin; bản PDF trên crosseyedpianist.com)
+    link: https://crosseyedpianist.com/wp-content/uploads/2016/08/thehealthypianist_bapamfactsheet.pdf
+  - id: imslp-chopin25
+    bac: 1
+    ten: IMSLP, Chopin, Études Op. 25 (Op. 25 số 6 Sol♯ thứ, số 8 Rê♭ trưởng, số 10 Si thứ; Schlesinger 1837)
+    link: https://imslp.org/wiki/%C3%89tudes,_Op.25_(Chopin,_Fr%C3%A9d%C3%A9ric)
+  - id: wiki-op25-6
+    bac: 3
+    ten: "Wikipedia, Étude Op. 25, No. 6 (Chopin): étude về quãng ba lướt nhanh"
+    link: https://en.wikipedia.org/wiki/%C3%89tude_Op._25,_No._6_(Chopin)
+  - id: wiki-op25-8
+    bac: 3
+    ten: "Wikipedia, Étude Op. 25, No. 8 (Chopin): \"employing notes related as sixths throughout the piece\""
+    link: https://en.wikipedia.org/wiki/%C3%89tude_Op._25,_No._8_(Chopin)
+  - id: imslp-debussy
+    bac: 1
+    ten: "IMSLP, Debussy, Douze Études (CD 143, 1915): số 2 Pour les tierces, số 4 Pour les sixtes, số 5 Pour les octaves, số 9 Pour les notes répétées"
+    link: https://imslp.org/wiki/Etudes_(Debussy%2C_Claude)
+  - id: wiki-op10-3
+    bac: 3
+    ten: "Wikipedia, Étude Op. 10, No. 3 (Chopin): ô 46–53 là đoạn quãng sáu kép cho cả hai tay"
+    link: https://en.wikipedia.org/wiki/%C3%89tude_Op._10,_No._3_(Chopin)
+  - id: wiki-k141
+    bac: 3
+    ten: "Wikipedia, Keyboard Sonata in D minor, K. 141 (Scarlatti): nốt lặp nhanh gần như suốt bài"
+    link: https://en.wikipedia.org/wiki/Keyboard_Sonata_in_D_minor,_K._141
+  - id: wiki-hanon
+    bac: 3
+    ten: Wikipedia, The Virtuoso Pianist in 60 Exercises (chỉ để định vị)
+    link: https://en.wikipedia.org/wiki/The_Virtuoso_Pianist_in_60_Exercises
+  - id: imslp-czerny299
+    bac: 1
+    ten: IMSLP, Czerny, Die Schule der Geläufigkeit (The School of Velocity), Op. 299
+    link: https://imslp.org/wiki/The_School_of_Velocity,_Op.299_(Czerny,_Carl)
+  - id: wiki-neuhaus
+    bac: 3
+    ten: Wikipedia, Heinrich Neuhaus (chỉ để định vị; thông tin ấn bản lấy thêm từ bản ghi thư viện và bách khoa Moskva, không có link)
+    link: https://en.wikipedia.org/wiki/Heinrich_Neuhaus
+  - id: rider-fink
+    bac: 3
+    ten: Thư viện Rider, bản ghi Seymour Fink, Mastering Piano Technique (Amadeus Press; bản ghi ghi năm 2005)
+    link: https://sierra.rider.edu/record=b1421068~S5
+nhan_dinh:
+  - id: n1
+    cau: Trang đi từ nốt lặp đến nốt kép (quãng ba legato, quãng sáu, nốt kép staccato), kèm sáu bài tập và bảng tập theo lộ trình.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Trang có đúng sáu bài tập (6 khối abc) và các bảng "Tập theo chặng"; khớp mô tả.
+    review: null
+  - id: n2
+    cau: Muốn đánh lại một nốt, bộ máy bên trong (phím, cần đẩy, búa) phải về lại vị trí sẵn sàng; nếu ngón đè phím xuống trước khi phím trồi lên đủ, nốt sẽ không kêu, hoặc lúc kêu lúc không.
+    loai: quy-tac
+    nguon:
+      - yamaha-mech
+      - wiki-action
+      - steinert
+    ket_qua: dung
+    ghi_chu: "Yamaha: cơ cấu lặp của Érard cho phép đánh lại nốt mà không phải nhả hết phím; Steinert: trên đàn đứng người chơi phải để phím lên gần hết; Wikipedia Piano action: cần lặp đặt lại cơ cấu đẩy (jack). \"Lúc kêu lúc không\" là hệ quả suy ra, không có câu nguyên văn."
+  - id: n3
+    cau: Nốt lặp nhanh ít phụ thuộc vào "ngón khỏe" mà phụ thuộc vào việc nhả phím đúng mức và đổi ngón.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập, lập luận từ n trước.
+  - id: n4
+    cau: Đàn cánh có cơ cấu thoát kép (double escapement), do nhà Érard đăng ký bằng sáng chế ở Anh năm 1821; nó là tiền thân của cơ cấu đàn cánh ngày nay.
+    loai: lich-su
+    nguon:
+      - finchcocks
+      - horniman
+      - squarepianos
+    ket_qua: da-sua
+    ghi_chu: "Câu cũ: \"do Sébastien Érard đăng ký bằng sáng chế ở Anh năm 1821\". Finchcocks: bằng sáng chế do Pierre Érard (cháu Sébastien) đăng ký ở London năm 1821; Horniman: \"In 1821 Erard patented ... the double escapement\"; squarepianos: đăng ký tháng 12/1821, cơ sở của mọi cơ cấu đàn hiện đại. Không nguồn nào nói người đăng ký là Sébastien nên đổi thành \"nhà Érard\"."
+  - id: n5
+    cau: "Sau khi búa đập dây, búa được giữ ở lưng chừng và một cần lặp (repetition lever) đặt lại cơ cấu đẩy, nên khi phím mới trồi lên một phần, bộ máy đã sẵn sàng: bạn đánh lại được mà không cần nhả phím hết."
+    loai: quy-tac
+    nguon:
+      - wiki-action
+      - yamaha-mech
+    ket_qua: da-sua
+    ghi_chu: "Câu cũ: \"một cần lặp có lò xo đỡ búa ở lưng chừng\". Wikipedia Piano action: back check giữ búa ở lưng chừng, cần lặp đặt lại jack; không nói cần lặp có lò xo đỡ búa. Yamaha: cơ cấu lặp cho phép lặp nốt nhanh mà không nhả hết phím. Sửa lời theo hai nguồn."
+  - id: n6
+    cau: "Đàn đứng thông thường không có cơ cấu thoát kép: phím phải trồi lên gần như hết mới đánh lại được; nốt lặp rất nhanh trên đàn đứng vì thế khó hơn, và bạn phải nhả phím nhiều hơn."
+    loai: quy-tac
+    nguon:
+      - steinert
+      - yamaha-mech
+    ket_qua: da-sua
+    ghi_chu: "Câu cũ: \"không có cần ấy\" (cần lặp có lò xo, đã sửa ở trên). Steinert: trên đàn đứng \"lift the key almost entirely back up\". Đổi \"cần ấy\" thành \"cơ cấu thoát kép\" cho khớp câu trước; chưa có nguồn nói mọi đàn đứng đều thiếu bộ phận lặp nên giữ chữ \"thông thường\"."
+  - id: n7
+    cau: "Đàn điện mỗi loại một khác; hãy thử ngay trên đàn của bạn: đánh một nốt, nhả từ từ, xem phím phải trồi lên tới đâu thì đánh lại được."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên thử trên đàn của mình; không khẳng định số liệu.
+  - id: n8
+    cau: Nốt lặp chậm, hát, có thể dùng một ngón; nốt lặp nhanh thì đổi ngón từ ngón ngoài vào ngón cái (3-2-1, 4-3-2-1), mỗi ngón rút nhẹ về phía lòng bàn tay; cổ tay xoay nhẹ theo mỗi nhóm; một xung nhỏ của cẳng tay ở nốt đầu mỗi nhóm.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên kỹ thuật và bấm ngón.
+  - id: n9
+    cau: Chùm ba dùng 3-2-1, móc kép dùng 4-3-2-1.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên bấm ngón.
+  - id: n10
+    cau: "Bảng \"Trên site\": bốn nốt lặp của Arietta (ô 1–4); nốt Sol♯ lặp nhịp chấm dôi của Ánh trăng (cuối ô 5, ô 6–9); nốt lặp tay trái của đoạn C Für Elise."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Trang cũ grieg-arietta (chưa chuyển): bốn nốt giai điệu lặp cùng cao độ ở ô 1–4 (dòng 44, 58 của opus-zero/docs/piano/tac-pham/grieg-arietta.md). Trang cũ beethoven-anh-trang (chưa chuyển): nhịp lấy đà cuối ô 5, ô 6–9 nốt Sol♯ lặp với nhịp chấm dôi (dòng 61). Trang mới tac-pham/fur-elise đã chuyển: đoạn C tay trái gõ La trầm liên tục, bài tập 3 đổi ngón 3–2–1 (dòng 59, 107). Lô chuyển Arietta và Ánh trăng phải giữ các ô nhịp này."
+    review: null
+  - id: n11
+    cau: "Nốt Sol♯ lặp ở Valse Si thứ: ô 69–72 và 77–80, đổi ngón 3-2-1."
+    loai: ve-site
+    nguon: []
+    ket_qua: null
+    ghi_chu: "chưa chắc: trang cũ chopin-valse-si-thu (chưa chuyển) ghi trio ô 65–80 và \"những nốt lặp nhịp chấm dôi ở ô 69–72\" (dòng 63); không thấy ô 77–80. Lô chuyển trang đó phải giữ ô 69–72 và kiểm ô 77–80 trên bản nhạc."
+    review: null
+  - id: n12
+    cau: "Beethoven, Sonata Op. 49 số 2: hình đệm nốt lặp tay trái ở ô 6–8, 21–24, nốt lặp ở ô 59–62 và quãng ba ngân ở ô 44–48."
+    loai: cau-truc
+    nguon:
+      - mutopia-op49
+    ket_qua: dung
+    ghi_chu: "Bản chép Mutopia (Breitkopf & Härtel), số ô đếm từ bản nhạc: nốt lặp tay trái ở ô 6–8, 21–24, 29–32; Si lặp ô 59–62; quãng ba ngân ô 44–48. Trang cũ beethoven-op49-2 (chưa chuyển) cũng ghi ô 6–8, 21–24, 44–48 và 59–62 (dòng 27, 86, 87): khớp."
+  - id: n13
+    cau: "Bài 1 (đổi ngón trên nốt lặp): ô 1–2 nhóm ba với 3-2-1, ô 3–4 nhóm bốn với 4-3-2-1; tay trái chơi hợp âm lặp."
+    loai: cau-truc
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối 1: ô 1–2 bốn chùm ba (3eee) mỗi ô, ngón 3-2-1; ô 3–4 móc kép từng nhóm bốn e/e/e/e/, ngón 4-3-2-1; mỗi ô đủ 8 móc đơn; tay trái hợp âm lặp [E,G,]. Đối chiếu abc."
+  - id: n14
+    cau: Bắt đầu thật chậm, nghe từng nốt kêu; tăng dần với máy đếm nhịp; nốt nào không kêu là bạn chưa nhả phím đủ.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; link metronome là trang chưa chuyển (xem ve-site cuối).
+  - id: n15
+    cau: Giữa hai lần đánh, phím chỉ cần trồi lên tới điểm bộ máy sẵn sàng, không hơn; ngón không rời mặt phím, động tác nhỏ; tìm điểm ấy trên đàn bằng cách đánh nốt p, nhả từ từ, rồi đánh lại từ nhiều độ cao khác nhau.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập, nối n về cơ cấu lặp ở trên.
+  - id: n16
+    cau: Hợp âm lặp pp có ở tay trái của Prélude Mi thứ và ở phách 2–3 của Prélude La trưởng của Chopin; chơi từ mặt phím, mỗi hợp âm như tiếng vọng của hợp âm trước.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Trang cũ chopin-prelude-mi-thu (chưa chuyển): \"Hợp âm lặp pp ... phím chỉ trồi lên một phần giữa hai lần đánh\" (dòng 99). Trang cũ chopin-prelude-la-truong (chưa chuyển): \"hai hợp âm lặp ở phách 2–3\" (dòng 34, 71). Lô chuyển phải giữ hai điểm này."
+    review: null
+  - id: n17
+    cau: "Mục cổ tay, cẳng tay và giữ cho đều: một ngón lặp nhanh bằng cổ tay nảy nhẹ; hợp âm lặp bằng cẳng tay và cổ tay nảy nhỏ; giai điệu và nốt lặp trong cùng một tay dồn trọng lượng về ngón hát; ba thói quen giữ nốt lặp đều và nhỏ."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên kỹ thuật và tập luyện.
+  - id: n18
+    cau: Đoạn C (ô 37–50) của Adagio Pathétique có giai điệu và nốt lặp trong cùng một tay.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Trang cũ pathetique-adagio (chưa chuyển) ghi đoạn C ô 37–50 ở La♭ thứ, phần đệm chùm ba móc kép, tay trái đáp lời ở âm vực trầm (dòng 60). Mô tả "nốt lặp trong cùng tay" suy từ phần đệm chùm ba móc kép lặp nốt; lô chuyển kiểm trên bản nhạc.
+    review: null
+  - id: n19
+    cau: Trang Quãng tám và bước nhảy có staccato quãng tám nhỏ (cổ tay nảy nhẹ).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Trang piano/quang-tam-buoc-nhay đã chuyển; có mục \"Quãng tám staccato: cổ tay hay cánh tay\" và bài 2."
+    review: null
+  - id: n20
+    cau: "Bài 2 (hợp âm lặp pp, nốt lặp nhịp chấm dôi): tay trái tám hợp âm đều mỗi ô, tay phải ô 2 ba nốt Fa lặp nhịp chấm dôi đổi ngón 3-2-1 rồi ngón 3 vắt qua ngón cái xuống Mi; giai điệu mp, hợp âm pp."
+    loai: cau-truc
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối 2: tay trái [F,A,D] x4 [E,G,^C] x4 ... mỗi ô đủ 8 móc đơn; tay phải ô 2 f3/ f/ f2 e4 với ngón 3 2 1 3; !mp! tay phải, !pp! tay trái. Đối chiếu abc."
+  - id: n21
+    cau: Nốt kép là hai nốt chơi cùng lúc bằng một tay, thường là quãng ba hoặc quãng sáu.
+    loai: dinh-nghia
+    nguon: []
+    ket_qua: null
+    ghi_chu: "chưa chắc: định nghĩa thông dụng (double notes), chưa mở nguồn bậc 1–2 nêu thuật ngữ \"nốt kép\" tiếng Việt hay \"double notes\"."
+  - id: n22
+    cau: "Nốt kép có ba cái khó: hai nốt phải vào cùng lúc, hai bè phải nối (khi legato), và nốt trên, thường là giai điệu, phải to hơn nốt dưới trong cùng một cú đánh."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Nhận xét sư phạm, không số liệu.
+  - id: n23
+    cau: "Tay phải có ba cặp ngón cơ bản cho quãng ba: 1–3, 2–4, 3–5 (ngón bè dưới ghi trước); tay trái 5–3, 4–2, 3–1; trong một thế tay ba cặp nối nhau dễ dàng."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Quy ước bấm ngón, lời khuyên; khối 3 dùng đúng các cặp này.
+  - id: n24
+    cau: "Ở chỗ đổi nhóm hai bè không thể cùng nối bằng ngón: bè trên được ưu tiên, bè dưới được hở một chút; thay ngón trên phím; vắt ngón ở bè trên; chọn một hệ thống ngón bấm cho gam quãng ba và giữ nguyên."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên kỹ thuật.
+  - id: n25
+    cau: Tai người nghe theo bè trên.
+    loai: quy-tac
+    nguon: []
+    ket_qua: null
+    ghi_chu: "chưa chắc: nhận định tri giác (người nghe chú ý bè trên) lặp lại ở tieng-dan và quang-tam; chưa mở nguồn (ví dụ nghiên cứu về melody lead hay về ưu thế của bè cao). Nếu không có nguồn, nên viết lại thành lời khuyên \"ưu tiên bè trên\" bỏ vế giải thích."
+  - id: n26
+    cau: "Tô bè trên: nghiêng trọng lượng về phía ngón út; ngón bè dưới nhẹ như chỉ chạm phím; bốn bước tập (bè trên riêng, bè dưới riêng, ghép với bè dưới bấm câm, chơi bình thường)."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập.
+  - id: n27
+    cau: Quãng ba legato ở ô 81–88 của Valse Si thứ và giai điệu quãng ba, quãng sáu ở ô 7–17 và 34–39 của Thuyền ca Venice.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Trang cũ chopin-valse-si-thu: trio lần hai bằng quãng ba (81–88, dòng 82, 122). Trang cũ mendelssohn-thuyen-ca: câu 1 vào bằng quãng ba (ô 7–17, dòng 58), A' ô 34–39 xen quãng tám Rê và nhảy từ quãng ba, quãng sáu (dòng 80, 116). Chưa chuyển; lô chuyển phải giữ các ô này."
+    review: null
+  - id: n28
+    cau: "Bài 3 (ba cặp ngón của quãng ba): tay phải ô 1–2, tay trái ô 3–4, hai tay ô 5–6."
+    loai: cau-truc
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối 3: tay phải [CE][DF][EG][DF] ô 1–2 với ngón 1-3, 2-4, 3-5; tay trái ô 3–4 với 5-3, 4-2, 3-1; ô 5–6 hai tay. Đối chiếu abc."
+  - id: n29
+    cau: "Bài 4: ở ô 1, trong lúc ngân quãng ba Rê–Fa♯, thay 3–5 bằng 2–4 để ngón 5 rảnh cho Sol ở ô 2; ở ô 3 ngón cái nhảy từ Đô xuống Si nên bè dưới hở, bè trên Mi–Rê (ngón 3 sang 2) vẫn liền."
+    loai: cau-truc
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối 4 (K:G): ô 1 [df]2 với nhãn \"3/5 → 2/4\", ô 2 [eg] ngón 3-5, [ce] ngón 1-3; ô 3 [Bd] ngón 1-2: bè trên Mi (3) sang Rê (2); ngón cái Đô sang Si. Khớp văn bản."
+  - id: n30
+    cau: "Quãng sáu: ngón cái ở bè dưới gần như mọi nốt, trượt từ phím đen xuống phím trắng liền kề; bè trên luân phiên 4 và 5 (5 trên phím trắng, 4 trên phím đen), tay lớn dùng thêm 3; tay mở vừa đủ."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: "Lời khuyên bấm ngón. Lưu ý: bài 5 (khối 5) bấm ngón 4 trên Rê (phím trắng), lệch quy tắc \"5 trên phím trắng\" của câu này; ghi cho review (xem khuông nhạc 5)."
+  - id: n31
+    cau: Tay nhỏ tập quãng sáu ngắn và dừng khi thấy căng.
+    loai: quy-tac
+    nguon:
+      - bapam
+    ket_qua: dung
+    ghi_chu: "BAPAM: người tay nhỏ cần cẩn thận để không gắng quá sức; tránh duỗi quá mức; \"If you experience pain, stop immediately\"."
+  - id: n32
+    cau: "Bài 5 (quãng sáu, bè trên 4–5, ngón cái trượt): ở Fa♯ ngón 4 vắt qua ngón 5 lên phím đen; ở ô 2 ngón 5 luồn dưới ngón 4 xuống Mi; ngón cái trượt từ Fa♯ xuống Sol."
+    loai: cau-truc
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối 5 (K:D): [Fd] 4, [Ge] 5, [Af] 4 (Fa♯ phím đen), [Bg] 5; ô 2 [Af] 4, [Ge] 5, [Fd] 4; tay trái ngón 1 chơi mọi nốt dưới: F♯ rồi G (trượt từ phím đen xuống trắng). Khớp văn bản."
+  - id: n33
+    cau: "Nốt kép staccato: hai nốt vào cùng lúc tuyệt đối vì staccato làm lộ mọi lệch nhỏ; động tác là staccato cổ tay, ngón giữ hình quãng; trong một thế tay dùng 1–3, 2–4, 3–5 cho quãng ba; quãng sáu dùng 1–5, hoặc 1–4 khi nốt trên là phím đen."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên kỹ thuật và bấm ngón.
+  - id: n34
+    cau: "Bài 6 (nốt kép staccato): ô 1–2 quãng ba, ô 3–4 quãng sáu; chậm, p, đặt sẵn hai ngón trước mỗi nốt; sau đó tăng tốc, rồi thử f bằng cẳng tay."
+    loai: cau-truc
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Khối 6: ô 1–2 [CE][DF][EG] quãng ba, ô 3–4 [Ec][Fd][Ge] quãng sáu (1–5); đối chiếu abc; ngón 1–5 cho quãng sáu khớp văn bản."
+  - id: n35
+    cau: "Quãng ba nửa cung là một trong những kỹ thuật khó nhất của piano: ngón bấm đặc biệt, mỗi sách một kiểu."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: null
+    ghi_chu: "chưa chắc: đánh giá chủ quan, dễ bị coi là khẳng định sự kiện; chưa có nguồn. Nên viết lại hoặc dẫn nguồn; review soát nhãn."
+  - id: n36
+    cau: Đích đến nổi tiếng là Étude Op. 25 số 6 (Sol♯ thứ) của Chopin, một étude về quãng ba.
+    loai: ten
+    nguon:
+      - imslp-chopin25
+      - wiki-op25-6
+    ket_qua: dung
+    ghi_chu: "IMSLP: Op. 25 số 6 giọng Sol♯ thứ; Wikipedia: étude về quãng ba (thirds) chơi lướt nhanh."
+  - id: n37
+    cau: Cùng tập ấy, số 8 (Rê♭ trưởng) là étude về quãng sáu.
+    loai: ten
+    nguon:
+      - imslp-chopin25
+      - wiki-op25-8
+    ket_qua: dung
+    ghi_chu: "IMSLP: Op. 25 số 8 Rê♭ trưởng; Wikipedia: nốt cách nhau quãng sáu suốt bài."
+  - id: n38
+    cau: Trong 12 Études, Debussy cũng viết riêng Pour les tierces, Pour les sixtes và Pour les notes répétées.
+    loai: ten
+    nguon:
+      - imslp-debussy
+    ket_qua: dung
+    ghi_chu: "IMSLP: Douze Études CD 143 (1915) gồm số 2 Pour les tierces, số 4 Pour les sixtes, số 9 Pour les notes répétées."
+  - id: n39
+    cau: "Bảng \"Tập theo chặng\": chặng 4 (≈ Grade 4–5), 5 (≈ Grade 6), 6 (≈ Grade 7–8), 7 (sau Grade 8)."
+    loai: cap-do
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Nhãn chặng khớp src/data/cap-do.yml (chặng 4 = Grade 4–5, 5 = Grade 6, 6 = Grade 7–8, 7 = Sau Grade 8). Nội dung từng chặng là gợi ý lộ trình của site (khuyen-tap ở n sau).
+  - id: n40
+    cau: "Cột \"Nốt lặp\" và \"Nốt kép\" của bảng chặng: nốt lặp chậm có hướng, hợp âm lặp pp, nốt lặp nhịp chấm dôi đổi ngón, hợp âm lặp dưới giai điệu, nốt lặp nhanh liên tục; quãng ba trong thế năm ngón, quãng ba, sáu legato, tô bè trên, quãng ba sáu song song ở pp, nốt kép staccato, gam quãng ba và sáu nếu đi thi, quãng ba nửa cung, quãng sáu nhanh."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Sắp xếp độ khó theo lộ trình của site.
+  - id: n41
+    cau: "Cột \"Gặp ở đâu\" chặng 4: Arietta ô 1–4; Op. 49 số 2 (đệm nốt lặp ô 6–8, 21–24, nốt lặp ô 59–62, quãng ba ngân ô 44–48); Prélude Mi thứ; Für Elise đoạn C."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Op. 49/2 đã kiểm trên bản nhạc (n về Op. 49 số 2); Arietta, Prélude Mi thứ chưa chuyển: các điểm giữ lại đã nêu ở các n ve-site phía trên; Für Elise đã chuyển (đoạn C có)."
+    review: null
+  - id: n42
+    cau: "Cột \"Gặp ở đâu\" chặng 5: Ánh trăng cuối ô 5, ô 6–9; Valse Si thứ ô 69–72, 77–80 (nốt lặp), ô 81–88 (quãng ba); Thuyền ca Venice ô 7–17, 34–39."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Trang cũ khớp từng mục (xem các n ve-site phía trên), trừ ô 77–80 của Valse Si thứ đã ghi chưa chắc.
+    review: null
+  - id: n43
+    cau: "Cột \"Gặp ở đâu\" chặng 6: Adagio Pathétique ô 17–28 (tay trái), ô 37–50 (tay phải); Clair de lune ô 1–14."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Trang cũ pathetique-adagio: đoạn B ô 17–28 tay trái hợp âm lặp, đoạn C ô 37–50 (dòng 58, 60); trang cũ debussy-clair-de-lune: ô 1–14 quãng ba, quãng sáu ở tay phải (dòng 60). Chưa chuyển; lô chuyển phải giữ."
+    review: null
+  - id: n44
+    cau: "Cột \"Gặp ở đâu\" chặng 7: Sonata K. 141 của Scarlatti (hướng dẫn nghe); đoạn quãng sáu kép trong Étude Op. 10 số 3 của Chopin (hướng dẫn nghe); Étude Op. 25 số 6 và số 8."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Trang cũ nghe-nhac/scarlatti-sonata: K. 141 \"nốt lặp lại cực nhanh gần như suốt bài\" (dòng 27); trang cũ nghe-nhac/chopin-etude: số 3 đoạn con bravura với quãng sáu kép (dòng 20). Chưa chuyển; lô chuyển phải giữ."
+    review: null
+  - id: n45
+    cau: Sonata K. 141 của Scarlatti có nốt lặp nhanh gần như suốt bài.
+    loai: cau-truc
+    nguon:
+      - wiki-k141
+    ket_qua: dung
+    ghi_chu: "Wikipedia: nốt lặp nhanh suốt bài (trích Deutschlandfunk). Chưa mở bản nhạc."
+  - id: n46
+    cau: Étude Op. 10 số 3 của Chopin có đoạn quãng sáu kép.
+    loai: cau-truc
+    nguon:
+      - wiki-op10-3
+    ket_qua: dung
+    ghi_chu: "Wikipedia: ô 46–53 là đoạn \"bravura passage of double sixths for both hands\"."
+  - id: n47
+    cau: "Bảng lỗi thường gặp: ngón đè phím không nhả đủ; nhấc tay cao giữa các nốt lặp; nốt lặp to dần ngoài ý muốn; hai nốt kép lệch nhau; nốt dưới to hơn nốt trên; cố nối cả hai bè (dấu hiệu, cách sửa)."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên tập; dấu hiệu là mô tả cảm nhận.
+  - id: n48
+    cau: "Quiz 1: ba nốt lặp nhanh thường được bấm 3-2-1, từ ngón ngoài vào ngón cái; mỗi ngón rút về phía lòng bàn tay, nhường chỗ cho ngón sau."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên bấm ngón.
+  - id: n49
+    cau: "Quiz 2: nốt lặp nhanh trên đàn cánh dễ hơn đàn đứng vì cơ cấu thoát kép cho phép đánh lại khi phím mới trồi lên một phần; trên đàn đứng thông thường phím phải trồi lên gần như hết."
+    loai: quy-tac
+    nguon:
+      - yamaha-mech
+      - steinert
+    ket_qua: dung
+    ghi_chu: Yamaha, Steinert; cùng nguồn với n về đàn cánh và đàn đứng. Hai lựa chọn sai ("phím nặng hơn", "bàn đạp giữa") không phải lý do.
+  - id: n50
+    cau: "Quiz 3: ba cặp ngón cơ bản của quãng ba tay phải là 1–3, 2–4, 3–5, nối nhau mà không cần vắt hay luồn ngón trong một thế tay."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Quy ước bấm ngón.
+  - id: n51
+    cau: "Quiz 4: khi không thể nối cả hai bè của chuỗi quãng ba, ưu tiên giữ bè trên legato vì bè trên thường là giai điệu và tai người nghe theo bè trên."
+    loai: quy-tac
+    nguon: []
+    ket_qua: null
+    ghi_chu: "chưa chắc: vế \"tai người nghe theo bè trên\" cùng nhận định tri giác ở trên, chưa có nguồn; vế \"ưu tiên bè trên\" là lời khuyên tập."
+  - id: n52
+    cau: "Quiz 5: trong quãng sáu legato bè trên được nối bằng ngón 4 và 5 luân phiên; ngón cái giữ bè dưới và chỉ trượt được từ phím đen xuống phím trắng."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên kỹ thuật.
+  - id: n53
+    cau: "Mục Nguồn: Yamaha, The Structure of the Piano: cơ cấu lặp do Érard phát minh."
+    loai: lich-su
+    nguon:
+      - yamaha-mech
+    ket_qua: dung
+    ghi_chu: "Yamaha: cơ cấu lặp Érard cho phép lặp nốt nhanh không nhả hết phím."
+  - id: n54
+    cau: "Mục Nguồn: M. Steinert & Sons, \"The Grand vs. Upright piano action – deep dive\": so sánh cơ cấu đàn cánh và đàn đứng."
+    loai: ten
+    nguon:
+      - steinert
+    ket_qua: dung
+    ghi_chu: Trang tồn tại với tiêu đề tương ứng; đã đọc phần đàn đứng phải nhả phím gần hết.
+  - id: n55
+    cau: "Mục Nguồn: Arthur A. Reblitz, Piano Servicing, Tuning, and Rebuilding (Vestal Press): cơ cấu đàn và cách điều chỉnh."
+    loai: ten
+    nguon: []
+    ket_qua: null
+    ghi_chu: "chưa chắc: chưa mở nguồn thư mục có link; tên sách và nhà xuất bản Vestal Press là kiến thức chung."
+  - id: n56
+    cau: "Mục Nguồn: Hanon, Le Pianiste virtuose: phần ba có các bài nốt lặp, quãng ba và quãng tám."
+    loai: cau-truc
+    nguon:
+      - wiki-hanon
+    ket_qua: dung
+    ghi_chu: "Wikipedia: phần 3 (bài 44–60) gồm nốt lặp, nốt kép lặp, gam quãng ba và quãng tám, tremolo."
+  - id: n57
+    cau: "Mục Nguồn: Carl Czerny, Die Schule der Geläufigkeit Op. 299."
+    loai: ten
+    nguon:
+      - imslp-czerny299
+    ket_qua: dung
+    ghi_chu: "IMSLP: Die Schule der Geläufigkeit (The School of Velocity), Op. 299."
+  - id: n58
+    cau: "Mục Nguồn: Heinrich Neuhaus, The Art of Piano Playing (bản tiếng Nga in lần đầu năm 1958)."
+    loai: nam
+    nguon:
+      - wiki-neuhaus
+    ket_qua: dung
+    ghi_chu: "Bản tiếng Nga \"Об искусстве фортепьянной игры\", 1958 (bách khoa Moskva, dic.academic.ru); bản tiếng Anh London: Barrie & Jenkins 1973; không có link mở được cho nguồn bậc 1."
+  - id: n59
+    cau: "Mục Nguồn: Seymour Fink, Mastering Piano Technique (Amadeus Press)."
+    loai: nam
+    nguon:
+      - rider-fink
+    ket_qua: da-sua
+    ghi_chu: Câu cũ ghi "(Amadeus Press, 1992)". Bản ghi thư viện Rider ghi năm 2005 (Amadeus Press, Hal Leonard); năm 1992 chỉ thấy trong tiêu đề một bài điểm sách chưa mở. Bỏ năm, giữ nhà xuất bản.
+  - id: n60
+    cau: "Mục Nguồn: Graham Fitch, Practising the Piano (practisingthepiano.com)."
+    loai: ten
+    nguon: []
+    ket_qua: null
+    ghi_chu: "chưa chắc: chưa mở trang."
+  - id: n61
+    cau: "Mục Nguồn: bản nhạc các étude trên IMSLP (Chopin Etudes Op. 25, Debussy Etudes)."
+    loai: ten
+    nguon:
+      - imslp-chopin25
+      - imslp-debussy
+    ket_qua: dung
+    ghi_chu: Cả hai trang IMSLP đã mở.
+  - id: n62
+    cau: "Các liên kết sang trang chưa chuyển: luyen-tap/metronome, nghe-nhac/chopin-etude, nghe-nhac/scarlatti-sonata, tac-pham/{beethoven-anh-trang, beethoven-op49-2, chopin-prelude-la-truong, chopin-prelude-mi-thu, chopin-valse-si-thu, debussy-clair-de-lune, grieg-arietta, mendelssohn-thuyen-ca, pathetique-adagio}, tai-lieu-tham-khao."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Tất cả tồn tại ở opus-zero/docs/ (đã kiểm bằng lệnh). Điều từng trang phải giữ: xem các n ve-site phía trên. Trang Chopin Op. 9/2 không được nhắc ở trang này."
+    review: null
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - not
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: "Bài 1: 4/4, mỗi ô 8 móc đơn; ô 1–2 chùm ba (3eee) ngón 3-2-1, ô 3–4 nhóm bốn móc kép ngón 4-3-2-1; tay trái C,/[E,G,] ngón 5 và 3-1. Khớp văn bản."
+  - khoi: 2
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - not
+      - so-ngon
+      - hop-am
+    ket_qua: dung
+    ghi_chu: "Bài 2: K:Dm 4/4; tay phải a6 g2 | f3/ f/ f2 e4 | d4 ^c4 | d8, tay trái 8 hợp âm lặp mỗi ô: [F,A,D] ... [E,G,^C] ... Dm, rồi [E,G,^C] (A7 không nốt gốc) ở ô 2, rồi Dm. Mỗi ô đủ 8 móc đơn. Khớp văn bản."
+  - khoi: 3
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - not
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: "Bài 3: C trưởng 4/4, L:1/4; ô 1–2 và ô 5–6 quãng ba [CE][DF][EG]...; ngón 1-3, 2-4, 3-5 (RH), 5-3, 4-2, 3-1 (LH); mỗi ô đủ 4 phách."
+  - khoi: 4
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - not
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: "Bài 4: K:G; ô 1 [Bd][ce][df]2 với nhãn \"3/5 → 2/4\"; ô 2 [eg]2 [df][ce]; ô 3 [Bd]4; tay trái G,,2 D,2 | C,2 D,2 | G,,4. Khớp văn bản."
+  - khoi: 5
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - not
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: "Bài 5: K:D, quãng sáu [Fd][Ge][Af][Bg] | [Af][Ge][Fd]2; ngón nốt trên 4-5-4-5 và 4-5-4. Lưu ý: ngón 4 trên Rê (phím trắng) ở nốt đầu, trong khi văn bản nói \"5 trên phím trắng, 4 trên phím đen\"; lời khuyên là gợi ý nên không sai, để review quyết định có sửa số ngón hay lời."
+  - khoi: 6
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - not
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: "Bài 6: C trưởng 2/4, L:1/8; ô 1–2 quãng ba staccato [CE][DF][EG] ngón 1-3, 2-4, 3-5; ô 3–4 quãng sáu [Ec][Fd][Ge] ngón 1-5; tay trái C, z G,, z. Mỗi ô đủ độ dài."
+doi_chu:
+  - cu:
+      - "Đàn cánh có cơ cấu thoát kép (double escapement), do Sébastien Érard đăng ký bằng sáng chế ở Anh năm 1821; nó là tiền thân của cơ cấu đàn cánh ngày nay. Sau khi búa đập dây, một cần lặp có lò xo đỡ búa ở lưng chừng, nên khi phím mới trồi lên một phần, bộ máy đã sẵn sàng: bạn đánh lại được mà không cần nhả phím hết."
+      - "Đàn đứng thông thường không có cần ấy: phím phải trồi lên gần như hết mới đánh lại được. Nốt lặp rất nhanh trên đàn đứng vì thế khó hơn, và bạn phải nhả phím nhiều hơn."
+    moi:
+      - "Đàn cánh có cơ cấu thoát kép (double escapement), do nhà Érard đăng ký bằng sáng chế ở Anh năm 1821; nó là tiền thân của cơ cấu đàn cánh ngày nay. Sau khi búa đập dây, búa được giữ ở lưng chừng và một cần lặp đặt lại cơ cấu đẩy, nên khi phím mới trồi lên một phần, bộ máy đã sẵn sàng: bạn đánh lại được mà không cần nhả phím hết."
+      - "Đàn đứng thông thường không có cơ cấu thoát kép: phím phải trồi lên gần như hết mới đánh lại được. Nốt lặp rất nhanh trên đàn đứng vì thế khó hơn, và bạn phải nhả phím nhiều hơn."
+    ly_do: "n4 (da-sua): Finchcocks ghi Pierre Érard đăng ký ở London; không nguồn nào nói Sébastien.; n5 (da-sua): Wikipedia Piano action: back check giữ búa, cần lặp đặt lại jack; không nói cần lặp có lò xo đỡ búa.; n6 (da-sua): khớp câu trước; Steinert: đàn đứng phải để phím lên gần hết."
+  - cu: Seymour Fink, Mastering Piano Technique (Amadeus Press, 1992).
+    moi: Seymour Fink, Mastering Piano Technique (Amadeus Press).
+    ly_do: "n59 (da-sua): bỏ năm 1992 (không xác nhận được; thư viện Rider ghi 2005)."

@@ -1,9 +1,9 @@
 ---
 title: Vị trí năm ngón và những bài hai tay đầu tiên
-description: 'Những tuần đầu chơi piano gần như diễn ra trọn trong thế tay năm ngón: mỗi ngón đặt sẵn trên một phím, nên bạn không phải lo "ngón nào", và dồn được sự chú ý…'
+description: 'Những tuần đầu chơi piano có thể diễn ra trọn trong thế tay năm ngón: mỗi ngón đặt sẵn trên một phím, nên bạn không phải lo "ngón nào", và dồn được sự chú ý…'
 ---
 
-Những tuần đầu chơi piano gần như diễn ra trọn trong **thế tay năm ngón**: mỗi ngón đặt sẵn trên một phím, nên bạn không phải lo "ngón nào", và dồn được sự chú ý vào đọc nhạc, giữ nhịp, nghe tiếng đàn, và việc khó nhất: cho hai tay chơi cùng lúc.
+Những tuần đầu chơi piano có thể diễn ra trọn trong **thế tay năm ngón**: mỗi ngón đặt sẵn trên một phím, nên bạn không phải lo "ngón nào", và dồn được sự chú ý vào đọc nhạc, giữ nhịp, nghe tiếng đàn, và việc khó nhất: cho hai tay chơi cùng lúc.
 
 ## Thế tay năm ngón là gì
 
@@ -11,7 +11,7 @@ Năm ngón đặt trên năm phím liền nhau, ứng với năm bậc đầu c�
 
 | Thế tay | Tay phải | Tay trái | Ghi chú |
 |---|---|---|---|
-| **Thế Đô** | Ngón 1 trên Đô4 … ngón 5 trên Sol4 | Ngón 5 trên Đô3 … ngón 1 trên Sol3 | Thế đầu tiên của hầu hết giáo trình |
+| **Thế Đô** | Ngón 1 trên Đô4 … ngón 5 trên Sol4 | Ngón 5 trên Đô3 … ngón 1 trên Sol3 | Thế đầu tiên của trang này |
 | **Thế Đô giữa** | Ngón 1 trên Đô4 … ngón 5 trên Sol4 | Ngón 5 trên Fa3 … ngón 1 trên Đô4 | Hai ngón cái chung phím Đô giữa; giai điệu thường chuyền qua lại giữa hai tay |
 | **Thế Sol** | Ngón 1 trên Sol4 … ngón 5 trên Rê5 | Ngón 5 trên Sol2 … ngón 1 trên Rê3 | |
 | **Thế Fa** | Ngón 1 trên Fa4 … ngón 5 trên Đô5 | Ngón 5 trên Fa2 … ngón 1 trên Đô3 | Phím đen đầu tiên: Si♭ (ngón 4 tay phải, ngón 2 tay trái) |
@@ -26,7 +26,7 @@ Tay trái là ảnh gương của tay phải. Khi hai tay **cùng đi lên** (sa
 
 ## Năm ngón trưởng và thứ ở mười hai giọng
 
-Năm nốt trưởng luôn theo mẫu **cung – cung – nửa cung – cung**. Muốn đổi sang **thứ**, chỉ cần hạ **bậc 3** xuống nửa cung, tức ngón 3 của cả hai tay dịch xuống một phím. Bảng dưới xếp mười hai giọng theo màu phím của **bậc 1, 3 và 5** (cũng là ba nốt của hợp âm chủ), cách nhiều giáo trình dùng để tay nhớ hình dạng.
+Năm nốt trưởng luôn theo mẫu **cung – cung – nửa cung – cung**. Muốn đổi sang **thứ**, chỉ cần hạ **bậc 3** xuống nửa cung, tức ngón 3 của cả hai tay dịch xuống một phím. Bảng dưới xếp mười hai giọng theo màu phím của **bậc 1, 3 và 5** (cũng là ba nốt của hợp âm chủ), để tay nhớ hình dạng.
 
 | Nhóm | Giọng | Năm nốt (bậc 1–5) | Phím đen (ngón tay phải) | Thế thứ: bậc 3 thành |
 |---|---|---|---|---|
@@ -43,7 +43,7 @@ Năm nốt trưởng luôn theo mẫu **cung – cung – nửa cung – cung**.
 | | Si♭ | Si♭ Đô Rê Mi♭ Fa | Si♭ (1), Mi♭ (4) | Rê♭ |
 | | Si | Si Đô♯ Rê♯ Mi Fa♯ | Đô♯ (2), Rê♯ (3), Fa♯ (5) | Rê |
 
-Trên bản nhạc, Rê♭ thứ và La♭ thứ hầu như luôn được viết thành **Đô♯ thứ** và **Sol♯ thứ**: cùng phím đàn, ít dấu hóa hơn.
+Rê♭ thứ cần tám dấu giáng nên không có hóa biểu, còn La♭ thứ cần bảy. Trên bản nhạc, có thể viết hai giọng này thành **Đô♯ thứ** (bốn dấu thăng) và **Sol♯ thứ** (năm dấu thăng): cùng phím đàn, ít dấu hóa hơn.
 
 Khi thế tay có phím đen, hãy đẩy cả bàn tay vào sâu hơn một chút về phía thân đàn để các ngón chạm phím đen thoải mái, thay vì bẻ cổ tay hay duỗi thẳng ngón.
 
@@ -197,13 +197,13 @@ K:C
 
 ## Rời khỏi thế năm ngón
 
-Nhạc thật hiếm khi nằm yên trong năm phím. Có năm cách để tay đi ra khỏi thế:
+Nhạc thật thường không nằm yên trong năm phím. Dưới đây là năm cách để tay đi ra khỏi thế:
 
-- **Mở rộng:** một ngón duỗi ra với tới phím ngoài thế tay trong khi các ngón khác giữ chỗ, ví dụ ngón 5 với từ Sol lên La.
+- **Mở rộng:** một ngón duỗi ra với tới phím ngoài thế tay trong khi các ngón khác giữ chỗ, ví dụ ngón 4 đặt trên Sol để ngón 5 với lên La.
 - **Thu hẹp:** hai ngón chơi hai phím gần nhau hơn bình thường, ví dụ ngón 1 và 3 trên hai phím liền nhau.
 - **Đổi thế:** cả bàn tay nhấc sang thế mới, thường trong lúc có dấu lặng hoặc nốt dài. Nhìn trước, di chuyển bằng cả cánh tay, và đặt tay xuống thế mới **trước** khi phải chơi.
 - **Luồn ngón cái và vắt ngón:** ngón cái đi dưới bàn tay (hoặc ngón 3, 4 vắt qua ngón cái) để tay đi tiếp mà không ngắt tiếng. Đây là nền tảng của [gam và hợp âm rải](/opus/piano/gam/).
-- **Thay ngón trên một phím:** giữ phím rồi đổi ngón (ví dụ ngón 3 thay ngón 1) để chuẩn bị thế mới mà vẫn liền tiếng; rất hay gặp trong Bach và các bản nhạc chậm.
+- **Thay ngón trên một phím:** giữ phím rồi đổi ngón (ví dụ ngón 3 thay ngón 1) để chuẩn bị thế mới mà vẫn liền tiếng.
 
 ```abc
 X:9
@@ -230,7 +230,7 @@ K:C
 | 1 | "Bài ca buổi sáng" ở giọng của tuần | Đọc bản Đô trưởng, chơi ở giọng khác |
 
 :::tip[Học tiếp]
-Trang này đi song song với [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/) từ bài 4 trở đi (ba bài đầu chỉ cần thế Đô của [Hai tuần đầu tiên](/opus/piano/hai-tuan-dau/)). Khi các bài trên đã trơn tru, bắt đầu [gam một quãng tám](/opus/piano/gam/).
+Trang này đi song song với [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/) từ bài 4 trở đi (ba bài đầu dùng các thế tay đã gặp ở [Hai tuần đầu tiên](/opus/piano/hai-tuan-dau/); riêng bài 2 có mở rộng tay, xem mục Rời khỏi thế năm ngón). Khi các bài trên đã trơn tru, bắt đầu [gam một quãng tám](/opus/piano/gam/).
 :::
 
 ```quiz
@@ -265,5 +265,5 @@ Trang này đi song song với [10 bài đầu tiên](/opus/piano/10-bai-dau-tie
 
 - Nancy Faber, Randall Faber, *Adult Piano Adventures: All-in-One Piano Course*, Book 1, Faber Piano Adventures.
 - Willard A. Palmer, Morton Manus, Amanda Vick Lethco, *Alfred's Basic Adult Piano Course*, Level 1, Alfred Music.
-- Béla Bartók, *Mikrokosmos*, quyển 1: những bài đầu là giai điệu hai tay đồng âm trong thế năm ngón.
+- Béla Bartók, *Mikrokosmos*, quyển 1: có những bài giai điệu hai tay chơi đồng âm (unison).
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

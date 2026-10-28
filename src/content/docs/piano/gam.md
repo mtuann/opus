@@ -219,7 +219,7 @@ Thêm [hợp âm rải](/opus/piano/hop-am-rai/) của cùng cặp giọng vào 
 | 6. Nâng cao (≈ Grade 7–8) | Toàn bộ, nhanh; gam cách quãng 3 và quãng 6 nếu định thi | Móc kép, ♩ = 100 trở lên |
 
 :::caution[Gợi ý, không phải yêu cầu thi]
-Các mốc trên là gợi ý của trang này để bạn tự đo tiến bộ, khớp với lộ trình của site. ABRSM và Trinity có danh sách gam, số quãng tám và tốc độ riêng cho từng cấp, và thay đổi theo chương trình. Nếu định thi, hãy tra chương trình hiện hành.
+Các mốc trên là gợi ý của trang này để bạn tự đo tiến bộ, khớp với lộ trình của site. ABRSM có danh sách gam, số quãng tám và tốc độ riêng cho từng cấp, và thay đổi theo chương trình. Nếu định thi, hãy tra chương trình hiện hành.
 :::
 
 ## Lỗi thường gặp
@@ -265,10 +265,7 @@ Các mốc trên là gợi ý của trang này để bạn tự đo tiến bộ,
 
 ## Nguồn
 
-- ABRSM, các tập *Piano Scales & Arpeggios* theo từng cấp và chương trình thi piano hiện hành.
-- Willard A. Palmer, Morton Manus, Amanda Vick Lethco, *The Complete Book of Scales, Chords, Arpeggios & Cadences* (Alfred).
 - University of Evansville, [Scale and Arpeggio Fingerings](https://faculty.evansville.edu/gu2/Scales.htm): bảng ngón bấm gam trưởng, thứ, nửa cung và hợp âm rải.
 - PianoScales.org: [gam trưởng](https://pianoscales.org/major.html) và [gam thứ hòa âm](https://pianoscales.org/minor-harmonic.html), ngón bấm từng giọng.
 - Graham Fitch, ["Nimble Chromatics"](https://practisingthepiano.com/nimble-chromatics/), Practising the Piano: ngón bấm gam nửa cung cơ bản và nâng cao.
-- György Sándor, *On Piano Playing: Motion, Sound and Expression* (1981).
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

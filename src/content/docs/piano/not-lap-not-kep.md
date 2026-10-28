@@ -11,8 +11,8 @@ Muốn đánh lại một nốt, bộ máy bên trong (phím, cần đẩy, búa
 
 ### Đàn cánh và đàn đứng
 
-- **Đàn cánh** có **cơ cấu thoát kép** (*double escapement*), do Sébastien Érard đăng ký bằng sáng chế ở Anh năm 1821; nó là tiền thân của cơ cấu đàn cánh ngày nay. Sau khi búa đập dây, một **cần lặp** có lò xo đỡ búa ở lưng chừng, nên khi phím mới trồi lên một phần, bộ máy đã sẵn sàng: bạn đánh lại được mà không cần nhả phím hết.
-- **Đàn đứng** thông thường không có cần ấy: phím phải trồi lên gần như hết mới đánh lại được. Nốt lặp rất nhanh trên đàn đứng vì thế khó hơn, và bạn phải nhả phím nhiều hơn.
+- **Đàn cánh** có **cơ cấu thoát kép** (*double escapement*), do nhà Érard đăng ký bằng sáng chế ở Anh năm 1821; nó là tiền thân của cơ cấu đàn cánh ngày nay. Sau khi búa đập dây, búa được giữ ở lưng chừng và một **cần lặp** đặt lại cơ cấu đẩy, nên khi phím mới trồi lên một phần, bộ máy đã sẵn sàng: bạn đánh lại được mà không cần nhả phím hết.
+- **Đàn đứng** thông thường không có cơ cấu thoát kép: phím phải trồi lên gần như hết mới đánh lại được. Nốt lặp rất nhanh trên đàn đứng vì thế khó hơn, và bạn phải nhả phím nhiều hơn.
 - **Đàn điện** mỗi loại một khác. Thử ngay trên đàn của bạn: đánh một nốt, nhả từ từ, xem phím phải trồi lên tới đâu thì đánh lại được.
 
 ### Đổi ngón: 3-2-1 và 4-3-2-1
@@ -249,7 +249,7 @@ K:C
 - Charles-Louis Hanon, *Le Pianiste virtuose*: phần ba có các bài nốt lặp, quãng ba và quãng tám (xem cách dùng ở [Bài tập ngón và étude](/opus/piano/bai-tap-ngon/)).
 - Carl Czerny, *Die Schule der Geläufigkeit* Op. 299.
 - Heinrich Neuhaus, *The Art of Piano Playing* (bản tiếng Nga in lần đầu năm 1958).
-- Seymour Fink, *Mastering Piano Technique* (Amadeus Press, 1992).
+- Seymour Fink, *Mastering Piano Technique* (Amadeus Press).
 - Graham Fitch, [Practising the Piano](https://practisingthepiano.com/).
 - Bản nhạc các étude: [IMSLP](https://imslp.org/) (tìm "Chopin Etudes Op.25", "Debussy Etudes").
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
