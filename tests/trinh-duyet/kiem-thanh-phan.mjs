@@ -6,7 +6,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { chromium } from 'playwright';
-import { DIST, TRANG, TRINH_DUYET, dongMayChu, goc, nguCanh, trangCo } from './chung.mjs';
+import { DIST, TRANG, TRINH_DUYET, dongMayChu, goc, khongChromium, nguCanh, trangCo } from './chung.mjs';
 
 after(dongMayChu);
 const KHUONG = trangCo('oz-abc');
@@ -397,7 +397,7 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 	});
 }
 
-test('chromium: in ngay sau khi mở trang vẫn có đủ khuông nhạc (sau khoảng một giây)', { skip: !KHUONG.length && khongCo('khuông nhạc') }, async () => {
+test('chromium: in ngay sau khi mở trang vẫn có đủ khuông nhạc (sau khoảng một giây)', { skip: khongChromium || (!KHUONG.length && khongCo('khuông nhạc')) }, async () => {
 	const trinhDuyet = await chromium.launch();
 	try {
 		const p = await trinhDuyet.newPage({ viewport: { width: 1280, height: 300 } });

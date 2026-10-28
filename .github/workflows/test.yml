@@ -1,8 +1,8 @@
 name: Kiểm thử
 
 # Nhánh việc (moi/**: việc của kế hoạch và lô; mo/**: mở khóa; them/**: thêm tác phẩm), pull request, hay bấm chạy tay:
-# build bản xem (có cả trang chưa khóa, kèm dải "Chưa kiểm định"), kiểm thử, kiểm thử trình duyệt, Lighthouse. Không đăng
-# gì. Nhánh main do deploy.yml kiểm thử trên bản thật trước khi đăng.
+# build bản xem (có cả trang chưa khóa, kèm dải "Chưa kiểm định"), kiểm thử, kiểm thử trình duyệt, Lighthouse, các phần
+# chạy song song. Không đăng gì. Nhánh main do deploy.yml kiểm thử trên bản thật trước khi đăng.
 on:
   push:
     branches: ['moi/**', 'mo/**', 'them/**']
@@ -19,27 +19,34 @@ concurrency:
 
 jobs:
   kiem-thu:
-    name: Kiểm thử (bản xem)
+    name: Kiểm thử (bản xem, ${{ matrix.phan }})
     runs-on: ubuntu-latest
-    # chặn đường treo (mặc định của GitHub là 6 giờ); một lần chạy thường khoảng 4 phút
+    # năm phần chạy song song (.github/actions/kiem-thu): npm test, kiểm thử trình duyệt trên từng trình duyệt, Lighthouse.
+    # Một phần hỏng thì các phần khác vẫn chạy tới cuối, để thấy hết lỗi trong một lần
+    strategy:
+      fail-fast: false
+      matrix:
+        phan: [npm-test, chromium, webkit, firefox, lighthouse]
+    # chặn đường treo (mặc định của GitHub là 6 giờ); phần lâu nhất thường khoảng 4 phút
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v7
         with:
-          # kiểm thử phạm vi lô (tests/pham-vi.test.mjs) so nhánh với main: cần đủ lịch sử
+          # kiểm thử phạm vi lô (tests/pham-vi.test.mjs) và trang mẫu (tools/trang-mau.mjs) so nhánh với main: cần đủ lịch sử
           fetch-depth: 0
       - uses: ./.github/actions/kiem-thu
         with:
           ban: xem
+          phan: ${{ matrix.phan }}
       # ảnh chụp các trang nhánh đã đổi và trang mẫu, 360 và 1280 px, để review xem (tools/chup-anh.mjs); không commit vào
       # repo. Tải về: gh run download <số lần chạy> -n anh-chup
-      # ảnh chỉ để xem: bước này hỏng thì không làm hỏng lần chạy
+      # chỉ ở phần chromium (đã cài Chromium); ảnh chỉ để xem: bước này hỏng thì không làm hỏng lần chạy
       - name: Chụp ảnh trang cho review
-        if: ${{ !cancelled() }}
+        if: ${{ !cancelled() && matrix.phan == 'chromium' }}
         continue-on-error: true
         run: node tools/chup-anh.mjs anh-chup
       - uses: actions/upload-artifact@v7
-        if: ${{ !cancelled() }}
+        if: ${{ !cancelled() && matrix.phan == 'chromium' }}
         continue-on-error: true
         with:
           name: anh-chup

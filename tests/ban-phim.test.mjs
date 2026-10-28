@@ -154,7 +154,7 @@ test('::cong-cu{ten="piano"}: thông số như khối oz-piano cũ; viết sai t
 	])
 		assert.throws(() => docThongSoBanPhim(ts), loi, JSON.stringify(ts));
 	const html = dung('::cong-cu{ten="piano" range="G3-G4" notes="G3 A3 B3 C4 D4 E4 F#4 G4"}');
-	assert.match(html, /^<div class="oz-ban-phim not-content" data-sinh data-pagefind-ignore><div class="oz-phim-cuon"><svg class="oz-phim"/);
+	assert.match(html, /^<div class="oz-ban-phim not-content" data-sinh data-pagefind-ignore><div class="oz-phim-cuon" tabindex="0" role="group" aria-label="Bàn phím piano, cuộn ngang"><svg class="oz-phim"/);
 	assert.match(html, /<button type="button" class="oz-btn" data-k="nghe">Nghe các nốt được tô<\/button>/);
 	assert.match(html, /<noscript data-sinh>/, 'tắt JavaScript: lời nhắc thay dòng hướng dẫn');
 	assert.match(banPhim({ range: 'C4-C5', notes: 'C4 E4 G4', play: 'chord' }), /data-choi="hop-am".*Nghe hợp âm<\/button>/);

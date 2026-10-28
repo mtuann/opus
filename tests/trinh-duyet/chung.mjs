@@ -16,7 +16,17 @@ export const tenTrang = (t) => t || '(trang chủ)';
 /** Trang có khối cần JavaScript (khuông nhạc, câu hỏi, khối nghe) trong bản build. */
 export const trangCo = (lop) => TRANG.filter((t) => !t.endsWith('.html') && fs.readFileSync(path.join(DIST, t, 'index.html'), 'utf8').includes(`class="${lop}`));
 
-export const TRINH_DUYET = { chromium, webkit, firefox };
+/**
+ * Trình duyệt được kiểm: cả ba, hay chỉ những trình duyệt ghi trong OPUS_TRINH_DUYET ("webkit", "chromium,firefox"). CI chạy
+ * mỗi trình duyệt ở một job, song song (.github/actions/kiem-thu). Phép thử chỉ chạy trên Chromium (axe, in, API tìm kiếm)
+ * bỏ qua khi không có Chromium: xem CO_CHROMIUM.
+ */
+const CA_BA = { chromium, webkit, firefox };
+const CHON = (process.env.OPUS_TRINH_DUYET ?? '').split(',').map((x) => x.trim()).filter(Boolean);
+for (const t of CHON) if (!(t in CA_BA)) throw new Error(`OPUS_TRINH_DUYET: không có trình duyệt "${t}" (có: ${Object.keys(CA_BA).join(', ')})`);
+export const TRINH_DUYET = CHON.length ? Object.fromEntries(CHON.map((t) => [t, CA_BA[t]])) : CA_BA;
+/** Lý do bỏ qua phép thử chỉ chạy trên Chromium, hay false khi có Chromium. */
+export const khongChromium = !('chromium' in TRINH_DUYET) && 'OPUS_TRINH_DUYET không có chromium';
 
 /** Cỡ màn hình theo AGENTS.md (mục Giao diện): 360 và 768 px có cảm ứng, 1280 px dùng chuột. */
 export const CO = [

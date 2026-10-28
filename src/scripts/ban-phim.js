@@ -117,6 +117,11 @@ export function mount(goc) {
 	const khung = goc.querySelector('.oz-phim-cuon');
 	const nhac = goc.querySelector('.oz-phim-ten');
 	if (khung) {
+		// các phím đã nhận tiêu điểm (ganBanPhim): khung thôi là một điểm dừng của Tab; khung đang giữ tiêu điểm thì chuyển
+		// sang phím đầu
+		const dangGiu = document.activeElement === khung;
+		for (const a of ['tabindex', 'role', 'aria-label']) khung.removeAttribute(a);
+		if (dangGiu) svg.querySelector('[tabindex="0"]')?.focus();
 		cuonToiPhimTo(khung, svg);
 		// bàn phím rộng hơn khung (điện thoại): nhắc kéo ngang, tới khi người học bấm phím đầu tiên
 		if (nhac && khung.scrollWidth > khung.clientWidth + 1) nhac.textContent += ' Kéo ngang để xem thêm phím.';

@@ -1,8 +1,8 @@
-// Bốn công cụ luyện tai của lô D3-L6 (src/scripts/luyen-tai.js) chạy đúng trên ba trình duyệt: không phát tiếng trước khi
+// Bốn công cụ luyện tai của lô D3-L6 (src/scripts/luyen-tai.js) chạy đúng: không phát tiếng trước khi
 // người học bấm; "Câu mới" bằng bàn phím (Enter, phím cách) phát câu hỏi; chọn đáp án tới khi đúng (đáp án sai bị đánh dấu,
 // tiêu điểm không mất), hiện hình phím đàn, lưu kỹ năng ở opus-zero:v1 như site cũ; đổi bộ thì dựng lại nút. Ở 360 px: không
 // tràn ngang, nút và ô chọn từ 44 px. Trang lấy thẳng từ bản build; bản build không có trang thì bỏ qua. Chờ điều kiện, không
-// chờ cố định.
+// chờ cố định. Nghe quãng kiểm trên ba trình duyệt; hợp âm, gam, tiến trình (cùng mã) chỉ trên Chromium.
 import { after, test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -104,34 +104,37 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 		}
 	});
 
-	for (const cc of ['chord-trainer', 'scale-trainer', 'cadence-trainer']) {
-		const [trang, kyNang, ngay] = TRANG[cc];
-		test(`${ten}: ${cc} ở 1280 px: phím cách phát câu hỏi, chọn tới khi đúng, lưu kỹ năng ${kyNang} và ${ngay} trong ngày`, { skip: !coTrang(trang) && `bản build không có trang ${trang}` }, async () => {
-			const trinhDuyet = await loai.launch();
-			try {
-				const ctx = await nguCanh(trinhDuyet, ten, { w: 1280, h: 800, camUng: false, toi: false });
-				const { p, el, loi } = await moTrang(ctx, trang);
-				if (cc === 'chord-trainer') {
-					await el.locator('select[data-k="set"]').selectOption('sevenths');
-					assert.equal(await el.locator('.oz-answers button').count(), 5);
+	// ba công cụ còn lại dùng chung mã với nghe quãng (luyen-tai.js: nút, bàn phím máy tính, lưu kỹ năng), đã kiểm trên
+	// ba trình duyệt ở phép trên: phần riêng của từng công cụ chỉ kiểm trên Chromium
+	if (ten === 'chromium')
+		for (const cc of ['chord-trainer', 'scale-trainer', 'cadence-trainer']) {
+			const [trang, kyNang, ngay] = TRANG[cc];
+			test(`${ten}: ${cc} ở 1280 px: phím cách phát câu hỏi, chọn tới khi đúng, lưu kỹ năng ${kyNang} và ${ngay} trong ngày`, { skip: !coTrang(trang) && `bản build không có trang ${trang}` }, async () => {
+				const trinhDuyet = await loai.launch();
+				try {
+					const ctx = await nguCanh(trinhDuyet, ten, { w: 1280, h: 800, camUng: false, toi: false });
+					const { p, el, loi } = await moTrang(ctx, trang);
+					if (cc === 'chord-trainer') {
+						await el.locator('select[data-k="set"]').selectOption('sevenths');
+						assert.equal(await el.locator('.oz-answers button').count(), 5);
+					}
+					await el.locator('[data-act="new"]').focus();
+					await p.keyboard.press('Space');
+					await p.waitForFunction(() => /đây\?$/.test(document.querySelector('.oz-lt .oz-feedback').textContent));
+					await traLoiToiKhiDung(p, el);
+					await p.waitForFunction(() => document.querySelector('.oz-lt-hinh svg'));
+					if (cc === 'cadence-trainer') {
+						assert.match(await el.locator('.oz-lt-hinh p').textContent(), /^Hai hợp âm cuối: (V|IV) → (I|V|vi) \(xanh: hợp âm áp chót, vàng: hợp âm cuối\)$/);
+						assert.ok((await el.locator('.oz-lt-hinh .to-2').count()) > 0);
+					}
+					const data = await p.evaluate(() => JSON.parse(localStorage.getItem('opus-zero:v1')));
+					assert.equal(data.store.skills[kyNang].n, 1);
+					assert.equal(Object.values(data.days)[0][ngay], 1);
+					assert.deepEqual(loi, []);
+					await ctx.close();
+				} finally {
+					await trinhDuyet.close();
 				}
-				await el.locator('[data-act="new"]').focus();
-				await p.keyboard.press('Space');
-				await p.waitForFunction(() => /đây\?$/.test(document.querySelector('.oz-lt .oz-feedback').textContent));
-				await traLoiToiKhiDung(p, el);
-				await p.waitForFunction(() => document.querySelector('.oz-lt-hinh svg'));
-				if (cc === 'cadence-trainer') {
-					assert.match(await el.locator('.oz-lt-hinh p').textContent(), /^Hai hợp âm cuối: (V|IV) → (I|V|vi) \(xanh: hợp âm áp chót, vàng: hợp âm cuối\)$/);
-					assert.ok((await el.locator('.oz-lt-hinh .to-2').count()) > 0);
-				}
-				const data = await p.evaluate(() => JSON.parse(localStorage.getItem('opus-zero:v1')));
-				assert.equal(data.store.skills[kyNang].n, 1);
-				assert.equal(Object.values(data.days)[0][ngay], 1);
-				assert.deepEqual(loi, []);
-				await ctx.close();
-			} finally {
-				await trinhDuyet.close();
-			}
-		});
-	}
+			});
+		}
 }

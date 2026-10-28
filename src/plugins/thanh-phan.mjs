@@ -578,7 +578,9 @@ export function banPhim(thongSo) {
 	const { thap, cao, to, hopAm } = docThongSoBanPhim(thongSo);
 	return (
 		`<div class="oz-ban-phim not-content" data-sinh data-pagefind-ignore${hopAm ? ' data-choi="hop-am"' : ''}>` +
-		`<div class="oz-phim-cuon">${veBanPhim({ thap, cao, to }).svg}</div>` +
+		// khung cuộn nhận tiêu điểm tới khi ban-phim.js gắn phím (bàn phím ở xa màn hình khởi tạo muộn, và khi không có
+		// JavaScript): người dùng bàn phím máy tính vẫn Tab tới và cuộn được (axe: scrollable-region-focusable)
+		`<div class="oz-phim-cuon" tabindex="0" role="group" aria-label="Bàn phím piano, cuộn ngang">${veBanPhim({ thap, cao, to }).svg}</div>` +
 		`<p class="oz-stats oz-phim-ten" aria-live="polite">Bấm vào phím để nghe và xem tên nốt.</p>` +
 		(to.length ? `<div class="oz-row"><button type="button" class="oz-btn" data-k="nghe">${hopAm ? 'Nghe hợp âm' : 'Nghe các nốt được tô'}</button></div>` : '') +
 		`${canJs('Bật JavaScript trong trình duyệt để bấm phím và nghe.')}</div>`

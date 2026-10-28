@@ -1,7 +1,8 @@
 name: Đăng site lên GitHub Pages
 
-# Mỗi lần push lên main (hay bấm chạy tay): build bản thật (chỉ trang đã khóa trong kiem-dinh/khoa.json), kiểm thử, kiểm
-# thử trình duyệt, Lighthouse; đạt hết thì đăng dist/. Hỏng bước nào thì không đăng: site giữ bản trước.
+# Mỗi lần push lên main (hay bấm chạy tay): build bản thật (chỉ trang đã khóa trong kiem-dinh/khoa.json), kiểm thử; kiểm
+# thử trình duyệt và Lighthouse chạy song song ở job trinh-duyet. Đạt hết thì đăng dist/. Hỏng bước nào thì không đăng:
+# site giữ bản trước.
 on:
   push:
     branches: [main]
@@ -23,20 +24,60 @@ jobs:
   build:
     name: Build và kiểm thử (bản thật)
     runs-on: ubuntu-latest
-    # chặn đường treo (mặc định của GitHub là 6 giờ); một lần chạy thường khoảng 4 phút
+    # chặn đường treo (mặc định của GitHub là 6 giờ); một lần chạy thường khoảng 1 phút
     timeout-minutes: 30
+    # đọc các lần chạy của test.yml (bước "Đã kiểm ở nhánh?")
+    permissions:
+      contents: read
+      actions: read
+    outputs:
+      chay-trinh-duyet: ${{ steps.da-kiem.outputs.chay }}
     steps:
       - uses: actions/checkout@v7
+      # Lô gộp vào main kiểu fast-forward: commit này đã qua test.yml ở nhánh (bản xem có mọi trang của bản thật, cùng mã),
+      # nên không chạy lại kiểm thử trình duyệt và Lighthouse. Build bản thật và npm test (khóa, link "sắp có" của bản thật)
+      # vẫn chạy. Push thẳng lên main, hay test.yml chưa đạt ở commit này, thì chạy đủ.
+      - name: Đã kiểm ở nhánh?
+        id: da-kiem
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          n=$(gh api "repos/${{ github.repository }}/actions/workflows/test.yml/runs?head_sha=${{ github.sha }}&status=success" -q .total_count || echo 0)
+          echo "test.yml đã đạt ở ${{ github.sha }}: $n lần"
+          echo "chay=$([ "${n:-0}" -gt 0 ] && echo false || echo true)" >> "$GITHUB_OUTPUT"
+        shell: bash
       - uses: ./.github/actions/kiem-thu
         with:
           ban: that
+          phan: npm-test
       - uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
+  trinh-duyet:
+    name: Kiểm thử (bản thật, ${{ matrix.phan }})
+    needs: build
+    if: needs.build.outputs.chay-trinh-duyet == 'true'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        phan: [chromium, webkit, firefox, lighthouse]
+    # phần lâu nhất thường khoảng 4 phút
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      # tự build lại (vài giây, cùng commit nên cùng kết quả) thay vì chép dist/ từ job build
+      - uses: ./.github/actions/kiem-thu
+        with:
+          ban: that
+          phan: ${{ matrix.phan }}
+
   deploy:
     name: Đăng
-    needs: build
+    needs: [build, trinh-duyet]
+    # trinh-duyet bị bỏ qua (commit đã qua test.yml ở nhánh) thì vẫn đăng; hỏng hay bị hủy thì không
+    if: ${{ !cancelled() && needs.build.result == 'success' && (needs.trinh-duyet.result == 'success' || needs.trinh-duyet.result == 'skipped') }}
     runs-on: ubuntu-latest
     # deploy-pages tự chờ tối đa 10 phút: để dư
     timeout-minutes: 15

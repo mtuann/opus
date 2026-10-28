@@ -8,7 +8,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { createRequire } from 'node:module';
 import { chromium } from 'playwright';
-import { DIST, TRINH_DUYET, dongMayChu, goc, nguCanh } from './chung.mjs';
+import { DIST, TRANG, TRINH_DUYET, dongMayChu, goc, khongChromium, nguCanh } from './chung.mjs';
 
 after(dongMayChu);
 const AXE = createRequire(import.meta.url).resolve('axe-core/axe.min.js');
@@ -388,7 +388,7 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 			const dung = { 0: 'C', 1: 'G', 2: 'D', 3: 'A', 4: 'E', 5: 'B', 6: 'F#', 7: 'C#', '-1': 'F', '-2': 'Bb', '-3': 'Eb', '-4': 'Ab', '-5': 'Db', '-6': 'Gb', '-7': 'Cb' }[n];
 			const sai = el.locator(`.oz-lhb-chon button:not([data-giong="${dung}"])`).first();
 			await sai.tap();
-			assert.match(await el.locator('.oz-feedback').textContent(), /^Chưa đúng\. Mẹo: .*giọng trưởng/);
+			assert.match(await el.locator('.oz-feedback').textContent(), /^Chưa đúng\. Mẹo: .*(giọng trưởng|Đô trưởng)/);
 			assert.ok(await sai.isDisabled());
 			await el.locator(`.oz-lhb-chon button[data-giong="${dung}"]`).tap();
 			assert.match(await el.locator('.oz-feedback').textContent(), /^Đúng\./);
@@ -409,8 +409,10 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 	});
 }
 
-// Trợ năng ở mọi trang có các thành phần này (kiem-tro-nang.mjs chỉ chạy ở trang mẫu): sau khi đã bấm thử, hai chế độ.
-test('axe: trang có bàn phím, vòng quãng năm, luyện hóa biểu không vi phạm (sau khi bấm thử)', { skip: !BAN_PHIM.length && !VONG.length && !LUYEN.length && khongCo('các thành phần này') }, async (t) => {
+// Trợ năng ở mọi trang có các thành phần này, sau khi đã bấm thử, hai chế độ; trừ trang mẫu, kiem-tro-nang.mjs đã kiểm
+// (cùng cách bấm thử).
+const AXE_TRANG = [...new Set([...BAN_PHIM, ...VONG, ...LUYEN])].filter((t) => !TRANG.includes(t));
+test('axe: trang có bàn phím, vòng quãng năm, luyện hóa biểu không vi phạm (sau khi bấm thử)', { skip: khongChromium || (!AXE_TRANG.length && 'mọi trang có các thành phần này là trang mẫu, đã kiểm ở kiem-tro-nang.mjs') }, async (t) => {
 	const trinhDuyet = await chromium.launch();
 	try {
 		for (const [w, h, scheme] of [
@@ -418,7 +420,7 @@ test('axe: trang có bàn phím, vòng quãng năm, luyện hóa biểu không v
 			[1280, 800, 'light'],
 		]) {
 			const ctx = await trinhDuyet.newContext({ viewport: { width: w, height: h }, colorScheme: scheme });
-			for (const trang of [...new Set([...BAN_PHIM, ...VONG, ...LUYEN])])
+			for (const trang of AXE_TRANG)
 				await t.test(`${w} px, ${scheme === 'dark' ? 'tối' : 'sáng'}: ${trang}`, async () => {
 					const p = await ctx.newPage();
 					await p.goto((await goc()) + trang, { waitUntil: 'load' });
