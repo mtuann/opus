@@ -39,6 +39,10 @@ export const KHOI = {
 	'thẻ ghi nhớ': 'class="oz-the-nho',
 	'trạng thái bài': 'class="oz-trang-thai-bai',
 	'luyện tai': 'class="oz-lt oz-tool',
+	'máy đếm nhịp': 'class="oz-may-dem-nhip',
+	'bài đang tập': 'class="oz-bai-dang-tap',
+	'kế hoạch buổi tập': 'class="oz-ke-hoach',
+	'dòng thời gian': 'class="oz-figure oz-dtg',
 };
 
 /** Số trang đã đổi của nhánh được lấy làm mẫu: một lô của đợt 3 có tới 8 trang. */
