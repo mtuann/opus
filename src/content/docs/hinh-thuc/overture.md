@@ -1,36 +1,35 @@
 ---
 title: Overture
-description: Overture ("mở màn") khởi đầu là khúc nhạc mở đầu của opera, ballet hay oratorio — chơi khi màn còn đóng, để khán giả ổn định chỗ ngồi và "vào" không khí. Dần…
+description: Overture ("mở màn") khởi đầu là khúc nhạc dàn nhạc mở đầu một tác phẩm kịch như opera hay oratorio. Dần dần, nó tách ra thành thể loại hòa nhạc độc lập.
 ---
 
-Overture ("mở màn") khởi đầu là **khúc nhạc mở đầu** của opera, ballet hay oratorio — chơi khi màn còn đóng, để khán giả ổn định chỗ ngồi và "vào" không khí. Dần dần, nó tách ra thành thể loại hòa nhạc độc lập.
+Overture ("mở màn") khởi đầu là **khúc nhạc dàn nhạc mở đầu** một tác phẩm kịch như opera hay oratorio. Dần dần, nó tách ra thành thể loại hòa nhạc độc lập.
 
 ## Hai gốc Baroque
 
 Thời Baroque có hai kiểu overture cho opera:
 
-- **Overture Pháp** (Lully): chậm – nhanh – chậm, với tiết tấu chấm (dotted) trang trọng. Nghe trong các tổ khúc của Bach và Handel.
-- **Overture Ý** (nhanh – chậm – nhanh): chính là **tổ tiên của giao hưởng** — tách khỏi opera, thêm chương 4 và thành symphony thời Cổ điển.
+- **Overture Pháp** (Lully): chậm – nhanh – chậm; phần chậm mở đầu có tiết tấu chấm (dotted), phần nhanh theo lối bắt chước. Nghe trong các tổ khúc dàn nhạc của Bach và trong oratorio của Handel, như *Messiah*.
+- **Overture Ý** (nhanh – chậm – nhanh): là **mẫu cho những bản giao hưởng đầu tiên**, vốn có ba chương; về sau giao hưởng thường có bốn chương.
 
 ## Overture hòa nhạc: một chương, một câu chuyện
 
-Thế kỷ 19, các nhà soạn nhạc viết **concert overture**: một chương độc lập cho dàn nhạc, thường kể một câu chuyện hoặc vẽ một cảnh — và thường dùng [hình thức sonata](/opus/hinh-thuc/sonata/) thu gọn:
+Thế kỷ 19, các nhà soạn nhạc viết **concert overture**: một chương độc lập cho dàn nhạc, không mở đầu cho tác phẩm kịch nào. Nhiều bản dùng [hình thức sonata](/opus/hinh-thuc/sonata/); một số bản gần với [symphonic poem](/opus/hinh-thuc/symphonic-poem/) khi kể một câu chuyện hoặc vẽ một cảnh:
 
 | Tác phẩm | Câu chuyện |
 |---|---|
-| Mendelssohn, *Hebrides* (*Động Fingal*) | Biển cả và hang Fingal ở Scotland; âm nhạc gợi sóng biển |
-| Berlioz, *Roman Carnival* | Lễ hội Rome |
-| Tchaikovsky, *1812* | Cuộc chiến Nga–Pháp năm 1812 (có đại bác thật — ở buổi diễn ngoài trời!) |
-| Tchaikovsky, *Romeo và Juliet* | Bi kịch Shakespeare — chủ đề tình yêu đối đầu chủ đề gươm đao |
+| Mendelssohn, *Hebrides* (*Động Fingal*) | Chuyến đi Scotland năm 1829 (đảo Staffa, hang Fingal); âm nhạc gợi sóng biển |
+| Berlioz, *Roman Carnival* | Lễ hội carnival ở Rome; chất liệu lấy từ opera *Benvenuto Cellini* |
+| Tchaikovsky, *1812* | Cuộc kháng chiến của Nga trước quân Napoleon năm 1812; tổng phổ có phần cho chuông và đại bác |
+| Tchaikovsky, *Romeo và Juliet* | Bi kịch Shakespeare: chủ đề tình yêu đối lại chủ đề xung đột giữa hai dòng họ |
 
 ## Đi qua một tác phẩm: Tchaikovsky, 1812 Overture
 
-Xem [hướng dẫn nghe chi tiết](/opus/nghe-nhac/tchaikovsky-1812/). Khung overture ở đây rất rõ:
+Xem [hướng dẫn nghe chi tiết](/opus/nghe-nhac/tchaikovsky-1812/). Thứ tự các phần:
 
-1. **Mở đầu chậm**: thánh ca Chính thống giáo — không khí Nga yên bình.
-2. **Thân chính**: *Marseillaise* (phe Pháp) đối đầu với nhạc dân gian Nga.
-3. **Trận chiến**: hai phe giằng co.
-4. **Kết**: *Marseillaise* sụp đổ, quốc ca Nga hoàng khải hoàn với đại bác và chuông.
+1. **Mở đầu chậm**: thánh ca Chính thống giáo của Nga.
+2. **Thân chính và trận chiến**: giai điệu dân gian Nga đối đầu với *Marseillaise* (phe Pháp) cho đến khi *Marseillaise* tan dần.
+3. **Kết**: quốc ca Nga hoàng *God Save the Tsar!* cùng chuông và đại bác.
 
 Nghe overture là nghe **kể chuyện bằng dàn nhạc**: mỗi lần một chủ đề xuất hiện, hãy hỏi "đây là phe nào, chuyện đang đến đâu?"
 
@@ -40,12 +39,12 @@ Nghe overture là nghe **kể chuyện bằng dàn nhạc**: mỗi lần một c
 |---|---|---|
 | [Tchaikovsky, *1812 Overture*](/opus/nghe-nhac/tchaikovsky-1812/) | Hai quốc ca đối đầu | Hướng dẫn nghe |
 | Mendelssohn, *Hebrides* | Hình ảnh sóng biển | |
-| Mozart, *Don Giovanni*: Overture | Overture opera kinh điển, chơi trước khi màn mở | |
+| Mozart, *Don Giovanni*: Overture | Overture của một opera: chơi trước khi opera bắt đầu | |
 
 ## Nguồn
 
-- Wikipedia: [Overture](https://en.wikipedia.org/wiki/Overture) (khúc nhạc mở đầu opera, ballet, oratorio; overture Pháp từ Lully; overture Ý nhanh – chậm – nhanh; concert overture từ đầu thời Lãng mạn, như *Hebrides* của Mendelssohn), [French overture](https://en.wikipedia.org/wiki/French_overture) (phần chậm với tiết tấu chấm, phần nhanh kiểu fugue, đoạn cuối thường gợi lại phần chậm; mở đầu các tổ khúc dàn nhạc của Bach và nhiều opera, oratorio của Handel), [Italian overture](https://en.wikipedia.org/wiki/Italian_overture) và [Symphony](https://en.wikipedia.org/wiki/Symphony) (overture Ý là tiền thân trực tiếp của giao hưởng; trong thế kỷ 18, giao hưởng bốn chương dần thành lệ).
-- Wikipedia tiếng Đức, [Ouvertüre](https://de.wikipedia.org/wiki/Ouvert%C3%BCre): overture opera thường chơi khi màn còn đóng; overture Pháp có ba phần chậm – nhanh – chậm; concert overture viết riêng cho buổi hòa nhạc, thường ở hình thức sonata nhanh có phần mở đầu chậm, nhiều khi có nội dung chương trình.
-- Các tác phẩm, Wikipedia: [The Hebrides](https://en.wikipedia.org/wiki/The_Hebrides_%28overture%29) (cảm hứng từ hang Fingal trên đảo Staffa, Scotland; chủ đề thứ hai tả sóng biển), [Overtures by Hector Berlioz](https://en.wikipedia.org/wiki/Overtures_by_Hector_Berlioz) (*Le carnaval romain*: overture hòa nhạc dựng từ chất liệu opera *Benvenuto Cellini*, có nhạc của cảnh lễ hội hóa trang), [Romeo and Juliet (Tchaikovsky)](https://en.wikipedia.org/wiki/Romeo_and_Juliet_%28Tchaikovsky%29) (chủ đề xung đột hai dòng họ, có tiếng chũm chọe tả cuộc đấu kiếm, đối lại chủ đề tình yêu), [Don Giovanni](https://en.wikipedia.org/wiki/Don_Giovanni).
-- *1812 Overture*: Wikipedia [1812 Overture](https://en.wikipedia.org/wiki/1812_Overture) (kỷ niệm cuộc kháng chiến của Nga trước quân Pháp năm 1812; mở đầu bằng thánh ca Chính thống giáo, *La Marseillaise* đối đầu nhạc dân gian Nga, kết bằng *God Save the Tsar!* với đại bác và chuông; buổi diễn ngoài trời có khi dùng đại bác thật) và trang [The Year 1812](https://en.tchaikovsky-research.net/pages/The_Year_1812) của Tchaikovsky Research (nguồn gốc các giai điệu được trích: thánh ca Chính thống giáo, bài dân ca "By the Gates", *La Marseillaise*, quốc ca *God Save the Tsar!*).
+- Britannica, [Overture](https://www.britannica.com/art/overture-music): định nghĩa; overture Pháp của Lully (phần chậm có tiết tấu chấm, phần nhanh theo lối bắt chước); overture Ý nhanh – chậm – nhanh làm mẫu cho những bản giao hưởng đầu tiên; Bach và Handel; concert overture thành thể loại độc lập ở thế kỷ 19.
+- *The Concise Oxford Dictionary of Music*, qua Encyclopedia.com: [overture](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/overture), [concert overture](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/concert-overture) (một chương, nhiều bản ở hình thức sonata; *Hebrides* là một trong những bản đầu tiên), [symphony](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/symphony) (sinfonia, overture opera nhanh – chậm – nhanh).
+- Tổ khúc của Bach: Bach Choir of Bethlehem, [BWV 1067](https://bach.org/education/bwv-1067/) (overture kiểu Pháp: phần chậm có tiết tấu chấm, rồi phần nhanh bắt chước).
+- Các tác phẩm: Mendelssohn in Scotland, [Hebrides Overture](https://www.mendelssohninscotland.com/hebrides-overture); The Orchestra Now, [Berlioz, Roman Carnival](https://ton.bard.edu/berliozs-roman-carnival-overture/); Tchaikovsky Research, [Romeo and Juliet](https://en.tchaikovsky-research.net/pages/Romeo_and_Juliet) và [The Year 1812](https://en.tchaikovsky-research.net/pages/The_Year_1812); Classic Note, [Tchaikovsky, 1812 Overture](https://theclassicnote.com/tchaikovsky-1812-overture/); IMSLP, [Mozart, Don Giovanni, K.527](https://imslp.org/wiki/Don_Giovanni,_K.527_(Mozart,_Wolfgang_Amadeus)).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

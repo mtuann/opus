@@ -1,21 +1,21 @@
 ---
 title: Symphonic poem (thơ giao hưởng)
-description: 'Symphonic poem (tiếng Đức: symphonische Dichtung; Richard Strauss gọi là Tondichtung, "thơ bằng âm thanh") là nhạc kể chuyện một chương cho dàn nhạc. Franz…'
+description: 'Symphonic poem (tiếng Đức: sinfonische Dichtung; Richard Strauss ưa gọi là Tondichtung, "thơ bằng âm thanh") là nhạc kể chuyện một chương cho dàn nhạc. Franz Liszt đặt ra tên gọi này.'
 ---
 
-Symphonic poem (tiếng Đức: *symphonische Dichtung*; Richard Strauss gọi là *Tondichtung*, "thơ bằng âm thanh") là **nhạc kể chuyện một chương** cho dàn nhạc. Franz Liszt đặt ra tên gọi này vào thập niên 1850 và viết 13 tác phẩm như vậy. Khác với giao hưởng (4 chương, cấu trúc trừu tượng), symphonic poem bám theo một **cốt truyện, bức tranh hay ý niệm** có sẵn.
+Symphonic poem (tiếng Đức: *sinfonische Dichtung*; Richard Strauss ưa gọi là *Tondichtung*, "thơ bằng âm thanh") là **nhạc kể chuyện một chương** cho dàn nhạc. Franz Liszt đặt ra tên gọi này và viết 13 tác phẩm như vậy. Khác với giao hưởng "thuần túy", symphonic poem chỉ có một chương và bám theo một **cốt truyện, bức tranh hay ý niệm** có sẵn.
 
 ## Ý tưởng cốt lõi: âm nhạc minh họa
 
 Người nghe thường được cho một **chương trình** (program) — vài dòng tóm tắt câu chuyện — rồi âm nhạc "diễn" lại bằng chủ đề và màu sắc dàn nhạc:
 
-- Mỗi nhân vật/sự kiện có **chủ đề riêng** (gần với ý tưởng *idée fixe* của Berlioz).
-- Chủ đề **biến hình** theo diễn biến truyện (vui → bi tráng, ngây thơ → anh hùng).
-- Hình thức tự do, uốn theo câu chuyện chứ không theo khuôn sonata cứng nhắc.
+- Một nhân vật có thể có **chủ đề riêng**: Till Eulenspiegel có hai chủ đề, một cho kèn horn và một cho clarinet.
+- Chủ đề có thể **biến hình** qua các đoạn, như trong *Les Préludes* của Liszt.
+- Hình thức tự do, chỉ gần với hình thức sonata của chương đầu giao hưởng.
 
 ## Đi qua một tác phẩm: Smetana, *Moldau*
 
-*Moldau* (sông Vltava) là chương nổi tiếng nhất trong chùm 6 symphonic poem *Má vlast* ("Tổ quốc tôi") của Smetana — một chuyến xuôi dòng sông, từ hai con suối đầu nguồn đến khi sông chảy qua Prague:
+*Moldau* (sông Vltava) là chương thứ hai trong chùm 6 symphonic poem *Má vlast* ("Tổ quốc tôi") của Smetana — một chuyến xuôi dòng sông, từ hai con suối đầu nguồn đến khi sông chảy qua Prague:
 
 | Đoạn | Sự kiện | Nghe gì |
 |---|---|---|
@@ -23,7 +23,7 @@ Người nghe thường được cho một **chương trình** (program) — và
 | 2 | Sông lớn dần | Giai điệu *Moldau* nổi tiếng cất lên (dây) |
 | 3 | Thợ săn trong rừng | Tiếng kèn horn |
 | 4 | Đám cưới nông dân | Điệu nhảy vui (polka) |
-| 5 | Tiên nữ dưới trăng | Sáo và kèn êm đềm, lung linh |
+| 5 | Tiên nữ dưới trăng | Sáo và oboe trao nhau câu nhạc cao, dây lung linh |
 | 6 | Thác ghềnh St. John | Dàn nhạc ào ạt, dữ dội nhất |
 | 7 | Qua Prague, đổ ra sông Elbe | Giai điệu *Moldau* trở lại, hùng tráng rồi xa dần |
 
@@ -33,17 +33,17 @@ Nghe một mạch và đánh dấu: mỗi lần cảnh đổi, âm nhạc đổi
 
 | Tác phẩm | Câu chuyện |
 |---|---|
-| Liszt, *Les Préludes* | Nổi tiếng nhất của Liszt; câu hỏi "đời là gì?" |
+| Liszt, *Les Préludes* | Được ưa chuộng nhất trong các symphonic poem của Liszt; câu hỏi "đời là gì?" |
 | Smetana, *Moldau* | Dòng sông Vltava (nghe ở trên) |
 | R. Strauss, *Don Juan* | Gã Don Juan đa tình, kết thúc bi thảm |
-| R. Strauss, *Till Eulenspiegel* | Chàng hề láu cá và trò tinh nghịch |
+| R. Strauss, *Till Eulenspiegel* | Chàng láu cá Till và những trò tinh nghịch |
 | Debussy, *La mer* (*Biển cả*) | Ba "phác thảo giao hưởng" về biển |
 | Sibelius, *Finlandia* | Lòng yêu nước Phần Lan |
 
 ## Phân biệt nhanh
 
-- **[Overture hòa nhạc](/opus/hinh-thuc/overture/)** vs **symphonic poem**: ranh giới mờ — *1812* của Tchaikovsky gọi là overture, *Moldau* gọi là symphonic poem; cả hai đều một chương và kể chuyện. Cách gọi thường do chính nhà soạn nhạc đặt.
-- **Nhạc chương trình** (program music) là khái niệm rộng hơn, bao trùm cả hai.
+- **[Overture hòa nhạc](/opus/hinh-thuc/overture/)** vs **symphonic poem**: *1812* của Tchaikovsky gọi là overture, *Moldau* gọi là symphonic poem; cả hai là một chương cho dàn nhạc và có nội dung kể chuyện. Symphonic poem phát triển từ concert overture, và một số concert overture gần với symphonic poem.
+- **Nhạc chương trình** (program music) là khái niệm rộng hơn: nhạc dựa trên nội dung ngoài âm nhạc, như symphonic poem.
 
 ## Nghe để luyện
 
@@ -55,8 +55,9 @@ Nghe một mạch và đánh dấu: mỗi lần cảnh đổi, âm nhạc đổi
 
 ## Nguồn
 
-- Wikipedia, [Symphonic poem](https://en.wikipedia.org/wiki/Symphonic_poem): định nghĩa thơ giao hưởng; chữ *Tondichtung* có từ Carl Loewe (1828); Liszt dùng tên *Symphonische Dichtung* cho các tác phẩm loại này của ông; Richard Strauss và Sibelius thích chữ "tone poem"; phép biến hình chủ đề của Liszt; Smetana gắn chủ đề với nhân vật, gần với cách làm của Berlioz; *Má vlast* là chùm sáu thơ giao hưởng.
-- Wikipedia, [Les Préludes](https://en.wikipedia.org/wiki/Les_Pr%C3%A9ludes): thơ giao hưởng thứ ba của Liszt, diễn lần đầu ngày 23/2/1854, là tác phẩm cho dàn nhạc sớm nhất mang tên "thơ giao hưởng"; mọi chủ đề sinh ra từ cùng một tế bào ba nốt, tiếp nối *idée fixe* của Berlioz; lời tựa in kèm tổng phổ hỏi phải chăng đời người chỉ là một chuỗi khúc dạo đầu. Ghi chú chương trình của [Boston Symphony Orchestra](https://www.bso.org/works/liszt-les-preludes) (John N. Burk, Steven Ledbetter): *Les Préludes* là thơ giao hưởng được ưa chuộng nhất của Liszt.
-- *Moldau*: Wikipedia [Má vlast](https://en.wikipedia.org/wiki/M%C3%A1_vlast) (lời Smetana tả dòng sông: hai con suối đầu nguồn, rừng và đồng cỏ, đám cưới nông dân, vũ điệu tiên nữ dưới trăng, thác St. John, qua Praha rồi khuất xa ở sông Elbe) và Wikipedia tiếng Đức [Die Moldau](https://de.wikipedia.org/wiki/Die_Moldau) (tiêu đề Smetana ghi trong tổng phổ; sáo rồi clarinet tả hai con suối, giai điệu chính ở violin, kèn horn trong cảnh săn, nhịp polka ở đám cưới, sáo và clarinet trong cảnh dưới trăng, đoạn thác là chỗ to nhất bài).
-- Các tác phẩm khác, Wikipedia: [Don Juan (Strauss)](https://en.wikipedia.org/wiki/Don_Juan_%28Strauss%29) (theo Lenau, Don Juan đi tìm người phụ nữ lý tưởng và kết thúc bằng cái chết), [Till Eulenspiegel's Merry Pranks](https://en.wikipedia.org/wiki/Till_Eulenspiegel%27s_Merry_Pranks) (Till có hai chủ đề, một cho kèn horn, một cho clarinet Rê), [La mer (Debussy)](https://en.wikipedia.org/wiki/La_mer_%28Debussy%29) (*trois esquisses symphoniques*), [Finlandia](https://en.wikipedia.org/wiki/Finlandia), [Program music](https://en.wikipedia.org/wiki/Program_music) (nhạc chương trình là khái niệm rộng; những tác phẩm một chương cho dàn nhạc thế kỷ 19 thường gọi là thơ giao hưởng).
+- *The Concise Oxford Dictionary of Music*, qua Encyclopedia.com: [symphonic poem](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/symphonic-poem) (một chương, theo chương trình; Liszt đặt tên và viết 13 tác phẩm; Strauss ưa chữ *Tondichtung*; Smetana viết theo thể loại này), [concert overture](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/concert-overture).
+- Britannica, [Symphonic poem](https://www.britannica.com/art/symphonic-poem): Liszt đặt ra thể loại; hình thức tự do, gần hình thức sonata; biến hình chủ đề; phát triển từ concert overture.
+- *Les Préludes*: Boston Symphony Orchestra, [Liszt, Les Préludes](https://www.bso.org/works/liszt-les-preludes) (diễn lần đầu ở Weimar ngày 23/2/1854; "the most popular of Liszt's symphonic poems"; lời tựa hỏi đời người có phải chỉ là chuỗi khúc dạo đầu).
+- *Moldau*: LA Phil, [The Moldau](https://www.laphil.com/musicdb/pieces/4162/the-moldau) (chương trình của Smetana, một trong sáu symphonic poem *Má vlast*), Lansdowne Symphony Orchestra, [Moldau](https://lansdowneso.org/smetana-moldau-vltava/) và Classic Note, [Smetana, Vltava](https://theclassicnote.com/smetana-vltava/) (nhạc cụ từng đoạn).
+- Các tác phẩm khác: Britannica, [Don Juan](https://www.britannica.com/topic/Don-Juan-tone-poem-by-Strauss) (theo Lenau, kết thúc nhạt dần theo cuối đời nhân vật); Rhode Island Philharmonic, [Till Eulenspiegel](https://www.riphil.org/blog/the-story-behind-r-strauss-till-eulenspiegel-s-merry-pranks) (hai chủ đề của Till); LA Phil, [La mer](https://www.laphil.com/works/la-mer) (*trois esquisses symphoniques*); Boston Symphony Orchestra, [Sibelius, Finlandia](https://www.bso.org/works/sibelius-finlandia) (viết trong bối cảnh phản kháng sự kiểm duyệt của Nga ở Phần Lan).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

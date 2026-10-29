@@ -1,47 +1,47 @@
 ---
 title: Concerto và ritornello
-description: Concerto là tác phẩm cho một (hoặc vài) nhạc cụ độc tấu cùng dàn nhạc. Sức hấp dẫn của nó nằm ở cuộc "đối thoại", có khi là "tranh tài", giữa một người và số…
+description: Concerto là tác phẩm cho một (hoặc vài) nhạc cụ độc tấu cùng dàn nhạc. Khi nghe, hãy để ý cuộc đối đáp, có khi là tranh tài, giữa một người và số đông.
 ---
 
-**Concerto** là tác phẩm cho **một (hoặc vài) nhạc cụ độc tấu** cùng dàn nhạc. Sức hấp dẫn của nó nằm ở cuộc "đối thoại", có khi là "tranh tài", giữa một người và số đông.
+**Concerto** là tác phẩm cho **một (hoặc vài) nhạc cụ độc tấu** cùng dàn nhạc. Khi nghe, hãy để ý cuộc đối đáp, có khi là tranh tài, giữa một người và số đông.
 
 ## Concerto thời Baroque: hình thức ritornello
 
-Vivaldi và Bach dùng hình thức **ritornello** (tiếng Ý: "điệp khúc nhỏ"):
+Concerto Baroque, như của Vivaldi, thường dùng hình thức **ritornello** (tiếng Ý: "lần quay lại nhỏ"):
 
 - **Ritornello** do **cả dàn nhạc** (*tutti*) chơi, mở đầu và kết thúc chương, và quay lại nhiều lần ở giữa, thường **ở các giọng khác nhau** và có khi chỉ một đoạn ngắn.
-- Xen giữa là các **đoạn độc tấu** (*solo*): nhạc cụ độc tấu khoe kỹ thuật, chuyển giọng.
+- Xen giữa là các **đoạn độc tấu** (*solo*): nhạc cụ độc tấu chơi nhanh và điêu luyện hơn.
 
 ```mermaid
 flowchart LR
-    R1["Ritornello<br/>giọng chính"] --> S1["Độc tấu"] --> R2["Ritornello<br/>giọng khác"] --> S2["Độc tấu"] --> R3["Ritornello<br/>giọng khác"] --> S3["Độc tấu"] --> R4["Ritornello<br/>giọng chính"]
+    R1["Ritornello<br/>mở đầu"] --> S1["Độc tấu"] --> R2["Ritornello<br/>giọng khác"] --> S2["Độc tấu"] --> R3["Ritornello<br/>giọng khác"] --> S3["Độc tấu"] --> R4["Ritornello<br/>giọng chính"]
 ```
 
-Khác với rondo, ritornello quay lại ở **giọng khác nhau** và thường **bị rút ngắn**; nó vừa là điệp khúc, vừa là "cột mốc" chuyển giọng.
+Khác với rondo, nơi điệp khúc luôn trở lại ở chủ âm, ritornello quay lại ở **giọng khác nhau** và thường chỉ là **một phần** của đoạn gốc.
 
 Ngoài ra còn **concerto grosso**: một nhóm nhỏ nhạc cụ độc tấu (*concertino*) đối đáp với cả dàn nhạc (*ripieno*), như các concerto Op. 6 của Corelli và Handel.
 
-**Đi qua một tác phẩm:** [Vivaldi *Mùa xuân*, chương 1](/opus/nghe-nhac/vivaldi-mua-xuan/) là ví dụ mẫu mực, có hướng dẫn nghe chi tiết.
+**Đi qua một tác phẩm:** [Vivaldi *Mùa xuân*, chương 1](/opus/nghe-nhac/vivaldi-mua-xuan/) là một ví dụ rõ về ritornello, có hướng dẫn nghe chi tiết.
 
 ## Concerto thời Cổ điển và Lãng mạn
 
-Từ Mozart, concerto thường có **3 chương: nhanh – chậm – nhanh**.
+Concerto thời Cổ điển thường có **3 chương: nhanh – chậm – nhanh**.
 
 - **Chương 1** kết hợp hình thức sonata với ý tưởng ritornello: thường có một phần trình bày của **dàn nhạc** trước, rồi một phần trình bày của **nghệ sĩ độc tấu**.
-- **Cadenza**: gần cuối chương 1, dàn nhạc dừng lại trên một hợp âm, nghệ sĩ độc tấu chơi một mình một đoạn tự do, khoe kỹ thuật và tưởng tượng, rồi dàn nhạc vào lại để kết. Thời Mozart, cadenza thường được **ứng tác**; từ Beethoven, nhà soạn nhạc viết sẵn ngày càng nhiều.
-- **Chương 2**: chậm, trữ tình, như một aria không lời.
-- **Chương 3**: nhanh, thường là rondo.
+- **Cadenza**: gần cuối chương 1, dàn nhạc dừng lại trên một hợp âm, nghệ sĩ độc tấu chơi một mình một đoạn tự do, khoe kỹ thuật và tưởng tượng, rồi dàn nhạc vào lại để kết. Cadenza vốn được **ứng tác**; từ thời Mozart và Beethoven, nhà soạn nhạc ngày càng viết sẵn.
+- **Chương 2**: chậm.
+- **Chương 3**: nhanh, thường ở hình thức rondo.
 
-Thời Lãng mạn, nhà soạn nhạc phá dần khuôn mẫu: Mendelssohn cho violin vào ngay từ ô nhịp thứ hai và nối các chương liền nhau; Rachmaninoff mở đầu Concerto số 2 bằng piano độc tấu.
+Thời Lãng mạn, nhà soạn nhạc thay đổi dần khuôn mẫu: Mendelssohn bỏ phần trình bày riêng của dàn nhạc, cho violin vào gần như ngay lập tức, và nối các chương liền nhau; Rachmaninoff mở đầu Concerto số 2 bằng piano độc tấu.
 
 ## Nghe thêm
 
 | Tác phẩm | Điều cần nghe | Hướng dẫn |
 |---|---|---|
 | Vivaldi *Bốn Mùa* | Ritornello, âm nhạc miêu tả | [Mùa xuân](/opus/nghe-nhac/vivaldi-mua-xuan/) |
-| Bach *Brandenburg Concerto* số 5, chương 1 | Harpsichord, vốn chỉ đệm, bỗng có một cadenza dài | |
+| Bach *Brandenburg Concerto* số 5, chương 1 | Harpsichord, vốn chỉ đệm, bỗng có một đoạn độc tấu dài như cadenza | |
 | Mendelssohn Concerto violin | Cadenza đặt trước tái hiện; các chương nối liền | [Hướng dẫn](/opus/nghe-nhac/mendelssohn-violin/) |
-| Rachmaninoff Concerto piano số 2 | Mở đầu bằng 8 hợp âm piano như tiếng chuông | [Hướng dẫn](/opus/nghe-nhac/rachmaninoff-2/) |
+| Rachmaninoff Concerto piano số 2 | Mở đầu bằng loạt hợp âm piano ngân như tiếng chuông, dài 8 ô nhịp | [Hướng dẫn](/opus/nghe-nhac/rachmaninoff-2/) |
 | Rodrigo *Concierto de Aranjuez*, chương 2 | Guitar và kèn cor anglais đối đáp | |
 
 ```quiz
@@ -54,7 +54,7 @@ Thời Lãng mạn, nhà soạn nhạc phá dần khuôn mẫu: Mendelssohn cho 
 + Đoạn độc tấu tự do khi dàn nhạc dừng lại
 - Chương chậm của concerto
 - Đoạn dàn nhạc chơi một mình
-> Thời Mozart thường được ứng tác.
+> Vốn được ứng tác; về sau nhà soạn nhạc ngày càng viết sẵn.
 ? Concerto Cổ điển thường có bao nhiêu chương?
 - 2
 + 3
@@ -64,5 +64,8 @@ Thời Lãng mạn, nhà soạn nhạc phá dần khuôn mẫu: Mendelssohn cho 
 
 ## Nguồn
 
-- [Open Music Theory](https://viva.pressbooks.pub/openmusictheory/), phần hình thức.
-- Ví dụ tác phẩm đối chiếu với bản nhạc trên [IMSLP](https://imslp.org/). Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
+- *The Concise Oxford Dictionary of Music*, qua Encyclopedia.com: [concerto](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/concerto), [concerto grosso](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/concerto-grosso), [cadenza](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/cadenza).
+- Ritornello: Listen, bản 8 (Macmillan Learning), [mục ritornello](https://digfir-published.macmillanusa.com/listen8e/listen8e_ch10_13.html); LCS Productions, [Ritornello Form](https://lcsproductions.net/MusicHistory/MusHistRev/MusicalForms/Ritornello.html); Open Music Theory, [Rondo](https://viva.pressbooks.pub/openmusictheory/chapter/rondo/) (điệp khúc rondo luôn ở chủ âm).
+- Concerto Cổ điển: Humanities LibreTexts, [Concertos in the Classical Era](https://human.libretexts.org/Courses/Prince_Georges_Community_College/Music_Appreciation%3A_A_Topical_Approach_to_Music_Genre_and_Style/08%3A_The_Instrumental_Concerto/8.04%3A_Concertos_in_the_Classical_Era); Carnegie Mellon, [Double Exposition and Ritornello](https://www.andrew.cmu.edu/user/johnito/music_theory/Form/Form4lrgr/FirstMvtCto.pdf).
+- Tác phẩm: Teoria, [Vivaldi, La Primavera, chương 1](https://www.teoria.com/en/articles/2021/vivaldi-seasons/primavera/01.php); IMSLP, [Corelli, Concerti grossi Op. 6](https://imslp.org/wiki/12_Concerti_Grossi,_Op.6_(Corelli,_Arcangelo)) và [Handel, Concerti grossi Op. 6](https://imslp.org/wiki/12_Concerti_Grossi,_Op.6_(Handel,_George_Frideric)); Bach Choir of Bethlehem, [Brandenburg số 5](https://bach.org/education/bwv-1050/); Cleveland Orchestra, [Mendelssohn, Concerto violin](https://www.clevelandorchestra.com/works/violin-concerto-mendelssohn) và Indianapolis Symphony, [Mendelssohn](https://www.indianapolissymphony.org/backstage/program-notes/mendelssohn-concerto-in-e-minor/); LA Phil, [Rachmaninoff, Concerto số 2](https://www.laphil.com/works/piano-concerto-no-2-in-c-minor-op-18); Reading Symphony, [Concierto de Aranjuez](https://readingsymphony.org/program-notes-concierto-de-aranjuez-for-guitar-and-orchestra/).
+- Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

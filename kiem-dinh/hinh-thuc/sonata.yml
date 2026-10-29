@@ -1,0 +1,441 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa hinh-thuc/sonata
+trang: src/content/docs/hinh-thuc/sonata.md
+nguon_cu: ../opus-zero/docs/hinh-thuc/sonata.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-29
+    nhanh: moi/d5-l2
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D5-L2 lượt 1, phần A)
+      luot_2: null
+      review: null
+      kiem_mau: null
+nguon:
+  - id: omt-sonata
+    bac: 2
+    ten: Open Music Theory, Sonata Form
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/sonata-form/
+  - id: omt-rondo
+    bac: 2
+    ten: Open Music Theory, Rondo
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/rondo/
+  - id: brit-sonata
+    bac: 2
+    ten: Encyclopaedia Britannica, Sonata form
+    link: https://www.britannica.com/art/sonata-form
+  - id: brit-dev
+    bac: 2
+    ten: "Encyclopaedia Britannica, Sonata form: Development"
+    link: https://www.britannica.com/art/sonata-form/Development
+  - id: brit-sonatina
+    bac: 2
+    ten: Encyclopaedia Britannica, Sonatina
+    link: https://www.britannica.com/art/sonatina-music
+  - id: ency-sonata
+    bac: 2
+    ten: Concise Oxford Dictionary of Music (Encyclopedia.com), sonata form
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/sonata-form
+  - id: ency-sonrondo
+    bac: 2
+    ten: Concise Oxford Dictionary of Music (Encyclopedia.com), sonata rondo
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/sonata-rondo
+  - id: louis-symph
+    bac: 2
+    ten: "Music Appreciation (Louis), Classical Period: The Symphony"
+    link: https://louis.pressbooks.pub/musicappreciation/chapter/classical-period-the-symphony/
+  - id: mto-malin
+    bac: 2
+    ten: Maliniak, The Classical Concerto First-Movement Cadenza, Music Theory Online 31.3
+    link: https://www.mtosmt.org/issues/mto.25.31.3/mto.25.31.3.maliniak.html
+  - id: henle-545
+    bac: 2
+    ten: G. Henle Verlag, Klaviersonate C-dur KV 545 (HN 164)
+    link: https://www.henle.de/de/Klaviersonate-C-dur-KV-545-Sonata-facile/HN-164
+  - id: imslp-545
+    bac: 1
+    ten: IMSLP, Piano Sonata No.16, K.545 (Mozart)
+    link: https://imslp.org/wiki/Piano_Sonata_No.16,_K.545_%28Mozart,_Wolfgang_Amadeus%29
+  - id: mutopia-545
+    bac: 1
+    ten: Mutopia Project, Sonata facile chương 1 (tệp LilyPond theo IMSLP)
+    link: https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=998
+  - id: gerber
+    bac: 2
+    ten: Gerber, A Macro-Analytical Approach to Mozart's Piano Sonata in C Major, K. 545, Musical Insights 1 (1997)
+    link: https://macromusic.org/journal/volume1/Gerber.html
+  - id: ptna-545
+    bac: 2
+    ten: PTNA Piano Music Encyclopedia, K. 545 chương 1
+    link: https://enc.piano.or.jp/en/musics/30516
+nhan_dinh:
+  - id: n1
+    cau: Hình thức sonata là "kiến trúc" quan trọng của nhạc thời Cổ điển, và các nhà soạn nhạc thời Lãng mạn vẫn tiếp tục dùng (dòng mô tả và đoạn mở đầu).
+    loai: lich-su
+    nguon:
+      - brit-sonata
+      - omt-sonata
+    ket_qua: da-sua
+    ghi_chu: 'Trang cũ: "quan trọng nhất của nhạc thời Cổ điển và Lãng mạn" (so sánh "nhất", không có nguồn). Nguồn chỉ nói đây là hình thức chủ đạo của chương nhanh thời Cổ điển, còn thời Lãng mạn vẫn dùng.'
+  - id: n2
+    cau: Hình thức sonata thường dùng cho chương đầu của giao hưởng, sonata, concerto, tứ tấu.
+    loai: lich-su
+    nguon:
+      - ency-sonata
+      - brit-sonata
+    ket_qua: dung
+    ghi_chu: "COD: dùng cho chương đầu của sonata, giao hưởng, concerto; Britannica nêu cả tứ tấu."
+  - id: n3
+    cau: Hiểu hình thức này thì có chỗ dựa để nghe chương đầu của nhiều bản giao hưởng từ Haydn đến Brahms.
+    loai: lich-su
+    nguon:
+      - brit-sonata
+      - louis-symph
+    ket_qua: da-sua
+    ghi_chu: 'Trang cũ: "theo dõi gần như mọi bản giao hưởng" (nói quá). Đã hạ thành "chỗ dựa để nghe chương đầu của nhiều bản".'
+  - id: n4
+    cau: "Cấu trúc ba hồi: trình bày, phát triển, tái hiện, rồi coda (sơ đồ mermaid và danh sách)."
+    loai: dinh-nghia
+    nguon:
+      - omt-sonata
+      - brit-sonata
+    ket_qua: dung
+    ghi_chu: Chữ "Coda (đoạn kết)" trong sơ đồ đã sửa từ "phần kết", xem n10.
+  - id: n5
+    cau: 'Phần trình bày: chủ đề 1 ở giọng chính, đoạn chuyển để chuyển giọng, rồi chủ đề 2 ở giọng mới; hai giọng tạo nên "xung đột".'
+    loai: dinh-nghia
+    nguon:
+      - omt-sonata
+      - brit-sonata
+    ket_qua: dung
+  - id: n6
+    cau: Nếu giọng chính là trưởng, giọng mới thường là giọng át; nếu giọng chính là thứ, giọng mới thường là giọng trưởng song song.
+    loai: quy-tac
+    nguon:
+      - brit-dev
+      - omt-sonata
+    ket_qua: dung
+    ghi_chu: Giọng "trưởng song song" = relative major (chưa có trong thuat-ngu.yml).
+  - id: n7
+    cau: Thời Cổ điển, cả phần trình bày thường được nhắc lại.
+    loai: quy-tac
+    nguon:
+      - brit-sonata
+      - brit-dev
+    ket_qua: dung
+  - id: n8
+    cau: "Phát triển: các chủ đề thường bị chia nhỏ, kết hợp lại và đưa qua nhiều giọng, thường là những giọng xa giọng chính; đây là phần bất ổn nhất."
+    loai: dinh-nghia
+    nguon:
+      - omt-sonata
+      - brit-dev
+    ket_qua: da-sua
+    ghi_chu: 'Trang cũ: "giọng thứ", "căng thẳng nhất". Phát triển không nhất thiết đi qua giọng thứ; sửa theo nguồn.'
+  - id: n9
+    cau: "Tái hiện: chủ đề 1 ở giọng chính, chủ đề 2 cũng ở giọng chính; xung đột được giải quyết."
+    loai: dinh-nghia
+    nguon:
+      - omt-sonata
+      - brit-sonata
+    ket_qua: dung
+  - id: n10
+    cau: Coda là đoạn kết, có thể ngắn hay rất dài, như coda chương 1 Giao hưởng số 5 của Beethoven.
+    loai: dinh-nghia
+    nguon:
+      - omt-sonata
+      - louis-symph
+    ket_qua: da-sua
+    ghi_chu: 'Trang cũ: "có thể rất ngắn (Mozart) hoặc dài như một phần phát triển thứ hai (Beethoven)": không có nguồn cho vế Mozart và so sánh. Thuật ngữ: thuat-ngu.yml dùng "Đoạn kết (coda)".'
+  - id: n11
+    cau: Có khi trước phần trình bày còn có một đoạn mở đầu chậm, như trong Giao hưởng số 99 của Haydn.
+    loai: lich-su
+    nguon:
+      - omt-sonata
+      - louis-symph
+    ket_qua: da-sua
+    ghi_chu: 'Trang cũ: "nhiều giao hưởng của Haydn" (không có nguồn). Giáo trình Louis nêu số 99.'
+  - id: n12
+    cau: Xem bài 19 về chuyển giọng (link).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Kiểm trên site mới: src/content/docs/nhac-ly/19-at-phu-chuyen-giong.md có, link /opus/nhac-ly/19-at-phu-chuyen-giong/ đúng."
+  - id: n13
+    cau: "Khung gợi ý: có bài học K. 545 (cấu trúc từng ô, chỗ khó, kế hoạch tập) và Sonata Op. 49 số 2 của Beethoven, chương 1, là chương sonata dễ hơn."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích CHƯA chuyển (piano/tac-pham/mozart-k545, beethoven-op49-2). Kiểm trên site cũ ~/w/opus-zero/docs/piano/tac-pham/{mozart-k545,beethoven-op49-2}.md: cả hai tồn tại. Lô chuyển hai bài học phải giữ: có cấu trúc từng ô, chỗ khó, kế hoạch tập; Op. 49 số 2 dễ hơn K. 545. Chữ "hình thức sonata nhỏ" của trang cũ đã đổi thành "chương sonata dễ hơn".'
+  - id: n14
+    cau: Mozart, Sonata piano cung Đô trưởng, K. 545.
+    loai: danh-muc
+    nguon:
+      - henle-545
+      - imslp-545
+    ket_qua: dung
+  - id: n15
+    cau: Sonata K. 545 viết năm 1788.
+    loai: nam
+    nguon:
+      - henle-545
+    ket_qua: dung
+  - id: n16
+    cau: 'Mozart ghi sonata này là "cho người mới học" (danh mục tự ghi của Mozart: "für Anfänger").'
+    loai: lich-su
+    nguon:
+      - henle-545
+    ket_qua: dung
+    ghi_chu: 'Henle HN 164: danh mục Mozart ghi "für Anfänger".'
+  - id: n17
+    cau: Chương 1 chỉ dài khoảng 73 ô nhịp.
+    loai: so-lieu
+    nguon:
+      - gerber
+      - ptna-545
+      - mutopia-545
+    ket_qua: null
+    ghi_chu: "chưa chắc: không nguồn nào đã mở nêu tổng số ô. PTNA chỉ ghi thời lượng; Gerber trích đến ô 73; Mutopia/IMSLP cho trình bày 1–28, phát triển 29–41, tái hiện từ ô 42. Suy ra: tái hiện = 28 ô + 4 ô đoạn chuyển mở rộng (chủ đề 2 ở ô 59 thay vì 55) thì cuối ở ô 73, khớp. Lượt 2 nên đếm ô cuối trên bản IMSLP/Mutopia."
+  - id: n18
+    cau: Chương 1 chơi trong 4–5 phút.
+    loai: so-lieu
+    nguon:
+      - ptna-545
+    ket_qua: dung
+    ghi_chu: "PTNA: 4 phút 30 giây."
+  - id: n19
+    cau: Mở bản nhạc trên IMSLP (tìm "K.545").
+    loai: danh-muc
+    nguon:
+      - imslp-545
+    ket_qua: dung
+    ghi_chu: Trang IMSLP K.545 có thật, đã mở.
+  - id: n20
+    cau: 'Ô 1–4: chủ đề 1 ở Đô trưởng; giai điệu đơn giản trên hợp âm rải tay trái (kiểu đệm "Alberti").'
+    loai: cau-truc
+    nguon:
+      - mutopia-545
+      - gerber
+      - ptna-545
+    ket_qua: dung
+  - id: n21
+    cau: "Ô 5–12: đoạn chuyển gồm các chuỗi gam móc kép nối tiếp, mỗi chuỗi bắt đầu thấp hơn chuỗi trước, rồi hợp âm Rê trưởng (V/V) dẫn sang giọng mới; Đô → Sol."
+    loai: cau-truc
+    nguon:
+      - mutopia-545
+      - gerber
+    ket_qua: da-sua
+    ghi_chu: 'Trang cũ: "Các chuỗi gam đi xuống". Bản nhạc: chuỗi sau bắt đầu thấp hơn chuỗi trước. Lưu ý cho bài học K. 545: nếu bài ấy viết "gam đi xuống" thì phải kiểm lại; đoạn chuyển kết bằng nửa kết ở Sol, ô 11–12.'
+  - id: n22
+    cau: "Ô 13–28: chủ đề 2 ở Sol trưởng (giọng át), rồi các nốt láy rền và chuỗi nốt nhanh khép phần trình bày."
+    loai: cau-truc
+    nguon:
+      - mutopia-545
+      - gerber
+    ket_qua: dung
+    ghi_chu: 'Cột ô ghi "(khoảng)"; chủ đề 2 vào ô 14 (ô 13 là ô nối). Lưu ý cho bài học K. 545: chủ đề 2 ở ô 14.'
+  - id: n23
+    cau: Phần trình bày (ô 1–28) được nhắc lại.
+    loai: cau-truc
+    nguon:
+      - mutopia-545
+      - imslp-545
+    ket_qua: dung
+  - id: n24
+    cau: "Ô 29–41: phát triển đi qua các giọng thứ (Sol thứ, Rê thứ, La thứ), dùng chất liệu từ phần kết của trình bày."
+    loai: cau-truc
+    nguon:
+      - mutopia-545
+      - gerber
+    ket_qua: dung
+  - id: n25
+    cau: "Ô 42–57: tái hiện chủ đề 1 ở Fa trưởng (không phải Đô trưởng); đoạn chuyển được mở rộng để đưa nhạc về Đô; Fa → Đô trưởng."
+    loai: cau-truc
+    nguon:
+      - mutopia-545
+      - gerber
+    ket_qua: da-sua
+    ghi_chu: 'Trang cũ: cột giọng chỉ "Fa trưởng", chưa nói đoạn chuyển mở rộng.'
+  - id: n26
+    cau: "Ô 58–73: chủ đề 2 trở lại ở Đô trưởng (từ ô 59); xung đột được giải quyết."
+    loai: cau-truc
+    nguon:
+      - gerber
+      - mutopia-545
+    ket_qua: null
+    ghi_chu: 'chưa chắc: chủ đề 2 ở Đô trưởng từ ô 59 có nguồn (Gerber); mốc cuối "73" chưa có nguồn, xem n17.'
+  - id: n27
+    cau: Mozart bắt đầu tái hiện ở giọng hạ át (Fa trưởng), một cách làm khác thường; đoạn chuyển trong tái hiện được mở rộng (từ ô 46) để đưa nhạc về Đô trưởng, nên chủ đề 2 vẫn trở lại ở giọng chính.
+    loai: cau-truc
+    nguon:
+      - gerber
+      - mutopia-545
+    ket_qua: da-sua
+    ghi_chu: 'Trang cũ nói "Mozart không cần viết lại đoạn chuyển": SAI, đoạn chuyển được mở rộng từ ô 46.'
+  - id: n28
+    cau: "Mozart Giao hưởng số 40, chương 1: chủ đề 2 ở Si♭ trưởng (trình bày) rồi ở Sol thứ (tái hiện)."
+    loai: cau-truc
+    nguon:
+      - louis-symph
+    ket_qua: dung
+  - id: n29
+    cau: "Beethoven Giao hưởng số 5, chương 1: cả chương xây từ một môtip bốn nốt; coda rất dài."
+    loai: cau-truc
+    nguon:
+      - louis-symph
+    ket_qua: dung
+  - id: n30
+    cau: "Mendelssohn Concerto violin, chương 1: cadenza đặt trước tái hiện, khác thường lệ."
+    loai: cau-truc
+    nguon:
+      - mto-malin
+    ket_qua: dung
+  - id: n31
+    cau: Link hướng dẫn nghe Mozart Giao hưởng số 40 (/opus/nghe-nhac/mozart-40/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Trang đích CHƯA chuyển. Site cũ ~/w/opus-zero/docs/nghe-nhac/mozart-40.md có. Lô chuyển trang phải giữ: chủ đề 2 ở Si♭ trưởng rồi Sol thứ."
+  - id: n32
+    cau: Link hướng dẫn nghe Beethoven Giao hưởng số 5 (/opus/nghe-nhac/beethoven-5/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Trang đích CHƯA chuyển. Site cũ nghe-nhac/beethoven-5.md có. Lô chuyển phải giữ: môtip bốn nốt, coda rất dài."
+  - id: n33
+    cau: Link hướng dẫn nghe Mendelssohn Concerto violin (/opus/nghe-nhac/mendelssohn-violin/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Trang đích CHƯA chuyển. Site cũ nghe-nhac/mendelssohn-violin.md có. Lô chuyển phải giữ: cadenza đặt trước tái hiện."
+  - id: n34
+    cau: "Sonata-rondo: chủ đề 1 quay lại thêm nhiều lần như rondo."
+    loai: dinh-nghia
+    nguon:
+      - ency-sonrondo
+      - omt-rondo
+    ket_qua: da-sua
+    ghi_chu: 'Trang cũ: "hay gặp ở chương cuối" (bỏ vì không nguồn cho vế đó); thêm ví dụ n35.'
+  - id: n35
+    cau: Chương cuối Sonata Pathétique (Op. 13) của Beethoven là sonata-rondo.
+    loai: lich-su
+    nguon:
+      - omt-rondo
+      - ency-sonrondo
+    ket_qua: dung
+  - id: n36
+    cau: "Sonatina: sonata ngắn và nhẹ hơn; chương đầu theo hình thức sonata nhưng phần phát triển rất ngắn hoặc không có."
+    loai: dinh-nghia
+    nguon:
+      - brit-sonatina
+    ket_qua: da-sua
+    ghi_chu: 'Trang cũ: "hình thức sonata thu nhỏ".'
+  - id: n37
+    cau: Những bản sonatina piano đầu tiên (Clementi, Kuhlau) thường viết để dạy đàn.
+    loai: lich-su
+    nguon:
+      - brit-sonatina
+    ket_qua: da-sua
+    ghi_chu: 'Trang cũ: "bài người học piano chơi ở năm thứ hai, thứ ba" (không nguồn).'
+  - id: n38
+    cau: Từ giữa thế kỷ 19 về sau, các nhà soạn nhạc vẫn tiếp tục dùng hình thức sonata.
+    loai: lich-su
+    nguon:
+      - brit-sonata
+      - louis-symph
+    ket_qua: da-sua
+    ghi_chu: 'Trang cũ: "từ cuối thế kỷ 19 co giãn rất tự do; tư duy vẫn còn đến hôm nay" (không nguồn).'
+  - id: q1
+    cau: "Quiz 1: trong phần trình bày ở giọng trưởng, chủ đề 2 thường ở giọng át (Đô trưởng → Sol trưởng); phương án sai: giọng thứ cùng tên, giọng hạ át."
+    loai: quy-tac
+    nguon:
+      - brit-dev
+      - omt-sonata
+    ket_qua: dung
+    ghi_chu: Lời giải thích không dựa vào vị trí lựa chọn.
+  - id: q2
+    cau: "Quiz 2: phần phát triển thường bất ổn và đi qua nhiều giọng nhất; giải thích: các chủ đề thường bị chia nhỏ, kết hợp lại và đưa qua nhiều giọng."
+    loai: dinh-nghia
+    nguon:
+      - omt-sonata
+      - brit-dev
+    ket_qua: da-sua
+    ghi_chu: 'Giải thích cũ: "bị chia nhỏ và biến đổi"; sửa cho khớp n8.'
+  - id: q3
+    cau: "Quiz 3: trong tái hiện, chủ đề 2 ở giọng chính; phương án sai: giọng át, giọng thứ song song."
+    loai: dinh-nghia
+    nguon:
+      - omt-sonata
+      - brit-sonata
+    ket_qua: dung
+  - id: q4
+    cau: "Quiz 4: điều khác thường ở tái hiện K. 545 chương 1 là chủ đề 1 trở lại ở Fa trưởng thay vì Đô trưởng; Mozart bắt đầu tái hiện ở giọng hạ át rồi đưa nhạc về Đô trưởng cho chủ đề 2."
+    loai: cau-truc
+    nguon:
+      - gerber
+      - mutopia-545
+    ket_qua: da-sua
+    ghi_chu: 'Giải thích cũ: "Một lối tắt hiếm gặp" (sai, xem n27).'
+khuong_nhac: []
+ghi_chu: 'Lượt 1 (D5-L2 phần A). Trang sonata: 38 nhận định cộng 4 câu quiz, không có khối abc; sơ đồ mermaid kiểm ở n4. Thuật ngữ chưa có trong thuat-ngu.yml (không làm hồ sơ thuật ngữ): chủ đề, đoạn chuyển, đoạn mở đầu (introduction), sonata-rondo, sonatina, giọng trưởng song song, giọng hạ át. Đã dùng "đoạn kết" cho coda, khớp thuat-ngu. Chưa chắc: n17 và n26 (mốc ô 73, không nguồn nào nêu tổng số ô).'
+doi_chu:
+  - cu: Hình thức sonata là "kiến trúc" quan trọng nhất của nhạc thời Cổ điển và Lãng mạn. Nó thường dùng cho chương đầu của giao hưởng, sonata, concerto, tứ tấu. Hiểu nó rồi, bạn có thể theo dõi gần như mọi bản giao hưởng từ Haydn đến Brahms.
+    moi: Hình thức sonata là "kiến trúc" quan trọng của nhạc thời Cổ điển, và các nhà soạn nhạc thời Lãng mạn vẫn tiếp tục dùng. Nó thường dùng cho chương đầu của giao hưởng, sonata, concerto, tứ tấu. Hiểu nó rồi, bạn có chỗ dựa để nghe chương đầu của nhiều bản giao hưởng từ Haydn đến Brahms.
+    ly_do: 'n1 (da-sua): bỏ "nhất", nguồn không xếp hạng.; n3 (da-sua): hạ câu nói quá.'
+  - cu: flowchart LR A["Trình bày<br/>Chủ đề 1 (giọng chính)<br/>→ chuyển giọng →<br/>Chủ đề 2 (giọng mới)"] --> B["Phát triển<br/>chia nhỏ, biến đổi,<br/>đi qua nhiều giọng"] B --> C["Tái hiện<br/>Chủ đề 1 (giọng chính)<br/>Chủ đề 2 (giọng chính)"] C --> D["Coda<br/>(phần kết)"]
+    moi: flowchart LR A["Trình bày<br/>Chủ đề 1 (giọng chính)<br/>→ chuyển giọng →<br/>Chủ đề 2 (giọng mới)"] --> B["Phát triển<br/>chia nhỏ, biến đổi,<br/>đi qua nhiều giọng"] B --> C["Tái hiện<br/>Chủ đề 1 (giọng chính)<br/>Chủ đề 2 (giọng chính)"] C --> D["Coda<br/>(đoạn kết)"]
+    ly_do: "n8, q2 (da-sua): sơ đồ: phát triển không nhất thiết qua giọng thứ (OMT)."
+  - cu: "Phát triển (development): các chủ đề bị chia nhỏ, biến đổi, chồng lên nhau, đưa qua nhiều giọng, thường là giọng thứ. Đây là phần bất ổn, căng thẳng nhất."
+    moi: "Phát triển (development): các chủ đề thường bị chia nhỏ, kết hợp lại và đưa qua nhiều giọng, thường là những giọng xa giọng chính. Đây là phần bất ổn nhất."
+    ly_do: "n8 (da-sua): phát triển không nhất thiết đi qua giọng thứ.; q2 (da-sua): khớp n8."
+  - cu:
+      - "Coda: phần kết, có thể rất ngắn (Mozart) hoặc dài như một phần phát triển thứ hai (Beethoven)."
+      - Có khi trước phần trình bày còn có một đoạn mở đầu chậm (introduction), như trong nhiều giao hưởng của Haydn.
+    moi:
+      - "Coda: đoạn kết, có thể ngắn hay rất dài, như coda chương 1 Giao hưởng số 5 của Beethoven."
+      - Có khi trước phần trình bày còn có một đoạn mở đầu chậm (introduction), như trong Giao hưởng số 99 của Haydn.
+    ly_do: 'n10 (da-sua): bỏ vế Mozart không nguồn; "đoạn kết" theo thuat-ngu.yml.; n11 (da-sua): nêu đúng ví dụ có nguồn.'
+  - cu:
+      - "Có bài học K. 545 với cấu trúc từng ô, chỗ khó và kế hoạch tập. Một hình thức sonata nhỏ và dễ hơn: Sonata Op. 49 số 2 của Beethoven, chương 1."
+      - 'Sonata piano cung Đô trưởng, K. 545 (1788), được Mozart ghi là "cho người mới học", là ví dụ rõ ràng nhất về hình thức sonata. Chương 1 chỉ dài khoảng 73 ô nhịp, chơi trong 4–5 phút. Mở bản nhạc trên IMSLP (tìm "K.545") và theo dõi:'
+    moi:
+      - "Có bài học K. 545 với cấu trúc từng ô, chỗ khó và kế hoạch tập. Một chương sonata dễ hơn: Sonata Op. 49 số 2 của Beethoven, chương 1."
+      - 'Sonata piano cung Đô trưởng, K. 545 (1788), được Mozart ghi là "cho người mới học", là một ví dụ gọn và rõ về hình thức sonata. Chương 1 chỉ dài khoảng 73 ô nhịp, chơi trong 4–5 phút. Mở bản nhạc trên IMSLP (tìm "K.545") và theo dõi:'
+    ly_do: "Câu ve-site (lượt 1 D5-L2): mô tả bài Op. 49 số 2 viết lại cho khớp trang đích."
+  - cu: Các chuỗi gam đi xuống, rồi hợp âm Rê trưởng (V/V) dẫn sang giọng mới
+    moi: Các chuỗi gam móc kép nối tiếp, mỗi chuỗi bắt đầu thấp hơn chuỗi trước, rồi hợp âm Rê trưởng (V/V) dẫn sang giọng mới
+    ly_do: "n21 (da-sua): theo bản nhạc, mỗi chuỗi bắt đầu thấp hơn chuỗi trước."
+  - cu:
+      - "Bất ngờ: chủ đề 1 trở lại ở Fa trưởng, không phải Đô trưởng"
+      - Fa trưởng
+    moi:
+      - "Bất ngờ: chủ đề 1 trở lại ở Fa trưởng, không phải Đô trưởng; đoạn chuyển được mở rộng để đưa nhạc về Đô"
+      - Fa → Đô trưởng
+    ly_do: "n25 (da-sua): thêm đoạn chuyển mở rộng."
+  - cu: "Chi tiết thú vị: bắt đầu tái hiện ở giọng hạ át (Fa trưởng) là một lối tắt hiếm gặp. Vì đoạn chuyển vốn đẩy nhạc lên một quãng 5, bắt đầu từ Fa thì đoạn chuyển tự nhiên đưa nhạc về đúng Đô trưởng cho chủ đề 2, nên Mozart không cần viết lại đoạn chuyển."
+    moi: "Chi tiết thú vị: Mozart bắt đầu tái hiện ở giọng hạ át (Fa trưởng), một cách làm khác thường. Đoạn chuyển trong phần tái hiện được mở rộng (từ ô 46) để đưa nhạc về Đô trưởng, nên chủ đề 2 vẫn trở lại ở giọng chính."
+    ly_do: "n27 (da-sua): câu cũ sai, đoạn chuyển được mở rộng."
+  - cu:
+      - "Sonata – rondo: chủ đề 1 quay lại thêm nhiều lần như rondo; hay gặp ở chương cuối."
+      - "Sonatina: hình thức sonata thu nhỏ, phần phát triển rất ngắn hoặc không có. Đây là những bài người học piano chơi ở năm thứ hai, thứ ba (Clementi, Kuhlau)."
+      - Từ cuối thế kỷ 19, các nhà soạn nhạc co giãn hình thức này rất tự do; nhưng tư duy "trình bày – phát triển – trở về" vẫn còn đến hôm nay.
+    moi:
+      - "Sonata – rondo: chủ đề 1 quay lại thêm nhiều lần như rondo; ví dụ chương cuối Sonata Pathétique (Op. 13) của Beethoven."
+      - "Sonatina: sonata ngắn và nhẹ hơn; chương đầu theo hình thức sonata nhưng phần phát triển rất ngắn hoặc không có. Những bản sonatina piano đầu tiên (Clementi, Kuhlau) thường viết để dạy đàn."
+      - Từ giữa thế kỷ 19 về sau, các nhà soạn nhạc vẫn tiếp tục dùng hình thức sonata.
+    ly_do: "n34 (da-sua): bỏ vế không nguồn, thêm ví dụ.; n36, n37 (da-sua): theo Britannica.; n38 (da-sua): bỏ câu không nguồn."
+  - cu:
+      - Open Music Theory, phần hình thức.
+      - Ví dụ tác phẩm đối chiếu với bản nhạc trên IMSLP. Xem tài liệu tham khảo.
+    moi:
+      - 'Open Music Theory: chương Sonata Form (trình bày, đoạn chuyển, chủ đề 2, phát triển, tái hiện, coda, đoạn mở đầu chậm, "xung đột" giữa hai giọng) và chương Rondo (sonata – rondo).'
+      - "Encyclopaedia Britannica: Sonata form và mục Development (nơi dùng, giọng của chủ đề 2, phát triển, tái hiện, coda, nhắc lại phần trình bày); Sonatina."
+      - "The Concise Oxford Dictionary of Music, qua Encyclopedia.com: sonata form (dùng cho chương đầu của sonata, giao hưởng, concerto), sonata rondo."
+      - "Giáo trình mở: Classical Period: The Symphony (Giao hưởng số 40: chủ đề 2 ở Si♭ trưởng rồi ở Sol thứ; số 5: coda dài; số 99: đoạn mở đầu chậm); Maliniak, The Classical Concerto First-Movement Cadenza, Music Theory Online 31.3 (cadenza của Mendelssohn dẫn vào phần tái hiện)."
+      - "Mozart K. 545: G. Henle Verlag, Klaviersonate C-dur KV 545 (HN 164: danh mục của Mozart ghi \"für Anfänger\"; 1788); IMSLP; Mutopia Project, Sonata facile, chương 1 (tệp LilyPond theo IMSLP: trình bày ô 1–28 có nhắc lại, phát triển ô 29–41, tái hiện từ ô 42 ở Fa trưởng); Brandy N. Gerber, A Macro-Analytical Approach to Mozart's Piano Sonata in C Major, K. 545, Musical Insights 1 (1997); PTNA Piano Music Encyclopedia, K. 545, chương 1 (số ô, thời lượng) và Op. 49 số 2, chương 1 (hình thức sonata)."
+      - Xem tài liệu tham khảo.
+    ly_do: "Mục Nguồn (lượt 1 D5-L2): thay dòng chung bằng các nguồn đã mở (OMT, COD, Britannica, IMSLP)."
+  - cu: 'mô tả: Hình thức sonata là "kiến trúc" quan trọng nhất của nhạc thời Cổ điển và Lãng mạn. Nó thường dùng cho chương đầu của giao hưởng, sonata, concerto, tứ tấu. Hiểu…'
+    moi: 'mô tả: Hình thức sonata là "kiến trúc" quan trọng của nhạc thời Cổ điển, và các nhà soạn nhạc thời Lãng mạn vẫn tiếp tục dùng. Nó thường dùng cho chương đầu của giao hưởng, sonata…'
+    ly_do: 'Mô tả (lượt 1 D5-L2): đổi theo câu mở đầu đã sửa. Bỏ "quan trọng nhất".'
+  - cu: "câu hỏi: Phần nào thường bất ổn và đi qua nhiều giọng nhất? | Trình bày | ✓ Phát triển | Tái hiện | Các chủ đề bị chia nhỏ và biến đổi."
+    moi: "câu hỏi: Phần nào thường bất ổn và đi qua nhiều giọng nhất? | Trình bày | ✓ Phát triển | Tái hiện | Các chủ đề thường bị chia nhỏ, kết hợp lại và đưa qua nhiều giọng."
+    ly_do: 'n8, q2 (da-sua): lời giải thích câu hỏi bỏ "luôn qua giọng thứ".'
+  - cu: "câu hỏi: Điều gì khác thường trong phần tái hiện của Mozart K. 545, chương 1? | ✓ Chủ đề 1 trở lại ở Fa trưởng thay vì Đô trưởng | Không có chủ đề 2 | Phần tái hiện ở giọng thứ | Một lối tắt hiếm gặp."
+    moi: "câu hỏi: Điều gì khác thường trong phần tái hiện của Mozart K. 545, chương 1? | ✓ Chủ đề 1 trở lại ở Fa trưởng thay vì Đô trưởng | Không có chủ đề 2 | Phần tái hiện ở giọng thứ | Mozart bắt đầu tái hiện ở giọng hạ át, rồi đưa nhạc về Đô trưởng cho chủ đề 2."
+    ly_do: "q4 (da-sua): khớp n27."
