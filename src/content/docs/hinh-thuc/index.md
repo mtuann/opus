@@ -7,7 +7,7 @@ description: "Hình thức là cách một bản nhạc được sắp xếp the
 
 Biết hình thức giúp bạn không bị "lạc" khi nghe một tác phẩm dài 40 phút.
 
-Sơ đồ nhanh của năm hình thức cơ bản (mỗi ô là một đoạn, cùng màu là cùng chất liệu):
+Sơ đồ nhanh của năm hình thức: hai đoạn, ba đoạn, rondo, chủ đề và biến tấu, hình thức sonata (mỗi ô là một đoạn, cùng màu là cùng chất liệu):
 
 ::hinh{ten="form-overview"}
 
@@ -32,7 +32,7 @@ Mỗi hình thức chính có một trang riêng, đi qua một tác phẩm cụ
 :   Vũ khúc 3/4: minuet – trio – minuet. Chương 3 giao hưởng thời Cổ điển.
 
 [Scherzo](/opus/hinh-thuc/scherzo/)
-:   "Trò đùa" của Beethoven thay minuet: nhanh, bất ngờ, đầy năng lượng.
+:   "Trò đùa": chương nhanh, nhịp 3, nhiều bất ngờ; Beethoven dùng nó thay minuet trong giao hưởng.
 
 [Overture](/opus/hinh-thuc/overture/)
 :   Khúc mở màn: từ mở đầu opera đến overture hòa nhạc độc lập.

@@ -13,6 +13,7 @@ Chủ nghĩa nhân văn đem lại mối quan tâm mới tới Hy Lạp và La M
 
 - **Bè trầm liên tục** (basso continuo): một bè trầm (như cello, viola da gamba) cùng một nhạc cụ hòa âm (harpsichord, organ, lute) chơi suốt tác phẩm. Bè trầm được ghi bằng **bè trầm số**, người chơi tự ứng tác hợp âm bên trên.
 - Các giọng **trưởng – thứ** và những chuỗi hợp âm được dùng ngày càng nhiều (xem [bài 12](/opus/nhac-ly/12-hoa-am-chuc-nang/)).
+- **Nhịp đều đặn**: phách và nhịp rõ, phách thường được chia nhỏ liên tục (*motor rhythm*).
 - **Tương phản**: to – nhỏ đột ngột (*terraced dynamics*), độc tấu – cả dàn nhạc.
 - Giai điệu nhiều trang trí; người biểu diễn được kỳ vọng tự thêm nốt hoa mỹ.
 

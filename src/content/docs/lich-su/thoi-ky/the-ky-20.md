@@ -20,6 +20,8 @@ Hai cuộc chiến tranh thế giới và những biến động chính trị l�
 | **Tiên phong sau 1945** | Nhạc chuỗi toàn phần, nhạc điện tử, nhạc ngẫu nhiên | Messiaen, Boulez, Stockhausen, Cage, Ligeti |
 | **Tối giản** | Mẫu ngắn lặp lại, biến đổi rất chậm | Reich, Glass, Riley; "tối giản thần thánh" của Pärt, Górecki |
 
+Reich, Glass và Pärt sinh ở thế kỷ 20, nhưng dữ liệu nhà soạn nhạc của site xếp họ vào thời Đương đại (trang [Âm nhạc hôm nay](/opus/lich-su/duong-dai/)).
+
 Hai đoạn ngắn do site viết để nghe sự khác biệt. Ấn tượng: hợp âm trượt song song trên một nốt trầm giữ suốt:
 
 ```abc

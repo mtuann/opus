@@ -18,7 +18,7 @@ Beethoven giai đoạn cuối (Giao hưởng số 9, các tứ tấu cuối) là
 - **Âm nhạc chương trình**: âm nhạc kể chuyện hoặc vẽ cảnh theo một nội dung ngoài âm nhạc (Berlioz *Giao hưởng kỳ ảo*, thơ giao hưởng của Liszt).
 - **Bản sắc dân tộc**: dân ca, điệu nhảy dân gian hay nét nhạc dân tộc của Ba Lan (Chopin), Séc (Dvořák, Smetana), Na Uy (Grieg), Nga (Nhóm Năm người, Tchaikovsky).
 
-Một đoạn ngắn do site viết theo đặc trưng Lãng mạn: tay trái rải rộng, hợp âm bảy giảm, hợp âm mượn, chậm dần trước kết:
+Một đoạn ngắn do site viết theo đặc trưng Lãng mạn: tay trái rải rộng, hợp âm bảy giảm, hợp âm Fa trưởng chuyển sang Fa thứ (nốt La hạ nửa cung), chậm dần trước kết:
 
 ```abc
 X:1

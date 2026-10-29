@@ -24,7 +24,7 @@ Một trong những nhà soạn nhạc Anh vĩ đại nhất, mất năm 36 tu�
 
 ### Antonio Vivaldi (1678–1741)
 
-Linh mục và nghệ sĩ violin người Venice, dạy nhạc nhiều năm tại một trại trẻ mồ côi nữ có dàn nhạc nổi tiếng. Ông viết hơn 500 concerto và góp phần chuẩn hóa concerto ba chương (nhanh – chậm – nhanh).
+Linh mục và nghệ sĩ violin người Venice, dạy nhạc nhiều năm tại một trại trẻ mồ côi nữ có dàn nhạc nổi tiếng. Ông viết khoảng 500 concerto và góp phần chuẩn hóa concerto ba chương (nhanh – chậm – nhanh).
 
 **Nghe trước:** [*Bốn Mùa*](/opus/nghe-nhac/vivaldi-mua-xuan/); Concerto cho hai violin cung La thứ RV 522; *Gloria* RV 589.
 
@@ -64,7 +64,7 @@ Thần đồng biểu diễn khắp châu Âu từ năm 6 tuổi, Mozart sống 
 
 ### Ludwig van Beethoven (1770–1827)
 
-Học ở Vienna (có thời gian học với Haydn), Beethoven bắt đầu bị mất thính lực từ khoảng năm 1798; bệnh nặng dần, và ông gần như điếc hoàn toàn khi viết những tác phẩm cuối đời. Ông là cây cầu từ Cổ điển sang Lãng mạn, đưa giao hưởng và sonata lên quy mô và chiều sâu chưa từng có.
+Học ở Vienna (có thời gian học với Haydn), Beethoven bắt đầu bị mất thính lực từ khoảng năm 1796; bệnh nặng dần, và từ khoảng năm 1818 ông không còn trò chuyện bằng lời với khách được nữa. Ông là cây cầu từ Cổ điển sang Lãng mạn, đưa giao hưởng và sonata lên quy mô và chiều sâu chưa từng có.
 
 **Nghe trước:** [Giao hưởng số 5](/opus/nghe-nhac/beethoven-5/); Sonata piano *Ánh trăng*; Giao hưởng số 9; [Tứ tấu đàn dây Op. 132](/opus/nghe-nhac/beethoven-op132/).
 
@@ -162,13 +162,13 @@ Nhà soạn nhạc Na Uy, đưa dân ca và phong cảnh Bắc Âu vào nhạc c
 
 ### Edward Elgar (1857–1934)
 
-Nhà soạn nhạc Anh tự học phần lớn, nổi tiếng muộn ở tuổi ngoài 40 với *Enigma Variations*. Tác phẩm của ông mở ra thời kỳ nở rộ hiện đại của âm nhạc Anh.
+Nhà soạn nhạc Anh tự học phần lớn, nổi tiếng muộn ở tuổi ngoài 40 với *Enigma Variations*. Các tác phẩm của ông góp phần khơi dậy một thời kỳ phục hưng của âm nhạc Anh.
 
 **Nghe trước:** *Enigma Variations*, biến tấu *Nimrod*; Concerto cello cung Mi thứ; *Pomp and Circumstance* số 1.
 
 ### Giacomo Puccini (1858–1924)
 
-Nhà soạn opera Ý với nhiều vở theo trường phái **verismo**: đời sống thường ngày, cảm xúc mãnh liệt, giai điệu không thể quên. Opera của ông thuộc nhóm được diễn nhiều nhất thế giới. *Turandot* dang dở khi ông mất.
+Nhà soạn opera Ý, một trong những đại diện lớn nhất của chủ nghĩa hiện thực trong opera (**verismo**, lấy đề tài đời thường, đương thời). Opera của ông thuộc nhóm được diễn nhiều nhất thế giới. *Turandot* dang dở khi ông mất.
 
 **Nghe trước:** *La bohème*; *Tosca*; *Gianni Schicchi*, aria *O mio babbino caro*.
 

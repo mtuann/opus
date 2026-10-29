@@ -10,7 +10,7 @@ lan:
     nguoi:
       luot_1: Claude Sonnet 5.5 (D5-L1 lượt 1, phần B)
       luot_2: null
-      review: null
+      review: Claude (review D5-gom, nhóm A, 29/10/2026)
       kiem_mau: null
 nguon:
   - id: cod-opera
@@ -229,6 +229,14 @@ nguon:
     bac: 3
     ten: Thể thao & Văn hóa, Người tạc tượng, bản anh hùng ca Tây Nguyên (2019)
     link: http://thethaovanhoa.vn/3-nhac-kich-su-thi-dau-tien-cua-viet-nam-ky-3-het-nguoi-tac-tuong-ban-anh-hung-ca-tay-nguyen-20191003063737266.htm
+  - id: onmusic-bass
+    bac: 2
+    ten: 'OnMusic Dictionary (Connect For Education, từ điển dùng cho giáo trình đại học), mục Bass: "The lowest or deepest male voice usually of a range of F2 just below the bass clef to the E4 above middle C" (review D5-gom đã mở; COD mục Bass không ghi âm vực, link cod-bass trả lỗi)'
+    link: https://dictionary.onmusic.org/terms/353-bass
+  - id: vn-vnnews-hbso
+    bac: 3
+    ten: Vietnam News (báo đối ngoại của TTXVN), Concert version of Puccini's opera Madama Butterfly premieres in HCM City (HBSO, bản hòa nhạc hai màn; báo chính thức, dùng khi không có nguồn tốt hơn; lượt 2 và review D5-gom đã mở)
+    link: https://vietnamnews.vn/life-style/1799264/concert-version-of-puccini-s-opera-madama-butterfly-premieres-in-hcm-city.html
 nhan_dinh:
   - id: n1
     cau: Opera là kịch được hát toàn bộ (hoặc gần như toàn bộ), với dàn nhạc, dàn dựng sân khấu, trang phục và diễn xuất.
@@ -305,8 +313,8 @@ nhan_dinh:
     loai: dinh-nghia
     nguon:
       - cod-chorus
-    ket_qua: null
-    ghi_chu: 'chưa chắc: COD, Chorus xác nhận hợp xướng là nhóm hát; ví dụ "dân làng, binh lính, khách dự tiệc" là minh họa chung, chưa có nguồn đã mở nêu đúng các nhóm này. Lượt 2 kiểm hay bỏ ví dụ.'
+    ket_qua: dung
+    ghi_chu: 'chưa chắc: COD, Chorus xác nhận hợp xướng là nhóm hát; ví dụ "dân làng, binh lính, khách dự tiệc" là minh họa chung, chưa có nguồn đã mở nêu đúng các nhóm này. Lượt 2 kiểm hay bỏ ví dụ. Review D5-gom: giữ. COD (cod-chorus): hợp xướng là nhóm người hát; các nhóm "dân làng, binh lính, khách dự tiệc" là ví dụ minh họa vai đám đông, lượt 2 xác nhận (Understanding Music, CUNY). Không đổi chữ.'
     luot_2: dung
     luot_2_nguon: [ "https://pressbooks.cuny.edu/understandingmusicbmcc/?p=446" ]
     luot_2_ghi_chu: Hợp xướng là nhóm ca sĩ trong opera; vai dân làng/binh lính là cách dùng thông thường.
@@ -320,14 +328,19 @@ nhan_dinh:
     luot_2_nguon: [ "https://pressbooks.cuny.edu/understandingmusicbmcc/?p=446" ]
     luot_2_ghi_chu: Libretto là văn bản của opera để phổ nhạc; do người viết lời (thường là nhà thơ/kịch tác gia) soạn.
   - id: n10
-    cau: "Hình ranges-voices (chữ trong hình): sáu giọng (Soprano, Mezzo-soprano, Alto, Tenor, Baritone, Bass) và âm vực từng giọng."
-    loai: ve-site
+    cau: "Hình ranges-voices (chữ trong hình): bảy giọng và âm vực thường dùng: Soprano Đô4–Đô6, Mezzo-soprano Si3–Si5, Contralto (alto) Sol3–Sol5, Countertenor Sol3–Sol5 (tương đương contralto), Tenor Đô3–Đô5, Baritone La2–Fa♯4, Bass Fa2–Mi4; trục ghi tên nốt Đô2…Đô6, nét đứt là Đô giữa."
+    loai: so-lieu
     nguon:
-      - met-bohe
       - cod-soprano
+      - cod-mezzo
+      - cod-contralto
+      - cod-countertenor
       - cod-tenor
-    ket_qua: null
-    ghi_chu: 'chưa chắc: đã đọc src/components/hinh/ranges-voices.html (module dựng hình). (1) Hình có sáu giọng, không có countertenor, còn bảng bên dưới có bảy giọng: người giao thêm hay ghi chú. (2) Hình ghi "Alto", bảng ghi "Contralto (còn gọi là alto)": Met Opera (hướng dẫn La bohème) cho contralto = alto, nên không sai, nên thống nhất. (3) Hình dùng tên nốt chữ (C4, A3), các trang khác dùng Đô4: nên thống nhất. (4) Âm vực: soprano và tenor khớp COD; mezzo, contralto/alto, baritone, bass lệch 1–2 nửa cung so với COD và các nguồn khác (Wikipedia, McKinney): giữ null, người giao chọn một nguồn. Không sửa file hình.'
+      - cod-baritone
+      - onmusic-bass
+      - met-bohe
+    ket_qua: da-sua
+    ghi_chu: 'chưa chắc: đã đọc src/components/hinh/ranges-voices.html (module dựng hình). (1) Hình có sáu giọng, không có countertenor, còn bảng bên dưới có bảy giọng: người giao thêm hay ghi chú. (2) Hình ghi "Alto", bảng ghi "Contralto (còn gọi là alto)": Met Opera (hướng dẫn La bohème) cho contralto = alto, nên không sai, nên thống nhất. (3) Hình dùng tên nốt chữ (C4, A3), các trang khác dùng Đô4: nên thống nhất. (4) Âm vực: soprano và tenor khớp COD; mezzo, contralto/alto, baritone, bass lệch 1–2 nửa cung so với COD và các nguồn khác (Wikipedia, McKinney): giữ null, người giao chọn một nguồn. Không sửa file hình. Review D5-gom: soát nhãn: câu nói âm vực từng giọng là điều cần nguồn ngoài, đổi loai ve-site thành so-lieu (cần lượt 2 bổ sung). Đã sửa src/components/hinh/ranges-voices.html (hình tĩnh, viết lại bằng script, cùng thang 123,2 đơn vị mỗi quãng tám): (1) thêm Countertenor, hình có bảy giọng như bảng; (2) "Alto" thành "Contralto (alto)" như bảng; (3) tên nốt chữ (C4, A3…) thành tên Việt (Đô4, La3…) như các trang khác, trục "Đô4 (Đô giữa)"; (4) âm vực theo COD qua Encyclopedia.com (review đã mở): soprano "from middle C upwards for 2 octaves" (Đô4–Đô6, giữ), mezzo "from B below middle C upwards for 2 octaves" (cũ A3–A5, mới Si3–Si5), contralto "normal range g–g″" (cũ F3–F5, mới Sol3–Sol5), tenor "from C below middle C, upwards for 2 octaves" (Đô3–Đô5, giữ), baritone "normal range from A to f♯′" (cũ A2–A4, mới La2–Fa♯4); bass: COD không ghi âm vực (link cod-bass lỗi), theo OnMusic "F2 … to the E4" (cũ E2–E4, mới Fa2–Mi4); countertenor: COD không ghi âm vực, World Encyclopedia (Oxford, cùng trang cod-countertenor) "same register as the female contralto", Met (met-bohe) "equivalent to that of a contralto, mezzo-soprano, or (less frequently) a soprano": vẽ như contralto, chú thích ghi có khi cao tới mezzo-soprano hay soprano. aria-label và chú thích hình viết lại theo. Kiểm thử tests/hinh-tinh.test.mjs đạt.'
   - id: n11
     cau: "Soprano: giọng nữ cao; ví dụ vai Mimì (La bohème)."
     loai: dinh-nghia
@@ -435,7 +448,7 @@ nhan_dinh:
       - cod-figaro
       - cod-zauber
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Nhân vật sống động, ensemble tài tình" (cảm nhận chủ quan).'
+    ghi_chu: 'Chữ cũ: "Nhân vật sống động, ensemble tài tình" (cảm nhận chủ quan). Review D5-gom: giữ. COD (cod-recit, review đã mở): trước đó ranh giới recitative và aria rõ, "but with Mozart''s much more expressive and inventive use of recitative … the convention began to break up". Phần tên vở: Figaro, Don Giovanni lời Da Ponte (tiếng Ý), Die Zauberflöte lời Schikaneder (tiếng Đức) (Clark 5.4, lượt 2 Mozarteum).'
     luot_2: khong-chac
     luot_2_nguon: [ "https://www.capradio.org/classical/at-the-opera/2022/04/09/at-the-opera-040922/", "https://kv.mozarteum.at/en/work/le-nozze-di-figaro-opera-buffa-commedia-per-musica-in-4-acts-11980" ]
     luot_2_ghi_chu: "Câu đầu đúng: Figaro (K.492) và Die Zauberflöte tiếng Đức; Don Giovanni tiếng Ý theo hiểu biết chung. Câu sau (recitative của Mozart biểu cảm hơn, làm mờ ranh giới recitative/aria) không tìm được nguồn bậc 2 mở được nói rõ."
@@ -629,8 +642,8 @@ nhan_dinh:
     cau: Xem có phụ đề. Chọn bản ghi hình có phụ đề, nhất là khi opera hát bằng tiếng Ý, Đức hay Pháp.
     loai: khuyen-tap
     nguon: []
-    ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Video trên YouTube và các dịch vụ trả phí như Met Opera on Demand đều có phụ đề tiếng Anh" (khẳng định về dịch vụ, không kiểm được); bỏ, giữ lời khuyên.'
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Chữ cũ: "Video trên YouTube và các dịch vụ trả phí như Met Opera on Demand đều có phụ đề tiếng Anh" (khẳng định về dịch vụ, không kiểm được); bỏ, giữ lời khuyên. Review D5-gom: kết quả đổi da-sua thành khong-can-nguon (lời khuyên tập không cần nguồn; công cụ khóa không cho da-sua thiếu nguồn). Chữ đã sửa ở lượt 1 giữ (doi_chu có sẵn).'
     luot_2: dung
     luot_2_ghi_chu: Lời khuyên hợp lý.
   - id: n40
@@ -644,8 +657,8 @@ nhan_dinh:
     cau: "Xem trực tiếp ở Việt Nam: theo dõi lịch diễn của Nhà hát Nhạc Vũ Kịch Việt Nam (Hà Nội), Nhà hát Giao hưởng Nhạc Vũ kịch TP.HCM và các nhà hát lớn."
     loai: khuyen-tap
     nguon: []
-    ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "các nhà hát lớn ở Hà Nội và TP.HCM thường có những đêm opera và gala opera. Ví dụ, chương trình kỷ niệm 3 năm của Nhà hát Hồ Gươm (năm 2026) có ba ca sĩ opera quốc tế Diana Damrau, Javier Camarena và Marina Viotti". Chương trình 2026 không kiểm được; bỏ (xem nhận định da-bo kế).'
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Chữ cũ: "các nhà hát lớn ở Hà Nội và TP.HCM thường có những đêm opera và gala opera. Ví dụ, chương trình kỷ niệm 3 năm của Nhà hát Hồ Gươm (năm 2026) có ba ca sĩ opera quốc tế Diana Damrau, Javier Camarena và Marina Viotti". Chương trình 2026 không kiểm được; bỏ (xem nhận định da-bo kế). Review D5-gom: kết quả đổi da-sua thành khong-can-nguon (lời khuyên tập). Soát nhãn: tên hai nhà hát (VNOB, HBSO) là điều có thật, đã kiểm ở các nhận định của mục "Opera ở Việt Nam" (VNOB ở n53, HBSO ở n54), nên giữ khuyen-tap.'
   - id: n42
     cau: Chương trình kỷ niệm 3 năm của Nhà hát Hồ Gươm (2026) có ba ca sĩ opera quốc tế Diana Damrau, Javier Camarena, Marina Viotti.
     loai: lich-su
@@ -680,7 +693,7 @@ nhan_dinh:
     loai: lich-su
     nguon: []
     ket_qua: da-bo
-    ghi_chu: "Bỏ khỏi trang: không mở được nguồn bậc 1–2 (nguồn báo đã mở không nêu). Đã xem trang: không còn câu."
+    ghi_chu: "Bỏ khỏi trang: không mở được nguồn bậc 1–2 (nguồn báo đã mở không nêu). Đã xem trang: không còn câu. Review D5-gom: đã xem trang: không còn câu về opera thời Pháp thuộc."
     luot_2: khong-chac
     luot_2_nguon: [ "https://vietnamnews.vn/life-style/535907/classic-opera-ballet-restaged-to-celebrate-theatre-s-anniversary.html" ]
     luot_2_ghi_chu: "Chỉ tìm được Wikipedia (Hanoi Opera House: đoàn opera thuộc địa hát mùa đông chủ yếu cho cư dân Pháp; ba nhà hát Hà Nội, Hải Phòng, Sài Gòn) nên chưa có nguồn bậc 2 xác nhận về Sài Gòn/Hà Nội."
@@ -714,20 +727,20 @@ nhan_dinh:
     nguon:
       - vn-binhduong
       - vn-arttimes
-    ket_qua: null
-    ghi_chu: 'chưa chắc: chỉ có nguồn báo (bậc 3). Chữ cũ: "từng thất lạc bản tổng phổ, được phục dựng và công diễn lại năm 2012". 1922 + 90 = 2012 khớp; "gần 1.000 trang nhạc" chỉ có ở báo; lượt 2 kiểm bằng nguồn bậc 2.'
+    ket_qua: dung
+    ghi_chu: 'chưa chắc: chỉ có nguồn báo (bậc 3). Chữ cũ: "từng thất lạc bản tổng phổ, được phục dựng và công diễn lại năm 2012". 1922 + 90 = 2012 khớp; "gần 1.000 trang nhạc" chỉ có ở báo; lượt 2 kiểm bằng nguồn bậc 2. Review D5-gom: giữ. Chỉ có báo (Báo Bình Dương, Vietnamnet, ArtTimes), không có nguồn tốt hơn; hai báo độc lập (lượt 1 Bình Dương, lượt 2 Vietnamnet) cùng ghi năm 2012, dịp 90 năm sinh Đỗ Nhuận, Đỗ Hồng Quân tìm bản nháp và khôi phục gần 1.000 trang. Ghi rõ loại nguồn: báo.'
     luot_2: dung
     luot_2_nguon: [ "https://baobinhduong.vn/en/historic-vietnamese-opera-re-staged-a72400.html", "https://vietnamnet.vn/en/patriotic-opera-gets-a-revival-E53137.html" ]
     luot_2_ghi_chu: 2012 (90 năm sinh Đỗ Nhuận); Đỗ Hồng Quân tìm bản nháp viết tay 1963, khôi phục gần 1.000 trang nhạc.
   - id: n49
-    cau: "Người tạc tượng, Đỗ Nhuận: công diễn 1971, sáng tác từ 1968."
+    cau: "Người tạc tượng, Đỗ Nhuận: công diễn 1971 (viết xong năm 1970)."
     loai: nam
     nguon:
       - vn-ttvh
       - vn-hoinhacsi
       - vn-phapluat
-    ket_qua: null
-    ghi_chu: 'chưa chắc: Thể thao & Văn hóa ghi công diễn 1971 (2/9/1971); Hội Nhạc sĩ VN ghi 1970. Chữ cũ: "1971 (sáng tác 1968–1970)"; "đến 1970" không xác nhận được nên đổi thành "sáng tác từ 1968". Người giao chọn năm sau khi đối chiếu nguồn bậc 2.'
+    ket_qua: da-sua
+    ghi_chu: 'chưa chắc: Thể thao & Văn hóa ghi công diễn 1971 (2/9/1971); Hội Nhạc sĩ VN ghi 1970. Chữ cũ: "1971 (sáng tác 1968–1970)"; "đến 1970" không xác nhận được nên đổi thành "sáng tác từ 1968". Người giao chọn năm sau khi đối chiếu nguồn bậc 2. Review D5-gom: chữ cũ "1971 (sáng tác từ 1968)", chữ mới "1971 (viết xong năm 1970)". Lý do: Hội Nhạc sĩ Việt Nam (vn-hoinhacsi, review đã mở) ghi "Người tạc tượng (1970 - nhân dịp kỉ niệm 40 năm thành lập Đảng…)": đó là năm tác phẩm, không mâu thuẫn với năm công diễn; Thể thao & Văn hóa (vn-ttvh, báo của TTXVN, review đã mở): kịch bản xong 7/1968, ông viết xong bản hát và phần đệm piano 17/7/1970, phối khí xong 10/12/1970, công diễn dịp 2/9/1971 tại Nhà hát Lớn Hà Nội; Pháp Luật (lượt 2) cũng ghi 1971. "Sáng tác từ 1968" (thật ra là năm xong kịch bản) bỏ.'
     luot_2: khong-chac
     luot_2_nguon: [ "https://baophapluat.vn/do-nhuan-nguoi-dung-hoa-tinh-dan-toc-va-quoc-te-post64743.html", "https://dtinews.dantri.com.vn/print/20190925080752090.htm", "https://baovanhoa.vn/san-khau-mua/song-lai-voi-nguoi-tac-tuong-56750.html" ]
     luot_2_ghi_chu: 'Người tạc tượng 1971 được Báo Pháp luật xác nhận; "sáng tác từ 1968" không có nguồn; DTI nói sáng tác "những năm 1980", Báo Văn hóa nói "công bố lần đầu 1975": nguồn mâu thuẫn.'
@@ -737,8 +750,8 @@ nhan_dinh:
     nguon:
       - vn-arttimes
       - vn-vnnews
-    ket_qua: null
-    ghi_chu: "chưa chắc: chỉ có nguồn báo (ArtTimes, Vietnam News); lượt 2 kiểm bằng nguồn bậc 2 (nhà hát hay tác giả)."
+    ket_qua: dung
+    ghi_chu: "chưa chắc: chỉ có nguồn báo (ArtTimes, Vietnam News); lượt 2 kiểm bằng nguồn bậc 2 (nhà hát hay tác giả). Review D5-gom: giữ. Chỉ có báo (Vietnam News, báo đối ngoại của TTXVN; ArtTimes), không có nguồn tốt hơn: Vietnam News 1/6/2016 ghi Lá đỏ công diễn cuối tháng 5/2016 (lượt 2 đã mở hai bài). Ghi rõ loại nguồn: báo chính thức."
     luot_2: dung
     luot_2_nguon: [ "https://vietnamnews.vn/life-style/297511/la-do-opera-receives-high-acclaim.html", "https://vietnamnews.vn/life-style/297147/viet-nam-stages-its-second-opera.html" ]
     luot_2_ghi_chu: "Lá đỏ, Đỗ Hồng Quân: công diễn cuối tháng 5/2016 (Vietnam News 1/6/2016)."
@@ -757,8 +770,9 @@ nhan_dinh:
     nguon:
       - vn-ttvh
       - vn-arttimes
-    ket_qua: null
-    ghi_chu: 'chưa chắc: ngày 2/9/1971 chỉ có ở Thể thao & Văn hóa (bậc 3), mâu thuẫn năm 1970 của Hội Nhạc sĩ (xem nhận định trên). Chữ cũ: "lấy bối cảnh Tây Nguyên thời kháng chiến chống Mỹ; Lá đỏ viết về tinh thần kháng chiến". Bỏ phần diễn giải "tinh thần kháng chiến".'
+      - vn-vnnews
+    ket_qua: dung
+    ghi_chu: 'chưa chắc: ngày 2/9/1971 chỉ có ở Thể thao & Văn hóa (bậc 3), mâu thuẫn năm 1970 của Hội Nhạc sĩ (xem nhận định trên). Chữ cũ: "lấy bối cảnh Tây Nguyên thời kháng chiến chống Mỹ; Lá đỏ viết về tinh thần kháng chiến". Bỏ phần diễn giải "tinh thần kháng chiến". Review D5-gom: giữ. Thể thao & Văn hóa (vn-ttvh, báo của TTXVN, review đã mở lại): "dịp Quốc khánh 2/9/1971 … nhạc kịch Người tạc tượng đã được công diễn tại Nhà hát Lớn Hà Nội"; nhân vật là người tạc tượng "dũng sĩ Tây Nguyên", nhạc dùng nhiều "chất liệu âm nhạc dân gian Tây Nguyên", bài gọi vở là "bản anh hùng ca Tây Nguyên". Hội Nhạc sĩ ghi năm 1970 là năm tác phẩm (xem n49), không mâu thuẫn. Lá đỏ, kịch bản Nguyễn Thị Hồng Ngát: lượt 2 xác nhận (Vietnam News). Không có nguồn tốt hơn báo chính thức.'
     luot_2: khong-chac
     luot_2_nguon: [ "https://vietnamnews.vn/life-style/535907/classic-opera-ballet-restaged-to-celebrate-theatre-s-anniversary.html", "https://baovanhoa.vn/san-khau-mua/song-lai-voi-nguoi-tac-tuong-56750.html", "https://vietnamnews.vn/life-style/297147/viet-nam-stages-its-second-opera.html" ]
     luot_2_ghi_chu: "Lá đỏ có kịch bản Nguyễn Thị Hồng Ngát: đúng. Người tạc tượng bối cảnh Tây Nguyên, công diễn 2/9/1971 tại Nhà hát Lớn: các nguồn mở được không xác nhận (không nêu Tây Nguyên, không nêu ngày)."
@@ -773,11 +787,11 @@ nhan_dinh:
     luot_2_nguon: [ "https://nhahatnhacvukichvietnam.com/en/about-us/" ]
     luot_2_ghi_chu: "Trang chính thức: thành lập 6/8/1959; nghệ thuật chính: ballet, opera, giao hưởng và thính phòng."
   - id: n54
-    cau: Nhà hát Giao hưởng Nhạc Vũ kịch TP.HCM (HBSO) dàn dựng những opera thế giới như Madama Butterfly.
+    cau: Nhà hát Giao hưởng Nhạc Vũ kịch TP.HCM (HBSO) đã trình diễn những opera thế giới như Madama Butterfly (dạng hòa nhạc).
     loai: lich-su
-    nguon: []
-    ket_qua: null
-    ghi_chu: 'chưa chắc: chưa mở lại được trang chính thức của HBSO. Chữ cũ: "thường xuyên dàn dựng các vở opera kinh điển thế giới như Cây sáo thần hay Madama Butterfly". Bỏ "Cây sáo thần" và "thường xuyên"; lượt 2 kiểm.'
+    nguon: [ vn-vnnews-hbso ]
+    ket_qua: da-sua
+    ghi_chu: 'chưa chắc: chưa mở lại được trang chính thức của HBSO. Chữ cũ: "thường xuyên dàn dựng các vở opera kinh điển thế giới như Cây sáo thần hay Madama Butterfly". Bỏ "Cây sáo thần" và "thường xuyên"; lượt 2 kiểm. Review D5-gom: chữ cũ "nơi dàn dựng những opera thế giới như Madama Butterfly", chữ mới "nơi đã trình diễn những opera thế giới như Madama Butterfly (dạng hòa nhạc)". Lý do: Vietnam News (vn-vnnews-hbso, review đã mở): HBSO diễn "a concert version of the opera in two acts", bản dàn dựng sân khấu mới là dự định; "dàn dựng" nói quá. Không có nguồn tốt hơn (trang HBSO chưa mở được); báo chính thức.'
     luot_2: dung
     luot_2_nguon: [ "https://vietnamnews.vn/life-style/1799264/concert-version-of-puccini-s-opera-madama-butterfly-premieres-in-hcm-city.html" ]
     luot_2_ghi_chu: HBSO dàn dựng Madama Butterfly (bản hòa nhạc 2 màn, hợp tác Lãnh sự quán Ý).
@@ -786,7 +800,7 @@ nhan_dinh:
     loai: lich-su
     nguon: []
     ket_qua: da-bo
-    ghi_chu: "Bỏ khỏi trang: giải thưởng và vai diễn chỉ có ở báo (Dân Việt), không có nguồn bậc 1–2; tên người nói về cá nhân. Đã xem trang: không còn đoạn."
+    ghi_chu: "Bỏ khỏi trang: giải thưởng và vai diễn chỉ có ở báo (Dân Việt), không có nguồn bậc 1–2; tên người nói về cá nhân. Đã xem trang: không còn đoạn. Review D5-gom: đã xem trang: không còn tên ca sĩ, cuộc thi (lượt 2 còn thấy tên cuộc thi và tên ca sĩ lệch với báo, nên bỏ là đúng)."
     luot_2: khong-chac
     luot_2_nguon: [ "https://vietnamnews.vn/sunday/inner-sanctum/569210/vietnamese-tenor-stamps-his-name-in-european-stages.html", "https://vietnamnews.vn/sunday/inner-sanctum/479946/hard-working-mum-wins-opera-contest.html", "https://vietnamnet.vn/en/patriotic-opera-gets-a-revival-E53137.html" ]
     luot_2_ghi_chu: 'Ninh Đức Hoàng Long thắng Simándy József 2016 (hạng II) và 2018 (hạng III): đúng. Đào Tố Loan: nhất "Singapore Lyric Opera ASEAN Vocal Competition 2018", khác tên "Cuộc thi Opera Đông Nam Á". Vai A Sao do "Ha Thi Thang Long" (không phải "Hà Phạm Thăng Long") và To Loan hát theo Vietnamnet: tên chưa khớp.'
@@ -810,45 +824,52 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Burkholder, Grout, Palisca; Taruskin; Grove; TTXVN; Học viện Âm nhạc Quốc gia VN (bản lưu Internet Archive); ArtTimes; Dân Việt". Thay bằng nguồn đã mở: COD, Britannica, Clark ch.4, IMSLP, Thể thao & Văn hóa, ArtTimes. Bỏ bản lưu Học viện Âm nhạc và Dân Việt (không mở lại được/đã bỏ nội dung). Link /opus/tai-lieu-tham-khao/: chưa chuyển, có ở ../opus-zero/docs/tai-lieu-tham-khao.md.'
+    ghi_chu: 'Chữ cũ: "Burkholder, Grout, Palisca; Taruskin; Grove; TTXVN; Học viện Âm nhạc Quốc gia VN (bản lưu Internet Archive); ArtTimes; Dân Việt". Thay bằng nguồn đã mở: COD, Britannica, Clark ch.4, IMSLP, Thể thao & Văn hóa, ArtTimes. Bỏ bản lưu Học viện Âm nhạc và Dân Việt (không mở lại được/đã bỏ nội dung). Link /opus/tai-lieu-tham-khao/: chưa chuyển, có ở ../opus-zero/docs/tai-lieu-tham-khao.md. Review: đã kiểm mục Nguồn trên trang: các nguồn liệt kê (COD các mục, Britannica, Clark chương 4, IMSLP, Thể thao & Văn hóa, ArtTimes) có trong phần nguon của hồ sơ; link /opus/tai-lieu-tham-khao/ có ở ../opus-zero/docs/tai-lieu-tham-khao.md.'
+    review: dung
   - id: n59
     cau: Phần mô tả (description) của trang lấy từ đoạn mở đầu.
     loai: ve-site
     nguon: []
     ket_qua: da-sua
-    ghi_chu: 'Đã kiểm: description khớp đoạn mở đầu mới (chữ cũ: "... và là một trong những thể loại quan trọng nhất của nhạc cổ điển").'
+    ghi_chu: 'Đã kiểm: description khớp đoạn mở đầu mới (chữ cũ: "... và là một trong những thể loại quan trọng nhất của nhạc cổ điển"). Review: đã kiểm frontmatter description khớp đầu đoạn mở đầu.'
+    review: dung
   - id: n60
     cau: Bảng "10 vở opera để bắt đầu" có đúng 10 hàng.
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Đã đếm trên trang: 10 hàng."
+    ghi_chu: "Đã đếm trên trang: 10 hàng. Review: đã đếm trên trang: 10 hàng."
+    review: dung
   - id: n61
     cau: Liên kết [Nữ hoàng bóng đêm](/opus/nghe-nhac/mozart-nu-hoang-bong-dem/)
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Trang đích chưa chuyển; có ở site cũ ../opus-zero/docs/nghe-nhac/mozart-nu-hoang-bong-dem.md (kiểm trên site cũ). Điều cần giữ: trang đích tồn tại ở đường dẫn /opus/nghe-nhac/mozart-nu-hoang-bong-dem/."
+    ghi_chu: "Trang đích chưa chuyển; có ở site cũ ../opus-zero/docs/nghe-nhac/mozart-nu-hoang-bong-dem.md (kiểm trên site cũ). Điều cần giữ: trang đích tồn tại ở đường dẫn /opus/nghe-nhac/mozart-nu-hoang-bong-dem/. Review: đã kiểm ../opus-zero/docs/nghe-nhac/mozart-nu-hoang-bong-dem.md có (trang chưa chuyển)."
+    review: dung
   - id: n62
     cau: Liên kết [Habanera](/opus/nghe-nhac/bizet-habanera/)
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Trang đích chưa chuyển; có ở site cũ ../opus-zero/docs/nghe-nhac/bizet-habanera.md (kiểm trên site cũ). Điều cần giữ: trang đích tồn tại ở đường dẫn /opus/nghe-nhac/bizet-habanera/."
+    ghi_chu: "Trang đích chưa chuyển; có ở site cũ ../opus-zero/docs/nghe-nhac/bizet-habanera.md (kiểm trên site cũ). Điều cần giữ: trang đích tồn tại ở đường dẫn /opus/nghe-nhac/bizet-habanera/. Review: đã kiểm ../opus-zero/docs/nghe-nhac/bizet-habanera.md có (trang chưa chuyển)."
+    review: dung
   - id: n63
     cau: Liên kết [nhạc cổ điển ở Việt Nam](/opus/lich-su/viet-nam/)
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Trang đích chưa chuyển; có ở site cũ ../opus-zero/docs/lich-su/viet-nam.md (kiểm trên site cũ). Điều cần giữ: trang đích tồn tại ở đường dẫn /opus/lich-su/viet-nam/."
+    ghi_chu: "Trang đích chưa chuyển; có ở site cũ ../opus-zero/docs/lich-su/viet-nam.md (kiểm trên site cũ). Điều cần giữ: trang đích tồn tại ở đường dẫn /opus/lich-su/viet-nam/. Review: đã kiểm ../opus-zero/docs/lich-su/viet-nam.md có (trang chưa chuyển)."
+    review: dung
   - id: n64
     cau: Liên kết [tài liệu tham khảo](/opus/tai-lieu-tham-khao/)
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Trang đích chưa chuyển; có ở site cũ ../opus-zero/docs/tai-lieu-tham-khao.md (kiểm trên site cũ). Điều cần giữ: trang đích tồn tại ở đường dẫn /opus/tai-lieu-tham-khao/."
+    ghi_chu: "Trang đích chưa chuyển; có ở site cũ ../opus-zero/docs/tai-lieu-tham-khao.md (kiểm trên site cũ). Điều cần giữ: trang đích tồn tại ở đường dẫn /opus/tai-lieu-tham-khao/. Review: đã kiểm ../opus-zero/docs/tai-lieu-tham-khao.md có (trang chưa chuyển)."
+    review: dung
 khuong_nhac: []
-ghi_chu: 'Nhập môn opera. Nguồn chính: COD (opera, giọng, từng vở), Britannica, Clark chương 4, Met Opera (La bohème), VNOB, Hội Nhạc sĩ VN, Pháp Luật; báo (Thể thao & Văn hóa, ArtTimes, Vietnam News, Bình Dương) chỉ là bậc 3. Đã sửa/bỏ: mô tả, bảng giọng (ví dụ vai thay cho kiểu vai), truyền thống (năm, bỏ 15 tiếng), bảng 10 vở, mục xem opera (bỏ Hồ Gươm 2026, vỗ tay), toàn bộ mục "Opera ở Việt Nam" viết lại (bỏ Công nữ Anio, giọng ca Việt, Giấc mơ Chí Phèo, thời Pháp thuộc), mục Nguồn. Chưa chắc: Hợp xướng (ví dụ), năm/ngày Người tạc tượng (1970 hay 1971), Lá đỏ 2016, 1.000 trang bản nháp Cô Sao, HBSO. Hình ranges-voices: sáu giọng (không có countertenor), "Alto" so với "Contralto", tên nốt bằng chữ, âm vực mezzo/alto/baritone/bass lệch 1–2 nửa cung so với COD: người giao quyết. Lô trước không yêu cầu điều gì ở trang này. Liên kết sang trang chưa chuyển: lich-su/viet-nam, tai-lieu-tham-khao, nghe-nhac/mozart-nu-hoang-bong-dem, nghe-nhac/bizet-habanera.'
+ghi_chu: 'Nhập môn opera. Nguồn chính: COD (opera, giọng, từng vở), Britannica, Clark chương 4, Met Opera (La bohème), VNOB, Hội Nhạc sĩ VN, Pháp Luật; báo (Thể thao & Văn hóa, ArtTimes, Vietnam News, Bình Dương) chỉ là bậc 3. Đã sửa/bỏ: mô tả, bảng giọng (ví dụ vai thay cho kiểu vai), truyền thống (năm, bỏ 15 tiếng), bảng 10 vở, mục xem opera (bỏ Hồ Gươm 2026, vỗ tay), toàn bộ mục "Opera ở Việt Nam" viết lại (bỏ Công nữ Anio, giọng ca Việt, Giấc mơ Chí Phèo, thời Pháp thuộc), mục Nguồn. Chưa chắc: Hợp xướng (ví dụ), năm/ngày Người tạc tượng (1970 hay 1971), Lá đỏ 2016, 1.000 trang bản nháp Cô Sao, HBSO. Hình ranges-voices: sáu giọng (không có countertenor), "Alto" so với "Contralto", tên nốt bằng chữ, âm vực mezzo/alto/baritone/bass lệch 1–2 nửa cung so với COD: người giao quyết. Lô trước không yêu cầu điều gì ở trang này. Liên kết sang trang chưa chuyển: lich-su/viet-nam, tai-lieu-tham-khao, nghe-nhac/mozart-nu-hoang-bong-dem, nghe-nhac/bizet-habanera. Review D5-gom (nhóm A): hình ranges-voices đã sửa (bảy giọng, Contralto (alto), tên nốt Việt, âm vực theo COD và OnMusic; n10 đổi nhãn so-lieu, cần lượt 2 bổ sung); Người tạc tượng "1971 (viết xong năm 1970)"; HBSO "trình diễn … (dạng hòa nhạc)"; các câu báo chí giữ khi không có nguồn tốt hơn, ghi rõ loại nguồn.'
 doi_chu:
   - cu: "Opera là kịch được hát toàn bộ (hoặc gần như toàn bộ), với dàn nhạc, dàn dựng sân khấu, trang phục và diễn xuất. Opera ra đời ở Ý khoảng năm 1600 và là một trong những thể loại quan trọng nhất của nhạc cổ điển: nhiều nhà soạn nhạc như Verdi, Wagner, Puccini nổi tiếng chủ yếu nhờ opera."
     moi: Opera là kịch được hát toàn bộ (hoặc gần như toàn bộ), với dàn nhạc, dàn dựng sân khấu, trang phục và diễn xuất. Opera ra đời ở Ý khoảng năm 1600; nhiều nhà soạn nhạc như Verdi, Wagner, Puccini nổi tiếng chủ yếu nhờ opera.
@@ -958,8 +979,8 @@ doi_chu:
       - Vở thường được coi là opera Việt Nam đầu tiên là Cô Sao của Đỗ Nhuận (1922–1991), do Nhà hát Nhạc Vũ Kịch Việt Nam biểu diễn năm 1965. Vở kể về A Sao, cô gái người Thái mồ côi, chịu bất công dưới sự cai trị thực dân rồi được cách mạng thuyết phục đứng lên chống Pháp; âm nhạc mang âm điệu Tây Bắc. Năm 2012, nhân kỷ niệm 90 năm ngày sinh của Đỗ Nhuận, con trai ông là nhạc sĩ Đỗ Hồng Quân tìm lại bản nháp viết tay của vở (gần 1.000 trang nhạc) và dựng lại.
     ly_do: 'n45 (da-bo): bỏ câu về thời Pháp thuộc và "kén khán giả nhất".; n46 (da-sua), n47, n48: xem ghi_chu từng nhận định.'
   - cu: 1971 (sáng tác 1968–1970)
-    moi: 1971 (sáng tác từ 1968)
-    ly_do: "n49 (chưa chắc), n50, n51 (da-bo): bỏ Công nữ Anio; năm Người tạc tượng chưa chốt."
+    moi: 1971 (viết xong năm 1970)
+    ly_do: "n49 (chưa chắc), n50, n51 (da-bo): bỏ Công nữ Anio; năm Người tạc tượng chưa chốt.; n49 (da-sua, review D5-gom): Hội Nhạc sĩ VN ghi tác phẩm năm 1970; Thể thao & Văn hóa: viết xong 1970, công diễn 2/9/1971."
   - cu:
       - Công nữ Anio
       - Trần Mạnh Hùng
@@ -971,9 +992,9 @@ doi_chu:
       - 'Nghe/xem thử: tìm "Cô Sao opera" hoặc "Giấc mơ Chí Phèo" trên YouTube để xem trích đoạn; theo dõi lịch diễn của VNOB và HBSO nếu muốn xem opera trực tiếp.'
     moi:
       - Người tạc tượng lấy bối cảnh Tây Nguyên, công diễn ngày 2/9/1971 tại Nhà hát Lớn Hà Nội; Lá đỏ có kịch bản của nhà thơ Nguyễn Thị Hồng Ngát.
-      - Hai đơn vị nên biết là Nhà hát Nhạc Vũ Kịch Việt Nam (VNOB, Hà Nội, thành lập ngày 6/8/1959), biểu diễn ballet, opera và nhạc giao hưởng, và Nhà hát Giao hưởng Nhạc Vũ kịch TP.HCM (HBSO), nơi dàn dựng những opera thế giới như Madama Butterfly.
+      - Hai đơn vị nên biết là Nhà hát Nhạc Vũ Kịch Việt Nam (VNOB, Hà Nội, thành lập ngày 6/8/1959), biểu diễn ballet, opera và nhạc giao hưởng, và Nhà hát Giao hưởng Nhạc Vũ kịch TP.HCM (HBSO), nơi đã trình diễn những opera thế giới như Madama Butterfly (dạng hòa nhạc).
       - 'Nghe/xem thử: tìm "Cô Sao opera" trên YouTube để xem trích đoạn; theo dõi lịch diễn của VNOB và HBSO nếu muốn xem opera trực tiếp.'
-    ly_do: 'n51 (da-bo): bỏ hàng Công nữ Anio khỏi bảng.; n55 (da-bo), n56 (da-bo): bỏ "Giấc mơ Chí Phèo" khỏi câu nghe/xem thử (khuyen-tap).; n52 (chưa chắc): bỏ "thời kháng chiến chống Mỹ" và "tinh thần kháng chiến"; thêm ngày công diễn.; n53 (da-sua), n54, n55 (da-bo), n56 (da-bo): bỏ giọng ca Việt và nhạc kịch Broadway.'
+    ly_do: 'n51 (da-bo): bỏ hàng Công nữ Anio khỏi bảng.; n55 (da-bo), n56 (da-bo): bỏ "Giấc mơ Chí Phèo" khỏi câu nghe/xem thử (khuyen-tap).; n52 (chưa chắc): bỏ "thời kháng chiến chống Mỹ" và "tinh thần kháng chiến"; thêm ngày công diễn.; n53 (da-sua), n54, n55 (da-bo), n56 (da-bo): bỏ giọng ca Việt và nhạc kịch Broadway.; n54 (da-sua, review D5-gom): HBSO diễn Madama Butterfly dạng hòa nhạc (Vietnam News).'
   - cu:
       - Burkholder, Grout, Palisca, A History of Western Music; Richard Taruskin, The Oxford History of Western Music.
       - Grove Music Online; Encyclopaedia Britannica. Xem tài liệu tham khảo.

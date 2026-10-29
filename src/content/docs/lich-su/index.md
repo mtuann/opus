@@ -38,7 +38,7 @@ Các bè giọng hát đan xen và bắt chước nhau; quãng ba và hợp âm 
 
 ## Baroque (~1600–1750)
 
-Đặc trưng là **bè trầm liên tục** (basso continuo), giai điệu nhiều trang trí, sự tương phản giữa nhóm nhỏ và cả dàn nhạc. **Opera** ra đời (Monteverdi *L'Orfeo*, 1607). Các thể loại **concerto**, **fugue**, **tổ khúc** (suite) phát triển mạnh. Giai đoạn này thường được coi là kết thúc năm 1750, năm Bach mất.
+Đặc trưng là **bè trầm liên tục** (basso continuo), giai điệu nhiều trang trí, sự tương phản giữa nhóm nhỏ và cả dàn nhạc. **Opera** ra đời ở Ý quanh năm 1600: *Dafne* (1598) của Peri có lẽ là vở opera đầu tiên; *L'Orfeo* (1607) của Monteverdi là vở opera đầu tiên còn giữ chỗ đứng trong các mùa diễn ngày nay. Các thể loại **concerto**, **fugue**, **tổ khúc** (suite) phát triển mạnh. Giai đoạn này thường được coi là kết thúc năm 1750, năm Bach mất.
 
 **Tên tuổi:** Claudio Monteverdi, Henry Purcell, Antonio Vivaldi, Johann Sebastian Bach, George Frideric Handel.
 
@@ -62,9 +62,9 @@ Các bè giọng hát đan xen và bắt chước nhau; quãng ba và hợp âm 
 
 ## Thế kỷ 20 (~1900–2000)
 
-Không còn một phong cách chung. **Chủ nghĩa ấn tượng** (Debussy) gợi tâm trạng và cảm xúc mà đề tài khơi lên hơn là miêu tả chi tiết. Stravinsky gây chấn động với *Le Sacre du printemps* (1913). Schoenberg phát triển **nhạc 12 âm**, bỏ hẳn cảm giác giọng chủ. Bartók đưa dân ca Đông Âu vào nhạc nghệ thuật. Cuối thế kỷ, **chủ nghĩa tối giản** (minimalism) dùng những mẫu ngắn lặp lại.
+Không còn một phong cách chung. **Chủ nghĩa ấn tượng** (Debussy) gợi tâm trạng và cảm xúc mà đề tài khơi lên hơn là miêu tả chi tiết. Stravinsky gây chấn động với *Le Sacre du printemps* (1913). Schoenberg phát triển **nhạc 12 âm**, bỏ hẳn cảm giác giọng chủ. Bartók đưa dân ca Đông Âu vào nhạc nghệ thuật. Từ thập niên 1960, **chủ nghĩa tối giản** (minimalism) dùng những mẫu ngắn lặp lại trên nền hòa âm đơn giản.
 
-**Tên tuổi:** Claude Debussy, Maurice Ravel, Igor Stravinsky, Arnold Schoenberg, Béla Bartók, Sergei Prokofiev, Dmitri Shostakovich, Olivier Messiaen, Aaron Copland, Steve Reich, Philip Glass.
+**Tên tuổi:** Claude Debussy, Maurice Ravel, Igor Stravinsky, Arnold Schoenberg, Béla Bartók, Sergei Prokofiev, Dmitri Shostakovich, Olivier Messiaen, Aaron Copland. Steve Reich và Philip Glass, hai tên tuổi của chủ nghĩa tối giản, sinh ở thế kỷ 20 nhưng site xếp vào thời Đương đại.
 
 **Nghe thử:** Debussy *Prélude à l'après-midi d'un faune*; Ravel *Boléro*; Stravinsky *Le Sacre du printemps*; Shostakovich Giao hưởng số 5; Reich *Music for 18 Musicians*.
 

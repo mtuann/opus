@@ -89,7 +89,7 @@ export const VI_DU = {
 		dau_hieu: [
 			"Tay trái rải hợp âm trải rộng hơn một quãng 8",
 			"Hợp âm bảy giảm ở ô nhịp 2 (nửa cung, căng thẳng)",
-			"Hợp âm mượn Fa thứ sau Fa trưởng ở ô nhịp 6 (xem bài 23)",
+			"Fa trưởng chuyển sang Fa thứ ở ô nhịp 6 (nốt La hạ nửa cung thành La♭)",
 			"Giai điệu có bước nhảy rộng, giàu cảm xúc; chậm dần (rit.) trước kết",
 		],
 	},
@@ -144,7 +144,7 @@ export const VI_DU = {
 		dau_hieu: [
 			"Marimba",
 			"Một mẫu ngắn lặp đi lặp lại (ostinato)",
-			"Mẫu thay đổi rất chậm, từng nốt một (quá trình cộng dồn)",
+			"Mẫu thay đổi rất chậm, mỗi lần chỉ đổi một nốt",
 			"Hòa âm gần như đứng yên: chủ nghĩa tối giản",
 		],
 	},

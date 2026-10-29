@@ -10,7 +10,7 @@ lan:
     nguoi:
       luot_1: Claude Sonnet 5.5 (D5-L1 lượt 1, phần A)
       luot_2: null
-      review: null
+      review: Claude (review D5-gom, nhóm A, 29/10/2026)
       kiem_mau: null
 nguon:
   - id: ec-monteverdi
@@ -497,49 +497,68 @@ nguon:
     bac: 2
     ten: Oxford Music Online, Grove Music Online (trang giới thiệu)
     link: https://www.oxfordmusiconline.com/grovemusic
+  - id: br-elgar
+    bac: 2
+    ten: Encyclopaedia Britannica, Edward Elgar ("stimulated a renaissance of English music"; review D5-gom đã mở)
+    link: https://www.britannica.com/biography/Edward-Elgar
+  - id: mto-messiaen
+    bac: 2
+    ten: Music Theory Online 8.2 (2002), Vincent Benitez, chú thích (Messiaen "colored-hearing synesthesia responded to chords"; review D5-gom đã mở)
+    link: https://mtosmt.org/issues/mto.02.8.2/mto.02.8.2.benitez_notes.html
+  - id: mozarteum-kv
+    bac: 2
+    ten: Internationale Stiftung Mozarteum, Ludwig von Köchel and the Köchel Catalogue (bản đầu đánh số 626 tác phẩm, kết thúc ở Requiem; review D5-gom đã mở)
+    link: https://kv.mozarteum.at/en/ludwig-von-koechel-and-the-koechel-catalogue
 nhan_dinh:
   - id: s1
     cau: Chân dung ngắn của khoảng 37 nhà soạn nhạc nên biết, xếp theo thời kỳ và năm sinh. Mỗi người có vài tác phẩm gợi ý để bắt đầu. Bối cảnh của từng thời kỳ nằm ở trang Lịch sử (/opus/lich-su/).
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: 'Kiểm trên src/content/docs/lich-su/nha-soan-nhac.md: đếm tiêu đề ### = 37 (Baroque 5, Cổ điển 3, Lãng mạn 16, Thế kỷ 20 9, Đương đại 4); mỗi mục có dòng "Nghe trước"; trong từng mục thời kỳ xếp theo năm sinh (đã đổi Mendelssohn 1809 lên trước Chopin 1810, thêm mục Đương đại, xem doi_chu); trang lich-su/index.md đã chuyển và đã khóa (có trong khoa.json) nên link /opus/lich-su/ đúng.'
+    ghi_chu: 'Kiểm trên src/content/docs/lich-su/nha-soan-nhac.md: đếm tiêu đề ### = 37 (Baroque 5, Cổ điển 3, Lãng mạn 16, Thế kỷ 20 9, Đương đại 4); mỗi mục có dòng "Nghe trước"; trong từng mục thời kỳ xếp theo năm sinh (đã đổi Mendelssohn 1809 lên trước Chopin 1810, thêm mục Đương đại, xem doi_chu); trang lich-su/index.md đã chuyển và đã khóa (có trong khoa.json) nên link /opus/lich-su/ đúng. Review: đã kiểm trên trang (37 tiêu đề ###, 37 dòng "Nghe trước", năm sinh tăng dần trong từng mục thời kỳ) và dist/lich-su/index.html có.'
+    review: dung
   - id: s2
     cau: Tiêu đề 37 mục có tên và năm sinh–mất (hay "sinh 1935") khớp dữ liệu đã khóa src/data/nha-soan-nhac.yml.
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: Khớp dữ liệu đã khóa, không kiểm lại năm. Kiểm thử npm test (namLechTrongChu, kiểm năm trong chữ trang lich-su/) kiểm các tiêu đề này. Mục nhập từ trang piano/nha-soan-nhac (ve-site đã khóa ở D4) trỏ vào 19 anchor của tiêu đề; xem s4.
+    ghi_chu: "Khớp dữ liệu đã khóa, không kiểm lại năm. Kiểm thử npm test (namLechTrongChu, kiểm năm trong chữ trang lich-su/) kiểm các tiêu đề này. Mục nhập từ trang piano/nha-soan-nhac (ve-site đã khóa ở D4) trỏ vào 19 anchor của tiêu đề; xem s4. Review: đã kiểm 37 tiêu đề với src/data/nha-soan-nhac.yml (tên, năm): khớp."
+    review: dung
   - id: s3
     cau: Các mục xếp theo thời kỳ (Baroque, Cổ điển, Lãng mạn, Thế kỷ 20, Đương đại), khớp trường thoi_ky của dữ liệu.
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: 'So từng người với thoi_ky ở src/data/nha-soan-nhac.yml: Beethoven "Cổ điển/Lãng mạn" đặt ở Cổ điển; Sibelius "Lãng mạn/Thế kỷ 20" ở Lãng mạn; Pärt, Reich, Glass, Adams "Đương đại" nay ở mục Đương đại (trước đây trang cũ xếp họ dưới Thế kỷ 20; các hồ sơ du-lieu/nha-soan-nhac/{part,reich,glass,adams}.yml dặn lô chuyển trang này sửa theo).'
+    ghi_chu: 'So từng người với thoi_ky ở src/data/nha-soan-nhac.yml: Beethoven "Cổ điển/Lãng mạn" đặt ở Cổ điển; Sibelius "Lãng mạn/Thế kỷ 20" ở Lãng mạn; Pärt, Reich, Glass, Adams "Đương đại" nay ở mục Đương đại (trước đây trang cũ xếp họ dưới Thế kỷ 20; các hồ sơ du-lieu/nha-soan-nhac/{part,reich,glass,adams}.yml dặn lô chuyển trang này sửa theo). Review: đã so từng tiêu đề với thoi_ky ở src/data/nha-soan-nhac.yml: khớp (Beethoven Cổ điển/Lãng mạn ở Cổ điển, Sibelius Lãng mạn/Thế kỷ 20 ở Lãng mạn, Pärt, Reich, Glass, Adams ở Đương đại).'
+    review: dung
   - id: s4
     cau: 'Dòng "Nhạc cho piano: xem Nhà soạn nhạc cho piano" của 19 người trỏ tới /opus/piano/nha-soan-nhac/#<neo> (bach, handel, haydn, mozart, beethoven, schubert, mendelssohn, chopin, schumann, liszt, brahms, tchaikovsky, grieg, debussy, rachmaninoff, ravel, bartok, prokofiev, shostakovich).'
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Điều lô trước yêu cầu giữ (kiem-dinh/piano/nha-soan-nhac.yml, câu về 19 anchor): trang này có đủ 19 tiêu đề ### với tên và năm đúng, id sinh bằng plugin id-cu (bỏ dấu, bỏ đ), nên anchor trên piano/nha-soan-nhac khớp: đã kiểm trong dist/lich-su/nha-soan-nhac/index.html (19/19 id có mặt) và trang piano/nha-soan-nhac đã khóa có link. Khớp, không lệch."
+    ghi_chu: "Điều lô trước yêu cầu giữ (kiem-dinh/piano/nha-soan-nhac.yml, câu về 19 anchor): trang này có đủ 19 tiêu đề ### với tên và năm đúng, id sinh bằng plugin id-cu (bỏ dấu, bỏ đ), nên anchor trên piano/nha-soan-nhac khớp: đã kiểm trong dist/lich-su/nha-soan-nhac/index.html (19/19 id có mặt) và trang piano/nha-soan-nhac đã khóa có link. Khớp, không lệch. Review: đã kiểm 19 link /opus/piano/nha-soan-nhac/#<neo> trong trang: cả 19 id có trong dist/piano/nha-soan-nhac/index.html; 19 link ngược từ piano/nha-soan-nhac tới trang này cũng có id trong dist/lich-su/nha-soan-nhac/index.html."
+    review: dung
   - id: s5
     cau: Các link "Nghe trước" trỏ tới trang hướng dẫn nghe nghe-nhac/vivaldi-mua-xuan, bach-cello-1, haydn-94, mozart-40, mozart-nu-hoang-bong-dem, beethoven-5, beethoven-op132, schubert-erlkonig, schubert-ca-hoi, mendelssohn-violin, brahms-4, bizet-habanera, tchaikovsky-ho-thien-nga, dvorak-9-largo, rachmaninoff-2, ravel-bolero, stravinsky-sacre, shostakovich-5, part-spiegel và trang tác phẩm piano/tac-pham/bach-prelude-do, chopin-nocturne-op9-2, debussy-clair-de-lune.
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: 'Các trang đích chưa chuyển (chỉ nghe-nhac/bach-goldberg và fur-elise có ở site mới; chuẩn bị đợt 6): kiểm trên ../opus-zero/docs/: đủ 23 trang, tiêu đề đúng tác phẩm (ví dụ "Bach: Tổ khúc cello số 1, Prelude", "Haydn: Giao hưởng số 94 Surprise, chương 2"). Điều cần giữ ở đợt 6: mỗi trang nói về đúng tác phẩm tên ở link. Các link này tự thành link khi trang lên, trước đó hiện "sắp có".'
+    ghi_chu: 'Các trang đích chưa chuyển (chỉ nghe-nhac/bach-goldberg và fur-elise có ở site mới; chuẩn bị đợt 6): kiểm trên ../opus-zero/docs/: đủ 23 trang, tiêu đề đúng tác phẩm (ví dụ "Bach: Tổ khúc cello số 1, Prelude", "Haydn: Giao hưởng số 94 Surprise, chương 2"). Điều cần giữ ở đợt 6: mỗi trang nói về đúng tác phẩm tên ở link. Các link này tự thành link khi trang lên, trước đó hiện "sắp có". Review: đã kiểm 22 đường dẫn nghe-nhac/… và piano/tac-pham/… trong trang: đều có file ở ../opus-zero/docs/.'
+    review: dung
   - id: s6
     cau: 'Cuối trang: "Các nhà soạn nhạc đang sống khác: xem Âm nhạc hôm nay (/opus/lich-su/duong-dai/). Các nhà soạn nhạc nữ: xem trang riêng (/opus/lich-su/nu-nha-soan-nhac/). Nhà soạn nhạc Việt Nam: xem Nhạc cổ điển ở Việt Nam (/opus/lich-su/viet-nam/)."'
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: 'Ba trang đích chưa chuyển; kiểm ở ../opus-zero/docs/lich-su/: duong-dai.md ("Âm nhạc hôm nay"), nu-nha-soan-nhac.md ("Các nhà soạn nhạc nữ"), viet-nam.md ("Nhạc cổ điển ở Việt Nam") đều có. Điều cần giữ: duong-dai nói về nhà soạn nhạc đang sống; nu-nha-soan-nhac về nhà soạn nhạc nữ; viet-nam về nhạc cổ điển ở Việt Nam. Link tới lich-su/opera (Verdi: "Nhập môn opera") đã chuyển. Dòng này nay nằm dưới mục Đương đại, hợp với "đang sống".'
+    ghi_chu: 'Ba trang đích chưa chuyển; kiểm ở ../opus-zero/docs/lich-su/: duong-dai.md ("Âm nhạc hôm nay"), nu-nha-soan-nhac.md ("Các nhà soạn nhạc nữ"), viet-nam.md ("Nhạc cổ điển ở Việt Nam") đều có. Điều cần giữ: duong-dai nói về nhà soạn nhạc đang sống; nu-nha-soan-nhac về nhà soạn nhạc nữ; viet-nam về nhạc cổ điển ở Việt Nam. Link tới lich-su/opera (Verdi: "Nhập môn opera") đã chuyển. Dòng này nay nằm dưới mục Đương đại, hợp với "đang sống". Review: đã kiểm ba trang đích ở ../opus-zero/docs/lich-su/ (duong-dai.md, nu-nha-soan-nhac.md, viet-nam.md) có.'
+    review: dung
   - id: s7
     cau: 'Hình vòng đời nhà soạn nhạc (::hinh{ten="lifespans"}) và chú thích "Vòng đời các nhà soạn nhạc từ năm 1650 (thanh kéo dài đến nay: còn sống), màu theo thời kỳ. Các nhà soạn nhạc trước đó (Hildegard, Machaut, Josquin, Palestrina, Monteverdi…) xem ở bảng dòng thời gian và trang các thời kỳ."'
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: 'Kiểm trong src/scripts/dong-thoi-gian.js (veVongDoi) và dist: hình dựng từ dữ liệu; người trước 1650 (chết ≤ 1660) không có trong hình, đúng danh sách ở chú thích; chữ "còn sống" tính theo năm build, không ghi cứng. Người trên hình gồm cả người không có mục ở trang này (Strozzi, Price, Boulanger, Hoàng Việt, Gubaidulina, Saariaho, Shaw, Clara Schumann, Fanny Mendelssohn): chú thích không hứa điều ngược lại. Link tới trang thời kỳ có ở site mới (lich-su/thoi-ky/*).'
+    ghi_chu: 'Kiểm trong src/scripts/dong-thoi-gian.js (veVongDoi) và dist: hình dựng từ dữ liệu; người trước 1650 (chết ≤ 1660) không có trong hình, đúng danh sách ở chú thích; chữ "còn sống" tính theo năm build, không ghi cứng. Người trên hình gồm cả người không có mục ở trang này (Strozzi, Price, Boulanger, Hoàng Việt, Gubaidulina, Saariaho, Shaw, Clara Schumann, Fanny Mendelssohn): chú thích không hứa điều ngược lại. Link tới trang thời kỳ có ở site mới (lich-su/thoi-ky/*). Review: đã kiểm hình trong dist/lich-su/nha-soan-nhac/index.html (module src/scripts/dong-thoi-gian.js): bắt đầu ở 1650, người còn sống thanh kéo tới nay, màu theo thời kỳ; chú thích khớp.'
+    review: dung
   - id: m1
     cau: "Monteverdi (1567–1643): người đứng ở ranh giới Phục hưng và Baroque."
     loai: lich-su
@@ -625,12 +644,12 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.encyclopedia.com/people/literature-and-arts/music-history-composers-and-performers-biographies/antonio-vivaldi" ]
     luot_2_ghi_chu: Ordained 1703, violinist, Venice, Pietà "to care for poor orphaned children", đào tạo nữ sinh.
   - id: v2
-    cau: Ông viết hơn 500 concerto và góp phần chuẩn hóa concerto ba chương (nhanh – chậm – nhanh).
+    cau: Ông viết khoảng 500 concerto và góp phần chuẩn hóa concerto ba chương (nhanh – chậm – nhanh).
     loai: lich-su
     nguon:
       - ec-vivaldi
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "…và định hình thể loại concerto độc tấu ba chương (nhanh – chậm – nhanh)." Chữ mới: "…và góp phần chuẩn hóa concerto ba chương…". Lý do: Oxford/Gale: "over five hundred concertos"; "helped to standardize the three-movement concerto form" (không nói ông tạo ra); ông còn được ghi công "regularizing ritornello form".'
+    ghi_chu: 'Chữ cũ: "…và định hình thể loại concerto độc tấu ba chương (nhanh – chậm – nhanh)." Chữ mới: "…và góp phần chuẩn hóa concerto ba chương…". Lý do: Oxford/Gale: "over five hundred concertos"; "helped to standardize the three-movement concerto form" (không nói ông tạo ra); ông còn được ghi công "regularizing ritornello form". Review D5-gom: chữ cũ "hơn 500 concerto", chữ mới "khoảng 500 concerto". Lý do: nguồn lệch (Gale, Europe 1450 to 1789: "over five hundred"; Gale, mục Vivaldi, Antonio: "About 500 of his concertos survive"; danh mục của COD: 456); viết chung "khoảng 500" theo mục Gale ghi rõ số còn lại. Nguồn: ec-vivaldi (cùng trang Encyclopedia.com, review đã mở). Phần "chuẩn hóa concerto ba chương" giữ (lượt 2 xác nhận).'
     luot_2: khong-chac
     luot_2_nguon: [ "https://www.encyclopedia.com/people/literature-and-arts/music-history-composers-and-performers-biographies/antonio-vivaldi" ]
     luot_2_ghi_chu: 'Encyclopedia.com: "over five hundred concertos", UXL: "about 500", mục Gale khác: 456. Con số "hơn 500" chưa thống nhất; chuẩn hóa concerto ba chương nhanh-chậm-nhanh có xác nhận.'
@@ -674,7 +693,7 @@ nhan_dinh:
     nguon:
       - ec-bach-od
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Sinh thời ông được biết đến như một nghệ sĩ organ hơn là nhà soạn nhạc". Lý do: Oxford: "famous as an org. virtuoso", "fewer than a dozen of his works were printed before he died"; Baker thêm "it is historically incorrect to maintain that Bach was not appreciated by his contemporaries", nên so sánh "hơn là nhà soạn nhạc" bỏ.'
+    ghi_chu: 'Chữ cũ: "Sinh thời ông được biết đến như một nghệ sĩ organ hơn là nhà soạn nhạc". Lý do: Oxford: "famous as an org. virtuoso", "fewer than a dozen of his works were printed before he died"; Baker thêm "it is historically incorrect to maintain that Bach was not appreciated by his contemporaries", nên so sánh "hơn là nhà soạn nhạc" bỏ. Review D5-gom: giữ. Đã mở lại ec-bach-od (COD): "in his lifetime fewer than a dozen of his comps. were printed"; "Bach was famous as an org. virtuoso". Khớp câu.'
     luot_2: khong-chac
     luot_2_nguon: [ "https://www.encyclopedia.com/people/literature-and-arts/music-history-composers-and-performers-biographies/johann-sebastian-bach" ]
     luot_2_ghi_chu: Danh tiếng organ có xác nhận ("master organist"); riêng "rất ít tác phẩm được in" không có nguyên văn trong trang mở được.
@@ -784,8 +803,9 @@ nhan_dinh:
       - ec-mozart
       - ec-mozart-od
       - br-mozart
+      - mozarteum-kv
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "hơn 600 tác phẩm". Chữ mới: "khoảng 600". Lý do: danh mục Köchel đánh số đến K. 626 (gồm cả bản thất lạc, bản dở dang, bản nghi vấn), các nguồn nói "nearly 600" hoặc "over 600" tùy cách đếm, nên "khoảng 600" an toàn. Sinh 27/1/1756, mất 5/12/1791 (35 tuổi). Chỗ yếu: không có con số duy nhất nguồn nào thống nhất.'
+    ghi_chu: 'Chữ cũ: "hơn 600 tác phẩm". Chữ mới: "khoảng 600". Lý do: danh mục Köchel đánh số đến K. 626 (gồm cả bản thất lạc, bản dở dang, bản nghi vấn), các nguồn nói "nearly 600" hoặc "over 600" tùy cách đếm, nên "khoảng 600" an toàn. Sinh 27/1/1756, mất 5/12/1791 (35 tuổi). Chỗ yếu: không có con số duy nhất nguồn nào thống nhất. Review D5-gom: giữ "khoảng 600". Mozarteum (danh mục Köchel): bản đầu đánh số 626 tác phẩm, kết thúc ở Requiem (gồm cả bản dở dang); "khoảng 600" là cách viết chung đúng mức. Thêm nguồn mozarteum-kv.'
     luot_2: khong-chac
     luot_2_nguon: [ "https://www.britannica.com/biography/Wolfgang-Amadeus-Mozart", "https://www.encyclopedia.com/people/literature-and-arts/music-history-composers-and-performers-biographies/wolfgang-amadeus-mozart" ]
     luot_2_ghi_chu: Sống 35 năm (5/12/1791, aged 35) có xác nhận; "khoảng 600 tác phẩm" (K. đến 626) không có trong trang mở được.
@@ -826,13 +846,13 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.encyclopedia.com/people/literature-and-arts/music-history-composers-and-performers-biographies/ludwig-van-beethoven" ]
     luot_2_ghi_chu: '"In 1792 Beethoven went to Vienna to study with Haydn".'
   - id: e2
-    cau: Beethoven bắt đầu bị mất thính lực từ khoảng năm 1798; bệnh nặng dần, và ông gần như điếc hoàn toàn khi viết những tác phẩm cuối đời.
+    cau: Beethoven bắt đầu bị mất thính lực từ khoảng năm 1796; bệnh nặng dần, và từ khoảng năm 1818 ông không còn trò chuyện bằng lời với khách được nữa.
     loai: nam
     nguon:
       - ec-beethoven
       - ec-beethoven-od
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "từ khoảng tuổi 28 và gần như điếc hoàn toàn khi viết những tác phẩm vĩ đại nhất". Chữ mới như trên. Lý do: tuổi 28 ứng với 1798 (sinh 1770) nhưng chữ "tuổi" dễ lệch (Beethoven tự kể 1796, Heiligenstadt Testament 1802 nói "sáu năm"); nguồn không thống nhất giữa 1796 và 1798 nên giữ "khoảng 1798" kèm "khoảng". "Những tác phẩm vĩ đại nhất" là đánh giá chủ quan, đổi sang "tác phẩm cuối đời" (giao hưởng 9, các tứ tấu cuối) khớp nguồn.'
+    ghi_chu: 'Chữ cũ: "từ khoảng tuổi 28 và gần như điếc hoàn toàn khi viết những tác phẩm vĩ đại nhất". Chữ mới như trên. Lý do: tuổi 28 ứng với 1798 (sinh 1770) nhưng chữ "tuổi" dễ lệch (Beethoven tự kể 1796, Heiligenstadt Testament 1802 nói "sáu năm"); nguồn không thống nhất giữa 1796 và 1798 nên giữ "khoảng 1798" kèm "khoảng". "Những tác phẩm vĩ đại nhất" là đánh giá chủ quan, đổi sang "tác phẩm cuối đời" (giao hưởng 9, các tứ tấu cuối) khớp nguồn. Review D5-gom: chữ cũ "từ khoảng năm 1798; bệnh nặng dần, và ông gần như điếc hoàn toàn khi viết những tác phẩm cuối đời", chữ mới như cau. Lý do: Baker (ec-beethoven, review đã mở): "lasting malady" bắt đầu sáu năm trước Di chúc Heiligenstadt (1802), "i.e., in 1796"; không nguồn nào đã mở ghi 1798; nguồn không dùng chữ điếc "hoàn toàn", mà ghi sau 1818 ông "no longer able to converse with visitors". Nguồn: ec-beethoven.'
     luot_2: khong-chac
     luot_2_nguon: [ "https://www.encyclopedia.com/people/literature-and-arts/music-history-composers-and-performers-biographies/ludwig-van-beethoven" ]
     luot_2_ghi_chu: 'Encyclopedia.com: bệnh bắt đầu 1796 (sáu năm trước Di chúc Heiligenstadt 1802); sau 1818 không còn trò chuyện được (dùng sổ giấy). Năm 1798 chưa được xác nhận, mức "gần như điếc hoàn toàn" ở tác phẩm cuối cũng chưa có nguyên văn. Gợi ý ghi "khoảng 1796-1798".'
@@ -932,7 +952,7 @@ nhan_dinh:
     nguon:
       - du-nsn
     ket_qua: da-sua
-    ghi_chu: "Trước đây trang xếp Chopin trước Mendelssohn, trái thứ tự năm sinh đã nói ở phần mở đầu. Đã đổi chỗ hai mục; dữ liệu khóa: Mendelssohn 1809, Chopin 1810. Anchor của hai mục không đổi."
+    ghi_chu: "Trước đây trang xếp Chopin trước Mendelssohn, trái thứ tự năm sinh đã nói ở phần mở đầu. Đã đổi chỗ hai mục; dữ liệu khóa: Mendelssohn 1809, Chopin 1810. Anchor của hai mục không đổi. Review D5-gom: giữ: câu về thứ tự mục, kiểm trên trang (Mendelssohn trước Chopin, Schumann) và năm sinh trong dữ liệu đã khóa."
     luot_2: khong-chac
     luot_2_nguon: [ "https://www.encyclopedia.com/people/literature-and-arts/music-history-composers-and-performers-biographies/frederic-francois-chopin" ]
     luot_2_ghi_chu: "Câu nói về thứ tự mục trên chính site, không kiểm được. Năm sinh: Mendelssohn 1809 (3/2), Chopin 1810 (22/2), Schumann 1810 (dữ liệu đã khóa): thứ tự theo năm đúng."
@@ -965,7 +985,7 @@ nhan_dinh:
       - br-chopin
       - ec-chopin
     ket_qua: da-sua
-    ghi_chu: "Chữ cũ: \"được coi là 'nhà thơ của cây đàn piano'\". Lý do: không tìm được nguồn bậc 1–2 cho nguyên văn câu cũ; Britannica gọi ông \"Polish French composer and pianist of the Romantic era, who wrote primarily for solo piano\" và nói về chất thơ trong nhạc; chữ mới bám chữ \"tone poet\" mà Oxford/Britannica dùng cho ông."
+    ghi_chu: "Chữ cũ: \"được coi là 'nhà thơ của cây đàn piano'\". Lý do: không tìm được nguồn bậc 1–2 cho nguyên văn câu cũ; Britannica gọi ông \"Polish French composer and pianist of the Romantic era, who wrote primarily for solo piano\" và nói về chất thơ trong nhạc; chữ mới bám chữ \"tone poet\" mà Oxford/Britannica dùng cho ông. Review D5-gom: giữ. Britannica (br-chopin, review đã mở): \"Chopin ranks as one of music's greatest tone poets by reason of his superfine imagination and fastidious craftsmanship.\" Khớp nguyên ý."
     luot_2: khong-chac
     luot_2_ghi_chu: Đánh giá phổ thông; không tìm được nguồn dùng đúng cụm "tone poet"; Encyclopedia.com không có "poet of the piano".
   - id: c4
@@ -1195,7 +1215,7 @@ nhan_dinh:
       - ec-carmen
       - br-bizet
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: bị chê là "thô tục" ... "được diễn nhiều nhất thế giới". Lý do: Britannica ghi giới phê bình chê vở là "immoral and vulgar" ("vô luân và thô tục"), nên đưa đủ cụm trong ngoặc kép; "được diễn nhiều nhất" không có nguồn xếp hạng, đổi "được yêu thích nhất".'
+    ghi_chu: 'Chữ cũ: bị chê là "thô tục" ... "được diễn nhiều nhất thế giới". Lý do: Britannica ghi giới phê bình chê vở là "immoral and vulgar" ("vô luân và thô tục"), nên đưa đủ cụm trong ngoặc kép; "được diễn nhiều nhất" không có nguồn xếp hạng, đổi "được yêu thích nhất". Review D5-gom: giữ. Britannica (br-carmen, review đã mở) nói vở bị "condemned by the earliest critics" và nhắc "initial rejection of his work as immoral and vulgar". Khớp cụm trong ngoặc kép.'
     luot_2: khong-chac
     luot_2_nguon: [ "https://www.encyclopedia.com/people/literature-and-arts/music-history-composers-and-performers-biographies/georges-bizet" ]
     luot_2_ghi_chu: 'Oxford: Carmen "a failure at its first performance", nay thuộc những opera được yêu thích nhất; trang không có chi tiết bị chê "vô luân và thô tục".'
@@ -1316,7 +1336,7 @@ nhan_dinh:
       - ec-grieg
       - ec-grieg-od
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "trong trẻo như tranh phong cảnh — nghe là thấy núi tuyết, vịnh hẹp và ánh sáng phương Bắc; hòa âm tinh tế, hiếm khi ồn ào". Lý do: cụm hình ảnh chủ quan không có nguồn; Oxford: ông không viết opera hoàn chỉnh hay giao hưởng thành công (Giao hưởng cung Do thứ bị ông rút lại).'
+    ghi_chu: 'Chữ cũ: "trong trẻo như tranh phong cảnh — nghe là thấy núi tuyết, vịnh hẹp và ánh sáng phương Bắc; hòa âm tinh tế, hiếm khi ồn ào". Lý do: cụm hình ảnh chủ quan không có nguồn; Oxford: ông không viết opera hoàn chỉnh hay giao hưởng thành công (Giao hưởng cung Do thứ bị ông rút lại). Review D5-gom: giữ. COD (ec-grieg-od, review đã mở): nhạc của Grieg "eschews the larger forms of opera and sym."; giao hưởng duy nhất bị ông cấm diễn ("withdrawn by composer"). Chữ "tránh" dịch đúng "eschews"; Concerto piano không thuộc hai thể loại câu nêu.'
     luot_2: khong-chac
     luot_2_nguon: [ "https://www.encyclopedia.com/people/literature-and-arts/music-history-composers-and-performers-biographies/edvard-hagerup-grieg" ]
     luot_2_ghi_chu: 'Encyclopedia.com: giao hưởng bị chính ông chối bỏ ("stilted work he soon repudiated"), opera dở dang, sở trường là tiểu phẩm; nhưng "tránh" là nói quá: ông vẫn viết Concerto piano, Peer Gynt, nhạc thính phòng.'
@@ -1344,13 +1364,14 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.classicfm.com/composers/elgar/" ]
     luot_2_ghi_chu: '"basically self-taught as a musician"; Enigma Variations 1899 "catapulted him to fame" (sinh 1857 nên 42 tuổi).'
   - id: x2
-    cau: Tác phẩm của Elgar mở ra thời kỳ nở rộ hiện đại của âm nhạc Anh.
+    cau: Các tác phẩm của Elgar góp phần khơi dậy một thời kỳ phục hưng của âm nhạc Anh.
     loai: lich-su
     nguon:
       - ec-elgar
       - berliner-elgar
+      - br-elgar
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Mở đầu thời kỳ phục hưng của âm nhạc Anh." Lý do: "English musical renaissance" là cách gọi thường gặp (Oxford/Gale gắn với Elgar), nhưng "mở đầu" là khẳng định mạnh; chữ mới diễn đạt đúng mức nguồn nói.'
+    ghi_chu: 'Chữ cũ: "Mở đầu thời kỳ phục hưng của âm nhạc Anh." Lý do: "English musical renaissance" là cách gọi thường gặp (Oxford/Gale gắn với Elgar), nhưng "mở đầu" là khẳng định mạnh; chữ mới diễn đạt đúng mức nguồn nói. Review D5-gom: chữ cũ "Tác phẩm của ông mở ra thời kỳ nở rộ hiện đại của âm nhạc Anh", chữ mới "Các tác phẩm của ông góp phần khơi dậy một thời kỳ phục hưng của âm nhạc Anh". Lý do: "mở ra" mạnh hơn nguồn; Britannica (br-elgar): các tác phẩm dàn nhạc của ông "stimulated a renaissance of English music".'
     luot_2: khong-chac
     luot_2_nguon: [ "https://www.classicfm.com/composers/elgar/" ]
     luot_2_ghi_chu: Trang ClassicFM không nói "mở ra thời kỳ nở rộ" của nhạc Anh; đánh giá phổ biến nhưng chưa có nguồn mở được.
@@ -1366,14 +1387,14 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.classicfm.com/composers/elgar/" ]
     luot_2_ghi_chu: Enigma Variations Op. 36, Nimrod, Cello Concerto Mi thứ Op. 85, Pomp and Circumstance.
   - id: q1
-    cau: "Puccini là nhà soạn opera Ý với nhiều vở theo trường phái verismo: đời sống thường ngày, cảm xúc mãnh liệt, giai điệu không thể quên."
+    cau: "Puccini là nhà soạn opera Ý, một trong những đại diện lớn nhất của chủ nghĩa hiện thực trong opera (verismo, lấy đề tài đời thường, đương thời)."
     loai: dinh-nghia
     nguon:
       - ec-puccini
       - ec-puccini-od
       - br-puccini
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "thuộc trường phái verismo". Lý do: Oxford/Britannica: Puccini chịu ảnh hưởng verismo (Manon Lescaut, Tosca, La bohème) nhưng không thuộc hẳn trường phái (Madama Butterfly, Turandot khác); nên viết "nhiều vở theo". Thuật ngữ verismo chưa có trong thuat-ngu.yml.'
+    ghi_chu: 'Chữ cũ: "thuộc trường phái verismo". Lý do: Oxford/Britannica: Puccini chịu ảnh hưởng verismo (Manon Lescaut, Tosca, La bohème) nhưng không thuộc hẳn trường phái (Madama Butterfly, Turandot khác); nên viết "nhiều vở theo". Thuật ngữ verismo chưa có trong thuat-ngu.yml. Review D5-gom: chữ cũ "Nhà soạn opera Ý với nhiều vở theo trường phái verismo: đời sống thường ngày, cảm xúc mãnh liệt, giai điệu không thể quên", chữ mới "Nhà soạn opera Ý, một trong những đại diện lớn nhất của chủ nghĩa hiện thực trong opera (verismo, lấy đề tài đời thường, đương thời)". Lý do: Britannica (br-puccini, review đã mở): "one of the greatest exponents of operatic realism"; Gale (ec-puccini): La bohème là vở đầu tiên của ông theo "verismo style", verismo đặt truyện ở hiện tại hay quá khứ gần, nhân vật gần gũi; "nhiều vở" không nguồn nào đếm, "giai điệu không thể quên" là cảm nhận: bỏ.'
     luot_2: khong-chac
     luot_2_nguon: [ "https://www.encyclopedia.com/people/literature-and-arts/music-history-composers-and-performers-biographies/giacomo-puccini" ]
     luot_2_ghi_chu: Encyclopedia.com định nghĩa verismo. Puccini thường được nối với verismo nhưng nhiều nguồn coi chỉ một phần (Tosca, Il tabarro) và còn tranh luận; "nhiều vở theo trường phái verismo" chưa được xác nhận chắc.
@@ -1461,7 +1482,7 @@ nhan_dinh:
       - ec-sibelius
       - ec-sibelius-od
     ket_qua: dung
-    ghi_chu: "Oxford/Baker: Tapiola 1926, rồi im lặng đến khi mất 1957 (31 năm), Giao hưởng số 8 bị hủy."
+    ghi_chu: "Oxford/Baker: Tapiola 1926, rồi im lặng đến khi mất 1957 (31 năm), Giao hưởng số 8 bị hủy. Review D5-gom: giữ. Baker (ec-sibelius-od, review đã mở): Tapiola công diễn 26/12/1926, \"he practically ceased to compose after 1927\"; ông mất 1957, tức khoảng 30 năm. Lượt 2 dựa vào mốc \"sau 1931 không công bố\" (26 năm) của nguồn khác; \"gần như ngừng sáng tác\" khớp Baker."
     luot_2: khong-chac
     luot_2_nguon: [ "https://www.encyclopedia.com/people/history/historians-miscellaneous-biographies/jean-sibelius" ]
     luot_2_ghi_chu: 'Encyclopedia.com: sau 1931 không công bố nốt nhạc nào trong 26 năm còn lại. Mốc im lặng thường nêu khoảng 1926-1929 (Tapiola 1926), tức 28-31 năm; "30 năm" là xấp xỉ, nguồn mở được không khớp chính xác.'
@@ -1582,7 +1603,7 @@ nhan_dinh:
       - zti-bartok
       - br-bartok
     ket_qua: dung
-    ghi_chu: 'ZTI/EBSCO: cùng Kodály, từ 1906; thu bằng máy phonograph ống sáp; hàng nghìn bài (khoảng 13.000 theo ZTI, gồm Hungary, Slovakia, Romania...). Câu dùng "hàng nghìn", không nêu số cụ thể.'
+    ghi_chu: 'ZTI/EBSCO: cùng Kodály, từ 1906; thu bằng máy phonograph ống sáp; hàng nghìn bài (khoảng 13.000 theo ZTI, gồm Hungary, Slovakia, Romania...). Câu dùng "hàng nghìn", không nêu số cụ thể. Review D5-gom: giữ. ZTI (zti-bartok, review đã mở): Bartók dùng máy phonograph từ đầu để ghi âm khi sưu tầm, ghi lên "phonograph cylinders" (ống sáp) từ 1905–1906; riêng 1906 hơn 1.000 bài Hungary, khoảng 300 bài Slovakia; tổng sưu tập khoảng 10.000 giai điệu; Romania từ 1909. "Hàng nghìn" và "Đông Âu" khớp.'
     luot_2: khong-chac
     luot_2_nguon: [ "https://www.encyclopedia.com/people/literature-and-arts/music-history-composers-and-performers-biographies/bela-bartok" ]
     luot_2_ghi_chu: Trang xác nhận từ 1905 ông sưu tầm nhạc dân gian nông thôn Hungary, nhưng không nêu máy ghi âm ống sáp hay số lượng.
@@ -1715,7 +1736,7 @@ nhan_dinh:
       - wise-sq8
       - sdt-sq8
     ket_qua: dung
-    ghi_chu: "Boosey & Hawkes/BSO: Waltz No.2 thuộc Suite for Variety Orchestra (còn gọi Jazz Suite No.2); Wise Music/Gohrisch: String Quartet No.8 Op.110 cung Do thứ."
+    ghi_chu: "Boosey & Hawkes/BSO: Waltz No.2 thuộc Suite for Variety Orchestra (còn gọi Jazz Suite No.2); Wise Music/Gohrisch: String Quartet No.8 Op.110 cung Do thứ. Review D5-gom: giữ. BSO (bso-waltz, review đã mở): \"Waltz No. 2 from Suite No. 1 for Variety Orchestra\", Shostakovich; trang nói tên đúng là Suite for Variety Orchestra (từng bị ghi nhầm là Jazz Suite No. 2). Tứ tấu số 8 theo wise-sq8, Giao hưởng số 5 lượt 2 xác nhận."
     luot_2: khong-chac
     luot_2_nguon: [ "https://www.encyclopedia.com/people/literature-and-arts/music-history-composers-and-performers-biographies/dmitri-shostakovich" ]
     luot_2_ghi_chu: Sym. 5 có xác nhận; Waltz số 2 (Suite for Variety Orchestra) và Tứ tấu số 8 không được nêu trong trang mở được. Lưu ý tên suite hay bị nhầm với Jazz Suite số 2.
@@ -1737,8 +1758,9 @@ nhan_dinh:
     nguon:
       - ec-messiaen
       - br-messiaen
+      - mto-messiaen
     ket_qua: dung
-    ghi_chu: "Oxford/Britannica: synaesthesia (cảm giác kèm màu). Câu nói mô tả theo lời chính ông."
+    ghi_chu: "Oxford/Britannica: synaesthesia (cảm giác kèm màu). Câu nói mô tả theo lời chính ông. Review D5-gom: giữ. Britannica và Encyclopedia.com không có câu về cảm giác kèm màu (review đã mở lại, chỉ thấy \"colour\" theo nghĩa âm sắc); thêm nguồn mto-messiaen (Music Theory Online, bài bình duyệt): Messiaen \"stated that his peculiar brand of colored-hearing synesthesia responded to chords\", \"when reading or hearing a score, he visualized corresponding phenomena of color\"."
     luot_2: khong-chac
     luot_2_nguon: [ "https://www.encyclopedia.com/people/literature-and-arts/music-history-composers-and-performers-biographies/olivier-messiaen" ]
     luot_2_ghi_chu: Trang không đề cập synesthesia (nghe âm như màu sắc); đúng theo kiến thức chung nhưng chưa có nguồn mở được.
@@ -1802,7 +1824,7 @@ nhan_dinh:
     nguon:
       - du-nsn
     ket_qua: da-sua
-    ghi_chu: 'Trước đây bốn người này nằm dưới "Thế kỷ 20"; dữ liệu khóa đã xếp họ "Đương đại" (hồ sơ du-lieu/nha-soan-nhac). Đã thêm tiêu đề `## Đương đại { #duong-dai }` trước Pärt; câu mở và mục lục khớp. Chưa dùng chữ "còn sống" trong trang vì Pärt, Reich, Glass, Adams còn sống nhưng chữ sẽ lỗi thời; dữ liệu khóa dùng "sinh năm".'
+    ghi_chu: 'Trước đây bốn người này nằm dưới "Thế kỷ 20"; dữ liệu khóa đã xếp họ "Đương đại" (hồ sơ du-lieu/nha-soan-nhac). Đã thêm tiêu đề `## Đương đại { #duong-dai }` trước Pärt; câu mở và mục lục khớp. Chưa dùng chữ "còn sống" trong trang vì Pärt, Reich, Glass, Adams còn sống nhưng chữ sẽ lỗi thời; dữ liệu khóa dùng "sinh năm". Review D5-gom: giữ: câu về cấu trúc trang; đã kiểm mục "## Đương đại { #duong-dai }" có bốn người, thoi_ky "Đương đại" trong dữ liệu đã khóa, năm sinh 1935, 1936, 1937, 1947 khớp.'
     luot_2: khong-chac
     luot_2_ghi_chu: "Câu về cấu trúc trang. Năm sinh: Pärt 1935, Reich 1936, Glass 1937, Adams 1947 (Boosey: b. 1947); việc cả bốn còn sống không xác nhận được bằng nguồn đã mở."
   - id: pa1
@@ -1937,7 +1959,7 @@ nhan_dinh:
       - oup-tar
       - grove
     ket_qua: dung
-    ghi_chu: "Norton: tác giả Burkholder, Grout, Palisca; OUP: Taruskin, Oxford History of Western Music (5 tập, 2005); Grove Music Online do Oxford University Press. Britannica đã mở (xem br-*)."
+    ghi_chu: "Norton: tác giả Burkholder, Grout, Palisca; OUP: Taruskin, Oxford History of Western Music (5 tập, 2005); Grove Music Online do Oxford University Press. Britannica đã mở (xem br-*). Review D5-gom: giữ. Đã mở wwnorton: \"A History of Western Music\", J. Peter Burkholder, Donald Jay Grout, Claude V. Palisca. Taruskin, Grove theo nguồn lượt 1 (oup-tar, grove)."
     luot_2: khong-chac
     luot_2_ghi_chu: "Như t30: không mở được trang nhà xuất bản để xác nhận tên sách; tên đúng theo kiến thức chung."
 khuong_nhac: []
@@ -1946,8 +1968,8 @@ doi_chu:
     moi: Một trong những nhà soạn nhạc Anh vĩ đại nhất, mất năm 36 tuổi. Bậc thầy của bè trầm lặp lại (ground bass) và phổ nhạc cho tiếng Anh.
     ly_do: 'p1 (da-sua): Oxford ghi "among the greatest of Eng. composers" và nói ông "challenges" Byrd, Elgar, Britten cho danh hiệu lớn nhất; không có nguồn nào nói "trước thế kỷ 20". "Died at the age of 36" (Temperley).'
   - cu: Linh mục và nghệ sĩ violin người Venice, dạy nhạc nhiều năm tại một trại trẻ mồ côi nữ có dàn nhạc nổi tiếng. Ông viết hơn 500 concerto và định hình thể loại concerto độc tấu ba chương (nhanh – chậm – nhanh).
-    moi: Linh mục và nghệ sĩ violin người Venice, dạy nhạc nhiều năm tại một trại trẻ mồ côi nữ có dàn nhạc nổi tiếng. Ông viết hơn 500 concerto và góp phần chuẩn hóa concerto ba chương (nhanh – chậm – nhanh).
-    ly_do: 'v2 (da-sua): Oxford/Gale: "over five hundred concertos"; "helped to standardize the three-movement concerto form" (không nói ông tạo ra); ông còn được ghi công "regularizing ritornello form".'
+    moi: Linh mục và nghệ sĩ violin người Venice, dạy nhạc nhiều năm tại một trại trẻ mồ côi nữ có dàn nhạc nổi tiếng. Ông viết khoảng 500 concerto và góp phần chuẩn hóa concerto ba chương (nhanh – chậm – nhanh).
+    ly_do: 'v2 (da-sua): Oxford/Gale: "over five hundred concertos"; "helped to standardize the three-movement concerto form" (không nói ông tạo ra); ông còn được ghi công "regularizing ritornello form".; v2 (da-sua, review D5-gom): "hơn 500" thành "khoảng 500": nguồn ghi 456, about 500, over 500; Gale: "About 500 of his concertos survive".'
   - cu: Nhạc sĩ organ và giám đốc âm nhạc nhà thờ ở Leipzig suốt 27 năm cuối đời. Bach là bậc thầy tuyệt đối của phức điệu và fugue; tác phẩm của ông là nền tảng học hòa âm và đối âm đến tận hôm nay. Sinh thời ông được biết đến như một nghệ sĩ organ hơn là nhà soạn nhạc; âm nhạc của ông được "tái khám phá" mạnh mẽ từ năm 1829 khi Mendelssohn dàn dựng lại Thương khó theo Thánh Matthew.
     moi: Nghệ sĩ organ bậc thầy, từ năm 1723 làm cantor (giám đốc âm nhạc) ở Leipzig suốt 27 năm cuối đời. Bach là bậc thầy tuyệt đối của phức điệu và fugue. Sinh thời ông nổi tiếng nhất với tài chơi organ, và rất ít tác phẩm của ông được in khi ông còn sống; làn sóng "tái khám phá" Bach thường được tính từ năm 1829, khi Mendelssohn dàn dựng lại Thương khó theo Thánh Matthew.
     ly_do: 'b1, b2, b3, b4 (da-sua): chữ cũ mơ hồ (ông không là organist ở Leipzig); Baker: "elected to the post of cantor of the city of Leipzig" 22/4/1723, nhậm chức 31/5/1723, giữ đến hết đời (mất 28/7/1750: 27 năm); "master organist" (Baker), "famous as an org. virtuoso" (Oxford). Chữ cũ có thêm: "tác phẩm của ông là nền tảng học hòa âm và đối âm đến tận hôm nay". Đã bỏ vế ấy: không tìm được nguồn bậc 1–2 đọc được (Open Music Theory trang đầu không nhắc Bach). Vế còn lại: Gale "the ultimate expression of polyphony", Oxford "supreme achievement", Kunst der Fuge "an encyclopedia of fugues, canons". Oxford: "famous as an org. virtuoso", "fewer than a dozen of his works were printed before he died"; Baker thêm "it is historically incorrect to maintain that Bach was not appreciated by his contemporaries", nên so sánh "hơn là nhà soạn nhạc" bỏ. Oxford và Britannica coi buổi diễn 11/3/1829 ở Berlin là khởi đầu phong trào phục hưng Bach thế kỷ 19; Baker ghi đó là "conventional" và nhắc Mozart, Beethoven đã tập các prelude và fugue của Bach, nên viết "thường được tính".'
@@ -1958,8 +1980,8 @@ doi_chu:
     moi: Thần đồng biểu diễn khắp châu Âu từ năm 6 tuổi, Mozart sống chỉ 35 năm nhưng để lại khoảng 600 tác phẩm ở mọi thể loại. Các tác phẩm được đánh số theo danh mục Köchel (K.).
     ly_do: 'z2 (da-sua): danh mục Köchel đánh số đến K. 626 (gồm cả bản thất lạc, bản dở dang, bản nghi vấn), các nguồn nói "nearly 600" hoặc "over 600" tùy cách đếm, nên "khoảng 600" an toàn. Sinh 27/1/1756, mất 5/12/1791 (35 tuổi). Chỗ yếu: không có con số duy nhất nguồn nào thống nhất.'
   - cu: Học ở Vienna (có thời gian học với Haydn), Beethoven bắt đầu bị mất thính lực từ khoảng tuổi 28 và gần như điếc hoàn toàn khi viết những tác phẩm vĩ đại nhất. Ông là cây cầu từ Cổ điển sang Lãng mạn, đưa giao hưởng và sonata lên quy mô và chiều sâu chưa từng có.
-    moi: Học ở Vienna (có thời gian học với Haydn), Beethoven bắt đầu bị mất thính lực từ khoảng năm 1798; bệnh nặng dần, và ông gần như điếc hoàn toàn khi viết những tác phẩm cuối đời. Ông là cây cầu từ Cổ điển sang Lãng mạn, đưa giao hưởng và sonata lên quy mô và chiều sâu chưa từng có.
-    ly_do: 'e2 (da-sua): tuổi 28 ứng với 1798 (sinh 1770) nhưng chữ "tuổi" dễ lệch (Beethoven tự kể 1796, Heiligenstadt Testament 1802 nói "sáu năm"); nguồn không thống nhất giữa 1796 và 1798 nên giữ "khoảng 1798" kèm "khoảng". "Những tác phẩm vĩ đại nhất" là đánh giá chủ quan, đổi sang "tác phẩm cuối đời" (giao hưởng 9, các tứ tấu cuối) khớp nguồn.'
+    moi: Học ở Vienna (có thời gian học với Haydn), Beethoven bắt đầu bị mất thính lực từ khoảng năm 1796; bệnh nặng dần, và từ khoảng năm 1818 ông không còn trò chuyện bằng lời với khách được nữa. Ông là cây cầu từ Cổ điển sang Lãng mạn, đưa giao hưởng và sonata lên quy mô và chiều sâu chưa từng có.
+    ly_do: 'e2 (da-sua): tuổi 28 ứng với 1798 (sinh 1770) nhưng chữ "tuổi" dễ lệch (Beethoven tự kể 1796, Heiligenstadt Testament 1802 nói "sáu năm"); nguồn không thống nhất giữa 1796 và 1798 nên giữ "khoảng 1798" kèm "khoảng". "Những tác phẩm vĩ đại nhất" là đánh giá chủ quan, đổi sang "tác phẩm cuối đời" (giao hưởng 9, các tứ tấu cuối) khớp nguồn.; e2 (da-sua, review D5-gom): năm khởi bệnh theo Baker ("in 1796", sáu năm trước Di chúc Heiligenstadt); "gần như điếc hoàn toàn" thay bằng điều nguồn ghi (sau 1818 không trò chuyện được với khách).'
   - moi: "Thần đồng âm nhạc: viết Bát tấu đàn dây năm 16 tuổi và khúc mở màn Giấc mộng đêm hè năm 17 tuổi. Là nhạc trưởng dàn nhạc Gewandhaus Leipzig và người dàn dựng lại Thương khó theo Thánh Matthew của Bach năm 1829, khơi dậy phong trào phục hưng âm nhạc Bach. Chị gái ông là Fanny Mendelssohn Hensel."
     ly_do: "n1, n5 (da-sua): so sánh với Mozart là nhận xét thường gặp nhưng không có câu nguồn đọc được để dẫn; bỏ để khỏi sai. Octet Op. 20 (1825, 16 tuổi, sinh 3/2/1809) và Midsummer Night's Dream overture (1826, 17 tuổi) khớp Oxford/Britannica. Trước đây trang xếp Chopin trước Mendelssohn, trái thứ tự năm sinh đã nói ở phần mở đầu. Đã đổi chỗ hai mục; dữ liệu khóa: Mendelssohn 1809, Chopin 1810. Anchor của hai mục không đổi. (mục Mendelssohn đổi chỗ lên trước Chopin, nội dung đổi như n1); n5 (da-sua): Trước đây trang xếp Chopin trước Mendelssohn, trái thứ tự năm sinh đã nói ở phần mở đầu. Đã đổi chỗ hai mục; dữ liệu khóa: Mendelssohn 1809, Chopin 1810. Anchor của hai mục không đổi. (mục Mendelssohn đổi chỗ lên trước Chopin, nội dung đổi như n1)"
   - cu: Sinh ở Ba Lan, sống và biểu diễn tại Paris. Gần như mọi tác phẩm của Chopin đều cho piano, và ông được coi là "nhà thơ của cây đàn piano".
@@ -1995,11 +2017,11 @@ doi_chu:
     moi: "Nhà soạn nhạc Na Uy, đưa dân ca và phong cảnh Bắc Âu vào nhạc cổ điển; nổi tiếng với các tiểu phẩm ngắn (10 tập Lyric Pieces cho piano). Dấu vân tay của ông: những tiểu phẩm giàu chất thơ, gắn với dân ca và phong cảnh Na Uy; ông tránh các hình thức lớn như opera hay giao hưởng."
     ly_do: 'g1, g2 (da-sua): "bậc thầy" là đánh giá; Oxford ghi 10 tập Lyric Pieces (66 bản, 1867–1901), nên dẫn số liệu. cụm hình ảnh chủ quan không có nguồn; Oxford: ông không viết opera hoàn chỉnh hay giao hưởng thành công (Giao hưởng cung Do thứ bị ông rút lại).'
   - cu: Nhà soạn nhạc Anh tự học phần lớn, nổi tiếng muộn ở tuổi ngoài 40 với Enigma Variations. Mở đầu thời kỳ phục hưng của âm nhạc Anh.
-    moi: Nhà soạn nhạc Anh tự học phần lớn, nổi tiếng muộn ở tuổi ngoài 40 với Enigma Variations. Tác phẩm của ông mở ra thời kỳ nở rộ hiện đại của âm nhạc Anh.
-    ly_do: 'x2 (da-sua): "English musical renaissance" là cách gọi thường gặp (Oxford/Gale gắn với Elgar), nhưng "mở đầu" là khẳng định mạnh; chữ mới diễn đạt đúng mức nguồn nói.'
+    moi: Nhà soạn nhạc Anh tự học phần lớn, nổi tiếng muộn ở tuổi ngoài 40 với Enigma Variations. Các tác phẩm của ông góp phần khơi dậy một thời kỳ phục hưng của âm nhạc Anh.
+    ly_do: 'x2 (da-sua): "English musical renaissance" là cách gọi thường gặp (Oxford/Gale gắn với Elgar), nhưng "mở đầu" là khẳng định mạnh; chữ mới diễn đạt đúng mức nguồn nói.; x2 (da-sua, review D5-gom): Britannica: "stimulated a renaissance of English music"; "mở ra" mạnh hơn nguồn.'
   - cu: "Nhà soạn opera Ý thuộc trường phái verismo: đời sống thường ngày, cảm xúc mãnh liệt, giai điệu không thể quên. Opera của ông thuộc nhóm được diễn nhiều nhất thế giới. Turandot dang dở khi ông mất."
-    moi: "Nhà soạn opera Ý với nhiều vở theo trường phái verismo: đời sống thường ngày, cảm xúc mãnh liệt, giai điệu không thể quên. Opera của ông thuộc nhóm được diễn nhiều nhất thế giới. Turandot dang dở khi ông mất."
-    ly_do: 'q1 (da-sua): Oxford/Britannica: Puccini chịu ảnh hưởng verismo (Manon Lescaut, Tosca, La bohème) nhưng không thuộc hẳn trường phái (Madama Butterfly, Turandot khác); nên viết "nhiều vở theo". Thuật ngữ verismo chưa có trong thuat-ngu.yml.'
+    moi: Nhà soạn opera Ý, một trong những đại diện lớn nhất của chủ nghĩa hiện thực trong opera (verismo, lấy đề tài đời thường, đương thời). Opera của ông thuộc nhóm được diễn nhiều nhất thế giới. Turandot dang dở khi ông mất.
+    ly_do: 'q1 (da-sua): Oxford/Britannica: Puccini chịu ảnh hưởng verismo (Manon Lescaut, Tosca, La bohème) nhưng không thuộc hẳn trường phái (Madama Butterfly, Turandot khác); nên viết "nhiều vở theo". Thuật ngữ verismo chưa có trong thuat-ngu.yml.; q1 (da-sua, review D5-gom): theo Britannica ("one of the greatest exponents of operatic realism") và Gale (verismo: đề tài hiện tại, đời thường); bỏ "nhiều vở", "giai điệu không thể quên".; dd1 (da-sua): Trước đây bốn người này nằm dưới "Thế kỷ 20"; dữ liệu khóa đã xếp họ "Đương đại" (hồ sơ du-lieu/nha-soan-nhac). Đã thêm tiêu đề `## Đương đại { #duong-dai }` trước Pärt; câu mở và mục lục khớp. Chưa dùng chữ "còn sống" trong trang vì Pärt, Reich, Glass, Adams còn sống nhưng chữ sẽ lỗi thời; dữ liệu khóa dùng "sinh năm".; gl1, gl2 (da-sua): Gale/EWB: học với Boulanger 1964–66, còn với Shankar là cộng tác (phiên âm nhạc cho Chappaqua), nên "làm việc với". Chữ cũ có thêm: "là một trong những nhà soạn nhạc đương đại được nghe nhiều nhất". Đã bỏ: xếp hạng không kiểm được. Phần còn lại: Gale/EWB (Einstein on the Beach, Satyagraha, giao hưởng, nhạc phim).'
   - cu: Nhà soạn nhạc Phần Lan, biểu tượng của bản sắc dân tộc Phần Lan. Giao hưởng của ông phát triển từ những mảnh nhỏ thành khối lớn như thiên nhiên Bắc Âu. Ông gần như ngừng sáng tác trong 30 năm cuối đời.
     moi: Nhà soạn nhạc Phần Lan, gắn chặt với bản sắc dân tộc Phần Lan (giai điệu Finlandia trở thành biểu tượng của khát vọng độc lập). Trong giao hưởng, ông bỏ khuôn hình thức quen thuộc và xây nhạc bằng biến tấu và lặp lại một chủ đề cơ bản. Ông gần như ngừng sáng tác trong 30 năm cuối đời.
     ly_do: 'j1, j2 (da-sua): Oxford/Baker: Finlandia (1899–1900) gắn với phong trào đòi tự chủ khỏi Nga; chữ mới nêu cụ thể và hạ "biểu tượng" về đúng đối tượng (Finlandia). so sánh "như thiên nhiên" là ẩn dụ không có nguồn; Oxford mô tả kỹ thuật phát triển chủ đề từ mảnh nhỏ và cấu trúc không theo khuôn sonata, nên viết mô tả kỹ thuật.'
@@ -2025,13 +2047,13 @@ doi_chu:
     moi: Một trong những nhà soạn nhạc Anh lớn nhất thế kỷ 20, đặc biệt ở opera và nhạc thanh nhạc. Âm nhạc của ông thường nói về những người lạc loài trong cộng đồng.
     ly_do: 'br1 (da-sua): xếp hạng tuyệt đối không có nguồn (Elgar, Vaughan Williams, Tippett cũng lớn); Oxford: "among the leading British composers of the 20th century".'
   - moi: Đương đại
-    ly_do: 'dd1 (da-sua): Trước đây bốn người này nằm dưới "Thế kỷ 20"; dữ liệu khóa đã xếp họ "Đương đại" (hồ sơ du-lieu/nha-soan-nhac). Đã thêm tiêu đề `## Đương đại { #duong-dai }` trước Pärt; câu mở và mục lục khớp. Chưa dùng chữ "còn sống" trong trang vì Pärt, Reich, Glass, Adams còn sống nhưng chữ sẽ lỗi thời; dữ liệu khóa dùng "sinh năm".; gl1, gl2 (da-sua): Gale/EWB: học với Boulanger 1964–66, còn với Shankar là cộng tác (phiên âm nhạc cho Chappaqua), nên "làm việc với". Chữ cũ có thêm: "là một trong những nhà soạn nhạc đương đại được nghe nhiều nhất". Đã bỏ: xếp hạng không kiểm được. Phần còn lại: Gale/EWB (Einstein on the Beach, Satyagraha, giao hưởng, nhạc phim).'
+    ly_do: 'gl1 (da-sua): Glass "làm việc với" Ravi Shankar (không phải học), theo Britannica.'
   - cu: "Một trong những người khai sinh chủ nghĩa tối giản ở Mỹ: các mẫu ngắn lặp lại, lệch pha dần, biến đổi rất chậm. Chịu ảnh hưởng của nhạc trống Tây Phi và gamelan Bali."
     moi: "Một trong những người khai sinh chủ nghĩa tối giản ở Mỹ: các mẫu ngắn lặp lại, lệch pha dần, biến đổi rất chậm. Ông từng học nhạc trống ở Ghana và gamelan Bali."
     ly_do: "re2 (da-sua): Gale ghi ông học trống ở Ghana (1970) và gamelan ở Seattle/Bali (1973–74); chữ mới nói đúng việc học, không khẳng định ảnh hưởng chung."
   - cu: Nhà soạn nhạc tối giản Mỹ, học với Nadia Boulanger ở Paris và với Ravi Shankar. Viết opera, giao hưởng, rất nhiều nhạc phim; là một trong những nhà soạn nhạc đương đại được nghe nhiều nhất.
     moi: Nhà soạn nhạc tối giản Mỹ, học với Nadia Boulanger ở Paris và làm việc với Ravi Shankar. Viết opera, giao hưởng, rất nhiều nhạc phim.
-    ly_do: 'gl1 (da-sua): Glass "làm việc với" Ravi Shankar (không phải học), theo Britannica.'
+    ly_do: 'gl1 (da-sua): Glass "làm việc với" Ravi Shankar (Britannica).'
   - cu: "Nhà soạn nhạc Mỹ, người đưa chủ nghĩa tối giản từ phòng thí nghiệm tiền phong ra sân khấu lớn: tiết tấu lặp lại dồn dập, hòa âm rực rỡ, quy mô giao hưởng. Ông nổi tiếng với các opera về đề tài thời sự (Nixon in China, Doctor Atomic) và những tác phẩm dàn nhạc đầy năng lượng."
     moi: "Nhà soạn nhạc Mỹ gắn với chủ nghĩa tối giản, kết hợp kỹ thuật lặp lại với những yếu tố biểu cảm kiểu tân Lãng mạn: tiết tấu lặp lại dồn dập, quy mô giao hưởng. Ông nổi tiếng với các opera về những sự kiện lịch sử gần đây (Nixon in China, Doctor Atomic) và những tác phẩm dàn nhạc đầy năng lượng."
     ly_do: 'ad1, ad2 (da-sua): "đưa ra sân khấu lớn" là khẳng định công lao không có nguồn; Britannica/NAC: kết hợp minimalism với biểu cảm tân Lãng mạn. Nixon in China (1987) và Doctor Atomic (2005) nói về sự kiện đã xảy ra (1972, 1945), nên "những sự kiện lịch sử gần đây".'

@@ -45,7 +45,7 @@ Khi đã nhận ra thời kỳ, bước tiếp theo là đoán **tác giả**. M
 : Hình thức cổ điển chặt chẽ ("ý thức cổ điển về hình thức và trật tự"), bậc thầy đối âm; hay dùng **hemiola** và những xê dịch nhịp (xem [bài 15](/opus/nhac-ly/15-tiet-tau-nang-cao/)). *Kiểm chứng:* [Giao hưởng số 4](/opus/nghe-nhac/brahms-4/).
 
 **Tchaikovsky**
-: Giai điệu **cuốn hút ngay, dễ nhớ**, đầy cảm xúc; kèn gỗ và dây luân phiên giữ giai điệu (như trong *Romeo và Juliet*); viết nhạc ballet. *Kiểm chứng:* [*Hồ thiên nga*](/opus/nghe-nhac/tchaikovsky-ho-thien-nga/).
+: Giai điệu **cuốn hút ngay**, đầy cảm xúc; dây và kèn gỗ trao qua lại chất liệu (như trong *Romeo và Juliet*); viết nhạc ballet. *Kiểm chứng:* [*Hồ thiên nga*](/opus/nghe-nhac/tchaikovsky-ho-thien-nga/).
 
 **Dvořák**
 : Chất **dân gian Séc** (nhịp điệu của Moravia và Bohemia) và ảnh hưởng nhạc Mỹ (spiritual); giai điệu ngũ cung thời kỳ ở Mỹ. *Kiểm chứng:* [Giao hưởng số 9](/opus/nghe-nhac/dvorak-9-largo/).
@@ -62,7 +62,9 @@ Khi đã nhận ra thời kỳ, bước tiếp theo là đoán **tác giả**. M
 : **Ostinato** dồn dập, có khi nhiều ostinato va vào nhau; nhịp điệu vượt qua vạch nhịp, trọng âm bất ngờ; hợp âm ghép, đa điệu tính (*Petrushka*). *Kiểm chứng:* [*Le Sacre du printemps*](/opus/nghe-nhac/stravinsky-sacre/).
 
 **Shostakovich**
-: Giai điệu dài ở violin, xen các đoạn độc tấu kèn gỗ; chất châm biếm, kỳ quái và hành khúc; cuối Giao hưởng số 5 là sự lặp lại căng thẳng, ám ảnh của Rê trưởng. *Kiểm chứng:* [Giao hưởng số 5](/opus/nghe-nhac/shostakovich-5/).
+: Giai điệu dài, xen các đoạn độc tấu kèn gỗ (chương Largo của Giao hưởng số 5); chất châm biếm, kỳ quái và hành khúc; cuối Giao hưởng số 5 là sự lặp lại kéo dài, ám ảnh của Rê trưởng. *Kiểm chứng:* [Giao hưởng số 5](/opus/nghe-nhac/shostakovich-5/).
+
+## Đương đại
 
 **Reich và Glass**
 : Mẫu ngắn **lặp lại**, thay đổi rất chậm; Reich: hai mẫu giống nhau lệch pha dần (*Piano Phase*); Glass: quá trình cộng dồn (thêm một lần lặp, bớt nốt cuối). *Kiểm chứng:* Reich *Music for 18 Musicians*, Glass *Glassworks*.

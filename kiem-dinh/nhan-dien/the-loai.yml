@@ -10,7 +10,7 @@ lan:
     nguoi:
       luot_1: Claude Sonnet 5.5 (D5-L3 lượt 1, phần B)
       luot_2: null
-      review: null
+      review: Claude (review D5-gom, nhóm B, 29/10/2026)
       kiem_mau: null
 nguon:
   - id: cod-chamber-music
@@ -177,6 +177,10 @@ nguon:
     bac: 2
     ten: Tucson Symphony Orchestra, ghi chú chương trình Boléro (Ravel)
     link: https://www.tucsonsymphony.org/program-notes/ravel/bolero/
+  - id: imslp-211
+    bac: 2
+    ten: 'IMSLP, Schweigt stille, plaudert nicht, BWV 211 (Bach): thể loại "Secular cantatas", sáng tác 1734–35 ở Leipzig'
+    link: https://imslp.org/wiki/Schweigt_stille,_plaudert_nicht,_BWV_211_(Bach,_Johann_Sebastian)
 nhan_dinh:
   - id: n1
     cau: "Nhạc thính phòng: nhóm nhỏ, mỗi bè một người."
@@ -195,7 +199,7 @@ nhan_dinh:
       - cod-chamber-music
       - cod-string-quartet
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ "2–9 người, mỗi bè một người". Chữ mới "Vài người, mỗi bè một người". Lý do: con số 2–9 không có ở nguồn bậc 2 nào đã mở; COD chỉ nói nhóm nhỏ, mỗi bè một người.'
+    ghi_chu: 'Chữ cũ "2–9 người, mỗi bè một người". Chữ mới "Vài người, mỗi bè một người". Lý do: con số 2–9 không có ở nguồn bậc 2 nào đã mở; COD chỉ nói nhóm nhỏ, mỗi bè một người. Review D5-gom: dung với chữ đã sửa. Đã kiểm trên trang: cây Mermaid có nhánh G -->|"Vài người, mỗi bè một người"| I["Nhạc thính phòng…"]. Định nghĩa khớp COD Chamber music (review đã mở): "instr. mus. for 2, 3, 4, or more instr., played with a single instr. to a ''part'', all the parts being on equal terms". Bỏ con số 2–9 là đúng (COD không giới hạn). Giữ da-sua.'
     luot_2: khong-chac
     luot_2_ghi_chu: Nói về cây quyết định của site (nhánh, nhãn); không kiểm được từ nguồn ngoài, nên do review kiểm trên trang.
   - id: n3
@@ -237,10 +241,9 @@ nhan_dinh:
     loai: danh-muc
     nguon:
       - br-cantata
-      - bach-211
-      - clark-cantata
-    ket_qua: null
-    ghi_chu: "chưa chắc: cantata thế tục có thật: BWV 211 (Coffee Cantata) là cantata thế tục (bach-cantatas.com, bậc 3); Clark (LibreTexts): Bach viết cả cantata nhà thờ lẫn thế tục. Hai nguồn đều bậc 3; lượt 2 nên tìm nguồn bậc 2."
+      - imslp-211
+    ket_qua: dung
+    ghi_chu: "chưa chắc: cantata thế tục có thật: BWV 211 (Coffee Cantata) là cantata thế tục (bach-cantatas.com, bậc 3); Clark (LibreTexts): Bach viết cả cantata nhà thờ lẫn thế tục. Hai nguồn đều bậc 3; lượt 2 nên tìm nguồn bậc 2. Review D5-gom: dung. IMSLP BWV 211 (review đã mở): thể loại \"Secular cantatas\", \"1734-35 in Leipzig\"; bản Eulenburg đặt tên \"Kaffee-Kantate\". Mục Nguồn của trang: thay link Bach-cantatas.com (bậc 3) bằng trang IMSLP BWV 211 (doi_chu). Bỏ hai nguồn bậc 3 (bach-211, clark-cantata) khỏi nhận định này."
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Schweigt_stille,_plaudert_nicht,_BWV_211_(Bach,_Johann_Sebastian)" ]
     luot_2_ghi_chu: "IMSLP: BWV 211 là cantata thế tục (Cà phê), Leipzig 1734–35."
@@ -535,21 +538,21 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm src/content/docs: piano/the-loai, lich-su/opera, hinh-thuc/concerto, hinh-thuc/index, nhac-cu/dan-nhac, tai-lieu-tham-khao đều có, tiêu đề khớp."
+    ghi_chu: "Kiểm src/content/docs: piano/the-loai, lich-su/opera, hinh-thuc/concerto, hinh-thuc/index, nhac-cu/dan-nhac, tai-lieu-tham-khao đều có, tiêu đề khớp. Review D5-gom: đã kiểm src/content/docs/ và dist/: piano/the-loai, lich-su/opera, hinh-thuc/concerto (đã chuyển ở đợt này), hinh-thuc/index (\"Hình thức & thể loại\"), nhac-cu/dan-nhac, tai-lieu-tham-khao đều có, tiêu đề khớp chữ link."
     review: dung
   - id: n35
     cau: Các trang nghe nhạc /opus/nghe-nhac/bach-cello-1/, mozart-requiem/, schubert-ca-hoi/, schubert-erlkonig/, ravel-bolero/ có trên site.
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Trang đích chưa chuyển sang site mới; kiểm trên ~/w/opus-zero/docs/nghe-nhac/ (cả năm tệp có). Lô chuyển nghe-nhac phải giữ đủ năm trang ở đúng đường dẫn, kèm tên: Tổ khúc cello (Bach), Con cá hồi, Mozart Requiem, Erlkönig, Boléro."
+    ghi_chu: "Trang đích chưa chuyển sang site mới; kiểm trên ~/w/opus-zero/docs/nghe-nhac/ (cả năm tệp có). Lô chuyển nghe-nhac phải giữ đủ năm trang ở đúng đường dẫn, kèm tên: Tổ khúc cello (Bach), Con cá hồi, Mozart Requiem, Erlkönig, Boléro. Review D5-gom: đã kiểm: năm trang chưa chuyển, ~/w/opus-zero/docs/nghe-nhac/bach-cello-1.md, mozart-requiem.md, schubert-ca-hoi.md, schubert-erlkonig.md, ravel-bolero.md đều có; link trên trang đúng đường dẫn."
     review: dung
 khuong_nhac: []
-ghi_chu: "Trang tầng lõi, có cây Mermaid, bảng biên chế và quiz; không có khối abc. Nguồn: COD qua Encyclopedia.com, Britannica, IMSLP (bậc 1-2), bach-cantatas.com và LibreTexts (bậc 3, chỉ cho cantata thế tục, n6). Thuật ngữ chưa có bản ghi trong thuat-ngu.yml (cho D3-L5): orchestra, harpsichord, recorder, concerto grosso, cantata, piano trio, piano quintet, symphonic poem, ballet suite, aria, các tên nhạc cụ (clarinet, tuba, cor anglais, saxophone, marimba, vibraphone). Câu ve-site n35 trỏ trang chưa chuyển. Chưa chắc: n6 (nguồn bậc 3)."
+ghi_chu: "Trang tầng lõi, có cây Mermaid, bảng biên chế và quiz; không có khối abc. Nguồn: COD qua Encyclopedia.com, Britannica, IMSLP (bậc 1-2), bach-cantatas.com và LibreTexts (bậc 3, chỉ cho cantata thế tục, n6). Thuật ngữ chưa có bản ghi trong thuat-ngu.yml (cho D3-L5): orchestra, harpsichord, recorder, concerto grosso, cantata, piano trio, piano quintet, symphonic poem, ballet suite, aria, các tên nhạc cụ (clarinet, tuba, cor anglais, saxophone, marimba, vibraphone). Câu ve-site n35 trỏ trang chưa chuyển. Chưa chắc: n6 (nguồn bậc 3). Review D5-gom (29/10/2026): n2 dung (COD Chamber music); n6 dung theo IMSLP BWV 211, mục Nguồn thay Bach-cantatas.com bằng IMSLP; câu ve-site đã kiểm."
 doi_chu:
   - cu: "Câu hỏi đầu tiên khi nghe một bản nhạc lạ: ai đang chơi? Biết biên chế là bạn đã đoán được thể loại trong phần lớn trường hợp."
     moi: "Câu hỏi đầu tiên khi nghe một bản nhạc lạ: ai đang chơi? Biên chế (nhạc cụ nào, bao nhiêu người, có giọng hát không) là manh mối đầu tiên để đoán thể loại."
-    ly_do: 'Câu mở đầu (lượt 1 D5-L3): bỏ "đoán được thể loại trong phần lớn trường hợp" (không nguồn); biên chế là manh mối đầu tiên.'
+    ly_do: 'Câu mở đầu (lượt 1 D5-L3): bỏ "đoán được thể loại trong phần lớn trường hợp" (không nguồn); biên chế là manh mối đầu tiên.; Mô tả (lượt 1 D5-L3): đổi theo câu mở đầu đã sửa.'
   - cu: 'flowchart TD A{"Có giọng hát không?"} -->|Có| B{"Có dàn dựng sân khấu,<br/>nhân vật, đối thoại?"} A -->|Không| G{"Bao nhiêu người chơi?"} B -->|Có| C["Opera"] B -->|Không| D{"Lời tôn giáo?"} D -->|Có| E["Thánh lễ, Requiem,<br/>cantata, oratorio"] D -->|Không| F{"Một giọng + piano?"} F -->|Có| F1["Ca khúc nghệ thuật (Lied)"] F -->|Không| F2["Hợp xướng, cantata thế tục"] G -->|"Một người"| H["Sonata độc tấu, tiểu phẩm<br/>(nocturne, étude, prélude…)"] G -->|"2–9 người, mỗi bè một người"| I["Nhạc thính phòng: sonata cho<br/>nhạc cụ và piano, tam tấu, tứ tấu…"] G -->|"Dàn nhạc"| J{"Có một nhạc cụ nổi bật,<br/>đối đáp với dàn nhạc?"} J -->|Có| K["Concerto"] J -->|Không| L["Giao hưởng, thơ giao hưởng,<br/>overture, tổ khúc ballet"]'
     moi: 'flowchart TD A{"Có giọng hát không?"} -->|Có| B{"Có dàn dựng sân khấu,<br/>nhân vật, đối thoại?"} A -->|Không| G{"Bao nhiêu người chơi?"} B -->|Có| C["Opera"] B -->|Không| D{"Lời tôn giáo?"} D -->|Có| E["Thánh lễ, Requiem,<br/>cantata, oratorio"] D -->|Không| F{"Một giọng + piano?"} F -->|Có| F1["Ca khúc nghệ thuật (Lied)"] F -->|Không| F2["Hợp xướng, cantata thế tục"] G -->|"Một người"| H["Sonata độc tấu, tiểu phẩm<br/>(nocturne, étude, prélude…)"] G -->|"Vài người, mỗi bè một người"| I["Nhạc thính phòng: sonata cho<br/>nhạc cụ và piano, tam tấu, tứ tấu…"] G -->|"Dàn nhạc"| J{"Có một nhạc cụ nổi bật,<br/>đối đáp với dàn nhạc?"} J -->|Có| K["Concerto"] J -->|Không| L["Giao hưởng, thơ giao hưởng,<br/>overture, tổ khúc ballet"]'
     ly_do: "n2 (da-sua): con số 2–9 không có nguồn."
@@ -579,8 +582,8 @@ doi_chu:
       - "The Concise Oxford Dictionary of Music, qua Encyclopedia.com: Chamber music, String quartet, Piano trio, Piano quintet, Sonata, Concerto, Concerto grosso, Basso continuo, Cadenza, Symphony, Symphonic poem, Suite, Lied, Mass, Requiem, Aria, Cor anglais, Saxophone, Marimba, Vibraphone, Orchestra."
       - "Encyclopaedia Britannica: Opera, Cantata, Harpsichord, Recorder, Tuba, Orchestra."
       - "IMSLP: Tổ khúc cello, BWV 1007–1012, Sonata và partita cho violin độc tấu, BWV 1001–1006, Debussy, Syrinx, Schubert, Ngũ tấu Con cá hồi, D. 667, Mozart, Requiem, K. 626, Schubert, Erlkönig, D. 328."
-      - "Cantata thế tục: Bach-cantatas.com, BWV 211. Boléro (saxophone): Tucson Symphony Orchestra, ghi chú chương trình."
-    ly_do: "Mục Nguồn (lượt 1 D5-L3): thêm các mục COD đã mở."
+      - "Cantata thế tục: IMSLP, Bach, Schweigt stille, plaudert nicht, BWV 211. Boléro (saxophone): Tucson Symphony Orchestra, ghi chú chương trình."
+    ly_do: "Mục Nguồn (lượt 1 D5-L3): thêm các mục COD đã mở.; n6 (review D5-gom): nguồn cantata thế tục đổi sang IMSLP BWV 211 (bậc 2)."
   - cu: "mô tả: Câu hỏi đầu tiên khi nghe một bản nhạc lạ: ai đang chơi? Biết biên chế là bạn đã đoán được thể loại trong phần lớn trường hợp."
     moi: "mô tả: Câu hỏi đầu tiên khi nghe một bản nhạc lạ: ai đang chơi? Biên chế (nhạc cụ nào, bao nhiêu người, có giọng hát không) là manh mối đầu tiên để đoán thể loại."
     ly_do: "Mô tả (lượt 1 D5-L3): đổi theo câu mở đầu đã sửa."

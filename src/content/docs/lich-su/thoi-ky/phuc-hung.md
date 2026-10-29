@@ -40,7 +40,7 @@ K:C
 
 ## 10 tác phẩm để nghe
 
-1. Guillaume Du Fay, *Nuper rosarum flores* (motet, công diễn lần đầu ngày 25/3/1436 tại nhà thờ chính tòa Santa Maria del Fiore, Florence).
+1. Guillaume Du Fay, *Nuper rosarum flores* (motet viết cho lễ cung hiến nhà thờ chính tòa Santa Maria del Fiore, Florence, ngày 25/3/1436).
 2. Josquin des Prez, *Ave Maria… virgo serena*.
 3. Josquin, *Mille regretz*.
 4. Palestrina, *Missa Papae Marcelli*.

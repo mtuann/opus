@@ -135,9 +135,10 @@ test('dữ liệu và chữ như recognition.js cũ', { skip: !coCu && 'không c
 	const DA_SUA = {
 		'baroque-1': ['clues'],
 		'classical-1': ['abc', 'clues'],
+		'romantic-1': ['clues'],
 		'romantic-2': ['clues'],
 		'impressionist-1': ['clues'],
-		'modern-1': ['abc'],
+		'modern-1': ['abc', 'clues'],
 		'modern-2': ['clues'],
 	};
 	const moi = Object.fromEntries(Object.entries(VI_DU).map(([k, v]) => [k, { period: v.thoi_ky, prog: v.prog, abc: v.abc, clues: v.dau_hieu }]));

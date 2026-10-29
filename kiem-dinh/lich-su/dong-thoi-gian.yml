@@ -10,7 +10,7 @@ lan:
     nguoi:
       luot_1: Claude Sonnet 5.5 (D5-L1 lượt 1, phần A)
       luot_2: null
-      review: null
+      review: Claude (review D5-gom, nhóm A, 29/10/2026)
       kiem_mau: null
 nguon:
   - id: du-nsn
@@ -173,19 +173,25 @@ nguon:
     bac: 2
     ten: Oxford University Press, The Oxford History of Western Music, tập 1 (Taruskin; bộ 5 tập 2005)
     link: https://academic.oup.com/book/60817/chapter-abstract/531543231?redirectedFrom=fulltext
+  - id: bcp-nhl
+    bac: 2
+    ten: "Báo Điện tử Chính phủ (Viet Nam Government News), Ha Noi Opera House: a century-long beauty (báo chính thức, dùng khi không có nguồn tốt hơn: khởi công 7/6/1901, hoàn thành 1911; lượt 2 và review D5-gom đã mở)"
+    link: https://en.baochinhphu.vn/ha-noi-opera-house-a-century-long-beauty-11111754.htm
 nhan_dinh:
   - id: t1
     cau: Mỗi thanh ngang là cuộc đời một nhà soạn nhạc; thanh màu khác là người còn sống. Các dải nền là các thời kỳ.
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: Kiểm trong src/scripts/dong-thoi-gian.js (hàng nào cũng một thanh từ sinh tới mất; người mat === null dùng lớp oz-dtg-con-song, tô màu --oz-h-vang thay --oz-h-xanh ở src/styles/thanh-phan.css; dải nền oz-dtg-dai theo thời kỳ).
+    ghi_chu: "Kiểm trong src/scripts/dong-thoi-gian.js (hàng nào cũng một thanh từ sinh tới mất; người mat === null dùng lớp oz-dtg-con-song, tô màu --oz-h-vang thay --oz-h-xanh ở src/styles/thanh-phan.css; dải nền oz-dtg-dai theo thời kỳ). Review: đã kiểm src/scripts/dong-thoi-gian.js (mỗi người một hàng, lớp oz-dtg-con-song khi mat null), src/styles/thanh-phan.css (.oz-dtg-con-song .oz-dtg-thanh tô --oz-h-vang) và dist/lich-su/dong-thoi-gian/index.html (5 hàng còn sống, 7 dải oz-dtg-dai)."
+    review: dung
   - id: t2
     cau: Di chuột vào thanh để xem năm sinh, năm mất (các năm này cũng có trong bảng ở cuối trang). Trên điện thoại, vuốt ngang để xem hết.
     loai: ve-site
     nguon: []
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Di chuột (hoặc chạm) vào thanh để xem năm sinh, năm mất." (cả mô tả của trang). Lý do: năm sinh–mất nằm trong phần tử <title> của SVG (src/scripts/dong-thoi-gian.js dòng 111), chỉ hiện khi di chuột; trang không có mã xử lý chạm (không có addEventListener), và tôi không thử được trên điện thoại; nhiều trình duyệt di động không hiện <title> SVG khi chạm. Bỏ "(hoặc chạm)" và chỉ sang bảng cuối trang, nơi năm luôn thấy được. "Vuốt ngang": .oz-dtg-khung { overflow-x: auto } với .oz-dtg-svg { min-width: 56rem }: đúng.'
+    ghi_chu: 'Chữ cũ: "Di chuột (hoặc chạm) vào thanh để xem năm sinh, năm mất." (cả mô tả của trang). Lý do: năm sinh–mất nằm trong phần tử <title> của SVG (src/scripts/dong-thoi-gian.js dòng 111), chỉ hiện khi di chuột; trang không có mã xử lý chạm (không có addEventListener), và tôi không thử được trên điện thoại; nhiều trình duyệt di động không hiện <title> SVG khi chạm. Bỏ "(hoặc chạm)" và chỉ sang bảng cuối trang, nơi năm luôn thấy được. "Vuốt ngang": .oz-dtg-khung { overflow-x: auto } với .oz-dtg-svg { min-width: 56rem }: đúng. Review: đã kiểm src/scripts/dong-thoi-gian.js (<title> mỗi hàng ghi sinh–mất), src/styles/thanh-phan.css (.oz-dtg-khung overflow-x: auto) và bảng cuối trang trong dist có cột Sinh, Mất.'
+    review: dung
   - id: t3
     cau: Bach và Handel sinh cùng năm 1685.
     loai: nam
@@ -389,8 +395,9 @@ nhan_dinh:
     loai: nam
     nguon:
       - baovanhoa
-    ket_qua: null
-    ghi_chu: "chưa chắc: chỉ có nguồn báo chí (bậc 3, Báo Văn hóa) mở được; năm hoàn thành 1911 là mốc thông dụng. Không có nguồn bậc 1–2 mở được."
+      - bcp-nhl
+    ket_qua: dung
+    ghi_chu: "chưa chắc: chỉ có nguồn báo chí (bậc 3, Báo Văn hóa) mở được; năm hoàn thành 1911 là mốc thông dụng. Không có nguồn bậc 1–2 mở được. Review D5-gom: giữ \"1911\". Báo Điện tử Chính phủ (bcp-nhl, báo chính thức, review đã mở): công trình \"started on June 7th, 1901 and completed in 1911\". Không tìm được nguồn tốt hơn (trang của chính Nhà hát chưa mở được); ghi rõ loại nguồn là báo chính thức."
     luot_2: dung
     luot_2_nguon: [ "https://en.baochinhphu.vn/ha-noi-opera-house-a-century-long-beauty-11111754.htm" ]
     luot_2_ghi_chu: Khởi công 7/6/1901, hoàn thành 1911.
@@ -472,7 +479,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Thêm nhà soạn nhạc mới vào bảng dưới đây, biểu đồ sẽ tự cập nhật…" Đã sửa từ trước (doi_chu có sẵn, giữ). Kiểm src/scripts/dong-thoi-gian.js (hàm bảng, dòng 172): cột Nhà soạn nhạc | Sinh | Mất | Thời kỳ; năm sinh khoảng ghi "~"; còn sống ô Mất trống.'
+    ghi_chu: 'Chữ cũ: "Thêm nhà soạn nhạc mới vào bảng dưới đây, biểu đồ sẽ tự cập nhật…" Đã sửa từ trước (doi_chu có sẵn, giữ). Kiểm src/scripts/dong-thoi-gian.js (hàm bảng, dòng 172): cột Nhà soạn nhạc | Sinh | Mất | Thời kỳ; năm sinh khoảng ghi "~"; còn sống ô Mất trống. Review: đã kiểm src/scripts/dong-thoi-gian.js dòng 172–178 (bảng Nhà soạn nhạc | Sinh | Mất | Thời kỳ; ~ trước năm sinh khoảng; ô Mất trống khi còn sống) và bảng trong dist/lich-su/dong-thoi-gian/index.html.'
+    review: dung
   - id: t30
     cau: "Nguồn: Burkholder, Grout, Palisca, A History of Western Music; Richard Taruskin, The Oxford History of Western Music; Grove Music Online; Encyclopaedia Britannica."
     loai: ten
@@ -481,7 +489,7 @@ nhan_dinh:
       - oup-tar
       - grove
     ket_qua: dung
-    ghi_chu: 'Như cu1 ở trang nhà soạn nhạc. Link tai-lieu-tham-khao: trang chưa chuyển (có ở ../opus-zero/docs/tai-lieu-tham-khao.md); link tự thành "sắp có".'
+    ghi_chu: 'Như cu1 ở trang nhà soạn nhạc. Link tai-lieu-tham-khao: trang chưa chuyển (có ở ../opus-zero/docs/tai-lieu-tham-khao.md); link tự thành "sắp có". Review D5-gom: giữ. Đã mở wwnorton (Norton): "A History of Western Music", J. Peter Burkholder, Donald Jay Grout, Claude V. Palisca; Taruskin, Grove theo nguồn lượt 1 (oup-tar, grove).'
     luot_2: khong-chac
     luot_2_ghi_chu: Không mở được trang nhà xuất bản (OUP chặn robot, Norton lỗi) để xác nhận tên sách; tên Burkholder-Grout-Palisca và Taruskin đúng theo kiến thức chung.
 khuong_nhac: []
@@ -527,4 +535,4 @@ doi_chu:
   - cu: "mô tả: Mỗi thanh ngang là cuộc đời một nhà soạn nhạc; thanh màu khác là người còn sống. Các dải nền là các thời kỳ. Di chuột (hoặc chạm) vào thanh để xem năm sinh…"
     moi: "mô tả: Mỗi thanh ngang là cuộc đời một nhà soạn nhạc; thanh màu khác là người còn sống. Các dải nền là các thời kỳ. Di chuột vào thanh để xem năm sinh…"
     ly_do: 't2 (lượt 1 D5-L1): mô tả đổi theo câu mở đầu, bỏ "(hoặc chạm)".'
-ghi_chu: 'Khuông nhạc: trang không có khối abc. Chưa có hồ sơ thuật ngữ cho "nhạc tối giản". Câu "Di chuột (hoặc chạm)" đã bỏ "(hoặc chạm)" vì trang chỉ có <title> SVG (hover), không có xử lý chạm (t2). Cristofori ~1700: Met và Britannica lệch (1700 so với 1709), giữ ~1700 (t9). Nhà hát Lớn 1911 chỉ có nguồn bậc 3, để null (t21). Các mốc 1956, 1982, 2023 chỉ có nguồn bậc 2 một phần hoặc bậc 3 (t24, t26, t27). Link tai-lieu-tham-khao trỏ trang chưa chuyển (t30).'
+ghi_chu: 'Khuông nhạc: trang không có khối abc. Chưa có hồ sơ thuật ngữ cho "nhạc tối giản". Câu "Di chuột (hoặc chạm)" đã bỏ "(hoặc chạm)" vì trang chỉ có <title> SVG (hover), không có xử lý chạm (t2). Cristofori ~1700: Met và Britannica lệch (1700 so với 1709), giữ ~1700 (t9). Nhà hát Lớn 1911 chỉ có nguồn bậc 3, để null (t21). Các mốc 1956, 1982, 2023 chỉ có nguồn bậc 2 một phần hoặc bậc 3 (t24, t26, t27). Link tai-lieu-tham-khao trỏ trang chưa chuyển (t30). Review D5-gom (nhóm A): Nhà hát Lớn 1911 giữ theo Báo Điện tử Chính phủ (báo chính thức, t21); Cristofori ~1700 giữ theo Met (t9, lượt 2 đúng).'

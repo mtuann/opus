@@ -19,7 +19,7 @@ flowchart LR
 | **A** | La thứ | Giai điệu quen thuộc: Mi – Rê♯ – Mi – Rê♯… (xem [bài học Für Elise](/opus/piano/tac-pham/fur-elise/)) |
 | **B** | Fa trưởng, rồi Đô trưởng | Giai điệu mới, sáng hơn (giọng trưởng), rồi chuỗi nốt nhanh |
 | **A** | La thứ | Giai điệu chính trở lại, nguyên vẹn |
-| **C** | La thứ, trên **âm nền La** ở bè trầm | Nốt La lặp lại dồn dập ở tay trái; đoạn không rời giọng chính |
+| **C** | La thứ, trên **âm nền La** ở bè trầm | Nốt La lặp lại dồn dập ở tay trái (móc kép); hòa âm bên trên đi qua Rê thứ, về sau bè trầm rời La (sang Si♭) rồi nhạc dẫn về A |
 | **A** | La thứ | Trở lại lần cuối, rồi bài kết thúc |
 
 **Cách nghe:** mỗi khi giai điệu "Mi – Rê♯" quay lại, giơ một ngón tay. Bạn sẽ đếm được hai lần quay lại, tức ba lần A kể cả lần đầu.

@@ -10,9 +10,9 @@ lan:
     nguoi:
       luot_1: Claude Sonnet 5.5 (D5-L1 lượt 1, phần C)
       luot_2: null
-      review: null
+      review: Claude (review D5-gom, nhóm B, 29/10/2026)
       kiem_mau: null
-ghi_chu: 'Trang thời kỳ Cổ điển (tầng lõi), 1 khối abc soạn riêng. Nguồn: Kuznetsova (LibreTexts), Freese (Wisconsin), OMT, COD qua Encyclopedia.com, IMSLP (trang tác phẩm); WebFetch ngày 28/10/2026. Britannica không mở được (bị chặn), Mutopia 403 và archive.org không tới được nên không kiểm được K. 545 (đã bỏ khỏi trang). Thuật ngữ trang dùng nhưng chưa có hồ sơ thuật ngữ: đệm Alberti, hòa nhạc công cộng, trường phái Vienna thứ nhất, hỏi – đáp (đoạn nhạc/period), basso continuo, fortepiano. Yêu cầu từ lô trước (grep "lich-su/thoi-ky" trong kiem-dinh/): đang có yêu cầu với trang baroque (25-be-tram-so) và the-ky-20 (32-ky-thuat-the-ky-20), không có yêu cầu riêng với co-dien; mục "Thời kỳ trước/tiếp theo" của trang vẫn trỏ đúng baroque và lang-man.'
+ghi_chu: 'Trang thời kỳ Cổ điển (tầng lõi), 1 khối abc soạn riêng. Nguồn: Kuznetsova (LibreTexts), Freese (Wisconsin), OMT, COD qua Encyclopedia.com, IMSLP (trang tác phẩm); WebFetch ngày 28/10/2026. Britannica không mở được (bị chặn), Mutopia 403 và archive.org không tới được nên không kiểm được K. 545 (đã bỏ khỏi trang). Thuật ngữ trang dùng nhưng chưa có hồ sơ thuật ngữ: đệm Alberti, hòa nhạc công cộng, trường phái Vienna thứ nhất, hỏi – đáp (đoạn nhạc/period), basso continuo, fortepiano. Yêu cầu từ lô trước (grep "lich-su/thoi-ky" trong kiem-dinh/): đang có yêu cầu với trang baroque (25-be-tram-so) và the-ky-20 (32-ky-thuat-the-ky-20), không có yêu cầu riêng với co-dien; mục "Thời kỳ trước/tiếp theo" của trang vẫn trỏ đúng baroque và lang-man. Review D5-gom (29/10/2026): n14, n20 giữ; n39 đổi nhãn thành ve-site; n44 dung (Norton, bản ghi thư viện); các câu ve-site đã kiểm trên trang, dist và site cũ.'
 nguon:
   - id: kuz-ov
     bac: 2
@@ -94,6 +94,14 @@ nguon:
     bac: 2
     ten: IMSLP, Piano Sonata No.8, Op.13, Beethoven
     link: https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)
+  - id: norton-hwm
+    bac: 2
+    ten: W. W. Norton, A History of Western Music (J. Peter Burkholder, Donald Jay Grout, Claude V. Palisca), trang sách của nhà xuất bản
+    link: https://wwnorton.com/books/9780393668179
+  - id: taruskin
+    bac: 2
+    ten: Bản ghi thư viện, The Oxford History of Western Music (Richard Taruskin, Oxford University Press, 2005)
+    link: https://theses.univ-nantes.fr/vufind/Record/PPN08332898X/Description
 nhan_dinh:
   - id: n1
     cau: Thời Cổ điển khoảng 1750–1820 (tiêu đề).
@@ -237,7 +245,7 @@ nhan_dinh:
     nguon:
       - omt-phr
     ket_qua: da-sua
-    ghi_chu: 'OMT: câu dài 4, 8 hoặc 16 ô nhịp. Bản cũ nói "4 + 4", đã sửa thành "thường dài 4 hay 8".'
+    ghi_chu: 'OMT: câu dài 4, 8 hoặc 16 ô nhịp. Bản cũ nói "4 + 4", đã sửa thành "thường dài 4 hay 8". Review D5-gom: dung với chữ đã sửa. OMT, The Phrase, Archetypes, and Unique Forms (review đã mở): "A phrase can be any length, but phrases of 4, 8, or 16 measures are particularly common." Trang viết "thường dài 4 hay 8 ô nhịp", nằm trong nguồn; Clark (lượt 2) không nêu số ô, không trái. Giữ da-sua.'
     luot_2: khong-chac
     luot_2_ghi_chu: Chu kỳ 4+4 ô nhịp là mô tả phổ biến nhưng nguồn đã mở (Clark) không nêu số ô; không kiểm được 'thường 4 hay 8'.
   - id: n15
@@ -254,7 +262,8 @@ nhan_dinh:
     cau: Link [bài 13](/opus/nhac-ly/13-ket/) nói về câu hỏi – đáp.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: src/content/docs/nhac-ly/13-ket.md tồn tại, bài đã chuyển.
+    ghi_chu: 'src/content/docs/nhac-ly/13-ket.md tồn tại, bài đã chuyển. Review D5-gom: đã kiểm src/content/docs/nhac-ly/13-ket.md, dist/nhac-ly/13-ket/ có; trên trang link đặt ngay sau "hai câu ghép thành một đoạn nhạc hỏi – đáp".'
+    review: dung
   - id: n17
     cau: "Tương phản trong cùng một chương: như hai chủ đề khác nhau về tính cách trong hình thức sonata."
     loai: lich-su
@@ -292,14 +301,15 @@ nhan_dinh:
       - cod-alb
       - omt-phr
     ket_qua: dung
-    ghi_chu: "Đối chiếu khối abc: 8 ô, hai câu 4 ô; câu 1 dừng ở Re (ô 4, trên Sol, nửa kết), câu 2 dừng ở Do (ô 8, kết hoàn toàn). Tay trái toàn hợp âm rải Alberti."
+    ghi_chu: "Đối chiếu khối abc: 8 ô, hai câu 4 ô; câu 1 dừng ở Re (ô 4, trên Sol, nửa kết), câu 2 dừng ở Do (ô 8, kết hoàn toàn). Tay trái toàn hợp âm rải Alberti. Review D5-gom: đã tự kiểm khối abc: L:1/8, M:4/4, 8 ô, mỗi ô đủ 8/8 ở hai bè; tay trái mẫu Alberti thấp–cao–giữa–cao (C,G,E,G,; F,CA,C; E,CG,C; G,,D,B,,D,); câu 1 (ô 1–4) dừng ở Rê trên hợp âm V (nửa kết), câu 2 (ô 5–8) đi ii–V–I, dừng ở Đô (kết hoàn toàn). Khớp câu. Lượt 2 không đọc được khuông; giữ dung."
     luot_2: khong-chac
     luot_2_ghi_chu: Đoạn do site viết, không có nguồn ngoài để kiểm; không mở trang/khuông nên không đối chiếu được với bản trên khuông.
   - id: n21
     cau: Link [So sánh các thời kỳ](/opus/nhan-dien/so-sanh-thoi-ky/).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: "Trang đích chưa chuyển; ../opus-zero/docs/nhan-dien/so-sanh-thoi-ky.md có tồn tại. Cần giữ: trang đó nêu cách nhận diện các thời kỳ, gồm Cổ điển."
+    ghi_chu: "Trang đích chưa chuyển; ../opus-zero/docs/nhan-dien/so-sanh-thoi-ky.md có tồn tại. Cần giữ: trang đó nêu cách nhận diện các thời kỳ, gồm Cổ điển. Review D5-gom: đã kiểm, trang đích đã chuyển ở đợt này: src/content/docs/nhan-dien/so-sanh-thoi-ky.md, dist/nhan-dien/so-sanh-thoi-ky/ có."
+    review: dung
   - id: n22
     cau: Piano (fortepiano) thay thế harpsichord.
     loai: lich-su
@@ -365,7 +375,8 @@ nhan_dinh:
     cau: Link [Hình thức sonata](/opus/hinh-thuc/sonata/).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Trang đích chưa chuyển; ../opus-zero/docs/hinh-thuc/sonata.md có tồn tại.
+    ghi_chu: "Trang đích chưa chuyển; ../opus-zero/docs/hinh-thuc/sonata.md có tồn tại. Review D5-gom: đã kiểm, trang đích đã chuyển ở đợt này: src/content/docs/hinh-thuc/sonata.md, dist/hinh-thuc/sonata/ có."
+    review: dung
   - id: n29
     cau: C. P. E. Bach, Sinfonia cung Si thứ, Wq 182 số 5 (cầu nối Baroque – Cổ điển).
     loai: ten
@@ -440,12 +451,14 @@ nhan_dinh:
     cau: Mozart, aria Nữ hoàng bóng đêm (link [nghe-nhac/mozart-nu-hoang-bong-dem](/opus/nghe-nhac/mozart-nu-hoang-bong-dem/)).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Trang đích chưa chuyển; ../opus-zero/docs/nghe-nhac/mozart-nu-hoang-bong-dem.md có tồn tại. Aria thuộc Cây sáo thần, K. 620 (nội dung trang đích kiểm ở lô của nó).
+    ghi_chu: "Trang đích chưa chuyển; ../opus-zero/docs/nghe-nhac/mozart-nu-hoang-bong-dem.md có tồn tại. Aria thuộc Cây sáo thần, K. 620 (nội dung trang đích kiểm ở lô của nó). Review D5-gom: đã kiểm, trang đích chưa chuyển; ~/w/opus-zero/docs/nghe-nhac/mozart-nu-hoang-bong-dem.md có; link trên trang đúng đường dẫn."
+    review: dung
   - id: n37
     cau: Mozart, Requiem (link [nghe-nhac/mozart-requiem](/opus/nghe-nhac/mozart-requiem/)).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Trang đích chưa chuyển; ../opus-zero/docs/nghe-nhac/mozart-requiem.md có tồn tại.
+    ghi_chu: "Trang đích chưa chuyển; ../opus-zero/docs/nghe-nhac/mozart-requiem.md có tồn tại. Review D5-gom: đã kiểm, trang đích chưa chuyển; ~/w/opus-zero/docs/nghe-nhac/mozart-requiem.md có; link trên trang đúng đường dẫn."
+    review: dung
   - id: n38
     cau: Beethoven, Sonata piano Pathétique, Op. 13.
     loai: ten
@@ -458,11 +471,12 @@ nhan_dinh:
     luot_2_ghi_chu: "IMSLP: Op.13, 1798, 'Pathétique'."
   - id: n39
     cau: Danh sách "10 tác phẩm để nghe" gồm đủ 10 mục.
-    loai: danh-muc
+    loai: ve-site
     ket_qua: dung
-    ghi_chu: "Đếm trên trang: 10 mục đánh số 1 đến 10. Cả 10 tác phẩm viết trong khoảng 1750–1820 (Gluck 1762, C. P. E. Bach 1773, các tác phẩm còn lại 1785–1799), khớp mốc của site."
+    ghi_chu: "Đếm trên trang: 10 mục đánh số 1 đến 10. Cả 10 tác phẩm viết trong khoảng 1750–1820 (Gluck 1762, C. P. E. Bach 1773, các tác phẩm còn lại 1785–1799), khớp mốc của site. Review D5-gom: soát nhãn: danh-muc thành ve-site (câu chỉ đếm mục trên trang, không cần nguồn ngoài; lượt 2 cũng ghi đây là câu về site). Đã kiểm trên trang: mục \"## 10 tác phẩm để nghe\" có 10 mục đánh số 1–10."
     luot_2: khong-chac
     luot_2_ghi_chu: Câu về chính site (đếm mục); không mở trang nên không kiểm được. Danh sách đầu vào có đủ 10 mục đánh số liên tiếp nhưng không thay được việc xem trang.
+    review: dung
   - id: n40
     cau: "Cách nghe: đếm ô nhịp theo nhóm 4; câu nhạc Cổ điển thường chia đôi khá đều, cảm giác hỏi – đáp ở cuối mỗi cặp câu."
     loai: khuyen-tap
@@ -474,25 +488,31 @@ nhan_dinh:
     cau: Link [Baroque](/opus/lich-su/thoi-ky/baroque/) là thời kỳ trước.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Trang baroque thuộc cùng nhóm trang thời kỳ; ../opus-zero/docs/lich-su/thoi-ky/baroque.md có tồn tại. Đúng thứ tự thời kỳ.
+    ghi_chu: 'Trang baroque thuộc cùng nhóm trang thời kỳ; ../opus-zero/docs/lich-su/thoi-ky/baroque.md có tồn tại. Đúng thứ tự thời kỳ. Review D5-gom: đã kiểm src/content/docs/lich-su/thoi-ky/baroque.md, dist/lich-su/thoi-ky/baroque/ có; trên trang nằm ở dòng "Thời kỳ trước".'
+    review: dung
   - id: n42
     cau: Link [Lãng mạn](/opus/lich-su/thoi-ky/lang-man/) là thời kỳ tiếp theo.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Trang lang-man có trong src/content/docs/lich-su/thoi-ky/ (cùng lô). Đúng thứ tự thời kỳ.
+    ghi_chu: 'Trang lang-man có trong src/content/docs/lich-su/thoi-ky/ (cùng lô). Đúng thứ tự thời kỳ. Review D5-gom: đã kiểm src/content/docs/lich-su/thoi-ky/lang-man.md, dist/lich-su/thoi-ky/lang-man/ có; trên trang nằm ở "Thời kỳ tiếp theo".'
+    review: dung
   - id: n43
     cau: Link [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Trang đích chưa chuyển; ../opus-zero/docs/tai-lieu-tham-khao.md có tồn tại.
+    ghi_chu: "Trang đích chưa chuyển; ../opus-zero/docs/tai-lieu-tham-khao.md có tồn tại. Review D5-gom: đã kiểm, trang đích đã chuyển ở đợt này: src/content/docs/tai-lieu-tham-khao.md, dist/tai-lieu-tham-khao/ có."
+    review: dung
   - id: n44
     cau: "Sách đọc thêm: Burkholder, Grout, Palisca, A History of Western Music; Taruskin, The Oxford History of Western Music."
     loai: ten
-    ket_qua: null
-    ghi_chu: 'chưa chắc: không mở được sách (không có bản mở). Hai tác phẩm là sách giáo khoa lịch sử âm nhạc chuẩn, nhưng chưa kiểm tên, tác giả, hay lần xuất bản trên nguồn mở. Đã bỏ dòng "Grove Music Online; Encyclopaedia Britannica" vì không dùng được.'
+    ket_qua: dung
+    ghi_chu: 'chưa chắc: không mở được sách (không có bản mở). Hai tác phẩm là sách giáo khoa lịch sử âm nhạc chuẩn, nhưng chưa kiểm tên, tác giả, hay lần xuất bản trên nguồn mở. Đã bỏ dòng "Grove Music Online; Encyclopaedia Britannica" vì không dùng được. Review D5-gom: dung. Trang sách của W. W. Norton (review đã mở): A History of Western Music, J. Peter Burkholder, Donald Jay Grout, Claude V. Palisca; bản ghi thư viện Đại học Nantes (review đã mở): The Oxford History of Western Music, Richard Taruskin, Oxford University Press, 2005. Tên và tác giả khớp; trang không ghi lần in.'
     luot_2: dung
     luot_2_nguon: [ "https://www.tenlong.com.tw/products/9780393668179", "https://repositorio.uca.edu.ar/bitstream/123456789/22307/1/oxford-history-music.pdf" ]
     luot_2_ghi_chu: Burkholder–Grout–Palisca (Norton) và Taruskin (OUP, nay có Gibbs ở bản College) là sách có thật.
+    nguon:
+      - norton-hwm
+      - taruskin
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -502,7 +522,7 @@ khuong_nhac:
       - not
       - nhip
     ket_qua: dung
-    ghi_chu: "Soạn cho trang. K:C, M:4/4, L:1/8, 8 ô. Mỗi ô đủ 8 nốt móc đơn. Tay phải: 2 câu 4 ô (câu 1 dừng Re trên Sol, câu 2 dừng Do). Tay trái, bản cũ sai (ví dụ ô 2 là F,A,CA, không phải mẫu Alberti và sai bậc hợp âm); đã sửa thành mẫu thấp–cao–giữa–cao: C,G,E,G, (I), F,CA,C (IV), E,CG,C (I6), G,,D,B,,D, (V). Hòa âm: I | IV I6 | IV I | V ; I | IV I6 | ii V | I. Khớp n13, n20."
+    ghi_chu: "Soạn cho trang. K:C, M:4/4, L:1/8, 8 ô. Mỗi ô đủ 8 nốt móc đơn. Tay phải: 2 câu 4 ô (câu 1 dừng Re trên Sol, câu 2 dừng Do). Tay trái, bản cũ sai (ví dụ ô 2 là F,A,CA, không phải mẫu Alberti và sai bậc hợp âm); đã sửa thành mẫu thấp–cao–giữa–cao: C,G,E,G, (I), F,CA,C (IV), E,CG,C (I6), G,,D,B,,D, (V). Hòa âm: I | IV I6 | IV I | V ; I | IV I6 | ii V | I. Khớp n13, n20. Review D5-gom: đã tự kiểm lại (xem n20): đủ phách, mẫu Alberti, nửa kết ô 4, kết hoàn toàn ô 8."
 doi_chu:
   - cu: "Thời Khai sáng: lý trí, sự rõ ràng, tính tự nhiên. Tầng lớp trung lưu lớn mạnh, hòa nhạc công cộng có bán vé xuất hiện ở London, Paris, Vienna; người nghiệp dư mua bản nhạc in và chơi piano tại nhà. Nhạc sĩ dần chuyển từ người làm công cho quý tộc sang nghệ sĩ tự do: Haydn phục vụ gia đình Esterházy gần 30 năm, Mozart rời Salzburg đến Vienna làm nghề tự do, Beethoven sống bằng tiền tài trợ, học trò và xuất bản."
     moi: "Thời Khai sáng, khuyến khích tư duy khoa học; âm nhạc chuộng sự cân đối, đối xứng và giản dị. Âm nhạc rời cung đình và nhà thờ để đến với hòa nhạc công cộng (ở London, Paris, Vienna) và gia đình trung lưu; người nghiệp dư mua bản nhạc in và chơi piano tại nhà. Nhạc sĩ dần chuyển từ người làm công cho quý tộc sang nghệ sĩ tự do: Haydn phục vụ gia đình Esterházy gần 30 năm, Mozart rời Salzburg đến Vienna làm nghề tự do, Beethoven sống bằng tiền tài trợ, học trò và xuất bản."

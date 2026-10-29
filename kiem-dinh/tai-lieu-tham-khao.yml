@@ -10,7 +10,7 @@ lan:
     nguoi:
       luot_1: Claude Sonnet 5.5 (D5-L3 lượt 1, phần B)
       luot_2: null
-      review: null
+      review: Claude (review D5-gom, nhóm B, 29/10/2026)
       kiem_mau: null
 nguon:
   - id: grove
@@ -177,20 +177,48 @@ nguon:
     bac: 2
     ten: SIL Open Font License 1.1
     link: https://openfontlicense.org/
+  - id: tonejs-readme
+    bac: 2
+    ten: 'Tone.js, README trên GitHub: ví dụ Sampler với baseUrl "https://tonejs.github.io/audio/salamander/" và các tệp C4.mp3, A4.mp3…'
+    link: https://github.com/Tonejs/Tone.js
+  - id: tonejs-audio
+    bac: 2
+    ten: Tone.js, kho audio trên GitHub (thư mục salamander; giấy phép ghi trong từng thư mục)
+    link: https://github.com/Tonejs/audio
+  - id: cc-by-sa-4
+    bac: 2
+    ten: Creative Commons, Attribution-ShareAlike 4.0 International (bản tóm tắt giấy phép)
+    link: https://creativecommons.org/licenses/by-sa/4.0/
+  - id: dcml-grieg
+    bac: 2
+    ten: DCMLab, grieg_lyric_pieces trên GitHub (DCML corpus initiative; có op12n01; CC BY-NC-SA 4.0)
+    link: https://github.com/DCMLab/grieg_lyric_pieces
+  - id: trompa-bee
+    bac: 2
+    ten: trompamusic-encodings, Beethoven_WoOAnh5_BreitkopfHaertel trên GitHub (MEI do dự án TROMPA làm, theo ấn bản Breitkopf und Härtel)
+    link: https://github.com/trompamusic-encodings/Beethoven_WoOAnh5_BreitkopfHaertel
+  - id: sapp-bee
+    bac: 2
+    ten: Craig Sapp, beethoven-piano-sonatas trên GitHub (bản Humdrum 32 sonata, theo ấn bản Durand 1915)
+    link: https://github.com/craigsapp/beethoven-piano-sonatas
+  - id: align-nguon
+    bac: 2
+    ten: "Hồ sơ nguồn bản nhạc số dùng để căn mốc của site cũ (tools/audio/align/NGUON.md, sources.json): asap, piano-midi, kernscores-* của Craig Stuart Sapp, chopin-first-editions (NIFC), dcml-grieg, trompa-beethoven, mutopia"
+    link: ../opus-zero/tools/audio/align/NGUON.md
 nhan_dinh:
   - id: t1
     cau: Link tới trang GitHub của dự án (https://github.com/mtuann/opus-zero/issues) để báo lỗi.
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Repo cũ mtuann/opus-zero công khai, có Issues. Repo mới chưa công khai (astro.config.mjs: link GitHub chỉ thêm lại khi repo công khai). Giữ link cũ cho tới khi repo mới công khai: người giao quyết lúc đó (đổi link sang repo mới)."
+    ghi_chu: "Repo cũ mtuann/opus-zero công khai, có Issues. Repo mới chưa công khai (astro.config.mjs: link GitHub chỉ thêm lại khi repo công khai). Giữ link cũ cho tới khi repo mới công khai: người giao quyết lúc đó (đổi link sang repo mới). Review D5-gom: đã kiểm trang: link https://github.com/mtuann/opus-zero/issues ở đoạn mở đầu. Repo cũ công khai, có Issues (lượt 1); repo mới chưa công khai. Giữ link cũ; người giao quyết đổi khi repo mới công khai (ghi ở báo cáo)."
     review: dung
   - id: t2
     cau: Link tới trang Cập nhật (/opus/cap-nhat/).
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: Trang đích chưa chuyển; kiểm ~/w/opus-zero/docs/cap-nhat.md (có, tiêu đề "Cập nhật"). Lô chuyển cap-nhat giữ đường dẫn.
+    ghi_chu: 'Trang đích chưa chuyển; kiểm ~/w/opus-zero/docs/cap-nhat.md (có, tiêu đề "Cập nhật"). Lô chuyển cap-nhat giữ đường dẫn. Review D5-gom: đã kiểm: cap-nhat chưa chuyển; ~/w/opus-zero/docs/cap-nhat.md có, tiêu đề "# Cập nhật"; link trên trang đúng đường dẫn /opus/cap-nhat/.'
     review: dung
   - id: t3
     cau: Grove Music Online (oxfordmusiconline.com) là bách khoa âm nhạc của Oxford University Press, nằm trong cổng Oxford Music Online.
@@ -451,7 +479,7 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: Trang đích chưa chuyển; kiểm ~/w/opus-zero/docs/lich-su/viet-nam.md và lich-su/nhac-truyen-thong-viet-nam.md (có cả hai). Lô chuyển giữ hai đường dẫn và mục nguồn báo chí cuối trang.
+    ghi_chu: "Trang đích chưa chuyển; kiểm ~/w/opus-zero/docs/lich-su/viet-nam.md và lich-su/nhac-truyen-thong-viet-nam.md (có cả hai). Lô chuyển giữ hai đường dẫn và mục nguồn báo chí cuối trang. Review D5-gom: đã kiểm: hai trang chưa chuyển; ~/w/opus-zero/docs/lich-su/viet-nam.md và lich-su/nhac-truyen-thong-viet-nam.md có, cuối mỗi trang có danh sách nguồn báo chí (Nhân Dân, Báo Pháp luật…)."
     review: dung
   - id: t29
     cau: "UNESCO, Di sản văn hóa phi vật thể: các danh sách di sản đã đăng ký."
@@ -476,9 +504,12 @@ nhan_dinh:
   - id: t31
     cau: Bản MP3 của mẫu âm lấy từ dự án Tone.js audio.
     loai: ten
-    nguon: []
-    ket_qua: null
-    ghi_chu: "chưa chắc: trang github.com/Tonejs/audio chặn công cụ. Giữ chữ cũ."
+    nguon:
+      - tonejs-readme
+      - tonejs-audio
+      - salamander
+    ket_qua: dung
+    ghi_chu: "chưa chắc: trang github.com/Tonejs/audio chặn công cụ. Giữ chữ cũ. Review D5-gom: dung. README Tone.js (review đã mở): ví dụ Sampler lấy \"C4.mp3\", \"A4.mp3\"… từ baseUrl \"https://tonejs.github.io/audio/salamander/\"; kho Tonejs/audio (review đã mở) có thư mục salamander. Bên site: public/mau-am/piano/ có A0.mp3…, LICENSE.txt ghi \"qua bản chuyển MP3 của dự án Tone.js (github.com/Tonejs/audio)\", nguồn gốc archive.org SalamanderGrandPianoV3 (t30)."
     luot_2: khong-chac
     luot_2_nguon: [ "https://github.com/Tonejs/audio" ]
     luot_2_ghi_chu: Repo Tonejs/audio có thư mục salamander, giấy phép ghi trong từng thư mục; trang đã mở không xác nhận đó là các tệp MP3 của mẫu Salamander.
@@ -487,14 +518,14 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: Trang đích chưa chuyển; kiểm ~/w/opus-zero/docs/nhan-dien/nghe-mu.md ("Bộ 10 bản thu thật", Wikimedia Commons), piano/tac-pham/index.md, nghe-nhac/index.md (có cả ba). Trên site mới có piano/tac-pham/fur-elise và nghe-nhac/bach-goldberg, nhưng chưa có trang mục lục hai thư mục. Lô chuyển giữ ba đường dẫn.
+    ghi_chu: 'Trang đích chưa chuyển; kiểm ~/w/opus-zero/docs/nhan-dien/nghe-mu.md ("Bộ 10 bản thu thật", Wikimedia Commons), piano/tac-pham/index.md, nghe-nhac/index.md (có cả ba). Trên site mới có piano/tac-pham/fur-elise và nghe-nhac/bach-goldberg, nhưng chưa có trang mục lục hai thư mục. Lô chuyển giữ ba đường dẫn. Review D5-gom: đã kiểm: nhan-dien/nghe-mu chưa chuyển; ~/w/opus-zero/docs/nhan-dien/nghe-mu.md: "Bộ 10 bản thu thật", lấy từ Wikimedia Commons; ~/w/opus-zero/docs/piano/tac-pham/index.md, nghe-nhac/index.md có.'
     review: dung
   - id: t33
     cau: Các bản thu lấy từ IMSLP được lưu trên site (chuyển mã MP3, cắt bớt khoảng lặng ở đầu và cuối); người chơi, giấy phép và nguồn của từng tệp ghi ở /opus/audio/NGUON.txt.
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: public/audio/NGUON.txt có (13 bản thu, mô tả đúng chuyển mã MP3 tối đa 128 kbps, cắt khoảng lặng; mỗi dòng ghi người chơi, giấy phép, nguồn). CHƯA có tệp mp3 trong public/audio (chép ở D6-0); câu đúng khi D6-0 xong.
+    ghi_chu: 'public/audio/NGUON.txt có (13 bản thu, mô tả đúng chuyển mã MP3 tối đa 128 kbps, cắt khoảng lặng; mỗi dòng ghi người chơi, giấy phép, nguồn). CHƯA có tệp mp3 trong public/audio (chép ở D6-0); câu đúng khi D6-0 xong. Review D5-gom: đã kiểm public/audio/NGUON.txt và dist/audio/NGUON.txt: 13 tệp, ghi "chuyển mã MP3 (tối đa 128 kbps), cắt bớt khoảng lặng dài ở đầu và cuối", mỗi dòng có người trình bày, giấy phép, nguồn IMSLP. Các tệp mp3 chưa có trong public/audio: câu "lưu trên site" chỉ đúng sau D6-0 (đã ghi ở báo cáo D5-L3).'
     review: dung
   - id: t34
     cau: 'Mốc tham khảo trong bảng "Theo dõi khi nghe" được căn tự động giữa bản thu và bản nhạc dạng số: dữ liệu của piano-midi.de (Bernd Krüger), bộ ASAP, các bản Humdrum của Craig Sapp và của Viện Fryderyk Chopin.'
@@ -503,17 +534,22 @@ nhan_dinh:
       - piano-midi
       - asap
       - nifc
+      - sapp-bee
+      - align-nguon
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ không có tên người và đường dẫn. piano-midi.de: Bernd Krüger; ASAP (CC BY-NC-SA 4.0); humdrum-chopin-first-editions của Viện Chopin (Craig Sapp). Phần "DCML, dự án TROMPA và các bản Mutopia" chưa kiểm hết (t35).'
+    ghi_chu: 'Chữ cũ không có tên người và đường dẫn. piano-midi.de: Bernd Krüger; ASAP (CC BY-NC-SA 4.0); humdrum-chopin-first-editions của Viện Chopin (Craig Sapp). Phần "DCML, dự án TROMPA và các bản Mutopia" chưa kiểm hết (t35). Review D5-gom: dung với chữ đã sửa. Phần Humdrum lượt 2 không xác nhận: review đã mở github.com/craigsapp/beethoven-piano-sonatas ("a digital edition of the 32 piano sonatas", Humdrum, ấn bản Durand 1915) và github.com/pl-wnifc/humdrum-chopin-first-editions ("Chopin First Editions encoded as Humdrum digital scores", NIFC). Việc site dùng các bộ này để căn mốc: đã kiểm hồ sơ nguồn của site cũ ../opus-zero/tools/audio/align/NGUON.md (bảng: asap, piano-midi Bernd Krüger, kernscores-beethoven/-mozart/-chopin-preludes của Craig Stuart Sapp, chopin-first-editions NIFC). Giữ da-sua.'
     luot_2: khong-chac
     luot_2_nguon: [ "http://www.piano-midi.de/", "https://github.com/fosfrancesco/asap-dataset" ]
     luot_2_ghi_chu: "Xác nhận: piano-midi.de do Bernd Krüger, bộ ASAP có điểm nhịp căn theo bản thu. Humdrum của Craig Sapp và của Viện Chopin không xác nhận được. Phần 'căn tự động trên site' là về site."
   - id: t35
     cau: Dữ liệu của DCML và dự án TROMPA cũng dùng cho mốc tham khảo.
     loai: ten
-    nguon: []
-    ket_qua: null
-    ghi_chu: 'chưa chắc: chưa mở trang của DCML và TROMPA; giữ chữ cũ. Lượt 2 hay người giao đối chiếu nguồn dữ liệu của các bảng "Theo dõi khi nghe" (src/data/tac-pham.yml).'
+    nguon:
+      - dcml-grieg
+      - trompa-bee
+      - align-nguon
+    ket_qua: dung
+    ghi_chu: 'chưa chắc: chưa mở trang của DCML và TROMPA; giữ chữ cũ. Lượt 2 hay người giao đối chiếu nguồn dữ liệu của các bảng "Theo dõi khi nghe" (src/data/tac-pham.yml). Review D5-gom: dung. Review đã mở github.com/DCMLab/grieg_lyric_pieces (DCML corpus initiative, có op12n01, CC BY-NC-SA 4.0) và github.com/trompamusic-encodings/Beethoven_WoOAnh5_BreitkopfHaertel (MEI "generated as part of the TROMPA project", ấn bản Breitkopf und Härtel). Hồ sơ nguồn của site cũ (tools/audio/align/NGUON.md) ghi: dcml-grieg dùng cho Grieg Arietta Op. 12 số 1, trompa-beethoven cho Sonatina Sol trưởng Anh. 5 số 1; tools/audio/align/pieces.py dùng "dcml_op12n01" và MEI TROMPA. Câu đúng.'
     luot_2: khong-chac
     luot_2_nguon: [ "https://github.com/DCMLab", "https://trompamusic.eu/" ]
     luot_2_ghi_chu: DCML (EPFL) và TROMPA (dự án EU) đều có thật; việc site dùng cho mốc tham khảo là về site, không kiểm được.
@@ -555,29 +591,29 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: public/fonts/OFL-BeVietnamPro.txt và OFL-Literata.txt có.
+    ghi_chu: "public/fonts/OFL-BeVietnamPro.txt và OFL-Literata.txt có. Review D5-gom: đã kiểm public/fonts/ và dist/fonts/: OFL-BeVietnamPro.txt, OFL-Literata.txt có."
     review: dung
   - id: t40
     cau: 'Hai mục "Âm thanh" và "Phần mềm" có neo #am-thanh và #phan-mem.'
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: Tiêu đề "## Âm thanh" và "## Phần mềm" sinh id am-thanh, phan-mem (Starlight bỏ chữ đ ở id khác, các id này không có chữ đ).
+    ghi_chu: 'Tiêu đề "## Âm thanh" và "## Phần mềm" sinh id am-thanh, phan-mem (Starlight bỏ chữ đ ở id khác, các id này không có chữ đ). Review D5-gom: đã kiểm dist/tai-lieu-tham-khao/index.html: tiêu đề có id="am-thanh" và id="phan-mem"; link [Âm thanh](#am-thanh), [Phần mềm](#phan-mem) ở mục Giấy phép khớp.'
     review: dung
   - id: t41
     cau: Nội dung site giấy phép CC BY-SA 4.0; ví dụ ghi nguồn "Opus, https://mtuann.github.io/opus/, CC BY-SA 4.0"; mã nguồn giấy phép MIT; link tệp LICENSE-CONTENT và LICENSE trên GitHub.
     loai: ve-site
     nguon: []
     ket_qua: da-sua
-    ghi_chu: 'LICENSE-CONTENT của repo mới ghi CC BY-SA 4.0 cho nội dung, địa chỉ https://mtuann.github.io/opus/; LICENSE là MIT. Link GitHub vẫn trỏ repo cũ mtuann/opus-zero (có LICENSE-CONTENT, LICENSE): giống t1, đổi khi repo mới công khai. Chữ cũ ví dụ ghi nguồn: "Opus Zero, https://mtuann.github.io/opus-zero/, CC BY-SA 4.0"; chữ mới "Opus, https://mtuann.github.io/opus/, CC BY-SA 4.0" theo LICENSE-CONTENT của repo mới.'
+    ghi_chu: 'LICENSE-CONTENT của repo mới ghi CC BY-SA 4.0 cho nội dung, địa chỉ https://mtuann.github.io/opus/; LICENSE là MIT. Link GitHub vẫn trỏ repo cũ mtuann/opus-zero (có LICENSE-CONTENT, LICENSE): giống t1, đổi khi repo mới công khai. Chữ cũ ví dụ ghi nguồn: "Opus Zero, https://mtuann.github.io/opus-zero/, CC BY-SA 4.0"; chữ mới "Opus, https://mtuann.github.io/opus/, CC BY-SA 4.0" theo LICENSE-CONTENT của repo mới. Review D5-gom: đã kiểm trang mục Giấy phép: CC BY-SA 4.0, ví dụ ghi nguồn "Opus, https://mtuann.github.io/opus/, CC BY-SA 4.0", mã nguồn MIT, link LICENSE-CONTENT và LICENSE còn trỏ repo cũ mtuann/opus-zero (giữ như t1, người giao quyết khi repo mới công khai).'
     review: dung
   - id: t42
     cau: CC BY-SA 4.0 cho phép sao chép, chia sẻ, chỉnh sửa, kể cả thương mại, nếu ghi nguồn, nói rõ đã sửa đổi và chia sẻ theo cùng giấy phép.
     loai: quy-tac
     nguon:
-      - omt
-    ket_qua: null
-    ghi_chu: "chưa chắc: chưa mở văn bản creativecommons.org (ghi trong trang: https://creativecommons.org/licenses/by-sa/4.0/). Nội dung quen thuộc, nhưng cần nguồn mở. Lượt 2 mở văn bản."
+      - cc-by-sa-4
+    ket_qua: dung
+    ghi_chu: "chưa chắc: chưa mở văn bản creativecommons.org (ghi trong trang: https://creativecommons.org/licenses/by-sa/4.0/). Nội dung quen thuộc, nhưng cần nguồn mở. Lượt 2 mở văn bản. Review D5-gom: dung. creativecommons.org/licenses/by-sa/4.0 (review đã mở): Share \"copy and redistribute … for any purpose, even commercially\", Adapt \"remix, transform, and build upon … even commercially\"; Attribution \"give appropriate credit, provide a link to the license, and indicate if changes were made\"; ShareAlike \"distribute your contributions under the same license as the original\". Khớp câu. Nguồn omt (không liên quan) thay bằng cc-by-sa-4."
     luot_2: dung
     luot_2_nguon: [ "https://creativecommons.org/licenses/by-sa/4.0/" ]
     luot_2_ghi_chu: "CC BY-SA 4.0: dùng thương mại, ghi nguồn, nêu thay đổi, chia sẻ cùng giấy phép."
@@ -590,7 +626,7 @@ nhan_dinh:
     luot_2: dung
     luot_2_ghi_chu: "khuyen-tap: hợp lý; mô tả giấy phép riêng của từng thành phần khớp các mục t30, t36, t38."
 khuong_nhac: []
-ghi_chu: "Trang tầng lõi, danh mục nguồn; không có khối abc. Nhận định tách theo mục sách/trang/công cụ (loại ten, nam, cap-do) và câu ve-site (link nội bộ, NGUON.txt, OFL, neo). Nhiều trang chủ chặn công cụ (abrsm.org, oyc.yale.edu, wienerurtext.com, global.oup.com, wwnorton.com, Tonejs/audio); thay bằng bản ghi thư viện, nhà xuất bản và bán sách, ghi ở từng nguồn. Chỗ sửa trang: t3, t4, t7–t14, t16, t20, t21, t23–t27, t29, t34, t36, t37, t41 (lý do ở ghi_chu từng nhận định và doi_chu). Chưa chắc: t31 (Tone.js), t35 (DCML, TROMPA), t42 (văn bản CC BY-SA). Câu ve-site trỏ trang chưa chuyển: cap-nhat, lich-su/viet-nam, lich-su/nhac-truyen-thong-viet-nam, nhan-dien/nghe-mu, piano/tac-pham/, nghe-nhac/. Link GitHub vẫn là repo cũ mtuann/opus-zero (t1, t41): người giao quyết khi repo mới công khai. NGUON.txt có mà chưa có mp3 (D6-0). Ràng buộc lô trước (grep kiem-dinh): trang phải ở đường dẫn này; giữ danh sách nguồn chính (Grove, OMT: còn); mọi link hinh-thuc, lich-su, piano, nhac-ly còn; neo #am-thanh, #phan-mem còn: khớp. Thuật ngữ chưa có: không cần."
+ghi_chu: "Trang tầng lõi, danh mục nguồn; không có khối abc. Nhận định tách theo mục sách/trang/công cụ (loại ten, nam, cap-do) và câu ve-site (link nội bộ, NGUON.txt, OFL, neo). Nhiều trang chủ chặn công cụ (abrsm.org, oyc.yale.edu, wienerurtext.com, global.oup.com, wwnorton.com, Tonejs/audio); thay bằng bản ghi thư viện, nhà xuất bản và bán sách, ghi ở từng nguồn. Chỗ sửa trang: t3, t4, t7–t14, t16, t20, t21, t23–t27, t29, t34, t36, t37, t41 (lý do ở ghi_chu từng nhận định và doi_chu). Chưa chắc: t31 (Tone.js), t35 (DCML, TROMPA), t42 (văn bản CC BY-SA). Câu ve-site trỏ trang chưa chuyển: cap-nhat, lich-su/viet-nam, lich-su/nhac-truyen-thong-viet-nam, nhan-dien/nghe-mu, piano/tac-pham/, nghe-nhac/. Link GitHub vẫn là repo cũ mtuann/opus-zero (t1, t41): người giao quyết khi repo mới công khai. NGUON.txt có mà chưa có mp3 (D6-0). Ràng buộc lô trước (grep kiem-dinh): trang phải ở đường dẫn này; giữ danh sách nguồn chính (Grove, OMT: còn); mọi link hinh-thuc, lich-su, piano, nhac-ly còn; neo #am-thanh, #phan-mem còn: khớp. Thuật ngữ chưa có: không cần. Review D5-gom (29/10/2026): t31 dung (README Tone.js, kho Tonejs/audio); t34 giữ da-sua, t35 dung (kho DCML, TROMPA, Craig Sapp, NIFC; hồ sơ căn mốc của site cũ); t42 dung (văn bản CC BY-SA 4.0); câu ve-site đã kiểm. Link GitHub (t1, t41) còn trỏ repo cũ."
 doi_chu:
   - cu:
       - "Grove Music Online (oxfordmusiconline.com): bách khoa âm nhạc chuẩn mực nhất bằng tiếng Anh; cần tài khoản, nhiều thư viện đại học có quyền truy cập."

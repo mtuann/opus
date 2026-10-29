@@ -73,12 +73,12 @@ Một số vở opera Việt đáng chú ý khác:
 
 | Vở | Tác giả | Công diễn |
 |---|---|---|
-| *Người tạc tượng* | Đỗ Nhuận | 1971 (sáng tác từ 1968) |
+| *Người tạc tượng* | Đỗ Nhuận | 1971 (viết xong năm 1970) |
 | *Lá đỏ* | Đỗ Hồng Quân | 2016 |
 
 *Người tạc tượng* lấy bối cảnh Tây Nguyên, công diễn ngày 2/9/1971 tại Nhà hát Lớn Hà Nội; *Lá đỏ* có kịch bản của nhà thơ Nguyễn Thị Hồng Ngát.
 
-Hai đơn vị nên biết là **Nhà hát Nhạc Vũ Kịch Việt Nam** (VNOB, Hà Nội, thành lập ngày 6/8/1959), biểu diễn ballet, opera và nhạc giao hưởng, và **Nhà hát Giao hưởng Nhạc Vũ kịch TP.HCM** (HBSO), nơi dàn dựng những opera thế giới như *Madama Butterfly*.
+Hai đơn vị nên biết là **Nhà hát Nhạc Vũ Kịch Việt Nam** (VNOB, Hà Nội, thành lập ngày 6/8/1959), biểu diễn ballet, opera và nhạc giao hưởng, và **Nhà hát Giao hưởng Nhạc Vũ kịch TP.HCM** (HBSO), nơi đã trình diễn những opera thế giới như *Madama Butterfly* (dạng hòa nhạc).
 
 **Nghe/xem thử:** tìm "Cô Sao opera" trên YouTube để xem trích đoạn; theo dõi lịch diễn của VNOB và HBSO nếu muốn xem opera trực tiếp.
 

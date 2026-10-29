@@ -23,3 +23,17 @@ Tổng: 857 dung, 1 sai, 174 khong-chac. Câu `sai`: symphonic-poem n16, bảng 
 Khác: Trumpet "E3 đến C6" lẫn âm thực và âm viết; timpani D2–C4 không nguồn nào ghi; Für Elise đoạn C "không rời giọng chính" (hòa âm lướt qua Rê thứ, Si♭); K. 545 chủ đề 2 vào ô 14 hay 13; Liszt 12 hay 13 symphonic poem.
 
 Danh sách cho review: `d5-gom/can-review.txt` (373 mục).
+
+## Review
+
+Bốn agent review (Claude Opus 5.5), không làm lượt 1 hay lượt 2 của các trang: nhóm A (nhà soạn nhạc, dòng thời gian, mục lục Lịch sử, opera, Trung cổ, Phục hưng), B (Baroque, Cổ điển, Lãng mạn, Thế kỷ 20, dàn nhạc, thể loại, tài liệu tham khảo, mục lục Nhận diện), C (mười trang hình thức), D (so sánh thời kỳ, dấu vân tay, luyện nghe và chữ trong công cụ). Mọi mục ở `can-review.txt` (373) đã xử lý; không còn `ket_qua: null`.
+
+Quyết định chung:
+
+- Pärt, Reich, Glass, Adams theo dữ liệu đã khóa (`thoi_ky: Đương đại`): mục lục Lịch sử, trang Thế kỷ 20 ghi rõ họ sinh ở thế kỷ 20 nhưng site xếp vào Đương đại; Dấu vân tay thêm mục "Đương đại".
+- K. 265: giữ "biến tấu 11 Adagio, 12 Allegro" theo ấn bản C. F. Peters (bản scan IMSLP) và Mutopia (Porro); cân nhắc khôi phục ở trang đã khóa `piano/hoa-am/ung-tac` khi có dịp mở khóa.
+- Hình `ranges-voices` dựng lại: bảy giọng như bảng (thêm countertenor), "Contralto (alto)", tên nốt kiểu Đô4, âm vực theo COD (bass theo OnMusic). Hình `ranges-orchestra` theo VSL Academy (âm thực): violin tới La7, viola tới La6, sáo Đô4–Rê7, bassoon tới Mi♭5, trumpet Đô Fa♯3–Đô6, timpani Đô2–Đô4; bỏ guitar.
+- Sửa đáng kể khác: Beethoven mất thính lực từ khoảng 1796; Vivaldi "khoảng 500 concerto"; Elgar, Puccini theo Britannica; "Opera ra đời ở Ý quanh năm 1600 (Peri)", L'Orfeo là vở sớm nhất còn được diễn; chủ nghĩa tối giản "từ thập niên 1960"; Người tạc tượng viết xong 1970, công diễn 1971; Moldau đoạn tiên nữ: sáo và clarinet (không phải oboe); Für Elise đoạn C: nốt La lặp ở bè trầm, hòa âm qua Rê thứ rồi rời La; K. 545 chương 1: 73 ô; Baroque khôi phục "nhịp đều đặn (motor rhythm)" theo Clark; ví dụ romantic-1 và trang Lãng mạn: "Fa trưởng chuyển sang Fa thứ" thay "hợp âm mượn" (đoạn quy về La thứ); modern-1 "mỗi lần chỉ đổi một nốt" thay "quá trình cộng dồn".
+- Trang đã khóa `piano/lich-su-dan`: dòng 149 ghi "(1655–1731)" là nguyên văn tiêu đề bài của Met, không phải năm site nêu (dòng 20 ghi 1655–1732): không cần sửa.
+
+Chữ đổi sau lượt 2 và câu đổi nhãn: 43 câu ở `bo-sung.yml` cho lượt 2 bổ sung.

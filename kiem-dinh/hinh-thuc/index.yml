@@ -10,7 +10,7 @@ lan:
     nguoi:
       luot_1: Claude Sonnet 5.5 (D5-L2 lượt 1, phần A)
       luot_2: null
-      review: null
+      review: Claude (review D5-gom, nhóm C, 29/10/2026)
       kiem_mau: null
 nguon:
   - id: brit-form
@@ -132,35 +132,41 @@ nhan_dinh:
     ghi_chu: Lời dẫn; "40 phút" là ví dụ, không phải số liệu.
     luot_2: dung
   - id: n4
-    cau: Sơ đồ nhanh của năm hình thức cơ bản (mỗi ô là một đoạn, cùng màu là cùng chất liệu), hình form-overview.
+    cau: "Sơ đồ nhanh của năm hình thức: hai đoạn, ba đoạn, rondo, chủ đề và biến tấu, hình thức sonata (mỗi ô là một đoạn, cùng màu là cùng chất liệu), hình form-overview."
     loai: ve-site
-    ket_qua: null
-    ghi_chu: "chưa chắc: kiểm trong src/components/hinh/form-overview.html (không sửa). Hình có 5 sơ đồ: hai đoạn, ba đoạn, rondo, chủ đề và biến tấu, sonata. Bảng \"Các hình thức cơ bản\" bên dưới cũng có 5 hàng nhưng hàng thứ năm là minuet và trio, hàng sonata không có: \"năm hình thức\" của hình và của bảng không trùng. Lỗi hình: sơ đồ biến tấu tô A' (k-b), A'' (k-c), A''' (k-b) khác màu nhau dù cùng chất liệu, trái với chú thích \"cùng màu là cùng chất liệu\"; nhãn \"Coda\" trong hình sonata, thuat-ngu.yml dùng \"Đoạn kết (coda)\". Người giao quyết: sửa hình hay câu dẫn."
+    ket_qua: da-sua
+    ghi_chu: "chưa chắc: kiểm trong src/components/hinh/form-overview.html (không sửa). Hình có 5 sơ đồ: hai đoạn, ba đoạn, rondo, chủ đề và biến tấu, sonata. Bảng \"Các hình thức cơ bản\" bên dưới cũng có 5 hàng nhưng hàng thứ năm là minuet và trio, hàng sonata không có: \"năm hình thức\" của hình và của bảng không trùng. Lỗi hình: sơ đồ biến tấu tô A' (k-b), A'' (k-c), A''' (k-b) khác màu nhau dù cùng chất liệu, trái với chú thích \"cùng màu là cùng chất liệu\"; nhãn \"Coda\" trong hình sonata, thuat-ngu.yml dùng \"Đoạn kết (coda)\". Người giao quyết: sửa hình hay câu dẫn. Review: đã kiểm src/components/hinh/form-overview.html (HEAD): năm sơ đồ hai đoạn, ba đoạn, rondo, chủ đề và biến tấu (Chủ đề, A', A'', A''' cùng lớp k-a: lỗi màu lượt 1 nêu đã sửa trước nhánh gom), sonata (Trình bày và Tái hiện cùng k-a; Phát triển k-dev, Coda k-coda). \"Cùng màu là cùng chất liệu\" đúng với cả năm sơ đồ. Bảng \"Các hình thức cơ bản\" bên dưới có minuet và trio thay sonata (sonata có mục riêng ngay sau): câu dẫn nay nêu tên năm hình thức của hình để khỏi lẫn với bảng. Chữ cũ: \"Sơ đồ nhanh của năm hình thức cơ bản (mỗi ô …)\"; chữ mới: \"Sơ đồ nhanh của năm hình thức: hai đoạn, ba đoạn, rondo, chủ đề và biến tấu, hình thức sonata (mỗi ô …)\". Nhãn \"Coda\" trong hình giữ, như trang sonata (\"Coda (đoạn kết)\")."
+    review: dung
   - id: n5
     cau: Mỗi hình thức chính có một trang riêng; 9 link tới sonata, fugue, bien-tau, rondo, concerto, minuet-trio, scherzo, overture, symphonic-poem.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: "Kiểm trên site mới: cả 9 tệp src/content/docs/hinh-thuc/*.md có (fugue, rondo, concerto, minuet-trio, scherzo, overture, symphonic-poem do phần B/C chuyển)."
+    ghi_chu: "Kiểm trên site mới: cả 9 tệp src/content/docs/hinh-thuc/*.md có (fugue, rondo, concerto, minuet-trio, scherzo, overture, symphonic-poem do phần B/C chuyển). Review: đã kiểm cả 9 tệp src/content/docs/hinh-thuc/{sonata,fugue,bien-tau,rondo,concerto,minuet-trio,scherzo,overture,symphonic-poem}.md có."
+    review: dung
   - id: n6
     cau: 'Sonata: "Trình bày – phát triển – tái hiện"; phân tích Mozart Sonata K. 545.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Khớp trang sonata (đã kiểm ở hồ sơ hinh-thuc/sonata).
+    ghi_chu: "Khớp trang sonata (đã kiểm ở hồ sơ hinh-thuc/sonata). Review: đã kiểm trang sonata: trình bày, phát triển, tái hiện; phân tích K. 545 chương 1."
+    review: dung
   - id: n7
     cau: "Fugue: các bè đuổi theo nhau bằng cùng một chủ đề; phân tích Bach Fugue cung Đô thứ, BWV 847."
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Trang fugue thuộc phần B; câu này khớp tiêu đề trang. Cần xem lại sau khi phần B xong.
+    ghi_chu: 'Trang fugue thuộc phần B; câu này khớp tiêu đề trang. Cần xem lại sau khi phần B xong. Review: đã kiểm trang fugue (chữ cuối nhánh gom): mở đầu "nhiều bè độc lập lần lượt đuổi theo nhau bằng cùng một chủ đề"; phân tích BWV 847.'
+    review: dung
   - id: n8
     cau: "Chủ đề và biến tấu: một giai điệu, nhiều cách biến đổi; phân tích Mozart 12 biến tấu K. 265."
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Khớp trang bien-tau.
+    ghi_chu: "Khớp trang bien-tau. Review: đã kiểm trang bien-tau: phân tích 12 biến tấu K. 265."
+    review: dung
   - id: n9
     cau: "Rondo: một đoạn chính quay lại nhiều lần; phân tích Für Elise."
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Trang rondo thuộc phần C; cần xem lại sau khi phần C xong.
+    ghi_chu: 'Trang rondo thuộc phần C; cần xem lại sau khi phần C xong. Review: đã kiểm trang rondo (chữ cuối nhánh gom): "một đoạn chính (A) quay lại nhiều lần"; phân tích Für Elise.'
+    review: dung
   - id: n10
     cau: "Concerto và ritornello: một người đối thoại với cả dàn nhạc."
     loai: dinh-nghia
@@ -181,13 +187,13 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://www.britannica.com/art/scherzo" ]
   - id: n12
-    cau: 'Scherzo: "trò đùa" của Beethoven thay minuet: nhanh, bất ngờ, đầy năng lượng.'
+    cau: 'Scherzo: "trò đùa": chương nhanh, nhịp 3, nhiều bất ngờ; Beethoven dùng nó thay minuet trong giao hưởng.'
     loai: lich-su
     nguon:
       - brit-scherzo
       - ency-scherzo
-    ket_qua: dung
-    ghi_chu: Trang scherzo thuộc phần C. Từ "scherzo" nghĩa là trò đùa (Britannica).
+    ket_qua: da-sua
+    ghi_chu: 'Trang scherzo thuộc phần C. Từ "scherzo" nghĩa là trò đùa (Britannica). Review D5-gom: mô tả cho khớp trang scherzo ("chương nhạc nhanh, thường ở nhịp 3, nhiều bất ngờ"; Beethoven viết scherzo thay minuet). Chữ cũ: "\"Trò đùa\" của Beethoven thay minuet: nhanh, bất ngờ, đầy năng lượng": "của Beethoven" dễ hiểu là Beethoven đặt ra scherzo, "đầy năng lượng" không có nguồn. Britannica, COD (scherzo): nghĩa "trò đùa", chương nhanh nhịp ba, thay minuet từ Beethoven. Cần lượt 2 bổ sung cho chữ mới.'
     luot_2: dung
     luot_2_nguon: [ "https://www.britannica.com/art/scherzo", "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/scherzo" ]
   - id: n13
@@ -255,6 +261,7 @@ nhan_dinh:
     ket_qua: dung
     luot_2: khong-chac
     luot_2_ghi_chu: Chủ đề và biến tấu là dạng chuẩn, nhưng tôi chưa mở được trang nào cho Mozart K. 265 (IMSLP lỗi).
+    ghi_chu: 'Review D5-gom: lượt 2 không mở được IMSLP; review mở API IMSLP (K. 265): "13 (theme, 12 variations)"; ấn bản Peters (Internet Archive): TEMA, VAR. I–XII. Đúng.'
   - id: n20
     cau: "Minuet và trio: A B A; điệu múa 3/4, đoạn giữa (trio) thường nhẹ nhàng hơn; chương 3 nhiều giao hưởng của Haydn, Mozart."
     loai: dinh-nghia
@@ -269,7 +276,8 @@ nhan_dinh:
     cau: Hai đoạn, hai đoạn có tái hiện và ba đoạn được giải thích kỹ ở bài nhạc lý 31 (link).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: "Kiểm trên site mới: nhac-ly/31-hinh-thuc-nho.md có, nội dung khớp."
+    ghi_chu: "Kiểm trên site mới: nhac-ly/31-hinh-thuc-nho.md có, nội dung khớp. Review: đã kiểm src/content/docs/nhac-ly/31-hinh-thuc-nho.md có; id hinh-thuc-hai-oan-binary, hinh-thuc-ba-oan-ternary có trong dist/nhac-ly/31-hinh-thuc-nho/index.html."
+    review: dung
   - id: n22
     cau: "Hình thức sonata: quan trọng của thời Cổ điển, vẫn dùng ở thời Lãng mạn; thường cho chương đầu giao hưởng, sonata, concerto, tứ tấu; trình bày hai chủ đề ở hai giọng, phát triển, tái hiện cả hai ở giọng chính, thường có coda."
     loai: dinh-nghia
@@ -376,13 +384,20 @@ nhan_dinh:
     cau: Link Các thể loại nhạc piano (/opus/piano/the-loai/).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: "Kiểm trên site mới: src/content/docs/piano/the-loai.md có."
+    ghi_chu: "Kiểm trên site mới: src/content/docs/piano/the-loai.md có. Review: đã kiểm src/content/docs/piano/the-loai.md có."
+    review: dung
 khuong_nhac: []
 ghi_chu: "Lượt 1 (D5-L2 phần A). Trang index, 33 nhận định, không có khối abc, không có quiz. Chưa chắc: n4 (hình form-overview, xem lỗi hình). Các dòng n7, n9, n10, n11, n12 mô tả trang thuộc phần B/C, cần xem lại sau khi hai phần ấy xong. Thuật ngữ chưa có trong thuat-ngu.yml: hình thức, thể loại, ritornello, cadenza."
 doi_chu:
   - cu: "Hình thức là cách một bản nhạc được sắp xếp theo thời gian: đoạn nào lặp lại, đoạn nào tương phản. Thể loại là loại tác phẩm, xác định bởi lực lượng biểu diễn và mục đích: giao hưởng, concerto, sonata…"
     moi: "Hình thức là cách một bản nhạc được sắp xếp theo thời gian: đoạn nào lặp lại, đoạn nào tương phản. Thể loại là loại tác phẩm quen thuộc: giao hưởng, concerto, sonata…"
     ly_do: "n2 (da-sua): bỏ vế không nguồn."
+  - cu: "Sơ đồ nhanh của năm hình thức cơ bản (mỗi ô là một đoạn, cùng màu là cùng chất liệu):"
+    moi: "Sơ đồ nhanh của năm hình thức: hai đoạn, ba đoạn, rondo, chủ đề và biến tấu, hình thức sonata (mỗi ô là một đoạn, cùng màu là cùng chất liệu):"
+    ly_do: 'n4 (da-sua, review D5-gom): nêu tên năm hình thức của hình; bảng "Các hình thức cơ bản" bên dưới có minuet và trio thay sonata nên "năm hình thức cơ bản" dễ lẫn.'
+  - cu: '"Trò đùa" của Beethoven thay minuet: nhanh, bất ngờ, đầy năng lượng.'
+    moi: '"Trò đùa": chương nhanh, nhịp 3, nhiều bất ngờ; Beethoven dùng nó thay minuet trong giao hưởng.'
+    ly_do: 'n12 (da-sua, review D5-gom): khớp chữ trang scherzo; bỏ "đầy năng lượng" (không nguồn) và "của Beethoven" (dễ hiểu là Beethoven đặt ra scherzo).'
   - cu: "Khúc mở màn: từ mở đầu opera đến overture hòa nhạc kể chuyện."
     moi: "Khúc mở màn: từ mở đầu opera đến overture hòa nhạc độc lập."
     ly_do: 'n13 (da-sua): "kể chuyện" thuộc symphonic poem.'

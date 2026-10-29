@@ -10,7 +10,7 @@ lan:
     nguoi:
       luot_1: Claude Sonnet 5.5 (D5-L3 lượt 1, phần A)
       luot_2: null
-      review: null
+      review: Claude (review D5-gom, nhóm D, 29/10/2026)
       kiem_mau: null
 nguon:
   - id: js-lt
@@ -29,51 +29,54 @@ nguon:
     bac: 2
     ten: Encyclopaedia Britannica, canon (music)
     link: https://www.britannica.com/art/canon-music
+  - id: carleton-fj
+    bac: 2
+    ten: "Carleton College, J. Ellinger, Music 108 (2013), Lab 5: Frère Jacques round (bảng cao độ từng ô)"
+    link: https://people.carleton.edu/~jellinge/m108f13/pages/11/11Lab5.html
 nhan_dinh:
   - id: n1
     cau: Công cụ nhận biết kết nằm ở bài Nghe tiến trình hòa âm (link luyen-tai/nghe-tien-trinh#luyen-voi-cong-cu).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Đã kiểm trên trang: nghe-tien-trinh.md có mục "Luyện với công cụ { #luyen-voi-cong-cu }" và mục "Bốn loại kết". Hồ sơ kiem-dinh/luyen-tai/index.yml ghi giữ nhan-dien/luyen-nghe.'
+    ghi_chu: 'Đã kiểm trên trang: nghe-tien-trinh.md có mục "Luyện với công cụ { #luyen-voi-cong-cu }" và mục "Bốn loại kết". Hồ sơ kiem-dinh/luyen-tai/index.yml ghi giữ nhan-dien/luyen-nghe. Review: đã kiểm src/content/docs/luyen-tai/nghe-tien-trinh.md dòng 95 "## Luyện với công cụ { #luyen-voi-cong-cu }".'
+    review: dung
   - id: n2
     cau: Tất cả phát bằng âm thanh tổng hợp trong trình duyệt.
-    loai: cau-truc
-    nguon:
-      - js-lt
-      - abc
+    loai: ve-site
     ket_qua: dung
-    ghi_chu: "Đã đọc mã: luyen-tai.js dùng chuanBi, choiNot (am-thanh.js); nhan-dien.js dùng trình phát abcjs với %%MIDI program."
+    ghi_chu: "Đã đọc mã: luyen-tai.js dùng chuanBi, choiNot (am-thanh.js); nhan-dien.js dùng trình phát abcjs với %%MIDI program. Review D5-gom, soát nhãn: câu chỉ nói về công cụ của site, đổi cau-truc thành ve-site. Đã kiểm luyen-tai.js (texture-trainer phát qua am-thanh.js) và nhan-dien.js (trình phát abcjs, %%MIDI program). (Bỏ trường nguon js-lt, abc khi đổi nhãn: câu ve-site không ghi nguồn; hai file vẫn là nơi đã kiểm.)"
     luot_2: khong-chac
     luot_2_ghi_chu: Mô tả hành vi/nội dung ứng dụng (không phải nhạc lý); không kiểm được bằng nguồn ngoài.
+    review: dung
   - id: n3
     cau: Mỗi câu đều có đáp án và giải thích.
-    loai: cau-truc
-    nguon:
-      - js-lt
-      - abc
+    loai: ve-site
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "mỗi câu đều có đáp án và giải thích". Sai với công cụ kết cấu: texture-trainer chỉ hiện "Đúng: {tên kết cấu}. Bấm Câu mới để tiếp tục." (luyen-tai.js, dòng dung), không giải thích. Công cụ đoán phong cách thì hiện đáp án và danh sách dấu hiệu. Sửa chữ trên trang cho khớp.'
+    ghi_chu: 'Chữ cũ: "mỗi câu đều có đáp án và giải thích". Sai với công cụ kết cấu: texture-trainer chỉ hiện "Đúng: {tên kết cấu}. Bấm Câu mới để tiếp tục." (luyen-tai.js, dòng dung), không giải thích. Công cụ đoán phong cách thì hiện đáp án và danh sách dấu hiệu. Sửa chữ trên trang cho khớp. Review D5-gom, soát nhãn: đổi cau-truc thành ve-site. Đã kiểm: luyen-tai.js texture-trainer chỉ hiện "Đúng: {kết cấu}. Bấm “Câu mới” để tiếp tục." (dòng 302); nhan-dien.js hiện "Đúng: {thời kỳ}. Các dấu hiệu:" và danh sách dấu hiệu. Chữ trang đã sửa khớp. (Bỏ trường nguon js-lt, abc khi đổi nhãn.)'
     luot_2: khong-chac
     luot_2_ghi_chu: Mô tả hành vi/nội dung ứng dụng (không phải nhạc lý); không kiểm được bằng nguồn ngoài.
+    review: dung
   - id: n4
     cau: Kết quả được tính vào nhật ký luyện tập (link luyen-tap/nhat-ky).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Chưa chuyển sang opus; đã có ở opus-zero/docs/luyen-tap/. Điều cần giữ: nhận diện được ghi vào kỹ năng "styles" (nhan-dien.js: ghiNgay("styles", 1); luyen-tai.js: ngay "styles", kyNang "texture"); khi trang nhật ký chuyển, phải còn mục ghi "styles".'
+    ghi_chu: 'Chưa chuyển sang opus; đã có ở opus-zero/docs/luyen-tap/. Điều cần giữ: nhận diện được ghi vào kỹ năng "styles" (nhan-dien.js: ghiNgay("styles", 1); luyen-tai.js: ngay "styles", kyNang "texture"); khi trang nhật ký chuyển, phải còn mục ghi "styles". Review: đã kiểm nhan-dien.js và luyen-tai.js ghi vào days[ngày].styles; trang nhật ký chưa chuyển (bản xem: mục Luyện tập "sắp có"). Lô chuyển luyen-tap/nhat-ky giữ mục ghi styles.'
+    review: dung
   - id: n5
     cau: Mười đoạn nhạc ngắn, mỗi đoạn viết theo đặc trưng của một thời kỳ (Baroque, Cổ điển, Lãng mạn, Ấn tượng, Thế kỷ 20).
     loai: danh-muc
     nguon:
       - abc
     ket_qua: dung
-    ghi_chu: "src/scripts/nhan-dien.js: VI_DU có 10 đoạn, hai đoạn mỗi thời kỳ; THOI_KY_ND có đúng 5 thời kỳ. Hồ sơ so-sanh-thoi-ky đã kiểm từng đoạn (xem ghi_chu ở đó)."
+    ghi_chu: "src/scripts/nhan-dien.js: VI_DU có 10 đoạn, hai đoạn mỗi thời kỳ; THOI_KY_ND có đúng 5 thời kỳ. Hồ sơ so-sanh-thoi-ky đã kiểm từng đoạn (xem ghi_chu ở đó). Review D5-gom: lượt 2 không đọc được mã. Phần số lượng (10 đoạn, 5 thời kỳ) đã kiểm trong VI_DU và THOI_KY_ND; phần \"viết theo đặc trưng của thời kỳ\" đã kiểm từng đoạn trong kiem-dinh/nhan-dien/so-sanh-thoi-ky.yml (n45–n82, review D5-gom). Giữ."
     luot_2: khong-chac
     luot_2_ghi_chu: Mô tả hành vi/nội dung ứng dụng (không phải nhạc lý); không kiểm được bằng nguồn ngoài.
   - id: n6
     cau: Nghe, đoán thời kỳ, rồi xem khuông nhạc và các dấu hiệu; khuông và dấu hiệu chỉ hiện sau khi trả lời.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Khớp CHU_ND.dan và CHU_ND.dung trong nhan-dien.js ("Khuông nhạc và các dấu hiệu chỉ hiện sau khi bạn trả lời").
+    ghi_chu: 'Khớp CHU_ND.dan và CHU_ND.dung trong nhan-dien.js ("Khuông nhạc và các dấu hiệu chỉ hiện sau khi bạn trả lời"). Review: đã kiểm LOI_DAN trong nhan-dien.js dòng 169 ("Khuông nhạc và các dấu hiệu chỉ hiện sau khi bạn trả lời").'
+    review: dung
   - id: n7
     cau: "Gợi ý: nghe nhạc cụ trước (harpsichord? piano? dàn dây? marimba?)."
     loai: khuyen-tap
@@ -94,7 +97,8 @@ nhan_dinh:
     cau: Link tới bảng so sánh các thời kỳ (nhan-dien/so-sanh-thoi-ky).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Trang cùng lô, đã chuyển.
+    ghi_chu: "Trang cùng lô, đã chuyển. Review: trang nhan-dien/so-sanh-thoi-ky có, cùng nhánh."
+    review: dung
   - id: n10
     cau: Cùng một giai điệu được phát theo bốn kết cấu khác nhau (xem bài 28).
     loai: cau-truc
@@ -108,24 +112,27 @@ nhan_dinh:
   - id: n11
     cau: Giai điệu đó là Frère Jacques.
     loai: ten
-    ket_qua: null
-    ghi_chu: 'chưa chắc: Britannica (canon) có nêu "Frère Jacques" là ví dụ canon (bậc 2) nhưng bài 28 đã khóa bỏ tên này vì không có nguồn bậc 1–2 cho cao độ. Cao độ trong FJ (luyen-tai.js) là bản quen thuộc, không có bản nhạc đọc được để đối chiếu. Người giao quyết: giữ tên (cần mở khóa bài 28) hay bỏ tên ở trang này cho thống nhất.'
+    ket_qua: dung
+    ghi_chu: 'chưa chắc: Britannica (canon) có nêu "Frère Jacques" là ví dụ canon (bậc 2) nhưng bài 28 đã khóa bỏ tên này vì không có nguồn bậc 1–2 cho cao độ. Cao độ trong FJ (luyen-tai.js) là bản quen thuộc, không có bản nhạc đọc được để đối chiếu. Người giao quyết: giữ tên (cần mở khóa bài 28) hay bỏ tên ở trang này cho thống nhất. Review D5-gom: giữ tên. Britannica, canon (đã mở): các canon dạng round như "Frère Jacques" "are a part of many community singing traditions" (nêu tên và cho biết là một round). Cao độ: Carleton College, Ellinger, Music 108, Lab 5 (đã mở) ghi giai điệu Frère Jacques từng ô: C4 D4 E4 C4 | ×2 | E4 F4 G4(trắng) | ×2 | G4 A4 G4 F4 (móc đơn) E4 C4 | ×2 | C4 G3 C4(trắng) | ×2, và dựng round hai bè vào ở ô 3: khớp từng nốt FJ trong src/scripts/luyen-tai.js (60 62 64 60 …, 67 69 67 65 64 60, 60 55 60). Bài 28 (đã khóa) bỏ tên vì lúc ấy không có nguồn bậc 1–2; nay có, bài 28 không bắt buộc sửa.'
     luot_2: khong-chac
     luot_2_ghi_chu: Mô tả hành vi/nội dung ứng dụng (không phải nhạc lý); không kiểm được bằng nguồn ngoài.
+    nguon:
+      - brit-canon
+      - carleton-fj
   - id: n12
     cau: Tốc độ và giọng thay đổi ngẫu nhiên.
-    loai: cau-truc
-    nguon:
-      - js-lt
+    loai: ve-site
     ket_qua: dung
-    ghi_chu: "luyen-tai.js: giọng dịch từ -3 đến +3 nửa cung, mỗi phách 0,38 đến 0,5 giây (cau)."
+    ghi_chu: "luyen-tai.js: giọng dịch từ -3 đến +3 nửa cung, mỗi phách 0,38 đến 0,5 giây (cau). Review D5-gom, soát nhãn: đổi cau-truc thành ve-site. Đã kiểm luyen-tai.js: dich từ -3 đến +3, nhip 0,38 đến dưới 0,5 giây (kiểm thử nhan-dien.test.mjs cũng kiểm khoảng này). (Bỏ trường nguon js-lt khi đổi nhãn.)"
     luot_2: khong-chac
     luot_2_ghi_chu: Mô tả hành vi/nội dung ứng dụng (không phải nhạc lý); không kiểm được bằng nguồn ngoài.
+    review: dung
   - id: n13
     cau: Link tới bài 28 (nhac-ly/28-ket-cau).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Đã chuyển và đã khóa; có mục "Bốn loại kết cấu".
+    ghi_chu: 'Đã chuyển và đã khóa; có mục "Bốn loại kết cấu". Review: bài 28 đã khóa, có mục bốn loại kết cấu.'
+    review: dung
   - id: n14
     cau: Chỉ một giai điệu → đơn âm.
     loai: dinh-nghia
@@ -171,12 +178,14 @@ nhan_dinh:
     cau: 'Chữ trong công cụ đoán phong cách: CHU_ND (lời dẫn, nút "Chọn thời kỳ", "Chưa đúng. Nghe lại: để ý nhạc cụ, kết cấu và hòa âm.", "Đúng: {thời kỳ}. Các dấu hiệu:", "Lượt này: đúng ngay lần đầu x/y").'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: "Đã đọc nhan-dien.js: không có khẳng định cần nguồn; giữ nguyên."
+    ghi_chu: "Đã đọc nhan-dien.js: không có khẳng định cần nguồn; giữ nguyên. Review: đã kiểm CHU_ND trong nhan-dien.js dòng 169–176 (nhóm \"Chọn thời kỳ\", sai \"Chưa đúng. Nghe lại: để ý nhạc cụ, kết cấu và hòa âm.\", điểm \"Lượt này: đúng ngay lần đầu x/y\")."
+    review: dung
   - id: n19
     cau: 'Chữ trong công cụ kết cấu: "Cùng một giai điệu được phát theo một trong bốn kết cấu", "Chưa đúng. Đếm xem có mấy đường nét độc lập.", "Đúng: {tên}. Bấm Câu mới để tiếp tục."'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Đã đọc luyen-tai.js: không có khẳng định cần nguồn. Lời khuyên "đếm mấy đường nét độc lập" hợp với phân biệt đơn âm, chủ điệu, phức điệu, dị âm nhưng là gợi ý chứ không phải định nghĩa.'
+    ghi_chu: 'Đã đọc luyen-tai.js: không có khẳng định cần nguồn. Lời khuyên "đếm mấy đường nét độc lập" hợp với phân biệt đơn âm, chủ điệu, phức điệu, dị âm nhưng là gợi ý chứ không phải định nghĩa. Review: đã kiểm luyen-tai.js dòng 291, 293, 302.'
+    review: dung
   - id: n20
     cau: "Tên bốn nút kết cấu: Đơn âm, Chủ điệu, Phức điệu, Dị âm."
     loai: ten
@@ -193,11 +202,11 @@ nhan_dinh:
     nguon:
       - abc
     ket_qua: da-sua
-    ghi_chu: "Đã kiểm trong hồ sơ so-sanh-thoi-ky (b1a…m2c): có 6 chỗ phải sửa trong nhan-dien.js (baroque-1, classical-1 hai chỗ, romantic-2, impressionist-1, modern-1, modern-2). Hồ sơ này không lặp lại; xem ghi_chu của so-sanh-thoi-ky. Không sửa file .js."
+    ghi_chu: "Đã kiểm trong hồ sơ so-sanh-thoi-ky (b1a…m2c): có 6 chỗ phải sửa trong nhan-dien.js (baroque-1, classical-1 hai chỗ, romantic-2, impressionist-1, modern-1, modern-2). Hồ sơ này không lặp lại; xem ghi_chu của so-sanh-thoi-ky. Không sửa file .js. Review D5-gom: các chỗ sửa lượt 1 đề nghị đã có trong nhan-dien.js; review sửa thêm romantic-1 và modern-1 (dòng Dấu hiệu), ghi ở so-sanh-thoi-ky.yml n63, n78; mọi đoạn đã kiểm bằng nhạc lý trên mã thật (so-sanh-thoi-ky.yml n45–n82). node --test tests/nhan-dien.test.mjs đạt."
     luot_2: khong-chac
     luot_2_ghi_chu: Mô tả hành vi/nội dung ứng dụng (không phải nhạc lý); không kiểm được bằng nguồn ngoài.
 khuong_nhac: []
-ghi_chu: 'Trang gồm hai công cụ; chữ trong công cụ đã đọc: nhan-dien.js (CHU_ND, VI_DU) và luyen-tai.js (FJ, KET_CAU, notKetCau, texture-trainer). Bốn kết cấu khớp bài 28 đã khóa. Lệch cần người giao quyết: tên "Frère Jacques" (n11). Chỗ phải sửa trong nhan-dien.js đã ghi ở kiem-dinh/nhan-dien/so-sanh-thoi-ky.yml (ghi_chu cấp hồ sơ và nhận định b1a…m2c). Không có chỗ phải sửa trong luyen-tai.js. Câu ve-site n4 trỏ trang chưa chuyển (luyen-tap/nhat-ky). Thuật ngữ chưa có hồ sơ: đơn âm, chủ điệu, phức điệu, dị âm đã có ở bài 28; luyến láy chưa có.'
+ghi_chu: 'Trang gồm hai công cụ; chữ trong công cụ đã đọc: nhan-dien.js (CHU_ND, VI_DU) và luyen-tai.js (FJ, KET_CAU, notKetCau, texture-trainer). Bốn kết cấu khớp bài 28 đã khóa. Lệch cần người giao quyết: tên "Frère Jacques" (n11). Chỗ phải sửa trong nhan-dien.js đã ghi ở kiem-dinh/nhan-dien/so-sanh-thoi-ky.yml (ghi_chu cấp hồ sơ và nhận định b1a…m2c). Không có chỗ phải sửa trong luyen-tai.js. Câu ve-site n4 trỏ trang chưa chuyển (luyen-tap/nhat-ky). Thuật ngữ chưa có hồ sơ: đơn âm, chủ điệu, phức điệu, dị âm đã có ở bài 28; luyến láy chưa có. Review D5-gom (nhóm D, 29/10/2026): tên Frère Jacques giữ (n11, Britannica và Carleton); soát nhãn đổi n2, n3, n12 thành ve-site.'
 doi_chu:
   - cu: Hai công cụ luyện tai cho kỹ năng nhận diện (công cụ nhận biết kết nằm ở bài Nghe tiến trình hòa âm). Tất cả phát bằng âm thanh tổng hợp trong trình duyệt; mỗi câu đều có đáp án và giải thích. Kết quả được tính vào nhật ký luyện tập.
     moi: Hai công cụ luyện tai cho kỹ năng nhận diện (công cụ nhận biết kết nằm ở bài Nghe tiến trình hòa âm). Tất cả phát bằng âm thanh tổng hợp trong trình duyệt; mỗi câu đều có đáp án; ở phần đoán phong cách, mỗi đoạn còn kèm các dấu hiệu. Kết quả được tính vào nhật ký luyện tập.

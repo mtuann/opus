@@ -10,7 +10,7 @@ lan:
     nguoi:
       luot_1: Claude Sonnet 5.5 (D5-L2 lượt 1, phần C)
       luot_2: null
-      review: null
+      review: Claude (review D5-gom, nhóm C, 29/10/2026)
       kiem_mau: null
 nguon:
   - id: omt-rondo
@@ -81,10 +81,12 @@ nhan_dinh:
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/rondo/", "https://www.britannica.com/art/rondo" ]
   - id: n3
     cau: Đoạn A quay về giống như điệp khúc của một bài hát, nên tai dễ nhận ra.
-    loai: khuyen-tap
+    loai: dinh-nghia
     ket_qua: da-sua
-    ghi_chu: 'Cũ: "…nên rondo dễ nghe và thường vui tươi." Bỏ "thường vui tươi": tính cách không nguồn nào (OMT, COD, Britannica) nói. Giữ phép so sánh với điệp khúc, là câu giúp nghe, không phải nhận định về nhạc.'
+    ghi_chu: 'Cũ: "…nên rondo dễ nghe và thường vui tươi." Bỏ "thường vui tươi": tính cách không nguồn nào (OMT, COD, Britannica) nói. Giữ phép so sánh với điệp khúc, là câu giúp nghe, không phải nhận định về nhạc. Review D5-gom (soát nhãn): câu so đoạn A với điệp khúc là điều kiểm được, không phải lời khuyên tập: đổi khuyen-tap thành dinh-nghia. OMT (Rondo): "it is tradition to call the repeating main section the refrain (or A)"; "The refrain material is essentially the same throughout". Đúng. Lượt 2 đã cho dung.'
     luot_2: dung
+    nguon:
+      - omt-rondo
   - id: n4
     cau: Rondo hay dùng cho chương cuối của sonata, concerto và giao hưởng thời Cổ điển.
     loai: lich-su
@@ -150,9 +152,12 @@ nhan_dinh:
     cau: Bản nhạc ngắn nhưng có đủ hình thức rondo năm đoạn.
     loai: so-lieu
     ket_qua: da-sua
-    ghi_chu: 'Cũ: "Bản nhạc ngắn (khoảng 3 phút) nhưng có đầy đủ hình thức rondo." Bỏ "(khoảng 3 phút)": không nguồn bậc 1–2 ghi thời lượng. Vế rondo năm đoạn: xem n11.'
+    ghi_chu: 'Cũ: "Bản nhạc ngắn (khoảng 3 phút) nhưng có đầy đủ hình thức rondo." Bỏ "(khoảng 3 phút)": không nguồn bậc 1–2 ghi thời lượng. Vế rondo năm đoạn: xem n11. Review D5-gom: thêm nguồn: Mutopia (bản nhạc, nhịp 3/8, A–B–A–C–A, xem n11, n15) và OMT (rondo năm đoạn ABACA). Đúng.'
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly", "https://viva.pressbooks.pub/openmusictheory/chapter/rondo/" ]
+    nguon:
+      - mut-fe
+      - omt-rondo
   - id: n11
     cau: Für Elise có đủ hình thức rondo A – B – A – C – A.
     loai: cau-truc
@@ -198,25 +203,24 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
   - id: n15
-    cau: Đoạn C ở La thứ, trên âm nền La ở bè trầm; đoạn không rời giọng chính.
+    cau: Đoạn C ở La thứ, trên âm nền La ở bè trầm.
     loai: cau-truc
     nguon:
       - wiki-fe
       - ldn-fe
       - mut-fe
     ket_qua: da-sua
-    ghi_chu: 'Bản nhạc: IMSLP (PDF) chặn bot nên chưa đối chiếu từng nốt; Mutopia (.ly) chỉ đọc qua công cụ tóm tắt; hai nguồn bậc 3 cùng khớp. Review nên mở bản nhạc. Cũ: "Rê thứ, trên âm nền La ở bè trầm". Wikipedia: C (từ ô 59) "does not leave the tonic", "unfolding over a tonic pedal"; trang phân tích: "Back in A minor but turbulent". Không nguồn nào nói giọng Rê thứ, nên sửa thành La thứ.'
+    ghi_chu: 'Bản nhạc: IMSLP (PDF) chặn bot nên chưa đối chiếu từng nốt; Mutopia (.ly) chỉ đọc qua công cụ tóm tắt; hai nguồn bậc 3 cùng khớp. Review nên mở bản nhạc. Cũ: "Rê thứ, trên âm nền La ở bè trầm". Wikipedia: C (từ ô 59) "does not leave the tonic", "unfolding over a tonic pedal"; trang phân tích: "Back in A minor but turbulent". Không nguồn nào nói giọng Rê thứ, nên sửa thành La thứ. Review D5-gom: lượt 2 đúng ở chỗ hòa âm không đứng yên ở La thứ. Mã LilyPond Mutopia: đoạn C, bè trầm a,16 lặp (khoảng năm ô), rồi <d, a,>, <dis, a,>, <e, a,>, <e, gis,>, <a,, a,>, lại a,16 lặp, rồi bes,16 lặp ba ô; bè trên <e'' g'' bes'' cis''''>4. <f'' a'' d''''>4 … <gis'' d'''' f''''> … <a'' c'''' e''''>4. …, lần hai … <g'' ees''''> <d'' f'' bes''> <d'' f'' gis''> <c'' e'' a''>: hòa âm qua Rê thứ, Si♭ rồi về La thứ. Hóa biểu La thứ, nhịp 3/8 không đổi. Bỏ vế "đoạn không rời giọng chính" (diễn giải, nguồn bậc 3); chữ trang của vế ấy thay bằng mô tả hòa âm ở n16. Ô Giọng ("La thứ, trên âm nền La ở bè trầm") giữ.'
     luot_2: khong-chac
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
     luot_2_ghi_chu: Khóa nhạc giữ La thứ không đổi, bè trầm giữ nốt La. Nhưng hòa âm lướt qua Rê thứ, Si♭, Si rồi Mi; 'không rời giọng chính' là cách diễn giải, nguồn tôi mở được không đưa phân tích giọng.
   - id: n16
-    cau: Ở đoạn C, nốt La lặp lại dồn dập ở tay trái.
+    cau: Ở đoạn C, nốt La lặp lại dồn dập ở tay trái (móc kép); hòa âm bên trên đi qua Rê thứ, về sau bè trầm rời La (sang Si♭) rồi nhạc dẫn về A.
     loai: cau-truc
     nguon:
       - mut-fe
-      - wiki-fe
-    ket_qua: null
-    ghi_chu: "chưa chắc: Wikipedia nói âm nền chủ (tonic pedal) nhưng không nói nốt lặp ở tay trái; Mutopia (.ly, qua công cụ tóm tắt) có mẫu a, 16 a, a, … ở bè trầm nhưng không xác định được ô; trang phân tích nói tay trái là móc kép liên tục với bước nhảy quãng tám. Cần mở bản nhạc."
+    ket_qua: da-sua
+    ghi_chu: "chưa chắc: Wikipedia nói âm nền chủ (tonic pedal) nhưng không nói nốt lặp ở tay trái; Mutopia (.ly, qua công cụ tóm tắt) có mẫu a, 16 a, a, … ở bè trầm nhưng không xác định được ô; trang phân tích nói tay trái là móc kép liên tục với bước nhảy quãng tám. Cần mở bản nhạc. Review D5-gom: mã LilyPond Mutopia (xem n15): bè trầm a,16 a, a, … (móc kép lặp) đầu đoạn C, rồi bes,16 lặp. Chữ cũ: \"Nốt La lặp lại dồn dập ở tay trái; đoạn không rời giọng chính\"; chữ mới: \"Nốt La lặp lại dồn dập ở tay trái (móc kép); hòa âm bên trên đi qua Rê thứ, về sau bè trầm rời La (sang Si♭) rồi nhạc dẫn về A\"."
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
     luot_2_ghi_chu: Bè trầm lặp a, nốt móc kép.
@@ -224,7 +228,7 @@ nhan_dinh:
     cau: 'Cũ: "căng thẳng, kịch tính nhất bài" (đoạn C).'
     loai: cau-truc
     ket_qua: da-bo
-    ghi_chu: 'Bỏ: là nhận xét, không nguồn nào (Wikipedia gọi C là "coda-like"). Thay bằng "đoạn không rời giọng chính" (n15).'
+    ghi_chu: 'Bỏ: là nhận xét, không nguồn nào (Wikipedia gọi C là "coda-like"). Thay bằng "đoạn không rời giọng chính" (n15). Review D5-gom: đã xem trang: không còn "căng thẳng, kịch tính".'
     luot_2: khong-chac
     luot_2_ghi_chu: Câu trích từ chữ cũ của trang, mang tính cảm nhận, không có nguồn xác nhận được.
   - id: n18
@@ -250,7 +254,8 @@ nhan_dinh:
     cau: Trang bài học Für Elise (link /opus/piano/tac-pham/fur-elise/).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: "Đã kiểm: src/content/docs/piano/tac-pham/fur-elise.md tồn tại (đợt 4), cũng nói chủ đề quay lại ba lần xen hai đoạn tương phản, khớp trang này."
+    ghi_chu: "Đã kiểm: src/content/docs/piano/tac-pham/fur-elise.md tồn tại (đợt 4), cũng nói chủ đề quay lại ba lần xen hai đoạn tương phản, khớp trang này. Review: đã kiểm src/content/docs/piano/tac-pham/fur-elise.md có."
+    review: dung
   - id: n21
     cau: Mozart, chương 3 Sonata piano K. 331, Rondo alla Turca.
     loai: ten
@@ -293,7 +298,8 @@ nhan_dinh:
     cau: Link bài nghe Vivaldi Mùa xuân (/opus/nghe-nhac/vivaldi-mua-xuan/).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: "Trang đích chưa chuyển. Đã kiểm ../opus-zero/docs/nghe-nhac/vivaldi-mua-xuan.md có tồn tại, chương 1 viết theo hình thức ritornello (dòng 16, 34–36). Điều cần giữ: bài nghe về ritornello của Vivaldi."
+    ghi_chu: "Trang đích chưa chuyển. Đã kiểm ../opus-zero/docs/nghe-nhac/vivaldi-mua-xuan.md có tồn tại, chương 1 viết theo hình thức ritornello (dòng 16, 34–36). Điều cần giữ: bài nghe về ritornello của Vivaldi. Review: đã kiểm ~/w/opus-zero/docs/nghe-nhac/vivaldi-mua-xuan.md có (ritornello); trang đích chưa chuyển."
+    review: dung
   - id: n26
     cau: Hình thức ritornello của concerto Baroque cũng dựa trên ý tưởng "một đoạn quay lại nhiều lần" (ritornello xen với các đoạn độc tấu).
     loai: cau-truc
@@ -307,7 +313,8 @@ nhan_dinh:
     cau: Link Concerto và ritornello (/opus/hinh-thuc/concerto/).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Đã kiểm: src/content/docs/hinh-thuc/concerto.md tồn tại, tiêu đề "Concerto và ritornello", có mục "Concerto thời Baroque: hình thức ritornello".'
+    ghi_chu: 'Đã kiểm: src/content/docs/hinh-thuc/concerto.md tồn tại, tiêu đề "Concerto và ritornello", có mục "Concerto thời Baroque: hình thức ritornello". Review: đã kiểm src/content/docs/hinh-thuc/concerto.md (title "Concerto và ritornello").'
+    review: dung
   - id: n28
     cau: "Câu hỏi 1: sơ đồ của rondo năm đoạn là A – B – A – C – A (không phải A – B – A hay A – A' – A'' – A'''); giải thích: A – B – A là ba đoạn, A – A' – A'' là biến tấu."
     loai: cau-truc
@@ -345,7 +352,8 @@ nhan_dinh:
     cau: "Mục Nguồn: dẫn chương Rondo của Open Music Theory, COD và Britannica (Rondo), IMSLP và Mutopia (Für Elise), link tới tài liệu tham khảo."
     loai: ve-site
     ket_qua: dung
-    ghi_chu: "Đã mở các trang ấy ngày 29/10/2026 và kiểm chữ mô tả khớp (n1, n2, n4, n8, n9). Link /opus/tai-lieu-tham-khao/: trang chưa chuyển, ../opus-zero/docs/tai-lieu-tham-khao.md có tồn tại."
+    ghi_chu: "Đã mở các trang ấy ngày 29/10/2026 và kiểm chữ mô tả khớp (n1, n2, n4, n8, n9). Link /opus/tai-lieu-tham-khao/: trang chưa chuyển, ../opus-zero/docs/tai-lieu-tham-khao.md có tồn tại. Review: đã kiểm mục Nguồn trên trang (OMT Rondo, COD và Britannica Rondo, IMSLP và Mutopia Für Elise); /opus/tai-lieu-tham-khao/ nay có ở src/content/docs/tai-lieu-tham-khao.md."
+    review: dung
 khuong_nhac: []
 doi_chu:
   - cu:
@@ -366,8 +374,8 @@ doi_chu:
       - Nốt La lặp lại dồn dập ở tay trái; căng thẳng, kịch tính nhất bài
     moi:
       - La thứ, trên âm nền La ở bè trầm
-      - Nốt La lặp lại dồn dập ở tay trái; đoạn không rời giọng chính
-    ly_do: 'n15, n16, n17, n18 (da-sua, da-bo): C ở La thứ, không phải Rê thứ (Wikipedia, trang phân tích; không nguồn nào nói Rê thứ); bỏ "căng thẳng, kịch tính nhất bài" và "kết thúc nhẹ nhàng" (không nguồn).'
+      - Nốt La lặp lại dồn dập ở tay trái (móc kép); hòa âm bên trên đi qua Rê thứ, về sau bè trầm rời La (sang Si♭) rồi nhạc dẫn về A
+    ly_do: 'n15, n16, n17, n18 (da-sua, da-bo): C ở La thứ, không phải Rê thứ (Wikipedia, trang phân tích; không nguồn nào nói Rê thứ); bỏ "căng thẳng, kịch tính nhất bài" và "kết thúc nhẹ nhàng" (không nguồn).; n15, n16 (da-sua, review D5-gom): theo bản nhạc (Mutopia), hòa âm đoạn C qua Rê thứ, Si♭; bỏ "đoạn không rời giọng chính".'
   - cu:
       - Trở lại lần cuối, kết thúc nhẹ nhàng
       - 'Cách nghe: mỗi khi giai điệu "Mi – Rê♯" quay lại, giơ một ngón tay. Bạn sẽ đếm được ba lần A.'
