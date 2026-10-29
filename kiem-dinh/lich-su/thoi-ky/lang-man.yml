@@ -1,0 +1,511 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa lich-su/thoi-ky/lang-man
+trang: src/content/docs/lich-su/thoi-ky/lang-man.md
+nguon_cu: ../opus-zero/docs/lich-su/thoi-ky/lang-man.md
+tang: loi
+lan:
+  - so: 1
+    ngay: 2026-10-28
+    nhanh: moi/d5-l1
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D5-L1 lượt 1, phần C)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Trang thời kỳ Lãng mạn (tầng lõi), 1 khối abc soạn riêng. Nguồn: Jones (LibreTexts), Kuznetsova, COD qua Encyclopedia.com, Yamaha, Met, OMT, IMSLP; WebFetch ngày 28/10/2026. Britannica không mở được. Chưa chắc: rubato như đặc trưng Lãng mạn (n15), Tchaikovsky trong nhóm bản sắc dân tộc Nga (n19), tên sách đọc thêm (n40). Thuật ngữ trang dùng nhưng chưa có hồ sơ thuật ngữ: virtuoso (nghệ sĩ bậc thầy), âm nhạc chương trình, thơ giao hưởng, rubato, hợp âm mượn, hợp âm bảy giảm, hợp âm nửa cung (chromatic), Lied. Năm sinh–mất nhà soạn nhạc: trang không nêu. Yêu cầu từ lô trước (grep "lich-su/thoi-ky" trong kiem-dinh/): lo-trinh-nghe (mục "10 tác phẩm để nghe" ở sáu trang) được giữ; không có yêu cầu riêng với lang-man.'
+nguon:
+  - id: j-rom
+    bac: 2
+    ten: Jones, Music Appreciation I, 6.13 Romantic Music (LibreTexts)
+    link: https://human.libretexts.org/Bookshelves/Music/Music_Appreciation/Music_Appreciation_I_%28Jones%29/06%3A_Early_Romantic_Era/6.13%3A_Romantic_Music
+  - id: j-piano
+    bac: 2
+    ten: Jones, Music Appreciation I, 6.03 The Piano (LibreTexts)
+    link: https://human.libretexts.org/Bookshelves/Music/Music_Appreciation/Music_Appreciation_I_%28Jones%29/06%3A_Early_Romantic_Era/6.03%3A_The_Piano
+  - id: j-prog
+    bac: 2
+    ten: Jones, Music Appreciation I, 6.06 Program Music and the Program Symphony (LibreTexts)
+    link: https://human.libretexts.org/Bookshelves/Music/Music_Appreciation/Music_Appreciation_I_%28Jones%29/06%3A_Early_Romantic_Era/6.06%3A_Program_Music_and_the_Program_Symphony
+  - id: j-nat
+    bac: 2
+    ten: Jones, Music Appreciation I, 8.10 Nationalism (LibreTexts)
+    link: https://human.libretexts.org/Bookshelves/Music/Music_Appreciation/Music_Appreciation_I_%28Jones%29/08%3A_Late_Romantic_Era/8.10%3A_Nationalism
+  - id: j-dvo
+    bac: 2
+    ten: Jones, Music Appreciation I, 8.11 Antonin Dvorak (LibreTexts)
+    link: https://human.libretexts.org/Bookshelves/Music/Music_Appreciation/Music_Appreciation_I_%28Jones%29/08%3A_Late_Romantic_Era/8.11%3A_Antonin_Dvorak
+  - id: j-mah8
+    bac: 2
+    ten: Jones, Music Appreciation I, 8.04 Symphony No. 8 (Mahler) (LibreTexts)
+    link: https://human.libretexts.org/Bookshelves/Music/Music_Appreciation/Music_Appreciation_I_%28Jones%29/08%3A_Late_Romantic_Era/8.04%3A_Symphony_No._8_Symphony_of_a_Thousand
+  - id: j-boh
+    bac: 2
+    ten: Jones, Music Appreciation I, 7.05 La Boheme (LibreTexts)
+    link: https://human.libretexts.org/Bookshelves/Music/Music_Appreciation/Music_Appreciation_I_%28Jones%29/07%3A_Romantic_Opera/7.05%3A_La_Boheme
+  - id: kuz-bee
+    bac: 2
+    ten: Kuznetsova, Music Appreciation II, 15.05 Ludwig van Beethoven (LibreTexts)
+    link: https://human.libretexts.org/Bookshelves/Music/Music_Appreciation/Music_Appreciation_II_%28Kuznetsova%29/15%3A_Classical_Instrumental_and_Chamber_Music_L._Beethoven/15.05%3A_Ludwig_van_Beethoven
+  - id: c-rom
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục Romantic(ism), qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/romanticism
+  - id: c-chr
+    bac: 2
+    ten: COD, mục Chromaticism, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/chromaticism
+  - id: c-rub
+    bac: 2
+    ten: COD, mục Rubato, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/rubato
+  - id: c-orc
+    bac: 2
+    ten: COD, mục Orchestra, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/orchestra
+  - id: c-val
+    bac: 2
+    ten: COD, mục Valve, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/valve
+  - id: c-tuba
+    bac: 2
+    ten: COD, mục Tuba, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/tuba
+  - id: c-cor
+    bac: 2
+    ten: COD, mục Cor anglais, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/cor-anglais
+  - id: c-pno
+    bac: 2
+    ten: COD, mục Piano, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/piano
+  - id: c-pag
+    bac: 2
+    ten: COD, mục Paganini, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/paganini-niccolo
+  - id: c-sp
+    bac: 2
+    ten: COD, mục Symphonic poem, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/symphonic-poem
+  - id: c-grieg
+    bac: 2
+    ten: COD, mục Grieg, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/grieg-edvard-hagerup
+  - id: c-five
+    bac: 2
+    ten: COD, mục The Five, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/literature-and-arts/performing-arts/music-history/five
+  - id: c-prog
+    bac: 2
+    ten: COD, mục Program Music, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/literature-and-arts/performing-arts/music-theory-forms-and-instruments/program-music
+  - id: c-liszt
+    bac: 2
+    ten: COD, mục Franz Liszt, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/people/literature-and-arts/music-history-composers-and-performers-biographies/franz-liszt
+  - id: c-nat
+    bac: 2
+    ten: Nationalism in the Arts, Encyclopedia.com
+    link: https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/nationalism-arts
+  - id: yam
+    bac: 2
+    ten: Yamaha, The origins of the piano
+    link: https://www.yamaha.com/en/musical_instrument_guide/piano/structure/structure003.html
+  - id: met
+    bac: 2
+    ten: Bảo tàng Metropolitan, Upright Piano
+    link: https://metmuseum.org/art/collection/search/504496
+  - id: omt-mm
+    bac: 2
+    ten: Open Music Theory, Modal Mixture
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/modal-mixture/
+  - id: i-berl
+    bac: 2
+    ten: IMSLP, Symphonie fantastique, H 48, Berlioz
+    link: https://imslp.org/wiki/Symphonie_fantastique,_H_48_(Berlioz,_Hector)
+  - id: i-erl
+    bac: 2
+    ten: IMSLP, Erlkönig, D.328, Schubert
+    link: https://imslp.org/wiki/Erlk%C3%B6nig,_D.328_(Schubert,_Franz)
+  - id: i-d667
+    bac: 2
+    ten: IMSLP, Piano Quintet D.667, Schubert
+    link: https://imslp.org/wiki/Piano_Quintet_in_A_major,_D.667_(Schubert,_Franz)
+  - id: i-noc
+    bac: 2
+    ten: IMSLP, Nocturnes Op.9, Chopin
+    link: https://imslp.org/wiki/Nocturnes,_Op.9_(Chopin,_Fr%C3%A9d%C3%A9ric)
+  - id: i-men
+    bac: 2
+    ten: IMSLP, Violin Concerto Op.64, Mendelssohn
+    link: https://imslp.org/wiki/Violin_Concerto_in_E_minor,_Op.64_(Mendelssohn,_Felix)
+  - id: i-trav
+    bac: 2
+    ten: IMSLP, La traviata, Verdi
+    link: https://imslp.org/wiki/La_traviata_(Verdi,_Giuseppe)
+  - id: i-tri
+    bac: 2
+    ten: IMSLP, Tristan und Isolde, WWV 90, Wagner
+    link: https://imslp.org/wiki/Tristan_und_Isolde,_WWV_90_(Wagner,_Richard)
+  - id: i-br4
+    bac: 2
+    ten: IMSLP, Symphony No.4, Op.98, Brahms
+    link: https://imslp.org/wiki/Symphony_No.4,_Op.98_(Brahms,_Johannes)
+  - id: i-swan
+    bac: 2
+    ten: IMSLP, Swan Lake, Op.20, Tchaikovsky
+    link: https://imslp.org/wiki/Swan_Lake,_Op.20_(Tchaikovsky,_Pyotr_Ilyich)
+  - id: i-dv9
+    bac: 2
+    ten: IMSLP, Symphony No.9, Op.95, Dvořák
+    link: https://imslp.org/wiki/Symphony_No.9,_Op.95_(Dvo%C5%99%C3%A1k,_Anton%C3%ADn)
+nhan_dinh:
+  - id: n1
+    cau: Thời Lãng mạn khoảng 1820–1900 (tiêu đề).
+    loai: nam
+    nguon:
+      - c-rom
+      - j-rom
+      - kuz-bee
+    ket_qua: dung
+    ghi_chu: 'Mốc là quy ước của site (đã nói ở mục Nguồn): COD dùng "Romantic" cho nhạc khoảng 1830–1900; Jones/Kuznetsova đặt ranh giới quanh 1815 (Beethoven giai đoạn cuối). Mốc 1900 khá chặt: Mahler 8 (1906–07) và Puccini (mất 1924) vẫn được liệt vào Lãng mạn muộn, trùng với nha-soan-nhac.yml (cả hai thoi_ky = Lãng mạn). Không mâu thuẫn trang khóa piano/the-loai, nơi Lãng mạn chỉ là nhãn thời kỳ, không nêu mốc.'
+  - id: n2
+    cau: "Mô tả (description): từ đầu thế kỷ 19, âm nhạc nhấn vào cảm xúc cá nhân, thiên nhiên, cái huyền bí siêu nhiên, chủ nghĩa dân tộc; piano mạnh hơn, dàn nhạc phình to, nghệ sĩ bậc thầy."
+    loai: lich-su
+    nguon:
+      - j-rom
+      - j-nat
+      - c-rom
+    ket_qua: da-sua
+    ghi_chu: Mô tả viết lại cho khớp mục Bối cảnh và Nhạc cụ. Bản cũ mở bằng "Sau Cách mạng Pháp và các cuộc chiến Napoleon... truyện cổ tích" không có nguồn đã mở.
+  - id: n3
+    cau: Từ đầu thế kỷ 19, âm nhạc nhấn vào cảm xúc cá nhân, thiên nhiên, cái huyền bí siêu nhiên và chủ nghĩa dân tộc.
+    loai: lich-su
+    nguon:
+      - j-rom
+      - j-nat
+      - c-nat
+    ket_qua: da-sua
+    ghi_chu: 'Bản cũ gắn với "Cách mạng Pháp và chiến tranh Napoleon" và "truyện cổ tích": không tìm được trong nguồn mở nên bỏ.'
+  - id: n4
+    cau: Âm nhạc được xem là nghệ thuật thích hợp nhất để biểu đạt cảm xúc; nhạc sĩ muốn bày tỏ thế giới nội tâm của mình.
+    loai: lich-su
+    nguon:
+      - j-rom
+      - c-rom
+    ket_qua: da-sua
+    ghi_chu: 'Bản cũ: "Nhạc sĩ được coi là thiên tài, nghệ sĩ tự do bày tỏ thế giới nội tâm"; "thiên tài" không có nguồn nên bỏ.'
+  - id: n5
+    cau: Công nghiệp hóa giúp chế tạo piano mạnh hơn và hàng loạt hơn, đưa đàn vào nhiều gia đình trung lưu.
+    loai: lich-su
+    nguon:
+      - yam
+      - met
+      - j-piano
+    ket_qua: da-sua
+    ghi_chu: 'Yamaha: sản xuất piano hàng loạt ở thế kỷ 19; Met: piano là vật mong ước của gia đình trung lưu Mỹ thế kỷ 19. Bản cũ nói "làm piano phổ biến".'
+  - id: n6
+    cau: Nhạc sĩ viết nhiều cho hòa nhạc công cộng và liên hoan.
+    loai: lich-su
+    nguon:
+      - j-rom
+      - c-orc
+    ket_qua: da-sua
+    ghi_chu: 'Bản cũ: "nhà hát lớn và phòng hòa nhạc mọc lên ở mọi thành phố"; câu ấy quá rộng, thay bằng ý nguồn có.'
+  - id: n7
+    cau: Thời của những nghệ sĩ bậc thầy (virtuoso) như Paganini và Liszt, được hâm mộ như ngôi sao.
+    loai: lich-su
+    nguon:
+      - c-pag
+      - c-liszt
+      - j-rom
+    ket_qua: dung
+  - id: n8
+    cau: Beethoven giai đoạn cuối (Giao hưởng số 9, các tứ tấu cuối) là cây cầu dẫn vào thời kỳ này.
+    loai: lich-su
+    nguon:
+      - kuz-bee
+    ket_qua: dung
+    ghi_chu: "Kuznetsova: giai đoạn cuối từ khoảng 1815, cầu nối sang Lãng mạn."
+  - id: n9
+    cau: "Cảm xúc đặt lên hàng đầu: biểu cảm quan trọng hơn khuôn khổ hình thức."
+    loai: lich-su
+    nguon:
+      - j-rom
+      - c-rom
+    ket_qua: dung
+  - id: n10
+    cau: Giai điệu dài, hát, đầy cảm xúc (đặc trưng cũ).
+    loai: lich-su
+    ket_qua: da-bo
+    ghi_chu: Bản cũ có dòng này; không có nguồn mở nói thế là đặc trưng riêng của Lãng mạn (giai điệu hát cũng có ở Cổ điển, Baroque). Đã thay bằng n9.
+  - id: n11
+    cau: "Hòa âm giàu màu sắc: dùng nhiều hợp âm nửa cung (chromatic) để biểu đạt cảm xúc."
+    loai: lich-su
+    nguon:
+      - c-chr
+      - j-rom
+    ket_qua: da-sua
+    ghi_chu: Bản cũ thêm "chuyển giọng xa và bất ngờ"; không có nguồn nên bỏ.
+  - id: n12
+    cau: "Ví dụ về hòa âm nửa cung: Tristan und Isolde của Wagner."
+    loai: lich-su
+    nguon:
+      - c-chr
+      - i-tri
+    ket_qua: dung
+  - id: n13
+    cau: Link [bài 19](/opus/nhac-ly/19-at-phu-chuyen-giong/) về hợp âm át phụ và chuyển giọng.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: src/content/docs/nhac-ly/19-at-phu-chuyen-giong.md tồn tại, bài đã chuyển và nói về át phụ và chuyển giọng.
+  - id: n14
+    cau: Rubato nghĩa là co giãn tốc độ để diễn cảm.
+    loai: dinh-nghia
+    nguon:
+      - c-rub
+    ket_qua: dung
+  - id: n15
+    cau: Diễn tấu tự do bằng rubato là một đặc trưng của lối chơi Lãng mạn.
+    loai: lich-su
+    nguon:
+      - c-rub
+    ket_qua: null
+    ghi_chu: 'chưa chắc: nguồn đã mở chỉ định nghĩa rubato, không khẳng định nó là đặc trưng của riêng Lãng mạn. Bản cũ gọi rubato là "linh hồn của lối chơi Lãng mạn" (đã bỏ); mục "Cách nghe" hạ thành "Đó có thể là rubato". Người giao quyết định giữ hay bỏ dòng này.'
+  - id: n16
+    cau: "Quy mô co giãn: từ tiểu phẩm một chương cho piano và ca khúc đến tác phẩm cỡ lớn (Giao hưởng số 8 của Mahler, opera của Wagner)."
+    loai: lich-su
+    nguon:
+      - j-mah8
+      - j-rom
+      - c-orc
+    ket_qua: da-sua
+    ghi_chu: 'Bản cũ: "dải âm lượng và tốc độ cực rộng" (không có nguồn, bỏ) và "giao hưởng Mahler". Mahler 8 viết 1906–07, ngoài mốc 1900: Jones xếp vào Lãng mạn muộn.'
+  - id: n17
+    cau: "Âm nhạc chương trình: kể chuyện hoặc vẽ cảnh theo một nội dung ngoài âm nhạc (Berlioz, Giao hưởng kỳ ảo; thơ giao hưởng của Liszt)."
+    loai: dinh-nghia
+    nguon:
+      - c-prog
+      - j-prog
+      - c-sp
+      - i-berl
+    ket_qua: dung
+  - id: n18
+    cau: "Bản sắc dân tộc: dân ca, điệu nhảy dân gian hay nét nhạc dân tộc của Ba Lan (Chopin), Séc (Dvořák, Smetana), Na Uy (Grieg), Nga (Nhóm Năm người)."
+    loai: lich-su
+    nguon:
+      - j-nat
+      - j-dvo
+      - c-grieg
+      - c-five
+      - c-nat
+    ket_qua: dung
+    ghi_chu: Jones 8.10 nêu Chopin với Ba Lan và định nghĩa nhạc dân tộc là dùng dân ca, điệu nhảy dân gian; Dvořák ở 8.11, Grieg và Nhóm Năm ở COD.
+  - id: n19
+    cau: Tchaikovsky thuộc nhóm nhạc sĩ mang bản sắc dân tộc Nga.
+    loai: lich-su
+    nguon:
+      - j-nat
+      - c-five
+    ket_qua: null
+    ghi_chu: 'chưa chắc: Jones 8.10 không nêu tên Tchaikovsky; COD nói về Nhóm Năm chứ không về Tchaikovsky. Không mở được mục Tchaikovsky của COD. Câu trang giữ "Nga (Nhóm Năm người, Tchaikovsky)"; người giao quyết định bỏ tên Tchaikovsky khỏi dòng này hay thêm nguồn.'
+  - id: n20
+    cau: "Đoạn ví dụ do site viết: tay trái rải rộng, hợp âm bảy giảm, hợp âm mượn, chậm dần trước kết."
+    loai: cau-truc
+    nguon:
+      - omt-mm
+      - c-chr
+    ket_qua: dung
+    ghi_chu: 'Đối chiếu khối abc (xem khuong_nhac): tay trái rải 6 nốt móc trải hơn một quãng tám; ô 2 là Do♯ bảy giảm (vii°7/ii); ô 6 là Fa thứ (iv) mượn từ giọng thứ song song, nốt La♭; "rit." ở ô 7. Ghi chú: giọng K:C nhưng đoạn bắt đầu và kết ở La thứ (vi), nên "hợp âm mượn" hiểu theo Đô.'
+  - id: n21
+    cau: Link [So sánh các thời kỳ](/opus/nhan-dien/so-sanh-thoi-ky/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Trang đích chưa chuyển; ../opus-zero/docs/nhan-dien/so-sanh-thoi-ky.md có tồn tại.
+  - id: n22
+    cau: Piano có khung gang, âm thanh lớn và vang hơn.
+    loai: lich-su
+    nguon:
+      - yam
+      - c-pno
+      - j-piano
+    ket_qua: da-sua
+    ghi_chu: 'Bản cũ: "Piano hiện đại"; bỏ chữ "hiện đại" và hạ thành so sánh "lớn và vang hơn".'
+  - id: n23
+    cau: "Dàn nhạc phình to: kèn đồng có van chơi được đủ các nốt của gam nửa cung."
+    loai: lich-su
+    nguon:
+      - c-val
+      - c-orc
+    ket_qua: da-sua
+    ghi_chu: 'Bản cũ: "chơi được mọi nốt"; sửa cho chính xác.'
+  - id: n24
+    cau: Dàn nhạc thêm tuba, cor anglais, harp, nhiều nhạc cụ gõ.
+    loai: danh-muc
+    nguon:
+      - c-tuba
+      - c-cor
+      - c-orc
+    ket_qua: dung
+  - id: n25
+    cau: Berlioz mở rộng mạnh các bộ kèn gỗ, kèn đồng và nhạc cụ gõ.
+    loai: lich-su
+    nguon:
+      - c-orc
+      - i-berl
+    ket_qua: dung
+    ghi_chu: Thay cho câu cũ "Giao hưởng cuối thế kỷ 19 có thể cần hơn 100 nhạc công" (bỏ vì không nguồn).
+  - id: n26
+    cau: "Thể loại chính: ca khúc nghệ thuật (Lied), tiểu phẩm piano (nocturne, ballade, étude, mazurka, valse), giao hưởng và thơ giao hưởng, concerto, opera (Verdi, Wagner, Puccini), ballet (Tchaikovsky)."
+    loai: danh-muc
+    nguon:
+      - j-rom
+      - c-sp
+      - i-noc
+      - i-trav
+      - i-swan
+      - j-boh
+    ket_qua: da-sua
+    ghi_chu: 'Bản cũ: "concerto của nghệ sĩ bậc thầy"; thu gọn thành "concerto". Puccini dựa trên La Bohème (Jones 7.05).'
+  - id: n27
+    cau: Schubert, Erlkönig.
+    loai: ten
+    nguon:
+      - i-erl
+    ket_qua: dung
+    ghi_chu: Lied D. 328.
+  - id: n28
+    cau: Schubert, Ngũ tấu Con cá hồi.
+    loai: ten
+    nguon:
+      - i-d667
+    ket_qua: dung
+    ghi_chu: D. 667, A major; biệt danh "Con cá hồi" (Forellenquintett) ghi ở IMSLP.
+  - id: n29
+    cau: Berlioz, Giao hưởng kỳ ảo, chương 4 "Hành khúc đến đoạn đầu đài".
+    loai: ten
+    nguon:
+      - i-berl
+    ket_qua: dung
+  - id: n30
+    cau: Chopin, Nocturne Op. 9 số 2.
+    loai: ten
+    nguon:
+      - i-noc
+    ket_qua: dung
+  - id: n31
+    cau: Mendelssohn, Concerto violin cung Mi thứ.
+    loai: ten
+    nguon:
+      - i-men
+    ket_qua: dung
+    ghi_chu: Op. 64.
+  - id: n32
+    cau: Verdi, La traviata, Brindisi.
+    loai: ten
+    nguon:
+      - i-trav
+    ket_qua: dung
+  - id: n33
+    cau: Wagner, Tristan und Isolde, Khúc dạo đầu.
+    loai: ten
+    nguon:
+      - i-tri
+    ket_qua: dung
+  - id: n34
+    cau: Brahms, Giao hưởng số 4, chương 4.
+    loai: ten
+    nguon:
+      - i-br4
+    ket_qua: dung
+    ghi_chu: Chương 4 là Allegro energico e passionato (passacaglia).
+  - id: n35
+    cau: Tchaikovsky, Hồ thiên nga.
+    loai: ten
+    nguon:
+      - i-swan
+    ket_qua: dung
+    ghi_chu: Op. 20.
+  - id: n36
+    cau: Dvořák, Giao hưởng số 9, chương 2.
+    loai: ten
+    nguon:
+      - i-dv9
+    ket_qua: dung
+    ghi_chu: Op. 95 "Từ Thế giới mới"; chương 2 Largo.
+  - id: n37
+    cau: Danh sách "10 tác phẩm để nghe" gồm đủ 10 mục, các link tới nghe-nhac/schubert-erlkonig, schubert-ca-hoi, mendelssohn-violin, brahms-4, tchaikovsky-ho-thien-nga, dvorak-9-largo và piano/tac-pham/chopin-nocturne-op9-2.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Đếm: 10 mục. Cả 7 trang đích chưa chuyển; tất cả có ở ../opus-zero/docs/ (nghe-nhac/*.md và piano/tac-pham/chopin-nocturne-op9-2.md). Yêu cầu của lô trước (lo-trinh-nghe: sáu trang thời kỳ đều có mục "10 tác phẩm để nghe") được giữ. Cả 10 tác phẩm viết trong khoảng 1815–1900 (Erlkönig 1815, Fantastique 1830, Brahms 4 1885, Dvořák 9 1893), khớp mốc.'
+  - id: n38
+    cau: "Cách nghe: để ý những khoảnh khắc nhạc chậm lại hoặc dồn lên mà không có chỉ dẫn trên bản nhạc, đó có thể là rubato; so sánh hai bản thu của cùng một nocturne Chopin."
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên nghe. Bản cũ khẳng định "Đó là rubato, linh hồn của lối chơi Lãng mạn", đã hạ giọng thành "có thể là" (xem n15).
+  - id: n39
+    cau: Link [Cổ điển](/opus/lich-su/thoi-ky/co-dien/) là thời kỳ trước và [Thế kỷ 20](/opus/lich-su/thoi-ky/the-ky-20/) là thời kỳ tiếp theo.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Cả hai trang có trong src/content/docs/lich-su/thoi-ky/ (cùng lô). Đúng thứ tự thời kỳ. Chú ý trang piano/nha-soan-nhac: Lãng mạn kết 1900, Debussy và Ravel xếp Thế kỷ 20, nhất quán."
+  - id: n40
+    cau: "Sách đọc thêm: Burkholder, Grout, Palisca, A History of Western Music; Taruskin, The Oxford History of Western Music."
+    loai: ten
+    ket_qua: null
+    ghi_chu: 'chưa chắc: không mở được sách (không có bản mở); chưa kiểm tên và tác giả trên nguồn mở. Đã bỏ dòng "Grove Music Online; Encyclopaedia Britannica".'
+  - id: n41
+    cau: Link [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Trang đích chưa chuyển; ../opus-zero/docs/tai-lieu-tham-khao.md có tồn tại.
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - giong
+      - not
+      - nhip
+    ket_qua: dung
+    ghi_chu: "Soạn cho trang. K:C, M:3/4, L:1/8, 8 ô, Q:1/4=60. Mỗi ô đủ 6 móc đơn: tay phải e4 c' b = 4+1+1, a6 ở ô cuối = 6; tay trái 6 nốt mỗi ô (ô cuối A,,E,C A,3 = 1+1+1+3). Hòa âm đọc ở Đô: vi (La thứ) | vii°7/ii (Do♯ giảm bảy) | ii (Re thứ) | V7/vi (Mi7) | IV (Fa) | iv (Fa thứ, La♭ mượn từ Đô thứ) | V7/vi | vi. Khớp n20. \"rit.\" ở ô 7."
+doi_chu:
+  - cu: Sau Cách mạng Pháp và các cuộc chiến Napoleon, châu Âu bước vào thời đại của cảm xúc cá nhân, thiên nhiên, truyện cổ tích, cái siêu nhiên và chủ nghĩa dân tộc. Nhạc sĩ được coi là thiên tài, nghệ sĩ tự do bày tỏ thế giới nội tâm. Công nghiệp hóa làm piano trở nên phổ biến trong các gia đình trung lưu; các nhà hát lớn và phòng hòa nhạc mọc lên ở mọi thành phố. Thời của những nghệ sĩ bậc thầy (virtuoso) như Paganini và Liszt, được hâm mộ như ngôi sao.
+    moi: Từ đầu thế kỷ 19, âm nhạc nhấn vào cảm xúc cá nhân, thiên nhiên, cái huyền bí siêu nhiên và chủ nghĩa dân tộc. Âm nhạc được xem là nghệ thuật thích hợp nhất để biểu đạt cảm xúc, và nhạc sĩ muốn bày tỏ thế giới nội tâm của mình. Công nghiệp hóa giúp chế tạo piano mạnh hơn và hàng loạt hơn, đưa đàn vào nhiều gia đình trung lưu; nhạc sĩ viết nhiều cho hòa nhạc công cộng và liên hoan. Thời của những nghệ sĩ bậc thầy (virtuoso) như Paganini và Liszt, được hâm mộ như ngôi sao.
+    ly_do: 'n3 (da-sua): bỏ phần không có nguồn.; n4 (da-sua): "thiên tài" không có nguồn; viết theo Jones.; n5 (da-sua): khớp Yamaha và Met.; n6 (da-sua): câu cũ quá rộng, không có nguồn.'
+  - cu:
+      - Giai điệu dài, hát, đầy cảm xúc.
+      - "Hòa âm giàu màu sắc: nhiều hợp âm nửa cung, chuyển giọng xa và bất ngờ (xem bài 19)."
+      - Dải âm lượng và tốc độ cực rộng; rubato (co giãn tốc độ) để diễn cảm.
+      - "Hình thức co giãn: tác phẩm rất ngắn (tiểu phẩm piano, ca khúc) hoặc rất dài (giao hưởng Mahler, opera Wagner)."
+    moi:
+      - "Cảm xúc đặt lên hàng đầu: biểu cảm quan trọng hơn khuôn khổ hình thức."
+      - "Hòa âm giàu màu sắc: dùng nhiều hợp âm nửa cung (chromatic) để biểu đạt cảm xúc, như trong Tristan und Isolde của Wagner (xem bài 19 về hợp âm át phụ và chuyển giọng)."
+      - "Diễn tấu tự do: rubato (co giãn tốc độ) để diễn cảm."
+      - "Quy mô co giãn: từ tiểu phẩm một chương cho piano và ca khúc đến tác phẩm cỡ lớn (Giao hưởng số 8 của Mahler, opera của Wagner)."
+    ly_do: 'n10 (da-bo): không có nguồn nói đó là đặc trưng riêng của Lãng mạn; thay bằng n9.; n11 (da-sua): bỏ "chuyển giọng xa và bất ngờ" vì không có nguồn.; n15 (null): bỏ "dải âm lượng và tốc độ cực rộng" không nguồn; vế rubato là đặc trưng Lãng mạn còn chưa chắc.; n16 (da-sua): nêu cụ thể Giao hưởng số 8 theo Jones.'
+  - cu: "Bản sắc dân tộc: dân ca và điệu nhảy dân gian của Ba Lan (Chopin), Séc (Dvořák, Smetana), Na Uy (Grieg), Nga (Nhóm Năm người, Tchaikovsky)."
+    moi: "Bản sắc dân tộc: dân ca, điệu nhảy dân gian hay nét nhạc dân tộc của Ba Lan (Chopin), Séc (Dvořák, Smetana), Na Uy (Grieg), Nga (Nhóm Năm người, Tchaikovsky)."
+    ly_do: 'Bản sắc dân tộc (lượt 1 D5-L1): thêm "nét nhạc dân tộc" cho khớp các ví dụ (Jones 8.10).'
+  - cu: "Piano hiện đại với khung gang, âm thanh lớn và vang. Dàn nhạc phình to: kèn đồng có van chơi được mọi nốt, thêm tuba, cor anglais, harp, nhiều nhạc cụ gõ. Giao hưởng cuối thế kỷ 19 có thể cần hơn 100 nhạc công."
+    moi: "Piano với khung gang, âm thanh lớn và vang hơn. Dàn nhạc phình to: kèn đồng có van chơi được đủ các nốt của gam nửa cung, thêm tuba, cor anglais, harp, nhiều nhạc cụ gõ; Berlioz mở rộng mạnh các bộ kèn gỗ, kèn đồng và nhạc cụ gõ."
+    ly_do: 'n22 (da-sua): bỏ "hiện đại", so sánh rõ hơn.; n23 (da-sua): "mọi nốt" thiếu chính xác.; n25 (da-sua): bỏ số liệu "hơn 100 nhạc công" không nguồn.'
+  - cu: Ca khúc nghệ thuật (Lied), tiểu phẩm piano (nocturne, ballade, étude, mazurka, valse), giao hưởng và thơ giao hưởng, concerto của nghệ sĩ bậc thầy, opera (Verdi, Wagner, Puccini), ballet (Tchaikovsky).
+    moi: Ca khúc nghệ thuật (Lied), tiểu phẩm piano (nocturne, ballade, étude, mazurka, valse), giao hưởng và thơ giao hưởng, concerto, opera (Verdi, Wagner, Puccini), ballet (Tchaikovsky).
+    ly_do: "n26 (da-sua): bỏ phần không có nguồn."
+  - cu: "Cách nghe: hãy để ý những khoảnh khắc nhạc chậm lại hoặc dồn lên mà không có chỉ dẫn rõ ràng trên bản nhạc. Đó là rubato, linh hồn của lối chơi Lãng mạn. So sánh hai bản thu của cùng một nocturne Chopin để nghe sự khác biệt."
+    moi: "Cách nghe: hãy để ý những khoảnh khắc nhạc chậm lại hoặc dồn lên mà không có chỉ dẫn rõ ràng trên bản nhạc. Đó có thể là rubato (xem trên). So sánh hai bản thu của cùng một nocturne Chopin để nghe sự khác biệt."
+    ly_do: "n38 (khuyen-tap): hạ giọng, liên quan n15."
+  - cu:
+      - Burkholder, Grout, Palisca, A History of Western Music; Richard Taruskin, The Oxford History of Western Music.
+      - Grove Music Online; Encyclopaedia Britannica. Xem tài liệu tham khảo.
+    moi:
+      - 'Mốc năm là quy ước của site: The Concise Oxford Dictionary of Music dùng "Romantic" cho nhạc viết khoảng 1830–1900 (Romantic(ism), qua Encyclopedia.com); giáo trình của Jones đặt ranh giới Cổ điển – Lãng mạn quanh đầu giai đoạn cuối của Beethoven (khoảng 1815).'
+      - "Jones, Music Appreciation I, chương 6–8 (LibreTexts): Romantic Music, The Piano, Program Music, Nationalism, Antonín Dvořák, Symphony No. 8 của Mahler, La Bohème."
+      - "Kuznetsova, Music Appreciation II, Ludwig van Beethoven: giai đoạn cuối từ khoảng 1815, cầu nối sang Lãng mạn."
+      - "The Concise Oxford Dictionary of Music, qua Encyclopedia.com: Chromaticism, Rubato, Orchestra, Valve, Tuba, Cor anglais, Piano, Paganini, Symphonic poem, Grieg, The Five; Program Music; Franz Liszt và Nationalism in the Arts, cũng trên Encyclopedia.com."
+      - "Yamaha, The origins of the piano: sản xuất piano hàng loạt ở thế kỷ 19; Bảo tàng Metropolitan, Upright Piano: đàn piano là vật mong ước của gia đình trung lưu Mỹ thế kỷ 19."
+      - "IMSLP, trang tác phẩm: Berlioz, Symphonie fantastique, Schubert, Erlkönig, Schubert, Ngũ tấu D. 667, Chopin, Nocturnes Op. 9, Mendelssohn, Op. 64, Verdi, La traviata, Wagner, Tristan und Isolde, Brahms, Giao hưởng số 4, Tchaikovsky, Swan Lake, Dvořák, Giao hưởng số 9."
+      - "Sách đọc thêm: Burkholder, Grout, Palisca, A History of Western Music; Richard Taruskin, The Oxford History of Western Music. Xem tài liệu tham khảo."
+    ly_do: "n1 (da-sua): Nguồn cũ chỉ nêu tên chung; thay bằng nguồn cụ thể có liên kết và nói rõ mốc năm là quy ước của site."
+  - cu: "mô tả: Sau Cách mạng Pháp và các cuộc chiến Napoleon, châu Âu bước vào thời đại của cảm xúc cá nhân, thiên nhiên, truyện cổ tích, cái siêu nhiên và chủ nghĩa dân tộc.…"
+    moi: "mô tả: Từ đầu thế kỷ 19, âm nhạc nhấn vào cảm xúc cá nhân, thiên nhiên, cái huyền bí siêu nhiên và chủ nghĩa dân tộc; piano mạnh hơn, dàn nhạc phình to, nghệ sĩ bậc thầy…"
+    ly_do: 'n2 (da-sua): không có nguồn mở cho "Cách mạng Pháp... truyện cổ tích"; mô tả viết lại khớp phần thân.'
