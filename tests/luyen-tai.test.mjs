@@ -297,3 +297,15 @@ test('bản build: các trang luyện tai không còn ô "chưa chuyển" của 
 	}
 	assert.deepEqual(con, []);
 });
+
+// Tên hợp âm bảy thống nhất với bài 11 và công cụ (src/scripts/nhac-ly.js): bảy trưởng, bảy át, bảy thứ, bảy nửa giảm,
+// bảy giảm; không "át bảy", "trưởng bảy"… (mo/bay-at, 29/10/2026)
+test('trang không gọi hợp âm bảy theo kiểu "át bảy", "trưởng bảy", "giảm bảy"', () => {
+	const DOCS = path.join(import.meta.dirname, '..', 'src/content/docs');
+	const sai = [];
+	for (const f of fs.readdirSync(DOCS, { recursive: true }).filter((x) => x.endsWith('.md'))) {
+		const s = fs.readFileSync(path.join(DOCS, f), 'utf8');
+		for (const m of s.matchAll(/\b(át|trưởng|giảm) bảy\b|\bThứ bảy \(m7\)/giu)) sai.push(`${f}: ${m[0]}`);
+	}
+	assert.deepEqual(sai, []);
+});

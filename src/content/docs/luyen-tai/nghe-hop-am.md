@@ -59,11 +59,11 @@ K:C
 
 | Hợp âm bảy | Ví dụ | Cảm giác |
 |---|---|---|
-| Trưởng bảy (Maj7) | Đô–Mi–Sol–Si | Sang, mơ màng, "nhạc jazz êm". |
-| Át bảy (7) | Đô–Mi–Sol–Si♭ | Muốn đi tiếp! Chứa tritone Mi–Si♭ (bậc 3 và bậc 7) nên nghe "thúc" về hợp âm chủ. |
-| Thứ bảy (m7) | Đô–Mi♭–Sol–Si♭ | Buồn, màu jazz. |
-| Nửa giảm (ø7) | Đô–Mi♭–Sol♭–Si♭ | Căng, u ám — gặp ở bậc 7 của giọng trưởng và bậc 2 của giọng thứ. |
-| Giảm bảy (o7) | Đô–Mi♭–Sol♭–Si♭♭ | Rất căng, "đáng sợ" — có thể làm hợp âm bản lề khi chuyển giọng. |
+| Bảy trưởng (Maj7) | Đô–Mi–Sol–Si | Sang, mơ màng, "nhạc jazz êm". |
+| Bảy át (7) | Đô–Mi–Sol–Si♭ | Muốn đi tiếp! Chứa tritone Mi–Si♭ (bậc 3 và bậc 7) nên nghe "thúc" về hợp âm chủ. |
+| Bảy thứ (m7) | Đô–Mi♭–Sol–Si♭ | Buồn, màu jazz. |
+| Bảy nửa giảm (ø7) | Đô–Mi♭–Sol♭–Si♭ | Căng, u ám — gặp ở bậc 7 của giọng trưởng và bậc 2 của giọng thứ. |
+| Bảy giảm (o7) | Đô–Mi♭–Sol♭–Si♭♭ | Rất căng, "đáng sợ" — có thể làm hợp âm bản lề khi chuyển giọng. |
 
 Hợp âm bảy khó hơn hợp âm ba nhiều. Chỉ tập khi đã phân biệt trưởng/thứ thành thạo — [công cụ cuối bài](#luyen-voi-cong-cu) cũng để bộ hợp âm bảy ở sau cùng.
 
@@ -98,16 +98,16 @@ Thứ tự luyện:
 - Nốt giữa
 > Nốt trầm cho biết đảo mấy: gốc (thế gốc), bậc 3 (đảo 1) hay bậc 5 (đảo 2).
 ? Hợp âm bảy nào thường dùng làm hợp âm át, nghe "muốn đi tiếp" về chủ?
-- Trưởng bảy (Maj7)
-+ Át bảy (7)
-- Thứ bảy (m7)
-> Hợp âm át bảy (ví dụ Sol7 = Sol–Si–Rê–Fa) chứa tritone nên nghe thúc về chủ (Đô).
+- Bảy trưởng (Maj7)
++ Bảy át (7)
+- Bảy thứ (m7)
+> Hợp âm bảy át (ví dụ Sol7 = Sol–Si–Rê–Fa) chứa tritone nên nghe thúc về chủ (Đô).
 ```
 
 ## Nguồn
 
 - Open Music Theory: [Triads](https://viva.pressbooks.pub/openmusictheory/chapter/triads/), [Inversion](https://viva.pressbooks.pub/openmusictheory/chapter/inversion/), [Seventh Chords](https://viva.pressbooks.pub/openmusictheory/chapter/seventh-chords/).
-- Robert Hutchinson, *Music Theory for the 21st-Century Classroom*, [23.3: The Fully Diminished Seventh as Pivot Chord](https://human.libretexts.org/Bookshelves/Music/Music_Theory/Music_Theory_for_the_21st-Century_Classroom_%28Hutchinson%29/23%3A_Enharmonic_Modulation/23.03%3A_The_Fully_Diminished_Seventh_as_Pivot_Chord) (hợp âm giảm bảy khi chuyển giọng).
+- Robert Hutchinson, *Music Theory for the 21st-Century Classroom*, [23.3: The Fully Diminished Seventh as Pivot Chord](https://human.libretexts.org/Bookshelves/Music/Music_Theory/Music_Theory_for_the_21st-Century_Classroom_%28Hutchinson%29/23%3A_Enharmonic_Modulation/23.03%3A_The_Fully_Diminished_Seventh_as_Pivot_Chord) (hợp âm bảy giảm khi chuyển giọng).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
 
 Bài tiếp theo: [Nghe gam và điệu thức](/opus/luyen-tai/nghe-gam/).

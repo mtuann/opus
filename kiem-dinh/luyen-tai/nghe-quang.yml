@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 3, 28/10/2026; bổ sung sau review)
       review: Claude (review D3-gom, nhóm C, 28/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 3 (D3-L2 đến D3-L6): 6 đúng, 4 câu về site và lời khuyên tập không kiểm độc lập được (người gom kiểm lại trên repo, đúng), 0 sai (bao-cao/d3-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-10-29
+    nhanh: mo/bay-at
+    ma_bam: sha256:ada79df56952f5a23ff780d0c951f4e00e02e8347f5e79139da9f85ec0aaa356
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/bay-at: thống nhất tên hợp âm bảy, 29/10/2026)"
+      luot_2: "không có lượt 2 ngoài: chỉ đổi tên gọi theo thuật ngữ đã khóa ở nhac-ly/11-hop-am-bay và src/scripts/nhac-ly.js; kiểm thử tests/luyen-tai.test.mjs chặn tên cũ"
+      review: "Claude Opus 5.5 (mo/bay-at, 29/10/2026: đọc lại từng chỗ đổi trong doi_chu)"
+      kiem_mau: "chủ repo yêu cầu (29/10/2026); không kiểm mẫu riêng: không có nhận định kiến thức mới"
 ghi_chu: "Trang nghe quãng (tầng lõi). Nguồn: OMT (Intervals, Species Counterpoint, Intro to Diatonic Modes, Triads, Minor Scales), Mount ch. 19 (V7), Soundfly và MacEwan (bài hát gợi nhớ, bậc 3). Câu về công cụ kiểm trên interval-trainer.js cũ (../opus-zero/docs/assets/js/): bộ Khởi động/Cơ bản/Mở rộng/Tất cả 12 quãng; kiểu lần lượt đi lên, đi xuống, cùng lúc. Sửa trang (xem doi_chu): bộ Cơ bản và Mở rộng trong lộ trình; 'quãng 2 và 7'; tritone; đáp án nhiễu quiz; câu bài hát gợi nhớ. Phần 'Nguồn' cuối trang: bỏ link chung musictheory.net, ghi đúng chương OMT đã mở. Lưu ý cho người giao: kiem-dinh/piano/lo-trinh.yml n15 viết 'quãng 2 ở bộ cuối Mở rộng' nhưng bộ Mở rộng chỉ có 2 trưởng; 2 thứ chỉ có ở 'Tất cả 12 quãng'. Neo #luyen-voi-cong-cu và câu 'Mỗi ngày 10 phút đều đặn hiệu quả hơn một buổi 1 tiếng mỗi tuần' (moi-ngay n7 trích) còn nguyên. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có: tritone, quãng đúng (perfect interval), quãng trưởng/thứ, quãng tăng/giảm, bậc (scale degree), quãng nghịch (đã có dissonance), arpeggio không dùng ở trang này."
 nguon:
   - id: omt-intervals
@@ -189,7 +198,7 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.britannica.com/art/tritone", "https://www.britannica.com/art/Locrian-mode" ]
     luot_2_ghi_chu: 'Britannica: tritone ("diabolus in musica") tranh den the ky 18. Cam nhan "cang, bat on" phu hop.'
   - id: n16
-    cau: "Tritone có mặt trong hợp âm át bảy (V7)."
+    cau: "Tritone có mặt trong hợp âm bảy át (V7)."
     loai: dinh-nghia
     nguon:
       - fff-v7
@@ -298,7 +307,7 @@ nhan_dinh:
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/intervals/" ]
     luot_2_ghi_chu: Y su pham; truong/thu khac nhau o so nua cung (3 nua so voi 4) nen cau cuoi dung.
   - id: n32
-    cau: "Quiz: quãng gồm 6 nửa cung và có mặt trong hợp âm át bảy (V7) là tritone; ví dụ Si–Fa trong Sol7 (Sol–Si–Rê–Fa) ở giọng Đô trưởng."
+    cau: "Quiz: quãng gồm 6 nửa cung và có mặt trong hợp âm bảy át (V7) là tritone; ví dụ Si–Fa trong Sol7 (Sol–Si–Rê–Fa) ở giọng Đô trưởng."
     loai: so-lieu
     nguon:
       - omt-intervals
@@ -326,8 +335,8 @@ doi_chu:
     moi: Căng, xít nhau (quãng 2) hoặc chênh vênh (quãng 7); đây là các quãng nghịch, tai muốn chúng "giải quyết" sang quãng êm hơn.
     ly_do: "n12 (da-sua): theo OMT Species Counterpoint, quãng 2 và 7 là quãng nghịch; 'gần nhất' không có nguồn."
   - cu: Căng nhất, chia đôi quãng tám (6 nửa cung). Nghe gai gai, bất ổn — dấu hiệu của át bảy (V7).
-    moi: Căng, chia đôi quãng tám (6 nửa cung). Nghe gai gai, bất ổn — có mặt trong hợp âm át bảy (V7).
-    ly_do: "n16 (da-sua): 'căng nhất' là so sánh không nguồn; 'dấu hiệu của át bảy' thành 'có mặt trong V7' (Mount ch. 19)."
+    moi: Căng, chia đôi quãng tám (6 nửa cung). Nghe gai gai, bất ổn — có mặt trong hợp âm bảy át (V7).
+    ly_do: "n16 (da-sua): 'căng nhất' là so sánh không nguồn; 'dấu hiệu của át bảy' thành 'có mặt trong V7' (Mount ch. 19).; mo/bay-at: thống nhất tên hợp âm bảy theo bài 11 và công cụ (bảy trưởng, bảy át, bảy thứ, bảy nửa giảm, bảy giảm; \"hợp âm át bảy\" thành \"hợp âm bảy át\")."
   - cu: 4. Gắn với giai điệu quen thuộc. Mỗi quãng có ít nhất một bài hát mở đầu bằng nó — xem bảng ở trang Luyện tai. Khi phân vân giữa 4 đúng và 5 đúng, hát thầm "Here Comes the Bride" (4 đúng) rồi "Twinkle Twinkle" (5 đúng), cái nào khớp thì đó là đáp án.
     moi: 4. Gắn với giai điệu quen thuộc. Nhiều quãng có một bài hát quen gợi nhớ — xem bảng ở trang Luyện tai. Khi phân vân giữa 4 đúng và 5 đúng, hát thầm "Here Comes the Bride" (4 đúng) rồi "Twinkle Twinkle" (5 đúng), cái nào khớp thì đó là đáp án.
     ly_do: "n21 (ve-site, da-sua): chính bảng ở trang Luyện tai không có bài cho 6 thứ, 7 thứ và 7 trưởng."
@@ -345,5 +354,9 @@ doi_chu:
       - "câu hỏi: Quãng nào căng nhất và thường báo hiệu hợp âm át bảy (V7)? | 5 đúng | 7 trưởng | ✓ Tritone (4 tăng / 5 giảm) | Tritone gồm 6 nửa cung, ví dụ Si–Fa trong hợp âm Sol7 (Sol–Si–Rê–Fa) ở giọng Đô trưởng."
     moi:
       - 'câu hỏi: Vì sao nên phân biệt trưởng/thứ trước khi đếm số quãng? | ✓ Vì cảm giác sáng/tối dễ nghe hơn đếm số, giúp loại bớt ứng viên | Vì quãng trưởng và quãng thứ có cùng số nửa cung | Vì số quãng không quan trọng | Nghe "sáng hay tối" là phản xạ nhanh; từ đó chỉ còn 2–3 quãng cùng tính chất để chọn.'
-      - "câu hỏi: Quãng nào gồm 6 nửa cung và có mặt trong hợp âm át bảy (V7)? | 5 đúng | 7 trưởng | ✓ Tritone (4 tăng / 5 giảm) | Tritone gồm 6 nửa cung, ví dụ Si–Fa trong hợp âm Sol7 (Sol–Si–Rê–Fa) ở giọng Đô trưởng."
-    ly_do: "n31 (da-sua): đáp án nhiễu cũ là câu đúng.; n32 (da-sua): hỏi theo điều kiểm được."
+      - "câu hỏi: Quãng nào gồm 6 nửa cung và có mặt trong hợp âm bảy át (V7)? | 5 đúng | 7 trưởng | ✓ Tritone (4 tăng / 5 giảm) | Tritone gồm 6 nửa cung, ví dụ Si–Fa trong hợp âm Sol7 (Sol–Si–Rê–Fa) ở giọng Đô trưởng."
+    ly_do: "n31 (da-sua): đáp án nhiễu cũ là câu đúng.; n32 (da-sua): hỏi theo điều kiểm được.; mo/bay-at: thống nhất tên hợp âm bảy theo bài 11 và công cụ (bảy trưởng, bảy át, bảy thứ, bảy nửa giảm, bảy giảm; \"hợp âm át bảy\" thành \"hợp âm bảy át\")."
+mo_khoa:
+  - ngay: 2026-10-29
+    nhanh: mo/bay-at
+    ly_do: 'Thống nhất thuật ngữ (người gom D5 ghi việc còn lại, chủ repo yêu cầu 29/10/2026): "hợp âm át bảy" thành "hợp âm bảy át" như bài 11 đã khóa, bàn phím piano và các trang khác.'

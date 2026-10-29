@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 3, 28/10/2026; bổ sung sau review)
       review: Claude (review D3-gom, nhóm C, 28/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 3 (D3-L2 đến D3-L6): 6 đúng, 4 câu về site và lời khuyên tập không kiểm độc lập được (người gom kiểm lại trên repo, đúng), 0 sai (bao-cao/d3-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-10-29
+    nhanh: mo/bay-at
+    ma_bam: sha256:2b5169708fccb55043ffa98caf5497001486c5d659447aa19c1804c0fd19f890
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/bay-at: thống nhất tên hợp âm bảy, 29/10/2026)"
+      luot_2: "không có lượt 2 ngoài: chỉ đổi tên gọi theo thuật ngữ đã khóa ở nhac-ly/11-hop-am-bay và src/scripts/nhac-ly.js; kiểm thử tests/luyen-tai.test.mjs chặn tên cũ"
+      review: "Claude Opus 5.5 (mo/bay-at, 29/10/2026: đọc lại từng chỗ đổi trong doi_chu)"
+      kiem_mau: "chủ repo yêu cầu (29/10/2026); không kiểm mẫu riêng: không có nhận định kiến thức mới"
 ghi_chu: "Trang nghe gam và điệu thức (tầng lõi). Nguồn: OMT Minor Scales, Intro to Diatonic Modes, Diatonic Modes, Collections, Seventh Chords; Trần Thanh Hà (thang năm âm Việt). Câu về công cụ kiểm trên scale-trainer.js cũ: bốn bộ 'Trưởng và thứ tự nhiên', 'Ba dạng gam thứ', 'Điệu thức thường gặp', 'Ngũ cung và gam 7 nốt'; hướng 'Đi lên' và 'Lên rồi xuống'; gợi ý HINT của từng điệu thức. Bộ 'Điệu thức thường gặp' không có Locrian. Cần người giao quyết: 'Thứ hòa âm' (đã đổi từ 'Thứ hòa thanh'); bài 7 và công cụ cũ dùng 'gam thứ hòa âm'. Câu ket_qua null: chủ âm 'thường là nốt kết', '2 tăng nghe gai', Lydian mơ màng, ngũ cung thoáng. Thuật ngữ chưa có trong src/data/thuat-ngu.yml: điệu thức (mode) và Dorian, Phrygian, Lydian, Mixolydian, Locrian; gam thứ tự nhiên/hòa âm/giai điệu; gam trưởng, gam thứ; gam ngũ cung (pentatonic); quãng 2 tăng (augmented second); bậc (scale degree); chủ âm đã có (tonic), nốt dẫn đã có (leading-tone), gam toàn cung đã có (whole-tone-scale)."
 nguon:
   - id: omt-minor
@@ -166,7 +175,7 @@ nhan_dinh:
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/" ]
     luot_2_ghi_chu: "OMT: melodic minor di len chi ha bac 3 so voi truong; di xuong giong natural. Dung."
   - id: n14
-    cau: "Thứ hòa âm đặc trưng bởi quãng 2 tăng; Sol♯ là nốt dẫn, nâng nửa cung để giọng thứ có hợp âm át bảy (V7) như giọng trưởng."
+    cau: "Thứ hòa âm đặc trưng bởi quãng 2 tăng; Sol♯ là nốt dẫn, nâng nửa cung để giọng thứ có hợp âm bảy át (V7) như giọng trưởng."
     loai: quy-tac
     nguon:
       - omt-minor
@@ -393,7 +402,7 @@ nhan_dinh:
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/" ]
     luot_2_ghi_chu: Nhu n3.
   - id: n39
-    cau: "Quiz: quãng 2 tăng Fa–Sol♯ ở cuối gam thứ đi lên là dấu hiệu của thứ hòa âm; Sol♯ là nốt dẫn tạo át bảy (V7)."
+    cau: "Quiz: quãng 2 tăng Fa–Sol♯ ở cuối gam thứ đi lên là dấu hiệu của thứ hòa âm; Sol♯ là nốt dẫn tạo hợp âm bảy át (V7)."
     loai: quy-tac
     nguon:
       - omt-minor
@@ -444,8 +453,8 @@ doi_chu:
     moi: Quãng Fa–Sol♯ là 2 tăng (3 nửa cung), chỉ dạng này có. Nhiều người nghe quãng này "gai", dễ nhận.
     ly_do: 'n28, n30 (da-sua): bỏ các câu màu văn hóa, phong cách không nguồn (Trung Đông, Tây Ban Nha, flamenco, jazzy, dân gian).; n11 (da-sua, review D3-gom): "nghe gai, rất đặc trưng" là cảm giác; thành điều kiểm được (chỉ thứ hòa âm có 2 tăng) và lời gợi ý nghe (n42).'
   - cu: 'Mẹo: dấu hiệu 2 tăng (nghe như quãng 3 thứ nhưng "gai" hơn) gần như luôn có nghĩa là thứ hòa thanh. Đây là gam của vô số bản nhạc cổ điển viết ở giọng thứ khi cần át bảy (V7).'
-    moi: "Mẹo: dấu hiệu 2 tăng (3 nửa cung, rộng bằng quãng 3 thứ nhưng nối hai bậc liền nhau) thường là dấu hiệu của thứ hòa âm. Sol♯ là nốt dẫn, nâng lên nửa cung để giọng thứ có hợp âm át bảy (V7) như giọng trưởng."
-    ly_do: "n14 (da-sua): 'gần như luôn' quá mạnh; thêm lý do V7.; n14 (da-sua, review D3-gom): \"nghe như quãng 3 thứ nhưng gai hơn\" thành điều kiểm được."
+    moi: "Mẹo: dấu hiệu 2 tăng (3 nửa cung, rộng bằng quãng 3 thứ nhưng nối hai bậc liền nhau) thường là dấu hiệu của thứ hòa âm. Sol♯ là nốt dẫn, nâng lên nửa cung để giọng thứ có hợp âm bảy át (V7) như giọng trưởng."
+    ly_do: "n14 (da-sua): 'gần như luôn' quá mạnh; thêm lý do V7.; n14 (da-sua, review D3-gom): \"nghe như quãng 3 thứ nhưng gai hơn\" thành điều kiểm được.; mo/bay-at: thống nhất tên hợp âm bảy theo bài 11 và công cụ (bảy trưởng, bảy át, bảy thứ, bảy nửa giảm, bảy giảm; \"hợp âm át bảy\" thành \"hợp âm bảy át\")."
   - cu: Thứ nhưng sáng hơn, jazzy.
     moi: Thứ nhưng sáng hơn.
     ly_do: 'n28, n30 (da-sua): bỏ các câu màu văn hóa, phong cách không nguồn (Trung Đông, Tây Ban Nha, flamenco, jazzy, dân gian).; n9 (da-sua): "Thứ hòa thanh" thành "Thứ hòa âm" trong câu hỏi, như bảng.; n11 (da-sua, review D3-gom): bỏ chữ "gai" trong câu hỏi, nêu vị trí quãng.'
@@ -487,7 +496,11 @@ doi_chu:
       - "câu hỏi: Nghe một gam thứ mà bậc 6 nghe cao bất thường (trưởng thay vì thứ) — điệu thức nào? | ✓ Dorian | Phrygian | Locrian | Dorian = thứ tự nhiên với bậc 6 trưởng: thứ nhưng sáng và jazzy hơn."
       - 'câu hỏi: Gam ngũ cung nghe khác gam thường ở điểm nào dễ nhận nhất? | Có nhiều nửa cung hơn | ✓ Không có nửa cung kề nhau, nghe thoáng và trống trải | Luôn bắt đầu bằng nốt Đô | Ngũ cung chỉ có 5 nốt với toàn nguyên cung và quãng 3 thứ: không chỗ nào "xít".'
     moi:
-      - "câu hỏi: Nghe thấy quãng 2 tăng (3 nửa cung) giữa bậc 6 và 7 khi gam thứ đi lên — đó là dạng nào? | Thứ tự nhiên | ✓ Thứ hòa âm | Thứ giai điệu | Fa–Sol♯ (3 nửa cung) là dấu hiệu của thứ hòa âm: Sol♯ là nốt dẫn, tạo át bảy (V7) cho giọng thứ."
+      - "câu hỏi: Nghe thấy quãng 2 tăng (3 nửa cung) giữa bậc 6 và 7 khi gam thứ đi lên — đó là dạng nào? | Thứ tự nhiên | ✓ Thứ hòa âm | Thứ giai điệu | Fa–Sol♯ (3 nửa cung) là dấu hiệu của thứ hòa âm: Sol♯ là nốt dẫn, tạo hợp âm bảy át (V7) cho giọng thứ."
       - "câu hỏi: Nghe một gam thứ mà bậc 6 nghe cao bất thường (trưởng thay vì thứ) — điệu thức nào? | ✓ Dorian | Phrygian | Locrian | Dorian = thứ tự nhiên với bậc 6 trưởng: thứ nhưng sáng hơn."
       - 'câu hỏi: Gam ngũ cung thường gặp (như Đô – Rê – Mi – Sol – La) khác gam trưởng ở điểm nào? | Có nhiều nửa cung hơn | ✓ Không có nửa cung | Luôn bắt đầu bằng nốt Đô | Giữa các nốt liền nhau của Đô – Rê – Mi – Sol – La chỉ có quãng 2 trưởng và quãng 3 thứ: không chỗ nào "xít".'
-    ly_do: 'n41 (da-sua, review D3-gom): theo n28 (chỉ dạng thường gặp không có nửa cung); bỏ cảm giác và câu hỏi "dễ nhận nhất".'
+    ly_do: 'n41 (da-sua, review D3-gom): theo n28 (chỉ dạng thường gặp không có nửa cung); bỏ cảm giác và câu hỏi "dễ nhận nhất".; mo/bay-at: thống nhất tên hợp âm bảy theo bài 11 và công cụ (bảy trưởng, bảy át, bảy thứ, bảy nửa giảm, bảy giảm; "hợp âm át bảy" thành "hợp âm bảy át").'
+mo_khoa:
+  - ngay: 2026-10-29
+    nhanh: mo/bay-at
+    ly_do: 'Thống nhất thuật ngữ (người gom D5 ghi việc còn lại, chủ repo yêu cầu 29/10/2026): "hợp âm át bảy" thành "hợp âm bảy át" như bài 11 đã khóa, bàn phím piano và các trang khác.'

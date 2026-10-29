@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 3, 28/10/2026; bổ sung sau review)
       review: Claude (review D3-gom, nhóm C, 28/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 3 (D3-L2 đến D3-L6): 6 đúng, 4 câu về site và lời khuyên tập không kiểm độc lập được (người gom kiểm lại trên repo, đúng), 0 sai (bao-cao/d3-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-10-29
+    nhanh: mo/bay-at
+    ma_bam: sha256:ae77c1792873bea9c4b8a7b5a46c4a9bc73caba48a5867efe608ba62253f4017
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/bay-at: thống nhất tên hợp âm bảy, 29/10/2026)"
+      luot_2: "không có lượt 2 ngoài: chỉ đổi tên gọi theo thuật ngữ đã khóa ở nhac-ly/11-hop-am-bay và src/scripts/nhac-ly.js; kiểm thử tests/luyen-tai.test.mjs chặn tên cũ"
+      review: "Claude Opus 5.5 (mo/bay-at, 29/10/2026: đọc lại từng chỗ đổi trong doi_chu)"
+      kiem_mau: "chủ repo yêu cầu (29/10/2026); không kiểm mẫu riêng: không có nhận định kiến thức mới"
 ghi_chu: "Trang nghe hợp âm (tầng lõi). Nguồn: OMT Triads, Inversion, Seventh Chords, 6/4 Chords; Mount ch. 19 (tritone trong V7); MT21C 23.3 (giảm bảy làm hợp âm bản lề). Câu về công cụ kiểm trên chord-trainer.js cũ: bộ 'Trưởng và thứ', '4 loại hợp âm ba', '5 loại hợp âm bảy'; chế độ 'Cùng lúc', 'Rải từng nốt', 'Rải rồi cùng lúc'; không có chế độ thể đảo. Câu 'chưa chắc' (ket_qua null): màu thể đảo, thứ bảy, giảm bảy. Tên 'arpeggio', 'block chord' không có ở chương OMT đã mở. Thuật ngữ chưa có trong src/data/thuat-ngu.yml: arpeggio (hợp âm rải), block chord (hợp âm chập), major/minor/diminished/augmented triad, seventh chord và năm loại (Maj7, át bảy, thứ bảy, nửa giảm, giảm bảy), thể gốc/thể đảo (inversion đã có), tritone, bậc (scale degree), cadential 6/4."
 nguon:
   - id: omt-triads
@@ -226,7 +235,7 @@ nhan_dinh:
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/seventh-chords/" ]
     luot_2_ghi_chu: "OMT liet ke nam loai hop am bay: major, dominant, minor, half-diminished, fully diminished. Dung (khong tinh minor-major, augmented-major)."
   - id: n22
-    cau: "Trưởng bảy: Đô–Mi–Sol–Si."
+    cau: "Bảy trưởng: Đô–Mi–Sol–Si."
     loai: cau-truc
     nguon:
       - omt-seventh
@@ -235,7 +244,7 @@ nhan_dinh:
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/seventh-chords/" ]
     luot_2_ghi_chu: "Truong bay = ba truong + 7 truong: Do Mi Sol Si. Dung."
   - id: n23
-    cau: "Trưởng bảy nghe sang, mơ màng, 'nhạc jazz êm'."
+    cau: "Bảy trưởng nghe sang, mơ màng, 'nhạc jazz êm'."
     loai: dinh-nghia
     nguon:
       - omt-seventh
@@ -245,7 +254,7 @@ nhan_dinh:
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/seventh-chords/" ]
     luot_2_ghi_chu: Mo ta cam nhan; cau truc dung.
   - id: n24
-    cau: "Át bảy: Đô–Mi–Sol–Si♭."
+    cau: "Bảy át: Đô–Mi–Sol–Si♭."
     loai: cau-truc
     nguon:
       - omt-seventh
@@ -254,7 +263,7 @@ nhan_dinh:
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/seventh-chords/" ]
     luot_2_ghi_chu: "At bay = ba truong + 7 thu: Do Mi Sol Si♭. Dung."
   - id: n25
-    cau: "Hợp âm át bảy chứa tritone Mi–Si♭ (bậc 3 và bậc 7), nên nghe thúc về hợp âm chủ."
+    cau: "Hợp âm bảy át chứa tritone Mi–Si♭ (bậc 3 và bậc 7), nên nghe thúc về hợp âm chủ."
     loai: dinh-nghia
     nguon:
       - fff-v7
@@ -265,7 +274,7 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.britannica.com/art/tritone", "https://viva.pressbooks.pub/openmusictheory/chapter/seventh-chords/", "https://viva.pressbooks.pub/openmusictheory/chapter/intervals/" ]
     luot_2_ghi_chu: Mi-Si♭ = 5 giam (tritone, OMT intervals/Britannica). Mi la bac 3, Si♭ bac 7 cua C7. Dung; "thuc ve chu" la phat bieu thong dung.
   - id: n26
-    cau: "Thứ bảy: Đô–Mi♭–Sol–Si♭."
+    cau: "Bảy thứ: Đô–Mi♭–Sol–Si♭."
     loai: cau-truc
     nguon:
       - omt-seventh
@@ -274,7 +283,7 @@ nhan_dinh:
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/seventh-chords/" ]
     luot_2_ghi_chu: "Thu bay = ba thu + 7 thu: Do Mi♭ Sol Si♭. Dung."
   - id: n27
-    cau: "Thứ bảy nghe buồn, màu jazz."
+    cau: "Bảy thứ nghe buồn, màu jazz."
     loai: dinh-nghia
     nguon:
       - omt-seventh
@@ -284,7 +293,7 @@ nhan_dinh:
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/seventh-chords/" ]
     luot_2_ghi_chu: OMT gợi ý hợp âm bảy thứ (minor-minor) là sad and jazzy. Câu cần rõ là hợp âm bảy thứ.
   - id: n28
-    cau: "Nửa giảm: Đô–Mi♭–Sol♭–Si♭."
+    cau: "Bảy nửa giảm: Đô–Mi♭–Sol♭–Si♭."
     loai: cau-truc
     nguon:
       - omt-seventh
@@ -313,7 +322,7 @@ nhan_dinh:
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/seventh-chords/" ]
     luot_2_ghi_chu: Mo ta cam nhan; cau truc dung.
   - id: n31
-    cau: "Giảm bảy: Đô–Mi♭–Sol♭–Si♭♭."
+    cau: "Bảy giảm: Đô–Mi♭–Sol♭–Si♭♭."
     loai: cau-truc
     nguon:
       - omt-seventh
@@ -323,7 +332,7 @@ nhan_dinh:
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/seventh-chords/" ]
     luot_2_ghi_chu: "Giam bay = ba giam + 7 giam: Do Mi♭ Sol♭ Si𝄫. Dung."
   - id: n32
-    cau: "Hợp âm giảm bảy nghe rất căng, \"đáng sợ\" (Open Music Theory: \"very scary\")."
+    cau: "Hợp âm bảy giảm nghe rất căng, \"đáng sợ\" (Open Music Theory: \"very scary\")."
     loai: dinh-nghia
     nguon:
       - omt-seventh
@@ -333,7 +342,7 @@ nhan_dinh:
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/seventh-chords/" ]
     luot_2_ghi_chu: OMT gán giảm bảy là very scary, nêu như mẹo nghe.
   - id: n33
-    cau: "Hợp âm giảm bảy có thể làm hợp âm bản lề khi chuyển giọng."
+    cau: "Hợp âm bảy giảm có thể làm hợp âm bản lề khi chuyển giọng."
     loai: dinh-nghia
     nguon:
       - mt21c-dim7
@@ -385,7 +394,7 @@ nhan_dinh:
     ghi_chu: "chord-trainer.js: không có chế độ thể đảo. Cũ xếp 'Thể đảo' như một bước của công cụ. Review: đã kiểm src/scripts/luyen-tai.js: chord-trainer chỉ có ô \"Bộ hợp âm\" và \"Cách phát\", không có thể đảo; chữ mới có ở dòng 81."
     review: dung
   - id: n41
-    cau: "Bộ '5 loại hợp âm bảy': bắt đầu từ trưởng bảy so với át bảy."
+    cau: "Bộ '5 loại hợp âm bảy': bắt đầu từ bảy trưởng so với bảy át."
     loai: ve-site
     ket_qua: dung
     ghi_chu: "chord-trainer.js: bộ '5 loại hợp âm bảy' có; lời khuyên bắt đầu từ Maj7 và 7 là lời khuyên tập. Review: đã kiểm src/scripts/luyen-tai.js dòng 135: bộ \"5 loại hợp âm bảy\" có maj7 và dom7."
@@ -421,7 +430,7 @@ nhan_dinh:
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/inversion-and-figured-bass/" ]
     luot_2_ghi_chu: Nhu n18.
   - id: n45
-    cau: "Quiz: hợp âm bảy thường dùng làm hợp âm át, nghe muốn đi tiếp về chủ, là át bảy; ví dụ Sol7 = Sol–Si–Rê–Fa chứa tritone và thúc về Đô."
+    cau: "Quiz: hợp âm bảy thường dùng làm hợp âm át, nghe muốn đi tiếp về chủ, là bảy át; ví dụ Sol7 = Sol–Si–Rê–Fa chứa tritone và thúc về Đô."
     loai: quy-tac
     nguon:
       - fff-v7
@@ -461,21 +470,35 @@ doi_chu:
   - cu: 'Kỹ thuật: luôn tìm nốt trầm trước. Hát nốt trầm lên, rồi hỏi: đây có phải nốt "nhà" (gốc) không? Nếu nốt trầm nghe như muốn "rơi" về một nốt khác thấp hơn, thì đó là thể đảo.'
     moi: 'Kỹ thuật: luôn tìm nốt trầm trước. Hát nốt trầm lên, rồi hỏi: đây có phải nốt "nhà" (gốc) không? Nếu nốt trầm nghe như muốn "rơi" về một nốt khác thấp hơn, thì nhiều khả năng đó là thể đảo.'
     ly_do: "n20 (da-sua): cảm giác 'rơi' không chứng minh thể đảo."
-  - cu: Êm, buồn nhẹ, thư giãn.
-    moi: Buồn, màu jazz.
-    ly_do: 'n27, n32 (da-sua, review D3-gom): theo OMT, Seventh Chords ("sad and jazzy", "very scary"); n33 (da-sua, review D3-gom): MT21C 23.3 nói giảm bảy làm được hợp âm bản lề, không nói "hay dùng trước khi".'
-  - cu: Căng, u ám — màu của nhạc tiền lãng mạn.
-    moi: Căng, u ám — gặp ở bậc 7 của giọng trưởng và bậc 2 của giọng thứ.
-    ly_do: "n29 (da-sua): 'màu của nhạc tiền lãng mạn' không có nguồn; thay bằng vị trí trong giọng (OMT Seventh Chords)."
+  - cu: Trưởng bảy (Maj7)
+    moi: Bảy trưởng (Maj7)
+    ly_do: 'n40 (ve-site, da-sua): chord-trainer.js không có chế độ thể đảo.; n45 (da-sua): hợp âm nửa giảm và giảm bảy cũng có xu hướng giải quyết.; mo/bay-at: thống nhất tên hợp âm bảy theo bài 11 và công cụ (bảy trưởng, bảy át, bảy thứ, bảy nửa giảm, bảy giảm; "hợp âm át bảy" thành "hợp âm bảy át").; n40 (ve-site, da-sua): chord-trainer.js không có chế độ thể đảo.; n45 (da-sua): hợp âm nửa giảm và giảm bảy cũng có xu hướng giải quyết.; mo/bay-at: thống nhất tên hợp âm bảy theo bài 11 và công cụ (bảy trưởng, bảy át, bảy thứ, bảy nửa giảm, bảy giảm; "hợp âm át bảy" thành "hợp âm bảy át").'
+  - cu: Át bảy (7)
+    moi: Bảy át (7)
+    ly_do: 'mo/bay-at: thống nhất tên hợp âm bảy theo bài 11 và công cụ (bảy trưởng, bảy át, bảy thứ, bảy nửa giảm, bảy giảm; "hợp âm át bảy" thành "hợp âm bảy át").'
+  - cu: Thứ bảy (m7)
+    moi: Bảy thứ (m7)
+    ly_do: 'mo/bay-at: thống nhất tên hợp âm bảy theo bài 11 và công cụ (bảy trưởng, bảy át, bảy thứ, bảy nửa giảm, bảy giảm; "hợp âm át bảy" thành "hợp âm bảy át").'
   - cu:
+      - Êm, buồn nhẹ, thư giãn.
+      - Nửa giảm (ø7)
+    moi:
+      - Buồn, màu jazz.
+      - Bảy nửa giảm (ø7)
+    ly_do: 'n27, n32 (da-sua, review D3-gom): theo OMT, Seventh Chords ("sad and jazzy", "very scary"); n33 (da-sua, review D3-gom): MT21C 23.3 nói giảm bảy làm được hợp âm bản lề, không nói "hay dùng trước khi".; mo/bay-at: thống nhất tên hợp âm bảy theo bài 11 và công cụ (bảy trưởng, bảy át, bảy thứ, bảy nửa giảm, bảy giảm; "hợp âm át bảy" thành "hợp âm bảy át").'
+  - cu:
+      - Căng, u ám — màu của nhạc tiền lãng mạn.
+      - Giảm bảy (o7)
       - Đô–Mi♭–Sol♭–Si𝄫
       - Căng tột độ, chênh vênh — hay dùng trước khi chuyển giọng.
       - Hợp âm bảy khó hơn hợp âm ba nhiều. Chỉ tập khi đã phân biệt trưởng/thứ thành thạo — đúng như gợi ý ở công cụ cuối bài.
     moi:
+      - Căng, u ám — gặp ở bậc 7 của giọng trưởng và bậc 2 của giọng thứ.
+      - Bảy giảm (o7)
       - Đô–Mi♭–Sol♭–Si♭♭
       - Rất căng, "đáng sợ" — có thể làm hợp âm bản lề khi chuyển giọng.
       - Hợp âm bảy khó hơn hợp âm ba nhiều. Chỉ tập khi đã phân biệt trưởng/thứ thành thạo — công cụ cuối bài cũng để bộ hợp âm bảy ở sau cùng.
-    ly_do: "n35 (ve-site, da-sua): chord-trainer.js xếp bộ hợp âm bảy sau cùng; câu cũ mơ hồ.; n31 (da-sua, review D3-gom): giáng kép viết ♭♭ (quyết định thuật ngữ, plans/lam-lai/README.md)."
+    ly_do: "n29 (da-sua): 'màu của nhạc tiền lãng mạn' không có nguồn; thay bằng vị trí trong giọng (OMT Seventh Chords).; n35 (ve-site, da-sua): chord-trainer.js xếp bộ hợp âm bảy sau cùng; câu cũ mơ hồ.; n31 (da-sua, review D3-gom): giáng kép viết ♭♭ (quyết định thuật ngữ, plans/lam-lai/README.md).; mo/bay-at: thống nhất tên hợp âm bảy theo bài 11 và công cụ (bảy trưởng, bảy át, bảy thứ, bảy nửa giảm, bảy giảm; \"hợp âm át bảy\" thành \"hợp âm bảy át\")."
   - cu: "Trưởng vs thứ (rải): phân biệt quan trọng nhất, đa số nghe được sau vài ngày."
     moi: "Trưởng vs thứ (rải): phân biệt quan trọng nhất."
     ly_do: 'n38 (review D3-gom): "đa số nghe được sau vài ngày" không có nguồn; bỏ.'
@@ -492,8 +515,12 @@ doi_chu:
   - cu: Open Music Theory; musictheory.net.
     moi:
       - "Open Music Theory: Triads, Inversion, Seventh Chords."
-      - "Robert Hutchinson, Music Theory for the 21st-Century Classroom, 23.3: The Fully Diminished Seventh as Pivot Chord (hợp âm giảm bảy khi chuyển giọng)."
-    ly_do: "Mục Nguồn: thay bằng các nguồn đã mở khi kiểm định (lượt 1 D3-L6); bỏ link chung."
+      - "Robert Hutchinson, Music Theory for the 21st-Century Classroom, 23.3: The Fully Diminished Seventh as Pivot Chord (hợp âm bảy giảm khi chuyển giọng)."
+    ly_do: "Mục Nguồn: thay bằng các nguồn đã mở khi kiểm định (lượt 1 D3-L6); bỏ link chung.; mo/bay-at: chú thích nguồn Hutchinson \"hợp âm giảm bảy\" thành \"hợp âm bảy giảm\"."
   - cu: 'câu hỏi: Hợp âm bảy nào "muốn đi tiếp" mạnh nhất, hay dùng làm át? | Trưởng bảy (Maj7) | ✓ Át bảy (7) | Thứ bảy (m7) | Hợp âm át bảy (ví dụ Sol7 = Sol–Si–Rê–Fa) chứa tritone nên nghe thúc về chủ (Đô).'
-    moi: 'câu hỏi: Hợp âm bảy nào thường dùng làm hợp âm át, nghe "muốn đi tiếp" về chủ? | Trưởng bảy (Maj7) | ✓ Át bảy (7) | Thứ bảy (m7) | Hợp âm át bảy (ví dụ Sol7 = Sol–Si–Rê–Fa) chứa tritone nên nghe thúc về chủ (Đô).'
-    ly_do: "n45 (da-sua): hợp âm nửa giảm và giảm bảy cũng có xu hướng giải quyết."
+    moi: 'câu hỏi: Hợp âm bảy nào thường dùng làm hợp âm át, nghe "muốn đi tiếp" về chủ? | Bảy trưởng (Maj7) | ✓ Bảy át (7) | Bảy thứ (m7) | Hợp âm bảy át (ví dụ Sol7 = Sol–Si–Rê–Fa) chứa tritone nên nghe thúc về chủ (Đô).'
+    ly_do: 'n45 (da-sua): hợp âm nửa giảm và giảm bảy cũng có xu hướng giải quyết.; mo/bay-at: thống nhất tên hợp âm bảy theo bài 11 và công cụ (bảy trưởng, bảy át, bảy thứ, bảy nửa giảm, bảy giảm; "hợp âm át bảy" thành "hợp âm bảy át").'
+mo_khoa:
+  - ngay: 2026-10-29
+    nhanh: mo/bay-at
+    ly_do: 'Thống nhất thuật ngữ (người gom D5 ghi việc còn lại, chủ repo yêu cầu 29/10/2026): "hợp âm át bảy" thành "hợp âm bảy át" như bài 11 đã khóa, bàn phím piano và các trang khác.'

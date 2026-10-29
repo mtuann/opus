@@ -16,7 +16,7 @@ Lý thuyết đầy đủ: [bài 9: Quãng](/opus/nhac-ly/09-quang/). Công cụ
 | Quãng đúng | 1, 4, 5, 8 | Nhiều người nghe thấy vang, rỗng, vững chãi; quãng 4 đúng hơi lửng lơ, muốn đi tiếp. |
 | Quãng 3 và 6 | 3 trưởng/thứ, 6 trưởng/thứ | Có "màu": trưởng sáng, thứ tối. |
 | Quãng 2 và 7 | 2 trưởng/thứ, 7 trưởng/thứ | Căng, xít nhau (quãng 2) hoặc chênh vênh (quãng 7); đây là các quãng nghịch, tai muốn chúng "giải quyết" sang quãng êm hơn. |
-| Tritone | 4 tăng / 5 giảm | Căng, chia đôi quãng tám (6 nửa cung). Nghe gai gai, bất ổn — có mặt trong hợp âm át bảy (V7). |
+| Tritone | 4 tăng / 5 giảm | Căng, chia đôi quãng tám (6 nửa cung). Nghe gai gai, bất ổn — có mặt trong hợp âm bảy át (V7). |
 
 Mẹo quan trọng nhất: **phân biệt trưởng/thứ trước, đếm số sau**. Nghe "sáng hay tối" dễ hơn nhiều so với đếm "3 hay 6". Khi đã biết là trưởng/thứ, chỉ còn 2–3 ứng viên để chọn.
 
@@ -63,7 +63,7 @@ Mỗi ngày 10 phút đều đặn hiệu quả hơn một buổi 1 tiếng mỗ
 - Vì quãng trưởng và quãng thứ có cùng số nửa cung
 - Vì số quãng không quan trọng
 > Nghe "sáng hay tối" là phản xạ nhanh; từ đó chỉ còn 2–3 quãng cùng tính chất để chọn.
-? Quãng nào gồm 6 nửa cung và có mặt trong hợp âm át bảy (V7)?
+? Quãng nào gồm 6 nửa cung và có mặt trong hợp âm bảy át (V7)?
 - 5 đúng
 - 7 trưởng
 + Tritone (4 tăng / 5 giảm)

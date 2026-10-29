@@ -26,7 +26,7 @@ Gam thứ có ba dạng, khác nhau ở bậc 6 và 7 khi **đi lên**:
 | Thứ hòa âm | Fa – Sol♯ | Quãng Fa–Sol♯ là **2 tăng** (3 nửa cung), chỉ dạng này có. Nhiều người nghe quãng này "gai", dễ nhận. |
 | Thứ giai điệu | Fa♯ – Sol♯ (lên); Fa – Sol (xuống) | Đi lên nghe gần như gam trưởng (chỉ khác nốt 3); đi xuống trở về thứ tự nhiên. |
 
-Mẹo: **dấu hiệu 2 tăng** (3 nửa cung, rộng bằng quãng 3 thứ nhưng nối hai bậc liền nhau) thường là dấu hiệu của thứ hòa âm. Sol♯ là nốt dẫn, nâng lên nửa cung để giọng thứ có hợp âm át bảy (V7) như giọng trưởng.
+Mẹo: **dấu hiệu 2 tăng** (3 nửa cung, rộng bằng quãng 3 thứ nhưng nối hai bậc liền nhau) thường là dấu hiệu của thứ hòa âm. Sol♯ là nốt dẫn, nâng lên nửa cung để giọng thứ có hợp âm bảy át (V7) như giọng trưởng.
 
 ## Điệu thức: tìm một nốt khác biệt
 
@@ -82,7 +82,7 @@ Thứ tự luyện:
 - Thứ tự nhiên
 + Thứ hòa âm
 - Thứ giai điệu
-> Fa–Sol♯ (3 nửa cung) là dấu hiệu của thứ hòa âm: Sol♯ là nốt dẫn, tạo át bảy (V7) cho giọng thứ.
+> Fa–Sol♯ (3 nửa cung) là dấu hiệu của thứ hòa âm: Sol♯ là nốt dẫn, tạo hợp âm bảy át (V7) cho giọng thứ.
 ? Nghe một gam thứ mà bậc 6 nghe cao bất thường (trưởng thay vì thứ) — điệu thức nào?
 + Dorian
 - Phrygian
