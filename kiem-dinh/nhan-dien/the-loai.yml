@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 5, 29/10/2026; bổ sung sau review)
       review: Claude (review D5-gom, nhóm B, 29/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 5 (D5-L1 đến D5-L3): 7 đúng (2 có điều kiện, đã sửa theo: chữ concerto ở hinh-thuc/index, bỏ hai mốc chưa kiểm trong ghi chú Stravinsky; bỏ link COD Notre Dame school 404), 0 sai, 3 câu về site không kiểm độc lập được trên máy kiểm (người gom kiểm lại, khớp) (bao-cao/d5-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-10-29
+    nhanh: mo/d5-hinh
+    ma_bam: sha256:34644e373661309ef7c657d584f74225f153f75d25cb82a8dacf6c46f27aa48e
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/d5-hinh: vẽ lại sơ đồ mermaid thành hình tĩnh, 29/10/2026)"
+      luot_2: "Claude Opus 5.5, agent độc lập (mo/d5-hinh: đối chiếu hình với khối mermaid cũ, chữ trang và ảnh chụp, 29/10/2026)"
+      review: Claude Opus 5.5 (mo/d5-hinh, 29/10/2026)
+      kiem_mau: "chủ repo báo lỗi (khối mermaid hiện nguyên mã, 29/10/2026); không kiểm mẫu riêng: chỉ đổi cách vẽ sơ đồ, chữ giữ nguyên"
 nguon:
   - id: cod-chamber-music
     bac: 2
@@ -199,7 +208,7 @@ nhan_dinh:
       - cod-chamber-music
       - cod-string-quartet
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ "2–9 người, mỗi bè một người". Chữ mới "Vài người, mỗi bè một người". Lý do: con số 2–9 không có ở nguồn bậc 2 nào đã mở; COD chỉ nói nhóm nhỏ, mỗi bè một người. Review D5-gom: dung với chữ đã sửa. Đã kiểm trên trang: cây Mermaid có nhánh G -->|"Vài người, mỗi bè một người"| I["Nhạc thính phòng…"]. Định nghĩa khớp COD Chamber music (review đã mở): "instr. mus. for 2, 3, 4, or more instr., played with a single instr. to a ''part'', all the parts being on equal terms". Bỏ con số 2–9 là đúng (COD không giới hạn). Giữ da-sua.'
+    ghi_chu: 'Chữ cũ "2–9 người, mỗi bè một người". Chữ mới "Vài người, mỗi bè một người". Lý do: con số 2–9 không có ở nguồn bậc 2 nào đã mở; COD chỉ nói nhóm nhỏ, mỗi bè một người. Review D5-gom: dung với chữ đã sửa. Đã kiểm trên trang: cây Mermaid có nhánh G -->|"Vài người, mỗi bè một người"| I["Nhạc thính phòng…"]. Định nghĩa khớp COD Chamber music (review đã mở): "instr. mus. for 2, 3, 4, or more instr., played with a single instr. to a ''part'', all the parts being on equal terms". Bỏ con số 2–9 là đúng (COD không giới hạn). Giữ da-sua. mo/d5-hinh: sơ đồ nay là hình tĩnh của site (trước đây khối mermaid hiện nguyên mã); chữ và thứ tự giữ nguyên.'
     luot_2: khong-chac
     luot_2_ghi_chu: Nói về cây quyết định của site (nhánh, nhãn); không kiểm được từ nguồn ngoài, nên do review kiểm trên trang.
   - id: n3
@@ -547,15 +556,20 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "Trang đích chưa chuyển sang site mới; kiểm trên ~/w/opus-zero/docs/nghe-nhac/ (cả năm tệp có). Lô chuyển nghe-nhac phải giữ đủ năm trang ở đúng đường dẫn, kèm tên: Tổ khúc cello (Bach), Con cá hồi, Mozart Requiem, Erlkönig, Boléro. Review D5-gom: đã kiểm: năm trang chưa chuyển, ~/w/opus-zero/docs/nghe-nhac/bach-cello-1.md, mozart-requiem.md, schubert-ca-hoi.md, schubert-erlkonig.md, ravel-bolero.md đều có; link trên trang đúng đường dẫn."
     review: dung
+  - id: n36
+    cau: "Hình cay-the-loai (thay sơ đồ mermaid): cây quyết định cùng sáu câu hỏi, tám ô thể loại và mười ba nhánh như sơ đồ cũ, vẽ bằng danh sách lồng nhau."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Đối chiếu từng ô, nhãn và nhánh của hình với khối mermaid cũ (doi_chu) và với chữ trên trang; kiểm thử tests/hinh-tinh.test.mjs kiểm chữ của hình. Ảnh chụp bản build ở màn hình rộng và điện thoại, sáng và tối: đọc được, không tràn ngang. Lượt 2 (agent độc lập): giữ đủ nhãn, nhánh, thứ tự; góp ý đã làm: hình fugue chuyển xuống dưới đoạn giới thiệu BWV 847, đoạn chuyển một ô trải hai bè, đáp đề cùng màu chủ đề; rondo không xuống dòng trên điện thoại."
+    review: dung
 khuong_nhac: []
 ghi_chu: "Trang tầng lõi, có cây Mermaid, bảng biên chế và quiz; không có khối abc. Nguồn: COD qua Encyclopedia.com, Britannica, IMSLP (bậc 1-2), bach-cantatas.com và LibreTexts (bậc 3, chỉ cho cantata thế tục, n6). Thuật ngữ chưa có bản ghi trong thuat-ngu.yml (cho D3-L5): orchestra, harpsichord, recorder, concerto grosso, cantata, piano trio, piano quintet, symphonic poem, ballet suite, aria, các tên nhạc cụ (clarinet, tuba, cor anglais, saxophone, marimba, vibraphone). Câu ve-site n35 trỏ trang chưa chuyển. Chưa chắc: n6 (nguồn bậc 3). Review D5-gom (29/10/2026): n2 dung (COD Chamber music); n6 dung theo IMSLP BWV 211, mục Nguồn thay Bach-cantatas.com bằng IMSLP; câu ve-site đã kiểm."
 doi_chu:
   - cu: "Câu hỏi đầu tiên khi nghe một bản nhạc lạ: ai đang chơi? Biết biên chế là bạn đã đoán được thể loại trong phần lớn trường hợp."
     moi: "Câu hỏi đầu tiên khi nghe một bản nhạc lạ: ai đang chơi? Biên chế (nhạc cụ nào, bao nhiêu người, có giọng hát không) là manh mối đầu tiên để đoán thể loại."
-    ly_do: 'Câu mở đầu (lượt 1 D5-L3): bỏ "đoán được thể loại trong phần lớn trường hợp" (không nguồn); biên chế là manh mối đầu tiên.; Mô tả (lượt 1 D5-L3): đổi theo câu mở đầu đã sửa.'
+    ly_do: 'Câu mở đầu (lượt 1 D5-L3): bỏ "đoán được thể loại trong phần lớn trường hợp" (không nguồn); biên chế là manh mối đầu tiên.; Mô tả (lượt 1 D5-L3): đổi theo câu mở đầu đã sửa.; Mô tả (lượt 1 D5-L3): đổi theo câu mở đầu đã sửa.'
   - cu: 'flowchart TD A{"Có giọng hát không?"} -->|Có| B{"Có dàn dựng sân khấu,<br/>nhân vật, đối thoại?"} A -->|Không| G{"Bao nhiêu người chơi?"} B -->|Có| C["Opera"] B -->|Không| D{"Lời tôn giáo?"} D -->|Có| E["Thánh lễ, Requiem,<br/>cantata, oratorio"] D -->|Không| F{"Một giọng + piano?"} F -->|Có| F1["Ca khúc nghệ thuật (Lied)"] F -->|Không| F2["Hợp xướng, cantata thế tục"] G -->|"Một người"| H["Sonata độc tấu, tiểu phẩm<br/>(nocturne, étude, prélude…)"] G -->|"2–9 người, mỗi bè một người"| I["Nhạc thính phòng: sonata cho<br/>nhạc cụ và piano, tam tấu, tứ tấu…"] G -->|"Dàn nhạc"| J{"Có một nhạc cụ nổi bật,<br/>đối đáp với dàn nhạc?"} J -->|Có| K["Concerto"] J -->|Không| L["Giao hưởng, thơ giao hưởng,<br/>overture, tổ khúc ballet"]'
-    moi: 'flowchart TD A{"Có giọng hát không?"} -->|Có| B{"Có dàn dựng sân khấu,<br/>nhân vật, đối thoại?"} A -->|Không| G{"Bao nhiêu người chơi?"} B -->|Có| C["Opera"] B -->|Không| D{"Lời tôn giáo?"} D -->|Có| E["Thánh lễ, Requiem,<br/>cantata, oratorio"] D -->|Không| F{"Một giọng + piano?"} F -->|Có| F1["Ca khúc nghệ thuật (Lied)"] F -->|Không| F2["Hợp xướng, cantata thế tục"] G -->|"Một người"| H["Sonata độc tấu, tiểu phẩm<br/>(nocturne, étude, prélude…)"] G -->|"Vài người, mỗi bè một người"| I["Nhạc thính phòng: sonata cho<br/>nhạc cụ và piano, tam tấu, tứ tấu…"] G -->|"Dàn nhạc"| J{"Có một nhạc cụ nổi bật,<br/>đối đáp với dàn nhạc?"} J -->|Có| K["Concerto"] J -->|Không| L["Giao hưởng, thơ giao hưởng,<br/>overture, tổ khúc ballet"]'
-    ly_do: "n2 (da-sua): con số 2–9 không có nguồn."
+    ly_do: "n2 (da-sua): con số 2–9 không có nguồn.; mo/d5-hinh: sơ đồ mermaid (site mới không vẽ, hiện nguyên mã) thay bằng hình tĩnh ::hinh{ten=\"cay-the-loai\"}, giữ chữ của sơ đồ."
   - cu: Dàn nhạc, 4 chương, khoảng 25–80 phút
     moi: Dàn nhạc, thường 4 chương
     ly_do: "n19 (da-sua): bỏ khoảng thời lượng không có nguồn."
@@ -590,3 +604,7 @@ doi_chu:
   - cu: "câu hỏi: Nghe thấy harpsichord trong một bản thu. Thời kỳ có thể nhất là gì? | ✓ Baroque | Lãng mạn | Ấn tượng | Harpsichord là nhạc cụ phím chính trước khoảng 1750."
     moi: "câu hỏi: Nghe thấy harpsichord trong một bản thu. Thời kỳ có thể nhất là gì? | ✓ Baroque | Lãng mạn | Ấn tượng | Harpsichord là một trong những nhạc cụ phím quan trọng nhất từ thế kỷ 16 đến nửa đầu thế kỷ 18."
     ly_do: "n33 (da-sua): Britannica, Harpsichord."
+mo_khoa:
+  - ngay: 2026-10-29
+    nhanh: mo/d5-hinh
+    ly_do: "Lỗi phát hiện sau khi lên site (chủ repo báo, 29/10/2026): khối mermaid hiện nguyên mã vì site mới không vẽ Mermaid; thay bằng hình tĩnh của site (::hinh)."

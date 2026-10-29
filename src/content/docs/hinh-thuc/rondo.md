@@ -5,10 +5,7 @@ description: "Rondo là hình thức có một đoạn chính (A) quay lại nhi
 
 **Rondo** là hình thức có một đoạn chính (A) **quay lại nhiều lần**, xen giữa là các đoạn tương phản: **A – B – A – C – A**, có khi dài hơn. Đoạn A quay về giống như điệp khúc của một bài hát, nên tai dễ nhận ra. Nó hay dùng cho **chương cuối** của sonata, concerto và giao hưởng thời Cổ điển.
 
-```mermaid
-flowchart LR
-    A1["A"] --> B["B<br/>tương phản"] --> A2["A"] --> C["C<br/>tương phản"] --> A3["A"]
-```
+::hinh{ten="form-rondo"}
 
 ## Đi qua một tác phẩm: Beethoven, Für Elise (WoO 59)
 

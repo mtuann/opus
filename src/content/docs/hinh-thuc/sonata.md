@@ -9,12 +9,7 @@ Hình thức sonata là "kiến trúc" quan trọng của nhạc thời Cổ đi
 
 Hình thức sonata giống một vở kịch ba hồi:
 
-```mermaid
-flowchart LR
-    A["Trình bày<br/>Chủ đề 1 (giọng chính)<br/>→ chuyển giọng →<br/>Chủ đề 2 (giọng mới)"] --> B["Phát triển<br/>chia nhỏ, biến đổi,<br/>đi qua nhiều giọng"]
-    B --> C["Tái hiện<br/>Chủ đề 1 (giọng chính)<br/>Chủ đề 2 (giọng chính)"]
-    C --> D["Coda<br/>(đoạn kết)"]
-```
+::hinh{ten="form-sonata"}
 
 1. **Trình bày** (exposition): giới thiệu **chủ đề 1** ở giọng chính, đi qua một **đoạn chuyển** để **chuyển giọng** (xem [bài 19](/opus/nhac-ly/19-at-phu-chuyen-giong/)), rồi giới thiệu **chủ đề 2** ở giọng mới. Nếu giọng chính là trưởng, giọng mới thường là **giọng át**; nếu giọng chính là thứ, giọng mới thường là **giọng trưởng song song**. Hai giọng tạo nên "xung đột". Thời Cổ điển, cả phần trình bày thường được **nhắc lại**.
 2. **Phát triển** (development): các chủ đề thường bị chia nhỏ, kết hợp lại và đưa qua nhiều giọng, thường là những giọng xa giọng chính. Đây là phần bất ổn nhất.

@@ -18,18 +18,11 @@ description: 'Fugue là hình thức phức điệu: nhiều bè độc lập l�
 | **Stretto** | Các bè vào chủ đề **chồng lấn** nhau trước khi bè trước kết thúc, làm âm nhạc căng và dồn dập hơn |
 | **Âm nền** (pedal point) | Một nốt giữ dài ở bè trầm trong lúc các hợp âm bên trên thay đổi (xem [bài 18](/opus/nhac-ly/18-am-ngoai-hop-am/)) |
 
-```mermaid
-flowchart LR
-    A["Bè alto: Chủ đề"] --> B["Bè soprano: Đáp đề<br/>(alto chơi đối đề)"]
-    B --> C["Đoạn chuyển"]
-    C --> D["Bè bass: Chủ đề"]
-    D --> E["Các đoạn chuyển và<br/>chủ đề ở nhiều giọng"]
-    E --> F["Âm nền, kết"]
-```
-
 ## Đi qua một tác phẩm: Bach Fugue cung Đô thứ, BWV 847
 
 Fugue số 2 trong *Bình quân luật* quyển 1 (1722) có **3 bè** và chỉ dài **31 ô nhịp**. Đây là một fugue dễ theo để bắt đầu: ít bè, ngắn, chủ đề nghe rõ.
+
+::hinh{ten="fugue-trinh-bay"}
 
 | Ô nhịp (khoảng) | Điều xảy ra |
 |---|---|

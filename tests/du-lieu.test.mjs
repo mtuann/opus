@@ -101,7 +101,7 @@ test('bộ nạp trang xóa HTML đã dựng khi dữ liệu đổi, giữ nguy�
 	}
 });
 
-test('dấu vết dựng lại tính schema và mọi plugin Markdown; dữ liệu không còn link .md của site cũ', () => {
+test('dấu vết dựng lại tính schema, mọi plugin Markdown và hình tĩnh; dữ liệu không còn link .md của site cũ', () => {
 	const tep = tepDauVet();
 	// dấu vết đổi khi nội dung một file trong danh sách đổi (đọc qua fs.readFileSync, thay tạm để thử)
 	const goc = fs.readFileSync;
@@ -117,6 +117,8 @@ test('dấu vết dựng lại tính schema và mọi plugin Markdown; dữ li�
 	assert.equal(dauVet(), truoc);
 	assert.ok(tep.includes('src/du-lieu.mjs'));
 	for (const f of fs.readdirSync(path.join(ROOT, 'src/plugins'))) assert.ok(tep.includes(`src/plugins/${f}`), f);
+	// hình tĩnh: ::hinh chèn nguyên file lúc dựng, sửa hình thì trang phải dựng lại (mo/d5-hinh)
+	for (const f of fs.readdirSync(path.join(ROOT, 'src/components/hinh')).filter((x) => x.endsWith('.html'))) assert.ok(tep.includes(`src/components/hinh/${f}`), f);
 	for (const f of fs.readdirSync(path.join(ROOT, 'src/data')))
 		assert.doesNotMatch(fs.readFileSync(path.join(ROOT, 'src/data', f), 'utf8'), /\]\([^)\s]*\.md[#)]/, `${f}: link .md cũ (tools/du_lieu/tach.py đổi thành /opus/…/)`);
 });

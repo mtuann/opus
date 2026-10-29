@@ -522,6 +522,131 @@ html.oz-stand-open .main-pane {
 .oz-seg.k-coda { background: #d6d6d6; }
 .oz-seg.k-intro { background: #e3e3e3; }
 .oz-seg.k-x { background: #ececec; color: #444; }
+/* Sơ đồ có nhóm (form-sonata): mỗi nhóm một tên phía trên các ô của nó; chật thì cả nhóm xuống dòng */
+.oz-form-nhom {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem 4px;
+	width: 100%;
+}
+.oz-form-khoi {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+}
+.sl-markdown-content :is(.oz-form-nhom, .oz-form-khoi, .oz-fugue, .oz-cay, .oz-cay ul, .oz-cay li) > * {
+	margin-top: 0;
+}
+.oz-form-khoi-ten {
+	padding-bottom: 0.15rem;
+	border-bottom: 2px solid var(--sl-color-gray-4);
+	font-size: var(--sl-text-xs);
+	font-weight: 600;
+	text-align: center;
+	color: var(--sl-color-gray-2);
+}
+/* Lưới bè theo ô nhịp (fugue-trinh-bay): cột tên bè, bốn cột ô nhịp; hàng cuối trải hết chiều ngang */
+.oz-fugue {
+	display: grid;
+	grid-template-columns: auto repeat(4, minmax(0, 1fr));
+	gap: 2px;
+	width: 100%;
+}
+.oz-fugue .oz-seg {
+	min-height: 2.6rem;
+	padding-inline: 0.2rem;
+}
+.oz-fugue .oz-o,
+.oz-fugue .oz-be {
+	align-self: center;
+	font-size: var(--sl-text-xs);
+	color: var(--sl-color-gray-3);
+}
+.oz-fugue .oz-o {
+	text-align: center;
+}
+.oz-fugue .oz-be {
+	padding-right: 0.4rem;
+}
+.oz-fugue .oz-trong {
+	border: 1px dashed var(--sl-color-gray-5);
+	border-radius: 5px;
+}
+.oz-fugue .oz-hai-be {
+	grid-row: span 2;
+}
+.oz-fugue .oz-sau {
+	grid-column: 2 / -1;
+	margin-top: 4px;
+}
+/* Cây quyết định (cay-the-loai): danh sách lồng nhau có đường nối; câu hỏi viền tròn, thể loại là ô màu */
+.oz-cay ul {
+	margin: 0;
+	padding: 0 0 0 1.1rem;
+	list-style: none;
+}
+.oz-cay > ul {
+	padding-left: 0;
+}
+.oz-cay li {
+	position: relative;
+	margin: 0;
+	padding: 0.3rem 0 0.1rem 0.9rem;
+	line-height: 1.35;
+}
+.oz-cay li::before,
+.oz-cay li::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	border-color: var(--sl-color-gray-5);
+}
+.oz-cay li::before {
+	top: 0;
+	bottom: 0;
+	border-left: 2px solid var(--sl-color-gray-5);
+}
+.oz-cay li:last-child::before {
+	bottom: auto;
+	height: 1.1rem;
+}
+.oz-cay li::after {
+	top: 1.1rem;
+	width: 0.7rem;
+	border-top: 2px solid var(--sl-color-gray-5);
+}
+.oz-cay > ul > li {
+	padding-left: 0;
+}
+.oz-cay > ul > li::before,
+.oz-cay > ul > li::after {
+	display: none;
+}
+.oz-hoi,
+.oz-ket {
+	display: inline-block;
+	padding: 0.15rem 0.55rem;
+	font-size: var(--sl-text-sm);
+}
+.oz-hoi {
+	border: 1.5px solid var(--sl-color-gray-4);
+	border-radius: 0.75rem;
+	font-weight: 600;
+}
+.oz-ket {
+	border-radius: 5px;
+	background: #b6dcc1;
+	color: #1b1b1b;
+}
+.oz-nhanh {
+	margin-right: 0.4rem;
+	font-size: var(--sl-text-xs);
+	font-style: italic;
+	color: var(--sl-color-gray-3);
+}
+.oz-nhanh::after {
+	content: ':';
+}
 .sl-markdown-content .oz-figure figcaption {
 	margin-top: 0.35rem;
 	font-size: var(--sl-text-sm);
@@ -1573,6 +1698,7 @@ html.oz-stand-open .main-pane {
 		font-style: italic;
 	}
 	.oz-seg,
+	.oz-ket,
 	.oz-chip {
 		-webkit-print-color-adjust: exact;
 		print-color-adjust: exact;

@@ -11,6 +11,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 5, 29/10/2026; bổ sung sau review)
       review: Claude (review D5-gom, nhóm C, 29/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 5 (D5-L1 đến D5-L3): 7 đúng (2 có điều kiện, đã sửa theo: chữ concerto ở hinh-thuc/index, bỏ hai mốc chưa kiểm trong ghi chú Stravinsky; bỏ link COD Notre Dame school 404), 0 sai, 3 câu về site không kiểm độc lập được trên máy kiểm (người gom kiểm lại, khớp) (bao-cao/d5-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-10-29
+    nhanh: mo/d5-hinh
+    ma_bam: sha256:88b3115694a8fd4fa97e20b2858d6306ae7685d7e2c6457df2f697ec4640946e
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/d5-hinh: vẽ lại sơ đồ mermaid thành hình tĩnh, 29/10/2026)"
+      luot_2: "Claude Opus 5.5, agent độc lập (mo/d5-hinh: đối chiếu hình với khối mermaid cũ, chữ trang và ảnh chụp, 29/10/2026)"
+      review: Claude Opus 5.5 (mo/d5-hinh, 29/10/2026)
+      kiem_mau: "chủ repo báo lỗi (khối mermaid hiện nguyên mã, 29/10/2026); không kiểm mẫu riêng: chỉ đổi cách vẽ sơ đồ, chữ giữ nguyên"
 nguon:
   - id: omt-fugue
     bac: 2
@@ -219,7 +228,7 @@ nhan_dinh:
     nguon:
       - mut-847
     ket_qua: dung
-    ghi_chu: "Khớp tệp .ly: ô 1–2 alto chủ đề, ô 3–4 soprano đáp đề với alto đối đề, ô 5–6 đoạn chuyển, ô 7–8 bass chủ đề, nhiều lần vào ở ô 11, 15, 20, 23, âm nền Đô từ giữa ô 29."
+    ghi_chu: "Khớp tệp .ly: ô 1–2 alto chủ đề, ô 3–4 soprano đáp đề với alto đối đề, ô 5–6 đoạn chuyển, ô 7–8 bass chủ đề, nhiều lần vào ở ô 11, 15, 20, 23, âm nền Đô từ giữa ô 29. mo/d5-hinh: sơ đồ nay là hình tĩnh của site (trước đây khối mermaid hiện nguyên mã); chữ và thứ tự giữ nguyên."
     luot_2: dung
     luot_2_nguon: [ "https://www.kunstderfuge.com/theory/fugue.htm", "https://tonic-chord.com/bach-prelude-and-fugue-no-2-in-c-minor-bwv-847-analysis/", "https://viva.pressbooks.pub/openmusictheory/chapter/high-baroque-fugal-exposition/" ]
     luot_2_ghi_chu: "Trình bày khớp: alto vào chủ đề (ô 1), soprano đáp đề (ô 3, alto đối đề), bass vào chủ đề (ô 7); âm nền Đô ở cuối (kunstderfuge, tonic-chord)."
@@ -488,12 +497,18 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://www.merriam-webster.com/dictionary/Picardy%20third", "https://viva.pressbooks.pub/openmusictheory/chapter/modal-mixture/", "https://www.britannica.com/art/cadence-music" ]
     luot_2_ghi_chu: Picardy third đúng; plagal (IV-I) và deceptive là hai loại kết khác (Britannica, Cadence).
+  - id: n44
+    cau: "Hình fugue-trinh-bay (thay sơ đồ mermaid): lưới ba bè theo ô nhịp của BWV 847: alto chủ đề Đô thứ ô 1–2 rồi đối đề ô 3–4; soprano đáp đề Sol thứ ô 3–4; đoạn chuyển ô 5–6 (một ô trải hai bè, chưa có bè thứ ba); bass chủ đề Đô thứ ô 7–8; ô 9–31 đoạn chuyển xen chủ đề ở nhiều giọng, âm nền, kết. Chủ đề và đáp đề cùng màu (cùng giai điệu). Hình đặt ngay dưới đoạn giới thiệu BWV 847, trên bảng ô nhịp (trước đây sơ đồ chung nằm cuối mục Các thành phần)."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Đối chiếu từng ô, nhãn và nhánh của hình với khối mermaid cũ (doi_chu) và với chữ trên trang; kiểm thử tests/hinh-tinh.test.mjs kiểm chữ của hình. Ảnh chụp bản build ở màn hình rộng và điện thoại, sáng và tối: đọc được, không tràn ngang. Lượt 2 (agent độc lập): giữ đủ nhãn, nhánh, thứ tự; góp ý đã làm: hình fugue chuyển xuống dưới đoạn giới thiệu BWV 847, đoạn chuyển một ô trải hai bè, đáp đề cùng màu chủ đề; rondo không xuống dòng trên điện thoại."
+    review: dung
 khuong_nhac: []
 ghi_chu: 'Trang fugue (tầng lõi), không có khối abc (chỉ bảng, một sơ đồ mermaid và quiz). Nguồn chính: Open Music Theory (High Baroque Fugal Exposition, ví dụ chính là chính fugue BWV 847; Modal Mixture), COD qua Encyclopedia.com (fugue, stretto, pedal, tierce de Picardie), Mutopia (Fuga II BWV 847, tệp .ly ấn bản Peters; WebFetch ngày 29/10/2026 trả chữ của tệp .ly, số ô và các lần vào đếm tay từ tệp ấy, không chạy công cụ lyrel), Britannica (năm quyển 1 Bình quân luật). Chữ đã sửa: bỏ "đỉnh cao của thời Baroque" (n3), số bè (n4), chủ đề, đối đề, đoạn chuyển, stretto, âm nền (n6, n9, n11, n12, n13), bỏ "khoảng 1,5 phút" (n20) và "nhịp nhanh và rõ, tốt nhất để bắt đầu" (n21), bỏ "nhảy nhót" (n22), sửa chỗ nói ô 26 và 29 (n27), sửa "rất phổ biến trong nhạc Baroque" của quãng 3 Picardy theo OMT (n31), bỏ chi tiết BWV 578 không nguồn (n34), mục Nguồn. Lô trước yêu cầu giữ (grep hinh-thuc/fugue trong kiem-dinh/): (1) trang đối âm (nhac-ly/22, n4): giữ đường dẫn /opus/hinh-thuc/fugue/ và nội dung giải thích fugue: KHỚP; (2) bài 23 hợp âm mượn (n16): giữ đoạn nêu tên quãng 3 Picardy và kiểm lại vế "rất phổ biến trong nhạc Baroque": KHỚP, đã giữ đoạn, vế ấy đã sửa theo OMT (n30, n31; bài 23 n15 đã khóa nói cùng điều: phổ biến ở thế kỷ 16–17, ít dần ở thế kỷ 18–19); (3) lịch sử Baroque (n45), nhac-ly/index, piano/nha-soan-nhac: giữ đường dẫn: KHỚP. Thống nhất với trang đã khóa: piano/the-loai (fugue là bản phức điệu mà chủ đề được các bè lần lượt bắt chước; Bình quân luật quyển 1 năm 1722): khớp. Chữ trang không có năm sinh–mất nhà soạn nhạc. Câu ve-site trỏ trang chưa chuyển: n33 (piano/tac-pham/bach-prelude-fugue-do-thu: giữ đường dẫn, bài học về BWV 847), n38 (nhac-cu/dan-nhac), n39 (tai-lieu-tham-khao); n14 (bài 18) đã có. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): subject (chủ đề), answer (đáp đề), countersubject (đối đề), episode (đoạn chuyển), stretto, pedal point (âm nền), Picardy third (quãng 3 Picardy); exposition (phần trình bày), polyphony, fugue đã có.'
 doi_chu:
   - cu: 'Fugue là hình thức phức điệu đỉnh cao của thời Baroque: nhiều bè độc lập lần lượt "đuổi theo" nhau bằng cùng một chủ đề. Tên gọi từ tiếng Latin fuga, nghĩa là "chạy trốn".'
     moi: 'Fugue là hình thức phức điệu: nhiều bè độc lập lần lượt "đuổi theo" nhau bằng cùng một chủ đề. Tên gọi có gốc từ tiếng Latin fuga, nghĩa là "chạy trốn".'
-    ly_do: 'n3 (da-bo): bỏ vế xếp hạng "đỉnh cao của thời Baroque", không có nguồn.; n3 (da-bo): mô tả bỏ "đỉnh cao của thời Baroque" (câu xếp hạng, nguồn không nói).'
+    ly_do: 'n3 (da-bo): bỏ vế xếp hạng "đỉnh cao của thời Baroque", không có nguồn.; n3 (da-bo): mô tả bỏ "đỉnh cao của thời Baroque" (câu xếp hạng, nguồn không nói).; n3 (da-bo): mô tả bỏ "đỉnh cao của thời Baroque".; n3 (da-bo): mô tả bỏ "đỉnh cao của thời Baroque".'
   - cu: Thường 3 hoặc 4 bè (soprano, alto, tenor, bass), kể cả khi chơi trên một cây đàn phím
     moi: Một bản fugue cho một người chơi đàn phím có thể có 3, 4, 5 hay 6 bè; tên bè theo giọng hát (soprano, alto, tenor, bass)
     ly_do: "n4 (da-sua): OMT, High Baroque Fugal Exposition: ba đến sáu bè."
@@ -509,9 +524,11 @@ doi_chu:
   - cu: Các bè vào chủ đề chồng lấn nhau trước khi bè trước kết thúc, tạo cao trào
     moi: Các bè vào chủ đề chồng lấn nhau trước khi bè trước kết thúc, làm âm nhạc căng và dồn dập hơn
     ly_do: 'n12 (da-sua): COD, stretto làm tăng căng thẳng; quiz bỏ "gần cuối".'
-  - cu: Một nốt giữ dài ở bè trầm, thường gần cuối (xem bài 18)
+  - cu:
+      - Một nốt giữ dài ở bè trầm, thường gần cuối (xem bài 18)
+      - 'flowchart LR A["Bè alto: Chủ đề"] --> B["Bè soprano: Đáp đề<br/>(alto chơi đối đề)"] B --> C["Đoạn chuyển"] C --> D["Bè bass: Chủ đề"] D --> E["Các đoạn chuyển và<br/>chủ đề ở nhiều giọng"] E --> F["Âm nền, kết"]'
     moi: Một nốt giữ dài ở bè trầm trong lúc các hợp âm bên trên thay đổi (xem bài 18)
-    ly_do: 'n13 (da-sua): COD, pedal; bỏ "thường gần cuối" (không nguồn).'
+    ly_do: 'n13 (da-sua): COD, pedal; bỏ "thường gần cuối" (không nguồn).; mo/d5-hinh: sơ đồ mermaid (site mới không vẽ, hiện nguyên mã) thay bằng hình tĩnh ::hinh{ten="fugue-trinh-bay"}, giữ chữ của sơ đồ; hình ghi ô nhịp của BWV 847 nên đặt dưới đoạn giới thiệu BWV 847, trên bảng.'
   - cu: "Fugue số 2 trong Bình quân luật quyển 1 (1722) có 3 bè và chỉ dài 31 ô nhịp, khoảng 1,5 phút. Đây là fugue tốt nhất để bắt đầu: chủ đề rất dễ nhận ra, nhịp nhanh và rõ."
     moi: "Fugue số 2 trong Bình quân luật quyển 1 (1722) có 3 bè và chỉ dài 31 ô nhịp. Đây là một fugue dễ theo để bắt đầu: ít bè, ngắn, chủ đề nghe rõ."
     ly_do: 'n20, n21 (da-bo, khuyen-tap): bỏ "khoảng 1,5 phút" (không nguồn), "tốt nhất", "nhịp nhanh và rõ".'
@@ -549,3 +566,7 @@ doi_chu:
   - cu: "câu hỏi: Stretto là gì? | ✓ Các bè vào chủ đề chồng lấn nhau | Đoạn không có chủ đề | Nốt giữ dài ở bè trầm | Thường tạo cao trào gần cuối."
     moi: "câu hỏi: Stretto là gì? | ✓ Các bè vào chủ đề chồng lấn nhau | Đoạn không có chủ đề | Nốt giữ dài ở bè trầm | Làm âm nhạc căng và dồn dập hơn."
     ly_do: "n12 (da-sua): stretto theo OMT và COD; lời giải thích câu hỏi đổi theo."
+mo_khoa:
+  - ngay: 2026-10-29
+    nhanh: mo/d5-hinh
+    ly_do: "Lỗi phát hiện sau khi lên site (chủ repo báo, 29/10/2026): khối mermaid hiện nguyên mã vì site mới không vẽ Mermaid; thay bằng hình tĩnh của site (::hinh)."

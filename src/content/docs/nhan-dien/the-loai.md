@@ -7,22 +7,7 @@ Câu hỏi đầu tiên khi nghe một bản nhạc lạ: **ai đang chơi?** Bi
 
 ## Cây quyết định
 
-```mermaid
-flowchart TD
-    A{"Có giọng hát không?"} -->|Có| B{"Có dàn dựng sân khấu,<br/>nhân vật, đối thoại?"}
-    A -->|Không| G{"Bao nhiêu người chơi?"}
-    B -->|Có| C["Opera"]
-    B -->|Không| D{"Lời tôn giáo?"}
-    D -->|Có| E["Thánh lễ, Requiem,<br/>cantata, oratorio"]
-    D -->|Không| F{"Một giọng + piano?"}
-    F -->|Có| F1["Ca khúc nghệ thuật (Lied)"]
-    F -->|Không| F2["Hợp xướng, cantata thế tục"]
-    G -->|"Một người"| H["Sonata độc tấu, tiểu phẩm<br/>(nocturne, étude, prélude…)"]
-    G -->|"Vài người, mỗi bè một người"| I["Nhạc thính phòng: sonata cho<br/>nhạc cụ và piano, tam tấu, tứ tấu…"]
-    G -->|"Dàn nhạc"| J{"Có một nhạc cụ nổi bật,<br/>đối đáp với dàn nhạc?"}
-    J -->|Có| K["Concerto"]
-    J -->|Không| L["Giao hưởng, thơ giao hưởng,<br/>overture, tổ khúc ballet"]
-```
+::hinh{ten="cay-the-loai"}
 
 ## Bảng biên chế thường gặp
 

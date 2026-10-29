@@ -12,10 +12,7 @@ Concerto Baroque, như của Vivaldi, thường dùng hình thức **ritornello*
 - **Ritornello** do **cả dàn nhạc** (*tutti*) chơi, mở đầu và kết thúc chương, và quay lại nhiều lần ở giữa, thường **ở các giọng khác nhau** và có khi chỉ một đoạn ngắn.
 - Xen giữa là các **đoạn độc tấu** (*solo*): nhạc cụ độc tấu chơi nhanh và điêu luyện hơn.
 
-```mermaid
-flowchart LR
-    R1["Ritornello<br/>mở đầu"] --> S1["Độc tấu"] --> R2["Ritornello<br/>giọng khác"] --> S2["Độc tấu"] --> R3["Ritornello<br/>giọng khác"] --> S3["Độc tấu"] --> R4["Ritornello<br/>giọng chính"]
-```
+::hinh{ten="form-ritornello"}
 
 Khác với rondo, nơi điệp khúc luôn trở lại ở chủ âm, ritornello quay lại ở **giọng khác nhau** và thường chỉ là **một phần** của đoạn gốc.
 

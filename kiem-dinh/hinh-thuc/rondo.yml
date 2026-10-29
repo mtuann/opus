@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 5, 29/10/2026; bổ sung sau review)
       review: Claude (review D5-gom, nhóm C, 29/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 5 (D5-L1 đến D5-L3): 7 đúng (2 có điều kiện, đã sửa theo: chữ concerto ở hinh-thuc/index, bỏ hai mốc chưa kiểm trong ghi chú Stravinsky; bỏ link COD Notre Dame school 404), 0 sai, 3 câu về site không kiểm độc lập được trên máy kiểm (người gom kiểm lại, khớp) (bao-cao/d5-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-10-29
+    nhanh: mo/d5-hinh
+    ma_bam: sha256:13ae3ead8cb99300d6001974763e8f90d16202524be29aaed016bccc91e79898
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/d5-hinh: vẽ lại sơ đồ mermaid thành hình tĩnh, 29/10/2026)"
+      luot_2: "Claude Opus 5.5, agent độc lập (mo/d5-hinh: đối chiếu hình với khối mermaid cũ, chữ trang và ảnh chụp, 29/10/2026)"
+      review: Claude Opus 5.5 (mo/d5-hinh, 29/10/2026)
+      kiem_mau: "chủ repo báo lỗi (khối mermaid hiện nguyên mã, 29/10/2026); không kiểm mẫu riêng: chỉ đổi cách vẽ sơ đồ, chữ giữ nguyên"
 nguon:
   - id: omt-rondo
     bac: 2
@@ -103,7 +112,7 @@ nhan_dinh:
     nguon:
       - omt-rondo
     ket_qua: da-sua
-    ghi_chu: 'Cũ: ô A đầu ghi "giọng chính" và có thêm ô "Coda" ở cuối. Đã bỏ: không nguồn bậc 1–2 nói đoạn A đầu nào cũng ở giọng chính hay rondo nào cũng có coda (Für Elise không có coda theo Wikipedia). Phần còn lại đúng theo OMT.'
+    ghi_chu: 'Cũ: ô A đầu ghi "giọng chính" và có thêm ô "Coda" ở cuối. Đã bỏ: không nguồn bậc 1–2 nói đoạn A đầu nào cũng ở giọng chính hay rondo nào cũng có coda (Für Elise không có coda theo Wikipedia). Phần còn lại đúng theo OMT. mo/d5-hinh: sơ đồ nay là hình tĩnh của site (trước đây khối mermaid hiện nguyên mã); chữ và thứ tự giữ nguyên.'
     luot_2: dung
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/rondo/" ]
   - id: n6
@@ -352,15 +361,19 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "Đã mở các trang ấy ngày 29/10/2026 và kiểm chữ mô tả khớp (n1, n2, n4, n8, n9). Link /opus/tai-lieu-tham-khao/: trang chưa chuyển, ../opus-zero/docs/tai-lieu-tham-khao.md có tồn tại. Review: đã kiểm mục Nguồn trên trang (OMT Rondo, COD và Britannica Rondo, IMSLP và Mutopia Für Elise); /opus/tai-lieu-tham-khao/ nay có ở src/content/docs/tai-lieu-tham-khao.md."
     review: dung
+  - id: n32
+    cau: "Hình form-rondo (thay sơ đồ mermaid): năm ô A, B tương phản, A, C tương phản, A; A cùng màu."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Đối chiếu từng ô, nhãn và nhánh của hình với khối mermaid cũ (doi_chu) và với chữ trên trang; kiểm thử tests/hinh-tinh.test.mjs kiểm chữ của hình. Ảnh chụp bản build ở màn hình rộng và điện thoại, sáng và tối: đọc được, không tràn ngang. Lượt 2 (agent độc lập): giữ đủ nhãn, nhánh, thứ tự; góp ý đã làm: hình fugue chuyển xuống dưới đoạn giới thiệu BWV 847, đoạn chuyển một ô trải hai bè, đáp đề cùng màu chủ đề; rondo không xuống dòng trên điện thoại."
+    review: dung
 khuong_nhac: []
 doi_chu:
   - cu:
       - "Rondo là hình thức có một đoạn chính (A) quay lại nhiều lần, xen giữa là các đoạn tương phản: A – B – A – C – A, có khi dài hơn. Đoạn A quay về giống như điệp khúc của một bài hát, nên rondo dễ nghe và thường vui tươi. Nó hay dùng cho chương cuối của sonata, concerto và giao hưởng thời Cổ điển."
       - flowchart LR A1["A<br/>giọng chính"] --> B["B<br/>tương phản"] --> A2["A"] --> C["C<br/>tương phản"] --> A3["A"] --> K["Coda"]
-    moi:
-      - "Rondo là hình thức có một đoạn chính (A) quay lại nhiều lần, xen giữa là các đoạn tương phản: A – B – A – C – A, có khi dài hơn. Đoạn A quay về giống như điệp khúc của một bài hát, nên tai dễ nhận ra. Nó hay dùng cho chương cuối của sonata, concerto và giao hưởng thời Cổ điển."
-      - flowchart LR A1["A"] --> B["B<br/>tương phản"] --> A2["A"] --> C["C<br/>tương phản"] --> A3["A"]
-    ly_do: 'n3 (da-sua): bỏ "thường vui tươi" (không nguồn), giữ phép so sánh điệp khúc.; n5 (da-sua): bỏ ô "giọng chính" của A đầu và ô "Coda" (không nguồn).'
+    moi: "Rondo là hình thức có một đoạn chính (A) quay lại nhiều lần, xen giữa là các đoạn tương phản: A – B – A – C – A, có khi dài hơn. Đoạn A quay về giống như điệp khúc của một bài hát, nên tai dễ nhận ra. Nó hay dùng cho chương cuối của sonata, concerto và giao hưởng thời Cổ điển."
+    ly_do: 'n3 (da-sua): bỏ "thường vui tươi" (không nguồn), giữ phép so sánh điệp khúc.; n5 (da-sua): bỏ ô "giọng chính" của A đầu và ô "Coda" (không nguồn).; mo/d5-hinh: sơ đồ mermaid (site mới không vẽ, hiện nguyên mã) thay bằng hình tĩnh ::hinh{ten="form-rondo"}, giữ chữ của sơ đồ.'
   - cu: Bagatelle cung La thứ, khoảng 1810, xuất bản sau khi Beethoven mất. Bản nhạc ngắn (khoảng 3 phút) nhưng có đầy đủ hình thức rondo.
     moi: Bagatelle cung La thứ, khoảng 1810, xuất bản sau khi Beethoven mất. Bản nhạc ngắn nhưng có đủ hình thức rondo năm đoạn.
     ly_do: 'n10 (da-sua): bỏ "(khoảng 3 phút)" (không nguồn ghi thời lượng).'
@@ -405,3 +418,7 @@ doi_chu:
       - "câu hỏi: Rondo thường dùng cho chương nào? | Chương đầu | Chương chậm | ✓ Chương cuối | Rondo là hình thức quen thuộc cho chương cuối của sonata và concerto thời Cổ điển."
       - "câu hỏi: Đoạn C của Für Elise có gì đặc biệt? | ✓ Bè trầm giữ nốt La làm âm nền | Chuyển sang nhịp 3/4 | Chuyển hẳn sang giọng trưởng | Đoạn C ở La thứ, trên âm nền La; bài vẫn ở nhịp 3/8."
     ly_do: 'n29 (da-sua): giải thích của câu hỏi 2 viết lại theo COD và Britannica (n4).; n30 (da-sua): đáp án câu 3 viết lại theo n15 (Wikipedia: tonic pedal).; n30 (da-sua): lựa chọn sai "Chơi chậm hơn hẳn" đổi thành "Chuyển hẳn sang giọng trưởng" (không nguồn nào cho biết đoạn C đổi tốc độ); giải thích viết lại theo n15.'
+mo_khoa:
+  - ngay: 2026-10-29
+    nhanh: mo/d5-hinh
+    ly_do: "Lỗi phát hiện sau khi lên site (chủ repo báo, 29/10/2026): khối mermaid hiện nguyên mã vì site mới không vẽ Mermaid; thay bằng hình tĩnh của site (::hinh)."

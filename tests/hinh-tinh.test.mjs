@@ -70,3 +70,29 @@ test('bản build: trang dùng hình tĩnh có nguyên hình, không còn ô "ch
 	assert.doesNotMatch(html, /oz-chua-co/);
 	assert.equal((html.match(/<figure class="oz-figure not-content" data-sinh><svg/g) ?? []).length, 3);
 });
+
+// Site mới không vẽ Mermaid (site cũ MkDocs có): khối ```mermaid hiện nguyên mã trên trang (lỗi lọt lên site ở đợt 5,
+// sửa ở nhánh mo/d5-hinh). Sơ đồ viết thành hình tĩnh ::hinh; năm hình thay sơ đồ cũ giữ đủ chữ của sơ đồ.
+test('trang không có khối mermaid; năm hình thay sơ đồ cũ có đủ nhãn', () => {
+	const DOCS = path.join(ROOT, 'src/content/docs');
+	const co = fs.readdirSync(DOCS, { recursive: true }).filter((f) => f.endsWith('.md') && /^\s*(```|~~~)\s*mermaid/m.test(fs.readFileSync(path.join(DOCS, f), 'utf8')));
+	assert.deepEqual(co, []);
+	const NHAN = {
+		'form-rondo': ['A', 'B', 'C', 'tương phản'],
+		'form-ritornello': ['Ritornello', 'mở đầu', 'Độc tấu', 'giọng khác', 'giọng chính'],
+		'form-sonata': ['Trình bày', 'Chủ đề 1', 'Chuyển giọng', 'Chủ đề 2', 'giọng mới', 'Phát triển', 'đi qua nhiều giọng', 'Tái hiện', 'Coda'],
+		'fugue-trinh-bay': ['Soprano', 'Alto', 'Bass', 'Chủ đề', 'Đáp đề', 'Đối đề', 'Đoạn chuyển', 'âm nền'],
+		'cay-the-loai': ['Có giọng hát không?', 'Có dàn dựng sân khấu, nhân vật, đối thoại?', 'Lời tôn giáo?', 'Một giọng + piano?', 'Bao nhiêu người chơi?',
+			'Có một nhạc cụ nổi bật, đối đáp với dàn nhạc?', 'Opera', 'Thánh lễ, Requiem, cantata, oratorio', 'Ca khúc nghệ thuật (Lied)', 'Hợp xướng, cantata thế tục',
+			'Sonata độc tấu, tiểu phẩm', 'Nhạc thính phòng', 'Concerto', 'Giao hưởng, thơ giao hưởng, overture, tổ khúc ballet'],
+	};
+	for (const [ten, ds] of Object.entries(NHAN)) {
+		const chu = hinhTinh(ten).replace(/<[^>]+>/g, ' ');
+		for (const x of ds) assert.ok(chu.includes(x), `${ten}: thiếu "${x}"`);
+	}
+	// cây: 6 câu hỏi, 8 ô thể loại, 13 nhánh, mỗi câu hỏi có đủ nhánh trả lời
+	const cay = hinhTinh('cay-the-loai');
+	assert.equal((cay.match(/class="oz-hoi"/g) ?? []).length, 6);
+	assert.equal((cay.match(/class="oz-ket"/g) ?? []).length, 8);
+	assert.equal((cay.match(/class="oz-nhanh"/g) ?? []).length, 13);
+});

@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 5, 29/10/2026; bổ sung sau review)
       review: Claude (review D5-gom, nhóm C, 29/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 5 (D5-L1 đến D5-L3): 7 đúng (2 có điều kiện, đã sửa theo: chữ concerto ở hinh-thuc/index, bỏ hai mốc chưa kiểm trong ghi chú Stravinsky; bỏ link COD Notre Dame school 404), 0 sai, 3 câu về site không kiểm độc lập được trên máy kiểm (người gom kiểm lại, khớp) (bao-cao/d5-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-10-29
+    nhanh: mo/d5-hinh
+    ma_bam: sha256:beb60fc97496794b9fc933c6812354a6f576b71e13f9b4fca65237cbdde15d03
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/d5-hinh: vẽ lại sơ đồ mermaid thành hình tĩnh, 29/10/2026)"
+      luot_2: "Claude Opus 5.5, agent độc lập (mo/d5-hinh: đối chiếu hình với khối mermaid cũ, chữ trang và ảnh chụp, 29/10/2026)"
+      review: Claude Opus 5.5 (mo/d5-hinh, 29/10/2026)
+      kiem_mau: "chủ repo báo lỗi (khối mermaid hiện nguyên mã, 29/10/2026); không kiểm mẫu riêng: chỉ đổi cách vẽ sơ đồ, chữ giữ nguyên"
 nguon:
   - id: omt-sonata
     bac: 2
@@ -104,13 +113,13 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.britannica.com/art/symphony-music", "https://www.britannica.com/art/sonata-form" ]
     luot_2_ghi_chu: "Hợp lý: giao hưởng chương đầu từ Haydn đến Brahms thường dùng hình thức sonata."
   - id: n4
-    cau: "Cấu trúc ba hồi: trình bày, phát triển, tái hiện, rồi coda (sơ đồ mermaid và danh sách)."
+    cau: "Cấu trúc ba hồi: trình bày, phát triển, tái hiện, rồi coda (hình và danh sách)."
     loai: dinh-nghia
     nguon:
       - omt-sonata
       - brit-sonata
     ket_qua: dung
-    ghi_chu: Chữ "Coda (đoạn kết)" trong sơ đồ đã sửa từ "phần kết", xem n10.
+    ghi_chu: 'Chữ "Coda (đoạn kết)" trong sơ đồ đã sửa từ "phần kết", xem n10. mo/d5-hinh: sơ đồ nay là hình tĩnh của site (trước đây khối mermaid hiện nguyên mã); chữ và thứ tự giữ nguyên.'
     luot_2: dung
     luot_2_nguon: [ "https://www.britannica.com/art/sonata-form", "https://viva.pressbooks.pub/openmusictheory/chapter/sonata-form/" ]
     luot_2_ghi_chu: Trình bày, phát triển, tái hiện; coda tùy chọn.
@@ -487,6 +496,12 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://macromusic.org/journal/volume1/Gerber.html", "https://enc.piano.or.jp/en/musics/300" ]
     luot_2_ghi_chu: Tái hiện K. 545 bắt đầu ở Fa trưởng; chủ đề 2 về Đô.
+  - id: n39
+    cau: "Hình form-sonata (thay sơ đồ mermaid): Trình bày (chủ đề 1 giọng chính, chuyển giọng, chủ đề 2 giọng mới), Phát triển (chia nhỏ, biến đổi, đi qua nhiều giọng), Tái hiện (chủ đề 1 và chủ đề 2 ở giọng chính), Coda; cùng màu là cùng chủ đề."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Đối chiếu từng ô, nhãn và nhánh của hình với khối mermaid cũ (doi_chu) và với chữ trên trang; kiểm thử tests/hinh-tinh.test.mjs kiểm chữ của hình. Ảnh chụp bản build ở màn hình rộng và điện thoại, sáng và tối: đọc được, không tràn ngang. Lượt 2 (agent độc lập): giữ đủ nhãn, nhánh, thứ tự; góp ý đã làm: hình fugue chuyển xuống dưới đoạn giới thiệu BWV 847, đoạn chuyển một ô trải hai bè, đáp đề cùng màu chủ đề; rondo không xuống dòng trên điện thoại."
+    review: dung
 khuong_nhac: []
 ghi_chu: 'Lượt 1 (D5-L2 phần A). Trang sonata: 38 nhận định cộng 4 câu quiz, không có khối abc; sơ đồ mermaid kiểm ở n4. Thuật ngữ chưa có trong thuat-ngu.yml (không làm hồ sơ thuật ngữ): chủ đề, đoạn chuyển, đoạn mở đầu (introduction), sonata-rondo, sonatina, giọng trưởng song song, giọng hạ át. Đã dùng "đoạn kết" cho coda, khớp thuat-ngu. Chưa chắc: n17 và n26 (mốc ô 73, không nguồn nào nêu tổng số ô).'
 doi_chu:
@@ -494,8 +509,7 @@ doi_chu:
     moi: Hình thức sonata là "kiến trúc" quan trọng của nhạc thời Cổ điển, và các nhà soạn nhạc thời Lãng mạn vẫn tiếp tục dùng. Nó thường dùng cho chương đầu của giao hưởng, sonata, concerto, tứ tấu. Hiểu nó rồi, bạn có chỗ dựa để nghe chương đầu của nhiều bản giao hưởng từ Haydn đến Brahms.
     ly_do: 'n1 (da-sua): bỏ "nhất", nguồn không xếp hạng.; n3 (da-sua): hạ câu nói quá.'
   - cu: flowchart LR A["Trình bày<br/>Chủ đề 1 (giọng chính)<br/>→ chuyển giọng →<br/>Chủ đề 2 (giọng mới)"] --> B["Phát triển<br/>chia nhỏ, biến đổi,<br/>đi qua nhiều giọng"] B --> C["Tái hiện<br/>Chủ đề 1 (giọng chính)<br/>Chủ đề 2 (giọng chính)"] C --> D["Coda<br/>(phần kết)"]
-    moi: flowchart LR A["Trình bày<br/>Chủ đề 1 (giọng chính)<br/>→ chuyển giọng →<br/>Chủ đề 2 (giọng mới)"] --> B["Phát triển<br/>chia nhỏ, biến đổi,<br/>đi qua nhiều giọng"] B --> C["Tái hiện<br/>Chủ đề 1 (giọng chính)<br/>Chủ đề 2 (giọng chính)"] C --> D["Coda<br/>(đoạn kết)"]
-    ly_do: "n8, q2 (da-sua): sơ đồ: phát triển không nhất thiết qua giọng thứ (OMT)."
+    ly_do: "n8, q2 (da-sua): sơ đồ: phát triển không nhất thiết qua giọng thứ (OMT).; mo/d5-hinh: sơ đồ mermaid (site mới không vẽ, hiện nguyên mã) thay bằng hình tĩnh ::hinh{ten=\"form-sonata\"}, giữ chữ của sơ đồ."
   - cu: "Phát triển (development): các chủ đề bị chia nhỏ, biến đổi, chồng lên nhau, đưa qua nhiều giọng, thường là giọng thứ. Đây là phần bất ổn, căng thẳng nhất."
     moi: "Phát triển (development): các chủ đề thường bị chia nhỏ, kết hợp lại và đưa qua nhiều giọng, thường là những giọng xa giọng chính. Đây là phần bất ổn nhất."
     ly_do: "n8 (da-sua): phát triển không nhất thiết đi qua giọng thứ.; q2 (da-sua): khớp n8."
@@ -561,3 +575,7 @@ doi_chu:
   - cu: "câu hỏi: Điều gì khác thường trong phần tái hiện của Mozart K. 545, chương 1? | ✓ Chủ đề 1 trở lại ở Fa trưởng thay vì Đô trưởng | Không có chủ đề 2 | Phần tái hiện ở giọng thứ | Một lối tắt hiếm gặp."
     moi: "câu hỏi: Điều gì khác thường trong phần tái hiện của Mozart K. 545, chương 1? | ✓ Chủ đề 1 trở lại ở Fa trưởng thay vì Đô trưởng | Không có chủ đề 2 | Phần tái hiện ở giọng thứ | Mozart bắt đầu tái hiện ở giọng hạ át, rồi đưa nhạc về Đô trưởng cho chủ đề 2."
     ly_do: "q4 (da-sua): khớp n27."
+mo_khoa:
+  - ngay: 2026-10-29
+    nhanh: mo/d5-hinh
+    ly_do: "Lỗi phát hiện sau khi lên site (chủ repo báo, 29/10/2026): khối mermaid hiện nguyên mã vì site mới không vẽ Mermaid; thay bằng hình tĩnh của site (::hinh)."

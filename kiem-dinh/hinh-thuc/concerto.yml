@@ -11,6 +11,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 5, 29/10/2026; bổ sung sau review)
       review: Claude (review D5-gom, nhóm C, 29/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 5 (D5-L1 đến D5-L3): 7 đúng (2 có điều kiện, đã sửa theo: chữ concerto ở hinh-thuc/index, bỏ hai mốc chưa kiểm trong ghi chú Stravinsky; bỏ link COD Notre Dame school 404), 0 sai, 3 câu về site không kiểm độc lập được trên máy kiểm (người gom kiểm lại, khớp) (bao-cao/d5-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-10-29
+    nhanh: mo/d5-hinh
+    ma_bam: sha256:89632324e4fa1d015e6c520bc0c0cc8f3da2224951eef48d1c2470cbc3c5cae9
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/d5-hinh: vẽ lại sơ đồ mermaid thành hình tĩnh, 29/10/2026)"
+      luot_2: "Claude Opus 5.5, agent độc lập (mo/d5-hinh: đối chiếu hình với khối mermaid cũ, chữ trang và ảnh chụp, 29/10/2026)"
+      review: Claude Opus 5.5 (mo/d5-hinh, 29/10/2026)
+      kiem_mau: "chủ repo báo lỗi (khối mermaid hiện nguyên mã, 29/10/2026); không kiểm mẫu riêng: chỉ đổi cách vẽ sơ đồ, chữ giữ nguyên"
 nguon:
   - id: cod-concerto
     bac: 2
@@ -147,7 +156,7 @@ nhan_dinh:
     nguon:
       - listen-rit
     ket_qua: da-sua
-    ghi_chu: 'Listen: ritornello ở giọng khác khi chương tiến triển, trở lại chủ âm ở cuối. Chữ cũ ghi ritornello đầu ở "giọng chính"; nguồn đã mở không nói giọng của lần đầu nên sơ đồ ghi "mở đầu". Sơ đồ chỉ là mẫu. Kiểm mẫu D5: chủ repo không mở được trang Listen (tên miền phụ không phân giải trên máy kiểm), kết luận đúng theo Grout/Palisca (qua Wikipedia, Ritornello): "The first and last statements are in the tonic". Người gom mở lại trang Listen ngày 29/10/2026: ritornello "usually it is played in different keys as the movement proceeds", cuối chương "the orchestral ritornello returns in the tonic key".'
+    ghi_chu: 'Listen: ritornello ở giọng khác khi chương tiến triển, trở lại chủ âm ở cuối. Chữ cũ ghi ritornello đầu ở "giọng chính"; nguồn đã mở không nói giọng của lần đầu nên sơ đồ ghi "mở đầu". Sơ đồ chỉ là mẫu. Kiểm mẫu D5: chủ repo không mở được trang Listen (tên miền phụ không phân giải trên máy kiểm), kết luận đúng theo Grout/Palisca (qua Wikipedia, Ritornello): "The first and last statements are in the tonic". Người gom mở lại trang Listen ngày 29/10/2026: ritornello "usually it is played in different keys as the movement proceeds", cuối chương "the orchestral ritornello returns in the tonic key". mo/d5-hinh: sơ đồ nay là hình tĩnh của site (trước đây khối mermaid hiện nguyên mã); chữ và thứ tự giữ nguyên.'
     luot_2: dung
     luot_2_nguon: [ "https://gcp-web.sjsu.edu/people/gordon.haramaki/courses/baroque/s1/9.-Vivaldi-and-Ritornello-Form.pdf", "https://teoria.com/en/articles/2021/vivaldi-seasons/primavera/01.php" ]
     luot_2_ghi_chu: Sơ đồ rút gọn (4 ritornello, 3 độc tấu); SJSU nói Vivaldi thường dùng 5 ritornello xen 4 đoạn độc tấu. Số lần lặp thay đổi nên vẫn chấp nhận được.
@@ -390,12 +399,18 @@ nhan_dinh:
     ghi_chu: Như n14.
     luot_2: dung
     luot_2_nguon: [ "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/concerto", "https://human.libretexts.org/Courses/Prince_Georges_Community_College/Music_Appreciation%3A_A_Topical_Approach_to_Music_Genre_and_Style/08%3A_The_Instrumental_Concerto/8.04%3A_Concertos_in_the_Classical_Era" ]
+  - id: n35
+    cau: "Hình form-ritornello (thay sơ đồ mermaid): ritornello mở đầu, độc tấu, ritornello giọng khác, độc tấu, ritornello giọng khác, độc tấu, ritornello giọng chính; chú thích ghi là sơ đồ mẫu."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Đối chiếu từng ô, nhãn và nhánh của hình với khối mermaid cũ (doi_chu) và với chữ trên trang; kiểm thử tests/hinh-tinh.test.mjs kiểm chữ của hình. Ảnh chụp bản build ở màn hình rộng và điện thoại, sáng và tối: đọc được, không tràn ngang. Lượt 2 (agent độc lập): giữ đủ nhãn, nhánh, thứ tự; góp ý đã làm: hình fugue chuyển xuống dưới đoạn giới thiệu BWV 847, đoạn chuyển một ô trải hai bè, đáp đề cùng màu chủ đề; rondo không xuống dòng trên điện thoại."
+    review: dung
 khuong_nhac: []
 ghi_chu: 'Trang concerto và ritornello (tầng lõi), không có khối abc (chỉ bảng, một sơ đồ mermaid và quiz). Nguồn chính: COD qua Encyclopedia.com (concerto, concerto grosso, cadenza), Listen 8e và LCS Productions (ritornello), OMT (Rondo, điệp khúc ở chủ âm), Humanities LibreTexts và Carnegie Mellon (concerto Cổ điển, double exposition), Teoria (Vivaldi, Mùa xuân), IMSLP (Corelli, Handel Op. 6), chú giải chương trình của Bach Choir of Bethlehem, Cleveland Orchestra, Indianapolis Symphony, LA Phil, Reading Symphony (WebFetch ngày 29/10/2026, bản tóm tắt chữ; chỗ quan trọng đã hỏi lại để lấy câu nguyên văn). Chữ đã sửa: bỏ "Vivaldi và Bach dùng" (Bach không có nguồn) thành "Concerto Baroque, như của Vivaldi" (n3), "điệp khúc nhỏ" thành "lần quay lại nhỏ" (n4), bỏ "khoe kỹ thuật, chuyển giọng" (n7), sơ đồ không còn nói ritornello đầu ở "giọng chính" (n8), so sánh với rondo (n9), "mẫu mực" (n13), "Từ Mozart" (n14), cadenza ứng tác (n17), bỏ "trữ tình, như một aria không lời" (n18), Mendelssohn không còn nói "ô nhịp thứ hai" (n20), "phá dần khuôn mẫu" (n22), Brandenburg số 5 "đoạn độc tấu dài như cadenza" (n25), Rachmaninoff "8 ô nhịp" (n28), mục Nguồn. Lô trước yêu cầu giữ (grep hinh-thuc/concerto trong kiem-dinh/): lịch sử Baroque (n44): giữ đường dẫn /opus/hinh-thuc/concerto/ và tiêu đề "Concerto và ritornello": KHỚP. Thống nhất với trang đã khóa: piano/the-loai (concerto thường ba chương, có cadenza): khớp; piano/hoa-am/ket (cadenza bắt đầu từ hợp âm 6/4 ở kết): trang concerto nói dàn nhạc dừng lại trên một hợp âm rồi độc tấu một mình, COD (cadenza) nói cadenza bắt đầu từ hợp âm chủ thể đảo hai (6/4): không mâu thuẫn; lịch sử Baroque (concerto và concerto grosso, Brandenburg số 5): khớp. Chữ trang không có năm sinh–mất nhà soạn nhạc. Câu ve-site trỏ trang chưa chuyển: n12, n24 (nghe-nhac/vivaldi-mua-xuan), n27 (nghe-nhac/mendelssohn-violin), n29 (nghe-nhac/rachmaninoff-2), n31 (tai-lieu-tham-khao). Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): ritornello, tutti, concerto grosso, concertino, ripieno; concerto, cadenza, rondo, sonata đã có. Chưa chắc: không còn.'
 doi_chu:
   - cu: Concerto là tác phẩm cho một (hoặc vài) nhạc cụ độc tấu cùng dàn nhạc. Sức hấp dẫn của nó nằm ở cuộc "đối thoại", có khi là "tranh tài", giữa một người và số đông.
     moi: Concerto là tác phẩm cho một (hoặc vài) nhạc cụ độc tấu cùng dàn nhạc. Khi nghe, hãy để ý cuộc đối đáp, có khi là tranh tài, giữa một người và số đông.
-    ly_do: "n2 (khuyen-tap): nhận xét cảm nhận chuyển thành lời gợi ý nghe.; Mô tả (lượt 1 D5-L2): đổi theo câu mở đầu đã sửa. Câu về sức hấp dẫn chuyển thành lời gợi ý nghe."
+    ly_do: "n2 (khuyen-tap): nhận xét cảm nhận chuyển thành lời gợi ý nghe.; Mô tả (lượt 1 D5-L2): đổi theo câu mở đầu đã sửa. Câu về sức hấp dẫn chuyển thành lời gợi ý nghe.; Mô tả (lượt 1 D5-L2/L1): đổi theo câu mở đầu đã sửa."
   - cu: 'Vivaldi và Bach dùng hình thức ritornello (tiếng Ý: "điệp khúc nhỏ"):'
     moi: 'Concerto Baroque, như của Vivaldi, thường dùng hình thức ritornello (tiếng Ý: "lần quay lại nhỏ"):'
     ly_do: 'n3, n4 (da-sua): LCS và Teoria; nguồn đã mở không nói về Bach; "little return".'
@@ -405,9 +420,8 @@ doi_chu:
       - Khác với rondo, ritornello quay lại ở giọng khác nhau và thường bị rút ngắn; nó vừa là điệp khúc, vừa là "cột mốc" chuyển giọng.
     moi:
       - "Xen giữa là các đoạn độc tấu (solo): nhạc cụ độc tấu chơi nhanh và điêu luyện hơn."
-      - flowchart LR R1["Ritornello<br/>mở đầu"] --> S1["Độc tấu"] --> R2["Ritornello<br/>giọng khác"] --> S2["Độc tấu"] --> R3["Ritornello<br/>giọng khác"] --> S3["Độc tấu"] --> R4["Ritornello<br/>giọng chính"]
       - Khác với rondo, nơi điệp khúc luôn trở lại ở chủ âm, ritornello quay lại ở giọng khác nhau và thường chỉ là một phần của đoạn gốc.
-    ly_do: 'n7 (da-sua): Listen; bỏ "chuyển giọng" không nguồn.; n8 (da-sua): nguồn không nói giọng của ritornello đầu.; n9 (da-sua): OMT Rondo và Listen; bỏ ẩn dụ "cột mốc".'
+    ly_do: 'n7 (da-sua): Listen; bỏ "chuyển giọng" không nguồn.; n8 (da-sua): nguồn không nói giọng của ritornello đầu.; n9 (da-sua): OMT Rondo và Listen; bỏ ẩn dụ "cột mốc".; mo/d5-hinh: sơ đồ mermaid (site mới không vẽ, hiện nguyên mã) thay bằng hình tĩnh ::hinh{ten="form-ritornello"}, giữ chữ của sơ đồ.'
   - cu: "Đi qua một tác phẩm: Vivaldi Mùa xuân, chương 1 là ví dụ mẫu mực, có hướng dẫn nghe chi tiết."
     moi: "Đi qua một tác phẩm: Vivaldi Mùa xuân, chương 1 là một ví dụ rõ về ritornello, có hướng dẫn nghe chi tiết."
     ly_do: 'n13 (da-sua): bỏ xếp hạng "mẫu mực".'
@@ -447,3 +461,7 @@ doi_chu:
   - cu: "câu hỏi: Cadenza là gì? | ✓ Đoạn độc tấu tự do khi dàn nhạc dừng lại | Chương chậm của concerto | Đoạn dàn nhạc chơi một mình | Thời Mozart thường được ứng tác."
     moi: "câu hỏi: Cadenza là gì? | ✓ Đoạn độc tấu tự do khi dàn nhạc dừng lại | Chương chậm của concerto | Đoạn dàn nhạc chơi một mình | Vốn được ứng tác; về sau nhà soạn nhạc ngày càng viết sẵn."
     ly_do: "n17 (da-sua): cadenza vốn ứng tác, từ thời Mozart và Beethoven nhà soạn nhạc ngày càng viết sẵn (COD); lời giải thích câu hỏi đổi theo."
+mo_khoa:
+  - ngay: 2026-10-29
+    nhanh: mo/d5-hinh
+    ly_do: "Lỗi phát hiện sau khi lên site (chủ repo báo, 29/10/2026): khối mermaid hiện nguyên mã vì site mới không vẽ Mermaid; thay bằng hình tĩnh của site (::hinh)."

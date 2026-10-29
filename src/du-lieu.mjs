@@ -390,13 +390,15 @@ export function boNap(ten) {
 
 /**
  * File mã mà HTML đã dựng của trang phụ thuộc: schema, bản build và khóa (src/khoa.mjs), danh sách trang trong bản
- * build (src/ban-build.mjs) và mọi plugin trong src/plugins/ (thêm plugin thì tự tính).
+ * build (src/ban-build.mjs), mọi plugin trong src/plugins/ (thêm plugin thì tự tính) và mọi hình tĩnh
+ * src/components/hinh/*.html (::hinh chèn nguyên file lúc dựng; mo/d5-hinh: sửa hình mà trang giữ HTML cũ).
  */
 export const tepDauVet = () => [
 	'src/du-lieu.mjs',
 	'src/ban-build.mjs',
 	'src/khoa.mjs',
 	...fs.readdirSync(path.join(GOC, 'src/plugins')).sort().map((f) => `src/plugins/${f}`),
+	...fs.readdirSync(path.join(GOC, 'src/components/hinh')).filter((f) => f.endsWith('.html')).sort().map((f) => `src/components/hinh/${f}`),
 ];
 
 /**
