@@ -25,7 +25,7 @@ Luôn đi từ **dễ** đến **khó**:
 | **6. Sắc thái** | To – nhỏ đột ngột từng khối? Chuyển dần? Dải rất rộng? | [Bài 14](/opus/nhac-ly/14-ky-hieu-bieu-dien/) |
 | **7. Hình thức** | Có đoạn quay lại không? Hai chủ đề tương phản? Một mẫu lặp liên tục? | [Hình thức](/opus/hinh-thuc/), [bài 31](/opus/nhac-ly/31-hinh-thuc-nho/) |
 
-**Mẹo quan trọng nhất:** đừng cố nghe cả 7 yếu tố cùng lúc. Bắt đầu với **biên chế** và **kết cấu**: chỉ hai yếu tố này đã đủ để phân biệt Baroque với Cổ điển trong phần lớn trường hợp.
+**Mẹo quan trọng nhất:** đừng cố nghe cả 7 yếu tố cùng lúc. Bắt đầu với **biên chế** và **kết cấu**, rồi thêm từng yếu tố khi tai đã quen.
 
 ## Luyện tập
 

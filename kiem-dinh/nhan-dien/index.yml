@@ -1,0 +1,76 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhan-dien/index
+trang: src/content/docs/nhan-dien/index.md
+nguon_cu: ../opus-zero/docs/nhan-dien/index.md
+tang: khung
+lan:
+  - so: 1
+    ngay: 2026-10-29
+    nhanh: moi/d5-l3
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D5-L3 lượt 1, phần B)
+      luot_2: null
+      review: null
+      kiem_mau: null
+nguon: []
+nhan_dinh:
+  - id: i1
+    cau: "Quy trình ba câu hỏi dẫn tới ba trang: Nhận diện thể loại qua biên chế (/opus/nhan-dien/the-loai/), So sánh các thời kỳ (/opus/nhan-dien/so-sanh-thoi-ky/), Dấu vân tay nhà soạn nhạc (/opus/nhan-dien/dau-van-tay/)."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm src/content/docs/nhan-dien/: ba trang có, tiêu đề khớp."
+    review: dung
+  - id: i2
+    cau: "Bảng bảy yếu tố dẫn tới: Dàn nhạc (/opus/nhac-cu/dan-nhac/), bài 28 (kết cấu), bài 30 (phát triển môtip), bài 12, 23, 32 (hòa âm), bài 15 (tiết tấu), bài 14 (sắc thái), Hình thức (/opus/hinh-thuc/) và bài 31 (hình thức nhỏ)."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Kiểm src/content/docs/: các trang có, tiêu đề khớp: 28 Kết cấu âm nhạc; 30 Phát triển môtip và cấu trúc câu; 12 Hòa âm chức năng; 23 Hợp âm mượn; 32 Kỹ thuật thế kỷ 20; 15 Tiết tấu nâng cao; 14 Ký hiệu biểu diễn; 31 Hình thức nhỏ; hinh-thuc/index "Hình thức & thể loại". Ràng buộc lô trước: nhac-ly/28-ket-cau (hàng "2. Kết cấu" → bài 28) và nhac-ly/index n8 (link 28, 30, 31, 32, 12, 23, 14, 15; không có bài 29): khớp.'
+    review: dung
+  - id: i3
+    cau: Bảng bảy yếu tố có link /opus/nhac-cu/nhac-cu-khac/ (Nhạc cụ khác).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Trang đích chưa chuyển; kiểm ~/w/opus-zero/docs/nhac-cu/nhac-cu-khac.md (có). Lô chuyển nhac-cu/nhac-cu-khac phải giữ đường dẫn ấy; còn không thì sửa dòng "1. Biên chế" của trang này theo thủ tục mở khóa.
+    review: dung
+  - id: i4
+    cau: "Mẹo: đừng cố nghe cả 7 yếu tố cùng lúc; bắt đầu với biên chế và kết cấu, rồi thêm từng yếu tố khi tai đã quen."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Chữ cũ: "…chỉ hai yếu tố này đã đủ để phân biệt Baroque với Cổ điển trong phần lớn trường hợp". Chữ mới: "…rồi thêm từng yếu tố khi tai đã quen." Lý do: vế "đã đủ để phân biệt… phần lớn trường hợp" là khẳng định về hiệu quả nhận diện, không có nguồn; bỏ. Phần còn lại là lời khuyên. Ket_qua ghi khong-can-nguon vì công cụ khóa đòi nguồn cho da-sua (như n14, n23 của bài 20).'
+  - id: i5
+    cau: "Bảng Luyện tập: trang Luyện nghe nhận diện (/opus/nhan-dien/luyen-nghe/) có 10 đoạn nhạc ngắn để đoán thời kỳ và phần nhận biết kết cấu."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Kiểm src/scripts/nhan-dien.js: VI_DU có 10 khóa (5 thời kỳ x 2); trang luyen-nghe có mục "2. Nhận biết kết cấu" với ::cong-cu{ten="texture-trainer"}. Ràng buộc lô trước nhac-ly/28-ket-cau: giữ "2. Nhận biết kết cấu": khớp (thuộc phần A).'
+    review: dung
+  - id: i6
+    cau: Trang Nghe mù (/opus/nhan-dien/nghe-mu/) có 10 bản thu thật (giấy phép mở), tên tác phẩm ẩn đến khi trả lời, và phiếu nghe mù cho bản thu của riêng bạn.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển; kiểm ~/w/opus-zero/docs/nhan-dien/nghe-mu.md: "Bộ 10 bản thu thật" từ Wikimedia Commons, tên ẩn đến khi trả lời, phiếu nghe mù. Lô chuyển nghe-mu giữ đủ: 10 bản thu, tên ẩn, phiếu.'
+    review: dung
+  - id: i7
+    cau: "Lộ trình: tuần 1–2 đọc bảng so sánh và luyện nhận biết kết cấu mỗi ngày; tuần 3–4 đoán phong cách đến khi đúng 8/10 và luyện nhận biết kết; tháng 2 nghe mù với bản thu thật; tháng 3 trở đi đọc dấu vân tay nhà soạn nhạc."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên lên lịch tập; không có tuyên bố về thế giới. Không trái trang lõi khác.
+  - id: i8
+    cau: Link /opus/luyen-tai/nghe-tien-trinh/#luyen-voi-cong-cu có thật.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Trang luyen-tai/nghe-tien-trinh có tiêu đề kèm {#luyen-voi-cong-cu}.
+    review: dung
+khuong_nhac: []
+ghi_chu: 'Trang tầng khung (src/data/trang.yml); có nhận định vì đã sửa một câu và còn nhiều câu về site. Chỗ sửa: i4 (bỏ vế "đã đủ để phân biệt Baroque với Cổ điển"). Trang đích chưa chuyển cần giữ: /opus/nhac-cu/nhac-cu-khac/ (i3), /opus/nhan-dien/nghe-mu/ (i6). Thuật ngữ trang dùng: rubato (đã có). Không có khối abc.'
+doi_chu:
+  - cu: "Mẹo quan trọng nhất: đừng cố nghe cả 7 yếu tố cùng lúc. Bắt đầu với biên chế và kết cấu: chỉ hai yếu tố này đã đủ để phân biệt Baroque với Cổ điển trong phần lớn trường hợp."
+    moi: "Mẹo quan trọng nhất: đừng cố nghe cả 7 yếu tố cùng lúc. Bắt đầu với biên chế và kết cấu, rồi thêm từng yếu tố khi tai đã quen."
+    ly_do: "i4 (da-sua): vế khẳng định hiệu quả không có nguồn."

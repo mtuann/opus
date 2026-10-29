@@ -8,67 +8,67 @@ Khi đã nhận ra thời kỳ, bước tiếp theo là đoán **tác giả**. M
 ## Baroque
 
 **Vivaldi**
-: Năng lượng dồn dập, hợp âm rải và gam chạy nhanh trên violin; ritornello rõ ràng; nhiều **chuỗi** đi xuống; nhạc miêu tả (chim, bão). *Kiểm chứng:* [*Bốn Mùa*](/opus/nghe-nhac/vivaldi-mua-xuan/).
+: Violin độc tấu điêu luyện; ritornello rõ ràng; nhạc miêu tả (chim, bão). *Kiểm chứng:* [*Bốn Mùa*](/opus/nghe-nhac/vivaldi-mua-xuan/).
 
 **J. S. Bach**
-: **Phức điệu dày đặc**: luôn có nhiều bè độc lập cùng chuyển động; bè trầm có giai điệu riêng; hòa âm phong phú, nhiều nốt treo; mọi chi tiết đều "có lý". *Kiểm chứng:* Brandenburg Concerto, [Fugue BWV 847](/opus/hinh-thuc/fugue/).
+: **Phức điệu**: nhiều bè độc lập cùng chuyển động, nhất là trong fugue; viết nhiều cho organ và harpsichord, những nhạc cụ hợp với đối âm. *Kiểm chứng:* Brandenburg Concerto, [Fugue BWV 847](/opus/hinh-thuc/fugue/).
 
 **Handel**
-: Kết cấu **đơn giản và rộng rãi** hơn Bach; hợp xướng hùng tráng với những khối hợp âm lớn xen phức điệu; giai điệu dễ nhớ, kịch tính sân khấu. *Kiểm chứng:* *Messiah*, *Hallelujah*.
+: Nhiều hợp xướng (oratorio) và dùng cùng phong cách với opera của ông; trong hợp xướng, kết cấu chuyển giữa **chủ điệu** và **phức điệu**. *Kiểm chứng:* *Messiah*, *Hallelujah*.
 
 ## Cổ điển
 
 **Haydn**
-: **Hóm hỉnh**: dừng đột ngột, im lặng bất ngờ, kết giả; phát triển chủ đề rất chặt từ một ý nhỏ; nhiều chất dân gian. *Kiểm chứng:* [Giao hưởng số 94](/opus/nghe-nhac/haydn-94/).
+: **Hóm hỉnh**: bất ngờ (như hợp âm to đột ngột trong "Surprise"), kết giả; xây cấu trúc lớn từ những môtip ngắn, đơn giản; hay dùng chất dân gian. *Kiểm chứng:* [Giao hưởng số 94](/opus/nghe-nhac/haydn-94/).
 
 **Mozart**
-: Giai điệu **ca hát** tự nhiên như opera; câu nhạc cân đối hoàn hảo; bè đệm Alberti; chuyển sắc trưởng – thứ trong chớp mắt; "dễ mà khó". *Kiểm chứng:* [Giao hưởng số 40](/opus/nghe-nhac/mozart-40/), Sonata K. 545.
+: Cảm giác về hình thức và sự cân đối; bề ngoài rạng rỡ, vui nhưng có mạch u sầu bên dưới; nhạc opera nới rộng nghệ thuật của ca sĩ; đệm Alberti, như đầu Sonata K. 545. *Kiểm chứng:* [Giao hưởng số 40](/opus/nghe-nhac/mozart-40/), Sonata K. 545.
 
 **Beethoven**
-: **Môtip ngắn phát triển không ngừng** (xem [bài 30](/opus/nhac-ly/30-phat-trien-motip/)); **sforzando** nhấn bất ngờ; tương phản dữ dội; coda dài như phần phát triển thứ hai; cảm giác đấu tranh rồi chiến thắng. *Kiểm chứng:* [Giao hưởng số 5](/opus/nghe-nhac/beethoven-5/).
+: **Phát triển một ý nhạc nhỏ** qua nhiều biến đổi (xem [bài 30](/opus/nhac-ly/30-phat-trien-motip/)), như phân mảnh chủ đề trong Giao hưởng số 5; dùng nhiều **sforzando**; coda mở rộng thành cao trào; các tác phẩm giai đoạn giữa thường được gọi là "anh hùng", thể hiện đấu tranh. *Kiểm chứng:* [Giao hưởng số 5](/opus/nghe-nhac/beethoven-5/).
 
 ## Lãng mạn
 
 **Schubert**
-: Giai điệu **hát** vô tận; chuyển đột ngột giữa trưởng và thứ trên cùng chủ âm; chuyển giọng sang giọng cách quãng 3; lặp lại dài, "trời đất rộng". *Kiểm chứng:* [*Con cá hồi*](/opus/nghe-nhac/schubert-ca-hoi/).
+: Giai điệu **hát** hơi dài; cách chuyển giọng độc đáo, hay dùng quan hệ quãng 3 nửa cung (chromatic mediant) giữa các hợp âm. *Kiểm chứng:* [*Con cá hồi*](/opus/nghe-nhac/schubert-ca-hoi/).
 
 **Chopin**
-: **Gần như chỉ viết cho piano**; giai điệu như giọng hát bel canto với nhiều trang trí; tay trái rải rộng; **rubato**; điệu nhảy Ba Lan (mazurka, polonaise). *Kiểm chứng:* [Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/).
+: **Chủ yếu viết cho piano** (mọi tác phẩm đều có piano); **rubato** là một phần lối chơi của ông; điệu nhảy Ba Lan (mazurka, polonaise) và nocturne. *Kiểm chứng:* [Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/).
 
 **Liszt**
-: **Kỹ thuật piano phô diễn**: quãng 8 liên tiếp, chuỗi nốt khắp bàn phím; giai điệu ở giữa, trang trí bao quanh; chuyển đổi chủ đề (một giai điệu biến hình thành nhiều tính cách). *Kiểm chứng:* *Liebestraum* số 3.
+: **Kỹ thuật piano phô diễn**; **chuyển đổi chủ đề**: dùng lại một chủ đề ở nhiều phần với tính cách khác nhau để thống nhất tác phẩm; mở đầu thể loại thơ giao hưởng. *Kiểm chứng:* *Liebestraum* số 3.
 
 **Wagner**
-: **Âm nhạc liền mạch**, gần như không bao giờ có kết trọn; hòa âm nửa cung căng thẳng kéo dài; dàn nhạc rất lớn, kèn đồng mạnh; leitmotif. *Kiểm chứng:* *Tristan und Isolde*, Khúc dạo đầu.
+: **Âm nhạc liền mạch**: "giai điệu bất tận" thay cho sự tách bạch giữa aria và recitative; hòa âm nửa cung dày đặc; dàn nhạc có vai trò và sức mạnh lớn hơn; leitmotif. *Kiểm chứng:* *Tristan und Isolde*, Khúc dạo đầu.
 
 **Brahms**
-: Kết cấu **dày, ấm**, nhiều bè giữa; **hemiola** và nhịp chồng (xem [bài 15](/opus/nhac-ly/15-tiet-tau-nang-cao/)); hình thức cổ điển chặt chẽ, nỗi buồn kìm nén. *Kiểm chứng:* [Giao hưởng số 4](/opus/nghe-nhac/brahms-4/).
+: Hình thức cổ điển chặt chẽ ("ý thức cổ điển về hình thức và trật tự"), bậc thầy đối âm; hay dùng **hemiola** và những xê dịch nhịp (xem [bài 15](/opus/nhac-ly/15-tiet-tau-nang-cao/)). *Kiểm chứng:* [Giao hưởng số 4](/opus/nghe-nhac/brahms-4/).
 
 **Tchaikovsky**
-: Giai điệu **lớn, dễ nhớ, cảm xúc dâng trào**; chuỗi đi lên dẫn đến cao trào; kèn gỗ độc tấu trên nền dây; nhịp điệu ballet. *Kiểm chứng:* [*Hồ thiên nga*](/opus/nghe-nhac/tchaikovsky-ho-thien-nga/).
+: Giai điệu **cuốn hút ngay, dễ nhớ**, đầy cảm xúc; kèn gỗ và dây luân phiên giữ giai điệu (như trong *Romeo và Juliet*); viết nhạc ballet. *Kiểm chứng:* [*Hồ thiên nga*](/opus/nghe-nhac/tchaikovsky-ho-thien-nga/).
 
 **Dvořák**
-: Chất **dân gian Séc** (và Mỹ); giai điệu ngũ cung; nhịp nhảy múa; phối khí trong sáng. *Kiểm chứng:* [Giao hưởng số 9](/opus/nghe-nhac/dvorak-9-largo/).
+: Chất **dân gian Séc** (nhịp điệu của Moravia và Bohemia) và ảnh hưởng nhạc Mỹ (spiritual); giai điệu ngũ cung thời kỳ ở Mỹ. *Kiểm chứng:* [Giao hưởng số 9](/opus/nghe-nhac/dvorak-9-largo/).
 
 ## Thế kỷ 20
 
 **Debussy**
-: **Hợp âm trượt song song**; gam toàn cung và ngũ cung; nhịp mơ hồ; rất nhỏ, như sương. *Kiểm chứng:* [*Clair de lune*](/opus/piano/tac-pham/debussy-clair-de-lune/), *Voiles* và *La cathédrale engloutie* trong [*Préludes*](/opus/nghe-nhac/debussy-preludes/), *Prélude à l'après-midi d'un faune*.
+: **Hợp âm trượt song song**; gam toàn cung và ngũ cung; chuyển giọng không chuẩn bị; hòa âm nhiều khi mơ hồ về giọng. *Kiểm chứng:* [*Clair de lune*](/opus/piano/tac-pham/debussy-clair-de-lune/), *Voiles* và *La cathédrale engloutie* trong [*Préludes*](/opus/nghe-nhac/debussy-preludes/), *Prélude à l'après-midi d'un faune*.
 
 **Ravel**
-: Phối khí **sắc nét, chính xác** như đồng hồ Thụy Sĩ; hòa âm 7 và 9 trong veo; ảnh hưởng điệu nhảy Tây Ban Nha và jazz. *Kiểm chứng:* [*Boléro*](/opus/nghe-nhac/ravel-bolero/).
+: Phối khí **chính xác, tinh xảo** (Stravinsky gọi ông là "thợ đồng hồ Thụy Sĩ"); hợp âm 9, có khi chạy song song; ảnh hưởng nhạc Tây Ban Nha, điệu nhảy và jazz. *Kiểm chứng:* [*Boléro*](/opus/nghe-nhac/ravel-bolero/).
 
 **Stravinsky**
-: **Ostinato** lặp lại với trọng âm dịch chuyển bất ngờ; đổi nhịp liên tục; các khối âm thanh cắt ghép đột ngột; đa điệu tính. *Kiểm chứng:* [*Le Sacre du printemps*](/opus/nghe-nhac/stravinsky-sacre/).
+: **Ostinato** dồn dập, có khi nhiều ostinato va vào nhau; nhịp điệu vượt qua vạch nhịp, trọng âm bất ngờ; hợp âm ghép, đa điệu tính (*Petrushka*). *Kiểm chứng:* [*Le Sacre du printemps*](/opus/nghe-nhac/stravinsky-sacre/).
 
 **Shostakovich**
-: Giai điệu dài, cô đơn ở violin hoặc kèn gỗ; hành khúc máy móc; châm biếm, valse méo mó; cao trào bị ép buộc. *Kiểm chứng:* [Giao hưởng số 5](/opus/nghe-nhac/shostakovich-5/).
+: Giai điệu dài ở violin, xen các đoạn độc tấu kèn gỗ; chất châm biếm, kỳ quái và hành khúc; cuối Giao hưởng số 5 là sự lặp lại căng thẳng, ám ảnh của Rê trưởng. *Kiểm chứng:* [Giao hưởng số 5](/opus/nghe-nhac/shostakovich-5/).
 
 **Reich và Glass**
-: Mẫu ngắn **lặp lại**, thay đổi rất chậm; Reich: lệch pha, tiết tấu đan nhau; Glass: hợp âm rải đều đặn, các khối lặp lại có đếm. *Kiểm chứng:* Reich *Music for 18 Musicians*, Glass *Glassworks*.
+: Mẫu ngắn **lặp lại**, thay đổi rất chậm; Reich: hai mẫu giống nhau lệch pha dần (*Piano Phase*); Glass: quá trình cộng dồn (thêm một lần lặp, bớt nốt cuối). *Kiểm chứng:* Reich *Music for 18 Musicians*, Glass *Glassworks*.
 
 **Pärt**
-: **Tĩnh lặng**, rất ít nốt; một bè đi theo gam, một bè theo hợp âm chủ như tiếng chuông (tintinnabuli). *Kiểm chứng:* [*Spiegel im Spiegel*](/opus/nghe-nhac/part-spiegel/).
+: **Tĩnh lặng**, giản dị: nốt đơn hoặc hợp âm ba, tempo chậm, âm thanh như tiếng chuông ngân (tintinnabuli). *Kiểm chứng:* [*Spiegel im Spiegel*](/opus/nghe-nhac/part-spiegel/).
 
 ## Tự kiểm tra
 
@@ -78,23 +78,25 @@ Khi đã nhận ra thời kỳ, bước tiếp theo là đoán **tác giả**. M
 - Chopin
 - Debussy
 > Phát triển môtip và sforzando là dấu hiệu của Beethoven.
-? Hợp âm trượt song song, gam toàn cung, rất nhỏ. Tác giả có thể nhất là ai?
+? Hợp âm trượt song song, gam toàn cung, hòa âm nhiều khi mơ hồ về giọng. Tác giả có thể nhất là ai?
 - Wagner
 + Debussy
 - Vivaldi
-> Dấu vân tay ấn tượng.
-? Piano độc tấu, giai điệu như giọng hát có trang trí, tay trái rải rộng, rubato. Tác giả có thể nhất là ai?
+> Hợp âm trượt song song và gam toàn cung là dấu vân tay của Debussy.
+? Chủ yếu viết cho piano, hay dùng rubato, mazurka, polonaise và nocturne. Tác giả có thể nhất là ai?
 + Chopin
 - Bach
 - Stravinsky
-> Phong cách nocturne.
-? Âm nhạc liền mạch, hòa âm nửa cung căng thẳng mãi không có kết trọn, dàn nhạc rất lớn. Tác giả có thể nhất là ai?
+> Piano, rubato, điệu nhảy Ba Lan và nocturne là dấu hiệu của Chopin.
+? Âm nhạc liền mạch như "giai điệu bất tận", hòa âm nửa cung dày đặc, leitmotif. Tác giả có thể nhất là ai?
 - Haydn
 - Pärt
 + Wagner
-> Như Khúc dạo đầu Tristan und Isolde.
+> Giai điệu bất tận, leitmotif và hòa âm nửa cung là dấu hiệu của Wagner, như trong Tristan und Isolde.
 ```
 
 ## Nguồn
 
-- Grove Music Online, mục từ về từng nhà soạn nhạc; Alex Ross, *The Rest Is Noise* (thế kỷ 20). Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
+- Clark và cộng sự, *Understanding Music: Past and Present*; Kuznetsova, *Music Appreciation II*; Jones, *Music Appreciation I* (giáo trình mở trên LibreTexts), các mục về từng nhà soạn nhạc.
+- *The Concise Oxford Dictionary of Music* (qua Encyclopedia.com), Encyclopaedia Britannica, Open Music Theory, Hutchinson (thế kỷ 20); bản nhạc Mutopia Project (Mozart, K. 545).
+- Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

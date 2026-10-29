@@ -131,10 +131,23 @@ test('mã ABC của mười đoạn: abcjs đọc không cảnh báo, ô nhịp 
 test('dữ liệu và chữ như recognition.js cũ', { skip: !coCu && 'không có ../opus-zero/' }, () => {
 	const { window } = chayCu();
 	const rec = window.OZRecognition;
-	assert.deepEqual(
-		Object.fromEntries(Object.entries(VI_DU).map(([k, v]) => [k, { period: v.thoi_ky, prog: v.prog, abc: v.abc, clues: v.dau_hieu }])),
-		j(rec.EX),
-	);
+	// lượt 1 kiểm định D5-L3 sửa vài trường (hồ sơ kiem-dinh/nhan-dien/so-sanh-thoi-ky.yml): phần còn lại như file cũ
+	const DA_SUA = {
+		'baroque-1': ['clues'],
+		'classical-1': ['abc', 'clues'],
+		'romantic-2': ['clues'],
+		'impressionist-1': ['clues'],
+		'modern-1': ['abc'],
+		'modern-2': ['clues'],
+	};
+	const moi = Object.fromEntries(Object.entries(VI_DU).map(([k, v]) => [k, { period: v.thoi_ky, prog: v.prog, abc: v.abc, clues: v.dau_hieu }]));
+	const cu = j(rec.EX);
+	for (const [k, ts] of Object.entries(DA_SUA))
+		for (const tr of ts) {
+			assert.notDeepEqual(moi[k][tr], cu[k][tr], `${k}.${tr} đã sửa`);
+			cu[k][tr] = moi[k][tr];
+		}
+	assert.deepEqual(moi, cu);
 	assert.deepEqual(FJ, j(rec.FJ));
 	const src = fs.readFileSync(path.join(JS_CU, 'recognition.js'), 'utf8');
 	const hang = (ten) => vm.runInNewContext(`(${new RegExp(`const ${ten} = (\\{[^}]*\\});`).exec(src)[1]})`);

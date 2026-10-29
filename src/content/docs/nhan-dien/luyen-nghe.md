@@ -3,7 +3,7 @@ title: Luyện nghe nhận diện
 description: Hai công cụ luyện tai cho kỹ năng nhận diện (công cụ nhận biết kết nằm ở bài Nghe tiến trình hòa âm). Tất cả phát bằng âm thanh tổng hợp trong trình duyệt; mỗi…
 ---
 
-Hai công cụ luyện tai cho kỹ năng nhận diện (công cụ nhận biết kết nằm ở bài [Nghe tiến trình hòa âm](/opus/luyen-tai/nghe-tien-trinh/#luyen-voi-cong-cu)). Tất cả phát bằng âm thanh tổng hợp trong trình duyệt; mỗi câu đều có đáp án và giải thích. Kết quả được tính vào [nhật ký luyện tập](/opus/luyen-tap/nhat-ky/).
+Hai công cụ luyện tai cho kỹ năng nhận diện (công cụ nhận biết kết nằm ở bài [Nghe tiến trình hòa âm](/opus/luyen-tai/nghe-tien-trinh/#luyen-voi-cong-cu)). Tất cả phát bằng âm thanh tổng hợp trong trình duyệt; mỗi câu đều có đáp án; ở phần đoán phong cách, mỗi đoạn còn kèm các dấu hiệu. Kết quả được tính vào [nhật ký luyện tập](/opus/luyen-tap/nhat-ky/).
 
 ## 1. Đoán phong cách
 

@@ -32,7 +32,7 @@ export const VI_DU = {
 			"K:G\n[V:1] G2B2 d2g2 f2a2 d2f2 | e2g2 c2e2 d2f2 B2d2 | c2e2 A2c2 B2d2 G2B2 | A4 !trill!A3G G8 |]\n[V:2] G,4 B,4 D,4 D4 | C,4 C4 B,,4 B,4 | A,,4 A,4 G,,4 G,4 | D,4 D4 G,,8 |]",
 		dau_hieu: [
 			"Harpsichord",
-			"Chuyển động móc kép liên tục, đều như máy",
+			"Chuyển động móc đơn liên tục, nhịp đều",
 			"Chuỗi đi xuống: cùng một hình nốt lặp lại thấp dần (xem bài 29)",
 			"Bè trầm nhảy quãng 8, đi đều từng phách",
 			"Láy rền (trill) ở kết",
@@ -58,12 +58,12 @@ export const VI_DU = {
 		abc:
 			"X:1\nL:1/8\nM:4/4\nQ:1/4=112\n" +
 			dauBe(0) +
-			"K:C\n[V:1] E2 G2 c3 B | A2 c2 G4 | F2 A2 E2 G2 | D6 z2 | E2 G2 c3 B | A2 c2 G4 | F2 D2 G2 B,2 | C6 z2 |]\n[V:2] C,G,E,G, C,G,E,G, | F,A,CA, E,G,CG, | F,A,CA, C,G,E,G, | B,,G,D,G, B,,G,D,G, | C,G,E,G, C,G,E,G, | F,A,CA, E,G,CG, | D,F,A,F, G,,D,B,,D, | C,G,E,G, C,4 |]",
+			"K:C\n[V:1] E2 G2 c3 B | A2 c2 G4 | F2 A2 E2 G2 | D6 z2 | E2 G2 c3 B | A2 c2 G4 | F2 D2 G2 B,2 | C6 z2 |]\n[V:2] C,G,E,G, C,G,E,G, | F,CA,C E,CG,C | F,CA,C C,G,E,G, | B,,G,D,G, B,,G,D,G, | C,G,E,G, C,G,E,G, | F,CA,C E,CG,C | D,A,F,A, G,,D,B,,D, | C,G,E,G, C,4 |]",
 		dau_hieu: [
 			"Piano",
 			"Tay trái đệm kiểu Alberti (thấp – cao – giữa – cao)",
 			"Câu nhạc 4 + 4 ô nhịp: câu hỏi dừng ở kết nửa, câu trả lời kết trọn",
-			"Chủ điệu rõ ràng, giai điệu đơn giản, hòa âm I – IV – V",
+			"Chủ điệu rõ ràng, giai điệu đơn giản, hòa âm chủ yếu I – IV – V",
 		],
 	},
 	"classical-2": {
@@ -102,8 +102,8 @@ export const VI_DU = {
 			"K:C\n[V:1] !p![EGc]4 | !crescendo(![_E_Ac]4 | !crescendo)![E^GB]4 | !f![EGc]4 |]\n[V:2] C,4 | _A,,4 | E,4 | C,4 |]",
 		dau_hieu: [
 			"Dàn dây, âm thanh dày và ấm",
-			"Các hợp âm trưởng cách nhau quãng 3 (Đô – La♭ – Mi – Đô): liên hệ quãng 3 nửa cung, rất được Schubert, Liszt, Wagner yêu thích",
-			"Mỗi bè chỉ dịch nửa cung, nhưng màu sắc đổi hẳn",
+			"Các hợp âm trưởng cách nhau quãng 3 (Đô – La♭ – Mi – Đô): liên hệ quãng 3 nửa cung",
+			"Ba bè trên chỉ dịch tối đa nửa cung (bè trầm nhảy quãng 3), nhưng màu sắc đổi hẳn",
 			"To dần rồi bùng lên",
 		],
 	},
@@ -116,7 +116,7 @@ export const VI_DU = {
 			"K:C\n[V:1] !pp![DFAc]2 [EGBd]2 | [FAce]2 [EGBd]2 | [DFAc]2 [CEGB]2 | [DFAc]4 |]\n[V:2] C,,4- | C,,4- | C,,4- | C,,4 |]",
 		dau_hieu: [
 			"Rất nhỏ (pp)",
-			"Các hợp âm bảy trượt song song cùng một hình dạng (planing), không theo quy tắc dẫn bè",
+			"Các hợp âm bảy chuyển động song song, mọi bè cùng đi một hướng (planing), không theo quy tắc dẫn bè",
 			"Một nốt trầm giữ suốt (âm nền)",
 			"Không có kết, không có cảm giác \"về nhà\"",
 		],
@@ -140,7 +140,7 @@ export const VI_DU = {
 		abc:
 			"X:1\nL:1/8\nM:4/4\nQ:1/4=132\n" +
 			dauBe(12) +
-			"K:C\n[V:1] e b d' b e b d' b | e b d' b e b d' b | e b d' e' e b d' e' | e b d' e' e b d' e' | e b d' e' ^f' e' d' b | e b d' e' ^f' e' d' b |]\n[V:2] [E,B,]8 | [E,B,]8 | [E,B,]8 | [E,B,]8 | [E,B,]8 | [E,B,]8 |]",
+			"K:C\n[V:1] e b d' b e b d' b | e b d' b e b d' b | e b d' e' e b d' e' | e b d' e' e b d' e' | e b d' ^f' e b d' ^f' | e b d' ^f' e b d' ^f' |]\n[V:2] [E,B,]8 | [E,B,]8 | [E,B,]8 | [E,B,]8 | [E,B,]8 | [E,B,]8 |]",
 		dau_hieu: [
 			"Marimba",
 			"Một mẫu ngắn lặp đi lặp lại (ostinato)",
@@ -157,8 +157,8 @@ export const VI_DU = {
 			"K:C\n[V:1] [_EG_B_d]2 [_EG_B_d] [_EG_B_d] | !>![_EG_B_d] [_EG_B_d] [_EG_B_d] !>![_EG_B_d] | [_EG_B_d] !>![_EG_B_d] [_EG_B_d]2 | [_EG_B_d] [_EG_B_d] !>![_EG_B_d] [_EG_B_d] |]\n[V:2] [_F,,_A,,_C,]2 [_F,,_A,,_C,] [_F,,_A,,_C,] | !>![_F,,_A,,_C,] [_F,,_A,,_C,] [_F,,_A,,_C,] !>![_F,,_A,,_C,] | [_F,,_A,,_C,] !>![_F,,_A,,_C,] [_F,,_A,,_C,]2 | [_F,,_A,,_C,] [_F,,_A,,_C,] !>![_F,,_A,,_C,] [_F,,_A,,_C,] |]",
 		dau_hieu: [
 			"Dàn dây dậm một hợp âm nghịch tai lặp đi lặp lại",
-			"Hai hợp âm khác giọng chồng lên nhau (đa điệu tính, kiểu Stravinsky)",
-			"Trọng âm rơi vào những chỗ không đoán trước, không theo phách mạnh",
+			"Hai hợp âm chồng lên nhau (hợp âm ghép): Mi♭7 trên Fa♭ trưởng, như hợp âm trong Le Sacre du printemps",
+			"Trọng âm thay đổi từ ô này sang ô khác, không theo một mẫu đều",
 		],
 	},
 };
