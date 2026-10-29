@@ -16,6 +16,7 @@ import { veLuyenTai } from '../scripts/luyen-tai.js';
 import { veMayDemNhip } from '../scripts/may-dem-nhip.js';
 import { TRANG_KE_HOACH, dungKeHoach, tinhKeHoach } from '../scripts/ke-hoach.js';
 import { dungBaiDangTap } from '../scripts/bai-dang-tap.js';
+import { NGUOI_VONG_DOI, bangMarkdown, chonNguoi, docDanhSach, veDongThoiGian, veVongDoi } from '../scripts/dong-thoi-gian.js';
 import { bangHep } from './bang-hep.mjs';
 
 export const esc = (s) =>
@@ -386,6 +387,8 @@ const HINH = {
 	circle: () => hinhVongQuangNam(),
 	functions: () => hinhChucNang(),
 	modes: () => hinhDieuThuc(),
+	// biểu đồ vòng đời từ 1650 (D5-L1), dựng từ nha-soan-nhac.yml thay hình tĩnh cũ: năm luôn khớp dữ liệu
+	lifespans: (trang) => veVongDoi(chonNguoi(docDanhSach(NGUOI_VONG_DOI), duLieuCho(trang).nguoi)),
 };
 
 /** ::hinh{ten="…"}: hình minh họa không thuộc bản ghi tác phẩm (vùng <!-- fig:… --> của trang cũ, trừ hình cấu trúc). */
@@ -791,4 +794,25 @@ export function hocTiep(rec, { tacPham, nguoi, base, trang }) {
 	}
 	if (!dong.length) return '';
 	return `<ul class="oz-hoc-tiep">${dong.map((d) => `<li>${d}</li>`).join('')}</ul>`;
+}
+
+// ---------- Dòng thời gian nhà soạn nhạc (D5-L1; src/scripts/dong-thoi-gian.js) ----------
+
+/**
+ * ::dong-thoi-gian{nguoi="…"}: biểu đồ vòng đời của các người trong danh sách (id, hay id:cách viết khác của tên), dựng
+ * từ nha-soan-nhac.yml lúc build. Trả về { html, ds }: ds (danh sách đã đọc) để ::bang-nha-soan-nhac cùng trang dùng lại.
+ * @param {Map<string, object>} nguoi bản ghi người theo id (trang đã khóa: chỉ đọc trường đã khóa)
+ */
+export function dongThoiGian(chu, nguoi, namNay) {
+	const ds = docDanhSach(chu);
+	return { html: veDongThoiGian(chonNguoi(ds, nguoi), { namNay }), ds };
+}
+
+/**
+ * ::bang-nha-soan-nhac: bảng | Nhà soạn nhạc | Sinh | Mất | Thời kỳ | theo thứ tự của danh sách, dựng như bảng Markdown
+ * viết tay (cùng Sätteri và plugin bảng hẹp, như ::tu-dien): so chữ với site cũ và tìm kiếm thấy chữ, không data-sinh.
+ */
+export function bangNhaSoanNhac(ds, nguoi) {
+	const { html } = markdownToHtml(bangMarkdown(chonNguoi(ds, nguoi)), { mdastPlugins: [chuAnToan], hastPlugins: [bangHep()], features: { smartPunctuation: false } });
+	return html.trim();
 }

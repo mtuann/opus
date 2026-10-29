@@ -12,7 +12,9 @@ const FILE = fs.readdirSync(THU_MUC_HINH).filter((f) => f.endsWith('.html'));
 const MAU_GIU = new Set([
 	// màu của vật được vẽ (D4-L1; D4-L2: vòng số ngón nền sáng, chữ mực, hình luon-ngon): phím trắng, phím đen và viền phím, da tay, thân đàn, ghế, áo; nằm trên nền sáng của chính vật
 	'#ffffff', '#1b1d22', '#4a4a4a', '#1f3a5f', '#e8eef5', '#f3d27a', '#bcd6f2', '#f1d3b8', '#d9c9a3', '#b0a48a', '#9fb5cf', '#4a5d73',
-	'#1b1b1b', '#fff', '#a9c7e8', '#f1d9a0', '#c9b6dd', '#7aa6d6', '#9fd0d0', '#8cc49a', '#e0b45e', '#c9a0dc', '#e98f7a', '#f3e3b8', '#e9b3a6', '#b6dcc1', '#d6d6d6']);
+	'#1b1b1b', '#fff', '#a9c7e8', '#f1d9a0', '#c9b6dd', '#7aa6d6', '#9fd0d0', '#8cc49a', '#e0b45e', '#c9a0dc', '#e98f7a', '#f3e3b8', '#e9b3a6', '#b6dcc1', '#d6d6d6',
+	// màu thời kỳ (D5-L1, hình periods; THOI_KY trong src/scripts/dong-thoi-gian.js): nền sáng, chữ #1b1b1b trên nó
+	'#c7d9a3']);
 
 test('chuyenHinh: bỏ xmlns, font-family; màu đậm thành biến; figure có not-content và data-sinh; chữ giữ nguyên', () => {
 	const cu = '<figure class="oz-figure"><svg class="oz-fig" viewBox="0 0 10 10" role="img" aria-label="A" xmlns="http://www.w3.org/2000/svg" font-family="X"><line stroke="#2F5582"/><text fill="#1b1b1b">Đô</text><text fill="#999">b</text></svg><figcaption>C</figcaption></figure>';

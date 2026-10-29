@@ -13,7 +13,8 @@ import { fileURLToPath } from 'node:url';
 import { parse } from 'yaml';
 import { chiDaKhoa, duLieuDaKiem } from '../du-lieu.mjs';
 import { docKhoa, truongDaKhoa } from '../khoa.mjs';
-import { congCu, docMoc, duLieuCho, hinh, hinhCauTruc, hocTiep, hopTacPham, khoiNghe, khuongAbc, quiz, tuDien } from './thanh-phan.mjs';
+import { bangNhaSoanNhac, congCu, docMoc, dongThoiGian, duLieuCho, hinh, hinhCauTruc, hocTiep, hopTacPham, khoiNghe, khuongAbc, quiz, tuDien } from './thanh-phan.mjs';
+import { docDanhSach } from '../scripts/dong-thoi-gian.js';
 
 /** Loại của trang tác phẩm theo đường dẫn: bai-hoc (piano/tac-pham/), nghe (nghe-nhac/). */
 function loaiTrang(trang) {
@@ -36,6 +37,24 @@ const CHI_THI = {
 	'cong-cu': { thuocTinh: ['ten*', '…'], ve: ({ tt, trang }) => congCu(tt, trang) },
 	// bảng thuật ngữ của một nhóm, dựng từ src/data/thuat-ngu.yml (D3-L5, trang Từ điển)
 	'tu-dien': { thuocTinh: ['nhom*'], ve: ({ tt, trang }) => tuDien(tt.nhom, duLieuCho(trang).thuatNgu) },
+	// dòng thời gian nhà soạn nhạc và bảng dữ liệu của nó, dựng từ src/data/nha-soan-nhac.yml (D5-L1): nguoi="id,id:tên,…";
+	// ::bang-nha-soan-nhac không ghi nguoi thì dùng danh sách của ::dong-thoi-gian đứng trước nó trong trang
+	'dong-thoi-gian': {
+		thuocTinh: ['nguoi*'],
+		ve: ({ tt, nguoi, rieng }) => {
+			const { html, ds } = dongThoiGian(tt.nguoi, nguoi);
+			rieng.dsNguoi = ds;
+			return html;
+		},
+	},
+	'bang-nha-soan-nhac': {
+		thuocTinh: ['nguoi'],
+		ve: ({ tt, nguoi, rieng }) => {
+			if (tt.nguoi === undefined && !rieng.dsNguoi)
+				throw new Error('::bang-nha-soan-nhac không có nguoi mà trước nó trong trang không có ::dong-thoi-gian{nguoi="…"}');
+			return bangNhaSoanNhac(tt.nguoi === undefined ? rieng.dsNguoi : docDanhSach(tt.nguoi), nguoi);
+		},
+	},
 };
 
 /** Tiêu đề mục chứa bảng mốc, ngay sau ::khoi-nghe{moc}. */
@@ -69,6 +88,8 @@ export function opusMarkdown({ base, docsDir, khoa = docKhoa }) {
 		// ::khoi-nghe{moc} vừa gặp: { so: số mốc, trongMuc: đã tới tiêu đề "Theo dõi khi nghe" chưa }, chờ bảng của mục ấy
 		// (Sätteri duyệt theo thứ tự trong trang). Trang hết mà chưa gặp bảng thì chưa bắt được: Sätteri không báo lúc hết cây.
 		let choMoc = null;
+		// trạng thái riêng của trang cho các chỉ thị (danh sách người của ::dong-thoi-gian cho ::bang-nha-soan-nhac)
+		const rieng = {};
 		return {
 			name: 'opus-markdown',
 			yaml(node) {
@@ -116,7 +137,7 @@ export function opusMarkdown({ base, docsDir, khoa = docKhoa }) {
 				if (muc.tacPham && !rec) throw loi(`::${node.name} cần trường tac_pham ở frontmatter (slug trong src/data/tac-pham.yml)`);
 				const nguoi = new Map(duLieu['nha-soan-nhac'].map((r) => [r.id, boc('nha-soan-nhac')(r)]));
 				try {
-					const html = muc.ve({ rec, tt, base, trang, nguoi, tacPham });
+					const html = muc.ve({ rec, tt, base, trang, nguoi, tacPham, rieng });
 					if (node.name === 'khoi-nghe' && choMoc) throw new Error(`khối nghe trước có moc mà chưa gặp bảng "${TIEU_DE_MOC}"`);
 					if (node.name === 'khoi-nghe' && tt.moc !== undefined) choMoc = { so: docMoc(tt.moc).length, trongMuc: false };
 					return { type: 'html', value: html };

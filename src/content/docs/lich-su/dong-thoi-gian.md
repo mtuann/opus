@@ -5,19 +5,9 @@ description: Mỗi thanh ngang là cuộc đời một nhà soạn nhạc; thanh
 
 Mỗi thanh ngang là cuộc đời một nhà soạn nhạc; thanh màu khác là người còn sống. Các dải nền là các thời kỳ. Di chuột (hoặc chạm) vào thanh để xem năm sinh, năm mất. Trên điện thoại, vuốt ngang để xem hết.
 
-::cong-cu{ten="timeline"}
+::dong-thoi-gian{nguoi="hildegard,machaut,josquin,palestrina,tallis,byrd,monteverdi,strozzi,purcell,vivaldi,bach:J. S. Bach,handel:G. F. Handel,haydn,mozart:W. A. Mozart,beethoven:L. van Beethoven,schubert,fanny-mendelssohn,mendelssohn,chopin,schumann,liszt,wagner,verdi,clara-schumann,brahms,bizet,tchaikovsky:P. I. Tchaikovsky,dvorak,grieg,puccini,elgar,mahler,debussy,sibelius,rachmaninoff,ravel,bartok,stravinsky,price,prokofiev,lili-boulanger,shostakovich,messiaen,gubaidulina,britten,hoang-viet,part,reich,glass,adams,saariaho,shaw"}
 
 Hãy để ý những điều thú vị mà dòng thời gian cho thấy: Bach và Handel sinh cùng năm 1685; Mozart mất khi Beethoven mới 20 tuổi; Chopin, Schumann và Liszt sinh trong vòng hai năm; Stravinsky sống từ thời Tchaikovsky còn sáng tác đến tận thời nhạc tối giản.
-
-
-<div class="oz-print-only">
-
-
-*Bản in của biểu đồ vòng đời (biểu đồ tương tác ở trên không in được):*
-
-::hinh{ten="lifespans"}
-
-</div>
 
 ## Sự kiện quan trọng
 
@@ -48,62 +38,9 @@ Hãy để ý những điều thú vị mà dòng thời gian cho thấy: Bach v
 
 ## Dữ liệu biểu đồ
 
-Thêm nhà soạn nhạc mới vào bảng dưới đây, biểu đồ sẽ tự cập nhật. Để trống cột "Mất" với người còn sống.
+Bảng dưới đây là số liệu của biểu đồ ở trên: năm sinh, năm mất và thời kỳ của từng người. Cột "Mất" để trống với người còn sống; dấu ~ trước năm sinh nghĩa là năm sinh chỉ biết khoảng.
 
-| Nhà soạn nhạc | Sinh | Mất | Thời kỳ |
-|---|---|---|---|
-| Hildegard von Bingen | 1098 | 1179 | Trung cổ |
-| Guillaume de Machaut | 1300 | 1377 | Trung cổ |
-| Josquin des Prez | 1450 | 1521 | Phục hưng |
-| Palestrina | 1525 | 1594 | Phục hưng |
-| Thomas Tallis | 1505 | 1585 | Phục hưng |
-| William Byrd | 1540 | 1623 | Phục hưng |
-| Claudio Monteverdi | 1567 | 1643 | Baroque |
-| Barbara Strozzi | 1619 | 1677 | Baroque |
-| Henry Purcell | 1659 | 1695 | Baroque |
-| Antonio Vivaldi | 1678 | 1741 | Baroque |
-| J. S. Bach | 1685 | 1750 | Baroque |
-| G. F. Handel | 1685 | 1759 | Baroque |
-| Joseph Haydn | 1732 | 1809 | Cổ điển |
-| W. A. Mozart | 1756 | 1791 | Cổ điển |
-| L. van Beethoven | 1770 | 1827 | Cổ điển/Lãng mạn |
-| Franz Schubert | 1797 | 1828 | Lãng mạn |
-| Fanny Mendelssohn | 1805 | 1847 | Lãng mạn |
-| Felix Mendelssohn | 1809 | 1847 | Lãng mạn |
-| Frédéric Chopin | 1810 | 1849 | Lãng mạn |
-| Robert Schumann | 1810 | 1856 | Lãng mạn |
-| Franz Liszt | 1811 | 1886 | Lãng mạn |
-| Richard Wagner | 1813 | 1883 | Lãng mạn |
-| Giuseppe Verdi | 1813 | 1901 | Lãng mạn |
-| Clara Schumann | 1819 | 1896 | Lãng mạn |
-| Johannes Brahms | 1833 | 1897 | Lãng mạn |
-| Georges Bizet | 1838 | 1875 | Lãng mạn |
-| P. I. Tchaikovsky | 1840 | 1893 | Lãng mạn |
-| Antonín Dvořák | 1841 | 1904 | Lãng mạn |
-| Edvard Grieg | 1843 | 1907 | Lãng mạn |
-| Giacomo Puccini | 1858 | 1924 | Lãng mạn |
-| Edward Elgar | 1857 | 1934 | Lãng mạn |
-| Gustav Mahler | 1860 | 1911 | Lãng mạn |
-| Claude Debussy | 1862 | 1918 | Thế kỷ 20 |
-| Jean Sibelius | 1865 | 1957 | Lãng mạn/Thế kỷ 20 |
-| Sergei Rachmaninoff | 1873 | 1943 | Thế kỷ 20 |
-| Maurice Ravel | 1875 | 1937 | Thế kỷ 20 |
-| Béla Bartók | 1881 | 1945 | Thế kỷ 20 |
-| Igor Stravinsky | 1882 | 1971 | Thế kỷ 20 |
-| Florence Price | 1887 | 1953 | Thế kỷ 20 |
-| Sergei Prokofiev | 1891 | 1953 | Thế kỷ 20 |
-| Lili Boulanger | 1893 | 1918 | Thế kỷ 20 |
-| Dmitri Shostakovich | 1906 | 1975 | Thế kỷ 20 |
-| Olivier Messiaen | 1908 | 1992 | Thế kỷ 20 |
-| Sofia Gubaidulina | 1931 | 2025 | Đương đại |
-| Benjamin Britten | 1913 | 1976 | Thế kỷ 20 |
-| Hoàng Việt | 1928 | 1967 | Thế kỷ 20 |
-| Arvo Pärt | 1935 | | Đương đại |
-| Steve Reich | 1936 | | Đương đại |
-| Philip Glass | 1937 | | Đương đại |
-| John Adams | 1947 | | Đương đại |
-| Kaija Saariaho | 1952 | 2023 | Đương đại |
-| Caroline Shaw | 1982 | | Đương đại |
+::bang-nha-soan-nhac
 
 ## Nguồn
 

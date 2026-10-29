@@ -1957,3 +1957,72 @@ html.oz-stand-open .main-pane {
 .sl-markdown-content .oz-plan-list {
 	margin-bottom: 0;
 }
+
+/* ---------- Dòng thời gian nhà soạn nhạc (D5-L1; ::dong-thoi-gian, src/scripts/dong-thoi-gian.js) ----------
+   SVG dựng lúc build. Rộng: khung cuộn ngang ở màn hình hẹp (trang không tràn), khi in co vừa trang. Dải nền thời kỳ cùng
+   màu với hình periods và lifespans, nhạt (độ đục thấp) để chữ theo màu chữ đọc được ở cả hai chế độ; thanh màu xanh mực,
+   người còn sống màu nhựa thông (biến --oz-h-*: có bản tối, sáng và in). */
+.oz-dtg-khung {
+	overflow-x: auto;
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 10px;
+}
+.oz-dtg-khung:focus-visible {
+	outline: 2px solid var(--sl-color-text-accent);
+	outline-offset: 2px;
+}
+.oz-dtg-svg {
+	display: block;
+	width: 100%;
+	min-width: 56rem;
+	height: auto;
+}
+.oz-dtg-dai {
+	fill-opacity: 0.2;
+}
+:root[data-theme='light'] .oz-dtg-dai {
+	fill-opacity: 0.3;
+}
+.oz-dtg-thoi-ky {
+	font-size: 11.5px;
+	font-weight: 600;
+	fill: currentColor;
+}
+.oz-dtg-nam {
+	font-size: 9.5px;
+	fill: currentColor;
+	fill-opacity: 0.75;
+}
+.oz-dtg-luoi {
+	stroke: currentColor;
+	stroke-opacity: 0.09;
+}
+.oz-dtg-thanh {
+	fill: var(--oz-h-xanh);
+}
+.oz-dtg-con-song .oz-dtg-thanh {
+	fill: var(--oz-h-vang);
+}
+.oz-dtg-ten {
+	font-size: 10.5px;
+	fill: currentColor;
+}
+.oz-dtg-hang:hover .oz-dtg-ten {
+	font-weight: 700;
+}
+@media print {
+	.oz-dtg-khung {
+		overflow: visible;
+		border: 0;
+	}
+	.oz-dtg-svg {
+		min-width: 0;
+	}
+	.oz-dtg-dai {
+		fill-opacity: 0.3;
+	}
+	.oz-dtg {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+}
