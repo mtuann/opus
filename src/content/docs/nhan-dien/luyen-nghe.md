@@ -20,3 +20,7 @@ Cùng một giai điệu (*Frère Jacques*) được phát theo bốn kết cấ
 ::cong-cu{ten="texture-trainer"}
 
 **Gợi ý:** chỉ một giai điệu → đơn âm. Giai điệu + hợp âm bên dưới → chủ điệu. Giai điệu thứ hai vào sau, bắt chước giai điệu đầu → phức điệu. Hai bản cùng giai điệu, một bản có thêm nốt luyến láy, vang cùng lúc → dị âm.
+
+Bốn kết cấu mà công cụ phát, vẽ thành piano roll (xem thêm [bài 28](/opus/nhac-ly/28-ket-cau/#nhin-thay-ket-cau)):
+
+::hinh{ten="texture-rolls"}

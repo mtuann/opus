@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 5, 29/10/2026; bổ sung sau review)
       review: Claude (review D5-gom, nhóm D, 29/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 5 (D5-L1 đến D5-L3): 7 đúng (2 có điều kiện, đã sửa theo: chữ concerto ở hinh-thuc/index, bỏ hai mốc chưa kiểm trong ghi chú Stravinsky; bỏ link COD Notre Dame school 404), 0 sai, 3 câu về site không kiểm độc lập được trên máy kiểm (người gom kiểm lại, khớp) (bao-cao/d5-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-10-29
+    nhanh: mo/d5-ket-cau
+    ma_bam: sha256:f7b7e331796aae97c1dd5d25e767a42d59b7aa4d35c1952444988060b3f4e686
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/d5-ket-cau: thêm hình texture-rolls, 29/10/2026)"
+      luot_2: "Claude Opus 5.5 (mo/d5-ket-cau: câu về site, đối chiếu hình với notKetCau trong luyen-tai.js và hồ sơ bài 28 đã khóa)"
+      review: Claude Opus 5.5 (mo/d5-ket-cau, 29/10/2026; ảnh chụp rộng và điện thoại, sáng và tối)
+      kiem_mau: "chủ repo yêu cầu thêm hình (29/10/2026); không kiểm mẫu riêng: hình đã khóa ở bài 28, chữ trang cũ không đổi"
 nguon:
   - id: js-lt
     bac: 1
@@ -205,9 +214,21 @@ nhan_dinh:
     ghi_chu: "Đã kiểm trong hồ sơ so-sanh-thoi-ky (b1a…m2c): có 6 chỗ phải sửa trong nhan-dien.js (baroque-1, classical-1 hai chỗ, romantic-2, impressionist-1, modern-1, modern-2). Hồ sơ này không lặp lại; xem ghi_chu của so-sanh-thoi-ky. Không sửa file .js. Review D5-gom: các chỗ sửa lượt 1 đề nghị đã có trong nhan-dien.js; review sửa thêm romantic-1 và modern-1 (dòng Dấu hiệu), ghi ở so-sanh-thoi-ky.yml n63, n78; mọi đoạn đã kiểm bằng nhạc lý trên mã thật (so-sanh-thoi-ky.yml n45–n82). node --test tests/nhan-dien.test.mjs đạt."
     luot_2: khong-chac
     luot_2_ghi_chu: Mô tả hành vi/nội dung ứng dụng (không phải nhạc lý); không kiểm được bằng nguồn ngoài.
+  - id: n22
+    cau: "Hình texture-rolls (bài 28) vẽ đúng bốn kết cấu mà công cụ nhận biết kết cấu phát; link bài 28 tới mục #nhin-thay-ket-cau."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Đối chiếu notKetCau() trong src/scripts/luyen-tai.js với hình: cùng giai điệu Frère Jacques (C D E C C D E C E F G E F G); chủ điệu đệm hợp âm I và V; phức điệu bè 2 vào sau hai ô, thấp hơn một quãng tám; dị âm bè 2 cao hơn một quãng tám, có nốt luyến láy. Hình đã kiểm và khóa ở nhac-ly/28-ket-cau. dist/nhac-ly/28-ket-cau/index.html có id nhin-thay-ket-cau."
+    review: dung
 khuong_nhac: []
 ghi_chu: 'Trang gồm hai công cụ; chữ trong công cụ đã đọc: nhan-dien.js (CHU_ND, VI_DU) và luyen-tai.js (FJ, KET_CAU, notKetCau, texture-trainer). Bốn kết cấu khớp bài 28 đã khóa. Lệch cần người giao quyết: tên "Frère Jacques" (n11). Chỗ phải sửa trong nhan-dien.js đã ghi ở kiem-dinh/nhan-dien/so-sanh-thoi-ky.yml (ghi_chu cấp hồ sơ và nhận định b1a…m2c). Không có chỗ phải sửa trong luyen-tai.js. Câu ve-site n4 trỏ trang chưa chuyển (luyen-tap/nhat-ky). Thuật ngữ chưa có hồ sơ: đơn âm, chủ điệu, phức điệu, dị âm đã có ở bài 28; luyến láy chưa có. Review D5-gom (nhóm D, 29/10/2026): tên Frère Jacques giữ (n11, Britannica và Carleton); soát nhãn đổi n2, n3, n12 thành ve-site.'
 doi_chu:
   - cu: Hai công cụ luyện tai cho kỹ năng nhận diện (công cụ nhận biết kết nằm ở bài Nghe tiến trình hòa âm). Tất cả phát bằng âm thanh tổng hợp trong trình duyệt; mỗi câu đều có đáp án và giải thích. Kết quả được tính vào nhật ký luyện tập.
     moi: Hai công cụ luyện tai cho kỹ năng nhận diện (công cụ nhận biết kết nằm ở bài Nghe tiến trình hòa âm). Tất cả phát bằng âm thanh tổng hợp trong trình duyệt; mỗi câu đều có đáp án; ở phần đoán phong cách, mỗi đoạn còn kèm các dấu hiệu. Kết quả được tính vào nhật ký luyện tập.
     ly_do: 'n3: công cụ kết cấu chỉ hiện "Đúng: …", không giải thích.'
+  - moi: "Bốn kết cấu mà công cụ phát, vẽ thành piano roll (xem thêm bài 28):"
+    ly_do: "n22 (mo/d5-ket-cau, chủ repo yêu cầu): thêm câu dẫn và hình texture-rolls (đã khóa ở bài 28) dưới gợi ý của công cụ nhận biết kết cấu."
+mo_khoa:
+  - ngay: 2026-10-29
+    nhanh: mo/d5-ket-cau
+    ly_do: "Chủ repo yêu cầu (29/10/2026): thêm hình texture-rolls (đã khóa ở bài 28) dưới gợi ý của công cụ nhận biết kết cấu, để thấy bốn kết cấu công cụ phát."
