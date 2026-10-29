@@ -43,6 +43,8 @@ export const KHOI = {
 	'bài đang tập': 'class="oz-bai-dang-tap',
 	'kế hoạch buổi tập': 'class="oz-ke-hoach',
 	'dòng thời gian': 'class="oz-figure oz-dtg',
+	'ví dụ phong cách': 'class="oz-vd-phong-cach"',
+	'đoán phong cách': 'class="oz-nd oz-tool',
 };
 
 /** Số trang đã đổi của nhánh được lấy làm mẫu: một lô của đợt 3 có tới 8 trang. */
