@@ -4,14 +4,14 @@ nguon_cu: ../opus-zero/docs/lich-su/thoi-ky/trung-co.md
 tang: loi
 lan:
   - so: 1
-    ngay: 2026-10-28
-    nhanh: moi/d5-l1
-    ma_bam: null
+    ngay: 2026-10-29
+    nhanh: moi/d5-gom
+    ma_bam: sha256:d9d20ea47eba7c0518205cf1a35f207661671ba50dac5ef18854e0e6b64d52e9
     nguoi:
       luot_1: Claude Sonnet 5.5 (D5-L1 lượt 1, phần B)
-      luot_2: null
+      luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 5, 29/10/2026; bổ sung sau review)
       review: Claude (review D5-gom, nhóm A, 29/10/2026)
-      kiem_mau: null
+      kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 5 (D5-L1 đến D5-L3): 7 đúng (2 có điều kiện, đã sửa theo: chữ concerto ở hinh-thuc/index, bỏ hai mốc chưa kiểm trong ghi chú Stravinsky; bỏ link COD Notre Dame school 404), 0 sai, 3 câu về site không kiểm độc lập được trên máy kiểm (người gom kiểm lại, khớp) (bao-cao/d5-gom/kiem-mau-ket-qua.yml)"
 nguon:
   - id: lt-2.2
     bac: 2
@@ -85,10 +85,6 @@ nguon:
     bac: 2
     ten: The Concise Oxford Dictionary of Music (Kennedy và Bourne) qua Encyclopedia.com, mục Polyphony
     link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/polyphony
-  - id: cod-notredame
-    bac: 2
-    ten: The Concise Oxford Dictionary of Music (Kennedy và Bourne) qua Encyclopedia.com, mục Notre Dame school
-    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/notre-dame-school
   - id: brit-leonin
     bac: 2
     ten: Encyclopaedia Britannica, Léonin
@@ -280,11 +276,10 @@ nhan_dinh:
     cau: Trường phái Notre-Dame ở Paris (Léonin, Pérotin), khoảng cuối thế kỷ 12 đến đầu thế kỷ 13, để lại những bộ organum hai bè (Léonin) và bốn bè (Pérotin).
     loai: lich-su
     nguon:
-      - cod-notredame
       - brit-leonin
       - brit-perotin
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "khoảng cuối thế kỷ 12 viết những bản organum lớn đầu tiên". "Lớn đầu tiên" không kiểm được; khoảng thời gian mở rộng theo Britannica (Pérotin hoạt động quanh 1200) và gắn mỗi người với số bè.'
+    ghi_chu: 'Chữ cũ: "khoảng cuối thế kỷ 12 viết những bản organum lớn đầu tiên". "Lớn đầu tiên" không kiểm được; khoảng thời gian mở rộng theo Britannica (Pérotin hoạt động quanh 1200) và gắn mỗi người với số bè. Kiểm mẫu D5 (chủ repo): đúng theo Britannica (Léonin: Magnus liber organi "a collection of two-voiced organum settings", khoảng 1170; Pérotin "is believed to have introduced the composition of polyphony in four parts", Viderunt và Sederunt bốn bè). Link COD mục Notre Dame school trả 404, đã bỏ khỏi nguồn của n11, n21, n22 (Britannica đủ cho cả ba).'
     luot_2: dung
     luot_2_nguon: [ "https://courses.lumenlearning.com/suny-musicapp-medieval-modern/chapter/perotinus-perotin-e", "https://nerd.wwnorton.com/ebooks/epub/concisehwm5anth/EPUB/content/1.3.1-chapter03.xhtml" ]
     luot_2_ghi_chu: "Léonin: organum duplum hai bè; Pérotin fl. khoảng 1200: ba, bốn bè; Viderunt omnes là organum quadruplum."
@@ -391,7 +386,6 @@ nhan_dinh:
     loai: ten
     nguon:
       - brit-perotin
-      - cod-notredame
     ket_qua: dung
     ghi_chu: "Britannica, Pérotin: Viderunt omnes (1198?) và Sederunt principes là organum bốn bè."
     luot_2: dung
@@ -402,7 +396,6 @@ nhan_dinh:
     loai: ten
     nguon:
       - brit-leonin
-      - cod-notredame
     ket_qua: da-sua
     ghi_chu: 'Chữ cũ: "Léonin, Viderunt omnes (organum hai bè)". Viderunt omnes hai bè của Léonin không xác nhận được ở nguồn mở (nổi tiếng là bản bốn bè của Pérotin); Magnus liber organi là bộ organum hai bè gắn tên Léonin (Britannica, COD).'
     luot_2: dung
@@ -486,7 +479,7 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Đã kiểm: trang đích đã chuyển, có ở src/content/docs/nhac-ly/16-dieu-thuc-ngu-cung.md. Review: đã kiểm dist/nhac-ly/16-dieu-thuc-ngu-cung/index.html có."
+    ghi_chu: "Đã kiểm: trang đích đã chuyển, có ở src/content/docs/nhac-ly/16-dieu-thuc-ngu-cung.md. Review: đã kiểm dist/nhac-ly/16-dieu-thuc-ngu-cung/index.html có. Kiểm mẫu D5: chủ repo không kiểm độc lập được (máy kiểm không có repo). Người gom kiểm lại: src/content/docs/nhac-ly/16-dieu-thuc-ngu-cung.md và dist/nhac-ly/16-dieu-thuc-ngu-cung/index.html có."
     review: dung
   - id: n32
     cau: Liên kết [Phục hưng](/opus/lich-su/thoi-ky/phuc-hung/)

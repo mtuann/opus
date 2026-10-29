@@ -26,7 +26,7 @@ Mỗi hình thức chính có một trang riêng, đi qua một tác phẩm cụ
 :   Một đoạn chính quay lại nhiều lần. Phân tích *Für Elise*.
 
 [Concerto và ritornello](/opus/hinh-thuc/concerto/)
-:   Một người đối thoại với cả dàn nhạc.
+:   Người độc tấu tương phản và hòa với cả dàn nhạc; đoạn tutti (ritornello) trở lại nhiều lần.
 
 [Minuet và Trio](/opus/hinh-thuc/minuet-trio/)
 :   Vũ khúc 3/4: minuet – trio – minuet. Chương 3 giao hưởng thời Cổ điển.

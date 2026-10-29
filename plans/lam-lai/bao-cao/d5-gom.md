@@ -44,3 +44,14 @@ Chữ đổi sau lượt 2 và câu đổi nhãn: 43 câu ở `bo-sung.yml` cho 
 
 - Sai (e2, `lich-su/nha-soan-nhac`): Beethoven từ khoảng 1818 vẫn trả lời bằng lời khi khách viết câu hỏi vào sổ đàm thoại (Baker). Người gom sửa trang theo câu đúng của lượt 2.
 - 17 khong-chac: lượt 2 không mở được nguồn hoặc nguồn không nói thẳng. Người gom giữ chữ (review đã mở nguồn) và ghi chú "Người gom (D5-gom)" vào từng câu; đưa vào kiểm mẫu nếu rơi vào mẫu.
+
+## Kiểm mẫu và khóa
+
+10 nhận định mẫu (`d5-gom/kiem-mau.yml`), kết quả của chủ repo ở `d5-gom/kiem-mau-ket-qua.yml`: 7 đúng (2 có điều kiện), 0 sai, 3 câu về site chủ repo không kiểm độc lập được vì máy kiểm không có repo (người gom kiểm lại: khớp).
+
+- `hinh-thuc/index` n10: "đối thoại" chỉ là ví von; đổi chữ theo nguồn ("tương phản và hòa với cả dàn nhạc", ritornello là đoạn tutti trở lại).
+- `lich-su/nha-soan-nhac` st1: bỏ hai mốc không có trong nguồn đã mở khỏi ghi chú.
+- `lich-su/thoi-ky/trung-co`: link COD Notre Dame school trả 404, bỏ khỏi nguồn n11, n21, n22 (Britannica đủ).
+- `hinh-thuc/concerto` n8: trang Listen người gom mở lại được, ghi trích dẫn vào hồ sơ.
+
+Đã điền `nguoi.luot_2` và `nguoi.kiem_mau` cho 27 hồ sơ, `khoa` 27 trang, `khoa tinh` khớp, bản build thật 117 trang, `npm test` 187 pass.
