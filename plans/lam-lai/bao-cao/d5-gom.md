@@ -37,3 +37,10 @@ Quyết định chung:
 - Trang đã khóa `piano/lich-su-dan`: dòng 149 ghi "(1655–1731)" là nguyên văn tiêu đề bài của Met, không phải năm site nêu (dòng 20 ghi 1655–1732): không cần sửa.
 
 Chữ đổi sau lượt 2 và câu đổi nhãn: 43 câu ở `bo-sung.yml` cho lượt 2 bổ sung.
+
+## Lượt 2 bổ sung
+
+43 câu (`d5-gom/bo-sung.yml`, kết quả `d5-gom/ket-qua-bo-sung.yml`, đã `nhap`): 25 dung, 1 sai, 17 khong-chac.
+
+- Sai (e2, `lich-su/nha-soan-nhac`): Beethoven từ khoảng 1818 vẫn trả lời bằng lời khi khách viết câu hỏi vào sổ đàm thoại (Baker). Người gom sửa trang theo câu đúng của lượt 2.
+- 17 khong-chac: lượt 2 không mở được nguồn hoặc nguồn không nói thẳng. Người gom giữ chữ (review đã mở nguồn) và ghi chú "Người gom (D5-gom)" vào từng câu; đưa vào kiểm mẫu nếu rơi vào mẫu.

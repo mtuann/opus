@@ -64,7 +64,7 @@ Thần đồng biểu diễn khắp châu Âu từ năm 6 tuổi, Mozart sống 
 
 ### Ludwig van Beethoven (1770–1827)
 
-Học ở Vienna (có thời gian học với Haydn), Beethoven bắt đầu bị mất thính lực từ khoảng năm 1796; bệnh nặng dần, và từ khoảng năm 1818 ông không còn trò chuyện bằng lời với khách được nữa. Ông là cây cầu từ Cổ điển sang Lãng mạn, đưa giao hưởng và sonata lên quy mô và chiều sâu chưa từng có.
+Học ở Vienna (có thời gian học với Haydn), Beethoven bắt đầu bị mất thính lực từ khoảng năm 1796; bệnh nặng dần, và từ khoảng năm 1818 khách phải viết câu hỏi vào sổ để ông đọc, rồi ông trả lời bằng lời. Ông là cây cầu từ Cổ điển sang Lãng mạn, đưa giao hưởng và sonata lên quy mô và chiều sâu chưa từng có.
 
 **Nghe trước:** [Giao hưởng số 5](/opus/nghe-nhac/beethoven-5/); Sonata piano *Ánh trăng*; Giao hưởng số 9; [Tứ tấu đàn dây Op. 132](/opus/nghe-nhac/beethoven-op132/).
 
