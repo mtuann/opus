@@ -1119,11 +1119,12 @@ html.oz-stand-open .main-pane {
 	.oz-ban-phim .oz-row,
 	.oz-vong .oz-row,
 	.oz-lhb > :not(noscript),
-	.oz-lt > :not(noscript) {
+	.oz-lt > :not(noscript),
+	.oz-nd > :not(noscript) {
 		display: none;
 	}
 }
-:is(.oz-ban-phim, .oz-vong, .oz-lhb, .oz-lt) noscript p {
+:is(.oz-ban-phim, .oz-vong, .oz-lhb, .oz-lt, .oz-nd) noscript p {
 	margin: 0.4rem 0 0;
 	font-size: var(--sl-text-sm);
 	color: var(--sl-color-gray-2);
@@ -1825,6 +1826,67 @@ html.oz-stand-open .main-pane {
 	width: min(100%, 360px, calc(var(--phim) * 26px + 4px));
 }
 .oz-lt-so {
+	min-height: 1.5em;
+	margin: 0;
+}
+
+/* ---------- Nhận diện phong cách (D5-L3; src/scripts/nhan-dien.js): ví dụ phong cách, đoán phong cách ---------- */
+.sl-markdown-content .oz-vd-phong-cach {
+	margin-block: 1rem 1.4rem;
+}
+.sl-markdown-content .oz-vd-phong-cach .oz-abc {
+	margin-block: 0;
+}
+.sl-markdown-content .oz-vd-phong-cach .oz-stats {
+	margin-top: 0.3rem;
+}
+.oz-nd > p.oz-stats:first-child {
+	margin: 0;
+}
+/* chỗ trình phát: giữ chiều cao thanh phát của abcjs (26 px, cảm ứng 48 px) để ô không xô khi script chạy */
+.oz-nd-nghe {
+	min-height: 26px;
+}
+@media (pointer: coarse) {
+	.oz-nd-nghe {
+		min-height: 48px;
+	}
+}
+/* khuông vẽ sẵn nhưng ẩn cho đến khi trả lời (như bản cũ): ra ngoài màn hình, vẫn có bề rộng để abcjs dàn trang */
+.oz-hidden-staff {
+	position: absolute !important;
+	left: -9999px;
+	width: 600px;
+	visibility: hidden;
+}
+.oz-nd-khuong {
+	overflow-x: auto;
+	color: var(--sl-color-white);
+}
+.oz-nd-khuong svg {
+	color: inherit;
+}
+.oz-nd-khuong .oz-playing,
+.oz-nd-khuong .oz-playing path {
+	fill: var(--oz-accent) !important;
+	stroke: var(--oz-accent) !important;
+}
+.sl-markdown-content .oz-nd .oz-clues {
+	margin: 0.4rem 0 0.8rem;
+	padding-left: 1.2rem;
+	font-size: var(--sl-text-sm);
+}
+.sl-markdown-content .oz-nd .oz-clues li {
+	margin-top: 0.15rem;
+}
+.oz-nd .oz-btn[aria-disabled='true'] {
+	opacity: 0.6;
+	cursor: default;
+}
+.oz-nd .oz-feedback {
+	margin-bottom: 0;
+}
+.oz-nd .oz-score {
 	min-height: 1.5em;
 	margin: 0;
 }

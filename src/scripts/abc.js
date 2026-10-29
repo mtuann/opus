@@ -6,8 +6,8 @@ const BASE = import.meta.env.BASE_URL;
 const HEP = 620; // khung hẹp hơn mức này (px) thì để abcjs tự ngắt dòng cho nốt đủ to
 let tai = null;
 
-/** Tải abcjs (một lần) và CSS của trình phát. */
-function taiAbcjs() {
+/** Tải abcjs (một lần) và CSS của trình phát. Đoán phong cách (src/scripts/nhan-dien.js) dùng lại. */
+export function taiAbcjs() {
 	if (window.ABCJS) return Promise.resolve(window.ABCJS);
 	tai ??= new Promise((ok, hong) => {
 		const css = document.createElement('link');
@@ -28,7 +28,7 @@ function taiAbcjs() {
 export const taiSan = () => taiAbcjs().catch(() => {});
 
 /** Con trỏ: tô sáng nốt đang phát. */
-function conTro() {
+export function conTro() {
 	let sang = [];
 	const tat = () => {
 		sang.forEach((e) => e.classList.remove('oz-playing'));
@@ -179,7 +179,8 @@ function congCu(el) {
 	const thanh = document.createElement('div');
 	thanh.className = 'oz-abc-tools';
 	let h = '';
-	if (st.ctrl && st.be.length === 2) {
+	// nghe từng tay: chỉ khuông piano hai tay; đoạn nhạc của dàn dây, marimba… (ví dụ phong cách) có data-khong-tay
+	if (st.ctrl && st.be.length === 2 && !st.khung.closest('[data-khong-tay]')) {
 		h +=
 			'<span class="oz-hands" role="group" aria-label="Nghe tay nào">' +
 			[

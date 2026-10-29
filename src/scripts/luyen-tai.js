@@ -1,12 +1,15 @@
 // Bốn công cụ luyện tai (D3-L6): nghe quãng (::cong-cu{ten="interval-trainer"}), nghe hợp âm (chord-trainer), nghe gam
 // (scale-trainer) và nghe kết (cadence-trainer), chuyển từ ../opus-zero/docs/assets/js/interval-trainer.js,
-// chord-trainer.js, scale-trainer.js và phần .oz-cadence-trainer của recognition.js. Cùng một cách chơi: chọn bộ câu hỏi,
-// bấm "Câu mới" để nghe, chọn đáp án; sai thì nghe lại và chọn tiếp, đúng thì hiện các nốt trên hình phím đàn.
+// chord-trainer.js, scale-trainer.js và phần .oz-cadence-trainer của recognition.js; thêm nhận biết kết cấu
+// (texture-trainer, D5-L3, phần .oz-texture-trainer của recognition.js). Cùng một cách chơi: chọn bộ câu hỏi,
+// bấm "Câu mới" để nghe, chọn đáp án; sai thì nghe lại (kết cấu: không tự phát lại, như bản cũ) và chọn tiếp, đúng thì
+// hiện các nốt trên hình phím đàn (kết cấu: không có hình).
 // Các hàm dựng HTML ở đầu file chạy cả lúc build (src/plugins/thanh-phan.mjs dựng sẵn ô, lựa chọn bộ, nút trả lời của bộ
 // đầu tiên: chữ thật, ô không đổi chiều cao khi script chạy) lẫn trên trình duyệt (đổi bộ thì dựng lại nút). mount(el)
 // thêm phần bấm được. Tiếng qua src/scripts/am-thanh.js (mẫu piano; chỉ phát khi người học bấm). Lưu như site cũ
-// (src/scripts/tien-do.js, khóa opus-zero:v1): kỹ năng intervals, chords, scales, cadence (store.skills và skillHist, chỉ
-// tính lần trả lời đầu của mỗi câu) và số câu đúng trong ngày (days[ngày].intervals, chords, scales; kết tính vào chords).
+// (src/scripts/tien-do.js, khóa opus-zero:v1): kỹ năng intervals, chords, scales, cadence, texture (store.skills và
+// skillHist, chỉ tính lần trả lời đầu của mỗi câu) và số câu đúng trong ngày (days[ngày].intervals, chords, scales; kết
+// tính vào chords, kết cấu vào styles).
 // Khác bản cũ: đáp án đã chọn sai không bị khóa hẳn (aria-disabled, để tiêu điểm bàn phím không rơi mất); đổi bộ ở công cụ
 // gam cũng xóa dòng phản hồi như ba công cụ kia; tên gam trong lời báo đúng chỉ viết thường chữ đầu ("điệu Dorian").
 import { GAM, HOP_AM } from './nhac-ly.js';
@@ -75,8 +78,56 @@ export const KET = {
 /** Cách xếp bè của từng hợp âm ở Đô trưởng (VOICING): bè trầm và ba bè trên, số MIDI. */
 export const XEP_BE = { I: [48, 64, 67, 72], IV: [41, 65, 69, 72], V: [43, 62, 67, 71], vi: [45, 64, 69, 72] };
 
+// ---------- Nhận biết kết cấu (recognition.js: Frère Jacques theo bốn kết cấu, giọng và tốc độ ngẫu nhiên) ----------
+
+/** Giai điệu Frère Jacques (FJ): [số MIDI, số phách]. */
+export const FJ = [
+	[60, 1], [62, 1], [64, 1], [60, 1], [60, 1], [62, 1], [64, 1], [60, 1], [64, 1], [65, 1], [67, 2], [64, 1], [65, 1], [67, 2],
+	[67, 0.5], [69, 0.5], [67, 0.5], [65, 0.5], [64, 1], [60, 1], [67, 0.5], [69, 0.5], [67, 0.5], [65, 0.5], [64, 1], [60, 1], [60, 1], [55, 1], [60, 2], [60, 1], [55, 1], [60, 2],
+];
+/** Bốn kết cấu (TEX). */
+export const KET_CAU = { mono: 'Đơn âm', homo: 'Chủ điệu', poly: 'Phức điệu', hetero: 'Dị âm' };
+/** Hợp âm đệm của kết cấu chủ điệu, mỗi hợp âm hai phách: I và V ở Đô trưởng. */
+const DEM_FJ = [[48, 52, 55], [48, 52, 55], [48, 52, 55], [48, 52, 55], [48, 52, 55], [43, 47, 50], [48, 52, 55], [43, 47, 50]];
+
+/** Một bè của giai điệu (line cũ): từ lúc `t0`, mỗi phách `nhip` giây, dịch `dich` nửa cung, tới `toi` phách. */
+function beFJ(t0, nhip, dich, am, toi) {
+	const ra = [];
+	let t = t0;
+	let n = 0;
+	for (const [m, d] of FJ) {
+		if (toi && n >= toi) break;
+		ra.push([m + dich, t, d * nhip * 0.95, am]);
+		t += d * nhip;
+		n += d;
+	}
+	return ra;
+}
+
+/** Các nốt của câu kết cấu (play cũ): [số MIDI, lúc bắt đầu, độ dài, âm lượng]. */
+export function notKetCau(q) {
+	const [t0, nhip, s] = [0.05, q.nhip, q.dich];
+	if (q.dap === 'mono') return beFJ(t0, nhip, s, 0.22, 16);
+	if (q.dap === 'homo') return [...beFJ(t0, nhip, s, 0.22, 16), ...DEM_FJ.flatMap((ch, i) => ch.map((m) => [m + s, t0 + i * 2 * nhip, 2 * nhip * 0.95, 0.09]))];
+	if (q.dap === 'poly') return [...beFJ(t0, nhip, s, 0.2, 24), ...beFJ(t0 + 8 * nhip, nhip, s - 12, 0.2, 16)];
+	// dị âm: giai điệu, cùng lúc một bản cao hơn quãng tám có thêm nốt luyến láy ở mỗi nốt từ một phách
+	const ra = beFJ(t0, nhip, s, 0.2, 16);
+	let t = t0;
+	let n = 0;
+	for (const [x, phach] of FJ) {
+		if (n >= 16) break;
+		const m = x + s + 12;
+		const d = phach * nhip;
+		if (phach >= 1) ra.push([m, t, d * 0.45, 0.12], [m + 2, t + d * 0.5, d * 0.22, 0.12], [m, t + d * 0.75, d * 0.22, 0.12]);
+		else ra.push([m, t, d * 0.9, 0.12]);
+		t += d;
+		n += phach;
+	}
+	return ra;
+}
+
 /**
- * Bốn công cụ: các ô chọn (ô đầu là bộ câu hỏi; giá trị đầu là mặc định), câu chữ, kỹ năng và trường trong ngày được lưu,
+ * Năm công cụ: các ô chọn (ô đầu là bộ câu hỏi; giá trị đầu là mặc định), câu chữ, kỹ năng và trường trong ngày được lưu,
  * cách ra câu hỏi (`cau`: q.dap là đáp án), các nốt phát (`phat`: [số MIDI, lúc bắt đầu (giây), độ dài, âm lượng]), lời báo
  * đúng và các phím tô trên hình phím đàn (`hinh`).
  */
@@ -232,6 +283,24 @@ export const CONG_CU_TAI = {
 			};
 		},
 	},
+	'texture-trainer': {
+		lop: 'oz-lt--ket-cau',
+		chon: [],
+		bo: Object.keys(KET_CAU),
+		nhom: 'Chọn kết cấu',
+		dau: 'Cùng một giai điệu được phát theo một trong bốn kết cấu. Hãy đoán kết cấu (xem bài 28).',
+		hoi: 'Kết cấu gì đây?',
+		sai: 'Chưa đúng. Đếm xem có mấy đường nét độc lập.',
+		kyNang: 'texture',
+		ngay: 'styles',
+		// chọn sai: không tự phát lại (bản cũ); người học bấm "Nghe lại"
+		phatLaiKhiSai: false,
+		nut: (k) => ({ chu: KET_CAU[k] }),
+		// giọng dịch từ -3 đến +3 nửa cung, mỗi phách 0,38 đến 0,5 giây
+		cau: (bo, r = Math.random) => ({ dap: chon1(bo, r), dich: ngauNhien(7, r) - 3, nhip: 0.38 + r() * 0.12 }),
+		phat: (q) => notKetCau(q),
+		dung: (q) => `Đúng: ${KET_CAU[q.dap]}. Bấm “Câu mới” để tiếp tục.`,
+	},
 };
 
 /** Các nốt (số MIDI) của hợp âm trong câu hỏi: nốt gốc cộng số nửa cung của từng nốt (HOP_AM của nhac-ly.js). */
@@ -366,13 +435,13 @@ export function mount(goc) {
 		if (cham(cc, q, b.dataset.d, phien)) {
 			b.classList.add('is-correct');
 			bao(cc.dung(q), 'ok');
-			const h = cc.hinh(q, giaTri());
-			hinh.innerHTML = (h.chu ? `<p class="oz-stats">${esc(h.chu)}</p>` : '') + hinhPhim(h);
+			const h = cc.hinh?.(q, giaTri());
+			if (h) hinh.innerHTML = (h.chu ? `<p class="oz-stats">${esc(h.chu)}</p>` : '') + hinhPhim(h);
 		} else {
 			b.classList.add('is-wrong');
 			b.setAttribute('aria-disabled', 'true');
 			bao(cc.sai, 'bad');
-			phat();
+			if (cc.phatLaiKhiSai !== false) phat();
 		}
 		thongKe();
 	});

@@ -23,6 +23,8 @@ const LUAT = [
 	['.oz-the-nho', () => import('./the-nho.js'), false],
 	// bốn công cụ luyện tai (D3-L6): ô dựng sẵn lúc build
 	['.oz-lt', () => import('./luyen-tai.js'), false],
+	// đoán phong cách (D5-L3): ô dựng sẵn; script tải abcjs, vẽ khuông ẩn và trình phát
+	['.oz-nd', () => import('./nhan-dien.js'), false],
 	// khởi tạo ngay: dấu "đã học" ở mục lục, người đọc thấy ngay khi mở trang
 	['.oz-trang-thai-bai', () => import('./trang-thai-bai.js'), true],
 	// máy đếm nhịp (D4-L1): ô dựng sẵn, script thêm phần bấm được

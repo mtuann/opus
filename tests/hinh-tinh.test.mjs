@@ -14,7 +14,9 @@ const MAU_GIU = new Set([
 	'#ffffff', '#1b1d22', '#4a4a4a', '#1f3a5f', '#e8eef5', '#f3d27a', '#bcd6f2', '#f1d3b8', '#d9c9a3', '#b0a48a', '#9fb5cf', '#4a5d73',
 	'#1b1b1b', '#fff', '#a9c7e8', '#f1d9a0', '#c9b6dd', '#7aa6d6', '#9fd0d0', '#8cc49a', '#e0b45e', '#c9a0dc', '#e98f7a', '#f3e3b8', '#e9b3a6', '#b6dcc1', '#d6d6d6',
 	// màu thời kỳ (D5-L1, hình periods; THOI_KY trong src/scripts/dong-thoi-gian.js): nền sáng, chữ #1b1b1b trên nó
-	'#c7d9a3']);
+	'#c7d9a3',
+	// thanh âm vực của piano và ô chú thích "phím" (D5-L3, hình ranges-orchestra): nền xám sáng như các thanh màu nhạt khác của hình, chữ #1b1b1b trên nó (7,9:1)
+	'#b0b0b0']);
 
 test('chuyenHinh: bỏ xmlns, font-family; màu đậm thành biến; figure có not-content và data-sinh; chữ giữ nguyên', () => {
 	const cu = '<figure class="oz-figure"><svg class="oz-fig" viewBox="0 0 10 10" role="img" aria-label="A" xmlns="http://www.w3.org/2000/svg" font-family="X"><line stroke="#2F5582"/><text fill="#1b1b1b">Đô</text><text fill="#999">b</text></svg><figcaption>C</figcaption></figure>';

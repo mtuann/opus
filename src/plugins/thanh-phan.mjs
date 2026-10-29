@@ -13,6 +13,7 @@ import { khoangPhim, thongTinGiong, veBanPhim, veChucNang, veDieuThuc, veHoaBieu
 import { CAU_HOI, nutTraLoi } from '../scripts/luyen-hoa-bieu.js';
 import { veBoiAm, veLenDay, vePho } from '../scripts/am-hoc.js';
 import { veLuyenTai } from '../scripts/luyen-tai.js';
+import { VI_DU, chuDauHieu, veDoanPhongCach } from '../scripts/nhan-dien.js';
 import { veMayDemNhip } from '../scripts/may-dem-nhip.js';
 import { TRANG_KE_HOACH, dungKeHoach, tinhKeHoach } from '../scripts/ke-hoach.js';
 import { dungBaiDangTap } from '../scripts/bai-dang-tap.js';
@@ -24,10 +25,10 @@ export const esc = (s) =>
 
 /** HTML đã dựng của trang có khối cần JavaScript (khuông nhạc, câu hỏi, khối nghe, danh sách việc, bài kiểm tra đầu vào,
  * chặng piano, ô gợi ý tập, bàn phím, vòng quãng năm, luyện hóa biểu, công cụ âm học, thẻ ghi nhớ, trạng thái bài đã học,
- * luyện tai, máy đếm nhịp, bài đang tập, kế hoạch tập)
+ * luyện tai, máy đếm nhịp, bài đang tập, kế hoạch tập, đoán phong cách)
  * không: MarkdownContent.astro chỉ tải bộ tải thành phần ở những trang này. */
 export const canTaiScript = (html) =>
-	/\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec|oz-placement|oz-muc-do|oz-goi-y|oz-ban-phim|oz-vong|oz-lhb|oz-boi-am|oz-pho|oz-len-day|oz-the-nho|oz-trang-thai-bai|oz-lt|oz-may-dem-nhip|oz-bai-dang-tap|oz-ke-hoach)[\s"]/.test(html);
+	/\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec|oz-placement|oz-muc-do|oz-goi-y|oz-ban-phim|oz-vong|oz-lhb|oz-boi-am|oz-pho|oz-len-day|oz-the-nho|oz-trang-thai-bai|oz-lt|oz-may-dem-nhip|oz-bai-dang-tap|oz-ke-hoach|oz-nd)[\s"]/.test(html);
 
 /** HTML đã dựng có hình hóa biểu (vẽ bằng <use href="#oz-kh-…">) không: MarkdownContent.astro thêm định nghĩa ký hiệu một lần. */
 export const canKyHieu = (html) => html.includes('href="#oz-kh-');
@@ -696,6 +697,27 @@ export function keHoach(ds = trangTrongBan()) {
 	return `<div class="oz-ke-hoach oz-tool not-content" data-sinh data-pagefind-ignore data-ke-hoach="${esc(JSON.stringify(data))}">${html}</div>`;
 }
 
+// ---------- Công cụ: nhận diện phong cách (D5-L3; src/scripts/nhan-dien.js) ----------
+
+/**
+ * Ví dụ phong cách (::cong-cu{ten="style-example" id="baroque-1"}, như khối oz-style-example của recognition.js cũ): khuông
+ * nhạc của một trong mười đoạn (VI_DU) dựng như khối ```abc (src/scripts/abc.js vẽ khuông và trình phát, âm sắc theo
+ * %%MIDI program của đoạn), dưới là dòng "Dấu hiệu: …". Đoạn không phải piano thì không có nút nghe từng tay
+ * (data-khong-tay). data-sinh: mã và chữ do thành phần dựng (trang cũ dựng bằng JavaScript; so chữ bỏ qua). Thiếu id, id
+ * lạ hay thông số khác thì build hỏng.
+ */
+export function viDuPhongCach({ id, ...thua }) {
+	const la = Object.keys(thua);
+	if (la.length) throw new Error(`công cụ "style-example" không nhận thông số ${la.join(', ')} (nhận: id)`);
+	const vd = VI_DU[id];
+	if (!vd) throw new Error(`công cụ "style-example": id "${id ?? ''}" không có (có: ${Object.keys(VI_DU).join(', ')})`);
+	return (
+		`<div class="oz-vd-phong-cach" data-vd="${esc(id)}" data-sinh${vd.prog === 0 ? '' : ' data-khong-tay'}>` +
+		khuongAbc(vd.abc) +
+		`<p class="oz-stats">${esc(chuDauHieu(vd))}</p></div>`
+	);
+}
+
 /** Công cụ đã có thành phần: tên (như khối <div class="oz-tên"> của site cũ) -> hàm dựng HTML (thông số, trang). */
 const CONG_CU = {
 	placement: (_, trang) => placement(khoiPlacement(trang)),
@@ -718,6 +740,10 @@ const CONG_CU = {
 	metronome: () => veMayDemNhip(),
 	repertoire: (thongSo) => baiDangTap(thongSo),
 	plan: () => keHoach(),
+	// nhận diện phong cách, nhận biết kết cấu (D5-L3)
+	'style-example': (thongSo) => viDuPhongCach(thongSo),
+	'style-trainer': () => veDoanPhongCach(),
+	'texture-trainer': () => veLuyenTai('texture-trainer'),
 };
 /** Công cụ không có thông số: viết thêm thuộc tính thì build hỏng (gõ nhầm, hay chép từ khối cũ). */
 const KHONG_THONG_SO = new Set([
@@ -737,6 +763,8 @@ const KHONG_THONG_SO = new Set([
 	'cadence-trainer',
 	'metronome',
 	'plan',
+	'style-trainer',
+	'texture-trainer',
 ]);
 
 /** ::cong-cu{ten="…" …}: công cụ luyện tập; thuộc tính khác là thông số (data-* của khối oz- cũ). */
