@@ -7,7 +7,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import vm from 'node:vm';
-import { MAY_NGOAI, TIEN_TO, danhSachTep, ghiSw, maSw, phienBan, scriptDangKy, scriptGo, tepLuuSan } from '../src/ung-dung/ung-dung.mjs';
+import { CHO_DANG_KY, MAY_NGOAI, TIEN_TO, danhSachTep, ghiSw, maSw, phienBan, scriptDangKy, scriptGo, tepLuuSan } from '../src/ung-dung/ung-dung.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DIST = path.join(ROOT, 'dist');
@@ -187,8 +187,14 @@ test('scriptDangKy: chỉ đăng ký khi có service worker và ngữ cảnh an 
 		const dk = [];
 		const nav = coSw ? { serviceWorker: { register: (u, o) => (dk.push([u, o.scope]), Promise.resolve()) } } : {};
 		const tai = [];
-		vm.runInNewContext(scriptDangKy(), { navigator: nav, isSecureContext: an, addEventListener: (t, f) => tai.push(f) });
-		tai.forEach((f) => f());
+		const hen = [];
+		vm.runInNewContext(scriptDangKy(), { navigator: nav, isSecureContext: an, addEventListener: (t, f) => tai.push([t, f]), setTimeout: (f, ms) => hen.push([f, ms]) });
+		assert.ok(tai.every(([t]) => t === 'load'));
+		tai.forEach(([, f]) => f());
+		// chưa đăng ký ngay lúc load: chờ CHO_DANG_KY ms
+		assert.equal(dk.length, 0);
+		assert.ok(hen.every(([, ms]) => ms === CHO_DANG_KY));
+		hen.forEach(([f]) => f());
 		return dk;
 	};
 	assert.deepEqual(chay({ an: true }), [['/opus/sw.js', '/opus/']]);

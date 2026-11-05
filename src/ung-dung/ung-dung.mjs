@@ -143,9 +143,14 @@ self.addEventListener("fetch", (e) => {
 `;
 }
 
+/** Đăng ký muộn sau khi trang tải xong (ms): việc lưu sẵn (khoảng 60 tệp) không tranh mạng với lần tải đầu và với các tệp
+ * tải lúc rảnh (abcjs). Đăng ký ngay lúc load làm mạng bận lâu hơn, Lighthouse đo lâu hơn và tính cả lúc abcjs chạy vào
+ * TBT (CI deploy 05/11/2026: bat-dau/tom-tat 86 điểm). */
+export const CHO_DANG_KY = 4000;
+
 /** Script đăng ký (trong <head> của mọi trang của bản build): chỉ khi trình duyệt có service worker và trang ở ngữ cảnh an toàn. */
 export const scriptDangKy = (base = '/opus/') =>
-	`if("serviceWorker"in navigator&&isSecureContext)addEventListener("load",function(){navigator.serviceWorker.register(${JSON.stringify(base + 'sw.js')},{scope:${JSON.stringify(base)}}).catch(function(){})})`;
+	`if("serviceWorker"in navigator&&isSecureContext)addEventListener("load",function(){setTimeout(function(){navigator.serviceWorker.register(${JSON.stringify(base + 'sw.js')},{scope:${JSON.stringify(base)}}).catch(function(){})},${CHO_DANG_KY})})`;
 
 /**
  * Script cho máy chủ thử (npm run dev): gỡ service worker mà npm run preview đã đăng ký ở cùng địa chỉ (localhost:4321/opus/),
