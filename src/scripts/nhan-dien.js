@@ -270,6 +270,7 @@ export async function mount(goc) {
 		const ABCJS = window.ABCJS;
 		const visual = ABCJS.renderAbc(khuong, vd.abc, { responsive: 'resize', foregroundColor: 'currentColor', paddingleft: 0, paddingright: 0 })[0];
 		if (!ABCJS.synth?.supportsAudio()) return null;
+		abc.ngoaiImLang();
 		const c = new ABCJS.synth.SynthController();
 		c.load(nghe, abc.conTro(), { displayPlay: true, displayRestart: true, displayProgress: true });
 		c.setTune(visual, false).catch(() => {

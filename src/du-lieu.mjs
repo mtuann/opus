@@ -398,6 +398,8 @@ export const tepDauVet = () => [
 	'src/ban-build.mjs',
 	'src/khoa.mjs',
 	...fs.readdirSync(path.join(GOC, 'src/plugins')).sort().map((f) => `src/plugins/${f}`),
+	// module của src/scripts/ mà plugin dùng lúc build (chữ dựng sẵn của công cụ, hình vẽ): sửa thì trang phải dựng lại
+	...fs.readdirSync(path.join(GOC, 'src/scripts')).filter((f) => /\.m?js$/.test(f)).sort().map((f) => `src/scripts/${f}`),
 	...fs.readdirSync(path.join(GOC, 'src/components/hinh')).filter((f) => f.endsWith('.html')).sort().map((f) => `src/components/hinh/${f}`),
 ];
 

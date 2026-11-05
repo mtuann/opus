@@ -239,12 +239,27 @@ function congCu(el) {
 	});
 }
 
+/**
+ * iPhone: Web Audio (trình phát của abcjs) mặc định theo công tắc im lặng; "playback" phát như trình nghe nhạc (Audio
+ * Session API, Safari 17+), như am-thanh.js. Chỉ đổi khi còn mặc định ("auto"): micro.js đang mở micro thì giữ
+ * "play-and-record".
+ */
+export function ngoaiImLang() {
+	try {
+		const s = navigator.audioSession;
+		if (s && s.type === 'auto') s.type = 'playback';
+	} catch {
+		// trình duyệt không cho đặt: để mặc định
+	}
+}
+
 function dung(el) {
 	if (el._oz) return;
 	el._oz = { src: el.dataset.abc, tay: 'both', goNhip: false, giaNhac: false, khung: el.closest('.oz-abc') };
 	const st = el._oz;
 	ve(el);
 	if (window.ABCJS.synth?.supportsAudio()) {
+		ngoaiImLang();
 		st.audio = document.createElement('div');
 		st.audio.className = 'abc-audio';
 		st.khung.append(st.audio);
