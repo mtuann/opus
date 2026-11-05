@@ -56,7 +56,9 @@ Kiểm thử `kiem-luyen-tap.mjs` khớp phần đầu câu ("Trình duyệt nà
 
 Bảy câu có chữ đổi sau lượt 2 (`d7-gom/bo-sung.yml`, xuất bằng `xuat D7-L1 D7-L2 --con-lai`): năm câu về MIDI và trình duyệt (`ban-phim` n13, `chep-giai-dieu` n12, `choi-theo` n14, `doc-not` n13, `ket-noi-midi` n3), `hat-lai` n8, `metronome` n10. Kết quả lượt 2 cũ của các câu này đã gỡ khỏi hồ sơ (ghi lại trong `ghi_chu`).
 
-Kết quả: chờ.
+Kết quả (`d7-gom/ket-qua-bo-sung.yml`, đã `nhap`): 6 dung, 0 sai, 1 khong-chac. Lượt 2 mở caniuse (Web MIDI: Chrome 43, Edge 79, Firefox 108, Opera 30; Safari và iOS không có) và Dolmetsch (khoảng BPM chỉ gần đúng, khác nhau giữa các nguồn).
+
+- Khong-chac: `hat-lai` n8, vì lượt 2 không mở được toàn văn bài nghiên cứu (Springer, PMC chặn). Người gom giữ chữ: review đã đọc Pfordresher & Halpern 2013, và chữ đã viết nhẹ theo nguồn. Câu được thêm vào mẫu kiểm của chủ repo (`kiem-mau.yml`, mục thứ 11).
 
 ## Kiểm thử
 
