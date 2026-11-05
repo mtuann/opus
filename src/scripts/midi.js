@@ -1,5 +1,5 @@
 // Đàn phím MIDI (::cong-cu{ten="midi-status"}, D7-L1), chuyển từ ../opus-zero/docs/assets/js/midi.js: Web MIDI API (Chrome,
-// Edge, Opera trên máy tính; Safari và trình duyệt trên iPhone, iPad không có). Module chung: mọi công cụ nhận nốt từ đàn
+// Edge, Firefox từ bản 108, Opera trên máy tính; Safari và trình duyệt trên iPhone, iPad không có). Module chung: mọi công cụ nhận nốt từ đàn
 // qua nghe(f); ô trạng thái (oz-midi) có nút kết nối, dòng trạng thái và lựa chọn phát tiếng khi bấm phím. Đã cho phép
 // một lần thì lần sau ô trạng thái tự kết nối lại (opus-zero:midi-auto, như bản cũ; bản sao lưu ở trang Dữ liệu giữ khóa
 // này). Như bản cũ, chỉ ô trạng thái mở kết nối: trang không có ô ấy thì đàn không gửi nốt tới bàn phím trong bài.
@@ -23,7 +23,7 @@ const dauVao = () => (truyCap ? [...truyCap.inputs.values()] : []);
 
 /** Trạng thái để hiện: { trang_thai: 'khong-ho-tro' | 'chua-noi' | 'khong-thay-dan' | 'da-noi', chu }. */
 export function trangThai() {
-	if (!coMidi()) return { trang_thai: 'khong-ho-tro', chu: 'Trình duyệt này không có MIDI trên web. Dùng Chrome, Edge hay Opera trên máy tính.' };
+	if (!coMidi()) return { trang_thai: 'khong-ho-tro', chu: 'Trình duyệt này không có MIDI trên web. Safari và mọi trình duyệt trên iPhone, iPad đều chưa có; trên máy tính, hãy thử Chrome, Edge hay Firefox.' };
 	if (!truyCap) return { trang_thai: 'chua-noi', chu: 'Chưa kết nối đàn MIDI.' };
 	const ds = dauVao();
 	return ds.length

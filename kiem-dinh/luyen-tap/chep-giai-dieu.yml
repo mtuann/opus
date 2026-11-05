@@ -9,8 +9,8 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: Claude Sonnet 5.5 (D7-L1 lượt 1, phần 1/2)
-      luot_2: null
-      review: null
+      luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 7, 05/11/2026)
+      review: Claude Opus 5.5 (review D7-gom, 05/11/2026)
       kiem_mau: null
 nguon:
   - id: caniuse-midi
@@ -22,7 +22,8 @@ nhan_dinh:
     cau: Nghe một câu nhạc ngắn rồi nhập lại từng nốt bằng bàn phím trên màn hình (hoặc đàn MIDI).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/scripts/chep.js (dictation): taoCau phát câu 4, 6 hay 8 nốt; nhập bằng bàn phím Sol3–Fa5 (ganBanPhim) hay đàn MIDI (nghe của midi.js); ô MIDI nằm ngay trong công cụ (veTrangThaiMidi).'
+    ghi_chu: 'src/scripts/chep.js (dictation): taoCau phát câu 4, 6 hay 8 nốt; nhập bằng bàn phím Sol3–Fa5 (ganBanPhim) hay đàn MIDI (nghe của midi.js); ô MIDI nằm ngay trong công cụ (veTrangThaiMidi). Review D7-gom: src/scripts/chep.js: taoCau, ganBanPhim Sol3–Fa5, nghe() của midi.js; veChep nhúng veTrangThaiMidi.'
+    review: dung
   - id: n2
     cau: 'Đây là một bài luyện tai khó: biến âm thanh trong đầu thành nốt nhạc.'
     loai: khuyen-tap
@@ -34,17 +35,20 @@ nhan_dinh:
     cau: Nút "Nghe chủ âm Đô" phát nốt Đô để định giọng.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'chep.js: data-act="chu-am" gọi choiNot(60) (Đô4); veChep có nút "Nghe chủ âm Đô".'
+    ghi_chu: 'chep.js: data-act="chu-am" gọi choiNot(60) (Đô4); veChep có nút "Nghe chủ âm Đô". Review D7-gom: chep.js: data-act="chu-am" gọi choiNot(60).'
+    review: dung
   - id: n4
     cau: Mọi câu nhạc đều ở Đô trưởng và bắt đầu bằng Đô4.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'chep.js taoCau: ra=[60]; các bậc lấy trong GAM = [0,2,4,5,7,9,11,12] cộng 60 (thang Đô trưởng Đô4–Đô5). Chữ DAU trong module cũng nói "Giai điệu luôn bắt đầu bằng Đô (Đô4)".'
+    ghi_chu: 'chep.js taoCau: ra=[60]; các bậc lấy trong GAM = [0,2,4,5,7,9,11,12] cộng 60 (thang Đô trưởng Đô4–Đô5). Chữ DAU trong module cũng nói "Giai điệu luôn bắt đầu bằng Đô (Đô4)". Review D7-gom: chep.js taoCau: ra = [60], các bậc trong GAM Đô trưởng.'
+    review: dung
   - id: n5
     cau: Nốt cuối của mọi câu là Đô (Đô4 hoặc Đô5).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'chep.js taoCau: ra.push(r() < 0.5 ? 60 : 72); trang viết "thường là Đô, cao hoặc thấp": đúng (thực tế luôn là Đô).'
+    ghi_chu: 'chep.js taoCau: ra.push(r() < 0.5 ? 60 : 72); trang viết "thường là Đô, cao hoặc thấp": đúng (thực tế luôn là Đô). Review D7-gom: chep.js taoCau: nốt cuối 60 hay 72.'
+    review: dung
   - id: n6
     cau: Nghe cả câu 2–3 lần trước khi bấm phím, hát thầm theo; tìm nốt cuối trước rồi các nốt giữa; nghĩ theo bậc và quãng.
     loai: khuyen-tap
@@ -56,12 +60,14 @@ nhan_dinh:
     cau: Ví dụ "nhảy xuống quãng 3" trỏ tới bài 9 (Quãng).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Link /opus/nhac-ly/09-quang/: trang có trong bản build, bài 9 là bài Quãng.'
+    ghi_chu: 'Link /opus/nhac-ly/09-quang/: trang có trong bản build, bài 9 là bài Quãng. Review D7-gom: src/content/docs/nhac-ly/09-quang.md có (bài 9, Quãng).'
+    review: dung
   - id: n8
     cau: Bắt đầu với cấp 1 (4 nốt, đi liền bậc; nốt cuối luôn là Đô).
     loai: ve-site
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "cấp 1 (4 nốt, chỉ bước liền)". Chữ mới: "cấp 1 (4 nốt, đi liền bậc; nốt cuối luôn là Đô)". Lý do: chep.js taoCau, cấp 1 chỉ đi bước ±1 bậc ở các nốt giữa, nhưng nốt cuối đặt thẳng là Đô4 hay Đô5 nên có thể là bước nhảy (ví dụ Mi hay Rê về Đô cao); ở bậc Đô đầu bước -1 bị giữ lại nên hai nốt Đô liền nhau. Nhãn "Cấp 1: 4 nốt, bước liền" trong chep.js (CAP) và câu "chỉ đi liền bậc" ở luyen-tai/choi-bang-tai (đã khóa) cũng cần sửa theo: xem báo cáo.'
+    ghi_chu: 'Chữ cũ: "cấp 1 (4 nốt, chỉ bước liền)". Chữ mới: "cấp 1 (4 nốt, đi liền bậc; nốt cuối luôn là Đô)". Lý do: chep.js taoCau, cấp 1 chỉ đi bước ±1 bậc ở các nốt giữa, nhưng nốt cuối đặt thẳng là Đô4 hay Đô5 nên có thể là bước nhảy (ví dụ Mi hay Rê về Đô cao); ở bậc Đô đầu bước -1 bị giữ lại nên hai nốt Đô liền nhau. Nhãn "Cấp 1: 4 nốt, bước liền" trong chep.js (CAP) và câu "chỉ đi liền bậc" ở luyen-tai/choi-bang-tai (đã khóa) cũng cần sửa theo: xem báo cáo. Review D7-gom: trang và chep.js taoCau khớp chữ mới: cấp 1 các nốt giữa đi ±1 bậc, nốt cuối đặt thẳng là Đô.'
+    review: dung
   - id: n9
     cau: Chuyển cấp khi chép đúng hoàn toàn 4 trên 5 câu.
     loai: khuyen-tap
@@ -70,25 +76,24 @@ nhan_dinh:
     luot_2: dung
     luot_2_ghi_chu: Ngưỡng 4/5 là lựa chọn của công cụ, hợp lý.
   - id: n10
-    cau: 'Ba cấp của công cụ: Cấp 1 4 nốt bước liền, Cấp 2 6 nốt có bước nhảy, Cấp 3 8 nốt.'
+    cau: 'Ba cấp của công cụ: Cấp 1 4 nốt, đi liền bậc, kết ở Đô; Cấp 2 6 nốt, có bước nhảy; Cấp 3 8 nốt.'
     loai: ve-site
-    ket_qua: null
-    ghi_chu: 'chưa chắc: số nốt đúng (CAP trong chep.js: n 4, 6, 8). Chữ "bước liền" của nhãn cấp 1 chưa đúng với nốt cuối (xem n8); cần người giao sửa nhãn CAP[1] trong src/scripts/chep.js thành chữ như trang, rồi mới chuyển null thành dung (module nằm ngoài phạm vi phần này).'
+    ket_qua: da-sua
+    ghi_chu: 'chưa chắc: số nốt đúng (CAP trong chep.js: n 4, 6, 8). Chữ "bước liền" của nhãn cấp 1 chưa đúng với nốt cuối (xem n8); cần người giao sửa nhãn CAP[1] trong src/scripts/chep.js thành chữ như trang, rồi mới chuyển null thành dung (module nằm ngoài phạm vi phần này). Review D7-gom: chep.js CAP nay là "Cấp 1: 4 nốt, đi liền bậc, kết ở Đô", "Cấp 2: 6 nốt, có bước nhảy", "Cấp 3: 8 nốt" (người giao đã sửa nhãn CAP[1] theo đề nghị của lượt 1); câu ghi lại theo nhãn mới. Ghi chú: trang đã khóa luyen-tai/choi-bang-tai dòng 71 vẫn viết "cấp 1: bốn nốt, chỉ đi liền bậc" (xem báo cáo d7-gom).'
+    review: dung
   - id: n11
     cau: Nút "Kiểm tra" đánh dấu từng nốt đúng hay sai, hiện "Đúng x/y nốt", vẽ hình so sánh câu gốc với câu bạn nhập; chép đúng hoàn toàn tính vào số câu trong ngày.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'chep.js cham(): "✓ Đô · ✗ Mi (bạn nhập Fa)", "Hoàn toàn chính xác!"; soSanhChep (hinh-so-sanh.js); kyNang("dictation") và ghiNgay("melodies").'
+    ghi_chu: 'chep.js cham(): "✓ Đô · ✗ Mi (bạn nhập Fa)", "Hoàn toàn chính xác!"; soSanhChep (hinh-so-sanh.js); kyNang("dictation") và ghiNgay("melodies"). Review D7-gom: chep.js mount, nút "kiem": cham() ("Đúng x/y nốt" hay "Hoàn toàn chính xác!"), soSanhChep, ghiNgay("melodies") khi đúng hết.'
+    review: dung
   - id: n12
-    cau: 'Trình duyệt hỗ trợ MIDI trên web: Chrome, Edge, Opera trên máy tính (chữ do ô MIDI trong công cụ hiện).'
+    cau: 'Ô MIDI trong công cụ báo khi trình duyệt không có MIDI trên web: Safari và mọi trình duyệt trên iPhone, iPad chưa có; trên máy tính, Chrome, Edge, Firefox có.'
     loai: so-lieu
     nguon:
       - caniuse-midi
-    ket_qua: dung
-    ghi_chu: 'Ô trạng thái MIDI (midi.js, midi-status): khi trình duyệt không có Web MIDI thì khóa nút và báo "Trình duyệt này không có MIDI trên web. Dùng Chrome, Edge hay Opera trên máy tính." Chrome, Edge, Opera hỗ trợ (Can I use, kiểm 11/2026); Firefox từ 108 cũng hỗ trợ nên danh sách chưa đủ nhưng không sai; Safari và iOS không có. Câu dễ cũ: rà lại khi trình duyệt đổi.'
-    luot_2: dung
-    luot_2_nguon: [ "https://caniuse.com/midi", "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMIDIAccess" ]
-    luot_2_ghi_chu: Đã mở caniuse (Chrome 43+, Edge 79+, Opera 30+ hỗ trợ; Safari và iOS Safari không) và MDN requestMIDIAccess (chỉ HTTPS, chưa Baseline). Lưu ý Firefox 108+ cũng hỗ trợ và Chrome Android có, nên danh sách không đầy đủ nhưng không sai về ý chính.
+    ket_qua: da-sua
+    ghi_chu: 'Ô trạng thái MIDI (midi.js, midi-status): khi trình duyệt không có Web MIDI thì khóa nút và báo "Trình duyệt này không có MIDI trên web. Dùng Chrome, Edge hay Opera trên máy tính." Chrome, Edge, Opera hỗ trợ (Can I use, kiểm 11/2026); Firefox từ 108 cũng hỗ trợ nên danh sách chưa đủ nhưng không sai; Safari và iOS không có. Câu dễ cũ: rà lại khi trình duyệt đổi. Review D7-gom: chữ đổi sau lượt 2 (lượt 2 của chữ cũ: dung); Lượt 2 (caniuse, MDN): Firefox từ bản 108 cũng có MIDI trên web, nên danh sách cũ thiếu. Chữ mới nêu trình duyệt chưa có (Safari, iPhone, iPad) và chỉ nêu ví dụ trình duyệt có ("như"), không liệt kê đủ. Chữ cũ của ô: "Dùng Chrome, Edge hay Opera trên máy tính."; chữ mới của ô: "Trình duyệt này không có MIDI trên web. Safari và mọi trình duyệt trên iPhone, iPad đều chưa có; trên máy tính, hãy thử Chrome, Edge hay Firefox." (src/scripts/midi.js, trangThai). Chờ lượt 2 bổ sung (plans/lam-lai/bao-cao/d7-gom/bo-sung.yml).'
 ghi_chu: 'Trang Luyện tập (tầng khung). Chỗ cần người giao sửa: nhãn "Cấp 1: 4 nốt, bước liền" (src/scripts/chep.js, CAP) và câu "Bắt đầu ở cấp 1: bốn nốt, chỉ đi liền bậc" ở luyen-tai/choi-bang-tai (trang đã khóa, cần mở khóa). Ô MIDI của công cụ là bản chép của ô midi-status. Thuật ngữ trang dùng (chủ âm, bậc, quãng) đã có hoặc thuộc bài nhạc lý khóa.'
 doi_chu:
   - cu: "Nghe một câu nhạc ngắn rồi nhập lại từng nốt bằng bàn phím trên màn hình (hoặc đàn MIDI). Đây là kỹ năng luyện tai cao nhất: biến âm thanh trong đầu thành nốt nhạc."

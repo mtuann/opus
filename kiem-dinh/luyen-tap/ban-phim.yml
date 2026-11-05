@@ -9,8 +9,8 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: Claude Sonnet 5.5 (D7-L1 lượt 1, phần 1/2)
-      luot_2: null
-      review: null
+      luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 7, 05/11/2026)
+      review: Claude Opus 5.5 (review D7-gom, 05/11/2026)
       kiem_mau: null
 nguon:
   - id: omt-major
@@ -34,17 +34,20 @@ nhan_dinh:
     cau: 'Chọn nốt gốc và loại gam hoặc hợp âm: các phím thuộc về nó được tô màu, tên nốt hiện bên trên.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Đã kiểm ở src/scripts/tra-phim.js (piano-explorer): luaChon dựng nốt, capNhat bật lớp "to" cho phím của lựa chọn, dongTen hiện tên các nốt ở dòng .oz-tra-phim-ten nằm trên bàn phím (veTraPhim); 14 nốt gốc, 11 gam, 9 hợp âm.'
+    ghi_chu: 'Đã kiểm ở src/scripts/tra-phim.js (piano-explorer): luaChon dựng nốt, capNhat bật lớp "to" cho phím của lựa chọn, dongTen hiện tên các nốt ở dòng .oz-tra-phim-ten nằm trên bàn phím (veTraPhim); 14 nốt gốc, 11 gam, 9 hợp âm. Review D7-gom: đã kiểm src/scripts/tra-phim.js (veTraPhim: dòng .oz-tra-phim-ten đứng trước bàn phím; capNhat bật lớp "to").'
+    review: dung
   - id: n2
     cau: Bấm Nghe để nghe gam hay hợp âm đã chọn.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'tra-phim.js: nút data-act="nghe", gam phát lần lượt, hợp âm rải rồi cùng lúc.'
+    ghi_chu: 'tra-phim.js: nút data-act="nghe", gam phát lần lượt, hợp âm rải rồi cùng lúc. Review D7-gom: tra-phim.js, nút data-act="nghe": gam phát lần lượt, hợp âm rải rồi cùng lúc.'
+    review: dung
   - id: n3
     cau: Bấm trực tiếp vào phím bất kỳ để nghe và xem tên.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'tra-phim.js gọi ganBanPhim (src/scripts/ban-phim.js): bấm phím phát tiếng và dòng .oz-phim-ten đọc tên nốt; dòng mặc định "Bấm vào phím để nghe và xem tên nốt."'
+    ghi_chu: 'tra-phim.js gọi ganBanPhim (src/scripts/ban-phim.js): bấm phím phát tiếng và dòng .oz-phim-ten đọc tên nốt; dòng mặc định "Bấm vào phím để nghe và xem tên nốt." Review D7-gom: src/scripts/ban-phim.js ganBanPhim: bấm phím phát tiếng, thongBao hiện tên phím.'
+    review: dung
   - id: n4
     cau: 'Gam trưởng đổi nốt gốc lần lượt Đô, Sol, Rê, La: mỗi lần thêm đúng một phím đen (Sol có Fa♯; Rê có Fa♯, Đô♯; La có Fa♯, Đô♯, Sol♯).'
     loai: quy-tac
@@ -69,7 +72,8 @@ nhan_dinh:
     cau: Đoạn gợi ý trỏ tới mục "Vòng quãng năm" của trang Hóa biểu và vòng quãng năm.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Link /opus/luyen-tap/hoa-bieu/#vong-quang-nam: trang hoa-bieu có trong bản xem, tiêu đề "Vòng quãng năm" có id vong-quang-nam (dist/luyen-tap/hoa-bieu/index.html).'
+    ghi_chu: 'Link /opus/luyen-tap/hoa-bieu/#vong-quang-nam: trang hoa-bieu có trong bản xem, tiêu đề "Vòng quãng năm" có id vong-quang-nam (dist/luyen-tap/hoa-bieu/index.html). Review D7-gom: dist/luyen-tap/hoa-bieu/index.html có id="vong-quang-nam".'
+    review: dung
   - id: n7
     cau: Gam trưởng và gam thứ tự nhiên trên cùng nốt gốc chỉ khác ở bậc 3, 6 và 7.
     loai: quy-tac
@@ -95,7 +99,8 @@ nhan_dinh:
     cau: Công cụ có đủ ba dạng gam thứ (tự nhiên, hòa âm, giai điệu) và nốt gốc La để so sánh.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'nhac-ly.js GAM: natural, harmonic, melodic (đi lên); tra-phim.js GOC có La.'
+    ghi_chu: 'nhac-ly.js GAM: natural, harmonic, melodic (đi lên); tra-phim.js GOC có La. Review D7-gom: src/scripts/nhac-ly.js GAM có natural, harmonic, melodic; tra-phim.js GOC có "A".'
+    review: dung
   - id: n10
     cau: Hợp âm trưởng và hợp âm thứ trên cùng nốt gốc chỉ khác nốt giữa, thứ dịch xuống nửa cung.
     loai: quy-tac
@@ -110,26 +115,26 @@ nhan_dinh:
     cau: 'Phần "Dùng đàn MIDI": cắm đàn piano điện vào máy tính để dùng phím thật.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'midi.js + tra-phim.js: ganBanPhim (midi mặc định bật) cho phím đàn MIDI sáng lên trên bàn phím; ô midi-status ở cuối trang có nút "Kết nối đàn MIDI".'
+    ghi_chu: 'midi.js + tra-phim.js: ganBanPhim (midi mặc định bật) cho phím đàn MIDI sáng lên trên bàn phím; ô midi-status ở cuối trang có nút "Kết nối đàn MIDI". Review D7-gom: ban-phim.js ganBanPhim (midi mặc định bật, nghe() của midi.js); trang có ::cong-cu{ten="midi-status"}.'
+    review: dung
   - id: n12
     cau: Link tới trang Kết nối đàn MIDI.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: luyen-tap/ket-noi-midi có trong bản xem (phần 2 của lô D7-L1) và trong src/data/trang.yml.
+    ghi_chu: "luyen-tap/ket-noi-midi có trong bản xem (phần 2 của lô D7-L1) và trong src/data/trang.yml. Review D7-gom: src/content/docs/luyen-tap/ket-noi-midi.md có, trang có trong bản xem."
+    review: dung
   - id: n13
-    cau: 'Trình duyệt hỗ trợ MIDI trên web: Chrome, Edge, Opera trên máy tính (chữ do ô midi-status hiện).'
+    cau: 'Ô midi-status báo khi trình duyệt không có MIDI trên web: Safari và mọi trình duyệt trên iPhone, iPad chưa có; trên máy tính, Chrome, Edge, Firefox có.'
     loai: so-lieu
     nguon:
       - caniuse-midi
-    ket_qua: dung
-    ghi_chu: 'Ô trạng thái MIDI (midi.js, midi-status): khi trình duyệt không có Web MIDI thì khóa nút và báo "Trình duyệt này không có MIDI trên web. Dùng Chrome, Edge hay Opera trên máy tính." Chrome, Edge, Opera hỗ trợ (Can I use, kiểm 11/2026); Firefox từ 108 cũng hỗ trợ nên danh sách chưa đủ nhưng không sai; Safari và iOS không có. Câu dễ cũ: rà lại khi trình duyệt đổi.'
-    luot_2: dung
-    luot_2_nguon: [ "https://caniuse.com/midi", "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMIDIAccess" ]
-    luot_2_ghi_chu: Đã mở caniuse (Chrome 43+, Edge 79+, Opera 30+ hỗ trợ; Safari và iOS Safari không) và MDN requestMIDIAccess (chỉ HTTPS, chưa Baseline). Lưu ý Firefox 108+ cũng hỗ trợ và Chrome Android có, nên danh sách không đầy đủ nhưng không sai về ý chính.
+    ket_qua: da-sua
+    ghi_chu: 'Ô trạng thái MIDI (midi.js, midi-status): khi trình duyệt không có Web MIDI thì khóa nút và báo "Trình duyệt này không có MIDI trên web. Dùng Chrome, Edge hay Opera trên máy tính." Chrome, Edge, Opera hỗ trợ (Can I use, kiểm 11/2026); Firefox từ 108 cũng hỗ trợ nên danh sách chưa đủ nhưng không sai; Safari và iOS không có. Câu dễ cũ: rà lại khi trình duyệt đổi. Review D7-gom: chữ đổi sau lượt 2 (lượt 2 của chữ cũ: dung); Lượt 2 (caniuse, MDN): Firefox từ bản 108 cũng có MIDI trên web, nên danh sách cũ thiếu. Chữ mới nêu trình duyệt chưa có (Safari, iPhone, iPad) và chỉ nêu ví dụ trình duyệt có ("như"), không liệt kê đủ. Chữ cũ của ô: "Dùng Chrome, Edge hay Opera trên máy tính."; chữ mới của ô: "Trình duyệt này không có MIDI trên web. Safari và mọi trình duyệt trên iPhone, iPad đều chưa có; trên máy tính, hãy thử Chrome, Edge hay Firefox." (src/scripts/midi.js, trangThai). Chờ lượt 2 bổ sung (plans/lam-lai/bao-cao/d7-gom/bo-sung.yml).'
   - id: n14
     cau: 'Ô trạng thái MIDI ở cuối trang: nút "Kết nối đàn MIDI", dòng trạng thái, ô chọn phát tiếng khi bấm phím.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Đã kiểm trong midi.js (veTrangThaiMidi, mount) và dist/luyen-tap/ban-phim/index.html: nút data-act="noi", dòng "Chưa kết nối đàn MIDI.", ô "Phát âm thanh khi bấm phím".'
+    ghi_chu: 'Đã kiểm trong midi.js (veTrangThaiMidi, mount) và dist/luyen-tap/ban-phim/index.html: nút data-act="noi", dòng "Chưa kết nối đàn MIDI.", ô "Phát âm thanh khi bấm phím". Review D7-gom: src/scripts/midi.js veTrangThaiMidi: nút "Kết nối đàn MIDI", dòng .oz-midi-chu, ô "Phát âm thanh khi bấm phím".'
+    review: dung
 ghi_chu: Trang Luyện tập (tầng khung). Không có thuật ngữ mới cần bản ghi (gam, hợp âm, nốt gốc đã dùng ở bài nhạc lý khóa).
 khuong_nhac: []

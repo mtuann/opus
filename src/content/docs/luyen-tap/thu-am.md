@@ -23,6 +23,6 @@ Khi đang chơi, tai bạn bận với ngón tay và bản nhạc; khi nghe lạ
 - **Đừng để tiếng bị vỡ.** Chơi thử đoạn to nhất trước khi thu; nếu nghe lại thấy rè ở chỗ *f*, lùi máy xa hơn. Công cụ thu âm của site đã tắt chế độ khử ồn và tự chỉnh âm lượng của trình duyệt, để to nhỏ trong bản thu đúng như bạn chơi.
 - **Phòng yên tĩnh, đóng cửa sổ.** Quạt, máy lạnh và tiếng xe ngoài đường lấn mất những chỗ *pp*.
 - **Quay video khi cần xem tay.** Đặt máy ở bên cạnh hoặc chếch từ trên cao để thấy cổ tay và ngón (xem bảng góc máy ở [Học với thầy và thi cấp](/opus/piano/thay-va-thi/)).
-- **Nghe lại bằng tai nghe**, không bằng loa điện thoại: loa nhỏ làm mất tiếng trầm và bàn đạp.
+- **Nghe lại bằng tai nghe**, không bằng loa điện thoại.
 
 Bản thu chỉ lưu trong trình duyệt này; xóa dữ liệu trình duyệt sẽ mất. Bấm **Tải về** những bản muốn giữ lâu dài.

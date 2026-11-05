@@ -18,13 +18,13 @@ Muốn luyện đọc tiết tấu có chấm điểm, dùng [công cụ tiết 
 
 ## Thuật ngữ tốc độ
 
-Các nhà soạn nhạc ghi tốc độ bằng tiếng Ý ở đầu bản nhạc. Khoảng BPM dưới đây chỉ là gần đúng; nghệ sĩ có quyền diễn giải.
+Các nhà soạn nhạc ghi tốc độ bằng tiếng Ý ở đầu bản nhạc. Mỗi thuật ngữ chỉ một vùng tốc độ, không gắn với một số BPM cố định: các nguồn ghi những khoảng BPM rất khác nhau, và nghệ sĩ có quyền diễn giải.
 
-| Thuật ngữ | Nghĩa | Khoảng BPM |
-|---|---|---|
-| Largo | Rất chậm, rộng rãi | 40–66 |
-| Adagio | Chậm, thong thả | 66–76 |
-| Andante | Vừa phải, như nhịp bước đi | 76–108 |
-| Moderato | Vừa | 108–120 |
-| Allegro | Nhanh, vui tươi | 120–156 |
-| Presto | Rất nhanh | 168–200 |
+| Thuật ngữ | Nghĩa |
+|---|---|
+| Largo | Rất chậm, rộng rãi |
+| Adagio | Chậm, thong thả |
+| Andante | Vừa phải, như nhịp bước đi |
+| Moderato | Vừa |
+| Allegro | Nhanh, vui tươi |
+| Presto | Rất nhanh |

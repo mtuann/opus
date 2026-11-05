@@ -9,8 +9,8 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: Claude Sonnet (D7-L2 lượt 1, phần 1/2)
-      luot_2: null
-      review: null
+      luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 7, 05/11/2026)
+      review: Claude Opus 5.5 (review D7-gom, 05/11/2026)
       kiem_mau: null
 ghi_chu: 'Trang khung (D7-L2, phần 1/2). Không sửa chữ. Định nghĩa thị tấu dựa Cambridge Dictionary (bậc 2) và Wikipedia (phụ). Lệch nhỏ giữa module và câu trên trang (người giao quyết): n12, đoạn "Cách tập" trong veThiTau (thi-tau.js) viết "bấm một trong hai nút “Chơi và được chấm”" trong khi "Chơi và được chấm:" là nhãn, hai nút là "Bằng đàn MIDI" và "Bằng micro (hát hoặc nhạc cụ)"; chữ này giữ như bản cũ (kiểm so-chu của lô D7-L2 sẽ báo nếu khác).'
 nguon:
@@ -38,12 +38,14 @@ nhan_dinh:
     cau: Mỗi lần bấm "Giai điệu mới", site tạo một giai điệu 4 ô nhịp ngẫu nhiên.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/scripts/thi-tau.js: nút data-act="moi" gọi moi() → taoGiaiDieu(giọng, cấp) với Math.random; vòng for b = 0..3 tạo đúng bốn ô, mỗi ô đủ 4 phách (M:4/4 trong abcGiaiDieu).'
+    ghi_chu: 'src/scripts/thi-tau.js: nút data-act="moi" gọi moi() → taoGiaiDieu(giọng, cấp) với Math.random; vòng for b = 0..3 tạo đúng bốn ô, mỗi ô đủ 4 phách (M:4/4 trong abcGiaiDieu). Review D7-gom: thi-tau.js: nút "Giai điệu mới" (data-act="moi"), bốn ô.'
+    review: dung
   - id: n3
     cau: Giai điệu kết thúc ở chủ âm.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/scripts/thi-tau.js taoGiaiDieu: ô cuối gồm [bậc 2 hay bậc 7, 2 phách] rồi [k.v, 2 phách], k.v là chủ âm của giọng.'
+    ghi_chu: 'src/scripts/thi-tau.js taoGiaiDieu: ô cuối gồm [bậc 2 hay bậc 7, 2 phách] rồi [k.v, 2 phách], k.v là chủ âm của giọng. Review D7-gom: thi-tau.js taoGiaiDieu: ô cuối kết ở k.v (chủ âm).'
+    review: dung
   - id: n4
     cau: Nghe chủ âm để "định giọng" trong đầu.
     loai: khuyen-tap
@@ -67,7 +69,8 @@ nhan_dinh:
     cau: Bấm "Nghe đáp án" để nghe giai điệu và so sánh.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/scripts/thi-tau.js: phat(true) phát 4 tiếng đếm rồi cả giai điệu (choiNot từng nốt theo notCan).'
+    ghi_chu: 'src/scripts/thi-tau.js: phat(true) phát 4 tiếng đếm rồi cả giai điệu (choiNot từng nốt theo notCan). Review D7-gom: thi-tau.js: nút "Nghe đáp án".'
+    review: dung
   - id: n8
     cau: Bắt đầu với Đô trưởng, cấp độ 1, tốc độ 60. Mỗi ngày đọc 3–5 giai điệu là đủ.
     loai: khuyen-tap
@@ -79,20 +82,24 @@ nhan_dinh:
     cau: Có đàn piano điện thì cắm vào máy tính để dùng phím thật; link "Kết nối đàn MIDI" dẫn tới trang hướng dẫn.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/scripts/thi-tau.js: nút "Bằng đàn MIDI" (chamMidi) cần đàn nối qua Web MIDI (src/scripts/midi.js; ô midi-status ngay dưới); src/content/docs/luyen-tap/ket-noi-midi.md có thật. Web MIDI chỉ có ở Chrome, Edge, Opera trên máy tính (midi.js nói rõ; ô báo khi trình duyệt không hỗ trợ).'
+    ghi_chu: 'src/scripts/thi-tau.js: nút "Bằng đàn MIDI" (chamMidi) cần đàn nối qua Web MIDI (src/scripts/midi.js; ô midi-status ngay dưới); src/content/docs/luyen-tap/ket-noi-midi.md có thật. Web MIDI chỉ có ở Chrome, Edge, Opera trên máy tính (midi.js nói rõ; ô báo khi trình duyệt không hỗ trợ). Review D7-gom: thi-tau.js chamMidi; trang có midi-status; ket-noi-midi có. Ghi chú về trình duyệt ở lượt 1 ("chỉ có ở Chrome, Edge, Opera") chưa đủ: Firefox từ 108 cũng có; chữ báo lỗi của thi-tau.js và midi.js đã sửa theo (mục 4 của review).'
+    review: dung
   - id: n10
     cau: 'Ô chọn của công cụ: năm giọng (Đô, Sol, Fa, Rê, Si♭ trưởng), ba cấp độ (1: đen, trắng, bước gần; 2: thêm móc đơn, nhảy quãng; 3: thêm chấm dôi), ba tốc độ (60, 80, 100).'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/scripts/thi-tau.js: GIONG_TT (năm giọng), CAP (ba cấp, chữ như trên), TOC_DO = [60, 80, 100]; taoGiaiDieu: cấp 1 chỉ có độ dài [1], [1], [2] (đen, trắng) và bước tối đa 2 bậc; cấp 2 thêm [0.5, 0.5] (móc đơn) và bước nhảy 4 hay 3 bậc, âm vực rộng hơn; cấp 3 thêm [1.5, 0.5] và [3] (chấm dôi). Chữ sinh ra (data-sinh), không phải chữ trang.'
+    ghi_chu: 'src/scripts/thi-tau.js: GIONG_TT (năm giọng), CAP (ba cấp, chữ như trên), TOC_DO = [60, 80, 100]; taoGiaiDieu: cấp 1 chỉ có độ dài [1], [1], [2] (đen, trắng) và bước tối đa 2 bậc; cấp 2 thêm [0.5, 0.5] (móc đơn) và bước nhảy 4 hay 3 bậc, âm vực rộng hơn; cấp 3 thêm [1.5, 0.5] và [3] (chấm dôi). Chữ sinh ra (data-sinh), không phải chữ trang. Review D7-gom: thi-tau.js GIONG_TT (năm giọng), CAP, TOC_DO = [60, 80, 100].'
+    review: dung
   - id: n11
     cau: Chơi và được chấm bằng đàn MIDI hay bằng micro; có tuỳ chọn "Bỏ qua quãng tám"; hát hoặc đàn xong thì hiện kết quả đúng bao nhiêu nốt.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/scripts/thi-tau.js: cham("midi") dùng chamMidi, cham("mic") dùng chamCaoDo (cham-diem.js); checkbox data-k="quang" truyền boQuang; xong() ghi "Đúng x/y nốt (p%)" rồi kyNang("sight", pt >= 80) và ghiNgay("melodies").'
+    ghi_chu: 'src/scripts/thi-tau.js: cham("midi") dùng chamMidi, cham("mic") dùng chamCaoDo (cham-diem.js); checkbox data-k="quang" truyền boQuang; xong() ghi "Đúng x/y nốt (p%)" rồi kyNang("sight", pt >= 80) và ghiNgay("melodies"). Review D7-gom: thi-tau.js: cham("midi")/cham("mic"), ô "Bỏ qua quãng tám", "Đúng x/y nốt".'
+    review: dung
   - id: n12
-    cau: 'Đoạn "Cách tập" do công cụ hiện: nghe chủ âm, nhìn giai điệu 30 giây, đọc tên nốt, bấm "Đếm vào" rồi hát (hoặc đàn) theo nhịp; muốn chấm điểm thì bấm một trong hai nút "Chơi và được chấm"; cuối cùng bấm "Nghe đáp án" để so sánh.'
+    cau: 'Đoạn "Cách tập" do công cụ hiện: nghe chủ âm, nhìn giai điệu 30 giây, đọc tên nốt, bấm "Đếm vào" rồi hát (hoặc đàn) theo nhịp; muốn chấm điểm thì bấm một trong hai nút ở dòng "Chơi và được chấm"; cuối cùng bấm "Nghe đáp án" để so sánh.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/scripts/thi-tau.js veThiTau: đoạn chữ này có trong ô. Chữ "Chơi và được chấm" là nhãn dòng (span) trước hai nút "Bằng đàn MIDI" và "Bằng micro (hát hoặc nhạc cụ)", không phải tên nút: người giao có thể sửa chữ cho khớp (module, không phải trang).'
+    ghi_chu: 'src/scripts/thi-tau.js veThiTau: đoạn chữ này có trong ô. Chữ "Chơi và được chấm" là nhãn dòng (span) trước hai nút "Bằng đàn MIDI" và "Bằng micro (hát hoặc nhạc cụ)", không phải tên nút: người giao có thể sửa chữ cho khớp (module, không phải trang). Review D7-gom: thi-tau.js veThiTau dòng 129: chữ nay là "Muốn được chấm điểm, bấm một trong hai nút ở dòng “Chơi và được chấm”" (người giao đã sửa theo lượt 1); câu ghi lại theo chữ ấy.'
+    review: dung
 khuong_nhac: []

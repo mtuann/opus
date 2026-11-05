@@ -10,7 +10,7 @@ Nếu bạn có **đàn piano điện** hoặc **đàn phím MIDI**, có thể c
 ## Cách kết nối
 
 1. Nối đàn với máy tính bằng **cáp USB** (cổng "USB to Host" trên đàn điện) hoặc bộ chuyển MIDI–USB.
-2. Mở site bằng **Chrome**, **Edge** hoặc **Opera** trên máy tính. Safari và mọi trình duyệt trên iPhone, iPad **chưa hỗ trợ** MIDI trên web.
+2. Mở site bằng một trình duyệt có MIDI trên web, như **Chrome**, **Edge**, **Firefox** hay **Opera** trên máy tính. Safari và mọi trình duyệt trên iPhone, iPad **chưa hỗ trợ** MIDI trên web; khi đó ô ở trên sẽ báo.
 3. Bấm **Kết nối đàn MIDI** ở trên và cho phép khi trình duyệt hỏi. Lần sau site sẽ tự kết nối lại.
 4. Bấm vài phím: nếu "Phát âm thanh khi bấm phím" đang bật, bạn sẽ nghe tiếng piano của site (tắt đi nếu đàn đã có loa riêng).
 

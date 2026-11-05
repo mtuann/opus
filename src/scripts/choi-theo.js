@@ -176,7 +176,7 @@ export function mountChoiTheo(goc) {
 		if (!c || dang) return;
 		const nguon = chon('nguon').value;
 		const phach = 60 / Number(chon('bpm').value);
-		if (nguon === 'midi' && !coMidi()) return bao('Trình duyệt này không có MIDI trên web. Dùng Chrome hay Edge trên máy tính, hoặc chọn Micro.', 'bad');
+		if (nguon === 'midi' && !coMidi()) return bao('Trình duyệt này không có MIDI trên web. Hãy mở trang bằng trình duyệt khác (như Chrome, Edge hay Firefox trên máy tính), hoặc chọn Micro.', 'bad');
 		if (nguon === 'mic' && !coMicro()) return bao('Trình duyệt này không mở được micro.', 'bad');
 		// đang chờ micro hay đàn MIDI (người dùng đang được hỏi quyền): bấm thêm thì bỏ qua
 		const cho = (dang = { cho: true, nguon, huy: false, nha: null });

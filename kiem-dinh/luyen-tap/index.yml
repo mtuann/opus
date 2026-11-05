@@ -9,8 +9,8 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: Claude Sonnet 5.5 (D7-L1 lượt 1, phần 1/2)
-      luot_2: null
-      review: null
+      luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 7, 05/11/2026)
+      review: Claude Opus 5.5 (review D7-gom, 05/11/2026)
       kiem_mau: null
 nguon: []
 nhan_dinh:
@@ -18,172 +18,206 @@ nhan_dinh:
     cau: Các công cụ chạy ngay trong trình duyệt, không cần cài đặt hay đăng nhập.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Site tĩnh: mọi công cụ là script ở src/scripts/ chạy trong trình duyệt (midi.js, micro.js, am-thanh.js…); site không có tài khoản hay đăng nhập.'
+    ghi_chu: 'Site tĩnh: mọi công cụ là script ở src/scripts/ chạy trong trình duyệt (midi.js, micro.js, am-thanh.js…); site không có tài khoản hay đăng nhập. Review D7-gom: site tĩnh, mọi công cụ là script ở src/scripts/; không có tài khoản hay đăng nhập.'
+    review: dung
   - id: n2
     cau: Kết quả được lưu trong trình duyệt của bạn và tổng hợp ở nhật ký luyện tập.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/scripts/tien-do.js lưu ở localStorage khóa opus-zero:v1; ../opus-zero/docs/luyen-tap/nhat-ky.md (chưa chuyển, lô D7-L2 giữ): nhật ký tổng hợp ngày luyện, mốc đọc nốt, quãng, hợp âm, thẻ…'
+    ghi_chu: 'src/scripts/tien-do.js lưu ở localStorage khóa opus-zero:v1; ../opus-zero/docs/luyen-tap/nhat-ky.md (chưa chuyển, lô D7-L2 giữ): nhật ký tổng hợp ngày luyện, mốc đọc nốt, quãng, hợp âm, thẻ… Review D7-gom: trang đích luyen-tap/nhat-ky nay đã có (D7-L2): bản đồ, việc hôm nay, ghi chú, năng lực (nhat-ky.js, nang-luc.js); tien-do.js lưu ở opus-zero:v1.'
+    review: dung
   - id: n3
     cau: Link nhật ký luyện tập trỏ tới trang luyen-tap/nhat-ky.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm trên site cũ ../opus-zero/docs/luyen-tap/nhat-ky.md (trang chưa chuyển, lô D7-L2 phải giữ điều ghi ở đây): Trang có ở site cũ, "sắp có" ở site mới (src/data/trang.yml có luyen-tap/nhat-ky). Điều cần giữ: trang nhật ký tổng hợp kết quả luyện tập (ô vuông theo ngày, chuỗi ngày, bản đồ 16 tuần, việc hôm nay, ghi chú).'
+    ghi_chu: 'Kiểm trên site cũ ../opus-zero/docs/luyen-tap/nhat-ky.md (trang chưa chuyển, lô D7-L2 phải giữ điều ghi ở đây): Trang có ở site cũ, "sắp có" ở site mới (src/data/trang.yml có luyen-tap/nhat-ky). Điều cần giữ: trang nhật ký tổng hợp kết quả luyện tập (ô vuông theo ngày, chuỗi ngày, bản đồ 16 tuần, việc hôm nay, ghi chú). Review D7-gom: trang đích nay đã có: src/content/docs/luyen-tap/nhat-ky.md, nhat-ky.js (bản đồ 16 tuần, chuỗi ngày, việc hôm nay, ghi chú); khớp điều cần giữ.'
+    review: dung
   - id: n4
     cau: 'Có đàn piano điện: kết nối qua MIDI để dùng phím thật thay cho chuột.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: midi.js, doc-not.js, chep.js, choi-theo.js, tra-phim.js nhận nốt từ đàn MIDI (Web MIDI). Link tới luyen-tap/ket-noi-midi (có trong bản xem).
+    ghi_chu: "midi.js, doc-not.js, chep.js, choi-theo.js, tra-phim.js nhận nốt từ đàn MIDI (Web MIDI). Link tới luyen-tap/ket-noi-midi (có trong bản xem). Review D7-gom: đã kiểm lại module và trang như ghi_chu của lượt 1; khớp."
+    review: dung
   - id: n5
     cau: Bài tập kỹ thuật bên đàn (gam, hợp âm rải, bàn đạp…) nằm ở mục Piano.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Các trang piano/gam, piano/hop-am-rai, piano/ban-dap có trong src/content/docs/piano/ và có link /opus/piano/ (mục lục mục Piano).
+    ghi_chu: "Các trang piano/gam, piano/hop-am-rai, piano/ban-dap có trong src/content/docs/piano/ và có link /opus/piano/ (mục lục mục Piano). Review D7-gom: đã kiểm lại module và trang như ghi_chu của lượt 1; khớp."
+    review: dung
   - id: n6
     cau: 'Ô chọn âm thanh ở đầu trang (công cụ sound-setting): chọn đàn piano thật (mẫu âm) hay âm tổng hợp, có nút nghe thử, dòng nói mẫu âm tải dần (30 mẫu, khoảng 2 MB cả bộ).'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/scripts/chon-am.js (veChonAm, chuTrangThai): hai lựa chọn piano và synth (am-thanh.js cheDo, datCheDo), nút "Nghe thử"; MAU.length = 30 (dist/luyen-tap/index.html: "Mẫu âm piano (30 mẫu, khoảng 2 MB cả bộ)…"); public/mau-am/piano/ có 30 mẫu, 2028 KB (du -sk), GIOI_HAN_MAU = 12.'
+    ghi_chu: 'src/scripts/chon-am.js (veChonAm, chuTrangThai): hai lựa chọn piano và synth (am-thanh.js cheDo, datCheDo), nút "Nghe thử"; MAU.length = 30 (dist/luyen-tap/index.html: "Mẫu âm piano (30 mẫu, khoảng 2 MB cả bộ)…"); public/mau-am/piano/ có 30 mẫu, 2028 KB (du -sk), GIOI_HAN_MAU = 12. Review D7-gom: src/scripts/chon-am.js (chuTrangThai: "30 mẫu, khoảng 2 MB cả bộ", nút "Nghe thử"); public/mau-am/piano/ có 30 file mp3, 2028 KB.'
+    review: dung
   - id: n7
     cau: Mục "Hôm nay nên luyện gì?" hiện buổi tập gợi ý cho hôm nay.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/scripts/ke-hoach.js (::cong-cu{ten="plan"}): tinhKeHoach chọn buổi tập từ dữ liệu lưu (chặng, bài đang tập, kỹ năng, bài nhạc lý đã xong, thẻ đến hạn), chỉ đọc; tiêu đề có id hom-nay-nen-luyen-gi (link từ nhat-ky cũ).'
+    ghi_chu: 'src/scripts/ke-hoach.js (::cong-cu{ten="plan"}): tinhKeHoach chọn buổi tập từ dữ liệu lưu (chặng, bài đang tập, kỹ năng, bài nhạc lý đã xong, thẻ đến hạn), chỉ đọc; tiêu đề có id hom-nay-nen-luyen-gi (link từ nhat-ky cũ). Review D7-gom: đã kiểm lại module và trang như ghi_chu của lượt 1; khớp.'
+    review: dung
   - id: n8
     cau: 'Đọc nốt: một nốt ngẫu nhiên hiện trên khuông, bạn chọn tên; tự ưu tiên những nốt bạn hay sai.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: doc-not.js (chonNot, trongSo, tùy chọn "Ưu tiên nốt hay sai"). Link luyen-tap/doc-not có trong bản xem.
+    ghi_chu: 'doc-not.js (chonNot, trongSo, tùy chọn "Ưu tiên nốt hay sai"). Link luyen-tap/doc-not có trong bản xem. Review D7-gom: đã kiểm lại module và trang như ghi_chu của lượt 1; khớp.'
+    review: dung
   - id: n9
     cau: 'Hóa biểu và vòng quãng năm: nhìn hóa biểu, đoán giọng trưởng hoặc giọng thứ; vòng quãng năm bấm được ở cuối trang.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Trang luyen-tap/hoa-bieu (bản xem): công cụ keysig-quiz (chọn giọng trưởng/thứ, tùy chọn giọng ở dist: oz-kh-thang, oz-kh-giang), rồi mục "Vòng quãng năm" (id vong-quang-nam) với công cụ circle bấm được ở cuối trang.'
+    ghi_chu: 'Trang luyen-tap/hoa-bieu (bản xem): công cụ keysig-quiz (chọn giọng trưởng/thứ, tùy chọn giọng ở dist: oz-kh-thang, oz-kh-giang), rồi mục "Vòng quãng năm" (id vong-quang-nam) với công cụ circle bấm được ở cuối trang. Review D7-gom: dist/luyen-tap/hoa-bieu/index.html: keysig-quiz rồi mục id="vong-quang-nam" với circle.'
+    review: dung
   - id: n10
     cau: 'Tiết tấu: đọc một tiết tấu 2 ô nhịp và gõ theo; site chấm độ chính xác đến từng mili giây.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm trên site cũ ../opus-zero/docs/luyen-tap/tiet-tau.md (trang chưa chuyển, lô D7-L2 phải giữ điều ghi ở đây): Trang chưa chuyển. Điều cần giữ: tiết tấu 2 ô nhịp 4/4, 4 tiếng đếm vào, gõ theo bằng nút hay phím cách, kết quả báo sớm/muộn trung bình theo ms (rhythm.js cũ dòng 128: "hơi sớm, trung bình n ms").'
+    ghi_chu: 'Kiểm trên site cũ ../opus-zero/docs/luyen-tap/tiet-tau.md (trang chưa chuyển, lô D7-L2 phải giữ điều ghi ở đây): Trang chưa chuyển. Điều cần giữ: tiết tấu 2 ô nhịp 4/4, 4 tiếng đếm vào, gõ theo bằng nút hay phím cách, kết quả báo sớm/muộn trung bình theo ms (rhythm.js cũ dòng 128: "hơi sớm, trung bình n ms"). Review D7-gom: trang đích nay đã có: tiet-tau.js (taoTietTau hai ô, M:4/4, 4 tiếng đếm, nút "Gõ" hay phím cách, "hơi sớm/muộn, trung bình N ms"); khớp.'
+    review: dung
   - id: n11
     cau: 'Thị tấu một bè: giai điệu ngẫu nhiên 4 ô nhịp để hát hoặc đàn, rồi nghe đáp án.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm trên site cũ ../opus-zero/docs/luyen-tap/thi-tau.md (trang chưa chuyển, lô D7-L2 phải giữ điều ghi ở đây): sight-reading.js cũ dòng 1: "sinh giai điệu ngẫu nhiên 4 ô nhịp để hát hoặc đàn, rồi nghe đáp án". Trang chưa chuyển: giữ đúng điều ấy.'
+    ghi_chu: 'Kiểm trên site cũ ../opus-zero/docs/luyen-tap/thi-tau.md (trang chưa chuyển, lô D7-L2 phải giữ điều ghi ở đây): sight-reading.js cũ dòng 1: "sinh giai điệu ngẫu nhiên 4 ô nhịp để hát hoặc đàn, rồi nghe đáp án". Trang chưa chuyển: giữ đúng điều ấy. Review D7-gom: trang đích nay đã có: thi-tau.js (bốn ô, "Nghe đáp án"); khớp.'
+    review: dung
   - id: n12
     cau: 'Thị tấu hai tay: bài 4 ô nhịp cho hai tay trên khuông kép, theo bốn cấp; chơi trên đàn của bạn rồi tự chấm.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm trên site cũ ../opus-zero/docs/luyen-tap/thi-tau-hai-tay.md (trang chưa chuyển, lô D7-L2 phải giữ điều ghi ở đây): trang cũ nói "bài bốn ô nhịp cho hai tay trên khuông kép", "Bốn cấp" và "tự chấm một trong ba mức"; sight2.js LEVELS 1–4. Trang chưa chuyển: giữ.'
+    ghi_chu: 'Kiểm trên site cũ ../opus-zero/docs/luyen-tap/thi-tau-hai-tay.md (trang chưa chuyển, lô D7-L2 phải giữ điều ghi ở đây): trang cũ nói "bài bốn ô nhịp cho hai tay trên khuông kép", "Bốn cấp" và "tự chấm một trong ba mức"; sight2.js LEVELS 1–4. Trang chưa chuyển: giữ. Review D7-gom: trang đích nay đã có: thi-tau-hai-tay.js (bốn ô, %%score RH LH, CAP 1–4, ba mức tự chấm); khớp.'
+    review: dung
   - id: n13
     cau: 'Chép giai điệu: nghe một câu nhạc ngắn và nhập lại từng nốt bằng bàn phím màn hình hoặc đàn MIDI.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Trang luyen-tap/chep-giai-dieu (bản xem), chep.js: xem hồ sơ của trang đó.'
+    ghi_chu: 'Trang luyen-tap/chep-giai-dieu (bản xem), chep.js: xem hồ sơ của trang đó. Review D7-gom: đã kiểm lại module và trang như ghi_chu của lượt 1; khớp.'
+    review: dung
   - id: n14
     cau: 'Phiếu bài tập và giấy kẻ khuông: tạo đề gọi tên nốt (khóa Sol, khóa Fa), quãng, hợp âm ba và hóa biểu để in ra giấy làm bài (đáp án ẩn khi in); in giấy kẻ khuông đơn hoặc khuông kép piano.'
     loai: ve-site
     ket_qua: da-sua
-    ghi_chu: 'Kiểm trên site cũ ../opus-zero/docs/luyen-tap/phieu-bai-tap.md (trang chưa chuyển, lô D7-L2 phải giữ điều ghi ở đây): Chữ cũ: "Tạo đề đọc nốt, tiết tấu để in ra giấy làm bài (đáp án ẩn khi in)". Chữ mới: "Tạo đề gọi tên nốt (khóa Sol, khóa Fa), quãng, hợp âm ba và hóa biểu…". Lý do: worksheet.js cũ chỉ có năm loại đề (notesTreble, notesBass, intervals, chords, keysigs), không có tiết tấu. Đáp án ẩn khi in (oz-noprint, trang cũ "Đáp án được ẩn khi in") và staffpaper.js: "Khuông đơn", "Khuông kép (piano)" đúng. Trang chưa chuyển: lô D7-L2 giữ năm loại đề này.'
+    ghi_chu: 'Kiểm trên site cũ ../opus-zero/docs/luyen-tap/phieu-bai-tap.md (trang chưa chuyển, lô D7-L2 phải giữ điều ghi ở đây): Chữ cũ: "Tạo đề đọc nốt, tiết tấu để in ra giấy làm bài (đáp án ẩn khi in)". Chữ mới: "Tạo đề gọi tên nốt (khóa Sol, khóa Fa), quãng, hợp âm ba và hóa biểu…". Lý do: worksheet.js cũ chỉ có năm loại đề (notesTreble, notesBass, intervals, chords, keysigs), không có tiết tấu. Đáp án ẩn khi in (oz-noprint, trang cũ "Đáp án được ẩn khi in") và staffpaper.js: "Khuông đơn", "Khuông kép (piano)" đúng. Trang chưa chuyển: lô D7-L2 giữ năm loại đề này. Review D7-gom: trang đích nay đã có: phieu.js LOAI năm loại, CSS in ẩn .oz-phieu-dap-an, giay-khuong.js "Khuông đơn", "Khuông kép (piano)"; khớp.'
+    review: dung
   - id: n15
     cau: 'Chơi theo: chơi hoặc hát theo bài, site nghe qua micro hoặc đàn MIDI và chấm từng nốt.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Trang luyen-tap/choi-theo (bản xem), choi-theo.js.
+    ghi_chu: "Trang luyen-tap/choi-theo (bản xem), choi-theo.js. Review D7-gom: đã kiểm lại module và trang như ghi_chu của lượt 1; khớp."
+    review: dung
   - id: n16
     cau: 'Hát lại và máy lên dây: nghe một nốt hoặc một quãng, hát lại, xem mình cao hay thấp bao nhiêu cent; máy lên dây ở cuối trang.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: choi-theo.js mountHatLai (Hát lại một nốt, Hát quãng đi lên, kim lệch theo cent) và so-cao-do.js (tuner); trang luyen-tap/hat-lai có mục "Máy lên dây" (id may-len-day) ở cuối trang.
+    ghi_chu: 'choi-theo.js mountHatLai (Hát lại một nốt, Hát quãng đi lên, kim lệch theo cent) và so-cao-do.js (tuner); trang luyen-tap/hat-lai có mục "Máy lên dây" (id may-len-day) ở cuối trang. Review D7-gom: đã kiểm lại module và trang như ghi_chu của lượt 1; khớp.'
+    review: dung
   - id: n17
     cau: 'Thu âm buổi tập: thu âm, lưu trên máy, nghe lại và so sánh hai bản thu.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm trên site cũ ../opus-zero/docs/luyen-tap/thu-am.md (trang chưa chuyển, lô D7-L2 phải giữ điều ghi ở đây): trang cũ: "Thu âm ngay trong trình duyệt, đặt tên, nghe lại, tải về, và so sánh hai bản thu… lưu trên máy bạn". Trang chưa chuyển: giữ.'
+    ghi_chu: 'Kiểm trên site cũ ../opus-zero/docs/luyen-tap/thu-am.md (trang chưa chuyển, lô D7-L2 phải giữ điều ghi ở đây): trang cũ: "Thu âm ngay trong trình duyệt, đặt tên, nghe lại, tải về, và so sánh hai bản thu… lưu trên máy bạn". Trang chưa chuyển: giữ. Review D7-gom: trang đích nay đã có: thu-am.js (thu, đặt tên, nghe lại, tải về, so sánh hai bản), kho-thu.js IndexedDB; khớp.'
+    review: dung
   - id: n18
     cau: 'Kết nối đàn MIDI: dùng đàn piano điện thay cho chuột trong các công cụ.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'midi.js: các công cụ có ô midi-status hay nghe() nhận nốt; link luyen-tap/ket-noi-midi có trong bản xem. (Công cụ nào có ô MIDI do trang của nó quyết định.)'
+    ghi_chu: 'midi.js: các công cụ có ô midi-status hay nghe() nhận nốt; link luyen-tap/ket-noi-midi có trong bản xem. (Công cụ nào có ô MIDI do trang của nó quyết định.) Review D7-gom: đã kiểm lại module và trang như ghi_chu của lượt 1; khớp.'
+    review: dung
   - id: n19
     cau: Bốn công cụ luyện tai nằm ngay trong các bài Luyện tai, cạnh phần hướng dẫn cách nghe.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: luyen-tai/nghe-quang (interval-trainer), nghe-hop-am (chord-trainer), nghe-gam (scale-trainer), nghe-tien-trinh (cadence-trainer); mỗi trang có mục "Luyện với công cụ" (id luyen-voi-cong-cu, có trong dist). Khớp hồ sơ luyen-tai/index n10.
+    ghi_chu: 'luyen-tai/nghe-quang (interval-trainer), nghe-hop-am (chord-trainer), nghe-gam (scale-trainer), nghe-tien-trinh (cadence-trainer); mỗi trang có mục "Luyện với công cụ" (id luyen-voi-cong-cu, có trong dist). Khớp hồ sơ luyen-tai/index n10. Review D7-gom: dist/luyen-tai/{nghe-quang,nghe-hop-am,nghe-gam,nghe-tien-trinh}/index.html đều có id="luyen-voi-cong-cu".'
+    review: dung
   - id: n20
     cau: 'Nhận biết quãng: nghe hai nốt và đoán khoảng cách giữa chúng.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'luyen-tai.js: interval-trainer phát hai nốt, người học chọn quãng.'
+    ghi_chu: 'luyen-tai.js: interval-trainer phát hai nốt, người học chọn quãng. Review D7-gom: đã kiểm lại module và trang như ghi_chu của lượt 1; khớp.'
+    review: dung
   - id: n21
     cau: 'Nhận biết hợp âm: phân biệt hợp âm trưởng, thứ, giảm, tăng và 5 loại hợp âm bảy.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'luyen-tai.js chord-trainer: bộ "4 loại hợp âm ba" (maj, min, dim, aug) và "5 loại hợp âm bảy" (maj7, dom7, min7, hdim7, dim7).'
+    ghi_chu: 'luyen-tai.js chord-trainer: bộ "4 loại hợp âm ba" (maj, min, dim, aug) và "5 loại hợp âm bảy" (maj7, dom7, min7, hdim7, dim7). Review D7-gom: đã kiểm lại module và trang như ghi_chu của lượt 1; khớp.'
+    review: dung
   - id: n22
     cau: 'Nhận biết gam: nghe một gam và đoán loại: trưởng, thứ, điệu thức hay ngũ cung.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'luyen-tai.js GOI_Y_GAM: major, natural/harmonic/melodic, dorian, mixolydian, lydian, phrygian, ngũ cung trưởng và thứ.'
+    ghi_chu: 'luyen-tai.js GOI_Y_GAM: major, natural/harmonic/melodic, dorian, mixolydian, lydian, phrygian, ngũ cung trưởng và thứ. Review D7-gom: đã kiểm lại module và trang như ghi_chu của lượt 1; khớp.'
+    review: dung
   - id: n23
     cau: 'Nhận biết kết: nghe bốn hợp âm và đoán loại kết ở cuối: trọn, nửa, plagal hay lừa.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'luyen-tai.js KET: pac, hc, plagal, deceptive, mỗi loại là chuỗi bốn hợp âm.'
+    ghi_chu: 'luyen-tai.js KET: pac, hc, plagal, deceptive, mỗi loại là chuỗi bốn hợp âm. Review D7-gom: đã kiểm lại module và trang như ghi_chu của lượt 1; khớp.'
+    review: dung
   - id: n24
     cau: Đoán phong cách và nhận biết kết cấu (giai điệu và đệm, đối âm…) nằm ở Luyện nghe nhận diện.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'nhan-dien/luyen-nghe có style-trainer và texture-trainer; texture-trainer có bốn kết cấu: đơn âm, chủ điệu (giai điệu và đệm), phức điệu (đối âm), dị âm (luyen-tai.js KET_CAU).'
+    ghi_chu: 'nhan-dien/luyen-nghe có style-trainer và texture-trainer; texture-trainer có bốn kết cấu: đơn âm, chủ điệu (giai điệu và đệm), phức điệu (đối âm), dị âm (luyen-tai.js KET_CAU). Review D7-gom: dist/nhan-dien/luyen-nghe/index.html có data-cong-cu="style-trainer" và "texture-trainer".'
+    review: dung
   - id: n25
     cau: Bài Chơi theo tai bên phím đàn dùng Hát lại và Chép giai điệu để tìm giai điệu trên phím, đệm và dịch giọng.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/content/docs/luyen-tai/choi-bang-tai.md: dòng 8 và mục "Giữ nốt trong đầu" (Hát lại), "Câu ngắn" (Chép giai điệu); các mục 1 (tìm giai điệu), 2 (đệm I, IV, V), 4 (dịch giọng).'
+    ghi_chu: 'src/content/docs/luyen-tai/choi-bang-tai.md: dòng 8 và mục "Giữ nốt trong đầu" (Hát lại), "Câu ngắn" (Chép giai điệu); các mục 1 (tìm giai điệu), 2 (đệm I, IV, V), 4 (dịch giọng). Review D7-gom: đã kiểm lại module và trang như ghi_chu của lượt 1; khớp.'
+    review: dung
   - id: n26
     cau: 'Bàn phím piano: chọn nốt gốc và loại gam hoặc hợp âm để thấy và nghe ngay trên phím đàn.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: tra-phim.js (piano-explorer); trang luyen-tap/ban-phim (bản xem).
+    ghi_chu: "tra-phim.js (piano-explorer); trang luyen-tap/ban-phim (bản xem). Review D7-gom: đã kiểm lại module và trang như ghi_chu của lượt 1; khớp."
+    review: dung
   - id: n27
     cau: 'Xây gam và hợp âm: tự bấm chọn từng nốt để dựng gam hoặc hợp âm theo yêu cầu, rồi kiểm tra.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm trên site cũ ../opus-zero/docs/luyen-tap/xay-hop-am.md (trang chưa chuyển, lô D7-L2 phải giữ điều ghi ở đây): trang cũ: "site yêu cầu một gam hoặc hợp âm, bạn bấm chọn từng nốt, rồi bấm Kiểm tra". Trang chưa chuyển: giữ.'
+    ghi_chu: 'Kiểm trên site cũ ../opus-zero/docs/luyen-tap/xay-hop-am.md (trang chưa chuyển, lô D7-L2 phải giữ điều ghi ở đây): trang cũ: "site yêu cầu một gam hoặc hợp âm, bạn bấm chọn từng nốt, rồi bấm Kiểm tra". Trang chưa chuyển: giữ. Review D7-gom: trang đích nay đã có: xay.js (câu hỏi "Bấm các nốt của: …", bấm chọn phím, "Kiểm tra"); khớp.'
+    review: dung
   - id: n28
     cau: 'Vòng quãng năm: bấm vào từng giọng để xem hóa biểu, các nốt và hợp âm.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'luyen-tap/hoa-bieu (bản xem), mục "Vòng quãng năm" (id vong-quang-nam) với circle bấm được; chữ trang cũ: "Bấm vào một giọng để xem hóa biểu, các nốt, hợp âm và nghe thử".'
+    ghi_chu: 'luyen-tap/hoa-bieu (bản xem), mục "Vòng quãng năm" (id vong-quang-nam) với circle bấm được; chữ trang cũ: "Bấm vào một giọng để xem hóa biểu, các nốt, hợp âm và nghe thử". Review D7-gom: đã kiểm lại module và trang như ghi_chu của lượt 1; khớp.'
+    review: dung
   - id: n29
     cau: 'Máy đếm nhịp: giữ nhịp khi vỗ tay, đọc tiết tấu hoặc tập đàn.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm trên site cũ ../opus-zero/docs/luyen-tap/metronome.md (trang chưa chuyển, lô D7-L2 phải giữ điều ghi ở đây): trang cũ: "giữ một nhịp đều tuyệt đối để bạn tập vỗ tiết tấu, đọc nhạc hoặc tập đàn". Trang chưa chuyển: giữ.'
+    ghi_chu: 'Kiểm trên site cũ ../opus-zero/docs/luyen-tap/metronome.md (trang chưa chuyển, lô D7-L2 phải giữ điều ghi ở đây): trang cũ: "giữ một nhịp đều tuyệt đối để bạn tập vỗ tiết tấu, đọc nhạc hoặc tập đàn". Trang chưa chuyển: giữ. Review D7-gom: trang đích nay đã có: luyen-tap/metronome, may-dem-nhip.js; khớp.'
+    review: dung
   - id: n30
     cau: 'Máy lên dây: đo cao độ qua micro để kiểm tra giọng hát, lên dây violin hoặc guitar, xem đàn piano cơ đang lệch chuẩn bao nhiêu.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'so-cao-do.js: chọn nhạc cụ tự do/violin/guitar (DAY), dòng nốt gần nhất và cent; trang luyen-tap/hat-lai (bản xem, mục "Máy lên dây") nói chơi La4 trên piano cơ rồi đọc số cent.'
+    ghi_chu: 'so-cao-do.js: chọn nhạc cụ tự do/violin/guitar (DAY), dòng nốt gần nhất và cent; trang luyen-tap/hat-lai (bản xem, mục "Máy lên dây") nói chơi La4 trên piano cơ rồi đọc số cent. Review D7-gom: đã kiểm lại module và trang như ghi_chu của lượt 1; khớp.'
+    review: dung
   - id: n31
     cau: 'Nhật ký luyện tập: chuỗi ngày liên tiếp, bản đồ 16 tuần, danh sách việc hôm nay và ghi chú.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm trên site cũ ../opus-zero/docs/luyen-tap/nhat-ky.md (trang chưa chuyển, lô D7-L2 phải giữ điều ghi ở đây): journal.js cũ dòng 1: "Nhật ký luyện tập: chuỗi ngày, bản đồ nhiệt 16 tuần, việc cần làm hôm nay, ghi chú." Trang chưa chuyển: giữ.'
+    ghi_chu: 'Kiểm trên site cũ ../opus-zero/docs/luyen-tap/nhat-ky.md (trang chưa chuyển, lô D7-L2 phải giữ điều ghi ở đây): journal.js cũ dòng 1: "Nhật ký luyện tập: chuỗi ngày, bản đồ nhiệt 16 tuần, việc cần làm hôm nay, ghi chú." Trang chưa chuyển: giữ. Review D7-gom: trang đích nay đã có: nhat-ky.js (chuChuoi, 16 tuần, VIEC, textarea ghi chú); khớp.'
+    review: dung
   - id: n32
     cau: 'Dữ liệu của tôi: xem, sao lưu, chuyển sang máy khác (gộp, không ghi đè) hoặc xóa dữ liệu học và bản thu âm.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/scripts/sao-luu.js (data): xuất và nhập bản sao lưu, gộp không ghi đè ("Dữ liệu trong file được gộp"), nút "Xóa tiến độ học" và "Xóa mọi bản thu âm"; trang luyen-tap/du-lieu có trong bản xem (phần 2).'
+    ghi_chu: 'src/scripts/sao-luu.js (data): xuất và nhập bản sao lưu, gộp không ghi đè ("Dữ liệu trong file được gộp"), nút "Xóa tiến độ học" và "Xóa mọi bản thu âm"; trang luyen-tap/du-lieu có trong bản xem (phần 2). Review D7-gom: đã kiểm lại module và trang như ghi_chu của lượt 1; khớp.'
+    review: dung
   - id: n33
     cau: 'Ghi chú "Về dữ liệu": mọi dữ liệu luyện tập nằm trong bộ nhớ của trình duyệt (localStorage, riêng bản thu âm ở IndexedDB) trên máy bạn, không gửi đi đâu.'
     loai: ve-site
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Mọi dữ liệu luyện tập nằm trong bộ nhớ của trình duyệt (`localStorage`) trên máy bạn, không gửi đi đâu." Chữ mới thêm "riêng bản thu âm ở IndexedDB". Lý do: bản thu âm lưu ở IndexedDB "opus-zero-recordings" (data.js cũ dòng 121; sao-luu.js), tiến độ và cài đặt ở localStorage (opus-zero:v1, opus-zero:sound, opus-zero:midi-auto); không có chỗ gửi dữ liệu đi.'
+    ghi_chu: 'Chữ cũ: "Mọi dữ liệu luyện tập nằm trong bộ nhớ của trình duyệt (`localStorage`) trên máy bạn, không gửi đi đâu." Chữ mới thêm "riêng bản thu âm ở IndexedDB". Lý do: bản thu âm lưu ở IndexedDB "opus-zero-recordings" (data.js cũ dòng 121; sao-luu.js), tiến độ và cài đặt ở localStorage (opus-zero:v1, opus-zero:sound, opus-zero:midi-auto); không có chỗ gửi dữ liệu đi. Review D7-gom: đã kiểm lại module và trang như ghi_chu của lượt 1; khớp.'
+    review: dung
   - id: n34
     cau: Mỗi trình duyệt, mỗi thiết bị có dữ liệu riêng; muốn chuyển sang máy khác, xem Dữ liệu của tôi.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: localStorage và IndexedDB gắn với từng trình duyệt trên từng thiết bị (không có tài khoản đồng bộ); trang luyen-tap/du-lieu có phần chuyển sang máy khác (sao-luu.js).
+    ghi_chu: "localStorage và IndexedDB gắn với từng trình duyệt trên từng thiết bị (không có tài khoản đồng bộ); trang luyen-tap/du-lieu có phần chuyển sang máy khác (sao-luu.js). Review D7-gom: đã kiểm lại module và trang như ghi_chu của lượt 1; khớp."
+    review: dung
 ghi_chu: 'Trang chỉ mục Luyện tập (tầng khung). Hầu hết là mô tả công cụ: kiểm ở module (src/scripts/) hay ở site cũ cho trang chưa chuyển (nhat-ky, tiet-tau, thi-tau, thi-tau-hai-tay, phieu-bai-tap, thu-am, xay-hop-am, metronome: lô D7-L2 tìm bằng grep -rn "luyen-tap/<trang>" kiem-dinh/). Sửa trang: mô tả Phiếu bài tập (năm loại đề, không có tiết tấu); ghi chú dữ liệu (thêm IndexedDB). Tìm lại trang nhận ra: grep -rn "luyen-tap/phieu-bai-tap" kiem-dinh/. Trang Luyện tập hiện cũng có công cụ plan (ke-hoach.js): link của nó tới trang chưa chuyển hiện "sắp có".'
 doi_chu:
   - cu: Tạo đề đọc nốt, tiết tấu để in ra giấy làm bài (đáp án ẩn khi in); in giấy kẻ khuông đơn hoặc khuông kép piano.

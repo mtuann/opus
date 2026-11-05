@@ -216,7 +216,7 @@ export function mount(goc) {
 	const cham = async (nguon) => {
 		const c = layNgCanh();
 		if (!c || dang) return;
-		if (nguon === 'midi' && !coMidi()) return bao('Trình duyệt này không hỗ trợ MIDI. Hãy dùng Chrome hoặc Edge, hoặc chấm bằng micro.', 'bad');
+		if (nguon === 'midi' && !coMidi()) return bao('Trình duyệt này không có MIDI trên web. Hãy mở trang bằng trình duyệt khác (như Chrome, Edge hay Firefox trên máy tính), hoặc chấm bằng micro.', 'bad');
 		if (nguon === 'mic' && !coMicro()) return bao('Trình duyệt này không mở được micro.', 'bad');
 		// đang chờ micro hay đàn MIDI (người dùng đang được hỏi quyền): bấm thêm thì bỏ qua
 		const cho = (dang = { cho: true, nguon, huy: false, nha: null });

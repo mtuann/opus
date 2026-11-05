@@ -9,8 +9,8 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: Claude Sonnet 5.5 (D7-L1 lượt 1, phần 1/2)
-      luot_2: null
-      review: null
+      luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 7, 05/11/2026)
+      review: Claude Opus 5.5 (review D7-gom, 05/11/2026)
       kiem_mau: null
 nguon:
   - id: omt-clefs
@@ -30,12 +30,14 @@ nhan_dinh:
     cau: Bấm tên của nốt trên khuông.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/scripts/doc-not.js (note-reader): một nốt ngẫu nhiên vẽ bằng veNotDon, bảy nút tên nốt (Đô Rê Mi hay C D E).'
+    ghi_chu: 'src/scripts/doc-not.js (note-reader): một nốt ngẫu nhiên vẽ bằng veNotDon, bảy nút tên nốt (Đô Rê Mi hay C D E). Review D7-gom: src/scripts/doc-not.js veDocNot: nốt vẽ bằng veNotDon, bảy nút tên nốt.'
+    review: dung
   - id: n2
     cau: Trên máy tính có thể gõ phím chữ cái C D E F G A B hoặc số 1 … 7 sau khi bấm vào khung.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'doc-not.js: goc.addEventListener("keydown") nhận CHU (C–B) và /^[1-7]$/; khung .oz-doc-not-khuong có tabindex=0, role="group" và nhãn "Gõ chữ C đến B hay số 1 đến 7"; phím bị bỏ qua khi tiêu điểm ở ô chọn hay khi giữ Alt, Ctrl, Meta. Chữ trên nút cũng ghi phím tắt (title "Phím tắt: C hoặc 1").'
+    ghi_chu: 'doc-not.js: goc.addEventListener("keydown") nhận CHU (C–B) và /^[1-7]$/; khung .oz-doc-not-khuong có tabindex=0, role="group" và nhãn "Gõ chữ C đến B hay số 1 đến 7"; phím bị bỏ qua khi tiêu điểm ở ô chọn hay khi giữ Alt, Ctrl, Meta. Chữ trên nút cũng ghi phím tắt (title "Phím tắt: C hoặc 1"). Review D7-gom: doc-not.js: keydown nhận C–B và /^[1-7]$/; khung .oz-doc-not-khuong có tabindex="0".'
+    review: dung
   - id: n3
     cau: 'Bắt đầu nhỏ: chọn khóa Sol, phạm vi "Trong khuông" (công cụ có hai lựa chọn này); chỉ chuyển sang bước tiếp khi đúng ngay lần đầu khoảng 9/10.'
     loai: khuyen-tap
@@ -47,12 +49,14 @@ nhan_dinh:
     cau: Khi bật "Ưu tiên nốt hay sai", những nốt bạn từng trả lời sai sẽ xuất hiện nhiều hơn.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'doc-not.js chonNot + trongSo: trọng số 1 + 4 × (sai + 1) / (lần + 2), nốt chưa gặp 1,6; thống kê lưu ở store.noteStats; ô "Ưu tiên nốt hay sai" bật sẵn.'
+    ghi_chu: 'doc-not.js chonNot + trongSo: trọng số 1 + 4 × (sai + 1) / (lần + 2), nốt chưa gặp 1,6; thống kê lưu ở store.noteStats; ô "Ưu tiên nốt hay sai" bật sẵn. Review D7-gom: doc-not.js trongSo, ô "Ưu tiên nốt hay sai" (checked).'
+    review: dung
   - id: n5
     cau: Dòng thống kê bên dưới cho biết 3 nốt bạn hay sai nhất.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'doc-not.js haySai: tối đa 3 nốt, đã gặp từ 3 lần và có sai, theo tỉ lệ sai; hiện sau "Hay sai nhất:" ở dòng .oz-doc-not-so. Chưa đủ dữ liệu thì dòng này không hiện.'
+    ghi_chu: 'doc-not.js haySai: tối đa 3 nốt, đã gặp từ 3 lần và có sai, theo tỉ lệ sai; hiện sau "Hay sai nhất:" ở dòng .oz-doc-not-so. Chưa đủ dữ liệu thì dòng này không hiện. Review D7-gom: doc-not.js haySai: tối đa 3 nốt (slice(0, 3)), đã gặp từ 3 lần, có sai.'
+    review: dung
   - id: n6
     cau: Trong khóa Sol, nốt Sol nằm trên dòng 2 (đếm từ dưới lên).
     loai: quy-tac
@@ -101,26 +105,26 @@ nhan_dinh:
     cau: Link tới bài Khuông nhạc và khóa để ôn lý thuyết.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Link /opus/nhac-ly/02-khuong-nhac-khoa/: trang có trong bản build, tiêu đề "2. Khuông nhạc và khóa".'
+    ghi_chu: 'Link /opus/nhac-ly/02-khuong-nhac-khoa/: trang có trong bản build, tiêu đề "2. Khuông nhạc và khóa". Review D7-gom: src/content/docs/nhac-ly/02-khuong-nhac-khoa.md có.'
+    review: dung
   - id: n12
     cau: 'Phần "Dùng đàn MIDI": cắm đàn piano điện vào máy tính để dùng phím thật.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'doc-not.js: nghe() của midi.js; bấm phím trắng đúng tên nốt là trả lời; phím đen báo "Phím đen: nốt trên khuông là một nốt tự nhiên (phím trắng)."; ô midi-status ở cuối trang. Link tới luyen-tap/ket-noi-midi có trong bản xem.'
+    ghi_chu: 'doc-not.js: nghe() của midi.js; bấm phím trắng đúng tên nốt là trả lời; phím đen báo "Phím đen: nốt trên khuông là một nốt tự nhiên (phím trắng)."; ô midi-status ở cuối trang. Link tới luyen-tap/ket-noi-midi có trong bản xem. Review D7-gom: doc-not.js nghe() của midi.js, báo "Phím đen: …"; trang có midi-status.'
+    review: dung
   - id: n13
-    cau: 'Trình duyệt hỗ trợ MIDI trên web: Chrome, Edge, Opera trên máy tính (chữ do ô midi-status hiện).'
+    cau: 'Ô midi-status báo khi trình duyệt không có MIDI trên web: Safari và mọi trình duyệt trên iPhone, iPad chưa có; trên máy tính, Chrome, Edge, Firefox có.'
     loai: so-lieu
     nguon:
       - caniuse-midi
-    ket_qua: dung
-    ghi_chu: 'Ô trạng thái MIDI (midi.js, midi-status): khi trình duyệt không có Web MIDI thì khóa nút và báo "Trình duyệt này không có MIDI trên web. Dùng Chrome, Edge hay Opera trên máy tính." Chrome, Edge, Opera hỗ trợ (Can I use, kiểm 11/2026); Firefox từ 108 cũng hỗ trợ nên danh sách chưa đủ nhưng không sai; Safari và iOS không có. Câu dễ cũ: rà lại khi trình duyệt đổi.'
-    luot_2: dung
-    luot_2_nguon: [ "https://caniuse.com/midi", "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMIDIAccess" ]
-    luot_2_ghi_chu: Đã mở caniuse (Chrome 43+, Edge 79+, Opera 30+ hỗ trợ; Safari và iOS Safari không) và MDN requestMIDIAccess (chỉ HTTPS, chưa Baseline). Lưu ý Firefox 108+ cũng hỗ trợ và Chrome Android có, nên danh sách không đầy đủ nhưng không sai về ý chính.
+    ket_qua: da-sua
+    ghi_chu: 'Ô trạng thái MIDI (midi.js, midi-status): khi trình duyệt không có Web MIDI thì khóa nút và báo "Trình duyệt này không có MIDI trên web. Dùng Chrome, Edge hay Opera trên máy tính." Chrome, Edge, Opera hỗ trợ (Can I use, kiểm 11/2026); Firefox từ 108 cũng hỗ trợ nên danh sách chưa đủ nhưng không sai; Safari và iOS không có. Câu dễ cũ: rà lại khi trình duyệt đổi. Review D7-gom: chữ đổi sau lượt 2 (lượt 2 của chữ cũ: dung); Lượt 2 (caniuse, MDN): Firefox từ bản 108 cũng có MIDI trên web, nên danh sách cũ thiếu. Chữ mới nêu trình duyệt chưa có (Safari, iPhone, iPad) và chỉ nêu ví dụ trình duyệt có ("như"), không liệt kê đủ. Chữ cũ của ô: "Dùng Chrome, Edge hay Opera trên máy tính."; chữ mới của ô: "Trình duyệt này không có MIDI trên web. Safari và mọi trình duyệt trên iPhone, iPad đều chưa có; trên máy tính, hãy thử Chrome, Edge hay Firefox." (src/scripts/midi.js, trangThai). Chờ lượt 2 bổ sung (plans/lam-lai/bao-cao/d7-gom/bo-sung.yml).'
   - id: n14
     cau: Kết quả đọc nốt được lưu như kỹ năng "notes" và thống kê từng nốt, tính vào số nốt đọc đúng trong ngày.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'doc-not.js: kyNang("notes"), ghiNgay("notes"), datKho("noteStats") (src/scripts/tien-do.js, khóa opus-zero:v1); dòng "Lượt này: đúng ngay lần đầu x/y. Hôm nay đã đọc đúng n nốt." Câu này không nằm ở trang nhưng là chữ công cụ hiện.'
+    ghi_chu: 'doc-not.js: kyNang("notes"), ghiNgay("notes"), datKho("noteStats") (src/scripts/tien-do.js, khóa opus-zero:v1); dòng "Lượt này: đúng ngay lần đầu x/y. Hôm nay đã đọc đúng n nốt." Câu này không nằm ở trang nhưng là chữ công cụ hiện. Review D7-gom: doc-not.js: kyNang("notes"), ghiNgay("notes", 1), datKho("noteStats").'
+    review: dung
 ghi_chu: Trang Luyện tập (tầng khung). Thuật ngữ trang dùng (khóa Sol, khóa Fa, dòng kẻ phụ) đã có trong src/data/thuat-ngu.yml (clef, ledger-line).
 khuong_nhac: []

@@ -9,8 +9,8 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: Claude Sonnet 5.5 (D7-L1 lượt 1, phần 2/2)
-      luot_2: null
-      review: null
+      luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 7, 05/11/2026)
+      review: Claude Opus 5.5 (review D7-gom, 05/11/2026)
       kiem_mau: null
 ghi_chu: 'Trang khung. Không sửa chữ. n3, n4 kiểm tháng 11/2026; n4 dễ cũ, đề nghị viết lại. Link tới thi-tau, xay-hop-am chưa chuyển: giữ như n8. Nguồn caniuse đọc qua kết quả tìm kiếm (trang caniuse cần JavaScript); MDN Web MIDI API đã mở, không có bảng tương thích ở bản đọc được.'
 nguon:
@@ -35,7 +35,8 @@ nhan_dinh:
     cau: Có thể cắm đàn piano điện hoặc đàn phím MIDI vào máy tính và dùng phím thật thay cho chuột trong các công cụ luyện tập.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: src/scripts/midi.js và công cụ nhận nốt (doc-not.js, choi-theo.js, chep.js, ban-phim.js dùng nghe() của midi.js). Xem n8 về điều kiện có ô trạng thái.
+    ghi_chu: "src/scripts/midi.js và công cụ nhận nốt (doc-not.js, choi-theo.js, chep.js, ban-phim.js dùng nghe() của midi.js). Xem n8 về điều kiện có ô trạng thái. Review D7-gom: midi.js nghe(); doc-not.js, choi-theo.js, chep.js, ban-phim.js, thi-tau.js, xay.js nhận nốt."
+    review: dung
   - id: n2
     cau: Nối đàn với máy tính bằng cáp USB (cổng "USB to Host" trên đàn điện) hoặc bộ chuyển MIDI–USB.
     loai: so-lieu
@@ -47,16 +48,13 @@ nhan_dinh:
     luot_2_nguon: [ "https://en.wikipedia.org/wiki/MIDI" ]
     luot_2_ghi_chu: 'Đã mở trang MIDI: dữ liệu MIDI truyền qua cáp MIDI hay USB; có bộ chuyển MIDI-USB để nối với máy tính có USB, và cổng USB phổ biến trên đàn MIDI. Tên gọi cổng "USB to Host" trên đàn điện không thấy trong phần đã đọc (chỉ đọc nửa đầu trang), nhưng ý chính được xác nhận.'
   - id: n3
-    cau: Mở site bằng Chrome, Edge hoặc Opera trên máy tính để dùng MIDI.
+    cau: Mở site bằng một trình duyệt có MIDI trên web, như Chrome, Edge, Firefox hay Opera trên máy tính.
     loai: so-lieu
     nguon:
       - caniuse-midi
       - mdn-midi
-    ket_qua: dung
-    ghi_chu: 'Kiểm tháng 11/2026. caniuse Web MIDI: Chrome từ 43, Edge từ 79 hỗ trợ; Opera theo Chromium. Câu không nói Firefox (Firefox từ 108 có hỗ trợ kèm bước cho phép) nhưng không sai.'
-    luot_2: dung
-    luot_2_nguon: [ "https://caniuse.com/midi", "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMIDIAccess" ]
-    luot_2_ghi_chu: Đã mở caniuse (Chrome 43+, Edge 79+, Opera 30+ hỗ trợ; Safari và iOS Safari không) và MDN requestMIDIAccess (chỉ HTTPS, chưa Baseline). Lưu ý Firefox 108+ cũng hỗ trợ và Chrome Android có, nên danh sách không đầy đủ nhưng không sai về ý chính.
+    ket_qua: da-sua
+    ghi_chu: 'Kiểm tháng 11/2026. caniuse Web MIDI: Chrome từ 43, Edge từ 79 hỗ trợ; Opera theo Chromium. Câu không nói Firefox (Firefox từ 108 có hỗ trợ kèm bước cho phép) nhưng không sai. Review D7-gom: chữ đổi sau lượt 2 (lượt 2 của chữ cũ: dung); Lượt 2 (caniuse, MDN): Firefox từ bản 108 cũng có MIDI trên web, nên danh sách cũ thiếu. Chữ mới nêu trình duyệt chưa có (Safari, iPhone, iPad) và chỉ nêu ví dụ trình duyệt có ("như"), không liệt kê đủ. Chữ cũ: "Mở site bằng Chrome, Edge hoặc Opera trên máy tính." Chờ lượt 2 bổ sung (plans/lam-lai/bao-cao/d7-gom/bo-sung.yml).'
   - id: n4
     cau: Safari và mọi trình duyệt trên iPhone, iPad chưa hỗ trợ MIDI trên web.
     loai: so-lieu
@@ -64,7 +62,7 @@ nhan_dinh:
       - caniuse-midi
       - webkit-midi
     ket_qua: dung
-    ghi_chu: 'Kiểm tháng 11/2026. caniuse: Safari chưa hỗ trợ (tới bản 26.x/27.1 và bản thử), WebKit bug 107250 vẫn NEW từ 2013; trình duyệt trên iOS dùng WebKit. Câu dễ cũ khi Apple thêm hỗ trợ: ĐỀ NGHỊ viết lại cho bền, ví dụ "Nếu trình duyệt không hỗ trợ MIDI trên web, ô ở trên sẽ báo (hiện nay là Safari và các trình duyệt trên iPhone, iPad)", hoặc bỏ tên và nhờ chính công cụ báo (midi.js trangThai trả "Trình duyệt này không có MIDI trên web").'
+    ghi_chu: 'Kiểm tháng 11/2026. caniuse: Safari chưa hỗ trợ (tới bản 26.x/27.1 và bản thử), WebKit bug 107250 vẫn NEW từ 2013; trình duyệt trên iOS dùng WebKit. Câu dễ cũ khi Apple thêm hỗ trợ: ĐỀ NGHỊ viết lại cho bền, ví dụ "Nếu trình duyệt không hỗ trợ MIDI trên web, ô ở trên sẽ báo (hiện nay là Safari và các trình duyệt trên iPhone, iPad)", hoặc bỏ tên và nhờ chính công cụ báo (midi.js trangThai trả "Trình duyệt này không có MIDI trên web"). Review D7-gom: giữ câu; thêm vế "khi đó ô ở trên sẽ báo" (ve-site, đúng: midi.js trangThai trả "khong-ho-tro" khi không có navigator.requestMIDIAccess), theo đề nghị viết cho bền của lượt 1.'
     luot_2: dung
     luot_2_nguon: [ "https://caniuse.com/midi" ]
     luot_2_ghi_chu: "Caniuse: Safari macOS và iOS Safari không hỗ trợ ở mọi phiên bản; trình duyệt iOS dùng WebKit. Có tiện ích bên thứ ba cho Safari macOS 18.4+ nhưng không phải hỗ trợ gốc."
@@ -72,25 +70,34 @@ nhan_dinh:
     cau: Bấm "Kết nối đàn MIDI" ở trên và cho phép khi trình duyệt hỏi.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/scripts/midi.js: nút data-act="noi" nhãn "Kết nối đàn MIDI", ketNoi() gọi navigator.requestMIDIAccess() (MDN: trình duyệt hỏi quyền).'
+    ghi_chu: 'src/scripts/midi.js: nút data-act="noi" nhãn "Kết nối đàn MIDI", ketNoi() gọi navigator.requestMIDIAccess() (MDN: trình duyệt hỏi quyền). Review D7-gom: midi.js: nút "Kết nối đàn MIDI", ketNoi() gọi requestMIDIAccess.'
+    review: dung
   - id: n6
     cau: Lần sau site sẽ tự kết nối lại.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/scripts/midi.js: lưu opus-zero:midi-auto = "1" khi kết nối được; mount tự gọi ketNoi() khi mở trang có ô trạng thái. Trình duyệt phải còn nhớ quyền.'
+    ghi_chu: 'src/scripts/midi.js: lưu opus-zero:midi-auto = "1" khi kết nối được; mount tự gọi ketNoi() khi mở trang có ô trạng thái. Trình duyệt phải còn nhớ quyền. Review D7-gom: midi.js: opus-zero:midi-auto, mount tự ketNoi.'
+    review: dung
   - id: n7
     cau: 'Bấm vài phím: nếu "Phát âm thanh khi bấm phím" đang bật, bạn sẽ nghe tiếng piano của site (tắt đi nếu đàn đã có loa riêng).'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/scripts/midi.js: ô data-k="tieng" nhãn "Phát âm thanh khi bấm phím", mặc định bật (phatTieng = true), nhan() phát choiNot khi loai "on". Phần "tắt đi nếu đàn có loa riêng" là lời khuyên.'
+    ghi_chu: 'src/scripts/midi.js: ô data-k="tieng" nhãn "Phát âm thanh khi bấm phím", mặc định bật (phatTieng = true), nhan() phát choiNot khi loai "on". Phần "tắt đi nếu đàn có loa riêng" là lời khuyên. Review D7-gom: midi.js: ô "Phát âm thanh khi bấm phím" (checked), nhan() phát choiNot.'
+    review: dung
   - id: n8
     cau: 'Sáu công cụ dùng được đàn MIDI: Đọc nốt, Thị tấu một bè, Chơi theo, Chép giai điệu, Xây gam và hợp âm, Bàn phím piano; mỗi công cụ làm đúng việc ghi ở bảng.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Đã chuyển, kiểm module: doc-not.js (nghe), choi-theo.js (chấm cao độ và nhịp bằng chamMidi), chep.js (nghe, nhập nốt), ban-phim.js (nghe, phím sáng). Chưa chuyển (D7-L2): thi-tau (site cũ docs/luyen-tap/thi-tau.md "Thị tấu một bè": cần giữ chấm từng nốt cao độ và nhịp bằng MIDI), xay-hop-am (docs/luyen-tap/xay-hop-am.md: bấm phím để chọn các nốt). Đã kiểm: midi.js chỉ ô trạng thái mở kết nối; trang doc-not và ban-phim đều có midi-status (grep), choi-theo.js và chep.js tự nhúng ô ấy. Trang thi-tau, xay-hop-am (D7-L2) phải có ô ấy thì câu bảng mới đúng.'
+    ghi_chu: 'Đã chuyển, kiểm module: doc-not.js (nghe), choi-theo.js (chấm cao độ và nhịp bằng chamMidi), chep.js (nghe, nhập nốt), ban-phim.js (nghe, phím sáng). Chưa chuyển (D7-L2): thi-tau (site cũ docs/luyen-tap/thi-tau.md "Thị tấu một bè": cần giữ chấm từng nốt cao độ và nhịp bằng MIDI), xay-hop-am (docs/luyen-tap/xay-hop-am.md: bấm phím để chọn các nốt). Đã kiểm: midi.js chỉ ô trạng thái mở kết nối; trang doc-not và ban-phim đều có midi-status (grep), choi-theo.js và chep.js tự nhúng ô ấy. Trang thi-tau, xay-hop-am (D7-L2) phải có ô ấy thì câu bảng mới đúng. Review D7-gom: nay cả sáu trang có: thi-tau.js chấm bằng chamMidi (cao độ và nhịp), trang thi-tau có midi-status; xay.js nhận nghe() và trang xay-hop-am có midi-status (dist/luyen-tap/{thi-tau,xay-hop-am}/index.html có oz-midi); khớp bảng.'
+    review: dung
   - id: n9
     cau: Với đàn MIDI, site biết chính xác từng nốt và thời điểm bấm, nên kết quả chính xác hơn nhiều so với micro, đặc biệt với hợp âm và nhịp nhanh.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/scripts/midi.js: sự kiện on/off có số MIDI và luc theo đồng hồ AudioContext; src/scripts/micro.js tanSoCoBan chỉ tìm một tần số cơ bản mỗi khung (không tách hợp âm). Đúng với cách công cụ làm.'
+    ghi_chu: 'src/scripts/midi.js: sự kiện on/off có số MIDI và luc theo đồng hồ AudioContext; src/scripts/micro.js tanSoCoBan chỉ tìm một tần số cơ bản mỗi khung (không tách hợp âm). Đúng với cách công cụ làm. Review D7-gom: midi.js sự kiện có m và luc; micro.js chỉ một tần số mỗi khung.'
+    review: dung
 khuong_nhac: []
+doi_chu:
+  - cu: Mở site bằng Chrome, Edge hoặc Opera trên máy tính. Safari và mọi trình duyệt trên iPhone, iPad chưa hỗ trợ MIDI trên web.
+    moi: Mở site bằng một trình duyệt có MIDI trên web, như Chrome, Edge, Firefox hay Opera trên máy tính. Safari và mọi trình duyệt trên iPhone, iPad chưa hỗ trợ MIDI trên web; khi đó ô ở trên sẽ báo.
+    ly_do: 'n3, n4 (review D7-gom): lượt 2 (caniuse, MDN) thấy Firefox từ bản 108 cũng có MIDI trên web; danh sách cũ thiếu. Chữ mới chỉ nêu ví dụ ("như") và nói ô trạng thái tự báo khi trình duyệt không có (midi.js, trangThai).'
