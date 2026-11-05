@@ -197,6 +197,23 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 			// bản thu còn sau khi tải lại trang
 			await p.reload({ waitUntil: 'load' });
 			await p.waitForFunction(() => document.querySelectorAll('.oz-thu-am-ban').length === 1, null, { timeout: 8000 });
+			// bản thu có id không phải số (bản sao lưu bị sửa tay): không hiện, không chèn thuộc tính lạ
+			await p.evaluate(
+				() =>
+					new Promise((ok, loi) => {
+						const r = indexedDB.open('opus-zero-recordings', 1);
+						r.onsuccess = () => {
+							const tx = r.result.transaction('rec', 'readwrite');
+							tx.objectStore('rec').put({ id: '1" data-la="x', label: 'Lạ', dur: 'x', blob: new Blob(['a'], { type: 'audio/webm' }) });
+							tx.oncomplete = () => (r.result.close(), ok());
+							tx.onerror = () => loi(tx.error);
+						};
+						r.onerror = () => loi(r.error);
+					}),
+			);
+			await p.reload({ waitUntil: 'load' });
+			await p.waitForFunction(() => document.querySelectorAll('.oz-thu-am-ban').length === 1, null, { timeout: 8000 });
+			assert.equal(await el.locator('[data-la]').count(), 0);
 			await p.evaluate(() => (window.__ozTuChoi = true));
 			await el.locator('[data-act="thu"]').tap();
 			await p.waitForFunction(() => /^Không mở được micro/.test(document.querySelector('.oz-thu-am .oz-feedback').textContent), null, { timeout: 5000 });

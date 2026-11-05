@@ -113,9 +113,17 @@ export function mount(goc) {
 	ghiChu.addEventListener('input', () => {
 		clearTimeout(hen);
 		hen = setTimeout(() => {
+			hen = 0;
 			datGhiChu(ghiChu.value);
 			ve();
 		}, 400);
+	});
+	// đóng thẻ ngay sau khi gõ: lưu nốt ghi chú đang chờ
+	addEventListener('pagehide', () => {
+		if (!hen) return;
+		clearTimeout(hen);
+		hen = 0;
+		datGhiChu(ghiChu.value);
 	});
 	document.addEventListener('oz:progress', ve);
 	addEventListener('pageshow', (e) => e.persisted && ve());

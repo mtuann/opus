@@ -66,16 +66,19 @@ export function mount(goc) {
 		const recs = ((await idb('readonly', (s) => s.getAll())) || []).filter((r) => r && r.blob).sort((a, b) => b.id - a.id);
 		ds.innerHTML = recs.length ? '' : '<p class="oz-stats">Chưa có bản thu nào.</p>';
 		for (const r of recs) {
+			// id và độ dài từ IndexedDB (có thể do bản sao lưu nhập vào): chỉ nhận số, không chèn chữ lạ vào thuộc tính
+			const id = Number(r.id);
+			if (!Number.isFinite(id)) continue;
 			const u = URL.createObjectURL(r.blob);
 			urls.push(u);
 			const o = document.createElement('div');
 			o.className = 'oz-thu-am-ban';
 			o.innerHTML =
-				`<label><input type="checkbox" data-id="${r.id}"> <strong>${esc(r.label)}</strong></label> ` +
-				`<span class="oz-stats">${esc(r.date || '')} · ${thoiGian(r.dur || 0)}</span>` +
+				`<label><input type="checkbox" data-id="${id}"> <strong>${esc(r.label)}</strong></label> ` +
+				`<span class="oz-stats">${esc(r.date || '')} · ${thoiGian(Number(r.dur) || 0)}</span>` +
 				`<audio controls preload="metadata" src="${u}"></audio>` +
 				`<div class="oz-row"><a class="oz-btn" download="${esc(tenFile(r.label, r.mime || ''))}" href="${u}">Tải về</a>` +
-				`<button type="button" class="oz-btn" data-xoa="${r.id}">Xóa</button></div>`;
+				`<button type="button" class="oz-btn" data-xoa="${id}">Xóa</button></div>`;
 			ds.append(o);
 		}
 		chonSoSanh();
@@ -165,8 +168,19 @@ export function mount(goc) {
 		d.manh = [];
 		d.mr.ondataavailable = (e) => e.data?.size && d.manh.push(e.data);
 		d.mr.onstop = () => luu(d);
+		// lỗi khi đang thu (micro bị rút ra…): dừng và lưu phần đã thu
+		d.mr.onerror = () => dung();
 		d.cho = false;
-		d.mr.start();
+		try {
+			d.mr.start();
+		} catch {
+			// không bắt đầu được (luồng micro vừa kết thúc…): trả micro, không kẹt ở trạng thái đang thu
+			d.thoi();
+			d.nha();
+			dang = null;
+			dongMicro();
+			return bao('Trình duyệt này không thu được âm thanh từ micro.', 'bad');
+		}
 		d.bat = Date.now();
 		nut.textContent = '■ Dừng';
 		bao('');

@@ -375,7 +375,7 @@ export function mount(goc) {
 		}
 		const kq = gop(docMay(), den.progress);
 		const co = new Set((await banThu()).map((x) => x.id));
-		const thuMoi = den.recordings.filter((x) => x && x.id && !co.has(x.id) && x.data);
+		const thuMoi = den.recordings.filter((x) => x && Number.isFinite(Number(x.id)) && x.id && !co.has(x.id) && x.data);
 		const td = thayDoi(kq.bao_cao, thuMoi.length);
 		xem.hidden = false;
 		xem.innerHTML =
