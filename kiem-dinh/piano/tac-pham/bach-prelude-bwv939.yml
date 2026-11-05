@@ -1,0 +1,606 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa piano/tac-pham/bach-prelude-bwv939
+trang: src/content/docs/piano/tac-pham/bach-prelude-bwv939.md
+nguon_cu: ../opus-zero/docs/piano/tac-pham/bach-prelude-bwv939.md
+tang: tac-pham
+lan:
+  - so: 1
+    ngay: 2026-11-05
+    nhanh: moi/d6-l2
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (D6-L2 phần A)"
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Bài học Bach, Prelude nhỏ Đô trưởng BWV 939 (tầng Tác phẩm). Bản nhạc: Mutopia bwv-939 (.ly và .mid, nguồn Bach-Gesellschaft Bd. 36, Naumann 1890; Hajo Dezelski), đối chiếu từng nốt cả 16 ô bằng script Python (mido) in nốt MIDI theo ô; MIDI ../opus-zero/_imslp/mid/mut_bwv939.mid cho cùng nốt với tệp tải từ Mutopia (chỉ khác tên track). Nguồn chép tay: Bach Digital đọc qua bản lưu Wayback (trang gốc chặn bot): trang BWV 939, P 804 tập nhỏ 53, cả tập P 804. Lời nói đầu Henle HN 106 (PDF trên henle.de). Ấn bản Peters: Bach Printed Music Database (bachbib.bw.edu). Kellner: ADB (Eitner) và Baker''s (Encyclopedia.com). Bản thu: Bach Cantatas Website (danh mục, bậc 3), Hyperion (album Hewitt), Österreichische Mediathek (album Gilbert), IMSLP (Kolodin, qua bản lưu Wayback). Sửa trang ở lượt 1: n14, n15 (Kellner, tập P 804, quyền tác giả), n20 (bỏ "một trong những bài Bach đầu tiên của rất nhiều người học đàn"), n21 (Bach-Gesellschaft và tên Fünf kleine Präludien), n23 (harpsichord: bỏ "nốt tắt khá nhanh", "ngân lâu hơn nhiều"), n29 (bỏ Nikolayeva), n64 (bỏ "các bản Urtext"), n75, n77, n78 (mục Nguồn: thay hai bài Wikipedia và sách Schulenberg chưa đọc bằng nguồn đã mở). Chưa chắc: n9 (định nghĩa nhịp điệu hòa âm, chưa thấy câu trong OMT). Không tính là nhận định: tiêu đề, tiêu đề cột, chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng, mốc trong ::khoi-nghe. Thuật ngữ trang dùng có trong thuat-ngu.yml: mordent (trang gọi "láy dưới", khớp nghĩa "chính – dưới – chính (có gạch)"), legato, non legato. Chưa có bản ghi: "nhịp điệu hòa âm" (harmonic rhythm), "nốt nền" (pedal point).'
+nguon:
+  - id: mut-939
+    bac: 1
+    ten: Mutopia Project, Bach, Praeludium BWV 939 ("Fünf kleine Präludien" Nr. 1), nguồn Bach-Gesellschaft Bd. 36 (Ernst Naumann, 1890), Hajo Dezelski; tệp LilyPond và MIDI
+    link: https://www.mutopiaproject.org/ftp/BachJS/BWV939/bwv-939/bwv-939.ly
+  - id: mut-846
+    bac: 1
+    ten: Mutopia Project, Bach, Prelude BWV 846 (Das wohltemperierte Klavier I, số 1), tệp MIDI
+    link: https://www.mutopiaproject.org/ftp/BachJS/BWV846/wtk1-prelude1/wtk1-prelude1.mid
+  - id: mut-924-999
+    bac: 1
+    ten: Mutopia Project, Bach, Prelude BWV 924 và Prelude BWV 999, tệp MIDI
+    link: https://www.mutopiaproject.org/ftp/BachJS/BWV924/bwv924_prelude_c_major_mutopia/bwv924_prelude_c_major_mutopia.mid
+  - id: bd-939
+    bac: 2
+    ten: Bach Digital, Prelude in C BWV 939 (bản lưu Wayback 20/2/2026)
+    link: https://www.bach-digital.de/receive/BachDigitalWork_work_00001114?lang=en
+  - id: bd-p804-53
+    bac: 2
+    ten: Bach Digital, D-B Mus.ms. Bach P 804, Faszikel 53 (bản lưu Wayback 21/1/2026)
+    link: https://www.bach-digital.de/receive/BachDigitalSource_source_00001849
+  - id: bd-p804
+    bac: 2
+    ten: Bach Digital, D-B Mus.ms. Bach P 804 [Konvolut] (bản lưu Wayback 16/3/2026)
+    link: https://www.bach-digital.de/receive/BachDigitalSource_source_00025378
+  - id: henle-106
+    bac: 2
+    ten: G. Henle Verlag, HN 106 Little Preludes and Fughettas (Rudolf Steglich; mức khó từng bài)
+    link: https://www.henle.de/en/Little-Preludes-and-Fughettas/HN-106
+  - id: henle-106-vw
+    bac: 2
+    ten: G. Henle Verlag, HN 106, lời nói đầu (Rudolf Steglich, Erlangen 1975; PDF)
+    link: https://www.henle.de/media/b5/c1/48/1690886075/0106-1690886075-sync.pdf
+  - id: imslp-939-943
+    bac: 2
+    ten: IMSLP, 5 Kleine Präludien, BWV 939-943 (Bach)
+    link: https://imslp.org/wiki/5_Kleine_Pr%C3%A4ludien,_BWV_939-943_(Bach,_Johann_Sebastian)
+  - id: imslp-939
+    bac: 2
+    ten: IMSLP, Prelude in C major, BWV 939 (Bach) (bản lưu Wayback 4/10/2026)
+    link: https://imslp.org/wiki/Prelude_in_C_major,_BWV_939_(Bach,_Johann_Sebastian)
+  - id: bpmd-peters
+    bac: 2
+    ten: Bach Printed Music Database (Riemenschneider Bach Institute), Griepenkerl (ed.), 12 petits préludes ou exercises pour le commençans, Peters, Leipzig, Oeuvres complets Liv. 9 No. 16
+    link: https://bachbib.bw.edu/script/bach2.pl?23=42453
+  - id: adb-kellner
+    bac: 2
+    ten: Robert Eitner, "Kellner, Johann Peter", Allgemeine Deutsche Biographie 15 (1882), qua deutsche-biographie.de
+    link: https://www.deutsche-biographie.de/sfz40498.html
+  - id: bakers-kellner
+    bac: 2
+    ten: Baker's Biographical Dictionary of Musicians, mục Kellner, Johann Peter, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/kellner-johann-peter
+  - id: brit-hpsd
+    bac: 2
+    ten: Encyclopaedia Britannica, harpsichord (bản lưu Wayback 5/7/2026)
+    link: https://www.britannica.com/art/harpsichord
+  - id: bcw-rec
+    bac: 3
+    ten: Bach Cantatas Website, Five Little Preludes BWV 939-943, danh sách bản thu (bậc 3; dùng để định vị bản thu và độ dài)
+    link: https://bach-cantatas.com/NVD/BWV939-943-Rec.htm
+  - id: hyperion-hewitt
+    bac: 2
+    ten: Hyperion Records, CDA67121/2, Bach, The French Suites (Angela Hewitt, piano; có các prelude nhỏ)
+    link: https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA67121/2
+  - id: mediathek-gilbert
+    bac: 2
+    ten: Österreichische Mediathek, Kenneth Gilbert (Cembalo), Preludes, Fantasias & Fugues, Archiv Produktion 1986
+    link: https://www.mediathek.at/atom/21B784FA-13C-000EC-000043D6-21B6F375/pool/bibl
+  - id: omt-intro
+    bac: 2
+    ten: Open Music Theory, Introduction to Harmony, Cadences, and Phrase Endings
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/
+nhan_dinh:
+  - id: n1
+    cau: Bài có mười sáu ô nhịp.
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: Mutopia đánh số ô 1–16; MIDI 16 ô.
+  - id: n2
+    cau: Bài chơi chưa đầy một phút; một lần chơi thường dài chừng 40 giây, tức quanh ♩ ≈ 90–100.
+    loai: so-lieu
+    nguon: [ bcw-rec, imslp-939, mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'Bach Cantatas: Gilbert 0:34, Sebestyén 0:33, Nikolayeva 0:45, Egarr 0:40; IMSLP: Kolodin (file trong public/audio 30,59 giây). 16 ô × 4 phách = 64 phách; 40 giây ứng với ♩ ≈ 96. Độ dài bản thu lấy từ danh mục bậc 3 và IMSLP; phép tính tốc độ là số học.'
+  - id: n3
+    cau: 'Bài có hợp âm rải chuyền qua lại giữa hai tay, nốt nền ở bè trầm, một chuỗi láy, một gam móc kép và một cái kết gọn gàng.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'Rải ở tay phải ô 1–3, 6, 8–11, 13; tay trái ô 4–5, 7, 12–13; nốt nền Đô ô 1–3, Sol ô 9–11; láy (\mordent) ô 9–11 tay trái; móc kép ô 14; kết ô 15–16.'
+  - id: n4
+    cau: Bài là bậc thang vừa sức trước Prelude Đô trưởng BWV 846 (link).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển: ../opus-zero/docs/piano/tac-pham/bach-prelude-do.md có. Dữ liệu: bach-prelude-bwv939 chặng 3, bach-prelude-do chặng 4 (src/data/tac-pham.yml).'
+  - id: n5
+    cau: 'Mười sáu ô, không có bè phức điệu nào phải giữ riêng.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: Kết cấu hợp âm rải và hợp âm; chỗ tay phải có hai bè (ô 6–7, 12, 15–16) chỉ là nốt giữ trong hợp âm, không có bè đối vị riêng.
+  - id: n6
+    cau: Vài tuần là bạn có một tác phẩm hoàn chỉnh để chơi cho người khác nghe.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n7
+    cau: 'Ô 1–3, tay phải rải trên nốt trầm ngân dài; ô 4, hình rải chuyển xuống tay trái còn tay phải đánh hợp âm; sau đó hai tay thay phiên nhau; ô 13, cả hai cùng rải.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'MIDI: tay trái C2–C3 ô 1–3 (12 phách); ô 4 tay trái C3 E3 G3…, tay phải G4 C5 E5 hợp âm; ô 5 tay trái rải, 6 tay phải, 7 tay trái, 8–11 tay phải, 12 tay trái; ô 13 cả hai tay rải.'
+  - id: n8
+    cau: Prelude BWV 846 dài 35 ô và đòi hình rải chia hai tay suốt bài.
+    loai: cau-truc
+    nguon: [ mut-846 ]
+    ket_qua: dung
+    ghi_chu: MIDI Mutopia wtk1-prelude1 có 35 ô; mỗi ô là một hợp âm rải chia hai tay.
+  - id: n9
+    cau: Nhịp điệu hòa âm là tốc độ đổi hợp âm.
+    loai: dinh-nghia
+    nguon: [ omt-intro ]
+    ket_qua: null
+    ghi_chu: 'chưa chắc: chương OMT đã mở nói về hòa âm và kết nhưng chưa thấy câu định nghĩa harmonic rhythm; định nghĩa này phổ biến. Lượt 2 tìm chương OMT đúng (có thể Harmonic Syntax) hay nguồn bậc 2 khác. Thuật ngữ chưa có bản ghi trong thuat-ngu.yml.'
+  - id: n10
+    cau: 'Gần như cả bài mỗi ô một hợp âm; riêng ô 15, hợp âm đổi gần như từng phách.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'Ô 6 đổi sang Mi thứ ở phách 4; ô 15: phách 1 G5 trên F3, D3; phách 2 C5 trên E3, C3; phách 3 G4 C5 trên G3; phách 4 D4 B4 trên G2.'
+  - id: n11
+    cau: 'Hòa âm tăng tốc báo hiệu kết đang tới (link Kết).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Gợi ý nghe; link src/content/docs/nhac-ly/13-ket.md có.'
+  - id: n12
+    cau: 'Quãng tám Đô trầm giữ suốt ba ô đầu, rồi nốt Sol trầm nhảy quãng tám có láy ở ô 9–11.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'Ly: "<c c''>1 ~" ba ô; ô 9–11 "g''4-\mordent g," (G3 có láy, rồi G2).'
+  - id: n13
+    cau: 'Không có bản viết tay nào của Bach cho bài này; nguồn duy nhất từ thế kỷ 18 là một bản chép trong tập P 804 ở Thư viện Quốc gia Berlin, một tập lớn đóng chung nhiều bản chép riêng lẻ.'
+    loai: lich-su
+    nguon: [ bd-939, bd-p804, bd-p804-53 ]
+    ket_qua: dung
+    ghi_chu: 'Bach Digital BWV 939: "unbekannt (einzige Quelle um/nach 1726)", nguồn chính "D-B Mus.ms. Bach P 804, Faszikel 53"; P 804: "Konvolutband aus dem 18. Jahrhundert ... bestehend aus 57 Einzelmanuskripten (Faszikeln)", Staatsbibliothek zu Berlin.'
+  - id: n14
+    cau: 'Tập P 804 phần lớn đến từ di sản của Johann Peter Kellner (1705–1772), cantor ở Gräfenroda, vùng Thüringen: 57 bản chép riêng lẻ, chủ yếu là nhạc đàn phím của Bach.'
+    loai: lich-su
+    nguon: [ bd-p804, adb-kellner, bakers-kellner, henle-106-vw ]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Tập này gắn với Kellner ...: ông và những người quanh ông đã chép rất nhiều tác phẩm đàn phím của Bach, và với không ít bài, bản chép của họ là nguồn sớm nhất hoặc duy nhất còn lại." Vế "nguồn sớm nhất hoặc duy nhất" cho "không ít bài" chưa có nguồn đọc được (sách Stinson 1989 không mở được). Chữ mới theo Bach Digital P 804: "größtenteils aus dem Nachlass Johann Peter Kellner, bestehend aus 57 Einzelmanuskripten ... (vornehmlich für Tasteninstrument), hauptsächlich von J. S. Bach". Kellner: Baker''s "b. Gräfenroda, Thuringia, Sept. 28, 1705 ... in 1732 he became Kantor"; ADB: sinh và mất ở Gräfenroda; Henle: "the Thuringian cantor Johann Peter Kellner". Năm 1705–1772 khớp bản ghi kellner đã khóa.'
+  - id: n15
+    cau: 'Phần chứa BWV 939–942 do một người chép chưa rõ tên, và không ghi tên tác giả; vì vậy không có bằng chứng trực tiếp rằng bài là của Bach, dù danh mục BWV và các ấn bản Urtext vẫn xếp bài dưới tên ông.'
+    loai: lich-su
+    nguon: [ bd-p804-53, bd-939, henle-106, imslp-939-943 ]
+    ket_qua: da-sua
+    ghi_chu: 'Bach Digital fasc. 53: "Scribe: unknown scribe" (Stinson: scribe 5, có thể Johann Baumbach), "No title or ascription to any composer". Chữ cũ "Vì vậy quyền tác giả của Bach đôi khi bị đặt dấu hỏi" chỉ thấy ở Wikipedia (dẫn BWV2a, không mở được). Chữ mới chỉ nói điều nguồn cho thấy; Bach Digital, Henle HN 106, IMSLP đều xếp bài dưới tên Bach (NBA V/12).'
+  - id: n16
+    cau: 'Năm sáng tác chưa chắc chắn: có tài liệu xếp bài vào thời Bach ở Köthen (1717–1723), có tài liệu đặt nó vào khoảng 1726–1727.'
+    loai: nam
+    nguon: [ bd-939, bd-p804-53, imslp-939-943, mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "1717?"; Mutopia: date "1717-1723?"; Bach Digital: năm sáng tác "unbekannt", bản chép "1726/1727 oder später (Stinson)". Câu dùng "có tài liệu", đúng mức.'
+  - id: n17
+    cau: 'Điều rõ ràng hơn là công dụng của bài: một bài ngắn để học đàn.'
+    loai: lich-su
+    nguon: [ bpmd-peters, henle-106 ]
+    ket_qua: dung
+    ghi_chu: 'Tên tập Peters: "12 petits préludes ou exercises pour le[s] commençans"; Henle mức 2 (dễ).'
+  - id: n18
+    cau: 'Năm 1843, nhà Peters ở Leipzig in một tập mười hai prelude ngắn, gom từ Clavier-Büchlein của Wilhelm Friedemann và tập P 804; tên tập là Douze petits Préludes ou Exercices pour les commençans.'
+    loai: lich-su
+    nguon: [ bpmd-peters, imslp-939, imslp-939-943, bd-p804, henle-106-vw ]
+    ket_qua: dung
+    ghi_chu: 'BPMD: Griepenkerl (ed.), "12 petits préludes ou exercises pour le commençans", Peters, Leipzig, Liv. 9 No. 16, thứ tự BWV 924, 939, 999, 925, 926, 940, 941, 927, 928, 929, 930, 942; ngày "[1844]". IMSLP: First Publication 1843. Hai nguồn lệch một năm (BPMD đặt năm trong ngoặc vuông, tức suy đoán); giữ 1843 theo IMSLP. BWV 924–930 nằm trong Clavierbüchlein (Henle); 939–942 và 999 nằm trong P 804 (Bach Digital, danh sách BWV của tập). Cách viết tên tập trên trang là chính tả chuẩn; BPMD chép "exercises pour le".'
+  - id: n19
+    cau: Clavier-Büchlein là cuốn sổ tay đàn phím Bach soạn cho con trai Wilhelm Friedemann.
+    loai: lich-su
+    nguon: [ henle-106-vw, henle-106 ]
+    ket_qua: dung
+    ghi_chu: 'Henle: "Little Clavier Book for Wilhelm Friedemann"; trang Henle (tiểu sử Bach): "Clavier-Büchlein vor Wilhelm Friedemann Bach from 1720".'
+  - id: n20
+    cau: BWV 939 là số 2 của tập Peters.
+    loai: danh-muc
+    nguon: [ bpmd-peters ]
+    ket_qua: da-sua
+    ghi_chu: 'Phần "số 2" đúng (BPMD: 924, 939, ...). Đã bỏ vế "và từ đó trở thành một trong những bài Bach đầu tiên của rất nhiều người học đàn": không kiểm được.'
+  - id: n21
+    cau: 'Năm 1890, ấn bản toàn tập của Hội Bach (Bach-Gesellschaft, tập 36) in lại bài; danh mục BWV về sau xếp nó đứng đầu nhóm Fünf kleine Präludien (Năm prelude nhỏ, BWV 939–943).'
+    loai: lich-su
+    nguon: [ imslp-939-943, mut-939 ]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Năm 1890, ấn bản toàn tập của Hội Bach (Bach-Gesellschaft) xếp nó đứng đầu nhóm Fünf kleine Präludien." IMSLP: BGA Band 36 (Naumann, 1890), năm bài ở tr. 119, 123, 127, 134–35, tức BGA không gom thành nhóm năm bài; "5 Kleine Präludien, BWV 939–943" là nhóm theo số BWV (IMSLP: "BWV 939–943 ; BC L70–74", mục 1 là BWV 939). Tiêu đề phụ "Fünf kleine Präludien" của Mutopia là theo nhóm BWV.'
+  - id: n22
+    cau: 'Bach viết cho Clavier, tức đàn phím nói chung, như harpsichord hay clavichord.'
+    loai: lich-su
+    nguon: [ bd-939, mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'Bach Digital: Scoring "Keyboard", Genre "Work for keyboard instruments"; Mutopia: instrument "Clavier".'
+  - id: n23
+    cau: 'Trên harpsichord, lực ngón gần như không làm tiếng to hay nhỏ đi; trên piano, tiếng to hay nhỏ theo lực ngón.'
+    loai: dinh-nghia
+    nguon: [ brit-hpsd ]
+    ket_qua: da-sua
+    ghi_chu: 'Britannica: pianoforte "capable of playing soft or loud according to the fingers'' pressure on the keys. The harpsichord is incapable of this dynamic gradation". Chữ cũ có thêm "nốt tắt khá nhanh" (harpsichord) và "nốt ngân lâu hơn nhiều" (piano): chưa có nguồn nói vậy, bỏ (như D6-L1 bỏ câu tương tự ở minuet-sol-thu).'
+  - id: n24
+    cau: Chơi Bach trên piano vì thế là một chuỗi lựa chọn (link thời kỳ Baroque).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Link src/content/docs/lich-su/thoi-ky/baroque.md có.'
+  - id: n25
+    cau: 'Câu hỏi nghe 1–4: quãng tám Đô vang tới đâu ở ô 3; đánh dấu ô có hình rải ở tay trái; láy ở ô 9–11 trên nốt Sol tay trái; nghệ sĩ có chậm ở hai ô cuối không.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: Các chi tiết bản nhạc trong câu hỏi đúng (quãng tám ô 1–3, láy ô 9–11 tay trái); phần còn lại là gợi ý nghe.
+  - id: n26
+    cau: Bài có mặt trong rất nhiều bản thu trọn các prelude nhỏ, cả trên harpsichord lẫn piano.
+    loai: lich-su
+    nguon: [ bcw-rec, hyperion-hewitt, mediathek-gilbert ]
+    ket_qua: dung
+    ghi_chu: Bach Cantatas liệt kê hàng chục bản thu BWV 939–943 trên harpsichord, piano, organ; Hyperion và Mediathek xác nhận hai album cụ thể.
+  - id: n27
+    cau: Kenneth Gilbert đã thu bài trên harpsichord.
+    loai: ten
+    nguon: [ mediathek-gilbert, bcw-rec ]
+    ket_qua: dung
+    ghi_chu: 'Bach Cantatas: "Five Little Preludes BWV 939-943 ... Kenneth Gilbert (Harpsichord), Archiv Produktion", album J.S. Bach: Preludes, Fantasies & Fugues; Mediathek: Kenneth Gilbert, Cembalo, "Preludes, Fantasias & Fugues", Archiv Produktion 1986 (trang Mediathek đã mở là BWV 933–938 và BWV 902 cùng album; chưa mở trang của đúng BWV 939).'
+  - id: n28
+    cau: Angela Hewitt đã thu bài trên piano.
+    loai: ten
+    nguon: [ hyperion-hewitt, bcw-rec ]
+    ket_qua: dung
+    ghi_chu: 'Bach Cantatas: "Bach: French Suites – Little Preludes [K-3] Five Little Preludes BWV 939-943 ... Angela Hewitt (Piano) Hyperion Jun, Aug 1995 2-CD"; Hyperion CDA67121/2 The French Suites (piano, 1995) có các little prelude ("all three preludes in C major"); trang Hyperion không có danh sách track.'
+  - id: n29
+    cau: 'Tatiana Nikolayeva đã thu bài trên piano.'
+    loai: ten
+    nguon: [ bcw-rec ]
+    ket_qua: da-bo
+    ghi_chu: 'Chỉ thấy ở Bach Cantatas (Victor VICC-115, 1991), bậc 3; chưa tìm được nguồn bậc 2. Bỏ tên: "Angela Hewitt và Tatiana Nikolayeva thu trên piano" thành "Angela Hewitt thu trên piano".'
+  - id: n30
+    cau: 'Muốn nghe trước bài ở chặng sau, mở bản thu và bảng Theo dõi khi nghe của Prelude BWV 846 (link có #theo-doi-khi-nghe).'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển: ../opus-zero/docs/piano/tac-pham/bach-prelude-do.md có mục "## Theo dõi khi nghe" (id cũ theo-doi-khi-nghe). Lô chuyển trang ấy giữ mục và id. Chặng 4 của bach-prelude-do là chặng sau của chặng 3.'
+  - id: n31
+    cau: 'Bảng Theo dõi khi nghe, dòng 1: ô 1–3, quãng tám Đô trầm ngân suốt ba ô; tay phải rải Đô bảy, Fa trưởng, rồi Sol bảy.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'Ô 1 C E G B♭ (Đô bảy), ô 2 A C F (Fa), ô 3 B G D F (Sol bảy).'
+  - id: n32
+    cau: 'Dòng 2: ô 4–5, tay phải đánh hợp âm, hình rải chuyển xuống tay trái; Fa♯ xuất hiện ở ô 5.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'Ô 5 tay trái F♯3 D3 F♯3 A3 …'
+  - id: n33
+    cau: 'Dòng 3: ô 6–8, sang Sol trưởng, hình rải chuyền qua lại giữa hai tay, đến hợp âm Rê bảy ở ô 8.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'Ô 6 Sol (tay phải rải), ô 7 La thứ (tay trái rải), ô 8 tay phải D F♯ A C trên F♯3, D3.'
+  - id: n34
+    cau: 'Dòng 4: ô 9–11, tay trái nhảy quãng tám trên nốt Sol, nốt Sol cao có láy; tay phải leo dần lên.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'Láy trên G3 (nốt cao của cặp G3–G2); nốt đầu tay phải B4, E5, F♯5.'
+  - id: n35
+    cau: 'Dòng 5: ô 12, tay phải giữ hợp âm Sol trưởng, tay trái rải Sol bảy để quay về Đô.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'Tay phải B4 D5 G5 (nốt trắng); tay trái G3 G2 B2 D3 B2 G2 F3 D3.'
+  - id: n36
+    cau: 'Dòng 6: ô 13, hai tay cùng rải; hợp âm Đô bảy của ô 1 trở lại, cao hơn một quãng tám.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'Ô 13 tay phải C5 E5 G5 C6 G5 E5 B♭5 G5 (ô 1: C4 E4 G4 E4 C4 B♭4 G4).'
+  - id: n37
+    cau: 'Dòng 7: ô 14, gam móc kép: tay phải chạy xuống rồi chạy lên trên nốt Fa trầm ngân dài.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'A5 G5 F5 E5 D5 C5 B4 A4 | B4 G4 A4 B4 C5 D5 E5 F5 trên F3 nốt tròn (nối sang ô 15).'
+  - id: n38
+    cau: 'Dòng 8: ô 15–16, hợp âm đổi theo từng phách, nốt Sol trầm nhảy quãng tám xuống, rồi hợp âm Đô cuối cùng.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'Ô 15 tay trái … G3 G2; ô 16 C2 tay trái, E4 C5 tay phải.'
+  - id: n39
+    cau: 'Bảng Cấu trúc, chặng Nốt nền chủ, ô 1–3: Đô bảy – Fa – Sol bảy, cả ba trên quãng tám Đô trầm.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+  - id: n40
+    cau: 'Chặng Chuyền tay, sang Sol trưởng, ô 4–8: Đô – Rê bảy – Sol (sang Mi thứ ở phách 4) – La thứ – Rê bảy; Fa♯ kéo nhạc về phía Sol trưởng.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'Ô 6 phách 4: tay phải E5 B4, tay trái G3 = Mi thứ.'
+  - id: n41
+    cau: 'Chặng Nốt nền át, ô 9–12: Sol bảy – Đô – Fa♯ giảm, trên nốt Sol trầm có láy; ô 12 dừng ở Sol; nốt đầu mỗi ô của tay phải đi lên Si – Mi – Fa♯ – Sol.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'Ô 11 F♯ A C (ba giảm). Nốt đầu ô 9–12: B4, E5, F♯5, G5.'
+  - id: n42
+    cau: 'Chặng Về Đô và kết, ô 13–16: Đô bảy – Fa – (ô 15 đổi hợp âm theo phách) – Đô; ô 14 là ô móc kép duy nhất; ô 15 hòa âm dày nhất; ô 16 dừng hẳn.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: '"Dày nhất" hiểu là hợp âm đổi nhiều nhất trong ô (n10). Chỉ ô 14 có móc kép.'
+  - id: n43
+    cau: 'Gợi ý viết tên hợp âm lên bản nhạc làm bản đồ để học thuộc; tay trái giữ quãng tám bằng ngón 5 và 1.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n44
+    cau: 'Khối 1 theo ấn bản Bach-Gesellschaft (1890), đối chiếu qua bản LilyPond của Mutopia; số ngón là gợi ý của trang; bản gốc không có dấu sắc thái hay dấu luyến nào.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: Tệp .ly không có dấu sắc thái, dấu luyến hay số ngón; chỉ có \mordent ở ô 9–11.
+  - id: n45
+    cau: 'Ba ô đầu, tay trái đặt quãng tám Đô (C2–C3) rồi để yên, đúng như bản nhạc ghi.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'MIDI: C2 và C3 dài 12 phách.'
+  - id: n46
+    cau: 'Ở ô 4, vai trò đảo lại: hình rải tay trái phải đều và nhẹ như tay phải; hợp âm tay phải đặt xuống khẽ.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n47
+    cau: 'Bảng Chỗ khó: giữ quãng tám Đô ô 1–3 (mười hai phách liền); hình rải đổi tay ô 4–8, 12–13; hợp âm tay phải ô 4–5; láy tay trái ô 9–11 rơi đúng phách mạnh rồi nhảy quãng tám xuống; gam móc kép ô 14 quay đầu giữa ô.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'Láy ở phách 1 và 3 của ô 9–11; ô 14 đổi chiều sau nốt thứ 8 (A4 → B4).'
+  - id: n48
+    cau: 'Ngón cố định cho ô 14: 5-4-3-2-1-3-2-1, rồi 2-1-2-3-1-2-3-4, ngón 5 vào Sol ở ô 15.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Chơi được: ngón 3 vắt qua ngón cái ở C5 → B4, ngón cái luồn ở G4 và C5; nốt đầu ô 15 là G5 (MIDI).'
+  - id: n49
+    cau: 'Ô 15: tay phải đi từ Sol cao xuống quãng bốn Sol–Đô rồi quãng sáu Rê–Si; tay trái đi Fa–Rê–Mi–Đô rồi nhảy quãng tám trên Sol.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'Tay phải G5 | G4+C5 | D4+B4; tay trái F3 (nối) D3 E3 C3 | G3 G2.'
+  - id: n50
+    cau: 'Móc đơn, nốt trắng, nốt đen, móc kép nối nhau trong bài; tập ở tốc độ của ô khó nhất, thường là ô 14.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: Có đủ bốn hình nốt (ly). Vế tập ở tốc độ ô khó nhất là gợi ý tập.
+  - id: n51
+    cau: 'Các cách tập trong bảng Chỗ khó (đánh quãng tám đủ sâu, không dùng bàn đạp giữ hộ, so tay trái ô 4 với tay phải ô 1, thu âm, đặt sẵn ngón, tập bản viết ra trước, tạm chơi nốt trơn, tập nhịp chấm dôi, tập riêng ô 14–16, gọi tên hợp âm, máy đếm nhịp).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Link luyen-tap/thu-am và luyen-tap/metronome có trong src/content/docs/.'
+  - id: n52
+    cau: 'Bài tập 1, 2, 3 soạn riêng cho trang, không trích từ bản gốc; bài tập 3 cùng hình nốt với ô 14 nhưng thấp hơn một bậc.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'Ô 14 gốc A5 G5 … F5; bài tập 3 G5 F5 … E5 rồi F5: cùng hình nốt, thấp một bậc.'
+  - id: n53
+    cau: 'Lời dẫn bài tập 1–3 (ô 1 và 3 tay phải rải trên quãng tám tay trái, ô 2 hai tay đổi vai; láy viết ra Sol – Fa – Sol bắt đầu đúng phách; ngón 1-2-1; chơi ô 14 với cùng thứ tự ngón, dời tay lên một phím) và cách tập kèm theo.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Mô tả khớp nốt của khối 2–4 (xem khuong_nhac).
+  - id: n54
+    cau: 'Kế hoạch 4 tuần, 20–30 phút mỗi ngày, tốc độ máy đếm nhịp từ ♩ = 60 đến 84–96.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n55
+    cau: Bach không ghi tốc độ.
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: Bản BG (Mutopia) không có chỉ dẫn tốc độ.
+  - id: n56
+    cau: 'Với người học, ♩ ≈ 80–90 đã rất đẹp; cảm hai phách lớn mỗi ô, mỗi phách một nhóm bốn móc đơn; giữ tốc độ đến hết ô 15, chỉ nới rất nhẹ ở ô cuối.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n57
+    cau: 'Trên piano có hai cách phát âm chính đáng: hình rải liền (legato) hay móc đơn hơi tách (non legato), gần với tiếng harpsichord; chọn một cách cho cả hai tay; gam ô 14 nên liền, nốt đen tay trái ô 9–11 hơi tách.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Không trái thuat-ngu.yml (legato: liền mạch; non legato: không liền, hơi tách, "nhạc thế kỷ 18 thường được chơi tách hơn").'
+  - id: n58
+    cau: 'Bàn đạp gần như không cần; quãng tám Đô được giữ bằng ngón; giữ bàn đạp suốt ba ô thì Đô bảy, Fa và Sol bảy chồng lên nhau.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Ba hợp âm khác nhau ở ô 1–3 đúng theo n31. Link piano/ban-dap có.'
+  - id: n59
+    cau: Bản nhạc không có dấu sắc thái nào.
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+  - id: n60
+    cau: 'Gợi ý sắc thái theo bốn chặng (ô 1–4 đầy đặn, 5–8 nhẹ hơn, 9–12 lớn dần theo đường đi lên của tay phải, 13–16 đầy tiếng); tránh to nhỏ từng nốt kiểu Lãng mạn.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Đường đi lên của tay phải ô 9–12 đúng theo n41.
+  - id: n61
+    cau: 'Kí hiệu láy ở ô 9–11 là láy dưới: nốt chính – nốt kề dưới – nốt chính, bắt đầu đúng phách.'
+    loai: dinh-nghia
+    nguon: [ mut-939, henle-106-vw ]
+    ket_qua: dung
+    ghi_chu: 'Ly ghi \mordent (dấu răng cưa có gạch = láy dưới; \prall mới là không gạch). thuat-ngu.yml mordent: "Láy: chính – dưới – chính (có gạch)". Henle lấy bảng ký hiệu hoa mỹ của Bach trong Clavierbüchlein làm hướng dẫn.'
+  - id: n62
+    cau: 'Ở ô 9, tay phải có Fa♮ (hợp âm Sol bảy); ở ô 11, tay phải có Fa♯.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'Ô 9 F5; ô 11 F♯5 (hai lần).'
+  - id: n63
+    cau: 'Chọn Fa hay Fa♯ cho nốt láy theo hòa âm, hỏi thầy, giữ một cách cố định; láy làm gãy nhịp thì chơi nốt trơn.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Link piano/not-hoa-my có.'
+  - id: n64
+    cau: 'Bản Bach-Gesellschaft chỉ có nốt và các dấu láy.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Bản Bach-Gesellschaft và các bản Urtext chỉ có nốt và các dấu láy." Phần Urtext chưa kiểm được (không mở được bản in Henle hay NBA; Henle HN 106 còn có số ngón của Theopold). Giữ phần kiểm được.'
+  - id: n65
+    cau: 'Nhiều ấn bản dạy đàn thêm sắc thái, dấu luyến, tốc độ, số ngón của người biên tập; số ô nhịp trên trang này theo bản Bach-Gesellschaft.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên đọc ấn bản, không nêu ấn bản cụ thể. Số ô theo BG đúng (n1).'
+  - id: n66
+    cau: 'Lỗi thường gặp (bảy dòng: nhấc tay trái trước khi hết ô 3; rải tay trái gồ ghề; hợp âm tay phải ô 4–5 gõ to; láy trễ phách; ô 14 vấp; bàn đạp giữ nốt trầm; kết vội ở ô 15).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Các số ô khớp n7, n10, n47.
+  - id: n67
+    cau: 'Học tiếp: BWV 846 cùng giọng, cùng lối rải hợp âm chia hai tay, dài 35 ô.'
+    loai: cau-truc
+    nguon: [ mut-846 ]
+    ket_qua: dung
+    ghi_chu: BWV 846 ở Đô trưởng, 35 ô (MIDI Mutopia).
+  - id: n68
+    cau: 'Học tiếp: link Bach Prelude Đô trưởng BWV 846 là bước tiếp theo, Invention số 1 cho phức điệu.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Hai trang đích chưa chuyển: ../opus-zero/docs/piano/tac-pham/bach-prelude-do.md và bach-invention-1.md có; dữ liệu chặng 4 cho cả hai.'
+  - id: n69
+    cau: 'Cùng nhóm prelude nhỏ: BWV 924 (Đô trưởng) và BWV 999 (Đô thứ), hai bài gần cùng độ khó, cũng dựng trên hợp âm rải.'
+    loai: cau-truc
+    nguon: [ henle-106, henle-106-vw, bpmd-peters, mut-924-999 ]
+    ket_qua: dung
+    ghi_chu: 'Henle: BWV 939 mức 2, BWV 924 mức 2, BWV 999 mức 3; lời nói đầu: Praeludium Đô thứ "pour la lute" (III, 6), prelude Đô trưởng mở đầu Clavierbüchlein. BPMD: cả ba trong tập 12 prelude nhỏ của Peters. MIDI Mutopia: hai bài là hình rải hợp âm suốt các ô đầu (tệp BWV 999 của Mutopia ở Rê thứ, là bản chuyển giọng).'
+  - id: n70
+    cau: 'Cùng chặng: Clementi Sonatina Op. 36 số 1, Tchaikovsky Cầu nguyện buổi sáng; nhẹ hơn một chặng: Minuet Sol trưởng, Musette Rê trưởng; danh sách ở Tác phẩm theo cấp độ.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'src/data/tac-pham.yml: clementi-sonatina chặng 3, tchaikovsky-cau-nguyen-buoi-sang 3, minuet-sol 2, musette-re 2; bach-prelude-bwv939 chặng 3. Các trang có trong src/content/docs/.'
+  - id: n71
+    cau: 'Câu hỏi 1: ở ba ô đầu tay trái giữ một quãng tám Đô trầm suốt ba ô; giải thích: tay phải rải Đô bảy, Fa và Sol bảy.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+  - id: n72
+    cau: 'Câu hỏi 2: ở ô 15 nhịp điệu hòa âm nhanh lên, hợp âm đổi gần như từng phách, báo hiệu kết; giải thích: phần lớn bài mỗi ô một hợp âm.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+  - id: n73
+    cau: 'Câu hỏi 3: không dùng bàn đạp giữ Đô trầm vì ba hợp âm của tay phải sẽ chồng lên nhau; giải thích: giữ bằng ngón, đúng như bản nhạc ghi.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Phần "đúng như bản nhạc ghi" kiểm ở n45.
+  - id: n74
+    cau: 'Câu hỏi 4: ô 9–11 là nốt nền át, nốt Sol trầm có láy, tay phải rải đi lên dần, không phải đoạn gam móc kép hay đoạn chuyển sang La thứ; giải thích: Sol là át âm của Đô trưởng, ô 12 dừng ở Sol, ô 13 về Đô.'
+    loai: cau-truc
+    nguon: [ mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'Sol là bậc V của Đô trưởng; ô 9–11 Sol bảy, Đô, Fa♯ giảm trên nền Sol.'
+  - id: n75
+    cau: 'Mục Nguồn: Bach Digital (trang BWV 939, P 804 tập nhỏ 53 và cả tập P 804).'
+    loai: lich-su
+    nguon: [ bd-939, bd-p804-53, bd-p804 ]
+    ket_qua: da-sua
+    ghi_chu: 'Thay dòng cũ "Bài Twelve Little Preludes, Wikipedia tiếng Anh ..." (bậc 3) bằng nguồn bậc 2 đã mở.'
+  - id: n76
+    cau: 'Mục Nguồn: Henle HN 106 (Steglich), lời nói đầu về bản chép của Kellner.'
+    loai: lich-su
+    nguon: [ henle-106, henle-106-vw ]
+    ket_qua: dung
+    ghi_chu: 'Lời nói đầu: "preserved, without special title, in a copy formerly in the possession of the Thuringian cantor Johann Peter Kellner". Chữ giữ nguyên, chỉ đổi link trang chủ henle.de thành trang HN 106.'
+  - id: n77
+    cau: 'Mục Nguồn: Bach Printed Music Database, tập 12 prelude nhỏ của Peters.'
+    loai: lich-su
+    nguon: [ bpmd-peters ]
+    ket_qua: da-sua
+    ghi_chu: Dòng mới, thay vai trò của bài Wikipedia cho ấn bản Peters.
+  - id: n78
+    cau: 'Mục Nguồn: ADB, "Kellner, Johann Peter" (Eitner, 1882).'
+    loai: lich-su
+    nguon: [ adb-kellner ]
+    ket_qua: da-sua
+    ghi_chu: 'Thay dòng "Bài Johann Peter Kellner, Wikipedia tiếng Anh" và dòng sách David Schulenberg, The Keyboard Music of J. S. Bach (Routledge 2006): sách in, chưa đọc, không nhận định nào dựa vào.'
+  - id: n79
+    cau: 'Mục Nguồn: danh sách bản thu ở Bach Cantatas Website.'
+    loai: lich-su
+    nguon: [ bcw-rec ]
+    ket_qua: dung
+    ghi_chu: Chữ giữ nguyên; đổi link trang chủ thành trang danh sách bản thu BWV 939–943.
+  - id: n80
+    cau: 'Mục Nguồn: bản nhạc IMSLP (Bach-Gesellschaft, tập 36, Ernst Naumann biên tập, 1890); đoạn trích đối chiếu với bản LilyPond của Mutopia Project; link tài liệu tham khảo.'
+    loai: lich-su
+    nguon: [ imslp-939-943, mut-939 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: BGA Band 36, Naumann, Breitkopf 1890. Link /opus/tai-lieu-tham-khao/ có trong src/content/docs/.'
+khuong_nhac:
+  - khoi: 1
+    loai: trich-doan
+    kiem: [ cu-phap, nhip, giong, not, so-ngon, doi-chieu-an-ban ]
+    ket_qua: dung
+    ghi_chu: 'Ô 1–4, 4/4, L:1/8, K:C. Ấn bản: Bach-Gesellschaft Bd. 36 (Naumann 1890) qua Mutopia bwv-939 (.ly và .mid). Công cụ: script Python (mido) in nốt MIDI theo ô, đọc thêm tệp .ly. Kết quả: 4/4 ô khớp cao độ và trường độ hai tay (tay phải: lặng móc đơn, C4 E4 G4 E4 C4 B♭4 G4 | A4 C4 F4 A4 F4 C4 C5 A4 | B4 G4 B4 D5 B4 G4 F5 D5 | G4 C5 E5 trắng, lặng đen, G4 C5 E5 đen; tay trái C2+C3 nối ba ô | lặng móc đơn, C3 E3 G3 E3 C3 C4 E3). Nguồn không có dấu sắc thái, dấu luyến; khối cũng không thêm. Số ngón là gợi ý của trang, chơi được.'
+  - khoi: 2
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
+    ket_qua: dung
+    ghi_chu: '4 ô 4/4, đủ phách. Ô 1 tay phải rải Đô trưởng trên quãng tám Đô; ô 2 tay trái rải Fa trưởng (F2 A2 C3 F3), tay phải hợp âm Fa; ô 3 tay phải rải Sol bảy (B3 D4 F4 G4) trên quãng tám Sol; ô 4 Đô. Đúng lời dẫn (ô 1, 3 tay phải rải; ô 2 đổi vai). Ngón 1-2-3-5 và 5-3-2-1 chơi được; hợp chặng 3.'
+  - khoi: 3
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
+    ket_qua: dung
+    ghi_chu: 'Ô 1 viết ra láy dưới G3–F3–G3 (móc kép, móc kép, móc đơn) rồi G2 nốt đen, hai lần; ô 2–3 dùng !lowermordent! trên G3, khớp \mordent của bản gốc ô 9–11; tay phải B D F (Sol bảy, Fa♮ như ô 9 gốc); ô 4 Đô. Đủ phách. Ngón 1-2-1 rồi 5 cho G2 chơi được.'
+  - khoi: 4
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, so-ngon ]
+    ket_qua: dung
+    ghi_chu: '4/4, L:1/16, mỗi dòng 2 ô đủ phách. Dạng gốc G5 F5 E5 D5 C5 B4 A4 G4 | A4 F4 G4 A4 B4 C5 D5 E5 | F5: đúng hình nốt ô 14 (A5 … F5) thấp một bậc. Hai biến thể nhịp chấm dôi (dài – ngắn, ngắn – dài) đủ phách. Ngón 5-4-3-2-1-3-2-1, 2-1-2-3-1-2-3-4, 5 khớp bảng Chỗ khó.'
+doi_chu:
+  - cu: "Không có bản viết tay nào của Bach cho bài này. Nguồn duy nhất từ thế kỷ 18 là một bản chép nằm trong tập P 804 ở Thư viện Quốc gia Berlin, một tập lớn đóng chung nhiều bản chép riêng lẻ. Tập này gắn với Johann Peter Kellner (1705–1772), cantor ở Gräfenroda, vùng Thüringen: ông và những người quanh ông đã chép rất nhiều tác phẩm đàn phím của Bach, và với không ít bài, bản chép của họ là nguồn sớm nhất hoặc duy nhất còn lại. Phần chứa BWV 939–942 do một người chép chưa rõ tên, và không ghi tên tác giả. Vì vậy quyền tác giả của Bach đôi khi bị đặt dấu hỏi, dù danh mục BWV và các ấn bản Urtext vẫn in bài dưới tên ông."
+    moi: "Không có bản viết tay nào của Bach cho bài này. Nguồn duy nhất từ thế kỷ 18 là một bản chép nằm trong tập P 804 ở Thư viện Quốc gia Berlin, một tập lớn đóng chung nhiều bản chép riêng lẻ. Tập này phần lớn đến từ di sản của Johann Peter Kellner (1705–1772), cantor ở Gräfenroda, vùng Thüringen: 57 bản chép riêng lẻ, chủ yếu là nhạc đàn phím của Bach. Phần chứa BWV 939–942 do một người chép chưa rõ tên, và không ghi tên tác giả. Vì vậy không có bằng chứng trực tiếp rằng bài là của Bach, dù danh mục BWV và các ấn bản Urtext vẫn xếp bài dưới tên ông."
+    ly_do: "n14 (da-sua), n15 (da-sua): Bach Digital, P 804: phần lớn từ di sản Kellner, 57 bản chép, chủ yếu nhạc Bach; vế \"nguồn sớm nhất hoặc duy nhất\" cho \"không ít bài\" và \"quyền tác giả đôi khi bị đặt dấu hỏi\" chưa có nguồn bậc 2 đọc được."
+  - cu: "Cái tên \"prelude nhỏ\" là của thế kỷ 19. Năm 1843, nhà Peters ở Leipzig in một tập mười hai prelude ngắn, gom từ hai nguồn: Clavier-Büchlein (sổ tay đàn phím) mà Bach soạn cho con trai Wilhelm Friedemann, và tập P 804. Tên tập nói rõ mục đích: Douze petits Préludes ou Exercices pour les commençans (Mười hai prelude nhỏ, hay bài tập cho người mới bắt đầu). BWV 939 là số 2 của tập ấy, và từ đó trở thành một trong những bài Bach đầu tiên của rất nhiều người học đàn. Năm 1890, ấn bản toàn tập của Hội Bach (Bach-Gesellschaft) xếp nó đứng đầu nhóm Fünf kleine Präludien."
+    moi: "Cái tên \"prelude nhỏ\" là của thế kỷ 19. Năm 1843, nhà Peters ở Leipzig in một tập mười hai prelude ngắn, gom từ hai nguồn: Clavier-Büchlein (sổ tay đàn phím) mà Bach soạn cho con trai Wilhelm Friedemann, và tập P 804. Tên tập nói rõ mục đích: Douze petits Préludes ou Exercices pour les commençans (Mười hai prelude nhỏ, hay bài tập cho người mới bắt đầu). BWV 939 là số 2 của tập ấy. Năm 1890, ấn bản toàn tập của Hội Bach (Bach-Gesellschaft, tập 36) in lại bài; danh mục BWV về sau xếp nó đứng đầu nhóm Fünf kleine Präludien (Năm prelude nhỏ, BWV 939–943)."
+    ly_do: "n20 (da-sua), n21 (da-sua): vế \"một trong những bài Bach đầu tiên của rất nhiều người học đàn\" không kiểm được; IMSLP: BGA tập 36 in năm bài ở các trang rời (119, 123, 127, 134–35), tên Fünf kleine Präludien là nhóm theo số BWV."
+  - cu: "Bach viết cho Clavier, tức đàn phím nói chung, như harpsichord hay clavichord. Trên harpsichord, nốt tắt khá nhanh và lực ngón gần như không làm tiếng to hay nhỏ đi; trên piano hiện đại, nốt ngân lâu hơn nhiều và bạn có cả một dải sắc thái. Chơi Bach trên piano vì thế là một chuỗi lựa chọn, bàn kỹ ở phần Diễn tấu. Xem thêm thời kỳ Baroque."
+    moi: "Bach viết cho Clavier, tức đàn phím nói chung, như harpsichord hay clavichord. Trên harpsichord, lực ngón gần như không làm tiếng to hay nhỏ đi; trên piano, tiếng to hay nhỏ theo lực ngón, nên bạn có cả một dải sắc thái. Chơi Bach trên piano vì thế là một chuỗi lựa chọn, bàn kỹ ở phần Diễn tấu. Xem thêm thời kỳ Baroque."
+    ly_do: "n23 (da-sua): Britannica (harpsichord) chỉ nói harpsichord không có dải mạnh nhẹ theo lực ngón; \"nốt tắt khá nhanh\", \"ngân lâu hơn nhiều\" chưa có nguồn."
+  - cu: "Bài có mặt trong rất nhiều bản thu trọn các prelude nhỏ, cả trên harpsichord lẫn piano: chẳng hạn Kenneth Gilbert thu trên harpsichord, Angela Hewitt và Tatiana Nikolayeva thu trên piano. Hãy nghe ít nhất một bản harpsichord và một bản piano, rồi ghi lại: bản nào nhanh hơn, bản nào thay đổi sắc thái nhiều hơn, hình rải liền hay hơi tách. Muốn nghe trước bài bạn sẽ học ở chặng sau của lộ trình, mở bản thu và bảng Theo dõi khi nghe của Prelude BWV 846."
+    moi: "Bài có mặt trong rất nhiều bản thu trọn các prelude nhỏ, cả trên harpsichord lẫn piano: chẳng hạn Kenneth Gilbert thu trên harpsichord, Angela Hewitt thu trên piano. Hãy nghe ít nhất một bản harpsichord và một bản piano, rồi ghi lại: bản nào nhanh hơn, bản nào thay đổi sắc thái nhiều hơn, hình rải liền hay hơi tách. Muốn nghe trước bài bạn sẽ học ở chặng sau của lộ trình, mở bản thu và bảng Theo dõi khi nghe của Prelude BWV 846."
+    ly_do: "n29 (da-bo): bản thu của Nikolayeva chỉ thấy ở danh mục bậc 3 (Bach Cantatas Website)."
+  - cu: "Bản Bach-Gesellschaft và các bản Urtext chỉ có nốt và các dấu láy. Nhiều ấn bản dạy đàn thêm sắc thái, dấu luyến, tốc độ và số ngón của người biên tập: có thể hữu ích, nhưng hãy biết đâu là của nguồn gốc, đâu là của người biên tập. Số ô nhịp trên trang này theo bản Bach-Gesellschaft."
+    moi: "Bản Bach-Gesellschaft chỉ có nốt và các dấu láy. Nhiều ấn bản dạy đàn thêm sắc thái, dấu luyến, tốc độ và số ngón của người biên tập: có thể hữu ích, nhưng hãy biết đâu là của nguồn gốc, đâu là của người biên tập. Số ô nhịp trên trang này theo bản Bach-Gesellschaft."
+    ly_do: "n64 (da-sua): phần \"các bản Urtext\" chưa kiểm được; bản BG (Mutopia) chỉ có nốt và dấu láy."
+  - cu: "Bài \"Twelve Little Preludes\", Wikipedia tiếng Anh (tổng hợp từ cơ sở dữ liệu Bach Digital và danh mục BWV): nguồn P 804, người chép, các ấn bản Peters 1843 và Bach-Gesellschaft 1890."
+    moi: "Bach Digital (Bach-Archiv Leipzig): trang BWV 939 và trang bản chép D-B Mus.ms. Bach P 804, tập nhỏ 53 (người chép chưa rõ, không ghi tên tác giả, khoảng 1726–1727 hoặc muộn hơn) và cả tập P 804 (phần lớn từ di sản của Kellner) (bach-digital.de)."
+    ly_do: "n75 (da-sua): thay nguồn bậc 3 bằng Bach Digital đã đọc (bản lưu Wayback)."
+  - cu: "Bài \"Johann Peter Kellner\", Wikipedia tiếng Anh: tiểu sử và vai trò người chép nhạc Bach."
+    moi: "Bach Printed Music Database (Riemenschneider Bach Institute): tập 12 petits préludes của nhà Peters (F. K. Griepenkerl biên tập), thứ tự các bài (bachbib.bw.edu)."
+    ly_do: "n77 (da-sua): thay nguồn bậc 3 bằng nguồn đã đọc cho ấn bản Peters."
+  - cu: "David Schulenberg, The Keyboard Music of J. S. Bach, ấn bản 2, Routledge, 2006."
+    moi: "Robert Eitner, \"Kellner, Johann Peter\", Allgemeine Deutsche Biographie 15 (1882) (deutsche-biographie.de)."
+    ly_do: "n78 (da-sua): sách in chưa đọc, không nhận định nào dựa vào; thay bằng ADB cho Kellner."

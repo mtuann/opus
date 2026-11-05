@@ -1,0 +1,605 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa piano/tac-pham/beethoven-sonatina-sol
+trang: src/content/docs/piano/tac-pham/beethoven-sonatina-sol.md
+nguon_cu: ../opus-zero/docs/piano/tac-pham/beethoven-sonatina-sol.md
+tang: tac-pham
+lan:
+  - so: 1
+    ngay: 2026-11-05
+    nhanh: moi/d6-l2
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (D6-L2 phần A)"
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Bài học Sonatina Sol trưởng Anh. 5 số 1, gán cho Beethoven (tầng Tác phẩm). Bản nhạc: bản mã hóa MEI của TROMPA (Werner Goebl, CC BY 4.0) theo Breitkopf & Härtel, Beethovens Werke Serie 16 No. 160 (B.160), kèm PDF dựng từ MEI; đọc bằng script Python (xml.etree) in nốt, dấu hóa, dấu luyến, sắc thái, fermata theo ô; đối chiếu từng nốt khối 1 (8 ô) và khối 2 (nhịp lấy đà + 4 ô). Nguồn lịch sử: Henle HN 365 (trang sản phẩm), mô tả của Wiener Urtext UT 50290 (chép lại trên trang bán lẻ), Centro Ricerche Musicali Beethoveniane (lvbeethoven.it, qua bản lưu Wayback: mạng chặn trang gốc), Thayer 1865 và Nottebohm 1868 (bản OCR trên Internet Archive), Deutsche Biographie (Kinsky, Nottebohm, Beethoven), DDB (bản ghi Kinsky–Halm). Sửa trang ở lượt 1: n11 (bản in 1807 ghi tên Beethoven: nguồn là lvbeethoven.it, không phải Henle), n12 (Wiener Urtext: "phần giới thiệu" của nhà xuất bản), n20 (hình thức: hai đoạn có tái hiện thêm coda, không phải ba đoạn, theo OMT và trang Hình thức nhỏ đã khóa), n21 (định nghĩa Romanze theo COD), n25 (thuật ngữ: "dấu lặng ngân" thành "dấu ngân", 8 chỗ; fermata ở ô 19 và ô 34 đặt trên nốt và hợp âm, không trên dấu lặng; thuat-ngu.yml fermata "Ngân dài tùy ý"), n72 (mục Nguồn: Wiener Urtext), n74 (thêm Thayer 1865, số trang Nottebohm). Chưa chắc: n53 (Moderato, chỉ thiếu nguồn bậc 2). Không tính là nhận định: tiêu đề, tiêu đề cột, chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng, mốc trong ::khoi-nghe (bản thu của León Egea: chương II không chơi dấu nhắc lại, khớp dòng "-" của mốc; khoảng cách mốc 153→181→229→258 ứng với 8, 13, 8 ô).'
+nguon:
+  - id: trompa
+    bac: 1
+    ten: TROMPA, MEI encoding Two Sonatinas WoO Anh. 5 (Breitkopf & Härtel, Beethovens Werke Serie 16 No. 160–161, plates B.160–161; Werner Goebl, CC BY 4.0), tệp Nr1_1, Nr1_2 và PDF
+    link: https://github.com/trompamusic-encodings/Beethoven_WoOAnh5_BreitkopfHaertel
+  - id: imslp-anh5
+    bac: 2
+    ten: IMSLP, 2 Sonatinas for Piano, Anh.5 (Beethoven)
+    link: https://imslp.org/wiki/2_Sonatinas_for_Piano,_Anh.5_(Beethoven,_Ludwig_van)
+  - id: henle-365
+    bac: 2
+    ten: G. Henle Verlag, HN 365 2 Piano Sonatinas G major and F major Anh. 5 (Otto von Irmer, ngón Walther Lampe; mô tả, mức khó)
+    link: https://www.henle.de/en/2-Piano-Sonatinas-G-major-and-F-major-Anh.-5/HN-365
+  - id: wu-50290
+    bac: 2
+    ten: Wiener Urtext Edition, UT 50290 Drei Sonatinen für Klavier (Reutter, ngón Nils Franke), mô tả của nhà xuất bản chép lại trên trang bán lẻ Hsiao Ya
+    link: https://hsiaoya.com/en/products/drei-sonatinen-fr-klavier-urtext-ut50290
+  - id: lvb-anh5
+    bac: 2
+    ten: Centro Ricerche Musicali Beethoveniane (lvbeethoven.it), Anhang 05 – Due sonatine per pianoforte (bản lưu Wayback 14/7/2026)
+    link: https://www.lvbeethoven.it/Anhang_05/
+  - id: thayer-1865
+    bac: 2
+    ten: Alexander Wheelock Thayer, Chronologisches Verzeichniss der Werke Ludwig van Beethoven's, Berlin 1865, số 24 (bản OCR Internet Archive)
+    link: https://archive.org/details/chronologisches00thaygoog
+  - id: thayer-life
+    bac: 2
+    ten: Alexander Wheelock Thayer, The Life of Ludwig van Beethoven (Internet Archive)
+    link: https://archive.org/details/thelifeofludwigv43591gut
+  - id: nott-1868
+    bac: 2
+    ten: Gustav Nottebohm, Thematisches Verzeichniss der im Druck erschienenen Werke von Ludwig van Beethoven, ấn bản 2, Leipzig 1868, tr. 148 (bản OCR Internet Archive)
+    link: https://archive.org/details/thematischesverz01nott
+  - id: ddb-kh
+    bac: 2
+    ten: Deutsche Digitale Bibliothek, Kinsky (Hans Halm), Das Werk Beethovens, München-Duisburg, Henle, 1955
+    link: https://www.deutsche-digitale-bibliothek.de/item/HX2Q5362GTGDCLCLMPY5TIDRNJ53BPDI?lang=en
+  - id: henle-2207
+    bac: 2
+    ten: G. Henle Verlag, HN 2207 Beethoven, Thematisch-bibliographisches Werkverzeichnis (cấu trúc danh mục; nhắc danh mục 1955 của Kinsky và Halm)
+    link: https://www.henle.de/en/Thematic-Bibliographical-Catalogue-of-Works/HN-2207
+  - id: db-kinsky
+    bac: 2
+    ten: Deutsche Biographie, Kinsky, Georg (1882–1951, Musikforscher)
+    link: https://www.deutsche-biographie.de/sfz41035.html
+  - id: db-nottebohm
+    bac: 2
+    ten: Deutsche Biographie, Nottebohm, Gustav (NDB và ADB)
+    link: https://www.deutsche-biographie.de/sfz72544.html
+  - id: db-beethoven
+    bac: 2
+    ten: Deutsche Biographie, Beethoven, Ludwig van (ADB)
+    link: https://www.deutsche-biographie.de/pnd118508288.html
+  - id: cod-romance
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục romance, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/romance
+  - id: imslp-k525
+    bac: 2
+    ten: IMSLP, Eine kleine Nachtmusik, K.525 (Mozart)
+    link: https://imslp.org/wiki/Eine_kleine_Nachtmusik,_K.525_(Mozart,_Wolfgang_Amadeus)
+  - id: omt-ternary
+    bac: 2
+    ten: Open Music Theory, Ternary Form (Brian Jarvis)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/ternary-form/
+  - id: omt-binary
+    bac: 2
+    ten: Open Music Theory, Binary Form (Brian Jarvis)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/binary-form/
+  - id: imslp-fur-elise
+    bac: 2
+    ten: IMSLP, Für Elise, WoO 59 (Beethoven)
+    link: https://imslp.org/wiki/F%C3%BCr_Elise,_WoO_59_(Beethoven,_Ludwig_van)
+  - id: abrsm-2526
+    bac: 2
+    ten: ABRSM, Practical Music Grades Piano Syllabus 2025 & 2026 (Grade 2, danh sách A, mục 2; theo hồ sơ bản ghi lần 1)
+    link: https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20&%202026%20Prac%20syllabus%2020240524_access.pdf
+nhan_dinh:
+  - id: n1
+    cau: Với rất nhiều người học đàn, đây là bài "Beethoven" đầu tiên, dù rất có thể ông không hề viết nó.
+    loai: lich-su
+    nguon: [ wu-50290, henle-365 ]
+    ket_qua: dung
+    ghi_chu: 'Wiener Urtext: "likely the first encounter with Beethoven''s piano music for many aspiring players. Yet one cannot even be sure whether it ... was written by Beethoven"; Henle: "firmly established in the repertoire for beginners", "very unlikely that they were actually written by Beethoven".'
+  - id: n2
+    cau: 'Bài có hai chương ngắn, Moderato và Romanze.'
+    loai: cau-truc
+    nguon: [ trompa, imslp-anh5 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Sonatina in G major (Moderato, Romanze); MEI: tempo "Moderato", chương 2 "Romanze".'
+  - id: n3
+    cau: 'Bài dạy câu nhạc rõ ràng, dấu luyến ngắn, nốt láy gọn, tay trái nhẹ nhàng bên dưới; câu nhạc bốn ô hỏi rồi đáp, dấu luyến hai nốt, nốt láy, kết rõ ràng.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'Câu 4 ô (ô 1–4 dừng ở Rê, 5–8 về Sol); luyến hai nốt ô 2, 7, 18, 23; nốt láy (grace) ô 1, 3, 5, 6.'
+  - id: n4
+    cau: Những viên gạch ấy bạn sẽ gặp lại ở Clementi, Haydn, Mozart.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n5
+    cau: 'Moderato duyên dáng và nhanh nhẹn; Romanze hát, mềm, có một khoảnh khắc dừng lại đầy chờ đợi.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: Phần tính cách là cảm nhận; "khoảnh khắc dừng lại" là fermata ô 19 (MEI).
+  - id: n6
+    cau: 'Tay trái dùng hợp âm hai nốt, hình Alberti (nốt trầm – nốt cao – nốt giữa – nốt cao), hình đệm 6/8.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'Ô 1–4 hợp âm hai nốt; ô 5 G3 D4 B3 D4 (trầm – cao – giữa – cao), khớp thuat-ngu.yml alberti-bass "trầm – cao – giữa – cao"; Romanze nốt trầm + hai hợp âm.'
+  - id: n7
+    cau: 'Bài ngắn và dễ hơn Clementi Sonatina Op. 36 số 1 (link), cùng một thế giới âm thanh.'
+    loai: cap-do
+    nguon: [ abrsm-2526, henle-365 ]
+    ket_qua: dung
+    ghi_chu: 'Ngắn hơn: Anh. 5/1 có 34 + 40 ô; Op. 36/1 có 38 + 26 + 70 ô (Mutopia, hồ sơ clementi-sonatina). Dễ hơn: ABRSM 2025–2026 xếp Moderato ở Grade 2, ABRSM 2023–2024 xếp Vivace của Op. 36/1 ở Grade 3 (hồ sơ bản ghi lần 1); Henle cùng mức 3. Link: src/content/docs/piano/tac-pham/clementi-sonatina.md có.'
+  - id: n8
+    cau: Danh mục chuẩn về tác phẩm Beethoven do Georg Kinsky soạn và Hans Halm hoàn tất (1955).
+    loai: lich-su
+    nguon: [ ddb-kh, db-kinsky, henle-2207 ]
+    ket_qua: dung
+    ghi_chu: 'DDB: "Das Werk Beethovens: thematisch-bibliographisches Verzeichnis seiner sämtlichen vollendeten Kompositionen", Henle 1955, Kinsky tác giả, Halm cộng tác; Deutsche Biographie: Kinsky 1882–1951 (mất trước khi sách ra); Henle: "In 1955 G. Henle Publishers released a catalogue ... Georg Kinsky and Hans Halm".'
+  - id: n9
+    cau: 'Danh mục chia tác phẩm thành ba nhóm: có số opus; không có số opus (WoO, Werke ohne Opuszahl); và Anhang, phụ lục cho tác phẩm mà quyền tác giả đáng ngờ; hai sonatina nằm ở mục thứ năm của phụ lục, nên mang số Anh. 5.'
+    loai: danh-muc
+    nguon: [ henle-2207, henle-365, imslp-anh5 ]
+    ket_qua: dung
+    ghi_chu: 'Henle HN 2207: "Works with opus number", "Works without opus number", "Spurious and dubious works" (danh mục mới giữ cấu trúc ấy); Henle HN 365: "listed in his catalogue of works as Anhang/Appendix 5"; IMSLP: "WoO Anh.5".'
+  - id: n10
+    cau: 'Không còn bản viết tay, và không có thư từ hay ghi chép nào của Beethoven nhắc đến hai bài.'
+    loai: lich-su
+    nguon: [ lvb-anh5 ]
+    ket_qua: dung
+    ghi_chu: 'lvbeethoven.it: "I manoscritti originali sono sconosciuti. Beethoven non menzionò mai le sonatine durante la sua vita."'
+  - id: n11
+    cau: 'Henle ghi rằng hai bài được in khi Beethoven còn sống, khoảng năm 1807; bản in ấy (nhà Rudolphus ở Altona) ghi tên ông là tác giả.'
+    loai: nam
+    nguon: [ henle-365, lvb-anh5 ]
+    ket_qua: da-sua
+    ghi_chu: 'Henle: "published during Beethoven''s lifetime in ca. 1807" (không nói "dưới tên ông"). lvbeethoven.it: "1807 circa. Altona, Rudolphus ... Titolo: II SONATINES / pour le Piano-Forte / Composées par / L. van Beethoven". Chữ cũ: "Henle ghi rằng chúng được in khi Beethoven còn sống, khoảng năm 1807, dưới tên ông"; tách phần tên tác giả ra, dẫn đúng nguồn.'
+  - id: n12
+    cau: Phần giới thiệu ấn bản Wiener Urtext (2021) nói bản in đầu tiên ra đời sau khi Beethoven mất.
+    loai: lich-su
+    nguon: [ wu-50290, nott-1868 ]
+    ket_qua: da-sua
+    ghi_chu: 'Mô tả Wiener Urtext: "In the first edition, which was published only after Beethoven''s death, they are attributed to Beethoven". Chữ cũ "lời giới thiệu ấn bản" thành "phần giới thiệu ấn bản": chưa đọc được lời tựa trong sách, chỉ đọc được mô tả của nhà xuất bản. Nottebohm 1868 cũng chỉ biết một bản in sau khi Beethoven mất (Böhme, Hamburg). Hai nguồn mâu thuẫn với n11; trang đã ghi cả hai, đúng chuẩn mục 2.'
+  - id: n13
+    cau: Toàn tập Breitkopf & Härtel ở thế kỷ 19 ghi nhà xuất bản gốc là August Cranz ở Hamburg.
+    loai: lich-su
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'Trang đầu (MEI và PDF): "Original-Verleger: Aug. Cranz in Hamburg. Stich und Druck von Breitkopf & Härtel in Leipzig. B.160."'
+  - id: n14
+    cau: Hamburg rất xa Vienna, nơi Beethoven sống từ năm 1792.
+    loai: nam
+    nguon: [ db-beethoven ]
+    ket_qua: dung
+    ghi_chu: 'ADB: "Im November 1792 kam er dort [Wien] an - und sollte Wien nicht mehr verlassen."'
+  - id: n15
+    cau: 'Alexander Wheelock Thayer, người viết tiểu sử Beethoven, chỉ dám đoán rằng nếu là của Beethoven thì hai bài thuộc thời ông còn trẻ ở Bonn, kèm một dấu hỏi.'
+    loai: lich-su
+    nguon: [ thayer-1865, thayer-life, lvb-anh5 ]
+    ket_qua: dung
+    ghi_chu: 'Thayer 1865, số 24: "II leichte Sonatinen für Clavier, Gdur, Fdur ... Aus der Bonner Zeit (?). Vielleicht sind diese dieselben, welche im Auctions-Catalog ... Nr. 157 ... Wenn nicht, könnte ihre Echtheit bezweifelt werden." Thayer là tác giả The Life of Ludwig van Beethoven (Internet Archive).'
+  - id: n16
+    cau: 'Năm 1868, Gustav Nottebohm, nhà nghiên cứu các sổ phác thảo của Beethoven, cũng nghi ngờ.'
+    loai: lich-su
+    nguon: [ nott-1868, db-nottebohm ]
+    ket_qua: dung
+    ghi_chu: 'Nottebohm 1868, tr. 148: "Zwei Sonatinen (Gdur, Fdur) ... Die Echtheit wird bezweifelt." NDB: "N. erkannte die Bedeutung der Skizzenbücher und gab zwei davon neu heraus".'
+  - id: n17
+    cau: Ngày nay Henle cho rằng rất khó có chuyện Beethoven là tác giả.
+    loai: lich-su
+    nguon: [ henle-365 ]
+    ket_qua: dung
+    ghi_chu: '"it is very unlikely that they were actually written by Beethoven".'
+  - id: n18
+    cau: Wiener Urtext viết rằng không thể chắc chắn, và cũng chưa ai tìm ra một tác giả khác.
+    loai: lich-su
+    nguon: [ wu-50290 ]
+    ket_qua: dung
+    ghi_chu: '"one cannot even be sure whether it ... was written by Beethoven ... an alternative composer has not yet been identified".'
+  - id: n19
+    cau: 'Âm nhạc thuộc phong cách Cổ điển: giai điệu chia thành câu bốn ô, hòa âm chủ yếu là chủ âm và át âm, tay trái đệm bằng hợp âm hai nốt và hình Alberti.'
+    loai: cau-truc
+    nguon: [ imslp-anh5, trompa ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Piece Style "Classical". MEI: câu 4 ô; hợp âm chủ yếu Sol và Rê (bảy); hợp âm hai nốt ô 1–4, Alberti ô 5–6, 21–22.'
+  - id: n20
+    cau: 'Tuy mang tên sonatina, không chương nào có hình thức sonata: cả hai đều là hình thức hai đoạn có tái hiện (A – B – A, trong đó B và A nhắc lại cùng nhau) thêm một coda.'
+    loai: cau-truc
+    nguon: [ trompa, omt-binary, omt-ternary ]
+    ket_qua: da-sua
+    ghi_chu: 'MEI: chương I: A ô 1–8 (không nhắc), ‖: B ô 9–16, A ô 17–24 :‖, coda 25–34; chương II: ‖: nhịp lấy đà + A ô 1–8 :‖ ‖: B 9–21, A 22–29 :‖, coda 29–40. OMT Ternary Form: "A and B do not repeat together, and neither do B and A"; OMT Binary Form: rounded binary là hai phần nhắc lại, chủ đề đầu trở lại trong phần hai. Trang Hình thức nhỏ (đã khóa): "Hai đoạn có tái hiện: A B A'', ‖: A :‖ ‖: B A'' :‖". Chữ cũ: "cả hai đều là ba đoạn A – B – A thêm một coda". Không có phần phát triển hay giọng át cho chủ đề hai, nên không phải hình thức sonata.'
+  - id: n21
+    cau: 'Romanze (romance) là cái tên không gắn với một hình thức cố định, thường gợi tính chất dịu dàng, riêng tư; Mozart đặt tên này cho chương chậm của Concerto piano Rê thứ K. 466.'
+    loai: dinh-nghia
+    nguon: [ cod-romance ]
+    ket_qua: da-sua
+    ghi_chu: 'COD: "Title with no strict formal application ... Generally it implies a specially personal or tender quality. Mozart called the slow movt. of his pf. conc. No.20 in D minor (K466) a Romance." Chữ cũ: "là cái tên thời ấy hay đặt cho một chương chậm vừa, giản dị, có tính chất bài hát": chưa có nguồn nói đúng như vậy.'
+  - id: n22
+    cau: Chương hai của Eine kleine Nachtmusik của Mozart cũng mang tên Romanze.
+    loai: ten
+    nguon: [ imslp-k525 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "1. Allegro • 2. Romanze: Andante • 3. Menuetto: Allegretto • 4. Rondo: Allegro".'
+  - id: n23
+    cau: Link Hình thức nhỏ, thời kỳ Cổ điển.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'src/content/docs/nhac-ly/31-hinh-thuc-nho.md có mục "Hai đoạn có tái hiện (rounded binary)"; lich-su/thoi-ky/co-dien.md có.'
+  - id: n24
+    cau: 'Câu hỏi nghe: chương I, câu đầu (ô 1–4) dừng lửng, câu sau (ô 5–8) khép lại; ô 5 tay trái đổi từ hợp âm hai nốt sang Alberti; nốt láy; Romanze cảm hai hay sáu phách, chỗ dừng trên dấu ngân (fermata); có chơi dấu nhắc lại không.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'Ô 4 dừng trên Rê (D3 F♯3), ô 8 về Sol; ô 5 Alberti; fermata ô 19 chương II.'
+  - id: n25
+    cau: 'Thuật ngữ: dấu ngân (fermata) ở ô 19 Romanze và ở hợp âm cuối chương I đặt trên nốt và hợp âm.'
+    loai: dinh-nghia
+    nguon: [ trompa ]
+    ket_qua: da-sua
+    ghi_chu: 'Trang viết "dấu lặng ngân" 8 chỗ (dòng 36, 56, 71, 73, 129 hai lần, 219, 237); "dấu lặng" là dấu nghỉ, nhưng MEI và PDF đặt fermata trên nốt E5 và hợp âm Rê bảy ở ô 19, trên hợp âm Sol ở ô 34. thuat-ngu.yml (đã khóa): fermata "Ngân dài tùy ý", vòng cung có chấm đặt trên hay dưới nốt hay dấu lặng; trang mozart-minuet-k2 (D6-L1) gọi là "dấu ngân". Đổi thành "dấu ngân".'
+  - id: n26
+    cau: Bài có mặt trong rất nhiều tuyển tập sonatina cho người học; bạn sẽ gặp đủ loại bản thu.
+    loai: lich-su
+    nguon: [ imslp-anh5, nott-1868 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP liệt kê nhiều ấn bản và 5 bản thu; Nottebohm 1868 đã liệt kê các ấn bản Breitkopf, Cranz, Böhme, Schott, Hofmeister.'
+  - id: n27
+    cau: 'Gợi ý nghe hai bản khác nhau, nghe thêm bản trên fortepiano (đàn piano của thời ấy) để hình dung tiếng đàn mỏng và rõ.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n28
+    cau: 'Bảng Theo dõi khi nghe, I. Moderato, A (ô 1–8): p; giai điệu Sol trưởng có nốt láy; câu đầu dừng lửng ở ô 4, câu sau khép lại ở Sol.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'MEI: dynam "p" ô 1.'
+  - id: n29
+    cau: 'I. B (ô 9–16): mf; tay trái lắc qua lại trên nốt Rê trầm, tay phải chạy móc đơn; ở ô 16, tay phải đi một mình dẫn về.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'MEI: dynam "mf" ô 9; tay trái F♯3 D3 F♯3 D3 G3 D3 …; ô 16 tay trái nghỉ cả ô (mRest).'
+  - id: n30
+    cau: 'I. A trở lại (ô 17–24): dolce; nguyên văn đoạn đầu.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'MEI: dir "dolce" ô 17; ô 17–24 cùng nốt ô 1–8.'
+  - id: n31
+    cau: 'I. B và A nhắc lại (ô 9–24); I. Coda (ô 25–34): mf; nốt Rê nhắc lại rồi đi lên theo hợp âm Sol; kết bằng các hợp âm Sol, hợp âm cuối ngân dài.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'Dấu nhắc lại: rptstart ô 9, rptend ô 24. Coda: ô 25 D5 D5 D5, ô 26 D5 G5 B5, ô 27 D6; mf ô 25; ô 32–34 hợp âm Sol, fermata ô 34. "Như tiếng kèn" là hình ảnh, không phải nhận định.'
+  - id: n32
+    cau: 'II. Romanze, A (nhịp lấy đà và ô 1–8): 6/8; giai điệu hát trên hình đệm nốt trầm – hai hợp âm; A nhắc lại.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'MEI: meter 6/8; ô 0 nhịp lấy đà B4 C5 D5; rptend ô 8.'
+  - id: n33
+    cau: 'II. B (ô 9–21): chuỗi nốt đi lên, lớn dần, sang Rê trưởng; ba hợp âm rải và dấu ngân ở ô 19; tay phải một mình dẫn về.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'Ô 9 A4 B4 C♯5 D5 E5 F♯5 (staccato dưới luyến, cresc.); ô 11 C♯; ô 17–19 hợp âm D3 F♯3 A3 C4 có arpeg; fermata ô 19; ô 20–21 tay trái nghỉ.'
+  - id: n34
+    cau: 'II. A trở lại (ô 22–29), rồi B và A nhắc lại; II. Coda (ô 29–40): p; nốt láy hai nốt, bè trầm đi lên nửa cung Đô – Đô♯ – Rê; kết nhẹ.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'rptstart ô 8 (nửa sau), rptend ô 29; coda bắt đầu từ nhịp lấy đà ở nửa sau ô 29, dynam "p"; ô 30, 34 hai nốt hoa mỹ A4 B4; ô 32 tay trái C3 rồi C♯3+G3, ô 33 D3.'
+  - id: n35
+    cau: 'Số ô nhịp theo bản Breitkopf & Härtel; ấn bản khác có thể lệch, nhất là ở chương II vì chương bắt đầu bằng nhịp lấy đà.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'MEI đánh số theo Breitkopf: nhịp lấy đà là ô 0, chương I 34 ô, chương II 40 ô.'
+  - id: n36
+    cau: 'Bảng Cấu trúc, I. A ô 1–8 Sol trưởng: hai câu bốn ô, câu 1 dừng trên hợp âm Rê (át âm) ở ô 4, câu 2 kết về Sol; tay trái hợp âm hai nốt, rồi Alberti ở ô 5–6; nốt láy ngắn; dấu luyến hai nốt ở ô 2 và 7.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+  - id: n37
+    cau: 'I. B ô 9–16 (nhắc lại cùng A), quanh hợp âm át Rê bảy: tay trái lắc trên nốt Rê trầm; tay phải chạy móc đơn theo chuỗi, ô 12 lặp hình của ô 10 cao hơn một bậc; ô 16 chỉ có tay phải; mf.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'Ô 10 D5 C5 A5 G5 F♯5 E5 D5 C5; ô 12 E5 D5 B5 A5 G5 F♯5 E5 D5 (cao một bậc). Ô 13 tay trái D3+A3 … D3+F♯3: Rê bảy.'
+  - id: n38
+    cau: 'I. A ô 17–24 Sol trưởng: nguyên văn ô 1–8, ghi dolce; hết ô 24 quay lại ô 9.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+  - id: n39
+    cau: 'I. Coda ô 25–34, Sol trưởng trên nốt Rê trầm: nốt Rê nhắc lại, giai điệu đi lên theo hợp âm Sol; tay trái rải hợp âm; các hợp âm kết; hợp âm cuối có dấu ngân.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'Tay trái D3 ở đầu mỗi nhóm ô 25–31; fermata ô 34.'
+  - id: n40
+    cau: 'II. A nhịp lấy đà và ô 1–8 (nhắc lại), Sol trưởng: giai điệu hát trên hình đệm nốt trầm – hai hợp âm; ô 3–4 dừng trên hợp âm Rê.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+  - id: n41
+    cau: 'II. B ô 9–21, Rê trưởng → Rê bảy: chuỗi nốt chấm dưới dấu luyến, lớn dần (ô 9); ba hợp âm rải Rê bảy và dấu ngân (ô 17–19); tay phải một mình ở ô 20–21, có La♯.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'Ô 21 G4 A4 A♯4 B4 C5 D5 (MEI có accid "s").'
+  - id: n42
+    cau: 'II. A ô 22–29 Sol trưởng: nguyên văn đoạn A; B và A nhắc lại cùng nhau.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: Ô 22–29 cùng nốt ô 1–8.
+  - id: n43
+    cau: 'II. Coda ô 29–40 Sol trưởng: p; nốt láy hai nốt (ô 30, 34); bè trầm Đô – Đô♯ – Rê (ô 32–33); hai câu kết ngắn.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'Ô 35–36 và 37–38 hai câu kết giống nhau, ô 39–40 hợp âm kết.'
+  - id: n44
+    cau: 'Khối 1 theo bản Breitkopf & Härtel (Toàn tập Beethoven, loạt 16, số 160), đối chiếu qua bản mã hóa MEI của dự án TROMPA; số ngón là gợi ý của trang.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'MEI: "Beethovens Werke. Serie 16. No. 160", Werner Goebl, CC BY 4.0. Nottebohm 1868 ghi cùng ấn bản là "Serie 16, No. 37. 38" (số bản sonata trong loạt); "No. 160" là số trên đầu trang và số bản khắc B.160.'
+  - id: n45
+    cau: 'Ô 1–4 là câu hỏi, dừng trên hợp âm Rê ở ô 4; ô 5–8 là câu trả lời, kết về Sol; ở ô 2 và ô 7 mỗi cặp nốt luyến là một tiếng thở; từ ô 5 tay trái chuyển sang Alberti; Fa♮ ở ô 5 kéo nhạc sang hợp âm Đô ở ô 6.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'Ô 5 tay trái F4 có accid bình (MEI); ô 6 G3 E4 C4 E4: hợp âm Đô. "Nốt đầu nặng, nốt sau nhẹ" là lời khuyên.'
+  - id: n46
+    cau: 'Khối 2: Romanze cùng nguồn; bản này không ghi sắc thái ở đầu chương.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'MEI ô 0–8 không có dynam; dynam đầu tiên của chương là "p" ở ô 29.'
+  - id: n47
+    cau: 'Tay trái Romanze: nốt trầm rồi hai hợp âm nhỏ, lặp mỗi nửa ô; ở ô 3–4 tay trái có hai bè: nốt Mi trầm rồi Rê trầm ngân dài dưới các hợp âm; Đô♯ đưa nhạc dừng trên hợp âm Rê.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'Ô 3 layer 3: E3 E3 (nốt đen chấm dôi); ô 4 D3; ô 3 hợp âm G3+C♯4 hai lần.'
+  - id: n48
+    cau: Ở ô 4, ngón 3 tay phải dời từ La sang Si trong lúc nghỉ.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Số ngón của trang; ô 4 A4 (nốt đen), lặng móc đơn, B4: khớp.'
+  - id: n49
+    cau: 'Bảng Chỗ khó: nốt láy ngắn ở I ô 1, 3, 5, 6 và II ô 1, 3; luyến hai nốt I ô 2, 7; Alberti I ô 5–6, 21–22; chuỗi móc đơn I ô 10, 12–15; coda I ô 25–31 với cú nhảy lên Rê cao (D6); hợp âm rải và dấu ngân II ô 17–19; tay phải một mình I ô 16, II ô 20–21, La♯ ở ô 21 Romanze.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'Các số ô khớp MEI (nốt láy còn ở ô 17, 19, 21, 22 chương I và ô 8, 22, 24 chương II: bảng chỉ liệt kê lần đầu).'
+  - id: n50
+    cau: 'Cách tập trong bảng Chỗ khó (tập không láy trước, nói thầm nặng – nhẹ, khối hợp âm trước rồi rải, viết số ngón, dừng trên nốt đầu nhóm sau, nốt nhắc lại nhẹ dần, cảm hai phách, rải nhanh từ dưới lên, quyết định trước độ dài dấu ngân, đếm to).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Link luyen-tap/metronome có.'
+  - id: n51
+    cau: 'Bài tập 1–3 soạn riêng cho trang, không trích từ bản gốc; lời dẫn (nốt láy ở ô 2 chạm nhanh, nốt Sol rơi đúng phách 3; tay phải mp, tay trái pp; đếm MỘT – hai – ba – HAI – hai – ba).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Khối 3: ô 2 G4 nốt trắng (phách 1–2) rồi nốt láy A vào G ở phách 3: khớp lời dẫn. Khối 4: !mp! tay phải, !pp! tay trái: khớp.'
+  - id: n52
+    cau: 'Kế hoạch 5 tuần, 20–30 phút mỗi ngày; chương II tập theo móc đơn trước, rồi theo nốt đen chấm dôi; tốc độ máy đếm nhịp trong bảng.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n53
+    cau: 'Moderato nghĩa là vừa phải.'
+    loai: dinh-nghia
+    nguon: []
+    ket_qua: null
+    ghi_chu: 'chưa chắc (chỉ thiếu nguồn): khớp thuat-ngu.yml đã khóa (Moderato "Vừa"), nhưng chưa mở được nguồn bậc 2 (Encyclopedia.com chỉ có mục vần, Britannica không có bản lưu). Lượt 2 tìm một từ điển nhạc bậc 2.'
+  - id: n54
+    cau: 'Khoảng ♩ = 100–112 là hợp lý cho Moderato; Romanze không ghi tốc độ, cảm hai phách mỗi ô (♩. ≈ 48–56).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Phần "Romanze không ghi tốc độ" kiểm được: MEI chỉ có chữ "Romanze", không chỉ dẫn tốc độ.'
+  - id: n55
+    cau: 'Phát âm: dấu luyến hai nốt (nốt đầu nặng hơn, nốt sau nhẹ, nhấc cổ tay), dấu luyến dài chơi liền, nốt chấm dưới dấu luyến ở Romanze ô 9 tách nhẹ, nốt láy ngắn nhanh và nốt chính đúng phách; hai nốt láy ở coda Romanze lướt nhanh vào nốt chính.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Chi tiết bản nhạc (staccato dưới luyến ô 9; hai nốt hoa mỹ ở coda) đúng theo MEI. Link piano/not-hoa-my có.'
+  - id: n56
+    cau: 'Sắc thái của bản Breitkopf: p ở đầu chương I, nhỏ dần trên các cặp nốt đi xuống ở ô 2, mf ở đoạn B (ô 9) và ở coda (ô 25), dolce ở ô 17; Romanze: lớn dần ở ô 9, nhỏ dần trước dấu ngân ở ô 19, p ở coda.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'MEI: p ô 1; hairpin dim ô 2 (phách 2 đến hết ô), cũng ở ô 18; mf ô 9, 25; dolce ô 17; chương II hairpin cres ô 9, hairpin dim ô 19 (phách 1–3,5) trước fermata, p ô 29.'
+  - id: n57
+    cau: 'Giữa các chỉ dẫn, để câu nhạc tự lên xuống; tay trái luôn nhỏ hơn một bậc; các ấn bản khác có thể ghi khác (link Tạo tiếng đàn).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Link piano/tieng-dan có.'
+  - id: n58
+    cau: 'Bàn đạp: chương I không dùng; Romanze có thể chạm nông trên nốt trầm đầu mỗi nửa ô; ô 17–19 một chút bàn đạp trên mỗi hợp âm rải.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Link piano/ban-dap có.'
+  - id: n59
+    cau: 'Nhiều tuyển tập cho người học in bài dưới tên Beethoven mà không ghi chú gì, kèm sắc thái và số ngón của người biên tập.'
+    loai: lich-su
+    nguon: [ trompa, nott-1868 ]
+    ket_qua: dung
+    ghi_chu: 'Bản Breitkopf in "Zwei leichte Sonaten für das Pianoforte von L. van Beethoven", không ghi chú; Nottebohm 1868 liệt kê các ấn bản Breitkopf, Cranz, Böhme, Schott, Hofmeister dưới tên Beethoven. Phần "kèm sắc thái và số ngón của người biên tập" nói chung, chưa kiểm cụ thể tuyển tập nào; lượt 2 xem lại.'
+  - id: n60
+    cau: Bản Urtext ghi rõ số Anh. 5 và cho biết đâu là chỉ dẫn của nguồn.
+    loai: lich-su
+    nguon: [ henle-365, wu-50290 ]
+    ket_qua: dung
+    ghi_chu: 'Henle HN 365 và Wiener Urtext ghi "Anh. 5"; Urtext theo thuat-ngu.yml là bản in theo nguồn, ít thêm thắt của người biên tập.'
+  - id: n61
+    cau: 'Cách giới thiệu trung thực: "Sonatina Sol trưởng, Anh. 5 số 1, gán cho Beethoven".'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Khớp tên bản ghi đã khóa (ten, gan_cho).
+  - id: n62
+    cau: 'Lỗi thường gặp (tám dòng: nốt láy chậm; luyến đánh đều; Alberti to; đoạn B nhanh dần; coda gõ nốt Rê, nhảy trễ; Romanze sáu phách nặng; kéo dấu ngân ô 19; tay phải một mình chậm lại ở chương I ô 16, Romanze ô 20–21).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Các số ô khớp MEI.
+  - id: n63
+    cau: 'Học tiếp: Clementi Sonatina Op. 36 số 1 dài hơn, chương I có hình thức sonata thật.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'Mutopia sonatina-1 (hồ sơ clementi-sonatina n2, n36–n38): chương I có trình bày, phát triển, tái hiện.'
+  - id: n64
+    cau: 'Bài chị em: Sonatina Fa trưởng, Anh. 5 số 2, cùng nguồn gốc đáng ngờ, gồm Allegro assai và Rondo.'
+    loai: ten
+    nguon: [ imslp-anh5, trompa, henle-365 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Sonatina in F major (Allegro assai, Rondo. Allegro); PDF Breitkopf No. 2: "Allegro assai", "RONDO. Allegro". "Nhanh nhẹn hơn" là cảm nhận theo chỉ dẫn tốc độ.'
+  - id: n65
+    cau: 'Học tiếp, link: Clementi (chặng 3), Burgmüller Arabesque và Bach Prelude nhỏ BWV 939 cùng chặng, Tác phẩm theo cấp độ, Für Elise khi vững tay hơn, Mozart K. 545 xa hơn nữa.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'src/data/tac-pham.yml: beethoven-sonatina-sol 3, clementi-sonatina 3, burgmuller-arabesque 3, bach-prelude-bwv939 3, fur-elise 4, mozart-k545 5. mozart-k545 chưa chuyển: ../opus-zero/docs/piano/tac-pham/mozart-k545.md có.'
+  - id: n66
+    cau: Für Elise là "Beethoven thật".
+    loai: lich-su
+    nguon: [ imslp-fur-elise ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Für Elise, WoO 59", Beethoven, bản viết tay ghi "1810 (March 3)", không có ghi chú nghi tác giả trong phần đã đọc. Bản ghi fur-elise đã khóa: tac_gia beethoven, không có gan_cho.'
+  - id: n67
+    cau: 'Câu hỏi 1: "Anh." là Anhang, phụ lục các tác phẩm đáng ngờ trong danh mục Beethoven; giải thích: danh mục Kinsky–Halm (1955) xếp hai sonatina vào phụ lục vì không chắc chúng là của Beethoven.'
+    loai: danh-muc
+    nguon: [ henle-365, henle-2207 ]
+    ket_qua: dung
+    ghi_chu: 'Henle: "very unlikely ... for this reason they do not have opus numbers but instead are listed ... as Anhang/Appendix 5".'
+  - id: n68
+    cau: 'Câu hỏi 2: chương I là A – B – A và coda, ô 9–24 được nhắc lại; giải thích: A ô 1–8, B quanh hợp âm át ô 9–16, A ô 17–24, coda ô 25–34; lựa chọn sai: hình thức sonata, chủ đề và bốn biến tấu.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: Ký hiệu A – B – A ở đây là tên các đoạn, không mâu thuẫn n20.
+  - id: n69
+    cau: 'Câu hỏi 3: Romanze 6/8 cảm hai phách mỗi ô, mỗi phách ba móc đơn; giải thích: nốt trầm đầu mỗi nửa ô là phách.'
+    loai: cau-truc
+    nguon: [ trompa ]
+    ket_qua: dung
+    ghi_chu: 'Nhịp 6/8 hai phách nốt đen chấm dôi; tay trái nốt trầm ở đầu mỗi nửa ô (ô 1: G3 …, F♯3 …).'
+  - id: n70
+    cau: 'Câu hỏi 4: luyến hai nốt, nốt đầu nặng hơn, nốt sau nhẹ rồi nhấc cổ tay; giải thích: như ở ô 2 và ô 7 chương I.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Luyến hai nốt ở ô 2, 7 đúng theo MEI.
+  - id: n71
+    cau: 'Mục Nguồn: Henle HN 365 (Otto von Irmer biên tập, ngón Walther Lampe): lời giới thiệu và mức độ khó trên henle.de.'
+    loai: lich-su
+    nguon: [ henle-365 ]
+    ket_qua: dung
+    ghi_chu: '"Otto von Irmer (Editor)", "Walther Lampe provided the fingerings"; mức 3 (easy).'
+  - id: n72
+    cau: 'Mục Nguồn: Wiener Urtext UT 50290 Drei Sonatinen für Klavier (Anh. 5 số 1 và 2, WoO 50; Jochen Reutter biên tập, 2021): phần giới thiệu của nhà xuất bản về quyền tác giả.'
+    loai: lich-su
+    nguon: [ wu-50290 ]
+    ket_qua: da-sua
+    ghi_chu: 'Hsiao Ya (mô tả Wiener Urtext): Reutter, Franke; Anh. 5/1, 5/2 và WoO 50. Năm 2021 và 24 trang theo các trang bán lẻ (pianodao.com bình 1/2022). Chữ cũ "lời giới thiệu về quyền tác giả" thành "phần giới thiệu của nhà xuất bản": chưa đọc lời tựa trong sách.'
+  - id: n73
+    cau: 'Mục Nguồn: Kinsky, Halm, Das Werk Beethovens. Thematisch-bibliographisches Verzeichnis seiner sämtlichen vollendeten Kompositionen, G. Henle, München, 1955.'
+    loai: lich-su
+    nguon: [ ddb-kh ]
+    ket_qua: dung
+    ghi_chu: Sách in, chưa đọc; dòng chỉ ghi thông tin thư mục, khớp bản ghi DDB.
+  - id: n74
+    cau: 'Mục Nguồn: Thayer, Chronologisches Verzeichniss (1865), số 24; Nottebohm, Thematisches Verzeichniss, ấn bản 2, Breitkopf & Härtel, Leipzig, 1868, tr. 148.'
+    loai: lich-su
+    nguon: [ thayer-1865, nott-1868 ]
+    ket_qua: da-sua
+    ghi_chu: 'Thêm dòng Thayer (nguồn của n15) và số trang, link Internet Archive cho Nottebohm. Nottebohm 1868 do Breitkopf & Härtel in (trang tên sách trong bản OCR).'
+  - id: n75
+    cau: 'Mục Nguồn: lvbeethoven.it, "Anhang 05": các lần in và ý kiến nghi ngờ.'
+    loai: lich-su
+    nguon: [ lvb-anh5 ]
+    ket_qua: dung
+  - id: n76
+    cau: 'Mục Nguồn: Ludwig van Beethovens Werke, loạt 16, số 160, Breitkopf & Härtel (bản quét trên IMSLP); đoạn trích đối chiếu với bản MEI của TROMPA (Werner Goebl, CC BY 4.0) trên GitHub; link tài liệu tham khảo.'
+    loai: lich-su
+    nguon: [ trompa, imslp-anh5 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: bản Breitkopf "n.d.[1862-90]"; README TROMPA: "Breitkopf und Härtel edition, 1862–90. Plates B.160 and B.161", CC-BY-4.0, Werner Goebl. Link /opus/tai-lieu-tham-khao/ có.'
+khuong_nhac:
+  - khoi: 1
+    loai: trich-doan
+    kiem: [ cu-phap, nhip, giong, not, so-ngon, doi-chieu-an-ban ]
+    ket_qua: dung
+    ghi_chu: 'Chương I ô 1–8, 4/4, L:1/8, K:G. Ấn bản: Breitkopf & Härtel Serie 16 No. 160 qua MEI TROMPA (Nr1_1). Công cụ: script Python đọc MEI (nốt, dấu hóa con <accid>, nốt láy, luyến, dynam, hairpin). Kết quả: 8/8 ô khớp cao độ, trường độ hai tay; nốt láy (B4 ô 1, 5; C5 ô 3; F♯5 ô 6) khớp; số dấu luyến từng ô khớp (3 ở ô 2, 4 ở ô 7); p ô 1, dim ô 2 (phách 2–4) khớp; Fa♮ ô 5 tay trái khớp. Số ngón chơi được.'
+  - khoi: 2
+    loai: trich-doan
+    kiem: [ cu-phap, nhip, giong, not, so-ngon, doi-chieu-an-ban ]
+    ket_qua: dung
+    ghi_chu: 'Romanze nhịp lấy đà và ô 1–4, 6/8. Cùng ấn bản (MEI Nr1_2). Khớp: nhịp lấy đà B4 C5 D5 (có luyến); tay phải ô 1–4; tay trái nốt trầm + hai hợp âm, ô 3 hai bè (E3 nốt đen chấm dôi hai lần) với hợp âm G3+C♯4 (MEI ghi ♯ ở hợp âm đầu, hợp âm sau theo dấu hóa trong ô; ABC [G,^C][G,C] cùng nghĩa), ô 4 D3 với F♯3+D4. Không có sắc thái ở đầu chương, khớp. Số ngón chơi được.'
+  - khoi: 3
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
+    ket_qua: dung
+    ghi_chu: '4 ô 4/4 Sol trưởng, đủ phách. Cặp luyến (D B)(C A)(B G)(A F♯) trên Sol – Rê bảy – Sol – Rê bảy; ô 2 nốt láy A vào G ở phách 3 như lời dẫn; tay trái hợp âm hai nốt như ô 1–4 gốc. Ngón 5-3, 4-2, 3-1, 2-1 chơi được.'
+  - khoi: 4
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
+    ket_qua: dung
+    ghi_chu: '4 ô 4/4. Alberti tay trái G D B D (Sol), G E C E (Đô), F♯ D C D (Rê bảy), G D B D rồi hợp âm; giai điệu B–D, C–E, D–C, B nằm trong hợp âm. Sắc thái mp/pp đúng lời dẫn. Ngón 5-1-2-1 chơi được (quãng 5–6).'
+  - khoi: 5
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
+    ket_qua: dung
+    ghi_chu: '4 ô 6/8, đủ phách. Hình đệm nốt trầm + hai hợp âm (G – B D, F♯ – C D) như Romanze; giai điệu legato trên Sol và Rê bảy, kết Sol. Ngón tay phải 3-4-5-3, 4-2-1-2 chơi được.'
+doi_chu:
+  - cu: "Những gì ta biết khá ít. Không còn bản viết tay, và không có thư từ hay ghi chép nào của Beethoven nhắc đến hai bài. Henle ghi rằng chúng được in khi Beethoven còn sống, khoảng năm 1807, dưới tên ông; lời giới thiệu ấn bản Wiener Urtext (2021) thì nói bản in đầu tiên ra đời sau khi ông mất. Toàn tập Breitkopf & Härtel ở thế kỷ 19 ghi nhà xuất bản gốc là August Cranz ở Hamburg, rất xa Vienna, nơi Beethoven sống từ năm 1792."
+    moi: "Những gì ta biết khá ít. Không còn bản viết tay, và không có thư từ hay ghi chép nào của Beethoven nhắc đến hai bài. Henle ghi rằng chúng được in khi Beethoven còn sống, khoảng năm 1807; bản in ấy (nhà Rudolphus ở Altona) ghi tên ông là tác giả. Phần giới thiệu ấn bản Wiener Urtext (2021) thì nói bản in đầu tiên ra đời sau khi ông mất. Toàn tập Breitkopf & Härtel ở thế kỷ 19 ghi nhà xuất bản gốc là August Cranz ở Hamburg, rất xa Vienna, nơi Beethoven sống từ năm 1792."
+    ly_do: "n11 (da-sua), n12 (da-sua): Henle không nói \"dưới tên ông\"; tên trên bản in Altona theo lvbeethoven.it; chỉ đọc được mô tả của Wiener Urtext, không phải lời tựa."
+  - cu: "Âm nhạc thuộc phong cách Cổ điển phổ biến cuối thế kỷ 18: giai điệu chia thành câu bốn ô, hòa âm chủ yếu là chủ âm và át âm, tay trái đệm bằng hợp âm hai nốt và hình Alberti. Tuy mang tên sonatina, không chương nào có hình thức sonata: cả hai đều là ba đoạn A – B – A thêm một coda (xem Hình thức nhỏ). Romanze (romance) là cái tên thời ấy hay đặt cho một chương chậm vừa, giản dị, có tính chất bài hát; chương hai của Eine kleine Nachtmusik (Một khúc nhạc đêm nhỏ) của Mozart cũng mang tên này. Xem thêm thời kỳ Cổ điển."
+    moi: "Âm nhạc thuộc phong cách Cổ điển phổ biến cuối thế kỷ 18: giai điệu chia thành câu bốn ô, hòa âm chủ yếu là chủ âm và át âm, tay trái đệm bằng hợp âm hai nốt và hình Alberti. Tuy mang tên sonatina, không chương nào có hình thức sonata: cả hai đều là hình thức hai đoạn có tái hiện (A – B – A, trong đó B và A nhắc lại cùng nhau) thêm một coda (xem Hình thức nhỏ). Romanze (romance) là cái tên không gắn với một hình thức cố định, thường gợi tính chất dịu dàng, riêng tư; Mozart đặt tên này cho chương chậm của Concerto piano Rê thứ K. 466, và chương hai của Eine kleine Nachtmusik (Một khúc nhạc đêm nhỏ) cũng mang tên này. Xem thêm thời kỳ Cổ điển."
+    ly_do: "n20 (da-sua): B và A nhắc lại cùng nhau là hai đoạn có tái hiện (OMT Ternary Form, Binary Form; trang Hình thức nhỏ). n21 (da-sua): định nghĩa romance theo COD."
+  - cu: "Romanze. Bạn cảm mỗi ô hai phách hay sáu phách? Ở đâu nhạc dừng lại trên một dấu lặng ngân (fermata)?"
+    moi: "Romanze. Bạn cảm mỗi ô hai phách hay sáu phách? Ở đâu nhạc dừng lại trên một dấu ngân (fermata)?"
+    ly_do: "n25 (da-sua): fermata đặt trên nốt, không trên dấu lặng; thuật ngữ theo thuat-ngu.yml (fermata: ngân dài tùy ý)."
+  - cu: "II. B (ô 9–21): chuỗi nốt đi lên, lớn dần, sang Rê trưởng; ba hợp âm rải và dấu lặng ngân ở ô 19; tay phải một mình dẫn về"
+    moi: "II. B (ô 9–21): chuỗi nốt đi lên, lớn dần, sang Rê trưởng; ba hợp âm rải và dấu ngân ở ô 19; tay phải một mình dẫn về"
+    ly_do: "n25 (da-sua): như trên."
+  - cu: "Nốt nhắc lại nhẹ; hợp âm cuối có dấu lặng ngân"
+    moi: "Nốt nhắc lại nhẹ; hợp âm cuối có dấu ngân"
+    ly_do: "n25 (da-sua): như trên."
+  - cu: "Chuỗi nốt chấm dưới dấu luyến, lớn dần (ô 9); ba hợp âm rải Rê bảy và dấu lặng ngân (ô 17–19); tay phải một mình ở ô 20–21, có La♯"
+    moi: "Chuỗi nốt chấm dưới dấu luyến, lớn dần (ô 9); ba hợp âm rải Rê bảy và dấu ngân (ô 17–19); tay phải một mình ở ô 20–21, có La♯"
+    ly_do: "n25 (da-sua): như trên."
+  - cu: "Hợp âm rải và dấu lặng ngân (II: ô 17–19)"
+    moi: "Hợp âm rải và dấu ngân (II: ô 17–19)"
+    ly_do: "n25 (da-sua): như trên."
+  - cu: "Rải nhanh từ dưới lên; quyết định trước độ dài dấu lặng ngân và giữ đúng như thế mỗi lần"
+    moi: "Rải nhanh từ dưới lên; quyết định trước độ dài dấu ngân và giữ đúng như thế mỗi lần"
+    ly_do: "n25 (da-sua): như trên."
+  - cu: "Ở Romanze: lớn dần ở ô 9, nhỏ dần trước dấu lặng ngân ở ô 19, p ở coda."
+    moi: "Ở Romanze: lớn dần ở ô 9, nhỏ dần trước dấu ngân ở ô 19, p ở coda."
+    ly_do: "n25 (da-sua): như trên (đoạn Sắc thái, chỉ trích câu đổi)."
+  - cu: "Kéo dấu lặng ngân ở ô 19 quá lâu, hoặc bỏ qua nó."
+    moi: "Kéo dấu ngân ở ô 19 quá lâu, hoặc bỏ qua nó."
+    ly_do: "n25 (da-sua): như trên."
+  - cu: "Wiener Urtext Edition, UT 50290 Drei Sonatinen für Klavier (Anh. 5 số 1 và 2, WoO 50; Jochen Reutter biên tập, 2021): lời giới thiệu về quyền tác giả."
+    moi: "Wiener Urtext Edition, UT 50290 Drei Sonatinen für Klavier (Anh. 5 số 1 và 2, WoO 50; Jochen Reutter biên tập, 2021): phần giới thiệu của nhà xuất bản về quyền tác giả."
+    ly_do: "n72 (da-sua): chỉ đọc được mô tả của nhà xuất bản."
+  - cu: "Gustav Nottebohm, Thematisches Verzeichniss der im Druck erschienenen Werke von Ludwig van Beethoven, ấn bản 2, Breitkopf & Härtel, Leipzig, 1868."
+    moi: "Alexander Wheelock Thayer, Chronologisches Verzeichniss der Werke Ludwig van Beethoven's, Berlin, 1865, số 24 (Internet Archive). Gustav Nottebohm, Thematisches Verzeichniss der im Druck erschienenen Werke von Ludwig van Beethoven, ấn bản 2, Breitkopf & Härtel, Leipzig, 1868, tr. 148 (Internet Archive)."
+    ly_do: "n74 (da-sua): thêm nguồn của câu về Thayer và số trang Nottebohm; hai dòng danh sách."

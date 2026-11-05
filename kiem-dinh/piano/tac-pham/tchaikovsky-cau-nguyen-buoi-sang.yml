@@ -1,0 +1,566 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa piano/tac-pham/tchaikovsky-cau-nguyen-buoi-sang
+trang: src/content/docs/piano/tac-pham/tchaikovsky-cau-nguyen-buoi-sang.md
+nguon_cu: ../opus-zero/docs/piano/tac-pham/tchaikovsky-cau-nguyen-buoi-sang.md
+tang: tac-pham
+lan:
+  - so: 1
+    ngay: '2026-11-05'
+    nhanh: moi/d6-l2
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5 (D6-L2 phần B)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Bài học Morning Prayer Op. 39 số 1 (tầng Tác phẩm). Bản nhạc: Mutopia 2032 (Rem Zolotykh, nguồn Schirmer 1904, phạm vi công cộng), .ly, PDF A4 và MIDI tải ngày 05/11/2026; MIDI tải mới khác file ../opus-zero/_imslp/mid/mut_tch01.mid ở phần đầu. Hòa âm từng ô đọc trên MIDI (nốt theo phách) và .ly. Lịch sử: Tchaikovsky Research (Children''s Album, Liturgy of Saint John Chrysostom, Symphony No. 6, Kamenka, Vladimir Davydov), IMSLP, Henle HN 45 (Album für die Jugend). Chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng thuộc hồ sơ du-lieu/tac-pham/tchaikovsky-cau-nguyen-buoi-sang. Sửa trang: n14 (phác thảo 24 bài "trong vài tuần" thành "xong vào đầu tháng 5": TR cho thấy chỉ vài ngày, 12–16/5 lịch mới), n23 (Phụng vụ Op. 41 viết tháng 5–6/1878, không phải mùa hè; "nhạc lễ Chính thống giáo Nga hát không có nhạc cụ" nói chung thay bằng điều TR ghi về chính Op. 41: hợp xướng bốn bè không nhạc đệm), n35 (ô 12 "chỗ to nhất bài": coda cũng mở bằng f, nên viết lại là đỉnh của câu 2). Các điều hồ sơ tchaikovsky-bai-ca-phap-co n15 đòi giữ (Florence 2/1878, Kamenka, 24 bài phác thảo, đề tặng Volodya Davydov, kết cấu hợp xướng bốn bè) vẫn còn; chữ "trong vài tuần" đổi thành mốc thời gian đúng. Khuông: khối 1 trích đoạn ô 1–8 khớp từng nốt cả hai tay với Mutopia; khối 2–4 ví dụ soạn, đúng. Thuật ngữ (Andante, Lento, legato, nốt treo, âm nền, kết trọn, kết chưa trọn, hợp âm mượn) có trong src/data/thuat-ngu.yml hay trang nhạc lý đã khóa.'
+nguon:
+  - id: mutopia-2032
+    bac: 1
+    ten: 'Mutopia Project, Morning Prayer, Op. 39 No. 1 (Rem Zolotykh, nguồn Schirmer 1904, "with finger notation", phạm vi công cộng), Mutopia-2015/07/09-2032: .ly, PDF A4, MIDI tải ngày 05/11/2026'
+    link: https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2032
+  - id: tr-op39
+    bac: 2
+    ten: "Tchaikovsky Research, Children's Album (24 bài, Andante G major 24 bars, thứ tự bản thảo, thư 14/26/2/1878 gửi Jurgenson từ Florence, thư 30/4/12/5/1878 gửi von Meck, phác thảo xong 4/16/5, chép sạch 13/25/7–20/7/1/8, in tháng 10, đề tặng, ấn bản toàn tập)"
+    link: https://en.tchaikovsky-research.net/pages/Children's_Album
+  - id: tr-liturgy
+    bac: 2
+    ten: 'Tchaikovsky Research, Liturgy of Saint John Chrysostom, Op. 41: "a setting of fifteen numbers from the Russian Orthodox Liturgy for unaccompanied voices", "unaccompanied mixed chorus (SATB)", sáng tác 4/16/5–27/5/8/6/1878'
+    link: https://en.tchaikovsky-research.net/pages/Liturgy_of_Saint_John_Chrysostom
+  - id: tr-sym6
+    bac: 2
+    ten: 'Tchaikovsky Research, Symphony No. 6 (Symphonie pathétique, Op. 74, 1893): "dedicated to the composer''s nephew, Vladimir Davydov"'
+    link: https://en.tchaikovsky-research.net/pages/Symphony_No._6
+  - id: tr-kamenka
+    bac: 2
+    ten: 'Tchaikovsky Research, Kamenka: "home of the composer''s sister Aleksandra, and her husband Lev Davydov, who managed his family''s extensive estates there", Ukraina; Tchaikovsky đến 11/23/4/1878'
+    link: https://en.tchaikovsky-research.net/pages/Kamenka
+  - id: tr-davydov
+    bac: 2
+    ten: 'Tchaikovsky Research, Vladimir Davydov (1871–1906), con trai Aleksandra, "favourite nephew"'
+    link: https://en.tchaikovsky-research.net/pages/Vladimir_Davydov
+  - id: imslp-op39
+    bac: 2
+    ten: "IMSLP, Children's Album, Op.39 (Tchaikovsky): in 1878 Moskva, Jurgenson; Dedication Vladimir Davydov; bản thu Luis Kolodin (wikitext đọc qua api.php)"
+    link: https://imslp.org/wiki/Children's_Album,_Op.39_(Tchaikovsky,_Pyotr)
+  - id: henle-hn45-vorwort
+    bac: 2
+    ten: 'G. Henle Verlag, HN 45 Schumann, Album für die Jugend op. 68, Preface (Ernst Herttrich 2007): quà sinh nhật Marie 1/9/1848, sách cho trẻ em'
+    link: https://www.henle.de/media/56/17/85/1690886059/0045-1690886059-sync.pdf
+  - id: omt-binary
+    bac: 2
+    ten: Open Music Theory, Binary Form (dùng cho dạng câu và kết)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/binary-form/
+  - id: omt-phrase-model
+    bac: 2
+    ten: 'Open Music Theory, Performing Harmonic Analysis Using the Phrase Model: "A cadence ending on 1̂ in the melody is a perfect authentic cadence, while one with 3̂ or 5̂ in the melody is an imperfect authentic cadence"'
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/performing-harmonic-analysis-using-the-phrase-model/
+  - id: omt-embellishing
+    bac: 2
+    ten: Open Music Theory, Embellishing Tones (suspension, pedal tone)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/embellishing-tones/
+  - id: omt-sequences
+    bac: 2
+    ten: Open Music Theory, Diatonic Sequences (circle-of-fifths sequence)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/diatonic-sequences/
+  - id: omt-mixture
+    bac: 2
+    ten: 'Open Music Theory, Modal Mixture: "Modal mixture involves borrowing notes from the parallel key"'
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/modal-mixture/
+  - id: omt-ltc
+    bac: 2
+    ten: Open Music Theory, The Leading-Tone Chord (fully diminished seventh)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/leading-tone-chord/
+nhan_dinh:
+  - id: n1
+    cau: Cầu nguyện buổi sáng là bài mở đầu Album for the Young của Tchaikovsky và chỉ có 24 ô nhịp.
+    loai: cau-truc
+    nguon: [tr-op39, mutopia-2032]
+    ket_qua: dung
+    ghi_chu: 'TR: "1. Morning Prayer … Andante (G major, 24 bars)". Mutopia MIDI: 24 ô 3/4.'
+  - id: n2
+    cau: 'Bài viết như một bài hát nhà thờ cho bốn giọng: chậm, khẽ, các nốt nối liền nhau.'
+    loai: cau-truc
+    nguon: [mutopia-2032]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: mỗi tay hai nốt (bốn bè) gần như suốt bài; Lento (Schirmer), \p ở đầu; dấu luyến dài. So sánh "bài hát nhà thờ" là cách nói của trang (tựa "Cầu nguyện").'
+  - id: n3
+    cau: Bài dạy kết cấu hợp xướng trên phím đàn, làm cho bè trên hát và giữ tiếng liền bằng ngón tay trước khi nhờ bàn đạp.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n4
+    cau: Tay phải giữ bè trên (soprano) và bè alto, tay trái giữ bè tenor và bè trầm.
+    loai: cau-truc
+    nguon: &m
+      - mutopia-2032
+    ket_qua: dung
+    ghi_chu: 'Mutopia: khuông trên <g b> … (hai bè), khuông dưới <g d''> … (hai bè); ô 5–8 mỗi khuông hai Voice (<< … \\ … >>).'
+  - id: n5
+    cau: Nghe được bốn đường đi cùng lúc là nền cho Bach, thánh ca và nhạc nhiều bè về sau; link "Hòa âm bốn bè" (/opus/nhac-ly/21-hoa-am-bon-be/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích src/content/docs/nhac-ly/21-hoa-am-bon-be.md có (bốn bè soprano, alto, tenor, bass). Vế "là nền cho…" là lời khuyên.'
+  - id: n6
+    cau: Trong mỗi hợp âm, nốt trên cùng là giai điệu và phải rõ hơn các nốt dưới; kỹ năng nổi bè theo bạn đến Chopin, Schumann, Grieg; link "Tạo tiếng đàn" (/opus/piano/tieng-dan/).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Phần kiểm được: giai điệu ở nốt trên của tay phải (Mutopia). Trang đích src/content/docs/piano/tieng-dan.md có.'
+  - id: n7
+    cau: Hòa âm đổi gần như mỗi phách.
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'MIDI: ô 3 D – Em – Am/C; ô 5 E7/G♯ – A – A7/G; ô 6 D7/F♯ – G – D7/A; ô 7 G/B – C – A7/C♯; ô 13 B7 – E – A7; ô 14 D7 – G – C. Vế "nên bàn đạp không cứu được" là lời khuyên.'
+  - id: n8
+    cau: Bạn học đổi ngón trên phím đang giữ (finger substitution), giữ nốt chung, và chỉ nhấc ngón ở bè đang lặp nốt.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n9
+    cau: Ở coda, tay trái vừa lặp một nốt Sol trầm, vừa giữ một bè giữa đang di chuyển; link "Âm ngoài hợp âm" (/opus/nhac-ly/18-am-ngoai-hop-am/).
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Mutopia khuông dưới ô 16–21: bè dưới g8 g g g g g (Sol2 móc đơn), bè trên d4) r d( | ees2. | d4) r d( | ees2. | d4( c b | bes2 a4. Trang đích nhac-ly/18-am-ngoai-hop-am.md có mục "Âm nền".'
+  - id: n10
+    cau: Bài chưa đến hai phút.
+    loai: so-lieu
+    nguon: [imslp-op39]
+    ket_qua: dung
+    ghi_chu: 'Bản thu gợi ý (Luis Kolodin, IMSLP; public/audio/tchaikovsky-cau-nguyen-buoi-sang.mp3) dài 79,80 giây (ffprobe). 24 ô 3/4 = 72 phách: ♩ = 56 khoảng 77 giây.'
+  - id: n11
+    cau: Bài có một cao trào, một vòng quãng năm và những hợp âm mượn màu thứ.
+    loai: cau-truc
+    nguon: [mutopia-2032, omt-sequences, omt-mixture]
+    ket_qua: dung
+    ghi_chu: 'Cao trào ô 12 (f); vòng quãng năm ô 13–14 (B – E – A – D – G – C); Mi♭ (ô 17, 19) và Si♭ (ô 21) ở coda: nốt của Sol thứ trong Sol trưởng (OMT: mixture là mượn nốt của giọng cùng tên).'
+  - id: n12
+    cau: Tháng 2 năm 1878, khi đang ở Florence, Tchaikovsky viết cho nhà xuất bản Pyotr Jurgenson rằng ông muốn soạn một loạt bài dễ.
+    loai: lich-su
+    nguon: [tr-op39]
+    ket_qua: dung
+    ghi_chu: 'TR: "while staying in Florence on 14/26 February, Tchaikovsky told Pyotr Jurgenson that he wanted “to write a number of easy pieces, like Kinderstück”". Chữ "cho trẻ em" của trang là nghĩa của Kinderstück.'
+  - id: n13
+    cau: Kamenka là điền trang của gia đình em gái Tchaikovsky, Aleksandra Davydova, ở Ukraina; ông trở về Kamenka (tháng 4/1878).
+    loai: lich-su
+    nguon: [tr-kamenka, tr-op39]
+    ket_qua: dung
+    ghi_chu: 'TR Kamenka: "Kamenka was the home of the composer''s sister Aleksandra, and her husband Lev Davydov, who managed his family''s extensive estates there"; thành phố ở Ukraina; chuyến 11/23 April 1878. TR Children''s Album: "after his return to Kamenka in April he decided to begin composition".'
+  - id: n14
+    cau: Ở Kamenka, Tchaikovsky phác thảo xong cả 24 bài vào đầu tháng 5, rồi sửa và chép sạch vào mùa hè.
+    loai: lich-su
+    nguon: [tr-op39]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "ông phác thảo cả 24 bài trong vài tuần, rồi sửa và chép sạch vào mùa hè." Chữ mới: "ông phác thảo xong cả 24 bài vào đầu tháng 5, rồi sửa và chép sạch vào mùa hè." Lý do: TR: thư 30 April/12 May "Tomorrow I shall start work on my collection"; "On 4/16 May the sketches for all 24 pieces were ready" (vài ngày, không phải vài tuần); chép sạch bắt đầu khoảng 13/25 July, xong 20 July/1 August. Câu mới vẫn giữ điều hồ sơ tchaikovsky-bai-ca-phap-co n15 nêu (24 bài phác thảo ở Kamenka).'
+  - id: n15
+    cau: Trong thư gửi Nadezhda von Meck, người bảo trợ của mình, Tchaikovsky nói muốn có những bản nhạc nhỏ với tên gọi hấp dẫn, như của Schumann.
+    loai: lich-su
+    nguon: [tr-op39]
+    ket_qua: dung
+    ghi_chu: 'TR: thư 30 April/12 May 1878 gửi von Meck: "I want to create a series of little individual pieces just for children, and with an attractive title, like Schumann''s". TR, trang Nadezhda von Meck (https://en.tchaikovsky-research.net/pages/Nadezhda_von_Meck): "Patroness and close friend of Tchaikovsky".'
+  - id: n16
+    cau: Bản in mang phụ đề 24 bài dễ (theo kiểu Schumann).
+    loai: ten
+    nguon: [tr-op39]
+    ket_qua: dung
+    ghi_chu: 'TR: subtitled "24 simple pieces à la Schumann".'
+  - id: n17
+    cau: Hình mẫu là tập Album für die Jugend mà Schumann viết cho các con năm 1848.
+    loai: lich-su
+    nguon: [tr-op39, henle-hn45-vorwort]
+    ket_qua: dung
+    ghi_chu: 'TR: phụ đề "à la Schumann", thư "like Schumann''s". Henle HN 45 Preface: quà sinh nhật cho "his eldest child, his daughter Marie … 1 September 1848"; Clara: "a book … containing pieces for children". Khớp hồ sơ piano/tac-pham/schumann-album (n về 1848).'
+  - id: n18
+    cau: Link "Album für die Jugend" (/opus/piano/tac-pham/schumann-album/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Trang đích src/content/docs/piano/tac-pham/schumann-album.md có.
+  - id: n19
+    cau: Tập nhạc được đề tặng Vladimir ("Volodya") Davydov, con trai cô em gái, đứa cháu Tchaikovsky yêu quý nhất.
+    loai: lich-su
+    nguon: [tr-op39, tr-davydov, imslp-op39]
+    ket_qua: dung
+    ghi_chu: 'TR: "dedicated to Tchaikovsky''s favourite nephew, Vladimir Davydov"; thư 12/24/12/1878: "Dedicated to Volodya Davydov". TR Vladimir Davydov: con thứ hai của Aleksandra, "favourite nephew". IMSLP: Dedication Vladimir Davydov (1871-1906).'
+  - id: n20
+    cau: Mười lăm năm sau, Tchaikovsky đề tặng chính người cháu này Giao hưởng số 6 Pathétique.
+    loai: lich-su
+    nguon: [tr-sym6]
+    ket_qua: dung
+    ghi_chu: 'TR Symphony No. 6: "subtitled Symphonie pathétique", sáng tác 1893; "The Sixth Symphony is dedicated to the composer''s nephew, Vladimir Davydov". 1878 + 15 = 1893.'
+  - id: n21
+    cau: 'Trong bản in, tập mở đầu bằng Cầu nguyện buổi sáng và khép lại bằng Trong nhà thờ (В церкви, số 24); ở giữa có búp bê, ngựa gỗ, lính gỗ, bài hát của nhiều xứ, chuyện cổ tích, mụ phù thủy Baba Yaga.'
+    loai: danh-muc
+    nguon: [tr-op39]
+    ket_qua: dung
+    ghi_chu: 'TR: 1 Morning Prayer; 3 Playing Hobby-Horses; 5 March of the Wooden Soldiers; 6, 7, 9 (búp bê); 15–18 bài hát Ý, Pháp, Đức, Napoli; 19 Nanny''s Story; 20 The Sorcerer (Баба-Яга); 24 In Church (В церкви).'
+  - id: n22
+    cau: Thứ tự trong bản viết tay hơi khác (Trong nhà thờ đứng áp chót), nhưng Cầu nguyện buổi sáng vẫn đứng đầu, nên con số 1 không đổi; Bài ca Pháp cổ mang số 16.
+    loai: danh-muc
+    nguon: [tr-op39]
+    ket_qua: dung
+    ghi_chu: 'TR: "The sequence of numbers differs in Tchaikovsky''s autograph score…: 1, 2, 4, 3, … 22, 24, and 23" (số 24 ở vị trí 23, áp chót; số 1 ở đầu); 16. Old French Song.'
+  - id: n23
+    cau: Cũng trong tháng 5 và tháng 6 năm 1878, Tchaikovsky viết Phụng vụ thánh Gioan Kim Khẩu (Op. 41), nhạc lễ Chính thống giáo Nga cho hợp xướng bốn bè không nhạc đệm.
+    loai: lich-su
+    nguon: [tr-liturgy, tr-op39]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Cũng trong mùa hè 1878, Tchaikovsky đang viết *Phụng vụ thánh Gioan Kim Khẩu* (Op. 41) cho hợp xướng. Nhạc lễ Chính thống giáo Nga hát không có nhạc cụ, nên bốn bè luôn là bốn giọng người." Chữ mới: "Cũng trong tháng 5 và tháng 6 năm 1878, Tchaikovsky viết *Phụng vụ thánh Gioan Kim Khẩu* (Op. 41), nhạc lễ Chính thống giáo Nga cho hợp xướng bốn bè không nhạc đệm: bốn bè là bốn giọng người." Lý do: TR Liturgy: "composed between 4/16 May and 27 May/8 June 1878" (cuối xuân, không phải mùa hè; TR Children''s Album: 21 July/2 August ông còn làm tiếp bản Liturgy); "a setting … from the Russian Orthodox Liturgy for unaccompanied voices", "Scored for unaccompanied mixed chorus (SATB)". Câu chung về mọi nhạc lễ Chính thống giáo Nga không tìm được nguồn bậc 2 đã mở, nên chỉ nói điều nguồn ghi về Op. 41.'
+  - id: n24
+    cau: Kết cấu của Cầu nguyện buổi sáng rất gần lối hát hợp xướng bốn bè ấy; hãy chơi như thể mỗi bè là một ca sĩ cần lấy hơi.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Phần bốn bè đã kiểm ở n4.'
+  - id: n25
+    cau: Link "thời kỳ Lãng mạn" (/opus/lich-su/thoi-ky/lang-man/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Trang đích src/content/docs/lich-su/thoi-ky/lang-man.md có.
+  - id: n26
+    cau: 'Cách nghe: ít nhất ba lần, mỗi lần một câu hỏi; so sánh hai bản thu khác tốc độ; nghe thêm Phụng vụ Op. 41 do một dàn hợp xướng Nga hát.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n27
+    cau: Ở ô 5–8, bè trầm leo lên từng bậc, có chỗ từng nửa cung.
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'MIDI bè trầm: ô 5 G♯2 A2 G2; ô 6 F♯2 G2 A2; ô 7 B2 C3 C♯3; ô 8 D3 (G♯–A, C–C♯–D là nửa cung).'
+  - id: n28
+    cau: Từ ô 16, bè trầm lặp một nốt Sol bằng móc đơn; trên nền ấy có hợp âm nghe "tối" hẳn đi.
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'MIDI: G2 móc đơn từ phách 1 ô 16 đến hết ô 21; ô 17, 19 F♯ – A – C – E♭ trên Sol (bảy giảm), ô 21 C♯ – E – G – B♭.'
+  - id: n29
+    cau: 'Câu 1, nửa đầu (ô 1–4): bốn bè đi chậm bằng nốt đen; nửa câu dừng trên hợp âm Si trưởng (ô 4), hợp âm át của Mi thứ; bè alto lặp nốt Sol; Rê♯ ở bè alto ô 4.'
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'MIDI: ô 1–3 nốt đen (có nốt đen chấm dôi – móc đơn); bè alto G4 G4 F♯4 | G4 G4; ô 4 tay phải D♯4 B4, tay trái B2 F♯3: Si trưởng (B – D♯ – F♯), át của Mi thứ.'
+  - id: n30
+    cau: 'Câu 1, nửa sau (ô 5–8): bè trầm đi Sol♯ – La – Sol, rồi leo từng bậc Fa♯ – Sol – La – Si – Đô – Đô♯ – Rê; nhạc nghiêng sang Rê trưởng và kết ở đó.'
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: Như n27; ô 8 hợp âm Rê (D3, A3, D4 dưới A4, F♯4).
+  - id: n31
+    cau: 'Ô 5–8: chuỗi hợp âm bảy (Mi bảy, La bảy, Rê bảy), rồi La bảy ở thể đảo dẫn về Rê: kết chưa trọn ở Rê trưởng (ô 8).'
+    loai: cau-truc
+    nguon: [mutopia-2032, omt-phrase-model]
+    ket_qua: dung
+    ghi_chu: 'MIDI: ô 5 phách 1 G♯2 E3 D4 B4 = E7 thể 1; phách 3 G2 E3 C♯4 A4 = A7 thể 3; ô 6 phách 1 F♯2 D3 C4 A4 = D7 thể 1; ô 7 phách 3 C♯3 A3 G4 E5 = A7 thể 1; ô 8 Rê với bè trên ở La (5̂). OMT: kết có 3̂ hay 5̂ ở giai điệu là imperfect authentic cadence; trang nhac-ly/13-ket (đã khóa): kết chưa trọn = V – I có thể đảo hoặc bè trên không ở chủ âm.'
+  - id: n32
+    cau: Ở ô 8, Sol của bè alto là nốt treo, rồi xuống Fa♯.
+    loai: cau-truc
+    nguon: [mutopia-2032, omt-embellishing]
+    ket_qua: dung
+    ghi_chu: 'Mutopia ô 7–8: bè alto g4-1 (phách 3 ô 7, trên A7) rồi ô 8 g4-3( fis8 e fis4) trên hợp âm Rê: Sol giữ lại thành nghịch rồi bước xuống Fa♯ (suspension 4–3 theo OMT).'
+  - id: n33
+    cau: 'Câu 2 (ô 9–11): bắt đầu giống hệt ô 1; Fa♮ ở ô 10 tạo hợp âm Sol bảy, dẫn sang Đô trưởng (ô 11); tay phải đi lên trong khi bè tenor tách ra, đi xuống Fa♮ – Mi – Rê – Đô – Si – La♯.'
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'MIDI ô 9 = ô 1 (cả hai tay). Ô 10 phách 3 F4 (tay trái) với G4 B4 (tay phải) = G7; ô 11 phách 1 E4 G4 C5 (Đô trưởng). Tenor: F4 (ô 10) – E4 D4 C4 B3 (ô 11) – A♯3 (ô 12). Giai điệu: C5 B4 B4 | C5 D5 E5 | F♯5.'
+  - id: n34
+    cau: 'Cao trào (ô 12–14): Fa♯ trưởng ở ô 12, rồi vòng quãng năm Si – Mi – La – Rê – Sol – Đô, nhạc dịu dần; đỉnh f ở ô 12.'
+    loai: cau-truc
+    nguon: [mutopia-2032, omt-sequences]
+    ket_qua: dung
+    ghi_chu: 'MIDI ô 12: A♯3 F♯4 C♯5 F♯5 (Fa♯ trưởng), \f. Ô 13: B7 – E – A7; ô 14: D7 – G – C (gốc đi xuống quãng năm mỗi phách: circle-of-fifths sequence, OMT). \> ở ô 13.'
+  - id: n35
+    cau: Ở ô 12, hợp âm Fa♯ trưởng có f và dấu nhấn, đỉnh của câu 2.
+    loai: cau-truc
+    nguon: *m
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ (bảng Theo dõi): "**Cao trào** (ô 12): hợp âm Fa♯ trưởng, chỗ to nhất bài". Chữ mới: "**Cao trào** (ô 12): hợp âm Fa♯ trưởng, *f* có dấu nhấn, đỉnh của câu 2". Lý do: bản Schirmer (Mutopia) ghi \f ở ô 12 (fis''2-> có dấu nhấn) và cũng ghi \f khi coda bắt đầu (b''\f, ô 16), nên "chỗ to nhất bài" không rõ trên bản nhạc; nốt cao nhất bài là Sol5 ở ô 16 (coda), không phải ô 12.'
+  - id: n36
+    cau: 'Kết câu 2 (ô 15–16): ii6/5 – V7 – I, kết trọn ở Sol trưởng; bè trên Si – La – La – Fa♯ – Sol.'
+    loai: cau-truc
+    nguon: [mutopia-2032, omt-phrase-model]
+    ket_qua: dung
+    ghi_chu: 'MIDI ô 15: C3 G3 E4 (A4) = La thứ bảy thể 1 (A – C – E – G, ii6/5), phách 3 D3 C4 D4 F♯4 = D7 (V7); ô 16 G2 D3 B3 G4 = Sol, bè trên Sol (1̂): perfect authentic cadence (OMT). Bè trên B4 (A4 móc kép) A4 F♯4 | G4.'
+  - id: n37
+    cau: 'Coda lần một (ô 16–18): bè trầm bắt đầu lặp Sol bằng móc đơn; một hợp âm bảy giảm Fa♯ – La – Đô – Mi♭ trên nền Sol (ô 17) rồi sáng lại ở Sol trưởng.'
+    loai: cau-truc
+    nguon: [mutopia-2032, omt-ltc]
+    ket_qua: dung
+    ghi_chu: 'MIDI ô 17: F♯5 C5 (tay phải), E♭3 (tay trái), A4 phách 3 trên G2 lặp: F♯ – A – C – E♭ (bảy giảm, OMT fully diminished seventh); ô 18 G4 B4 trên D3 G2: Sol trưởng.'
+  - id: n38
+    cau: 'Coda lần hai (ô 18–20): câu nhỏ ấy nhắc lại thấp hơn một quãng tám, khẽ hơn (mf).'
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'MIDI ô 19 = ô 17 thấp một quãng tám (C4 F♯4 … F♯3 A3); ô 20 G3 B3 = ô 18 thấp một quãng tám rồi đi tiếp; \mf ở phách 3 ô 18 (b,\mf), sau \f ở ô 16.'
+  - id: n39
+    cau: 'Kết (ô 21–24): thêm một hợp âm bảy giảm (Đô♯), hợp âm át (Rê bảy), rồi Sol trưởng pp ngân dài.'
+    loai: cau-truc
+    nguon: [mutopia-2032, omt-ltc]
+    ket_qua: dung
+    ghi_chu: 'MIDI ô 21 phách 1: B♭2 C♯4 E4 trên G2 = C♯ – E – G – B♭ (bảy giảm); phách 3: A2 C4 F♯4 = Rê bảy không nốt gốc; ô 22 Sol; ô 24 <g'' b d>2.\pp.'
+  - id: n40
+    cau: 'Bài không có dấu nhắc lại; hai câu tám ô bắt đầu giống nhau rồi rẽ hai ngả: câu 1 dừng ở Rê trưởng (giọng át), câu 2 lên cao trào rồi về Sol trưởng; coda đứng trên một nốt Sol trầm lặp lại suốt tám ô.'
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Mutopia: không có \repeat; ô 9 = ô 1; ô 8 Rê, ô 16 Sol; Sol2 lặp móc đơn ô 16–21 rồi ngân ô 22–24 (bàn đạp). "Suốt tám ô" tính cả phần ngân.'
+  - id: n41
+    cau: 'Bảng Cấu trúc, cột Điều cần chú ý: mỗi tay có hai bè khác nhịp (ô 5–8); để dành tiếng to nhất cho ô 12; lấy hơi trước coda; Sol trầm nhẹ, đều; Mi♭ là màu mượn từ Sol thứ; hợp âm cuối pp.'
+    loai: cau-truc
+    nguon: [mutopia-2032, omt-mixture]
+    ket_qua: dung
+    ghi_chu: 'Phần sự kiện: ô 5–8 hai Voice mỗi khuông (Mutopia); E♭ là nốt của Sol thứ (OMT: mixture mượn nốt từ giọng cùng tên); \pp ô 24. Phần còn lại là lời khuyên.'
+  - id: n42
+    cau: Link "Kết và câu nhạc", "Át phụ và chuyển giọng", "Chuỗi hòa âm", "Hợp âm mượn" (nhac-ly/13, 19, 29, 23).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Bốn trang đích có ở src/content/docs/nhac-ly/ (13-ket.md có "Kết trọn", "Kết chưa trọn"; 19-at-phu-chuyen-giong.md; 29-chuoi-hoa-am.md; 23-hop-am-muon.md).'
+  - id: n43
+    cau: Lời khuyên tô bốn bè bằng bốn màu bút chì.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n44
+    cau: Đoạn nhạc trên khuông theo ấn bản Schirmer (New York, 1904), qua bản dàn trang LilyPond công cộng của Mutopia Project; dấu p theo bản ấy; số ngón phần lớn lấy từ bản Schirmer.
+    loai: ten
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Mutopia: source "Schirmer, 1904", license "Public Domain", moreInfo "with finger notation"; \p ô 1. Đối chiếu số ngón: <g b-3>, <fis-1 a-2>, <g-1 c-4> … khớp phần lớn số ngón trên khối 1. "New York" là nơi đặt nhà Schirmer (không ghi ở Mutopia; G. Schirmer, New York).'
+  - id: n45
+    cau: 'Ở ô 1–4 mỗi tay đánh hai nốt một lúc; bè alto lặp Sol; từ ô 1 sang ô 2, ngón cái có thể trượt từ phím đen Fa♯ sang phím trắng Sol.'
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Mutopia: <fis-1 a-2>8 cuối ô 1 rồi <g-1 c-4>4 đầu ô 2: Schirmer ghi ngón 1 cho cả Fa♯ và Sol (trượt). Vế "ngón cái chỉ nhấc vừa đủ" là lời khuyên.'
+  - id: n46
+    cau: 'Ở ô 5–8: tay phải giữ Đô♯ (ô 5) và Sol (phách 3 ô 7) bên dưới bè trên; tay trái đánh lại Mi, Rê ở phách 2 (ô 5, 6) và giữ chúng trong khi bè trầm leo lên; ở ô 8, bè trên giữ La suốt ô, còn bè dưới đi Sol – Fa♯ – Mi – Fa♯.'
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'MIDI: ô 5 C♯4 nốt trắng (phách 2–3); ô 7 G4 phách 3; tay trái E3 phách 1 và E3 phách 2 dài 2 phách, D3 tương tự ô 6; ô 8 A4 chấm dôi trắng trên G4 F♯4 E4 F♯4.'
+  - id: n47
+    cau: 'Bảng Chỗ khó: bè alto dễ to hơn giai điệu vì ngón 4–5 yếu hơn ngón cái; nốt lặp ở bè alto (Sol ở ô 1–2 và 9–11); ngón cái bận ở bè alto nên bè trên chỉ còn ngón 2–5; hai bè trong một tay (ô 5–8, coda); lên cao trào (ô 10–12); âm nền và bè giữa ở coda (ô 16–24); hòa âm đổi gần như mỗi phách.'
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Phần vị trí: Sol alto ô 1–2, 9–11 (MIDI G4); hai Voice ô 5–8 và coda; ô 10–12 tay phải đi lên, tenor đi xuống; Sol2 lặp ô 16–21. Phần nguyên nhân và cách tập là lời khuyên (n48).'
+  - id: n48
+    cau: 'Cách tập ở bảng Chỗ khó: chơi bè trên một mình rồi thêm bè dưới khẽ; ngón cái sát mặt phím; đổi ngón trên phím; tập riêng từng bè; lớn dần từ ô 10, f bằng sức nặng cánh tay; ngón 5 lặp Sol nhẹ; tập không bàn đạp trước, nếu dùng thì bàn đạp nối, nông, đổi mỗi hợp âm.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n49
+    cau: 'Bản Schirmer ghi đổi ngón ở ô 17: đánh Đô bằng ngón cái rồi đổi sang ngón út, để Si (ngón 4) và La đi xuống tiếp mà vẫn liền.'
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Mutopia ô 17: c4\finger \markup \tied-lyric #"1~5" b8-4 a (ngón 1 đổi sang 5 trên Đô, Si ngón 4).'
+  - id: n50
+    cau: Link "Bàn đạp" (/opus/piano/ban-dap/); bàn đạp nối là đạp ngay sau khi đánh hợp âm mới.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Trang đích src/content/docs/piano/ban-dap.md có mục "Bàn đạp nối" (đã khóa).
+  - id: n51
+    cau: Các bài tập dưới đây soạn riêng cho trang này, không trích từ bản nhạc gốc.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Khối 2–4 có T:"… (soạn cho trang này)"; khuong_nhac khối 2–4 xếp vi-du-soan.'
+  - id: n52
+    cau: 'Bài tập 1: bè alto do ngón cái suốt bài; ở ô 2 đánh Rê bằng ngón 4 rồi đổi sang ngón 5, đi xuống Đô (4), Si (3), La (2).'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Khối abc 2: [G!4!d]2 ô 1, "^4–5"[Gd]2 ô 2, [!1!E!4!c]2 [G!3!B]2 [F!2!A]2 ô 3; bè alto G, E, F với ngón 1.'
+  - id: n53
+    cau: 'Bài tập 1, các bước: bè trên một mình, thêm bè alto (bè trên mf, alto pp), thêm tay trái.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n54
+    cau: 'Bài tập 2: các nốt có dấu nối (Sol ở bè alto, Mi ở bè trên) giữ nguyên; ở ô 2, Sol của bè alto ngân sang hợp âm Rê (nốt treo) rồi xuống Fa♯.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Khối abc 3: [!1!G-!5!e-]2 | [G-e]2 [G!4!d-]2 [!1!Fd]2: Sol và Mi nối từ ô 1 sang ô 2; G trên [D,A,] rồi F (Fa♯ theo khóa Sol trưởng) ở phách 3. Đúng định nghĩa nốt treo (n32).'
+  - id: n55
+    cau: 'Bài tập 2, các bước: chơi riêng từng bè và hát; ghép hai bè ngoài, rồi từng tay, rồi bốn bè; thêm bàn đạp nối ở mỗi chữ Ped., đổi đúng lúc Fa♯ vào.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n56
+    cau: 'Bài tập 3: lặp Sol trầm bằng ngón 5, móc đơn đều, pp; bè giữa Rê – Mi – Đô – Si nối liền bằng ngón 2 – 1 – 3 – 4; ghép hai bè, bè giữa nổi hơn.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Khối abc 4: !5!G,, móc đơn ×6 mỗi ô, !pp!; !2!D,6 | !1!E,6 | !3!C,6 | !4!B,,6.'
+  - id: n57
+    cau: Trong bài thật, bè giữa ở coda đi Rê – Mi♭ – Rê; thay Mi bằng Mi♭ ở ô 2 của bài tập thì hợp âm Đô trưởng thành Đô thứ và tối hẳn đi; đó là màu mượn từ Sol thứ; link "Hợp âm mượn".
+    loai: cau-truc
+    nguon: [mutopia-2032, omt-mixture]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: bè trên khuông dưới d4) r d( | ees2. | d4). Khối 4 ô 2: E,6 với [G c] trên G,, (Đô trưởng thể 2); E♭ thay E thành Đô thứ (C – E♭ – G). OMT Modal Mixture: mượn nốt từ giọng cùng tên (Sol thứ có Mi♭). Trang đích nhac-ly/23-hop-am-muon.md có.'
+  - id: n58
+    cau: Kế hoạch 4 tuần, 20–30 phút mỗi ngày, mốc máy đếm nhịp ♩ = 48–52 đến ♩ ≈ 60–66; danh sách việc.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n59
+    cau: Link "thu âm" (/opus/luyen-tap/thu-am/) và "máy đếm nhịp" (/opus/luyen-tap/metronome/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Hai trang đích có ở src/content/docs/luyen-tap/ (thu-am.md, metronome.md).
+  - id: n60
+    cau: Tchaikovsky ghi Andante; một số bản in cũ, như bản Schirmer 1904, in Lento.
+    loai: ten
+    nguon: [tr-op39, mutopia-2032]
+    ket_qua: dung
+    ghi_chu: 'TR: "Morning Prayer … Andante (G major, 24 bars)". Mutopia (Schirmer 1904): \tempo "Lento.".'
+  - id: n61
+    cau: 'Tốc độ khoảng ♩ = 56–66; nghĩ theo câu bốn ô; bỏ máy đếm nhịp khi đã thuộc hình dáng câu.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n62
+    cau: 'Cân bằng bốn bè: bè trên rõ nhất, alto và tenor khẽ nhất; bè tenor đi xuống ở ô 10–12 và bè giữa Rê – Mi♭ ở coda là lúc để nó nổi lên một chút.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Vị trí đã kiểm: tenor ô 10–12 (n33), bè giữa coda (n57).'
+  - id: n63
+    cau: Legato cả bốn bè, trừ những nốt lặp; lấy hơi ở cuối mỗi câu (ô 4, 8, 16).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Vị trí cuối câu khớp bản nhạc: ô 4 (Si trưởng nốt trắng chấm dôi), ô 8 (Rê), ô 16 (Sol).'
+  - id: n64
+    cau: 'Bản Schirmer ghi p ở đầu, lớn dần tới f ở ô 12; khi coda bắt đầu lại có f, rồi mf ở lần nhắc thấp hơn, dim. và pp ở hợp âm cuối.'
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Mutopia: \p ô 1; \< ô 3, 6, 10; \mf ô 8; \p ô 9; \f ô 12; b''\f ô 16; b,\mf ô 18; <g d''>\dim ô 20; <g'' b d>2.\pp ô 24.'
+  - id: n65
+    cau: 'f ở đây là tiếng cả dàn hợp xướng hát to, không phải tiếng dàn nhạc; sắc thái ở các ấn bản có thể khác nhau; một đỉnh ở ô 12, và coda tắt dần.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Phần kiểm được (f ô 12; coda f → mf → dim. → pp) ở n64.'
+  - id: n66
+    cau: Bản Schirmer chỉ ghi bàn đạp ở ba ô cuối, để giữ Sol trầm và hợp âm cuối ngân.
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Mutopia: g2.(\sustainOn ô 22 … g2.)\sustainOff ô 24; không có \sustainOn nào khác.'
+  - id: n67
+    cau: 'Bàn đạp: hòa âm đổi gần như mỗi phách nên legato phải đến từ ngón tay; nếu dùng thì đạp nông, đổi ở mỗi hợp âm; ở coda đổi theo bè giữa hoặc không đạp cho đến ô 22.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n68
+    cau: Ít rubato; chỉ chậm lại một chút ở cuối câu 2 (ô 15–16) và ở hai ô cuối.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n69
+    cau: Bản nhạc phổ biến trên mạng thường là các bản in cũ, với tốc độ, sắc thái và số ngón của người biên tập; bản Schirmer đổi Andante thành Lento là một ví dụ.
+    loai: ten
+    nguon: [tr-op39, mutopia-2032]
+    ket_qua: dung
+    ghi_chu: 'Andante (TR, theo bản thảo và bản Jurgenson) và Lento (Schirmer 1904, Mutopia) như n60. Mutopia ghi "with finger notation" (số ngón của bản Schirmer). Lời khuyên đối chiếu Urtext là khuyên tập.'
+  - id: n70
+    cau: 'Lỗi thường gặp: bốn bè to như nhau; Sol lặp ở alto to dần; nhấc cả bàn tay rồi dùng bàn đạp che; giữ bàn đạp qua chỗ đổi hợp âm, nhất là ô 5–6 nơi bè trầm đi từng nửa cung; nhấc nốt dài tay trái sớm (ô 5, 6, 8); coda Sol trầm to; quá chậm; hợp âm cuối không cùng lúc.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Vị trí đã kiểm: bè trầm G♯–A ô 5 (n27); nốt dài tay trái ô 5, 6, 8 (n46).'
+  - id: n71
+    cau: 'Học tiếp: Bài ca Pháp cổ, bài số 16, giai điệu Sol thứ hát trên lớp đệm hợp âm.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích src/content/docs/piano/tac-pham/tchaikovsky-bai-ca-phap-co.md có; hồ sơ trang ấy n1 (giai điệu Sol thứ trên Sol trầm), n17 (số 16).'
+  - id: n72
+    cau: 'Học tiếp: hình mẫu Schumann Album für die Jugend; nổi nốt trên trong hợp âm: Chopin Prélude La trưởng rồi Prélude Mi thứ; nhiều bè, legato, bàn đạp tinh: Schumann Träumerei; Tác phẩm theo cấp độ.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'schumann-album, tac-pham-theo-cap có ở site mới. Chưa chuyển, kiểm ở site cũ ../opus-zero/docs/piano/tac-pham/: chopin-prelude-la-truong.md ("làm cho nốt trên của hợp âm hát"), chopin-prelude-mi-thu.md (hợp âm lặp khẽ, nghe các bè), schumann-traumerei.md ("nhiều giọng trong hai bàn tay", legato bằng ngón và bàn đạp). Điều cần giữ: ba trang ấy giữ đúng các kỹ năng này.'
+  - id: n73
+    cau: 'Nghe thêm: Tchaikovsky: Hồ thiên nga (/opus/nghe-nhac/tchaikovsky-ho-thien-nga/).'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển; site cũ ../opus-zero/docs/nghe-nhac/tchaikovsky-ho-thien-nga.md có. Dữ liệu: tchaikovsky-ho-thien-nga loai nghe.'
+  - id: n74
+    cau: 'Câu hỏi 1: bài gồm hai câu tám ô, rồi một coda tám ô trên âm nền Sol; 24 ô, không dấu nhắc lại; câu 1 kết ở Rê trưởng, câu 2 lên cao trào ở ô 12 rồi kết ở Sol trưởng.'
+    loai: cau-truc
+    nguon: [mutopia-2032, omt-embellishing]
+    ket_qua: dung
+    ghi_chu: Như n1, n33–n36, n40. Âm nền (pedal tone) theo OMT Embellishing Tones; trang nhac-ly/18-am-ngoai-hop-am (đã khóa) gọi "Âm nền".
+  - id: n75
+    cau: 'Câu hỏi 2: giữ bè trên liền khi ngón cái bận ở bè alto bằng cách đổi ngón trên phím đang giữ; hòa âm đổi gần như mỗi phách nên bàn đạp không thay được ngón tay.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Phần hòa âm đổi mỗi phách đã kiểm ở n7.
+  - id: n76
+    cau: 'Câu hỏi 3: câu 1 (ô 1–8) kết ở Rê trưởng, giọng át của Sol trưởng; ở ô 8, hợp âm La bảy dẫn về Rê trưởng, với nốt treo Sol xuống Fa♯ ở bè alto; Sol trưởng chỉ trở về hẳn ở ô 16.'
+    loai: cau-truc
+    nguon: [mutopia-2032, omt-embellishing]
+    ket_qua: dung
+    ghi_chu: 'Như n31, n32, n36. La bảy ở ô 7 (phách 3) dẫn vào hợp âm Rê ở ô 8; lời giải thích nói "ở ô 8" theo nghĩa kết ở ô 8. Không dựa vào vị trí lựa chọn.'
+  - id: n77
+    cau: 'Câu hỏi 4: âm nền ở coda là nốt Sol trầm lặp đều bằng móc đơn trong khi hòa âm phía trên thay đổi; tay trái vừa lặp Sol bằng ngón 5, vừa giữ bè giữa Rê – Mi♭ – Rê.'
+    loai: cau-truc
+    nguon: [mutopia-2032, omt-embellishing]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: g8-4 g g g g g (ngón 4 ở ô 21 theo Schirmer; ngón 5 là gợi ý của trang); bè giữa d – ees – d. OMT: pedal tone giữ ở bè trầm trong khi các bè trên đổi.'
+  - id: n78
+    cau: 'Nguồn: Tchaikovsky Research, "Children''s Album": thời gian và nơi sáng tác, lời đề tặng, thứ tự trong bản viết tay, chỉ dẫn Andante, số ô nhịp, các ấn bản toàn tập.'
+    loai: ten
+    nguon: [tr-op39]
+    ket_qua: dung
+    ghi_chu: 'TR có đủ: Composition, Dedication, thứ tự bản thảo, "Andante (G major, 24 bars)", Complete Collected Works tập 52 (1948) và New Complete Edition tập 69b (2001).'
+  - id: n79
+    cau: 'Nguồn: ấn bản Schirmer (1904), bản dàn trang LilyPond công cộng của Mutopia Project (người nhập: Rem Zolotykh): nguồn của đoạn nhạc, sắc thái, bàn đạp và phần lớn số ngón.'
+    loai: ten
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Mutopia 2032: maintainer "Rem Zolotykh", source "Schirmer, 1904", license "Public Domain".'
+  - id: n80
+    cau: Link "tài liệu tham khảo" (/opus/tai-lieu-tham-khao/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Trang đích src/content/docs/tai-lieu-tham-khao.md có.
+khuong_nhac:
+  - khoi: 1
+    loai: trich-doan
+    kiem: [not-tay-phai, not-tay-trai, tiet-tau, giong, nhip, sac-thai, so-ngon]
+    ket_qua: dung
+    ghi_chu: 'Cầu nguyện buổi sáng ô 1–8, ấn bản Schirmer 1904 qua Mutopia 2032. Đối chiếu từng nốt, cả hai tay, bằng MIDI tải mới (đọc nốt theo phách bằng script Python không thư viện) và .ly: tay phải ô 1–4 [GB]2 [GB]3 [FA] | [Gc]2 [GB]4 | [FA]2 [EG]2 [EA]2 | [^DB]6; ô 5–8 hai bè B2 E3 A & =D2 ^C4 | A2 D3 F & =C2 B,2 C2 | G2 G2 e3/2 A/ & D2 E2 G2 | A6 & G2 F E F2; tay trái ô 1–4 [G,D]2 [G,D]3 [D,D] | [E,C]2 [G,D]4 | [D,D]2 [E,B,]2 [C,E,]2 | [B,,F,]6; ô 5–8 E,2 E,4 & ^G,,2 A,,2 =G,,2 | D,2 D,4 & F,,2 G,,2 A,,2 | [B,,G,]2 [C,G,]2 [^C,A,]2 | A,4 D2 & D,6: khớp từng nốt và trường độ. Sắc thái p ô 1 khớp; Q:1/4=60 (bản Mutopia: MIDI 62, chữ Lento). Số ngón phần lớn như Schirmer (<g b-3>, <fis-1 a-2>, <g-1 c-4>, cis2-1, b-1( c-1), e''8.-5, a2.-4 …), phần còn lại là gợi ý chơi được.'
+  - khoi: 2
+    loai: vi-du-soan
+    kiem: [cu-phap, giong, hop-am, so-ngon]
+    ket_qua: dung
+    ghi_chu: 'Bè trên hát, đổi ngón trên phím, Sol trưởng, 3/4, L:1/8: mỗi ô 6. Bè trên B c d | e d | c B A | B với ngón 2-3-4 | 5 (4–5) | 4-3-2 | 3; bè alto G G G | G G | E G F | G bằng ngón cái. Hợp âm G – C/G – G/B… – Am – G – D – G hợp lý. Đúng chú thích (đổi 4 sang 5 trên Rê ở ô 2).'
+  - khoi: 3
+    loai: vi-du-soan
+    kiem: [cu-phap, giong, hop-am, so-ngon, ban-dap]
+    ket_qua: dung
+    ghi_chu: 'Hợp xướng bốn bè và bàn đạp nối, Sol trưởng, 3/4, L:1/8: mỗi ô 6. Hợp âm G – D/F♯ – Em | C – D(4) – D | G – C | G; Sol alto và Mi bè trên nối từ ô 1 sang ô 2; Sol treo trên Rê rồi xuống Fa♯ (phách 3 ô 2): đúng chú thích về nốt treo và đổi bàn đạp. Ngón 1-3, 2-4, 1-5 … chơi được.'
+  - khoi: 4
+    loai: vi-du-soan
+    kiem: [cu-phap, giong, hop-am, so-ngon, am-nen]
+    ket_qua: dung
+    ghi_chu: 'Âm nền, Sol trưởng, 3/4, L:1/8: mỗi ô 6. Tay trái hai bè: Sol2 móc đơn ×6 (ngón 5, pp) dưới bè giữa D3 – E3 – C3 – B2 nốt trắng chấm dôi (ngón 2-1-3-4; khoảng Sol2–Mi3 là quãng 6, vừa tay). Tay phải G – C/G – D7/G – G. Đúng chú thích; ô 2 đổi E thành E♭ cho Đô thứ như câu dưới khối.'
+doi_chu:
+  - cu: Sol trưởng · 3/4 Andante ≈ Grade 3 24 ô nhịp
+    moi: Sol trưởng · 3/4 Andante ≈ Grade 3–4 24 ô nhịp
+    ly_do: "Chip cấp độ dựng từ bản ghi tac-pham/tchaikovsky-cau-nguyen-buoi-sang: D2-0 sửa grade Grade 3 thành Grade 3–4 (ABRSM Grade 4, 2019 & 2020; RCM Level 3; plans/lam-lai/bao-cao/d2-0/sua-A.yml, hồ sơ du-lieu/tac-pham/tchaikovsky-cau-nguyen-buoi-sang n4)."
+  - cu: "Khoảng ABRSM Grade 3 (ước lượng): nốt dễ đọc, nhưng giữ bốn bè liền và cân bằng đòi hỏi kiểm soát tốt"
+    moi: "Khoảng ABRSM Grade 3–4: ABRSM xếp bài ở Grade 4 (đề cương 2019–2020), RCM Level 3. Nốt dễ đọc, nhưng giữ bốn bè liền và cân bằng đòi hỏi kiểm soát tốt"
+    ly_do: "Dòng Độ khó của thong_tin sửa ở D2-0 theo đề cương ABRSM và RCM (sua-A.yml); lượt 1 D6-L2 kiểm lại ở hồ sơ bản ghi."
+  - cu: "Tháng 2 năm 1878, khi đang ở Florence, Tchaikovsky viết cho nhà xuất bản Pyotr Jurgenson rằng ông muốn soạn một loạt bài dễ cho trẻ em. Trở về Kamenka, điền trang của gia đình em gái ông, Aleksandra Davydova, ở Ukraina, ông phác thảo cả 24 bài trong vài tuần, rồi sửa và chép sạch vào mùa hè."
+    moi: "Tháng 2 năm 1878, khi đang ở Florence, Tchaikovsky viết cho nhà xuất bản Pyotr Jurgenson rằng ông muốn soạn một loạt bài dễ cho trẻ em. Trở về Kamenka, điền trang của gia đình em gái ông, Aleksandra Davydova, ở Ukraina, ông phác thảo xong cả 24 bài vào đầu tháng 5, rồi sửa và chép sạch vào mùa hè."
+    ly_do: 'n14 (da-sua): Tchaikovsky Research: bắt đầu khoảng 13/5 (lịch mới), "On 4/16 May the sketches for all 24 pieces were ready": vài ngày, không phải vài tuần. (Đoạn viết tay ở đây chỉ gồm hai câu đầu của đoạn; phần sau đoạn không đổi.)'
+  - cu: "Cũng trong mùa hè 1878, Tchaikovsky đang viết Phụng vụ thánh Gioan Kim Khẩu (Op. 41) cho hợp xướng. Nhạc lễ Chính thống giáo Nga hát không có nhạc cụ, nên bốn bè luôn là bốn giọng người. Kết cấu của Cầu nguyện buổi sáng rất gần lối hát ấy: hãy chơi như thể mỗi bè là một ca sĩ cần lấy hơi. Xem thêm thời kỳ Lãng mạn."
+    moi: "Cũng trong tháng 5 và tháng 6 năm 1878, Tchaikovsky viết Phụng vụ thánh Gioan Kim Khẩu (Op. 41), nhạc lễ Chính thống giáo Nga cho hợp xướng bốn bè không nhạc đệm: bốn bè là bốn giọng người. Kết cấu của Cầu nguyện buổi sáng rất gần lối hát ấy: hãy chơi như thể mỗi bè là một ca sĩ cần lấy hơi. Xem thêm thời kỳ Lãng mạn."
+    ly_do: 'n23 (da-sua): Tchaikovsky Research: Liturgy "composed between 4/16 May and 27 May/8 June 1878", "for unaccompanied voices", "unaccompanied mixed chorus (SATB)"; câu chung về mọi nhạc lễ Chính thống giáo Nga chưa có nguồn đã mở.'
+  - cu: "… | Cao trào (ô 12): hợp âm Fa♯ trưởng, chỗ to nhất bài"
+    moi: "… | Cao trào (ô 12): hợp âm Fa♯ trưởng, f có dấu nhấn, đỉnh của câu 2"
+    ly_do: 'n35 (da-sua): bản Schirmer ghi f cả ở ô 12 lẫn đầu coda (ô 16), nên "chỗ to nhất bài" không rõ trên bản nhạc.'

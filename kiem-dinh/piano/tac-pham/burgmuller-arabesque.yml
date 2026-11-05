@@ -1,0 +1,547 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa piano/tac-pham/burgmuller-arabesque
+trang: src/content/docs/piano/tac-pham/burgmuller-arabesque.md
+nguon_cu: ../opus-zero/docs/piano/tac-pham/burgmuller-arabesque.md
+tang: tac-pham
+lan:
+  - so: 1
+    ngay: '2026-11-05'
+    nhanh: moi/d6-l2
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5 (D6-L2 phần B)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Bài học Arabesque Op. 100 số 2 (tầng Tác phẩm). Bản nhạc: Mutopia 203 (25EF-02, Bas Wassink theo Collection Litolff, phạm vi công cộng), .ly, PDF A4 và MIDI tải ngày 05/11/2026; MIDI tải mới khác file ../opus-zero/_imslp/mid/mut_burg02.mid ở phần đầu (tên track), nốt giống nhau. Bản Mutopia không đánh số ô; số ô ở hồ sơ đếm trên .ly (dẫn nhập ô 1–2, A ô 3–10 với hai kết, B ô 11–18, A'' ô 19–26 với hai kết, coda ô 27–31; 31 ô đã viết). Tiểu sử: Deutsche Biographie, NDB, PTNA. Chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng thuộc hồ sơ du-lieu/tac-pham/burgmuller-arabesque. Sửa trang: n1 (bỏ đánh giá "được yêu thích nhất", "nghe khó hơn thực tế"; cả description), n3 và n10 ("chưa đầy một phút" thành "khoảng một phút": bản thu gợi ý dài 65 giây), n14 (Burgmüller không mất ở Paris; "thầy dạy piano được ưa chuộng" thành "dạy piano"), n29 (bỏ "được thu rất nhiều"), n65 (link cùng chặng: Valse La thứ nay ở chặng 5, thay bằng Cầu nguyện buổi sáng, chặng 3). Khuông: ba khối đều là ví dụ soạn, đúng. Thuật ngữ trang dùng (scherzando, leggiero, dolce, a tempo, sforzando, staccato, legato) có trong src/data/thuat-ngu.yml; risoluto chưa có bản ghi thuật ngữ (cho lô sau): nghĩa đã kiểm ở n35 (Treccani).'
+nguon:
+  - id: mutopia-203
+    bac: 1
+    ten: "Mutopia Project, l'Arabesque (Burgmüller, Op. 100 số 2), dàn trang Bas Wassink theo Collection Litolff, Mutopia-2013/01/12-203, phạm vi công cộng: .ly, PDF A4, MIDI tải ngày 05/11/2026"
+    link: https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=203
+  - id: imslp-op100
+    bac: 2
+    ten: 'IMSLP, 25 Études faciles et progressives, Op.100 (Burgmüller, Friedrich): tên 25 bài, tựa đầy đủ, lần in đầu 1851 (Benoît aîné), bản thu (wikitext đọc qua api.php)'
+    link: https://imslp.org/wiki/25_%C3%89tudes_faciles_et_progressives,_Op.100_(Burgm%C3%BCller,_Friedrich)
+  - id: imslp-op105
+    bac: 2
+    ten: 'IMSLP, 12 Études, Op.105 (Burgmüller): Work Title "12 Études brillantes et mélodiques", in 1854 (Schott)'
+    link: https://imslp.org/wiki/12_%C3%89tudes,_Op.105_(Burgm%C3%BCller,_Friedrich)
+  - id: imslp-op109
+    bac: 2
+    ten: 'IMSLP, 18 Études, Op.109 (Burgmüller): Work Title "18 Études de genre", Alternative Title "Faisant suite aux Études faciles, Op.100", in 1858'
+    link: https://imslp.org/wiki/18_%C3%89tudes,_Op.109_(Burgm%C3%BCller,_Friedrich)
+  - id: imslp-peri
+    bac: 2
+    ten: 'IMSLP, La Péri (Burgmüller): 3 màn, công diễn đầu 1843-02-22, Tags "ballets ; orch"'
+    link: https://imslp.org/wiki/La_P%C3%A9ri_(Burgm%C3%BCller,_Friedrich)
+  - id: db-burgmuller
+    bac: 2
+    ten: 'Deutsche Biographie, Burgmüller, Friedrich (GND 117168890): Lebensdaten 1806–1874, Geburtsort Regensburg, Sterbeort Beaulieu'
+    link: https://www.deutsche-biographie.de/pnd117168890.html
+  - id: ndb-burgmuller
+    bac: 2
+    ten: 'Neue Deutsche Biographie, bài gia đình Burgmüller (mục Norbert Burgmüller): "B Frdr. (1806–74), Komponist populärer Klaviermusik, lebte seit 1832 in Paris"'
+    link: https://www.deutsche-biographie.de/sfz7533.html
+  - id: ptna-burgmuller
+    bac: 2
+    ten: 'PTNA Piano Music Encyclopedia (Hội giáo viên piano Nhật Bản), Burgmüller, Johann Friedrich Franz (Iida Arisa; bản tiếng Anh dịch máy từ tiếng Nhật)'
+    link: https://enc.piano.or.jp/en/persons/290
+  - id: cnrtl-arabesque
+    bac: 2
+    ten: CNRTL (Trésor de la langue française informatisé), mục từ "arabesque"
+    link: https://www.cnrtl.fr/definition/arabesque
+  - id: treccani-risoluto
+    bac: 2
+    ten: Treccani, Vocabolario, mục từ "risoluto"
+    link: https://www.treccani.it/vocabolario/risoluto/
+  - id: imslp-schumann-op18
+    bac: 2
+    ten: 'IMSLP, Arabeske, Op.18 (Schumann): sáng tác 1838, in 1839'
+    link: https://imslp.org/wiki/Arabeske,_Op.18_(Schumann,_Robert)
+  - id: imslp-debussy-arabesques
+    bac: 2
+    ten: 'IMSLP, Deux Arabesques, CD 74 ; L.66 (Debussy): sáng tác 1890–91, in 1891'
+    link: https://imslp.org/wiki/2_Arabesques_(Debussy,_Claude)
+  - id: abrsm-1920
+    bac: 2
+    ten: 'ABRSM, Piano Syllabus 2019 & 2020 (bản đầy đủ, bản lưu Wayback): Grade 2 có "Burgmüller Arabesque (No. 2 from 25 études faciles et progressives, Op. 100)"'
+    link: https://web.archive.org/web/20201112011213/https://gb.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf
+  - id: rcm-2022
+    bac: 2
+    ten: 'The Royal Conservatory (RCM), Piano Syllabus 2022 Edition: Level 3, Etudes, "Arabesque, op. 100, no. 2"'
+    link: https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf
+  - id: omt-binary
+    bac: 2
+    ten: Open Music Theory, Binary Form (rounded binary)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/binary-form/
+  - id: wiki-burgmuller
+    bac: 3
+    ten: Wikipedia, Friedrich Burgmüller (chỉ để đối chiếu mục Nguồn của trang)
+    link: https://en.wikipedia.org/wiki/Friedrich_Burgm%C3%BCller
+nhan_dinh:
+  - id: n1
+    cau: Arabesque là bài số 2 trong tập étude Op. 100 của Burgmüller.
+    loai: danh-muc
+    nguon: [imslp-op100]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ (câu mở đầu): "*Arabesque* là một trong những bài được yêu thích nhất trong tập étude của Burgmüller, vì nó nghe khó hơn thực tế, và vì nó dạy đúng những thứ cần có trước khi bước vào Czerny hay Chopin." Chữ mới: "*Arabesque* là bài số 2 trong tập étude Op. 100 của Burgmüller, và dạy đúng những thứ cần có trước khi bước vào Czerny hay Chopin." Lý do: "được yêu thích nhất" và "nghe khó hơn thực tế" là đánh giá không đo được (như La candeur n2 của D6-L1); IMSLP: number=2, title=L''arabesque. Sửa cả description (frontmatter). Vế "dạy đúng những thứ cần có trước Czerny hay Chopin" là lời khuyên (n2).'
+  - id: n2
+    cau: Bài dạy đúng những thứ cần có trước khi bước vào Czerny hay Chopin.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n3
+    cau: Bài dài khoảng một phút.
+    loai: so-lieu
+    nguon: [imslp-op100, mutopia-203]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Chưa đầy một phút" (câu mở đầu, description). Chữ mới: "Khoảng một phút". Lý do: bản thu gợi ý của trang (Luis Kolodin, IMSLP; file public/audio/burgmuller-arabesque.mp3, ffprobe 65,43 giây) dài hơn một phút. Tính trên bản nhạc: chơi đủ hai dấu nhắc lại là 55 ô 2/4 (2 + 2×8 + 2×16 + 5) = 110 phách: ♩ = 132 khoảng 50 giây, ♩ = 100 khoảng 66 giây.'
+  - id: n4
+    cau: Bài có những chùm nốt chạy nhanh, hợp âm ngắn gọn và sắc thái đổi liên tục.
+    loai: cau-truc
+    nguon: &m
+      - mutopia-203
+    ket_qua: dung
+    ghi_chu: 'Mutopia: a16( b c b a8-.) …; hợp âm <a c e>4-. ở dẫn nhập; p, cresc., sf, f, dim. e poco rall., a tempo, p, dolce, risoluto f, sf.'
+  - id: n5
+    cau: 'Hình nốt chính là năm nốt liền bậc trong một thế tay, ở tốc độ Allegro.'
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Mutopia: meter "Allegro scherzando"; a16 b c b a8, a16 b c d e8, d16 e f g a8 (năm nốt liền bậc, vừa năm ngón).'
+  - id: n6
+    cau: Phải chơi hình nốt ấy đều, nhẹ và rõ; đây là cửa vào của mọi đoạn chạy ngón về sau.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n7
+    cau: Ở đoạn giữa, tay trái chạy đúng hình nốt ấy.
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Mutopia, tay trái ô 11–17: gis16( a b a gis8) …, a16( b c d e8) …, cis16 d e d cis8, d16 e f g a8 (khóa Sol).'
+  - id: n8
+    cau: Bài có hợp âm ngắn, nốt kết câu ngắn, p đổi sang f nhanh và sf bất ngờ; tính cách scherzando nằm ở đó.
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Mutopia: hợp âm staccato ô 1–2; a8-. kết mỗi chùm; e4-5_\sf (kết thứ nhất của A); e,4.-5_\f ngay sau kết thứ hai (p sang f); "Allegro scherzando". Vế "tính cách nằm ở đó" là cách diễn giải.'
+  - id: n9
+    cau: Mỗi bài của Burgmüller trong Op. 100 có một cái tên gợi hình.
+    loai: ten
+    nguon: [imslp-op100]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: 25 tựa (La candeur, L''arabesque, La pastorale, … La chevaleresque). "Không viết bài tập khô khan; học kỹ thuật mà vẫn chơi nhạc" là lời giới thiệu.'
+  - id: n10
+    cau: Bài khoảng một phút, dễ học thuộc, hợp để chơi cho người khác nghe.
+    loai: so-lieu
+    nguon: [imslp-op100]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Chưa đến một phút, dễ học thuộc". Chữ mới: "Khoảng một phút, dễ học thuộc". Lý do như n3 (bản thu gợi ý 65 giây). "Dễ học thuộc, hợp để chơi cho người khác nghe" là lời khuyên.'
+  - id: n11
+    cau: Friedrich Burgmüller sinh năm 1806 ở Regensburg.
+    loai: nam
+    nguon: [db-burgmuller, ptna-burgmuller]
+    ket_qua: dung
+    ghi_chu: 'Deutsche Biographie: Lebensdaten 1806–1874, Geburtsort Regensburg. PTNA: "Born in Regensburg, Germany".'
+  - id: n12
+    cau: Burgmüller sinh trong một gia đình nhạc sĩ.
+    loai: lich-su
+    nguon: [ndb-burgmuller, ptna-burgmuller]
+    ket_qua: dung
+    ghi_chu: 'NDB: bài gia đình Burgmüller (cha Johann August Franz, em Norbert, đều là nhạc sĩ; Friedrich ở mục "B"). PTNA: "In Europe, the name Burgmüller typically refers to his father, Johann August Franz, or his brother, Norbert."'
+  - id: n13
+    cau: Năm 1832 Burgmüller sang Paris.
+    loai: nam
+    nguon: [ndb-burgmuller, ptna-burgmuller]
+    ket_qua: dung
+    ghi_chu: 'NDB: "lebte seit 1832 in Paris". PTNA: "moved to Paris at the age of 26" (1806 + 26 = 1832).'
+  - id: n14
+    cau: Burgmüller sống ở Pháp đến cuối đời; ông dạy piano.
+    loai: lich-su
+    nguon: [db-burgmuller, ptna-burgmuller, ndb-burgmuller]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Năm 1832 ông sang Paris và ở lại đó đến cuối đời. Ông là thầy dạy piano được ưa chuộng, viết nhiều nhạc salon…". Chữ mới: "Năm 1832 ông sang Paris và sống ở Pháp đến cuối đời. Ông dạy piano, viết nhiều nhạc salon…". Lý do: Deutsche Biographie ghi Sterbeort Beaulieu; PTNA: "died in Beaulieu, Marolles-en-Hurepoix" (gần Paris, không phải Paris); "được ưa chuộng" là đánh giá không có nguồn, PTNA chỉ ghi "active as a salon musician and educator". Cùng cách sửa với La candeur n16 (D6-L1). Chú ý cho người giao: hồ sơ La candeur n16 viết Beaulieu-sur-Mer; PTNA ghi Beaulieu ở Marolles-en-Hurepoix (Essonne). Chữ "sống ở Pháp" đúng với cả hai.'
+  - id: n15
+    cau: Burgmüller viết nhiều nhạc salon cho người chơi nghiệp dư.
+    loai: lich-su
+    nguon: [ndb-burgmuller, ptna-burgmuller]
+    ket_qua: dung
+    ghi_chu: 'NDB: "Komponist populärer Klaviermusik". PTNA: "In Paris, he was active as a salon musician and educator". IMSLP Category Burgmüller: nhiều "Valse de salon", "Fantaisie brillante" trên giai điệu opera.'
+  - id: n16
+    cau: Burgmüller viết nhạc cho vở ballet La Péri (1843).
+    loai: nam
+    nguon: [imslp-peri, ptna-burgmuller]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Work Title=La Peri", "Number of Movements/Sections=3 acts", "First Performance=1843-02-22", "Tags=ballets ; orch". PTNA: "His major work includes the ballet music “La Péri”".'
+  - id: n17
+    cau: Ngày nay tên Burgmüller gắn với ba tập étude cho người học, Op. 100, Op. 105 và Op. 109.
+    loai: lich-su
+    nguon: [ptna-burgmuller, imslp-op105, imslp-op109]
+    ket_qua: dung
+    ghi_chu: 'PTNA: "he is primarily known for his pedagogical piano pieces, Op. 100, 105, and 109".'
+  - id: n18
+    cau: 25 Études faciles et progressives, Op. 100 in năm 1851.
+    loai: nam
+    nguon: [imslp-op100]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Year of First Publication=1851 – Paris: Benoît aîné"; Bibliographie de la France 27/12/1851.'
+  - id: n19
+    cau: Op. 105 là 12 Études, Op. 109 là 18 Études.
+    loai: danh-muc
+    nguon: [imslp-op105, imslp-op109]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "12 Études brillantes et mélodiques", Op.105 (12 etudes); "18 Études de genre", Op.109 (18 bài).'
+  - id: n20
+    cau: Tựa đề đầy đủ của Op. 100 nói các bài được soạn và ghi số ngón cho bàn tay nhỏ.
+    loai: ten
+    nguon: [imslp-op100]
+    ket_qua: dung
+    ghi_chu: 'IMSLP Alternative Title: "25 études faciles et progressives, composées et doigtées expressément pour l''etendue des petites mains".'
+  - id: n21
+    cau: 'Mỗi bài trong tập có một tựa tiếng Pháp gợi hình ảnh: sự ngây thơ, khúc đồng quê, dòng suối trong, cuộc săn.'
+    loai: ten
+    nguon: [imslp-op100]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: La candeur (1), La pastorale (3), Le courant limpide (7), La chasse (9). "Khác với những tập luyện ngón thuần túy" là cách đặt đối lập, không phải nhận định riêng.'
+  - id: n22
+    cau: Op. 100 đặc biệt phổ biến trong giáo trình piano ở Nhật Bản và ở nhiều nước khác.
+    loai: lich-su
+    nguon: [ptna-burgmuller, abrsm-1920, rcm-2022]
+    ket_qua: dung
+    ghi_chu: 'PTNA: "In Japan, however, he is widely renowned as the composer of “25 Études faciles et progressives, Op. 100”, a foundational work for piano learners." Nước khác: ABRSM 2019–2020 (Anh) xếp Arabesque ở Grade 2; RCM 2022 (Canada) xếp ở Level 3; hồ sơ bản ghi lần 1 n4: Innocence, Douce plainte, Ballade, La tarentelle có trong các đề cương ABRSM.'
+  - id: n23
+    cau: Arabesque vốn là tên một kiểu hoa văn trang trí gồm những đường cong uốn lượn đan vào nhau.
+    loai: dinh-nghia
+    nguon: [cnrtl-arabesque]
+    ket_qua: dung
+    ghi_chu: 'CNRTL: "Sorte d’ornement … qui consiste en des entrelacements de feuillages, de fruits, de fleurs…"; gốc tiếng Ý arabesco "ornement formé de plantes, de branches, de feuillages... entrelacés".'
+  - id: n24
+    cau: Trong âm nhạc, chữ arabesque chỉ những bản nhạc có nét trang trí bay bổng.
+    loai: dinh-nghia
+    nguon: [cnrtl-arabesque]
+    ket_qua: dung
+    ghi_chu: 'CNRTL: nghĩa "musique: Ornementation musicale"; mục MUS. "le premier violon l''orne (un thème) d''une arabesque bouclée".'
+  - id: n25
+    cau: Schumann và Debussy cũng có bản Arabesque, không liên quan đến bài này.
+    loai: ten
+    nguon: [imslp-schumann-op18, imslp-debussy-arabesques]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Schumann, Arabeske Op. 18 (1838, in 1839); Debussy, Deux Arabesques L. 66 (1890–91). Hai tác phẩm riêng, ra đời trước và sau Op. 100 (1851). "Nổi tiếng" là cách nói thông thường; RCM 2022 có Deux arabesques trong danh sách.'
+  - id: n26
+    cau: Ở bài này, "hoa văn" là chùm năm nốt chạy lên xuống, cứ xuất hiện rồi biến mất.
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Mutopia: a16 b c b a (lên rồi xuống), a16 b c d e (lên); mỗi chùm kết bằng móc đơn staccato rồi lặng (r8). Hình ảnh "nét vẽ" là diễn giải.'
+  - id: n27
+    cau: Scherzando nghĩa là "đùa vui".
+    loai: dinh-nghia
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Khớp Từ điển của site (src/data/thuat-ngu.yml, mục scherzando, nghia "Đùa vui", đã khóa ở D3-L5).
+  - id: n28
+    cau: Bài này không bi kịch dù ở giọng thứ; nó tinh nghịch, nhanh nhẹn, hơi bất ngờ.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Diễn giải tính cách. Phần kiểm được: giọng La thứ (Mutopia \key a\minor), Allegro scherzando (n5).'
+  - id: n29
+    cau: Bài này được thu rất nhiều, cả bởi nghệ sĩ lẫn giáo viên.
+    loai: so-lieu
+    nguon: [imslp-op100]
+    ket_qua: da-bo
+    ghi_chu: 'Chữ cũ: "Nghe vài bản thu (bài này được thu rất nhiều, cả bởi nghệ sĩ lẫn giáo viên) và chú ý:". Chữ mới: "Nghe vài bản thu và chú ý:". Lý do: không kiểm được; IMSLP chỉ có hai bản thu số 2 (Mississippi College Piano Pedagogy, Luis Kolodin). Bỏ như La candeur n30 (D6-L1).'
+  - id: n30
+    cau: 'Cách nghe: bốn câu hỏi (độ nhẹ, ai đang chạy, đếm chỗ đổi sắc thái, tốc độ); nghe thêm vài bài khác trong Op. 100.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n31
+    cau: 'Dẫn nhập (2 ô): tay trái đánh hợp âm La thứ staccato, p; tay phải nghỉ.'
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Mutopia: MD r2 | r |; MS <a c e>4-.^\p <a c e>-. | <a c e>-. <a c e>-.'
+  - id: n32
+    cau: 'Đoạn A: chùm năm nốt móc kép ở tay phải, p, leggiermente; mỗi chùm kết bằng một nốt móc đơn ngắn; to dần, sf ở cuối.'
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Mutopia: a16-1_\markup{\dynamic p \italic "leggieremente"}-( b c b a8-)-. r; tay trái ^\crescendo ô 7 (<a d f>); kết thứ nhất c8-)-. r e4-5_\sf.'
+  - id: n33
+    cau: 'Đoạn A (khoảng 8 ô) có dấu nhắc lại và hai kết khác nhau; tay phải chùm năm nốt kiểu La – Si – Đô – Si – La, La – Si – Đô – Rê – Mi; tay trái đệm hợp âm.'
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Mutopia: \repeat volta 2 {7 ô} \alternative {{c8 r e4 sf} {c4 c''8 r}}: 8 ô (ô 3–10). Tay phải a16 b c b a, a16 b c d e; tay trái hợp âm nốt đen.'
+  - id: n34
+    cau: 'Đoạn B (khoảng 8 ô): f; hình nốt chạy chuyển xuống tay trái, có lúc lên khóa Sol; tay phải chơi nốt dài hơn (nốt đen chấm dôi, móc đơn); cuối đoạn dim. e poco rall.'
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Mutopia: tay phải e,4.-5_\f( b8 | c4.) a8 …; tay trái gis16( a b a gis8) … ô 11–17, \clef treble ô 16; d_\markup{\italic "dim. e poco rall."} ô 17. 8 ô (11–18).'
+  - id: n35
+    cau: Risoluto nghĩa là quả quyết.
+    loai: dinh-nghia
+    nguon: [treccani-risoluto]
+    ket_qua: dung
+    ghi_chu: 'Treccani: "In musica, didascalia musicale che prescrive un’esecuzione decisa ed energica." Thuật ngữ chưa có trong src/data/thuat-ngu.yml.'
+  - id: n36
+    cau: "Đoạn A' (khoảng 8 ô): a tempo, p; hình nốt trở lại tay phải; có chỗ dolce (ngọt ngào)."
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Mutopia: a,16-1^\markup{\italic "a tempo"}_\p ô 19; r b,-.-2_\markup{\italic "dolce"} ô 23; \alternative {a2} {a16 b c b a8}. Dolce = ngọt ngào: thuat-ngu.yml (đã khóa).'
+  - id: n37
+    cau: "Đoạn B nhắc lại: tay trái lại chạy ở f; A' nhắc lại là lần cuối trước coda."
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: "Mutopia: \\repeat volta 2 { B (ô 11–18) A' (ô 19–25) } với hai kết; coda sau kết thứ hai."
+  - id: n38
+    cau: 'Coda (khoảng 5 ô): risoluto, f; chùm nốt dồn dập, chủ yếu ở tay phải, một lần ở tay trái; to dần; kết bằng hợp âm sf có dấu ngân.'
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Mutopia: ô 27–29 tay phải d16 e f g a8, a16 b c b a8, d16 e f g a8; tay trái ^\crescendo ô 27; ô 30 e,,16^\markup{\italic "risoluto"}_\f( d c b a8) ở tay phải và e16( d c b a8) ở tay trái (lần duy nhất tay trái chạy trong coda); ô 31 <c'' a''>2^\fermata_\sf. "Khoảng 5 ô" đúng (27–31).'
+  - id: n39
+    cau: B và A' được nhắc lại cùng nhau, nên hình dạng của bài là một hai đoạn có tái hiện thu nhỏ, mở đầu bằng hai ô dẫn nhập và khép lại bằng một coda ngắn.
+    loai: cau-truc
+    nguon: [mutopia-203, omt-binary]
+    ket_qua: dung
+    ghi_chu: "Mutopia: ‖: A :‖ ‖: B A' :‖; A' mở đầu y như A (a16 b c b a). OMT Binary Form: rounded binary là hai đoạn mà đoạn sau mang lại chất liệu mở đầu của đoạn đầu."
+  - id: n40
+    cau: Link "Hình thức nhỏ" (/opus/nhac-ly/31-hinh-thuc-nho/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Trang đích src/content/docs/nhac-ly/31-hinh-thuc-nho.md có mục "Hai đoạn có tái hiện (rounded binary)".
+  - id: n41
+    cau: Thế tay của hình nốt chính ở tay phải là năm nốt từ La đến Mi (bàn phím vẽ G4–F5, tô A4 B4 C5 D5 E5).
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Mutopia MIDI: ô 3–4 A4 B4 C5 B4 A4 / A4 B4 C5 D5 E5 (A4–E5). Bàn phím do ::cong-cu{ten="piano"} vẽ; thông số range, notes đúng như câu.'
+  - id: n42
+    cau: 'Bảng Chỗ khó: chùm năm nốt đều (nốt yếu ngón 4); nốt kết chùm; hình nốt ở tay trái đoạn B, có đoạn đọc ở khóa Sol; hợp âm đệm nhẹ; đổi sắc thái nhanh; chậm lại rồi về tốc độ (cuối B, đầu A''); coda.'
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Phần kiểm được là vị trí các chỗ trong bản nhạc: \clef treble ô 16 (tay trái); "dim. e poco rall." ô 17, "a tempo" ô 19; coda ô 27–31. Phần "vì sao khó" và "cách tập" là lời khuyên (n43).'
+  - id: n43
+    cau: 'Cách tập ở bảng Chỗ khó: máy đếm nhịp, nhịp chấm dôi, dời trọng âm; nhấc cổ tay nhẹ sau nốt kết; tay trái tập gấp đôi; hợp âm chỉ "chạm"; tập sắc thái từ tốc độ chậm; đánh dấu poco rall. và a tempo; cổ tay mềm, hợp âm cuối bằng sức nặng cánh tay.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n44
+    cau: Các bài tập dưới đây soạn riêng cho trang này, không trích từ bản nhạc gốc.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Ba khối abc có T:"… (soạn cho trang này)"; khuong_nhac khối 1–3 xếp vi-du-soan.
+  - id: n45
+    cau: 'Bài tập 1: ô 1–2 tay phải, ô 3–4 tay trái chạy y như vậy, ô 5–6 chùm nốt trên nền hợp âm.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Đã kiểm trên khối abc 1 của trang (xem khuong_nhac khối 1).
+  - id: n46
+    cau: 'Bài tập 1, cách tập: tay đang nghỉ vẫn đếm; tăng dần đến ♩ = 100 rồi mới thử nhanh hơn.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n47
+    cau: 'Bài tập 2: nốt trầm ở phách, hợp âm ở giữa phách; ô 1–2 rất nhỏ, ô 3–4 to dần, ô 5–6 f.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Khối abc 2: tay trái .A,, z .A,, z, tay phải z .[ce] z .[ce]; !p! ô 1, !<(! ô 3–4, !f! ô 5.'
+  - id: n48
+    cau: 'Bài tập 2, cách tập: buông phím gọn; f mà tiếng vẫn tròn; hợp âm cuối dùng sức nặng cánh tay.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n49
+    cau: 'Bài tập 3 là kiểu kết cấu của đoạn B: tay trái chạy ở f, tay phải giữ những nốt dài hơn.'
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Đoạn B ở Mutopia: tay trái móc kép, tay phải e4. b8 (n34). Khối abc 3: tay phải [ce]6 [Bd]2, tay trái C,D,E,F,G,2, !f!.'
+  - id: n50
+    cau: 'Bài tập 3, cách tập: tay trái chắc mà không nặng, sức từ cánh tay thả lỏng; tập thêm ở p để kiểm tra độ đều.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n51
+    cau: 'Kế hoạch 4 tuần, khoảng 30 phút mỗi ngày, các mốc máy đếm nhịp từ ♩ = 60–72 đến ♩ = 100–120; đích cuối khoảng ♩ = 112–132; rõ ràng quan trọng hơn tốc độ; danh sách việc.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n52
+    cau: Kế hoạch tuần 2 và lỗi thường gặp nói chỗ tay trái đổi khóa ở đoạn B.
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Mutopia: tay trái \clef treble ô 16, \clef bass ô 19.'
+  - id: n53
+    cau: Link "thu âm" (/opus/luyen-tap/thu-am/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Trang đích src/content/docs/luyen-tap/thu-am.md có (công cụ thu âm).
+  - id: n54
+    cau: Scherzando là đùa vui, không phải hấp tấp; giọng La thứ ở đây không buồn mà tinh nghịch.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Nghĩa scherzando đã kiểm ở n27; phần còn lại là diễn giải.
+  - id: n55
+    cau: 'Tiếng đàn và phát âm: ngón sát phím, cổ tay mềm; chùm nốt legato nhẹ, nốt kết chùm và hợp âm staccato; đừng nhấc tay cao.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Phần "chùm nốt legato, nốt kết chùm staccato" khớp bản nhạc: dấu luyến trên chùm, a8-. (Mutopia).'
+  - id: n56
+    cau: 'Các chỉ dẫn trong bài: p, to dần, sf, f, dim. e poco rall., a tempo, dolce, risoluto.'
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Mutopia có đủ: \p, cresc., \sf, \f, "dim. e poco rall.", "a tempo", "dolce", "risoluto" (thêm "leggieremente").'
+  - id: n57
+    cau: sf là nhấn đột ngột một nốt, không phải đổi cả đoạn sang f.
+    loai: dinh-nghia
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Khớp Từ điển của site (src/data/thuat-ngu.yml, mục sforzando: "Nhấn mạnh đột ngột"), đã khóa.'
+  - id: n58
+    cau: 'Bàn đạp: không dùng, trừ có thể ở hợp âm cuối có dấu ngân; mọi sự liền tiếng đến từ ngón tay.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Mutopia không ghi bàn đạp.
+  - id: n59
+    cau: Burgmüller tự ghi số ngón cho tập Op. 100.
+    loai: lich-su
+    nguon: [imslp-op100]
+    ket_qua: dung
+    ghi_chu: 'IMSLP tựa đầy đủ: "composées et doigtées expressément pour l''etendue des petites mains" (doigtées: ghi số ngón). Lời khuyên dùng số ngón in sẵn là khuyên tập.'
+  - id: n60
+    cau: 'Lỗi thường gặp: chơi nhanh hơn khả năng; nhấn nốt đầu chùm; hợp âm đệm nặng; nhấc tay cao; sf và f thành đập, p không đủ nhỏ; tay trái đoạn B chậm và không đều; dùng bàn đạp làm nhòe; vội ở coda.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n61
+    cau: La candeur là số 1 của Op. 100, ở Đô trưởng, để luyện hát legato.
+    loai: danh-muc
+    nguon: [imslp-op100]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: number=1 La candeur. Đô trưởng và legato: hồ sơ piano/tac-pham/burgmuller-la-candeur (Mutopia 202, \key c\major, giai điệu hát có dấu luyến).'
+  - id: n62
+    cau: 'Cùng tập Op. 100: La pastorale (số 3), Le courant limpide (số 7), Ballade (số 15), Inquiétude (số 18), La tarentelle (số 20), La chevaleresque (số 25, bài kết tập).'
+    loai: danh-muc
+    nguon: [imslp-op100]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: số 3 La pastorale, 7 Le courant limpide, 15 Ballade, 18 Inquiétude, 20 La tarentelle, 25 La chevaleresque (bài cuối của 25 bài).'
+  - id: n63
+    cau: Le courant limpide có dòng nước chảy ở tay phải.
+    loai: cau-truc
+    nguon: [imslp-op100]
+    ket_qua: dung
+    ghi_chu: 'Mutopia 25EF-07 (Le Courant Limpide, "Rieselnder Bach * The limpid Stream", Allegro vivace, Sol trưởng): tay phải chạy liên ba móc đơn (\times 2/3 {b8 g'' d b g'' d …}). Tải từ https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-07/25EF-07.ly ngày 05/11/2026.'
+  - id: n64
+    cau: Ballade (số 15) ở Đô thứ, có giai điệu ở tay trái.
+    loai: cau-truc
+    nguon: [imslp-op100]
+    ket_qua: dung
+    ghi_chu: 'Mutopia 25EF-15 (Ballade, Allegro con brio): \key c\minor, 3/8; tay phải hợp âm <c es g>8-. staccato "misterioso", giai điệu ở khuông dưới. Tải từ https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-15/25EF-15.ly ngày 05/11/2026. "Kịch tính" là diễn giải tính cách.'
+  - id: n65
+    cau: 'Cùng chặng trên site: Clementi Sonatina Op. 36 số 1 và Tchaikovsky: Cầu nguyện buổi sáng.'
+    loai: ve-site
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "[Clementi: Sonatina Op. 36 số 1](…), [Chopin: Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/); *Wilder Reiter*…". Chữ mới: "[Clementi: Sonatina Op. 36 số 1](…), [Tchaikovsky: Cầu nguyện buổi sáng](/opus/piano/tac-pham/tchaikovsky-cau-nguyen-buoi-sang/); *Wilder Reiter*…". Lý do: src/data/tac-pham.yml (chang đã khóa): burgmuller-arabesque 3, clementi-sonatina 3, tchaikovsky-cau-nguyen-buoi-sang 3, chopin-valse-la-thu 5 (D2-0 sửa từ 3). Hai trang đích có ở src/content/docs/piano/tac-pham/.'
+  - id: n66
+    cau: Wilder Reiter trong Schumann Album für die Jugend luyện cùng loại staccato.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích src/content/docs/piano/tac-pham/schumann-album.md có Wilder Reiter (số 8), nói về staccato. Câu không nói cùng chặng (schumann-album chặng 2).'
+  - id: n67
+    cau: Link "Bài tập ngón và étude" (/opus/piano/bai-tap-ngon/) và "Tác phẩm theo cấp độ" (/opus/piano/tac-pham-theo-cap/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Hai trang đích có trong src/content/docs/piano/; bai-tap-ngon nói về Op. 100 (hồ sơ kiem-dinh/piano/bai-tap-ngon.yml n58: Arabesque Op. 100 số 2); tac-pham-theo-cap có Arabesque ở chặng 3.'
+  - id: n68
+    cau: 'Câu hỏi 1: ở đoạn B, hình nốt chạy chính chuyển xuống tay trái, có lúc lên tận khóa Sol; tay phải giữ những nốt dài hơn.'
+    loai: cau-truc
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: Như n34. Vế "hãy tập tay trái riêng nhiều gấp đôi" là lời khuyên.
+  - id: n69
+    cau: 'Câu hỏi 2: scherzando nghĩa là đùa vui; bài ở La thứ nhưng không buồn.'
+    loai: dinh-nghia
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Như n27 (thuat-ngu.yml); La thứ ở Mutopia \key a\minor. Phần tính cách là diễn giải.
+  - id: n70
+    cau: 'Câu hỏi 3: sf yêu cầu nhấn đột ngột một nốt, không đổi cả đoạn sang f.'
+    loai: dinh-nghia
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Như n57.
+  - id: n71
+    cau: 'Câu hỏi 4: tập chùm năm nốt chậm với máy đếm nhịp, theo nhịp chấm dôi, dời trọng âm; nhấn nốt đầu chùm quá mạnh nghe giật cục.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n72
+    cau: 'Nguồn: IMSLP ghi lần in đầu (Paris: Benoît aîné, 1851) và tên các bài.'
+    loai: nam
+    nguon: [imslp-op100]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "1851 – Paris: Benoît aîné"; danh sách 25 bài.'
+  - id: n73
+    cau: 'Nguồn: bản dàn trang công cộng của L''Arabesque tại Mutopia; cấu trúc và chỉ dẫn sắc thái trên trang theo bản đó.'
+    loai: ten
+    nguon: *m
+    ket_qua: dung
+    ghi_chu: 'Mutopia 203: Copyright "Public Domain". Các chỉ dẫn trên trang (n31–n38, n56) đều có trong bản này.'
+  - id: n74
+    cau: 'Nguồn: Wikipedia, "Friedrich Burgmüller" (năm sinh, năm mất, năm sang Paris).'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Câu nói site dùng nguồn nào. Năm sinh, mất, năm sang Paris đã kiểm bằng nguồn bậc 2 (n11, n13, n14). Link https://en.wikipedia.org/wiki/Friedrich_Burgm%C3%BCller mở được.'
+  - id: n75
+    cau: Link "tài liệu tham khảo" (/opus/tai-lieu-tham-khao/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Trang đích src/content/docs/tai-lieu-tham-khao.md có.
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem: [cu-phap, giong, tiet-tau, so-ngon, hai-tay]
+    ket_qua: dung
+    ghi_chu: 'Chùm năm nốt chuyền tay, La thứ, 2/4, L:1/16: mỗi ô đủ 8 móc kép. Tay phải A4–E5 ngón 1→5 rồi E5–A4 ngón 5→1 (đúng thế tay của n41); tay trái A2–E3 ngón 5→1 lên, E3–A2 ngón 1→5 xuống; ô 5–6 chùm nốt tay phải trên hợp âm [A,,E,] staccato. Đúng điều trang nói (ô 1–2 tay phải, 3–4 tay trái, 5–6 trên nền hợp âm); số ngón chơi được; hợp chặng 3.'
+  - khoi: 2
+    loai: vi-du-soan
+    kiem: [cu-phap, giong, hop-am, sac-thai, so-ngon]
+    ket_qua: dung
+    ghi_chu: 'Hợp âm staccato, La thứ, 2/4, L:1/8: mỗi ô 4 móc đơn. Tay trái A,, và E,, ở phách, tay phải [ce], [Bd], [^GB] giữa phách (La thứ, Mi bảy, Mi trưởng). Sắc thái p (ô 1), to dần ô 3–4, f ô 5–6, hợp âm cuối có dấu nhấn: đúng chú thích dưới khối.'
+  - khoi: 3
+    loai: vi-du-soan
+    kiem: [cu-phap, giong, tiet-tau, so-ngon]
+    ket_qua: dung
+    ghi_chu: 'Tay trái chạy, tay phải giữ, Đô trưởng, 2/4, L:1/16: mỗi ô 8. Tay trái C3–G3 ngón 5→1, G3–C3 ngón 1→5, G2–D3, D3–G2; tay phải [ce]6 [Bd]2 … (nốt dài), !f!. Đúng kết cấu đoạn B (n34, n49); ngón chơi được.'
+doi_chu:
+  - cu: "Chưa đầy một phút tinh nghịch: những chùm nốt chạy vụt qua như nét hoa văn, hợp âm ngắn gọn, sắc thái đổi liên tục. Arabesque là một trong những bài được yêu…"
+    moi: "Khoảng một phút tinh nghịch: những chùm nốt chạy vụt qua như nét hoa văn, hợp âm ngắn gọn, sắc thái đổi liên tục. Arabesque là bài số 2 trong tập étude Op. 100…"
+    ly_do: 'n1, n3 (da-sua), mô tả trang: bỏ đánh giá "được yêu thích nhất"; bản thu gợi ý dài 65 giây nên "chưa đầy một phút" thành "khoảng một phút".'
+  - cu: "Chưa đầy một phút tinh nghịch: những chùm nốt chạy vụt qua như nét hoa văn, hợp âm ngắn gọn, sắc thái đổi liên tục. Arabesque là một trong những bài được yêu thích nhất trong tập étude của Burgmüller, vì nó nghe khó hơn thực tế, và vì nó dạy đúng những thứ cần có trước khi bước vào Czerny hay Chopin."
+    moi: "Khoảng một phút tinh nghịch: những chùm nốt chạy vụt qua như nét hoa văn, hợp âm ngắn gọn, sắc thái đổi liên tục. Arabesque là bài số 2 trong tập étude Op. 100 của Burgmüller, và dạy đúng những thứ cần có trước khi bước vào Czerny hay Chopin."
+    ly_do: 'n1, n3 (da-sua): "được yêu thích nhất", "nghe khó hơn thực tế" là đánh giá không đo được (IMSLP: số 2 của Op. 100); bản thu gợi ý (Kolodin) dài 65 giây.'
+  - cu: Ngắn mà trọn vẹn. Chưa đến một phút, dễ học thuộc, rất hợp để chơi cho người khác nghe.
+    moi: Ngắn mà trọn vẹn. Khoảng một phút, dễ học thuộc, rất hợp để chơi cho người khác nghe.
+    ly_do: 'n10 (da-sua): bản thu gợi ý dài 65 giây; chơi đủ nhắc lại ở ♩ = 100–132 là 50–66 giây.'
+  - cu: Friedrich Burgmüller sinh năm 1806 ở Regensburg, trong một gia đình nhạc sĩ. Năm 1832 ông sang Paris và ở lại đó đến cuối đời. Ông là thầy dạy piano được ưa chuộng, viết nhiều nhạc salon cho người chơi nghiệp dư, và cả nhạc cho vở ballet La Péri (1843).
+    moi: Friedrich Burgmüller sinh năm 1806 ở Regensburg, trong một gia đình nhạc sĩ. Năm 1832 ông sang Paris và sống ở Pháp đến cuối đời. Ông dạy piano, viết nhiều nhạc salon cho người chơi nghiệp dư, và cả nhạc cho vở ballet La Péri (1843).
+    ly_do: 'n14 (da-sua): Burgmüller mất ở Beaulieu, không ở Paris (Deutsche Biographie, GND 117168890; PTNA); "được ưa chuộng" không có nguồn.'
+  - cu: "Nghe vài bản thu (bài này được thu rất nhiều, cả bởi nghệ sĩ lẫn giáo viên) và chú ý:"
+    moi: "Nghe vài bản thu và chú ý:"
+    ly_do: 'n29 (da-bo): không kiểm được; IMSLP chỉ có hai bản thu số 2.'
+  - cu: "Cùng chặng trên site: Clementi: Sonatina Op. 36 số 1, Chopin: Valse La thứ; Wilder Reiter trong Schumann: Album für die Jugend luyện cùng loại staccato."
+    moi: "Cùng chặng trên site: Clementi: Sonatina Op. 36 số 1, Tchaikovsky: Cầu nguyện buổi sáng; Wilder Reiter trong Schumann: Album für die Jugend luyện cùng loại staccato."
+    ly_do: 'n65 (da-sua): Valse La thứ nay ở chặng 5 (tac-pham.yml, chang đã khóa); Cầu nguyện buổi sáng ở chặng 3 như Arabesque.'

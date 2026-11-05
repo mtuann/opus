@@ -1,0 +1,558 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa piano/tac-pham/chopin-valse-la-thu
+trang: src/content/docs/piano/tac-pham/chopin-valse-la-thu.md
+nguon_cu: ../opus-zero/docs/piano/tac-pham/chopin-valse-la-thu.md
+tang: tac-pham
+lan:
+  - so: 1
+    ngay: '2026-11-05'
+    nhanh: moi/d6-l2
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5 (D6-L2 phần B)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Bài học Valse La thứ B. 150 (tầng Tác phẩm). Bản nhạc: bản LilyPond chép theo bản thảo ở Paris (kho rdj/music trên GitHub, chopin-b150-waltz-in-a-minor.ly, tải ngày 05/11/2026; có \barNumberCheck): A ô 1–16, ‖: B :‖ ô 17–24, ‖: A'' C :‖ ô 25–40, A'''' ô 41–52, coda ô 53–56, 56 ô và một phách lấy đà. Bản IMSLP (PDF) không mở (bị chặn). Lịch sử: IMSLP (wikitext), Henle HN 131 (Bemerkungen/Comments, Vorwort), Henle HN 1822 (trang mẫu có lời bình Valse La thứ), Ấn bản Quốc gia Ba Lan (bảng số WN), Henle blog (valse 2024). Chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng thuộc hồ sơ du-lieu/tac-pham/chopin-valse-la-thu. Sửa trang: n1 (bỏ "với nhiều người là bản Chopin đầu tiên", thay bằng mức Henle; cả description), n4 (chặng: "vừa sức người mới qua chặng sơ cấp" sai với chặng 5 đã khóa), n10, n12 (bối cảnh valse: bỏ "món không thể thiếu của các phòng khách", "khoảnh khắc ngẫu hứng" thành "chỗ co giãn nhịp"), n16 (bỏ Prod''homme 1939 và "số đặc biệt": không mở được nguồn), n20 (Op. 34 số 2: bỏ "dài hơn", thêm mức Henle), n24 (bỏ đánh giá về Lipatti, Rubinstein), n33 và n34 (coda: bỏ "nhỏ dần đến lặng", bản thảo không ghi), n69 (link cùng chặng: Clementi, Arabesque ở chặng 3; thay bằng hai bài chặng 5). Chưa chắc: n56 (học trò kể về rubato), n62 (nốt hoa mỹ vào đúng phách, theo Eigeldinger), n78 (bản WIMA 1999 và 56 ô), n79 (sách Brown 1960): chỉ có sách in hay PDF IMSLP bị chặn. Khuông: ba khối đều là ví dụ soạn, đúng. Thuật ngữ (Allegretto, rubato, rondo, trill, legato) có trong src/data/thuat-ngu.yml; "đạp trễ" là chữ của trang piano/ban-dap (đã khóa, mục Bàn đạp nối).'
+nguon:
+  - id: rdj-b150
+    bac: 1
+    ten: 'Bản LilyPond Waltz in A minor, B. 150 (kho rdj/music trên GitHub), chép theo bản thảo "Walec" ở Bibliothèque nationale, Paris; \tempo Allegretto, \barNumberCheck #8, #17, #25, #41, #48; tải ngày 05/11/2026'
+    link: https://github.com/rdj/music/blob/HEAD/chopin-b150-waltz-in-a-minor.ly
+  - id: imslp-b150
+    bac: 2
+    ten: 'IMSLP, Waltz in A minor, B.150 (Chopin): B.150 ; CT 224, Allegretto không ghi, "1860 in 4 Pièces pour piano by Charlotte de Rothschild (No.3)", "Published as Valse by Charlotte de Rothschild", bản thu (wikitext đọc qua api.php)'
+    link: https://imslp.org/wiki/Waltz_in_A_minor,_B.150_(Chopin,_Fr%C3%A9d%C3%A9ric)
+  - id: henle-hn131-bem
+    bac: 2
+    ten: 'G. Henle Verlag, HN 131 Chopin, Walzer: Comments (bảng niên đại và năm in: KK IVb no. 11, 1843, in 1955; op. 69, 70 in 1855; "KK IVb no. 11 a minor … This piece first appeared in print in the French periodical La Revue Musicale (1955)")'
+    link: https://www.henle.de/media/a3/c6/49/1697725591/0131-1697725590-sync.pdf
+  - id: henle-hn131-vorwort
+    bac: 2
+    ten: 'G. Henle Verlag, HN 131 Chopin, Walzer: Preface (Ewald Zimmermann, 1978): "After the death of the composer, Julian Fontana, his friend and collaborator, published a number of … posthumous works"; các valse op. 18, 34, 42, 64 in lúc Chopin còn sống'
+    link: https://www.henle.de/media/d3/d6/59/1690886042/0131-1690886042-sync.pdf
+  - id: henle-hn131
+    bac: 2
+    ten: 'G. Henle Verlag, HN 131 Chopin, Waltzes (trang sản phẩm: mức khó từng valse; "Waltz a minor KK IVb,11 3 easy ABRSM: Piano Grade 6 recommended"; op. 34,2 mức 5)'
+    link: https://www.henle.de/en/Waltzes/HN-131
+  - id: henle-hn1822
+    bac: 2
+    ten: 'G. Henle Verlag, HN 1822, trang mẫu Waltz a minor KK IVb no. 11 (2017), lời bình: "With his waltzes Chopin … by no means intended people to get up and dance"; bản thảo trong nhà Rothschild; "The Waltz was only published in 1955 in the periodical La Revue musicale"'
+    link: https://www.henle.de/media/2a/f6/a2/1686734195/hn_1822_a_chopin_s_6-7_sj.pdf
+  - id: henle-blog-2024
+    bac: 2
+    ten: 'Henle Blog, "A minor sensation: Chopin’s recently discovered A minor waltz" (12/5/2025): valse La thứ tìm thấy năm 2024 ở Morgan Library & Museum'
+    link: https://blog.henle.de/en/2025/05/12/a-minor-sensation-chopins-recently-discovered-a-minor-waltz/
+  - id: ne-numbering
+    bac: 2
+    ten: 'Chopin National Edition (Wydanie Narodowe), Numbering and Chronology of the Works: WN 63 Waltz A minor, 1847–49, in 1955; series A: op. 18, 34, 42, 64'
+    link: https://www.chopin-nationaledition.com/wp-content/uploads/2013/05/numbering_en.pdf
+  - id: imslp-op69
+    bac: 2
+    ten: 'IMSLP, Waltzes, Op.69 (Chopin): Julian Fontana biên tập bản in đầu; một số bản in 1852 (Krakow: Wildt)'
+    link: https://imslp.org/wiki/Waltzes,_Op.69_(Chopin,_Fr%C3%A9d%C3%A9ric)
+  - id: imslp-op70
+    bac: 2
+    ten: 'IMSLP, Waltzes, Op.70 (Chopin): Year of First Publication 1855'
+    link: https://imslp.org/wiki/Waltzes,_Op.70_(Chopin,_Fr%C3%A9d%C3%A9ric)
+  - id: imslp-op34
+    bac: 2
+    ten: 'IMSLP, Waltzes, Op.34 (Chopin): số 2 "Lento" (La thứ), in 1838'
+    link: https://imslp.org/wiki/Waltzes,_Op.34_(Chopin,_Fr%C3%A9d%C3%A9ric)
+  - id: chopin-pl-paris
+    bac: 2
+    ten: 'Towarzystwo im. Fryderyka Chopina (chopin.pl), "Chopin in France": "Fryderyk Chopin arrived in Paris on October 5, 1831"'
+    link: https://www.chopin.pl/france.en.html
+  - id: britannica-waltz
+    bac: 2
+    ten: 'Britannica, "waltz" (bản lưu Wayback 2025): "(from German walzen…) highly popular ballroom dance evolved from the Ländler… in 3/4 time… the ballroom dance par excellence of the 19th century"'
+    link: https://www.britannica.com/art/waltz
+  - id: cmm-lipatti
+    bac: 2
+    ten: 'BBC Music Magazine (classical-music.com), bài điểm đĩa "Chopin: 14 Waltzes" (Dinu Lipatti, EMI)'
+    link: https://www.classical-music.com/reviews/instrumental/chopin-14-waltzes
+  - id: commons-higuchi
+    bac: 2
+    ten: 'Wikimedia Commons, File:Chopin - Waltz No. 19 in A minor, B. 150 (Aya Higuchi).flac: PD-author (Musopen, dự án Set Chopin Free), thời lượng 130,68 giây'
+    link: https://commons.wikimedia.org/wiki/File:Chopin_-_Waltz_No._19_in_A_minor,_B._150_(Aya_Higuchi).flac
+  - id: ia-eigeldinger
+    bac: 2
+    ten: 'Internet Archive, chopinpianisttea0000unse: "Chopin : pianist and teacher as seen by his pupils" (Cambridge University Press, 1986; bản cho mượn, chỉ đọc metadata)'
+    link: https://archive.org/details/chopinpianisttea0000unse
+  - id: omt-rondo
+    bac: 2
+    ten: Open Music Theory, Rondo
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/rondo/
+  - id: wiki-b150
+    bac: 3
+    ten: 'Wikipedia, Waltz in A minor, Op. posth. (Chopin) (chỉ để tìm nguồn: Prod''homme, Brown, Belotti, Cummings)'
+    link: https://en.wikipedia.org/wiki/Waltz_in_A_minor,_Op._posth._(Chopin)
+nhan_dinh:
+  - id: n1
+    cau: Đây là valse dễ nhất của Chopin theo thang độ khó của Henle.
+    loai: cap-do
+    nguon: [henle-hn131]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ (câu mở đầu và description): "Với nhiều người, đây là bản nhạc Chopin đầu tiên: nó dạy tay trái valse, …". Chữ mới: "Đây là valse dễ nhất của Chopin theo thang độ khó của Henle: nó dạy tay trái valse, …". Lý do: "với nhiều người là bản Chopin đầu tiên" không đo được; Henle HN 131 xếp "Waltz a minor KK IVb,11" mức 3, thấp nhất trong các valse của tập (op. 18 mức 6, op. 34 mức 5–6, op. 42 mức 7, op. 64 mức 6, op. 70,3 mức 5, KK IVa,12/13/14/15 mức 5–6, KK IVb,10 mức 4).'
+  - id: n2
+    cau: Bài là một bản valse ngắn, không có số opus, chỉ được in sau khi Chopin mất.
+    loai: lich-su
+    nguon: [imslp-b150, henle-hn131-bem]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Op./Cat. No. "B.150 ; CT 224" (không opus), in 1860 (Chopin mất 1849). Henle: in 1955. rdj: 56 ô. "Buồn và giản dị" là diễn giải (La thứ).'
+  - id: n3
+    cau: Bài dạy tay trái valse, giai điệu hát, bàn đạp mỗi ô nhịp và những bước đầu của rubato.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Phần kiểm được (tay trái nốt trầm – hợp âm – hợp âm) ở n6.'
+  - id: n4
+    cau: Bài có đủ nét phong cách Chopin (giai điệu hát, tay trái nhảy, bàn đạp, rubato) ở mức vừa sức người đã vững trình độ trung cấp.
+    loai: ve-site
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "nhưng ở mức độ vừa sức người mới qua chặng sơ cấp." Chữ mới: "nhưng ở mức độ vừa sức người đã vững trình độ trung cấp." Lý do: src/data/tac-pham.yml (đã khóa) chang 5, grade Grade 5–6; src/data/cap-do.yml: chặng 2 "Sơ cấp", chặng 4 "Trung cấp", chặng 5 "Trung cấp cao". Grade đã kiểm ở hồ sơ bản ghi lần 1 (ABRSM Grade 6).'
+  - id: n5
+    cau: Bài có giai điệu hát, tay trái nhảy kiểu valse.
+    loai: cau-truc
+    nguon: &r
+      - rdj-b150
+    ket_qua: dung
+    ghi_chu: 'rdj: tay phải a8( b c4) c | d8( e f2) … có dấu luyến; tay trái a,,4 <a'''' c e> q (nốt trầm rồi hợp âm cách hơn quãng 8).'
+  - id: n6
+    cau: 'Tay trái valse: nốt trầm ở phách 1, hai hợp âm ở phách 2 và 3.'
+    loai: cau-truc
+    nguon: *r
+    ket_qua: dung
+    ghi_chu: 'rdj: a,,4 <a'''' c e> q | d,, <a'''' d f> q … gần như mọi ô. Vế "hình đệm này lặp lại trong hàng trăm tác phẩm Lãng mạn; học kỹ một lần, dùng mãi" là lời giới thiệu (khuyên tập).'
+  - id: n7
+    cau: Giai điệu đơn giản, có vài nốt hoa mỹ nhỏ.
+    loai: cau-truc
+    nguon: *r
+    ket_qua: dung
+    ghi_chu: 'rdj: \grace { e16^( f } ô 4, 12, 20, 22, 23, 28, 35, 36, 39, 44; \prall ô 33, 38, 51. Vế "chuẩn bị tốt cho Nocturne Op. 9 số 2" là lời khuyên.'
+  - id: n8
+    cau: Bàn đạp mỗi ô là bài tập tự nhiên cho kỹ thuật đạp trễ (nhấn sau nốt trầm, đổi đúng lúc).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: '"Đạp trễ" (bàn đạp nối) là cách gọi của trang piano/ban-dap (đã khóa).'
+  - id: n9
+    cau: Đoạn giữa chuyển sang La trưởng, cùng nốt chủ âm với La thứ.
+    loai: cau-truc
+    nguon: *r
+    ket_qua: dung
+    ghi_chu: 'rdj ô 33–40: cs, fs (Đô♯, Fa♯), tay trái <e'' a cs> (La trưởng), kết a4 ô 40.'
+  - id: n10
+    cau: Valse (waltz) là điệu nhảy nhịp 3 đến từ vùng nói tiếng Đức, điệu khiêu vũ thịnh hành nhất thế kỷ 19.
+    loai: dinh-nghia
+    nguon: [britannica-waltz]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "… đến từ vùng nói tiếng Đức, phổ biến khắp châu Âu đầu thế kỷ 19, và là món không thể thiếu của các phòng khách (salon) ở Paris, nơi Chopin sống từ năm 1831." Chữ mới: "… đến từ vùng nói tiếng Đức, điệu khiêu vũ thịnh hành nhất thế kỷ 19; Chopin sống ở Paris từ năm 1831." Lý do: Britannica: "(from German walzen…) highly popular ballroom dance evolved from the Ländler… in 3/4 time… the ballroom dance par excellence of the 19th century"; "món không thể thiếu của các phòng khách ở Paris" không tìm được nguồn.'
+  - id: n11
+    cau: Chopin sống ở Paris từ năm 1831.
+    loai: nam
+    nguon: [chopin-pl-paris]
+    ket_qua: dung
+    ghi_chu: 'chopin.pl: "Fryderyk Chopin arrived in Paris on October 5, 1831."'
+  - id: n12
+    cau: 'Valse của Chopin là nhạc để nghe hơn là để nhảy: ông giữ nhịp 3 và tay trái kiểu valse, nhưng thêm vào đó nỗi buồn, sự tinh tế và những chỗ co giãn nhịp.'
+    loai: lich-su
+    nguon: [henle-hn1822]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "… nỗi buồn, sự tinh tế và những khoảnh khắc ngẫu hứng." Chữ mới: "… nỗi buồn, sự tinh tế và những chỗ co giãn nhịp." Lý do: Henle HN 1822: "With his waltzes Chopin … by no means intended people to get up and dance. Thus although his waltzes take up the swaying air of this fashionable dance of the time, they are first and foremost gossamer-like pieces, often infused with a tender melancholy that would also understandably be unsuitable for dancing due to their frequent change of tempo and subtle rhythmic shifts." Nguồn nói "change of tempo", không nói "ngẫu hứng".'
+  - id: n13
+    cau: 'Lúc còn sống, Chopin chỉ cho in tám bản valse: Op. 18, ba bản Op. 34, Op. 42 và ba bản Op. 64.'
+    loai: so-lieu
+    nguon: [ne-numbering, henle-hn131-vorwort]
+    ket_qua: dung
+    ghi_chu: 'Ấn bản Quốc gia, series A (tác phẩm in lúc Chopin sống): 18 Waltz (1834), 34 3 Waltzes (1838), 42 Waltz (1840), 64 3 Waltzes (1847): 1 + 3 + 1 + 3 = 8. Henle: "the waltzes op. 18, 34, 42 and 64, which were published during Chopin’s lifetime".'
+  - id: n14
+    cau: Sau khi Chopin mất, người bạn Julian Fontana in thêm các bản Op. 69 và Op. 70 (1855).
+    loai: lich-su
+    nguon: [henle-hn131-vorwort, henle-hn131-bem, imslp-op69, imslp-op70]
+    ket_qua: dung
+    ghi_chu: 'Henle Preface: "After the death of the composer, Julian Fontana, his friend and collaborator, published a number of Frederic Chopin’s posthumous works … waltzes op. 69 and 70"; bảng Henle: op. 69, 70 "Date of publication 1855". IMSLP Op. 69: Editor Julian Fontana; ghi thêm một số valse (69 số 2, 70 số 2) đã in sớm hơn năm 1852 (Krakow: Wildt), không trái với câu (câu nói ấn bản của Fontana).'
+  - id: n15
+    cau: Bài được in năm 1860 nhưng mang tên người khác, là số 3 của tập 4 Pièces pour piano đề tên Charlotte de Rothschild.
+    loai: nam
+    nguon: [imslp-b150]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Year of First Publication=1860 in 4 Pièces pour piano (Rothschild, Charlotte de) (No.3)*", "[*] Published as Valse by Charlotte de Rothschild (1825–1899)". Khớp kiem-dinh/cap-nhat.yml n30, blog phien-ban-15 n26.'
+  - id: n16
+    cau: Năm 1955, bài được in trong tạp chí La Revue musicale và được công nhận là của Chopin.
+    loai: nam
+    nguon: [henle-hn131-bem, henle-hn1822]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Năm 1939, nhà nghiên cứu Jacques-Gabriel Prod''homme giới thiệu bản valse La thứ này trên tạp chí *The Musical Quarterly*; năm 1955, nó được in trong một số đặc biệt của tạp chí *La Revue musicale* và được công nhận là của Chopin." Chữ mới: "Năm 1955, nó được in trong tạp chí *La Revue musicale* và được công nhận là của Chopin." Lý do: chi tiết Prod''homme 1939 chỉ thấy ở Wikipedia (bậc 3); Crossref: bài của J.-G. Prod''homme trong The Musical Quarterly 25(1), 1939, tr. 34–47 tên "Two Musical Libraries of Paris" (DOI 10.1093/mq/XXV.1.34), không đọc được nội dung (trả phí). "Số đặc biệt" không có ở Henle. Henle Comments: "This piece first appeared in print in the French periodical La Revue Musicale (1955)"; HN 1822: "The Waltz was only published in 1955 in the periodical La Revue musicale". Henle in bài trong tập valse của Chopin (KK IVb no. 11).'
+  - id: n17
+    cau: 'Các ký hiệu B., KK, WN là số trong các danh mục tác phẩm Chopin do Maurice Brown, Krystyna Kobylańska và Ấn bản Quốc gia Ba Lan lập ra.'
+    loai: danh-muc
+    nguon: [imslp-b150, henle-hn131-bem, ne-numbering]
+    ket_qua: dung
+    ghi_chu: 'Henle Comments: "KK = Krystyna Kobylanska: Frédéric Chopin, Thematisch-bibliographisches Werkverzeichnis"; Ấn bản Quốc gia: WN 63 Waltz A minor; IMSLP: B.150. B. = Brown: tựa sách của Brown (Chopin: An Index of His Works in Chronological Order) chỉ thấy ở Wikipedia, nhưng số "B." trên IMSLP là danh mục Brown (IMSLP dùng ký hiệu này cho mọi tác phẩm Chopin).'
+  - id: n18
+    cau: Vì không có số opus, bài được gọi bằng một trong các số danh mục, hoặc "Valse La thứ (di cảo)".
+    loai: ten
+    nguon: [imslp-b150, henle-hn131]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Waltz in A minor, B.150"; Henle: "Waltz a minor KK IVb,11"; RCM 2022: "Waltz in A Minor, op. posth., B 150".'
+  - id: n19
+    cau: Link "Đọc tên tác phẩm" (/opus/nghe-nhac/doc-ten-tac-pham/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển; site cũ ../opus-zero/docs/nghe-nhac/doc-ten-tac-pham.md có, nói về số opus và các danh mục tác phẩm. Điều cần giữ: trang ấy giải thích số danh mục khi không có opus.'
+  - id: n20
+    cau: Chopin còn có Valse La thứ Op. 34 số 2, một bản Lento khó hơn nhiều (Henle xếp mức 5, bài này mức 3).
+    loai: cap-do
+    nguon: [imslp-op34, henle-hn131]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "một bản *Lento* dài hơn và khó hơn nhiều." Chữ mới: "một bản *Lento* khó hơn nhiều (Henle xếp mức 5, bài này mức 3)." Lý do: IMSLP Op. 34: "2. Lento (a)"; Henle: "Waltz a minor op. 34,2 5 medium", "Waltz a minor KK IVb,11 3 easy". "Dài hơn" chưa đếm được trên bản nhạc (không có bản Mutopia; PDF IMSLP bị chặn) nên bỏ.'
+  - id: n21
+    cau: Năm 2024 có một bản valse La thứ rất ngắn được công bố từ một bản thảo tìm thấy ở Thư viện và Bảo tàng Morgan (New York).
+    loai: lich-su
+    nguon: [henle-blog-2024]
+    ket_qua: dung
+    ghi_chu: 'Henle Blog: "In spring 2024, a new work by Frédéric Chopin was discovered in the Morgan Library & Museum, though shared with the world only in the fall"; "The Waltz is certainly a “complete” work, despite its brevity". Bài trên trang là B. 150 (khác bản ấy).'
+  - id: n22
+    cau: Các album valse kinh điển thường gồm 14 bản quen thuộc, và bản này không nằm trong số đó.
+    loai: so-lieu
+    nguon: [cmm-lipatti, henle-hn131-bem]
+    ket_qua: dung
+    ghi_chu: 'BBC Music Magazine: album "Chopin: 14 Waltzes" (Dinu Lipatti). Henle bảng valse: 8 valse in lúc sống + op. 69 (2), op. 70 (3) + KK IVa no. 15 (Mi thứ, in 1868) = 14 bản đã in trước thế kỷ 20; KK IVb no. 11 (bài này) in 1955, không thuộc nhóm 14. "Thường" là cách nói chung.'
+  - id: n23
+    cau: 'Cách nghe: ít nhất hai nghệ sĩ, mỗi lần một câu hỏi (tay trái, nốt hoa mỹ, đoạn La trưởng, rubato).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n24
+    cau: Nghe Valse Si thứ Op. 69 số 2, bản học tiếp, qua hai bản thu khác nhau và tự so sánh.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "… qua bản thu của Dinu Lipatti và Arthur Rubinstein. Nhiều người thấy Lipatti thanh thoát và chặt chẽ hơn, Rubinstein ung dung như đang trò chuyện: hãy tự nghe và quyết định." Chữ mới: "… qua hai bản thu khác nhau: bản nào thanh thoát và chặt chẽ hơn, bản nào ung dung như đang trò chuyện? Hãy tự nghe và quyết định." Lý do: "nhiều người thấy" là đánh giá không có nguồn; bản thu Op. 69 số 2 của Rubinstein không mở được nguồn bậc 2 (trang đĩa chặn công cụ). Câu mới là lời khuyên nghe.'
+  - id: n25
+    cau: Valse Si thứ Op. 69 số 2 là bản học tiếp; muốn hiểu lối hát của Chopin, nghe bản thu kèm bản đồ nghe trong bài học Nocturne Op. 9 số 2.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển; site cũ ../opus-zero/docs/piano/tac-pham/chopin-valse-si-thu.md và chopin-nocturne-op9-2.md có; trang nocturne có mục "Theo dõi khi nghe" (id theo-doi-khi-nghe). Dữ liệu: chopin-valse-si-thu chặng 6 (sau chặng 5). Điều cần giữ: Nocturne có mục #theo-doi-khi-nghe.'
+  - id: n26
+    cau: 'Đoạn A (La thứ, ô 1–16): giai điệu đơn giản, có nốt hoa mỹ nhỏ, trên tay trái valse; bốn câu 4 ô, mỗi câu hơi khác câu trước.'
+    loai: cau-truc
+    nguon: *r
+    ket_qua: dung
+    ghi_chu: 'rdj: câu 1 ô 1–4, câu 2 ô 5–8 (kết c4 r), câu 3 ô 9–12 (như câu 1, khác câu 2), câu 4 ô 13–16 (c8 d e4 …, kết e2.); \barNumberCheck #17 sau đó.'
+  - id: n27
+    cau: 'Đoạn B (ô 17–24, có nhắc lại): sôi nổi hơn, nổi bật với một hợp âm rải đi lên nhanh.'
+    loai: cau-truc
+    nguon: *r
+    ket_qua: dung
+    ghi_chu: 'rdj: \repeat volta 2 ô 17–24; ô 21 \tuplet 3/2 { e8 gs b } \tuplet 5/4 { e16 gs b \ottava #1 e gs } (rải Mi trưởng đi lên hơn hai quãng tám). "Sôi nổi hơn" là diễn giải (nhiều móc đơn hơn đoạn A).'
+  - id: n28
+    cau: "Đoạn A' (ô 25–32): câu đầu của chủ đề, rồi một câu đi lên (Rê♯, Fa♯, Sol♯) và dừng ở hợp âm át, mở đường sang La trưởng."
+    loai: cau-truc
+    nguon: *r
+    ket_qua: dung
+    ghi_chu: 'rdj: ô 25–28 như ô 1–4; ô 29–32 c8 d e4 | f8 g a2 | ds,8( e fs4) fs | gs8( a b2), tay trái ô 32 e, <e'' b'' d> (Mi bảy, hợp âm át của La).'
+  - id: n29
+    cau: "Đoạn C (La trưởng, ô 33–40): Đô♯ và Fa♯ thay cho Đô và Fa; A' và C nhắc lại cùng nhau."
+    loai: cau-truc
+    nguon: *r
+    ket_qua: dung
+    ghi_chu: 'rdj: \repeat volta 2 { ô 25–40 }; ô 33–40 cs, fs; tay trái <e'' a cs>. Khớp kiem-dinh/cap-nhat.yml n28 (đoạn C dài 8 ô).'
+  - id: n30
+    cau: Đoạn C đứng ở vị trí của phần trio trong một bản valse thường.
+    loai: cau-truc
+    nguon: [rdj-b150]
+    ket_qua: dung
+    ghi_chu: 'Cách so sánh của trang: đoạn ở giọng cùng chủ âm (La trưởng), đặt giữa bài trước lần trở lại cuối của chủ đề (rdj ô 33–40). Wikipedia (theo Cummings, AllMusic) cũng nói đoạn này "replaces a Trio in a typical waltz" (bậc 3, AllMusic chặn công cụ).'
+  - id: n31
+    cau: "Đoạn A'' (ô 41–52): chủ đề lần cuối, chỉ ba câu đầu; câu thứ ba khép bằng một kết."
+    loai: cau-truc
+    nguon: *r
+    ket_qua: dung
+    ghi_chu: 'rdj: \barNumberCheck #41, ô 41–48 như ô 1–8; ô 49–52 a8 b c4 c | d8 e f2 | r8 e\prall ds e b'' d, | c2) r4 (câu thứ ba, kết ở La thứ: tay trái e, <e'' gs d''> rồi a, <e'' a c>).'
+  - id: n32
+    cau: 'Bài có 56 ô nhịp và một nhịp lấy đà; hai chỗ nhắc lại: đoạn B (ô 17–24) và ô 25–40 (A'' và C); thứ tự nghe A – B – B – A'' – C – A'' – C – A'''' – coda.'
+    loai: cau-truc
+    nguon: *r
+    ket_qua: dung
+    ghi_chu: 'rdj: \partial 4 (e''4 lấy đà); ô cuối a2 r4 là ô 56 (đếm từ \barNumberCheck #48: e, | rồi 8 ô 49–56); \repeat volta 2 ở ô 17–24 và 25–40. Khớp kiem-dinh/cap-nhat.yml n28.'
+  - id: n33
+    cau: 'Coda (ô 53–56): ngắn, có một láy rền ở ô áp chót, khép lại ở La thứ.'
+    loai: cau-truc
+    nguon: *r
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ (bảng Theo dõi): "**Coda** (ô 53–56): ngắn, khép lại lặng lẽ, nhỏ dần đến lặng". Chữ mới: "**Coda** (ô 53–56): ngắn, có một láy rền ở ô áp chót, khép lại ở La thứ". Lý do: bản thảo (rdj) không ghi sắc thái; ô 55 e4\startTrillSpan (láy rền), ô 56 a2 trên tay trái a, <e'' c''> (La thứ). Henle HN 1822: "The trill in the penultimate measure, integrated into a ritenuto in the closing measures".'
+  - id: n34
+    cau: "Bảng Cấu trúc, hàng A'' và coda: chủ đề lần cuối, câu thứ ba khép bằng một kết; coda ngắn khép lại ở La thứ."
+    loai: cau-truc
+    nguon: *r
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "…; coda khép lại lặng lẽ". Chữ mới: "…; coda ngắn khép lại ở La thứ". Lý do như n33.'
+  - id: n35
+    cau: Link "rondo" (/opus/hinh-thuc/rondo/); hình thức chủ đề quay lại xen kẽ với các đoạn khác là rondo.
+    loai: dinh-nghia
+    nguon: [omt-rondo]
+    ket_qua: dung
+    ghi_chu: 'OMT Rondo: rondo form có refrain (A) trở lại xen giữa các episode (B, C). Trang đích src/content/docs/hinh-thuc/rondo.md có.'
+  - id: n36
+    cau: 'Bảng Chỗ khó: bước nhảy tay trái chỉ có một phách; hai hợp âm (sáu nốt) dễ át một nốt giai điệu; nốt hoa mỹ; hợp âm rải đi lên ở đoạn B; bàn đạp mỗi ô; đoạn La trưởng có Đô♯, Fa♯; rubato.'
+    loai: cau-truc
+    nguon: *r
+    ket_qua: dung
+    ghi_chu: 'rdj: nốt trầm phách 1 rồi hợp âm ba nốt ở phách 2 và 3 (hai hợp âm, sáu nốt); ô 21 hợp âm rải; ô 33–40 cs, fs. Cách tập là lời khuyên (n37).'
+  - id: n37
+    cau: 'Cách tập ở bảng Chỗ khó: "nhảy rồi dừng", mắt nhìn đích; nốt trầm mp, hợp âm pp; tập giai điệu không nốt hoa mỹ trước; luồn ngón cái sớm; đạp trễ, đạp nông khi giai điệu đi bậc; khoanh dấu hóa; rubato chỉ ở một, hai chỗ mỗi câu.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n38
+    cau: Link "Nốt hoa mỹ" (/opus/piano/not-hoa-my/) và "Bàn đạp" (/opus/piano/ban-dap/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Hai trang đích có ở src/content/docs/piano/ (not-hoa-my.md, ban-dap.md; ban-dap có mục "Bàn đạp nối").
+  - id: n39
+    cau: Các bài tập dưới đây soạn riêng cho trang này; bài 1 và bài 2 dùng chung một tiến trình hòa âm.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Ba khối abc có T:"… (soạn cho trang này)". Khối 1 và 2: Am – E – E – Am – Dm – Am – E – Am (cùng tay trái).'
+  - id: n40
+    cau: 'Bài tập 1: mỗi chữ Ped. là một lần đổi bàn đạp ngay sau nốt trầm; hợp âm dùng ngón 4-2-1 hoặc 5-3-1; nốt trầm sâu, hợp âm nhẹ; tập cả khi nhắm mắt.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n41
+    cau: 'Bài tập 2: hai nốt hoa mỹ nhỏ ở ô 2 và ô 6; nốt Mi đầu bài và nốt Fa ở ô 5 là những nốt dài.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Khối abc 2: {/c}B4 ô 2, {/d}c4 ô 6; e4 ô 1, f4 ô 5 (nốt trắng).'
+  - id: n42
+    cau: Bài tập 2, cách chơi nốt hoa mỹ (vào đúng phách, cùng lúc với nốt trầm, trượt ngay vào nốt chính) và nghe nốt dài tắt dần.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên cho bài tập soạn riêng; điều nói về nhạc Chopin nói chung ở n62.
+  - id: n43
+    cau: 'Bài tập 3: ngón cái luồn dưới ngón 3 ngay khi ngón 3 vừa đánh; rải nhẹ, nốt đích không mạnh; thử chút rubato.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n44
+    cau: Kế hoạch 5 tuần, 30–45 phút mỗi ngày, mốc máy đếm nhịp ♩ = 80–92 đến ♩ ≈ 120–138.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n45
+    cau: Link "thu âm" (/opus/luyen-tap/thu-am/); máy đếm nhịp nhúng trên trang (::cong-cu metronome).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Trang đích src/content/docs/luyen-tap/thu-am.md có; công cụ metronome có trong CONG_CU (src/plugins/thanh-phan.mjs).
+  - id: n46
+    cau: Allegretto là "hơi nhanh", không phải chậm.
+    loai: dinh-nghia
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Khớp Từ điển của site (src/data/thuat-ngu.yml, mục allegretto: "Hơi nhanh"), đã khóa. Bài ghi Allegretto: rdj \tempo Allegretto; Henle HN 1822 "Allegretto".'
+  - id: n47
+    cau: 'Khi đã thuộc bài, cảm một nhịp lớn mỗi ô; chơi quá chậm, valse thành bài than thở nặng nề.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n56
+    cau: Các học trò của Chopin kể rằng khi ông co giãn giai điệu, tay đệm vẫn giữ nhịp.
+    loai: lich-su
+    nguon: []
+    ket_qua: null
+    ghi_chu: 'chưa chắc: nguồn quen thuộc là Eigeldinger, Chopin: Pianist and Teacher as Seen by His Pupils (CUP 1986; sách in; bản trên Internet Archive chỉ cho mượn, không tìm trong sách được) và lời tựa của Mikuli (ấn bản Kistner, PDF trên IMSLP bị chặn). Chưa mở được nguồn bậc 1–2 trên mạng. Câu trỏ sang trang Nocturne Op. 9 số 2 (chưa chuyển): lô chuyển trang ấy kiểm cùng điều này.'
+  - id: n57
+    cau: 'Rubato ở bài này: nán ở nốt cao nhất của câu hay ở một bước nhảy đẹp rồi trả lại thời gian; chậm lại nhẹ ở cuối đoạn A (câu thứ tư) trước đoạn B; không co giãn ở mọi ô.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Ý "lấy ở chỗ này, trả lại ở chỗ khác" khớp Từ điển của site (thuat-ngu.yml, mục rubato).'
+  - id: n58
+    cau: 'Bàn đạp: một lần đạp mỗi ô là điểm xuất phát; ba bẫy: giai điệu đi bậc trong ô, hòa âm đổi giữa ô, nốt hay hợp âm ngắn; để tai quyết định.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n59
+    cau: Có ô mà hòa âm đổi giữa ô.
+    loai: cau-truc
+    nguon: *r
+    ket_qua: dung
+    ghi_chu: 'rdj: tay trái ô 7 g, <g'' b f''> <g d'' f> (đổi thể), ô 17 e,4 <e'' b'' d> <e gs d''>, ô 53–55 c <e a e''> r | d <a'' b f''> r | e, <e'' c''> <e b'' d>.'
+  - id: n60
+    cau: Link "Nocturne Op. 9 số 2" ở mục Rubato.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển; site cũ ../opus-zero/docs/piano/tac-pham/chopin-nocturne-op9-2.md có. Điều cần giữ: trang ấy nói về rubato của Chopin (tay đệm giữ nhịp), xem n56.'
+  - id: n62
+    cau: Nhiều chuyên gia về Chopin, trong đó có Jean-Jacques Eigeldinger, cho rằng các nốt hoa mỹ nhỏ trong nhạc Chopin thường vào đúng phách, cùng lúc với nốt trầm.
+    loai: lich-su
+    nguon: []
+    ket_qua: null
+    ghi_chu: 'chưa chắc: chỉ có sách in (Eigeldinger 1986), không mở được bản trên mạng. Henle HN 1822 về bài này chỉ nói "The little ornaments are to be played in a gentle manner with a delicate touch… as if “en passant”", không nói vào phách. Đề nghị người giao: nếu lượt 2 cũng không có nguồn, viết lại thành lời khuyên ("chơi các nốt hoa mỹ nhỏ nhẹ và gọn, như lướt qua") và bỏ tên Eigeldinger ở đây và ở mục Nguồn.'
+  - id: n63
+    cau: 'Sắc thái: phần lớn bài trong vùng p đến mf; đoạn La trưởng sáng hơn nhưng không cần to hơn; kết bài nhỏ dần đến lặng.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên diễn tấu: bản thảo (rdj) không ghi sắc thái.'
+  - id: n64
+    cau: 'Lỗi thường gặp: tay trái nặng ở phách 2 và 3; nốt trầm ngắn; bàn đạp giữ qua chỗ đổi hòa âm; tay trái nhảy trễ; rubato ở mọi nốt; chơi quá chậm và nặng; đoạn La trưởng không đổi màu.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n65
+    cau: Valse Si thứ Op. 69 số 2 cũng in sau khi Chopin mất, dài hơn và giàu cảm xúc hơn; bước tiếp tự nhiên.
+    loai: lich-su
+    nguon: [henle-hn131-bem, imslp-op69]
+    ket_qua: dung
+    ghi_chu: 'Henle: op. 69 no. 2 sáng tác 1829, in 1855 (sau 1849); IMSLP Op. 69: in 1852 và ấn bản Fontana. "Dài hơn": trang Op. 69 số 2 ở site cũ (../opus-zero/docs/piano/tac-pham/chopin-valse-si-thu.md, theo Mutopia/Peters) ghi 144 ô và một nhịp lấy đà, so với 56 ô của B. 150; "giàu cảm xúc hơn", "bước tiếp tự nhiên" là lời giới thiệu. Dữ liệu: chopin-valse-si-thu chặng 6.'
+  - id: n66
+    cau: Prélude Mi thứ Op. 28 số 4 có giai điệu dài trên lớp hợp âm đổi chậm.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển; site cũ ../opus-zero/docs/piano/tac-pham/chopin-prelude-mi-thu.md có, nói tay trái hợp âm đổi dần từng nốt dưới giai điệu. Điều cần giữ: trang ấy nói về giai điệu trên lớp hợp âm đổi chậm và bàn đạp.'
+  - id: n67
+    cau: Nocturne Op. 9 số 2 cùng kỹ năng hát và tay trái nhảy nhưng trang trí dày hơn.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển; site cũ chopin-nocturne-op9-2.md có (tay trái nhảy, "chỉ có thời gian một móc đơn để nhảy", nhiều nốt trang trí). Điều cần giữ như hồ sơ kiem-dinh/piano/quang-tam-buoc-nhay.yml (dòng ~358).'
+  - id: n69
+    cau: 'Cùng chặng trên site: Mozart Sonata Đô trưởng K. 545 và Schumann Träumerei.'
+    loai: ve-site
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "**Cùng chặng trên site:** [Clementi: Sonatina Op. 36 số 1](/opus/piano/tac-pham/clementi-sonatina/), [Burgmüller: Arabesque](/opus/piano/tac-pham/burgmuller-arabesque/)." Chữ mới: "**Cùng chặng trên site:** [Mozart: Sonata Đô trưởng K. 545](/opus/piano/tac-pham/mozart-k545/), [Schumann: Träumerei](/opus/piano/tac-pham/schumann-traumerei/)." Lý do: src/data/tac-pham.yml (chang đã khóa): chopin-valse-la-thu 5; clementi-sonatina, burgmuller-arabesque 3; mozart-k545 5, schumann-traumerei 5. Hai trang đích chưa chuyển (site cũ có mozart-k545.md, schumann-traumerei.md): link thành "sắp có" tới khi lên.'
+  - id: n70
+    cau: Link "Tác phẩm theo cấp độ" (/opus/piano/tac-pham-theo-cap/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Trang đích có; hồ sơ kiem-dinh/piano/tac-pham-theo-cap.yml ghi Valse La thứ ở bảng chặng 5.
+  - id: n71
+    cau: 'Câu hỏi 1: Valse La thứ B. 150 có hình thức rondo nhỏ A – B – A'' – C – A'''' và coda; đoạn C ở La trưởng đứng ở vị trí phần trio.'
+    loai: cau-truc
+    nguon: [rdj-b150, omt-rondo]
+    ket_qua: dung
+    ghi_chu: Như n26–n32, n30, n35.
+  - id: n72
+    cau: 'Câu hỏi 2: đạp trễ là nhấn bàn đạp ngay sau khi đánh nốt trầm, rồi đổi ở nốt trầm của ô sau.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Khớp trang piano/ban-dap (đã khóa, mục "Bàn đạp nối"). Lời giải thích không dựa vào vị trí lựa chọn.'
+  - id: n73
+    cau: 'Câu hỏi 3: B. 150 là số trong danh mục tác phẩm Chopin của Maurice Brown; bài không có số opus nên được gọi bằng số danh mục B., KK hay WN.'
+    loai: danh-muc
+    nguon: [imslp-b150, henle-hn131-bem, ne-numbering]
+    ket_qua: dung
+    ghi_chu: Như n17.
+  - id: n74
+    cau: 'Câu hỏi 4: tập bước nhảy tay trái theo kiểu nhảy rồi dừng; nốt trầm sâu, hai hợp âm nhẹ.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n75
+    cau: 'Nguồn: trang IMSLP ghi bản in đầu tiên "1860 in 4 Pièces pour piano by Charlotte de Rothschild (No.3)".'
+    loai: nam
+    nguon: [imslp-b150]
+    ket_qua: dung
+    ghi_chu: 'IMSLP wikitext: "1860 in {{LinkWork|4 Pièces pour piano||Rothschild|Charlotte de}} (No.3)*"; trang hiện ra đúng chữ trích.'
+  - id: n76
+    cau: 'Nguồn: Wikipedia "Waltz in A minor, Op. posth. (Chopin)" (số danh mục, niên đại, lịch sử in ấn, cấu trúc).'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Câu nói site dùng nguồn nào; link mở được. Các nhận định lấy từ đó đã kiểm bằng nguồn bậc 1–2 (n13–n17, n26–n32).'
+  - id: n77
+    cau: 'Nguồn: bản LilyPond chép theo bản thảo của Chopin ở Thư viện Quốc gia Pháp, kho rdj/music trên GitHub; cho 56 ô nhịp, dấu nhắc lại ở ô 17–24 và ô 25–40.'
+    loai: cau-truc
+    nguon: *r
+    ket_qua: dung
+    ghi_chu: 'rdj: chú thích "Musical text from the autograph Walec at Bibliothèque Nationale, Paris"; 56 ô; \repeat volta 2 ô 17–24, 25–40. IMSLP liệt kê hai bản thảo ở BnF (MS-119 A, B).'
+  - id: n78
+    cau: 'Nguồn: bản khắc của André Van Ryckeghem cho Werner Icking Music Archive (1999), nay có trên IMSLP, cũng cho 56 ô nhịp với cùng hai dấu nhắc lại.'
+    loai: cau-truc
+    nguon: [imslp-b150]
+    ket_qua: null
+    ghi_chu: 'chưa chắc: IMSLP có file WIMA.dcf1-walzamin.pdf, Editor André Van Ryckeghem, Werner Icking Music Archive; năm 1999 không ghi ở IMSLP; PDF bị chặn nên chưa đếm ô. Đề nghị: nếu lượt 2 không mở được, bỏ năm (1999) và vế "hai bản cùng cho 56 ô", chỉ giữ bản rdj là bản đã đối chiếu.'
+  - id: n79
+    cau: 'Nguồn: Maurice J. E. Brown, Chopin: An Index of His Works in Chronological Order, Macmillan, 1960 (số B.).'
+    loai: ten
+    nguon: [wiki-b150]
+    ket_qua: null
+    ghi_chu: 'chưa chắc: sách in; chỉ thấy ở Wikipedia (bậc 3, trích lần in thứ 2, Da Capo 1972). Henle Preface nhắc "M. J. E. Brown". Lượt 2 tìm bản ghi thư viện (LoC, WorldCat).'
+  - id: n80
+    cau: 'Nguồn: Krystyna Kobylańska, Frédéric Chopin: Thematisch-bibliographisches Werkverzeichnis, G. Henle Verlag, 1979 (số KK).'
+    loai: ten
+    nguon: [henle-hn131-bem]
+    ket_qua: dung
+    ghi_chu: 'Henle Comments: "KK = Krystyna Kobylanska: Frédéric Chopin, Thematisch-bibliographisches Werkverzeichnis, München 1979". (Chữ kèm theo trong PDF bị ngắt dòng; tên sách và năm 1979 đọc được.)'
+  - id: n81
+    cau: 'Nguồn: Jean-Jacques Eigeldinger, Chopin: Pianist and Teacher as Seen by His Pupils, Cambridge University Press, 1986.'
+    loai: ten
+    nguon: [ia-eigeldinger]
+    ket_qua: dung
+    ghi_chu: 'Internet Archive: mục chopinpianisttea0000unse "Chopin : pianist and teacher as seen by his pupils", năm 1986 (bản cho mượn); metadata: publisher "Cambridge [Cambridgeshire] ; New York : Cambridge University Press". Nội dung dẫn ở n56, n62 chưa kiểm.'
+  - id: n82
+    cau: 'Nguồn: Chopin, Ấn bản Quốc gia Ba Lan (Wydanie Narodowe), biên tập Jan Ekier.'
+    loai: ten
+    nguon: [ne-numbering]
+    ket_qua: dung
+    ghi_chu: 'Chopin National Edition (chopin-nationaledition.com): bảng số WN; Henle Preface: "J. Ekier". Ekier là tổng biên tập Ấn bản Quốc gia.'
+  - id: n83
+    cau: Link "tài liệu tham khảo" (/opus/tai-lieu-tham-khao/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Trang đích src/content/docs/tai-lieu-tham-khao.md có.
+khuong_nhac:
+  - khoi: 1
+    loai: vi-du-soan
+    kiem: [cu-phap, giong, hop-am, so-ngon, ban-dap]
+    ket_qua: dung
+    ghi_chu: 'Tay trái valse, La thứ, 3/4, L:1/4: mỗi ô 3 phách. Tiến trình Am – E7 (D G♯ B trên E) – E7 – Am – Dm – Am – E7 – Am; nốt trầm ngón 5, hợp âm ba nốt (4-2-1 hay 5-3-1 chơi được). "Ped." mỗi ô ở nốt trầm, "*" ở ô cuối: đúng chú thích (đổi bàn đạp sau nốt trầm). Mức khó hợp chặng 5.'
+  - khoi: 2
+    loai: vi-du-soan
+    kiem: [cu-phap, giong, hop-am, so-ngon, not-hoa-my]
+    ket_qua: dung
+    ghi_chu: 'Giai điệu trên tay trái valse, La thứ, 3/4, L:1/8: mỗi ô 6. Tay trái cùng tiến trình khối 1. Giai điệu e–d–c | B–G♯ | B–c–d | A | f–e–d | c–e | d–c–B | A: nốt hợp âm ở phách mạnh (E, B, G♯ trên E7; F trên Dm), nốt lướt d, c, e. Nốt hoa mỹ {/c} ô 2, {/d} ô 6; Mi ô 1 và Fa ô 5 là nốt trắng: đúng chú thích. Ngón 5-4-3 | 2-1 | 2-3-4 | 1 … chơi được.'
+  - khoi: 3
+    loai: vi-du-soan
+    kiem: [cu-phap, giong, hop-am, so-ngon]
+    ket_qua: dung
+    ghi_chu: 'Hợp âm rải đi lên, La thứ, 3/4, L:1/16: mỗi ô 12. Tay phải E A c (1-2-3) rồi ngón cái luồn sang e (1), a (4): đúng chú thích "ngón cái luồn dưới ngón 3"; ô 2 E G♯ B e g♯ trên E7. Mô phỏng hình rải ô 21 của bản nhạc (n27) ở mức dễ hơn.'
+doi_chu:
+  - cu: La thứ · 3/4 Allegretto ≈ Grade 3–4 Rondo nhỏ
+    moi: La thứ · 3/4 Allegretto ≈ Grade 5–6 Rondo nhỏ
+    ly_do: "Chip cấp độ dựng từ bản ghi tac-pham/chopin-valse-la-thu: D2-0 sửa grade Grade 3–4 thành Grade 5–6 và chang 3 thành 5 (ABRSM Grade 6, 2025 & 2026 và 2027 & 2028; RCM Level 6; plans/lam-lai/bao-cao/d2-0/sua-A.yml, hồ sơ du-lieu/tac-pham/chopin-valse-la-thu n4, n5)."
+  - cu: Khoảng ABRSM Grade 3–4 (ước lượng); một trong những valse dễ nhất của Chopin
+    moi: "Khoảng ABRSM Grade 5–6: ABRSM xếp bài ở Grade 6 (đề cương 2025–2026 và 2027–2028), RCM Level 6; Henle mức 3. Một trong những valse dễ nhất của Chopin"
+    ly_do: "Dòng Độ khó của thong_tin sửa ở D2-0 theo đề cương ABRSM và RCM (sua-A.yml); lượt 1 D6-L2 kiểm lại ở hồ sơ bản ghi."
+  - cu: "Một bản valse ngắn, buồn và giản dị, không có số opus, chỉ được in sau khi Chopin mất. Với nhiều người, đây là bản nhạc Chopin đầu tiên: nó dạy tay trái valse…"
+    moi: "Một bản valse ngắn, buồn và giản dị, không có số opus, chỉ được in sau khi Chopin mất. Đây là valse dễ nhất của Chopin theo thang độ khó của Henle: nó dạy…"
+    ly_do: 'n1 (da-sua), mô tả trang: "với nhiều người là bản Chopin đầu tiên" không đo được; Henle HN 131 xếp bài mức 3, thấp nhất trong các valse.'
+  - cu: "Một bản valse ngắn, buồn và giản dị, không có số opus, chỉ được in sau khi Chopin mất. Với nhiều người, đây là bản nhạc Chopin đầu tiên: nó dạy tay trái valse, giai điệu hát, bàn đạp mỗi ô nhịp và những bước đầu của rubato."
+    moi: "Một bản valse ngắn, buồn và giản dị, không có số opus, chỉ được in sau khi Chopin mất. Đây là valse dễ nhất của Chopin theo thang độ khó của Henle: nó dạy tay trái valse, giai điệu hát, bàn đạp mỗi ô nhịp và những bước đầu của rubato."
+    ly_do: 'n1 (da-sua): như mô tả trang.'
+  - cu: "Cửa vào Chopin. Phong cách của Chopin (giai điệu hát, tay trái nhảy, bàn đạp, rubato) có đủ ở đây, nhưng ở mức độ vừa sức người mới qua chặng sơ cấp."
+    moi: "Cửa vào Chopin. Phong cách của Chopin (giai điệu hát, tay trái nhảy, bàn đạp, rubato) có đủ ở đây, nhưng ở mức độ vừa sức người đã vững trình độ trung cấp."
+    ly_do: 'n4 (da-sua): bài ở chặng 5 (Trung cấp cao, Grade 6) theo tac-pham.yml và cap-do.yml đã khóa, không phải ngay sau chặng 2 (Sơ cấp).'
+  - cu: "Valse (waltz) là điệu nhảy nhịp 3 đến từ vùng nói tiếng Đức, phổ biến khắp châu Âu đầu thế kỷ 19, và là món không thể thiếu của các phòng khách (salon) ở Paris, nơi Chopin sống từ năm 1831. Valse của Chopin là nhạc để nghe hơn là để nhảy: ông giữ nhịp 3 và tay trái kiểu valse, nhưng thêm vào đó nỗi buồn, sự tinh tế và những khoảnh khắc ngẫu hứng."
+    moi: "Valse (waltz) là điệu nhảy nhịp 3 đến từ vùng nói tiếng Đức, điệu khiêu vũ thịnh hành nhất thế kỷ 19; Chopin sống ở Paris từ năm 1831. Valse của Chopin là nhạc để nghe hơn là để nhảy: ông giữ nhịp 3 và tay trái kiểu valse, nhưng thêm vào đó nỗi buồn, sự tinh tế và những chỗ co giãn nhịp."
+    ly_do: 'n10, n12 (da-sua): Britannica ("the ballroom dance par excellence of the 19th century"); "món không thể thiếu của các phòng khách ở Paris" không có nguồn; Henle HN 1822 nói "frequent change of tempo and subtle rhythmic shifts", không nói ngẫu hứng.'
+  - cu: "Lúc còn sống, Chopin chỉ cho in tám bản valse (Op. 18, ba bản Op. 34, Op. 42 và ba bản Op. 64). Sau khi ông mất, người bạn Julian Fontana in thêm các bản Op. 69 và Op. 70 (1855); những bản không có số opus, trong đó có bài này, xuất hiện muộn hơn nữa. Bài này được in năm 1860 nhưng mang tên người khác: nó là số 3 của tập 4 Pièces pour piano đề tên Charlotte de Rothschild. Năm 1939, nhà nghiên cứu Jacques-Gabriel Prod'homme giới thiệu bản valse La thứ này trên tạp chí The Musical Quarterly; năm 1955, nó được in trong một số đặc biệt của tạp chí La Revue musicale và được công nhận là của Chopin."
+    moi: "Lúc còn sống, Chopin chỉ cho in tám bản valse (Op. 18, ba bản Op. 34, Op. 42 và ba bản Op. 64). Sau khi ông mất, người bạn Julian Fontana in thêm các bản Op. 69 và Op. 70 (1855); những bản không có số opus, trong đó có bài này, xuất hiện muộn hơn nữa. Bài này được in năm 1860 nhưng mang tên người khác: nó là số 3 của tập 4 Pièces pour piano đề tên Charlotte de Rothschild. Năm 1955, nó được in trong tạp chí La Revue musicale và được công nhận là của Chopin."
+    ly_do: "n16 (da-sua): chi tiết Prod'homme 1939 và \"số đặc biệt\" chỉ thấy ở Wikipedia; Henle (HN 131 Comments, HN 1822): bài in lần đầu dưới tên Chopin trong La Revue musicale năm 1955."
+  - cu: "Chopin còn có Valse La thứ Op. 34 số 2: một bản Lento dài hơn và khó hơn nhiều. Năm 2024 còn có một bản valse La thứ rất ngắn được công bố từ một bản thảo tìm thấy ở Thư viện và Bảo tàng Morgan (New York). Bài trên trang này là bản B. 150."
+    moi: "Chopin còn có Valse La thứ Op. 34 số 2: một bản Lento khó hơn nhiều (Henle xếp mức 5, bài này mức 3). Năm 2024 còn có một bản valse La thứ rất ngắn được công bố từ một bản thảo tìm thấy ở Thư viện và Bảo tàng Morgan (New York). Bài trên trang này là bản B. 150."
+    ly_do: 'n20 (da-sua): "dài hơn" chưa đếm được trên bản nhạc; mức khó theo Henle HN 131.'
+  - cu: "Rồi nghe Valse Si thứ Op. 69 số 2, bản bạn sẽ học tiếp, qua bản thu của Dinu Lipatti và Arthur Rubinstein. Nhiều người thấy Lipatti thanh thoát và chặt chẽ hơn, Rubinstein ung dung như đang trò chuyện: hãy tự nghe và quyết định. Muốn hiểu lối hát của Chopin, nghe bản thu kèm bản đồ nghe trong bài học Nocturne Op. 9 số 2 sắp có."
+    moi: "Rồi nghe Valse Si thứ Op. 69 số 2, bản bạn sẽ học tiếp, qua hai bản thu khác nhau: bản nào thanh thoát và chặt chẽ hơn, bản nào ung dung như đang trò chuyện? Hãy tự nghe và quyết định. Muốn hiểu lối hát của Chopin, nghe bản thu kèm bản đồ nghe trong bài học Nocturne Op. 9 số 2 sắp có."
+    ly_do: 'n24 (da-sua): "nhiều người thấy" là đánh giá không có nguồn; tên hai bản thu bỏ vì chưa mở được nguồn cho bản Rubinstein. (Chữ hiển thị viết tay: các link tới trang chưa chuyển hiện "sắp có"; người giao đối chiếu với so-chu.mjs.)'
+  - cu: "… | Coda (ô 53–56): ngắn, khép lại lặng lẽ, nhỏ dần đến lặng"
+    moi: "… | Coda (ô 53–56): ngắn, có một láy rền ở ô áp chót, khép lại ở La thứ"
+    ly_do: 'n33 (da-sua): bản thảo không ghi sắc thái; ô 55 có láy rền, ô 56 kết ở La thứ (rdj; Henle HN 1822).'
+  - cu: "Chủ đề lần cuối, câu thứ ba khép bằng một kết; coda khép lại lặng lẽ"
+    moi: "Chủ đề lần cuối, câu thứ ba khép bằng một kết; coda ngắn khép lại ở La thứ"
+    ly_do: 'n34 (da-sua): như n33.'
+  - cu: "Cùng chặng trên site: Clementi: Sonatina Op. 36 số 1, Burgmüller: Arabesque. Danh sách theo cấp: Tác phẩm theo cấp độ."
+    moi: "Cùng chặng trên site: Mozart: Sonata Đô trưởng K. 545 sắp có, Schumann: Träumerei sắp có. Danh sách theo cấp: Tác phẩm theo cấp độ."
+    ly_do: 'n69 (da-sua): Valse La thứ ở chặng 5 (tac-pham.yml đã khóa); Clementi, Arabesque ở chặng 3; K. 545 và Träumerei ở chặng 5. (Chữ "sắp có" theo bản build lúc này: hai trang chưa chuyển.)'

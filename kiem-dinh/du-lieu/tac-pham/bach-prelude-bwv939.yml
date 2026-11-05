@@ -11,7 +11,16 @@ lan:
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
-ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/bach-prelude-bwv939.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Bach-Digital (bach-digital.de) không mở được: trang chỉ trả về thử thách chống bot ("Please wait a moment while we verify your connection"), nên không dùng.'
+  - so: 2
+    ngay: 2026-11-05
+    nhanh: moi/d6-l2
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (D6-L2 phần A)"
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/bach-prelude-bwv939.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Bach-Digital (bach-digital.de) không mở được: trang chỉ trả về thử thách chống bot ("Please wait a moment while we verify your connection"), nên không dùng. Lần 2 (D6-L2, lượt 1 phần A): nhận định n7–n25 cho các trường chưa khóa (giong, nhip, thoi_ky, ky_nang_chinh, chip, thong_tin, hinh, ban_thu); bản nhạc đối chiếu Mutopia bwv-939 (Bach-Gesellschaft); nguồn chép tay theo Bach Digital (bản lưu Wayback). Không có chỗ sai; một ghi chú về năm in Peters (1843 hay 1844).'
 nguon:
   - id: imslp-bwv939
     bac: 2
@@ -37,6 +46,38 @@ nguon:
     bac: 2
     ten: G. Henle Verlag, Levels of Difficulty (thang độ khó 1–9; trang không có bảng quy đổi sang ABRSM)
     link: https://www.henle.de/Levels-of-Difficulty/
+  - id: mut-939
+    bac: 1
+    ten: Mutopia Project, Bach, Praeludium BWV 939, nguồn Bach-Gesellschaft Bd. 36 (Naumann 1890); tệp LilyPond và MIDI
+    link: https://www.mutopiaproject.org/ftp/BachJS/BWV939/bwv-939/bwv-939.ly
+  - id: imslp-939
+    bac: 2
+    ten: IMSLP, Prelude in C major, BWV 939 (Bach) (bản lưu Wayback 4/10/2026; có bản thu của Luis Kolodin)
+    link: https://imslp.org/wiki/Prelude_in_C_major,_BWV_939_(Bach,_Johann_Sebastian)
+  - id: imslp-kolodin
+    bac: 2
+    ten: IMSLP, File:PMLP797208-Little Prelude in C Major BWV 939 (320 kbps).mp3 (bản lưu Wayback 19/1/2024)
+    link: https://imslp.org/wiki/File:PMLP797208-Little_Prelude_in_C_Major_BWV_939_(320_kbps).mp3
+  - id: bd-939
+    bac: 2
+    ten: Bach Digital, Prelude in C BWV 939 (bản lưu Wayback 20/2/2026)
+    link: https://www.bach-digital.de/receive/BachDigitalWork_work_00001114?lang=en
+  - id: bd-p804-53
+    bac: 2
+    ten: Bach Digital, D-B Mus.ms. Bach P 804, Faszikel 53 (bản lưu Wayback 21/1/2026)
+    link: https://www.bach-digital.de/receive/BachDigitalSource_source_00001849
+  - id: bd-p804
+    bac: 2
+    ten: Bach Digital, D-B Mus.ms. Bach P 804 [Konvolut] (bản lưu Wayback 16/3/2026)
+    link: https://www.bach-digital.de/receive/BachDigitalSource_source_00025378
+  - id: bpmd-peters
+    bac: 2
+    ten: Bach Printed Music Database, Griepenkerl (ed.), 12 petits préludes, Peters, Leipzig, Liv. 9 No. 16
+    link: https://bachbib.bw.edu/script/bach2.pl?23=42453
+  - id: db-bach
+    bac: 2
+    ten: Deutsche Biographie, Bach, Johann Sebastian (1685–1750)
+    link: https://www.deutsche-biographie.de/pnd11850553X.html
 nhan_dinh:
   - id: n1
     cau: "Tên bài: Prelude nhỏ Đô trưởng, BWV 939 (bài đầu trong Năm prelude nhỏ BWV 939–943)."
@@ -117,3 +158,132 @@ nhan_dinh:
     ghi_chu: '../opus-zero/docs/assets/js/practice.js, hằng SUGGEST[3] có ["piano/tac-pham/bach-prelude-bwv939/", "Bach: Prelude nhỏ Đô trưởng, BWV 939"]; chặng 3 trùng chang 3 của bản ghi.'
     luot_2: dung
     luot_2_ghi_chu: Reasonable (short, easy piece); not contradicted.
+  - id: n7
+    cau: Giọng của bài là Đô trưởng.
+    loai: cau-truc
+    truong: [giong]
+    nguon: [mut-939, imslp-939]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: \key c \major; IMSLP: Key "C major".'
+  - id: n8
+    cau: Nhịp của bài là 4/4.
+    loai: cau-truc
+    truong: [nhip]
+    nguon: [mut-939]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: \time 4/4.'
+  - id: n9
+    cau: Bài thuộc thời kỳ Baroque.
+    loai: lich-su
+    truong: [thoi_ky]
+    nguon: [imslp-bwv939, mut-939]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Composer Time Period và Piece Style "Baroque"; Mutopia: style "Baroque".'
+  - id: n10
+    cau: 'Kỹ năng chính: hợp âm rải chia hai tay, nhịp hòa âm, chơi Bach trên piano.'
+    loai: cau-truc
+    truong: [ky_nang_chinh]
+    nguon: [mut-939]
+    ket_qua: dung
+    ghi_chu: Hình rải đổi tay (ô 1–13), hòa âm mỗi ô một hợp âm rồi dồn ở ô 15 (hồ sơ trang n7, n10).
+  - id: n11
+    cau: 'Chip: "Đô trưởng · 4/4".'
+    loai: cau-truc
+    truong: [chip]
+    nguon: [mut-939]
+    ket_qua: dung
+  - id: n12
+    cau: 'Chip: "Hợp âm rải chia hai tay".'
+    loai: cau-truc
+    truong: [chip]
+    nguon: [mut-939]
+    ket_qua: dung
+  - id: n13
+    cau: 'Chip cấp độ: "≈ Grade 3".'
+    loai: cap-do
+    truong: [chip]
+    nguon: [henle-hn106, rcm-2022]
+    ket_qua: dung
+    ghi_chu: Trùng grade đã khóa ở lần 1 (ước lượng; lần 1 ghi lượt 2 nghiêng về Grade 4–5).
+  - id: n14
+    cau: 'Chip: "16 ô nhịp".'
+    loai: cau-truc
+    truong: [chip]
+    nguon: [mut-939]
+    ket_qua: dung
+  - id: n15
+    cau: 'Thông tin, nhà soạn nhạc: Johann Sebastian Bach (1685–1750); bản chép duy nhất còn lại không ghi tên tác giả.'
+    loai: lich-su
+    truong: [thong_tin]
+    nguon: [db-bach, bd-p804-53, bd-939]
+    ket_qua: dung
+    ghi_chu: 'Deutsche Biographie: "Lebensdaten 1685 – 1750"; Bach Digital P 804 fasc. 53: "No title or ascription to any composer"; BWV 939 chỉ có nguồn này.'
+  - id: n16
+    cau: 'Thông tin, tác phẩm: Prelude (Praeludium) Đô trưởng, BWV 939, bài đầu trong Fünf kleine Präludien (Năm prelude nhỏ, BWV 939–943); số 2 trong tuyển tập 12 prelude nhỏ.'
+    loai: danh-muc
+    truong: [thong_tin]
+    nguon: [imslp-bwv939, mut-939, bpmd-peters]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "5 Kleine Präludien" BWV 939–943, No. 1 BWV 939; Mutopia: "Praeludium Nr. 1"; BPMD: tập 12 prelude của Peters, thứ tự 924, 939, … (BWV 939 thứ hai).'
+  - id: n17
+    cau: 'Thông tin, sáng tác / xuất bản: không còn bản viết tay của Bach; nguồn thế kỷ 18 duy nhất là một bản chép trong tập P 804 ở Thư viện Quốc gia Berlin, bộ sưu tập gắn với Johann Peter Kellner; năm sáng tác chưa xác định, các tài liệu ước đoán từ thời Köthen (1717–1723) đến khoảng 1726–1727; in lần đầu năm 1843 (nhà Peters, Leipzig).'
+    loai: lich-su
+    truong: [thong_tin]
+    nguon: [bd-939, bd-p804-53, bd-p804, imslp-bwv939, imslp-939, bpmd-peters]
+    ket_qua: dung
+    ghi_chu: 'Bach Digital: nguồn duy nhất P 804 fasc. 53, "1726/1727 oder später (Stinson)"; P 804 phần lớn từ di sản Kellner; IMSLP: composition "1717?", First publication 1843 (Nos. 1–4). BPMD ghi tập Peters "[1844]" (ngoặc vuông, suy đoán): hai nguồn lệch, giữ 1843 theo IMSLP; lượt 2 xem lại.'
+  - id: n18
+    cau: 'Thông tin, giọng · nhịp · tốc độ: Đô trưởng · 4/4 · không ghi tốc độ (thường ♩ ≈ 80–100).'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: [mut-939]
+    ket_qua: dung
+    ghi_chu: 'Bản BG không có chỉ dẫn tốc độ. "Thường ♩ ≈ 80–100": các bản thu dài 33–45 giây (hồ sơ trang n2) ứng với ♩ ≈ 85–115; khoảng 80–100 là tốc độ gợi ý, không phải sự kiện chặt.'
+  - id: n19
+    cau: 'Thông tin, hình thức: một mạch liền 16 ô, bốn chặng: nốt nền chủ (ô 1–3) → chuyền tay, sang Sol trưởng (ô 4–8) → nốt nền át có láy (ô 9–12) → về Đô, gam móc kép và kết (ô 13–16).'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: [mut-939]
+    ket_qua: dung
+    ghi_chu: Không có dấu nhắc lại; số ô từng chặng như hồ sơ trang n39–n42.
+  - id: n20
+    cau: 'Thông tin, độ khó: khoảng ABRSM Grade 3 (ước lượng).'
+    loai: cap-do
+    truong: [thong_tin]
+    nguon: [henle-hn106, rcm-2022, abrsm-2526]
+    ket_qua: dung
+    ghi_chu: Như grade đã khóa ở lần 1; "ước lượng" đúng vì không đề cương nào xếp riêng BWV 939.
+  - id: n21
+    cau: 'Thông tin, kỹ năng chính: hợp âm rải chia giữa hai tay, giữ nốt trầm bằng ngón, móc đơn đều, láy ở tay trái, gam móc kép có chỗ quay đầu, tiếng đàn rõ với rất ít hoặc không bàn đạp.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: [mut-939]
+    ket_qua: dung
+    ghi_chu: Các yếu tố có trong bài (ô 1–3 nốt trầm giữ bằng ngón, láy ô 9–11 tay trái, móc kép ô 14).
+  - id: n22
+    cau: 'Thông tin, bản nhạc: IMSLP (5 Kleine Präludien, BWV 939–943, có bản Bach-Gesellschaft năm 1890); Urtext: G. Henle Verlag HN 106, Kleine Präludien und Fughetten.'
+    loai: ten
+    truong: [thong_tin]
+    nguon: [imslp-bwv939, henle-hn106]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: BGA Band 36 (Naumann, 1890); Henle HN 106 (tên tiếng Anh Little Preludes and Fughettas), Urtext.'
+  - id: n23
+    cau: 'Hình cấu trúc: nốt nền chủ ô 1–3; chuyền tay, sang Sol trưởng ô 4–8; nốt nền át ô 9–12; về Đô ô 13–16 và kết; độ dài theo số ô (3, 5, 4, 4).'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [mut-939]
+    ket_qua: dung
+  - id: n24
+    cau: 'Bản thu gợi ý: Luis Kolodin, trên piano; giấy phép CC BY-SA 4.0; trang tệp trên IMSLP.'
+    loai: ten
+    truong: [ban_thu]
+    nguon: [imslp-939, imslp-kolodin]
+    ket_qua: dung
+    ghi_chu: 'IMSLP (bản lưu): trang Prelude in C major, BWV 939: "Performer Pages Luis Kolodin (Piano) ... Copyright Creative Commons Attribution-ShareAlike 4.0"; trang tệp PMLP797208 thuộc trang tác phẩm ấy (1,65 MB). public/audio/NGUON.txt ghi cùng người chơi, giấy phép và link.'
+  - id: n25
+    cau: 'Bản thu dài 30,59 giây (d: 30.59).'
+    loai: so-lieu
+    truong: [ban_thu]
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Đo trên public/audio/bach-prelude-bwv939.mp3 (afinfo: 30,589 giây).'

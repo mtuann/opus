@@ -11,7 +11,16 @@ lan:
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
-ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/tchaikovsky-cau-nguyen-buoi-sang.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Cần cập nhật theo: chip.cap_do và dòng "Độ khó" trong thong_tin.'
+  - so: 2
+    ngay: '2026-11-05'
+    nhanh: moi/d6-l2
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5 (D6-L2 phần B)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/tchaikovsky-cau-nguyen-buoi-sang.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Cần cập nhật theo: chip.cap_do và dòng "Độ khó" trong thong_tin. Lần 2 (D6-L2, lượt 1 phần B): nhận định n6–n30 cho các trường chưa khóa (giong, nhip, thoi_ky, ky_nang_chinh, chip, thong_tin, hinh, ban_thu). Bản nhạc: Mutopia 2032 (Schirmer 1904). Sai: n27 (nhãn đoạn Coda của hinh ghi "pp" trong khi coda mở bằng f): đề xuất trong plans/lam-lai/bao-cao/d6-l2/sua-B.yml.'
 nguon:
   - id: imslp-op39
     bac: 2
@@ -25,6 +34,11 @@ nguon:
     bac: 2
     ten: The Royal Conservatory (RCM), Piano Syllabus, 2022 Edition
     link: https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf
+  - {id: mutopia-2032, bac: 1, ten: 'Mutopia Project, Morning Prayer, Op. 39 No. 1 (Rem Zolotykh, Schirmer 1904, phạm vi công cộng), Mutopia-2015/07/09-2032; .ly và MIDI tải ngày 05/11/2026', link: 'https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2032'}
+  - {id: tr-op39, bac: 2, ten: 'Tchaikovsky Research, Children''s Album', link: 'https://en.tchaikovsky-research.net/pages/Children''s_Album'}
+  - {id: imslp-tchaikovsky, bac: 2, ten: 'IMSLP, Category:Tchaikovsky, Pyotr (sinh 7/5/1840, mất 6/11/1893)', link: 'https://imslp.org/wiki/Category:Tchaikovsky,_Pyotr'}
+  - {id: wiktionary-utrenniy, bac: 2, ten: 'Wiktionary tiếng Nga, mục "утренний" (tính từ đuôi mềm, giống cái утренняя)', link: 'https://ru.wiktionary.org/wiki/%D1%83%D1%82%D1%80%D0%B5%D0%BD%D0%BD%D0%B8%D0%B9'}
+  - {id: imslp-kolodin-morning, bac: 2, ten: 'IMSLP, file bản thu Luis Kolodin plays Tchaikovsky''s Morning Prayer (giấy phép ghi ở mục Recordings của trang Op.39)', link: 'https://imslp.org/wiki/File:PMLP19418-Y2mate.mx_-_Luis_Kolodin_plays_Tchaikovsky''s_Morning_Prayer_(128_kbps).mp3'}
 nhan_dinh:
   - id: n1
     cau: "Tên bài: Cầu nguyện buổi sáng, Op. 39 số 1 (Morning Prayer, bài đầu trong Album cho thiếu nhi)."
@@ -91,3 +105,178 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ https://web.archive.org/web/20201112011213/https://gb.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf ]
     luot_2_ghi_chu: Stage 3 = Grade 3 is inside 3-4; note ABRSM lists it at Grade 4 (border of stages 3/4).
+  - id: n6
+    cau: 'Giọng: Sol trưởng.'
+    loai: cau-truc
+    truong: [giong]
+    nguon: [mutopia-2032, tr-op39]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: \key g \major; TR: "Andante (G major, 24 bars)".'
+  - id: n7
+    cau: 'Nhịp: 3/4.'
+    loai: cau-truc
+    truong: [nhip]
+    nguon: [mutopia-2032]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: \time 3/4.'
+  - id: n8
+    cau: 'Thời kỳ: Lãng mạn.'
+    loai: lich-su
+    truong: [thoi_ky]
+    nguon: [imslp-op39]
+    ket_qua: dung
+    ghi_chu: 'IMSLP Op.39: Piece Style Romantic; Mutopia: style "Romantic".'
+  - id: n9
+    cau: 'Kỹ năng chính: bốn bè kiểu hợp xướng, đổi ngón để giữ legato, bàn đạp.'
+    loai: cau-truc
+    truong: [ky_nang_chinh]
+    nguon: [mutopia-2032]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: hai bè mỗi tay; Schirmer ghi đổi ngón "1~5" ô 17, "4~3" ô 20; bàn đạp ô 22–24.'
+  - id: n10
+    cau: 'Chip: "Sol trưởng · 3/4", "Andante", "24 ô nhịp".'
+    loai: cau-truc
+    truong: [chip]
+    nguon: [tr-op39, mutopia-2032]
+    ket_qua: dung
+    ghi_chu: 'TR: Andante (G major, 24 bars); Mutopia 3/4, 24 ô.'
+  - id: n11
+    cau: 'Chip cấp độ: ≈ Grade 3–4.'
+    loai: cap-do
+    truong: [chip]
+    nguon: [abrsm-1920, rcm-2022]
+    ket_qua: dung
+    ghi_chu: 'Trùng grade đã khóa (lần 1 n4). ABRSM 2019–2020: "Tchaikovsky Morning Prayer (No. 1 from Album for the Young, Op. 39)" ở Grade 4 (trang 20, đã mở lại); RCM 2022 trang 36 (Level 3) "Morning Prayer (no. 1)".'
+  - id: n12
+    cau: 'Thông tin, Nhà soạn nhạc: Pyotr Ilyich Tchaikovsky (1840–1893).'
+    loai: nam
+    truong: [thong_tin]
+    nguon: [imslp-tchaikovsky]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Born 1840/5/7, Died 1893/11/6.'
+  - id: n13
+    cau: 'Thông tin, Tác phẩm: Cầu nguyện buổi sáng (Утренняя молитва, Morning Prayer), bài số 1 trong Album for the Young (Детский альбом, nghĩa đen "Album thiếu nhi"), Op. 39.'
+    loai: ten
+    truong: [thong_tin]
+    nguon: [tr-op39, imslp-op39, wiktionary-utrenniy]
+    ket_qua: dung
+    ghi_chu: 'TR, IMSLP: "Children''s Album (Детский альбом), Op. 39", "1. Morning Prayer (Утренная молитва)". Cả TR và IMSLP viết "Утренная" (thiếu chữ я); dạng đúng là "Утренняя": утренний là tính từ đuôi mềm (Wiktionary), giống cái утренняя. Dữ liệu viết đúng. ABRSM: "Album for the Young".'
+  - id: n14
+    cau: 'Thông tin: Op. 39 là tập 24 bài dễ "theo kiểu Schumann".'
+    loai: ten
+    truong: [thong_tin]
+    nguon: [tr-op39]
+    ket_qua: dung
+    ghi_chu: 'TR: subtitled "24 simple pieces à la Schumann".'
+  - id: n15
+    cau: 'Thông tin: bài mang số 1 cả trong bản in đầu tiên lẫn trong bản viết tay.'
+    loai: danh-muc
+    truong: [thong_tin]
+    nguon: [tr-op39]
+    ket_qua: dung
+    ghi_chu: 'TR: thứ tự bản thảo "1, 2, 4, 3, …": số 1 đứng đầu.'
+  - id: n16
+    cau: 'Thông tin, Sáng tác: năm 1878, phác thảo xong cả 24 bài vào tháng 5 ở Kamenka (Ukraina).'
+    loai: nam
+    truong: [thong_tin]
+    nguon: [tr-op39]
+    ket_qua: dung
+    ghi_chu: 'TR: "after his return to Kamenka in April he decided to begin composition"; "On 4/16 May the sketches for all 24 pieces were ready". Kamenka ở Ukraina: TR trang Kamenka.'
+  - id: n17
+    cau: 'Thông tin: sửa và chép sạch vào tháng 7.'
+    loai: nam
+    truong: [thong_tin]
+    nguon: [tr-op39]
+    ket_qua: dung
+    ghi_chu: 'TR: "The fair copy … was begun, it seems, on 13/25 July"; "By 20 July/1 August the copying out was completed". Chú ý: chép sạch ở Verbovka (TR), không ở Kamenka; dữ liệu không nói nơi chép, nên đúng.'
+  - id: n18
+    cau: 'Thông tin: nhà Jurgenson (Moskva) in tập vào tháng 10 năm 1878.'
+    loai: nam
+    truong: [thong_tin]
+    nguon: [tr-op39, imslp-op39]
+    ket_qua: dung
+    ghi_chu: 'TR: bản thảo gửi "Pyotr Jurgenson in Moscow"; "In October, after the proofs had been corrected, the album was published". IMSLP: "1878 — Moscow: P. Jurgenson. 27 pages. Plate 3347".'
+  - id: n19
+    cau: 'Thông tin: tập đề tặng cháu trai Vladimir Davydov.'
+    loai: lich-su
+    truong: [thong_tin]
+    nguon: [tr-op39, imslp-op39]
+    ket_qua: dung
+    ghi_chu: 'TR: "dedicated to Tchaikovsky''s favourite nephew, Vladimir Davydov"; IMSLP: Dedication Vladimir Davydov (1871-1906).'
+  - id: n20
+    cau: 'Thông tin, Giọng · nhịp · tốc độ: Sol trưởng · 3/4 · Andante; bản Schirmer 1904 in Lento.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: [tr-op39, mutopia-2032]
+    ket_qua: dung
+    ghi_chu: 'TR: Andante; Mutopia (source "Schirmer, 1904"): \tempo "Lento.".'
+  - id: n21
+    cau: 'Thông tin, Hình thức: hai câu tám ô (ô 1–8 kết ở Rê trưởng; ô 9–16 lên cao trào rồi kết ở Sol trưởng) và một coda tám ô trên âm nền Sol; 24 ô nhịp, không có dấu nhắc lại.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: [mutopia-2032]
+    ket_qua: dung
+    ghi_chu: 'Mutopia/MIDI: ô 8 Rê (sau A7/C♯), ô 12 Fa♯ trưởng f, ô 16 Sol (ii6/5 – V7 – I); Sol2 lặp ô 16–21, ngân ô 22–24; không có \repeat.'
+  - id: n22
+    cau: 'Thông tin, Độ khó: khoảng ABRSM Grade 3–4; ABRSM xếp bài ở Grade 4 (đề cương 2019–2020), RCM Level 3.'
+    loai: cap-do
+    truong: [thong_tin]
+    nguon: [abrsm-1920, rcm-2022]
+    ket_qua: dung
+    ghi_chu: Như n11. Vế "nốt dễ đọc, nhưng giữ bốn bè liền và cân bằng đòi hỏi kiểm soát tốt" là nhận xét sư phạm.
+  - id: n23
+    cau: 'Thông tin, Kỹ năng chính: chơi bốn bè bằng hai tay; nổi bè trên; legato bằng ngón (đổi ngón trên phím đang giữ, nhấc nốt lặp ở bè giữa); hai bè trong một tay; âm nền ở bè trầm; bàn đạp đổi theo hòa âm.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: [mutopia-2032]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: hai bè mỗi tay; Sol alto lặp ô 1–2; đổi ngón "1~5" ô 17; hai Voice mỗi khuông ô 5–8, coda; Sol2 lặp ở coda.'
+  - id: n24
+    cau: 'Thông tin, Bản nhạc: có ở IMSLP; ấn bản toàn tập mới tập 69b (2001), biên tập Thomas Kohlhase.'
+    loai: ten
+    truong: [thong_tin]
+    nguon: [tr-op39, imslp-op39]
+    ket_qua: dung
+    ghi_chu: 'TR: "in volume 69b of the New Complete Edition of Tchaikovsky''s works (2001), edited by Thomas Kohlhase". Vế "các bản in cũ thường thêm chỉ dẫn của người biên tập" có ví dụ Lento của Schirmer (n20); lời khuyên đối chiếu là khuyên tập.'
+  - id: n25
+    cau: 'Hình, chú thích: Cầu nguyện buổi sáng, Op. 39 số 1: hai câu tám ô và một coda tám ô trên âm nền Sol (24 ô nhịp).'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [mutopia-2032]
+    ket_qua: dung
+    ghi_chu: Như n21.
+  - id: n26
+    cau: 'Hình, các đoạn: Câu 1 ô 1–8, kết ở Rê trưởng (8); Câu 2 ô 9–11, như câu 1 rồi đi lên (3); Cao trào ô 12–14, f, vòng quãng năm (3); Kết câu 2 ô 15–16, kết trọn ở Sol trưởng (2).'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [mutopia-2032]
+    ket_qua: dung
+    ghi_chu: 'MIDI: ô 9 = ô 1; ô 10–11 tay phải đi lên; ô 12 \f Fa♯ trưởng; ô 13–14 B7 – E – A7 – D7 – G – C; ô 15–16 ii6/5 – V7 – I.'
+  - id: n27
+    cau: 'Hình, đoạn Coda: ô 17–24, âm nền Sol, f rồi nhỏ dần đến pp.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [mutopia-2032]
+    ket_qua: da-sua
+    ghi_chu: 'Dữ liệu ghi nhãn "ô 17–24 · âm nền Sol · pp"; đề xuất "ô 17–24 · âm nền Sol · f → pp" (sua-B.yml). Lý do: bản Schirmer (Mutopia) ghi coda mở bằng \f (b''\f, phách 3 ô 16), \mf ô 18, \dim ô 20, \pp chỉ ở hợp âm cuối ô 24; nhãn "pp" cho cả coda sai với bản nhạc. Trang bài học (bảng Cấu trúc, mục Sắc thái) đã nói đúng f, mf, dim., pp.'
+  - id: n28
+    cau: 'Hình, ghi chú: không có dấu nhắc lại; coda bắt đầu từ phách 3 của ô 16, khi bè trầm đã lặp nốt Sol.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [mutopia-2032]
+    ket_qua: dung
+    ghi_chu: 'MIDI: G2 móc đơn từ phách 1 ô 16; tay phải nghỉ phách 2, vào g''4-5( với \f ở phách 3 ô 16.'
+  - id: n29
+    cau: 'Bản thu: người chơi Luis Kolodin, giấy phép CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/), trang file https://imslp.org/wiki/File:PMLP19418-Y2mate.mx_-_Luis_Kolodin_plays_Tchaikovsky''s_Morning_Prayer_(128_kbps).mp3.'
+    loai: ten
+    truong: [ban_thu]
+    nguon: [imslp-op39, imslp-kolodin-morning]
+    ket_qua: dung
+    ghi_chu: 'IMSLP Op.39 Recordings: "File Name 1=PMLP19418-Y2mate.mx_-_Luis_Kolodin_plays_Tchaikovsky''s_Morning_Prayer_(128_kbps).mp3", "File Description 1=1. Morning Prayer", "Kolodin, Luis=Piano", "Copyright=Creative Commons Attribution-ShareAlike 4.0".'
+  - id: n30
+    cau: 'Bản thu: file audio/tchaikovsky-cau-nguyen-buoi-sang.mp3 dài 79,8 giây.'
+    loai: so-lieu
+    truong: [ban_thu]
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'ffprobe public/audio/tchaikovsky-cau-nguyen-buoi-sang.mp3: 79,80 s.'
