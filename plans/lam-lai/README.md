@@ -87,7 +87,7 @@ Câu hỏi nhỏ còn chờ (từ review nhánh quyết định, `bao-cao/d2-ban
 - `nhan-dien/nghe-mu` ở Tham chiếu nên 6 trang trỏ tới nó (3 ở D3-L6, 3 ở D5-L3) hiện "sắp có" tới đợt 8: giữ vậy, hay giữ trang ở Lõi và đưa 10 bản thu vào dữ liệu có kiểm link. Trước D3-L6.
 - Mục "Sau 6 tháng: đi sâu hơn" của lộ trình nghe hiểu: `nhac-ly/am-hoc` (Lõi) và `lich-su/nhac-truyen-thong-viet-nam` (Đọc thêm) nằm cùng một dòng việc. Có tính mục ấy là lộ trình không (tính thì trang nhạc truyền thống vào Lõi, lô D5-L1). Trước D5-L1.
 - ~~Cỡ mẫu lượt 2 của trang Đọc thêm~~: **giữ 5 nhận định mỗi trang** (agent chọn theo lời giao của chủ repo ngày 05/11/2026, lý do ở `bao-cao/d8-chuan-bi.md`; chủ repo review sau).
-- Trang Tác phẩm có cần đủ hai lượt không: xem lại khi đã đo được tỉ lệ hai lượt lệch nhau ở các lô Lõi. Trước D6-0.
+- ~~Trang Tác phẩm có cần đủ hai lượt không~~: **giữ đủ hai lượt** (agent chọn theo lời giao của chủ repo ngày 05/11/2026, ở D6-0; chủ repo review sau). Lý do: ở đợt 8, lượt 2 vẫn bắt câu sai thật mà lượt 1 và review bỏ sót (năm lập Polish Festival Orchestra, nhịp *Mariage d'Amour*, con số của Yamaha; `bao-cao/d8-gom.md`); trang Tác phẩm và bản ghi của chúng là dữ liệu dùng ở nhiều trang (trang chặng, ô gợi ý tập, Học tiếp, sách in). Câu `ve-site` và lời khuyên tập vẫn theo cách đã chốt (review kiểm; mẫu 3 câu mỗi trang).
 
 ## Tiến độ
 
@@ -101,7 +101,7 @@ Câu hỏi nhỏ còn chờ (từ review nhánh quyết định, `bao-cao/d2-ban
 | 5 | Nhạc cổ điển nền tảng | 3 | 27 trang: thời kỳ, hình thức, nhận diện; đủ 101 trang lõi | Xong 29/10/2026: D5-L1 đến D5-L3 lượt 1 và nhánh gom (lượt 2, review, lượt 2 bổ sung, kiểm mẫu, khóa 27 trang); 117 trang trên site thật |
 | 7 | Công cụ, sách in, blog, Cập nhật | 3 | 17 công cụ luyện tập, sách in, blog, dùng khi mất mạng | Chờ chủ repo: D7-L1 đến D7-L3 xong lượt 1, lượt 2, review (nhánh gom `moi/d7-gom`, `bao-cao/d7-gom.md`); còn kiểm mẫu (`d7-gom/kiem-mau.yml`, `kiem-mau-l3.yml`) và khóa 23 trang |
 | 8 | Tham chiếu có hạn và Đọc thêm | 3 | 20 trang | Chờ chủ repo: D8-L1 đến D8-L3 xong lượt 1, lượt 2, review (nhánh gom `moi/d8-gom`, `bao-cao/d8-gom.md`); còn kiểm mẫu (`d8-gom/kiem-mau.yml`) và khóa 20 trang |
-| 6 | Tác phẩm | 11 | 34 bài học, 45 hướng dẫn nghe, danh mục tác phẩm; đủ 233 trang cũ | Chưa làm |
+| 6 | Tác phẩm | 11 | 34 bài học, 45 hướng dẫn nghe, danh mục tác phẩm; đủ 233 trang cũ | D6-0 (chuẩn bị) xong 05/11/2026, chờ review (`bao-cao/d6-0.md`); các lô chưa làm |
 | 9 | Hoàn tất | | Site mới không còn cần `../opus-zero/` | Chưa làm |
 
 Bảng xếp theo thứ tự làm: đợt 6 (tác phẩm) sau đợt 8. Số trang tính cả trang mục lục của mỗi mục. Danh sách trang của từng lô: `anh-xa.md`. Người review cập nhật bảng này cuối mỗi đợt.
@@ -259,10 +259,10 @@ Từ đợt này, mỗi lô gộp vào `main` là trang của lô lên site th�
 
 Khung, lõi, công cụ và tham chiếu đã lên site; đợt này thêm tác phẩm từng lô. Link "sắp có" tới bài học (ở trang lõi, trang chặng, ô gợi ý tập, công cụ, trang tham chiếu) tự thành link khi lô lên. Mỗi lô khóa nốt các trường còn lại của bản ghi tác phẩm trong lô.
 
-- Trước lô đầu, một việc riêng (nhánh `moi/d6-0-chuan-bi`, báo cáo `d6-0.md`): chép các bản thu từ `../opus-zero/docs/assets/audio/` sang `public/audio/` (cả `NGUON.txt`); chép `../opus-zero/tools/audio/` sang `tools/audio/` rồi sửa để `attach.py`, `check_audio.py`, phần căn mốc đọc và ghi bản thu trong bản ghi của `tac-pham.yml` thay vì trong trang; thông số hình cấu trúc nằm trong bản ghi; `tools/them_tac_pham.py` và kiểm thử `tac_pham` theo `../ben-vung/them-tac-pham.md`.
+- Trước lô đầu, một việc riêng (nhánh `moi/d6-0-chuan-bi`, báo cáo `d6-0.md`): chép các bản thu từ `../opus-zero/docs/assets/audio/` sang `public/audio/` (cả `NGUON.txt`); chép `../opus-zero/tools/audio/` sang `tools/audio/` rồi sửa để `attach.py`, `check_audio.py`, phần căn mốc đọc và ghi bản thu trong bản ghi của `tac-pham.yml` thay vì trong trang; thông số hình cấu trúc nằm trong bản ghi; `tools/them_tac_pham.py` và kiểm thử `tac_pham` theo `../ben-vung/them-tac-pham.md`. Đã làm (D6-0, 05/11/2026): công cụ viết bằng Node, `tools/them-tac-pham.mjs` (lý do ở `../ben-vung/them-tac-pham.md` mục 2); kiểm kê từng lô và việc cho lô sau ở `bao-cao/d6-0.md`.
 - Đối chiếu nốt và căn mốc bản thu IMSLP dùng `../opus-zero/_imslp/` (chỉ có trên máy bạn, không có trong git).
 - D6-L1 đến D6-L6: bài học chặng 2 đến 7, kèm hướng dẫn nghe cùng tác phẩm; D6-L7 đến D6-L11: các hướng dẫn nghe còn lại theo thứ tự nav cũ, cùng hai trang mục lục.
-- Danh mục `tac-pham` sinh từ dữ liệu, lọc theo chặng, thời kỳ, tác giả, loại.
+- Danh mục `tac-pham` sinh từ dữ liệu, lọc theo chặng, thời kỳ, tác giả, loại: làm ở D6-L11, cùng hai trang mục lục; lô ấy cũng cho sách in có tác phẩm đọc danh sách từ dữ liệu (D6-0 chọn; `THEM` của `tests/pham-vi.test.mjs`).
 
 **Xong khi:** 81 trang của 11 lô đã khóa; mọi trường của 73 bản ghi tác phẩm đã khóa (khóa cả bản ghi); `python3 tools/audio/check_audio.py` không lỗi; danh mục, trang chặng và "Học tiếp" hiện đủ; hai cuốn sách in có tác phẩm ("Hướng dẫn nghe", "Piano: 10 bài đầu tiên và bài học tác phẩm") đủ chương.
 

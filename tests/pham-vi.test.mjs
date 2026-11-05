@@ -46,6 +46,10 @@ const THEM = {
 	// hai workflow hằng tuần (trang cần rà lại, link ra ngoài), script của chúng, ngày kiểm và ngày rà lại ở đầu trang tham
 	// chiếu (đọc hồ sơ qua src/kiem-dinh.mjs)
 	'D8-L1': ['.github/workflows/ra-lai.yml', '.github/workflows/kiem-link.yml', 'tools/ra-lai.mjs', 'tools/kiem-link.mjs', 'src/kiem-dinh.mjs'],
+	// danh mục tác phẩm sinh từ dữ liệu (trang mới trong src/pages/, lọc theo chặng, thời kỳ, tác giả, loại), cùng hai
+	// trang mục lục piano/tac-pham/index, nghe-nhac/index của lô; menu (src/nhom.mjs) và sách in có tác phẩm (src/sach/)
+	// đọc danh sách tác phẩm từ dữ liệu, để tác phẩm thêm sau đợt 6 tự vào (D6-0 chọn, plans/lam-lai/bao-cao/d6-0.md)
+	'D6-L11': ['src/pages/', 'src/ban-build.mjs', 'src/nhom.mjs', 'src/sach/', 'src/plugins/opus-markdown.mjs'],
 };
 
 /** File `file` (đường dẫn từ gốc repo) có thuộc phạm vi của lô `lo` ("D3-L2"), với các trang `trangLo`, không. */
@@ -61,6 +65,74 @@ function trongPhamVi(file, lo, trangLo) {
 	if (!m) return false;
 	// bài blog đổi đường dẫn theo cú pháp site mới (README, đợt 7)
 	return trangLo.includes(m[1]) || (m[1].startsWith('blog/') && trangLo.some((t) => t.startsWith('blog/')));
+}
+
+/**
+ * Nhánh thêm một tác phẩm sau đợt 6, them/<slug> (plans/ben-vung/them-tac-pham.md mục 4): chỉ tạo file của tác phẩm và
+ * nối thêm vào dữ liệu, không sửa dòng có sẵn. `file`: đường dẫn từ gốc; trả về true nếu được chạm.
+ */
+export function trongPhamViThem(file, slug) {
+	const ten = slug.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+	return [
+		/^src\/data\/(tac-pham|nha-soan-nhac|trang)\.yml$/,
+		new RegExp(`^src/content/docs/(piano/tac-pham|nghe-nhac)/${ten}\\.md$`),
+		new RegExp(`^kiem-dinh/(piano/tac-pham|nghe-nhac)/${ten}\\.yml$`),
+		new RegExp(`^kiem-dinh/du-lieu/tac-pham/${ten}\\.yml$`),
+		/^kiem-dinh\/du-lieu\/nha-soan-nhac\/[a-z0-9-]+\.yml$/,
+		/^kiem-dinh\/khoa\.json$/,
+		new RegExp(`^public/audio/${ten}(-[a-z0-9-]+)?\\.mp3$`),
+		/^public\/audio\/NGUON\.txt$/,
+		new RegExp(`^plans/ben-vung/bao-cao/them-${ten}\\.md$`),
+	].some((re) => re.test(file));
+}
+
+/** File chỉ được nối thêm ở cuối trên nhánh them/<slug>: dữ liệu dùng chung và tệp nguồn âm thanh. */
+const CHI_NOI = ['src/data/tac-pham.yml', 'src/data/nha-soan-nhac.yml', 'src/data/trang.yml', 'public/audio/NGUON.txt'];
+
+/** Kiểm nhánh them/<slug> trong repo `goc`: null nếu không phải nhánh ấy, không thì { slug, loi }. */
+function kiemPhamViThem(goc, nhanh) {
+	const m = /^them\/([a-z0-9]+(?:-[a-z0-9]+)*)$/.exec(nhanh);
+	if (!m) return null;
+	const slug = m[1];
+	const nen = ['main', 'origin/main'].find((b) => {
+		try {
+			return git(goc, 'rev-parse', '--verify', '--quiet', `${b}^{commit}`);
+		} catch {
+			return false;
+		}
+	});
+	if (!nen) throw new Error('không thấy nhánh main hay origin/main để so');
+	const chung = git(goc, 'merge-base', 'HEAD', nen);
+	const file = new Set(
+		[git(goc, 'diff', '--name-only', '--no-renames', chung), git(goc, 'ls-files', '--others', '--exclude-standard')].join('\n').split('\n').filter(Boolean),
+	);
+	const loi = [...file].sort().filter((f) => !trongPhamViThem(f, slug)).map((f) => `${f}: ngoài phạm vi của nhánh them/${slug} (them-tac-pham.md mục 4)`);
+	const cu = (f) => {
+		try {
+			return execFileSync('git', ['-C', goc, 'show', `${chung}:${f}`], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
+		} catch {
+			return '';
+		}
+	};
+	for (const f of CHI_NOI.filter((x) => file.has(x))) {
+		const truoc = cu(f).replace(/\n*$/, '\n');
+		if (!fs.readFileSync(path.join(goc, f), 'utf8').startsWith(truoc)) loi.push(`${f}: chỉ được nối thêm ở cuối, không sửa dòng có sẵn`);
+	}
+	// khoa.json: khóa đã có giữ nguyên; khóa mới chỉ của trang và bản ghi của tác phẩm (và tác giả mới)
+	if (file.has('kiem-dinh/khoa.json')) {
+		let truoc = {};
+		try {
+			truoc = JSON.parse(cu('kiem-dinh/khoa.json'));
+		} catch {}
+		const nay = docKhoa(goc);
+		for (const bang of ['trang', 'ban_ghi']) {
+			for (const [k, v] of Object.entries(truoc[bang] ?? {})) if (nay[bang][k] !== v) loi.push(`kiem-dinh/khoa.json: ${k} đã khóa ở main mà bị đổi hay gỡ`);
+			for (const k of Object.keys(nay[bang]).filter((x) => !(x in (truoc[bang] ?? {}))))
+				if (!(bang === 'trang' ? [`piano/tac-pham/${slug}`, `nghe-nhac/${slug}`].includes(k) : k.split('#')[0] === `tac-pham/${slug}` || k.startsWith('nha-soan-nhac/')))
+					loi.push(`kiem-dinh/khoa.json: khóa mới ${k} không thuộc tác phẩm ${slug}`);
+		}
+	}
+	return { slug, loi };
 }
 
 /** Tên nhánh đang kiểm; trên GitHub Actions, pull request để HEAD tách rời nên lấy từ biến môi trường. */
@@ -234,4 +306,76 @@ test('nhánh đang làm: chỉ chạm file trong phạm vi của lô (nhánh moi
 	const kq = kiemPhamVi(ROOT, nhanh);
 	if (!kq) return t.skip(`nhánh ${nhanh || '(không rõ)'} không phải nhánh lô`);
 	assert.deepEqual(kq.loi, [], `lô ${kq.lo} chạm chỗ ngoài phạm vi (plans/lam-lai/README.md, Quy tắc chung): việc khác thì ghi vào báo cáo`);
+});
+
+test('phạm vi nhánh them/<slug>: chỉ file của tác phẩm, dữ liệu chỉ nối thêm ở cuối', () => {
+	for (const f of [
+		'src/data/tac-pham.yml',
+		'src/data/trang.yml',
+		'src/data/nha-soan-nhac.yml',
+		'src/content/docs/piano/tac-pham/mozart-alla-turca.md',
+		'src/content/docs/nghe-nhac/mozart-alla-turca.md',
+		'kiem-dinh/piano/tac-pham/mozart-alla-turca.yml',
+		'kiem-dinh/du-lieu/tac-pham/mozart-alla-turca.yml',
+		'kiem-dinh/du-lieu/nha-soan-nhac/satie.yml',
+		'kiem-dinh/khoa.json',
+		'public/audio/mozart-alla-turca.mp3',
+		'public/audio/mozart-alla-turca-2.mp3',
+		'public/audio/NGUON.txt',
+		'plans/ben-vung/bao-cao/them-mozart-alla-turca.md',
+	])
+		assert.ok(trongPhamViThem(f, 'mozart-alla-turca'), f);
+	for (const f of [
+		'src/data/cap-do.yml',
+		'src/content/docs/piano/tac-pham/fur-elise.md',
+		'src/content/docs/piano/gam.md',
+		'kiem-dinh/piano/tac-pham/fur-elise.yml',
+		'kiem-dinh/du-lieu/tac-pham/fur-elise.yml',
+		'public/audio/fur-elise.mp3',
+		'src/plugins/thanh-phan.mjs',
+		'AGENTS.md',
+	])
+		assert.ok(!trongPhamViThem(f, 'mozart-alla-turca'), f);
+
+	const goc = fs.mkdtempSync(path.join(os.tmpdir(), 'opus-pham-vi-them-'));
+	const g = (...ts) => execFileSync('git', ['-C', goc, '-c', 'user.name=thu', '-c', 'user.email=thu@example.com', ...ts], { stdio: 'ignore' });
+	const ghi = (f, chu) => {
+		fs.mkdirSync(path.dirname(path.join(goc, f)), { recursive: true });
+		fs.writeFileSync(path.join(goc, f), chu);
+	};
+	try {
+		g('init', '-q', '-b', 'main');
+		ghi('src/data/tac-pham.yml', '- slug: u\n  ten: U\n');
+		ghi('src/data/trang.yml', '- id: a\n  tang: loi\n');
+		ghi('kiem-dinh/khoa.json', JSON.stringify({ trang: { a: 'sha256:a' }, ban_ghi: { 'tac-pham/u#ten': 'sha256:u' } }));
+		g('add', '-A');
+		g('commit', '-q', '-m', 'nền');
+		g('checkout', '-q', '-b', 'them/moi');
+		ghi('src/data/tac-pham.yml', '- slug: u\n  ten: U\n- slug: moi\n  ten: Mới\n');
+		ghi('src/data/trang.yml', '- id: a\n  tang: loi\n- id: piano/tac-pham/moi\n  tang: tac-pham\n');
+		ghi('src/content/docs/piano/tac-pham/moi.md', 'trang\n');
+		ghi('kiem-dinh/khoa.json', JSON.stringify({ trang: { a: 'sha256:a', 'piano/tac-pham/moi': 'sha256:m' }, ban_ghi: { 'tac-pham/u#ten': 'sha256:u', 'tac-pham/moi': 'sha256:n' } }));
+		assert.deepEqual(kiemPhamViThem(goc, 'them/moi'), { slug: 'moi', loi: [] });
+		assert.equal(kiemPhamViThem(goc, 'moi/d6-l1'), null);
+		// sửa dòng có sẵn, file ngoài phạm vi, khóa của mục khác
+		ghi('src/data/tac-pham.yml', '- slug: u\n  ten: U sửa\n- slug: moi\n  ten: Mới\n');
+		ghi('src/content/docs/piano/gam.md', 'sửa\n');
+		ghi('kiem-dinh/khoa.json', JSON.stringify({ trang: { 'piano/tac-pham/moi': 'sha256:m', b: 'sha256:b' }, ban_ghi: { 'tac-pham/u#ten': 'sha256:u2' } }));
+		assert.deepEqual(kiemPhamViThem(goc, 'them/moi').loi, [
+			'src/content/docs/piano/gam.md: ngoài phạm vi của nhánh them/moi (them-tac-pham.md mục 4)',
+			'src/data/tac-pham.yml: chỉ được nối thêm ở cuối, không sửa dòng có sẵn',
+			'kiem-dinh/khoa.json: a đã khóa ở main mà bị đổi hay gỡ',
+			'kiem-dinh/khoa.json: khóa mới b không thuộc tác phẩm moi',
+			'kiem-dinh/khoa.json: tac-pham/u#ten đã khóa ở main mà bị đổi hay gỡ',
+		]);
+	} finally {
+		fs.rmSync(goc, { recursive: true, force: true });
+	}
+});
+
+test('nhánh đang làm them/<slug>: chỉ chạm file của tác phẩm (nhánh khác bỏ qua)', (t) => {
+	const nhanh = nhanhHienTai(ROOT);
+	const kq = kiemPhamViThem(ROOT, nhanh);
+	if (!kq) return t.skip(`nhánh ${nhanh || '(không rõ)'} không phải nhánh them/<slug>`);
+	assert.deepEqual(kq.loi, [], `nhánh them/${kq.slug} chạm chỗ ngoài phạm vi (plans/ben-vung/them-tac-pham.md mục 4): việc khác là việc riêng`);
 });

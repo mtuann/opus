@@ -55,7 +55,8 @@ tools/khoa.mjs              # hồ sơ mẫu, khóa, tính, mở khóa, xuất n
 tools/khuong-nhac.mjs       # kiểm khối ```abc: cảnh báo của abcjs, độ dài ô nhịp
 tools/may-chu.mjs           # máy chủ tĩnh cho kiểm thử trình duyệt và Lighthouse (HTTP/2 như GitHub Pages)
 tools/lighthouse/kiem.mjs   # đo Lighthouse, kiểm luật 7
-tools/audio/                # chép từ ../opus-zero/tools/audio/ ở đợt 6
+tools/audio/                # bản thu (Python): chép từ ../opus-zero/tools/audio/ ở D6-0, đọc và ghi ban_thu, mốc trong trang
+tools/them-tac-pham.mjs     # khung cho tác phẩm mới (D6-0; plans/ben-vung/them-tac-pham.md)
 plans/                      # kế hoạch, báo cáo
 .github/workflows/          # deploy.yml, test.yml (từ D1.7)
 .github/actions/kiem-thu/   # các bước build và kiểm thử dùng chung cho hai workflow
@@ -135,7 +136,8 @@ Cách làm (D1.6):
 | Trình duyệt: hiển thị, công cụ khởi tạo, in | `tests/trinh-duyet/kiem-hien-thi.mjs`, `kiem-thanh-phan.mjs`; ngoại tuyến từ đợt 7 | `tests/browser.mjs` |
 | Tìm kiếm: bộ truy vấn chuẩn, gõ không dấu cả chữ "đ" | `tests/trinh-duyet/kiem-tim-kiem.mjs`, `tests/tim-kiem.test.mjs` | `tests/search.mjs` |
 | Lighthouse ở ba trang | `tools/lighthouse/kiem.mjs` | `tools/lighthouse/` |
-| Bản thu và mốc (từ đợt 6) | | `tools/audio/check_audio.py` (vẫn ở gốc, đổi đường dẫn) |
+| Bản thu và mốc (từ D6-0) | `tests/ban-thu.test.mjs` (chạy `tools/audio/check_audio.py --static` và `tools/audio/tests/`; cần Python, PyYAML) | `tools/audio/check_audio.py` |
+| Trang tác phẩm theo mẫu, công cụ thêm tác phẩm (từ D6-0) | `tests/tac-pham.test.mjs` | `tests/levels.py`, `tests/counts.py` (một phần) |
 
 `npm test` chạy các file `tests/*.test.mjs`; kiểm thử trình duyệt và Lighthouse chạy riêng (`npm run test:trinh-duyet`, `npm run lighthouse`). CI chạy cả ba (mục 8).
 

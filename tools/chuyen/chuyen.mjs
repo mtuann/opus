@@ -299,6 +299,18 @@ export function chuyenTrang(md, { trang, moTa, banGhi }) {
 	const dau = { title: tieuDe, ...(moTa && { description: moTa }), ...(banGhi && { tac_pham: banGhi.slug }), ...giu };
 	const moi = chuyenThan(dong, { trang, banGhi, canhBao });
 	while (moi.length && moi.at(-1) === '') moi.pop();
+	// Bài học tác phẩm: ::hoc-tiep (trang chặng, trang cùng tác phẩm; sinh từ dữ liệu, data-sinh) ở cuối mục "Học tiếp",
+	// sau các bài chọn lọc viết tay (AGENTS.md, "Mẫu trang"; thêm ở D6-0)
+	if (banGhi && loaiTrang(trang) === 'bai-hoc' && !moi.includes('::hoc-tiep')) {
+		const dau = moi.findIndex((l) => /^## Học tiếp\s*(\{[^}]*\})?\s*$/.test(l));
+		// trang thiếu mục thì để tests/tac-pham.test.mjs báo
+		if (dau >= 0) {
+			let cuoi = moi.findIndex((l, i) => i > dau && /^## /.test(l));
+			if (cuoi < 0) cuoi = moi.length;
+			while (cuoi > dau + 1 && moi[cuoi - 1] === '') cuoi--;
+			moi.splice(cuoi, 0, '', '::hoc-tiep');
+		}
+	}
 	// lớp oz- còn sót trong HTML thô: site cũ có CSS hay JavaScript cho lớp này, site mới thì chưa. Khối có chức năng
 	// chỉ được thêm ô "chưa chuyển" khi có thuộc tính markdown; thiếu thì cũng phải báo.
 	const conSot = new Set(

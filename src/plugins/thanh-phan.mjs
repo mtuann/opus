@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 import { markdownToHtml } from 'satteri';
 import { parse as parseYaml } from 'yaml';
 import { DUONG_GOC, trangCuaDiaChi, trangTrongBan } from '../ban-build.mjs';
-import { chiDaKhoa, duLieuDaKiem } from '../du-lieu.mjs';
+import { chiDaKhoa, coTruongDaKhoa, duLieuDaKiem } from '../du-lieu.mjs';
 import { docKhoa, truongDaKhoa } from '../khoa.mjs';
 import { GIONG, midiCua, soDauGon, tenVietCua } from '../scripts/nhac-ly.js';
 import { khoangPhim, thongTinGiong, veBanPhim, veChucNang, veDieuThuc, veHoaBieu, veVongChon, veVongQuangNam } from '../scripts/ve.js';
@@ -302,7 +302,8 @@ export function duLieuCho(noi, { luonKhoa = false, khoa = docKhoa() } = {}) {
 	const d = duLieuDaKiem();
 	return {
 		capDo: d['cap-do'].map(boc('cap-do')).sort((a, b) => a.id - b.id),
-		tacPham: d['tac-pham'].map(boc('tac-pham')),
+		// tác phẩm chưa khóa trường nào (vừa thêm, chưa kiểm định) thì trang đã khóa và thứ luôn đăng không thấy (coTruongDaKhoa)
+		tacPham: d['tac-pham'].filter((r) => !daKhoa || coTruongDaKhoa(r, 'tac-pham', daKhoa)).map(boc('tac-pham')),
 		nguoi: new Map(d['nha-soan-nhac'].map((r) => [r.id, boc('nha-soan-nhac')(r)])),
 		thuatNgu: d['thuat-ngu'].map(boc('thuat-ngu')),
 	};
@@ -893,7 +894,8 @@ export function hocTiep(rec, { tacPham, nguoi, base, trang }) {
 		dong.push(`<strong>${nhan}:</strong> <a href="${base}${kia}/">${md(tenTacPham(banGhiKia, nguoi))}</a>.`);
 	}
 	if (!dong.length) return '';
-	return `<ul class="oz-hoc-tiep">${dong.map((d) => `<li>${d}</li>`).join('')}</ul>`;
+	// data-sinh: chữ sinh từ dữ liệu, không có ở trang cũ (tools/chuyen/so-chu.mjs bỏ khi so chữ)
+	return `<ul class="oz-hoc-tiep" data-sinh>${dong.map((d) => `<li>${d}</li>`).join('')}</ul>`;
 }
 
 // ---------- Dòng thời gian nhà soạn nhạc (D5-L1; src/scripts/dong-thoi-gian.js) ----------

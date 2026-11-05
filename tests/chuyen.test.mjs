@@ -225,3 +225,15 @@ test(
 	},
 );
 
+
+test('bài học tác phẩm: ::hoc-tiep ở cuối mục "Học tiếp", sau các bài chọn lọc viết tay (D6-0)', () => {
+	const banGhi = { slug: 'x', loai: 'bai-hoc' };
+	const vao = '## Học tiếp\n\n- [A](a.md)\n- B\n\n## Kiểm tra nhanh\n\nChữ.';
+	const kq = chuyen(vao, { trang: 'piano/tac-pham/x', banGhi });
+	assert.equal(kq.than, '## Học tiếp\n\n- [A](/opus/piano/tac-pham/a/)\n- B\n\n::hoc-tiep\n\n## Kiểm tra nhanh\n\nChữ.');
+	assert.equal(chuyen('## Học tiếp\n\n- B', { trang: 'piano/tac-pham/x', banGhi }).than, '## Học tiếp\n\n- B\n\n::hoc-tiep');
+	// hướng dẫn nghe, trang không có bản ghi, bài học thiếu mục (tests/tac-pham.test.mjs báo): không thêm
+	assert.equal(chuyen('## Học tiếp\n\n- B', { trang: 'nghe-nhac/x', banGhi: { slug: 'x', loai: 'nghe' } }).than, '## Học tiếp\n\n- B');
+	assert.equal(chuyen('## Học tiếp\n\n- B', { trang: 'piano/gam' }).than, '## Học tiếp\n\n- B');
+	assert.equal(chuyen('## Khác', { trang: 'piano/tac-pham/x', banGhi }).than, '## Khác');
+});

@@ -102,7 +102,11 @@ test('trang đã khóa: hình và công cụ dựng từ dữ liệu chỉ đọ
 	assert.match(hinhLoTrinh(duLieuCho('piano/lo-trinh', { khoa: { ...khoaTrang, ban_ghi: caCapDo } }).capDo), /Chặng 7/);
 	// chưa khóa trang thì không chặn; luôn đăng thì chặn dù không có trang nào khóa
 	assert.match(hinhLoTrinh(duLieuCho('piano/lo-trinh', { khoa: { trang: {}, ban_ghi: {} } }).capDo), /Chặng 7/);
-	assert.throws(() => goiYTheoChang(duLieuCho('ô gợi ý tập', { luonKhoa: true, khoa: { trang: {}, ban_ghi: caCapDo } }), []), /ô gợi ý tập hiện trường chưa khóa du-lieu\/tac-pham\//);
+	// tác phẩm khóa một phần (chỉ ten) thì đọc chang là lỗi; tác phẩm chưa khóa trường nào thì không có trong danh sách
+	const chiTen = Object.fromEntries(duLieuDaKiem()['tac-pham'].map((r) => [`tac-pham/${r.slug}#ten`, 'x']));
+	assert.throws(() => goiYTheoChang(duLieuCho('ô gợi ý tập', { luonKhoa: true, khoa: { trang: {}, ban_ghi: { ...caCapDo, ...chiTen } } }), []), /ô gợi ý tập hiện trường chưa khóa du-lieu\/tac-pham\//);
+	assert.deepEqual(duLieuCho('ô gợi ý tập', { luonKhoa: true, khoa: { trang: {}, ban_ghi: caCapDo } }).tacPham, []);
+	assert.equal(duLieuCho('ô gợi ý tập', { khoa: { trang: {}, ban_ghi: {} } }).tacPham.length, duLieuDaKiem()['tac-pham'].length, 'trang chưa khóa thấy mọi bản ghi');
 	// chiDaKhoa vẫn cho đọc id
 	assert.equal(chiDaKhoa({ id: 2, ten: 'x' }, 'cap-do', 'thử', () => false).id, 2);
 });
@@ -183,7 +187,8 @@ test('ô gợi ý tập: dữ liệu theo chặng (goi_y, chang), luôn đăng n
 	assert.deepEqual(d.bai_nhac_ly, ['/opus/nhac-ly/10-hop-am-ba/']);
 	// luôn đăng: bản ghi chưa khóa thì build hỏng, dù không có trang nào khóa
 	const caCapDo = Object.fromEntries(duLieuDaKiem()['cap-do'].map((c) => [`cap-do/${c.id}`, 'x']));
-	assert.throws(() => goiYTap(duLieuCho('ô gợi ý tập ở trang chủ', { luonKhoa: true, khoa: { trang: {}, ban_ghi: caCapDo } }), ds), /ô gợi ý tập ở trang chủ hiện trường chưa khóa du-lieu\/tac-pham\//);
+	const chiTen = Object.fromEntries(duLieuDaKiem()['tac-pham'].map((r) => [`tac-pham/${r.slug}#ten`, 'x']));
+	assert.throws(() => goiYTap(duLieuCho('ô gợi ý tập ở trang chủ', { luonKhoa: true, khoa: { trang: {}, ban_ghi: { ...caCapDo, ...chiTen } } }), ds), /ô gợi ý tập ở trang chủ hiện trường chưa khóa du-lieu\/tac-pham\//);
 	assert.equal(congCu({ ten: 'goi-y-tap' }, 'index'), goiYTap());
 	assert.throws(() => congCu({ ten: 'goi-y-tap', chang: '3' }, 'index'), /không nhận thông số/);
 });

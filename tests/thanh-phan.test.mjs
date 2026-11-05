@@ -113,7 +113,7 @@ test('::hoc-tiep: trang chặng hiện tại và chặng sau, trang cùng tác p
 	const html = dung(trangTacPham('fur-elise', '::hoc-tiep'));
 	assert.equal(
 		html.trim(),
-		'<ul class="oz-hoc-tiep"><li><strong>Cùng chặng 4:</strong> <a href="/opus/piano/lo-trinh/chang-4/">các bài của chặng 4</a>.</li>' +
+		'<ul class="oz-hoc-tiep" data-sinh><li><strong>Cùng chặng 4:</strong> <a href="/opus/piano/lo-trinh/chang-4/">các bài của chặng 4</a>.</li>' +
 			'<li><strong>Chặng 5:</strong> <a href="/opus/piano/lo-trinh/chang-5/">các bài của chặng 5</a>.</li></ul>',
 	);
 	// chặng cuối: không có dòng chặng sau

@@ -11,7 +11,7 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse } from 'yaml';
-import { chiDaKhoa, duLieuDaKiem } from '../du-lieu.mjs';
+import { chiDaKhoa, coTruongDaKhoa, duLieuDaKiem } from '../du-lieu.mjs';
 import { docKhoa, truongDaKhoa } from '../khoa.mjs';
 import { bangNhaSoanNhac, congCu, danhSachBai, docBaiBlog, docMoc, dongThoiGian, duLieuCho, hinh, hinhCauTruc, hocTiep, hopTacPham, khoiNghe, khuongAbc, quiz, tacPhamMoi, tuDien } from './thanh-phan.mjs';
 import { docDanhSach } from '../scripts/dong-thoi-gian.js';
@@ -135,8 +135,10 @@ export function opusMarkdown({ base, docsDir, khoa = docKhoa }) {
 				const k = khoa();
 				const daKhoa = k.trang[trang] ? truongDaKhoa(k) : null;
 				const boc = (bo) => (r) => (daKhoa ? chiDaKhoa(r, bo, `trang đã khóa ${trang} (::${node.name})`, daKhoa) : r);
-				const tacPham = duLieu['tac-pham'].map(boc('tac-pham'));
-				const rec = fm.tac_pham ? tacPham.find((r) => r.slug === fm.tac_pham) : undefined;
+				const tatCa = duLieu['tac-pham'].map(boc('tac-pham'));
+				const rec = fm.tac_pham ? tatCa.find((r) => r.slug === fm.tac_pham) : undefined;
+				// danh sách (Học tiếp, tác phẩm mới…) của trang đã khóa bỏ qua tác phẩm chưa khóa trường nào (coTruongDaKhoa)
+				const tacPham = daKhoa ? tatCa.filter((r) => coTruongDaKhoa(r, 'tac-pham', daKhoa)) : tatCa;
 				if (muc.tacPham && !rec) throw loi(`::${node.name} cần trường tac_pham ở frontmatter (slug trong src/data/tac-pham.yml)`);
 				const nguoi = new Map(duLieu['nha-soan-nhac'].map((r) => [r.id, boc('nha-soan-nhac')(r)]));
 				try {

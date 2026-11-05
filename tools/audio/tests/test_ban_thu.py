@@ -264,7 +264,9 @@ class DuLieuThat(unittest.TestCase):
         chu = page.DATA.read_text(encoding="utf-8")
         recs = page.records()
         for r in recs:
-            for f in ("ban_thu", "hinh"):
+            # hinh: chỉ bản ghi tách từ site cũ (tools/du_lieu/tach.py, cùng kiểu viết); bản ghi do tools/them-tac-pham.mjs
+            # viết có thể khác cách đặt nháy, attach.py chỉ ghi ban_thu nên không sao
+            for f in ("ban_thu", "hinh") if "them_ngay" not in r else ("ban_thu",):
                 if f in r:
                     self.assertEqual(page.replace_field(chu, r["slug"], f, r[f]), chu, "%s.%s" % (r["slug"], f))
             if "ban_thu" in r:

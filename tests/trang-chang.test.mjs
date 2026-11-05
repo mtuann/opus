@@ -5,12 +5,14 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
-import { duLieuDaKiem } from '../src/du-lieu.mjs';
+import { coTruongDaKhoa, duLieuDaKiem } from '../src/du-lieu.mjs';
+import { truongDaKhoa } from '../src/khoa.mjs';
 import { BAT_DAU_CHANG_1, ganDung, gradeChang } from '../src/plugins/thanh-phan.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DIST = path.join(ROOT, 'dist');
 const du = duLieuDaKiem();
+const daKhoa = truongDaKhoa();
 const capDo = [...du['cap-do']].sort((a, b) => a.id - b.id);
 const giaiMa = (s) => s.replaceAll('&quot;', '"').replaceAll('&#39;', "'").replaceAll('&lt;', '<').replaceAll('&gt;', '>').replaceAll('&amp;', '&');
 
@@ -53,7 +55,8 @@ test('trang chặng liệt kê đúng bài học tác phẩm của chặng (bài
 	const diaChi = (r) => `/opus/piano/tac-pham/${r.slug}/`;
 	for (const c of capDo) {
 		const html = docTrang(`piano/lo-trinh/chang-${c.id}`);
-		const bai = du['tac-pham'].filter((r) => r.loai === 'bai-hoc' && r.chang === c.id);
+		// tác phẩm chưa khóa trường nào (vừa thêm bằng tools/them-tac-pham.mjs) chưa vào danh sách
+		const bai = du['tac-pham'].filter((r) => r.loai === 'bai-hoc' && r.chang === c.id && coTruongDaKhoa(r, 'tac-pham', daKhoa));
 		const danhSach = [...html.matchAll(/<ul class="oz-chang-bai">/g)].length;
 		const tatCa = [...html.matchAll(/<ul class="oz-chang-bai">([\s\S]*?)<\/ul>/g)].flatMap((m) => muc(`<ul class="oz-chang-bai">${m[1]}</ul>`, 'oz-chang-bai'));
 		if (!bai.length) {

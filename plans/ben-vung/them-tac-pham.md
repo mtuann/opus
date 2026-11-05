@@ -2,7 +2,7 @@
 
 Áp dụng cho trang thuộc tầng Tác phẩm của site mới: bài học trong `src/content/docs/piano/tac-pham/` và hướng dẫn nghe trong `src/content/docs/nghe-nhac/`. Mục tiêu: thêm một tác phẩm chỉ tạo file mới và nối thêm dữ liệu, không sửa trang nào khác, nên review chỉ cần đọc phần thêm.
 
-**Trạng thái:** dùng được từ sau đợt 6 của `plans/lam-lai/README.md`, khi bản ghi tác phẩm đã đủ trường, `tools/audio/` đã đọc và ghi bản thu trong bản ghi, và công cụ ở mục 2, 4 đã có (việc chuẩn bị của đợt 6). Trước đó không thêm tác phẩm. Ba bài làm thử đầu tiên: xem `README.md` mục "Vận hành sau khi làm lại".
+**Trạng thái:** dùng được từ sau đợt 6 của `plans/lam-lai/README.md`, khi bản ghi tác phẩm đã đủ trường. `tools/audio/` đọc và ghi bản thu trong bản ghi, công cụ ở mục 2 và kiểm thử ở mục 4 đã có từ việc chuẩn bị D6-0 (`plans/lam-lai/bao-cao/d6-0.md`). Trước khi đợt 6 xong không thêm tác phẩm. Còn chờ D6-L11: danh mục tác phẩm, và sách in đọc danh sách tác phẩm từ dữ liệu (lúc D6-0, chương sách in còn liệt kê tay trong `src/sach/sach.mjs`; menu đã tự thêm trang mới vào nhóm Tác phẩm). Ba bài làm thử đầu tiên: xem `README.md` mục "Vận hành sau khi làm lại".
 
 ## 1. Khảo sát và duyệt
 
@@ -21,13 +21,23 @@ Bạn duyệt danh sách. Chỉ ứng viên đã duyệt mới sang bước 2.
 
 ## 2. Tạo khung
 
-`python3 tools/them_tac_pham.py <slug> --loai bai-hoc|nghe` (tạo ở việc chuẩn bị của đợt 6) sinh:
+```bash
+node tools/them-tac-pham.mjs <slug> --loai bai-hoc --tac-gia <id> --ten "<tên>" --chang <1–7> --grade "Grade <n>" [--danh-muc "<số danh mục>"] [--thoi-ky "<thời kỳ>"]
+node tools/them-tac-pham.mjs <slug> --loai nghe --tac-gia <id> --ten "<tên>"
+```
 
-- một bản ghi cuối `src/data/tac-pham.yml`, điền từ kết quả khảo sát;
+Công cụ làm ở D6-0, viết bằng Node thay cho `tools/them_tac_pham.py` ghi lúc đầu: dùng chung schema và kiểm chéo của `src/du-lieu.mjs`, lệnh `mau` của `tools/khoa.mjs` và cách đọc ghi YAML của bản build. Nó sinh:
+
+- một bản ghi cuối `src/data/tac-pham.yml`: trường như bản ghi cùng loại đã có, chỗ cần điền ghi `[[điền: …]]`; dòng "Nhà soạn nhạc" của bảng thông tin và chip cấp độ lấy từ dữ liệu;
+- một dòng `- id: <trang>`, `tang: tac-pham` cuối `src/data/trang.yml` (kiểm chéo của dữ liệu đòi trang chính của bản ghi có tầng);
 - trang mới theo mẫu, đủ các mục bắt buộc (mẫu lấy từ mục "Mẫu trang" của `AGENTS.md`, chốt ở D1.3);
-- hồ sơ kiểm định rỗng `kiem-dinh/<đường dẫn>.yml`.
+- hồ sơ kiểm định mẫu của trang `kiem-dinh/<đường dẫn>.yml` và của bản ghi `kiem-dinh/du-lieu/tac-pham/<slug>.yml` (`node tools/khoa.mjs mau`).
 
-Bản ghi mẫu (giá trị trong `<>` lấy từ khảo sát):
+Dữ liệu sau khi thêm phải qua schema và kiểm chéo; không qua thì công cụ trả lại các file như cũ. Tác giả chưa có trong `nha-soan-nhac.yml` thì thêm bản ghi tác giả trước (có hồ sơ), rồi chạy lại. `--cap` tới trang có bản ghi riêng (như `nghe-nhac/mozart-k331`) cần bản ghi kia trỏ `cap` ngược lại, tức sửa một bản ghi đã có: việc riêng, có mở khóa nếu bản ghi ấy đã khóa.
+
+Bản ghi chưa khóa trường nào không hiện ở trang đã khóa hay trang luôn đăng (trang chặng, ô gợi ý tập, danh sách "Học tiếp"…; `coTruongDaKhoa` trong `src/du-lieu.mjs`), nên thêm bản ghi không làm hỏng build; tác phẩm hiện ở các danh sách ấy khi bản ghi được khóa (mục 6).
+
+Bản ghi mẫu (giá trị trong `<>` lấy từ khảo sát; `ban_thu` không có cho tới khi `attach.py` ghi, vì schema không nhận danh sách rỗng):
 
 ```yaml
 - slug: mozart-alla-turca
@@ -46,8 +56,8 @@ Bản ghi mẫu (giá trị trong `<>` lấy từ khảo sát):
   cap: nghe-nhac/mozart-k331       # trang cùng tác phẩm, nếu có
   ky_nang: []                      # cho mục "Chọn bài theo mục tiêu"
   goi_y: false                     # có đưa vào gợi ý tập trong practice.js không
-  hinh: {}                         # thông số hình cấu trúc (site cũ để ở tools/figures.py)
-  ban_thu: []                      # bản thu và mốc; tools/audio/attach.py ghi, không sửa tay
+  hinh: {bai-hoc: [...]}           # sơ đồ các đoạn (site cũ để ở tools/figures.py); công cụ sinh khung một đoạn
+  ban_thu: [...]                   # bản thu; tools/audio/attach.py ghi, không sửa tay. Mốc ở trang: ::khoi-nghe{moc="…"}
   them_ngay: <ngày gộp>
 ```
 
@@ -57,15 +67,16 @@ Danh sách bài cùng chặng, menu, mục lục, danh mục tác phẩm, sách 
 
 - Trang theo mẫu; hộp thông tin và chip cấp độ là chỉ thị sinh từ bản ghi, không viết tay.
 - Trích đoạn thật đối chiếu từng nốt theo `chuan-kiem-dinh.md` mục 4; bài tập chuẩn bị soạn riêng, ghi "soạn cho trang này".
-- Bản thu gắn bằng `tools/audio/attach.py` theo `tools/audio/README.md` (ghi vào bản ghi, không vào trang).
+- Bản thu gắn bằng `tools/audio/attach.py` theo `tools/audio/README.md` (bản thu ghi vào bản ghi, mốc tham khảo ghi vào `::khoi-nghe{moc="…"}` của trang).
 - Ghi hồ sơ kiểm định cho trang mới (lượt 1).
 
 ## 4. Kiểm tự động
 
 | Kiểm thử | Kiểm gì |
 |---|---|
-| Kiểm thử `tac_pham` cho `<slug>` (tạo ở việc chuẩn bị của đợt 6) | Bản ghi đủ trường, đúng kiểu; tác giả có trong dữ liệu; trang đủ mục bắt buộc; khuông nhạc không cảnh báo và đủ phách; trích đoạn có mục đối chiếu trong hồ sơ; bản thu đúng giấy phép; mục Nguồn có link; link nội bộ và anchor đúng |
-| Kiểm thử phạm vi (D1.6, mở rộng cho nhánh `them/<slug>`) | Nhánh chỉ chạm các file ở bảng dưới; không sửa dòng có sẵn trong `src/data/` |
+| Kiểm thử `tac_pham` (D6-0): `tests/tac-pham.test.mjs` cho mọi trang tác phẩm | Trang đủ mục bắt buộc, đúng thứ tự, chỉ thị đúng mục; bảng "Theo dõi khi nghe" cột đầu "…"; mục Nguồn có link; bản ghi đủ trường; không còn `[[điền: …]]` |
+| Các kiểm thử khác của `npm test` | Bản ghi đúng kiểu, tác giả có trong dữ liệu (`du-lieu.test.mjs`); khuông nhạc không cảnh báo và đủ phách (`khuong-nhac.test.mjs`); bản thu đúng giấy phép, file có thật, mốc hợp bảng (`ban-thu.test.mjs`: `tools/audio/check_audio.py --static`); link nội bộ và anchor (`link.test.mjs`); trích đoạn có mục đối chiếu trong hồ sơ (`node tools/khoa.mjs khoa`) |
+| Kiểm thử phạm vi (`tests/pham-vi.test.mjs`, nhánh `them/<slug>`, D6-0) | Nhánh chỉ chạm các file ở bảng dưới; dữ liệu và `NGUON.txt` chỉ nối thêm ở cuối; khóa đã có trong `khoa.json` giữ nguyên, khóa mới chỉ của tác phẩm (và tác giả mới) |
 | `npm run build:xem`, `npm test` | Như mọi lần: build, schema, khóa, link, trợ năng |
 
 Các file nhánh `them/<slug>` được chạm:
@@ -74,9 +85,11 @@ Các file nhánh `them/<slug>` được chạm:
 |---|---|
 | `src/data/tac-pham.yml` | Thêm một bản ghi ở cuối |
 | `src/data/nha-soan-nhac.yml` | Thêm một bản ghi, chỉ khi tác giả chưa có |
+| `src/data/trang.yml` | Thêm một dòng (tầng `tac-pham` của trang mới) |
 | `src/content/docs/piano/tac-pham/<slug>.md` hoặc `src/content/docs/nghe-nhac/<slug>.md` | Tạo mới |
 | `kiem-dinh/piano/tac-pham/<slug>.yml` hoặc `kiem-dinh/nghe-nhac/<slug>.yml` | Tạo mới |
-| `kiem-dinh/khoa.json` | Thêm một dòng (bước 6) |
+| `kiem-dinh/du-lieu/tac-pham/<slug>.yml`; `kiem-dinh/du-lieu/nha-soan-nhac/<id>.yml` (tác giả mới) | Tạo mới |
+| `kiem-dinh/khoa.json` | Thêm khóa của trang và của bản ghi (bước 6) |
 | `public/audio/<slug>*.mp3`, `public/audio/NGUON.txt` | Thêm file, thêm dòng; chỉ khi bản thu lưu trên site |
 | `plans/ben-vung/bao-cao/them-<slug>.md` | Tạo mới |
 

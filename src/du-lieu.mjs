@@ -198,6 +198,14 @@ export function chiDaKhoa(banGhi, bo, noi, daKhoa = truongDaKhoa()) {
 	});
 }
 
+/**
+ * Bản ghi có ít nhất một trường đã khóa không (`daKhoa` như truongDaKhoa, src/khoa.mjs). Trang đã khóa và thứ luôn đăng
+ * (trang chặng, ô gợi ý tập) bỏ qua bản ghi tác phẩm chưa khóa trường nào khi liệt kê: tác phẩm vừa thêm bằng
+ * tools/them-tac-pham.mjs (plans/ben-vung/them-tac-pham.md) chưa hiện ở đâu, và không làm hỏng build, cho tới khi được
+ * kiểm định và khóa (D6-0). Bản ghi đã khóa một phần thì vẫn qua chiDaKhoa: đọc trường chưa khóa là lỗi.
+ */
+export const coTruongDaKhoa = (banGhi, bo, daKhoa) => Object.keys(schema[bo].shape).some((t) => daKhoa(bo, khoa(bo, banGhi), t));
+
 /** Thư mục gốc của dự án: thư mục cha của src/, nơi có file này. */
 const GOC = fileURLToPath(new URL('../', import.meta.url));
 

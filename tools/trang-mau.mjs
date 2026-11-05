@@ -16,6 +16,7 @@ export const KHOI = {
 	'khối nghe': 'class="oz-listen',
 	'hộp tác phẩm': 'class="oz-piece',
 	'hình cấu trúc': 'class="oz-figure',
+	'học tiếp': 'class="oz-hoc-tiep',
 	'bảng': '<table',
 	'khối thu gọn': '<details',
 	'chữ "sắp có"': 'class="oz-sap-co"',

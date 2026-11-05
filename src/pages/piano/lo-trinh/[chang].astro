@@ -11,7 +11,7 @@
 import { getCollection, render } from 'astro:content';
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { DUONG_GOC, trangCuaMuc } from '../../../ban-build.mjs';
-import { chiDaKhoa } from '../../../du-lieu.mjs';
+import { chiDaKhoa, coTruongDaKhoa } from '../../../du-lieu.mjs';
 import { truongDaKhoa } from '../../../khoa.mjs';
 import {
 	BAT_DAU_CHANG_1,
@@ -36,7 +36,8 @@ const daKhoa = truongDaKhoa({ trang: KHOA.trang ?? {}, ban_ghi: KHOA.ban_ghi ?? 
 const noi = `trang chặng ${id}`;
 const boc = (bo) => (e) => chiDaKhoa(e.data, bo, noi, daKhoa);
 const capDo = (await getCollection('cap-do')).map(boc('cap-do')).sort((a, b) => a.id - b.id);
-const tacPham = (await getCollection('tac-pham')).map(boc('tac-pham'));
+// tác phẩm chưa khóa trường nào (vừa thêm, chưa kiểm định) chưa vào danh sách (coTruongDaKhoa, src/du-lieu.mjs)
+const tacPham = (await getCollection('tac-pham')).filter((e) => coTruongDaKhoa(e.data, 'tac-pham', daKhoa)).map(boc('tac-pham'));
 const nguoi = new Map((await getCollection('nha-soan-nhac')).map((e) => [e.data.id, boc('nha-soan-nhac')(e)]));
 const c = capDo.find((x) => x.id === id);
 const bai = tacPham.filter((r) => r.loai === 'bai-hoc' && r.chang === id);
