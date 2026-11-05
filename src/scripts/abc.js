@@ -276,8 +276,18 @@ function dung(el) {
 	congCu(el);
 }
 
+/**
+ * Nhường lượt cho trình duyệt trước khi vẽ một khuông: abcjs tải xong thì mọi khuông đang chờ được gọi cùng lúc; vẽ liền
+ * trong một tác vụ thì trang có khuông (như bat-dau/tom-tat) đứng hàng trăm ms trên máy chậm (TBT của Lighthouse ở CI).
+ * Mỗi khuông một tác vụ riêng, trình duyệt xử lý được thao tác của người đọc ở giữa. In thì inTruoc vẽ đồng bộ, không nhường.
+ */
+const nhuong = () =>
+	new Promise((r) => (globalThis.scheduler?.yield ? globalThis.scheduler.yield().then(r) : setTimeout(r, 0)));
+
 export function mount(el) {
-	return taiAbcjs().then(() => dung(el));
+	return taiAbcjs()
+		.then(nhuong)
+		.then(() => dung(el));
 }
 
 /** Trước khi in: vẽ đồng bộ mọi khuông chưa vẽ (abcjs đã tải, hay mã đã tải sẵn: chạy ngay). */
