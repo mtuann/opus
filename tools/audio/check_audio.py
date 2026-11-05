@@ -24,7 +24,7 @@ Kiểm:
    không nghe thấy khác biệt; transcode.py giữ đủ 3 giây. Số "cắt đầu" in ra với -v là --start của transcode.py khi
    chuyển mã lại mà giữ nguyên mốc. File gốc không có trên máy (ví dụ trong CI) thì bỏ qua.
 6. --network: file trên Commons còn đó, độ dài khớp d, giấy phép trên Commons vẫn là giấy phép ghi trong bản ghi.
-Có lỗi thì thoát với mã 1.
+Có lỗi thì thoát với mã 1; không hỏi được Commons (--network) thì in một dòng "LỖI mạng" và thoát mã 2.
 """
 import argparse
 import glob
@@ -251,7 +251,11 @@ def main(argv=None):
     if a.network:
         import commons
         titles = [commons_title(p) for _, _, p, _ in remote]
-        info = {r["title"]: r for r in commons.files(sorted({t for t in titles if t}))}
+        try:
+            info = {r["title"]: r for r in commons.files(sorted({t for t in titles if t}))}
+        except (OSError, RuntimeError, ValueError) as e:     # HTTPError, URLError, hết lần thử, ApiError, JSON hỏng
+            print("LỖI mạng: không đối chiếu được với Commons (%s: %s); chạy lại sau" % (type(e).__name__, e))
+            return 2
         for (where, i, p, rec), t in zip(remote, titles):
             if not t:
                 if "imslp.org/" not in (p.get("link") or ""):   # bản thu IMSLP chỉ dẫn link: không có API để đối chiếu

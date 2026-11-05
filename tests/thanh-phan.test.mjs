@@ -9,7 +9,7 @@ import { duLieuDaKiem } from '../src/du-lieu.mjs';
 import { bam, danhSachViec } from '../src/plugins/danh-sach-viec.mjs';
 import { sapCo } from '../src/plugins/sap-co.mjs';
 import { opusMarkdown } from '../src/plugins/opus-markdown.mjs';
-import { canTaiScript, docMoc, docQuiz, hinhCauTruc, khoiNghe, md } from '../src/plugins/thanh-phan.mjs';
+import { hocTiep, canTaiScript, docMoc, docQuiz, hinhCauTruc, khoiNghe, md } from '../src/plugins/thanh-phan.mjs';
 import { kiemDinh, ngayViet } from '../src/kiem-dinh.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
@@ -124,6 +124,17 @@ test('::hoc-tiep: trang chặng hiện tại và chặng sau, trang cùng tác p
 	// Trang hướng dẫn nghe dùng chung bản ghi: dẫn về bài học, không dẫn về chính nó
 	const nghe = dung(trangTacPham('liszt-liebestraum', '::hoc-tiep'), 'nghe-nhac/liszt-liebestraum');
 	assert.match(nghe, /<strong>Bài học:<\/strong> <a href="\/opus\/piano\/tac-pham\/liszt-liebestraum\/">/);
+	// trang kia có bản ghi riêng mà bản ghi ấy không có trong danh sách (chưa khóa trường nào): bỏ dòng, không hiện tên sai
+	const tatCa = duLieuDaKiem()['tac-pham'];
+	const rec = tatCa.find((r) => r.slug === 'schumann-traumerei');
+	const nguoi = new Map(duLieuDaKiem()['nha-soan-nhac'].map((r) => [r.id, r]));
+	const ctx = { tatCa, nguoi, base: '/opus/', trang: 'piano/tac-pham/schumann-traumerei' };
+	assert.match(hocTiep(rec, { ...ctx, tacPham: tatCa }), /Nghe kèm:<\/strong> <a href="\/opus\/nghe-nhac\/schumann-kinderszenen\/">Schumann: Kinderszenen<\/a>/);
+	const khongCo = hocTiep(rec, { ...ctx, tacPham: tatCa.filter((r) => r.slug !== 'schumann-kinderszenen') });
+	assert.doesNotMatch(khongCo, /Nghe kèm|Träumerei<\/a>/);
+	// trang cap dùng chung bản ghi (cùng slug hay không có bản ghi riêng): tên của chính bản ghi
+	const anhTrang = tatCa.find((r) => r.slug === 'beethoven-anh-trang');
+	assert.match(hocTiep(anhTrang, { ...ctx, tacPham: [anhTrang], trang: 'piano/tac-pham/beethoven-anh-trang' }), /Nghe kèm:<\/strong> <a href="\/opus\/nghe-nhac\/beethoven-moonlight\/">/);
 });
 
 test('::khoi-nghe: không có bản thu trong dữ liệu thì để người học tự dán link; có thì gợi ý bản đầu tiên, mốc theo trang', () => {

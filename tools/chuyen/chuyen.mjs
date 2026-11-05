@@ -302,12 +302,12 @@ export function chuyenTrang(md, { trang, moTa, banGhi }) {
 	// Bài học tác phẩm: ::hoc-tiep (trang chặng, trang cùng tác phẩm; sinh từ dữ liệu, data-sinh) ở cuối mục "Học tiếp",
 	// sau các bài chọn lọc viết tay (AGENTS.md, "Mẫu trang"; thêm ở D6-0)
 	if (banGhi && loaiTrang(trang) === 'bai-hoc' && !moi.includes('::hoc-tiep')) {
-		const dau = moi.findIndex((l) => /^## Học tiếp\s*(\{[^}]*\})?\s*$/.test(l));
+		const dauMuc = moi.findIndex((l) => /^## Học tiếp\s*(\{[^}]*\})?\s*$/.test(l));
 		// trang thiếu mục thì để tests/tac-pham.test.mjs báo
-		if (dau >= 0) {
-			let cuoi = moi.findIndex((l, i) => i > dau && /^## /.test(l));
+		if (dauMuc >= 0) {
+			let cuoi = moi.findIndex((l, i) => i > dauMuc && /^## /.test(l));
 			if (cuoi < 0) cuoi = moi.length;
-			while (cuoi > dau + 1 && moi[cuoi - 1] === '') cuoi--;
+			while (cuoi > dauMuc + 1 && moi[cuoi - 1] === '') cuoi--;
 			moi.splice(cuoi, 0, '', '::hoc-tiep');
 		}
 	}

@@ -142,7 +142,7 @@ export function opusMarkdown({ base, docsDir, khoa = docKhoa }) {
 				if (muc.tacPham && !rec) throw loi(`::${node.name} cần trường tac_pham ở frontmatter (slug trong src/data/tac-pham.yml)`);
 				const nguoi = new Map(duLieu['nha-soan-nhac'].map((r) => [r.id, boc('nha-soan-nhac')(r)]));
 				try {
-					const html = muc.ve({ rec, tt, base, trang, nguoi, tacPham, rieng });
+					const html = muc.ve({ rec, tt, base, trang, nguoi, tacPham, tatCa, rieng });
 					if (node.name === 'khoi-nghe' && choMoc) throw new Error(`khối nghe trước có moc mà chưa gặp bảng "${TIEU_DE_MOC}"`);
 					if (node.name === 'khoi-nghe' && tt.moc !== undefined) choMoc = { so: docMoc(tt.moc).length, trongMuc: false };
 					return { type: 'html', value: html };

@@ -23,6 +23,7 @@ import licenses  # noqa: E402
 import net  # noqa: E402
 import page  # noqa: E402
 import transcode  # noqa: E402
+from unittest import mock  # noqa: E402
 
 GOC = HERE.parents[2]
 
@@ -225,6 +226,67 @@ class GhiBanThu(RepoGia):
         chu = self.doc("src/data/tac-pham.yml")
         self.assertIn("  - by: C\n    lic: CC BY-SA 4.0\n", chu, "note rỗng và t rỗng bị bỏ")
         self.assertNotIn("ref", chu)
+
+
+class SauReview(RepoGia):
+    """Sửa theo review D6-0: mạng, transcode, ghi YAML."""
+    PART = '{"mp3":"audio/bai-a.mp3","d":90.2}'
+
+    def test_api_bao_loi_thi_nem_khong_luu_dem(self):
+        with tempfile.TemporaryDirectory() as dem, mock.patch.dict(os.environ, {"OZ_AUDIO_CACHE": dem}):
+            with mock.patch.object(net, "fetch", return_value=b'{"error": {"code": "ratelimited"}}'):
+                with self.assertRaises(net.ApiError):
+                    net.get_json("https://x.org/a")
+            self.assertEqual(list(Path(dem, "api").iterdir()), [])
+            # thiếu query: files() ném lỗi, không coi file là không còn
+            with mock.patch.object(net, "fetch", return_value=b'{"batchcomplete": true}'):
+                with self.assertRaises(net.ApiError):
+                    commons.files(["File:A.ogg"])
+            self.assertEqual(list(Path(dem, "api").iterdir()), [])
+            # bản đệm cũ hỏng thì bỏ, hỏi lại
+            ok = b'{"query": {"pages": []}}'
+            with mock.patch.object(net, "fetch", return_value=ok):
+                self.assertEqual(net.get_json("https://x.org/b", need=("query",)), {"query": {"pages": []}})
+            self.assertEqual(len(list(Path(dem, "api").iterdir())), 1)
+
+    def test_check_audio_mang_hong_thi_mot_dong_ma_2(self):
+        for loi in (net.ApiError("API báo lỗi x"), RuntimeError("không tải được sau 6 lần"), OSError("HTTP Error 403")):
+            out = io.StringIO()
+            with mock.patch.object(commons, "files", side_effect=loi), contextlib.redirect_stdout(out):
+                code = check_audio.main(["--static", "--network"])
+            self.assertEqual(code, 2)
+            self.assertIn("LỖI mạng: không đối chiếu được với Commons", out.getvalue())
+            self.assertNotIn("Traceback", out.getvalue())
+
+    def chay_transcode(self, *args):
+        err = io.StringIO()
+        with contextlib.redirect_stderr(err):
+            try:
+                transcode.main(list(args))
+            except SystemExit as e:
+                return str(e.code)
+        return ""
+
+    def test_transcode_doi_ghi_de_va_tu_choi_file_da_khoa(self):
+        base = ["goc.mp3", "--name", "bai-a", "--work", "W", "--by", "B", "--lic", "CC0", "--source", "https://x.org/"]
+        self.assertIn("đã có: thêm --ghi-de", self.chay_transcode(*base))
+        GhiBanThu.ghi_a(self)
+        (self.goc / "kiem-dinh/khoa.json").write_text(json.dumps({"trang": {}, "ban_ghi": {"tac-pham/bai-a": "sha256:x"}}), encoding="utf-8")
+        msg = self.chay_transcode(*base, "--ghi-de")
+        self.assertIn("ban_thu đã khóa của bản ghi bai-a", msg)
+        self.assertIn("node tools/khoa.mjs mo du-lieu/tac-pham/bai-a", msg)
+        self.assertIsNone(transcode.dich_bi_chan("bai-a", self.goc / "thu", False), "thư mục thử không vướng khóa")
+        self.assertIsNone(transcode.dich_bi_chan("moi", page.AUDIO, False))
+
+    def test_ghi_ban_thu_lech_cho_khac_thi_khong_ghi(self):
+        truoc = self.doc("src/data/tac-pham.yml")
+        rec = {"by": "A", "lic": "CC0", "page": "https://x.org/", "parts": [{"mp3": "audio/bai-a.mp3", "d": 9}]}
+        hong = lambda text, slug, field, value: text.replace("ten: Nghe B", "ten: Nghe C") + "\n"  # noqa: E731
+        with mock.patch.object(page, "replace_field", side_effect=hong):
+            with self.assertRaises(SystemExit):
+                page.write_recordings("bai-a", [rec])
+        self.assertEqual(self.doc("src/data/tac-pham.yml"), truoc)
+        self.assertTrue(page.write_recordings("bai-a", [rec]))
 
 
 class KiemTra(RepoGia):

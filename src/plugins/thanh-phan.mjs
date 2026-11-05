@@ -878,7 +878,7 @@ export function tuDien(nhom, thuatNgu) {
  * chặng hiện tại và chặng sau (danh sách mọi bài nằm ở trang chặng, không chép lại vào từng bài) và trang cùng tác phẩm
  * (cap: bài học và hướng dẫn nghe trỏ sang nhau).
  */
-export function hocTiep(rec, { tacPham, nguoi, base, trang }) {
+export function hocTiep(rec, { tacPham, tatCa = tacPham, nguoi, base, trang }) {
 	const dong = [];
 	if (rec.loai === 'bai-hoc') {
 		const chang = (n, nhan) => `<strong>${nhan}:</strong> <a href="${base}piano/lo-trinh/chang-${n}/">các bài của chặng ${n}</a>.`;
@@ -889,9 +889,13 @@ export function hocTiep(rec, { tacPham, nguoi, base, trang }) {
 		// Trang cùng tác phẩm hay tác phẩm lớn hơn: trang chính của bản ghi và trang cap trỏ sang nhau
 		const chinh = (rec.loai === 'bai-hoc' ? 'piano/tac-pham/' : 'nghe-nhac/') + rec.slug;
 		const kia = trang === rec.cap ? chinh : rec.cap;
-		const banGhiKia = tacPham.find((r) => (r.loai === 'bai-hoc' ? 'piano/tac-pham/' : 'nghe-nhac/') + r.slug === kia) ?? rec;
+		// trang kia có bản ghi riêng (slug khác bản ghi này) thì tên lấy từ bản ghi ấy; bản ghi ấy không có trong danh sách
+		// (trang đã khóa không thấy bản ghi chưa khóa trường nào) thì bỏ dòng, không hiện tên của bản ghi này
+		const slugKia = kia.split('/').pop();
+		const rieng = slugKia !== rec.slug && tatCa.some((r) => r.slug === slugKia);
+		const banGhiKia = rieng ? tacPham.find((r) => r.slug === slugKia) : rec;
 		const nhan = kia.startsWith('nghe-nhac/') ? 'Nghe kèm' : 'Bài học';
-		dong.push(`<strong>${nhan}:</strong> <a href="${base}${kia}/">${md(tenTacPham(banGhiKia, nguoi))}</a>.`);
+		if (banGhiKia) dong.push(`<strong>${nhan}:</strong> <a href="${base}${kia}/">${md(tenTacPham(banGhiKia, nguoi))}</a>.`);
 	}
 	if (!dong.length) return '';
 	// data-sinh: chữ sinh từ dữ liệu, không có ở trang cũ (tools/chuyen/so-chu.mjs bỏ khi so chữ)

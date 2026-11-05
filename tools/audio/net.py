@@ -82,14 +82,35 @@ def fetch(url, headers=None, tries=6, timeout=60):
     raise RuntimeError("không tải được sau %d lần: %s" % (tries, url))
 
 
-def get_json(url, cache=True):
-    """JSON từ url, có bộ nhớ đệm (api/<sha1>.json). cache=False: luôn hỏi lại."""
+class ApiError(RuntimeError):
+    """Câu trả lời của API báo lỗi hay thiếu phần cần có: không lưu đệm, lần sau hỏi lại."""
+
+
+def get_json(url, cache=True, need=()):
+    """JSON từ url, có bộ nhớ đệm (api/<sha1>.json). cache=False: luôn hỏi lại. Câu trả lời có khóa "error" (API của
+    MediaWiki báo lỗi), hay thiếu một khóa trong need, thì ném ApiError và không lưu đệm (kể cả bản đệm cũ hỏng)."""
     path = cache_dir("api") / (hashlib.sha1(url.encode()).hexdigest() + ".json")
     if cache and path.exists():
-        return json.loads(path.read_text(encoding="utf-8"))
+        data = json.loads(path.read_text(encoding="utf-8"))
+        if _problem(data, need) is None:
+            return data
+        path.unlink()
     data = json.loads(fetch(url))
+    why = _problem(data, need)
+    if why:
+        raise ApiError("%s: %s" % (why, url))
     path.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
     return data
+
+
+def _problem(data, need):
+    if not isinstance(data, dict):
+        return "câu trả lời không phải đối tượng JSON"
+    if "error" in data:
+        e = data["error"]
+        return "API báo lỗi %s" % (e.get("code", e) if isinstance(e, dict) else e)
+    miss = [k for k in need if k not in data]
+    return "câu trả lời thiếu %s" % ", ".join(miss) if miss else None
 
 
 def download(url, dest):

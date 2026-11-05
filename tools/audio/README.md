@@ -90,7 +90,7 @@ python3 tools/audio/attach.py grieg-arietta --by "Luis Kolodin" --lic "CC BY-SA 
 - Ghi một dòng vào `public/audio/NGUON.txt`, thay dòng cũ cùng tên file.
 - Link nguồn suy ra từ tên file IMSLP (`PMLP…`); tên file khác thì thêm `--source`.
 
-Thử trước bằng `--out-dir /tmp/thu`: lệnh ghi file vào thư mục đó và không sửa `NGUON.txt`.
+Thử trước bằng `--out-dir /tmp/thu`: lệnh ghi file vào thư mục đó và không sửa `NGUON.txt`. File đích đã có thì phải thêm `--ghi-de`; file đang dùng trong `ban_thu` đã khóa thì lệnh từ chối (mở khóa bản ghi trước).
 
 Thêm file mới vào `public/audio/` thì sửa thêm câu "Thay đổi" ở đầu `NGUON.txt` (mô tả cách cắt đầu, cắt đuôi, làm nhỏ dần) cho đúng với file mới. Trang nói số bản thu IMSLP (như `cap-nhat`) là trang đã khóa: ghi vào báo cáo, sửa theo thủ tục mở khóa.
 
@@ -99,7 +99,7 @@ Bản thu nhiều file (nhiều chương): chạy `transcode.py` cho từng file
 Chuyển mã lại một file đã có mốc (sửa đuôi, đổi bitrate): làm theo các bước sau, nếu không mọi mốc sẽ lệch.
 
 1. Lấy số giây đã cắt ở đầu (dòng "cắt đầu") bằng `python3 tools/audio/check_audio.py -v`.
-2. Chạy lại với `--start <số đó>`.
+2. Chạy lại với `--start <số đó> --ghi-de`.
 3. Ghi lại bằng `attach.py ... --keep-ref`.
 
 ### 2c. Bản thu chỉ dẫn link

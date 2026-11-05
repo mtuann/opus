@@ -41,9 +41,9 @@ PROPS = {
 FRESH = False                       # --fresh: không dùng câu trả lời đã lưu
 
 
-def api(**params):
+def api(need=(), **params):
     params.update(format="json", formatversion="2")
-    return net.get_json(API + "?" + urllib.parse.urlencode(params), cache=not FRESH)
+    return net.get_json(API + "?" + urllib.parse.urlencode(params), cache=not FRESH, need=need)
 
 
 def text(v):
@@ -95,7 +95,8 @@ def files(names):
     names = [title(n) for n in names]
     found = {}
     for i in range(0, len(names), 50):
-        d = api(action="query", titles="|".join(names[i:i + 50]), redirects="1", **PROPS)
+        # câu trả lời không có query (lỗi, bị chặn…) thì ném lỗi, không coi mọi file là không còn
+        d = api(need=("query",), action="query", titles="|".join(names[i:i + 50]), redirects="1", **PROPS)
         q = d.get("query", {})
         for p in q.get("pages", []):
             found[p["title"]] = row(p)

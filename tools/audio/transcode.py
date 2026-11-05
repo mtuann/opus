@@ -14,6 +14,7 @@ Việc làm:
 - In JSON của phần bản thu ({t, mp3, d}, mp3 viết audio/<name>.mp3 như trong ban_thu) để đưa vào attach.py --part.
 
 --out-dir DIR: ghi file vào DIR thay vì public/audio, không sửa NGUON.txt (để thử).
+--ghi-de: file đích đã có thì phải thêm cờ này. File đang dùng trong ban_thu đã khóa thì từ chối (mở khóa trước).
 --source: trang file ở nguồn; bỏ trống thì suy ra từ tên file IMSLP (PMLP…/IMSLP…): https://imslp.org/wiki/File:<tên>.
   File tải từ IMSLP thường có thêm tiền tố IMSLP<số>- (IMSLP815839-PMLP1846-….mp3): trang file là phần sau tiền tố.
 """
@@ -76,7 +77,21 @@ def update_nguon(line):
     f.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def main():
+def dich_bi_chan(name, out_dir, ghi_de):
+    """Lý do không được ghi file <name>.mp3 vào out_dir (None nếu được): file đã có mà thiếu --ghi-de; file trong
+    public/audio/ đang dùng ở ban_thu đã khóa của một bản ghi (đổi file là đổi bản thu đã kiểm định: mở khóa trước)."""
+    dst = Path(out_dir) / (name + ".mp3")
+    if dst.exists() and not ghi_de:
+        return "%s đã có: thêm --ghi-de để chuyển mã lại (giữ mốc thì dùng --start, xem tools/audio/README.md)" % dst
+    if Path(out_dir).resolve() == page.AUDIO.resolve():
+        mp3 = page.asset_url(name + ".mp3")
+        for r in page.records():
+            if any(p.get("mp3") == mp3 for b in r.get("ban_thu") or [] for p in b.get("parts") or []) and page.field_locked(r["slug"], "ban_thu"):
+                return "%s đang dùng trong ban_thu đã khóa của bản ghi %s: %s" % (mp3, r["slug"], page.unlock_hint("du-lieu/tac-pham/" + r["slug"]))
+    return None
+
+
+def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("src", help="file gốc, ví dụ ../opus-zero/_imslp/PMLP1776-grieg_arietta.mp3")
     ap.add_argument("--name", required=True, help="tên file trên site, không có đuôi: chữ thường, số, gạch nối")
@@ -88,11 +103,15 @@ def main():
     ap.add_argument("--start", type=float, help="ép điểm bắt đầu (giây trong file gốc); dùng khi chuyển mã lại file đã có mốc, "
                     "lấy số 'cắt đầu' từ check_audio.py -v để mốc không lệch")
     ap.add_argument("--out-dir", help="thư mục ra để thử (không sửa NGUON.txt)")
-    a = ap.parse_args()
-    sound.need_ffmpeg()
+    ap.add_argument("--ghi-de", action="store_true", help="ghi đè file đã có")
+    a = ap.parse_args(argv)
 
     if not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", a.name):
         sys.exit("transcode: --name chỉ gồm chữ thường không dấu, số và gạch nối")
+    chan = dich_bi_chan(a.name, Path(a.out_dir) if a.out_dir else page.AUDIO, a.ghi_de)
+    if chan:
+        sys.exit("transcode: " + chan)
+    sound.need_ffmpeg()
     try:
         lic, lic_url = licenses.parse(a.lic)
     except ValueError as e:
