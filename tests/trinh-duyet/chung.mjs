@@ -45,7 +45,20 @@ const bocLoai = (loai) =>
 	});
 /** Chromium với service worker chặn mặc định, cho phép thử chỉ chạy trên Chromium (axe, in, API tìm kiếm). */
 export const CHROMIUM = bocLoai(chromium);
-const CA_BA = { chromium: CHROMIUM, webkit: bocLoai(webkit), firefox: bocLoai(firefox) };
+/**
+ * Firefox: cho Web Audio chạy không cần cử chỉ người dùng (Chromium và WebKit của Playwright đã cho sẵn). Micro giả của các
+ * phép thử dựng luồng từ AudioContext; trên máy CI Linux, Firefox chặn tự phát thì đồng hồ âm thanh đứng, công cụ dùng
+ * micro (thu âm, so cao độ, hát lại, chơi theo) không nhận được tiếng.
+ */
+const PREF_FIREFOX = { 'media.autoplay.default': 0, 'media.autoplay.blocking_policy': 0, 'media.autoplay.block-webaudio': false };
+const firefoxCoAm = new Proxy(firefox, {
+	get(t, k) {
+		if (k === 'launch') return (o = {}) => t.launch({ ...o, firefoxUserPrefs: { ...PREF_FIREFOX, ...o.firefoxUserPrefs } });
+		const v = Reflect.get(t, k);
+		return typeof v === 'function' ? v.bind(t) : v;
+	},
+});
+const CA_BA = { chromium: CHROMIUM, webkit: bocLoai(webkit), firefox: bocLoai(firefoxCoAm) };
 const CHON = (process.env.OPUS_TRINH_DUYET ?? '').split(',').map((x) => x.trim()).filter(Boolean);
 for (const t of CHON) if (!(t in CA_BA)) throw new Error(`OPUS_TRINH_DUYET: không có trình duyệt "${t}" (có: ${Object.keys(CA_BA).join(', ')})`);
 export const TRINH_DUYET = CHON.length ? Object.fromEntries(CHON.map((t) => [t, CA_BA[t]])) : CA_BA;
