@@ -12,15 +12,15 @@ lan:
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
   - so: 2
-    ngay: null
+    ngay: 2026-11-05
     nhanh: moi/d6-l1
     ma_bam: null
     nguoi:
-      luot_1: null
+      luot_1: "Claude Opus 5.5 (D6-L1 phần A)"
       luot_2: null
       review: null
       kiem_mau: null
-ghi_chu: "Trang bài học cũ ../opus-zero/docs/piano/tac-pham/minuet-sol-thu.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Nguồn cổ: IMSLP ghi tên Pezold (cách viết của IMSLP cho Christian Petzold). Bach-Digital không mở được (thử thách chống bot)."
+ghi_chu: "Trang bài học cũ ../opus-zero/docs/piano/tac-pham/minuet-sol-thu.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Nguồn cổ: IMSLP ghi tên Pezold (cách viết của IMSLP cho Christian Petzold). Bach-Digital không mở được (thử thách chống bot). Lần 2 (D6-L1, lượt 1 phần A): nhận định n6–n27 cho các trường chưa khóa (giong, nhip, thoi_ky, ky_nang_chinh, chip, thong_tin, hinh, ban_thu); bản nhạc đối chiếu Mutopia anna-magdalena-05, lịch sử theo Schulze (Bach-Jahrbuch 1979). Còn mở: n18 (Peters 1880), đề xuất ở plans/lam-lai/bao-cao/d6-l1/sua-A.yml."
 nguon:
   - id: imslp-anh115
     bac: 2
@@ -42,6 +42,38 @@ nguon:
     bac: 2
     ten: The Royal Conservatory (RCM), Piano Syllabus, 2022 Edition
     link: https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf
+  - id: mut-anh115
+    bac: 1
+    ten: Mutopia Project, Menuet in G minor, BWV Anh. 115 (Allen Garvin, nguồn Bach-Gesellschaft; tệp LilyPond và MIDI)
+    link: https://www.mutopiaproject.org/ftp/BachJS/BWVAnh115/anna-magdalena-05/anna-magdalena-05.ly
+  - id: schulze-1979
+    bac: 2
+    ten: 'Hans-Joachim Schulze, Ein "Dresdner Menuett" im zweiten Klavierbüchlein der Anna Magdalena Bach, Bach-Jahrbuch 65 (1979), tr. 45–64 (bản số hóa)'
+    link: https://bjb.publia.org/bjb/article/view/1686
+  - id: imslp-nb
+    bac: 2
+    ten: IMSLP, Notebooks for Anna Magdalena Bach (danh sách bài của Klavierbüchlein 1725)
+    link: https://imslp.org/wiki/Notebooks_for_Anna_Magdalena_Bach_(Bach,_Johann_Sebastian)
+  - id: imslp-anh114
+    bac: 2
+    ten: IMSLP, Minuet in G major, BWV Anh.114 (ấn bản Bach-Gesellschaft Bd. 43.2, 1894; nguồn do Anna Magdalena chép)
+    link: https://imslp.org/wiki/Minuet_in_G_major,_BWV_Anh.114_(Pezold,_Christian)
+  - id: omt-minor
+    bac: 2
+    ten: Open Music Theory, Minor Scales, Scale Degrees, and Key Signatures
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/
+  - id: cod-minuet
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục minuet, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/minuet
+  - id: imslp-kolodin
+    bac: 2
+    ten: IMSLP, file bản thu Luis Kolodin, Petzold Minuet BWV Anh 115 (trên trang tác phẩm BWV Anh. 115)
+    link: https://imslp.org/wiki/File:PMLP357199-Y2Mate.is_-_Luis_Kolodin_plays_Petzold's_Minuet_BWV_Anh_115-T-FK2J7_WaQ-160k-1659057524268.mp3
+  - id: wiki-minuets
+    bac: 3
+    ten: Wikipedia, Minuets in G major and G minor (bậc 3; chỉ để định vị)
+    link: https://en.wikipedia.org/wiki/Minuets_in_G_major_and_G_minor
 nhan_dinh:
   - id: n1
     cau: "Tên bài: Minuet Sol thứ, BWV Anh. 115 (trong Notenbüchlein für Anna Magdalena Bach, 1725)."
@@ -113,3 +145,150 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ https://www.trinitycollege.com/qualifications/music/grade-exams/piano/piano-grade-2 ]
     luot_2_ghi_chu: Stage 2 = Grade 1-2; Trinity Grade 2.
+  - id: n6
+    cau: Giọng của bài là Sol thứ.
+    loai: cau-truc
+    truong: [giong]
+    nguon: [mut-anh115, imslp-anh115]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: \key g \minor, kết Sol thứ; IMSLP: Key "G minor".'
+  - id: n7
+    cau: Nhịp của bài là 3/4.
+    loai: cau-truc
+    truong: [nhip]
+    nguon: [mut-anh115]
+    ket_qua: dung
+  - id: n8
+    cau: Bài thuộc thời kỳ Baroque.
+    loai: lich-su
+    truong: [thoi_ky]
+    nguon: [imslp-anh115]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Composer Time Period "Baroque".'
+  - id: n9
+    cau: 'Kỹ năng chính: giọng thứ và nốt cảm Fa♯, hai bè, phát âm kiểu Baroque.'
+    loai: cau-truc
+    truong: [ky_nang_chinh]
+    nguon: [mut-anh115, omt-minor]
+    ket_qua: dung
+    ghi_chu: 'Fa♯ là cảm âm (bậc 7 nâng) của Sol thứ (OMT); bài hai bè, không dấu phát âm (Mutopia). "Nốt cảm" là tên khác của cảm âm; trang dùng "cảm âm": người giao cân nhắc thống nhất chữ.'
+  - id: n10
+    cau: 'Chip: "Sol thứ · 3/4".'
+    loai: cau-truc
+    truong: [chip]
+    nguon: [mut-anh115]
+    ket_qua: dung
+  - id: n11
+    cau: 'Chip: "Minuet".'
+    loai: ten
+    truong: [chip]
+    nguon: [imslp-anh115]
+    ket_qua: dung
+  - id: n12
+    cau: 'Chip cấp độ: "≈ Grade 2".'
+    loai: cap-do
+    truong: [chip]
+    nguon: [abrsm-2728, trinity-2023]
+    ket_qua: dung
+    ghi_chu: Trùng grade đã khóa ở lần 1.
+  - id: n13
+    cau: 'Chip: "Hai đoạn, có nhắc lại".'
+    loai: cau-truc
+    truong: [chip]
+    nguon: [mut-anh115]
+    ket_qua: dung
+  - id: n14
+    cau: 'Thông tin, nhà soạn nhạc: Christian Petzold (1677–1733), nghệ sĩ organ của nhà thờ Sophienkirche ở Dresden; suốt nhiều thập kỷ, bài này bị gán cho J. S. Bach.'
+    loai: lich-su
+    truong: [thong_tin]
+    nguon: [schulze-1979, imslp-anh115]
+    ket_qua: dung
+    ghi_chu: 'Schulze tr. 57–58; IMSLP: "formerly attributed to Johann Sebastian Bach as BWV Anhang 115".'
+  - id: n15
+    cau: 'Thông tin, tác phẩm: Minuet Sol thứ, BWV Anh. 115; đi thành cặp với Minuet Sol trưởng, BWV Anh. 114.'
+    loai: danh-muc
+    truong: [thong_tin]
+    nguon: [imslp-anh115]
+    ket_qua: dung
+  - id: n16
+    cau: 'Thông tin: cùng Minuet Sol trưởng hợp thành một chương trong một tổ khúc cho harpsichord (Suite de Clavecin) của Petzold.'
+    loai: lich-su
+    truong: [thong_tin]
+    nguon: [schulze-1979]
+    ket_qua: dung
+    ghi_chu: 'Schulze tr. 54: "Svite de Clavecin par C. Pezold".'
+  - id: n17
+    cau: 'Thông tin: Anna Magdalena Bach chép hai bài vào cuốn sổ tay năm 1725 của bà (bài số 4 và 5).'
+    loai: lich-su
+    truong: [thong_tin]
+    nguon: [imslp-nb, imslp-anh114]
+    ket_qua: dung
+  - id: n18
+    cau: 'Thông tin: in từ cuối thế kỷ 19: C. F. Peters (1880), ấn bản toàn tập Bach-Gesellschaft (1894).'
+    loai: nam
+    truong: [thong_tin]
+    nguon: [imslp-anh114, wiki-minuets]
+    ket_qua: null
+    ghi_chu: 'chưa chắc: như hồ sơ du-lieu/tac-pham/minuet-sol n20 (Peters 1880 chỉ thấy ở Wikipedia). Đề xuất ở sua-A.yml.'
+  - id: n19
+    cau: 'Thông tin, giọng · nhịp · tốc độ: Sol thứ · 3/4 · không ghi tốc độ; nhịp vừa phải của điệu minuet.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: [mut-anh115, cod-minuet]
+    ket_qua: dung
+  - id: n20
+    cau: 'Thông tin, hình thức: hai đoạn (binary), mỗi đoạn 16 ô và đều có dấu nhắc lại; tổng cộng 32 ô; đoạn A kết ở Si♭ trưởng, đoạn B về lại Sol thứ.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: [mut-anh115]
+    ket_qua: dung
+    ghi_chu: Ô 16 hợp âm Si♭ trưởng, ô 32 Sol thứ (MIDI Mutopia).
+  - id: n21
+    cau: 'Thông tin, độ khó: khoảng ABRSM Grade 2 (ước lượng).'
+    loai: cap-do
+    truong: [thong_tin]
+    nguon: [abrsm-2728, trinity-2023]
+    ket_qua: dung
+    ghi_chu: 'Lần 1 (đã khóa): ABRSM 2027–2028 và Trinity xếp bài ở Grade 2; chữ "ước lượng" thừa nhưng không sai (review cân nhắc bỏ, như schumann/burgmuller).'
+  - id: n22
+    cau: 'Thông tin, kỹ năng chính: màu giọng thứ; đọc Fa♯, Mi♮, Si♮ ngoài hóa biểu; hai bè độc lập; phát âm tách và liền; láy ngắn ở chỗ kết; nhảy quãng tám ở cả hai tay.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: [mut-anh115]
+    ket_qua: dung
+    ghi_chu: 'Fa♯, Mi♮, Si♮ ở ô 7, 12, 17, 25–31; láy trên ô 8, 15, 31; nhảy quãng tám tay phải ô 3 (Sol5–Sol4), tay trái ô 4, 8 (Rê3–Rê4).'
+  - id: n23
+    cau: 'Thông tin, bản nhạc: IMSLP (tìm "Minuet in G minor, BWV Anh.115"); bản Urtext sổ tay 1725 của Bärenreiter (theo Neue Bach-Ausgabe).'
+    loai: ten
+    truong: [thong_tin]
+    nguon: [imslp-anh115]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: NBA Serie V, Band 4, Bärenreiter 1957 (urtext).'
+  - id: n24
+    cau: 'Hình cấu trúc: hai đoạn 16 ô đều nhắc lại: câu 1 ô 1–8 Sol thứ, kết nửa trên Rê; câu 2 ô 9–16 kết ở Si♭ trưởng; câu 3 ô 17–24 Fa trưởng, Si♭ trưởng; câu 4 ô 25–32 Đô thứ → Sol thứ.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [mut-anh115]
+    ket_qua: dung
+    ghi_chu: Như hồ sơ trang minuet-sol-thu n22–n27.
+  - id: n25
+    cau: 'Hình, ghi chú: khi chơi trọn cặp: Minuet Sol trưởng, Minuet Sol thứ, rồi Minuet Sol trưởng lần nữa (da capo).'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [schulze-1979]
+    ket_qua: dung
+    ghi_chu: 'Schulze tr. 56: "On reprend le premier Menuet."'
+  - id: n26
+    cau: 'Bản thu gợi ý: Luis Kolodin; giấy phép CC BY-SA 4.0.'
+    loai: ten
+    truong: [ban_thu]
+    nguon: [imslp-anh115]
+    ket_qua: dung
+    ghi_chu: 'IMSLP Anh. 115: "Luis Kolodin, piano ... CC BY-SA 4.0", file "PMLP357199-Y2Mate.is - Luis Kolodin plays Petzold''s Minuet BWV Anh 115-T-FK2J7 WaQ-160k-1659057524268.mp3" (khớp page của bản ghi).'
+  - id: n27
+    cau: 'Bản thu dài 84,65 giây (d: 84.65).'
+    loai: so-lieu
+    truong: [ban_thu]
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Đo trên public/audio/minuet-sol-thu.mp3 (afinfo: 84,648 giây); public/audio/NGUON.txt ghi nguồn là file IMSLP trên. Không có nguồn ngoài cho độ dài (như hồ sơ burgmuller-la-candeur n35).'

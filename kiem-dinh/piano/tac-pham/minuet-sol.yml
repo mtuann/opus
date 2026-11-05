@@ -4,30 +4,581 @@ nguon_cu: ../opus-zero/docs/piano/tac-pham/minuet-sol.md
 tang: tac-pham
 lan:
   - so: 1
-    ngay: null
+    ngay: 2026-11-05
     nhanh: moi/d6-l1
     ma_bam: null
     nguoi:
-      luot_1: null
+      luot_1: "Claude Opus 5.5 (D6-L1 phần A)"
       luot_2: null
       review: null
       kiem_mau: null
-nguon: []
-nhan_dinh: []
+ghi_chu: 'Bài học Minuet Sol trưởng BWV Anh. 114 (tầng Tác phẩm). Bản nhạc: tệp LilyPond và MIDI của Mutopia (anna-magdalena-04, nguồn Bach-Gesellschaft), đối chiếu từng nốt bằng script Python (mido) đọc MIDI Mutopia theo ô (script ở thư mục tạm, không trong repo). Lịch sử: bài của Hans-Joachim Schulze, Bach-Jahrbuch 65 (1979), tr. 45–64, bản số hóa trên bjb.publia.org (ảnh scan; đã đọc tr. 45, 52–58, 64). IMSLP mở qua WebFetch (curl bị trang kiểm tra bot). Bach-Digital không mở. Sửa trang ở lượt 1: n6 (người chép), n9 (bỏ câu dạy con, không có nguồn đọc được), n28 (bỏ tên Leonhardt và Egarr), n47 (ô 8 và 12), n79 (mục Nguồn: số tập, trang và link bản số hóa của bài Schulze). Còn mở: n11, n74, n75 (năm 1950 và nghĩa "Anh. II" chỉ thấy ở Wikipedia). Không tính là nhận định: tiêu đề mục, tiêu đề cột bảng, chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng (thuộc hồ sơ bản ghi hay thành phần), mốc tham khảo trong ::khoi-nghe.'
+nguon:
+  - id: mut-anh114
+    bac: 1
+    ten: Mutopia Project, Menuet in G, BWV Anh. 114 (Allen Garvin, nguồn Bach-Gesellschaft; tệp LilyPond và MIDI)
+    link: https://www.mutopiaproject.org/ftp/BachJS/BWVAnh114/anna-magdalena-04/anna-magdalena-04.ly
+  - id: imslp-anh114
+    bac: 2
+    ten: IMSLP, Minuet in G major, BWV Anh.114 (Pezold, Christian)
+    link: https://imslp.org/wiki/Minuet_in_G_major,_BWV_Anh.114_(Pezold,_Christian)
+  - id: imslp-anh115
+    bac: 2
+    ten: IMSLP, Minuet in G minor, BWV Anh.115 (Pezold, Christian)
+    link: https://imslp.org/wiki/Minuet_in_G_minor,_BWV_Anh.115_(Pezold,_Christian)
+  - id: imslp-nb
+    bac: 2
+    ten: IMSLP, Notebooks for Anna Magdalena Bach (danh sách bài của Klavierbüchlein 1725, người chép, ấn bản)
+    link: https://imslp.org/wiki/Notebooks_for_Anna_Magdalena_Bach_(Bach,_Johann_Sebastian)
+  - id: schulze-1979
+    bac: 2
+    ten: 'Hans-Joachim Schulze, Ein "Dresdner Menuett" im zweiten Klavierbüchlein der Anna Magdalena Bach, Bach-Jahrbuch 65 (1979), tr. 45–64 (bản số hóa)'
+    link: https://bjb.publia.org/bjb/article/view/1686
+  - id: cod-minuet
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục minuet, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/minuet
+  - id: omt-intro
+    bac: 2
+    ten: Open Music Theory, Introduction to Harmony, Cadences, and Phrase Endings (kết nửa, kết trọn)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/
+  - id: met-crist
+    bac: 2
+    ten: 'Metropolitan Museum of Art, The Piano: The Pianofortes of Bartolomeo Cristofori (harpsichord không đáp ứng lực ngón; như hồ sơ khóa piano/lich-su-dan n4)'
+    link: https://www.metmuseum.org/essays/the-piano-the-pianofortes-of-bartolomeo-cristofori-1655-1731
+  - id: cbs-lover
+    bac: 2
+    ten: "CBS News Texas, The Foote Files: Minuet In G Major (A Lover's Concerto của The Toys, 1965; bài nay ghi tên Petzold)"
+    link: https://www.cbsnews.com/texas/news/the-foote-files-minuet-in-g-major
+  - id: apple-kipnis
+    bac: 2
+    ten: 'Apple Music Classical, J.S. Bach: The Notebooks of Anna Magdalena Bach (Nonesuch; Igor Kipnis và các nghệ sĩ khác), track "#4/#5 Minuets for Keyboard in G major, BWV Anh. 114/.115"'
+    link: https://classical.music.apple.com/ae/album/83159027
+  - id: hyperion-esf
+    bac: 2
+    ten: "Hyperion, tập sách đĩa Notebooks for Anna Magdalena (Mahan Esfahani): Christian Pezold, Minuets in G major & G minor BWV Anh 114 & 115, clavichord"
+    link: https://www.bach-cantatas.com/Pic-NonVocal-BIG/Esfahani-M-K08c[Hyperion-CD-booklet].pdf
+  - id: omt-meter
+    bac: 2
+    ten: "Open Music Theory, Simple Meter and Time Signatures (mẫu số 4 của số chỉ nhịp: phách là nốt đen)"
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/simple-meter-and-time-signatures/
+  - id: wiki-minuets
+    bac: 3
+    ten: Wikipedia, Minuets in G major and G minor (bậc 3; chỉ để định vị nguồn)
+    link: https://en.wikipedia.org/wiki/Minuets_in_G_major_and_G_minor
+nhan_dinh:
+  - id: n1
+    cau: 'Bản minuet này thường được gọi là "Minuet của Bach".'
+    loai: ten
+    nguon: [ imslp-anh114, cbs-lover ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "formerly attributed to Johann Sebastian Bach as BWV Anhang 114"; CBS: "it was assumed that it was composed by Johann Sebastian Bach".'
+  - id: n2
+    cau: Bài có hai bè độc lập (tay trái không đệm hợp âm mà đi một đường bè trầm riêng, lúc đứng yên, lúc chạy).
+    loai: cau-truc
+    nguon: [ mut-anh114 ]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: bè trầm một nốt mỗi lúc, chỉ có hợp âm ở ô 1, 25, 26, 29, 32; ô 2–6 nốt trắng chấm dôi, ô 8, 12 chạy móc đơn.'
+  - id: n3
+    cau: Bài gồm bốn câu 8 ô, mỗi câu chia đôi thành hai nửa 4 ô; tổng 32 ô.
+    loai: cau-truc
+    nguon: [ mut-anh114, schulze-1979 ]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: hai đoạn nhắc lại, mỗi đoạn 16 ô; Schulze tr. 55 ghi "16 :||: 16 T." cho Menuet alternativement. Kết ở ô 8, 16, 24, 32.'
+  - id: n4
+    cau: Bản gốc gần như không ghi dấu luyến hay sắc thái.
+    loai: cau-truc
+    nguon: [ mut-anh114 ]
+    ket_qua: dung
+    ghi_chu: Bản Mutopia theo Bach-Gesellschaft không có dấu luyến, sắc thái hay tốc độ; chỉ có dấu trang trí (n63).
+  - id: n5
+    cau: 'Kỹ năng của bài: mở rộng thế tay năm ngón, đổi vị trí tay, nhảy quãng tám ở cả hai tay, đọc Fa♯ và Đô♯.'
+    loai: cau-truc
+    nguon: [ mut-anh114 ]
+    ket_qua: dung
+    ghi_chu: 'Nhảy quãng tám tay phải Sol5–Sol4 (ô 4, 12); tay trái Rê4–Rê3 (ô 8), Sol3–Sol2 (ô 16); Fa♯ trong hóa biểu, Đô♯ ở ô 20–23.'
+  - id: n6
+    cau: 'Năm 1725, J. S. Bach bắt đầu cuốn sổ tay âm nhạc thứ hai cho vợ, Anna Magdalena Bach; sổ mở đầu bằng hai partita của Bach, sau là những bài nhỏ (minuet, polonaise, aria, bài hát); Anna Magdalena tự tay chép nhiều bài, trong đó có cặp minuet này.'
+    loai: lich-su
+    nguon: [ imslp-nb, imslp-anh114, schulze-1979 ]
+    ket_qua: da-sua
+    ghi_chu: 'Cũ: "Anna Magdalena tự tay chép các bài số 3 đến 11." Không tìm được nguồn đọc được nói đúng các bài 3–11 (Bach-Digital, NBA V/4 không mở). IMSLP Anh. 114: nguồn sớm nhất là bản "copied by Anna Magdalena Bach"; IMSLP notebook: số 1 BWV 827, số 2 BWV 830 (partita), rồi minuet, polonaise, aria, choral; người chép gồm Anna Magdalena và nhiều người khác. Schulze tr. 64: sổ bắt đầu nửa sau năm 1725. Mới: "Anna Magdalena tự tay chép nhiều bài, trong đó có cặp minuet này."'
+  - id: n7
+    cau: Bài số 3 là một minuet Fa trưởng khuyết danh; bài số 4 và 5 là cặp minuet Sol trưởng và Sol thứ.
+    loai: danh-muc
+    nguon: [ imslp-nb ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "3. Menuet F-dur, BWV Anh.113; 4. Menuet G-dur, BWV Anh.114; 5. Menuet g-moll, BWV Anh.115" (bài 3 không ghi tác giả). Schulze tr. 64 chú thích 84: nguồn gốc của số 3 (BWV Anh. 113) còn chưa rõ.'
+  - id: n8
+    cau: Có thể Bach mang hai minuet về sau chuyến đi Dresden tháng 9 năm 1725, khi ông biểu diễn trên cây organ Silbermann mới của nhà thờ Sophienkirche, nơi Petzold là nghệ sĩ organ.
+    loai: lich-su
+    nguon: [ schulze-1979 ]
+    ket_qua: dung
+    ghi_chu: 'Schulze tr. 64: "das „Dresdner Menuett" BWV Anh. 114/115 als beziehungsvolles Mitbringsel von jener Reise im September 1725 ... dem Christian Petzold bereitwillig seinen Platz an der neuesten und schönsten Orgel der Stadt einräumte". Tr. 57: organ Silbermann ở Sophienkirche khánh thành 18/11/1720; Petzold là Sophienorganist. Trang viết "có thể", đúng mức giả thuyết của Schulze.'
+  - id: n9
+    cau: Nhiều khả năng các bài dễ này dùng để dạy các con nhỏ trong nhà.
+    loai: lich-su
+    nguon: [ wiki-minuets ]
+    ket_qua: da-bo
+    ghi_chu: 'Đã bỏ khỏi trang. Chỉ thấy ở Wikipedia (dẫn Schulenberg 2006, sách in); Schulze không nói. Không có nguồn bậc 1–2 đọc được.'
+  - id: n10
+    cau: Vì sổ tay không ghi tên tác giả cho phần lớn các bài, các nhà xuất bản thế kỷ 19 in chúng như nhạc của Bach.
+    loai: lich-su
+    nguon: [ imslp-anh114, mut-anh114 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Bach-Gesellschaft Ausgabe Bd. 43.2 (Waldersee, Breitkopf 1894) in bài trong toàn tập Bach; bài "formerly attributed to Johann Sebastian Bach". Tệp Mutopia (theo BG) ghi composer "Johann Sebastian Bach".'
+  - id: n11
+    cau: 'Danh mục tác phẩm Bach (BWV, 1950) xếp cặp minuet vào phụ lục (Anhang, viết tắt Anh.), nơi dành cho tác phẩm còn nghi vấn.'
+    loai: danh-muc
+    nguon: [ imslp-anh114, wiki-minuets ]
+    ket_qua: null
+    ghi_chu: 'chưa chắc: IMSLP ghi số "BWV Anh. II 114 / Anh. III 183" và "formerly attributed to Bach"; năm 1950 và nghĩa "Anh. II = tác phẩm nghi vấn" chỉ thấy ở Wikipedia (BWV Anh.). Bach-Digital, trang Breitkopf về BWV không đọc được chữ. Cùng điều ở câu hỏi 2 (n74, n75).'
+  - id: n12
+    cau: 'Cuối thập niên 1970, Hans-Joachim Schulze chỉ ra rằng cặp minuet nằm trong một tổ khúc cho harpsichord mang tên Petzold.'
+    loai: lich-su
+    nguon: [ schulze-1979 ]
+    ket_qua: dung
+    ghi_chu: 'Schulze tr. 54: "eine Svite de Clavecin par C. Pezold"; tr. 56: "das Menuettpaar BWV Anh. 114/115 ... einer Cembalosuite des Dresdner Hoforganisten Christian Petzold entnommen".'
+  - id: n13
+    cau: Tổ khúc do Johann Benjamin Tzschirich chép vào một tập nhạc khoảng giữa thập niên 1730.
+    loai: lich-su
+    nguon: [ schulze-1979 ]
+    ket_qua: dung
+    ghi_chu: 'Schulze tr. 52: Tzschirich là "Schreiber und Besitzer unserer Quelle"; tr. 54: tổ khúc thuộc các mục chép muộn nhất, "möglicherweise erst 1735/36 anzusetzen".'
+  - id: n14
+    cau: Bài của Schulze đăng trên Bach-Jahrbuch số năm 1979.
+    loai: nam
+    nguon: [ schulze-1979 ]
+    ket_qua: dung
+    ghi_chu: Bach-Jahrbuch Bd. 65 (1979), tr. 45–64.
+  - id: n15
+    cau: Từ đó, giới nghiên cứu ghi tên Petzold.
+    loai: lich-su
+    nguon: [ imslp-anh114, hyperion-esf ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP xếp bài dưới tên "Pezold, Christian"; Hyperion (2023) ghi "Christian Pezold"; Apple Music ghi Christian Petzold.'
+  - id: n16
+    cau: Link "Đọc tên tác phẩm" để hiểu cách đọc các ký hiệu như BWV hay Anh.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Trang đích nghe-nhac/doc-ten-tac-pham chưa chuyển; ../opus-zero/docs/nghe-nhac/doc-ten-tac-pham.md có bảng BWV và đoạn "Chữ Anh. (Anhang, phụ lục) trong BWV đánh dấu những tác phẩm còn nghi vấn". Lô chuyển trang ấy cần giữ phần BWV và Anh.'
+  - id: n17
+    cau: Từ điển âm nhạc của Johann Gottfried Walther (1732) nhắc đến Petzold như tác giả của những bản nhạc đàn phím hay.
+    loai: lich-su
+    nguon: [ schulze-1979 ]
+    ket_qua: dung
+    ghi_chu: 'Schulze tr. 57: "„Gute Kirchen- und Clavier-Stücke" erwähnt 1732 Johann Gottfried Walther im Petzold-Artikel seines Musiklexikons".'
+  - id: n18
+    cau: Telemann đã in một tổ khúc của Petzold trong tuyển tập Der getreue Music-Meister (1728–1729).
+    loai: lich-su
+    nguon: [ schulze-1979 ]
+    ket_qua: dung
+    ghi_chu: 'Schulze tr. 57: "1729 erscheint eine „Svite de Clavecin, composée par Mr. C. Petzold." in Telemanns Sammlung Der getreue Musikmeister"; tuyển tập ra theo kỳ 1728–1729.'
+  - id: n19
+    cau: Petzold mất năm 1733; người kế nhiệm ông ở Sophienkirche là Wilhelm Friedemann Bach, con trai cả của J. S. Bach.
+    loai: lich-su
+    nguon: [ schulze-1979 ]
+    ket_qua: dung
+    ghi_chu: 'Schulze tr. 58: "1733 im Mai stirbt Petzold ... Wilhelm Friedemann amtiert als Petzolds Nachfolger bis 1746". W. F. Bach là con trai cả (hồ sơ khóa piano/not-hoa-my).'
+  - id: n20
+    cau: Minuet là điệu nhảy cung đình Pháp nhịp 3/4, bước nhỏ và thanh lịch, một chương quen thuộc trong tổ khúc thời Baroque.
+    loai: dinh-nghia
+    nguon: [ cod-minuet ]
+    ket_qua: dung
+    ghi_chu: 'COD: "Dance in triple time, orig. as Fr. rustic dance and adapted by the court in the 17th cent."; tên từ "small, dainty step"; có trong tổ khúc từ Lully, ở Bach, Handel. Như hồ sơ khóa hinh-thuc/minuet-trio m1, m2.'
+  - id: n21
+    cau: Về sau minuet trở thành chương 3 của giao hưởng và sonata Cổ điển.
+    loai: lich-su
+    nguon: [ cod-minuet ]
+    ket_qua: dung
+    ghi_chu: 'COD: chương 3 chuẩn của giao hưởng thế kỷ 18 (hồ sơ khóa hinh-thuc/minuet-trio m3 dùng "thường"). Với sonata, minuet không luôn là chương 3; review cân nhắc thêm "thường".'
+  - id: n22
+    cau: Link Minuet và Trio, thời kỳ Baroque.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: src/content/docs/hinh-thuc/minuet-trio.md và src/content/docs/lich-su/thoi-ky/baroque.md có trong site mới.
+  - id: n23
+    cau: Ca khúc A Lover's Concerto (1965) do nhóm The Toys thu âm được dựng trên giai điệu bài này.
+    loai: lich-su
+    nguon: [ cbs-lover ]
+    ket_qua: dung
+    ghi_chu: "CBS News: \"the 1965 hit song, 'A Lover's Concerto' by The Toys\", một phiên bản của chính Minuet Sol trưởng; bài nay \"attributed to Christian Petzold\"."
+  - id: n24
+    cau: Petzold viết cho harpsichord.
+    loai: lich-su
+    nguon: [ schulze-1979 ]
+    ket_qua: dung
+    ghi_chu: 'Schulze tr. 54: "Svite de Clavecin" (clavecin = harpsichord).'
+  - id: n25
+    cau: Harpsichord không to nhỏ theo lực ngón.
+    loai: dinh-nghia
+    nguon: [ met-crist ]
+    ket_qua: dung
+    ghi_chu: "Met: harpsichord \"lacked the ability to respond to the strength of the player's touch\" (như hồ sơ khóa piano/lich-su-dan n4)."
+  - id: n26
+    cau: Câu nhạc trên harpsichord được "nói" bằng phát âm và nhịp điệu; trên piano, giữ sự rõ ràng đó trước khi nghĩ đến sắc thái.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n27
+    cau: Nghe ít nhất hai bản (harpsichord hay clavichord, và piano); mỗi lần nghe chú ý một điều (nhịp nhảy, phát âm, tay trái, nhắc lại).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n28
+    cau: Igor Kipnis đã thu bài này; Mahan Esfahani thu bài này trên clavichord.
+    loai: ten
+    nguon: [ apple-kipnis, hyperion-esf ]
+    ket_qua: da-sua
+    ghi_chu: 'Cũ: "(Gustav Leonhardt, Igor Kipnis hay Richard Egarr đều đã thu bài này) hoặc trên clavichord (Mahan Esfahani)". Mới: "hoặc clavichord (ví dụ Igor Kipnis, hay Mahan Esfahani trên clavichord)". Kipnis: Apple Music, album Nonesuch có track BWV Anh. 114/115 (trang không ghi nhạc cụ, nên câu mới không nói Kipnis chơi harpsichord). Esfahani: tập sách đĩa Hyperion "clavichord [3''33]". Leonhardt, Egarr: chỉ thấy ở Wikipedia, chưa mở được danh mục đĩa nào ghi bài này, nên bỏ tên.'
+  - id: n29
+    cau: '"Nốt đen" là nốt có độ dài một phách (trong nhịp 3/4 của bài).'
+    loai: dinh-nghia
+    nguon: [ omt-meter ]
+    ket_qua: dung
+    ghi_chu: 'Đúng với M:3/4 (mẫu số 4: phách là nốt đen), như OMT và hồ sơ khóa nhac-ly/04-nhip.'
+  - id: n30
+    cau: Minuet Sol thứ (BWV Anh. 115) đi cặp với bài này.
+    loai: lich-su
+    nguon: [ schulze-1979, imslp-anh115 ]
+    ket_qua: dung
+    ghi_chu: 'Schulze tr. 55–56: "Menuet alternativement" (Sol trưởng) rồi "Menuet 2" (Sol thứ) trong cùng tổ khúc; IMSLP Anh. 115: "This and the G major minuet are thought to be from the same suite".'
+  - id: n31
+    cau: Thời Baroque người ta thường chơi minuet 1, minuet 2, rồi minuet 1 lần nữa.
+    loai: quy-tac
+    nguon: [ schulze-1979, cod-minuet ]
+    ket_qua: dung
+    ghi_chu: 'Chính tổ khúc Petzold ghi "On reprend le premier Menuet" sau Menuet 2 (Schulze tr. 56). COD: minuet thứ hai tương phản, về sau gọi là trio, hình thức ABA.'
+  - id: n32
+    cau: Link hướng dẫn nghe Eine kleine Nachtmusik, chương 3 (minuet của thời Cổ điển).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Trang đích nghe-nhac/mozart-eine-kleine chưa chuyển; ../opus-zero/docs/nghe-nhac/mozart-eine-kleine.md có chương minuet (chương 3). Lô chuyển trang ấy cần giữ.'
+  - id: n33
+    cau: 'Theo dõi khi nghe, câu 1 (ô 1–8): môtip Rê – Sol La Si Đô đi lên; tay trái đi xuống từng bậc bằng nốt trắng chấm dôi; câu dừng lơ lửng trên Rê (kết nửa).'
+    loai: cau-truc
+    nguon: [ mut-anh114, omt-intro ]
+    ket_qua: dung
+    ghi_chu: 'MIDI Mutopia ô 1: Rê5, Sol4 La4 Si4 Đô5; tay trái ô 3–6 Đô4 Si3 La3 Sol3 nốt trắng chấm dôi; ô 8 tay phải La4, tay trái Rê4 Rê3 Đô4 Si3 La3: hợp âm Rê (V). OMT: half cadence là câu kết ở V.'
+  - id: n34
+    cau: 'Câu 2 (ô 9–16): giai điệu như câu 1, chỉ khác ở hai ô cuối; tay trái chuyển động nhiều hơn; kết trọn ở Sol trưởng.'
+    loai: cau-truc
+    nguon: [ mut-anh114, omt-intro ]
+    ket_qua: dung
+    ghi_chu: 'Ô 9–14 tay phải giống ô 1–6; ô 15–16 (La Si La Sol Fa♯ | Sol) khác ô 7–8. Tay trái ô 9–16 có nốt đen và móc đơn (ô 10, 12, 13, 15). Ô 15–16: Rê3 → Sol3, Sol2; tay phải Fa♯ → Sol: kết trọn.'
+  - id: n35
+    cau: 'Đoạn B, câu 3 (ô 17–24): mở đầu ở nốt Si cao, sang Rê trưởng với Đô♯ ở cả hai tay; chuỗi móc đơn đi lên ở ô 21 là cao trào nhỏ của bài; kết ở ô 24.'
+    loai: cau-truc
+    nguon: [ mut-anh114 ]
+    ket_qua: dung
+    ghi_chu: 'Ô 17 Si5; Đô♯5 tay phải ô 20, 21, 23, Đô♯4 tay trái ô 22; ô 21 La4 Si4 Đô♯5 Rê5 Mi5 Fa♯5 đi lên; ô 24 Rê5 trên Rê4–Rê3. "Cao trào nhỏ" là cách nói.'
+  - id: n36
+    cau: 'Câu 4 (ô 25–32): nốt Rê – Sol của ô 1 trở lại trong dạng mới; chuỗi móc đơn ở ô 29 dẫn về kết ở Sol trưởng.'
+    loai: cau-truc
+    nguon: [ mut-anh114 ]
+    ket_qua: dung
+    ghi_chu: 'Ô 25 Rê5, Sol4 Fa♯4 Sol4; ô 29 Rê4 Mi4 Fa♯4 Sol4 La4 Si4; ô 32 hợp âm Sol trưởng.'
+  - id: n37
+    cau: Bảng cấu trúc, câu 3 "chuyển sang Rê trưởng (có Đô♯)"; câu 4 "về lại Sol trưởng (tay trái đã có Đô♮ ở ô 24)".
+    loai: cau-truc
+    nguon: [ mut-anh114 ]
+    ket_qua: dung
+    ghi_chu: "LilyPond ô 24 tay trái \"d d, c'!\" (Đô♮ có dấu hoàn nhắc)."
+  - id: n38
+    cau: 'Bảng cấu trúc, câu 1: ô 1–4 như câu hỏi, ô 5–8 đi xuống từng bậc và dừng lơ lửng.'
+    loai: cau-truc
+    nguon: [ mut-anh114 ]
+    ket_qua: dung
+    ghi_chu: 'Ô 5–6: Đô5 Rê Đô Si La | Si Đô Si La Sol (móc đơn đi xuống từng bậc); ô 8 dừng ở La4 trên hợp âm Rê.'
+  - id: n39
+    cau: Đoạn A chỉ khép lại bằng kết trọn ở ô 16; đừng làm ô 8 "kết" mạnh như ô 16.
+    loai: cau-truc
+    nguon: [ mut-anh114, omt-intro ]
+    ket_qua: dung
+    ghi_chu: Như n33, n34; vế sau là lời khuyên.
+  - id: n40
+    cau: 'Cả bài chỉ dùng vài ý: môtip đi lên của ô 1, chuỗi móc đơn đi xuống của ô 5–6, và chuỗi móc đơn đi lên dẫn tới kết (ô 21, ô 29).'
+    loai: cau-truc
+    nguon: [ mut-anh114 ]
+    ket_qua: dung
+    ghi_chu: Ô 1, 9 (môtip); ô 5–6, 13–14 (đi xuống); ô 21, 29 (sáu móc đơn đi lên). "Chỉ dùng vài ý" là cách tóm.
+  - id: n41
+    cau: Link Hình thức nhỏ (hình thức hai đoạn).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: src/content/docs/nhac-ly/31-hinh-thuc-nho.md có mục "Hình thức hai đoạn (binary)" và lấy chính Minuet Sol trưởng làm ví dụ.
+  - id: n42
+    cau: 'Nốt nhạc của khuông theo ấn bản Bach-Gesellschaft (1894), bỏ các dấu trang trí; số ngón là gợi ý của trang; ô 1–8 là câu 1, ô 9–16 là câu 2; hết ô 16 thì nhắc lại từ đầu.'
+    loai: cau-truc
+    nguon: [ mut-anh114, imslp-anh114 ]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: source "Bach-Gesellschaft"; IMSLP: BG Bd. 43.2, 1894. Khối 1 khớp từng nốt, không có dấu trang trí (khuong_nhac khối 1).'
+  - id: n43
+    cau: Hợp âm đầu bài ở tay trái dùng ngón 5-3-1; ở ô 13–14, ngón 5 trượt từ Fa♯ lên Sol (ổn với cách phát âm hơi tách).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Hợp âm ô 1 là Sol3 Si3 Rê4 (Mutopia); ô 13 tay trái Fa♯3 ngón 5, ô 14 Sol3.'
+  - id: n44
+    cau: 'Chỗ khó: nhảy quãng tám tay phải (Sol cao xuống Sol) ở ô 4 và 12.'
+    loai: cau-truc
+    nguon: [ mut-anh114 ]
+    ket_qua: dung
+    ghi_chu: Ô 4 và 12 tay phải Sol5 rồi Sol4 Sol4.
+  - id: n45
+    cau: 'Chỗ khó: đổi thế tay ở ô 3, 7, 15 (Mi rồi Đô ở ô 3; Fa♯ nằm dưới thế tay ở ô 7 và 15).'
+    loai: cau-truc
+    nguon: [ mut-anh114 ]
+    ket_qua: dung
+    ghi_chu: Ô 3 Mi5 rồi Đô5; ô 7 bắt đầu Fa♯4, ô 15 kết bằng Fa♯4, dưới thế tay Sol.
+  - id: n46
+    cau: Cách tập các chỗ khó (mắt nhìn trước nốt đích, viết số ngón, tập chậm từng chỗ, đếm to, ghép từng cặp ô, khoanh dấu hóa…).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n47
+    cau: Tay phải chạy móc đơn khi tay trái giữ nốt dài; ở ô 8 và 12 thì tay trái chạy móc đơn.
+    loai: cau-truc
+    nguon: [ mut-anh114 ]
+    ket_qua: da-sua
+    ghi_chu: 'Cũ: "ở ô 8 và 12 thì ngược lại". Ô 8: tay phải La4 trắng chấm dôi, tay trái chạy; ô 12: tay phải Sol5 Sol4 Sol4 nốt đen (không giữ nốt dài), tay trái Si3 Đô4 Si3 La3 Sol3. Mới: "thì tay trái chạy móc đơn" (đúng cả hai ô).'
+  - id: n48
+    cau: Hóa biểu chỉ có Fa♯; Đô♯ xuất hiện ở ô 20–23, rồi Đô♮ trở lại ở tay trái ô 24.
+    loai: cau-truc
+    nguon: [ mut-anh114 ]
+    ket_qua: dung
+    ghi_chu: "Đô♯ ở ô 20, 21, 23 (tay phải), 22 (tay trái); ô 24 tay trái \"c'!\"."
+  - id: n49
+    cau: 'Bước nhảy tay trái ở ô 8: Rê xuống Rê thấp rồi vọt lên Đô (quãng bảy) trong thời gian của móc đơn.'
+    loai: cau-truc
+    nguon: [ mut-anh114 ]
+    ket_qua: dung
+    ghi_chu: Ô 8 tay trái Rê4 (đen), Rê3 Đô4 Si3 La3 (móc đơn); Rê3–Đô4 là quãng bảy thứ.
+  - id: n50
+    cau: Người mới hay nhấn đều cả ba phách, nghe như bước đi nặng nề; đếm "MỘT – hai – ba".
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n51
+    cau: Các bài tập chuẩn bị soạn riêng cho trang này, không trích từ bản nhạc gốc.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Khối 2–4 có "(soạn cho trang này)" ở T:; khối 3 ô 2 và khối 4 ô 5–6 mượn hình bè trầm ô 8, 16 để tập (trang nói rõ ở bài tập 2), không phải trích đoạn liên tục.'
+  - id: n52
+    cau: 'Bài tập 1: dấu chấm nghĩa là tách nhẹ (nốt dài khoảng một nửa đến hai phần ba giá trị, nhấc ngón chứ không bật); móc đơn trong dấu luyến chơi liền.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Quy ước riêng của bài tập ("ở đây nghĩa là"), không trái trang piano/tieng-dan.
+  - id: n53
+    cau: 'Bài tập 2: ô 2 chính là kiểu chuyển động của ô 8 trong bài; ô 3–4 đổi vai.'
+    loai: cau-truc
+    nguon: [ mut-anh114 ]
+    ket_qua: dung
+    ghi_chu: 'Khối 3 ô 2 tay trái "D2 D,C B,A," = Rê4 Rê3 Đô4 Si3 La3, đúng ô 8 tay trái của bài (MIDI Mutopia).'
+  - id: n54
+    cau: 'Bài tập 3: dấu lặng cho thời gian chuẩn bị rồi ngắn dần; khi ô 3 và ô 6 đã chắc, chơi ô 3–4 và ô 7–8 của bài.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Khối 4 ô 1–3 dấu lặng hai phách, một phách, không còn.
+  - id: n55
+    cau: Kế hoạch 4 tuần (bảng tuần và máy đếm nhịp ♩ = 60–112) và danh sách việc.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n56
+    cau: Link thu âm (luyen-tap/thu-am).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: src/content/docs/luyen-tap/thu-am.md có trong site mới.
+  - id: n57
+    cau: Minuet là điệu nhảy vừa phải, không phải bài chậm.
+    loai: dinh-nghia
+    nguon: [ cod-minuet ]
+    ket_qua: dung
+    ghi_chu: 'COD; Britannica (hồ sơ khóa hinh-thuc/minuet-trio m2): nhịp ba, tốc độ vừa phải.'
+  - id: n58
+    cau: Khoảng ♩ = 100–116 là hợp lý; đừng chậm lại ở cuối mỗi câu, chỉ một chút ở ô cuối.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Bản gốc không ghi tốc độ (Mutopia).
+  - id: n59
+    cau: 'Điểm xuất phát phát âm: nốt đen hơi tách, móc đơn đi bậc liền, nốt cuối của chuỗi móc đơn nhấc nhẹ; đây là điểm xuất phát tập luyện, không phải luật lịch sử; nốt dài tay trái giữ đủ giá trị.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Khớp dòng Baroque của bảng "Phát âm theo phong cách" ở piano/tieng-dan ("Nhiều nốt hơi tách"). Cũng là câu hỏi 4 (n78).
+  - id: n60
+    cau: Link phần phát âm theo phong cách trong Tạo tiếng đàn.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: src/content/docs/piano/tieng-dan.md có mục "Phát âm theo phong cách".
+  - id: n61
+    cau: Bản gốc không ghi sắc thái.
+    loai: cau-truc
+    nguon: [ mut-anh114 ]
+    ket_qua: dung
+  - id: n62
+    cau: Gợi ý sắc thái (mf cho đoạn A, sáng hơn đầu đoạn B; lần nhắc lại nhỏ hơn hay thêm nốt trang trí).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n63
+    cau: 'Ấn bản Bach-Gesellschaft in dấu láy (mordent) ở nốt Đô của ô 3 và ô 5 (và ô 11, 13), một appoggiatura Si trước nốt La ở ô 8, và một láy rền ngắn ở ô 30.'
+    loai: cau-truc
+    nguon: [ mut-anh114 ]
+    ket_qua: dung
+    ghi_chu: 'LilyPond (theo BG): ô 3 "c8^[\mordent", ô 5 "c4^\mordent", ô 11 "c8[\mordent", ô 13 "c4\mordent"; ô 8 "\grace b8 a2."; ô 30 "c4 b^\prall a" (láy rền ngắn trên nốt Si).'
+  - id: n64
+    cau: Các ấn bản khác nhau về chi tiết trang trí; học bài không trang trí trước rồi thêm dần.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n65
+    cau: Link Nốt hoa mỹ.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: src/content/docs/piano/not-hoa-my.md có (láy rền, láy, appoggiatura).
+  - id: n66
+    cau: 'Bàn đạp: không dùng; liền tiếng đến từ ngón tay.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n67
+    cau: Lỗi thường gặp (dính liền hay tách cứng, nhấn đều ba phách, nhấc nốt dài sớm, chậm lại trước bước nhảy ở ô 4 và 12, đổi số ngón, quên Đô♯ hay Đô♮ ở ô 24, bỏ nhắc lại).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Các số ô khớp n44, n48.
+  - id: n68
+    cau: 'Học tiếp: Minuet Sol thứ cùng mức độ (cùng chặng); chơi Sol trưởng, Sol thứ, rồi Sol trưởng lần nữa.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'src/data/tac-pham.yml (trường chang đã khóa): minuet-sol và minuet-sol-thu cùng chang 2. Thứ tự chơi: n31.'
+  - id: n69
+    cau: 'Cùng cuốn sổ tay 1725: Minuet Fa trưởng (BWV Anh. 113) và Musette Rê trưởng (BWV Anh. 126).'
+    loai: danh-muc
+    nguon: [ imslp-nb ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: số 3 "Menuet F-dur, BWV Anh.113", số 22 "Musette D-dur, BWV Anh.126".'
+  - id: n70
+    cau: 'Cùng chặng trên site: Schumann Album für die Jugend; sau đó Clementi Sonatina Op. 36 số 1.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'src/data/tac-pham.yml (chang đã khóa): schumann-album chang 2, clementi-sonatina chang 3. Trang schumann-album có; clementi-sonatina chưa chuyển (../opus-zero/docs/piano/tac-pham/clementi-sonatina.md), link hiện "sắp có".'
+  - id: n71
+    cau: 'Khi đã vững hai bè: Bach Invention số 1; danh sách đầy đủ theo cấp: Tác phẩm theo cấp độ.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'bach-invention-1 chưa chuyển (../opus-zero/docs/piano/tac-pham/bach-invention-1.md, invention hai bè); src/content/docs/piano/tac-pham-theo-cap.md có.'
+  - id: n72
+    cau: 'Câu hỏi 1: ô 8 kết nửa, dừng lơ lửng trên Rê, hợp âm át (không phải kết trọn ở Sol trưởng, không chuyển hẳn sang Rê trưởng).'
+    loai: cau-truc
+    nguon: [ mut-anh114, omt-intro ]
+    ket_qua: dung
+    ghi_chu: Như n33; ô 9 trở lại Sol trưởng ngay.
+  - id: n73
+    cau: 'Câu hỏi 1, giải thích: câu 1 dừng lơ lửng ở ô 8; đoạn A chỉ khép lại bằng kết trọn ở ô 16.'
+    loai: cau-truc
+    nguon: [ mut-anh114 ]
+    ket_qua: dung
+  - id: n74
+    cau: 'Câu hỏi 2: chữ "Anh." trong BWV Anh. 114 là phụ lục (Anhang) của danh mục Bach, nơi xếp các tác phẩm còn nghi vấn (không phải bài do Anna Magdalena sáng tác hay bản soạn lại cho harpsichord).'
+    loai: danh-muc
+    nguon: [ imslp-anh114, wiki-minuets ]
+    ket_qua: null
+    ghi_chu: 'chưa chắc: như n11 (nghĩa của Anh. II chỉ thấy ở Wikipedia). "Anh." = Anhang: IMSLP ghi "BWV Anhang 114".'
+  - id: n75
+    cau: 'Câu hỏi 2, giải thích: danh mục BWV (1950) xếp cặp minuet vào phụ lục; từ cuối thập niên 1970, sau nghiên cứu của Hans-Joachim Schulze, giới nghiên cứu ghi tên Christian Petzold.'
+    loai: lich-su
+    nguon: [ schulze-1979, imslp-anh114 ]
+    ket_qua: null
+    ghi_chu: 'chưa chắc: phần "(1950)" như n11; phần Schulze và Petzold đúng (n12, n15).'
+  - id: n76
+    cau: 'Câu hỏi 3: khi tập bước nhảy quãng tám tay phải (ô 4, 12), mắt nhìn trước nốt đích, dời cả bàn tay như một khối, ngón 1 đặt lên phím trước rồi mới đánh; chậm lại trước bước nhảy làm nhịp bị "khựng".'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n77
+    cau: 'Câu hỏi 3, giải thích: bài tập 3 cho thời gian chuẩn bị bằng dấu lặng rồi rút ngắn dần.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Khối 4 (bài tập 3) đúng như vậy.
+  - id: n78
+    cau: 'Câu hỏi 4: điểm xuất phát phát âm hợp lý là nốt đen hơi tách, móc đơn đi bậc liền, nốt cuối chuỗi móc đơn nhấc nhẹ; đây là điểm xuất phát để tập, không phải luật lịch sử.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Như n59.
+  - id: n79
+    cau: 'Nguồn: bài của Hans-Joachim Schulze trên Bach-Jahrbuch 65 (1979), tr. 45–64, là bằng chứng chính cho việc ghi tên Petzold.'
+    loai: ten
+    nguon: [ schulze-1979 ]
+    ket_qua: da-sua
+    ghi_chu: 'Cũ: "*Bach-Jahrbuch* 1979 (in năm 1980)". Mới: "*Bach-Jahrbuch* 65 (1979), tr. 45–64 ([bản số hóa](https://bjb.publia.org/bjb/article/view/1686))". Năm in 1980 chỉ thấy ở Wikipedia; trang số hóa ghi Bd. 65 (1979), tr. 45–64.'
+  - id: n80
+    cau: 'Nguồn: Neue Bach-Ausgabe, tập V/4 (Bärenreiter, 1957, biên tập Georg von Dadelsen): hai cuốn sổ tay của Anna Magdalena Bach.'
+    loai: ten
+    nguon: [ imslp-anh114, imslp-nb ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Neue Bach-Ausgabe, Serie V, Band 4, ed. Georg von Dadelsen, Bärenreiter, Kassel, 1957".'
+  - id: n81
+    cau: 'Nguồn: ấn bản Bach-Gesellschaft (1894), bản dàn trang công cộng của Mutopia Project: nguồn của đoạn nhạc trên trang.'
+    loai: ten
+    nguon: [ mut-anh114, imslp-anh114 ]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: license "Public Domain", source "Bach-Gesellschaft"; IMSLP: BG Bd. 43.2, 1894.'
+  - id: n82
+    cau: 'Nguồn: Wikipedia "Minuets in G major and G minor"; IMSLP; link tài liệu tham khảo.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Link Wikipedia và IMSLP sống (đã mở); src/content/docs/tai-lieu-tham-khao.md có. Wikipedia chỉ là đọc thêm, không phải nguồn của nhận định nào.'
 khuong_nhac:
   - khoi: 1
-    loai: null
-    kiem: []
-    ket_qua: null
+    loai: trich-doan
+    kiem: [ cu-phap, nhip, giong, not, so-ngon, doi-chieu-an-ban ]
+    ket_qua: dung
+    ghi_chu: 'Đoạn A ô 1–16, 3/4, L:1/8, K:G. Ấn bản: Bach-Gesellschaft qua Mutopia anna-magdalena-04 (.ly và .mid). Công cụ: script Python (mido) in nốt MIDI theo ô, đối chiếu từng nốt cả hai tay với khối ABC. Kết quả: 16/16 ô khớp cao độ và trường độ cả hai tay (tay trái ô 1 hợp âm Sol3–Si3–Rê4 nửa ô + La3; ô 7 Rê4 Si3 Sol3; ô 8 Rê4 Rê3 Đô4 Si3 La3; ô 15–16 Đô4 Rê4 Rê3 | Sol3 Sol2). Khác bản gốc đúng như trang nói: bỏ dấu trang trí (mordent ô 3, 5, 11, 13; appoggiatura ô 8). Số ngón chơi được.'
   - khoi: 2
-    loai: null
-    kiem: []
-    ket_qua: null
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
+    ket_qua: dung
+    ghi_chu: '4 ô 3/4, mỗi ô 6 móc đơn. Đúng điều trang nói: nốt đen có dấu chấm (tách), móc đơn trong dấu luyến (ô 1, 3). Hòa âm Sol – Sol – Rê – Sol hợp giai điệu. Ngón tay phải 1-2-3-4-5, 5-4-3, 4-3-2-1-2; tay trái 5-3-1, 3-4-5, 1-3-5: chơi được, vừa chặng 2.'
   - khoi: 3
-    loai: null
-    kiem: []
-    ket_qua: null
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, hop-am, so-ngon, doi-chieu-an-ban ]
+    ket_qua: dung
+    ghi_chu: '5 ô 3/4. Ô 1–2 tay phải giữ Si4, La4 trong khi tay trái chạy; ô 2 tay trái đúng hình ô 8 của bài (đối chiếu MIDI Mutopia); ô 3–4 đổi vai (tay phải Sol4–Rê5, Đô5–Fa♯4; tay trái Sol3, Rê4 giữ). Hòa âm Sol – Rê7 – Sol – Rê – Sol. Ngón chơi được.'
   - khoi: 4
-    loai: null
-    kiem: []
-    ket_qua: null
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, so-ngon ]
+    ket_qua: dung
+    ghi_chu: '6 ô 3/4, đủ phách (ô 2: g2 z G G2 = 6 móc đơn). Tay phải Sol5 ngón 5 xuống Sol4 ngón 1 với dấu lặng ngắn dần; ô 3 đúng ô 4 của bài. Tay trái ô 4–6 nhảy Rê4–Rê3, rồi hình ô 8 và Sol3–Sol2 (ô 16 của bài). Đúng điều trang nói.'
+doi_chu:
+  - cu: "Nghe ít nhất hai bản: một bản trên harpsichord (Gustav Leonhardt, Igor Kipnis hay Richard Egarr đều đã thu bài này) hoặc trên clavichord (Mahan Esfahani), và một bản trên piano. Mỗi lần nghe, chú ý một điều:"
+    moi: "Nghe ít nhất hai bản: một bản trên harpsichord hoặc clavichord (ví dụ Igor Kipnis, hay Mahan Esfahani trên clavichord), và một bản trên piano. Mỗi lần nghe, chú ý một điều:"
+    ly_do: "n28 (da-sua): bản thu của Kipnis (Apple Music, Nonesuch) và Esfahani (Hyperion, clavichord) có ghi bài này; chưa tìm được danh mục đĩa ghi bản thu của Leonhardt và Egarr."
+  - cu: Tay phải chạy móc đơn khi tay trái giữ nốt dài; ở ô 8 và 12 thì ngược lại
+    moi: Tay phải chạy móc đơn khi tay trái giữ nốt dài; ở ô 8 và 12 thì tay trái chạy móc đơn
+    ly_do: "n47 (da-sua): ô 12 tay phải chơi nốt đen, không giữ nốt dài (Mutopia, Bach-Gesellschaft)."
+  - cu: "Hans-Joachim Schulze, bài viết về cặp minuet và tổ khúc của Petzold, Bach-Jahrbuch 1979 (in năm 1980): bằng chứng chính cho việc ghi tên Petzold."
+    moi: "Hans-Joachim Schulze, bài viết về cặp minuet và tổ khúc của Petzold, Bach-Jahrbuch 65 (1979), tr. 45–64 (bản số hóa): bằng chứng chính cho việc ghi tên Petzold."
+    ly_do: "n79 (da-sua): số tập và trang theo bản số hóa đã đọc; năm in 1980 không có nguồn đọc được."
+  - cu: "Năm 1725, J. S. Bach bắt đầu cuốn sổ tay âm nhạc thứ hai cho vợ, ca sĩ Anna Magdalena Bach. Cuốn sổ mở đầu bằng hai partita của chính Bach; phía sau là những bài nhỏ được chép vào dần: minuet, polonaise, aria, bài hát. Anna Magdalena tự tay chép các bài số 3 đến 11. Bài số 3 là một minuet Fa trưởng khuyết danh; bài số 4 và 5 là cặp minuet Sol trưởng và Sol thứ. Có thể Bach mang chúng về sau chuyến đi Dresden tháng 9 năm 1725, khi ông biểu diễn trên cây organ Silbermann mới của nhà thờ Sophienkirche, nơi Petzold là nghệ sĩ organ. Nhiều khả năng các bài dễ này dùng để dạy các con nhỏ trong nhà."
+    moi: "Năm 1725, J. S. Bach bắt đầu cuốn sổ tay âm nhạc thứ hai cho vợ, ca sĩ Anna Magdalena Bach. Cuốn sổ mở đầu bằng hai partita của chính Bach; phía sau là những bài nhỏ được chép vào dần: minuet, polonaise, aria, bài hát. Anna Magdalena tự tay chép nhiều bài, trong đó có cặp minuet này. Bài số 3 là một minuet Fa trưởng khuyết danh; bài số 4 và 5 là cặp minuet Sol trưởng và Sol thứ. Có thể Bach mang chúng về sau chuyến đi Dresden tháng 9 năm 1725, khi ông biểu diễn trên cây organ Silbermann mới của nhà thờ Sophienkirche, nơi Petzold là nghệ sĩ organ."
+    ly_do: "n6 (da-sua): không tìm được nguồn đọc được cho các bài 3–11; IMSLP ghi nguồn sớm nhất của BWV Anh. 114 là bản Anna Magdalena chép. n9 (da-bo): chỉ thấy ở Wikipedia (dẫn sách in); không có nguồn bậc 1–2 đọc được."

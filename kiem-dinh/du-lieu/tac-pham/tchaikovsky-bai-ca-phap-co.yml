@@ -1,101 +1,373 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/tchaikovsky-bai-ca-phap-co
 ban_ghi: tac-pham/tchaikovsky-bai-ca-phap-co
 lan:
-  - so: 1
-    ngay: 2026-10-24
-    nhanh: moi/d2-0-du-lieu
-    ma_bam: sha256:93f66cf7ee2df23af00a6905dcf470158866665df3705e806ecc2dd3771d3645
-    nguoi:
-      luot_1: Claude Sonnet 5.5 (D2-0 phần A)
-      luot_2: Claude Sonnet 5.5 (D2-0 lượt 2 phần A)
-      review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
-      kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
-    truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
-  - so: 2
-    ngay: null
-    nhanh: moi/d6-l1
-    ma_bam: null
-    nguoi:
-      luot_1: null
-      luot_2: null
-      review: null
-      kiem_mau: null
-ghi_chu: "Trang bài học cũ ../opus-zero/docs/piano/tac-pham/tchaikovsky-bai-ca-phap-co.md có (loai: bai-hoc là cấu trúc, không phải nhận định)."
+- so: 1
+  ngay: 2026-10-24
+  nhanh: moi/d2-0-du-lieu
+  ma_bam: sha256:93f66cf7ee2df23af00a6905dcf470158866665df3705e806ecc2dd3771d3645
+  nguoi:
+    luot_1: Claude Sonnet 5.5 (D2-0 phần A)
+    luot_2: Claude Sonnet 5.5 (D2-0 lượt 2 phần A)
+    review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
+    kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
+  truong:
+  - chang
+  - danh_muc
+  - gan_cho
+  - goi_y
+  - grade
+  - khuyet_danh
+  - loai
+  - tac_gia
+  - ten
+- so: 2
+  ngay: '2026-11-05'
+  nhanh: moi/d6-l1
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Opus 5.5 (D6-L1 phần B)
+    luot_2: null
+    review: null
+    kiem_mau: null
+ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/tchaikovsky-bai-ca-phap-co.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Lần 2 (D6-L1, lượt 1 phần B): nhận định n6–n31 cho các trường chưa khóa (giong, nhip, thoi_ky, ky_nang_chinh, chip, thong_tin, hinh, ban_thu). Không có chỗ sai.'
 nguon:
-  - id: imslp-op39
-    bac: 2
-    ten: IMSLP, Children's Album, Op.39 (Tchaikovsky)
-    link: https://imslp.org/wiki/Children's_Album,_Op.39_(Tchaikovsky,_Pyotr_Ilyich)
-  - id: abrsm-1920
-    bac: 2
-    ten: ABRSM, Piano Syllabus 2019 & 2020 (bản đầy đủ; bản lưu của us.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf)
-    link: https://web.archive.org/web/2021/https://us.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf
-  - id: rcm-2022
-    bac: 2
-    ten: The Royal Conservatory (RCM), Piano Syllabus, 2022 Edition
-    link: https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf
+- id: imslp-op39
+  bac: 2
+  ten: IMSLP, Children's Album, Op.39 (Tchaikovsky)
+  link: https://imslp.org/wiki/Children's_Album,_Op.39_(Tchaikovsky,_Pyotr_Ilyich)
+- id: abrsm-1920
+  bac: 2
+  ten: ABRSM, Piano Syllabus 2019 & 2020 (bản đầy đủ; bản lưu của us.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf)
+  link: https://web.archive.org/web/2021/https://us.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf
+- id: rcm-2022
+  bac: 2
+  ten: The Royal Conservatory (RCM), Piano Syllabus, 2022 Edition
+  link: https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf
+- id: mutopia-2080
+  bac: 1
+  ten: Mutopia Project, Old French Song Op. 39 No. 16 (David McNamara, Schirmer 1904), Mutopia-2015/11/27-2080
+  link: https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2080
+- id: tr-op39
+  bac: 2
+  ten: Tchaikovsky Research, Children's Album
+  link: https://en.tchaikovsky-research.net/pages/Children's_Album
+- id: imslp-tchaikovsky
+  bac: 2
+  ten: IMSLP, Category:Tchaikovsky, Pyotr (7/5/1840 – 6/11/1893, Nationality Russian, Time Period Romantic)
+  link: https://imslp.org/wiki/Category:Tchaikovsky,_Pyotr
+- id: imslp-kolodin-old-french
+  bac: 2
+  ten: IMSLP, file bản thu Luis Kolodin plays Tchaikovsky's Old French Song (giấy phép ghi ở mục Recordings của trang Op.39)
+  link: https://imslp.org/wiki/File:PMLP19418-Y2mate.mx_-_Luis_Kolodin_plays_Tchaikovsky's_Old_French_Song_(128_kbps).mp3
 nhan_dinh:
-  - id: n1
-    cau: "Tên bài: Bài ca Pháp cổ, Op. 39 số 16 (Old French Song, trong Album cho thiếu nhi)."
-    loai: ten
-    truong:
-      - ten
-    nguon:
-      - imslp-op39
-      - abrsm-1920
-    ket_qua: dung
-    ghi_chu: "IMSLP: \"Children's Album, Op.39\", bài thứ 16 \"Old French Song (Старинная французская песенка), Molto moderato (G minor, 32 bars)\". ABRSM 2019–2020: \"Old French Song (No. 16 from Album for the Young, Op. 39)\"."
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Children%27s_Album,_Op.39_(Tchaikovsky,_Pyotr_Ilyich)" ]
-    luot_2_ghi_chu: "IMSLP: Children's Album Op.39, 24 pieces, no.16 Old French Song (Molto moderato, G minor)."
-  - id: n2
-    cau: "Tác giả: Pyotr Ilyich Tchaikovsky."
-    loai: lich-su
-    truong:
-      - tac_gia
-    nguon:
-      - imslp-op39
-      - abrsm-1920
-    ket_qua: dung
-    ghi_chu: 'IMSLP: Composer "Tchaikovsky, Pyotr"; ABRSM 2019–2020 liệt kê dưới tên Tchaikovsky.'
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Children%27s_Album,_Op.39_(Tchaikovsky,_Pyotr_Ilyich)" ]
-    luot_2_ghi_chu: "IMSLP composer: Tchaikovsky, Pyotr."
-  - id: n3
-    cau: "Số danh mục: Op. 39 số 16."
-    loai: danh-muc
-    truong:
-      - danh_muc
-    nguon:
-      - imslp-op39
-      - abrsm-1920
-    ket_qua: dung
-    ghi_chu: 'IMSLP: Op./Cat. No. "Op.39 ; TH 141", bài thứ 16. ABRSM 2019–2020: "No. 16 from Album for the Young, Op. 39".'
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Children%27s_Album,_Op.39_(Tchaikovsky,_Pyotr_Ilyich)", https://web.archive.org/web/20201112011213/https://gb.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf ]
-    luot_2_ghi_chu: Op.39 No.16 (published numbering; ABRSM 2019-20 also "No. 16 from Album for the Young, Op. 39").
-  - id: n4
-    cau: Bài tương đương khoảng ABRSM Grade 2–3.
-    loai: cap-do
-    truong:
-      - grade
-    nguon:
-      - abrsm-1920
-      - rcm-2022
-    ket_qua: dung
-    ghi_chu: 'Đề cương chính thức: ABRSM Piano 2019 & 2020, Grade 3, danh sách B, mục 6: "Tchaikovsky, Old French Song (No. 16 from Album for the Young, Op. 39)". RCM 2022: "Old French Song (no. 16)" ở Level 4. Grade 3 nằm trong khoảng Grade 2–3 (ABRSM nghiêng về đầu trên).'
-    luot_2: dung
-    luot_2_nguon: [ https://web.archive.org/web/20201112011213/https://gb.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf, https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf ]
-    luot_2_ghi_chu: 'ABRSM 2019-20 Grade 3: "Old French Song (No. 16 from Album for the Young, Op. 39)"; RCM 2022 Level 4. Grade 3 lies inside 2-3.'
-  - id: n5
-    cau: Bài thuộc chặng 2 (Grade 1–2) của lộ trình piano.
-    loai: cap-do
-    truong:
-      - chang
-    nguon:
-      - abrsm-1920
-    ket_qua: dung
-    ghi_chu: "Khoảng Grade 2–3 nằm giữa chặng 2 (Grade 1–2) và chặng 3 (Grade 3); dữ liệu chọn chặng 2 (đầu dưới), hợp lệ theo luật kiểm chéo, dù ABRSM xếp Grade 3 (chặng 3): chủ repo có thể cân nhắc."
-    luot_2: dung
-    luot_2_nguon: [ https://web.archive.org/web/20201112011213/https://gb.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf ]
-    luot_2_ghi_chu: Stage 2 = Grade 1-2 covers the low end of the claimed 2-3; note ABRSM lists it at Grade 3 (border of stages 2/3).
+- id: n1
+  cau: 'Tên bài: Bài ca Pháp cổ, Op. 39 số 16 (Old French Song, trong Album cho thiếu nhi).'
+  loai: ten
+  truong:
+  - ten
+  nguon:
+  - imslp-op39
+  - abrsm-1920
+  ket_qua: dung
+  ghi_chu: 'IMSLP: "Children''s Album, Op.39", bài thứ 16 "Old French Song (Старинная французская песенка), Molto moderato (G minor, 32 bars)". ABRSM 2019–2020: "Old French Song (No. 16 from Album for the Young, Op. 39)".'
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/Children%27s_Album,_Op.39_(Tchaikovsky,_Pyotr_Ilyich)
+  luot_2_ghi_chu: 'IMSLP: Children''s Album Op.39, 24 pieces, no.16 Old French Song (Molto moderato, G minor).'
+- id: n2
+  cau: 'Tác giả: Pyotr Ilyich Tchaikovsky.'
+  loai: lich-su
+  truong:
+  - tac_gia
+  nguon:
+  - imslp-op39
+  - abrsm-1920
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Composer "Tchaikovsky, Pyotr"; ABRSM 2019–2020 liệt kê dưới tên Tchaikovsky.'
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/Children%27s_Album,_Op.39_(Tchaikovsky,_Pyotr_Ilyich)
+  luot_2_ghi_chu: 'IMSLP composer: Tchaikovsky, Pyotr.'
+- id: n3
+  cau: 'Số danh mục: Op. 39 số 16.'
+  loai: danh-muc
+  truong:
+  - danh_muc
+  nguon:
+  - imslp-op39
+  - abrsm-1920
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Op./Cat. No. "Op.39 ; TH 141", bài thứ 16. ABRSM 2019–2020: "No. 16 from Album for the Young, Op. 39".'
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/Children%27s_Album,_Op.39_(Tchaikovsky,_Pyotr_Ilyich)
+  - https://web.archive.org/web/20201112011213/https://gb.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf
+  luot_2_ghi_chu: Op.39 No.16 (published numbering; ABRSM 2019-20 also "No. 16 from Album for the Young, Op. 39").
+- id: n4
+  cau: Bài tương đương khoảng ABRSM Grade 2–3.
+  loai: cap-do
+  truong:
+  - grade
+  nguon:
+  - abrsm-1920
+  - rcm-2022
+  ket_qua: dung
+  ghi_chu: 'Đề cương chính thức: ABRSM Piano 2019 & 2020, Grade 3, danh sách B, mục 6: "Tchaikovsky, Old French Song (No. 16 from Album for the Young, Op. 39)". RCM 2022: "Old French Song (no. 16)" ở Level 4. Grade 3 nằm trong khoảng Grade 2–3 (ABRSM nghiêng về đầu trên).'
+  luot_2: dung
+  luot_2_nguon:
+  - https://web.archive.org/web/20201112011213/https://gb.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf
+  - https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf
+  luot_2_ghi_chu: 'ABRSM 2019-20 Grade 3: "Old French Song (No. 16 from Album for the Young, Op. 39)"; RCM 2022 Level 4. Grade 3 lies inside 2-3.'
+- id: n5
+  cau: Bài thuộc chặng 2 (Grade 1–2) của lộ trình piano.
+  loai: cap-do
+  truong:
+  - chang
+  nguon:
+  - abrsm-1920
+  ket_qua: dung
+  ghi_chu: 'Khoảng Grade 2–3 nằm giữa chặng 2 (Grade 1–2) và chặng 3 (Grade 3); dữ liệu chọn chặng 2 (đầu dưới), hợp lệ theo luật kiểm chéo, dù ABRSM xếp Grade 3 (chặng 3): chủ repo có thể cân nhắc.'
+  luot_2: dung
+  luot_2_nguon:
+  - https://web.archive.org/web/20201112011213/https://gb.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf
+  luot_2_ghi_chu: Stage 2 = Grade 1-2 covers the low end of the claimed 2-3; note ABRSM lists it at Grade 3 (border of stages 2/3).
+- id: n6
+  cau: 'Giọng: Sol thứ.'
+  loai: cau-truc
+  truong:
+  - giong
+  nguon:
+  - mutopia-2080
+  - tr-op39
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \key g \minor; TR: G minor.'
+- id: n7
+  cau: 'Nhịp: 2/4.'
+  loai: cau-truc
+  truong:
+  - nhip
+  nguon: &id001
+  - mutopia-2080
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \time 2/4.'
+- id: n8
+  cau: 'Thời kỳ: Lãng mạn.'
+  loai: lich-su
+  truong:
+  - thoi_ky
+  nguon:
+  - imslp-op39
+  - imslp-tchaikovsky
+  ket_qua: dung
+  ghi_chu: 'IMSLP Op.39: Piece Style Romantic; Category Tchaikovsky: Time Period Romantic. (Mutopia ghi Style "Classical": bỏ qua, nguồn bậc 2 khác nhau, theo IMSLP.)'
+- id: n9
+  cau: 'Kỹ năng chính: giai điệu hát ở Sol thứ, phần đệm nhỏ và đều.'
+  loai: cau-truc
+  truong:
+  - ky_nang_chinh
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: giai điệu có luyến ở tay phải, tay trái giọng giữa móc đơn/nốt đen và bè trầm ngân.'
+- id: n10
+  cau: 'Chip: "Sol thứ · 2/4" và "Molto moderato".'
+  loai: ten
+  truong:
+  - chip
+  nguon:
+  - tr-op39
+  - imslp-op39
+  - mutopia-2080
+  ket_qua: dung
+  ghi_chu: 'TR, IMSLP: Molto moderato (G minor); Mutopia 2/4.'
+- id: n11
+  cau: 'Chip cấp độ: ≈ Grade 2–3.'
+  loai: cap-do
+  truong:
+  - chip
+  nguon:
+  - abrsm-1920
+  - rcm-2022
+  ket_qua: dung
+  ghi_chu: 'Trùng grade đã khóa (lần 1 n4: ABRSM 2019–2020 Grade 3).'
+- id: n12
+  cau: 'Chip: "A A B A, 32 ô nhịp".'
+  loai: cau-truc
+  truong:
+  - chip
+  nguon:
+  - mutopia-2080
+  - tr-op39
+  ket_qua: dung
+  ghi_chu: 'Mutopia: overallForm AABA; TR: 32 bars.'
+- id: n13
+  cau: 'Thông tin, Nhà soạn nhạc: Pyotr Ilyich Tchaikovsky (1840–1893), người Nga.'
+  loai: nam
+  truong:
+  - thong_tin
+  nguon:
+  - imslp-tchaikovsky
+  ket_qua: dung
+  ghi_chu: 'IMSLP: 7/5/1840 – 6/11/1893, Nationality Russian.'
+- id: n14
+  cau: 'Thông tin, Tác phẩm: Старинная французская песенка (Bài ca Pháp cổ; tiếng Anh Old French Song) là số 16 trong Детский альбом (Album cho thiếu nhi; tiếng Anh Children''s Album hay Album for the Young), Op. 39.'
+  loai: ten
+  truong:
+  - thong_tin
+  nguon:
+  - tr-op39
+  - imslp-op39
+  - abrsm-1920
+  ket_qua: dung
+  ghi_chu: 'TR, IMSLP: "Children''s Album (Детский альбом), Op. 39", "Old French Song (Старинная французская песенка)" số 16; ABRSM 2019–2020: "Album for the Young, Op. 39".'
+- id: n15
+  cau: 'Thông tin: Op. 39 gồm 24 bài đơn giản "à la Schumann" (theo kiểu Schumann).'
+  loai: ten
+  truong:
+  - thong_tin
+  nguon:
+  - tr-op39
+  ket_qua: dung
+  ghi_chu: 'TR: "subtitled \"24 simple pieces à la Schumann\"".'
+- id: n16
+  cau: 'Thông tin, Sáng tác: viết từ tháng 5 đến tháng 7 năm 1878.'
+  loai: nam
+  truong:
+  - thong_tin
+  nguon:
+  - tr-op39
+  ket_qua: dung
+  ghi_chu: 'TR: "composed between May and July 1878".'
+- id: n17
+  cau: 'Thông tin: Jurgenson in ở Moskva tháng 10 năm 1878.'
+  loai: nam
+  truong:
+  - thong_tin
+  nguon:
+  - tr-op39
+  - imslp-op39
+  ket_qua: dung
+  ghi_chu: 'TR: bản thảo gửi "Pyotr Jurgenson in Moscow"; "In October … the album was published". IMSLP: "1878 — Moscow: P. Jurgenson".'
+- id: n18
+  cau: 'Thông tin: tập đề tặng cháu trai của nhà soạn nhạc, Vladimir (Volodya) Davydov.'
+  loai: lich-su
+  truong:
+  - thong_tin
+  nguon:
+  - tr-op39
+  - imslp-op39
+  ket_qua: dung
+  ghi_chu: 'TR: "dedicated to Tchaikovsky''s favourite nephew, Vladimir Davydov", thư: "Dedicated to Volodya Davydov". IMSLP: Dedication Vladimir Davydov (1871-1906).'
+- id: n19
+  cau: 'Thông tin: bài đứng thứ 16 cả trong bản in đầu tiên lẫn trong bản thảo của Tchaikovsky.'
+  loai: danh-muc
+  truong:
+  - thong_tin
+  nguon:
+  - tr-op39
+  ket_qua: dung
+  ghi_chu: 'TR: thứ tự bản thảo 1, 2, 4, 3, 5, 9, 6, 7, 8, 14, 10, 11, 12, 13, 15, 16…: vị trí 16 là số 16.'
+- id: n20
+  cau: 'Thông tin, Giọng · nhịp · tốc độ: Sol thứ · 2/4 · Molto moderato (rất vừa phải).'
+  loai: cau-truc
+  truong:
+  - thong_tin
+  nguon:
+  - tr-op39
+  - mutopia-2080
+  ket_qua: dung
+  ghi_chu: 'TR: Molto moderato, G minor; Mutopia 2/4.'
+- id: n21
+  cau: 'Thông tin: bản Schirmer (1904) ghi Moderato assai.'
+  loai: ten
+  truong:
+  - thong_tin
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia (source Schirmer 1904): \tempo "Moderato assai.". "Nghĩa gần như nhau" là nhận xét (molto, assai đều là "rất").'
+- id: n22
+  cau: 'Thông tin, Hình thức: ba đoạn có tái hiện A A B A, mỗi đoạn 8 ô; 32 ô nhịp, mở đầu bằng một nốt lấy đà.'
+  loai: cau-truc
+  truong:
+  - thong_tin
+  nguon:
+  - mutopia-2080
+  - tr-op39
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \partial 8, AABA, 4 × 8 ô; TR 32 bars.'
+- id: n23
+  cau: 'Thông tin, Độ khó: khoảng ABRSM Grade 2–3 (ước lượng).'
+  loai: cap-do
+  truong:
+  - thong_tin
+  nguon:
+  - abrsm-1920
+  - rcm-2022
+  ket_qua: dung
+  ghi_chu: Như grade đã khóa (lần 1 n4).
+- id: n24
+  cau: 'Thông tin, Kỹ năng chính: giai điệu hát (cantabile); tay trái hai bè (nốt trầm ngân và giọng giữa); hợp âm rải staccato dưới giai điệu legato; ba lớp sắc thái cùng lúc; nhịp chấm dôi kép.'
+  loai: cau-truc
+  truong:
+  - thong_tin
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: hai Voice ở khuông dưới; ô 17–20 rải staccato; a4.. ô 7.'
+- id: n25
+  cau: 'Thông tin, Bản nhạc: có ở IMSLP (Children''s Album, Op.39) và bản dàn trang công cộng ở Mutopia Project theo ấn bản Schirmer 1904.'
+  loai: ten
+  truong:
+  - thong_tin
+  nguon:
+  - imslp-op39
+  - mutopia-2080
+  ket_qua: dung
+  ghi_chu: 'Mutopia 2080: Public Domain, Schirmer 1904.'
+- id: n26
+  cau: 'Thông tin, Bản nhạc: khi mua bản in, chọn ấn bản ghi rõ dựa trên nguồn của Tchaikovsky (bản thảo và bản in Jurgenson).'
+  loai: khuyen-tap
+  truong:
+  - thong_tin
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n27
+  cau: 'Hình, chú thích: Bài ca Pháp cổ, Op. 39 số 16: A A B A, mỗi đoạn 8 ô nhịp.'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Như n22.
+- id: n28
+  cau: 'Hình, các đoạn: A ô 1–8 (p, Sol thứ trên âm nền Sol); A ô 9–16 (pp); B ô 17–24 (hợp âm rải staccato, mf, dừng ở át âm); A ô 25–32 (p, kết ở Sol thứ); mỗi đoạn độ rộng 8.'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \p, \pp, \mf ô 22, \p; bè trầm Sol; ô 17–20 staccato; ô 24 D trưởng; ô 32 Sol thứ.'
+- id: n29
+  cau: 'Hình, ghi chú: bài mở đầu bằng một nốt lấy đà (Rê); đoạn B dừng trên hợp âm Rê trưởng để đưa về A.'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \partial 8 d8; ô 24 <a fis> trên d'' d.'
+- id: n30
+  cau: 'Bản thu: người chơi Luis Kolodin, giấy phép CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/), trang file https://imslp.org/wiki/File:PMLP19418-Y2mate.mx_-_Luis_Kolodin_plays_Tchaikovsky''s_Old_French_Song_(128_kbps).mp3.'
+  loai: ten
+  truong:
+  - ban_thu
+  nguon:
+  - imslp-op39
+  - imslp-kolodin-old-french
+  ket_qua: dung
+  ghi_chu: 'IMSLP Op.39 Recordings: "File Name 5=PMLP19418-Y2mate.mx_-_Luis_Kolodin_plays_Tchaikovsky''s_Old_French_Song_(128_kbps).mp3", "File Description 5=16. Old French Song", "Kolodin, Luis=Piano", "Copyright=Creative Commons Attribution-ShareAlike 4.0".'
+- id: n31
+  cau: 'Bản thu: file audio/tchaikovsky-bai-ca-phap-co.mp3 dài 70,14 giây.'
+  loai: so-lieu
+  truong:
+  - ban_thu
+  nguon: []
+  ket_qua: dung
+  ghi_chu: 'ffprobe: 70.11 s (lệch 0,03 s).'

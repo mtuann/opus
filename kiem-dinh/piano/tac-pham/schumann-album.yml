@@ -4,29 +4,633 @@ nguon_cu: ../opus-zero/docs/piano/tac-pham/schumann-album.md
 tang: tac-pham
 lan:
   - so: 1
-    ngay: null
+    ngay: '2026-11-05'
     nhanh: moi/d6-l1
     ma_bam: null
     nguoi:
-      luot_1: null
+      luot_1: Claude Opus 5.5 (D6-L1 phần B)
       luot_2: null
       review: null
       kiem_mau: null
-nguon: []
-nhan_dinh: []
+ghi_chu: 'Bài học ba tiểu phẩm Op. 68 số 1, 8, 10 (tầng Tác phẩm). Không có trích đoạn: ba khối abc là ví dụ soạn. Bản nhạc: Mutopia 647, 655, 659 (Peters, CC BY-SA 2.5; tựa và chỉ dẫn tiếng Pháp), thêm hai bản in trên Internet Archive (Schuberth 1867 bản Klauser; một bản không ghi tên) để xem chỉ dẫn tốc độ tiếng Đức. Lịch sử: lời tựa và Bemerkungen của Henle HN 45 (Herttrich 2007), PDF tải từ trang sản phẩm. Chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng thuộc hồ sơ du-lieu/tac-pham/schumann-album. Hai mục doi_chu đầu (chip cấp độ, dòng Độ khó) do người giao ghi, giữ nguyên. Sửa trang: n47, n78; bỏ: n64. Chưa chắc: n56, n72 (Nicht schnell ở Melodie).'
+nguon:
+  - id: henle-hn45-vorwort
+    bac: 2
+    ten: G. Henle Verlag, HN 45 Schumann, Album für die Jugend op. 68, Ernst Herttrich (biên tập), lời tựa (Vorwort/Preface, ký "Remagen, Sommer 2007"), PDF trên trang sản phẩm
+    link: https://www.henle.de/media/56/17/85/1690886059/0045-1690886059-sync.pdf
+  - id: henle-hn45-bemerkungen
+    bac: 2
+    ten: 'G. Henle Verlag, HN 45, Bemerkungen/Comments (nguồn: E1 Erstausgabe Schuberth & Comp., số bản 1232, "erschienen im Dezember 1848"; ghi chú từng bài)'
+    link: https://www.henle.de/media/90/21/08/1697725681/0045-1697725681-sync.pdf
+  - id: henle-hn45
+    bac: 2
+    ten: G. Henle Verlag, trang sản phẩm HN 45 (Ernst Herttrich, Editor)
+    link: https://www.henle.de/en/Album-for-the-Young-op.-68/HN-45
+  - id: imslp-op68
+    bac: 2
+    ten: 'IMSLP, Album für die Jugend, Op.68 (Schumann, Robert): danh sách 43 bài, hai phần, bản thu Mississippi College Piano Pedagogy (đọc wikitext qua API)'
+    link: https://imslp.org/wiki/Album_f%C3%BCr_die_Jugend,_Op.68_(Schumann,_Robert)
+  - id: mutopia-647
+    bac: 1
+    ten: 'Mutopia Project, Op. 68 số 1 Mélodie (Philippe Hézaine, theo Peters, CC BY-SA 2.5), Mutopia-2007/02/11-647: .ly và PDF'
+    link: https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=647
+  - id: mutopia-655
+    bac: 1
+    ten: Mutopia Project, Op. 68 số 8 Le cavalier sauvage (Wilder Reiter; Peters, CC BY-SA 2.5), Mutopia-2007/02/11-655
+    link: https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=655
+  - id: mutopia-659
+    bac: 1
+    ten: Mutopia Project, Op. 68 số 10 Le gai laboureur (Fröhlicher Landmann; Peters, CC BY-SA 2.5), Mutopia-2007/02/11-659
+    link: https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=659
+  - id: mutopia-676
+    bac: 1
+    ten: Mutopia Project, Op. 68 số 2 Marche militaire (Soldatenmarsch; Peters), Mutopia-2007/02/11-676
+    link: https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=676
+  - id: mutopia-650
+    bac: 1
+    ten: Mutopia Project, Op. 68 số 16 Premier chagrin (Erster Verlust; Peters), Mutopia-2007/02/11-650
+    link: https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=650
+  - id: ia-schuberth-1867
+    bac: 1
+    ten: Internet Archive, Robert Schumann, Erstes Album für die Jugend op. 68, J. Schuberth & Co., Leipzig [1867] (bản Klauser, thứ tự bài khác), PDF
+    link: https://archive.org/details/b26976821
+  - id: ia-op68-ban-khac
+    bac: 1
+    ten: Internet Archive, "Album Fur Die Jugend, Op. 68 Complete Score Of All Pieces" (bản in không ghi nhà xuất bản, tựa tiếng Anh), PDF
+    link: https://archive.org/details/album-fur-die-jugend-op.-68-complete-score-of-all-pieces
+  - id: ws-regeln
+    bac: 1
+    ten: Wikisource (de), Robert Schumann, Musikalische Haus- und Lebensregeln, theo Neue Zeitschrift für Musik 1850, Bd. 32, Beilage zu Nr. 36 (chép lại văn bản gốc)
+    link: https://de.wikisource.org/wiki/Musikalische_Haus-_und_Lebensregeln
+  - id: imslp-op15
+    bac: 2
+    ten: 'IMSLP, Kinderszenen, Op.15 (Schumann): sáng tác 1838'
+    link: https://imslp.org/wiki/Kinderszenen,_Op.15_(Schumann,_Robert)
+  - id: imslp-mendelssohn
+    bac: 2
+    ten: IMSLP, Category:Mendelssohn, Felix (mất 4/11/1847)
+    link: https://imslp.org/wiki/Category:Mendelssohn,_Felix
+  - id: imslp-sz42
+    bac: 2
+    ten: 'IMSLP, For Children, Sz.42 (Bartók): sáng tác 1908–09'
+    link: https://imslp.org/wiki/For_Children,_Sz.42_(Bart%C3%B3k,_B%C3%A9la)
+  - id: tr-op39
+    bac: 2
+    ten: Tchaikovsky Research, Children's Album (Op. 39, 1878, "24 simple pieces à la Schumann")
+    link: https://en.tchaikovsky-research.net/pages/Children's_Album
+  - id: kth-decay
+    bac: 2
+    ten: 'KTH, Five lectures on the acoustics of the piano, Klaus Wogram: Decay of the piano tone'
+    link: https://www.speech.kth.se/music/5_lectures/wogram/decay.html
+  - id: wiki-op68
+    bac: 3
+    ten: Wikipedia, Album for the Young (chỉ để đối chiếu mục Nguồn của trang)
+    link: https://en.wikipedia.org/wiki/Album_for_the_Young
+nhan_dinh:
+  - id: n1
+    cau: Năm 1848, Schumann viết cho các con mình 43 bản nhạc ngắn (Album für die Jugend).
+    loai: nam
+    nguon:
+      - henle-hn45-vorwort
+      - imslp-op68
+    ket_qua: dung
+    ghi_chu: 'Henle: quà sinh nhật Marie 1/9/1848, phần lớn viết trong tháng 9/1848; IMSLP: 43 pieces, Year/Date of Composition 1848.'
+  - id: n2
+    cau: Tập nhạc đến nay vẫn là một trong những cánh cửa đẹp nhất để bước vào âm nhạc Lãng mạn.
+    loai: khuyen-tap
+    nguon:
+      - henle-hn45-vorwort
+    ket_qua: khong-can-nguon
+    ghi_chu: Nhận xét giới thiệu; Henle gọi là "eine der populärsten Sammlungen von Klavierstücken überhaupt".
+  - id: n3
+    cau: Trang này chọn ba bài nền tảng (Melodie, Wilder Reiter, Fröhlicher Landmann), kèm ghi chú nhanh về hai bài nữa.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Trang có mục Cấu trúc, Diễn tấu cho ba bài số 1, 8, 10 và mục "Hai bài nên học kèm" (số 2, số 16).
+  - id: n4
+    cau: Schumann không viết bài tập mà viết những tiểu phẩm có tên gọi, có nhân vật, có cảm xúc.
+    loai: ten
+    nguon:
+      - imslp-op68
+    ket_qua: dung
+    ghi_chu: 'IMSLP: mỗi bài có tên (Melodie, Soldatenmarsch, Wilder Reiter, Fröhlicher Landmann…). Vế "mỗi bài dạy một kỹ năng" là lời khuyên.'
+  - id: n5
+    cau: Melodie dạy hát legato trên lớp đệm nhẹ; Wilder Reiter dạy staccato và chuyển giai điệu từ tay phải sang tay trái; Fröhlicher Landmann dạy để tay trái hát, rồi bắt một tay vừa hát vừa đệm.
+    loai: cau-truc
+    nguon:
+      - mutopia-647
+      - mutopia-655
+      - mutopia-659
+    ket_qua: dung
+    ghi_chu: 'Mutopia: số 1 tay phải nốt đen có luyến trên móc đơn tay trái; số 8 staccato, đoạn B giai điệu ở tay trái; số 10 giai điệu tay trái ô 1–8, ô 9–10 tay phải hai bè (giai điệu trên, hợp âm dưới).'
+  - id: n6
+    cau: 'Câu nhạc dài, sắc thái có ý nghĩa, tiếng đàn có màu: những điều sẽ cần cho Chopin và Schumann về sau.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n7
+    cau: Mỗi bài chỉ dài khoảng một phút.
+    loai: so-lieu
+    nguon:
+      - imslp-op68
+    ket_qua: dung
+    ghi_chu: 'Bản thu Mississippi College trên IMSLP (file của site): số 1 66,5 s; số 8 29,8 s (không nhắc lại A); số 10 41,7 s (ffprobe). "Khoảng một phút" là đầu trên; không bài nào dài hơn.'
+  - id: n8
+    cau: Ba bài liền nhau thành một nhóm nhỏ đủ cho một buổi chơi đàn ở nhà.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n9
+    cau: 'Ngày 31 tháng 8 năm 1848, Schumann ghi trong sổ chi tiêu gia đình: "ý tưởng về album cho trẻ em, những bản nhỏ cho Marie".'
+    loai: lich-su
+    nguon: &id001
+      - henle-hn45-vorwort
+    ket_qua: dung
+    ghi_chu: 'Henle: "Im sogenannten Haushaltbuch Schumanns … unter dem Datum 31. August …: „Idee d. Kinderalbum''s – Stückchen f. Marie.“"'
+  - id: n10
+    cau: Ngày 1 tháng 9 (1848) là sinh nhật lần thứ bảy của Marie, con gái lớn của Robert và Clara Schumann; quà của bố là một tập bài nhỏ chép tay.
+    loai: lich-su
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: 'Henle: "ein Geburtstagsgeschenk Schumanns für sein ältestes Kind, die Tochter Marie – ein kleines Notenheft mit „Stückchen für''s Clavier / Zu Marie''chens 7tem Geburtstag / den 1sten September 1848 / gemacht vom Papa.“"'
+  - id: n11
+    cau: Những ngày tiếp theo Schumann ghi "rất nhiều bản nhỏ cho trẻ em", đến 9 tháng 9 thì album "gần xong"; vài bài còn được viết thêm trong tháng 9.
+    loai: lich-su
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: 'Henle: 3., 4., 5. September „Viele Kinderstükchen“; 9. September „das Album zieml.[ich] beendigt“; 10.–12. và 19. September thêm „neue Stükchen“, „vier Kinderstükchen“.'
+  - id: n12
+    cau: Schumann định đặt tên Weihnachtsalbum für Kinder (Album Giáng sinh cho trẻ em) để in kịp Giáng sinh.
+    loai: lich-su
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: 'Henle: "Da der Titel Weihnachtsalbum für Kinder lauten sollte, drängte er auf ein Erscheinen noch im Dezember des Jahres."'
+  - id: n13
+    cau: Nhà Breitkopf & Härtel từ chối in; Julius Schuberth ở Hamburg nhận lời.
+    loai: lich-su
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: 'Henle: Breitkopf & Härtel "konnte sich … nicht zu einer Herausgabe des Werkes entschließen. Schumann wandte sich daraufhin an den Hamburger Verleger Julius Schuberth"; thư Schuberth 13/10: "Gut, ich behalte blindlings das Manuscript".'
+  - id: n14
+    cau: Schuberth đề nghị bỏ chữ "Giáng sinh" để tập nhạc bán được quanh năm.
+    loai: lich-su
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: 'Henle: "Der Titel Weihnachtsalbum war auf Wunsch von Schuberth weggefallen, damit … das Album sich „ewig & täglich“ absetzen lasse."'
+  - id: n15
+    cau: Bản in đầu tiên ra tháng 12/1848.
+    loai: nam
+    nguon:
+      - henle-hn45-bemerkungen
+    ket_qua: dung
+    ghi_chu: 'Henle Bemerkungen: "E1 Erstausgabe. Hamburg, Schuberth & Comp., Plattennummer 1232, erschienen im Dezember 1848." (IMSLP ghi năm in đầu 1849, theo bản 1849; Henle gần nguồn hơn.)'
+  - id: n16
+    cau: Bản in đầu có tranh bìa trong của họa sĩ Ludwig Richter, bốn góc vẽ bốn mùa.
+    loai: lich-su
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: 'Henle: Richter "erklärte, eine Titelzeichnung zu entwerfen… Die vier Eck-Vignetten stellen … die vier Jahreszeiten dar"; "Richters Titelzeichnung wurde nur für den Innentitel verwendet."'
+  - id: n17
+    cau: Trang bìa ghi nhầm "40 bản nhạc" dù tập có đủ 43 bài.
+    loai: lich-su
+    nguon:
+      - henle-hn45-vorwort
+      - henle-hn45-bemerkungen
+    ket_qua: dung
+    ghi_chu: 'Henle: "Beide Titelseiten enthalten die Angabe „40 Clavierstücke“. Tatsächlich umfasste diese erste Auflage aber bereits die selben 43 Stücke"; Bemerkungen: "Titel: 40 [recte: 43] / Clavierstücke".'
+  - id: n18
+    cau: Trong vòng một năm, nhà xuất bản quảng cáo đã bán gần 2.000 bản.
+    loai: so-lieu
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: 'Henle: quảng cáo của Schuberth trên Signale für die musikalische Welt (8/1850): "binnen Jahresfrist … eine Auflage von nahe an 2000 Exempl. Absatz gefunden hat".'
+  - id: n19
+    cau: 'Trong một lá thư năm 1848, Schumann phân biệt: Kinderszenen là hồi tưởng của người lớn, viết cho người lớn; album mới hướng về phía trước, dành cho các em nhỏ.'
+    loai: lich-su
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: 'Henle: thư gửi Carl Reinecke 6/10/1848: "Von den Kinderscenen unterscheiden sie sich durchaus. Diese sind Rückspiegelungen eines älteren und für ältere, während das Weihnachtsalbum mehr Vorspiegelungen, Ahnungen, zukünftige Zustände für Jüngere enthält".'
+  - id: n20
+    cau: Kinderszenen (Cảnh tuổi thơ) viết năm 1838.
+    loai: nam
+    nguon:
+      - imslp-op15
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Year/Date of Composition 1838.'
+  - id: n21
+    cau: Phần hai của album khó hơn và mang nhiều màu sắc người lớn hơn.
+    loai: lich-su
+    nguon:
+      - imslp-op68
+    ket_qua: dung
+    ghi_chu: 'IMSLP: hai phần "Erste Abteilung (für Kleinere)" và "Zweite Abteilung (für Erwachsenere)". Henle xếp các bài phần hai ở mức khó cao hơn (trang HN 45, Levels of Difficulty).'
+  - id: n22
+    cau: Bài số 28, Erinnerung (Kỷ niệm), ghi ngày 4 tháng 11 năm 1847, ngày Mendelssohn qua đời.
+    loai: lich-su
+    nguon:
+      - imslp-op68
+      - henle-hn45-bemerkungen
+      - imslp-mendelssohn
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "28. Erinnerung (4 November 1847)". Henle Bemerkungen: tựa ở Stichvorlage "Zur Erinnerung an Felix Mendelssohn Bartholdy / gest. d. 4ten November 1847". IMSLP Mendelssohn: mất 4/11/1847.'
+  - id: n23
+    cau: Cùng thời gian đó, Schumann viết Musikalische Haus- und Lebensregeln, một chuỗi câu ngắn gửi người học nhạc.
+    loai: lich-su
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: 'Henle: phần lớn Regeln đã có trong tập phác thảo của album (1848), Schumann sắp xếp và chép sạch mùa thu 1849.'
+  - id: n24
+    cau: Haus- und Lebensregeln được in trên Neue Zeitschrift für Musik năm 1850, rồi in kèm album từ lần in thứ hai (12/1850).
+    loai: nam
+    nguon:
+      - henle-hn45-vorwort
+      - ws-regeln
+    ket_qua: dung
+    ghi_chu: 'Henle: "schon am 28. Juni 1850 als Beilage Nr. 36 zur NZfM erschienen"; "in die Neuauflage vom Dezember 1850 aufgenommen". Wikisource ghi Beilage zu Nr. 36 (3. Mai 1850): hai nguồn lệch ngày, cùng năm 1850, trang chỉ ghi năm.'
+  - id: n25
+    cau: Ấn bản năm 1859 in Haus- und Lebensregeln ba thứ tiếng; bản tiếng Pháp do Franz Liszt dịch.
+    loai: lich-su
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: 'Henle: "In einer 1859 herausgebrachten Auflage … in einer dreisprachigen Version … die französische Übersetzung stammt von keinem Geringeren als Franz Liszt".'
+  - id: n26
+    cau: '"Spiele im Takte!" Chơi đúng nhịp! Lối chơi của một số virtuoso giống như dáng đi của người say.'
+    loai: lich-su
+    nguon:
+      - ws-regeln
+    ket_qua: dung
+    ghi_chu: 'Wikisource: "Spiele im Takte! Das Spiel mancher Virtuosen ist wie der Gang eines Betrunkenen."'
+  - id: n27
+    cau: '"Schleppen und Eilen sind gleich große Fehler." Kéo lê và chạy vội là hai lỗi lớn ngang nhau.'
+    loai: lich-su
+    nguon:
+      - ws-regeln
+    ket_qua: dung
+    ghi_chu: 'Wikisource (bản NZfM 1850): "Schleppen und eilen sind gleich große Fehler." Chỉ khác chữ hoa ở "eilen"; không sửa (các bản in sau viết hoa danh từ hóa "Eilen"; không đổi nghĩa).'
+  - id: n28
+    cau: Hãy cố chơi những bài dễ thật hay và đẹp; như thế tốt hơn chơi bài khó một cách tầm thường.
+    loai: lich-su
+    nguon:
+      - ws-regeln
+    ket_qua: dung
+    ghi_chu: 'Wikisource: "Bemühe dich, leichte Stücke gut und schön zu spielen; es ist besser, als schwere mittelmäßig vorzutragen."'
+  - id: n29
+    cau: '"Es ist des Lernens kein Ende." Việc học không bao giờ kết thúc.'
+    loai: lich-su
+    nguon:
+      - ws-regeln
+    ket_qua: dung
+    ghi_chu: 'Wikisource: câu cuối "Es ist des Lernens kein Ende."'
+  - id: n30
+    cau: Link "thời kỳ Lãng mạn" (/opus/lich-su/thoi-ky/lang-man/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Trang đích src/content/docs/lich-su/thoi-ky/lang-man.md có.
+  - id: n31
+    cau: Phần một của album gồm số 1–18.
+    loai: cau-truc
+    nguon:
+      - imslp-op68
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Erste Abteilung (für Kleinere) số 1–18.'
+  - id: n32
+    cau: 'Cách nghe: nghe trọn phần một, rồi nghe riêng ba bài mỗi bài ít nhất ba lần với các câu hỏi; so sánh tốc độ các bản thu.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n33
+    cau: Link "hướng dẫn nghe Kinderszenen" (/opus/nghe-nhac/schumann-kinderszenen/), trang viết về tuổi thơ cho người lớn.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển; site cũ ../opus-zero/docs/nghe-nhac/schumann-kinderszenen.md có ("Schumann: Kinderszenen (Cảnh tuổi thơ), Op. 15"). Điều cần giữ: hướng dẫn nghe Kinderszenen Op. 15.'
+  - id: n34
+    cau: 'Số 1 Melodie, câu a (vang hai lần): giai điệu legato ở tay phải trên lớp móc đơn đều của tay trái, mỗi hơi hai ô; câu dừng lơ lửng.'
+    loai: cau-truc
+    nguon: &id002
+      - mutopia-647
+    ket_qua: dung
+    ghi_chu: 'Mutopia: \repeat volta 2 ô 1–4; dấu luyến e4( d c b | a8 c b d c4 g) (hai ô); ô 4 kết trên hợp âm Sol (b <fis a> g trên d g c, d b d g,): kết nửa.'
+  - id: n35
+    cau: 'Câu b: giai điệu đổi hướng, những mảnh ngắn ngắt bằng dấu lặng.'
+    loai: cau-truc
+    nguon: *id002
+    ket_qua: dung
+    ghi_chu: 'Mutopia ô 5–6: d''( c b) r | f''( e d) r.'
+  - id: n36
+    cau: 'Câu a'': nốt đầu có thêm quãng ba; lần này câu kết trọn ở Đô.'
+    loai: cau-truc
+    nguon: *id002
+    ket_qua: dung
+    ghi_chu: 'Mutopia ô 9: <c e>4( d c b; ô 12: d8 f b, d c4 trên tay trái kết về Đô.'
+  - id: n37
+    cau: Câu b và câu a' lần nữa, kết bài ở Đô trưởng.
+    loai: cau-truc
+    nguon: *id002
+    ket_qua: dung
+    ghi_chu: Mutopia ô 13–20 chép lại b và a', \bar "|." sau c4 (Đô).
+  - id: n38
+    cau: 'Số 8 Wilder Reiter, đoạn A (vang hai lần): La thứ, mở bằng nhịp lấy đà; giai điệu staccato ở tay phải, tay trái đánh hợp âm ngắn.'
+    loai: cau-truc
+    nguon: &id003
+      - mutopia-655
+    ket_qua: dung
+    ghi_chu: 'Mutopia: \partial 8, e8_. lấy đà; \repeat volta 2 ô 1–8; tay trái <a c>_. r r <a c e>_. …'
+  - id: n39
+    cau: 'Đoạn B: sang Fa trưởng; giai điệu của đoạn A chuyển xuống tay trái, tay phải đánh hợp âm ngắn.'
+    loai: cau-truc
+    nguon: *id003
+    ket_qua: dung
+    ghi_chu: 'Mutopia ô 9–16: tay trái c | f c f a f a | c a d c a f | g e a g e c …: đúng giai điệu A (e | a e a c a c | e c f e c a | b gis c b gis e) dời sang Fa trưởng; tay phải <c f a>_. r r …'
+  - id: n40
+    cau: 'Đoạn A trở lại: giai điệu về lại tay phải, ở La thứ.'
+    loai: cau-truc
+    nguon:
+      - mutopia-655
+      - henle-hn45-bemerkungen
+    ket_qua: dung
+    ghi_chu: 'Mutopia ô 17–24 chép lại A. Henle: "17–24: Instead of repeating M 1–8 … coda … crossed it out again and reinstated the old version".'
+  - id: n41
+    cau: 'Số 10 Fröhlicher Landmann, câu a (vang hai lần): giai điệu chắc khỏe ở tay trái, tay phải đệm hợp âm nghịch phách.'
+    loai: cau-truc
+    nguon: &id004
+      - mutopia-659
+    ket_qua: dung
+    ghi_chu: 'Mutopia: ô 1–4 và 5–8 (chép lại) tay trái f4. a8 c4. f,8 …, \f; tay phải r8 <c f a> <c f a> r …: mỗi cặp hợp âm vào sau dấu lặng ở phách 1 và 3, nên lệch khỏi phách mạnh.'
+  - id: n42
+    cau: 'Đoạn b: giai điệu lên vùng cao, tay phải vừa hát ở trên vừa đệm ở dưới, tay trái đi song song bên dưới; hai ô cuối trả giai điệu về tay trái. Đoạn b nhắc lại, kết bài ở Fa trưởng.'
+    loai: cau-truc
+    nguon: *id004
+    ket_qua: dung
+    ghi_chu: 'Mutopia ô 9–14: tay phải \voiceOne bes''4.^> a8 g4. … trên \voiceTwo <c e> <c e>…; tay trái g''4._> f8 e4. (song song quãng ba/sáu bên dưới); ô 13–14 tay trái bes g c, bes'' a f c a'' | g4 e f; ô 15–20 chép lại, kết Fa.'
+  - id: n43
+    cau: 'Số 1 Melodie: Đô trưởng, 4/4; câu 4 ô: a (vang hai lần) – b – a'' – b – a''; giai điệu ở tay phải legato, tay trái chạy móc đơn đều.'
+    loai: cau-truc
+    nguon: *id002
+    ket_qua: dung
+    ghi_chu: 'Mutopia: \key c \major \time 4/4; ô 1–4 lặp, 5–8, 9–12, 13–16, 17–20.'
+  - id: n44
+    cau: 'Melodie: mỗi câu hai ô một hơi; a'' khác a ở nốt đầu (có thêm quãng ba) và ở cách kết: a dừng lơ lửng, a'' kết trọn ở Đô.'
+    loai: cau-truc
+    nguon: *id002
+    ket_qua: dung
+    ghi_chu: Như n34, n36.
+  - id: n45
+    cau: 'Số 8 Wilder Reiter: La thứ, 6/8, bắt đầu bằng nhịp lấy đà; ba đoạn A (8 ô, nhắc lại) – B (8 ô) – A (8 ô); A giai điệu tay phải, B tay trái ở Fa trưởng, tay kia đánh hợp âm ngắn; giai điệu đoạn B chính là giai điệu đoạn A dời sang Fa trưởng.'
+    loai: cau-truc
+    nguon: *id003
+    ket_qua: dung
+    ghi_chu: Như n38–n40.
+  - id: n46
+    cau: 'Số 10 Fröhlicher Landmann: Fa trưởng, 4/4, nhịp lấy đà một móc đơn; câu a (4 ô, vang hai lần) – đoạn b (6 ô, vang hai lần); hai ô cuối của b trả giai điệu về tay trái và kết ở Fa trưởng.'
+    loai: cau-truc
+    nguon: *id004
+    ket_qua: dung
+    ghi_chu: 'Mutopia: \key f \major \time 4/4 \partial 8 (c tay trái); ô 1–4, 5–8; ô 9–14, 15–20.'
+  - id: n47
+    cau: Ba bài đều xây từ những câu ngắn, phần lớn 4 ô, nhắc lại và biến đổi.
+    loai: cau-truc
+    nguon:
+      - mutopia-647
+      - mutopia-655
+      - mutopia-659
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Ba bài đều xây từ những câu 4 ô, nhắc lại và biến đổi." Chữ mới: "Ba bài đều xây từ những câu ngắn, phần lớn 4 ô, nhắc lại và biến đổi." Lý do: đoạn b của số 10 dài 6 ô (Mutopia ô 9–14, chính bảng Cấu trúc của trang ghi "6 ô"), không chia đều thành câu 4 ô.'
+  - id: n48
+    cau: Link "hình thức nhỏ" (/opus/nhac-ly/31-hinh-thuc-nho/) trong phần nhạc lý.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Trang đích src/content/docs/nhac-ly/31-hinh-thuc-nho.md có.
+  - id: n49
+    cau: 'Bảng "Chỗ khó và cách tập" (bảy dòng: lớp đệm móc đơn, câu legato dài, staccato, giai điệu chuyển xuống tay trái, hợp âm nghịch phách, một tay vừa hát vừa đệm, nhịp lấy đà).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Chi tiết bản nhạc trong bảng (đoạn B của số 8 giai điệu tay trái; đoạn b của số 10 ngón 4–5 giữ giai điệu trên hợp âm) đã kiểm ở n39, n42; số ngón 4–5 / 1–3 là gợi ý chơi được.
+  - id: n50
+    cau: Các bài tập chuẩn bị soạn riêng cho trang này, không trích từ bản nhạc gốc.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Ba khối abc là ví dụ soạn, tiêu đề ghi "(soạn cho trang này)" (khuong_nhac khối 1–3).
+  - id: n51
+    cau: 'Bài tập 1: tay phải legato trọn câu; tay trái chỉ chạm phím, nốt trầm đầu mỗi nửa ô rõ hơn; khi chắc, to dần nhẹ đến nốt Sol ở ô 2 rồi nhỏ dần.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Khối 1 có Sol5 ở ô 2 (đỉnh câu): khớp.'
+  - id: n52
+    cau: 'Bài tập 2: ô 1–2 giai điệu tay phải, tay trái hợp âm ngắn; ô 3–4 đổi vai, giai điệu xuống tay trái ở Fa trưởng, đúng như đoạn B của Wilder Reiter.'
+    loai: cau-truc
+    nguon: *id003
+    ket_qua: dung
+    ghi_chu: 'Khối 2: tay trái ô 3–4 F A C F C A | C B♭ A G = giai điệu ô 1–2 (A C E A E C | E D C B) dời sang Fa trưởng, như đoạn B thật (n39).'
+  - id: n53
+    cau: 'Bài tập 3 là kết cấu của đoạn b trong Fröhlicher Landmann: ngón 5 giữ nốt giai điệu đủ hai phách, ở mf, trong khi ngón 1–3 đánh hợp âm nhỏ, ngắn ở p.'
+    loai: cau-truc
+    nguon: *id004
+    ket_qua: dung
+    ghi_chu: 'Mutopia ô 9–12: bè trên bes''4. a8 g4. (giai điệu), bè dưới <c e> <c e> (hợp âm ngắn) cùng tay phải. Khối 3: nốt trắng ngón 5 trên hợp âm móc đơn staccato.'
+  - id: n54
+    cau: Kế hoạch 5 tuần, khoảng 30 phút mỗi ngày, với tốc độ máy đếm nhịp từng tuần (tốc độ cuối chỉ là gợi ý).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n55
+    cau: Link "thu âm" (/opus/luyen-tap/thu-am/).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Trang đích src/content/docs/luyen-tap/thu-am.md có.
+  - id: n56
+    cau: Chỉ dẫn Nicht schnell ở đầu Melodie nghĩa là "không nhanh", không phải "chậm".
+    loai: ten
+    nguon:
+      - mutopia-647
+      - ia-schuberth-1867
+      - ia-op68-ban-khac
+    ket_qua: null
+    ghi_chu: 'chưa chắc: nghĩa đúng ("nicht schnell" = không nhanh), nhưng không chắc Schumann ghi chỉ dẫn này ở số 1. Bản Peters trên Mutopia ghi "pas vite" (bản Pháp của Nicht schnell); hai bản in đọc được trên Internet Archive (Schuberth 1867 bản Klauser; một bản in không ghi tên) để trống chỉ dẫn tốc độ ở Melodie, trong khi số 3, số 5 (cùng bản) ghi "Nicht schnell". Chưa xem được bản in đầu hay Henle (PDF IMSLP bị chặn; lời tựa và Bemerkungen của Henle không nói tới). Đề nghị người giao quyết: (a) giữ nếu Henle/bản in đầu có "Nicht schnell"; (b) không có thì viết "Schumann không ghi chữ chỉ tốc độ; nhiều ấn bản (như Peters) thêm Nicht schnell / pas vite (không nhanh)", sửa theo câu hỏi 2 (n70), dòng Giọng · nhịp · tốc độ của bản ghi (hồ sơ bản ghi du-lieu/tac-pham/schumann-album n19).'
+  - id: n57
+    cau: Giai điệu Melodie như một bài hát đơn giản, mỗi dấu luyến là một hơi thở; dùng rất ít bàn đạp hay không dùng, nếu dùng thì đổi theo nửa ô.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n58
+    cau: Wilder Reiter là hình ảnh một đứa trẻ phi ngựa (tựa gốc trong bản khắc là "Wilder Schaukelpferdreiter").
+    loai: ten
+    nguon:
+      - henle-hn45-bemerkungen
+    ket_qua: dung
+    ghi_chu: 'Henle: "Reiter in Stv zu Schaukelpferdreiter korrigiert; mit Brief vom 24. Oktober 1848 … wieder Wilder Reiter" (Kỵ sĩ ngựa bập bênh): hình ảnh đứa trẻ cưỡi ngựa. Câu trên trang: "Hình ảnh là một đứa trẻ phi ngựa, đầy hăng hái".'
+  - id: n59
+    cau: 'Wilder Reiter: nhanh, rõ, có lực nhưng không ồn; staccato ngắn mà tròn; không dùng bàn đạp; ở đoạn B để tay trái hát tự tin như tay phải ở đoạn A.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n60
+    cau: Fröhlicher Landmann là người nông dân đi làm về; giai điệu tay trái ở f, legato.
+    loai: ten
+    nguon:
+      - imslp-op68
+      - mutopia-659
+    ket_qua: dung
+    ghi_chu: 'IMSLP tựa đầy đủ "Fröhlicher Landmann, von der Arbeit zurückkehrend"; Mutopia: \f đầu bài, dấu luyến tay trái \( … \).'
+  - id: n61
+    cau: 'Fröhlicher Landmann: hợp âm tay phải nhẹ và ngắn; ở đoạn b nốt giai điệu ngón 4–5 nổi trên hợp âm của chính bàn tay đó; bàn đạp không cần hoặc chạm rất nhẹ.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n62
+    cau: Số 2 Soldatenmarsch (Hành khúc người lính) ở Sol trưởng, nhịp hành khúc với tiết tấu chấm dôi và hợp âm ngắn ở cả hai tay.
+    loai: cau-truc
+    nguon:
+      - mutopia-676
+      - imslp-op68
+    ket_qua: dung
+    ghi_chu: 'Mutopia 676: \key g \major \time 2/4; <g b>8. <g c>16 <g d''>8 r (chấm dôi, hợp âm cắt bằng dấu lặng); tay trái g''8. a16 b8 r … có hợp âm <d c''> r. IMSLP: số 2 Soldatenmarsch.'
+  - id: n63
+    cau: 'Soldatenmarsch là bài staccato hợp âm đầu tiên rất tốt: hai tay buông phím cùng lúc, nhịp đều như bước chân.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n64
+    cau: Nhiều người học Soldatenmarsch trước cả Wilder Reiter.
+    loai: cap-do
+    nguon: []
+    ket_qua: da-bo
+    ghi_chu: 'Bỏ câu (không kiểm được "nhiều người"). Chữ cũ của mục: "… không chạy vội ở nốt ngắn. Nhiều người học bài này trước cả Wilder Reiter." Chữ mới: "… không chạy vội ở nốt ngắn."'
+  - id: n65
+    cau: Số 16 Erster Verlust (Mất mát đầu tiên) ở Mi thứ, một khúc buồn rất ngắn.
+    loai: cau-truc
+    nguon:
+      - mutopia-650
+      - imslp-op68
+    ket_qua: dung
+    ghi_chu: 'Mutopia 650: \key e \minor \time 2/4. IMSLP: số 16 "Erster Verlus[t]".'
+  - id: n66
+    cau: 'Erster Verlust: học hát legato trong giọng thứ, không đánh mạnh nốt cao nhất, kết thật nhỏ.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n67
+    cau: Danh sách "Lỗi thường gặp" (bảy dòng).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n68
+    cau: 'Các bài khác của phần một: Trällerliedchen (số 3), Stückchen (số 5), Jägerliedchen (số 7), Volksliedchen (số 9), Kleiner Morgenwanderer (số 17), Schnitterliedchen (số 18); phần hai bắt đầu từ Kleine Romanze (số 19).'
+    loai: danh-muc
+    nguon:
+      - imslp-op68
+    ket_qua: dung
+    ghi_chu: 'IMSLP: 3 Trällerliedchen, 5 Stückchen, 7 Jägerliedchen, 9 Volksliedchen, 17 Kleiner Morgenwanderer, 18 Schnitterliedchen; Zweite Abteilung bắt đầu 19 Kleine Romanze.'
+  - id: n69
+    cau: 'Học tiếp: cùng chặng trên site Petzold: Minuet Sol trưởng; bước tiếp theo Clementi: Sonatina Op. 36 số 1 và Burgmüller: Arabesque; cùng tác giả Schumann: Träumerei (bản nổi tiếng nhất của Kinderszenen); link Tác phẩm theo cấp độ.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/data/tac-pham.yml: minuet-sol chang 2 (bằng trang này, chang 2); clementi-sonatina, burgmuller-arabesque chang 3 (bước tiếp). minuet-sol cùng lô (phần A); clementi-sonatina, burgmuller-arabesque, schumann-traumerei chưa chuyển (site cũ có). piano/tac-pham-theo-cap có. Vế "bản nổi tiếng nhất của Kinderszenen" là nhận định ở trang Träumerei, không tách ở đây; tác giả Petzold là tac_gia đã khóa của minuet-sol.'
+  - id: n70
+    cau: 'Cùng ý tưởng: Album cho tuổi trẻ Op. 39 của Tchaikovsky (1878) và tập For Children của Bartók.'
+    loai: nam
+    nguon:
+      - tr-op39
+      - imslp-sz42
+    ket_qua: dung
+    ghi_chu: 'Tchaikovsky Research: Op. 39, 1878, "24 simple pieces à la Schumann". IMSLP: For Children, Sz.42, 1908–09.'
+  - id: n71
+    cau: 'Câu hỏi 1: ở đoạn B của Wilder Reiter, giai điệu ở tay trái, chính là giai điệu đoạn A dời sang Fa trưởng; tay phải chỉ đánh hợp âm ngắn.'
+    loai: cau-truc
+    nguon: *id003
+    ket_qua: dung
+    ghi_chu: Như n39. Giải thích không dựa vào vị trí lựa chọn.
+  - id: n72
+    cau: 'Câu hỏi 2: chỉ dẫn Nicht schnell ở đầu Melodie nghĩa là "không nhanh", không có nghĩa là "chậm".'
+    loai: ten
+    nguon:
+      - mutopia-647
+      - ia-schuberth-1867
+    ket_qua: null
+    ghi_chu: 'chưa chắc: như n56 (nghĩa đúng; chưa chắc chỉ dẫn có trong bản gốc ở số 1).'
+  - id: n73
+    cau: 'Câu hỏi 3: ở đoạn b của Fröhlicher Landmann, tay phải giữ nốt giai điệu bằng ngón 4–5 trong khi ngón 1–3 đánh hợp âm nhỏ.'
+    loai: cau-truc
+    nguon: *id004
+    ket_qua: dung
+    ghi_chu: Như n42, n53; Henle/Mutopia không ghi số ngón ở đây, 4–5 / 1–3 là cách chơi duy nhất hợp lý cho bè trên và hợp âm dưới cùng tay.
+  - id: n74
+    cau: 'Câu hỏi 4: tập staccato của Wilder Reiter bằng cổ tay, ngón sát phím, tập chậm và nhỏ trước.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n75
+    cau: 'Mục Nguồn: Ernst Herttrich, lời tựa ấn bản Album für die Jugend op. 68, G. Henle Verlag, 2007 (sổ chi tiêu, lịch sử xuất bản, Haus- und Lebensregeln).'
+    loai: ten
+    nguon:
+      - henle-hn45
+      - henle-hn45-vorwort
+    ket_qua: dung
+    ghi_chu: 'Henle HN 45: Editor Ernst Herttrich; lời tựa ký "Remagen, Sommer 2007 Ernst Herttrich", nói đủ ba điều.'
+  - id: n76
+    cau: 'Mục Nguồn: Bernhard R. Appel, chuyên khảo về Album für die Jugend (1998).'
+    loai: ten
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: 'Henle: "seiner 1998 veröffentlichten Monographie Robert Schumanns „Album für die Jugend“" (Bernhard R. Appel).'
+  - id: n77
+    cau: 'Mục Nguồn: Wikipedia "Album for the Young" (danh sách 43 bài và giọng); Robert Schumann, Musikalische Haus- und Lebensregeln (in kèm album từ năm 1850).'
+    loai: ten
+    nguon:
+      - wiki-op68
+      - imslp-op68
+      - henle-hn45-vorwort
+    ket_qua: dung
+    ghi_chu: Danh sách 43 bài kiểm bằng IMSLP; năm 1850 kiểm bằng Henle (n24). Wikipedia không là nguồn duy nhất.
+  - id: n78
+    cau: 'Mục Nguồn: bản dàn trang theo ấn bản Peters (giấy phép CC BY-SA 2.5) tại Mutopia Project.'
+    loai: ten
+    nguon:
+      - mutopia-647
+      - mutopia-655
+      - mutopia-659
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "bản dàn trang công cộng theo ấn bản Peters tại Mutopia Project". Chữ mới: "bản dàn trang theo ấn bản Peters (giấy phép CC BY-SA 2.5) tại Mutopia Project". Lý do: các file Op. 68 trên Mutopia (647, 655, 659) ghi copyright "Creative Commons Attribution-ShareAlike 2.5", không phải phạm vi công cộng như hai trang Burgmüller, Tchaikovsky; source = "Peters".'
+  - id: n79
+    cau: 'Mục Nguồn: link IMSLP chung và "tài liệu tham khảo" (/opus/tai-lieu-tham-khao/).'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Trang đích src/content/docs/tai-lieu-tham-khao.md có.
 khuong_nhac:
   - khoi: 1
-    loai: null
-    kiem: []
-    ket_qua: null
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+      - so-ngon
+      - chang
+    ket_qua: dung
+    ghi_chu: 'Hát trên lớp đệm móc đơn: 4/4, Đô trưởng, 4 ô đủ 8 móc đơn. Tay phải E5 D5 C5 E5 | F5 G5 F5 E5 | D5 F5 E5 D5 | C5, thế Đô năm ngón (3-2-1-3 | 4-5-4-3 | 2-4-3-2 | 1). Tay trái hợp âm rải C3 G3 E3 G3 (5-1-3), F3 C4 A3 C4 (5-1-2), G2 F3 D3 F3 (5-1-3, quãng 7 thứ chơi được), C3 G3 E3 G3 rồi hợp âm Đô. Hòa âm I – IV – V7 – I, giai điệu khớp (Sol ô 2, Mi ô 3 là nốt qua). Đỉnh câu Sol5 ở ô 2 khớp lời dẫn. Kết cấu như Melodie (giai điệu nốt đen trên móc đơn). Hợp chặng 2.'
   - khoi: 2
-    loai: null
-    kiem: []
-    ket_qua: null
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+      - so-ngon
+      - chang
+    ket_qua: dung
+    ghi_chu: 'Staccato và giai điệu đổi tay: 6/8, La thứ, 5 ô đủ 6 móc đơn. Ô 1–2 tay phải A4 C5 E5 A5 E5 C5 | E5 D5 C5 B4 (1-2-3-5, 4…) trên tay trái A2+E3, G♯2+E3 (i – V); ô 3–4 tay trái F2 A2 C3 F3 C3 A2 | C3 B♭2 A2 G2 (5-3-2-1-2-3, 2-3-4-5) = đúng giai điệu ô 1–2 dời sang Fa trưởng, tay phải [A C], [E G] (Fa, Đô bảy) rồi hợp âm Fa ô 5. Khớp lời dẫn n52 và đoạn B của số 8 (Mutopia 655). Hợp chặng 2.'
   - khoi: 3
-    loai: null
-    kiem: []
-    ket_qua: null
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+      - so-ngon
+      - chang
+    ket_qua: dung
+    ghi_chu: 'Hát và đệm trong cùng một tay: 4/4, Fa trưởng, 4 ô đủ phách (chồng bè "&": bè trên nốt trắng ngón 5, bè dưới z + hai hợp âm móc đơn staccato + z). Bè trên C5 D5 | C5 B♭4 | A4 G4 | F4; hợp âm dưới F4+A4, F4+B♭4 | F4+A4, E4+G4 | C4+F4, B♭3+E4 | A3+C4: tầm tay rộng nhất một quãng 6 (B♭3 – G4), chơi được bằng 1-3 và 5. Tay trái F3 B♭2 | F3 C3 | F3 C3 | F2. Hòa âm I – IV | I – V7 | I – V7 | I, khớp. Đúng kết cấu đoạn b số 10 (Mutopia 659: bè trên giai điệu, bè dưới hợp âm ngắn cùng tay phải). Hợp chặng 2.'
 doi_chu:
   - cu: Op. 68 số 1, 8, 10 Ba tiểu phẩm ngắn ≈ Grade 1–3
     moi: Op. 68 số 1, 8, 10 Ba tiểu phẩm ngắn ≈ Grade 1–4
@@ -34,3 +638,15 @@ doi_chu:
   - cu: "Số 1: khoảng ABRSM Grade 1; số 8: khoảng Grade 2; số 10: khoảng Grade 2–3 (ước lượng)"
     moi: ABRSM xếp số 1 ở Grade 1 (đề cương 2021–2022), số 8 ở Grade 3 (2023–2028), số 10 ở Grade 4 (2017–2018)
     ly_do: "Dòng Độ khó của thong_tin sửa ở D2-0 theo đề cương ABRSM (sua-A.yml: số 8 ở Grade 3, số 10 ở Grade 4, không phải Grade 2 và 2–3 như trang cũ); lượt 1 D6-L1 kiểm lại ở hồ sơ bản ghi."
+  - cu: Ba bài đều xây từ những câu 4 ô, nhắc lại và biến đổi. Đây chính là các hình thức nhỏ bạn học trong phần nhạc lý, ở dạng gọn nhất.
+    moi: Ba bài đều xây từ những câu ngắn, phần lớn 4 ô, nhắc lại và biến đổi. Đây chính là các hình thức nhỏ bạn học trong phần nhạc lý, ở dạng gọn nhất.
+    ly_do: "n47 (da-sua): đoạn b của số 10 dài 6 ô (Mutopia 659 ô 9–14; bảng Cấu trúc của trang cũng ghi 6 ô)."
+  - cu: "Số 2 Soldatenmarsch (Hành khúc người lính, Sol trưởng): nhịp hành khúc với tiết tấu chấm dôi và hợp âm ngắn ở cả hai tay. Một bài staccato hợp âm đầu tiên rất tốt: hai tay buông phím cùng lúc, nhịp đều như bước chân, không chạy vội ở nốt ngắn. Nhiều người học bài này trước cả Wilder Reiter."
+    moi: "Số 2 Soldatenmarsch (Hành khúc người lính, Sol trưởng): nhịp hành khúc với tiết tấu chấm dôi và hợp âm ngắn ở cả hai tay. Một bài staccato hợp âm đầu tiên rất tốt: hai tay buông phím cùng lúc, nhịp đều như bước chân, không chạy vội ở nốt ngắn."
+    ly_do: 'n64 (da-bo): "Nhiều người học bài này trước cả Wilder Reiter" không kiểm được.'
+  - cu: "Bản nhạc: IMSLP; bản dàn trang công cộng theo ấn bản Peters tại Mutopia Project. Xem thêm tài liệu tham khảo."
+    moi: "Bản nhạc: IMSLP; bản dàn trang theo ấn bản Peters (giấy phép CC BY-SA 2.5) tại Mutopia Project. Xem thêm tài liệu tham khảo."
+    ly_do: "n78 (da-sua): bản Op. 68 trên Mutopia mang giấy phép CC BY-SA 2.5, không phải phạm vi công cộng."
+  - cu: Mỗi bài là một hình thức nhỏ dựng từ các câu 4 ô (xem Cấu trúc)
+    moi: Mỗi bài là một hình thức nhỏ dựng từ các câu ngắn, phần lớn 4 ô (xem Cấu trúc)
+    ly_do: "n22 của hồ sơ bản ghi tac-pham/schumann-album (da-sua, D6-L1 lượt 1; plans/lam-lai/bao-cao/d6-l1/sua-B.yml): dòng Hình thức của thong_tin; đoạn b của số 10 dài 6 ô (Mutopia 659 ô 9–14), nên không phải mọi câu đều 4 ô."

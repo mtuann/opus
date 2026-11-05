@@ -12,15 +12,15 @@ lan:
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
   - so: 2
-    ngay: null
+    ngay: 2026-11-05
     nhanh: moi/d6-l1
     ma_bam: null
     nguoi:
-      luot_1: null
+      luot_1: "Claude Opus 5.5 (D6-L1 phần A)"
       luot_2: null
       review: null
       kiem_mau: null
-ghi_chu: "Trang bài học cũ ../opus-zero/docs/piano/tac-pham/musette-re.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Cần chủ repo chọn: khuyet_danh: true (như hiện nay) hay tac_gia: bach kèm gan_cho: true (xem n2). Bach-Digital không mở được (thử thách chống bot)."
+ghi_chu: "Trang bài học cũ ../opus-zero/docs/piano/tac-pham/musette-re.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Cần chủ repo chọn: khuyet_danh: true (như hiện nay) hay tac_gia: bach kèm gan_cho: true (xem n2). Bach-Digital không mở được (thử thách chống bot). Lần 2 (D6-L1, lượt 1 phần A): nhận định n6–n27 cho các trường chưa khóa (giong, nhip, thoi_ky, ky_nang_chinh, chip, thong_tin, hinh, ban_thu); bản nhạc đối chiếu Mutopia anna-magdalena-22; bản thu Commons nghe kiểm thứ tự đoạn. Không có chỗ sai."
 nguon:
   - id: imslp-anh126
     bac: 2
@@ -38,6 +38,34 @@ nguon:
     bac: 2
     ten: G. Henle Verlag, HN 349 Notebook for Anna Magdalena Bach (mức khó từng bài)
     link: https://www.henle.de/en/Notebook-for-Anna-Magdalena-Bach/HN-349
+  - id: mut-musette
+    bac: 1
+    ten: Mutopia Project, Musette, BWV Anh. 126 (Allen Garvin, nguồn Bach-Gesellschaft; tệp LilyPond và MIDI)
+    link: https://www.mutopiaproject.org/ftp/BachJS/BWVAnh126/anna-magdalena-22/anna-magdalena-22.ly
+  - id: imslp-nb
+    bac: 2
+    ten: IMSLP, Notebooks for Anna Magdalena Bach (danh sách bài của Klavierbüchlein 1725)
+    link: https://imslp.org/wiki/Notebooks_for_Anna_Magdalena_Bach_(Bach,_Johann_Sebastian)
+  - id: imslp-anh114
+    bac: 2
+    ten: IMSLP, Minuet in G major, BWV Anh.114 (ấn bản Bach-Gesellschaft Bd. 43.2, 1894, in các bài của sổ tay)
+    link: https://imslp.org/wiki/Minuet_in_G_major,_BWV_Anh.114_(Pezold,_Christian)
+  - id: cod-musette
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục musette, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/literature-and-arts/performing-arts/music-history/musette
+  - id: cod-dacapo
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục da capo, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/da-capo
+  - id: omt-major
+    bac: 2
+    ten: Open Music Theory, Major Scales, Scale Degrees, and Key Signatures (át âm bậc 5)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/major-scales/
+  - id: commons-musette
+    bac: 2
+    ten: Wikimedia Commons, Bach, JS - Musette in D (Piano Performance by eldüendesüarez)
+    link: https://commons.wikimedia.org/wiki/File:Bach,_JS_-_Musette_in_D_(Piano_Performance_by_eld%C3%BCendes%C3%BCarez).wav
 nhan_dinh:
   - id: n1
     cau: "Tên bài: Musette Rê trưởng, BWV Anh. 126 (bài số 22 trong sổ tay thứ hai của Anna Magdalena Bach, 1725)."
@@ -107,3 +135,151 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ https://web.archive.org/web/20201112011213/https://gb.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf ]
     luot_2_ghi_chu: Stage 2 = Grade 1-2; ABRSM Grade 2.
+  - id: n6
+    cau: Giọng của bài là Rê trưởng.
+    loai: cau-truc
+    truong: [giong]
+    nguon: [mut-musette, imslp-anh126]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: \key d \major, kết Rê (dấu ngân ô 8); IMSLP: Key "D major".'
+  - id: n7
+    cau: Nhịp của bài là 2/4.
+    loai: cau-truc
+    truong: [nhip]
+    nguon: [mut-musette]
+    ket_qua: dung
+  - id: n8
+    cau: Bài thuộc thời kỳ Baroque.
+    loai: lich-su
+    truong: [thoi_ky]
+    nguon: [imslp-anh126]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Composer Time Period "Baroque"; bài chép vào sổ tay 1725.'
+  - id: n9
+    cau: 'Kỹ năng chính: bè trầm quãng tám giữ nền, đổi vị trí tay, sắc thái vọng.'
+    loai: cau-truc
+    truong: [ky_nang_chinh]
+    nguon: [mut-musette]
+    ket_qua: dung
+    ghi_chu: Bè trầm quãng tám ô 1–2, 5–6, 9–18; tay phải nhảy giữa vùng La5 và Fa♯4; các ý lặp lại (ô 1–2, 13–16, 19–20) để làm tiếng vọng. Sắc thái vọng là gợi ý chơi (bản gốc không ghi sắc thái).
+  - id: n10
+    cau: 'Chip: "Rê trưởng · 2/4".'
+    loai: cau-truc
+    truong: [chip]
+    nguon: [mut-musette]
+    ket_qua: dung
+  - id: n11
+    cau: 'Chip: "Bè trầm giữ nền".'
+    loai: cau-truc
+    truong: [chip]
+    nguon: [mut-musette, cod-musette]
+    ket_qua: dung
+  - id: n12
+    cau: 'Chip cấp độ: "≈ Grade 2".'
+    loai: cap-do
+    truong: [chip]
+    nguon: [abrsm-1920, rcm-2022]
+    ket_qua: dung
+    ghi_chu: Trùng grade đã khóa ở lần 1 (ABRSM Grade 2, 2019–2020).
+  - id: n13
+    cau: 'Chip: "A · B · A".'
+    loai: cau-truc
+    truong: [chip]
+    nguon: [mut-musette, cod-dacapo]
+    ket_qua: dung
+    ghi_chu: Đoạn A, đoạn B kết ở La trưởng, rồi A da capo tới dấu ngân.
+  - id: n14
+    cau: 'Thông tin, nhà soạn nhạc: khuyết danh; từng được in như nhạc của J. S. Bach (1685–1750); danh mục BWV xếp bài vào phụ lục (Anh.), cùng những tác phẩm mà việc gán cho Bach còn nghi vấn.'
+    loai: lich-su
+    truong: [thong_tin]
+    nguon: [imslp-anh126, mut-musette]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "BWV Anh.126; BWV Anh. II 126", "Bach''s authorship of this work is uncertain". Mutopia (theo BG) ghi composer "Johann Sebastian Bach (1685-1750)".'
+  - id: n15
+    cau: 'Thông tin, tác phẩm: Musette Rê trưởng, BWV Anh. 126.'
+    loai: danh-muc
+    truong: [thong_tin]
+    nguon: [imslp-anh126]
+    ket_qua: dung
+  - id: n16
+    cau: 'Thông tin: không rõ năm sáng tác; bài được chép vào cuốn sổ tay thứ hai của Anna Magdalena Bach, bắt đầu năm 1725 (bài số 22).'
+    loai: lich-su
+    truong: [thong_tin]
+    nguon: [imslp-nb, imslp-anh126]
+    ket_qua: dung
+    ghi_chu: 'IMSLP notebook: số 22 "Musette D-dur, BWV Anh.126". IMSLP Anh. 126 ghi "Year of composition 1725" là năm của sổ, không phải năm sáng tác đã biết; "không rõ năm sáng tác" là đúng mức.'
+  - id: n17
+    cau: 'Thông tin: in trong ấn bản toàn tập Bach-Gesellschaft (1894).'
+    loai: nam
+    truong: [thong_tin]
+    nguon: [mut-musette, imslp-anh114]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: source "Bach-Gesellschaft"; IMSLP: BG Bd. 43.2 (1894) in các bài của sổ tay.'
+  - id: n18
+    cau: 'Thông tin, giọng · nhịp · tốc độ: Rê trưởng · 2/4 · không ghi tốc độ; nhịp vui, vừa phải.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: [mut-musette]
+    ket_qua: dung
+    ghi_chu: Không có chỉ dẫn tốc độ trong bản BG; "vui, vừa phải" là gợi ý.
+  - id: n19
+    cau: 'Thông tin, hình thức: đoạn A (8 ô) và đoạn B (12 ô), mỗi đoạn có dấu nhắc lại; đoạn B kết ở La trưởng, nên đoạn A trở lại (da capo) và bài kết ở dấu ngân của ô 8.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: [mut-musette, cod-dacapo]
+    ket_qua: dung
+  - id: n20
+    cau: 'Thông tin, độ khó: khoảng ABRSM Grade 2 (ước lượng).'
+    loai: cap-do
+    truong: [thong_tin]
+    nguon: [abrsm-1920]
+    ket_qua: dung
+    ghi_chu: Lần 1 (đã khóa) ghi ABRSM 2019–2020 Grade 2; "ước lượng" thừa nhưng không sai.
+  - id: n21
+    cau: 'Thông tin, kỹ năng chính: bè trầm quãng tám (xoay cẳng tay); móc kép tay phải trên móc đơn tay trái; đổi thế tay và nhảy quãng ở tay phải; hai tay chung một giai điệu; phát âm nhẹ; sắc thái tiếng vọng; đọc Rê♯ và Sol♯.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: [mut-musette]
+    ket_qua: dung
+    ghi_chu: Các yếu tố có trong bài (hồ sơ trang musette-re n2, n5, n48, n49, n55).
+  - id: n22
+    cau: 'Thông tin, bản nhạc: IMSLP (tìm "Musette in D major, BWV Anh.126"); bản Urtext sổ tay 1725 của Bärenreiter (theo Neue Bach-Ausgabe).'
+    loai: ten
+    truong: [thong_tin]
+    nguon: [imslp-anh126]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: NBA V/4 (1957, Dadelsen, Bärenreiter BA 5008) và "Notebook for Anna Magdalena Bach, 1725" (BA 5164).'
+  - id: n23
+    cau: 'Hình cấu trúc: đoạn A ô 1–8 Rê trưởng, bè trầm Rê (8 ô, nhắc lại); B ô 9–12 La trưởng, bè trầm La (4 ô); âm nền Mi ô 13–18, có Rê♯ (6 ô); kết ô 19–20 La trưởng (2 ô, nhắc lại); A da capo ô 1–8, dừng ở dấu ngân.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [mut-musette]
+    ket_qua: dung
+    ghi_chu: MIDI Mutopia (hồ sơ trang n33–n41). Bè trầm Mi bắt đầu từ nửa sau ô 12; chia ô theo câu nhạc.
+  - id: n24
+    cau: 'Hình, ghi chú: đoạn B kết ở La trưởng (giọng át), nên đoạn A trở lại để bài kết ở Rê trưởng.'
+    loai: quy-tac
+    truong: [hinh]
+    nguon: [mut-musette, omt-major]
+    ket_qua: dung
+  - id: n25
+    cau: 'Bản thu gợi ý: eldüendesüarez (piano), giấy phép CC BY-SA 4.0.'
+    loai: ten
+    truong: [ban_thu]
+    nguon: [commons-musette]
+    ket_qua: dung
+    ghi_chu: 'Commons: "Piano Performance by eldüendesüarez", CC BY-SA 4.0.'
+  - id: n26
+    cau: 'Ghi chú bản thu: sau mỗi lần đoạn B, người chơi đều quay lại đoạn A.'
+    loai: cau-truc
+    truong: [ban_thu]
+    nguon: [commons-musette]
+    ket_qua: dung
+    ghi_chu: 'Nghe và phân tích chroma bản mp3 của Commons (librosa, thư mục tạm): 0–16 giây nền Rê (A A), 16–28 nền La rồi Mi (B), khoảng 29–36 nền Rê (A), 36–48 B, 48–64 Rê (A): A A B A B A.'
+  - id: n27
+    cau: 'Bản thu dài 63,59 giây (d: 63.59).'
+    loai: so-lieu
+    truong: [ban_thu]
+    nguon: [commons-musette]
+    ket_qua: dung
+    ghi_chu: 'Commons: 63,59 giây (1 phút 4 giây); file mp3 chuyển mã tải về đo được 63,59 giây.'

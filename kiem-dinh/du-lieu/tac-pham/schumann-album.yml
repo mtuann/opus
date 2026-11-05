@@ -1,137 +1,465 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/schumann-album
 ban_ghi: tac-pham/schumann-album
 lan:
-  - so: 1
-    ngay: 2026-10-24
-    nhanh: moi/d2-0-du-lieu
-    ma_bam: sha256:589f7e20199148c40aa4ff82dc84f15dc9ae527ac884c13986601004d925fbbc
-    nguoi:
-      luot_1: Claude Sonnet 5.5 (D2-0 phần A)
-      luot_2: Claude Sonnet 5.5 (D2-0 lượt 2 phần A)
-      review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
-      kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
-    truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
-  - so: 2
-    ngay: null
-    nhanh: moi/d6-l1
-    ma_bam: null
-    nguoi:
-      luot_1: null
-      luot_2: null
-      review: null
-      kiem_mau: null
-ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/schumann-album.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Trang này dạy ba bài (số 1 Melodie, số 8 Wilder Reiter, số 10 Fröhlicher Landmann) nên grade là khoảng của ba bài. Cần cập nhật theo: chip.cap_do và dòng "Độ khó" trong thong_tin.'
+- so: 1
+  ngay: 2026-10-24
+  nhanh: moi/d2-0-du-lieu
+  ma_bam: sha256:589f7e20199148c40aa4ff82dc84f15dc9ae527ac884c13986601004d925fbbc
+  nguoi:
+    luot_1: Claude Sonnet 5.5 (D2-0 phần A)
+    luot_2: Claude Sonnet 5.5 (D2-0 lượt 2 phần A)
+    review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
+    kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
+  truong:
+  - chang
+  - danh_muc
+  - gan_cho
+  - goi_y
+  - grade
+  - khuyet_danh
+  - loai
+  - tac_gia
+  - ten
+- so: 2
+  ngay: '2026-11-05'
+  nhanh: moi/d6-l1
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Opus 5.5 (D6-L1 phần B)
+    luot_2: null
+    review: null
+    kiem_mau: null
+ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/schumann-album.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Trang này dạy ba bài (số 1 Melodie, số 8 Wilder Reiter, số 10 Fröhlicher Landmann) nên grade là khoảng của ba bài. Cần cập nhật theo: chip.cap_do và dòng "Độ khó" trong thong_tin. Lần 2 (D6-L1, lượt 1 phần B): nhận định n7–n34 cho các trường chưa khóa (thoi_ky, ky_nang_chinh, chip, thong_tin, hinh, ban_thu; bản ghi không có giong, nhip). Sửa: n22 (Hình thức "các câu 4 ô" → "các câu ngắn, phần lớn 4 ô"; sua-B.yml). Chưa chắc: n19 (Nicht schnell ở Melodie).'
 nguon:
-  - id: imslp-op68
-    bac: 2
-    ten: IMSLP, Album für die Jugend, Op.68 (Schumann)
-    link: https://imslp.org/wiki/Album_f%C3%BCr_die_Jugend,_Op.68_(Schumann,_Robert)
-  - id: henle-hn45
-    bac: 2
-    ten: G. Henle Verlag, HN 45 Schumann, Album for the Young op. 68 (mức khó từng bài)
-    link: https://www.henle.de/en/Album-for-the-Young-op.-68/HN-45
-  - id: abrsm-2122
-    bac: 2
-    ten: "ABRSM, Piano Syllabus 2021 & 2022, Qualification Specification: Practical Music"
-    link: https://www.abrsm.org/sites/default/files/2023-09/piano-2021-2022-syllabus-rev-sep-2020-final.pdf
-  - id: abrsm-2324
-    bac: 2
-    ten: ABRSM, Practical Music Grades Piano Syllabus 2023 & 2024, Qualification Specification
-    link: https://www.abrsm.org/sites/default/files/2023-10/Piano%202023%20&%202024%20Prac%20syllabus%2020230807.pdf
-  - id: abrsm-2526
-    bac: 2
-    ten: ABRSM, Practical Music Grades Piano Syllabus 2025 & 2026, Qualification Specification
-    link: https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20&%202026%20Prac%20syllabus%2020240524_access.pdf
-  - id: abrsm-2728
-    bac: 2
-    ten: ABRSM, Music Performance Grades Piano Syllabus (Section 3) 2027 & 2028 (danh sách tác phẩm giống Practical Grades)
-    link: https://www.abrsm.org/sites/default/files/2026-06/Piano%20Performance%20Grades%20Syllabus%202027%20&%202028.pdf
-  - id: abrsm-1718
-    bac: 2
-    ten: "ABRSM, Piano 2017 & 2018: các danh sách tác phẩm Grade 1–8 (bản lưu của us.abrsm.org/media/12152/piano_2017___2018.pdf)"
-    link: https://web.archive.org/web/2020/https://us.abrsm.org/media/12152/piano_2017___2018.pdf
-  - id: rcm-2022
-    bac: 2
-    ten: The Royal Conservatory (RCM), Piano Syllabus, 2022 Edition
-    link: https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf
+- id: imslp-op68
+  bac: 2
+  ten: IMSLP, Album für die Jugend, Op.68 (Schumann)
+  link: https://imslp.org/wiki/Album_f%C3%BCr_die_Jugend,_Op.68_(Schumann,_Robert)
+- id: henle-hn45
+  bac: 2
+  ten: G. Henle Verlag, HN 45 Schumann, Album for the Young op. 68 (mức khó từng bài)
+  link: https://www.henle.de/en/Album-for-the-Young-op.-68/HN-45
+- id: abrsm-2122
+  bac: 2
+  ten: 'ABRSM, Piano Syllabus 2021 & 2022, Qualification Specification: Practical Music'
+  link: https://www.abrsm.org/sites/default/files/2023-09/piano-2021-2022-syllabus-rev-sep-2020-final.pdf
+- id: abrsm-2324
+  bac: 2
+  ten: ABRSM, Practical Music Grades Piano Syllabus 2023 & 2024, Qualification Specification
+  link: https://www.abrsm.org/sites/default/files/2023-10/Piano%202023%20&%202024%20Prac%20syllabus%2020230807.pdf
+- id: abrsm-2526
+  bac: 2
+  ten: ABRSM, Practical Music Grades Piano Syllabus 2025 & 2026, Qualification Specification
+  link: https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20&%202026%20Prac%20syllabus%2020240524_access.pdf
+- id: abrsm-2728
+  bac: 2
+  ten: ABRSM, Music Performance Grades Piano Syllabus (Section 3) 2027 & 2028 (danh sách tác phẩm giống Practical Grades)
+  link: https://www.abrsm.org/sites/default/files/2026-06/Piano%20Performance%20Grades%20Syllabus%202027%20&%202028.pdf
+- id: abrsm-1718
+  bac: 2
+  ten: 'ABRSM, Piano 2017 & 2018: các danh sách tác phẩm Grade 1–8 (bản lưu của us.abrsm.org/media/12152/piano_2017___2018.pdf)'
+  link: https://web.archive.org/web/2020/https://us.abrsm.org/media/12152/piano_2017___2018.pdf
+- id: rcm-2022
+  bac: 2
+  ten: The Royal Conservatory (RCM), Piano Syllabus, 2022 Edition
+  link: https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf
+- id: henle-hn45-vorwort
+  bac: 2
+  ten: G. Henle Verlag, HN 45, lời tựa của Ernst Herttrich (2007), PDF trên trang sản phẩm
+  link: https://www.henle.de/media/56/17/85/1690886059/0045-1690886059-sync.pdf
+- id: henle-hn45-bemerkungen
+  bac: 2
+  ten: 'G. Henle Verlag, HN 45, Bemerkungen/Comments (E1: Schuberth & Comp., số bản 1232, "erschienen im Dezember 1848")'
+  link: https://www.henle.de/media/90/21/08/1697725681/0045-1697725681-sync.pdf
+- id: schumann-portal-dresden
+  bac: 2
+  ten: Schumann-Portal, Dresden 1844–1850 (nơi ở của gia đình Schumann)
+  link: https://www.schumann-portal.de/dresden-1844-1850.html
+- id: imslp-schumann
+  bac: 2
+  ten: IMSLP, Category:Schumann, Robert (8/6/1810 – 29/7/1856, Time Period Romantic)
+  link: https://imslp.org/wiki/Category:Schumann,_Robert
+- id: mutopia-647
+  bac: 1
+  ten: Mutopia Project, Op. 68 số 1 (Peters, CC BY-SA 2.5), Mutopia-2007/02/11-647
+  link: https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=647
+- id: mutopia-655
+  bac: 1
+  ten: Mutopia Project, Op. 68 số 8 (Peters, CC BY-SA 2.5), Mutopia-2007/02/11-655
+  link: https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=655
+- id: mutopia-659
+  bac: 1
+  ten: Mutopia Project, Op. 68 số 10 (Peters, CC BY-SA 2.5), Mutopia-2007/02/11-659
+  link: https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=659
+- id: ia-schuberth-1867
+  bac: 1
+  ten: Internet Archive, Erstes Album für die Jugend op. 68, J. Schuberth & Co., Leipzig [1867] (bản Klauser)
+  link: https://archive.org/details/b26976821
+- id: ia-op68-ban-khac
+  bac: 1
+  ten: Internet Archive, Album Fur Die Jugend, Op. 68 Complete Score Of All Pieces (bản in không ghi nhà xuất bản)
+  link: https://archive.org/details/album-fur-die-jugend-op.-68-complete-score-of-all-pieces
+- id: baerenreiter-ba9641
+  bac: 2
+  ten: Bärenreiter (US), BA 9641 Schumann, Album for the Young op. 68, Urtext, biên tập Holger M. Stüwe
+  link: https://barenreiter.us/products/schumann-album-for-the-young-op-68-barenreiter
 nhan_dinh:
-  - id: n1
-    cau: "Tên bài: Album für die Jugend Op. 68 (43 tiểu phẩm của Schumann; trang này chọn ba bài)."
-    loai: ten
-    truong:
-      - ten
-    nguon:
-      - imslp-op68
-      - henle-hn45
-    ket_qua: dung
-    ghi_chu: 'IMSLP: "Album für die Jugend, Op.68", 43 bài. Henle HN 45: "Album for the Young op. 68".'
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Album_f%C3%BCr_die_Jugend,_Op.68_(Schumann,_Robert)", https://www.henle.de/en/Album-for-the-Young-op.-68/HN-45 ]
-    luot_2_ghi_chu: 'IMSLP: Album für die Jugend Op.68, "43 pieces". The remark "trang này chọn ba bài" is about the site page, not checkable from sources.'
-  - id: n2
-    cau: "Tác giả: Robert Schumann."
-    loai: lich-su
-    truong:
-      - tac_gia
-    nguon:
-      - imslp-op68
-      - henle-hn45
-    ket_qua: dung
-    ghi_chu: 'IMSLP: Composer "Schumann, Robert"; Henle HN 45.'
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Album_f%C3%BCr_die_Jugend,_Op.68_(Schumann,_Robert)" ]
-    luot_2_ghi_chu: "IMSLP composer: Schumann, Robert."
-  - id: n3
-    cau: "Số danh mục: Op. 68."
-    loai: danh-muc
-    truong:
-      - danh_muc
-    nguon:
-      - imslp-op68
-      - henle-hn45
-    ket_qua: dung
-    ghi_chu: 'IMSLP: Op./Cat. No. "Op.68". Henle: "op. 68".'
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Album_f%C3%BCr_die_Jugend,_Op.68_(Schumann,_Robert)" ]
-    luot_2_ghi_chu: Op.68.
-  - id: n4
-    cau: Các bài của trang (Op. 68 số 1, 8, 10) tương đương khoảng ABRSM Grade 1–4.
-    loai: cap-do
-    truong:
-      - grade
-    nguon:
-      - abrsm-2122
-      - abrsm-2324
-      - abrsm-2526
-      - abrsm-2728
-      - abrsm-1718
-      - henle-hn45
-      - rcm-2022
-    ket_qua: da-sua
-    ghi_chu: 'Dữ liệu ghi "Grade 1–3"; sửa thành "Grade 1–4". Đề cương chính thức: số 1 Melodie ở ABRSM Grade 1 (2021 & 2022); số 8 Wilder Reiter ở Grade 3 (2023–2028, ba kỳ liền); số 10 Fröhlicher Landmann ở Grade 4 (2017 & 2018). Henle: số 1 mức 2, số 8 và số 10 mức 3; RCM 2022: số 8 và số 10 ở Level 4. Số 10 ở Grade 4 nằm ngoài "Grade 1–3" cũ.'
-    luot_2: dung
-    luot_2_nguon: [ https://web.archive.org/web/20231003114530/https://gb.abrsm.org/media/65196/piano-g1-2021-2022-rev-sep-2020.pdf, https://web.archive.org/web/20220609113639/https://gb.abrsm.org/media/66595/piano-2023-2024-practical-grades-syllabus-may-2022.pdf, https://web.archive.org/web/20191112232528/https://us.abrsm.org/media/12152/piano_2017___2018.pdf, https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf, https://www.henle.de/en/Album-for-the-Young-op.-68/HN-45 ]
-    luot_2_ghi_chu: "No.1 Melodie: ABRSM 2021-22 Grade 1 (RCM Level 3, Henle 2). No.8 Wilder Reiter: ABRSM 2023-26 Grade 3 (RCM Level 4, Henle 3). No.10 Fröhlicher Landmann: ABRSM 2017-18 Grade 4 (RCM Level 4, Henle 3). So Grade 1-4 exactly."
-  - id: n5
-    cau: Bài thuộc chặng 2 (Grade 1–2) của lộ trình piano.
-    loai: cap-do
-    truong:
-      - chang
-    nguon:
-      - abrsm-2122
-      - abrsm-2324
-    ket_qua: dung
-    ghi_chu: "Chặng 2 = Grade 1–2 (cap-do.yml). Số 1 (Grade 1) thuộc chặng 2; số 8 (Grade 3) và số 10 (Grade 4) thuộc chặng 3–4: dữ liệu xếp cả trang vào chặng 2 theo đầu dưới của khoảng, hợp lệ theo luật kiểm chéo."
-    luot_2: dung
-    luot_2_nguon: [ https://web.archive.org/web/20231003114530/https://gb.abrsm.org/media/65196/piano-g1-2021-2022-rev-sep-2020.pdf ]
-    luot_2_ghi_chu: "Entry stage: Stage 2 = Grade 1-2 holds for no.1 (Grade 1) but nos. 8 and 10 are Grade 3-4 (stages 3-4); acceptable as the stage where the album starts."
-  - id: n6
-    cau: Bài được gợi ý ở chặng 2 trong hộp luyện tập của trang chủ.
-    loai: khuyen-tap
-    truong:
-      - goi_y
-    nguon: []
-    ket_qua: khong-can-nguon
-    ghi_chu: '../opus-zero/docs/assets/js/practice.js, hằng SUGGEST[2] có ["piano/tac-pham/schumann-album/", "Schumann: Album für die Jugend"]; chặng 2 trùng chang 2 của bản ghi.'
-    luot_2: dung
-    luot_2_ghi_chu: Reasonable (start with no.1); not contradicted.
+- id: n1
+  cau: 'Tên bài: Album für die Jugend Op. 68 (43 tiểu phẩm của Schumann; trang này chọn ba bài).'
+  loai: ten
+  truong:
+  - ten
+  nguon:
+  - imslp-op68
+  - henle-hn45
+  ket_qua: dung
+  ghi_chu: 'IMSLP: "Album für die Jugend, Op.68", 43 bài. Henle HN 45: "Album for the Young op. 68".'
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/Album_f%C3%BCr_die_Jugend,_Op.68_(Schumann,_Robert)
+  - https://www.henle.de/en/Album-for-the-Young-op.-68/HN-45
+  luot_2_ghi_chu: 'IMSLP: Album für die Jugend Op.68, "43 pieces". The remark "trang này chọn ba bài" is about the site page, not checkable from sources.'
+- id: n2
+  cau: 'Tác giả: Robert Schumann.'
+  loai: lich-su
+  truong:
+  - tac_gia
+  nguon:
+  - imslp-op68
+  - henle-hn45
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Composer "Schumann, Robert"; Henle HN 45.'
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/Album_f%C3%BCr_die_Jugend,_Op.68_(Schumann,_Robert)
+  luot_2_ghi_chu: 'IMSLP composer: Schumann, Robert.'
+- id: n3
+  cau: 'Số danh mục: Op. 68.'
+  loai: danh-muc
+  truong:
+  - danh_muc
+  nguon:
+  - imslp-op68
+  - henle-hn45
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Op./Cat. No. "Op.68". Henle: "op. 68".'
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/Album_f%C3%BCr_die_Jugend,_Op.68_(Schumann,_Robert)
+  luot_2_ghi_chu: Op.68.
+- id: n4
+  cau: Các bài của trang (Op. 68 số 1, 8, 10) tương đương khoảng ABRSM Grade 1–4.
+  loai: cap-do
+  truong:
+  - grade
+  nguon:
+  - abrsm-2122
+  - abrsm-2324
+  - abrsm-2526
+  - abrsm-2728
+  - abrsm-1718
+  - henle-hn45
+  - rcm-2022
+  ket_qua: da-sua
+  ghi_chu: 'Dữ liệu ghi "Grade 1–3"; sửa thành "Grade 1–4". Đề cương chính thức: số 1 Melodie ở ABRSM Grade 1 (2021 & 2022); số 8 Wilder Reiter ở Grade 3 (2023–2028, ba kỳ liền); số 10 Fröhlicher Landmann ở Grade 4 (2017 & 2018). Henle: số 1 mức 2, số 8 và số 10 mức 3; RCM 2022: số 8 và số 10 ở Level 4. Số 10 ở Grade 4 nằm ngoài "Grade 1–3" cũ.'
+  luot_2: dung
+  luot_2_nguon:
+  - https://web.archive.org/web/20231003114530/https://gb.abrsm.org/media/65196/piano-g1-2021-2022-rev-sep-2020.pdf
+  - https://web.archive.org/web/20220609113639/https://gb.abrsm.org/media/66595/piano-2023-2024-practical-grades-syllabus-may-2022.pdf
+  - https://web.archive.org/web/20191112232528/https://us.abrsm.org/media/12152/piano_2017___2018.pdf
+  - https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf
+  - https://www.henle.de/en/Album-for-the-Young-op.-68/HN-45
+  luot_2_ghi_chu: 'No.1 Melodie: ABRSM 2021-22 Grade 1 (RCM Level 3, Henle 2). No.8 Wilder Reiter: ABRSM 2023-26 Grade 3 (RCM Level 4, Henle 3). No.10 Fröhlicher Landmann: ABRSM 2017-18 Grade 4 (RCM Level 4, Henle 3). So Grade 1-4 exactly.'
+- id: n5
+  cau: Bài thuộc chặng 2 (Grade 1–2) của lộ trình piano.
+  loai: cap-do
+  truong:
+  - chang
+  nguon:
+  - abrsm-2122
+  - abrsm-2324
+  ket_qua: dung
+  ghi_chu: 'Chặng 2 = Grade 1–2 (cap-do.yml). Số 1 (Grade 1) thuộc chặng 2; số 8 (Grade 3) và số 10 (Grade 4) thuộc chặng 3–4: dữ liệu xếp cả trang vào chặng 2 theo đầu dưới của khoảng, hợp lệ theo luật kiểm chéo.'
+  luot_2: dung
+  luot_2_nguon:
+  - https://web.archive.org/web/20231003114530/https://gb.abrsm.org/media/65196/piano-g1-2021-2022-rev-sep-2020.pdf
+  luot_2_ghi_chu: 'Entry stage: Stage 2 = Grade 1-2 holds for no.1 (Grade 1) but nos. 8 and 10 are Grade 3-4 (stages 3-4); acceptable as the stage where the album starts.'
+- id: n6
+  cau: Bài được gợi ý ở chặng 2 trong hộp luyện tập của trang chủ.
+  loai: khuyen-tap
+  truong:
+  - goi_y
+  nguon: []
+  ket_qua: khong-can-nguon
+  ghi_chu: '../opus-zero/docs/assets/js/practice.js, hằng SUGGEST[2] có ["piano/tac-pham/schumann-album/", "Schumann: Album für die Jugend"]; chặng 2 trùng chang 2 của bản ghi.'
+  luot_2: dung
+  luot_2_ghi_chu: Reasonable (start with no.1); not contradicted.
+- id: n7
+  cau: 'Thời kỳ: Lãng mạn.'
+  loai: lich-su
+  truong:
+  - thoi_ky
+  nguon:
+  - imslp-op68
+  - imslp-schumann
+  ket_qua: dung
+  ghi_chu: 'IMSLP Op.68: Piece Style Romantic; Category Schumann: Time Period Romantic.'
+- id: n8
+  cau: 'Kỹ năng chính: giai điệu trên phần đệm, staccato, tính cách từng bài.'
+  loai: cau-truc
+  truong:
+  - ky_nang_chinh
+  nguon:
+  - mutopia-647
+  - mutopia-655
+  - mutopia-659
+  ket_qua: dung
+  ghi_chu: 'Mutopia: số 1 giai điệu trên móc đơn; số 8 staccato; mỗi bài một tựa và tính cách.'
+- id: n9
+  cau: 'Chip: "Op. 68 số 1, 8, 10" và "Ba tiểu phẩm ngắn" (Melodie, Wilder Reiter, Fröhlicher Landmann).'
+  loai: danh-muc
+  truong:
+  - chip
+  nguon:
+  - imslp-op68
+  ket_qua: dung
+  ghi_chu: 'IMSLP: 1 Melodie, 8 Wilder Reiter, 10 Fröhlicher Landmann. Ngắn: 20, 24, 20 ô (Mutopia).'
+- id: n10
+  cau: 'Chip cấp độ: ≈ Grade 1–4.'
+  loai: cap-do
+  truong:
+  - chip
+  nguon:
+  - abrsm-2122
+  - abrsm-2324
+  - abrsm-1718
+  ket_qua: dung
+  ghi_chu: 'Trùng grade đã khóa (lần 1 n4: số 1 Grade 1, số 8 Grade 3, số 10 Grade 4).'
+- id: n11
+  cau: 'Thông tin, Nhà soạn nhạc: Robert Schumann (1810–1856).'
+  loai: nam
+  truong:
+  - thong_tin
+  nguon:
+  - imslp-schumann
+  ket_qua: dung
+  ghi_chu: 'IMSLP: 8/6/1810 – 29/7/1856.'
+- id: n12
+  cau: 'Thông tin, Tác phẩm: Album für die Jugend (Album cho tuổi trẻ), Op. 68, gồm 43 tiểu phẩm piano.'
+  loai: ten
+  truong:
+  - thong_tin
+  nguon:
+  - imslp-op68
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Album für die Jugend, Op.68, "43 pieces".'
+- id: n13
+  cau: 'Thông tin: tập chia hai phần, Für Kleinere (cho các em nhỏ hơn, số 1–18) và Für Erwachsenere (cho các em lớn hơn, số 19–43).'
+  loai: cau-truc
+  truong:
+  - thong_tin
+  nguon:
+  - imslp-op68
+  ket_qua: dung
+  ghi_chu: 'IMSLP: "Erste Abteilung (für Kleinere)" 1–18; "Zweite Abteilung (für Erwachsenere)" 19–43.'
+- id: n14
+  cau: 'Thông tin, Sáng tác: tháng 9/1848 tại Dresden.'
+  loai: nam
+  truong:
+  - thong_tin
+  nguon:
+  - henle-hn45-vorwort
+  - schumann-portal-dresden
+  ket_qua: dung
+  ghi_chu: 'Henle: các bài viết từ 1/9 đến 22/9/1848 (Haushaltbuch, ngày trong tập phác thảo); Schumann-Portal: gia đình sống ở Dresden 1844–1850.'
+- id: n15
+  cau: 'Thông tin: khởi đầu là quà sinh nhật 7 tuổi của con gái lớn Marie (1/9/1848).'
+  loai: lich-su
+  truong:
+  - thong_tin
+  nguon: &id001
+  - henle-hn45-vorwort
+  ket_qua: dung
+  ghi_chu: 'Henle: "Stückchen für''s Clavier / Zu Marie''chens 7tem Geburtstag / den 1sten September 1848 / gemacht vom Papa", "sein ältestes Kind, die Tochter Marie".'
+- id: n16
+  cau: 'Thông tin: Julius Schuberth (Hamburg) xuất bản tháng 12/1848.'
+  loai: nam
+  truong:
+  - thong_tin
+  nguon:
+  - henle-hn45-bemerkungen
+  - henle-hn45-vorwort
+  ket_qua: dung
+  ghi_chu: 'Henle Bemerkungen: "E1 Erstausgabe. Hamburg, Schuberth & Comp., Plattennummer 1232, erschienen im Dezember 1848"; lời tựa: "Hamburger Verleger Julius Schuberth". (IMSLP ghi 1849.)'
+- id: n17
+  cau: 'Thông tin: lần in thứ hai (12/1850) thêm phụ lục Musikalische Haus- und Lebensregeln.'
+  loai: nam
+  truong:
+  - thong_tin
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Henle: "die im Dezember 1850 erschienene … „Zweite mit einem Textanhange [den Musicalischen Haus- und Lebensregeln] vermehrte Auflage“".'
+- id: n18
+  cau: 'Thông tin: số 1 Melodie (Giai điệu): Đô trưởng · 4/4.'
+  loai: cau-truc
+  truong:
+  - thong_tin
+  nguon: &id002
+  - mutopia-647
+  ket_qua: dung
+  ghi_chu: 'Mutopia 647: \key c \major \time 4/4.'
+- id: n19
+  cau: 'Thông tin: số 1 Melodie có chỉ dẫn tốc độ Nicht schnell (không nhanh).'
+  loai: ten
+  truong:
+  - thong_tin
+  nguon:
+  - mutopia-647
+  - ia-schuberth-1867
+  - ia-op68-ban-khac
+  ket_qua: null
+  ghi_chu: 'chưa chắc: Peters (Mutopia 647) ghi "pas vite" (= nicht schnell); hai bản in đọc được trên Internet Archive (Schuberth 1867 bản Klauser; một bản không ghi tên) không ghi chỉ dẫn tốc độ ở Melodie, dù cùng bản ghi "Nicht schnell" ở số 3, số 5. Chưa xem được bản in đầu hay Henle. Nếu bản gốc không có: sửa thành "Số 1 *Melodie* (Giai điệu): Đô trưởng · 4/4 · Schumann không ghi chữ chỉ tốc độ (bản Peters: *pas vite*, không nhanh)" và sửa theo trang (hồ sơ trang n56, n72). Không ghi vào sua-B.yml vì chưa quyết.'
+- id: n20
+  cau: 'Thông tin: số 8 Wilder Reiter (Kỵ sĩ hoang dã): La thứ · 6/8 · nhanh, sôi nổi.'
+  loai: cau-truc
+  truong:
+  - thong_tin
+  nguon:
+  - mutopia-655
+  - ia-schuberth-1867
+  ket_qua: dung
+  ghi_chu: 'Mutopia 655: \key c \major (La thứ, giai điệu a e a c, G♯), \time 6/8, "vif" (Peters). Bản Schuberth 1867 không ghi chữ tốc độ; dòng dữ liệu viết "nhanh, sôi nổi" không in nghiêng, là mô tả chứ không trích chỉ dẫn: hợp.'
+- id: n21
+  cau: 'Thông tin: số 10 Fröhlicher Landmann, von der Arbeit zurückkehrend (Người nông dân vui vẻ đi làm về): Fa trưởng · 4/4 · Frisch und munter (tươi tắn, vui vẻ).'
+  loai: ten
+  truong:
+  - thong_tin
+  nguon:
+  - imslp-op68
+  - ia-schuberth-1867
+  - mutopia-659
+  ket_qua: dung
+  ghi_chu: 'IMSLP: tựa đầy đủ; Schuberth 1867: "Frisch und munter." dưới tựa; Mutopia 659: Fa trưởng 4/4, "Frais et gaillard".'
+- id: n22
+  cau: 'Thông tin, Hình thức: mỗi bài là một hình thức nhỏ dựng từ các câu ngắn, phần lớn 4 ô.'
+  loai: cau-truc
+  truong:
+  - thong_tin
+  nguon:
+  - mutopia-647
+  - mutopia-655
+  - mutopia-659
+  ket_qua: da-sua
+  ghi_chu: Dữ liệu ghi "Mỗi bài là một hình thức nhỏ dựng từ các câu 4 ô (xem Cấu trúc)". Đoạn b của số 10 dài 6 ô (Mutopia 659 ô 9–14; hinh của chính bản ghi ghi "6 ô"). Sửa thành "Mỗi bài là một hình thức nhỏ dựng từ các câu ngắn, phần lớn 4 ô (xem Cấu trúc)". Trang cũng đã sửa câu tương tự (hồ sơ trang n47).
+- id: n23
+  cau: 'Thông tin, Độ khó: ABRSM xếp số 1 ở Grade 1 (đề cương 2021–2022), số 8 ở Grade 3 (2023–2028), số 10 ở Grade 4 (2017–2018).'
+  loai: cap-do
+  truong:
+  - thong_tin
+  nguon:
+  - abrsm-2122
+  - abrsm-2324
+  - abrsm-2526
+  - abrsm-2728
+  - abrsm-1718
+  ket_qua: dung
+  ghi_chu: Như lần 1 n4 (đã qua lượt 2, review).
+- id: n24
+  cau: 'Thông tin, Kỹ năng chính: giai điệu legato trên lớp đệm nhẹ; staccato nhanh và nhẹ; giai điệu ở tay trái; giai điệu chuyền giữa hai tay; giai điệu và đệm trong cùng một tay.'
+  loai: cau-truc
+  truong:
+  - thong_tin
+  nguon:
+  - mutopia-647
+  - mutopia-655
+  - mutopia-659
+  ket_qua: dung
+  ghi_chu: 'Mutopia: số 1 (legato trên móc đơn), số 8 (staccato; B giai điệu tay trái), số 10 (tay trái hát; ô 9–12 tay phải giai điệu và hợp âm cùng tay).'
+- id: n25
+  cau: 'Thông tin, Bản nhạc: IMSLP; bản Urtext của G. Henle Verlag (biên tập Ernst Herttrich, 2007) và Bärenreiter.'
+  loai: ten
+  truong:
+  - thong_tin
+  nguon:
+  - imslp-op68
+  - henle-hn45
+  - henle-hn45-vorwort
+  - baerenreiter-ba9641
+  ket_qua: dung
+  ghi_chu: 'Henle HN 45: Editor Ernst Herttrich, lời tựa "Sommer 2007"; Bärenreiter BA 9641: "Urtext / Critical Edition", Editor Holger M. Stüwe.'
+- id: n26
+  cau: 'Hình 1, chú thích: số 1 Melodie (Đô trưởng, 4/4) gồm các câu 4 ô.'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon: *id002
+  ket_qua: dung
+  ghi_chu: 'Mutopia 647: 20 ô, 5 câu 4 ô.'
+- id: n27
+  cau: 'Hình 1, các đoạn: a (vang hai lần) – b – a'' (kết ở Đô) – b – a'' (kết ở Đô); độ rộng 2, 1, 1, 1, 1 (mỗi đơn vị một câu 4 ô).'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon: *id002
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \repeat volta 2 ô 1–4; b ô 5–8, 13–16; a'' ô 9–12, 17–20, kết c4.'
+- id: n28
+  cau: 'Hình 2, chú thích: số 8 Wilder Reiter (La thứ, 6/8) có ba đoạn, mỗi đoạn 8 ô.'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon: &id003
+  - mutopia-655
+  ket_qua: dung
+  ghi_chu: 'Mutopia 655: ô 1–8, 9–16, 17–24.'
+- id: n29
+  cau: 'Hình 2, các đoạn: A (La thứ, giai điệu tay phải, nhắc lại) – B (Fa trưởng, giai điệu tay trái) – A (La thứ, giai điệu tay phải); độ rộng 2, 1, 1.'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon: *id003
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \repeat volta 2 ô 1–8; B tay trái Fa trưởng; A chép lại.'
+- id: n30
+  cau: 'Hình 3, chú thích: số 10 Fröhlicher Landmann (Fa trưởng, 4/4).'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon: &id004
+  - mutopia-659
+  ket_qua: dung
+  ghi_chu: Mutopia 659.
+- id: n31
+  cau: 'Hình 3, các đoạn: a (4 ô, giai điệu tay trái, vang hai lần, độ rộng 2) – b (6 ô, giai điệu cả hai tay, vang hai lần, độ rộng 3).'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon: *id004
+  ket_qua: dung
+  ghi_chu: 'Mutopia (Peters viết ra cả phần nhắc lại): ô 1–4 = 5–8; ô 9–14 = 15–20; ở b giai điệu ở bè trên tay phải và tay trái đi song song, ô 13–14 về tay trái.'
+- id: n32
+  cau: 'Bản thu: người chơi Mississippi College Piano Pedagogy, giấy phép CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); trang là trang IMSLP của Op. 68 (mục Recordings).'
+  loai: ten
+  truong:
+  - ban_thu
+  nguon:
+  - imslp-op68
+  ket_qua: dung
+  ghi_chu: 'IMSLP Op.68 mục Recordings: "File Description 1=1. Melodie … 3=8. Wilder Reiter, 4=10. The Happy Farmer", "Performer Categories=Mississippi College Piano Pedagogy=piano", "Copyright=Creative Commons Attribution-ShareAlike 4.0". page trỏ trang tác phẩm (không phải trang file như hai bản ghi kia); public/audio/NGUON.txt ghi trang file từng phần.'
+- id: n33
+  cau: 'Bản thu, ghi chú: bản Wilder Reiter chơi đoạn A một lần (không nhắc lại).'
+  loai: cau-truc
+  truong:
+  - ban_thu
+  nguon: *id003
+  ket_qua: dung
+  ghi_chu: 'Đo chroma (librosa) file audio/schumann-album-8.mp3 (29,8 s): Fa (đoạn B, Fa trưởng) trội ở khoảng 10–19 s, Sol♯ (La thứ) ở 0–10 s và 20–30 s: A một lần (8 ô ≈ 10 s), B, A. Có nhắc lại thì B phải bắt đầu khoảng 15 s.'
+- id: n34
+  cau: 'Bản thu, các phần: "Số 1. Melodie" (audio/schumann-album-1.mp3, 66,64 s), "Số 8. Wilder Reiter" (schumann-album-8.mp3, 29,81 s), "Số 10. Fröhlicher Landmann" (schumann-album-10.mp3, 41,69 s).'
+  loai: so-lieu
+  truong:
+  - ban_thu
+  nguon:
+  - imslp-op68
+  ket_qua: dung
+  ghi_chu: 'Tên phần khớp IMSLP (1. Melodie, 8. Wilder Reiter, 10. The Happy Farmer). ffprobe: 66,54 s, 29,78 s, 41,67 s: lệch 0,02–0,1 s so với d (làm tròn, thẻ dữ liệu), không đáng sửa; tools/audio/check_audio.py đã chạy đạt ở D6-0.'

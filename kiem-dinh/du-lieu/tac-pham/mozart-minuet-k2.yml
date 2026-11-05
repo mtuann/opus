@@ -12,15 +12,15 @@ lan:
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
   - so: 2
-    ngay: null
+    ngay: 2026-11-05
     nhanh: moi/d6-l1
     ma_bam: null
     nguoi:
-      luot_1: null
+      luot_1: "Claude Opus 5.5 (D6-L1 phần A)"
       luot_2: null
       review: null
       kiem_mau: null
-ghi_chu: "Trang bài học cũ ../opus-zero/docs/piano/tac-pham/mozart-minuet-k2.md có (loai: bai-hoc là cấu trúc, không phải nhận định)."
+ghi_chu: "Trang bài học cũ ../opus-zero/docs/piano/tac-pham/mozart-minuet-k2.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Lần 2 (D6-L1, lượt 1 phần A): nhận định n7–n25 cho các trường chưa khóa (giong, nhip, thoi_ky, ky_nang_chinh, chip, thong_tin, hinh, ban_thu); bản nhạc đối chiếu Mutopia menuet_k2; ngày, bản in đầu, số NMA theo Köchel online. Không có chỗ sai."
 nguon:
   - id: imslp-k2
     bac: 2
@@ -46,6 +46,38 @@ nguon:
     bac: 2
     ten: G. Henle Verlag, Levels of Difficulty (thang độ khó 1–9; trang không có bảng quy đổi sang ABRSM)
     link: https://www.henle.de/Levels-of-Difficulty/
+  - id: mut-k2
+    bac: 1
+    ten: Mutopia Project, Mozart, Menuett KV 2 (Breitkopf & Härtel, Mozarts Werke; tệp LilyPond và MIDI)
+    link: https://www.mutopiaproject.org/ftp/MozartWA/KV2/menuet_k2/menuet_k2.ly
+  - id: kv-2
+    bac: 2
+    ten: Köchel-Verzeichnis online (Internationale Stiftung Mozarteum), KV 2 Piano piece in F
+    link: https://kv.mozarteum.at/en/work/piano-piece-in-f-1009
+  - id: kv-nb
+    bac: 2
+    ten: Köchel-Verzeichnis online, Music book for Maria Anna (Nannerl) Mozart, 1759
+    link: https://kv.mozarteum.at/en/work/music-book-for-maria-anna-nannerl-mozart-1759-9699
+  - id: ndb-wam
+    bac: 2
+    ten: Neue Deutsche Biographie, Mozart, Wolfgang Amadeus
+    link: https://www.deutsche-biographie.de/pnd118584596.html
+  - id: ndb-lm
+    bac: 2
+    ten: Neue Deutsche Biographie, Mozart, Leopold
+    link: https://www.deutsche-biographie.de/sfz65883.html
+  - id: pm-ut50262
+    bac: 2
+    ten: Performers Music (Chicago), Wiener Urtext UT 50262, Pieces from the Nannerl Music Book, ed. Ulrich Leisinger
+    link: https://www.performersmusicchicago.com/pieces-from-the-nannerl-music-book-mozart-cf-ut050262
+  - id: omt-intro
+    bac: 2
+    ten: Open Music Theory, Introduction to Harmony, Cadences, and Phrase Endings
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/
+  - id: cod-cadence
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục cadence, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/cadence
 nhan_dinh:
   - id: n1
     cau: "Tên bài: Minuet Fa trưởng, K. 2 (trong cuốn sổ nhạc cho Nannerl)."
@@ -125,3 +157,133 @@ nhan_dinh:
     ghi_chu: '../opus-zero/docs/assets/js/practice.js, hằng SUGGEST[2] có ["piano/tac-pham/mozart-minuet-k2/", "Mozart: Minuet Fa trưởng, K. 2"]; chặng 2 trùng chang 2 của bản ghi.'
     luot_2: dung
     luot_2_ghi_chu: Reasonable; not contradicted.
+  - id: n7
+    cau: Giọng của bài là Fa trưởng.
+    loai: cau-truc
+    truong: [giong]
+    nguon: [mut-k2, imslp-k2]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: \key f \major; IMSLP: Key "F major".'
+  - id: n8
+    cau: Nhịp của bài là 3/4.
+    loai: cau-truc
+    truong: [nhip]
+    nguon: [mut-k2]
+    ket_qua: dung
+  - id: n9
+    cau: Bài thuộc thời kỳ Cổ điển.
+    loai: lich-su
+    truong: [thoi_ky]
+    nguon: [imslp-k2]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Composer Time Period "Classical"; Mutopia: style "Classical".'
+  - id: n10
+    cau: 'Kỹ năng chính: nhịp 3/4, câu nhạc bốn ô, kết nửa và kết trọn.'
+    loai: cau-truc
+    truong: [ky_nang_chinh]
+    nguon: [mut-k2, omt-intro]
+    ket_qua: dung
+    ghi_chu: Câu 4 ô; kết nửa ô 8 (V), kết trọn ô 16, 24.
+  - id: n11
+    cau: 'Chip: "Fa trưởng · 3/4".'
+    loai: cau-truc
+    truong: [chip]
+    nguon: [mut-k2]
+    ket_qua: dung
+  - id: n12
+    cau: 'Chip: "Minuet".'
+    loai: ten
+    truong: [chip]
+    nguon: [imslp-k2, mut-k2]
+    ket_qua: dung
+    ghi_chu: 'IMSLP "Minuet in F major"; Mutopia "Menuett".'
+  - id: n13
+    cau: 'Chip cấp độ: "≈ Grade 1–2".'
+    loai: cap-do
+    truong: [chip]
+    nguon: [henle-hn134, rcm-2022]
+    ket_qua: dung
+    ghi_chu: Trùng grade đã khóa ở lần 1.
+  - id: n14
+    cau: 'Chip: "24 ô nhịp".'
+    loai: cau-truc
+    truong: [chip]
+    nguon: [mut-k2]
+    ket_qua: dung
+  - id: n15
+    cau: 'Thông tin, nhà soạn nhạc: Wolfgang Amadeus Mozart (1756–1791); người ghi bài ra giấy nhiều khả năng là cha ông, Leopold Mozart (1719–1787).'
+    loai: lich-su
+    truong: [thong_tin]
+    nguon: [ndb-wam, ndb-lm, kv-nb]
+    ket_qua: dung
+    ghi_chu: 'NDB: W. A. Mozart 27.1.1756–5.12.1791; Leopold 1719–1787. Köchel (sổ Nannerl): phần lớn bài của Mozart trong sổ do Leopold ghi.'
+  - id: n16
+    cau: 'Thông tin, tác phẩm: Minuet (Menuett) Fa trưởng, K. 2; Ấn bản Mozart mới (Neue Mozart-Ausgabe) xếp nó là bài số 58 của cuốn sổ nhạc cho Nannerl.'
+    loai: danh-muc
+    truong: [thong_tin]
+    nguon: [kv-2, imslp-k2]
+    ket_qua: dung
+    ghi_chu: 'Köchel KV 2: "Other work numbers: NMA No. 58"; IMSLP: "1762 in Nannerl''s Music Book (No.58)".'
+  - id: n17
+    cau: 'Thông tin: Salzburg, tháng 1 năm 1762; in lần đầu năm 1828 trong cuốn tiểu sử Mozart của Georg Nikolaus Nissen; in trong toàn tập Mozart của Breitkopf & Härtel năm 1878.'
+    loai: nam
+    truong: [thong_tin]
+    nguon: [kv-2, imslp-k2]
+    ket_qua: dung
+    ghi_chu: 'Köchel: "Salzburg, 1762 – 01.1762", "Erstdruck, 1828, in G. N. Nissen''s Biographie W. A. Mozarts"; IMSLP: Breitkopf & Härtel 1878, Mozarts Werke Serie XXII No. 2.'
+  - id: n18
+    cau: 'Thông tin, giọng · nhịp · tốc độ: Fa trưởng · 3/4 · không ghi tốc độ; nhịp vừa phải của điệu minuet.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: [mut-k2]
+    ket_qua: dung
+    ghi_chu: Bản Breitkopf (Mutopia) không ghi tốc độ.
+  - id: n19
+    cau: 'Thông tin, hình thức: 24 ô nhịp: đoạn A 8 ô (có dấu nhắc lại), đoạn B 8 ô ghé qua Sol thứ, rồi chủ đề trở lại hai lần, mỗi lần 4 ô.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: [mut-k2]
+    ket_qua: dung
+    ghi_chu: Mutopia chỉ có dấu nhắc ở ô 1–8; ô 9–16 Sol thứ rồi Fa; ô 17–20 và 21–24 nhắc chủ đề.
+  - id: n20
+    cau: 'Thông tin, độ khó: khoảng ABRSM Grade 1–2 (ước lượng).'
+    loai: cap-do
+    truong: [thong_tin]
+    nguon: [henle-hn134, rcm-2022, abrsm-2526]
+    ket_qua: dung
+    ghi_chu: Như grade đã khóa ở lần 1.
+  - id: n21
+    cau: 'Thông tin, kỹ năng chính: câu nhạc 4 ô trong nhịp 3/4, hai bè độc lập, móc đơn luyến và nốt đen tách, nốt treo ở phách 1, chùm ba móc đơn, đọc Mi♭ và Fa♯ khi chuyển giọng.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: [mut-k2]
+    ket_qua: dung
+    ghi_chu: Các yếu tố có trong bài (hồ sơ trang n4, n12, n40, n51, n66).
+  - id: n22
+    cau: 'Thông tin, bản nhạc: IMSLP (có bản Breitkopf 1878 và bản Neue Mozart-Ausgabe); Urtext: Wiener Urtext, Pieces from the Nannerl Music Book (UT 50262, biên tập Ulrich Leisinger), hoặc Neue Mozart-Ausgabe IX/27/1 (Bärenreiter).'
+    loai: ten
+    truong: [thong_tin]
+    nguon: [imslp-k2, pm-ut50262, kv-2]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Breitkopf 1878 và Bärenreiter 1982 NMA IX/27/1 (Plath); UT 50262 ed. Leisinger, mục lục có "Minuet F major K 2".'
+  - id: n23
+    cau: 'Hình cấu trúc: A ô 1–8 Fa trưởng, kết nửa, có nhắc lại; B ô 9–16 sang Sol thứ rồi về Fa; A'' ô 17–20 kết lừa; Kết ô 21–24 kết trọn.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [mut-k2, cod-cadence]
+    ket_qua: dung
+    ghi_chu: MIDI Mutopia (hồ sơ trang n37–n43).
+  - id: n24
+    cau: 'Bản thu gợi ý: Jewgeni Smirnow, trên đàn piano điện; giấy phép CC BY 4.0.'
+    loai: ten
+    truong: [ban_thu]
+    nguon: [imslp-k2]
+    ket_qua: dung
+    ghi_chu: 'IMSLP K. 2: "Jewgeni Smirnow (digital keyboard)", file "PMLP116890-002_Menuett_F_(Mozart_WA).mp3", CC BY 4.0 (khớp page của bản ghi).'
+  - id: n25
+    cau: 'Bản thu dài 55,01 giây (d: 55.01).'
+    loai: so-lieu
+    truong: [ban_thu]
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Đo trên public/audio/mozart-minuet-k2.mp3 (afinfo: 55,014 giây); NGUON.txt ghi nguồn là file IMSLP trên.'

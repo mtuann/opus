@@ -1,10 +1,10 @@
 ---
 title: "Burgmüller: La candeur, Op. 100 số 1"
-description: "Bài mở đầu tập étude được yêu thích nhất của Burgmüller, và với nhiều người là étude đầu tiên nghe như nhạc thật: một giai điệu móc đơn hát liền tiếng ở tay…"
+description: "Bài mở đầu tập 25 Études faciles et progressives, Op. 100 của Burgmüller, một étude nghe như nhạc thật: một giai điệu móc đơn hát liền tiếng ở tay phải…"
 tac_pham: burgmuller-la-candeur
 ---
 
-Bài mở đầu tập étude được yêu thích nhất của Burgmüller, và với nhiều người là étude đầu tiên nghe như nhạc thật: một giai điệu móc đơn hát liền tiếng ở tay phải trên những hợp âm ngân của tay trái, rồi hai tay đổi vai. Muốn chơi đúng tính cách *candeur* (trong sáng, ngây thơ), bạn cần một legato thật đều và một sự cân bằng tinh tế giữa hai tay.
+Bài mở đầu tập *25 Études faciles et progressives*, Op. 100 của Burgmüller, một étude nghe như nhạc thật: một giai điệu móc đơn hát liền tiếng ở tay phải trên những hợp âm ngân của tay trái, rồi hai tay đổi vai. Muốn chơi đúng tính cách *candeur* (trong sáng, ngây thơ), bạn cần một legato thật đều và một sự cân bằng tinh tế giữa hai tay.
 
 ::hop-tac-pham
 

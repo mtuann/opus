@@ -4,30 +4,630 @@ nguon_cu: ../opus-zero/docs/piano/tac-pham/musette-re.md
 tang: tac-pham
 lan:
   - so: 1
-    ngay: null
+    ngay: 2026-11-05
     nhanh: moi/d6-l1
     ma_bam: null
     nguoi:
-      luot_1: null
+      luot_1: "Claude Opus 5.5 (D6-L1 phần A)"
       luot_2: null
       review: null
       kiem_mau: null
-nguon: []
-nhan_dinh: []
+ghi_chu: 'Bài học Musette Rê trưởng BWV Anh. 126 (tầng Tác phẩm). Bản nhạc: Mutopia anna-magdalena-22 (.ly và .mid, nguồn Bach-Gesellschaft, Allen Garvin), đối chiếu từng nốt bằng script Python (mido) theo ô. Nhạc cụ musette: Britannica (bản lưu Wayback vì trang gốc trả 403), Concise Oxford Dictionary of Music (qua Encyclopedia.com), bản ghi nhạc cụ của Đại học Edinburgh. BWV 808: IMSLP, Hội Bach Hà Lan, PTNA. Sửa trang ở lượt 1: n3 (bỏ "tự nhiên nhất"), n13 (bỏ "kẹp dưới cánh tay" và "giấc mơ đồng quê" của nhạc cụ; "quý tộc" thành "cung đình"), n24 ("phần lớn" thành "nhiều"), n67 (tiếng vọng: bỏ câu khẳng định thói quen Baroque, sửa câu harpsichord), n87 (mục Nguồn: thay Grove, không đọc được, bằng Britannica và COD). Lời khuyên về mỏi tay ở bè trầm quãng tám (n52, n84) xếp khuyen-tap vì nói về độ đều và độ mỏi, không về đau hay chấn thương; review soát nhãn. Không tính là nhận định: tiêu đề, tiêu đề cột, chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng, mốc trong ::khoi-nghe (đã nghe thử bản thu Commons bằng chroma: A A B A B A, các mốc 16, 21, 26, 37, 49 khớp đầu đoạn B, âm nền Mi, kết B, B nhắc lại, A cuối).'
+nguon:
+  - id: mut-musette
+    bac: 1
+    ten: Mutopia Project, Musette, BWV Anh. 126 (Allen Garvin, nguồn Bach-Gesellschaft; tệp LilyPond và MIDI)
+    link: https://www.mutopiaproject.org/ftp/BachJS/BWVAnh126/anna-magdalena-22/anna-magdalena-22.ly
+  - id: imslp-anh126
+    bac: 2
+    ten: IMSLP, Musette in D major, BWV Anh.126 (Bach, Johann Sebastian)
+    link: https://imslp.org/wiki/Musette_in_D_major,_BWV_Anh.126_(Bach,_Johann_Sebastian)
+  - id: imslp-nb
+    bac: 2
+    ten: IMSLP, Notebooks for Anna Magdalena Bach (danh sách bài của Klavierbüchlein 1725, người chép)
+    link: https://imslp.org/wiki/Notebooks_for_Anna_Magdalena_Bach_(Bach,_Johann_Sebastian)
+  - id: imslp-anh114
+    bac: 2
+    ten: IMSLP, Minuet in G major, BWV Anh.114 (ấn bản Bach-Gesellschaft Bd. 43.2, 1894)
+    link: https://imslp.org/wiki/Minuet_in_G_major,_BWV_Anh.114_(Pezold,_Christian)
+  - id: brit-musette
+    bac: 2
+    ten: Encyclopaedia Britannica, musette (đọc qua bản lưu Wayback Machine 2025)
+    link: https://www.britannica.com/art/musette
+  - id: cod-musette
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục musette, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/literature-and-arts/performing-arts/music-history/musette
+  - id: ed-musette
+    bac: 2
+    ten: University of Edinburgh, Musical Instrument Museums, bản ghi musette de cour (khoảng 1700)
+    link: https://collections.ed.ac.uk/mimed/record/17583
+  - id: imslp-808
+    bac: 2
+    ten: IMSLP, English Suite No.3 in G minor, BWV 808 (Bach)
+    link: https://imslp.org/wiki/English_Suite_No.3_in_G_minor,_BWV_808_(Bach,_Johann_Sebastian)
+  - id: nbs-808
+    bac: 2
+    ten: Netherlands Bach Society (All of Bach), English Suite no. 3 in G minor BWV 808
+    link: https://bachvereniging.nl/en/bwv/bwv-808
+  - id: ptna-808
+    bac: 2
+    ten: PTNA Piano Encyclopedia, Bach, Englische Suiten Nr. 3 Gavotte I–II (Musette)
+    link: https://enc.piano.or.jp/en/musics/39101
+  - id: omt-embell
+    bac: 2
+    ten: Open Music Theory, Embellishing Tones (pedal tone)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/embellishing-tones/
+  - id: omt-major
+    bac: 2
+    ten: Open Music Theory, Major Scales, Scale Degrees, and Key Signatures (át âm bậc 5)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/major-scales/
+  - id: cod-dacapo
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục da capo, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/da-capo
+  - id: ency-harp
+    bac: 2
+    ten: Encyclopedia.com, harpsichord (hai tầng phím, mỗi tầng một bộ dây; như hồ sơ khóa piano/lich-su-dan n5)
+    link: https://www.encyclopedia.com/literature-and-arts/performing-arts/music-theory-forms-and-instruments/harpsichord
+  - id: hyperion-esf
+    bac: 2
+    ten: "Hyperion, tập sách đĩa Notebooks for Anna Magdalena (Mahan Esfahani): Musette in D major BWV Anh 126, harpsichord"
+    link: https://www.bach-cantatas.com/Pic-NonVocal-BIG/Esfahani-M-K08c[Hyperion-CD-booklet].pdf
+  - id: mut-bwv846
+    bac: 1
+    ten: Mutopia Project, Bach, WTC I Prelude 1 BWV 846 (tệp MIDI)
+    link: https://www.mutopiaproject.org/ftp/BachJS/BWV846/wtk1-prelude1/wtk1-prelude1.mid
+  - id: commons-musette
+    bac: 2
+    ten: Wikimedia Commons, Bach, JS - Musette in D (Piano Performance by eldüendesüarez)
+    link: https://commons.wikimedia.org/wiki/File:Bach,_JS_-_Musette_in_D_(Piano_Performance_by_eld%C3%BCendes%C3%BCarez).wav
+nhan_dinh:
+  - id: n1
+    cau: 'Bài bắt chước tiếng kèn túi: tay trái đập đều quãng tám Rê như ống kèn giữ một nốt trầm, tay phải hát giai điệu ở phía trên.'
+    loai: cau-truc
+    nguon: [ mut-musette, cod-musette ]
+    ket_qua: dung
+    ghi_chu: 'Tay trái ô 1–2, 5–6 Rê2 Rê3 móc đơn; COD: musette (bản nhạc) có bè trầm giữ nốt gợi tiếng nhạc cụ.'
+  - id: n2
+    cau: 'Tay trái giữ một nhịp đập quãng tám gần như suốt bài (không phải hợp âm, cũng không phải một bè hát).'
+    loai: cau-truc
+    nguon: [ mut-musette ]
+    ket_qua: dung
+    ghi_chu: Quãng tám ở ô 1–2, 5–6, 9–18 (14/20 ô); ô 3–4, 7–8, 19–20 tay trái chơi giai điệu.
+  - id: n3
+    cau: Đây là bài tập tốt để xoay cẳng tay và giữ đều ở cấp độ này.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Cũ: "Đây là bài tập xoay cẳng tay và giữ đều tự nhiên nhất ở cấp độ này." So sánh "tự nhiên nhất" không kiểm được; viết lại thành lời khuyên.'
+  - id: n4
+    cau: 'Tay phải liên tục chuyển giữa hai vùng: trên cao quanh La5 và ở giữa, ngay trên Đô giữa.'
+    loai: cau-truc
+    nguon: [ mut-musette ]
+    ket_qua: dung
+    ghi_chu: Ô 1–2, 5–6 La5–Rê5; ô 3–4, 7–8 Fa♯4–La4, Rê4, Mi4 (ngay trên Đô4).
+  - id: n5
+    cau: Ở ô 3–4 và 7–8, hai tay chơi cùng một giai điệu, cách nhau một quãng tám.
+    loai: cau-truc
+    nguon: [ mut-musette ]
+    ket_qua: dung
+    ghi_chu: Ô 3 tay phải Fa♯4 Sol4 La4 Sol4 Fa♯4, tay trái Fa♯3 Sol3 La3 Sol3 Fa♯3; ô 4, 7, 8 tương tự.
+  - id: n6
+    cau: 'Bài đầy ý lặp lại: ô 2 giống hệt ô 1, ô 5–8 lặp lại ô 1–4, ô 15–16 lặp lại ô 13–14.'
+    loai: cau-truc
+    nguon: [ mut-musette ]
+    ket_qua: dung
+    ghi_chu: 'Ô 1 = ô 2; ô 5–7 = ô 1–3, ô 8 khác ô 4 ở nửa sau (Rê4 nốt đen có dấu ngân); ô 15–16 = ô 13–14.'
+  - id: n7
+    cau: Trọn bài, kể cả nhắc lại và da capo, chỉ khoảng một phút.
+    loai: so-lieu
+    nguon: [ commons-musette ]
+    ket_qua: dung
+    ghi_chu: 'Bản thu Commons (piano, chơi A A B A B A) dài 63,59 giây. Tính: A A B B A = 48 ô 2/4 = 96 phách, ở ♩ = 96 là 60 giây.'
+  - id: n8
+    cau: 'Musette vừa là tên một nhạc cụ, vừa là tên một kiểu bản nhạc.'
+    loai: dinh-nghia
+    nguon: [ cod-musette ]
+    ket_qua: dung
+    ghi_chu: 'COD: "(1) Type of Fr. bagpipe ..." và "(2) Variety of gavotte in which persistent drone bass suggests the above instr."'
+  - id: n9
+    cau: 'Nhạc cụ ấy, gọi đầy đủ là musette de cour, là một loại kèn túi nhỏ của Pháp; người chơi bơm hơi bằng một ống bễ thay vì thổi bằng miệng.'
+    loai: dinh-nghia
+    nguon: [ brit-musette, cod-musette, ed-musette ]
+    ket_qua: dung
+    ghi_chu: 'Britannica: "small, elegant bagpipe that was fashionable in French court circles ... The bagpipe was bellows-blown"; Edinburgh: "Musette de cour ... Bellows-blown bagpipe". Phần "kẹp dưới cánh tay" đã bỏ (n13).'
+  - id: n10
+    cau: Thế kỷ 17–18, musette thịnh hành trong giới cung đình Pháp.
+    loai: lich-su
+    nguon: [ brit-musette, cod-musette ]
+    ket_qua: dung
+    ghi_chu: 'Britannica: "fashionable in French court circles in the 17th and 18th centuries"; COD: "popular in court circles in 17th and 18th cents."'
+  - id: n11
+    cau: 'Như mọi loại kèn túi, musette có những ống kèn chỉ phát một nốt trầm không đổi, vang suốt dưới giai điệu (drone).'
+    loai: dinh-nghia
+    nguon: [ brit-musette, cod-musette, ed-musette ]
+    ket_qua: dung
+    ghi_chu: 'Britannica: "shuttle drone ... to supply four drones"; COD: "4 or 5 drones enclosed in cylinder". "Như mọi loại kèn túi" là cách nói chung.'
+  - id: n12
+    cau: 'Âm nền (pedal point): bè trầm giữ hoặc lặp lại một nốt trong khi phía trên đổi hòa âm; trên đàn phím, các nhà soạn nhạc bắt chước tiếng musette bằng âm nền.'
+    loai: dinh-nghia
+    nguon: [ omt-embell, cod-musette ]
+    ket_qua: dung
+    ghi_chu: 'OMT: "Pedal tones are often found in the bass. They consist of a series of static notes below chord changes". COD: musette (bản nhạc) có "persistent drone bass".'
+  - id: n13
+    cau: Musette (nhạc cụ) bơm hơi bằng ống bễ, thịnh hành ở cung đình Pháp (chỗ sửa).
+    loai: lich-su
+    nguon: [ brit-musette, ed-musette ]
+    ket_qua: da-sua
+    ghi_chu: 'Cũ: "người chơi bơm hơi bằng một ống bễ kẹp dưới cánh tay thay vì thổi bằng miệng. Thế kỷ 17–18, nó thịnh hành trong giới quý tộc Pháp, gắn với giấc mơ về đời sống đồng quê, mục đồng." Mới: "người chơi bơm hơi bằng một ống bễ thay vì thổi bằng miệng. Thế kỷ 17–18, nó thịnh hành trong giới cung đình Pháp." Nguồn đã mở (Britannica, COD, Edinburgh) nói ống bễ và giới cung đình, không nói kẹp dưới cánh tay hay mối gắn với đời sống mục đồng (chỉ Wikipedia, không dẫn nguồn).'
+  - id: n14
+    cau: Link Âm ngoài hợp âm.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: src/content/docs/nhac-ly/18-am-ngoai-hop-am.md có dòng "Âm nền (pedal point)".
+  - id: n15
+    cau: Những bản nhạc mang tên musette thường có tính chất đồng quê và hay nằm trong tổ khúc.
+    loai: lich-su
+    nguon: [ nbs-808, cod-musette ]
+    ket_qua: dung
+    ghi_chu: 'Hội Bach Hà Lan: Musette là "a simple pastorale dance often used by French composers like Rameau and Couperin"; COD: một kiểu gavotte (điệu nhảy của tổ khúc).'
+  - id: n16
+    cau: 'Bach viết Gavotte II trong English Suite số 3 Sol thứ, BWV 808, có tên phụ "ou la Musette".'
+    loai: ten
+    nguon: [ imslp-808 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "5. Gavotte alternativement / 6. Gavotte II ou la Musette".'
+  - id: n17
+    cau: Gavotte II của BWV 808 có âm nền Sol ở bè trầm.
+    loai: cau-truc
+    nguon: [ ptna-808 ]
+    ket_qua: dung
+    ghi_chu: 'PTNA: "G major"; "A bass line, imitating the drone of bagpipes, dominates the entire piece"; nốt Sol ở bè trầm ở ô 4. Chưa có bản nhạc BWV 808 đọc được (Mutopia không có chương này).'
+  - id: n18
+    cau: 'Bài Rê trưởng này: bè trầm không giữ nốt mà đập quãng tám Rê – Rê bằng móc đơn; khi hòa âm đổi, nốt nền đổi: Rê ở đoạn A, La rồi Mi ở đoạn B.'
+    loai: cau-truc
+    nguon: [ mut-musette ]
+    ket_qua: dung
+    ghi_chu: Tay trái Rê2–Rê3 (đoạn A), La2–La3 (ô 9–12), Mi2–Mi3 (ô 12 nửa sau đến 18).
+  - id: n19
+    cau: Hình ảnh "như ống kèn rung đều và như tiếng chân giữ nhịp".
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Cách ví để tập.
+  - id: n20
+    cau: Bài là số 22 trong cuốn sổ tay thứ hai mà J. S. Bach bắt đầu cho vợ, ca sĩ Anna Magdalena Bach, năm 1725.
+    loai: danh-muc
+    nguon: [ imslp-nb ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "22. Musette D-dur, BWV Anh.126" trong Klavierbüchlein von 1725.'
+  - id: n21
+    cau: Link trang Minuet Sol trưởng (chuyện về cuốn sổ).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: src/content/docs/piano/tac-pham/minuet-sol.md, mục Bối cảnh kể về sổ tay 1725.
+  - id: n22
+    cau: 'Ngay trước Musette là một minuet ghi rõ "Menuet fait par Mons. Böhm", tức của Georg Böhm.'
+    loai: lich-su
+    nguon: [ imslp-nb, hyperion-esf ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "21. Menuet fait par Mons. Böhm"; Hyperion: "attributed to Georg Böhm (1661–1733)".'
+  - id: n23
+    cau: Vài bài trước nữa là những bản hành khúc và polonaise thường được ghi là của Carl Philipp Emanuel Bach, con trai J. S. Bach.
+    loai: lich-su
+    nguon: [ imslp-nb ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: số 16 "Marche D-dur (Ph.E. Bach)", 17 "Polonaise g-moll (Ph.E. Bach)", 18 "Marche G-dur (Ph.E. Bach)", 19 "Polonaise g-moll (Ph.E. Bach)".'
+  - id: n24
+    cau: Nhiều bài trong sổ do chính Anna Magdalena chép, và nhiều bài không ghi tên tác giả.
+    loai: lich-su
+    nguon: [ imslp-nb ]
+    ket_qua: da-sua
+    ghi_chu: 'Cũ: "Phần lớn các bài trong sổ do chính bà chép". IMSLP liệt kê người chép sổ 1725: Anna Magdalena cùng C. P. E. Bach, J. C. F. Bach, J. C. Bach, J. G. B. Bach, Ludewig, Zelter và hai người khuyết danh; không nguồn đọc được nào nói "phần lớn". Mới: "Nhiều bài".'
+  - id: n25
+    cau: Riêng Musette thì không rõ tác giả.
+    loai: lich-su
+    nguon: [ imslp-anh126 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Bach''s authorship of this work is uncertain".'
+  - id: n26
+    cau: Thế kỷ 19 in Musette như nhạc của Bach; danh mục BWV xếp nó vào phụ lục (Anhang, Anh.), cùng nhóm với những bài còn nghi vấn.
+    loai: danh-muc
+    nguon: [ mut-musette, imslp-anh126, imslp-anh114 ]
+    ket_qua: dung
+    ghi_chu: 'Mutopia (theo Bach-Gesellschaft, 1894: IMSLP Anh. 114, BG Bd. 43.2) ghi composer J. S. Bach; IMSLP: "BWV Anh.126; BWV Anh. II 126" và "authorship ... uncertain". Nghĩa "Anh. II = nghi vấn" xem hồ sơ minuet-sol n11 (chưa có nguồn bậc 2 nói thẳng); ở đây IMSLP xác nhận chính bài này còn nghi vấn.'
+  - id: n27
+    cau: Link Đọc tên tác phẩm.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển; ../opus-zero/docs/nghe-nhac/doc-ten-tac-pham.md có BWV và Anh. Lô chuyển trang ấy cần giữ.'
+  - id: n28
+    cau: Bản Bach-Gesellschaft không ghi tốc độ, sắc thái hay dấu luyến.
+    loai: cau-truc
+    nguon: [ mut-musette ]
+    ket_qua: dung
+    ghi_chu: Tệp Mutopia (theo BG) chỉ có nốt, dấu nhắc, dấu ngân và một dấu nối (ô 13–14, 15–16).
+  - id: n29
+    cau: Bài có trong nhiều album về sổ tay Anna Magdalena và tuyển tập cho người học, trên harpsichord lẫn piano.
+    loai: lich-su
+    nguon: [ hyperion-esf, commons-musette ]
+    ket_qua: dung
+    ghi_chu: 'Hyperion (Esfahani): "Musette in D major BWV Anh 126", harpsichord; Commons: bản piano. IMSLP Anh. 126 liệt kê tuyển tập cho người học (Bach for Early Grades, Music by the Masters).'
+  - id: n30
+    cau: Nghe ít nhất hai bản khác nhau về nhạc cụ hoặc tốc độ; mỗi lần nghe chú ý một điều.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n31
+    cau: Cùng cuốn sổ tay còn có Aria Sol trưởng, chính là chủ đề của Goldberg Variations.
+    loai: lich-su
+    nguon: [ imslp-nb ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "26. Aria für Klavier G-dur, BWV 988 No.1" (aria mở đầu Goldberg Variations BWV 988).'
+  - id: n32
+    cau: Link hướng dẫn nghe Biến tấu Goldberg.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: src/content/docs/nghe-nhac/bach-goldberg.md có.
+  - id: n33
+    cau: 'Theo dõi khi nghe, đoạn A (ô 1–8): tay trái đập quãng tám Rê; giai điệu chạy xuống từ La cao, vang hai lần; ô 3–4 hai tay chung một giai điệu; ô 8 kết ở Rê.'
+    loai: cau-truc
+    nguon: [ mut-musette ]
+    ket_qua: dung
+    ghi_chu: Ô 1–2 La5 Sol5 Fa♯5 Mi5 Rê5 hai lần; ô 8 Rê4 trên Rê3.
+  - id: n34
+    cau: 'Đoạn B mở đầu (ô 9–12): bè trầm chuyển lên La; hình Đô♯ – Rê – Mi lặp lại, rồi những bước nhảy La – Mi.'
+    loai: cau-truc
+    nguon: [ mut-musette ]
+    ket_qua: dung
+    ghi_chu: 'Ô 9 Đô♯5 Rê5 Mi5 hai lần; ô 10–11 La5 Mi5; tay trái La2–La3.'
+  - id: n35
+    cau: 'Bè trầm Mi (ô 13–18): nền chuyển sang Mi; tay phải nhảy qua lại giữa hai bè, có Rê♯; ô 17 là chuỗi móc kép quanh nốt Mi.'
+    loai: cau-truc
+    nguon: [ mut-musette ]
+    ket_qua: dung
+    ghi_chu: Ô 13 Mi5 Rê♯5 Mi4 Rê5; ô 17 Mi5 Rê♯5 Đô♯5 Rê♯5 hai lần; tay trái Mi2–Mi3 (từ nửa sau ô 12).
+  - id: n36
+    cau: 'Kết đoạn B (ô 19–20): hình Đô♯ – Rê – Mi vang ở trên rồi vọng lại thấp hơn một quãng tám; kết ở La trưởng.'
+    loai: cau-truc
+    nguon: [ mut-musette ]
+    ket_qua: dung
+    ghi_chu: Ô 19 Đô♯5 Rê5 Mi5; ô 20 Đô♯4 Rê4 Mi4 rồi La3 (tay trái Đô♯3 Rê3 Mi3 La2).
+  - id: n37
+    cau: Đoạn A trở lại (da capo) thường không nhắc lại; bài dừng ở dấu ngân.
+    loai: quy-tac
+    nguon: [ cod-dacapo, mut-musette ]
+    ket_qua: dung
+    ghi_chu: 'COD: da capo là chơi lại từ đầu tới chữ fine "or the pause mark"; Mutopia có dấu ngân ở ô 8. "Thường không nhắc lại" là lệ chơi da capo (hồ sơ khóa hinh-thuc/minuet-trio m10).'
+  - id: n38
+    cau: 'Bảng cấu trúc, đoạn A: ô 1–8 có nhắc lại; Rê trưởng; quãng tám Rê (ô 1–2, 5–6); ô 5–8 lặp lại ô 1–4; ô 8 kết ở Rê với dấu ngân, điểm kết của cả bài.'
+    loai: cau-truc
+    nguon: [ mut-musette ]
+    ket_qua: dung
+  - id: n39
+    cau: 'Bảng cấu trúc, B phần 1 (ô 9–12): sang La trưởng, quãng tám La; nhảy La – Mi ô 10–11; ô 12 chạy xuống; tay trái dời lên La.'
+    loai: cau-truc
+    nguon: [ mut-musette ]
+    ket_qua: dung
+    ghi_chu: Ô 12 Rê5 Đô♯5 Si4 La4 Si4 Mi4 đi xuống.
+  - id: n40
+    cau: 'Bảng cấu trúc, B phần 2 (ô 13–18): quãng tám Mi, âm nền át của La trưởng; tay phải hai bè Mi – Rê♯ – Mi thấp – Rê (nối sang ô sau); ô 17 móc kép quanh Mi; Rê♯ rồi Rê♮ trong cùng ô 13 và 15; Sol♯ ở ô 14, 16, 18.'
+    loai: cau-truc
+    nguon: [ mut-musette, omt-major ]
+    ket_qua: dung
+    ghi_chu: 'LilyPond ô 13 "e[ dis e, d''] ~", ô 14 "d[ cis a'' gis]", ô 18 "e[ gis, a d!]": Sol♯ ở 14, 16, 18. Mi là bậc 5 (át âm) của La trưởng (OMT).'
+  - id: n41
+    cau: 'Bảng cấu trúc, B kết (ô 19–20): kết ở La trưởng; Đô♯ – Rê – Mi ở trên (ô 19) rồi thấp hơn một quãng tám (ô 20), hai tay cùng giai điệu.'
+    loai: cau-truc
+    nguon: [ mut-musette ]
+    ket_qua: dung
+  - id: n42
+    cau: 'Đoạn B kết ở La trưởng, giọng át của Rê trưởng, nên chơi lại đoạn A từ đầu và kết ở dấu ngân của ô 8.'
+    loai: quy-tac
+    nguon: [ mut-musette, omt-major, cod-dacapo ]
+    ket_qua: dung
+  - id: n43
+    cau: 'Bản nhạc có thể ghi "D.C." (Da capo, "từ đầu") hoặc "D.C. al Fine", hoặc chỉ có dấu ngân; cách chơi như nhau.'
+    loai: dinh-nghia
+    nguon: [ cod-dacapo, mut-musette ]
+    ket_qua: dung
+    ghi_chu: 'COD: "Repeat from the beginning until you come to the word fine (end), or the pause mark". Bản Mutopia (BG) chỉ có dấu ngân.'
+  - id: n44
+    cau: Link Ký hiệu biểu diễn.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: src/content/docs/nhac-ly/14-ky-hieu-bieu-dien.md có dòng D.C. (Da Capo).
+  - id: n45
+    cau: 'Âm nền Mi ở ô 13–18 là âm nền át: nhạc "đứng chờ" trên át âm, và tai mong được về chủ âm La.'
+    loai: quy-tac
+    nguon: [ omt-embell, omt-major ]
+    ket_qua: dung
+    ghi_chu: 'OMT: pedal tone thường ở bè trầm, gọi theo bậc của nốt (ở đây bậc 5 của La trưởng). Phần cảm nhận là cách nói.'
+  - id: n46
+    cau: Nốt nhạc của khuông theo ấn bản Bach-Gesellschaft (1894), qua bản dàn trang công cộng của Mutopia Project; bản ấy không có dấu luyến hay sắc thái; hết ô 8 thì nhắc lại từ đầu.
+    loai: cau-truc
+    nguon: [ mut-musette, imslp-anh114 ]
+    ket_qua: dung
+  - id: n47
+    cau: 'Tay trái: ngón 5 trên Rê2, ngón 1 trên Rê3, bàn tay giữ độ mở quãng tám; ô 3–4 hai tay soi gương: tay phải 3-4-5-4-3, tay trái 3-2-1-2-3.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Cao độ Rê2, Rê3 khớp Mutopia; ngón khớp khối 1.
+  - id: n48
+    cau: 'Tay phải nhảy hai lần: từ Rê5 xuống Fa♯4 (ô 2 sang ô 3, quãng sáu) và từ Rê4 vọt lên La5 (ô 4 sang ô 5, quãng mười hai).'
+    loai: cau-truc
+    nguon: [ mut-musette ]
+    ket_qua: dung
+    ghi_chu: 'Rê5–Fa♯4: quãng sáu thứ; Rê4–La5: quãng tám + quãng năm = quãng mười hai.'
+  - id: n49
+    cau: 'Chỗ khó: móc kép trên móc đơn (ô 1–2, 5–6): mỗi nốt móc đơn của tay trái ứng với hai nốt móc kép của tay phải.'
+    loai: cau-truc
+    nguon: [ mut-musette ]
+    ket_qua: dung
+    ghi_chu: Nửa sau mỗi ô 1–2, 5–6 tay phải bốn móc kép trên hai móc đơn tay trái.
+  - id: n50
+    cau: 'Chỗ khó: hai tay chung giai điệu ở ô 3–4, 7–8, 20.'
+    loai: cau-truc
+    nguon: [ mut-musette ]
+    ket_qua: dung
+  - id: n51
+    cau: 'Chỗ khó: hai bè trong tay phải (ô 13–16): Mi5 – Rê♯5 – Mi4 – Rê5, nhảy quãng bảy, có dấu nối sang ô sau; bè trên đi xuống từng nửa cung Mi – Rê♯ – Rê – Đô♯.'
+    loai: cau-truc
+    nguon: [ mut-musette ]
+    ket_qua: dung
+    ghi_chu: Mi4–Rê5 quãng bảy thứ; Rê5 nối sang ô 14 rồi Đô♯5.
+  - id: n52
+    cau: 'Bè trầm quãng tám: đập quãng tám liên tục dễ làm cứng cổ tay, mỏi, to và nặng, hoặc lệch nhịp; bàn tay mở sẵn quãng tám, xoay nhẹ cẳng tay từ ngón 5 sang ngón 1 thay vì nhấc cả tay; tập riêng tay trái với máy đếm nhịp.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên kỹ thuật về độ đều và độ mỏi, không nói đau hay chấn thương; không trái trang piano/tu-the (xoay cẳng tay). Review soát nhãn.'
+  - id: n53
+    cau: Link máy đếm nhịp.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: src/content/docs/luyen-tap/metronome.md có.
+  - id: n54
+    cau: Cách tập các chỗ khó khác (đếm "một – và – hai – và", nhìn trước nốt đích, khoanh dấu hóa, đọc to tên nốt, ngón 3-2-1-2 cho ô 17).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n55
+    cau: 'Dấu hóa ở đoạn B: Rê♯ rồi Rê♮ trong cùng ô 13, 15; Sol♯ ở ô 14, 16, 18; ô 17 Mi – Rê♯ – Đô♯ – Rê♯ hai lần liền.'
+    loai: cau-truc
+    nguon: [ mut-musette ]
+    ket_qua: dung
+  - id: n56
+    cau: Các bài tập chuẩn bị soạn riêng cho trang này, không trích từ bản nhạc gốc.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Khối 2–4 có "(soạn cho trang này)".
+  - id: n57
+    cau: 'Bài tập 1: ô 1–4 chỉ có nốt dài để nghe tay trái; ô 5–7 mỗi nốt móc đơn của tay trái ứng với hai nốt móc kép của tay phải; nốt thấp hơi rõ hơn, nốt cao nhẹ.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Khối 2 đúng như mô tả (ô 5–7 nửa sau có bốn móc kép).
+  - id: n58
+    cau: 'Bài tập 2: mỗi hình nốt vang ở trên (f) rồi được nhắc lại thấp hơn một quãng tám (p), như tiếng vọng: đúng điều xảy ra ở ô 19–20 của bài.'
+    loai: cau-truc
+    nguon: [ mut-musette ]
+    ket_qua: dung
+    ghi_chu: Khối 3 Fa♯5 Sol La Sol Fa♯ rồi Fa♯4…; bài ô 19–20 Đô♯5 Rê5 Mi5 rồi Đô♯4 Rê4 Mi4.
+  - id: n59
+    cau: Nhả nốt đen cuối ô sớm một chút để dời tay; tiếng vọng nhỏ hơn nhưng không chậm hơn.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n60
+    cau: 'Bài tập 3: ngón cái giữ chỗ trên Mi4 như một cái trục; các ngón trên đi xuống Mi – Rê♯ – Mi – Rê – Đô♯ – Si; chơi ô 13–16 của bài với cảm giác ấy.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Khối 4 bè trên Mi5 Rê♯5 Mi5 Rê5 Đô♯5 Si4 trên Mi4 lặp; đúng mô tả.
+  - id: n61
+    cau: Kế hoạch 4 tuần (♩ = 60–108) và danh sách việc (chơi trọn A – A – B – B – A và dừng ở dấu ngân).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n62
+    cau: Link thu âm.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: src/content/docs/luyen-tap/thu-am.md có.
+  - id: n63
+    cau: 'Tốc độ khoảng ♩ = 92–108; musette là nhạc đồng quê, vui nhưng không vội; chỉ chậm lại một chút trước dấu ngân cuối bài.'
+    loai: khuyen-tap
+    nguon: [ nbs-808 ]
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Vế "nhạc đồng quê": Hội Bach Hà Lan gọi musette là "a simple pastorale dance". Tốc độ là gợi ý (bản gốc không ghi).'
+  - id: n64
+    cau: 'Bè trầm: tay trái nhỏ hơn tay phải ít nhất một bậc sắc thái; nốt thấp hơi rõ hơn; chơi hơi tách, nảy nhẹ; ngón cái rơi từ sát phím.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n65
+    cau: 'Phát âm: nốt La cao đầu ô 1 hơi tách, bốn móc kép đi xuống liền và nhẹ dần; móc đơn ô 3–4 hơi tách; đoạn B bước nhảy (ô 10–11, 13–16) tách, nhóm đi bậc liền.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n66
+    cau: Link Tạo tiếng đàn (phát âm theo phong cách).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: src/content/docs/piano/tieng-dan.md có.
+  - id: n67
+    cau: 'Một ý lặp lại có thể chơi như tiếng vọng: lần sau nhỏ hơn; trên harpsichord hai bàn phím, người chơi có thể đổi sang bàn phím kia; trên piano đổi lực tay và màu tiếng.'
+    loai: lich-su
+    nguon: [ ency-harp ]
+    ket_qua: da-sua
+    ghi_chu: 'Cũ: "Trong nhạc Baroque, một ý lặp lại hay được chơi như tiếng vọng: lần sau nhỏ hơn, như từ xa vọng lại. Trên harpsichord hai bàn phím, người chơi đổi bàn phím; trên piano, ...". Mới: "Một ý lặp lại có thể chơi như tiếng vọng: lần sau nhỏ hơn, như từ xa vọng lại. Trên harpsichord hai bàn phím, người chơi có thể đổi sang bàn phím kia; trên piano, ...". Chưa có nguồn đọc được nói tiếng vọng là thói quen của nhạc Baroque; Encyclopedia.com (harpsichord): đàn có hai tầng phím, mỗi tầng một bộ dây, nên đổi tầng phím đổi màu tiếng. Câu mới là gợi ý.'
+  - id: n68
+    cau: Bản nhạc không ghi sắc thái, nên bảng tiếng vọng chỉ là gợi ý.
+    loai: khuyen-tap
+    nguon: [ mut-musette ]
+    ket_qua: khong-can-nguon
+    ghi_chu: Vế "không ghi" đúng (Mutopia).
+  - id: n69
+    cau: Bảng gợi ý tiếng vọng (ô 1 f, ô 2 p; ô 13–14 f, ô 15–16 p; ô 19 mf, ô 20 p; da capo không nhắc lại).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Các cặp ô lặp lại khớp n6, n36.
+  - id: n70
+    cau: Lần đầu và lần nhắc lại, đi tiếp qua ô 8 mà không dừng; dấu ngân chỉ có hiệu lực ở lần chơi cuối.
+    loai: quy-tac
+    nguon: [ cod-dacapo ]
+    ket_qua: dung
+    ghi_chu: 'COD: da capo chơi lại "until you come to ... the pause mark", tức dấu ngân đánh dấu chỗ kết khi chơi lại.'
+  - id: n71
+    cau: Ở dấu ngân, ngân nốt Rê lâu hơn chừng gấp đôi rồi nhấc cả hai tay cùng lúc.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n72
+    cau: 'Không dùng bàn đạp; bản gốc không có nốt hoa mỹ, chơi đúng như viết là hợp phong cách.'
+    loai: cau-truc
+    nguon: [ mut-musette ]
+    ket_qua: dung
+    ghi_chu: Tệp Mutopia (theo BG) không có dấu trang trí nào. Phần bàn đạp là lời khuyên.
+  - id: n73
+    cau: Lỗi thường gặp (tay trái to, ngón cái gõ, cả cánh tay nhảy theo nốt, móc kép vội ở ô 1–2 và 17, chậm lại trước bước nhảy, ô 3–4 lệch, quên Rê♮ ở ô 13, 15 hay mang Rê♯ sang ô 18, dừng ở ô 20).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Số ô khớp n40, n55; ô 18 không có Rê♯ (Mutopia "d!").
+  - id: n74
+    cau: 'Học tiếp: Minuet Sol trưởng và Minuet Sol thứ, cùng sổ tay, cùng cấp độ, viết hai bè.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Hai trang có; chang 2 cả ba (src/data/tac-pham.yml, đã khóa). Cùng sổ tay: IMSLP notebook (số 4, 5, 22).'
+  - id: n75
+    cau: Bach Prelude Đô trưởng BWV 846 kết bằng âm nền át rồi âm nền chủ.
+    loai: cau-truc
+    nguon: [ mut-bwv846 ]
+    ket_qua: dung
+    ghi_chu: 'MIDI Mutopia: bè trầm Sol2 giữ từ ô 24 đến ô 31 (âm nền át) dưới các hợp âm đổi, rồi Đô2 từ ô 32 đến ô 35 (âm nền chủ). Trang đích piano/tac-pham/bach-prelude-do chưa chuyển (có ở ../opus-zero/docs/).'
+  - id: n76
+    cau: 'Cùng cấp, khác phong cách: Mozart Minuet Fa trưởng K. 2 và Burgmüller La candeur.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Hai trang có; chang 2 (src/data/tac-pham.yml).
+  - id: n77
+    cau: 'Để nghe: Gavotte II "ou la Musette" trong English Suite số 3 của Bach; danh sách theo cấp: Tác phẩm theo cấp độ.'
+    loai: ten
+    nguon: [ imslp-808 ]
+    ket_qua: dung
+    ghi_chu: Như n16; tac-pham-theo-cap có.
+  - id: n78
+    cau: '"Musette" ban đầu là tên một loại kèn túi nhỏ của Pháp, bơm hơi bằng ống bễ (không phải điệu nhảy nhanh của Ý hay kiểu harpsichord nhỏ).'
+    loai: dinh-nghia
+    nguon: [ brit-musette, cod-musette ]
+    ket_qua: dung
+  - id: n79
+    cau: 'Câu hỏi 1, giải thích: bản nhạc mang tên musette bắt chước nhạc cụ ấy, nhất là nốt trầm vang đều dưới giai điệu; trên đàn phím, đó là âm nền.'
+    loai: dinh-nghia
+    nguon: [ cod-musette, omt-embell ]
+    ket_qua: dung
+  - id: n80
+    cau: 'Câu hỏi 2: ở đoạn B, bè trầm quãng tám đổi từ La (ô 9–12) sang Mi (ô 13–18).'
+    loai: cau-truc
+    nguon: [ mut-musette ]
+    ket_qua: dung
+    ghi_chu: Mi bắt đầu từ nửa sau ô 12; cách chia ô của câu hỏi theo câu nhạc.
+  - id: n81
+    cau: 'Câu hỏi 2, giải thích: Mi là át âm của La trưởng; âm nền Mi chuẩn bị cho chỗ kết ở La trưởng (ô 20).'
+    loai: quy-tac
+    nguon: [ omt-major, mut-musette ]
+    ket_qua: dung
+  - id: n82
+    cau: 'Câu hỏi 3: sau đoạn B phải chơi lại đoạn A vì đoạn B kết ở La trưởng; đoạn A trở lại để bài kết ở Rê trưởng, tại dấu ngân của ô 8.'
+    loai: quy-tac
+    nguon: [ mut-musette, cod-dacapo ]
+    ket_qua: dung
+  - id: n83
+    cau: 'Câu hỏi 3, giải thích: đó là lối da capo; khi chơi đoạn A lần cuối, thường bỏ dấu nhắc lại.'
+    loai: quy-tac
+    nguon: [ cod-dacapo ]
+    ket_qua: dung
+    ghi_chu: Như n37.
+  - id: n84
+    cau: 'Câu hỏi 4: cách tập bè trầm quãng tám: bàn tay mở sẵn quãng tám, xoay nhẹ cẳng tay giữa ngón 5 và ngón 1, tay trái nhỏ hơn giai điệu; xoay cẳng tay giữ sức và giữ đều.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Như n52.
+  - id: n85
+    cau: 'Nguồn: Neue Bach-Ausgabe, tập V/4 (Bärenreiter, 1957, biên tập Georg von Dadelsen).'
+    loai: ten
+    nguon: [ imslp-anh126 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Neue Bach-Ausgabe, Serie V, Band 4 (1957) ... Georg von Dadelsen. Kassel: Bärenreiter".'
+  - id: n86
+    cau: 'Nguồn: ấn bản Bach-Gesellschaft (1894), bản dàn trang công cộng của Mutopia Project (người nhập: Allen Garvin).'
+    loai: ten
+    nguon: [ mut-musette, imslp-anh114 ]
+    ket_qua: dung
+    ghi_chu: 'Tệp .ly: enteredby "Allen Garvin", source "Bach-Gesellschaft".'
+  - id: n87
+    cau: 'Nguồn: Encyclopaedia Britannica và Concise Oxford Dictionary of Music, mục "musette": nhạc cụ và kiểu bản nhạc mang tên ấy.'
+    loai: ten
+    nguon: [ brit-musette, cod-musette ]
+    ket_qua: da-sua
+    ghi_chu: 'Cũ: "*The New Grove Dictionary of Music and Musicians*, các mục \"Musette\": nhạc cụ và kiểu bản nhạc mang tên ấy." Grove Music Online cần đăng nhập, không đọc được để kiểm; thay bằng hai nguồn đã đọc.'
+  - id: n88
+    cau: 'Nguồn: Wikipedia "Notebook for Anna Magdalena Bach"; IMSLP (tìm "Musette in D major, BWV Anh.126"); tài liệu tham khảo.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Link sống; chỉ là đọc thêm. tai-lieu-tham-khao có.
 khuong_nhac:
   - khoi: 1
-    loai: null
-    kiem: []
-    ket_qua: null
+    loai: trich-doan
+    kiem: [ cu-phap, nhip, giong, not, so-ngon, doi-chieu-an-ban ]
+    ket_qua: dung
+    ghi_chu: 'Đoạn A ô 1–8, 2/4, L:1/16, K:D. Ấn bản: Bach-Gesellschaft qua Mutopia anna-magdalena-22 (.ly và .mid). Công cụ: script Python (mido) in nốt MIDI theo ô, đối chiếu từng nốt cả hai tay. Kết quả: 8/8 ô khớp cao độ và trường độ (tay phải La5 Sol5 Fa♯5 Mi5 Rê5 ×2 | Fa♯4 Sol4 La4 Sol4 Fa♯4 | Mi4 La4 Fa♯4 Rê4 | … | Mi4 La4 Rê4; tay trái Rê2 Rê3 ×4 mỗi ô ở ô 1–2, 5–6; Fa♯3 Sol3 La3 Sol3 Fa♯3 | Mi3 La3 Fa♯3 Rê3 | … | Mi3 La3 Rê3), dấu ngân ở ô 8 đúng bản. Số ngón chơi được.'
   - khoi: 2
-    loai: null
-    kiem: []
-    ket_qua: null
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
+    ket_qua: dung
+    ghi_chu: '8 ô 2/4, mỗi ô 8 móc kép. Tay trái quãng tám Rê, La (ngón 5-1) như bài; ô 1–4 tay phải nốt dài, ô 5–7 móc kép trên móc đơn: đúng mô tả. Hòa âm Rê – La – Rê hợp. Ngón chơi được, vừa chặng 2.'
   - khoi: 3
-    loai: null
-    kiem: []
-    ket_qua: null
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
+    ket_qua: dung
+    ghi_chu: '6 ô 2/4. Hình Fa♯ Sol La Sol Fa♯ ở trên (f) rồi thấp hơn một quãng tám (p), rồi Mi Fa♯ Sol Fa♯ Mi tương tự; nền Rê, La. Đúng mô tả (giống ô 19–20 của bài). Ngón chơi được.'
   - khoi: 4
-    loai: null
-    kiem: []
-    ket_qua: null
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
+    ket_qua: dung
+    ghi_chu: '4 ô 2/4. Tay phải ngón cái trên Mi4, bè trên Mi5 Rê♯5 | Mi5 Rê♮5 | Đô♯5 Si4 | La4 trên nền Mi rồi La: đúng mô tả và hòa âm của ô 13–20 (âm nền át về La). Ngón 5-1-4-1 chơi được.'
+doi_chu:
+  - cu: "Trong nhạc Baroque, một ý lặp lại hay được chơi như tiếng vọng: lần sau nhỏ hơn, như từ xa vọng lại. Trên harpsichord hai bàn phím, người chơi đổi bàn phím; trên piano, bạn đổi lực tay và màu tiếng. Bản nhạc không ghi gì, nên đây chỉ là một gợi ý:"
+    moi: "Một ý lặp lại có thể chơi như tiếng vọng: lần sau nhỏ hơn, như từ xa vọng lại. Trên harpsichord hai bàn phím, người chơi có thể đổi sang bàn phím kia; trên piano, bạn đổi lực tay và màu tiếng. Bản nhạc không ghi gì, nên đây chỉ là một gợi ý:"
+    ly_do: "n67 (da-sua): chưa có nguồn đọc được cho thói quen tiếng vọng của nhạc Baroque; viết lại thành gợi ý."
+  - cu: 'The New Grove Dictionary of Music and Musicians, các mục "Musette": nhạc cụ và kiểu bản nhạc mang tên ấy.'
+    moi: 'Encyclopaedia Britannica, mục "musette", và The Concise Oxford Dictionary of Music, mục "musette" (qua Encyclopedia.com): nhạc cụ và kiểu bản nhạc mang tên ấy.'
+    ly_do: "n87 (da-sua): Grove cần đăng nhập, không đọc được; thay bằng hai nguồn đã đọc khi kiểm định."
+  - cu: "Tay trái có một việc riêng. Không phải hợp âm, cũng không phải một bè hát: tay trái giữ một nhịp đập quãng tám gần như suốt bài. Đây là bài tập xoay cẳng tay và giữ đều tự nhiên nhất ở cấp độ này."
+    moi: "Tay trái có một việc riêng. Không phải hợp âm, cũng không phải một bè hát: tay trái giữ một nhịp đập quãng tám gần như suốt bài. Đây là bài tập tốt để xoay cẳng tay và giữ đều ở cấp độ này."
+    ly_do: 'n3 (da-sua): so sánh "tự nhiên nhất" không kiểm được.'
+  - cu: "Musette vừa là tên một nhạc cụ, vừa là tên một kiểu bản nhạc. Nhạc cụ ấy, gọi đầy đủ là musette de cour (musette cung đình), là một loại kèn túi nhỏ của Pháp: người chơi bơm hơi bằng một ống bễ kẹp dưới cánh tay thay vì thổi bằng miệng. Thế kỷ 17–18, nó thịnh hành trong giới quý tộc Pháp, gắn với giấc mơ về đời sống đồng quê, mục đồng."
+    moi: "Musette vừa là tên một nhạc cụ, vừa là tên một kiểu bản nhạc. Nhạc cụ ấy, gọi đầy đủ là musette de cour (musette cung đình), là một loại kèn túi nhỏ của Pháp: người chơi bơm hơi bằng một ống bễ thay vì thổi bằng miệng. Thế kỷ 17–18, nó thịnh hành trong giới cung đình Pháp."
+    ly_do: "n13 (da-sua): Britannica, COD, Edinburgh nói ống bễ và giới cung đình Pháp; không nguồn đọc được nói kẹp dưới cánh tay hay giấc mơ mục đồng."
+  - cu: 'Bài là số 22 trong cuốn sổ tay thứ hai mà J. S. Bach bắt đầu cho vợ, ca sĩ Anna Magdalena Bach, năm 1725 (chuyện về cuốn sổ có ở trang Minuet Sol trưởng). Phần lớn các bài trong sổ do chính bà chép, và nhiều bài không ghi tên tác giả. Ngay trước Musette là một minuet ghi rõ "Menuet fait par Mons. Böhm", tức của Georg Böhm; vài bài trước nữa là những bản hành khúc và polonaise thường được ghi là của Carl Philipp Emanuel Bach, con trai J. S. Bach. Riêng Musette thì không rõ tác giả. Thế kỷ 19 in nó như nhạc của Bach; danh mục BWV xếp nó vào phụ lục (Anhang, viết tắt Anh.), cùng nhóm với những bài còn nghi vấn (cách đọc ký hiệu: Đọc tên tác phẩm).'
+    moi: 'Bài là số 22 trong cuốn sổ tay thứ hai mà J. S. Bach bắt đầu cho vợ, ca sĩ Anna Magdalena Bach, năm 1725 (chuyện về cuốn sổ có ở trang Minuet Sol trưởng). Nhiều bài trong sổ do chính bà chép, và nhiều bài không ghi tên tác giả. Ngay trước Musette là một minuet ghi rõ "Menuet fait par Mons. Böhm", tức của Georg Böhm; vài bài trước nữa là những bản hành khúc và polonaise thường được ghi là của Carl Philipp Emanuel Bach, con trai J. S. Bach. Riêng Musette thì không rõ tác giả. Thế kỷ 19 in nó như nhạc của Bach; danh mục BWV xếp nó vào phụ lục (Anhang, viết tắt Anh.), cùng nhóm với những bài còn nghi vấn (cách đọc ký hiệu: Đọc tên tác phẩm).'
+    ly_do: 'n24 (da-sua): IMSLP liệt kê nhiều người chép; không nguồn nào nói "phần lớn".'

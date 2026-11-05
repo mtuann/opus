@@ -30,7 +30,7 @@ Bài được viết cho đàn phím của thời ấy, harpsichord hoặc clavi
 
 ## Nghe trước khi tập
 
-Cả bài chỉ dài chừng một phút. Nghe ít nhất hai bản: một bản trên harpsichord (ví dụ của Guy Penson) và một bản trên piano (ví dụ của Alessandro Deljavan, trong album dành cho cuốn sổ nhạc của Nannerl). Mỗi lần nghe, chú ý một điều:
+Cả bài chỉ dài chừng một phút. Nghe ít nhất hai bản: một bản trên harpsichord và một bản trên piano (ví dụ của Alessandro Deljavan, trong album dành cho cuốn sổ nhạc của Nannerl). Mỗi lần nghe, chú ý một điều:
 
 1. **Bước nhảy.** Phách 1 của mỗi ô có rõ hơn phách 2 và 3 không?
 2. **Phát âm.** Cặp móc đơn có liền không, và hai nốt đen theo sau được tách đến mức nào?
@@ -192,7 +192,7 @@ Bản gốc không ghi sắc thái. Một kế hoạch đơn giản: *mf* cho đ
 
 ### Dấu ngân và kết lừa
 
-Ở ô 20, tai chờ hợp âm Fa trưởng thì bè trầm lại đi tới Rê: một **kết lừa** (xem [Kết và câu nhạc](/opus/nhac-ly/13-ket/)). Dấu ngân cho người nghe một khoảnh khắc để nhận ra bất ngờ ấy. Không phải ấn bản nào cũng in dấu ngân ở ô 20; nếu bản của bạn không có, vẫn nên thở nhẹ ở đó trước khi chủ đề trở lại.
+Ở ô 20, tai chờ hợp âm Fa trưởng thì bè trầm lại đi tới Rê: một **kết lừa** (xem [Kết và câu nhạc](/opus/nhac-ly/13-ket/)). Dấu ngân cho người nghe một khoảnh khắc để nhận ra bất ngờ ấy. Bản Breitkopf in dấu ngân ở ô 20; nếu bản của bạn không có, vẫn nên thở nhẹ ở đó trước khi chủ đề trở lại.
 
 ### Nốt hoa mỹ và bàn đạp
 
@@ -249,6 +249,5 @@ Bản gốc không có nốt hoa mỹ. Khi đã chơi chắc, bạn có thể th
 - *Mozarts Werke*, Serie XXII (Breitkopf & Härtel, 1878), bản dàn trang công cộng của [Mutopia Project](https://www.mutopiaproject.org/): nguồn của đoạn nhạc trên trang này.
 - W. A. Mozart, *Pieces from the Nannerl Music Book*, Wiener Urtext UT 50262, biên tập Ulrich Leisinger.
 - "Nannerl Notenbuch", [Wikipedia](https://en.wikipedia.org/wiki/Nannerl_Notenbuch): lịch sử cuốn sổ và các ghi chú của Leopold.
-- PTNA Piano Encyclopedia, mục "Menuet F-Dur K2" ([enc.piano.or.jp](https://enc.piano.or.jp/)): phân tích hình thức và các nốt treo.
 - Daniel Gottlob Türk, *Klavierschule* (1789): cách chơi nốt "theo cách thông thường".
 - Bản nhạc: [IMSLP](https://imslp.org/). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

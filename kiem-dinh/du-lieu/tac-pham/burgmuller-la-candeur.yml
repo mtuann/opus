@@ -1,111 +1,422 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/burgmuller-la-candeur
 ban_ghi: tac-pham/burgmuller-la-candeur
 lan:
-  - so: 1
-    ngay: 2026-10-24
-    nhanh: moi/d2-0-du-lieu
-    ma_bam: sha256:906410d8d2d225a4134533223d08627d3ebdd9cad7754ea876167ff5f69f4861
-    nguoi:
-      luot_1: Claude Sonnet 5.5 (D2-0 phần A)
-      luot_2: Claude Sonnet 5.5 (D2-0 lượt 2 phần A)
-      review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
-      kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
-    truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
-  - so: 2
-    ngay: null
-    nhanh: moi/d6-l1
-    ma_bam: null
-    nguoi:
-      luot_1: null
-      luot_2: null
-      review: null
-      kiem_mau: null
-ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/burgmuller-la-candeur.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Henle HN 1726 liệt kê bài số 1 của Op. 100 là "1. Nonchalance" (tên tiếng Anh của ấn bản, cùng vị trí số 1 với "La candeur" của IMSLP; các tài liệu Henle đã mở không nêu tên Pháp của bài này).'
+- so: 1
+  ngay: 2026-10-24
+  nhanh: moi/d2-0-du-lieu
+  ma_bam: sha256:906410d8d2d225a4134533223d08627d3ebdd9cad7754ea876167ff5f69f4861
+  nguoi:
+    luot_1: Claude Sonnet 5.5 (D2-0 phần A)
+    luot_2: Claude Sonnet 5.5 (D2-0 lượt 2 phần A)
+    review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
+    kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
+  truong:
+  - chang
+  - danh_muc
+  - gan_cho
+  - goi_y
+  - grade
+  - khuyet_danh
+  - loai
+  - tac_gia
+  - ten
+- so: 2
+  ngay: '2026-11-05'
+  nhanh: moi/d6-l1
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Opus 5.5 (D6-L1 phần B)
+    luot_2: null
+    review: null
+    kiem_mau: null
+ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/burgmuller-la-candeur.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Henle HN 1726 liệt kê bài số 1 của Op. 100 là "1. Nonchalance" (tên tiếng Anh của ấn bản, cùng vị trí số 1 với "La candeur" của IMSLP; các tài liệu Henle đã mở không nêu tên Pháp của bài này). Lần 2 (D6-L1, lượt 1 phần B): nhận định n6–n35 cho các trường chưa khóa (giong, nhip, thoi_ky, ky_nang_chinh, chip, thong_tin, hinh, ban_thu); bản nhạc đối chiếu là Mutopia 202. Không có chỗ sai. n35 đo trên file trong public/audio/ (không có nguồn ngoài).'
 nguon:
-  - id: imslp-op100
-    bac: 2
-    ten: IMSLP, 25 Études faciles et progressives, Op.100 (Burgmüller)
-    link: https://imslp.org/wiki/25_%C3%89tudes_faciles_et_progressives,_Op.100_(Burgm%C3%BCller,_Friedrich)
-  - id: henle-hn1726
-    bac: 2
-    ten: G. Henle Verlag, HN 1726 Burgmüller, 25 Etudes op. 100 (mức khó từng bài)
-    link: https://www.henle.de/en/25-Etudes-op.-100/HN-1726
-  - id: abrsm-2122
-    bac: 2
-    ten: "ABRSM, Piano Syllabus 2021 & 2022, Qualification Specification: Practical Music"
-    link: https://www.abrsm.org/sites/default/files/2023-09/piano-2021-2022-syllabus-rev-sep-2020-final.pdf
-  - id: abrsm-2728
-    bac: 2
-    ten: ABRSM, Music Performance Grades Piano Syllabus (Section 3) 2027 & 2028 (danh sách tác phẩm giống Practical Grades)
-    link: https://www.abrsm.org/sites/default/files/2026-06/Piano%20Performance%20Grades%20Syllabus%202027%20&%202028.pdf
-  - id: henle-thang
-    bac: 2
-    ten: G. Henle Verlag, Levels of Difficulty (thang độ khó 1–9; trang không có bảng quy đổi sang ABRSM)
-    link: https://www.henle.de/Levels-of-Difficulty/
+- id: imslp-op100
+  bac: 2
+  ten: IMSLP, 25 Études faciles et progressives, Op.100 (Burgmüller)
+  link: https://imslp.org/wiki/25_%C3%89tudes_faciles_et_progressives,_Op.100_(Burgm%C3%BCller,_Friedrich)
+- id: henle-hn1726
+  bac: 2
+  ten: G. Henle Verlag, HN 1726 Burgmüller, 25 Etudes op. 100 (mức khó từng bài)
+  link: https://www.henle.de/en/25-Etudes-op.-100/HN-1726
+- id: abrsm-2122
+  bac: 2
+  ten: 'ABRSM, Piano Syllabus 2021 & 2022, Qualification Specification: Practical Music'
+  link: https://www.abrsm.org/sites/default/files/2023-09/piano-2021-2022-syllabus-rev-sep-2020-final.pdf
+- id: abrsm-2728
+  bac: 2
+  ten: ABRSM, Music Performance Grades Piano Syllabus (Section 3) 2027 & 2028 (danh sách tác phẩm giống Practical Grades)
+  link: https://www.abrsm.org/sites/default/files/2026-06/Piano%20Performance%20Grades%20Syllabus%202027%20&%202028.pdf
+- id: henle-thang
+  bac: 2
+  ten: G. Henle Verlag, Levels of Difficulty (thang độ khó 1–9; trang không có bảng quy đổi sang ABRSM)
+  link: https://www.henle.de/Levels-of-Difficulty/
+- id: mutopia-202
+  bac: 1
+  ten: 'Mutopia Project, La Candeur (Op. 100 số 1), Bas Wassink theo Collection Litolff, Mutopia-2013/01/12-202, phạm vi công cộng: .ly, PDF, MIDI'
+  link: https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=202
+- id: imslp-burgmuller
+  bac: 2
+  ten: IMSLP, Category:Burgmüller, Friedrich (1806–1874, Nationality German, Time Period Romantic)
+  link: https://imslp.org/wiki/Category:Burgm%C3%BCller,_Friedrich
+- id: db-burgmuller
+  bac: 2
+  ten: 'Deutsche Biographie, Burgmüller, Friedrich (GND 117168890): Regensburg 1806 – Beaulieu 1874; Komponist, Pianist, Musiklehrer'
+  link: https://www.deutsche-biographie.de/pnd117168890.html
+- id: ndb-burgmuller
+  bac: 2
+  ten: 'Neue Deutsche Biographie, bài gia đình Burgmüller: Friedrich "Komponist populärer Klaviermusik, lebte seit 1832 in Paris"'
+  link: https://www.deutsche-biographie.de/sfz7533.html
+- id: bnf-burgmuller
+  bac: 2
+  ten: 'BnF, data.bnf.fr: Friedrich Burgmüller (1806-1874), "Installé à Paris en 1832"'
+  link: https://data.bnf.fr/ark:/12148/cb14788755q
+- id: cnrtl-candeur
+  bac: 2
+  ten: CNRTL, mục từ "candeur"
+  link: https://www.cnrtl.fr/definition/candeur
+- id: imslp-kolodin-candeur
+  bac: 2
+  ten: IMSLP, file bản thu Luis Kolodin plays Burgmuller's La candeur (trang file; giấy phép CC BY-SA 4.0 ghi ở mục Recordings của trang Op.100)
+  link: https://imslp.org/wiki/File:PMLP7983-Y2mate.mx_-_Luis_Kolodin_plays_Burgmuller's_La_candeur_(128_kbps).mp3
 nhan_dinh:
-  - id: n1
-    cau: "Tên bài: La candeur Op. 100 số 1 (bài đầu trong 25 Études faciles et progressives)."
-    loai: ten
-    truong:
-      - ten
-    nguon:
-      - imslp-op100
-      - henle-hn1726
-    ket_qua: dung
-    ghi_chu: 'IMSLP: "25 Études faciles et progressives, Op.100", mục 1 "La candeur". Henle HN 1726 đặt bài số 1 là "1. Nonchalance" (cùng vị trí số 1; tên tiếng Anh của ấn bản).'
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/25_%C3%89tudes_faciles_et_progressives,_Op.100_(Burgm%C3%BCller,_Friedrich)", https://www.henle.de/en/25-Etudes-op.-100/HN-1726 ]
-    luot_2_ghi_chu: 'IMSLP: Op.100 no.1 "La candeur" (Henle calls no.1 "Nonchalance").'
-  - id: n2
-    cau: "Tác giả: Friedrich Burgmüller."
-    loai: lich-su
-    truong:
-      - tac_gia
-    nguon:
-      - imslp-op100
-      - henle-hn1726
-    ket_qua: dung
-    ghi_chu: 'IMSLP: Composer "Burgmüller, Friedrich". Henle HN 1726.'
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/25_%C3%89tudes_faciles_et_progressives,_Op.100_(Burgm%C3%BCller,_Friedrich)" ]
-    luot_2_ghi_chu: "IMSLP composer: Burgmüller, Friedrich."
-  - id: n3
-    cau: "Số danh mục: Op. 100 số 1."
-    loai: danh-muc
-    truong:
-      - danh_muc
-    nguon:
-      - imslp-op100
-      - henle-hn1726
-    ket_qua: dung
-    ghi_chu: 'IMSLP: Op./Cat. No. "Op.100", mục 1. Henle: bài số 1 trong op. 100.'
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/25_%C3%89tudes_faciles_et_progressives,_Op.100_(Burgm%C3%BCller,_Friedrich)" ]
-    luot_2_ghi_chu: Op.100 No.1.
-  - id: n4
-    cau: Bài tương đương khoảng ABRSM Grade 2–3.
-    loai: cap-do
-    truong:
-      - grade
-    nguon:
-      - henle-hn1726
-      - abrsm-2122
-      - abrsm-2728
-      - henle-thang
-    ket_qua: dung
-    ghi_chu: 'Nói theo kiểu tương đương: La candeur không có trong đề cương ABRSM 2017–2028 (cùng Grade 8 của 2015–2016) hay Trinity từ 2023, và không thấy trong RCM 2022. Henle xếp mức 1 (easy), bằng "Innocence" (số 5) ở ABRSM Grade 3 (2021–2022) và "Douce plainte" (số 16) ở Grade 3 (2027–2028). Khoảng Grade 2–3 bao Grade 3; bằng chứng nghiêng về đầu trên (Grade 3).'
-    luot_2: dung
-    luot_2_nguon: [ https://www.henle.de/en/25-Etudes-op.-100/HN-1726, https://web.archive.org/web/20201112011213/https://gb.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf, https://web.archive.org/web/20211206105029/https://gb.abrsm.org/media/65198/piano-g3-2021-2022-rev-sep-2020.pdf ]
-    luot_2_ghi_chu: No syllabus (ABRSM 2013-26, Trinity, RCM) lists no.1 itself. Henle level 1, the lowest tier, same as Op.100 nos. 2, 3, 5 etc.; of those ABRSM lists no.2 at Grade 2 (2019-20) and no.5 at Grade 3 (2021-22). So Grade 2-3 is supported indirectly.
-  - id: n5
-    cau: Bài thuộc chặng 2 (Grade 1–2) của lộ trình piano.
-    loai: cap-do
-    truong:
-      - chang
-    nguon:
-      - henle-hn1726
-    ket_qua: dung
-    ghi_chu: "Khoảng Grade 2–3 nằm giữa chặng 2 (Grade 1–2) và chặng 3 (Grade 3); dữ liệu chọn chặng 2 (đầu dưới), hợp lệ theo luật kiểm chéo, dù bằng chứng nghiêng về Grade 3 (chặng 3): chủ repo có thể cân nhắc."
-    luot_2: dung
-    luot_2_nguon: [ https://www.henle.de/en/25-Etudes-op.-100/HN-1726 ]
-    luot_2_ghi_chu: Stage 2 = Grade 1-2; consistent with the low end of 2-3.
+- id: n1
+  cau: 'Tên bài: La candeur Op. 100 số 1 (bài đầu trong 25 Études faciles et progressives).'
+  loai: ten
+  truong:
+  - ten
+  nguon:
+  - imslp-op100
+  - henle-hn1726
+  ket_qua: dung
+  ghi_chu: 'IMSLP: "25 Études faciles et progressives, Op.100", mục 1 "La candeur". Henle HN 1726 đặt bài số 1 là "1. Nonchalance" (cùng vị trí số 1; tên tiếng Anh của ấn bản).'
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/25_%C3%89tudes_faciles_et_progressives,_Op.100_(Burgm%C3%BCller,_Friedrich)
+  - https://www.henle.de/en/25-Etudes-op.-100/HN-1726
+  luot_2_ghi_chu: 'IMSLP: Op.100 no.1 "La candeur" (Henle calls no.1 "Nonchalance").'
+- id: n2
+  cau: 'Tác giả: Friedrich Burgmüller.'
+  loai: lich-su
+  truong:
+  - tac_gia
+  nguon:
+  - imslp-op100
+  - henle-hn1726
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Composer "Burgmüller, Friedrich". Henle HN 1726.'
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/25_%C3%89tudes_faciles_et_progressives,_Op.100_(Burgm%C3%BCller,_Friedrich)
+  luot_2_ghi_chu: 'IMSLP composer: Burgmüller, Friedrich.'
+- id: n3
+  cau: 'Số danh mục: Op. 100 số 1.'
+  loai: danh-muc
+  truong:
+  - danh_muc
+  nguon:
+  - imslp-op100
+  - henle-hn1726
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Op./Cat. No. "Op.100", mục 1. Henle: bài số 1 trong op. 100.'
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/25_%C3%89tudes_faciles_et_progressives,_Op.100_(Burgm%C3%BCller,_Friedrich)
+  luot_2_ghi_chu: Op.100 No.1.
+- id: n4
+  cau: Bài tương đương khoảng ABRSM Grade 2–3.
+  loai: cap-do
+  truong:
+  - grade
+  nguon:
+  - henle-hn1726
+  - abrsm-2122
+  - abrsm-2728
+  - henle-thang
+  ket_qua: dung
+  ghi_chu: 'Nói theo kiểu tương đương: La candeur không có trong đề cương ABRSM 2017–2028 (cùng Grade 8 của 2015–2016) hay Trinity từ 2023, và không thấy trong RCM 2022. Henle xếp mức 1 (easy), bằng "Innocence" (số 5) ở ABRSM Grade 3 (2021–2022) và "Douce plainte" (số 16) ở Grade 3 (2027–2028). Khoảng Grade 2–3 bao Grade 3; bằng chứng nghiêng về đầu trên (Grade 3).'
+  luot_2: dung
+  luot_2_nguon:
+  - https://www.henle.de/en/25-Etudes-op.-100/HN-1726
+  - https://web.archive.org/web/20201112011213/https://gb.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf
+  - https://web.archive.org/web/20211206105029/https://gb.abrsm.org/media/65198/piano-g3-2021-2022-rev-sep-2020.pdf
+  luot_2_ghi_chu: No syllabus (ABRSM 2013-26, Trinity, RCM) lists no.1 itself. Henle level 1, the lowest tier, same as Op.100 nos. 2, 3, 5 etc.; of those ABRSM lists no.2 at Grade 2 (2019-20) and no.5 at Grade 3 (2021-22). So Grade 2-3 is supported indirectly.
+- id: n5
+  cau: Bài thuộc chặng 2 (Grade 1–2) của lộ trình piano.
+  loai: cap-do
+  truong:
+  - chang
+  nguon:
+  - henle-hn1726
+  ket_qua: dung
+  ghi_chu: 'Khoảng Grade 2–3 nằm giữa chặng 2 (Grade 1–2) và chặng 3 (Grade 3); dữ liệu chọn chặng 2 (đầu dưới), hợp lệ theo luật kiểm chéo, dù bằng chứng nghiêng về Grade 3 (chặng 3): chủ repo có thể cân nhắc.'
+  luot_2: dung
+  luot_2_nguon:
+  - https://www.henle.de/en/25-Etudes-op.-100/HN-1726
+  luot_2_ghi_chu: Stage 2 = Grade 1-2; consistent with the low end of 2-3.
+- id: n6
+  cau: 'Giọng: Đô trưởng.'
+  loai: cau-truc
+  truong:
+  - giong
+  nguon: &id001
+  - mutopia-202
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \key c\major; kết ở Đô.'
+- id: n7
+  cau: 'Nhịp: 4/4.'
+  loai: cau-truc
+  truong:
+  - nhip
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \time 4/4.'
+- id: n8
+  cau: 'Thời kỳ: Lãng mạn.'
+  loai: lich-su
+  truong:
+  - thoi_ky
+  nguon:
+  - imslp-op100
+  - imslp-burgmuller
+  - mutopia-202
+  ket_qua: dung
+  ghi_chu: 'IMSLP Op.100: Piece Style Romantic; Category Burgmüller: Time Period Romantic; Mutopia: Style Romantic.'
+- id: n9
+  cau: 'Kỹ năng chính: giai điệu legato trên hợp âm giữ, hai tay đổi vai.'
+  loai: cau-truc
+  truong:
+  - ky_nang_chinh
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: ô 1–8 giai điệu móc đơn có luyến trên hợp âm nốt tròn; ô 9–12 tay trái chạy, tay phải giữ.'
+- id: n10
+  cau: 'Chip: "Đô trưởng · 4/4".'
+  loai: cau-truc
+  truong:
+  - chip
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Như n6, n7.
+- id: n11
+  cau: 'Chip: "Allegro moderato" (chỉ dẫn tốc độ của bài).'
+  loai: ten
+  truong:
+  - chip
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: meter = "Allegro moderato".'
+- id: n12
+  cau: 'Chip cấp độ: ≈ Grade 2–3.'
+  loai: cap-do
+  truong:
+  - chip
+  nguon:
+  - henle-hn1726
+  - abrsm-2122
+  - abrsm-2728
+  ket_qua: dung
+  ghi_chu: 'Trùng grade đã khóa (n4 của lần 1: Henle mức 1, cùng mức với các bài Op. 100 ABRSM xếp Grade 2–3).'
+- id: n13
+  cau: 'Chip: "Hai đoạn và coda".'
+  loai: cau-truc
+  truong:
+  - chip
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: hai \repeat volta 2 (ô 1–8, 9–16) rồi coda ô 18–23.'
+- id: n14
+  cau: 'Thông tin, Nhà soạn nhạc: Friedrich Burgmüller (1806–1874).'
+  loai: nam
+  truong:
+  - thong_tin
+  nguon:
+  - imslp-burgmuller
+  - db-burgmuller
+  ket_qua: dung
+  ghi_chu: 'IMSLP: 4/12/1806 – 13/2/1874; Deutsche Biographie 1806–1874.'
+- id: n15
+  cau: 'Thông tin: Burgmüller là người Đức.'
+  loai: lich-su
+  truong:
+  - thong_tin
+  nguon:
+  - imslp-burgmuller
+  - db-burgmuller
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Nationality German; Deutsche Biographie: sinh ở Regensburg.'
+- id: n16
+  cau: 'Thông tin: từ năm 1832 Burgmüller sống ở Paris.'
+  loai: lich-su
+  truong:
+  - thong_tin
+  nguon:
+  - ndb-burgmuller
+  - bnf-burgmuller
+  ket_qua: dung
+  ghi_chu: 'NDB: "lebte seit 1832 in Paris"; BnF: "Installé à Paris en 1832". (Ông mất ở Beaulieu-sur-Mer; dòng dữ liệu không nói ngược lại.)'
+- id: n17
+  cau: 'Thông tin: Burgmüller dạy piano và viết nhạc salon.'
+  loai: lich-su
+  truong:
+  - thong_tin
+  nguon:
+  - db-burgmuller
+  - ndb-burgmuller
+  ket_qua: dung
+  ghi_chu: 'Deutsche Biographie: Musiklehrer, Pianist; NDB: "Komponist populärer Klaviermusik".'
+- id: n18
+  cau: 'Thông tin, Tác phẩm: La candeur nghĩa là sự ngây thơ, trong sáng.'
+  loai: ten
+  truong:
+  - thong_tin
+  nguon:
+  - cnrtl-candeur
+  ket_qua: dung
+  ghi_chu: 'CNRTL: "Pureté de l''âme…", "Innocence de cœur…".'
+- id: n19
+  cau: 'Thông tin: La candeur là số 1 trong 25 Études faciles et progressives, Op. 100.'
+  loai: danh-muc
+  truong:
+  - thong_tin
+  nguon:
+  - imslp-op100
+  ket_qua: dung
+  ghi_chu: 'IMSLP: number=1 La candeur.'
+- id: n20
+  cau: 'Thông tin: tựa 25 Études faciles et progressives nghĩa là 25 bài luyện dễ, tăng dần độ khó.'
+  loai: ten
+  truong:
+  - thong_tin
+  nguon:
+  - imslp-op100
+  ket_qua: dung
+  ghi_chu: Dịch đúng "faciles et progressives".
+- id: n21
+  cau: 'Thông tin, Sáng tác / xuất bản: in lần đầu năm 1851 ở Paris, nhà Benoît aîné, cùng cả tập.'
+  loai: nam
+  truong:
+  - thong_tin
+  nguon:
+  - imslp-op100
+  ket_qua: dung
+  ghi_chu: 'IMSLP: "Year of First Publication=1851 – Paris: Benoît aîné"; bản in Benoît aîné n.d.[1851] chứa cả 25 bài.'
+- id: n22
+  cau: 'Thông tin, Giọng · nhịp · tốc độ: Đô trưởng · 4/4 · Allegro moderato (nhanh vừa phải).'
+  loai: cau-truc
+  truong:
+  - thong_tin
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \key c\major, \time 4/4, Allegro moderato.'
+- id: n23
+  cau: 'Thông tin, Hình thức: hai đoạn có nhắc lại ‖: A :‖ ‖: B :‖, mỗi đoạn 8 ô (đoạn B có hai kết khác nhau), rồi coda khoảng 6 ô.'
+  loai: cau-truc
+  truong:
+  - thong_tin
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: A ô 1–8, B ô 9–16 với \alternative (ô 16 kết thứ nhất, ô 17 kết thứ hai), coda ô 18–23.'
+- id: n24
+  cau: 'Thông tin, Độ khó: khoảng ABRSM Grade 2–3 (ước lượng).'
+  loai: cap-do
+  truong:
+  - thong_tin
+  nguon:
+  - henle-hn1726
+  - abrsm-2122
+  - abrsm-2728
+  ket_qua: dung
+  ghi_chu: Như grade đã khóa (lần 1 n4).
+- id: n25
+  cau: 'Thông tin, Kỹ năng chính: legato móc đơn đều; giai điệu nổi trên hợp âm ngân; hai tay đổi vai; hai bè trong một tay; đổi thế tay giữa câu; sắc thái nhỏ và tinh (p, pp, một nốt sf).'
+  loai: cau-truc
+  truong:
+  - thong_tin
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: luyến móc đơn; hợp âm ngân; ô 9–12 đổi vai; ô 13 hai bè tay phải; ô 2, 3–4, 7 đổi thế; \p, \pp, một \sf (ô 14).'
+- id: n26
+  cau: 'Thông tin, Bản nhạc: có ở IMSLP (25 Études faciles et progressives, Op.100) và bản dàn trang công cộng ở Mutopia Project theo ấn bản Litolff.'
+  loai: ten
+  truong:
+  - thong_tin
+  nguon:
+  - imslp-op100
+  - mutopia-202
+  ket_qua: dung
+  ghi_chu: 'IMSLP có nhiều bản in (Benoît aîné…); Mutopia: Collection Litolff, Public Domain.'
+- id: n27
+  cau: 'Thông tin, Bản nhạc: khi mua bản in, chọn ấn bản giữ nguyên số ngón và chỉ dẫn của tác giả.'
+  loai: khuyen-tap
+  truong:
+  - thong_tin
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n28
+  cau: 'Hình (bài học), chú thích: La candeur, Op. 100 số 1 có hai đoạn có nhắc lại và một coda ngắn; độ rộng gần đúng theo số ô nhịp.'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: 8 + 8 ô có nhắc lại, coda 6 ô; độ rộng 8, 8, 6.'
+- id: n29
+  cau: 'Hình, đoạn ‖: A :‖: ô 1–8, tay phải hát, tay trái giữ hợp âm, dừng ở át âm.'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Mutopia ô 1–8; ô 8 hợp âm Sol (V).
+- id: n30
+  cau: 'Hình, đoạn ‖: B :‖: ô 9–16, hai tay đổi vai, sf ở ô 14, kết ở Đô trưởng.'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: ô 9–12 đổi vai; a8-5_\sf ô 14; kết Đô ô 16/17.'
+- id: n31
+  cau: 'Hình, đoạn Coda: sau kết thứ hai, âm nền Đô, nhỏ dần đến pp.'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: hợp âm tay trái đều có Đô4 ở dưới; \> mỗi nhóm; <e c''>1_\pp.'
+- id: n32
+  cau: 'Hình, ghi chú: lần thứ hai, đoạn B rẽ sang kết thứ hai và đi thẳng vào coda.'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \alternative.'
+- id: n33
+  cau: 'Bản thu: người chơi Luis Kolodin, giấy phép CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/).'
+  loai: ten
+  truong:
+  - ban_thu
+  nguon:
+  - imslp-op100
+  - imslp-kolodin-candeur
+  ket_qua: dung
+  ghi_chu: 'IMSLP Op.100, mục Recordings: "Performer Categories=Kolodin, Luis=Piano", "File Description 1=1. La candeur", "Copyright=Creative Commons Attribution-ShareAlike 4.0".'
+- id: n34
+  cau: 'Bản thu: trang file là https://imslp.org/wiki/File:PMLP7983-Y2mate.mx_-_Luis_Kolodin_plays_Burgmuller''s_La_candeur_(128_kbps).mp3.'
+  loai: ten
+  truong:
+  - ban_thu
+  nguon:
+  - imslp-op100
+  ket_qua: dung
+  ghi_chu: 'IMSLP: "File Name 1=PMLP7983-Y2mate.mx_-_Luis_Kolodin_plays_Burgmuller''s_La_candeur_(128_kbps).mp3"; khớp public/audio/NGUON.txt.'
+- id: n35
+  cau: 'Bản thu: file audio/burgmuller-la-candeur.mp3 dài 108,3 giây.'
+  loai: so-lieu
+  truong:
+  - ban_thu
+  nguon: []
+  ket_qua: dung
+  ghi_chu: 'ffprobe public/audio/burgmuller-la-candeur.mp3: 108.300 s (file của site, chuyển mã từ file IMSLP, NGUON.txt).'

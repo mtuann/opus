@@ -12,15 +12,15 @@ lan:
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
   - so: 2
-    ngay: null
+    ngay: 2026-11-05
     nhanh: moi/d6-l1
     ma_bam: null
     nguoi:
-      luot_1: null
+      luot_1: "Claude Opus 5.5 (D6-L1 phần A)"
       luot_2: null
       review: null
       kiem_mau: null
-ghi_chu: "Trang bài học cũ ../opus-zero/docs/piano/tac-pham/minuet-sol.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Nguồn cổ: IMSLP ghi tên Pezold (cách viết của IMSLP cho Christian Petzold). Bach-Digital không mở được (thử thách chống bot)."
+ghi_chu: "Trang bài học cũ ../opus-zero/docs/piano/tac-pham/minuet-sol.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Nguồn cổ: IMSLP ghi tên Pezold (cách viết của IMSLP cho Christian Petzold). Bach-Digital không mở được (thử thách chống bot). Lần 2 (D6-L1, lượt 1 phần A): nhận định n7–n29 cho các trường chưa khóa (giong, nhip, thoi_ky, ky_nang_chinh, chip, thong_tin, hinh, ban_thu); bản nhạc đối chiếu Mutopia anna-magdalena-04, lịch sử theo Schulze (Bach-Jahrbuch 1979). Chip và dòng thông tin về cấp độ (n13, n23) chỉ ghi truong chip, thong_tin, khớp grade đã khóa. Còn mở: n20 (Peters 1880), đề xuất ở plans/lam-lai/bao-cao/d6-l1/sua-A.yml."
 nguon:
   - id: imslp-anh114
     bac: 2
@@ -42,6 +42,34 @@ nguon:
     bac: 2
     ten: G. Henle Verlag, Levels of Difficulty (thang độ khó 1–9; trang không có bảng quy đổi sang ABRSM)
     link: https://www.henle.de/Levels-of-Difficulty/
+  - id: mut-anh114
+    bac: 1
+    ten: Mutopia Project, Menuet in G, BWV Anh. 114 (Allen Garvin, nguồn Bach-Gesellschaft; tệp LilyPond và MIDI)
+    link: https://www.mutopiaproject.org/ftp/BachJS/BWVAnh114/anna-magdalena-04/anna-magdalena-04.ly
+  - id: schulze-1979
+    bac: 2
+    ten: 'Hans-Joachim Schulze, Ein "Dresdner Menuett" im zweiten Klavierbüchlein der Anna Magdalena Bach, Bach-Jahrbuch 65 (1979), tr. 45–64 (bản số hóa)'
+    link: https://bjb.publia.org/bjb/article/view/1686
+  - id: imslp-nb
+    bac: 2
+    ten: IMSLP, Notebooks for Anna Magdalena Bach (danh sách bài của Klavierbüchlein 1725, người chép, ấn bản)
+    link: https://imslp.org/wiki/Notebooks_for_Anna_Magdalena_Bach_(Bach,_Johann_Sebastian)
+  - id: omt-intro
+    bac: 2
+    ten: Open Music Theory, Introduction to Harmony, Cadences, and Phrase Endings
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-harmony/
+  - id: commons-anh114
+    bac: 2
+    ten: Wikimedia Commons, File:Minuet in G major, Anh. 114 - Notebook for Anna Magdalena Bach.ogg
+    link: https://commons.wikimedia.org/wiki/File:Minuet_in_G_major,_Anh._114_-_Notebook_for_Anna_Magdalena_Bach.ogg
+  - id: wiki-minuets
+    bac: 3
+    ten: Wikipedia, Minuets in G major and G minor (bậc 3; chỉ để định vị)
+    link: https://en.wikipedia.org/wiki/Minuets_in_G_major_and_G_minor
+  - id: cod-minuet
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục minuet, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/minuet
 nhan_dinh:
   - id: n1
     cau: "Tên bài: Minuet Sol trưởng, BWV Anh. 114 (trong Notenbüchlein für Anna Magdalena Bach, 1725)."
@@ -120,3 +148,162 @@ nhan_dinh:
     ghi_chu: '../opus-zero/docs/assets/js/practice.js, hằng SUGGEST[2] có ["piano/tac-pham/minuet-sol/", "Petzold: Minuet Sol trưởng"]; chặng 2 trùng chang 2 của bản ghi.'
     luot_2: dung
     luot_2_ghi_chu: Reasonable; not contradicted.
+  - id: n7
+    cau: Giọng của bài là Sol trưởng.
+    loai: cau-truc
+    truong: [giong]
+    nguon: [mut-anh114, imslp-anh114]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: \key g \major, kết Sol trưởng; IMSLP: Key "G major".'
+  - id: n8
+    cau: Nhịp của bài là 3/4.
+    loai: cau-truc
+    truong: [nhip]
+    nguon: [mut-anh114]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: \time 3/4.'
+  - id: n9
+    cau: Bài thuộc thời kỳ Baroque.
+    loai: lich-su
+    truong: [thoi_ky]
+    nguon: [imslp-anh114]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Composer Time Period "Baroque"; Petzold 1677–1733 (Schulze tr. 57–58).'
+  - id: n10
+    cau: 'Kỹ năng chính của bài: nhịp 3/4, hai bè độc lập, rời thế năm ngón.'
+    loai: cau-truc
+    truong: [ky_nang_chinh]
+    nguon: [mut-anh114]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: 3/4; tay trái là một bè riêng; tay phải vượt thế năm ngón (Rê5 rồi Sol4, nhảy quãng tám Sol5–Sol4 ô 4, 12). Chọn kỹ năng là việc của site; điều kiểm được là bài có các yếu tố này.'
+  - id: n11
+    cau: 'Chip: "Sol trưởng · 3/4".'
+    loai: cau-truc
+    truong: [chip]
+    nguon: [mut-anh114]
+    ket_qua: dung
+  - id: n12
+    cau: 'Chip: "Minuet".'
+    loai: ten
+    truong: [chip]
+    nguon: [imslp-anh114, mut-anh114]
+    ket_qua: dung
+    ghi_chu: 'IMSLP "Minuet in G major"; Mutopia "Menuet".'
+  - id: n13
+    cau: 'Chip cấp độ: "≈ Grade 1–2".'
+    loai: cap-do
+    truong: [chip]
+    nguon: [henle-hn349, rcm-2022]
+    ket_qua: dung
+    ghi_chu: Trùng grade đã khóa ở lần 1 (n4).
+  - id: n14
+    cau: 'Chip: "Hai đoạn, có nhắc lại".'
+    loai: cau-truc
+    truong: [chip]
+    nguon: [mut-anh114]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: hai \repeat volta 2, mỗi đoạn 16 ô.'
+  - id: n15
+    cau: 'Thông tin, nhà soạn nhạc: Christian Petzold (1677–1733), nghệ sĩ organ của nhà thờ Sophienkirche ở Dresden.'
+    loai: lich-su
+    truong: [thong_tin]
+    nguon: [schulze-1979]
+    ket_qua: dung
+    ghi_chu: 'Schulze tr. 57: Petzold sinh cuối năm 1677 ở Weißig, làm Sophienorganist ở Dresden; tr. 58: mất tháng 5/1733.'
+  - id: n16
+    cau: 'Thông tin: suốt nhiều thập kỷ, bài này bị gán cho J. S. Bach.'
+    loai: lich-su
+    truong: [thong_tin]
+    nguon: [imslp-anh114, schulze-1979]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "formerly attributed to Johann Sebastian Bach"; in như của Bach từ BG 1894 đến bài Schulze 1979.'
+  - id: n17
+    cau: 'Thông tin, tác phẩm: Minuet Sol trưởng, BWV Anh. 114; đi thành cặp với Minuet Sol thứ, BWV Anh. 115.'
+    loai: danh-muc
+    truong: [thong_tin]
+    nguon: [imslp-anh114, schulze-1979]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: related work Minuet in G minor BWV Anh.115, cùng tổ khúc; Schulze tr. 55–56.'
+  - id: n18
+    cau: 'Thông tin: hai minuet hợp thành một chương (một cặp minuet, chơi Sol trưởng, Sol thứ rồi Sol trưởng lần nữa) trong một tổ khúc cho harpsichord của Petzold.'
+    loai: lich-su
+    truong: [thong_tin]
+    nguon: [schulze-1979]
+    ket_qua: dung
+    ghi_chu: 'Schulze tr. 54–56: "Svite de Clavecin par C. Pezold", "Menuet alternativement", "Menuet 2", "On reprend le premier Menuet".'
+  - id: n19
+    cau: 'Thông tin: Anna Magdalena Bach chép hai minuet vào cuốn sổ tay năm 1725 của bà (bài số 4 và 5).'
+    loai: lich-su
+    truong: [thong_tin]
+    nguon: [imslp-nb, imslp-anh114]
+    ket_qua: dung
+    ghi_chu: 'IMSLP notebook: số 4, 5 của Klavierbüchlein 1725; IMSLP Anh. 114: nguồn sớm nhất do Anna Magdalena chép.'
+  - id: n20
+    cau: 'Thông tin: bài được in từ cuối thế kỷ 19: C. F. Peters (1880), ấn bản toàn tập Bach-Gesellschaft (1894).'
+    loai: nam
+    truong: [thong_tin]
+    nguon: [imslp-anh114, wiki-minuets]
+    ket_qua: null
+    ghi_chu: 'chưa chắc: BG Bd. 43.2 (Waldersee, 1894) có trên IMSLP; ấn bản Peters 1880 chỉ thấy ở Wikipedia (dẫn Czerny, Griepenkerl, Roitzsch 1880), IMSLP Anh. 114/115 không liệt kê. Đề xuất ở sua-A.yml: bỏ Peters nếu lượt 2 cũng không tìm được.'
+  - id: n21
+    cau: 'Thông tin, giọng · nhịp · tốc độ: Sol trưởng · 3/4 · không ghi tốc độ; nhịp vừa phải của điệu minuet.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: [mut-anh114, cod-minuet]
+    ket_qua: dung
+    ghi_chu: 'Mutopia không có chỉ dẫn tốc độ (chỉ \tempo trong khối midi, không in). COD/Britannica: minuet tốc độ vừa phải.'
+  - id: n22
+    cau: 'Thông tin, hình thức: hai đoạn (binary), mỗi đoạn 16 ô nhịp và đều có dấu nhắc lại; tổng cộng 32 ô.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: [mut-anh114, schulze-1979]
+    ket_qua: dung
+  - id: n23
+    cau: 'Thông tin, độ khó: khoảng ABRSM Grade 1–2 (ước lượng).'
+    loai: cap-do
+    truong: [thong_tin]
+    nguon: [henle-hn349, rcm-2022, abrsm-2728]
+    ket_qua: dung
+    ghi_chu: Như n4 (lần 1, đã khóa); "ước lượng" vì bài không có trong đề cương ABRSM.
+  - id: n24
+    cau: 'Thông tin, kỹ năng chính: hai bè độc lập, phát âm tách và liền, câu 4 ô, đổi thế tay, nhảy quãng tám, nhịp 3/4 có phách mạnh.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: [mut-anh114]
+    ket_qua: dung
+    ghi_chu: Các yếu tố có trong bài (Mutopia); câu 4 ô (kết ô 8, 16, 24, 32, nửa câu ở ô 4).
+  - id: n25
+    cau: 'Thông tin, bản nhạc: IMSLP (tìm "Minuet in G major, BWV Anh.114"); bản Urtext của sổ tay 1725 (Notenbüchlein für Anna Magdalena Bach) của Bärenreiter (theo Neue Bach-Ausgabe) hoặc G. Henle Verlag.'
+    loai: ten
+    truong: [thong_tin]
+    nguon: [imslp-anh114, henle-hn349]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Notebook for Anna Magdalena Bach (1725), ed. Georg von Dadelsen, Bärenreiter, Kassel, 1957" và NBA V/4; Henle HN 349 Notebook for Anna Magdalena Bach.'
+  - id: n26
+    cau: 'Hình cấu trúc: hai đoạn, mỗi đoạn 16 ô nhịp và đều nhắc lại: câu 1 ô 1–8 kết nửa ở Rê; câu 2 ô 9–16 kết trọn ở Sol; câu 3 ô 17–24 sang Rê trưởng; câu 4 ô 25–32 về Sol trưởng.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [mut-anh114, omt-intro]
+    ket_qua: dung
+    ghi_chu: 'MIDI Mutopia: ô 8 hợp âm Rê (V), ô 16 Sol, ô 17–24 Đô♯, kết Rê ô 24, ô 24 Đô♮ rồi về Sol, ô 32 Sol (hồ sơ trang n33–n37).'
+  - id: n27
+    cau: 'Bản thu gợi ý: Aaron Dunn (Musopen).'
+    loai: ten
+    truong: [ban_thu]
+    nguon: [commons-anh114]
+    ket_qua: dung
+    ghi_chu: 'Commons: Author "Aaron Dunn", nguồn Musopen (musopen.org/music/19797-menuets-in-g-major-bwv-anh-114-115/).'
+  - id: n28
+    cau: 'Giấy phép của bản thu: phạm vi công cộng.'
+    loai: ten
+    truong: [ban_thu]
+    nguon: [commons-anh114]
+    ket_qua: dung
+    ghi_chu: 'Commons: "Public Domain Mark 1.0", người giữ quyền đánh dấu.'
+  - id: n29
+    cau: 'Trang file của bản thu là trang Commons đã ghi; file dài khoảng 50 giây (d: 49.89).'
+    loai: so-lieu
+    truong: [ban_thu]
+    nguon: [commons-anh114]
+    ket_qua: dung
+    ghi_chu: 'Trang Commons mở được, ghi độ dài 50 giây (Ogg, đã cắt từ bản gốc, chỉ Minuet Anh. 114). Link mp3 và src là bản chuyển mã và file gốc trên upload.wikimedia.org cùng tên.'

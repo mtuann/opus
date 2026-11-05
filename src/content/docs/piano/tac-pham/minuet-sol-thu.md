@@ -12,20 +12,20 @@ Bài thứ hai của cặp minuet nổi tiếng trong cuốn sổ tay năm 1725 
 
 - **Bài giọng thứ "thật" đầu tiên.** Giọng thứ không chỉ là "buồn": nó có những nốt riêng (Fa♯, Mi♮) và một đường đi hòa âm riêng. Bài này cho bạn nghe và chạm tay vào cả hai.
 - **Cảm âm Fa♯.** Hóa biểu chỉ có Si♭ và Mi♭, nhưng gần như mỗi lần nhạc dừng trên hợp âm Rê hay kết ở Sol thứ đều có Fa♯, **cảm âm** nằm dưới chủ âm nửa cung. Đọc nhanh và nghe ra nốt này là nền cho mọi bài giọng thứ về sau (xem [Gam thứ](/opus/nhac-ly/07-gam-thu/)).
-- **Bè trầm biết hát.** Bốn ô đầu, tay trái đi xuống Sol – Fa – Mi♭ – Rê bằng nốt trắng chấm dôi: bốn bậc từ chủ âm xuống át âm, một công thức rất quen của giọng thứ thời Baroque. Giữ đủ trường độ, bạn sẽ nghe hai tay như hai giọng hát.
+- **Bè trầm biết hát.** Bốn ô đầu, tay trái đi xuống Sol – Fa – Mi♭ – Rê, ba nốt đầu là nốt trắng chấm dôi: bốn bậc từ chủ âm xuống át âm. Giữ đủ trường độ, bạn sẽ nghe hai tay như hai giọng hát.
 - **Phát âm do bạn quyết định.** Bản gốc không có một dấu luyến nào. Đây là chỗ tốt để học cách mang sự rõ ràng của harpsichord sang piano hiện đại.
 
 ## Bối cảnh
 
 Bài này là người anh em giọng thứ của [Minuet Sol trưởng](/opus/piano/tac-pham/minuet-sol/): cùng nằm trong sổ tay năm 1725 của Anna Magdalena Bach (bài số 5, ngay sau Minuet Sol trưởng), và cùng được xác định là của **Christian Petzold** chứ không phải của Bach; câu chuyện đầy đủ và cách đọc ký hiệu BWV Anh. có ở trang Minuet Sol trưởng.
 
-Trong tổ khúc cho harpsichord của Petzold, nơi chúng được tìm thấy, hai minuet hợp thành một chương, bên cạnh tám chương khác, và được chơi theo thứ tự: Sol trưởng, Sol thứ, rồi Sol trưởng lần nữa (*da capo*). Minuet thứ hai, cùng chủ âm nhưng khác màu, giữ vai trò tương phản mà về sau người ta gọi là **trio** (xem [Minuet và Trio](/opus/hinh-thuc/minuet-trio/)).
+Trong tổ khúc cho harpsichord của Petzold, nơi chúng được tìm thấy, hai minuet hợp thành một chương, bên cạnh các chương prelude, allemande, courante, sarabande, bourrée, gigue và passepied (kèm trio), và được chơi theo thứ tự: Sol trưởng, Sol thứ, rồi Sol trưởng lần nữa (*da capo*). Minuet thứ hai, cùng chủ âm nhưng khác màu, giữ vai trò tương phản mà về sau người ta gọi là **trio** (xem [Minuet và Trio](/opus/hinh-thuc/minuet-trio/)).
 
-Petzold viết cho **harpsichord**: dây được gảy, tiếng tắt nhanh, to nhỏ không đổi theo lực ngón, nên câu nhạc được "nói" bằng phát âm và nhịp điệu. Piano hiện đại ngân lâu và dễ to nhỏ, nhưng cũng dễ làm mọi thứ dính và nặng (xem [Lịch sử cây đàn piano](/opus/piano/lich-su-dan/) và [thời Baroque](/opus/lich-su/thoi-ky/baroque/)).
+Petzold viết cho **harpsichord**: dây được gảy, to nhỏ không đổi theo lực ngón, nên câu nhạc được "nói" bằng phát âm và nhịp điệu. Piano hiện đại dễ to nhỏ, nhưng cũng dễ làm mọi thứ dính và nặng (xem [Lịch sử cây đàn piano](/opus/piano/lich-su-dan/) và [thời Baroque](/opus/lich-su/thoi-ky/baroque/)).
 
 ## Nghe trước khi tập
 
-Nghe ít nhất hai bản: một bản trên harpsichord (Gustav Leonhardt, Igor Kipnis và Richard Egarr đều đã thu cặp minuet này) hoặc trên clavichord (Mahan Esfahani), và một bản trên piano. Nếu được, nghe trọn cặp theo thứ tự trưởng – thứ – trưởng. Mỗi lần nghe, chú ý một điều:
+Nghe ít nhất hai bản: một bản trên harpsichord hoặc clavichord (ví dụ Igor Kipnis, hay Mahan Esfahani trên clavichord), và một bản trên piano. Nếu được, nghe trọn cặp theo thứ tự trưởng – thứ – trưởng. Mỗi lần nghe, chú ý một điều:
 
 1. **Màu thứ.** Chỗ nào nhạc tối nhất, chỗ nào sáng lên? (Gợi ý: cuối đoạn A sáng hẳn.)
 2. **Bè trầm.** Bạn có nghe ra tay trái đi xuống Sol – Fa – Mi♭ – Rê ở bốn ô đầu không?
@@ -55,7 +55,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 
 | Đoạn | Ô nhịp | Giọng và kết | Nội dung | Điều cần chú ý |
 |---|---|---|---|---|
-| A, câu 1 | 1–8 | Sol thứ; **kết nửa** ở ô 8 (dừng trên hợp âm Rê) | Giai điệu và bè trầm cùng đi xuống; tay trái Sol – Fa – Mi♭ – Rê bằng nốt trắng chấm dôi | Fa♯ đầu tiên ở tay trái ô 7; ô 4 và 8 tay phải giữ, tay trái chạy |
+| A, câu 1 | 1–8 | Sol thứ; **kết nửa** ở ô 8 (dừng trên hợp âm Rê) | Giai điệu và bè trầm cùng đi xuống; tay trái Sol – Fa – Mi♭ (nốt trắng chấm dôi) – Rê | Fa♯ đầu tiên ở tay trái ô 7; ô 4 và 8 tay phải giữ, tay trái chạy |
 | A, câu 2 | 9–16 | Sang **Si♭ trưởng**, giọng trưởng song song; **kết trọn** ở ô 16 | Ô 9–12 như ô 1–4 (tay trái ô 12 có Si♮); ô 13–16: hợp âm Sol – Đô – Fa – Si♭ theo vòng quãng năm | Ô 16 sáng, đừng chơi tối như đầu bài |
 | B, câu 3 | 17–24 | Dừng ở **Fa trưởng** (ô 20), rồi về Si♭ trưởng (ô 24) | Mi♮ cuối ô 17 dẫn sang Fa trưởng; ô 18 hai tay đi ngược chiều; ô 21 móc đơn đi lên từ Fa | Đoạn sáng nhất; Si♭ cao trở lại ở ô 19 |
 | B, câu 4 | 25–32 | Qua **Đô thứ**, dừng trên hợp âm Rê (ô 28), **kết trọn** ở Sol thứ (ô 32) | Ô 27 nhảy zíc zắc; ô 29 gam Sol thứ giai điệu đi lên Rê – Mi♮ – Fa♯ – Sol – La – Si♭; láy ngắn ở ô 31 | Dày đặc dấu hóa: Si♮ (ô 25), Fa♯ (ô 27, 28, 29, 31), Mi♮ (ô 28, 29) |
@@ -90,7 +90,7 @@ Tay phải mở đầu bằng ngón 5 trên Si♭ cao, nốt nằm ngay trên d�
 | Mở đầu trên cao, rồi nhảy (ô 1–3, 9–11) | La5 và Si♭5 nằm ngoài khuông, đọc chậm; ô 2 nhảy La → Rê, ô 3 nhảy Sol cao → Sol thấp | Thuộc trước hai nốt vạch phụ; tập riêng ô 2–3: mắt nhìn trước nốt đích, dời cả bàn tay như một khối, không chậm lại |
 | Một tay giữ, một tay chạy (ô 3–4, 8, 11–12) | Tay phải chạy móc đơn khi tay trái giữ nốt dài, rồi đổi vai | Bài tập 2. Đếm to "một – hai – ba"; kiểm tra nốt dài được giữ đủ giá trị |
 | Nốt nhảy zíc zắc (ô 27) | Sol – Rê, Fa♯ – Đô, Sol – Si♭: nhảy qua lại bằng móc đơn | Nghe như hai bè: bè dưới Sol – Fa♯ – Sol, bè trên Rê – Đô – Si♭. Chơi từng bè riêng bằng nốt đen, rồi ghép |
-| Gam đi lên ở ô 29 | Gam thứ giai điệu: Mi♮ và Fa♯ cùng được nâng lên; phải luồn ngón cái | Ngón gợi ý: Rê 1, Mi 2, Fa♯ 3, luồn ngón cái sang Sol 1, La 2, Si♭ 3. Tập gam Sol thứ giai điệu ở [Gam và ngón bấm](/opus/piano/gam/) trước |
+| Gam đi lên ở ô 29 | Gam thứ giai điệu: Mi♮ và Fa♯ cùng được nâng lên; phải luồn ngón cái | Ngón gợi ý: Rê 1, Mi 2, Fa♯ 3, luồn ngón cái sang Sol 1, La 2, Si♭ 3. Tập trước gam Sol thứ hòa âm ở [Gam và ngón bấm](/opus/piano/gam/) (trang ấy chưa có ngón gam thứ giai điệu) |
 | Láy trên (ô 8, 9, 15, 31) và láy dưới (ô 13, 22) | Nốt láy làm lệch nhịp hoặc to hơn nốt chính | Học bài không láy trước; thêm vào khi đã vững: đúng phách, nhanh, nhẹ (Bài tập 3) |
 
 Sáu nốt đi lên của ô 29 trên bàn phím: để ý hai phím đen Fa♯ và Si♭, còn Mi♮ là phím trắng.
@@ -251,7 +251,7 @@ Không dùng. Bàn đạp làm nhòe hai bè và xóa mất phát âm, thứ qua
 
 ## Nguồn
 
-- Hans-Joachim Schulze, bài viết về cặp minuet và tổ khúc của Petzold, *Bach-Jahrbuch* 1979 (in năm 1980): bằng chứng chính cho việc ghi tên Petzold.
+- Hans-Joachim Schulze, bài viết về cặp minuet và tổ khúc của Petzold, *Bach-Jahrbuch* 65 (1979), tr. 45–64 ([bản số hóa](https://bjb.publia.org/bjb/article/view/1686)): bằng chứng chính cho việc ghi tên Petzold.
 - *Neue Bach-Ausgabe*, tập V/4 (Bärenreiter, 1957, biên tập Georg von Dadelsen): hai cuốn sổ tay của Anna Magdalena Bach.
 - Ấn bản Bach-Gesellschaft (1894), bản dàn trang công cộng của [Mutopia Project](https://www.mutopiaproject.org/) (người nhập: Allen Garvin): nguồn của đoạn nhạc trên trang này.
 - "Minuets in G major and G minor", [Wikipedia](https://en.wikipedia.org/wiki/Minuets_in_G_major_and_G_minor): lịch sử cuốn sổ, việc ghi tên Petzold, thứ tự chơi, các bản thu.

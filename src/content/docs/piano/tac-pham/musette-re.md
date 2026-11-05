@@ -10,7 +10,7 @@ Một vũ khúc nhỏ bắt chước tiếng kèn túi: tay trái đập đều 
 
 ## Vì sao nên học bài này
 
-- **Tay trái có một việc riêng.** Không phải hợp âm, cũng không phải một bè hát: tay trái giữ một nhịp đập quãng tám gần như suốt bài. Đây là bài tập xoay cẳng tay và giữ đều tự nhiên nhất ở cấp độ này.
+- **Tay trái có một việc riêng.** Không phải hợp âm, cũng không phải một bè hát: tay trái giữ một nhịp đập quãng tám gần như suốt bài. Đây là bài tập tốt để xoay cẳng tay và giữ đều ở cấp độ này.
 - **Học đổi thế tay.** Tay phải liên tục chuyển giữa hai vùng: trên cao quanh La5 và ở giữa, ngay trên Đô giữa. Mỗi lần chuyển là một lần luyện "mắt đi trước, tay theo sau".
 - **Hai tay chung một giai điệu.** Ở ô 3–4 và 7–8, hai tay chơi cùng một giai điệu, cách nhau một quãng tám, và phải khít như một.
 - **Sắc thái tiếng vọng.** Bài đầy ý lặp lại: ô 2 giống hệt ô 1, ô 5–8 lặp lại ô 1–4, ô 15–16 lặp lại ô 13–14. Đó là chỗ để học cho cùng một câu một màu khác.
@@ -18,13 +18,13 @@ Một vũ khúc nhỏ bắt chước tiếng kèn túi: tay trái đập đều 
 
 ## Bối cảnh
 
-**Musette** vừa là tên một nhạc cụ, vừa là tên một kiểu bản nhạc. Nhạc cụ ấy, gọi đầy đủ là *musette de cour* (musette cung đình), là một loại kèn túi nhỏ của Pháp: người chơi bơm hơi bằng một ống bễ kẹp dưới cánh tay thay vì thổi bằng miệng. Thế kỷ 17–18, nó thịnh hành trong giới quý tộc Pháp, gắn với giấc mơ về đời sống đồng quê, mục đồng.
+**Musette** vừa là tên một nhạc cụ, vừa là tên một kiểu bản nhạc. Nhạc cụ ấy, gọi đầy đủ là *musette de cour* (musette cung đình), là một loại kèn túi nhỏ của Pháp: người chơi bơm hơi bằng một ống bễ thay vì thổi bằng miệng. Thế kỷ 17–18, nó thịnh hành trong giới cung đình Pháp.
 
 Như mọi loại kèn túi, musette có những ống kèn chỉ phát một nốt trầm không đổi, vang suốt dưới giai điệu (tiếng Anh gọi là *drone*). Trên đàn phím, các nhà soạn nhạc bắt chước nó bằng **âm nền** (pedal point): bè trầm giữ hoặc lặp lại một nốt trong khi phía trên đổi hòa âm (xem [Âm ngoài hợp âm](/opus/nhac-ly/18-am-ngoai-hop-am/)). Những bản nhạc như thế mang tên musette, thường có tính chất đồng quê và hay nằm trong tổ khúc. Chính Bach cũng viết một bản: Gavotte II trong English Suite số 3 Sol thứ, BWV 808, có tên phụ "ou la Musette" (hay là Musette), với âm nền Sol ở bè trầm.
 
 Bài Rê trưởng này dùng một cách riêng: bè trầm không giữ nốt mà đập quãng tám Rê – Rê bằng móc đơn, nghe như ống kèn rung đều và như tiếng chân giữ nhịp. Khi hòa âm đổi, "ống kèn" cũng đổi nốt: Rê ở đoạn A, La rồi Mi ở đoạn B.
 
-Bài là số 22 trong cuốn sổ tay thứ hai mà J. S. Bach bắt đầu cho vợ, ca sĩ **Anna Magdalena Bach**, năm 1725 (chuyện về cuốn sổ có ở trang [Minuet Sol trưởng](/opus/piano/tac-pham/minuet-sol/)). Phần lớn các bài trong sổ do chính bà chép, và nhiều bài không ghi tên tác giả. Ngay trước Musette là một minuet ghi rõ "Menuet fait par Mons. Böhm", tức của Georg Böhm; vài bài trước nữa là những bản hành khúc và polonaise thường được ghi là của Carl Philipp Emanuel Bach, con trai J. S. Bach. Riêng Musette thì không rõ tác giả. Thế kỷ 19 in nó như nhạc của Bach; danh mục BWV xếp nó vào phụ lục (*Anhang*, viết tắt **Anh.**), cùng nhóm với những bài còn nghi vấn (cách đọc ký hiệu: [Đọc tên tác phẩm](/opus/nghe-nhac/doc-ten-tac-pham/)).
+Bài là số 22 trong cuốn sổ tay thứ hai mà J. S. Bach bắt đầu cho vợ, ca sĩ **Anna Magdalena Bach**, năm 1725 (chuyện về cuốn sổ có ở trang [Minuet Sol trưởng](/opus/piano/tac-pham/minuet-sol/)). Nhiều bài trong sổ do chính bà chép, và nhiều bài không ghi tên tác giả. Ngay trước Musette là một minuet ghi rõ "Menuet fait par Mons. Böhm", tức của Georg Böhm; vài bài trước nữa là những bản hành khúc và polonaise thường được ghi là của Carl Philipp Emanuel Bach, con trai J. S. Bach. Riêng Musette thì không rõ tác giả. Thế kỷ 19 in nó như nhạc của Bach; danh mục BWV xếp nó vào phụ lục (*Anhang*, viết tắt **Anh.**), cùng nhóm với những bài còn nghi vấn (cách đọc ký hiệu: [Đọc tên tác phẩm](/opus/nghe-nhac/doc-ten-tac-pham/)).
 
 Bản Bach-Gesellschaft không ghi tốc độ, sắc thái hay dấu luyến: những điều ấy do người chơi quyết định.
 
@@ -192,7 +192,7 @@ Một điểm xuất phát: nốt La cao đầu ô 1 hơi tách, bốn móc kép
 
 ### Tiếng vọng
 
-Trong nhạc Baroque, một ý lặp lại hay được chơi như tiếng vọng: lần sau nhỏ hơn, như từ xa vọng lại. Trên harpsichord hai bàn phím, người chơi đổi bàn phím; trên piano, bạn đổi lực tay và màu tiếng. Bản nhạc không ghi gì, nên đây chỉ là một gợi ý:
+Một ý lặp lại có thể chơi như tiếng vọng: lần sau nhỏ hơn, như từ xa vọng lại. Trên harpsichord hai bàn phím, người chơi có thể đổi sang bàn phím kia; trên piano, bạn đổi lực tay và màu tiếng. Bản nhạc không ghi gì, nên đây chỉ là một gợi ý:
 
 | Chỗ | Gợi ý |
 |---|---|
@@ -260,5 +260,5 @@ Không dùng bàn đạp: tay trái đã tự tạo độ vang, bàn đạp ch�
 - *Neue Bach-Ausgabe*, tập V/4 (Bärenreiter, 1957, biên tập Georg von Dadelsen): hai cuốn sổ tay của Anna Magdalena Bach.
 - Ấn bản Bach-Gesellschaft (1894), bản dàn trang công cộng của [Mutopia Project](https://www.mutopiaproject.org/) (người nhập: Allen Garvin): nguồn của đoạn nhạc trên trang này.
 - "Notebook for Anna Magdalena Bach", [Wikipedia](https://en.wikipedia.org/wiki/Notebook_for_Anna_Magdalena_Bach): danh sách các bài trong cuốn sổ và tình trạng ghi tên tác giả.
-- *The New Grove Dictionary of Music and Musicians*, các mục "Musette": nhạc cụ và kiểu bản nhạc mang tên ấy.
+- *Encyclopaedia Britannica*, mục "musette", và *The Concise Oxford Dictionary of Music*, mục "musette" (qua [Encyclopedia.com](https://www.encyclopedia.com/literature-and-arts/performing-arts/music-history/musette)): nhạc cụ và kiểu bản nhạc mang tên ấy.
 - Bản nhạc: [IMSLP](https://imslp.org/) (tìm "Musette in D major, BWV Anh.126"). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
