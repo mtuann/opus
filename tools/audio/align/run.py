@@ -3,13 +3,15 @@
     python3 tools/audio/align/run.py fur-elise                # in bảng: mốc mới, ba biến thể, mốc đang ghi trên trang
     python3 tools/audio/align/run.py fur-elise --plot         # thêm hình phổ cho các dòng chưa nhận (để kiểm tra tay)
     python3 tools/audio/align/run.py fur-elise --plot-all     # hình phổ cho mọi dòng
-    python3 tools/audio/align/run.py fur-elise --write        # ghi ref vào data-rec của trang
+    python3 tools/audio/align/run.py fur-elise --write        # ghi mốc vào ::khoi-nghe{moc="…"} của trang
     python3 tools/audio/align/run.py --list                   # các cấu hình có trong pieces.py
 
 Mỗi dòng được căn ba lần với ba bộ tham số (core.VARIANTS). Nhận khi có hai lần lệch nhau không quá 2 giây (lấy
 trung bình hai lần đó); job có nguồn đối chiếu (check) thì kết quả còn phải khớp nguồn thứ hai trong 2 giây.
-Dòng không nhận được ghi null (trang hiện "chưa có"), trừ khi đã đo tay trên phổ và ghi vào fix của job.
-Bản thu lấy từ data-rec của trang: file trên site đọc thẳng, file trên mạng tải một lần vào bộ nhớ đệm.
+Dòng không nhận được ghi "-" (trang hiện "chưa có"), trừ khi đã đo tay trên phổ và ghi vào fix của job.
+Bản thu là bản gợi ý trong bản ghi của trang (ban_thu đầu tiên trong src/data/tac-pham.yml, theo tac_pham ở frontmatter):
+file trên site (public/audio/) đọc thẳng, file trên mạng tải một lần vào bộ nhớ đệm. Mốc nằm ở trang (moc của
+::khoi-nghe), vì mỗi trang có bảng "Theo dõi khi nghe" riêng; trang phải đã chuyển sang site mới.
 """
 import argparse
 import itertools
@@ -31,11 +33,11 @@ from pieces import PIECES  # noqa: E402
 TOL = 2.0
 
 
-def audio_for(md, part):
+def audio_for(part):
     """File âm thanh để căn một phần. Phần chỉ dẫn link: file gốc ở src (trang file IMSLP: bản đã tải tay vào _imslp/;
     file trên Commons: tải về bộ nhớ đệm), vì mốc tính theo file ở link."""
     if part.get("mp3"):
-        f = page.local_file(md, part["mp3"])
+        f = page.local_file(part["mp3"])
         return f if f is not None else net.cached_audio(part["mp3"])
     src = part.get("src") or ""
     if "imslp.org/wiki/File:" in src:
@@ -93,9 +95,10 @@ def run(name, plot=None, verbose=True):
     cfg = PIECES[name]
     md = page.md_path(cfg["page"])
     text = md.read_text(encoding="utf-8")
-    _, rec = page.find_block(text)
+    rec = page.recording(page.slug_of_page(md))
     if not rec:
-        raise SystemExit("%s: trang chưa có bản thu (data-rec)" % cfg["page"])
+        raise SystemExit("%s: bản ghi của trang chưa có bản thu (ban_thu; ghi bằng attach.py)" % cfg["page"])
+    old = page.find_listen(text)[1] or []
     rows = page.listen_rows(text)
     offs = np.cumsum([0] + [float(p.get("d") or 0) for p in rec["parts"]])
     res, detail = {}, {}
@@ -105,7 +108,7 @@ def run(name, plot=None, verbose=True):
             raise SystemExit("%s: job có part=%d nhưng bản thu chỉ có %d phần" % (name, part, len(rec["parts"])))
         aligned = "src" in job or "join" in job
         rows_to_align = {r: v for r, v in job["rows"].items() if v != "start"} if aligned else {}
-        audio = audio_for(md, rec["parts"][part]) if rows_to_align or "start" in job["rows"].values() else None
+        audio = audio_for(rec["parts"][part]) if rows_to_align or "start" in job["rows"].values() else None
         for r, v in job["rows"].items():               # dòng là thời điểm cố định hoặc đầu phần, không cần căn
             if v == "start":
                 v = first_sound(audio)
@@ -153,7 +156,6 @@ def run(name, plot=None, verbose=True):
             segs = [(max(0, t - 3), min(info["dur"], t + 5)) for _, t in sel]
             P.verify(audio, notes, V[1][1], segs, out, sel, "%s phần %d" % (name, part))
             print("  hình kiểm tra: %s" % out)
-    old = rec.get("ref") or []
     ref = [None if res.get(i) is None else int(np.floor(res[i] + 0.5)) for i in range(len(rows))]
     if verbose:
         print("  dòng   mốc  (trên trang)  thường khởi-âm thô→mịn")
@@ -173,7 +175,7 @@ def main():
     ap.add_argument("--list", action="store_true")
     ap.add_argument("--plot", action="store_true", help="hình phổ cho các dòng chưa nhận")
     ap.add_argument("--plot-all", action="store_true", help="hình phổ cho mọi dòng")
-    ap.add_argument("--write", action="store_true", help="ghi ref vào trang")
+    ap.add_argument("--write", action="store_true", help="ghi mốc vào trang")
     a = ap.parse_args()
     if a.list or not a.name:
         for k, v in PIECES.items():
@@ -184,17 +186,17 @@ def main():
     md, rec, ref = run(a.name, plot="all" if a.plot_all else a.plot)
     if a.write:
         text = md.read_text(encoding="utf-8")
-        m, _ = page.find_block(text)
-        new = page.normalize(dict(rec, ref=ref))
-        errs = attach.problems(md, new, text)
+        errs = attach.moc_problems(rec, ref, text)
         if errs:
             sys.exit("không ghi: " + "; ".join(errs))
-        out = page.block(new)
-        if out != m.group(0):
-            md.write_text(text[:m.start()] + out + text[m.end():], encoding="utf-8")
-            print("đã ghi ref vào %s" % page.rel(md))
+        out = page.set_moc(text, ref)
+        if out == text:
+            print("%s: mốc không đổi" % page.rel(md))
+        elif page.page_locked(page.rel(md)):
+            sys.exit("không ghi: trang %s đã khóa: %s" % (page.rel(md), page.unlock_hint(page.rel(md))))
         else:
-            print("%s: ref không đổi" % page.rel(md))
+            md.write_text(out, encoding="utf-8")
+            print("đã ghi mốc vào %s" % page.rel(md))
 
 
 if __name__ == "__main__":

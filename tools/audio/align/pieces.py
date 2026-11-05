@@ -1,8 +1,9 @@
-"""Cấu hình căn mốc cho từng trang có bản thu gợi ý (đã dùng để tính ref hiện có trên trang, v13–v14).
+"""Cấu hình căn mốc cho từng trang có bản thu gợi ý (đã dùng để tính mốc hiện có trên trang, v13–v14 của site cũ; chép
+sang site mới ở D6-0, không đổi số).
 
-PIECES[tên] = dict(page="đường dẫn trong docs/", jobs=[...]). Mỗi job căn trọn một phần của bản thu: bản nhạc
+PIECES[tên] = dict(page="đường dẫn trong src/content/docs/ (giữ như docs/ của site cũ)", jobs=[...]). Mỗi job căn trọn một phần của bản thu: bản nhạc
 (sau segs, join) phải phủ mọi thứ phần đó chơi, từ nốt đầu tới nốt cuối.
-- part: chỉ số phần trong parts của data-rec (từ 0, mặc định 0).
+- part: chỉ số phần trong parts của bản thu gợi ý (ban_thu đầu tiên của bản ghi; từ 0, mặc định 0).
 - src, read, qpm, tempi: nguồn bản nhạc: tên file trong sources.json. read thường đoán được từ tên (asap_…, dcml_…,
   .mid, .krn, .mei, .musicxml); "hand" là bản chép tay trong hand.py. kern, mei, musicxml, dcml cần qpm: tốc độ
   danh nghĩa, phách đen mỗi phút (chỉ để dựng bản nhạc, bộ căn tự kéo cho bằng bản thu).
@@ -17,7 +18,7 @@ PIECES[tên] = dict(page="đường dẫn trong docs/", jobs=[...]). Mỗi job c
 - fix: {dòng: giây trong phần} giá trị đã kiểm tra tay trên phổ (khởi âm từng cao độ), dùng thay cho kết quả căn.
 - check: nguồn bản nhạc thứ hai (độc lập) để đối chiếu, dạng dict(src=..., read=..., qpm=..., segs=..., rows={...}).
 - wpitch, band: tham số căn (mặc định 0,6 và không giới hạn).
-Giây trong anchors, fix và mốc cố định tính trong phần; run.py cộng độ dài các phần trước để ra ref.
+Giây trong anchors, fix và mốc cố định tính trong phần; run.py cộng độ dài các phần trước để ra mốc của trang.
 Ghi chú bên phải: số ô trên bản nhạc in, hoặc cách đã đo mốc cố định.
 """
 BACH846 = dict(src="asap_Bach_Prelude_bwv_846")

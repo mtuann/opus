@@ -1,8 +1,8 @@
 """Chuyển mã một bản thu tải tay (thường từ IMSLP, nằm trong _imslp/) thành MP3 lưu trên site.
 
-    python3 tools/audio/transcode.py _imslp/PMLP1776-grieg_arietta.mp3 --name grieg-arietta \\
-        --page docs/piano/tac-pham/grieg-arietta.md --work "Grieg: Arietta Op. 12 số 1" \\
-        --by "Luis Kolodin" --lic "CC BY-SA 4.0" [--source https://imslp.org/wiki/File:...] [--t "Tên phần"]
+    python3 tools/audio/transcode.py ../opus-zero/_imslp/PMLP1776-grieg_arietta.mp3 --name grieg-arietta \\
+        --work "Grieg: Arietta Op. 12 số 1" --by "Luis Kolodin" --lic "CC BY-SA 4.0" \\
+        [--source https://imslp.org/wiki/File:...] [--t "Tên phần"]
 
 Việc làm:
 - MP3 tối đa 128 kbps (không tăng bitrate của file gốc), bỏ thẻ siêu dữ liệu cũ, ghi thẻ ID3: tên tác phẩm,
@@ -10,10 +10,10 @@ Việc làm:
 - Đầu file: nếu nốt đầu tiên đến sau hơn 1 giây im lặng, cắt bớt nhưng giữ 0,5 giây trước nốt đầu.
 - Cuối file: chỉ cắt khi đã im lặng thật (dưới −60 dBFS) lâu hơn 3,5 giây; giữ 3 giây sau khi tiếng tắt
   và làm nhỏ dần 1 giây cuối (nằm trọn trong phần đã im). Còn tiếng tới cuối thì không cắt.
-- Ghi file vào docs/assets/audio/<name>.mp3 và một dòng vào docs/assets/audio/NGUON.txt (thay dòng cũ cùng file).
-- In JSON của phần bản thu ({t, mp3, d}, mp3 là đường dẫn tương đối từ --page) để đưa vào attach.py --part.
+- Ghi file vào public/audio/<name>.mp3 và một dòng vào public/audio/NGUON.txt (thay dòng cũ cùng file).
+- In JSON của phần bản thu ({t, mp3, d}, mp3 viết audio/<name>.mp3 như trong ban_thu) để đưa vào attach.py --part.
 
---out-dir DIR: ghi file vào DIR thay vì docs/assets/audio, không sửa NGUON.txt (để thử).
+--out-dir DIR: ghi file vào DIR thay vì public/audio, không sửa NGUON.txt (để thử).
 --source: trang file ở nguồn; bỏ trống thì suy ra từ tên file IMSLP (PMLP…/IMSLP…): https://imslp.org/wiki/File:<tên>.
   File tải từ IMSLP thường có thêm tiền tố IMSLP<số>- (IMSLP815839-PMLP1846-….mp3): trang file là phần sau tiền tố.
 """
@@ -78,9 +78,8 @@ def update_nguon(line):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("src", help="file gốc, ví dụ _imslp/PMLP1776-grieg_arietta.mp3")
+    ap.add_argument("src", help="file gốc, ví dụ ../opus-zero/_imslp/PMLP1776-grieg_arietta.mp3")
     ap.add_argument("--name", required=True, help="tên file trên site, không có đuôi: chữ thường, số, gạch nối")
-    ap.add_argument("--page", required=True, help="trang dùng bản thu (để tính đường dẫn tương đối)")
     ap.add_argument("--work", required=True, help='tên tác phẩm, ví dụ "Grieg: Arietta Op. 12 số 1"')
     ap.add_argument("--by", required=True, help="người chơi; ghi chú thêm trong ngoặc, ví dụ \"Jewgeni Smirnow (đàn piano điện)\"")
     ap.add_argument("--lic", required=True, help="giấy phép ghi trên trang file ở nguồn")
@@ -104,7 +103,6 @@ def main():
         if not re.match(r"(PMLP|IMSLP)\d", src.name):
             sys.exit("transcode: cần --source (link trang file ở nguồn)")
         source = imslp_page(src.name)
-    md = page.md_path(a.page)
     out_dir = Path(a.out_dir) if a.out_dir else page.AUDIO
     out_dir.mkdir(parents=True, exist_ok=True)
     dst = out_dir / (a.name + ".mp3")
@@ -131,7 +129,7 @@ def main():
     if not a.out_dir:
         update_nguon(nguon_line(a.name, a.work, a.by, lic, lic_url, source))
         print("đã ghi dòng nguồn vào %s" % (page.AUDIO / "NGUON.txt").relative_to(page.ROOT), file=sys.stderr)
-    part = {"t": a.t, "mp3": page.asset_url(md, a.name + ".mp3"), "d": d}
+    part = {"t": a.t, "mp3": page.asset_url(a.name + ".mp3"), "d": d}
     print(json.dumps({k: v for k, v in part.items() if v != ""}, ensure_ascii=False))
 
 

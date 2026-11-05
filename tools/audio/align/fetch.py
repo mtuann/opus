@@ -2,7 +2,7 @@
 
     python3 tools/audio/align/fetch.py                       # mọi file trong sources.json
     python3 tools/audio/align/fetch.py cpm_elise.mid ...     # một vài file
-    python3 tools/audio/align/fetch.py --from _imslp/_scripts/align/src   # chép từ thư mục có sẵn trước khi tải
+    python3 tools/audio/align/fetch.py --from ../opus-zero/_imslp/_scripts/align/src   # chép từ thư mục có sẵn trước khi tải
     python3 tools/audio/align/fetch.py --status              # file nào đã có, file nào còn thiếu
     python3 tools/audio/align/fetch.py --add kern_sonata11-3.krn --set kernscores-mozart \\
         --url https://raw.githubusercontent.com/craigsapp/mozart-piano-sonatas/<commit>/kern/sonata11-3.krn

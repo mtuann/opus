@@ -1,8 +1,9 @@
-name: Kiểm tra link ra ngoài
+name: Kiểm tra link ra ngoài và bản thu
 
-# Chạy mỗi thứ Hai lúc 02:00 UTC (9:00 sáng giờ Việt Nam), hoặc bấm chạy tay trong tab Actions (D8-L1; như
-# link-check.yml của site cũ). Giữ đúng một issue nhãn link-hong: có link hỏng thì mở issue, hoặc cập nhật issue đang mở
-# thay vì mở thêm; lần sau không còn link hỏng thì issue tự đóng. Không đăng gì, không chặn deploy.
+# Chạy mỗi thứ Hai lúc 02:00 UTC (9:00 sáng giờ Việt Nam), hoặc bấm chạy tay trong tab Actions (D8-L1, D6-0; như
+# link-check.yml của site cũ). Hai job, mỗi job giữ đúng một issue: kiem-link (nhãn link-hong) và ban-thu (nhãn ban-thu).
+# Có lỗi thì mở issue, hoặc cập nhật issue đang mở thay vì mở thêm; lần sau không còn lỗi thì issue tự đóng. Không đăng
+# gì, không chặn deploy.
 # GitHub tắt lịch chạy sau 60 ngày repo không có hoạt động: khi đó bật lại ở tab Actions.
 on:
   schedule:
@@ -31,7 +32,7 @@ jobs:
           # Chỉ kiểm link http(s). Link nội bộ đã được tests/link.test.mjs kiểm trên bản build ở mỗi lần push.
           # Ba nhóm file: trang (src/content/docs), dữ liệu (src/data: nguồn trong chữ, bản thu trong ban_thu của
           # tac-pham.yml) và module có link ra ngoài (src/scripts/nghe-mu.js: mười bản thu của Nghe mù trên Wikimedia
-          # Commons). Phần đối chiếu bản thu với Commons (độ dài, giấy phép; check_audio.py cũ) để D6-0.
+          # Commons). Phần đối chiếu bản thu với Commons (độ dài, giấy phép) ở job ban-thu bên dưới.
           # 403 và 429: nhiều trang báo và trang thương mại chặn robot hoặc giới hạn tần suất; chấp nhận để tránh báo lỗi
           # giả, link hỏng thật thường trả về 404.
           # Bỏ qua: abrsm.org (chặn robot: máy của GitHub nhận 307 lặp lại), trang chủ Oxford Music Online (chuyển hướng
@@ -80,3 +81,55 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh issue close "${{ steps.issue.outputs.number }}" --repo "$GITHUB_REPOSITORY" --comment "Lần kiểm tra tự động ngày $(date -u +%d/%m/%Y) không còn link hỏng."
+
+  # Bản thu trên Wikimedia Commons có thể bị xóa, đổi tên hay đổi giấy phép (job recordings của site cũ, D6-0).
+  # check_audio.py --static --network đối chiếu mọi bản thu trong ban_thu của src/data/tac-pham.yml với Commons (file còn,
+  # độ dài, giấy phép), cùng NGUON.txt và mốc trong trang; không cần ffmpeg. Yêu cầu tới Commons gửi User-Agent
+  # opus-kiem-dinh/1.0 (tools/audio/net.py), nghỉ 2,5 giây giữa hai yêu cầu.
+  ban-thu:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install -r requirements.txt
+
+      - name: Đối chiếu bản thu với Wikimedia Commons
+        id: check
+        run: |
+          set +e
+          python3 tools/audio/check_audio.py --static --network > check.txt 2>&1
+          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+          cat check.txt
+          {
+            echo "Lần kiểm tra tự động ngày $(date -u +%d/%m/%Y): \`python3 tools/audio/check_audio.py --static --network\` đối chiếu mọi bản thu trong \`ban_thu\` của \`src/data/tac-pham.yml\` với Wikimedia Commons (file còn trên Commons, độ dài, giấy phép)."
+            echo
+            echo '```'
+            cat check.txt
+            echo '```'
+            echo
+            echo "Cách sửa: tools/audio/README.md (tìm bản thu thay thế, ghi lại bằng attach.py; trường ban_thu đã khóa thì mở khóa trước)."
+          } > issue.md
+
+      - name: Tìm issue bản thu đang mở
+        id: issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: echo "number=$(gh issue list --repo "$GITHUB_REPOSITORY" --label ban-thu --state open --json number --jq '.[0].number // empty')" >> "$GITHUB_OUTPUT"
+
+      - name: Mở hoặc cập nhật issue nếu bản thu có lỗi
+        if: steps.check.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v6
+        with:
+          title: 'Báo cáo bản thu'
+          content-filepath: ./issue.md
+          labels: ban-thu
+          issue-number: ${{ steps.issue.outputs.number }}
+
+      - name: Đóng issue khi bản thu không còn lỗi
+        if: steps.check.outputs.exit_code == 0 && steps.issue.outputs.number != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue close "${{ steps.issue.outputs.number }}" --repo "$GITHUB_REPOSITORY" --comment "Lần kiểm tra tự động ngày $(date -u +%d/%m/%Y) không còn lỗi bản thu."

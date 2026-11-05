@@ -1,34 +1,39 @@
-"""Kiểm tra bản thu của site: file lưu trên site, NGUON.txt và mọi khối data-rec.
+"""Kiểm tra bản thu của site: file trong public/audio/, NGUON.txt, mọi bản thu (ban_thu trong src/data/tac-pham.yml) và
+mọi mốc tham khảo (::khoi-nghe{moc="…"} trong trang).
 
     python3 tools/audio/check_audio.py              # kiểm tra cả site (cần ffmpeg)
     python3 tools/audio/check_audio.py --network    # thêm: hỏi Commons độ dài và giấy phép hiện tại của từng file
     python3 tools/audio/check_audio.py --tail a.mp3 b.mp3   # chỉ đo đuôi các file này (thử kết quả transcode.py)
-    python3 tools/audio/check_audio.py --static     # chỉ mục 1 và 2, không cần ffmpeg (chạy trong npm test, nhóm nhanh)
-    python3 tools/audio/check_audio.py --static --network   # mục 1, 2 và 5, không cần ffmpeg (CI chạy hằng tuần)
+    python3 tools/audio/check_audio.py --static     # chỉ mục 1, 2 và 3, không cần ffmpeg (npm test chạy, tests/ban-thu.test.mjs)
+    python3 tools/audio/check_audio.py --static --network   # mục 1, 2, 3 và 6, không cần ffmpeg (CI chạy hằng tuần)
 
 Kiểm:
-1. Mọi file trong docs/assets/audio/ có một dòng trong NGUON.txt theo mẫu
+1. Mọi file trong public/audio/ có một dòng trong NGUON.txt theo mẫu
    "<file>.mp3 — <tác phẩm>; trình bày: <người chơi>; giấy phép <tên> (<link>); nguồn: <link>", và ngược lại.
-2. Mọi data-rec: khóa đúng thứ tự, có lic, licUrl (trừ phạm vi công cộng), page; giấy phép được nhận
-   (licenses.py); mỗi phần có mp3 (hoặc link, với bản thu chỉ dẫn link) và d; ref là số giây hoặc null, tăng dần,
-   không dài hơn bảng "Theo dõi khi nghe".
-3. File lưu trên site: d khớp độ dài file (lệch không quá 0,5 giây); 0,25 giây cuối không to hơn −50 dBFS
+2. Mọi bản thu trong ban_thu: có by, lic, licUrl (trừ phạm vi công cộng), page; giấy phép được nhận (licenses.py); mỗi
+   phần có mp3 (audio/<tên>.mp3, file có trong public/audio/; hoặc link, với bản thu chỉ dẫn link) và d; bản thu nhiều
+   phần có tên phần t.
+3. Mọi trang có ::khoi-nghe: đúng một dòng; mốc là số giây hay "-", tăng dần, không quá độ dài bản thu gợi ý (bản đầu
+   tiên của ban_thu), không nhiều hơn số dòng bảng "Theo dõi khi nghe"; có mốc thì bản ghi phải có bản thu.
+4. File lưu trên site: d khớp độ dài file (lệch không quá 0,5 giây); 0,25 giây cuối không to hơn −50 dBFS
    (bắt lỗi cắt cụt đuôi khi nhạc còn to).
-4. Khi có file gốc trong _imslp/ (theo link nguồn IMSLP ở NGUON.txt): so với file gốc, file trên site dừng trước
-   khi tiếng tắt (dưới −60 dBFS) là lỗi. Phép kiểm này bắt được lỗi của script cũ (cắt theo ngưỡng −45 dB, mất
-   tiếng ngân ở mức khoảng −60 dBFS) mà ngưỡng −50 dBFS bỏ sót. Tiếng đã tắt nhưng giữ ít hơn 3 giây khoảng lặng
-   sau đó (trong khi file gốc có) thì chỉ in "chú ý": không nghe thấy khác biệt; transcode.py giữ đủ 3 giây.
-   Số "cắt đầu" in ra với -v là --start của transcode.py khi chuyển mã lại mà giữ nguyên mốc.
-   File gốc không có trên máy (ví dụ trong CI) thì bỏ qua.
-5. --network: file trên Commons còn đó, độ dài khớp d, giấy phép trên Commons vẫn là giấy phép ghi trên trang.
-Bản đầy đủ không chạy trong npm test (cần ffmpeg, và --network cần mạng); npm test chạy --static.
+5. Khi có file gốc trong _imslp/ (theo link nguồn IMSLP ở NGUON.txt; tìm ở _imslp/ của repo, rồi ../opus-zero/_imslp/,
+   hay thư mục ở biến OPUS_IMSLP): so với file gốc, file trên site dừng trước khi tiếng tắt (dưới −60 dBFS) là lỗi.
+   Phép kiểm này bắt được lỗi của script cũ (cắt theo ngưỡng −45 dB, mất tiếng ngân ở mức khoảng −60 dBFS) mà ngưỡng
+   −50 dBFS bỏ sót. Tiếng đã tắt nhưng giữ ít hơn 3 giây khoảng lặng sau đó (trong khi file gốc có) thì chỉ in "chú ý":
+   không nghe thấy khác biệt; transcode.py giữ đủ 3 giây. Số "cắt đầu" in ra với -v là --start của transcode.py khi
+   chuyển mã lại mà giữ nguyên mốc. File gốc không có trên máy (ví dụ trong CI) thì bỏ qua.
+6. --network: file trên Commons còn đó, độ dài khớp d, giấy phép trên Commons vẫn là giấy phép ghi trong bản ghi.
 Có lỗi thì thoát với mã 1.
 """
 import argparse
 import glob
+import json
+import os
 import re
 import sys
 import urllib.parse
+from pathlib import Path
 
 import attach
 import licenses
@@ -38,9 +43,14 @@ import sound
 TAIL_DB = -50.0
 D_TOL = 0.5
 KEEP = 3.0                      # giây cần giữ sau khi tiếng tắt (như transcode.py)
-IMSLP_DIR = page.ROOT / "_imslp"
 NGUON = re.compile(r"^(?P<file>[a-z0-9-]+\.mp3) — (?P<work>[^;]+); trình bày: (?P<by>[^;]+); giấy phép (?P<lic>[^;(]+?)"
                    r"(?: \((?P<url>https?://[^)\s]+)\))?; nguồn: (?P<src>https?://\S+)$")
+
+
+def imslp_dirs():
+    """Thư mục có thể chứa bản thu tải tay từ IMSLP (không có trong git)."""
+    out = [Path(os.environ["OPUS_IMSLP"])] if os.environ.get("OPUS_IMSLP") else []
+    return out + [page.ROOT / "_imslp", page.ROOT.parent / "opus-zero" / "_imslp"]
 
 
 def tail_level(path, span=0.25):
@@ -76,11 +86,14 @@ def original(source_url):
     if not m:
         return None
     name = urllib.parse.unquote(m.group(1))
-    f = IMSLP_DIR / name
-    if f.exists():
-        return f
-    found = [g for g in IMSLP_DIR.glob("IMSLP*-" + glob.escape(name)) if re.fullmatch(r"IMSLP\d+-", g.name[:-len(name)])]
-    return found[0] if len(found) == 1 else None
+    for d in imslp_dirs():
+        f = d / name
+        if f.exists():
+            return f
+        found = [g for g in d.glob("IMSLP*-" + glob.escape(name)) if re.fullmatch(r"IMSLP\d+-", g.name[:-len(name)])]
+        if len(found) == 1:
+            return found[0]
+    return None
 
 
 def head_trim(hosted, orig, secs=20.0, win=0.01, max_lag=8.0):
@@ -122,13 +135,69 @@ def commons_title(part):
     return None
 
 
-def main():
+def check_records(recs, errs):
+    """Kiểm mọi bản thu (mục 2). Trả về (số bản ghi có bản thu, [(nơi, số phần, phần, bản thu, file trên site hay None)])."""
+    n, parts = 0, []
+    for r in recs:
+        bt = r.get("ban_thu")
+        if bt is None:
+            continue
+        n += 1
+        if not isinstance(bt, list) or not bt:
+            errs.append("tac-pham.yml %s: ban_thu phải là danh sách có ít nhất một bản thu" % r["slug"])
+            continue
+        for k, rec in enumerate(bt, 1):
+            where = "tac-pham.yml %s ban_thu[%d]" % (r["slug"], k)
+            try:
+                if json.dumps(page.normalize(rec), ensure_ascii=False) != json.dumps(rec, ensure_ascii=False):   # so cả thứ tự khóa
+                    errs.append("%s: khóa chưa đúng thứ tự by, note, lic, licUrl, page, parts (t, mp3, link, src, d) hay có giá trị rỗng (ghi lại bằng attach.py)" % where)
+            except ValueError as e:
+                errs.append("%s: %s" % (where, e))
+                continue
+            errs.extend("%s: %s" % (where, e) for e in attach.rec_problems(rec))
+            for i, p in enumerate(rec.get("parts") or [], 1):
+                try:
+                    f = page.local_file(p["mp3"]) if p.get("mp3") else None   # phần chỉ dẫn link: không có file để đo
+                except ValueError:
+                    continue                                                  # rec_problems đã báo
+                parts.append((where, i, p, rec, f))
+    return n, parts
+
+
+def check_pages(recs, errs):
+    """Kiểm mốc ở mọi trang có ::khoi-nghe (mục 3). Trả về số trang có mốc."""
+    by_slug = {r["slug"]: r for r in recs}
+    n = 0
+    for md in sorted(page.DOCS.rglob("*.md")):
+        text = md.read_text(encoding="utf-8")
+        if not re.search(r"^::khoi-nghe", text, re.M):
+            continue
+        where = page.rel(md)
+        try:
+            _, ref = page.find_listen(text)
+        except ValueError as e:
+            errs.append("%s: %s" % (where, e))
+            continue
+        if not ref:
+            continue
+        n += 1
+        slug = page.frontmatter(text).get("tac_pham")
+        r = by_slug.get(slug)
+        if r is None:
+            errs.append("%s: có mốc nhưng trang không có tac_pham (hay bản ghi %r không có)" % (where, slug))
+            continue
+        bt = r.get("ban_thu") or []
+        errs.extend("%s: %s" % (where, e) for e in attach.moc_problems(bt[0] if bt else None, ref, text))
+    return n
+
+
+def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--network", action="store_true", help="đối chiếu với Commons (chậm lần đầu, có bộ nhớ đệm)")
     ap.add_argument("--tail", nargs="+", metavar="FILE", help="chỉ đo đuôi các file này")
     ap.add_argument("-v", "--verbose", action="store_true", help="in số đo của từng file so với file gốc")
-    ap.add_argument("--static", action="store_true", help="chỉ kiểm NGUON.txt và data-rec, không đo file (không cần ffmpeg)")
-    a = ap.parse_args()
+    ap.add_argument("--static", action="store_true", help="chỉ kiểm NGUON.txt, bản thu và mốc, không đo file (không cần ffmpeg)")
+    a = ap.parse_args(argv)
     if a.tail or not a.static:
         sound.need_ffmpeg()
 
@@ -139,51 +208,31 @@ def main():
             ok = lv <= TAIL_DB
             bad += not ok
             print("%s %s: %.2f s, 0,25 giây cuối to nhất %.1f dBFS" % ("ok " if ok else "LỖI", f, d, lv))
-        sys.exit(1 if bad else 0)
+        return 1 if bad else 0
 
     errs, warns = [], []
     sources = check_nguon(errs)
+    recs = page.records()
+    n_recs, parts = check_records(recs, errs)
+    n_pages = check_pages(recs, errs)
     used, remote = set(), []
-    n_pages = 0
-    for md in sorted(page.DOCS.rglob("*.md")):
-        text = md.read_text(encoding="utf-8")
-        if "oz-listen" not in text:
+    for where, i, p, rec, f in parts:
+        if f is None:
+            remote.append((where, i, p, rec))
             continue
-        where = page.rel(md)
-        try:
-            m, rec = page.find_block(text)
-        except ValueError as e:
-            errs.append("%s: %s" % (where, e))
+        if not f.exists():
             continue
-        if not rec:
+        used.add(f.name)
+        if a.static:
             continue
-        n_pages += 1
-        try:
-            if page.block(rec) != m.group(0):
-                errs.append("%s: data-rec chưa đúng thứ tự khóa hoặc cách escape (chạy attach.py để ghi lại)" % where)
-            errs.extend("%s: %s" % (where, e) for e in attach.problems(md, page.normalize(rec), text))
-        except ValueError as e:
-            errs.append("%s: %s" % (where, e))
-        for i, p in enumerate(rec.get("parts") or [], 1):
-            f = page.local_file(md, p["mp3"]) if p.get("mp3") else None   # phần chỉ dẫn link: không có file để đo
-            if f is None:
-                remote.append((where, i, p, rec))
-                continue
-            if f.parent != page.AUDIO:
-                errs.append("%s phần %d: file lưu trên site phải nằm trong docs/assets/audio/: %s" % (where, i, p["mp3"]))
-            if not f.exists():
-                continue
-            used.add(f.name)
-            if a.static:
-                continue
-            d = sound.probe(f)[0]
-            if abs(d - (p.get("d") or 0)) > D_TOL:
-                errs.append("%s phần %d: d = %s nhưng file dài %.2f giây" % (where, i, p.get("d"), d))
-            lv = tail_level(f)
-            if lv > TAIL_DB:
-                errs.append("%s phần %d: %s: 0,25 giây cuối to tới %.1f dBFS (đuôi bị cắt cụt?)" % (where, i, f.name, lv))
+        d = sound.probe(f)[0]
+        if abs(d - (p.get("d") or 0)) > D_TOL:
+            errs.append("%s phần %d: d = %s nhưng file dài %.2f giây" % (where, i, p.get("d"), d))
+        lv = tail_level(f)
+        if lv > TAIL_DB:
+            errs.append("%s phần %d: %s: 0,25 giây cuối to tới %.1f dBFS (đuôi bị cắt cụt?)" % (where, i, f.name, lv))
     for f in sorted({p.name for p in page.AUDIO.glob("*.mp3")} - used):
-        warns.append("%s: không trang nào dùng" % f)
+        warns.append("%s: không bản ghi nào dùng" % f)
     compared = 0
     for name, url in sorted(sources.items()):
         orig = None if a.static else original(url)
@@ -215,21 +264,22 @@ def main():
             if abs(r["d"] - (p.get("d") or 0)) > D_TOL:
                 errs.append("%s phần %d: d = %s nhưng file Commons dài %.2f giây" % (where, i, p.get("d"), r["d"]))
             if r["lic"] != rec.get("lic"):
-                errs.append("%s phần %d: Commons ghi giấy phép %r (%s), trang ghi %r" % (where, i, r["lic_raw"], r["lic"] or r["why"], rec.get("lic")))
+                errs.append("%s phần %d: Commons ghi giấy phép %r (%s), bản ghi ghi %r" % (where, i, r["lic_raw"], r["lic"] or r["why"], rec.get("lic")))
 
     for w in warns:
         print("chú ý:", w)
     for e in errs:
         print("LỖI:", e)
+    n_files = len(list(page.AUDIO.glob("*.mp3")))
+    net_note = " (%d phần trên mạng, đã đối chiếu Commons)" % len(remote) if a.network else ""
     if a.static:
-        print("check_audio --static: %d file trên site, %d trang có bản thu%s, %d lỗi (chưa đo file: chạy không có --static, cần ffmpeg)" % (
-            len(list(page.AUDIO.glob("*.mp3"))), n_pages,
-            " (%d phần trên mạng, đã đối chiếu Commons)" % len(remote) if a.network else "", len(errs)))
+        print("check_audio --static: %d file trên site, %d bản ghi có bản thu%s, %d trang có mốc, %d lỗi (chưa đo file: chạy không có --static, cần ffmpeg)" % (
+            n_files, n_recs, net_note, n_pages, len(errs)))
     else:
-        print("check_audio: %d file trên site (%d so được với file gốc trong _imslp/), %d trang có bản thu (%d phần trên mạng%s), %d lỗi" % (
-            len(list(page.AUDIO.glob("*.mp3"))), compared, n_pages, len(remote), ", đã đối chiếu Commons" if a.network else "", len(errs)))
-    sys.exit(1 if errs else 0)
+        print("check_audio: %d file trên site (%d so được với file gốc trong _imslp/), %d bản ghi có bản thu (%d phần trên mạng%s), %d trang có mốc, %d lỗi" % (
+            n_files, compared, n_recs, len(remote), ", đã đối chiếu Commons" if a.network else "", n_pages, len(errs)))
+    return 1 if errs else 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

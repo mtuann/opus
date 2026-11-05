@@ -1,10 +1,11 @@
 """Tải từ mạng một cách lịch sự, dùng chung cho các công cụ trong tools/audio.
 
-- User-Agent kèm link repo, như AGENTS.md yêu cầu.
+- User-Agent kèm link site, như AGENTS.md (mục Mạng) yêu cầu; không kèm email hay thông tin cá nhân.
 - Nghỉ khoảng 2,5 giây giữa hai yêu cầu tới cùng một máy chủ Wikimedia; thử lại khi gặp 429 hoặc 5xx,
   chờ theo Retry-After nếu máy chủ gửi. Khoảng nghỉ tính chung cho mọi tiến trình dùng cùng bộ nhớ đệm (nhiều
   công cụ chạy song song): thời điểm của yêu cầu gần nhất ghi trong throttle/<máy chủ>, khóa bằng flock.
-- Bộ nhớ đệm ngoài repo: $OZ_AUDIO_CACHE, mặc định ~/.cache/opus-zero (hoặc $XDG_CACHE_HOME/opus-zero).
+- Bộ nhớ đệm ngoài repo: $OZ_AUDIO_CACHE, mặc định ~/.cache/opus-zero (hoặc $XDG_CACHE_HOME/opus-zero): giữ tên của
+  site cũ để dùng lại bản nhạc số, đặc trưng và câu trả lời API đã tải.
   Thư mục con: api/ (câu trả lời API), audio/ (bản thu tải về để căn mốc), scores/ (bản nhạc số), features/.
 """
 import hashlib
@@ -21,7 +22,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-UA = "OpusZeroBot/1.0 (https://github.com/mtuann/opus-zero)"
+UA = "opus-kiem-dinh/1.0 (https://mtuann.github.io/opus/)"
 PAUSE = 2.5
 SLOW = ("wikimedia.org", "wikipedia.org", "imslp.org")   # máy chủ cần nghỉ giữa các yêu cầu
 

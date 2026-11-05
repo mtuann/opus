@@ -6,15 +6,16 @@
     python3 tools/audio/align/explore.py bars kern_sonata11-1a.krn kern_sonata11-1b.krn --qpm 100
 
     # khởi âm theo từng cao độ trong một khoảng thời gian của bản thu (đo mốc tay: nốt nào vang lúc nào)
-    python3 tools/audio/align/explore.py onsets docs/piano/tac-pham/fur-elise.md 80 90 A2:45 E5:76 [--part 0]
+    python3 tools/audio/align/explore.py onsets piano/tac-pham/fur-elise 80 90 A2:45 E5:76 [--part 0]
 
     # toàn cảnh phổ của một phần bản thu, kèm vạch các mốc đang ghi trên trang (PNG trong plots/ của bộ nhớ đệm)
-    python3 tools/audio/align/explore.py overview docs/piano/tac-pham/fur-elise.md [--part 0]
+    python3 tools/audio/align/explore.py overview piano/tac-pham/fur-elise [--part 0]
 
     # so chi phí DTW của các cách nối đoạn (bản thu có chơi dấu nhắc lại không?)
-    python3 tools/audio/align/explore.py structure docs/piano/tac-pham/mozart-minuet-k2.md mutopia_menuet_k2.mid \\
+    python3 tools/audio/align/explore.py structure piano/tac-pham/mozart-minuet-k2 mutopia_menuet_k2.mid \\
         --segs "" --segs "[(0,7),(0,7),(8,23)]" --segs "[(0,7),(0,7),(8,23),(8,23)]"
-Thay cho trang có thể đưa thẳng một file âm thanh hoặc link file (khi chưa ghi khối bản thu vào trang).
+Thay cho trang có thể đưa slug bản ghi (khi trang chưa chuyển sang site mới), hoặc thẳng một file âm thanh hay link file
+(khi bản ghi chưa có bản thu). Bản thu là bản gợi ý trong ban_thu của bản ghi; mốc là moc của ::khoi-nghe trong trang.
 --part chọn phần của bản thu nhiều phần (từ 0); giây trong onsets là giây trong phần đó.
 structure so các cách nối của cùng một nguồn. Chi phí thấp và biến thiên tốc độ nhỏ là dấu hiệu tốt; k (độ dài bản
 thu chia độ dài bản nhạc) chỉ có nghĩa khi so giữa các cách nối, vì độ dài bản nhạc kern, MEI tùy qpm bạn đặt. Khi
@@ -47,18 +48,29 @@ AUDIO_EXT = (".mp3", ".ogg", ".oga", ".flac", ".wav", ".m4a", ".opus")
 
 
 def part_audio(arg, part):
-    """(trang hoặc None, data-rec hoặc None, file âm thanh) cho một trang (phần part) hoặc một file, link âm thanh."""
+    """(trang hoặc None, bản thu kèm mốc của trang (ref) hoặc None, file âm thanh) cho một trang hay slug bản ghi (phần
+    part), hoặc một file, link âm thanh."""
     if arg.startswith(("http://", "https://")):
         return None, None, net.cached_audio(arg)
     if arg.lower().endswith(AUDIO_EXT):
         return None, None, Path(arg)
-    md = page.md_path(arg)
-    _, rec = page.find_block(md.read_text(encoding="utf-8"))
+    md, ref = None, None
+    if "/" in arg or arg.endswith(".md"):
+        md = page.md_path(arg)
+        text = md.read_text(encoding="utf-8")
+        slug = page.slug_of_page(md)
+        try:
+            ref = page.find_listen(text)[1]
+        except ValueError:
+            pass
+    else:
+        slug = arg
+    rec = page.recording(slug)
     if not rec:
-        raise SystemExit("trang chưa có bản thu: ghi khối bản thu trước (attach.py), hoặc đưa thẳng file âm thanh")
+        raise SystemExit("bản ghi %s chưa có bản thu: ghi bằng attach.py, hoặc đưa thẳng file âm thanh" % slug)
     if part >= len(rec["parts"]):
         raise SystemExit("bản thu chỉ có %d phần (--part từ 0)" % len(rec["parts"]))
-    return md, rec, audio_for(md, rec["parts"][part])
+    return md, dict(rec, ref=ref or []), audio_for(rec["parts"][part])
 
 
 def cmd_bars(a):
@@ -96,8 +108,8 @@ def cmd_overview(a):
         offs = np.cumsum([0] + [float(x.get("d") or 0) for x in rec["parts"]])
         marks = [("dòng %d" % (i + 1), r - offs[a.part]) for i, r in enumerate(rec.get("ref") or [])
                  if r is not None and offs[a.part] <= r < offs[a.part + 1]]
-        title = "%s phần %d (%d dòng trong bảng)" % (page.rel(md), a.part, len(page.listen_rows(md.read_text(encoding="utf-8"))))
-    out = net.cache_dir("plots") / ("%s-p%d-toan-canh.png" % (md.stem if md else Path(str(audio)).stem, a.part))
+        title = "%s phần %d (%d dòng trong bảng)" % (page.rel(md), a.part, len(page.listen_rows(md.read_text(encoding="utf-8")))) if md else "%s phần %d" % (a.page, a.part)
+    out = net.cache_dir("plots") / ("%s-p%d-toan-canh.png" % (md.stem if md else Path(str(a.page)).stem, a.part))
     plot.overview(audio, out, marks, title=title)
     print(out)
 
@@ -126,16 +138,16 @@ def main():
     b.add_argument("--last", type=int, default=10 ** 6)
     b.add_argument("--limit", type=int, default=12, help="số nốt in mỗi ô")
     o = sub.add_parser("onsets")
-    o.add_argument("page", help="trang .md, hoặc file/link âm thanh")
+    o.add_argument("page", help="trang (piano/tac-pham/x), slug bản ghi, hoặc file/link âm thanh")
     o.add_argument("--part", type=int, default=0)
     o.add_argument("t0", type=float)
     o.add_argument("t1", type=float)
     o.add_argument("pitches", nargs="+", help="tên:số MIDI, ví dụ A2:45")
     v = sub.add_parser("overview")
-    v.add_argument("page", help="trang .md, hoặc file/link âm thanh")
+    v.add_argument("page", help="trang (piano/tac-pham/x), slug bản ghi, hoặc file/link âm thanh")
     v.add_argument("--part", type=int, default=0)
     s = sub.add_parser("structure")
-    s.add_argument("page", help="trang .md, hoặc file/link âm thanh")
+    s.add_argument("page", help="trang (piano/tac-pham/x), slug bản ghi, hoặc file/link âm thanh")
     s.add_argument("src")
     s.add_argument("--part", type=int, default=0)
     s.add_argument("--read", help="cách đọc, khi tên file không đủ để đoán (midi, asap, kern, mei, musicxml, dcml)")

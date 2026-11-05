@@ -27,6 +27,15 @@ runs:
     - name: Build (${{ inputs.ban == 'xem' && 'bản xem' || 'bản thật' }})
       run: npm run ${{ inputs.ban == 'xem' && 'build:xem' || 'build' }}
       shell: bash
+    # npm test chạy kiểm thử Python của tools/audio và check_audio.py --static (tests/ban-thu.test.mjs, D6-0): cần Python
+    # và PyYAML (requirements.txt)
+    - uses: actions/setup-python@v7
+      if: inputs.phan == 'npm-test'
+      with:
+        python-version: '3.12'
+    - if: inputs.phan == 'npm-test'
+      run: python3 -m pip install -r requirements.txt
+      shell: bash
     - if: inputs.phan == 'npm-test'
       run: npm test
       shell: bash

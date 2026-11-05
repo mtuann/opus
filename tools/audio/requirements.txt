@@ -1,7 +1,9 @@
 # Thư viện cho công cụ căn mốc (tools/audio/align/), cài trong một môi trường riêng, không dùng chung với
-# requirements.txt của site:
+# requirements.txt ở gốc repo:
 #   python3 -m venv .venv-audio && .venv-audio/bin/pip install -r tools/audio/requirements.txt
-# Đã thử với Python 3.13. Các script khác trong tools/audio/ chỉ cần Python 3.10+ (thư viện chuẩn) và ffmpeg.
+# Đã thử với Python 3.13 (site cũ). Các script khác trong tools/audio/ chỉ cần Python 3.12 và PyYAML (requirements.txt ở
+# gốc repo; PyYAML để đọc và ghi src/data/tac-pham.yml), thêm ffmpeg khi đo file hay chuyển mã.
+pyyaml==6.0.3
 librosa==0.11.0
 partitura==1.9.0
 mido==1.3.3
