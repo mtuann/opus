@@ -107,8 +107,15 @@ export function loiHoSo(hs, muc, goc) {
 	const bg = laBanGhi(muc) && tachKhoaBanGhi(laBanGhi(muc)).banGhi;
 	if (bg ? hs.ban_ghi !== bg : hs.trang !== `src/content/docs/${muc}.md`)
 		loi.push(bg ? `ban_ghi phải là "${bg}"` : `trang phải là "src/content/docs/${muc}.md"`);
+	// Khóa từng phần (D6-L1): chỉ xét lần đã ghi khóa ấy (lần có truong trùng các trường của khóa; chưa có thì lần cuối, như
+	// lúc khóa) và các nhận định chạm trường đã khóa (nhận định không ghi truong: vẫn xét). Lần kiểm định mới cho trường chưa
+	// khóa (lô sau thêm bằng mau, đang chờ lượt 2) không làm khóa cũ thành "hồ sơ chưa đủ"; khóa cả bản ghi thì xét hết.
+	const truongKhoa = bg ? tachKhoaBanGhi(laBanGhi(muc)).truong : null;
+	const cungTruong = (l) => Array.isArray(l?.truong) && l.truong.length === truongKhoa.length && l.truong.every((t) => truongKhoa.includes(t));
+	const lanXet = Array.isArray(hs.lan) ? (truongKhoa && hs.lan.findLast(cungTruong)) || hs.lan.at(-1) : null;
+	const xet = (n) => !truongKhoa || !Array.isArray(n?.truong) || n.truong.some((t) => truongKhoa.includes(t));
 	if (!Array.isArray(hs.lan) || !hs.lan.length) loi.push('thiếu lan (các lần kiểm định)');
-	else for (const k of NGUOI) if (!hs.lan.at(-1).nguoi?.[k]) loi.push(`lần kiểm định cuối: thiếu nguoi.${k}`);
+	else for (const k of NGUOI) if (!lanXet.nguoi?.[k]) loi.push(`lần kiểm định ${lanXet === hs.lan.at(-1) ? 'cuối' : lanXet.so ?? ''}: thiếu nguoi.${k}`);
 	// tầng lấy từ src/data/trang.yml (mức kiểm theo tầng): hồ sơ ghi khác thì sửa hồ sơ, không tin hồ sơ
 	const tang = bg ? null : tangTrong(muc, goc);
 	if (!bg && (hs.tang ?? null) !== tang) loi.push(`hồ sơ ghi tang: ${hs.tang ?? null} mà src/data/trang.yml ghi ${tang}: sửa tang trong hồ sơ`);
@@ -119,7 +126,8 @@ export function loiHoSo(hs, muc, goc) {
 	// lượt 2 chỉ kiểm mẫu ở trang Đọc thêm (mọi nhận định) và ở lời khuyên tập; câu về chính site không qua lượt 2
 	const motLuot = tang === 'ngoai-vi';
 	const mauLuot2 = (n) => motLuot || n.loai === 'khuyen-tap' || n.loai === VE_SITE;
-	for (const n of hs.nhan_dinh ?? []) {
+	const nhanDinh = (hs.nhan_dinh ?? []).filter(xet);
+	for (const n of nhanDinh) {
 		const ten = `nhận định ${n.id ?? '(không id)'}`;
 		if (!n.id || !n.cau) loi.push(`${ten}: thiếu id hay cau`);
 		if (!KET_QUA.includes(n.ket_qua)) loi.push(`${ten}: ket_qua phải là ${KET_QUA.join(', ')}`);
@@ -143,7 +151,7 @@ export function loiHoSo(hs, muc, goc) {
 			loi.push(`${ten}: lượt 2 cho "${n.luot_2}" mà kết quả "dung": ghi_chu cách đã giải quyết`);
 	}
 	// lời khuyên tập (trang không phải Đọc thêm): lượt 2 kiểm mẫu MAU_KHUYEN_TAP câu; mẫu có câu sai thì kiểm hết các câu ấy
-	const khuyen = motLuot ? [] : (hs.nhan_dinh ?? []).filter((n) => n.loai === 'khuyen-tap');
+	const khuyen = motLuot ? [] : nhanDinh.filter((n) => n.loai === 'khuyen-tap');
 	if (khuyen.length) {
 		const co = khuyen.filter((n) => LUOT_2.includes(n.luot_2)).length;
 		const sai = khuyen.some((n) => n.luot_2 === 'sai');
