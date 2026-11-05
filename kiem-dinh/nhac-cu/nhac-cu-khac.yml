@@ -1,0 +1,671 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-cu/nhac-cu-khac
+trang: src/content/docs/nhac-cu/nhac-cu-khac.md
+nguon_cu: ../opus-zero/docs/nhac-cu/nhac-cu-khac.md
+tang: ngoai-vi
+lan:
+- so: 1
+  ngay: 2026-11-05
+  nhanh: moi/d8-l2
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Sonnet 5.5 (D8-L2 lượt 1, phần 2/2)
+    luot_2: null
+    review: null
+    kiem_mau: null
+ghi_chu: 'Trang Đọc thêm (ngoại vi), không có khối abc; có hình ranges-voices (hình tĩnh). HÌNH KHÁC TRANG CŨ (người giao ghi doi_chu): hình ranges-voices đã sửa ở D5 so với site cũ (cũ: sáu giọng, tên nốt kiểu C4, âm vực hơi khác; mới: bảy giọng, thêm Countertenor, tên nốt Việt Đô4…, âm vực mới theo COD và OnMusic). Nguồn mở được ngày 05/11/2026: COD (Encyclopedia.com), Baker (Encyclopedia.com), IMSLP, Bate Collection (Oxford), Hall (The Diapason 2013), NATS Journal of Singing 2023, Chorus America. Chưa quyết: h5 (âm vực countertenor Sol3–Sol5, null), và vài nguồn bậc 3 cho c5. Chữ đã sửa: câu mở đầu và câu âm vực (i2, i3: trang dan-nhac không có giọng hát, organ, harpsichord), giọng hát (v1, v11, v12), organ (o1–o6, o13), harpsichord (c1, c5, c11). doi_chu viết tay từ khối của dist/ cũ (dist chưa build lại sau sửa): người giao chạy node tools/chuyen/so-chu.mjs nhac-cu/nhac-cu-khac --doi-chu sau khi build, và ghi thêm doi_chu của hình ranges-voices theo mô tả trên. Thuật ngữ trang dùng chưa có bản ghi ở src/data/thuat-ngu.yml (cho D3-L5; không tạo): manual, pedalboard, stop (đổi âm sắc organ), harpsichord, organ, contralto/alto, countertenor, toccata, fugue.'
+nguon:
+- id: cod-soprano
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Soprano (mục của Kennedy và Bourne) (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/literature-and-arts/performing-arts/music-theory-forms-and-instruments/soprano
+- id: cod-mezzo
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Mezzo-soprano (mục của Kennedy và Bourne) (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/literature-and-arts/performing-arts/music-theory-forms-and-instruments/mezzo-soprano
+- id: cod-contralto
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Contralto (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/contralto
+- id: cod-alto
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Alto (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/alto
+- id: cod-countertenor
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Countertenor (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/literature-and-arts/performing-arts/music-theory-forms-and-instruments/countertenor
+- id: cod-tenor
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Tenor (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/tenor
+- id: cod-baritone
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Baritone (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/baritone
+- id: onmusic-bass
+  bac: 2
+  ten: 'OnMusic Dictionary (Connect For Education), mục Bass: "lowest or deepest male voice usually of a range of F2 … to the E4 above middle C" (truy cập 05/11/2026)'
+  link: https://dictionary.onmusic.org/terms/353-bass
+- id: cod-oratorio
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Oratorio (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/oratorio
+- id: cod-mass
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Mass (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/mass
+- id: cod-lied
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Lied (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/lied
+- id: imslp-zauberflote
+  bac: 1
+  ten: 'IMSLP, Die Zauberflöte, K.620: Singspiel/opera 1791; có mục Der Hölle Rache (Act II, No.14) (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Die_Zauberfl%C3%B6te,_K.620_(Mozart,_Wolfgang_Amadeus)
+- id: imslp-requiem
+  bac: 1
+  ten: 'IMSLP, Requiem, K.626: cho 4 giọng, hợp xướng và dàn nhạc, 1791 (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Requiem,_K.626_(Mozart,_Wolfgang_Amadeus)
+- id: imslp-erlkonig
+  bac: 1
+  ten: 'IMSLP, Erlkönig, D.328: Lied cho giọng và piano, 1815 (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Erlk%C3%B6nig,_D.328_(Schubert,_Franz)
+- id: imslp-winterreise
+  bac: 1
+  ten: 'IMSLP, Winterreise, D.911: 24 ca khúc cho giọng và piano, 1827 (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Winterreise,_D.911_(Op.89)_(Schubert,_Franz)
+- id: cod-habanera
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Habanera (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/habanera
+- id: imslp-carmen
+  bac: 1
+  ten: 'IMSLP, Carmen: opéra comique, 1873–74 (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Carmen_(Bizet,_Georges)
+- id: imslp-tallis
+  bac: 1
+  ten: 'IMSLP, Spem in alium nunquam habui: 8 hợp xướng, 40 bè, khoảng 1570 (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Spem_in_alium_nunquam_habui_(Tallis,_Thomas)
+- id: cod-fischer
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Fischer-Dieskau, Dietrich (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/fischer-dieskau-dietrich
+- id: cod-norman
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Norman, Jessye (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/norman-jessye
+- id: cod-bartoli
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Bartoli, Cecilia (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/bartoli-cecilia
+- id: cod-pavarotti
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Pavarotti, Luciano (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/pavarotti-luciano
+- id: kaufmann-paris
+  bac: 2
+  ten: Opéra national de Paris, Jonas Kaufmann (trang nghệ sĩ) (truy cập 05/11/2026)
+  link: https://operadeparis.fr/en/artists/jonas-kaufmann
+- id: sixteen
+  bac: 2
+  ten: The Sixteen, About us (truy cập 05/11/2026)
+  link: https://www.thesixteen.com/about-us/
+- id: monteverdi-choir
+  bac: 2
+  ten: Monteverdi Choir & Orchestras, About us (truy cập 05/11/2026)
+  link: https://monteverdi.co.uk/about-us/
+- id: nats-vocal
+  bac: 2
+  ten: Martha, Vontela, Sataloff, "An Introduction to Vocal Fold Masses", Journal of Singing 79(3), 2023, tr. 339–346 (NATS) (truy cập 05/11/2026)
+  link: https://www.nats.org/_Library/JOS_On_Point/JOS-079-3-2023-339.pdf
+- id: chorus-sight
+  bac: 2
+  ten: Chorus America, How Important is Sight-Singing? (truy cập 05/11/2026)
+  link: https://chorusamerica.org/singers/how-important-sight-singing
+- id: cod-organ
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Organ (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/organ
+- id: cod-stop
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Stop (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/stop
+- id: cod-manual
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Manual (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/manual
+- id: cod-pedalboard
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Pedal-board (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/pedal-board
+- id: cod-bach
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Bach, Johann Sebastian (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/bach-johann-sebastian
+- id: imslp-bwv565
+  bac: 1
+  ten: 'IMSLP, Toccata and Fugue in D minor, BWV 565: organ; năm sáng tác ghi "1708 ?" (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Toccata_and_Fugue_in_D_minor,_BWV_565_(Bach,_Johann_Sebastian)
+- id: hall-diapason
+  bac: 2
+  ten: 'Jonathan B. Hall, "BWV 565: Composer Found?", The Diapason, tháng 1/2013, tr. 24 (truy cập 05/11/2026)'
+  link: https://media.thediapason.com/s3fs-public/24_Jan 2013 Hall BWV.pdf
+- id: imslp-bwv578
+  bac: 1
+  ten: 'IMSLP, Fugue in G minor, BWV 578: cho organ, khoảng 1707? (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Fugue_in_G_minor,_BWV_578_(Bach,_Johann_Sebastian)
+- id: imslp-widor5
+  bac: 1
+  ten: 'IMSLP, Organ Symphony No.5, Op.42 No.1: cho organ; chương 5 là Toccata (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Organ_Symphony_No.5,_Op.42_No.1_(Widor,_Charles-Marie)
+- id: cod-widor
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Widor, Charles-Marie (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/widor-charles-marie-jean-albert
+- id: cod-saintsaens
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Saint-Saëns, Camille (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/saint-saens-charles-camille
+- id: imslp-saintsaens3
+  bac: 1
+  ten: 'IMSLP, Symphony No.3, Op.78: cho organ và dàn nhạc, 1886, 2 chương (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Symphony_No.3,_Op.78_(Saint-Sa%C3%ABns,_Camille)
+- id: cod-nativite
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), La Nativité du Seigneur (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/nativite-du-seigneur-la
+- id: imslp-messiaen-list
+  bac: 1
+  ten: 'IMSLP, List of works by Olivier Messiaen: mục Keyboard, Organ: La Nativité du Seigneur (1935), chín bản (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/List_of_works_by_Olivier_Messiaen
+- id: bate
+  bac: 2
+  ten: Bate Collection, University of Oxford, The Harpsichord (truy cập 05/11/2026)
+  link: https://bate.site.ox.ac.uk/harpsichord
+- id: cod-scarlatti
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Scarlatti, Domenico (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/scarlatti-giuseppe-domenico
+- id: imslp-scarlatti-cat
+  bac: 1
+  ten: 'IMSLP, Category: Scarlatti, Domenico: có mục Keyboard Sonatas, K.1–555 theo Kirkpatrick (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Category:Scarlatti,_Domenico
+- id: imslp-scarlatti-k141
+  bac: 1
+  ten: 'IMSLP, Keyboard Sonata in D minor, K.141: sonata phím, Allegro (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Keyboard_Sonata_in_D_minor,_K.141_(Scarlatti,_Domenico)
+- id: wiki-scarlatti
+  bac: 3
+  ten: Wikipedia, Domenico Scarlatti (truy cập 05/11/2026)
+  link: https://en.wikipedia.org/wiki/Domenico_Scarlatti
+- id: cod-goldberg
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Goldberg Variations (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/goldberg-variations
+- id: imslp-italian
+  bac: 1
+  ten: 'IMSLP, Italian Concerto, BWV 971: cho harpsichord, 1733–35 (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Italian_Concerto_BWV_971_(Bach,_Johann_Sebastian)
+- id: cod-italian
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Italian Concerto (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/italian-concerto
+- id: imslp-rameau
+  bac: 1
+  ten: 'IMSLP, Pièces de clavecin: trang tác phẩm Pièces de clavecin của Rameau (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Pi%C3%A8ces_de_clavecin_(Rameau,_Jean-Philippe)
+- id: cod-rameau
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Rameau, Jean-Philippe (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/rameau-jean-philippe
+- id: imslp-barricades
+  bac: 1
+  ten: 'IMSLP, Les barricades mystérieuses: cho harpsichord, 1717 (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Les_barricades_myst%C3%A9rieuses_(Couperin,_Fran%C3%A7ois)
+- id: cod-couperin
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Couperin, François (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/couperin-francois
+- id: cod-leonhardt
+  bac: 2
+  ten: The Columbia Encyclopedia, 6th ed. (qua Encyclopedia.com), Leonhardt, Gustav (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/leonhardt-gustav
+- id: cod-pinnock
+  bac: 2
+  ten: Baker's Biographical Dictionary of Musicians (qua Encyclopedia.com), Pinnock, Trevor (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/pinnock-trevor-david
+- id: esfahani-dg
+  bac: 2
+  ten: Deutsche Grammophon, Mahan Esfahani, Biography (truy cập 05/11/2026)
+  link: https://www.deutschegrammophon.com/en/artists/mahan-esfahani/biography
+- id: rondeau-ls
+  bac: 2
+  ten: Letní slavnosti staré hudby (Praha), Jean Rondeau harpsichord (truy cập 05/11/2026)
+  link: https://letnislavnosti.cz/en/artist/jean-rondeau/
+nhan_dinh:
+- id: n1
+  cau: Trang nói piano (mục Piano), violin, guitar, cello, sáo, clarinet, trumpet có trang riêng; giọng hát, organ, harpsichord là ba "giọng nói" quan trọng khác.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Kiểm: src/content/docs/nhac-cu/ có violin.md, guitar.md, cello.md, sao.md, clarinet.md, trumpet.md; piano/index.md có (mục Piano); link /opus/piano/ và /opus/nhac-cu/<tên>/ đúng. "Ba giọng nói quan trọng khác" là cách nói của trang, ba mục Giọng hát, Organ, Harpsichord đúng là ba mục trang.'
+- id: n2
+  cau: Xem thêm vị trí của các nhạc cụ khác trong dàn nhạc giao hưởng.
+  loai: ve-site
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "Xem thêm vị trí của chúng trong dàn nhạc giao hưởng" ("chúng" = giọng hát, organ, harpsichord). Kiểm nhac-cu/dan-nhac.md: sơ đồ chỗ ngồi (hình seating) và âm vực (ranges-orchestra) chỉ có nhạc cụ dàn nhạc; không có giọng hát, organ, harpsichord (chỉ piano trong thang âm vực). Đổi thành "các nhạc cụ khác". Người giao ghi doi_chu.'
+- id: n3
+  cau: Âm vực của các nhạc cụ dàn nhạc được so sánh ở trang Dàn nhạc giao hưởng (mục Âm vực các nhạc cụ); âm vực các giọng hát ở hình bên dưới.
+  loai: ve-site
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "Âm vực của các nhạc cụ trong trang này và trong dàn nhạc được so sánh ở trang Dàn nhạc giao hưởng" (sai: hình ranges-orchestra không có giọng hát, organ, harpsichord). Kiểm: dan-nhac.md có mục "Âm vực các nhạc cụ" (id am-vuc-cac-nhac-cu, có trong dist/nhac-cu/dan-nhac/index.html); hình ranges-voices có trong trang này. Đã sửa chữ.'
+- id: n4
+  cau: 'Hình ranges-voices (chữ trong hình): bảy loại giọng gồm soprano, mezzo-soprano, contralto (alto), countertenor, tenor, baritone, bass.'
+  loai: dinh-nghia
+  nguon:
+  - cod-soprano
+  - cod-mezzo
+  - cod-contralto
+  - cod-alto
+  - cod-countertenor
+  - cod-tenor
+  - cod-baritone
+  - onmusic-bass
+  ket_qua: dung
+  ghi_chu: 'Mỗi loại có mục ở COD (soprano, mezzo-soprano, contralto, alto: "Low-register female v., usually referred to as contralto", countertenor, tenor, baritone); bass: OnMusic (COD, Bass: "Lowest male voice—see basso"). Hình khác trang cũ: xem ghi_chu hồ sơ.'
+- id: n5
+  cau: 'Hình: âm vực thường dùng của soprano là Đô4–Đô6.'
+  loai: so-lieu
+  nguon:
+  - cod-soprano
+  ket_qua: dung
+  ghi_chu: 'COD, Soprano: "Normal female range is from middle C upwards for 2 octaves" (C4–C6).'
+- id: n6
+  cau: 'Hình: âm vực của mezzo-soprano là Si3–Si5.'
+  loai: so-lieu
+  nguon:
+  - cod-mezzo
+  ket_qua: dung
+  ghi_chu: 'COD, Mezzo-soprano: "Vocal range from B below middle C upwards for 2 octaves" (B3–B5).'
+- id: n7
+  cau: 'Hình: âm vực của contralto (alto) là Sol3–Sol5.'
+  loai: so-lieu
+  nguon:
+  - cod-contralto
+  - cod-alto
+  ket_qua: dung
+  ghi_chu: 'COD, Contralto: "normal range g–g″" (G3–G5, theo ký hiệu COD g = G dưới Đô giữa, g″ = G hai quãng tám trên). COD, Alto: giọng nữ trầm "usually referred to as contralto".'
+- id: n8
+  cau: 'Hình: âm vực của countertenor là Sol3–Sol5, tương đương contralto.'
+  loai: so-lieu
+  nguon:
+  - cod-countertenor
+  ket_qua: null
+  ghi_chu: 'chưa chắc: COD, Countertenor mô tả "High male v." và nói họ hát lại vai Baroque "long since assigned to conts. or tens." nhưng không ghi âm vực bằng số. Tìm thấy Britannica (không mở được, Cloudflare) định nghĩa countertenor là giọng nam có âm vực alto; chưa có nguồn mở được ghi Sol3–Sol5. Người giao quyết: tìm nguồn (Grove, Britannica qua Wayback) hay bỏ hai đầu mút khỏi hình (file hình: không được sửa ở lô này).'
+- id: n9
+  cau: 'Hình: âm vực của tenor là Đô3–Đô5.'
+  loai: so-lieu
+  nguon:
+  - cod-tenor
+  ket_qua: dung
+  ghi_chu: 'COD, Tenor: "Range from C below middle C, upwards for 2 octaves" (C3–C5).'
+- id: n10
+  cau: 'Hình: âm vực của baritone là La2–Fa♯4.'
+  loai: so-lieu
+  nguon:
+  - cod-baritone
+  ket_qua: dung
+  ghi_chu: 'COD, Baritone: "Normal range from A to f♯′" (A2–F♯4; COD ghi thêm baritone Ý và Pháp có khi lên a♭′).'
+- id: n11
+  cau: 'Hình: âm vực của bass là Fa2–Mi4.'
+  loai: so-lieu
+  nguon:
+  - onmusic-bass
+  ket_qua: dung
+  ghi_chu: 'OnMusic Dictionary, Bass: "usually of a range of F2 just below the bass clef to the E4 above middle C".'
+- id: n12
+  cau: 'Hình: chú thích "gần đúng; giọng chuyên nghiệp có thể rộng hơn" và "Đường nét đứt là Đô giữa"; trục ghi tên nốt Đô2…Đô6, Đô4 (Đô giữa).'
+  loai: dinh-nghia
+  nguon:
+  - cod-soprano
+  - cod-mezzo
+  ket_qua: dung
+  ghi_chu: 'Đô giữa = Đô4: COD, Soprano mô tả khoảng "from middle C"; khoảng của soprano là C4–C6 khớp. Phần "gần đúng, có thể rộng hơn" là rào đón, các mục COD ghi "normal range"; COD baritone: "in It. and Fr. opera bars. are sometimes required to sing up to a♭′" (rộng hơn bình thường). Chữ chú thích hình về countertenor ("có khi cao tới mezzo-soprano hay soprano"): chưa chắc, như h5 (COD ghi "High male v." và vai Baroque thuộc contralto hay tenor).'
+- id: n13
+  cau: 'Giọng hát có mặt trong nhiều thể loại nhạc cổ điển: opera, oratorio, thánh lễ, ca khúc nghệ thuật, hợp xướng.'
+  loai: dinh-nghia
+  nguon:
+  - cod-oratorio
+  - cod-mass
+  - cod-lied
+  - imslp-zauberflote
+  - imslp-requiem
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "Giọng hát là nhạc cụ đầu tiên và vẫn là trung tâm của rất nhiều nhạc cổ điển: …". "Nhạc cụ đầu tiên" không kiểm được và "trung tâm của rất nhiều" tuyệt đối: bỏ, giữ danh sách thể loại. COD, Oratorio: "setting of a religious lib. for solo singers, ch., and orch."; Mass: thánh lễ Công giáo có hát; Lied: "distinctive type of Ger. solo vocal comp."; IMSLP: Zauberflöte (opera, K.620), Requiem K.626 (4 giọng, hợp xướng, dàn nhạc).'
+- id: n14
+  cau: Các loại giọng (soprano, mezzo, alto, tenor, baritone, bass) được giới thiệu ở trang Nhập môn opera.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Kiểm: lich-su/opera.md có mục "Các loại giọng" gồm soprano, mezzo-soprano, contralto (còn gọi alto), countertenor, tenor, baritone, bass; link /opus/lich-su/opera/ đúng.'
+- id: n15
+  cau: Schubert, Erlkönig và tập ca khúc Winterreise.
+  loai: ten
+  nguon:
+  - imslp-erlkonig
+  - imslp-winterreise
+  - cod-lied
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Erlkönig D.328 (Lied cho giọng và piano, 1815); Winterreise D.911, 24 ca khúc cho giọng và piano, 1827. Link hướng dẫn nghe nghe-nhac/schubert-erlkonig chưa chuyển: "sắp có", đã ghi ở v10.'
+- id: n16
+  cau: Mozart, aria Nữ hoàng bóng đêm (trong Die Zauberflöte, K. 620).
+  loai: ten
+  nguon:
+  - imslp-zauberflote
+  ket_qua: dung
+  ghi_chu: 'IMSLP, Die Zauberflöte K.620 (1791): mục "Der Hölle Rache kocht in meinem Herzen (Act II, No.14)". Trang IMSLP không ghi người hát là Nữ hoàng bóng đêm; vai này và aria này là cách gọi chuẩn, chưa có nguồn bậc 1–2 đã mở nói thẳng ở đây.'
+- id: n17
+  cau: Bizet, Habanera (từ opera Carmen).
+  loai: ten
+  nguon:
+  - cod-habanera
+  - imslp-carmen
+  ket_qua: dung
+  ghi_chu: 'COD, Habanera: "the habanera in Bizet''s opera Carmen (‘L''Amour est un oiseau rebelle’)"; IMSLP: Carmen, 1873–74.'
+- id: n18
+  cau: Mozart, Requiem cho hợp xướng.
+  loai: ten
+  nguon:
+  - imslp-requiem
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Requiem K.626, 1791, cho 4 giọng, hợp xướng và dàn nhạc.'
+- id: n19
+  cau: Tallis, Spem in alium có 40 bè.
+  loai: so-lieu
+  nguon:
+  - imslp-tallis
+  ket_qua: dung
+  ghi_chu: 'IMSLP: 8 hợp xướng, 40 bè (mỗi hợp xướng 5 bè), khoảng 1570. Câu "xem Phục hưng": ve-site (v10).'
+- id: n20
+  cau: Dietrich Fischer-Dieskau (ca khúc), Jessye Norman, Cecilia Bartoli, Luciano Pavarotti, Jonas Kaufmann là ca sĩ cổ điển.
+  loai: ten
+  nguon:
+  - cod-fischer
+  - cod-norman
+  - cod-bartoli
+  - cod-pavarotti
+  - kaufmann-paris
+  ket_qua: dung
+  ghi_chu: 'COD: Fischer-Dieskau "Ger. baritone … outstanding in Lieder"; Norman "Amer. soprano … Noted Lieder singer"; Bartoli "Italian mezzo-soprano"; Pavarotti "It. tenor"; Opéra de Paris: Jonas Kaufmann "Tenor … performed over seventy roles on the world''s leading opera stages".'
+- id: n21
+  cau: The Sixteen và Monteverdi Choir là dàn hợp xướng.
+  loai: ten
+  nguon:
+  - sixteen
+  - monteverdi-choir
+  ket_qua: dung
+  ghi_chu: 'The Sixteen: "a performing arts charity which exists to take beautiful and inspiring choral music" (trang không ghi năm thành lập); Monteverdi Choir: trang nói "What began in 1964 became a new artistic standard", có Choir Director.'
+- id: n22
+  cau: Link tới hướng dẫn nghe Schubert (Erlkönig), Mozart (Nữ hoàng bóng đêm), Bizet (Habanera), Mozart (Requiem) và tới Phục hưng (Spem in alium, 40 bè).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Kiểm src/data/trang.yml: nghe-nhac/schubert-erlkonig, mozart-nu-hoang-bong-dem, bizet-habanera, mozart-requiem có trong kế hoạch, chưa có trong src/content/docs/ (chưa chuyển): link hiện "sắp có", giữ địa chỉ /opus/nghe-nhac/<tên>/ đúng với trang cũ. lich-su/thoi-ky/phuc-hung.md có trong bản build và nhắc "Tallis, Spem in alium (40 bè)".'
+- id: n23
+  cau: 'Nên học với giáo viên thanh nhạc: dùng giọng sai kỹ thuật có thể làm tổn thương dây thanh.'
+  loai: quy-tac
+  nguon:
+  - nats-vocal
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "luôn cần giáo viên thanh nhạc: hát sai kỹ thuật có thể làm tổn thương dây thanh". Martha, Vontela, Sataloff (Journal of Singing, NATS, 2023): "Voice use demands (overuse) and improper vocal technique (misuse) are central to the trauma and pathogenesis of most vocal fold masses in professional voice users." Nguồn nói về người dùng giọng chuyên nghiệp; "có thể" giữ nguyên, "luôn cần" (tuyệt đối) thành "nên". Câu dính sức khỏe: xếp quy-tac, cần lượt 2.'
+- id: n24
+  cau: 'Một cách bắt đầu là tham gia một dàn hợp xướng nghiệp dư: có dàn nhận người mới, có nơi mở cả lớp ký âm và đọc nhạc nhập môn.'
+  loai: dinh-nghia
+  nguon:
+  - chorus-sight
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "Cách bắt đầu dễ nhất là tham gia một dàn hợp xướng nghiệp dư; bạn sẽ học đọc nhạc, nghe hòa âm và hát cùng người khác". Chorus America: một người chỉ huy ở Atlanta có "one … open-enrollment" và dạy "an eight-week class … fundamentals of music notation" (sau đó học viên đọc được hòa âm bốn bè đơn giản); bài viết không nói mọi dàn hợp xướng đều vậy. "Dễ nhất" và "bạn sẽ học đọc nhạc" tuyệt đối: đổi thành "một cách", "có dàn", "có nơi".'
+- id: n25
+  cau: Ở dàn hợp xướng bạn nghe hòa âm và hát cùng người khác.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+  ghi_chu: Mô tả chung, đi kèm v12.
+- id: n26
+  cau: Trang Thị tấu một bè và Luyện tai trên site giúp ích trực tiếp cho người học hát.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Kiểm: luyen-tap/thi-tau.md (tiêu đề "Thị tấu một bè", công cụ sight: tạo giai điệu 4 ô nhịp để đọc, hát hoặc chơi) và luyen-tai/index.md (luyện nhận quãng, hợp âm, gam, tiết tấu) có trong bản build; link /opus/luyen-tap/thi-tau/ và /opus/luyen-tai/ đúng. "Giúp ích trực tiếp" là nhận xét của trang; trang Thị tấu nói "đọc và hát hoặc chơi".'
+- id: n27
+  cau: Organ ống thường được gọi là "vua của các nhạc cụ" vì kích thước lớn.
+  loai: dinh-nghia
+  nguon:
+  - cod-organ
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "Organ ống là nhạc cụ lớn nhất và phức tạp nhất". COD, Organ: "Often known as ‘the king of instruments’ because of its normal large size, although it is made in various sizes". "Phức tạp nhất" không nguồn; "lớn nhất" không đúng cho mọi organ (COD: có nhiều cỡ).'
+- id: n28
+  cau: Organ gồm nhiều hàng ống, mỗi ống một cao độ; hàng trăm đến hàng nghìn ống, mỗi ống một cao độ và âm sắc.
+  loai: so-lieu
+  nguon:
+  - cod-organ
+  - cod-stop
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "hàng trăm đến hàng nghìn ống, mỗi ống một cao độ và âm sắc". COD, Organ: "A row of pipes, graduated as to size (and hence as to pitch)"; mỗi hàng ống là một "register or stop" ("organ of ‘20 stops’, of ‘100 stops’"). Không nguồn nào ghi số ống ("hàng trăm đến hàng nghìn") và "mỗi ống một âm sắc" (âm sắc tùy hàng): bỏ số lượng, giữ "mỗi ống một cao độ". Câu mới: "không khí thổi qua nhiều hàng ống, mỗi ống một cao độ".'
+- id: n29
+  cau: Organ có một hay nhiều tầng phím tay (manual) và một bàn phím chân (pedalboard).
+  loai: dinh-nghia
+  nguon:
+  - cod-organ
+  - cod-manual
+  - cod-pedalboard
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "nhiều tầng phím tay". COD, Manual: "Any of the org. kbds. provided for the hands (as opposed to pedal-kbd.)"; Organ: "All orgs. nowadays possess both types of kbd."; số manual "2, 3, or 4 (occasionally more)" ở organ có nhiều stop. Đổi thành "một hay nhiều" cho đúng organ nhỏ.'
+- id: n30
+  cau: Người chơi kéo các nút đổi âm sắc (stop), mỗi nút chọn một hàng ống, để đổi âm sắc và độ mạnh.
+  loai: dinh-nghia
+  nguon:
+  - cod-organ
+  - cod-stop
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "kéo các nút đổi âm sắc (stop) để chọn nhóm ống, tạo ra những âm sắc giống sáo, kèn, đàn dây hoặc rất mạnh, rất sáng". COD, Stop: "Row of pipes on org. (registers), all operated by handles or draw-stops placed near the player"; Organ: "robust tone" (great organ), "softer stops" (choir organ). "Giống sáo, kèn, đàn dây" và "rất sáng" không có ở COD: đổi thành "âm sắc và độ mạnh".'
+- id: n31
+  cau: Organ gắn chặt với nhà thờ.
+  loai: lich-su
+  nguon:
+  - cod-organ
+  ket_qua: dung
+  ghi_chu: 'COD, Organ: nói về "‘great’ church org.", "large church orgs.", choir organ dùng "originally in a church … for the acc. of the choral body".'
+- id: n32
+  cau: Bach từng làm nghệ sĩ organ ở nhiều nhà thờ và cung đình.
+  loai: lich-su
+  nguon:
+  - cod-bach
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "Bach, người là nghệ sĩ organ lừng danh nhất thời ông". COD, Bach: "Ger. composer and organist … Organist at Arnstadt, 1703, and then Mühlhausen, 1707 … In 1708 became organist in the Kapelle of the Duke of Saxe-Weimar". "Lừng danh nhất thời ông" (xếp hạng) không kiểm được: đổi thành điều COD xác nhận. Người giao có thể ghi thêm: trang lich-su/nha-soan-nhac (đã khóa) nói về Bach.'
+- id: n33
+  cau: Bach, Toccata và Fugue cung Rê thứ, BWV 565 (cho organ).
+  loai: danh-muc
+  nguon:
+  - imslp-bwv565
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Toccata and Fugue in D minor, BWV 565, cho organ; năm "1708 ?".'
+- id: n34
+  cau: Một số học giả nghi ngờ BWV 565 có thật là tác phẩm của Bach.
+  loai: lich-su
+  nguon:
+  - hall-diapason
+  ket_qua: dung
+  ghi_chu: 'Hall, The Diapason 1/2013: "For about thirty years, the question of the authorship of BWV 565 … has been raised civilly but persistently. Broached in 1981 by Peter Williams"; "The exhaustive study on the authenticity of 565, by Rolf Dietrich Claus, concludes that the piece is not by Bach". Hall nói cũng có ý kiến khác (tác phẩm của Bach từ thời trẻ, hay chuyển soạn từ violin); "một số học giả nghi ngờ" đúng.'
+- id: n35
+  cau: BWV 565 là bản organ nổi tiếng nhất.
+  loai: lich-su
+  nguon: []
+  ket_qua: da-bo
+  ghi_chu: 'Đã bỏ khỏi trang ("nổi tiếng nhất"): xếp hạng không kiểm được.'
+- id: n36
+  cau: Bach, Fugue cung Sol thứ, BWV 578 (cho organ).
+  loai: danh-muc
+  nguon:
+  - imslp-bwv578
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Fugue in G minor, BWV 578, cho organ, 1707?.'
+- id: n37
+  cau: Link "xem Fugue" tới trang Fugue.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Kiểm: hinh-thuc/fugue.md có trong bản build và liệt kê "Bach, Fugue cung Sol thứ, BWV 578, cho organ"; link /opus/hinh-thuc/fugue/ đúng.'
+- id: n38
+  cau: Widor, Giao hưởng cho organ số 5, Toccata.
+  loai: danh-muc
+  nguon:
+  - imslp-widor5
+  - cod-widor
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Organ Symphony No.5, Op.42 No.1, chương 5 là Toccata; COD, Widor: "Fr. organist and composer".'
+- id: n39
+  cau: Saint-Saëns, Giao hưởng số 3 "Organ".
+  loai: ten
+  nguon:
+  - cod-saintsaens
+  - imslp-saintsaens3
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "…, chương cuối". COD, Saint-Saëns: "His best sym., No.3 in C minor (the ‘Organ’)"; IMSLP: Symphony No.3, Op.78, cho organ và dàn nhạc, 1886, 2 chương. "Chương cuối" bỏ: IMSLP ghi hai chương (mỗi chương hai phần), chưa có nguồn nào mở ghi phần organ ở phần cuối.'
+- id: n40
+  cau: Messiaen, La Nativité du Seigneur (cho organ).
+  loai: ten
+  nguon:
+  - cod-nativite
+  - imslp-messiaen-list
+  ket_qua: dung
+  ghi_chu: 'COD: "9 meditations in 4 books for organ by Messiaen, comp. 1935"; IMSLP: mục Keyboard, Organ, "La Nativité du Seigneur (1935)", chín bản.'
+- id: n41
+  cau: Dây của harpsichord được gảy bởi những miếng gảy nhỏ (lông vũ, hay nhựa ở đàn hiện đại) khi bấm phím, thay vì gõ bằng búa.
+  loai: dinh-nghia
+  nguon:
+  - bate
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "những miếng gảy nhỏ (ban đầu làm từ lông vũ)". Bate Collection (Oxford): "the strings are plucked with a small plectra (quills or plastic) when the keys are pressed". Đổi "ban đầu làm từ lông vũ" thành "lông vũ, hay nhựa ở đàn hiện đại" (Bate không nói "ban đầu"). "Trông giống piano" là mô tả hình dáng, giữ.'
+- id: n42
+  cau: Người chơi harpsichord không điều chỉnh được to nhỏ bằng lực bấm.
+  loai: dinh-nghia
+  nguon:
+  - bate
+  ket_qua: dung
+  ghi_chu: 'Bate: "the volume of the sound cannot be controlled by the player''s touch".'
+- id: n43
+  cau: Harpsichord lớn có hai tầng phím và các cơ cấu đổi âm sắc để tạo tương phản.
+  loai: dinh-nghia
+  nguon:
+  - bate
+  - cod-stop
+  - cod-manual
+  ket_qua: dung
+  ghi_chu: 'Bate: "double manual harpsichord", các bộ dây "known as stops or registers" đổi âm sắc; COD, Stop: "Hpd. mechanism for similar purpose as org. stop"; COD, Manual: "Hpds. have 1st and 2nd manuals".'
+- id: n44
+  cau: Harpsichord là nhạc cụ phím chính của thời Baroque, trước khi piano thay thế.
+  loai: lich-su
+  nguon:
+  - bate
+  ket_qua: dung
+  ghi_chu: 'Bate: harpsichord "reached its peak in terms of design, craftsmanship, and musical importance" ở thế kỷ 17–18. Vế "trước khi piano thay thế" chưa có nguồn mở nói thẳng ở đây; khớp trang piano/lich-su-dan (site) và Baroque (lich-su/thoi-ky/baroque: "Harpsichord thường đệm cho dàn nhạc"; piano ra đời khoảng 1698–1700). Review nên kiểm.'
+- id: n45
+  cau: Domenico Scarlatti viết khoảng 550 sonata phím, đánh số K. 1–555 (bảng Kirkpatrick), ví dụ K. 141.
+  loai: so-lieu
+  nguon:
+  - cod-scarlatti
+  - imslp-scarlatti-cat
+  - imslp-scarlatti-k141
+  - wiki-scarlatti
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "có 555 bản". COD: "the 550 single-movt. sonatas he wrote in Sp."; IMSLP: danh mục "Keyboard Sonatas, K.1-555"; Wikipedia (bậc 3, chỉ đối chiếu): "555 keyboard sonatas", đánh số Kirkpatrick. K. 141 có trên IMSLP (Keyboard Sonata in D minor, K.141). Hai nguồn bậc 1–2 khác nhau (550 / số cuối K.555): viết "khoảng 550 bản, đánh số K. 1–555".'
+- id: n46
+  cau: Bach, Goldberg Variations viết cho harpsichord hai tầng phím.
+  loai: lich-su
+  nguon:
+  - cod-goldberg
+  ket_qua: dung
+  ghi_chu: 'COD: "30 variations on an orig. theme for 2-manual hpd., by Bach".'
+- id: n47
+  cau: Bach, Concerto Ý, BWV 971 (cho harpsichord).
+  loai: danh-muc
+  nguon:
+  - imslp-italian
+  - cod-italian
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Italian Concerto BWV 971, 1733–35, cho harpsichord; COD: "for solo hpd. with 2 manuals, pubd. in 2nd section of Klavierübung, 1735".'
+- id: n48
+  cau: Rameau, Pièces de clavecin.
+  loai: ten
+  nguon:
+  - imslp-rameau
+  - cod-rameau
+  ket_qua: dung
+  ghi_chu: 'IMSLP: trang Pièces de clavecin của Rameau; COD: Rameau "Fr. composer, harpsichordist, and organist".'
+- id: n49
+  cau: François Couperin, Les barricades mystérieuses.
+  loai: ten
+  nguon:
+  - imslp-barricades
+  - cod-couperin
+  ket_qua: dung
+  ghi_chu: 'IMSLP: cho harpsichord, 1717 (Second livre, Ordre VI, no.5); COD: Couperin "Fr. composer, harpsichordist, and organist".'
+- id: n50
+  cau: Gustav Leonhardt, Trevor Pinnock, Mahan Esfahani, Jean Rondeau là nghệ sĩ harpsichord.
+  loai: ten
+  nguon:
+  - cod-leonhardt
+  - cod-pinnock
+  - esfahani-dg
+  - rondeau-ls
+  ket_qua: dung
+  ghi_chu: 'Columbia: Leonhardt "Dutch harpsicordist, organist, and conductor"; Baker: Pinnock "outstanding English harpsichordist and conductor"; Deutsche Grammophon: Esfahani "one of the world''s leading harpsichordists"; letnislavnosti.cz: "Jean Rondeau harpsichord" (học với Blandine Verlet).'
+- id: n51
+  cau: So sánh cùng một tác phẩm Bach trên harpsichord và trên piano là một bài nghe rất thú vị.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ có "(ví dụ Glenn Gould)". Bỏ tên người: COD, Gould: "Canadian pianist … Exceptionally wide repertory, from 16th-cent. kbd. works to jazz" không nói Bach; chưa mở nguồn ghi bản thu Bach cụ thể của ông. Lời khuyên nghe giữ.'
+- id: n52
+  cau: Link "Đọc tên tác phẩm và bản thu" nói về phong cách biểu diễn lịch sử.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Kiểm: nghe-nhac/doc-ten-tac-pham có trong src/data/trang.yml, chưa chuyển ("sắp có"). Trang cũ (../opus-zero/docs/nghe-nhac/doc-ten-tac-pham.md) có đoạn về "biểu diễn theo phong cách lịch sử (HIP)" với nhạc cụ thời đó, harpsichord thay piano. Điều cần giữ khi chuyển: trang đích vẫn có đoạn về phong cách biểu diễn lịch sử.'
+- id: n53
+  cau: 'Nguồn: bản nhạc ở IMSLP; xem trang tài liệu tham khảo.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Kiểm: tai-lieu-tham-khao.md có mục IMSLP; link đúng.'
+- id: n54
+  cau: Link tới trang Bach (lich-su/nha-soan-nhac), Baroque (lich-su/thoi-ky/baroque).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Kiểm: lich-su/nha-soan-nhac.md (có mục Johann Sebastian Bach) và lich-su/thoi-ky/baroque.md có trong bản build; link đúng.'
+khuong_nhac: []
+doi_chu:
+- cu: Ngoài piano (mục Piano) và violin, guitar, cello, sáo, clarinet, trumpet, đây là ba "giọng nói" quan trọng khác của nhạc cổ điển. Xem thêm vị trí của chúng trong dàn nhạc giao hưởng.
+  moi: Ngoài piano (mục Piano) và violin, guitar, cello, sáo, clarinet, trumpet, đây là ba "giọng nói" quan trọng khác của nhạc cổ điển. Xem thêm vị trí của các nhạc cụ khác trong dàn nhạc giao hưởng.
+  ly_do: 'n2 (da-sua): giọng hát, organ, harpsichord không có trong sơ đồ và âm vực ở trang dan-nhac.'
+- cu: Âm vực của các nhạc cụ trong trang này và trong dàn nhạc được so sánh ở trang Dàn nhạc giao hưởng.
+  moi: Âm vực của các nhạc cụ dàn nhạc được so sánh ở trang Dàn nhạc giao hưởng; âm vực các giọng hát ở hình bên dưới.
+  ly_do: 'n3 (da-sua): hình ranges-orchestra ở dan-nhac không có giọng hát, organ, harpsichord.'
+- cu: 'Giọng hát là nhạc cụ đầu tiên và vẫn là trung tâm của rất nhiều nhạc cổ điển: opera, oratorio, thánh lễ, ca khúc nghệ thuật, hợp xướng. Các loại giọng (soprano, mezzo, alto, tenor, baritone, bass) được giới thiệu ở Nhập môn opera.'
+  moi: 'Giọng hát có mặt trong nhiều thể loại nhạc cổ điển: opera, oratorio, thánh lễ, ca khúc nghệ thuật, hợp xướng. Các loại giọng (soprano, mezzo, alto, tenor, baritone, bass) được giới thiệu ở Nhập môn opera.'
+  ly_do: 'n13 (da-sua): "nhạc cụ đầu tiên", "trung tâm của rất nhiều" không kiểm được.'
+- cu: 'Nếu học: luôn cần giáo viên thanh nhạc: hát sai kỹ thuật có thể làm tổn thương dây thanh. Cách bắt đầu dễ nhất là tham gia một dàn hợp xướng nghiệp dư; bạn sẽ học đọc nhạc, nghe hòa âm và hát cùng người khác. Thị tấu một bè và luyện tai trên site giúp ích trực tiếp.'
+  moi: 'Nếu học: nên học với giáo viên thanh nhạc: dùng giọng sai kỹ thuật có thể làm tổn thương dây thanh. Một cách bắt đầu là tham gia một dàn hợp xướng nghiệp dư: có dàn nhận người mới, có nơi mở cả lớp ký âm và đọc nhạc nhập môn; ở đó bạn nghe hòa âm và hát cùng người khác. Thị tấu một bè và luyện tai trên site giúp ích trực tiếp.'
+  ly_do: 'n23, n24, n25 (da-sua): sức khỏe giọng theo NATS (Martha et al. 2023), bớt tuyệt đối ("luôn", "dễ nhất", "bạn sẽ học đọc nhạc"); hợp xướng theo Chorus America.'
+- cu: 'Organ ống là nhạc cụ lớn nhất và phức tạp nhất: hàng trăm đến hàng nghìn ống, mỗi ống một cao độ và âm sắc, được điều khiển từ nhiều tầng phím tay (manual) và một bàn phím chân (pedalboard). Người chơi kéo các nút đổi âm sắc (stop) để chọn nhóm ống, tạo ra những âm sắc giống sáo, kèn, đàn dây hoặc rất mạnh, rất sáng. Organ gắn chặt với nhà thờ và với Bach, người là nghệ sĩ organ lừng danh nhất thời ông.'
+  moi: 'Organ ống thường được gọi là "vua của các nhạc cụ" vì kích thước lớn: không khí thổi qua nhiều hàng ống, mỗi ống một cao độ, được điều khiển từ một hay nhiều tầng phím tay (manual) và một bàn phím chân (pedalboard). Người chơi kéo các nút đổi âm sắc (stop), mỗi nút chọn một hàng ống, để đổi âm sắc và độ mạnh. Organ gắn chặt với nhà thờ và với Bach, người từng làm nghệ sĩ organ ở nhiều nhà thờ và cung đình.'
+  ly_do: 'n27, n28, n29, n30, n31, n32: theo COD (Organ, Stop, Manual, Bach); bỏ "lớn nhất và phức tạp nhất", "hàng trăm đến hàng nghìn ống", "âm sắc giống sáo, kèn, đàn dây", "lừng danh nhất thời ông" (không nguồn).'
+- cu: Bach, Toccata và Fugue cung Rê thứ, BWV 565 (nổi tiếng nhất, dù một số học giả nghi ngờ đây có thật là tác phẩm của Bach)
+  moi: Bach, Toccata và Fugue cung Rê thứ, BWV 565 (dù một số học giả nghi ngờ đây có thật là tác phẩm của Bach)
+  ly_do: 'n35 (da-bo): bỏ "nổi tiếng nhất" (xếp hạng); vế nghi ngờ giữ (o8).'
+- cu: Saint-Saëns, Giao hưởng số 3 "Organ", chương cuối
+  moi: Saint-Saëns, Giao hưởng số 3 "Organ"
+  ly_do: 'n39 (da-sua): bỏ "chương cuối" (IMSLP: hai chương; chưa có nguồn mở nói phần organ).'
+- cu: Harpsichord trông giống piano nhưng dây được gảy bởi những miếng gảy nhỏ (ban đầu làm từ lông vũ) thay vì gõ bằng búa. Vì vậy người chơi không điều chỉnh được to nhỏ bằng lực bấm; harpsichord lớn có hai tầng phím và các cơ cấu đổi âm sắc để tạo tương phản. Đây là nhạc cụ phím chính của thời Baroque, trước khi piano thay thế.
+  moi: Harpsichord trông giống piano nhưng dây được gảy bởi những miếng gảy nhỏ (làm từ lông vũ, hay nhựa ở đàn hiện đại) thay vì gõ bằng búa. Vì vậy người chơi không điều chỉnh được to nhỏ bằng lực bấm; harpsichord lớn có hai tầng phím và các cơ cấu đổi âm sắc để tạo tương phản. Đây là nhạc cụ phím chính của thời Baroque, trước khi piano thay thế.
+  ly_do: 'n41 (da-sua): Bate nói lông vũ hay nhựa, không nói "ban đầu".'
+- cu: Domenico Scarlatti, các sonata (có 555 bản), ví dụ K. 141
+  moi: Domenico Scarlatti, các sonata (khoảng 550 bản, đánh số K. 1–555), ví dụ K. 141
+  ly_do: 'n45 (da-sua): COD ghi 550; IMSLP có K.1–555.'
+- cu: 'Nghệ sĩ nên tìm: Gustav Leonhardt, Trevor Pinnock, Mahan Esfahani, Jean Rondeau. So sánh cùng một tác phẩm Bach trên harpsichord và trên piano (ví dụ Glenn Gould) là một bài nghe rất thú vị; xem Đọc tên tác phẩm và bản thu về phong cách biểu diễn lịch sử.'
+  moi: 'Nghệ sĩ nên tìm: Gustav Leonhardt, Trevor Pinnock, Mahan Esfahani, Jean Rondeau. So sánh cùng một tác phẩm Bach trên harpsichord và trên piano là một bài nghe rất thú vị; xem Đọc tên tác phẩm và bản thu về phong cách biểu diễn lịch sử.'
+  ly_do: 'n51 (da-sua): bỏ tên Glenn Gould (chưa kiểm được bản thu Bach của ông).'

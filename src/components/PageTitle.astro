@@ -1,7 +1,8 @@
 ---
 // Tiêu đề trang của Starlight, thêm nhãn nhóm nội dung phía trên (màu và biểu tượng của nhóm, src/nhom.mjs), để người
 // đọc nhìn là biết mình đang ở mục nào, và huy hiệu "Đã kiểm định" phía dưới khi trang đã khóa và hồ sơ có nhận định;
-// bài blog có thêm ngày đăng; trang tham chiếu có hạn có thêm dòng ngày kiểm và ngày rà lại (D8-L1).
+// bài blog có thêm ngày đăng; trang tham chiếu có hạn có thêm dòng ngày kiểm và ngày rà lại (D8-L1); trang Đọc thêm
+// (tầng ngoai-vi) có dòng "ngoài lộ trình" (D8-L2).
 import { getCollection } from 'astro:content';
 import Default from '@astrojs/starlight/components/PageTitle.astro';
 import { dongRaLai, kiemDinh, ngayViet, thangKiem } from '../kiem-dinh.mjs';
@@ -25,6 +26,9 @@ const kd = trang ? kiemDinh(trang, KHOA, hoSo) : null;
 // Trang tham chiếu có hạn: tháng kiểm (lần cuối trong lan của hồ sơ, khi đã khóa) và tháng rà lại (ra_lai của trang.yml)
 const raLai = trang ? dsTrang.get(trang)?.ra_lai : undefined;
 const chuRaLai = raLai ? dongRaLai(thangKiem(trang, KHOA, hoSo), raLai) : null;
+// Trang ngoại vi (Đọc thêm): nhắc người học rằng trang không nằm trong lộ trình các chặng
+const ngoaiVi = trang ? dsTrang.get(trang)?.tang === 'ngoai-vi' : false;
+const goc = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 // Ngày đăng của bài blog (frontmatter date, D7-L3), dưới tiêu đề
 const ngayDang = entry.data.date ? entry.data.date.toISOString().slice(0, 10) : null;
 ---
@@ -38,6 +42,13 @@ const ngayDang = entry.data.date ? entry.data.date.toISOString().slice(0, 10) : 
 	)
 }
 <Default />
+{
+	ngoaiVi && (
+		<p class="oz-ngoai-lo-trinh" data-pagefind-ignore>
+			Đọc thêm, ngoài lộ trình: không cần cho các chặng. <a href={`${goc}piano/lo-trinh/`}>Xem lộ trình piano</a>
+		</p>
+	)
+}
 {
 	ngayDang && (
 		<p class="oz-ngay-dang" data-pagefind-ignore>

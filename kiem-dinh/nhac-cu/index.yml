@@ -1,0 +1,397 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nhac-cu/index
+trang: src/content/docs/nhac-cu/index.md
+nguon_cu: ../opus-zero/docs/nhac-cu/index.md
+tang: khung
+lan:
+- so: 1
+  ngay: 2026-11-05
+  nhanh: moi/d8-l2
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Sonnet 5.5 (D8-L2 lượt 1, phần 2/2)
+    luot_2: null
+    review: null
+    kiem_mau: null
+ghi_chu: 'Trang lối vào nhóm (tầng khung). Theo chuẩn tầng khung hồ sơ không có nhận định khi chữ sinh từ dữ liệu; trang này có chữ viết tay nói về âm nhạc (bảng họ nhạc cụ, "Piano chơi cùng ai?", "Nghe dàn nhạc trong tiếng piano"), nên lập nhận định cho các câu ấy có nguồn; câu chỉ là danh sách link của site xếp ve-site. Không có khối abc. Sửa chữ: x2, x5, x7, x8, x10 (cột "Mỗi loại một trang riêng" sai: piano và harp không có trang riêng), x18, x19, x20, x22–x25 (Les Adieux: bỏ quãng 3, 5, 6 và hợp âm Đô thứ, chưa kiểm được; Scarlatti và guitar: chưa chắc, ket_qua null). Nguồn: VSL, COD, IMSLP, Wigmore Hall, Pärt Centre, wssymphony.org, Hollywood Bowl, The Listeners'' Club (bậc 3), Wikipedia (bậc 3, chỉ đối chiếu). Chưa quyết: x25. Dòng x4, x6, x7b chỉ dẫn lại các hồ sơ dan-nhac (khóa). doi_chu viết tay từ khối của dist/ cũ (dist chưa build lại sau sửa): người giao chạy node tools/chuyen/so-chu.mjs nhac-cu/index --doi-chu sau khi build để đối chiếu. Thuật ngữ trang dùng: pizzicato và legato đã có bản ghi ở src/data/thuat-ngu.yml; chưa có (cho D3-L5; không tạo bản ghi): vibrato, Lied, concerto, tam tấu piano, ngũ tấu.'
+nguon:
+- id: cod-orchestra
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Orchestra (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/orchestra
+- id: vsl-violin
+  bac: 2
+  ten: Vienna Symphonic Library, Academy, violin (truy cập 05/11/2026)
+  link: https://www.vsl.co.at/academy/strings/violin
+- id: vsl-flute
+  bac: 2
+  ten: Vienna Symphonic Library, Academy, flute (truy cập 05/11/2026)
+  link: https://www.vsl.co.at/academy/woodwinds/concert-flute
+- id: vsl-oboe
+  bac: 2
+  ten: Vienna Symphonic Library, Academy, oboe (truy cập 05/11/2026)
+  link: https://www.vsl.co.at/academy/woodwinds/oboe
+- id: vsl-clarinet
+  bac: 2
+  ten: Vienna Symphonic Library, Academy, clarinet (truy cập 05/11/2026)
+  link: https://www.vsl.co.at/academy/woodwinds/clarinet
+- id: vsl-brass
+  bac: 2
+  ten: Vienna Symphonic Library, Academy, brass (trang chung) (truy cập 05/11/2026)
+  link: https://www.vsl.co.at/academy/brass
+- id: vsl-trumpet-c
+  bac: 2
+  ten: Vienna Symphonic Library, Academy, trumpet in C (truy cập 05/11/2026)
+  link: https://www.vsl.co.at/academy/brass/trumpet-c
+- id: vsl-horn
+  bac: 2
+  ten: Vienna Symphonic Library, Academy, horn (truy cập 05/11/2026)
+  link: https://www.vsl.co.at/academy/brass/horn-f
+- id: cod-percussion
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Percussion (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/percussion
+- id: cod-concerto
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Concerto (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/concerto
+- id: imslp-mozart21
+  bac: 1
+  ten: 'IMSLP, Piano Concerto No.21, K.467: cho piano và dàn nhạc, 1785 (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Piano_Concerto_No.21,_K.467_(Mozart,_Wolfgang_Amadeus)
+- id: imslp-grieg
+  bac: 1
+  ten: 'IMSLP, Piano Concerto, Op.16: cung La thứ, cho piano và dàn nhạc (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Piano_Concerto,_Op.16_(Grieg,_Edvard)
+- id: imslp-rach2
+  bac: 1
+  ten: 'IMSLP, Piano Concerto No.2, Op.18: cung Đô thứ, 1900–01 (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Piano_Concerto_No.2,_Op.18_(Rachmaninoff,_Sergei)
+- id: imslp-rhapsody
+  bac: 1
+  ten: 'IMSLP, Rhapsody in Blue: cho piano và dàn nhạc, 1924 (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Rhapsody_in_Blue_(Gershwin,_George)
+- id: cod-chamber
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Chamber music (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/chamber-music
+- id: cod-piano-trio
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Piano trio (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/piano-trio
+- id: imslp-trout
+  bac: 1
+  ten: 'IMSLP, Piano Quintet in A major, D.667: violin, viola, cello, contrabass, piano; tên khác Trout Quintet (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Piano_Quintet_in_A_major,_D.667_(Schubert,_Franz)
+- id: cod-piano-quintet
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Piano quintet (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/piano-quintet
+- id: wigmore-erlkonig
+  bac: 2
+  ten: Wigmore Hall, Song Explorers resource pack (Schubert, Erlkönig) (truy cập 05/11/2026)
+  link: https://media.wigmore-hall.org.uk/documents/WH-Song_Explorers_resource_pack.pdf
+- id: imslp-erlkonig
+  bac: 1
+  ten: 'IMSLP, Erlkönig, D.328: Lied cho giọng và piano, 1815 (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Erlk%C3%B6nig,_D.328_(Schubert,_Franz)
+- id: cod-lied
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Lied (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/lied
+- id: part-spiegel
+  bac: 2
+  ten: Arvo Pärt Centre, Spiegel im Spiegel (truy cập 05/11/2026)
+  link: https://www.arvopart.ee/en/arvo-part/work/544/
+- id: listeners-club
+  bac: 3
+  ten: 'The Listeners'' Club, Beethoven''s "Les Adieux" Sonata: Saying Goodbye in Three Chords (truy cập 05/11/2026)'
+  link: https://thelistenersclub.com/2017/09/20/beethovens-les-adieux-sonata-saying-goodbye-in-three-chords/
+- id: imslp-pictures
+  bac: 1
+  ten: 'IMSLP, Pictures at an Exhibition: cho piano, 1874 (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Pictures_at_an_Exhibition_(Mussorgsky,_Modest)
+- id: wsso-pictures
+  bac: 2
+  ten: 'wssymphony.org, ghi chú chương trình Mussorgsky: Pictures at an Exhibition (trang không ghi tên đầy đủ của dàn nhạc) (truy cập 05/11/2026)'
+  link: https://www.wssymphony.org/program-notes/modeste-mussorgsky-pictures-at-an-exhibition/
+- id: wiki-op81a
+  bac: 3
+  ten: Wikipedia, Piano Sonata No. 26 (Beethoven) (truy cập 05/11/2026)
+  link: https://en.wikipedia.org/wiki/Piano_Sonata_No._26_(Beethoven)
+- id: imslp-op81a
+  bac: 1
+  ten: 'IMSLP, Piano Sonata No.26, Op.81a: Es-dur, 1809–10; tên khác Les Adieux/Das Lebewohl (truy cập 05/11/2026)'
+  link: https://imslp.org/wiki/Piano_Sonata_No.26,_Op.81a_(Beethoven,_Ludwig_van)
+- id: cod-scarlatti
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music (qua Encyclopedia.com), Scarlatti, Domenico (truy cập 05/11/2026)
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/scarlatti-giuseppe-domenico
+- id: wiki-scarlatti
+  bac: 3
+  ten: Wikipedia, Domenico Scarlatti (truy cập 05/11/2026)
+  link: https://en.wikipedia.org/wiki/Domenico_Scarlatti
+- id: hb-pictures
+  bac: 2
+  ten: Hollywood Bowl, Pictures at an Exhibition (musicdb) (truy cập 05/11/2026)
+  link: https://www.hollywoodbowl.com/musicdb/pieces/557/pictures-at-an-exhibition
+- id: bate
+  bac: 2
+  ten: Bate Collection, University of Oxford, The Harpsichord (truy cập 05/11/2026)
+  link: https://bate.site.ox.ac.uk/harpsichord
+nhan_dinh:
+- id: n1
+  cau: 'Site tập trung vào piano; các trang trong mục này thuộc phần nghe: giúp nhận ra tiếng từng nhạc cụ, hiểu vai trò trong dàn nhạc và khi chơi cùng piano.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Kiểm: AGENTS.md và mục trang chủ: site Opus học piano; các trang trong src/content/docs/nhac-cu/ (đầu mỗi trang có hộp "Trang này thuộc phần nghe") đúng như câu mô tả. Câu "Site này tập trung vào piano" trùng với chữ "Opus tập trung vào piano" ở các trang nhạc cụ.'
+- id: n2
+  cau: Người học piano nghe kỹ các nhạc cụ khác sẽ dễ hiểu hơn những đoạn piano gợi tiếng dây, tiếng kèn hay giọng hát.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "sẽ chơi hay hơn, vì rất nhiều đoạn piano được viết để gợi tiếng dây, tiếng kèn hay giọng hát". Bỏ "chơi hay hơn" (hứa hẹn) và "rất nhiều … được viết để" (số lượng và ý định nhà soạn nhạc không kiểm được); ví dụ có nguồn ở mục "Nghe dàn nhạc trong tiếng piano" (x16–x20). Lời khuyên nghe, không cần nguồn.'
+- id: n3
+  cau: 'Muốn học chơi piano: xem mục Piano.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Kiểm: piano/index.md có trong bản build; link /opus/piano/ đúng.'
+- id: n4
+  cau: Bộ dây của dàn nhạc gồm violin, viola, cello, contrabass.
+  loai: dinh-nghia
+  nguon:
+  - cod-orchestra
+  ket_qua: dung
+  ghi_chu: 'COD, Orchestra: dàn nhạc chia các nhóm dây, gỗ, đồng, gõ. Khớp trang dan-nhac (khóa, d3–d7: nguồn COD, VSL).'
+- id: n5
+  cau: 'Âm sắc nhóm dây: kéo vĩ liền mạch, có thể rung (vibrato), có thể gảy bằng ngón (pizzicato).'
+  loai: dinh-nghia
+  nguon:
+  - vsl-violin
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "Liền, ấm, thường có rung (vibrato); có thể gảy bằng ngón (pizzicato)". VSL, violin: "legato … one note flows into the next without a break" (kéo vĩ liền), vibrato (nhiều loại; "It was not until the 19th century that vibrato playing became widespread" nên "thường có rung" chưa đúng cho mọi thời kỳ), pizzicato "Plucking of the strings with the right hand". "Ấm" không nguồn chung cho cả họ dây: bỏ; "thường có rung" thành "có thể rung".'
+- id: n6
+  cau: Bộ gỗ gồm sáo, oboe, clarinet, bassoon.
+  loai: dinh-nghia
+  nguon:
+  - cod-orchestra
+  ket_qua: dung
+  ghi_chu: COD, Orchestra (bộ gỗ); khớp dan-nhac (khóa, d9–d13; COD, VSL).
+- id: n7
+  cau: Sáo mềm, thanh ở âm vực giữa; oboe sáng, xuyên, có chất dăm; clarinet tròn, ấm, dịu ở âm vực trầm.
+  loai: dinh-nghia
+  nguon:
+  - vsl-flute
+  - vsl-oboe
+  - vsl-clarinet
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "Sáo trong và thoáng; oboe hơi ''giọng mũi''; clarinet tròn, mềm ở âm vực trầm". VSL flute: giữa "mellow and graceful"; VSL oboe: "Clear, bright, penetrating, acerbic, keen, biting, rasping, reedy …" (không có "nasal"; khớp d11 của dan-nhac đã bỏ "hơi mũi"); VSL clarinet: âm vực trầm (chalumeau) "Darker, fuller, mellower and warmer timbre", "round". "Trong và thoáng" của sáo không nguồn: dùng mô tả VSL.'
+- id: n8
+  cau: Họ đồng gồm kèn horn, trumpet, trombone, tuba.
+  loai: dinh-nghia
+  nguon:
+  - cod-orchestra
+  - vsl-brass
+  ket_qua: dung
+  ghi_chu: COD, Orchestra (bộ đồng); khớp dan-nhac (khóa, d14–d17; VSL, brass).
+- id: n9
+  cau: Trumpet sáng, vang; horn ấm và dịu hơn.
+  loai: dinh-nghia
+  nguon:
+  - vsl-trumpet-c
+  - vsl-horn
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "Sáng, vang xa; horn tròn và ấm hơn". VSL trumpet: "metallic, bright … powerful"; VSL horn: "Full, warm, velvety, clear, distant, mellow, metallic" và "mellow and romantic euphony … contrasts so sharply with the strident metallic quality of the trumpet"; VSL không dùng "round" cho horn, và không nói "vang xa": đổi "vang xa" thành "vang", "tròn và ấm hơn" thành "ấm và dịu hơn". Khớp dan-nhac d14.'
+- id: n10
+  cau: Họ gõ gồm timpani, trống, chũm chọe, chuông; timpani có cao độ.
+  loai: dinh-nghia
+  nguon:
+  - cod-percussion
+  ket_qua: dung
+  ghi_chu: 'COD, Percussion: nhạc cụ gõ có cao độ xác định "definite pitch—kettledrum, tubular bells, …", không cao độ "triangle, gong, castanet…"; timpani = kettledrum (COD, Timpani: "See drum"). Chữ "Nhịp và màu sắc" là mô tả chung, bỏ qua.'
+- id: n11
+  cau: Họ phím, gảy và giọng gồm piano, harpsichord, organ, harp, guitar, giọng hát; mỗi loại một âm sắc riêng (xem các trang ở cột bên).
+  loai: ve-site
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "Mỗi loại một trang riêng" (cột âm sắc). Sai: piano ở mục Piano và harp (đàn hạc) chỉ có ở trang dan-nhac, không có trang riêng; chỉ guitar có trang riêng, giọng hát, organ, harpsichord chung một trang (nhac-cu-khac). Đổi chữ trong cột này thành "Mỗi loại một âm sắc riêng (xem các trang ở cột bên)". Họ nhạc cụ (phím, gảy, giọng) là cách chia của trang. Người giao ghi doi_chu.'
+- id: n12
+  cau: 'Cột Trang trong bảng: link tới Violin, Cello, Sáo, Clarinet, Trumpet, Dàn nhạc giao hưởng, Guitar cổ điển, Giọng hát organ harpsichord.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Kiểm: violin.md, cello.md, sao.md, clarinet.md, trumpet.md, dan-nhac.md, guitar.md, nhac-cu-khac.md đều có trong src/content/docs/nhac-cu/; link đúng địa chỉ.'
+- id: n13
+  cau: Sơ đồ chỗ ngồi và âm vực từng nhạc cụ so với bàn phím piano có ở trang Dàn nhạc giao hưởng.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Kiểm: dan-nhac.md có mục "Sơ đồ chỗ ngồi thường gặp" (hình seating) và "Âm vực các nhạc cụ" ("So với bàn phím piano", hình ranges-orchestra).'
+- id: n14
+  cau: 'Concerto: piano đối thoại với cả dàn nhạc.'
+  loai: dinh-nghia
+  nguon:
+  - cod-concerto
+  ket_qua: dung
+  ghi_chu: 'COD, Concerto: "A work in which a solo instr(s). is contrasted and blended with the orch." ("đối thoại" là cách nói của trang; hinh-thuc/concerto cũng nói "đối đáp").'
+- id: n15
+  cau: Mozart, Concerto số 21 cho piano (K. 467); Grieg, Concerto cho piano (Op. 16); Rachmaninoff, Concerto số 2 cho piano (Op. 18); Gershwin, Rhapsody in Blue (piano và dàn nhạc).
+  loai: ten
+  nguon:
+  - imslp-mozart21
+  - imslp-grieg
+  - imslp-rach2
+  - imslp-rhapsody
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Mozart K.467, 1785 (piano, orchestra); Grieg Op.16, cung La thứ; Rachmaninoff Op.18, cung Đô thứ, 1900–01; Gershwin, Rhapsody in Blue, 1924 (piano, orchestra). Chữ trang chỉ ghi số hiệu: "Concerto số 21", "số 2"; số hiệu K., Op. khớp IMSLP.'
+- id: n16
+  cau: Link tới bốn hướng dẫn nghe concerto và trang Concerto và ritornello.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Kiểm: nghe-nhac/mozart-concerto-21, grieg-concerto, rachmaninoff-2, gershwin-rhapsody có trong src/data/trang.yml, chưa chuyển (hiện "sắp có", giữ địa chỉ đúng với trang cũ); hinh-thuc/concerto.md có trong bản build, tiêu đề "Concerto và ritornello".'
+- id: n17
+  cau: Nhạc thính phòng gồm sonata cho violin và piano, cho cello và piano, tam tấu piano (piano, violin, cello).
+  loai: dinh-nghia
+  nguon:
+  - cod-chamber
+  - cod-piano-trio
+  ket_qua: dung
+  ghi_chu: 'COD, Chamber music: "duet sonatas for vn. and pf., or vc. and pf."; COD, Piano trio: "Group of 3 players—pianist, violinist, cellist".'
+- id: n18
+  cau: Ngũ tấu Con cá hồi (Trout) của Schubert có piano.
+  loai: ten
+  nguon:
+  - imslp-trout
+  - cod-piano-quintet
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Piano Quintet in A major, D.667, violin, viola, cello, contrabass, piano; tên khác "Trout Quintet (Die Forelle)"; COD, Piano quintet: "Schubert''s ‘Trout’ quintet, is for pf., vn., va., vc., and db.". Link nghe-nhac/schubert-ca-hoi: chưa chuyển, "sắp có".'
+- id: n19
+  cau: Ở nhạc thính phòng, các phần đàn thường ngang hàng với nhau, piano không chỉ để đệm.
+  loai: dinh-nghia
+  nguon:
+  - cod-chamber
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "Ở đây piano không phải ''người đệm'' mà là bạn diễn ngang hàng". COD, Chamber music: "all the parts being on equal terms". Đổi thành "thường ngang hàng": COD nói chung, và COD, Sonata: "for … other instr(s). with pf. acc." (sonata có thể coi piano đệm) nên bỏ khẳng định tuyệt đối.'
+- id: n20
+  cau: Trong Erlkönig của Schubert, phần piano gợi tiếng vó ngựa phi.
+  loai: dinh-nghia
+  nguon:
+  - wigmore-erlkonig
+  - imslp-erlkonig
+  - cod-lied
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "piano là tiếng vó ngựa và cơn bão, một người kể chuyện thứ hai". Wigmore Hall (gói tài liệu): "Throughout the piece, the piano plays very fast triplets to represent the galloping horse"; "a distinctive triplet melody in the left hand … represents the Erlking". "Cơn bão" và "người kể chuyện thứ hai" không có ở nguồn: bỏ. IMSLP: Lied D.328 cho giọng và piano; COD, Lied.'
+- id: n21
+  cau: Link tới hướng dẫn nghe Schubert Erlkönig.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Kiểm: nghe-nhac/schubert-erlkonig có trong src/data/trang.yml, chưa chuyển: "sắp có", giữ địa chỉ đúng.'
+- id: n22
+  cau: 'Spiegel im Spiegel của Pärt (1978) là bản cho violin và piano: giai điệu violin trên nền các nốt piano.'
+  loai: dinh-nghia
+  nguon:
+  - part-spiegel
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "giai điệu violin trên những nốt piano chậm rãi". Trung tâm Arvo Pärt: 1978, "Violin and piano"; giai điệu và "the piano plays tintinnabuli notes". Trang không nêu tốc độ, nên bỏ "chậm rãi". Link nghe-nhac/part-spiegel chưa chuyển: "sắp có".'
+- id: n23
+  cau: 'Chủ đề chậm, dài hơi thường là giọng hát hoặc cello: chơi legato, thở theo câu.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+  ghi_chu: Lời khuyên tập; không trái trang lõi nào (piano/tieng-dan là trang về legato, staccato). Link /opus/piano/tieng-dan/ có trong bản build.
+- id: n24
+  cau: Có nhà soạn nhạc viết cho piano với âm sắc nhạc cụ khác trong đầu.
+  loai: lich-su
+  nguon:
+  - listeners-club
+  - imslp-pictures
+  - wsso-pictures
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "Nhiều nhà soạn nhạc nghĩ bằng dàn nhạc khi viết cho piano". "Nhiều" và "nghĩ bằng dàn nhạc" không kiểm được. Các ví dụ ngay dưới (Beethoven, Mussorgsky/Ravel) có nguồn; câu mở đầu hạ giọng thành "có". Ý định nhà soạn nhạc chỉ suy từ ví dụ, review nên cân nhắc giữ hay bỏ.'
+- id: n25
+  cau: Những quãng rộng, mở gợi tiếng của kèn horn.
+  loai: dinh-nghia
+  nguon:
+  - listeners-club
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "Hai bè đi song song qua các quãng 3, 5, 6 (''quãng năm kèn horn'') gợi tiếng tù và của kèn horn". The Listeners'' Club (về ba hợp âm Le-be-wohl): "suggesting the wide-open intervals of horns, the instrument of the hunt" (không nêu quãng 3, 5, 6). Bỏ quãng cụ thể (không nguồn). Không nguồn bậc 1–2 nói "quãng năm kèn horn" trong đoạn này.'
+- id: n26
+  cau: Ba hợp âm Le-be-wohl mở đầu sonata Les Adieux Op. 81a của Beethoven gợi tiếng tù và săn bắn, rồi hợp âm thứ ba đưa bài tới một nơi bất ngờ.
+  loai: dinh-nghia
+  nguon:
+  - listeners-club
+  - wiki-op81a
+  - imslp-op81a
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "… bắt đầu như thế, rồi bất ngờ rẽ sang hợp âm Đô thứ ở nốt thứ ba". IMSLP: Piano Sonata No.26, Op.81a, 1809–10, tên khác "Les Adieux/Das Lebewohl"; Wikipedia: Beethoven viết "Le-be-wohl" trên ba hợp âm đầu, "at first forming an interrupted cadence"; Listeners'' Club: hai hợp âm đầu "predictable pattern", hợp âm thứ ba "delivers a surprise, taking us to a completely new place". "Hợp âm Đô thứ" chưa kiểm được ở nguồn nào (cần bản nhạc: IMSLP chặn tải PDF): bỏ tên hợp âm, giữ "bất ngờ". Gợi ý cho lượt 2: ai mở được bản nhạc có thể thêm lại tên hợp âm.'
+- id: n27
+  cau: Nốt lặp nhanh trong các sonata của Scarlatti thường được cho là gợi guitar Tây Ban Nha.
+  loai: dinh-nghia
+  nguon:
+  - cod-scarlatti
+  - wiki-scarlatti
+  ket_qua: null
+  ghi_chu: 'chưa chắc: COD, Scarlatti: "Introduced many new technical devices (rapid repetitions, crossed hands, double-note passages, etc.)" và sống ở Tây Ban Nha, nhưng không nói guitar; Wikipedia (bậc 3): "The influence of the Spanish guitar can be seen in notes being played repeatedly"; chương sách của Indiana University Press về nhạc piano Tây Ban Nha (nguồn học thuật) không mở được nội dung. Chữ cũ "Nốt lặp nhanh và hợp âm gõ … gợi guitar": đã bỏ "hợp âm gõ" (không nguồn) và hạ giọng thành "thường được cho là". Người giao quyết: tìm nguồn bậc 1–2 hay bỏ câu. Link hướng dẫn nghe Scarlatti: chưa chuyển, "sắp có".'
+- id: n28
+  cau: Những bức tranh ở phòng triển lãm của Mussorgsky vốn viết cho piano, về sau Ravel phối cho dàn nhạc.
+  loai: lich-su
+  nguon:
+  - wsso-pictures
+  - imslp-pictures
+  - hb-pictures
+  ket_qua: dung
+  ghi_chu: 'IMSLP: cho piano, 1874; wssymphony.org: "suite of musical miniatures for piano solo, 1874" và "Maurice Ravel''s 1922 arrangement and brilliant orchestration" (do Koussevitzky đặt hàng); Hollywood Bowl: "1874; orch. 1922".'
+- id: n29
+  cau: Nghe cả hai bản (piano, dàn nhạc) để thấy piano "chứa" cả dàn nhạc thế nào.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+  ghi_chu: 'Lời khuyên nghe. Link hướng dẫn nghe nghe-nhac/mussorgsky-tranh: chưa chuyển, "sắp có".'
+- id: n30
+  cau: 'Phần "Các trang trong mục này": mô tả dan-nhac (các bộ, sơ đồ chỗ ngồi, âm vực, bài tập nghe) và các trang nhạc cụ (âm thanh, vai trò, nên nghe gì, nghệ sĩ nên tìm, vài lời khuyên nếu muốn học).'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Kiểm: dan-nhac.md có mục Bộ dây/gỗ/đồng/gõ, Sơ đồ chỗ ngồi, Âm vực, Bài tập nghe; violin, cello, guitar, sao, clarinet, trumpet có các mục Âm thanh và cấu tạo, Vai trò, Nên nghe, Nghệ sĩ nên tìm, Nếu muốn học (nay đã đổi nhẹ ở sao, trumpet; các mục giữ nguyên tên). nhac-cu-khac.md là trang chung giọng hát, organ, harpsichord.'
+- id: n31
+  cau: Harpsichord là cây đàn của phần lớn nhạc phím Baroque mà người chơi piano ngày nay vẫn học.
+  loai: lich-su
+  nguon:
+  - bate
+  ket_qua: dung
+  ghi_chu: 'Bate: harpsichord đạt đỉnh ở thế kỷ 17–18 (thời Baroque). "Phần lớn nhạc phím Baroque" và "người chơi piano ngày nay vẫn học": mô tả chung, khớp piano/lich-su-dan (site, mục harpsichord) và các bài Bach, Scarlatti của site. Review nên cân nhắc.'
+- id: n32
+  cau: 'Link tới Lịch sử cây đàn piano, Luyện nghe nhận diện, Ravel: Boléro.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Kiểm: piano/lich-su-dan.md (có mục harpsichord) và nhan-dien/luyen-nghe.md ("Luyện nghe nhận diện") có trong bản build; nghe-nhac/ravel-bolero có trong trang.yml, chưa chuyển: "sắp có".'
+khuong_nhac: []
+doi_chu:
+- cu: 'Site này tập trung vào piano. Các trang trong mục này thuộc phần nghe: giúp bạn nhận ra tiếng từng nhạc cụ, hiểu vai trò của chúng trong dàn nhạc và khi chơi cùng piano. Người học piano nghe kỹ các nhạc cụ khác sẽ chơi hay hơn, vì rất nhiều đoạn piano được viết để gợi tiếng dây, tiếng kèn hay giọng hát.'
+  moi: 'Site này tập trung vào piano. Các trang trong mục này thuộc phần nghe: giúp bạn nhận ra tiếng từng nhạc cụ, hiểu vai trò của chúng trong dàn nhạc và khi chơi cùng piano. Người học piano nghe kỹ các nhạc cụ khác sẽ dễ hiểu hơn những đoạn piano gợi tiếng dây, tiếng kèn hay giọng hát.'
+  ly_do: 'n2 (da-sua): bỏ hứa hẹn "chơi hay hơn" và "rất nhiều … được viết để".'
+- cu: Liền, ấm, thường có rung (vibrato); có thể gảy bằng ngón (pizzicato)
+  moi: Kéo vĩ liền mạch, có thể rung (vibrato); có thể gảy bằng ngón (pizzicato)
+  ly_do: 'n5 (da-sua): theo VSL; bỏ "ấm", "thường có rung".'
+- cu: Sáo trong và thoáng; oboe hơi "giọng mũi"; clarinet tròn, mềm ở âm vực trầm
+  moi: Sáo mềm, thanh ở âm vực giữa; oboe sáng, xuyên, có chất dăm; clarinet tròn, ấm, dịu ở âm vực trầm
+  ly_do: 'n7 (da-sua): theo VSL; bỏ "trong và thoáng", "hơi giọng mũi" (khớp d11 của dan-nhac).'
+- cu: Sáng, vang xa; horn tròn và ấm hơn
+  moi: Trumpet sáng, vang; horn ấm và dịu hơn
+  ly_do: 'n9 (da-sua): theo VSL; bỏ "vang xa", "tròn".'
+- cu: Mỗi loại một trang riêng
+  moi: Mỗi loại một âm sắc riêng (xem các trang ở cột bên)
+  ly_do: 'n11 (da-sua): chữ cũ sai (piano và harp không có trang riêng).'
+- cu: 'Nhiều nhà soạn nhạc nghĩ bằng dàn nhạc khi viết cho piano. Khi tập một bài, hãy tự hỏi: đoạn này là nhạc cụ gì?'
+  moi: 'Có nhà soạn nhạc viết cho piano với âm sắc nhạc cụ khác trong đầu. Khi tập một bài, hãy tự hỏi: đoạn này là nhạc cụ gì?'
+  ly_do: 'n24 (da-sua): "Nhiều … nghĩ bằng dàn nhạc" không kiểm được.'
+- cu: Hai bè đi song song qua các quãng 3, 5, 6 ("quãng năm kèn horn") gợi tiếng tù và của kèn horn. Ba hợp âm Le-be-wohl mở đầu sonata Les Adieux Op. 81a của Beethoven bắt đầu như thế, rồi bất ngờ rẽ sang hợp âm Đô thứ ở nốt thứ ba.
+  moi: Những quãng rộng, mở gợi tiếng của kèn horn. Ba hợp âm Le-be-wohl mở đầu sonata Les Adieux Op. 81a của Beethoven gợi tiếng tù và săn bắn, rồi hợp âm thứ ba đưa bài tới một nơi bất ngờ.
+  ly_do: 'n25, n26 (da-sua): bỏ "quãng 3, 5, 6", "quãng năm kèn horn", "hợp âm Đô thứ" (không nguồn); giữ ý theo Listeners'' Club, Wikipedia.'
+- cu: Nốt lặp nhanh và hợp âm gõ trong các sonata của Scarlatti gợi guitar (hướng dẫn nghe).
+  moi: Nốt lặp nhanh trong các sonata của Scarlatti thường được cho là gợi guitar Tây Ban Nha (hướng dẫn nghe).
+  ly_do: 'n27 (chưa chắc): bỏ "hợp âm gõ"; hạ giọng.'
+- cu: 'Ca khúc nghệ thuật (Lied): trong Erlkönig, piano là tiếng vó ngựa và cơn bão, một người kể chuyện thứ hai.'
+  moi: 'Ca khúc nghệ thuật (Lied): trong Erlkönig, phần piano gợi tiếng vó ngựa phi.'
+  ly_do: 'n20 (da-sua): theo Wigmore Hall; bỏ "cơn bão", "người kể chuyện thứ hai".'
+- cu: 'Tĩnh lặng: Spiegel im Spiegel của Pärt, giai điệu violin trên những nốt piano chậm rãi.'
+  moi: 'Tĩnh lặng: Spiegel im Spiegel của Pärt, giai điệu violin trên nền các nốt piano.'
+  ly_do: 'n22 (da-sua): nguồn không nêu tốc độ.'
+- cu: 'Nhạc thính phòng: sonata cho violin và piano, cho cello và piano; tam tấu piano (piano, violin, cello); ngũ tấu như Con cá hồi của Schubert. Ở đây piano không phải "người đệm" mà là bạn diễn ngang hàng.'
+  moi: 'Nhạc thính phòng: sonata cho violin và piano, cho cello và piano; tam tấu piano (piano, violin, cello); ngũ tấu như Con cá hồi của Schubert. Ở thể loại này, các phần đàn thường ngang hàng với nhau, piano không chỉ để đệm.'
+  ly_do: 'n19 (da-sua): theo COD, Chamber music ("on equal terms"), bỏ tuyệt đối.'
