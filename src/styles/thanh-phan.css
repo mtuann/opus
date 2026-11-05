@@ -178,7 +178,8 @@
 .oz-abc:not(.oz-stand) {
 	container-type: inline-size;
 }
-.abc-notation:not([data-rendered]) {
+.abc-notation:not([data-rendered]),
+.oz-tt2-cho {
 	min-height: calc(6.9rem + var(--he, 1) * 5.5rem);
 	border-radius: 8px;
 	background: repeating-linear-gradient(to bottom, transparent 0 0.9rem, var(--sl-color-gray-6) 0.9rem calc(0.9rem + 1px))
@@ -186,12 +187,14 @@
 }
 /* màn hình cảm ứng: nút của thanh phát và hàng nút cao 44 px */
 @media (pointer: coarse) {
-	.abc-notation:not([data-rendered]) {
+	.abc-notation:not([data-rendered]),
+	.oz-tt2-cho {
 		min-height: calc(9.1rem + var(--he, 1) * 6.25rem);
 	}
 }
 @container (max-width: 619px) {
-	.abc-notation:not([data-rendered]) {
+	.abc-notation:not([data-rendered]),
+	.oz-tt2-cho {
 		min-height: calc(24.9rem + var(--he-hep, 1) * 6.65rem);
 	}
 }
@@ -2460,7 +2463,8 @@ html.oz-stand-open .main-pane {
 }
 /* khuông vẽ bằng abcjs khi ô tới gần màn hình: giữ chỗ cho khỏi xô bố cục */
 .oz-tiet-tau-khuong {
-	min-height: 5.5rem;
+	/* cao nhất đo được: hai dòng (màn hình hẹp, hay tiết tấu dài ở 1280 px) khoảng 153 px */
+	min-height: 9.6rem;
 }
 .oz-thi-tau-khuong {
 	min-height: 7rem;

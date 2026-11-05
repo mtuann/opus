@@ -225,11 +225,11 @@ export const veThiTauHaiTay = () =>
 	`<div class="oz-row"><label>Cấp <select data-k="cap">${Object.entries(CAP)
 		.map(([k, v]) => `<option value="${k}">${k} · ${v.ten}</option>`)
 		.join('')}</select></label>` +
-	`<button type="button" class="oz-btn oz-btn--primary" data-act="moi">Bài mới</button><span class="oz-stats oz-tt2-thong-tin"></span></div>` +
+	`<button type="button" class="oz-btn oz-btn--primary" data-act="moi">Bài mới</button><span class="oz-stats oz-tt2-thong-tin">Đô trưởng · nhịp 4/4 · ♩ = 60</span></div>` +
 	`<div class="oz-tt2-khuong"><figure class="oz-abc" style="--he:2;--he-hep:2"><div class="oz-tt2-cho" aria-hidden="true"></div></figure></div>` +
 	`<p class="oz-stats">Nhìn bài khoảng 30 giây, chơi một lượt không dừng, rồi mới bấm nghe để so sánh. Bạn chơi thế nào?</p>` +
 	`<div class="oz-row oz-tt2-muc" role="group" aria-label="Tự chấm">${MUC.map(([k, t]) => `<button type="button" class="oz-btn" data-r="${k}">${t}</button>`).join('')}</div>` +
-	`<p class="oz-feedback" aria-live="polite"></p><p class="oz-stats oz-tt2-so"></p>` +
+	`<p class="oz-feedback" aria-live="polite"></p><p class="oz-stats oz-tt2-so">${chuThongKe(0, [])}</p>` +
 	`<noscript data-sinh><p>Thị tấu hai tay cần JavaScript để tạo bài: bật JavaScript trong trình duyệt để dùng.</p></noscript></div>`;
 
 export function mount(goc) {
