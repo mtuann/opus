@@ -55,6 +55,17 @@ export const KHOI = {
 	'sao lưu dữ liệu học': 'class="oz-sao-luu',
 	'so cao độ': 'class="oz-so-cao-do',
 	'chọn âm thanh': 'class="oz-chon-am',
+	// công cụ Luyện tập của D7-L2 (lớp chốt ở bước chuẩn bị D7-L2, AGENTS.md mục D7-L2; thành phần do lô làm)
+	'xây gam và hợp âm': 'class="oz-xay',
+	'giấy kẻ khuông': 'class="oz-giay-khuong',
+	'phiếu bài tập': 'class="oz-phieu',
+	'thu âm': 'class="oz-thu-am',
+	'tiết tấu': 'class="oz-tiet-tau',
+	'thị tấu một bè': 'class="oz-thi-tau oz-tool',
+	'thị tấu hai tay': 'class="oz-thi-tau-hai-tay',
+	'nhật ký': 'class="oz-nhat-ky',
+	'bảng năng lực': 'class="oz-nang-luc',
+	'biểu đồ tiến bộ': 'class="oz-tien-bo',
 };
 
 /** Số trang đã đổi của nhánh được lấy làm mẫu: một lô của đợt 3 có tới 8 trang. */
