@@ -8,7 +8,7 @@ Từ hôm nay, Opus Zero là sổ tay **học piano cổ điển** từ con số
 
 ## Vì sao là piano?
 
-Piano là một trong số ít nhạc cụ cho bạn **nhìn thấy và chơi được cả giai điệu lẫn hòa âm** cùng lúc, một mình. Mọi khái niệm của nhạc lý, từ quãng, gam đến hợp âm và kết, đều thành hình dạng dưới mười ngón tay. Kho nhạc viết cho piano cũng lớn hơn bất kỳ nhạc cụ nào khác, từ Bach đến Rachmaninoff, và rất nhiều bản trong đó nằm trong tầm tay người lớn tự học.
+Trên piano, một mình bạn **nhìn thấy và chơi được cả giai điệu lẫn hòa âm** cùng lúc. Mọi khái niệm của nhạc lý, từ quãng, gam đến hợp âm và kết, đều thành hình dạng dưới mười ngón tay. Kho nhạc chơi được trên piano trải từ Bach đến Rachmaninoff, và rất nhiều bản trong đó nằm trong tầm tay người lớn tự học.
 
 Trước đây site có lộ trình cho bảy nhạc cụ, mỗi nhạc cụ một trang. Cách đó dàn trải: không nhạc cụ nào được viết đủ sâu. Giờ các trang violin, cello, guitar, sáo, clarinet, trumpet chuyển sang phần nghe, mục [Nhạc cụ & dàn nhạc](/opus/nhac-cu/), để giúp bạn nhận ra tiếng từng nhạc cụ khi nghe nhạc.
 

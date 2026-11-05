@@ -69,3 +69,67 @@ Kết quả (`d7-gom/ket-qua-bo-sung.yml`, đã `nhap`): 6 dung, 0 sai, 1 khong-
 10 nhận định mẫu ở `d7-gom/kiem-mau.yml` (`xuat D7-L1 D7-L2 --mau 10`). Đã điền `nguoi.luot_2` và `nguoi.review` cho 17 hồ sơ; `kiem_mau` để trống.
 
 Chờ chủ repo: kiểm mẫu, rồi `khoa` 17 trang sau khi có kết quả lượt 2 bổ sung.
+
+## D7-L3
+
+Sáu trang: `bat-dau/sach-in`, `blog/index`, ba bài `blog/posts/2026-10-*`, `cap-nhat` (254 nhận định, 211 `ve-site` ở lượt 1). Theo quyết định của người điều phối: giữ nhật ký phiên bản 1–15 của Opus Zero ở `cap-nhat`, giữ hướng dẫn in đã rút ngắn ở `sach-in`.
+
+### Lượt 2
+
+42 nhận định (`d7-gom/trang-3.yml`, kết quả `ket-qua-trang-3.yml`, đã `nhap`): 25 dung, 0 sai, 17 khong-chac. `nhap` báo 28 câu cần review (`d7-gom/can-review-l3.txt`).
+
+### Review
+
+Claude Opus 5.5, không làm lượt 1 hay lượt 2 của các trang này. Hai agent con đọc `cap-nhat` (câu `ve-site`, chia đôi theo id) trên `../opus-zero` (file, `git log`, `git show`) và repo mới; một agent con tra nguồn ngoài (Commons, IMSLP, Classic FM…). Người review quyết định và ghi hồ sơ.
+
+**Câu về chính site (214 sau khi đổi nhãn):** 209 `review: dung`, 5 `sai`, đã sửa. `ghi_chu` mỗi câu có thêm "Review D7-gom: …" ghi chỗ đã kiểm (`src/sach/sach.mjs`, `dist/sach/*.html`, `dist/sw.js`, `src/plugins/thanh-phan.mjs`, commit của site cũ…).
+
+- `sach-in` n26–n29 (chữ sinh ra của sách): `dung`, khớp nguyên văn `SACH[i].mo_ta`, `trangSach`, `cauHoiIn` và danh sách trang của từng cuốn.
+- Ba câu lượt 1 để trống nay kiểm được: `cap-nhat` n117 (commit `2e32c84`: khoảng 49 hình), n133 (`SKILLS` của `plan.js` ở `04fd9fc`: 13), n140 (`2a686e6`: 16 mục `###` mới).
+- Năm câu sai: `cap-nhat` n45 (lý do "IMSLP không cho nhúng file" là điều về dịch vụ ngoài, bỏ vế này, `da-bo`), n48 ("phạm vi công cộng" trái với mục phiên bản 15 của chính trang, thành "trên Wikimedia Commons"), n125 (102 KB → 47 KB không đo lại được), n143 ("8 hướng dẫn nghe"), n144 ("11 công cụ"): git gộp phiên bản 2–3, nên bỏ số, giữ ý.
+
+**Soát nhãn:** `cap-nhat` n80 (file *Pathétique* trên Commons dài 6:24) đổi `ve-site` thành `so-lieu` (Commons API: 384,5 giây); n45 cũng chứa điều ngoài site, đã bỏ.
+
+**Câu cần review và câu `khong-chac`:**
+
+| Câu | Quyết định |
+|---|---|
+| `sach-in` n16 | Sửa: "Ở ô chọn đích đến (máy in), chọn lưu thành PDF (trên Chrome: Lưu dưới dạng PDF)". Chrome Help tiếng Việt: "chọn đích đến", "Lưu dưới dạng PDF"; Firefox: "Destination", "Save to PDF" |
+| `sach-in` n18 | Sửa: "Nếu hộp thoại in có mục in đầu trang và chân trang (thường nằm trong phần cài đặt thêm), nên tắt…". Nguồn: Mozilla Support (bản lưu Wayback); không mở được trang Chrome nói về mục này |
+| `sach-in` n19, n20 | Giữ, `dung`: Chrome Help (Android): More → Share → Print, "tap Save as PDF"; Apple, Print from iPhone: nút Chia sẻ hay Thêm rồi In |
+| `trong-tam-piano` n3 | Sửa: bỏ vế so sánh "một trong số ít nhạc cụ" (không có nguồn bậc 1–2) |
+| `trong-tam-piano` n5 | Bỏ: "kho nhạc lớn hơn bất kỳ nhạc cụ nào" chỉ có nguồn bậc 3 |
+| `trong-tam-piano` n6 | Sửa: "Kho nhạc chơi được trên piano trải từ Bach đến Rachmaninoff" (Bach viết cho đàn phím trước piano; Henle HN 14 in cho piano solo) |
+| `trong-tam-piano` n17 | Giữ: IMSLP, Minuet K. 2, F major |
+| `phien-ban-15` n14 | Bỏ câu về động cơ của người lớn học đàn (không có nguồn); tên hai bài chuyển vào câu `ve-site` sau |
+| `phien-ban-15` n22 | `dung`: Library of Congress: bản thu 10/6/1924 của Whiteman và Gershwin, thu lại năm 1927 "also with Gershwin" |
+| `cap-nhat` n18 | `dung`: Classic FM, Brilliant Classics, Radio Swiss Classic |
+| `cap-nhat` n22, n88 | `dung`: metadata Commons và trang IMSLP của đúng file |
+| `cap-nhat` n26 | Giữ 1956 và 1948 theo Commons (nơi site cũ dẫn link); nguồn ghi 1956–1957 chỉ ở bậc 3 |
+| `cap-nhat` n27 | `dung`: copyright.gov (bản thu phát hành 1947–1956: 95 + 15 năm) |
+| `cap-nhat` n28 | `dung`: đoạn C dài 8 ô (ô 33–40), A' và C nhắc lại cùng nhau (ô 25–40). PDF IMSLP bị chặn; đếm trên bản LilyPond `rdj/music` mà site cũ dùng. Site mới chưa có trang `piano/tac-pham/chopin-valse-la-thu` (đợt 6), nên không có trang đã khóa để đối chiếu |
+| `cap-nhat` n34 | Sửa cho khớp trang đã khóa `hinh-thuc/minuet-trio`: "trio thường đổi giọng, hoặc đổi trưởng – thứ trên cùng chủ âm" |
+| `cap-nhat` n35 | `dung`: Mutopia BWV Anh. 126 (A B A, như trang đã khóa `nhac-ly/31`) |
+| `cap-nhat` n48 | Như trên: "(1956, trên Wikimedia Commons)" |
+| `cap-nhat` n49, n60, n61, n69, n70 | `dung`: Commons (12 file), IMSLP (Op. 4, 35, 58; Op. 85, 102), Met, Tchaikovsky Research và LoC |
+| `cap-nhat` n55 | Bỏ "bài hay bị gọi nhầm là Spring Waltz" (chỉ có nguồn bậc 3); câu `ve-site` n54 sửa theo |
+| `cap-nhat` n58 | Sửa: Henle HN 1062 (bậc 2) nói biệt danh có từ khi Beethoven còn sống, trái với "chỉ phổ biến sau khi Beethoven mất" (Wikipedia). Câu mới: "biệt danh Ánh trăng (gắn với hình ảnh mặt hồ dưới trăng mà Rellstab viết về chương 1)" |
+| `cap-nhat` n59 | `dung`: Hi-Fi+ "Recorded: 1974 (Symphony No 5)"; trang DG trả 429 |
+| `cap-nhat` n91 | Giữ "khoảng năm 1823–1824" (Henle: 1823; Wikipedia: 1824) |
+| `cap-nhat` n130 | `dung`: FreePats và `public/mau-am/piano/LICENSE.txt` (CC BY 3.0) |
+
+Nguồn Wikipedia ở hai bài blog bị ghi `bac: 2`, nay ghi lại là 3; `phien-ban-15` n18, n21 thêm Classic FM, LoC.
+
+Chữ đổi ghi `doi_chu`: `sach-in`, `cap-nhat` khớp `so-chu --doi-chu` ("doi_chu đã đủ"); hai bài blog ghi tay, so với `.cache/site-cu/blog/2026/10/…`.
+
+### Lượt 2 bổ sung
+
+Chờ. Bảy câu (`d7-gom/bo-sung-l3.yml`, `xuat D7-L3 --con-lai`): `sach-in` n16, n18; `trong-tam-piano` n3, n6; `cap-nhat` n34, n58 (chữ đổi sau lượt 2: kết quả lượt 2 cũ đã gỡ khỏi hồ sơ, chép vào `ghi_chu`), n80 (đổi nhãn).
+
+### Kiểm thử
+
+`npm run build:xem` không cảnh báo `[opus]`; `npm test` 238 đạt, 1 bỏ qua (`pham-vi`); `node --test tests/trinh-duyet/kiem-ung-dung.mjs` 8 đạt. Lần chạy đầu có một lần hỏng ("error loading dynamically imported module … ui-core"), ba lần sau đều đạt: có thể chập chờn khi mất mạng, nên theo dõi.
+
+### Kiểm mẫu
+
+5 nhận định ở `d7-gom/kiem-mau-l3.yml` (`xuat D7-L3 --mau 5`). Đã điền `nguoi.luot_2` và `nguoi.review` cho 6 hồ sơ; `kiem_mau` để trống. Chờ chủ repo: kiểm mẫu, lượt 2 bổ sung, rồi khóa 6 trang.

@@ -21,8 +21,8 @@ Sách chỉ gồm các trang đã lên site; trang nào chưa lên thì chưa c�
 
 1. Bấm **Mở sách**. Đợi nút trên cùng chuyển thành **In / Lưu PDF** (khuông nhạc đã được vẽ xong).
 2. Bấm nút đó (hoặc <span class="keys"><kbd>Ctrl</kbd><span>+</span><kbd>P</kbd></span>, trên Mac <span class="keys"><kbd>Cmd</kbd><span>+</span><kbd>P</kbd></span>).
-3. Ở ô **Máy in** chọn **Lưu dưới dạng PDF**. Khổ giấy A4.
-4. Nên tắt mục **Đầu trang và chân trang** của trình duyệt cho bản in gọn hơn.
+3. Ở ô chọn đích đến (máy in), chọn lưu thành PDF (trên Chrome: **Lưu dưới dạng PDF**). Khổ giấy A4.
+4. Nếu hộp thoại in có mục in đầu trang và chân trang (thường nằm trong phần cài đặt thêm), nên tắt mục ấy cho bản in gọn hơn.
 
 **Trên điện thoại:** tìm lệnh **In** trong menu của trình duyệt (thường nằm trong mục Chia sẻ); từ màn hình xem trước bản in có thể lưu thành PDF.
 

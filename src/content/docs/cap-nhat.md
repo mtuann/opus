@@ -40,7 +40,7 @@ Site đang được làm lại ở địa chỉ này, dưới tên Opus: mỗi t
     - [Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/) của Chopin: đoạn C (La trưởng) dài 8 ô chứ không phải 16, và dấu nhắc lại thứ hai gồm cả đoạn A' lẫn đoạn C. Bảng theo dõi, hình cấu trúc và mốc tham khảo được sửa theo. Trang thêm chuyện bài từng được in năm 1860 dưới tên Charlotte de Rothschild.
     - [*Mùa xuân*](/opus/nghe-nhac/vivaldi-mua-xuan/) của Vivaldi: phần cuối chương 1 tách thành ba sự kiện (ritornello, một đoạn độc tấu ngắn, ritornello cuối), đủ mốc.
 - **Nguồn:** chín trang có mục Nguồn với nguồn thật: [Minuet và Trio](/opus/hinh-thuc/minuet-trio/), [Overture](/opus/hinh-thuc/overture/), [Scherzo](/opus/hinh-thuc/scherzo/), [Thơ giao hưởng](/opus/hinh-thuc/symphonic-poem/) và các bài nhạc lý từ [28](/opus/nhac-ly/28-ket-cau/) đến [32](/opus/nhac-ly/32-ky-thuat-the-ky-20/). Trong lúc đối chiếu, vài chi tiết được sửa cho đúng nguồn:
-    - trio thường ở giọng át hoặc giọng cùng tên;
+    - trio thường đổi giọng, hoặc đổi trưởng – thứ trên cùng chủ âm;
     - Musette Rê trưởng là hình thức ba đoạn;
     - vài ví dụ không tìm được nguồn đã được bỏ.
 - **Mỗi điều viết một nơi:** bài [Hình thức nhỏ](/opus/nhac-ly/31-hinh-thuc-nho/) giữ phần chi tiết về hình thức hai đoạn, ba đoạn; trang [Minuet và Trio](/opus/hinh-thuc/minuet-trio/) và trang [Scherzo](/opus/hinh-thuc/scherzo/) giữ phần của mình. Các trang này link qua lại. Hai trang nhà soạn nhạc ([Lịch sử](/opus/lich-su/nha-soan-nhac/) và [Piano](/opus/piano/nha-soan-nhac/)) link tới nhau cho từng người.
@@ -53,12 +53,12 @@ Site đang được làm lại ở địa chỉ này, dưới tên Opus: mỗi t
 
 ### 10/2026: Phiên bản 14 (gọn lại quanh cây đàn)
 
-- **Cả 34 bài học tác phẩm đều có bản thu:** mười bài học có thêm bản thu từ [IMSLP](https://imslp.org/) (mười ba bản thu của Luis Kolodin, Ramón León Egea, Jewgeni Smirnow và nhóm Mississippi College Piano Pedagogy), lưu ngay trên site Opus Zero vì IMSLP không cho nhúng file trực tiếp; Thuyền ca Venice và Musette Rê trưởng có bản thu từ Wikimedia Commons. Các bản thu mới đều có mốc tham khảo. Người chơi, giấy phép và nguồn của từng file: [tệp nguồn âm thanh](/opus/audio/NGUON.txt).
-- **Hướng dẫn nghe mới: [Debussy, *Préludes* quyển 1](/opus/nghe-nhac/debussy-preludes/).** Mười hai bức tranh âm thanh, với bản thu trọn quyển của Marcelle Meyer (1956, phạm vi công cộng) và mốc đầu từng bản.
+- **Cả 34 bài học tác phẩm đều có bản thu:** mười bài học có thêm bản thu từ [IMSLP](https://imslp.org/) (mười ba bản thu của Luis Kolodin, Ramón León Egea, Jewgeni Smirnow và nhóm Mississippi College Piano Pedagogy), lưu ngay trên site Opus Zero; Thuyền ca Venice và Musette Rê trưởng có bản thu từ Wikimedia Commons. Các bản thu mới đều có mốc tham khảo. Người chơi, giấy phép và nguồn của từng file: [tệp nguồn âm thanh](/opus/audio/NGUON.txt).
+- **Hướng dẫn nghe mới: [Debussy, *Préludes* quyển 1](/opus/nghe-nhac/debussy-preludes/).** Mười hai bức tranh âm thanh, với bản thu trọn quyển của Marcelle Meyer (1956, trên Wikimedia Commons) và mốc đầu từng bản.
 - **Gộp những trang trùng nhau:** công cụ nhận biết quãng, hợp âm và gam nằm ngay cuối các bài [Luyện tai](/opus/luyen-tai/), cạnh phần hướng dẫn cách nghe; công cụ nhận biết kết chuyển sang [Nghe tiến trình hòa âm](/opus/luyen-tai/nghe-tien-trinh/#luyen-voi-cong-cu); vòng quãng năm vào trang [Hóa biểu](/opus/luyen-tap/hoa-bieu/#vong-quang-nam); giấy kẻ khuông vào [Phiếu bài tập](/opus/luyen-tap/phieu-bai-tap/#giay-ke-khuong); phổ âm thanh vào bài [Âm học](/opus/nhac-ly/am-hoc/#am-sac); máy lên dây vào trang [Hát lại](/opus/luyen-tap/hat-lai/#may-len-day). Ba hướng dẫn nghe (Prelude Đô trưởng của Bach, Nocturne Op. 9 số 2, *Clair de lune*) gộp vào bài học tác phẩm tương ứng, mỗi bài có lối tắt cho người chỉ muốn nghe. Hai lộ trình cho người chưa có đàn gộp thành [Lộ trình nghe hiểu và nhạc lý](/opus/bat-dau/lo-trinh-nghe/). Địa chỉ cũ vẫn dùng được và đưa thẳng tới đúng mục ở trang mới.
 - **Viết lại cho người tập đàn:** [Bài 0](/opus/bat-dau/bai-0/) (ba hiểu lầm của người lớn học piano, bắt đầu từ đâu); [Nghe tiến trình hòa âm](/opus/luyen-tai/nghe-tien-trinh/) với ví dụ hai tay và những tiến trình gặp trong bài đang tập; tháng 7–10 của [Lộ trình piano năm đầu](/opus/bat-dau/lo-trinh-choi/) dùng các bài học tác phẩm vừa sức.
-- **Mục mới [Bài phổ biến ngoài nhạc cổ điển](/opus/piano/tac-pham-theo-cap/#ngoai-co-dien)**, bắt đầu với *Mariage d'Amour*, bài hay bị gọi nhầm là "Spring Waltz" của Chopin. Bảng [Grade nghĩa là gì trên site này](/opus/piano/thay-va-thi/#thi-cap); mức độ ở [Các thể loại nhạc piano](/opus/piano/the-loai/) ghi theo bảy chặng. Trang [Thu âm buổi tập](/opus/luyen-tap/thu-am/) thêm cách thu sao cho nghe lại được.
-- **Rà soát độ chính xác:** cấp độ ước lượng của nhiều bài được thống nhất giữa các trang; biệt danh "Ánh trăng" (hình ảnh của Rellstab, cái tên chỉ phổ biến sau khi Beethoven mất); năm thu Giao hưởng số 5 của Carlos Kleiber (1974); Chopin viết ba sonata piano; hai tập cuối *Lieder ohne Worte* của Mendelssohn in sau khi ông mất. Những nội dung từng có ở hai nơi (ba bàn đạp, bảng danh mục tác phẩm, khi bị chững lại, buổi tập mẫu, [kế hoạch hôm nay](/opus/luyen-tap/#hom-nay-nen-luyen-gi)) giờ chỉ còn ở một trang, các trang khác dẫn link tới.
+- **Mục mới [Bài phổ biến ngoài nhạc cổ điển](/opus/piano/tac-pham-theo-cap/#ngoai-co-dien)**, bắt đầu với *Mariage d'Amour*. Bảng [Grade nghĩa là gì trên site này](/opus/piano/thay-va-thi/#thi-cap); mức độ ở [Các thể loại nhạc piano](/opus/piano/the-loai/) ghi theo bảy chặng. Trang [Thu âm buổi tập](/opus/luyen-tap/thu-am/) thêm cách thu sao cho nghe lại được.
+- **Rà soát độ chính xác:** cấp độ ước lượng của nhiều bài được thống nhất giữa các trang; biệt danh "Ánh trăng" (gắn với hình ảnh mặt hồ dưới trăng mà Rellstab viết về chương 1); năm thu Giao hưởng số 5 của Carlos Kleiber (1974); Chopin viết ba sonata piano; hai tập cuối *Lieder ohne Worte* của Mendelssohn in sau khi ông mất. Những nội dung từng có ở hai nơi (ba bàn đạp, bảng danh mục tác phẩm, khi bị chững lại, buổi tập mẫu, [kế hoạch hôm nay](/opus/luyen-tap/#hom-nay-nen-luyen-gi)) giờ chỉ còn ở một trang, các trang khác dẫn link tới.
 - **Trang nhạc cụ chỉ còn phần nghe:** sáu trang violin, cello, guitar, sáo, clarinet và trumpet bỏ phần học chơi (lộ trình, sơ đồ cần đàn, "10 bài đầu tiên"), vốn nằm ngoài trọng tâm piano và có nhiều giai điệu chép sai. Mỗi trang giữ âm thanh, vai trò, tác phẩm nên nghe và nghệ sĩ nên tìm; [máy lên dây](/opus/luyen-tap/hat-lai/#may-len-day) vẫn có chế độ violin và guitar.
 - **Hướng dẫn nghe:** [Giao hưởng số 5 của Beethoven](/opus/nghe-nhac/beethoven-5/) có bảng "Theo dõi khi nghe" và chỗ ghi mốc theo bản thu; [*Mùa đông* của Vivaldi](/opus/nghe-nhac/vivaldi-mua-dong/) có bài sonnet đi kèm từng chương và bảng theo dõi chương 1; [Mẫu nhật ký nghe](/opus/nghe-nhac/mau/) có ví dụ điền sẵn. Trang [Nghe & nhận diện](/opus/nghe-nhac/) chia hướng dẫn thành nhạc piano và nhạc cho dàn nhạc, giọng hát, thính phòng, kèm gợi ý nghe trong năm đầu.
 - **Nhạc lý:** các phần trong [mục lục](/opus/nhac-ly/) đặt tên theo nội dung (hợp âm, hòa âm và biểu diễn; tiết tấu, điệu thức và chuyển giọng; hòa âm mở rộng và phân tích; nghe hiểu cấu trúc), thêm mục "Sau 32 bài". Sửa bè trầm trong ví dụ của [bài 21](/opus/nhac-ly/21-hoa-am-bon-be/), ký hiệu hợp âm ở [bài 29](/opus/nhac-ly/29-chuoi-hoa-am/), mô tả phần A của hình thức hai đoạn ở [bài 31](/opus/nhac-ly/31-hinh-thuc-nho/) (có thể kết ở giọng mới, kết nửa hoặc kết trọn); [bài 14](/opus/nhac-ly/14-ky-hieu-bieu-dien/) ghi rõ clavichord cũng chơi to nhỏ theo lực ngón trước piano.
@@ -139,7 +139,7 @@ Thêm khoảng 50 hình minh họa ở những chỗ hình giúp hiểu rõ hơn
 
 ### 10/2026: Phiên bản 7 (chắc chắn hơn, nhanh hơn, dễ dùng hơn)
 
-- **Nhanh hơn:** mỗi trang chỉ tải công cụ nó dùng. Trước đây mọi trang tải khoảng 754 KB JavaScript; nay một nửa số trang chỉ cần khoảng 25 KB. Menu được thu gọn trong mỗi trang, HTML trung bình giảm từ khoảng 102 KB xuống 47 KB.
+- **Nhanh hơn:** mỗi trang chỉ tải công cụ nó dùng. Trước đây mọi trang tải khoảng 754 KB JavaScript; nay một nửa số trang chỉ cần khoảng 25 KB. Menu được thu gọn trong mỗi trang, nên HTML của mỗi trang nhẹ hơn nhiều.
 - **Dễ dùng hơn:** menu gọn từ 12 xuống 8 mục; trang chủ mới với ba con đường bắt đầu và kế hoạch hôm nay; tìm kiếm không dấu ("hop am" tìm ra "hợp âm").
 - **Tiếp cận tốt hơn:** bàn phím piano dùng được bằng phím mũi tên và Enter; nút lớn hơn trên màn hình cảm ứng; sửa thứ tự tiêu đề và bảng thiếu tiêu đề; mọi cặp màu chữ đạt chuẩn tương phản WCAG AA.
 - **Chắc chắn hơn:** bộ kiểm thử tự động (đơn vị, trình duyệt, tiếp cận, tìm kiếm, ô nhịp) chạy trước mỗi lần deploy.
@@ -168,11 +168,11 @@ Thêm khoảng 50 hình minh họa ở những chỗ hình giúp hiểu rõ hơn
 
 ### 10/2026: Phiên bản 3
 
-Bài 0, kiểm tra đầu vào, hai lộ trình, ba bài ôn tập, 6 bài nhạc lý nâng cao (15–20), trang riêng cho piano, violin, guitar với 10 bài đầu tiên, 8 hướng dẫn nghe, opera, các nhà soạn nhạc nữ, dòng thời gian, nhạc cổ điển ở Việt Nam.
+Bài 0, kiểm tra đầu vào, hai lộ trình, ba bài ôn tập, 6 bài nhạc lý nâng cao (15–20), trang riêng cho piano, violin, guitar với 10 bài đầu tiên, thêm hướng dẫn nghe, opera, các nhà soạn nhạc nữ, dòng thời gian, nhạc cổ điển ở Việt Nam.
 
 ### 10/2026: Phiên bản 2
 
-14 bài nhạc lý nền tảng có quiz, từ điển thuật ngữ có thẻ ghi nhớ, 11 công cụ luyện tập, blog nhật ký học, cài như ứng dụng.
+14 bài nhạc lý nền tảng có quiz, từ điển thuật ngữ có thẻ ghi nhớ, thêm công cụ luyện tập, blog nhật ký học, cài như ứng dụng.
 
 ### 10/2026: Phiên bản 1
 
