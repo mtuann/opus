@@ -188,7 +188,7 @@ test('scriptDangKy: chỉ đăng ký khi có service worker và ngữ cảnh an 
 		const nav = coSw ? { serviceWorker: { register: (u, o) => (dk.push([u, o.scope]), Promise.resolve()) } } : {};
 		const tai = [];
 		const hen = [];
-		vm.runInNewContext(scriptDangKy(), { navigator: nav, isSecureContext: an, addEventListener: (t, f) => tai.push([t, f]), setTimeout: (f, ms) => hen.push([f, ms]) });
+		vm.runInNewContext(scriptDangKy(), { navigator: nav, isSecureContext: an, addEventListener: (t, f) => tai.push([t, f]), setTimeout: (f, ms) => hen.push([f, ms]), window: {} });
 		assert.ok(tai.every(([t]) => t === 'load'));
 		tai.forEach(([, f]) => f());
 		// chưa đăng ký ngay lúc load: chờ CHO_DANG_KY ms
@@ -197,9 +197,26 @@ test('scriptDangKy: chỉ đăng ký khi có service worker và ngữ cảnh an 
 		hen.forEach(([f]) => f());
 		return dk;
 	};
+	// có requestIdleCallback: đăng ký khi trình duyệt rảnh, sau CHO_DANG_KY ms
+	const ranh = () => {
+		const dk = [];
+		const nav = { serviceWorker: { register: (u, o) => (dk.push([u, o.scope]), Promise.resolve()) } };
+		const tai = [];
+		const hen = [];
+		const cho = [];
+		const rIC = (f, o) => cho.push([f, o]);
+		vm.runInNewContext(scriptDangKy(), { navigator: nav, isSecureContext: true, addEventListener: (t, f) => tai.push(f), setTimeout: (f) => hen.push(f), window: { requestIdleCallback: rIC }, requestIdleCallback: rIC });
+		tai.forEach((f) => f());
+		hen.forEach((f) => f());
+		assert.equal(dk.length, 0);
+		assert.equal(cho.length, 1);
+		cho.forEach(([f]) => f());
+		return dk;
+	};
 	assert.deepEqual(chay({ an: true }), [['/opus/sw.js', '/opus/']]);
 	assert.deepEqual(chay({ an: false }), []);
 	assert.deepEqual(chay({ an: true, coSw: false }), []);
+	assert.deepEqual(ranh(), [['/opus/sw.js', '/opus/']]);
 });
 
 const coDist = fs.existsSync(path.join(DIST, 'sw.js'));
