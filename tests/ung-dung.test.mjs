@@ -46,6 +46,15 @@ test('tepLuuSan: trang chủ, CSS, JavaScript và font của trang chủ, manife
 	fs.rmSync(d, { recursive: true });
 });
 
+test('tepLuuSan: có abcjs trong dist/vendor/ thì lưu sẵn (khuông của trang đã xem vẽ được khi mất mạng)', () => {
+	const { d } = distGia();
+	fs.mkdirSync(path.join(d, 'vendor'), { recursive: true });
+	for (const f of ['abcjs-basic-min.js', 'abcjs-audio.css']) fs.writeFileSync(path.join(d, 'vendor', f), '');
+	const ra = tepLuuSan(d);
+	assert.ok(ra.includes('/opus/vendor/abcjs-basic-min.js') && ra.includes('/opus/vendor/abcjs-audio.css'));
+	fs.rmSync(d, { recursive: true });
+});
+
 /** Chạy mã sw.js trong vm với self, caches, fetch giả; trả về các hàm xử lý sự kiện. */
 function chaySw(ma, { mang = true } = {}) {
 	const kho = new Map();

@@ -36,7 +36,7 @@ export function phienBan(dist, tep = danhSachTep(dist)) {
 
 /**
  * Tệp lưu sẵn khi cài: trang chủ cùng CSS, JavaScript (cả module nó nạp sau, như ô gợi ý tập) và font nó dùng, để mở lại
- * trang chủ khi mất mạng, kể cả khi mới xem một trang khác; trang 404, manifest và icon. Chỉ tệp có trong `dist` (cài
+ * trang chủ khi mất mạng, kể cả khi mới xem một trang khác; trang 404, manifest, icon và abcjs. Chỉ tệp có trong `dist` (cài
  * hỏng khi một tệp không tải được).
  */
 export function tepLuuSan(dist, base = '/opus/') {
@@ -57,7 +57,9 @@ export function tepLuuSan(dist, base = '/opus/') {
 			if (!ra.includes(con)) ra.push(con);
 		}
 	}
-	for (const f of ['404.html', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png']) if (fs.existsSync(path.join(dist, f))) ra.push(base + f);
+	// abcjs (public/vendor/): trang có khuông chỉ tải abcjs khi khuông hiện ra hay lúc rảnh (src/scripts/tai.js, abc.js), nên
+	// lưu sẵn để khuông của trang đã xem vẽ được khi mất mạng, kể cả khi người đọc chưa cuộn tới khuông nào
+	for (const f of ['404.html', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png', 'vendor/abcjs-basic-min.js', 'vendor/abcjs-audio.css']) if (fs.existsSync(path.join(dist, f))) ra.push(base + f);
 	return [...new Set(ra)].filter((u) => u === base || fs.existsSync(path.join(dist, decodeURI(u.slice(base.length)))));
 }
 
