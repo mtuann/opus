@@ -37,7 +37,7 @@ Nghe ít nhất hai bản: một bản trên harpsichord hoặc clavichord (ví 
 3. **Tay trái.** Bè trầm có "nói" như một giọng riêng, hay chỉ làm nền?
 4. **Nhắc lại.** Lần nhắc lại có khác lần đầu không: nhỏ hơn, thêm nốt trang trí, hay đổi phát âm?
 
-Rồi nghe tiếp Minuet Sol thứ (BWV Anh. 115): hai bài là một cặp, và thời Baroque người ta thường chơi minuet 1, minuet 2, rồi minuet 1 lần nữa. Muốn nghe minuet của thời Cổ điển để so sánh, xem [hướng dẫn nghe *Eine kleine Nachtmusik*](/opus/nghe-nhac/mozart-eine-kleine/), chương 3.
+Rồi nghe tiếp [Minuet Sol thứ](/opus/piano/tac-pham/minuet-sol-thu/) (BWV Anh. 115): hai bài là một cặp, và thời Baroque người ta thường chơi minuet 1, minuet 2, rồi minuet 1 lần nữa. Muốn nghe minuet của thời Cổ điển để so sánh, xem chương 3 của *Eine kleine Nachtmusik* ở trang [Minuet và Trio](/opus/hinh-thuc/minuet-trio/#i-qua-mot-tac-pham-mozart-eine-kleine-nachtmusik-chuong-3).
 
 ::khoi-nghe{moc="1 12 - 22 33"}
 
@@ -193,7 +193,7 @@ Bản gốc không ghi sắc thái. Trên piano, chọn một mức chung cho m�
 
 ### Trang trí
 
-Ấn bản Bach-Gesellschaft in dấu láy (mordent) ở nốt Đô của ô 3 và ô 5 (và các chỗ tương ứng ở ô 11, 13), một appoggiatura Si trước nốt La ở ô 8, và một láy rền ngắn ở ô 30. Các ấn bản khác nhau về chi tiết này. Hãy học bài **không trang trí** trước, rồi thêm dần, nhất là ở lần nhắc lại. Cách chơi từng loại nốt hoa mỹ: xem [Nốt hoa mỹ](/opus/piano/not-hoa-my/).
+Ấn bản Bach-Gesellschaft in **láy dưới** (răng cưa có gạch dọc, *mordent*) ở nốt Đô của ô 3 và ô 5 (và các chỗ tương ứng ở ô 11, 13), một appoggiatura Si trước nốt La ở ô 8, và một **láy trên** (răng cưa ngắn, không gạch) ở ô 30. Hãy học bài **không trang trí** trước, rồi thêm dần, nhất là ở lần nhắc lại. Cách chơi từng loại nốt hoa mỹ: xem [Nốt hoa mỹ](/opus/piano/not-hoa-my/).
 
 ### Bàn đạp
 
@@ -211,7 +211,7 @@ Không dùng. Sự liền tiếng đến từ ngón tay, sự rõ ràng đến t
 
 ## Học tiếp
 
-- **Bài cặp đôi:** Minuet Sol thứ, BWV Anh. 115, cùng mức độ; chơi Sol trưởng, Sol thứ, rồi Sol trưởng lần nữa.
+- **Bài cặp đôi:** [Minuet Sol thứ](/opus/piano/tac-pham/minuet-sol-thu/), BWV Anh. 115, cùng mức độ; chơi Sol trưởng, Sol thứ, rồi Sol trưởng lần nữa.
 - **Cùng cuốn sổ tay 1725:** Minuet Fa trưởng (BWV Anh. 113) và Musette Rê trưởng (BWV Anh. 126).
 - **Cùng chặng trên site:** [Schumann: Album für die Jugend](/opus/piano/tac-pham/schumann-album/); sau đó [Clementi: Sonatina Op. 36 số 1](/opus/piano/tac-pham/clementi-sonatina/).
 - **Khi đã vững hai bè:** [Bach: Invention số 1](/opus/piano/tac-pham/bach-invention-1/). Danh sách đầy đủ theo cấp: [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).

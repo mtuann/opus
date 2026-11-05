@@ -19,7 +19,7 @@ Năm 1848, Schumann viết cho các con mình 43 bản nhạc ngắn, và tập 
 
 Ngày 31 tháng 8 năm 1848, Schumann ghi trong sổ chi tiêu gia đình: "ý tưởng về album cho trẻ em, những bản nhỏ cho Marie". Hôm sau, 1 tháng 9, là sinh nhật lần thứ bảy của **Marie**, con gái lớn của Robert và Clara Schumann; món quà của bố là một tập bài nhỏ chép tay. Những ngày tiếp theo, ông ghi "rất nhiều bản nhỏ cho trẻ em", và đến 9 tháng 9 thì album "gần xong". Vài bài còn được viết thêm trong tháng 9.
 
-Schumann định đặt tên *Weihnachtsalbum für Kinder* (Album Giáng sinh cho trẻ em) để in kịp Giáng sinh. Nhà Breitkopf & Härtel từ chối in; nhà xuất bản **Julius Schuberth** ở Hamburg nhận lời, nhưng đề nghị bỏ chữ "Giáng sinh" để tập nhạc bán được quanh năm. Bản in đầu tiên ra tháng 12/1848, với tranh bìa trong của họa sĩ **Ludwig Richter** (bốn góc vẽ bốn mùa). Trang bìa ghi nhầm "40 bản nhạc" dù tập có đủ 43 bài. Trong vòng một năm, nhà xuất bản quảng cáo đã bán gần 2.000 bản.
+Schumann định đặt tên *Weihnachtsalbum für Kinder* (Album Giáng sinh cho trẻ em) để in kịp Giáng sinh. Nhà Breitkopf & Härtel từ chối in; nhà xuất bản **Julius Schuberth** ở Hamburg nhận lời, nhưng đề nghị bỏ chữ "Giáng sinh" để tập nhạc bán được quanh năm. Bản in đầu tiên ra tháng 12/1848, với tranh bìa trong của họa sĩ **Ludwig Richter** (bốn góc vẽ bốn mùa). Trang bìa ghi nhầm "40 bản nhạc" dù tập có đủ 43 bài. Tháng 8 năm 1850, nhà xuất bản quảng cáo rằng chỉ trong vòng một năm album đã bán được gần 2.000 bản.
 
 Schumann viết nhiều về tuổi thơ. Trong một lá thư năm 1848, ông phân biệt: *Kinderszenen* (Cảnh tuổi thơ, 1838) là những hồi tưởng của người lớn, viết cho người lớn; còn album mới hướng về phía trước, dành cho các em nhỏ. Phần hai của album khó hơn và mang nhiều màu sắc người lớn hơn; bài số 28, *Erinnerung* (Kỷ niệm), ghi ngày 4 tháng 11 năm 1847, ngày Mendelssohn qua đời.
 
@@ -159,7 +159,7 @@ Kế hoạch 5 tuần cho cả ba bài, khoảng 30 phút mỗi ngày. Tốc đ�
 
 ### Melodie
 
-*Nicht schnell* nghĩa là "không nhanh", không phải "chậm". Giai điệu như một bài hát đơn giản, mỗi dấu luyến là một hơi thở. Dùng rất ít bàn đạp, hoặc không dùng: legato phải đến từ ngón tay. Nếu dùng, đổi theo từng nửa ô và giữ thật nông.
+Bản in đầu (Schuberth, 1848) không ghi chỉ dẫn tốc độ cho *Melodie*. Nhiều ấn bản về sau thêm *Nicht schnell* (bản Peters: *pas vite*), có bản in chữ ấy trong ngoặc: đó là chỉ dẫn của người biên tập. Chữ ấy nghĩa là "không nhanh", không phải "chậm". Giai điệu như một bài hát đơn giản, mỗi dấu luyến là một hơi thở. Dùng rất ít bàn đạp, hoặc không dùng: legato phải đến từ ngón tay. Nếu dùng, đổi theo từng nửa ô và giữ thật nông.
 
 ### Wilder Reiter
 
@@ -201,7 +201,7 @@ Một người nông dân đi làm về, vừa đi vừa hát: chắc khỏe, vu
 - Ở tay phải: một giai điệu mới ở Đô trưởng
 - Không có giai điệu, hai tay chỉ đánh hợp âm ngắn
 > Tay phải lúc này chỉ đánh hợp âm ngắn và phải nhỏ lại ngay, để tay trái hát với cùng sự tự tin như tay phải ở đoạn A.
-? Chỉ dẫn Nicht schnell ở đầu Melodie nghĩa là gì?
+? Nhiều ấn bản ghi Nicht schnell ở đầu Melodie (người biên tập thêm; bản in đầu không ghi). Chữ ấy nghĩa là gì?
 - Chậm
 + Không nhanh
 - Nhanh và nhẹ

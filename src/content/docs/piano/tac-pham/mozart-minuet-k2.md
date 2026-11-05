@@ -26,7 +26,7 @@ Leopold dùng chính cuốn sổ ấy để dạy cậu em Wolfgang, kém chị 
 
 Về sau nhiều trang bị tách khỏi cuốn sổ. Minuet K. 2 được in lần đầu năm 1828, trong cuốn tiểu sử Mozart của Georg Nikolaus Nissen, người chồng sau của Constanze, vợ góa Mozart. Chữ **K.** (hay **KV**) chỉ danh mục tác phẩm Mozart do Ludwig von Köchel lập năm 1862; cách đọc các ký hiệu này có ở [Đọc tên tác phẩm](/opus/nghe-nhac/doc-ten-tac-pham/).
 
-Bài được viết cho đàn phím của thời ấy, harpsichord hoặc clavichord (xem [Lịch sử cây đàn piano](/opus/piano/lich-su-dan/)), theo phong cách **galant** giữa thế kỷ 18: câu ngắn, giai điệu dễ hát, bè trầm giản dị. **Minuet** là điệu nhảy cung đình nhịp 3/4; về sau nó thành chương ba quen thuộc của giao hưởng và sonata Cổ điển (xem [Minuet và Trio](/opus/hinh-thuc/minuet-trio/) và [thời kỳ Cổ điển](/opus/lich-su/thoi-ky/co-dien/)).
+Bài được viết cho đàn phím của thời ấy, harpsichord hoặc clavichord (xem [Lịch sử cây đàn piano](/opus/piano/lich-su-dan/)), theo phong cách **galant** ("lịch lãm, kiểu cung đình"), lối viết thế kỷ 18 mà Mozart thời đầu ưa dùng. **Minuet** là điệu nhảy cung đình nhịp 3/4; về sau nó thành chương ba quen thuộc của giao hưởng và sonata Cổ điển (xem [Minuet và Trio](/opus/hinh-thuc/minuet-trio/) và [thời kỳ Cổ điển](/opus/lich-su/thoi-ky/co-dien/)).
 
 ## Nghe trước khi tập
 
@@ -38,7 +38,7 @@ Cả bài chỉ dài chừng một phút. Nghe ít nhất hai bản: một bản
 4. **Màu Sol thứ.** Đoạn giữa tối đi lúc nào, và sáng lại lúc nào?
 5. **Dấu ngân.** Ở chỗ dừng gần cuối, nghệ sĩ chờ bao lâu rồi mới đi tiếp?
 
-Muốn nghe Mozart trưởng thành viết minuet ra sao, nghe chương 3 của *Eine kleine Nachtmusik* ([hướng dẫn nghe](/opus/nghe-nhac/mozart-eine-kleine/)).
+Muốn nghe Mozart trưởng thành viết minuet ra sao, nghe chương 3 của *Eine kleine Nachtmusik* (trang [Minuet và Trio](/opus/hinh-thuc/minuet-trio/#i-qua-mot-tac-pham-mozart-eine-kleine-nachtmusik-chuong-3) đi qua chương này).
 
 ::khoi-nghe{moc="1 13 25 31 38 46"}
 
@@ -61,7 +61,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 
 | Đoạn | Ô nhịp | Giọng và kết | Nội dung | Điều cần chú ý |
 |---|---|---|---|---|
-| A, câu 1 | 1–4 | Fa trưởng; dừng ở Fa (ô 4) | Môtip một ô: hai móc đơn đi lên quãng ba, rơi xuống quãng sáu, rồi hai nốt đen cùng cao độ. Môtip vang ba lần, mỗi lần thấp hơn | Ô 4: nốt treo Mi trên bè trầm Fa |
+| A, câu 1 | 1–4 | Fa trưởng; dừng ở Fa (ô 4) | Môtip một ô: hai móc đơn đi lên quãng ba, rơi xuống (quãng sáu ở ô 1, quãng năm ở ô 2 và 3), rồi hai nốt đen (cùng cao độ ở ô 1 và 2). Môtip vang ba lần, mỗi lần thấp hơn | Ô 4: nốt treo Mi trên bè trầm Fa |
 | A, câu 2 | 5–8 | Fa trưởng; **kết nửa** ở ô 8 (dừng trên hợp âm Đô) | Giai điệu đi lên từ Đô giữa; chùm ba móc đơn ở ô 7; tay trái giữ nốt Đô | Ô 8 là dấu phẩy, không phải dấu chấm |
 | B, nửa đầu | 9–12 | Sang Sol thứ (Mi♭, Fa♯) | Hình nốt của ô 1 trong màu thứ, mỗi ô thấp hơn một bậc | Nốt treo Fa♯ ở ô 12 |
 | B, nửa sau | 13–16 | Về Fa trưởng (Mi♮ ở ô 15) | Chuỗi tiếp tục đi xuống | Ô 16 khép lại giống ô 4 |
@@ -94,10 +94,10 @@ K:F
 
 | Chỗ khó | Vì sao khó | Cách tập |
 |---|---|---|
-| Cặp móc đơn luyến rồi rơi quãng sáu (ô 1–3) | Phải nhấc tay sau nốt luyến và rơi đúng vào nốt đen tiếp theo mà không trễ phách | Bài tập 1. Nghĩ "rơi – lăn – nhấc": rơi vào nốt đầu, lăn sang nốt sau, nhấc cổ tay; mắt nhìn trước nốt đích |
+| Cặp móc đơn luyến rồi rơi xuống (quãng sáu ở ô 1, quãng năm ở ô 2 và 3) | Phải nhấc tay sau nốt luyến và rơi đúng vào nốt đen tiếp theo mà không trễ phách | Bài tập 1. Nghĩ "rơi – lăn – nhấc": rơi vào nốt đầu, lăn sang nốt sau, nhấc cổ tay; mắt nhìn trước nốt đích |
 | Nốt treo ở phách 1 (ô 4, 8, 12, 16, 20, 24) | Người mới hay chơi nốt nghịch nhỏ, nhấc sớm, hoặc lại nhấn vào nốt giải | Bài tập 2. Nốt treo đậm hơn và giữ đủ hai phách, nốt giải nhẹ hơn. Ở các ô này tay trái đi xuống (trừ ô 20), nên cũng nhỏ dần |
 | Chùm ba ở ô 7 | Hai ô trước là cặp móc đơn, ô 7 bỗng có ba nốt trong một phách | Bài tập 3. Ba nốt đều nhau và lấp vừa một phách, không chạy vội tới nốt Si♭ |
-| Tay trái rơi quãng tám (ô 3, 4, 8) | Đô4 xuống Đô3, Fa3 xuống Fa2 trong thời gian một nốt đen | Tập riêng từng bước nhảy: ngón 1 rồi ngón 5, tay thả lỏng, mắt nhìn nốt đích |
+| Tay trái rơi quãng tám (ô 3) và đi xuống một quãng tám qua nốt giữa (ô 4, 8) | Ô 3: Đô4 xuống Đô3 trong thời gian một nốt đen; ô 4 và 8: Fa3 – Đô3 – Fa2, Đô4 – Sol3 – Đô3 | Tập riêng từng bước nhảy: ngón 1 rồi ngón 5, tay thả lỏng, mắt nhìn nốt đích |
 | Đổi thế tay phải giữa ô 4 và ô 5 | Từ quanh Fa4 phải xuống Đô giữa | Đặt ngón 1 lên Đô giữa ngay khi nhả nốt Fa; ô 5–8 không cần dời tay nữa |
 | Dấu hóa ở đoạn B | Hóa biểu chỉ có Si♭; Mi♭ và Fa♯ xuất hiện ở ô 9–12, rồi Mi♮ trở lại | Khoanh các dấu hóa bằng bút chì; đọc to tên nốt ô 9–16 trước khi chơi |
 | Dấu ngân ở ô 20 | Không biết dừng bao lâu; dễ vội đi tiếp hoặc dừng quá lâu | Đếm thầm thêm khoảng hai phách, lấy hơi, rồi vào ô 21 đúng tốc độ cũ |

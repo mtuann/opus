@@ -4,7 +4,7 @@ description: Bài thứ hai của cặp minuet nổi tiếng trong cuốn sổ t
 tac_pham: minuet-sol-thu
 ---
 
-Bài thứ hai của cặp minuet nổi tiếng trong cuốn sổ tay năm 1725 của Anna Magdalena Bach, đi liền sau [Minuet Sol trưởng](/opus/piano/tac-pham/minuet-sol/). Cùng nhịp 3/4, cùng 32 ô nhịp, cùng độ khó, nhưng giọng thứ đổi hẳn màu: bè trầm đi xuống từng bậc, nốt Fa♯ kéo về Sol, và bạn phải tự quyết định cách "nói" từng câu trên cây đàn piano mà Petzold chưa từng biết.
+Bài thứ hai của cặp minuet nổi tiếng trong cuốn sổ tay năm 1725 của Anna Magdalena Bach, đi liền sau [Minuet Sol trưởng](/opus/piano/tac-pham/minuet-sol/). Cùng nhịp 3/4, cùng 32 ô nhịp, cùng độ khó, nhưng giọng thứ đổi hẳn màu: bè trầm đi xuống từng bậc, nốt Fa♯ kéo về Sol, và bạn phải tự quyết định cách "nói" từng câu trên cây đàn piano, không phải cây harpsichord mà Petzold viết cho.
 
 ::hop-tac-pham
 
@@ -200,7 +200,7 @@ Bản gốc không ghi sắc thái; hãy để hòa âm dẫn đường. Đoạn
 
 ### Nốt hoa mỹ
 
-Bản Bach-Gesellschaft in **láy trên** (răng cưa ngắn, không gạch) ở ô 8, 9, 15 và 31, và **láy dưới** (có gạch dọc) ở ô 13 và 22; các ấn bản khác nhau ở chi tiết này. Theo cách đọc quen thuộc thời Bach, láy trên bắt đầu từ nốt trên, đúng phách: ở ô 8 là Si♭ – La – Si♭ – La rồi ngân La (bài tập 3). Ở ô 9, nốt Si♭ vừa vang ngay trước nốt La có láy, nên chỉ cần nối sang chứ không đánh lại. Láy dưới là chính – dưới – chính: Fa – Mi♭ – Fa ở ô 13. Chi tiết và cách tập: [Nốt hoa mỹ](/opus/piano/not-hoa-my/).
+Bản Bach-Gesellschaft in **láy trên** (răng cưa ngắn, không gạch) ở ô 8, 9, 15 và 31, và **láy dưới** (có gạch dọc) ở ô 13 và 22. Theo cách đọc quen thuộc thời Bach, láy trên bắt đầu từ nốt trên, đúng phách: ở ô 8 là Si♭ – La – Si♭ – La rồi ngân La (bài tập 3). Ở ô 9, nốt Si♭ vừa vang ngay trước nốt La có láy, nên chỉ cần nối sang chứ không đánh lại. Láy dưới là chính – dưới – chính: Fa – Mi♭ – Fa ở ô 13. Chi tiết và cách tập: [Nốt hoa mỹ](/opus/piano/not-hoa-my/).
 
 ### Bàn đạp
 

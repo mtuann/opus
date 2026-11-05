@@ -10,7 +10,7 @@ lan:
     nguoi:
       luot_1: "Claude Opus 5.5 (D6-L1 phần A)"
       luot_2: null
-      review: null
+      review: Claude Opus 5.5 (review D6-L1-gom, 05/11/2026)
       kiem_mau: null
 ghi_chu: 'Bài học Mozart Minuet Fa trưởng K. 2 (tầng Tác phẩm). Bản nhạc: Mutopia menuet_k2 (.ly và .mid, nguồn Breitkopf & Härtel, Mozarts Werke, Nicolas Morant), đối chiếu từng nốt cả 24 ô bằng script Python (mido). Köchel online: trang KV 2 và trang sổ nhạc Nannerl đọc qua WebFetch (trang dựng bằng JavaScript; curl không thấy chữ; địa chỉ có tên mới hiện nội dung). Tiểu sử: Neue Deutsche Biographie (deutsche-biographie.de) cho W. A. và Leopold Mozart. Lời tựa Henle HN 1236 (PDF trên henle.de) cho sổ nhạc Nannerl. Türk: bản scan Klavierschule 1789 trên Internet Archive (OCR). Sửa trang ở lượt 1: n30 (bỏ tên Guy Penson, chưa tìm thấy bản thu), n70 (dấu ngân ô 20), n86 (bỏ dòng PTNA ở mục Nguồn: trang PTNA về KV 2 không tìm thấy). Còn mở: n16 (ghi chú 26/1/1761 chỉ thấy ở Wikipedia), n24 (mô tả phong cách galant). Không tính là nhận định: tiêu đề, tiêu đề cột, chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng, mốc trong ::khoi-nghe.'
 nguon:
@@ -78,6 +78,14 @@ nguon:
     bac: 3
     ten: Wikipedia, Nannerl Notenbuch (bậc 3; chỉ để định vị)
     link: https://en.wikipedia.org/wiki/Nannerl_Notenbuch
+  - id: jahn-1882
+    bac: 2
+    ten: "Otto Jahn, Life of Mozart, quyển 1 (bản dịch Pauline D. Townsend, London 1882), Project Gutenberg #43411: ghi chú của Leopold trong sổ nhạc Nannerl"
+    link: https://www.gutenberg.org/ebooks/43411
+  - id: cod-galant
+    bac: 2
+    ten: 'The Concise Oxford Dictionary of Music, mục galant, qua Encyclopedia.com: "Courtly. 18th-cent. term to describe elegant style ... favoured by ... early Mozart"'
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/galant
 nhan_dinh:
   - id: n1
     cau: Minuet K. 2 có 24 ô nhịp.
@@ -167,7 +175,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: src/content/docs/piano/tac-pham/minuet-sol.md có (hai bè).
+    ghi_chu: "src/content/docs/piano/tac-pham/minuet-sol.md có (hai bè). Review D6-L1-gom: piano/tac-pham/minuet-sol (cùng lô) là bài hai bè. Đúng."
+    review: dung
   - id: n12
     cau: Sáu lần trong bài, phách 1 là một nốt nghịch ngân hai phách rồi mới đi tới nốt hợp âm.
     loai: cau-truc
@@ -191,7 +200,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: src/content/docs/nhac-ly/13-ket.md có kết nửa, kết lừa.
+    ghi_chu: "src/content/docs/nhac-ly/13-ket.md có kết nửa, kết lừa. Review D6-L1-gom: nhac-ly/13-ket có kết nửa, kết lừa. Đúng."
+    review: dung
   - id: n15
     cau: Leopold Mozart là nhạc công violin và nhà soạn nhạc trong dàn nhạc của Tổng giám mục Salzburg.
     loai: lich-su
@@ -204,12 +214,15 @@ nhan_dinh:
   - id: n16
     cau: 'Một ghi chú nổi tiếng kể rằng Wolfgang học một minuet và trio trong nửa giờ, lúc chín giờ rưỡi tối ngày 26 tháng 1 năm 1761, một ngày trước sinh nhật năm tuổi.'
     loai: lich-su
-    nguon: [ wiki-nannerl, ndb-wam ]
-    ket_qua: null
-    ghi_chu: 'chưa chắc: chỉ thấy ở Wikipedia (Nannerl Notenbuch, bảng số 11, kèm chữ Đức "einen Tag vor seinem 5ten Jahr um halb 10 uhr nachts in einer halben stund"); Köchel (trang sổ nhạc) và lời tựa Henle đã mở không trích ghi chú này. Phần "một ngày trước sinh nhật năm tuổi" khớp NDB (sinh 27.1.1756). Lượt 2 hay review tìm NMA IX/27/1 (dme.mozarteum.at) để xác nhận.'
+    nguon:
+      - jahn-1882
+      - ndb-wam
+    ket_qua: dung
+    ghi_chu: 'chưa chắc: chỉ thấy ở Wikipedia (Nannerl Notenbuch, bảng số 11, kèm chữ Đức "einen Tag vor seinem 5ten Jahr um halb 10 uhr nachts in einer halben stund"); Köchel (trang sổ nhạc) và lời tựa Henle đã mở không trích ghi chú này. Phần "một ngày trước sinh nhật năm tuổi" khớp NDB (sinh 27.1.1756). Lượt 2 hay review tìm NMA IX/27/1 (dme.mozarteum.at) để xác nhận. Review D6-L1-gom: lượt 2 tìm được nguồn ngoài Wikipedia; review tự mở bản Gutenberg: Otto Jahn, Life of Mozart, quyển 1 (bản dịch Pauline D. Townsend, 1882), trích ghi chú của Leopold: "This minuet and trio were learned by Wolfgangerl in half-an-hour, at half-past nine at night, on January 26, 1761, one day before his fifth year." Giữ.'
     luot_2: dung
     luot_2_nguon: [ "https://www.gutenberg.org/ebooks/43411" ]
     luot_2_ghi_chu: 'Otto Jahn, Life of Mozart, quyển 1 (Gutenberg #43411) dẫn ghi chú của Leopold: "This minuet and trio were learned by Wolfgangerl in half-an-hour, at half-past nine at night, on January 26, 1761, one day before his fifth year." Chưa tìm được bản gốc trong NMA trên mạng.'
+    review: dung
   - id: n17
     cau: Năm 1756, năm Wolfgang ra đời, Leopold xuất bản một cuốn sách dạy violin rất có tiếng.
     loai: nam
@@ -274,13 +287,12 @@ nhan_dinh:
     luot_2_nguon: [ "https://kv.mozarteum.at/en/work/piano-piece-in-f-1009", "https://www.henle.de/media/56/5a/41/1697725907/1236-1697725907-sync.pdf" ]
     luot_2_ghi_chu: 'Köchel online (phần giới thiệu nhóm): "Wolfgang was unable to write down the compositions himself until he was eight years old"; Henle: "his father mostly did this for him".'
   - id: n24
-    cau: 'Phong cách galant giữa thế kỷ 18: câu ngắn, giai điệu dễ hát, bè trầm giản dị.'
+    cau: 'Phong cách galant: chữ galant nghĩa là "lịch lãm, kiểu cung đình"; đó là lối viết thế kỷ 18 mà Mozart thời đầu ưa dùng.'
     loai: dinh-nghia
-    nguon: []
-    ket_qua: null
-    ghi_chu: 'chưa chắc: chưa mở được nguồn bậc 2 mô tả phong cách galant như vậy (OMT Galant Schemas chỉ nói các schema của "Galant style", dẫn Gjerdingen 2007, không định nghĩa). Đặc điểm câu ngắn, bè trầm giản dị đúng với bài (Mutopia).'
-    luot_2: khong-chac
-    luot_2_ghi_chu: Không tìm được nguồn bậc 2 đọc được mô tả đặc điểm phong cách galant (câu ngắn, giai điệu dễ hát, bè trầm giản dị). Open Music Theory chương Galant Schemas chỉ nói về schema, không định nghĩa phong cách; Britannica (galant style) bị chặn, cả bản lưu.
+    nguon:
+      - cod-galant
+    ket_qua: da-sua
+    ghi_chu: 'chưa chắc: chưa mở được nguồn bậc 2 mô tả phong cách galant như vậy (OMT Galant Schemas chỉ nói các schema của "Galant style", dẫn Gjerdingen 2007, không định nghĩa). Đặc điểm câu ngắn, bè trầm giản dị đúng với bài (Mutopia). Review D6-L1-gom: cả hai lượt không tìm được nguồn bậc 2 cho "câu ngắn, giai điệu dễ hát, bè trầm giản dị" (chỉ Wikipedia). Viết lại theo Concise Oxford Dictionary of Music (encyclopedia.com, mục galant): "Courtly. 18th-cent. term to describe elegant style ... favoured by, for example, J. C. Bach, the Stamitzes, and early Mozart." Chữ cũ: "theo phong cách galant giữa thế kỷ 18: câu ngắn, giai điệu dễ hát, bè trầm giản dị". Câu có điều mới: gỡ kết quả lượt 2 cũ (khong-chac: không tìm được nguồn bậc 2 mô tả các đặc điểm; OMT chỉ nói schema; Britannica bị chặn), chờ lượt 2 bổ sung.'
   - id: n25
     cau: Về sau nhiều trang bị tách khỏi cuốn sổ.
     loai: lich-su
@@ -313,7 +325,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: 'Trang đích chưa chuyển; ../opus-zero/docs/nghe-nhac/doc-ten-tac-pham.md có dòng "K. hoặc KV | Mozart | Ludwig von Köchel (1862)". Lô chuyển trang ấy cần giữ.'
+    ghi_chu: 'Trang đích chưa chuyển; ../opus-zero/docs/nghe-nhac/doc-ten-tac-pham.md có dòng "K. hoặc KV | Mozart | Ludwig von Köchel (1862)". Lô chuyển trang ấy cần giữ. Review D6-L1-gom: site cũ doc-ten-tac-pham có dòng "K. hoặc KV | Mozart | Ludwig von Köchel (1862)". Đúng.'
+    review: dung
   - id: n29
     cau: Bài viết cho đàn phím của thời ấy, harpsichord hoặc clavichord.
     loai: lich-su
@@ -328,10 +341,11 @@ nhan_dinh:
     loai: ten
     nguon: [ hra-deljavan ]
     ket_qua: da-sua
-    ghi_chu: 'Cũ: "một bản trên harpsichord (ví dụ của Guy Penson) và một bản trên piano (ví dụ của Alessandro Deljavan, ...)". Mới: bỏ "(ví dụ của Guy Penson)". Deljavan: album "Mozart: Nannerl Notenbuch, Pt. 1" (OnClassical 2022) có track "Minuet for Piano in F Major, K. 2". Guy Penson: chưa tìm được bản thu nào của bài này.'
+    ghi_chu: 'Cũ: "một bản trên harpsichord (ví dụ của Guy Penson) và một bản trên piano (ví dụ của Alessandro Deljavan, ...)". Mới: bỏ "(ví dụ của Guy Penson)". Deljavan: album "Mozart: Nannerl Notenbuch, Pt. 1" (OnClassical 2022) có track "Minuet for Piano in F Major, K. 2". Guy Penson: chưa tìm được bản thu nào của bài này. Review D6-L1-gom: chữ trang khớp câu (chỉ Deljavan); lượt 2 xác nhận (HIGHRESAUDIO, eClassical). Đúng.'
     luot_2: dung
     luot_2_nguon: [ "https://www.highresaudio.com/de/album/view/js4vei/alessandro-deljavan-mozart-nannerl-notenbuch-pt-1", "https://www.eclassical.com/onclassical/mozart-nannerl-notenbuch-pt-1.html" ]
     luot_2_ghi_chu: 'Album "Mozart: Nannerl Notenbuch, Pt. 1" (OnClassical) có track "Minuet for Piano in F Major, K. 2" (00:46); eClassical ghi nhạc cụ Piano, Deljavan, Alessandro.'
+    review: dung
   - id: n31
     cau: Cả bài chỉ dài chừng một phút.
     loai: so-lieu
@@ -347,11 +361,12 @@ nhan_dinh:
     nguon: []
     ket_qua: khong-can-nguon
   - id: n33
-    cau: Link hướng dẫn nghe Eine kleine Nachtmusik (chương 3 là minuet).
+    cau: Link chương 3 của Eine kleine Nachtmusik ở trang Minuet và Trio (mục đi qua chương này).
     loai: ve-site
     nguon: []
-    ket_qua: dung
-    ghi_chu: 'Trang đích chưa chuyển; ../opus-zero/docs/nghe-nhac/mozart-eine-kleine.md có chương minuet. Lô chuyển trang cần giữ.'
+    ket_qua: da-sua
+    ghi_chu: 'Trang đích chưa chuyển; ../opus-zero/docs/nghe-nhac/mozart-eine-kleine.md có chương minuet. Lô chuyển trang cần giữ. Review D6-L1-gom: câu cũ sai: hướng dẫn nghe Eine kleine Nachtmusik (site cũ, bản ghi mozart-eine-kleine: "chương 1") chỉ nói chương 1. Sửa: trỏ sang hinh-thuc/minuet-trio (đã khóa), mục đi qua chương 3 (Menuetto, Allegretto). doi_chu.'
+    review: dung
   - id: n34
     cau: 'Theo dõi khi nghe, đoạn A (ô 1–8): cặp móc đơn đi lên rồi rơi xuống hai nốt đen, ba lần liền, mỗi lần thấp hơn; ô 5–8 đi lên và dừng lơ lửng.'
     loai: cau-truc
@@ -388,14 +403,15 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/MozartWA/KV2/menuet_k2/menuet_k2.ly" ]
     luot_2_ghi_chu: Đếm trên bản Mutopia (Breitkopf & Härtel, Mozarts Werke Serie XXII, plate W.A.M. 2.4). Ô 17–19 giống ô 1–3; ô 20 bè trầm Rê3 (Rê–Fa–La với Mi→Fa ở tay phải), dấu ngân; ô 21–24 nhắc lại chủ đề, kết Fa.
   - id: n38
-    cau: 'Bảng cấu trúc, câu 1 (ô 1–4): môtip một ô: hai móc đơn đi lên quãng ba, rơi xuống quãng sáu, rồi hai nốt đen cùng cao độ; môtip vang ba lần, mỗi lần thấp hơn; ô 4 nốt treo Mi trên bè trầm Fa.'
+    cau: 'Bảng cấu trúc, câu 1 (ô 1–4): môtip một ô: hai móc đơn đi lên quãng ba, rơi xuống (quãng sáu ở ô 1, quãng năm ở ô 2 và 3), rồi hai nốt đen (cùng cao độ ở ô 1 và 2); môtip vang ba lần, mỗi lần thấp hơn; ô 4 nốt treo Mi trên bè trầm Fa.'
     loai: cau-truc
     nguon: [ mut-k2 ]
-    ket_qua: dung
-    ghi_chu: 'Fa5–La5 quãng ba, La5–Đô5 quãng sáu, Đô5 Đô5. Lần thứ ba (ô 3) hai nốt đen là Fa4 Mi4 (không cùng cao độ): biến thể dẫn vào nốt treo. Ô 4 Mi4 trên Fa3.'
+    ket_qua: da-sua
+    ghi_chu: 'Fa5–La5 quãng ba, La5–Đô5 quãng sáu, Đô5 Đô5. Lần thứ ba (ô 3) hai nốt đen là Fa4 Mi4 (không cùng cao độ): biến thể dẫn vào nốt treo. Ô 4 Mi4 trên Fa3. Review D6-L1-gom: câu cũ nói mọi lần đều rơi quãng sáu và hai nốt đen cùng cao độ. Review đếm trên menuet_k2.ly: ô 1 La5→Đô5 (quãng sáu), ô 2 Fa5→Si♭4, ô 3 Đô5→Fa4 (quãng năm); ô 3 hai nốt đen Fa4 Mi4. Đúng như ghi chú lượt 1 và lượt 2 của câu này; chữ mới chỉ theo điều lượt 2 đã ghi, phần còn lại lượt 2 đã xác nhận.'
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/MozartWA/KV2/menuet_k2/menuet_k2.ly", "https://enc.piano.or.jp/musics/63258" ]
     luot_2_ghi_chu: "Đếm trên bản Mutopia (Breitkopf & Härtel, Mozarts Werke Serie XXII, plate W.A.M. 2.4). Ô 1: Fa5–La5 (quãng ba lên), La5→Đô5 (quãng sáu xuống), Đô5 Đô5. PTNA mô tả cùng môtip ở ô 1. Lưu ý: hai lần sau là biến thể (ô 2 và ô 3 rơi quãng năm; ô 3 hai nốt đen là Fa4–Mi4, không cùng cao độ). Ô 4: Mi4 trên bè trầm Fa3."
+    review: dung
   - id: n39
     cau: 'Câu 2 (ô 5–8): Fa trưởng; kết nửa ở ô 8 (dừng trên hợp âm Đô); giai điệu đi lên từ Đô giữa; chùm ba móc đơn ở ô 7; tay trái giữ nốt Đô.'
     loai: cau-truc
@@ -453,16 +469,18 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: src/content/docs/nhac-ly/31-hinh-thuc-nho.md có.
+    ghi_chu: "src/content/docs/nhac-ly/31-hinh-thuc-nho.md có. Review D6-L1-gom: nhac-ly/31-hinh-thuc-nho: trang đích có trong bản xem (dist), link.test đạt. Đúng."
+    review: dung
   - id: n46
     cau: Nốt nhạc của khuông theo ấn bản Breitkopf & Härtel (1878), qua bản dàn trang công cộng của Mutopia Project; dấu luyến theo bản ấy; hết ô 8 thì nhắc lại từ đầu.
     loai: cau-truc
     nguon: [ mut-k2, imslp-k2 ]
     ket_qua: dung
-    ghi_chu: 'Mutopia: source "Leipzig: Breitkopf & Härtel, 1877-1910. Plate W.A.M. 2.4", license "Public Domain"; IMSLP: Mozarts Werke Serie XXII, 1878. Dấu luyến của khối khớp tệp .ly.'
+    ghi_chu: 'Mutopia: source "Leipzig: Breitkopf & Härtel, 1877-1910. Plate W.A.M. 2.4", license "Public Domain"; IMSLP: Mozarts Werke Serie XXII, 1878. Dấu luyến của khối khớp tệp .ly. Review D6-L1-gom: phần về khuông: đối chiếu khối 1 với menuet_k2.ly: nốt hai tay ô 1–8 (kể cả chùm ba ô 7) và dấu luyến (cặp móc đơn, nốt treo – nốt giải, Đô–Mi trong chùm ba) khớp; dấu nhắc sau ô 8. Đúng.'
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/MozartWA/KV2/menuet_k2/menuet_k2.ly", "https://imslp.org/wiki/Minuet_in_F_major,_K.2_(Mozart,_Wolfgang_Amadeus)" ]
     luot_2_ghi_chu: 'File Mutopia: source "Leipzig: Breitkopf & Härtel, 1877-1910. Plate W.A.M. 2.4", Mozarts Werke Serie XXII, Public Domain; IMSLP ghi bản in Breitkopf 1878. Chỉ ô 1–8 nằm trong \repeat volta 2. Phần khuông trên site không mở (ngoài phạm vi lượt 2).'
+    review: dung
   - id: n47
     cau: 'Ô 1–3: ngón 2–4 cho cặp móc đơn, ngón 1 cho hai nốt đen, cả bàn tay dời xuống sau mỗi ô; ô 5–8 nằm gọn trong một thế tay (ngón 1 trên Đô giữa, ngón 5 trên Si♭ ở ô 7).'
     loai: khuyen-tap
@@ -479,14 +497,15 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/MozartWA/KV2/menuet_k2/menuet_k2.ly" ]
     luot_2_ghi_chu: "Đếm trên bản Mutopia (Breitkopf & Härtel, Mozarts Werke Serie XXII, plate W.A.M. 2.4). Tay trái ô 1–3: Fa3, La3 | Si♭3 | Đô4 rồi Đô3: đi lên Fa–La–Si♭–Đô rồi rơi quãng tám. Ngón 5-3-2-1 là gợi ý, khớp vị trí các nốt."
   - id: n49
-    cau: 'Chỗ khó: cặp móc đơn luyến rồi rơi quãng sáu (ô 1–3).'
+    cau: 'Chỗ khó: cặp móc đơn luyến rồi rơi xuống (quãng sáu ở ô 1, quãng năm ở ô 2 và 3).'
     loai: cau-truc
     nguon: [ mut-k2 ]
-    ket_qua: dung
-    ghi_chu: La5–Đô5, Fa5–Si♭4, Đô5–Fa4 đều là quãng sáu.
+    ket_qua: da-sua
+    ghi_chu: "La5–Đô5, Fa5–Si♭4, Đô5–Fa4 đều là quãng sáu. Review D6-L1-gom: lượt 2 sai đúng: review đếm trên menuet_k2.ly (relative c'): ô 1 La5→Đô5 quãng sáu, ô 2 Fa5→Si♭4 và ô 3 Đô5→Fa4 quãng năm. Chữ trang theo câu đúng của lượt 2, phần còn lại lượt 2 đã xác nhận. Bài tập 1 (soạn) vẫn rơi quãng sáu ở cả ba ô (A4→C4, B♭4→D4, C5→E4), câu dẫn \"ngón 1 rơi xuống quãng sáu\" đúng."
     luot_2: sai
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/MozartWA/KV2/menuet_k2/menuet_k2.ly", "https://enc.piano.or.jp/musics/63258" ]
     luot_2_ghi_chu: "câu đúng: Chỗ khó: cặp móc đơn luyến rồi rơi xuống (quãng sáu ở ô 1, quãng năm ở ô 2 và 3).; Đếm trên bản Mutopia (Breitkopf & Härtel, Mozarts Werke Serie XXII, plate W.A.M. 2.4). Chỉ ô 1 rơi quãng sáu (La5→Đô5); ô 2 (Fa5→Si♭4) và ô 3 (Đô5→Fa4) rơi quãng năm."
+    review: dung
   - id: n50
     cau: 'Chỗ khó: nốt treo ở phách 1 (ô 4, 8, 12, 16, 20, 24); ở các ô này tay trái đi xuống (trừ ô 20).'
     loai: cau-truc
@@ -505,13 +524,15 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/MozartWA/KV2/menuet_k2/menuet_k2.ly" ]
     luot_2_ghi_chu: "Đếm trên bản Mutopia (Breitkopf & Härtel, Mozarts Werke Serie XXII, plate W.A.M. 2.4). Ô 5, 6: Đô–Mi, Đô–Fa (cặp móc đơn); ô 7: \\tuplet 3/2 {Đô Mi Sol} trong một phách."
   - id: n52
-    cau: 'Chỗ khó: tay trái rơi quãng tám ở ô 3, 4, 8 (Đô4 xuống Đô3, Fa3 xuống Fa2) trong thời gian một nốt đen.'
+    cau: 'Chỗ khó: tay trái rơi quãng tám ở ô 3 (Đô4 xuống Đô3, trong thời gian một nốt đen); ở ô 4 và ô 8 tay trái đi xuống một quãng tám qua nốt giữa (Fa3 – Đô3 – Fa2; Đô4 – Sol3 – Đô3).'
     loai: cau-truc
     nguon: [ mut-k2 ]
-    ket_qua: dung
+    ket_qua: da-sua
     luot_2: sai
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/MozartWA/KV2/menuet_k2/menuet_k2.ly" ]
     luot_2_ghi_chu: "câu đúng: Chỗ khó: tay trái rơi quãng tám ở ô 3 (Đô4 xuống Đô3, trong thời gian một nốt đen); ở ô 4 và ô 8 tay trái đi xuống một quãng tám qua nốt giữa (Fa3 – Đô3 – Fa2; Đô4 – Sol3 – Đô3).; Đếm trên bản Mutopia (Breitkopf & Härtel, Mozarts Werke Serie XXII, plate W.A.M. 2.4). Ô 3 tay trái rơi thẳng Đô4→Đô3 (một bước). Ô 4 (Fa3–Đô3–Fa2) và ô 8 (Đô4–Sol3–Đô3) xuống một quãng tám qua nốt giữa, mỗi bước một nốt đen, không phải một bước nhảy quãng tám."
+    review: dung
+    ghi_chu: "Review D6-L1-gom: lượt 2 sai đúng: tay trái ô 3 \"c2 c,4\" (Đô4 → Đô3), ô 4 \"f c f,\" (Fa3 Đô3 Fa2), ô 8 \"c' g c,\" (Đô4 Sol3 Đô3). Chữ trang (hàng bảng Chỗ khó) theo câu đúng của lượt 2, phần còn lại lượt 2 đã xác nhận."
   - id: n53
     cau: 'Chỗ khó: đổi thế tay phải giữa ô 4 và ô 5, từ quanh Fa4 xuống Đô giữa.'
     loai: cau-truc
@@ -538,7 +559,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: Khối 2–4 có "(soạn cho trang này)"; khối 3, 4 mượn ô như trang nói (n58, n60).
+    ghi_chu: 'Khối 2–4 có "(soạn cho trang này)"; khối 3, 4 mượn ô như trang nói (n58, n60). Review D6-L1-gom: khối 2–4 có "(soạn cho trang này)"; khối 3, 4 mượn ô 4, 8, 12 và ô 5, 7 (xem n58, n60). Đúng.'
+    review: dung
   - id: n57
     cau: 'Bài tập 1: rơi vào nốt đầu bằng ngón 2, lăn sang ngón 4 rồi nhấc cổ tay; ngón 1 rơi xuống quãng sáu, hai nốt đen hơi tách, nhẹ hơn.'
     loai: khuyen-tap
@@ -550,10 +572,11 @@ nhan_dinh:
     loai: cau-truc
     nguon: [ mut-k2 ]
     ket_qua: dung
-    ghi_chu: 'Khối 3: Mi4–Fa4 trên Fa3 Đô3 Fa2 (= ô 4), La4–Sol4 trên Đô4 Sol3 Đô3 (= ô 8), Fa♯4–Sol4 trên Sol3 Rê3 Sol2 (= ô 12): khớp từng nốt MIDI Mutopia. Ô 4 Đô♯4–Rê4 trên Rê3 La2 Rê2: Rê thứ.'
+    ghi_chu: 'Khối 3: Mi4–Fa4 trên Fa3 Đô3 Fa2 (= ô 4), La4–Sol4 trên Đô4 Sol3 Đô3 (= ô 8), Fa♯4–Sol4 trên Sol3 Rê3 Sol2 (= ô 12): khớp từng nốt MIDI Mutopia. Ô 4 Đô♯4–Rê4 trên Rê3 La2 Rê2: Rê thứ. Review D6-L1-gom: khối 3: E4–F2 trên F,2 C,2 F,,2 (= ô 4), A4–G2 trên C2 G,2 C,2 (= ô 8), ^F4–G2 trên G,2 D,2 G,,2 (= ô 12), ^C4–D2 trên D,2 A,,2 D,,2 (Rê thứ). Đúng.'
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/MozartWA/KV2/menuet_k2/menuet_k2.ly" ]
     luot_2_ghi_chu: "Đếm trên bản Mutopia (Breitkopf & Härtel, Mozarts Werke Serie XXII, plate W.A.M. 2.4). Kiểm phần bản nhạc: ô 4, 8, 12 là ba chỗ kết đầu (nốt nghịch ngân phách 1, giải phách 3), ô 20 cùng động tác trên bè trầm Rê. Nội dung bài tập trên trang không mở (ngoài phạm vi lượt 2); review kiểm khuông bài tập."
+    review: dung
   - id: n59
     cau: 'Nốt treo chơi đậm, giữ đủ hai phách; nốt giải ở phách 3 nhẹ hơn; tay trái "gốc – năm – gốc thấp".'
     loai: khuyen-tap
@@ -564,16 +587,18 @@ nhan_dinh:
     loai: cau-truc
     nguon: [ mut-k2 ]
     ket_qua: dung
-    ghi_chu: 'Khối 4 ô 1 Đô4 Mi4 Sol4 Sol4 trên Đô3 (= ô 5), ô 2 chùm ba Đô4 Mi4 Sol4, Si♭4 La4 trên Đô3 Mi3 Fa3 (= ô 7); ô 3–4 Rê–Fa–La, Đô5–Si♭4 trên Rê3, Rê3 Fa3 Sol3: cao một bậc.'
+    ghi_chu: 'Khối 4 ô 1 Đô4 Mi4 Sol4 Sol4 trên Đô3 (= ô 5), ô 2 chùm ba Đô4 Mi4 Sol4, Si♭4 La4 trên Đô3 Mi3 Fa3 (= ô 7); ô 3–4 Rê–Fa–La, Đô5–Si♭4 trên Rê3, Rê3 Fa3 Sol3: cao một bậc. Review D6-L1-gom: khối 4: ô 1 (C E) G2 G2 trên C,6 (= ô 5), ô 2 (3 C E G B2 A2 trên C,2 E,2 F,2 (= ô 7); ô 3–4 cùng hình từ Rê. Đúng.'
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/MozartWA/KV2/menuet_k2/menuet_k2.ly" ]
     luot_2_ghi_chu: "Đếm trên bản Mutopia (Breitkopf & Härtel, Mozarts Werke Serie XXII, plate W.A.M. 2.4). Kiểm phần bản nhạc: ô 5 (Đô–Mi | Sol Sol) và ô 7 (chùm ba Đô–Mi–Sol | Si♭ La) có thật. Nội dung bài tập trên trang không mở; review kiểm khuông bài tập."
+    review: dung
   - id: n61
     cau: Link máy đếm nhịp; ba nốt chùm ba lấp đều đúng một tiếng gõ nốt đen.
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: src/content/docs/luyen-tap/metronome.md có. Chùm ba = ba nốt trong một phách nốt đen (khối 4 "(3").
+    ghi_chu: 'src/content/docs/luyen-tap/metronome.md có. Chùm ba = ba nốt trong một phách nốt đen (khối 4 "(3"). Review D6-L1-gom: luyen-tap/metronome có; khối 4 ô 2, 4 có "(3" ba móc đơn trong một phách nốt đen. Đúng.'
+    review: dung
   - id: n62
     cau: Kế hoạch 4 tuần (♩ = 66–116) và danh sách việc.
     loai: khuyen-tap
@@ -584,7 +609,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: src/content/docs/luyen-tap/thu-am.md có.
+    ghi_chu: "src/content/docs/luyen-tap/thu-am.md có. Review D6-L1-gom: luyen-tap/thu-am: trang đích có trong bản xem (dist), link.test đạt. Đúng."
+    review: dung
   - id: n64
     cau: Bản gốc không ghi tốc độ.
     loai: cau-truc
@@ -637,10 +663,11 @@ nhan_dinh:
     loai: cau-truc
     nguon: [ mut-k2 ]
     ket_qua: da-sua
-    ghi_chu: 'Cũ: "Không phải ấn bản nào cũng in dấu ngân ở ô 20; nếu bản của bạn không có, ...". Chưa tìm được ấn bản nào không in dấu ngân để kiểm câu cũ; bản Breitkopf (Mutopia) có "\fermata" ở ô 20 cả hai tay. Mới: "Bản Breitkopf in dấu ngân ở ô 20; nếu bản của bạn không có, ...".'
+    ghi_chu: 'Cũ: "Không phải ấn bản nào cũng in dấu ngân ở ô 20; nếu bản của bạn không có, ...". Chưa tìm được ấn bản nào không in dấu ngân để kiểm câu cũ; bản Breitkopf (Mutopia) có "\fermata" ở ô 20 cả hai tay. Mới: "Bản Breitkopf in dấu ngân ở ô 20; nếu bản của bạn không có, ...". Review D6-L1-gom: chữ trang khớp; \fermata ô 20 cả hai tay trong menuet_k2.ly (review đã mở). Đúng.'
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/MozartWA/KV2/menuet_k2/menuet_k2.ly" ]
     luot_2_ghi_chu: Đếm trên bản Mutopia (Breitkopf & Härtel, Mozarts Werke Serie XXII, plate W.A.M. 2.4). Dấu ngân (\fermata) ở ô 20, cả hai tay. Phần 'thở nhẹ' là lời khuyên.
+    review: dung
   - id: n71
     cau: 'Ở ô 20, tai chờ hợp âm Fa trưởng thì bè trầm lại đi tới Rê: một kết lừa; dấu ngân cho người nghe khoảnh khắc nhận ra bất ngờ ấy.'
     loai: quy-tac
@@ -664,7 +691,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: src/content/docs/piano/not-hoa-my.md có.
+    ghi_chu: "src/content/docs/piano/not-hoa-my.md có. Review D6-L1-gom: piano/not-hoa-my: trang đích có trong bản xem (dist), link.test đạt. Đúng."
+    review: dung
   - id: n74
     cau: Lỗi thường gặp (dính liền hay tách cả cặp móc đơn, nhấn đều ba phách, nốt treo nhỏ hơn nốt giải, chùm ba thành móc đơn chấm dôi, quên Mi♭ và Fa♯ ở ô 9–12 hay mang Fa♯ sang ô 13–14, bỏ dấu ngân, chơi quá nhanh).
     loai: khuyen-tap
@@ -687,13 +715,15 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: Ba trang có; cùng chang 2 (src/data/tac-pham.yml, đã khóa).
+    ghi_chu: "Ba trang có; cùng chang 2 (src/data/tac-pham.yml, đã khóa). Review D6-L1-gom: minuet-sol, minuet-sol-thu, musette-re có (cùng lô); tac-pham.yml: cả ba và mozart-minuet-k2 chặng 2. Đúng."
+    review: dung
   - id: n77
     cau: 'Bước tiếp theo trong phong cách Cổ điển: Sonatina Sol trưởng thường gán cho Beethoven, rồi Clementi Sonatina Op. 36 số 1; mục tiêu xa hơn: Mozart Sonata Đô trưởng K. 545; Tác phẩm theo cấp độ.'
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: 'beethoven-sonatina-sol (chang 3, gan_cho đã khóa), clementi-sonatina (chang 3), mozart-k545 (chang 5) chưa chuyển, có ở ../opus-zero/docs/piano/tac-pham/; thứ tự khớp chặng. tac-pham-theo-cap có.'
+    ghi_chu: 'beethoven-sonatina-sol (chang 3, gan_cho đã khóa), clementi-sonatina (chang 3), mozart-k545 (chang 5) chưa chuyển, có ở ../opus-zero/docs/piano/tac-pham/; thứ tự khớp chặng. tac-pham-theo-cap có. Review D6-L1-gom: tac-pham.yml: beethoven-sonatina-sol 3, clementi-sonatina 3, mozart-k545 5 (đúng thứ tự); ba trang chưa chuyển, site cũ có; tac-pham-theo-cap có. Đúng.'
+    review: dung
   - id: n78
     cau: 'Câu hỏi 1: Minuet K. 2 được ghi ngày tháng 1 năm 1762, ở Salzburg, khi Mozart khoảng sáu tuổi (không phải 1756 hay 1764).'
     loai: nam
@@ -765,10 +795,11 @@ nhan_dinh:
     loai: ten
     nguon: []
     ket_qua: da-bo
-    ghi_chu: 'Đã bỏ khỏi trang. Link trỏ trang chủ enc.piano.or.jp; không tìm thấy mục riêng cho KV 2 (trang Notenbuch für Nannerl, id 3910, không có K. 2 và không phân tích nốt treo). Không có nhận định nào trong hồ sơ dựa vào nguồn này.'
+    ghi_chu: 'Đã bỏ khỏi trang. Link trỏ trang chủ enc.piano.or.jp; không tìm thấy mục riêng cho KV 2 (trang Notenbuch für Nannerl, id 3910, không có K. 2 và không phân tích nốt treo). Không có nhận định nào trong hồ sơ dựa vào nguồn này. Review D6-L1-gom: giữ bỏ dòng PTNA ở mục Nguồn: lượt 2 tìm được mục PTNA 63258 (phân tích hình thức và nốt treo), nhưng trang không cần thêm nguồn đọc thêm; không đưa lại.'
     luot_2: dung
     luot_2_nguon: [ "https://enc.piano.or.jp/musics/63258" ]
     luot_2_ghi_chu: 'PTNA mục "メヌエット ヘ長調 K2/Menuet F-Dur K2" (ID 63258): phân tích hình thức ba đoạn và 6 nốt treo (稽留音).'
+    review: dung
 khuong_nhac:
   - khoi: 1
     loai: trich-doan
@@ -799,3 +830,22 @@ doi_chu:
   - cu: "Ở ô 20, tai chờ hợp âm Fa trưởng thì bè trầm lại đi tới Rê: một kết lừa (xem Kết và câu nhạc). Dấu ngân cho người nghe một khoảnh khắc để nhận ra bất ngờ ấy. Không phải ấn bản nào cũng in dấu ngân ở ô 20; nếu bản của bạn không có, vẫn nên thở nhẹ ở đó trước khi chủ đề trở lại."
     moi: "Ở ô 20, tai chờ hợp âm Fa trưởng thì bè trầm lại đi tới Rê: một kết lừa (xem Kết và câu nhạc). Dấu ngân cho người nghe một khoảnh khắc để nhận ra bất ngờ ấy. Bản Breitkopf in dấu ngân ở ô 20; nếu bản của bạn không có, vẫn nên thở nhẹ ở đó trước khi chủ đề trở lại."
     ly_do: "n70 (da-sua): câu cũ không kiểm được; bản Breitkopf (Mutopia) có dấu ngân ở ô 20."
+  - cu: "Bài được viết cho đàn phím của thời ấy, harpsichord hoặc clavichord (xem Lịch sử cây đàn piano), theo phong cách galant giữa thế kỷ 18: câu ngắn, giai điệu dễ hát, bè trầm giản dị. Minuet là điệu nhảy cung đình nhịp 3/4; về sau nó thành chương ba quen thuộc của giao hưởng và sonata Cổ điển (xem Minuet và Trio và thời kỳ Cổ điển)."
+    moi: Bài được viết cho đàn phím của thời ấy, harpsichord hoặc clavichord (xem Lịch sử cây đàn piano), theo phong cách galant ("lịch lãm, kiểu cung đình"), lối viết thế kỷ 18 mà Mozart thời đầu ưa dùng. Minuet là điệu nhảy cung đình nhịp 3/4; về sau nó thành chương ba quen thuộc của giao hưởng và sonata Cổ điển (xem Minuet và Trio và thời kỳ Cổ điển).
+    ly_do: "Review D6-L1-gom (n24): các đặc điểm cũ không có nguồn bậc 2; viết theo Concise Oxford Dictionary of Music, mục galant."
+  - cu: Muốn nghe Mozart trưởng thành viết minuet ra sao, nghe chương 3 của Eine kleine Nachtmusik (hướng dẫn nghe).
+    moi: Muốn nghe Mozart trưởng thành viết minuet ra sao, nghe chương 3 của Eine kleine Nachtmusik (trang Minuet và Trio đi qua chương này).
+    ly_do: "Review D6-L1-gom (n33): hướng dẫn nghe Eine kleine Nachtmusik chỉ nói chương 1; trang Minuet và Trio (đã khóa) đi qua chương 3."
+  - cu: "Môtip một ô: hai móc đơn đi lên quãng ba, rơi xuống quãng sáu, rồi hai nốt đen cùng cao độ. Môtip vang ba lần, mỗi lần thấp hơn"
+    moi: "Môtip một ô: hai móc đơn đi lên quãng ba, rơi xuống (quãng sáu ở ô 1, quãng năm ở ô 2 và 3), rồi hai nốt đen (cùng cao độ ở ô 1 và 2). Môtip vang ba lần, mỗi lần thấp hơn"
+    ly_do: "Review D6-L1-gom (n38): chỉ ô 1 rơi quãng sáu, ô 3 hai nốt đen khác cao độ (Mutopia)."
+  - cu: Cặp móc đơn luyến rồi rơi quãng sáu (ô 1–3)
+    moi: Cặp móc đơn luyến rồi rơi xuống (quãng sáu ở ô 1, quãng năm ở ô 2 và 3)
+    ly_do: "Review D6-L1-gom (n49): câu đúng của lượt 2 (Mutopia)."
+  - cu:
+      - Tay trái rơi quãng tám (ô 3, 4, 8)
+      - Đô4 xuống Đô3, Fa3 xuống Fa2 trong thời gian một nốt đen
+    moi:
+      - Tay trái rơi quãng tám (ô 3) và đi xuống một quãng tám qua nốt giữa (ô 4, 8)
+      - "Ô 3: Đô4 xuống Đô3 trong thời gian một nốt đen; ô 4 và 8: Fa3 – Đô3 – Fa2, Đô4 – Sol3 – Đô3"
+    ly_do: "Review D6-L1-gom (n52): câu đúng của lượt 2 (Mutopia): chỉ ô 3 là bước nhảy quãng tám thẳng."

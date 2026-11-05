@@ -10,7 +10,7 @@ lan:
     nguoi:
       luot_1: Claude Opus 5.5 (D6-L1 phần B)
       luot_2: null
-      review: null
+      review: Claude Opus 5.5 (review D6-L1-gom, 05/11/2026)
       kiem_mau: null
 ghi_chu: 'Bài học tác phẩm (tầng Tác phẩm). Bản nhạc: Mutopia 25EF-01 (Litolff), .ly, PDF A4 và MIDI tải ngày 05/11/2026 (User-Agent opus-kiem-dinh). Chữ do ::hop-tac-pham dựng (chip, bảng thông tin), ::hinh-cau-truc và ::hoc-tiep không tách ở đây: thuộc hồ sơ du-lieu/tac-pham/burgmuller-la-candeur. Sửa trang: n16 (Burgmüller mất ở Beaulieu-sur-Mer, không ở Paris), n30 (bỏ câu "được thu rất nhiều"), khối 1 (nốt cuối ô 8 là Sol5). Chưa chắc: n2 (câu đánh giá "tập étude được yêu thích nhất", có cả trong description). Thuật ngữ trang dùng (legato, dolce, poco rit., sf, coda, kết nửa, kết trọn, át âm) đều đã có trong src/data/thuat-ngu.yml hay trang nhạc lý đã khóa.'
 nguon:
@@ -54,6 +54,14 @@ nguon:
     bac: 3
     ten: Wikipedia, Friedrich Burgmüller (chỉ để đối chiếu mục Nguồn của trang)
     link: https://en.wikipedia.org/wiki/Friedrich_Burgm%C3%BCller
+  - id: henle-hn1726-vorwort
+    bac: 2
+    ten: "G. Henle Verlag, HN 1726 Burgmüller, 25 Etüden op. 100, lời tựa (Vorwort, PDF): sinh ở Regensburg, định cư Paris khoảng 1832, nhập quốc tịch Pháp 1842"
+    link: https://www.henle.de/media/db/e2/27/1789628596/HN_1726_Vorwort.pdf
+  - id: omt-notation
+    bac: 2
+    ten: Open Music Theory, Other Aspects of Notation (sf, sfz áp cho nốt được đánh dấu)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/other-aspects-of-notation/
 nhan_dinh:
   - id: n1
     cau: La candeur là bài mở đầu (số 1) của tập 25 Études faciles et progressives, Op. 100 của Burgmüller.
@@ -71,10 +79,11 @@ nhan_dinh:
     nguon:
       - imslp-op100
     ket_qua: da-sua
-    ghi_chu: 'Người giao (chủ lô) sửa: bỏ "được yêu thích nhất" và "với nhiều người là étude đầu tiên…" (đánh giá không đo được), giữ điều IMSLP ghi (số 1 của Op. 100); sửa cả câu mở đầu và description, ghi doi_chu. Lượt 1 ghi: câu đánh giá, không có nguồn đo "được yêu thích nhất". IMSLP có trang "See Also: List of Intermediate Piano Repertoire" và nhiều bản chép, bản thu cho Op. 100 (nhiều hơn hẳn các opus khác của Burgmüller trên Category), nhưng không nói thẳng. Đề nghị người giao: giữ như lời giới thiệu (chữ ở câu mở đầu và mô tả trang) hay viết lại "một trong những tập étude được dùng nhiều nhất". Không sửa vì câu nằm cả ở description (frontmatter).'
+    ghi_chu: 'Người giao (chủ lô) sửa: bỏ "được yêu thích nhất" và "với nhiều người là étude đầu tiên…" (đánh giá không đo được), giữ điều IMSLP ghi (số 1 của Op. 100); sửa cả câu mở đầu và description, ghi doi_chu. Lượt 1 ghi: câu đánh giá, không có nguồn đo "được yêu thích nhất". IMSLP có trang "See Also: List of Intermediate Piano Repertoire" và nhiều bản chép, bản thu cho Op. 100 (nhiều hơn hẳn các opus khác của Burgmüller trên Category), nhưng không nói thẳng. Đề nghị người giao: giữ như lời giới thiệu (chữ ở câu mở đầu và mô tả trang) hay viết lại "một trong những tập étude được dùng nhiều nhất". Không sửa vì câu nằm cả ở description (frontmatter). Review D6-L1-gom: chữ trang (câu mở đầu, description) chỉ còn điều IMSLP ghi (số 1 của Op. 100); lượt 2 xác nhận (IMSLP, Henle HN 1726). Đúng.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/25_%C3%89tudes_faciles_et_progressives,_Op.100_(Burgm%C3%BCller,_Friedrich)", "https://www.henle.de/25-Etudes-op.-100/HN-1726" ]
     luot_2_ghi_chu: "IMSLP: La candeur là số 1, đứng đầu tập; Henle HN 1726 liệt kê bài 1 ở đầu."
+    review: dung
   - id: n3
     cau: Bài có giai điệu móc đơn hát liền tiếng ở tay phải trên những hợp âm ngân của tay trái, rồi hai tay đổi vai.
     loai: cau-truc
@@ -143,7 +152,8 @@ nhan_dinh:
     cau: Link "Phối hợp hai tay" tới /opus/piano/hai-tay/ (trang cùng nói về cân bằng hai tay).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Trang đích src/content/docs/piano/hai-tay.md có trong site mới. Điều cần giữ: trang ấy nói về phối hợp và cân bằng hai tay.'
+    ghi_chu: 'Trang đích src/content/docs/piano/hai-tay.md có trong site mới. Điều cần giữ: trang ấy nói về phối hợp và cân bằng hai tay. Review D6-L1-gom: trang piano/hai-tay có mục "Giai điệu f, đệm p" (giai điệu nổi, phần đệm lùi lại) và các kiểu phối hợp hai tay; trang đích có trong bản xem (dist), link.test đạt. Đúng.'
+    review: dung
   - id: n12
     cau: Đoạn B đưa hình móc đơn xuống tay trái trong khi tay phải giữ hai nốt ngân; ô 13 bắt một bàn tay chơi hai bè cùng lúc.
     loai: cau-truc
@@ -186,10 +196,11 @@ nhan_dinh:
       - bnf-burgmuller
       - db-burgmuller
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "sang Paris năm 1832 và ở lại đó đến cuối đời". Chữ mới: "sang Paris năm 1832 và sống ở Pháp đến cuối đời". Lý do: Deutsche Biographie ghi Sterbeort Beaulieu (Beaulieu-sur-Mer, ở Pháp), không phải Paris; NDB: "lebte seit 1832 in Paris"; BnF: "Installé à Paris en 1832". (BnF ghi deathPlace Paris trong dữ liệu máy, cùng lúc ghi birthPlace Paris là sai rõ, nên theo Deutsche Biographie.) Trang Arabesque cũ có cùng câu "ở lại đó đến cuối đời": lô chuyển trang ấy cần sửa theo.'
+    ghi_chu: 'Chữ cũ: "sang Paris năm 1832 và ở lại đó đến cuối đời". Chữ mới: "sang Paris năm 1832 và sống ở Pháp đến cuối đời". Lý do: Deutsche Biographie ghi Sterbeort Beaulieu (Beaulieu-sur-Mer, ở Pháp), không phải Paris; NDB: "lebte seit 1832 in Paris"; BnF: "Installé à Paris en 1832". (BnF ghi deathPlace Paris trong dữ liệu máy, cùng lúc ghi birthPlace Paris là sai rõ, nên theo Deutsche Biographie.) Trang Arabesque cũ có cùng câu "ở lại đó đến cuối đời": lô chuyển trang ấy cần sửa theo. Review D6-L1-gom: "sống ở Pháp đến cuối đời" khớp Deutsche Biographie (mất ở Beaulieu); lượt 2 xác nhận (Henle HN 1726: định cư Paris khoảng 1832, nhập quốc tịch Pháp 1842). Đúng.'
     luot_2: dung
     luot_2_nguon: [ "https://www.henle.de/media/db/e2/27/1789628596/HN_1726_Vorwort.pdf", "https://www.deutsche-biographie.de/sfz7533.html", "https://www.deutsche-biographie.de/sfz7530.html" ]
     luot_2_ghi_chu: "Henle: 'um 1832' định cư ở Paris, 1842 nhập quốc tịch Pháp; NDB: 'lebte seit 1832 in Paris'; Deutsche Biographie: nơi mất Beaulieu (Pháp)."
+    review: dung
   - id: n17
     cau: Ở Paris, Burgmüller làm thầy dạy piano và viết nhạc salon (nhạc piano phổ thông) cho người chơi nghiệp dư.
     loai: lich-su
@@ -205,7 +216,8 @@ nhan_dinh:
     cau: Chân dung đầy đủ hơn của Burgmüller có ở trang Arabesque (/opus/piano/tac-pham/burgmuller-arabesque/).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Trang đích chưa chuyển (D6, lô khác). Site cũ ../opus-zero/docs/piano/tac-pham/burgmuller-arabesque.md, mục "Bối cảnh" dòng 32: đoạn tiểu sử Burgmüller (Regensburg 1806, Paris 1832, thầy dạy piano, nhạc salon, ballet La Péri 1843). Điều cần giữ: trang Arabesque có đoạn tiểu sử dài hơn trang này. Chú ý cho lô chuyển trang ấy: câu "ở lại đó đến cuối đời" ở trang cũ sai (xem n16).'
+    ghi_chu: 'Trang đích chưa chuyển (D6, lô khác). Site cũ ../opus-zero/docs/piano/tac-pham/burgmuller-arabesque.md, mục "Bối cảnh" dòng 32: đoạn tiểu sử Burgmüller (Regensburg 1806, Paris 1832, thầy dạy piano, nhạc salon, ballet La Péri 1843). Điều cần giữ: trang Arabesque có đoạn tiểu sử dài hơn trang này. Chú ý cho lô chuyển trang ấy: câu "ở lại đó đến cuối đời" ở trang cũ sai (xem n16). Review D6-L1-gom: site cũ ../opus-zero/docs/piano/tac-pham/burgmuller-arabesque.md, mục Bối cảnh: đoạn tiểu sử (Regensburg, Paris 1832, nhạc salon, La Péri 1843) dài hơn trang này. Đúng. Lô chuyển trang ấy sửa câu "ở lại đó đến cuối đời" (như n16).'
+    review: dung
   - id: n19
     cau: Arabesque là bài số 2 của cùng tập Op. 100, đứng ngay sau La candeur.
     loai: danh-muc
@@ -307,9 +319,10 @@ nhan_dinh:
     nguon:
       - imslp-op100
     ket_qua: da-bo
-    ghi_chu: 'Bỏ câu (không kiểm được; IMSLP chỉ có một bản thu của số 1, của Luis Kolodin, và một bản tổng hợp). Chữ cũ: "Bài này được thu rất nhiều, cả bởi nghệ sĩ lẫn giáo viên. Nghe hai, ba bản và mỗi lần chú ý một điều:". Chữ mới: "Nghe hai, ba bản thu và mỗi lần chú ý một điều:".'
+    ghi_chu: 'Bỏ câu (không kiểm được; IMSLP chỉ có một bản thu của số 1, của Luis Kolodin, và một bản tổng hợp). Chữ cũ: "Bài này được thu rất nhiều, cả bởi nghệ sĩ lẫn giáo viên. Nghe hai, ba bản và mỗi lần chú ý một điều:". Chữ mới: "Nghe hai, ba bản thu và mỗi lần chú ý một điều:". Review D6-L1-gom: câu đã bỏ khỏi trang; lượt 2 cũng không tìm được nguồn và đề nghị bỏ. Giữ bỏ.'
     luot_2: khong-chac
     luot_2_ghi_chu: Không tìm được nguồn bậc 2 đếm số bản thu (Presto, AllMusic chặn công cụ; MusicBrainz chỉ liên kết 3 bản thu với tác phẩm; IMSLP có vài bản thu của giáo viên/nghệ sĩ). Câu chung chung, nên viết lại cụ thể hoặc bỏ.
+    review: dung
   - id: n31
     cau: Năm câu hỏi khi nghe (giai điệu hay hình nốt, tay trái ở đâu, đổi vai ở đoạn B, nốt La sf ở ô 14, kết).
     loai: khuyen-tap
@@ -328,7 +341,8 @@ nhan_dinh:
     cau: Link nghe tiếp Arabesque (/opus/piano/tac-pham/burgmuller-arabesque/).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Trang đích chưa chuyển; site cũ ../opus-zero/docs/piano/tac-pham/burgmuller-arabesque.md có. Điều cần giữ: trang Arabesque Op. 100 số 2.'
+    ghi_chu: 'Trang đích chưa chuyển; site cũ ../opus-zero/docs/piano/tac-pham/burgmuller-arabesque.md có. Điều cần giữ: trang Arabesque Op. 100 số 2. Review D6-L1-gom: site cũ có trang Arabesque Op. 100 số 2; link hiện "sắp có" ở bản xem. Đúng.'
+    review: dung
   - id: n34
     cau: La candeur và Arabesque đứng liền nhau trong tập mà tính cách trái ngược hẳn.
     loai: danh-muc
@@ -519,7 +533,8 @@ nhan_dinh:
     cau: Link "Hình thức nhỏ" (/opus/nhac-ly/31-hinh-thuc-nho/) và "Kết và câu nhạc" (/opus/nhac-ly/13-ket/).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Hai trang đích có trong src/content/docs/nhac-ly/ (31-hinh-thuc-nho.md, 13-ket.md). Điều cần giữ: trang 31 nói về hình thức hai đoạn; trang 13 nói về kết nửa, kết trọn. Hồ sơ nhac-ly/31-hinh-thuc-nho n9 trỏ ngược tới trang này ("phần A kết nửa"): vẫn đúng (n42).'
+    ghi_chu: 'Hai trang đích có trong src/content/docs/nhac-ly/ (31-hinh-thuc-nho.md, 13-ket.md). Điều cần giữ: trang 31 nói về hình thức hai đoạn; trang 13 nói về kết nửa, kết trọn. Hồ sơ nhac-ly/31-hinh-thuc-nho n9 trỏ ngược tới trang này ("phần A kết nửa"): vẫn đúng (n42). Review D6-L1-gom: nhac-ly/31-hinh-thuc-nho có mục "Hình thức hai đoạn (binary)"; nhac-ly/13-ket có kết nửa, kết trọn. Đúng.'
+    review: dung
   - id: n55
     cau: Cả hai đoạn đều nhắc lại; lần thứ hai, đoạn B bỏ kết thứ nhất, rẽ sang kết thứ hai và đi thẳng vào coda.
     loai: cau-truc
@@ -534,10 +549,11 @@ nhan_dinh:
     loai: cau-truc
     nguon: *id001
     ket_qua: dung
-    ghi_chu: Xem khuong_nhac khối 1 (đối chiếu từng nốt; đã sửa nốt cuối ô 8).
+    ghi_chu: "Xem khuong_nhac khối 1 (đối chiếu từng nốt; đã sửa nốt cuối ô 8). Review D6-L1-gom: đối chiếu khối 1 với 25EF-01.ly của Mutopia (relative c'''): nốt, dấu luyến, sf/dim/cresc, số ngón (g-5, e-3, c'-5, b-2 c-1 e-3, f-4, b-3 c-4) và hợp âm tay trái khớp; ô 8 tay phải \"g b c d g4\" là Sol5 (đã sửa ở lượt 1). Giữ nhãn cau-truc (vế về ấn bản đã qua lượt 2)."
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=202", "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-01/25EF-01.ly" ]
     luot_2_ghi_chu: "Phần kiểm được từ ngoài: Mutopia id 202 ghi nguồn 'Collection Litolff' và có ghi số ngón ở một số nốt. Việc khuông của trang chép đúng bản ấy là kiểm khuông nhạc (mục 4 của chuẩn), lượt 2 không mở trang nên không đối chiếu."
+    review: dung
   - id: n57
     cau: Hết ô 8, nhắc lại từ đầu rồi mới sang đoạn B.
     loai: cau-truc
@@ -625,21 +641,25 @@ nhan_dinh:
     cau: Link "máy đếm nhịp" (/opus/luyen-tap/metronome/).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Trang đích src/content/docs/luyen-tap/metronome.md có trong site mới (máy đếm nhịp).
+    ghi_chu: "Trang đích src/content/docs/luyen-tap/metronome.md có trong site mới (máy đếm nhịp). Review D6-L1-gom: luyen-tap/metronome: trang đích có trong bản xem (dist), link.test đạt. Đúng."
+    review: dung
   - id: n68
     cau: Các bài tập chuẩn bị soạn riêng cho trang này, không trích từ bản nhạc gốc.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Ba khối 2–4 là ví dụ soạn (khuong_nhac khối 2–4), tiêu đề ghi "(soạn cho trang này)".
+    ghi_chu: 'Ba khối 2–4 là ví dụ soạn (khuong_nhac khối 2–4), tiêu đề ghi "(soạn cho trang này)". Review D6-L1-gom: ba khối 2–4 có T: "(soạn cho trang này)", câu dẫn mục Bài tập ghi "soạn riêng cho trang này". Đúng.'
+    review: dung
   - id: n69
     cau: 'Bài tập 1: tay phải mf, tay trái pp; tay trái dùng 5-3-1 cho Đô – Mi – Sol và 5-2-1 cho Si – Fa – Sol.'
     loai: cau-truc
-    nguon: []
+    nguon:
+      - mutopia-202
     ket_qua: dung
-    ghi_chu: 'Kiểm trên khối 2: !mf! tay phải, !pp! tay trái; hợp âm [C,E,G,] và [B,,F,G,]. Câu mô tả ví dụ soạn của trang.'
+    ghi_chu: 'Kiểm trên khối 2: !mf! tay phải, !pp! tay trái; hợp âm [C,E,G,] và [B,,F,G,]. Câu mô tả ví dụ soạn của trang. Review D6-L1-gom: phần về bài tập trên trang kiểm trên khối 2: !mf! tay phải, !pp! tay trái, hợp âm [C,E,G,] và [B,,F,G,]; số ngón 5-3-1, 5-2-1 ở câu dẫn. Đúng. Giữ nhãn (vế về hợp âm của bài đã qua lượt 2). Review D6-L1-gom: thêm nguồn mutopia-202 cho vế về hợp âm của bài (ô 1, ô 5), lượt 2 đã đối chiếu.'
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-01/25EF-01.ly" ]
     luot_2_ghi_chu: "Thực chất là bài tập và gợi ý ngón của trang (nên xếp khuyen-tap hay ve-site). Phần nói về bài: hợp âm Đô–Mi–Sol (ô 1) và Si–Fa–Sol (ô 5) có trong bản Mutopia; ngón 5-3-1, 5-2-1 hợp lý. Mức sắc thái mf/pp của bài tập không kiểm được từ ngoài."
+    review: dung
   - id: n70
     cau: Chơi xong bài tập 1 thì đổi vai sắc thái; đổi được theo ý muốn là đã làm chủ cân bằng.
     loai: khuyen-tap
@@ -650,19 +670,21 @@ nhan_dinh:
     loai: cau-truc
     nguon: *id001
     ket_qua: dung
-    ghi_chu: 'Khối 3: ô 1 tay phải g f e d c d e f, tay trái C D E F G F E D (ngược chiều); ô 2, 4 [ce]8; !<(! ô 2, !>(! ô 4. Ô 9 của bài cũng ngược chiều (Mutopia).'
+    ghi_chu: 'Khối 3: ô 1 tay phải g f e d c d e f, tay trái C D E F G F E D (ngược chiều); ô 2, 4 [ce]8; !<(! ô 2, !>(! ô 4. Ô 9 của bài cũng ngược chiều (Mutopia). Review D6-L1-gom: khối 3: ô 1, 3 hai tay ngược chiều, ô 2, 4 tay phải [ce]8 (ngón 1 và 3 ở câu dẫn), tay trái chạy, !<(! ô 2, !>(! ô 4. Đúng.'
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-01/25EF-01.ly" ]
     luot_2_ghi_chu: "Phần nói về bài khớp Mutopia: ô 9 hai tay ngược chiều; ô 10 tay phải giữ Đô–Mi (bản Mutopia ghi ngón 2-4, trang gợi ý 1-3 cho bài tập). Nội dung bài tập soạn riêng không đối chiếu được (không mở trang)."
+    review: dung
   - id: n72
     cau: 'Bài tập 3: ngón 5 giữ nốt trên trong khi ngón 3-2-1 (hay 4-3-2) chơi nhóm ba nốt sau dấu lặng; ở ô 2 bàn tay dời xuống một bậc mỗi nửa ô; đó là kết cấu của ô 13. Ô 3–4 mỗi cặp hai nốt luyến như nốt La sf ở ô 14; ô cuối chậm lại như poco rit. ở ô 15.'
     loai: cau-truc
     nguon: *id001
     ket_qua: dung
-    ghi_chu: 'Khối 4 khớp (xem khuong_nhac khối 4); ô 13, 14, 15 của bài (Mutopia): hai bè, a sf → g luyến, poco rit.'
+    ghi_chu: 'Khối 4 khớp (xem khuong_nhac khối 4); ô 13, 14, 15 của bài (Mutopia): hai bè, a sf → g luyến, poco rit. Review D6-L1-gom: khối 4: ngón 5 giữ g8, f4 e4 trong khi bè dưới 3-2-1 sau dấu lặng; ô 2 dời xuống từng nửa ô; ô 3–4 cặp nốt luyến có dấu nhấn; "poco rit." ô 4. Đúng.'
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-01/25EF-01.ly" ]
     luot_2_ghi_chu: "Phần nói về bài khớp Mutopia: ô 13 ngón 5 giữ nốt trên, bè dưới ba nốt sau dấu lặng; ô 14 La sf luyến xuống Sol; ô 15 poco rit. Nội dung bài tập soạn riêng không đối chiếu được."
+    review: dung
   - id: n73
     cau: Kế hoạch 4 tuần, 20–30 phút mỗi ngày; tốc độ máy đếm nhịp từng tuần (♩ = 72–84 đến 112–132); đích cuối khoảng ♩ = 120–132.
     loai: khuyen-tap
@@ -673,7 +695,8 @@ nhan_dinh:
     cau: Link "thu âm" (/opus/luyen-tap/thu-am/).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Trang đích src/content/docs/luyen-tap/thu-am.md có trong site mới.
+    ghi_chu: "Trang đích src/content/docs/luyen-tap/thu-am.md có trong site mới. Review D6-L1-gom: luyen-tap/thu-am: trang đích có trong bản xem (dist), link.test đạt. Đúng."
+    review: dung
   - id: n75
     cau: Mẹo "Kiểm tra cân bằng bằng tai" và danh sách tự kiểm (năm ô đánh dấu).
     loai: khuyen-tap
@@ -705,7 +728,8 @@ nhan_dinh:
     cau: Link "Tạo tiếng đàn" (/opus/piano/tieng-dan/).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Trang đích src/content/docs/piano/tieng-dan.md có trong site mới.
+    ghi_chu: "Trang đích src/content/docs/piano/tieng-dan.md có trong site mới. Review D6-L1-gom: piano/tieng-dan: trang đích có trong bản xem (dist), link.test đạt. Đúng."
+    review: dung
   - id: n80
     cau: 'Mục Cân bằng: ba mức (giai điệu, hợp âm tay trái, ở đoạn B tay trái thành giọng chính); nốt trên cùng của tay trái dễ to nhất.'
     loai: khuyen-tap
@@ -723,9 +747,10 @@ nhan_dinh:
   - id: n82
     cau: sf chỉ là nhấn một nốt, không phải chuyển cả đoạn sang f.
     loai: dinh-nghia
-    nguon: []
+    nguon:
+      - omt-notation
     ket_qua: dung
-    ghi_chu: Khớp Từ điển của site (src/data/thuat-ngu.yml, mục sforzando, đã khóa ở D3-L5) và trang nhac-ly/14-ky-hieu-bieu-dien (link ngay sau). Không thêm nguồn ngoài vì định nghĩa đã kiểm ở hai trang ấy.
+    ghi_chu: "Khớp Từ điển của site (src/data/thuat-ngu.yml, mục sforzando, đã khóa ở D3-L5) và trang nhac-ly/14-ky-hieu-bieu-dien (link ngay sau). Không thêm nguồn ngoài vì định nghĩa đã kiểm ở hai trang ấy. Review D6-L1-gom: thêm nguồn lượt 2 đã mở (OMT, Other aspects of notation: sf, sfz đặt ngay trên hay dưới nốt nó áp dụng), cùng nghĩa với thuat-ngu.yml mục sforzando (đã khóa)."
     luot_2: dung
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/other-aspects-of-notation/" ]
     luot_2_ghi_chu: "OMT: sf, sfz là dấu nhấn, 'placed directly above or below the note to which they apply'; chỉ áp cho nốt đó."
@@ -733,7 +758,8 @@ nhan_dinh:
     cau: Link "Ký hiệu biểu diễn" (/opus/nhac-ly/14-ky-hieu-bieu-dien/).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Trang đích src/content/docs/nhac-ly/14-ky-hieu-bieu-dien.md có, nói về sf và sắc thái.
+    ghi_chu: "Trang đích src/content/docs/nhac-ly/14-ky-hieu-bieu-dien.md có, nói về sf và sắc thái. Review D6-L1-gom: nhac-ly/14-ky-hieu-bieu-dien có dòng sfz (sforzando, nhấn mạnh đột ngột một nốt). Đúng."
+    review: dung
   - id: n84
     cau: Bản Litolff trên Mutopia không ghi bàn đạp.
     loai: cau-truc
@@ -752,7 +778,8 @@ nhan_dinh:
     cau: Link "Bàn đạp" (/opus/piano/ban-dap/).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Trang đích src/content/docs/piano/ban-dap.md có.
+    ghi_chu: "Trang đích src/content/docs/piano/ban-dap.md có. Review D6-L1-gom: piano/ban-dap: trang đích có trong bản xem (dist), link.test đạt. Đúng."
+    review: dung
   - id: n87
     cau: Số ngón của tập Op. 100 được tính cho bàn tay nhỏ, đúng như tựa tập nhạc.
     loai: ten
@@ -778,7 +805,8 @@ nhan_dinh:
     cau: 'Học tiếp, cùng tập Op. 100: link Arabesque (số 2) ngay sau, để luyện ngón nhanh và staccato.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Trang đích chưa chuyển; site cũ ../opus-zero/docs/piano/tac-pham/burgmuller-arabesque.md có. Điều cần giữ: bài Arabesque Op. 100 số 2, trang nói về ngón nhanh và staccato. Số 2: IMSLP (n19).'
+    ghi_chu: 'Trang đích chưa chuyển; site cũ ../opus-zero/docs/piano/tac-pham/burgmuller-arabesque.md có. Điều cần giữ: bài Arabesque Op. 100 số 2, trang nói về ngón nhanh và staccato. Số 2: IMSLP (n19). Review D6-L1-gom: site cũ burgmuller-arabesque: kỹ năng chính "chùm năm nốt móc kép đều và nhẹ ... hợp âm staccato". Đúng.'
+    review: dung
   - id: n91
     cau: Trong Op. 100, La pastorale là số 3, Consolation số 13, Ave Maria số 19.
     loai: danh-muc
@@ -793,17 +821,20 @@ nhan_dinh:
     cau: 'Học tiếp: link Tchaikovsky: Bài ca Pháp cổ ("một giai điệu Sol thứ trên tay trái hai bè") và Schumann: Album für die Jugend, cùng cấp.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Hai trang cùng lô (src/content/docs/piano/tac-pham/tchaikovsky-bai-ca-phap-co.md, schumann-album.md). Bản ghi tac-pham: cả hai chang 2 như bài này. Trang Tchaikovsky: giai điệu Sol thứ, tay trái hai bè (kiểm ở hồ sơ trang ấy).'
+    ghi_chu: 'Hai trang cùng lô (src/content/docs/piano/tac-pham/tchaikovsky-bai-ca-phap-co.md, schumann-album.md). Bản ghi tac-pham: cả hai chang 2 như bài này. Trang Tchaikovsky: giai điệu Sol thứ, tay trái hai bè (kiểm ở hồ sơ trang ấy). Review D6-L1-gom: trang tchaikovsky-bai-ca-phap-co (cùng lô): giai điệu Sol thứ, tay trái hai bè (mở đầu, mục Vì sao nên học); tac-pham.yml (chang đã khóa): tchaikovsky-bai-ca-phap-co, schumann-album, burgmuller-la-candeur đều chặng 2. Đúng.'
+    review: dung
   - id: n93
     cau: 'Học tiếp: cổ điển cùng chặng Mozart: Minuet Fa trưởng K. 2; chặng sau Sonatina Sol trưởng, rồi Clementi: Sonatina Op. 36 số 1.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/data/tac-pham.yml: mozart-minuet-k2 chang 2 (bằng bài này); beethoven-sonatina-sol chang 3, clementi-sonatina chang 3 (chặng sau). Trang mozart-minuet-k2 cùng lô (phần A); beethoven-sonatina-sol, clementi-sonatina chưa chuyển (site cũ có).'
+    ghi_chu: 'src/data/tac-pham.yml: mozart-minuet-k2 chang 2 (bằng bài này); beethoven-sonatina-sol chang 3, clementi-sonatina chang 3 (chặng sau). Trang mozart-minuet-k2 cùng lô (phần A); beethoven-sonatina-sol, clementi-sonatina chưa chuyển (site cũ có). Review D6-L1-gom: tac-pham.yml (chang đã khóa): mozart-minuet-k2 chặng 2; beethoven-sonatina-sol, clementi-sonatina chặng 3. Đúng.'
+    review: dung
   - id: n94
     cau: 'Học tiếp: link Bài tập ngón và étude (/opus/piano/bai-tap-ngon/) và Tác phẩm theo cấp độ (/opus/piano/tac-pham-theo-cap/).'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Hai trang đích có trong src/content/docs/piano/.
+    ghi_chu: "Hai trang đích có trong src/content/docs/piano/. Review D6-L1-gom: piano/bai-tap-ngon, piano/tac-pham-theo-cap: trang đích có trong bản xem (dist), link.test đạt. Đúng."
+    review: dung
   - id: n95
     cau: 'Câu hỏi 1: đoạn A (ô 1–8) dừng trên hợp âm Sol, tức át âm (kết nửa), ngay sau hợp âm Rê có Fa♯; chỉ đoạn B mới kết trọn ở Đô trưởng; đó là khung của hình thức hai đoạn.'
     loai: cau-truc
@@ -863,22 +894,23 @@ nhan_dinh:
     luot_2_nguon: [ "https://imslp.org/wiki/25_%C3%89tudes_faciles_et_progressives,_Op.100_(Burgm%C3%BCller,_Friedrich)" ]
     luot_2_ghi_chu: "IMSLP: Year of First Publication 1851 – Paris: Benoît aîné, và danh sách 25 tựa."
   - id: n101
-    cau: 'Mục Nguồn: Wikipedia, "Friedrich Burgmüller" cho năm sinh, năm mất, năm sang Paris.'
+    cau: 'Mục Nguồn: lời tựa Henle HN 1726 và Deutsche Biographie cho năm sinh, năm mất, nơi sinh, những năm ở Paris.'
     loai: nam
     nguon:
-      - wiki-burgmuller
+      - henle-hn1726-vorwort
       - db-burgmuller
-      - ndb-burgmuller
-    ket_qua: dung
-    ghi_chu: Bài Wikipedia có cả ba điều; trên trang, các điều ấy đã kiểm bằng Deutsche Biographie, NDB, BnF (n15, n16), nên Wikipedia không là nguồn duy nhất.
+    ket_qua: da-sua
+    ghi_chu: 'Bài Wikipedia có cả ba điều; trên trang, các điều ấy đã kiểm bằng Deutsche Biographie, NDB, BnF (n15, n16), nên Wikipedia không là nguồn duy nhất. Review D6-L1-gom: theo đề nghị của lượt 2, thay dòng Wikipedia (bài ghi sai nơi mất) bằng hai nguồn lượt 2 đã mở. Henle HN 1726 lời tựa: "Burgmüller wurde in Regensburg geboren", "um 1832 in Paris niederließ", "1842 wurde er französischer Staatsbürger". Chữ cũ: "\"Friedrich Burgmüller\", Wikipedia (năm sinh, năm mất, năm sang Paris)." Chỉ đổi nguồn theo lượt 2, phần còn lại lượt 2 đã xác nhận.'
     luot_2: dung
     luot_2_nguon: [ "https://en.wikipedia.org/wiki/Friedrich_Burgm%C3%BCller", "https://www.deutsche-biographie.de/sfz7530.html", "https://www.henle.de/media/db/e2/27/1789628596/HN_1726_Vorwort.pdf" ]
     luot_2_ghi_chu: Bài Wikipedia có năm sinh 1806, mất 1874, sang Paris 1832, nên câu đúng. Nhưng theo chuẩn Wikipedia không được là nguồn duy nhất, và bài ghi sai nơi mất (Paris; Deutsche Biographie ghi Beaulieu). Nên thay hay thêm Henle HN 1726 (lời tựa) và Deutsche Biographie.
+    review: dung
   - id: n102
     cau: 'Mục Nguồn: link IMSLP chung và "tài liệu tham khảo" (/opus/tai-lieu-tham-khao/).'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Trang đích src/content/docs/tai-lieu-tham-khao.md có.
+    ghi_chu: "Trang đích src/content/docs/tai-lieu-tham-khao.md có. Review D6-L1-gom: tai-lieu-tham-khao: trang đích có trong bản xem (dist), link.test đạt. Đúng."
+    review: dung
 khuong_nhac:
   - khoi: 1
     loai: trich-doan
@@ -965,3 +997,9 @@ doi_chu:
   - cu: "mô tả: Bài mở đầu tập étude được yêu thích nhất của Burgmüller, và với nhiều người là étude đầu tiên nghe như nhạc thật: một giai điệu móc đơn hát liền tiếng ở tay…"
     moi: "mô tả: Bài mở đầu tập 25 Études faciles et progressives, Op. 100 của Burgmüller, một étude nghe như nhạc thật: một giai điệu móc đơn hát liền tiếng ở tay phải…"
     ly_do: "n2 (da-sua, người giao): bỏ đánh giá \"được yêu thích nhất\", \"với nhiều người là étude đầu tiên\" (không có nguồn đo được); giữ điều IMSLP ghi: bài số 1 của Op. 100."
+  - cu: Friedrich Burgmüller (1806–1874), người Đức, từ năm 1832 sống ở Paris, dạy piano và viết nhạc salon
+    moi: Friedrich Burgmüller (1806–1874), sinh ở Regensburg (Đức); từ năm 1832 sống ở Paris, dạy piano và viết nhạc salon; năm 1842 nhập quốc tịch Pháp
+    ly_do: 'Review D6-L1-gom (dữ liệu, hồ sơ du-lieu/tac-pham/burgmuller-la-candeur n15): "người Đức" chưa đủ, Henle HN 1726 (lời tựa) ghi ông nhập quốc tịch Pháp năm 1842.'
+  - cu: '"Friedrich Burgmüller", Wikipedia (năm sinh, năm mất, năm sang Paris).'
+    moi: 'G. Henle Verlag, lời tựa ấn bản 25 Etüden op. 100 (HN 1726), và Deutsche Biographie, mục "Burgmüller, Friedrich" (deutsche-biographie.de): năm sinh, năm mất, nơi sinh, những năm sống ở Paris.'
+    ly_do: "Review D6-L1-gom (n101): thay Wikipedia (ghi sai nơi mất) bằng hai nguồn bậc 2 đã kiểm."

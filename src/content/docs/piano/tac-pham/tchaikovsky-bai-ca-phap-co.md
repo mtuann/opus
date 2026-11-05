@@ -222,7 +222,7 @@ Bản nhạc trên Mutopia không ghi bàn đạp. Ở đoạn A, dấu nối c�
 - **Cùng tập Op. 39:** [Cầu nguyện buổi sáng (số 1)](/opus/piano/tac-pham/tchaikovsky-cau-nguyen-buoi-sang/), viết theo lối hợp xướng; *Búp bê ốm* (số 6); *Bài ca Ý* (số 15) và *Bài ca Đức* (số 17), hai bài đứng cạnh bài này.
 - **Hình mẫu của tập:** [Schumann: Album für die Jugend](/opus/piano/tac-pham/schumann-album/).
 - **Bước tiếp theo với giai điệu hát:** [Grieg: Arietta](/opus/piano/tac-pham/grieg-arietta/), [Chopin: Prelude Mi thứ](/opus/piano/tac-pham/chopin-prelude-mi-thu/), rồi [Schumann: Träumerei](/opus/piano/tac-pham/schumann-traumerei/).
-- **Nhẹ hơn một chút:** [Burgmüller: La candeur](/opus/piano/tac-pham/burgmuller-la-candeur/). Danh sách theo cấp: [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
+- **Cùng chặng:** [Burgmüller: La candeur](/opus/piano/tac-pham/burgmuller-la-candeur/). Danh sách theo cấp: [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
 
 ::hoc-tiep
 

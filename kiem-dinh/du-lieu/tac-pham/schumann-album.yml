@@ -27,7 +27,7 @@ lan:
     nguoi:
       luot_1: Claude Opus 5.5 (D6-L1 phần B)
       luot_2: null
-      review: null
+      review: Claude Opus 5.5 (review D6-L1-gom, 05/11/2026)
       kiem_mau: null
 ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/schumann-album.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Trang này dạy ba bài (số 1 Melodie, số 8 Wilder Reiter, số 10 Fröhlicher Landmann) nên grade là khoảng của ba bài. Cần cập nhật theo: chip.cap_do và dòng "Độ khó" trong thong_tin. Lần 2 (D6-L1, lượt 1 phần B): nhận định n7–n34 cho các trường chưa khóa (thoi_ky, ky_nang_chinh, chip, thong_tin, hinh, ban_thu; bản ghi không có giong, nhip). Sửa: n22 (Hình thức "các câu 4 ô" → "các câu ngắn, phần lớn 4 ô"; sua-B.yml). Chưa chắc: n19 (Nicht schnell ở Melodie).'
 nguon:
@@ -103,6 +103,10 @@ nguon:
     bac: 2
     ten: Bärenreiter (US), BA 9641 Schumann, Album for the Young op. 68, Urtext, biên tập Holger M. Stüwe
     link: https://barenreiter.us/products/schumann-album-for-the-young-op-68-barenreiter
+  - id: bsb-e1
+    bac: 1
+    ten: "Bayerische Staatsbibliothek, bsb11108083: Schumann, Album für die Jugend Op. 68, Schuberth & Co., số bản khắc 1232 (bản in đầu, 1848), bản quét"
+    link: http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb11108083-7
 nhan_dinh:
   - id: n1
     cau: 'Tên bài: Album für die Jugend Op. 68 (43 tiểu phẩm của Schumann; trang này chọn ba bài).'
@@ -317,10 +321,11 @@ nhan_dinh:
       - henle-hn45-bemerkungen
       - henle-hn45-vorwort
     ket_qua: dung
-    ghi_chu: 'Henle Bemerkungen: "E1 Erstausgabe. Hamburg, Schuberth & Comp., Plattennummer 1232, erschienen im Dezember 1848"; lời tựa: "Hamburger Verleger Julius Schuberth". (IMSLP ghi 1849.)'
+    ghi_chu: 'Henle Bemerkungen: "E1 Erstausgabe. Hamburg, Schuberth & Comp., Plattennummer 1232, erschienen im Dezember 1848"; lời tựa: "Hamburger Verleger Julius Schuberth". (IMSLP ghi 1849.) Review D6-L1-gom: giữ 12/1848 theo Henle HN 45 Bemerkungen ("E1 ... erschienen im Dezember 1848"), gần nguồn gốc hơn; IMSLP ghi 1849 (năm in trên bản/lần in sau). Lượt 2 xác nhận (Henle, PTNA). Đúng.'
     luot_2: dung
     luot_2_nguon: [ "https://www.henle.de/media/56/17/85/1690886059/0045-1690886059-sync.pdf", "https://enc.piano.or.jp/en/musics/2440" ]
     luot_2_ghi_chu: "Henle: nhà xuất bản Hamburg Julius Schuberth; PTNA: 'published in December 1848'. Ghi chú: IMSLP ghi First Publication 1849 (bản in lần hai có tranh của Richter)."
+    review: dung
   - id: n17
     cau: 'Thông tin: lần in thứ hai (12/1850) thêm phụ lục Musikalische Haus- und Lebensregeln.'
     loai: nam
@@ -345,19 +350,15 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/SchumannR/O68/schumann-op68-01-melodie/schumann-op68-01-melodie.ly" ]
     luot_2_ghi_chu: \key c \major, \time 4/4.
   - id: n19
-    cau: 'Thông tin: số 1 Melodie có chỉ dẫn tốc độ Nicht schnell (không nhanh).'
+    cau: 'Thông tin: số 1 Melodie: bản in đầu không ghi tốc độ (nhiều ấn bản thêm Nicht schnell, không nhanh).'
     loai: ten
     truong:
       - thong_tin
     nguon:
+      - bsb-e1
       - mutopia-647
-      - ia-schuberth-1867
-      - ia-op68-ban-khac
-    ket_qua: null
-    ghi_chu: 'chưa chắc: Peters (Mutopia 647) ghi "pas vite" (= nicht schnell); hai bản in đọc được trên Internet Archive (Schuberth 1867 bản Klauser; một bản không ghi tên) không ghi chỉ dẫn tốc độ ở Melodie, dù cùng bản ghi "Nicht schnell" ở số 3, số 5. Chưa xem được bản in đầu hay Henle. Nếu bản gốc không có: sửa thành "Số 1 *Melodie* (Giai điệu): Đô trưởng · 4/4 · Schumann không ghi chữ chỉ tốc độ (bản Peters: *pas vite*, không nhanh)" và sửa theo trang (hồ sơ trang n56, n72). Không ghi vào sua-B.yml vì chưa quyết.'
-    luot_2: khong-chac
-    luot_2_nguon: [ "https://commons.wikimedia.org/wiki/File:Album_f%C3%BCr_die_Jugend_;_Kinderscenen_-_op._68_-_op._15_-_(f%C3%BCr_Pianoforte(1900)_--_BY-NLB-br0000200545_--_6338822.pdf", "https://archive.org/details/b26976821", "https://www.henle.de/media/90/21/08/1697725681/0045-1697725681-sync.pdf" ]
-    luot_2_ghi_chu: Bản 1900 (Commons, BY-NLB) in '(Nicht schnell.)' trong ngoặc, tức chỉ dẫn của người biên tập; bản Schuberth 1867 (Klauser, Internet Archive b26976821) không ghi tốc độ cho Melodie; Henle không nêu tốc độ của số 1. Chưa thấy bản in đầu để xác định đây có phải chỉ dẫn của Schumann.
+    ket_qua: da-sua
+    ghi_chu: 'chưa chắc: Peters (Mutopia 647) ghi "pas vite" (= nicht schnell); hai bản in đọc được trên Internet Archive (Schuberth 1867 bản Klauser; một bản không ghi tên) không ghi chỉ dẫn tốc độ ở Melodie, dù cùng bản ghi "Nicht schnell" ở số 3, số 5. Chưa xem được bản in đầu hay Henle. Nếu bản gốc không có: sửa thành "Số 1 *Melodie* (Giai điệu): Đô trưởng · 4/4 · Schumann không ghi chữ chỉ tốc độ (bản Peters: *pas vite*, không nhanh)" và sửa theo trang (hồ sơ trang n56, n72). Không ghi vào sua-B.yml vì chưa quyết. Review D6-L1-gom: review mở bản quét bản in đầu (Bayerische Staatsbibliothek, bsb11108083, "Album für die Jugend. 40 Clavierstücke ... Op. 68", Schuberth & Co., số bản khắc 1232, Erstausg. theo Deutsche Digitale Bibliothek; một agent con Sonnet đọc ảnh IIIF trang 1 và 3): trang 1 "MELODIE." không có chữ chỉ tốc độ nào; trang 3 (Trällerliedchen) có "Nicht schnell.". Henle HN 45 Bemerkungen không nói tốc độ của số 1; một bản in năm 1900 in "(Nicht schnell.)" trong ngoặc (lượt 2); Peters (Mutopia) ghi "pas vite". Kết luận: Nicht schnell ở Melodie là chỉ dẫn của người biên tập. Dữ liệu: "bản in đầu không ghi tốc độ (nhiều ấn bản thêm *Nicht schnell*, không nhanh)". Gỡ kết quả lượt 2 cũ (khong-chac: bản 1900 in "(Nicht schnell.)" trong ngoặc; Schuberth 1867 không ghi; chưa thấy bản in đầu) để lượt 2 bổ sung.'
   - id: n20
     cau: 'Thông tin: số 8 Wilder Reiter (Kỵ sĩ hoang dã): La thứ · 6/8 · nhanh, sôi nổi.'
     loai: cau-truc
@@ -395,10 +396,11 @@ nhan_dinh:
       - mutopia-655
       - mutopia-659
     ket_qua: da-sua
-    ghi_chu: Dữ liệu ghi "Mỗi bài là một hình thức nhỏ dựng từ các câu 4 ô (xem Cấu trúc)". Đoạn b của số 10 dài 6 ô (Mutopia 659 ô 9–14; hinh của chính bản ghi ghi "6 ô"). Sửa thành "Mỗi bài là một hình thức nhỏ dựng từ các câu ngắn, phần lớn 4 ô (xem Cấu trúc)". Trang cũng đã sửa câu tương tự (hồ sơ trang n47).
+    ghi_chu: 'Dữ liệu ghi "Mỗi bài là một hình thức nhỏ dựng từ các câu 4 ô (xem Cấu trúc)". Đoạn b của số 10 dài 6 ô (Mutopia 659 ô 9–14; hinh của chính bản ghi ghi "6 ô"). Sửa thành "Mỗi bài là một hình thức nhỏ dựng từ các câu ngắn, phần lớn 4 ô (xem Cấu trúc)". Trang cũng đã sửa câu tương tự (hồ sơ trang n47). Review D6-L1-gom: chữ dữ liệu khớp câu; lượt 2 xác nhận (số 10 đoạn b 6 ô). Đúng.'
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/SchumannR/O68/schumann-op68-01-melodie/schumann-op68-01-melodie.ly", "https://www.mutopiaproject.org/ftp/SchumannR/O68/schumann-op68-08-cavalier-sauvage/schumann-op68-08-cavalier-sauvage.ly", "https://www.mutopiaproject.org/ftp/SchumannR/O68/schumann-op68-10-gai-laboureur/schumann-op68-10-gai-laboureur.ly" ]
     luot_2_ghi_chu: Câu 4 ô (số 10 đoạn b 6 ô).
+    review: dung
   - id: n23
     cau: 'Thông tin, Độ khó: ABRSM xếp số 1 ở Grade 1 (đề cương 2021–2022), số 8 ở Grade 3 (2023–2028), số 10 ở Grade 4 (2017–2018).'
     loai: cap-do

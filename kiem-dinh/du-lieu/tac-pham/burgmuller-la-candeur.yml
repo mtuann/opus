@@ -27,7 +27,7 @@ lan:
     nguoi:
       luot_1: Claude Opus 5.5 (D6-L1 phần B)
       luot_2: null
-      review: null
+      review: Claude Opus 5.5 (review D6-L1-gom, 05/11/2026)
       kiem_mau: null
 ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/burgmuller-la-candeur.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Henle HN 1726 liệt kê bài số 1 của Op. 100 là "1. Nonchalance" (tên tiếng Anh của ấn bản, cùng vị trí số 1 với "La candeur" của IMSLP; các tài liệu Henle đã mở không nêu tên Pháp của bài này). Lần 2 (D6-L1, lượt 1 phần B): nhận định n6–n35 cho các trường chưa khóa (giong, nhip, thoi_ky, ky_nang_chinh, chip, thong_tin, hinh, ban_thu); bản nhạc đối chiếu là Mutopia 202. Không có chỗ sai. n35 đo trên file trong public/audio/ (không có nguồn ngoài).'
 nguon:
@@ -79,6 +79,10 @@ nguon:
     bac: 2
     ten: IMSLP, file bản thu Luis Kolodin plays Burgmuller's La candeur (trang file; giấy phép CC BY-SA 4.0 ghi ở mục Recordings của trang Op.100)
     link: https://imslp.org/wiki/File:PMLP7983-Y2mate.mx_-_Luis_Kolodin_plays_Burgmuller's_La_candeur_(128_kbps).mp3
+  - id: henle-hn1726-vorwort
+    bac: 2
+    ten: G. Henle Verlag, HN 1726 Burgmüller, 25 Etüden op. 100, lời tựa (Vorwort, PDF)
+    link: https://www.henle.de/media/db/e2/27/1789628596/HN_1726_Vorwort.pdf
 nhan_dinh:
   - id: n1
     cau: 'Tên bài: La candeur Op. 100 số 1 (bài đầu trong 25 Études faciles et progressives).'
@@ -263,18 +267,19 @@ nhan_dinh:
     luot_2_nguon: [ "https://imslp.org/wiki/Category:Burgm%C3%BCller,_Friedrich", "https://www.deutsche-biographie.de/pnd117168890.html" ]
     luot_2_ghi_chu: "IMSLP: 4/12/1806 – 13/2/1874; Deutsche Biographie (GND): 1806–1874."
   - id: n15
-    cau: 'Thông tin: Burgmüller là người Đức.'
+    cau: 'Thông tin: Burgmüller sinh ở Regensburg (Đức); năm 1842 nhập quốc tịch Pháp.'
     loai: lich-su
     truong:
       - thong_tin
     nguon:
-      - imslp-burgmuller
       - db-burgmuller
-    ket_qua: dung
-    ghi_chu: 'IMSLP: Nationality German; Deutsche Biographie: sinh ở Regensburg.'
+      - henle-hn1726-vorwort
+    ket_qua: da-sua
+    ghi_chu: 'IMSLP: Nationality German; Deutsche Biographie: sinh ở Regensburg. Review D6-L1-gom: chữ cũ "người Đức"; Henle HN 1726 lời tựa: "Burgmüller wurde in Regensburg geboren ... 1842 wurde er französischer Staatsbürger". Dữ liệu: "sinh ở Regensburg (Đức); từ năm 1832 sống ở Paris, dạy piano và viết nhạc salon; năm 1842 nhập quốc tịch Pháp". Lượt 2 đã nêu đúng điều này (n15: Staatsoper; hồ sơ trang n16: Henle), phần còn lại lượt 2 đã xác nhận.'
     luot_2: dung
     luot_2_nguon: [ "https://www.deutsche-biographie.de/pnd117168890.html", "https://web.archive.org/web/2025/https://www.staatsoper.de/en/biographies/burgmueller-friedrich" ]
     luot_2_ghi_chu: "GND: sinh ở Regensburg. Ghi chú: Staatsoper (bản lưu) nói ông nhập quốc tịch Pháp năm 1842; 'người Đức' đúng theo nơi sinh và gốc."
+    review: dung
   - id: n16
     cau: 'Thông tin: từ năm 1832 Burgmüller sống ở Paris.'
     loai: lich-su
@@ -503,9 +508,10 @@ nhan_dinh:
     loai: so-lieu
     truong:
       - ban_thu
-    nguon: []
+    nguon:
+      - imslp-kolodin-candeur
     ket_qua: dung
-    ghi_chu: 'ffprobe public/audio/burgmuller-la-candeur.mp3: 108.300 s (file của site, chuyển mã từ file IMSLP, NGUON.txt).'
+    ghi_chu: 'ffprobe public/audio/burgmuller-la-candeur.mp3: 108.300 s (file của site, chuyển mã từ file IMSLP, NGUON.txt). Review D6-L1-gom: thêm nguồn để hồ sơ khóa được (khoa.mjs báo "thiếu nguon"); số đo trên file của site như lượt 1 và lượt 2 đã ghi; nguồn là file bản thu gốc trên IMSLP (public/audio/NGUON.txt), không đổi chữ.'
     luot_2: dung
     luot_2_nguon: [ "public/audio/burgmuller-la-candeur.mp3" ]
     luot_2_ghi_chu: "afinfo: 108,33 s. (IMSLP ghi 1:51 cho bản gốc; file của site ngắn hơn chút.)"

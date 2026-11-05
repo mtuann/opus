@@ -263,5 +263,5 @@ Số ngón của tập Op. 100 được tính cho bàn tay nhỏ, đúng như t�
 
 - Bản dàn trang công cộng *La Candeur* tại [Mutopia Project](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=202) (người dàn trang: Bas Wassink; nguồn: Collection Litolff): nốt nhạc, dấu luyến, sắc thái và số ngón của đoạn trích trên trang này, cùng cấu trúc và các chỉ dẫn của cả bài.
 - IMSLP, trang "25 Études faciles et progressives, Op.100 (Burgmüller, Friedrich)": lần in đầu (Paris: Benoît aîné, 1851) và tên các bài trong tập.
-- "Friedrich Burgmüller", [Wikipedia](https://en.wikipedia.org/wiki/Friedrich_Burgm%C3%BCller) (năm sinh, năm mất, năm sang Paris).
+- G. Henle Verlag, lời tựa ấn bản *25 Etüden op. 100* (HN 1726), và *Deutsche Biographie*, mục "Burgmüller, Friedrich" ([deutsche-biographie.de](https://www.deutsche-biographie.de/pnd117168890.html)): năm sinh, năm mất, nơi sinh, những năm sống ở Paris.
 - Bản nhạc: [IMSLP](https://imslp.org/). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

@@ -14,7 +14,7 @@ Một vũ khúc nhỏ bắt chước tiếng kèn túi: tay trái đập đều 
 - **Học đổi thế tay.** Tay phải liên tục chuyển giữa hai vùng: trên cao quanh La5 và ở giữa, ngay trên Đô giữa. Mỗi lần chuyển là một lần luyện "mắt đi trước, tay theo sau".
 - **Hai tay chung một giai điệu.** Ở ô 3–4 và 7–8, hai tay chơi cùng một giai điệu, cách nhau một quãng tám, và phải khít như một.
 - **Sắc thái tiếng vọng.** Bài đầy ý lặp lại: ô 2 giống hệt ô 1, ô 5–8 lặp lại ô 1–4, ô 15–16 lặp lại ô 13–14. Đó là chỗ để học cho cùng một câu một màu khác.
-- **Trình diễn được sớm.** Trọn bài, kể cả nhắc lại và da capo, chỉ khoảng một phút: vui, dễ nhớ, hợp cho lần đầu chơi trước người khác.
+- **Trình diễn được sớm.** Trọn bài, kể cả nhắc lại và da capo, dài khoảng một đến hai phút: vui, dễ nhớ, hợp cho lần đầu chơi trước người khác.
 
 ## Bối cảnh
 

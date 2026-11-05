@@ -10,7 +10,7 @@ lan:
     nguoi:
       luot_1: Claude Opus 5.5 (D6-L1 phần B)
       luot_2: null
-      review: null
+      review: Claude Opus 5.5 (review D6-L1-gom, 05/11/2026)
       kiem_mau: null
 ghi_chu: 'Bài học Old French Song Op. 39 số 16 (tầng Tác phẩm). Bản nhạc: Mutopia 2080 (Schirmer 1904), .ly và PDF. Lịch sử: Tchaikovsky Research (Children''s Album, The Maid of Orleans), IMSLP. Chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng thuộc hồ sơ du-lieu/tac-pham/tchaikovsky-bai-ca-phap-co. Sửa trang: n9. Khuông: khối 1 (trích đoạn) khớp từng nốt; khối 2–4 ví dụ soạn đúng. Thuật ngữ trang dùng (cantabile, molto moderato, espressivo, una corda, kết nửa, kết trọn, cảm âm) đã có trong src/data/thuat-ngu.yml hay trang nhạc lý đã khóa.'
 nguon:
@@ -50,6 +50,10 @@ nguon:
     bac: 2
     ten: 'KTH, Five lectures on the acoustics of the piano, Klaus Wogram: Decay of the piano tone'
     link: https://www.speech.kth.se/music/5_lectures/wogram/decay.html
+  - id: trinity-terms
+    bac: 2
+    ten: Trinity College London, danh sách thuật ngữ âm nhạc (Musical terms), resource 785 (nguồn của thuat-ngu.yml mục cantabile, đã khóa)
+    link: https://trinitycollege.com/resource?id=785
 nhan_dinh:
   - id: n1
     cau: Bài là một giai điệu Sol thứ hát chậm rãi trên nốt Sol trầm ngân dài.
@@ -103,9 +107,10 @@ nhan_dinh:
   - id: n6
     cau: Cantabile nghĩa là "như hát".
     loai: dinh-nghia
-    nguon: []
+    nguon:
+      - trinity-terms
     ket_qua: dung
-    ghi_chu: Khớp Từ điển của site (src/data/thuat-ngu.yml, mục cantabile, đã khóa ở D3-L5).
+    ghi_chu: "Khớp Từ điển của site (src/data/thuat-ngu.yml, mục cantabile, đã khóa ở D3-L5). Review D6-L1-gom: thêm nguồn bậc 2 của bản ghi thuật ngữ đã khóa (kiem-dinh/du-lieu/thuat-ngu/cantabile.yml): Trinity College London, Musical terms."
     luot_2: dung
     luot_2_nguon: [ "https://en.wiktionary.org/api/rest_v1/page/definition/cantabile" ]
     luot_2_ghi_chu: "Wiktionary: cantabile 'singable', 'singingly, lyrically'."
@@ -133,10 +138,11 @@ nhan_dinh:
     loai: cau-truc
     nguon: *id001
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Đây là bước đầu của lối viết nhiều bè trong nhạc Lãng mạn." Chữ mới: "Đây là bước đầu để chơi hai bè trong một bàn tay." Lý do: vế "lối viết nhiều bè trong nhạc Lãng mạn" là khái quát lịch sử không có nguồn; câu mới chỉ nói điều bản nhạc cho thấy (tay trái hai bè, Mutopia: Voice "middle" và "bass" cùng khuông dưới).'
+    ghi_chu: 'Chữ cũ: "Đây là bước đầu của lối viết nhiều bè trong nhạc Lãng mạn." Chữ mới: "Đây là bước đầu để chơi hai bè trong một bàn tay." Lý do: vế "lối viết nhiều bè trong nhạc Lãng mạn" là khái quát lịch sử không có nguồn; câu mới chỉ nói điều bản nhạc cho thấy (tay trái hai bè, Mutopia: Voice "middle" và "bass" cùng khuông dưới). Review D6-L1-gom: chữ trang khớp câu; lượt 2 xác nhận (tay trái hai bè, Mutopia). Đúng.'
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/TchaikovskyPI/O39/16OldFrenchSong/16OldFrenchSong.ly" ]
     luot_2_ghi_chu: Tay trái hai bè (voiceThree, voiceFour) trong đoạn A; 'bước đầu' là nhận xét sư phạm.
+    review: dung
   - id: n10
     cau: 'Ba lớp âm thanh: giai điệu, giọng giữa, nốt trầm ở ba mức to nhỏ khác nhau cùng lúc; làm được là một bước lớn về tiếng đàn.'
     loai: khuyen-tap
@@ -146,7 +152,8 @@ nhan_dinh:
     cau: Link "tiếng đàn" (/opus/piano/tieng-dan/).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Trang đích src/content/docs/piano/tieng-dan.md có.
+    ghi_chu: "Trang đích src/content/docs/piano/tieng-dan.md có. Review D6-L1-gom: piano/tieng-dan: trang đích có trong bản xem (dist), link.test đạt. Đúng."
+    review: dung
   - id: n12
     cau: Ở đầu đoạn B, tay phải hát legato trong khi tay trái rải hợp âm staccato.
     loai: cau-truc
@@ -180,7 +187,8 @@ nhan_dinh:
     cau: Câu chuyện đầy đủ của tập được kể ở bài Cầu nguyện buổi sáng (/opus/piano/tac-pham/tchaikovsky-cau-nguyen-buoi-sang/).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Trang đích chưa chuyển; site cũ ../opus-zero/docs/piano/tac-pham/tchaikovsky-cau-nguyen-buoi-sang.md, mục "Bối cảnh" (dòng 30–34): Florence 2/1878, Kamenka, 24 bài phác thảo trong vài tuần, đề tặng Volodya Davydov. Điều cần giữ: trang ấy có đoạn bối cảnh đầy đủ của Op. 39.'
+    ghi_chu: 'Trang đích chưa chuyển; site cũ ../opus-zero/docs/piano/tac-pham/tchaikovsky-cau-nguyen-buoi-sang.md, mục "Bối cảnh" (dòng 30–34): Florence 2/1878, Kamenka, 24 bài phác thảo trong vài tuần, đề tặng Volodya Davydov. Điều cần giữ: trang ấy có đoạn bối cảnh đầy đủ của Op. 39. Review D6-L1-gom: site cũ tchaikovsky-cau-nguyen-buoi-sang mục Bối cảnh (dòng 32–34): Florence 2/1878, Kamenka, 24 bài, đề tặng Vladimir Davydov. Đúng.'
+    review: dung
   - id: n16
     cau: Cầu nguyện buổi sáng là bài số 1 của tập.
     loai: danh-muc
@@ -426,7 +434,8 @@ nhan_dinh:
     cau: Link "Hình thức nhỏ", "Kết và câu nhạc", "Gam thứ" (/opus/nhac-ly/31-hinh-thuc-nho/, 13-ket/, 07-gam-thu/).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Ba trang đích có trong src/content/docs/nhac-ly/.
+    ghi_chu: "Ba trang đích có trong src/content/docs/nhac-ly/. Review D6-L1-gom: nhac-ly/31-hinh-thuc-nho, 13-ket, 07-gam-thu: trang đích có trong bản xem (dist), link.test đạt. Đúng."
+    review: dung
   - id: n42
     cau: Nốt nhạc, dấu luyến và sắc thái của khuông đoạn A theo bản Mutopia (ấn bản Schirmer, 1904); số ngón là gợi ý của trang.
     loai: cau-truc
@@ -509,12 +518,14 @@ nhan_dinh:
     cau: Link "thu âm" (/opus/luyen-tap/thu-am/) ở bảng và ở Kế hoạch tập.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Trang đích src/content/docs/luyen-tap/thu-am.md có.
+    ghi_chu: "Trang đích src/content/docs/luyen-tap/thu-am.md có. Review D6-L1-gom: luyen-tap/thu-am: trang đích có trong bản xem (dist), link.test đạt. Đúng."
+    review: dung
   - id: n52
     cau: Các bài tập chuẩn bị soạn riêng cho trang này, không trích từ bản nhạc gốc.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Ba khối 2–4 ghi "(soạn cho trang này)".
+    ghi_chu: 'Ba khối 2–4 ghi "(soạn cho trang này)". Review D6-L1-gom: khối 2–4 có "(soạn cho trang này)". Đúng.'
+    review: dung
   - id: n53
     cau: 'Bài tập 1: ô 1–4 chỉ tay trái, ngón 5 giữ Sol, chỉ đánh lại ở phách 2 của ô 2 và 4 như trong bài; ô 5–8 lặp lại, thêm tay phải hát to hơn một bậc.'
     loai: cau-truc
@@ -626,7 +637,8 @@ nhan_dinh:
     cau: Link "Bàn đạp" (/opus/piano/ban-dap/).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Trang đích src/content/docs/piano/ban-dap.md có.
+    ghi_chu: "Trang đích src/content/docs/piano/ban-dap.md có. Review D6-L1-gom: piano/ban-dap: trang đích có trong bản xem (dist), link.test đạt. Đúng."
+    review: dung
   - id: n68
     cau: Đoạn trích trên trang theo bản Schirmer 1904, không phải bản in đầu tiên; các ấn bản có thể khác ở chỉ dẫn tốc độ (Molto moderato hay Moderato assai), dấu luyến và dấu sắc thái.
     loai: ten
@@ -639,17 +651,17 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2080", "https://en.tchaikovsky-research.net/pages/Children%27s_Album", "https://imslp.org/wiki/Children%27s_Album,_Op.39_(Tchaikovsky,_Pyotr)" ]
     luot_2_ghi_chu: "Mutopia: Schirmer 1904; bản in đầu Jurgenson, Moskva 1878 (IMSLP, Tchaikovsky Research). Chỉ dẫn tốc độ khác nhau thật: Tchaikovsky Research ghi Molto moderato, Schirmer ghi Moderato assai. Vế dấu luyến và sắc thái viết 'có thể khác', không kiểm được trực tiếp."
   - id: n69
-    cau: Danh sách "Lỗi thường gặp" (bảy dòng).
+    cau: "Lỗi thường gặp: đếm bốn móc đơn nặng như nhau thay vì hai phách; giọng giữa to bằng giai điệu, hay nốt Sol trầm bị nhấc sớm; nhấn nốt lấy đà Rê và nốt Rê nhắc lại ở ô 2, 4; hai móc kép ở ô 6 thành móc đơn, La chấm dôi kép ở ô 7 bị cắt ngắn; lần pp nhỏ đến mức có nốt không kêu; ô 17–20 tay trái nặng, dính bàn đạp hay kéo tay phải mất legato; chậm lại ở cuối mỗi đoạn A."
     loai: khuyen-tap
     nguon: []
     ket_qua: khong-can-nguon
-    luot_2: khong-chac
-    luot_2_ghi_chu: Danh sách chỉ ghi tiêu đề 'Lỗi thường gặp (bảy dòng)', không có nội dung các dòng để đánh giá.
+    ghi_chu: 'Review D6-L1-gom: câu cũ chỉ ghi "Danh sách \"Lỗi thường gặp\" (bảy dòng)", nên lượt 2 không đánh giá được (khong-chac). Ghi đủ bảy dòng; không dính sức khỏe, không trái trang lõi. Gỡ kết quả lượt 2 cũ để lượt 2 bổ sung kiểm (vẫn là câu trong mẫu lời khuyên tập).'
   - id: n70
     cau: 'Học tiếp: link Cầu nguyện buổi sáng (số 1), "viết theo lối hợp xướng".'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Trang đích chưa chuyển; site cũ ../opus-zero/docs/piano/tac-pham/tchaikovsky-cau-nguyen-buoi-sang.md có; bản ghi tchaikovsky-cau-nguyen-buoi-sang: ky_nang_chinh "Bốn bè kiểu hợp xướng". Điều cần giữ: trang nói về kết cấu hợp xướng bốn bè.'
+    ghi_chu: 'Trang đích chưa chuyển; site cũ ../opus-zero/docs/piano/tac-pham/tchaikovsky-cau-nguyen-buoi-sang.md có; bản ghi tchaikovsky-cau-nguyen-buoi-sang: ky_nang_chinh "Bốn bè kiểu hợp xướng". Điều cần giữ: trang nói về kết cấu hợp xướng bốn bè. Review D6-L1-gom: site cũ tchaikovsky-cau-nguyen-buoi-sang: "kết cấu hợp xướng", bốn bè. Đúng.'
+    review: dung
   - id: n71
     cau: Trong Op. 39, Búp bê ốm là số 6; Bài ca Ý (số 15) và Bài ca Đức (số 17) đứng cạnh bài này.
     loai: danh-muc
@@ -665,12 +677,14 @@ nhan_dinh:
     cau: 'Học tiếp: hình mẫu của tập là Schumann: Album für die Jugend (link).'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Trang cùng lô src/content/docs/piano/tac-pham/schumann-album.md. "Hình mẫu": TR "à la Schumann", thư gửi von Meck "like Schumann''s" (tr-op39).'
+    ghi_chu: 'Trang cùng lô src/content/docs/piano/tac-pham/schumann-album.md. "Hình mẫu": TR "à la Schumann", thư gửi von Meck "like Schumann''s" (tr-op39). Review D6-L1-gom: trang schumann-album có (cùng lô). Đúng.'
+    review: dung
   - id: n73
-    cau: 'Học tiếp: bước tiếp theo với giai điệu hát Grieg: Arietta, Chopin: Prelude Mi thứ, rồi Schumann: Träumerei; nhẹ hơn một chút: Burgmüller: La candeur; link Tác phẩm theo cấp độ.'
+    cau: 'Học tiếp: bước tiếp theo với giai điệu hát Grieg: Arietta, Chopin: Prelude Mi thứ, rồi Schumann: Träumerei; cùng chặng: Burgmüller: La candeur; link Tác phẩm theo cấp độ.'
     loai: ve-site
-    ket_qua: dung
-    ghi_chu: 'src/data/tac-pham.yml: grieg-arietta chang 4, chopin-prelude-mi-thu chang 4, schumann-traumerei chang 5 (đều sau chặng 2 của bài này, theo thứ tự tăng); burgmuller-la-candeur chang 2, Henle mức 1 (hồ sơ bản ghi lần 1) — "nhẹ hơn một chút" so với bài này (ABRSM Grade 3, 2019–2020). Grieg, Chopin, Träumerei chưa chuyển (site cũ có); La candeur cùng lô; piano/tac-pham-theo-cap có.'
+    ket_qua: da-sua
+    ghi_chu: 'src/data/tac-pham.yml: grieg-arietta chang 4, chopin-prelude-mi-thu chang 4, schumann-traumerei chang 5 (đều sau chặng 2 của bài này, theo thứ tự tăng); burgmuller-la-candeur chang 2, Henle mức 1 (hồ sơ bản ghi lần 1) — "nhẹ hơn một chút" so với bài này (ABRSM Grade 3, 2019–2020). Grieg, Chopin, Träumerei chưa chuyển (site cũ có); La candeur cùng lô; piano/tac-pham-theo-cap có. Review D6-L1-gom: "nhẹ hơn một chút" là so sánh độ khó cần nguồn ngoài (Henle, ABRSM), lẫn vào câu ve-site; trên site hai bài cùng chặng 2 và cùng grade "Grade 2–3" (tac-pham.yml, đã khóa), nên site không cho thấy La candeur nhẹ hơn. Đổi thành "Cùng chặng" (doi_chu). Phần còn lại: grieg-arietta 4, chopin-prelude-mi-thu 4, schumann-traumerei 5 (đúng thứ tự). Đúng.'
+    review: dung
   - id: n74
     cau: 'Câu hỏi 1: bài có hình thức A A B A, mỗi đoạn 8 ô, tổng cộng 32 ô; đoạn A vang lên ba lần (p, pp, rồi p sau đoạn B); đoạn B dừng trên hợp âm Rê để đưa về A.'
     loai: cau-truc
@@ -734,7 +748,8 @@ nhan_dinh:
     cau: 'Mục Nguồn: link IMSLP chung và "tài liệu tham khảo".'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Trang đích src/content/docs/tai-lieu-tham-khao.md có.
+    ghi_chu: "Trang đích src/content/docs/tai-lieu-tham-khao.md có. Review D6-L1-gom: tai-lieu-tham-khao: trang đích có trong bản xem (dist), link.test đạt. Đúng."
+    review: dung
 khuong_nhac:
   - khoi: 1
     loai: trich-doan
@@ -785,3 +800,6 @@ doi_chu:
   - cu: Một bàn tay, hai bè. Ngón 5 tay trái giữ Sol trầm qua nhiều ô (dấu nối), trong khi ngón 3-2-1 chơi một giọng giữa có dấu luyến riêng. Đây là bước đầu của lối viết nhiều bè trong nhạc Lãng mạn.
     moi: Một bàn tay, hai bè. Ngón 5 tay trái giữ Sol trầm qua nhiều ô (dấu nối), trong khi ngón 3-2-1 chơi một giọng giữa có dấu luyến riêng. Đây là bước đầu để chơi hai bè trong một bàn tay.
     ly_do: 'n9 (da-sua): "lối viết nhiều bè trong nhạc Lãng mạn" là khái quát không có nguồn; câu mới chỉ nói điều bản nhạc cho thấy (Mutopia 2080: tay trái hai bè).'
+  - cu: "Nhẹ hơn một chút: Burgmüller: La candeur. Danh sách theo cấp: Tác phẩm theo cấp độ."
+    moi: "Cùng chặng: Burgmüller: La candeur. Danh sách theo cấp: Tác phẩm theo cấp độ."
+    ly_do: 'Review D6-L1-gom (n73): hai bài cùng chặng 2, cùng grade trong dữ liệu đã khóa; "nhẹ hơn" cần nguồn ngoài.'
