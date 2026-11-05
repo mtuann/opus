@@ -104,3 +104,10 @@ Mọi câu khác đổi chữ chỉ theo câu đúng của lượt 2, hay chỉ 
 - Lô D6-L2 (`burgmuller-arabesque`) nên viết Burgmüller như dữ liệu mới: sinh ở Regensburg, sống ở Paris từ 1832, nhập quốc tịch Pháp năm 1842, mất ở Beaulieu. Không viết "ở lại Paris đến cuối đời".
 - Dòng "Độ khó" của `burgmuller-la-candeur` và nhiều bản ghi khác vẫn có "(ước lượng)". Lô này chỉ sửa hai bài đã được giao.
 - Còn trống `nguoi.luot_2` (người làm lượt 2 và lượt 2 bổ sung) và `nguoi.kiem_mau` trong lần kiểm định cuối của 14 hồ sơ.
+
+## Lượt 2 bổ sung và trạng thái khóa (người gom)
+
+- Lượt 2 bổ sung (Claude Opus 5.5): `ket-qua-bo-sung.yml` 9 dung, `ket-qua-bo-sung-du-lieu.yml` 1 dung; đã `nhap`. Schumann n18 đúng nguyên văn Henle HN 45 ("binnen Jahresfrist … nahe an 2000 Exempl."); *Melodie* không ghi tốc độ ở bản in đầu (BSB bsb11108083), "(Nicht schnell.)" là của Peters.
+- Đã điền `nguoi.luot_2` cho 14 hồ sơ (7 trang, 7 bản ghi). Còn thiếu cho khóa: `nguoi.kiem_mau` (chủ repo).
+- Mẫu kiểm cho chủ repo: 8 nhận định ở `d6-l1-gom/kiem-mau.yml` (`xuat D6-L1 --mau 8`).
+- `npm run build:xem` không cảnh báo `[opus]`; `npm test` 281 đạt; `node tools/khoa.mjs tinh` không lỗi.
