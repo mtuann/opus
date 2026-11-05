@@ -170,4 +170,24 @@ nhan_dinh:
     loai: ve-site
     ket_qua: dung
     ghi_chu: "Trang đích đã chuyển: src/content/docs/luyen-tap/phieu-bai-tap.md có \"## Giấy kẻ khuông\" (id giay-ke-khuong theo id-cu); trang có công cụ staffpaper (D7-L2)."
+  - id: n26
+    cau: "Chữ sinh ra trên bìa sách (src/sach/sach.mjs, SACH.mo_ta): mô tả bảy cuốn: \"Bài 1–14 và ba bài ôn tập: từ tên nốt đến hòa âm chức năng và ký hiệu biểu diễn.\"; \"Bài 15–32 và âm học: tiết tấu nâng cao, điệu thức, chuyển giọng, hòa âm bốn bè, đối âm, kết cấu, hình thức.\"; \"Tờ tóm tắt nhạc lý và từ điển thuật ngữ.\"; \"Các thời kỳ, nhà soạn nhạc, opera, nhạc cổ điển và nhạc truyền thống Việt Nam; lịch sử cây đàn piano, các thể loại, nhà soạn nhạc và nghệ sĩ piano.\"; \"Cách đọc tên tác phẩm và bản thu, cùng các hướng dẫn nghe từng bước, có chỗ để ghi mốc thời gian bằng tay.\"; \"Lộ trình 7 chặng và lộ trình năm đầu, chọn đàn, tư thế, … hòa âm bên phím và ứng tác.\"; \"10 bài hai tay có số ngón, tác phẩm theo cấp độ và các bài học tác phẩm, từ Minuet Fa trưởng của Mozart đến Ballade số 1 của Chopin: cấu trúc, chỗ khó, bài tập chuẩn bị, kế hoạch tập.\""
+    loai: ve-site
+    ket_qua: null
+    ghi_chu: "chưa chắc (cho review): chữ sinh ra, không qua so chữ (thêm theo review mã D7-L3). Mỗi mô tả phải khớp danh sách SACH[i].trang và các trang ấy; mô tả cũ của books.py bỏ số (42 hướng dẫn nghe, 16 về piano, 34 bài học, hơn 100 thuật ngữ). Review kiểm trên src/sach/sach.mjs và dist/sach/*.html của bản xem."
+  - id: n27
+    cau: "Chữ sinh ra trên bìa sách: \"Bản in ngày <ngày build> · <số> chương · Bản trực tuyến: https://mtuann.github.io/opus/\"; khi thiếu chương: \"<số> chương (các trang đã lên site; trang khác sẽ có trong sách khi lên site)\"; khi không có chương nào: \"Chưa có chương nào: các trang của cuốn này chưa lên site\" (không có mục lục)."
+    loai: ve-site
+    ket_qua: null
+    ghi_chu: "chưa chắc (cho review): trangSach ở src/sach/sach.mjs; số chương là số trang của cuốn có trong bản build (dungSach). Sách chỉ dựng khi trang bat-dau/sach-in có trong bản build (review mã D7-L3, mục 1), nên bản thật chưa có dist/sach/ tới khi trang này khóa."
+  - id: n28
+    cau: "Chữ sinh ra trên bìa sách: \"Nội dung theo giấy phép CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/): được chia sẻ và chỉnh sửa nếu ghi nguồn và chia sẻ lại theo cùng giấy phép. Bản thu, font và nội dung trích từ nguồn khác giữ giấy phép riêng.\""
+    loai: ve-site
+    ket_qua: null
+    ghi_chu: "chưa chắc (cho review): chép từ books.py cũ. Đối chiếu dòng giấy phép ở chân trang (src/components/Footer.astro: nội dung CC BY-SA 4.0) và mục Giấy phép của tai-lieu-tham-khao (đã khóa); phần \"được chia sẻ và chỉnh sửa nếu ghi nguồn và chia sẻ lại theo cùng giấy phép\" khớp chứng thư CC BY-SA 4.0 (như blog 23/10, n-giấy phép)."
+  - id: n29
+    cau: "Chữ sinh ra trên trang sách: nút \"Đang vẽ khuông nhạc…\" rồi \"In / Lưu PDF\" và lời \"Chọn “Lưu dưới dạng PDF” trong hộp thoại in để có file PDF.\"; tắt JavaScript thì nút bật sẵn, ghi \"In / Lưu PDF\"; mục lục, câu hỏi \"Kiểm tra nhanh (đáp án ở cuối chương)\", \"Đáp án kiểm tra nhanh\"."
+    loai: ve-site
+    ket_qua: null
+    ghi_chu: "chưa chắc (cho review): trangSach, cauHoiIn, lamChuong ở src/sach/sach.mjs; nút bật sẵn theo review mã D7-L3 (mục 8). Phần \"Lưu dưới dạng PDF\" là tên trong hộp thoại in của trình duyệt: cùng câu chưa chắc với n16."
 khuong_nhac: []

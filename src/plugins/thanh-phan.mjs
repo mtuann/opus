@@ -968,7 +968,10 @@ export function danhSachBai(bai, base = DUONG_GOC) {
  */
 export function tacPhamMoi(tacPham, nguoi, trang = trangTrongBan(), base = DUONG_GOC) {
 	const co = new Set(trang);
+	// slug đọc được ở mọi bản ghi (chiDaKhoa); chỉ bản ghi có trang mang slug ấy trong bản build mới đọc loai, them_ngay
+	const slugCo = new Set(trang.map((t) => /^(?:piano\/tac-pham|nghe-nhac)\/([^/]+)$/.exec(t)?.[1]).filter(Boolean));
 	const ds = tacPham
+		.filter((r) => slugCo.has(r.slug))
 		.filter((r) => co.has(trangTacPham(r)))
 		.filter((r) => r.them_ngay)
 		.map((r) => ({ r, ngay: ngayISO(r.them_ngay), trang: trangTacPham(r) }))

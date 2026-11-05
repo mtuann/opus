@@ -7,7 +7,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import vm from 'node:vm';
-import { MAY_NGOAI, TIEN_TO, danhSachTep, ghiSw, maSw, phienBan, scriptDangKy, tepLuuSan } from '../src/ung-dung/ung-dung.mjs';
+import { MAY_NGOAI, TIEN_TO, danhSachTep, ghiSw, maSw, phienBan, scriptDangKy, scriptGo, tepLuuSan } from '../src/ung-dung/ung-dung.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DIST = path.join(ROOT, 'dist');
@@ -49,11 +49,12 @@ test('tepLuuSan: trang chủ, CSS, JavaScript và font của trang chủ, manife
 /** Chạy mã sw.js trong vm với self, caches, fetch giả; trả về các hàm xử lý sự kiện. */
 function chaySw(ma, { mang = true } = {}) {
 	const kho = new Map();
+	const nap = [];
 	const cache = (ten) => {
 		if (!kho.has(ten)) kho.set(ten, new Map());
 		const m = kho.get(ten);
 		return {
-			addAll: async (ds) => ds.forEach((u) => m.set(u, `lưu sẵn ${u}`)),
+			addAll: async (ds) => ds.forEach((r) => (nap.push(r), m.set(r.url ?? r, `lưu sẵn ${r.url ?? r}`))),
 			put: async (r, res) => m.set(r.url ?? r, res.body),
 			match: async (r) => {
 				const u = new URL(r.url ?? r, 'https://mtuann.github.io').pathname;
@@ -72,14 +73,20 @@ function chaySw(ma, { mang = true } = {}) {
 		},
 		URL,
 		Promise,
+		Request: class {
+			constructor(url, o = {}) {
+				this.url = url;
+				this.cache = o.cache;
+			}
+		},
 	};
 	ctx.addEventListener = ctx.self.addEventListener;
 	vm.runInNewContext(ma, ctx);
-	return { nghe, kho, ctx };
+	return { nghe, kho, ctx, nap };
 }
-const yeuCau = (url, { mode = 'no-cors', accept = '', destination = '', range = false } = {}) => ({
+const yeuCau = (url, { mode = 'no-cors', accept = '', destination = '', range = false, method = 'GET' } = {}) => ({
 	url,
-	method: 'GET',
+	method,
 	mode,
 	destination,
 	headers: { get: (k) => (k === 'accept' ? accept : null), has: (k) => k === 'range' && range },
@@ -93,11 +100,13 @@ async function goi(nghe, r) {
 
 test('maSw: cài thì lưu sẵn; kích hoạt thì chỉ xóa bộ nhớ đệm cũ của site này; trang lấy mạng trước, mất mạng thì bản đã lưu', async () => {
 	const ma = maSw({ phien: 'abc', luuSan: ['/opus/', '/opus/_astro/a.css'] });
-	const { nghe, kho } = chaySw(ma);
+	const { nghe, kho, nap } = chaySw(ma);
 	let cho;
 	nghe.install({ waitUntil: (p) => (cho = p) });
 	await cho;
 	assert.deepEqual([...kho.get(`${TIEN_TO}abc`).keys()], ['/opus/', '/opus/_astro/a.css']);
+	// bỏ qua bộ nhớ đệm HTTP của trình duyệt khi lưu sẵn (GitHub Pages để 10 phút)
+	assert.deepEqual(nap.map((r) => r.cache), ['reload', 'reload']);
 	kho.set(`${TIEN_TO}cu`, new Map());
 	kho.set('opus-zero-v19', new Map());
 	nghe.activate({ waitUntil: (p) => (cho = p) });
@@ -134,6 +143,45 @@ test('maSw: mất mạng thì trang đã xem và tệp đã lưu vẫn mở; tra
 	await assert.rejects(goi(nghe, yeuCau('https://mtuann.github.io/opus/_astro/khong.js')));
 });
 
+test('maSw: phản hồi không ok (404, 5xx), opaque, yêu cầu POST và module của máy chủ thử không được lưu', async () => {
+	const { nghe, kho, ctx } = chaySw(maSw({ phien: 'v', luuSan: [] }));
+	const traVe = { '/opus/a.js': { ok: false, status: 404 }, '/opus/b.js': { ok: false, status: 503 }, [`${MAY_NGOAI[0]}x.mp3`]: { ok: false, status: 0, type: 'opaque' } };
+	let soLanTai = 0;
+	ctx.fetch = async (r) => {
+		soLanTai++;
+		const k = Object.keys(traVe).find((x) => r.url.endsWith(x));
+		return { ...(traVe[k] ?? { ok: true, status: 200 }), body: `mạng ${r.url}`, clone() { return this; } };
+	};
+	for (const u of ['https://mtuann.github.io/opus/a.js', 'https://mtuann.github.io/opus/b.js', `${MAY_NGOAI[0]}x.mp3`]) assert.equal((await goi(nghe, yeuCau(u))).body, `mạng ${u}`);
+	assert.equal(await goi(nghe, yeuCau('https://mtuann.github.io/opus/x/', { mode: 'navigate', method: 'POST' })), undefined);
+	for (const d of ['src/scripts/abc.js', '@vite/client', '@fs/x.js', 'node_modules/.vite/a.js'])
+		assert.equal(await goi(nghe, yeuCau(`https://mtuann.github.io/opus/${d}`)), undefined, d);
+	await new Promise((ok) => setTimeout(ok, 0));
+	assert.deepEqual([...(kho.get(`${TIEN_TO}v`) ?? new Map()).keys()], []);
+	assert.equal(soLanTai, 3);
+});
+
+test('maSw: tệp có ?… (pagefind-entry.json?ts=…) lấy mạng trước, lưu một bản không có ?…; mất mạng thì dùng bản ấy', async () => {
+	const { nghe, kho, ctx } = chaySw(maSw({ phien: 'v', luuSan: [] }));
+	const u = 'https://mtuann.github.io/opus/pagefind/pagefind-entry.json';
+	assert.equal((await goi(nghe, yeuCau(`${u}?ts=1`))).body, `mạng ${u}?ts=1`);
+	assert.equal((await goi(nghe, yeuCau(`${u}?ts=2`))).body, `mạng ${u}?ts=2`, 'không dùng bản đã lưu khi có mạng');
+	await new Promise((ok) => setTimeout(ok, 0));
+	assert.deepEqual([...kho.get(`${TIEN_TO}v`).keys()], [u], 'một bản, không lưu từng biến thể ts');
+	ctx.fetch = async () => {
+		throw new TypeError('mất mạng');
+	};
+	assert.equal((await goi(nghe, yeuCau(`${u}?ts=3`))).body, `mạng ${u}?ts=2`);
+});
+
+test('scriptGo (npm run dev): gỡ service worker của /opus/ đã đăng ký ở bản preview, không đụng phạm vi khác', async () => {
+	const go = [];
+	const ds = ['http://localhost:4321/opus/', 'http://localhost:4321/khac/'].map((scope) => ({ scope, unregister: () => go.push(scope) }));
+	vm.runInNewContext(scriptGo(), { navigator: { serviceWorker: { getRegistrations: () => Promise.resolve(ds) } }, URL });
+	await new Promise((ok) => setTimeout(ok, 0));
+	assert.deepEqual(go, ['http://localhost:4321/opus/']);
+});
+
 test('scriptDangKy: chỉ đăng ký khi có service worker và ngữ cảnh an toàn, phạm vi /opus/', () => {
 	const chay = ({ an, coSw = true }) => {
 		const dk = [];
@@ -157,7 +205,7 @@ test('dist/sw.js: phiên bản khớp các tệp của bản build, tệp lưu s
 	assert.ok(luu.includes('/opus/') && luu.some((u) => u.endsWith('.css')), 'lưu sẵn trang chủ và CSS');
 	for (const u of luu) assert.ok(u === '/opus/' || fs.existsSync(path.join(DIST, decodeURI(u.slice('/opus/'.length)))), u);
 	assert.equal(ma, maSw({ phien: phienBan(DIST), luuSan: luu }));
-	assert.ok(danhSachTep(DIST).includes('sach/nhac-ly-co-ban.html'), 'phiên bản tính cả sách in');
+	if (fs.existsSync(path.join(DIST, 'sach'))) assert.ok(danhSachTep(DIST).includes('sach/nhac-ly-co-ban.html'), 'phiên bản tính cả sách in');
 });
 
 test('dist/: manifest (tên Opus, icon 192, 512, maskable có thật); mọi trang có thẻ manifest và script đăng ký', { skip: !coDist && 'chưa build' }, () => {

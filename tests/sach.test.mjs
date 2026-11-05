@@ -6,7 +6,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
-import { SACH, cauHoiIn, docTrang, lamChuong, trangSach } from '../src/sach/sach.mjs';
+import os from 'node:os';
+import { SACH, TRANG_SACH_IN, cauHoiIn, docTrang, dungSach, lamChuong, trangSach } from '../src/sach/sach.mjs';
 import { docCay, ghi } from '../src/sach/html.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
@@ -71,12 +72,32 @@ test('trangSach: bìa ghi số chương; chưa có chương nào thì nói vậy
 	const hai = trangSach(s, [{ url: 'a/', ten: 'A', html: '<p>a</p>' }, { url: 'c/', ten: 'C', html: '<p>c</p>' }], { ngay: '05/11/2026' });
 	assert.match(hai, /Bản in ngày 05\/11\/2026 · 2 chương \(các trang đã lên site/);
 	assert.match(hai, /<li><a href="#chuong-1">A<\/a><\/li><li><a href="#chuong-2">C<\/a><\/li>/);
-	assert.match(hai, /<button id="print" type="button" disabled>Đang vẽ khuông nhạc…<\/button>/);
+	// nút bật sẵn (tắt JavaScript vẫn bấm được); script tắt nó tới khi vẽ xong khuông
+	assert.match(hai, /<button id="print" type="button">In \/ Lưu PDF<\/button>/);
+	assert.match(hai, /btn\.disabled = true; btn\.textContent = "Đang vẽ khuông nhạc…";/);
 	assert.match(hai, /<script src="\/opus\/vendor\/abcjs-basic-min\.js"><\/script>/);
 	const rong = trangSach(s, []);
 	assert.match(rong, /Chưa có chương nào/);
 	assert.doesNotMatch(rong, /class="toc"/);
 	assert.match(trangSach(s, ['a/', 'b/', 'c/'].map((url) => ({ url, ten: url, html: '' }))), /· 3 chương ·/);
+});
+
+test('dungSach: không có trang bat-dau/sach-in trong bản build thì không có sách (xóa dist/sach/ cũ); có thì đủ bảy cuốn', () => {
+	const d = fs.mkdtempSync(path.join(os.tmpdir(), 'opus-sach-'));
+	fs.mkdirSync(path.join(d, 'sach'));
+	fs.writeFileSync(path.join(d, 'sach', 'cu.html'), 'cũ');
+	assert.deepEqual(dungSach(d), []);
+	assert.equal(fs.existsSync(path.join(d, 'sach')), false);
+	fs.mkdirSync(path.join(d, TRANG_SACH_IN), { recursive: true });
+	fs.writeFileSync(path.join(d, TRANG_SACH_IN, 'index.html'), '<h1>Sách</h1><div class="sl-markdown-content"></div>');
+	assert.equal(dungSach(d).length, SACH.length);
+	assert.deepEqual(fs.readdirSync(path.join(d, 'sach')).sort(), SACH.map((s) => `${s.id}.html`).sort());
+	fs.rmSync(d, { recursive: true });
+});
+
+test('dist/: không có trang Sách in được (bản thật khi trang chưa khóa) thì không có dist/sach/', { skip: !fs.existsSync(path.join(DIST, 'index.html')) && 'chưa build' }, () => {
+	if (!fs.existsSync(path.join(DIST, TRANG_SACH_IN, 'index.html'))) assert.equal(fs.existsSync(path.join(DIST, 'sach')), false);
+	else assert.ok(fs.existsSync(path.join(DIST, 'sach')));
 });
 
 const coDist = fs.existsSync(path.join(DIST, 'sach'));

@@ -71,9 +71,10 @@ test('tacPhamMoi: không đọc them_ngay của tác phẩm chưa có trong bả
 				return Reflect.get(t, k);
 			},
 		});
-	const ds = [khoa(rec('a', 'bai-hoc', '2026-12-01'), []), khoa(rec('x', 'bai-hoc', '2026-12-02'), ['them_ngay', 'ten'])];
+	// x: chưa có trong bản build, loai, them_ngay, ten chưa khóa: không được đọc
+	const ds = [khoa(rec('a', 'bai-hoc', '2026-12-01'), []), khoa(rec('x', 'bai-hoc', '2026-12-02'), ['loai', 'them_ngay', 'ten'])];
 	assert.match(tacPhamMoi(ds, nguoi, ['piano/tac-pham/a']), /tac-pham\/a\//);
-	assert.throws(() => tacPhamMoi(ds, nguoi, ['piano/tac-pham/x']), /them_ngay/);
+	assert.throws(() => tacPhamMoi(ds, nguoi, ['piano/tac-pham/x']), /loai|them_ngay/);
 });
 
 test('dist/: trang blog liệt kê các bài có trong bản build, mới trước; bài có ngày đăng; Cập nhật có nhật ký tác phẩm mới', { skip: !fs.existsSync(path.join(DIST, 'index.html')) && 'chưa build' }, () => {

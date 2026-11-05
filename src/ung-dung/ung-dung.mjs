@@ -61,6 +61,9 @@ export function tepLuuSan(dist, base = '/opus/') {
 	return [...new Set(ra)].filter((u) => u === base || fs.existsSync(path.join(dist, decodeURI(u.slice(base.length)))));
 }
 
+/** Đường dẫn của máy chủ thử (npm run dev: Vite) dưới /opus/: không bao giờ lưu. */
+export const KHONG_LUU = ['src/', '@vite/', '@fs/', '@id/', 'node_modules/'];
+
 /** Mã của service worker cho phiên bản `phien` và danh sách lưu sẵn `luuSan`. */
 export function maSw({ phien, luuSan, base = '/opus/' }) {
 	return `/* Service worker của Opus, sinh lúc build (src/ung-dung/ung-dung.mjs): đừng sửa tay. */
@@ -68,9 +71,11 @@ const PHIEN = ${JSON.stringify(TIEN_TO + phien)};
 const GOC = ${JSON.stringify(base)};
 const LUU_SAN = ${JSON.stringify(luuSan)};
 const MAY_NGOAI = ${JSON.stringify(MAY_NGOAI)};
+const KHONG_LUU = ${JSON.stringify(KHONG_LUU.map((d) => base + d))};
 
 self.addEventListener("install", (e) => {
-  e.waitUntil(caches.open(PHIEN).then((c) => c.addAll(LUU_SAN)).then(() => self.skipWaiting()));
+  // cache: "reload": bỏ qua bộ nhớ đệm HTTP của trình duyệt (GitHub Pages để 10 phút), để không lưu bản cũ ngay sau khi đăng
+  e.waitUntil(caches.open(PHIEN).then((c) => c.addAll(LUU_SAN.map((u) => new Request(u, { cache: "reload" })))).then(() => self.skipWaiting()));
 });
 
 self.addEventListener("activate", (e) => {
@@ -82,6 +87,20 @@ self.addEventListener("activate", (e) => {
 });
 
 const laTrang = (r) => r.mode === "navigate" || (r.headers.get("accept") || "").includes("text/html");
+// địa chỉ bỏ phần ?…: mỗi tệp một bản lưu (pagefind-entry.json?ts=… đổi mỗi lần mở tìm kiếm)
+const boHoi = (u) => u.split("#")[0].split("?")[0];
+
+function mangTruoc(c, r, khoa, duPhong) {
+  return fetch(r)
+    .then((res) => {
+      if (res.ok) c.put(khoa, res.clone());
+      return res;
+    })
+    .catch((err) => c.match(khoa).then((hit) => hit || (duPhong ? c.match(duPhong) : undefined)).then((hit) => {
+      if (hit) return hit;
+      throw err;
+    }));
+}
 
 self.addEventListener("fetch", (e) => {
   const r = e.request;
@@ -89,20 +108,17 @@ self.addEventListener("fetch", (e) => {
   const u = new URL(r.url);
   const cungSite = u.origin === self.location.origin && u.pathname.startsWith(GOC);
   if (!cungSite && !MAY_NGOAI.some((m) => r.url.startsWith(m))) return;
+  if (cungSite && KHONG_LUU.some((d) => u.pathname.startsWith(d))) return;
   // âm thanh, video và yêu cầu theo đoạn (Range): trình duyệt tự tải, không lưu
   if (r.headers.has("range") || r.destination === "audio" || r.destination === "video") return;
   if (cungSite && laTrang(r)) {
     // trang: bản mới từ mạng, mất mạng thì bản đã lưu, chưa có thì trang chủ đã lưu
-    e.respondWith(
-      caches.open(PHIEN).then((c) =>
-        fetch(r)
-          .then((res) => {
-            if (res.ok) c.put(r, res.clone());
-            return res;
-          })
-          .catch(() => c.match(r, { ignoreSearch: true }).then((hit) => hit || c.match(GOC)))
-      )
-    );
+    e.respondWith(caches.open(PHIEN).then((c) => mangTruoc(c, r, boHoi(r.url), GOC)));
+    return;
+  }
+  // tệp có ?… (như chỉ mục tìm kiếm pagefind-entry.json?ts=…): mạng trước, lưu một bản theo địa chỉ không có ?…
+  if (u.search) {
+    e.respondWith(caches.open(PHIEN).then((c) => mangTruoc(c, r, boHoi(r.url))));
     return;
   }
   // tệp tĩnh: bản đã lưu ngay, tải lại ngầm
@@ -127,9 +143,16 @@ self.addEventListener("fetch", (e) => {
 `;
 }
 
-/** Script đăng ký (trong <head> của mọi trang): chỉ khi trình duyệt có service worker và trang ở ngữ cảnh an toàn. */
+/** Script đăng ký (trong <head> của mọi trang của bản build): chỉ khi trình duyệt có service worker và trang ở ngữ cảnh an toàn. */
 export const scriptDangKy = (base = '/opus/') =>
 	`if("serviceWorker"in navigator&&isSecureContext)addEventListener("load",function(){navigator.serviceWorker.register(${JSON.stringify(base + 'sw.js')},{scope:${JSON.stringify(base)}}).catch(function(){})})`;
+
+/**
+ * Script cho máy chủ thử (npm run dev): gỡ service worker mà npm run preview đã đăng ký ở cùng địa chỉ (localhost:4321/opus/),
+ * để nó không trả bản cũ của trang hay module của Vite.
+ */
+export const scriptGo = (base = '/opus/') =>
+	`if("serviceWorker"in navigator)navigator.serviceWorker.getRegistrations().then(function(ds){ds.forEach(function(d){if(new URL(d.scope).pathname.indexOf(${JSON.stringify(base)})===0)d.unregister()})}).catch(function(){})`;
 
 /** Ghi `dist`/sw.js; trả về { phien, luuSan }. */
 export function ghiSw(dist, base = '/opus/') {
@@ -144,6 +167,8 @@ export function ungDung({ base = '/opus/' } = {}) {
 	return {
 		name: 'opus-ung-dung',
 		hooks: {
+			// thẻ script trong <head> của mọi trang: bản build đăng ký service worker, máy chủ thử (dev) gỡ nó
+			'astro:config:setup': ({ command, injectScript }) => injectScript('head-inline', command === 'dev' ? scriptGo(base) : scriptDangKy(base)),
 			'astro:build:done': ({ dir, logger }) => {
 				const { phien, luuSan } = ghiSw(fileURLToPath(dir), base);
 				logger.info(`đã ghi sw.js, phiên bản ${phien}, ${luuSan.length} tệp lưu sẵn`);

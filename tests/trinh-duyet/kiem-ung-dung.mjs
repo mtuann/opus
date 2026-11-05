@@ -103,3 +103,31 @@ test('chromium: sách in ra PDF khổ A4, nhiều trang (bìa, mục lục, mỗ
 		await trinhDuyet.close();
 	}
 });
+
+test('chromium: khi service worker điều khiển trang, tìm kiếm vẫn ra kết quả ("dan"), cả lần mở thứ hai; chỉ mục không lưu từng biến thể ?ts=', { skip: khongChromium || (!coSw && 'bản build không có sw.js') }, async () => {
+	const trinhDuyet = await TRINH_DUYET.chromium.launch();
+	try {
+		const ctx = await trinhDuyet.newContext({ serviceWorkers: 'allow' });
+		const p = await ctx.newPage();
+		await p.goto(await goc(), { waitUntil: 'load' });
+		await p.waitForFunction(() => navigator.serviceWorker?.controller?.state === 'activated', null, { timeout: 20000 });
+		const tim = () =>
+			p.evaluate(async () => {
+				const pf = await import(`/opus/pagefind/pagefind.js?lan=${Math.random()}`);
+				const kq = await pf.search('dan');
+				return kq.results.length;
+			});
+		const lan1 = await tim();
+		assert.ok(lan1 > 0, 'có kết quả');
+		await p.reload({ waitUntil: 'load' });
+		assert.equal(await tim(), lan1, 'lần mở thứ hai cùng số kết quả');
+		const khoa = await p.evaluate(async () => {
+			const c = await caches.open((await caches.keys()).find((k) => k.startsWith('opus-sw-')));
+			return (await c.keys()).map((r) => r.url).filter((u) => u.includes('pagefind-entry.json') || u.includes('pagefind.js'));
+		});
+		assert.ok(khoa.every((u) => !u.includes('?')), `không lưu địa chỉ có ?…: ${khoa.join(', ')}`);
+		await ctx.close();
+	} finally {
+		await trinhDuyet.close();
+	}
+});

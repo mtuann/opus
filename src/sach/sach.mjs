@@ -10,6 +10,9 @@ import { fileURLToPath } from 'node:url';
 import { dinhNghiaKyHieu } from '../scripts/ve.js';
 import { chuCua, docCay, doiCon, ghi, lop, tim, timHet } from './html.mjs';
 
+/** Trang giới thiệu sách (link tới từng cuốn): sách chỉ dựng khi trang này có trong bản build. */
+export const TRANG_SACH_IN = 'bat-dau/sach-in';
+
 const L = (...ten) => ten.map((n) => `nhac-ly/${n}/`);
 
 /**
@@ -235,7 +238,7 @@ export function trangSach(sach, chuong, { css = [], ngay = ngayIn(), base = '/op
 ${[...new Set(css)].join('\n')}
 <style>${CSS}</style></head>
 <body data-so-chuong="${chuong.length}">
-<div class="toolbar"><button id="print" type="button" disabled>Đang vẽ khuông nhạc…</button> <span class="muted">Chọn “Lưu dưới dạng PDF” trong hộp thoại in để có file PDF.</span></div>
+<div class="toolbar"><button id="print" type="button">In / Lưu PDF</button> <span class="muted">Chọn “Lưu dưới dạng PDF” trong hộp thoại in để có file PDF.</span></div>
 <main>
 <section class="cover"><p class="muted">Opus</p><h1>${esc(sach.ten)}</h1><p>${esc(sach.mo_ta)}</p>
 <p class="muted">Bản in ngày ${esc(ngay)} · ${esc(soChuong)} · Bản trực tuyến: <a href="${esc(site)}">${esc(site)}</a></p>
@@ -248,6 +251,8 @@ ${kyHieu}
 <script>
 (function () {
   var btn = document.getElementById("print");
+  // nút bật sẵn (trang tắt JavaScript vẫn in được bằng lệnh In); có JavaScript thì tắt tới khi vẽ xong khuông
+  btn.disabled = true; btn.textContent = "Đang vẽ khuông nhạc…";
   function xong() { document.body.setAttribute("data-ready", "1"); btn.disabled = false; btn.textContent = "In / Lưu PDF"; }
   try {
     if (window.ABCJS) document.querySelectorAll(".abc-notation[data-abc]").forEach(function (el) {
@@ -265,11 +270,17 @@ ${kyHieu}
 }
 
 /**
- * Dựng mọi cuốn vào `dist`/sach/. Trang của cuốn đọc ở `dist`/<url>/index.html: không có (chưa có trong bản build) thì bỏ
+ * Dựng mọi cuốn vào `dist`/sach/, khi bản build có trang bat-dau/sach-in (không thì không có sách nào). Trang của cuốn đọc ở `dist`/<url>/index.html: không có (chưa có trong bản build) thì bỏ
  * chương. Trả về [{ id, chuong: [url…] }].
  */
 export function dungSach(dist, { base = '/opus/', site = 'https://mtuann.github.io', ngay = ngayIn() } = {}) {
 	const diaChi = new URL(base, site).href;
+	// sách chỉ lên cùng trang Sách in được (bản thật: khi trang ấy đã khóa), vì chữ trên bìa là chữ của site chưa kiểm định
+	// riêng; không có trang ấy thì không có dist/sach/
+	if (!fs.existsSync(path.join(dist, TRANG_SACH_IN, 'index.html'))) {
+		fs.rmSync(path.join(dist, 'sach'), { recursive: true, force: true });
+		return [];
+	}
 	fs.mkdirSync(path.join(dist, 'sach'), { recursive: true });
 	return SACH.map((s) => {
 		const chuong = [];
@@ -294,6 +305,7 @@ export function sachIn() {
 		hooks: {
 			'astro:build:done': ({ dir, logger }) => {
 				const ra = dungSach(fileURLToPath(dir));
+				if (!ra.length) return logger.info(`không dựng sách in: bản build không có trang ${TRANG_SACH_IN}`);
 				const tong = (id) => SACH.find((s) => s.id === id).trang.length;
 				logger.info(`đã dựng ${ra.length} cuốn sách in: ${ra.map((s) => `${s.id} (${s.chuong.length}/${tong(s.id)} chương)`).join(', ')}`);
 			},
