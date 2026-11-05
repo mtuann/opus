@@ -41,14 +41,29 @@ Bốn lời khuyên tập đã đổi chữ có `ket_qua: da-sua` mà không có
 Script trong thư mục nháp gọi `loiHoSo` (xuất ra từ `tools/khoa.mjs`) cho từng trang của D8-L1, D8-L2, D8-L3 theo `anh-xa.md`. Không chạy `khoa`, không ghi gì. Kết quả:
 
 - **Cả 20 trang:** lần cuối của `lan` thiếu `nguoi.luot_2` và `nguoi.kiem_mau`. Chủ repo điền (`luot_2`: các agent lượt 2 và lượt 2 bổ sung; `kiem_mau`: lần kiểm mẫu của chủ repo).
-- **`piano/nghe-si` n65, n70, n71, n72, n73: thiếu `nguon`** (các review trước không bắt được):
-  - n65 ("nhiều cuộc thi phát trực tiếp các vòng thi"): lượt 1 không ghi nguồn; lượt 2 chỉ dẫn Wikipedia (Leeds, Cliburn).
-  - n70–n73 (mục 30 tác phẩm): lượt 1 ghi "kiến thức chuẩn". Lượt 2 đã mở trang Henle cho một phần: Hob. XVI:52, K. 331, Op. 27/2, Op. 117, D. 899, Op. 23, Liebestraum, Gaspard, Allegro barbaro. Couperin, Partita BWV 826, Goldberg, K. 467, Op. 111, Gershwin, Ligeti, Satie… chưa có nguồn mở.
-  - Cần một lượt nhỏ: thêm nguồn bậc 1–2 (Henle, IMSLP, `src/data/tac-pham.yml` cho bài đã có bản ghi) vào danh sách `nguon` của hồ sơ và vào từng nhận định. Với n65, dẫn nguồn ở hồ sơ `lich-su/duong-dai`, hay trang chính thức của các cuộc thi. Phần không tìm được nguồn thì bỏ khỏi trang. Trang này chưa khóa được tới khi xong.
+- **`piano/nghe-si` n65, n70, n71, n72, n73 thiếu `nguon`** (các review trước không bắt được). Đã xử lý ở mục 5; nay không còn lỗi.
 - Không còn nhận định nào thiếu `ket_qua` hay lượt 2 (theo mức của tầng). Không có câu lượt 2 `sai`/`khong-chac` nào thiếu ghi chú giải quyết. Mọi câu `ve-site` có `review`. Khuông nhạc đủ.
 - Điều chủ repo nên xem khi kiểm mẫu:
   - `bat-dau/hoi-dap` n2: giữ theo câu đã khóa ở bai-0. Thấy Schneider 2008 chưa đủ thì sửa cả hai trang (bai-0 theo thủ tục mở khóa).
   - Ở `piano/chon-dan` n5, hai trang của Yamaha ghi 14 và 15.
+
+## 5. `piano/nghe-si`: năm nhận định chưa có nguồn
+
+Lượt 1 không ghi nguồn cho các câu này ("kiến thức chuẩn"). Lượt 2 ghi `dung` nhưng chỉ mở được một phần. Review tự mở nguồn bậc 1–2 cho **từng vế**: IMSLP đọc qua API `imslp.org/api.php` (trang tác phẩm, User-Agent `opus-kiem-dinh/1.0`); Henle, PTNA và trang chính thức của các cuộc thi đọc bằng curl; trang Schott đọc qua bản lưu Wayback (trang gốc trả 403). Mọi vế đều có nguồn, nên **không đổi chữ, không có `doi_chu`, không cần thêm lượt 2**. Mỗi câu có `review: dung` và `ghi_chu` "Review cuối D8-gom: …". Hồ sơ có thêm 39 nguồn.
+
+| Id | Câu | Nguồn đã thêm |
+|---|---|---|
+| n65 | Nhiều cuộc thi phát trực tiếp các vòng thi trên mạng | `chopin-stream`: trang chính thức cuộc thi Chopin, kỳ 19 phát mọi vòng ở chất lượng 4K trên trang chính thức, ứng dụng, YouTube của Viện Chopin. `leeds-stream`: trang chính thức Leeds 2024, phát qua Medici.TV, BBC, YouTube trong lúc thi. Thay Wikipedia của lượt 2 |
+| n70 | Baroque 1–5 | IMSLP: Couperin (Second livre, Ordre VI số 5), Bình quân luật I (BWV 846–869, "durch alle Tone und Semitonia"), BWV 826 Đô thứ, BWV 988, K. 141 Rê thứ, K. 380 Mi trưởng |
+| n71 | Cổ điển 6–11 | IMSLP: Hob. XVI:52 (Mi♭, 1794, số 62), K. 331, K. 467, Op. 13, Op. 27/2, Op. 111 (hai chương, Arietta). Henle HN 1489: viết năm 1794 trong lần thứ hai Haydn ở London. PTNA: chương 2 của Op. 111 là Arietta và biến tấu |
+| n72 | Lãng mạn 12–22 | IMSLP: D. 899, D. 960, Op. 15, Op. 9, Op. 10, Op. 25, Op. 23, S. 541 (số 3), S. 178 (một chương, 25–30 phút), Op. 117, Op. 118, Grieg Op. 16, *Tranh triển lãm* |
+| n73 | Thế kỷ 20 và hôm nay 23–30 | IMSLP: *Gymnopédies*, *Suite bergamasque* (Clair de lune là bài 3), *Préludes* quyển 1, *Gaspard* (Ondine, Le Gibet, Scarbo, theo thơ Aloysius Bertrand), Rachmaninoff Op. 18, *Rhapsody in Blue*, *Allegro barbaro*. Henle HN 1620: Sonata 6–8 gọi là "war sonatas". PTNA: chương cuối Sonata số 7 nhịp 7/8. Schott ED 7989: Ligeti *Études* quyển 1 |
+
+Hai chỗ suy ra, không trích nguyên văn:
+- "Một trong những sonata cuối" của Hob. XVI:52 suy từ số 62 ở IMSLP và năm 1794 ở Henle.
+- "Khoảng nửa giờ" của Sonata Si thứ dựa theo thời lượng 25–30 phút ở IMSLP.
+
+Chủ repo xem lại hai chỗ này khi kiểm mẫu nếu muốn.
 
 ## Kiểm
 
