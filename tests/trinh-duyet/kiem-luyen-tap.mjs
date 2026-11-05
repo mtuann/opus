@@ -7,7 +7,7 @@ import { after, test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
-import { DIST, TRINH_DUYET, dongMayChu, goc, nguCanh } from './chung.mjs';
+import { DIST, TRINH_DUYET, dongHoAmChay, dongMayChu, goc, nguCanh } from './chung.mjs';
 
 after(dongMayChu);
 
@@ -231,6 +231,7 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 	test(`${ten}: so cao độ và hát lại qua micro (giả): 440 Hz là "La A4"; hát đúng nốt thì "Đúng!"; mỗi lúc một công cụ nghe; micro bị từ chối thì báo`, { skip: bo('luyen-tap/hat-lai/', 'oz-so-cao-do') }, async (t) => {
 		const trinhDuyet = await loai.launch();
 		try {
+			if (!(await dongHoAmChay(trinhDuyet))) return t.skip('đồng hồ âm thanh không chạy (máy không có thiết bị âm thanh)');
 			const ctx = await nguCanh(trinhDuyet, ten, { w: 360, h: 780, camUng: true, toi: true });
 			const { p, loi } = await moTrang(ctx, 'luyen-tap/hat-lai/', '.oz-so-cao-do', { micro: true });
 			if (!(await coAm(p))) return t.skip('trình duyệt không có Web Audio');
@@ -269,6 +270,7 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 	test(`${ten}: micro: bấm hai lần trong lúc chờ cho phép chỉ mở một lần, tắt thì dừng mọi luồng; rời trang hay đổi công cụ trong lúc chờ thì luồng vừa mở được đóng; Audio Session về playback`, { skip: bo('luyen-tap/hat-lai/', 'oz-so-cao-do') }, async (t) => {
 		const trinhDuyet = await loai.launch();
 		try {
+			if (!(await dongHoAmChay(trinhDuyet))) return t.skip('đồng hồ âm thanh không chạy (máy không có thiết bị âm thanh)');
 			const ctx = await nguCanh(trinhDuyet, ten, { w: 1280, h: 800, camUng: false, toi: false });
 			const { p, loi } = await moTrang(ctx, 'luyen-tap/hat-lai/', '.oz-so-cao-do', { micro: true });
 			if (!(await coAm(p))) return t.skip('trình duyệt không có Web Audio');
@@ -314,6 +316,7 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 	test(`${ten}: chơi theo: khuông vẽ bằng abcjs; chọn đàn MIDI thì hiện ô kết nối; bắt đầu rồi dừng thì chấm từng nốt (thiếu hết khi im lặng)`, { skip: bo('luyen-tap/choi-theo/', 'oz-choi-theo') }, async (t) => {
 		const trinhDuyet = await loai.launch();
 		try {
+			if (!(await dongHoAmChay(trinhDuyet))) return t.skip('đồng hồ âm thanh không chạy (máy không có thiết bị âm thanh)');
 			const ctx = await nguCanh(trinhDuyet, ten, { w: 1280, h: 800, camUng: false, toi: false });
 			const { p, el, loi } = await moTrang(ctx, 'luyen-tap/choi-theo/', '.oz-choi-theo', { micro: true });
 			if (!(await coAm(p))) return t.skip('trình duyệt không có Web Audio');

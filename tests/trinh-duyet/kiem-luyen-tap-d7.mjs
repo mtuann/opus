@@ -7,7 +7,7 @@ import { after, test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
-import { DIST, TRINH_DUYET, dongMayChu, goc, khongChromium, nguCanh } from './chung.mjs';
+import { DIST, TRINH_DUYET, dongHoAmChay, dongMayChu, goc, khongChromium, nguCanh } from './chung.mjs';
 
 after(dongMayChu);
 
@@ -162,6 +162,7 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 	test(`${ten}: thu âm qua micro (giả): thu, dừng thì lưu (IndexedDB) và ghi số phút; hai bản thì so sánh; xóa; micro bị từ chối thì báo`, { skip: bo('luyen-tap/thu-am/', 'oz-thu-am') }, async (t) => {
 		const trinhDuyet = await loai.launch();
 		try {
+			if (!(await dongHoAmChay(trinhDuyet))) return t.skip('đồng hồ âm thanh không chạy (máy không có thiết bị âm thanh)');
 			const ctx = await nguCanh(trinhDuyet, ten, { w: 768, h: 1024, camUng: true, toi: false });
 			const { p, el, loi } = await moTrang(ctx, 'luyen-tap/thu-am/', '.oz-thu-am', { micro: true });
 			if (await el.locator('[data-act="thu"]').isDisabled()) return t.skip('trình duyệt này không có MediaRecorder');

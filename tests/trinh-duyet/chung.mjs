@@ -45,20 +45,7 @@ const bocLoai = (loai) =>
 	});
 /** Chromium với service worker chặn mặc định, cho phép thử chỉ chạy trên Chromium (axe, in, API tìm kiếm). */
 export const CHROMIUM = bocLoai(chromium);
-/**
- * Firefox: cho Web Audio chạy không cần cử chỉ người dùng (Chromium và WebKit của Playwright đã cho sẵn). Micro giả của các
- * phép thử dựng luồng từ AudioContext; trên máy CI Linux, Firefox chặn tự phát thì đồng hồ âm thanh đứng, công cụ dùng
- * micro (thu âm, so cao độ, hát lại, chơi theo) không nhận được tiếng.
- */
-const PREF_FIREFOX = { 'media.autoplay.default': 0, 'media.autoplay.blocking_policy': 0, 'media.autoplay.block-webaudio': false };
-const firefoxCoAm = new Proxy(firefox, {
-	get(t, k) {
-		if (k === 'launch') return (o = {}) => t.launch({ ...o, firefoxUserPrefs: { ...PREF_FIREFOX, ...o.firefoxUserPrefs } });
-		const v = Reflect.get(t, k);
-		return typeof v === 'function' ? v.bind(t) : v;
-	},
-});
-const CA_BA = { chromium: CHROMIUM, webkit: bocLoai(webkit), firefox: bocLoai(firefoxCoAm) };
+const CA_BA = { chromium: CHROMIUM, webkit: bocLoai(webkit), firefox: bocLoai(firefox) };
 const CHON = (process.env.OPUS_TRINH_DUYET ?? '').split(',').map((x) => x.trim()).filter(Boolean);
 for (const t of CHON) if (!(t in CA_BA)) throw new Error(`OPUS_TRINH_DUYET: không có trình duyệt "${t}" (có: ${Object.keys(CA_BA).join(', ')})`);
 export const TRINH_DUYET = CHON.length ? Object.fromEntries(CHON.map((t) => [t, CA_BA[t]])) : CA_BA;
@@ -144,4 +131,33 @@ export async function cuonHet(p, loi = []) {
 		throw new Error(`khối chưa dựng xong sau 20 giây: ${cho.join('; ')}; lỗi trên trang: ${loi.join(' | ') || 'không có'}`, { cause: e });
 	});
 	await p.evaluate(() => scrollTo(0, 0));
+}
+
+/**
+ * Đồng hồ âm thanh có chạy không: AudioContext tiến sau khoảng nửa giây. Firefox trên máy CI Linux không có thiết bị âm
+ * thanh nên đồng hồ đứng; micro giả của phép thử (luồng từ OscillatorNode) khi ấy không có tiếng, công cụ dùng micro không
+ * nhận được gì. Phép thử micro tự bỏ qua khi đồng hồ đứng (ở máy có loa thì chạy đủ).
+ */
+export async function dongHoAmChay(trinhDuyet) {
+	const p = await trinhDuyet.newPage();
+	try {
+		await p.goto('about:blank');
+		return await p.evaluate(async () => {
+			const AC = window.AudioContext || window.webkitAudioContext;
+			if (!AC) return false;
+			const c = new AC();
+			const o = c.createOscillator();
+			o.connect(c.createMediaStreamDestination());
+			o.start();
+			await c.resume?.().catch(() => {});
+			await new Promise((ok) => setTimeout(ok, 600));
+			const chay = c.currentTime > 0.1;
+			await c.close();
+			return chay;
+		});
+	} catch {
+		return false;
+	} finally {
+		await p.close();
+	}
 }
