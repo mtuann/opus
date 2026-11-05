@@ -1,5 +1,6 @@
 // Bộ tải theo nhu cầu, như ../opus-zero/docs/assets/js/loader.js: mỗi trang chỉ tải công cụ nó dùng. Khối ở xa màn
-// hình khởi tạo khi người đọc cuộn tới cách nó khoảng 600 px; khối ở phía trên chỗ đang đọc (kể cả trước đích của
+// hình khởi tạo khi người đọc cuộn tới cách nó khoảng 600 px (lúc trang vừa mở, trước khi người đọc cuộn hay bấm: chỉ
+// khối đang hiện trên màn hình); khối ở phía trên chỗ đang đọc (kể cả trước đích của
 // một link #mục) khởi tạo ngay, rồi cuộn lại cho đích đứng đúng chỗ. Trước khi in: khởi tạo hết những khối còn chờ.
 // Mỗi module có mount(el); có thể có inTruoc() để vẽ đồng bộ ngay trước khi in, và taiSan() để tải trước lúc rảnh.
 
@@ -69,9 +70,16 @@ function dich() {
 	}
 }
 
+/**
+ * Lề tải trước: lúc trang vừa mở chỉ khởi tạo khối đang hiện trên màn hình (le = 0); người đọc bắt đầu cuộn, bấm phím hay
+ * chạm thì mới tải trước các khối cách màn hình LE px. Khối nằm ngay dưới mép màn hình (như khuông đầu ở bat-dau/tom-tat
+ * trên điện thoại) không làm trang vừa tải đứng vì abcjs chạy và vẽ (TBT của Lighthouse ở CI).
+ */
+let le = 0;
+
 /** Phần tử ở gần hay phía trên màn hình, hoặc nằm trước đích của link #mục. */
 function oTruoc(el) {
-	if (el.getBoundingClientRect().top < innerHeight + LE) return true;
+	if (el.getBoundingClientRect().top < innerHeight + le) return true;
 	const t = dich();
 	return !!t && t !== el && !!(el.compareDocumentPosition(t) & Node.DOCUMENT_POSITION_FOLLOWING);
 }
@@ -110,12 +118,26 @@ function chay(el) {
 	return fn();
 }
 
+const taoIo = () =>
+	new IntersectionObserver((es) => es.forEach((e) => e.isIntersecting && chay(e.target)), { rootMargin: `${le}px 0px` });
+
+// Lần đầu người đọc tương tác: mở lề tải trước, quan sát lại các khối đang chờ với lề mới
+function moLe() {
+	if (le === LE) return;
+	le = LE;
+	for (const ev of SU_KIEN_MO) removeEventListener(ev, moLe);
+	if (!io) return;
+	io.disconnect();
+	io = taoIo();
+	for (const el of cho.keys()) io.observe(el);
+}
+const SU_KIEN_MO = ['scroll', 'wheel', 'touchstart', 'keydown', 'pointerdown'];
+for (const ev of SU_KIEN_MO) addEventListener(ev, moLe, { passive: true });
+
 function khiGan(el, fn) {
 	if (!('IntersectionObserver' in window) || oTruoc(el)) return fn();
 	cho.set(el, fn);
-	io ??= new IntersectionObserver((es) => es.forEach((e) => e.isIntersecting && chay(e.target)), {
-		rootMargin: `${LE}px 0px`,
-	});
+	io ??= taoIo();
 	io.observe(el);
 	return Promise.resolve();
 }
