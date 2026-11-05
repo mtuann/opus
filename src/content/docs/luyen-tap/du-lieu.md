@@ -14,7 +14,7 @@ Mọi tiến độ học (bài đã học, kết quả luyện tập, thẻ ghi 
 3. Trên máy B: mở trang này, bấm **Chọn file sao lưu**, xem trước rồi bấm **Gộp vào máy này**.
 4. Muốn hai máy giống nhau hoàn toàn: làm ngược lại từ B sang A.
 
-**Gộp** nghĩa là không có gì bị mất: ngày luyện tập của cả hai máy đều được giữ, bài đã học được cộng lại, kỹ năng lấy kết quả mới hơn, thẻ ghi nhớ giữ tiến độ tốt hơn, ghi chú khác nhau được giữ cả hai. Gộp cùng một file nhiều lần cũng không làm số liệu bị nhân đôi.
+**Gộp** nghĩa là không có gì bị ghi đè hay xóa: ngày luyện tập của cả hai máy đều được giữ (ngày có ở cả hai máy thì mỗi số đếm lấy số lớn hơn), bài đã học được cộng lại, kỹ năng lấy kết quả mới hơn, thẻ ghi nhớ giữ tiến độ tốt hơn, ghi chú khác nhau được giữ cả hai. Gộp cùng một file nhiều lần cũng không làm số liệu bị nhân đôi.
 
 ## Nên sao lưu khi nào?
 

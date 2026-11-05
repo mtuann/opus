@@ -1,0 +1,137 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa luyen-tap/choi-theo
+trang: src/content/docs/luyen-tap/choi-theo.md
+nguon_cu: ../opus-zero/docs/luyen-tap/choi-theo.md
+tang: khung
+lan:
+- so: 1
+  ngay: '2026-11-05'
+  nhanh: moi/d7-l1
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Sonnet 5.5 (D7-L1 lượt 1, phần 1/2)
+    luot_2: null
+    review: null
+    kiem_mau: null
+nguon:
+- id: hyperphysics-cent
+  bac: 2
+  ten: HyperPhysics (Georgia State University), Cents ("one equal tempered semitone is equal to 100 cents")
+  link: https://hyperphysics.gsu.edu/hbase/Music/cents.html
+- id: wiki-cent
+  bac: 3
+  ten: 'Wikipedia, Cent (music): equally tempered semitone spans 100 cents'
+  link: https://en.wikipedia.org/wiki/Cent_(music)
+- id: wiki-transposing
+  bac: 3
+  ten: Wikipedia, Transposing instrument ("Double bass, bass guitar, guitar, and contrabassoon sound an octave lower than written")
+  link: https://en.wikipedia.org/wiki/Transposing_instrument
+- id: wiki-clef
+  bac: 3
+  ten: 'Wikipedia, Clef (guitar viết khóa Sol nhưng âm thật thấp một quãng tám; bè tenor viết khóa Sol có số 8 bên dưới: âm thật thấp một quãng tám)'
+  link: https://en.wikipedia.org/wiki/Clef
+- id: wiki-ah-vous
+  bac: 3
+  ten: Wikipedia, Ah! vous dirai-je, Maman ("Twinkle, Twinkle, Little Star" dùng giai điệu này)
+  link: https://en.wikipedia.org/wiki/Ah!_vous_dirai-je,_Maman
+- id: wiki-hanschen
+  bac: 3
+  ten: Wikipedia, Hänschen klein ("The melody of Hänschen klein is used in Lightly Row")
+  link: https://en.wikipedia.org/wiki/H%C3%A4nschen_klein
+- id: wiki-ode
+  bac: 3
+  ten: Wikipedia, Ode to Joy (giai điệu của Beethoven, chương 4 Giao hưởng số 9, hoàn thành 1824)
+  link: https://en.wikipedia.org/wiki/Ode_to_Joy
+- id: mutopia-ode
+  bac: 2
+  ten: Mutopia Project, Beethoven, Ode to Joy (tệp LilyPond; composer L. V. Beethoven)
+  link: https://www.mutopiaproject.org/ftp/BeethovenLv/ode/ode.ly
+- id: caniuse-midi
+  bac: 2
+  ten: 'Can I use, Web MIDI API (kiểm 11/2026: Chrome từ 43, Edge từ 79, Opera từ 30, Firefox từ 108; Safari và iOS không hỗ trợ)'
+  link: https://caniuse.com/midi
+nhan_dinh:
+- id: n1
+  cau: Chọn một bài, bấm Bắt đầu, nghe 4 tiếng đếm rồi chơi (hoặc hát) theo nhịp.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/choi-theo.js (playalong): nút "Bắt đầu (đếm 4 nhịp)"; batDau gọi tiengGo 4 lần rồi bắt đầu chấm; nghe bằng Micro hay Đàn MIDI (chọn "Nghe bằng"). Chữ trong công cụ: "1 – 2 – 3 – 4… chơi!"'
+- id: n2
+  cau: 'Site nghe bạn qua micro hoặc đàn MIDI và chấm từng nốt: đúng, cao hay thấp bao nhiêu cent, hay thiếu.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'choi-theo.js hangKetQua + cham-diem.js: mỗi nốt ket_qua dat (✓), cao, thap, thieu ("thiếu"). Với micro (chamCaoDo) hiện số cent (+/−n¢); với đàn MIDI (chamMidi) nốt sai hiện tên phím đã bấm thay vì cent, nên câu đúng đầy đủ với micro, gần đúng với MIDI; chấp nhận vì câu nói chung. Micro: micro.js tắt echoCancellation, noiseSuppression, autoGainControl để cao độ không méo.'
+- id: n3
+  cau: 100 cent bằng nửa cung.
+  loai: dinh-nghia
+  nguon:
+  - hyperphysics-cent
+  - wiki-cent
+  ket_qua: dung
+  ghi_chu: 'HyperPhysics: một nửa cung điều hòa bằng 100 cent. Chữ này cũng có ở lời chú của công cụ (choi-theo.js: "100 cent = nửa cung").'
+- id: n4
+  cau: 'Với micro: chơi ở nơi yên tĩnh, đặt điện thoại hoặc máy tính gần nhạc cụ.'
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+  ghi_chu: Lời khuyên dùng micro (micro.js tắt khử ồn nên tiếng ồn nền ảnh hưởng thật).
+- id: n5
+  cau: Công cụ có nút "Nghe mẫu"; không bật nó lúc chơi vì micro sẽ nghe cả loa.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'choi-theo.js: nút data-act="mau" (Nghe mẫu) phát cả bài qua loa; micro mở với echoCancellation: false (micro.js) nên thu cả tiếng loa. Chữ nhắc cùng ý trong công cụ: "đeo tai nghe nếu bật nghe mẫu".'
+- id: n6
+  cau: 'Micro chỉ nghe chính xác một nốt mỗi lúc: giai điệu piano một tay hoặc giọng hát; hợp âm piano chưa chấm được.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'micro.js: tanSoCoBan (tự tương quan) trả một tần số cơ bản mỗi khung 30 ms; BAI trong choi-theo.js đều là giai điệu một bè; không có bài hợp âm.'
+- id: n7
+  cau: Với giọng nam hay nhạc cụ khác như guitar, chọn mục tương ứng để công cụ bỏ qua chênh lệch quãng tám.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'choi-theo.js NHAC_CU: voice "Giọng hát (bỏ qua quãng tám)" và guitar "Guitar (âm thật thấp một quãng tám)" đều boQuang: true (cham-diem.js boQuangTam, chamMidi boQuang); các mục piano và violin không bỏ qua. Ghi: tên mục là "Giọng hát", không riêng "giọng nam".'
+- id: n8
+  cau: Âm thanh thật của giọng nam và của guitar thấp hơn nốt viết (một quãng tám).
+  loai: quy-tac
+  nguon:
+  - wiki-transposing
+  - wiki-clef
+  ket_qua: null
+  ghi_chu: 'chưa chắc: Wikipedia (Transposing instrument): "guitar ... sound an octave lower than written"; Wikipedia (Clef): bè tenor viết khóa Sol có số 8 bên dưới, âm thật thấp một quãng tám. Cả hai đều bậc 3; tìm nguồn bậc 1–2 đọc được cho phần guitar (giáo trình ký âm guitar) và cho giọng nam (giọng nam hát thấp hơn khóa Sol đã viết cho giọng nữ một quãng tám). Tìm kiếm: chỉ ra blog và diễn đàn guitar.'
+- id: n9
+  cau: Đàn MIDI cho kết quả chính xác nhất, kể cả về nhịp.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'cham-diem.js chamMidi: ghép từng lần bấm với nốt trong cửa sổ max(0,12 giây, 35% phách) quanh lúc bắt đầu nốt, thời điểm theo đồng hồ AudioContext (midi.js luc), đúng cao độ từng phím; chamCaoDo (micro) chỉ xét cao độ trong khoảng 20%–85% độ dài nốt, không xét thời điểm vào nốt.'
+- id: n10
+  cau: Link tới trang Kết nối đàn MIDI.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: luyen-tap/ket-noi-midi có trong bản xem.
+- id: n11
+  cau: 'Năm bài của công cụ là giai điệu (phần tay phải) của các bài trong 10 bài đầu tiên: Twinkle, Hänschen klein, Au clair de la lune, Ode to Joy, cùng gam Đô trưởng đi lên.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Đối chiếu choi-theo.js BAI với khối abc của src/content/docs/piano/10-bai-dau-tien.md (tay phải RH): Twinkle (C C G G A A G2 F F E E D D C2) khớp ô 1–4; Hänschen klein (G E E2 F D D2 C D E F G G G2) khớp ô 1–4; Au clair de la lune (C C C D E2 D2 C E D D C4) khớp ô 1–4; Ode to Joy khớp ô 1–4 (E E F G G F E D C C D E E. D D2); gam đi lên Đô–Đô cao là bài thứ năm của công cụ. Bốn bài đều là đoạn đầu (4 ô nhịp), bản chép của site cũ giữ nguyên. Tên bài trong công cụ "Twinkle, Twinkle (Ah! vous dirai-je, maman)": xem n12.'
+- id: n12
+  cau: 'Tên các bài trong công cụ: "Twinkle, Twinkle (Ah! vous dirai-je, maman)" (cùng giai điệu), "Hänschen klein (Lightly Row)" (cùng giai điệu), "Ode to Joy (Beethoven)".'
+  loai: ten
+  nguon:
+  - wiki-ah-vous
+  - wiki-hanschen
+  - wiki-ode
+  - mutopia-ode
+  ket_qua: dung
+  ghi_chu: 'Wikipedia: giai điệu "Twinkle, Twinkle, Little Star" là giai điệu của "Ah! vous dirai-je, Maman"; giai điệu Hänschen klein dùng cho "Lightly Row"; Ode to Joy là giai điệu của Beethoven (chương 4 Giao hưởng số 9, 1824), Mutopia ghi composer L. V. Beethoven. Nguồn bậc 3 chỉ để định hướng; tên bài cùng khớp hồ sơ đã khóa kiem-dinh/piano/10-bai-dau-tien.yml.'
+- id: n13
+  cau: Hãy tập các bài đó với cả hai tay ở trang 10 bài đầu tiên, rồi quay lại đây để được chấm phần giai điệu.
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+  ghi_chu: Lời khuyên tập; link /opus/piano/10-bai-dau-tien/ có trong bản build.
+- id: n14
+  cau: Trình duyệt hỗ trợ MIDI trên web (công cụ báo "Dùng Chrome hay Edge trên máy tính, hoặc chọn Micro").
+  loai: so-lieu
+  nguon:
+  - caniuse-midi
+  ket_qua: dung
+  ghi_chu: 'choi-theo.js batDau: khi chọn Đàn MIDI mà trình duyệt không có Web MIDI thì báo "Trình duyệt này không có MIDI trên web. Dùng Chrome hay Edge trên máy tính, hoặc chọn Micro." Chrome và Edge hỗ trợ (Can I use, kiểm 11/2026); Firefox từ 108 cũng hỗ trợ, Safari và iOS không: câu không sai, chỉ chưa đủ.'
+ghi_chu: 'Trang Luyện tập (tầng khung), công cụ chơi theo (choi-theo.js) do lô D7-L1 làm. Chỗ chưa chắc cho người giao: n8 (nguồn bậc 1–2 cho "giọng nam, guitar thấp hơn nốt viết"; có thể bỏ vế "giọng nam" hay viết lại chung hơn: "vì âm thật thấp hơn nốt viết một quãng tám"). Ghi chú: câu "Chơi theo" chấm cent chỉ với micro; với MIDI hiện tên phím. Thuật ngữ "cent" chưa có bản ghi trong src/data/thuat-ngu.yml (cho D3-L5). Chữ "Hänschen klein", "Lightly Row" là tên bài hát.'
+khuong_nhac: []

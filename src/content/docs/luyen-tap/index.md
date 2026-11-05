@@ -32,7 +32,7 @@ Các công cụ dưới đây chạy ngay trong trình duyệt, không cần cà
 :   Nghe một câu nhạc ngắn và nhập lại từng nốt bằng bàn phím màn hình hoặc đàn MIDI.
 
 [Phiếu bài tập và giấy kẻ khuông](/opus/luyen-tap/phieu-bai-tap/)
-:   Tạo đề đọc nốt, tiết tấu để in ra giấy làm bài (đáp án ẩn khi in); in giấy kẻ khuông đơn hoặc khuông kép piano.
+:   Tạo đề gọi tên nốt (khóa Sol, khóa Fa), quãng, hợp âm ba và hóa biểu để in ra giấy làm bài (đáp án ẩn khi in); in giấy kẻ khuông đơn hoặc khuông kép piano.
 
 ## Site nghe bạn
 
@@ -92,5 +92,5 @@ Bốn công cụ dưới đây nằm ngay trong các bài [Luyện tai](/opus/lu
 :   Xem, sao lưu, chuyển sang máy khác (gộp, không ghi đè) hoặc xóa dữ liệu học và bản thu âm.
 
 :::note[Về dữ liệu]
-Mọi dữ liệu luyện tập nằm trong bộ nhớ của trình duyệt (`localStorage`) trên máy bạn, không gửi đi đâu. Mỗi trình duyệt, mỗi thiết bị có dữ liệu riêng. Muốn chuyển sang máy khác, xem [Dữ liệu của tôi](/opus/luyen-tap/du-lieu/).
+Mọi dữ liệu luyện tập nằm trong bộ nhớ của trình duyệt (`localStorage`, riêng bản thu âm ở IndexedDB) trên máy bạn, không gửi đi đâu. Mỗi trình duyệt, mỗi thiết bị có dữ liệu riêng. Muốn chuyển sang máy khác, xem [Dữ liệu của tôi](/opus/luyen-tap/du-lieu/).
 :::

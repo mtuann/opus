@@ -12,7 +12,8 @@ import { ghiNgay, kyNang } from './tien-do.js';
 import { veBanPhim } from './ve.js';
 
 export const CAP = {
-	1: { ten: 'Cấp 1: 4 nốt, bước liền', n: 4 },
+	// nốt cuối luôn là Đô (Đô4 hay Đô5), nên có thể là một bước nhảy: nhãn nói rõ (lượt 1, hồ sơ chep-giai-dieu n10)
+	1: { ten: 'Cấp 1: 4 nốt, đi liền bậc, kết ở Đô', n: 4 },
 	2: { ten: 'Cấp 2: 6 nốt, có bước nhảy', n: 6 },
 	3: { ten: 'Cấp 3: 8 nốt', n: 8 },
 };

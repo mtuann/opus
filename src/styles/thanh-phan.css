@@ -2298,12 +2298,14 @@ html.oz-stand-open .main-pane {
 /* chọn file sao lưu: ô chọn file ẩn bằng mắt nhưng vẫn nhận Tab; nhãn trông như nút, có viền tiêu điểm */
 .oz-chon-file {
 	position: relative;
+	/* nhãn là phần tử dòng: cần inline-flex để min-height 44 px của .oz-btn trên màn hình cảm ứng có tác dụng */
+	display: inline-flex;
+	align-items: center;
 }
 .oz-chon-file input[type='file'] {
 	position: absolute;
-	inset: 0;
-	width: 100%;
-	height: 100%;
+	/* phủ cả viền 1 px của nhãn: vùng bấm bằng cả nút (44 px trên cảm ứng) */
+	inset: -1px;
 	opacity: 0;
 	cursor: pointer;
 }

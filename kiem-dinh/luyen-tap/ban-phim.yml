@@ -1,0 +1,117 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa luyen-tap/ban-phim
+trang: src/content/docs/luyen-tap/ban-phim.md
+nguon_cu: ../opus-zero/docs/luyen-tap/ban-phim.md
+tang: khung
+lan:
+- so: 1
+  ngay: '2026-11-05'
+  nhanh: moi/d7-l1
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Sonnet 5.5 (D7-L1 lượt 1, phần 1/2)
+    luot_2: null
+    review: null
+    kiem_mau: null
+nguon:
+- id: omt-major
+  bac: 2
+  ten: Open Music Theory, Major Scales (thứ tự dấu thăng; "the last sharp is a half step below the tonic"; vòng quãng năm)
+  link: https://viva.pressbooks.pub/openmusictheory/chapter/major-scales/
+- id: omt-minor
+  bac: 2
+  ten: 'Open Music Theory, Minor Scales (ba dạng gam thứ; công thức W-H-W-W-H-W-W: "third note is always a half step lower than the third note of the major scale")'
+  link: https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/
+- id: omt-triads
+  bac: 2
+  ten: Open Music Theory, Triads ("a minor triad's third is minor and its fifth is perfect")
+  link: https://viva.pressbooks.pub/openmusictheory/chapter/triads/
+- id: caniuse-midi
+  bac: 2
+  ten: 'Can I use, Web MIDI API (kiểm 11/2026: Chrome từ 43, Edge từ 79, Opera từ 30, Firefox từ 108; Safari và iOS không hỗ trợ)'
+  link: https://caniuse.com/midi
+nhan_dinh:
+- id: n1
+  cau: 'Chọn nốt gốc và loại gam hoặc hợp âm: các phím thuộc về nó được tô màu, tên nốt hiện bên trên.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Đã kiểm ở src/scripts/tra-phim.js (piano-explorer): luaChon dựng nốt, capNhat bật lớp "to" cho phím của lựa chọn, dongTen hiện tên các nốt ở dòng .oz-tra-phim-ten nằm trên bàn phím (veTraPhim); 14 nốt gốc, 11 gam, 9 hợp âm.'
+- id: n2
+  cau: Bấm Nghe để nghe gam hay hợp âm đã chọn.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'tra-phim.js: nút data-act="nghe", gam phát lần lượt, hợp âm rải rồi cùng lúc.'
+- id: n3
+  cau: Bấm trực tiếp vào phím bất kỳ để nghe và xem tên.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'tra-phim.js gọi ganBanPhim (src/scripts/ban-phim.js): bấm phím phát tiếng và dòng .oz-phim-ten đọc tên nốt; dòng mặc định "Bấm vào phím để nghe và xem tên nốt."'
+- id: n4
+  cau: 'Gam trưởng đổi nốt gốc lần lượt Đô, Sol, Rê, La: mỗi lần thêm đúng một phím đen (Sol có Fa♯; Rê có Fa♯, Đô♯; La có Fa♯, Đô♯, Sol♯).'
+  loai: quy-tac
+  nguon:
+  - omt-major
+  ket_qua: dung
+  ghi_chu: 'OMT Major Scales: thứ tự dấu thăng F, C, G, D, A, E, B; dấu thăng cuối nằm nửa cung dưới chủ âm, nên G có 1 thăng (Fa♯), D có 2, A có 3 (cuối là Sol♯). Công cụ có đủ tên gốc Đô, Sol, Rê, La và "Gam trưởng" (tra-phim.js GOC, GAM của nhac-ly.js).'
+- id: n5
+  cau: Chuỗi Đô, Sol, Rê, La (mỗi bước lên một quãng năm đúng) chính là vòng quãng năm.
+  loai: dinh-nghia
+  nguon:
+  - omt-major
+  ket_qua: dung
+  ghi_chu: 'OMT Major Scales: vòng quãng năm xếp các giọng trưởng theo số dấu hóa tăng dần; mỗi giọng cách giọng trước một quãng năm đúng (C-G, G-D, D-A).'
+- id: n6
+  cau: Đoạn gợi ý trỏ tới mục "Vòng quãng năm" của trang Hóa biểu và vòng quãng năm.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Link /opus/luyen-tap/hoa-bieu/#vong-quang-nam: trang hoa-bieu có trong bản xem, tiêu đề "Vòng quãng năm" có id vong-quang-nam (dist/luyen-tap/hoa-bieu/index.html).'
+- id: n7
+  cau: Gam trưởng và gam thứ tự nhiên trên cùng nốt gốc chỉ khác ở bậc 3, 6 và 7.
+  loai: quy-tac
+  nguon:
+  - omt-major
+  - omt-minor
+  ket_qua: dung
+  ghi_chu: 'Công thức OMT: trưởng W-W-H-W-W-W-H, thứ tự nhiên W-H-W-W-H-W-W; bậc 3, 6, 7 của thứ thấp hơn trưởng nửa cung, các bậc còn lại giống nhau (bậc 2, 4, 5 trùng).'
+- id: n8
+  cau: 'Có ba dạng gam thứ: tự nhiên, hòa âm, giai điệu.'
+  loai: dinh-nghia
+  nguon:
+  - omt-minor
+  ket_qua: dung
+  ghi_chu: 'OMT Minor Scales: "There are three variations on the minor scale: natural minor, harmonic minor, and melodic minor."'
+- id: n9
+  cau: Công cụ có đủ ba dạng gam thứ (tự nhiên, hòa âm, giai điệu) và nốt gốc La để so sánh.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'nhac-ly.js GAM: natural, harmonic, melodic (đi lên); tra-phim.js GOC có La.'
+- id: n10
+  cau: Hợp âm trưởng và hợp âm thứ trên cùng nốt gốc chỉ khác nốt giữa, thứ dịch xuống nửa cung.
+  loai: quy-tac
+  nguon:
+  - omt-triads
+  ket_qua: dung
+  ghi_chu: 'OMT Triads: quãng ba trưởng thì trưởng, ba thứ thì thứ, cả hai đều có quãng năm đúng; HOP_AM của nhac-ly.js: maj [0,4,7], min [0,3,7].'
+- id: n11
+  cau: 'Phần "Dùng đàn MIDI": cắm đàn piano điện vào máy tính để dùng phím thật.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'midi.js + tra-phim.js: ganBanPhim (midi mặc định bật) cho phím đàn MIDI sáng lên trên bàn phím; ô midi-status ở cuối trang có nút "Kết nối đàn MIDI".'
+- id: n12
+  cau: Link tới trang Kết nối đàn MIDI.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: luyen-tap/ket-noi-midi có trong bản xem (phần 2 của lô D7-L1) và trong src/data/trang.yml.
+- id: n13
+  cau: 'Trình duyệt hỗ trợ MIDI trên web: Chrome, Edge, Opera trên máy tính (chữ do ô midi-status hiện).'
+  loai: so-lieu
+  nguon:
+  - caniuse-midi
+  ket_qua: dung
+  ghi_chu: 'Ô trạng thái MIDI (midi.js, midi-status): khi trình duyệt không có Web MIDI thì khóa nút và báo "Trình duyệt này không có MIDI trên web. Dùng Chrome, Edge hay Opera trên máy tính." Chrome, Edge, Opera hỗ trợ (Can I use, kiểm 11/2026); Firefox từ 108 cũng hỗ trợ nên danh sách chưa đủ nhưng không sai; Safari và iOS không có. Câu dễ cũ: rà lại khi trình duyệt đổi.'
+- id: n14
+  cau: 'Ô trạng thái MIDI ở cuối trang: nút "Kết nối đàn MIDI", dòng trạng thái, ô chọn phát tiếng khi bấm phím.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Đã kiểm trong midi.js (veTrangThaiMidi, mount) và dist/luyen-tap/ban-phim/index.html: nút data-act="noi", dòng "Chưa kết nối đàn MIDI.", ô "Phát âm thanh khi bấm phím".'
+ghi_chu: Trang Luyện tập (tầng khung). Không có thuật ngữ mới cần bản ghi (gam, hợp âm, nốt gốc đã dùng ở bài nhạc lý khóa).
+khuong_nhac: []

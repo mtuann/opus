@@ -204,7 +204,7 @@ test('sao lưu: gộp như data.js cũ (cùng dữ liệu, cùng kết quả); g
 			for (const l of Object.keys(p.store.lessons)) assert.ok(a.store.lessons[l]);
 		}
 		if (cu) assert.deepEqual(moTa(a), Object.fromEntries(Object.entries(thuong(cu.describe(thuong(a)))).map(([k, v], j) => [Object.keys(moTa(a))[j], v])));
-		assert.ok(bao_cao.ngay_them >= 0);
+		assert.equal(bao_cao.ngay_them, Object.keys(dt.days).filter((d) => !mt.days[d]).length, 'số ngày thêm');
 	}
 });
 
@@ -219,6 +219,11 @@ test('sao lưu: nhận file của site cũ (format opus-zero-backup, và bản r
 	const { tong, html } = thayDoi(gop({ days: {} }, tien).bao_cao, 2);
 	assert.equal(tong, 4);
 	assert.equal(html, '<li>thêm 1 ngày luyện tập</li><li>thêm 1 bài đã học</li><li>thêm 2 bản thu âm</li>');
+	// thay đổi chỉ ở thống kê nốt hay chặng piano vẫn được xem trước và gộp được (bản cũ báo "không có gì mới")
+	const chiNot = gop({ days: {} }, { days: {}, store: { noteStats: { 'treble:30': [3, 1] }, pianoLevel: { stage: 2, updated: '2026-10-01' } } });
+	assert.equal(chiNot.bao_cao.khac, 2);
+	assert.equal(thayDoi(gop(chiNot.gop, { days: {}, store: { noteStats: { 'treble:30': [3, 1] } } }).bao_cao, 0).tong, 0, 'gộp lại: không đổi');
+	assert.equal(gop({ days: {} }, { days: {}, store: { noteStats: {} } }).bao_cao.khac, 0, 'phần rỗng không tính');
 });
 
 // ---------- Micro, chấm điểm ----------

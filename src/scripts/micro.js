@@ -82,6 +82,8 @@ let phan = null;
 let dem = null;
 let hen = 0;
 let dangMo = null;
+/** Tăng mỗi lần đóng: lần mở nào bắt đầu trước lần đóng gần nhất thì khi getUserMedia xong, đóng luồng ngay (bị hủy). */
+let lanDong = 0;
 const nghe = [];
 
 function nhip() {
@@ -103,8 +105,14 @@ export function moMicro() {
 	const c = layNgCanh();
 	if (!c) return Promise.reject(new Error('khong-co-web-audio'));
 	phienThu(true);
+	const lan = lanDong;
 	dangMo = navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false } }).then(
 		(s) => {
+			// đã đóng (rời trang, công cụ khác dùng micro) trong lúc chờ người dùng cho phép: đóng luồng vừa mở
+			if (lan !== lanDong) {
+				for (const t of s.getTracks()) t.stop();
+				throw new Error('da-huy');
+			}
 			luong = s;
 			dangMo = null;
 			phan = c.createAnalyser();
@@ -114,7 +122,7 @@ export function moMicro() {
 			hen = setInterval(nhip, 30);
 		},
 		(e) => {
-			dangMo = null;
+			if (lan === lanDong) dangMo = null;
 			if (!luong) phienThu(false);
 			throw e;
 		},
@@ -124,13 +132,16 @@ export function moMicro() {
 
 /** Đóng micro (dừng luồng; đèn micro của trình duyệt tắt). */
 export function dongMicro() {
+	lanDong++;
 	clearInterval(hen);
 	hen = 0;
 	if (luong) for (const t of luong.getTracks()) t.stop();
-	if (luong) phienThu(false);
+	if (luong || dangMo) phienThu(false);
 	luong = null;
 	phan = null;
+	dangMo = null;
 }
+
 export const dangMoMicro = () => !!luong;
 
 /** Nhận khung cao độ từ micro; trả về hàm thôi nhận (không còn ai nhận thì micro đóng). */

@@ -1,0 +1,212 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa luyen-tap/hat-lai
+trang: src/content/docs/luyen-tap/hat-lai.md
+nguon_cu: ../opus-zero/docs/luyen-tap/hat-lai.md
+tang: khung
+lan:
+  - so: 1
+    ngay: '2026-11-05'
+    nhanh: moi/d7-l1
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D7-L1 lượt 1, phần 2/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Trang khung (D7-L1, phần 2/2). Hai chỗ sửa: n13 (quãng tám) và n28 (piano điện). Thuật ngữ trang dùng chưa kiểm ở thuat-ngu.yml: cent, quãng tám. Ghi chú: n28 chỉ dựa trang Roland KF-20/25 đã mở; "440 hay 442" theo đó. n26 Wikipedia (bậc 3) là nguồn duy nhất đọc được, trang UEN Tuning Together bị 403.'
+doi_chu:
+  - cu: "Nếu thường xuyên bị báo thấp (hoặc cao) hơn khoảng 12 nửa cung, có thể bạn đang hát đúng nốt nhưng ở quãng tám khác: chọn lại Giọng."
+    moi: "Công cụ bỏ qua quãng tám: hát đúng nốt ở quãng tám nào cũng được tính là đúng (giọng nam hát thấp hơn một quãng tám vẫn đúng). Chọn Giọng để nốt mẫu nằm trong tầm hát của bạn."
+    ly_do: "n13 (da-sua): chamHat gấp độ lệch về trong ±600 cent nên không thể báo lệch 12 nửa cung; câu cũ sai với công cụ."
+  - cu: "Đàn piano cơ thì không tự lên dây: việc ấy dành cho thợ (Chăm sóc và bảo dưỡng). Nhưng máy cho biết đàn nhà bạn đang lệch chuẩn bao nhiêu: chơi nốt La4, ngay trên Đô giữa, và đọc số cent. Điều này quan trọng khi bạn chơi cùng một nhạc cụ khác, vì nhạc cụ kia phải chỉnh theo piano. Piano điện luôn đúng cao độ."
+    moi: "Đàn piano cơ thì không tự lên dây: việc ấy dành cho thợ (Chăm sóc và bảo dưỡng). Nhưng máy cho biết đàn nhà bạn đang lệch chuẩn bao nhiêu: chơi nốt La4, ngay trên Đô giữa, và đọc số cent. Điều này quan trọng khi bạn chơi cùng một nhạc cụ khác, vì nhạc cụ kia phải chỉnh theo piano. Piano điện không phải lên dây vì cao độ do mạch điện tử giữ; nếu đàn có chỉnh chuẩn La (mặc định thường 440 hay 442 Hz) thì đối chiếu lại bằng máy."
+    ly_do: 'n28 (da-sua): nhiều piano điện cho chỉnh chuẩn La (Roland KF-20/25: 415,3–466,2 Hz, mặc định 442 Hz); "luôn đúng" quá tuyệt đối.'
+nguon:
+  - id: wiki-cent
+    bac: 3
+    ten: Wikipedia, Cent (music)
+    link: https://en.wikipedia.org/wiki/Cent_(music)
+  - id: pfordresher
+    bac: 2
+    ten: Pfordresher & Halpern (2013), Auditory imagery and the poor-pitch singer, Psychonomic Bulletin & Review 20, tr. 747-753
+    link: https://www.acsu.buffalo.edu/~pqp/pdfs/Pfordresher&Halpern_2013_PBR.pdf
+  - id: wiki-violin
+    bac: 3
+    ten: Wikipedia, Violin
+    link: https://en.wikipedia.org/wiki/Violin
+  - id: wiki-guitar
+    bac: 3
+    ten: Wikipedia, Guitar tunings
+    link: https://en.wikipedia.org/wiki/Guitar_tunings
+  - id: wiki-a440
+    bac: 3
+    ten: Wikipedia, A440 (pitch standard)
+    link: https://en.wikipedia.org/wiki/A440_(pitch_standard)
+  - id: wiki-tuning
+    bac: 3
+    ten: 'Wikipedia, Musical tuning (ghi: piano dùng ở buổi tập nhóm vì cao độ không chỉnh theo từng buổi)'
+    link: https://en.wikipedia.org/wiki/Musical_tuning
+  - id: roland-kf20
+    bac: 2
+    ten: 'Roland, KF-20/KF-25: Match the tuning to another instrument (master tuning)'
+    link: https://static.roland.com/manuals/kf-20_kf-25_v100/en-US/338858251.html
+nhan_dinh:
+  - id: n1
+    cau: Site phát một nốt (hoặc một quãng), bạn hát lại vào micro.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/choi-theo.js: cauHat (kieu unison: một nốt; interval: hai nốt cách một quãng), phat() phát bằng am-thanh.js, hat() mở micro (micro.js).'
+  - id: n2
+    cau: Kim chỉ cho thấy bạn đang cao hay thấp so với nốt cần hát.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/choi-theo.js: mountHatLai, ngheMicro cập nhật kim .oz-kim-chi theo độ lệch cent khi đang hát.'
+  - id: n3
+    cau: Sau 3 giây, site chấm độ lệch theo cent.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/choi-theo.js: nút "Hát (3 giây)", setTimeout 3000 rồi chamHat (kết quả có số cent).'
+  - id: n4
+    cau: Hát trong khoảng ±50 cent được tính là đúng.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/choi-theo.js: chamHat: dat = Math.abs(d) <= 50; dòng "Lượt này: … trong khoảng ±50 cent".'
+  - id: n5
+    cau: 50 cent là một phần tư cung.
+    loai: so-lieu
+    nguon:
+      - wiki-cent
+    ket_qua: dung
+    ghi_chu: 'Wikipedia Cent: nửa cung 100 cent, quãng tám 1200 cent, một cung (whole tone) 200 cent, nên 50 cent bằng một phần tư cung.'
+  - id: n6
+    cau: 1 cent bằng 1/100 nửa cung.
+    loai: dinh-nghia
+    nguon:
+      - wiki-cent
+    ket_qua: dung
+    ghi_chu: 'Wikipedia Cent: "semitone ... 100 cents by definition".'
+  - id: n7
+    cau: Muốn đo cao độ tự do, không cần nốt mẫu, dùng máy lên dây ở cuối trang.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Mục "## Máy lên dây { #may-len-day }" có cuối trang, công cụ tuner có lựa chọn "Tự do (mọi nốt)" (src/scripts/so-cao-do.js); link #may-len-day khớp.'
+  - id: n8
+    cau: 'Hát buộc tai và não liên kết với nhau: bạn phải nghe trong đầu một cao độ trước khi phát ra nó.'
+    loai: quy-tac
+    nguon:
+      - pfordresher
+    ket_qua: dung
+    ghi_chu: 'Pfordresher & Halpern 2013: kết quả "support a link between auditory imagery and vocal imitation" (người hát lệch tông có hình ảnh âm thanh trong đầu kém rõ hơn, theo bản tự đánh giá, mẫu sinh viên). Ủng hộ ý chính; chữ "buộc"/"phải" mạnh hơn nguồn nói. Chấp nhận, chưa đề nghị sửa.'
+  - id: n9
+    cau: Nghe trong đầu một cao độ rồi hát là nền tảng của chép giai điệu, đọc thị tấu và chơi theo tai trên phím đàn.
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n10
+    cau: Link tới "chép giai điệu" và "đọc thị tấu".
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'luyen-tap/chep-giai-dieu có ở site mới (phần 1 của lô). luyen-tap/thi-tau chưa chuyển (D7-L2): ../opus-zero/docs/luyen-tap/thi-tau.md có, tiêu đề "Thị tấu một bè", nói về đọc và chơi lần đầu một bản nhạc. Lô chuyển trang này giữ đúng nội dung là đọc thị tấu.'
+  - id: n11
+    cau: Bắt đầu với "Hát lại một nốt", rồi chuyển sang "Hát quãng đi lên".
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/choi-theo.js veHatLai: hai lựa chọn "Hát lại một nốt", "Hát quãng đi lên" ở ô Bài, đúng tên.'
+  - id: n12
+    cau: Hát nguyên âm "a" hoặc "la", giữ hơi đều; đừng trượt lên xuống tìm nốt.
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n13
+    cau: 'Công cụ bỏ qua quãng tám: hát đúng nốt ở quãng tám nào cũng được tính là đúng (giọng nam hát thấp hơn một quãng tám vẫn đúng). Chọn "Giọng" để nốt mẫu nằm trong tầm hát của bạn.'
+    loai: ve-site
+    ket_qua: da-sua
+    ghi_chu: 'src/scripts/choi-theo.js: chamHat gấp độ lệch bằng boQuangTam (src/scripts/cham-diem.js, ±600 cent) nên không bao giờ báo lệch 12 nửa cung; cauHat: Giọng "Nam (trầm)" nền C3 (48), "Nữ, trẻ em (cao)" nền C4 (60). Sửa trang: cũ "Nếu thường xuyên bị báo thấp (hoặc cao) hơn khoảng 12 nửa cung, có thể bạn đang hát đúng nốt nhưng ở quãng tám khác: chọn lại Giọng." là sai với công cụ (cả bản cũ playalong.js cũng gấp quãng tám); mới như câu trên.'
+  - id: n14
+    cau: Xem thêm Bài 0, mục "Tôi bị lệch tông".
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: Link /opus/bat-dau/bai-0/#toi-co-can-biet-hat-khong-toi-bi-lech-tong; bat-dau/bai-0.md có mục "## Tôi có cần biết hát không? Tôi bị "lệch tông"" (id khớp quy tắc id-cu).
+  - id: n15
+    cau: 'Máy lên dây: bấm "Bật micro", rồi hát hoặc chơi một nốt; màn hình cho biết nốt gần nhất, tần số và độ lệch tính bằng cent.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/so-cao-do.js: nút "Bật micro"/"Tắt micro"; hiện .oz-so-cao-do-not (tên nốt), -hz (Hz), -cent (lệch cent và lời nhắc).'
+  - id: n16
+    cau: Chọn "Tự do" để đo cao độ khi hát hoặc chơi đàn.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/so-cao-do.js: lựa chọn đầu "Tự do (mọi nốt)" (chromatic), làm tròn tới nốt gần nhất.'
+  - id: n17
+    cau: 'Chọn violin hay guitar: công cụ tự tìm dây gần nhất và phát nốt chuẩn của từng dây.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/so-cao-do.js: docTanSo chọn dây gần nhất trong DAY; nutDay dựng nút "Nghe dây chuẩn" cho từng dây.'
+  - id: n18
+    cau: 'Dây chuẩn violin của công cụ: Sol3 (G3), Rê4 (D4), La4 (A4), Mi5 (E5).'
+    loai: so-lieu
+    nguon:
+      - wiki-violin
+    ket_qua: dung
+    ghi_chu: 'Wikipedia Violin: "G3, D4, A4, E5". DAY.violin: 55, 62, 69, 76 (C4 = 60) khớp. Chữ do công cụ sinh ra (so-cao-do.js).'
+  - id: n19
+    cau: 'Dây chuẩn guitar của công cụ: Mi2, La2, Rê3, Sol3, Si3, Mi4.'
+    loai: so-lieu
+    nguon:
+      - wiki-guitar
+    ket_qua: dung
+    ghi_chu: 'Wikipedia Guitar tunings: "E2–A2–D3–G3–B3–E4". DAY.guitar: 40, 45, 50, 55, 59, 64 khớp.'
+  - id: n20
+    cau: Máy dựa trên La4 = 440 Hz.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/micro.js: midiCuaTanSo = 69 + 12 * log2(f / 440).'
+  - id: n21
+    cau: La4 = 440 Hz là chuẩn phổ biến nhất hiện nay.
+    loai: so-lieu
+    nguon:
+      - wiki-a440
+    ket_qua: dung
+    ghi_chu: 'Wikipedia A440: chuẩn cao độ cho nốt La trên Đô giữa, ISO 16. Nguồn không nói "phổ biến nhất" nguyên văn; ISO 16 là chuẩn quốc tế (bản gốc Anh/dàn nhạc có khi dùng 442). Chấp nhận.'
+  - id: n22
+    cau: 'Link "Âm học: chuẩn cao độ".'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'nhac-ly/am-hoc.md có mục "## Chuẩn cao độ: La = 440 Hz?" (id chuan-cao-o-la-440-hz).'
+  - id: n23
+    cau: 'Đàn piano cơ không tự lên dây: việc ấy dành cho thợ.'
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n24
+    cau: Link "Chăm sóc và bảo dưỡng" ở trang chọn đàn.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: piano/chon-dan chưa chuyển (D7 không phải lô của nó). ../opus-zero/docs/piano/chon-dan.md dòng 89 có "## Chăm sóc và bảo dưỡng" (id cham-soc-va-bao-duong). Lô chuyển trang đó giữ mục này.
+  - id: n25
+    cau: Chơi nốt La4, ngay trên Đô giữa, và đọc số cent cho biết đàn đang lệch chuẩn bao nhiêu.
+    loai: dinh-nghia
+    nguon:
+      - wiki-a440
+    ket_qua: dung
+    ghi_chu: 'Wikipedia A440: La4 là "the musical note of A above middle C".'
+  - id: n26
+    cau: Nhạc cụ kia phải chỉnh theo piano khi chơi cùng.
+    loai: quy-tac
+    nguon:
+      - wiki-tuning
+    ket_qua: dung
+    ghi_chu: 'Wikipedia Musical tuning: "in ensemble rehearsals often a piano is used (as its pitch cannot be adjusted for each performance)"; dàn nhạc chỉnh theo nốt La do oboe, người chơi chỉnh theo phím đàn nếu có. Đúng với piano cơ.'
+  - id: n27
+    cau: Link "Chơi cùng một nhạc cụ khác".
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: piano/choi-cung-nguoi-khac chưa chuyển. ../opus-zero/docs/piano/choi-cung-nguoi-khac.md dòng 161 có "## Song tấu với một nhạc cụ" (id song-tau-voi-mot-nhac-cu). Lô chuyển giữ mục này.
+  - id: n28
+    cau: Piano điện không phải lên dây vì cao độ do mạch điện tử giữ; nếu đàn có chỉnh chuẩn La (mặc định thường 440 hay 442 Hz) thì đối chiếu lại bằng máy.
+    loai: so-lieu
+    nguon:
+      - roland-kf20
+    ket_qua: da-sua
+    ghi_chu: 'Cũ: "Piano điện luôn đúng cao độ." (tuyệt đối). Roland KF-20/25: "adjust the reference pitch ... 415.3–466.2 Hz", mặc định 442,0 Hz; GO-88 mặc định 440 (kết quả tìm kiếm, chưa mở trang). Mới như câu trên.'
+  - id: n29
+    cau: Dùng ở nơi yên tĩnh, đặt điện thoại gần nguồn âm.
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+khuong_nhac: []

@@ -3,7 +3,7 @@
 // version 2: progress, settings, recordings, exported), nên file xuất ở site cũ khôi phục được ở đây và ngược lại; nhận cả
 // bản rất cũ chỉ có { days, store }. Cùng các khóa: opus-zero:v1 (tiến độ, src/scripts/tien-do.js), opus-zero:sound
 // (âm thanh), opus-zero:midi-auto (đàn MIDI); bản thu âm ở IndexedDB opus-zero-recordings, kho rec (của công cụ thu âm).
-// Hàm gộp là hàm thuần và gộp cùng một bản sao lưu nhiều lần cho kết quả như gộp một lần (kiểm thử: tests/sao-luu.test.mjs).
+// Hàm gộp là hàm thuần và gộp cùng một bản sao lưu nhiều lần cho kết quả như gộp một lần (kiểm thử: tests/luyen-tap.test.mjs, so với data.js cũ).
 // Khác bản cũ: file tải về tên opus-<ngày>.json (site đổi tên), chữ "tải từ Opus Zero" thành "tải từ trang Dữ liệu".
 // veSaoLuu dựng sẵn ô lúc build, mount đọc dữ liệu và thêm phần bấm được.
 import { KHOA, homNay } from './tien-do.js';
@@ -57,7 +57,7 @@ export function gop(co, den) {
 	co = laDoiTuong(co) && laDoiTuong(co.days) ? co : { days: {} };
 	const L = sao(co);
 	const I = sao(den);
-	const bc = { ngay_them: 0, ngay_bo_sung: 0, bai_them: 0, ky_nang: 0, the: 0, nghe_mu: 0, moc_nghe: 0, viec: 0, bai_tap: 0 };
+	const bc = { ngay_them: 0, ngay_bo_sung: 0, bai_them: 0, ky_nang: 0, the: 0, nghe_mu: 0, moc_nghe: 0, viec: 0, bai_tap: 0, khac: 0 };
 	L.store ||= {};
 	const S = L.store;
 	const IS = I.store || {};
@@ -204,6 +204,13 @@ export function gop(co, den) {
 	if (laDoiTuong(IS.pianoLevel) && (!laDoiTuong(S.pianoLevel) || (IS.pianoLevel.updated || '') > (S.pianoLevel.updated || ''))) S.pianoLevel = IS.pianoLevel;
 	// các phần khác (như kết quả kiểm tra đầu vào): giữ của máy này, thêm nếu chưa có
 	for (const k of Object.keys(IS)) if (!KHO_RIENG.includes(k) && S[k] === undefined) S[k] = IS[k];
+	// phần đổi mà các số trên chưa đếm (thống kê từng nốt, nghe mù, chặng piano, lịch sử kỹ năng, phần khác): bản cũ không đếm,
+	// nên file chỉ có các thay đổi ấy bị báo "không có gì mới" và không gộp được
+	const truoc = co.store ?? {};
+	// phần rỗng ({} hay []) coi như chưa có
+	const chu = (x) => (x === undefined || (typeof x === 'object' && x !== null && !Object.keys(x).length) ? '' : JSON.stringify(x));
+	for (const k of Object.keys(S))
+		if (!['lessons', 'skills', 'cards', 'blindLog', 'listen', 'checks', 'repertoire'].includes(k) && chu(S[k]) !== chu(truoc[k])) bc.khac++;
 	return { gop: L, bao_cao: bc };
 }
 
@@ -260,6 +267,7 @@ export function thayDoi(bc, soThuMoi) {
 		[bc.moc_nghe, (n) => `thêm mốc nghe ở ${n} trang`],
 		[bc.viec, (n) => `thêm ${n} mục đã đánh dấu xong`],
 		[bc.bai_tap, (n) => `cập nhật ${n} bài đang tập`],
+		[bc.khac, (n) => `cập nhật ${n} phần dữ liệu khác (thống kê nốt, kỹ năng theo ngày, chặng piano…)`],
 		[soThuMoi, (n) => `thêm ${n} bản thu âm`],
 	].filter(([n]) => n);
 	return { tong: dong.reduce((s, [n]) => s + n, 0), html: dong.map(([n, f]) => `<li>${f(n)}</li>`).join('') };
@@ -292,10 +300,19 @@ function idb(che, viec) {
 		r.onupgradeneeded = () => r.result.createObjectStore(KHO_THU, { keyPath: 'id' });
 		r.onerror = () => hong(r.error);
 		r.onsuccess = () => {
-			const t = r.result.transaction(KHO_THU, che);
-			const q = viec(t.objectStore(KHO_THU));
-			t.oncomplete = () => (r.result.close(), ok(q && q.result));
-			t.onerror = () => (r.result.close(), hong(t.error));
+			const db = r.result;
+			let q;
+			try {
+				const t = db.transaction(KHO_THU, che);
+				t.oncomplete = () => (db.close(), ok(q && q.result));
+				t.onerror = () => (db.close(), hong(t.error));
+				// hủy (hết chỗ lưu…): báo lỗi, không treo
+				t.onabort = () => (db.close(), hong(t.error || new Error('giao dịch bị hủy')));
+				q = viec(t.objectStore(KHO_THU));
+			} catch (e) {
+				db.close();
+				hong(e);
+			}
 		};
 	});
 }
@@ -361,7 +378,7 @@ export function mount(goc) {
 		const kem = goc.querySelector('[data-k="thu"]').checked;
 		bao('Đang chuẩn bị…');
 		const ds = kem
-			? await Promise.all((await banThu()).map(async (r) => ({ id: r.id, label: r.label, date: r.date, dur: r.dur, mime: r.mime, data: await blobThanhB64(r.blob) })))
+			? await Promise.all((await banThu()).filter((r) => r.blob).map(async (r) => ({ id: r.id, label: r.label, date: r.date, dur: r.dur, mime: r.mime, data: await blobThanhB64(r.blob) })))
 			: [];
 		const ra = {
 			format: DINH_DANG,
@@ -397,8 +414,9 @@ export function mount(goc) {
 				: '<p>File này không có gì mới so với dữ liệu trên máy: không cần gộp.</p>');
 		bao('');
 		xem.querySelector('[data-act="gop"]')?.addEventListener('click', async () => {
+			// gộp vào dữ liệu lúc bấm (tab khác có thể vừa ghi thêm), không vào bản đã đọc lúc chọn file
 			try {
-				ghiMay(kq.gop);
+				ghiMay(gop(docMay(), den.progress).gop);
 			} catch {
 				return bao('Không ghi được dữ liệu (bộ nhớ trình duyệt đầy?).', false);
 			}
@@ -408,7 +426,9 @@ export function mount(goc) {
 				// không lưu được lựa chọn âm thanh: giữ mặc định
 			}
 			try {
-				await Promise.all(thuMoi.map((x) => idb('readwrite', (s) => s.put({ id: x.id, label: x.label, date: x.date, dur: x.dur, mime: x.mime, blob: b64ThanhBlob(x.data, x.mime) }))));
+				// giải mã trước khi mở giao dịch: file sửa tay có chuỗi base64 hỏng thì báo lỗi, không treo
+				const ban = thuMoi.map((x) => ({ id: x.id, label: x.label, date: x.date, dur: x.dur, mime: x.mime, blob: b64ThanhBlob(x.data, x.mime) }));
+				await Promise.all(ban.map((b) => idb('readwrite', (s) => s.put(b))));
 				bao('Đã gộp xong.', true);
 			} catch {
 				bao('Đã gộp tiến độ, nhưng không lưu được bản thu âm.', false);

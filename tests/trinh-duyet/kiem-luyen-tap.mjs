@@ -23,13 +23,21 @@ const GIA_MIDI = () => {
 	navigator.requestMIDIAccess = () => Promise.resolve({ inputs: new Map([['1', vao]]), onstatechange: null });
 	window.__ozBam = (m) => vao.onmidimessage?.({ data: [0x90, m, 100] });
 };
-/** Micro giả: sóng sin ở window.__ozTanSo Hz (0: im lặng); __ozTuChoi thì từ chối; __ozMicTat đếm số lần dừng luồng. */
+/**
+ * Micro giả: sóng sin ở window.__ozTanSo Hz (0: im lặng); __ozTuChoi thì từ chối; __ozCho: số ms chờ trước khi mở (như lúc
+ * người dùng đang được hỏi quyền); __ozMicMo, __ozMicTat đếm số luồng đã mở và số lần dừng luồng. Audio Session của Safari
+ * giả khi trình duyệt không có (navigator.audioSession.type).
+ */
 const GIA_MICRO = () => {
 	window.__ozTanSo = 440;
 	window.__ozMicTat = 0;
+	window.__ozMicMo = 0;
+	if (!navigator.audioSession) Object.defineProperty(navigator, 'audioSession', { value: { type: 'auto' } });
 	// gắn lên prototype: WebKit có lúc thay đối tượng navigator.mediaDevices, thuộc tính gắn vào đối tượng cũ thì mất
 	const gia = async () => {
+		if (window.__ozCho) await new Promise((ok) => setTimeout(ok, window.__ozCho));
 		if (window.__ozTuChoi) throw new DOMException('không cho', 'NotAllowedError');
+		window.__ozMicMo++;
 		const AC = window.AudioContext || window.webkitAudioContext;
 		const c = new AC();
 		await c.resume?.();
@@ -251,6 +259,51 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 			await p.evaluate(() => (window.__ozTuChoi = true));
 			await may.locator('[data-act="mic"]').tap();
 			await p.waitForFunction(() => /^Không mở được micro/.test(document.querySelector('.oz-so-cao-do-cent').textContent), null, { timeout: 5000 });
+			assert.deepEqual(loi, []);
+			await ctx.close();
+		} finally {
+			await trinhDuyet.close();
+		}
+	});
+
+	test(`${ten}: micro: bấm hai lần trong lúc chờ cho phép chỉ mở một lần, tắt thì dừng mọi luồng; rời trang hay đổi công cụ trong lúc chờ thì luồng vừa mở được đóng; Audio Session về playback`, { skip: bo('luyen-tap/hat-lai/', 'oz-so-cao-do') }, async (t) => {
+		const trinhDuyet = await loai.launch();
+		try {
+			const ctx = await nguCanh(trinhDuyet, ten, { w: 1280, h: 800, camUng: false, toi: false });
+			const { p, loi } = await moTrang(ctx, 'luyen-tap/hat-lai/', '.oz-so-cao-do', { micro: true });
+			if (!(await coAm(p))) return t.skip('trình duyệt không có Web Audio');
+			const nut = p.locator('.oz-so-cao-do [data-act="mic"]');
+			const so = () => p.evaluate(() => [window.__ozMicMo, window.__ozMicTat]);
+			// bấm hai lần khi micro chưa mở
+			await p.evaluate(() => (window.__ozCho = 400));
+			await nut.click();
+			await nut.click();
+			await p.waitForFunction(() => document.querySelector('.oz-so-cao-do-not').textContent === 'La A4', null, { timeout: 8000 });
+			assert.equal(await p.evaluate(() => navigator.audioSession.type), 'play-and-record');
+			await nut.click();
+			assert.equal(await nut.textContent(), 'Bật micro');
+			const [mo, tat] = await so();
+			assert.equal(mo, 1, 'chỉ mở một luồng');
+			assert.equal(tat, mo, 'dừng mọi luồng đã mở');
+			assert.equal(await p.evaluate(() => navigator.audioSession.type), 'playback');
+			// rời trang trong lúc chờ: luồng mở sau đó được dừng ngay
+			await nut.click();
+			await p.evaluate(() => dispatchEvent(new Event('pagehide')));
+			await p.waitForFunction(() => window.__ozMicMo === 2 && window.__ozMicTat === 2, null, { timeout: 5000 });
+			assert.equal(await p.evaluate(() => navigator.audioSession.type), 'playback');
+			// đổi công cụ trong lúc chờ: hát lại nhận micro, so cao độ không giữ luồng nào
+			await nut.click();
+			const hat = p.locator('.oz-hat-lai');
+			await hat.scrollIntoViewIfNeeded();
+			await p.waitForFunction(() => document.querySelector('.oz-hat-lai')?.dataset.san, null, { timeout: 20000 });
+			await hat.locator('[data-act="moi"]').click();
+			await hat.locator('[data-act="hat"]').click();
+			await p.waitForFunction(() => /^Đang nghe… hãy ngân nốt /.test(document.querySelector('.oz-hat-lai .oz-feedback').textContent), null, { timeout: 8000 });
+			await p.waitForFunction(() => /^(Đúng!|Cao hơn|Thấp hơn|Site chưa nghe rõ)/.test(document.querySelector('.oz-hat-lai .oz-feedback').textContent), null, { timeout: 10000 });
+			const [mo2, tat2] = await so();
+			assert.equal(tat2, mo2, `mọi luồng đã dừng (${mo2} mở, ${tat2} dừng)`);
+			assert.equal(await p.evaluate(() => navigator.audioSession.type), 'playback');
+			assert.equal(await nut.textContent(), 'Bật micro');
 			assert.deepEqual(loi, []);
 			await ctx.close();
 		} finally {

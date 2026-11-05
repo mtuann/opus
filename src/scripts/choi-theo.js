@@ -10,7 +10,7 @@
 import { choiNot, chuanBi, layNgCanh, tiengGo } from './am-thanh.js';
 import { boQuangTam, caoDoOnDinh, chamCaoDo, chamMidi, tomTatCham } from './cham-diem.js';
 import { pianoRoll, tenNot } from './hinh-so-sanh.js';
-import { coMicro, giuMicro, midiCuaTanSo, moMicro, ngheMicro } from './micro.js';
+import { coMicro, dongMicro, giuMicro, midiCuaTanSo, moMicro, ngheMicro } from './micro.js';
 import { coMidi, ketNoi, nghe, veTrangThaiMidi } from './midi.js';
 import { ghiNgay, kyNang } from './tien-do.js';
 
@@ -142,6 +142,13 @@ export function mountChoiTheo(goc) {
 		if (!dang) return;
 		const r = dang;
 		dang = null;
+		// dừng (hay công cụ khác nhận micro) trong lúc chờ micro, đàn MIDI: hủy, không chấm
+		if (r.cho) {
+			r.huy = true;
+			r.nha?.();
+			if (r.nguon === 'mic') dongMicro();
+			return;
+		}
 		clearTimeout(r.hen);
 		r.thoi();
 		r.nha?.();
@@ -177,24 +184,24 @@ export function mountChoiTheo(goc) {
 		if (!c || dang) return;
 		const nguon = chon('nguon').value;
 		const phach = 60 / Number(chon('bpm').value);
-		let nha = null;
-		if (nguon === 'midi') {
-			if (!coMidi()) return bao('Trình duyệt này không có MIDI trên web. Dùng Chrome hay Edge trên máy tính, hoặc chọn Micro.', 'bad');
-			try {
-				await ketNoi();
-			} catch {
-				return bao('Chưa kết nối được đàn MIDI.', 'bad');
-			}
-		} else {
-			if (!coMicro()) return bao('Trình duyệt này không mở được micro.', 'bad');
-			nha = giuMicro(xong);
-			try {
+		if (nguon === 'midi' && !coMidi()) return bao('Trình duyệt này không có MIDI trên web. Dùng Chrome hay Edge trên máy tính, hoặc chọn Micro.', 'bad');
+		if (nguon === 'mic' && !coMicro()) return bao('Trình duyệt này không mở được micro.', 'bad');
+		// đang chờ micro hay đàn MIDI (người dùng đang được hỏi quyền): bấm thêm thì bỏ qua
+		const cho = (dang = { cho: true, nguon, huy: false, nha: null });
+		try {
+			if (nguon === 'midi') await ketNoi();
+			else {
+				cho.nha = giuMicro(xong);
 				await moMicro();
-			} catch {
-				nha();
-				return bao('Không mở được micro. Hãy cho phép trang dùng micro rồi thử lại.', 'bad');
 			}
+		} catch {
+			if (cho.huy) return;
+			dang = null;
+			cho.nha?.();
+			return bao(nguon === 'midi' ? 'Chưa kết nối được đàn MIDI.' : 'Không mở được micro. Hãy cho phép trang dùng micro rồi thử lại.', 'bad');
 		}
+		if (cho.huy) return;
+		const nha = cho.nha;
 		const t0 = c.currentTime + 0.15;
 		for (let i = 0; i < 4; i++) tiengGo(t0 + i * phach, i === 0);
 		const can = notCan(chon('bai').value, chon('nhac-cu').value, t0 + 4 * phach, phach);
@@ -299,22 +306,35 @@ export function mountHatLai(goc) {
 	};
 	const thoiHat = () => {
 		if (!dangHat) return;
-		clearTimeout(dangHat.hen);
-		dangHat.thoi();
-		dangHat.nha();
+		const h = dangHat;
 		dangHat = null;
+		// thôi trong lúc chờ micro mở: hủy lần mở ấy
+		if (h.cho) {
+			h.huy = true;
+			h.nha?.();
+			dongMicro();
+			return;
+		}
+		clearTimeout(h.hen);
+		h.thoi();
+		h.nha();
 	};
 	const hat = async () => {
 		if (!cau) return moi();
 		if (dangHat) return;
 		if (!coMicro()) return bao('Trình duyệt này không mở được micro.', 'bad');
-		const nha = giuMicro(thoiHat);
+		const cho = (dangHat = { cho: true, huy: false, nha: null });
+		cho.nha = giuMicro(thoiHat);
 		try {
 			await moMicro();
 		} catch {
-			nha();
+			if (cho.huy) return;
+			dangHat = null;
+			cho.nha();
 			return bao('Không mở được micro. Hãy cho phép trang dùng micro.', 'bad');
 		}
+		if (cho.huy) return;
+		const nha = cho.nha;
 		const khung = [];
 		const dich = cau.dich;
 		bao(`Đang nghe… hãy ngân nốt ${tenKhongSo(dich)}.`);

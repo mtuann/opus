@@ -1,0 +1,108 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa luyen-tap/doc-not
+trang: src/content/docs/luyen-tap/doc-not.md
+nguon_cu: ../opus-zero/docs/luyen-tap/doc-not.md
+tang: khung
+lan:
+- so: 1
+  ngay: '2026-11-05'
+  nhanh: moi/d7-l1
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Sonnet 5.5 (D7-L1 lượt 1, phần 1/2)
+    luot_2: null
+    review: null
+    kiem_mau: null
+nguon:
+- id: omt-clefs
+  bac: 2
+  ten: 'Open Music Theory, Clefs (treble clef quanh dòng G, "the second line from the bottom"; bass clef: "the dot of the bass clef begins on the F line (the second line from the top)")'
+  link: https://viva.pressbooks.pub/openmusictheory/chapter/clefs/
+- id: omt-grand
+  bac: 2
+  ten: Open Music Theory, The Keyboard and Grand Staff (C4 "written on the first ledger line below the treble clef staff or the first ledger line above the bass clef staff")
+  link: https://viva.pressbooks.pub/openmusictheory/chapter/the-keyboard-and-grand-staff/
+- id: caniuse-midi
+  bac: 2
+  ten: 'Can I use, Web MIDI API (kiểm 11/2026: Chrome từ 43, Edge từ 79, Opera từ 30, Firefox từ 108; Safari và iOS không hỗ trợ)'
+  link: https://caniuse.com/midi
+nhan_dinh:
+- id: n1
+  cau: Bấm tên của nốt trên khuông.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/doc-not.js (note-reader): một nốt ngẫu nhiên vẽ bằng veNotDon, bảy nút tên nốt (Đô Rê Mi hay C D E).'
+- id: n2
+  cau: Trên máy tính có thể gõ phím chữ cái C D E F G A B hoặc số 1 … 7 sau khi bấm vào khung.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'doc-not.js: goc.addEventListener("keydown") nhận CHU (C–B) và /^[1-7]$/; khung .oz-doc-not-khuong có tabindex=0, role="group" và nhãn "Gõ chữ C đến B hay số 1 đến 7"; phím bị bỏ qua khi tiêu điểm ở ô chọn hay khi giữ Alt, Ctrl, Meta. Chữ trên nút cũng ghi phím tắt (title "Phím tắt: C hoặc 1").'
+- id: n3
+  cau: 'Bắt đầu nhỏ: chọn khóa Sol, phạm vi "Trong khuông" (công cụ có hai lựa chọn này); chỉ chuyển sang bước tiếp khi đúng ngay lần đầu khoảng 9/10.'
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+  ghi_chu: 'Lời khuyên tập. Phần công cụ: veDocNot có "Khóa Sol" và "Trong khuông" (và đó cũng là lựa chọn mặc định); chữ "Trong khuông" gồm cả khe ngay dưới và trên khuông (D4, G5 ở PHAM_VI.treble.basic), không có dòng kẻ phụ.'
+- id: n4
+  cau: Khi bật "Ưu tiên nốt hay sai", những nốt bạn từng trả lời sai sẽ xuất hiện nhiều hơn.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'doc-not.js chonNot + trongSo: trọng số 1 + 4 × (sai + 1) / (lần + 2), nốt chưa gặp 1,6; thống kê lưu ở store.noteStats; ô "Ưu tiên nốt hay sai" bật sẵn.'
+- id: n5
+  cau: Dòng thống kê bên dưới cho biết 3 nốt bạn hay sai nhất.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'doc-not.js haySai: tối đa 3 nốt, đã gặp từ 3 lần và có sai, theo tỉ lệ sai; hiện sau "Hay sai nhất:" ở dòng .oz-doc-not-so. Chưa đủ dữ liệu thì dòng này không hiện.'
+- id: n6
+  cau: Trong khóa Sol, nốt Sol nằm trên dòng 2 (đếm từ dưới lên).
+  loai: quy-tac
+  nguon:
+  - omt-clefs
+  ket_qua: dung
+  ghi_chu: 'OMT Clefs: "the treble clef wraps around the G line (the second line from the bottom)."'
+- id: n7
+  cau: Trong khóa Fa, nốt Fa nằm trên dòng 4 (đếm từ dưới lên).
+  loai: quy-tac
+  nguon:
+  - omt-clefs
+  ket_qua: dung
+  ghi_chu: 'OMT Clefs: dấu chấm của khóa Fa "begins on the F line (the second line from the top)", tức dòng 4 tính từ dưới.'
+- id: n8
+  cau: Đô giữa nằm trên dòng kẻ phụ (dưới khuông khóa Sol, trên khuông khóa Fa).
+  loai: quy-tac
+  nguon:
+  - omt-grand
+  ket_qua: dung
+  ghi_chu: 'OMT The Keyboard and Grand Staff: C4 là "written on the first ledger line below the treble clef staff or the first ledger line above the bass clef staff".'
+- id: n9
+  cau: Nên thuộc vài nốt mốc, đếm từ mốc gần nhất; đúng trước, nhanh sau; khi đã đúng đều thử trả lời trong vòng 2 giây.
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+  ghi_chu: Lời khuyên tập đọc nốt.
+- id: n10
+  cau: 'Thứ tự mở rộng gợi ý: khóa Sol trong khuông, khóa Fa trong khuông, khóa Sol thêm dòng kẻ phụ, khóa Fa thêm dòng kẻ phụ, rồi cả hai khóa.'
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+  ghi_chu: Lời khuyên tập. Công cụ có các lựa chọn khóa Sol, khóa Fa, "Sol và Fa" và hai phạm vi (doc-not.js veDocNot, PHAM_VI.treble/bass); có thêm khóa Đô alto, tenor mà trang không nhắc.
+- id: n11
+  cau: Link tới bài Khuông nhạc và khóa để ôn lý thuyết.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Link /opus/nhac-ly/02-khuong-nhac-khoa/: trang có trong bản build, tiêu đề "2. Khuông nhạc và khóa".'
+- id: n12
+  cau: 'Phần "Dùng đàn MIDI": cắm đàn piano điện vào máy tính để dùng phím thật.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'doc-not.js: nghe() của midi.js; bấm phím trắng đúng tên nốt là trả lời; phím đen báo "Phím đen: nốt trên khuông là một nốt tự nhiên (phím trắng)."; ô midi-status ở cuối trang. Link tới luyen-tap/ket-noi-midi có trong bản xem.'
+- id: n13
+  cau: 'Trình duyệt hỗ trợ MIDI trên web: Chrome, Edge, Opera trên máy tính (chữ do ô midi-status hiện).'
+  loai: so-lieu
+  nguon:
+  - caniuse-midi
+  ket_qua: dung
+  ghi_chu: 'Ô trạng thái MIDI (midi.js, midi-status): khi trình duyệt không có Web MIDI thì khóa nút và báo "Trình duyệt này không có MIDI trên web. Dùng Chrome, Edge hay Opera trên máy tính." Chrome, Edge, Opera hỗ trợ (Can I use, kiểm 11/2026); Firefox từ 108 cũng hỗ trợ nên danh sách chưa đủ nhưng không sai; Safari và iOS không có. Câu dễ cũ: rà lại khi trình duyệt đổi.'
+- id: n14
+  cau: Kết quả đọc nốt được lưu như kỹ năng "notes" và thống kê từng nốt, tính vào số nốt đọc đúng trong ngày.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'doc-not.js: kyNang("notes"), ghiNgay("notes"), datKho("noteStats") (src/scripts/tien-do.js, khóa opus-zero:v1); dòng "Lượt này: đúng ngay lần đầu x/y. Hôm nay đã đọc đúng n nốt." Câu này không nằm ở trang nhưng là chữ công cụ hiện.'
+ghi_chu: Trang Luyện tập (tầng khung). Thuật ngữ trang dùng (khóa Sol, khóa Fa, dòng kẻ phụ) đã có trong src/data/thuat-ngu.yml (clef, ledger-line).
+khuong_nhac: []

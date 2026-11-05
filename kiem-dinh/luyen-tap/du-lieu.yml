@@ -1,0 +1,90 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa luyen-tap/du-lieu
+trang: src/content/docs/luyen-tap/du-lieu.md
+nguon_cu: ../opus-zero/docs/luyen-tap/du-lieu.md
+tang: khung
+lan:
+  - so: 1
+    ngay: '2026-11-05'
+    nhanh: moi/d7-l1
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D7-L1 lượt 1, phần 2/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Trang khung. Đã sửa một câu (n8). Chỗ cần người giao: không có tests/sao-luu.test.mjs trong worktree (AGENTS.md D7-L1 nói có kiểm thử Node cho phần gộp); tôi chỉ chạy thử gop() bằng script riêng.'
+doi_chu:
+  - cu: "Gộp nghĩa là không có gì bị mất: ngày luyện tập của cả hai máy đều được giữ, bài đã học được cộng lại, kỹ năng lấy kết quả mới hơn, thẻ ghi nhớ giữ tiến độ tốt hơn, ghi chú khác nhau được giữ cả hai. Gộp cùng một file nhiều lần cũng không làm số liệu bị nhân đôi."
+    moi: "Gộp nghĩa là không có gì bị ghi đè hay xóa: ngày luyện tập của cả hai máy đều được giữ (ngày có ở cả hai máy thì mỗi số đếm lấy số lớn hơn), bài đã học được cộng lại, kỹ năng lấy kết quả mới hơn, thẻ ghi nhớ giữ tiến độ tốt hơn, ghi chú khác nhau được giữ cả hai. Gộp cùng một file nhiều lần cũng không làm số liệu bị nhân đôi."
+    ly_do: 'n8 (da-sua): cùng một ngày ở cả hai máy thì số đếm lấy số lớn hơn (Math.max), không cộng, nên "không có gì bị mất" quá tuyệt đối.'
+nguon:
+  - id: mdn-storage
+    bac: 2
+    ten: MDN, Storage quotas and eviction criteria
+    link: https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria
+nhan_dinh:
+  - id: n1
+    cau: Mọi tiến độ học (bài đã học, kết quả luyện tập, thẻ ghi nhớ, nhật ký, mốc nghe) và bản thu âm được lưu trong trình duyệt trên máy này.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Kiểm src/scripts/sao-luu.js: tiến độ ở localStorage opus-zero:v1 (days, lessons, skills, cards, listen, ghi chú ngày), bản thu ở IndexedDB opus-zero-recordings; moTa/tomTat liệt kê đúng các mục này. Không có mục nào khác trong kho.'
+  - id: n2
+    cau: Dữ liệu ấy không gửi lên đâu cả.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Site tĩnh: grep fetch/sendBeacon/gtag/analytics trong src/scripts, src/components, src/*.mjs, astro.config chỉ thấy fetch mẫu âm (am-thanh.js, tải về, không gửi). Không có chỗ nào gửi dữ liệu người học đi.'
+  - id: n3
+    cau: Trang cho phép xem, sao lưu, chuyển sang máy khác và xóa dữ liệu ấy.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/sao-luu.js (veSaoLuu): khối "Đang lưu trên máy này", "Tải bản sao lưu", "Khôi phục từ bản sao lưu", "Xóa dữ liệu"; dist/luyen-tap/du-lieu/ có đủ.'
+  - id: n4
+    cau: 'Trên máy A: bấm "Tải file sao lưu".'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/sao-luu.js: nút data-act="xuat" nhãn "Tải file sao lưu (.json)"; tải về file opus-<ngày>.json.'
+  - id: n5
+    cau: Chuyển file sang máy B bằng Google Drive, Zalo, email cho chính mình…
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n6
+    cau: 'Trên máy B: mở trang này, bấm "Chọn file sao lưu", xem trước rồi bấm "Gộp vào máy này".'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/sao-luu.js: nhãn "Chọn file sao lưu"; khi chọn file hiện danh sách thay đổi (thayDoi) rồi nút "Gộp vào máy này" và "Hủy"; file không có gì mới thì báo không cần gộp.'
+  - id: n7
+    cau: 'Muốn hai máy giống nhau hoàn toàn: làm ngược lại từ B sang A.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/sao-luu.js: gộp A vào B rồi B vào A cho tiến độ giống nhau (đã chạy thử gop() với dữ liệu mẫu: ngày, bài, kỹ năng, ghi chú khớp). Chỉ lựa chọn âm thanh được chép sang khi máy nhận chưa có; lựa chọn đàn MIDI (midiAuto) không được khôi phục. "Hoàn toàn" nói về tiến độ học.'
+  - id: n8
+    cau: 'Gộp nghĩa là không có gì bị ghi đè hay xóa: ngày luyện tập của cả hai máy đều được giữ (ngày có ở cả hai máy thì mỗi số đếm lấy số lớn hơn), bài đã học được cộng lại, kỹ năng lấy kết quả mới hơn, thẻ ghi nhớ giữ tiến độ tốt hơn, ghi chú khác nhau được giữ cả hai.'
+    loai: ve-site
+    ket_qua: da-sua
+    ghi_chu: 'src/scripts/sao-luu.js: gop/gopNgay: số đếm Math.max (TRUONG_SO); lessons hợp lại, giữ ngày sớm; skills lấy last mới hơn (cùng ngày: n lớn hơn); cards lấy box cao hơn (cùng hộp: due muộn hơn); ghi chú nối bằng "\n---\n" khi khác nhau. Sửa trang: cũ "không có gì bị mất", mới như câu này, vì cùng một ngày ở hai máy chỉ giữ số đếm lớn hơn, không cộng.'
+  - id: n9
+    cau: Gộp cùng một file nhiều lần không làm số liệu bị nhân đôi.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/sao-luu.js: số đếm lấy max, tập hợp hợp lại, phiếu nghe mù bỏ bản trùng, ghi chú không nối lại khi đã chứa nhau. Đã chạy thử gop(gop(A,B),B) bằng gop(A,B).'
+  - id: n10
+    cau: Nên sao lưu mỗi tuần một lần, nếu bạn học đều.
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n11
+    cau: Nên sao lưu trước khi xóa dữ liệu trình duyệt, đổi máy, cài lại trình duyệt, hoặc dùng chế độ ẩn danh.
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n12
+    cau: Dữ liệu ở chế độ ẩn danh mất khi đóng cửa sổ.
+    loai: quy-tac
+    nguon:
+      - mdn-storage
+    ket_qua: dung
+    ghi_chu: 'MDN: "in private browsing mode ... stored data is usually deleted when the private browsing mode ends." Đúng; MDN nói "thường" (usually) nên câu của trang hơi tuyệt đối, chấp nhận được.'
+  - id: n13
+    cau: Bản thu âm chỉ nằm trong file sao lưu khi bạn đánh dấu "Kèm bản thu âm".
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/sao-luu.js: ô data-k="thu" nhãn "Kèm bản thu âm (file sẽ lớn hơn nhiều)"; không đánh dấu thì recordings là [].'
+khuong_nhac: []

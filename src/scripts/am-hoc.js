@@ -152,7 +152,8 @@ function mountPho(goc) {
 	const nutMic = goc.querySelector('[data-act="mic"]');
 	let phan = null; // AnalyserNode đang vẽ
 	let nghe = null; // AnalyserNode gắn vào đầu ra chung của site
-	let mic = null; // { luong, phan }
+	let mic = null; // { luong, phan, nha }
+	let choMic = null; // đang chờ micro mở: { huy }
 	let raf = 0;
 	let du = null;
 	let song = null;
@@ -202,19 +203,32 @@ function mountPho(goc) {
 		const viec = nut.dataset.act;
 		if (viec === 'mic') {
 			if (mic) return tatMic();
-			// Safari trên iPhone: thu và phát cùng lúc (AGENTS.md, Sau D3-L1; src/scripts/micro.js)
+			if (choMic) return;
+			// mỗi lúc một công cụ dùng micro: nhận lượt trước (công cụ khác thôi nghe, đặt Audio Session về playback), rồi mới
+			// đặt Audio Session thu và phát (Safari trên iPhone; AGENTS.md, Sau D3-L1; src/scripts/micro.js) và mở micro
+			const cho = (choMic = { huy: false });
+			const nha = giuMicro(() => {
+				cho.huy = true;
+				tatMic();
+			});
 			phienThu(true);
 			try {
 				const luong = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false } });
+				// công cụ khác nhận micro trong lúc chờ người dùng cho phép: đóng luồng vừa mở
+				if (cho.huy) return void luong.getTracks().forEach((t) => t.stop());
 				const a = taoPhan(c);
 				c.createMediaStreamSource(luong).connect(a);
-				// mỗi lúc một công cụ dùng micro (công cụ khác trên trang đang nghe thì thôi)
-				mic = { luong, phan: a, nha: giuMicro(tatMic) };
+				mic = { luong, phan: a, nha };
 				nutMic.textContent = 'Tắt micro';
 				chay(a);
 			} catch {
-				phienThu(false);
-				tin.textContent = 'Không mở được micro.';
+				nha();
+				if (!cho.huy) {
+					phienThu(false);
+					tin.textContent = 'Không mở được micro.';
+				}
+			} finally {
+				choMic = null;
 			}
 			return;
 		}

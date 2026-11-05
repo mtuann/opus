@@ -1,9 +1,9 @@
 ---
 title: Chép giai điệu
-description: "Nghe một câu nhạc ngắn rồi nhập lại từng nốt bằng bàn phím trên màn hình (hoặc đàn MIDI). Đây là kỹ năng luyện tai cao nhất: biến âm thanh trong đầu thành nốt…"
+description: "Nghe một câu nhạc ngắn rồi nhập lại từng nốt bằng bàn phím trên màn hình (hoặc đàn MIDI). Đây là một bài luyện tai khó: biến âm thanh trong đầu thành nốt…"
 ---
 
-Nghe một câu nhạc ngắn rồi **nhập lại từng nốt** bằng bàn phím trên màn hình (hoặc đàn MIDI). Đây là kỹ năng luyện tai cao nhất: biến âm thanh trong đầu thành nốt nhạc.
+Nghe một câu nhạc ngắn rồi **nhập lại từng nốt** bằng bàn phím trên màn hình (hoặc đàn MIDI). Đây là một bài luyện tai khó: biến âm thanh trong đầu thành nốt nhạc.
 
 ::cong-cu{ten="dictation"}
 
@@ -14,4 +14,4 @@ Nghe một câu nhạc ngắn rồi **nhập lại từng nốt** bằng bàn ph
 3. Tìm **nốt cuối** trước (thường là Đô, cao hoặc thấp), rồi các nốt ở giữa.
 4. Nghĩ theo **bậc** và **quãng**: "đi lên một bậc", "nhảy xuống quãng 3" (xem [bài 9](/opus/nhac-ly/09-quang/)).
 
-Bắt đầu với cấp 1 (4 nốt, chỉ bước liền), chuyển cấp khi chép đúng hoàn toàn 4 trên 5 câu.
+Bắt đầu với cấp 1 (4 nốt, đi liền bậc; nốt cuối luôn là Đô), chuyển cấp khi chép đúng hoàn toàn 4 trên 5 câu.

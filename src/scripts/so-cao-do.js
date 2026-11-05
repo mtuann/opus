@@ -4,7 +4,7 @@
 // như bản cũ (75% giá trị trước, 25% giá trị mới).
 // veSoCaoDo dựng sẵn ô lúc build, mount thêm phần bấm được.
 import { choiNot, layNgCanh } from './am-thanh.js';
-import { coMicro, giuMicro, midiCuaTanSo, moMicro, ngheMicro } from './micro.js';
+import { coMicro, dongMicro, giuMicro, midiCuaTanSo, moMicro, ngheMicro } from './micro.js';
 
 const TEN = ['Đô', 'Đô♯', 'Rê', 'Mi♭', 'Mi', 'Fa', 'Fa♯', 'Sol', 'Sol♯', 'La', 'Si♭', 'Si'];
 const CHU = ['C', 'C♯', 'D', 'E♭', 'E', 'F', 'F♯', 'G', 'G♯', 'A', 'B♭', 'B'];
@@ -65,6 +65,8 @@ export function mount(goc) {
 	let thoi = null;
 	let nha = null;
 	let muot = null;
+	/** Đang chờ micro mở (người dùng đang được hỏi quyền): bấm thêm thì bỏ qua; tắt trong lúc chờ thì hủy. */
+	let cho = null;
 	const nutDay = () => {
 		const ds = DAY[chon.value];
 		day.innerHTML = ds
@@ -76,6 +78,11 @@ export function mount(goc) {
 		if (b && layNgCanh()) choiNot(Number(b.dataset.m), undefined, 2.5, 0.25);
 	});
 	const tat = () => {
+		// tắt trong lúc chờ micro mở: hủy lần mở ấy (micro.js đóng luồng khi getUserMedia xong)
+		if (cho) {
+			cho.huy = true;
+			dongMicro();
+		}
 		thoi?.();
 		thoi = null;
 		nha?.();
@@ -85,15 +92,25 @@ export function mount(goc) {
 	};
 	const bat = async () => {
 		if (!coMicro()) return void (cent.textContent = 'Trình duyệt này không mở được micro. Hãy thử Chrome, Edge, Firefox hoặc Safari bản mới.');
+		if (cho) return;
 		// nhận lượt trước (công cụ đang nghe thôi, micro có thể đóng), rồi mới mở micro
+		const lan = (cho = { huy: false });
 		nha = giuMicro(tat);
+		nut.setAttribute('aria-busy', 'true');
 		try {
 			await moMicro();
 		} catch {
-			nha();
-			nha = null;
-			return void (cent.textContent = 'Không mở được micro. Hãy cho phép trang dùng micro trong cài đặt trình duyệt rồi thử lại.');
+			if (!lan.huy) {
+				nha?.();
+				nha = null;
+				cent.textContent = 'Không mở được micro. Hãy cho phép trang dùng micro trong cài đặt trình duyệt rồi thử lại.';
+			}
+			return;
+		} finally {
+			cho = null;
+			nut.removeAttribute('aria-busy');
 		}
+		if (lan.huy) return;
 		nut.textContent = 'Tắt micro';
 		cent.textContent = 'Đang nghe… hãy hát, gảy hoặc kéo một dây.';
 		thoi = ngheMicro(({ f }) => {
@@ -107,7 +124,7 @@ export function mount(goc) {
 			cent.textContent = d.loi;
 		});
 	};
-	nut.addEventListener('click', () => (thoi ? tat() : bat()));
+	nut.addEventListener('click', () => (thoi ? tat() : cho ? undefined : bat()));
 	chon.addEventListener('change', nutDay);
 	nutDay();
 	goc.dataset.san = '1';

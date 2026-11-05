@@ -13,7 +13,7 @@ Hát buộc tai và não liên kết với nhau: bạn phải **nghe trong đầ
 
 - Bắt đầu với **Hát lại một nốt**, rồi chuyển sang **Hát quãng đi lên**.
 - Hát nguyên âm "a" hoặc "la", giữ hơi đều; đừng trượt lên xuống tìm nốt.
-- Nếu thường xuyên bị báo thấp (hoặc cao) hơn khoảng 12 nửa cung, có thể bạn đang hát đúng nốt nhưng ở quãng tám khác: chọn lại **Giọng**.
+- Công cụ bỏ qua quãng tám: hát đúng nốt ở quãng tám nào cũng được tính là đúng (giọng nam hát thấp hơn một quãng tám vẫn đúng). Chọn **Giọng** để nốt mẫu nằm trong tầm hát của bạn.
 
 Xem thêm: [Bài 0, mục "Tôi bị lệch tông"](/opus/bat-dau/bai-0/#toi-co-can-biet-hat-khong-toi-bi-lech-tong).
 
@@ -25,5 +25,5 @@ Bấm **Bật micro**, rồi hát hoặc chơi một nốt. Màn hình cho biế
 
 Máy dựa trên **La4 = 440 Hz**, chuẩn phổ biến nhất hiện nay (xem [Âm học: chuẩn cao độ](/opus/nhac-ly/am-hoc/#chuan-cao-o-la-440-hz)).
 
-- **Đàn piano cơ** thì không tự lên dây: việc ấy dành cho thợ ([Chăm sóc và bảo dưỡng](/opus/piano/chon-dan/#cham-soc-va-bao-duong)). Nhưng máy cho biết đàn nhà bạn đang lệch chuẩn bao nhiêu: chơi nốt La4, ngay trên Đô giữa, và đọc số cent. Điều này quan trọng khi bạn [chơi cùng một nhạc cụ khác](/opus/piano/choi-cung-nguoi-khac/#song-tau-voi-mot-nhac-cu), vì nhạc cụ kia phải chỉnh theo piano. Piano điện luôn đúng cao độ.
+- **Đàn piano cơ** thì không tự lên dây: việc ấy dành cho thợ ([Chăm sóc và bảo dưỡng](/opus/piano/chon-dan/#cham-soc-va-bao-duong)). Nhưng máy cho biết đàn nhà bạn đang lệch chuẩn bao nhiêu: chơi nốt La4, ngay trên Đô giữa, và đọc số cent. Điều này quan trọng khi bạn [chơi cùng một nhạc cụ khác](/opus/piano/choi-cung-nguoi-khac/#song-tau-voi-mot-nhac-cu), vì nhạc cụ kia phải chỉnh theo piano. Piano điện không phải lên dây vì cao độ do mạch điện tử giữ; nếu đàn có chỉnh chuẩn La (mặc định thường 440 hay 442 Hz) thì đối chiếu lại bằng máy.
 - Dùng ở nơi yên tĩnh, đặt điện thoại gần nguồn âm.
