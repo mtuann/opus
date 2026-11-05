@@ -10,7 +10,7 @@ lan:
     nguoi:
       luot_1: Claude Sonnet 5.5 (D8-L2 lượt 1, phần 2/2)
       luot_2: null
-      review: null
+      review: Claude Opus 5.5 (review D8-gom, 05/11/2026)
       kiem_mau: null
 ghi_chu: 'Trang Đọc thêm (ngoại vi), không có khối abc. Nguồn chính mở được ngày 05/11/2026: Concise Oxford Dictionary of Music (Encyclopedia.com), VSL Academy (đọc qua công cụ đọc web; curl chỉ ra vỏ JavaScript trống), IMSLP, Weakley (University of Florida) cho áp lực môi. Chỗ sửa lớn: mô tả âm sắc (a1, a3), "dịch giọng/phổ biến nhất" (a8), bỏ trumpet Đô "dùng nhiều" (a13), piccolo Si♭ (a15), vai trò dàn nhạc (a18), Baroque (a19: bỏ Handel, Purcell), jazz (a20–a22: bỏ cup, plunger), Kind of Blue (a29), phần "Nếu muốn học" (a33–a39: bỏ 15–20 phút, giá, môi nhanh mỏi; áp lực môi theo nguồn). Chưa quyết: a27 (Tchaikovsky 1812: nghe kèn đồng ở đoạn trận chiến, ket_qua null). Câu về sức khỏe (áp lực môi, a34) xếp quy-tac, cần lượt 2. Mô tả trang (description) đổi theo a1. doi_chu viết tay từ khối của dist/ cũ (dist chưa build lại sau sửa): người giao chạy node tools/chuyen/so-chu.mjs nhac-cu/trumpet --doi-chu sau khi build để đối chiếu; dòng "Opus tập trung vào piano" người giao ghi (dist cũ còn "Opus Zero"). Thuật ngữ trang dùng chưa có bản ghi ở src/data/thuat-ngu.yml (cho D3-L5; không tạo): dịch giọng (transposing), piccolo (trumpet piccolo), van piston, clarino, sordino/mute (chỉ có con-sordino), fanfare, harmon mute, khóa Sol.'
 nguon:
@@ -94,6 +94,10 @@ nguon:
     bac: 2
     ten: Mark A. Weakley, Comparative Analysis of Trumpet Embouchure Methods (project in lieu of thesis, University of Florida), mục Instructional Strategies (truy cập 05/11/2026)
     link: https://ufdcimages.uflib.ufl.edu/AA/00/03/10/25/00001/Weakley_Mark_final_.pdf
+  - id: tchaikovsky-research-1812
+    bac: 2
+    ten: Tchaikovsky Research, The Year 1812 (biên chế); truy cập 2026-11-05
+    link: https://en.tchaikovsky-research.net/pages/The_Year_1812
 nhan_dinh:
   - id: n1
     cau: 'Trumpet có âm sắc sáng, mạnh và lộng lẫy: kim loại, vang, nổi lên trong dàn nhạc.'
@@ -306,16 +310,17 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'wssymphony.org: "A bold solo trumpet announces the beginning of the ''Promenade''"; bản phối của Ravel 1922 (wssymphony.org, Hollywood Bowl: "Trumpets alone present the theme"; "orch. 1922"); IMSLP: bản piano 1874.'
   - id: n27
-    cau: 'Tchaikovsky, 1812 Overture: nghe bộ kèn đồng ở đoạn trận chiến.'
-    loai: lich-su
-    nguon: []
-    ket_qua: null
-    ghi_chu: 'chưa chắc: trang hướng dẫn nghe (nghe-nhac/tchaikovsky-1812) chưa chuyển; trang cũ (../opus-zero/docs/nghe-nhac/tchaikovsky-1812.md) ghi gợi ý "nghe bộ gõ và kèn đồng" ở đoạn trận chiến, chưa kiểm định. Chưa mở được nguồn bậc 1–2 nào nói về phần kèn đồng của đoạn này (Hollywood Bowl 404). Người giao quyết giữ hay đổi thành "nghe đoạn trận chiến" không nói nhạc cụ.'
+    cau: 'Tchaikovsky, 1812 Overture: bộ kèn đồng của tác phẩm có 2 trumpet cùng 2 cornet, 4 horn, 3 trombone và tuba.'
+    loai: so-lieu
+    nguon: [ tchaikovsky-research-1812 ]
+    ket_qua: da-sua
+    ghi_chu: 'chưa chắc: trang hướng dẫn nghe (nghe-nhac/tchaikovsky-1812) chưa chuyển; trang cũ (../opus-zero/docs/nghe-nhac/tchaikovsky-1812.md) ghi gợi ý "nghe bộ gõ và kèn đồng" ở đoạn trận chiến, chưa kiểm định. Chưa mở được nguồn bậc 1–2 nào nói về phần kèn đồng của đoạn này (Hollywood Bowl 404). Người giao quyết giữ hay đổi thành "nghe đoạn trận chiến" không nói nhạc cụ. Review D8-gom: không nguồn bậc 1–2 nào mô tả kèn đồng ở đoạn trận chiến (Hollywood Bowl chỉ nói đại bác; Tchaikovsky Research chỉ ghi biên chế). Viết lại theo biên chế Tchaikovsky Research: "4 horns (in F), 2 cornets (in B-flat), 2 trumpets (in E-flat), 3 trombones, tuba". Ghi doi_chu. Đưa vào lượt 2 bổ sung.'
   - id: n28
     cau: Link tới hướng dẫn nghe Tchaikovsky, 1812 Overture.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm: nghe-nhac/tchaikovsky-1812 có trong src/data/trang.yml, chưa có trong src/content/docs/ (chưa chuyển): link hiện "sắp có", giữ địa chỉ /opus/nghe-nhac/tchaikovsky-1812/ đúng với trang cũ.'
+    ghi_chu: 'Kiểm: nghe-nhac/tchaikovsky-1812 có trong src/data/trang.yml, chưa có trong src/content/docs/ (chưa chuyển): link hiện "sắp có", giữ địa chỉ /opus/nghe-nhac/tchaikovsky-1812/ đúng với trang cũ. Review D8-gom: trang.yml có nghe-nhac/tchaikovsky-1812 ("sắp có"). Phần "nghe bộ kèn đồng ở đoạn trận chiến" là n27, không thuộc câu này.'
+    review: dung
   - id: n29
     cau: 'Miles Davis, Kind of Blue (jazz, 1959): trumpet với harmon mute ở Blue in Green và Flamenco Sketches.'
     loai: ten
@@ -403,17 +408,20 @@ nhan_dinh:
     cau: Trang này thuộc phần nghe; Opus tập trung vào piano; xem trang Nhạc cụ trong dàn nhạc.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm: như sao t27. Chữ "Opus tập trung vào piano" đổi từ "Opus Zero…": người giao ghi doi_chu.'
+    ghi_chu: 'Kiểm: như sao t27. Chữ "Opus tập trung vào piano" đổi từ "Opus Zero…": người giao ghi doi_chu. Review D8-gom: như cello n30.'
+    review: dung
   - id: n41
     cau: Xem thêm vị trí của trumpet trong dàn nhạc giao hưởng.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm: nhac-cu/dan-nhac.md có mục Bộ đồng với dòng Trumpet; link đúng.'
+    ghi_chu: 'Kiểm: nhac-cu/dan-nhac.md có mục Bộ đồng với dòng Trumpet; link đúng. Review D8-gom: nhac-cu/dan-nhac.md (đã khóa), mục Bộ đồng có trumpet.'
+    review: dung
   - id: n42
     cau: 'Nguồn: bản nhạc ở IMSLP; xem trang tài liệu tham khảo.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm: tai-lieu-tham-khao.md có mục IMSLP; link đúng.'
+    ghi_chu: 'Kiểm: tai-lieu-tham-khao.md có mục IMSLP; link đúng. Review D8-gom: tai-lieu-tham-khao.md (đã khóa) dòng 39: IMSLP.'
+    review: dung
 khuong_nhac: []
 doi_chu:
   - cu: "Opus Zero tập trung vào piano; trang này giúp bạn nghe hiểu nhạc cụ này khi nó xuất hiện trong dàn nhạc, nhạc thính phòng hay concerto. Xem Nhạc cụ trong dàn nhạc."
@@ -449,3 +457,6 @@ doi_chu:
   - cu: 'mô tả: Trumpet là giọng lệnh của dàn nhạc: sáng, vang xa, xuyên qua mọi âm thanh khác. Từ tiếng kèn trận thời xưa đến những đoạn cao trào chói lọi trong giao hưởng…'
     moi: 'mô tả: Trumpet có âm sắc sáng, mạnh và lộng lẫy: kim loại, vang, nổi lên trong dàn nhạc. Từ tiếng kèn trận thời xưa đến những đoạn cao trào trong giao hưởng, đây là nhạc cụ của sự hùng tráng.'
     ly_do: 'n1, n2 (da-sua): mô tả trang đổi theo câu mở đầu.'
+  - cu: Tchaikovsky, 1812 Overture — nghe bộ kèn đồng ở đoạn trận chiến
+    moi: Tchaikovsky, 1812 Overture — bộ kèn đồng của tác phẩm có 2 trumpet cùng 2 cornet, 4 horn, 3 trombone và tuba
+    ly_do: "Review D8-gom: n27, không nguồn nói về kèn đồng ở đoạn trận chiến; viết theo biên chế của Tchaikovsky Research."

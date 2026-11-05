@@ -10,7 +10,7 @@ Những câu hỏi thường gặp của người mới. Chưa thấy câu hỏi
 <details>
 <summary>Người lớn bắt đầu học piano có muộn không?</summary>
 
-Không. Người lớn vẫn học được piano, và có lợi thế ở cách tự sắp xếp việc học; người học từ nhỏ có lợi thế về phối hợp động tác, nên ngón tay của người lớn có thể quen chậm hơn một chút. Nhiều người bắt đầu ở tuổi 40, 50, 60 vẫn chơi được những tác phẩm họ yêu thích. Xem [lộ trình piano năm đầu](/opus/bat-dau/lo-trinh-choi/).
+Không. Người lớn vẫn học được piano, và có lợi thế ở cách tự sắp xếp việc học; người học từ nhỏ có lợi thế về phối hợp động tác, nên ngón tay của người lớn có thể quen chậm hơn một chút. Xem [lộ trình piano năm đầu](/opus/bat-dau/lo-trinh-choi/).
 
 </details>
 
@@ -24,7 +24,7 @@ Không. Người lớn vẫn học được piano, và có lợi thế ở cách
 <details>
 <summary>Mỗi ngày nên tập bao lâu?</summary>
 
-Năm đầu: 20–45 phút mỗi ngày là đủ; nên chia thành hai buổi ngắn nếu được. Sau đó có thể tăng dần lên 60–90 phút, tăng từ từ và luôn xen giờ nghỉ (xem [Giữ đôi tay khỏe](/opus/piano/suc-khoe/)). Quan trọng hơn thời gian là **cách tập**: mục tiêu rõ, chậm, chia nhỏ. Xem [Thói quen mỗi ngày](/opus/bat-dau/moi-ngay/) và [Cách tập hiệu quả](/opus/piano/cach-tap/).
+Năm đầu (chặng 1 và đầu chặng 2), lộ trình của site gợi ý 20–30 phút mỗi ngày; nên chia thành hai buổi ngắn nếu được. Ở các chặng sau, thời gian tăng dần tới 60–90 phút (chặng 6). Tăng từ từ và luôn xen giờ nghỉ (xem [Giữ đôi tay khỏe](/opus/piano/suc-khoe/)). Quan trọng hơn thời gian là **cách tập**: mục tiêu rõ, chậm, chia nhỏ. Xem [Thói quen mỗi ngày](/opus/bat-dau/moi-ngay/) và [Cách tập hiệu quả](/opus/piano/cach-tap/).
 
 </details>
 
@@ -59,7 +59,7 @@ Bài ấy không phải của Chopin. Đó là *Mariage d'Amour* của Paul de S
 <details>
 <summary>Tôi từng học đàn hồi nhỏ, nay quay lại thì bắt đầu từ đâu?</summary>
 
-Làm [bài kiểm tra đầu vào](/opus/bat-dau/kiem-tra-dau-vao/), rồi bắt đầu thấp hơn chặng nó gợi ý một chặng: tay cần vài tuần để nhớ lại, và bài dễ giúp bạn lấy lại nhịp tập đều. Mấy tuần đầu dành nhiều thời gian cho gam và đọc nhạc, hai thứ hay mai một nhất sau nhiều năm nghỉ. Xem [lộ trình piano](/opus/piano/lo-trinh/).
+Làm [bài kiểm tra đầu vào](/opus/bat-dau/kiem-tra-dau-vao/), rồi bắt đầu thấp hơn chặng nó gợi ý một chặng: tay cần vài tuần để nhớ lại, và bài dễ giúp bạn lấy lại nhịp tập đều. Mấy tuần đầu dành nhiều thời gian cho gam và đọc nhạc. Xem [lộ trình piano](/opus/piano/lo-trinh/).
 
 </details>
 
@@ -117,21 +117,21 @@ Rất nên. Biết gam, hợp âm và kết giúp bạn đọc nhanh hơn (thấ
 <details>
 <summary>Có cần học nhạc lý nếu chỉ muốn nghe?</summary>
 
-Không bắt buộc, nhưng rất nên học ít nhất 9 bài đầu. Biết gam, giọng và quãng giúp bạn hiểu *vì sao* một đoạn nhạc nghe buồn, căng thẳng hay được giải tỏa. Xem [lộ trình nghe hiểu](/opus/bat-dau/lo-trinh-nghe/): nó chỉ dùng phần nhạc lý cần thiết.
+Không bắt buộc, nhưng rất nên học vài bài. [Lộ trình nghe hiểu](/opus/bat-dau/lo-trinh-nghe/) 6 tháng chỉ dùng sáu bài nhạc lý: bài 1 và 4 (cao độ, nhịp), bài 6 và 7 (gam trưởng, gam thứ), bài 12 và 13 (hòa âm chức năng, kết). Biết gam, giọng và kết giúp bạn hiểu *vì sao* một đoạn nhạc nghe buồn, căng thẳng hay được giải tỏa.
 
 </details>
 
 <details>
 <summary>Nên học Đô Rê Mi hay C D E?</summary>
 
-Cả hai. Ở Việt Nam, sách và thầy cô dùng Đô Rê Mi; phần lớn tài liệu tốt trên mạng, phần mềm và ký hiệu hợp âm dùng chữ cái. Site này luôn ghi cả hai.
+Cả hai. Ở Việt Nam, tên nốt gọi là Đô, Rê, Mi; trong tài liệu tiếng Anh và trong ký hiệu hợp âm (C, Am, G7), tên nốt viết bằng chữ cái. Site này luôn ghi cả hai.
 
 </details>
 
 <details>
 <summary>Đô Rê Mi 'cố định' và 'di động' là gì?</summary>
 
-**Đô cố định**: Đô luôn là nốt C, dù bản nhạc ở giọng nào. Đây là cách dùng ở Pháp, Ý, Tây Ban Nha, Nga… **Đô di động**: "Đô" là chủ âm của giọng đang chơi; ở giọng Sol trưởng, nốt Sol được hát là "Đô". Cách này phổ biến ở Anh, Mỹ, Hungary (phương pháp Kodály), rất mạnh cho luyện tai. Site này dùng Đô cố định để gọi tên nốt.
+**Đô cố định**: Đô luôn là nốt C, dù bản nhạc ở giọng nào. Đây là cách dùng ở các nước như Pháp, Ý. **Đô di động**: "Đô" là chủ âm của giọng trưởng đang chơi; ở giọng Sol trưởng, nốt Sol được hát là "Đô". Cách này phát triển trong dạy hát hợp xướng ở Anh, và Kodály chủ trương dùng nó để dạy đọc nhạc; phương pháp của ông dùng nó cho thị xướng, nghe chép và luyện tai. Site này dùng Đô cố định để gọi tên nốt.
 
 </details>
 
@@ -170,7 +170,7 @@ Trong trình duyệt trên máy bạn, không gửi đi đâu. Dùng [Dữ liệ
 <details>
 <summary>Không nghe thấy âm thanh?</summary>
 
-Kiểm tra điện thoại không ở chế độ im lặng (trên iPhone, công tắc im lặng chặn cả âm thanh trang web), và bấm vào trang một lần trước khi phát. Âm thanh của khuông nhạc cần mạng ở lần đầu tiên.
+Kiểm tra điện thoại không ở chế độ im lặng: trên iPhone, chế độ này mặc định tắt cả tiếng do trang web phát, kể cả tiếng của khuông nhạc trên site. Bấm vào trang một lần trước khi phát. Âm thanh của khuông nhạc cần mạng ở lần đầu tiên.
 
 </details>
 

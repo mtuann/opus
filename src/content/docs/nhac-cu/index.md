@@ -31,13 +31,13 @@ Sơ đồ chỗ ngồi và âm vực từng nhạc cụ so với bàn phím pian
 Có nhà soạn nhạc viết cho piano với âm sắc nhạc cụ khác trong đầu. Khi tập một bài, hãy tự hỏi: đoạn này là nhạc cụ gì?
 
 - Chủ đề chậm, dài hơi thường là **giọng hát** hoặc **cello**: chơi legato, thở theo câu (xem [Tạo tiếng đàn](/opus/piano/tieng-dan/)).
-- Những quãng rộng, mở gợi tiếng của **kèn horn**. Ba hợp âm *Le-be-wohl* mở đầu sonata *Les Adieux* Op. 81a của Beethoven gợi tiếng tù và săn bắn, rồi hợp âm thứ ba đưa bài tới một nơi bất ngờ.
-- Nốt lặp nhanh trong các sonata của Scarlatti thường được cho là gợi **guitar** Tây Ban Nha ([hướng dẫn nghe](/opus/nghe-nhac/scarlatti-sonata/)).
+- Lối hai bè quen thuộc của kèn horn tự nhiên ("quãng năm kèn horn") gợi tiếng **kèn horn**. Ba hợp âm *Le-be-wohl* mở đầu sonata *Les Adieux* Op. 81a của Beethoven dựa trên một hình nét kèn horn tự nhiên: hai bè đi qua quãng 3 trưởng, quãng 5 đúng, quãng 6 thứ.
+- Trong các sonata của Scarlatti có những hợp âm rải bắt chước tiếng gảy dây **guitar** ([hướng dẫn nghe](/opus/nghe-nhac/scarlatti-sonata/)).
 - *Những bức tranh ở phòng triển lãm* của Mussorgsky vốn viết cho piano, về sau Ravel phối cho dàn nhạc. Nghe cả hai để thấy piano "chứa" cả dàn nhạc thế nào ([hướng dẫn nghe](/opus/nghe-nhac/mussorgsky-tranh/)).
 
 ## Các trang trong mục này
 
 - [Dàn nhạc giao hưởng](/opus/nhac-cu/dan-nhac/): các bộ, sơ đồ chỗ ngồi, âm vực, bài tập nghe.
-- [Violin](/opus/nhac-cu/violin/), [Cello](/opus/nhac-cu/cello/), [Guitar cổ điển](/opus/nhac-cu/guitar/), [Sáo](/opus/nhac-cu/sao/), [Clarinet](/opus/nhac-cu/clarinet/), [Trumpet](/opus/nhac-cu/trumpet/): âm thanh, vai trò, nên nghe gì, nghệ sĩ nên tìm, và vài lời khuyên nếu bạn muốn học chơi.
+- [Violin](/opus/nhac-cu/violin/), [Cello](/opus/nhac-cu/cello/), [Guitar cổ điển](/opus/nhac-cu/guitar/), [Sáo](/opus/nhac-cu/sao/), [Clarinet](/opus/nhac-cu/clarinet/), [Trumpet](/opus/nhac-cu/trumpet/): âm thanh, nên nghe gì, nghệ sĩ nên tìm, và vài lời khuyên nếu bạn muốn học chơi.
 - [Giọng hát, organ, harpsichord](/opus/nhac-cu/nhac-cu-khac/): ba "giọng nói" quan trọng khác. Harpsichord là cây đàn của phần lớn nhạc phím Baroque mà người chơi piano ngày nay vẫn học (xem [Lịch sử cây đàn piano](/opus/piano/lich-su-dan/)).
 - Nhận ra nhạc cụ bằng tai: [Luyện nghe nhận diện](/opus/nhan-dien/luyen-nghe/) và [Ravel: Boléro](/opus/nghe-nhac/ravel-bolero/).

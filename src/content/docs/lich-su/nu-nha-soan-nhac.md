@@ -64,7 +64,7 @@ Lịch sử âm nhạc thường được kể qua những cái tên nam giới.
 *Nghe:* *Hồ Nguyệt Cô hoá cáo* (cho ngũ tấu nhạc cụ cổ điển cùng bộ gõ, và video trình diễn Tuồng; công diễn ở Liên hoan Nhạc mới Hà Nội 2018).
 
 **Sa Huỳnh** (sinh 1988), tên khai sinh Lương Sa Huỳnh. Con gái cố nhạc sĩ Triều Dâng, chị học Khoa Piano, Nhạc viện TP. Hồ Chí Minh, được biết đến từ ca khúc *Về ăn cơm* (Bài hát Việt 2007), rồi viết nhiều ca khúc cho ca sĩ Tùng Dương.
-*Dấu vân tay:* ca từ giàu chất tự sự, theo nhận xét của Tùng Dương.
+*Dấu vân tay:* các ca khúc trong album *Human* đi qua những chặng đường của đời người, những suy nghĩ về cuộc sống.
 *Nghe:* *Về ăn cơm*; *Chiếc ô ngăn đôi*; sáu ca khúc của chị trong album *Human* của Tùng Dương.
 
 ## Nguồn

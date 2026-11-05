@@ -9,7 +9,7 @@ lan:
     nguoi:
       luot_1: Claude Sonnet (D8-L1 lượt 1, phần 2/2)
       luot_2: null
-      review: null
+      review: Claude Opus 5.5 (D8-gom, không làm lượt 1, lượt 2 của trang này)
       kiem_mau: null
 ghi_chu: 'Trang tham chiếu có hạn (ra_lai 2027-04). Kiểm định lượt 1 ngày 05/11/2026 (mọi nguồn truy cập ngày ấy). Rà lại theo service worker của D7-L3 (bao-cao/d7-l3.md; AGENTS.md mục D7-L3): đọc src/ung-dung/ung-dung.mjs, public/manifest.webmanifest, tests/trinh-duyet/kiem-ung-dung.mjs, src/scripts/sao-luu.js; câu về site là ve-site, ghi_chu nói đã kiểm ở đâu. Cách cài lấy từ trang hỗ trợ của hãng (Google Chrome Help, Microsoft Learn, Apple iPhone User Guide, MDN); không đọc được trang Firefox (Mozilla chặn công cụ đọc web) nên trang không viết về Firefox, kể cả Firefox Android (không thay đổi so với trang cũ, vốn không nhắc). Không có khối abc, câu hỏi hay thuật ngữ. Người giao cần biết: (1) trang Hỏi đáp (bat-dau/hoi-dap) và trang này dùng tên "Opus"; (2) câu về kho dữ liệu iOS dựa trên bình luận WebKit 2022, nên rà lại khi tháng 4/2027.'
 nguon:
@@ -29,6 +29,10 @@ nguon:
     bac: 2
     ten: Apple, iPhone User Guide, Bookmark a website in Safari on iPhone (mục Add a website icon to your Home Screen); truy cập 05/11/2026
     link: https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios
+  - id: apple-iphone-vi
+    bac: 2
+    ten: 'Apple, Hướng dẫn sử dụng iPhone (bản tiếng Việt), mục Thêm biểu tượng trang web vào Màn hình chính: "Chạm vào [nút Menu của trang], sau đó chạm vào Chia sẻ. Nếu bố cục tab là Dưới cùng hoặc Trên cùng, hãy chạm vào [nút Chia sẻ]"; truy cập 05/11/2026 (review D8-gom)'
+    link: https://support.apple.com/vi-vn/guide/iphone/iph42ab2f3a7/ios
   - id: webkit-181849
     bac: 2
     ten: WebKit Bugzilla 181849, "Add to homescreen" apps don't share storage with Safari (bình luận của Brent Fulgham, WebKit, 1/2/2022); truy cập 05/11/2026
@@ -38,18 +42,17 @@ nhan_dinh:
     cau: Opus có thể được cài lên màn hình chính của điện thoại hoặc máy tính, mở như một ứng dụng riêng, và dùng được cả khi không có mạng với những trang bạn đã từng mở.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Đã kiểm: public/manifest.webmanifest (name Opus, display standalone, icon 192, 512 và maskable, start_url ./); src/ung-dung/ung-dung.mjs (dist/sw.js sinh lúc build, phạm vi /opus/, trang lấy mạng trước, mất mạng thì bản đã lưu); tests/trinh-duyet/kiem-ung-dung.mjs (tắt mạng, trang đã xem mở lại được). Tên site trong manifest là Opus; trang cũ ghi "Opus Zero" (xem doi_chu).'
+    ghi_chu: 'Đã kiểm: public/manifest.webmanifest (name Opus, display standalone, icon 192, 512 và maskable, start_url ./); src/ung-dung/ung-dung.mjs (dist/sw.js sinh lúc build, phạm vi /opus/, trang lấy mạng trước, mất mạng thì bản đã lưu); tests/trinh-duyet/kiem-ung-dung.mjs (tắt mạng, trang đã xem mở lại được). Tên site trong manifest là Opus; trang cũ ghi "Opus Zero" (xem doi_chu). Review D8-gom: public/manifest.webmanifest (short_name Opus, display standalone, ba icon); src/ung-dung/ung-dung.mjs (mangTruoc: trang lấy mạng trước, mất mạng dùng bản đã lưu).'
+    review: dung
   - id: n2
-    cau: 'Trên iPhone, iPad (Safari): mở site bằng Safari; bấm nút Chia sẻ (hình vuông có mũi tên lên; ở một số bản iOS nút này nằm trong menu ⋯ cạnh thanh địa chỉ); cuộn xuống và chọn Thêm vào Màn hình chính (Add to Home Screen).'
+    cau: 'Trên iPhone, iPad (Safari): mở site bằng Safari; bấm nút ⋯ (Menu của trang), rồi bấm Chia sẻ; nếu bố cục tab là Dưới cùng hay Trên cùng, bấm thẳng nút Chia sẻ (hình vuông có mũi tên lên); cuộn xuống và chọn Thêm vào Màn hình chính (Add to Home Screen).'
     loai: quy-tac
     nguon:
       - apple-iphone
       - mdn-install
-    ket_qua: dung
-    ghi_chu: 'Apple (đã mở bản tiếng Anh): "Go to the Safari app… Tap …, then tap Share. If your Tabs layout is Bottom or Top, tap … Scroll down the list of options, then tap Add to Home Screen." Nhãn tiếng Việt "Thêm vào Màn hình chính" là bản dịch của trang cũ; không có trang Apple tiếng Việt đã mở để đối chiếu nhãn, nên trang ghi thêm nhãn tiếng Anh. MDN: Safari trên iOS cài PWA bằng giao diện "Add to home screen".'
-    luot_2: khong-chac
-    luot_2_nguon: [ "https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/" ]
-    luot_2_ghi_chu: "WebKit xác nhận: mở site ở Safari, bấm Share, chọn Add to Home Screen. Chưa xác nhận được chi tiết 'ở một số bản iOS nút Chia sẻ nằm trong menu ⋯ cạnh thanh địa chỉ' (trang hỗ trợ Apple chỉ mở được phần cắt cụt). Do vậy không ghi đúng cả câu."
+      - apple-iphone-vi
+    ket_qua: da-sua
+    ghi_chu: 'Apple (đã mở bản tiếng Anh): "Go to the Safari app… Tap …, then tap Share. If your Tabs layout is Bottom or Top, tap … Scroll down the list of options, then tap Add to Home Screen." Nhãn tiếng Việt "Thêm vào Màn hình chính" là bản dịch của trang cũ; không có trang Apple tiếng Việt đã mở để đối chiếu nhãn, nên trang ghi thêm nhãn tiếng Anh. MDN: Safari trên iOS cài PWA bằng giao diện "Add to home screen". Review D8-gom: lượt 2 không xác nhận được vế "ở một số bản iOS nút này nằm trong menu ⋯ cạnh thanh địa chỉ". Đã mở Apple, Hướng dẫn sử dụng iPhone, bản tiếng Việt (https://support.apple.com/vi-vn/guide/iphone/iph42ab2f3a7/ios) và tiếng Anh: "Chạm vào [nút Menu của trang], sau đó chạm vào Chia sẻ. Nếu bố cục tab là Dưới cùng hoặc Trên cùng, hãy chạm vào [nút Chia sẻ]. Cuộn danh sách các tùy chọn xuống, sau đó chạm vào Thêm vào Màn hình chính" (tên nút lấy từ thuộc tính alt của hình). Viết lại bước 2 theo đúng chữ ấy (bỏ "một số bản iOS", "cạnh thanh địa chỉ"); nhãn "Thêm vào Màn hình chính" khớp bản tiếng Việt. Chữ đổi sau lượt 2: lượt 2 bổ sung. Lượt 2 cũ (trước khi đổi chữ): khong-chac, nguồn https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/; WebKit xác nhận: mở site ở Safari, bấm Share, chọn Add to Home Screen. Chưa xác nhận được chi tiết ở một số bản iOS nút Chia sẻ nằm trong menu ⋯ cạnh thanh địa chỉ.'
   - id: n3
     cau: 'Trên Android (Chrome): mở site bằng Chrome; bấm menu ⋮ ở góc trên; chọn mục cài đặt ứng dụng trong menu (Chrome ghi Install and create shortcut), rồi bấm Install.'
     loai: quy-tac
@@ -76,27 +79,32 @@ nhan_dinh:
     cau: Vài giây sau khi trang tải xong, site tự chuẩn bị việc lưu trang.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Đã kiểm src/ung-dung/ung-dung.mjs: script đăng ký service worker chạy ở sự kiện load, chờ CHO_DANG_KY = 8000 ms rồi chờ lúc rảnh (requestIdleCallback, hạn 5000 ms), chỉ khi isSecureContext. Câu này thay cho câu cũ "đã mở ít nhất một lần… sẽ được lưu" đứng một mình: trang mở rồi rời đi trước lúc đăng ký thì chưa được lưu.'
+    ghi_chu: 'Đã kiểm src/ung-dung/ung-dung.mjs: script đăng ký service worker chạy ở sự kiện load, chờ CHO_DANG_KY = 8000 ms rồi chờ lúc rảnh (requestIdleCallback, hạn 5000 ms), chỉ khi isSecureContext. Câu này thay cho câu cũ "đã mở ít nhất một lần… sẽ được lưu" đứng một mình: trang mở rồi rời đi trước lúc đăng ký thì chưa được lưu. Review D8-gom: src/ung-dung/ung-dung.mjs: script đăng ký chạy sau load, setTimeout CHO_DANG_KY = 8000 rồi requestIdleCallback (timeout 5000), chỉ khi isSecureContext. "Vài giây" khớp.'
+    review: dung
   - id: n6
     cau: Từ đó, những trang bạn đã mở ít nhất một lần khi có mạng sẽ được lưu lại và mở được khi mất mạng; trang chủ được lưu sẵn.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Đã kiểm src/ung-dung/ung-dung.mjs: trang lấy mạng trước và lưu bản mới (mangTruoc), mất mạng thì dùng bản đã lưu, chưa có thì trang chủ đã lưu; tepLuuSan lưu sẵn trang chủ, 404, manifest, icon, CSS, JS và font của trang chủ. tests/trinh-duyet/kiem-ung-dung.mjs kiểm việc này bằng context.setOffline.'
+    ghi_chu: 'Đã kiểm src/ung-dung/ung-dung.mjs: trang lấy mạng trước và lưu bản mới (mangTruoc), mất mạng thì dùng bản đã lưu, chưa có thì trang chủ đã lưu; tepLuuSan lưu sẵn trang chủ, 404, manifest, icon, CSS, JS và font của trang chủ. tests/trinh-duyet/kiem-ung-dung.mjs kiểm việc này bằng context.setOffline. Review D8-gom: ung-dung.mjs: mangTruoc lưu bản mới mỗi lần trang tải qua mạng; tepLuuSan đọc dist/index.html để lưu sẵn trang chủ.'
+    review: dung
   - id: n7
     cau: Các công cụ luyện tập và khuông nhạc hoạt động bình thường nếu trang đó đã được mở trước.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Đã kiểm: tệp tĩnh (JS, CSS của công cụ, abcjs ở public/vendor/) lưu theo kiểu bản đã lưu trước, tải lại ngầm (ung-dung.mjs); tests/trinh-duyet/kiem-ung-dung.mjs: khuông vẽ được khi mất mạng sau khi đã xem trang. Mức độ "bình thường" của từng công cụ không kiểm riêng từng cái; công cụ dùng micro, MIDI không cần mạng, công cụ cần tệp chưa tải thì cần tải một lần.'
+    ghi_chu: 'Đã kiểm: tệp tĩnh (JS, CSS của công cụ, abcjs ở public/vendor/) lưu theo kiểu bản đã lưu trước, tải lại ngầm (ung-dung.mjs); tests/trinh-duyet/kiem-ung-dung.mjs: khuông vẽ được khi mất mạng sau khi đã xem trang. Mức độ "bình thường" của từng công cụ không kiểm riêng từng cái; công cụ dùng micro, MIDI không cần mạng, công cụ cần tệp chưa tải thì cần tải một lần. Review D8-gom: ung-dung.mjs (tệp tĩnh cùng site lưu khi tải); tests/trinh-duyet/kiem-ung-dung.mjs kiểm khuông vẽ được khi mất mạng sau khi đã xem trang.'
+    review: dung
   - id: n8
     cau: Âm thanh piano của các ví dụ khuông nhạc (phát bằng thư viện abcjs) cần được tải về ít nhất một lần khi có mạng.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Đã kiểm: soundfont của abcjs ở paulrosen.github.io/midi-js-soundfonts/ nằm trong MAY_NGOAI của ung-dung.mjs, chỉ lưu sau khi đã tải một lần (chưa nghe lần nào mà mất mạng thì khuông vẫn hiện, không có tiếng; chú thích đầu file).'
+    ghi_chu: 'Đã kiểm: soundfont của abcjs ở paulrosen.github.io/midi-js-soundfonts/ nằm trong MAY_NGOAI của ung-dung.mjs, chỉ lưu sau khi đã tải một lần (chưa nghe lần nào mà mất mạng thì khuông vẫn hiện, không có tiếng; chú thích đầu file). Review D8-gom: ung-dung.mjs: MAY_NGOAI = paulrosen.github.io/midi-js-soundfonts/, chỉ lưu khi đã tải (chú thích dòng 9).'
+    review: dung
   - id: n9
     cau: Ô tìm kiếm cần có mạng ở lần dùng đầu tiên.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Đã kiểm: chỉ mục Pagefind (pagefind-entry.json?ts=…) được lưu theo địa chỉ không có ?… sau lần tải đầu (nhánh "tệp có ?…" của sw.js); chưa tải lần nào thì cần mạng.'
+    ghi_chu: 'Đã kiểm: chỉ mục Pagefind (pagefind-entry.json?ts=…) được lưu theo địa chỉ không có ?… sau lần tải đầu (nhánh "tệp có ?…" của sw.js); chưa tải lần nào thì cần mạng. Review D8-gom: ung-dung.mjs: nhánh tệp có ?… (pagefind-entry.json?ts=…) mạng trước, lưu theo địa chỉ bỏ ?…; chưa tải lần nào thì cần mạng.'
+    review: dung
   - id: n10
     cau: 'Dữ liệu luyện tập nằm trong trình duyệt, và bản cài ra màn hình chính có thể không dùng chung dữ liệu với trình duyệt đã cài nó: trên iPhone, iPad ứng dụng ở Màn hình chính có kho dữ liệu riêng, và bản cài từ hai trình duyệt khác nhau cũng không dùng chung dữ liệu.'
     loai: so-lieu
@@ -104,15 +112,17 @@ nhan_dinh:
       - mdn-install
       - webkit-181849
     ket_qua: dung
-    ghi_chu: 'MDN: "you can install the same PWA from a different browser, but the two installs behave as separate instances and do not share data". WebKit (2022): "Home Screen apps are created as isolated entities without shared state with the browser." Đây là nguồn đã đọc; chưa có nguồn hãng nào mới hơn 2022 cho iOS 26 (Safari 26 mở mọi trang thêm vào Màn hình chính như ứng dụng web: chưa thấy nguồn nói kho dữ liệu đổi). Câu cũ "dùng chung dữ liệu với trình duyệt đã cài nó" sai ở iOS và ở Windows/Android khi cài từ trình duyệt khác; đã sửa (doi_chu). Trang rà lại tháng 4/2027.'
+    ghi_chu: 'MDN: "you can install the same PWA from a different browser, but the two installs behave as separate instances and do not share data". WebKit (2022): "Home Screen apps are created as isolated entities without shared state with the browser." Đây là nguồn đã đọc; chưa có nguồn hãng nào mới hơn 2022 cho iOS 26 (Safari 26 mở mọi trang thêm vào Màn hình chính như ứng dụng web: chưa thấy nguồn nói kho dữ liệu đổi). Câu cũ "dùng chung dữ liệu với trình duyệt đã cài nó" sai ở iOS và ở Windows/Android khi cài từ trình duyệt khác; đã sửa (doi_chu). Trang rà lại tháng 4/2027. Review D8-gom: lượt 2 khong-chac vì nguồn của lượt 2 không nói thẳng. Review đã mở lại hai nguồn của lượt 1 (bậc 2, đọc được): MDN, Installing and uninstalling web apps: "you can install the same PWA from a different browser and that the two apps will behave as two different instances and will not share any data"; WebKit Bugzilla 181849, bình luận 3 của Brent Fulgham (WebKit, 1/2/2022): "The current behavior (on Apple platforms) is by design. Home Screen apps are created as isolated entities without shared state with the browser." Hai vế của câu đều có nguồn bậc 2; chữ đã viết nhẹ ("có thể không dùng chung"). Giữ chữ. Nguồn iOS là năm 2022: điểm cần xem khi rà lại (4/2027).'
     luot_2: khong-chac
     luot_2_nguon: [ "https://webkit.org/blog/14403/updates-to-storage-policy/", "https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/" ]
     luot_2_ghi_chu: WebKit nói ứng dụng màn hình chính có hạn mức lưu trữ giống bản trình duyệt và 'mỗi trình duyệt có chính sách lưu trữ riêng'; nhưng không nói rõ kho dữ liệu của ứng dụng iOS tách riêng khỏi Safari, cũng không nói bản cài từ hai trình duyệt không dùng chung dữ liệu. Chưa có nguồn xác nhận cả câu.
+    review: dung
   - id: n11
     cau: Điện thoại và máy tính có dữ liệu riêng; dùng nút Tải file sao lưu và Gộp vào máy này ở trang Dữ liệu của tôi để chuyển giữa các thiết bị (gộp không bao giờ ghi đè dữ liệu đang có).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Đã kiểm: src/scripts/sao-luu.js có nút "Tải file sao lưu (.json)" (dòng 282), "Chọn file sao lưu" và "Gộp vào máy này" (dòng 384); trang /opus/luyen-tap/du-lieu/ (title "Dữ liệu của tôi") ghi "Gộp nghĩa là không có gì bị ghi đè hay xóa".'
+    ghi_chu: 'Đã kiểm: src/scripts/sao-luu.js có nút "Tải file sao lưu (.json)" (dòng 282), "Chọn file sao lưu" và "Gộp vào máy này" (dòng 384); trang /opus/luyen-tap/du-lieu/ (title "Dữ liệu của tôi") ghi "Gộp nghĩa là không có gì bị ghi đè hay xóa". Review D8-gom: src/scripts/sao-luu.js dòng 282 ("Tải file sao lưu (.json)"), dòng 384 ("Gộp vào máy này"); src/content/docs/luyen-tap/du-lieu.md (title "Dữ liệu của tôi", có trong src, chưa khóa) dòng 17: "Gộp nghĩa là không có gì bị ghi đè hay xóa".'
+    review: dung
 khuong_nhac: []
 doi_chu:
   - cu: Opus Zero có thể được cài lên màn hình chính của điện thoại hoặc máy tính, mở như một ứng dụng riêng, và dùng được cả khi không có mạng với những trang bạn đã từng mở.
@@ -122,9 +132,9 @@ doi_chu:
       - Bấm nút Chia sẻ (hình vuông có mũi tên lên).
       - Chọn Thêm vào Màn hình chính.
     moi:
-      - Bấm nút Chia sẻ (hình vuông có mũi tên lên; ở một số bản iOS nút này nằm trong menu ⋯ cạnh thanh địa chỉ).
+      - Bấm nút ⋯ (Menu của trang), rồi bấm Chia sẻ. Nếu bố cục tab là Dưới cùng hay Trên cùng, bấm thẳng nút Chia sẻ (hình vuông có mũi tên lên).
       - Cuộn xuống và chọn Thêm vào Màn hình chính (Add to Home Screen).
-    ly_do: 'Apple (iPhone User Guide): ở bố cục thanh Tabs Bottom hay Top, nút Chia sẻ nằm sau nút ⋯.'
+    ly_do: 'Apple (Hướng dẫn sử dụng iPhone, bản tiếng Việt và tiếng Anh): "Chạm vào [nút Menu của trang], sau đó chạm vào Chia sẻ. Nếu bố cục tab là Dưới cùng hoặc Trên cùng, hãy chạm vào [nút Chia sẻ]". Review D8-gom viết bước 2 theo đúng chữ ấy.'
   - cu: Chọn Cài đặt ứng dụng hoặc Thêm vào màn hình chính.
     moi: Chọn mục cài đặt ứng dụng trong menu (Chrome ghi Install and create shortcut), rồi bấm Install.
     ly_do: 'Google Chrome Help (Android): nhãn hiện hành là "Install and create shortcut" rồi "Install".'

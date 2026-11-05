@@ -6,12 +6,12 @@ description: "Cùng một bản nhạc, mỗi nghệ sĩ kể một câu chuyệ
 Cùng một bản nhạc, mỗi nghệ sĩ kể một câu chuyện khác: nhanh hay chậm, sáng hay tối, hát hay nói. Trang này giới thiệu các nghệ sĩ piano quan trọng từ thời Liszt đến hôm nay, các cuộc thi lớn, cách so sánh hai bản thu, và 30 tác phẩm piano nên nghe.
 
 :::tip[Dùng trang này thế nào]
-Mỗi nghệ sĩ có một gợi ý "nghe trước". Trang chỉ ghi năm thu khi chắc chắn; khi tìm bản thu, đọc kỹ thông tin theo hướng dẫn ở [Đọc tên tác phẩm và bản thu](/opus/nghe-nhac/doc-ten-tac-pham/). Không có bản thu "đúng": nghe nhiều cách chơi là đường ngắn nhất để tìm ra cách chơi của bạn.
+Mỗi nghệ sĩ có một gợi ý "nghe trước". Các chữ tả tiếng đàn và phong cách trong cột "Nổi tiếng với" là nhận xét của site, để bạn có điều để lắng nghe; hãy tự nghe và tự nhận xét. Trang chỉ ghi năm thu khi chắc chắn; khi tìm bản thu, đọc kỹ thông tin theo hướng dẫn ở [Đọc tên tác phẩm và bản thu](/opus/nghe-nhac/doc-ten-tac-pham/). Không có bản thu "đúng": nghe nhiều cách chơi là đường ngắn nhất để tìm ra cách chơi của bạn.
 :::
 
 ## Liszt và buổi độc tấu
 
-Đầu thế kỷ 19, một buổi hòa nhạc thường là chương trình hỗn hợp: ca sĩ, dàn nhạc, nhiều nghệ sĩ thay nhau lên sân khấu. **Franz Liszt** đảo ngược điều đó. Ngày 9/6/1840, buổi diễn của ông ở Hanover Square Rooms (London) được gọi là *recital*: lần đầu tiên chữ này, vốn chỉ việc đọc diễn cảm, được dùng cho âm nhạc. Liszt chơi một mình, không cần bản nhạc, và đặt cây đàn nằm ngang sân khấu để khán giả thấy nghiêng mặt ông và nghe tiếng đàn rõ hơn.
+Đầu thế kỷ 19, một buổi hòa nhạc thường là chương trình hỗn hợp: ca sĩ, dàn nhạc, nhiều nghệ sĩ thay nhau lên sân khấu. **Franz Liszt** đảo ngược điều đó. Ngày 9/6/1840, buổi diễn của ông ở Hanover Square Rooms (London) được gọi là *recital*: lần đầu tiên chữ này, vốn chỉ việc đọc diễn cảm, được dùng cho âm nhạc. Liszt chơi một mình, chơi nhiều bài thuộc lòng (điều khán giả thời ấy chưa quen thấy, dù không phải bài nào ông cũng chơi thuộc), và đặt cây đàn nằm ngang sân khấu để khán giả thấy nghiêng mặt ông và nghe tiếng đàn rõ hơn.
 
 **Clara Schumann** là một trong những nghệ sĩ đầu tiên biểu diễn thuộc lòng và góp phần biến việc đó thành chuẩn mực. Hình mẫu quen thuộc hôm nay (một người, một cây đàn, cả buổi tối, chơi thuộc lòng) đã thành hình trong thế kỷ 19.
 
@@ -29,7 +29,7 @@ Mỗi nghệ sĩ có một gợi ý "nghe trước". Trang chỉ ghi năm thu kh
 | **Ignacy Jan Paderewski** (1860–1941) | Thần tượng của các phòng hòa nhạc; năm 1919 làm Thủ tướng Ba Lan | Chopin; *Minuet* Sol trưởng Op. 14 số 1 của chính ông |
 | **Sergei Rachmaninoff** (1873–1943) | Một trong những nghệ sĩ piano lớn nhất thời mình: tiếng rõ, nhịp chắc, không ủy mị | Bốn concerto và *Rhapsody on a Theme of Paganini* do chính ông thu với Dàn nhạc Philadelphia |
 | **Josef Hofmann** (1876–1957) | Bậc thầy kỹ thuật và sự tiết chế; Rachmaninoff đề tặng ông Concerto số 3, nhưng ông không bao giờ chơi bản này | Bản thu buổi hòa nhạc mừng 50 năm biểu diễn ở Metropolitan Opera, New York (28/11/1937) |
-| **Alfred Cortot** (1877–1962) | Chopin và Schumann giàu chất thơ, không hoàn hảo về nốt; soạn các ấn bản "để học" kèm bài tập chuẩn bị | Chopin: 24 Prélude, các Ballade |
+| **Alfred Cortot** (1877–1962) | Chopin và Schumann giàu chất thơ; soạn các ấn bản "để học" kèm bài tập chuẩn bị | Chopin: 24 Prélude, các Ballade |
 | **Artur Schnabel** (1882–1951) | Người đầu tiên thu âm trọn 32 sonata Beethoven | Sonata Op. 110, Op. 111 |
 | **Edwin Fischer** (1886–1960) | Bản thu trọn *Bình quân luật* đầu tiên; chỉ huy concerto Bach và Mozart ngay từ bàn phím | *Bình quân luật* quyển 1 |
 
@@ -62,7 +62,7 @@ Mỗi nghệ sĩ có một gợi ý "nghe trước". Trang chỉ ghi năm thu kh
 | **Murray Perahia** (sinh 1947) | Giải Nhất Leeds 1972; vừa chơi vừa chỉ huy các concerto Mozart; Bach trong sáng | Concerto Mozart; *Partita* và *Goldberg* của Bach |
 | **Mitsuko Uchida** (sinh 1948) | Mozart và Schubert tinh tế; giải Nhì Chopin 1970 và Leeds 1975 | Sonata Mozart; sonata Schubert |
 | **Grigory Sokolov** (sinh 1950) | Thắng Tchaikovsky năm 1966 lúc 16 tuổi, người trẻ nhất từng thắng; chủ yếu chơi độc tấu; phần lớn đĩa gần đây là bản thu trực tiếp | Các bản thu trực tiếp những buổi độc tấu của ông |
-| **András Schiff** (sinh 1953) | Bach rõ ràng, ít bàn đạp; Beethoven, Schubert, Bartók | *Bình quân luật*; *Goldberg* |
+| **András Schiff** (sinh 1953) | Bach rõ ràng, không dùng bàn đạp vang (theo bài viết của chính ông); Beethoven, Schubert, Bartók | *Bình quân luật*; *Goldberg* |
 | **Krystian Zimerman** (sinh 1956) | Thắng Chopin năm 1975; cầu toàn; năm 1999 vừa chơi vừa chỉ huy hai concerto Chopin với dàn nhạc do ông lập | Bốn Ballade Chopin; *Préludes* của Debussy; Sonata D. 959 và D. 960 của Schubert |
 | **Angela Hewitt** (sinh 1958) | Bach trên piano: thắng cuộc thi piano Bach quốc tế ở Toronto năm 1985, thu các tác phẩm phím lớn của Bach từ 1994 đến 2005 | *Bình quân luật*; *Goldberg*; Couperin |
 | **Marc-André Hamelin** (sinh 1961) | Kỹ thuật phi thường cho những tác phẩm hiếm (Alkan, Godowsky, Medtner, Kapustin); tự viết 12 étude ở mọi giọng thứ | Medtner; Kapustin; Haydn |
@@ -112,7 +112,7 @@ Mitsuko Uchida chỉ đoạt giải Nhì ở Chopin 1970 và Leeds 1975; Ashkena
 So sánh là cách luyện tai nhanh nhất, và cũng là cách tìm ra cách chơi của chính bạn. Làm theo năm bước:
 
 1. **Chọn một đoạn ngắn**, 30–90 giây, ở cùng một chỗ trong hai bản: Aria của *Goldberg*, tám ô nhịp đầu của một nocturne. Ghi lại nghệ sĩ, năm thu, thu trực tiếp hay trong phòng thu (xem [Đọc tên tác phẩm và bản thu](/opus/nghe-nhac/doc-ten-tac-pham/)).
-2. **Nghe ở cùng âm lượng.** Bản to hơn gần như luôn có vẻ "hay hơn". Nghe mỗi bản hai lần: một lần không nhìn bản nhạc, một lần có.
+2. **Nghe ở cùng âm lượng**, để hai bản chỉ khác nhau ở cách chơi. Nghe mỗi bản hai lần: một lần không nhìn bản nhạc, một lần có.
 3. **So từng mặt một** theo bảng dưới. Mỗi lượt nghe chỉ chú ý một hoặc hai mặt.
 4. **Ghi chép** bằng một câu "Bản A…, còn bản B…", cộng một điều bạn muốn mượn cho cách chơi của mình. Có thể dùng [mẫu ghi chép](/opus/nghe-nhac/mau/).
 5. **Thử trên đàn:** chơi đoạn đó theo cách của A, rồi theo cách của B; [thu âm](/opus/luyen-tap/thu-am/) mình và so với hai bản thu.
@@ -194,7 +194,7 @@ Muốn biết nên chơi gì của từng nhà soạn nhạc, xem [Nhà soạn n
 - Glenn Gould
 > Schnabel thu từ năm 1932 đến 1935 ở London.
 ? Khi so sánh hai bản thu, vì sao nên chỉnh hai bản to ngang nhau?
-+ Vì bản to hơn thường có vẻ hay hơn, làm sai lệch nhận xét
++ Để hai bản chỉ khác nhau ở cách chơi, không khác ở độ to
 - Vì bản nhỏ hơn luôn là bản thu cũ
 - Vì máy đếm nhịp cần âm lượng bằng nhau
 > So sánh công bằng bắt đầu từ cùng một đoạn nhạc và cùng một âm lượng.

@@ -33,7 +33,7 @@ Danh sách được chọn lọc cho người tự học từ đầu. Hầu hế
 ## Lịch sử và nghe nhạc
 
 - [Yale: Listening to Music (MUSI 112)](https://videolectures.net/yalemusi112f08_listening_music) — khóa học của Craig Wright (Yale, 2008), 23 video bài giảng.
-- *Young People's Concerts* của Leonard Bernstein — tìm trên YouTube hoặc DVD.
+- *Young People's Concerts* của Leonard Bernstein — loạt chương trình truyền hình cùng New York Philharmonic (1958–1972); [kịch bản từng buổi](https://www.leonardbernstein.com/lectures/television-scripts/young-peoples-concerts) có trên trang Leonard Bernstein.
 - Aaron Copland, *What to Listen For in Music* — sách nhỏ, dễ đọc, kinh điển.
 - Burkholder, Grout, Palisca, *A History of Western Music* — giáo trình lịch sử chuẩn.
 - Alex Ross, *The Rest Is Noise* — lịch sử âm nhạc thế kỷ 20.
@@ -41,13 +41,13 @@ Danh sách được chọn lọc cho người tự học từ đầu. Hầu hế
 
 ## Chọn bản thu
 
-- **Building a Library** của BBC Radio 3: mỗi tuần so sánh các bản thu của một tác phẩm, có [dạng podcast](https://podcasts.apple.com/podcast/id273489899).
+- **Building a Library** của BBC Radio 3: mỗi tập, một chuyên gia nghe nhiều bản thu của một tác phẩm và chọn bản nên có; nghe qua [podcast Record Review](https://podcasts.apple.com/podcast/id273489899).
 - [Gramophone](https://www.gramophone.co.uk/) và giải *Gramophone Awards* hằng năm.
 - Xem [Đọc tên tác phẩm và bản thu](/opus/nghe-nhac/doc-ten-tac-pham/).
 
 ## Nghe nhạc trực tuyến
 
-- Dịch vụ chuyên nhạc cổ điển: **Apple Music Classical**, **Idagio**. Thông tin bản thu đầy đủ hơn ứng dụng nghe nhạc thông thường.
+- Dịch vụ chuyên nhạc cổ điển: **Apple Music Classical**, **Idagio**: tìm được theo nhà soạn nhạc, tác phẩm và người biểu diễn.
 - Kênh YouTube của **Viện Fryderyk Chopin**: toàn bộ các vòng thi Chopin, gồm cả cuộc thi năm 2025.
 
 ## Bản nhạc và bản thu
@@ -63,9 +63,9 @@ Danh sách được chọn lọc cho người tự học từ đầu. Hầu hế
 
 ## Kênh YouTube
 
-- **Inside the Score** — phân tích tác phẩm dễ hiểu.
-- **David Bennett Piano** — giải thích khái niệm nhạc lý qua ví dụ.
-- **Nahre Sol** — nghệ sĩ piano, nhiều video về cách nghe và chơi theo phong cách.
-- **Ben Laude** — về piano và lịch sử nghệ sĩ piano.
+- **Inside the Score** — video phân tích nhạc cổ điển và nhạc phim.
+- **David Bennett Music Theory** — video giải thích nhạc lý.
+- **Nahre Sol** — video về sáng tạo âm nhạc, lấy cảm hứng từ nhạc xưa và nay.
+- **Ben Laude** — nghệ sĩ piano, giáo viên âm nhạc, làm video về piano.
 
 Theo dõi tin tức và buổi diễn: xem [Âm nhạc hôm nay](/opus/lich-su/duong-dai/).

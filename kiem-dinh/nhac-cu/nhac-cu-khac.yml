@@ -10,7 +10,7 @@ lan:
     nguoi:
       luot_1: Claude Sonnet 5.5 (D8-L2 lượt 1, phần 2/2)
       luot_2: null
-      review: null
+      review: Claude Opus 5.5 (review D8-gom, 05/11/2026)
       kiem_mau: null
 ghi_chu: 'Trang Đọc thêm (ngoại vi), không có khối abc; có hình ranges-voices (hình tĩnh). HÌNH KHÁC TRANG CŨ (người giao ghi doi_chu): hình ranges-voices đã sửa ở D5 so với site cũ (cũ: sáu giọng, tên nốt kiểu C4, âm vực hơi khác; mới: bảy giọng, thêm Countertenor, tên nốt Việt Đô4…, âm vực mới theo COD và OnMusic). Nguồn mở được ngày 05/11/2026: COD (Encyclopedia.com), Baker (Encyclopedia.com), IMSLP, Bate Collection (Oxford), Hall (The Diapason 2013), NATS Journal of Singing 2023, Chorus America. Chưa quyết: h5 (âm vực countertenor Sol3–Sol5, null), và vài nguồn bậc 3 cho c5. Chữ đã sửa: câu mở đầu và câu âm vực (i2, i3: trang dan-nhac không có giọng hát, organ, harpsichord), giọng hát (v1, v11, v12), organ (o1–o6, o13), harpsichord (c1, c5, c11). doi_chu viết tay từ khối của dist/ cũ (dist chưa build lại sau sửa): người giao chạy node tools/chuyen/so-chu.mjs nhac-cu/nhac-cu-khac --doi-chu sau khi build, và ghi thêm doi_chu của hình ranges-voices theo mô tả trên. Thuật ngữ trang dùng chưa có bản ghi ở src/data/thuat-ngu.yml (cho D3-L5; không tạo): manual, pedalboard, stop (đổi âm sắc organ), harpsichord, organ, contralto/alto, countertenor, toccata, fugue.'
 nguon:
@@ -242,22 +242,33 @@ nguon:
     bac: 2
     ten: Letní slavnosti staré hudby (Praha), Jean Rondeau harpsichord (truy cập 05/11/2026)
     link: https://letnislavnosti.cz/en/artist/jean-rondeau/
+  - id: britannica-countertenor
+    bac: 2
+    ten: Britannica, countertenor (bản lưu Wayback Machine); truy cập 2026-11-05
+    link: https://web.archive.org/web/2026/https://www.britannica.com/art/countertenor
+  - id: we-harpsichord
+    bac: 2
+    ten: Encyclopedia.com, harpsichord (World Encyclopedia, Oxford, và bài chính); truy cập 2026-11-05
+    link: https://www.encyclopedia.com/literature-and-arts/performing-arts/music-theory-forms-and-instruments/harpsichord
 nhan_dinh:
   - id: n1
     cau: Trang nói piano (mục Piano), violin, guitar, cello, sáo, clarinet, trumpet có trang riêng; giọng hát, organ, harpsichord là ba "giọng nói" quan trọng khác.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm: src/content/docs/nhac-cu/ có violin.md, guitar.md, cello.md, sao.md, clarinet.md, trumpet.md; piano/index.md có (mục Piano); link /opus/piano/ và /opus/nhac-cu/<tên>/ đúng. "Ba giọng nói quan trọng khác" là cách nói của trang, ba mục Giọng hát, Organ, Harpsichord đúng là ba mục trang.'
+    ghi_chu: 'Kiểm: src/content/docs/nhac-cu/ có violin.md, guitar.md, cello.md, sao.md, clarinet.md, trumpet.md; piano/index.md có (mục Piano); link /opus/piano/ và /opus/nhac-cu/<tên>/ đúng. "Ba giọng nói quan trọng khác" là cách nói của trang, ba mục Giọng hát, Organ, Harpsichord đúng là ba mục trang. Review D8-gom: dòng 6 của trang: link /opus/piano/ và sáu trang nhạc cụ đều có trong src/content/docs/; ba mục Giọng hát, Organ, Harpsichord là ba mục của trang.'
+    review: dung
   - id: n2
     cau: Xem thêm vị trí của các nhạc cụ khác trong dàn nhạc giao hưởng.
     loai: ve-site
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Xem thêm vị trí của chúng trong dàn nhạc giao hưởng" ("chúng" = giọng hát, organ, harpsichord). Kiểm nhac-cu/dan-nhac.md: sơ đồ chỗ ngồi (hình seating) và âm vực (ranges-orchestra) chỉ có nhạc cụ dàn nhạc; không có giọng hát, organ, harpsichord (chỉ piano trong thang âm vực). Đổi thành "các nhạc cụ khác". Người giao ghi doi_chu.'
+    ghi_chu: 'Chữ cũ: "Xem thêm vị trí của chúng trong dàn nhạc giao hưởng" ("chúng" = giọng hát, organ, harpsichord). Kiểm nhac-cu/dan-nhac.md: sơ đồ chỗ ngồi (hình seating) và âm vực (ranges-orchestra) chỉ có nhạc cụ dàn nhạc; không có giọng hát, organ, harpsichord (chỉ piano trong thang âm vực). Đổi thành "các nhạc cụ khác". Người giao ghi doi_chu. Review D8-gom: dòng 6: "Xem thêm vị trí của các nhạc cụ khác trong dàn nhạc giao hưởng"; dan-nhac.md (đã khóa) có sơ đồ chỗ ngồi các nhạc cụ dàn nhạc, không có giọng hát, organ, harpsichord: chữ đã sửa đúng.'
+    review: dung
   - id: n3
     cau: Âm vực của các nhạc cụ dàn nhạc được so sánh ở trang Dàn nhạc giao hưởng (mục Âm vực các nhạc cụ); âm vực các giọng hát ở hình bên dưới.
     loai: ve-site
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Âm vực của các nhạc cụ trong trang này và trong dàn nhạc được so sánh ở trang Dàn nhạc giao hưởng" (sai: hình ranges-orchestra không có giọng hát, organ, harpsichord). Kiểm: dan-nhac.md có mục "Âm vực các nhạc cụ" (id am-vuc-cac-nhac-cu, có trong dist/nhac-cu/dan-nhac/index.html); hình ranges-voices có trong trang này. Đã sửa chữ.'
+    ghi_chu: 'Chữ cũ: "Âm vực của các nhạc cụ trong trang này và trong dàn nhạc được so sánh ở trang Dàn nhạc giao hưởng" (sai: hình ranges-orchestra không có giọng hát, organ, harpsichord). Kiểm: dan-nhac.md có mục "Âm vực các nhạc cụ" (id am-vuc-cac-nhac-cu, có trong dist/nhac-cu/dan-nhac/index.html); hình ranges-voices có trong trang này. Đã sửa chữ. Review D8-gom: dan-nhac.md (đã khóa) mục "Âm vực các nhạc cụ" (id am-vuc-cac-nhac-cu, hình ranges-orchestra); hình ranges-voices ngay dưới dòng 8 của trang.'
+    review: dung
   - id: n4
     cau: 'Hình ranges-voices (chữ trong hình): bảy loại giọng gồm soprano, mezzo-soprano, contralto (alto), countertenor, tenor, baritone, bass.'
     loai: dinh-nghia
@@ -299,8 +310,9 @@ nhan_dinh:
     loai: so-lieu
     nguon:
       - cod-countertenor
-    ket_qua: null
-    ghi_chu: 'chưa chắc: COD, Countertenor mô tả "High male v." và nói họ hát lại vai Baroque "long since assigned to conts. or tens." nhưng không ghi âm vực bằng số. Tìm thấy Britannica (không mở được, Cloudflare) định nghĩa countertenor là giọng nam có âm vực alto; chưa có nguồn mở được ghi Sol3–Sol5. Người giao quyết: tìm nguồn (Grove, Britannica qua Wayback) hay bỏ hai đầu mút khỏi hình (file hình: không được sửa ở lô này).'
+      - britannica-countertenor
+    ket_qua: dung
+    ghi_chu: 'chưa chắc: COD, Countertenor mô tả "High male v." và nói họ hát lại vai Baroque "long since assigned to conts. or tens." nhưng không ghi âm vực bằng số. Tìm thấy Britannica (không mở được, Cloudflare) định nghĩa countertenor là giọng nam có âm vực alto; chưa có nguồn mở được ghi Sol3–Sol5. Người giao quyết: tìm nguồn (Grove, Britannica qua Wayback) hay bỏ hai đầu mút khỏi hình (file hình: không được sửa ở lô này). Review D8-gom: hình ranges-voices dùng chung với lich-su/opera (đã khóa); review D5-gom vẽ countertenor như contralto theo World Encyclopedia (Oxford, cùng trang COD): "same register as the female contralto", và Met Opera; Britannica (Wayback): "countertenor, in music, adult male alto voice". Không nguồn nào ghi riêng Sol3–Sol5 cho countertenor: hai đầu mút là của contralto (COD "normal range g–g″"), câu và hình nói "tương đương contralto", đúng. Không sửa hình (dùng chung với trang đã khóa).'
   - id: n9
     cau: 'Hình: âm vực của tenor là Đô3–Đô5.'
     loai: so-lieu
@@ -345,7 +357,8 @@ nhan_dinh:
     cau: Các loại giọng (soprano, mezzo, alto, tenor, baritone, bass) được giới thiệu ở trang Nhập môn opera.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm: lich-su/opera.md có mục "Các loại giọng" gồm soprano, mezzo-soprano, contralto (còn gọi alto), countertenor, tenor, baritone, bass; link /opus/lich-su/opera/ đúng.'
+    ghi_chu: 'Kiểm: lich-su/opera.md có mục "Các loại giọng" gồm soprano, mezzo-soprano, contralto (còn gọi alto), countertenor, tenor, baritone, bass; link /opus/lich-su/opera/ đúng. Review D8-gom: lich-su/opera.md (đã khóa) bảng các loại giọng, dòng 25–30.'
+    review: dung
   - id: n15
     cau: Schubert, Erlkönig và tập ca khúc Winterreise.
     loai: ten
@@ -407,7 +420,8 @@ nhan_dinh:
     cau: Link tới hướng dẫn nghe Schubert (Erlkönig), Mozart (Nữ hoàng bóng đêm), Bizet (Habanera), Mozart (Requiem) và tới Phục hưng (Spem in alium, 40 bè).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm src/data/trang.yml: nghe-nhac/schubert-erlkonig, mozart-nu-hoang-bong-dem, bizet-habanera, mozart-requiem có trong kế hoạch, chưa có trong src/content/docs/ (chưa chuyển): link hiện "sắp có", giữ địa chỉ /opus/nghe-nhac/<tên>/ đúng với trang cũ. lich-su/thoi-ky/phuc-hung.md có trong bản build và nhắc "Tallis, Spem in alium (40 bè)".'
+    ghi_chu: 'Kiểm src/data/trang.yml: nghe-nhac/schubert-erlkonig, mozart-nu-hoang-bong-dem, bizet-habanera, mozart-requiem có trong kế hoạch, chưa có trong src/content/docs/ (chưa chuyển): link hiện "sắp có", giữ địa chỉ /opus/nghe-nhac/<tên>/ đúng với trang cũ. lich-su/thoi-ky/phuc-hung.md có trong bản build và nhắc "Tallis, Spem in alium (40 bè)". Review D8-gom: trang.yml có bốn hướng dẫn nghe ("sắp có"); lich-su/thoi-ky/phuc-hung.md (đã khóa) dòng 47: "Thomas Tallis, Spem in alium (40 bè)".'
+    review: dung
   - id: n23
     cau: 'Nên học với giáo viên thanh nhạc: dùng giọng sai kỹ thuật có thể làm tổn thương dây thanh.'
     loai: quy-tac
@@ -432,14 +446,15 @@ nhan_dinh:
     cau: Trang Thị tấu một bè và Luyện tai trên site giúp ích trực tiếp cho người học hát.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm: luyen-tap/thi-tau.md (tiêu đề "Thị tấu một bè", công cụ sight: tạo giai điệu 4 ô nhịp để đọc, hát hoặc chơi) và luyen-tai/index.md (luyện nhận quãng, hợp âm, gam, tiết tấu) có trong bản build; link /opus/luyen-tap/thi-tau/ và /opus/luyen-tai/ đúng. "Giúp ích trực tiếp" là nhận xét của trang; trang Thị tấu nói "đọc và hát hoặc chơi".'
+    ghi_chu: 'Kiểm: luyen-tap/thi-tau.md (tiêu đề "Thị tấu một bè", công cụ sight: tạo giai điệu 4 ô nhịp để đọc, hát hoặc chơi) và luyen-tai/index.md (luyện nhận quãng, hợp âm, gam, tiết tấu) có trong bản build; link /opus/luyen-tap/thi-tau/ và /opus/luyen-tai/ đúng. "Giúp ích trực tiếp" là nhận xét của trang; trang Thị tấu nói "đọc và hát hoặc chơi". Review D8-gom: luyen-tap/thi-tau.md ("Thị tấu một bè": đọc và hát hoặc chơi) và luyen-tai/index.md (đã khóa) có trong bản build.'
+    review: dung
   - id: n27
     cau: Organ ống thường được gọi là "vua của các nhạc cụ" vì kích thước lớn.
     loai: dinh-nghia
     nguon:
       - cod-organ
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Organ ống là nhạc cụ lớn nhất và phức tạp nhất". COD, Organ: "Often known as ‘the king of instruments’ because of its normal large size, although it is made in various sizes". "Phức tạp nhất" không nguồn; "lớn nhất" không đúng cho mọi organ (COD: có nhiều cỡ).'
+    ghi_chu: 'Chữ cũ: "Organ ống là nhạc cụ lớn nhất và phức tạp nhất". COD, Organ: "Often known as ‘the king of instruments’ because of its normal large size, although it is made in various sizes". "Phức tạp nhất" không nguồn; "lớn nhất" không đúng cho mọi organ (COD: có nhiều cỡ). Review D8-gom: giữ chữ. COD (bậc 2): "Often known as ''the king of instruments'' because of its normal large size"; câu theo đúng lý do COD nêu. Lượt 2 dẫn NPR (Mozart gọi như vậy vì âm thanh đồ sộ): một cách giải thích khác, không trái câu "thường được gọi … vì kích thước lớn" của COD.'
     luot_2: khong-chac
     luot_2_nguon: [ "https://www.npr.org/5448834" ]
     luot_2_ghi_chu: "NPR: Mozart là người đầu tiên gọi organ là 'king of instruments', vì 'sự đồ sộ và cao quý của âm thanh'. Lý do 'vì kích thước lớn' chỉ gần đúng; nên viết 'vì quy mô và âm thanh đồ sộ'."
@@ -516,7 +531,8 @@ nhan_dinh:
     cau: Link "xem Fugue" tới trang Fugue.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm: hinh-thuc/fugue.md có trong bản build và liệt kê "Bach, Fugue cung Sol thứ, BWV 578, cho organ"; link /opus/hinh-thuc/fugue/ đúng.'
+    ghi_chu: 'Kiểm: hinh-thuc/fugue.md có trong bản build và liệt kê "Bach, Fugue cung Sol thứ, BWV 578, cho organ"; link /opus/hinh-thuc/fugue/ đúng. Review D8-gom: hinh-thuc/fugue.md (đã khóa) dòng 42: Bach, Fugue cung Sol thứ, BWV 578, cho organ.'
+    review: dung
   - id: n38
     cau: Widor, Giao hưởng cho organ số 5, Toccata.
     loai: danh-muc
@@ -572,8 +588,9 @@ nhan_dinh:
     loai: lich-su
     nguon:
       - bate
+      - we-harpsichord
     ket_qua: dung
-    ghi_chu: 'Bate: harpsichord "reached its peak in terms of design, craftsmanship, and musical importance" ở thế kỷ 17–18. Vế "trước khi piano thay thế" chưa có nguồn mở nói thẳng ở đây; khớp trang piano/lich-su-dan (site) và Baroque (lich-su/thoi-ky/baroque: "Harpsichord thường đệm cho dàn nhạc"; piano ra đời khoảng 1698–1700). Review nên kiểm.'
+    ghi_chu: 'Bate: harpsichord "reached its peak in terms of design, craftsmanship, and musical importance" ở thế kỷ 17–18. Vế "trước khi piano thay thế" chưa có nguồn mở nói thẳng ở đây; khớp trang piano/lich-su-dan (site) và Baroque (lich-su/thoi-ky/baroque: "Harpsichord thường đệm cho dàn nhạc"; piano ra đời khoảng 1698–1700). Review nên kiểm. Review D8-gom: nguồn cũ không nói vế "trước khi piano thay thế". Encyclopedia.com (World Encyclopedia, Oxford): "The harpsichord was the principal keyboard instrument from 1500 to 1750, but was replaced by the piano"; bài chính: "By the early 1800s, the harpsichord had fallen out of favor and the piano was becoming increasingly popular". Giữ chữ.'
   - id: n45
     cau: Domenico Scarlatti viết khoảng 550 sonata phím, đánh số K. 1–555 (bảng Kirkpatrick), ví dụ K. 141.
     loai: so-lieu
@@ -632,25 +649,28 @@ nhan_dinh:
     cau: So sánh cùng một tác phẩm Bach trên harpsichord và trên piano là một bài nghe rất thú vị.
     loai: khuyen-tap
     nguon: []
-    ket_qua: da-sua
-    ghi_chu: 'Chữ cũ có "(ví dụ Glenn Gould)". Bỏ tên người: COD, Gould: "Canadian pianist … Exceptionally wide repertory, from 16th-cent. kbd. works to jazz" không nói Bach; chưa mở nguồn ghi bản thu Bach cụ thể của ông. Lời khuyên nghe giữ.'
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Chữ cũ có "(ví dụ Glenn Gould)". Bỏ tên người: COD, Gould: "Canadian pianist … Exceptionally wide repertory, from 16th-cent. kbd. works to jazz" không nói Bach; chưa mở nguồn ghi bản thu Bach cụ thể của ông. Lời khuyên nghe giữ. Review D8-gom: như cello n26; lượt 2 đã ghi dung.'
     luot_2: dung
     luot_2_ghi_chu: "Lời khuyên nghe: hợp lý."
   - id: n52
     cau: Link "Đọc tên tác phẩm và bản thu" nói về phong cách biểu diễn lịch sử.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm: nghe-nhac/doc-ten-tac-pham có trong src/data/trang.yml, chưa chuyển ("sắp có"). Trang cũ (../opus-zero/docs/nghe-nhac/doc-ten-tac-pham.md) có đoạn về "biểu diễn theo phong cách lịch sử (HIP)" với nhạc cụ thời đó, harpsichord thay piano. Điều cần giữ khi chuyển: trang đích vẫn có đoạn về phong cách biểu diễn lịch sử.'
+    ghi_chu: 'Kiểm: nghe-nhac/doc-ten-tac-pham có trong src/data/trang.yml, chưa chuyển ("sắp có"). Trang cũ (../opus-zero/docs/nghe-nhac/doc-ten-tac-pham.md) có đoạn về "biểu diễn theo phong cách lịch sử (HIP)" với nhạc cụ thời đó, harpsichord thay piano. Điều cần giữ khi chuyển: trang đích vẫn có đoạn về phong cách biểu diễn lịch sử. Review D8-gom: trang.yml có nghe-nhac/doc-ten-tac-pham ("sắp có"); trang cũ dòng 81: biểu diễn theo phong cách lịch sử (HIP), harpsichord thay piano.'
+    review: dung
   - id: n53
     cau: 'Nguồn: bản nhạc ở IMSLP; xem trang tài liệu tham khảo.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm: tai-lieu-tham-khao.md có mục IMSLP; link đúng.'
+    ghi_chu: 'Kiểm: tai-lieu-tham-khao.md có mục IMSLP; link đúng. Review D8-gom: tai-lieu-tham-khao.md (đã khóa) dòng 39: IMSLP.'
+    review: dung
   - id: n54
     cau: Link tới trang Bach (lich-su/nha-soan-nhac), Baroque (lich-su/thoi-ky/baroque).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm: lich-su/nha-soan-nhac.md (có mục Johann Sebastian Bach) và lich-su/thoi-ky/baroque.md có trong bản build; link đúng.'
+    ghi_chu: 'Kiểm: lich-su/nha-soan-nhac.md (có mục Johann Sebastian Bach) và lich-su/thoi-ky/baroque.md có trong bản build; link đúng. Review D8-gom: lich-su/nha-soan-nhac.md (đã khóa) mục "Johann Sebastian Bach (1685–1750)" (dòng 31); lich-su/thoi-ky/baroque.md đã khóa.'
+    review: dung
 khuong_nhac: []
 doi_chu:
   - cu: Ngoài piano (mục Piano) và violin, guitar, cello, sáo, clarinet, trumpet, đây là ba "giọng nói" quan trọng khác của nhạc cổ điển. Xem thêm vị trí của chúng trong dàn nhạc giao hưởng.

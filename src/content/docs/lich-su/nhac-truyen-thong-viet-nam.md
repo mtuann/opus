@@ -1,9 +1,9 @@
 ---
 title: Nhạc truyền thống Việt Nam và nhạc cổ điển
-description: "Người Việt học nhạc cổ điển phương Tây thường đã quen với một truyền thống âm nhạc khác, với những thang âm, nhạc cụ và cách nghe…"
+description: "Nhạc truyền thống Việt Nam có những thang âm, nhạc cụ và cách nghe riêng, khác nhạc cổ điển phương Tây. Trang này đặt hai truyền thống cạnh nhau…"
 ---
 
-Người Việt học nhạc cổ điển phương Tây thường đã quen với một truyền thống âm nhạc khác, với những thang âm, nhạc cụ và cách nghe riêng. Trang này đặt hai truyền thống cạnh nhau để mỗi bên soi sáng bên kia. Nên đọc sau [bài 16: Điệu thức và gam ngũ cung](/opus/nhac-ly/16-dieu-thuc-ngu-cung/).
+Nhạc truyền thống Việt Nam có những thang âm, nhạc cụ và cách nghe riêng, khác nhạc cổ điển phương Tây. Trang này đặt hai truyền thống cạnh nhau để mỗi bên soi sáng bên kia. Nên đọc sau [bài 16: Điệu thức và gam ngũ cung](/opus/nhac-ly/16-dieu-thuc-ngu-cung/).
 
 *Cập nhật lần cuối: 11/2026.*
 

@@ -37,7 +37,7 @@ Pablo Casals (người làm sống lại sự quan tâm tới nhạc cello của
 
 ## Nếu muốn học
 
-Nên học với giáo viên ngay từ đầu nếu có điều kiện. Người lớn thường dùng đàn cỡ 4/4 (cỡ đầy đủ). Với người mới, nhiều cửa hàng và trường nhạc gợi ý thuê đàn thay vì mua vì cello đắt hơn violin; có nơi cho thuê theo tháng. Học đọc khóa Fa trước, khóa Đô tenor sau.
+Nên học với giáo viên ngay từ đầu nếu có điều kiện. Với người mới, nhiều cửa hàng và trường nhạc gợi ý thuê đàn thay vì mua vì cello đắt hơn violin; có nơi cho thuê theo tháng. Học đọc khóa Fa trước, khóa Đô tenor sau.
 
 Xem thêm vị trí cello trong [dàn nhạc giao hưởng](/opus/nhac-cu/dan-nhac/).
 

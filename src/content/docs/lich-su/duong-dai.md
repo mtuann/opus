@@ -24,7 +24,7 @@ Nhạc cổ điển không dừng lại ở Beethoven. Các nhà soạn nhạc v
 
 - **Cuộc thi Piano Quốc tế Chopin lần thứ 19** (Warsaw, tháng 10/2025): giải Nhất thuộc về nghệ sĩ người Mỹ **Eric Lu**; giải Nhì là Kevin Chen (Canada), giải Ba là Zitong Wang (Trung Quốc). Ban giám khảo do Garrick Ohlsson làm chủ tịch, có **Đặng Thái Sơn**. Các vòng thi được phát trên kênh YouTube của Viện Fryderyk Chopin; cuộc thi tiếp theo dự kiến vào năm 2030.
 - **Giải Pulitzer Âm nhạc** (trao cho tác phẩm của nhà soạn nhạc Mỹ): 2024 – Tyshawn Sorey, *Adagio (for Wadada Leo Smith)*; 2025 – Susie Ibarra, *Sky Islands*; 2026 – Gabriela Lena Frank, *Picaflor: A Future Myth*.
-- **Sofia Gubaidulina**, một trong những nhà soạn nhạc quan trọng nhất cuối thế kỷ 20, mất ngày 13/3/2025 ở tuổi 93.
+- **Sofia Gubaidulina**, cùng Schnittke và Denisov là một trong ba nhà soạn nhạc lớn ở Moskva thời sau Shostakovich (theo nhà xuất bản Boosey & Hawkes), mất ngày 13/3/2025 ở tuổi 93.
 
 ## Tên tuổi Việt Nam nên biết
 

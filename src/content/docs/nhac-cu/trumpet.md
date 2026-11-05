@@ -29,7 +29,7 @@ Các loại trumpet khác: trumpet Đô (không dịch giọng, vang đúng nố
 - Hummel, Concerto trumpet cung Mi trưởng
 - Bach, Concerto Brandenburg số 2 — nghe bè trumpet cao vút ở chương đầu và chương cuối (thường chơi bằng trumpet piccolo)
 - Mussorgsky (phối Ravel), *Pictures at an Exhibition*: "Promenade" mở đầu bằng trumpet độc tấu
-- [Tchaikovsky, *1812 Overture*](/opus/nghe-nhac/tchaikovsky-1812/) — nghe bộ kèn đồng ở đoạn trận chiến
+- [Tchaikovsky, *1812 Overture*](/opus/nghe-nhac/tchaikovsky-1812/) — bộ kèn đồng của tác phẩm có 2 trumpet cùng 2 cornet, 4 horn, 3 trombone và tuba
 - Miles Davis, *Kind of Blue* (jazz, 1959): trumpet với harmon mute ở *Blue in Green* và *Flamenco Sketches*
 
 ## Nghệ sĩ nên tìm

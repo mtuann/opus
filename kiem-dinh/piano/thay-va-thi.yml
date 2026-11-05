@@ -9,7 +9,7 @@ lan:
     nguoi:
       luot_1: Claude Sonnet (D8-L1 lượt 1, phần 1/2)
       luot_2: null
-      review: null
+      review: Claude Opus 5.5 (D8-gom, không làm lượt 1, lượt 2 của trang này)
       kiem_mau: null
 ghi_chu: 'D8-L1 phần 1/2, lượt 1 (05/11/2026). Nguồn chính: hai PDF ABRSM Practical Grades Qualification Specification 2025 & 2026 và 2027 & 2028 (63 tr.), Music Performance Grades Piano Syllabus 2027 & 2028 và Qualification Specification (generic parts), Trinity Piano Syllabus (bản trực tuyến 02/2026), bản lưu Wayback Machine trang ABRSM diplomas; đã đọc PDF bằng PyMuPDF. Đã sửa: n4 (Invention số 1 chặng 4, thay bằng Träumerei ở hộp Grade), n8 (bỏ "phổ biến nhất"), n16 (hiệu lực 2025–2026 vs overlap đến 31/12/2027), n25–n26 (diploma: bỏ ngày 31/12/2023, "vẫn có giá trị", "độc tấu"), n28 (Trinity Việt Nam: hai nơi liên hệ), n32 (tên bộ phận năng khiếu ở hcmcons), n50 (mục Nguồn). Chưa chắc (null): n30, n31, n37, n51. Người giao cần: đồng bộ doi_chu; cân nhắc thêm Practical Grades Piano Syllabus 2027 & 2028 vào mục Nguồn; câu "Gam và hợp âm rải thì phải chơi thuộc" giữ nguyên chữ cho hoc-thuoc-bieu-dien n4.'
 nguon:
@@ -61,27 +61,51 @@ nguon:
     bac: 3
     ten: Wikipedia tiếng Việt, Học viện Âm nhạc Huế (thành lập 08/11/2007; đào tạo gồm Piano; một trong ba trường âm nhạc lớn) (truy cập 05/11/2026)
     link: https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_%C3%82m_nh%E1%BA%A1c_Hu%E1%BA%BF
+  - id: abrsm-lrsm-2024
+    bac: 2
+    ten: 'ABRSM, Performance LRSM and FRSM Qualification Specification from 2024: "candidates must already have passed ABRSM Grade 8 (Practical Music or Music Performance) or equivalent… or be able to demonstrate appropriate professional experience"; "Approval of professional experience must already have been granted before a candidate enters" (truy cập 05/11/2026, review D8-gom)'
+    link: https://www.abrsm.org/sites/default/files/2023-11/Performance%20LRSM%20and%20FRSM%20Qualification%20Specification%20from%202024%20English.pdf
+  - id: trinity-latency
+    bac: 2
+    ten: 'Trinity College London, tài nguyên cho giáo viên "Dealing with latency in your online teaching": "The time delay makes it impossible for musicians to play together online"; nhiều phần mềm gọi video chặn tiếng khi hơn một người cùng phát ra âm thanh; mục "Playing together: accompaniments and metronomes" (truy cập 05/11/2026, review D8-gom)'
+    link: https://resources.trinitycollege.com/teachers/music/dealing-with-latency
+  - id: vnam
+    bac: 2
+    ten: 'Học viện Âm nhạc Quốc gia Việt Nam, trang chủ: "Các khoa, bộ môn: Khoa Piano…" (truy cập 05/11/2026, review D8-gom)'
+    link: https://vnam.edu.vn/
+  - id: hue-home
+    bac: 2
+    ten: Học viện Âm nhạc Huế, trang chủ (có tuyển sinh trung cấp, đại học; trang chủ không nêu khoa Piano) (truy cập 05/11/2026, review D8-gom)
+    link: https://hocvienamnhachue.edu.vn/
+  - id: ol-klickstein
+    bac: 3
+    ten: "Open Library (danh mục thư viện): The musician's way: a guide to practice, performance, and wellness, Gerald Klickstein, Oxford University Press, 2009 (lượt 2 đã mở)"
+    link: https://openlibrary.org/search.json?q=musician%27s+way+klickstein&fields=title,subtitle,author_name,publisher,first_publish_year&limit=3
 nhan_dinh:
   - id: n1
     cau: Tiêu đề trang "Học với thầy và thi cấp", mục "## Thi cấp" (id thi-cap), mục "### ABRSM" có câu về chơi thuộc, hàng "Góc máy" trong bảng học trực tuyến và hộp "Grade nghĩa là gì trên site này" giữ nguyên như trang cũ, vì các trang đã khóa trỏ tới.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Đã grep kiem-dinh/: piano/cach-tap (n… liên kết tới thay-va-thi), hoc-thuoc-bieu-dien n4 ("mục ABRSM có câu về chơi thuộc"), the-loai (anchor #thi-cap), luyen-tap/thu-am (n14: bảng góc máy), thi-tau, choi-cung-nguoi-khac, lo-trinh, bat-dau/lo-trinh-choi, cap-nhat.yml (hộp Grade nghĩa là gì), piano/suc-khoe. Trên trang mới: title "Học với thầy và thi cấp"; "## Thi cấp" (id thi-cap theo id-cu.mjs); "### ABRSM"; dòng "| **Góc máy** |"; hộp ":::note[Grade nghĩa là gì trên site này]"; câu "Chơi thuộc các tác phẩm là tùy chọn và không được cộng điểm trực tiếp; gam và hợp âm rải thì phải chơi thuộc" nguyên văn.'
+    ghi_chu: 'Đã grep kiem-dinh/: piano/cach-tap (n… liên kết tới thay-va-thi), hoc-thuoc-bieu-dien n4 ("mục ABRSM có câu về chơi thuộc"), the-loai (anchor #thi-cap), luyen-tap/thu-am (n14: bảng góc máy), thi-tau, choi-cung-nguoi-khac, lo-trinh, bat-dau/lo-trinh-choi, cap-nhat.yml (hộp Grade nghĩa là gì), piano/suc-khoe. Trên trang mới: title "Học với thầy và thi cấp"; "## Thi cấp" (id thi-cap theo id-cu.mjs); "### ABRSM"; dòng "| **Góc máy** |"; hộp ":::note[Grade nghĩa là gì trên site này]"; câu "Chơi thuộc các tác phẩm là tùy chọn và không được cộng điểm trực tiếp; gam và hợp âm rải thì phải chơi thuộc" nguyên văn. Review D8-gom: trang hiện: title "Học với thầy và thi cấp", "## Thi cấp", "### ABRSM" với câu chơi thuộc nguyên văn (dòng 115), hàng "| **Góc máy** |" (dòng 65, khớp luyen-tap/thu-am n14: góc bên cạnh thấy vai, khuỷu tay, cổ tay, chân; góc từ trên), hộp ":::note[Grade nghĩa là gì trên site này]". Các sửa của review không chạm những chỗ này.'
+    review: dung
   - id: n2
     cau: Các link nội bộ trong trang (lo-trinh, tu-the, cach-tap, thi-tau, suc-khoe, chon-dan, hoc-thuoc-bieu-dien, 10-bai-dau-tien, tac-pham/…, tac-pham-theo-cap, gam, luyen-tai, luyen-tap/thu-am, luyen-tap/nhat-ky, tai-lieu-tham-khao) trỏ tới trang có trong kế hoạch.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Mọi id có trong src/data/trang.yml (tests/link.test.mjs kiểm trên bản build; link tới trang chưa lên hiện "sắp có"). Link tới bài học tác phẩm (/opus/piano/tac-pham/<slug>/) có bản ghi trong src/data/tac-pham.yml (xem n4).
+    ghi_chu: 'Mọi id có trong src/data/trang.yml (tests/link.test.mjs kiểm trên bản build; link tới trang chưa lên hiện "sắp có"). Link tới bài học tác phẩm (/opus/piano/tac-pham/<slug>/) có bản ghi trong src/data/tac-pham.yml (xem n4). Review D8-gom: mọi link nội bộ trỏ tới id có trong src/data/trang.yml hay bài có bản ghi trong tac-pham.yml (tests/link.test.mjs kiểm trên bản build).'
+    review: dung
   - id: n3
     cau: 'Bảng hộp "Grade nghĩa là gì": Initial–chặng 1; Grade 1–2–chặng 2; Grade 3–chặng 3; Grade 4–5–chặng 4; Grade 6–chặng 5; Grade 7–8–chặng 6; sau Grade 8–chặng 7 ("Diploma trở lên"); tên chặng khớp cap-do.yml.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/data/cap-do.yml (khóa): nhan_grade/tuong_duong 1: trước Grade 1, 2: Grade 1–2, 3: Grade 3, 4: Grade 4–5, 5: Grade 6, 6: Grade 7–8, 7: Sau Grade 8 / diploma trở lên; tên Khởi đầu, Sơ cấp, Sơ trung cấp, Trung cấp, Trung cấp cao, Nâng cao, Sau Grade 8. Chữ ở cột đầu "Initial" cho chặng 1: cap-do.yml ghi "trước Grade 1" (Initial Grade của ABRSM nằm trước Grade 1: n5).'
+    ghi_chu: 'src/data/cap-do.yml (khóa): nhan_grade/tuong_duong 1: trước Grade 1, 2: Grade 1–2, 3: Grade 3, 4: Grade 4–5, 5: Grade 6, 6: Grade 7–8, 7: Sau Grade 8 / diploma trở lên; tên Khởi đầu, Sơ cấp, Sơ trung cấp, Trung cấp, Trung cấp cao, Nâng cao, Sau Grade 8. Chữ ở cột đầu "Initial" cho chặng 1: cap-do.yml ghi "trước Grade 1" (Initial Grade của ABRSM nằm trước Grade 1: n5). Review D8-gom: src/data/cap-do.yml (đã khóa) nhan_grade 1–7: trước Grade 1, Grade 1–2, 3, 4–5, 6, 7–8, Sau Grade 8; tên Khởi đầu… Nâng cao khớp. Chặng 7 trong data tên "Sau Grade 8" (tuong_duong "diploma trở lên"); ô ghi "7. Diploma trở lên" lấy tuong_duong, như tiêu đề "Chặng 7. Sau Grade 8 (diploma trở lên)" của piano/lo-trinh đã khóa. Không đổi.'
+    review: dung
   - id: n4
     cau: 'Bảng hộp Grade: bài ví dụ của mỗi chặng có chặng khớp src/data/tac-pham.yml: Minuet Sol trưởng và Schumann Op. 68 (chặng 2); Clementi Op. 36 số 1 và Arabesque (3); Prelude Đô trưởng BWV 846 và Für Elise (4); K. 545 và Träumerei (5); Pathétique chương 2 và Clair de lune (6); Ballade số 1 (7).'
     loai: ve-site
     ket_qua: da-sua
-    ghi_chu: 'Dữ liệu src/data/tac-pham.yml (chang): minuet-sol 2; schumann-album 2; clementi-sonatina 3; burgmuller-arabesque 3; bach-prelude-do 4; fur-elise 4; mozart-k545 5; schumann-traumerei 5; pathetique-adagio 6; debussy-clair-de-lune 6; chopin-ballade-1 7. Chữ cũ: hàng Grade 6 / chặng 5 ghi "K. 545, Invention số 1": Invention số 1 là chặng 4 theo dữ liệu (đã khóa D2-0, hồ sơ nói cần cập nhật theo bảng "Tác phẩm theo cấp độ"). Chữ mới: "K. 545, Träumerei" (chặng 5, Grade 6). Grade của bài khớp dữ liệu: Träumerei Grade 6, K. 545 Grade 6 (ABRSM 2027 & 2028 có Mozart K. 545 ở Grade 6, tr. 37 của PDF).'
+    ghi_chu: 'Dữ liệu src/data/tac-pham.yml (chang): minuet-sol 2; schumann-album 2; clementi-sonatina 3; burgmuller-arabesque 3; bach-prelude-do 4; fur-elise 4; mozart-k545 5; schumann-traumerei 5; pathetique-adagio 6; debussy-clair-de-lune 6; chopin-ballade-1 7. Chữ cũ: hàng Grade 6 / chặng 5 ghi "K. 545, Invention số 1": Invention số 1 là chặng 4 theo dữ liệu (đã khóa D2-0, hồ sơ nói cần cập nhật theo bảng "Tác phẩm theo cấp độ"). Chữ mới: "K. 545, Träumerei" (chặng 5, Grade 6). Grade của bài khớp dữ liệu: Träumerei Grade 6, K. 545 Grade 6 (ABRSM 2027 & 2028 có Mozart K. 545 ở Grade 6, tr. 37 của PDF). Review D8-gom: src/data/tac-pham.yml: minuet-sol 2, schumann-album 2, clementi-sonatina 3, burgmuller-arabesque 3, bach-prelude-do 4, fur-elise 4, mozart-k545 5, schumann-traumerei 5, pathetique-adagio 6, debussy-clair-de-lune 6, chopin-ballade-1 7.'
+    review: dung
   - id: n5
     cau: Grade là thang độ khó của các hội đồng thi Anh, từ Initial (trước Grade 1) đến Grade 8.
     loai: dinh-nghia
@@ -97,12 +121,14 @@ nhan_dinh:
     cau: Site dùng thang của ABRSM để ghi độ khó, và chia đường học thành 7 chặng.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: src/data/cap-do.yml (7 chặng, Grade ABRSM); piano/lo-trinh (đã khóa).
+    ghi_chu: "src/data/cap-do.yml (7 chặng, Grade ABRSM); piano/lo-trinh (đã khóa). Review D8-gom: src/data/cap-do.yml: 7 chặng, nhan_grade theo Grade ABRSM; piano/lo-trinh (đã khóa)."
+    review: dung
   - id: n7
     cau: Chữ "≈ Grade N" trên các bài học là ước lượng độ khó, không có nghĩa bài nằm trong chương trình thi Grade N.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: Cột grade trong src/data/tac-pham.yml ("Grade 5–6" v.v.) là ước lượng của site; hộp thông tin bài học hiện "≈". Khớp piano/tac-pham-theo-cap ("Cấp chỉ là ước lượng").
+    ghi_chu: 'Cột grade trong src/data/tac-pham.yml ("Grade 5–6" v.v.) là ước lượng của site; hộp thông tin bài học hiện "≈". Khớp piano/tac-pham-theo-cap ("Cấp chỉ là ước lượng"). Review D8-gom: src/plugins/thanh-phan.mjs (dòng 323): chip cấp hiện "≈ Grade N"; tac-pham.yml grade là ước lượng; piano/tac-pham-theo-cap ghi "ước lượng của site".'
+    review: dung
   - id: n8
     cau: ABRSM và Trinity College London là hai hội đồng thi của Anh.
     loai: ten
@@ -110,7 +136,7 @@ nhan_dinh:
       - abrsm-prac-2728
       - trinity-piano
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Hai hội đồng thi phổ biến nhất là ABRSM và Trinity College London, đều của Anh." "Phổ biến nhất" không có nguồn: đổi thành "Hai hội đồng thi của Anh được nói đến ở đây là ABRSM và Trinity College London." ABRSM: regulated by Ofqual, Qualifications Wales, CCEA (PDF 2027 & 2028, tr. 5); Trinity College London: "charity number England & Wales" (Piano Syllabus, tr. 2).'
+    ghi_chu: 'Chữ cũ: "Hai hội đồng thi phổ biến nhất là ABRSM và Trinity College London, đều của Anh." "Phổ biến nhất" không có nguồn: đổi thành "Hai hội đồng thi của Anh được nói đến ở đây là ABRSM và Trinity College London." ABRSM: regulated by Ofqual, Qualifications Wales, CCEA (PDF 2027 & 2028, tr. 5); Trinity College London: "charity number England & Wales" (Piano Syllabus, tr. 2). Review D8-gom: giữ da-sua: lượt 2 dung, cùng điều với lượt 1.'
     luot_2: dung
     luot_2_nguon: [ "https://www.abrsm.org/sites/default/files/2026-06/Piano%20Practical%20Grades%20Qualification%20Specification%202027%20&%202028.pdf", "https://trinitycollege.com/resource?id=9079" ]
     luot_2_ghi_chu: ABRSM (đăng ký ở Anh, Ofqual quản lý) và Trinity College London (Anh) xác nhận qua đề cương của hai bên.
@@ -190,7 +216,7 @@ nhan_dinh:
       - abrsm-perf-2728
       - abrsm-prac-2526
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "chương trình 2027–2028 dùng được từ 1/1/2027; chương trình 2025–2026 vẫn có hiệu lực đến hết 31/12/2027. Trong năm 2027 bạn chọn được một trong hai, nhưng các bài trong danh sách phải lấy từ cùng một chương trình." PDF Practical 2027 & 2028 tr. 7 mục "Overlap": "This specification is valid for exams from 1 January 2027 until 31 December 2028. … Candidates may play pieces from the 2025 & 2026 Piano syllabus until 31 December 2027. All pieces must be from the same syllabus." (Performance: "All requirements must be from the same syllabus".) PDF 2025 & 2026: "valid from 1 January 2025 until 31 December 2026". Nên chữ "chương trình 2025–2026 còn hiệu lực đến 31/12/2027" không chính xác: bản đặc tả hết hạn 31/12/2026, chỉ các bài của nó được chơi tiếp đến hết 31/12/2027 (overlap). Đã viết lại. Phần overlap cho các yêu cầu khác ngoài bài (gam…): www.abrsm.org/overlap không mở được (403 robot), trang chỉ nói về bài.'
+    ghi_chu: 'Chữ cũ: "chương trình 2027–2028 dùng được từ 1/1/2027; chương trình 2025–2026 vẫn có hiệu lực đến hết 31/12/2027. Trong năm 2027 bạn chọn được một trong hai, nhưng các bài trong danh sách phải lấy từ cùng một chương trình." PDF Practical 2027 & 2028 tr. 7 mục "Overlap": "This specification is valid for exams from 1 January 2027 until 31 December 2028. … Candidates may play pieces from the 2025 & 2026 Piano syllabus until 31 December 2027. All pieces must be from the same syllabus." (Performance: "All requirements must be from the same syllabus".) PDF 2025 & 2026: "valid from 1 January 2025 until 31 December 2026". Nên chữ "chương trình 2025–2026 còn hiệu lực đến 31/12/2027" không chính xác: bản đặc tả hết hạn 31/12/2026, chỉ các bài của nó được chơi tiếp đến hết 31/12/2027 (overlap). Đã viết lại. Phần overlap cho các yêu cầu khác ngoài bài (gam…): www.abrsm.org/overlap không mở được (403 robot), trang chỉ nói về bài. Review D8-gom: giữ da-sua: lượt 2 dung, cùng điều với lượt 1.'
     luot_2: dung
     luot_2_nguon: [ "https://www.musicmark.org.uk/wp-content/uploads/Piano-syllabus-Press-Release-2026-FINAL.pdf", "https://www.abrsm.org/sites/default/files/2026-06/Piano%20Performance%20Grades%20Syllabus%202027%20&%202028.pdf" ]
     luot_2_ghi_chu: Dùng được từ 1/1/2027; đề cương 2025–2026 còn hiệu lực đến hết 31/12/2027; 'All requirements must be from the same syllabus'.
@@ -276,22 +302,20 @@ nhan_dinh:
     luot_2_nguon: [ "https://trinitycollege.com/resource?id=9079" ]
     luot_2_ghi_chu: "'No theory qualifications or other prerequisites are required to enter graded or certificate exams at any level'; không cần đỗ cấp thấp hơn."
   - id: n25
-    cau: 'ABRSM: ARSM dành cho người đã qua Grade 8, thi trực tiếp (nơi có tổ chức) hoặc qua video; LRSM và FRSM theo định dạng mới từ 2024, nộp video buổi biểu diễn kèm tài liệu bổ trợ; cả ba yêu cầu đã đỗ Grade 8 ABRSM (Performance hoặc Practical) hay bằng tương đương của hội đồng thi khác trong danh sách ABRSM chấp nhận.'
+    cau: "ABRSM: ARSM dành cho người đã qua Grade 8, thi trực tiếp (nơi có tổ chức) hoặc qua video; LRSM và FRSM theo định dạng mới từ 2024, nộp video buổi biểu diễn kèm tài liệu bổ trợ; cả ba yêu cầu đã đỗ Grade 8 ABRSM (Performance hoặc Practical) hay bằng tương đương của hội đồng thi khác trong danh sách ABRSM chấp nhận; với LRSM và FRSM, kinh nghiệm biểu diễn chuyên nghiệp được ABRSM duyệt trước cũng thay được Grade 8."
     loai: quy-tac
     nguon:
       - abrsm-dip-wb
+      - abrsm-lrsm-2024
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "LRSM và FRSM theo định dạng mới từ 2024, nộp video một buổi độc tấu, yêu cầu đã có Grade 8 (của ABRSM hoặc của một hội đồng thi khác nằm trong danh sách ABRSM chấp nhận)." Bản lưu trang ABRSM (08/09/2025): "New LRSM and FRSM from 2024"; ARSM: "A digital exam assessed from a video recording… A face-to-face exam – if these are available in your country"; LRSM, FRSM "digitally-assessed… you''ll need to arrange a video recording of your performance… supporting evidence"; "To enter for a Performance ARSM, LRSM or FRSM you must have passed ABRSM Grade 8 (Performance or Practical Grade)… In place of ABRSM Grade 8, we accept the equivalent qualification from… Trinity College London…". Chữ mới thêm "kiểm tra trực tiếp nơi có tổ chức", "kèm tài liệu bổ trợ", bỏ "độc tấu" (trang không dùng chữ này), nêu điều kiện cho cả ARSM.'
-    luot_2: dung
-    luot_2_nguon: [ "https://www.abrsm.org/sites/default/files/2023-09/arsm-qualification-spec-march-2023-v2.pdf", "https://www.abrsm.org/sites/default/files/2023-11/Performance%20LRSM%20and%20FRSM%20Qualification%20Specification%20from%202024%20English.pdf" ]
-    luot_2_ghi_chu: "ARSM: Grade 8 ABRSM (Practical hay Performance) hoặc bằng tương đương; thi trực tiếp hoặc số (video). LRSM/FRSM (từ 2024): digital, video buổi biểu diễn kèm phần viết hoặc video thuyết trình. Lưu ý nhỏ: LRSM/FRSM còn cho thay Grade 8 bằng kinh nghiệm nghề nghiệp phù hợp (câu không nhắc)."
+    ghi_chu: 'Chữ cũ: "LRSM và FRSM theo định dạng mới từ 2024, nộp video một buổi độc tấu, yêu cầu đã có Grade 8 (của ABRSM hoặc của một hội đồng thi khác nằm trong danh sách ABRSM chấp nhận)." Bản lưu trang ABRSM (08/09/2025): "New LRSM and FRSM from 2024"; ARSM: "A digital exam assessed from a video recording… A face-to-face exam – if these are available in your country"; LRSM, FRSM "digitally-assessed… you''ll need to arrange a video recording of your performance… supporting evidence"; "To enter for a Performance ARSM, LRSM or FRSM you must have passed ABRSM Grade 8 (Performance or Practical Grade)… In place of ABRSM Grade 8, we accept the equivalent qualification from… Trinity College London…". Chữ mới thêm "kiểm tra trực tiếp nơi có tổ chức", "kèm tài liệu bổ trợ", bỏ "độc tấu" (trang không dùng chữ này), nêu điều kiện cho cả ARSM. Review D8-gom: lượt 2 ghi chú: LRSM, FRSM còn cho thay Grade 8 bằng kinh nghiệm nghề nghiệp. Đã đọc bản đặc tả LRSM, FRSM 2024 (PDF): đúng, và phải được duyệt trước khi đăng ký. Thêm vế này để câu "cả ba yêu cầu…" không nói quá. Chữ đổi sau lượt 2: lượt 2 bổ sung. Lượt 2 cũ (trước khi đổi chữ): dung, nguồn https://www.abrsm.org/sites/default/files/2023-09/arsm-qualification-spec-march-2023-v2.pdf, https://www.abrsm.org/sites/default/files/2023-11/Performance%20LRSM%20and%20FRSM%20Qualification%20Specification%20from%202024%20English.pdf; ARSM: Grade 8 ABRSM (Practical hay Performance) hoặc bằng tương đương; thi trực tiếp hoặc số (video). LRSM/FRSM (từ 2024): digital, video buổi biểu diễn kèm phần viết hoặc video thuyết trình. Lưu ý nhỏ: LRSM/FRSM còn cho thay Grade 8 bằng kinh nghiệm nghề nghiệp phù hợp (câu không nhắc).'
   - id: n26
     cau: Các bằng DipABRSM, LRSM và FRSM kiểu cũ đã được ABRSM ngừng.
     loai: lich-su
     nguon:
       - abrsm-dip-wb
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Bằng DipABRSM đã ngừng nhận thi (hạn cuối 31/12/2023), nhưng những bằng đã cấp vẫn có giá trị." Bản lưu trang ABRSM: "We have now withdrawn our previous DipABRSM, LRSM and FRSM diplomas (ending 2024)": không khớp ngày 31/12/2023 và trang không nói "bằng đã cấp vẫn có giá trị". Bỏ ngày và vế "vẫn có giá trị", viết theo đúng điều trang ABRSM nói.'
+    ghi_chu: 'Chữ cũ: "Bằng DipABRSM đã ngừng nhận thi (hạn cuối 31/12/2023), nhưng những bằng đã cấp vẫn có giá trị." Bản lưu trang ABRSM: "We have now withdrawn our previous DipABRSM, LRSM and FRSM diplomas (ending 2024)": không khớp ngày 31/12/2023 và trang không nói "bằng đã cấp vẫn có giá trị". Bỏ ngày và vế "vẫn có giá trị", viết theo đúng điều trang ABRSM nói. Review D8-gom: giữ da-sua: lượt 2 dung, cùng điều với lượt 1.'
     luot_2: dung
     luot_2_nguon: [ "https://www.abrsm.org/sites/default/files/2023-11/Performance%20LRSM%20and%20FRSM%20Qualification%20Specification%20from%202024%20English.pdf", "https://pianodao.com/2023/11/17/abrsm-performance-diplomas/" ]
     luot_2_ghi_chu: Đề cương 2024 chỉ còn ARSM, LRSM, FRSM kiểu mới; bài trên Piano Dao (nguồn phụ) nói DipABRSM bị bỏ và LRSM/FRSM mới thay. Trang chính thức về việc ngừng (abrsm.org) trả 403 nên không mở được.
@@ -311,7 +335,7 @@ nhan_dinh:
     nguon:
       - trinity-vn
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "…liệt kê các kỳ thi âm nhạc và nhạc lý, cùng thông tin liên hệ một trung tâm thi ở Hà Nội." Trang Trinity Vietnam (05/11/2026): "Exams offered in Vietnam: Music, Theory of Music, Rock & Pop, TYLEC, DipTESOL"; "Contact details: Hanoi (Magic Music School), Ho Chi Minh City (Vietnam Cultural Industry Development Association - HCMC Branch)": hiện có hai nơi liên hệ, không chỉ Hà Nội. Viết chung để khỏi cũ khi danh sách đổi;'
+    ghi_chu: 'Chữ cũ: "…liệt kê các kỳ thi âm nhạc và nhạc lý, cùng thông tin liên hệ một trung tâm thi ở Hà Nội." Trang Trinity Vietnam (05/11/2026): "Exams offered in Vietnam: Music, Theory of Music, Rock & Pop, TYLEC, DipTESOL"; "Contact details: Hanoi (Magic Music School), Ho Chi Minh City (Vietnam Cultural Industry Development Association - HCMC Branch)": hiện có hai nơi liên hệ, không chỉ Hà Nội. Viết chung để khỏi cũ khi danh sách đổi; Review D8-gom: giữ da-sua: trang Trinity Vietnam (mở lại ở review) có "Contact details": Hanoi (Magic Music School, người liên hệ, điện thoại, email), Ho Chi Minh City (VCIDA chi nhánh TP. HCM); lượt 2 không thấy phần này, có lẽ vì đọc bản rút gọn. Chữ "thông tin liên hệ của đại diện Trinity tại Việt Nam" đúng.'
     luot_2: khong-chac
     luot_2_ghi_chu: Trang Trinity Vietnam (trinitycollege.com/local-trinity/vietnam) liệt kê Music, Theory of Music, Rock & Pop... nhưng phần chữ tôi đọc chỉ nói 'liên hệ đại diện địa phương', chưa thấy tên, số điện thoại hay email của đại diện ở Việt Nam (có thể nằm trong thành phần tải động).
   - id: n29
@@ -328,28 +352,26 @@ nhan_dinh:
     cau: Với ABRSM, nhiều trung tâm âm nhạc trong nước giới thiệu lớp luyện thi.
     loai: lich-su
     nguon: []
-    ket_qua: null
-    ghi_chu: 'chưa chắc: nhận định chung về thị trường trong nước, chưa mở nguồn (không có danh sách trung tâm ABRSM ở Việt Nam trên trang ABRSM mở được). Người giao cân nhắc bỏ câu.'
+    ket_qua: da-bo
+    ghi_chu: 'chưa chắc: nhận định chung về thị trường trong nước, chưa mở nguồn (không có danh sách trung tâm ABRSM ở Việt Nam trên trang ABRSM mở được). Người giao cân nhắc bỏ câu. Review D8-gom: bỏ câu "Với ABRSM, nhiều trung tâm âm nhạc trong nước giới thiệu lớp luyện thi": không có nguồn (lượt 1 chưa mở, lượt 2 chỉ thấy một bài báo về một trường). Giữ lời khuyên kiểm tra trên website ABRSM.'
     luot_2: khong-chac
     luot_2_ghi_chu: Chỉ mở được bài VnEconomy (25/02/2026) nói Sunny Days Piano là trường đối tác chính thức của ABRSM, học viên thi ABRSM. Chưa có nguồn mở được cho 'nhiều trung tâm' giới thiệu lớp luyện thi.
   - id: n31
-    cau: 'Ba cơ sở đào tạo âm nhạc chuyên nghiệp lớn có đào tạo piano: Học viện Âm nhạc Quốc gia Việt Nam (Hà Nội), Nhạc viện Thành phố Hồ Chí Minh, Học viện Âm nhạc Huế.'
+    cau: Trong các cơ sở đào tạo âm nhạc chuyên nghiệp ở Việt Nam có Học viện Âm nhạc Quốc gia Việt Nam (Hà Nội), Nhạc viện Thành phố Hồ Chí Minh và Học viện Âm nhạc Huế; hai trường đầu có khoa Piano.
     loai: lich-su
     nguon:
+      - vnam
       - hcmcons
-      - wp-vi-hue
-    ket_qua: null
-    ghi_chu: 'chưa chắc: hcmcons.vn có khoa Piano; Wikipedia tiếng Việt ghi Học viện Âm nhạc Huế "là một trong ba trường" và đào tạo Piano; Học viện Âm nhạc Quốc gia Việt Nam có Khoa Piano (kết quả tìm kiếm, vnam.edu.vn chưa mở). Chưa có nguồn bậc 2 cho "ba cơ sở lớn".'
-    luot_2: dung
-    luot_2_nguon: [ "https://en.wikipedia.org/wiki/Conservatory_of_Ho_Chi_Minh_City", "https://vi.wikipedia.org/wiki/Học_viện_Âm_nhạc_Quốc_gia_Việt_Nam", "https://vi.wikipedia.org/wiki/Học_viện_Âm_nhạc_Huế", "https://hcmcons.vn" ]
-    luot_2_ghi_chu: Cả ba cơ sở có đào tạo piano (khoa Piano). 'Ba cơ sở chuyên nghiệp lớn' là cách nói; nguồn chính là Wikipedia và hcmcons.vn.
+      - hue-home
+    ket_qua: da-sua
+    ghi_chu: 'chưa chắc: hcmcons.vn có khoa Piano; Wikipedia tiếng Việt ghi Học viện Âm nhạc Huế "là một trong ba trường" và đào tạo Piano; Học viện Âm nhạc Quốc gia Việt Nam có Khoa Piano (kết quả tìm kiếm, vnam.edu.vn chưa mở). Chưa có nguồn bậc 2 cho "ba cơ sở lớn". Review D8-gom: chữ cũ "Ba cơ sở… lớn có đào tạo piano" chỉ có Wikipedia; "lớn" và "ba" không có nguồn bậc 2. Trang chủ vnam.edu.vn có Khoa Piano; hcmcons.vn có khoa Piano; trang chủ Học viện Âm nhạc Huế không nêu khoa Piano (chỉ có workshop đệm piano), nên không viết Huế có khoa Piano. Bỏ vế "nhiều hệ bắt đầu từ khi học sinh còn nhỏ" ở câu sau (không có nguồn, chưa có nhận định riêng). Chữ đổi sau lượt 2: lượt 2 bổ sung. Lượt 2 cũ (trước khi đổi chữ): dung, nguồn https://en.wikipedia.org/wiki/Conservatory_of_Ho_Chi_Minh_City, https://vi.wikipedia.org/wiki/Học_viện_Âm_nhạc_Quốc_gia_Việt_Nam, https://vi.wikipedia.org/wiki/Học_viện_Âm_nhạc_Huế, https://hcmcons.vn; Cả ba cơ sở có đào tạo piano (khoa Piano). ''Ba cơ sở chuyên nghiệp lớn'' là cách nói; nguồn chính là Wikipedia và hcmcons.vn.'
   - id: n32
     cau: Nhạc viện TP. Hồ Chí Minh có bộ phận Năng khiếu âm nhạc.
     loai: lich-su
     nguon:
       - hcmcons
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Nhạc viện TP. Hồ Chí Minh chẳng hạn có Trung tâm Bồi dưỡng Năng khiếu Âm nhạc". hcmcons.vn (05/11/2026): mục "Trung tâm và các Phòng Chức Năng: … Thông tin thư viện và Năng khiếu âm nhạc" và liên kết "Website Năng khiếu âm nhạc"; không thấy tên "Trung tâm Bồi dưỡng Năng khiếu Âm nhạc". Viết như trang hiện ghi.'
+    ghi_chu: 'Chữ cũ: "Nhạc viện TP. Hồ Chí Minh chẳng hạn có Trung tâm Bồi dưỡng Năng khiếu Âm nhạc". hcmcons.vn (05/11/2026): mục "Trung tâm và các Phòng Chức Năng: … Thông tin thư viện và Năng khiếu âm nhạc" và liên kết "Website Năng khiếu âm nhạc"; không thấy tên "Trung tâm Bồi dưỡng Năng khiếu Âm nhạc". Viết như trang hiện ghi. Review D8-gom: giữ da-sua: trang chủ hcmcons.vn (mở lại) có "Thông tin thư viện và Năng khiếu âm nhạc", tin "Trung tâm Bồi dưỡng Năng khiếu Âm nhạc tổ chức lễ trao chứng nhận…".'
     luot_2: dung
     luot_2_nguon: [ "https://hcmcons.vn" ]
     luot_2_ghi_chu: Trang hcmcons.vn có đơn vị 'Thông tin thư viện và Năng khiếu âm nhạc' và 'Trung tâm Bồi dưỡng Năng khiếu Âm nhạc'.
@@ -363,15 +385,12 @@ nhan_dinh:
     ket_qua: khong-can-nguon
     ghi_chu: Nhận xét thực tế, không nêu số liệu; đi kèm lời khuyên đánh giá bằng các dấu hiệu ở trên.
   - id: n35
-    cau: 'Zoom: Settings → Audio, chọn Original sound for musicians, tắt Automatically adjust microphone volume; bật High-fidelity music mode nếu dùng mạng dây; chỉ bật Echo cancellation khi dùng loa thay vì tai nghe.'
+    cau: "Zoom: Settings → Audio, chọn Original sound for musicians, tắt Automatically adjust microphone volume; bật High-fidelity music mode nếu dùng mạng dây; nên dùng tai nghe, còn nếu nghe qua loa thì bật Echo cancellation."
     loai: quy-tac
     nguon:
       - berklee-zoom
-    ket_qua: dung
-    ghi_chu: 'Berklee Online (cập nhật 18/12/2025): "Ensure that the Automatically adjust microphone volume toggle is toggled off"; "Under the Microphone Modes header, select Original sound for musicians"; "If you are using a wired ethernet connection, check the box next to High-fidelity music mode… not recommended for wireless connections"; "If you are not using headphones… make sure the box next to Echo cancellation is checked".'
-    luot_2: khong-chac
-    luot_2_nguon: [ "https://oit.colorado.edu/node/26441", "https://support.getacceptd.com/hc/en-us/articles/4409910357133-Best-Audio-Quality" ]
-    luot_2_ghi_chu: "Original sound, tắt Automatically adjust microphone volume (Acceptd), High-fidelity music mode với mạng dây (Zoom blog): khớp. Riêng Echo cancellation: Colorado khuyên luôn bật để tránh vọng, Acceptd cũng bật, cộng đồng Zoom nói tắt khi dùng tai nghe; không khớp với 'chỉ bật khi dùng loa'."
+    ket_qua: da-sua
+    ghi_chu: 'Berklee Online (cập nhật 18/12/2025): "Ensure that the Automatically adjust microphone volume toggle is toggled off"; "Under the Microphone Modes header, select Original sound for musicians"; "If you are using a wired ethernet connection, check the box next to High-fidelity music mode… not recommended for wireless connections"; "If you are not using headphones… make sure the box next to Echo cancellation is checked". Review D8-gom: lượt 2 khong-chac ở Echo cancellation. Berklee (mở lại): "It is recommended to use headphones when performing"; "If you are not using headphones… make sure the box next to Echo cancellation is checked". Berklee không nói phải tắt khi dùng tai nghe, nên chữ "chỉ bật… khi dùng loa" nói quá; viết lại đúng theo Berklee. Chữ đổi sau lượt 2: lượt 2 bổ sung. Lượt 2 cũ (trước khi đổi chữ): khong-chac, nguồn https://oit.colorado.edu/node/26441, https://support.getacceptd.com/hc/en-us/articles/4409910357133-Best-Audio-Quality; Original sound, tắt Automatically adjust microphone volume (Acceptd), High-fidelity music mode với mạng dây (Zoom blog): khớp. Riêng Echo cancellation: Colorado khuyên luôn bật để tránh vọng, Acceptd cũng bật, cộng đồng Zoom nói tắt khi dùng tai nghe; không khớp với ''chỉ bật khi dùng loa''.'
   - id: n36
     cau: Ứng dụng nào không có chế độ cho nhạc thì bộ lọc tiếng ồn có thể "nuốt" những nốt nhỏ và tiếng ngân.
     loai: quy-tac
@@ -385,9 +404,10 @@ nhan_dinh:
   - id: n37
     cau: 'Học trực tuyến: thầy trò không thể chơi cùng lúc hay đếm nhịp cho nhau qua mạng; thầy làm mẫu, bạn nghe rồi chơi lại; máy đếm nhịp đặt ở phía bạn.'
     loai: quy-tac
-    nguon: []
-    ket_qua: null
-    ghi_chu: 'chưa chắc: độ trễ của cuộc gọi video khiến chơi cùng lúc khó là hiểu biết chung nhưng chưa mở nguồn bậc 2 (nghiên cứu về độ trễ trong chơi nhạc từ xa); "không thể" mạnh. Đề xuất viết "khó chơi cùng lúc vì độ trễ" hay bỏ.'
+    nguon:
+      - trinity-latency
+    ket_qua: dung
+    ghi_chu: 'chưa chắc: độ trễ của cuộc gọi video khiến chơi cùng lúc khó là hiểu biết chung nhưng chưa mở nguồn bậc 2 (nghiên cứu về độ trễ trong chơi nhạc từ xa); "không thể" mạnh. Đề xuất viết "khó chơi cùng lúc vì độ trễ" hay bỏ. Review D8-gom: Trinity College London (tài nguyên giáo viên, bậc 2): "The time delay makes it impossible for musicians to play together online", nên "không thể chơi cùng lúc" có nguồn. Thầy làm mẫu, máy đếm nhịp phía học trò là lời khuyên, cùng mục "accompaniments and metronomes" của trang ấy.'
     luot_2: dung
     luot_2_nguon: [ "https://www.scoringnotes.com/news/better-music-experiences-come-to-zoom-with-high-fidelity-audio/" ]
     luot_2_ghi_chu: "Scoring Notes: bản cập nhật Zoom nói về chất lượng âm thanh, không giảm độ trễ; khó chơi ghép nhịp phức tạp qua Zoom. Lời khuyên cụ thể (đặt máy đếm nhịp phía bạn) là cách làm hợp lý, không có nguồn riêng."
@@ -477,16 +497,17 @@ nhan_dinh:
       - hcmcons
       - berklee-zoom
     ket_qua: da-sua
-    ghi_chu: 'Các tài liệu có thật và mở được ngày 05/11/2026 (PDF ABRSM, Trinity, trang LCM, hcmcons, Berklee). Mục Nguồn ghi "Practical Music Grades: Piano Syllabus 2025 & 2026" và "Music Performance Grades: Piano Syllabus 2027 & 2028": đúng tên tài liệu, nhưng Practical Grades Piano Syllabus 2027 & 2028 cũng đã đăng (PDF 63 tr.): người giao cân nhắc thêm. Đã sửa: "…lịch ngừng DipABRSM" thành "…việc ngừng các bằng cũ" (khớp n26).'
+    ghi_chu: 'Các tài liệu có thật và mở được ngày 05/11/2026 (PDF ABRSM, Trinity, trang LCM, hcmcons, Berklee). Mục Nguồn ghi "Practical Music Grades: Piano Syllabus 2025 & 2026" và "Music Performance Grades: Piano Syllabus 2027 & 2028": đúng tên tài liệu, nhưng Practical Grades Piano Syllabus 2027 & 2028 cũng đã đăng (PDF 63 tr.): người giao cân nhắc thêm. Đã sửa: "…lịch ngừng DipABRSM" thành "…việc ngừng các bằng cũ" (khớp n26). Review D8-gom: giữ da-sua: lượt 2 dung, cùng điều với lượt 1.'
     luot_2: dung
     luot_2_nguon: [ "https://www.abrsm.org/sites/default/files/2026-06/Piano%20Performance%20Grades%20Syllabus%202027%20&%202028.pdf", "https://www.abrsm.org/sites/default/files/2026-06/Piano%20Practical%20Grades%20Qualification%20Specification%202027%20&%202028.pdf", "https://www.abrsm.org/sites/default/files/2026-04/00%20Performance%20Grades%20Qual%20Spec%20-%20Generic%20Parts%2020260130_Final.pdf", "https://trinitycollege.com/resource?id=9079", "https://www.abrsm.org/sites/default/files/2023-11/Performance%20LRSM%20and%20FRSM%20Qualification%20Specification%20from%202024%20English.pdf" ]
     luot_2_ghi_chu: "Các tài liệu có thật và tên khớp: Performance Grades Piano Syllabus 2027 & 2028, Qualification Specification (Performance và Practical), Trinity Piano Syllabus (online edition 2/2026), ABRSM diplomas. Chưa mở được riêng tệp 'Practical Music Grades: Piano Syllabus 2025 & 2026' nhưng đề cương 2027–2028 nhắc đến."
   - id: n51
     cau: 'Gerald Klickstein, The Musician''s Way: A Guide to Practice, Performance, and Wellness (Oxford University Press, 2009).'
     loai: ten
-    nguon: []
-    ket_qua: null
-    ghi_chu: 'chưa chắc: sách in, chưa mở nguồn trực tuyến (Oxford University Press). Tên và năm là điều agent không đọc được từ sách in (chuẩn mục 2).'
+    nguon:
+      - ol-klickstein
+    ket_qua: dung
+    ghi_chu: 'chưa chắc: sách in, chưa mở nguồn trực tuyến (Oxford University Press). Tên và năm là điều agent không đọc được từ sách in (chuẩn mục 2). Review D8-gom: sách in: tên, nhà xuất bản, năm khớp bản ghi Open Library (danh mục thư viện) mà lượt 2 đã mở; như tai-nguyen n8.'
     luot_2: dung
     luot_2_nguon: [ "https://openlibrary.org/search.json?q=musician%27s+way+klickstein&fields=title,subtitle,author_name,publisher,first_publish_year&limit=3" ]
     luot_2_ghi_chu: "Open Library: The musician's way: a guide to practice, performance, and wellness, Gerald Klickstein, Oxford University Press, 2009."
@@ -494,7 +515,8 @@ nhan_dinh:
     cau: 'Link ngoài của trang còn mở được: abrsm.org (403 robot), trinitycollege.com, trinitycollege.com/local-trinity/vietnam, lcme.uwl.ac.uk/…/vietnam, hcmcons.vn, Berklee Online; link ABRSM diplomas (abrsm.org/en-gb/other-assessments/diplomas/music-performance).'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'curl ngày 05/11/2026: 200 cho trinitycollege.com, trinitycollege.com/local-trinity/vietnam, lcme.uwl.ac.uk/…/vietnam, hcmcons.vn, online.berklee.edu; 403 cho abrsm.org và trang diplomas (Cloudflare chặn robot, trình duyệt thường vào được; bản lưu Wayback Machine mở được, n25–n26); PDF đề cương trên abrsm.org/sites/default/files/ mở được (n13…n17).'
+    ghi_chu: 'curl ngày 05/11/2026: 200 cho trinitycollege.com, trinitycollege.com/local-trinity/vietnam, lcme.uwl.ac.uk/…/vietnam, hcmcons.vn, online.berklee.edu; 403 cho abrsm.org và trang diplomas (Cloudflare chặn robot, trình duyệt thường vào được; bản lưu Wayback Machine mở được, n25–n26); PDF đề cương trên abrsm.org/sites/default/files/ mở được (n13…n17). Review D8-gom: curl ngày 05/11/2026 (review): trinitycollege.com/local-trinity/vietnam, hcmcons.vn, online.berklee.edu mở được; abrsm.org chặn công cụ (PDF đề cương mở được).'
+    review: dung
 khuong_nhac: []
 doi_chu:
   - cu: K. 545, Invention số 1
@@ -507,14 +529,20 @@ doi_chu:
     moi: 'Chương trình đổi định kỳ: chương trình piano 2027–2028 dùng được từ 1/1/2027. Trong năm 2027, các bài của chương trình 2025–2026 vẫn được chơi, đến hết 31/12/2027; bạn chọn một trong hai chương trình, và các bài phải lấy từ cùng một chương trình.'
     ly_do: 'PDF ABRSM 2027 & 2028, mục Overlap: bản đặc tả 2025 & 2026 hết hạn 31/12/2026; chỉ các bài của nó được chơi đến 31/12/2027, mọi bài phải cùng một chương trình.'
   - cu: 'ABRSM: ARSM dành cho người đã qua Grade 8, thi trực tiếp hoặc qua video; LRSM và FRSM theo định dạng mới từ 2024, nộp video một buổi độc tấu, yêu cầu đã có Grade 8 (của ABRSM hoặc của một hội đồng thi khác nằm trong danh sách ABRSM chấp nhận). Bằng DipABRSM đã ngừng nhận thi (hạn cuối 31/12/2023), nhưng những bằng đã cấp vẫn có giá trị.'
-    moi: 'ABRSM: ARSM dành cho người đã qua Grade 8, thi trực tiếp (nơi có tổ chức) hoặc qua video; LRSM và FRSM theo định dạng mới từ 2024, nộp video buổi biểu diễn kèm tài liệu bổ trợ. Cả ba yêu cầu đã đỗ Grade 8 của ABRSM (Performance hoặc Practical), hay bằng tương đương của một hội đồng thi khác nằm trong danh sách ABRSM chấp nhận. Các bằng DipABRSM, LRSM và FRSM kiểu cũ đã được ABRSM ngừng.'
-    ly_do: 'Bản lưu trang ABRSM diplomas (08/09/2025): "We have now withdrawn our previous DipABRSM, LRSM and FRSM diplomas (ending 2024)"; ngày 31/12/2023 và "đã cấp vẫn có giá trị" không có trong trang; ARSM cũng cần Grade 8 và có thi trực tiếp "nơi có tổ chức"; LRSM, FRSM nộp video kèm "supporting evidence".'
+    moi: 'ABRSM: ARSM dành cho người đã qua Grade 8, thi trực tiếp (nơi có tổ chức) hoặc qua video; LRSM và FRSM theo định dạng mới từ 2024, nộp video buổi biểu diễn kèm tài liệu bổ trợ. Cả ba yêu cầu đã đỗ Grade 8 của ABRSM (Performance hoặc Practical), hay bằng tương đương của một hội đồng thi khác nằm trong danh sách ABRSM chấp nhận; với LRSM và FRSM, kinh nghiệm biểu diễn chuyên nghiệp được ABRSM duyệt trước cũng thay được Grade 8. Các bằng DipABRSM, LRSM và FRSM kiểu cũ đã được ABRSM ngừng.'
+    ly_do: 'Bản lưu trang ABRSM diplomas (08/09/2025): "We have now withdrawn our previous DipABRSM, LRSM and FRSM diplomas (ending 2024)"; ngày 31/12/2023 và "đã cấp vẫn có giá trị" không có trong trang; ARSM cũng cần Grade 8 và có thi trực tiếp "nơi có tổ chức"; LRSM, FRSM nộp video kèm "supporting evidence". Review D8-gom: thêm lối thay Grade 8 bằng kinh nghiệm chuyên nghiệp (đặc tả LRSM, FRSM 2024).'
   - cu: Trang dành cho Việt Nam trên website Trinity liệt kê các kỳ thi âm nhạc và nhạc lý, cùng thông tin liên hệ một trung tâm thi ở Hà Nội.
     moi: Trang dành cho Việt Nam trên website Trinity liệt kê các kỳ thi (có âm nhạc và nhạc lý), cùng thông tin liên hệ của đại diện Trinity tại Việt Nam.
     ly_do: Trang Trinity Vietnam (05/11/2026) ghi hai nơi liên hệ (Hà Nội, TP. HCM) và nhiều loại kỳ thi (Music, Theory of Music, Rock & Pop…); viết chung cho bền.
   - cu: Ba cơ sở đào tạo âm nhạc chuyên nghiệp lớn có đào tạo piano là Học viện Âm nhạc Quốc gia Việt Nam (Hà Nội), Nhạc viện Thành phố Hồ Chí Minh và Học viện Âm nhạc Huế. Các trường này đào tạo nhạc công chuyên nghiệp, nhiều hệ bắt đầu từ khi học sinh còn nhỏ; một số có trung tâm bồi dưỡng năng khiếu hoặc lớp ngắn hạn (Nhạc viện TP. Hồ Chí Minh chẳng hạn có Trung tâm Bồi dưỡng Năng khiếu Âm nhạc). Chương trình thay đổi theo năm, nên hãy hỏi trực tiếp phòng đào tạo về lớp cho người lớn.
-    moi: Ba cơ sở đào tạo âm nhạc chuyên nghiệp lớn có đào tạo piano là Học viện Âm nhạc Quốc gia Việt Nam (Hà Nội), Nhạc viện Thành phố Hồ Chí Minh và Học viện Âm nhạc Huế. Các trường này đào tạo nhạc công chuyên nghiệp, nhiều hệ bắt đầu từ khi học sinh còn nhỏ; một số có trung tâm bồi dưỡng năng khiếu hoặc lớp ngắn hạn (Nhạc viện TP. Hồ Chí Minh chẳng hạn có bộ phận Năng khiếu âm nhạc). Chương trình thay đổi theo năm, nên hãy hỏi trực tiếp phòng đào tạo về lớp cho người lớn.
-    ly_do: hcmcons.vn ghi "Thông tin thư viện và Năng khiếu âm nhạc" và "Website Năng khiếu âm nhạc"; không thấy tên "Trung tâm Bồi dưỡng Năng khiếu Âm nhạc".
+    moi: Trong các cơ sở đào tạo âm nhạc chuyên nghiệp ở Việt Nam có Học viện Âm nhạc Quốc gia Việt Nam (Hà Nội), Nhạc viện Thành phố Hồ Chí Minh và Học viện Âm nhạc Huế; hai trường đầu có khoa Piano. Các trường này đào tạo nhạc công chuyên nghiệp; một số có trung tâm bồi dưỡng năng khiếu hoặc lớp ngắn hạn (Nhạc viện TP. Hồ Chí Minh chẳng hạn có bộ phận Năng khiếu âm nhạc). Chương trình thay đổi theo năm, nên hãy hỏi trực tiếp phòng đào tạo về lớp cho người lớn.
+    ly_do: 'hcmcons.vn ghi "Thông tin thư viện và Năng khiếu âm nhạc" và "Website Năng khiếu âm nhạc"; không thấy tên "Trung tâm Bồi dưỡng Năng khiếu Âm nhạc". Review D8-gom: bỏ "ba… lớn" và "nhiều hệ bắt đầu từ khi học sinh còn nhỏ" (không có nguồn bậc 2); chỉ ghi khoa Piano ở hai trường có nêu trên trang chủ.'
   - cu: 'ABRSM, Music Performance diplomas: ARSM, LRSM, FRSM và lịch ngừng DipABRSM.'
     moi: 'ABRSM, Music Performance diplomas: ARSM, LRSM, FRSM và việc ngừng các bằng cũ.'
     ly_do: Khớp câu đã sửa ở mục Sau Grade 8 (không còn ngày 31/12/2023).
+  - cu: 'Trên Zoom, vào Settings → Audio: chọn Original sound for musicians, tắt Automatically adjust microphone volume; bật High-fidelity music mode nếu dùng mạng dây; chỉ bật Echo cancellation khi dùng loa thay vì tai nghe. Ứng dụng nào không có chế độ cho nhạc thì bộ lọc tiếng ồn có thể "nuốt" những nốt nhỏ và tiếng ngân'
+    moi: 'Trên Zoom, vào Settings → Audio: chọn Original sound for musicians, tắt Automatically adjust microphone volume; bật High-fidelity music mode nếu dùng mạng dây; nên dùng tai nghe, còn nếu nghe qua loa thì bật Echo cancellation. Ứng dụng nào không có chế độ cho nhạc thì bộ lọc tiếng ồn có thể "nuốt" những nốt nhỏ và tiếng ngân'
+    ly_do: 'Review D8-gom: theo Berklee Online (khuyên dùng tai nghe; dùng loa thì bật Echo cancellation), bỏ "chỉ".'
+  - cu: Với ABRSM, nhiều trung tâm âm nhạc trong nước giới thiệu lớp luyện thi. Hãy kiểm tra lịch thi, địa điểm và cách đăng ký trực tiếp trên website ABRSM, nhất là với các kỳ thi trực tiếp (Practical Grades).
+    moi: Với ABRSM, hãy kiểm tra lịch thi, địa điểm và cách đăng ký trực tiếp trên website ABRSM, nhất là với các kỳ thi trực tiếp (Practical Grades).
+    ly_do: "Review D8-gom: bỏ câu về trung tâm luyện thi trong nước (không có nguồn)."

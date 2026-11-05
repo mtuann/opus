@@ -31,7 +31,7 @@ Danh mục này xếp những tác phẩm thật, từ bài đầu tiên đến 
 | [Schubert: Impromptu Sol♭ trưởng, D. 899 số 3](/opus/piano/tac-pham/schubert-impromptu-sol-giang/) | 7 | 6 |
 | [Chopin: Ballade số 1, Op. 23](/opus/piano/tac-pham/chopin-ballade-1/) | 7 | 8 |
 
-Henle xếp *Für Elise* và Invention số 1 cùng mức 3, còn *Clair de lune* và K. 545 cùng mức 5. Site đặt *Clair de lune* cao hơn K. 545 một chặng vì âm thanh, bàn đạp và sự tự do nhịp điệu mà bài này đòi hỏi. Mức 7 của Sonata *Ánh trăng* là cho cả bản, gồm chương 3 *Presto agitato* rất khó; riêng chương 1 thì site xếp ở chặng 5. Hãy dùng các thang để so sánh tương đối, đừng coi chúng là phép đo chính xác.
+Henle xếp *Für Elise* và Invention số 1 cùng mức 3, còn *Clair de lune* và K. 545 cùng mức 5. Site đặt *Clair de lune* cao hơn K. 545 một chặng vì âm thanh, bàn đạp và sự tự do nhịp điệu mà bài này đòi hỏi. Mức 7 của Sonata *Ánh trăng* là cho cả bản, gồm cả chương 3 *Presto agitato*; riêng chương 1 thì site xếp ở chặng 5. Hãy dùng các thang để so sánh tương đối, đừng coi chúng là phép đo chính xác.
 
 ## Chọn bài thế nào
 
@@ -82,9 +82,9 @@ Người lớn thường muốn đi thẳng tới bài mình yêu: *Clair de lun
 | Türk: *Handstücke für angehende Klavierspieler* (Bài cho người mới học đàn, 1792 và 1795), những bài đầu | Cổ điển | Bài ngắn viết cho học trò thế kỷ 18: câu nhạc và cách phát âm Cổ điển |
 | Bartók: *Mikrokosmos* Sz. 107, quyển 1–2 | Thế kỷ 20 | Giai điệu đồng âm hai tay, rồi hai tay độc lập; điệu thức dân gian ngoài trưởng và thứ |
 | Stravinsky: *Les cinq doigts* (Năm ngón tay, 1921) | Thế kỷ 20 | Tám giai điệu rất dễ trên năm nốt: tay phải gần như nằm yên một thế, hòa âm mang màu thế kỷ 20 |
-| Diabelli: *Melodische Übungsstücke* Op. 149, cho bốn tay | Cổ điển | Phần của người học gói trong năm nốt, thầy hoặc bạn chơi phần kia: giữ nhịp cùng người khác ngay từ đầu |
+| Diabelli: *Melodische Übungsstücke* Op. 149, cho bốn tay | Thế kỷ 19, phong cách Cổ điển | Phần của người học gói trong năm nốt, thầy hoặc bạn chơi phần kia: giữ nhịp cùng người khác ngay từ đầu |
 | Kurtág: *Játékok* (Trò chơi), quyển 1 | Đương đại | Bộ sưu tập bắt đầu từ năm 1973: chơi với âm thanh, cụm nốt, khoảng lặng, để khám phá cây đàn hơn là luyện ngón |
-| Czerny: *Practical Method for Beginners* Op. 599, những bài đầu | Đầu thế kỷ 19 | Năm ngón đều, hai tay cùng chuyển động; chọn vài bài, không cần tập hết |
+| Czerny: *Practical Method for Beginners* Op. 599, những bài đầu | Thế kỷ 19 | Năm ngón đều, hai tay cùng chuyển động; chọn vài bài, không cần tập hết |
 | Gurlitt: *Anfangs-Stunden* (Những giờ học đầu) Op. 117 | Lãng mạn | Bài rất ngắn, mỗi bài một tính cách |
 
 ## Chặng 2. Sơ cấp (≈ Grade 1–2)
@@ -96,7 +96,7 @@ Những tác phẩm cổ điển thật đầu tiên: vũ khúc ngắn của th�
 | [Petzold: Minuet Sol trưởng, BWV Anh. 114](/opus/piano/tac-pham/minuet-sol/) | Baroque | Nhịp 3/4 của điệu minuet, hai bè độc lập, những bước đầu ra khỏi thế năm ngón |
 | [Petzold: Minuet Sol thứ, BWV Anh. 115](/opus/piano/tac-pham/minuet-sol-thu/) | Baroque | Người anh em giọng thứ của bài trên: cùng phong cách, màu tối hơn |
 | *Notenbüchlein für Anna Magdalena Bach* (Sổ nhạc cho Anna Magdalena Bach, 1725): Minuet Sol trưởng Anh. 116, Polonaise Sol thứ Anh. 119, Hành khúc Rê trưởng Anh. 122, [Musette Rê trưởng Anh. 126](/opus/piano/tac-pham/musette-re/) | Baroque | Mỗi bài một điệu nhảy, một kiểu phát âm; Hành khúc thường được cho là của C. P. E. Bach; Musette có tay trái nhảy quãng tám |
-| *Notenbuch für Wolfgang* (Sổ nhạc cho Wolfgang): Burleske, Minuet, Bourrée | Giữa thế kỷ 18 | Bài ngắn, sáng, câu nhạc rõ ràng. Sổ này thường in dưới tên Leopold Mozart, nhưng nhiều khả năng là tuyển tập khuyết danh |
+| *Notenbuch für Wolfgang* (Sổ nhạc cho Wolfgang): Minuet, Bourrée | Giữa thế kỷ 18 | Bài ngắn, sáng, câu nhạc rõ ràng. Sổ này thường in dưới tên Leopold Mozart, nhưng nhiều khả năng là tuyển tập khuyết danh |
 | Mozart: Andante Đô trưởng K. 1a, [Minuet Fa trưởng K. 2](/opus/piano/tac-pham/mozart-minuet-k2/), Allegro Si♭ trưởng K. 3 | Cổ điển | Những bài Mozart viết lúc 5–6 tuổi, được ghi lại trong sổ nhạc của chị gái Nannerl: câu nhạc Cổ điển cân đối |
 | [Schumann: *Album für die Jugend* Op. 68](/opus/piano/tac-pham/schumann-album/): *Melodie* (số 1), *Wilder Reiter* (số 8), *Fröhlicher Landmann* (số 10); thêm *Soldatenmarsch* (số 2) | Lãng mạn | Giai điệu hát trên phần đệm, staccato chắc, giai điệu chuyển xuống tay trái (*Wilder Reiter*) |
 | Tchaikovsky: *Album for the Young* Op. 39: [*Old French Song* (Bài ca Pháp cổ)](/opus/piano/tac-pham/tchaikovsky-bai-ca-phap-co/), *The Sick Doll* (Búp bê ốm) | Lãng mạn | Giai điệu buồn hát trên hợp âm, sắc thái *p* và *pp*, "thở" ở cuối câu |
@@ -115,7 +115,7 @@ Những tác phẩm cổ điển thật đầu tiên: vũ khúc ngắn của th�
 | [Clementi: Sonatina Đô trưởng Op. 36 số 1](/opus/piano/tac-pham/clementi-sonatina/) | Cổ điển | Hình thức sonata thu nhỏ, gam và hợp âm rải trong bài, ba chương tương phản |
 | Clementi: Sonatina Op. 36 số 2 (Sol trưởng) và số 3 (Đô trưởng) | Cổ điển | Chương nhanh dài hơn, ngón chạy cần đều hơn |
 | Kuhlau: Sonatina Đô trưởng Op. 20 số 1; Sonatina Đô trưởng Op. 55 số 1 | Cổ điển | Cùng ngôn ngữ với Clementi, giai điệu cởi mở, nhiều đoạn chạy ngón |
-| Diabelli: các sonatina Op. 151 và Op. 168 | Cổ điển | Giai điệu dễ nhớ trên đệm Alberti đều |
+| Diabelli: các sonatina Op. 151 và Op. 168 | Thế kỷ 19, phong cách Cổ điển | Giai điệu dễ nhớ trên đệm Alberti đều |
 | [Sonatina Sol trưởng, Anh. 5 số 1](/opus/piano/tac-pham/beethoven-sonatina-sol/) (thường gán cho Beethoven) | Cổ điển | Hai chương, Moderato và Romanze; giai điệu hát chậm. Nay ít được cho là của Beethoven |
 | [Burgmüller: *Arabesque* Op. 100 số 2](/opus/piano/tac-pham/burgmuller-arabesque/) | Lãng mạn | Nhóm móc kép nhanh và đều, hợp âm staccato, chuyền tay |
 | Burgmüller: Op. 100: *La chasse* (Cuộc săn, số 9), *Ballade* (số 15) | Lãng mạn | Nhảy tay nhanh, staccato nhẹ, tương phản sắc thái mạnh |
@@ -143,9 +143,9 @@ Hai kỹ năng lớn của chặng là **phức điệu** (Bach) và **giai đi�
 | [Beethoven: Sonata Op. 49 số 2 (Sol trưởng)](/opus/piano/tac-pham/beethoven-op49-2/) và số 1 (Sol thứ) | Cổ điển | Sonata hai chương của Beethoven: chương 1 của số 2 là một hình thức sonata nhỏ, rõ ràng; chương 2 là một *Tempo di Menuetto* |
 | Clementi: Sonatina Op. 36 số 4–6; Kuhlau: Sonatina Op. 20 số 2 và 3 | Cổ điển | Chạy ngón nhanh hơn, sonatina nhiều chương |
 | [Chopin: Prélude Mi thứ Op. 28 số 4](/opus/piano/tac-pham/chopin-prelude-mi-thu/) | Lãng mạn | Hợp âm tay trái thật khẽ và đều dưới một giai điệu gần như chỉ quanh một nốt |
-| Chopin: Prélude Op. 28 số 6 (Si thứ), [số 7 (La trưởng)](/opus/piano/tac-pham/chopin-prelude-la-truong/), số 20 (Đô thứ) | Lãng mạn | Số 6: giai điệu ở tay trái; số 7: một mazurka 16 ô nhịp; số 20: hợp âm dày, nhỏ dần từ *ff* xuống *pp* |
+| Chopin: Prélude Op. 28 số 6 (Si thứ), [số 7 (La trưởng)](/opus/piano/tac-pham/chopin-prelude-la-truong/), số 20 (Đô thứ) | Lãng mạn | Số 6: giai điệu ở tay trái; số 7: một mazurka 16 ô nhịp; số 20: hợp âm dày, sắc thái đi từ *ff* xuống *p* rồi *pp* |
 | Chopin: Mazurka La thứ Op. 68 số 2; Mazurka Sol thứ Op. 67 số 2 | Lãng mạn | Nhịp mazurka với trọng âm lệch sang phách 2 hoặc 3, rubato dân gian |
-| [Satie: Gymnopédie số 1](/opus/piano/tac-pham/satie-gymnopedie/); Gnossienne số 1 | Cuối thế kỷ 19 | Bước nhảy trầm – hợp âm, bàn đạp theo ô nhịp, giữ tốc độ chậm đều; Gnossienne viết không có vạch nhịp |
+| [Satie: Gymnopédie số 1](/opus/piano/tac-pham/satie-gymnopedie/); Gnossienne số 1 | Cuối thế kỷ 19 | Bước nhảy trầm – hợp âm, bàn đạp theo ô nhịp, giữ tốc độ chậm đều |
 | Grieg: *Lyriske stykker* (Lyric Pieces) Op. 12: [*Arietta* (số 1)](/opus/piano/tac-pham/grieg-arietta/), *Vals* (số 2), *Alfedans* (Điệu múa yêu tinh, số 4) | Lãng mạn | Giai điệu hát trọn trong một trang (*Arietta*), staccato nhẹ và nhanh (*Alfedans*) |
 | Schumann: Op. 68: *Knecht Ruprecht* (số 12) | Lãng mạn | Quãng tám và tương phản kịch tính |
 | Tchaikovsky: *Album for the Young*: *The Sorcerer* (Phù thủy), *Lark Song* (Tiếng chim chiền chiện) | Lãng mạn | Staccato nhanh; nốt hoa mỹ nhẹ như tiếng chim |
@@ -162,7 +162,7 @@ Chương sonata thật đầu tiên, phức điệu Bach có chủ đích, và *
 | Schumann: *Von fremden Ländern und Menschen* (Về những xứ sở và con người xa lạ), *Kinderszenen* Op. 15 số 1 | Lãng mạn | Giai điệu, chùm ba nốt đệm và bè trầm chia trong hai tay; nghe [Kinderszenen](/opus/nghe-nhac/schumann-kinderszenen/) |
 | [Beethoven: Sonata Op. 27 số 2 (*Ánh trăng*), chương 1](/opus/piano/tac-pham/beethoven-anh-trang/) | Cổ điển | Chùm ba nốt đều, giai điệu nổi trên cùng, bàn đạp đổi theo hòa âm; nghe [hướng dẫn](/opus/nghe-nhac/beethoven-moonlight/) |
 | [Chopin: Valse La thứ, B. 150](/opus/piano/tac-pham/chopin-valse-la-thu/) | Lãng mạn | Đệm valse tay trái, giai điệu hát, bàn đạp theo ô nhịp, rubato đầu tiên |
-| Chopin: Nocturne Mi thứ Op. 72 số 1; Nocturne Đô♯ thứ (di cảo, B. 49) | Lãng mạn | Rubato; giai điệu hát trên hợp âm rải rộng của tay trái |
+| Chopin: Nocturne Mi thứ Op. 72 số 1; Nocturne Đô♯ thứ (di cảo, B. 49) | Lãng mạn | Rubato; giai điệu hát trên hợp âm rải rộng của tay trái. Op. 72 số 1 có trong danh sách Grade 8 của ABRSM (2027–2028), còn Henle xếp mức 5 |
 | Haydn: Sonata Đô trưởng Hob. XVI:35 | Cổ điển | Ngón nhẹ và nhanh, tính hài hước rất Haydn |
 | [Mendelssohn: *Lieder ohne Worte* (Bài ca không lời) Op. 19 số 6, *Venetianisches Gondellied* (Sol thứ)](/opus/piano/tac-pham/mendelssohn-thuyen-ca/) | Lãng mạn | Giai điệu hát trên nhịp đung đưa của bài ca chèo thuyền |
 | Schubert: *Moments musicaux* D. 780 số 3 (Fa thứ) | Lãng mạn | Staccato nhẹ, nhịp đều, giai điệu mang màu dân ca |
@@ -191,7 +191,7 @@ Những tác phẩm lớn được yêu thích nhất. Mỗi bài cần vài th�
 | Debussy: Arabesque số 1 (Mi trưởng); *La fille aux cheveux de lin* (Cô gái tóc lanh), *Préludes* quyển 1 số 8 | Ấn tượng | Hai chọi ba, bàn đạp nửa, câu nhạc tự do |
 | Liszt: *Consolation* số 3 (Rê♭ trưởng) S. 172 | Lãng mạn | Giai điệu hát trên hợp âm rải rộng; bước chuẩn bị cho *Liebestraum* số 3 ở chặng 7 |
 | Rachmaninoff: Prelude Đô♯ thứ Op. 3 số 2 | Lãng mạn muộn | Hợp âm lớn trải rộng, dùng sức nặng cánh tay mà tiếng không gắt |
-| Ravel: *Menuet sur le nom d'Haydn* (Minuet trên tên Haydn, 1909) | Thế kỷ 20 | 54 ô nhịp, chủ đề tạo từ các chữ cái trong tên Haydn, hòa âm tinh tế |
+| Ravel: *Menuet sur le nom d'Haydn* (Minuet trên tên Haydn, 1909) | Thế kỷ 20 | Bài ngắn, chủ đề tạo từ các chữ cái trong tên Haydn, hòa âm tinh tế |
 | Gershwin: *Three Preludes* (Ba prelude) | Thế kỷ 20 | Đảo phách, hợp âm màu jazz |
 
 ## Chặng 7. Sau Grade 8 (diploma trở lên)
@@ -205,8 +205,8 @@ Những tác phẩm lớn được yêu thích nhất. Mỗi bài cần vài th�
 | [Schubert: Impromptu Op. 90 (D. 899) số 3 (Sol♭ trưởng)](/opus/piano/tac-pham/schubert-impromptu-sol-giang/) | Lãng mạn | Giai điệu và phần đệm trong cùng tay phải; nghe [Impromptu](/opus/nghe-nhac/schubert-impromptu/) |
 | [Chopin: Ballade số 1 Sol thứ Op. 23](/opus/piano/tac-pham/chopin-ballade-1/) | Lãng mạn | Hình thức tự sự lớn, sức bền, coda *Presto con fuoco* |
 | Chopin: Ballade số 2–4 (Op. 38, 47, 52); bốn Scherzo (Op. 20, 31, 39, 54); Études Op. 10 và Op. 25; Sonata Op. 35 và Op. 58; *Barcarolle* Op. 60 | Lãng mạn | Đỉnh cao kỹ thuật và hình thức của Chopin; nghe [Études](/opus/nghe-nhac/chopin-etude/) |
-| Bach: *Bình quân luật* (BWV 846–893); Partita (BWV 825–830); *Goldberg Variations* BWV 988 | Baroque | Fugue bốn, năm bè; tổ khúc lớn; nghe [Goldberg](/opus/nghe-nhac/bach-goldberg/) |
-| Beethoven: sonata giữa đời (*Waldstein* Op. 53, *Appassionata* Op. 57) và cuối đời (Op. 109, 110, 111) | Cổ điển | Kiến trúc lớn, sức bền; fugue (Op. 110), biến tấu (Op. 109, Op. 111) |
+| Bach: *Bình quân luật* (BWV 846–893); Partita (BWV 825–830); *Goldberg Variations* BWV 988 | Baroque | Fugue nhiều bè; tổ khúc lớn; nghe [Goldberg](/opus/nghe-nhac/bach-goldberg/) |
+| Beethoven: sonata giữa đời (*Waldstein* Op. 53, *Appassionata* Op. 57) và cuối đời (Op. 109, 110, 111) | Cổ điển | Kiến trúc lớn, sức bền; chương fugue của Op. 110 |
 | Haydn: Sonata Mi♭ trưởng Hob. XVI:52; Mozart: Sonata La thứ K. 310, Concerto số 21 Đô trưởng K. 467 | Cổ điển | Sonata Cổ điển ở quy mô lớn nhất; concerto với dàn nhạc hoặc piano thứ hai; nghe [Concerto số 21](/opus/nghe-nhac/mozart-concerto-21/) |
 | Schubert: ba sonata cuối D. 958, 959, 960; *Wanderer-Fantasie* D. 760 | Lãng mạn | Câu nhạc rất dài, kiến trúc rộng, sức bền tinh thần |
 | Schumann: *Carnaval* Op. 9, *Kreisleriana* Op. 16, *Fantasie* Op. 17 | Lãng mạn | Chuỗi tính cách tương phản, nhịp điệu phức tạp |
@@ -234,7 +234,7 @@ Các bài dưới đây xếp theo cấp của bản gốc, từ dễ đến kh�
 | [*River Flows in You*](#river-flows-in-you) | Yiruma | Album *First Love* (2001) | Grade 5, chặng 4 |
 | [*Kiss the Rain*](#kiss-the-rain) | Yiruma | Album *From the Yellow Room* (2003) | Grade 5, chặng 4 |
 | [*One Summer's Day*](#one-summers-day) | Joe Hisaishi | Phim *Spirited Away* (2001) | Grade 5, chặng 4 |
-| [*Mariage d'Amour*](#paul-de-senneville-mariage-damour) | Paul de Senneville | Bản thu của Richard Clayderman (1979) | Grade 5–6, đầu chặng 5 |
+| [*Mariage d'Amour*](#paul-de-senneville-mariage-damour) | Paul de Senneville | Bản thu của Richard Clayderman | Grade 5–6, đầu chặng 5 |
 | [*Comptine d'un autre été: l'après-midi*](#comptine) | Yann Tiersen | Phim *Amélie* (2001) | Grade 6, chặng 5 |
 | [*Nuvole bianche*](#nuvole-bianche) | Ludovico Einaudi | Album *Una mattina* (2004) | Grade 6, chặng 5 |
 
@@ -245,13 +245,13 @@ Các bài dưới đây xếp theo cấp của bản gốc, từ dễ đến kh�
 | Nhà soạn nhạc | Yiruma (tên thật Lee Ru-ma, sinh 1978), nghệ sĩ piano và nhà soạn nhạc người Hàn Quốc |
 | Xuất xứ | Album *First Love* (2001, hãng Stomp Music) |
 | Giọng · nhịp · tốc độ | La trưởng · 4/4 · mở đầu tự do (*Freely, flowing*), rồi vừa phải (*Moderately, expressively*), theo bản in trên Musicnotes |
-| Cấp (≈) | Bản gốc: khoảng Grade 5, chặng 4 (ước lượng của site). Bản dễ do chính tác giả soạn: khoảng Grade 3, chặng 3 |
+| Cấp (≈) | Bản gốc: khoảng Grade 5, chặng 4 (ước lượng của site). Bản dễ được tác giả duyệt: khoảng Grade 3, chặng 3 |
 | Bản nhạc | Còn bản quyền. Bản của tác giả: tập [*Yiruma SOLO: Original*](https://www.fabermusic.com/shop/yiruma-solo-original-p470825) và bản dễ [*Yiruma SOLO: Easy*](https://www.fabermusic.com/shop/p470824) (Faber Music). Bản số được cấp phép, giọng gốc La trưởng: [Musicnotes](https://www.musicnotes.com/sheetmusic/yiruma/river-flows-in-you/MN0096080) |
 | Bản thu chính thức | Album *First Love*; [kênh YouTube chính thức của Yiruma](https://www.youtube.com/@yirumaplaceofficial) |
 
-Hai tập *SOLO* của Faber Music in các bài trong album *SOLO* (2021), album Yiruma ra mắt nhân 20 năm sáng tác. Mỗi bài có hai dạng, bản gốc và bản dễ, đều do chính ông ghi. Trong bài điểm sách trên Pianodao, Andrew Eales xếp tập bản gốc quanh Grade 5 và tập bản dễ quanh Grade 3. Faber còn có tập *First SOLO* cho người mới học hơn nữa.
+Hai tập *SOLO* của Faber Music in các bài trong album *SOLO* (2021), album Yiruma ra mắt nhân 20 năm sáng tác. Mỗi bài có hai dạng, bản gốc và bản dễ, đều là bản được chính tác giả duyệt. Trong bài điểm sách trên Pianodao, Andrew Eales xếp tập bản gốc quanh Grade 5 và tập bản dễ quanh Grade 3.
 
-**Không phải nhạc phim *Twilight*.** Bài hay bị nhầm với *Bella's Lullaby*, đoạn piano Carter Burwell viết cho phim *Twilight* (2008). *River Flows in You* không có trong album nhạc phim lẫn album nhạc nền của phim; bài nằm trong album *First Love* của Yiruma từ năm 2001, bảy năm trước khi phim ra mắt.
+**Không phải *Bella's Lullaby*.** Bài hay bị nhầm với *Bella's Lullaby*, đoạn piano Carter Burwell viết cho phim *Twilight* (2008). *River Flows in You* là bài của Yiruma, nằm trong album *First Love* từ năm 2001, bảy năm trước khi phim ra mắt.
 
 **Bài này dạy gì:**
 
@@ -268,8 +268,8 @@ Hai tập *SOLO* của Faber Music in các bài trong album *SOLO* (2021), album
 |---|---|
 | Nhà soạn nhạc | Yiruma (xem bài trên) |
 | Xuất xứ | Album *From the Yellow Room* (2003, hãng Stomp Music) |
-| Giọng · nhịp · tốc độ | La♭ trưởng · 4/4 · ♩ = khoảng 76, theo bản in trên Musicnotes |
-| Cấp (≈) | Bản gốc: khoảng Grade 5, chặng 4, khó hơn *River Flows in You* một chút (ước lượng của site). Bản dễ do chính tác giả soạn: khoảng Grade 3, chặng 3 |
+| Giọng · nhịp · tốc độ | La♭ trưởng · 4/4 · ♩ = khoảng 76, theo bản Musicnotes ở dòng Bản nhạc (bản soạn khác có thể ở giọng, tốc độ khác) |
+| Cấp (≈) | Bản gốc: khoảng Grade 5, chặng 4, khó hơn *River Flows in You* một chút (ước lượng của site). Bản dễ được tác giả duyệt: khoảng Grade 3, chặng 3 |
 | Bản nhạc | Còn bản quyền. Có trong cả hai tập *SOLO* của Faber Music ở bài trên. Bản số được cấp phép, giọng gốc La♭ trưởng: [Musicnotes](https://www.musicnotes.com/sheetmusic/yiruma/kiss-the-rain/MN0073221) |
 | Bản thu chính thức | Album *From the Yellow Room*; [kênh YouTube chính thức của Yiruma](https://www.youtube.com/@yirumaplaceofficial) |
 
@@ -288,13 +288,13 @@ Hai tập *SOLO* của Faber Music in các bài trong album *SOLO* (2021), album
 | Mục | Thông tin |
 |---|---|
 | Nhà soạn nhạc | Joe Hisaishi (sinh 1950), nhà soạn nhạc Nhật Bản, viết nhạc cho nhiều phim của Hayao Miyazaki và Studio Ghibli |
-| Xuất xứ | Bài mở đầu album nhạc phim *Spirited Away* (2001), phim hoạt hình của Hayao Miyazaki và Studio Ghibli. Tên tiếng Nhật *Ano natsu e*, nghĩa là "Về mùa hè ấy" |
-| Giọng · nhịp · tốc độ | Đô trưởng · 4/4 · ♩ = 80, theo bản piano solo trên Musicnotes |
+| Xuất xứ | Nhạc phim *Spirited Away* (2001), phim hoạt hình của Hayao Miyazaki và Studio Ghibli |
+| Giọng · nhịp · tốc độ | Đô trưởng · 4/4 · ♩ = 80, theo bản piano solo Musicnotes ở dòng Bản nhạc (bản soạn khác có thể ghi tốc độ khác) |
 | Cấp (≈) | Bản piano solo trên Musicnotes: khoảng Grade 5, chặng 4 (ước lượng của site). Bản easy piano chính thức: chặng 2–3 |
 | Bản nhạc | Còn bản quyền. Tập [*Ghibli Best Stories*](https://www.halleonard.com/product/49044225/ghibli-best-stories) (Zen-On, Nhật Bản; Hal Leonard phân phối) gồm các bản piano nhạc phim Ghibli của Hisaishi và có bài này; theo nhà phân phối, đây là ấn bản duy nhất được tác giả duyệt. Bản số được cấp phép: [piano solo](https://www.musicnotes.com/sheetmusic/spirited-away/one-summers-day/MN0151256) và [easy piano](https://www.musicnotes.com/sheetmusic/spirited-away/one-summers-day/MN0242959) trên Musicnotes. Các bản in khác nhau về độ khó: xem trang mẫu trước khi mua |
-| Bản thu chính thức | Album nhạc phim *Spirited Away* (Studio Ghibli Records, 2001), dàn nhạc New Japan Philharmonic, Hisaishi chỉ huy và chơi piano; [kênh YouTube chính thức của Joe Hisaishi](https://www.youtube.com/@joehisaishiofficial9777) |
+| Bản thu chính thức | Album nhạc phim *Spirited Away* (2001); [kênh YouTube chính thức của Joe Hisaishi](https://www.youtube.com/@joehisaishiofficial9777) |
 
-**Không phải bài Ghibli nào cũng của Hisaishi.** Bài hát *Itsumo nando demo* (*Always with Me*) trong phim *Spirited Away* có nhạc của Youmi Kimura và lời của Wakako Kaku; ABRSM ghi tên Youmi Kimura, không ghi Hisaishi, khi đưa một bản soạn của bài vào danh sách Grade 3 (chương trình 2025–2026). Còn *Summer*, một bài piano quen thuộc khác của Hisaishi, là nhạc phim *Kikujiro* (1999) của Takeshi Kitano, không phải phim Ghibli.
+**Không phải bài Ghibli nào cũng của Hisaishi.** Bài hát *Itsumo nando demo* (*Always with Me*) trong phim *Spirited Away* có nhạc của Youmi Kimura; ABRSM ghi tên Youmi Kimura, không ghi Hisaishi, khi đưa một bản soạn của bài vào danh sách Grade 3 (chương trình 2025–2026). Còn *Summer*, một bài piano quen thuộc khác của Hisaishi, là nhạc phim *Kikujiro* (1999) của Takeshi Kitano, không phải phim Ghibli.
 
 **Bài này dạy gì:**
 
@@ -309,21 +309,20 @@ Hai tập *SOLO* của Faber Music in các bài trong album *SOLO* (2021), album
 
 | Mục | Thông tin |
 |---|---|
-| Nhà soạn nhạc | Paul de Senneville (1933–2023), nhà soạn nhạc và nhà sản xuất người Pháp. Ông cùng Olivier Toussaint lập hãng đĩa Delphine, nơi đưa Richard Clayderman thành tên tuổi |
-| Sáng tác, bản thu đầu tiên | Năm 1978; Richard Clayderman thu âm lần đầu trong album *Lettre à ma mère* (1979) |
-| Giọng · nhịp · tốc độ | Sol thứ · chủ yếu 4/4, có vài chỗ đổi sang 5/4 và 3/4 · khoảng ♩ = 72 |
+| Nhà soạn nhạc | Paul de Senneville (1933–2023), nhà soạn nhạc và nhà sản xuất người Pháp |
+| Bản thu, bản in | Bài gắn với các bản thu của Richard Clayderman; bản in trên Musicnotes đề năm bản quyền 1980 |
+| Giọng · nhịp · tốc độ | Sol thứ · chủ yếu 4/4, có vài ô 3/4 · mở đầu *Moderato*, ♩ = 72, theo bản Musicnotes ở dòng Bản nhạc |
 | Cấp (≈) | Bản piano solo như bản thu của Clayderman: khoảng Grade 5–6, đầu chặng 5 (ước lượng của site). Bản soạn dễ: chặng 2–3 |
 | Bản nhạc | Còn bản quyền. Bản piano solo được cấp phép, giọng gốc Sol thứ: [Musicnotes](https://www.musicnotes.com/sheetmusic/richard-clayderman/mariage-damour/MN0114635). Các bản soạn dễ có trên những trang bán nhạc số được cấp phép |
 
-**Không phải của Chopin.** Trên YouTube và nhiều trang chia sẻ nhạc, bài này hay mang tên "Spring Waltz" (Valse mùa xuân) và được gắn cho Chopin. Chopin không viết bài nào như vậy, và đây cũng không phải một điệu valse: valse ở nhịp 3/4, còn bài này chủ yếu ở 4/4. Nhầm lẫn được cho là bắt đầu từ một video đăng bản thu của George Davidson (một bản soạn hơi khác của bài) dưới tên sai. Video ấy có hàng chục triệu lượt xem trước khi bị gỡ, nhưng các bản sao mang cùng tên sai vẫn tiếp tục lan truyền. Muốn chơi một valse thật của Chopin ở tầm tương đương, xem [Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/) (chặng 5); cao hơn một chặng là [Valse Si thứ Op. 69 số 2](/opus/piano/tac-pham/chopin-valse-si-thu/) (chặng 6).
+**Không phải của Chopin.** Trên mạng, bài này có khi mang tên "Spring Waltz" (Valse mùa xuân) và bị gắn cho Chopin. Bản nhạc được cấp phép ghi tác giả là Paul de Senneville; Chopin không có bài nào như vậy, và đây cũng không phải một điệu valse: valse ở nhịp 3/4, còn bài này chủ yếu ở 4/4. Muốn chơi một valse thật của Chopin ở tầm tương đương, xem [Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/) (chặng 5); cao hơn một chặng là [Valse Si thứ Op. 69 số 2](/opus/piano/tac-pham/chopin-valse-si-thu/) (chặng 6).
 
 **Bài này dạy gì:**
 
 - **Tay trái rải hợp âm liên tục**, trải rộng trên bàn phím mà vẫn đều và khẽ; ôn cách dùng cổ tay ở [Hợp âm, hợp âm rải và hình đệm](/opus/piano/hop-am-rai/).
 - **Giai điệu hát** ở tay phải, nổi lên trên phần đệm ([Tạo tiếng đàn](/opus/piano/tieng-dan/)).
 - **Bàn đạp đổi theo hợp âm**, để tiếng vang của hai hòa âm không lẫn vào nhau ([Bàn đạp](/opus/piano/ban-dap/)).
-- **Quãng tám** khi giai điệu trở lại ở đoạn cao trào ([Quãng tám và bước nhảy](/opus/piano/quang-tam-buoc-nhay/)).
-- **Đếm qua những chỗ đổi nhịp** mà câu nhạc không bị hẫng: đếm to các phách của ô 5/4 và 3/4 trước khi chơi.
+- **Đếm qua những chỗ đổi nhịp** mà câu nhạc không bị hẫng: đếm to các phách của ô 3/4 trước khi chơi.
 
 **Đi qua trước:** [Cầu nguyện buổi sáng](/opus/piano/tac-pham/tchaikovsky-cau-nguyen-buoi-sang/) (chặng 3) cho giai điệu trên phần đệm, [Gymnopédie số 1](/opus/piano/tac-pham/satie-gymnopedie/) (chặng 4) cho bàn đạp và tốc độ chậm, [Prélude Mi thứ](/opus/piano/tac-pham/chopin-prelude-mi-thu/) (chặng 4) cho hợp âm khẽ dưới một giai điệu hát. Nếu bạn đang ở chặng 2–3, hãy bắt đầu bằng một bản soạn dễ rồi quay lại bản đầy đủ sau.
 
@@ -332,18 +331,18 @@ Hai tập *SOLO* của Faber Music in các bài trong album *SOLO* (2021), album
 | Mục | Thông tin |
 |---|---|
 | Nhà soạn nhạc | Yann Tiersen (sinh 1970), nhạc sĩ người Pháp |
-| Xuất xứ | Album nhạc phim *Le Fabuleux Destin d'Amélie Poulain* (Số phận kỳ diệu của Amélie Poulain, thường gọi tắt là *Amélie*; hãng Virgin, 2001). Tên bài nghĩa là "Bài đồng dao của một mùa hè khác: buổi chiều" |
-| Giọng · nhịp · tốc độ | Mi thứ · 4/4 · ♩ = 100, theo bản in trên Musicnotes |
+| Xuất xứ | Album nhạc phim *Le Fabuleux Destin d'Amélie Poulain* (Số phận kỳ diệu của Amélie Poulain, thường gọi tắt là *Amélie*, 2001). Tên bài nghĩa là "Bài đồng dao của một mùa hè khác: buổi chiều" |
+| Giọng · nhịp · tốc độ | Mi thứ · 4/4 · ♩ = 100, theo bản Musicnotes ở dòng Bản nhạc (bản soạn khác có thể ghi tốc độ khác) |
 | Cấp (≈) | Bản gốc: khoảng Grade 6, chặng 5 (ước lượng của site; AMEB đưa bài vào tập Grade 6 của chương trình Piano for Leisure, Series 4). Bản soạn dễ: thường ở chặng 2–3 |
 | Bản nhạc | Còn bản quyền. Tập [*Yann Tiersen: Piano Works 1994–2003*](https://www.halleonard.com/product/50490446/yann-tiersen-piano-works) (Ricordi; Hal Leonard phân phối). Bản số được cấp phép, giọng gốc Mi thứ: [Musicnotes](https://www.musicnotes.com/sheetmusic/yann-tiersen/comptine-dun-autre-%C3%A9t%C3%A9-lapr%C3%A8s-midi/MN0091413) |
 | Bản thu chính thức | Album nhạc phim *Amélie*; [kênh YouTube chính thức của Yann Tiersen](https://www.youtube.com/@YannTiersen) |
 
-**Đừng nhầm tên.** Album *Rue des Cascades* (1996) của Tiersen có ba bài *Comptine d'été* số 1–3; đó là những bài khác. Khi mua bản nhạc, tìm đúng tên đầy đủ *Comptine d'un autre été: l'après-midi*.
+**Tìm đúng tên.** Khi mua bản nhạc, tìm đúng tên đầy đủ *Comptine d'un autre été: l'après-midi*.
 
 **Bài này dạy gì:**
 
 - **Tay trái hai bè gần như suốt bài**: ngón 5 và 4 đi nốt đen ở dưới, ngón cái lặp móc đơn ở trên. Giữ đều và nhẹ ở ♩ = 100 cần cổ tay mềm và sức bền.
-- **Tay phải** đi từ những nhóm móc kép ngắn sang nốt kép, rồi lên âm vực cao hơn với những chuỗi nốt nhanh ([Nốt lặp và nốt kép](/opus/piano/not-lap-not-kep/)).
+- **Tay phải** đi từ những nhóm móc kép ngắn sang nốt kép ([Nốt lặp và nốt kép](/opus/piano/not-lap-not-kep/)).
 - **Cân bằng hai tay**: giai điệu phải nổi trên dòng tay trái không ngừng ([Tạo tiếng đàn](/opus/piano/tieng-dan/#can-bang-e-giai-ieu-hat)).
 - **Sắc thái theo câu**: *p*, *mf*, to dần, nhỏ dần trên cùng một hình đệm.
 
@@ -385,9 +384,9 @@ Những bài cùng loại khác mà người lớn hay hỏi cũng theo cùng ng
 - Thang mức độ khó 1–9: [G. Henle Verlag](https://www.henle.de/), "Levels of Difficulty"; các mức Henle trích ở trang này lấy từ trang của từng ấn bản tương ứng.
 - Chương trình thi: [ABRSM](https://www.abrsm.org/), [Trinity College London](https://www.trinitycollege.com/).
 - Jane Magrath, *The Pianist's Guide to Standard Teaching and Performance Literature* (Alfred, 1995).
-- Maurice Hinson và Wesley Roberts, *Guide to the Pianist's Repertoire*, ấn bản 4 (Indiana University Press, 2014).
+- Maurice Hinson và Wesley Roberts, *Guide to the Pianist's Repertoire*, ấn bản 4 (Indiana University Press, 2013).
 - Bản nhạc: [IMSLP](https://imslp.org/) (tìm theo tên tác phẩm kèm số Op., BWV, K., D. hoặc Hob.).
-- *Mariage d'Amour*: Wikipedia, ["Mariage d'amour"](https://en.wikipedia.org/wiki/Mariage_d%27amour) và ["Paul de Senneville"](https://en.wikipedia.org/wiki/Paul_de_Senneville); trang bản nhạc trên [Musicnotes](https://www.musicnotes.com/sheetmusic/richard-clayderman/mariage-damour/MN0114635) (giọng gốc, nhà xuất bản).
+- *Mariage d'Amour*: BnF, ["Paul de Senneville (1933–2023)"](https://data.bnf.fr/ark:/12148/cb148352594); trang bản nhạc trên [Musicnotes](https://www.musicnotes.com/sheetmusic/richard-clayderman/mariage-damour/MN0114635) (giọng gốc, tốc độ, nhà xuất bản, trang mẫu).
 - *River Flows in You*, *Kiss the Rain*: Wikipedia, ["Yiruma"](https://en.wikipedia.org/wiki/Yiruma) và ["First Love (Yiruma album)"](https://en.wikipedia.org/wiki/First_Love_%28Yiruma_album%29); Faber Music, [*Yiruma SOLO: Original*](https://www.fabermusic.com/shop/yiruma-solo-original-p470825) và [*SOLO: Easy*](https://www.fabermusic.com/shop/p470824); Andrew Eales, ["Yiruma 20th Anniversary Solo piano"](https://pianodao.com/2023/12/16/yiruma-20th-anniversary-solo/) (Pianodao, 2023). Về *Twilight*: Classic FM, ["Yiruma's River Flows in You: from its meaning to its starring role in the Twilight saga"](https://www.classicfm.com/discover-music/instruments/piano/yiruma-river-flows-in-you-meaning-twilight/) (2019) và Wikipedia, ["Twilight (soundtrack)"](https://en.wikipedia.org/wiki/Twilight_%28soundtrack%29).
 - *One Summer's Day*: Wikipedia, ["Spirited Away (soundtrack)"](https://en.wikipedia.org/wiki/Spirited_Away_%28soundtrack%29), ["Joe Hisaishi"](https://en.wikipedia.org/wiki/Joe_Hisaishi), ["Kikujiro"](https://en.wikipedia.org/wiki/Kikujiro) và ["Porco Rosso"](https://en.wikipedia.org/wiki/Porco_Rosso); Hal Leonard, [*Ghibli Best Stories*](https://www.halleonard.com/product/49044225/ghibli-best-stories); ABRSM, *Piano Exam Pieces 2025 & 2026*, Grade 3 và Grade 8 (mục lục); Classic FM, ["Rihanna, Studio Ghibli and Black Panther appear in new official piano syllabus"](https://www.classicfm.com/about-classic-fm/partners/abrsm/rihanna-studio-ghibli-black-panther-piano-syllabus/) (2024).
 - *Comptine d'un autre été: l'après-midi*: Wikipedia, ["Amélie (soundtrack)"](https://en.wikipedia.org/wiki/Am%C3%A9lie_%28soundtrack%29), ["Rue des Cascades"](https://en.wikipedia.org/wiki/Rue_des_Cascades) và ["Yann Tiersen"](https://en.wikipedia.org/wiki/Yann_Tiersen); Hal Leonard, [*Yann Tiersen: Piano Works 1994–2003*](https://www.halleonard.com/product/50490446/yann-tiersen-piano-works); mục lục tập AMEB *Piano for Leisure Series 4, Grade 6* trên trang của [Australian Music Centre](https://www.australianmusiccentre.com.au/product/ameb-piano-for-leisure-series-4-grade-book-grade-6).

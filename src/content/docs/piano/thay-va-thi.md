@@ -63,7 +63,7 @@ Học trực tuyến giúp bạn tìm được thầy giỏi ở xa và linh ho�
 | Phần | Nên làm |
 |---|---|
 | **Góc máy** | Lý tưởng là hai góc: một **từ bên cạnh**, thấy vai, khuỷu tay, cổ tay và chân trên bàn đạp; một **từ trên xuống**, thấy hình bàn tay và ngón bấm. Chỉ có một máy thì đặt chếch từ phía trên một bên, đủ cao để thấy cả hai tay và vai, và đổi góc khi thầy cần |
-| **Âm thanh** | Trên Zoom, vào Settings → Audio: chọn **Original sound for musicians**, tắt **Automatically adjust microphone volume**; bật **High-fidelity music mode** nếu dùng mạng dây; chỉ bật **Echo cancellation** khi dùng loa thay vì tai nghe. Ứng dụng nào không có chế độ cho nhạc thì bộ lọc tiếng ồn có thể "nuốt" những nốt nhỏ và tiếng ngân |
+| **Âm thanh** | Trên Zoom, vào Settings → Audio: chọn **Original sound for musicians**, tắt **Automatically adjust microphone volume**; bật **High-fidelity music mode** nếu dùng mạng dây; nên dùng tai nghe, còn nếu nghe qua loa thì bật **Echo cancellation**. Ứng dụng nào không có chế độ cho nhạc thì bộ lọc tiếng ồn có thể "nuốt" những nốt nhỏ và tiếng ngân |
 | **Độ trễ** | Thầy trò không thể chơi cùng lúc hay đếm nhịp cho nhau qua mạng. Thầy làm mẫu, bạn nghe rồi chơi lại; máy đếm nhịp đặt ở phía bạn |
 | **Đường truyền** | Ưu tiên mạng dây, tắt các ứng dụng khác, để điện thoại ở chế độ không làm phiền |
 | **Bản nhạc** | Hai bên dùng cùng một ấn bản, đánh số ô nhịp từ trước |
@@ -126,7 +126,7 @@ Trinity cũng có **Initial** và **Grade 1–8**. Chương trình piano hiện 
 
 ### Sau Grade 8: các bằng diploma
 
-- **ABRSM**: **ARSM** dành cho người đã qua Grade 8, thi trực tiếp (nơi có tổ chức) hoặc qua video; **LRSM** và **FRSM** theo định dạng mới từ 2024, nộp video buổi biểu diễn kèm tài liệu bổ trợ. Cả ba yêu cầu đã đỗ Grade 8 của ABRSM (Performance hoặc Practical), hay bằng tương đương của một hội đồng thi khác nằm trong danh sách ABRSM chấp nhận. Các bằng **DipABRSM**, **LRSM** và **FRSM** kiểu cũ đã được ABRSM ngừng.
+- **ABRSM**: **ARSM** dành cho người đã qua Grade 8, thi trực tiếp (nơi có tổ chức) hoặc qua video; **LRSM** và **FRSM** theo định dạng mới từ 2024, nộp video buổi biểu diễn kèm tài liệu bổ trợ. Cả ba yêu cầu đã đỗ Grade 8 của ABRSM (Performance hoặc Practical), hay bằng tương đương của một hội đồng thi khác nằm trong danh sách ABRSM chấp nhận; với LRSM và FRSM, kinh nghiệm biểu diễn chuyên nghiệp được ABRSM duyệt trước cũng thay được Grade 8. Các bằng **DipABRSM**, **LRSM** và **FRSM** kiểu cũ đã được ABRSM ngừng.
 - **Trinity**: **ATCL**, **LTCL** và **FTCL** (Associate, Licentiate, Fellowship), ở các mảng biểu diễn, giảng dạy và lý thuyết.
 
 ### Thi ở Việt Nam
@@ -135,14 +135,14 @@ Trinity cũng có **Initial** và **Grade 1–8**. Chương trình piano hiện 
 
 - Trang dành cho Việt Nam trên website **Trinity** liệt kê các kỳ thi (có âm nhạc và nhạc lý), cùng thông tin liên hệ của đại diện Trinity tại Việt Nam.
 - **LCM Exams** (London College of Music, thuộc University of West London), một hội đồng thi khác của Anh, có điều phối viên quốc gia và trung tâm thi ở nhiều thành phố Việt Nam.
-- Với **ABRSM**, nhiều trung tâm âm nhạc trong nước giới thiệu lớp luyện thi. Hãy kiểm tra lịch thi, địa điểm và cách đăng ký trực tiếp trên website ABRSM, nhất là với các kỳ thi trực tiếp (Practical Grades).
+- Với **ABRSM**, hãy kiểm tra lịch thi, địa điểm và cách đăng ký trực tiếp trên website ABRSM, nhất là với các kỳ thi trực tiếp (Practical Grades).
 - Thi qua video (Performance Grades của ABRSM, thi qua video của Trinity) không cần trung tâm thi gần nhà, nhưng hãy kiểm tra xem bạn có đăng ký được từ Việt Nam không, cách thanh toán, và yêu cầu khi quay.
 
 Đừng chỉ dựa vào lời giới thiệu của trung tâm: hãy đối chiếu với thông tin chính thức của hội đồng thi.
 
 ## Học ở trường âm nhạc Việt Nam
 
-Ba cơ sở đào tạo âm nhạc chuyên nghiệp lớn có đào tạo piano là **Học viện Âm nhạc Quốc gia Việt Nam** (Hà Nội), **Nhạc viện Thành phố Hồ Chí Minh** và **Học viện Âm nhạc Huế**. Các trường này đào tạo nhạc công chuyên nghiệp, nhiều hệ bắt đầu từ khi học sinh còn nhỏ; một số có trung tâm bồi dưỡng năng khiếu hoặc lớp ngắn hạn (Nhạc viện TP. Hồ Chí Minh chẳng hạn có bộ phận Năng khiếu âm nhạc). Chương trình thay đổi theo năm, nên hãy hỏi trực tiếp phòng đào tạo về lớp cho người lớn.
+Trong các cơ sở đào tạo âm nhạc chuyên nghiệp ở Việt Nam có **Học viện Âm nhạc Quốc gia Việt Nam** (Hà Nội), **Nhạc viện Thành phố Hồ Chí Minh** và **Học viện Âm nhạc Huế**; hai trường đầu có khoa Piano. Các trường này đào tạo nhạc công chuyên nghiệp; một số có trung tâm bồi dưỡng năng khiếu hoặc lớp ngắn hạn (Nhạc viện TP. Hồ Chí Minh chẳng hạn có bộ phận Năng khiếu âm nhạc). Chương trình thay đổi theo năm, nên hãy hỏi trực tiếp phòng đào tạo về lớp cho người lớn.
 
 Kể cả khi không theo học ở trường, đây vẫn là nơi tốt để:
 

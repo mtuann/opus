@@ -9,7 +9,7 @@ lan:
     nguoi:
       luot_1: Claude Opus 5.5 (D8-L1 lượt 1, người làm lô; trang và chữ của công cụ nghe mù)
       luot_2: null
-      review: null
+      review: Claude Opus 5.5 (D8-gom, không làm lượt 1, lượt 2 của trang này)
       kiem_mau: null
 nguon:
   - id: c-t1
@@ -104,6 +104,18 @@ nguon:
     bac: 2
     ten: 'IMSLP, Symphony No.1, Op.68 (Brahms): chương 1 Un poco sostenuto – Allegro'
     link: https://imslp.org/wiki/Symphony_No.1,_Op.68_(Brahms,_Johannes)
+  - id: nbs-1042
+    bac: 2
+    ten: 'Netherlands Bach Society (All of Bach), Violin Concerto in E major, BWV 1042: "Bach wrote a long-drawn-out ostinato, with intricate musings by the violin and a free-flowing, melancholy solo melody above a repetitive bass motif"; truy cập 05/11/2026 (review D8-gom)'
+    link: https://www.bachvereniging.nl/en/bwv/bwv-1042
+  - id: tbso-k516
+    bac: 2
+    ten: 'Thunder Bay Symphony Orchestra, chương trình hòa nhạc (PDF), ghi chú về Mozart, Ngũ tấu K. 516: "The finale begins with a lengthy Adagio introduction … Mozart unexpectedly launches into the sprightly G major Allegro"; truy cập 05/11/2026 (review D8-gom)'
+    link: https://tbso.ca/wp-content/uploads/2022/03/021-CC-Mozart-Haydn.pdf
+  - id: mitr-k516
+    bac: 2
+    ten: 'Music in the Round, ghi chú chương trình Mozart, String Quintet in G minor K516: "The element of tragedy is still very apparent in the slow introduction to the finale", "the major-key ebullience of the finale"; truy cập 05/11/2026 (review D8-gom)'
+    link: https://musicintheround.co.uk/programmes/mozart-amadeus-string-quintet-in-g-minor-k516/
 nhan_dinh:
   - id: n1
     cau: Nghe mù là nghe một bản nhạc mà không biết tên, rồi đoán.
@@ -116,14 +128,15 @@ nhan_dinh:
     cau: Cách này cho biết bạn thật sự nhận diện được bằng tai hay chỉ nhớ thông tin về bài.
     loai: khuyen-tap
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Đây là cách duy nhất để kiểm tra xem bạn thật sự nhận diện được bằng tai hay chỉ nhớ thông tin." "Duy nhất" là nói quá, không kiểm được; viết lại (cả mô tả trang). Ghi doi_chu.'
+    ghi_chu: 'Chữ cũ: "Đây là cách duy nhất để kiểm tra xem bạn thật sự nhận diện được bằng tai hay chỉ nhớ thông tin." "Duy nhất" là nói quá, không kiểm được; viết lại (cả mô tả trang). Ghi doi_chu. Review D8-gom: đồng ý chữ mới (bỏ "duy nhất", lượt 2 dung). Câu là lời khuyên, không chứa điều về sức khỏe.'
     luot_2: dung
     luot_2_ghi_chu: Lời khuyên hợp lý, khớp cách dạy phổ biến.
   - id: n3
     cau: 'Trang này có hai công cụ: một bộ 10 bản thu thật để luyện, và một phiếu ghi cho bản thu của riêng bạn.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Đã kiểm trang (::cong-cu{ten="blind"}, ::cong-cu{ten="blind-log"}) và src/scripts/nghe-mu.js: BAN_THU có 10 bản. Giữ đúng điều nhan-dien/index.yml i6 và so-sanh-thoi-ky.yml ghi cho trang này (10 bản thu, tên ẩn, phiếu).'
+    ghi_chu: 'Đã kiểm trang (::cong-cu{ten="blind"}, ::cong-cu{ten="blind-log"}) và src/scripts/nghe-mu.js: BAN_THU có 10 bản. Giữ đúng điều nhan-dien/index.yml i6 và so-sanh-thoi-ky.yml ghi cho trang này (10 bản thu, tên ẩn, phiếu). Review D8-gom: trang có ::cong-cu{ten="blind"} và ::cong-cu{ten="blind-log"}; src/scripts/nghe-mu.js BAN_THU có 10 mục t1–t10.'
+    review: dung
   - id: n4
     cau: Các bản thu dưới đây lấy từ Wikimedia Commons, đều có giấy phép mở (Creative Commons, EFF Open Audio License hoặc phạm vi công cộng).
     loai: so-lieu
@@ -147,17 +160,20 @@ nhan_dinh:
     cau: Tên tác phẩm và người biểu diễn được ẩn cho đến khi bạn trả lời.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/scripts/nghe-mu.js: tên, người biểu diễn, dấu hiệu, link trang tệp chỉ dựng vào .oz-nm-dap-an khi bấm "Xem đáp án" (xem()); ô dựng sẵn không có tên. Lưu ý: tên tệp nằm trong địa chỉ nguồn của thẻ audio sau khi bấm "Nghe bản thu" (như bản cũ).'
+    ghi_chu: 'src/scripts/nghe-mu.js: tên, người biểu diễn, dấu hiệu, link trang tệp chỉ dựng vào .oz-nm-dap-an khi bấm "Xem đáp án" (xem()); ô dựng sẵn không có tên. Lưu ý: tên tệp nằm trong địa chỉ nguồn của thẻ audio sau khi bấm "Nghe bản thu" (như bản cũ). Review D8-gom: nghe-mu.js: ô dựng sẵn (nút "Nghe bản thu", "Xem đáp án", "Bản khác") không có tên; tên, người biểu diễn, dấu hiệu chỉ dựng khi bấm "Xem đáp án".'
+    review: dung
   - id: n6
     cau: Bộ gồm bản thu thời Baroque, Cổ điển, Lãng mạn và Ấn tượng; site chưa tìm được bản thu thế kỷ 20 có giấy phép mở để đưa vào.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'BAN_THU: 4 Baroque, 4 Cổ điển, 1 Lãng mạn, 1 Ấn tượng; không bản nào modern (tests/nghe-mu.test.mjs kiểm). Vế "chưa tìm được" là câu về việc của site.'
+    ghi_chu: 'BAN_THU: 4 Baroque, 4 Cổ điển, 1 Lãng mạn, 1 Ấn tượng; không bản nào modern (tests/nghe-mu.test.mjs kiểm). Vế "chưa tìm được" là câu về việc của site. Review D8-gom: nghe-mu.js BAN_THU: thoi_ky baroque ×4, classical ×4, romantic ×1, impressionist ×1, không có modern; tests/nghe-mu.test.mjs kiểm không có modern.'
+    review: dung
   - id: n7
     cau: Phần thế kỷ 20 hãy luyện bằng đoán phong cách (/opus/nhan-dien/luyen-nghe/) và phiếu nghe mù bên dưới.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: src/content/docs/nhan-dien/luyen-nghe.md có công cụ style-trainer với hai đoạn modern-1, modern-2 (VI_DU, nhan-dien.js).
+    ghi_chu: 'src/content/docs/nhan-dien/luyen-nghe.md có công cụ style-trainer với hai đoạn modern-1, modern-2 (VI_DU, nhan-dien.js). Review D8-gom: src/content/docs/nhan-dien/luyen-nghe.md (đã khóa) dòng 12 ::cong-cu{ten="style-trainer"}; src/scripts/nhan-dien.js VI_DU có modern-1, modern-2.'
+    review: dung
   - id: n8
     cau: Số lượng còn ít, nên sau vài vòng bạn sẽ nhớ đáp án; khi đó chuyển sang phiếu nghe mù với nguồn nhạc phong phú hơn.
     loai: khuyen-tap
@@ -168,7 +184,8 @@ nhan_dinh:
     cau: Bản thu chỉ tải khi bạn bấm "Nghe bản thu", và được phát trực tiếp từ máy chủ Wikimedia nên cần có mạng. Nếu một bản không phát được, bấm "Bản khác".
     loai: ve-site
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Bản thu được phát trực tiếp từ máy chủ Wikimedia, cần có mạng. …" Thêm vế "chỉ tải khi bạn bấm Nghe bản thu" theo công cụ mới (nghe-mu.js: nguồn chỉ gắn vào thẻ audio trong phat(); kiem-nghe-mu.mjs kiểm không có yêu cầu nào tới Wikimedia trước khi bấm). Nguồn phát là upload.wikimedia.org và commons.wikimedia.org (BAN_THU.nguon); lỗi tải thì báo "Không phát được bản thu này. Bấm “Bản khác”." Ghi doi_chu.'
+    ghi_chu: 'Chữ cũ: "Bản thu được phát trực tiếp từ máy chủ Wikimedia, cần có mạng. …" Thêm vế "chỉ tải khi bạn bấm Nghe bản thu" theo công cụ mới (nghe-mu.js: nguồn chỉ gắn vào thẻ audio trong phat(); kiem-nghe-mu.mjs kiểm không có yêu cầu nào tới Wikimedia trước khi bấm). Nguồn phát là upload.wikimedia.org và commons.wikimedia.org (BAN_THU.nguon); lỗi tải thì báo "Không phát được bản thu này. Bấm “Bản khác”." Ghi doi_chu. Review D8-gom: nghe-mu.js: nguồn chỉ gắn vào thẻ audio khi bấm "Nghe bản thu" (chú thích dòng 5, dòng 281); BAN_THU.nguon chỉ ở upload.wikimedia.org, commons.wikimedia.org; CHU_NM.loi: "Không phát được bản thu này. Bấm “Bản khác”."'
+    review: dung
   - id: n10
     cau: 'Radio nhạc cổ điển: BBC Radio 3 nghe được trực tuyến.'
     loai: ten
@@ -188,12 +205,14 @@ nhan_dinh:
     cau: Nhờ bạn bè chọn một bài trong danh sách hướng dẫn nghe (/opus/nghe-nhac/) hoặc các trang thời kỳ, rồi bật cho bạn nghe.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: nghe-nhac/index chưa chuyển (đợt 6), hiện "sắp có"; ../opus-zero/docs/nghe-nhac/index.md là danh mục các hướng dẫn nghe. Lô chuyển giữ đường dẫn.
+    ghi_chu: 'nghe-nhac/index chưa chuyển (đợt 6), hiện "sắp có"; ../opus-zero/docs/nghe-nhac/index.md là danh mục các hướng dẫn nghe. Lô chuyển giữ đường dẫn. Review D8-gom: trang đích nghe-nhac/index chưa chuyển (chưa có trong src/content/docs/nghe-nhac/, hiện "sắp có"); ở ../opus-zero/docs/nghe-nhac/index.md là trang "Nghe nhạc" mở ra các hướng dẫn nghe. Lô chuyển trang đích phải giữ đường dẫn /opus/nghe-nhac/ và danh sách hướng dẫn nghe.'
+    review: dung
   - id: n13
     cau: Ghi dự đoán trước khi xem tên, rồi ghi đáp án thật; site lưu lịch sử và tính tỉ lệ đoán đúng của bạn theo thời gian.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'nghe-mu.js ganPhieu: lưu store.blindLog (opus-zero:v1), bảng 15 lần gần nhất, dòng "Đã ghi N lần nghe mù; đoán đúng thời kỳ x/N." (kiem-nghe-mu.mjs kiểm).'
+    ghi_chu: 'nghe-mu.js ganPhieu: lưu store.blindLog (opus-zero:v1), bảng 15 lần gần nhất, dòng "Đã ghi N lần nghe mù; đoán đúng thời kỳ x/N." (kiem-nghe-mu.mjs kiểm). Review D8-gom: nghe-mu.js: datKho(''blindLog'', …) mỗi lần ghi; tomTatPhieu: 15 lần gần nhất và số lần đoán đúng thời kỳ; CHU_NM.tomTat "Đã ghi N lần nghe mù; đoán đúng thời kỳ x/N."'
+    review: dung
   - id: n14
     cau: Nghe ít nhất 60 giây trước khi đoán; đoạn mở đầu đôi khi gây nhầm.
     loai: khuyen-tap
@@ -213,7 +232,8 @@ nhan_dinh:
     cau: 'Đi theo quy trình ba câu hỏi: biên chế → thời kỳ → tác giả (xem Nghe để nhận diện, /opus/nhan-dien/).'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/content/docs/nhan-dien/index.md mục "Quy trình ba câu hỏi": 1. Biên chế và thể loại, 2. Thời kỳ, 3. Tác giả.'
+    ghi_chu: 'src/content/docs/nhan-dien/index.md mục "Quy trình ba câu hỏi": 1. Biên chế và thể loại, 2. Thời kỳ, 3. Tác giả. Review D8-gom: src/content/docs/nhan-dien/index.md (đã khóa), mục "## Quy trình ba câu hỏi" (dòng 8).'
+    review: dung
   - id: n17
     cau: Nói ra lý do ("Có harpsichord, bè trầm đi đều, nhiều chuỗi, nên là Baroque"); lý do quan trọng hơn kết quả đúng hay sai.
     loai: khuyen-tap
@@ -222,12 +242,14 @@ nhan_dinh:
     cau: Khi sai, tìm xem yếu tố nào đánh lừa bạn, và đọc lại dòng tương ứng trong bảng so sánh (/opus/nhan-dien/so-sanh-thoi-ky/).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: src/content/docs/nhan-dien/so-sanh-thoi-ky.md có bảng so sánh theo yếu tố.
+    ghi_chu: 'src/content/docs/nhan-dien/so-sanh-thoi-ky.md có bảng so sánh theo yếu tố. Review D8-gom: src/content/docs/nhan-dien/so-sanh-thoi-ky.md (đã khóa), mục "## Bảng so sánh": mỗi dòng một yếu tố (Biên chế, Kết cấu, Giai điệu…).'
+    review: dung
   - id: n19
     cau: 'Mục "Nguồn và giấy phép": mười link tới trang tệp trên Wikimedia Commons, tên mỗi link khớp tệp.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Đã so mười link của khối <details> với BAN_THU.trang trong nghe-mu.js: cùng mười trang tệp, cùng thứ tự t1–t10. Workflow kiem-link.yml kiểm các link này hằng tuần (đọc cả trang và nghe-mu.js).'
+    ghi_chu: 'Đã so mười link của khối <details> với BAN_THU.trang trong nghe-mu.js: cùng mười trang tệp, cùng thứ tự t1–t10. Workflow kiem-link.yml kiểm các link này hằng tuần (đọc cả trang và nghe-mu.js). Review D8-gom: so mười link của khối <details> với BAN_THU.trang (nghe-mu.js dòng 44–170): cùng mười trang tệp, cùng thứ tự; t2 và t10 khác nhau chỉ ở cách mã hóa ký tự trong địa chỉ.'
+    review: dung
   - id: n20
     cau: 'Bản thu t1 (chữ của công cụ nghe mù): J. S. Bach, Brandenburg Concerto số 6, BWV 1051, chương 2 (Adagio ma non tanto); Advent Chamber Orchestra.'
     loai: ten
@@ -311,8 +333,9 @@ nhan_dinh:
     nguon:
       - c-t4
       - i-1042
-    ket_qua: null
-    ghi_chu: 'chưa chắc: IMSLP: biên chế violin, dàn dây, continuo; chương 2 Adagio. Bè trầm lặp của chương 2: chưa đối chiếu bản nhạc (IMSLP chặn tải PDF); lượt 2 xem lại.'
+      - nbs-1042
+    ket_qua: dung
+    ghi_chu: 'chưa chắc: IMSLP: biên chế violin, dàn dây, continuo; chương 2 Adagio. Bè trầm lặp của chương 2: chưa đối chiếu bản nhạc (IMSLP chặn tải PDF); lượt 2 xem lại. Review D8-gom: lượt 1 chưa có kết quả, lượt 2 dung nhưng chưa đọc tổng phổ. Review mở Netherlands Bach Society (All of Bach, bậc 2), trang BWV 1042: chương chậm là "a long-drawn-out ostinato … a free-flowing, melancholy solo melody above a repetitive bass motif". Khớp "violin hát trên một bè trầm lặp lại"; biên chế có continuo theo IMSLP. Ghi dung.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Violin_Concerto_in_E_major,_BWV_1042_(Bach,_Johann_Sebastian)" ]
     luot_2_ghi_chu: "Chương Adagio của BWV 1042 dựa trên bè trầm ostinato: mô tả chuẩn; chưa đọc phần tổng phổ nên không kiểm riêng."
@@ -377,8 +400,10 @@ nhan_dinh:
     nguon:
       - c-t7
       - i-k516
-    ket_qua: null
-    ghi_chu: 'chưa chắc: Người biểu diễn: bản cũ ghi "xem trang tệp"; ghi theo trang tệp. IMSLP: chương 4 "Adagio – Allegro", giọng Sol thứ của tác phẩm; Allegro ở Sol trưởng: chưa đối chiếu bản nhạc (lượt 2 xem lại).'
+      - tbso-k516
+      - mitr-k516
+    ket_qua: dung
+    ghi_chu: 'chưa chắc: Người biểu diễn: bản cũ ghi "xem trang tệp"; ghi theo trang tệp. IMSLP: chương 4 "Adagio – Allegro", giọng Sol thứ của tác phẩm; Allegro ở Sol trưởng: chưa đối chiếu bản nhạc (lượt 2 xem lại). Review D8-gom: lượt 1 chưa có kết quả, lượt 2 dung (IMSLP chỉ ghi "Adagio – Allegro" và giọng Sol thứ của tác phẩm, không ghi giọng của Allegro). Review mở hai ghi chú chương trình (bậc 2): Thunder Bay Symphony Orchestra: "a lengthy Adagio introduction … the sprightly G major Allegro"; Music in the Round: phần chậm mở đầu chương cuối còn bi thương, rồi "the major-key ebullience of the finale". Adagio ở Sol thứ: giọng của tác phẩm (IMSLP) và phần mở đầu bi thương; không có nguồn bậc 2 nào ghi giọng khác. Ghi dung.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/String_Quintet_No.4_in_G_minor,_K.516_(Mozart,_Wolfgang_Amadeus)" ]
     luot_2_ghi_chu: "IMSLP: hai violin, hai viola, cello; chương 4 'Adagio rồi Allegro' (Sol thứ rồi Sol trưởng). Khớp."
@@ -443,7 +468,7 @@ nhan_dinh:
       - c-t10
       - i-l66
     ket_qua: dung
-    ghi_chu: 'IMSLP: sáng tác 1890–91, in 1891 (Durand), mục "Piece Style: Romantic"; nên tính đúng cả Lãng mạn (dung: impressionist, romantic).'
+    ghi_chu: 'IMSLP: sáng tác 1890–91, in 1891 (Durand), mục "Piece Style: Romantic"; nên tính đúng cả Lãng mạn (dung: impressionist, romantic). Review D8-gom: lượt 2 khong-chac vì "nằm giữa Lãng mạn muộn và Ấn tượng" không có nguồn bậc 2. Review đọc lại IMSLP (2 Arabesques, CD 74, qua api.php): sáng tác 1890–91, in 1891, Piece Style: Romantic; Debussy lúc ấy 28 tuổi (sinh 1862, nha-soan-nhac.yml đã khóa), nên "tác phẩm thời trẻ" đúng. Năm 1890–91 nằm trong khoảng Ấn tượng (~1890–1920) của bảng so-sanh-thoi-ky (đã khóa), và lượt 2 dẫn Wikipedia gọi hai arabesque là ví dụ sớm của nhạc ấn tượng. "Nằm giữa" là cách site giải thích vì sao nhận cả hai đáp án (quy tắc chấm, nghe-mu.js dung: impressionist, romantic). Giữ chữ, ghi dung.'
     luot_2: khong-chac
     luot_2_nguon: [ "https://en.wikipedia.org/wiki/Deux_arabesques" ]
     luot_2_ghi_chu: Wikipedia gọi hai arabesque là ví dụ sớm của nhạc ấn tượng, không nói 'nằm giữa Lãng mạn muộn và Ấn tượng'. Việc chấp nhận cả hai đáp án là quy tắc chấm của site; xếp thời kỳ là nhận định, không có nguồn bậc 2.

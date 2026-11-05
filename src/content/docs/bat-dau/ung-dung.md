@@ -8,7 +8,7 @@ Opus có thể được cài lên màn hình chính của điện thoại hoặc
 ## Trên iPhone, iPad (Safari)
 
 1. Mở site bằng **Safari**.
-2. Bấm nút **Chia sẻ** (hình vuông có mũi tên lên; ở một số bản iOS nút này nằm trong menu **⋯** cạnh thanh địa chỉ).
+2. Bấm nút **⋯** (Menu của trang), rồi bấm **Chia sẻ**. Nếu bố cục tab là **Dưới cùng** hay **Trên cùng**, bấm thẳng nút **Chia sẻ** (hình vuông có mũi tên lên).
 3. Cuộn xuống và chọn **Thêm vào Màn hình chính** (*Add to Home Screen*).
 
 ## Trên Android (Chrome)
