@@ -47,3 +47,18 @@ Ba người review Claude Opus 5.5, không làm lượt 1, lượt 2 của trang
 - `tools/chuyen/chuyen.mjs` không đặt nháy cho `description` có dấu `:` (`d8-l2.md`); sửa tay rồi. Sửa `src/scripts/*.js` mà plugin dùng lúc build thì trang không tự dựng lại (`d8-l1.md`). Hai việc mức Vừa, làm riêng.
 - Kiểm thử trình duyệt chập chờn hai lần trong đợt: một phép ở trang Nghe mù (chạy lại đạt), `firefox: thu âm qua micro (giả)` (`kiem-luyen-tap-d7.mjs:189`, D8-L3). Theo dõi ở CI.
 - Hai workflow hằng tuần (`ra-lai.yml`, `kiem-link.yml`) chưa chạy thật: lần đầu bấm chạy tay ở tab Actions.
+
+## Kiểm mẫu và khóa (05/11/2026)
+
+Chủ repo giao Claude Opus 5.5 (phiên Cowork) kiểm mẫu thay, điền `kiem_mau` và khóa. Người kiểm không phải chủ repo; `nguoi.kiem_mau` ghi rõ điều này. Nguồn mở lại bằng agent đọc trang web và Commons API.
+
+12 nhận định ở `d8-gom/kiem-mau.yml`, kết quả `d8-gom/kiem-mau-ket-qua.yml`: 9 đúng, 2 sai, 1 không kiểm được.
+
+- `nhac-cu/trumpet` n8 sai: "loại thường gặp là trumpet Si♭" nói quá nguồn; VSL: "the most widely used trumpets are those in Bb and C". Sửa thành "Hai loại trumpet dùng nhiều nhất là trumpet Si♭ và trumpet Đô"; trumpet Đô chuyển lên câu kế.
+- `nhac-cu/trumpet` n19 sai: "ngày nay … thường được chơi bằng trumpet piccolo có van" không có nguồn; trumpetstudio: "Modern performers often use either period instruments or piccolo trumpets". Sửa n19 và hai câu cùng ý (n16, n25): piccolo hoặc trumpet tự nhiên kiểu cổ.
+- `lich-su/nu-nha-soan-nhac` n84 không kiểm được: nguồn duy nhất là bản lưu Wayback của TTVH, bị chặn ở máy kiểm; không tìm được nguồn khác. Giữ chữ.
+- `piano/tac-pham-theo-cap` n32: mức 7 của Henle đọc qua phần trích của công cụ đọc trang (hai lần cùng kết quả), không thấy trong phần nguyên văn.
+
+Hai câu sai cùng trang với lỗi lượt 2 và review đều bỏ qua cho thấy trang Đọc thêm (lượt 2 chỉ 5 nhận định mỗi trang) còn có thể sót câu nói quá nguồn.
+
+Khóa 20 trang. `khoa tinh` khớp; bản build thật 160 trang; `npm test` 281 pass.

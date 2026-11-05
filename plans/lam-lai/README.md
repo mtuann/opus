@@ -99,8 +99,8 @@ Câu hỏi nhỏ còn chờ (từ review nhánh quyết định, `bao-cao/d2-ban
 | 3 | Nhạc lý và luyện tai | 6 | 45 trang, Từ điển | Xong 28/10/2026: D3-L1 (khóa 24/10), D3-L2 đến D3-L6 lượt 1 và nhánh gom (lượt 2, review, kiểm mẫu, khóa 37 trang và cả 154 bản ghi `thuat-ngu.yml`); 62 trang trên site thật |
 | 4 | Piano nền tảng | 4 | 28 trang: bắt đầu bên phím, kỹ thuật, tập luyện, hòa âm bên phím, văn học piano | Xong 28/10/2026: D4-L1 đến D4-L4 lượt 1 và nhánh gom (lượt 2, review, lượt 2 bổ sung, kiểm mẫu, khóa 28 trang; mở khóa và khóa lại `piano/lo-trinh`); 90 trang trên site thật |
 | 5 | Nhạc cổ điển nền tảng | 3 | 27 trang: thời kỳ, hình thức, nhận diện; đủ 101 trang lõi | Xong 29/10/2026: D5-L1 đến D5-L3 lượt 1 và nhánh gom (lượt 2, review, lượt 2 bổ sung, kiểm mẫu, khóa 27 trang); 117 trang trên site thật |
-| 7 | Công cụ, sách in, blog, Cập nhật | 3 | 17 công cụ luyện tập, sách in, blog, dùng khi mất mạng | Chờ chủ repo: D7-L1 đến D7-L3 xong lượt 1, lượt 2, review (nhánh gom `moi/d7-gom`, `bao-cao/d7-gom.md`); còn kiểm mẫu (`d7-gom/kiem-mau.yml`, `kiem-mau-l3.yml`) và khóa 23 trang |
-| 8 | Tham chiếu có hạn và Đọc thêm | 3 | 20 trang | Chờ chủ repo: D8-L1 đến D8-L3 xong lượt 1, lượt 2, review (nhánh gom `moi/d8-gom`, `bao-cao/d8-gom.md`); còn kiểm mẫu (`d8-gom/kiem-mau.yml`) và khóa 20 trang |
+| 7 | Công cụ, sách in, blog, Cập nhật | 3 | 17 công cụ luyện tập, sách in, blog, dùng khi mất mạng | Xong 05/11/2026: D7-L1 đến D7-L3 lượt 1 và nhánh gom (lượt 2, review, kiểm mẫu do Claude kiểm thay chủ repo theo lời giao, khóa 23 trang); 160 trang trên site thật cùng đợt 8 |
+| 8 | Tham chiếu có hạn và Đọc thêm | 3 | 20 trang | Xong 05/11/2026: D8-L1 đến D8-L3 lượt 1 và nhánh gom (lượt 2, review, kiểm mẫu do Claude kiểm thay chủ repo theo lời giao: 2 câu sai ở `nhac-cu/trumpet` đã sửa, khóa 20 trang) |
 | 6 | Tác phẩm | 11 | 34 bài học, 45 hướng dẫn nghe, danh mục tác phẩm; đủ 233 trang cũ | Đang làm: D6-0 xong và đã review (`bao-cao/d6-0.md`); D6-L1 xong lượt 1, gộp ở bản xem (`d6-l1.md`), lượt 2 đang chạy |
 | 9 | Hoàn tất | | Site mới không còn cần `../opus-zero/` | Chưa làm |
 

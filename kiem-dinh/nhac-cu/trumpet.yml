@@ -5,13 +5,13 @@ tang: ngoai-vi
 lan:
   - so: 1
     ngay: 2026-11-05
-    nhanh: moi/d8-l2
-    ma_bam: null
+    nhanh: moi/d7-d8-kiem-mau
+    ma_bam: sha256:baa27d2162f89108f191f0d1955513c72ab7167818632ef85c613a5d2745c742
     nguoi:
       luot_1: Claude Sonnet 5.5 (D8-L2 lượt 1, phần 2/2)
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 8, 05/11/2026); Claude Opus 5.5 (lượt 2 làm lại cho câu khong-chac của lượt 2 bổ sung)
       review: Claude Opus 5.5 (review D8-gom, 05/11/2026)
-      kiem_mau: null
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 05/11/2026 (chủ repo không tự kiểm): 12 nhận định mẫu của đợt 8, 9 đúng, 2 sai đã sửa (nhac-cu/trumpet n8 Si♭ và Đô là hai loại dùng nhiều nhất; n19 bè Baroque nay chơi bằng piccolo hoặc trumpet tự nhiên kiểu cổ; sửa theo cả n16, n25), 1 không kiểm được (nu-nha-soan-nhac n84: nguồn chỉ có bản lưu Wayback, bị chặn) (bao-cao/d8-gom/kiem-mau-ket-qua.yml)"
 ghi_chu: 'Trang Đọc thêm (ngoại vi), không có khối abc. Nguồn chính mở được ngày 05/11/2026: Concise Oxford Dictionary of Music (Encyclopedia.com), VSL Academy (đọc qua công cụ đọc web; curl chỉ ra vỏ JavaScript trống), IMSLP, Weakley (University of Florida) cho áp lực môi. Chỗ sửa lớn: mô tả âm sắc (a1, a3), "dịch giọng/phổ biến nhất" (a8), bỏ trumpet Đô "dùng nhiều" (a13), piccolo Si♭ (a15), vai trò dàn nhạc (a18), Baroque (a19: bỏ Handel, Purcell), jazz (a20–a22: bỏ cup, plunger), Kind of Blue (a29), phần "Nếu muốn học" (a33–a39: bỏ 15–20 phút, giá, môi nhanh mỏi; áp lực môi theo nguồn). Chưa quyết: a27 (Tchaikovsky 1812: nghe kèn đồng ở đoạn trận chiến, ket_qua null). Câu về sức khỏe (áp lực môi, a34) xếp quy-tac, cần lượt 2. Mô tả trang (description) đổi theo a1. doi_chu viết tay từ khối của dist/ cũ (dist chưa build lại sau sửa): người giao chạy node tools/chuyen/so-chu.mjs nhac-cu/trumpet --doi-chu sau khi build để đối chiếu; dòng "Opus tập trung vào piano" người giao ghi (dist cũ còn "Opus Zero"). Thuật ngữ trang dùng chưa có bản ghi ở src/data/thuat-ngu.yml (cho D3-L5; không tạo): dịch giọng (transposing), piccolo (trumpet piccolo), van piston, clarino, sordino/mute (chỉ có con-sordino), fanfare, harmon mute, khóa Sol.'
 nguon:
   - id: vsl-trumpet-c
@@ -153,13 +153,13 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'COD, Valve: valve "whereby all the notes of the chromatic scale were made available to brass instr."'
   - id: n8
-    cau: Trumpet thường là nhạc cụ dịch giọng; loại thường gặp là trumpet Si♭.
+    cau: Hai loại trumpet dùng nhiều nhất là trumpet Si♭ và trumpet Đô; trumpet Si♭ là nhạc cụ dịch giọng.
     loai: dinh-nghia
     nguon:
       - cod-trumpet
       - vsl-trumpet-c
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Trumpet là nhạc cụ dịch giọng. Loại phổ biến nhất là trumpet Si♭". COD: "Either a transposing instr. in B♭ … or non-transposing in C"; VSL: trumpet in C "Non-transposing", Bb trumpet "Sounds a major second lower than written". "Phổ biến nhất" không nguồn nào nói thẳng, và có loại không dịch giọng (Đô): đổi thành "thường là", "thường gặp".'
+    ghi_chu: 'Chữ cũ: "Trumpet là nhạc cụ dịch giọng. Loại phổ biến nhất là trumpet Si♭". COD: "Either a transposing instr. in B♭ … or non-transposing in C"; VSL: trumpet in C "Non-transposing", Bb trumpet "Sounds a major second lower than written". "Phổ biến nhất" không nguồn nào nói thẳng, và có loại không dịch giọng (Đô): đổi thành "thường là", "thường gặp". Kiểm mẫu D8 (Claude, chủ repo giao kiểm mẫu, 05/11/2026): chữ "Trumpet thường là nhạc cụ dịch giọng; loại thường gặp là trumpet Si♭" nói quá nguồn: COD ghi "Either a transposing instr. in B♭ … or non-transposing in C", VSL ghi "the most widely used trumpets are those in Bb and C" (không tách riêng Si♭). Đổi theo VSL.'
   - id: n9
     cau: Với trumpet Si♭, nốt viết Đô vang thành Si♭, thấp hơn một cung so với nốt viết.
     loai: quy-tac
@@ -216,14 +216,14 @@ nhan_dinh:
     ket_qua: da-sua
     ghi_chu: 'Chữ cũ: "loại Si♭ phổ biến vang cao hơn nốt viết một quãng 7 thứ". VSL: "the high Bb sounds a minor seventh higher" (còn D trumpet vang cao hơn nốt viết một quãng hai trưởng). Bỏ "phổ biến" (VSL liệt kê D, Eb, E, F, G, Ab và Si♭ cao như các loại ngang nhau, không nói loại nào phổ biến).'
   - id: n16
-    cau: Ngày nay trumpet piccolo thường được dùng để chơi các bè trumpet cao vút thời Baroque, như Concerto Brandenburg số 2 của Bach.
+    cau: Ngày nay nhiều người chơi dùng trumpet piccolo cho các bè trumpet cao vút thời Baroque như Concerto Brandenburg số 2 của Bach, số khác dùng trumpet tự nhiên kiểu cổ.
     loai: lich-su
     nguon:
       - cod-trumpet
       - trumpetstudio
       - imslp-bwv1047
-    ket_qua: dung
-    ghi_chu: 'COD, Trumpet: "Bach trumpet: 19th-cent instr., in D, specially made (with valves) to play high tpt. parts in works of Baroque period"; trumpetstudio.com (bậc 3, giáo viên trumpet): "Modern players may use piccolo trumpets to imitate the original sound"; IMSLP: Brandenburg số 2 có trumpet. Ghi chú: nguồn bậc 2 chỉ có COD (trumpet Bach cao trong Rê); piccolo trumpet gần Brandenburg 2 theo trumpetstudio (bậc 3) và lời khuyên chung. Chấp nhận: câu vừa phải ("thường").'
+    ket_qua: da-sua
+    ghi_chu: 'COD, Trumpet: "Bach trumpet: 19th-cent instr., in D, specially made (with valves) to play high tpt. parts in works of Baroque period"; trumpetstudio.com (bậc 3, giáo viên trumpet): "Modern players may use piccolo trumpets to imitate the original sound"; IMSLP: Brandenburg số 2 có trumpet. Ghi chú: nguồn bậc 2 chỉ có COD (trumpet Bach cao trong Rê); piccolo trumpet gần Brandenburg 2 theo trumpetstudio (bậc 3) và lời khuyên chung. Chấp nhận: câu vừa phải ("thường"). Kiểm mẫu D8 (Claude, chủ repo giao kiểm mẫu, 05/11/2026): chữ cũ "thường được dùng" chỉ nói một lựa chọn; trumpetstudio.com: "Modern performers often use either period instruments or piccolo trumpets to emulate the original natural trumpet''s sound and style". COD không gắn piccolo với bè Baroque. Đổi theo trumpetstudio.'
   - id: n17
     cau: Nguyên bản Concerto Brandenburg số 2 viết cho trumpet tự nhiên không van.
     loai: lich-su
@@ -244,14 +244,14 @@ nhan_dinh:
     ket_qua: da-sua
     ghi_chu: 'Chữ cũ: "đỉnh cao của bộ kèn đồng — các đoạn fanfare, cao trào, và nhiều giai điệu chính hùng tráng". VSL, brass: trumpet có "shallowest mouthpiece" → âm sáng; VSL trang brass không nói trumpet là "đỉnh cao" của bộ kèn đồng, và không nói về fanfare hay giai điệu chính. Đổi thành mô tả có nguồn và ví dụ Promenade (n kế). Dòng này vừa sửa vừa bỏ ("đỉnh cao", "fanfare", "giai điệu chính" bỏ).'
   - id: n19
-    cau: Ở thời Baroque, trumpet tự nhiên (không van) chơi các bè cao vút (clarino), như trong Monteverdi và Bach (Concerto Brandenburg số 2); ngày nay các bè này thường được chơi bằng trumpet piccolo có van.
+    cau: Ở thời Baroque, trumpet tự nhiên (không van) chơi các bè cao vút (clarino), như trong Monteverdi và Bach (Concerto Brandenburg số 2); ngày nay các bè này thường được chơi bằng trumpet piccolo hoặc trumpet tự nhiên kiểu cổ.
     loai: lich-su
     nguon:
       - cod-trumpet
       - imslp-bwv1047
       - trumpetstudio
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "… chơi các bè cao vút (clarino) trong Bach, Handel, Purcell". COD: "the brilliant, high-pitched effects required from the baroque tpt. by Monteverdi and others were obtained from the clarino"; IMSLP: Brandenburg số 2 có trumpet. Chưa mở nguồn nào nói riêng về Handel hay Purcell: bỏ hai tên.'
+    ghi_chu: 'Chữ cũ: "… chơi các bè cao vút (clarino) trong Bach, Handel, Purcell". COD: "the brilliant, high-pitched effects required from the baroque tpt. by Monteverdi and others were obtained from the clarino"; IMSLP: Brandenburg số 2 có trumpet. Chưa mở nguồn nào nói riêng về Handel hay Purcell: bỏ hai tên. Kiểm mẫu D8 (Claude, chủ repo giao kiểm mẫu, 05/11/2026): vế "ngày nay … bằng trumpet piccolo có van" không có nguồn nói đúng như vậy; trumpetstudio.com: "Modern performers often use either period instruments or piccolo trumpets to emulate the original natural trumpet''s sound and style". Đổi theo câu ấy.'
   - id: n20
     cau: Trong jazz, trumpet là nhạc cụ solo của nhiều nghệ sĩ lớn, như Louis Armstrong, Miles Davis, Dizzy Gillespie.
     loai: lich-su
@@ -293,13 +293,13 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'IMSLP: Trumpet Concerto in E major, S.49, 1803.'
   - id: n25
-    cau: 'Bach, Concerto Brandenburg số 2: nghe bè trumpet cao vút ở chương đầu và chương cuối (thường chơi bằng trumpet piccolo).'
+    cau: 'Bach, Concerto Brandenburg số 2: nghe bè trumpet cao vút ở chương đầu và chương cuối (nay thường chơi bằng trumpet piccolo hoặc trumpet tự nhiên kiểu cổ).'
     loai: danh-muc
     nguon:
       - imslp-bwv1047
       - trumpetstudio
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "nghe trumpet piccolo vút cao ở chương cuối". trumpetstudio.com: trumpet "assumes a leadership role in the first movement", "silent during the second movement", "returns in the final movement". IMSLP: BWV 1047 có trumpet. Thêm chương đầu; "piccolo" thành "thường chơi bằng" (còn có trumpet tự nhiên).'
+    ghi_chu: 'Chữ cũ: "nghe trumpet piccolo vút cao ở chương cuối". trumpetstudio.com: trumpet "assumes a leadership role in the first movement", "silent during the second movement", "returns in the final movement". IMSLP: BWV 1047 có trumpet. Thêm chương đầu; "piccolo" thành "thường chơi bằng" (còn có trumpet tự nhiên). Kiểm mẫu D8 (Claude, chủ repo giao kiểm mẫu, 05/11/2026): sửa theo n19 (trumpetstudio.com: "Modern performers often use either period instruments or piccolo trumpets to emulate the original natural trumpet''s sound and style".)'
   - id: n26
     cau: 'Mussorgsky (phối Ravel), Pictures at an Exhibition: Promenade mở đầu bằng trumpet độc tấu.'
     loai: ten
@@ -424,39 +424,41 @@ nhan_dinh:
     review: dung
 khuong_nhac: []
 doi_chu:
-  - cu: "Opus Zero tập trung vào piano; trang này giúp bạn nghe hiểu nhạc cụ này khi nó xuất hiện trong dàn nhạc, nhạc thính phòng hay concerto. Xem Nhạc cụ trong dàn nhạc."
-    moi: "Opus tập trung vào piano; trang này giúp bạn nghe hiểu nhạc cụ này khi nó xuất hiện trong dàn nhạc, nhạc thính phòng hay concerto. Xem Nhạc cụ trong dàn nhạc."
-    ly_do: "Site mới tên Opus (bản trước tên Opus Zero); chữ trong trang theo tên hiện hành. Không phải nhận định về nhạc."
-  - cu: 'Trumpet là giọng lệnh của dàn nhạc: sáng, vang xa, xuyên qua mọi âm thanh khác. Từ tiếng kèn trận thời xưa đến những đoạn cao trào chói lọi trong giao hưởng, trumpet là nhạc cụ của sự hùng tráng — nhưng cũng có thể thủ thỉ rất tình cảm khi chơi nhỏ và dùng sordino (nút bịt).'
-    moi: 'Trumpet có âm sắc sáng, mạnh và lộng lẫy: kim loại, vang, nổi lên trong dàn nhạc. Từ tiếng kèn trận thời xưa đến những đoạn cao trào trong giao hưởng, trumpet là nhạc cụ của sự hùng tráng — nhưng khi chơi nhỏ, nhất là khi dùng sordino (nút bịt), tiếng kèn cũng có thể nhẹ và tinh tế.'
+  - cu: "Trumpet là giọng lệnh của dàn nhạc: sáng, vang xa, xuyên qua mọi âm thanh khác. Từ tiếng kèn trận thời xưa đến những đoạn cao trào chói lọi trong giao hưởng, trumpet là nhạc cụ của sự hùng tráng — nhưng cũng có thể thủ thỉ rất tình cảm khi chơi nhỏ và dùng sordino (nút bịt)."
+    moi: "Trumpet có âm sắc sáng, mạnh và lộng lẫy: kim loại, vang, nổi lên trong dàn nhạc. Từ tiếng kèn trận thời xưa đến những đoạn cao trào trong giao hưởng, trumpet là nhạc cụ của sự hùng tráng — nhưng khi chơi nhỏ, nhất là khi dùng sordino (nút bịt), tiếng kèn cũng có thể nhẹ và tinh tế."
     ly_do: 'n1, n2, n3 (da-sua): theo VSL, COD; bỏ "giọng lệnh", "xuyên qua mọi âm thanh khác", "chói lọi", "thủ thỉ rất tình cảm".'
-  - cu: 'Trumpet là nhạc cụ dịch giọng. Loại phổ biến nhất là trumpet Si♭: nốt viết Đô vang thành Si♭ — thấp hơn một cung so với nốt viết. Âm vực viết khoảng Fa♯3 đến Đô6. Đọc khóa Sol.'
-    moi: 'Trumpet thường là nhạc cụ dịch giọng. Loại thường gặp là trumpet Si♭: nốt viết Đô vang thành Si♭ — thấp hơn một cung so với nốt viết. Âm vực viết khoảng Fa♯3 đến Đô6. Đọc khóa Sol.'
-    ly_do: 'n8 (da-sua): có trumpet Đô không dịch giọng; "phổ biến nhất" không nguồn.'
-  - cu: 'Các loại trumpet khác: trumpet Đô (dùng nhiều trong dàn nhạc giao hưởng chuyên nghiệp, vang đúng nốt viết), trumpet piccolo (nhỏ hơn, vang cao hơn trumpet thường khoảng một quãng tám; loại Si♭ phổ biến vang cao hơn nốt viết một quãng 7 thứ) — ngày nay thường dùng để chơi các bè trumpet cao vút thời Baroque như Concerto Brandenburg số 2 của Bach (nguyên bản viết cho trumpet tự nhiên không van).'
-    moi: 'Các loại trumpet khác: trumpet Đô (không dịch giọng, vang đúng nốt viết), trumpet piccolo (nhỏ hơn, vang cao hơn trumpet thường khoảng một quãng tám; loại Si♭ cao vang cao hơn nốt viết một quãng 7 thứ) — ngày nay thường dùng để chơi các bè trumpet cao vút thời Baroque như Concerto Brandenburg số 2 của Bach (nguyên bản viết cho trumpet tự nhiên không van).'
-    ly_do: 'n12, n13: bỏ "dùng nhiều trong dàn nhạc giao hưởng chuyên nghiệp" (da-bo).'
-  - cu: 'Dàn nhạc: đỉnh cao của bộ kèn đồng — các đoạn fanfare, cao trào, và nhiều giai điệu chính hùng tráng.'
-    moi: 'Dàn nhạc: thuộc bộ kèn đồng, nổi lên nhờ âm sắc sáng, mạnh; có những đoạn trumpet độc tấu, như Promenade mở đầu bản phối Pictures at an Exhibition của Ravel.'
-    ly_do: 'n18 (da-sua): bỏ "đỉnh cao của bộ kèn đồng", "fanfare", "giai điệu chính" (không nguồn); thêm ví dụ Promenade (wssymphony.org, Hollywood Bowl).'
-  - cu: 'Nhạc Baroque: trumpet tự nhiên (natural trumpet, không van) chơi các bè cao vút (clarino) trong Bach, Handel, Purcell; ngày nay các bè này thường được chơi bằng trumpet piccolo có van.'
-    moi: 'Nhạc Baroque: trumpet tự nhiên (natural trumpet, không van) chơi các bè cao vút (clarino), như trong Monteverdi và Bach (Concerto Brandenburg số 2); ngày nay các bè này thường được chơi bằng trumpet piccolo có van.'
-    ly_do: 'n19 (da-sua): theo COD (Monteverdi) và IMSLP (Bach); bỏ Handel, Purcell (chưa kiểm).'
-  - cu: 'Jazz: một trong những giọng solo trung tâm (Louis Armstrong, Miles Davis, Dizzy Gillespie) — với các loại sordino tạo âm sắc đa dạng (cup, harmon, plunger).'
-    moi: 'Jazz: nhạc cụ solo của nhiều nghệ sĩ lớn (Louis Armstrong, Miles Davis, Dizzy Gillespie), có khi dùng sordino như harmon mute để đổi âm sắc.'
-    ly_do: 'n20, n21, n22 (da-sua): "một trong những giọng solo trung tâm" không kiểm được; chỉ giữ harmon mute (Apple Music), bỏ cup và plunger (da-bo).'
+  - cu: Opus Zero tập trung vào piano; trang này giúp bạn nghe hiểu nhạc cụ này khi nó xuất hiện trong dàn nhạc, nhạc thính phòng hay concerto. Xem Nhạc cụ trong dàn nhạc.
+    moi: Opus tập trung vào piano; trang này giúp bạn nghe hiểu nhạc cụ này khi nó xuất hiện trong dàn nhạc, nhạc thính phòng hay concerto. Xem Nhạc cụ trong dàn nhạc.
+    ly_do: Site mới tên Opus (bản trước tên Opus Zero); chữ trong trang theo tên hiện hành. Không phải nhận định về nhạc.
+  - cu:
+      - "Trumpet là nhạc cụ dịch giọng. Loại phổ biến nhất là trumpet Si♭: nốt viết Đô vang thành Si♭ — thấp hơn một cung so với nốt viết. Âm vực viết khoảng Fa♯3 đến Đô6. Đọc khóa Sol."
+      - "Các loại trumpet khác: trumpet Đô (dùng nhiều trong dàn nhạc giao hưởng chuyên nghiệp, vang đúng nốt viết), trumpet piccolo (nhỏ hơn, vang cao hơn trumpet thường khoảng một quãng tám; loại Si♭ phổ biến vang cao hơn nốt viết một quãng 7 thứ) — ngày nay thường dùng để chơi các bè trumpet cao vút thời Baroque như Concerto Brandenburg số 2 của Bach (nguyên bản viết cho trumpet tự nhiên không van)."
+    moi:
+      - "Hai loại trumpet dùng nhiều nhất là trumpet Si♭ và trumpet Đô. Trumpet Si♭ là nhạc cụ dịch giọng: nốt viết Đô vang thành Si♭ — thấp hơn một cung so với nốt viết. Âm vực viết khoảng Fa♯3 đến Đô6. Đọc khóa Sol."
+      - Trumpet Đô không dịch giọng, vang đúng nốt viết. Trumpet piccolo nhỏ hơn, vang cao hơn trumpet thường khoảng một quãng tám (loại Si♭ cao vang cao hơn nốt viết một quãng 7 thứ); ngày nay nhiều người chơi dùng nó cho các bè trumpet cao vút thời Baroque như Concerto Brandenburg số 2 của Bach (nguyên bản viết cho trumpet tự nhiên không van), số khác dùng trumpet tự nhiên kiểu cổ.
+    ly_do: 'n8 (da-sua): có trumpet Đô không dịch giọng; "phổ biến nhất" không nguồn.; n12, n13: bỏ "dùng nhiều trong dàn nhạc giao hưởng chuyên nghiệp" (da-bo).; kiểm mẫu D8 (Claude, chủ repo giao, 05/11/2026): n8, n16, n19, n25 sửa theo nguồn (VSL: Si♭ và Đô là hai loại dùng nhiều nhất; trumpetstudio: bè Baroque nay chơi bằng piccolo hoặc trumpet tự nhiên kiểu cổ).'
+  - cu:
+      - "Dàn nhạc: đỉnh cao của bộ kèn đồng — các đoạn fanfare, cao trào, và nhiều giai điệu chính hùng tráng."
+      - "Nhạc Baroque: trumpet tự nhiên (natural trumpet, không van) chơi các bè cao vút (clarino) trong Bach, Handel, Purcell; ngày nay các bè này thường được chơi bằng trumpet piccolo có van."
+      - "Jazz: một trong những giọng solo trung tâm (Louis Armstrong, Miles Davis, Dizzy Gillespie) — với các loại sordino tạo âm sắc đa dạng (cup, harmon, plunger)."
+    moi:
+      - "Dàn nhạc: thuộc bộ kèn đồng, nổi lên nhờ âm sắc sáng, mạnh; có những đoạn trumpet độc tấu, như Promenade mở đầu bản phối Pictures at an Exhibition của Ravel."
+      - "Nhạc Baroque: trumpet tự nhiên (natural trumpet, không van) chơi các bè cao vút (clarino), như trong Monteverdi và Bach (Concerto Brandenburg số 2); ngày nay các bè này thường được chơi bằng trumpet piccolo hoặc trumpet tự nhiên kiểu cổ."
+      - "Jazz: nhạc cụ solo của nhiều nghệ sĩ lớn (Louis Armstrong, Miles Davis, Dizzy Gillespie), có khi dùng sordino như harmon mute để đổi âm sắc."
+    ly_do: 'n18 (da-sua): bỏ "đỉnh cao của bộ kèn đồng", "fanfare", "giai điệu chính" (không nguồn); thêm ví dụ Promenade (wssymphony.org, Hollywood Bowl).; n19 (da-sua): theo COD (Monteverdi) và IMSLP (Bach); bỏ Handel, Purcell (chưa kiểm).; n20, n21, n22 (da-sua): "một trong những giọng solo trung tâm" không kiểm được; chỉ giữ harmon mute (Apple Music), bỏ cup và plunger (da-bo).; kiểm mẫu D8 (Claude, chủ repo giao, 05/11/2026): n8, n16, n19, n25 sửa theo nguồn (VSL: Si♭ và Đô là hai loại dùng nhiều nhất; trumpetstudio: bè Baroque nay chơi bằng piccolo hoặc trumpet tự nhiên kiểu cổ).'
   - cu: Bach, Concerto Brandenburg số 2 — nghe trumpet piccolo vút cao ở chương cuối
-    moi: Bach, Concerto Brandenburg số 2 — nghe bè trumpet cao vút ở chương đầu và chương cuối (thường chơi bằng trumpet piccolo)
-    ly_do: 'n25 (da-sua): trumpet chơi ở chương đầu và chương cuối, nghỉ ở chương hai (trumpetstudio.com); "piccolo" thành "thường chơi bằng".'
-  - cu: 'Miles Davis, Kind of Blue (jazz): trumpet với harmon mute'
-    moi: 'Miles Davis, Kind of Blue (jazz, 1959): trumpet với harmon mute ở Blue in Green và Flamenco Sketches'
-    ly_do: 'n29 (da-sua): Apple Music chỉ nêu hai bài ấy dùng harmon mute; thêm năm 1959.'
-  - cu: 'Trumpet dễ phát ra tiếng nhưng khó chơi hay: môi nhanh mỏi, cao độ phụ thuộc hoàn toàn vào môi và hơi (van chỉ đổi ống). Người mới thường chỉ chơi được 15–20 phút mỗi ngày lúc đầu — đó là bình thường. Nên học với giáo viên để tránh tạo áp lực môi sai cách (dí kèn quá mạnh vào môi). Kèn học sinh giá vừa phải, và nhớ mua thêm sordino để tập không làm phiền hàng xóm.'
+    moi: Bach, Concerto Brandenburg số 2 — nghe bè trumpet cao vút ở chương đầu và chương cuối (nay thường chơi bằng trumpet piccolo hoặc trumpet tự nhiên kiểu cổ)
+    ly_do: 'n25 (da-sua): trumpet chơi ở chương đầu và chương cuối, nghỉ ở chương hai (trumpetstudio.com); "piccolo" thành "thường chơi bằng".; kiểm mẫu D8 (Claude, chủ repo giao, 05/11/2026): n8, n16, n19, n25 sửa theo nguồn (VSL: Si♭ và Đô là hai loại dùng nhiều nhất; trumpetstudio: bè Baroque nay chơi bằng piccolo hoặc trumpet tự nhiên kiểu cổ).'
+  - cu:
+      - Tchaikovsky, 1812 Overture — nghe bộ kèn đồng ở đoạn trận chiến
+      - "Miles Davis, Kind of Blue (jazz): trumpet với harmon mute"
+    moi:
+      - Tchaikovsky, 1812 Overture — bộ kèn đồng của tác phẩm có 2 trumpet cùng 2 cornet, 4 horn, 3 trombone và tuba
+      - "Miles Davis, Kind of Blue (jazz, 1959): trumpet với harmon mute ở Blue in Green và Flamenco Sketches"
+    ly_do: "n29 (da-sua): Apple Music chỉ nêu hai bài ấy dùng harmon mute; thêm năm 1959.; Review D8-gom: n27, không nguồn nói về kèn đồng ở đoạn trận chiến; viết theo biên chế của Tchaikovsky Research."
+  - cu: "Trumpet dễ phát ra tiếng nhưng khó chơi hay: môi nhanh mỏi, cao độ phụ thuộc hoàn toàn vào môi và hơi (van chỉ đổi ống). Người mới thường chỉ chơi được 15–20 phút mỗi ngày lúc đầu — đó là bình thường. Nên học với giáo viên để tránh tạo áp lực môi sai cách (dí kèn quá mạnh vào môi). Kèn học sinh giá vừa phải, và nhớ mua thêm sordino để tập không làm phiền hàng xóm."
     moi: Cao độ của trumpet phụ thuộc chủ yếu vào môi và hơi (các van chỉ đổi độ dài ống), nên chơi hay đòi hỏi luyện môi và hơi lâu dài. Người mới thường theo bản năng dí kèn mạnh vào môi để lên nốt cao; áp lực ấy cản máu tới cơ môi và làm tiếng kém đi, nên hãy học với giáo viên để tránh thói quen đó. Sordino làm tiếng nhỏ lại, hữu ích khi tập ở nơi cần giữ yên tĩnh.
     ly_do: 'n33, n34, n35, n36, n37, n38, n39: bỏ "dễ phát ra tiếng", "môi nhanh mỏi", "15–20 phút", giá kèn (da-bo); "hoàn toàn" thành "chủ yếu"; áp lực môi theo Weakley; sordino theo COD.'
-  - cu: 'mô tả: Trumpet là giọng lệnh của dàn nhạc: sáng, vang xa, xuyên qua mọi âm thanh khác. Từ tiếng kèn trận thời xưa đến những đoạn cao trào chói lọi trong giao hưởng…'
-    moi: 'mô tả: Trumpet có âm sắc sáng, mạnh và lộng lẫy: kim loại, vang, nổi lên trong dàn nhạc. Từ tiếng kèn trận thời xưa đến những đoạn cao trào trong giao hưởng, đây là nhạc cụ của sự hùng tráng.'
-    ly_do: 'n1, n2 (da-sua): mô tả trang đổi theo câu mở đầu.'
-  - cu: Tchaikovsky, 1812 Overture — nghe bộ kèn đồng ở đoạn trận chiến
-    moi: Tchaikovsky, 1812 Overture — bộ kèn đồng của tác phẩm có 2 trumpet cùng 2 cornet, 4 horn, 3 trombone và tuba
-    ly_do: "Review D8-gom: n27, không nguồn nói về kèn đồng ở đoạn trận chiến; viết theo biên chế của Tchaikovsky Research."
+  - cu: "mô tả: Trumpet là giọng lệnh của dàn nhạc: sáng, vang xa, xuyên qua mọi âm thanh khác. Từ tiếng kèn trận thời xưa đến những đoạn cao trào chói lọi trong giao hưởng…"
+    moi: "mô tả: Trumpet có âm sắc sáng, mạnh và lộng lẫy: kim loại, vang, nổi lên trong dàn nhạc. Từ tiếng kèn trận thời xưa đến những đoạn cao trào trong giao hưởng, đây là nhạc cụ của sự hùng tráng."
+    ly_do: "n1, n2 (da-sua): mô tả trang đổi theo câu mở đầu."

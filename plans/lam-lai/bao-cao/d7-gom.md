@@ -140,3 +140,11 @@ Phép thử `kiem-ung-dung.mjs` hỏng một lần ở lần chạy đầu của
 ### Kiểm mẫu
 
 5 nhận định ở `d7-gom/kiem-mau-l3.yml` (`xuat D7-L3 --mau 5`). Đã điền `nguoi.luot_2` và `nguoi.review` cho 6 hồ sơ; `kiem_mau` để trống. Chờ chủ repo: kiểm mẫu, lượt 2 bổ sung, rồi khóa 6 trang.
+
+## Kiểm mẫu và khóa (05/11/2026)
+
+Chủ repo giao Claude Opus 5.5 (phiên Cowork) kiểm mẫu thay, điền `kiem_mau` và khóa. Người kiểm không phải chủ repo; `nguoi.kiem_mau` ghi rõ điều này.
+
+- D7-L1, D7-L2: 11 nhận định ở `d7-gom/kiem-mau.yml`, kết quả `d7-gom/kiem-mau-ket-qua.yml`: 11 đúng (hat-lai n8 có điều kiện: Pfordresher và Halpern 2013 là bằng chứng tương quan). Câu `ve-site` kiểm lại trên mã (`doc-not.js`, `phieu.js`, `thu-am.js`, `tien-do.js`).
+- D7-L3: 8 nhận định ở `d7-gom/kiem-mau-l3.yml`, kết quả `d7-gom/kiem-mau-l3-ket-qua.yml`: 8 đúng (cap-nhat n80 có điều kiện: Commons API 384,5 giây, file bị cắt vì 0,4 giây cuối còn -18 dB; vị trí "giữa phần phát triển" chưa nghe kiểm).
+- Khóa 23 trang. `khoa tinh` khớp; bản build thật 160 trang (cùng đợt 8); `npm test` 281 pass. Kiểm thử trình duyệt không chạy được trên máy kiểm (thiếu trình duyệt Playwright); chạy ở CI.
