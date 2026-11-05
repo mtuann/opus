@@ -190,7 +190,9 @@ test('trang nào tải bộ tải thành phần: dò trên HTML đã dựng, kh�
 	assert.ok(canTaiScript(dung('> ```quiz\n> ? Câu?\n> + Đúng\n> ```')), 'câu hỏi trong trích dẫn');
 	assert.ok(canTaiScript(dung(trangTacPham('fur-elise', '::khoi-nghe'))), 'khối nghe');
 	assert.ok(!canTaiScript(dung('Chữ thường, `class="oz-quiz"` trong mã, và <span class="oz-chip">chip</span>.')));
-	assert.ok(!canTaiScript(dung(trangTacPham('fur-elise', '::hop-tac-pham\n\n::hinh-cau-truc\n\n::hoc-tiep'))));
+	assert.ok(!canTaiScript(dung(trangTacPham('fur-elise', '::hinh-cau-truc\n\n::hoc-tiep'))));
+	// hộp tác phẩm có nút "Tôi đang tập bài này" (D6-L1, src/scripts/tap-bai.js)
+	assert.ok(canTaiScript(dung(trangTacPham('fur-elise', '::hop-tac-pham'))), 'hộp tác phẩm');
 });
 
 test('huy hiệu "Đã kiểm định": chỉ khi trang có trong khoa.json; ngày của lần kiểm định gần nhất; đếm nhận định', () => {

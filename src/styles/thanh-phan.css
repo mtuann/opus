@@ -136,6 +136,27 @@
 .oz-piece-info th[scope='row'] {
 	vertical-align: top;
 }
+/* Nút "Tôi đang tập bài này" cuối hộp tác phẩm (src/scripts/tap-bai.js): một hàng, xuống dòng khi hẹp; không in */
+.sl-markdown-content .oz-piece-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem 0.6rem;
+	align-items: center;
+	margin-top: 0.6rem;
+}
+.sl-markdown-content .oz-piece-actions > * {
+	margin-top: 0;
+}
+.oz-btn--quiet {
+	border-color: transparent;
+	text-decoration: underline;
+	padding-inline: 0.3rem;
+}
+@media print {
+	.oz-piece-actions {
+		display: none !important;
+	}
+}
 /* Màn hình rộng: tên mục một dòng. Màn hình hẹp: tên mục xuống dòng, để cột thông tin đủ rộng (bảng không cao vọt) */
 @media (min-width: 40rem) {
 	.oz-piece-info th[scope='row'] {

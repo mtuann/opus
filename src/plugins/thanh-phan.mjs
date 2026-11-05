@@ -18,6 +18,7 @@ import { VI_DU, chuDauHieu, veDoanPhongCach } from '../scripts/nhan-dien.js';
 import { veMayDemNhip } from '../scripts/may-dem-nhip.js';
 import { TRANG_KE_HOACH, dungKeHoach, tinhKeHoach } from '../scripts/ke-hoach.js';
 import { dungBaiDangTap } from '../scripts/bai-dang-tap.js';
+import { dungNutTapBai } from '../scripts/tap-bai.js';
 import { NGUOI_VONG_DOI, bangMarkdown, chonNguoi, docDanhSach, veDongThoiGian, veVongDoi } from '../scripts/dong-thoi-gian.js';
 import { veTrangThaiMidi } from '../scripts/midi.js';
 import { veChonAm } from '../scripts/chon-am.js';
@@ -47,7 +48,7 @@ export const esc = (s) =>
  * luyện tai, máy đếm nhịp, bài đang tập, kế hoạch tập, đoán phong cách, các công cụ Luyện tập của D7-L1, D7-L2, nghe mù)
  * không: MarkdownContent.astro chỉ tải bộ tải thành phần ở những trang này. */
 export const canTaiScript = (html) =>
-	/\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec|oz-placement|oz-muc-do|oz-goi-y|oz-ban-phim|oz-vong|oz-lhb|oz-boi-am|oz-pho|oz-len-day|oz-the-nho|oz-trang-thai-bai|oz-lt|oz-may-dem-nhip|oz-bai-dang-tap|oz-ke-hoach|oz-nd|oz-midi|oz-chon-am|oz-tra-phim|oz-doc-not|oz-chep|oz-sao-luu|oz-so-cao-do|oz-choi-theo|oz-hat-lai|oz-xay|oz-giay-khuong|oz-phieu|oz-thu-am|oz-tiet-tau|oz-thi-tau|oz-thi-tau-hai-tay|oz-nhat-ky|oz-nang-luc|oz-tien-bo|oz-nghe-mu|oz-phieu-nghe-mu)[\s"]/.test(html);
+	/\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec|oz-placement|oz-muc-do|oz-goi-y|oz-ban-phim|oz-vong|oz-lhb|oz-boi-am|oz-pho|oz-len-day|oz-the-nho|oz-trang-thai-bai|oz-lt|oz-may-dem-nhip|oz-bai-dang-tap|oz-ke-hoach|oz-nd|oz-midi|oz-chon-am|oz-tra-phim|oz-doc-not|oz-chep|oz-sao-luu|oz-so-cao-do|oz-choi-theo|oz-hat-lai|oz-xay|oz-giay-khuong|oz-phieu|oz-thu-am|oz-tiet-tau|oz-thi-tau|oz-thi-tau-hai-tay|oz-nhat-ky|oz-nang-luc|oz-tien-bo|oz-nghe-mu|oz-phieu-nghe-mu|oz-piece-actions)[\s"]/.test(html);
 
 /** HTML đã dựng có hình hóa biểu (vẽ bằng <use href="#oz-kh-…">) không: MarkdownContent.astro thêm định nghĩa ký hiệu một lần. */
 export const canKyHieu = (html) => html.includes('href="#oz-kh-');
@@ -197,9 +198,10 @@ export function chipCapDo(rec, chu = null) {
 
 /**
  * ::hop-tac-pham: hàng chip (giọng · nhịp, tốc độ, cấp độ, hình thức) và bảng "Thông tin tác phẩm và bản nhạc nên
- * dùng" thu gọn, cả hai dựng từ bản ghi trong src/data/tac-pham.yml.
+ * dùng" thu gọn, cả hai dựng từ bản ghi trong src/data/tac-pham.yml; cuối hộp là các nút "Tôi đang tập bài này"
+ * (src/scripts/tap-bai.js, D6-L1), dựng sẵn ở trạng thái chưa tập, nút tắt tới khi script chạy; không in, không vào sách.
  */
-export function hopTacPham(rec) {
+export function hopTacPham(rec, base = DUONG_GOC) {
 	const chip = (rec.chip ?? []).map((c) =>
 		typeof c === 'string' ? `<span class="oz-chip">${md(c)}</span>` : chipCapDo(rec, c.cap_do),
 	);
@@ -213,6 +215,7 @@ export function hopTacPham(rec) {
 			? `<details class="oz-piece-info"><summary>Thông tin tác phẩm và bản nhạc nên dùng</summary>` +
 				`<table><thead><tr><th scope="col">Mục</th><th scope="col">Thông tin</th></tr></thead><tbody>${hang}</tbody></table></details>`
 			: '') +
+		`<div class="oz-piece-actions oz-khong-in" data-sinh data-pagefind-ignore data-goc="${esc(base)}">${dungNutTapBai(undefined, '', { tat: true })}</div>` +
 		`</div>`
 	);
 }

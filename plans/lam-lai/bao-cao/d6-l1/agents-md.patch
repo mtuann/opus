@@ -1,0 +1,19 @@
+--- a/AGENTS.md
++++ b/AGENTS.md
+@@ -150,7 +150,7 @@
+ |---|---|---|
+ | Khuông nhạc | Khối ` ```abc ` theo "Quy ước ABC" của `../opus-zero/AGENTS.md`; dòng `T:` ở phần đầu (trước `K:`) thành tiêu đề | Khuông và trình phát (abcjs 6.7.1 trong `public/vendor/`): tốc độ, lặp, nghe từng tay, gõ nhịp, chế độ giá nhạc. Vẽ khi khối tới gần màn hình, mỗi khuông một tác vụ (nhường lượt cho trình duyệt giữa các khuông, để trang nhiều khuông không đứng lâu); trước khi in thì vẽ hết. mã abcjs tải sẵn (chỉ tải về, chưa chạy, để trang vừa tải không bị đứng) lúc trình duyệt rảnh sau khi trang tải xong (Chromium, Firefox: gần như ngay; Safari: sau 3 giây); trước khi in thì chạy mã ấy ngay (`inTruoc` của `src/scripts/abc.js`); in sớm hơn nữa thì chỗ khuông chưa vẽ in dòng nhắc |
+ | Câu hỏi kiểm tra nhanh | Khối ` ```quiz `: dòng `? câu hỏi`, `+ đáp án đúng`, `- đáp án sai`, `> giải thích` | Câu hỏi bấm được, thứ tự lựa chọn trộn mỗi lần, nên lời giải thích không được dựa vào vị trí lựa chọn ("đáp án thứ hai"). Thiếu đáp án đúng hay có dòng lạ thì build hỏng |
+-| Hộp thông tin tác phẩm | `::hop-tac-pham` | Chip (giọng · nhịp, tốc độ, cấp độ, hình thức) và bảng "Thông tin tác phẩm và bản nhạc nên dùng" thu gọn |
++| Hộp thông tin tác phẩm | `::hop-tac-pham` | Chip (giọng · nhịp, tốc độ, cấp độ, hình thức), bảng "Thông tin tác phẩm và bản nhạc nên dùng" thu gọn, và nút "Tôi đang tập bài này" (D6-L1) |
+ | Hình cấu trúc | `::hinh-cau-truc` | Sơ đồ các đoạn từ `hinh` của bản ghi: `hinh.bai-hoc` ở trang bài học, `hinh.nghe` ở hướng dẫn nghe |
+ | Khối nghe | `::khoi-nghe`; có mốc tham khảo: `::khoi-nghe{moc="3 61 - 73"}` (số giây cho từng dòng của bảng `## Theo dõi khi nghe`, `-` là dòng chưa có mốc) | Trình nghe kèm bản thu; người học bấm "Ghi mốc" ngay trong bảng `## Theo dõi khi nghe`. Bản thu gợi ý lấy từ `ban_thu` của bản ghi, dùng chung cho bài học và hướng dẫn nghe; mốc tham khảo nằm ở trang vì mỗi trang có bảng riêng. Không có bản thu thì người học tự dán link hay chọn file |
+ | Học tiếp | `::hoc-tiep` | Link tới trang chặng hiện tại và chặng sau (ở bài học), trang cùng tác phẩm (bài học và hướng dẫn nghe trỏ sang nhau); đặt sau các bài chọn lọc viết tay |
+@@ -220,6 +220,7 @@
+ - D8-L2 (8 trang `nhac-cu/`; chốt ở `plans/lam-lai/bao-cao/d8-chuan-bi.md`, "Đã chọn" 3):
+   - Trang tầng `ngoai-vi` (Đọc thêm) có dòng "Đọc thêm, ngoài lộ trình: không cần cho các chặng. Xem lộ trình piano" dưới tiêu đề (`src/components/PageTitle.astro`, lớp `oz-ngoai-lo-trinh`, link `/opus/piano/lo-trinh/`, `data-pagefind-ignore`): hiện tự động theo `tang` của `src/data/trang.yml`, trang tầng khác (kể cả `nhac-cu/index`, tầng `khung`) không có. Không viết tay trong trang (`tests/ngoai-lo-trinh.test.mjs`).
+   - `::hinh{ten="ranges-voices"}` dùng hình tĩnh có từ D5 (bảy giọng, tên nốt Việt, âm vực theo COD): khác hình của trang cũ nên ghi ở `doi_chu` của `nhac-cu/nhac-cu-khac`.
++- D6-L1 (bài học chặng 2): cuối hộp `::hop-tac-pham` có hàng nút `.oz-piece-actions` (`src/scripts/tap-bai.js`, chuyển từ `mountPiece` của `practice.js` cũ): "Tôi đang tập bài này", "Hôm nay đã tập bài này" (mỗi ngày một buổi, ghi `days[ngày].piano`), "Đã chơi được trọn bài", "Bỏ khỏi bài đang tập", "Tập lại". Ghi `store.repertoire` ở `opus-zero:v1`, cùng khóa (đường dẫn trang trong site, như `piano/tac-pham/minuet-sol/`) và định dạng với site cũ; ô bài đang tập (`bai-dang-tap.js`), kế hoạch tập (`ke-hoach.js`) và nhật ký đọc dữ liệu này. Bản build dựng sẵn trạng thái "chưa tập" với nút tắt (`dungNutTapBai`), script bật nút; hàng nút có `data-sinh`, `data-pagefind-ignore`, lớp `oz-khong-in` (không in, không vào sách in). Không viết gì trong trang. Kiểm thử: `tests/tap-bai.test.mjs` (so với `practice.js` cũ trong vm), `tests/trinh-duyet/kiem-tap-bai.mjs`.
+ - 7 trang chặng `piano/lo-trinh/chang-1` đến `chang-7` sinh từ dữ liệu ở `src/pages/piano/lo-trinh/[chang].astro`:
+   - luôn đăng, cả ở bản thật;
+   - không có dải "Chưa kiểm định";

@@ -34,6 +34,8 @@ const LUAT = [
 	// trước khi người đọc cuộn tới
 	['.oz-bai-dang-tap', () => import('./bai-dang-tap.js'), true],
 	['.oz-ke-hoach', () => import('./ke-hoach.js'), true],
+	// khởi tạo ngay: nút "Tôi đang tập bài này" ở hộp tác phẩm đầu bài học (D6-L1), dựng sẵn với nút tắt
+	['.oz-piece-actions', () => import('./tap-bai.js'), true],
 	// công cụ Luyện tập (D7-L1). Khởi tạo ngay: ô MIDI (tự kết nối lại, để các công cụ khác trên trang nhận nốt từ đàn) và
 	// ô sao lưu (tóm tắt dữ liệu đang lưu), như loader.js cũ
 	['.oz-midi', () => import('./midi.js'), true],
