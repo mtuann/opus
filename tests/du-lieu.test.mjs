@@ -151,3 +151,17 @@ test('trang tác phẩm khai đúng tac_pham: trang chính của mỗi bản ghi
 	}
 	assert.deepEqual(loi, []);
 });
+
+test('trang tham chiếu có hạn đã khóa: ra_lai sau tháng kiểm của hồ sơ, không quá 12 tháng (D8-L1)', async () => {
+	const { loiRaLai, thangKiem } = await import('../src/kiem-dinh.mjs');
+	const trang = parse(fs.readFileSync(path.join(ROOT, 'src/data/trang.yml'), 'utf8'));
+	const khoa = JSON.parse(fs.readFileSync(path.join(ROOT, 'kiem-dinh/khoa.json'), 'utf8'));
+	const loi = [];
+	for (const r of trang.filter((x) => x.ra_lai && khoa.trang?.[x.id])) {
+		const hs = path.join(ROOT, 'kiem-dinh', `${r.id}.yml`);
+		const kiem = thangKiem(r.id, khoa, fs.existsSync(hs) ? fs.readFileSync(hs, 'utf8') : undefined);
+		if (!kiem) loi.push(`${r.id}: đã khóa mà lần cuối trong lan của hồ sơ không có ngày`);
+		else if (loiRaLai(kiem, r.ra_lai)) loi.push(`${r.id}: ${loiRaLai(kiem, r.ra_lai)}`);
+	}
+	assert.deepEqual(loi, []);
+});

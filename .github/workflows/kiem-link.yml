@@ -1,0 +1,77 @@
+name: Kiểm tra link ra ngoài
+
+# Chạy mỗi thứ Hai lúc 02:00 UTC (9:00 sáng giờ Việt Nam), hoặc bấm chạy tay trong tab Actions (D8-L1; như
+# link-check.yml của site cũ). Giữ đúng một issue nhãn link-hong: có link hỏng thì mở issue, hoặc cập nhật issue đang mở
+# thay vì mở thêm; lần sau không còn link hỏng thì issue tự đóng. Không đăng gì, không chặn deploy.
+# GitHub tắt lịch chạy sau 60 ngày repo không có hoạt động: khi đó bật lại ở tab Actions.
+on:
+  schedule:
+    - cron: '0 2 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: kiem-link
+  cancel-in-progress: false
+
+jobs:
+  kiem-link:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Kiểm tra link ra ngoài
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Chỉ kiểm link http(s). Link nội bộ đã được tests/link.test.mjs kiểm trên bản build ở mỗi lần push.
+          # Ba nhóm file: trang (src/content/docs), dữ liệu (src/data: nguồn trong chữ, bản thu trong ban_thu của
+          # tac-pham.yml) và module có link ra ngoài (src/scripts/nghe-mu.js: mười bản thu của Nghe mù trên Wikimedia
+          # Commons). Phần đối chiếu bản thu với Commons (độ dài, giấy phép; check_audio.py cũ) để D6-0.
+          # 403 và 429: nhiều trang báo và trang thương mại chặn robot hoặc giới hạn tần suất; chấp nhận để tránh báo lỗi
+          # giả, link hỏng thật thường trả về 404.
+          # Bỏ qua: abrsm.org (chặn robot: máy của GitHub nhận 307 lặp lại), trang chủ Oxford Music Online (chuyển hướng
+          # vòng quanh trang đăng nhập), iframe_api của YouTube, và chính site cùng repo (repo còn riêng tư: người ngoài
+          # nhận 404; link nội bộ đã kiểm ở bản build).
+          args: >-
+            --no-progress
+            --max-retries 3
+            --timeout 30
+            --scheme https
+            --scheme http
+            --accept "100..=103,200..=299,403,429"
+            --exclude "^https://www\.youtube\.com/iframe_api"
+            --exclude "^https://(www\.|us\.)?abrsm\.org/"
+            --exclude "^https://www\.oxfordmusiconline\.com/?$"
+            --exclude "^https://mtuann\.github\.io/opus/"
+            --exclude "^https://github\.com/mtuann/opus(/|$)"
+            "src/content/docs/**/*.md"
+            "src/data/*.yml"
+            "src/scripts/nghe-mu.js"
+          output: ./lychee/out.md
+          fail: false
+
+      - name: Tìm issue link hỏng đang mở
+        id: issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: echo "number=$(gh issue list --repo "$GITHUB_REPOSITORY" --label link-hong --state open --json number --jq '.[0].number // empty')" >> "$GITHUB_OUTPUT"
+
+      - name: Mở hoặc cập nhật issue nếu có link hỏng
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v6
+        with:
+          title: 'Báo cáo link hỏng'
+          content-filepath: ./lychee/out.md
+          labels: link-hong
+          issue-number: ${{ steps.issue.outputs.number }}
+
+      - name: Đóng issue khi không còn link hỏng
+        if: steps.lychee.outputs.exit_code == 0 && steps.issue.outputs.number != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue close "${{ steps.issue.outputs.number }}" --repo "$GITHUB_REPOSITORY" --comment "Lần kiểm tra tự động ngày $(date -u +%d/%m/%Y) không còn link hỏng."

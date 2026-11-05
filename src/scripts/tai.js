@@ -53,6 +53,8 @@ const LUAT = [
 	['.oz-thi-tau-hai-tay', () => import('./thi-tau-hai-tay.js'), false],
 	['.oz-nhat-ky', () => import('./nhat-ky.js'), true],
 	['.oz-nang-luc, .oz-tien-bo', () => import('./nang-luc.js'), false],
+	// nghe mù và phiếu nghe mù (D8-L1): ô dựng sẵn; bản thu chỉ tải khi người học bấm phát
+	['.oz-nghe-mu, .oz-phieu-nghe-mu', () => import('./nghe-mu.js'), false],
 ];
 const LE = 600;
 const cho = new Map(); // phần tử đang chờ tới gần màn hình -> hàm khởi tạo (trả về promise)

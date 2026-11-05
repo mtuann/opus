@@ -36,6 +36,7 @@ import { veThiTau } from '../scripts/thi-tau.js';
 import { veThiTauHaiTay } from '../scripts/thi-tau-hai-tay.js';
 import { veNhatKy } from '../scripts/nhat-ky.js';
 import { veNangLuc, veTienBo } from '../scripts/nang-luc.js';
+import { veNgheMu, vePhieuNgheMu } from '../scripts/nghe-mu.js';
 import { bangHep } from './bang-hep.mjs';
 
 export const esc = (s) =>
@@ -43,10 +44,10 @@ export const esc = (s) =>
 
 /** HTML đã dựng của trang có khối cần JavaScript (khuông nhạc, câu hỏi, khối nghe, danh sách việc, bài kiểm tra đầu vào,
  * chặng piano, ô gợi ý tập, bàn phím, vòng quãng năm, luyện hóa biểu, công cụ âm học, thẻ ghi nhớ, trạng thái bài đã học,
- * luyện tai, máy đếm nhịp, bài đang tập, kế hoạch tập, đoán phong cách, các công cụ Luyện tập của D7-L1, D7-L2)
+ * luyện tai, máy đếm nhịp, bài đang tập, kế hoạch tập, đoán phong cách, các công cụ Luyện tập của D7-L1, D7-L2, nghe mù)
  * không: MarkdownContent.astro chỉ tải bộ tải thành phần ở những trang này. */
 export const canTaiScript = (html) =>
-	/\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec|oz-placement|oz-muc-do|oz-goi-y|oz-ban-phim|oz-vong|oz-lhb|oz-boi-am|oz-pho|oz-len-day|oz-the-nho|oz-trang-thai-bai|oz-lt|oz-may-dem-nhip|oz-bai-dang-tap|oz-ke-hoach|oz-nd|oz-midi|oz-chon-am|oz-tra-phim|oz-doc-not|oz-chep|oz-sao-luu|oz-so-cao-do|oz-choi-theo|oz-hat-lai|oz-xay|oz-giay-khuong|oz-phieu|oz-thu-am|oz-tiet-tau|oz-thi-tau|oz-thi-tau-hai-tay|oz-nhat-ky|oz-nang-luc|oz-tien-bo)[\s"]/.test(html);
+	/\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec|oz-placement|oz-muc-do|oz-goi-y|oz-ban-phim|oz-vong|oz-lhb|oz-boi-am|oz-pho|oz-len-day|oz-the-nho|oz-trang-thai-bai|oz-lt|oz-may-dem-nhip|oz-bai-dang-tap|oz-ke-hoach|oz-nd|oz-midi|oz-chon-am|oz-tra-phim|oz-doc-not|oz-chep|oz-sao-luu|oz-so-cao-do|oz-choi-theo|oz-hat-lai|oz-xay|oz-giay-khuong|oz-phieu|oz-thu-am|oz-tiet-tau|oz-thi-tau|oz-thi-tau-hai-tay|oz-nhat-ky|oz-nang-luc|oz-tien-bo|oz-nghe-mu|oz-phieu-nghe-mu)[\s"]/.test(html);
 
 /** HTML đã dựng có hình hóa biểu (vẽ bằng <use href="#oz-kh-…">) không: MarkdownContent.astro thêm định nghĩa ký hiệu một lần. */
 export const canKyHieu = (html) => html.includes('href="#oz-kh-');
@@ -785,6 +786,9 @@ const CONG_CU = {
 	journal: () => nhatKy(),
 	skills: () => veNangLuc(lienKetCongCuTap()),
 	trends: () => veTienBo(),
+	// nghe mù (D8-L1): src/scripts/nghe-mu.js
+	blind: () => veNgheMu(),
+	'blind-log': () => vePhieuNgheMu(),
 };
 
 /** Nhật ký luyện tập (D7-L2): link "Dữ liệu của tôi" dựng lúc build, "sắp có" khi trang Dữ liệu chưa có trong bản build. */
@@ -831,6 +835,8 @@ const KHONG_THONG_SO = new Set([
 	'journal',
 	'skills',
 	'trends',
+	'blind',
+	'blind-log',
 ]);
 
 /** ::cong-cu{ten="…" …}: công cụ luyện tập; thuộc tính khác là thông số (data-* của khối oz- cũ). */

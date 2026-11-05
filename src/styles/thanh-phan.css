@@ -2221,13 +2221,13 @@ html.oz-stand-open .main-pane {
 /* ---------- Công cụ Luyện tập (D7-L1, và D7-L2 ở các quy tắc chung): midi-status, sound-setting, piano-explorer, note-reader, dictation, data, tuner,
    playalong, singback (src/scripts/midi.js, chon-am.js, tra-phim.js, doc-not.js, chep.js, sao-luu.js, so-cao-do.js,
    choi-theo.js) ---------- */
-.sl-markdown-content :is(.oz-midi, .oz-chon-am, .oz-tra-phim, .oz-doc-not, .oz-chep, .oz-sao-luu, .oz-so-cao-do, .oz-choi-theo, .oz-hat-lai, .oz-xay, .oz-giay-khuong, .oz-phieu, .oz-thu-am, .oz-tiet-tau, .oz-thi-tau, .oz-thi-tau-hai-tay, .oz-nhat-ky, .oz-nang-luc, .oz-tien-bo) > * {
+.sl-markdown-content :is(.oz-midi, .oz-chon-am, .oz-tra-phim, .oz-doc-not, .oz-chep, .oz-sao-luu, .oz-so-cao-do, .oz-choi-theo, .oz-hat-lai, .oz-xay, .oz-giay-khuong, .oz-phieu, .oz-thu-am, .oz-tiet-tau, .oz-thi-tau, .oz-thi-tau-hai-tay, .oz-nhat-ky, .oz-nang-luc, .oz-tien-bo, .oz-nghe-mu, .oz-phieu-nghe-mu) > * {
 	margin-top: 0;
 }
-.sl-markdown-content :is(.oz-midi, .oz-chon-am, .oz-tra-phim, .oz-doc-not, .oz-chep, .oz-sao-luu, .oz-so-cao-do, .oz-choi-theo, .oz-hat-lai, .oz-xay, .oz-giay-khuong, .oz-phieu, .oz-thu-am, .oz-tiet-tau, .oz-thi-tau, .oz-thi-tau-hai-tay, .oz-nhat-ky, .oz-nang-luc, .oz-tien-bo) > * + * {
+.sl-markdown-content :is(.oz-midi, .oz-chon-am, .oz-tra-phim, .oz-doc-not, .oz-chep, .oz-sao-luu, .oz-so-cao-do, .oz-choi-theo, .oz-hat-lai, .oz-xay, .oz-giay-khuong, .oz-phieu, .oz-thu-am, .oz-tiet-tau, .oz-thi-tau, .oz-thi-tau-hai-tay, .oz-nhat-ky, .oz-nang-luc, .oz-tien-bo, .oz-nghe-mu, .oz-phieu-nghe-mu) > * + * {
 	margin-top: 0.5rem;
 }
-:is(.oz-midi, .oz-chon-am, .oz-tra-phim, .oz-doc-not, .oz-chep, .oz-sao-luu, .oz-so-cao-do, .oz-choi-theo, .oz-hat-lai, .oz-xay, .oz-giay-khuong, .oz-phieu, .oz-thu-am, .oz-tiet-tau, .oz-thi-tau, .oz-thi-tau-hai-tay, .oz-nhat-ky, .oz-nang-luc, .oz-tien-bo) label {
+:is(.oz-midi, .oz-chon-am, .oz-tra-phim, .oz-doc-not, .oz-chep, .oz-sao-luu, .oz-so-cao-do, .oz-choi-theo, .oz-hat-lai, .oz-xay, .oz-giay-khuong, .oz-phieu, .oz-thu-am, .oz-tiet-tau, .oz-thi-tau, .oz-thi-tau-hai-tay, .oz-nhat-ky, .oz-nang-luc, .oz-tien-bo, .oz-nghe-mu, .oz-phieu-nghe-mu) label {
 	display: inline-flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -2236,7 +2236,7 @@ html.oz-stand-open .main-pane {
 	min-width: 0;
 	font-size: var(--sl-text-sm);
 }
-:is(.oz-midi, .oz-chon-am, .oz-tra-phim, .oz-doc-not, .oz-chep, .oz-so-cao-do, .oz-choi-theo, .oz-hat-lai, .oz-xay, .oz-giay-khuong, .oz-phieu, .oz-tiet-tau, .oz-thi-tau, .oz-thi-tau-hai-tay) select {
+:is(.oz-midi, .oz-chon-am, .oz-tra-phim, .oz-doc-not, .oz-chep, .oz-so-cao-do, .oz-choi-theo, .oz-hat-lai, .oz-xay, .oz-giay-khuong, .oz-phieu, .oz-tiet-tau, .oz-thi-tau, .oz-thi-tau-hai-tay, .oz-nghe-mu, .oz-phieu-nghe-mu) select {
 	appearance: none;
 	-webkit-appearance: none;
 	max-width: 100%;
@@ -2270,7 +2270,7 @@ html.oz-stand-open .main-pane {
 	float: left;
 }
 @media (pointer: coarse) {
-	:is(.oz-midi, .oz-chon-am, .oz-tra-phim, .oz-doc-not, .oz-chep, .oz-so-cao-do, .oz-choi-theo, .oz-hat-lai, .oz-xay, .oz-giay-khuong, .oz-phieu, .oz-tiet-tau, .oz-thi-tau, .oz-thi-tau-hai-tay) select,
+	:is(.oz-midi, .oz-chon-am, .oz-tra-phim, .oz-doc-not, .oz-chep, .oz-so-cao-do, .oz-choi-theo, .oz-hat-lai, .oz-xay, .oz-giay-khuong, .oz-phieu, .oz-tiet-tau, .oz-thi-tau, .oz-thi-tau-hai-tay, .oz-nghe-mu, .oz-phieu-nghe-mu) select,
 	:is(.oz-midi, .oz-chon-am, .oz-doc-not, .oz-sao-luu, .oz-xay, .oz-tiet-tau, .oz-thi-tau, .oz-thu-am, .oz-nhat-ky) label:has(input:is([type='checkbox'], [type='radio'])) {
 		min-height: 44px;
 		min-width: 44px;
@@ -2770,6 +2770,12 @@ span.oz-ss-go-thua {
 	font-size: var(--sl-text-sm);
 	color: var(--sl-color-gray-3);
 }
+/* Ngày kiểm và ngày rà lại dưới tiêu đề trang tham chiếu có hạn (D8-L1, src/components/PageTitle.astro) */
+.oz-ra-lai {
+	margin-top: 0.4rem;
+	font-size: var(--sl-text-sm);
+	color: var(--sl-color-gray-3);
+}
 ul.oz-ds-bai {
 	list-style: none;
 	padding-left: 0;
@@ -2805,4 +2811,71 @@ ul.oz-ds-bai > li:last-child {
 .oz-tac-pham-moi-loai {
 	color: var(--sl-color-gray-3);
 	font-size: var(--sl-text-sm);
+}
+
+/* ---------- Nghe mù (D8-L1): blind, blind-log (src/scripts/nghe-mu.js) ----------
+   Trình phát là thẻ <audio> của trình duyệt, rộng hết ô, hiện sau khi bấm "Nghe bản thu"; ô nhập của phiếu có nhãn ở trên khi hẹp; bảng phiếu cuộn ngang
+   trong khung, trang không tràn. Chưa có JavaScript thì chỉ hiện dòng nhắc. */
+/* nút "Nghe bản thu" và trình phát (hiện sau khi bấm) chiếm cùng một chỗ, cao như nhau: ô không xô khi đổi */
+.oz-nm-phat {
+	display: flex;
+	align-items: center;
+	min-height: 54px;
+}
+.oz-nm-audio {
+	display: block;
+	width: 100%;
+	min-height: 44px;
+}
+.oz-nm-phat [hidden] {
+	display: none;
+}
+.oz-phieu-nghe-mu .oz-nm-o {
+	flex: 1 1 16rem;
+}
+.oz-phieu-nghe-mu .oz-nm-o .oz-input {
+	flex: 1 1 10rem;
+	width: 100%;
+}
+.oz-nm-dap-an p {
+	margin: 0.4rem 0;
+}
+.oz-nm-dap-an a {
+	color: var(--sl-color-text-accent);
+}
+.oz-nm-cuon {
+	overflow-x: auto;
+	max-width: 100%;
+}
+.oz-nm-cuon table {
+	border-collapse: collapse;
+	width: 100%;
+	font-size: var(--sl-text-sm);
+}
+.oz-nm-cuon :is(th, td) {
+	padding: 0.35rem 0.5rem;
+	border-bottom: 1px solid var(--sl-color-gray-5);
+	text-align: start;
+	vertical-align: top;
+}
+.oz-nghe-mu .oz-score {
+	min-height: 1.5em;
+}
+.oz-nghe-mu noscript p,
+.oz-phieu-nghe-mu noscript p {
+	margin: 0.4rem 0 0;
+	font-size: var(--sl-text-sm);
+	color: var(--sl-color-gray-2);
+}
+@media (scripting: none) {
+	.oz-nghe-mu > :not(noscript),
+	.oz-phieu-nghe-mu > :not(noscript) {
+		display: none;
+	}
+}
+@media print {
+	.oz-nghe-mu,
+	.oz-phieu-nghe-mu {
+		display: none;
+	}
 }

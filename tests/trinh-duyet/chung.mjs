@@ -102,6 +102,8 @@ function khoiCho(ten) {
 		...document.querySelectorAll(
 			':is(.oz-xay, .oz-giay-khuong, .oz-phieu, .oz-thu-am, .oz-tiet-tau, .oz-thi-tau, .oz-thi-tau-hai-tay, .oz-nhat-ky, .oz-nang-luc, .oz-tien-bo):not([data-san])',
 		),
+		// nghe mù, phiếu nghe mù (D8-L1): như trên
+		...document.querySelectorAll(':is(.oz-nghe-mu, .oz-phieu-nghe-mu):not([data-san])'),
 	];
 	if (ten) return cho.map((e) => `${e.className} "${e.textContent.trim().slice(0, 30)}"`);
 	cho[0]?.scrollIntoView({ block: 'center' });

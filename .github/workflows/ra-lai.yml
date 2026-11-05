@@ -1,0 +1,65 @@
+name: Trang cần rà lại
+
+# Chạy mỗi thứ Hai lúc 02:00 UTC (9:00 sáng giờ Việt Nam), hoặc bấm chạy tay trong tab Actions (D8-L1).
+# Trang tham chiếu có hạn có ra_lai trong src/data/trang.yml; tools/ra-lai.mjs liệt kê trang có ra_lai từ tháng này trở về
+# trước. Giữ đúng một issue nhãn ra-lai: có trang đến hạn thì mở issue, hoặc cập nhật issue đang mở thay vì mở thêm; lần sau
+# không còn trang nào thì issue tự đóng. Không đăng gì, không chặn deploy.
+# GitHub tắt lịch chạy sau 60 ngày repo không có hoạt động: khi đó bật lại ở tab Actions.
+on:
+  schedule:
+    - cron: '0 2 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: ra-lai
+  cancel-in-progress: false
+
+jobs:
+  ra-lai:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      # script chỉ cần gói yaml: bỏ bước cài trình duyệt và các script sau khi cài
+      - run: npm ci --ignore-scripts
+
+      - name: Liệt kê trang đến hạn rà lại
+        id: ra-lai
+        run: |
+          set +e
+          node tools/ra-lai.mjs --ra issue.md
+          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Tìm issue rà lại đang mở
+        id: issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: echo "number=$(gh issue list --repo "$GITHUB_REPOSITORY" --label ra-lai --state open --json number --jq '.[0].number // empty')" >> "$GITHUB_OUTPUT"
+
+      # exit_code 1: có trang đến hạn; khác 0 và 1 là lỗi của script, để bước sau báo hỏng
+      - name: Mở hoặc cập nhật issue nếu có trang đến hạn
+        if: steps.ra-lai.outputs.exit_code == '1'
+        uses: peter-evans/create-issue-from-file@v6
+        with:
+          title: 'Trang cần rà lại'
+          content-filepath: ./issue.md
+          labels: ra-lai
+          issue-number: ${{ steps.issue.outputs.number }}
+
+      - name: Đóng issue khi không còn trang đến hạn
+        if: steps.ra-lai.outputs.exit_code == '0' && steps.issue.outputs.number != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue close "${{ steps.issue.outputs.number }}" --repo "$GITHUB_REPOSITORY" --comment "Lần kiểm tra tự động ngày $(date -u +%d/%m/%Y) không còn trang nào đến hạn rà lại."
+
+      - name: Script hỏng
+        if: steps.ra-lai.outputs.exit_code != '0' && steps.ra-lai.outputs.exit_code != '1'
+        run: echo "tools/ra-lai.mjs thoát với mã ${{ steps.ra-lai.outputs.exit_code }}" && exit 1

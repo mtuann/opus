@@ -1,10 +1,10 @@
 ---
 // Tiêu đề trang của Starlight, thêm nhãn nhóm nội dung phía trên (màu và biểu tượng của nhóm, src/nhom.mjs), để người
 // đọc nhìn là biết mình đang ở mục nào, và huy hiệu "Đã kiểm định" phía dưới khi trang đã khóa và hồ sơ có nhận định;
-// bài blog có thêm ngày đăng.
+// bài blog có thêm ngày đăng; trang tham chiếu có hạn có thêm dòng ngày kiểm và ngày rà lại (D8-L1).
 import { getCollection } from 'astro:content';
 import Default from '@astrojs/starlight/components/PageTitle.astro';
-import { kiemDinh, ngayViet } from '../kiem-dinh.mjs';
+import { dongRaLai, kiemDinh, ngayViet, thangKiem } from '../kiem-dinh.mjs';
 import { nhomCuaTrang, svgNhom } from '../nhom.mjs';
 import { ngayVN } from '../plugins/thanh-phan.mjs';
 
@@ -18,9 +18,13 @@ const { entry } = Astro.locals.starlightRoute;
 const trang = entry.filePath?.replace(/^src\/content\/docs\//, '').replace(/\.mdx?$/, '');
 // Tầng của trang (src/data/trang.yml) quyết định vài trang vào Đọc thêm. Đọc cả bộ (Astro giữ sẵn), không dùng
 // getEntry: tra một trang không có bản ghi thì Astro in cảnh báo.
-const tang = new Map((await getCollection('trang')).map((r) => [r.id, r.data.tang]));
-const nhom = trang ? nhomCuaTrang(trang, tang.get(trang)) : undefined;
-const kd = trang ? kiemDinh(trang, KHOA, HO_SO[`/kiem-dinh/${trang}.yml`]) : null;
+const dsTrang = new Map((await getCollection('trang')).map((r) => [r.id, r.data]));
+const nhom = trang ? nhomCuaTrang(trang, dsTrang.get(trang)?.tang) : undefined;
+const hoSo = trang ? HO_SO[`/kiem-dinh/${trang}.yml`] : undefined;
+const kd = trang ? kiemDinh(trang, KHOA, hoSo) : null;
+// Trang tham chiếu có hạn: tháng kiểm (lần cuối trong lan của hồ sơ, khi đã khóa) và tháng rà lại (ra_lai của trang.yml)
+const raLai = trang ? dsTrang.get(trang)?.ra_lai : undefined;
+const chuRaLai = raLai ? dongRaLai(thangKiem(trang, KHOA, hoSo), raLai) : null;
 // Ngày đăng của bài blog (frontmatter date, D7-L3), dưới tiêu đề
 const ngayDang = entry.data.date ? entry.data.date.toISOString().slice(0, 10) : null;
 ---
@@ -38,6 +42,13 @@ const ngayDang = entry.data.date ? entry.data.date.toISOString().slice(0, 10) : 
 	ngayDang && (
 		<p class="oz-ngay-dang" data-pagefind-ignore>
 			Ngày đăng: <time datetime={ngayDang}>{ngayVN(ngayDang)}</time>
+		</p>
+	)
+}
+{
+	chuRaLai && (
+		<p class="oz-ra-lai" data-pagefind-ignore>
+			{chuRaLai}
 		</p>
 	)
 }
