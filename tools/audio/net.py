@@ -9,6 +9,7 @@
   Thư mục con: api/ (câu trả lời API), audio/ (bản thu tải về để căn mốc), scores/ (bản nhạc số), features/.
 """
 import hashlib
+import http.client
 import json
 try:
     import fcntl
@@ -76,7 +77,7 @@ def fetch(url, headers=None, tries=6, timeout=60):
             wait = int(e.headers.get("Retry-After") or 0) or 10 * (attempt + 1)
             print("  [%d] %s: chờ %d giây rồi thử lại" % (e.code, host, wait), file=sys.stderr)
             time.sleep(min(wait, 120))
-        except (urllib.error.URLError, TimeoutError) as e:
+        except (urllib.error.URLError, TimeoutError, ConnectionError, http.client.HTTPException) as e:   # cả IncompleteRead
             print("  [lỗi mạng] %s: %s" % (host, e), file=sys.stderr)
             time.sleep(10 * (attempt + 1))
     raise RuntimeError("không tải được sau %d lần: %s" % (tries, url))
@@ -91,10 +92,13 @@ def get_json(url, cache=True, need=()):
     MediaWiki báo lỗi), hay thiếu một khóa trong need, thì ném ApiError và không lưu đệm (kể cả bản đệm cũ hỏng)."""
     path = cache_dir("api") / (hashlib.sha1(url.encode()).hexdigest() + ".json")
     if cache and path.exists():
-        data = json.loads(path.read_text(encoding="utf-8"))
-        if _problem(data, need) is None:
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (ValueError, OSError):           # bản đệm hỏng (file bị cắt…): bỏ, tải lại
+            data = None
+        if data is not None and _problem(data, need) is None:
             return data
-        path.unlink()
+        path.unlink(missing_ok=True)
     data = json.loads(fetch(url))
     why = _problem(data, need)
     if why:

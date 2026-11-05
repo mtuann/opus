@@ -287,27 +287,29 @@ def replace_field(text, slug, field, value):
 
 
 def same_except(old, new, slug, ban_thu):
-    """new giống old ở mọi chỗ, trừ ban_thu của bản ghi slug, và ban_thu ấy đúng là ban_thu (None: không có trường)."""
+    """Lý do new không đúng (None nếu đúng): new phải giống old ở mọi chỗ, trừ ban_thu của bản ghi slug, và ban_thu ấy
+    phải đúng là ban_thu (None: không có trường)."""
     if not isinstance(old, list) or not isinstance(new, list) or len(old) != len(new):
-        return False
+        return "lệch ở chỗ khác (số bản ghi đổi)"
     for o, n in zip(old, new):
         if o.get("slug") != slug:
             if o != n:
-                return False
+                return "lệch ở chỗ khác (bản ghi %s)" % o.get("slug")
             continue
         if {k: v for k, v in o.items() if k != "ban_thu"} != {k: v for k, v in n.items() if k != "ban_thu"}:
-            return False
+            return "lệch ở chỗ khác (trường khác của %s)" % slug
         if n.get("ban_thu") != ban_thu:
-            return False
-    return True
+            return "đọc lại ban_thu khác dữ liệu định ghi"
+    return None
 
 
 def write_recordings(slug, ban_thu):
     """Ghi ban_thu (danh sách bản thu; rỗng hay None: bỏ trường) cho bản ghi slug. Trả về True nếu file đổi."""
     text = DATA.read_text(encoding="utf-8")
     new = replace_field(text, slug, "ban_thu", [normalize(b) for b in ban_thu] if ban_thu else None)
-    if not same_except(yaml.safe_load(text), yaml.safe_load(new), slug, [normalize(b) for b in ban_thu] if ban_thu else None):
-        raise SystemExit("ghi %s không đúng (đọc lại khác dữ liệu định ghi, hay lệch ở chỗ khác); không ghi" % DATA.relative_to(ROOT))
+    why = same_except(yaml.safe_load(text), yaml.safe_load(new), slug, [normalize(b) for b in ban_thu] if ban_thu else None)
+    if why:
+        raise SystemExit("ghi %s không đúng: %s; không ghi" % (DATA.relative_to(ROOT), why))
     if new != text:
         DATA.write_text(new, encoding="utf-8")
     return new != text

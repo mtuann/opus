@@ -28,6 +28,7 @@ Có lỗi thì thoát với mã 1; không hỏi được Commons (--network) th�
 """
 import argparse
 import glob
+import http.client
 import json
 import os
 import re
@@ -211,6 +212,7 @@ def main(argv=None):
         return 1 if bad else 0
 
     errs, warns = [], []
+    net_err = None
     sources = check_nguon(errs)
     recs = page.records()
     n_recs, parts = check_records(recs, errs)
@@ -253,10 +255,12 @@ def main(argv=None):
         titles = [commons_title(p) for _, _, p, _ in remote]
         try:
             info = {r["title"]: r for r in commons.files(sorted({t for t in titles if t}))}
-        except (OSError, RuntimeError, ValueError) as e:     # HTTPError, URLError, hết lần thử, ApiError, JSON hỏng
-            print("LỖI mạng: không đối chiếu được với Commons (%s: %s); chạy lại sau" % (type(e).__name__, e))
-            return 2
-        for (where, i, p, rec), t in zip(remote, titles):
+        except (OSError, RuntimeError, ValueError, http.client.HTTPException) as e:   # HTTPError, URLError, hết lần thử, ApiError, JSON hỏng, IncompleteRead
+            net_err = "LỖI mạng: không đối chiếu được với Commons (%s: %s); chạy lại sau" % (type(e).__name__, e)
+            remote_check = []
+        else:
+            remote_check = list(zip(remote, titles))
+        for (where, i, p, rec), t in remote_check:
             if not t:
                 if "imslp.org/" not in (p.get("link") or ""):   # bản thu IMSLP chỉ dẫn link: không có API để đối chiếu
                     warns.append("%s phần %d: không phải file Commons, không đối chiếu được: %s" % (where, i, (p.get("mp3") or p.get("link") or "")[:80]))
@@ -282,6 +286,9 @@ def main(argv=None):
     else:
         print("check_audio: %d file trên site (%d so được với file gốc trong _imslp/), %d bản ghi có bản thu (%d phần trên mạng%s), %d trang có mốc, %d lỗi" % (
             n_files, compared, n_recs, len(remote), ", đã đối chiếu Commons" if a.network else "", n_pages, len(errs)))
+    if net_err:          # lỗi cục bộ đã in ở trên; lỗi mạng thì mã 2
+        print(net_err)
+        return 2
     return 1 if errs else 0
 
 

@@ -243,6 +243,16 @@ class SauReview(RepoGia):
                 with self.assertRaises(net.ApiError):
                     commons.files(["File:A.ogg"])
             self.assertEqual(list(Path(dem, "api").iterdir()), [])
+            # bản đệm JSON hỏng (file bị cắt): bỏ, tải lại
+            import hashlib
+            url = "https://x.org/hong"
+            f = net.cache_dir("api") / (hashlib.sha1(url.encode()).hexdigest() + ".json")
+            f.write_text("{hong", encoding="utf-8")
+            with mock.patch.object(net, "fetch", return_value=b'{"query": {}}') as fetch:
+                self.assertEqual(net.get_json(url, need=("query",)), {"query": {}})
+            fetch.assert_called_once()
+            self.assertEqual(json.loads(f.read_text(encoding="utf-8")), {"query": {}})
+            f.unlink()
             # bản đệm cũ hỏng thì bỏ, hỏi lại
             ok = b'{"query": {"pages": []}}'
             with mock.patch.object(net, "fetch", return_value=ok):
@@ -250,13 +260,23 @@ class SauReview(RepoGia):
             self.assertEqual(len(list(Path(dem, "api").iterdir())), 1)
 
     def test_check_audio_mang_hong_thi_mot_dong_ma_2(self):
-        for loi in (net.ApiError("API báo lỗi x"), RuntimeError("không tải được sau 6 lần"), OSError("HTTP Error 403")):
+        import http.client
+        # có sẵn một lỗi cục bộ (file không có dòng NGUON.txt): vẫn in trước dòng lỗi mạng
+        (self.goc / "public/audio/thua.mp3").write_bytes(b"ID3")
+        for loi in (net.ApiError("API báo lỗi x"), RuntimeError("không tải được sau 6 lần"), OSError("HTTP Error 403"),
+                    http.client.IncompleteRead(b"abc", 10)):
             out = io.StringIO()
             with mock.patch.object(commons, "files", side_effect=loi), contextlib.redirect_stdout(out):
                 code = check_audio.main(["--static", "--network"])
-            self.assertEqual(code, 2)
+            self.assertEqual(code, 2, type(loi))
             self.assertIn("LỖI mạng: không đối chiếu được với Commons", out.getvalue())
+            self.assertIn("LỖI: thua.mp3: không có dòng trong NGUON.txt", out.getvalue())
             self.assertNotIn("Traceback", out.getvalue())
+        # fetch thử lại khi gặp IncompleteRead
+        with mock.patch.object(net.urllib.request, "urlopen", side_effect=http.client.IncompleteRead(b"", 5)), \
+                mock.patch.object(net.time, "sleep"), contextlib.redirect_stderr(io.StringIO()):
+            with self.assertRaises(RuntimeError):
+                net.fetch("https://x.org/", tries=2)
 
     def chay_transcode(self, *args):
         err = io.StringIO()
@@ -281,10 +301,20 @@ class SauReview(RepoGia):
     def test_ghi_ban_thu_lech_cho_khac_thi_khong_ghi(self):
         truoc = self.doc("src/data/tac-pham.yml")
         rec = {"by": "A", "lic": "CC0", "page": "https://x.org/", "parts": [{"mp3": "audio/bai-a.mp3", "d": 9}]}
-        hong = lambda text, slug, field, value: text.replace("ten: Nghe B", "ten: Nghe C") + "\n"  # noqa: E731
+        that = page.replace_field
+        # ghi ban_thu đúng, nhưng làm hỏng bản ghi khác: phải rơi vào nhánh "lệch ở chỗ khác"
+        hong = lambda *a: that(*a).replace("ten: Nghe B", "ten: Nghe C")  # noqa: E731
         with mock.patch.object(page, "replace_field", side_effect=hong):
-            with self.assertRaises(SystemExit):
+            with self.assertRaises(SystemExit) as cm:
                 page.write_recordings("bai-a", [rec])
+        self.assertIn("lệch ở chỗ khác (bản ghi nghe-b)", str(cm.exception))
+        self.assertEqual(self.doc("src/data/tac-pham.yml"), truoc)
+        # ban_thu đọc lại sai: nhánh kia
+        sai = lambda text, slug, field, value: that(text, slug, field, [dict(value[0], by="Khác")])  # noqa: E731
+        with mock.patch.object(page, "replace_field", side_effect=sai):
+            with self.assertRaises(SystemExit) as cm:
+                page.write_recordings("bai-a", [rec])
+        self.assertIn("đọc lại ban_thu khác dữ liệu định ghi", str(cm.exception))
         self.assertEqual(self.doc("src/data/tac-pham.yml"), truoc)
         self.assertTrue(page.write_recordings("bai-a", [rec]))
 
