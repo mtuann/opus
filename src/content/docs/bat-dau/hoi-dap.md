@@ -38,7 +38,7 @@ Với 30–45 phút mỗi ngày, tập đúng cách, nhiều người lớn chơ
 <details>
 <summary>Bài “Spring Waltz” của Chopin ở cấp nào?</summary>
 
-Bài ấy không phải của Chopin. Đó là *Mariage d'Amour* của Paul de Senneville, viết năm 1978 và nổi tiếng qua bản thu của Richard Clayderman. Bản piano solo đầy đủ ở khoảng Grade 5–6 (đầu chặng 5); có nhiều bản soạn dễ hơn cho chặng 2–3. Bài còn bản quyền, nên hãy dùng bản nhạc được cấp phép. Xem [Bài phổ biến ngoài nhạc cổ điển](/opus/piano/tac-pham-theo-cap/#ngoai-co-dien).
+Bài ấy không phải của Chopin. Đó là *Mariage d'Amour* của Paul de Senneville, nổi tiếng qua các bản thu của Richard Clayderman. Bản piano solo đầy đủ ở khoảng Grade 5–6 (đầu chặng 5); có nhiều bản soạn dễ hơn cho chặng 2–3. Bài còn bản quyền, nên hãy dùng bản nhạc được cấp phép. Xem [Bài phổ biến ngoài nhạc cổ điển](/opus/piano/tac-pham-theo-cap/#ngoai-co-dien).
 
 </details>
 

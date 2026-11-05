@@ -29,7 +29,7 @@ Mỗi nghệ sĩ có một gợi ý "nghe trước". Các chữ tả tiếng đ�
 | **Ignacy Jan Paderewski** (1860–1941) | Thần tượng của các phòng hòa nhạc; năm 1919 làm Thủ tướng Ba Lan | Chopin; *Minuet* Sol trưởng Op. 14 số 1 của chính ông |
 | **Sergei Rachmaninoff** (1873–1943) | Một trong những nghệ sĩ piano lớn nhất thời mình: tiếng rõ, nhịp chắc, không ủy mị | Bốn concerto và *Rhapsody on a Theme of Paganini* do chính ông thu với Dàn nhạc Philadelphia |
 | **Josef Hofmann** (1876–1957) | Bậc thầy kỹ thuật và sự tiết chế; Rachmaninoff đề tặng ông Concerto số 3, nhưng ông không bao giờ chơi bản này | Bản thu buổi hòa nhạc mừng 50 năm biểu diễn ở Metropolitan Opera, New York (28/11/1937) |
-| **Alfred Cortot** (1877–1962) | Chopin và Schumann giàu chất thơ; soạn các ấn bản "để học" kèm bài tập chuẩn bị | Chopin: 24 Prélude, các Ballade |
+| **Alfred Cortot** (1877–1962) | Chopin và Schumann giàu chất thơ; soạn các ấn bản "để học" (Édition de travail) của Chopin | Chopin: 24 Prélude, các Ballade |
 | **Artur Schnabel** (1882–1951) | Người đầu tiên thu âm trọn 32 sonata Beethoven | Sonata Op. 110, Op. 111 |
 | **Edwin Fischer** (1886–1960) | Bản thu trọn *Bình quân luật* đầu tiên; chỉ huy concerto Bach và Mozart ngay từ bàn phím | *Bình quân luật* quyển 1 |
 
@@ -38,33 +38,33 @@ Mỗi nghệ sĩ có một gợi ý "nghe trước". Các chữ tả tiếng đ�
 | Nghệ sĩ | Nổi tiếng với | Nghe trước |
 |---|---|---|
 | **Arthur Rubinstein** (1887–1982) | Chopin tự nhiên, ấm áp, không ủy mị; biểu diễn đến gần 90 tuổi | Nocturne, mazurka, polonaise của Chopin |
-| **Wilhelm Kempff** (1895–1991) | Beethoven và Schubert hát, tự nhiên; thu trọn 32 sonata Beethoven hai lần (mono 1951–1956, stereo 1964–1965) | Sonata Beethoven; sonata Schubert |
-| **Clara Haskil** (1895–1960) | Mozart giản dị và sâu; cuộc thi mang tên bà ở Vevey (Thụy Sĩ) có từ năm 1963 | Concerto số 20 và số 24 của Mozart |
+| **Wilhelm Kempff** (1895–1991) | Beethoven và Schubert hát, tự nhiên; thu trọn 32 sonata Beethoven hai lần (1951–56 và 1964–65) | Sonata Beethoven; sonata Schubert |
+| **Clara Haskil** (1895–1960) | Mozart giản dị và sâu; cuộc thi mang tên bà (Thụy Sĩ, nay ở Vevey) có từ năm 1963 | Concerto số 20 và số 24 của Mozart |
 | **Claudio Arrau** (1903–1991) | Nghệ sĩ Chile, tiếng đàn sâu, dày, trang nghiêm | Nocturne Chopin; sonata Beethoven |
 | **Vladimir Horowitz** (1903–1989) | Màu sắc, sức bật và tiếng đàn rực lửa; vắng bóng từ năm 1953, trở lại Carnegie Hall năm 1965, về biểu diễn ở Moskva năm 1986 | Scarlatti; Schumann, *Kinderszenen*; Concerto số 3 của Rachmaninoff |
 | **Rudolf Serkin** (1903–1991) | Beethoven nghiêm cẩn; cùng Adolf Busch lập Marlboro Music (1951), nơi các thế hệ nghệ sĩ cùng chơi nhạc thính phòng | Sonata và concerto Beethoven; Concerto số 1 của Brahms |
 | **Sviatoslav Richter** (1915–1997) | Gần như tự học, kho bài khổng lồ; công diễn lần đầu Sonata số 7 của Prokofiev (1943), và Sonata số 9 được đề tặng ông | *Tranh triển lãm* thu trực tiếp ở Sofia năm 1958; *Bình quân luật* |
 | **Emil Gilels** (1916–1985) | Tiếng đàn vàng, vững chãi; thắng cuộc thi Ysaÿe năm 1938, tiền thân của cuộc thi Queen Elisabeth | *Lyric Pieces* của Grieg; sonata Beethoven |
 | **Dinu Lipatti** (1917–1950) | Sự trong sáng hiếm có; mất năm 33 tuổi; buổi độc tấu cuối ở Besançon ngày 16/9/1950 | Valse Chopin; Concerto Grieg; Partita số 1 của Bach |
-| **Arturo Benedetti Michelangeli** (1920–1995) | Kiểm soát âm thanh tuyệt đối, cầu toàn đến cả tình trạng cây đàn; giải Nhất Geneva 1939; thầy của Argerich và Pollini | Debussy, *Images* và *Préludes*; Concerto Sol trưởng của Ravel |
+| **Arturo Benedetti Michelangeli** (1920–1995) | Kiểm soát âm thanh tuyệt đối, cầu toàn đến cả tình trạng cây đàn; giải Nhất Geneva 1939; Pollini học riêng với ông | Debussy, *Images* và *Préludes*; Concerto Sol trưởng của Ravel |
 | **Glenn Gould** (1932–1982) | Bach rõ từng bè, cá tính rất mạnh; từ năm 1964 chỉ thu âm, không biểu diễn trước công chúng | *Goldberg* năm 1955 và 1981 (xem [hướng dẫn nghe](/opus/nghe-nhac/bach-goldberg/)) |
 
 ## Những thế hệ sau
 
 | Nghệ sĩ | Nổi tiếng với | Nghe trước |
 |---|---|---|
-| **Alfred Brendel** (1931–2025) | Beethoven, Schubert, Haydn, Liszt; người đầu tiên thu âm trọn tác phẩm piano độc tấu của Beethoven; viết tiểu luận và thơ | Sonata Schubert; sonata Haydn |
+| **Alfred Brendel** (1931–2025) | Beethoven, Schubert, Haydn, Liszt; người đầu tiên thu âm trọn tác phẩm piano của Beethoven; viết tiểu luận và thơ | Sonata Schubert; sonata Haydn |
 | **Vladimir Ashkenazy** (sinh 1937) | Giải Nhì Chopin 1955, giải Nhất Queen Elisabeth 1956 và Tchaikovsky 1962 (chung với John Ogdon); kho thu âm khổng lồ; về sau chuyên chỉ huy, thôi biểu diễn năm 2020 | Rachmaninoff: prelude, *Études-tableaux*; Chopin |
-| **Martha Argerich** (sinh 1941) | Lửa và tốc độ; thắng Busoni và Geneva năm 1957, Chopin năm 1965; từ thập niên 1980 ít độc tấu, chủ yếu concerto và thính phòng | Ravel, *Gaspard de la nuit*; Prokofiev, Concerto số 3; Schumann |
+| **Martha Argerich** (sinh 1941) | Lửa và tốc độ; thắng Busoni và Geneva năm 1957, Chopin năm 1965; ít bản thu độc tấu, chủ yếu concerto và thính phòng | Ravel, *Gaspard de la nuit*; Prokofiev, Concerto số 3; Schumann |
 | **Maurizio Pollini** (1942–2024) | Chính xác, kiến trúc rõ; thắng Chopin năm 1960 khi 18 tuổi; bền bỉ bênh vực nhạc thế kỷ 20 | Étude Chopin; *Petrushka* của Stravinsky; sonata cuối của Beethoven |
 | **Maria João Pires** (sinh 1944) | Mozart, Schubert, Chopin giản dị và sâu; thắng cuộc thi mừng 200 năm ngày sinh Beethoven ở Brussels năm 1970; từ năm 2025 ngừng biểu diễn, và tháng 11/2025 bà thông báo đã kết thúc sự nghiệp biểu diễn | Sonata Mozart; Nocturne Chopin; Impromptu Schubert |
 | **Radu Lupu** (1945–2022) | Tiếng đàn mềm như hát, rất kín tiếng; thắng Van Cliburn 1966 và Leeds 1969; ngồi ghế tựa thay cho ghế đàn | Schubert; Brahms Op. 117–119 |
-| **Murray Perahia** (sinh 1947) | Giải Nhất Leeds 1972; vừa chơi vừa chỉ huy các concerto Mozart; Bach trong sáng | Concerto Mozart; *Partita* và *Goldberg* của Bach |
+| **Murray Perahia** (sinh 1947) | Giải Nhất Leeds 1972; vừa chơi vừa chỉ huy concerto (như của Beethoven) với Academy of St Martin in the Fields; Bach trong sáng | Concerto Mozart; *Partita* và *Goldberg* của Bach |
 | **Mitsuko Uchida** (sinh 1948) | Mozart và Schubert tinh tế; giải Nhì Chopin 1970 và Leeds 1975 | Sonata Mozart; sonata Schubert |
 | **Grigory Sokolov** (sinh 1950) | Thắng Tchaikovsky năm 1966 lúc 16 tuổi, người trẻ nhất từng thắng; chủ yếu chơi độc tấu; phần lớn đĩa gần đây là bản thu trực tiếp | Các bản thu trực tiếp những buổi độc tấu của ông |
 | **András Schiff** (sinh 1953) | Bach rõ ràng, không dùng bàn đạp vang (theo bài viết của chính ông); Beethoven, Schubert, Bartók | *Bình quân luật*; *Goldberg* |
-| **Krystian Zimerman** (sinh 1956) | Thắng Chopin năm 1975; cầu toàn; năm 1999 vừa chơi vừa chỉ huy hai concerto Chopin với dàn nhạc do ông lập | Bốn Ballade Chopin; *Préludes* của Debussy; Sonata D. 959 và D. 960 của Schubert |
-| **Angela Hewitt** (sinh 1958) | Bach trên piano: thắng cuộc thi piano Bach quốc tế ở Toronto năm 1985, thu các tác phẩm phím lớn của Bach từ 1994 đến 2005 | *Bình quân luật*; *Goldberg*; Couperin |
+| **Krystian Zimerman** (sinh 1956) | Thắng Chopin năm 1975; cầu toàn; năm 1999 lập Polish Festival Orchestra (dàn nhạc nhạc công trẻ Ba Lan) và thu hai concerto Chopin với dàn nhạc ấy | Bốn Ballade Chopin; *Préludes* của Debussy; Sonata D. 959 và D. 960 của Schubert |
+| **Angela Hewitt** (sinh 1958) | Bach trên piano: thắng cuộc thi piano Bach quốc tế ở Toronto năm 1985, thu các tác phẩm phím đàn lớn của Bach cho hãng Hyperion | *Bình quân luật*; *Goldberg*; Couperin |
 | **Marc-André Hamelin** (sinh 1961) | Kỹ thuật phi thường cho những tác phẩm hiếm (Alkan, Godowsky, Medtner, Kapustin); tự viết 12 étude ở mọi giọng thứ | Medtner; Kapustin; Haydn |
 | **Evgeny Kissin** (sinh 1971) | Thần đồng: năm 1984, khi 12 tuổi, đã thu hai concerto Chopin | Chopin; Liszt; Schubert |
 
@@ -72,15 +72,15 @@ Mỗi nghệ sĩ có một gợi ý "nghe trước". Các chữ tả tiếng đ�
 
 | Nghệ sĩ | Nổi tiếng với | Nghe trước |
 |---|---|---|
-| **Lang Lang** (sinh 1982) | Nghệ sĩ Trung Quốc; biểu diễn ở lễ khai mạc Olympic Bắc Kinh 2008 và với nhiều dàn nhạc lớn ở châu Âu, Mỹ | Chopin; Liszt |
+| **Lang Lang** (sinh 1982) | Nghệ sĩ Trung Quốc; biểu diễn ở lễ khai mạc Olympic Bắc Kinh 2008 và với nhiều dàn nhạc hàng đầu thế giới | Chopin; Liszt |
 | **Yuja Wang** (sinh 1987) | Nổi tiếng với các concerto Nga; năm 2023 chơi trọn bốn concerto của Rachmaninoff trong một buổi ở Carnegie Hall | Rachmaninoff; Prokofiev |
-| **Igor Levit** (sinh 1987) | Trọn 32 sonata Beethoven (2019); hơn 50 buổi hòa nhạc phát trực tuyến từ nhà mùa xuân 2020; chơi trọn *Vexations* của Satie trong hơn 15 giờ | *Goldberg* và *Diabelli*; Shostakovich Op. 87 |
-| **Daniil Trifonov** (sinh 1991) | Giải Ba Chopin 2010; giải Nhất Rubinstein và Tchaikovsky (kèm Grand Prix) năm 2011; Grammy 2018 cho trọn bộ étude của Liszt | Étude Liszt; Chopin |
+| **Igor Levit** (sinh 1987) | Trọn 32 sonata Beethoven; nhiều buổi hòa nhạc phát trực tuyến từ nhà trên Twitter từ tháng 3/2020; chơi trọn *Vexations* của Satie trong hơn 15 giờ | *Goldberg* và *Diabelli*; Shostakovich Op. 87 |
+| **Daniil Trifonov** (sinh 1991) | Giải Ba Chopin 2010; giải Nhất Rubinstein và Tchaikovsky (kèm Grand Prix) năm 2011; Grammy 2018 cho album *Transcendental* (Liszt) | Étude Liszt; Chopin |
 | **Seong-Jin Cho** (sinh 1994) | Giải Nhất Chopin 2015 | Concerto số 1 và bốn Ballade của Chopin |
-| **Jan Lisiecki** (sinh 1995) | Nghệ sĩ Canada; thu Chopin (concerto, étude, nocturne) và Mendelssohn | Chopin |
-| **Bruce Liu** (sinh 1997) | Giải Nhất Chopin 2021; học với Đặng Thái Sơn ở Montréal | Chopin |
+| **Jan Lisiecki** (sinh 1995) | Nghệ sĩ Canada; thu Chopin (concerto, nocturne, prelude) và Mozart | Chopin |
+| **Bruce Liu** (sinh 1997) | Giải Nhất Chopin 2021; học với Đặng Thái Sơn | Chopin |
 | **Eric Lu** (sinh 1997) | Giải Tư Chopin 2015, giải Nhất Leeds 2018, giải Nhất Chopin 2025; từng học riêng với Đặng Thái Sơn | Chopin; Impromptu Schubert |
-| **Yunchan Lim** (sinh 2004) | Huy chương vàng Van Cliburn 2022 lúc 18 tuổi, người trẻ nhất từng thắng; album Étude Chopin đoạt giải Gramophone 2024 | Étude Chopin; Concerto số 3 của Rachmaninoff ở chung kết Cliburn 2022 |
+| **Yunchan Lim** (sinh 2004) | Huy chương vàng Van Cliburn 2022 lúc 18 tuổi, người trẻ nhất từng thắng; album Étude Chopin đoạt ba giải của BBC Music Magazine năm 2025 | Étude Chopin; Concerto số 3 của Rachmaninoff ở chung kết Cliburn 2022 |
 | **Aristo Sham** (Hồng Kông) | Huy chương vàng Van Cliburn 2025 | Các vòng thi Cliburn 2025, phát trên mạng |
 
 ## Nghệ sĩ piano Việt Nam
@@ -101,7 +101,7 @@ Mỗi nghệ sĩ có một gợi ý "nghe trước". Các chữ tả tiếng đ�
 | Van Cliburn International Piano Competition | Fort Worth, Texas, Mỹ | 1962 | 4 năm một lần | Lupu (1966); gần đây Yekwon Sunwoo (2017), Yunchan Lim (2022), Aristo Sham (2025) |
 | Queen Elisabeth Competition | Brussels, Bỉ | Piano từ 1938 | Luân phiên các bộ môn | Tiền thân là cuộc thi Ysaÿe (Gilels thắng phần piano năm 1938). Leon Fleisher (1952), Ashkenazy (1956); gần đây Jonathan Fournel (2021), Nikola Meeuwsen (2025) |
 
-Các cuộc thi khác đáng theo dõi: **Geneva** (Michelangeli thắng năm 1939, Argerich năm 1957), **Busoni** ở Bolzano (Argerich 1957), **Clara Haskil** ở Vevey (từ 1963, hai năm một lần), **Arthur Rubinstein** ở Tel Aviv (Trifonov 2011). Nhiều cuộc thi phát trực tiếp các vòng thi trên mạng (xem [Âm nhạc hôm nay](/opus/lich-su/duong-dai/)): một dịp hiếm để nghe cùng một tác phẩm qua hàng chục cách chơi.
+Các cuộc thi khác đáng theo dõi: **Geneva** (Michelangeli thắng năm 1939, Argerich năm 1957), **Busoni** ở Bolzano (Argerich 1957), **Clara Haskil** ở Thụy Sĩ (từ 1963, hai năm một lần; nay ở Vevey), **Arthur Rubinstein** ở Tel Aviv (Trifonov 2011). Nhiều cuộc thi phát trực tiếp các vòng thi trên mạng (xem [Âm nhạc hôm nay](/opus/lich-su/duong-dai/)): một dịp hiếm để nghe cùng một tác phẩm qua hàng chục cách chơi.
 
 :::note[Giải thưởng không phải là tất cả]
 Mitsuko Uchida chỉ đoạt giải Nhì ở Chopin 1970 và Leeds 1975; Ashkenazy giải Nhì ở Chopin 1955. Một cuộc thi đo phong độ của vài tuần, còn một sự nghiệp đo sự trưởng thành của nhiều thập kỷ.
