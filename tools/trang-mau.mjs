@@ -66,6 +66,10 @@ export const KHOI = {
 	'nhật ký': 'class="oz-nhat-ky',
 	'bảng năng lực': 'class="oz-nang-luc',
 	'biểu đồ tiến bộ': 'class="oz-tien-bo',
+	// D7-L3 (chốt ở bước chuẩn bị D7-L3, AGENTS.md mục D7-L3; thành phần do lô làm)
+	'danh sách bài blog': 'class="oz-ds-bai',
+	'nhật ký tác phẩm mới': 'class="oz-tac-pham-moi',
+	'link sách in': 'href="/opus/sach/',
 };
 
 /** Số trang đã đổi của nhánh được lấy làm mẫu: một lô của đợt 3 có tới 8 trang. */

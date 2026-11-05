@@ -39,6 +39,10 @@ const THEM = {
 	'D3-L5': ['src/pages/', 'src/ban-build.mjs', 'src/plugins/opus-markdown.mjs'],
 	// chỉ thị ::dong-thoi-gian, ::bang-nha-soan-nhac (dòng thời gian từ nha-soan-nhac.yml) đăng ký trong plugin đọc trang
 	'D5-L1': ['src/plugins/opus-markdown.mjs'],
+	// sách in sinh lúc build từ trang có trong bản build (thay books.py cũ), service worker và manifest (dùng khi mất mạng,
+	// cài như ứng dụng), danh sách bài blog và nhật ký tác phẩm mới ở trang Cập nhật (chỉ thị trong plugin đọc trang),
+	// frontmatter của bài blog (date)
+	'D7-L3': ['astro.config.mjs', 'src/content.config.ts', 'src/ban-build.mjs', 'src/plugins/opus-markdown.mjs', 'src/sach/', 'src/ung-dung/'],
 };
 
 /** File `file` (đường dẫn từ gốc repo) có thuộc phạm vi của lô `lo` ("D3-L2"), với các trang `trangLo`, không. */

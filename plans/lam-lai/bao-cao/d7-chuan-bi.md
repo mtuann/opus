@@ -51,6 +51,17 @@ Chủ repo giao agent quyết theo đề xuất (05/11/2026), ghi ở mục Quy�
 - **D7-L3**: `cap-nhat` link tới `/opus/audio/NGUON.txt` và câu "bản thu lưu trên site" (đúng sau D6-0); blog chốt đường dẫn mới, 3 bài chưa có mô tả (`d1-4.md`); `bat-dau/ung-dung` rà lại sau khi có service worker (`d2-bang-tang.md`).
 - Không liên quan đợt 7, vẫn còn mở: "Dân ca Pháp" ở hai chỗ của `piano/10-bai-dau-tien` (`d4-gom.md`); nhãn biến tấu 11, 12 của K. 265 ở `piano/hoa-am/ung-tac` (`d5-gom.md`, tùy chọn); hai câu hỏi về lượt 2 trang Đọc thêm (trước đợt 8) và trang Tác phẩm (trước D6-0) ở mục Quyết định của kế hoạch.
 
+## Chuẩn bị D7-L3
+
+Làm trên `main` sau khi D7-L2 gộp (agent tự quyết theo lời giao của chủ repo, 05/11/2026; chủ repo review sau):
+
+- `THEM['D7-L3']` của `tests/pham-vi.test.mjs`: `astro.config.mjs` (tích hợp sách in, service worker, thẻ manifest), `src/content.config.ts` (`date` của bài blog), `src/ban-build.mjs`, `src/plugins/opus-markdown.mjs` (chỉ thị `::danh-sach-bai`, `::tac-pham-moi`), `src/sach/`, `src/ung-dung/`.
+- `KHOI` của `tools/trang-mau.mjs`: danh sách bài blog (`oz-ds-bai`), nhật ký tác phẩm mới (`oz-tac-pham-moi`), link sách in (`href="/opus/sach/`).
+- `AGENTS.md` mục D7-L3: cách làm đã chốt. Lý do của các chỗ chọn:
+  - **Địa chỉ blog** giữ đường dẫn file (`blog/posts/2026-10-11-bat-dau/`): đúng id trong `trang.yml`, không phải đổi `anh-xa.md`; địa chỉ cũ theo ngày (`/opus-zero/blog/2026/10/11/…`) ở site khác nên không cần chuyển hướng.
+  - **Sách in sinh từ bản build** như `books.py` (đọc HTML đã dựng, không dựng lại Markdown): khuông, câu hỏi, hình ra đúng như trang; bản thật tự chỉ có trang đã khóa.
+  - **Soundfont của abcjs** (`paulrosen.github.io`): service worker lưu khi đã tải một lần; chưa nghe lần nào mà mất mạng thì khuông vẫn hiện, không có tiếng. Lô ghi vào báo cáo nếu đổi cách.
+
 ## Kiểm thử
 
 - `npm run build:xem`: không cảnh báo `[opus]`.
