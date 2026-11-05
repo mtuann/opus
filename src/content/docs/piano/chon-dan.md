@@ -11,7 +11,7 @@ Cây đàn đầu tiên ảnh hưởng đến việc học nhiều hơn bạn ng
 |---|---|---|---|
 | **Piano điện** (digital piano) | Không cần lên dây; tập bằng tai nghe vào ban đêm; gọn, nhẹ; kết nối được với máy tính | Cảm giác phím và tiếng đàn là mô phỏng; sắc thái rất nhỏ và bàn đạp kém tinh tế hơn đàn cơ tốt | Người mới bắt đầu, sống ở chung cư, cần tập muộn |
 | **Piano cơ đứng** (upright) | Dây, búa và bảng cộng hưởng thật; phản hồi trung thực nhất về lực ngón; dùng được hàng chục năm nếu giữ tốt | Cần lên dây định kỳ; nhạy với độ ẩm; tiếng to, khó tập đêm; nặng, chuyển nhà tốn kém | Người có chỗ đặt đàn và muốn học lâu dài |
-| **Piano cơ đại** (grand) | Dây nằm ngang, búa rơi về nhờ trọng lượng; đánh lặp một nốt nhanh hơn đàn đứng (theo Yamaha: tới khoảng 15 lần mỗi giây, đàn đứng khoảng 7) | Rất đắt, cần phòng rộng | Người học nâng cao, có không gian |
+| **Piano cơ đại** (grand) | Dây nằm ngang, búa rơi về nhờ trọng lượng; đánh lặp một nốt nhanh hơn đàn đứng (theo Yamaha: tới khoảng 14 lần mỗi giây, đàn đứng khoảng 7) | Rất đắt, cần phòng rộng | Người học nâng cao, có không gian |
 | **Đàn lai** (hybrid) và đàn cơ có hệ thống tắt tiếng | Bộ máy phím cơ (hoặc rất gần đàn cơ) kèm âm thanh số; tập được bằng tai nghe | Đàn cơ có hệ thống tắt tiếng vẫn là đàn cơ: vẫn cần lên dây và giữ độ ẩm | Người muốn cảm giác đàn cơ nhưng phải tập yên lặng |
 
 Với người lớn mới học, **một cây piano điện tốt** là khởi đầu hoàn toàn hợp lý. Điều quan trọng là thỉnh thoảng được chơi trên đàn cơ (ở lớp học, trung tâm, nhà bạn bè) để tay và tai biết "chuẩn" là thế nào. Site gợi ý tính chuyện nâng cấp lên đàn cơ khi đến khoảng Grade 4–5, lúc các bài bắt đầu đòi hỏi sắc thái và bàn đạp tinh tế (xem [Bàn đạp](/opus/piano/ban-dap/) và [Tạo tiếng đàn](/opus/piano/tieng-dan/)).
@@ -87,7 +87,7 @@ Góc tập tốt là góc khiến bạn **ngồi vào đàn dễ hơn là không
 - **Trên giá nhạc**: bút chì và tẩy để ghi ngón bấm, sổ tập hoặc [nhật ký luyện tập](/opus/luyen-tap/nhat-ky/).
 - **Điện thoại hoặc máy tính bảng** mở sẵn site: [máy đếm nhịp](/opus/luyen-tap/metronome/), [thu âm buổi tập](/opus/luyen-tap/thu-am/), [chơi theo](/opus/luyen-tap/choi-theo/), [đọc nốt](/opus/luyen-tap/doc-not/). Một giá đỡ để quay video tay từ bên cạnh rất đáng mua.
 - **Đồng hồ hẹn giờ** nhắc nghỉ 10 phút sau mỗi 20 phút tập (theo BAPAM; xem [Giữ đôi tay khỏe](/opus/piano/suc-khoe/)).
-- **Giờ tập yên tĩnh**: với đàn cơ ở chung cư, thỏa thuận giờ tập với hàng xóm; thảm dưới đàn và đệm lót chân đàn giảm tiếng truyền qua sàn.
+- **Giờ tập yên tĩnh**: với đàn cơ ở chung cư, thỏa thuận giờ tập với hàng xóm.
 
 ## Chăm sóc và bảo dưỡng
 

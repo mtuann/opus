@@ -311,11 +311,11 @@ Hai tập *SOLO* của Faber Music in các bài trong album *SOLO* (2021), album
 |---|---|
 | Nhà soạn nhạc | Paul de Senneville (1933–2023), nhà soạn nhạc và nhà sản xuất người Pháp |
 | Bản thu, bản in | Bài gắn với các bản thu của Richard Clayderman; bản in trên Musicnotes đề năm bản quyền 1980 |
-| Giọng · nhịp · tốc độ | Sol thứ · chủ yếu 4/4, có vài ô 3/4 · mở đầu *Moderato*, ♩ = 72, theo bản Musicnotes ở dòng Bản nhạc |
+| Giọng · nhịp · tốc độ | Sol thứ · mở đầu 4/4 có xen ô 3/4, phần chính 3/4 · mở đầu *Moderato*, ♩ = 72, phần chính *Faster*, ♩. = 50, theo bản Musicnotes ở dòng Bản nhạc |
 | Cấp (≈) | Bản piano solo như bản thu của Clayderman: khoảng Grade 5–6, đầu chặng 5 (ước lượng của site). Bản soạn dễ: chặng 2–3 |
 | Bản nhạc | Còn bản quyền. Bản piano solo được cấp phép, giọng gốc Sol thứ: [Musicnotes](https://www.musicnotes.com/sheetmusic/richard-clayderman/mariage-damour/MN0114635). Các bản soạn dễ có trên những trang bán nhạc số được cấp phép |
 
-**Không phải của Chopin.** Trên mạng, bài này có khi mang tên "Spring Waltz" (Valse mùa xuân) và bị gắn cho Chopin. Bản nhạc được cấp phép ghi tác giả là Paul de Senneville; Chopin không có bài nào như vậy, và đây cũng không phải một điệu valse: valse ở nhịp 3/4, còn bài này chủ yếu ở 4/4. Muốn chơi một valse thật của Chopin ở tầm tương đương, xem [Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/) (chặng 5); cao hơn một chặng là [Valse Si thứ Op. 69 số 2](/opus/piano/tac-pham/chopin-valse-si-thu/) (chặng 6).
+**Không phải của Chopin.** Trên mạng, bài này có khi mang tên "Spring Waltz" (Valse mùa xuân) và bị gắn cho Chopin. Bản nhạc được cấp phép ghi tác giả là Paul de Senneville; Chopin không có bài nào như vậy. Muốn chơi một valse thật của Chopin ở tầm tương đương, xem [Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/) (chặng 5); cao hơn một chặng là [Valse Si thứ Op. 69 số 2](/opus/piano/tac-pham/chopin-valse-si-thu/) (chặng 6).
 
 **Bài này dạy gì:**
 

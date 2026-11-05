@@ -62,7 +62,7 @@ Các dàn nhạc trong nước đưa tác phẩm của nhạc sĩ Việt vào ch
 - **Đỗ Hồng Quân** (sinh 1956), con trai nhạc sĩ Đỗ Nhuận: học sáng tác và chỉ huy ở Nhạc viện Tchaikovsky (Moskva), giảng dạy sáng tác ở Nhạc viện Hà Nội hơn 25 năm. Ông viết khí nhạc, nhạc phim và nhạc sân khấu, trong đó có giao hưởng *Trổ một* và tổ khúc ba lê *Hồng hoang*.
 - **Đặng Hữu Phúc** (sinh 1953): học sáng tác và piano ở Hà Nội, tu nghiệp ở Paris, giảng viên sáng tác ở Học viện Âm nhạc Quốc gia Việt Nam. Ông viết nhạc phim (giải Kim Tước cho nhạc phim ở Liên hoan Phim quốc tế Thượng Hải năm 2005) và nhạc giao hưởng, thính phòng; nghệ sĩ Đặng Thái Sơn đã biểu diễn một số tác phẩm piano của ông, như *Suite* và *Sonate polyphonique*.
 - **Nguyễn Mạnh Duy Linh**: nhạc sĩ sáng tác; *Concerto Grosso* của ông được trình diễn trong hòa nhạc kỷ niệm 30 năm HBSO (tháng 8/2023).
-- **Lương Huệ Trinh** (sinh 1985): học tại Học viện Âm nhạc Quốc gia Việt Nam, rồi học thạc sĩ sáng tác đa phương tiện ở Hamburg (2015–2018, tốt nghiệp loại ưu); cô viết nhạc điện-âm và đa phương tiện. Tác phẩm gồm buổi hòa nhạc đa phương tiện *Thư Hà Nội* (viết cùng Jean-David Caillouet).
+- **Lương Huệ Trinh** (sinh 1985): học tại Học viện Âm nhạc Quốc gia Việt Nam, rồi học thạc sĩ sáng tác đa phương tiện ở Hamburg (2015–2018); cô viết nhạc điện-âm và đa phương tiện. Tác phẩm gồm buổi hòa nhạc đa phương tiện *Thư Hà Nội* (viết cùng Jean-David Caillouet).
 
 Gợi ý: khi xem chương trình hòa nhạc của VNSO, HBSO hay SSO, hãy để ý mục "tác phẩm Việt Nam": đó là cách trực tiếp nhất để nghe nhạc cổ điển Việt Nam hôm nay.
 

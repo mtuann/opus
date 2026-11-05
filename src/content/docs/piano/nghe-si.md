@@ -63,7 +63,7 @@ Mỗi nghệ sĩ có một gợi ý "nghe trước". Các chữ tả tiếng đ�
 | **Mitsuko Uchida** (sinh 1948) | Mozart và Schubert tinh tế; giải Nhì Chopin 1970 và Leeds 1975 | Sonata Mozart; sonata Schubert |
 | **Grigory Sokolov** (sinh 1950) | Thắng Tchaikovsky năm 1966 lúc 16 tuổi, người trẻ nhất từng thắng; chủ yếu chơi độc tấu; phần lớn đĩa gần đây là bản thu trực tiếp | Các bản thu trực tiếp những buổi độc tấu của ông |
 | **András Schiff** (sinh 1953) | Bach rõ ràng, không dùng bàn đạp vang (theo bài viết của chính ông); Beethoven, Schubert, Bartók | *Bình quân luật*; *Goldberg* |
-| **Krystian Zimerman** (sinh 1956) | Thắng Chopin năm 1975; cầu toàn; năm 1999 lập Polish Festival Orchestra (dàn nhạc nhạc công trẻ Ba Lan) và thu hai concerto Chopin với dàn nhạc ấy | Bốn Ballade Chopin; *Préludes* của Debussy; Sonata D. 959 và D. 960 của Schubert |
+| **Krystian Zimerman** (sinh 1956) | Thắng Chopin năm 1975; cầu toàn; năm 1998 lập Polish Festival Orchestra (dàn nhạc nhạc công trẻ Ba Lan) nhân 150 năm ngày mất của Chopin (1999), lưu diễn và thu hai concerto Chopin với dàn nhạc ấy | Bốn Ballade Chopin; *Préludes* của Debussy; Sonata D. 959 và D. 960 của Schubert |
 | **Angela Hewitt** (sinh 1958) | Bach trên piano: thắng cuộc thi piano Bach quốc tế ở Toronto năm 1985, thu các tác phẩm phím đàn lớn của Bach cho hãng Hyperion | *Bình quân luật*; *Goldberg*; Couperin |
 | **Marc-André Hamelin** (sinh 1961) | Kỹ thuật phi thường cho những tác phẩm hiếm (Alkan, Godowsky, Medtner, Kapustin); tự viết 12 étude ở mọi giọng thứ | Medtner; Kapustin; Haydn |
 | **Evgeny Kissin** (sinh 1971) | Thần đồng: năm 1984, khi 12 tuổi, đã thu hai concerto Chopin | Chopin; Liszt; Schubert |

@@ -170,7 +170,7 @@ Trong trình duyệt trên máy bạn, không gửi đi đâu. Dùng [Dữ liệ
 <details>
 <summary>Không nghe thấy âm thanh?</summary>
 
-Kiểm tra điện thoại không ở chế độ im lặng: trên iPhone, chế độ này mặc định tắt cả tiếng do trang web phát, kể cả tiếng của khuông nhạc trên site. Bấm vào trang một lần trước khi phát. Âm thanh của khuông nhạc cần mạng ở lần đầu tiên.
+Kiểm tra điện thoại không ở chế độ im lặng: trên iPhone, chế độ này mặc định tắt tiếng mà trang web phát bằng Web Audio (thẻ audio và video thì vẫn nghe được), trong đó có tiếng của khuông nhạc trên site. Bấm vào trang một lần trước khi phát. Âm thanh của khuông nhạc cần mạng ở lần đầu tiên.
 
 </details>
 
