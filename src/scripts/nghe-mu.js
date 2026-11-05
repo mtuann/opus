@@ -333,8 +333,11 @@ function ganNgheMu(goc) {
 		if (b?.dataset.act === 'next') banKhac();
 		if (b?.dataset.act === 'check') xem();
 	});
-	// lỗi của thẻ <source> không nổi bọt: nghe ở pha bắt
-	audio.addEventListener('error', () => bao(CHU_NM.loi, 'bad'), true);
+	// lỗi của thẻ <source> không nổi bọt: nghe ở pha bắt. Chỉ báo khi nguồn cuối cũng hỏng (mp3 chuyển mã của Commons
+	// có thể 404 trong khi ogg vẫn phát được) hay chính thẻ audio báo lỗi
+	audio.addEventListener('error', (e) => {
+		if (e.target === audio || e.target === audio.lastElementChild) bao(CHU_NM.loi, 'bad');
+	}, true);
 	banKhac();
 }
 
