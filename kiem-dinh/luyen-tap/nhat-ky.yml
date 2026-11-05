@@ -1,0 +1,112 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa luyen-tap/nhat-ky
+trang: src/content/docs/luyen-tap/nhat-ky.md
+nguon_cu: ../opus-zero/docs/luyen-tap/nhat-ky.md
+tang: khung
+lan:
+- so: 1
+  ngay: '2026-11-05'
+  nhanh: moi/d7-l2
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Sonnet (D7-L2 lượt 1, phần 1/2)
+    luot_2: null
+    review: null
+    kiem_mau: null
+ghi_chu: 'Trang khung (D7-L2, phần 1/2). Hai chỗ sửa: n3 (máy đếm nhịp từ 5 phút) và n4 (thị tấu hai tay ít nhất 3 bài), cùng một câu của đoạn mở đầu; description của trang không đổi (bị cắt trước chỗ sửa). Điều cần giữ ở lô D6: nút "Hôm nay đã tập bài này" (ghi days[ngày].piano) và "Tôi đang tập bài này" (ghi store.repertoire) ở đầu bài học tác phẩm; link /opus/piano/tac-pham/ (trang piano/tac-pham/index) hiện "sắp có" tới khi trang ấy lên. Câu thuộc về module (nhat-ky.js, nang-luc.js, bai-dang-tap.js, tien-do.js, ke-hoach.js) khớp chữ trên trang; đã so với journal.js, progress.js cũ: cùng logic. Không có thuật ngữ nhạc cần bản ghi.'
+doi_chu:
+- cu: 'Mỗi ô vuông là một ngày; màu càng đậm là ngày luyện tập càng nhiều. Ngày được tính khi bạn bấm Hôm nay đã tập bài này ở một bài học tác phẩm, dùng máy đếm nhịp, đọc một bài thị tấu hai tay, hoặc đạt mốc trong các công cụ khác: 10 nốt đọc đúng, 10 quãng hoặc hợp âm nhận đúng, một quiz bài học hay 10 thẻ thuật ngữ.'
+  moi: 'Mỗi ô vuông là một ngày; màu càng đậm là ngày luyện tập càng nhiều. Ngày được tính khi bạn bấm Hôm nay đã tập bài này ở một bài học tác phẩm, dùng máy đếm nhịp từ 5 phút, đọc ít nhất 3 bài thị tấu hai tay, hoặc đạt mốc trong các công cụ khác: 10 nốt đọc đúng, 10 quãng hoặc hợp âm nhận đúng, một quiz bài học hay 10 thẻ thuật ngữ.'
+  ly_do: 'n3, n4 (da-sua): mucNgay chỉ cộng điểm khi minutes >= 5 và readings >= 3 (cả bản cũ progress.js dòng 60, 65), nên "dùng máy đếm nhịp" và "đọc một bài thị tấu hai tay" chưa đủ để ngày có màu.'
+nguon: []
+nhan_dinh:
+- id: n1
+  cau: Mỗi ô vuông của bản đồ là một ngày; màu càng đậm là ngày luyện tập càng nhiều.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/nhat-ky.js: cacNgay (16 tuần, mỗi ngày một ô), oBanDo (lớp l1, l2, l3 theo mức); src/scripts/tien-do.js: mucNgay(d) trả 0–3 theo điểm hoạt động trong ngày.'
+- id: n2
+  cau: Ngày được tính khi bạn bấm "Hôm nay đã tập bài này" ở một bài học tác phẩm.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/tien-do.js: mucNgay cộng 2 điểm khi piano >= 1 (ngày có mức 2). Nút "Hôm nay đã tập bài này" ở site cũ: ../opus-zero/docs/assets/js/practice.js dòng 111 và 132 (record("piano", 1)). Site mới chưa có nút này: thuộc thẻ đầu bài học tác phẩm (.oz-piece, đợt 6; bai-dang-tap.js nói rõ). Điều cần giữ: lô D6 làm nút "Hôm nay đã tập bài này" và nút "Tôi đang tập bài này", ghi days[ngày].piano và store.repertoire.'
+- id: n3
+  cau: Ngày được tính khi bạn dùng máy đếm nhịp từ 5 phút.
+  loai: ve-site
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "dùng máy đếm nhịp". Chữ mới: "dùng máy đếm nhịp từ 5 phút". Lý do: src/scripts/tien-do.js mucNgay chỉ cộng điểm khi minutes >= 5 (một lần dùng dưới 5 phút không làm ngày có màu); minutes ghi bởi may-dem-nhip.js (phút trọn vẹn). Bản cũ cũng như vậy (progress.js dòng 60). Lưu ý: thu-am.js cũng ghi minutes, nên "từ 5 phút" là điều kiện đủ, không phải duy nhất.'
+- id: n4
+  cau: Ngày được tính khi bạn đọc ít nhất 3 bài thị tấu hai tay.
+  loai: ve-site
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "đọc một bài thị tấu hai tay". Chữ mới: "đọc ít nhất 3 bài thị tấu hai tay". Lý do: src/scripts/tien-do.js mucNgay cộng điểm khi readings >= 3 (progress.js cũ dòng 65: readings >= 3); thi-tau-hai-tay.js ghi ghiNgay("readings", 1) mỗi bài. Một bài thì ngày chưa có màu.'
+- id: n5
+  cau: Ngày được tính khi bạn đọc đúng 10 nốt.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/tien-do.js mucNgay: notes >= 10 cộng 1 điểm; src/scripts/doc-not.js ghiNgay("notes", 1) mỗi nốt đúng.'
+- id: n6
+  cau: Ngày được tính khi bạn nhận đúng 10 quãng hoặc 10 hợp âm.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/tien-do.js mucNgay: intervals >= 10 cộng 1 điểm; chords nằm trong nhóm (chords + keysigs + rhythms + melodies + builds + scales + styles) >= 10 cũng cộng 1 điểm. Công cụ ghi intervals, chords qua src/scripts/luyen-tai.js.'
+- id: n7
+  cau: Ngày được tính khi bạn làm một quiz bài học hay ôn 10 thẻ thuật ngữ.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/tien-do.js mucNgay: cards >= 10 hoặc quizzes >= 1 cộng 1 điểm; quiz.js ghiNgay("quizzes", 1), the-nho.js ghiNgay("cards", 1).'
+- id: n8
+  cau: 'Năm việc của hôm nay trong công cụ, ba việc tự đánh dấu: đọc nốt khi đọc đúng 10 nốt; luyện tai khi nhận đúng 10 quãng hoặc hợp âm; nhạc lý khi làm xong một quiz hoặc ôn 10 thẻ thuật ngữ.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/nhat-ky.js: VIEC (năm việc, chữ như TASKS của journal.js cũ) và tuDanhDau: doc-not khi notes >= 10; luyen-tai khi intervals + chords + scales >= 10 (tính cả gam, chữ ở trang không nhắc gam); nhac-ly khi quizzes >= 1 hoặc cards >= 10.'
+- id: n9
+  cau: Bấm "Tôi đang tập bài này" ở đầu mỗi bài học tác phẩm thì bài hiện ở trang Nhật ký.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Site cũ: ../opus-zero/docs/assets/js/practice.js dòng 111–132 (nút ở thẻ đầu bài, ghi store.repertoire[trang].status = "learning"). Site mới: src/scripts/bai-dang-tap.js đọc store.repertoire và liệt kê bài status "learning" hay "done". Nút ở đầu bài học tác phẩm chưa có ở site mới (đợt 6): điều cần giữ ở lô D6.'
+- id: n10
+  cau: Bài đang tập cũng hiện trong kế hoạch hôm nay, và bài lâu chưa tập được nhắc trước.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/bai-dang-tap.js: danh sách bài "learning" xếp theo ngày tập cuối tăng dần (lâu nhất trước); src/scripts/ke-hoach.js benDan: lấy tối đa hai bài "learning" xếp theo last tăng dần vào kế hoạch ("N ngày chưa tập").'
+- id: n11
+  cau: Kế hoạch gợi ý cho hôm nay ở trang Luyện tập, mục "Hôm nay nên luyện gì?".
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/content/docs/luyen-tap/index.md: mục "## Hôm nay nên luyện gì?" có ::cong-cu{ten="plan"} (id #hom-nay-nen-luyen-gi theo src/plugins/id-cu.mjs; tests/link.test.mjs kiểm anchor).'
+- id: n12
+  cau: Mục "Tiến bộ theo tuần" hiện biểu đồ độ chính xác theo tuần của từng kỹ năng đã luyện.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/nang-luc.js (veTienBo, mount) gọi bieuDoTienBo của src/scripts/hinh-so-sanh.js: mỗi kỹ năng có lịch sử một đường theo tuần, 12 tuần gần nhất, đọc store.skillHist do kyNang (tien-do.js) ghi; chưa có dữ liệu thì "Chưa có dữ liệu. Biểu đồ sẽ xuất hiện sau vài ngày luyện tập."'
+- id: n13
+  cau: Độ chính xác gần đây của kỹ năng được tính theo các lần trả lời gần nhất, lần mới quan trọng hơn lần cũ.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/tien-do.js kyNang: s.ema = s.ema * 0.85 + (đúng ? 1 : 0) * 0.15 (trung bình trượt mũ: lần mới trọng số 0,15, các lần cũ giảm dần); nang-luc.js hiện ema làm phần trăm.'
+- id: n14
+  cau: Kỹ năng mờ sẽ mở khi bạn học xong bài lý thuyết tương ứng.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/ke-hoach.js tinhKeHoach: unlocked = st.n > 0 || !s[3] || !!done[s[3]], với s[3] là bài nhạc lý cần xong (KY_NANG), done lấy từ store.lessons (quiz.js datKho("lessons") khi làm xong bài). Kỹ năng đã luyện lần nào cũng mở, ngoài điều trang nói. Bảng hiện "(mở sau bài học tương ứng)" cho kỹ năng mờ.'
+- id: n15
+  cau: Bảng năng lực có cột Kỹ năng, Độ chính xác gần đây, Số lần, Lần cuối, một hàng cho mỗi kỹ năng, mỗi tên là link tới công cụ tương ứng.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/nang-luc.js dungBangNangLuc; KY_NANG (ke-hoach.js) có 14 kỹ năng; dist/luyen-tap/nhat-ky/index.html: mọi link tới trang có trong bản xem (luyen-tap/doc-not, tiet-tau, hoa-bieu, thi-tau, thi-tau-hai-tay, chep-giai-dieu, hat-lai, choi-theo; luyen-tai/nghe-*; nhan-dien/luyen-nghe) và đúng anchor #luyen-voi-cong-cu của bốn trang luyện tai.'
+- id: n16
+  cau: 'Dữ liệu của nhật ký chỉ lưu trong trình duyệt này; sao lưu, chuyển sang máy khác hoặc xóa: xem trang "Dữ liệu của tôi".'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/tien-do.js lưu localStorage khóa opus-zero:v1; src/content/docs/luyen-tap/du-lieu.md: "được lưu trong trình duyệt trên máy này ... xem, sao lưu, chuyển sang máy khác, hoặc xóa"; link dựng ở veNhatKy (nhat-ky.js).'
+- id: n17
+  cau: 'Ghi chú tốt thì ngắn và cụ thể; ví dụ: "Minuet Sol trưởng ô 9–16, ♩ = 72, ba lần liền không vấp. Ô 13 tay trái còn hụt nhịp. Gam Rê trưởng hai tay đã đều." Một tuần sau đọc lại, bạn sẽ thấy rõ mình tiến bộ đến đâu.'
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+  ghi_chu: Lời khuyên và ví dụ minh họa, không khẳng định sự kiện nào (Minuet Sol trưởng chỉ là ví dụ của một ghi chú).
+- id: n18
+  cau: 'Mốc thời gian gợi ý của năm việc trong ngày: tập đàn 20–45 phút; đọc nốt 5 phút; luyện tai 5 phút; học hoặc ôn nhạc lý 10 phút; nghe chủ động một tác phẩm.'
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+  ghi_chu: src/scripts/nhat-ky.js VIEC (chữ như TASKS cũ). Là gợi ý buổi tập, khớp kiểu kế hoạch ở ke-hoach.js (5, 5, 10 phút).
+khuong_nhac: []

@@ -1,8 +1,9 @@
 // Hình phản hồi của các công cụ luyện tập (D7-L1), chuyển từ ../opus-zero/docs/assets/js/viz.js: so sánh chép giai điệu
 // (compareRoll cũ) và piano roll cao độ khi chơi theo, hát lại (pianoRoll cũ). Hàm thuần trả về chuỗi SVG (kiểm thử bằng
 // Node, chèn bằng innerHTML). Khác bản cũ: màu theo lớp CSS của site (src/styles/thanh-phan.css: oz-ss-dat, oz-ss-cao,
-// oz-ss-thap, oz-ss-thieu; có bản sáng và tối), không viết cứng; chữ trong hình là chữ thật. Dải nhịp gõ (tapStrip) và biểu
-// đồ tiến bộ theo tuần chuyển cùng trang của chúng (D7-L2).
+// oz-ss-thap, oz-ss-thieu; có bản sáng và tối), không viết cứng; chữ trong hình là chữ thật. D7-L2 thêm dải nhịp gõ
+// (tapStrip cũ, công cụ tiết tấu), biểu đồ tiến bộ theo tuần (weekly, trendsHtml cũ, trang Nhật ký) và hàng kết quả từng nốt
+// (chơi theo, thị tấu một bè).
 
 const TEN = ['Đô', 'Đô♯', 'Rê', 'Mi♭', 'Mi', 'Fa', 'Fa♯', 'Sol', 'Sol♯', 'La', 'Si♭', 'Si'];
 const TU_NHIEN = [0, 2, 4, 5, 7, 9, 11];
@@ -91,4 +92,144 @@ export function pianoRoll({ can = [], khung = [], phim = [], boQuangTam = false 
 	}
 	b += chu(L, H - 4, `Ô: nốt đúng (xanh lá = đạt, đỏ = cao, xanh dương = thấp, xám = thiếu) · chấm: ${phim.length ? 'phím bạn bấm' : 'cao độ bạn hát hoặc chơi'}`, 'oz-ss-chu');
 	return svg(W, H, 'Piano roll so sánh nốt cần chơi với cao độ thực tế của bạn', b);
+}
+
+/** Hàng kết quả từng nốt (resultRow cũ; chơi theo, thị tấu một bè): ✓, "thiếu", số cent hay tên phím đã bấm. */
+export function hangKetQua(kq) {
+	return `<div class="oz-ket-qua">${kq
+		.map((r) => {
+			const lop = r.ket_qua === 'dat' ? 'dat' : r.ket_qua === 'thieu' ? 'thieu' : 'sai';
+			const nhan = r.ket_qua === 'dat' ? '✓' : r.ket_qua === 'thieu' ? 'thiếu' : r.cent !== undefined ? `${r.cent > 0 ? '+' : ''}${r.cent}¢` : r.bam !== undefined ? tenNot(r.bam) : '?';
+			return `<span class="oz-kq oz-kq-${lop}"><b>${esc(tenNot(r.m))}</b>${esc(nhan)}</span>`;
+		})
+		.join('')}</div>`;
+}
+
+// ---------- Dải nhịp gõ (tiết tấu, D7-L2) ----------
+
+/**
+ * Ghép lần gõ với lúc cần gõ (finish của rhythm.js cũ): mỗi lúc cần gõ lấy lần gõ gần nhất chưa dùng, trong `dungSai` giây.
+ * Trả về { trung: [[lúc cần gõ, lần gõ]…], thua: [lần gõ không ghép được] }. Hàm thuần, chấm điểm và dải nhịp dùng chung.
+ */
+export function ghepNhip(can, go, dungSai) {
+	const con = go.slice();
+	const trung = [];
+	for (const e of can) {
+		let tot = -1;
+		let kc = 1e9;
+		con.forEach((t, i) => {
+			const d = Math.abs(t - e);
+			if (d < kc) {
+				kc = d;
+				tot = i;
+			}
+		});
+		if (tot >= 0 && kc <= dungSai) trung.push([e, con.splice(tot, 1)[0]]);
+	}
+	return { trung, thua: con };
+}
+
+/**
+ * Dải thời gian của một lượt gõ (tapStrip cũ): vạch đậm là lúc cần gõ (`can`, giây), chấm là lần gõ (`go`): xanh lá đúng lúc
+ * (lệch dưới 30 ms), xanh dương sớm, đỏ muộn, vòng xám là gõ thừa. `dau`: lúc phách đầu (sau đếm vào), `phach`: giây mỗi
+ * phách, `soPhach`: số phách được vẽ. Màu theo lớp CSS (oz-ss-go-*), có chú giải bằng chữ ngay dưới.
+ */
+export function daiNhipGo({ can = [], go = [], phach, dau, soPhach = 8, dungSai }) {
+	const W = 640;
+	const L = 10;
+	const x = (t) => L + ((t - dau + phach * 0.25) / (phach * (soPhach + 0.5))) * (W - 2 * L);
+	let b = '';
+	for (let i = 0; i <= soPhach; i++) {
+		const xx = x(dau + i * phach);
+		b += `<line class="${i % 4 === 0 ? 'oz-ss-o-nhip' : 'oz-ss-luoi'}" x1="${so(xx)}" x2="${so(xx)}" y1="10" y2="56"/>`;
+		if (i < soPhach) b += chu(xx + 2, 66, String((i % 4) + 1), 'oz-ss-ten');
+	}
+	const { trung, thua } = ghepNhip(can, go, dungSai);
+	for (const e of can) b += `<line class="oz-ss-can-go" x1="${so(x(e))}" x2="${so(x(e))}" y1="16" y2="50"/>`;
+	for (const [e, t] of trung) {
+		const d = t - e;
+		b += `<circle class="oz-ss-go-${Math.abs(d) < 0.03 ? 'dat' : d < 0 ? 'som' : 'muon'}" cx="${so(x(t))}" cy="33" r="5"/>`;
+	}
+	for (const t of thua) b += `<circle class="oz-ss-go-thua" cx="${so(x(t))}" cy="33" r="4"/>`;
+	return (
+		svg(W, 70, 'Dải thời gian: vạch đậm là lúc cần gõ, chấm là lúc bạn gõ; xanh lá đúng lúc, xanh dương sớm, đỏ muộn, vòng xám là gõ thừa', b) +
+		'<p class="oz-ss-chu-giai"><span class="oz-ss-go-dat">●</span> đúng lúc <span class="oz-ss-go-som">●</span> sớm ' +
+		'<span class="oz-ss-go-muon">●</span> muộn <span class="oz-ss-go-thua">○</span> thừa · vạch đậm: lúc cần gõ</p>'
+	);
+}
+
+// ---------- Tiến bộ theo tuần (trang Nhật ký, D7-L2) ----------
+
+/** Thứ Hai của tuần chứa ngày iso (weekKey cũ). */
+export function khoaTuan(iso) {
+	const [y, m, d] = iso.split('-').map(Number);
+	const x = new Date(Date.UTC(y, m - 1, d));
+	x.setUTCDate(x.getUTCDate() - ((x.getUTCDay() + 6) % 7));
+	return x.toISOString().slice(0, 10);
+}
+
+/** Số lượt và số đúng của `soTuan` tuần gần nhất (weekly cũ): `lich` là skillHist[kỹ năng] ({ ngày: [lượt, đúng] }). */
+export function theoTuan(lich, homNay, soTuan) {
+	const ra = [];
+	const cuoi = new Date(`${khoaTuan(homNay)}T00:00:00Z`);
+	for (let i = soTuan - 1; i >= 0; i--) {
+		const d = new Date(cuoi);
+		d.setUTCDate(d.getUTCDate() - 7 * i);
+		ra.push({ w: d.toISOString().slice(0, 10), n: 0, c: 0 });
+	}
+	const chiSo = Object.fromEntries(ra.map((o, i) => [o.w, i]));
+	for (const ngay of Object.keys(lich || {})) {
+		const k = /^\d{4}-\d{2}-\d{2}$/.test(ngay) ? chiSo[khoaTuan(ngay)] : undefined;
+		if (k === undefined || !Array.isArray(lich[ngay])) continue;
+		ra[k].n += Number(lich[ngay][0]) || 0;
+		ra[k].c += Number(lich[ngay][1]) || 0;
+	}
+	return ra;
+}
+
+/** Đường nhỏ: độ chính xác từng tuần, vạch nét đứt ở 80% (spark cũ). */
+function duongNho(diem, nhan) {
+	const W = 220;
+	const H = 54;
+	const L = 4;
+	const R = 30;
+	const x = (i) => L + (i / (diem.length - 1)) * (W - L - R);
+	const y = (p) => 6 + (1 - p) * (H - 18);
+	let duong = '';
+	let cham = '';
+	let cuoi = null;
+	let xCuoi = 0;
+	diem.forEach((p, i) => {
+		if (!p.n) return;
+		const pc = p.c / p.n;
+		duong += `${duong ? 'L' : 'M'}${so(x(i))} ${so(y(pc))}`;
+		cham += `<circle cx="${so(x(i))}" cy="${so(y(pc))}" r="2"/>`;
+		cuoi = pc;
+		xCuoi = x(i);
+	});
+	let b = `<line class="oz-ss-moc" x1="${L}" x2="${W - R}" y1="${so(y(0.8))}" y2="${so(y(0.8))}"/>` + chu(L + 1, y(0.8) - 2, '80%', 'oz-ss-ten oz-ss-nho');
+	b += `<path class="oz-tb-duong" d="${duong}"/><g class="oz-tb-cham">${cham}</g>`;
+	if (cuoi !== null) b += chu(xCuoi + 5, y(cuoi) + 3, `${Math.round(cuoi * 100)}%`);
+	return svg(W, H, nhan, b);
+}
+
+/**
+ * Biểu đồ tiến bộ (trendsHtml cũ): mỗi kỹ năng đã có lượt luyện một đường độ chính xác theo tuần, 12 tuần gần nhất.
+ * `lichSu`: store.skillHist; `ten`: id kỹ năng -> tên.
+ */
+export function bieuDoTienBo(lichSu, homNay, ten) {
+	const ids = Object.keys(lichSu || {}).filter((k) => lichSu[k] && typeof lichSu[k] === 'object' && Object.keys(lichSu[k]).length);
+	if (!ids.length) return '<p class="oz-stats">Chưa có dữ liệu. Biểu đồ sẽ xuất hiện sau vài ngày luyện tập.</p>';
+	return (
+		'<div class="oz-tb-luoi">' +
+		ids
+			.map((id) => {
+				const w = theoTuan(lichSu[id], homNay, 12);
+				const tong = w.reduce((s, p) => s + p.n, 0);
+				const t = ten[id] || id;
+				return `<div class="oz-tb-o"><b>${esc(t)}</b><small> · ${tong} lượt trong 12 tuần</small>${duongNho(w, `Độ chính xác theo tuần của kỹ năng ${t}`)}</div>`;
+			})
+			.join('') +
+		'</div><p class="oz-stats">Mỗi điểm là độ chính xác của một tuần (12 tuần gần nhất); đường nét đứt: mốc 80%.</p>'
+	);
 }

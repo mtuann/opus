@@ -1,0 +1,105 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa luyen-tap/thu-am
+trang: src/content/docs/luyen-tap/thu-am.md
+nguon_cu: ../opus-zero/docs/luyen-tap/thu-am.md
+tang: khung
+lan:
+- so: 1
+  ngay: '2026-11-05'
+  nhanh: moi/d7-l2
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Sonnet (D7-L2 lượt 1, phần 2/2)
+    luot_2: null
+    review: null
+    kiem_mau: null
+ghi_chu: 'Trang khung (D7-L2, phần 2/2). Không sửa chữ. Phần lớn là lời khuyên tập (khuyen-tap). Câu về công cụ kiểm trên src/scripts/thu-am.js, kho-thu.js, micro.js (đối chiếu recorder.js cũ). n14 trỏ trang chưa chuyển (piano/thay-va-thi, kiểm trên site cũ). n16 chưa chắc (quy-tac, null): "loa nhỏ làm mất tiếng trầm và bàn đạp". Thuật ngữ trang dùng không có bản ghi cần kiểm.'
+nguon:
+- id: wiki-loudspeaker
+  bac: 3
+  ten: 'Wikipedia, Loudspeaker (đã mở: "It is typically not possible to combine high efficiency (especially at low frequencies) with compact enclosure size and adequate low-frequency response")'
+  link: https://en.wikipedia.org/wiki/Loudspeaker
+nhan_dinh:
+- id: n1
+  cau: Thu âm ngay trong trình duyệt, đặt tên, nghe lại, tải về.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/thu-am.js: MediaRecorder trên luồng micro (nút "● Thu"), ô "Tên bản thu", danh sách có trình phát <audio controls> và nút "Tải về" (tenFile).'
+- id: n2
+  cau: Có thể so sánh hai bản thu (ví dụ tuần này với tháng trước).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/thu-am.js: chonSoSanh: chọn tối đa hai ô, hiện hai trình phát (nghe cùng lúc được) và nút "Phát lần lượt A rồi B".'
+- id: n3
+  cau: Bản thu được lưu trên máy bạn, không gửi đi đâu.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/kho-thu.js: IndexedDB "opus-zero-recordings"; thu-am.js, kho-thu.js, micro.js không có fetch, XMLHttpRequest, sendBeacon hay WebSocket (grep). Micro chỉ vào AudioContext/MediaRecorder cục bộ.'
+- id: n4
+  cau: Khi đang chơi, tai bạn bận với ngón tay và bản nhạc; khi nghe lại, bạn nghe như một khán giả.
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+- id: n5
+  cau: Thu âm là một phần của cách tập piano hiệu quả; link tới piano/cach-tap.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/content/docs/piano/cach-tap.md: bước 11 "Mỗi tuần thu âm một lần và nghe lại như một khán giả", bảng công cụ "Thu âm buổi tập", mục lỗi thường gặp "hãy thu âm mỗi tuần".'
+- id: n6
+  cau: 'Thói quen gợi ý: mỗi tuần thu một lần bài đang tập, cùng một đoạn, đặt tên kèm số ô nhịp.'
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+- id: n7
+  cau: 'Nghe lại với một câu hỏi duy nhất: nhịp có đều không? Cao độ có chuẩn không? Chỗ to nhỏ có rõ không?'
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+- id: n8
+  cau: Mỗi tháng, chọn hai bản thu cách nhau 4 tuần để so sánh; tiến bộ thường lớn hơn bạn tưởng.
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+- id: n9
+  cau: Để điện thoại cách đàn khoảng một đến hai mét, không đặt lên nắp hay thân đàn (máy sẽ thu tiếng rung và tiếng phím); giữ nguyên vị trí từ tuần này sang tuần khác để hai bản thu so sánh được.
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+- id: n10
+  cau: Chơi thử đoạn to nhất trước khi thu; nếu nghe lại thấy rè ở chỗ f thì lùi máy xa hơn.
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+- id: n11
+  cau: Công cụ thu âm của site đã tắt chế độ khử ồn và tự chỉnh âm lượng của trình duyệt, để to nhỏ trong bản thu đúng như bạn chơi.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/micro.js moMicro(): getUserMedia({audio:{echoCancellation:false, noiseSuppression:false, autoGainControl:false}}) (dòng 109); thu-am.js lấy luồng ấy qua luongMicro() cho MediaRecorder. Ràng buộc là yêu cầu cho trình duyệt (không dùng exact), trang không hứa hơn.'
+- id: n12
+  cau: 'Phòng yên tĩnh, đóng cửa sổ: quạt, máy lạnh và tiếng xe ngoài đường lấn mất những chỗ pp.'
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+- id: n13
+  cau: 'Quay video khi cần xem tay: đặt máy ở bên cạnh hoặc chếch từ trên cao để thấy cổ tay và ngón.'
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+- id: n14
+  cau: Bảng góc máy nằm ở trang "Học với thầy và thi cấp" (piano/thay-va-thi).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Trang đích chưa chuyển (lô khác). ../opus-zero/docs/piano/thay-va-thi.md dòng 62: bảng, hàng "Góc máy": một góc từ bên cạnh (vai, khuỷu tay, cổ tay, chân trên bàn đạp), một góc từ trên xuống (bàn tay, ngón bấm), một máy thì đặt chếch từ phía trên một bên. Lô chuyển trang đó phải giữ hàng "Góc máy" này.'
+- id: n15
+  cau: Nghe lại bằng tai nghe, không bằng loa điện thoại.
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+- id: n16
+  cau: Loa nhỏ (của điện thoại) làm mất tiếng trầm và bàn đạp.
+  loai: quy-tac
+  nguon:
+  - wiki-loudspeaker
+  ket_qua: null
+  ghi_chu: 'chưa chắc: Wikipedia Loudspeaker chỉ nói chung "không thể vừa gọn vừa đủ đáp ứng tần số thấp"; chưa có nguồn bậc 1–2 về loa điện thoại, và "mất tiếng bàn đạp" không có nguồn. Đề nghị lượt 2 / review: giữ khuyến nghị tai nghe, bỏ vế giải thích, hay tìm nguồn kỹ thuật.'
+- id: n17
+  cau: Bản thu chỉ lưu trong trình duyệt này; xóa dữ liệu trình duyệt sẽ mất.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/kho-thu.js (IndexedDB của trình duyệt); src/scripts/thu-am.js veLai(): dòng "Xóa dữ liệu trình duyệt sẽ mất bản thu; hãy tải về những bản muốn giữ".'
+- id: n18
+  cau: Bấm Tải về những bản muốn giữ lâu dài.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/thu-am.js: nút "Tải về" (a download, tenFile) ở mỗi bản thu.'
+khuong_nhac: []

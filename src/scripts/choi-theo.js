@@ -9,7 +9,7 @@
 // veChoiTheo, veHatLai dựng sẵn ô lúc build, mount thêm phần bấm được.
 import { choiNot, chuanBi, layNgCanh, tiengGo } from './am-thanh.js';
 import { boQuangTam, caoDoOnDinh, chamCaoDo, chamMidi, tomTatCham } from './cham-diem.js';
-import { pianoRoll, tenNot } from './hinh-so-sanh.js';
+import { hangKetQua, pianoRoll, tenNot } from './hinh-so-sanh.js';
 import { coMicro, dongMicro, giuMicro, midiCuaTanSo, moMicro, ngheMicro } from './micro.js';
 import { coMidi, ketNoi, nghe, veTrangThaiMidi } from './midi.js';
 import { ghiNgay, kyNang } from './tien-do.js';
@@ -72,16 +72,8 @@ export function notCan(bai, nhacCu, t0, phach) {
 	});
 }
 
-/** Hàng kết quả từng nốt (resultRow cũ): ✓, "thiếu", số cent hay tên phím đã bấm. */
-export function hangKetQua(kq) {
-	return `<div class="oz-ket-qua">${kq
-		.map((r) => {
-			const lop = r.ket_qua === 'dat' ? 'dat' : r.ket_qua === 'thieu' ? 'thieu' : 'sai';
-			const nhan = r.ket_qua === 'dat' ? '✓' : r.ket_qua === 'thieu' ? 'thiếu' : r.cent !== undefined ? `${r.cent > 0 ? '+' : ''}${r.cent}¢` : r.bam !== undefined ? tenNot(r.bam) : '?';
-			return `<span class="oz-kq oz-kq-${lop}"><b>${esc(tenNot(r.m))}</b>${esc(nhan)}</span>`;
-		})
-		.join('')}</div>`;
-}
+// hàng kết quả từng nốt: chuyển sang hinh-so-sanh.js (thị tấu một bè dùng chung, D7-L2)
+export { hangKetQua };
 
 const tuyChon = (o, chon) => Object.entries(o).map(([k, v]) => `<option value="${k}"${k === chon ? ' selected' : ''}>${esc(v.ten)}</option>`).join('');
 

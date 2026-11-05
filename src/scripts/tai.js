@@ -43,6 +43,16 @@ const LUAT = [
 	['.oz-chep', () => import('./chep.js'), false],
 	['.oz-so-cao-do', () => import('./so-cao-do.js'), false],
 	['.oz-choi-theo, .oz-hat-lai', () => import('./choi-theo.js'), false],
+	// công cụ Luyện tập (D7-L2). Khởi tạo ngay: nhật ký (chuỗi ngày, việc hôm nay ở đầu trang Nhật ký)
+	['.oz-xay', () => import('./xay.js'), false],
+	['.oz-giay-khuong', () => import('./giay-khuong.js'), false],
+	['.oz-phieu', () => import('./phieu.js'), false],
+	['.oz-thu-am', () => import('./thu-am.js'), false],
+	['.oz-tiet-tau', () => import('./tiet-tau.js'), false],
+	['.oz-thi-tau', () => import('./thi-tau.js'), false],
+	['.oz-thi-tau-hai-tay', () => import('./thi-tau-hai-tay.js'), false],
+	['.oz-nhat-ky', () => import('./nhat-ky.js'), true],
+	['.oz-nang-luc, .oz-tien-bo', () => import('./nang-luc.js'), false],
 ];
 const LE = 600;
 const cho = new Map(); // phần tử đang chờ tới gần màn hình -> hàm khởi tạo (trả về promise)

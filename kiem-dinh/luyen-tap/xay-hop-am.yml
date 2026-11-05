@@ -1,0 +1,78 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa luyen-tap/xay-hop-am
+trang: src/content/docs/luyen-tap/xay-hop-am.md
+nguon_cu: ../opus-zero/docs/luyen-tap/xay-hop-am.md
+tang: khung
+lan:
+- so: 1
+  ngay: '2026-11-05'
+  nhanh: moi/d7-l2
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Sonnet (D7-L2 lượt 1, phần 2/2)
+    luot_2: null
+    review: null
+    kiem_mau: null
+ghi_chu: 'Trang khung (D7-L2, phần 2/2). Không sửa chữ. n4 (3 và 4 nửa cung) dựa Wikipedia Minor third / Major third (bậc 3), vì OMT chỉ nói quãng ba thứ nhỏ hơn quãng ba trưởng nửa cung: lượt 2 nên tìm thêm nguồn bậc 1–2 cho số 3 và 4. Câu về công cụ kiểm trên src/scripts/xay.js (đối chiếu build.js cũ), nhac-ly.js (tên nốt đúng) và 2 trang bài 6, 7 đã chuyển. Quirk không sửa: nhãn "Chỉ giọng ít dấu hóa" gồm Si, Mi nhưng bỏ Mi♭, La♭ (xay.js GOC.slice(0, 8)). Thuật ngữ: nửa cung (semitone), hợp âm (chord), gam (scale) đều có bản ghi ở thuat-ngu.yml; nốt gốc, quãng ba chưa có (ghi cho D3-L5).'
+nguon:
+- id: wiki-m3
+  bac: 3
+  ten: Wikipedia, Minor third
+  link: https://en.wikipedia.org/wiki/Minor_third
+- id: wiki-M3
+  bac: 3
+  ten: Wikipedia, Major third
+  link: https://en.wikipedia.org/wiki/Major_third
+- id: omt-triads
+  bac: 2
+  ten: Open Music Theory, Triads
+  link: https://viva.pressbooks.pub/openmusictheory/chapter/triads/
+nhan_dinh:
+- id: n1
+  cau: 'Đây là bài tập "viết" trên bàn phím: site yêu cầu một gam hoặc hợp âm.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/xay.js: BO (hợp âm ba, hợp âm bảy, gam trưởng, ba dạng gam thứ, điệu thức và ngũ cung), taoCau; câu hỏi "Bấm các nốt của: …".'
+- id: n2
+  cau: Bạn bấm chọn từng nốt, rồi bấm Kiểm tra; bấm lại một phím để bỏ chọn.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/xay.js: doi(m) bật/tắt phím (ganBanPhim khiBam); nút data-act="kiem" ("Kiểm tra"); aria-pressed theo phím đã chọn.'
+- id: n3
+  cau: 'Với hợp âm: bắt đầu từ nốt gốc, đếm số nửa cung cho từng quãng 3.'
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+- id: n4
+  cau: Quãng ba thứ có 3 nửa cung, quãng ba trưởng có 4 nửa cung.
+  loai: dinh-nghia
+  nguon:
+  - wiki-m3
+  - wiki-M3
+  - omt-triads
+  ket_qua: dung
+  ghi_chu: 'Wikipedia Minor third: "the interval from A to C is a minor third, as the note C lies three semitones above A"; Major third: "The major third spans four semitones, whereas the minor third only spans three". OMT Triads: "Minor triads contain a minor third, which is one half step smaller than a major third." (OMT không ghi số 3 và 4; số lấy từ Wikipedia, bậc 3, lượt 2 nên tìm nguồn bậc 1–2 như bài 9 Quãng của site, đã khóa ở D3-L2.)'
+- id: n5
+  cau: 'Với gam: áp công thức cung và nửa cung từ bài 6 (Gam trưởng) và bài 7 (Gam thứ).'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: src/content/docs/nhac-ly/06-gam-truong.md có "## Công thức gam trưởng" (cung, cung, nửa cung, …); 07-gam-thu.md có công thức cung và nửa cung của ba dạng gam thứ ("nửa cung" 7 lần); đúng số bài 6, 7.
+- id: n6
+  cau: Bàn phím không phân biệt Fa♯ với Sol♭.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/xay.js: kiemTra so theo lớp cao độ (lopCaoDo, mod 12); veBanPhim: một phím đen cho Fa♯/Sol♭.'
+- id: n7
+  cau: Sau khi đúng, hãy đọc tên nốt chính xác trong phần đáp án; đó là phần "viết" thật sự.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/xay.js: kiem(): khi đúng, bao(`Đúng: ${tenDapAn(cau)}.`) với tenViet có dấu hóa (kiểm bằng node: 12 gốc cho gam trưởng, hợp âm ba trưởng và thứ ra tên đúng, như Si♭ Đô Rê Mi♭ Fa Sol La). Vế "phần viết thật sự" là lời khuyên.'
+- id: n8
+  cau: Khi đã thạo, bỏ dấu ở ô "Chỉ giọng ít dấu hóa".
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/xay.js: ô data-k="it-dau" nhãn "Chỉ giọng ít dấu hóa", mặc định chọn; itDau → GOC.slice(0, 8) (C D E F G A B Bb), bỏ chọn thì cả 12 gốc. Ghi chú cho người giao: "ít dấu hóa" gồm Si, Mi (4–5 dấu thăng) nhưng bỏ Mi♭, La♭; nhãn là lựa chọn của site, không sửa.'
+- id: n9
+  cau: Có đàn piano điện thì cắm vào máy tính để dùng phím thật; link tới Kết nối đàn MIDI.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/xay.js: nghe(su.loai === "on") → doi(veKhung(m)); src/scripts/midi.js: Web MIDI (Chrome, Edge, Opera trên máy tính); luyen-tap/ket-noi-midi có ở src/content/docs; ô trạng thái ::cong-cu{ten="midi-status"} ở cuối trang.'
+khuong_nhac: []

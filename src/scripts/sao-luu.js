@@ -7,6 +7,7 @@
 // Khác bản cũ: file tải về tên opus-<ngày>.json (site đổi tên), chữ "tải từ Opus Zero" thành "tải từ trang Dữ liệu".
 // veSaoLuu dựng sẵn ô lúc build, mount đọc dữ liệu và thêm phần bấm được.
 import { KHOA, homNay } from './tien-do.js';
+import { banThu, idb } from './kho-thu.js';
 
 export const DINH_DANG = 'opus-zero-backup';
 export const KHOA_AM = 'opus-zero:sound';
@@ -290,36 +291,6 @@ export const veSaoLuu = () =>
 
 // ---------- Trong trình duyệt ----------
 
-const DB = 'opus-zero-recordings';
-const KHO_THU = 'rec';
-/** Một việc trên kho bản thu (IndexedDB); trình duyệt không có IndexedDB thì null. */
-function idb(che, viec) {
-	return new Promise((ok, hong) => {
-		if (!window.indexedDB) return ok(null);
-		const r = indexedDB.open(DB, 1);
-		r.onupgradeneeded = () => r.result.createObjectStore(KHO_THU, { keyPath: 'id' });
-		r.onerror = () => hong(r.error);
-		r.onsuccess = () => {
-			const db = r.result;
-			let q;
-			try {
-				const t = db.transaction(KHO_THU, che);
-				t.oncomplete = () => (db.close(), ok(q && q.result));
-				t.onerror = () => (db.close(), hong(t.error));
-				// hủy (hết chỗ lưu…): báo lỗi, không treo
-				t.onabort = () => (db.close(), hong(t.error || new Error('giao dịch bị hủy')));
-				q = viec(t.objectStore(KHO_THU));
-			} catch (e) {
-				db.close();
-				hong(e);
-			}
-		};
-	});
-}
-const banThu = () =>
-	idb('readonly', (s) => s.getAll())
-		.then((x) => x || [])
-		.catch(() => []);
 const blobThanhB64 = (blob) =>
 	new Promise((ok) => {
 		const fr = new FileReader();

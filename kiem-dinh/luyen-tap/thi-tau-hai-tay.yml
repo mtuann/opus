@@ -1,0 +1,141 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa luyen-tap/thi-tau-hai-tay
+trang: src/content/docs/luyen-tap/thi-tau-hai-tay.md
+nguon_cu: ../opus-zero/docs/luyen-tap/thi-tau-hai-tay.md
+tang: khung
+lan:
+- so: 1
+  ngay: '2026-11-05'
+  nhanh: moi/d7-l2
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Sonnet (D7-L2 lượt 1, phần 2/2)
+    luot_2: null
+    review: null
+    kiem_mau: null
+ghi_chu: 'Trang khung (D7-L2, phần 2/2). Không có nhận định cần nguồn ngoài: bảng bốn cấp và các câu về cách công cụ chấm là câu về site, kiểm trên taoBai, loiSauCham, CAP, TIET_TAU, TAY_TRAI của src/scripts/thi-tau-hai-tay.js (đối chiếu sight2.js cũ: cùng luật, test luyen-tap-d7 so với bản cũ). Một chỗ sửa: n9 (cấp 1 không có hợp âm tay trái). Thuật ngữ trang dùng chưa có bản ghi ở thuat-ngu.yml: thị tấu, nốt tròn, nốt trắng, nốt đen, móc đơn, chấm dôi, thế năm ngón, chủ âm (có: tonic), hợp âm (có: chord), ô nhịp (có: measure), hóa biểu (key-signature đã có). Chưa chắc (không sửa): cấp 4 không có cấp 5 để gợi ý lên (n20); ô V ở cấp 4 rải có bậc 4 (âm bảy, n8). Mô-đun trang kiểm khớp câu trên trang, trừ n9.'
+doi_chu:
+- cu: Ở mọi cấp, nốt của tay phải ở phách mạnh luôn nằm trong hợp âm của tay trái, và bài luôn kết về chủ âm, nên tai bạn có chỗ dựa để biết mình chơi đúng hay sai.
+  moi: Từ cấp 2, nốt của tay phải ở phách mạnh luôn nằm trong hợp âm của tay trái; ở mọi cấp, bài luôn kết về chủ âm. Nhờ vậy tai bạn có chỗ dựa để biết mình chơi đúng hay sai.
+  ly_do: 'n9 (da-sua): ở cấp 1 hai tay chơi lần lượt, không có hợp âm tay trái (taoBai: oGiaiDieu với hopAm = null), nên "ở mọi cấp" sai; luật phách mạnh chỉ áp dụng từ cấp 2.'
+nguon: []
+nhan_dinh:
+- id: n1
+  cau: Mỗi lần bấm Bài mới, site tạo một bài bốn ô nhịp cho hai tay trên khuông kép, đúng cấp bạn chọn.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/thi-tau-hai-tay.js: taoBai (4 ô: cấp 1 hai ô RH rồi hai ô LH; cấp 2–4 bốn ô theo KE_HOACH), sangAbc (%%score {RH LH}, khóa Sol và khóa Fa), nút data-act="moi", ô Cấp (CAP).'
+- id: n2
+  cau: Đặt điện thoại hoặc máy tính lên giá nhạc, đọc khoảng nửa phút, rồi chơi ngay trên đàn của bạn, một lượt, không dừng lại.
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+- id: n3
+  cau: Mỗi tay đặt ở thế năm ngón bắt đầu từ chủ âm; số ngón ở nốt đầu tiên của mỗi tay cho biết vị trí đó.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/thi-tau-hai-tay.js: GIONG (chủ âm RH 28/32/31/29/33/29/30, LH 21/18/17/22/19/22/23), oGiaiDieu chỉ dùng bậc 1–5; be(): chỉ nốt đầu của mỗi tay có !ngón! (RH: bậc; LH: 6 − bậc).'
+- id: n4
+  cau: Link "Vị trí năm ngón" tới piano/nam-ngon.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: src/content/docs/piano/nam-ngon.md có, title "Vị trí năm ngón và những bài hai tay đầu tiên".
+- id: n5
+  cau: 'Cấp 1: Đô trưởng; tay phải hai ô rồi tay trái hai ô, lần lượt; tiết tấu nốt tròn, nốt trắng, nốt đen; nhịp 4/4.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/thi-tau-hai-tay.js: CAP[1] giong C, nhip 4/4; taoBai cap<=1: rh 2 ô + lh 2 ô xen kẽ; TIET_TAU["4/4"][1] chỉ [4],[2,2],[1,1,2],[2,1,1],[1,1,1,1] (đơn vị nốt đen: tròn, trắng, đen).'
+- id: n6
+  cau: 'Cấp 2: Đô, Sol, Fa trưởng; hai tay cùng lúc, tay phải hát, tay trái giữ một nốt trầm dài mỗi ô (hợp âm I, IV, V); thêm nhịp 3/4 và nốt trắng chấm dôi.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/thi-tau-hai-tay.js: CAP[2] giong C,G,F, nhip 4/4 và 3/4; taoBai cap===2 → lh mỗi ô một nốt dài n phách ({I:1,IV:4,V:5}); KE_HOACH chỉ I, IV, V; TIET_TAU 3/4 cấp 2 có [3] (trắng chấm dôi), 4/4 có [3,1].'
+- id: n7
+  cau: 'Cấp 3: thêm La thứ và Rê thứ; tay trái hai nốt mỗi ô theo hợp âm; thêm móc đơn.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/thi-tau-hai-tay.js: CAP[3] giong C,G,F,Am,Dm; TAY_TRAI[3] mỗi ô hai nốt (4/4: 2+2 phách; 3/4: 2+1) là bậc 1, 5 (I), 4, 1 (IV), 5, 2 (V); TIET_TAU cấp 3 có 0.5 (móc đơn).'
+- id: n8
+  cau: 'Cấp 4: Sol, Rê, Fa trưởng; Mi thứ, Rê thứ; tay trái rải hợp âm bằng nốt đen; thêm nốt đen chấm dôi.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/thi-tau-hai-tay.js: CAP[4] giong G,D,F,Em,Dm; TAY_TRAI[4] mỗi nốt 1 phách (ô I: 1-5-3-5; ô cuối là một nốt dài); TIET_TAU cấp 4 có 1.5 (đen chấm dôi). Lưu ý: ô V rải bậc 5-2-4-2 (bậc 4 là âm bảy của V7), vẫn là "rải hợp âm" theo nghĩa rộng; không sửa.'
+- id: n9
+  cau: Từ cấp 2, nốt của tay phải ở phách mạnh luôn nằm trong hợp âm của tay trái.
+  loai: ve-site
+  ket_qua: da-sua
+  ghi_chu: 'src/scripts/thi-tau-hai-tay.js: oGiaiDieu: laManh = hopAm && manh.includes(t) (manh [0,2] ở 4/4, [0] ở 3/4) → ganHopAm trong HOP_AM[hợp âm] (I {1,3,5}, IV {4,1}, V {5,2} sau khi lọc bậc ≤5); chống lặp ba nốt vẫn chọn trong hợp âm khi là phách mạnh. Cấp 1: hopAm = null, hai tay chơi lần lượt nên không có hợp âm tay trái. Trang cũ (sight2.js cũ giống) viết "Ở mọi cấp": sai với cấp 1. Cũ: "Ở mọi cấp, nốt của tay phải ở phách mạnh luôn nằm trong hợp âm của tay trái, và bài luôn kết về chủ âm, nên tai bạn có chỗ dựa để biết mình chơi đúng hay sai." Mới: "Từ cấp 2, nốt của tay phải ở phách mạnh luôn nằm trong hợp âm của tay trái; ở mọi cấp, bài luôn kết về chủ âm. Nhờ vậy tai bạn có chỗ dựa để biết mình chơi đúng hay sai."'
+- id: n10
+  cau: Ở mọi cấp, bài luôn kết về chủ âm.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/thi-tau-hai-tay.js: oGiaiDieu(cuoi=true) đặt nốt cuối d = 1 (chủ âm của tay đó) ở mọi cấp; taoBai gọi với het (cấp ≥ 2) hay ô LH cuối (cấp 1).'
+- id: n11
+  cau: Link "danh sách 30 giây" tới piano/thi-tau#quet-30-giay-truoc-khi-choi, nói về giọng và nhịp, hình dạng các câu, tiết tấu khó nhất.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/content/docs/piano/thi-tau.md: "## Quét 30 giây trước khi chơi" (id quet-30-giay-truoc-khi-choi theo id-cu) có danh sách giọng, số chỉ nhịp và tốc độ, hình mẫu, tiết tấu khó…; trang tóm ba mục đầu, khớp.'
+- id: n12
+  cau: Số ngón ở nốt đầu mỗi tay cho biết thế tay; đặt cả hai tay lên phím trước khi bắt đầu.
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+- id: n13
+  cau: Đếm vào một ô rồi chơi một lượt không dừng; sai thì bỏ qua, giữ nhịp, vì trong thị tấu giữ nhịp quan trọng hơn đúng từng nốt.
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+- id: n14
+  cau: Bật "Gõ nhịp" ở trình phát nếu muốn có tiếng đếm.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/abc.js congCu(): ô chọn "Gõ nhịp" (data-k="click", st.goNhip) khi khuông có trình phát; src/scripts/thi-tau-hai-tay.js mount() nạp abc.js cho khuông (khối .abc-notation). Ghi chú: bản xem chỉ hiện sau khi abcjs tải xong.'
+- id: n15
+  cau: 'Rồi mới nghe: bấm phát để so sánh với điều bạn vừa chơi, sau đó tự chấm một trong ba mức.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/thi-tau-hai-tay.js: trình phát từ abc.js; ba nút data-r (MUC: Trôi chảy, Vấp vài chỗ, Phải dừng nhiều); sau khi chấm các nút aria-disabled (chấm một lần mỗi bài).'
+- id: n16
+  cau: Ô phần trăm ở trình phát chỉnh tốc độ phần nghe.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'public/vendor/abcjs: ô .abcjs-midi-tempo (type number, mặc định 100, nhãn "%") gọi warpHandler → setTempo; abc.js dùng trình phát của abcjs (SynthController).'
+- id: n17
+  cau: Khi tự chơi, hãy chọn tốc độ mà bạn chắc chắn không phải dừng, kể cả khi nó chậm hơn nhiều so với tốc độ ghi trên bài.
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+- id: n18
+  cau: 'Có ba mức tự chấm: Trôi chảy, Vấp vài chỗ, Phải dừng nhiều.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/thi-tau-hai-tay.js: MUC = good/some/bad với đúng ba nhãn này.'
+- id: n19
+  cau: 'Trôi chảy: giữ nhịp từ đầu đến cuối, sai không quá một hai nốt. Vấp vài chỗ: dừng hoặc chậm lại một hai lần. Phải dừng nhiều: dừng ở hầu hết các ô.'
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+- id: n20
+  cau: Khi bốn trong năm bài gần nhất ở một cấp đều trôi chảy, công cụ sẽ gợi ý bạn lên cấp.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/thi-tau-hai-tay.js: loiSauCham: cung = lịch sử cùng cấp, slice(-5); đủ 5 và ≥ 4 "good" thì thêm "bạn đã sẵn sàng lên cấp N+1". Chỉ khi cap < 4 (cấp 4 không có cấp 5): câu trang nói chung, không sửa.'
+- id: n21
+  cau: 'Mỗi ngày đọc 3–5 bài là đủ: thị tấu tiến bộ nhờ đều đặn chứ không nhờ đọc thật nhiều trong một buổi.'
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+- id: n22
+  cau: Kết quả được tính vào kế hoạch hôm nay như một kỹ năng riêng; link tới Nhật ký luyện tập.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/thi-tau-hai-tay.js: kyNang("sight2", muc==="good"), ghiNgay("readings"); src/scripts/ke-hoach.js KY_NANG có "sight2" (Thị tấu hai tay); src/scripts/nhat-ky.js có "bài thị tấu hai tay" (readings); luyen-tap/nhat-ky có ở src/content/docs.'
+- id: n23
+  cau: 'Link "Đọc nhạc và thị tấu" tới piano/thi-tau: đọc hai khóa cùng lúc, đọc theo quãng, chọn sách thị tấu.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/content/docs/piano/thi-tau.md: "## Đọc hai khuông cùng lúc", "### Quãng trên khuông và trên phím", "## Tài liệu theo trình độ"; title trang "Đọc nhạc và thị tấu trên đàn".'
+- id: n24
+  cau: 'Link "Thị tấu một bè": giai điệu một bè, hát hoặc chơi một tay, có chấm điểm qua micro hoặc đàn MIDI.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/content/docs/luyen-tap/thi-tau.md (phần 1/2 của lô) và src/scripts/thi-tau.js: nút "Bằng đàn MIDI" và "Bằng micro (hát hoặc nhạc cụ)" (mục "Chơi và được chấm"); chép giai điệu một bè.'
+- id: n25
+  cau: Link Phiếu bài tập và Đọc nốt, dùng khi còn phải dừng lại tìm tên nốt.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'luyen-tap/phieu-bai-tap (đề đọc nốt, quãng, hợp âm, hóa biểu: xem mô tả ở piano/thi-tau "Luyện trên site") và luyen-tap/doc-not (bấm tên nốt trên khuông) có ở src/content/docs.'
+khuong_nhac: []

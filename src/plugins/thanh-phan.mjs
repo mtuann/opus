@@ -26,6 +26,15 @@ import { veChep } from '../scripts/chep.js';
 import { veSaoLuu } from '../scripts/sao-luu.js';
 import { veSoCaoDo } from '../scripts/so-cao-do.js';
 import { veChoiTheo, veHatLai } from '../scripts/choi-theo.js';
+import { veXay } from '../scripts/xay.js';
+import { veGiayKhuong } from '../scripts/giay-khuong.js';
+import { vePhieu } from '../scripts/phieu.js';
+import { veThuAm } from '../scripts/thu-am.js';
+import { veTietTau } from '../scripts/tiet-tau.js';
+import { veThiTau } from '../scripts/thi-tau.js';
+import { veThiTauHaiTay } from '../scripts/thi-tau-hai-tay.js';
+import { veNhatKy } from '../scripts/nhat-ky.js';
+import { veNangLuc, veTienBo } from '../scripts/nang-luc.js';
 import { bangHep } from './bang-hep.mjs';
 
 export const esc = (s) =>
@@ -33,20 +42,21 @@ export const esc = (s) =>
 
 /** HTML đã dựng của trang có khối cần JavaScript (khuông nhạc, câu hỏi, khối nghe, danh sách việc, bài kiểm tra đầu vào,
  * chặng piano, ô gợi ý tập, bàn phím, vòng quãng năm, luyện hóa biểu, công cụ âm học, thẻ ghi nhớ, trạng thái bài đã học,
- * luyện tai, máy đếm nhịp, bài đang tập, kế hoạch tập, đoán phong cách, các công cụ Luyện tập của D7-L1)
+ * luyện tai, máy đếm nhịp, bài đang tập, kế hoạch tập, đoán phong cách, các công cụ Luyện tập của D7-L1, D7-L2)
  * không: MarkdownContent.astro chỉ tải bộ tải thành phần ở những trang này. */
 export const canTaiScript = (html) =>
-	/\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec|oz-placement|oz-muc-do|oz-goi-y|oz-ban-phim|oz-vong|oz-lhb|oz-boi-am|oz-pho|oz-len-day|oz-the-nho|oz-trang-thai-bai|oz-lt|oz-may-dem-nhip|oz-bai-dang-tap|oz-ke-hoach|oz-nd|oz-midi|oz-chon-am|oz-tra-phim|oz-doc-not|oz-chep|oz-sao-luu|oz-so-cao-do|oz-choi-theo|oz-hat-lai)[\s"]/.test(html);
+	/\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec|oz-placement|oz-muc-do|oz-goi-y|oz-ban-phim|oz-vong|oz-lhb|oz-boi-am|oz-pho|oz-len-day|oz-the-nho|oz-trang-thai-bai|oz-lt|oz-may-dem-nhip|oz-bai-dang-tap|oz-ke-hoach|oz-nd|oz-midi|oz-chon-am|oz-tra-phim|oz-doc-not|oz-chep|oz-sao-luu|oz-so-cao-do|oz-choi-theo|oz-hat-lai|oz-xay|oz-giay-khuong|oz-phieu|oz-thu-am|oz-tiet-tau|oz-thi-tau|oz-thi-tau-hai-tay|oz-nhat-ky|oz-nang-luc|oz-tien-bo)[\s"]/.test(html);
 
 /** HTML đã dựng có hình hóa biểu (vẽ bằng <use href="#oz-kh-…">) không: MarkdownContent.astro thêm định nghĩa ký hiệu một lần. */
 export const canKyHieu = (html) => html.includes('href="#oz-kh-');
 
 /**
- * Trang có công cụ phát tiếng piano (bàn phím, vòng quãng năm, luyện tai, các công cụ Luyện tập của D7-L1) không:
+ * Trang có công cụ phát tiếng piano (bàn phím, vòng quãng năm, luyện tai, các công cụ Luyện tập của D7-L1; của D7-L2: xây gam
+ * và hợp âm, tiết tấu, thị tấu một bè) không:
  * MarkdownContent.astro ghi nguồn của mẫu âm (CC BY 3.0 đòi ghi tác giả) một lần ở cuối bài, cạnh mục Nguồn.
  */
 export const coAmPiano = (html) =>
-	/\sclass="(?:[^"]*\s)?(?:oz-ban-phim|oz-vong|oz-lt|oz-midi|oz-chon-am|oz-tra-phim|oz-doc-not|oz-chep|oz-so-cao-do|oz-choi-theo|oz-hat-lai)[\s"]/.test(html);
+	/\sclass="(?:[^"]*\s)?(?:oz-ban-phim|oz-vong|oz-lt|oz-midi|oz-chon-am|oz-tra-phim|oz-doc-not|oz-chep|oz-so-cao-do|oz-choi-theo|oz-hat-lai|oz-xay|oz-tiet-tau|oz-thi-tau)[\s"]/.test(html);
 
 /** Dòng ghi nguồn mẫu âm piano (public/mau-am/piano/LICENSE.txt); data-sinh: không phải chữ của trang. */
 export const nguonAmPiano = (base = DUONG_GOC) =>
@@ -763,7 +773,24 @@ const CONG_CU = {
 	tuner: () => veSoCaoDo(),
 	playalong: () => veChoiTheo(),
 	singback: () => veHatLai(),
+	// Luyện tập (D7-L2)
+	build: () => veXay(),
+	staffpaper: () => veGiayKhuong(),
+	'worksheet-gen': () => vePhieu(),
+	recorder: () => veThuAm(),
+	rhythm: () => veTietTau(),
+	sight: () => veThiTau(),
+	sight2: () => veThiTauHaiTay(),
+	journal: () => nhatKy(),
+	skills: () => veNangLuc(lienKetCongCuTap()),
+	trends: () => veTienBo(),
 };
+
+/** Nhật ký luyện tập (D7-L2): link "Dữ liệu của tôi" dựng lúc build, "sắp có" khi trang Dữ liệu chưa có trong bản build. */
+export function nhatKy(ds = trangTrongBan()) {
+	const co = new Set(ds.map(duongDanTrang)).has('luyen-tap/du-lieu/');
+	return veNhatKy(lienKet(`${DUONG_GOC}luyen-tap/du-lieu/`, 'Dữ liệu của tôi', co));
+}
 /** Công cụ không có thông số: viết thêm thuộc tính thì build hỏng (gõ nhầm, hay chép từ khối cũ). */
 const KHONG_THONG_SO = new Set([
 	'placement',
@@ -793,6 +820,16 @@ const KHONG_THONG_SO = new Set([
 	'tuner',
 	'playalong',
 	'singback',
+	'build',
+	'staffpaper',
+	'worksheet-gen',
+	'recorder',
+	'rhythm',
+	'sight',
+	'sight2',
+	'journal',
+	'skills',
+	'trends',
 ]);
 
 /** ::cong-cu{ten="…" …}: công cụ luyện tập; thuộc tính khác là thông số (data-* của khối oz- cũ). */

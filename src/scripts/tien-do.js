@@ -73,3 +73,65 @@ export function kyNang(id, dung) {
 	ghi(data);
 	bao();
 }
+
+// ---------- Nhật ký luyện tập (D7-L2): việc trong ngày, ghi chú, mức hoạt động, chuỗi ngày (progress.js cũ) ----------
+
+/** Toàn bộ tiến độ đã lưu ({ days, store }; load cũ). */
+export const docTienDo = doc;
+/** Ghi lại toàn bộ tiến độ, không báo sự kiện (save cũ: nhật ký tự đánh dấu việc lúc vẽ lại, báo thì vẽ lại mãi). */
+export const ghiTienDo = ghi;
+/** Ngày `key` trong `data`, tạo mới nếu chưa có (getDay cũ). */
+export const ngayCua = (data, key) => (data.days[key] ??= { tasks: {}, note: '', notes: 0, intervals: 0, minutes: 0 });
+
+/** Đánh dấu một việc của hôm nay (setTask cũ). */
+export function datViec(viec, xong) {
+	const data = doc();
+	const ngay = ngayCua(data, homNay());
+	(ngay.tasks ??= {})[viec] = !!xong;
+	ghi(data);
+	bao();
+}
+
+/** Ghi chú của hôm nay (setNote cũ; không báo sự kiện, như bản cũ). */
+export function datGhiChu(chu) {
+	const data = doc();
+	ngayCua(data, homNay()).note = chu;
+	ghi(data);
+}
+
+/** Mức hoạt động của một ngày, 0–3 (level cũ). */
+export function mucNgay(d) {
+	if (!d) return 0;
+	let diem = Object.values(d.tasks || {}).filter(Boolean).length;
+	if ((d.notes || 0) >= 10) diem += 1;
+	if ((d.intervals || 0) >= 10) diem += 1;
+	if ((d.minutes || 0) >= 5) diem += 1;
+	if ((d.chords || 0) + (d.keysigs || 0) + (d.rhythms || 0) + (d.melodies || 0) + (d.builds || 0) + (d.scales || 0) + (d.styles || 0) >= 10) diem += 1;
+	if ((d.cards || 0) >= 10 || (d.quizzes || 0) >= 1) diem += 1;
+	if ((d.piano || 0) >= 1) diem += 2; // đã ngồi vào đàn tập bài
+	if ((d.checks || 0) >= 1) diem += 1;
+	if ((d.readings || 0) >= 3) diem += 1; // thị tấu hai tay
+	if (diem === 0) return 0;
+	if (diem <= 1) return 1;
+	if (diem <= 3) return 2;
+	return 3;
+}
+
+/** Ngày iso (YYYY-MM-DD) lùi hay tiến `n` ngày, theo lịch (không lệch vì giờ mùa hè). */
+export function congNgay(iso, n) {
+	const [y, m, d] = iso.split('-').map(Number);
+	const x = new Date(Date.UTC(y, m - 1, d + n));
+	return x.toISOString().slice(0, 10);
+}
+
+/** Số ngày luyện tập liên tiếp tính tới hôm nay (streak cũ): hôm nay chưa tập thì vẫn tính chuỗi tới hôm qua. */
+export function chuoiNgay(days, hom = homNay()) {
+	let d = hom;
+	let n = 0;
+	if (mucNgay(days[d]) === 0) d = congNgay(d, -1);
+	while (mucNgay(days[d]) > 0) {
+		n++;
+		d = congNgay(d, -1);
+	}
+	return n;
+}

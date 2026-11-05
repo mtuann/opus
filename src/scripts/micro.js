@@ -143,6 +143,8 @@ export function dongMicro() {
 }
 
 export const dangMoMicro = () => !!luong;
+/** Luồng micro đang mở (MediaStream), hay null: công cụ thu âm (D7-L2) ghi luồng này bằng MediaRecorder. */
+export const luongMicro = () => luong;
 
 /** Nhận khung cao độ từ micro; trả về hàm thôi nhận (không còn ai nhận thì micro đóng). */
 export function ngheMicro(fn) {

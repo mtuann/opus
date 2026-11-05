@@ -74,6 +74,10 @@ function khoiCho(ten) {
 		...document.querySelectorAll(
 			':is(.oz-midi, .oz-chon-am, .oz-tra-phim, .oz-doc-not, .oz-chep, .oz-sao-luu, .oz-so-cao-do, .oz-choi-theo, .oz-hat-lai):not([data-san])',
 		),
+		// công cụ Luyện tập (D7-L2): như trên
+		...document.querySelectorAll(
+			':is(.oz-xay, .oz-giay-khuong, .oz-phieu, .oz-thu-am, .oz-tiet-tau, .oz-thi-tau, .oz-thi-tau-hai-tay, .oz-nhat-ky, .oz-nang-luc, .oz-tien-bo):not([data-san])',
+		),
 	];
 	if (ten) return cho.map((e) => `${e.className} "${e.textContent.trim().slice(0, 30)}"`);
 	cho[0]?.scrollIntoView({ block: 'center' });
