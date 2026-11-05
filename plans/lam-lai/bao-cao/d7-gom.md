@@ -124,7 +124,14 @@ Chữ đổi ghi `doi_chu`: `sach-in`, `cap-nhat` khớp `so-chu --doi-chu` ("do
 
 ### Lượt 2 bổ sung
 
-Chờ. Bảy câu (`d7-gom/bo-sung-l3.yml`, `xuat D7-L3 --con-lai`): `sach-in` n16, n18; `trong-tam-piano` n3, n6; `cap-nhat` n34, n58 (chữ đổi sau lượt 2: kết quả lượt 2 cũ đã gỡ khỏi hồ sơ, chép vào `ghi_chu`), n80 (đổi nhãn).
+Bảy câu (`d7-gom/bo-sung-l3.yml`, `xuat D7-L3 --con-lai`): `sach-in` n16, n18; `trong-tam-piano` n3, n6; `cap-nhat` n34, n58 (chữ đổi sau lượt 2: kết quả lượt 2 cũ đã gỡ khỏi hồ sơ, chép vào `ghi_chu`), n80 (đổi nhãn).
+
+Kết quả (`d7-gom/ket-qua-bo-sung-l3.yml`, đã `nhap`): 4 dung (`sach-in` n16, n18 theo Mozilla Support; `cap-nhat` n34 theo Open Music Theory 5.12, n58), 0 sai, 3 khong-chac. Người gom giữ chữ cả ba, ghi chú vào hồ sơ và thêm vào mẫu kiểm (`kiem-mau-l3.yml`, ba mục cuối):
+
+- `trong-tam-piano` n3, n6: lượt 2 không mở được nguồn nói thẳng (Wikipedia 404, Britannica 403); review đã viết lại câu cho nhẹ, n6 dẫn Henle HN 14.
+- `cap-nhat` n80: trang Commons không nói file dừng ở đâu; review đo độ dài qua Commons API (384,52 s) và đối chiếu mốc tham khảo của trang hướng dẫn nghe (phần phát triển từ 312 s).
+
+Phép thử `kiem-ung-dung.mjs` hỏng một lần ở lần chạy đầu của review ("error loading dynamically imported module … ui-core"); người gom chạy lại 18 lần (6 lần mỗi trình duyệt) đều đạt, và `ui-core` có trong danh sách lưu sẵn: có lẽ do `dist/` đang dựng lại. Theo dõi trên CI.
 
 ### Kiểm thử
 
