@@ -1,0 +1,757 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa piano/tac-pham/burgmuller-la-candeur
+trang: src/content/docs/piano/tac-pham/burgmuller-la-candeur.md
+nguon_cu: ../opus-zero/docs/piano/tac-pham/burgmuller-la-candeur.md
+tang: tac-pham
+lan:
+- so: 1
+  ngay: '2026-11-05'
+  nhanh: moi/d6-l1
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Opus 5.5 (D6-L1 phần B)
+    luot_2: null
+    review: null
+    kiem_mau: null
+ghi_chu: 'Bài học tác phẩm (tầng Tác phẩm). Bản nhạc: Mutopia 25EF-01 (Litolff), .ly, PDF A4 và MIDI tải ngày 05/11/2026 (User-Agent opus-kiem-dinh). Chữ do ::hop-tac-pham dựng (chip, bảng thông tin), ::hinh-cau-truc và ::hoc-tiep không tách ở đây: thuộc hồ sơ du-lieu/tac-pham/burgmuller-la-candeur. Sửa trang: n16 (Burgmüller mất ở Beaulieu-sur-Mer, không ở Paris), n30 (bỏ câu "được thu rất nhiều"), khối 1 (nốt cuối ô 8 là Sol5). Chưa chắc: n2 (câu đánh giá "tập étude được yêu thích nhất", có cả trong description). Thuật ngữ trang dùng (legato, dolce, poco rit., sf, coda, kết nửa, kết trọn, át âm) đều đã có trong src/data/thuat-ngu.yml hay trang nhạc lý đã khóa.'
+nguon:
+- id: mutopia-202
+  bac: 1
+  ten: 'Mutopia Project, La Candeur (Burgmüller, Op. 100), dàn trang Bas Wassink theo Collection Litolff, Mutopia-2013/01/12-202, phạm vi công cộng: file .ly, PDF A4 và MIDI tải ngày 05/11/2026'
+  link: https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=202
+- id: imslp-op100
+  bac: 2
+  ten: 'IMSLP, 25 Études faciles et progressives, Op.100 (Burgmüller, Friedrich): tên các bài, tựa đầy đủ, lần in đầu, bản thu (đọc wikitext qua API của IMSLP)'
+  link: https://imslp.org/wiki/25_%C3%89tudes_faciles_et_progressives,_Op.100_(Burgm%C3%BCller,_Friedrich)
+- id: imslp-burgmuller
+  bac: 2
+  ten: IMSLP, Category:Burgmüller, Friedrich (sinh 4/12/1806, mất 13/2/1874, quốc tịch Đức, thời kỳ Lãng mạn)
+  link: https://imslp.org/wiki/Category:Burgm%C3%BCller,_Friedrich
+- id: db-burgmuller
+  bac: 2
+  ten: 'Deutsche Biographie, Burgmüller, Friedrich (GND 117168890): 1806–1874, sinh ở Regensburg, mất ở Beaulieu; Komponist, Musiker, Pianist, Musiklehrer'
+  link: https://www.deutsche-biographie.de/pnd117168890.html
+- id: ndb-burgmuller
+  bac: 2
+  ten: 'Neue Deutsche Biographie, bài về gia đình Burgmüller (mục Norbert Burgmüller), đoạn về Friedrich: "Komponist populärer Klaviermusik, lebte seit 1832 in Paris"'
+  link: https://www.deutsche-biographie.de/sfz7533.html
+- id: bnf-burgmuller
+  bac: 2
+  ten: 'BnF, data.bnf.fr: Friedrich Burgmüller (1806-1874), ghi chú "Compositeur. - Installé à Paris en 1832"'
+  link: https://data.bnf.fr/ark:/12148/cb14788755q
+- id: cnrtl-candeur
+  bac: 2
+  ten: CNRTL (Trésor de la langue française informatisé), mục từ "candeur"
+  link: https://www.cnrtl.fr/definition/candeur
+- id: omt-binary
+  bac: 2
+  ten: Open Music Theory, Binary Form (kết nửa trước chỗ trở lại)
+  link: https://viva.pressbooks.pub/openmusictheory/chapter/binary-form/
+- id: kth-decay
+  bac: 2
+  ten: 'KTH (Royal Institute of Technology), Five lectures on the acoustics of the piano, Klaus Wogram: Decay of the piano tone'
+  link: https://www.speech.kth.se/music/5_lectures/wogram/decay.html
+- id: wiki-burgmuller
+  bac: 3
+  ten: Wikipedia, Friedrich Burgmüller (chỉ để đối chiếu mục Nguồn của trang)
+  link: https://en.wikipedia.org/wiki/Friedrich_Burgm%C3%BCller
+nhan_dinh:
+- id: n1
+  cau: La candeur là bài mở đầu (số 1) của tập 25 Études faciles et progressives, Op. 100 của Burgmüller.
+  loai: danh-muc
+  nguon:
+  - imslp-op100
+  ket_qua: dung
+  ghi_chu: 'IMSLP: "{{#subitem:...|number=1|title=La candeur}}" trong danh sách 25 bài của Op.100.'
+- id: n2
+  cau: Tập étude Op. 100 là tập étude được yêu thích nhất của Burgmüller, và với nhiều người La candeur là étude đầu tiên nghe như nhạc thật.
+  loai: lich-su
+  nguon:
+  - imslp-op100
+  ket_qua: null
+  ghi_chu: 'chưa chắc: câu đánh giá, không có nguồn đo "được yêu thích nhất". IMSLP có trang "See Also: List of Intermediate Piano Repertoire" và nhiều bản chép, bản thu cho Op. 100 (nhiều hơn hẳn các opus khác của Burgmüller trên Category), nhưng không nói thẳng. Đề nghị người giao: giữ như lời giới thiệu (chữ ở câu mở đầu và mô tả trang) hay viết lại "một trong những tập étude được dùng nhiều nhất". Không sửa vì câu nằm cả ở description (frontmatter).'
+- id: n3
+  cau: Bài có giai điệu móc đơn hát liền tiếng ở tay phải trên những hợp âm ngân của tay trái, rồi hai tay đổi vai.
+  loai: cau-truc
+  nguon: &id001
+  - mutopia-202
+  ket_qua: dung
+  ghi_chu: 'Mutopia: ô 1–8 tay phải móc đơn có dấu luyến, tay trái hợp âm nốt tròn; ô 9–12 tay trái chạy móc đơn (g8-5 ( b c d) …) trong khi tay phải giữ <c e>1.'
+- id: n4
+  cau: Chữ candeur nghĩa là trong sáng, ngây thơ.
+  loai: ten
+  nguon:
+  - cnrtl-candeur
+  ket_qua: dung
+  ghi_chu: 'CNRTL: "Pureté de l''âme qui se manifeste par un comportement simple et sincère"; "Innocence de cœur d''une pers. sans expérience de la vie".'
+- id: n5
+  cau: Muốn chơi đúng tính cách candeur, cần một legato thật đều và sự cân bằng tinh tế giữa hai tay.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n6
+  cau: Burgmüller mở tập Op. 100 bằng một bài hát không lời có câu, có chỗ to dần, một nốt nhấn sf ở đỉnh, một chỗ dolce e poco rit. và một coda nhỏ dần đến pp.
+  loai: cau-truc
+  nguon:
+  - mutopia-202
+  - imslp-op100
+  ket_qua: dung
+  ghi_chu: 'Mutopia: cresc. ô 5, \< ô 7, 10, 12; a8-5_\sf ô 14; "dolce e poco rit." ô 15; coda có \> mỗi nhóm, "dim. e poco rit.", <e c''>1_\pp. "Bài luyện ngón khô khan" là cách nói đối lập, không phải nhận định riêng.'
+- id: n7
+  cau: Gần như ô nào cũng là một chuỗi móc đơn có dấu luyến, từng nhóm bốn hoặc tám nốt.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: dấu luyến bốn nốt (ô 1, 2, 5, 6), tám nốt (ô 3, 4, 9, 11); vài ô không có móc đơn (ô 10, 12 tay phải nốt tròn, ô 13 nốt trắng, ô 21–23), nên "gần như" đúng.'
+- id: n8
+  cau: Đều về nhịp và đều về tiếng là nền của mọi giai điệu bạn sẽ chơi về sau.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n9
+  cau: Suốt đoạn A, tay trái chỉ giữ hợp âm.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia vThree ô 1–8: <c e g>1, <c f a>, <c e g>~<c e g>, <b f'' g>, <c e g>, <d fis c''>, <g b>2. r4.'
+- id: n10
+  cau: Đoạn A là hoàn cảnh lý tưởng để tập cho tay phải hát, còn tay trái lùi về phía sau.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n11
+  cau: Link "Phối hợp hai tay" tới /opus/piano/hai-tay/ (trang cùng nói về cân bằng hai tay).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Trang đích src/content/docs/piano/hai-tay.md có trong site mới. Điều cần giữ: trang ấy nói về phối hợp và cân bằng hai tay.'
+- id: n12
+  cau: Đoạn B đưa hình móc đơn xuống tay trái trong khi tay phải giữ hai nốt ngân; ô 13 bắt một bàn tay chơi hai bè cùng lúc.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: ô 10, 12 tay phải <c-2 e-4>1 trên tay trái móc đơn; ô 13 vOne g''2-5 fis (bè trên) và vTwo r8 es d c (bè dưới), cùng khuông tay phải.'
+- id: n13
+  cau: Bài ở Đô trưởng nhưng có Fa♯ (ô 7), Mi♭ (ô 13) và La♭ (coda).
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \key c\major; <d fis c''> ô 7; es ô 13 (vTwo); <c f as> ở coda (ô 18, 20).'
+- id: n14
+  cau: Nghe ra những màu hòa âm ấy ngay khi đang chơi là bước đầu của việc nghe hòa âm.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n15
+  cau: Friedrich Burgmüller sinh năm 1806 ở Regensburg.
+  loai: nam
+  nguon:
+  - db-burgmuller
+  - imslp-burgmuller
+  ket_qua: dung
+  ghi_chu: 'Deutsche Biographie: Lebensdaten 1806–1874, Geburtsort Regensburg. IMSLP: Born 1806/12/4.'
+- id: n16
+  cau: Burgmüller sang Paris năm 1832 và sống ở Pháp đến cuối đời.
+  loai: lich-su
+  nguon:
+  - ndb-burgmuller
+  - bnf-burgmuller
+  - db-burgmuller
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "sang Paris năm 1832 và ở lại đó đến cuối đời". Chữ mới: "sang Paris năm 1832 và sống ở Pháp đến cuối đời". Lý do: Deutsche Biographie ghi Sterbeort Beaulieu (Beaulieu-sur-Mer, ở Pháp), không phải Paris; NDB: "lebte seit 1832 in Paris"; BnF: "Installé à Paris en 1832". (BnF ghi deathPlace Paris trong dữ liệu máy, cùng lúc ghi birthPlace Paris là sai rõ, nên theo Deutsche Biographie.) Trang Arabesque cũ có cùng câu "ở lại đó đến cuối đời": lô chuyển trang ấy cần sửa theo.'
+- id: n17
+  cau: Ở Paris, Burgmüller làm thầy dạy piano và viết nhạc salon (nhạc piano phổ thông) cho người chơi nghiệp dư.
+  loai: lich-su
+  nguon:
+  - db-burgmuller
+  - ndb-burgmuller
+  ket_qua: dung
+  ghi_chu: 'Deutsche Biographie: Beruf "Komponist; Musiker; Pianist; Musiklehrer". NDB: "Komponist populärer Klaviermusik". "Nhạc salon cho người chơi nghiệp dư" là cách gọi loại nhạc piano phổ thông ấy; Op. 100 ghi rõ cho người học (n20).'
+- id: n18
+  cau: Chân dung đầy đủ hơn của Burgmüller có ở trang Arabesque (/opus/piano/tac-pham/burgmuller-arabesque/).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Trang đích chưa chuyển (D6, lô khác). Site cũ ../opus-zero/docs/piano/tac-pham/burgmuller-arabesque.md, mục "Bối cảnh" dòng 32: đoạn tiểu sử Burgmüller (Regensburg 1806, Paris 1832, thầy dạy piano, nhạc salon, ballet La Péri 1843). Điều cần giữ: trang Arabesque có đoạn tiểu sử dài hơn trang này. Chú ý cho lô chuyển trang ấy: câu "ở lại đó đến cuối đời" ở trang cũ sai (xem n16).'
+- id: n19
+  cau: Arabesque là bài số 2 của cùng tập Op. 100, đứng ngay sau La candeur.
+  loai: danh-muc
+  nguon:
+  - imslp-op100
+  ket_qua: dung
+  ghi_chu: 'IMSLP: number=2, title=L''arabesque.'
+- id: n20
+  cau: 25 Études faciles et progressives, Op. 100 in năm 1851.
+  loai: nam
+  nguon:
+  - imslp-op100
+  ket_qua: dung
+  ghi_chu: 'IMSLP: "Year of First Publication=1851 – Paris: Benoît aîné"; bản in Benoît aîné "n.d.[1851]", số bản 410. B; Bibliographie de la France 27/12/1851.'
+- id: n21
+  cau: Tựa đề đầy đủ của tập nói các bài được soạn và ghi số ngón riêng cho tầm với của bàn tay nhỏ.
+  loai: ten
+  nguon:
+  - imslp-op100
+  ket_qua: dung
+  ghi_chu: 'IMSLP Alternative Title: "25 études faciles et progressives, composées et doigtées expressément pour l''etendue des petites mains".'
+- id: n22
+  cau: Mỗi bài của Op. 100 mang một tựa tiếng Pháp gợi một tính cách hay một hình ảnh.
+  loai: ten
+  nguon:
+  - imslp-op100
+  ket_qua: dung
+  ghi_chu: 'IMSLP: La candeur, L''arabesque, La pastorale, La petite réunion, Innocence, Progrès, Le courant limpide … La chevaleresque; vài tựa là tên thể loại (Ballade, Barcarolle, La tarentelle), vẫn gợi một hình ảnh.'
+- id: n23
+  cau: Độ khó các bài của Op. 100 tăng dần theo thứ tự.
+  loai: ten
+  nguon:
+  - imslp-op100
+  ket_qua: dung
+  ghi_chu: 'Chữ "progressives" trong tựa tập (IMSLP: "25 Études faciles et progressives"). Câu nói theo ý định của tựa.'
+- id: n24
+  cau: La candeur đứng đầu tập, ngay trước Arabesque.
+  loai: danh-muc
+  nguon:
+  - imslp-op100
+  ket_qua: dung
+  ghi_chu: 'IMSLP: số 1 La candeur, số 2 L''arabesque.'
+- id: n25
+  cau: Một bài hát dịu dàng, rồi một bài tinh nghịch, như hai mặt của cùng một đứa trẻ.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+  ghi_chu: Hình ảnh so sánh tính cách hai bài, không phải sự kiện.
+- id: n26
+  cau: 'Chữ candeur trong tiếng Pháp chỉ sự trong sáng, thật thà, không chút tính toán: cái ngây thơ của trẻ nhỏ.'
+  loai: ten
+  nguon:
+  - cnrtl-candeur
+  ket_qua: dung
+  ghi_chu: 'CNRTL: "Pureté de l''âme qui se manifeste par un comportement simple et sincère"; "Spontanéité d''une âme désintéressée"; "Innocence de cœur d''une pers. sans expérience de la vie".'
+- id: n27
+  cau: Bản dàn trang trên Mutopia (theo ấn bản Litolff) ghi thêm tựa tiếng Đức và tiếng Anh với nghĩa "sự chân thành".
+  loai: ten
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia .ly: subtitle = "Aufrightigkeit * Sincerity" (chữ Đức viết sai chính tả của Aufrichtigkeit); source = "Collection Litolff, 19th Century".'
+- id: n28
+  cau: 'Tính cách ấy là chìa khóa diễn tấu: không phô trương, không làm điệu, chỉ hát cho thật đều và thật sạch.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n29
+  cau: 'Với người lớn tự học, Burgmüller là cây cầu giữa sách giáo trình và tác phẩm thật: bài ngắn, viết vừa tay, nhưng bài nào cũng là một tiểu phẩm có tính cách; La candeur là chỗ tốt để tập thói quen vừa chơi vừa nghe tay phải.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n30
+  cau: Bài này được thu rất nhiều, cả bởi nghệ sĩ lẫn giáo viên.
+  loai: so-lieu
+  nguon:
+  - imslp-op100
+  ket_qua: da-bo
+  ghi_chu: 'Bỏ câu (không kiểm được; IMSLP chỉ có một bản thu của số 1, của Luis Kolodin, và một bản tổng hợp). Chữ cũ: "Bài này được thu rất nhiều, cả bởi nghệ sĩ lẫn giáo viên. Nghe hai, ba bản và mỗi lần chú ý một điều:". Chữ mới: "Nghe hai, ba bản thu và mỗi lần chú ý một điều:".'
+- id: n31
+  cau: Năm câu hỏi khi nghe (giai điệu hay hình nốt, tay trái ở đâu, đổi vai ở đoạn B, nốt La sf ở ô 14, kết).
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n32
+  cau: Ở đoạn B, tay trái nhận hình móc đơn trong khi tay phải giữ hai nốt ngân; nốt La cao ở ô 14 có dấu sf; coda nhỏ dần, chậm lại, hợp âm cuối pp.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: ô 10, 12; a8-5_\sf (A5) ô 14; "dim. e poco rit." và <e c''>1_\pp.'
+- id: n33
+  cau: Link nghe tiếp Arabesque (/opus/piano/tac-pham/burgmuller-arabesque/).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Trang đích chưa chuyển; site cũ ../opus-zero/docs/piano/tac-pham/burgmuller-arabesque.md có. Điều cần giữ: trang Arabesque Op. 100 số 2.'
+- id: n34
+  cau: La candeur và Arabesque đứng liền nhau trong tập mà tính cách trái ngược hẳn.
+  loai: danh-muc
+  nguon:
+  - imslp-op100
+  ket_qua: dung
+  ghi_chu: 'IMSLP: số 1 và số 2. "Tính cách trái ngược" là nhận xét (dịu dàng, legato so với nhanh, staccato), không cần nguồn riêng.'
+- id: n35
+  cau: 'Đoạn A (ô 1–8): p, dolce; tay phải hát chuỗi móc đơn bắt đầu từ Sol cao, tay trái giữ hợp âm; to dần ở ô 5–7, dừng trên hợp âm Sol (át âm).'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: g8-5_\p (G5) mở bài, "dolce" ở tay trái; cresc. ô 5, \< ô 7; ô 8 tay trái <g b>2. (hợp âm Sol).'
+- id: n36
+  cau: Đoạn A được nhắc lại (ô 1–8).
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \repeat volta 2 quanh ô 1–8.'
+- id: n37
+  cau: 'Đoạn B, nửa đầu (ô 9–12): p; ô 9 và 11 hai tay đi ngược chiều; ô 10 và 12 tay phải giữ Đô – Mi, tay trái chạy móc đơn và to dần.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: f8-5_\p ô 9; ô 9, 11 tay phải f d c b (xuống), tay trái g b c d (lên); ô 10, 12 <c e>1 với \<.'
+- id: n38
+  cau: 'Đoạn B, nửa sau (ô 13–16): Mi♭ tạo màu tối bất ngờ; nốt La cao sf rơi xuống Sol; dolce e poco rit.; kết ở Đô trưởng, tay trái đáp lại bằng hình nốt nhỏ Đô – Mi – Fa – Sol.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: es ô 13; a8-5_\sf ( g) ô 14; "dolce e poco rit." ô 15; kết thứ nhất e2. tay phải trên c8 e f g c,4 tay trái (ô 16).'
+- id: n39
+  cau: Đoạn B được nhắc lại (ô 9–15).
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \repeat volta 2 quanh ô 9–15, \alternative hai kết (ô 16 và ô 17).'
+- id: n40
+  cau: 'Kết thứ hai và coda: tay phải chạy lên Đô – Rê – Mi – Fa – Sol rồi rơi xuống Fa – Rê – Đô – Si, mỗi nhóm nhỏ dần; tay trái giữ âm nền Đô, hợp âm Fa thứ (có La♭) xen với Đô trưởng.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: kết thứ hai c8-3 b ( c-3 d e f g c,-1; f-5\> d c b\! (lặp); tay trái <c e>2, <c f as> <c f as>, <c e g>1 (âm nền C4 ở mọi hợp âm).'
+- id: n41
+  cau: 'Kết: tay trái nhắc lại hình Đô – Mi – Fa – Sol ở âm vực trầm; hợp âm Đô trưởng dim. e poco rit.; hợp âm cuối pp.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \clef bass c,8-5 ( e f g c,2) c8 ( e f g~ <c, g''>1); <g c e>2 "dim. e poco rit."; <e c''>1_\pp.'
+- id: n42
+  cau: 'Đoạn A (ô 1–8, nhắc lại) ở Đô trưởng; hợp âm Rê có Fa♯ (ô 7) dẫn về hợp âm Sol: dừng ở át âm (kết nửa).'
+  loai: cau-truc
+  nguon:
+  - mutopia-202
+  - omt-binary
+  ket_qua: dung
+  ghi_chu: 'Mutopia ô 7 <d fis c''>, ô 8 <g b> dưới giai điệu g b c d g: kết trên V. OMT Binary Form nói về half cadence trước phần sau.'
+- id: n43
+  cau: 'Đoạn A: tay phải có nhóm bốn móc đơn đi xuống (ô 1–2, 5–6), câu tám nốt có Si – Đô (ô 3–4), ô 7 dẫn xuống Sol; tay trái mỗi ô một hợp âm ngân, dolce.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: ô 1–2, 5–6 (g e d c)(g e d c), (c'' a g f)…; ô 3–4 g e d c b c e f; ô 7 b a c b d c b a → G4 ô 8.'
+- id: n44
+  cau: Ở ô 2 tay phải dời lên Đô6; ở ô 3–4 ngón 2 vắt qua ngón cái xuống Si.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: c''-5 (C6) ô 2; b-2 c-1 ô 3, 4.'
+- id: n45
+  cau: 'Đoạn B, nửa đầu (ô 9–12): hợp âm át bảy (Sol – Si – Rê – Fa) xen với Đô trưởng; ô 9, 11 tay phải Fa – Rê – Đô – Si đi xuống, tay trái Sol – Si – Đô – Rê đi lên; ô 10, 12 tay phải giữ Đô – Mi, tay trái chạy.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: ô 9, 11 tổng hợp F D C B + G B C D = G7 (Đô là nốt qua); ô 10, 12 C E trên g a b c d c e c = Đô trưởng.'
+- id: n46
+  cau: Ở ô 10 và 12, dấu to dần nằm trên nốt ngân của tay phải.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: <c-2\< e-4>1 ô 10, <c-2 e-4>1)\< ô 12 (dấu đặt ở bè tay phải).'
+- id: n47
+  cau: Trên piano, nốt đã đánh thì tắt dần, không thể to lên, nên chính tay trái làm việc to dần.
+  loai: dinh-nghia
+  nguon:
+  - kth-decay
+  ket_qua: dung
+  ghi_chu: 'KTH (Wogram): "the decay of a piano tone… since the initial blow of the hammer sets the string in vibration": âm piano chỉ tắt dần sau cú đánh của búa. Câu xuất hiện ở bảng Cấu trúc, câu hỏi 2 (dòng ">") và bài tập 2.'
+- id: n48
+  cau: 'Đoạn B, nửa sau (ô 13–16): Mi♭ và Fa♯ trên bè trầm La (ô 13); hợp âm Đô thế đảo hai (ô 14), Sol bảy (ô 15); kết trọn ở Đô trưởng.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: tay trái a2 <a c> ô 13; <g c e>1 ô 14 (Đô với Sol ở bè trầm: thế đảo hai); <g f''>2 <g f''> ô 15 (Sol – Fa: Sol bảy); kết thứ nhất tay phải E5 trên hợp âm Đô, kết thứ hai về Đô.'
+- id: n49
+  cau: Ô 13 tay phải chơi hai bè; ô 14 La sf rơi xuống Sol; ô 15 p, dolce e poco rit.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Mutopia ô 13–15 như n12, n38.
+- id: n50
+  cau: Kết thứ nhất quay về ô 9; kết thứ hai đi thẳng vào coda.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \alternative { { e2.) r4 } { c8-3 b … } } rồi coda.'
+- id: n51
+  cau: Coda dài khoảng 6 ô, trên âm nền Đô, hợp âm Fa thứ (Đô – Fa – La♭) xen với Đô trưởng; hình nốt của đoạn B trở lại, mỗi nhóm nhỏ dần; tay trái Đô – Mi – Fa – Sol; dim. e poco rit., pp.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia PDF: kết thứ hai là ô 17, hệ thứ ba bắt đầu ô 18, bài hết ở ô 23: coda ô 18–23 = 6 ô.'
+- id: n52
+  cau: Trong bản Mutopia, khuông tay trái chuyển sang khóa Sol từ ô 15 đến gần cuối.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \clef treble trước <g f''>2 (ô 15), \clef bass trong ô 21.'
+- id: n53
+  cau: 'Đoạn A dừng ở át âm, đoạn B khép lại ở chủ âm: khung của hình thức hai đoạn, cộng thêm một coda.'
+  loai: cau-truc
+  nguon:
+  - mutopia-202
+  - omt-binary
+  ket_qua: dung
+  ghi_chu: 'Mutopia: hai phần nhắc lại, kết nửa ở ô 8, kết trọn ô 16–17. OMT Binary Form: hình thức hai phần, mỗi phần nhắc lại.'
+- id: n54
+  cau: Link "Hình thức nhỏ" (/opus/nhac-ly/31-hinh-thuc-nho/) và "Kết và câu nhạc" (/opus/nhac-ly/13-ket/).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Hai trang đích có trong src/content/docs/nhac-ly/ (31-hinh-thuc-nho.md, 13-ket.md). Điều cần giữ: trang 31 nói về hình thức hai đoạn; trang 13 nói về kết nửa, kết trọn. Hồ sơ nhac-ly/31-hinh-thuc-nho n9 trỏ ngược tới trang này ("phần A kết nửa"): vẫn đúng (n42).'
+- id: n55
+  cau: Cả hai đoạn đều nhắc lại; lần thứ hai, đoạn B bỏ kết thứ nhất, rẽ sang kết thứ hai và đi thẳng vào coda.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: hai \repeat volta 2, \alternative.'
+- id: n56
+  cau: Nốt nhạc, dấu luyến, sắc thái và số ngón của khuông đoạn A theo bản Mutopia (ấn bản Litolff); số ngón chỉ ghi ở những chỗ bản ấy ghi.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Xem khuong_nhac khối 1 (đối chiếu từng nốt; đã sửa nốt cuối ô 8).
+- id: n57
+  cau: Hết ô 8, nhắc lại từ đầu rồi mới sang đoạn B.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \repeat volta 2 ô 1–8.'
+- id: n58
+  cau: 'Ô 1: ngón 5 trên Sol5, bốn nốt Sol – Mi – Rê – Đô bằng 5-3-2-1. Ô 2: ngón 5 trên Đô6, rồi lại 5-3-2-1.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: g8-5 e-3 (ô 1), c''-5 (ô 2); 2-1 cho Rê, Đô là suy ra trong thế năm ngón (bản không ghi).'
+- id: n59
+  cau: 'Ô 3–4: sau Đô (ngón 1), ngón 2 vắt qua ngón cái xuống Si rồi ngón cái trở lại Đô.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: b-2 c-1 e-3.'
+- id: n60
+  cau: Khi vắt ngón ở ô 3–4, cổ tay đi theo, khuỷu tay không xoay.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n61
+  cau: 'Ô 7: ngón 3 trên Si và ngón 4 trên Đô đặt tay vào thế năm ngón Sol – Rê, để ngón cái sẵn sàng cho nốt Sol ở ô 8.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: b-3 a c-4 ô 7; ô 8 bắt đầu G4 rồi B4 C5 D5 (thế Sol – Rê). Nốt cuối ô 8 là G5 (xem khối 1), ngoài thế năm ngón; câu chỉ nói về nốt Sol đầu ô 8.'
+- id: n62
+  cau: 'Số ngón tay trái (gợi ý của trang): Đô – Mi – Sol 5-3-1, Đô – Fa – La 5-2-1, Si – Fa – Sol 5-2-1, Rê – Fa♯ – Đô 5-3-1, Sol – Si 2-1; đặt hợp âm cùng lúc với nốt đầu của tay phải và giữ đủ bốn phách.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+  ghi_chu: 'Số ngón trang tự gợi ý, đã thử: các thế đều trong tầm một bàn tay (rộng nhất Rê3 – Đô4, quãng 7 thứ, 5-1).'
+- id: n63
+  cau: Ở ô 3–4, dấu nối giữ nguyên hợp âm tay trái qua hai ô.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \tieNeutral <c e g> ~ <c e g>.'
+- id: n64
+  cau: Thế tay năm ngón của tay phải ở ô 1 đi từ Đô (C5) đến Sol (G5).
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Ô 1: G5 E5 D5 C5. Bàn phím ::cong-cu tô C5 D5 E5 F5 G5 (dựng lúc build, không phải chữ của trang).'
+- id: n65
+  cau: 'Bảng "Chỗ khó và cách tập": các dòng Móc đơn đều và liền, Tay trái giữ hợp âm mà không lấn, Đổi thế tay, Hai tay đổi vai, Nốt sf và chỗ chậm lại, Coda nhỏ dần (cột "Vì sao khó" và "Cách tập").'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+  ghi_chu: Lời khuyên tập. Chi tiết về bản nhạc trong bảng (ô 2, 3–4, 7; ô 9–12; ô 14–15; khóa Sol ở coda) đã kiểm ở n44, n45, n49, n52.
+- id: n66
+  cau: 'Ô 13: ngón 5 giữ Sol rồi Fa♯ trong khi các ngón khác chơi Mi♭ – Rê – Đô sau một dấu lặng; Mi♭ là phím đen.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: g''2-5 fis (ngón 5 ở Sol); vTwo r8 es d c. Số ngón 3-2-1 là gợi ý của trang (bản không ghi), chơi được.'
+- id: n67
+  cau: Link "máy đếm nhịp" (/opus/luyen-tap/metronome/).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: Trang đích src/content/docs/luyen-tap/metronome.md có trong site mới (máy đếm nhịp).
+- id: n68
+  cau: Các bài tập chuẩn bị soạn riêng cho trang này, không trích từ bản nhạc gốc.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: Ba khối 2–4 là ví dụ soạn (khuong_nhac khối 2–4), tiêu đề ghi "(soạn cho trang này)".
+- id: n69
+  cau: 'Bài tập 1: tay phải mf, tay trái pp; tay trái dùng 5-3-1 cho Đô – Mi – Sol và 5-2-1 cho Si – Fa – Sol.'
+  loai: cau-truc
+  nguon: []
+  ket_qua: dung
+  ghi_chu: 'Kiểm trên khối 2: !mf! tay phải, !pp! tay trái; hợp âm [C,E,G,] và [B,,F,G,]. Câu mô tả ví dụ soạn của trang.'
+- id: n70
+  cau: Chơi xong bài tập 1 thì đổi vai sắc thái; đổi được theo ý muốn là đã làm chủ cân bằng.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n71
+  cau: 'Bài tập 2: ô 1 và 3 hai tay đi ngược chiều, kiểu ô 9 của bài; ô 2 và 4 tay phải giữ Đô – Mi (ngón 1 và 3), tay trái chạy, to dần rồi nhỏ dần.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Khối 3: ô 1 tay phải g f e d c d e f, tay trái C D E F G F E D (ngược chiều); ô 2, 4 [ce]8; !<(! ô 2, !>(! ô 4. Ô 9 của bài cũng ngược chiều (Mutopia).'
+- id: n72
+  cau: 'Bài tập 3: ngón 5 giữ nốt trên trong khi ngón 3-2-1 (hay 4-3-2) chơi nhóm ba nốt sau dấu lặng; ở ô 2 bàn tay dời xuống một bậc mỗi nửa ô; đó là kết cấu của ô 13. Ô 3–4 mỗi cặp hai nốt luyến như nốt La sf ở ô 14; ô cuối chậm lại như poco rit. ở ô 15.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Khối 4 khớp (xem khuong_nhac khối 4); ô 13, 14, 15 của bài (Mutopia): hai bè, a sf → g luyến, poco rit.'
+- id: n73
+  cau: Kế hoạch 4 tuần, 20–30 phút mỗi ngày; tốc độ máy đếm nhịp từng tuần (♩ = 72–84 đến 112–132); đích cuối khoảng ♩ = 120–132.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+  ghi_chu: Gợi ý của trang. Mutopia đặt MIDI ♩ = 152; bản Kolodin dài 108 giây cho khoảng 39 ô có nhắc lại (♩ ≈ 90), nên 120–132 là đích hợp lý, không phải chỉ dẫn của tác giả (Burgmüller không ghi số máy đếm nhịp).
+- id: n74
+  cau: Link "thu âm" (/opus/luyen-tap/thu-am/).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: Trang đích src/content/docs/luyen-tap/thu-am.md có trong site mới.
+- id: n75
+  cau: Mẹo "Kiểm tra cân bằng bằng tai" và danh sách tự kiểm (năm ô đánh dấu).
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n76
+  cau: Allegro moderato là nhanh vừa phải.
+  loai: dinh-nghia
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: meter = "Allegro moderato". Nghĩa: allegro (nhanh) + moderato (vừa phải); khớp Từ điển của site (src/data/thuat-ngu.yml, các mục allegro, moderato).'
+- id: n77
+  cau: Nghĩ theo nửa ô (hai phách); không rubato tùy hứng, không nhấn nhá làm điệu.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n78
+  cau: 'Mục Legato và dấu luyến: dấu luyến chia giai điệu thành nhóm bốn hoặc tám nốt; cuối nhóm chỉ lấy một hơi rất nhẹ; ngón tay sát phím, cổ tay mềm.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+  ghi_chu: Phần "nhóm bốn hoặc tám nốt" đã kiểm ở n7.
+- id: n79
+  cau: Link "Tạo tiếng đàn" (/opus/piano/tieng-dan/).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: Trang đích src/content/docs/piano/tieng-dan.md có trong site mới.
+- id: n80
+  cau: 'Mục Cân bằng: ba mức (giai điệu, hợp âm tay trái, ở đoạn B tay trái thành giọng chính); nốt trên cùng của tay trái dễ to nhất.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n81
+  cau: 'Phần lớn bài ở p; các chỗ sắc thái: nhỏ dần trên nhóm đầu ô 2; cresc. từ ô 5 đến dấu to dần ở ô 7; to dần ở ô 10 và 12; ô 13 nhỏ dần trên hai nốt ngân; sf ở ô 14; p, dolce e poco rit. ở ô 15; trong coda mỗi nhóm Fa – Rê – Đô – Si có dấu nhỏ dần riêng, rồi dim. e poco rit. và pp.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \> ô 2 nhóm đầu; cresc. ô 5; \< ô 7; \< ô 10, 12; g''2-5\> fis\> ô 13; \sf ô 14; c-4_\p … "dolce e poco rit." ô 15; f-5\> d c b\! ở coda; "dim. e poco rit."; \pp.'
+- id: n82
+  cau: sf chỉ là nhấn một nốt, không phải chuyển cả đoạn sang f.
+  loai: dinh-nghia
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Khớp Từ điển của site (src/data/thuat-ngu.yml, mục sforzando, đã khóa ở D3-L5) và trang nhac-ly/14-ky-hieu-bieu-dien (link ngay sau). Không thêm nguồn ngoài vì định nghĩa đã kiểm ở hai trang ấy.
+- id: n83
+  cau: Link "Ký hiệu biểu diễn" (/opus/nhac-ly/14-ky-hieu-bieu-dien/).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: Trang đích src/content/docs/nhac-ly/14-ky-hieu-bieu-dien.md có, nói về sf và sắc thái.
+- id: n84
+  cau: Bản Litolff trên Mutopia không ghi bàn đạp.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Mutopia .ly không có \sustainOn hay "Ped." nào.
+- id: n85
+  cau: Bài không cần bàn đạp; bàn đạp chỉ làm nhòe chuỗi móc đơn; có thể chạm nhẹ ở hai hợp âm cuối.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n86
+  cau: Link "Bàn đạp" (/opus/piano/ban-dap/).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: Trang đích src/content/docs/piano/ban-dap.md có.
+- id: n87
+  cau: Số ngón của tập Op. 100 được tính cho bàn tay nhỏ, đúng như tựa tập nhạc.
+  loai: ten
+  nguon:
+  - imslp-op100
+  ket_qua: dung
+  ghi_chu: Tựa đầy đủ "composées et doigtées expressément pour l'étendue des petites mains" (IMSLP).
+- id: n88
+  cau: Người lớn có thể thấy vài chỗ hơi chật; chỉ đổi số ngón khi thật cần, ghi bằng bút chì.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n89
+  cau: Danh sách "Lỗi thường gặp" (tám dòng).
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+  ghi_chu: Chi tiết bản nhạc trong danh sách (ô 9–12, ô 13 Mi♭ và hai phách, sf, poco rit.) đã kiểm ở n37, n38, n49.
+- id: n90
+  cau: 'Học tiếp, cùng tập Op. 100: link Arabesque (số 2) ngay sau, để luyện ngón nhanh và staccato.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Trang đích chưa chuyển; site cũ ../opus-zero/docs/piano/tac-pham/burgmuller-arabesque.md có. Điều cần giữ: bài Arabesque Op. 100 số 2, trang nói về ngón nhanh và staccato. Số 2: IMSLP (n19).'
+- id: n91
+  cau: Trong Op. 100, La pastorale là số 3, Consolation số 13, Ave Maria số 19.
+  loai: danh-muc
+  nguon:
+  - imslp-op100
+  ket_qua: dung
+  ghi_chu: 'IMSLP: number=3 La pastorale; 13 Consolation; 19 Ave Maria.'
+- id: n92
+  cau: 'Học tiếp: link Tchaikovsky: Bài ca Pháp cổ ("một giai điệu Sol thứ trên tay trái hai bè") và Schumann: Album für die Jugend, cùng cấp.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Hai trang cùng lô (src/content/docs/piano/tac-pham/tchaikovsky-bai-ca-phap-co.md, schumann-album.md). Bản ghi tac-pham: cả hai chang 2 như bài này. Trang Tchaikovsky: giai điệu Sol thứ, tay trái hai bè (kiểm ở hồ sơ trang ấy).'
+- id: n93
+  cau: 'Học tiếp: cổ điển cùng chặng Mozart: Minuet Fa trưởng K. 2; chặng sau Sonatina Sol trưởng, rồi Clementi: Sonatina Op. 36 số 1.'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/data/tac-pham.yml: mozart-minuet-k2 chang 2 (bằng bài này); beethoven-sonatina-sol chang 3, clementi-sonatina chang 3 (chặng sau). Trang mozart-minuet-k2 cùng lô (phần A); beethoven-sonatina-sol, clementi-sonatina chưa chuyển (site cũ có).'
+- id: n94
+  cau: 'Học tiếp: link Bài tập ngón và étude (/opus/piano/bai-tap-ngon/) và Tác phẩm theo cấp độ (/opus/piano/tac-pham-theo-cap/).'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: Hai trang đích có trong src/content/docs/piano/.
+- id: n95
+  cau: 'Câu hỏi 1: đoạn A (ô 1–8) dừng trên hợp âm Sol, tức át âm (kết nửa), ngay sau hợp âm Rê có Fa♯; chỉ đoạn B mới kết trọn ở Đô trưởng; đó là khung của hình thức hai đoạn.'
+  loai: cau-truc
+  nguon:
+  - mutopia-202
+  - omt-binary
+  ket_qua: dung
+  ghi_chu: Như n42, n53. Lời giải thích không dựa vào vị trí lựa chọn.
+- id: n96
+  cau: 'Câu hỏi 2: ở ô 10 và 12, chính tay trái với chuỗi móc đơn bên dưới làm việc to dần, vì trên piano một nốt đã đánh không thể to lên.'
+  loai: dinh-nghia
+  nguon:
+  - kth-decay
+  - mutopia-202
+  ket_qua: dung
+  ghi_chu: Như n46, n47.
+- id: n97
+  cau: 'Câu hỏi 3: khó khăn chính ở ô 13 là tay phải chơi hai bè, ngón 5 giữ nốt trên, các ngón còn lại chơi Mi♭ – Rê – Đô.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Như n12, n66. Lời giải thích (tập bè dưới riêng, khoanh Mi♭) là lời khuyên.
+- id: n98
+  cau: 'Câu hỏi 4: dấu luyến bốn nốt là cách chia nhóm; cuối nhóm chỉ lấy một hơi rất nhẹ, đường câu vẫn kéo dài hai ô.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+  ghi_chu: Lời khuyên về cách hiểu dấu luyến, khớp mục Diễn tấu.
+- id: n99
+  cau: 'Mục Nguồn: bản dàn trang công cộng La Candeur tại Mutopia Project (id 202), người dàn trang Bas Wassink, nguồn Collection Litolff.'
+  loai: ten
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Trang Mutopia id=202: Maintainer Bas Wassink; Source "Collection Litolff, 19th Century"; Copyright Public Domain.'
+- id: n100
+  cau: 'Mục Nguồn: trang IMSLP của Op. 100 cho lần in đầu (Paris: Benoît aîné, 1851) và tên các bài trong tập.'
+  loai: nam
+  nguon:
+  - imslp-op100
+  ket_qua: dung
+  ghi_chu: 'IMSLP: "Year of First Publication=1851 – Paris: Benoît aîné".'
+- id: n101
+  cau: 'Mục Nguồn: Wikipedia, "Friedrich Burgmüller" cho năm sinh, năm mất, năm sang Paris.'
+  loai: nam
+  nguon:
+  - wiki-burgmuller
+  - db-burgmuller
+  - ndb-burgmuller
+  ket_qua: dung
+  ghi_chu: Bài Wikipedia có cả ba điều; trên trang, các điều ấy đã kiểm bằng Deutsche Biographie, NDB, BnF (n15, n16), nên Wikipedia không là nguồn duy nhất.
+- id: n102
+  cau: 'Mục Nguồn: link IMSLP chung và "tài liệu tham khảo" (/opus/tai-lieu-tham-khao/).'
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: Trang đích src/content/docs/tai-lieu-tham-khao.md có.
+khuong_nhac:
+- khoi: 1
+  loai: trich-doan
+  kiem:
+  - cu-phap
+  - nhip
+  - giong
+  - not
+  - hop-am
+  - so-ngon
+  - doi-chieu-an-ban
+  ket_qua: da-sua
+  ghi_chu: 'Đối chiếu từng nốt ô 1–8 (cả dấu luyến, sắc thái, số ngón, dấu nhắc lại) với Mutopia 25EF-01.ly (Litolff, Bas Wassink), đọc tay theo cao độ tương đối của LilyPond, rồi so với MIDI Mutopia tải mới (25EF-01.mid, mido: in nốt theo ô) và ảnh PDF A4 (vẽ bằng PDFKit). 4/4, Đô trưởng, mỗi ô 8 móc đơn. Khớp mọi nốt trừ nốt cuối ô 8 của tay phải: khối ghi G2 (Sol4), Mutopia ghi g4 sau d (Sol5, PDF thấy nốt đen trên dòng kẻ trên cùng; MIDI tải mới: G5). Đã sửa "GBcd G2) z2 :|" thành "GBcd g2) z2 :|". (File MIDI cũ ../opus-zero/_imslp/mid/mut_burg01.mid ghi G4: file này khác file trên Mutopia, có lẽ dựng lại bằng công cụ khác, nên lỗi lọt qua lần đối chiếu ở site cũ.) Tay trái: C3 E3 G3 / C3 F3 A3 / C3 E3 G3 (nối) / B2 F3 G3 / C3 E3 G3 / D3 F#3 C4 / G3 B3 nốt trắng chấm: khớp. Số ngón 5,3 / 5 / 5,2,1,3 / 2,1 / 4 / 3,4: đúng chỗ Mutopia ghi; "dolce" ở tay trái, cresc. ô 5, dấu nhỏ dần ô 2, to dần ô 7: khớp. Doi_chu đã ghi.'
+- khoi: 2
+  loai: vi-du-soan
+  kiem:
+  - cu-phap
+  - nhip
+  - giong
+  - hop-am
+  - so-ngon
+  - chang
+  ket_qua: dung
+  ghi_chu: 'Tay phải hát, tay trái trải thảm: 4/4, Đô trưởng, 4 ô đủ 8 móc đơn. Tay phải thế Đô năm ngón (1 trên C5, 5 trên G5; ô 4 F-D-C 4-2-1); tay trái Đô – Mi – Sol 5-3-1 và Si – Fa – Sol 5-2-1 như lời dẫn (n69). Hòa âm I – V7 – I – V7 I, giai điệu khớp hợp âm (nốt qua ở ô 2). mf/pp khớp lời dẫn. Hợp chặng 2.'
+- khoi: 3
+  loai: vi-du-soan
+  kiem:
+  - cu-phap
+  - nhip
+  - giong
+  - hop-am
+  - so-ngon
+  - chang
+  ket_qua: dung
+  ghi_chu: 'Hai tay ngược chiều, rồi đổi vai: 4/4, Đô trưởng, đủ phách. Ô 1, 3: tay phải G5-F-E-D (5) rồi C5-D-E-F (1), tay trái C3-D-E-F (5) rồi G3-F-E-D (1): ngược chiều từng cặp, như ô 9 của bài. Ô 2, 4: tay phải [C5 E5] nốt tròn, tay trái chạy, !<(! ở ô 2 và !>(! ở ô 4 như lời dẫn (n71). Thế năm ngón cả hai tay, hợp chặng 2.'
+- khoi: 4
+  loai: vi-du-soan
+  kiem:
+  - cu-phap
+  - nhip
+  - giong
+  - hop-am
+  - so-ngon
+  - chang
+  ket_qua: dung
+  ghi_chu: 'Giữ nốt trên, nhấn rồi buông: 4/4, Đô trưởng, 4 ô đủ 8 móc đơn (ô 1–2 dùng chồng bè "&": bè trên nốt tròn/trắng, bè dưới z + ba móc đơn hai lần). Ô 1: G5 (5) giữ, E-D-C (3-2-1), F-E-D (4-3-2); ô 2: F5 rồi E5 (5) giữ, D-C-B và C-B-A (3-2-1), mỗi nửa ô dời xuống một bậc như lời dẫn (n72). Hòa âm: C, G7, G7 (Sol – Fa), La thứ (La – Mi), C, G7, C: nốt trên khớp. Ô 3–4 cặp nhấn (A-G, G-F, F-E) như nốt sf La – Sol ở ô 14; poco rit. ô cuối. Tay trái quãng 7 Sol2 – Fa3 (ô 2) chơi được bằng 5-1. Hợp chặng 2.'
+doi_chu:
+- cu: Friedrich Burgmüller sinh năm 1806 ở Regensburg, sang Paris năm 1832 và ở lại đó đến cuối đời, làm thầy dạy piano và viết nhạc salon cho người chơi nghiệp dư. Chân dung đầy đủ hơn có ở trang Arabesque, bài số 2 của cùng tập.
+  moi: Friedrich Burgmüller sinh năm 1806 ở Regensburg, sang Paris năm 1832 và sống ở Pháp đến cuối đời, làm thầy dạy piano và viết nhạc salon cho người chơi nghiệp dư. Chân dung đầy đủ hơn có ở trang Arabesque, bài số 2 của cùng tập.
+  ly_do: 'n16 (da-sua): Burgmüller mất ở Beaulieu(-sur-Mer), không ở Paris (Deutsche Biographie, GND 117168890); NDB và BnF: sống ở Paris từ 1832.'
+- cu: 'Bài này được thu rất nhiều, cả bởi nghệ sĩ lẫn giáo viên. Nghe hai, ba bản và mỗi lần chú ý một điều:'
+  moi: 'Nghe hai, ba bản thu và mỗi lần chú ý một điều:'
+  ly_do: 'n30 (da-bo): "được thu rất nhiều, cả bởi nghệ sĩ lẫn giáo viên" không kiểm được (IMSLP chỉ có một bản thu số 1).'
+- cu: |-
+    khuông: La candeur, đoạn A (ô 1–8) | X:1
+    M:4/4
+    L:1/8
+    Q:1/4=120
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    K:C
+    [V:RH] !p!!5!(g!3!edc) (gedc) | !>(!!5!(c'ag!>)!f) (c'agf) | !5!(gedc !2!B!1!c!3!ef) | (gedc !2!B!1!cde) |
+    [V:LH] "^dolce"[C,E,G,]8 | [C,F,A,]8 | [C,E,G,]8- | [C,E,G,]8 |
+    [V:RH] "_cresc."(gfed) (gfed) | !4!(fedc) (fedc) | !<(!!3!(BA!4!c!<)!B dcBA | GBcd G2) z2 :|
+    [V:LH] [B,,F,G,]8 | [C,E,G,]8 | [D,^F,C]8 | [G,B,]6 z2 :|
+  moi: |-
+    khuông: La candeur, đoạn A (ô 1–8) | X:1
+    M:4/4
+    L:1/8
+    Q:1/4=120
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    K:C
+    [V:RH] !p!!5!(g!3!edc) (gedc) | !>(!!5!(c'ag!>)!f) (c'agf) | !5!(gedc !2!B!1!c!3!ef) | (gedc !2!B!1!cde) |
+    [V:LH] "^dolce"[C,E,G,]8 | [C,F,A,]8 | [C,E,G,]8- | [C,E,G,]8 |
+    [V:RH] "_cresc."(gfed) (gfed) | !4!(fedc) (fedc) | !<(!!3!(BA!4!c!<)!B dcBA | GBcd g2) z2 :|
+    [V:LH] [B,,F,G,]8 | [C,E,G,]8 | [D,^F,C]8 | [G,B,]6 z2 :|
+  ly_do: 'Khối 1 (da-sua): nốt cuối ô 8 tay phải là Sol5 (g), không phải Sol4 (G), theo Mutopia 25EF-01 (.ly, PDF, MIDI).'
