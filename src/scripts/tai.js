@@ -33,6 +33,16 @@ const LUAT = [
 	// trước khi người đọc cuộn tới
 	['.oz-bai-dang-tap', () => import('./bai-dang-tap.js'), true],
 	['.oz-ke-hoach', () => import('./ke-hoach.js'), true],
+	// công cụ Luyện tập (D7-L1). Khởi tạo ngay: ô MIDI (tự kết nối lại, để các công cụ khác trên trang nhận nốt từ đàn) và
+	// ô sao lưu (tóm tắt dữ liệu đang lưu), như loader.js cũ
+	['.oz-midi', () => import('./midi.js'), true],
+	['.oz-sao-luu', () => import('./sao-luu.js'), true],
+	['.oz-chon-am', () => import('./chon-am.js'), false],
+	['.oz-tra-phim', () => import('./tra-phim.js'), false],
+	['.oz-doc-not', () => import('./doc-not.js'), false],
+	['.oz-chep', () => import('./chep.js'), false],
+	['.oz-so-cao-do', () => import('./so-cao-do.js'), false],
+	['.oz-choi-theo, .oz-hat-lai', () => import('./choi-theo.js'), false],
 ];
 const LE = 600;
 const cho = new Map(); // phần tử đang chờ tới gần màn hình -> hàm khởi tạo (trả về promise)

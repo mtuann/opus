@@ -2214,3 +2214,237 @@ html.oz-stand-open .main-pane {
 		print-color-adjust: exact;
 	}
 }
+
+/* ---------- Công cụ Luyện tập (D7-L1): midi-status, sound-setting, piano-explorer, note-reader, dictation, data, tuner,
+   playalong, singback (src/scripts/midi.js, chon-am.js, tra-phim.js, doc-not.js, chep.js, sao-luu.js, so-cao-do.js,
+   choi-theo.js) ---------- */
+.sl-markdown-content :is(.oz-midi, .oz-chon-am, .oz-tra-phim, .oz-doc-not, .oz-chep, .oz-sao-luu, .oz-so-cao-do, .oz-choi-theo, .oz-hat-lai) > * {
+	margin-top: 0;
+}
+.sl-markdown-content :is(.oz-midi, .oz-chon-am, .oz-tra-phim, .oz-doc-not, .oz-chep, .oz-sao-luu, .oz-so-cao-do, .oz-choi-theo, .oz-hat-lai) > * + * {
+	margin-top: 0.5rem;
+}
+:is(.oz-midi, .oz-chon-am, .oz-tra-phim, .oz-doc-not, .oz-chep, .oz-sao-luu, .oz-so-cao-do, .oz-choi-theo, .oz-hat-lai) label {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.4rem;
+	max-width: 100%;
+	min-width: 0;
+	font-size: var(--sl-text-sm);
+}
+:is(.oz-midi, .oz-chon-am, .oz-tra-phim, .oz-doc-not, .oz-chep, .oz-so-cao-do, .oz-choi-theo, .oz-hat-lai) select {
+	appearance: none;
+	-webkit-appearance: none;
+	max-width: 100%;
+	font: inherit;
+	padding: 0.3rem 1.8rem 0.3rem 0.55rem;
+	border: 1px solid var(--sl-color-gray-4);
+	border-radius: 8px;
+	color: var(--sl-color-white);
+	background-color: var(--sl-color-black);
+	background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+	background-position:
+		calc(100% - 0.95rem) 55%,
+		calc(100% - 0.6rem) 55%;
+	background-size: 0.35rem 0.35rem;
+	background-repeat: no-repeat;
+}
+:is(.oz-midi, .oz-chon-am, .oz-doc-not, .oz-sao-luu) input:is([type='checkbox'], [type='radio']) {
+	width: 1.1rem;
+	height: 1.1rem;
+	margin: 0;
+	accent-color: var(--sl-color-accent-high);
+}
+.oz-chon-am fieldset {
+	border: 0;
+	padding: 0;
+	min-width: 0;
+}
+.oz-chon-am legend {
+	padding: 0;
+	margin-inline-end: 0.3rem;
+	float: left;
+}
+@media (pointer: coarse) {
+	:is(.oz-midi, .oz-chon-am, .oz-tra-phim, .oz-doc-not, .oz-chep, .oz-so-cao-do, .oz-choi-theo, .oz-hat-lai) select,
+	:is(.oz-midi, .oz-chon-am, .oz-doc-not, .oz-sao-luu) label:has(input:is([type='checkbox'], [type='radio'])) {
+		min-height: 44px;
+		min-width: 44px;
+	}
+}
+/* tên các nốt của gam, hợp âm đang chọn */
+.oz-tra-phim-ten small,
+.oz-doc-not .oz-answers small {
+	margin-inline-start: 0.2rem;
+	font-size: 0.75em;
+	color: var(--sl-color-gray-3);
+}
+.oz-doc-not .oz-answers :is(.is-correct, .is-wrong) small {
+	color: inherit;
+}
+.oz-doc-not .oz-answer-btn[aria-disabled='true'] {
+	cursor: default;
+}
+/* nốt trên khuông: SVG của site (veNotDon), giữa ô */
+.oz-doc-not-khuong {
+	max-width: 16rem;
+	margin-inline: auto;
+	border-radius: 8px;
+}
+.oz-doc-not-khuong .oz-not-don {
+	max-width: 16rem;
+}
+/* chọn file sao lưu: ô chọn file ẩn bằng mắt nhưng vẫn nhận Tab; nhãn trông như nút, có viền tiêu điểm */
+.oz-chon-file {
+	position: relative;
+}
+.oz-chon-file input[type='file'] {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	cursor: pointer;
+}
+.oz-chon-file:focus-within {
+	outline: 2px solid var(--oz-focus);
+	outline-offset: 2px;
+}
+.sl-markdown-content .oz-sao-luu :is(ul, .oz-sao-luu-tom-tat, .oz-sao-luu-xem) > * {
+	margin-top: 0.2rem;
+}
+.oz-sao-luu .oz-tool-title:not(:first-child) {
+	margin-top: 1rem;
+}
+/* kim lệch cao độ (so cao độ, hát lại): vạch giữa là đúng, kim lệch tối đa ±50 cent */
+.oz-kim {
+	position: relative;
+	height: 1.6rem;
+	margin: 0.6rem 0;
+	border-radius: 999px;
+	background: linear-gradient(90deg, color-mix(in srgb, var(--oz-bad) 35%, transparent), color-mix(in srgb, var(--oz-ok) 45%, transparent) 45% 55%, color-mix(in srgb, var(--oz-bad) 35%, transparent));
+}
+.oz-kim-giua {
+	position: absolute;
+	inset-block: 0;
+	left: 50%;
+	width: 2px;
+	background: var(--sl-color-white);
+}
+.oz-kim-chi {
+	position: absolute;
+	top: -0.2rem;
+	left: 50%;
+	width: 4px;
+	height: 2rem;
+	margin-left: -2px;
+	border-radius: 2px;
+	background: var(--sl-color-accent-high);
+	transition: left 0.08s linear;
+}
+@media (prefers-reduced-motion: reduce) {
+	.oz-kim-chi {
+		transition: none;
+	}
+}
+.oz-so-cao-do-hien {
+	text-align: center;
+}
+.oz-so-cao-do-not {
+	font-family: var(--oz-heading);
+	font-size: 2.2rem;
+	font-weight: 600;
+	line-height: 1.2;
+}
+.oz-so-cao-do-not.dung {
+	color: var(--oz-ok);
+}
+/* khuông của bài chơi theo (abcjs vẽ khi ô tới gần màn hình): giữ chỗ cho khỏi xô bố cục */
+.oz-choi-theo-khuong {
+	min-height: 7rem;
+}
+.oz-choi-theo-khuong svg {
+	color: var(--sl-color-white);
+}
+/* kết quả từng nốt (chơi theo) */
+.oz-ket-qua {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.3rem;
+	margin: 0.5rem 0;
+}
+.oz-kq {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 2.8rem;
+	padding: 0.2rem 0.35rem;
+	border: 1px solid var(--sl-color-gray-4);
+	border-radius: 6px;
+	font-size: var(--sl-text-xs);
+}
+.oz-kq b {
+	font-size: var(--sl-text-sm);
+}
+.oz-kq-dat {
+	border-color: var(--oz-ok);
+	color: var(--oz-ok);
+}
+.oz-kq-sai {
+	border-color: var(--oz-bad);
+	color: var(--oz-bad);
+}
+.oz-kq-thieu {
+	color: var(--sl-color-gray-3);
+}
+/* hình so sánh (src/scripts/hinh-so-sanh.js): màu theo kết quả, cả hai chế độ */
+.oz-ss {
+	display: block;
+	width: 100%;
+	max-width: 40rem;
+	height: auto;
+	margin: 0.5rem 0;
+	color: var(--sl-color-white);
+	font-size: 8px;
+}
+.oz-ss text {
+	fill: currentColor;
+}
+.oz-ss .oz-ss-ten,
+.oz-ss .oz-ss-chu {
+	fill-opacity: 0.7;
+}
+.oz-ss .oz-ss-luoi {
+	stroke: currentColor;
+	stroke-opacity: 0.12;
+}
+.oz-ss rect {
+	stroke-width: 1;
+}
+.oz-ss .oz-ss-dat {
+	fill: color-mix(in srgb, var(--oz-ok) 25%, transparent);
+	stroke: var(--oz-ok);
+}
+.oz-ss .oz-ss-cao {
+	fill: color-mix(in srgb, var(--oz-bad) 25%, transparent);
+	stroke: var(--oz-bad);
+}
+.oz-ss .oz-ss-thap {
+	fill: color-mix(in srgb, var(--sl-color-accent-high) 25%, transparent);
+	stroke: var(--sl-color-accent-high);
+}
+.oz-ss .oz-ss-thieu {
+	fill: color-mix(in srgb, var(--sl-color-gray-3) 20%, transparent);
+	stroke: var(--sl-color-gray-3);
+}
+.oz-ss .oz-ss-cham-sai {
+	fill: var(--oz-bad);
+}
+.oz-ss .oz-ss-noi {
+	stroke: var(--oz-bad);
+	stroke-dasharray: 2 2;
+}
+.oz-ss :is(.oz-ss-do, .oz-ss-phim) {
+	fill: currentColor;
+}

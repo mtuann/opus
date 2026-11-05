@@ -18,6 +18,14 @@ import { veMayDemNhip } from '../scripts/may-dem-nhip.js';
 import { TRANG_KE_HOACH, dungKeHoach, tinhKeHoach } from '../scripts/ke-hoach.js';
 import { dungBaiDangTap } from '../scripts/bai-dang-tap.js';
 import { NGUOI_VONG_DOI, bangMarkdown, chonNguoi, docDanhSach, veDongThoiGian, veVongDoi } from '../scripts/dong-thoi-gian.js';
+import { veTrangThaiMidi } from '../scripts/midi.js';
+import { veChonAm } from '../scripts/chon-am.js';
+import { veTraPhim } from '../scripts/tra-phim.js';
+import { veDocNot } from '../scripts/doc-not.js';
+import { veChep } from '../scripts/chep.js';
+import { veSaoLuu } from '../scripts/sao-luu.js';
+import { veSoCaoDo } from '../scripts/so-cao-do.js';
+import { veChoiTheo, veHatLai } from '../scripts/choi-theo.js';
 import { bangHep } from './bang-hep.mjs';
 
 export const esc = (s) =>
@@ -25,19 +33,20 @@ export const esc = (s) =>
 
 /** HTML đã dựng của trang có khối cần JavaScript (khuông nhạc, câu hỏi, khối nghe, danh sách việc, bài kiểm tra đầu vào,
  * chặng piano, ô gợi ý tập, bàn phím, vòng quãng năm, luyện hóa biểu, công cụ âm học, thẻ ghi nhớ, trạng thái bài đã học,
- * luyện tai, máy đếm nhịp, bài đang tập, kế hoạch tập, đoán phong cách)
+ * luyện tai, máy đếm nhịp, bài đang tập, kế hoạch tập, đoán phong cách, các công cụ Luyện tập của D7-L1)
  * không: MarkdownContent.astro chỉ tải bộ tải thành phần ở những trang này. */
 export const canTaiScript = (html) =>
-	/\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec|oz-placement|oz-muc-do|oz-goi-y|oz-ban-phim|oz-vong|oz-lhb|oz-boi-am|oz-pho|oz-len-day|oz-the-nho|oz-trang-thai-bai|oz-lt|oz-may-dem-nhip|oz-bai-dang-tap|oz-ke-hoach|oz-nd)[\s"]/.test(html);
+	/\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec|oz-placement|oz-muc-do|oz-goi-y|oz-ban-phim|oz-vong|oz-lhb|oz-boi-am|oz-pho|oz-len-day|oz-the-nho|oz-trang-thai-bai|oz-lt|oz-may-dem-nhip|oz-bai-dang-tap|oz-ke-hoach|oz-nd|oz-midi|oz-chon-am|oz-tra-phim|oz-doc-not|oz-chep|oz-sao-luu|oz-so-cao-do|oz-choi-theo|oz-hat-lai)[\s"]/.test(html);
 
 /** HTML đã dựng có hình hóa biểu (vẽ bằng <use href="#oz-kh-…">) không: MarkdownContent.astro thêm định nghĩa ký hiệu một lần. */
 export const canKyHieu = (html) => html.includes('href="#oz-kh-');
 
 /**
- * Trang có công cụ phát tiếng piano (bàn phím, vòng quãng năm, luyện tai) không: MarkdownContent.astro ghi nguồn của mẫu âm (CC BY 3.0
- * đòi ghi tác giả) một lần ở cuối bài, cạnh mục Nguồn.
+ * Trang có công cụ phát tiếng piano (bàn phím, vòng quãng năm, luyện tai, các công cụ Luyện tập của D7-L1) không:
+ * MarkdownContent.astro ghi nguồn của mẫu âm (CC BY 3.0 đòi ghi tác giả) một lần ở cuối bài, cạnh mục Nguồn.
  */
-export const coAmPiano = (html) => /\sclass="(?:[^"]*\s)?(?:oz-ban-phim|oz-vong|oz-lt)[\s"]/.test(html);
+export const coAmPiano = (html) =>
+	/\sclass="(?:[^"]*\s)?(?:oz-ban-phim|oz-vong|oz-lt|oz-midi|oz-chon-am|oz-tra-phim|oz-doc-not|oz-chep|oz-so-cao-do|oz-choi-theo|oz-hat-lai)[\s"]/.test(html);
 
 /** Dòng ghi nguồn mẫu âm piano (public/mau-am/piano/LICENSE.txt); data-sinh: không phải chữ của trang. */
 export const nguonAmPiano = (base = DUONG_GOC) =>
@@ -744,6 +753,16 @@ const CONG_CU = {
 	'style-example': (thongSo) => viDuPhongCach(thongSo),
 	'style-trainer': () => veDoanPhongCach(),
 	'texture-trainer': () => veLuyenTai('texture-trainer'),
+	// Luyện tập (D7-L1)
+	'midi-status': () => veTrangThaiMidi(),
+	'sound-setting': () => veChonAm(),
+	'piano-explorer': () => veTraPhim(),
+	'note-reader': () => veDocNot(),
+	dictation: () => veChep(),
+	data: () => veSaoLuu(),
+	tuner: () => veSoCaoDo(),
+	playalong: () => veChoiTheo(),
+	singback: () => veHatLai(),
 };
 /** Công cụ không có thông số: viết thêm thuộc tính thì build hỏng (gõ nhầm, hay chép từ khối cũ). */
 const KHONG_THONG_SO = new Set([
@@ -765,6 +784,15 @@ const KHONG_THONG_SO = new Set([
 	'plan',
 	'style-trainer',
 	'texture-trainer',
+	'midi-status',
+	'sound-setting',
+	'piano-explorer',
+	'note-reader',
+	'dictation',
+	'data',
+	'tuner',
+	'playalong',
+	'singback',
 ]);
 
 /** ::cong-cu{ten="…" …}: công cụ luyện tập; thuộc tính khác là thông số (data-* của khối oz- cũ). */

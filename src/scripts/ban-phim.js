@@ -9,6 +9,8 @@
 // mở rộng theo. Nhờ vậy chỉ lần bấm đầu (và lần sau đó, nếu mạng chậm) còn là âm tổng hợp.
 // Không có âm thanh (trình duyệt không tạo được AudioContext) thì phím vẫn nháy và vẫn đọc tên nốt.
 import { chuanBi, choiNot, layNgCanh, taiTruoc } from './am-thanh.js';
+import { nghe } from './midi.js';
+import { tenPhim } from './nhac-ly.js';
 
 /** Nửa bề rộng vùng tải trước quanh phím người học đang dùng, tính bằng nửa cung (một quãng tám mỗi bên: tối đa 9 mẫu). */
 export const VUNG_TAI = 12;
@@ -17,10 +19,11 @@ export const vungQuanh = (m, cac) => cac.filter((x) => Math.abs(x - m) <= VUNG_T
 
 /**
  * Thêm phần bấm được cho một hình bàn phím (svg.oz-phim do veBanPhim dựng). `thongBao`: chỗ đọc tên nốt vừa bấm (vùng
- * aria-live); `khiBam(m)`: gọi sau mỗi lần bấm. Trả về { nhay(m): nháy phím m như vừa bấm }. Dùng lại được cho công cụ
- * khác cần bàn phím (bàn phím ở trang Luyện tập, nghe chép…).
+ * aria-live); `khiBam(m)`: gọi sau mỗi lần bấm. Phím bấm trên đàn MIDI đã kết nối (src/scripts/midi.js) cũng sáng lên và
+ * được đọc tên, như piano.js cũ; `midi: false` thì không (công cụ tự nhận nốt từ đàn). Trả về { nhay(m): nháy phím m như
+ * vừa bấm }. Dùng lại được cho công cụ khác cần bàn phím (bàn phím ở trang Luyện tập, nghe chép…).
  */
-export function ganBanPhim(svg, { thongBao, khiBam } = {}) {
+export function ganBanPhim(svg, { thongBao, khiBam, midi = true } = {}) {
 	const phim = [...svg.querySelectorAll('[data-m]')].sort((a, b) => a.dataset.m - b.dataset.m);
 	const cacNot = phim.map((k) => Number(k.dataset.m));
 	/** Tải trước mẫu âm của vùng quanh phím k (mẫu gần k trước). */
@@ -48,6 +51,12 @@ export function ganBanPhim(svg, { thongBao, khiBam } = {}) {
 		if (thongBao) thongBao.textContent = k.dataset.ten;
 		khiBam?.(m);
 	};
+	if (midi)
+		nghe((su) => {
+			if (su.loai !== 'on' || !svg.isConnected) return;
+			nhay(su.m);
+			if (thongBao) thongBao.textContent = `${tenPhim(su.m)} (đàn MIDI)`;
+		});
 	const phimCua = (e) => e.target.closest?.('[data-m]');
 	// rê chuột (hay bút) vào bàn phím lần đầu: tải trước quanh phím dưới con trỏ, để lần bấm đầu đã có tiếng piano
 	let daRe = false;

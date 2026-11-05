@@ -6,6 +6,7 @@
 // Khác bản cũ: phổ vẽ bằng SVG, nhãn trục là chữ HTML (đọc được, không nhỏ lại ở màn hình hẹp); nút micro bật và tắt được;
 // số thập phân viết dấu phẩy.
 import { chuanBiPiano, choiNot, dauRa, layNgCanh, phatTanSo } from './am-thanh.js';
+import { giuMicro, phienThu, tanSoCoBan } from './micro.js';
 
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 /** Số viết kiểu Việt: dấu phẩy thập phân. */
@@ -95,50 +96,8 @@ export const vePho = () =>
 	VACH.map((f) => `<span class="oz-pho-nhan" style="left:${(100 * viTri(f)).toFixed(2)}%">${f >= 1000 ? f / 1000 + 'k' : f}</span>`).join('') +
 	`</div><p class="oz-stats oz-pho-tin" aria-live="polite">${PHO_GOI_Y}</p>`;
 
-/**
- * Tần số cơ bản của một đoạn sóng (detect của tuner.js cũ: tự tương quan, nội suy parabol); im quá (RMS dưới 0,01) hay
- * không tìm được thì -1.
- */
-export function tanSoCoBan(buf, rate) {
-	let rms = 0;
-	for (let i = 0; i < buf.length; i++) rms += buf[i] * buf[i];
-	if (Math.sqrt(rms / buf.length) < 0.01) return -1;
-	let a = 0;
-	let b = buf.length - 1;
-	const th = 0.2;
-	for (let i = 0; i < buf.length / 2; i++)
-		if (Math.abs(buf[i]) < th) {
-			a = i;
-			break;
-		}
-	for (let i = 1; i < buf.length / 2; i++)
-		if (Math.abs(buf[buf.length - i]) < th) {
-			b = buf.length - i;
-			break;
-		}
-	const x = buf.slice(a, b);
-	const n = x.length;
-	const c = new Float32Array(n);
-	for (let lag = 0; lag < n; lag++) {
-		let s = 0;
-		for (let i = 0; i < n - lag; i++) s += x[i] * x[i + lag];
-		c[lag] = s;
-	}
-	let d = 0;
-	while (d < n - 1 && c[d] > c[d + 1]) d++;
-	let max = -1;
-	let pos = -1;
-	for (let i = d; i < n; i++)
-		if (c[i] > max) {
-			max = c[i];
-			pos = i;
-		}
-	if (pos <= 0 || pos >= n - 1) return -1;
-	const [x1, x2, x3] = [c[pos - 1], c[pos], c[pos + 1]];
-	const A = (x1 + x3 - 2 * x2) / 2;
-	const B = (x3 - x1) / 2;
-	return rate / (A ? pos - B / (2 * A) : pos);
-}
+// tìm cao độ dùng chung với các công cụ micro của trang Luyện tập (D7-L1): ở src/scripts/micro.js
+export { tanSoCoBan };
 
 /** Đường phổ (thuộc tính d của path) từ cường độ theo dB của từng dải (getFloatFrequencyData). */
 export function duongPho(data, rate, fftSize) {
@@ -230,6 +189,8 @@ function mountPho(goc) {
 	const tatMic = () => {
 		if (!mic) return;
 		mic.luong.getTracks().forEach((t) => t.stop());
+		mic.nha();
+		phienThu(false);
 		if (phan === mic.phan) phan = null;
 		mic = null;
 		nutMic.textContent = 'Bật micro';
@@ -241,20 +202,18 @@ function mountPho(goc) {
 		const viec = nut.dataset.act;
 		if (viec === 'mic') {
 			if (mic) return tatMic();
-			try {
-				// Safari trên iPhone: thu và phát cùng lúc (AGENTS.md, Sau D3-L1)
-				if (navigator.audioSession) navigator.audioSession.type = 'play-and-record';
-			} catch {
-				// trình duyệt không cho đặt: để mặc định
-			}
+			// Safari trên iPhone: thu và phát cùng lúc (AGENTS.md, Sau D3-L1; src/scripts/micro.js)
+			phienThu(true);
 			try {
 				const luong = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false } });
 				const a = taoPhan(c);
 				c.createMediaStreamSource(luong).connect(a);
-				mic = { luong, phan: a };
+				// mỗi lúc một công cụ dùng micro (công cụ khác trên trang đang nghe thì thôi)
+				mic = { luong, phan: a, nha: giuMicro(tatMic) };
 				nutMic.textContent = 'Tắt micro';
 				chay(a);
 			} catch {
+				phienThu(false);
 				tin.textContent = 'Không mở được micro.';
 			}
 			return;
