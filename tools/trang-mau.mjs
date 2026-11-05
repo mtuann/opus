@@ -70,6 +70,11 @@ export const KHOI = {
 	'danh sách bài blog': 'class="oz-ds-bai',
 	'nhật ký tác phẩm mới': 'class="oz-tac-pham-moi',
 	'link sách in': 'href="/opus/sach/',
+	// D8 (chốt ở nhánh chuẩn bị đợt 8, plans/lam-lai/bao-cao/d8-chuan-bi.md; thành phần do lô làm)
+	'nghe mù': 'class="oz-nghe-mu',
+	'phiếu nghe mù': 'class="oz-phieu-nghe-mu',
+	'ngày rà lại': 'class="oz-ra-lai',
+	'dòng ngoài lộ trình': 'class="oz-ngoai-lo-trinh',
 };
 
 /** Số trang đã đổi của nhánh được lấy làm mẫu: một lô của đợt 3 có tới 8 trang. */

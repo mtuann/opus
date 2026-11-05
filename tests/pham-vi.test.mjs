@@ -43,6 +43,9 @@ const THEM = {
 	// cài như ứng dụng), danh sách bài blog và nhật ký tác phẩm mới ở trang Cập nhật (chỉ thị trong plugin đọc trang),
 	// frontmatter của bài blog (date)
 	'D7-L3': ['astro.config.mjs', 'src/content.config.ts', 'src/ban-build.mjs', 'src/plugins/opus-markdown.mjs', 'src/sach/', 'src/ung-dung/'],
+	// hai workflow hằng tuần (trang cần rà lại, link ra ngoài), script của chúng, ngày kiểm và ngày rà lại ở đầu trang tham
+	// chiếu (đọc hồ sơ qua src/kiem-dinh.mjs)
+	'D8-L1': ['.github/workflows/ra-lai.yml', '.github/workflows/kiem-link.yml', 'tools/ra-lai.mjs', 'tools/kiem-link.mjs', 'src/kiem-dinh.mjs'],
 };
 
 /** File `file` (đường dẫn từ gốc repo) có thuộc phạm vi của lô `lo` ("D3-L2"), với các trang `trangLo`, không. */

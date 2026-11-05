@@ -86,7 +86,7 @@ Câu hỏi nhỏ còn chờ (từ review nhánh quyết định, `bao-cao/d2-ban
 
 - `nhan-dien/nghe-mu` ở Tham chiếu nên 6 trang trỏ tới nó (3 ở D3-L6, 3 ở D5-L3) hiện "sắp có" tới đợt 8: giữ vậy, hay giữ trang ở Lõi và đưa 10 bản thu vào dữ liệu có kiểm link. Trước D3-L6.
 - Mục "Sau 6 tháng: đi sâu hơn" của lộ trình nghe hiểu: `nhac-ly/am-hoc` (Lõi) và `lich-su/nhac-truyen-thong-viet-nam` (Đọc thêm) nằm cùng một dòng việc. Có tính mục ấy là lộ trình không (tính thì trang nhạc truyền thống vào Lõi, lô D5-L1). Trước D5-L1.
-- Cỡ mẫu lượt 2 của trang Đọc thêm: 5 nhận định mỗi trang (đang làm), hay theo lô, hay theo tỉ lệ. Trước đợt 8.
+- ~~Cỡ mẫu lượt 2 của trang Đọc thêm~~: **giữ 5 nhận định mỗi trang** (agent chọn theo lời giao của chủ repo ngày 05/11/2026, lý do ở `bao-cao/d8-chuan-bi.md`; chủ repo review sau).
 - Trang Tác phẩm có cần đủ hai lượt không: xem lại khi đã đo được tỉ lệ hai lượt lệch nhau ở các lô Lõi. Trước D6-0.
 
 ## Tiến độ
@@ -100,7 +100,7 @@ Câu hỏi nhỏ còn chờ (từ review nhánh quyết định, `bao-cao/d2-ban
 | 4 | Piano nền tảng | 4 | 28 trang: bắt đầu bên phím, kỹ thuật, tập luyện, hòa âm bên phím, văn học piano | Xong 28/10/2026: D4-L1 đến D4-L4 lượt 1 và nhánh gom (lượt 2, review, lượt 2 bổ sung, kiểm mẫu, khóa 28 trang; mở khóa và khóa lại `piano/lo-trinh`); 90 trang trên site thật |
 | 5 | Nhạc cổ điển nền tảng | 3 | 27 trang: thời kỳ, hình thức, nhận diện; đủ 101 trang lõi | Xong 29/10/2026: D5-L1 đến D5-L3 lượt 1 và nhánh gom (lượt 2, review, lượt 2 bổ sung, kiểm mẫu, khóa 27 trang); 117 trang trên site thật |
 | 7 | Công cụ, sách in, blog, Cập nhật | 3 | 17 công cụ luyện tập, sách in, blog, dùng khi mất mạng | Chờ chủ repo: D7-L1 đến D7-L3 xong lượt 1, lượt 2, review (nhánh gom `moi/d7-gom`, `bao-cao/d7-gom.md`); còn kiểm mẫu (`d7-gom/kiem-mau.yml`, `kiem-mau-l3.yml`) và khóa 23 trang |
-| 8 | Tham chiếu có hạn và Đọc thêm | 3 | 20 trang | Chưa làm |
+| 8 | Tham chiếu có hạn và Đọc thêm | 3 | 20 trang | Đang làm: nhánh chuẩn bị (`bao-cao/d8-chuan-bi.md`) |
 | 6 | Tác phẩm | 11 | 34 bài học, 45 hướng dẫn nghe, danh mục tác phẩm; đủ 233 trang cũ | Chưa làm |
 | 9 | Hoàn tất | | Site mới không còn cần `../opus-zero/` | Chưa làm |
 
