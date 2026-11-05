@@ -988,7 +988,9 @@ export function tacPhamMoi(tacPham, nguoi, trang = trangTrongBan(), base = DUONG
 	const ds = tacPham
 		.filter((r) => slugCo.has(r.slug))
 		.filter((r) => co.has(trangTacPham(r)))
-		.filter((r) => r.them_ngay)
+		// bản ghi không có them_ngay (73 tác phẩm cũ, d6-0.md) thì bỏ mà không đọc trường qua chiDaKhoa: trường vắng thì
+		// không hiện gì, không cần khóa; có them_ngay thì đọc, và trường phải đã khóa
+		.filter((r) => Object.hasOwn(r, 'them_ngay') && r.them_ngay)
 		.map((r) => ({ r, ngay: ngayISO(r.them_ngay), trang: trangTacPham(r) }))
 		.sort((a, b) => b.ngay.localeCompare(a.ngay) || a.trang.localeCompare(b.trang));
 	if (!ds.length) return `<p class="oz-tac-pham-moi" data-sinh>Chưa có tác phẩm nào trên site: các bài học tác phẩm và hướng dẫn nghe sẽ hiện ở đây khi lên site.</p>`;

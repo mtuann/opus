@@ -89,3 +89,14 @@ test('dist/: trang blog liệt kê các bài có trong bản build, mới trư�
 	const c = path.join(DIST, 'cap-nhat', 'index.html');
 	if (fs.existsSync(c)) assert.match(fs.readFileSync(c, 'utf8'), /class="oz-tac-pham-moi"/);
 });
+
+test('tacPhamMoi: tác phẩm trên bản build không có them_ngay (tác phẩm cũ) thì bỏ mà không đọc trường chưa khóa', () => {
+	const r = { slug: 'y', loai: 'bai-hoc', ten: 'Y', tac_gia: 'mozart' };
+	const p = new Proxy(r, {
+		get(t, k) {
+			if (k === 'them_ngay') throw new Error('đọc them_ngay chưa khóa');
+			return Reflect.get(t, k);
+		},
+	});
+	assert.match(tacPhamMoi([p], nguoi, ['piano/tac-pham/y']), /Chưa có tác phẩm nào trên site/);
+});
