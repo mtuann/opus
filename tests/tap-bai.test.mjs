@@ -12,7 +12,7 @@ import { markdownToHtml } from 'satteri';
 import { opusMarkdown } from '../src/plugins/opus-markdown.mjs';
 import { canTaiScript } from '../src/plugins/thanh-phan.mjs';
 import { NHAC, apThaoTac, dungNutTapBai, khoaTrang } from '../src/scripts/tap-bai.js';
-import { dungBaiDangTap } from '../src/scripts/bai-dang-tap.js';
+import { dungBaiDangTap, truoc } from '../src/scripts/bai-dang-tap.js';
 import { tinhKeHoach, trangThaiTu } from '../src/scripts/ke-hoach.js';
 import { KHOA, datKho, docTienDo, ghiNgay, layKho, mucNgay } from '../src/scripts/tien-do.js';
 
@@ -52,6 +52,10 @@ test('nút theo trạng thái: chữ lấy từ dữ liệu được thoát; s�
 	assert.doesNotMatch(dungNutTapBai({ status: 'learning', n: 'x', last: '' }, '2026-11-05'), /Đã tập/);
 	assert.match(dungNutTapBai({ status: 'learning', n: 2, last: '2026-11-05' }, '2026-11-05'), /disabled>Đã ghi buổi tập hôm nay/);
 	assert.equal(dungNutTapBai('hỏng', '2026-11-05'), dungNutTapBai(undefined, '2026-11-05'));
+	// ngày hỏng: không ghi "lần cuối NaN ngày trước"
+	assert.match(dungNutTapBai({ status: 'learning', n: 2, last: 'x' }, '2026-11-05'), /Đã tập 2 buổi\.<\/span>$/);
+	assert.equal(truoc('2026-13-xx', '2026-11-05'), '');
+	assert.equal(truoc(20261101, '2026-11-05'), '');
 	assert.equal(apThaoTac([], 'a/', 'learning', { ten: 'A', today: '2026-11-05', bayGio: 'x' }).rep['a/'].status, 'learning');
 	assert.deepEqual(apThaoTac({}, 'a/', 'la', { ten: 'A', today: '2026-11-05', bayGio: 'x' }), { rep: {}, buoi: false });
 });

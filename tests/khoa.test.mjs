@@ -41,7 +41,9 @@ test('mọi mục trong kiem-dinh/khoa.json còn khớp mã băm và có hồ s�
 		const f = path.join(ROOT, 'kiem-dinh', `${muc.split('#')[0]}.yml`);
 		assert.ok(fs.existsSync(f), `${muc}: thiếu hồ sơ kiem-dinh/${muc}.yml`);
 		const hs = parse(fs.readFileSync(f, 'utf8'));
-		assert.deepEqual(loiHoSo(hs, muc, ROOT), [], `hồ sơ của ${muc} chưa đủ`);
+		// khóa đã có: xét lần kiểm định đã ghi mã băm đang khóa (khóa từng phần: lô sau có thể đang thêm lần mới)
+		const maBam = muc.startsWith('du-lieu/') ? ban_ghi[muc.slice(8)] : trang[muc];
+		assert.deepEqual(loiHoSo(hs, muc, ROOT, { maBam }), [], `hồ sơ của ${muc} chưa đủ`);
 		const [, bo, truong] = /^du-lieu\/([^/]+)\/[^#]+(?:#(.+))?$/.exec(muc) ?? [];
 		for (const t of truong?.split(',') ?? []) assert.ok(t in schema[bo].shape, `${muc}: bộ ${bo} không có trường ${t}`);
 		// trang: lần cuối ghi mã băm đang khóa; bản ghi khóa từng phần qua nhiều lần: một lần nào đó ghi mã băm của khóa ấy

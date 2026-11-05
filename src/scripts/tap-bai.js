@@ -38,7 +38,9 @@ export function dungNutTapBai(r, today, { tat = false } = {}) {
 		h = `<button type="button" class="oz-btn oz-btn--primary" data-a="learning"${t}>Tôi đang tập bài này</button>` + `<span class="oz-stats">${NHAC}</span>`;
 	}
 	const n = Number(r?.n) || 0;
-	if (n && st !== 'removed') h += '<span class="oz-stats">Đã tập ' + n + ' buổi, lần cuối ' + truoc(r.last, today) + '.</span>';
+	const khi = n && st !== 'removed' ? truoc(r.last, today) : '';
+	// ngày lần cuối hỏng hay thiếu: chỉ ghi số buổi (bản cũ ghi "lần cuối ." )
+	if (n && st !== 'removed') h += '<span class="oz-stats">Đã tập ' + n + ' buổi' + (khi ? ', lần cuối ' + khi : '') + '.</span>';
 	return h;
 }
 

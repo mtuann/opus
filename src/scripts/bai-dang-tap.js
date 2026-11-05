@@ -11,7 +11,8 @@ import { homNay, layKho } from './tien-do.js';
 
 /** "hôm nay", "hôm qua", "3 ngày trước" (ago cũ). */
 export function truoc(iso, today) {
-	if (!iso) return '';
+	// ngày lưu trong trình duyệt có thể hỏng: không phải YYYY-MM-DD thì không ghi "lần cuối …"
+	if (!/^\d{4}-\d{2}-\d{2}$/.test(String(iso ?? '')) || !/^\d{4}-\d{2}-\d{2}$/.test(String(today ?? ''))) return '';
 	const t = today.split('-').map(Number);
 	const a = String(iso).split('-').map(Number);
 	const d = Math.round((Date.UTC(t[0], t[1] - 1, t[2]) - Date.UTC(a[0], a[1] - 1, a[2])) / 86400000);

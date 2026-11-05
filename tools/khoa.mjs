@@ -102,20 +102,29 @@ const soKhuong = (noiDung) => (noiDung.match(/^```abc\s*$/gm) ?? []).length;
  * Lỗi của hồ sơ trước khi khóa (chuan-kiem-dinh.md mục 3, 5): mọi nhận định đã qua hai lượt và có kết quả, nguồn có
  * trong danh sách nguồn, chỗ sửa và bỏ có ghi chú, chỗ hai lượt khác nhau đã giải quyết; mỗi khuông nhạc đã kiểm.
  */
-export function loiHoSo(hs, muc, goc) {
+export function loiHoSo(hs, muc, goc, { maBam } = {}) {
 	const loi = [];
 	const bg = laBanGhi(muc) && tachKhoaBanGhi(laBanGhi(muc)).banGhi;
 	if (bg ? hs.ban_ghi !== bg : hs.trang !== `src/content/docs/${muc}.md`)
 		loi.push(bg ? `ban_ghi phải là "${bg}"` : `trang phải là "src/content/docs/${muc}.md"`);
-	// Khóa từng phần (D6-L1): chỉ xét lần đã ghi khóa ấy (lần có truong trùng các trường của khóa; chưa có thì lần cuối, như
-	// lúc khóa) và các nhận định chạm trường đã khóa (nhận định không ghi truong: vẫn xét). Lần kiểm định mới cho trường chưa
-	// khóa (lô sau thêm bằng mau, đang chờ lượt 2) không làm khóa cũ thành "hồ sơ chưa đủ"; khóa cả bản ghi thì xét hết.
+	// Khóa từng phần (D6-L1): chỉ xét các nhận định chạm trường của khóa (nhận định không ghi truong: vẫn xét), để lần kiểm
+	// định mới cho trường chưa khóa (lô sau thêm bằng mau, đang chờ lượt 2) không làm khóa cũ thành "hồ sơ chưa đủ".
+	// Lần kiểm định được xét (đủ người): lúc khóa (lệnh khoa, không có maBam) luôn là lần cuối, kể cả khi mở khóa rồi khóa
+	// lại đúng các trường cũ (mo vừa thêm lần mới, phải điền đủ người); khi kiểm một khóa đã có (maBam: mã băm đang ghi
+	// trong khoa.json) là lần đã ghi mã băm ấy. Khóa cả bản ghi và trang thì xét mọi nhận định.
 	const truongKhoa = bg ? tachKhoaBanGhi(laBanGhi(muc)).truong : null;
-	const cungTruong = (l) => Array.isArray(l?.truong) && l.truong.length === truongKhoa.length && l.truong.every((t) => truongKhoa.includes(t));
-	const lanXet = Array.isArray(hs.lan) ? (truongKhoa && hs.lan.findLast(cungTruong)) || hs.lan.at(-1) : null;
+	const lanXet = Array.isArray(hs.lan) ? (truongKhoa && maBam && hs.lan.findLast((l) => l?.ma_bam === maBam)) || hs.lan.at(-1) : null;
 	const xet = (n) => !truongKhoa || !Array.isArray(n?.truong) || n.truong.some((t) => truongKhoa.includes(t));
 	if (!Array.isArray(hs.lan) || !hs.lan.length) loi.push('thiếu lan (các lần kiểm định)');
 	else for (const k of NGUOI) if (!lanXet.nguoi?.[k]) loi.push(`lần kiểm định ${lanXet === hs.lan.at(-1) ? 'cuối' : lanXet.so ?? ''}: thiếu nguoi.${k}`);
+	// truong của nhận định bản ghi phải là trường có trong schema: gõ sai thì nhận định thoát phép xét của khóa từng phần
+	if (bg) {
+		const bo = bg.split('/')[0];
+		for (const n of hs.nhan_dinh ?? []) {
+			const la = (Array.isArray(n?.truong) ? n.truong : n?.truong == null ? [] : [n.truong]).filter((t) => !TRUONG[bo]?.includes(t));
+			if (la.length) loi.push(`nhận định ${n?.id ?? '(không id)'}: truong ${la.join(', ')} không có trong bộ ${bo}`);
+		}
+	}
 	// tầng lấy từ src/data/trang.yml (mức kiểm theo tầng): hồ sơ ghi khác thì sửa hồ sơ, không tin hồ sơ
 	const tang = bg ? null : tangTrong(muc, goc);
 	if (!bg && (hs.tang ?? null) !== tang) loi.push(`hồ sơ ghi tang: ${hs.tang ?? null} mà src/data/trang.yml ghi ${tang}: sửa tang trong hồ sơ`);

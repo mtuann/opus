@@ -51,7 +51,7 @@ const THEM = {
 	// đọc danh sách tác phẩm từ dữ liệu, để tác phẩm thêm sau đợt 6 tự vào (D6-0 chọn, plans/lam-lai/bao-cao/d6-0.md)
 	// hồ sơ bản ghi khóa từng phần: lần kiểm định mới cho trường chưa khóa (đợt 6 khóa nốt bản ghi tác phẩm) không làm khóa
 	// cũ thành "hồ sơ chưa đủ" (loiHoSo của tools/khoa.mjs, tests/khoa-tung-phan.test.mjs); nên gộp riêng vào main trước lô
-	'D6-L1': ['tools/khoa.mjs', 'tests/pham-vi.test.mjs'],
+	'D6-L1': ['tools/khoa.mjs', 'tests/khoa.test.mjs', 'tests/pham-vi.test.mjs'],
 	'D6-L11': ['src/pages/', 'src/ban-build.mjs', 'src/nhom.mjs', 'src/sach/', 'src/plugins/opus-markdown.mjs'],
 };
 
