@@ -100,7 +100,7 @@ Câu hỏi nhỏ còn chờ (từ review nhánh quyết định, `bao-cao/d2-ban
 | 4 | Piano nền tảng | 4 | 28 trang: bắt đầu bên phím, kỹ thuật, tập luyện, hòa âm bên phím, văn học piano | Xong 28/10/2026: D4-L1 đến D4-L4 lượt 1 và nhánh gom (lượt 2, review, lượt 2 bổ sung, kiểm mẫu, khóa 28 trang; mở khóa và khóa lại `piano/lo-trinh`); 90 trang trên site thật |
 | 5 | Nhạc cổ điển nền tảng | 3 | 27 trang: thời kỳ, hình thức, nhận diện; đủ 101 trang lõi | Xong 29/10/2026: D5-L1 đến D5-L3 lượt 1 và nhánh gom (lượt 2, review, lượt 2 bổ sung, kiểm mẫu, khóa 27 trang); 117 trang trên site thật |
 | 7 | Công cụ, sách in, blog, Cập nhật | 3 | 17 công cụ luyện tập, sách in, blog, dùng khi mất mạng | Chờ chủ repo: D7-L1 đến D7-L3 xong lượt 1, lượt 2, review (nhánh gom `moi/d7-gom`, `bao-cao/d7-gom.md`); còn kiểm mẫu (`d7-gom/kiem-mau.yml`, `kiem-mau-l3.yml`) và khóa 23 trang |
-| 8 | Tham chiếu có hạn và Đọc thêm | 3 | 20 trang | Đang làm: chuẩn bị xong (`bao-cao/d8-chuan-bi.md`); D8-L1 xong lượt 1, gộp ở bản xem (`bao-cao/d8-l1.md`) |
+| 8 | Tham chiếu có hạn và Đọc thêm | 3 | 20 trang | Đang làm: chuẩn bị xong (`bao-cao/d8-chuan-bi.md`); D8-L1, D8-L2 xong lượt 1, gộp ở bản xem (`bao-cao/d8-l1.md`, `d8-l2.md`) |
 | 6 | Tác phẩm | 11 | 34 bài học, 45 hướng dẫn nghe, danh mục tác phẩm; đủ 233 trang cũ | Chưa làm |
 | 9 | Hoàn tất | | Site mới không còn cần `../opus-zero/` | Chưa làm |
 

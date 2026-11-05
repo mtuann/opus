@@ -215,6 +215,9 @@ Frontmatter có `tac_pham`. Thứ tự các mục như mẫu ở `../opus-zero/A
   - Trang tầng `tham-chieu` có dòng "Kiểm tra lần cuối: tháng 11/2026 · rà lại tháng 4/2027" dưới tiêu đề (`src/components/PageTitle.astro`, lớp `oz-ra-lai`): tháng kiểm là ngày của lần cuối trong `lan` (khi trang đã khóa; chưa khóa thì "chưa kiểm định"), tháng rà lại là `ra_lai` của `trang.yml` (`src/kiem-dinh.mjs`). Không viết tay dòng "Cập nhật lần cuối" trong trang.
   - `piano/tac-pham-theo-cap`: bài có bản ghi thì chặng viết trên trang khớp `chang` của `tac-pham.yml` (`tests/tac-pham-theo-cap.test.mjs` đọc link `/opus/piano/tac-pham/<slug>/` trong bảng của mục "## Chặng N", cột "Chặng…", cột "(chặng)" và chữ "(chặng N)" sau link); tiêu đề mục chặng khớp `cap-do.yml`. Bài có bản ghi thì viết link để phép kiểm bắt được.
   - Sửa `src/scripts/*.js` mà plugin dùng lúc build (chữ dựng sẵn của công cụ) thì `npm run build` không tự dựng lại trang (`tepDauVet` chỉ tính `src/plugins/`): xóa `node_modules/.astro/data-store.json` trước khi build.
+- D8-L2 (8 trang `nhac-cu/`; chốt ở `plans/lam-lai/bao-cao/d8-chuan-bi.md`, "Đã chọn" 3):
+  - Trang tầng `ngoai-vi` (Đọc thêm) có dòng "Đọc thêm, ngoài lộ trình: không cần cho các chặng. Xem lộ trình piano" dưới tiêu đề (`src/components/PageTitle.astro`, lớp `oz-ngoai-lo-trinh`, link `/opus/piano/lo-trinh/`, `data-pagefind-ignore`): hiện tự động theo `tang` của `src/data/trang.yml`, trang tầng khác (kể cả `nhac-cu/index`, tầng `khung`) không có. Không viết tay trong trang (`tests/ngoai-lo-trinh.test.mjs`).
+  - `::hinh{ten="ranges-voices"}` dùng hình tĩnh có từ D5 (bảy giọng, tên nốt Việt, âm vực theo COD): khác hình của trang cũ nên ghi ở `doi_chu` của `nhac-cu/nhac-cu-khac`.
 - 7 trang chặng `piano/lo-trinh/chang-1` đến `chang-7` sinh từ dữ liệu ở `src/pages/piano/lo-trinh/[chang].astro`:
   - luôn đăng, cả ở bản thật;
   - không có dải "Chưa kiểm định";
