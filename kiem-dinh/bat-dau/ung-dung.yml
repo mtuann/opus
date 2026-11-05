@@ -1,0 +1,130 @@
+trang: src/content/docs/bat-dau/ung-dung.md
+nguon_cu: ../opus-zero/docs/bat-dau/ung-dung.md
+tang: tham-chieu
+lan:
+- so: 1
+  ngay: '2026-11-05'
+  nhanh: moi/d8-l1
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Sonnet (D8-L1 lượt 1, phần 2/2)
+    luot_2: null
+    review: null
+    kiem_mau: null
+ghi_chu: 'Trang tham chiếu có hạn (ra_lai 2027-04). Kiểm định lượt 1 ngày 05/11/2026 (mọi nguồn truy cập ngày ấy). Rà lại theo service worker của D7-L3 (bao-cao/d7-l3.md; AGENTS.md mục D7-L3): đọc src/ung-dung/ung-dung.mjs, public/manifest.webmanifest, tests/trinh-duyet/kiem-ung-dung.mjs, src/scripts/sao-luu.js; câu về site là ve-site, ghi_chu nói đã kiểm ở đâu. Cách cài lấy từ trang hỗ trợ của hãng (Google Chrome Help, Microsoft Learn, Apple iPhone User Guide, MDN); không đọc được trang Firefox (Mozilla chặn công cụ đọc web) nên trang không viết về Firefox, kể cả Firefox Android (không thay đổi so với trang cũ, vốn không nhắc). Không có khối abc, câu hỏi hay thuật ngữ. Người giao cần biết: (1) trang Hỏi đáp (bat-dau/hoi-dap) và trang này dùng tên "Opus"; (2) câu về kho dữ liệu iOS dựa trên bình luận WebKit 2022, nên rà lại khi tháng 4/2027.'
+nguon:
+- id: mdn-install
+  bac: 2
+  ten: MDN Web Docs, Installing and uninstalling web apps (PWA); truy cập 05/11/2026
+  link: https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Installing
+- id: chrome-help
+  bac: 2
+  ten: Google Chrome Help, Install, manage, or uninstall apps in Chrome (tab máy tính và tab Android); truy cập 05/11/2026
+  link: https://support.google.com/chrome/answer/9658361
+- id: edge-learn
+  bac: 2
+  ten: Microsoft Learn, Use Progressive Web Apps (PWAs) in Microsoft Edge (mục Installing a PWA); truy cập 05/11/2026
+  link: https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/ux
+- id: apple-iphone
+  bac: 2
+  ten: Apple, iPhone User Guide, Bookmark a website in Safari on iPhone (mục Add a website icon to your Home Screen); truy cập 05/11/2026
+  link: https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios
+- id: webkit-181849
+  bac: 2
+  ten: WebKit Bugzilla 181849, "Add to homescreen" apps don't share storage with Safari (bình luận của Brent Fulgham, WebKit, 1/2/2022); truy cập 05/11/2026
+  link: https://bugs.webkit.org/show_bug.cgi?id=181849
+nhan_dinh:
+- id: n1
+  cau: Opus có thể được cài lên màn hình chính của điện thoại hoặc máy tính, mở như một ứng dụng riêng, và dùng được cả khi không có mạng với những trang bạn đã từng mở.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Đã kiểm: public/manifest.webmanifest (name Opus, display standalone, icon 192, 512 và maskable, start_url ./); src/ung-dung/ung-dung.mjs (dist/sw.js sinh lúc build, phạm vi /opus/, trang lấy mạng trước, mất mạng thì bản đã lưu); tests/trinh-duyet/kiem-ung-dung.mjs (tắt mạng, trang đã xem mở lại được). Tên site trong manifest là Opus; trang cũ ghi "Opus Zero" (xem doi_chu).'
+- id: n2
+  cau: 'Trên iPhone, iPad (Safari): mở site bằng Safari; bấm nút Chia sẻ (hình vuông có mũi tên lên; ở một số bản iOS nút này nằm trong menu ⋯ cạnh thanh địa chỉ); cuộn xuống và chọn Thêm vào Màn hình chính (Add to Home Screen).'
+  loai: quy-tac
+  nguon:
+  - apple-iphone
+  - mdn-install
+  ket_qua: dung
+  ghi_chu: 'Apple (đã mở bản tiếng Anh): "Go to the Safari app… Tap …, then tap Share. If your Tabs layout is Bottom or Top, tap … Scroll down the list of options, then tap Add to Home Screen." Nhãn tiếng Việt "Thêm vào Màn hình chính" là bản dịch của trang cũ; không có trang Apple tiếng Việt đã mở để đối chiếu nhãn, nên trang ghi thêm nhãn tiếng Anh. MDN: Safari trên iOS cài PWA bằng giao diện "Add to home screen".'
+- id: n3
+  cau: 'Trên Android (Chrome): mở site bằng Chrome; bấm menu ⋮ ở góc trên; chọn mục cài đặt ứng dụng trong menu (Chrome ghi Install and create shortcut), rồi bấm Install.'
+  loai: quy-tac
+  nguon:
+  - chrome-help
+  ket_qua: dung
+  ghi_chu: 'Google Chrome Help, tab Android (đọc ngày 05/11/2026): "Tap the More icon… Tap Install and create shortcut, then tap Install." Trang cũ ghi "Cài đặt ứng dụng hoặc Thêm vào màn hình chính"; đã sửa theo nhãn hiện hành của Chrome (doi_chu).'
+- id: n4
+  cau: 'Trên máy tính: bấm biểu tượng cài đặt trên thanh địa chỉ: ở Chrome là biểu tượng Install, ở Edge là biểu tượng App available rồi nút Install; ở Chrome còn có thể vào menu ⋮, chọn Cast, save, and share, rồi Install page as app.'
+  loai: quy-tac
+  nguon:
+  - chrome-help
+  - edge-learn
+  - mdn-install
+  ket_qua: dung
+  ghi_chu: 'Chrome Help: "Select More, then Cast, save, and share, then Install page as app… On some websites, you can instead select the Install icon at the top right of the address bar." Microsoft Learn: "the App available icon appears in the Address bar… Click the Install button." Trang cũ ghi "vào menu và chọn Cài đặt Opus Zero"; nhãn ấy không còn ở Chrome hiện hành, đã sửa (doi_chu).'
+- id: n5
+  cau: Vài giây sau khi trang tải xong, site tự chuẩn bị việc lưu trang.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Đã kiểm src/ung-dung/ung-dung.mjs: script đăng ký service worker chạy ở sự kiện load, chờ CHO_DANG_KY = 8000 ms rồi chờ lúc rảnh (requestIdleCallback, hạn 5000 ms), chỉ khi isSecureContext. Câu này thay cho câu cũ "đã mở ít nhất một lần… sẽ được lưu" đứng một mình: trang mở rồi rời đi trước lúc đăng ký thì chưa được lưu.'
+- id: n6
+  cau: Từ đó, những trang bạn đã mở ít nhất một lần khi có mạng sẽ được lưu lại và mở được khi mất mạng; trang chủ được lưu sẵn.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Đã kiểm src/ung-dung/ung-dung.mjs: trang lấy mạng trước và lưu bản mới (mangTruoc), mất mạng thì dùng bản đã lưu, chưa có thì trang chủ đã lưu; tepLuuSan lưu sẵn trang chủ, 404, manifest, icon, CSS, JS và font của trang chủ. tests/trinh-duyet/kiem-ung-dung.mjs kiểm việc này bằng context.setOffline.'
+- id: n7
+  cau: Các công cụ luyện tập và khuông nhạc hoạt động bình thường nếu trang đó đã được mở trước.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Đã kiểm: tệp tĩnh (JS, CSS của công cụ, abcjs ở public/vendor/) lưu theo kiểu bản đã lưu trước, tải lại ngầm (ung-dung.mjs); tests/trinh-duyet/kiem-ung-dung.mjs: khuông vẽ được khi mất mạng sau khi đã xem trang. Mức độ "bình thường" của từng công cụ không kiểm riêng từng cái; công cụ dùng micro, MIDI không cần mạng, công cụ cần tệp chưa tải thì cần tải một lần.'
+- id: n8
+  cau: Âm thanh piano của các ví dụ khuông nhạc (phát bằng thư viện abcjs) cần được tải về ít nhất một lần khi có mạng.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Đã kiểm: soundfont của abcjs ở paulrosen.github.io/midi-js-soundfonts/ nằm trong MAY_NGOAI của ung-dung.mjs, chỉ lưu sau khi đã tải một lần (chưa nghe lần nào mà mất mạng thì khuông vẫn hiện, không có tiếng; chú thích đầu file).'
+- id: n9
+  cau: Ô tìm kiếm cần có mạng ở lần dùng đầu tiên.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Đã kiểm: chỉ mục Pagefind (pagefind-entry.json?ts=…) được lưu theo địa chỉ không có ?… sau lần tải đầu (nhánh "tệp có ?…" của sw.js); chưa tải lần nào thì cần mạng.'
+- id: n10
+  cau: 'Dữ liệu luyện tập nằm trong trình duyệt, và bản cài ra màn hình chính có thể không dùng chung dữ liệu với trình duyệt đã cài nó: trên iPhone, iPad ứng dụng ở Màn hình chính có kho dữ liệu riêng, và bản cài từ hai trình duyệt khác nhau cũng không dùng chung dữ liệu.'
+  loai: so-lieu
+  nguon:
+  - mdn-install
+  - webkit-181849
+  ket_qua: dung
+  ghi_chu: 'MDN: "you can install the same PWA from a different browser, but the two installs behave as separate instances and do not share data". WebKit (2022): "Home Screen apps are created as isolated entities without shared state with the browser." Đây là nguồn đã đọc; chưa có nguồn hãng nào mới hơn 2022 cho iOS 26 (Safari 26 mở mọi trang thêm vào Màn hình chính như ứng dụng web: chưa thấy nguồn nói kho dữ liệu đổi). Câu cũ "dùng chung dữ liệu với trình duyệt đã cài nó" sai ở iOS và ở Windows/Android khi cài từ trình duyệt khác; đã sửa (doi_chu). Trang rà lại tháng 4/2027.'
+- id: n11
+  cau: Điện thoại và máy tính có dữ liệu riêng; dùng nút Tải file sao lưu và Gộp vào máy này ở trang Dữ liệu của tôi để chuyển giữa các thiết bị (gộp không bao giờ ghi đè dữ liệu đang có).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'Đã kiểm: src/scripts/sao-luu.js có nút "Tải file sao lưu (.json)" (dòng 282), "Chọn file sao lưu" và "Gộp vào máy này" (dòng 384); trang /opus/luyen-tap/du-lieu/ (title "Dữ liệu của tôi") ghi "Gộp nghĩa là không có gì bị ghi đè hay xóa".'
+khuong_nhac: []
+doi_chu:
+- cu: Opus Zero có thể được cài lên màn hình chính của điện thoại hoặc máy tính, mở như một ứng dụng riêng, và dùng được cả khi không có mạng với những trang bạn đã từng mở.
+  moi: Opus có thể được cài lên màn hình chính của điện thoại hoặc máy tính, mở như một ứng dụng riêng, và dùng được cả khi không có mạng với những trang bạn đã từng mở.
+  ly_do: Site mới tên Opus (public/manifest.webmanifest).
+- cu:
+  - Bấm nút Chia sẻ (hình vuông có mũi tên lên).
+  - Chọn Thêm vào Màn hình chính.
+  moi:
+  - Bấm nút Chia sẻ (hình vuông có mũi tên lên; ở một số bản iOS nút này nằm trong menu ⋯ cạnh thanh địa chỉ).
+  - Cuộn xuống và chọn Thêm vào Màn hình chính (Add to Home Screen).
+  ly_do: 'Apple (iPhone User Guide): ở bố cục thanh Tabs Bottom hay Top, nút Chia sẻ nằm sau nút ⋯.'
+- cu: Chọn Cài đặt ứng dụng hoặc Thêm vào màn hình chính.
+  moi: Chọn mục cài đặt ứng dụng trong menu (Chrome ghi Install and create shortcut), rồi bấm Install.
+  ly_do: 'Google Chrome Help (Android): nhãn hiện hành là "Install and create shortcut" rồi "Install".'
+- cu: Bấm biểu tượng cài đặt ở cuối thanh địa chỉ, hoặc vào menu và chọn Cài đặt Opus Zero.
+  moi: 'Bấm biểu tượng cài đặt trên thanh địa chỉ: ở Chrome là biểu tượng Install, ở Edge là biểu tượng App available rồi nút Install. Ở Chrome còn có thể vào menu ⋮, chọn Cast, save, and share, rồi Install page as app.'
+  ly_do: 'Chrome Help và Microsoft Learn: nhãn hiện hành ở từng trình duyệt; menu "Cài đặt Opus Zero" không còn.'
+- cu: Những trang bạn đã mở ít nhất một lần khi có mạng sẽ được lưu lại và mở được khi mất mạng.
+  moi: Vài giây sau khi trang tải xong, site tự chuẩn bị việc lưu trang. Từ đó, những trang bạn đã mở ít nhất một lần khi có mạng sẽ được lưu lại và mở được khi mất mạng; trang chủ được lưu sẵn.
+  ly_do: 'Rà theo service worker của D7-L3: script đăng ký chờ 8 giây sau khi trang tải xong (CHO_DANG_KY), nên trang rời đi sớm chưa được lưu; trang chủ lưu sẵn khi cài.'
+- cu: Ứng dụng cài từ site dùng chung dữ liệu với trình duyệt đã cài nó. Điện thoại và máy tính có dữ liệu riêng; dùng nút Tải file sao lưu và Gộp vào máy này ở trang Dữ liệu của tôi để chuyển giữa các thiết bị (gộp không bao giờ ghi đè dữ liệu đang có).
+  moi: 'Dữ liệu luyện tập nằm trong trình duyệt, và bản cài ra màn hình chính có thể không dùng chung dữ liệu với trình duyệt đã cài nó: trên iPhone, iPad ứng dụng ở Màn hình chính có kho dữ liệu riêng, và bản cài từ hai trình duyệt khác nhau cũng không dùng chung dữ liệu. Điện thoại và máy tính có dữ liệu riêng; dùng nút Tải file sao lưu và Gộp vào máy này ở trang Dữ liệu của tôi để chuyển giữa các thiết bị (gộp không bao giờ ghi đè dữ liệu đang có).'
+  ly_do: 'MDN (hai bản cài từ hai trình duyệt không dùng chung dữ liệu) và WebKit bug 181849 (ứng dụng ở Màn hình chính tách riêng khỏi Safari): câu cũ "dùng chung dữ liệu" không đúng chung.'
+- cu: 'mô tả: Opus Zero có thể được cài lên màn hình chính của điện thoại hoặc máy tính, mở như một ứng dụng riêng, và dùng được cả khi không có mạng với những trang bạn đã…'
+  moi: 'mô tả: Opus có thể được cài lên màn hình chính của điện thoại hoặc máy tính, mở như một ứng dụng riêng, và dùng được cả khi không có mạng với những trang bạn đã…'
+  ly_do: Site mới tên Opus (manifest name "Opus"; Opus Zero là tên bản trước). Mô tả trang (frontmatter description).
