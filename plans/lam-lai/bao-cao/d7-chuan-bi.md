@@ -38,6 +38,8 @@ Chín trang đều có trong `src/data/trang.yml`, tầng khung, chưa trang nà
 
 ## Cần chủ repo quyết
 
+Chủ repo giao agent quyết theo đề xuất (05/11/2026), ghi ở mục Quyết định của kế hoạch: (1) làm như đợt 3–5, nhánh gom ở cuối, kiểm mẫu và khóa khi chủ repo review; (2) trang chủ giữ như đã khóa; (3) nút "Tôi đang tập bài này" ở đợt 6. Câu hỏi gốc:
+
 1. **Cách làm đợt 7**: như đợt 3–5 (lượt 1 từng lô, rồi nhánh gom: lượt 2, review, kiểm mẫu, khóa), hay khóa từng lô? Trang Luyện tập đều tầng khung, nhận định chủ yếu là câu về chính site (không qua lượt 2), nên gom ít lợi hơn các đợt trước.
 2. **Đọc nốt ở trang chủ**: trang chủ cũ có công cụ đọc nốt ("Thử ngay: đọc một nốt"); trang chủ mới (đã khóa) không có. Thêm thì phải mở khóa `index` sau khi `note-reader` lên; không thêm thì giữ như hiện nay.
 3. **Nút "Tôi đang tập bài này"** ở hộp tác phẩm (`practice.js` cũ; `d1.md` để chủ repo chọn D6 hay D7-L1): D4-L1 đã làm ô bài đang tập và ghi nút là việc của đợt 6. Đề nghị chốt đợt 6.

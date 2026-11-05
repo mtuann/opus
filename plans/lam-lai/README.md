@@ -75,6 +75,11 @@ Thêm, chốt ngày 24/10/2026:
   - "Hòa âm" (gam thứ hòa âm, hòa âm chức năng), không dùng "hòa thanh"; lô chuyển `luyen-tai/nghe-gam` sửa theo, ghi `doi_chu`.
   - "Dấu hóa" là tên chung của ♯, ♭, ♮; "dấu hóa bất thường" là dấu viết trong bài (bản ghi `accidental`). D3-L5 thêm mục "dấu hóa" nếu cần.
   - *Period* là "đoạn nhạc"; *section* (phần của hình thức) là "phần". Lô sau gặp chỗ lẫn thì ghi trong hồ sơ, không sửa trang đã khóa.
+- [x] **Đợt 7** (chủ repo giao agent làm hết đợt theo đề xuất ở `bao-cao/d7-chuan-bi.md`, ngày 05/11/2026; chủ repo review sau):
+  - Làm như đợt 3–5: D7-L1 đến D7-L3 lượt 1 từng lô, rồi nhánh gom `moi/d7-gom` (lượt 2, review). Kiểm mẫu của chủ repo và khóa làm sau cùng, khi chủ repo review. Trang chưa khóa gộp vào `main` ở bản xem như các lô trước.
+  - Không push trong lúc làm: không có `test.yml`, nên trước mỗi lần gộp vào `main` chạy ở máy đủ các bước của CI (`npm run build:xem`, `npm test`, `npm run test:trinh-duyet`, `npm run lighthouse`). Chủ repo push khi xong đợt.
+  - Trang chủ giữ như đã khóa, chưa thêm công cụ đọc nốt ("Thử ngay: đọc một nốt" của trang chủ cũ); thêm sau thì theo thủ tục mở khóa.
+  - Nút "Tôi đang tập bài này" ở hộp tác phẩm (`practice.js` cũ): đợt 6, như D4-L1 đã ghi.
 
 
 Câu hỏi nhỏ còn chờ (từ review nhánh quyết định, `bao-cao/d2-bang-tang.md`); hỏi chủ repo trước lô ghi bên cạnh:
