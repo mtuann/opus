@@ -45,6 +45,16 @@ export const KHOI = {
 	'dòng thời gian': 'class="oz-figure oz-dtg',
 	'ví dụ phong cách': 'class="oz-vd-phong-cach"',
 	'đoán phong cách': 'class="oz-nd oz-tool',
+	// công cụ Luyện tập của D7-L1 (lớp chốt ở plans/lam-lai/bao-cao/d7-chuan-bi.md; thành phần do lô làm)
+	'trạng thái MIDI': 'class="oz-midi',
+	'tra hợp âm, gam trên phím': 'class="oz-tra-phim',
+	'chép giai điệu': 'class="oz-chep',
+	'chơi theo': 'class="oz-choi-theo',
+	'hát lại': 'class="oz-hat-lai',
+	'đọc nốt': 'class="oz-doc-not',
+	'sao lưu dữ liệu học': 'class="oz-sao-luu',
+	'so cao độ': 'class="oz-so-cao-do',
+	'chọn âm thanh': 'class="oz-chon-am',
 };
 
 /** Số trang đã đổi của nhánh được lấy làm mẫu: một lô của đợt 3 có tới 8 trang. */

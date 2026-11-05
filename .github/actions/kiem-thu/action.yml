@@ -1,8 +1,9 @@
 name: Build và kiểm thử
 description: >-
   Cài Node và các gói, build bản thật hay bản xem, rồi chạy một phần kiểm thử: npm test, kiểm thử trình duyệt trên một
-  trình duyệt, Lighthouse (luật 7 của kế hoạch), hay chỉ cài Chromium cho bước chụp ảnh. Các phần chạy song song, mỗi phần một job (matrix của test.yml và
-  deploy.yml); build chỉ mất vài giây nên job nào cũng tự build. Dùng chung cho test.yml và deploy.yml.
+  trình duyệt, Lighthouse (luật 7 của kế hoạch), hay chỉ cài Chromium cho bước chụp ảnh. Các phần chạy song song, mỗi
+  phần một job (matrix của test.yml và deploy.yml); build chỉ mất vài giây nên job nào cũng tự build. Dùng chung cho
+  test.yml và deploy.yml.
 inputs:
   ban:
     description: "that: bản thật (npm run build, chỉ trang đã khóa); xem: bản xem (npm run build:xem, thêm trang chưa khóa)"
