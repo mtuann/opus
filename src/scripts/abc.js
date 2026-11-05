@@ -7,13 +7,19 @@ const HEP = 620; // khung hẹp hơn mức này (px) thì để abcjs tự ngắ
 let tai = null;
 
 /** Tải abcjs (một lần) và CSS của trình phát. Đoán phong cách (src/scripts/nhan-dien.js) dùng lại. */
+let coCss = false;
+const themCss = () => {
+	if (coCss) return;
+	coCss = true;
+	const css = document.createElement('link');
+	css.rel = 'stylesheet';
+	css.href = `${BASE}vendor/abcjs-audio.css`;
+	document.head.append(css);
+};
 export function taiAbcjs() {
+	themCss();
 	if (window.ABCJS) return Promise.resolve(window.ABCJS);
 	tai ??= new Promise((ok, hong) => {
-		const css = document.createElement('link');
-		css.rel = 'stylesheet';
-		css.href = `${BASE}vendor/abcjs-audio.css`;
-		document.head.append(css);
 		const s = document.createElement('script');
 		s.src = `${BASE}vendor/abcjs-basic-min.js`;
 		s.onload = () => ok(window.ABCJS);
@@ -25,7 +31,27 @@ export function taiAbcjs() {
 	});
 	return tai;
 }
-export const taiSan = () => taiAbcjs().catch(() => {});
+/**
+ * Mã abcjs đã tải về lúc rảnh, chưa chạy. Tải sẵn chỉ lấy mã về (fetch), không chạy: chạy abcjs là một tác vụ dài (khoảng
+ * 400 ms trên điện thoại chậm), làm trang vừa tải xong bị đứng một lúc (TBT của Lighthouse). Trước khi in (inTruoc) thì
+ * chạy mã này bằng thẻ <script> nội tuyến (chạy đồng bộ), để in ngay sau khi mở trang vẫn đủ khuông nhạc.
+ */
+let nguon = null;
+export function taiSan() {
+	if (window.ABCJS || tai || nguon) return;
+	fetch(`${BASE}vendor/abcjs-basic-min.js`)
+		.then((r) => (r.ok ? r.text() : null))
+		.then((t) => (nguon = t))
+		.catch(() => {});
+}
+/** Chạy ngay mã abcjs đã tải sẵn (đồng bộ), khi abcjs chưa có và chưa đang tải bằng thẻ script. */
+function chayNgay() {
+	if (window.ABCJS || tai || !nguon) return;
+	const s = document.createElement('script');
+	s.textContent = nguon;
+	nguon = null;
+	document.head.append(s);
+}
 
 /** Con trỏ: tô sáng nốt đang phát. */
 export function conTro() {
@@ -239,8 +265,9 @@ export function mount(el) {
 	return taiAbcjs().then(() => dung(el));
 }
 
-/** Trước khi in: vẽ đồng bộ mọi khuông chưa vẽ (abcjs đã tải). */
+/** Trước khi in: vẽ đồng bộ mọi khuông chưa vẽ (abcjs đã tải, hay mã đã tải sẵn: chạy ngay). */
 export function inTruoc() {
+	chayNgay();
 	if (!window.ABCJS) return;
 	document.querySelectorAll('.abc-notation').forEach((el) => {
 		if (!el._oz) dung(el);
