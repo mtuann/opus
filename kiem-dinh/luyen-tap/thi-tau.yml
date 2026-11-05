@@ -3,87 +3,96 @@ trang: src/content/docs/luyen-tap/thi-tau.md
 nguon_cu: ../opus-zero/docs/luyen-tap/thi-tau.md
 tang: khung
 lan:
-- so: 1
-  ngay: '2026-11-05'
-  nhanh: moi/d7-l2
-  ma_bam: null
-  nguoi:
-    luot_1: Claude Sonnet (D7-L2 lượt 1, phần 1/2)
-    luot_2: null
-    review: null
-    kiem_mau: null
+  - so: 1
+    ngay: '2026-11-05'
+    nhanh: moi/d7-l2
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet (D7-L2 lượt 1, phần 1/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Trang khung (D7-L2, phần 1/2). Không sửa chữ. Định nghĩa thị tấu dựa Cambridge Dictionary (bậc 2) và Wikipedia (phụ). Lệch nhỏ giữa module và câu trên trang (người giao quyết): n12, đoạn "Cách tập" trong veThiTau (thi-tau.js) viết "bấm một trong hai nút “Chơi và được chấm”" trong khi "Chơi và được chấm:" là nhãn, hai nút là "Bằng đàn MIDI" và "Bằng micro (hát hoặc nhạc cụ)"; chữ này giữ như bản cũ (kiểm so-chu của lô D7-L2 sẽ báo nếu khác).'
 nguon:
-- id: cambridge-sightread
-  bac: 2
-  ten: Cambridge Dictionary, sight-read
-  link: https://dictionary.cambridge.org/dictionary/english/sight-read
-- id: wiki-sightreading
-  bac: 3
-  ten: Wikipedia, Sight-reading
-  link: https://en.wikipedia.org/wiki/Sight-reading
+  - id: cambridge-sightread
+    bac: 2
+    ten: Cambridge Dictionary, sight-read
+    link: https://dictionary.cambridge.org/dictionary/english/sight-read
+  - id: wiki-sightreading
+    bac: 3
+    ten: Wikipedia, Sight-reading
+    link: https://en.wikipedia.org/wiki/Sight-reading
 nhan_dinh:
-- id: n1
-  cau: Thị tấu (sight-reading) là đọc và hát hoặc chơi một bản nhạc lần đầu tiên nhìn thấy.
-  loai: dinh-nghia
-  nguon:
-  - cambridge-sightread
-  - wiki-sightreading
-  ket_qua: dung
-  ghi_chu: 'Cambridge Dictionary: sight-read: "to play or sing written music the first time you see it"; Wikipedia: "the practice of reading and performing of a piece in a music notation that the performer has not seen or learned before" (Wikipedia chỉ phụ).'
-- id: n2
-  cau: Mỗi lần bấm "Giai điệu mới", site tạo một giai điệu 4 ô nhịp ngẫu nhiên.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/thi-tau.js: nút data-act="moi" gọi moi() → taoGiaiDieu(giọng, cấp) với Math.random; vòng for b = 0..3 tạo đúng bốn ô, mỗi ô đủ 4 phách (M:4/4 trong abcGiaiDieu).'
-- id: n3
-  cau: Giai điệu kết thúc ở chủ âm.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/thi-tau.js taoGiaiDieu: ô cuối gồm [bậc 2 hay bậc 7, 2 phách] rồi [k.v, 2 phách], k.v là chủ âm của giọng.'
-- id: n4
-  cau: Nghe chủ âm để "định giọng" trong đầu.
-  loai: khuyen-tap
-  ket_qua: khong-can-nguon
-  ghi_chu: 'Nút "Nghe chủ âm" có thật (data-act="chu-am": choiNot nốt chủ âm).'
-- id: n5
-  cau: 'Nhìn giai điệu khoảng 30 giây: đọc tên nốt, tìm các bước nhảy lớn, để ý hóa biểu.'
-  loai: khuyen-tap
-  ket_qua: khong-can-nguon
-  ghi_chu: Khớp trang piano/thi-tau ("Quét 30 giây trước khi chơi").
-- id: n6
-  cau: Bấm "Đếm vào" rồi hát (bằng tên nốt Đô Rê Mi) hoặc đàn theo nhịp; đừng dừng lại khi sai, giữ nhịp quan trọng hơn đúng từng nốt.
-  loai: khuyen-tap
-  ket_qua: khong-can-nguon
-  ghi_chu: 'Nút "Đếm vào" có thật: phat(false) phát 4 tiếng gõ (tiengGo) theo tốc độ đã chọn, không phát giai điệu (src/scripts/thi-tau.js). Lời khuyên "giữ nhịp quan trọng hơn" khớp piano/thi-tau ("không bao giờ phải dừng").'
-- id: n7
-  cau: Bấm "Nghe đáp án" để nghe giai điệu và so sánh.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/thi-tau.js: phat(true) phát 4 tiếng đếm rồi cả giai điệu (choiNot từng nốt theo notCan).'
-- id: n8
-  cau: Bắt đầu với Đô trưởng, cấp độ 1, tốc độ 60. Mỗi ngày đọc 3–5 giai điệu là đủ.
-  loai: khuyen-tap
-  ket_qua: khong-can-nguon
-  ghi_chu: 'Khớp piano/thi-tau mục "Kế hoạch 5–10 phút mỗi ngày": "Mỗi ngày 3–5 đoạn ngắn mới". Công cụ có đủ Đô trưởng, cấp 1 và tốc độ 60 để chọn (GIONG_TT, CAP, TOC_DO; mặc định của ô là Đô, cấp 1, tốc độ 80).'
-- id: n9
-  cau: Có đàn piano điện thì cắm vào máy tính để dùng phím thật; link "Kết nối đàn MIDI" dẫn tới trang hướng dẫn.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/thi-tau.js: nút "Bằng đàn MIDI" (chamMidi) cần đàn nối qua Web MIDI (src/scripts/midi.js; ô midi-status ngay dưới); src/content/docs/luyen-tap/ket-noi-midi.md có thật. Web MIDI chỉ có ở Chrome, Edge, Opera trên máy tính (midi.js nói rõ; ô báo khi trình duyệt không hỗ trợ).'
-- id: n10
-  cau: 'Ô chọn của công cụ: năm giọng (Đô, Sol, Fa, Rê, Si♭ trưởng), ba cấp độ (1: đen, trắng, bước gần; 2: thêm móc đơn, nhảy quãng; 3: thêm chấm dôi), ba tốc độ (60, 80, 100).'
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/thi-tau.js: GIONG_TT (năm giọng), CAP (ba cấp, chữ như trên), TOC_DO = [60, 80, 100]; taoGiaiDieu: cấp 1 chỉ có độ dài [1], [1], [2] (đen, trắng) và bước tối đa 2 bậc; cấp 2 thêm [0.5, 0.5] (móc đơn) và bước nhảy 4 hay 3 bậc, âm vực rộng hơn; cấp 3 thêm [1.5, 0.5] và [3] (chấm dôi). Chữ sinh ra (data-sinh), không phải chữ trang.'
-- id: n11
-  cau: Chơi và được chấm bằng đàn MIDI hay bằng micro; có tuỳ chọn "Bỏ qua quãng tám"; hát hoặc đàn xong thì hiện kết quả đúng bao nhiêu nốt.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/thi-tau.js: cham("midi") dùng chamMidi, cham("mic") dùng chamCaoDo (cham-diem.js); checkbox data-k="quang" truyền boQuang; xong() ghi "Đúng x/y nốt (p%)" rồi kyNang("sight", pt >= 80) và ghiNgay("melodies").'
-- id: n12
-  cau: 'Đoạn "Cách tập" do công cụ hiện: nghe chủ âm, nhìn giai điệu 30 giây, đọc tên nốt, bấm "Đếm vào" rồi hát (hoặc đàn) theo nhịp; muốn chấm điểm thì bấm một trong hai nút "Chơi và được chấm"; cuối cùng bấm "Nghe đáp án" để so sánh.'
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/thi-tau.js veThiTau: đoạn chữ này có trong ô. Chữ "Chơi và được chấm" là nhãn dòng (span) trước hai nút "Bằng đàn MIDI" và "Bằng micro (hát hoặc nhạc cụ)", không phải tên nút: người giao có thể sửa chữ cho khớp (module, không phải trang).'
+  - id: n1
+    cau: Thị tấu (sight-reading) là đọc và hát hoặc chơi một bản nhạc lần đầu tiên nhìn thấy.
+    loai: dinh-nghia
+    nguon:
+      - cambridge-sightread
+      - wiki-sightreading
+    ket_qua: dung
+    ghi_chu: 'Cambridge Dictionary: sight-read: "to play or sing written music the first time you see it"; Wikipedia: "the practice of reading and performing of a piece in a music notation that the performer has not seen or learned before" (Wikipedia chỉ phụ).'
+    luot_2: dung
+    luot_2_nguon: [ "https://en.wikipedia.org/wiki/Tempo" ]
+    luot_2_ghi_chu: "Thị tấu: đọc và chơi (hay hát) bản nhạc lần đầu thấy; định nghĩa phổ biến. Chưa mở trang riêng về sight-reading; Wikipedia chỉ để tìm nguồn nên độ chắc vừa phải."
+  - id: n2
+    cau: Mỗi lần bấm "Giai điệu mới", site tạo một giai điệu 4 ô nhịp ngẫu nhiên.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/thi-tau.js: nút data-act="moi" gọi moi() → taoGiaiDieu(giọng, cấp) với Math.random; vòng for b = 0..3 tạo đúng bốn ô, mỗi ô đủ 4 phách (M:4/4 trong abcGiaiDieu).'
+  - id: n3
+    cau: Giai điệu kết thúc ở chủ âm.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/thi-tau.js taoGiaiDieu: ô cuối gồm [bậc 2 hay bậc 7, 2 phách] rồi [k.v, 2 phách], k.v là chủ âm của giọng.'
+  - id: n4
+    cau: Nghe chủ âm để "định giọng" trong đầu.
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Nút "Nghe chủ âm" có thật (data-act="chu-am": choiNot nốt chủ âm).'
+  - id: n5
+    cau: 'Nhìn giai điệu khoảng 30 giây: đọc tên nốt, tìm các bước nhảy lớn, để ý hóa biểu.'
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: Khớp trang piano/thi-tau ("Quét 30 giây trước khi chơi").
+    luot_2: dung
+    luot_2_ghi_chu: Lời khuyên tập, hợp cách dạy phổ biến (ABRSM cũng cho thời gian xem bản nhạc ~30 giây).
+  - id: n6
+    cau: Bấm "Đếm vào" rồi hát (bằng tên nốt Đô Rê Mi) hoặc đàn theo nhịp; đừng dừng lại khi sai, giữ nhịp quan trọng hơn đúng từng nốt.
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Nút "Đếm vào" có thật: phat(false) phát 4 tiếng gõ (tiengGo) theo tốc độ đã chọn, không phát giai điệu (src/scripts/thi-tau.js). Lời khuyên "giữ nhịp quan trọng hơn" khớp piano/thi-tau ("không bao giờ phải dừng").'
+    luot_2: dung
+    luot_2_ghi_chu: Lời khuyên tập, hợp cách dạy phổ biến.
+  - id: n7
+    cau: Bấm "Nghe đáp án" để nghe giai điệu và so sánh.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/thi-tau.js: phat(true) phát 4 tiếng đếm rồi cả giai điệu (choiNot từng nốt theo notCan).'
+  - id: n8
+    cau: Bắt đầu với Đô trưởng, cấp độ 1, tốc độ 60. Mỗi ngày đọc 3–5 giai điệu là đủ.
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Khớp piano/thi-tau mục "Kế hoạch 5–10 phút mỗi ngày": "Mỗi ngày 3–5 đoạn ngắn mới". Công cụ có đủ Đô trưởng, cấp 1 và tốc độ 60 để chọn (GIONG_TT, CAP, TOC_DO; mặc định của ô là Đô, cấp 1, tốc độ 80).'
+    luot_2: dung
+    luot_2_ghi_chu: Lời khuyên tập, hợp lý.
+  - id: n9
+    cau: Có đàn piano điện thì cắm vào máy tính để dùng phím thật; link "Kết nối đàn MIDI" dẫn tới trang hướng dẫn.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/thi-tau.js: nút "Bằng đàn MIDI" (chamMidi) cần đàn nối qua Web MIDI (src/scripts/midi.js; ô midi-status ngay dưới); src/content/docs/luyen-tap/ket-noi-midi.md có thật. Web MIDI chỉ có ở Chrome, Edge, Opera trên máy tính (midi.js nói rõ; ô báo khi trình duyệt không hỗ trợ).'
+  - id: n10
+    cau: 'Ô chọn của công cụ: năm giọng (Đô, Sol, Fa, Rê, Si♭ trưởng), ba cấp độ (1: đen, trắng, bước gần; 2: thêm móc đơn, nhảy quãng; 3: thêm chấm dôi), ba tốc độ (60, 80, 100).'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/thi-tau.js: GIONG_TT (năm giọng), CAP (ba cấp, chữ như trên), TOC_DO = [60, 80, 100]; taoGiaiDieu: cấp 1 chỉ có độ dài [1], [1], [2] (đen, trắng) và bước tối đa 2 bậc; cấp 2 thêm [0.5, 0.5] (móc đơn) và bước nhảy 4 hay 3 bậc, âm vực rộng hơn; cấp 3 thêm [1.5, 0.5] và [3] (chấm dôi). Chữ sinh ra (data-sinh), không phải chữ trang.'
+  - id: n11
+    cau: Chơi và được chấm bằng đàn MIDI hay bằng micro; có tuỳ chọn "Bỏ qua quãng tám"; hát hoặc đàn xong thì hiện kết quả đúng bao nhiêu nốt.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/thi-tau.js: cham("midi") dùng chamMidi, cham("mic") dùng chamCaoDo (cham-diem.js); checkbox data-k="quang" truyền boQuang; xong() ghi "Đúng x/y nốt (p%)" rồi kyNang("sight", pt >= 80) và ghiNgay("melodies").'
+  - id: n12
+    cau: 'Đoạn "Cách tập" do công cụ hiện: nghe chủ âm, nhìn giai điệu 30 giây, đọc tên nốt, bấm "Đếm vào" rồi hát (hoặc đàn) theo nhịp; muốn chấm điểm thì bấm một trong hai nút "Chơi và được chấm"; cuối cùng bấm "Nghe đáp án" để so sánh.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/thi-tau.js veThiTau: đoạn chữ này có trong ô. Chữ "Chơi và được chấm" là nhãn dòng (span) trước hai nút "Bằng đàn MIDI" và "Bằng micro (hát hoặc nhạc cụ)", không phải tên nút: người giao có thể sửa chữ cho khớp (module, không phải trang).'
 khuong_nhac: []

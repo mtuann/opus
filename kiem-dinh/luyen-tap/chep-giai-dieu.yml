@@ -28,6 +28,8 @@ nhan_dinh:
     loai: khuyen-tap
     ket_qua: khong-can-nguon
     ghi_chu: Lời nhận xét về độ khó; sửa từ "kỹ năng luyện tai cao nhất" (xếp hạng không kiểm được) thành "một bài luyện tai khó". Không trái các trang luyen-tai.
+    luot_2: dung
+    luot_2_ghi_chu: Lời khuyên hợp lý.
   - id: n3
     cau: Nút "Nghe chủ âm Đô" phát nốt Đô để định giọng.
     loai: ve-site
@@ -48,6 +50,8 @@ nhan_dinh:
     loai: khuyen-tap
     ket_qua: khong-can-nguon
     ghi_chu: Lời khuyên cách làm, hợp với các trang luyen-tai/choi-bang-tai ("nghe hai, ba lần, hát lại").
+    luot_2: dung
+    luot_2_ghi_chu: Cách dạy chép chính tả phổ biến.
   - id: n7
     cau: Ví dụ "nhảy xuống quãng 3" trỏ tới bài 9 (Quãng).
     loai: ve-site
@@ -63,6 +67,8 @@ nhan_dinh:
     loai: khuyen-tap
     ket_qua: khong-can-nguon
     ghi_chu: Lời khuyên tập (cùng ngưỡng với bảng tuần của luyen-tai/choi-bang-tai).
+    luot_2: dung
+    luot_2_ghi_chu: Ngưỡng 4/5 là lựa chọn của công cụ, hợp lý.
   - id: n10
     cau: 'Ba cấp của công cụ: Cấp 1 4 nốt bước liền, Cấp 2 6 nốt có bước nhảy, Cấp 3 8 nốt.'
     loai: ve-site
@@ -80,6 +86,9 @@ nhan_dinh:
       - caniuse-midi
     ket_qua: dung
     ghi_chu: 'Ô trạng thái MIDI (midi.js, midi-status): khi trình duyệt không có Web MIDI thì khóa nút và báo "Trình duyệt này không có MIDI trên web. Dùng Chrome, Edge hay Opera trên máy tính." Chrome, Edge, Opera hỗ trợ (Can I use, kiểm 11/2026); Firefox từ 108 cũng hỗ trợ nên danh sách chưa đủ nhưng không sai; Safari và iOS không có. Câu dễ cũ: rà lại khi trình duyệt đổi.'
+    luot_2: dung
+    luot_2_nguon: [ "https://caniuse.com/midi", "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMIDIAccess" ]
+    luot_2_ghi_chu: Đã mở caniuse (Chrome 43+, Edge 79+, Opera 30+ hỗ trợ; Safari và iOS Safari không) và MDN requestMIDIAccess (chỉ HTTPS, chưa Baseline). Lưu ý Firefox 108+ cũng hỗ trợ và Chrome Android có, nên danh sách không đầy đủ nhưng không sai về ý chính.
 ghi_chu: 'Trang Luyện tập (tầng khung). Chỗ cần người giao sửa: nhãn "Cấp 1: 4 nốt, bước liền" (src/scripts/chep.js, CAP) và câu "Bắt đầu ở cấp 1: bốn nốt, chỉ đi liền bậc" ở luyen-tai/choi-bang-tai (trang đã khóa, cần mở khóa). Ô MIDI của công cụ là bản chép của ô midi-status. Thuật ngữ trang dùng (chủ âm, bậc, quãng) đã có hoặc thuộc bài nhạc lý khóa.'
 doi_chu:
   - cu: "Nghe một câu nhạc ngắn rồi nhập lại từng nốt bằng bàn phím trên màn hình (hoặc đàn MIDI). Đây là kỹ năng luyện tai cao nhất: biến âm thanh trong đầu thành nốt nhạc."

@@ -3,86 +3,95 @@ trang: src/content/docs/luyen-tap/hoa-bieu.md
 nguon_cu: ../opus-zero/docs/luyen-tap/hoa-bieu.md
 tang: khung
 lan:
-- so: 1
-  ngay: '2026-11-05'
-  nhanh: moi/d7-l1
-  ma_bam: null
-  nguoi:
-    luot_1: Claude Sonnet 5.5 (D7-L1 lượt 1, phần 2/2)
-    luot_2: null
-    review: null
-    kiem_mau: null
-ghi_chu: 'Trang khung, không sửa chữ. Link OMT dẫn theo đường dẫn chương chuẩn; hai trang OMT chưa mở được trong phiên này
-  (tin vào kiến thức nhạc lý chuẩn và hồ sơ nhac-ly/08-hoa-bieu đã khóa): lượt 2 nên mở lại để xác nhận nguyên văn.'
+  - so: 1
+    ngay: '2026-11-05'
+    nhanh: moi/d7-l1
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet 5.5 (D7-L1 lượt 1, phần 2/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Trang khung, không sửa chữ. Link OMT dẫn theo đường dẫn chương chuẩn; hai trang OMT chưa mở được trong phiên này (tin vào kiến thức nhạc lý chuẩn và hồ sơ nhac-ly/08-hoa-bieu đã khóa): lượt 2 nên mở lại để xác nhận nguyên văn.'
 nguon:
-- id: omt-keysig
-  bac: 3
-  ten: Wikipedia, Key signature
-  link: https://en.wikipedia.org/wiki/Key_signature
-- id: omt-circle
-  bac: 2
-  ten: Wikipedia, Circle of fifths
-  link: https://en.wikipedia.org/wiki/Circle_of_fifths
+  - id: omt-keysig
+    bac: 3
+    ten: Wikipedia, Key signature
+    link: https://en.wikipedia.org/wiki/Key_signature
+  - id: omt-circle
+    bac: 2
+    ten: Wikipedia, Circle of fifths
+    link: https://en.wikipedia.org/wiki/Circle_of_fifths
 nhan_dinh:
-- id: n1
-  cau: Công cụ cho nhìn hóa biểu và chọn giọng, có phạm vi "Đến 4 dấu hóa" và giọng trưởng.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/luyen-hoa-bieu.js và dist/luyen-tap/hoa-bieu/: lựa chọn "Giọng trưởng / Giọng thứ / Cả hai", Phạm
-    vi "Đến 4 dấu hóa" / "Tất cả 15 giọng", Khóa Sol / Fa.'
-- id: n2
-  cau: Nên bắt đầu với phạm vi đến 4 dấu hóa và giọng trưởng, rồi mở rộng dần.
-  loai: khuyen-tap
-  ket_qua: khong-can-nguon
-- id: n3
-  cau: 'Dấu thăng: dấu thăng cuối cùng cộng nửa cung là chủ âm giọng trưởng.'
-  loai: quy-tac
-  nguon:
-  - omt-keysig
-  ket_qua: dung
-  ghi_chu: 'Wikipedia Key signature: giọng trưởng có thăng: chủ âm là nửa cung trên dấu thăng cuối (nốt dẫn). Ví dụ 2 thăng (Fa♯,
-    Đô♯): Đô♯ + nửa cung = Rê trưởng ✓.'
-- id: n4
-  cau: 'Dấu giáng: dấu giáng áp chót là tên giọng trưởng; riêng 1 dấu giáng là Fa trưởng.'
-  loai: quy-tac
-  nguon:
-  - omt-keysig
-  ket_qua: dung
-  ghi_chu: 'Wikipedia Key signature: "the penultimate flat is the tonic" của giọng trưởng; một giáng (Si♭) là Fa trưởng. Ví dụ
-    3 giáng (Si♭, Mi♭, La♭): Mi♭ trưởng ✓.'
-- id: n5
-  cau: 'Giọng thứ: từ chủ âm giọng trưởng đi xuống 3 nửa cung.'
-  loai: quy-tac
-  nguon:
-  - omt-keysig
-  ket_qua: dung
-  ghi_chu: 'Wikipedia Key signature: giọng thứ song song có chủ âm cách chủ âm giọng trưởng một quãng ba thứ (3 nửa cung) xuống.
-    Ví dụ Đô trưởng và La thứ ✓.'
-- id: n6
-  cau: 'Vòng quãng năm: vòng ngoài là các giọng trưởng, vòng trong là giọng thứ song song.'
-  loai: quy-tac
-  nguon:
-  - omt-circle
-  ket_qua: dung
-  ghi_chu: 'Wikipedia Circle of fifths: giọng thứ song song xếp trong, trưởng ngoài là cách vẽ thông thường; src/scripts/vong-quang-nam.js
-    và ve.js: aria-label "vòng ngoài là giọng trưởng, vòng trong là giọng thứ song song".'
-- id: n7
-  cau: Đi theo chiều kim đồng hồ mỗi bước thêm một dấu thăng; ngược chiều thêm một dấu giáng.
-  loai: quy-tac
-  nguon:
-  - omt-circle
-  ket_qua: dung
-  ghi_chu: 'Wikipedia Circle of fifths: lên quãng năm đúng (theo kim đồng hồ) thêm một thăng, xuống thêm một giáng. src/scripts/ve.js:
-    vòng bắt đầu Đô ở đỉnh, vị trí tăng theo chiều kim đồng hồ.'
-- id: n8
-  cau: Bấm vào một giọng trên vòng để xem hóa biểu, các nốt, hợp âm và nghe thử.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/vong-quang-nam.js: chọn giọng, hiện hóa biểu, các nốt, hợp âm các bậc, giọng song song; nghe gam và
-    I-IV-V-I.'
-- id: n9
-  cau: 'Lý thuyết đầy đủ ở bài 8: Hóa biểu và vòng quãng năm.'
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: nhac-ly/08-hoa-bieu có ở site mới; tiêu đề trang đó là "Hóa biểu và vòng quãng năm" (kiểm src/content/docs/nhac-ly/08-hoa-bieu.md).
+  - id: n1
+    cau: Công cụ cho nhìn hóa biểu và chọn giọng, có phạm vi "Đến 4 dấu hóa" và giọng trưởng.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/luyen-hoa-bieu.js và dist/luyen-tap/hoa-bieu/: lựa chọn "Giọng trưởng / Giọng thứ / Cả hai", Phạm vi "Đến 4 dấu hóa" / "Tất cả 15 giọng", Khóa Sol / Fa.'
+  - id: n2
+    cau: Nên bắt đầu với phạm vi đến 4 dấu hóa và giọng trưởng, rồi mở rộng dần.
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    luot_2: dung
+    luot_2_ghi_chu: Lời khuyên hợp lý.
+  - id: n3
+    cau: 'Dấu thăng: dấu thăng cuối cùng cộng nửa cung là chủ âm giọng trưởng.'
+    loai: quy-tac
+    nguon:
+      - omt-keysig
+    ket_qua: dung
+    ghi_chu: 'Wikipedia Key signature: giọng trưởng có thăng: chủ âm là nửa cung trên dấu thăng cuối (nốt dẫn). Ví dụ 2 thăng (Fa♯, Đô♯): Đô♯ + nửa cung = Rê trưởng ✓.'
+    luot_2: dung
+    luot_2_nguon: [ "https://en.wikipedia.org/wiki/Key_signature" ]
+    luot_2_ghi_chu: Chủ âm cao hơn dấu thăng cuối nửa cung.
+  - id: n4
+    cau: 'Dấu giáng: dấu giáng áp chót là tên giọng trưởng; riêng 1 dấu giáng là Fa trưởng.'
+    loai: quy-tac
+    nguon:
+      - omt-keysig
+    ket_qua: dung
+    ghi_chu: 'Wikipedia Key signature: "the penultimate flat is the tonic" của giọng trưởng; một giáng (Si♭) là Fa trưởng. Ví dụ 3 giáng (Si♭, Mi♭, La♭): Mi♭ trưởng ✓.'
+    luot_2: dung
+    luot_2_nguon: [ "https://en.wikipedia.org/wiki/Key_signature" ]
+    luot_2_ghi_chu: Dấu giáng áp chót; một dấu giáng là Fa trưởng.
+  - id: n5
+    cau: 'Giọng thứ: từ chủ âm giọng trưởng đi xuống 3 nửa cung.'
+    loai: quy-tac
+    nguon:
+      - omt-keysig
+    ket_qua: dung
+    ghi_chu: 'Wikipedia Key signature: giọng thứ song song có chủ âm cách chủ âm giọng trưởng một quãng ba thứ (3 nửa cung) xuống. Ví dụ Đô trưởng và La thứ ✓.'
+    luot_2: dung
+    luot_2_nguon: [ "https://en.wikipedia.org/wiki/Key_signature" ]
+    luot_2_ghi_chu: Giọng thứ song song thấp hơn quãng ba thứ (3 nửa cung).
+  - id: n6
+    cau: 'Vòng quãng năm: vòng ngoài là các giọng trưởng, vòng trong là giọng thứ song song.'
+    loai: quy-tac
+    nguon:
+      - omt-circle
+    ket_qua: dung
+    ghi_chu: 'Wikipedia Circle of fifths: giọng thứ song song xếp trong, trưởng ngoài là cách vẽ thông thường; src/scripts/vong-quang-nam.js và ve.js: aria-label "vòng ngoài là giọng trưởng, vòng trong là giọng thứ song song".'
+    luot_2: dung
+    luot_2_nguon: [ "https://en.wikipedia.org/wiki/Key_signature" ]
+    luot_2_ghi_chu: Vòng ngoài trưởng, vòng trong thứ là cách vẽ chuẩn (nguồn xác nhận quan hệ trưởng-thứ song song và chiều vòng); cách bố trí hình là quy ước vẽ.
+  - id: n7
+    cau: Đi theo chiều kim đồng hồ mỗi bước thêm một dấu thăng; ngược chiều thêm một dấu giáng.
+    loai: quy-tac
+    nguon:
+      - omt-circle
+    ket_qua: dung
+    ghi_chu: 'Wikipedia Circle of fifths: lên quãng năm đúng (theo kim đồng hồ) thêm một thăng, xuống thêm một giáng. src/scripts/ve.js: vòng bắt đầu Đô ở đỉnh, vị trí tăng theo chiều kim đồng hồ.'
+    luot_2: dung
+    luot_2_nguon: [ "https://en.wikipedia.org/wiki/Key_signature" ]
+    luot_2_ghi_chu: Kim đồng hồ thêm thăng, ngược chiều thêm giáng.
+  - id: n8
+    cau: Bấm vào một giọng trên vòng để xem hóa biểu, các nốt, hợp âm và nghe thử.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/vong-quang-nam.js: chọn giọng, hiện hóa biểu, các nốt, hợp âm các bậc, giọng song song; nghe gam và I-IV-V-I.'
+  - id: n9
+    cau: 'Lý thuyết đầy đủ ở bài 8: Hóa biểu và vòng quãng năm.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: nhac-ly/08-hoa-bieu có ở site mới; tiêu đề trang đó là "Hóa biểu và vòng quãng năm" (kiểm src/content/docs/nhac-ly/08-hoa-bieu.md).
 khuong_nhac: []

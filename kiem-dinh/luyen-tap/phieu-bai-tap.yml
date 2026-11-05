@@ -3,123 +3,135 @@ trang: src/content/docs/luyen-tap/phieu-bai-tap.md
 nguon_cu: ../opus-zero/docs/luyen-tap/phieu-bai-tap.md
 tang: khung
 lan:
-- so: 1
-  ngay: '2026-11-05'
-  nhanh: moi/d7-l2
-  ma_bam: null
-  nguoi:
-    luot_1: Claude Sonnet (D7-L2 lượt 1, phần 1/2)
-    luot_2: null
-    review: null
-    kiem_mau: null
+  - so: 1
+    ngay: '2026-11-05'
+    nhanh: moi/d7-l2
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet (D7-L2 lượt 1, phần 1/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Trang khung (D7-L2, phần 1/2). Một chỗ sửa: n7 ("cách học có hiệu quả ghi nhớ cao nhất" thành "một trong những cách học ..."; description của trang không đổi). Lưu ý cho người giao: n3, n16 ("in ra giấy (A4)", "Trang in khổ A4"): site không đặt @page, nên khổ giấy do người in chọn; giữ như site cũ. Nguồn n6, n7: Dunlosky 2013 (American Educator, bản tóm tắt báo; bài gốc ở Psychological Science in the Public Interest chỉ đọc tóm tắt PubMed vì trang tạp chí trả 403). Dòng "Viết ra giấy" so với "practice testing" của nguồn: nguồn nói về kiểm tra tự nhớ nói chung, không riêng viết tay.'
 doi_chu:
-- cu: 'Viết ra giấy buộc bạn tự nhớ lại thay vì chỉ nhận ra đáp án trong các lựa chọn. Đây là cách học có hiệu quả ghi nhớ cao nhất. Gợi ý: mỗi tuần in 2–3 phiếu, làm không nhìn bài, rồi chấm bằng đáp án.'
-  moi: 'Viết ra giấy buộc bạn tự nhớ lại thay vì chỉ nhận ra đáp án trong các lựa chọn. Đây là một trong những cách học có hiệu quả ghi nhớ cao nhất. Gợi ý: mỗi tuần in 2–3 phiếu, làm không nhìn bài, rồi chấm bằng đáp án.'
-  ly_do: 'n7 (da-sua): Dunlosky 2013 xếp practice testing và distributed practice là hai cách hiệu quả nhất trong mười cách được xét; "cách học có hiệu quả ghi nhớ cao nhất" thành "một trong những cách".'
+  - cu: 'Viết ra giấy buộc bạn tự nhớ lại thay vì chỉ nhận ra đáp án trong các lựa chọn. Đây là cách học có hiệu quả ghi nhớ cao nhất. Gợi ý: mỗi tuần in 2–3 phiếu, làm không nhìn bài, rồi chấm bằng đáp án.'
+    moi: 'Viết ra giấy buộc bạn tự nhớ lại thay vì chỉ nhận ra đáp án trong các lựa chọn. Đây là một trong những cách học có hiệu quả ghi nhớ cao nhất. Gợi ý: mỗi tuần in 2–3 phiếu, làm không nhìn bài, rồi chấm bằng đáp án.'
+    ly_do: 'n7 (da-sua): Dunlosky 2013 xếp practice testing và distributed practice là hai cách hiệu quả nhất trong mười cách được xét; "cách học có hiệu quả ghi nhớ cao nhất" thành "một trong những cách".'
 nguon:
-- id: dunlosky-ae
-  bac: 2
-  ten: 'Dunlosky, J. (2013), Strengthening the Student Toolbox: Study Strategies to Boost Learning, American Educator 37(3), tr. 12–21 (American Federation of Teachers)'
-  link: https://www.aft.org/ae/fall2013/dunlosky
-- id: dunlosky-2013
-  bac: 2
-  ten: Dunlosky, Rawson, Marsh, Nathan, Willingham (2013), Improving Students' Learning With Effective Learning Techniques, Psychological Science in the Public Interest 14(1), tr. 4–58 (chỉ đọc bản tóm tắt ở PubMed, PMID 26173288, qua NCBI E-utilities)
-  link: https://pubmed.ncbi.nlm.nih.gov/26173288/
+  - id: dunlosky-ae
+    bac: 2
+    ten: 'Dunlosky, J. (2013), Strengthening the Student Toolbox: Study Strategies to Boost Learning, American Educator 37(3), tr. 12–21 (American Federation of Teachers)'
+    link: https://www.aft.org/ae/fall2013/dunlosky
+  - id: dunlosky-2013
+    bac: 2
+    ten: Dunlosky, Rawson, Marsh, Nathan, Willingham (2013), Improving Students' Learning With Effective Learning Techniques, Psychological Science in the Public Interest 14(1), tr. 4–58 (chỉ đọc bản tóm tắt ở PubMed, PMID 26173288, qua NCBI E-utilities)
+    link: https://pubmed.ncbi.nlm.nih.gov/26173288/
 nhan_dinh:
-- id: n1
-  cau: 'Công cụ có năm loại bài để chọn: gọi tên nốt khóa Sol, gọi tên nốt khóa Fa, gọi tên quãng (hòa âm), gọi tên hợp âm ba, đọc hóa biểu.'
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/phieu.js: LOAI có đúng năm khóa (notesTreble, notesBass, intervals, chords, keysigs) với các tên ấy; dist/luyen-tap/phieu-bai-tap/index.html có năm option.'
-- id: n2
-  cau: Bấm "Đề mới" thì có đề khác.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/phieu.js: nút data-act="moi" gọi tao() sinh đề ngẫu nhiên (deBai, Math.random); đổi loại bài cũng sinh đề mới.'
-- id: n3
-  cau: Bấm "In phiếu" để in ra giấy (A4).
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/in.js inRieng(.oz-phieu-to): chỉ in phiếu (tiêu đề, dòng họ tên, đề). Site không đặt @page nên khổ giấy do hộp thoại in chọn; không ép A4. Chữ "(A4)" như bản cũ (worksheet.js cũ cũng window.print() không đặt khổ). Điều trang hứa chỉ là gợi ý in khổ A4: người giao quyết có sửa thành "in trên giấy A4 hay Letter" không (chưa sửa).'
-- id: n4
-  cau: Đáp án được ẩn khi in.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/styles/thanh-phan.css @media print: .oz-phieu-dap-an { display: none !important }; ngoài ra in riêng (in.js) chỉ giữ .oz-phieu-to, mà đáp án (.oz-phieu-dap-an) nằm ngoài khối ấy (src/scripts/phieu.js vePhieu).'
-- id: n5
-  cau: Bấm "Hiện/ẩn đáp án" để xem đáp án sau khi làm xong.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/phieu.js: nút data-act="dap-an" bật tắt hidden của .oz-phieu-dap-an, chứa "Đáp án: 1. …; 2. …" (chuDapAn).'
-- id: n6
-  cau: Tự nhớ lại thay vì chỉ nhận ra đáp án trong các lựa chọn là cách học tốt hơn cho ghi nhớ.
-  loai: quy-tac
-  nguon:
-  - dunlosky-ae
-  - dunlosky-2013
-  ket_qua: dung
-  ghi_chu: 'Dunlosky 2013 (American Educator): "student learning can benefit from almost any kind of practice test ... Research suggests, however, that students will benefit most from tests that require recall from memory, and not from tests that merely ask them to recognize ..." (đọc ngày 5/11/2026).'
-- id: n7
-  cau: Tự kiểm tra bằng cách nhớ lại là một trong những cách học có hiệu quả ghi nhớ cao nhất.
-  loai: so-lieu
-  nguon:
-  - dunlosky-ae
-  - dunlosky-2013
-  ket_qua: da-sua
-  ghi_chu: 'Chữ cũ: "Đây là cách học có hiệu quả ghi nhớ cao nhất." Chữ mới: "Đây là một trong những cách học có hiệu quả ghi nhớ cao nhất." Lý do: Dunlosky 2013: "We rated two strategies—practice testing and distributed practice—as the most effective of those we reviewed" (hai cách đứng đầu trong mười cách, không phải một cách duy nhất).'
-- id: n8
-  cau: Mỗi tuần in 2–3 phiếu, làm không nhìn bài, rồi chấm bằng đáp án.
-  loai: khuyen-tap
-  ket_qua: khong-can-nguon
-- id: n9
-  cau: 'Bài tập viết 1: viết gam trưởng của Sol, Rê, Fa, Si♭ có hóa biểu.'
-  loai: khuyen-tap
-  ket_qua: khong-can-nguon
-- id: n10
-  cau: 'Bài tập viết 2: viết gam thứ hòa âm của Mi, Rê, Sol.'
-  loai: khuyen-tap
-  ket_qua: khong-can-nguon
-- id: n11
-  cau: 'Bài tập viết 3: viết hợp âm ba trên mọi bậc của Rê trưởng, ghi số La Mã dưới mỗi hợp âm.'
-  loai: khuyen-tap
-  ket_qua: khong-can-nguon
-- id: n12
-  cau: 'Bài tập viết 4: viết hợp âm V7 của 5 giọng bất kỳ và giải quyết về I.'
-  loai: khuyen-tap
-  ket_qua: khong-can-nguon
-- id: n13
-  cau: 'Bài tập viết 5: chép lại 4 ô nhịp đầu của một bản nhạc bạn yêu thích, nghe và kiểm tra.'
-  loai: khuyen-tap
-  ket_qua: khong-can-nguon
-- id: n14
-  cau: 'Giấy kẻ khuông nằm ở cuối trang, ở mục "Giấy kẻ khuông" (link #giay-ke-khuong).'
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/content/docs/luyen-tap/phieu-bai-tap.md: "## Giấy kẻ khuông" là mục cuối, có ::cong-cu{ten="staffpaper"}; id giay-ke-khuong theo id-cu.mjs; tests/link.test.mjs kiểm anchor.'
-- id: n15
-  cau: Chọn được loại khuông (khuông đơn hoặc khuông kép piano) và số khuông mỗi trang, rồi bấm "In giấy kẻ khuông".
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/giay-khuong.js: veGiayKhuong có ô Loại (Khuông đơn, Khuông kép (piano)), ô Số khuông mỗi trang (SO_KHUONG = 8, 10, 12) và nút "In giấy kẻ khuông" (inRieng(giay)).'
-- id: n16
-  cau: Trang in khổ A4.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/giay-khuong.js: tờ giấy là SVG viewBox 0 0 210 297 (tỉ lệ A4), lề 15 mm, khe 2 mm; src/styles/thanh-phan.css in cao 96vh. Không có @page: khổ giấy vẫn do hộp thoại in chọn (đúng A4 khi người in chọn A4). Giống bản cũ (staffpaper.js: "Trang A4 210 × 297 mm, lề 15 mm").'
-- id: n17
-  cau: Khi hộp thoại in hiện ra, chọn "Lưu dưới dạng PDF" nếu muốn giữ file để in nhiều lần.
-  loai: khuyen-tap
-  ket_qua: khong-can-nguon
-  ghi_chu: Hộp thoại in của Chrome, Edge, Safari có tuỳ chọn lưu PDF; chữ nút tuỳ trình duyệt và ngôn ngữ.
-- id: n18
-  cau: Giấy kẻ khuông dùng để làm các bài tập viết ở cuối mỗi bài nhạc lý Hòa âm bốn bè và Đối âm.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: src/content/docs/nhac-ly/21-hoa-am-bon-be.md và 22-doi-am.md đều có mục "## Bài tập viết" gần cuối trang (trước "## Nguồn"); link /opus/nhac-ly/21-hoa-am-bon-be/ và /opus/nhac-ly/22-doi-am/ tới trang có thật.
-- id: n19
-  cau: Giấy kẻ khuông dùng để chép lại một giai điệu vừa nghe (link tới trang Chép giai điệu) hoặc ghi ý tưởng riêng khi ứng tác (link tới trang Ứng tác).
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/content/docs/luyen-tap/chep-giai-dieu.md ("Nghe một câu nhạc ngắn rồi nhập lại từng nốt") và src/content/docs/piano/hoa-am/ung-tac.md ("Ứng tác cổ điển: bắt đầu từ đâu") có thật; trang chỉ gợi ý dùng giấy, không nói hai trang ấy có sẵn nút in.'
+  - id: n1
+    cau: 'Công cụ có năm loại bài để chọn: gọi tên nốt khóa Sol, gọi tên nốt khóa Fa, gọi tên quãng (hòa âm), gọi tên hợp âm ba, đọc hóa biểu.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/phieu.js: LOAI có đúng năm khóa (notesTreble, notesBass, intervals, chords, keysigs) với các tên ấy; dist/luyen-tap/phieu-bai-tap/index.html có năm option.'
+  - id: n2
+    cau: Bấm "Đề mới" thì có đề khác.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/phieu.js: nút data-act="moi" gọi tao() sinh đề ngẫu nhiên (deBai, Math.random); đổi loại bài cũng sinh đề mới.'
+  - id: n3
+    cau: Bấm "In phiếu" để in ra giấy (A4).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/in.js inRieng(.oz-phieu-to): chỉ in phiếu (tiêu đề, dòng họ tên, đề). Site không đặt @page nên khổ giấy do hộp thoại in chọn; không ép A4. Chữ "(A4)" như bản cũ (worksheet.js cũ cũng window.print() không đặt khổ). Điều trang hứa chỉ là gợi ý in khổ A4: người giao quyết có sửa thành "in trên giấy A4 hay Letter" không (chưa sửa).'
+  - id: n4
+    cau: Đáp án được ẩn khi in.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/styles/thanh-phan.css @media print: .oz-phieu-dap-an { display: none !important }; ngoài ra in riêng (in.js) chỉ giữ .oz-phieu-to, mà đáp án (.oz-phieu-dap-an) nằm ngoài khối ấy (src/scripts/phieu.js vePhieu).'
+  - id: n5
+    cau: Bấm "Hiện/ẩn đáp án" để xem đáp án sau khi làm xong.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/phieu.js: nút data-act="dap-an" bật tắt hidden của .oz-phieu-dap-an, chứa "Đáp án: 1. …; 2. …" (chuDapAn).'
+  - id: n6
+    cau: Tự nhớ lại thay vì chỉ nhận ra đáp án trong các lựa chọn là cách học tốt hơn cho ghi nhớ.
+    loai: quy-tac
+    nguon:
+      - dunlosky-ae
+      - dunlosky-2013
+    ket_qua: dung
+    ghi_chu: 'Dunlosky 2013 (American Educator): "student learning can benefit from almost any kind of practice test ... Research suggests, however, that students will benefit most from tests that require recall from memory, and not from tests that merely ask them to recognize ..." (đọc ngày 5/11/2026).'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.psychologicalscience.org/news/releases/which-study-strategies-make-the-grade.html" ]
+    luot_2_ghi_chu: 'Đã mở thông cáo APS về Dunlosky et al. 2013: practice testing (tự kiểm tra) xếp hiệu quả cao, trên các cách chỉ đọc lại. Câu viết "hơn việc nhận ra đáp án" là diễn giải hợp lý; thông cáo không nói riêng về nhận ra so với nhớ lại.'
+  - id: n7
+    cau: Tự kiểm tra bằng cách nhớ lại là một trong những cách học có hiệu quả ghi nhớ cao nhất.
+    loai: so-lieu
+    nguon:
+      - dunlosky-ae
+      - dunlosky-2013
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Đây là cách học có hiệu quả ghi nhớ cao nhất." Chữ mới: "Đây là một trong những cách học có hiệu quả ghi nhớ cao nhất." Lý do: Dunlosky 2013: "We rated two strategies—practice testing and distributed practice—as the most effective of those we reviewed" (hai cách đứng đầu trong mười cách, không phải một cách duy nhất).'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.psychologicalscience.org/news/releases/which-study-strategies-make-the-grade.html" ]
+    luot_2_ghi_chu: 'Đã mở thông cáo APS: practice testing và distributed practice là hai kỹ thuật xếp "high utility" trong 10 kỹ thuật. "Một trong những" đúng.'
+  - id: n8
+    cau: Mỗi tuần in 2–3 phiếu, làm không nhìn bài, rồi chấm bằng đáp án.
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    luot_2: dung
+    luot_2_ghi_chu: Lời khuyên tập, hợp lý (phù hợp luyện nhớ lại, phân tán).
+  - id: n9
+    cau: 'Bài tập viết 1: viết gam trưởng của Sol, Rê, Fa, Si♭ có hóa biểu.'
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n10
+    cau: 'Bài tập viết 2: viết gam thứ hòa âm của Mi, Rê, Sol.'
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    luot_2: dung
+    luot_2_ghi_chu: Bài tập viết gam, hợp lý.
+  - id: n11
+    cau: 'Bài tập viết 3: viết hợp âm ba trên mọi bậc của Rê trưởng, ghi số La Mã dưới mỗi hợp âm.'
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n12
+    cau: 'Bài tập viết 4: viết hợp âm V7 của 5 giọng bất kỳ và giải quyết về I.'
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+  - id: n13
+    cau: 'Bài tập viết 5: chép lại 4 ô nhịp đầu của một bản nhạc bạn yêu thích, nghe và kiểm tra.'
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    luot_2: dung
+    luot_2_ghi_chu: Lời khuyên tập, hợp lý.
+  - id: n14
+    cau: 'Giấy kẻ khuông nằm ở cuối trang, ở mục "Giấy kẻ khuông" (link #giay-ke-khuong).'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/content/docs/luyen-tap/phieu-bai-tap.md: "## Giấy kẻ khuông" là mục cuối, có ::cong-cu{ten="staffpaper"}; id giay-ke-khuong theo id-cu.mjs; tests/link.test.mjs kiểm anchor.'
+  - id: n15
+    cau: Chọn được loại khuông (khuông đơn hoặc khuông kép piano) và số khuông mỗi trang, rồi bấm "In giấy kẻ khuông".
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/giay-khuong.js: veGiayKhuong có ô Loại (Khuông đơn, Khuông kép (piano)), ô Số khuông mỗi trang (SO_KHUONG = 8, 10, 12) và nút "In giấy kẻ khuông" (inRieng(giay)).'
+  - id: n16
+    cau: Trang in khổ A4.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/giay-khuong.js: tờ giấy là SVG viewBox 0 0 210 297 (tỉ lệ A4), lề 15 mm, khe 2 mm; src/styles/thanh-phan.css in cao 96vh. Không có @page: khổ giấy vẫn do hộp thoại in chọn (đúng A4 khi người in chọn A4). Giống bản cũ (staffpaper.js: "Trang A4 210 × 297 mm, lề 15 mm").'
+  - id: n17
+    cau: Khi hộp thoại in hiện ra, chọn "Lưu dưới dạng PDF" nếu muốn giữ file để in nhiều lần.
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: Hộp thoại in của Chrome, Edge, Safari có tuỳ chọn lưu PDF; chữ nút tuỳ trình duyệt và ngôn ngữ.
+  - id: n18
+    cau: Giấy kẻ khuông dùng để làm các bài tập viết ở cuối mỗi bài nhạc lý Hòa âm bốn bè và Đối âm.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: src/content/docs/nhac-ly/21-hoa-am-bon-be.md và 22-doi-am.md đều có mục "## Bài tập viết" gần cuối trang (trước "## Nguồn"); link /opus/nhac-ly/21-hoa-am-bon-be/ và /opus/nhac-ly/22-doi-am/ tới trang có thật.
+  - id: n19
+    cau: Giấy kẻ khuông dùng để chép lại một giai điệu vừa nghe (link tới trang Chép giai điệu) hoặc ghi ý tưởng riêng khi ứng tác (link tới trang Ứng tác).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/content/docs/luyen-tap/chep-giai-dieu.md ("Nghe một câu nhạc ngắn rồi nhập lại từng nốt") và src/content/docs/piano/hoa-am/ung-tac.md ("Ứng tác cổ điển: bắt đầu từ đâu") có thật; trang chỉ gợi ý dùng giấy, không nói hai trang ấy có sẵn nút in.'
 khuong_nhac: []

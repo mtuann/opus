@@ -3,85 +3,95 @@ trang: src/content/docs/luyen-tap/tiet-tau.md
 nguon_cu: ../opus-zero/docs/luyen-tap/tiet-tau.md
 tang: khung
 lan:
-- so: 1
-  ngay: '2026-11-05'
-  nhanh: moi/d7-l2
-  ma_bam: null
-  nguoi:
-    luot_1: Claude Sonnet (D7-L2 lượt 1, phần 2/2)
-    luot_2: null
-    review: null
-    kiem_mau: null
+  - so: 1
+    ngay: '2026-11-05'
+    nhanh: moi/d7-l2
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet (D7-L2 lượt 1, phần 2/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Trang khung (D7-L2, phần 2/2). Một chỗ bỏ: n8 ("Đa số người mới có xu hướng gõ sớm": không kiểm được). n9 (độ trễ chạm trên điện thoại) dựa trang Android Developers, chỉ xác nhận có độ trễ chạm và độ trễ âm thanh tùy máy, không kiểm chữ "nhỏ". Câu về công cụ kiểm trên src/scripts/tiet-tau.js và hinh-so-sanh.js (đối chiếu rhythm.js cũ; các điều index.yml yêu cầu giữ: 2 ô 4/4, 4 tiếng đếm, nút hay phím cách, sớm/muộn trung bình theo ms: đều giữ). Thuật ngữ không cần bản ghi mới (nốt dài, móc đơn, dấu lặng: chưa có ở thuat-ngu.yml, ghi cho D3-L5).'
 doi_chu:
-- cu: Kết quả "hơi sớm" hay "hơi muộn" cho biết thói quen của bạn. Đa số người mới có xu hướng gõ sớm.
-  moi: Kết quả "hơi sớm" hay "hơi muộn" cho biết thói quen của bạn.
-  ly_do: 'n8 (da-bo): "đa số người mới gõ sớm" không có nguồn kiểm được.'
+  - cu: Kết quả "hơi sớm" hay "hơi muộn" cho biết thói quen của bạn. Đa số người mới có xu hướng gõ sớm.
+    moi: Kết quả "hơi sớm" hay "hơi muộn" cho biết thói quen của bạn.
+    ly_do: 'n8 (da-bo): "đa số người mới gõ sớm" không có nguồn kiểm được.'
 nguon:
-- id: repp2005
-  bac: 2
-  ten: 'Repp (2005), Sensorimotor synchronization: a review of the tapping literature, Psychonomic Bulletin & Review 12(6), 969–992 (đã mở bản tóm tắt qua NCBI E-utilities, PMID 16615317)'
-  link: https://pubmed.ncbi.nlm.nih.gov/16615317/
-- id: android-latency
-  bac: 2
-  ten: Android Developers, Audio latency (định nghĩa touch latency, độ trễ âm thanh theo máy)
-  link: https://developer.android.com/ndk/guides/audio/audio-latency
+  - id: repp2005
+    bac: 2
+    ten: 'Repp (2005), Sensorimotor synchronization: a review of the tapping literature, Psychonomic Bulletin & Review 12(6), 969–992 (đã mở bản tóm tắt qua NCBI E-utilities, PMID 16615317)'
+    link: https://pubmed.ncbi.nlm.nih.gov/16615317/
+  - id: android-latency
+    bac: 2
+    ten: Android Developers, Audio latency (định nghĩa touch latency, độ trễ âm thanh theo máy)
+    link: https://developer.android.com/ndk/guides/audio/audio-latency
 nhan_dinh:
-- id: n1
-  cau: Công cụ cho một tiết tấu 2 ô nhịp, nhịp 4/4.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/tiet-tau.js: taoTietTau(cap, 2) hai ô, mỗi ô 48 đơn vị (4 phách); abcTietTau M:4/4.'
-- id: n2
-  cau: Bấm Bắt đầu gõ, nghe 4 tiếng đếm vào, rồi gõ theo từng nốt bằng nút "Gõ" hoặc phím Space.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/tiet-tau.js: nút data-act="bat-dau" ("Bắt đầu gõ"), hen(): bốn tiếng tiengGo trước dau; nút .oz-go (nhãn "Gõ", "hoặc nhấn phím cách", pointerdown), keydown e.code === "Space".'
-- id: n3
-  cau: Site so sánh thời điểm bạn gõ với nhịp chuẩn.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/tiet-tau.js: chamGo (ghepNhip trong src/scripts/hinh-so-sanh.js: mỗi nốt lấy lần gõ gần nhất, dung sai min(150 ms, 30% phách)), daiNhipGo vẽ dải nhịp.'
-- id: n4
-  cau: 'Đếm to khi đọc: "1 – 2 – 3 – 4", và "1 và 2 và…" khi có nốt móc đơn.'
-  loai: khuyen-tap
-  ket_qua: khong-can-nguon
-- id: n5
-  cau: Nếu sai, bấm Nghe mẫu để nghe tiết tấu đúng, rồi thử lại cùng tiết tấu đó.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/tiet-tau.js: nút "Nghe mẫu" hen(true, true) (tiếng đếm và tiếng nốt); tiết tấu chỉ đổi khi bấm "Tiết tấu mới" hay đổi cấp (moi()); lời báo khi sai: "Bấm “Nghe mẫu” rồi thử lại."'
-- id: n6
-  cau: Chỉ gõ vào nốt nhạc, không gõ vào dấu lặng; nốt dài (trắng, tròn) chỉ gõ một lần ở đầu nốt.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/tiet-tau.js: lucGo chỉ lấy lúc bắt đầu của nốt (x[1]), bỏ dấu lặng; mỗi nốt dài một lúc cần gõ; gõ thừa bị đếm ("gõ thừa N lần").'
-- id: n7
-  cau: Kết quả "hơi sớm" hay "hơi muộn" cho biết thói quen của bạn.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/tiet-tau.js: chamGo: xuHuong "rất đều" (lệch TB < 25 ms) / "hơi sớm, trung bình N ms" / "hơi muộn, trung bình N ms".'
-- id: n8
-  cau: Đa số người mới có xu hướng gõ sớm.
-  loai: so-lieu
-  nguon:
-  - repp2005
-  ket_qua: da-bo
-  ghi_chu: 'Đã bỏ khỏi trang. Repp (2005), review: hiện tượng "negative mean asynchrony" (gõ hơi sớm hơn tiếng nhịp) là một mục của tài liệu gõ nhịp, nhưng bản tóm tắt đã mở không nói "đa số người mới", và chưa đọc được toàn văn để kiểm; với công cụ này, độ trễ chạm và âm thanh của máy lại thường làm lệch muộn. Cũ (cuối mục): "Kết quả “hơi sớm” hay “hơi muộn” cho biết thói quen của bạn. Đa số người mới có xu hướng gõ sớm." Mới: bỏ câu thứ hai.'
-- id: n9
-  cau: Trên điện thoại, có thể có độ trễ nhỏ giữa lúc chạm và lúc ghi nhận.
-  loai: so-lieu
-  nguon:
-  - android-latency
-  ket_qua: dung
-  ghi_chu: 'Android Developers (Audio latency): "Touch latency is the time between a user touching the screen and that touch event being received by an app"; cùng trang: độ trễ âm thanh khứ hồi "varies greatly depending on device model and Android build". Trang nói "có thể" và "nhỏ", không nêu số; nguồn đủ cho "có thể có độ trễ" ở điện thoại, không kiểm được chữ "nhỏ".'
-- id: n10
-  cau: Nếu luôn bị báo "muộn", hãy dùng máy tính với bàn phím.
-  loai: khuyen-tap
-  ket_qua: khong-can-nguon
-- id: n11
-  cau: Link "Trường độ" (nhac-ly/03-truong-do) và "Nhịp" (nhac-ly/04-nhip) là lý thuyết của công cụ này.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: src/content/docs/nhac-ly/03-truong-do.md (title "3. Trường độ và dấu lặng") và 04-nhip.md ("4. Nhịp và số chỉ nhịp") có ở site mới; đúng chủ đề tiết tấu 4/4, nốt và dấu lặng.
+  - id: n1
+    cau: Công cụ cho một tiết tấu 2 ô nhịp, nhịp 4/4.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/tiet-tau.js: taoTietTau(cap, 2) hai ô, mỗi ô 48 đơn vị (4 phách); abcTietTau M:4/4.'
+  - id: n2
+    cau: Bấm Bắt đầu gõ, nghe 4 tiếng đếm vào, rồi gõ theo từng nốt bằng nút "Gõ" hoặc phím Space.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/tiet-tau.js: nút data-act="bat-dau" ("Bắt đầu gõ"), hen(): bốn tiếng tiengGo trước dau; nút .oz-go (nhãn "Gõ", "hoặc nhấn phím cách", pointerdown), keydown e.code === "Space".'
+  - id: n3
+    cau: Site so sánh thời điểm bạn gõ với nhịp chuẩn.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/tiet-tau.js: chamGo (ghepNhip trong src/scripts/hinh-so-sanh.js: mỗi nốt lấy lần gõ gần nhất, dung sai min(150 ms, 30% phách)), daiNhipGo vẽ dải nhịp.'
+  - id: n4
+    cau: 'Đếm to khi đọc: "1 – 2 – 3 – 4", và "1 và 2 và…" khi có nốt móc đơn.'
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    luot_2: dung
+    luot_2_ghi_chu: Lời khuyên tập, cách đếm phổ biến.
+  - id: n5
+    cau: Nếu sai, bấm Nghe mẫu để nghe tiết tấu đúng, rồi thử lại cùng tiết tấu đó.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/tiet-tau.js: nút "Nghe mẫu" hen(true, true) (tiếng đếm và tiếng nốt); tiết tấu chỉ đổi khi bấm "Tiết tấu mới" hay đổi cấp (moi()); lời báo khi sai: "Bấm “Nghe mẫu” rồi thử lại."'
+  - id: n6
+    cau: Chỉ gõ vào nốt nhạc, không gõ vào dấu lặng; nốt dài (trắng, tròn) chỉ gõ một lần ở đầu nốt.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/tiet-tau.js: lucGo chỉ lấy lúc bắt đầu của nốt (x[1]), bỏ dấu lặng; mỗi nốt dài một lúc cần gõ; gõ thừa bị đếm ("gõ thừa N lần").'
+  - id: n7
+    cau: Kết quả "hơi sớm" hay "hơi muộn" cho biết thói quen của bạn.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/tiet-tau.js: chamGo: xuHuong "rất đều" (lệch TB < 25 ms) / "hơi sớm, trung bình N ms" / "hơi muộn, trung bình N ms".'
+  - id: n8
+    cau: Đa số người mới có xu hướng gõ sớm.
+    loai: so-lieu
+    nguon:
+      - repp2005
+    ket_qua: da-bo
+    ghi_chu: 'Đã bỏ khỏi trang. Repp (2005), review: hiện tượng "negative mean asynchrony" (gõ hơi sớm hơn tiếng nhịp) là một mục của tài liệu gõ nhịp, nhưng bản tóm tắt đã mở không nói "đa số người mới", và chưa đọc được toàn văn để kiểm; với công cụ này, độ trễ chạm và âm thanh của máy lại thường làm lệch muộn. Cũ (cuối mục): "Kết quả “hơi sớm” hay “hơi muộn” cho biết thói quen của bạn. Đa số người mới có xu hướng gõ sớm." Mới: bỏ câu thứ hai.'
+    luot_2: dung
+    luot_2_nguon: [ "https://link.springer.com/article/10.3758/s13423-012-0371-2" ]
+    luot_2_ghi_chu: 'Nghiên cứu "negative mean asynchrony": người gõ theo phách thường gõ sớm khoảng vài chục ms, người không nhạc công nhiều hơn nhạc công (thấy trong kết quả tìm kiếm; bài Psychonomic Bulletin & Review chưa mở trực tiếp). Câu "đa số người mới" là diễn giải hợp lý.'
+  - id: n9
+    cau: Trên điện thoại, có thể có độ trễ nhỏ giữa lúc chạm và lúc ghi nhận.
+    loai: so-lieu
+    nguon:
+      - android-latency
+    ket_qua: dung
+    ghi_chu: 'Android Developers (Audio latency): "Touch latency is the time between a user touching the screen and that touch event being received by an app"; cùng trang: độ trễ âm thanh khứ hồi "varies greatly depending on device model and Android build". Trang nói "có thể" và "nhỏ", không nêu số; nguồn đủ cho "có thể có độ trễ" ở điện thoại, không kiểm được chữ "nhỏ".'
+    luot_2: dung
+    luot_2_nguon: [ "https://android-developers.googleblog.com/2016/04/a-new-method-to-measure-touch-and-audio.html" ]
+    luot_2_ghi_chu: "Độ trễ chạm trên điện thoại cỡ vài chục ms (Google: điển hình ~20 ms; nghiên cứu CMU ~69 ms). Thấy qua kết quả tìm kiếm, chưa mở trực tiếp trang."
+  - id: n10
+    cau: Nếu luôn bị báo "muộn", hãy dùng máy tính với bàn phím.
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    luot_2: dung
+    luot_2_ghi_chu: Lời khuyên tập, hợp lý.
+  - id: n11
+    cau: Link "Trường độ" (nhac-ly/03-truong-do) và "Nhịp" (nhac-ly/04-nhip) là lý thuyết của công cụ này.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: src/content/docs/nhac-ly/03-truong-do.md (title "3. Trường độ và dấu lặng") và 04-nhip.md ("4. Nhịp và số chỉ nhịp") có ở site mới; đúng chủ đề tiết tấu 4/4, nốt và dấu lặng.
 khuong_nhac: []

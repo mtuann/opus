@@ -3,181 +3,230 @@ trang: src/content/docs/luyen-tap/metronome.md
 nguon_cu: ../opus-zero/docs/luyen-tap/metronome.md
 tang: khung
 lan:
-- so: 1
-  ngay: '2026-11-05'
-  nhanh: moi/d7-l2
-  ma_bam: null
-  nguoi:
-    luot_1: Claude Sonnet (D7-L2 lượt 1, phần 1/2)
-    luot_2: null
-    review: null
-    kiem_mau: null
+  - so: 1
+    ngay: '2026-11-05'
+    nhanh: moi/d7-l2
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet (D7-L2 lượt 1, phần 1/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Trang khung (D7-L2, phần 1/2). Một chỗ sửa: n12 (Largo 40–60 thành 40–66). Thuật ngữ Largo, Adagio, Andante, Moderato, Allegro, Presto và tempo, beat đã có bản ghi khóa ở thuat-ngu.yml; "BPM" chưa có bản ghi riêng. Lưu ý cho review: n18, n20 (Moderato 108–120, Allegro 120–156) chỉ khớp chính xác Wikipedia (bậc 3), nguồn bậc 2 (Dolmetsch) ghi khoảng khác; đã ghi dung vì trang nói "gần đúng", review quyết có giữ cột BPM không. Lệch nhỏ giữa trang và máy: thanh kéo của máy (TOC_DO) gọi Allegro từ 120 tới dưới 168, trang ghi 120–156 (156–168 là Vivace theo Wikipedia); trang đã nói "gần đúng". Dolmetsch đọc qua curl ngày 5/11/2026.'
 doi_chu:
-- cu: 40–60
-  moi: 40–66
-  ly_do: 'n12 (da-sua): Dolmetsch ghi Largo 42-66 bpm, Wikipedia 40–66; không nguồn nào ghi 60 làm cận trên. Cùng cách sửa với thuat-ngu/largo (D3-L5).'
+  - cu: 40–60
+    moi: 40–66
+    ly_do: 'n12 (da-sua): Dolmetsch ghi Largo 42-66 bpm, Wikipedia 40–66; không nguồn nào ghi 60 làm cận trên. Cùng cách sửa với thuat-ngu/largo (D3-L5).'
 nguon:
-- id: wiki-tempo
-  bac: 3
-  ten: Wikipedia, Tempo (đọc 5/11/2026)
-  link: https://en.wikipedia.org/wiki/Tempo
-- id: dolmetsch-tempo
-  bac: 2
-  ten: 'Dolmetsch Online, Music Theory Online, Lesson 5: Tempo (Table of Tempo Markings), Dr. Brian Blood'
-  link: https://www.dolmetsch.com/musictheory5.htm
+  - id: wiki-tempo
+    bac: 3
+    ten: Wikipedia, Tempo (đọc 5/11/2026)
+    link: https://en.wikipedia.org/wiki/Tempo
+  - id: dolmetsch-tempo
+    bac: 2
+    ten: 'Dolmetsch Online, Music Theory Online, Lesson 5: Tempo (Table of Tempo Markings), Dr. Brian Blood'
+    link: https://www.dolmetsch.com/musictheory5.htm
 nhan_dinh:
-- id: n1
-  cau: BPM (beats per minute) là số phách mỗi phút.
-  loai: dinh-nghia
-  nguon:
-  - wiki-tempo
-  - dolmetsch-tempo
-  ket_qua: dung
-  ghi_chu: 'Wikipedia, Tempo: "tempo ... is typically measured in beats per minute (bpm or BPM). For example, a tempo of 60 beats per minute signifies one beat per second"; Dolmetsch: "Beats per minute (bpm)".'
-- id: n2
-  cau: Máy đếm nhịp giữ một nhịp đều tuyệt đối.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/may-dem-nhip.js: henPhach hẹn trước các tiếng gõ theo đồng hồ của AudioContext (tiengGo, am-thanh.js), bộ hẹn giờ 25 ms chỉ đánh thức, không quyết lúc phát. "Tuyệt đối" theo nghĩa không lệch nhịp vì trễ của bộ hẹn giờ; là mô tả của trang cũ, giữ nguyên.'
-- id: n3
-  cau: 'Bắt đầu chậm hơn mức bạn nghĩ mình làm được: chơi đúng ở 60 BPM có ích hơn chơi sai ở 100 BPM.'
-  loai: khuyen-tap
-  ket_qua: khong-can-nguon
-- id: n4
-  cau: Khi đã làm đúng 3 lần liên tiếp thì tăng 2–4 BPM; sai thì lùi lại một nấc.
-  loai: khuyen-tap
-  ket_qua: khong-can-nguon
-  ghi_chu: 'Khớp trang piano/cach-tap, mục 8 "Thang máy đếm nhịp": "Đúng ba lần liên tiếp thì tăng 2–4 nhịp mỗi phút; sai thì lùi một nấc".'
-- id: n5
-  cau: Link "ví dụ một thang máy đếm nhịp" (/opus/piano/cach-tap/) dẫn tới trang có ví dụ ấy.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: src/content/docs/piano/cach-tap.md, mục "### Ví dụ một thang máy đếm nhịp" (bảng bốn ngày, ♩ = 60 đến 76).
-- id: n6
-  cau: Nút "Gõ để đo tốc độ" bấm nhiều lần theo một bản nhạc đang nghe thì cho biết tốc độ của bản nhạc.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/may-dem-nhip.js: nút data-act="tap" gọi bpmTuLanGo, trung bình khoảng cách các lần gõ trong 2,5 giây gần nhất rồi đặt BPM (cần ít nhất hai lần gõ). Nút có chữ "Gõ để đo tốc độ" trong veMayDemNhip và trong dist/luyen-tap/metronome/index.html.'
-- id: n7
-  cau: Thời gian dùng máy đếm nhịp (tính theo phút trọn vẹn) được ghi vào nhật ký luyện tập.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/scripts/may-dem-nhip.js, hàm dung(): phut = Math.floor((Date.now() - batDau) / 60000); nếu phut > 0 thì ghiNgay("minutes", phut) (src/scripts/tien-do.js, days[ngày].minutes); trang Nhật ký hiện "phút máy đếm nhịp" và mucNgay tính minutes từ 5 phút.'
-- id: n8
-  cau: Link "công cụ tiết tấu" (/opus/luyen-tap/tiet-tau/) dẫn tới công cụ luyện đọc tiết tấu có chấm điểm.
-  loai: ve-site
-  ket_qua: dung
-  ghi_chu: 'src/content/docs/luyen-tap/tiet-tau.md: "gõ theo từng nốt ... Site so sánh thời điểm bạn gõ với nhịp chuẩn" (src/scripts/tiet-tau.js chấm và gọi kyNang("rhythm")).'
-- id: n9
-  cau: Các nhà soạn nhạc ghi tốc độ bằng tiếng Ý ở đầu bản nhạc.
-  loai: quy-tac
-  nguon:
-  - wiki-tempo
-  - dolmetsch-tempo
-  ket_qua: dung
-  ghi_chu: 'Wikipedia, Tempo: "it is customary to describe the tempo of a piece by one or more words, most commonly in Italian"; "the base tempo indication (such as Allegro) typically appears in large type above the staff". Dolmetsch: "the most common tempo related marks are listed below ... most commonly in Italian".'
-- id: n10
-  cau: Khoảng BPM của các thuật ngữ tốc độ chỉ là gần đúng; nghệ sĩ có quyền diễn giải.
-  loai: quy-tac
-  nguon:
-  - dolmetsch-tempo
-  - wiki-tempo
-  ket_qua: dung
-  ghi_chu: 'Dolmetsch, Tempo: "there is a wide variation associated with each mark ... these markings should be used carefully. Very often, the style of the piece of music or the skill of the musician, dictates the range of tempi within which a performance can be convincing". Wikipedia: nghĩa chính xác của nhiều thuật ngữ đã đổi theo thời gian (Largo, Adagio).'
-- id: n11
-  cau: 'Largo: rất chậm, rộng rãi.'
-  loai: dinh-nghia
-  nguon:
-  - dolmetsch-tempo
-  - wiki-tempo
-  ket_qua: dung
-  ghi_chu: 'Bản ghi thuat-ngu/largo đã khóa (D3-L5). Dolmetsch: "broad, very slow and dignified"; Wikipedia: "slow and broad".'
-- id: n12
-  cau: 'Largo: khoảng 40–66 BPM.'
-  loai: so-lieu
-  nguon:
-  - dolmetsch-tempo
-  - wiki-tempo
-  ket_qua: da-sua
-  ghi_chu: 'Chữ cũ: "40–60". Chữ mới: "40–66". Lý do: Dolmetsch ghi Largo 42-66 bpm, Wikipedia (bản đọc ngày 5/11/2026) ghi 40–66; không nguồn nào đã mở ghi 60 làm cận trên. Cùng cách sửa với D3-L5 (du-lieu/thuat-ngu/largo n2: "40–60" thành "40–66"). Máy đếm nhịp (TOC_DO) tách Larghetto từ 60 nhưng bảng ở trang chỉ nêu sáu thuật ngữ, nên không mâu thuẫn.'
-- id: n13
-  cau: 'Adagio: chậm, thong thả.'
-  loai: dinh-nghia
-  nguon:
-  - dolmetsch-tempo
-  - wiki-tempo
-  ket_qua: dung
-  ghi_chu: 'Bản ghi thuat-ngu/adagio đã khóa. Dolmetsch: "slow, but not as slow as largo"; Wikipedia: "slow with great expression".'
-- id: n14
-  cau: 'Adagio: khoảng 66–76 BPM.'
-  loai: so-lieu
-  nguon:
-  - dolmetsch-tempo
-  ket_qua: dung
-  ghi_chu: 'Dolmetsch: Adagio "58-97 bpm (some sources suggest 66-76 bpm while others suggest 48-66 bpm)". Khoảng của trang là một trong các cách ghi của nguồn, gần đúng như trang nói; Wikipedia ghi 44–66.'
-- id: n15
-  cau: 'Andante: vừa phải, như nhịp bước đi.'
-  loai: dinh-nghia
-  nguon:
-  - dolmetsch-tempo
-  - wiki-tempo
-  ket_qua: dung
-  ghi_chu: 'Bản ghi thuat-ngu/andante đã khóa ("Vừa phải, như bước đi"; trang thêm chữ "nhịp", là lựa chọn dịch). Dolmetsch: "moving along - walking pace"; Wikipedia: "at a walking pace, moderately slow".'
-- id: n16
-  cau: 'Andante: khoảng 76–108 BPM.'
-  loai: so-lieu
-  nguon:
-  - dolmetsch-tempo
-  - wiki-tempo
-  ket_qua: dung
-  ghi_chu: 'Dolmetsch: Andante "56-88 bpm (some sources suggest 76-108 bpm)"; Wikipedia: 56–108. Khoảng của trang khớp "some sources suggest" của Dolmetsch.'
-- id: n17
-  cau: 'Moderato: vừa.'
-  loai: dinh-nghia
-  nguon:
-  - dolmetsch-tempo
-  - wiki-tempo
-  ket_qua: dung
-  ghi_chu: 'Bản ghi thuat-ngu/moderato đã khóa. Dolmetsch: "moderate speed"; Wikipedia: "at a moderate speed".'
-- id: n18
-  cau: 'Moderato: khoảng 108–120 BPM.'
-  loai: so-lieu
-  nguon:
-  - wiki-tempo
-  - dolmetsch-tempo
-  ket_qua: dung
-  ghi_chu: 'Wikipedia ghi đúng "108–120 bpm"; Dolmetsch ghi 66-126 (một số nguồn 120-168), tức nguồn không thống nhất. Chỉ khớp một nguồn (bậc 3) và nằm trong khoảng 66-126 của nguồn bậc 2; trang nói "gần đúng". Lưu ý cho review: lô D3-gom đã bỏ số BPM khỏi trang Từ điển vì khoảng chồng lấn giữa các nguồn; người giao quyết có giữ cột này không (xem báo cáo).'
-- id: n19
-  cau: 'Allegro: nhanh, vui tươi.'
-  loai: dinh-nghia
-  nguon:
-  - dolmetsch-tempo
-  - wiki-tempo
-  ket_qua: dung
-  ghi_chu: 'Bản ghi thuat-ngu/allegro đã khóa. Dolmetsch: "quick, lively and bright"; Wikipedia: "fast and bright", và "allegro also connotes joy".'
-- id: n20
-  cau: 'Allegro: khoảng 120–156 BPM.'
-  loai: so-lieu
-  nguon:
-  - wiki-tempo
-  - dolmetsch-tempo
-  ket_qua: dung
-  ghi_chu: 'Wikipedia ghi đúng "120–156 bpm"; Dolmetsch: 84-144, máy điện tử hiện đại gợi ý 120-160. Chỉ khớp một nguồn bậc 3 và một mốc đo của nguồn bậc 2; trang nói "gần đúng". Lưu ý cho review, như dòng Moderato.'
-- id: n21
-  cau: 'Presto: rất nhanh.'
-  loai: dinh-nghia
-  nguon:
-  - dolmetsch-tempo
-  - wiki-tempo
-  ket_qua: dung
-  ghi_chu: 'Bản ghi thuat-ngu/presto đã khóa. Dolmetsch: "very quick"; Wikipedia: "very fast".'
-- id: n22
-  cau: 'Presto: khoảng 168–200 BPM.'
-  loai: so-lieu
-  nguon:
-  - wiki-tempo
-  - dolmetsch-tempo
-  ket_qua: dung
-  ghi_chu: 'Dolmetsch: Presto "100-152 bpm (some sources suggest 168-208 bpm)"; Wikipedia: "168–200 bpm". Khớp Wikipedia và gần "some sources suggest" của Dolmetsch.'
+  - id: n1
+    cau: BPM (beats per minute) là số phách mỗi phút.
+    loai: dinh-nghia
+    nguon:
+      - wiki-tempo
+      - dolmetsch-tempo
+    ket_qua: dung
+    ghi_chu: 'Wikipedia, Tempo: "tempo ... is typically measured in beats per minute (bpm or BPM). For example, a tempo of 60 beats per minute signifies one beat per second"; Dolmetsch: "Beats per minute (bpm)".'
+    luot_2: dung
+    luot_2_nguon: [ "https://en.wikipedia.org/wiki/Tempo" ]
+    luot_2_ghi_chu: 'Đã mở trang Wikipedia "Tempo": tempo tính bằng số phách mỗi phút (BPM). Wikipedia chỉ dùng để xác nhận định nghĩa thông dụng.'
+  - id: n2
+    cau: Máy đếm nhịp giữ một nhịp đều tuyệt đối.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/may-dem-nhip.js: henPhach hẹn trước các tiếng gõ theo đồng hồ của AudioContext (tiengGo, am-thanh.js), bộ hẹn giờ 25 ms chỉ đánh thức, không quyết lúc phát. "Tuyệt đối" theo nghĩa không lệch nhịp vì trễ của bộ hẹn giờ; là mô tả của trang cũ, giữ nguyên.'
+  - id: n3
+    cau: 'Bắt đầu chậm hơn mức bạn nghĩ mình làm được: chơi đúng ở 60 BPM có ích hơn chơi sai ở 100 BPM.'
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    luot_2: dung
+    luot_2_ghi_chu: Lời khuyên tập, hợp cách dạy phổ biến.
+  - id: n4
+    cau: Khi đã làm đúng 3 lần liên tiếp thì tăng 2–4 BPM; sai thì lùi lại một nấc.
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Khớp trang piano/cach-tap, mục 8 "Thang máy đếm nhịp": "Đúng ba lần liên tiếp thì tăng 2–4 nhịp mỗi phút; sai thì lùi một nấc".'
+    luot_2: dung
+    luot_2_ghi_chu: Lời khuyên tập, hợp cách dạy phổ biến.
+  - id: n5
+    cau: Link "ví dụ một thang máy đếm nhịp" (/opus/piano/cach-tap/) dẫn tới trang có ví dụ ấy.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: src/content/docs/piano/cach-tap.md, mục "### Ví dụ một thang máy đếm nhịp" (bảng bốn ngày, ♩ = 60 đến 76).
+  - id: n6
+    cau: Nút "Gõ để đo tốc độ" bấm nhiều lần theo một bản nhạc đang nghe thì cho biết tốc độ của bản nhạc.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/may-dem-nhip.js: nút data-act="tap" gọi bpmTuLanGo, trung bình khoảng cách các lần gõ trong 2,5 giây gần nhất rồi đặt BPM (cần ít nhất hai lần gõ). Nút có chữ "Gõ để đo tốc độ" trong veMayDemNhip và trong dist/luyen-tap/metronome/index.html.'
+  - id: n7
+    cau: Thời gian dùng máy đếm nhịp (tính theo phút trọn vẹn) được ghi vào nhật ký luyện tập.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/scripts/may-dem-nhip.js, hàm dung(): phut = Math.floor((Date.now() - batDau) / 60000); nếu phut > 0 thì ghiNgay("minutes", phut) (src/scripts/tien-do.js, days[ngày].minutes); trang Nhật ký hiện "phút máy đếm nhịp" và mucNgay tính minutes từ 5 phút.'
+  - id: n8
+    cau: Link "công cụ tiết tấu" (/opus/luyen-tap/tiet-tau/) dẫn tới công cụ luyện đọc tiết tấu có chấm điểm.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/content/docs/luyen-tap/tiet-tau.md: "gõ theo từng nốt ... Site so sánh thời điểm bạn gõ với nhịp chuẩn" (src/scripts/tiet-tau.js chấm và gọi kyNang("rhythm")).'
+  - id: n9
+    cau: Các nhà soạn nhạc ghi tốc độ bằng tiếng Ý ở đầu bản nhạc.
+    loai: quy-tac
+    nguon:
+      - wiki-tempo
+      - dolmetsch-tempo
+    ket_qua: dung
+    ghi_chu: 'Wikipedia, Tempo: "it is customary to describe the tempo of a piece by one or more words, most commonly in Italian"; "the base tempo indication (such as Allegro) typically appears in large type above the staff". Dolmetsch: "the most common tempo related marks are listed below ... most commonly in Italian".'
+    luot_2: dung
+    luot_2_nguon: [ "https://en.wikipedia.org/wiki/Tempo" ]
+    luot_2_ghi_chu: 'Đã mở Wikipedia "Tempo": tiếng Ý thành chuẩn vì là ngôn ngữ của phần lớn nhà soạn nhạc; cũng có khi dùng ngôn ngữ khác (câu viết "ghi bằng tiếng Ý" là cách nói phổ biến, hơi tuyệt đối).'
+  - id: n10
+    cau: Khoảng BPM của các thuật ngữ tốc độ chỉ là gần đúng; nghệ sĩ có quyền diễn giải.
+    loai: quy-tac
+    nguon:
+      - dolmetsch-tempo
+      - wiki-tempo
+    ket_qua: dung
+    ghi_chu: 'Dolmetsch, Tempo: "there is a wide variation associated with each mark ... these markings should be used carefully. Very often, the style of the piece of music or the skill of the musician, dictates the range of tempi within which a performance can be convincing". Wikipedia: nghĩa chính xác của nhiều thuật ngữ đã đổi theo thời gian (Largo, Adagio).'
+    luot_2: dung
+    luot_2_nguon: [ "https://en.wikipedia.org/wiki/Tempo", "https://orchestracentral.com/music-tempos-and-markings/" ]
+    luot_2_ghi_chu: 'Wikipedia: "very rough approximations"; Orchestra Central: ranges "could be left up for interpretation". Đã mở cả hai.'
+  - id: n11
+    cau: 'Largo: rất chậm, rộng rãi.'
+    loai: dinh-nghia
+    nguon:
+      - dolmetsch-tempo
+      - wiki-tempo
+    ket_qua: dung
+    ghi_chu: 'Bản ghi thuat-ngu/largo đã khóa (D3-L5). Dolmetsch: "broad, very slow and dignified"; Wikipedia: "slow and broad".'
+    luot_2: dung
+    luot_2_nguon: [ "https://en.wikipedia.org/wiki/Tempo" ]
+    luot_2_ghi_chu: 'Wikipedia: Largo "slow and broad".'
+  - id: n12
+    cau: 'Largo: khoảng 40–66 BPM.'
+    loai: so-lieu
+    nguon:
+      - dolmetsch-tempo
+      - wiki-tempo
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "40–60". Chữ mới: "40–66". Lý do: Dolmetsch ghi Largo 42-66 bpm, Wikipedia (bản đọc ngày 5/11/2026) ghi 40–66; không nguồn nào đã mở ghi 60 làm cận trên. Cùng cách sửa với D3-L5 (du-lieu/thuat-ngu/largo n2: "40–60" thành "40–66"). Máy đếm nhịp (TOC_DO) tách Larghetto từ 60 nhưng bảng ở trang chỉ nêu sáu thuật ngữ, nên không mâu thuẫn.'
+    luot_2: khong-chac
+    luot_2_nguon: [ "https://en.wikipedia.org/wiki/Tempo", "https://www.classical-music.com/features/musical-terms/what-is-tempo-in-music", "https://orchestracentral.com/music-tempos-and-markings/" ]
+    luot_2_ghi_chu: 'Các nguồn đã mở lệch nhau: Wikipedia "Tempo" 40–66; classical-music.com 40–60; Orchestra Central 45–50. Khoảng 40–66 khớp Wikipedia nhưng không phải chuẩn duy nhất.'
+  - id: n13
+    cau: 'Adagio: chậm, thong thả.'
+    loai: dinh-nghia
+    nguon:
+      - dolmetsch-tempo
+      - wiki-tempo
+    ket_qua: dung
+    ghi_chu: 'Bản ghi thuat-ngu/adagio đã khóa. Dolmetsch: "slow, but not as slow as largo"; Wikipedia: "slow with great expression".'
+    luot_2: dung
+    luot_2_nguon: [ "https://en.wikipedia.org/wiki/Tempo" ]
+    luot_2_ghi_chu: 'Wikipedia: Adagio "slow with great expression"; classical-music.com: slow and unhurried.'
+  - id: n14
+    cau: 'Adagio: khoảng 66–76 BPM.'
+    loai: so-lieu
+    nguon:
+      - dolmetsch-tempo
+    ket_qua: dung
+    ghi_chu: 'Dolmetsch: Adagio "58-97 bpm (some sources suggest 66-76 bpm while others suggest 48-66 bpm)". Khoảng của trang là một trong các cách ghi của nguồn, gần đúng như trang nói; Wikipedia ghi 44–66.'
+    luot_2: khong-chac
+    luot_2_nguon: [ "https://en.wikipedia.org/wiki/Tempo", "https://www.classical-music.com/features/musical-terms/what-is-tempo-in-music", "https://orchestracentral.com/music-tempos-and-markings/" ]
+    luot_2_ghi_chu: "Nguồn lệch: classical-music.com 66–76; Wikipedia 44–66; Orchestra Central 55–65. Khoảng 66–76 khớp một nguồn."
+  - id: n15
+    cau: 'Andante: vừa phải, như nhịp bước đi.'
+    loai: dinh-nghia
+    nguon:
+      - dolmetsch-tempo
+      - wiki-tempo
+    ket_qua: dung
+    ghi_chu: 'Bản ghi thuat-ngu/andante đã khóa ("Vừa phải, như bước đi"; trang thêm chữ "nhịp", là lựa chọn dịch). Dolmetsch: "moving along - walking pace"; Wikipedia: "at a walking pace, moderately slow".'
+    luot_2: dung
+    luot_2_nguon: [ "https://en.wikipedia.org/wiki/Tempo", "https://www.classical-music.com/features/musical-terms/what-is-tempo-in-music" ]
+    luot_2_ghi_chu: "Cả hai nguồn: Andante là nhịp bước đi, vừa chậm."
+  - id: n16
+    cau: 'Andante: khoảng 76–108 BPM.'
+    loai: so-lieu
+    nguon:
+      - dolmetsch-tempo
+      - wiki-tempo
+    ket_qua: dung
+    ghi_chu: 'Dolmetsch: Andante "56-88 bpm (some sources suggest 76-108 bpm)"; Wikipedia: 56–108. Khoảng của trang khớp "some sources suggest" của Dolmetsch.'
+    luot_2: khong-chac
+    luot_2_nguon: [ "https://en.wikipedia.org/wiki/Tempo", "https://www.classical-music.com/features/musical-terms/what-is-tempo-in-music", "https://orchestracentral.com/music-tempos-and-markings/" ]
+    luot_2_ghi_chu: "Nguồn lệch: classical-music.com 76–108; Wikipedia 56–108; Orchestra Central 73–77. Khoảng 76–108 khớp một nguồn, cận trên 108 phổ biến."
+  - id: n17
+    cau: 'Moderato: vừa.'
+    loai: dinh-nghia
+    nguon:
+      - dolmetsch-tempo
+      - wiki-tempo
+    ket_qua: dung
+    ghi_chu: 'Bản ghi thuat-ngu/moderato đã khóa. Dolmetsch: "moderate speed"; Wikipedia: "at a moderate speed".'
+    luot_2: dung
+    luot_2_nguon: [ "https://en.wikipedia.org/wiki/Tempo", "https://www.classical-music.com/features/musical-terms/what-is-tempo-in-music" ]
+    luot_2_ghi_chu: "Moderato: tốc độ vừa, cả hai nguồn."
+  - id: n18
+    cau: 'Moderato: khoảng 108–120 BPM.'
+    loai: so-lieu
+    nguon:
+      - wiki-tempo
+      - dolmetsch-tempo
+    ket_qua: dung
+    ghi_chu: 'Wikipedia ghi đúng "108–120 bpm"; Dolmetsch ghi 66-126 (một số nguồn 120-168), tức nguồn không thống nhất. Chỉ khớp một nguồn (bậc 3) và nằm trong khoảng 66-126 của nguồn bậc 2; trang nói "gần đúng". Lưu ý cho review: lô D3-gom đã bỏ số BPM khỏi trang Từ điển vì khoảng chồng lấn giữa các nguồn; người giao quyết có giữ cột này không (xem báo cáo).'
+    luot_2: khong-chac
+    luot_2_nguon: [ "https://en.wikipedia.org/wiki/Tempo", "https://www.classical-music.com/features/musical-terms/what-is-tempo-in-music", "https://orchestracentral.com/music-tempos-and-markings/" ]
+    luot_2_ghi_chu: Wikipedia và classical-music.com cùng 108–120; Orchestra Central 86–97. Phần lớn nguồn khớp nhưng có nguồn khác.
+  - id: n19
+    cau: 'Allegro: nhanh, vui tươi.'
+    loai: dinh-nghia
+    nguon:
+      - dolmetsch-tempo
+      - wiki-tempo
+    ket_qua: dung
+    ghi_chu: 'Bản ghi thuat-ngu/allegro đã khóa. Dolmetsch: "quick, lively and bright"; Wikipedia: "fast and bright", và "allegro also connotes joy".'
+    luot_2: dung
+    luot_2_nguon: [ "https://en.wikipedia.org/wiki/Tempo", "https://www.classical-music.com/features/musical-terms/what-is-tempo-in-music" ]
+    luot_2_ghi_chu: "Allegro: nhanh, vui tươi (fast and bright), cả hai nguồn."
+  - id: n20
+    cau: 'Allegro: khoảng 120–156 BPM.'
+    loai: so-lieu
+    nguon:
+      - wiki-tempo
+      - dolmetsch-tempo
+    ket_qua: dung
+    ghi_chu: 'Wikipedia ghi đúng "120–156 bpm"; Dolmetsch: 84-144, máy điện tử hiện đại gợi ý 120-160. Chỉ khớp một nguồn bậc 3 và một mốc đo của nguồn bậc 2; trang nói "gần đúng". Lưu ý cho review, như dòng Moderato.'
+    luot_2: khong-chac
+    luot_2_nguon: [ "https://en.wikipedia.org/wiki/Tempo", "https://www.classical-music.com/features/musical-terms/what-is-tempo-in-music", "https://orchestracentral.com/music-tempos-and-markings/" ]
+    luot_2_ghi_chu: Wikipedia và classical-music.com cùng 120–156; Orchestra Central 109–132; một số nguồn khác trong kết quả tìm kiếm đến 168. Khoảng 120–156 là một cách phổ biến, không chuẩn duy nhất.
+  - id: n21
+    cau: 'Presto: rất nhanh.'
+    loai: dinh-nghia
+    nguon:
+      - dolmetsch-tempo
+      - wiki-tempo
+    ket_qua: dung
+    ghi_chu: 'Bản ghi thuat-ngu/presto đã khóa. Dolmetsch: "very quick"; Wikipedia: "very fast".'
+    luot_2: dung
+    luot_2_nguon: [ "https://en.wikipedia.org/wiki/Tempo", "https://www.classical-music.com/features/musical-terms/what-is-tempo-in-music" ]
+    luot_2_ghi_chu: "Presto: rất nhanh, cả hai nguồn."
+  - id: n22
+    cau: 'Presto: khoảng 168–200 BPM.'
+    loai: so-lieu
+    nguon:
+      - wiki-tempo
+      - dolmetsch-tempo
+    ket_qua: dung
+    ghi_chu: 'Dolmetsch: Presto "100-152 bpm (some sources suggest 168-208 bpm)"; Wikipedia: "168–200 bpm". Khớp Wikipedia và gần "some sources suggest" của Dolmetsch.'
+    luot_2: dung
+    luot_2_nguon: [ "https://en.wikipedia.org/wiki/Tempo", "https://www.classical-music.com/features/musical-terms/what-is-tempo-in-music", "https://orchestracentral.com/music-tempos-and-markings/" ]
+    luot_2_ghi_chu: Wikipedia và classical-music.com 168–200; Orchestra Central 168–177 (nằm trong khoảng). Không nguồn nào mâu thuẫn.
 khuong_nhac: []
