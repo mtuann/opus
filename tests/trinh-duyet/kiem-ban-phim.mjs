@@ -7,8 +7,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { createRequire } from 'node:module';
-import { chromium } from 'playwright';
-import { DIST, TRANG, TRINH_DUYET, dongMayChu, goc, khongChromium, nguCanh } from './chung.mjs';
+import { DIST, TRANG, TRINH_DUYET, dongMayChu, goc, khongChromium, nguCanh, CHROMIUM } from './chung.mjs';
 
 after(dongMayChu);
 const AXE = createRequire(import.meta.url).resolve('axe-core/axe.min.js');
@@ -413,7 +412,7 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 // (cùng cách bấm thử).
 const AXE_TRANG = [...new Set([...BAN_PHIM, ...VONG, ...LUYEN])].filter((t) => !TRANG.includes(t));
 test('axe: trang có bàn phím, vòng quãng năm, luyện hóa biểu không vi phạm (sau khi bấm thử)', { skip: khongChromium || (!AXE_TRANG.length && 'mọi trang có các thành phần này là trang mẫu, đã kiểm ở kiem-tro-nang.mjs') }, async (t) => {
-	const trinhDuyet = await chromium.launch();
+	const trinhDuyet = await CHROMIUM.launch();
 	try {
 		for (const [w, h, scheme] of [
 			[360, 780, 'dark'],

@@ -14,6 +14,8 @@ import { idCu } from './src/plugins/id-cu.mjs';
 import { opusMarkdown } from './src/plugins/opus-markdown.mjs';
 import { sapCo } from './src/plugins/sap-co.mjs';
 import { timKiemKhongDau } from './src/tim-kiem/tich-hop.mjs';
+import { sachIn } from './src/sach/sach.mjs';
+import { scriptDangKy, ungDung } from './src/ung-dung/ung-dung.mjs';
 
 const site = 'https://mtuann.github.io';
 // Tầng của trang (src/data/trang.yml): trang Đọc thêm xếp nhóm theo tầng. Dữ liệu sai thì báo lỗi ngay ở đây, như khi nạp
@@ -89,6 +91,10 @@ export default defineConfig({
 				{ tag: 'meta', attrs: { name: 'theme-color', content: '#fbfbf9', media: '(prefers-color-scheme: light)' } },
 				{ tag: 'meta', attrs: { name: 'theme-color', content: '#12161d', media: '(prefers-color-scheme: dark)' } },
 				{ tag: 'link', attrs: { rel: 'apple-touch-icon', href: `${base}/icons/icon-192.png` } },
+				// Cài như ứng dụng và dùng khi mất mạng (D7-L3, src/ung-dung/): manifest, đăng ký service worker (dist/sw.js sinh
+				// lúc build) khi trang tải xong, chỉ ở ngữ cảnh an toàn
+				{ tag: 'link', attrs: { rel: 'manifest', href: `${base}/manifest.webmanifest` } },
+				{ tag: 'script', content: scriptDangKy(`${base}/`) },
 				// Ảnh khi chia sẻ link (Facebook, Zalo, X…), như site cũ: tên site trên khuông nhạc, dải phím đàn (public/og.png,
 				// 1200×630; Starlight đã có og:title, og:description, twitter:card)
 				{ tag: 'meta', attrs: { property: 'og:image', content: `${site}${base}/og.png` } },
@@ -99,5 +105,9 @@ export default defineConfig({
 		}),
 		// sau Starlight: bọc pagefind.js mà Starlight vừa dựng (gõ "d" thay "đ" vẫn tìm ra)
 		timKiemKhongDau(),
+		// sách in (dist/sach/<id>.html, D7-L3) dựng từ trang đã có trong dist/; sau Pagefind nên không vào chỉ mục tìm kiếm
+		sachIn(),
+		// sau cùng: sw.js lấy phiên bản từ mọi tệp của dist/, kể cả sách in và chỉ mục tìm kiếm
+		ungDung({ base: `${base}/` }),
 	],
 });

@@ -1,0 +1,55 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa blog/index
+trang: src/content/docs/blog/index.md
+nguon_cu: ../opus-zero/docs/blog/index.md
+tang: khung
+lan:
+  - so: 1
+    ngay: '2026-11-05'
+    nhanh: moi/d7-l3
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet (D7-L3 lượt 1, phần 2/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: "Trang khung (D7-L3, phần 2/2). 6 nhận định ve-site, đều dung; không sửa trang. Link trong trang (cap-nhat, luyen-tap/nhat-ky) đúng trang và có trong trang.yml. Danh sách bài sinh từ frontmatter ba bài, không so được chữ (đã ghi doi_chu)."
+doi_chu:
+  - cu: null
+    moi: Các bài tháng 10/2026 viết khi site còn tên Opus Zero, ở địa chỉ cũ https://mtuann.github.io/opus-zero/.
+    ly_do: "Thêm: ba bài blog chuyển nguyên chữ, có tên Opus Zero (tên cũ của site) và nói về các phiên bản của site cũ; nói một lần ở trang blog thay vì sửa từng bài đã ghi ngày."
+  - cu: Danh sách bài do plugin blog của MkDocs tự sinh (tiêu đề, ngày, đoạn mở đầu trước <!-- more -->, chủ đề)
+    moi: ::danh-sach-bai (tiêu đề là link, ngày, mô tả của bài; data-sinh)
+    ly_do: Không so chữ được (tests/chuyen.test.mjs, KHONG_SO). Danh sách dựng lúc build từ frontmatter của bài có trong bản build (AGENTS.md mục D7-L3); bỏ chủ đề (categories) và trang Lưu trữ, Chủ đề của plugin blog cũ.
+nguon: []
+nhan_dinh:
+  - id: n1
+    cau: "Nhật ký của người viết site: ghi chép ngắn về việc học và những thông báo lớn về site."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Ba bài của blog (src/content/docs/blog/posts/): 11/10 ghi chép việc học (mục tiêu), 21/10 và 23/10 thông báo lớn về site."
+  - id: n2
+    cau: "Danh sách thay đổi đầy đủ nằm ở Cập nhật (/opus/cap-nhat/)."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Trang đích đã chuyển (src/content/docs/cap-nhat.md, id cap-nhat ở src/data/trang.yml): trang ghi thay đổi của site."
+  - id: n3
+    cau: "Nhật ký tập đàn của chính bạn là trang Nhật ký luyện tập (/opus/luyen-tap/nhat-ky/)."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Trang đích đã chuyển (src/content/docs/luyen-tap/nhat-ky.md, id luyen-tap/nhat-ky): công cụ journal, nơi người học tự ghi."
+  - id: n4
+    cau: "Các bài tháng 10/2026 viết khi site còn tên Opus Zero."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Ngày ba bài: 11/10, 21/10, 23/10/2026 (dist/blog/index.html); AGENTS.md dòng đầu \"Opus (bản trước tên Opus Zero)\"; tiêu đề hai bài 11/10 và 21/10 có \"Opus Zero\"; site cũ ../opus-zero/mkdocs.yml: site_name Opus Zero (copyright \"Opus Zero — sổ tay học piano cổ điển\"). Bài 23/10 không nêu tên nhưng viết ở site cũ (commit 0294abc, 23/10/2026, ../opus-zero)."
+  - id: n5
+    cau: "Địa chỉ cũ của site là https://mtuann.github.io/opus-zero/."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "../opus-zero/mkdocs.yml dòng 4: site_url https://mtuann.github.io/opus-zero/; AGENTS.md (site mới: https://mtuann.github.io/opus/)."
+  - id: n6
+    cau: "Danh sách bài (::danh-sach-bai): mỗi bài có tiêu đề là link, ngày và mô tả, mới trước."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "src/plugins/thanh-phan.mjs danhSachBai/docBaiBlog; dist/blog/index.html: ba mục 23/10/2026, 21/10/2026, 11/10/2026, mỗi mục tiêu đề link, <time>, mô tả (data-sinh)."
+khuong_nhac: []

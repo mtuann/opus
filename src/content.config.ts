@@ -5,7 +5,7 @@ import { defineCollection } from 'astro:content';
 import { z } from 'astro/zod';
 import { docsLoader, i18nLoader } from '@astrojs/starlight/loaders';
 import { docsSchema, i18nSchema } from '@astrojs/starlight/schema';
-import { locTheoBan } from './ban-build.mjs';
+import { dungLaiKhiBlogDoi, locTheoBan } from './ban-build.mjs';
 import { boNap, dungLaiKhiDoi, schema, slugTacPham } from './du-lieu.mjs';
 import { kiemKhoa } from './khoa.mjs';
 
@@ -20,8 +20,9 @@ const duLieu = (ten: keyof typeof schema) => defineCollection({ loader: boNap(te
 
 export const collections = {
 	docs: defineCollection({
-		// dựng lại mọi trang khi src/data/, plugin Markdown hay khóa đổi (xem dungLaiKhiDoi); bản thật bỏ trang chưa khóa
-		loader: dungLaiKhiDoi(locTheoBan(docsLoader())),
+		// dựng lại mọi trang khi src/data/, plugin Markdown, khóa (xem dungLaiKhiDoi) hay frontmatter bài blog đổi; bản thật bỏ
+		// trang chưa khóa
+		loader: dungLaiKhiBlogDoi(dungLaiKhiDoi(locTheoBan(docsLoader()))),
 		schema: docsSchema({
 			extend: z.object({
 				// Slug bản ghi trong src/data/tac-pham.yml; chỉ trang tác phẩm (bài học, hướng dẫn nghe) có trường này
@@ -29,6 +30,8 @@ export const collections = {
 					.string()
 					.refine((s) => tacPham.has(s), { message: 'không có bản ghi này trong src/data/tac-pham.yml' })
 					.optional(),
+				// Ngày đăng của bài blog (blog/posts/<yyyy-mm-dd>-<tên>.md, D7-L3): ::danh-sach-bai xếp bài theo ngày này
+				date: z.coerce.date().optional(),
 			}),
 		}),
 	}),

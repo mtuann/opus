@@ -6,8 +6,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { chromium } from 'playwright';
-import { DIST, TRINH_DUYET, dongMayChu, goc, khongChromium } from './chung.mjs';
+import { DIST, TRINH_DUYET, dongMayChu, goc, khongChromium, CHROMIUM } from './chung.mjs';
 
 after(dongMayChu);
 
@@ -72,7 +71,7 @@ async function tim(p, cau, toiDa) {
 }
 
 test('tìm kiếm qua pagefind.js của bản build', { skip: khongChromium }, async (t) => {
-	const trinhDuyet = await chromium.launch();
+	const trinhDuyet = await CHROMIUM.launch();
 	try {
 		const p = await trinhDuyet.newPage();
 		await p.goto(await goc(), { waitUntil: 'load' });

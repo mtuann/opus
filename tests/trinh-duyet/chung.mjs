@@ -21,7 +21,31 @@ export const trangCo = (lop) => TRANG.filter((t) => !t.endsWith('.html') && fs.r
  * mỗi trình duyệt ở một job, song song (.github/actions/kiem-thu). Phép thử chỉ chạy trên Chromium (axe, in, API tìm kiếm)
  * bỏ qua khi không có Chromium: xem CO_CHROMIUM.
  */
-const CA_BA = { chromium, webkit, firefox };
+/**
+ * Service worker (dist/sw.js, D7-L3) chặn mặc định trong mọi ngữ cảnh: yêu cầu do service worker trả lời thì route() của
+ * Playwright không thấy (phép thử làm chậm mẫu âm, font, abcjs), và bộ nhớ đệm của nó làm phép thử phụ thuộc nhau. Phép
+ * thử dùng khi mất mạng mở ngữ cảnh với serviceWorkers: 'allow'.
+ */
+const chanSw = (o = {}) => ({ serviceWorkers: 'block', ...o });
+const bocTrinhDuyet = (b) =>
+	new Proxy(b, {
+		get(t, k) {
+			if (k === 'newContext' || k === 'newPage') return (o) => t[k](chanSw(o));
+			const v = Reflect.get(t, k);
+			return typeof v === 'function' ? v.bind(t) : v;
+		},
+	});
+const bocLoai = (loai) =>
+	new Proxy(loai, {
+		get(t, k) {
+			if (k === 'launch') return async (o) => bocTrinhDuyet(await t.launch(o));
+			const v = Reflect.get(t, k);
+			return typeof v === 'function' ? v.bind(t) : v;
+		},
+	});
+/** Chromium với service worker chặn mặc định, cho phép thử chỉ chạy trên Chromium (axe, in, API tìm kiếm). */
+export const CHROMIUM = bocLoai(chromium);
+const CA_BA = { chromium: CHROMIUM, webkit: bocLoai(webkit), firefox: bocLoai(firefox) };
 const CHON = (process.env.OPUS_TRINH_DUYET ?? '').split(',').map((x) => x.trim()).filter(Boolean);
 for (const t of CHON) if (!(t in CA_BA)) throw new Error(`OPUS_TRINH_DUYET: không có trình duyệt "${t}" (có: ${Object.keys(CA_BA).join(', ')})`);
 export const TRINH_DUYET = CHON.length ? Object.fromEntries(CHON.map((t) => [t, CA_BA[t]])) : CA_BA;

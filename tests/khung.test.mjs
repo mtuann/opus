@@ -74,7 +74,8 @@ test('hộp tìm kiếm nói tiếng Việt (src/content/i18n/vi.json), không c
 
 test('mọi trang dạng thư mục (…/index.html), có trang 404.html cho GitHub Pages', () => {
 	assert.ok(fs.existsSync(path.join(DIST, '404.html')));
-	const odd = htmlFiles.map(rel).filter((f) => f !== '404.html' && path.basename(f) !== 'index.html');
+	// sách in (D7-L3) là file /opus/sach/<id>.html như site cũ, không phải trang của Starlight
+	const odd = htmlFiles.map(rel).filter((f) => f !== '404.html' && path.basename(f) !== 'index.html' && !/^sach\/[a-z0-9-]+\.html$/.test(f));
 	assert.deepEqual(odd, [], 'trang không theo dạng thư mục');
 });
 

@@ -108,3 +108,30 @@ export function chiTrangTrongBan(plugin, docsDir = DOCS) {
 		return plugin(ctx);
 	};
 }
+
+/**
+ * Bọc bộ nạp trang: ::danh-sach-bai của blog/index lấy tiêu đề, ngày, mô tả từ frontmatter của bài blog (D7-L3), mà Astro
+ * chỉ dựng lại trang có file đổi. Frontmatter của bài nào đổi (hay thêm, bớt bài) thì xóa bộ nhớ đệm của trang, dựng lại
+ * hết (như dungLaiKhiDoi của src/du-lieu.mjs).
+ */
+export function dungLaiKhiBlogDoi(loader) {
+	return {
+		...loader,
+		load: async (ctx) => {
+			const thuMuc = path.join(DOCS, 'blog', 'posts');
+			const dau = fs.existsSync(thuMuc)
+				? fs
+						.readdirSync(thuMuc)
+						.filter((f) => f.endsWith('.md'))
+						.sort()
+						.map((f) => `${f}\n${/^---\n[\s\S]*?\n---/.exec(fs.readFileSync(path.join(thuMuc, f), 'utf8'))?.[0] ?? ''}`)
+						.join('\n')
+				: '';
+			if (ctx.meta.get('opus-blog') !== dau) {
+				ctx.store.clear();
+				ctx.meta.set('opus-blog', dau);
+			}
+			await loader.load(ctx);
+		},
+	};
+}

@@ -4,15 +4,14 @@
 import { after, test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
-import { chromium } from 'playwright';
-import { TRANG, cuonHet, dongMayChu, goc, khongChromium, tenTrang } from './chung.mjs';
+import { TRANG, cuonHet, dongMayChu, goc, khongChromium, tenTrang, CHROMIUM } from './chung.mjs';
 
 after(dongMayChu);
 const AXE = createRequire(import.meta.url).resolve('axe-core/axe.min.js');
 const NHAN = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'];
 
 test('axe: không vi phạm', { skip: khongChromium }, async (t) => {
-	const trinhDuyet = await chromium.launch();
+	const trinhDuyet = await CHROMIUM.launch();
 	try {
 		// hai tổ hợp đủ cả hai cỡ và hai chế độ màu (bốn tổ hợp gấp đôi thời gian mà chưa bắt thêm lỗi nào): độ tương phản
 		// theo chế độ màu, bố cục theo cỡ màn hình

@@ -1,0 +1,173 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa bat-dau/sach-in
+trang: src/content/docs/bat-dau/sach-in.md
+nguon_cu: ../opus-zero/docs/bat-dau/sach-in.md
+tang: khung
+lan:
+  - so: 1
+    ngay: '2026-11-05'
+    nhanh: moi/d7-l3
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Sonnet (D7-L3 lượt 1, phần 2/2)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: "Trang khung (D7-L3, phần 2/2). 25 nhận định: 20 ve-site (kiểm trên src/sach/sach.mjs, dist/sach/*.html, trang đích), 5 quy-tac về trình duyệt. Không sửa trang. n15 dung (Chrome, Firefox). n16, n18, n19, n20 chưa chắc: không mở được trang hỗ trợ Chrome/Apple (Safari iPhone) nói về \"Save as PDF\", \"Headers and footers\", Chia sẻ → In; chỉ Firefox có nguồn (xem từng ghi chú, có đề xuất viết chung hơn cho người giao quyết). Mã sách khớp trang ở mọi điểm đã kiểm; lưu ý n24: doi_chu của người giao nói abc.js, thực tế vẽ trước khi in nằm ở tai.js (beforeprint). Người giao đã sửa tiêu đề bảng thành \"Mở\" (thêm doi_chu): n12 vẫn đúng."
+doi_chu:
+  - cu: Đọc tên tác phẩm và 42 hướng dẫn nghe (16 về nhạc piano)
+    moi: Đọc tên tác phẩm và các hướng dẫn nghe
+    ly_do: Số hướng dẫn nghe theo site cũ; sách mới chỉ gồm trang đã lên site (src/sach/sach.mjs), nên bảng không ghi số mà bìa sách ghi số chương.
+  - cu: 10 bài hai tay có số ngón, tác phẩm theo cấp và 34 bài học tác phẩm
+    moi: 10 bài hai tay có số ngón, tác phẩm theo cấp và các bài học tác phẩm
+    ly_do: "Như trên: số bài học tác phẩm theo site cũ (34); bài học tác phẩm lên site ở đợt 6."
+  - cu: null
+    moi: Sách chỉ gồm các trang đã lên site; trang nào chưa lên thì chưa có trong sách, và số chương ghi ở trang bìa.
+    ly_do: "Thêm (D7-L3): sách sinh từ trang có trong bản build, chương chưa lên site thì bỏ, bìa ghi số chương (AGENTS.md mục D7-L3)."
+  - cu: "Trên điện thoại: Android (Chrome) chọn menu ⋮ → Chia sẻ → In; iPhone (Safari) chọn Chia sẻ → In, rồi đặt hai ngón tay lên trang xem trước và kéo giãn ra (như phóng to ảnh) để mở bản PDF, sau đó bấm Chia sẻ → Lưu vào Tệp."
+    moi: "Trên điện thoại: tìm lệnh In trong menu của trình duyệt (thường nằm trong mục Chia sẻ); từ màn hình xem trước bản in có thể lưu thành PDF."
+    ly_do: "Hướng dẫn theo giao diện từng phiên bản trình duyệt (bao-cao/d2-bang-tang.md dòng 113: giữ ngắn hay bỏ): viết ngắn, không tả từng thao tác của iPhone."
+  - cu: "Muốn in một bài lẻ: mở bài đó và bấm nút In bài này ở đầu trang. Muốn giấy kẻ khuông để làm bài tập: xem Giấy kẻ khuông."
+    moi: "Muốn in một bài lẻ: mở bài đó rồi dùng lệnh In của trình duyệt (Ctrl+P, trên Mac Cmd+P); khuông nhạc trong bài được vẽ đủ trước khi in. Muốn giấy kẻ khuông để làm bài tập: xem Giấy kẻ khuông."
+    ly_do: Site mới không có nút "In bài này" (nút của site cũ, mkdocs); in bằng lệnh In của trình duyệt, khuông nhạc vẽ hết trước khi in (beforeprint trong src/scripts/tai.js).
+  - cu: null
+    moi: Mở
+    ly_do: Ô tiêu đề cột thứ ba của bảng rỗng ở site cũ; axe (empty-table-header) báo lỗi trợ năng, nên đặt tên cột "Mở".
+nguon:
+  - id: chrome-print
+    bac: 2
+    ten: "Google Chrome Help, \"Print from Chrome\" (đã mở: Ctrl + p trên Windows và Linux, ⌘ + p trên Mac; trang không nói về \"Save as PDF\" hay \"Headers and footers\" ở mục in thường)"
+    link: https://support.google.com/chrome/answer/1069693
+  - id: mozilla-print
+    bac: 2
+    ten: "Mozilla Support, How to print web pages in Firefox (nội dung đọc qua kết quả tìm kiếm của trang này, không mở được toàn văn: Ctrl+P hay menu Print; chọn \"Save to PDF\" trong danh sách máy in; More settings có \"Print headers and footers\")"
+    link: https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox
+nhan_dinh:
+  - id: n1
+    cau: "Bảy cuốn sách tổng hợp nội dung của site, trình bày để in ra giấy hoặc lưu thành PDF đọc khi không có mạng."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "src/sach/sach.mjs: SACH có đúng 7 cuốn (id nhac-ly-co-ban … piano-tac-pham); dist/sach/ có 7 file .html; trang sách là HTML đã dựng sẵn nên lưu PDF xong đọc không cần mạng."
+  - id: n2
+    cau: "Mỗi cuốn có bìa, mục lục, mỗi chương bắt đầu ở trang mới."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "src/sach/sach.mjs: trangSach: section.cover, nav.toc, mỗi section.chapter có break-before: page (CSS trong CSS, có ở dist/sach/piano-ky-thuat.html)."
+  - id: n3
+    cau: "Mỗi cuốn có khuông nhạc in đầy đủ."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "src/sach/sach.mjs: trangSach: script gọi ABCJS.renderAbc cho mọi .abc-notation[data-abc] rồi mới bật nút \"In / Lưu PDF\"; dist/sach/*.html nạp vendor/abcjs-basic-min.js."
+  - id: n4
+    cau: "Quiz chuyển thành câu hỏi kèm đáp án ở cuối chương."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "src/sach/sach.mjs: lamChuong + cauHoiIn: khối .oz-quiz thành \"Kiểm tra nhanh\" (A, B, C…) và div.book-answers \"Đáp án kiểm tra nhanh\" ở cuối chương."
+  - id: n5
+    cau: "Sách \"Nhạc lý cơ bản\": bài 1–14 và ba bài ôn tập."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "src/sach/sach.mjs: SACH nhac-ly-co-ban: 01–05, on-tap-1, 06–09, on-tap-2, 10–14, on-tap-3 = 14 bài và 3 bài ôn tập; dist có 17 chương."
+  - id: n6
+    cau: "Sách \"Nhạc lý nâng cao\": bài 15–32 và âm học."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "src/sach/sach.mjs: SACH nhac-ly-nang-cao: 15–32 cùng am-hoc (19 chương trong dist)."
+  - id: n7
+    cau: "Sách \"Tóm tắt và thuật ngữ\": tờ tóm tắt và từ điển thuật ngữ."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "src/sach/sach.mjs: SACH tom-tat-thuat-ngu = bat-dau/tom-tat/ và nhac-ly/tu-dien/."
+  - id: n8
+    cau: "Sách \"Lịch sử nhạc cổ điển và văn học piano\": các thời kỳ, nhà soạn nhạc, opera, nhạc Việt Nam; lịch sử cây đàn piano, các thể loại, nhà soạn nhạc và nghệ sĩ piano."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "src/sach/sach.mjs: SACH lich-su: lich-su/ và sáu trang thời kỳ, đường dài, nhà soạn nhạc, nữ nhà soạn nhạc, opera, Việt Nam, nhạc truyền thống; piano/lich-su-dan, the-loai, nha-soan-nhac, nghe-si."
+  - id: n9
+    cau: "Sách \"Hướng dẫn nghe\": đọc tên tác phẩm và các hướng dẫn nghe."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "src/sach/sach.mjs: SACH huong-dan-nghe = nghe-nhac/doc-ten-tac-pham/ cộng các hướng dẫn nghe."
+  - id: n10
+    cau: "Sách \"Piano: kỹ thuật và cách tập\" gồm lộ trình, chọn đàn, tư thế, bàn phím, hai tuần đầu tiên, năm ngón, gam, hợp âm, tạo tiếng đàn, bàn đạp, nốt hoa mỹ, hai tay, quãng tám, nốt lặp, bài tập ngón, cách tập, thị tấu, học thuộc, chơi cùng người khác, giữ tay khỏe, hòa âm bên phím."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "src/sach/sach.mjs: SACH piano-ky-thuat: piano/lo-trinh, bat-dau/lo-trinh-choi, chon-dan, tu-the, ban-do-ban-phim, hai-tuan-dau, nam-ngon, gam, hop-am-rai, tieng-dan, ban-dap, not-hoa-my, hai-tay, quang-tam-buoc-nhay, not-lap-not-kep, bai-tap-ngon, cach-tap, thi-tau, hoc-thuoc-bieu-dien, choi-cung-nguoi-khac, suc-khoe, hoa-am và 4 trang con: khớp từng mục."
+  - id: n11
+    cau: "Sách \"Piano: 10 bài đầu tiên và bài học tác phẩm\": 10 bài hai tay có số ngón, tác phẩm theo cấp và các bài học tác phẩm."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "src/sach/sach.mjs: SACH piano-tac-pham = piano/10-bai-dau-tien/, tac-pham-theo-cap/ và các trang piano/tac-pham/<bài>/."
+  - id: n12
+    cau: "Mỗi dòng của bảng có link \"Mở sách\" tới /opus/sach/<id>.html."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "dist/sach/ có đủ 7 file nhac-ly-co-ban, nhac-ly-nang-cao, tom-tat-thuat-ngu, lich-su, huong-dan-nghe, piano-ky-thuat, piano-tac-pham trùng 7 link trong trang (id trong SACH)."
+  - id: n13
+    cau: "Sách chỉ gồm các trang đã lên site; trang nào chưa lên thì chưa có trong sách, và số chương ghi ở trang bìa."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "src/sach/sach.mjs: dungSach bỏ trang không có ở dist; trangSach ghi soChuong trên bìa (\"N chương (các trang đã lên site…)\"; dist/sach/lich-su.html: 12 chương). Lưu ý cho người giao: số chương ở dist là của bản xem hiện tại."
+  - id: n14
+    cau: "Bấm Mở sách; đợi nút trên cùng chuyển thành \"In / Lưu PDF\" (khuông nhạc đã được vẽ xong)."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "src/sach/sach.mjs: trangSach: nút #print \"Đang vẽ khuông nhạc…\" (disabled) đổi thành \"In / Lưu PDF\" sau khi vẽ xong khuông."
+  - id: n15
+    cau: "Bấm nút đó (hoặc Ctrl+P, trên Mac Cmd+P)."
+    loai: quy-tac
+    nguon: [ chrome-print, mozilla-print ]
+    ket_qua: dung
+    ghi_chu: "Nút: window.print() (src/sach/sach.mjs). Phím tắt: Chrome Help: \"Ctrl + p\" (Windows, Linux), \"⌘ + p\" (Mac); Firefox: Ctrl+P (Mozilla Support, xem nguon). Safari trên Mac dùng Cmd+P (không mở trang Apple nào, chỉ khẳng định cho Chrome và Firefox)."
+  - id: n16
+    cau: "Ở ô Máy in chọn \"Lưu dưới dạng PDF\"."
+    loai: quy-tac
+    nguon: [ mozilla-print ]
+    ket_qua: null
+    ghi_chu: "chưa chắc: Mozilla (Firefox) có \"Save to PDF\" trong danh sách máy in; trang hỗ trợ Chrome mở được không nói về lựa chọn này và tên ô/chữ khác nhau giữa Chrome (\"Máy in\"/\"Lưu dưới dạng PDF\"), Firefox, Safari. Đề xuất viết chung: \"Ở hộp thoại in, chọn lưu thành PDF thay vì một máy in.\""
+  - id: n17
+    cau: "Khổ giấy A4."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "src/sach/sach.mjs: CSS @media print: @page { size: A4; margin: 15mm 14mm; } (có trong dist/sach/*.html)."
+  - id: n18
+    cau: "Nên tắt mục \"Đầu trang và chân trang\" của trình duyệt cho bản in gọn hơn."
+    loai: quy-tac
+    nguon: [ mozilla-print ]
+    ket_qua: null
+    ghi_chu: "chưa chắc: Firefox có \"Print headers and footers\" (Mozilla Support, qua kết quả tìm kiếm). Không mở được trang Chrome hay Safari nói về mục này; chữ \"Đầu trang và chân trang\" là chữ của Chrome/Edge tiếng Việt, không kiểm được. Đề xuất: \"Nên tắt mục đầu trang và chân trang trong hộp thoại in (nếu có)\"."
+  - id: n19
+    cau: "Trên điện thoại, lệnh In nằm trong menu của trình duyệt (thường trong mục Chia sẻ)."
+    loai: quy-tac
+    ket_qua: null
+    ghi_chu: "chưa chắc: không mở được trang hỗ trợ Chrome (Android), Safari (iPhone) nào nói rõ. Kết quả tìm kiếm cho thấy Apple dùng Chia sẻ rồi In ở một số ứng dụng (Ghi chú) nhưng không phải bản Safari. Đề xuất viết chung hơn hoặc bỏ câu."
+  - id: n20
+    cau: "Từ màn hình xem trước bản in trên điện thoại có thể lưu thành PDF."
+    loai: quy-tac
+    ket_qua: null
+    ghi_chu: "chưa chắc: không có nguồn chính thức khớp đã mở. Đề xuất bỏ hoặc nói chung \"tùy trình duyệt\"."
+  - id: n21
+    cau: "Sách được tạo lại tự động mỗi khi site cập nhật, nên luôn khớp với nội dung trực tuyến; ngày in ghi ở trang bìa."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "src/sach/sach.mjs: sachIn() chạy ở astro:build:done cho cả npm run build và build:xem; bìa: \"Bản in ngày ${ngay}\" (dist/sach/*.html: \"Bản in ngày 05/11/2026\")."
+  - id: n22
+    cau: "Công cụ tương tác (máy đếm nhịp, luyện tai, bàn phím…) không in được và đã được lược bỏ."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "src/sach/sach.mjs: LOP_BO (oz-tool, oz-ban-phim, oz-trang-thai-bai, oz-listen, oz-nguon-am, oz-chua-co…); dist/sach/*.html không còn ô \"chưa chuyển\"."
+  - id: n23
+    cau: "Đường dẫn trong sách trỏ về site trực tuyến."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "src/sach/sach.mjs: lamChuong đổi href tương đối thành địa chỉ đầy đủ https://mtuann.github.io/opus/… (new URL(d, goc))."
+  - id: n24
+    cau: "Muốn in một bài lẻ: mở bài đó rồi dùng lệnh In của trình duyệt (Ctrl+P, trên Mac Cmd+P); khuông nhạc trong bài được vẽ đủ trước khi in."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "src/scripts/tai.js dòng 168: addEventListener(\"beforeprint\") khởi tạo và vẽ mọi khối còn chờ (khuông nhạc). doi_chu ghi abc.js; mã vẽ đủ trước khi in nằm ở tai.js gọi inTruoc của module. Phần Ctrl+P: như n15."
+  - id: n25
+    cau: "Muốn giấy kẻ khuông để làm bài tập: xem Giấy kẻ khuông (/opus/luyen-tap/phieu-bai-tap/#giay-ke-khuong)."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Trang đích đã chuyển: src/content/docs/luyen-tap/phieu-bai-tap.md có \"## Giấy kẻ khuông\" (id giay-ke-khuong theo id-cu); trang có công cụ staffpaper (D7-L2)."
+khuong_nhac: []

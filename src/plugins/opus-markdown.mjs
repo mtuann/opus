@@ -13,7 +13,7 @@ import { fileURLToPath } from 'node:url';
 import { parse } from 'yaml';
 import { chiDaKhoa, duLieuDaKiem } from '../du-lieu.mjs';
 import { docKhoa, truongDaKhoa } from '../khoa.mjs';
-import { bangNhaSoanNhac, congCu, docMoc, dongThoiGian, duLieuCho, hinh, hinhCauTruc, hocTiep, hopTacPham, khoiNghe, khuongAbc, quiz, tuDien } from './thanh-phan.mjs';
+import { bangNhaSoanNhac, congCu, danhSachBai, docBaiBlog, docMoc, dongThoiGian, duLieuCho, hinh, hinhCauTruc, hocTiep, hopTacPham, khoiNghe, khuongAbc, quiz, tacPhamMoi, tuDien } from './thanh-phan.mjs';
 import { docDanhSach } from '../scripts/dong-thoi-gian.js';
 
 /** Loại của trang tác phẩm theo đường dẫn: bai-hoc (piano/tac-pham/), nghe (nghe-nhac/). */
@@ -55,6 +55,9 @@ const CHI_THI = {
 			return bangNhaSoanNhac(tt.nguoi === undefined ? rieng.dsNguoi : docDanhSach(tt.nguoi), nguoi);
 		},
 	},
+	// danh sách bài blog có trong bản build (trang blog/index) và nhật ký tác phẩm mới theo them_ngay (trang Cập nhật), D7-L3
+	'danh-sach-bai': { ve: ({ base }) => danhSachBai(docBaiBlog(), base) },
+	'tac-pham-moi': { ve: ({ tacPham, nguoi, base }) => tacPhamMoi(tacPham, nguoi, undefined, base) },
 };
 
 /** Tiêu đề mục chứa bảng mốc, ngay sau ::khoi-nghe{moc}. */

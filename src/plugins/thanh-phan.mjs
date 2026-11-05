@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { markdownToHtml } from 'satteri';
+import { parse as parseYaml } from 'yaml';
 import { DUONG_GOC, trangCuaDiaChi, trangTrongBan } from '../ban-build.mjs';
 import { chiDaKhoa, duLieuDaKiem } from '../du-lieu.mjs';
 import { docKhoa, truongDaKhoa } from '../khoa.mjs';
@@ -908,4 +909,80 @@ export function dongThoiGian(chu, nguoi, namNay) {
 export function bangNhaSoanNhac(ds, nguoi) {
 	const { html } = markdownToHtml(bangMarkdown(chonNguoi(ds, nguoi)), { mdastPlugins: [chuAnToan], hastPlugins: [bangHep()], features: { smartPunctuation: false } });
 	return html.trim();
+}
+
+// ---------- Blog và trang Cập nhật (D7-L3) ----------
+
+/** Ngày "2026-10-11" (hay Date) thành "11/10/2026". */
+export function ngayVN(d) {
+	const s = d instanceof Date ? d.toISOString().slice(0, 10) : String(d);
+	const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(s);
+	if (!m) throw new Error(`ngày không đúng dạng năm-tháng-ngày: "${s}"`);
+	return `${m[3]}/${m[2]}/${m[1]}`;
+}
+const ngayISO = (d) => (d instanceof Date ? d.toISOString().slice(0, 10) : String(d).slice(0, 10));
+
+/** Thư mục bài blog (trang blog/posts/<yyyy-mm-dd>-<tên>). */
+export const THU_MUC_BAI = 'blog/posts/';
+
+/**
+ * Bài blog trong `trang` (dạng trangTrongBan) đọc từ frontmatter của file trong src/content/docs/blog/posts/:
+ * [{ trang, title, date, description }]. Thiếu date hay description thì báo lỗi (AGENTS.md mục D7-L3).
+ */
+export function docBaiBlog(trang = trangTrongBan(), docs = DOCS) {
+	return trang
+		.filter((t) => t.startsWith(THU_MUC_BAI))
+		.map((t) => {
+			const nguon = fs.readFileSync(path.join(docs, `${t}.md`), 'utf8');
+			const fm = parseYaml(/^---\n([\s\S]*?)\n---/.exec(nguon)?.[1] ?? '') ?? {};
+			for (const k of ['title', 'date', 'description']) if (!fm[k]) throw new Error(`bài blog ${t} thiếu ${k} ở frontmatter`);
+			return { trang: t, title: String(fm.title), date: ngayISO(fm.date), description: String(fm.description) };
+		});
+}
+
+/**
+ * ::danh-sach-bai (trang blog/index): bài có trong bản build, mới trước (cùng ngày thì theo tên trang), mỗi bài một mục:
+ * tiêu đề (link), ngày, mô tả (Markdown trong dòng). Không có bài nào thì một dòng nói vậy.
+ */
+export function danhSachBai(bai, base = DUONG_GOC) {
+	const ds = [...bai].sort((a, b) => b.date.localeCompare(a.date) || a.trang.localeCompare(b.trang));
+	if (!ds.length) return `<p class="oz-ds-bai" data-sinh>Chưa có bài nào.</p>`;
+	return (
+		`<ul class="oz-ds-bai" data-sinh>` +
+		ds
+			.map(
+				(b) =>
+					`<li><p class="oz-ds-bai-ten"><a href="${esc(base + b.trang + '/')}">${esc(b.title)}</a></p>` +
+					`<p class="oz-ds-bai-ngay"><time datetime="${esc(b.date)}">${ngayVN(b.date)}</time></p>` +
+					`<p class="oz-ds-bai-mo-ta">${md(b.description)}</p></li>`,
+			)
+			.join('') +
+		`</ul>`
+	);
+}
+
+/**
+ * ::tac-pham-moi (trang Cập nhật): tác phẩm có them_ngay mà trang chính (trangTacPham) có trong bản build, mới trước. Chỉ
+ * đọc them_ngay của bản ghi có trang chính trong bản build, nên ở trang đã khóa (bản ghi qua chiDaKhoa) chỉ tác phẩm đã
+ * lên site cần khóa them_ngay. Chưa có tác phẩm nào thì một dòng nói vậy.
+ */
+export function tacPhamMoi(tacPham, nguoi, trang = trangTrongBan(), base = DUONG_GOC) {
+	const co = new Set(trang);
+	const ds = tacPham
+		.filter((r) => co.has(trangTacPham(r)))
+		.filter((r) => r.them_ngay)
+		.map((r) => ({ r, ngay: ngayISO(r.them_ngay), trang: trangTacPham(r) }))
+		.sort((a, b) => b.ngay.localeCompare(a.ngay) || a.trang.localeCompare(b.trang));
+	if (!ds.length) return `<p class="oz-tac-pham-moi" data-sinh>Chưa có tác phẩm nào trên site: các bài học tác phẩm và hướng dẫn nghe sẽ hiện ở đây khi lên site.</p>`;
+	return (
+		`<ul class="oz-tac-pham-moi" data-sinh>` +
+		ds
+			.map(
+				({ r, ngay, trang: t }) =>
+					`<li><time datetime="${esc(ngay)}">${ngayVN(ngay)}</time>: <a href="${esc(base + t + '/')}">${md(tenTrongDanhSach(r, nguoi)).replace(/<\/?a\b[^>]*>/g, '')}</a> ` +
+					`<span class="oz-tac-pham-moi-loai">(${r.loai === 'bai-hoc' ? 'bài học' : 'hướng dẫn nghe'})</span></li>`,
+			)
+			.join('') +
+		`</ul>`
+	);
 }
