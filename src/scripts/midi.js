@@ -1,8 +1,9 @@
 // Đàn phím MIDI (::cong-cu{ten="midi-status"}, D7-L1), chuyển từ ../opus-zero/docs/assets/js/midi.js: Web MIDI API (Chrome,
-// Edge, Firefox từ bản 108, Opera trên máy tính; Safari và trình duyệt trên iPhone, iPad không có). Module chung: mọi công cụ nhận nốt từ đàn
-// qua nghe(f); ô trạng thái (oz-midi) có nút kết nối, dòng trạng thái và lựa chọn phát tiếng khi bấm phím. Đã cho phép
-// một lần thì lần sau ô trạng thái tự kết nối lại (opus-zero:midi-auto, như bản cũ; bản sao lưu ở trang Dữ liệu giữ khóa
-// này). Như bản cũ, chỉ ô trạng thái mở kết nối: trang không có ô ấy thì đàn không gửi nốt tới bàn phím trong bài.
+// Edge, Firefox từ bản 108, Opera trên máy tính; Safari và trình duyệt trên iPhone, iPad không có). Module chung: mọi công
+// cụ nhận nốt từ đàn qua nghe(f); ô trạng thái (oz-midi) có nút kết nối, dòng trạng thái và lựa chọn phát tiếng khi bấm
+// phím. Đã cho phép một lần thì lần sau ô trạng thái tự kết nối lại (opus-zero:midi-auto, như bản cũ; bản sao lưu ở trang
+// Dữ liệu giữ khóa này). Như bản cũ, chỉ ô trạng thái mở kết nối: trang không có ô ấy thì đàn không gửi nốt tới bàn
+// phím trong bài.
 // Sự kiện: { loai: 'on' | 'off', m (số MIDI), luc (giây, theo đồng hồ của AudioContext nếu đã có, để chấm nhịp cùng đồng
 // hồ với tiếng phát), luc_do (tiếng mạnh 0–127) }.
 // veTrangThaiMidi dựng sẵn ô lúc build (src/plugins/thanh-phan.mjs); trình duyệt không có Web MIDI thì mount báo ngay.
