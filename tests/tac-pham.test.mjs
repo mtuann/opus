@@ -19,9 +19,7 @@ const DOCS = path.join(ROOT, 'src/content/docs');
  * Trang đã chuyển trước khi có ::hoc-tiep (D1.8): lỗi còn chờ lô của trang sửa. Lô sửa xong thì xóa dòng ở đây (kiểm thử
  * hỏng khi lỗi không còn, để danh sách không cũ).
  */
-const CHO_LO = {
-	'piano/tac-pham/fur-elise': { lo: 'D6-L3', loi: ['cần đúng một ::hoc-tiep (trong mục "Học tiếp"), có 0'] },
-};
+const CHO_LO = {};
 
 const docTrang = (f) => {
 	const chu = fs.readFileSync(f, 'utf8');

@@ -225,6 +225,8 @@ Vì bản viết tay đã mất, các ấn bản có thể khác nhau ở vài c
 - **Cổ điển:** [Mozart: Sonata K. 545](/opus/piano/tac-pham/mozart-k545/), cùng lối viết trong sáng nhưng dài hơi hơn.
 - **Nghe thêm:** [Beethoven: Sonata *Ánh trăng*](/opus/nghe-nhac/beethoven-moonlight/).
 
+::hoc-tiep
+
 ## Kiểm tra nhanh
 
 ```quiz
