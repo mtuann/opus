@@ -1,113 +1,549 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/liszt-liebestraum
 ban_ghi: tac-pham/liszt-liebestraum
 lan:
-  - so: 1
-    ngay: 2026-10-24
-    nhanh: moi/d2-0-du-lieu
-    ma_bam: sha256:b33d4f58e43546418829fe30b8ba38ba1356f50d76f1276edf3818e5e8ee0ce0
-    nguoi:
-      luot_1: Claude Sonnet 5.5 (D2-0 phần A)
-      luot_2: Claude Sonnet 5.5 (D2-0 lượt 2 phần A)
-      review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
-      kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
-    truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
-ghi_chu: "Trang bài học cũ ../opus-zero/docs/piano/tac-pham/liszt-liebestraum.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Trang hướng dẫn nghe nghe-nhac/liszt-liebestraum.md (cap) cũng có."
+- so: 1
+  ngay: 2026-10-24
+  nhanh: moi/d2-0-du-lieu
+  ma_bam: sha256:b33d4f58e43546418829fe30b8ba38ba1356f50d76f1276edf3818e5e8ee0ce0
+  nguoi:
+    luot_1: Claude Sonnet 5.5 (D2-0 phần A)
+    luot_2: Claude Sonnet 5.5 (D2-0 lượt 2 phần A)
+    review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
+    kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
+  truong:
+  - chang
+  - danh_muc
+  - gan_cho
+  - goi_y
+  - grade
+  - khuyet_danh
+  - loai
+  - tac_gia
+  - ten
+- so: 2
+  ngay: 2026-11-05
+  nhanh: moi/d6-l6
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Opus 5.5 (D6-L6 phần B)
+    luot_2: null
+    review: null
+    kiem_mau: null
+ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/liszt-liebestraum.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Trang hướng dẫn nghe nghe-nhac/liszt-liebestraum.md (cap) cũng có. Lần 2 (D6-L6, lượt 1 phần B): nhận định n7–n43 cho các trường chưa khóa (giong, nhip, thoi_ky, ky_nang_chinh, luyen_nghe, chip, thong_tin, hinh, ban_thu). Bản nhạc: bản in đầu Kistner [1850] (BSB) và Schirmer 1915, đếm 85 ô (cadenza ô 25 và ô 60, mỗi cái một ô; Più animato ô 26). Dữ liệu sai: Độ khó (bỏ ước lượng ABRSM), hinh.bai-hoc (cadenza 1, A'', ghi chú), hinh.nghe (cadenza 1 "nốt nhỏ", cadenza 2 "quãng ba gãy", độ dài ba đoạn): plans/lam-lai/bao-cao/d6-l6/sua-B.yml. cap (nghe-nhac/liszt-liebestraum) là cấu trúc, không phải nhận định. Không có câu chưa chắc.'
 nguon:
-  - id: imslp-liebestraume
-    bac: 2
-    ten: IMSLP, Liebesträume, S.541 (Liszt)
-    link: https://imslp.org/wiki/Liebestr%C3%A4ume,_S.541_(Liszt,_Franz)
-  - id: henle-hn634
-    bac: 2
-    ten: G. Henle Verlag, HN 634 Liszt, Liebesträume, 3 Notturnos (mức khó từng bài)
-    link: https://www.henle.de/en/Liebestraeume-3-Notturnos/HN-634
-  - id: rcm-2022
-    bac: 2
-    ten: The Royal Conservatory (RCM), Piano Syllabus, 2022 Edition
-    link: https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf
-  - id: abrsm-2526
-    bac: 2
-    ten: ABRSM, Practical Music Grades Piano Syllabus 2025 & 2026, Qualification Specification
-    link: https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20&%202026%20Prac%20syllabus%2020240524_access.pdf
-  - id: henle-thang
-    bac: 2
-    ten: G. Henle Verlag, Levels of Difficulty (thang độ khó 1–9; trang không có bảng quy đổi sang ABRSM)
-    link: https://www.henle.de/Levels-of-Difficulty/
+- id: imslp-liebestraume
+  bac: 2
+  ten: IMSLP, Liebesträume, S.541 (Liszt)
+  link: https://imslp.org/wiki/Liebestr%C3%A4ume,_S.541_(Liszt,_Franz)
+- id: henle-hn634
+  bac: 2
+  ten: G. Henle Verlag, HN 634 Liszt, Liebesträume, 3 Notturnos (mức khó từng bài)
+  link: https://www.henle.de/en/Liebestraeume-3-Notturnos/HN-634
+- id: rcm-2022
+  bac: 2
+  ten: The Royal Conservatory (RCM), Piano Syllabus, 2022 Edition
+  link: https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf
+- id: abrsm-2526
+  bac: 2
+  ten: ABRSM, Practical Music Grades Piano Syllabus 2025 & 2026, Qualification Specification
+  link: https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20&%202026%20Prac%20syllabus%2020240524_access.pdf
+- id: henle-thang
+  bac: 2
+  ten: G. Henle Verlag, Levels of Difficulty (thang độ khó 1–9; trang không có bảng quy đổi sang ABRSM)
+  link: https://www.henle.de/Levels-of-Difficulty/
+- id: kistner-1850
+  bac: 1
+  ten: 'Liszt, Liebesträume: 3 Notturnos für das Pianoforte, Kistner, Leipzig [1850], bản của Thư viện Quốc gia Bayern (2 Mus.pr. 4748; số bản in 1751/6847, tức lần in lại từ cùng bản khắc, Henle gọi là E 2), số hóa; Notturno số 3 ở tr. 16 (lời thơ) và 17–22. Ảnh trang đọc qua IIIF (bsb11307527_00016–00022), xem 05–06/11/2026'
+  link: https://www.digitale-sammlungen.de/view/bsb11307527
+- id: schirmer-1915
+  bac: 1
+  ten: Liszt, Consolations and Liebesträume, biên tập và ghi ngón Rafael Joseffy, Schirmer's Library vol. 341 (G. Schirmer, New York, 1895/1915), Internet Archive lisztconsolation00unse, Notturno III ở tr. 34–39 (ảnh PDF)
+  link: https://archive.org/details/lisztconsolation00unse
+- id: henle-634-vorwort
+  bac: 2
+  ten: 'G. Henle Verlag, HN 634: lời tựa (Ernst-Günter Heinemann, 1998), PDF'
+  link: https://www.henle.de/media/5f/df/70/1690886072/0634-1690886072-sync.pdf
+- id: henle-634-comments
+  bac: 2
+  ten: 'G. Henle Verlag, HN 634: Bemerkungen/Comments (Heinemann, 1998), PDF; số ô (M 13, 14, 28, 44, 51, 53) khớp cách đếm của bản in đầu'
+  link: https://www.henle.de/media/bd/96/f0/1690886039/0634-1690886039-sync.pdf
+- id: ptna-23749
+  bac: 2
+  ten: PTNA Piano Encyclopedia, Liebesträume – 3 notturnos No. 3 As-Dur S.541/3 (bài giới thiệu Ito Moeko; hướng dẫn biểu diễn Ooi Kazurou, 2018)
+  link: https://enc.piano.or.jp/en/musics/23749
+- id: imslp-s541
+  bac: 2
+  ten: 'IMSLP, Liebesträume, S.541 (Liszt): S.541 ; LW.A103, 3 nocturnes; năm sáng tác và in 1850; Piece Style Romantic (wikitext qua api.php)'
+  link: https://imslp.org/wiki/Liebestr%C3%A4ume,_S.541_(Liszt,_Franz)
+- id: imslp-s298
+  bac: 2
+  ten: 'IMSLP, O lieb so lang du lieben kannst, S.298 (Liszt): bản 1 1843, in 1847 (Kistner); bản 2 cho soprano hoặc tenor, in 1850; lời Freiligrath (1810–1876) (wikitext qua api.php)'
+  link: https://imslp.org/wiki/O_lieb_so_lang_du_lieben_kannst,_S.298_(Liszt,_Franz)
+- id: oxfordsong
+  bac: 2
+  ten: 'Oxford Song (Oxford International Song Festival), O lieb, so lang du lieben kannst! (Liszt): lời Freiligrath và bản dịch tiếng Anh của Richard Stokes'
+  link: https://oxfordsong.org/song/o-lieb-so-lang-du-lieben-kannst
+- id: cod-affetto
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music, mục affetto ("Affection. Hence, affettuoso … with tenderness")
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/affetto
+- id: commons-backhaus
+  bac: 2
+  ten: Wikimedia Commons, Wilhelm Backhaus, Liebestraum No. 3, HMV D 788 (thu 15/10/1923, London; phát hành 1924; Public domain, PD-old-70; 238,25 giây), đọc qua API
+  link: https://commons.wikimedia.org/wiki/File:PDP-CH_-_Wilhelm_Backhaus_-_Liebestraum_No._3_in_A-flat_major,_S.541-3_(Liszt)_-_Hmv-d788-05754.flac
+- id: pdp-user
+  bac: 2
+  ten: 'Wikimedia Commons, User:Pdproject (Swiss Foundation Public Domain): số hóa đĩa hát, "Inventory of 78 rpm shellac discs"'
+  link: https://commons.wikimedia.org/wiki/User:Pdproject
 nhan_dinh:
-  - id: n1
-    cau: "Tên bài: Liebestraum số 3 (bài cuối trong ba Liebesträume)."
-    loai: ten
-    truong:
-      - ten
-    nguon:
-      - imslp-liebestraume
-      - henle-hn634
-    ket_qua: dung
-    ghi_chu: 'IMSLP: "Liebesträume, S.541", mục 3 "Oh Lieb, so lang du lieben kannst". Henle HN 634: "O lieb, so lang du lieben kannst!" (bài thứ ba).'
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Liebestr%C3%A4ume,_S.541_(Liszt,_Franz)", https://www.henle.de/en/Liebestraeume-3-Notturnos/HN-634 ]
-    luot_2_ghi_chu: 'IMSLP: Liebesträume S.541 (3 nocturnes), no.3 "Oh Lieb, so lang du lieben kannst".'
-  - id: n2
-    cau: "Tác giả: Franz Liszt."
-    loai: lich-su
-    truong:
-      - tac_gia
-    nguon:
-      - imslp-liebestraume
-      - henle-hn634
-    ket_qua: dung
-    ghi_chu: 'IMSLP: Composer "Liszt, Franz"; Henle HN 634.'
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Liebestr%C3%A4ume,_S.541_(Liszt,_Franz)" ]
-    luot_2_ghi_chu: "IMSLP composer: Liszt, Franz."
-  - id: n3
-    cau: "Số danh mục: S. 541 số 3."
-    loai: danh-muc
-    truong:
-      - danh_muc
-    nguon:
-      - imslp-liebestraume
-      - henle-hn634
-    ket_qua: dung
-    ghi_chu: 'IMSLP: Op./Cat. No. "S.541 ; LW.A103", mục 3. Henle HN 634 là ấn bản của S. 541.'
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Liebestr%C3%A4ume,_S.541_(Liszt,_Franz)", https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf ]
-    luot_2_ghi_chu: 'S.541 (IMSLP: "S.541 ; LW.A103"); RCM writes "Liebestraum No. 3, S 541/3".'
-  - id: n4
-    cau: Bài tương đương khoảng ABRSM Grade 8 trở lên.
-    loai: cap-do
-    truong:
-      - grade
-    nguon:
-      - henle-hn634
-      - rcm-2022
-      - abrsm-2526
-      - henle-thang
-    ket_qua: dung
-    ghi_chu: 'Nói theo kiểu tương đương: ABRSM không liệt kê Liebestraum số 3 trong 2017–2028 (và Grade 8 của 2015–2016; chỉ có Consolation số 5 ở Grade 7 và Consolation số 2 ở Grade 8 (2025–2026)); Trinity cũng không có (từ 2023). Henle xếp mức 7 (difficult), cao hơn hai bài kia của tập (mức 6); RCM 2022 đặt Liebestraum số 3 trong danh sách diploma ARCT. Phù hợp với "Grade 8 trở lên".'
-    luot_2: dung
-    luot_2_nguon: [ https://www.henle.de/en/Liebestraeume-3-Notturnos/HN-634, https://web.archive.org/web/20210725061338/https://gb.abrsm.org/media/14967/pianoarsm.pdf, https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf ]
-    luot_2_ghi_chu: Henle level 7 (difficult) for no.3 (no.2 "Seliger Tod", Henle 6, is on ABRSM's ARSM list); RCM 2022 lists no.3 only in the ARCT (diploma) list; not in any ABRSM grade list 2013-26. "Grade 8 trở lên" is consistent.
-  - id: n5
-    cau: Bài thuộc chặng 7 (sau Grade 8) của lộ trình piano.
-    loai: cap-do
-    truong:
-      - chang
-    nguon:
-      - henle-hn634
-      - rcm-2022
-    ket_qua: dung
-    ghi_chu: Chặng 7 = sau Grade 8 (cap-do.yml); "Grade 8 trở lên" khớp chặng 7.
-    luot_2: dung
-    luot_2_nguon: [ https://www.henle.de/en/Liebestraeume-3-Notturnos/HN-634 ]
-    luot_2_ghi_chu: Stage 7 = after Grade 8.
-  - id: n6
-    cau: Bài được gợi ý ở chặng 7 trong hộp luyện tập của trang chủ.
-    loai: khuyen-tap
-    truong:
-      - goi_y
-    nguon: []
-    ket_qua: khong-can-nguon
-    ghi_chu: '../opus-zero/docs/assets/js/practice.js, hằng SUGGEST[7] có ["piano/tac-pham/liszt-liebestraum/", "Liszt: Liebestraum số 3"]; chặng 7 trùng chang 7 của bản ghi.'
-    luot_2: dung
-    luot_2_ghi_chu: Reasonable for stage 7; not contradicted.
+- id: n1
+  cau: 'Tên bài: Liebestraum số 3 (bài cuối trong ba Liebesträume).'
+  loai: ten
+  truong:
+  - ten
+  nguon:
+  - imslp-liebestraume
+  - henle-hn634
+  ket_qua: dung
+  ghi_chu: 'IMSLP: "Liebesträume, S.541", mục 3 "Oh Lieb, so lang du lieben kannst". Henle HN 634: "O lieb, so lang du lieben kannst!" (bài thứ ba).'
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/Liebestr%C3%A4ume,_S.541_(Liszt,_Franz)
+  - https://www.henle.de/en/Liebestraeume-3-Notturnos/HN-634
+  luot_2_ghi_chu: 'IMSLP: Liebesträume S.541 (3 nocturnes), no.3 "Oh Lieb, so lang du lieben kannst".'
+- id: n2
+  cau: 'Tác giả: Franz Liszt.'
+  loai: lich-su
+  truong:
+  - tac_gia
+  nguon:
+  - imslp-liebestraume
+  - henle-hn634
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Composer "Liszt, Franz"; Henle HN 634.'
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/Liebestr%C3%A4ume,_S.541_(Liszt,_Franz)
+  luot_2_ghi_chu: 'IMSLP composer: Liszt, Franz.'
+- id: n3
+  cau: 'Số danh mục: S. 541 số 3.'
+  loai: danh-muc
+  truong:
+  - danh_muc
+  nguon:
+  - imslp-liebestraume
+  - henle-hn634
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Op./Cat. No. "S.541 ; LW.A103", mục 3. Henle HN 634 là ấn bản của S. 541.'
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/Liebestr%C3%A4ume,_S.541_(Liszt,_Franz)
+  - https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf
+  luot_2_ghi_chu: 'S.541 (IMSLP: "S.541 ; LW.A103"); RCM writes "Liebestraum No. 3, S 541/3".'
+- id: n4
+  cau: Bài tương đương khoảng ABRSM Grade 8 trở lên.
+  loai: cap-do
+  truong:
+  - grade
+  nguon:
+  - henle-hn634
+  - rcm-2022
+  - abrsm-2526
+  - henle-thang
+  ket_qua: dung
+  ghi_chu: 'Nói theo kiểu tương đương: ABRSM không liệt kê Liebestraum số 3 trong 2017–2028 (và Grade 8 của 2015–2016; chỉ có Consolation số 5 ở Grade 7 và Consolation số 2 ở Grade 8 (2025–2026)); Trinity cũng không có (từ 2023). Henle xếp mức 7 (difficult), cao hơn hai bài kia của tập (mức 6); RCM 2022 đặt Liebestraum số 3 trong danh sách diploma ARCT. Phù hợp với "Grade 8 trở lên".'
+  luot_2: dung
+  luot_2_nguon:
+  - https://www.henle.de/en/Liebestraeume-3-Notturnos/HN-634
+  - https://web.archive.org/web/20210725061338/https://gb.abrsm.org/media/14967/pianoarsm.pdf
+  - https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf
+  luot_2_ghi_chu: Henle level 7 (difficult) for no.3 (no.2 "Seliger Tod", Henle 6, is on ABRSM's ARSM list); RCM 2022 lists no.3 only in the ARCT (diploma) list; not in any ABRSM grade list 2013-26. "Grade 8 trở lên" is consistent.
+- id: n5
+  cau: Bài thuộc chặng 7 (sau Grade 8) của lộ trình piano.
+  loai: cap-do
+  truong:
+  - chang
+  nguon:
+  - henle-hn634
+  - rcm-2022
+  ket_qua: dung
+  ghi_chu: Chặng 7 = sau Grade 8 (cap-do.yml); "Grade 8 trở lên" khớp chặng 7.
+  luot_2: dung
+  luot_2_nguon:
+  - https://www.henle.de/en/Liebestraeume-3-Notturnos/HN-634
+  luot_2_ghi_chu: Stage 7 = after Grade 8.
+- id: n6
+  cau: Bài được gợi ý ở chặng 7 trong hộp luyện tập của trang chủ.
+  loai: khuyen-tap
+  truong:
+  - goi_y
+  nguon: []
+  ket_qua: khong-can-nguon
+  ghi_chu: '../opus-zero/docs/assets/js/practice.js, hằng SUGGEST[7] có ["piano/tac-pham/liszt-liebestraum/", "Liszt: Liebestraum số 3"]; chặng 7 trùng chang 7 của bản ghi.'
+  luot_2: dung
+  luot_2_ghi_chu: Reasonable for stage 7; not contradicted.
+- id: n7
+  cau: 'Giọng: La♭ trưởng.'
+  loai: cau-truc
+  truong:
+  - giong
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  - imslp-s298
+  ket_qua: dung
+  ghi_chu: Hóa biểu bốn dấu giáng, mở và kết ở hợp âm La♭ (bản in đầu); IMSLP S.298 Key Ab.
+- id: n8
+  cau: 'Nhịp: 6/4.'
+  loai: cau-truc
+  truong:
+  - nhip
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  ket_qua: dung
+  ghi_chu: 'Bản in đầu: 6/4.'
+- id: n9
+  cau: 'Thời kỳ: Lãng mạn.'
+  loai: lich-su
+  truong:
+  - thoi_ky
+  nguon:
+  - imslp-s541
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Piece Style "Romantic".'
+- id: n10
+  cau: 'Kỹ năng chính: giai điệu ngón cái ở giọng giữa, hợp âm rải chia hai tay, cadenza, quãng tám.'
+  loai: cau-truc
+  truong:
+  - ky_nang_chinh
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  - ptna-23749
+  ket_qua: dung
+  ghi_chu: Giai điệu Đô4… ở giữa, ngón 1 (Schirmer), chuyền giữa hai tay (PTNA ghi ngón ô 13–22); cadenza ô 25, 60; quãng tám ô 41–49.
+- id: n11
+  cau: 'Luyện nghe: giai điệu giữa lớp hợp âm rải, cadenza.'
+  loai: cau-truc
+  truong:
+  - luyen_nghe
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  ket_qua: dung
+- id: n12
+  cau: 'Chip: La♭ trưởng · 6/4.'
+  loai: cau-truc
+  truong:
+  - chip
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  ket_qua: dung
+- id: n13
+  cau: 'Chip: Poco allegro, con affetto.'
+  loai: cau-truc
+  truong:
+  - chip
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  ket_qua: dung
+  ghi_chu: 'Bản in đầu: "Poco Allegro, con affetto."'
+- id: n14
+  cau: 'Chip cấp độ: ≈ Grade 8 trở lên.'
+  loai: cap-do
+  truong:
+  - chip
+  nguon:
+  - rcm-2022
+  - henle-hn634
+  ket_qua: dung
+  ghi_chu: 'Dựng từ grade đã khóa (lần 1 n4). RCM 2022: danh sách ARCT; Henle 7.'
+- id: n15
+  cau: 'Chip: 85 ô nhịp, hai cadenza.'
+  loai: cau-truc
+  truong:
+  - chip
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  - ptna-23749
+  - henle-634-comments
+  ket_qua: dung
+  ghi_chu: 'Đếm trên bản in đầu: 85 ô (không tính nhịp lấy đà; cadenza ô 25 và ô 60 mỗi cái một ô). PTNA: "Measures 61 to 85". Henle Comments đánh số khớp (ô 44, 51, 53).'
+- id: n16
+  cau: 'Thông tin, Nhà soạn nhạc: Franz Liszt (1811–1886).'
+  loai: nam
+  truong:
+  - thong_tin
+  nguon:
+  - henle-hn634
+  - schirmer-1915
+  ket_qua: dung
+  ghi_chu: 'Henle: sinh 22/10/1811, mất 31/7/1886; khớp nha-soan-nhac.yml (đã khóa).'
+- id: n17
+  cau: 'Thông tin, Tác phẩm: Liebestraum số 3 La♭ trưởng, S. 541 số 3, bài cuối trong Liebesträume (Những giấc mơ tình yêu), ba notturno cho piano; ứng với ca khúc O lieb, so lang du lieben kannst! (Hãy yêu, chừng nào bạn còn có thể yêu!).'
+  loai: danh-muc
+  truong:
+  - thong_tin
+  nguon:
+  - imslp-s541
+  - henle-hn634
+  - oxfordsong
+  ket_qua: dung
+- id: n18
+  cau: 'Thông tin, Sáng tác: gốc là ca khúc của chính Liszt (S. 298) trên thơ Ferdinand Freiligrath, viết khoảng cuối năm 1843, in năm 1847.'
+  loai: nam
+  truong:
+  - thong_tin
+  nguon:
+  - imslp-s298
+  - ptna-23749
+  - henle-634-vorwort
+  ket_qua: dung
+- id: n19
+  cau: 'Thông tin, Xuất bản: ba Liebesträume cho piano in năm 1850; đầu mỗi bài in lời thơ (bài 1 và 2 thơ Ludwig Uhland, bài 3 thơ Freiligrath).'
+  loai: nam
+  truong:
+  - thong_tin
+  nguon:
+  - henle-634-vorwort
+  - henle-hn634
+  - kistner-1850
+  ket_qua: dung
+- id: n20
+  cau: 'Thông tin, Giọng · nhịp · tốc độ: La♭ trưởng · 6/4 · Poco allegro, con affetto (hơi nhanh, trìu mến).'
+  loai: cau-truc
+  truong:
+  - thong_tin
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  - cod-affetto
+  ket_qua: dung
+- id: n21
+  cau: 'Thông tin, Hình thức: 85 ô nhịp; giai điệu hát ba lần, ngăn bởi hai cadenza; lần thứ hai bắt đầu ở Si trưởng rồi dồn lên cao trào; lần thứ ba trở về La♭ trưởng.'
+  loai: cau-truc
+  truong:
+  - thong_tin
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  ket_qua: dung
+  ghi_chu: Ô 1, 26 (Si trưởng, Più animato), 37 (stringendo), 61 (Tempo primo, La♭).
+- id: n22
+  cau: 'Thông tin, Độ khó: Henle xếp mức 7 trên thang 9 ("khó"), trên hai bài kia của tập (mức 6); RCM (đề cương 2022) đặt bài ở danh sách ARCT; ABRSM không xếp bài vào Grade nào.'
+  loai: cap-do
+  truong:
+  - thong_tin
+  nguon:
+  - henle-hn634
+  - rcm-2022
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "Khoảng ABRSM Grade 8 trở lên (ước lượng), chặng 7 của [lộ trình](/opus/piano/lo-trinh/). Henle xếp mức 7 trên thang 9 ("khó"), trên hai bài kia của tập (mức 6)". Lý do: bỏ ước lượng ABRSM (như D6-L1-gom, D6-L4); ghi điều có nguồn: Henle 7 (hai bài kia 6), RCM 2022 ARCT (tr. 102); ABRSM không có bài trong đề cương 2017–2028 (lần 1 n4). Vế chặng bỏ cho gọn (chặng hiện ở chip và trang chặng). Mục trong sua-B.yml.'
+- id: n23
+  cau: 'Thông tin, Kỹ năng chính: giai điệu ngón cái giữa lớp đệm, hợp âm rải chia hai tay, cadenza, quãng tám và bước nhảy, bàn đạp theo hòa âm, sức bền ở đoạn dồn.'
+  loai: cau-truc
+  truong:
+  - thong_tin
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  - ptna-23749
+  ket_qua: dung
+  ghi_chu: Bước nhảy tay trái ô 38–46 (PTNA ô 41); đoạn 37–60 nhanh dần.
+- id: n24
+  cau: 'Thông tin, Bản nhạc: IMSLP (Liebesträume, S.541); bản Urtext G. Henle Verlag HN 634, biên tập Ernst-Günter Heinemann, số ngón Klaus Schilde.'
+  loai: ten
+  truong:
+  - thong_tin
+  nguon:
+  - imslp-s541
+  - henle-hn634
+  ket_qua: dung
+- id: n25
+  cau: 'Hình bài học: 85 ô nhịp 6/4, giai điệu hát ba lần, ngăn bởi hai cadenza.'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  ket_qua: dung
+- id: n26
+  cau: 'Hình bài học, đoạn A: ô 1–23, La♭ trưởng, giai điệu ở âm vực giữa (23 ô).'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  ket_qua: dung
+- id: n27
+  cau: 'Hình bài học, cadenza 1: ô 24–25 (2 ô).'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  - henle-634-comments
+  ket_qua: da-sua
+  ghi_chu: 'Dữ liệu ghi [Cadenza 1, từ ô 24, 3]: theo bản in đầu, cadenza là ô 25 (ô 24 dẫn vào), Più animato ô 26: đổi thành [Cadenza 1, ô 24–25, 2]. Mục trong sua-B.yml.'
+- id: n28
+  cau: 'Hình bài học, đoạn A'': ô 26–36, Più animato, mở đầu ở Si trưởng (11 ô).'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  ket_qua: da-sua
+  ghi_chu: 'Dữ liệu ghi [A'', ''ô 27–36 · Più animato, mở đầu ở Si trưởng'', 10]: Più animato ở ô 26 (bản in đầu, Schirmer): đổi thành ''ô 26–36 …'', 11.'
+- id: n29
+  cau: 'Hình bài học, dồn lên cao trào: ô 37–60, sempre stringendo, quãng tám; cadenza 2 ở cuối (24 ô).'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  ket_qua: dung
+- id: n30
+  cau: 'Hình bài học, đoạn A'''': ô 61–85, Tempo I, La♭ trưởng (25 ô).'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  - ptna-23749
+  ket_qua: dung
+- id: n31
+  cau: 'Hình bài học, ghi chú: số ô theo bản in đầu (Kistner 1850), mỗi cadenza một ô; PTNA đặt Più animato ở ô 27.'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  - henle-634-vorwort
+  - ptna-23749
+  ket_qua: da-sua
+  ghi_chu: Dữ liệu ghi "Số ô theo phân tích của PTNA (Piano Encyclopedia); ấn bản có thể đếm lệch quanh các cadenza." Đổi theo cách đếm trên bản in đầu (Henle theo bản này); cùng ý với ghi chú trên trang bài học (hồ sơ trang n47).
+- id: n32
+  cau: 'Hình nghe: giai điệu hát ba lần, ngăn cách bởi hai cadenza (độ dài gần đúng theo số ô nhịp).'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  ket_qua: dung
+- id: n33
+  cau: 'Hình nghe, A: La♭ trưởng, giai điệu ở âm vực giữa (23).'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  ket_qua: dung
+- id: n34
+  cau: 'Hình nghe, cadenza 1: chuỗi nốt chạy liền, không vạch nhịp (2).'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  ket_qua: da-sua
+  ghi_chu: 'Dữ liệu ghi [Cadenza 1, ''nốt nhỏ, không vạch nhịp'', 2]: bản in đầu in cadenza bằng nốt cỡ thường; đổi thành ''nốt chạy liền, không vạch nhịp''. Độ dài 2 (ô 24–25) đúng.'
+- id: n35
+  cau: 'Hình nghe, A'': Si trưởng, più animato con passione (11).'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  ket_qua: dung
+  ghi_chu: 'Ô 26–36: 11 ô.'
+- id: n36
+  cau: 'Hình nghe, dồn lên cao trào: sempre stringendo, quãng tám (23 ô: 37–59).'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  ket_qua: da-sua
+  ghi_chu: Dữ liệu ghi 21. Ô 37–59 là 23 ô (cadenza 2 là ô 60). Chú thích nói "gần đúng" nên không sai hẳn; đề xuất số đúng (sua-B.yml, mục có điều kiện như một mục).
+- id: n37
+  cau: 'Hình nghe, cadenza 2: chuỗi nốt nhẹ (leggiero) trôi xuống (1 ô).'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  ket_qua: da-sua
+  ghi_chu: 'Dữ liệu ghi [Cadenza 2, quãng ba gãy đi xuống, 2]: ô 60 ghi leggiero, hình nốt không phải quãng ba gãy (cùng chỗ sửa trên trang nghe, hồ sơ trang n34, n42); một ô. Đổi thành [Cadenza 2, ''leggiero, trôi xuống'', 1].'
+- id: n38
+  cau: 'Hình nghe, A'''': La♭ trưởng, lắng dần đến kết (25 ô: 61–85).'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon:
+  - kistner-1850
+  - schirmer-1915
+  ket_qua: da-sua
+  ghi_chu: 'Dữ liệu ghi 26; ô 61–85 là 25 ô. Tổng sáu đoạn sau khi sửa: 23 + 2 + 11 + 23 + 1 + 25 = 85.'
+- id: n39
+  cau: 'Bản thu: Wilhelm Backhaus.'
+  loai: ten
+  truong:
+  - ban_thu
+  nguon:
+  - commons-backhaus
+  ket_qua: dung
+  ghi_chu: 'Commons: "Performer(s): Wilhelm Backhaus (1884-1969)".'
+- id: n40
+  cau: 'Bản thu: thu năm 1923, đĩa 78 vòng.'
+  loai: nam
+  truong:
+  - ban_thu
+  nguon:
+  - commons-backhaus
+  - pdp-user
+  ket_qua: dung
+  ghi_chu: 'Commons: "1st recording date: 15 October 1923", London, HMV D 788 (tên file Hmv-d788), phát hành 1924. Public Domain Project số hóa đĩa hát cũ ("Inventory of 78 rpm shellac discs").'
+- id: n41
+  cau: 'Bản thu: phạm vi công cộng.'
+  loai: so-lieu
+  truong:
+  - ban_thu
+  nguon:
+  - commons-backhaus
+  ket_qua: dung
+  ghi_chu: 'Commons: LicenseShortName "Public domain"; {{PD-old-70}}, {{Pdproject}}. Không có licUrl: đúng, vì không phải giấy phép CC.'
+- id: n42
+  cau: 'Bản thu: trang Commons, file gốc FLAC và bản chuyển mã MP3 đúng địa chỉ.'
+  loai: so-lieu
+  truong:
+  - ban_thu
+  nguon:
+  - commons-backhaus
+  ket_qua: dung
+  ghi_chu: 'API imageinfo: url .../f/f0/PDP-CH_-_Wilhelm_Backhaus_-_…_Hmv-d788-05754.flac; videoinfo derivatives có …flac.mp3 cùng đường dẫn.'
+- id: n43
+  cau: 'Bản thu: độ dài 238,25 giây.'
+  loai: so-lieu
+  truong:
+  - ban_thu
+  nguon:
+  - commons-backhaus
+  ket_qua: dung
+  ghi_chu: Commons metadata playtime_seconds 238.249.
