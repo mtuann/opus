@@ -119,3 +119,9 @@ Review đếm lại trên bản in đầu Kistner: BSB `bsb00051595` (ảnh IIIF
   - danh mục thư viện Hope: bị chặn bằng trang kiểm tra robot, không vòng.
 
   Agent con không dùng mạng.
+
+## Lượt 2 bổ sung và trạng thái khóa (người gom)
+
+- Lượt 2 bổ sung (Claude Opus 5.5): `ket-qua-bo-sung.yml` 4 dung (Ballade n54, n83 theo BAPAM *The Healthy Pianist* và bản in Pháp đầu; Liebestraum n47 và dữ liệu n31: tự đếm lại bản Kistner BSB, 85 ô, khớp quy ước câu ghi); đã `nhap`.
+- Đã điền `nguoi.luot_2` cho 7 hồ sơ (4 trang, 3 bản ghi). Còn thiếu cho khóa: `nguoi.kiem_mau`.
+- Mẫu kiểm: 8 nhận định ở `d6-l6-gom/kiem-mau.yml` (`xuat D6-L6 --mau 8`).
