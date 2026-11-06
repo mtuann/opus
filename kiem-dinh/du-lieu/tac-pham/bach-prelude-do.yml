@@ -17,8 +17,8 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: "Claude Opus 5.5 (D6-L3 phần A)"
-      luot_2: null
-      review: null
+      luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L3, 05/11/2026, bốn phần; bổ sung sau review)
+      review: "Claude Opus 5.5 (review D6-L3-gom, 05/11/2026)"
       kiem_mau: null
 ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/bach-prelude-do.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Bach-Digital (bach-digital.de) không mở được: trang chỉ trả về thử thách chống bot ("Please wait a moment while we verify your connection"), nên không dùng. Lần 2 (D6-L3, lượt 1 phần A): nhận định n7–n28 cho các trường chưa khóa (giong, nhip, thoi_ky, ky_nang_chinh, luyen_nghe, chip, thong_tin, hinh, ban_thu); bản nhạc đối chiếu Mutopia wtk1-prelude1, lịch sử theo lời nói đầu Henle HN 14. Dữ liệu sai: n23; đề xuất sửa (cả có điều kiện) ở plans/lam-lai/bao-cao/d6-l3/sua-A.yml. Còn mở: n19, n21, n26. luyen_nghe là trường của schema (src/du-lieu.mjs).'
 nguon:
@@ -82,6 +82,14 @@ nguon:
     bac: 2
     ten: 'Qobuz, Bach: Well-Tempered Clavier Book I, Sviatoslav Richter (Prelude BWV 846 01:58)'
     link: https://www.qobuz.com/au-en/album/bach-well-tempered-clavier-book-i-sviatoslav-richter/ln7jrrw5fqh8b
+  - id: "imslp-wiener-urtext"
+    bac: 2
+    ten: "IMSLP, Wiener Urtext Edition (danh mục ấn bản, lượt 2 mở)"
+    link: "https://cn.imslp.org/wiki/Wiener_Urtext_Edition"
+  - id: "barenreiter-wtc1"
+    bac: 2
+    ten: "Bärenreiter, Bach: The Well-Tempered Clavier Book 1 BWV 846–869 (Urtext; lượt 2 mở)"
+    link: "https://barenreiter.us/products/bach-the-well-tempered-clavier-book-1-bwv-846-869-barenreiter"
 nhan_dinh:
   - id: n1
     cau: "Tên bài: Prelude Đô trưởng BWV 846 (prelude của cặp prelude và fugue đầu trong Das wohltemperierte Klavier, quyển 1)."
@@ -277,15 +285,16 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.henle.de/media/3b/f8/6c/1690899704/1642-1690899704-sync.pdf", "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)" ]
     luot_2_ghi_chu: "Lời tựa Henle HN 1642: quyển 1 còn trong 'complete autograph fair copy dating from the year 1722'; trang tựa ghi Bach là 'chapel-master … to the Prince of Anhalt-Cöthen, in the year 1722'. IMSLP: holograph P 415, 1722-23."
   - id: n19
-    cau: 'Thông tin: một phiên bản sớm hơn nằm trong Clavier-Büchlein (sổ tay đàn phím) mà Bach bắt đầu soạn năm 1720 cho con trai Wilhelm Friedemann.'
+    cau: "Thông tin: một phiên bản sớm hơn nằm trong Clavier-Büchlein (sổ tay đàn phím) mà Bach bắt đầu soạn năm 1720 cho con trai Wilhelm Friedemann."
     loai: lich-su
     truong: [ thong_tin ]
     nguon: [ imslp-wfb, imslp-846a ]
-    ket_qua: null
-    ghi_chu: 'chưa chắc: dữ liệu ghi "Một phiên bản sớm hơn và ngắn hơn". "Sớm hơn", năm 1720, W. F. Bach: IMSLP. "Ngắn hơn": chưa có nguồn đã mở (IMSLP không ghi số ô của BWV 846a). Trang đã bỏ vế ấy. Đề xuất có điều kiện ở plans/lam-lai/bao-cao/d6-l3/sua-A.yml.'
+    ket_qua: "da-sua"
+    ghi_chu: "chưa chắc: dữ liệu ghi \"Một phiên bản sớm hơn và ngắn hơn\". \"Sớm hơn\", năm 1720, W. F. Bach: IMSLP. \"Ngắn hơn\": chưa có nguồn đã mở (IMSLP không ghi số ô của BWV 846a). Trang đã bỏ vế ấy. Đề xuất có điều kiện ở plans/lam-lai/bao-cao/d6-l3/sua-A.yml. Review D6-L3-gom: Lượt 2 xác nhận \"sớm hơn\", năm 1720, W. F. Bach; không ai tìm được nguồn cho \"ngắn hơn\". Áp mục có điều kiện của sua-A.yml: bỏ \"và ngắn hơn\" (doi_chu ở trang)."
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Klavierb%C3%BCchlein_f%C3%BCr_Wilhelm_Friedemann_Bach_(Bach,_Johann_Sebastian)", "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)" ]
     luot_2_ghi_chu: "IMSLP Klavierbüchlein für Wilhelm Friedemann Bach: Composition Year '1720 started'; mục 14 'Præludium in C major, BWV 846a'. Trang WTC I: Related Works 'Notebook for Wilhelm Friedemann Bach (Nos.14-18): Preludes Nos.1a-12 (BWV 846a-857)'."
+    review: "dung"
   - id: n20
     cau: 'Thông tin: tập nhạc lưu hành bằng bản chép tay, đến năm 1801 mới được in.'
     loai: nam
@@ -297,15 +306,16 @@ nhan_dinh:
     luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.henle.de/media/3b/f8/6c/1690899704/1642-1690899704-sync.pdf" ]
     luot_2_ghi_chu: "IMSLP: First Publication 1801, Wien: Hoffmeister & Co. Henle: chưa in đến khoảng 50 năm sau khi Bach mất, đã lưu hành qua 'innumerable handwritten copies'."
   - id: n21
-    cau: 'Thông tin, giọng · nhịp · tốc độ: Đô trưởng · 4/4 · Bach không ghi tốc độ (thường ♩ ≈ 60–72).'
+    cau: "Thông tin, giọng · nhịp · tốc độ: Đô trưởng · 4/4 · Bach không ghi tốc độ."
     loai: so-lieu
     truong: [ thong_tin ]
-    nguon: [ mut-846, henle-hn14-vorwort, ecm-schiff, qobuz-richter, apple-gould, commons-ishizaka ]
-    ket_qua: null
-    ghi_chu: 'chưa chắc: "Bach không ghi tốc độ" đúng (Henle, Schiff: quyển 1 chỉ có chỉ dẫn tốc độ ở prelude Đô thứ, Mi thứ, Si thứ). "Thường ♩ ≈ 60–72": tính từ độ dài bốn bản thu (35 ô × 4 phách): Schiff 1:48 ≈ ♩ 78, Richter 1:58 ≈ 71, Gould 2:22 ≈ 59, Ishizaka 2:43 ≈ 52 (bỏ qua chậm dần cuối bài). Hai trong bốn bản nằm trong khoảng ghi. Đề xuất có điều kiện ở sua-A.yml.'
+    nguon: [ "mut-846", "henle-hn14-vorwort" ]
+    ket_qua: "da-sua"
+    ghi_chu: "chưa chắc: \"Bach không ghi tốc độ\" đúng (Henle, Schiff: quyển 1 chỉ có chỉ dẫn tốc độ ở prelude Đô thứ, Mi thứ, Si thứ). \"Thường ♩ ≈ 60–72\": tính từ độ dài bốn bản thu (35 ô × 4 phách): Schiff 1:48 ≈ ♩ 78, Richter 1:58 ≈ 71, Gould 2:22 ≈ 59, Ishizaka 2:43 ≈ 52 (bỏ qua chậm dần cuối bài). Hai trong bốn bản nằm trong khoảng ghi. Đề xuất có điều kiện ở sua-A.yml. Review D6-L3-gom: Lượt 2: \"♩ ≈ 60–72\" là thói quen diễn, không có nguồn chuẩn; bốn bản thu lượt 1 đo từ ♩ ≈ 52 đến 78. Bỏ phần trong ngoặc, giữ \"Bach không ghi tốc độ\" (hai lượt cùng xác nhận) (doi_chu ở trang)."
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BachJS/BWV846/wtk1-prelude1/wtk1-prelude1.ly", "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)" ]
     luot_2_ghi_chu: Bản nhạc (Mutopia) không có chỉ dẫn tốc độ in ra (chỉ có \tempo 4=60 ẩn cho MIDI). Khoảng ♩ ≈ 60–72 là thói quen diễn, không có nguồn chuẩn; bản thu Crossland trên IMSLP dài 130 giây cho 140 phách (≈ ♩ 65), nằm trong khoảng. Chấp nhận như mô tả thói quen.
+    review: "dung"
   - id: n22
     cau: 'Thông tin, hình thức: một chuỗi hợp âm rải liên tục: khẳng định Đô trưởng → sang Sol trưởng → quay về, căng dần → âm nền át → âm nền chủ và kết.'
     loai: cau-truc
@@ -317,15 +327,16 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BachJS/BWV846/wtk1-prelude1/wtk1-prelude1.ly" ]
     luot_2_ghi_chu: "Đọc bè trầm Mutopia: ô 1–4 Đô; ô 5–11 qua La thứ, Rê7 tới Sol (ô 11 Sol trưởng); quay về, căng dần (ô 20–23 Đô7, Fa, Fa♯°7, La♭°7); ô 24–31 âm nền Sol; ô 32–35 âm nền Đô, kết."
   - id: n23
-    cau: 'Thông tin, độ khó: khoảng ABRSM Grade 4–5; Trinity xếp bài ở Grade 5 (danh sách từ 2023), Henle mức 1; nốt không khó, cái khó là sự đều đặn và tiếng đàn.'
+    cau: "Thông tin, độ khó: Trinity xếp bài ở Grade 5 (danh sách từ 2023), Henle mức 1; nốt không khó, cái khó là sự đều đặn và tiếng đàn."
     loai: cap-do
     truong: [ thong_tin ]
     nguon: [ trinity-2023, henle-hn14 ]
     ket_qua: da-sua
-    ghi_chu: 'Dữ liệu cũ: "Khoảng ABRSM Grade 4–5 (ước lượng): nốt không khó, cái khó là sự đều đặn và tiếng đàn". Bài có trong đề cương Trinity (Grade 5, danh sách từ 2023, lần 1 n4), nên ghi kỳ đề cương thay "(ước lượng)" như D6-L1-gom làm. Giữ "Khoảng ABRSM Grade 4–5" khớp grade đã khóa. Đề xuất ở sua-A.yml.'
+    ghi_chu: "Dữ liệu cũ: \"Khoảng ABRSM Grade 4–5 (ước lượng): nốt không khó, cái khó là sự đều đặn và tiếng đàn\". Bài có trong đề cương Trinity (Grade 5, danh sách từ 2023, lần 1 n4), nên ghi kỳ đề cương thay \"(ước lượng)\" như D6-L1-gom làm. Giữ \"Khoảng ABRSM Grade 4–5\" khớp grade đã khóa. Đề xuất ở sua-A.yml. Review D6-L3-gom: Bỏ \"khoảng ABRSM Grade 4–5\" (ước lượng: không đề cương ABRSM nào xếp bài, lượt 2 cũng nói vậy); giữ Trinity Grade 5 và Henle mức 1, hai lượt cùng xác nhận (doi_chu ở trang). Chip \"≈ Grade 4–5\" theo grade đã khóa, không đổi."
     luot_2: dung
     luot_2_nguon: [ "https://www.trinitycollege.com/resource/?id=10125", "https://www.henle.de/en/Prelude-and-Fugue-C-major-BWV-846-Well-Tempered-Clavier-Part-I/HN-1642" ]
     luot_2_ghi_chu: "Trinity: Grade 5 (repertoire list từ 2023, Extended Edition); Henle HN 1642: 'Prelude C major BWV 846 — 1 easy'; Henle nói 'Though it seems easy to play … the performer must build up, and maintain, the musical tension'. ABRSM Grade 4–5 là ước lượng (không có đề cương ABRSM cho bài), hợp với Trinity Grade 5."
+    review: "dung"
   - id: n24
     cau: 'Thông tin, kỹ năng chính: hợp âm rải chia giữa hai tay, giữ nốt bằng ngón, móc kép đều, bàn đạp (hoặc không), sắc thái theo hòa âm, học thuộc theo hợp âm.'
     loai: cau-truc
@@ -349,12 +360,13 @@ nhan_dinh:
     cau: 'Thông tin, bản nhạc: bản Urtext của Bärenreiter và Wiener Urtext.'
     loai: ten
     truong: [ thong_tin ]
-    nguon: []
-    ket_qua: null
-    ghi_chu: 'chưa chắc: chưa mở được trang ấn bản WTC I của Bärenreiter hay Wiener Urtext (danh mục PDF của Universal Edition tải không được). Lượt 2 kiểm.'
+    nguon: [ "barenreiter-wtc1", "imslp-wiener-urtext" ]
+    ket_qua: "dung"
+    ghi_chu: "chưa chắc: chưa mở được trang ấn bản WTC I của Bärenreiter hay Wiener Urtext (danh mục PDF của Universal Edition tải không được). Lượt 2 kiểm. Review D6-L3-gom: Lượt 2: Bärenreiter (Urtext) và danh mục Wiener Urtext trên IMSLP có ấn bản quyển 1. Kết quả dung, thêm hai nguồn."
     luot_2: dung
     luot_2_nguon: [ "https://barenreiter.us/products/bach-the-well-tempered-clavier-book-1-bwv-846-869-barenreiter", "https://cn.imslp.org/wiki/Wiener_Urtext_Edition" ]
     luot_2_ghi_chu: Bärenreiter BA 5191 (Urtext, Alfred Dürr); Wiener Urtext UT 50050 'Das wohltemperierte Klavier I, BWV 846-869' (danh mục IMSLP).
+    review: "dung"
   - id: n27
     cau: 'Hình cấu trúc: Prelude Đô trưởng BWV 846, 35 ô; các đoạn Đô trưởng ô 1–4 (4), đi xa sang Sol trưởng ô 5–11 (7), quay về căng dần ô 12–23 (12), âm nền át ô 24–31 (8), âm nền chủ ô 32–35 (4).'
     loai: cau-truc

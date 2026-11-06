@@ -17,8 +17,8 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: "Claude Opus 5.5 (D6-L3 phần A)"
-      luot_2: null
-      review: null
+      luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L3, 05/11/2026, bốn phần; bổ sung sau review)
+      review: "Claude Opus 5.5 (review D6-L3-gom, 05/11/2026)"
       kiem_mau: null
 ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/fur-elise.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Lần 2 (D6-L3, lượt 1 phần A): nhận định n7–n28 cho các trường chưa khóa (bản ghi không có luyen_nghe); bản nhạc Mutopia fur_Elise_WoO59 (Breitkopf & Härtel 1888), lịch sử theo Henle HN 1347, mục WoO 59 của danh mục Henle 2014, đề cương RCM 2022. Dữ liệu sai: n18, n23; đề xuất (cả có điều kiện) ở plans/lam-lai/bao-cao/d6-l3/sua-A.yml. Còn mở: n13, n17, n21, n26.'
 nguon:
@@ -82,6 +82,22 @@ nguon:
     bac: 2
     ten: Open Music Theory, Binary Form (rounded binary)
     link: https://viva.pressbooks.pub/openmusictheory/chapter/binary-form/
+  - id: "imslp-wiener-urtext"
+    bac: 2
+    ten: "IMSLP, Wiener Urtext Edition (danh mục ấn bản, lượt 2 mở)"
+    link: "https://cn.imslp.org/wiki/Wiener_Urtext_Edition"
+  - id: "bh-appassionato-33"
+    bac: 2
+    ten: "Beethoven-Haus Bonn, appassionato 33 (PDF): danh mục Kinsky chia \"Werke mit Opuszahl\" và \"Werke ohne Opuszahl (WoO)\" (lượt 2 mở)"
+    link: "https://internet.beethoven.de/pdf-web/appassionato_33.pdf"
+  - id: "musicca-poco"
+    bac: 2
+    ten: "Musicca, Italian music dictionary: poco \"little, not much, a bit\" (lượt 2 mở)"
+    link: "https://www.musicca.com/dictionary/italian/poco"
+  - id: "barenreiter-woo59"
+    bac: 2
+    ten: "Bärenreiter, Beethoven: Bagatelle in A minor WoO 59 \"Für Elise\" (Urtext / Critical Edition; lượt 2 mở)"
+    link: "https://barenreiter.us/products/beethoven-bagatelle-in-a-minor-woo-59-fur-elise-barenreiter"
 nhan_dinh:
   - id: n1
     cau: "Tên bài: Für Elise WoO 59 (Bagatelle La thứ)."
@@ -222,15 +238,16 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly", "https://imslp.org/wiki/F%C3%BCr_Elise,_WoO_59_(Beethoven,_Ludwig_van)" ]
     luot_2_ghi_chu: "Mutopia: 'Poco moto.'; IMSLP: Movements '1. Poco moto'."
   - id: n13
-    cau: 'Chip cấp độ: "≈ Grade 5 (đoạn A ≈ Grade 3)".'
+    cau: "Chip cấp độ: \"≈ Grade 5\"."
     loai: cap-do
     truong: [ chip ]
     nguon: [ henle-hn1347, rcm-2022 ]
-    ket_qua: null
-    ghi_chu: 'chưa chắc: "≈ Grade 5" trùng grade đã khóa (lần 1 n4). "Đoạn A ≈ Grade 3": chưa thấy nguồn (đề cương không xếp riêng đoạn A). Cùng câu ở thong_tin (n23). Đề xuất ở sua-A.yml.'
+    ket_qua: "da-sua"
+    ghi_chu: "chưa chắc: \"≈ Grade 5\" trùng grade đã khóa (lần 1 n4). \"Đoạn A ≈ Grade 3\": chưa thấy nguồn (đề cương không xếp riêng đoạn A). Cùng câu ở thong_tin (n23). Đề xuất ở sua-A.yml. Review D6-L3-gom: Lượt 2 không tìm được nguồn cho \"đoạn A ≈ Grade 3\". Áp mục có điều kiện của sua-A.yml: chip thành \"≈ Grade 5\" (khớp grade đã khóa) (doi_chu ở trang)."
     luot_2: khong-chac
     luot_2_nguon: [ "https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf", "https://www.henle.de/en/Bagatelle-in-a-minor-WoO-59-Fuer-Elise/HN-1347" ]
     luot_2_ghi_chu: RCM Level 7 (2022) và Henle mức 3 (easy) xác nhận được; '≈ Grade 5 (đoạn A ≈ Grade 3)' là ước lượng của site, không tìm được đề cương ABRSM nào có bài để xác nhận.
+    review: "dung"
   - id: n14
     cau: 'Chip: "Rondo A–B–A–C–A".'
     loai: cau-truc
@@ -264,22 +281,24 @@ nhan_dinh:
     cau: 'Thông tin: WoO là Werk ohne Opuszahl, tác phẩm không có số opus.'
     loai: dinh-nghia
     truong: [ thong_tin ]
-    nguon: []
-    ket_qua: null
-    ghi_chu: 'chưa chắc: chưa mở được nguồn bậc 2 giải nghĩa WoO trong lần này (hồ sơ trang piano/tac-pham/beethoven-sonatina-sol dùng "Werke ohne Opuszahl"). Lượt 2 kiểm.'
+    nguon: [ "bh-appassionato-33" ]
+    ket_qua: "dung"
+    ghi_chu: "chưa chắc: chưa mở được nguồn bậc 2 giải nghĩa WoO trong lần này (hồ sơ trang piano/tac-pham/beethoven-sonatina-sol dùng \"Werke ohne Opuszahl\"). Lượt 2 kiểm. Review D6-L3-gom: Lượt 2: Beethoven-Haus (appassionato 33): \"alle Werke ohne Opuszahl (WoO)\". Kết quả dung."
     luot_2: dung
     luot_2_nguon: [ "https://internet.beethoven.de/pdf-web/appassionato_33.pdf" ]
     luot_2_ghi_chu: "Beethoven-Haus (appassionato 33): Kinsky chia danh mục thành 'Werke mit Opuszahl' và 'alle Werke ohne Opuszahl (WoO)'."
+    review: "dung"
   - id: n18
     cau: 'Thông tin: bản viết tay mà Ludwig Nohl được xem đề ngày 27 tháng 4, không ghi năm; có lẽ năm 1810.'
     loai: nam
     truong: [ thong_tin ]
     nguon: [ henle-1347-vorwort, lvbwv-woo59 ]
     ket_qua: da-sua
-    ghi_chu: 'Dữ liệu cũ: "Bản viết tay mà nhà nghiên cứu Ludwig Nohl được xem đề ngày 27 tháng 4 năm 1810". Henle: Nohl chép tiêu đề "Für Elise on 27 April in remembrance of L. v. Bthvn", "the 27th of April (without mention of a year)"; LvBWV: "datierte er ''27. April'', sie entstand wohl ebenfalls 1810". Năm 1810 là suy ra, không có trên bản viết tay. Đề xuất ở sua-A.yml.'
+    ghi_chu: "Dữ liệu cũ: \"Bản viết tay mà nhà nghiên cứu Ludwig Nohl được xem đề ngày 27 tháng 4 năm 1810\". Henle: Nohl chép tiêu đề \"Für Elise on 27 April in remembrance of L. v. Bthvn\", \"the 27th of April (without mention of a year)\"; LvBWV: \"datierte er '27. April', sie entstand wohl ebenfalls 1810\". Năm 1810 là suy ra, không có trên bản viết tay. Đề xuất ở sua-A.yml. Review D6-L3-gom: Hai lượt cùng kết luận, nguồn khớp; đồng ý."
     luot_2: dung
     luot_2_nguon: [ "https://www.henle.de/media/53/13/68/1697725822/1347-1697725821-sync.pdf", "https://imslp.org/wiki/F%C3%BCr_Elise,_WoO_59_(Beethoven,_Ludwig_van)" ]
     luot_2_ghi_chu: "Lời tựa Henle: theo Nohl, bản viết tay đề 'Für Elise on 27 April in remembrance of L. v. Bthvn', 'the 27th of April (without mention of a year) had always been … connected with the genesis of the work in the year 1810'. IMSLP: 'for which scholarship has generally agreed that 1810 is the year'."
+    review: "dung"
   - id: n19
     cau: 'Thông tin: Nohl in bài này lần đầu năm 1867, bốn mươi năm sau khi Beethoven mất; bản viết tay ấy nay đã thất lạc.'
     loai: nam
@@ -303,12 +322,13 @@ nhan_dinh:
     cau: 'Thông tin: Poco moto nghĩa là "hơi chuyển động".'
     loai: dinh-nghia
     truong: [ thong_tin ]
-    nguon: [ cod-moto ]
-    ket_qua: null
-    ghi_chu: 'chưa chắc: như hồ sơ trang (COD: moto "Motion"; chưa mở được nguồn cho poco).'
+    nguon: [ "cod-moto", "musicca-poco" ]
+    ket_qua: "dung"
+    ghi_chu: "chưa chắc: như hồ sơ trang (COD: moto \"Motion\"; chưa mở được nguồn cho poco). Review D6-L3-gom: Lượt 2: Musicca poco \"a bit\"; COD moto \"Motion\". Kết quả dung."
     luot_2: dung
     luot_2_nguon: [ "https://www.musicca.com/dictionary/italian/poco", "https://www.musicca.com/dictionary/italian/moto" ]
     luot_2_ghi_chu: "Musicca: poco = 'little, not much, a bit'; moto = 'movement, motion'. 'Hơi chuyển động' là dịch sát nghĩa."
+    review: "dung"
   - id: n22
     cau: 'Thông tin, hình thức: rondo nhỏ A–B–A–C–A; riêng đoạn A là một hình thức hai đoạn có tái hiện thu nhỏ.'
     loai: cau-truc
@@ -320,15 +340,16 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly", "https://viva.pressbooks.pub/openmusictheory/chapter/binary-form/" ]
     luot_2_ghi_chu: "Bản nhạc: đoạn A có hai phần nhắc lại; phần sau mở bằng câu tương phản (Đô trưởng, Sol trưởng, âm nền Mi) rồi câu mở đầu trở lại ở giọng chính. Open Music Theory, Binary Form: 'In rounded binary, the beginning of A returns in the home key somewhere in the middle of the second reprise'."
   - id: n23
-    cau: 'Thông tin, độ khó: khoảng ABRSM Grade 5 cho cả bài; RCM xếp bài ở Level 7 (đề cương 2022); riêng đoạn A khoảng Grade 3.'
+    cau: "Thông tin, độ khó: RCM xếp bài ở Level 7 (đề cương 2022); Henle mức 3."
     loai: cap-do
     truong: [ thong_tin ]
     nguon: [ rcm-2022, henle-hn1347 ]
     ket_qua: da-sua
-    ghi_chu: 'Dữ liệu cũ: "Khoảng ABRSM Grade 5 cho cả bài (ước lượng); riêng đoạn A khoảng Grade 3". Bài có trong đề cương RCM 2022 (Level 7, List B, tr. 60 và 64: "Für Elise, WoO 59", đã mở PDF): ghi kỳ đề cương thay "(ước lượng)". Vế "đoạn A khoảng Grade 3" chưa có nguồn: đề xuất có điều kiện bỏ, ở sua-A.yml.'
+    ghi_chu: "Dữ liệu cũ: \"Khoảng ABRSM Grade 5 cho cả bài (ước lượng); riêng đoạn A khoảng Grade 3\". Bài có trong đề cương RCM 2022 (Level 7, List B, tr. 60 và 64: \"Für Elise, WoO 59\", đã mở PDF): ghi kỳ đề cương thay \"(ước lượng)\". Vế \"đoạn A khoảng Grade 3\" chưa có nguồn: đề xuất có điều kiện bỏ, ở sua-A.yml. Review D6-L3-gom: Bỏ \"khoảng ABRSM Grade 5 cho cả bài\" và \"riêng đoạn A khoảng Grade 3\" (ước lượng, lượt 2 không tìm được nguồn); thêm Henle mức 3 mà hai lượt cùng xác nhận (doi_chu ở trang)."
     luot_2: khong-chac
     luot_2_nguon: [ "https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf", "https://www.henle.de/en/Bagatelle-in-a-minor-WoO-59-Fuer-Elise/HN-1347" ]
     luot_2_ghi_chu: "RCM Piano Syllabus 2022, Level 7 List B: 'Für Elise, WoO 59' (đúng); Henle mức 3. Hai vế ABRSM ('khoảng Grade 5 cho cả bài', 'đoạn A khoảng Grade 3') không có đề cương ABRSM nào để xác nhận."
+    review: "dung"
   - id: n24
     cau: 'Thông tin, kỹ năng chính: chuyền tay liền mạch, nửa cung Mi–Rê♯ nhẹ và đều, hợp âm rải tay trái, nhịp chấm dôi và nốt láy, đường chạy móc ba, nốt lặp tay trái dưới hợp âm tay phải, bàn đạp theo hòa âm.'
     loai: cau-truc
@@ -351,12 +372,13 @@ nhan_dinh:
     cau: 'Thông tin, bản nhạc: Wiener Urtext, Bärenreiter.'
     loai: ten
     truong: [ thong_tin ]
-    nguon: []
-    ket_qua: null
-    ghi_chu: 'chưa chắc: chưa mở được trang ấn bản WoO 59 của hai nhà này. Lượt 2 kiểm.'
+    nguon: [ "imslp-wiener-urtext", "barenreiter-woo59" ]
+    ket_qua: "dung"
+    ghi_chu: "chưa chắc: chưa mở được trang ấn bản WoO 59 của hai nhà này. Lượt 2 kiểm. Review D6-L3-gom: Lượt 2: Wiener Urtext UT 50053 (danh mục IMSLP), Bärenreiter BA 11839. Kết quả dung."
     luot_2: dung
     luot_2_nguon: [ "https://cn.imslp.org/wiki/Wiener_Urtext_Edition", "https://barenreiter.us/products/beethoven-bagatelle-in-a-minor-woo-59-fur-elise-barenreiter" ]
     luot_2_ghi_chu: Wiener Urtext UT 50053 (Für Elise WoO 59 và WoO 60, Brendel) trong danh mục IMSLP; Bärenreiter BA 11839 'Urtext / Critical Edition'.
+    review: "dung"
   - id: n27
     cau: 'Hình cấu trúc: rondo nhỏ A–B–A–C–A; A La thứ (a, b + a), B Fa trưởng (đường chạy móc ba), A La thứ, C (nốt La trầm lặp lại), chuyển (rải La thứ, nửa cung đi xuống), A La thứ (kết); độ dài gần đúng theo số ô, không tính phần nhắc lại.'
     loai: cau-truc

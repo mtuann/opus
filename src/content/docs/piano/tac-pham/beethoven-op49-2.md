@@ -78,7 +78,7 @@ Số ô nhịp trên trang này theo bản Breitkopf & Härtel (qua Mutopia); h�
 | Chủ đề 2 | 87 (nhịp lấy đà) – 102 | Ba nốt Rê làm đà; chủ đề 2 ở giọng chủ | Sol trưởng |
 | Nhóm kết | 103–122 | Như ô 36–52, ở Sol trưởng; hợp âm cuối ở ô 122, tiếp theo là dấu lặng có dấu ngân | Sol trưởng |
 
-Điều đáng chú ý nhất: hợp âm Rê cuối đoạn chuyển. Ở ô 20, tai nghe nó như một giọng mới (Rê trưởng); ở ô 87, cũng hợp âm ấy, sau cũng những nốt ấy, lại nghe như át âm kéo về Sol. Chơi hai chỗ này liền nhau vài lần, bạn sẽ hiểu vì sao phần tái hiện "giải quyết" phần trình bày.
+Điều đáng chú ý nhất: hợp âm Rê cuối đoạn chuyển. Cả hai lần (ô 20 và ô 87), đoạn chuyển dừng trên hợp âm Rê, át âm của Sol. Ở phần trình bày, chủ đề 2 vào thẳng Rê trưởng ngay sau đó, nên tai nghe lại hợp âm Rê như chủ âm của một giọng mới; ở phần tái hiện, chủ đề 2 ở lại Sol trưởng. Chơi hai chỗ này liền nhau vài lần, bạn sẽ hiểu vì sao phần tái hiện "giải quyết" phần trình bày.
 
 ### Tám ô đầu
 
@@ -211,7 +211,7 @@ Bản Breitkopf mà trang này dùng ghi rất ít sắc thái (chẳng hạn *p
 
 ### Phát âm
 
-- Nốt đen không có dấu luyến (giai điệu ô 2–4, đoạn chuyển): hơi tách, gọn, nhưng không khô.
+- Nốt đen không có dấu luyến (giai điệu ô 3–4, đoạn chuyển; ở ô 2, ba nốt Sol–Fa♯–Sol có dấu luyến): hơi tách, gọn, nhưng không khô.
 - Cặp nốt luyến (ô 9–14, chủ đề 2): nốt đầu nặng, nốt sau nhẹ và ngắn lại.
 - Ba nốt La làm đà ở ô 20: nhẹ, hơi tách, dẫn vào nốt Rê đầu dấu luyến.
 - Staccato trên các nốt Mi lặp (ô 25–26) và các quãng ba đi xuống (ô 45, 48): nhẹ, nảy, không gõ.
@@ -266,7 +266,7 @@ Bản Urtext Henle (HN 1327) in chung hai sonata Op. 49, ngón bấm của Murra
 + Gần như giống hệt, nhưng lần này dẫn sang chủ đề 2 ở Sol trưởng thay vì Rê trưởng
 - Được viết lại hoàn toàn ở Đô trưởng
 - Bị bỏ đi: chủ đề 2 đến ngay sau chủ đề 1
-> Cùng những nốt ấy, hợp âm Rê cuối đoạn được nghe như một giọng mới ở phần trình bày, và như át âm của Sol ở phần tái hiện.
+> Cả hai lần đoạn chuyển đều dừng trên hợp âm Rê, át âm của Sol; ở phần trình bày, chủ đề 2 sau đó vào Rê trưởng, ở phần tái hiện chủ đề 2 ở lại Sol trưởng.
 ? Nên tập nhịp chấm dôi (ô 3) đặt cạnh chùm ba (ô 1) thế nào?
 + Đếm theo móc đơn "1 và 2 và", đặt nốt móc đơn đúng chữ "và" cuối, xen một ô chùm ba với một ô chấm dôi
 - Chơi nốt móc đơn trùng với nốt thứ ba của chùm ba cho liền mạch

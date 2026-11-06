@@ -19,7 +19,7 @@ Bản prelude mở đầu *Bình quân luật* quyển 1 trông như một bài 
 - **Bài học thuộc lý tưởng.** Nhớ 35 hợp âm dễ hơn nhớ năm trăm nốt; học thuộc bằng hiểu biết là kỹ năng bạn sẽ cần cho mọi bài lớn hơn.
 
 :::tip[Chưa sẵn sàng?]
-Nếu móc kép đều ở hai tay còn khó, hãy làm các bài trong [Hợp âm rải](/opus/piano/hop-am-rai/) trước, rồi tập khung hòa âm ở phần Cấu trúc như một bài đọc hợp âm. Nếu chưa từng chơi nhạc Baroque, [Minuet Sol trưởng](/opus/piano/tac-pham/minuet-sol/) là bước đệm nhẹ nhàng hơn.
+Nếu móc kép đều ở hai tay còn khó, hãy làm các bài trong [Hợp âm rải](/opus/piano/hop-am-rai/) trước, rồi tập khung hòa âm ở phần Cấu trúc như một bài đọc hợp âm. Nếu chưa từng chơi nhạc Baroque, [Minuet Sol trưởng](/opus/piano/tac-pham/minuet-sol/) ở chặng 2 là bước đệm.
 :::
 
 ## Bối cảnh
@@ -43,7 +43,7 @@ Bản nhạc dài khoảng hai phút. Nghe ít nhất ba lần, mỗi lần mộ
 3. **Độ vang.** Nghệ sĩ giữ nốt bằng ngón, bằng bàn đạp, hay cả hai? Tiếng đàn khô hay ướt?
 4. **Một giai điệu bên trên.** Năm 1853, Charles Gounod viết thêm một giai điệu lên trên prelude này, về sau thành bài *Ave Maria* nổi tiếng. Nghe bản ấy rồi nghe lại bản gốc: hòa âm của Bach tự nó đã "hát" đến mức nào?
 
-Rồi so sánh vài nghệ sĩ đã thu trọn *Bình quân luật*, chẳng hạn Glenn Gould, Sviatoslav Richter và András Schiff. Schiff viết rằng có thể chơi trọn *Bình quân luật* mà không chạm tới bàn đạp vang. Ghi lại: ai chơi nhanh nhất, ai nghe vang nhất, ai để sắc thái thay đổi nhiều nhất? Nghe thêm một bản trên harpsichord để biết âm thanh mà Bach quen thuộc. Không có cách đúng duy nhất; điều quan trọng là bạn biết mình chọn gì và vì sao.
+Rồi so sánh vài nghệ sĩ đã thu trọn *Bình quân luật*, chẳng hạn Glenn Gould, Sviatoslav Richter và András Schiff. Schiff viết rằng có thể chơi trọn *Bình quân luật* mà không chạm tới bàn đạp vang, trừ đoạn cuối fugue La thứ của quyển 1. Ghi lại: ai chơi nhanh nhất, ai nghe vang nhất, ai để sắc thái thay đổi nhiều nhất? Nghe thêm một bản trên harpsichord để biết âm thanh mà Bach quen thuộc. Không có cách đúng duy nhất; điều quan trọng là bạn biết mình chọn gì và vì sao.
 
 ::khoi-nghe{moc="1 19 48 79 93 102 137 142 152"}
 
@@ -123,7 +123,7 @@ Cách dùng khung:
 |---|---|---|
 | Chuyền từ tay trái sang tay phải | Nốt đầu của tay phải dễ bị nhấn hoặc vào trễ, nghe thành "hai nốt + ba nốt" thay vì một dòng tám nốt | Tập chậm, nhắm mắt, chỉ lắng nghe chỗ nối giữa nốt thứ hai và thứ ba. Thu âm rồi nghe lại. Bài tập 1 |
 | Giữ nốt tay trái | Nốt trầm là nốt trắng, nốt thứ hai ngân đến hết nửa ô; người mới hay nhấc ngón sớm, tiếng đàn mỏng hẳn | Tập riêng tay trái, đếm to "một – và – hai – và". Giữa chừng nhấc tay phải lên: hai nốt tay trái phải vẫn còn kêu |
-| Móc kép đều | Hình ba nốt lặp lại dễ bị "nhóm" theo ba, nốt đầu nhóm to hơn; ngón 4 và 5 yếu hơn | Bài tập 2 (biến thể tiết tấu); tập với [máy đếm nhịp](/opus/luyen-tap/metronome/) đặt theo móc đơn |
+| Móc kép đều | Hình ba nốt lặp lại dễ bị "nhóm" theo ba, nốt đầu nhóm to hơn | Bài tập 2 (biến thể tiết tấu); tập với [máy đếm nhịp](/opus/luyen-tap/metronome/) đặt theo móc đơn |
 | Đổi thế tay mỗi ô | Mỗi ô một hình bàn tay mới, có khi lạ tay (các hợp âm bảy giảm ở ô 12, 14, 22, 23); nghĩ chậm thì chỗ sang ô bị hở hoặc vội | Tập khung hòa âm, viết tên hợp âm lên bản nhạc. Ở phách cuối mỗi ô, mắt và đầu đã ở hợp âm sau. Tập riêng từng cặp ô: 1–2, 2–3, 3–4… |
 | Âm nền át (ô 24–31) | Tám ô trên cùng nốt Sol trầm, dễ thành đứng yên hoặc to dần quá sớm | Đánh dấu ô căng (Sol bảy ở ô 27 và 31, bảy giảm ở ô 28) và ô giãn (Đô trên nền Sol ở ô 25 và 29); để sắc thái đi theo |
 | Ô 33–34 | Hình nốt khác hẳn phần còn lại; tay quen khuôn cũ dễ vấp | Học riêng hai ô này ngay từ tuần đầu; nối với ô 32 và ô 35 |

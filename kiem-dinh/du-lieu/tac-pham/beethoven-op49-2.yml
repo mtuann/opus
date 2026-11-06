@@ -17,8 +17,8 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: "Claude Opus 5.5 (D6-L3 phần A)"
-      luot_2: null
-      review: null
+      luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L3, 05/11/2026, bốn phần; bổ sung sau review)
+      review: "Claude Opus 5.5 (review D6-L3-gom, 05/11/2026)"
       kiem_mau: null
 ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/beethoven-op49-2.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Lần 2 (D6-L3, lượt 1 phần A): nhận định n7–n28 cho các trường chưa khóa (bản ghi không có luyen_nghe); bản nhạc Mutopia LVB_Sonate_49no2_1, lịch sử theo lời nói đầu Henle HN 1327, đề cương RCM 2022. Dữ liệu sai: n17, n22; đề xuất ở plans/lam-lai/bao-cao/d6-l3/sua-A.yml. Còn mở: n20, n25.'
 nguon:
@@ -58,6 +58,22 @@ nguon:
     bac: 2
     ten: Open Music Theory, Simple Meter and Time Signatures (2/2, cut time)
     link: https://viva.pressbooks.pub/openmusictheory/chapter/simple-meter-and-time-signatures/
+  - id: "imslp-wiener-urtext"
+    bac: 2
+    ten: "IMSLP, Wiener Urtext Edition (danh mục ấn bản, lượt 2 mở)"
+    link: "https://cn.imslp.org/wiki/Wiener_Urtext_Edition"
+  - id: "barenreiter-op49"
+    bac: 2
+    ten: "Bärenreiter, Beethoven: Piano Sonatas op. 49 (Urtext, Del Mar; lượt 2 mở)"
+    link: "https://barenreiter.us/products/beethoven-piano-sonatas-op-49-barenreiter"
+  - id: "hebu-abrsm-op49"
+    bac: 2
+    ten: "HeBu, ABRSM: Beethoven Piano Sonata in G op. 49 no. 2 (biên tập Barry Cooper; lượt 2 mở)"
+    link: "https://hebu-music.com/en/article/ludwig-van-beethoven/abrsm-associated-board-of-the-music-schools/piano-sonata-in-g-op49-no2.368148"
+  - id: "dolmetsch-tempo"
+    bac: 2
+    ten: "Dolmetsch Online, Music Theory: tempo (allegro, con moto…); non troppo \"not too much, moderately\" (lượt 2, hồ sơ trang n87)"
+    link: "http://www.dolmetsch.com/musictheory5.htm"
 nhan_dinh:
   - id: n1
     cau: "Tên bài: Sonata Sol trưởng Op. 49 số 2, chương 1 (Allegro, ma non troppo)."
@@ -199,10 +215,11 @@ nhan_dinh:
     truong: [ chip ]
     nguon: [ henle-hn1327, rcm-2022 ]
     ket_qua: dung
-    ghi_chu: Trùng grade đã khóa (lần 1, n4).
+    ghi_chu: "Trùng grade đã khóa (lần 1, n4). Review D6-L3-gom: Chip \"≈ Grade\" phải khớp grade đã khóa (src/du-lieu.mjs), nên không sửa ở lô này; lượt 2 không tìm được đề cương ABRSM nào xác nhận. Ghi ở báo cáo (Chủ repo cần biết)."
     luot_2: khong-chac
     luot_2_nguon: [ "https://www.henle.de/en/Levels-of-Difficulty/", "https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf" ]
     luot_2_ghi_chu: Không tìm được đề cương ABRSM nào xếp bài này; Henle mức 3 (bài làm ví dụ cho mức 3), RCM Level 8 (2022). '≈ Grade 5' là ước lượng của site, không có nguồn ABRSM xác nhận; RCM Level 8 thường được coi là cao hơn Grade 5 nhưng điều này cũng không có nguồn chính thức.
+    review: "dung"
   - id: n14
     cau: 'Chip: "Hình thức sonata, 122 ô nhịp".'
     loai: cau-truc
@@ -239,10 +256,11 @@ nhan_dinh:
     truong: [ thong_tin ]
     nguon: [ henle-1327-vorwort, imslp-op49-2 ]
     ket_qua: da-sua
-    ghi_chu: 'Dữ liệu cũ: "Viết khoảng 1796–1798, cùng thời với ba sonata Op. 10 (theo Henle)". Henle: "the 2nd Sonata was probably written in 1796, and the 1st Sonata in 1797/98 ... in close proximity to the three Sonatas op. 2 (1794/95), the Grande Sonate op. 7 (1796/97) and the three Sonatas op. 10 (1795 – 98)"; IMSLP: 1795–96. "1796–1798" là của cả cặp; bản ghi này là số 2. Đề xuất ở sua-A.yml.'
+    ghi_chu: "Dữ liệu cũ: \"Viết khoảng 1796–1798, cùng thời với ba sonata Op. 10 (theo Henle)\". Henle: \"the 2nd Sonata was probably written in 1796, and the 1st Sonata in 1797/98 ... in close proximity to the three Sonatas op. 2 (1794/95), the Grande Sonate op. 7 (1796/97) and the three Sonatas op. 10 (1795 – 98)\"; IMSLP: 1795–96. \"1796–1798\" là của cả cặp; bản ghi này là số 2. Đề xuất ở sua-A.yml. Review D6-L3-gom: Hai lượt cùng kết luận, nguồn khớp; đồng ý."
     luot_2: dung
     luot_2_nguon: [ "https://www.henle.de/media/df/c7/fd/1697725885/1327-1697725884-sync.pdf", "https://www.henle.de/en/Two-Easy-Piano-Sonatas-no.-19-and-no.-20-g-minor-and-G-major-op.-49-no.-1-and-no.-2/HN-1327" ]
     luot_2_ghi_chu: "Lời tựa Henle: 'the 2nd Sonata was probably written in 1796, and the 1st Sonata in 1797/98', gần với ba sonata op. 10 (1795–98). (IMSLP ghi 1795-96, không mâu thuẫn với 'có lẽ 1796'.)"
+    review: "dung"
   - id: n18
     cau: 'Thông tin: in năm 1805 ở Vienna cùng sonata Op. 49 số 1, với tên Sonates faciles ("những sonata dễ").'
     loai: nam
@@ -266,12 +284,13 @@ nhan_dinh:
     cau: 'Thông tin, tốc độ: Allegro, ma non troppo (nhanh, nhưng không quá).'
     loai: dinh-nghia
     truong: [ thong_tin ]
-    nguon: *id001
-    ket_qua: null
-    ghi_chu: 'chưa chắc: chữ chỉ tốc độ khớp Mutopia; nghĩa "ma non troppo" chưa có nguồn đã mở (như hồ sơ trang piano/tac-pham/beethoven-op49-2). Lượt 2 kiểm.'
+    nguon: [ "mut-op49", "dolmetsch-tempo" ]
+    ket_qua: "dung"
+    ghi_chu: "chưa chắc: chữ chỉ tốc độ khớp Mutopia; nghĩa \"ma non troppo\" chưa có nguồn đã mở (như hồ sơ trang piano/tac-pham/beethoven-op49-2). Lượt 2 kiểm. Review D6-L3-gom: Lượt 2 xác nhận chữ ở Mutopia và nghĩa; nghĩa non troppo theo Dolmetsch (như hồ sơ trang n87). Kết quả dung."
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/O49/LVB_Sonate_49no2_1/LVB_Sonate_49no2_1.ly" ]
     luot_2_ghi_chu: "Mutopia: 'Allegro, ma non troppo'; dịch 'nhanh, nhưng không quá' đúng nghĩa."
+    review: "dung"
   - id: n21
     cau: 'Thông tin, hình thức: hình thức sonata, 122 ô; trình bày ô 1–52 (có nhắc lại), phát triển ô 53–66, tái hiện ô 67–122.'
     loai: cau-truc
@@ -283,15 +302,16 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/O49/LVB_Sonate_49no2_1/LVB_Sonate_49no2_1.ly", "https://imslp.org/wiki/Piano_Sonata_No.20,_Op.49_No.2_(Beethoven,_Ludwig_van)" ]
     luot_2_ghi_chu: "Đếm .ly Mutopia: dấu nhắc lại ':|' sau ô 52; ô 53 mở bằng hợp âm Rê thứ (phát triển) đến ô 66; ô 67 chủ đề 1 trở lại; hết ở ô 122 (IMSLP: 122 bars)."
   - id: n22
-    cau: 'Thông tin, độ khó: khoảng ABRSM Grade 5 (chặng 4 của site); RCM xếp chương 1 và 2 ở Level 8 (đề cương 2022); Henle xếp mức 3 (dễ) trên thang 1–9.'
+    cau: "Thông tin, độ khó: RCM xếp chương 1 và 2 ở Level 8 (đề cương 2022); Henle xếp mức 3 (dễ) trên thang 1–9."
     loai: cap-do
     truong: [ thong_tin ]
     nguon: [ rcm-2022, henle-hn1327, henle-thang ]
     ket_qua: da-sua
-    ghi_chu: 'Dữ liệu cũ: "Khoảng ABRSM Grade 5 (ước lượng; chặng 4 của site); Henle xếp mức 3 (dễ) trên thang 1–9". Bài có trong đề cương RCM 2022 (Level 8, List B, tr. 73: "Sonata in G Major, op. 49, no. 2 · 1st movement · 2nd movement", đã mở PDF), nên ghi kỳ đề cương thay "(ước lượng)". Không có trong ABRSM, Trinity (lần 1 n4). Đề xuất ở sua-A.yml.'
+    ghi_chu: "Dữ liệu cũ: \"Khoảng ABRSM Grade 5 (ước lượng; chặng 4 của site); Henle xếp mức 3 (dễ) trên thang 1–9\". Bài có trong đề cương RCM 2022 (Level 8, List B, tr. 73: \"Sonata in G Major, op. 49, no. 2 · 1st movement · 2nd movement\", đã mở PDF), nên ghi kỳ đề cương thay \"(ước lượng)\". Không có trong ABRSM, Trinity (lần 1 n4). Đề xuất ở sua-A.yml. Review D6-L3-gom: Bỏ \"khoảng ABRSM Grade 5 (chặng 4 của site)\" (ước lượng, lượt 2 không tìm được đề cương ABRSM); giữ RCM Level 8 và Henle mức 3, hai lượt cùng xác nhận (doi_chu ở trang)."
     luot_2: khong-chac
     luot_2_nguon: [ "https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf", "https://www.henle.de/en/Two-Easy-Piano-Sonatas-no.-19-and-no.-20-g-minor-and-G-major-op.-49-no.-1-and-no.-2/HN-1327", "https://www.henle.de/en/Levels-of-Difficulty/" ]
     luot_2_ghi_chu: "RCM Piano Syllabus 2022, Level 8: Sonata op. 49 no. 2, 1st movement và 2nd movement (sách ghi nhầm 'G Minor'): đúng. Henle HN 1327: 'Piano Sonata G major op. 49,2 — 3 easy', thang 1–9: đúng. Vế 'khoảng ABRSM Grade 5' không có đề cương ABRSM nào để xác nhận."
+    review: "dung"
   - id: n23
     cau: 'Thông tin, kỹ năng chính: chùm ba móc đơn đều (hợp âm rải và gam), nhịp chấm dôi không bị "chùm ba hóa", láy rền có nốt kết, láy quanh, hình đệm nốt lặp ở tay trái, gam chùm ba ở cả hai tay, phát âm Cổ điển.'
     loai: cau-truc
@@ -313,15 +333,16 @@ nhan_dinh:
     luot_2_nguon: [ "https://imslp.org/wiki/Piano_Sonata_No.20,_Op.49_No.2_(Beethoven,_Ludwig_van)", "https://www.henle.de/en/Two-Easy-Piano-Sonatas-no.-19-and-no.-20-g-minor-and-G-major-op.-49-no.-1-and-no.-2/HN-1327" ]
     luot_2_ghi_chu: IMSLP có trang 'Piano Sonata No.20, Op.49 No.2'; Henle HN 1327 in chung hai sonata op. 49, 'Murray Perahia (Fingering Piano, Editor)'.
   - id: n25
-    cau: 'Thông tin, bản nhạc: Wiener Urtext, Bärenreiter; ấn bản ABRSM (biên tập Barry Cooper) có chú thích hữu ích.'
+    cau: "Thông tin, bản nhạc: Wiener Urtext, Bärenreiter; ấn bản ABRSM (biên tập Barry Cooper)."
     loai: ten
     truong: [ thong_tin ]
-    nguon: []
-    ket_qua: null
-    ghi_chu: 'chưa chắc: chưa mở được trang ấn bản Op. 49 của Wiener Urtext, Bärenreiter và ABRSM; "có chú thích hữu ích" là đánh giá. Lượt 2 kiểm.'
+    nguon: [ "imslp-wiener-urtext", "barenreiter-op49", "hebu-abrsm-op49" ]
+    ket_qua: "da-sua"
+    ghi_chu: "chưa chắc: chưa mở được trang ấn bản Op. 49 của Wiener Urtext, Bärenreiter và ABRSM; \"có chú thích hữu ích\" là đánh giá. Lượt 2 kiểm. Review D6-L3-gom: Lượt 2 tìm được Wiener Urtext (danh mục IMSLP), Bärenreiter BA 10858, ấn bản ABRSM của Barry Cooper. Bỏ \"có chú thích hữu ích\" (đánh giá) (doi_chu ở trang)."
     luot_2: dung
     luot_2_nguon: [ "https://cn.imslp.org/wiki/Wiener_Urtext_Edition", "https://barenreiter.us/products/beethoven-piano-sonatas-op-49-barenreiter", "https://hebu-music.com/en/article/ludwig-van-beethoven/abrsm-associated-board-of-the-music-schools/piano-sonata-in-g-op49-no2.368148" ]
     luot_2_ghi_chu: Wiener Urtext UT 50085 (Op.49 No.1 và 2, thay bằng UT 50248); Bärenreiter BA 10858 (Urtext, Del Mar); ABRSM Signature Series, Herausgeber Barry Cooper. 'Có chú thích hữu ích' là nhận xét, không kiểm được nhưng không sai.
+    review: "dung"
   - id: n26
     cau: 'Hình cấu trúc: 122 ô, độ dài theo số ô; chủ đề 1 Sol trưởng ô 1–14 (14), đoạn chuyển trên nốt Rê ô 15–20 (6), chủ đề 2 Rê trưởng ô 21–35 (15), nhóm kết gam chùm ba ô 36–52 (17), phát triển Rê thứ, La thứ, Mi thứ ô 53–66 (14), tái hiện chủ đề 1 Sol trưởng rẽ qua Đô trưởng ô 67–81 (15), đoạn chuyển ô 82–87 (6), chủ đề 2 Sol trưởng ô 88–102 (15), nhóm kết ô 103–122 (20); phần trình bày được nhắc lại.'
     loai: cau-truc

@@ -4,15 +4,15 @@ description: "Mười sáu ô nhịp, chưa đến một phút: một trong nh�
 tac_pham: chopin-prelude-la-truong
 ---
 
-Mười sáu ô nhịp, chưa đến một phút: một trong những prélude ngắn nhất của Chopin, nhịp ba với hình chấm dôi gợi điệu mazurka. Bài học ở đây là làm cho **nốt trên của hợp âm** hát, rải một hợp âm thật lớn, dùng bàn đạp đúng như bản nhạc ghi, và co giãn nhịp thật tinh trong một hình thức nhỏ xíu.
+Mười sáu ô nhịp, chưa đến một phút: một trong những prélude ngắn nhất của Chopin, nhịp ba với hình chấm dôi gợi điệu mazurka. Bài học ở đây là làm cho **nốt trên của hợp âm** hát, chơi một hợp âm thật lớn, dùng bàn đạp đúng như bản nhạc ghi, và co giãn nhịp thật tinh trong một hình thức nhỏ xíu.
 
 ::hop-tac-pham
 
 ## Vì sao nên học bài này
 
 - **Nốt trên phải hát.** Gần như mọi nốt giai điệu nằm ở đỉnh một hợp âm hai, ba nốt. Học nổi nốt trên ở đây, bạn sẽ dùng nó cho mọi bài Chopin về sau (xem [Tạo tiếng đàn](/opus/piano/tieng-dan/)).
-- **Một hợp âm rải thật lớn.** Hợp âm ở ô 12 trải từ Fa♯3 lên Đô♯6. Bạn học rải từ dưới lên sao cho nốt cao nhất đến đúng lúc và hát rõ nhất (xem [Nốt hoa mỹ](/opus/piano/not-hoa-my/)).
-- **Bàn đạp theo câu.** Bản nhạc ghi bàn đạp rất cụ thể: một lần đạp cho mỗi câu hai ô, nhả ở chỗ tay trái nghỉ. Làm theo, bạn sẽ thấy bàn đạp tạo hình câu nhạc chứ không chỉ làm tiếng to (xem [Bàn đạp](/opus/piano/ban-dap/)).
+- **Một hợp âm thật lớn.** Hợp âm ở ô 12 trải từ Fa♯3 lên Đô♯6. Bạn học làm cho nốt cao nhất hát rõ nhất; tay không với tới thì rải từ dưới lên (xem [Nốt hoa mỹ](/opus/piano/not-hoa-my/)).
+- **Bàn đạp theo câu.** Bản nhạc ghi bàn đạp rất cụ thể: một lần đạp cho mỗi câu hai ô, nhả ở chỗ tay trái nghỉ; riêng ô 11–14 bàn đạp đổi mỗi ô. Làm theo, bạn sẽ thấy bàn đạp tạo hình câu nhạc chứ không chỉ làm tiếng to (xem [Bàn đạp](/opus/piano/ban-dap/)).
 - **Rubato trong khuôn nhỏ.** Tám câu cùng một nhịp điệu: chơi thẳng thì như máy, co giãn câu nào cũng giống câu nào thì thành khuôn. Đây là chỗ an toàn để tập co giãn có kế hoạch.
 - **Vừa sức sớm.** Có thể học bài này trước [Prélude Mi thứ](/opus/piano/tac-pham/chopin-prelude-mi-thu/): Henle xếp cả hai ở mức 4, mức thấp nhất trong bộ Op. 28, nhưng bài này chỉ có 16 ô nhịp, bài Mi thứ 25 ô.
 
@@ -29,7 +29,7 @@ Nhà soạn nhạc Catalunya Federico Mompou về sau lấy chính prélude này
 Nghe ít nhất ba lần, mỗi lần một câu hỏi:
 
 1. **Nhịp điệu.** Đếm xem nhịp điệu "nhịp lấy đà – chấm dôi – hai hợp âm – nốt dài" lặp lại mấy lần.
-2. **Đỉnh.** Chỗ nào cao nhất và đầy đặn nhất? Bạn có nghe được hợp âm đó được rải từ dưới lên không?
+2. **Đỉnh.** Chỗ nào cao nhất và đầy đặn nhất? Hợp âm đó được đánh cùng lúc hay rải từ dưới lên?
 3. **Bàn đạp.** Nốt trầm có ngân suốt mỗi câu không? Nhịp lấy đà của câu sau có "khô" và sạch hơn không?
 
 Rồi so sánh vài nghệ sĩ đã thu trọn bộ prelude với lối chơi rất khác nhau, chẳng hạn Alfred Cortot, Maurizio Pollini và Martha Argerich. Ghi lại: ai chơi nhanh nhất, ai co giãn nhịp nhiều nhất, ai rải hợp âm ô 12 chậm nhất, ai để câu cuối ngân lâu nhất? Nếu thích bài này, nghe thêm bộ biến tấu của Mompou để thấy cùng một giai điệu có thể đi xa đến đâu.
@@ -47,7 +47,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | … | **Câu 3** (ô 5–6): lại trên hợp âm át; La♯ chạm vào Si như một tiếng thở dài ngắn |
 | … | **Câu 4** (ô 7–8): về La trưởng, bè trầm xuống thấp nhất bài; khép nửa đầu |
 | … | **Câu 5** (ô 9–10): nửa sau bắt đầu lại như câu 1 |
-| … | **Câu 6 và đỉnh** (ô 11–12): giai điệu lên Đô♯6, nốt cao nhất bài; hợp âm rải lớn ở ô 12 |
+| … | **Câu 6 và đỉnh** (ô 11–12): giai điệu lên Đô♯6, nốt cao nhất bài; hợp âm lớn nhất bài ở ô 12 |
 | … | **Câu 7** (ô 13–14): Si thứ, rồi hợp âm át; nhạc dịu xuống |
 | … | **Câu 8** (ô 15–16): về La trưởng; giai điệu nhảy lên một quãng tám, hợp âm cuối ngân |
 
@@ -64,7 +64,7 @@ Mỗi câu hai ô có cùng một nhịp điệu: nhịp lấy đà ở phách 3
 | 3 | 5–6 | Át (bè trầm Mi) | Đô♯5 → La♯4 . Si4 → Rê5 | La♯ chạm vào Si; bè trong giữ Rê |
 | 4 | 7–8 | La trưởng | Sol♯4 → Sol♯4 . La4 → Đô♯5 | Bè trầm xuống La1; khép nửa đầu |
 | 5 | 9–10 | Mi bảy | Như câu 1 | Bắt đầu lại, đừng chơi y hệt lần đầu |
-| 6 | 11–12 | La trưởng → Fa♯ bảy | Fa♯5 → Rê♯5 . Mi5 → Đô♯6 | Đỉnh của bài; hợp âm rải lớn ở ô 12 |
+| 6 | 11–12 | La trưởng → Fa♯ bảy | Fa♯5 → Rê♯5 . Mi5 → Đô♯6 | Đỉnh của bài; hợp âm lớn nhất bài ở ô 12 |
 | 7 | 13–14 | Si thứ → Mi (át) | Đô♯5 → Đô♯5 . Rê5 → Fa♯5 | Hòa âm đổi mỗi ô; dịu xuống |
 | 8 | 15–16 | La trưởng | Sol♯4 → Si4 . La4 → La5 | Nhảy lên một quãng tám; hợp âm cuối ngân |
 
@@ -98,7 +98,7 @@ Nhịp lấy đà Mi4 vang một mình: tay trái nghỉ, bàn đạp chưa xu�
 | Hình chấm dôi ở phách 1 | Dễ thành nhịp hành khúc: nốt chấm dôi bị cắt ngắn, nốt móc kép to và bật | Đếm chia bốn trong phách; nốt móc kép nhẹ, nối thẳng vào hợp âm phách 2, như một hơi thở ngắn chứ không phải một cú bật |
 | Hai tay đan vào nhau (ô 1–2, 7–10) | Nốt cao của tay trái (Mi4) nằm trên nốt thấp của tay phải (Rê4 ở ô 1–2 và 9–10, Đô♯4 ở ô 7–8): hai ngón cái tranh chỗ | Tập hai tay thật chậm; quyết định ngón cái nào đặt sâu vào trong phím, ngón nào ở mép. Ở ô 7, ngón cái tay phải đặt sâu trên phím đen Đô♯4 |
 | Hợp âm lặp ở phách 2–3 | Hai tay cùng lặp hợp âm; dễ nặng và đều đều như máy | Hợp âm thứ hai nhẹ hơn hợp âm thứ nhất, như tiếng vọng; tay sát phím, phím chỉ trồi lên một phần |
-| Hợp âm rải lớn (ô 12) | Tay phải trải một quãng mười (La♯4–Đô♯6), cả hợp âm từ Fa♯3; dễ rải chậm như đàn harp, hoặc nốt trên cùng bị chìm | Bài tập 3. Rải từ dưới lên, bắt đầu đúng phách; nốt Đô♯6 to nhất; bàn đạp xuống từ nốt đầu tiên để giữ các nốt dưới khi tay đi lên |
+| Hợp âm lớn (ô 12) | Tay phải trải một quãng mười (La♯4–Đô♯6), cả hợp âm từ Fa♯3; tay nhỏ phải rải, dễ rải chậm như đàn harp, hoặc nốt trên cùng bị chìm | Bài tập 3. Tay với tới thì đánh cùng lúc, không thì rải nhanh từ dưới lên; nốt Đô♯6 to nhất; bàn đạp xuống từ nốt đầu tiên để giữ các nốt dưới |
 | Bàn đạp | Giữ bàn đạp qua nhịp lấy đà làm các câu dính vào nhau; đổi muộn ở ô 11–14 làm hòa âm nhòe | Theo dấu trong bản nhạc: đạp cùng nốt trầm ở phách 1, nhả ở phách 3 của ô sau; từ ô 11 đến ô 14 đổi mỗi ô. Bài tập 2 |
 | Rubato | Tám câu cùng một nhịp điệu; co giãn ở mọi câu như nhau thì thành khuôn | Vẽ đường cong cho cả bài trước khi chơi (xem phần Diễn tấu); tay trái giữ nhịp, tay phải được thở |
 
@@ -174,13 +174,13 @@ Kế hoạch 4 tuần, mỗi ngày khoảng 20–30 phút. Tốc độ ghi theo 
 |---|---|---|
 | 1 | Nghe 3 bản thu; ghi hòa âm từng câu lên bản nhạc; tay phải: nốt trên một mình, rồi cả hợp âm (bài tập 1); tay trái: nốt trầm và hợp âm | ♩ = 48–54 |
 | 2 | Hai tay ô 1–8 với bàn đạp theo câu (bài tập 2); tập riêng chỗ hai tay đan vào nhau | ♩ = 54–60 |
-| 3 | Ô 9–16; hợp âm rải ô 12 (bài tập 3); ghép cả bài | ♩ = 56–63 |
+| 3 | Ô 9–16; hợp âm lớn ô 12 (bài tập 3); ghép cả bài | ♩ = 56–63 |
 | 4 | Hình dáng và rubato: vẽ đường cong cho tám câu; [thu âm](/opus/luyen-tap/thu-am/) và nghe lại | ♩ ≈ 60–72 |
 
 - [ ] Nốt trên của mọi hợp âm rõ hơn các nốt dưới
 - [ ] Nhịp lấy đà nào cũng vang sạch, không dính bàn đạp
 - [ ] Hợp âm thứ hai trong mỗi cặp nhẹ hơn hợp âm thứ nhất
-- [ ] Hợp âm ô 12 rải gọn, nốt Đô♯6 hát
+- [ ] Hợp âm ô 12 gọn (đánh cùng lúc hay rải nhanh), nốt Đô♯6 hát
 - [ ] Không có hai câu nào chơi giống hệt nhau
 
 ## Diễn tấu
@@ -191,7 +191,7 @@ Kế hoạch 4 tuần, mỗi ngày khoảng 20–30 phút. Tốc độ ghi theo 
 
 ### Nốt trên và hợp âm lặp
 
-- Nốt trên luôn là giai điệu, kể cả trong hợp âm rải ở ô 12.
+- Nốt trên luôn là giai điệu, kể cả trong hợp âm lớn ở ô 12.
 - Nốt dài ở ô chẵn vẫn phải "sống": nghe nó tắt dần trước khi nhịp lấy đà tiếp theo vào.
 - Trong cặp hợp âm lặp ở phách 2–3, hợp âm sau nhẹ hơn.
 - Tay trái: nốt trầm ở phách 1 ấm và tròn, vì bàn đạp sẽ giữ nó suốt câu; hai hợp âm sau rất nhẹ.
@@ -200,21 +200,21 @@ Kế hoạch 4 tuần, mỗi ngày khoảng 20–30 phút. Tốc độ ghi theo 
 
 Trong bản Peters mà trang này đối chiếu, mỗi câu có một lần đạp: xuống ở phách 1 cùng nốt trầm của ô lẻ, nhả ở phách 3 của ô chẵn, đúng chỗ tay trái có dấu lặng. Nhờ vậy nốt trầm ngân suốt câu, còn nhịp lấy đà của câu sau vang khô và rõ, như người hát lấy hơi trước câu mới. Từ ô 11 đến ô 14, hòa âm đổi mỗi ô và bàn đạp cũng đổi mỗi ô; ở ô 11 và 13, bản Peters ghi nhả ngay ở hợp âm phách 3. Chopin thường tự ghi bàn đạp trong bản viết tay; các bản Urtext như Ấn bản Quốc gia Ba Lan cho biết dấu nào là của ông, dấu nào của người biên tập, nên hãy đối chiếu bản bạn dùng.
 
-### Hợp âm rải ở ô 12
+### Hợp âm ở ô 12 { #hop-am-rai-o-o-12 }
 
-Đây là đỉnh của bài và là hợp âm lớn nhất: Fa♯ bảy, át của Si thứ, trải từ Fa♯3 lên Đô♯6. Theo lệ chung khi chơi Chopin (xem [Nốt hoa mỹ](/opus/piano/not-hoa-my/)), hợp âm rải bắt đầu đúng phách, từ nốt thấp nhất. Rải nhanh vừa phải, như một hơi thở sâu chứ không phải tiếng đàn harp; nốt trên cùng, Đô♯6, là nốt giai điệu và phải hát rõ nhất. Hãy xem bản Urtext của bạn ghi dấu rải thế nào: một đường liền qua hai khuông (rải liền một hơi từ tay trái lên tay phải) hay hai đường riêng cho hai tay (không nhất thiết là hai tay rải cùng lúc).
+Đây là đỉnh của bài và là hợp âm lớn nhất: Fa♯ bảy, át của Si thứ, trải từ Fa♯3 lên Đô♯6. Bản Peters không ghi dấu rải ở ô này: dấu ngoặc bên trái hợp âm tay phải là ngoặc số ngón, ngón cái giữ cả quãng ba La♯4–Đô♯5. Tay với tới quãng mười thì đánh cả hợp âm cùng lúc; tay nhỏ hơn thì rải nhanh từ dưới lên, như một hơi thở sâu chứ không phải tiếng đàn harp. Dù chơi cách nào, nốt trên cùng, Đô♯6, là nốt giai điệu và phải hát rõ nhất.
 
-Chín nốt của hợp âm ô 12 theo bản Peters, từ dưới lên; bấm để nghe chúng vang lần lượt như khi rải:
+Chín nốt của hợp âm ô 12 theo bản Peters, từ dưới lên; bấm để nghe chúng vang lần lượt:
 
 ::cong-cu{ten="piano" range="F3-D6" notes="F#3 C#4 E4 F#4 A#4 C#5 E5 A#5 C#6"}
 
 ### Rubato
 
-Học trò của Chopin kể rằng ông muốn phần đệm giữ nhịp vững trong khi giai điệu được tự do co giãn (xem sách của Eigeldinger trong phần Nguồn). Ở bài này, chỗ dựa là nốt trầm phách 1 của tay trái. Một đường cong gợi ý: câu 1–4 giản dị, gần như đúng nhịp; câu 5 bắt đầu lại nhẹ hơn; câu 6 tiến lên, cho thêm một chút thời gian ngay trước hợp âm rải; câu 7–8 thả lỏng, câu cuối chậm hơn một chút. Co giãn ở chỗ nốt dài và nhịp lấy đà, không co giãn giữa hình chấm dôi.
+Carl Mikuli, một học trò của Chopin, kể rằng khi tay hát co giãn tự do, tay đệm vẫn giữ đúng nhịp (Niecks dẫn lại, xem phần Nguồn). Ở bài này, chỗ dựa là nốt trầm phách 1 của tay trái. Một đường cong gợi ý: câu 1–4 giản dị, gần như đúng nhịp; câu 5 bắt đầu lại nhẹ hơn; câu 6 tiến lên, cho thêm một chút thời gian ngay trước hợp âm ô 12; câu 7–8 thả lỏng, câu cuối chậm hơn một chút. Co giãn ở chỗ nốt dài và nhịp lấy đà, không co giãn giữa hình chấm dôi.
 
 ### Ấn bản
 
-Bản Peters là một ấn bản thế kỷ 19 với một số chỉ dẫn của người biên tập. Các ấn bản khác nhau ở những chi tiết như dấu luyến, chỉ dẫn sắc thái và cách ghi dấu rải ở ô 12. Hãy dùng một bản Urtext, lý tưởng nhất là Ấn bản Quốc gia Ba Lan của Jan Ekier, có kèm chú giải biểu diễn.
+Bản Peters là một ấn bản thế kỷ 19 với một số chỉ dẫn của người biên tập. Các ấn bản khác nhau ở những chi tiết như dấu luyến và chỉ dẫn sắc thái. Hãy dùng một bản Urtext, lý tưởng nhất là Ấn bản Quốc gia Ba Lan của Jan Ekier, có kèm chú giải biểu diễn.
 
 ## Lỗi thường gặp
 
@@ -249,11 +249,11 @@ Bản Peters là một ấn bản thế kỷ 19 với một số chỉ dẫn c�
 - Không nhả cho đến hết bài
 - Ở mỗi phách
 > Bàn đạp xuống cùng nốt trầm ở phách 1 và giữ suốt câu. Từ ô 11 đến ô 14, hòa âm và bàn đạp đổi mỗi ô.
-? Nên rải hợp âm lớn ở ô 12 thế nào?
-+ Từ nốt thấp nhất lên, bắt đầu đúng phách, nốt cao nhất Đô♯6 hát rõ nhất
-- Từ trên xuống, nốt thấp nhất to nhất
-- Thật chậm như đàn harp, mọi nốt to như nhau
-> Nốt trên cùng là giai điệu. Bàn đạp xuống từ nốt đầu tiên để giữ các nốt dưới khi tay đi lên.
+? Nên chơi hợp âm lớn ở ô 12 thế nào?
++ Cùng lúc nếu tay với tới quãng mười, không thì rải nhanh từ dưới lên; nốt cao nhất Đô♯6 hát rõ nhất
+- Rải từ trên xuống, nốt thấp nhất to nhất
+- Rải thật chậm như đàn harp, mọi nốt to như nhau
+> Bản Peters không ghi dấu rải ở ô này. Nốt trên cùng là giai điệu; bàn đạp xuống cùng hợp âm để giữ các nốt dưới.
 ? Hợp âm Fa♯ bảy ở ô 12 có vai trò gì?
 + Át của Si thứ (một át phụ), dẫn sang hợp âm Si thứ ở ô 13
 - Hợp âm chủ của bài
@@ -263,7 +263,7 @@ Bản Peters là một ấn bản thế kỷ 19 với một số chỉ dẫn c�
 
 ## Nguồn
 
-- Jean-Jacques Eigeldinger, *Chopin: Pianist and Teacher as Seen by His Pupils*, Cambridge University Press, 1986: cách Chopin dạy và lời kể của học trò về rubato.
+- Frederick Niecks, *Frederick Chopin as a Man and Musician*, tập 2, 1888 (bản Project Gutenberg): lời kể của các học trò về rubato.
 - Ấn bản Quốc gia Ba Lan (Wydanie Narodowe Dzieł Fryderyka Chopina), tập *Preludia* op. 28, biên tập Jan Ekier: văn bản Urtext và chú giải biểu diễn.
 - Ấn bản Peters, bản dàn trang LilyPond công cộng của [Mutopia Project](https://www.mutopiaproject.org/) (người nhập: Magnus Lewis-Smith): nguồn của đoạn nhạc, các hợp âm, giai điệu và dấu bàn đạp dẫn trên trang này.
 - Bản nhạc: [IMSLP](https://imslp.org/). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

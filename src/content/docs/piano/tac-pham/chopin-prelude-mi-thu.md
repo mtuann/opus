@@ -166,7 +166,7 @@ Gần như cả bài ở *p* và *pp*. Chỉ có một chữ *f*, ở ô 17; hã
 
 ### Bàn đạp
 
-Đổi theo hòa âm, nghĩa là đúng lúc một bè di chuyển; đạp nông. Các ấn bản ghi bàn đạp không giống nhau ở mọi ô; hãy đọc kỹ bản bạn dùng, rồi kiểm tra bằng tai: nếu nghe hai hợp âm chồng lên nhau, bạn đã đổi muộn.
+Đổi theo hòa âm, nghĩa là đúng lúc một bè di chuyển; đạp nông. Các ấn bản của bộ Prélude không phải lúc nào cũng ghi bàn đạp giống nhau; hãy đọc kỹ bản bạn dùng, rồi kiểm tra bằng tai: nếu nghe hai hợp âm chồng lên nhau, bạn đã đổi muộn.
 
 ### Im lặng
 

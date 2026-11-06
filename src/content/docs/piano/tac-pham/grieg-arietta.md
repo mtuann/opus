@@ -10,7 +10,7 @@ tac_pham: grieg-arietta
 
 ## Vì sao nên học bài này
 
-- **Hai lớp trong một bàn tay.** Giai điệu nằm ở bè trên; ngay bên dưới, cũng trong tay phải, là dòng móc kép của **bè trong**. Các ngón phía ngoài (4–5) phải hát, các ngón phía trong (1–2) phải thì thầm. Đây là kỹ năng nền của hầu hết nhạc Lãng mạn về sau (xem mục cân bằng trong [Tạo tiếng đàn](/opus/piano/tieng-dan/)).
+- **Hai lớp trong một bàn tay.** Giai điệu nằm ở bè trên, tay phải; ngay bên dưới là dòng móc kép của **bè trong**, chia cho hai tay: hai nốt đầu mỗi nhóm do tay trái đánh, hai nốt sau do tay phải, dưới giai điệu. Các ngón phía ngoài (4–5) phải hát, các ngón phía trong (1–2) phải thì thầm. Đây là kỹ năng nền của hầu hết nhạc Lãng mạn về sau (xem mục cân bằng trong [Tạo tiếng đàn](/opus/piano/tieng-dan/)).
 - **Bàn đạp kiểu Lãng mạn.** Hòa âm đổi trên những nốt trầm ngân dài. Bạn học đổi bàn đạp theo hòa âm mà không đánh mất nốt trầm và không làm đứt giai điệu (xem [Bàn đạp](/opus/piano/ban-dap/)).
 - **Một bài hát trọn vẹn trong một trang.** Chỉ một chủ đề, nói hai lần, khép lại bằng một ô. Bạn tập cách làm cho lần thứ hai khác lần đầu, và cho cùng một hình kết mang một màu mới mỗi lần nó trở lại.
 - **Cửa vào *Lyric Pieces*.** Đây là bài đầu tiên trong 66 bài, và giai điệu của nó còn trở lại ở bài cuối cùng, 34 năm sau. Học xong, bạn có cả một kho tiểu phẩm vừa sức để đi tiếp.
@@ -225,7 +225,7 @@ Dùng một bản in đáng tin, ví dụ bản Urtext của Henle; các bản i
 - **Cùng tập Op. 12:** *Vals* (số 2) và *Alfedans* (Điệu múa yêu tinh, số 4); về sau, *Efterklang* Op. 71 số 7, để tự tay khép vòng tròn của *Arietta*.
 - **Cùng cấp, cùng kỹ năng nổi nốt trên:** [Chopin: Prélude La trưởng](/opus/piano/tac-pham/chopin-prelude-la-truong/): hợp âm có nốt trên hát, bàn đạp theo câu.
 - **Giai điệu Lãng mạn và rubato:** [Chopin: Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/).
-- **Bước tiếp theo về nhiều lớp:** [Schumann: Träumerei](/opus/piano/tac-pham/schumann-traumerei/) (khoảng Grade 6): giai điệu, bè trong và bè trầm đan vào nhau trong cả hai tay.
+- **Bước tiếp theo về nhiều lớp:** [Schumann: Träumerei](/opus/piano/tac-pham/schumann-traumerei/) (chặng 5): giai điệu, bè trong và bè trầm đan vào nhau trong cả hai tay.
 - **Nghe thêm Grieg:** [Concerto cho piano La thứ](/opus/nghe-nhac/grieg-concerto/), viết chỉ một năm sau Op. 12. Thứ tự gợi ý: [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
 
 ::hoc-tiep

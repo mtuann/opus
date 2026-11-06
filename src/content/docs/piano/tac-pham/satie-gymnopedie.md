@@ -46,7 +46,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | … | **Dạo đầu** (4 ô): chỉ tay trái, nốt trầm rồi hợp âm; Sol bảy trưởng và Rê bảy trưởng đung đưa như con lắc |
 | … | **Câu 1**: giai điệu vào ở phách 2 của ô 5; nốt Fa♯ ngân suốt bốn ô cuối câu |
 | … | **Câu 2**: mở đầu như câu 1 rồi rẽ hướng; lần đầu tiên hòa âm rời khỏi cặp Sol – Rê |
-| … | **Đoạn giữa**: giai điệu lên cao hơn, Đô♮ và Fa♮ đổi màu; bè trầm chủ yếu giữ nốt Rê |
+| … | **Đoạn giữa**: giai điệu đi lên từng bậc (từ La4 tới La5), Đô♮ và Fa♮ đổi màu; bè trầm chủ yếu giữ nốt Rê |
 | … | **Kết lượt 1**: dừng ở hợp âm Rê trưởng, nhưng bài còn tiếp |
 | … | **Lượt 2**: dạo đầu trở lại, mọi thứ nhắc lại gần như nguyên văn; nghệ sĩ có chơi nhỏ hơn, gần hơn không? |
 | … | **Đoạn giữa, lượt 2**: Đô♮ và Fa♮ trở lại |
@@ -61,7 +61,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | Dạo đầu | 4 ô | Chỉ tay trái: nốt trầm Sol rồi hợp âm Si – Rê – Fa♯ (cả ô là Sol bảy trưởng); nốt trầm Rê rồi hợp âm La – Đô♯ – Fa♯ (Rê bảy trưởng); lặp lại | Đặt nhịp và không khí; đều như con lắc |
 | Câu 1 | 8 ô | Giai điệu vào ở phách 2: Fa♯ – La, Sol – Fa♯ – Đô♯, Si – Đô♯ – Rê, La, rồi Fa♯ ngân suốt bốn ô | Một hơi dài; nốt ngân phải sống qua bốn ô |
 | Câu 2 | 9 ô | Mở đầu như câu 1 rồi rẽ hướng; hòa âm lần đầu rời khỏi cặp Sol – Rê | Đánh dấu chỗ rẽ để khỏi nhầm khi học thuộc |
-| Đoạn giữa | 10 ô | Giai điệu lên cao hơn, có Đô♮ và Fa♮; bè trầm chủ yếu giữ nốt Rê | Màu sắc mới, sắc thái vẫn hẹp |
+| Đoạn giữa | 10 ô | Giai điệu đi lên từng bậc tới La5, có Đô♮ và Fa♮; bè trầm chủ yếu giữ nốt Rê | Màu sắc mới, sắc thái vẫn hẹp |
 | Kết lượt 1 | 8 ô | Câu kết, dừng ở hợp âm Rê trưởng | Không chậm lại nhiều: bài còn tiếp |
 | Lượt 2 | 31 ô | Nhắc lại từ đầu gần như nguyên văn (bản in gốc viết ra đầy đủ, không dùng dấu nhắc lại) | Cùng nốt, khác không khí: nhỏ hơn, gần hơn |
 | Kết lượt 2 | 8 ô | Fa♮ thay cho Fa♯; kết ở hợp âm Rê thứ | Tối lại; để hợp âm cuối tự tắt |
@@ -148,7 +148,7 @@ Kế hoạch 4 tuần, mỗi ngày khoảng 30 phút.
 
 ### Bàn đạp và una corda
 
-- Bàn đạp vang đổi mỗi ô, ở nốt trầm. Nốt trầm được ghi là nốt trắng chấm dôi ngân cả ô; vì tay trái phải rời nó để đánh hợp âm, chỉ bàn đạp mới giữ được nó.
+- Bàn đạp vang đổi mỗi ô, ở nốt trầm. Bản in không ghi dấu bàn đạp; cách đổi này suy từ cách ghi nốt trầm: nốt trầm được ghi là nốt trắng chấm dôi ngân cả ô; vì tay trái phải rời nó để đánh hợp âm, chỉ bàn đạp mới giữ được nó.
 - **Una corda** (bàn đạp trái) làm tiếng đàn mềm và mờ đi. Bạn có thể dùng cho cả bài, hoặc chỉ cho lượt hai để tạo khác biệt. Đừng dùng nó thay cho việc tự chơi nhỏ.
 
 ### Tay trái

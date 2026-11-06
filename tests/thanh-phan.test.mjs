@@ -81,7 +81,7 @@ test('::hop-tac-pham: chip và bảng thông tin đúng như bản ghi', () => {
 	const html = dung(trangTacPham('fur-elise', '::hop-tac-pham'));
 	assert.match(html, /<div class="oz-piece">/);
 	assert.equal((html.match(/class="oz-chip[ "]/g) ?? []).length, rec.chip.length, 'mỗi chip của bản ghi một <span class="oz-chip">');
-	assert.match(html, /<span class="oz-chip oz-chip--level" title="Chặng 4 của lộ trình">≈ Grade 5 \(đoạn A ≈ Grade 3\)<\/span>/);
+	assert.match(html, /<span class="oz-chip oz-chip--level" title="Chặng 4 của lộ trình">≈ Grade 5<\/span>/);
 	assert.match(html, /<summary>Thông tin tác phẩm và bản nhạc nên dùng<\/summary>/);
 	assert.equal((html.match(/<th scope="row">/g) ?? []).length, rec.thong_tin.length);
 	assert.match(html, /<td>Ludwig van Beethoven \(1770–1827\)<\/td>/);
