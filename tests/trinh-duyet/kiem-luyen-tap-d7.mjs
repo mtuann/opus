@@ -187,6 +187,8 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 			assert.match(await el.locator('.oz-thu-am-ban a[download]').getAttribute('download'), /^Minuet_ ô 1_8\.(webm|m4a)$/);
 			assert.ok((await p.evaluate(() => window.__ozMicTat)) >= 1, 'dừng thu thì đóng micro');
 			await thu('Bản hai');
+			// danh sách vẽ lại sau khi lưu xong (IndexedDB): chờ đủ hai bản rồi mới xem thứ tự
+			await p.waitForFunction(() => document.querySelectorAll('.oz-thu-am .oz-thu-am-ban').length === 2, null, { timeout: 8000 });
 			assert.equal(await el.locator('.oz-thu-am-ban strong').first().textContent(), 'Bản hai', 'bản mới ở trên');
 			for (const c of await el.locator('.oz-thu-am-ban input[type=checkbox]').all()) await c.check();
 			assert.ok(await el.locator('.oz-thu-am-so').isVisible());

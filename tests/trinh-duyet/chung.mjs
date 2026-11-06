@@ -142,19 +142,26 @@ export async function dongHoAmChay(trinhDuyet) {
 	const p = await trinhDuyet.newPage();
 	try {
 		await p.goto('about:blank');
-		return await p.evaluate(async () => {
-			const AC = window.AudioContext || window.webkitAudioContext;
-			if (!AC) return false;
-			const c = new AC();
-			const o = c.createOscillator();
-			o.connect(c.createMediaStreamDestination());
-			o.start();
-			await c.resume?.().catch(() => {});
-			await new Promise((ok) => setTimeout(ok, 600));
-			const chay = c.currentTime > 0.1;
-			await c.close();
-			return chay;
-		});
+		// mọi bước có hạn: trên máy CI, resume() hay close() của AudioContext có thể không bao giờ xong (đã treo cả job)
+		return await p.evaluate(
+			() =>
+				Promise.race([
+					new Promise((ok) => setTimeout(() => ok(false), 3000)),
+					(async () => {
+						const AC = window.AudioContext || window.webkitAudioContext;
+						if (!AC) return false;
+						const c = new AC();
+						const o = c.createOscillator();
+						o.connect(c.createMediaStreamDestination());
+						o.start();
+						c.resume?.().catch(() => {});
+						await new Promise((ok) => setTimeout(ok, 600));
+						const chay = c.currentTime > 0.1;
+						c.close().catch(() => {});
+						return chay;
+					})(),
+				]),
+		);
 	} catch {
 		return false;
 	} finally {
