@@ -11,7 +11,7 @@ tac_pham: mozart-concerto-21
 | Sáng tác | Vienna, đầu năm 1785; Mozart ghi vào danh mục tác phẩm của mình ngày 9/3/1785 và tự chơi phần độc tấu buổi ra mắt ở nhà hát Burgtheater hôm sau |
 | Thời kỳ | Cổ điển |
 | Thể loại | Concerto piano, 3 chương |
-| Độ dài | Khoảng 28–30 phút; riêng chương 2 (*Andante*) khoảng 6–7 phút |
+| Độ dài | Khoảng 26–30 phút; riêng chương 2 (*Andante*) khoảng 6–7 phút |
 
 ## Điều cần biết trước khi nghe
 
@@ -21,15 +21,15 @@ Mozart viết concerto trước hết để **tự mình biểu diễn** trong c
 
 Ba chương theo khuôn mẫu **nhanh – chậm – nhanh** của [concerto Cổ điển](/opus/hinh-thuc/concerto/):
 
-- **Chương 1, *Allegro maestoso*** (chữ *maestoso* không có trong bản thảo; Mozart chỉ ghi khi chép tác phẩm vào danh mục). Dàn nhạc trình bày trước; sau đó piano mới vào, với phần trình bày của riêng mình, kể cả một chủ đề mới ở **Sol thứ** khiến nhiều người nghĩ tới [Giao hưởng số 40](/opus/nghe-nhac/mozart-40/).
+- **Chương 1, *Allegro maestoso*** (bản thảo không ghi chỉ dẫn tốc độ; chữ *Allegro maestoso* lấy từ danh mục tác phẩm do Mozart tự ghi). Dàn nhạc trình bày trước; sau đó piano mới vào, với phần trình bày của riêng mình, kể cả một chủ đề mới ở **Sol thứ** khiến nhiều người nghĩ tới [Giao hưởng số 40](/opus/nghe-nhac/mozart-40/).
 - **Chương 2, *Andante*** (Fa trưởng): trọng tâm của trang này.
-- **Chương 3, *Allegro vivace assai***: một rondo tinh nghịch như cảnh hài trong opera.
+- **Chương 3, *Allegro vivace assai***: một rondo nhanh, tinh nghịch.
 
-**Andante: một aria không lời.** Mở đầu chỉ có dàn nhạc. Đàn dây gắn **sordino** (miếng chặn kẹp trên ngựa đàn) nên tiếng mờ và mềm như qua một lớp sương. Violin 1 hát một giai điệu dài; violin 2 và viola lặp lại các nốt theo **chùm ba** đều đặn, gần như không dứt; cello và contrabass **gảy dây** (*pizzicato*). Rồi piano bước vào, hát lại giai điệu ấy như một giọng soprano đứng trước dàn nhạc. Giai điệu có những bước nhảy quãng rộng và những chỗ **nghịch tai** thoáng qua; giữa chương, nhạc nhiều lần tối lại ở các giọng thứ, trước khi trở về Fa trưởng và tắt dần trong một coda ngắn.
+**Andante: một aria không lời.** Mở đầu chỉ có dàn nhạc. Violin và viola gắn **sordino** (miếng chặn kẹp trên ngựa đàn) nên tiếng mờ và mềm như qua một lớp sương. Violin 1 hát một giai điệu dài; violin 2 và viola lặp lại các nốt theo **chùm ba** đều đặn, gần như không dứt; cello và contrabass **gảy dây** (*pizzicato*). Rồi piano bước vào, hát lại giai điệu ấy như một giọng soprano đứng trước dàn nhạc. Giai điệu có những bước nhảy quãng rộng và những chỗ **nghịch tai** thoáng qua; giữa chương, nhạc nhiều lần tối lại ở các giọng thứ, trước khi trở về Fa trưởng và tắt dần trong một coda ngắn.
 
-**Cadenza và những chỗ "để trống".** Thời Mozart, gần cuối một chương nhanh, dàn nhạc dừng trên một hợp âm có dấu ngân (*fermata*); nghệ sĩ độc tấu chơi một mình rồi kết bằng một **láy rền** dài, làm hiệu cho dàn nhạc vào lại. Ở vài dấu ngân khác, người chơi còn ứng tác một đoạn nối ngắn gọi là ***Eingang*** ("lối vào"). Mozart từng viết ra giấy nhiều cadenza cho chị gái và học trò, nhưng cadenza của ông cho K. 467 **đã thất lạc**. Mỗi nghệ sĩ vì thế phải tự chọn: chơi cadenza của người đời sau, tự viết, hoặc ứng tác ngay trên sân khấu như nghệ sĩ kiêm học giả Robert Levin.
+**Cadenza và những chỗ "để trống".** Thời Mozart, gần cuối một chương nhanh, dàn nhạc dừng trên một hợp âm có dấu ngân (*fermata*); nghệ sĩ độc tấu chơi một mình rồi kết bằng một **láy rền** dài, làm hiệu cho dàn nhạc vào lại. Ở vài dấu ngân khác, người chơi còn ứng tác một đoạn nối ngắn gọi là ***Eingang*** ("lối vào"). Mozart thường tự ứng tác cadenza khi chơi; ông viết ra giấy nhiều cadenza cho chị gái và học trò, nhưng **không có cadenza nào của ông cho K. 467 còn lại**. Mỗi nghệ sĩ vì thế phải tự chọn: chơi cadenza của người đời sau, tự viết, hoặc ứng tác ngay trên sân khấu như nghệ sĩ kiêm học giả Robert Levin.
 
-**Nghe bằng tai người chơi piano.** Trong *Andante*, piano không có gì để khoe: chỉ một giai điệu dài trên nền chùm ba. Cái khó là giữ cho từng nốt dài vẫn **hát** khi tiếng đàn tắt dần, và trang trí mà không làm lệch nhịp đi đều đặn bên dưới. Cây đàn thời Mozart (âm vực FF–f''', khoảng năm quãng tám) nhẹ tiếng và tắt nhanh (xem [lịch sử cây đàn piano](/opus/piano/lich-su-dan/)); trên đàn hiện đại, người chơi phải tiết chế [bàn đạp](/opus/piano/ban-dap/) và [cách nhấn phím](/opus/piano/tieng-dan/) để hòa vào tiếng dây gắn sordino.
+**Nghe bằng tai người chơi piano.** Trong *Andante*, piano không có gì để khoe: chỉ một giai điệu dài trên nền chùm ba. Cái khó là giữ cho từng nốt dài vẫn **hát** khi tiếng đàn tắt dần, và trang trí mà không làm lệch nhịp đi đều đặn bên dưới. Ở Vienna, Mozart chơi fortepiano kiểu của Anton Walter, âm vực hơn năm quãng tám một chút, từ FF đến g''' (xem [lịch sử cây đàn piano](/opus/piano/lich-su-dan/)); trên đàn hiện đại, người chơi phải tiết chế [bàn đạp](/opus/piano/ban-dap/) và [cách nhấn phím](/opus/piano/tieng-dan/) để hòa vào tiếng dây gắn sordino.
 
 ## Sơ đồ cấu trúc
 
@@ -67,15 +67,15 @@ Ghi lại thời điểm (phút:giây) bạn nghe thấy từng sự kiện tron
 
 ## So sánh bản thu
 
-- **Géza Anda**, vừa độc tấu vừa chỉ huy dàn nhạc Camerata Academica Salzburg: bản thu đã đi vào phim *Elvira Madigan*; tiếng đàn tròn, hát.
-- **Murray Perahia**, cũng vừa chơi vừa chỉ huy (English Chamber Orchestra): piano và dàn nhạc trò chuyện thân mật như nhạc thính phòng.
-- **Malcolm Bilson** (fortepiano) với John Eliot Gardiner và dàn nhạc nhạc cụ thời kỳ: tiếng đàn nhẹ, trong, tắt nhanh, gần với âm thanh Mozart từng nghe.
+- **Géza Anda**, vừa độc tấu vừa chỉ huy dàn nhạc Camerata Academica Salzburg (Deutsche Grammophon, thu năm 1961): chương *Andante* của bản thu này là nhạc nền phim *Elvira Madigan*.
+- **Murray Perahia**, cũng vừa chơi vừa chỉ huy, với English Chamber Orchestra (CBS, 1978): nghe xem piano và dàn nhạc trao lời cho nhau thế nào khi không có nhạc trưởng riêng.
+- **Malcolm Bilson** (fortepiano) với John Eliot Gardiner và English Baroque Soloists, dàn nhạc chơi nhạc cụ thời kỳ (Archiv Produktion, 1987): so tiếng fortepiano với tiếng đàn hiện đại.
 
 Xem thêm [Nghệ sĩ piano và bản thu](/opus/piano/nghe-si/).
 
 ## Nếu bạn muốn chơi
 
-Concerto Mozart là mục tiêu của trình độ **nâng cao**. Chương 2 không dày nốt, nhưng hát một giai điệu dài với tiếng đều và trang trí tự nhiên đòi hỏi khoảng **Grade 8** trở lên; chương 1 và 3 còn khó hơn. Lộ trình hợp lý: [Sonata K. 545](/opus/piano/tac-pham/mozart-k545/), [Sonata K. 331](/opus/nghe-nhac/mozart-k331/), một sonata Mozart lớn hơn, rồi mới đến concerto. Khi tập, dùng **bản rút gọn cho hai piano** (piano thứ hai chơi phần dàn nhạc) và tìm một người cùng chơi: concerto là âm nhạc của đối thoại. Đọc thêm [nốt hoa mỹ](/opus/piano/not-hoa-my/) và [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
+Henle xếp phần piano của concerto này ở mức **6** (trung bình) trên thang 1–9. Chương 2 không dày nốt, nhưng hát một giai điệu dài với tiếng đều và trang trí tự nhiên là điều khó; chương 1 và 3 nhiều nốt hơn hẳn. Lộ trình hợp lý: [Sonata K. 545](/opus/piano/tac-pham/mozart-k545/), [Sonata K. 331](/opus/nghe-nhac/mozart-k331/), một sonata Mozart lớn hơn, rồi mới đến concerto. Khi tập, dùng **bản rút gọn cho hai piano** (piano thứ hai chơi phần dàn nhạc) và tìm một người cùng chơi: concerto là âm nhạc của đối thoại. Đọc thêm [nốt hoa mỹ](/opus/piano/not-hoa-my/) và [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
 
 ## Ghi chép của bạn
 
@@ -84,8 +84,8 @@ Concerto Mozart là mục tiêu của trình độ **nâng cao**. Chương 2 kh�
 ## Nguồn
 
 - Bản nhạc: [IMSLP](https://imslp.org/) (tìm "Piano Concerto No.21, K.467").
-- Danh mục Köchel trực tuyến của Mozarteum Salzburg ([kv.mozarteum.at](https://kv.mozarteum.at/)): ngày hoàn thành, các cadenza thất lạc.
-- Norbert Gertsch, lời tựa tổng phổ K. 467 (Breitkopf & Härtel, 2007): ngày 9 và 10/3/1785; bản thảo lưu ở Thư viện Morgan, New York.
-- Arthur Hutchings, *A Companion to Mozart's Piano Concertos* (Oxford University Press, 1948); Charles Rosen, *The Classical Style* (1971).
+- Danh mục Köchel trực tuyến của Mozarteum Salzburg ([kv.mozarteum.at](https://kv.mozarteum.at/en/work/concerto-in-c-5544)): ngày hoàn thành, buổi ra mắt, biên chế; Mozart thường ứng tác cadenza.
+- *Neue Mozart-Ausgabe* V/15/6 (1961), [bản trực tuyến của Mozarteum](https://dme.mozarteum.at/DME/nma/nma_cont.php?vsep=155&p1=93): tổng phổ, chú thích về chỉ dẫn tốc độ chương 1.
+- Norbert Gertsch, [lời tựa ấn bản Henle HN 766](https://www.henle.de/en/Piano-Concerto-no.-21-C-major-K.-467/HN-766) (2006): ngày 9 và 10/3/1785; bản thảo lưu ở Thư viện Morgan, New York.
 - Bản thu chương 3 của Giorgi Latsabidze: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Mozart_Piano_Concerto_N_21_in_C_major,_K._467_(3rd_movement).oga).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

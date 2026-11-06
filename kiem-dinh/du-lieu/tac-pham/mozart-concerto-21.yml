@@ -1,6 +1,6 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/mozart-concerto-21
 ban_ghi: tac-pham/mozart-concerto-21
-ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/mozart-concerto-21.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh."
+ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/mozart-concerto-21.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh. Lần 2 (D6-L7, lượt 1 phần B): nhận định n4–n13 cho các trường chưa khóa (thoi_ky, luyen_nghe, hinh, ban_thu); trọng số độ dài của từng ô trong hinh là cách vẽ của site. Đề xuất sửa hinh (n9, n12) ở plans/lam-lai/bao-cao/d6-l7/sua-B.yml."
 lan:
   - so: 1
     ngay: 2026-10-24
@@ -13,11 +13,11 @@ lan:
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
   - so: 2
-    ngay: null
+    ngay: 2026-11-06
     nhanh: moi/d6-l7
     ma_bam: null
     nguoi:
-      luot_1: null
+      luot_1: Claude Opus 5.5 (D6-L7 phần B)
       luot_2: null
       review: null
       kiem_mau: null
@@ -30,6 +30,30 @@ nguon:
     bac: 2
     ten: Köchel-Verzeichnis online (Stiftung Mozarteum), KV 467 Concerto in C for piano and orchestra
     link: https://kv.mozarteum.at/en/work/concerto-in-c-5544
+  - id: imslp-467-api
+    bac: 2
+    ten: 'IMSLP, Piano Concerto No.21, K.467 (wikitext qua API): "Piece Style=Classical", 3 movements'
+    link: https://imslp.org/wiki/Piano_Concerto_No.21_in_C_major,_K.467_(Mozart,_Wolfgang_Amadeus)
+  - id: nma-467
+    bac: 1
+    ten: 'Neue Mozart-Ausgabe V/15/6 (1961), DME Mozarteum, ảnh trang 93–105 (chương 1, ô 1–139) và 138–149 (Andante): dàn nhạc ô 1–72, piano vào ô 73, Eingang ô 79, Sol thứ ô 109, Sol trưởng ô 128; Andante: violin 1, 2, viola "sordini", violin 2 và viola chùm ba, cello và bass "pizzicato"'
+    link: https://dme.mozarteum.at/DME/nma/nma_cont.php?vsep=155&p1=93
+  - id: ptna-275
+    bac: 2
+    ten: 'PTNA Piano Encyclopedia, K.467: chương 1 "Concerto-sonata form"; chương 2 "Ternary form", F major; chương 3 "Rondo form", C major; "Mozart''s own cadenzas for the outer movements have not survived"'
+    link: https://enc.piano.or.jp/en/musics/275
+  - id: koechel-467
+    bac: 2
+    ten: 'Köchel-Verzeichnis online, KV 467: "While he usually improvised his own cadenzas and lead-ins, Mozart provided a large number of written cadenzas for his sister … and his students"'
+    link: https://kv.mozarteum.at/en/work/concerto-in-c-5544
+  - id: cod-cadenza
+    bac: 2
+    ten: 'The Concise Oxford Dictionary of Music, mục cadenza: soloists "substitute cadenzas by other hands"'
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/cadenza
+  - id: commons-467
+    bac: 2
+    ten: 'Wikimedia Commons, File:Mozart Piano Concerto N 21 in C major, K. 467 (3rd movement).oga: "3rd movement, Taipei KHS Concert Hall Taiwan, June 2011"; "Giorgi Latsabidze, piano; David L. Wen, conductor; Hsinchu Chamber Orchestra, Taiwan"; {{self|cc-by-sa-3.0}}; commons.py info: 482,83 giây'
+    link: https://commons.wikimedia.org/wiki/File:Mozart_Piano_Concerto_N_21_in_C_major,_K._467_(3rd_movement).oga
 nhan_dinh:
   - id: n1
     cau: Tên «Concerto piano số 21» chỉ Concerto cho piano số 21 cung Đô trưởng của Mozart.
@@ -58,3 +82,71 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Piano_Concerto_No.21_in_C_major,_K.467_(Mozart,_Wolfgang_Amadeus)", https://id.loc.gov/authorities/names/n81133938.json ]
     luot_2_ghi_chu: IMSLP Op./Cat. No. = K.467 (C major). LoC 'K. 467, C major'.
+  - id: n4
+    cau: 'Thời kỳ: Cổ điển.'
+    loai: lich-su
+    truong: [thoi_ky]
+    nguon: [imslp-467-api]
+    ket_qua: dung
+  - id: n5
+    cau: 'Luyện nghe: đối thoại piano và dàn nhạc, cadenza.'
+    loai: cau-truc
+    truong: [luyen_nghe]
+    nguon: [nma-467, ptna-275]
+    ket_qua: dung
+    ghi_chu: 'NMA: dàn nhạc và piano luân phiên trình bày; PTNA: có cadenza ở hai chương ngoài.'
+  - id: n6
+    cau: 'Hình, chú thích: chương 1 có hai lần trình bày, của dàn nhạc rồi của piano; độ dài các ô gần đúng.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [nma-467, ptna-275]
+    ket_qua: dung
+    ghi_chu: 'NMA: dàn nhạc ô 1–72, piano vào ô 73 với phần trình bày riêng; PTNA "Concerto-sonata form".'
+  - id: n7
+    cau: 'Hình, chương 1: dàn nhạc trình bày (Đô trưởng, hành khúc); piano trình bày (rẽ sang Sol thứ rồi Sol trưởng); phát triển; tái hiện (Đô trưởng); cadenza (piano một mình); coda.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [nma-467, ptna-275]
+    ket_qua: dung
+    ghi_chu: 'NMA tr. 93–105: ô 1 dây p môtip hành khúc Đô trưởng; ô 109 Sol thứ; ô 128 Sol trưởng. Phát triển, tái hiện, cadenza, coda: theo PTNA ("Concerto-sonata form", cadenza ở chương ngoài); chưa xem ảnh trang từ ô 140 trở đi (lượt 2 nên đối chiếu tr. 106–137).'
+  - id: n8
+    cau: 'Hình, chương 2: Andante, Fa trưởng.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [nma-467, ptna-275]
+    ket_qua: dung
+  - id: n9
+    cau: 'Hình, chương 2: violin và viola gắn sordino; chùm ba.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [nma-467]
+    ket_qua: da-sua
+    ghi_chu: 'Dữ liệu ghi "dây gắn sordino, chùm ba". NMA tr. 138: "sordini" ở violin 1, violin 2, viola; cello và bass "pizzicato", không sordino. Đề xuất "violin, viola gắn sordino; chùm ba" (sua-B.yml), cùng chỗ sửa ở trang (hồ sơ trang n16).'
+  - id: n10
+    cau: 'Hình, chương 3: Allegro vivace assai, Đô trưởng, rondo, có cadenza ngắn.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [ptna-275, koechel-467]
+    ket_qua: dung
+    ghi_chu: 'PTNA: "Third Movement: Allegro vivace assai, C major, 2/4 time. Rondo form"; cadenza ở chương ngoài. "Ngắn" so với cadenza chương 1 là nhận xét chung; chưa đối chiếu bản nhạc chương 3.'
+  - id: n11
+    cau: 'Hình: ba chương nhanh – chậm – nhanh (chương 1, Andante, chương 3).'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [koechel-467]
+    ket_qua: dung
+    ghi_chu: 'Köchel: 1. Allegro maestoso, 2. Andante, 3. Allegro vivace assai.'
+  - id: n12
+    cau: 'Hình, ghi chú: không còn cadenza nào của Mozart cho concerto này; nghệ sĩ chơi cadenza của người khác, tự soạn hoặc ứng tác.'
+    loai: lich-su
+    truong: [hinh]
+    nguon: [ptna-275, koechel-467, cod-cadenza]
+    ket_qua: da-sua
+    ghi_chu: 'Dữ liệu ghi "Cadenza của Mozart cho concerto này đã thất lạc; nghệ sĩ chơi cadenza của người khác hoặc tự soạn." "Thất lạc" ngầm nói từng có bản viết; PTNA chỉ nói "have not survived", Köchel: Mozart thường ứng tác. Đề xuất câu trên (sua-B.yml), cùng chỗ sửa ở trang (hồ sơ trang n22).'
+  - id: n13
+    cau: 'Bản thu: Giorgi Latsabidze (piano), Hsinchu Chamber Orchestra, David L. Wen chỉ huy; chỉ có chương 3, thu năm 2011; CC BY-SA 3.0; trang Commons; một phần dài 482,83 giây.'
+    loai: ten
+    truong: [ban_thu]
+    nguon: [commons-467]
+    ket_qua: dung
+    ghi_chu: 'Commons: author và mô tả như ở nguồn; ngày trong mô tả "June 2011" (trường date "2011-09-14" là ngày khác, có lẽ ngày tải lên; năm vẫn 2011). Giấy phép cc-by-sa-3.0, licUrl khớp. Thời lượng khớp.'

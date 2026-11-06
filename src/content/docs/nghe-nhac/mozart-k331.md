@@ -8,7 +8,7 @@ tac_pham: mozart-k331
 |---|---|
 | Nhà soạn nhạc | Wolfgang Amadeus Mozart (1756–1791) |
 | Tên đầy đủ | Sonata piano số 11 cung La trưởng, K. 331 (300i) |
-| Sáng tác | Khoảng năm 1783, nhiều khả năng ở Vienna; in năm 1784 (nhà Artaria) cùng hai sonata K. 330 và K. 332 |
+| Sáng tác | Chưa rõ năm: Neue Mozart-Ausgabe đoán năm 1783 (ở Vienna hay Salzburg), Henle (2021) cho là sớm hơn, ở Vienna; in tháng 8 năm 1784 (nhà Artaria, Vienna) cùng hai sonata K. 330 và K. 332 |
 | Thời kỳ | Cổ điển |
 | Thể loại | Sonata piano |
 | Độ dài | Khoảng 20–25 phút |
@@ -17,15 +17,15 @@ tac_pham: mozart-k331
 
 Ai cũng biết chương cuối, *Rondo alla turca*. Nhưng cả bản sonata là một trường hợp lạ: **không chương nào ở [hình thức sonata](/opus/hinh-thuc/sonata/)**. Thay cho chương nhanh mở đầu như thường lệ, Mozart viết một bộ **chủ đề và biến tấu**; tiếp theo là một **minuet**; cuối cùng là một bản "nhạc Thổ Nhĩ Kỳ". Nghe nó như ba bức tranh tương phản thì dễ theo dõi hơn là chờ đợi một "sonata" theo sách.
 
-**Chương 1, Andante grazioso** (nhịp 6/8): chủ đề dịu dàng, nhịp đung đưa kiểu **siciliana**, gồm hai nửa (8 và 10 ô nhịp), mỗi nửa nhắc lại. Sau đó là **sáu biến tấu** giữ nguyên khung hòa âm và hình dáng câu nhạc: biến tấu 1 và 2 trang trí giai điệu (biến tấu 2 trên nền **chùm ba nốt** móc kép); biến tấu 3 chuyển sang **La thứ**; ở biến tấu 4, **tay trái vắt qua tay phải**, đảm nhận cả bè trầm lẫn giai điệu; biến tấu 5 là **Adagio**, chậm và trang trí như một aria; biến tấu 6 đổi sang **Allegro nhịp 4/4**, sáng rực. Xem lại [Chủ đề và biến tấu](/opus/hinh-thuc/bien-tau/).
+**Chương 1, Andante grazioso** (nhịp 6/8): chủ đề dịu dàng, nhịp đung đưa, gồm hai nửa (8 và 10 ô nhịp), mỗi nửa nhắc lại. Sau đó là **sáu biến tấu** giữ nguyên khung hòa âm và hình dáng câu nhạc: biến tấu 1 và 2 trang trí giai điệu (biến tấu 2 trên nền **chùm ba nốt** móc kép); biến tấu 3 chuyển sang **La thứ**; ở biến tấu 4, **tay trái vắt qua tay phải**, đảm nhận cả bè trầm lẫn giai điệu; biến tấu 5 là **Adagio**, chậm và trang trí như một aria; biến tấu 6 đổi sang **Allegro nhịp 4/4**, sáng rực. Xem lại [Chủ đề và biến tấu](/opus/hinh-thuc/bien-tau/).
 
 **Chương 2, Menuetto**: một [minuet và trio](/opus/hinh-thuc/minuet-trio/) ở La trưởng. Trio chuyển sang **Rê trưởng**, mềm mại hơn, với những chuỗi quãng 3 và quãng 6 song song.
 
-**Chương 3, Alla turca** (Allegretto): tên gọi do chính Mozart ghi. Vienna những năm 1780 đang mê "nhạc Thổ": âm thanh của **ban nhạc quân đội Janissary** với trống, chũm chọe, chuông. Mozart cũng vừa viết vở opera *Die Entführung aus dem Serail* (Vụ bắt cóc khỏi hậu cung, 1782) đầy màu sắc ấy. Trên piano, ông "bắt chước" ban nhạc bằng những đoạn **hành khúc La trưởng** mạnh mẽ, với hợp âm tay trái rải thật nhanh như tiếng trống và chũm chọe. Chương này là một **rondo không đều đặn**: đoạn La thứ, hành khúc La trưởng, đoạn Fa♯ thứ, rồi các đoạn quay lại, khép bằng một coda rộn ràng.
+**Chương 3, Alla turca**: tên gọi có từ bản in đầu năm 1784; theo Henle, nó được thêm vào lúc in, do Mozart hay nhà xuất bản. Vienna những năm 1780 đang mê "nhạc Thổ": âm thanh của **ban nhạc quân đội Janissary** với trống, chũm chọe, kẻng tam giác. Mozart cũng vừa viết vở opera *Die Entführung aus dem Serail* (Vụ bắt cóc khỏi hậu cung, 1782) đầy màu sắc ấy. Trên piano, ông "bắt chước" ban nhạc bằng những đoạn **hành khúc La trưởng** mạnh mẽ, với hợp âm tay trái rải thật nhanh như tiếng trống và chũm chọe. Chương này là một **rondo không đều đặn**: đoạn La thứ, hành khúc La trưởng, đoạn Fa♯ thứ, rồi các đoạn quay lại, khép bằng một coda rộn ràng.
 
-**Nghe bằng tai người chơi piano.** Mọi thứ phải **nhẹ và rõ**: nhịp siciliana không được nặng nề, các nốt trang trí phải "nói" chứ không "chạy". Hãy để ý tốc độ của chương cuối: Mozart ghi **Allegretto** (hơi nhanh) chứ không phải Presto; nhiều bản thu chơi quá nhanh và mất đi vẻ hóm hỉnh. Gần như không cần [bàn đạp](/opus/piano/ban-dap/); tiếng trống của hành khúc đến từ [cách nhấn phím](/opus/piano/tieng-dan/) và độ gọn của hợp âm rải.
+**Nghe bằng tai người chơi piano.** Mọi thứ phải **nhẹ và rõ**: nhịp 6/8 không được nặng nề, các nốt trang trí phải "nói" chứ không "chạy". Hãy để ý tốc độ của chương cuối: bản in đầu ghi **Allegrino**, nhiều ấn bản về sau (như bản gõ lại trên Mutopia) ghi **Allegretto** (hơi nhanh), đều không phải Presto. Gần như không cần [bàn đạp](/opus/piano/ban-dap/); tiếng trống của hành khúc đến từ [cách nhấn phím](/opus/piano/tieng-dan/) và độ gọn của hợp âm rải.
 
-Một chi tiết mới: năm 2014, bốn trang bản thảo của Mozart cho chương 1 và chương 2 được tìm thấy ở Thư viện Quốc gia Széchényi, Budapest. Trước đó người ta chỉ biết trang cuối của chương 3.
+Một chi tiết mới: tháng 9 năm 2014, một phần bản thảo của Mozart, từ biến tấu 3 của chương 1 tới ô 10 của trio chương 2, được tìm thấy ở Thư viện Quốc gia Széchényi, Budapest. Trước đó người ta chỉ biết một tờ có các ô cuối của chương 3.
 
 ## Sơ đồ cấu trúc
 
@@ -43,7 +43,7 @@ Ghi lại thời điểm (phút:giây) bạn nghe thấy từng sự kiện tron
 
 | Thời điểm | Sự kiện |
 |---|---|
-| … | **Chương 1, chủ đề**: giai điệu 6/8 đung đưa kiểu siciliana; hai nửa, mỗi nửa nhắc lại |
+| … | **Chương 1, chủ đề**: giai điệu 6/8 đung đưa; hai nửa, mỗi nửa nhắc lại |
 | … | **Biến tấu 1–2**: giai điệu được trang trí; ở biến tấu 2, phần đệm chạy bằng chùm ba nốt |
 | … | **Biến tấu 3**: chuyển sang La thứ, nốt chạy lên xuống liên tục |
 | … | **Biến tấu 4**: La trưởng trở lại; tay trái vắt qua tay phải |
@@ -66,13 +66,12 @@ Ghi lại thời điểm (phút:giây) bạn nghe thấy từng sự kiện tron
 
 ## So sánh bản thu
 
-- **Mitsuko Uchida**: cách chơi Mozart tinh tế, sắc thái nhỏ, trang trí tự nhiên.
-- **Daniel Barenboim** hoặc **András Schiff**: tiếng đàn tròn, câu nhạc hát; nghe Adagio của biến tấu 5 để so sánh.
+- **Mitsuko Uchida**, **Daniel Barenboim** hay **András Schiff** (piano hiện đại): cả ba đều có bản thu K. 331; nghe Adagio của biến tấu 5 ở hai bản để so sánh cách trang trí.
 - **Một bản trên fortepiano** (đàn piano thời Mozart; tìm "K. 331 fortepiano"): tiếng nhẹ, tắt nhanh, hành khúc "Thổ" nghe giòn và gần với ban nhạc Janissary hơn. Đọc thêm [lịch sử cây đàn piano](/opus/piano/lich-su-dan/).
 
 ## Nếu bạn muốn chơi
 
-Chương 1 và chương 3 ở khoảng chặng 6 (≈ Grade 7–8, xem [Nhà soạn nhạc cho piano](/opus/piano/nha-soan-nhac/#wolfgang-amadeus-mozart-17561791)); chủ đề chương 1 có thể tập sớm hơn để làm quen với nhịp 6/8 và cách trang trí kiểu Mozart. Chuẩn bị bằng [Sonata K. 545](/opus/piano/tac-pham/mozart-k545/) và [Sonatina Clementi](/opus/piano/tac-pham/clementi-sonatina/), luyện gam và hợp âm rải thật đều tay (xem [lộ trình piano](/opus/piano/lo-trinh/)), và đọc [nốt hoa mỹ](/opus/piano/not-hoa-my/). Ở chương 3, tập hợp âm rải tay trái thật nhẹ trước rồi mới tăng tốc.
+Chương 1 và chương 3 ở khoảng chặng 6 (Henle xếp cả bản ở mức 6 trên thang 1–9 và ghi ABRSM Grade 8; xem [Nhà soạn nhạc cho piano](/opus/piano/nha-soan-nhac/#wolfgang-amadeus-mozart-17561791)); chủ đề chương 1 có thể tập sớm hơn để làm quen với nhịp 6/8 và cách trang trí kiểu Mozart. Chuẩn bị bằng [Sonata K. 545](/opus/piano/tac-pham/mozart-k545/) và [Sonatina Clementi](/opus/piano/tac-pham/clementi-sonatina/), luyện gam và hợp âm rải thật đều tay (xem [lộ trình piano](/opus/piano/lo-trinh/)), và đọc [nốt hoa mỹ](/opus/piano/not-hoa-my/). Ở chương 3, tập hợp âm rải tay trái thật nhẹ trước rồi mới tăng tốc.
 
 ## Ghi chép của bạn
 
@@ -81,7 +80,7 @@ Chương 1 và chương 3 ở khoảng chặng 6 (≈ Grade 7–8, xem [Nhà so�
 ## Nguồn
 
 - Bản nhạc: [IMSLP](https://imslp.org/) (tìm "Piano Sonata No.11, K.331").
-- Charles Rosen, *The Classical Style* (1971); Grove Music Online.
-- Thông tin về bản thảo tìm thấy năm 2014: Thư viện Quốc gia Széchényi (Budapest).
+- Bản nhạc gõ lại trên [Mutopia](https://www.mutopiaproject.org/) (theo Breitkopf & Härtel; chương 3 theo một bản trên IMSLP).
+- G. Henle Verlag, [Piano Sonata A major K. 331 (HN 1300)](https://www.henle.de/en/Piano-Sonata-A-major-K.-331-Alla-Turca/HN-1300): lời tựa của Wolf-Dieter Seiffert (2021) về năm sáng tác, bản in 1784, bản thảo tìm thấy năm 2014 ở Budapest, chỉ dẫn "Alla turca" và "Allegrino".
 - Bản thu Luis Kolodin: [IMSLP](https://imslp.org/wiki/Piano_Sonata_No.11_in_A_major,_K.331/300i_(Mozart,_Wolfgang_Amadeus)), ba file cho ba chương.
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

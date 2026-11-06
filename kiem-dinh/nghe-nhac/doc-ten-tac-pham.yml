@@ -4,14 +4,572 @@ nguon_cu: ../opus-zero/docs/nghe-nhac/doc-ten-tac-pham.md
 tang: tac-pham
 lan:
   - so: 1
-    ngay: null
+    ngay: 2026-11-06
     nhanh: moi/d6-l7
     ma_bam: null
     nguoi:
-      luot_1: null
+      luot_1: Claude Opus 5.5 (D6-L7 phần B)
       luot_2: null
       review: null
       kiem_mau: null
-nguon: []
-nhan_dinh: []
+ghi_chu: 'Trang không có bản ghi (không tac_pham). Không có khối abc; có một khối quiz (5 câu) và hình oz-anatomy (chữ trong hình là nhận định n4). Nguồn chính: danh sách danh mục của Music Library Association (MLA, Thematic Indexes Used in LC/NACO), Köchel online, IMSLP (wikitext qua API), COD qua Encyclopedia.com, Henle (lời tựa HN 1062, 9813), Bärenreiter (TP 40), Breitkopf (BWV), CiNii (Deutsch 1951), LoC (Baselt), Lưu trữ Bartók Budapest, MusicBrainz, BBC Music Magazine, Eastman, Early Music America. Sửa: n8, n24, n37, n40, n42, n45, n46, n55. Câu trang khác dẫn tới giữ đúng: tiêu đề "Đọc tên tác phẩm và bản thu"; tiêu đề "## Các danh mục riêng" (id cac-danh-muc-rieng không đổi); dòng BWV (Schmieder 1950); đoạn "Chữ Anh. (Anhang, phụ lục) trong BWV…"; dòng "K. hoặc KV | Mozart | Ludwig von Köchel (1862)"; phần số danh mục khi không có opus; đoạn HIP (nhạc cụ thời đó, harpsichord thay piano, "thường A = 415 Hz cho nhạc Baroque", link /opus/nhac-ly/am-hoc/) chỉ đổi mốc năm và câu tả âm thanh; cách đọc thông tin bản thu. Thuật ngữ chưa có trong thuat-ngu.yml: HIP (biểu diễn theo phong cách lịch sử), danh mục tác phẩm (thematic catalogue), Op. posth., WoO, remaster. Đã có: opus.'
+nguon:
+  - id: imslp-beet5
+    bac: 2
+    ten: "IMSLP, Symphony No.5, Op.67 (Beethoven) (wikitext): Key c, Op.67, 4 movements, Average Duration 30 minutes"
+    link: https://imslp.org/wiki/Symphony_No.5,_Op.67_(Beethoven,_Ludwig_van)
+  - id: henle-9813
+    bac: 2
+    ten: 'G. Henle Verlag, lời tựa ấn bản Giao hưởng số 5 (PDF 9813): "nothing in the sources is indicative of fate, whom, according to Anton Schindler, Beethoven supposedly has knocking on the door here. The often-cited image, probably contrived by Schindler, was responsible for the very unfortunate sobriquet Fate Symphony"'
+    link: https://www.henle.de/media/6b/8a/de/1697725781/9813-1697725781-sync.pdf
+  - id: henle-1062
+    bac: 2
+    ten: "G. Henle Verlag, HN 1062 Sonate op. 27 Nr. 2, Preface (Gertsch, Perahia 2012; PDF): bản in đầu (Cappi, Vienna, 1802) chỉ ghi \"SONATA quasi una FANTASIA\"; \"This association may have its origin in Ludwig Rellstab's first Kunstnovelle, Theodor … of 1823\" (\"The lake rests quiet under the light of the moon…\", Berliner Allgemeine musikalische Zeitung no. 32, 1824); biệt danh \"soon became established, for example in Anton Schindler's Beethoven biography of 1840\""
+    link: https://www.henle.de/media/ca/21/5b/1697725842/1062-1697725842-sync.pdf
+  - id: cod-opus
+    bac: 2
+    ten: 'The Concise Oxford Dictionary of Music, mục opus, qua Encyclopedia.com: "(Lat.). Work … This numbering gives a rough idea of the order in which works were comp., but can be misleading. Sometimes the Opus no. is allotted by the composer, sometimes by the publisher. Some composers, e.g. Mozart, Haydn, did not number their works … Dvořák allowed early works to be given late opus nos. by his publisher. In many cases an opus no. covers a group of works … Op.59, No.3"'
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/opus
+  - id: cod-woo
+    bac: 2
+    ten: "The Concise Oxford Dictionary of Music, mục WoO: \"Werk ohne Opuszahl (Work without opus number). Applied, for example, to Beethoven's works in Kinsky's catalogue\""
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/woo
+  - id: dolmetsch-p
+    bac: 2
+    ten: "Dolmetsch Online, Music dictionary P (defsp2): \"Posthumous: published after the author's death\"; \"post. abbreviation of posthum (German), posthumous\""
+    link: https://www.dolmetsch.com/defsp2.htm
+  - id: niecks
+    bac: 2
+    ten: 'Frederick Niecks, Frederick Chopin as a Man and Musician (1888), Project Gutenberg #4973: danh mục xuất bản "Op.9. Trois Nocturnes [B flat minor, E flat major, and B major]"'
+    link: https://www.gutenberg.org/ebooks/4973
+  - id: mla-ti
+    bac: 2
+    ten: 'Music Library Association, Thematic Indexes Used in Library of Congress NACO Authority Files (từng trang nhà soạn nhạc): Bach "Schmieder … Thematisch-systematisches Verzeichnis … Abbreviation: BWV"; Handel "Händel-Handbuch … HWV"; Vivaldi "Ryom, Peter … (RV)"; Mozart "Köchel … Chronologisch-thematisches Verzeichnis … K."; Haydn "Hoboken, Anthony van … H."; Schubert "Deutsch, Otto Erich … Thematisches Verzeichnis … in chronologischer Folge … D."; Liszt "Searle, Humphrey … S."; Dvořák "Burghauser, Jarmil … B.; Earlier edition from 1960"; Scarlatti "Kirkpatrick, Ralph … 1953 … K."; "Longo, Alessandro … L."; Bartók "Somfai, László … BB"; Beethoven "Kinsky … WoO"'
+    link: https://cmc.wp.musiclibraryassoc.org/thematic-indexes-used-in-library-of-congress-naco-authority-files/
+  - id: breitkopf-bwv
+    bac: 2
+    ten: 'Breitkopf & Härtel, Bach-Werke-Verzeichnis (BWV): "Das erste Bach-Werke-Verzeichnis (BWV) erschien unter der Autorschaft von Wolfgang Schmieder im Bach-Jubiläumsjahr 1950"; ấn bản mới có phần "Incerta und Fehlzuschreibungen"'
+    link: https://www.breitkopf.com/en/work/78/bach-werke-verzeichnis-bwv
+  - id: loc-baselt
+    bac: 2
+    ten: 'Library of Congress, bản ghi n85250337 (Baselt, Bernd): "Verzeichnis der Werke Georg Friedrich Händels (HWV), 1986: t.p. (Bernd Baselt)"'
+    link: https://id.loc.gov/authorities/names/n85250337.json
+  - id: koechel-kk
+    bac: 2
+    ten: "Köchel-Verzeichnis online, Ludwig von Köchel and the Köchel Catalog: \"first published by Breitkopf & Härtel in 1862\"; \"Köchel was determined to depict Mozart's development from a prodigy child to the great master … covered 626 works, ending with the unfinished Requiem\""
+    link: https://kv.mozarteum.at/en/ludwig-von-koechel-and-the-koechel-catalogue
+  - id: cinii-deutsch
+    bac: 2
+    ten: CiNii Books, "Schubert, thematic catalogue of all his works in chronological order" by Otto Erich Deutsch in collaboration with Donald R. Wakeling, J. M. Dent & Sons, 1951
+    link: https://ci.nii.ac.jp/ncid/BB03920775
+  - id: bartok-arch
+    bac: 2
+    ten: "Lưu trữ Bartók (Viện Âm nhạc học, Budapest), Béla Bartók's Compositions: chữ viết tắt \"BB Béla Bartók Thematic Catalogue number, see László Somfai …\"; \"Sz Szőllősy number\"; \"BB 68 (Sz 56 / W 37) Romanian folk dances, for piano (1915)\"; \"BB 123 (Sz 116) Concerto for Orchestra (1943)\""
+    link: https://zti.btk.mta.hu/en/ba/bartok-compositions/chronology
+  - id: imslp-cat
+    bac: 2
+    ten: 'IMSLP (wikitext qua API): Das wohltemperierte Klavier I, BWV 846–869 (Præludium in C, BWV 846); Messiah, HWV 56; Violin Concerto RV 269 "La primavera"; Symphony No.94, Hob.I:94; String Quartet Hob.III:77; Erlkönig, D.328, Op.1 (1815, in 1821); Liebesträume, S.541 (3 nocturnes); Symphony No.40, K.550; Requiem, K.626 "1791 (unfinished)"; Romanian Folk Dances, Sz.56; List of works by Domenico Scarlatti (K.1–555)'
+    link: https://imslp.org/wiki/Liebestr%C3%A4ume,_S.541_(Liszt,_Franz)
+  - id: imslp-dvorak9
+    bac: 2
+    ten: 'IMSLP, Symphony No.9, Op.95 (Dvořák): "Year of First Publication=1894 - Berlin: Simrock (as \"Symphony No.5\")"'
+    link: https://imslp.org/wiki/Symphony_No.9,_Op.95_(Dvo%C5%99%C3%A1k,_Anton%C3%ADn)
+  - id: imslp-schubert9
+    bac: 2
+    ten: 'IMSLP, Symphony No.9, D.944 (Schubert): Die »Große«; "this symphony is numbered No.7 under certain systems (and No.8 under another). We choose to adopt the system that numbers it as 9"'
+    link: https://imslp.org/wiki/Symphony_No.9,_D.944_(Schubert,_Franz)
+  - id: imslp-anh114
+    bac: 2
+    ten: 'IMSLP, Minuet in G major, BWV Anh.114 (Pezold, Christian): "BWV Anh.114 ; BWV Anh. II 114 / Anh. III 183"; Notebooks for Anna Magdalena Bach: "4. Menuet G-dur, BWV Anh.114"'
+    link: https://imslp.org/wiki/Minuet_in_G_major,_BWV_Anh.114_(Pezold,_Christian)
+  - id: ba-tp40
+    bac: 2
+    ten: 'Bärenreiter TP 40, Mozart Sinfonie in g KV 550, Zweite Fassung mit Klarinetten (Robbins Landon), Vorwort (PDF mẫu): bản in đầu (André) "in der ursprünglichen Fassung ohne Klarinetten"; bản thứ hai thêm clarinet'
+    link: https://www.barenreiter.co.uk/prefaces/9790006200375_Innenansicht.pdf
+  - id: musicweb-part
+    bac: 2
+    ten: 'MusicWeb International, review Brilliant Classics 9170: "Spiegel im spiegel for violin and piano (1978)", "for viola and piano", "for cello and piano"'
+    link: https://www.musicweb-international.com/classrev/2010/Oct10/part_brilliant9170p.htm
+  - id: mb-kleiber
+    bac: 2
+    ten: 'MusicBrainz, release "Symphonie Nr. 5" (Deutsche Grammophon, 1975, DE): Wiener Philharmoniker, Carlos Kleiber; ghi tại Großer Musikvereinssaal, 1974-03 đến 1974-04'
+    link: https://musicbrainz.org/release/bb934503-6cd8-4942-8144-aa9609795c40
+  - id: dg-argerich
+    bac: 2
+    ten: Deutsche Grammophon, SCHUMANN Kinderszenen / Argerich (đĩa piano)
+    link: https://www.deutschegrammophon.com/en/catalogue/products/schumann-kinderszenen-argerich-7066
+  - id: cod-conducting
+    bac: 2
+    ten: 'The Concise Oxford Dictionary of Music, mục conducting: "controlling an orch. … the beating of time, ensuring of correct entries, and the shaping of individual phrasing"'
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/conducting
+  - id: mb-labels
+    bac: 2
+    ten: 'MusicBrainz, các hãng đĩa: Deutsche Grammophon, Decca Records, Sony Classical, Warner Classics, harmonia mundi, Hyperion ("UK classical"), BIS ("Swedish classical music label"), ECM New Series'
+    link: https://musicbrainz.org/label/447147a3-c947-4422-9993-db1254234110
+  - id: hifiplus-lp
+    bac: 2
+    ten: 'Hi-Fi+, The history of the LP: "While the first vinyl LPs contained mono recordings…"; đĩa thương mại đầu tiên hai kênh trong một rãnh: Audio Fidelity, tháng 11/1957'
+    link: https://hifiplus.com/articles/the-history-of-the-lp/
+  - id: mb-gould
+    bac: 2
+    ten: 'MusicBrainz, release "The Goldberg Variations" (Sony Classical, 2007): "1981 Recording Remastered" (ví dụ bản thu cũ phát hành lại sau khi xử lý âm thanh)'
+    link: https://musicbrainz.org/release/cc05439a-144a-4992-9c11-31d0f6f261ae
+  - id: bbcmm-hip
+    bac: 2
+    ten: "BBC Music Magazine (classical-music.com), Richard Morrison, \"Shock impact and religious zeal: how historically informed performance revolutionised classical music\" (24/10/2025): \"back in the 1970s and '80s the authenticity brigade – led by the likes of Nikolaus Harnoncourt, Christopher Hogwood and Norrington\"; \"Vibrato was out of the question\"; \"old woodwinds, valveless brass instruments and gut fiddles\"; \"a startlingly different attitude to speeds, embellishments and even pitch as well as timbre\""
+    link: https://www.classical-music.com/features/artists/historically-informed-performance
+  - id: esm415
+    bac: 2
+    ten: 'Eastman School of Music, Baroque Ensemble: Historic Instruments: "played on period instruments, at low pitch (A=415)"'
+    link: https://www.esm.rochester.edu/community/course/baroque-chamber-historic/
+  - id: ema-brass
+    bac: 2
+    ten: "Early Music America, The Modern World of Early Brass: \"a baroque orchestra tuned to a' = 415hz\"; chơi kèn \"without valves\"; \"gut strings\""
+    link: https://www.earlymusicamerica.org/emag-feature/the-modern-world-of-early-brass/
+  - id: mco-ebs
+    bac: 2
+    ten: 'Monteverdi Choir and Orchestras, English Baroque Soloists: "one of the most innovative period instrument ensembles", "Founded in 1978 by Sir John Eliot Gardiner"'
+    link: https://www.monteverdi.co.uk/about-us/english-baroque-soloists
+  - id: apple-rr
+    bac: 2
+    ten: 'Apple Podcasts, Record Review Podcast (BBC Radio 3), id273489899: "Building a Library: a guide to the best recordings … Each week an expert and enthusiast brings along a wide range of recordings of a well-known piece … ending with a recommendation for your library"'
+    link: https://podcasts.apple.com/us/podcast/record-review-podcast/id273489899
+  - id: gramophone-awards
+    bac: 2
+    ten: Gramophone, Gramophone Classical Music Awards 2024 (bản lưu Wayback 12/2/2025; trang gốc bị Cloudflare chặn)
+    link: https://www.gramophone.co.uk/awards/gramophone-classical-music-awards-2024
+  - id: ifb-bwv3
+    bac: 2
+    ten: 'Informationsmittel für Bibliotheken (IfB), bài điểm sách BWV³ (2022): BWV 1 (Schmieder, Leipzig, Breitkopf & Härtel, 1950); trích lời tựa Schmieder: chia tác phẩm "echt" (phần chính) và "zweifelhaft" (Anhang II)'
+    link: https://www.informationsmittel-fuer-bibliotheken.de/showfile.php?id=11543
+nhan_dinh:
+  - id: n1
+    cau: Trang này giải thích các phần của tên một tác phẩm và của thông tin bản thu, để tìm đúng tác phẩm và chọn bản thu.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Kiểm trên trang: các mục "Một cái tên đầy đủ gồm những gì?", "Opus là gì?", "Các danh mục riêng", "Đọc thông tin một bản thu", "Tìm bản thu tốt ở đâu?".'
+  - id: n2
+    cau: 'Ví dụ: Beethoven, Giao hưởng số 5 cung Đô thứ, Op. 67 ("Định mệnh").'
+    loai: danh-muc
+    nguon:
+      - imslp-beet5
+    ket_qua: dung
+  - id: n3
+    cau: 'Hình và bảng: tên đầy đủ gồm nhà soạn nhạc (Beethoven), thể loại (Giao hưởng), số thứ tự (số 5, thứ tự trong các tác phẩm cùng thể loại của nhà soạn nhạc), giọng (cung Đô thứ, giọng chính), số hiệu danh mục (Op. 67), biệt danh ("Định mệnh").'
+    loai: dinh-nghia
+    nguon:
+      - imslp-beet5
+      - cod-opus
+    ket_qua: dung
+    ghi_chu: Chữ trong hình oz-anatomy (và aria-label) cùng sáu nhãn với bảng; giữ cấu trúc p1–p6.
+  - id: n4
+    cau: 'Chú thích hình và đoạn sau bảng: chỉ riêng số hiệu danh mục (Op. 67) đã đủ xác định chính xác tác phẩm; tìm theo tên nhà soạn nhạc kèm số hiệu ("Beethoven Op. 67", "Mozart K. 550").'
+    loai: dinh-nghia
+    nguon:
+      - cod-opus
+      - mla-ti
+    ket_qua: dung
+    ghi_chu: 'Số hiệu xác định duy nhất trong tác phẩm của một nhà soạn nhạc (Op. 67 của Beethoven); trang luôn đi kèm tên nhà soạn nhạc ("hãy tìm theo tên nhà soạn nhạc kèm số hiệu"). Có trường hợp một số opus gồm nhiều bài (COD: "Op.59, No.3"): khi đó cần cả số trong opus; câu hiểu theo ví dụ Op. 67 là đúng.'
+  - id: n5
+    cau: Link Hình thức & thể loại và bài 8 (hóa biểu, giọng).
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: src/content/docs/hinh-thuc/index.md và nhac-ly/08-hoa-bieu.md có.
+  - id: n6
+    cau: "Bảng: biệt danh thường không phải do nhà soạn nhạc đặt."
+    loai: lich-su
+    nguon:
+      - henle-9813
+      - henle-1062
+    ket_qua: dung
+    ghi_chu: 'Hai ví dụ trên trang: "Định mệnh" (Henle 9813: do Schindler), "Ánh trăng" (Henle 1062). Chữ "thường" để chừa trường hợp nhà soạn nhạc tự đặt (như Pathétique).'
+  - id: n7
+    cau: 'Opus (tiếng Latin: "tác phẩm"), viết tắt Op., là số thứ tự tác phẩm, do nhà soạn nhạc hoặc nhà xuất bản gán khi xuất bản.'
+    loai: dinh-nghia
+    nguon:
+      - cod-opus
+    ket_qua: dung
+    ghi_chu: 'COD: "(Lat.). Work … Sometimes the Opus no. is allotted by the composer, sometimes by the publisher".'
+  - id: n8
+    cau: "Số opus chỉ cho biết gần đúng thứ tự sáng tác, và có khi sai lệch: nhà xuất bản có thể gán số opus muộn cho một tác phẩm viết từ sớm."
+    loai: dinh-nghia
+    nguon:
+      - cod-opus
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Số opus thường theo thứ tự xuất bản, không hẳn theo thứ tự sáng tác." Lý do: COD: "This numbering gives a rough idea of the order in which works were comp., but can be misleading … Dvořák allowed early works to be given late opus nos. by his publisher"; "thường theo thứ tự xuất bản" không có ở nguồn đã mở.'
+  - id: n9
+    cau: "Một opus có thể gồm nhiều tác phẩm nhỏ: Chopin Nocturne Op. 9 số 2 là bản thứ hai trong tập Op. 9."
+    loai: danh-muc
+    nguon:
+      - cod-opus
+      - niecks
+    ket_qua: dung
+    ghi_chu: 'COD: "an opus no. covers a group of works … Op.59, No.3". Niecks: "Op.9. Trois Nocturnes [B flat minor, E flat major, and B major]".'
+  - id: n10
+    cau: "Op. posth. (posthumous, di cảo): xuất bản sau khi nhà soạn nhạc mất."
+    loai: dinh-nghia
+    nguon:
+      - dolmetsch-p
+    ket_qua: dung
+    ghi_chu: "Dolmetsch: \"Posthumous: published after the author's death\"."
+  - id: n11
+    cau: WoO (Werk ohne Opuszahl, "tác phẩm không có số opus") dùng cho Beethoven; Für Elise là WoO 59.
+    loai: danh-muc
+    nguon:
+      - cod-woo
+      - mla-ti
+    ket_qua: dung
+    ghi_chu: 'COD WoO; MLA Beethoven: "Kinsky … Abbreviation: WoO … For works without opus no.". Für Elise WoO 59: danh_muc của bản ghi tac-pham/fur-elise (đã khóa).'
+  - id: n12
+    cau: Với nhiều nhà soạn nhạc, số opus không đầy đủ hoặc không đáng tin, nên các nhà nghiên cứu lập danh mục riêng, đặt theo tên người lập.
+    loai: lich-su
+    nguon:
+      - cod-opus
+      - mla-ti
+    ket_qua: dung
+    ghi_chu: 'COD: "Some composers, e.g. Mozart, Haydn, did not number their works; some, e.g. Elgar, gave some works opus nos. and not others". MLA: danh mục mang tên người lập (Schmieder, Köchel, Hoboken…). Ngoại lệ BWV, HWV, RV: ký hiệu theo tên nhà soạn nhạc hay tên sách; câu "đặt theo tên người lập" đúng cho cột "Danh mục của".'
+  - id: n13
+    cau: "BWV, J. S. Bach: danh mục của Wolfgang Schmieder (1950); xếp theo thể loại, không theo thời gian; Prelude cung Đô trưởng BWV 846."
+    loai: danh-muc
+    nguon:
+      - breitkopf-bwv
+      - mla-ti
+      - imslp-cat
+    ket_qua: dung
+    ghi_chu: 'Breitkopf: BWV đầu tiên của Schmieder, 1950. MLA: tên sách "Thematisch-systematisches Verzeichnis" (hệ thống, theo thể loại), khác Köchel "Chronologisch-thematisches". IMSLP: "Præludium in C, BWV 846". Dòng này trang khác dẫn tới, giữ.'
+  - id: n14
+    cau: "HWV, Handel: danh mục của Bernd Baselt; Messiah HWV 56."
+    loai: danh-muc
+    nguon:
+      - loc-baselt
+      - mla-ti
+      - imslp-cat
+    ket_qua: dung
+    ghi_chu: 'LoC: "Verzeichnis der Werke Georg Friedrich Händels (HWV), 1986: t.p. (Bernd Baselt)"; MLA: HWV (Händel-Handbuch). IMSLP: Messiah, HWV 56.'
+  - id: n15
+    cau: "RV, Vivaldi: danh mục của Peter Ryom; Mùa xuân RV 269."
+    loai: danh-muc
+    nguon:
+      - mla-ti
+      - imslp-cat
+    ket_qua: dung
+    ghi_chu: 'MLA: "Ryom, Peter … (RV)". IMSLP: Violin Concerto in E major, RV 269, "La primavera".'
+  - id: n16
+    cau: "K. hoặc KV, Mozart: danh mục của Ludwig von Köchel (1862), xếp gần đúng theo thời gian sáng tác; Giao hưởng số 40, K. 550."
+    loai: danh-muc
+    nguon:
+      - koechel-kk
+      - mla-ti
+      - imslp-cat
+    ket_qua: dung
+    ghi_chu: 'Köchel online: "first published by Breitkopf & Härtel in 1862"; MLA: "Chronologisch-thematisches Verzeichnis". IMSLP: Symphony No.40, K.550. Dòng này trang khác dẫn tới, giữ.'
+  - id: n17
+    cau: "Hob., Haydn: danh mục của Anthony van Hoboken, chia nhóm theo thể loại (nhóm I là giao hưởng); Giao hưởng số 94, Hob. I:94."
+    loai: danh-muc
+    nguon:
+      - mla-ti
+      - imslp-cat
+    ket_qua: dung
+    ghi_chu: 'MLA: "Hoboken, Anthony van. Joseph Haydn: Thematisch-bibliographisches Werkverzeichnis". IMSLP: Symphony No.94 "Hob.I:94"; tứ tấu "Hob.III:77" (nhóm III): nhóm theo thể loại.'
+  - id: n18
+    cau: "D., Schubert: danh mục của Otto Erich Deutsch (1951); Erlkönig D. 328."
+    loai: danh-muc
+    nguon:
+      - cinii-deutsch
+      - mla-ti
+      - imslp-cat
+    ket_qua: dung
+    ghi_chu: "CiNii: Deutsch, Schubert: thematic catalogue …, J. M. Dent & Sons, 1951. IMSLP: Erlkönig, D.328."
+  - id: n19
+    cau: "S., Liszt: danh mục của Humphrey Searle; Liebestraum số 3, S. 541."
+    loai: danh-muc
+    nguon:
+      - mla-ti
+      - imslp-cat
+    ket_qua: dung
+    ghi_chu: 'MLA: "Searle, Humphrey. The Music of Liszt … Abbreviation: S.". IMSLP: Liebesträume, S.541, 3 nocturnes (số 3 là S. 541 số 3).'
+  - id: n20
+    cau: "B., Dvořák: danh mục của Jarmil Burghauser."
+    loai: danh-muc
+    nguon:
+      - mla-ti
+    ket_qua: dung
+    ghi_chu: 'MLA: "Burghauser, Jarmil, and John Clapham. Antonín Dvořák, thematický katalog … Abbreviation: B. … Earlier edition from 1960".'
+  - id: n21
+    cau: "L. hoặc K., Domenico Scarlatti: Longo, về sau Ralph Kirkpatrick; 555 sonata cho harpsichord."
+    loai: danh-muc
+    nguon:
+      - mla-ti
+      - imslp-cat
+    ket_qua: dung
+    ghi_chu: 'MLA: Longo 1937 (L.), Kirkpatrick 1953 (K.) "For keyboard sonatas". IMSLP List of works by Domenico Scarlatti: K. 1 đến K. 555 (Keyboard Sonata in F minor, K.555).'
+  - id: n22
+    cau: "Sz. hoặc BB, Bartók: András Szőllősy, về sau László Somfai (BB); Vũ khúc dân gian Romania Sz. 56."
+    loai: danh-muc
+    nguon:
+      - bartok-arch
+      - mla-ti
+      - imslp-cat
+    ket_qua: dung
+    ghi_chu: 'Lưu trữ Bartók: "Sz Szőllősy number"; "BB … László Somfai … 1996"; "BB 68 (Sz 56 / W 37) Romanian folk dances, for piano (1915)". IMSLP: Romanian Folk Dances, Sz.56 ; BB 68.'
+  - id: n23
+    cau: "Mẹo: số K. càng lớn thì tác phẩm Mozart càng muộn; K. 1 là tác phẩm thời thơ ấu; K. 626 (Requiem) là tác phẩm cuối cùng, dang dở."
+    loai: danh-muc
+    nguon:
+      - koechel-kk
+      - imslp-cat
+    ket_qua: dung
+    ghi_chu: 'Köchel online: đánh số theo con đường "from a prodigy child to the great master", "626 works, ending with the unfinished Requiem". IMSLP: Requiem K.626 "1791 (unfinished)". Lưu ý: các lần sửa danh mục đổi số một số tác phẩm, nên "càng lớn càng muộn" là mẹo gần đúng.'
+  - id: n24
+    cau: Tên "Ánh trăng" của Sonata piano Op. 27 số 2 có lẽ bắt nguồn từ hình ảnh mặt hồ dưới trăng mà nhà phê bình Ludwig Rellstab dùng để tả chương 1, trong một truyện ngắn năm 1824; bản in đầu tiên (1802) chỉ ghi Sonata quasi una fantasia.
+    loai: lich-su
+    nguon:
+      - henle-1062
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: \"Tên \\\"Ánh trăng\\\" … bắt nguồn từ hình ảnh mà nhà phê bình Ludwig Rellstab dùng để tả chương 1; cái tên chỉ trở nên phổ biến sau khi Beethoven mất.\" Lý do: Henle: \"may have its origin in Ludwig Rellstab's … Theodor … of 1823\" (in 1824, khi Beethoven còn sống), \"soon became established, for example in … 1840\"; vế \"chỉ trở nên phổ biến sau khi Beethoven mất\" bị review D7-gom bỏ ở trang cap-nhat (Henle: biệt danh có từ khi Beethoven còn sống). Bản in Cappi 1802: \"SONATA quasi una FANTASIA\". Khớp trang beethoven-anh-trang, nghe-nhac/beethoven-moonlight."
+  - id: n25
+    cau: '"Định mệnh" của Giao hưởng số 5 không phải tên Beethoven đặt.'
+    loai: lich-su
+    nguon:
+      - henle-9813
+    ket_qua: dung
+    ghi_chu: 'Henle: "The often-cited image, probably contrived by Schindler, was responsible for the very unfortunate sobriquet Fate Symphony".'
+  - id: n26
+    cau: Biệt danh giúp dễ nhớ, nhưng đừng coi đó là ý đồ của nhà soạn nhạc.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n27
+    cau: Giao hưởng Từ Thế giới mới của Dvořák ngày nay là số 9, nhưng trong các ấn bản cũ từng được đánh số 5.
+    loai: danh-muc
+    nguon:
+      - imslp-dvorak9
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "1894 - Berlin: Simrock (as \"Symphony No.5\")".'
+  - id: n28
+    cau: Giao hưởng "Lớn" cung Đô trưởng của Schubert có lúc được gọi là số 7, số 8 hoặc số 9.
+    loai: danh-muc
+    nguon:
+      - imslp-schubert9
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "numbered No.7 under certain systems (and No.8 under another)… numbers it as 9"; Alternative Title "Die »Große«".'
+  - id: n29
+    cau: Khi thấy số lạ, hãy tra số hiệu danh mục.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n30
+    cau: Minuet cung Sol trưởng trong sổ tay Anna Magdalena Bach (BWV Anh. 114) thực ra của Christian Petzold.
+    loai: lich-su
+    nguon:
+      - imslp-anh114
+    ket_qua: dung
+    ghi_chu: 'IMSLP: trang tác phẩm đặt tên "(Pezold, Christian)"; sổ tay Anna Magdalena: "4. Menuet G-dur, BWV Anh.114".'
+  - id: n31
+    cau: Chữ Anh. (Anhang, "phụ lục") trong BWV đánh dấu những tác phẩm còn nghi vấn hoặc không phải của Bach.
+    loai: dinh-nghia
+    nguon:
+      - imslp-anh114
+      - breitkopf-bwv
+      - ifb-bwv3
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Anh. 114 = "BWV Anh. II 114 / Anh. III 183" (phụ lục II, III của BWV2); Breitkopf: BWV mới có phần "Incerta und Fehlzuschreibungen" (tác phẩm không chắc và gán nhầm). Nguồn đã mở không nói từng phụ lục nghĩa gì; lượt 2 nên tìm thêm (lời tựa BWV, Bach-Archiv). Câu này trang khác dẫn tới, giữ. Chủ lô bổ sung: nguồn bậc 2 đã dùng ở review D6-L1-gom (hồ sơ piano/tac-pham/minuet-sol n11): lời tựa Schmieder BWV 1 (trích trong bài điểm sách IfB) chia "echt" (phần chính) và "zweifelhaft" (Anhang II); IMSLP ghi Minuet là "BWV Anh. II 114", "formerly attributed to Bach".'
+  - id: n32
+    cau: Mozart Giao hưởng số 40 có bản có và không có clarinet.
+    loai: lich-su
+    nguon:
+      - ba-tp40
+    ket_qua: dung
+    ghi_chu: 'Bärenreiter TP 40: "Zweite Fassung mit Klarinetten"; bản in André "in der ursprünglichen Fassung ohne Klarinetten".'
+  - id: n33
+    cau: Spiegel im Spiegel của Pärt có bản cho violin, viola, cello (với piano).
+    loai: ten
+    nguon:
+      - musicweb-part
+    ket_qua: dung
+    ghi_chu: 'MusicWeb: "Spiegel im spiegel for violin and piano (1978)", "for viola and piano", "for cello and piano".'
+  - id: n34
+    cau: Ghi chú bản thu thường nói rõ phiên bản.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n35
+    cau: "Ví dụ dòng thông tin bản thu: Beethoven Symphony No. 5, Wiener Philharmoniker, Carlos Kleiber, Deutsche Grammophon, 1974 (phát hành năm 1975)."
+    loai: nam
+    nguon:
+      - mb-kleiber
+    ket_qua: dung
+    ghi_chu: "MusicBrainz: DG 1975, ghi 1974-03 đến 1974-04 tại Musikverein. (Hồ sơ cap-nhat dùng Hi-Fi+ cho năm 1974.)"
+  - id: n36
+    cau: "Bảng: nghệ sĩ độc tấu (ví dụ Martha Argerich, piano) quyết định cách diễn giải ở concerto, sonata, độc tấu; mỗi dàn nhạc có âm sắc riêng; nhạc trưởng quyết định tốc độ, cân bằng, tính cách của bản giao hưởng."
+    loai: dinh-nghia
+    nguon:
+      - cod-conducting
+      - dg-argerich
+    ket_qua: dung
+    ghi_chu: 'COD conducting: "the beating of time, ensuring of correct entries, and the shaping of individual phrasing". Argerich: nghệ sĩ piano (DG). "Mỗi dàn nhạc có âm sắc riêng" là nhận xét chung, nhẹ.'
+  - id: n37
+    cau: "Một số hãng đĩa nhạc cổ điển: Deutsche Grammophon, Decca, Sony Classical, Warner Classics, Harmonia Mundi, Hyperion, BIS, ECM New Series."
+    loai: ten
+    nguon:
+      - mb-labels
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Một số hãng nổi tiếng: …". Chữ mới: "Một số hãng đĩa nhạc cổ điển: …". Bỏ "nổi tiếng" (đánh giá). MusicBrainz có cả tám hãng (BIS "Swedish classical music label", Hyperion "UK classical").'
+  - id: n38
+    cau: Bản thu trước khoảng 1955 thường là mono.
+    loai: lich-su
+    nguon:
+      - hifiplus-lp
+    ket_qua: dung
+    ghi_chu: 'Hi-Fi+: các LP đầu tiên là mono; đĩa hai kênh một rãnh đầu tiên tháng 11/1957. Thu stereo trên băng có từ trước (Hi-Fi+), nên "thường" và "khoảng 1955" là hợp.'
+  - id: n39
+    cau: Bản cũ có thể nghe rè nhưng có giá trị lịch sử; bản live có không khí và đôi khi tiếng khán giả; remaster là bản thu cũ được xử lý lại âm thanh.
+    loai: dinh-nghia
+    nguon:
+      - mb-gould
+    ket_qua: dung
+    ghi_chu: 'MusicBrainz: Gould 1981 phát hành lại 2007 "1981 Recording Remastered". Hai vế đầu là nhận xét chung.'
+  - id: n40
+    cau: "Từ khoảng những năm 1970, phong trào biểu diễn theo phong cách lịch sử (HIP) chơi nhạc Baroque và Cổ điển bằng nhạc cụ thời đó hoặc bản sao: violin dây ruột, kèn không có van, harpsichord thay piano."
+    loai: lich-su
+    nguon:
+      - bbcmm-hip
+      - ema-brass
+    ket_qua: da-sua
+    ghi_chu: "Chữ cũ: \"Từ khoảng những năm 1960–1970\". Chữ mới: \"Từ khoảng những năm 1970\". Lý do: BBC Music Magazine: \"back in the 1970s and '80s the authenticity brigade\"; \"old woodwinds, valveless brass instruments and gut fiddles\". (Concentus Musicus của Harnoncourt có từ 1953; mốc \"khoảng 1970\" là lúc phong trào lan rộng.)"
+  - id: n41
+    cau: HIP lên dây thấp hơn, thường A = 415 Hz cho nhạc Baroque.
+    loai: so-lieu
+    nguon:
+      - esm415
+      - ema-brass
+    ket_qua: dung
+    ghi_chu: "Eastman: \"period instruments, at low pitch (A=415)\"; EMA: \"a baroque orchestra tuned to a' = 415hz\". Câu này trang khác (nhac-ly/am-hoc) dẫn tới, giữ."
+  - id: n42
+    cau: Âm sắc khác hẳn, cách chọn tốc độ cũng khác, và ít rung (vibrato) hơn.
+    loai: lich-su
+    nguon:
+      - bbcmm-hip
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Âm thanh thường nhẹ hơn, trong hơn, tốc độ nhanh hơn, ít rung (vibrato) hơn." Lý do: BBC Music Magazine: "Vibrato was out of the question"; "a startlingly different attitude to speeds, embellishments and even pitch as well as timbre"; "nhẹ hơn, trong hơn, nhanh hơn" không có ở nguồn đã mở.'
+  - id: n43
+    cau: Link Âm học.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: src/content/docs/nhac-ly/am-hoc.md có, mục chuẩn cao độ nói 415 Hz và link ngược về trang này.
+  - id: n44
+    cau: Không bên nào "đúng" hơn; hãy nghe cùng một tác phẩm Bach hoặc Vivaldi ở cả hai cách và tự chọn.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n45
+    cau: "Gợi ý tên nghệ sĩ và nhóm HIP: Nikolaus Harnoncourt, Christopher Hogwood, Roger Norrington, John Eliot Gardiner với English Baroque Soloists."
+    loai: ten
+    nguon:
+      - bbcmm-hip
+      - mco-ebs
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Nikolaus Harnoncourt, John Eliot Gardiner, Trevor Pinnock, William Christie, Jordi Savall, Il Giardino Armonico." Lý do: chỉ giữ tên có ở nguồn đã mở: BBC Music Magazine (Harnoncourt, Hogwood, Norrington); MCO (English Baroque Soloists của Gardiner là "period instrument ensemble"). Pinnock, Christie, Savall, Il Giardino Armonico chưa mở nguồn bậc 2: bỏ (lượt 2 có thể thêm lại nếu tìm được).'
+  - id: n46
+    cau: "Building a Library trong chương trình Record Review của BBC Radio 3 (có dạng podcast): mỗi kỳ một chuyên gia so sánh nhiều bản thu của một tác phẩm và chọn bản nên có."
+    loai: ten
+    nguon:
+      - apple-rr
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "mỗi tuần … chọn bản nên có. Đây là nguồn tham khảo tốt nhất cho người mới." Bỏ câu đánh giá; "mỗi tuần" thành "mỗi kỳ" (podcast ghi "Biweekly", mô tả ghi "Each week"). Apple Podcasts: Record Review Podcast, BBC Radio 3, "Building a Library … ending with a recommendation for your library". Link podcast đúng chương trình.'
+  - id: n47
+    cau: "Gramophone: tạp chí và giải thưởng Gramophone Awards hằng năm."
+    loai: ten
+    nguon:
+      - gramophone-awards
+    ket_qua: dung
+    ghi_chu: Gramophone Classical Music Awards 2024 (bản lưu Wayback).
+  - id: n48
+    cau: Nhiều trang hướng dẫn nghe của site có gợi ý bản thu hoặc phần so sánh bản thu, và nhiều trang có sẵn một bản thu mở trong công cụ nghe.
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/content/docs/nghe-nhac/*.md: các hướng dẫn nghe có mục "So sánh bản thu" và ::khoi-nghe; ban_thu trong src/data/tac-pham.yml (ví dụ chopin-etude, mozart-concerto-21, schumann-kinderszenen).'
+  - id: n49
+    cau: "Thử nhiều bản: nghe 1–2 phút đầu của 3–4 bản thu, chọn bản làm bạn muốn nghe tiếp; đó cũng là bài luyện tai."
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n50
+    cau: "Câu hỏi 1: đáp án đúng: K. 550 thuộc về Mozart."
+    loai: danh-muc
+    nguon:
+      - imslp-cat
+    ket_qua: dung
+  - id: n51
+    cau: "Câu hỏi 1: lựa chọn sai Bach, Beethoven (K. 550 không phải của hai người này)."
+    loai: danh-muc
+    nguon:
+      - mla-ti
+    ket_qua: dung
+    ghi_chu: Bach dùng BWV, Beethoven dùng Op./WoO (MLA).
+  - id: n52
+    cau: "Câu hỏi 1, giải thích: danh mục Köchel cho tác phẩm của Mozart."
+    loai: danh-muc
+    nguon:
+      - koechel-kk
+    ket_qua: dung
+  - id: n53
+    cau: "Câu hỏi 2: đáp án đúng: BWV là danh mục tác phẩm của J. S. Bach; lựa chọn sai Beethoven, Brahms; giải thích: Bach-Werke-Verzeichnis, do Wolfgang Schmieder lập."
+    loai: danh-muc
+    nguon:
+      - breitkopf-bwv
+      - mla-ti
+    ket_qua: dung
+    ghi_chu: Gộp các dòng của câu 2 (đều cùng nguồn).
+  - id: n54
+    cau: 'Câu hỏi 3: đáp án đúng: biệt danh "Ánh trăng" của Op. 27 số 2 do một nhà phê bình, không phải Beethoven, đặt; lựa chọn sai: Beethoven, nhà xuất bản của Beethoven.'
+    loai: lich-su
+    nguon:
+      - henle-1062
+    ket_qua: dung
+    ghi_chu: 'Henle: bản in Cappi chỉ ghi "SONATA quasi una FANTASIA"; hình ảnh từ Rellstab. Henle viết "may have its origin": đáp án vẫn đúng hơn hai lựa chọn kia.'
+  - id: n55
+    cau: "Câu hỏi 3, giải thích: hình ảnh ánh trăng là của nhà phê bình Ludwig Rellstab; bản in đầu tiên chỉ ghi Sonata quasi una fantasia."
+    loai: lich-su
+    nguon:
+      - henle-1062
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "…; cái tên chỉ phổ biến sau khi Beethoven mất." Như n24. Lời giải thích không dựa vào vị trí lựa chọn.'
+  - id: n56
+    cau: 'Câu hỏi 4: "Op. posth." nghĩa là xuất bản sau khi nhà soạn nhạc mất; lựa chọn sai "tác phẩm cuối cùng", "tác phẩm không hoàn thành"; giải thích: posthumous, di cảo.'
+    loai: dinh-nghia
+    nguon:
+      - dolmetsch-p
+    ket_qua: dung
+  - id: n57
+    cau: "Câu hỏi 5: cách chính xác nhất khi tìm một tác phẩm là tìm theo tên nhà soạn nhạc kèm số hiệu danh mục; lựa chọn sai: tìm theo biệt danh, theo giọng; giải thích: số hiệu danh mục xác định duy nhất một tác phẩm."
+    loai: dinh-nghia
+    nguon:
+      - mla-ti
+      - cod-opus
+    ket_qua: dung
+    ghi_chu: "Như n4: số hiệu xác định duy nhất trong tác phẩm của một nhà soạn nhạc; đáp án đúng đã kèm tên nhà soạn nhạc. Lời giải thích không dựa vào vị trí lựa chọn."
 khuong_nhac: []
+doi_chu:
+  - cu: Số opus thường theo thứ tự xuất bản, không hẳn theo thứ tự sáng tác.
+    moi: "Số opus chỉ cho biết gần đúng thứ tự sáng tác, và có khi sai lệch: nhà xuất bản có thể gán số opus muộn cho một tác phẩm viết từ sớm."
+    ly_do: "n8: COD opus."
+  - cu: Biệt danh không phải của tác giả. Tên "Ánh trăng" của Sonata piano Op. 27 số 2 bắt nguồn từ hình ảnh mà nhà phê bình Ludwig Rellstab dùng để tả chương 1; cái tên chỉ trở nên phổ biến sau khi Beethoven mất. "Định mệnh" của Giao hưởng số 5 cũng không phải tên Beethoven đặt. Biệt danh giúp dễ nhớ, nhưng đừng coi đó là ý đồ của nhà soạn nhạc.
+    moi: Biệt danh không phải của tác giả. Tên "Ánh trăng" của Sonata piano Op. 27 số 2 có lẽ bắt nguồn từ hình ảnh mặt hồ dưới trăng mà nhà phê bình Ludwig Rellstab dùng để tả chương 1, trong một truyện ngắn năm 1824; bản in đầu tiên (1802) chỉ ghi Sonata quasi una fantasia. "Định mệnh" của Giao hưởng số 5 cũng không phải tên Beethoven đặt. Biệt danh giúp dễ nhớ, nhưng đừng coi đó là ý đồ của nhà soạn nhạc.
+    ly_do: "n24: Henle HN 1062."
+  - cu: "Một số hãng nổi tiếng: Deutsche Grammophon, Decca, Sony Classical, Warner Classics, Harmonia Mundi, Hyperion, BIS, ECM New Series"
+    moi: "Một số hãng đĩa nhạc cổ điển: Deutsche Grammophon, Decca, Sony Classical, Warner Classics, Harmonia Mundi, Hyperion, BIS, ECM New Series"
+    ly_do: "n37: bỏ đánh giá."
+  - cu:
+      - "Từ khoảng những năm 1960–1970, phong trào biểu diễn theo phong cách lịch sử (historically informed performance, HIP) chơi nhạc Baroque và Cổ điển bằng nhạc cụ thời đó hoặc bản sao: violin dây ruột, kèn không có van, harpsichord thay piano, lên dây thấp hơn (thường A = 415 Hz cho nhạc Baroque, xem Âm học). Âm thanh thường nhẹ hơn, trong hơn, tốc độ nhanh hơn, ít rung (vibrato) hơn."
+      - 'Không bên nào "đúng" hơn. Hãy nghe cùng một tác phẩm Bach hoặc Vivaldi ở cả hai cách và tự chọn. Gợi ý tên nghệ sĩ và nhóm HIP để tìm: Nikolaus Harnoncourt, John Eliot Gardiner, Trevor Pinnock, William Christie, Jordi Savall, Il Giardino Armonico.'
+    moi:
+      - "Từ khoảng những năm 1970, phong trào biểu diễn theo phong cách lịch sử (historically informed performance, HIP) chơi nhạc Baroque và Cổ điển bằng nhạc cụ thời đó hoặc bản sao: violin dây ruột, kèn không có van, harpsichord thay piano, lên dây thấp hơn (thường A = 415 Hz cho nhạc Baroque, xem Âm học). Âm sắc khác hẳn, cách chọn tốc độ cũng khác, và ít rung (vibrato) hơn."
+      - 'Không bên nào "đúng" hơn. Hãy nghe cùng một tác phẩm Bach hoặc Vivaldi ở cả hai cách và tự chọn. Gợi ý tên nghệ sĩ và nhóm HIP để tìm: Nikolaus Harnoncourt, Christopher Hogwood, Roger Norrington, John Eliot Gardiner với English Baroque Soloists.'
+    ly_do: "n40, n42: BBC Music Magazine. n45: chỉ giữ tên có ở nguồn đã mở."
+  - cu: "Building a Library trong chương trình Record Review của BBC Radio 3 (nghe trên BBC Sounds hoặc dạng podcast): mỗi tuần một chuyên gia so sánh nhiều bản thu của một tác phẩm và chọn bản nên có. Đây là nguồn tham khảo tốt nhất cho người mới."
+    moi: "Building a Library trong chương trình Record Review của BBC Radio 3 (nghe trên BBC Sounds hoặc dạng podcast): mỗi kỳ một chuyên gia so sánh nhiều bản thu của một tác phẩm và chọn bản nên có."
+    ly_do: "n46: bỏ đánh giá."
+  - cu: 'câu hỏi: Biệt danh "Ánh trăng" của sonata Op. 27 số 2 do ai đặt? | Beethoven | ✓ Một nhà phê bình, không phải Beethoven | Nhà xuất bản của Beethoven | Hình ảnh ánh trăng là của nhà phê bình Ludwig Rellstab; cái tên chỉ phổ biến sau khi Beethoven mất.'
+    moi: 'câu hỏi: Biệt danh "Ánh trăng" của sonata Op. 27 số 2 do ai đặt? | Beethoven | ✓ Một nhà phê bình, không phải Beethoven | Nhà xuất bản của Beethoven | Hình ảnh ánh trăng là của nhà phê bình Ludwig Rellstab; bản in đầu tiên chỉ ghi Sonata quasi una fantasia.'
+    ly_do: "n55: lời giải thích câu hỏi 3."

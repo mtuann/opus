@@ -13,11 +13,11 @@ lan:
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
   - so: 2
-    ngay: null
+    ngay: 2026-11-06
     nhanh: moi/d6-l7
     ma_bam: null
     nguoi:
-      luot_1: null
+      luot_1: Claude Opus 5.5 (D6-L7 phần A)
       luot_2: null
       review: null
       kiem_mau: null
@@ -34,6 +34,18 @@ nguon:
     bac: 2
     ten: G. Henle Verlag, Piano Sonata A major K. 331 (Alla Turca) (HN 1300)
     link: https://www.henle.de/en/Piano-Sonata-A-major-K.-331-Alla-Turca/HN-1300
+  - id: mutopia-k331
+    bac: 1
+    ten: 'Mutopia Project, Mozart KV 331 (chủ đề, 6 biến tấu, Menuetto theo Breitkopf & Härtel; Rondo theo một bản trên IMSLP; .ly tải 06/11/2026)'
+    link: https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/MozartWA/KV331
+  - id: imslp-wt
+    bac: 2
+    ten: 'IMSLP, Piano Sonata No.11 (wikitext): "Piece Style=Classical"; bản thu Kolodin: 3 file, "File Description" 1. Tema con variazione / 2. Menuetto & trio / 3. Alla Turca, "Copyright=Creative Commons Attribution-ShareAlike 4.0"'
+    link: https://imslp.org/wiki/Piano_Sonata_No.11_in_A_major,_K.331/300i_(Mozart,_Wolfgang_Amadeus)
+  - id: kolodin-files
+    bac: 2
+    ten: 'IMSLP, ba file Kolodin (api.php imageinfo: 11200384, 6183231, 3537227 byte, audio/mp3); file chương 1 tải sẵn ở ../opus-zero/_imslp/IMSLP815839-… (ffprobe: 692,024 giây)'
+    link: https://imslp.org/wiki/File:PMLP1846-luis-kolodin-plays-mozart-s-piano-sonata-no.11.mp3
 nhan_dinh:
   - id: n1
     cau: Tên «Sonata K. 331» chỉ Sonata piano số 11 cung La trưởng, K. 331, có chương cuối «Alla turca».
@@ -64,3 +76,51 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Piano_Sonata_No.11,_K.331_(Mozart,_Wolfgang_Amadeus)", https://id.loc.gov/authorities/names/n82128918.json ]
     luot_2_ghi_chu: "IMSLP Op./Cat. No. = 'K.331 ; K6.300i ; Op.6 No.2' (Piano Sonata No.11, A major). LoC (Köchel 6): '300i=331'."
+  - id: n4
+    cau: 'Thời kỳ: Cổ điển.'
+    loai: lich-su
+    truong: [thoi_ky]
+    nguon: [imslp-wt]
+    ket_qua: dung
+    ghi_chu: 'IMSLP "Piece Style=Classical".'
+  - id: n5
+    cau: 'Luyện nghe: biến tấu, minuet, rondo "Thổ Nhĩ Kỳ".'
+    loai: cau-truc
+    truong: [luyen_nghe]
+    nguon: [imslp-wt, mutopia-k331]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Tema con variazione, Menuetto & trio, Alla Turca; Mutopia: Rondo Alla Turca.'
+  - id: n6
+    cau: 'Hình, chú thích: Sonata La trưởng K. 331, không chương nào ở hình thức sonata.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [mutopia-k331, imslp-wt]
+    ket_qua: dung
+  - id: n7
+    cau: 'Hình, chương 1: chủ đề La trưởng 6/8; BT 1; BT 2 chùm ba; BT 3 La thứ; BT 4 vắt tay; BT 5 Adagio; BT 6 Allegro 4/4.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [mutopia-k331]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: tema \key a \major \time 6/8; var2 \times 2/3; var3 \key a \minor; var4 tay trái vắt lên (hồ sơ trang n11); var5 "Adagio"; var6 "Allegro" \time 4/4.'
+  - id: n8
+    cau: 'Hình, chương 2: Menuetto, trio Rê trưởng; chương 3: Alla turca, La thứ ↔ La trưởng, coda.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [mutopia-k331]
+    ket_qua: dung
+    ghi_chu: 'Mutopia menuetto: Trio \key d \major; rondo: \key a \minor và \key a \major luân phiên, kết La trưởng. Trọng số là cách vẽ của site.'
+  - id: n9
+    cau: 'Bản thu: Luis Kolodin, CC BY-SA 4.0, trang IMSLP của tác phẩm; ba phần I. Andante grazioso, II. Menuetto, III. Alla turca với link Special:ImagefromIndex/815839, 815840, 815841.'
+    loai: ten
+    truong: [ban_thu]
+    nguon: [imslp-wt, kolodin-files]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Performer Categories=Kolodin, Luis=Piano", "Copyright=Creative Commons Attribution-ShareAlike 4.0"; file tải về có tiền tố IMSLP815839 (chương 1), khớp số ImagefromIndex. Tên phần của site (Andante grazioso…) khác chữ mô tả của IMSLP (Tema con variazione…) nhưng cùng chương.'
+  - id: n10
+    cau: 'Bản thu, độ dài ba phần (giây): 692,02; 382,01; 218,52.'
+    loai: so-lieu
+    truong: [ban_thu]
+    nguon: [kolodin-files]
+    ket_qua: dung
+    ghi_chu: 'Chương 1: ffprobe 692,024 giây trên file đã tải. Chương 2, 3 chưa tải (không qua trang chờ của IMSLP): tính theo cỡ file với cùng tốc độ bit của chương 1 (11200384 byte / 692,02 giây ≈ 16185 byte/giây): 6183231 → 382,0 giây; 3537227 → 218,5 giây: khớp. Lượt 2 nên đo lại nếu có file.'

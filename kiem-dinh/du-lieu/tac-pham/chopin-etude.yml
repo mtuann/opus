@@ -1,6 +1,6 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/chopin-etude
 ban_ghi: tac-pham/chopin-etude
-ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/chopin-etude.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh."
+ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/chopin-etude.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh. Lần 2 (D6-L7, lượt 1 phần B): nhận định n4–n11 cho các trường chưa khóa (thoi_ky, luyen_nghe, hinh, ban_thu); trọng số độ dài của từng ô trong hinh là cách vẽ của site, không phải nhận định. Không đề xuất sửa."
 lan:
   - so: 1
     ngay: 2026-10-24
@@ -13,11 +13,11 @@ lan:
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
   - so: 2
-    ngay: null
+    ngay: 2026-11-06
     nhanh: moi/d6-l7
     ma_bam: null
     nguoi:
-      luot_1: null
+      luot_1: Claude Opus 5.5 (D6-L7 phần B)
       luot_2: null
       review: null
       kiem_mau: null
@@ -34,6 +34,34 @@ nguon:
     bac: 2
     ten: G. Henle Verlag, Etude c minor op. 10 no. 12 (Revolution) (HN 658)
     link: https://www.henle.de/en/Etude-c-minor-op.-10-no.-12-Revolution/HN-658
+  - id: imslp-op10-api
+    bac: 2
+    ten: 'IMSLP, Études, Op.10 (Chopin) (wikitext qua API): "Piece Style=Romantic"; số 3 "Tristesse", số 12 "Revolutionary"'
+    link: https://imslp.org/wiki/%C3%89tudes,_Op.10_(Chopin,_Fr%C3%A9d%C3%A9ric)
+  - id: henle-hn124-p
+    bac: 2
+    ten: 'G. Henle Verlag, HN 124 Etudes (trang sản phẩm): Opp. 10 và 25 "a new type of virtuosic etude that also makes aesthetic demands"'
+    link: https://www.henle.de/en/Etudes/HN-124
+  - id: cod-etude
+    bac: 2
+    ten: 'The Concise Oxford Dictionary of Music, mục étude: "Masterpieces of this kind suitable for public perf. as well as private practice were written by Chopin"'
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/etude
+  - id: henle-hn124-bem
+    bac: 2
+    ten: 'G. Henle Verlag, HN 124, Comments (PDF): Op. 10 số 3, ô 21 "poco piu animato"'
+    link: https://www.henle.de/media/10/02/f2/1697725665/0124-1697725664-sync.pdf
+  - id: ia-schirmer
+    bac: 1
+    ten: Chopin, Etudes for the Piano, G. Schirmer 1916 (Friedheim), Internet Archive chopinetudesforp00unse, ảnh trang 12–15 (Op. 10 số 3)
+    link: https://archive.org/details/chopinetudesforp00unse
+  - id: mutopia-12
+    bac: 1
+    ten: 'Mutopia Project, op-10-12-wfi.ly (Peters, Scholtz 1900): Op. 10 số 12, 84 ô'
+    link: https://github.com/MutopiaProject/MutopiaProject/blob/master/ftp/ChopinFF/O10/op-10-12-wfi/op-10-12-wfi.ly
+  - id: commons-neeman
+    bac: 2
+    ten: 'Wikimedia Commons, hai file Edward Neeman (Op. 10 số 3, số 12): mô tả "Performer: Edward Neeman", nguồn Musopen "Set Chopin Free", "PD-author [Musopen]"; tools/audio/commons.py info: 275,71 và 164,79 giây'
+    link: https://commons.wikimedia.org/wiki/File:Chopin_-_12_%C3%89tudes,_Op._10_-_No._3_in_E_major_%27Tristesse%27_(Edward_Neeman).flac
 nhan_dinh:
   - id: n1
     cau: "Tên «Étude Op. 10 số 3 và số 12» chỉ hai bản trong 12 Étude Op. 10: số 3 cung Mi trưởng và số 12 cung Đô thứ."
@@ -63,3 +91,58 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/%C3%89tudes,_Op.10_(Chopin,_Fr%C3%A9d%C3%A9ric)", https://www.henle.de/Etude-E-major-op.-10-no.-3/HN-656, https://www.henle.de/en/Etude-c-minor-op.-10-no.-12-Revolution/HN-658, https://id.loc.gov/authorities/names/n81089328.json ]
     luot_2_ghi_chu: IMSLP Op./Cat. No. = Op.10 for the set of 12 studies, which contains no. 3 and no. 12. Henle 'op. 10 no. 3' / 'op. 10 no. 12'; LoC n81089328 (Kobylanska) 'op. 10. Zwölf Etüden'.
+  - id: n4
+    cau: 'Thời kỳ: Lãng mạn.'
+    loai: lich-su
+    truong: [thoi_ky]
+    nguon: [imslp-op10-api]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Piece Style=Romantic.'
+  - id: n5
+    cau: 'Luyện nghe: kỹ thuật phục vụ âm nhạc (étude vừa luyện kỹ thuật vừa là tác phẩm hòa nhạc).'
+    loai: lich-su
+    truong: [luyen_nghe]
+    nguon: [henle-hn124-p, cod-etude]
+    ket_qua: dung
+    ghi_chu: 'Henle: "a new type of virtuosic etude that also makes aesthetic demands"; COD: "suitable for public perf. as well as private practice".'
+  - id: n6
+    cau: 'Hình, chú thích: Étude Op. 10 số 3 (Mi trưởng) và số 12 (Đô thứ), gần đúng.'
+    loai: ten
+    truong: [hinh]
+    nguon: [imslp-op10-api]
+    ket_qua: dung
+  - id: n7
+    cau: 'Hình, số 3: A (Mi trưởng, giai điệu và đệm trong một tay); B (poco più animato, nốt kép); hợp âm bảy giảm; con bravura (quãng sáu kép); bảy át kéo dài, dẫn về chủ đề; A'' rút gọn, tắt dần.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [ia-schirmer, henle-hn124-bem]
+    ket_qua: dung
+    ghi_chu: 'Như hồ sơ trang nghe-nhac/chopin-etude n20–n23: poco più animato ô 21 (Henle); con bravura quãng sáu hai tay trên hợp âm bảy giảm Si–Rê–Fa–Sol♯; nền Si trước Tempo I; phần trở lại khoảng 16 ô so với 20 ô đầu, kết pp.'
+  - id: n8
+    cau: 'Hình, số 12: mở đầu (tay trái đổ xuống); A (Đô thứ, quãng tám tay phải); B (chuyển giọng); A''; coda (lắng xuống, kết Đô trưởng).'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [mutopia-12]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: ô 1–9 mở đầu; ô 10 trở đi quãng tám tay phải; ô 29–36 chuyển giọng (nhiều thăng); ô 41 trở đi trở lại; ô 75–80 smorz., lặng, sotto voce; ô 84 hợp âm Đô trưởng.'
+  - id: n9
+    cau: 'Hình, ghi chú: ở số 12, tay trái chạy móc kép gần như không nghỉ từ đầu đến cuối.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [mutopia-12]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: tay trái móc kép hầu như mọi ô, kể cả ô 76 khi tay phải lặng; ô cuối (83–84) là hợp âm, nên "gần như".'
+  - id: n10
+    cau: 'Bản thu: Edward Neeman (Musopen), phạm vi công cộng; trang Commons của file số 3.'
+    loai: ten
+    truong: [ban_thu]
+    nguon: [commons-neeman]
+    ket_qua: dung
+    ghi_chu: 'Commons: "Performer: Edward Neeman", nguồn Kickstarter Musopen "Set Chopin Free", giấy phép ghi âm PD-author (Musopen), tác phẩm PD-old.'
+  - id: n11
+    cau: 'Bản thu, hai phần: Op. 10 số 3 (275,71 giây) và Op. 10 số 12 (164,79 giây).'
+    loai: so-lieu
+    truong: [ban_thu]
+    nguon: [commons-neeman]
+    ket_qua: dung
+    ghi_chu: 'Commons API (commons.py info): 275,71 và 164,79; khớp. Tên file "No. 3 in E major" và "No. 12 in C minor".'

@@ -10,26 +10,26 @@ tac_pham: scarlatti-sonata
 | Tác phẩm | Sonata Mi trưởng K. 380 (L. 23); Sonata Rê thứ K. 141 (L. 422); Sonata Fa thứ K. 466 (L. 118) |
 | Sáng tác | Những năm Scarlatti phục vụ triều đình Bồ Đào Nha rồi Tây Ban Nha; phần lớn được biết qua các tập chép tay thập niên 1740–1750 |
 | Thời kỳ | Baroque muộn |
-| Thể loại | Sonata một chương cho harpsichord |
+| Thể loại | Sonata một chương cho đàn phím (chủ yếu harpsichord) |
 | Độ dài | Mỗi bản khoảng 3–6 phút |
 
 ## Điều cần biết trước khi nghe
 
 Domenico Scarlatti sinh năm 1685 ở Naples, **cùng năm với Bach và Handel**. Năm 1719 ông tới Lisbon và dạy nhạc cho công chúa Bồ Đào Nha Maria Magdalena Barbara. Khi bà về làm dâu hoàng gia Tây Ban Nha (về sau trở thành hoàng hậu), Scarlatti theo sang, sống ở Seville rồi Madrid đến cuối đời. Ông để lại **555 bản sonata** cho đàn phím; 30 bản đầu tiên được in năm 1738 với cái tên khiêm tốn *Essercizi* ("Bài tập").
 
-Chữ **K.** trước số hiệu là của **Ralph Kirkpatrick**, nghệ sĩ harpsichord đã lập danh mục năm 1953 theo thứ tự thời gian; đừng nhầm với K. của Köchel trong nhạc Mozart. Các ấn bản cũ dùng số **L.** của Alessandro Longo (1906). Xem [cách đọc tên tác phẩm](/opus/nghe-nhac/doc-ten-tac-pham/).
+Chữ **K.** trước số hiệu là của **Ralph Kirkpatrick**, nghệ sĩ harpsichord đã lập danh mục năm 1953, cố gắng xếp các sonata theo thứ tự thời gian (dựa vào thứ tự trong các tập chép tay ở Venice); đừng nhầm với K. của Köchel trong nhạc Mozart. Các ấn bản cũ dùng số **L.** của Alessandro Longo (ấn bản 1906–1910). Xem [cách đọc tên tác phẩm](/opus/nghe-nhac/doc-ten-tac-pham/).
 
 **Mỗi sonata chỉ có một chương, ở hình thức hai đoạn.** Nửa đầu đi từ giọng chính sang một giọng mới; nửa sau đi xa hơn rồi trở về; mỗi nửa có dấu nhắc lại. Chìa khóa để nghe: phần **cuối** nửa đầu xuất hiện lại ở cuối nửa sau, nhưng ở giọng chính, như hai câu thơ **gieo vần** với nhau. Kirkpatrick gọi điểm mà từ đó hai nửa bắt đầu "vần" với nhau là **crux**. Xem thêm [hình thức nhỏ](/opus/nhac-ly/31-hinh-thuc-nho/).
 
-**Màu sắc bán đảo Iberia.** Nhiều bản mang nhịp điệu vũ điệu dân gian Tây Ban Nha và Bồ Đào Nha; những nốt lặp lại nhanh và hợp âm gõ mạnh khiến nhiều người nghe thấy tiếng **guitar**, dù ý kiến này vẫn còn tranh luận. Scarlatti cũng là bậc thầy của kỹ thuật **bắt chéo tay**: một tay vắt qua tay kia để chơi nốt ở xa.
+**Vũ điệu và tiếng guitar.** Nhiều bản bắt chước bước nhảy của vũ điệu; những nốt lặp lại nhanh và hợp âm gõ mạnh gợi tiếng gảy **guitar**. Scarlatti cũng là bậc thầy của kỹ thuật **bắt chéo tay**: một tay vắt qua tay kia để chơi nốt ở xa.
 
-**Nghe bằng tai người chơi piano.** Đây là nhạc viết cho harpsichord. Trên piano hiện đại, nghệ sĩ phải chơi **nhẹ, gọn, rõ**, rất ít dùng [bàn đạp](/opus/piano/ban-dap/), và giữ những nốt lặp lại thật đều bằng cách **đổi ngón** trên cùng một phím. Hãy để ý cách mỗi người tạo ra "tiếng kèn" hay "tiếng guitar" chỉ bằng đầu ngón tay.
+**Nghe bằng tai người chơi piano.** Đây là nhạc viết chủ yếu cho harpsichord. Trên piano hiện đại, nghệ sĩ phải chơi **nhẹ, gọn, rõ**, rất ít dùng [bàn đạp](/opus/piano/ban-dap/), và giữ những nốt lặp lại thật đều bằng cách **đổi ngón** trên cùng một phím. Hãy để ý cách mỗi người tạo ra "tiếng kèn" hay "tiếng guitar" chỉ bằng đầu ngón tay.
 
 Ba bản trong trang này có ba tính cách khác hẳn nhau:
 
-- **K. 380, Mi trưởng** (*Andante commodo*): như một **đoàn rước trong cung điện**, với những lời gọi kèn đồng đáp qua đáp lại giữa "gần" và "xa".
-- **K. 141, Rê thứ** (nhịp 3/8): **nốt lặp lại cực nhanh** gần như suốt bài, bắt chéo tay, nhịp điệu vũ điệu Tây Ban Nha. Một bản trình diễn kỹ thuật thật sự.
-- **K. 466, Fa thứ** (*Andante moderato*): chậm, buồn, **hát** như một aria; mặt trữ tình ít được biết đến của Scarlatti.
+- **K. 380, Mi trưởng** (*Andante commodo*, nhịp 3/4): có biệt danh *Cortège* (**đoàn rước**); mở đầu bằng những hình nốt như lời gọi kèn, đáp qua đáp lại.
+- **K. 141, Rê thứ** (*Allegro*, nhịp 3/8): **nốt lặp lại cực nhanh** gần như suốt bài, bắt chéo tay. Một bản trình diễn kỹ thuật thật sự: Henle xếp mức 7 (khó) trên thang 1–9.
+- **K. 466, Fa thứ** (*Andante moderato*): chậm, buồn, **hát** như một aria; mặt trữ tình của Scarlatti.
 
 ## Sơ đồ cấu trúc
 
@@ -52,7 +52,7 @@ Ghi lại thời điểm (phút:giây) bạn nghe thấy từng sự kiện tron
 | … | **K. 380**: nửa đầu được nhắc lại (nghệ sĩ có trang trí khác đi không?) |
 | … | **K. 380**: nửa sau đi qua các giọng xa, rồi đoạn "vần" trở lại ở Mi trưởng |
 | … | **K. 141**: nốt lặp lại dồn dập trên cùng một phím, như tiếng gảy guitar |
-| … | **K. 141**: hai tay bắt chéo, nhịp đảo phách kiểu vũ điệu |
+| … | **K. 141**: hai tay bắt chéo, tay trái vắt lên chơi nốt cao |
 | … | **K. 141**: nửa sau kết ở Rê thứ, mạnh mẽ |
 | … | **K. 466**: giai điệu chậm, buồn ở Fa thứ, hát như một aria |
 | … | **K. 466**: nửa sau trở về Fa thứ và khép lại lặng lẽ |
@@ -67,13 +67,13 @@ Ghi lại thời điểm (phút:giây) bạn nghe thấy từng sự kiện tron
 
 ## So sánh bản thu
 
-- **Vladimir Horowitz**: thu âm K. 380 nhiều lần; bản này mở đầu đĩa *Horowitz in Moscow*, ghi buổi hòa nhạc ở Moscow năm 1986; tiếng đàn mềm mại, nhiều màu.
-- **Martha Argerich**: hay chơi K. 141 như một bản tặng thêm (encore); những nốt lặp lại nhanh và sắc như tia lửa. Angela Hewitt cũng có bản thu K. 141 rất đáng nghe để so sánh.
-- **Scott Ross** (harpsichord): người đầu tiên một mình thu âm trọn 555 bản sonata (1984–1985). Nghe để biết âm thanh gốc mà Scarlatti nghĩ tới.
+- **Vladimir Horowitz**: thu âm K. 380 nhiều lần; bản này mở đầu đĩa *Horowitz in Moscow* (Deutsche Grammophon), ghi buổi hòa nhạc ở Moscow năm 1986.
+- **Martha Argerich**: có bản thu trực tiếp K. 141 (*Live from the Concertgebouw 1978 & 1979*). Angela Hewitt cũng thu K. 141 (Hyperion, 2016) để so sánh.
+- **Scott Ross** (harpsichord): thu trọn 555 bản sonata cho hãng Erato (1984–1985). Nghe để biết âm thanh của cây đàn Scarlatti viết cho.
 
 ## Nếu bạn muốn chơi
 
-Sonata Scarlatti là những "bài kỹ thuật có hồn" tuyệt vời cho người chơi piano trung cấp trở lên. K. 380 ở khoảng chặng 6 (≈ Grade 8, xem [Nhà soạn nhạc cho piano](/opus/piano/nha-soan-nhac/#domenico-scarlatti-16851757)); K. 141 khó hơn nhiều vì nốt lặp lại nhanh và bắt chéo tay. Hãy bắt đầu bằng những bản ngắn, chậm như **K. 32** (Rê thứ, *Aria*) hoặc **K. 34** (Rê thứ, *Larghetto*), đồng thời tập [nốt hoa mỹ](/opus/piano/not-hoa-my/), [phối hợp và bắt chéo hai tay](/opus/piano/hai-tay/) và [staccato nhẹ](/opus/piano/tieng-dan/). Xem thêm [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
+Sonata Scarlatti vừa là bài kỹ thuật vừa là nhạc để nghe, hợp với người chơi piano trung cấp trở lên. K. 380 ở khoảng chặng 6 (ABRSM Grade 7 theo trang của Henle, mức 5 trên thang 1–9; xem [Nhà soạn nhạc cho piano](/opus/piano/nha-soan-nhac/#domenico-scarlatti-16851757)); K. 141 khó hơn (Henle mức 7) vì nốt lặp lại nhanh và bắt chéo tay. Hãy bắt đầu bằng những bản ngắn, chậm như **K. 32** (Rê thứ, *Aria*) hoặc **K. 34** (Rê thứ, *Larghetto*), đồng thời tập [nốt hoa mỹ](/opus/piano/not-hoa-my/), [phối hợp và bắt chéo hai tay](/opus/piano/hai-tay/) và [staccato nhẹ](/opus/piano/tieng-dan/). Xem thêm [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
 
 ## Ghi chép của bạn
 
@@ -81,8 +81,8 @@ Sonata Scarlatti là những "bài kỹ thuật có hồn" tuyệt vời cho ng�
 
 ## Nguồn
 
-- Bản nhạc: [IMSLP](https://imslp.org/) (tìm "Scarlatti Keyboard Sonata K.380", "K.141", "K.466").
-- Ralph Kirkpatrick, *Domenico Scarlatti* (Princeton University Press, 1953).
-- Malcolm Boyd, *Domenico Scarlatti: Master of Music* (1986).
+- Bản nhạc: [IMSLP](https://imslp.org/) (tìm "Scarlatti Keyboard Sonata K.380", "K.141", "K.466"); ảnh chép tay K. 380 (Parma), K. 141 (Worgan), K. 466 (Venice) trên [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Scarlatti,_Sonate_K._380_-_ms._Parme_X,23.jpg).
+- G. Henle Verlag: lời tựa và mức khó của [K. 380 (HN 574)](https://www.henle.de/en/Piano-Sonata-in-E-major-K.-380-L.-23/HN-574) và [K. 141 (HN 1221)](https://www.henle.de/en/Piano-Sonata-d-minor-Toccata-K.-141-L.-422/HN-1221).
+- Cristina Fernandes, "Scarlatti, Domenico", *Dizionario Biografico degli Italiani* ([Treccani](https://www.treccani.it/enciclopedia/giuseppe-domenico-scarlatti_(Dizionario-Biografico)/)).
 - Bản thu K. 380 của Raymond Smullyan: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Scarlatti_Sonata_E_Major_K380.ogg), từ bộ sưu tập Al Goldstein (Pandora Music).
-- Grove Music Online. Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
+- Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
