@@ -1,10 +1,10 @@
 ---
 title: "Beethoven: Für Elise, WoO 59"
-description: "Tám ô nhịp đầu của Für Elise thuộc loại nổi tiếng nhất trong nhạc piano, nhưng bài không dừng ở đó. Học trọn bài, bạn gặp ba nhân vật rất khác nhau: chủ đề La…"
+description: "Für Elise là một trong những tác phẩm nổi tiếng nhất của Beethoven, nhưng bài không dừng ở tám ô nhịp đầu. Học trọn bài, bạn gặp ba nhân vật rất khác nhau: chủ đề La…"
 tac_pham: fur-elise
 ---
 
-Tám ô nhịp đầu của *Für Elise* thuộc loại nổi tiếng nhất trong nhạc piano, nhưng bài không dừng ở đó. Học trọn bài, bạn gặp ba nhân vật rất khác nhau: chủ đề La thứ trôi như nước, đoạn Fa trưởng duyên dáng với những đường chạy nhanh, và đoạn kịch tính trên nốt La trầm gõ liên tục.
+*Für Elise* là một trong những tác phẩm nổi tiếng nhất của Beethoven, nhưng bài không dừng ở tám ô nhịp đầu. Học trọn bài, bạn gặp ba nhân vật rất khác nhau: chủ đề La thứ trôi như nước, đoạn Fa trưởng duyên dáng với những đường chạy nhanh, và đoạn kịch tính trên nốt La trầm gõ liên tục.
 
 ::hop-tac-pham
 
@@ -13,8 +13,8 @@ Tám ô nhịp đầu của *Für Elise* thuộc loại nổi tiếng nhất tro
 - **Chuyền tay vô hình.** Ở chủ đề, dòng móc kép đi từ tay trái sang tay phải. Làm cho chỗ nối ấy không ai nghe ra là kỹ năng dùng mãi về sau (xem [Phối hợp hai tay](/opus/piano/hai-tay/)).
 - **Kiểm soát hai ngón kề nhau.** Cặp Mi–Rê♯ lặp đi lặp lại phải nhẹ, đều, như một tiếng thở dài, không như tiếng gõ.
 - **Ba tính cách trong ba phút.** Trữ tình, duyên dáng, kịch tính: bạn học đổi màu tiếng đàn theo từng đoạn.
-- **Rondo thu nhỏ.** Chủ đề quay lại ba lần, xen hai đoạn tương phản; bạn hiểu [rondo](/opus/hinh-thuc/rondo/) bằng chính đôi tay.
-- **Đi hết bài.** Rất nhiều người dừng ở tám ô đầu. Chơi trọn vẹn và hay cả bài là một bước trưởng thành thật sự.
+- **Rondo thu nhỏ.** Chủ đề vang lên ba lần, xen giữa là hai đoạn tương phản; bạn hiểu [rondo](/opus/hinh-thuc/rondo/) bằng chính đôi tay.
+- **Đi hết bài.** Tám ô đầu chỉ là một phần nhỏ của bài. Chơi trọn vẹn và hay cả bài là một bước trưởng thành thật sự.
 
 ## Bối cảnh
 
@@ -25,8 +25,8 @@ Bài chỉ đến với công chúng năm 1867, khi Ludwig Nohl in lại từ m�
 **Elise là ai?** Không ai biết chắc. Có ba giả thuyết chính:
 
 - **Therese Malfatti**, học trò mà Beethoven được cho là muốn cầu hôn khoảng năm 1810. Theo giả thuyết này, Nohl đã đọc nhầm chữ "Therese" trong nét chữ khó đọc của Beethoven thành "Elise".
-- **Elisabeth Röckel**, một nữ ca sĩ trẻ trong vòng bạn bè của Beethoven (có tài liệu gọi bà là "Elise"), về sau là vợ nhà soạn nhạc Johann Nepomuk Hummel.
-- **Elise Barensfeld**, một cô bé ca sĩ có tài, quê ở Regensburg, sống ở Vienna vào thời gian đó.
+- **Elisabeth Röckel**, về sau là vợ nhà soạn nhạc Johann Nepomuk Hummel. Đây là giả thuyết của Klaus Martin Kopitz; Michael Lorenz đã phản bác.
+- **Elise (Lisette) Barensfeld**, có thể là học trò piano của Therese Malfatti năm 1810. Đây là giả thuyết của Rita Steblin.
 
 Chưa giả thuyết nào được chứng minh. Với người chơi đàn, điều đó không thay đổi gì: bản nhạc vẫn là một món quà nhỏ, thân mật, không phải một tác phẩm hòa nhạc đồ sộ. Xem thêm [thời kỳ Cổ điển](/opus/lich-su/thoi-ky/co-dien/).
 
@@ -39,7 +39,7 @@ Nghe trọn bài hai, ba lần, mắt theo bản nhạc:
 3. Ở đoạn C, nốt La trầm gõ liên tục tạo cảm giác gì: hồi hộp, giận dữ, hay đau đớn?
 4. Đoạn chuyển về chủ đề lần cuối (hợp âm rải đi lên, rồi chuỗi nửa cung đi xuống): nhanh, hay thong thả?
 
-So sánh vài bản thu. Để ý tốc độ: nhiều người chơi chủ đề rất chậm và mơ màng, trong khi *Poco moto* nghĩa là "hơi chuyển động". Nếu tìm được, nghe thêm một bản trên **fortepiano**, loại đàn piano thời Beethoven: tiếng nhẹ hơn, tắt nhanh hơn, và bàn đạp nghe khác hẳn.
+So sánh vài bản thu. Để ý tốc độ: *Poco moto* nghĩa là "hơi chuyển động", nên chủ đề không cần chậm và mơ màng. Nếu tìm được, nghe thêm một bản trên **fortepiano**, loại đàn piano thời Beethoven, để nghe tiếng đàn và bàn đạp khác piano hiện đại thế nào.
 
 ::khoi-nghe{moc="2 12 23 41 61 71 85 113 138 144"}
 
@@ -197,7 +197,7 @@ Bản nhạc ghi rất ít chỉ dẫn sắc thái (bản Breitkopf & Härtel 18
 
 ### Bàn đạp
 
-Bản Breitkopf & Härtel và nhiều ấn bản khác ghi bàn đạp cho từng ô có hợp âm rải tay trái ở chủ đề, nhả trước ô Mi–Rê♯. Nguyên tắc chung: **đổi theo hòa âm, nhả hẳn khi giai điệu đi một mình**. Ở đoạn B, dùng bàn đạp nông, đổi theo hợp âm; với đường chạy móc ba, giảm bàn đạp để từng nốt còn rõ. Ở đoạn C, bàn đạp ngắn cho từng hợp âm, hoặc rất ít, để nốt La lặp lại không thành tiếng ù.
+Bản Breitkopf & Härtel 1888 ghi bàn đạp cho từng ô có hợp âm rải tay trái ở chủ đề, nhả trước ô Mi–Rê♯. Nguyên tắc chung: **đổi theo hòa âm, nhả hẳn khi giai điệu đi một mình**. Ở đoạn B, dùng bàn đạp nông, đổi theo hợp âm; với đường chạy móc ba, giảm bàn đạp để từng nốt còn rõ. Ở đoạn C, bàn đạp ngắn cho từng hợp âm, hoặc rất ít, để nốt La lặp lại không thành tiếng ù.
 
 ### Nốt hoa mỹ
 
@@ -205,7 +205,7 @@ Bản Breitkopf & Härtel và nhiều ấn bản khác ghi bàn đạp cho từn
 
 ### Ấn bản
 
-Vì bản viết tay đã mất, các ấn bản có thể khác nhau ở vài chi tiết như dấu luyến hay bàn đạp. Hãy dùng một bản Urtext và đọc phần chú thích của người biên tập. Các bản "đơn giản hóa" cho người mới học thường cắt bớt đoạn B và C hoặc đổi tay trái: tránh chúng khi bạn học bài thật.
+Vì bản viết tay đã mất, các ấn bản có thể khác nhau ở vài chi tiết như dấu luyến. Hãy dùng một bản Urtext và đọc phần chú thích của người biên tập. Khi học bài thật, tránh các bản "đơn giản hóa" cho người mới học.
 
 ## Lỗi thường gặp
 
@@ -222,7 +222,7 @@ Vì bản viết tay đã mất, các ấn bản có thể khác nhau ở vài c
 
 - **Cùng chặng:** [Bach: Prelude Đô trưởng](/opus/piano/tac-pham/bach-prelude-do/), [Chopin: Prélude Mi thứ](/opus/piano/tac-pham/chopin-prelude-mi-thu/), [Satie: Gymnopédie số 1](/opus/piano/tac-pham/satie-gymnopedie/).
 - **Beethoven tiếp theo:** [Sonata Sol trưởng Op. 49 số 2](/opus/piano/tac-pham/beethoven-op49-2/) và các bagatelle trong Op. 33 hoặc Op. 119; rồi [Pathétique, chương 2](/opus/piano/tac-pham/pathetique-adagio/).
-- **Cổ điển:** [Mozart: Sonata K. 545](/opus/piano/tac-pham/mozart-k545/), cùng lối viết trong sáng nhưng dài hơi hơn.
+- **Cổ điển:** [Mozart: Sonata K. 545](/opus/piano/tac-pham/mozart-k545/), một sonata Cổ điển ở chặng sau.
 - **Nghe thêm:** [Beethoven: Sonata *Ánh trăng*](/opus/nghe-nhac/beethoven-moonlight/).
 
 ::hoc-tiep
@@ -234,7 +234,7 @@ Vì bản viết tay đã mất, các ấn bản có thể khác nhau ở vài c
 + Rondo nhỏ A–B–A–C–A
 - Hình thức sonata
 - Chủ đề và biến tấu
-> Chủ đề Mi–Rê♯ quay lại ba lần, xen giữa là đoạn Fa trưởng (B) và đoạn kịch tính trên nốt La trầm (C).
+> Chủ đề Mi–Rê♯ vang lên ba lần, xen giữa là đoạn Fa trưởng (B) và đoạn kịch tính trên nốt La trầm (C).
 ? Poco moto nghĩa là gì?
 - Rất chậm, mơ màng
 + Hơi chuyển động
@@ -254,7 +254,7 @@ Vì bản viết tay đã mất, các ấn bản có thể khác nhau ở vài c
 
 ## Nguồn
 
-- Barry Cooper (biên tập), *The Beethoven Compendium*, Thames & Hudson, 1991.
-- Lewis Lockwood, *Beethoven: The Music and the Life*, W. W. Norton, 2003.
-- Georg Kinsky, Hans Halm, *Das Werk Beethovens*, G. Henle Verlag, 1955 (danh mục, nơi đặt ký hiệu WoO).
-- Bản nhạc: [IMSLP](https://imslp.org/); đoạn trích đối chiếu với bản Breitkopf & Härtel 1888 qua bản chép LilyPond của [Mutopia Project](https://www.mutopiaproject.org/). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
+- Beethoven, *Bagatelle in a minor WoO 59 (Für Elise)*, G. Henle Verlag, HN 1347 (biên tập Joanna Cobb Biermann): lời nói đầu và bình chú trên [trang ấn bản](https://www.henle.de/en/Bagatelle-in-a-minor-WoO-59-Fuer-Elise/HN-1347) (phác thảo 1808 và 1810, Nohl và bản in 1867, các giả thuyết về Elise).
+- *Ludwig van Beethoven. Thematisch-bibliographisches Werkverzeichnis*, G. Henle Verlag, 2014 (danh mục, nơi đặt ký hiệu WoO): [mục WoO 59](https://www.henle.de/download/KB_ausfuehrlich/2207_2_153-155.pdf).
+- Beethoven-Haus Bonn: [trang tác phẩm WoO 59](https://www.beethoven.de/en/work/view/5327609864912896) và [tờ phác thảo BH 116](https://www.beethoven.de/en/media/view/5010945952710656).
+- Bản nhạc: [IMSLP](https://imslp.org/wiki/F%C3%BCr_Elise,_WoO_59_(Beethoven,_Ludwig_van)); đoạn trích đối chiếu với bản Breitkopf & Härtel 1888 qua bản chép LilyPond của [Mutopia Project](https://www.mutopiaproject.org/). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

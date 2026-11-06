@@ -12,15 +12,15 @@ lan:
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
   - so: 2
-    ngay: null
+    ngay: '2026-11-05'
     nhanh: moi/d6-l3
     ma_bam: null
     nguoi:
-      luot_1: null
+      luot_1: Claude Opus 5.5 (D6-L3 phần B)
       luot_2: null
       review: null
       kiem_mau: null
-ghi_chu: "Trang bài học cũ ../opus-zero/docs/piano/tac-pham/satie-gymnopedie.md có (loai: bai-hoc là cấu trúc, không phải nhận định)."
+ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/satie-gymnopedie.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Lần 2 (D6-L3, lượt 1 phần B): nhận định n6–n24 cho các trường chưa khóa (bản ghi không có trường giong; danh_muc không có). Bản nhạc: bản in gốc 1888 (Commons). Sửa đề xuất: n13 (tuổi của Satie: 21, Henle ghi 22; viết "chưa đầy 22 tuổi"); sua-B.yml. Chưa chắc: n19 (bản in lại của Dover). thoi_ky "Cuối thế kỷ 19" khác nhãn "Early 20th century" của IMSLP (n7).'
 nguon:
   - id: imslp-gymnopedies
     bac: 2
@@ -54,6 +54,30 @@ nguon:
     bac: 2
     ten: G. Henle Verlag, Levels of Difficulty (thang độ khó 1–9; trang không có bảng quy đổi sang ABRSM)
     link: https://www.henle.de/Levels-of-Difficulty/
+  - id: 'commons-or'
+    bac: 1
+    ten: 'Wikimedia Commons, File:IMSLP03213-Satie-GymnopediesOrEd.pdf (bản in gốc, Paris 1888, PD-old): "à Mademoiselle Jeanne de Bret", "Lent et douloureux", 3/4, hai dấu thăng, 78 ô viết liền; kết lượt 1 Rê–Fa♯–La–Rê (ô 39), kết lượt 2 Rê–Fa♮–La–Rê (ô 78); xem ảnh từng trang'
+    link: 'https://commons.wikimedia.org/wiki/File:IMSLP03213-Satie-GymnopediesOrEd.pdf'
+  - id: 'henle-hn1072-vorwort'
+    bac: 2
+    ten: 'G. Henle Verlag, HN 1072, Preface (Krämer 2011): "composed at the age of 22"; "composed quickly, one after the other, between February and early April 1888"; "The 1ère Gymnopédie was dedicated to Jeanne de Bret"; "technically unchallenging"; "laid out in two sections"'
+    link: 'https://www.henle.de/media/d4/79/64/1697725847/1072-1697725846-sync.pdf'
+  - id: 'imslp-satie'
+    bac: 2
+    ten: 'IMSLP, Category:Satie, Erik (wikitext): Born 1866/5/17, Died 1925/7/1, Time Period Early 20th century'
+    link: 'https://imslp.org/wiki/Category:Satie,_Erik'
+  - id: 'brit-tg'
+    bac: 2
+    ten: 'Britannica, Trois gymnopédies (Wayback 2025): "three pieces for solo piano by French composer Erik Satie, written in 1888"'
+    link: 'https://www.britannica.com/topic/Trois-gymnopedies'
+  - id: 'commons-alciatore'
+    bac: 2
+    ten: 'Wikimedia Commons, File:Erik Satie - gymnopedies - la 1 ere. lent et douloureux.ogg: Author Robin Alciatore, Source musopen.com, {{PD-author|Robin Alciatore}}; API thời lượng 183,59 giây'
+    link: 'https://commons.wikimedia.org/wiki/File:Erik_Satie_-_gymnopedies_-_la_1_ere._lent_et_douloureux.ogg'
+  - id: 'cnrtl-douloureux'
+    bac: 2
+    ten: 'CNRTL, douloureux; CNRTL, lent'
+    link: 'https://www.cnrtl.fr/definition/douloureux'
 nhan_dinh:
   - id: n1
     cau: "Tên bài: Gymnopédie số 1 (bài đầu trong bộ Trois Gymnopédies cho piano)."
@@ -124,3 +148,182 @@ nhan_dinh:
     luot_2: khong-chac
     luot_2_nguon: [ https://www.henle.de/en/Gymnopedies/HN-1072 ]
     luot_2_ghi_chu: Follows n4 (no official listing).
+  - id: 'n6'
+    cau: 'Nhịp: 3/4.'
+    loai: 'cau-truc'
+    truong:
+    - 'nhip'
+    nguon:
+    - 'commons-or'
+    ket_qua: 'dung'
+  - id: 'n7'
+    cau: 'Thời kỳ: cuối thế kỷ 19.'
+    loai: 'lich-su'
+    truong:
+    - 'thoi_ky'
+    nguon:
+    - 'imslp-gymnopedies'
+    - 'brit-tg'
+    - 'henle-hn1072-vorwort'
+    ket_qua: 'dung'
+    ghi_chu: 'Bài viết năm 1888 (IMSLP "1888 (March-April)", Britannica, Henle), nên "cuối thế kỷ 19" đúng theo năm. IMSLP xếp phong cách là "Early 20th century" (Category Satie: Time Period Early 20th century); đây là nhãn thời kỳ của site (theo năm sáng tác), ghi để người giao biết.'
+  - id: 'n8'
+    cau: 'Kỹ năng chính: bước nhảy tay trái, bàn đạp, giữ tốc độ chậm.'
+    loai: 'cau-truc'
+    truong:
+    - 'ky_nang_chinh'
+    nguon:
+    - 'commons-or'
+    ket_qua: 'dung'
+    ghi_chu: 'Bản in gốc: tay trái nốt trầm (nốt trắng chấm dôi) rồi hợp âm cách hơn quãng tám; Lent.'
+  - id: 'n9'
+    cau: 'Chip: "3/4", "Lent et douloureux", "Hai lượt gần giống nhau".'
+    loai: 'cau-truc'
+    truong:
+    - 'chip'
+    nguon:
+    - 'commons-or'
+    ket_qua: 'dung'
+    ghi_chu: 'Bản in gốc: ô 40–70 nhắc lại ô 1–31; phần kết khác.'
+  - id: 'n10'
+    cau: 'Chip cấp độ: ≈ Grade 4.'
+    loai: 'cap-do'
+    truong:
+    - 'chip'
+    nguon:
+    - 'henle-hn1072'
+    - 'abrsm-2526'
+    - 'rcm-2022'
+    ket_qua: 'dung'
+    ghi_chu: 'Trùng grade đã khóa (lần 1 n4: ước lượng, không đề cương nào xếp bài; Henle mức 2). Henle Preface: "technically unchallenging".'
+  - id: 'n11'
+    cau: 'Thông tin, Nhà soạn nhạc: Erik Satie (1866–1925).'
+    loai: 'nam'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'imslp-satie'
+    ket_qua: 'dung'
+  - id: 'n12'
+    cau: 'Thông tin, Tác phẩm: Gymnopédie số 1, bài đầu trong bộ Trois Gymnopédies (Ba Gymnopédie) cho piano.'
+    loai: 'ten'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'imslp-gymnopedies'
+    - 'brit-tg'
+    ket_qua: 'dung'
+  - id: 'n13'
+    cau: 'Thông tin, Sáng tác: tháng 2 đến đầu tháng 4 năm 1888, khi Satie chưa đầy 22 tuổi.'
+    loai: 'nam'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'henle-hn1072-vorwort'
+    - 'imslp-gymnopedies'
+    - 'imslp-satie'
+    ket_qua: 'da-sua'
+    ghi_chu: 'Dữ liệu ghi "1888, khi Satie 22 tuổi". Đề xuất: "1888 (tháng 2 đến đầu tháng 4), khi Satie chưa đầy 22 tuổi". Lý do: Satie sinh 17/5/1866 (IMSLP), bài viết tháng 2 đến đầu tháng 4/1888 (Henle; IMSLP "1888 (March-April)"), nên lúc ấy ông 21 tuổi. Henle Preface viết "composed at the age of 22" (có lẽ tính tuổi theo năm); hai nguồn lệch nhau, viết "chưa đầy 22 tuổi" đúng với cả hai mốc. Xem sua-B.yml.'
+  - id: 'n14'
+    cau: 'Thông tin: bài số 1 đề tặng cô Jeanne de Bret.'
+    loai: 'lich-su'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'commons-or'
+    - 'henle-hn1072-vorwort'
+    ket_qua: 'dung'
+    ghi_chu: 'Bản in gốc: "à Mademoiselle Jeanne de Bret"; Henle: "dedicated to Jeanne de Bret".'
+  - id: 'n15'
+    cau: 'Thông tin, Giọng · nhịp · tốc độ: hóa biểu hai dấu thăng, hòa âm lơ lửng và kết ở Rê · 3/4 · Lent et douloureux ("chậm và đau đớn").'
+    loai: 'cau-truc'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'commons-or'
+    - 'cnrtl-douloureux'
+    ket_qua: 'dung'
+    ghi_chu: 'Bản in gốc: hai dấu thăng; lượt 1 kết Rê trưởng (ô 39), lượt 2 kết Rê thứ (ô 78); "Lent et douloureux". CNRTL: lent, douloureux.'
+  - id: 'n16'
+    cau: 'Thông tin, Hình thức: cả bài được chơi hai lượt gần như giống nhau, chỉ khác phần kết; mỗi lượt: 4 ô dạo đầu, hai câu giai điệu, đoạn giữa, kết.'
+    loai: 'cau-truc'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'commons-or'
+    - 'henle-hn1072-vorwort'
+    ket_qua: 'dung'
+    ghi_chu: 'Bản in gốc: 4 + 8 + 9 + 10 + 8 (lượt 1), 31 + 8 (lượt 2). Henle: "laid out in two sections".'
+  - id: 'n17'
+    cau: 'Thông tin, Độ khó: khoảng ABRSM Grade 4 (ước lượng).'
+    loai: 'cap-do'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'henle-hn1072'
+    - 'abrsm-2526'
+    - 'trinity-2023'
+    - 'rcm-2022'
+    ket_qua: 'dung'
+    ghi_chu: '"(Ước lượng)" đúng: không có trong ABRSM, Trinity, RCM (lần 1 n4; RCM 2022 chỉ có Gnossienne số 3 ở Level 8, đã mở lại). Henle mức 2.'
+  - id: 'n18'
+    cau: 'Thông tin, Kỹ năng chính: bước nhảy tay trái từ nốt trầm lên hợp âm, nhịp đều ở tốc độ chậm, giai điệu dài legato, bàn đạp mỗi ô, una corda, sắc thái hẹp.'
+    loai: 'cau-truc'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'commons-or'
+    ket_qua: 'dung'
+    ghi_chu: 'Bản in gốc: nốt trầm – hợp âm; giai điệu nối dài (ô 9–12 Fa♯ ngân bốn ô); sắc thái pp–p, một f mỗi lượt. Una corda, bàn đạp là lời khuyên (bản in không ghi).'
+  - id: 'n19'
+    cau: 'Thông tin, Bản nhạc: các bản in lại bản gốc, ví dụ của Dover.'
+    loai: 'ten'
+    truong:
+    - 'thong_tin'
+    nguon: []
+    ket_qua: null
+    ghi_chu: 'chưa chắc: chưa mở được trang nào của Dover có Gymnopédies (bản in lại bản gốc). Bản in gốc có trên IMSLP và Wikimedia Commons; bản Urtext có Henle HN 1072. Đề xuất có điều kiện (sua-B.yml): nếu lượt 2 không tìm được trang Dover, đổi thành "IMSLP (bản in gốc năm 1888); bản Urtext: G. Henle Verlag (HN 1072)".'
+  - id: 'n20'
+    cau: 'Hình, chú thích: cả bài được chơi hai lượt gần như giống nhau, chỉ khác phần kết.'
+    loai: 'cau-truc'
+    truong:
+    - 'hinh'
+    nguon:
+    - 'commons-or'
+    ket_qua: 'dung'
+  - id: 'n21'
+    cau: 'Hình, các đoạn: dạo đầu 4 ô, chỉ tay trái (4); câu 1 8 ô (8); câu 2 9 ô (9); đoạn giữa có Đô♮, Fa♮ (10); kết 1 ở Rê trưởng (8); lượt 2 nhắc lại từ đầu (31); kết 2 có Fa♮, ở Rê thứ (8).'
+    loai: 'cau-truc'
+    truong:
+    - 'hinh'
+    nguon:
+    - 'commons-or'
+    ket_qua: 'dung'
+    ghi_chu: 'Bản in gốc: ô 1–4, 5–12, 13–21, 22–31, 32–39, 40–70, 71–78: 78 ô.'
+  - id: 'n22'
+    cau: 'Bản thu: người chơi Robin Alciatore (Musopen).'
+    loai: 'ten'
+    truong:
+    - 'ban_thu'
+    nguon:
+    - 'commons-alciatore'
+    ket_qua: 'dung'
+    ghi_chu: 'Commons: "Author=Robin Alciatore", "Source=http://www.musopen.com".'
+  - id: 'n23'
+    cau: 'Bản thu: phạm vi công cộng; trang https://commons.wikimedia.org/wiki/File:Erik_Satie_-_gymnopedies_-_la_1_ere._lent_et_douloureux.ogg.'
+    loai: 'ten'
+    truong:
+    - 'ban_thu'
+    nguon:
+    - 'commons-alciatore'
+    ket_qua: 'dung'
+    ghi_chu: 'Commons: {{PD-author|Robin Alciatore}}; "Musopen has requested in-line attribution" (dữ liệu đã ghi "(Musopen)" trong by).'
+  - id: 'n24'
+    cau: 'Bản thu: file mp3 chuyển mã của Commons, nguồn ogg gốc; dài 183,59 giây.'
+    loai: 'so-lieu'
+    truong:
+    - 'ban_thu'
+    nguon:
+    - 'commons-alciatore'
+    ket_qua: 'dung'
+    ghi_chu: 'Commons API: duration 183.58857142857144.'

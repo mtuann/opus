@@ -1,10 +1,10 @@
 ---
 title: "Beethoven: Sonata Sol trưởng Op. 49 số 2, chương 1"
-description: "Đây là chương sonata thật đầu tiên mà nhiều người học có thể chơi trọn: 122 ô nhịp, đủ trình bày, phát triển và tái hiện, không chỗ nào đòi sức mạnh hay tốc độ…"
+description: 'Một chương sonata trọn vẹn mà bản in đầu tiên gọi là "sonata dễ": 122 ô nhịp, đủ trình bày, phát triển và tái hiện, không chỗ nào đòi sức mạnh hay tốc độ…'
 tac_pham: beethoven-op49-2
 ---
 
-Đây là chương sonata thật đầu tiên mà nhiều người học có thể chơi trọn: 122 ô nhịp, đủ trình bày, phát triển và tái hiện, không chỗ nào đòi sức mạnh hay tốc độ ghê gớm. Trang này hướng dẫn tập chương 1 (*Allegro, ma non troppo*) để bạn nghe **hình thức sonata** từ bên trong: lúc nào nhạc rời nhà, đi đâu, và trở về bằng cách nào.
+Đây là một chương sonata trọn vẹn mà bản in đầu tiên gọi là "sonata dễ": 122 ô nhịp, đủ trình bày, phát triển và tái hiện, không chỗ nào đòi sức mạnh hay tốc độ ghê gớm. Trang này hướng dẫn tập chương 1 (*Allegro, ma non troppo*) để bạn nghe **hình thức sonata** từ bên trong: lúc nào nhạc rời nhà, đi đâu, và trở về bằng cách nào.
 
 ::hop-tac-pham
 
@@ -13,7 +13,7 @@ tac_pham: beethoven-op49-2
 - **Hình thức sonata trong tầm tay.** Ba phần của [hình thức sonata](/opus/hinh-thuc/sonata/) đều ngắn và rõ. Có một chi tiết rất đáng học: đoạn chuyển ở phần tái hiện (ô 82–87) gần như nguyên văn đoạn chuyển ở phần trình bày (ô 15–20), nhưng lần đầu nó dẫn sang chủ đề 2 ở Rê trưởng, lần sau ở Sol trưởng. Cùng những nốt ấy, hai ý nghĩa: bạn cảm nhận "giọng" bằng chính đôi tay.
 - **Chùm ba và nhịp chấm dôi sống cạnh nhau.** Ô 1 có **chùm ba** (liên ba: ba nốt móc đơn trong một phách đen), ô 3 có **nhịp chấm dôi** (nốt đen chấm dôi rồi nốt móc đơn). Giữ hai kiểu tiết tấu này tách bạch là bài học về sự chính xác mà mọi tác phẩm Cổ điển đều cần.
 - **Gam thành âm nhạc.** Các chuỗi gam chùm ba ở nhóm kết (ô 36–43, ô 103–110) là lý do để luyện [gam](/opus/piano/gam/) mỗi ngày; tay trái cũng có gam chùm ba (ô 44, 47, 111, 114).
-- **Tay trái nhiều vai.** Một bè trầm đi từng bước (ô 2–4), **hình đệm nốt lặp** (ô 6–8, 21–24), hợp âm rải chùm ba (ô 15–19), nốt lặp đều (ô 59–62). Học xong bài này, tay trái của bạn không còn chỉ biết "đệm".
+- **Tay trái nhiều vai.** Một bè trầm có giai điệu riêng (ô 2–4), **hình đệm nốt lặp** (ô 6–8, 21–24), hợp âm rải chùm ba (ô 15–19), nốt lặp đều (ô 59–62). Học xong bài này, tay trái của bạn không còn chỉ biết "đệm".
 
 :::tip[Chưa sẵn sàng?]
 Nếu gam Sol trưởng và Rê trưởng hai quãng tám, mỗi phách ba nốt, ở ♩ = 120 còn vấp, học trước [Clementi: Sonatina Op. 36 số 1](/opus/piano/tac-pham/clementi-sonatina/) hoặc [Sonatina Sol trưởng gán cho Beethoven](/opus/piano/tac-pham/beethoven-sonatina-sol/). Bài này cũng là bước chuẩn bị tốt cho [Mozart: Sonata K. 545](/opus/piano/tac-pham/mozart-k545/) ở chặng sau: ít Alberti hơn, nhiều chùm ba hơn.
@@ -21,13 +21,13 @@ Nếu gam Sol trưởng và Rê trưởng hai quãng tám, mỗi phách ba nốt
 
 ## Bối cảnh
 
-Hai sonata Op. 49 đều chỉ có hai chương. Theo lời giới thiệu của ấn bản Henle, Beethoven viết chúng khoảng 1796–1798, cùng thời với ba sonata Op. 10, khi ông chưa đến ba mươi tuổi và được biết đến ở Vienna trước hết như một nghệ sĩ piano. Chúng không được in ngay. Việc chúng được in có lẽ là nhờ người em trai Carl, người lo việc giao dịch với các nhà xuất bản cho anh: Carl đem chào vài nơi không thành, đến năm 1805 mới có một nhà xuất bản ở Vienna nhận in. Bản in đầu tiên gọi chúng là *Sonates faciles*, "những sonata dễ".
+Hai sonata Op. 49 đều chỉ có hai chương. Theo lời giới thiệu của ấn bản Henle, Beethoven viết chúng khoảng 1796–1798 (số 2 có lẽ năm 1796), gần cùng thời với ba sonata Op. 10, khi ông chưa đến ba mươi tuổi. Chúng không được in ngay. Việc chúng được in có lẽ là nhờ người em trai Carl, người lục tìm trong các bản thảo của anh những bài có thể đem bán: từ cuối năm 1802, Carl đem chào vài nơi không thành, đến tháng 1 năm 1805 một nhà xuất bản ở Vienna mới in chúng. Bản in đầu tiên gọi chúng là *Sonates faciles*, "những sonata dễ".
 
-Vì in muộn, hai bản sonata nhỏ này mang số Op. 49, lớn hơn cả Sonata *Ánh trăng* Op. 27 (1801), bài được viết sau chúng. Ở đây số Op. cho biết lúc in, không phải lúc viết: Op. 49 số 2 thuộc về Beethoven của những năm 1790, còn rất gần ngôn ngữ của Haydn và Mozart.
+Vì in muộn, hai bản sonata nhỏ này mang số Op. 49, lớn hơn cả Sonata *Ánh trăng* Op. 27 (1801), bài được viết sau chúng. Ở đây số Op. cho biết lúc in, không phải lúc viết: Op. 49 số 2 thuộc về Beethoven của những năm 1790.
 
-Chương 2 (*Tempo di Menuetto*) có chủ đề mà Beethoven dùng lại trong chương minuet của bản Septet Op. 20 (1799–1800), một tác phẩm rất được ưa chuộng thời ông.
+Chương 2 (*Tempo di Menuetto*) có chủ đề mà Beethoven dùng lại trong chương minuet của bản Septet Op. 20 (1799), một tác phẩm rất được ưa chuộng thời ông.
 
-Đàn Vienna cuối thế kỷ 18 có âm vực khoảng năm quãng tám (Fa1–Fa6), tiếng nhẹ và tắt nhanh; cả chương này nằm gọn trong khoảng Sol1–Mi6. Trên đàn hiện đại, hãy giữ tiếng gọn, sáng, và rất ít bàn đạp. Xem thêm [thời kỳ Cổ điển](/opus/lich-su/thoi-ky/co-dien/).
+Đàn piano Vienna cuối thế kỷ 18 có âm vực khoảng năm quãng tám (kiểu đàn của Anton Walter: Fa1–Sol6); cả chương này nằm gọn trong khoảng Sol1–Mi6. Trên đàn hiện đại, hãy giữ tiếng gọn, sáng, và rất ít bàn đạp. Xem thêm [thời kỳ Cổ điển](/opus/lich-su/thoi-ky/co-dien/).
 
 ## Nghe trước khi tập
 
@@ -38,7 +38,7 @@ Nghe cả hai chương vài lần, rồi tập trung vào chương 1 với bốn
 3. **Gam chùm ba:** nghệ sĩ làm chúng nghe như câu nhạc hay như bài tập ngón?
 4. **Phần phát triển:** nhạc tối lại ở đâu, và bao lâu thì trở về?
 
-Mọi nghệ sĩ thu trọn 32 sonata của Beethoven đều có bài này, ví dụ Wilhelm Kempff, Alfred Brendel hay András Schiff. So sánh tốc độ họ chọn cho *ma non troppo*, độ tách tiếng của các nốt đen và độ nổi của tay trái. Nghe thêm một bản trên fortepiano (Ronald Brautigam thu trọn các sonata của Beethoven trên loại đàn này) để thấy chùm ba và gam trong trẻo thế nào trên một cây đàn gần với đàn thời Beethoven. Site chưa có hướng dẫn nghe riêng cho Op. 49; [hướng dẫn nghe *Pathétique*](/opus/nghe-nhac/beethoven-pathetique/) giới thiệu một sonata lớn hơn của Beethoven cùng thời kỳ, và [Nghệ sĩ piano và bản thu nên nghe](/opus/piano/nghe-si/) giúp bạn chọn bản thu.
+Mọi bản thu trọn 32 sonata của Beethoven đều có bài này. So sánh tốc độ họ chọn cho *ma non troppo*, độ tách tiếng của các nốt đen và độ nổi của tay trái. Nghe thêm một bản trên fortepiano (Ronald Brautigam thu trọn các sonata của Beethoven trên loại đàn này) để thấy chùm ba và gam trong trẻo thế nào trên một cây đàn gần với đàn thời Beethoven. Site chưa có hướng dẫn nghe riêng cho Op. 49; [hướng dẫn nghe *Pathétique*](/opus/nghe-nhac/beethoven-pathetique/) giới thiệu một sonata lớn hơn của Beethoven cùng thời kỳ, và [Nghệ sĩ piano và bản thu nên nghe](/opus/piano/nghe-si/) giúp bạn chọn bản thu.
 
 ::khoi-nghe{moc="1 15 24 34 60 88 177 200 225 262"}
 
@@ -57,7 +57,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | … | **Phát triển** (ô 53–66): cử chỉ mở đầu trở lại ở Rê thứ, *f*; rồi La thứ, Mi thứ trên nốt Si lặp của tay trái; hai tay cùng đi xuống, dẫn về |
 | … | **Tái hiện** (ô 67–81): chủ đề 1 ở Sol trưởng; từ ô 74 rẽ sang đường mới, gam chùm ba đi qua Đô trưởng và La thứ |
 | … | **Đoạn chuyển và chủ đề 2** (ô 82–102): đoạn chuyển gần như nguyên văn lần đầu, nhưng chủ đề 2 giờ ở Sol trưởng, với ba nốt Rê làm đà (ô 87) |
-| … | **Nhóm kết** (ô 103–122): gam chùm ba ở Sol trưởng, quãng ba ngân, các hợp âm kết; ô cuối là một dấu lặng có dấu ngân |
+| … | **Nhóm kết** (ô 103–122): gam chùm ba ở Sol trưởng, quãng ba ngân, các hợp âm kết; ô cuối: hợp âm, rồi dấu lặng có dấu ngân |
 
 ## Cấu trúc
 
@@ -106,7 +106,7 @@ K:G
 
 | Chỗ khó | Vì sao khó | Cách tập |
 |---|---|---|
-| Hợp âm rồi chùm ba đi lên (ô 1, 5, 53, 56, 67, 71) | Tay rời hợp âm để rải hơn một quãng tám (ô 1: Rê–Sol–Si–Rê rồi Đô–La); chùm ba hay vội và rơi trễ vào phách đầu ô sau | Gom mỗi chùm ba thành hợp âm khối để biết thế tay; tập "đích đến": dừng trên nốt Sol ở đầu ô 2. Đếm hai phách trắng: hợp âm là phách 1, hai chùm ba là phách 2 |
+| Hợp âm rồi chùm ba (ô 1, 5, 53, 56, 67, 71) | Tay rời hợp âm để rải hơn một quãng tám (ô 1: Rê–Sol–Si–Rê rồi Đô–La); chùm ba hay vội và rơi trễ vào phách đầu ô sau | Gom mỗi chùm ba thành hợp âm khối để biết thế tay; tập "đích đến": dừng trên nốt Sol ở đầu ô 2. Đếm hai phách trắng: hợp âm là phách 1, hai chùm ba là phách 2 |
 | Nhịp chấm dôi cạnh chùm ba (ô 3, 7, 69) | Tai vừa nghe chùm ba nên muốn đặt nốt móc đơn sau dấu chấm vào chỗ nốt thứ ba của chùm ba: nhịp bị đung đưa | Đếm theo móc đơn "1 và 2 và": nốt móc đơn rơi đúng chữ "và" cuối. Bài tập 1 xen một ô chùm ba với một ô chấm dôi. Xem [tiết tấu nâng cao](/opus/nhac-ly/15-tiet-tau-nang-cao/) |
 | Láy rền có nốt kết (ô 4, 8, 70) | Chỉ có một nốt đen ở tốc độ nhanh; nốt trên của láy (Rê) vừa vang ngay trước | Ở tốc độ thật chỉ đủ năm, sáu nốt nhanh: vài nốt Đô–Rê, rồi hai nốt kết Si–Đô, rồi Si đúng phách. Có thể bắt đầu láy từ chính nốt Đô, vì nốt Rê vừa vang đã làm nốt trên; nếu bắt đầu từ nốt trên, đừng nhấn nốt Rê ấy lần nữa. Xem [Nốt hoa mỹ](/opus/piano/not-hoa-my/) |
 | Cặp nốt luyến và láy quanh (ô 9–14) | Mỗi cặp phải "nặng – nhẹ" rồi nhấc tay đúng dấu lặng; láy quanh sau nốt Sol chấm dôi (ô 12) dễ làm trễ nốt La | Nói to "nặng – nhẹ – (nghỉ)"; nốt thứ hai ngắn và nhẹ. Láy quanh: giữ Sol, chơi bốn nốt La–Sol–Fa♯–Sol trong phần chấm dôi, rồi vào La đúng chỗ của nó. Tập chậm với [máy đếm nhịp](/opus/luyen-tap/metronome/) theo móc đơn |
@@ -160,7 +160,7 @@ K:G
 
 1. Ô 1: nhóm thứ ba (Fa♯–Sol–La) và nhóm thứ tư (Si–Đô–Rê) có ngón cái nằm giữa nhóm. Nhấn rất nhẹ nốt đầu mỗi nhóm ba; ngón cái luồn sớm và nhẹ.
 2. Ô 3: tay trái chạy gam, tay phải giữ quãng ba và lắng nghe tay trái đều đến đâu.
-3. Tập thêm ở Rê trưởng và Đô trưởng, hai giọng của các chuỗi gam chùm ba trong phần trình bày và phần tái hiện.
+3. Tập thêm ở Rê trưởng và Đô trưởng: các chuỗi gam chùm ba ở ô 36–43 đi ở Rê trưởng, ở ô 75–78 đi qua Đô trưởng.
 
 ### 3. Hình đệm nốt lặp ở tay trái
 
@@ -203,7 +203,7 @@ Kế hoạch 8 tuần, 30–45 phút mỗi ngày. Tốc độ tính theo phách 
 
 ### Tốc độ và nhịp
 
-*Allegro, ma non troppo*: nhanh, nhưng không quá. Nhịp 2/2 nghĩa là hai phách trắng mỗi ô; nghĩ theo phách trắng, chùm ba sẽ trôi và nhịp chấm dôi có đà. Chọn tốc độ theo đoạn khó nhất (thường là gam chùm ba ở nhóm kết) rồi giữ nó cho cả chương. Nhạc Cổ điển gần như không co giãn nhịp: chỉ một hơi thở rất nhỏ trước phần phát triển và trước tái hiện.
+*Allegro, ma non troppo*: nhanh, nhưng không quá. Nhịp 2/2 nghĩa là hai phách trắng mỗi ô; nghĩ theo phách trắng, chùm ba sẽ trôi và nhịp chấm dôi có đà. Chọn tốc độ theo đoạn khó nhất (thường là gam chùm ba ở nhóm kết) rồi giữ nó cho cả chương. Giữ nhịp ổn định, chỉ cho một hơi thở rất nhỏ trước phần phát triển và trước tái hiện.
 
 ### Sắc thái
 
@@ -230,7 +230,7 @@ Xem [Nốt hoa mỹ](/opus/piano/not-hoa-my/) và theo chú thích của bản U
 
 ### Ấn bản
 
-Bản Urtext Henle (HN 1327) in chung hai sonata Op. 49, ngón bấm của Murray Perahia. Các bản thế kỷ 19, như bản Breitkopf dùng cho đoạn trích trên trang này, đáng tin về nốt nhạc, nhưng dấu luyến và sắc thái có thể khác bản Urtext ở vài chỗ: khi phân vân, theo bản Urtext.
+Bản Urtext Henle (HN 1327) in chung hai sonata Op. 49, ngón bấm của Murray Perahia. Bản Breitkopf thế kỷ 19 dùng cho đoạn trích trên trang này có thể khác bản Urtext ở dấu luyến và sắc thái: khi phân vân, theo bản Urtext.
 
 ## Lỗi thường gặp
 
@@ -246,8 +246,8 @@ Bản Urtext Henle (HN 1327) in chung hai sonata Op. 49, ngón bấm của Murra
 
 ## Học tiếp
 
-- **Chương 2 của chính sonata này** (*Tempo di Menuetto*): cùng giọng, nhẹ nhàng hơn, với chủ đề bạn sẽ gặp lại trong Septet Op. 20.
-- **Sonata Op. 49 số 1** (Sol thứ): hai chương, *Andante* buồn và hát, rồi *Rondo: Allegro*.
+- **Chương 2 của chính sonata này** (*Tempo di Menuetto*): cùng giọng Sol trưởng, với chủ đề bạn sẽ gặp lại trong Septet Op. 20.
+- **Sonata Op. 49 số 1** (Sol thứ): hai chương, *Andante* rồi *Rondo: Allegro*.
 - **Mozart: [Sonata K. 545](/opus/piano/tac-pham/mozart-k545/)**: bước tiếp theo ở chặng 5, cũng hình thức sonata nhưng với đệm Alberti và chuỗi gam móc kép.
 - **Beethoven tiếp theo:** [Pathétique, chương 2](/opus/piano/tac-pham/pathetique-adagio/) và [Sonata Ánh trăng, chương 1](/opus/piano/tac-pham/beethoven-anh-trang/).
 - Xem thứ tự gợi ý ở [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
@@ -272,7 +272,7 @@ Bản Urtext Henle (HN 1327) in chung hai sonata Op. 49, ngón bấm của Murra
 - Chơi nốt móc đơn trùng với nốt thứ ba của chùm ba cho liền mạch
 - Bỏ dấu chấm dôi cho dễ
 > Tai vừa nghe chùm ba nên muốn đặt nốt móc đơn muộn, ở chỗ nốt thứ ba của chùm ba. Bài tập 1 giúp tách hai kiểu tiết tấu.
-? Vì sao một sonata viết khoảng 1796–1798 lại mang số Op. 49, lớn hơn cả Sonata Ánh trăng (Op. 27)?
+? Vì sao một sonata viết khoảng năm 1796 lại mang số Op. 49, lớn hơn cả Sonata Ánh trăng (Op. 27)?
 - Vì Beethoven viết lại nó năm 1805
 + Vì nó chỉ được in năm 1805, nhiều năm sau khi viết
 - Vì số Op. do nhà xuất bản Henle đặt sau này
@@ -281,8 +281,6 @@ Bản Urtext Henle (HN 1327) in chung hai sonata Op. 49, ngón bấm của Murra
 
 ## Nguồn
 
-- Beethoven, *Two Easy Piano Sonatas* Op. 49, G. Henle Verlag, HN 1327 (biên tập Norbert Gertsch, ngón bấm Murray Perahia): lời giới thiệu và mức độ khó trên [trang ấn bản](https://www.henle.de/en/Two-Easy-Piano-Sonatas-no.-19-and-no.-20-g-minor-and-G-major-op.-49-no.-1-and-no.-2/HN-1327) (thời gian sáng tác, việc in năm 1805, tên *Sonates faciles*, mức 3).
+- Beethoven, *Two Easy Piano Sonatas* Op. 49, G. Henle Verlag, HN 1327 (biên tập Norbert Gertsch, ngón bấm Murray Perahia): lời giới thiệu và mức độ khó trên [trang ấn bản](https://www.henle.de/en/Two-Easy-Piano-Sonatas-no.-19-and-no.-20-g-minor-and-G-major-op.-49-no.-1-and-no.-2/HN-1327) (thời gian sáng tác, việc in năm 1805, tên *Sonates faciles*, Septet Op. 20, mức 3).
 - *Ludwig van Beethovens Werke* (Breitkopf & Härtel, 1862–1865), bản dàn trang công cộng của [Mutopia Project](https://www.mutopiaproject.org/) (người nhập: Stelios Samelis): nguồn của đoạn trích, số ô nhịp và các chi tiết nốt nhạc trên trang này.
-- Beethoven, *The 35 Piano Sonatas*, ABRSM (biên tập Barry Cooper).
-- Charles Rosen, *Beethoven's Piano Sonatas: A Short Companion*, Yale University Press, 2002.
-- Bản nhạc: [IMSLP](https://imslp.org/). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
+- Bản nhạc: [IMSLP](https://imslp.org/wiki/Piano_Sonata_No.20,_Op.49_No.2_(Beethoven,_Ludwig_van)). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

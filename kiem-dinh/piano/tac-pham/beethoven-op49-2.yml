@@ -3,31 +3,815 @@ trang: src/content/docs/piano/tac-pham/beethoven-op49-2.md
 nguon_cu: ../opus-zero/docs/piano/tac-pham/beethoven-op49-2.md
 tang: tac-pham
 lan:
-  - so: 1
-    ngay: null
-    nhanh: moi/d6-l3
-    ma_bam: null
-    nguoi:
-      luot_1: null
-      luot_2: null
-      review: null
-      kiem_mau: null
-nguon: []
-nhan_dinh: []
+- so: 1
+  ngay: 2026-11-05
+  nhanh: moi/d6-l3
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Opus 5.5 (D6-L3 phần A)
+    luot_2: null
+    review: null
+    kiem_mau: null
+ghi_chu: 'Bài học Op. 49 số 2, chương 1 (tầng Tác phẩm). Bản nhạc: Mutopia LVB_Sonate_49no2_1 (Breitkopf & Härtel 1862–1865; .ly, .mid tải 05/11/2026, User-Agent opus-kiem-dinh), đếm ô và đối chiếu bằng script Python (mido): 122 ô, mọi số ô trên trang khớp. Lịch sử: lời giới thiệu Henle HN 1327 (PDF), IMSLP. Sửa trang: n2, n12, n18, n19, n20, n23, n24, n25, n33, n48, n66, n83, n101, n102, n109; bỏ: n112 (hai sách in chưa đọc ở mục Nguồn). Còn mở: n87 ("ma non troppo" chưa có nguồn đã mở). Giữ cho hồ sơ khác: hình đệm nốt lặp ô 6–8, 21–24 (và 29–32), nốt lặp ô 59–62, quãng ba ngân ô 44–48 (piano/not-lap-not-kep n41), đoạn chuyển ô 15–19 có bước nhảy Fa♯4–La5 (piano/quang-tam-buoc-nhay n37, n45): đã đếm trên bản nhạc, đúng. hinh-thuc/sonata n13: trang có cấu trúc từng ô, chỗ khó, kế hoạch tập. Không tính là nhận định: tiêu đề mục, tiêu đề cột bảng, chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng (thuộc hồ sơ bản ghi), mốc trong ::khoi-nghe. Thuật ngữ trang dùng (chùm ba, láy rền, láy quanh, staccato, alla breve, Alberti) có trong src/data/thuat-ngu.yml hay trang đã khóa.'
+nguon:
+- id: mut-op49
+  bac: 1
+  ten: 'Mutopia Project, Sonata No. 20 (1st Movement: Allegro, ma non troppo), Op. 49 No. 2 (Stelios Samelis, nguồn Breitkopf & Härtel 1862–1865; tệp LilyPond và MIDI)'
+  link: https://www.mutopiaproject.org/ftp/BeethovenLv/O49/LVB_Sonate_49no2_1/LVB_Sonate_49no2_1.ly
+- id: mut-k545
+  bac: 1
+  ten: Mutopia Project, Mozart, Sonata K. 545, chương 1 (nguồn IMSLP; tệp LilyPond)
+  link: https://www.mutopiaproject.org/ftp/MozartWA/KV545/K545-1/K545-1.ly
+- id: imslp-op49-2
+  bac: 2
+  ten: 'IMSLP, Piano Sonata No.20, Op.49 No.2 (Beethoven): Allegro ma non troppo (G major, 122 bars), Tempo di minuet (G major, 120 bars); 1795–96; in 1805'
+  link: https://imslp.org/wiki/Piano_Sonata_No.20,_Op.49_No.2_(Beethoven,_Ludwig_van)
+- id: imslp-op49-1
+  bac: 2
+  ten: 'IMSLP, Piano Sonata No.19, Op.49 No.1 (Beethoven): Andante (G minor), Rondo. Allegro (G major); 1797'
+  link: https://imslp.org/wiki/Piano_Sonata_No.19,_Op.49_No.1_(Beethoven,_Ludwig_van)
+- id: imslp-op13
+  bac: 2
+  ten: 'IMSLP, Piano Sonata No.8, Op.13 (Beethoven): sáng tác 1798'
+  link: https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)
+- id: henle-1327
+  bac: 2
+  ten: 'G. Henle Verlag, HN 1327 Two Easy Piano Sonatas op. 49 no. 1 and no. 2: trang sản phẩm (Norbert Gertsch, Murray Perahia "Fingering Piano, Editor"; mức 3 cho cả hai sonata)'
+  link: https://www.henle.de/en/Two-Easy-Piano-Sonatas-no.-19-and-no.-20-g-minor-and-G-major-op.-49-no.-1-and-no.-2/HN-1327
+- id: henle-1327-vorwort
+  bac: 2
+  ten: 'G. Henle Verlag, HN 1327: lời nói đầu (Norbert Gertsch, Murray Perahia, 2018), PDF'
+  link: https://www.henle.de/media/df/c7/fd/1697725885/1327-1697725884-sync.pdf
+- id: henle-1062-vorwort
+  bac: 2
+  ten: 'G. Henle Verlag, HN 1062 Sonata op. 27 no. 2: lời nói đầu (Norbert Gertsch), PDF ("his 1801 Sonata"; bản in Cappi 1802)'
+  link: https://www.henle.de/media/ca/21/5b/1697725842/1062-1697725842-sync.pdf
+- id: omt-sonata
+  bac: 2
+  ten: Open Music Theory, Sonata Form
+  link: https://viva.pressbooks.pub/openmusictheory/chapter/sonata-form/
+- id: omt-meter
+  bac: 2
+  ten: Open Music Theory, Simple Meter and Time Signatures (2/2, cut time)
+  link: https://viva.pressbooks.pub/openmusictheory/chapter/simple-meter-and-time-signatures/
+- id: cod-alla-breve
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music, mục alla breve, qua Encyclopedia.com
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/alla-breve
+- id: dolmetsch-tempo
+  bac: 2
+  ten: 'Dolmetsch Online, Music Theory: tempo (allegro, con moto…)'
+  link: http://www.dolmetsch.com/musictheory5.htm
+- id: dolmetsch-orn
+  bac: 2
+  ten: 'Dolmetsch Online, Music Theory: Ornaments (Pralltriller nối với nốt đứng trước khi đi xuống liền bậc; láy rền thời Beethoven)'
+  link: https://www.dolmetsch.com/musictheory23.htm
+- id: tafelmusik
+  bac: 2
+  ten: 'Tafelmusik, Mozart’s Piano: The Fortepiano (đàn theo kiểu Anton Walter: "just over five octaves (from FF to g’’’)")'
+  link: https://tafelmusik.org/explore-baroque/articles/mozarts-piano-fortepiano/
+- id: eclassical-bis
+  bac: 2
+  ten: eClassical (BIS), Beethoven – Complete works for solo piano, Vol. 2, Ronald Brautigam, fortepiano (BIS-1363; Sonata No. 20 Op. 49 No. 2, I. Allegro, ma non troppo 4’43)
+  link: https://bis.eclassical.com/label/bis/beethoven-complete-works-for-solo-piano-vol2.html
+- id: evansville-wb
+  bac: 2
+  ten: 'University of Evansville, Scale and Arpeggio Fingerings (bản lưu Wayback 2024): C, G, D, A, E trưởng tay phải 1 2 3 1 2 3 4 …; như hồ sơ đã khóa piano/gam'
+  link: https://web.archive.org/web/2024/https://faculty.evansville.edu/gu2/Scales.htm
+- id: bapam
+  bac: 2
+  ten: BAPAM (British Association for Performing Arts Medicine), The Healthy Pianist ("avoid any technique involving repetition ... for more than short periods"; "tension or fatigue ... warning signs"); như hồ sơ đã khóa piano/quang-tam-buoc-nhay
+  link: https://www.bapam.org.uk/?p=59585
+nhan_dinh:
+- id: n1
+  cau: 'Tiêu đề: "Beethoven: Sonata Sol trưởng Op. 49 số 2, chương 1".'
+  loai: ten
+  nguon: [imslp-op49-2, henle-1327]
+  ket_qua: dung
+- id: n2
+  cau: 'Mô tả và câu mở đầu: đây là một chương sonata trọn vẹn mà bản in đầu tiên gọi là "sonata dễ".'
+  loai: lich-su
+  nguon: [henle-1327-vorwort]
+  ket_qua: da-sua
+  ghi_chu: 'Câu cũ (cả description): "Đây là chương sonata thật đầu tiên mà nhiều người học có thể chơi trọn". "Đầu tiên", "nhiều người học" không kiểm được. Henle: bản in đầu tiên mang tên "Deux Sonates faciles".'
+- id: n3
+  cau: Chương có 122 ô nhịp, đủ trình bày, phát triển và tái hiện.
+  loai: cau-truc
+  nguon: [mut-op49, imslp-op49-2, omt-sonata]
+  ket_qua: dung
+  ghi_chu: MIDI Mutopia 122 ô; IMSLP "122 bars"; trình bày 1–52 (dấu nhắc ô 52), phát triển 53–66, tái hiện 67–122.
+- id: n4
+  cau: Không chỗ nào đòi sức mạnh hay tốc độ ghê gớm.
+  loai: cap-do
+  nguon: [henle-1327]
+  ket_qua: dung
+  ghi_chu: Henle xếp mức 3 (easy) trên thang 1–9.
+- id: n5
+  cau: Trang hướng dẫn tập chương 1 (Allegro, ma non troppo) để nghe hình thức sonata từ bên trong.
+  loai: ten
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: 'Mutopia: "Allegro, ma non troppo". Phần còn lại là lời giới thiệu.'
+- id: n6
+  cau: Ba phần của hình thức sonata (link /opus/hinh-thuc/sonata/) đều ngắn và rõ.
+  loai: cau-truc
+  nguon: [mut-op49, omt-sonata]
+  ket_qua: dung
+  ghi_chu: 'Trang hinh-thuc/sonata có (đã khóa). Ba phần: 52, 14 và 56 ô.'
+- id: n7
+  cau: Đoạn chuyển ở phần tái hiện (ô 82–87) gần như nguyên văn đoạn chuyển ở phần trình bày (ô 15–20); lần đầu nó dẫn sang chủ đề 2 ở Rê trưởng, lần sau ở Sol trưởng.
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: 'MIDI: ô 82–86 trùng từng nốt ô 15–19; ô 87 (D4, ba nốt Rê làm đà) khác ô 20 (D4, ba nốt La). Chủ đề 2 ô 21 Rê trưởng, ô 88 Sol trưởng.'
+- id: n8
+  cau: Ô 1 có chùm ba (ba nốt móc đơn trong một phách đen), ô 3 có nhịp chấm dôi (nốt đen chấm dôi rồi nốt móc đơn).
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: 'Ô 1: "\times 2/3 { d''8 g'' b'' d'''' c'''' a'' }"; ô 3: a''4. a''8 b''4. b''8.'
+- id: n9
+  cau: Giữ hai kiểu tiết tấu tách bạch là bài học về sự chính xác.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n10
+  cau: Các chuỗi gam chùm ba ở nhóm kết (ô 36–43, ô 103–110); tay trái cũng có gam chùm ba (ô 44, 47, 111, 114).
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: 'MIDI: gam 12 nốt ô 36, 38, 40, 43 (Rê trưởng) và 103, 105, 107, 110 (Sol trưởng); tay trái 11 nốt ô 44, 47, 111, 114.'
+- id: n11
+  cau: Link Gam (/opus/piano/gam/).
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Trang có (đã khóa).
+- id: n12
+  cau: 'Tay trái nhiều vai: một bè trầm có giai điệu riêng (ô 2–4), hình đệm nốt lặp (ô 6–8, 21–24), hợp âm rải chùm ba (ô 15–19), nốt lặp đều (ô 59–62).'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: da-sua
+  ghi_chu: 'Câu cũ: "Một bè trầm đi từng bước (ô 2–4)": bè trầm Si La Sol | Fa♯ Rê Sol Fa | Mi Fa♯ Sol có bước nhảy (Fa♯–Rê, Rê–Sol), nên sửa theo chính câu ở mục Tám ô đầu. Các ô khác khớp MIDI. Giữ cho piano/not-lap-not-kep n41.'
+- id: n13
+  cau: 'Gợi ý chuẩn bị: gam Sol trưởng và Rê trưởng hai quãng tám, mỗi phách ba nốt, ở ♩ = 120.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n14
+  cau: Link Clementi Sonatina Op. 36 số 1, Sonatina Sol trưởng gán cho Beethoven, Mozart K. 545.
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: clementi-sonatina và beethoven-sonatina-sol có trong src/content/docs; mozart-k545 chưa chuyển (../opus-zero/docs/piano/tac-pham/mozart-k545.md có), hiện "sắp có".
+- id: n15
+  cau: Mozart K. 545 ở chặng sau.
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: 'tac-pham.yml (chang đã khóa): beethoven-op49-2 chặng 4, mozart-k545 chặng 5.'
+- id: n16
+  cau: So với Op. 49 số 2, K. 545 có nhiều đệm Alberti hơn và ít chùm ba hơn.
+  loai: cau-truc
+  nguon: [mut-op49, mut-k545]
+  ket_qua: dung
+  ghi_chu: 'Mutopia K. 545 chương 1: tay trái mở đầu bằng Alberti (c8 g'' e'' g''), không có chùm ba (\times). Op. 49 số 2 không có Alberti, có nhiều chùm ba.'
+- id: n17
+  cau: Hai sonata Op. 49 đều chỉ có hai chương.
+  loai: cau-truc
+  nguon: [henle-1327-vorwort, imslp-op49-2, imslp-op49-1]
+  ket_qua: dung
+  ghi_chu: 'Henle: Carl chào "2 small, easy sonatas, each of which has only two movements"; IMSLP: hai chương mỗi bài.'
+- id: n18
+  cau: Theo lời giới thiệu của ấn bản Henle, Beethoven viết chúng khoảng 1796–1798 (số 2 có lẽ năm 1796), gần cùng thời với ba sonata Op. 10.
+  loai: nam
+  nguon: [henle-1327-vorwort, imslp-op49-2]
+  ket_qua: da-sua
+  ghi_chu: 'Câu cũ: "viết chúng khoảng 1796–1798, cùng thời với ba sonata Op. 10". Henle: "the 2nd Sonata was probably written in 1796, and the 1st Sonata in 1797/98 ... in close proximity to the three Sonatas op. 2 (1794/95), the Grande Sonate op. 7 (1796/97) and the three Sonatas op. 10 (1795 – 98)". IMSLP ghi số 2: 1795–96. Thêm năm của số 2 vì trang nói về số 2.'
+- id: n19
+  cau: Khi viết chúng, Beethoven chưa đến ba mươi tuổi.
+  loai: nam
+  nguon: [henle-1327-vorwort]
+  ket_qua: da-sua
+  ghi_chu: 'Henle: Beethoven 1770–1827; 1796–98 là 25–28 tuổi. Câu cũ có thêm "và được biết đến ở Vienna trước hết như một nghệ sĩ piano": chưa có nguồn đã mở, bỏ.'
+- id: n20
+  cau: 'Việc chúng được in có lẽ là nhờ người em trai Carl, người lục tìm trong các bản thảo của anh những bài có thể đem bán: từ cuối năm 1802 Carl đem chào vài nơi không thành, đến tháng 1 năm 1805 một nhà xuất bản ở Vienna mới in chúng.'
+  loai: lich-su
+  nguon: [henle-1327-vorwort]
+  ket_qua: da-sua
+  ghi_chu: 'Câu cũ: "người em trai Carl, người lo việc giao dịch với các nhà xuất bản cho anh: Carl đem chào vài nơi không thành, đến năm 1805 mới có một nhà xuất bản ở Vienna nhận in". Henle: "We instead probably owe their publication to the keen business sense of his brother Kaspar Karl, who while sifting through Beethoven''s manuscripts ... came across the two Sonatas. Starting in November 1802 he offered ... first of all to André in Offenbach, then in 1803 to Breitkopf & Härtel ... and, probably in 1804, to the Wiener Kunst- und Industrie-Comptoir, which was awarded the contract"; "published in January 1805". Viết lại theo đúng điều Henle nói.'
+- id: n21
+  cau: Bản in đầu tiên gọi chúng là Sonates faciles, "những sonata dễ".
+  loai: ten
+  nguon: [henle-1327-vorwort]
+  ket_qua: dung
+  ghi_chu: 'Henle: "The Deux Sonates faciles op. 49 – the title is thus in the original edition".'
+- id: n22
+  cau: Vì in muộn, hai sonata mang số Op. 49, lớn hơn Sonata Ánh trăng Op. 27 (1801), bài được viết sau chúng; số Op. ở đây cho biết lúc in, không phải lúc viết.
+  loai: danh-muc
+  nguon: [henle-1327-vorwort, henle-1062-vorwort]
+  ket_qua: dung
+  ghi_chu: 'Henle HN 1327: "their relatively high opus number means that they have been erroneously classified as nos. 19 and 20 ... chronologically ... approximately nos. 4 and 5". Henle HN 1062: "his 1801 Sonata".'
+- id: n23
+  cau: Op. 49 số 2 thuộc về Beethoven của những năm 1790.
+  loai: nam
+  nguon: [henle-1327-vorwort]
+  ket_qua: da-sua
+  ghi_chu: 'Câu cũ có thêm "còn rất gần ngôn ngữ của Haydn và Mozart": nhận định phong cách, chưa có nguồn đã mở, bỏ.'
+- id: n24
+  cau: Chương 2 (Tempo di Menuetto) có chủ đề mà Beethoven dùng lại trong chương minuet của bản Septet Op. 20 (1799), một tác phẩm rất được ưa chuộng thời ông.
+  loai: lich-su
+  nguon: [henle-1327-vorwort]
+  ket_qua: da-sua
+  ghi_chu: 'Câu cũ ghi Septet "(1799–1800)". Henle: "he included it in his Septet op. 20 of 1799. The borrowed melody was so popular, as was the whole Septet". Đổi năm theo Henle.'
+- id: n25
+  cau: 'Đàn piano Vienna cuối thế kỷ 18 có âm vực khoảng năm quãng tám (kiểu đàn của Anton Walter: Fa1–Sol6).'
+  loai: lich-su
+  nguon: [tafelmusik]
+  ket_qua: da-sua
+  ghi_chu: 'Câu cũ: "Đàn Vienna cuối thế kỷ 18 có âm vực khoảng năm quãng tám (Fa1–Fa6), tiếng nhẹ và tắt nhanh". Tafelmusik: đàn kiểu Walter "just over five octaves (from FF to g'''''')", tức Fa1–Sol6; "tiếng nhẹ và tắt nhanh" không có ở nguồn đã mở, bỏ.'
+- id: n26
+  cau: Cả chương này nằm gọn trong khoảng Sol1–Mi6.
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: 'MIDI: nốt thấp nhất 31 (Sol1, ô 122), cao nhất 88 (Mi6, ô 111).'
+- id: n27
+  cau: Trên đàn hiện đại, hãy giữ tiếng gọn, sáng, và rất ít bàn đạp.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n28
+  cau: Link thời kỳ Cổ điển (/opus/lich-su/thoi-ky/co-dien/).
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Trang có.
+- id: n29
+  cau: Nghe cả hai chương vài lần, rồi tập trung vào chương 1 với bốn câu hỏi.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n30
+  cau: Cử chỉ mở đầu (hợp âm Sol trưởng, rồi chùm ba đi lên và đi xuống) còn xuất hiện ở ô 5, đầu phần phát triển ở giọng thứ, đầu phần tái hiện.
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: Ô 5 (cao một quãng tám), ô 53 Rê thứ (F A D + chùm ba), ô 67.
+- id: n31
+  cau: Ba nốt lặp báo hiệu chủ đề 2.
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: 'Ô 20: ba nốt La móc đơn; ô 87: ba nốt Rê.'
+- id: n32
+  cau: Câu hỏi 3, 4 khi nghe (gam chùm ba nghe như câu nhạc hay bài tập; phần phát triển tối lại ở đâu).
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n33
+  cau: Mọi bản thu trọn 32 sonata của Beethoven đều có bài này.
+  loai: lich-su
+  nguon: [imslp-op49-2]
+  ket_qua: da-sua
+  ghi_chu: 'Câu cũ có thêm "ví dụ Wilhelm Kempff, Alfred Brendel hay András Schiff": chưa mở trang hãng đĩa của ba bộ thu ấy, bỏ tên (theo quy ước chỉ giữ tên nghệ sĩ khi thấy bản thu thật). IMSLP: Piano Sonata No. 20, một trong 32 sonata.'
+- id: n34
+  cau: So sánh tốc độ, độ tách tiếng của nốt đen và độ nổi của tay trái.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n35
+  cau: Ronald Brautigam thu trọn các sonata của Beethoven trên fortepiano.
+  loai: ten
+  nguon: [eclassical-bis]
+  ket_qua: dung
+  ghi_chu: 'BIS: "Beethoven – Complete works for solo piano", Vol. 2 (BIS-1363) có Sonata số 20; nhạc cụ: fortepiano. Op. 49 số 2 chương 1: 4''43.'
+- id: n36
+  cau: Site chưa có hướng dẫn nghe riêng cho Op. 49; link hướng dẫn nghe Pathétique và Nghệ sĩ piano và bản thu nên nghe.
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: src/data/trang.yml và tac-pham.yml không có trang nghe-nhac cho Op. 49; nghe-nhac/beethoven-pathetique chưa chuyển (site cũ có); piano/nghe-si có.
+- id: n37
+  cau: Pathétique là một sonata lớn hơn của Beethoven cùng thời kỳ.
+  loai: nam
+  nguon: [imslp-op13]
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Op. 13 sáng tác 1798, ba chương; Op. 49 số 2 khoảng 1796.'
+- id: n38
+  cau: 'Khối nghe: dán link một bản thu hay chọn file, rồi bấm ghi mốc.'
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Thành phần khoi-nghe.
+- id: n39
+  cau: 'Theo dõi khi nghe, chủ đề 1 (ô 1–8): hợp âm Sol trưởng, chùm ba đi lên rồi xuống, giai điệu nhịp chấm dôi kết bằng láy rền; từ ô 5 cả câu nhắc lại cao hơn một quãng tám, tay trái chuyển sang hình đệm nốt lặp.'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: Hình đệm nốt lặp từ ô 6 (B D A D G D F♯ D).
+- id: n40
+  cau: 'Tiếp nối (ô 9–14): những cặp nốt luyến đi lên nửa cung (Rê♯–Mi, Đô♯–Rê) ngăn bởi dấu lặng ngắn; láy quanh ở ô 12; tay trái rất thưa.'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: '"dis''''''8( e'''''') r8", "cis''''''8( d'''''') r8"; ô 12 g''4. có dấu turn; tay trái ô 9–14 chỉ một hợp âm hay một nốt mỗi ô.'
+- id: n41
+  cau: 'Đoạn chuyển (ô 15–20), f: tay phải nhảy giữa nốt đen ở âm vực giữa và chùm ba từ trên cao đổ xuống; tay trái rải hợp âm chùm ba trên nốt Rê trầm.'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: '"fis''4\f"; tay trái D F♯ A, D G B chùm ba ô 15–19.'
+- id: n42
+  cau: 'Chủ đề 2 (nhịp lấy đà ở ô 20, ô 21–35): Rê trưởng; ba nốt La lặp làm đà, giai điệu luyến mềm trên hình đệm nốt lặp; staccato nhẹ trên những nốt Mi lặp (ô 25–26).'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: '"e''''\staccato e''''\staccato" ô 25, 26.'
+- id: n43
+  cau: 'Nhóm kết (ô 36–52): gam chùm ba mười hai nốt đi xuống rồi đi lên, xen những ô nốt đen lặp; quãng ba ngân dài trong lúc tay trái chạy gam; các hợp âm kết ở Rê trưởng.'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: Ô 36 đi xuống, 37 Đô♯ ×4, 38 đi lên, 39 Sol ×4…; ô 44, 47 quãng ba nốt tròn trên gam tay trái; ô 49–52 hợp âm Rê.
+- id: n44
+  cau: Trình bày nhắc lại (ô 1–52).
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: Dấu nhắc lại ":|" ở cuối ô 52.
+- id: n45
+  cau: 'Phát triển (ô 53–66): cử chỉ mở đầu trở lại ở Rê thứ, f; rồi La thứ, Mi thứ trên nốt Si lặp của tay trái; hai tay cùng đi xuống, dẫn về.'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: Ô 53 F A D \f; ô 56 La thứ; ô 57–58 Mi thứ; ô 59–62 tay trái Si; ô 63–66 hai tay đi xuống, dừng Rê3.
+- id: n46
+  cau: 'Tái hiện (ô 67–81): chủ đề 1 ở Sol trưởng; từ ô 74 rẽ sang đường mới, gam chùm ba đi qua Đô trưởng và La thứ.'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: Ô 67–73 như ô 1–7; ô 74 C6 G5 A5 F5…; ô 75–78 gam có Fa♮ (Đô trưởng), ô 79–81 Sol♯ (La thứ).
+- id: n47
+  cau: 'Đoạn chuyển và chủ đề 2 (ô 82–102): đoạn chuyển gần như nguyên văn lần đầu, nhưng chủ đề 2 giờ ở Sol trưởng, với ba nốt Rê làm đà (ô 87).'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+- id: n48
+  cau: 'Nhóm kết (ô 103–122): gam chùm ba ở Sol trưởng, quãng ba ngân, các hợp âm kết; ô cuối: hợp âm, rồi dấu lặng có dấu ngân.'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: da-sua
+  ghi_chu: 'Câu cũ: "ô cuối là một dấu lặng có dấu ngân". Mutopia ô 122: "<b'' d'''' g''''>4 r4 r2\fermata": hợp âm nốt đen rồi dấu lặng, dấu ngân ở dấu lặng cuối.'
+- id: n49
+  cau: Số ô nhịp trên trang theo bản Breitkopf & Härtel (qua Mutopia).
+  loai: ten
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: 'Mutopia: source "Breitkopf & Hartel (1862-1865)".'
+- id: n50
+  cau: 'Bảng Cấu trúc, chủ đề 1 (ô 1–8, Sol trưởng): hợp âm và chùm ba, giai điệu nhịp chấm dôi, láy rền ở ô 4; ô 5–8 nhắc lại cao hơn một quãng tám.'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+- id: n51
+  cau: 'Bảng Cấu trúc, tiếp nối (ô 9–14, Sol trưởng): cặp nốt luyến nửa cung và dấu lặng; láy quanh ở ô 12; dừng trên hợp âm La trưởng.'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: Ô 14 tay trái Đô♯3 Mi3 La3.
+- id: n52
+  cau: 'Bảng Cấu trúc, đoạn chuyển (ô 15–20, Sol → Rê): f; tay phải nốt đen và chùm ba, tay trái hợp âm rải chùm ba trên nốt Rê; dừng trên hợp âm Rê.'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: Ô 20 Rê4 tay phải, Rê3 Fa♯3 tay trái.
+- id: n53
+  cau: 'Bảng Cấu trúc, chủ đề 2 (ô 20 nhịp lấy đà – 35, Rê trưởng): ba nốt La làm đà; giai điệu luyến trên hình đệm nốt lặp; nói hai lần (ô 21–28, 29–35).'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: Ô 29–32 trùng ô 21–24.
+- id: n54
+  cau: 'Bảng Cấu trúc, nhóm kết (ô 36–52, Rê trưởng): gam chùm ba xen nốt đen lặp (36–43); quãng ba ngân trên gam chùm ba của tay trái (44–48); hợp âm kết (49–52); cả phần trình bày nhắc lại.'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: Giữ cho piano/not-lap-not-kep n41 (quãng ba ngân ô 44–48).
+- id: n55
+  cau: 'Bảng Cấu trúc, phát triển (ô 53–66): cử chỉ mở đầu ở Rê thứ (ô 53) và La thứ (ô 56); Mi thứ, rồi nốt Si lặp ở tay trái (ô 59–62); hai tay đi xuống, dừng trên nốt Rê trầm (ô 63–66).'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: Giữ cho piano/not-lap-not-kep n41 (nốt lặp ô 59–62).
+- id: n56
+  cau: 'Bảng Cấu trúc, tái hiện chủ đề 1 (ô 67–81, Sol trưởng): ô 67–73 gần như ô 1–7; từ ô 74 đi đường mới: gam chùm ba qua Đô trưởng (75–78) và La thứ (79–81).'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: Ô 73 khác ô 7 một chút (A5 nốt đen, dấu lặng, A5 móc đơn).
+- id: n57
+  cau: 'Bảng Cấu trúc, đoạn chuyển (ô 82–87, Sol trưởng): gần như nguyên văn ô 15–20.'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+- id: n58
+  cau: 'Bảng Cấu trúc, chủ đề 2 (ô 87 nhịp lấy đà – 102): ba nốt Rê làm đà; chủ đề 2 ở giọng chủ.'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+- id: n59
+  cau: 'Bảng Cấu trúc, nhóm kết (ô 103–122): như ô 36–52, ở Sol trưởng; hợp âm cuối ở ô 122, tiếp theo là dấu lặng có dấu ngân.'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+- id: n60
+  cau: 'Hợp âm Rê cuối đoạn chuyển: ở ô 20 tai nghe nó như một giọng mới (Rê trưởng); ở ô 87, cũng hợp âm ấy, lại nghe như át âm kéo về Sol; vì vậy phần tái hiện "giải quyết" phần trình bày.'
+  loai: cau-truc
+  nguon: [mut-op49, omt-sonata]
+  ket_qua: dung
+  ghi_chu: 'Ô 21 chủ đề 2 ở Rê trưởng; ô 88 ở Sol trưởng. OMT Sonata Form: chủ đề 2 ở giọng khác trong phần trình bày, về giọng chủ ở phần tái hiện.'
+- id: n61
+  cau: Chơi hai chỗ này liền nhau vài lần.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n62
+  cau: 'Tám ô đầu: nốt nhạc, dấu luyến, láy rền và chữ p theo bản Breitkopf & Härtel (Ludwig van Beethovens Werke, 1862–1865) qua Mutopia; số ngón là gợi ý của trang; bản ấy không ghi sắc thái ở ô 1; từ ô 6 tay trái đọc ở khóa Sol.'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: 'Xem khuong_nhac khối 1. Mutopia: \p ở tay trái ô 6, đổi khóa treble trước nốt ấy; không có dấu sắc thái ở ô 1.'
+- id: n63
+  cau: 'Ở ô 2–4, tay trái là một bè trầm có giai điệu riêng: Si – La – Sol – Fa♯ – Rê – Sol – Fa♮ – Mi – Fa♯ – Sol; nốt Fa♮ ở ô 3 đi xuống nửa cung tới Mi ở ô 4.'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: 'MIDI tay trái ô 2–4: B3 A3 G3 | F♯3 D3 G3 F3 | E3 F♯3 G3…'
+- id: n64
+  cau: Ở ô 6–8, ngón cái tay trái lặp nốt Rê ở trên trong khi bè dưới đi xuống; quãng giữa hai nốt mở dần từ quãng ba đến quãng tám (Rê–Rê ở ô 7).
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: Ô 6 Si4–Rê5, La4–Rê5, Sol4–Rê5; ô 7 Fa♯4–Rê5, Rê4–Rê5 (quãng tám).
+- id: n65
+  cau: Láy rền ở ô 4 và ô 8 kết bằng hai nốt nhỏ Si–Đô đã in sẵn.
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: '"c''''\trill \grace { b''16[ c''''] }".'
+- id: n66
+  cau: 'Chỗ khó, hợp âm rồi chùm ba (ô 1, 5, 53, 56, 67, 71): tay rời hợp âm để rải hơn một quãng tám (ô 1: Rê–Sol–Si–Rê rồi Đô–La); hai phách trắng: hợp âm là phách 1, hai chùm ba là phách 2.'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: da-sua
+  ghi_chu: 'Tên hàng cũ: "Hợp âm rồi chùm ba đi lên": ở ô 53 và 56 chùm ba đi xuống (D F E D C B; C6 B A G F♯), nên bỏ "đi lên". Phần còn lại khớp MIDI.'
+- id: n67
+  cau: Chỗ khó, nhịp chấm dôi cạnh chùm ba (ô 3, 7, 69).
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+- id: n68
+  cau: 'Chỗ khó, láy rền có nốt kết (ô 4, 8, 70): chỉ có một nốt đen ở tốc độ nhanh; nốt trên của láy (Rê) vừa vang ngay trước.'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+- id: n69
+  cau: Có thể bắt đầu láy từ chính nốt Đô, vì nốt Rê vừa vang đã làm nốt trên; nếu bắt đầu từ nốt trên, đừng nhấn nốt Rê ấy lần nữa.
+  loai: quy-tac
+  nguon: [dolmetsch-orn]
+  ket_qua: dung
+  ghi_chu: 'Dolmetsch: khi nốt được láy đứng sau nốt cao hơn một bậc (đi xuống liền bậc), nốt đầu của láy "is tied to the preceding note"; với Beethoven "the evidence is largely circumstantial". Không trái trang đã khóa piano/not-hoa-my (ngoại lệ "nốt trên vừa vang ngay trước đó ... thì được nối sang, không đánh lại").'
+- id: n70
+  cau: 'Chỗ khó, cặp nốt luyến và láy quanh (ô 9–14): mỗi cặp nặng – nhẹ rồi nhấc tay đúng dấu lặng; láy quanh sau nốt Sol chấm dôi (ô 12).'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+- id: n71
+  cau: 'Láy quanh sau nốt Sol: bốn nốt La–Sol–Fa♯–Sol trong phần chấm dôi.'
+  loai: dinh-nghia
+  nguon: [dolmetsch-orn]
+  ket_qua: dung
+  ghi_chu: 'Láy quanh: trên – chính – dưới – chính (thuat-ngu.yml mục turn, đã khóa; Dolmetsch Ornaments). Trên Sol: La–Sol–Fa♯–Sol.'
+- id: n72
+  cau: 'Chỗ khó, đoạn chuyển (ô 15–19): tay phải nhảy giữa nốt đen ở âm vực giữa và chùm ba từ trên cao (Fa♯4 lên La5, một quãng mười).'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: 'Ô 15: F♯4 rồi A5 (quãng mười). Giữ cho piano/quang-tam-buoc-nhay n37, n45.'
+- id: n73
+  cau: 'Chỗ khó, gam chùm ba (ô 36–43, 103–110; tay trái ô 44, 47, 111, 114): nhóm ngón (3 và 4 ngón) không trùng nhóm nốt (3 nốt), ngón cái rơi giữa nhóm.'
+  loai: cau-truc
+  nguon: [evansville-wb]
+  ket_qua: dung
+  ghi_chu: 'Evansville: gam Sol trưởng tay phải 1 2 3 1 2 3 4 1 2 3 1 2 3 4 5 (như trang đã khóa piano/gam) trên nhóm ba nốt: khối 3 (bài tập 2) ghi ngón cái ở nốt Sol và Đô, giữa nhóm.'
+- id: n74
+  cau: 'Chỗ khó, hình đệm nốt lặp ở tay trái (ô 6–8, 21–24, 29–32): ngón cái lặp một nốt suốt nhiều phách; bè dưới mới là đường đi của hòa âm.'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+- id: n75
+  cau: 'Chỗ khó, nốt lặp ở tay trái (ô 59–62): tám móc đơn trên nốt Si mỗi ô, dễ to dần và mỏi cổ tay.'
+  loai: quy-tac
+  nguon: [mut-op49, bapam]
+  ket_qua: dung
+  ghi_chu: 'MIDI: ô 59, 61 Si3 + bảy Si4; ô 60, 62 tám Si4 (chữ trang "cùng một nốt": cùng nốt Si). Vế "mỏi cổ tay" dính tới sức khỏe: xếp quy-tac, BAPAM: "avoid any technique involving repetition ... for more than short periods"; "tension or fatigue ... warning signs". Cách tập (đổi ngón 3–2–1, cổ tay nảy nhẹ, giữ nhẹ) không trái BAPAM.'
+- id: n76
+  cau: 'Chỗ khó, tái hiện rẽ hướng (ô 73–81): các nốt Fa♮ ở ô 74–78 dễ thành Fa♯.'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+- id: n77
+  cau: Cột "Cách tập" của bảng Chỗ khó (gom hợp âm khối, tập đích đến, đếm theo móc đơn, nói to nặng – nhẹ, cổ tay dẫn đường, nhấn nhẹ nốt đầu nhóm, học thuộc theo phần…).
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n78
+  cau: 'Links trong bảng Chỗ khó: tiết tấu nâng cao, Nốt hoa mỹ, máy đếm nhịp, Gam, Cách tập, Học thuộc và biểu diễn.'
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Sáu trang có trong src/content/docs.
+- id: n79
+  cau: Các bài tập chuẩn bị soạn riêng cho trang này.
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Khối 2–4 là ví dụ soạn.
+- id: n80
+  cau: 'Bài tập 1: ở ô chùm ba, nốt đầu mỗi nhóm trùng với nốt tay trái; ở ô chấm dôi, nốt móc đơn rơi đúng giữa nốt tay trái thứ hai và thứ ba.'
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: 'Khối 2 ô 2: La nốt đen chấm dôi (phách 1–1,5), La móc đơn ở 1,5; tay trái nốt đen ở 0, 1, 2, 3: móc đơn rơi giữa nốt thứ hai và thứ ba.'
+- id: n81
+  cau: Các bước tập bài tập 1–3 (đếm to, tăng tốc từ ♩ = 80 lên 132, ngón cái chạm nhẹ, tay phải mf tay trái p).
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n82
+  cau: 'Bài tập 2: nhóm thứ ba (Fa♯–Sol–La) và nhóm thứ tư (Si–Đô–Rê) có ngón cái nằm giữa nhóm; ô 3 tay trái chạy gam, tay phải giữ quãng ba.'
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: 'Khối 3: ngón 4-1-2 và 3-1-2; ô 3 [GB]8 trên gam tay trái.'
+- id: n83
+  cau: 'Tập thêm ở Rê trưởng và Đô trưởng: các chuỗi gam chùm ba ở ô 36–43 đi ở Rê trưởng, ở ô 75–78 đi qua Đô trưởng.'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: da-sua
+  ghi_chu: 'Câu cũ: "Tập thêm ở Rê trưởng và Đô trưởng, hai giọng của các chuỗi gam chùm ba trong phần trình bày và phần tái hiện." Nhóm kết của tái hiện (ô 103–110) ở Sol trưởng, nên "hai giọng ... trong phần tái hiện" thiếu; ghi rõ ô.'
+- id: n84
+  cau: Kế hoạch 8 tuần (việc chính, tốc độ máy đếm nhịp), lời nhắc không vội đạt tốc độ cuối.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n85
+  cau: Tốc độ tính theo phách đen; khi đã nhanh, cảm hai phách trắng mỗi ô (alla breve).
+  loai: dinh-nghia
+  nguon: [cod-alla-breve, omt-meter]
+  ket_qua: dung
+  ghi_chu: 'COD: alla breve "Indicates 2/2 time ... the measure may be considered to have 2 beats"; OMT: 2/2 (cut time), hai phách mỗi ô.'
+- id: n86
+  cau: Link thu âm (/opus/luyen-tap/thu-am/).
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Trang có.
+- id: n87
+  cau: 'Allegro, ma non troppo: nhanh, nhưng không quá.'
+  loai: dinh-nghia
+  nguon: [dolmetsch-tempo]
+  ket_qua: null
+  ghi_chu: 'chưa chắc: allegro "nhanh" có ở thuat-ngu.yml (đã khóa) và Dolmetsch; chưa mở được nguồn cho "ma non troppo" (COD, Merriam-Webster, Cambridge trả 403 hay không có mục). Lượt 2 kiểm.'
+- id: n88
+  cau: Nhịp 2/2 nghĩa là hai phách trắng mỗi ô.
+  loai: dinh-nghia
+  nguon: [omt-meter, cod-alla-breve]
+  ket_qua: dung
+- id: n89
+  cau: Chọn tốc độ theo đoạn khó nhất rồi giữ cho cả chương; giữ nhịp ổn định, chỉ một hơi thở rất nhỏ trước phần phát triển và trước tái hiện.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+  ghi_chu: 'Câu cũ: "Nhạc Cổ điển gần như không co giãn nhịp: chỉ một hơi thở..." Vế "Nhạc Cổ điển gần như không co giãn nhịp" là nhận định chung không có nguồn: viết lại thành lời khuyên (doi_chu).'
+- id: n90
+  cau: Bản Breitkopf mà trang dùng ghi rất ít sắc thái (chẳng hạn p ở ô 6, f ở ô 15 và ô 53).
+  loai: cau-truc
+  nguon: [mut-op49, henle-1327-vorwort]
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \p ô 6, \f ô 15, 53, và một \f ở tay trái ô 114. Henle: bản in đầu của sonata số 2 gần như không có chỉ dẫn sắc thái.'
+- id: n91
+  cau: Gợi ý sắc thái theo cấu trúc; f của Beethoven trẻ vẫn tròn, không đập.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n92
+  cau: 'Phát âm: nốt đen không có dấu luyến (giai điệu ô 2–4, đoạn chuyển); cặp nốt luyến (ô 9–14, chủ đề 2); ba nốt La làm đà ở ô 20 dẫn vào nốt Rê đầu dấu luyến; staccato trên các nốt Mi lặp (ô 25–26) và các quãng ba đi xuống (ô 45, 48).'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: 'Mutopia: ô 21 "d''''4( cis'''' d'''' e'''')"; staccato ô 25–26, 45, 48. Cách chơi (hơi tách, nặng – nhẹ, nảy) là lời khuyên.'
+- id: n93
+  cau: 'Bàn đạp: hầu như không cần; chút bàn đạp nông cho hợp âm mở đầu và hợp âm kết.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n94
+  cau: Link Bàn đạp (/opus/piano/ban-dap/) và Nốt hoa mỹ (/opus/piano/not-hoa-my/).
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Hai trang có.
+- id: n95
+  cau: Láy rền ở ô 4, 8, 70 (trên nốt Đô, có hai nốt kết in nhỏ) và ô 109 (trên nốt La).
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \trill + \grace { b c } ô 4, 8, 70; "a''4\trill" ô 109.'
+- id: n96
+  cau: Láy quanh ở ô 12, sau nốt Sol, trong phần chấm dôi.
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+- id: n97
+  cau: Nốt nhỏ trước các gam chùm ba ở ô 36, 40, 75, 103, 107.
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \appoggiatura d''''16 (36), fis''''16 (40), c''''16 (75), g''''16 (103), b''''16 (107). Cách chơi là lời khuyên.'
+- id: n98
+  cau: Bản Urtext Henle (HN 1327) in chung hai sonata Op. 49, ngón bấm của Murray Perahia.
+  loai: ten
+  nguon: [henle-1327]
+  ket_qua: dung
+- id: n99
+  cau: Bản Breitkopf thế kỷ 19 dùng cho đoạn trích có thể khác bản Urtext ở dấu luyến và sắc thái; khi phân vân, theo bản Urtext.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+  ghi_chu: 'Câu cũ: "Các bản thế kỷ 19, như bản Breitkopf ..., đáng tin về nốt nhạc, nhưng dấu luyến và sắc thái có thể khác bản Urtext ở vài chỗ". "Đáng tin về nốt nhạc" chưa có nguồn đã mở: bỏ (doi_chu).'
+- id: n100
+  cau: Lỗi thường gặp (chín dòng).
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+  ghi_chu: Các ô nêu (1, 5, 9–14, 73–74, ô cuối) khớp MIDI.
+- id: n101
+  cau: 'Học tiếp: chương 2 (Tempo di Menuetto) cùng giọng Sol trưởng, với chủ đề gặp lại trong Septet Op. 20.'
+  loai: cau-truc
+  nguon: [imslp-op49-2, henle-1327-vorwort]
+  ket_qua: da-sua
+  ghi_chu: 'Câu cũ có "nhẹ nhàng hơn": đánh giá, bỏ. IMSLP: Tempo di minuet, G major; Henle: chủ đề dùng lại trong Septet.'
+- id: n102
+  cau: 'Sonata Op. 49 số 1 (Sol thứ): hai chương, Andante rồi Rondo: Allegro.'
+  loai: cau-truc
+  nguon: [imslp-op49-1]
+  ket_qua: da-sua
+  ghi_chu: 'Câu cũ: "Andante buồn và hát": bỏ phần đánh giá. IMSLP: Andante (G minor), Rondo. Allegro (G major).'
+- id: n103
+  cau: 'Mozart Sonata K. 545: bước tiếp theo ở chặng 5.'
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: 'tac-pham.yml: mozart-k545 chặng 5. Trang chưa chuyển, hiện "sắp có".'
+- id: n104
+  cau: K. 545 cũng hình thức sonata, với đệm Alberti và chuỗi gam móc kép.
+  loai: cau-truc
+  nguon: [mut-k545]
+  ket_qua: dung
+  ghi_chu: 'Mutopia K. 545 chương 1: Alberti tay trái, chuỗi gam móc kép (c16 …).'
+- id: n105
+  cau: 'Beethoven tiếp theo: Pathétique chương 2, Sonata Ánh trăng chương 1; thứ tự gợi ý ở Tác phẩm theo cấp độ.'
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: pathetique-adagio, beethoven-anh-trang chưa chuyển (site cũ có); piano/tac-pham-theo-cap có.
+- id: n106
+  cau: 'Câu hỏi 1: phần phát triển bắt đầu ở ô 53 bằng hợp âm và chùm ba của mở đầu, ở Rê thứ; ô 36 là nhóm kết, ô 67 là tái hiện; phần phát triển (ô 53–66) đi qua Rê thứ, La thứ, Mi thứ rồi dừng trên nốt Rê trầm.'
+  loai: cau-truc
+  nguon: [mut-op49]
+  ket_qua: dung
+- id: n107
+  cau: 'Câu hỏi 2: đoạn chuyển ở tái hiện gần như giống hệt đoạn ở trình bày, nhưng dẫn sang chủ đề 2 ở Sol trưởng thay vì Rê trưởng; hợp âm Rê cuối đoạn nghe như giọng mới ở trình bày và như át âm của Sol ở tái hiện.'
+  loai: cau-truc
+  nguon: [mut-op49, omt-sonata]
+  ket_qua: dung
+- id: n108
+  cau: 'Câu hỏi 3: đếm theo móc đơn, đặt nốt móc đơn đúng chữ "và" cuối; tai vừa nghe chùm ba nên muốn đặt nốt móc đơn muộn.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n109
+  cau: 'Câu hỏi 4: sonata viết khoảng năm 1796 mang số Op. 49 vì chỉ được in năm 1805; theo Henle, Carl đã đem chào vài nhà xuất bản không thành; năm 1805 hai sonata mới được in, với tên Sonates faciles.'
+  loai: lich-su
+  nguon: [henle-1327-vorwort]
+  ket_qua: da-sua
+  ghi_chu: 'Câu hỏi cũ: "viết khoảng 1796–1798"; số 2 có lẽ viết năm 1796 (Henle), IMSLP 1795–96. Lời giải thích khớp Henle.'
+- id: n110
+  cau: 'Nguồn: Henle HN 1327 (biên tập Norbert Gertsch, ngón bấm Murray Perahia), lời giới thiệu và mức độ khó trên trang ấn bản.'
+  loai: ten
+  nguon: [henle-1327, henle-1327-vorwort]
+  ket_qua: dung
+- id: n111
+  cau: 'Nguồn: Ludwig van Beethovens Werke (Breitkopf & Härtel, 1862–1865), bản dàn trang công cộng của Mutopia (người nhập: Stelios Samelis).'
+  loai: ten
+  nguon: [mut-op49]
+  ket_qua: dung
+  ghi_chu: 'Mutopia: maintainer Stelios Samelis; source "Breitkopf & Hartel (1862-1865)".'
+- id: n112
+  cau: 'Mục Nguồn bỏ hai sách in chưa đọc (Beethoven, The 35 Piano Sonatas, ABRSM, biên tập Barry Cooper; Charles Rosen, Beethoven''s Piano Sonatas: A Short Companion, 2002).'
+  loai: ten
+  nguon: []
+  ket_qua: da-bo
+  ghi_chu: Sách in chưa đọc, không có nguồn đọc được kèm (quy ước D6-L1, D6-L2). Lời giới thiệu Henle, IMSLP và Mutopia đã đủ cho các câu trên trang.
+- id: n113
+  cau: 'Nguồn: bản nhạc IMSLP; link tài liệu tham khảo.'
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Link IMSLP trỏ thẳng tới trang tác phẩm; /opus/tai-lieu-tham-khao/ có.
 khuong_nhac:
-  - khoi: 1
-    loai: null
-    kiem: []
-    ket_qua: null
-  - khoi: 2
-    loai: null
-    kiem: []
-    ket_qua: null
-  - khoi: 3
-    loai: null
-    kiem: []
-    ket_qua: null
-  - khoi: 4
-    loai: null
-    kiem: []
-    ket_qua: null
+- khoi: 1
+  loai: trich-doan
+  kiem: [cu-phap, nhip, giong, not-tay-phai, not-tay-trai, not-hoa-my, sac-thai, so-ngon, doi-chieu-an-ban]
+  ket_qua: dung
+  ghi_chu: 'Ô 1–8, 2/2, L:1/8, K:G. Ấn bản: Breitkopf & Härtel (1862–1865) qua Mutopia LVB_Sonate_49no2_1 (.ly và .mid, tải 05/11/2026). Công cụ: script Python (mido) in nốt MIDI theo ô và hai tay, đọc .ly cho dấu luyến, láy, sắc thái, khóa. Kết quả: 8/8 ô khớp cao độ và trường độ cả hai tay (ô 1 hợp âm B3 D4 G4 + chùm ba D G B D C A; ô 4 D5, C5 láy rền, nốt kết Si–Đô, B4; tay trái ô 2–4 B A G | F♯ D G F♮ | E F♯ G G B D; ô 6–8 hình đệm nốt lặp B D A D G D | F♯ D D D G D F D | E G F♯ A G); dấu luyến (G F♯ G) ô 2, 6, (B A G) tay trái ô 2, (b c c♯ d) ô 8; p ở tay trái ô 6 cùng chỗ đổi khóa Sol; không có sắc thái ở ô 1. Số ngón là gợi ý, chơi được.'
+- khoi: 2
+  loai: vi-du-soan
+  kiem: [cu-phap, nhip, giong, hop-am, tiet-tau, so-ngon]
+  ket_qua: dung
+  ghi_chu: 6 ô 2/2, đủ phách (chùm ba móc đơn, nhịp chấm dôi nốt đen chấm + móc đơn). Xen ô chùm ba (1, 3, 5) với ô chấm dôi (2, 4) như lời dẫn; móc đơn sau dấu chấm rơi giữa nốt tay trái thứ hai và thứ ba. Hòa âm Sol, Đô/Mi, Rê7, Sol. Ngón 1-2-3-5-3-2 và 4-2-1-2 chơi được.
+- khoi: 3
+  loai: vi-du-soan
+  kiem: [cu-phap, nhip, giong, so-ngon, hai-tay]
+  ket_qua: dung
+  ghi_chu: '4 ô 2/2. Ô 1–2 gam Sol trưởng chùm ba hai quãng tám tay phải (1-2-3, 1-2-3, 4-1-2, 3-1-2; 3-2-1, 3-2-1, 4-3-2, 1-3-2), ô 3 gam tay trái (5-4-3, 2-1-3, 2-1-4, 3-2-1) dưới quãng ba Sol–Si, ô 4 quãng ba staccato đi xuống: đúng như lời dẫn (ngón cái giữa nhóm ở nhóm 3 và 4). Ngón chuẩn của gam Sol trưởng (piano/gam đã khóa).'
+- khoi: 4
+  loai: vi-du-soan
+  kiem: [cu-phap, nhip, giong, hop-am, so-ngon]
+  ket_qua: dung
+  ghi_chu: 4 ô 2/2. Tay trái hình đệm nốt lặp (bè dưới B G A F♯ | G E F♯ A | G B F♯ A | G B, ngón cái lặp Rê4) như ô 6–8 gốc, thấp hơn một quãng tám; tay phải nốt trắng B A G A B C B. p tay trái, mf tay phải đúng lời dẫn. Ngón 2-1, 4-1, 3-1, 5-1 chơi được.
+doi_chu:
+- cu: 'Đây là chương sonata thật đầu tiên mà nhiều người học có thể chơi trọn: 122 ô nhịp, đủ trình bày, phát triển và tái hiện, không chỗ nào đòi sức mạnh hay tốc độ ghê gớm. Trang này hướng dẫn tập chương 1 (Allegro, ma non troppo) để bạn nghe hình thức sonata từ bên trong: lúc nào nhạc rời nhà, đi đâu, và trở về bằng cách nào.'
+  moi: 'Đây là một chương sonata trọn vẹn mà bản in đầu tiên gọi là "sonata dễ": 122 ô nhịp, đủ trình bày, phát triển và tái hiện, không chỗ nào đòi sức mạnh hay tốc độ ghê gớm. Trang này hướng dẫn tập chương 1 (Allegro, ma non troppo) để bạn nghe hình thức sonata từ bên trong: lúc nào nhạc rời nhà, đi đâu, và trở về bằng cách nào.'
+  ly_do: 'n2 (da-sua): "đầu tiên", "nhiều người học" không kiểm được; Henle HN 1327: bản in đầu tên "Deux Sonates faciles".'
+- cu: Viết khoảng 1796–1798, cùng thời với ba sonata Op. 10 (theo Henle); in năm 1805 ở Vienna cùng sonata Op. 49 số 1, với tên Sonates faciles ("những sonata dễ")
+  moi: Có lẽ viết năm 1796 (số 1 năm 1797/98), gần cùng thời với ba sonata Op. 10 (theo Henle); in năm 1805 ở Vienna cùng sonata Op. 49 số 1, với tên Sonates faciles ("những sonata dễ")
+  ly_do: 'Dữ liệu (thong_tin, hiện qua ::hop-tac-pham) sửa theo sua-A.yml, nhận định n17 của hồ sơ bản ghi: Bản ghi là số 2; Henle: số 2 có lẽ năm 1796 (IMSLP: 1795–96). Trang đã sửa theo (hồ sơ trang). Chữ hiện qua ::hop-tac-pham: người giao thêm doi_chu cho trang.'
+- cu: Khoảng ABRSM Grade 5 (ước lượng; chặng 4 của site); Henle xếp mức 3 (dễ) trên thang 1–9
+  moi: Khoảng ABRSM Grade 5 (chặng 4 của site); RCM xếp chương 1 và 2 ở Level 8 (đề cương 2022); Henle xếp mức 3 (dễ) trên thang 1–9
+  ly_do: 'Dữ liệu (thong_tin, hiện qua ::hop-tac-pham) sửa theo sua-A.yml, nhận định n22 của hồ sơ bản ghi: Bài có trong đề cương RCM 2022 (Level 8 List B, tr. 73): ghi kỳ đề cương thay "(ước lượng)". Grade đã khóa không đổi. Nếu người giao muốn giữ "(ước lượng)" vì không có trong ABRSM, Trinity thì viết "(ước lượng; không có trong đề cương ABRSM, Trinity)".'
+- cu: Tay trái nhiều vai. Một bè trầm đi từng bước (ô 2–4), hình đệm nốt lặp (ô 6–8, 21–24), hợp âm rải chùm ba (ô 15–19), nốt lặp đều (ô 59–62). Học xong bài này, tay trái của bạn không còn chỉ biết "đệm".
+  moi: Tay trái nhiều vai. Một bè trầm có giai điệu riêng (ô 2–4), hình đệm nốt lặp (ô 6–8, 21–24), hợp âm rải chùm ba (ô 15–19), nốt lặp đều (ô 59–62). Học xong bài này, tay trái của bạn không còn chỉ biết "đệm".
+  ly_do: 'n12 (da-sua): bè trầm ô 2–4 có bước nhảy, không đi từng bước (Mutopia).'
+- cu:
+  - 'Hai sonata Op. 49 đều chỉ có hai chương. Theo lời giới thiệu của ấn bản Henle, Beethoven viết chúng khoảng 1796–1798, cùng thời với ba sonata Op. 10, khi ông chưa đến ba mươi tuổi và được biết đến ở Vienna trước hết như một nghệ sĩ piano. Chúng không được in ngay. Việc chúng được in có lẽ là nhờ người em trai Carl, người lo việc giao dịch với các nhà xuất bản cho anh: Carl đem chào vài nơi không thành, đến năm 1805 mới có một nhà xuất bản ở Vienna nhận in. Bản in đầu tiên gọi chúng là Sonates faciles, "những sonata dễ".'
+  - 'Vì in muộn, hai bản sonata nhỏ này mang số Op. 49, lớn hơn cả Sonata Ánh trăng Op. 27 (1801), bài được viết sau chúng. Ở đây số Op. cho biết lúc in, không phải lúc viết: Op. 49 số 2 thuộc về Beethoven của những năm 1790, còn rất gần ngôn ngữ của Haydn và Mozart.'
+  - Chương 2 (Tempo di Menuetto) có chủ đề mà Beethoven dùng lại trong chương minuet của bản Septet Op. 20 (1799–1800), một tác phẩm rất được ưa chuộng thời ông.
+  - Đàn Vienna cuối thế kỷ 18 có âm vực khoảng năm quãng tám (Fa1–Fa6), tiếng nhẹ và tắt nhanh; cả chương này nằm gọn trong khoảng Sol1–Mi6. Trên đàn hiện đại, hãy giữ tiếng gọn, sáng, và rất ít bàn đạp. Xem thêm thời kỳ Cổ điển.
+  moi:
+  - 'Hai sonata Op. 49 đều chỉ có hai chương. Theo lời giới thiệu của ấn bản Henle, Beethoven viết chúng khoảng 1796–1798 (số 2 có lẽ năm 1796), gần cùng thời với ba sonata Op. 10, khi ông chưa đến ba mươi tuổi. Chúng không được in ngay. Việc chúng được in có lẽ là nhờ người em trai Carl, người lục tìm trong các bản thảo của anh những bài có thể đem bán: từ cuối năm 1802, Carl đem chào vài nơi không thành, đến tháng 1 năm 1805 một nhà xuất bản ở Vienna mới in chúng. Bản in đầu tiên gọi chúng là Sonates faciles, "những sonata dễ".'
+  - 'Vì in muộn, hai bản sonata nhỏ này mang số Op. 49, lớn hơn cả Sonata Ánh trăng Op. 27 (1801), bài được viết sau chúng. Ở đây số Op. cho biết lúc in, không phải lúc viết: Op. 49 số 2 thuộc về Beethoven của những năm 1790.'
+  - Chương 2 (Tempo di Menuetto) có chủ đề mà Beethoven dùng lại trong chương minuet của bản Septet Op. 20 (1799), một tác phẩm rất được ưa chuộng thời ông.
+  - 'Đàn piano Vienna cuối thế kỷ 18 có âm vực khoảng năm quãng tám (kiểu đàn của Anton Walter: Fa1–Sol6); cả chương này nằm gọn trong khoảng Sol1–Mi6. Trên đàn hiện đại, hãy giữ tiếng gọn, sáng, và rất ít bàn đạp. Xem thêm thời kỳ Cổ điển.'
+  ly_do: 'n18, n19, n20 (da-sua): theo lời giới thiệu Henle HN 1327; bỏ vế "nghệ sĩ piano" chưa có nguồn. n23 (da-sua): bỏ nhận định phong cách chưa có nguồn. n24 (da-sua): Henle: "Septet op. 20 of 1799". n25 (da-sua): Tafelmusik: đàn kiểu Walter FF–g''''''; bỏ "tiếng nhẹ và tắt nhanh" chưa có nguồn.'
+- cu: Mọi nghệ sĩ thu trọn 32 sonata của Beethoven đều có bài này, ví dụ Wilhelm Kempff, Alfred Brendel hay András Schiff. So sánh tốc độ họ chọn cho ma non troppo, độ tách tiếng của các nốt đen và độ nổi của tay trái. Nghe thêm một bản trên fortepiano (Ronald Brautigam thu trọn các sonata của Beethoven trên loại đàn này) để thấy chùm ba và gam trong trẻo thế nào trên một cây đàn gần với đàn thời Beethoven. Site chưa có hướng dẫn nghe riêng cho Op. 49; hướng dẫn nghe Pathétique giới thiệu một sonata lớn hơn của Beethoven cùng thời kỳ, và Nghệ sĩ piano và bản thu nên nghe giúp bạn chọn bản thu.
+  moi: Mọi bản thu trọn 32 sonata của Beethoven đều có bài này. So sánh tốc độ họ chọn cho ma non troppo, độ tách tiếng của các nốt đen và độ nổi của tay trái. Nghe thêm một bản trên fortepiano (Ronald Brautigam thu trọn các sonata của Beethoven trên loại đàn này) để thấy chùm ba và gam trong trẻo thế nào trên một cây đàn gần với đàn thời Beethoven. Site chưa có hướng dẫn nghe riêng cho Op. 49; hướng dẫn nghe Pathétique giới thiệu một sonata lớn hơn của Beethoven cùng thời kỳ, và Nghệ sĩ piano và bản thu nên nghe giúp bạn chọn bản thu.
+  ly_do: 'n33 (da-sua): bỏ tên ba nghệ sĩ chưa thấy trang bản thu.'
+- cu: 'Nhóm kết (ô 103–122): gam chùm ba ở Sol trưởng, quãng ba ngân, các hợp âm kết; ô cuối là một dấu lặng có dấu ngân'
+  moi: 'Nhóm kết (ô 103–122): gam chùm ba ở Sol trưởng, quãng ba ngân, các hợp âm kết; ô cuối: hợp âm, rồi dấu lặng có dấu ngân'
+  ly_do: 'n48 (da-sua): ô 122 có hợp âm rồi dấu lặng (Mutopia).'
+- cu: Hợp âm rồi chùm ba đi lên (ô 1, 5, 53, 56, 67, 71)
+  moi: Hợp âm rồi chùm ba (ô 1, 5, 53, 56, 67, 71)
+  ly_do: 'n66 (da-sua): chùm ba ở ô 53, 56 đi xuống.'
+- cu: Tập thêm ở Rê trưởng và Đô trưởng, hai giọng của các chuỗi gam chùm ba trong phần trình bày và phần tái hiện.
+  moi: 'Tập thêm ở Rê trưởng và Đô trưởng: các chuỗi gam chùm ba ở ô 36–43 đi ở Rê trưởng, ở ô 75–78 đi qua Đô trưởng.'
+  ly_do: 'n83 (da-sua): nhóm kết của tái hiện ở Sol trưởng; ghi rõ ô.'
+- cu: 'Allegro, ma non troppo: nhanh, nhưng không quá. Nhịp 2/2 nghĩa là hai phách trắng mỗi ô; nghĩ theo phách trắng, chùm ba sẽ trôi và nhịp chấm dôi có đà. Chọn tốc độ theo đoạn khó nhất (thường là gam chùm ba ở nhóm kết) rồi giữ nó cho cả chương. Nhạc Cổ điển gần như không co giãn nhịp: chỉ một hơi thở rất nhỏ trước phần phát triển và trước tái hiện.'
+  moi: 'Allegro, ma non troppo: nhanh, nhưng không quá. Nhịp 2/2 nghĩa là hai phách trắng mỗi ô; nghĩ theo phách trắng, chùm ba sẽ trôi và nhịp chấm dôi có đà. Chọn tốc độ theo đoạn khó nhất (thường là gam chùm ba ở nhóm kết) rồi giữ nó cho cả chương. Giữ nhịp ổn định, chỉ cho một hơi thở rất nhỏ trước phần phát triển và trước tái hiện.'
+  ly_do: 'n89: bỏ nhận định chung "Nhạc Cổ điển gần như không co giãn nhịp" (không nguồn).'
+- cu: 'Bản Urtext Henle (HN 1327) in chung hai sonata Op. 49, ngón bấm của Murray Perahia. Các bản thế kỷ 19, như bản Breitkopf dùng cho đoạn trích trên trang này, đáng tin về nốt nhạc, nhưng dấu luyến và sắc thái có thể khác bản Urtext ở vài chỗ: khi phân vân, theo bản Urtext.'
+  moi: 'Bản Urtext Henle (HN 1327) in chung hai sonata Op. 49, ngón bấm của Murray Perahia. Bản Breitkopf thế kỷ 19 dùng cho đoạn trích trên trang này có thể khác bản Urtext ở dấu luyến và sắc thái: khi phân vân, theo bản Urtext.'
+  ly_do: 'n99: bỏ "đáng tin về nốt nhạc" (không nguồn).'
+- cu:
+  - 'Chương 2 của chính sonata này (Tempo di Menuetto): cùng giọng, nhẹ nhàng hơn, với chủ đề bạn sẽ gặp lại trong Septet Op. 20.'
+  - 'Sonata Op. 49 số 1 (Sol thứ): hai chương, Andante buồn và hát, rồi Rondo: Allegro.'
+  moi:
+  - 'Chương 2 của chính sonata này (Tempo di Menuetto): cùng giọng Sol trưởng, với chủ đề bạn sẽ gặp lại trong Septet Op. 20.'
+  - 'Sonata Op. 49 số 1 (Sol thứ): hai chương, Andante rồi Rondo: Allegro.'
+  ly_do: 'n101 (da-sua): bỏ "nhẹ nhàng hơn". n102 (da-sua): bỏ "buồn và hát".'
+- cu: 'Beethoven, Two Easy Piano Sonatas Op. 49, G. Henle Verlag, HN 1327 (biên tập Norbert Gertsch, ngón bấm Murray Perahia): lời giới thiệu và mức độ khó trên trang ấn bản (thời gian sáng tác, việc in năm 1805, tên Sonates faciles, mức 3).'
+  moi: 'Beethoven, Two Easy Piano Sonatas Op. 49, G. Henle Verlag, HN 1327 (biên tập Norbert Gertsch, ngón bấm Murray Perahia): lời giới thiệu và mức độ khó trên trang ấn bản (thời gian sáng tác, việc in năm 1805, tên Sonates faciles, Septet Op. 20, mức 3).'
+  ly_do: 'Mục Nguồn: thêm Septet Op. 20 vào danh sách điều lấy từ lời giới thiệu Henle (n24).'
+- cu:
+  - Beethoven, The 35 Piano Sonatas, ABRSM (biên tập Barry Cooper).
+  - 'Charles Rosen, Beethoven''s Piano Sonatas: A Short Companion, Yale University Press, 2002.'
+  moi: null
+  ly_do: 'n112 (da-bo): sách in chưa đọc.'
+- cu: 'mô tả: Đây là chương sonata thật đầu tiên mà nhiều người học có thể chơi trọn: 122 ô nhịp, đủ trình bày, phát triển và tái hiện, không chỗ nào đòi sức mạnh hay tốc độ…'
+  moi: 'mô tả: Một chương sonata trọn vẹn mà bản in đầu tiên gọi là "sonata dễ": 122 ô nhịp, đủ trình bày, phát triển và tái hiện, không chỗ nào đòi sức mạnh hay tốc độ…'
+  ly_do: 'n2 (da-sua): "đầu tiên", "nhiều người học" không kiểm được; Henle HN 1327: bản in đầu tên "Deux Sonates faciles".'
+- cu: 'câu hỏi: Vì sao một sonata viết khoảng 1796–1798 lại mang số Op. 49, lớn hơn cả Sonata Ánh trăng (Op. 27)? | Vì Beethoven viết lại nó năm 1805 | ✓ Vì nó chỉ được in năm 1805, nhiều năm sau khi viết | Vì số Op. do nhà xuất bản Henle đặt sau này | Theo Henle, em trai Beethoven là Carl đã đem chào vài nhà xuất bản không thành; năm 1805 hai sonata mới được in, với tên Sonates faciles.'
+  moi: 'câu hỏi: Vì sao một sonata viết khoảng năm 1796 lại mang số Op. 49, lớn hơn cả Sonata Ánh trăng (Op. 27)? | Vì Beethoven viết lại nó năm 1805 | ✓ Vì nó chỉ được in năm 1805, nhiều năm sau khi viết | Vì số Op. do nhà xuất bản Henle đặt sau này | Theo Henle, em trai Beethoven là Carl đã đem chào vài nhà xuất bản không thành; năm 1805 hai sonata mới được in, với tên Sonates faciles.'
+  ly_do: 'n109 (da-sua): số 2 có lẽ viết năm 1796 (Henle).'

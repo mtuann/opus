@@ -12,15 +12,15 @@ lan:
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
   - so: 2
-    ngay: null
+    ngay: 2026-11-05
     nhanh: moi/d6-l3
     ma_bam: null
     nguoi:
-      luot_1: null
+      luot_1: "Claude Opus 5.5 (D6-L3 phần A)"
       luot_2: null
       review: null
       kiem_mau: null
-ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/bach-prelude-do.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Bach-Digital (bach-digital.de) không mở được: trang chỉ trả về thử thách chống bot ("Please wait a moment while we verify your connection"), nên không dùng.'
+ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/bach-prelude-do.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Bach-Digital (bach-digital.de) không mở được: trang chỉ trả về thử thách chống bot ("Please wait a moment while we verify your connection"), nên không dùng. Lần 2 (D6-L3, lượt 1 phần A): nhận định n7–n28 cho các trường chưa khóa (giong, nhip, thoi_ky, ky_nang_chinh, luyen_nghe, chip, thong_tin, hinh, ban_thu); bản nhạc đối chiếu Mutopia wtk1-prelude1, lịch sử theo lời nói đầu Henle HN 14. Dữ liệu sai: n23; đề xuất sửa (cả có điều kiện) ở plans/lam-lai/bao-cao/d6-l3/sua-A.yml. Còn mở: n19, n21, n26. luyen_nghe là trường của schema (src/du-lieu.mjs).'
 nguon:
   - id: imslp-wtc1
     bac: 2
@@ -46,6 +46,42 @@ nguon:
     bac: 2
     ten: G. Henle Verlag, Levels of Difficulty (thang độ khó 1–9; trang không có bảng quy đổi sang ABRSM)
     link: https://www.henle.de/Levels-of-Difficulty/
+  - id: mut-846
+    bac: 1
+    ten: Mutopia Project, Das Wohltemperierte Clavier I, Praeludium I, BWV 846 (tệp LilyPond và MIDI)
+    link: https://www.mutopiaproject.org/ftp/BachJS/BWV846/wtk1-prelude1/wtk1-prelude1.ly
+  - id: henle-hn14-vorwort
+    bac: 2
+    ten: 'G. Henle Verlag, HN 14: lời nói đầu (Heinemann) và ghi chú diễn tấu (Schiff), PDF'
+    link: https://www.henle.de/media/f4/14/7f/1690886046/0014-1690886046-sync.pdf
+  - id: henle-blog-schwencke
+    bac: 2
+    ten: Norbert Müllemann, On the lookout for the lost measure, blog G. Henle Verlag, 2012
+    link: https://blog.henle.de/en/2012/04/16/on-the-lookout-for-the-lost-measure-bach%E2%80%99s-c-major-prelude-from-the-well-tempered-clavier-i/
+  - id: imslp-wfb
+    bac: 2
+    ten: IMSLP, Klavierbüchlein für Wilhelm Friedemann Bach (bắt đầu 1720; số 14 Præludium 1, BWV 846a)
+    link: https://imslp.org/wiki/Klavierb%C3%BCchlein_f%C3%BCr_Wilhelm_Friedemann_Bach_(Bach,_Johann_Sebastian)
+  - id: imslp-846a
+    bac: 2
+    ten: IMSLP, Prelude and Fughetta in C major, BWV 846a
+    link: https://imslp.org/wiki/Prelude_in_C_major,_BWV_846a_(Bach,_Johann_Sebastian)
+  - id: commons-ishizaka
+    bac: 2
+    ten: Wikimedia Commons, Kimiko Ishizaka – Prelude No. 1 in C major, BWV 846 (.ogg; CC0; 162,92 giây; nguồn welltemperedclavier.org)
+    link: https://commons.wikimedia.org/wiki/File:Kimiko_Ishizaka_-_Bach_-_Well-Tempered_Clavier,_Book_1_-_01_Prelude_No._1_in_C_major,_BWV_846.ogg
+  - id: ecm-schiff
+    bac: 2
+    ten: ECM Records, Das Wohltemperierte Clavier, András Schiff (Praeludium C-Dur 01:48)
+    link: https://ecmrecords.com/product/johann-sebastian-bach-das-wohltemperierte-clavier-andras-schiff/
+  - id: apple-gould
+    bac: 2
+    ten: Apple Music Classical, Glenn Gould Plays Bach Vol. 2 (Prelude BWV 846 2:22)
+    link: https://classical.music.apple.com/us/album/716335058
+  - id: qobuz-richter
+    bac: 2
+    ten: 'Qobuz, Bach: Well-Tempered Clavier Book I, Sviatoslav Richter (Prelude BWV 846 01:58)'
+    link: https://www.qobuz.com/au-en/album/bach-well-tempered-clavier-book-i-sviatoslav-richter/ln7jrrw5fqh8b
 nhan_dinh:
   - id: n1
     cau: "Tên bài: Prelude Đô trưởng BWV 846 (prelude của cặp prelude và fugue đầu trong Das wohltemperierte Klavier, quyển 1)."
@@ -124,3 +160,152 @@ nhan_dinh:
     ghi_chu: '../opus-zero/docs/assets/js/practice.js, hằng SUGGEST[4] có ["piano/tac-pham/bach-prelude-do/", "Bach: Prelude Đô trưởng"]; chặng 4 trùng chang 4 của bản ghi.'
     luot_2: dung
     luot_2_ghi_chu: Reasonable; not contradicted.
+  - id: n7
+    cau: Giọng của bài là Đô trưởng.
+    loai: cau-truc
+    truong: [giong]
+    nguon: [mut-846, imslp-wtc1]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: không dấu hóa, kết C E G C; IMSLP: cặp số 1, Đô trưởng.'
+  - id: n8
+    cau: Nhịp của bài là 4/4.
+    loai: cau-truc
+    truong: [nhip]
+    nguon: &id001 [mut-846]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: \time 4/4.'
+  - id: n9
+    cau: Bài thuộc thời kỳ Baroque.
+    loai: lich-su
+    truong: [thoi_ky]
+    nguon: [imslp-wtc1, henle-hn14-vorwort]
+    ket_qua: dung
+    ghi_chu: 'Sáng tác đầu những năm 1720 (IMSLP; Henle: bản chép sạch 1722); Mutopia style "Baroque".'
+  - id: n10
+    cau: 'Kỹ năng chính: hợp âm rải đều, nghe hòa âm, cổ tay thả lỏng.'
+    loai: cau-truc
+    truong: [ky_nang_chinh]
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: Bài là chuỗi hợp âm rải móc kép, mỗi ô một hợp âm (Mutopia). Chọn kỹ năng là việc của site.
+  - id: n11
+    cau: 'Luyện nghe: nghe hòa âm, âm nền.'
+    loai: cau-truc
+    truong: [luyen_nghe]
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: Âm nền Sol ô 24–31, Đô ô 32–35 (Mutopia).
+  - id: n12
+    cau: 'Chip: "Đô trưởng · 4/4".'
+    loai: cau-truc
+    truong: [chip]
+    nguon: *id001
+    ket_qua: dung
+  - id: n13
+    cau: 'Chip: "Hợp âm rải liên tục".'
+    loai: cau-truc
+    truong: [chip]
+    nguon: *id001
+    ket_qua: dung
+  - id: n14
+    cau: 'Chip cấp độ: "≈ Grade 4–5".'
+    loai: cap-do
+    truong: [chip]
+    nguon: [trinity-2023, henle-hn14]
+    ket_qua: dung
+    ghi_chu: Trùng grade đã khóa (lần 1, n4).
+  - id: n15
+    cau: 'Chip: "BWV 846".'
+    loai: danh-muc
+    truong: [chip]
+    nguon: [imslp-wtc1, henle-hn14]
+    ket_qua: dung
+  - id: n16
+    cau: 'Thông tin, nhà soạn nhạc: Johann Sebastian Bach (1685–1750).'
+    loai: nam
+    truong: [thong_tin]
+    nguon: [imslp-wtc1]
+    ket_qua: dung
+    ghi_chu: Khớp src/data/nha-soan-nhac.yml (bach 1685–1750, đã khóa).
+  - id: n17
+    cau: 'Thông tin, tác phẩm: Prelude Đô trưởng, BWV 846, bài đầu tiên của Das Wohltemperierte Klavier (Bình quân luật) quyển 1; đi cặp với Fugue Đô trưởng.'
+    loai: ten
+    truong: [thong_tin]
+    nguon: [imslp-wtc1, henle-hn14]
+    ket_qua: dung
+  - id: n18
+    cau: 'Thông tin: bản chép sạch quyển 1 đề năm 1722, thời Bach làm việc ở Köthen.'
+    loai: nam
+    truong: [thong_tin]
+    nguon: [henle-hn14-vorwort]
+    ket_qua: dung
+    ghi_chu: 'Henle: bản viết tay chép sạch năm 1722; trang bìa: "chapel-master and director of chamber music to the Prince of Anhalt-Cöthen, in the year 1722".'
+  - id: n19
+    cau: 'Thông tin: một phiên bản sớm hơn nằm trong Clavier-Büchlein (sổ tay đàn phím) mà Bach bắt đầu soạn năm 1720 cho con trai Wilhelm Friedemann.'
+    loai: lich-su
+    truong: [thong_tin]
+    nguon: [imslp-wfb, imslp-846a]
+    ket_qua: null
+    ghi_chu: 'chưa chắc: dữ liệu ghi "Một phiên bản sớm hơn và ngắn hơn". "Sớm hơn", năm 1720, W. F. Bach: IMSLP. "Ngắn hơn": chưa có nguồn đã mở (IMSLP không ghi số ô của BWV 846a). Trang đã bỏ vế ấy. Đề xuất có điều kiện ở plans/lam-lai/bao-cao/d6-l3/sua-A.yml.'
+  - id: n20
+    cau: 'Thông tin: tập nhạc lưu hành bằng bản chép tay, đến năm 1801 mới được in.'
+    loai: nam
+    truong: [thong_tin]
+    nguon: [imslp-wtc1, henle-hn14-vorwort]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Hoffmeister, Vienna, [1801], số bản khắc 53. Henle: in khoảng năm mươi năm sau khi Bach mất, sau khi đã lưu hành qua vô số bản chép.'
+  - id: n21
+    cau: 'Thông tin, giọng · nhịp · tốc độ: Đô trưởng · 4/4 · Bach không ghi tốc độ (thường ♩ ≈ 60–72).'
+    loai: so-lieu
+    truong: [thong_tin]
+    nguon: [mut-846, henle-hn14-vorwort, ecm-schiff, qobuz-richter, apple-gould, commons-ishizaka]
+    ket_qua: null
+    ghi_chu: 'chưa chắc: "Bach không ghi tốc độ" đúng (Henle, Schiff: quyển 1 chỉ có chỉ dẫn tốc độ ở prelude Đô thứ, Mi thứ, Si thứ). "Thường ♩ ≈ 60–72": tính từ độ dài bốn bản thu (35 ô × 4 phách): Schiff 1:48 ≈ ♩ 78, Richter 1:58 ≈ 71, Gould 2:22 ≈ 59, Ishizaka 2:43 ≈ 52 (bỏ qua chậm dần cuối bài). Hai trong bốn bản nằm trong khoảng ghi. Đề xuất có điều kiện ở sua-A.yml.'
+  - id: n22
+    cau: 'Thông tin, hình thức: một chuỗi hợp âm rải liên tục: khẳng định Đô trưởng → sang Sol trưởng → quay về, căng dần → âm nền át → âm nền chủ và kết.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: Như bảng Cấu trúc của trang (hồ sơ trang).
+  - id: n23
+    cau: 'Thông tin, độ khó: khoảng ABRSM Grade 4–5; Trinity xếp bài ở Grade 5 (danh sách từ 2023), Henle mức 1; nốt không khó, cái khó là sự đều đặn và tiếng đàn.'
+    loai: cap-do
+    truong: [thong_tin]
+    nguon: [trinity-2023, henle-hn14]
+    ket_qua: da-sua
+    ghi_chu: 'Dữ liệu cũ: "Khoảng ABRSM Grade 4–5 (ước lượng): nốt không khó, cái khó là sự đều đặn và tiếng đàn". Bài có trong đề cương Trinity (Grade 5, danh sách từ 2023, lần 1 n4), nên ghi kỳ đề cương thay "(ước lượng)" như D6-L1-gom làm. Giữ "Khoảng ABRSM Grade 4–5" khớp grade đã khóa. Đề xuất ở sua-A.yml.'
+  - id: n24
+    cau: 'Thông tin, kỹ năng chính: hợp âm rải chia giữa hai tay, giữ nốt bằng ngón, móc kép đều, bàn đạp (hoặc không), sắc thái theo hòa âm, học thuộc theo hợp âm.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: Các yếu tố có trong bài (tay trái hai nốt rồi tay phải ba nốt, nốt ngân hết nửa ô).
+  - id: n25
+    cau: 'Thông tin, bản nhạc: IMSLP (tìm "Das wohltemperierte Klavier I"); bản Urtext G. Henle Verlag; bản đúng có 35 ô nhịp.'
+    loai: ten
+    truong: [thong_tin]
+    nguon: [imslp-wtc1, henle-hn14, henle-blog-schwencke]
+    ket_qua: dung
+  - id: n26
+    cau: 'Thông tin, bản nhạc: bản Urtext của Bärenreiter và Wiener Urtext.'
+    loai: ten
+    truong: [thong_tin]
+    nguon: []
+    ket_qua: null
+    ghi_chu: 'chưa chắc: chưa mở được trang ấn bản WTC I của Bärenreiter hay Wiener Urtext (danh mục PDF của Universal Edition tải không được). Lượt 2 kiểm.'
+  - id: n27
+    cau: 'Hình cấu trúc: Prelude Đô trưởng BWV 846, 35 ô; các đoạn Đô trưởng ô 1–4 (4), đi xa sang Sol trưởng ô 5–11 (7), quay về căng dần ô 12–23 (12), âm nền át ô 24–31 (8), âm nền chủ ô 32–35 (4).'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: Độ rộng đúng bằng số ô (4 + 7 + 12 + 8 + 4 = 35). Ranh giới khớp hồ sơ trang.
+  - id: n28
+    cau: 'Bản thu gợi ý: Kimiko Ishizaka, giấy phép CC0, trang Commons; dài 162,92 giây.'
+    loai: ten
+    truong: [ban_thu]
+    nguon: [commons-ishizaka]
+    ket_qua: dung
+    ghi_chu: 'Commons: "performed by Kimiko Ishizaka", LicenseShortName CC0, licUrl creativecommons.org/publicdomain/zero/1.0; length 162.92 (khớp d). Liên kết mp3, src đúng tệp b/b6.'

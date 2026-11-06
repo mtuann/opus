@@ -1,25 +1,623 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa piano/tac-pham/satie-gymnopedie
-trang: src/content/docs/piano/tac-pham/satie-gymnopedie.md
-nguon_cu: ../opus-zero/docs/piano/tac-pham/satie-gymnopedie.md
-tang: tac-pham
+trang: 'src/content/docs/piano/tac-pham/satie-gymnopedie.md'
+nguon_cu: '../opus-zero/docs/piano/tac-pham/satie-gymnopedie.md'
+tang: 'tac-pham'
 lan:
-  - so: 1
-    ngay: null
-    nhanh: moi/d6-l3
-    ma_bam: null
-    nguoi:
-      luot_1: null
-      luot_2: null
-      review: null
-      kiem_mau: null
-nguon: []
-nhan_dinh: []
+- so: 1
+  ngay: '2026-11-05'
+  nhanh: 'moi/d6-l3'
+  ma_bam: null
+  nguoi:
+    luot_1: 'Claude Opus 5.5 (D6-L3 phần B)'
+    luot_2: null
+    review: null
+    kiem_mau: null
+ghi_chu: 'Bài học Gymnopédie số 1 (tầng Tác phẩm). Bản nhạc: bản in gốc ba Gymnopédie (Paris 1888, bản quét IMSLP 03213 trên Wikimedia Commons, PD-old; PDF tải ngày 05/11/2026, xem ảnh từng trang): 78 ô viết liền (4 + 8 + 9 + 10 + 8, rồi 31 + 8), 3/4, hai dấu thăng, Lent et douloureux, đề tặng Jeanne de Bret. Mutopia không có Gymnopédie; PDF IMSLP không mở. Lịch sử: lời tựa Henle HN 1072 (Krämer 2011), IMSLP, Britannica (Wayback), Warner, Decca, MusicWeb, CNRTL, Trinity. Chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng thuộc hồ sơ du-lieu/tac-pham/satie-gymnopedie. Sửa trang: n5 ("gần như ô nào"), n9 (bỏ ảnh hưởng tới Debussy, Ravel, tối giản; thay bằng Britannica), n12, n14 (Montmartre theo Henle; bỏ so với Wagner), n13 (bỏ câu Wagner), n16 (Salammbô, lời tự giải thích đầy mỉa mai), n19 (bỏ "được nghe nhiều nhất, trong phim, quảng cáo"), n58 và n71 (bản in gốc có f ở ô 9 và 48: sửa "không có chỗ nào cần f"), n76, n77 (mục Nguồn: thêm Henle, thay Mutopia/Dover bằng bản in gốc). Không có chỗ chưa chắc; n24 ("cực chậm") là cách nói mạnh, lượt 2 cân nhắc. Khuông: hai khối ví dụ soạn, đúng. Thuật ngữ: una corda có trong thuat-ngu.yml; Lent, douloureux (tiếng Pháp) chưa có (ghi cho D3-L5).'
+nguon:
+- id: 'commons-or'
+  bac: 1
+  ten: 'Wikimedia Commons, File:IMSLP03213-Satie-GymnopediesOrEd.pdf (bản in gốc ba Gymnopédie, "publicadas en París en 1888", PD-old; nguồn IMSLP), trang 1–4: "à Mademoiselle Jeanne de Bret", "1ère Gymnopédie", "Lent et douloureux", 3/4, hai dấu thăng; 78 ô viết ra đủ, không có dấu nhắc lại; PDF tải ngày 05/11/2026, xem ảnh từng trang'
+  link: 'https://commons.wikimedia.org/wiki/File:IMSLP03213-Satie-GymnopediesOrEd.pdf'
+- id: 'henle-hn1072-vorwort'
+  bac: 2
+  ten: 'G. Henle Verlag, HN 1072 Satie, Gymnopédies, Preface (Ulrich Krämer, 2011): "composed at the age of 22"; "technically unchallenging mood pictures"; Gymnopedie "festival events at which young, unarmed men displayed their warrior prowess in sporting competitions and dances … young Spartan women danced"; "composed … between February and early April 1888, shortly after Satie had left his parents'' home and moved to the artistic quarter of Montmartre"; Chat noir: "He was hired as a pianist"; "inspired … on reading Flaubert''s novel Salammbô, but … such admissions are full of irony"; "dedicated to Jeanne de Bret"; Debussy "on friendly terms with Satie since 1891, orchestrated both pieces [1ère và 3ème]"; "This laid the foundation for the pieces'' success"; "statically conceived throughout, avoiding any sort of development"; "they resemble a sculpture"; "among the most popular works"'
+  link: 'https://www.henle.de/media/d4/79/64/1697725847/1072-1697725846-sync.pdf'
+- id: 'imslp-gymno'
+  bac: 2
+  ten: 'IMSLP, 3 Gymnopédies (Satie) (wikitext qua api.php): "Year/Date of Composition=1888 (March-April)"; "Year of First Publication=1888 - Paris, self-published (Nos.1, 3), 1895 (No.2)"'
+  link: 'https://imslp.org/wiki/3_Gymnop%C3%A9dies_(Satie,_Erik)'
+- id: 'brit-tg'
+  bac: 2
+  ten: 'Britannica, Trois gymnopédies (Betsy Schwarm; bản lưu Wayback 2025): "written in 1888"; "derived from a festival of ancient Sparta at which young men danced"; "The Trois gymnopédies are the best-known of Satie''s piano pieces"; "minimalist"; "Claude Debussy, who was an older contemporary and a friend, later orchestrated Gymnopédies No. 3 and No. 1"'
+  link: 'https://www.britannica.com/topic/Trois-gymnopedies'
+- id: 'brit-satie'
+  bac: 2
+  ten: 'Britannica, Erik Satie (bản lưu Wayback 2025): "Trois Gymnopédies (1888), use then-novel chords that reveal him as a pioneer in harmony"'
+  link: 'https://www.britannica.com/biography/Erik-Satie'
+- id: 'warner-ciccolini'
+  bac: 2
+  ten: 'Warner Classics, Aldo Ciccolini, News: đĩa Gymnopédies, Gnossiennes "salutes Aldo Ciccolini, the Italian-born pianist who launched the Satie ‘boom’ when this album first appeared in 1956"; hộp 10 CD "Tout Satie!"'
+  link: 'https://www.warnerclassics.com/artist/aldo-ciccolini/news'
+- id: 'decca-roge'
+  bac: 2
+  ten: 'Decca Classics store, Pascal Rogé: The Complete Decca Recordings (43 CD): "exclusive Decca artist in the 1970s and ’80s, extensively documenting the music of Ravel, Debussy, Satie, and Poulenc"'
+  link: 'https://store.deccaclassics.com/products/pascal-roge-the-complete-decca-recordings-43-cd-boxset'
+- id: 'musicweb-satie'
+  bac: 2
+  ten: 'MusicWeb International, bài điểm đĩa Satie (Chevallier, tháng 4/2009): "Reinbert de Leeuw on his much-praised recording (Eloquence … or Philips Duo …) is actually slower in Nos.1 and 3"; "There certainly is a wide variety of tempi on offer"'
+  link: 'https://www.musicweb-international.com/classRev/2009/apr09/Satie_Chevallier_zzt080901.htm'
+- id: 'commons-alciatore'
+  bac: 2
+  ten: 'Wikimedia Commons, File:Erik Satie - gymnopedies - la 1 ere. lent et douloureux.ogg (Robin Alciatore, Musopen; API: thời lượng 183,59 giây)'
+  link: 'https://commons.wikimedia.org/wiki/File:Erik_Satie_-_gymnopedies_-_la_1_ere._lent_et_douloureux.ogg'
+- id: 'cnrtl-lent'
+  bac: 2
+  ten: 'CNRTL (Trésor de la langue française), lent'
+  link: 'https://www.cnrtl.fr/definition/lent'
+- id: 'cnrtl-douloureux'
+  bac: 2
+  ten: 'CNRTL (Trésor de la langue française), douloureux'
+  link: 'https://www.cnrtl.fr/definition/douloureux'
+- id: 'trinity-terms'
+  bac: 2
+  ten: 'Trinity College London, Musical terms and directions for performance (resource 785): "Una Corda indicate the use of the left pedal"'
+  link: 'https://trinitycollege.com/resource?id=785'
+- id: 'ol-orledge'
+  bac: 2
+  ten: 'Open Library, OL2200702M: "Satie the composer", Robert Orledge, Cambridge University Press, 1990'
+  link: 'https://openlibrary.org/books/OL2200702M'
+- id: 'ol-whiting'
+  bac: 2
+  ten: 'Open Library, OL685724M: "Satie the bohemian", Steven Moore Whiting, Oxford University Press, 1999'
+  link: 'https://openlibrary.org/books/OL685724M'
+- id: 'mut-2035'
+  bac: 1
+  ten: 'Mutopia Project 2035, Gnossienne No. 1 (Satie), Éditions Salabert 1913'
+  link: 'https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2035'
+nhan_dinh:
+- id: 'n1'
+  cau: 'Ít nốt, chậm, lặp lại: Gymnopédie số 1 trông như một bài dễ, đọc hết nốt được trong một buổi (câu mở đầu và mô tả trang).'
+  loai: 'cap-do'
+  nguon:
+  - 'henle-hn1072-vorwort'
+  - 'commons-or'
+  ket_qua: 'dung'
+  ghi_chu: 'Henle: "technically unchallenging mood pictures"; Henle xếp cả ba Gymnopédie mức 2 (hồ sơ bản ghi lần 1 n4). Bản in gốc: 78 ô, ít nốt, đoạn sau gần như nhắc lại đoạn trước. "Trong một buổi" là ước lượng của lời khuyên.'
+- id: 'n2'
+  cau: 'Bài kéo dài mấy phút liền.'
+  loai: 'so-lieu'
+  nguon:
+  - 'commons-alciatore'
+  ket_qua: 'dung'
+  ghi_chu: 'Bản thu gợi ý dài 183,59 giây (khoảng 3 phút).'
+- id: 'n3'
+  cau: 'Cái khó là làm cho sự giản dị ấy đều, tĩnh và hát; bài học về nhịp chậm, bước nhảy tay trái, màu sắc tiếng đàn.'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n4'
+  cau: 'Nhịp đều khi chậm: ở tốc độ chậm mọi chênh lệch nhỏ đều lộ ra; bài rèn "đồng hồ bên trong".'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n5'
+  cau: 'Tay trái đánh một nốt trầm rồi nhảy lên một hợp âm, gần như ô nào cũng vậy.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'da-sua'
+  ghi_chu: 'Chữ cũ: "ô nào cũng vậy". Chữ mới: "gần như ô nào cũng vậy". Lý do: bản in gốc: các ô 38–39 và 77–78 (hai ô cuối mỗi lượt) là hợp âm khối cả ô, không có nốt trầm rồi hợp âm; mọi ô khác đúng mẫu. Khớp hồ sơ piano/quang-tam-buoc-nhay n34 (tay trái nhảy từ nốt trầm lên hợp âm).'
+- id: 'n6'
+  cau: 'Đây là dạng đệm của valse, nocturne và vô số bài sau này, ở đây được tập chậm nhất có thể.'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+  ghi_chu: 'Lời giới thiệu; dạng đệm nốt trầm – hợp âm của valse có ở trang chopin-valse-la-thu (đã kiểm ở hồ sơ ấy).'
+- id: 'n7'
+  cau: 'Cả bài gần như ở p và pp.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+  ghi_chu: 'Bản in gốc: pp ô 1, 5, 13, 40, 44, 52; p ô 22, 61; f chỉ ở ô 9 và 48.'
+- id: 'n8'
+  cau: 'Bạn học tạo khác biệt bằng cân bằng ba lớp, bàn đạp và una corda, chứ không bằng to nhỏ.'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n9'
+  cau: 'Hợp âm bảy trưởng, màu điệu thức, sự lặp lại không phát triển: những hợp âm còn mới lạ năm 1888 cho thấy Satie là người đi tiên phong về hòa âm.'
+  loai: 'lich-su'
+  nguon:
+  - 'brit-satie'
+  - 'henle-hn1072-vorwort'
+  - 'commons-or'
+  ket_qua: 'da-sua'
+  ghi_chu: 'Chữ cũ: "… sự lặp lại không phát triển: những thứ Debussy, Ravel và các nhạc sĩ tối giản về sau đi tiếp". Chữ mới như câu. Lý do: ảnh hưởng tới Debussy, Ravel và nhạc tối giản không tìm được nguồn bậc 2 (Britannica còn viết nhạc Satie "stands in opposition to the works of composer Claude Debussy"); Britannica: Trois Gymnopédies "use then-novel chords that reveal him as a pioneer in harmony"; Henle: "avoiding any sort of development". Bản in gốc ô 1–4: Sol–Si–Rê–Fa♯ và Rê–La–Đô♯–Fa♯ (hợp âm bảy trưởng).'
+- id: 'n10'
+  cau: 'Link "Điệu thức" (/opus/nhac-ly/16-dieu-thuc-ngu-cung/) và "thế kỷ 20" (/opus/lich-su/thoi-ky/the-ky-20/).'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'src/content/docs/nhac-ly/16-dieu-thuc-ngu-cung.md và lich-su/thoi-ky/the-ky-20.md có.'
+- id: 'n11'
+  cau: 'Dễ học thuộc, dễ biểu diễn: lượt hai gần như lặp lại lượt một.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+  ghi_chu: 'Bản in gốc: ô 40–70 lặp ô 1–31; khác ở phần kết (ô 71–78 so với 32–39).'
+- id: 'n12'
+  cau: 'Năm 1888, Satie hơn hai mươi tuổi, vừa rời nhà cha mẹ và sống ở khu Montmartre của Paris, giữa giới nghệ sĩ và các quán cabaret.'
+  loai: 'lich-su'
+  nguon:
+  - 'henle-hn1072-vorwort'
+  ket_qua: 'da-sua'
+  ghi_chu: 'Chữ cũ: "Năm 1888, Satie hơn hai mươi tuổi, sống ở khu Montmartre của Paris, giữa giới nghệ sĩ và các quán cabaret." Chữ mới thêm "vừa rời nhà cha mẹ và". Lý do: Henle: "shortly after Satie had left his parents'' home and moved to the artistic quarter of Montmartre"; tháng 12/1887 Satie vào làm pianist ở Le Chat noir. Satie sinh 17/5/1866 (IMSLP, nha-soan-nhac.yml): đầu 1888 ông 21 tuổi, khớp "hơn hai mươi tuổi".'
+- id: 'n13'
+  cau: 'Âm nhạc châu Âu lúc ấy đang say mê sự đồ sộ của Wagner: dàn nhạc khổng lồ, hòa âm đặc, cảm xúc dâng trào.'
+  loai: 'lich-su'
+  nguon: []
+  ket_qua: 'da-bo'
+  ghi_chu: 'Đã bỏ khỏi trang. Câu khái quát về thời đại, không tìm được nguồn bậc 2 nói gì về Wagner liên quan tới Gymnopédies; câu sau ("đi theo hướng ngược lại hoàn toàn") viết lại thành n14.'
+- id: 'n14'
+  cau: 'Gymnopédies được viết thật giản dị: vài lớp nhạc mỏng, một giai điệu đơn giản, không cao trào, không phát triển.'
+  loai: 'cau-truc'
+  nguon:
+  - 'henle-hn1072-vorwort'
+  - 'commons-or'
+  ket_qua: 'da-sua'
+  ghi_chu: 'Chữ cũ: "*Gymnopédies* đi theo hướng ngược lại hoàn toàn: vài lớp nhạc mỏng, …". Chữ mới: "*Gymnopédies* được viết thật giản dị: vài lớp nhạc mỏng, …". Lý do: bỏ vế so với Wagner (n13). Henle: "statically conceived throughout, avoiding any sort of development".'
+- id: 'n15'
+  cau: 'Tên gọi gợi đến gymnopaedia, một lễ hội ở Sparta thời cổ Hy Lạp có những điệu múa của các chàng trai trẻ.'
+  loai: 'lich-su'
+  nguon:
+  - 'brit-tg'
+  - 'henle-hn1072-vorwort'
+  ket_qua: 'dung'
+  ghi_chu: 'Britannica: "derived from a festival of ancient Sparta at which young men danced". Henle: "festival events at which young, unarmed men displayed their warrior prowess in sporting competitions and dances".'
+- id: 'n16'
+  cau: 'Những lời Satie tự giải thích về bài (ông nói mình có cảm hứng khi đọc tiểu thuyết Salammbô của Flaubert) thường đầy mỉa mai.'
+  loai: 'lich-su'
+  nguon:
+  - 'henle-hn1072-vorwort'
+  ket_qua: 'da-sua'
+  ghi_chu: 'Chữ cũ: "Satie thích những cái tên bí ẩn và hiếm khi giải thích chúng". Chữ mới như câu. Lý do: chưa có nguồn cho "thích tên bí ẩn"; Henle: "By his own admission he had been inspired to write the composition on reading Flaubert''s novel Salammbô, but – as frequently with Satie – such admissions are full of irony and therefore consciously misleading". Vế "đừng tìm một câu chuyện trong bài" giữ (lời khuyên).'
+- id: 'n17'
+  cau: 'Hãy nghe bài như một bức phù điêu: chậm, cân đối, xa xăm.'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+  ghi_chu: 'Henle cũng so ba bài với "a sculpture".'
+- id: 'n18'
+  cau: 'Bộ ba bài trở nên nổi tiếng một phần nhờ Debussy, bạn của Satie, người về sau phối khí cho dàn nhạc hai bài số 1 và số 3.'
+  loai: 'lich-su'
+  nguon:
+  - 'henle-hn1072-vorwort'
+  - 'brit-tg'
+  ket_qua: 'dung'
+  ghi_chu: 'Henle: Debussy "on friendly terms with Satie since 1891, orchestrated both pieces", buổi diễn 20/2/1897 "laid the foundation for the pieces'' success". Britannica: "a friend, later orchestrated Gymnopédies No. 3 and No. 1".'
+- id: 'n19'
+  cau: 'Ngày nay ba bài Gymnopédie là những bản piano nổi tiếng nhất của Satie.'
+  loai: 'lich-su'
+  nguon:
+  - 'brit-tg'
+  - 'henle-hn1072-vorwort'
+  ket_qua: 'da-sua'
+  ghi_chu: 'Chữ cũ: "Đến thế kỷ 20, *Gymnopédie* số 1 thành một trong những bản piano được nghe nhiều nhất, trong phim, quảng cáo, phòng chờ." Chữ mới như câu. Lý do: "được nghe nhiều nhất", "phim, quảng cáo, phòng chờ" không có nguồn bậc 2; Britannica: "The Trois gymnopédies are the best-known of Satie''s piano pieces"; Henle: "among the most popular works".'
+- id: 'n20'
+  cau: 'Sự quen thuộc ấy là cái bẫy: rất dễ chơi nó như nhạc nền; việc của bạn là làm người nghe lắng tai trở lại.'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n21'
+  cau: 'Bốn ô đầu chỉ có tay trái; giai điệu vào ở phách thứ hai của ô 5; đoạn giữa có các nốt Đô♮ và Fa♮.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+  ghi_chu: 'Bản in gốc: ô 1–4 tay phải lặng (dấu lặng cả ô); ô 5 dấu lặng đen rồi Fa♯5, La5; ô 22 Đô♮, ô 27 Fa♮.'
+- id: 'n22'
+  cau: 'Câu hỏi khi nghe (hai lớp, chỗ thở, màu sắc đoạn giữa, phần kết lượt hai).'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n23'
+  cau: 'Aldo Ciccolini và Pascal Rogé, cả hai thu nhiều nhạc piano của Satie.'
+  loai: 'ten'
+  nguon:
+  - 'warner-ciccolini'
+  - 'decca-roge'
+  ket_qua: 'dung'
+  ghi_chu: 'Warner: Ciccolini "launched the Satie ‘boom’ when this album first appeared in 1956", hộp "Tout Satie!". Decca: Rogé "extensively documenting the music of … Satie".'
+- id: 'n24'
+  cau: 'Reinbert de Leeuw nổi tiếng với tốc độ cực chậm.'
+  loai: 'ten'
+  nguon:
+  - 'musicweb-satie'
+  ket_qua: 'dung'
+  ghi_chu: 'MusicWeb: "Reinbert de Leeuw on his much-praised recording … is actually slower in Nos.1 and 3" (chậm hơn một bản đã bị chê là chậm). "Cực chậm" là cách nói mạnh; lượt 2 cân nhắc.'
+- id: 'n25'
+  cau: 'Cùng một bài mà độ dài các bản thu chênh nhau rất nhiều.'
+  loai: 'so-lieu'
+  nguon:
+  - 'musicweb-satie'
+  ket_qua: 'dung'
+  ghi_chu: 'MusicWeb: "There certainly is a wide variety of tempi on offer".'
+- id: 'n26'
+  cau: 'Ghi lại tốc độ nào giữ được mạch; nghe bản phối khí của Debussy.'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n27'
+  cau: 'Theo dõi, dạo đầu (4 ô): chỉ tay trái, nốt trầm rồi hợp âm; Sol bảy trưởng và Rê bảy trưởng đung đưa.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+- id: 'n28'
+  cau: 'Theo dõi, câu 1: giai điệu vào ở phách 2 của ô 5; nốt Fa♯ ngân suốt bốn ô cuối câu.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+  ghi_chu: 'Bản in gốc: Fa♯4 ô 9, nối qua ô 10, 11, 12.'
+- id: 'n29'
+  cau: 'Theo dõi, câu 2: mở đầu như câu 1 rồi rẽ hướng; lần đầu tiên hòa âm rời khỏi cặp Sol – Rê.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+  ghi_chu: 'Ô 13–17 như ô 5–9 (bè trầm Sol, Rê xen kẽ); ô 18 bè trầm Si, ô 19–20 Mi: lần đầu khác Sol – Rê (ô 1–17 chỉ có Sol, Rê).'
+- id: 'n30'
+  cau: 'Theo dõi, đoạn giữa: giai điệu lên cao hơn, Đô♮ và Fa♮ đổi màu; bè trầm chủ yếu giữ nốt Rê.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+  ghi_chu: 'Ô 22–31: giai điệu quanh Rê5–Mi5, lên La5 ở ô 28 (cao hơn đoạn cuối câu 1 và câu 2, quanh Fa♯4, Mi4); Đô♮ ô 22, 24, 28, Fa♮ ô 27; bè trầm Rê ở phần lớn các ô.'
+- id: 'n31'
+  cau: 'Theo dõi, kết lượt 1: dừng ở hợp âm Rê trưởng, nhưng bài còn tiếp.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+  ghi_chu: 'Ô 39: Rê–Fa♯–La–Rê.'
+- id: 'n32'
+  cau: 'Theo dõi, lượt 2: dạo đầu trở lại, mọi thứ nhắc lại gần như nguyên văn.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+- id: 'n33'
+  cau: 'Theo dõi, đoạn giữa lượt 2: Đô♮ và Fa♮ trở lại.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+  ghi_chu: 'Ô 61 (p) Đô♮, ô 66 Fa♮.'
+- id: 'n34'
+  cau: 'Theo dõi, kết lượt 2: Fa♮ thay cho Fa♯, kết ở hợp âm Rê thứ; hợp âm cuối tự tắt.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+  ghi_chu: 'Ô 72–78: Fa♮; ô 78 Rê–Fa♮–La–Rê. "Tự tắt" là cách chơi.'
+- id: 'n35'
+  cau: 'Bảng Cấu trúc, dạo đầu, 4 ô: nốt trầm Sol rồi hợp âm Si – Rê – Fa♯ (cả ô là Sol bảy trưởng); nốt trầm Rê rồi hợp âm La – Đô♯ – Fa♯ (Rê bảy trưởng); lặp lại.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+  ghi_chu: 'Bản in gốc ô 1: Sol2 + Si3 (khuông dưới), Rê4 Fa♯4 (khuông trên); ô 2: Rê2 + La3, Đô♯4 Fa♯4.'
+- id: 'n36'
+  cau: 'Bảng, câu 1, 8 ô: Fa♯ – La, Sol – Fa♯ – Đô♯, Si – Đô♯ – Rê, La, rồi Fa♯ ngân suốt bốn ô.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+  ghi_chu: 'Ô 5–12: Fa♯5 La5 | Sol5 Fa♯5 Đô♯5 | Si4 Đô♯5 Rê5 | La4 | Fa♯4 (nối bốn ô).'
+- id: 'n37'
+  cau: 'Bảng, câu 2, 9 ô: mở đầu như câu 1 rồi rẽ hướng.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+  ghi_chu: 'Ô 13–21.'
+- id: 'n38'
+  cau: 'Bảng, đoạn giữa, 10 ô: giai điệu lên cao hơn, có Đô♮ và Fa♮; bè trầm chủ yếu giữ Rê.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+  ghi_chu: 'Ô 22–31.'
+- id: 'n39'
+  cau: 'Bảng, kết lượt 1, 8 ô: câu kết, dừng ở Rê trưởng.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+  ghi_chu: 'Ô 32–39.'
+- id: 'n40'
+  cau: 'Bảng, lượt 2, 31 ô: nhắc lại từ đầu gần như nguyên văn; bản in gốc viết ra đầy đủ, không dùng dấu nhắc lại.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+  ghi_chu: 'Ô 40–70 (31 ô); bản in gốc không có dấu nhắc lại, 78 ô viết liền.'
+- id: 'n41'
+  cau: 'Bảng, kết lượt 2, 8 ô: Fa♮ thay cho Fa♯; kết ở Rê thứ.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+  ghi_chu: 'Ô 71–78. Tổng 4 + 8 + 9 + 10 + 8 + 31 + 8 = 78 ô.'
+- id: 'n42'
+  cau: 'Hai hợp âm tay trái của bốn ô đầu, đúng quãng tám: Si3 Rê4 Fa♯4 và La3 Đô♯4 Fa♯4 (thông số notes của ::cong-cu piano); nốt trầm Sol và Rê nằm thấp hơn.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+  ghi_chu: 'notes="B3 D4 F#4" và "A3 C#4 F#4", range="G3-G4": khớp bản in gốc; nốt trầm Sol2, Rê2.'
+- id: 'n43'
+  cau: 'Hai hợp âm chỉ khác nhau hai nốt (Si → La, Rê → Đô♯); Fa♯ giữ nguyên.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+- id: 'n44'
+  cau: 'Bước nhảy tay trái: từ nốt trầm lên hợp âm có khi xa hơn một quãng tám.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+  ghi_chu: 'Sol2 → Si3 (quãng mười), Rê2 → La3 (quãng mười hai).'
+- id: 'n45'
+  cau: 'Các dòng còn lại của bảng Chỗ khó (nhảy sớm đánh đúng lúc, nhịp đều, giai điệu dài, cân bằng ba lớp, bàn đạp mỗi ô) và cách tập.'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n46'
+  cau: 'Link "Máy đếm nhịp" (/opus/luyen-tap/metronome/) và "Bàn đạp" (/opus/piano/ban-dap/).'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'src/content/docs/luyen-tap/metronome.md và piano/ban-dap.md có.'
+- id: 'n47'
+  cau: 'Hóa biểu có Fa♯, Đô♯ nên Fa♮, Đô♮ ở đoạn giữa và kết lượt 2 rất dễ bị bỏ qua.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+  ghi_chu: 'Bản in gốc: hai dấu thăng (Fa♯, Đô♯); dấu bình viết riêng từng nốt.'
+- id: 'n48'
+  cau: 'Các bài tập chuẩn bị soạn riêng cho trang, ở giọng Đô.'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'Hai khối abc: K:C, tiêu đề "(soạn cho trang này)".'
+- id: 'n49'
+  cau: 'Bài tập 1: nốt trầm là nốt trắng chấm dôi ngân cả ô, hợp âm vào ở phách 2; hợp âm dùng ngón 5-3-1 hoặc 4-2-1.'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'Khối 1: F,,3 & z [A,CE]2 (L:1/4): nốt trầm ba phách, hợp âm hai phách từ phách 2; hợp âm ba nốt.'
+- id: 'n50'
+  cau: 'Cách tập bài tập 1 (rất chậm, tay đặt sẵn, nốt trầm p hợp âm pp, nhắm mắt).'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n51'
+  cau: 'Bài tập 2: nốt Đô ngân qua ô 5 và ô 6.'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'Khối 2: !3!c3- | c3 (ô 5–6).'
+- id: 'n52'
+  cau: 'Cách chơi bài tập 2 (legato, hợp âm ô 6 vào khẽ).'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n53'
+  cau: 'Kế hoạch 4 tuần (30 phút mỗi ngày, ♩ = 60–72).'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n54'
+  cau: 'Link "thu âm" (/opus/luyen-tap/thu-am/).'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'src/content/docs/luyen-tap/thu-am.md có.'
+- id: 'n55'
+  cau: 'Lent là chậm, nhưng vẫn là nhịp ba.'
+  loai: 'dinh-nghia'
+  nguon:
+  - 'cnrtl-lent'
+  - 'commons-or'
+  ket_qua: 'dung'
+  ghi_chu: 'CNRTL: lent (chậm). Bản in gốc: "Lent et douloureux", 3/4. Khớp thuat-ngu.yml (Lento, đã khóa).'
+- id: 'n56'
+  cau: 'Chọn tốc độ để nốt ngân dài nhất còn sống; giữ tốc độ ổn định, chỉ thở nhẹ ở cuối câu.'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n57'
+  cau: 'Douloureux là "đau đớn"; ở đây là một nỗi buồn xa xăm, kiềm chế.'
+  loai: 'dinh-nghia'
+  nguon:
+  - 'cnrtl-douloureux'
+  ket_qua: 'dung'
+  ghi_chu: 'CNRTL: douloureux (gây đau, đầy đau đớn). Vế "nỗi buồn xa xăm" là diễn giải.'
+- id: 'n58'
+  cau: 'Sắc thái hẹp: bản in gốc ghi pp ở đầu bài và ở hai câu giai điệu, p ở đoạn giữa, và chỉ một chữ f mỗi lượt, dưới nốt Fa♯ ngân dài của câu 1 (ô 9 và ô 48).'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'da-sua'
+  ghi_chu: 'Chữ cũ: "Sắc thái hẹp, chỉ những đợt to nhỏ rất nhẹ theo câu; không có chỗ nào cần *f*." Chữ mới: "Sắc thái hẹp: bản in gốc ghi *pp* ở đầu bài và ở hai câu giai điệu, *p* ở đoạn giữa, và chỉ một chữ *f* mỗi lượt, dưới nốt Fa♯ ngân dài của câu 1 (ô 9 và ô 48). Ngoài chỗ ấy, chỉ những đợt to nhỏ rất nhẹ theo câu." Lý do: bản in gốc (Commons, IMSLP 03213) ghi f ở ô 9 và ô 48 (xem ảnh phóng to); pp ô 1, 5, 13, 40, 44, 52; p ô 22, 61. Bản .ly gymno1.ly trong ../opus-zero/_imslp/ cũng có fis2.\f.'
+- id: 'n59'
+  cau: 'Bàn đạp vang đổi mỗi ô, ở nốt trầm; nốt trầm ghi là nốt trắng chấm dôi ngân cả ô, tay trái phải rời nó để đánh hợp âm nên chỉ bàn đạp giữ được nó.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+  ghi_chu: 'Bản in gốc: nốt trầm nốt trắng chấm dôi, hợp âm nốt trắng ở phách 2; không ghi dấu bàn đạp (đổi mỗi ô là lời khuyên).'
+- id: 'n60'
+  cau: 'Una corda là bàn đạp trái, làm tiếng đàn mềm và mờ đi.'
+  loai: 'dinh-nghia'
+  nguon:
+  - 'trinity-terms'
+  ket_qua: 'dung'
+  ghi_chu: 'Trinity: "Una Corda indicate the use of the left pedal". thuat-ngu.yml (đã khóa): "Dùng bàn đạp trái (làm tiếng nhỏ hơn và đổi màu âm)".'
+- id: 'n61'
+  cau: 'Có thể dùng una corda cho cả bài hay chỉ cho lượt hai; đừng dùng nó thay cho việc tự chơi nhỏ.'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n62'
+  cau: 'Hợp âm ở phách 2 là nốt trắng: giữ nó đến hết ô.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+- id: 'n63'
+  cau: 'Lượt hai: chơi nhỏ hơn, gần hơn; phần kết với Fa♮ và Rê thứ khép bài trong màu tối.'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+  ghi_chu: 'Fa♮, Rê thứ: n34.'
+- id: 'n64'
+  cau: 'Lỗi thường gặp (hợp âm to hơn nốt trầm, nhịp khập khiễng, nhanh chậm dần, đứt hơi, đổi bàn đạp muộn, quên dấu bình, rubato kiểu Lãng mạn).'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n65'
+  cau: 'Học tiếp, cùng tác giả: Gymnopédie số 2 và số 3, Gnossienne số 1.'
+  loai: 'ten'
+  nguon:
+  - 'imslp-gymno'
+  - 'mut-2035'
+  ket_qua: 'dung'
+- id: 'n66'
+  cau: 'Học tiếp, cùng chặng: Chopin Prélude Mi thứ (cũng hợp âm khẽ dưới một giai điệu dài), Bach Prelude Đô trưởng, Für Elise.'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'tac-pham.yml (đã khóa): chopin-prelude-mi-thu, bach-prelude-do, fur-elise chặng 4, như satie-gymnopedie; ba trang có. Trang Prélude Mi thứ dạy hợp âm lặp pp dưới giai điệu ngân (hồ sơ chopin-valse-la-thu n66 cũng nói vậy).'
+- id: 'n67'
+  cau: 'Học tiếp, bước tiếp: Schumann Träumerei, rồi Debussy Clair de lune khi đã vững hơn.'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'tac-pham.yml: schumann-traumerei chặng 5, debussy-clair-de-lune chặng 6 (sau chặng 4). Hai trang chưa chuyển: ../opus-zero/docs/piano/tac-pham/schumann-traumerei.md, debussy-clair-de-lune.md có.'
+- id: 'n68'
+  cau: 'Nghe thêm: Debussy Préludes quyển 1, Pärt Spiegel im Spiegel (link).'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'Chưa chuyển: ../opus-zero/docs/nghe-nhac/debussy-preludes.md, part-spiegel.md có. Điều cần giữ: hai trang là hướng dẫn nghe đúng hai tác phẩm ấy.'
+- id: 'n69'
+  cau: 'Câu hỏi 1: hai lượt chỉ khác ở phần kết: lượt 1 dừng ở Rê trưởng, lượt 2 có Fa♮ và kết ở Rê thứ; bản in gốc viết ra đầy đủ, không dùng dấu nhắc lại.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+- id: 'n70'
+  cau: 'Câu hỏi 2: Lent et douloureux nghĩa là chậm và đau đớn.'
+  loai: 'dinh-nghia'
+  nguon:
+  - 'cnrtl-lent'
+  - 'cnrtl-douloureux'
+  ket_qua: 'dung'
+- id: 'n71'
+  cau: 'Câu hỏi 2, lời giải thích: đau đớn ở đây là nỗi buồn xa xăm, kiềm chế; sắc thái hẹp, gần như chỉ pp và p.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'da-sua'
+  ghi_chu: 'Chữ cũ: "…không phải bi kịch; không chỗ nào cần f." Chữ mới: "…không phải bi kịch; sắc thái hẹp, gần như chỉ pp và p." Lý do: như n58 (bản in gốc có f ở ô 9 và ô 48).'
+- id: 'n72'
+  cau: 'Câu hỏi 3: nốt trầm ghi là nốt trắng chấm dôi ngân cả ô, nhưng tay trái phải rời nó để đánh hợp âm ở phách 2.'
+  loai: 'cau-truc'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'dung'
+- id: 'n73'
+  cau: 'Câu hỏi 4: tập bước nhảy tay trái: nhảy sớm, đánh đúng lúc.'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n74'
+  cau: 'Nguồn: Robert Orledge, Satie the Composer, Cambridge University Press, 1990.'
+  loai: 'ten'
+  nguon:
+  - 'ol-orledge'
+  ket_qua: 'dung'
+- id: 'n75'
+  cau: 'Nguồn: Steven Moore Whiting, Satie the Bohemian: From Cabaret to Concert Hall, Oxford University Press, 1999.'
+  loai: 'ten'
+  nguon:
+  - 'ol-whiting'
+  ket_qua: 'dung'
+- id: 'n76'
+  cau: 'Nguồn: G. Henle Verlag, Satie: Gymnopédies (HN 1072), lời tựa của Ulrich Krämer (2011).'
+  loai: 'ten'
+  nguon:
+  - 'henle-hn1072-vorwort'
+  ket_qua: 'da-sua'
+  ghi_chu: 'Dòng mới ở mục Nguồn: "G. Henle Verlag, *Satie: Gymnopédies* (HN 1072), lời tựa của Ulrich Krämer (2011): năm viết, lời đề tặng, Montmartre, bản phối khí của Debussy." Lý do: nguồn bậc 2 đã mở cho các câu Bối cảnh (n12, n15, n16, n18, n19); Orledge, Whiting là sách in chưa đọc. Lời tựa ký "Berlin, autumn 2011, Ulrich Krämer".'
+- id: 'n77'
+  cau: 'Nguồn: bản nhạc IMSLP; nốt nhạc, số ô và chỉ dẫn được đối chiếu với bản in gốc (bản quét trên Wikimedia Commons).'
+  loai: 'ten'
+  nguon:
+  - 'commons-or'
+  ket_qua: 'da-sua'
+  ghi_chu: 'Chữ cũ: "nốt nhạc và chỉ dẫn được đối chiếu với bản chép LilyPond của Mutopia Project (từ bản in lại bản gốc của Dover)". Chữ mới: "nốt nhạc, số ô và chỉ dẫn được đối chiếu với bản in gốc (bản quét trên Wikimedia Commons)". Lý do: Mutopia không còn Gymnopédie nào (danh sách tác phẩm Satie ngày 05/11/2026: Croquis, Chapitres, Gnossiennes, Trois valses); lượt này đối chiếu với bản in gốc trên Commons. Bản gymno1.ly ở ../opus-zero/_imslp/ không ghi nguồn và dùng dấu nhắc lại, nên không dẫn.'
+- id: 'n78'
+  cau: 'Link tài liệu tham khảo (/opus/tai-lieu-tham-khao/).'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'src/content/docs/tai-lieu-tham-khao.md có.'
 khuong_nhac:
-  - khoi: 1
-    loai: null
-    kiem: []
-    ket_qua: null
-  - khoi: 2
-    loai: null
-    kiem: []
-    ket_qua: null
+- khoi: 1
+  loai: 'vi-du-soan'
+  kiem:
+  - 'cu-phap'
+  - 'giong'
+  - 'hop-am'
+  - 'so-ngon'
+  - 'ban-dap'
+  ket_qua: 'dung'
+  ghi_chu: 'Đô trưởng, khóa Fa, 3/4, L:1/4: mỗi ô 3 (nốt trầm 3 & lặng 1 + hợp âm 2). Mô phỏng tay trái bài thật: Fa bảy trưởng (Fa2; La3 Đô4 Mi4) và Đô bảy trưởng (Đô3; Sol3 Si3 Mi4) đung đưa bốn ô, rồi La thứ bảy, Rê thứ bảy, Sol bảy, Đô. Bước nhảy Fa2 → La3 (quãng mười), Sol2 → Si3: đúng "nhảy". Hợp âm ba nốt, ngón 5-3-1 hay 4-2-1 chơi được. "Ped." mỗi ô ở nốt trầm.'
+- khoi: 2
+  loai: 'vi-du-soan'
+  kiem:
+  - 'cu-phap'
+  - 'giong'
+  - 'hop-am'
+  - 'so-ngon'
+  - 'ban-dap'
+  ket_qua: 'dung'
+  ghi_chu: 'Đô trưởng, 3/4, L:1/4: mỗi ô 3. Giai điệu vào ở phách 2 (z c e), như bài thật; Đô5 ngân qua ô 5–6 (c3- | c3): đúng chú thích. Tay trái cùng mẫu khối 1, hợp âm ô 6 Rê thứ bảy (La3 Đô4 Fa4) dưới Đô5. Ngón tay phải chơi được; legato.'
+doi_chu:
+- cu: 1888, khi Satie 22 tuổi; bài số 1 đề tặng cô Jeanne de Bret
+  moi: 1888 (tháng 2 đến đầu tháng 4), khi Satie chưa đầy 22 tuổi; bài số 1 đề tặng cô Jeanne de Bret
+  ly_do: 'Dữ liệu (thong_tin, hiện qua ::hop-tac-pham) sửa theo sua-B.yml, nhận định n13 của hồ sơ bản ghi: Satie sinh 17/5/1866 (IMSLP); bài viết "between February and early April 1888" (Henle), IMSLP "1888 (March-April)": lúc ấy ông 21 tuổi. Henle Preface viết "composed at the age of 22" (lệch với hai mốc trên); "chưa đầy 22 tuổi" đúng với cả hai. Trang bài học viết "hơn hai mươi tuổi", đã đúng.'
+- cu: Mẫu đệm nốt trầm – hợp âm. Tay trái đánh một nốt trầm rồi nhảy lên một hợp âm, ô nào cũng vậy. Đây là dạng đệm của valse, nocturne và vô số bài sau này, ở đây được tập chậm nhất có thể.
+  moi: Mẫu đệm nốt trầm – hợp âm. Tay trái đánh một nốt trầm rồi nhảy lên một hợp âm, gần như ô nào cũng vậy. Đây là dạng đệm của valse, nocturne và vô số bài sau này, ở đây được tập chậm nhất có thể.
+  ly_do: 'n5 (da-sua): hai ô cuối mỗi lượt là hợp âm khối.'
+- cu: 'Cửa sổ sang thế kỷ 20. Hợp âm bảy trưởng, màu điệu thức, sự lặp lại không phát triển: những thứ Debussy, Ravel và các nhạc sĩ tối giản về sau đi tiếp (xem Điệu thức và thế kỷ 20).'
+  moi: 'Cửa sổ sang thế kỷ 20. Hợp âm bảy trưởng, màu điệu thức, sự lặp lại không phát triển: những hợp âm còn mới lạ năm 1888 cho thấy Satie là người đi tiên phong về hòa âm (xem Điệu thức và thế kỷ 20).'
+  ly_do: 'n9 (da-sua): Britannica ("then-novel chords … pioneer in harmony"); ảnh hưởng tới Debussy, Ravel, tối giản không có nguồn bậc 2.'
+- cu:
+  - 'Năm 1888, Satie hơn hai mươi tuổi, sống ở khu Montmartre của Paris, giữa giới nghệ sĩ và các quán cabaret. Âm nhạc châu Âu lúc ấy đang say mê sự đồ sộ của Wagner: dàn nhạc khổng lồ, hòa âm đặc, cảm xúc dâng trào. Gymnopédies đi theo hướng ngược lại hoàn toàn: vài lớp nhạc mỏng, một giai điệu đơn giản, không cao trào, không phát triển.'
+  - 'Tên gọi gợi đến gymnopaedia, một lễ hội ở Sparta thời cổ Hy Lạp có những điệu múa của các chàng trai trẻ. Satie thích những cái tên bí ẩn và hiếm khi giải thích chúng; đừng tìm một "câu chuyện" trong bài. Hãy nghe nó như một bức phù điêu: chậm, cân đối, xa xăm.'
+  - 'Bộ ba bài trở nên nổi tiếng một phần nhờ Debussy, bạn của Satie, người về sau phối khí cho dàn nhạc hai bài số 1 và số 3. Đến thế kỷ 20, Gymnopédie số 1 thành một trong những bản piano được nghe nhiều nhất, trong phim, quảng cáo, phòng chờ. Sự quen thuộc ấy là cái bẫy: rất dễ chơi nó như nhạc nền. Việc của bạn là làm người nghe lắng tai trở lại.'
+  moi:
+  - 'Năm 1888, Satie hơn hai mươi tuổi, vừa rời nhà cha mẹ và sống ở khu Montmartre của Paris, giữa giới nghệ sĩ và các quán cabaret. Gymnopédies được viết thật giản dị: vài lớp nhạc mỏng, một giai điệu đơn giản, không cao trào, không phát triển.'
+  - 'Tên gọi gợi đến gymnopaedia, một lễ hội ở Sparta thời cổ Hy Lạp có những điệu múa của các chàng trai trẻ. Những lời Satie tự giải thích về bài (ông nói mình có cảm hứng khi đọc tiểu thuyết Salammbô của Flaubert) thường đầy mỉa mai; đừng tìm một "câu chuyện" trong bài. Hãy nghe nó như một bức phù điêu: chậm, cân đối, xa xăm.'
+  - 'Bộ ba bài trở nên nổi tiếng một phần nhờ Debussy, bạn của Satie, người về sau phối khí cho dàn nhạc hai bài số 1 và số 3. Ngày nay ba bài Gymnopédie là những bản piano nổi tiếng nhất của Satie. Sự quen thuộc ấy là cái bẫy: rất dễ chơi nó như nhạc nền. Việc của bạn là làm người nghe lắng tai trở lại.'
+  ly_do: 'n12, n14 (da-sua), n13 (da-bo): theo lời tựa Henle HN 1072; câu về Wagner không có nguồn. n16 (da-sua): Henle HN 1072. n19 (da-sua): Britannica ("best-known of Satie''s piano pieces").'
+- cu: '"Đau đớn" ở đây không phải bi kịch. Đó là một nỗi buồn xa xăm, kiềm chế, như nhìn qua một lớp kính. Sắc thái hẹp, chỉ những đợt to nhỏ rất nhẹ theo câu; không có chỗ nào cần f.'
+  moi: '"Đau đớn" ở đây không phải bi kịch. Đó là một nỗi buồn xa xăm, kiềm chế, như nhìn qua một lớp kính. Sắc thái hẹp: bản in gốc ghi pp ở đầu bài và ở hai câu giai điệu, p ở đoạn giữa, và chỉ một chữ f mỗi lượt, dưới nốt Fa♯ ngân dài của câu 1 (ô 9 và ô 48). Ngoài chỗ ấy, chỉ những đợt to nhỏ rất nhẹ theo câu.'
+  ly_do: 'n58 (da-sua): bản in gốc có f ở ô 9 và ô 48.'
+- cu: 'Bản nhạc: IMSLP; nốt nhạc và chỉ dẫn được đối chiếu với bản chép LilyPond của Mutopia Project (từ bản in lại bản gốc của Dover). Xem thêm tài liệu tham khảo.'
+  moi:
+  - 'G. Henle Verlag, Satie: Gymnopédies (HN 1072), lời tựa của Ulrich Krämer (2011): năm viết, lời đề tặng, Montmartre, bản phối khí của Debussy.'
+  - 'Bản nhạc: IMSLP; nốt nhạc, số ô và chỉ dẫn được đối chiếu với bản in gốc (bản quét trên Wikimedia Commons). Xem thêm tài liệu tham khảo.'
+  ly_do: 'n76, n77 (da-sua): thêm lời tựa Henle; Mutopia không còn bản Gymnopédie, đối chiếu với bản in gốc.'
+- cu: 'câu hỏi: Lent et douloureux nghĩa là gì? | Nhẹ và vui | ✓ Chậm và đau đớn | Chậm dần rồi nhanh dần | "Đau đớn" ở đây là một nỗi buồn xa xăm, kiềm chế, không phải bi kịch; không chỗ nào cần f.'
+  moi: 'câu hỏi: Lent et douloureux nghĩa là gì? | Nhẹ và vui | ✓ Chậm và đau đớn | Chậm dần rồi nhanh dần | "Đau đớn" ở đây là một nỗi buồn xa xăm, kiềm chế, không phải bi kịch; sắc thái hẹp, gần như chỉ pp và p.'
+  ly_do: 'n71 (da-sua): như n58.'

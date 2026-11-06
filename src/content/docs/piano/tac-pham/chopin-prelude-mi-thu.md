@@ -1,10 +1,10 @@
 ---
 title: "Chopin: Prélude Mi thứ, Op. 28 số 4"
-description: "Hai mươi lăm ô nhịp, một giai điệu gần như chỉ đi lại giữa hai nốt cạnh nhau, một tay trái lặp đi lặp lại những hợp âm móc đơn: ít nốt đến thế mà là một trong…"
+description: "Hai mươi lăm ô nhịp, một giai điệu gần như chỉ đi lại giữa hai nốt cạnh nhau, một tay trái lặp đi lặp lại những hợp âm móc đơn: ít nốt đến thế mà được chơi trong…"
 tac_pham: chopin-prelude-mi-thu
 ---
 
-Hai mươi lăm ô nhịp, một giai điệu gần như chỉ đi lại giữa hai nốt cạnh nhau, một tay trái lặp đi lặp lại những hợp âm móc đơn: ít nốt đến thế mà là một trong những trang nhạc buồn nhất Chopin để lại. Đây là bài học về **hòa âm trượt từng nửa cung**, về chơi hợp âm thật khẽ và đều, và về sức nặng của im lặng.
+Hai mươi lăm ô nhịp, một giai điệu gần như chỉ đi lại giữa hai nốt cạnh nhau, một tay trái lặp đi lặp lại những hợp âm móc đơn: ít nốt đến thế mà được chơi trong lễ tang của chính Chopin. Đây là bài học về **hòa âm trượt từng nửa cung**, về chơi hợp âm thật khẽ và đều, và về sức nặng của im lặng.
 
 ::hop-tac-pham
 
@@ -14,15 +14,15 @@ Hai mươi lăm ô nhịp, một giai điệu gần như chỉ đi lại giữa 
 - **Hợp âm *pp* đều như nhịp tim.** Chơi tám hợp âm mỗi ô thật khẽ mà không hợp âm nào "lồi" ra là kỹ năng đệm cốt lõi của nhạc Lãng mạn.
 - **Hát trên một nốt.** Giai điệu ngân dài trên nốt Si rồi thở dài sang Đô: bạn học làm cho một nốt dài có sức sống (xem [Tạo tiếng đàn](/opus/piano/tieng-dan/)).
 - **Một cao trào trong 25 ô.** Dồn lên, bùng nổ, lắng xuống, im lặng, kết: cả một vở kịch thu nhỏ.
-- **Bài Chopin đầu tiên lý tưởng.** Khoảng hai phút, kỹ thuật vừa sức, âm nhạc sâu.
+- **Một bài Chopin đầu tiên vừa sức.** Khoảng hai phút; Henle xếp bài ở mức 4, mức thấp nhất trong bộ Op. 28.
 
 ## Bối cảnh
 
-Bộ 24 Prélude Op. 28 đi qua đủ 24 giọng, mỗi giọng trưởng theo sau là giọng thứ song song của nó, tiến theo vòng quãng năm: Đô trưởng, La thứ, Sol trưởng, Mi thứ… Chopin tôn sùng Bach, và ý tưởng một bộ prelude đủ mọi giọng gợi nhớ *Bình quân luật*. Nhưng prelude của Chopin không còn là "khúc dạo đầu" cho một fugue: mỗi bài là một bức tranh độc lập, có bài chỉ dài vài chục giây.
+Bộ 24 Prélude Op. 28 đi qua đủ 24 giọng, mỗi giọng trưởng theo sau là giọng thứ song song của nó, tiến theo vòng quãng năm: Đô trưởng, La thứ, Sol trưởng, Mi thứ… Chopin mang theo bản *Bình quân luật* của Bach tới Mallorca, và ý tưởng một bộ prelude đủ mọi giọng gợi nhớ tác phẩm ấy. Nhưng prelude của Chopin không còn là "khúc dạo đầu" cho một fugue: mỗi bài là một bức tranh độc lập, có bài chỉ dài vài chục giây.
 
-Chopin hoàn tất bộ này ở đảo Mallorca, nơi ông trú đông 1838–1839 cùng nhà văn George Sand, trong một tu viện cũ ở Valldemossa, khi bệnh phổi đã hành hạ ông. Trong thư gửi Camille Pleyel, ông viết rằng mình đã viết xong các prelude "trên cây đàn nhỏ của ông". Nhạc trưởng Hans von Bülow về sau đặt cho bài số 4 biệt danh "Ngạt thở"; biệt danh ấy không phải của Chopin.
+Chopin hoàn tất bộ này ở đảo Mallorca, nơi ông trú đông 1838–1839 cùng nhà văn George Sand, trong một tu viện cũ ở Valldemossa, khi bệnh phổi đã hành hạ ông. Trong thư gửi Camille Pleyel, ông viết rằng mình đã viết xong các prelude "trên cây đàn nhỏ của ông". Bài số 4 có khi được gọi bằng biệt danh "Ngạt thở" (*Suffocation*); biệt danh ấy không phải của Chopin, ông chỉ ghi tốc độ *Largo*.
 
-Ngày 30 tháng 10 năm 1849, tại lễ tang Chopin ở nhà thờ Madeleine (Paris), nghệ sĩ organ Louis Lefébure-Wély chơi hai prelude Mi thứ và Si thứ (số 4 và số 6) trên đàn organ, và Requiem của Mozart được trình diễn. Xem thêm [thời kỳ Lãng mạn](/opus/lich-su/thoi-ky/lang-man/).
+Ngày 30 tháng 10 năm 1849, tại lễ tang Chopin ở nhà thờ Madeleine (Paris), nghệ sĩ organ Louis Lefébure-Wély chơi trên đàn organ hai prelude của Chopin, trong đó có bài Mi thứ này, và Requiem của Mozart được trình diễn. Xem thêm [thời kỳ Lãng mạn](/opus/lich-su/thoi-ky/lang-man/).
 
 ## Nghe trước khi tập
 
@@ -83,7 +83,7 @@ Từ hợp âm thứ hai trở đi, mỗi lần đổi chỉ **một** bè đi x
 
 | Chỗ khó | Vì sao khó | Cách tập |
 |---|---|---|
-| Hợp âm lặp *pp* | Tám hợp âm mỗi ô; một hợp âm to hơn là lộ ngay; cẳng tay dễ mỏi và cứng | Chơi từ mặt phím, phím chỉ trồi lên một phần giữa hai lần đánh; cổ tay mềm, động tác nhỏ. Đặt [máy đếm nhịp](/opus/luyen-tap/metronome/) theo móc đơn |
+| Hợp âm lặp *pp* | Tám hợp âm mỗi ô; một hợp âm to hơn là lộ ngay; động tác lớn dễ làm tiếng to và không đều | Chơi từ mặt phím, phím chỉ trồi lên một phần giữa hai lần đánh; cổ tay mềm, động tác nhỏ. Đặt [máy đếm nhịp](/opus/luyen-tap/metronome/) theo móc đơn |
 | Nghe bè đang di chuyển | Mỗi lần chỉ đổi một nốt; dễ đánh nhầm hoặc quên chỗ đổi | Ghi tên nốt từng hợp âm; tập tay trái như một bài hợp xướng (mỗi hợp âm đánh một lần, ngân); hát bè đang đi xuống |
 | Nốt Si dài ở tay phải | Si ngân cả ô trong khi tám hợp âm vang bên dưới; nó tắt dần và chìm | Đánh Si bằng sức nặng của cánh tay, không bằng ngón cứng; tay trái nhỏ hơn hẳn; nghe xem khi Đô vào, Si còn bao nhiêu |
 | Nét chạy ở ô 12 | Tay trái nghỉ, tay phải một mình; dễ vội hoặc mất nhịp | Tập đúng nhịp trước, rồi mới cho phép co giãn nhẹ; nối liền sang ô 13 |
@@ -189,7 +189,7 @@ Gần như cả bài ở *p* và *pp*. Chỉ có một chữ *f*, ở ô 17; hã
 
 ## Học tiếp
 
-- **Cùng tác giả:** Prélude Si thứ Op. 28 số 6 (cũng được chơi trong lễ tang Chopin; giai điệu nằm ở tay trái), [Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/), [Valse Si thứ](/opus/piano/tac-pham/chopin-valse-si-thu/), rồi [Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/).
+- **Cùng tác giả:** Prélude Si thứ Op. 28 số 6 (giai điệu nằm ở tay trái), [Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/), [Valse Si thứ](/opus/piano/tac-pham/chopin-valse-si-thu/), rồi [Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/).
 - **Cùng chặng:** [Bach: Prelude Đô trưởng](/opus/piano/tac-pham/bach-prelude-do/), [Satie: Gymnopédie số 1](/opus/piano/tac-pham/satie-gymnopedie/), [Für Elise](/opus/piano/tac-pham/fur-elise/).
 - **Cùng kỹ năng hát:** [Schumann: Träumerei](/opus/piano/tac-pham/schumann-traumerei/).
 - **Nghe thêm:** [Chopin: Étude Op. 10](/opus/nghe-nhac/chopin-etude/), nhất là số 3, một giai điệu buồn khác của Chopin.
@@ -226,5 +226,6 @@ Gần như cả bài ở *p* và *pp*. Chỉ có một chữ *f*, ở ô 17; hã
 - Jean-Jacques Eigeldinger, *Chopin: Pianist and Teacher as Seen by His Pupils*, Cambridge University Press, 1986.
 - Jim Samson, *The Music of Chopin*, Routledge & Kegan Paul, 1985.
 - Thomas Higgins (biên tập), *Chopin: Preludes, Op. 28* (Norton Critical Scores), W. W. Norton, 1973.
-- [Prelude, Op. 28, No. 4 (Chopin)](https://en.wikipedia.org/wiki/Prelude,_Op._28,_No._4_%28Chopin%29), Wikipedia (lễ tang, biệt danh của Bülow, hợp âm sáu tăng ở ô 23).
+- G. Henle Verlag, *Chopin: Préludes* (HN 882), [lời tựa](https://www.henle.de/media/cb/de/28/1690886065/0882-1690886065-sync.pdf) (Mallorca, thư gửi Pleyel ngày 22/1/1839) và [trang sản phẩm](https://www.henle.de/en/Preludes/HN-882) (mức khó từng prelude).
+- Viện Fryderyk Chopin (NIFC), [niên biểu năm 1849](https://en.chopin.nifc.pl/chopin/life/calendar/year/1849): lễ tang ngày 30/10/1849 ở nhà thờ Madeleine.
 - Bản nhạc: [IMSLP](https://imslp.org/); bảng hòa âm đối chiếu với bản Peters 1879 qua bản chép LilyPond của [Mutopia Project](https://www.mutopiaproject.org/). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

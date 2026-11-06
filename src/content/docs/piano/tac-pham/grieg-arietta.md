@@ -19,9 +19,9 @@ tac_pham: grieg-arietta
 
 Edvard Grieg sinh ở Bergen, Na Uy, và học ở Nhạc viện Leipzig (1858–1862), ngôi trường do Mendelssohn sáng lập. Ở đó, truyền thống **tiểu phẩm piano** Đức đang rất sống: *Lieder ohne Worte* (Bài hát không lời) của Mendelssohn, các tập nhạc nhỏ của Schumann (xem [Thể loại](/opus/piano/the-loai/)). Grieg mang truyền thống ấy về phương Bắc và pha vào đó giai điệu, nhịp điệu của âm nhạc dân gian Na Uy.
 
-Tập Op. 12 được viết khoảng 1866–1867 và in năm 1867. Tám bài trong tập là những bức tranh rất ngắn: *Arietta*, *Vals* (Valse), *Vektersang* (Bài ca người gác đêm, gợi hứng từ *Macbeth*), *Alfedans* (Điệu múa yêu tinh), *Folkevise* (Dân ca), *Norsk* (Điệu Na Uy), *Albumblad* (Trang album) và *Fedrelandssang* (Bài ca quê hương). Chỉ một năm sau, năm 1868, Grieg viết [Concerto cho piano La thứ](/opus/nghe-nhac/grieg-concerto/).
+Tập Op. 12 được viết khoảng 1866–1867 và in năm 1867. Tám bài trong tập là những bức tranh rất ngắn: *Arietta*, *Vals* (Valse), *Vægtersang* (Bài ca người gác đêm, gợi hứng từ *Macbeth*), *Alfedans* (Điệu múa yêu tinh), *Folkevise* (Dân ca), *Norsk* (Điệu Na Uy), *Albumblad* (Trang album) và *Fædrelandssang* (Bài ca quê hương). Chỉ một năm sau, năm 1868, Grieg viết [Concerto cho piano La thứ](/opus/nghe-nhac/grieg-concerto/).
 
-Trong 34 năm tiếp theo, ông viết thêm chín tập; cả bộ gồm 66 bài trong mười tập, gọi chung là *Lyriske stykker*. Giai điệu của *Arietta* là một trong những giai điệu Grieg yêu thích nhất. Ở bài cuối cùng của tập cuối, Op. 71 số 7 *Efterklang* (Dư âm; tên tiếng Anh *Remembrances*, Hồi ức), viết và in năm 1901, ông cho nó trở lại, lần này thành một điệu valse. Bài đầu và bài cuối ôm lấy cả bộ như hai trang bìa của một cuốn nhật ký.
+Trong 34 năm tiếp theo, ông viết thêm chín tập; cả bộ gồm 66 bài trong mười tập, gọi chung là *Lyriske stykker*. Ở bài cuối cùng của tập cuối, Op. 71 số 7 *Efterklang* (Dư âm; tên tiếng Anh *Remembrances*, Hồi ức), viết và in năm 1901, ông cho nó trở lại, lần này thành một điệu valse. Bài đầu và bài cuối ôm lấy cả bộ như hai trang bìa của một cuốn nhật ký.
 
 *Arietta* là tiếng Ý, nghĩa là "aria nhỏ": một bài hát ngắn. Ở đây không có lời và không có ca sĩ; giọng hát là ngón tay của bạn. Xem thêm [thời kỳ Lãng mạn](/opus/lich-su/thoi-ky/lang-man/).
 
@@ -34,7 +34,7 @@ Bài chỉ dài khoảng một phút rưỡi, nên hãy nghe nhiều lần, mỗ
 3. **Hai màu của một hình kết.** Ở ô 9–12, cùng một hình kết vang hai lần: lần đầu ở Sol thứ và rẽ hướng (kết lừa), lần sau về Mi♭ trưởng trọn vẹn (kết trọn). Lần nào tối, lần nào sáng?
 4. **Ô cuối.** Bài khép lại dứt khoát, hay tan đi như người chìm vào giấc ngủ?
 
-Rồi so sánh ít nhất hai bản thu, chẳng hạn Emil Gilels, người đưa *Arietta* vào tuyển tập *Lyric Pieces* nổi tiếng của mình, và Einar Steen-Nøkleberg, nghệ sĩ Na Uy đã thu trọn các tác phẩm piano của Grieg. Ghi lại: ai chơi chậm nhất, ai để nốt trầm vang rõ nhất, ai cho ô cuối tan lâu nhất? Cuối cùng, nghe *Efterklang* Op. 71 số 7 ngay sau *Arietta*: cùng một giai điệu, nhưng đã thành điệu valse của một người nhìn lại. Muốn biết thêm về các nghệ sĩ, xem [Nghệ sĩ piano và bản thu](/opus/piano/nghe-si/).
+Rồi so sánh ít nhất hai bản thu, chẳng hạn Emil Gilels, người mở đầu tuyển tập *Lyric Pieces* của mình (Deutsche Grammophon) bằng *Arietta*, và Einar Steen-Nøkleberg, nghệ sĩ Na Uy đã thu trọn các tác phẩm piano của Grieg. Ghi lại: ai chơi chậm nhất, ai để nốt trầm vang rõ nhất, ai cho ô cuối tan lâu nhất? Cuối cùng, nghe *Efterklang* Op. 71 số 7 ngay sau *Arietta*: cùng một giai điệu, nhưng đã thành điệu valse của một người nhìn lại. Muốn biết thêm về các nghệ sĩ, xem [Nghệ sĩ piano và bản thu](/opus/piano/nghe-si/).
 
 ::khoi-nghe{moc="1 13 25 33 44 53 60 77"}
 
@@ -237,7 +237,7 @@ Dùng một bản in đáng tin, ví dụ bản Urtext của Henle; các bản i
 + Ở bài cuối cùng, Op. 71 số 7 Efterklang, dưới dạng một điệu valse
 - Ở bài số 2 của Op. 12, Vals
 - Không ở đâu cả; mỗi bài có một chủ đề riêng
-> Grieg dùng giai điệu yêu thích này để khép lại cả bộ năm 1901, 34 năm sau tập đầu tiên.
+> Grieg dùng lại giai điệu này để khép lại cả bộ năm 1901, 34 năm sau tập đầu tiên.
 ? Từ ô 13, điều gì xảy ra?
 + Chủ đề trở lại (đoạn A'), có thêm nốt hoa mỹ, nốt chủ ở bè trầm thấp hơn một quãng tám
 - Một chủ đề mới ở Sol thứ bắt đầu
@@ -258,6 +258,7 @@ Dùng một bản in đáng tin, ví dụ bản Urtext của Henle; các bản i
 ## Nguồn
 
 - PTNA Piano Music Encyclopedia (Bách khoa âm nhạc piano PTNA), mục [*Arietta* Op. 12-1](https://enc.piano.or.jp/en/musics/21051): phân tích hình thức (a – b – c, A', coda), hòa âm ô 9–12, gợi ý tốc độ, đoạn trở lại và ô cuối.
-- [*Lyric Pieces*](https://en.wikipedia.org/wiki/Lyric_Pieces), Wikipedia tiếng Anh: 66 bài trong mười tập (1867–1901), năm viết và in của Op. 12 và Op. 71; *Arietta* là một trong những giai điệu Grieg yêu thích, trở lại ở *Efterklang* dưới dạng valse.
+- IMSLP, [*Lyric Pieces*, Op. 12](https://imslp.org/wiki/Lyric_Pieces,_Op.12_(Grieg,_Edvard)) và [Op. 71](https://imslp.org/wiki/Lyric_Pieces,_Op.71_(Grieg,_Edvard)): tên tám bài của Op. 12, năm viết và in; *Efterklang* (*Tempo di Valse*) dùng lại *Arietta*.
+- [Britannica, mục Edvard Grieg](https://www.britannica.com/biography/Edvard-Grieg): mười tập *Lyric Pieces* (1867–1901), Nhạc viện Leipzig.
 - Joseph Banowetz, *The Pianist's Guide to Pedaling*, Indiana University Press, 1985: bàn đạp nối và nửa bàn đạp.
 - Bản nhạc: [IMSLP](https://imslp.org/) (tìm "Lyric Pieces, Op.12 (Grieg, Edvard)"); [G. Henle Verlag](https://www.henle.de/). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

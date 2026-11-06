@@ -1,25 +1,695 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa piano/tac-pham/chopin-prelude-mi-thu
-trang: src/content/docs/piano/tac-pham/chopin-prelude-mi-thu.md
-nguon_cu: ../opus-zero/docs/piano/tac-pham/chopin-prelude-mi-thu.md
-tang: tac-pham
+trang: 'src/content/docs/piano/tac-pham/chopin-prelude-mi-thu.md'
+nguon_cu: '../opus-zero/docs/piano/tac-pham/chopin-prelude-mi-thu.md'
+tang: 'tac-pham'
 lan:
-  - so: 1
-    ngay: null
-    nhanh: moi/d6-l3
-    ma_bam: null
-    nguoi:
-      luot_1: null
-      luot_2: null
-      review: null
-      kiem_mau: null
-nguon: []
-nhan_dinh: []
+- so: 1
+  ngay: '2026-11-05'
+  nhanh: 'moi/d6-l3'
+  ma_bam: null
+  nguoi:
+    luot_1: 'Claude Opus 5.5 (D6-L3 phần B)'
+    luot_2: null
+    review: null
+    kiem_mau: null
+ghi_chu: 'Bài học Prélude Mi thứ Op. 28 số 4 (tầng Tác phẩm). Bản nhạc: ấn bản Peters 1879 qua Mutopia 468 (.ly tải ngày 05/11/2026): 25 ô và một nhịp lấy đà, 2/2, Largo; bảng hòa âm ô 1–5 khớp từng nốt. Bản IMSLP (PDF) không mở. Lịch sử: Henle HN 882 (Preface, trang sản phẩm), Ấn bản Quốc gia (Commentary), NIFC (niên biểu 1849, qua Wayback), Ville de Paris và chopin.pl (lễ tang), COD, Trinity, Treccani (thuật ngữ), Naxos và DG (bản thu). Chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng thuộc hồ sơ du-lieu/tac-pham/chopin-prelude-mi-thu. Sửa trang: n4 (câu mở đầu và mô tả: bỏ "trang nhạc buồn nhất", thay bằng lễ tang), n12 (bỏ "lý tưởng", "âm nhạc sâu", thêm mức Henle), n14 (bỏ "tôn sùng Bach", thay bằng việc mang Bình quân luật tới Mallorca), n18 (bỏ tên Bülow), n19 và n70 (bài thứ hai ở lễ tang: NIFC ghi Si♭ thứ, Ville de Paris ghi Si thứ; viết chung), n45 (bỏ vế sức khỏe "cẳng tay dễ mỏi và cứng"), n82 (dòng Wikipedia ở mục Nguồn thay bằng Henle và NIFC). Không còn chỗ chưa chắc. Khuông: hai khối ví dụ soạn, đúng. Thuật ngữ: Largo, espressivo có trong thuat-ngu.yml; stretto, smorzando chưa có (ghi cho D3-L5).'
+nguon:
+- id: 'mut-468'
+  bac: 1
+  ten: 'Mutopia Project 468, Prelude: Op. 28, No. 4 (''Suffocation'') (Chopin), Source: Peters, 1879, người nhập Magnus Lewis-Smith, Public Domain; Chop-28-4.ly (\time 2/2, Largo, \partial 4, 25 ô, "espressivo", stretto ô 16, \f ô 17, dim. ô 18, smorz. ô 21, fermata ô 23, 25), tải ngày 05/11/2026'
+  link: 'https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=468'
+- id: 'mut-469'
+  bac: 1
+  ten: 'Mutopia Project 469, Prelude Op. 28, No. 6 (Edition Peters, Magnus Lewis-Smith): tay phải nốt Si, Rê lặp từng cặp móc đơn (Assai Lento), tải .ly ngày 05/11/2026'
+  link: 'https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=469'
+- id: 'imslp-op28'
+  bac: 2
+  ten: 'IMSLP, Preludes, Op.28 (Chopin) (wikitext qua api.php): 24 bài với giọng và tốc độ (4 Largo e …), không có fugue; Year/Date of Composition 1838-39; First Publication 1839'
+  link: 'https://imslp.org/wiki/Preludes,_Op.28_(Chopin,_Fr%C3%A9d%C3%A9ric)'
+- id: 'henle-hn882'
+  bac: 2
+  ten: 'G. Henle Verlag, HN 882 Chopin, Preludes (trang sản phẩm: "Prelude e minor op. 28,4 4 medium"; mức 4 thấp nhất trong 24 bài, cùng số 6, 7, 20)'
+  link: 'https://www.henle.de/en/Preludes/HN-882'
+- id: 'henle-hn882-vorwort'
+  bac: 2
+  ten: 'G. Henle Verlag, HN 882, Preface: "Chopin and George Sand''s winter stay together on Mallorca at the turn of the year 1838/39"; "outbreak of Chopin''s lung disease"; phòng trong tu viện ở "Valdemosa" có "Bach [Chopin had taken the score of the Well-tempered Clavier to Mallorca with him]"; thư 22/1/1839 gửi Pleyel: "At last I''m sending you my preludes, which I completed on your little piano"; bản in lại thu 1839 thêm "additional pedal markings"'
+  link: 'https://www.henle.de/media/cb/de/28/1690886065/0882-1690886065-sync.pdf'
+- id: 'ne-comm'
+  bac: 2
+  ten: 'Chopin National Edition, Preludes: Source Commentary và Performance Commentary (nguồn A = bản viết tay, FC, FE, GE, EE, bản của học trò FES, FEJ, FED; số 4: "Bars 13, 15-17 & 20-21 The dynamic signs contained in parentheses come from FES")'
+  link: 'https://www.chopin-nationaledition.com/wp-content/uploads/2023/05/preludes_commentaries.pdf'
+- id: 'ne-site'
+  bac: 2
+  ten: 'Chopin National Edition (chopin-nationaledition.com): "Redaktorzy: Jan Ekier, Paweł Kamiński"'
+  link: 'https://chopin-nationaledition.com/wp-content/uploads/2023/03/Rules-of-the-Competition.pdf'
+- id: 'nifc-1849'
+  bac: 2
+  ten: 'Narodowy Instytut Fryderyka Chopina (NIFC), Chopin: niên biểu năm 1849 (bản lưu Wayback 05/07/2019): "30 October. Funeral solemnities in the church of St Magdalen. Performed during the service were Preludes in E minor and B flat minor (played on the organ by Lefébure-Wély) and, probably in keeping with Chopin''s wishes, Mozart''s Requiem"'
+  link: 'https://en.chopin.nifc.pl/chopin/life/calendar/year/1849'
+- id: 'parisfr'
+  bac: 2
+  ten: 'Ville de Paris (paris.fr), "Concert commémoratif des funérailles de Chopin à la Madeleine 1849": "le 30 octobre 1849 … l''organiste Louis Lefébure-Wély exécuta les Préludes en mi mineur et en si mineur … le Requiem de Mozart"'
+  link: 'https://www.paris.fr/evenements/concert-commemoratif-des-funerailles-de-chopin-a-la-madeleine-1849-23336'
+- id: 'chopin-pl'
+  bac: 2
+  ten: 'Towarzystwo im. Fryderyka Chopina (chopin.pl), Chronicle of life and works, Epilog: "30 X - funeral ceremonies in the St. Madeleine church (the Mozart Requiem)"'
+  link: 'http://www.chopin.pl/kronika_zycia_tworczosci_chopina_epilog.en.html'
+- id: 'commons-ilic4'
+  bac: 2
+  ten: 'Wikimedia Commons, File:Ivan Ilić-Chopin Prelude Opus 28 n.4.ogg (API: thời lượng 109,81 giây; CC BY 3.0)'
+  link: 'https://commons.wikimedia.org/wiki/File:Ivan_Ili%C4%87-Chopin_Prelude_Opus_28_n.4.ogg'
+- id: 'naxos-cortot'
+  bac: 2
+  ten: 'Naxos, 8.111023: CHOPIN: 24 Preludes / 3 Impromptus (Cortot, 78 rpm Recordings, Vol. 1)'
+  link: 'https://www.naxos.com/CatalogueDetail/?id=8.111023'
+- id: 'dg-pollini'
+  bac: 2
+  ten: 'Deutsche Grammophon, CHOPIN 24 Préludes, Op. 28 / Pollini'
+  link: 'https://www.deutschegrammophon.com/en/catalogue/products/chopin-24-preludes-op-28-pollini-13521'
+- id: 'dg-argerich'
+  bac: 2
+  ten: 'Deutsche Grammophon, CHOPIN 24 Préludes · Sonata No. 2 / Argerich'
+  link: 'https://www.deutschegrammophon.com/en/catalogue/products/chopin-24-preludes-sonata-no-2-argerich-9748'
+- id: 'cod-german-sixth'
+  bac: 2
+  ten: 'The Concise Oxford Dictionary of Music, mục German sixth, qua Encyclopedia.com: "Type of augmented 6th chord"'
+  link: 'https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/german-sixth'
+- id: 'cod-stretto'
+  bac: 2
+  ten: 'The Concise Oxford Dictionary of Music, mục stretto, qua Encyclopedia.com: "Drawn together. 1. Quicker tempo"'
+  link: 'https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/stretto'
+- id: 'trinity-terms'
+  bac: 2
+  ten: 'Trinity College London, Musical terms and directions for performance (resource 785): "Largo Broad"; "Stretto Pressing onwards, hurrying the speed"; "Smorzando" cùng nhóm với "Morendo"; "Espressivo Expressively"'
+  link: 'https://trinitycollege.com/resource?id=785'
+- id: 'treccani-smorzando'
+  bac: 2
+  ten: 'Treccani, Vocabolario, smorzando: "Didascalia musicale … per prescrivere una diminuzione, sino a estinguersi, dell''intensità del suono"'
+  link: 'https://www.treccani.it/vocabolario/smorzando/'
+- id: 'ia-eigeldinger'
+  bac: 2
+  ten: 'Internet Archive, chopinpianisttea0000unse: "Chopin : pianist and teacher as seen by his pupils", Cambridge University Press, 1986 (metadata)'
+  link: 'https://archive.org/details/chopinpianisttea0000unse'
+- id: 'ia-samson'
+  bac: 2
+  ten: 'Internet Archive, musicofchopin0000sams: "The music of Chopin", Samson, Jim, London; Boston: Routledge & Kegan Paul, 1985 (metadata)'
+  link: 'https://archive.org/details/musicofchopin0000sams'
+- id: 'ol-higgins'
+  bac: 2
+  ten: 'Open Library, OL20041641M: "Preludes, op. 28: An authoritative score, historical background, analysis, views and comments", Edited by Thomas Higgins, New York: Norton, 1973, Norton critical scores'
+  link: 'https://openlibrary.org/books/OL20041641M'
+nhan_dinh:
+- id: 'n1'
+  cau: 'Bài dài hai mươi lăm ô nhịp (câu mở đầu và mô tả trang).'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Mutopia 468: \partial 4 rồi 25 ô (đếm tay phải và tay trái).'
+- id: 'n2'
+  cau: 'Giai điệu gần như chỉ đi lại giữa hai nốt cạnh nhau.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Mutopia ô 1–8: b2. c4 | b2. c4 | b2. c4 | b2. bf4 | a2. b4 | a2. b4 | a2. b8. a16 | a2. (Si–Đô, rồi La–Si).'
+- id: 'n3'
+  cau: 'Tay trái lặp đi lặp lại những hợp âm móc đơn.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Mutopia: <g b e>8 ×8 mỗi ô, v.v.'
+- id: 'n4'
+  cau: 'Ít nốt đến thế mà bài được chơi trong lễ tang của chính Chopin (câu mở đầu và mô tả trang).'
+  loai: 'lich-su'
+  nguon:
+  - 'nifc-1849'
+  - 'parisfr'
+  ket_qua: 'da-sua'
+  ghi_chu: 'Chữ cũ: "ít nốt đến thế mà là một trong những trang nhạc buồn nhất Chopin để lại" (mô tả trang: "…mà là một trong…"). Chữ mới: "ít nốt đến thế mà được chơi trong lễ tang của chính Chopin" (mô tả: "…mà được chơi trong…"). Lý do: "buồn nhất" là đánh giá không kiểm được; NIFC và Ville de Paris đều ghi Prélude Mi thứ được chơi ở lễ tang (n19).'
+- id: 'n5'
+  cau: 'Bài học về hòa âm trượt từng nửa cung, chơi hợp âm khẽ và đều, và sức nặng của im lặng.'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+  ghi_chu: 'Phần kiểm được ở n6, n42, n66.'
+- id: 'n6'
+  cau: 'Hợp âm tay trái đổi từng chút một: gần như mỗi lần chỉ một bè đi xuống nửa cung.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Như n42.'
+- id: 'n7'
+  cau: 'Link "Chuỗi hòa âm" (/opus/nhac-ly/29-chuoi-hoa-am/) cho dẫn bè.'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'src/content/docs/nhac-ly/29-chuoi-hoa-am.md có.'
+- id: 'n8'
+  cau: 'Chơi tám hợp âm mỗi ô thật khẽ mà không hợp âm nào lồi ra là kỹ năng đệm cốt lõi của nhạc Lãng mạn.'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+  ghi_chu: 'Tám hợp âm mỗi ô: n3. Khớp hồ sơ piano/not-lap-not-kep n16 (hợp âm lặp pp ở tay trái Prélude Mi thứ).'
+- id: 'n9'
+  cau: 'Giai điệu ngân dài trên nốt Si rồi thở dài sang Đô.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Mutopia ô 1–3: b2. c4.'
+- id: 'n10'
+  cau: 'Link "Tạo tiếng đàn" (/opus/piano/tieng-dan/).'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'src/content/docs/piano/tieng-dan.md (đã khóa) có; hồ sơ piano/tieng-dan n57 nói tay trái Prélude Mi thứ phải nghe được các bè trong hợp âm lặp: trang này giữ ý ấy (n42, Diễn tấu).'
+- id: 'n11'
+  cau: 'Một cao trào trong 25 ô: dồn lên, bùng nổ, lắng xuống, im lặng, kết.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Mutopia: stretto ô 16, \f ô 17, dim. ô 18, \p ô 19, smorz. ô 21, r\fermata ô 23, kết ô 24–25.'
+- id: 'n12'
+  cau: 'Một bài Chopin đầu tiên vừa sức: khoảng hai phút; Henle xếp bài ở mức 4, mức thấp nhất trong bộ Op. 28.'
+  loai: 'cap-do'
+  nguon:
+  - 'henle-hn882'
+  - 'commons-ilic4'
+  ket_qua: 'da-sua'
+  ghi_chu: 'Chữ cũ: "Bài Chopin đầu tiên lý tưởng. Khoảng hai phút, kỹ thuật vừa sức, âm nhạc sâu." Chữ mới: "Một bài Chopin đầu tiên vừa sức. Khoảng hai phút; Henle xếp bài ở mức 4, mức thấp nhất trong bộ Op. 28." Lý do: "lý tưởng", "âm nhạc sâu" là đánh giá; Henle HN 882: "Prelude e minor op. 28,4 4 medium", mức thấp nhất (số 6, 7, 20 cũng 4); bản thu gợi ý 109,81 giây. Dữ liệu (đã khóa) ghi Grade 5, chặng 4; RCM 2022 xếp bài ở Level 7 (hồ sơ bản ghi lần 1 n4).'
+- id: 'n13'
+  cau: 'Bộ 24 Prélude Op. 28 đi qua đủ 24 giọng, mỗi giọng trưởng theo sau là giọng thứ song song, theo vòng quãng năm: Đô trưởng, La thứ, Sol trưởng, Mi thứ…'
+  loai: 'cau-truc'
+  nguon:
+  - 'imslp-op28'
+  ket_qua: 'dung'
+- id: 'n14'
+  cau: 'Chopin mang theo bản Bình quân luật của Bach tới Mallorca, và ý tưởng một bộ prelude đủ mọi giọng gợi nhớ tác phẩm ấy.'
+  loai: 'lich-su'
+  nguon:
+  - 'henle-hn882-vorwort'
+  - 'imslp-op28'
+  ket_qua: 'da-sua'
+  ghi_chu: 'Chữ cũ: "Chopin tôn sùng Bach, và ý tưởng một bộ prelude đủ mọi giọng gợi nhớ *Bình quân luật*." Chữ mới như câu. Lý do: "tôn sùng" chưa có nguồn bậc 2 đã mở; Henle HN 882 Preface: "Bach [Chopin had taken the score of the Well-tempered Clavier to Mallorca with him]". Vế "gợi nhớ" là so sánh: cả hai đi qua đủ 24 giọng.'
+- id: 'n15'
+  cau: 'Prelude của Chopin không còn là khúc dạo đầu cho một fugue: mỗi bài là một bức tranh độc lập, có bài chỉ dài vài chục giây.'
+  loai: 'cau-truc'
+  nguon:
+  - 'imslp-op28'
+  ket_qua: 'dung'
+  ghi_chu: 'IMSLP: Op. 28 gồm 24 prelude, không có fugue. Số 7 dài 38 giây (hồ sơ chopin-prelude-la-truong n17).'
+- id: 'n16'
+  cau: 'Chopin hoàn tất bộ này ở đảo Mallorca, nơi ông trú đông 1838–1839 cùng nhà văn George Sand, trong một tu viện cũ ở Valldemossa, khi bệnh phổi đã hành hạ ông.'
+  loai: 'lich-su'
+  nguon:
+  - 'henle-hn882-vorwort'
+  ket_qua: 'dung'
+  ghi_chu: 'Henle: "winter stay together on Mallorca at the turn of the year 1838/39"; "his room in the monastery in Valdemosa"; "The outbreak of Chopin''s lung disease"; "the Préludes were quickly completed" (đầu 1839).'
+- id: 'n17'
+  cau: 'Trong thư gửi Camille Pleyel, Chopin viết rằng mình đã viết xong các prelude "trên cây đàn nhỏ của ông".'
+  loai: 'lich-su'
+  nguon:
+  - 'henle-hn882-vorwort'
+  ket_qua: 'dung'
+  ghi_chu: 'Henle: "On 22 January he wrote to Pleyel: “At last I''m sending you my preludes, which I completed on your little piano…”". Henle không ghi tên riêng ở câu này (chỗ khác ghi "Camille Pleyel" là người được đề tặng bản Pháp; IMSLP: Camille Pleyel 1788–1855).'
+- id: 'n18'
+  cau: 'Bài số 4 có khi được gọi bằng biệt danh "Ngạt thở" (Suffocation); biệt danh ấy không phải của Chopin, ông chỉ ghi tốc độ Largo.'
+  loai: 'ten'
+  nguon:
+  - 'mut-468'
+  - 'imslp-op28'
+  ket_qua: 'da-sua'
+  ghi_chu: 'Chữ cũ: "Nhạc trưởng Hans von Bülow về sau đặt cho bài số 4 biệt danh "Ngạt thở"; biệt danh ấy không phải của Chopin." Chữ mới như câu. Lý do: việc Bülow đặt biệt danh chỉ thấy ở Wikipedia (bậc 3) và vài blog; không tìm được nguồn bậc 2. Biệt danh có dùng: Mutopia 468 ghi tên "Prelude: Op. 28, No. 4 (''Suffocation'')"; IMSLP chỉ ghi "Largo (e)".'
+- id: 'n19'
+  cau: 'Ngày 30 tháng 10 năm 1849, tại lễ tang Chopin ở nhà thờ Madeleine (Paris), nghệ sĩ organ Louis Lefébure-Wély chơi trên đàn organ hai prelude của Chopin, trong đó có bài Mi thứ này, và Requiem của Mozart được trình diễn.'
+  loai: 'lich-su'
+  nguon:
+  - 'nifc-1849'
+  - 'parisfr'
+  - 'chopin-pl'
+  ket_qua: 'da-sua'
+  ghi_chu: 'Chữ cũ: "… chơi hai prelude Mi thứ và Si thứ (số 4 và số 6) trên đàn organ, và Requiem của Mozart được trình diễn." Chữ mới như câu. Lý do: hai nguồn bậc 2 khác nhau ở bài thứ hai: NIFC ghi "Preludes in E minor and B flat minor", Ville de Paris ghi "en mi mineur et en si mineur"; theo chuẩn mục 2, viết chung phần hai nguồn cùng nói (Mi thứ). Ngày, nơi, người chơi, Requiem: NIFC, paris.fr, chopin.pl khớp. Cũng sửa dòng Học tiếp (n70).'
+- id: 'n20'
+  cau: 'Link "thời kỳ Lãng mạn" (/opus/lich-su/thoi-ky/lang-man/).'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'src/content/docs/lich-su/thoi-ky/lang-man.md có.'
+- id: 'n21'
+  cau: 'Nghe ít nhất ba lần, mỗi lần một câu hỏi (tay trái, giai điệu bốn ô đầu, hình dáng và khoảng lặng).'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n22'
+  cau: 'Alfred Cortot, Maurizio Pollini và Martha Argerich đã thu trọn bộ prelude.'
+  loai: 'ten'
+  nguon:
+  - 'naxos-cortot'
+  - 'dg-pollini'
+  - 'dg-argerich'
+  ket_qua: 'dung'
+- id: 'n23'
+  cau: 'So sánh các bản thu: ai co giãn nhiều nhất, ai giữ tay trái đều nhất, ai làm cao trào dữ dội nhất, ai để khoảng lặng dài nhất.'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n24'
+  cau: 'Theo dõi, nhịp lấy đà và câu 1 (ô 1–12): hai nốt Si cách nhau một quãng tám mở lời; giai điệu ngân Si rồi thở dài sang Đô, hợp âm tay trái trượt xuống từng nửa cung.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Mutopia: \partial 4 b8. b''16 (Si3, Si4).'
+- id: 'n25'
+  cau: 'Theo dõi, ô 9: giai điệu bừng lên một chút, trong khi hợp âm bên dưới vẫn trượt xuống.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Mutopia ô 9: gs4 a8 b d c e, a với \< \>; tay trái <c e b''> → <c e a>.'
+- id: 'n26'
+  cau: 'Theo dõi, ô 12: tay trái dừng trên Si bảy; tay phải một mình chạy một nét nhỏ dẫn về đầu.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Mutopia ô 12: tay trái <b ds a''>4 r r2; tay phải g8 fs c b ds fs \tuplet 3/2 {d'' c b}.'
+- id: 'n27'
+  cau: 'Theo dõi, câu 2 (ô 13–15): mở đầu như ô 1, nhưng hòa âm trượt nhanh hơn.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Mutopia ô 13 = ô 1; ô 14 hai hợp âm, ô 15 bốn hợp âm (ô 3 có ba).'
+- id: 'n28'
+  cau: 'Theo dõi, stretto và cao trào (ô 16–18): dồn lên; đỉnh f duy nhất của bài ở ô 17, rồi nhỏ dần.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+- id: 'n29'
+  cau: 'Theo dõi, lắng xuống (ô 19–22): trở lại p; smorzando ở ô 21, giai điệu chìm về nốt Mi, hợp âm thưa dần.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Mutopia: fs2.\p ô 19; e2._\markup{smorz.} ô 21; e ô 21–23; ô 21–22 hợp âm đổi theo nửa ô.'
+- id: 'n30'
+  cau: 'Theo dõi, im lặng (ô 23): một hợp âm sáu tăng, rồi dấu lặng có dấu ngân.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  - 'cod-german-sixth'
+  ket_qua: 'dung'
+  ghi_chu: 'Mutopia ô 23: tay trái <bf c g''>2 r\fermata, tay phải e2 r\fermata: Đô–Mi–Sol–Si♭ (= La♯) trên Đô, giải quyết về Si (ô 24).'
+- id: 'n31'
+  cau: 'Theo dõi, kết (ô 24–25): ba hợp âm cuối pp: át, rồi chủ Mi thứ.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Mutopia ô 24: e2 ds trên <fs b e> và <b ds fs> (Si, hai hợp âm át), ô 25 <g b e> (Mi thứ), pp, fermata.'
+- id: 'n32'
+  cau: 'Bảng Cấu trúc, nhịp lấy đà: hai nốt Si cách quãng tám, p, espressivo.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Mutopia: b8.\(\p b''16_\markup{"espressivo"}.'
+- id: 'n33'
+  cau: 'Bảng, câu 1 (ô 1–12): tay phải ngân Si, thở dài Si–Đô; ô 9 giai điệu bừng lên; ô 12 tay trái dừng ở Si bảy, tay phải nét chạy nhỏ.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+- id: 'n34'
+  cau: 'Bảng, câu 2 mở đầu (ô 13–15): như ô 1, hòa âm trượt nhanh hơn.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+- id: 'n35'
+  cau: 'Bảng, cao trào (ô 16–18): chữ stretto ở ô 16, đỉnh f ở ô 17, nhỏ dần ở ô 18; cao trào duy nhất.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Mutopia superMarks: decrescendoText "stretto" ở ô 16; \f ô 17; "dim." ô 18.'
+- id: 'n36'
+  cau: 'Bảng, lắng xuống (ô 19–22): trở lại p; smorzando ở ô 21.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+- id: 'n37'
+  cau: 'Bảng, im lặng (ô 23): hợp âm sáu tăng kiểu Đức rồi dấu lặng có dấu ngân.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  - 'cod-german-sixth'
+  ket_qua: 'dung'
+  ghi_chu: 'Đô–Mi–Sol–La♯ (viết Si♭): hợp âm sáu tăng có quãng năm đúng trên bè trầm (kiểu Đức), giải quyết ra hợp âm át (Si). COD: "German sixth. Type of augmented 6th chord". Trang đã khóa nhac-ly/24-napoli-sau-tang định nghĩa hợp âm sáu tăng.'
+- id: 'n38'
+  cau: 'Bảng, kết (ô 24–25): ba hợp âm cuối pp, át rồi chủ Mi thứ.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+- id: 'n39'
+  cau: 'Link "bài 24" (/opus/nhac-ly/24-napoli-sau-tang/).'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'src/content/docs/nhac-ly/24-napoli-sau-tang.md có mục "Hợp âm sáu tăng (+6)".'
+- id: 'n40'
+  cau: 'Bảng hòa âm tay trái ô 1–5: Sol–Si–Mi; Fa♯–La–Mi → Fa♯–La–Rê♯; Fa–La–Rê♯ → Fa–La–Rê → Fa–Sol♯–Rê; Mi–Sol♯–Rê → Mi–Sol–Rê → Mi–Sol–Đô♯; Mi–Sol–Đô → Mi–Fa♯–Đô.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Mutopia ô 1: <g b e>; ô 2: <fs a e''> <fs a ds>; ô 3: <f a ds> <f a d> <f gs d''>; ô 4: <e gs d''> <e g d''> <e g cs>; ô 5: <e g c> <e fs c''>: khớp từng nốt.'
+- id: 'n41'
+  cau: 'Hợp âm ô 1 (Sol–Si–Mi) là Mi thứ thể đảo một.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Bè trầm Sol (quãng ba của Mi thứ). Định nghĩa thể đảo theo trang đã khóa nhac-ly (hợp âm ba).'
+- id: 'n42'
+  cau: 'Từ hợp âm thứ hai trở đi, mỗi lần đổi chỉ một bè đi xuống nửa cung, khi ở bè trên, khi ở bè dưới, khi ở bè giữa.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Ô 1→2 hai bè đổi (Sol→Fa♯, Si→La), nên câu nói "từ hợp âm thứ hai". Từ đó: Mi→Rê♯ (trên), Fa♯→Fa (dưới), Rê♯→Rê (trên), La→Sol♯ (giữa), Fa→Mi (dưới), Sol♯→Sol (giữa), Rê→Đô♯ (trên), Đô♯→Đô (trên), Sol→Fa♯ (giữa): đúng.'
+- id: 'n43'
+  cau: 'Nhiều hợp âm trên đường đi không thuộc giọng nào rõ ràng; chúng tồn tại vì đường đi của từng bè, nên bài nghe như trượt dần xuống.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Ví dụ Fa–La–Rê♯, Fa–Sol♯–Rê (Mutopia ô 3) không phải hợp âm ba trưởng hay thứ của giọng nào; xuất hiện do một bè đi nửa cung.'
+- id: 'n44'
+  cau: 'Link "Âm ngoài hợp âm" (/opus/nhac-ly/18-am-ngoai-hop-am/).'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'src/content/docs/nhac-ly/18-am-ngoai-hop-am.md có.'
+- id: 'n45'
+  cau: 'Bảng Chỗ khó, hợp âm lặp pp: tám hợp âm mỗi ô; một hợp âm to hơn là lộ ngay; động tác lớn dễ làm tiếng to và không đều; chơi từ mặt phím, phím chỉ trồi lên một phần, cổ tay mềm, động tác nhỏ; máy đếm nhịp theo móc đơn.'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+  ghi_chu: 'Đã sửa chữ (lời khuyên, không cần nguồn). Chữ cũ (cột Vì sao khó): "…; cẳng tay dễ mỏi và cứng". Chữ mới: "…; động tác lớn dễ làm tiếng to và không đều". Lý do: lời khuyên dính tới sức khỏe (mỏi, cứng) không xếp khuyen-tap và cần nguồn; bỏ vế ấy, giữ phần kỹ thuật. Cách tập "chơi từ mặt phím, phím chỉ trồi lên một phần" giữ nguyên (hồ sơ piano/not-lap-not-kep n16 dựa vào câu này).'
+- id: 'n46'
+  cau: 'Nét chạy ở ô 12: tay trái nghỉ, tay phải một mình.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Mutopia ô 12: tay trái chỉ đánh hợp âm phách 1 rồi nghỉ (r r2).'
+- id: 'n47'
+  cau: 'Cao trào ô 16–18: stretto, nốt láy quanh, nhảy lên Đô cao, f.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Mutopia ô 16: gss''4\turn (láy quanh); ô 17: e8\f ds c'' (Đô6). Khớp hồ sơ piano/quang-tam-buoc-nhay n37 (cú nhảy lên Đô cao ở cao trào ô 16–18).'
+- id: 'n48'
+  cau: 'Các dòng còn lại của bảng Chỗ khó (nghe bè đang di chuyển, nốt Si dài, nét chạy ô 12, cao trào, bàn đạp, khoảng lặng ô 23) và cách tập.'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n49'
+  cau: 'Link "máy đếm nhịp" (/opus/luyen-tap/metronome/) và "Bàn đạp" (/opus/piano/ban-dap/).'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'src/content/docs/luyen-tap/metronome.md và piano/ban-dap.md có.'
+- id: 'n50'
+  cau: 'Các bài tập chuẩn bị soạn riêng cho trang, ở La thứ.'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'Hai khối abc: K:Am, tiêu đề "(soạn cho trang này)".'
+- id: 'n51'
+  cau: 'Bài tập 1: bè trầm đi xuống từng nửa cung La – Sol♯ – Sol – Fa♯ – Fa – Mi, tay phải ngân và thở dài.'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'Khối 1 tay trái: [A,CE] [^G,B,E] [G,CE] [^F,A,D] [F,A,D] [E,^G,D]: bè trầm La, Sol♯, Sol, Fa♯, Fa, Mi; tay phải e6 f2 (Mi rồi Fa).'
+- id: 'n52'
+  cau: 'Cách tập bài tập 1 (tay trái riêng pp, đổi bàn đạp; tay phải hát; ghép hai tay).'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n53'
+  cau: 'Bài tập 2: dồn lên, đỉnh f, lắng xuống, dừng trên hợp âm sáu tăng (Fa – La – Đô – Rê♯), lặng, rồi kết; ở ô 2 hòa âm đổi nhanh gấp đôi.'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'Khối 2: ô 2 hợp âm đổi mỗi hai móc đơn (ô 1 mỗi bốn); ô 3 !f! c''; ô 4 tay trái [F,A,C], tay phải ^d (Rê♯), !fermata!z4; ô 5 [E,^G,B,] rồi [A,CE].'
+- id: 'n54'
+  cau: 'Cách tập bài tập 2 (đỉnh f bằng sức nặng cánh tay, giữ dấu lặng đủ dài).'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n55'
+  cau: 'Kế hoạch 4 tuần (30 phút mỗi ngày, ♩ = 40–56).'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n56'
+  cau: 'Link "thu âm" (/opus/luyen-tap/thu-am/).'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'src/content/docs/luyen-tap/thu-am.md có.'
+- id: 'n57'
+  cau: 'Largo là rộng và chậm; bài viết ở nhịp 2/2.'
+  loai: 'dinh-nghia'
+  nguon:
+  - 'trinity-terms'
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Trinity: "Largo Broad"; thuat-ngu.yml (đã khóa): "Rất chậm, rộng rãi". Mutopia: \time 2/2, Largo.'
+- id: 'n58'
+  cau: 'Hãy nghĩ theo hai phách lớn mỗi ô; tay trái là nhịp tim, đều, gần như không co giãn, trừ chỗ stretto và những ô cuối.'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n59'
+  cau: 'Giai điệu và hợp âm: nhịp lấy đà nhẹ; nốt Si dài phải sống; cho bè đang di chuyển rõ hơn một chút.'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+  ghi_chu: 'Khớp hồ sơ piano/tieng-dan n57 (nghe được các bè trong hợp âm lặp).'
+- id: 'n60'
+  cau: 'Gần như cả bài ở p và pp; chỉ có một chữ f, ở ô 17; từ ô 21 (smorzando) mọi thứ tắt dần; ba hợp âm cuối pp.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Mutopia: \p (lấy đà, ô 13, 19), một \f (ô 17), smorz. ô 21, pp ô 24.'
+- id: 'n61'
+  cau: 'Smorzando là tắt dần.'
+  loai: 'dinh-nghia'
+  nguon:
+  - 'treccani-smorzando'
+  - 'trinity-terms'
+  ket_qua: 'dung'
+  ghi_chu: 'Treccani: "una diminuzione, sino a estinguersi, dell''intensità del suono". Chưa có trong thuat-ngu.yml.'
+- id: 'n62'
+  cau: 'Stretto là dồn lên.'
+  loai: 'dinh-nghia'
+  nguon:
+  - 'cod-stretto'
+  - 'trinity-terms'
+  ket_qua: 'dung'
+  ghi_chu: 'COD: "1. Quicker tempo"; Trinity: "Pressing onwards, hurrying the speed". Chưa có trong thuat-ngu.yml.'
+- id: 'n63'
+  cau: 'Các ấn bản ghi bàn đạp không giống nhau ở mọi ô.'
+  loai: 'lich-su'
+  nguon:
+  - 'henle-hn882-vorwort'
+  - 'ne-comm'
+  ket_qua: 'dung'
+  ghi_chu: 'Henle: bản in lại thu 1839 thêm "additional pedal markings"; Ấn bản Quốc gia tách dấu của từng nguồn.'
+- id: 'n64'
+  cau: 'Đổi bàn đạp theo hòa âm, đạp nông; nghe hai hợp âm chồng lên nhau là đổi muộn.'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n65'
+  cau: 'Ô 23 dừng trên một hợp âm căng rồi lặng hẳn, có dấu ngân.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Mutopia ô 23: r\fermata cả hai tay.'
+- id: 'n66'
+  cau: 'Khoảng lặng là một phần của âm nhạc; đừng nhấc tay khỏi đàn trong lúc lặng.'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n67'
+  cau: 'Ấn bản Quốc gia Ba Lan của Jan Ekier được soạn từ bản viết tay và các bản in đầu tiên; các bản thế kỷ 19 có thể khác ở dấu luyến, bàn đạp và chỉ dẫn sắc thái.'
+  loai: 'lich-su'
+  nguon:
+  - 'ne-site'
+  - 'ne-comm'
+  - 'henle-hn882-vorwort'
+  ket_qua: 'dung'
+  ghi_chu: 'Ấn bản Quốc gia: Source Commentary dùng A (bản viết tay), FC, FE, GE, EE và bản của học trò; số 4 ghi sắc thái trong ngoặc lấy từ FES. Henle: bản của học trò có "many additional dynamic markings, slurs".'
+- id: 'n68'
+  cau: 'Nếu bản của bạn khác bảng hòa âm ở trên, hãy kiểm tra lại với một bản Urtext.'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n69'
+  cau: 'Lỗi thường gặp (tay trái gõ, Si chìm, quá chậm, tay trái co giãn, cao trào sớm, cắt khoảng lặng, hợp âm cuối to, bàn đạp nhòe).'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n70'
+  cau: 'Học tiếp, cùng tác giả: Prélude Si thứ Op. 28 số 6, giai điệu nằm ở tay trái.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-469'
+  ket_qua: 'da-sua'
+  ghi_chu: 'Chữ cũ: "Prélude Si thứ Op. 28 số 6 (cũng được chơi trong lễ tang Chopin; giai điệu nằm ở tay trái)". Chữ mới: "Prélude Si thứ Op. 28 số 6 (giai điệu nằm ở tay trái)". Lý do: bài thứ hai ở lễ tang chưa thống nhất giữa hai nguồn bậc 2 (n19). Mutopia 469: tay phải chỉ lặp nốt Si, Rê từng cặp móc đơn, giai điệu ở tay trái.'
+- id: 'n71'
+  cau: 'Học tiếp: Valse La thứ, Valse Si thứ, Nocturne Op. 9 số 2 (link).'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'chopin-valse-la-thu.md có; Valse Si thứ và Nocturne chưa chuyển: ../opus-zero/docs/piano/tac-pham/chopin-valse-si-thu.md, chopin-nocturne-op9-2.md có (tac-pham.yml chặng 6).'
+- id: 'n72'
+  cau: 'Học tiếp, cùng chặng: Bach Prelude Đô trưởng, Satie Gymnopédie số 1, Für Elise (link).'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'tac-pham.yml (đã khóa): bach-prelude-do, satie-gymnopedie, fur-elise đều chặng 4, như chopin-prelude-mi-thu. Ba trang có ở src/content/docs/piano/tac-pham/.'
+- id: 'n73'
+  cau: 'Học tiếp, cùng kỹ năng hát: Schumann Träumerei (link).'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'Trang chưa chuyển: ../opus-zero/docs/piano/tac-pham/schumann-traumerei.md có (giai điệu hát, nhiều bè). Điều cần giữ: trang ấy dạy giai điệu hát.'
+- id: 'n74'
+  cau: 'Nghe thêm: Chopin Étude Op. 10 (link), nhất là số 3, một giai điệu buồn khác của Chopin.'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'Trang chưa chuyển: ../opus-zero/docs/nghe-nhac/chopin-etude.md có, trọng tâm số 3 (Lento ma non troppo, biệt danh "Tristesse"). Điều cần giữ: trang ấy nói về số 3.'
+- id: 'n75'
+  cau: 'Câu hỏi 1: cao trào duy nhất ở ô 16–18, đỉnh f ở ô 17; chữ stretto ở ô 16; chỉ có một chữ f.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+- id: 'n76'
+  cau: 'Câu hỏi 2: hợp âm tay trái mỗi lần thường chỉ một bè đi xuống nửa cung; nhiều hợp âm không thuộc giọng nào rõ ràng.'
+  loai: 'cau-truc'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+- id: 'n77'
+  cau: 'Câu hỏi 3: Largo trong nhịp 2/2: rộng và chậm, nghĩ hai phách lớn mỗi ô.'
+  loai: 'dinh-nghia'
+  nguon:
+  - 'trinity-terms'
+  - 'mut-468'
+  ket_qua: 'dung'
+- id: 'n78'
+  cau: 'Câu hỏi 4: tập hợp âm lặp pp từ mặt phím, phím chỉ trồi lên một phần, cổ tay mềm, động tác nhỏ.'
+  loai: 'khuyen-tap'
+  nguon: []
+  ket_qua: 'khong-can-nguon'
+- id: 'n79'
+  cau: 'Nguồn: Jean-Jacques Eigeldinger, Chopin: Pianist and Teacher as Seen by His Pupils, Cambridge University Press, 1986.'
+  loai: 'ten'
+  nguon:
+  - 'ia-eigeldinger'
+  ket_qua: 'dung'
+  ghi_chu: 'Trang không dẫn điều cụ thể nào từ sách này.'
+- id: 'n80'
+  cau: 'Nguồn: Jim Samson, The Music of Chopin, Routledge & Kegan Paul, 1985.'
+  loai: 'ten'
+  nguon:
+  - 'ia-samson'
+  ket_qua: 'dung'
+- id: 'n81'
+  cau: 'Nguồn: Thomas Higgins (biên tập), Chopin: Preludes, Op. 28 (Norton Critical Scores), W. W. Norton, 1973.'
+  loai: 'ten'
+  nguon:
+  - 'ol-higgins'
+  ket_qua: 'dung'
+- id: 'n82'
+  cau: 'Nguồn: Henle HN 882 (lời tựa, trang sản phẩm) và niên biểu năm 1849 của Viện Fryderyk Chopin.'
+  loai: 'ten'
+  nguon:
+  - 'henle-hn882-vorwort'
+  - 'henle-hn882'
+  - 'nifc-1849'
+  ket_qua: 'da-sua'
+  ghi_chu: 'Chữ cũ: "[Prelude, Op. 28, No. 4 (Chopin)](Wikipedia), Wikipedia (lễ tang, biệt danh của Bülow, hợp âm sáu tăng ở ô 23)." Chữ mới: hai dòng "G. Henle Verlag, Chopin: Préludes (HN 882), lời tựa (Mallorca, thư gửi Pleyel ngày 22/1/1839) và trang sản phẩm (mức khó từng prelude)." và "Viện Fryderyk Chopin (NIFC), niên biểu năm 1849: lễ tang ngày 30/10/1849 ở nhà thờ Madeleine." Lý do: Wikipedia không được là nguồn duy nhất; thay bằng nguồn bậc 2 đã mở. Link NIFC: trang gốc đã đổi địa chỉ (không mở được ngày 05/11/2026), đọc qua bản lưu Wayback 2019; người giao cân nhắc đổi link sang bản lưu.'
+- id: 'n83'
+  cau: 'Nguồn: bản nhạc IMSLP; bảng hòa âm đối chiếu với bản Peters 1879 qua bản chép LilyPond của Mutopia Project.'
+  loai: 'ten'
+  nguon:
+  - 'mut-468'
+  ket_qua: 'dung'
+  ghi_chu: 'Mutopia 468: "Source: Peters, 1879".'
+- id: 'n84'
+  cau: 'Link tài liệu tham khảo (/opus/tai-lieu-tham-khao/).'
+  loai: 've-site'
+  ket_qua: 'dung'
+  ghi_chu: 'src/content/docs/tai-lieu-tham-khao.md có.'
 khuong_nhac:
-  - khoi: 1
-    loai: null
-    kiem: []
-    ket_qua: null
-  - khoi: 2
-    loai: null
-    kiem: []
-    ket_qua: null
+- khoi: 1
+  loai: 'vi-du-soan'
+  kiem:
+  - 'cu-phap'
+  - 'giong'
+  - 'hop-am'
+  - 'so-ngon'
+  - 'ban-dap'
+  ket_qua: 'dung'
+  ghi_chu: 'La thứ, 4/4, L:1/8: mỗi ô 8. Tay trái tám hợp âm mỗi ô (bốn mỗi nửa ô), bè trầm La – Sol♯ – Sol – Fa♯ – Fa – Mi rồi La: đúng chú thích. Tay phải Mi ngân, Fa (nốt lạ, "thở dài") ô 1, Mi–Rê, Rê–Đô–Si, La: ngón 3-4-3-2-4-3-2-1 chơi được. "Ped." mỗi lần hợp âm đổi: đúng bước 1.'
+- khoi: 2
+  loai: 'vi-du-soan'
+  kiem:
+  - 'cu-phap'
+  - 'giong'
+  - 'hop-am'
+  - 'sac-thai'
+  - 'so-ngon'
+  ket_qua: 'dung'
+  ghi_chu: 'La thứ, 4/4, L:1/8: mỗi ô 8. Ô 2 hợp âm đổi mỗi hai móc đơn (ô 1 mỗi bốn): đúng "nhanh gấp đôi"; \< ô 2, !f! ô 3 (Đô6), \> rồi !p! ô 4. Ô 4: Fa–La–Đô (tay trái) + Rê♯ (tay phải) = hợp âm sáu tăng kiểu Đức của La thứ, giải quyết về Mi (Mi–Sol♯–Si ô 5) rồi La thứ: đúng chú thích. Dấu lặng có dấu ngân ô 4. Ngón 2-3-4-5, 5-4-3 chơi được.'
+doi_chu:
+- cu: 'Hai mươi lăm ô nhịp, một giai điệu gần như chỉ đi lại giữa hai nốt cạnh nhau, một tay trái lặp đi lặp lại những hợp âm móc đơn: ít nốt đến thế mà là một trong những trang nhạc buồn nhất Chopin để lại. Đây là bài học về hòa âm trượt từng nửa cung, về chơi hợp âm thật khẽ và đều, và về sức nặng của im lặng.'
+  moi: 'Hai mươi lăm ô nhịp, một giai điệu gần như chỉ đi lại giữa hai nốt cạnh nhau, một tay trái lặp đi lặp lại những hợp âm móc đơn: ít nốt đến thế mà được chơi trong lễ tang của chính Chopin. Đây là bài học về hòa âm trượt từng nửa cung, về chơi hợp âm thật khẽ và đều, và về sức nặng của im lặng.'
+  ly_do: 'n4 (da-sua): "buồn nhất" là đánh giá; NIFC và Ville de Paris ghi bài được chơi ở lễ tang Chopin.'
+- cu: Bộ Op. 28 viết trong khoảng 1835–1839, hoàn tất ở Mallorca mùa đông 1838–1839; in năm 1839 (bản Pháp đề tặng Camille Pleyel, bản Đức đề tặng Joseph Christoph Kessler)
+  moi: Bộ Op. 28 hoàn tất ở Mallorca mùa đông 1838–1839 (vài bài có thể có từ đầu thập niên 1830); in năm 1839 (bản Pháp đề tặng Camille Pleyel, bản Đức đề tặng Joseph Christoph Kessler)
+  ly_do: 'Dữ liệu (thong_tin, hiện qua ::hop-tac-pham) sửa theo sua-B.yml, nhận định n14 của hồ sơ bản ghi: Như chopin-prelude-la-truong. Henle: bản nháp số 2 và số 4 ghi "Palma, 28 9bra" (28/11/1838), nên số 4 "most probably" viết ở Mallorca. Vế "bài này viết ở Mallorca" là tùy chọn; bỏ nếu muốn hai bản ghi cùng chữ.'
+- cu: 'Khoảng ABRSM Grade 5 (ước lượng): ít nốt, nhưng đòi hỏi kiểm soát tiếng đàn rất tinh'
+  moi: 'Khoảng ABRSM Grade 5: RCM xếp bài ở Level 7 (đề cương 2022); Henle mức 4. Ít nốt, nhưng đòi hỏi kiểm soát tiếng đàn rất tinh'
+  ly_do: 'Dữ liệu (thong_tin, hiện qua ::hop-tac-pham) sửa theo sua-B.yml, nhận định n18 của hồ sơ bản ghi: Bài có trong đề cương RCM 2022 (trang 65, Level 7: "Prelude in E Minor, op. 28, no. 4"), nên "(ước lượng)" không còn đúng; ghi kỳ đề cương như D6-L1-gom (minuet-sol-thu, musette-re). ABRSM, Trinity không xếp bài (hồ sơ lần 1 n4). Grade đã khóa (Grade 5) giữ nguyên; RCM Level 7 cao hơn: người giao cân nhắc khi mở khóa.'
+- cu: Bài Chopin đầu tiên lý tưởng. Khoảng hai phút, kỹ thuật vừa sức, âm nhạc sâu.
+  moi: Một bài Chopin đầu tiên vừa sức. Khoảng hai phút; Henle xếp bài ở mức 4, mức thấp nhất trong bộ Op. 28.
+  ly_do: 'n12 (da-sua): thay đánh giá bằng mức Henle (HN 882).'
+- cu:
+  - 'Bộ 24 Prélude Op. 28 đi qua đủ 24 giọng, mỗi giọng trưởng theo sau là giọng thứ song song của nó, tiến theo vòng quãng năm: Đô trưởng, La thứ, Sol trưởng, Mi thứ… Chopin tôn sùng Bach, và ý tưởng một bộ prelude đủ mọi giọng gợi nhớ Bình quân luật. Nhưng prelude của Chopin không còn là "khúc dạo đầu" cho một fugue: mỗi bài là một bức tranh độc lập, có bài chỉ dài vài chục giây.'
+  - Chopin hoàn tất bộ này ở đảo Mallorca, nơi ông trú đông 1838–1839 cùng nhà văn George Sand, trong một tu viện cũ ở Valldemossa, khi bệnh phổi đã hành hạ ông. Trong thư gửi Camille Pleyel, ông viết rằng mình đã viết xong các prelude "trên cây đàn nhỏ của ông". Nhạc trưởng Hans von Bülow về sau đặt cho bài số 4 biệt danh "Ngạt thở"; biệt danh ấy không phải của Chopin.
+  - Ngày 30 tháng 10 năm 1849, tại lễ tang Chopin ở nhà thờ Madeleine (Paris), nghệ sĩ organ Louis Lefébure-Wély chơi hai prelude Mi thứ và Si thứ (số 4 và số 6) trên đàn organ, và Requiem của Mozart được trình diễn. Xem thêm thời kỳ Lãng mạn.
+  moi:
+  - 'Bộ 24 Prélude Op. 28 đi qua đủ 24 giọng, mỗi giọng trưởng theo sau là giọng thứ song song của nó, tiến theo vòng quãng năm: Đô trưởng, La thứ, Sol trưởng, Mi thứ… Chopin mang theo bản Bình quân luật của Bach tới Mallorca, và ý tưởng một bộ prelude đủ mọi giọng gợi nhớ tác phẩm ấy. Nhưng prelude của Chopin không còn là "khúc dạo đầu" cho một fugue: mỗi bài là một bức tranh độc lập, có bài chỉ dài vài chục giây.'
+  - Chopin hoàn tất bộ này ở đảo Mallorca, nơi ông trú đông 1838–1839 cùng nhà văn George Sand, trong một tu viện cũ ở Valldemossa, khi bệnh phổi đã hành hạ ông. Trong thư gửi Camille Pleyel, ông viết rằng mình đã viết xong các prelude "trên cây đàn nhỏ của ông". Bài số 4 có khi được gọi bằng biệt danh "Ngạt thở" (Suffocation); biệt danh ấy không phải của Chopin, ông chỉ ghi tốc độ Largo.
+  - Ngày 30 tháng 10 năm 1849, tại lễ tang Chopin ở nhà thờ Madeleine (Paris), nghệ sĩ organ Louis Lefébure-Wély chơi trên đàn organ hai prelude của Chopin, trong đó có bài Mi thứ này, và Requiem của Mozart được trình diễn. Xem thêm thời kỳ Lãng mạn.
+  ly_do: 'n14 (da-sua): Henle HN 882 (lời tựa). n18 (da-sua): việc Bülow đặt biệt danh chỉ có ở Wikipedia. n19 (da-sua): NIFC ghi bài thứ hai là Si♭ thứ, Ville de Paris ghi Si thứ; viết chung phần hai nguồn cùng nói.'
+- cu: Tám hợp âm mỗi ô; một hợp âm to hơn là lộ ngay; cẳng tay dễ mỏi và cứng
+  moi: Tám hợp âm mỗi ô; một hợp âm to hơn là lộ ngay; động tác lớn dễ làm tiếng to và không đều
+  ly_do: 'n45 (da-sua): bỏ vế sức khỏe (mỏi, cứng) không có nguồn.'
+- cu: 'Cùng tác giả: Prélude Si thứ Op. 28 số 6 (cũng được chơi trong lễ tang Chopin; giai điệu nằm ở tay trái), Valse La thứ, Valse Si thứ, rồi Nocturne Op. 9 số 2.'
+  moi: 'Cùng tác giả: Prélude Si thứ Op. 28 số 6 (giai điệu nằm ở tay trái), Valse La thứ, Valse Si thứ, rồi Nocturne Op. 9 số 2.'
+  ly_do: 'n70 (da-sua): như n19.'
+- cu: Prelude, Op. 28, No. 4 (Chopin), Wikipedia (lễ tang, biệt danh của Bülow, hợp âm sáu tăng ở ô 23).
+  moi:
+  - 'G. Henle Verlag, Chopin: Préludes (HN 882), lời tựa (Mallorca, thư gửi Pleyel ngày 22/1/1839) và trang sản phẩm (mức khó từng prelude).'
+  - 'Viện Fryderyk Chopin (NIFC), niên biểu năm 1849: lễ tang ngày 30/10/1849 ở nhà thờ Madeleine.'
+  ly_do: 'n82 (da-sua): thay Wikipedia bằng nguồn bậc 2 đã mở (hai dòng mới).'
+- cu: 'mô tả: Hai mươi lăm ô nhịp, một giai điệu gần như chỉ đi lại giữa hai nốt cạnh nhau, một tay trái lặp đi lặp lại những hợp âm móc đơn: ít nốt đến thế mà là một trong…'
+  moi: 'mô tả: Hai mươi lăm ô nhịp, một giai điệu gần như chỉ đi lại giữa hai nốt cạnh nhau, một tay trái lặp đi lặp lại những hợp âm móc đơn: ít nốt đến thế mà được chơi trong…'
+  ly_do: 'n4 (da-sua): như câu mở đầu.'

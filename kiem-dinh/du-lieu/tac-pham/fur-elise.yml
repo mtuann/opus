@@ -12,15 +12,15 @@ lan:
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
   - so: 2
-    ngay: null
+    ngay: 2026-11-05
     nhanh: moi/d6-l3
     ma_bam: null
     nguoi:
-      luot_1: null
+      luot_1: "Claude Opus 5.5 (D6-L3 phần A)"
       luot_2: null
       review: null
       kiem_mau: null
-ghi_chu: "Trang bài học cũ ../opus-zero/docs/piano/tac-pham/fur-elise.md có (loai: bai-hoc là cấu trúc, không phải nhận định)."
+ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/fur-elise.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Lần 2 (D6-L3, lượt 1 phần A): nhận định n7–n28 cho các trường chưa khóa (bản ghi không có luyen_nghe); bản nhạc Mutopia fur_Elise_WoO59 (Breitkopf & Härtel 1888), lịch sử theo Henle HN 1347, mục WoO 59 của danh mục Henle 2014, đề cương RCM 2022. Dữ liệu sai: n18, n23; đề xuất (cả có điều kiện) ở plans/lam-lai/bao-cao/d6-l3/sua-A.yml. Còn mở: n13, n17, n21, n26.'
 nguon:
   - id: imslp-elise
     bac: 2
@@ -54,6 +54,34 @@ nguon:
     bac: 2
     ten: G. Henle Verlag, Levels of Difficulty (thang độ khó 1–9; trang không có bảng quy đổi sang ABRSM)
     link: https://www.henle.de/Levels-of-Difficulty/
+  - id: mut-elise
+    bac: 1
+    ten: Mutopia Project, Für Elise, WoO 59 (Breitkopf & Härtel 1888; tệp LilyPond và MIDI)
+    link: https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly
+  - id: henle-1347-vorwort
+    bac: 2
+    ten: 'G. Henle Verlag, HN 1347: lời nói đầu (Joanna Cobb Biermann, 2016), PDF'
+    link: https://www.henle.de/media/53/13/68/1697725822/1347-1697725821-sync.pdf
+  - id: lvbwv-woo59
+    bac: 2
+    ten: Ludwig van Beethoven. Thematisch-bibliographisches Werkverzeichnis (G. Henle Verlag, 2014), mục WoO 59 (PDF)
+    link: https://www.henle.de/download/KB_ausfuehrlich/2207_2_153-155.pdf
+  - id: commons-gao
+    bac: 2
+    ten: Wikimedia Commons, FurElise.ogg (V. Gao, "Self-made", phạm vi công cộng; 176,59 giây)
+    link: https://commons.wikimedia.org/wiki/File:FurElise.ogg
+  - id: omt-rondo
+    bac: 2
+    ten: Open Music Theory, Rondo
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/rondo/
+  - id: cod-moto
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục moto, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/moto
+  - id: omt-binary
+    bac: 2
+    ten: Open Music Theory, Binary Form (rounded binary)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/binary-form/
 nhan_dinh:
   - id: n1
     cau: "Tên bài: Für Elise WoO 59 (Bagatelle La thứ)."
@@ -135,3 +163,151 @@ nhan_dinh:
     ghi_chu: '../opus-zero/docs/assets/js/practice.js, hằng SUGGEST[4] có ["piano/tac-pham/fur-elise/", "Beethoven: Für Elise"]; chặng 4 trùng chang 4 của bản ghi.'
     luot_2: dung
     luot_2_ghi_chu: Reasonable; not contradicted.
+  - id: n7
+    cau: Giọng của bài là La thứ.
+    loai: cau-truc
+    truong: [giong]
+    nguon: [mut-elise, imslp-elise]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: \key a \minor; IMSLP: "A minor".'
+  - id: n8
+    cau: Nhịp của bài là 3/8.
+    loai: cau-truc
+    truong: [nhip]
+    nguon: &id001 [mut-elise]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: \time 3/8.'
+  - id: n9
+    cau: Bài thuộc thời kỳ Cổ điển.
+    loai: lich-su
+    truong: [thoi_ky]
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: Mutopia style "Classical"; năm 1810. Beethoven nằm giữa Cổ điển và Lãng mạn; site xếp Cổ điển như IMSLP-Mutopia.
+  - id: n10
+    cau: 'Kỹ năng chính: chuyền tay, nửa cung đều, các đoạn tương phản.'
+    loai: cau-truc
+    truong: [ky_nang_chinh]
+    nguon: *id001
+    ket_qua: dung
+  - id: n11
+    cau: 'Chip: "La thứ · 3/8".'
+    loai: cau-truc
+    truong: [chip]
+    nguon: *id001
+    ket_qua: dung
+  - id: n12
+    cau: 'Chip: "Poco moto".'
+    loai: ten
+    truong: [chip]
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: 'Mutopia: "Poco moto." ở nhịp lấy đà.'
+  - id: n13
+    cau: 'Chip cấp độ: "≈ Grade 5 (đoạn A ≈ Grade 3)".'
+    loai: cap-do
+    truong: [chip]
+    nguon: [henle-hn1347, rcm-2022]
+    ket_qua: null
+    ghi_chu: 'chưa chắc: "≈ Grade 5" trùng grade đã khóa (lần 1 n4). "Đoạn A ≈ Grade 3": chưa thấy nguồn (đề cương không xếp riêng đoạn A). Cùng câu ở thong_tin (n23). Đề xuất ở sua-A.yml.'
+  - id: n14
+    cau: 'Chip: "Rondo A–B–A–C–A".'
+    loai: cau-truc
+    truong: [chip]
+    nguon: [mut-elise, omt-rondo]
+    ket_qua: dung
+  - id: n15
+    cau: 'Thông tin, nhà soạn nhạc: Ludwig van Beethoven (1770–1827).'
+    loai: nam
+    truong: [thong_tin]
+    nguon: [henle-1347-vorwort]
+    ket_qua: dung
+    ghi_chu: Henle "(1770 – 1827)"; khớp nha-soan-nhac.yml.
+  - id: n16
+    cau: 'Thông tin, tác phẩm: bản nhạc piano (thường gọi là Bagatelle) La thứ, WoO 59, "Für Elise" ("Cho Elise").'
+    loai: ten
+    truong: [thong_tin]
+    nguon: [henle-1347-vorwort, lvbwv-woo59, imslp-elise]
+    ket_qua: dung
+    ghi_chu: 'LvBWV: "WoO 59 Bagatelle (a-moll) für Klavier", "Beiname: Für Elise (nach dem Titel der postumen Erstausgabe)"; Henle: "Bagatelle in a minor WoO 59 nicknamed Für Elise".'
+  - id: n17
+    cau: 'Thông tin: WoO là Werk ohne Opuszahl, tác phẩm không có số opus.'
+    loai: dinh-nghia
+    truong: [thong_tin]
+    nguon: []
+    ket_qua: null
+    ghi_chu: 'chưa chắc: chưa mở được nguồn bậc 2 giải nghĩa WoO trong lần này (hồ sơ trang piano/tac-pham/beethoven-sonatina-sol dùng "Werke ohne Opuszahl"). Lượt 2 kiểm.'
+  - id: n18
+    cau: 'Thông tin: bản viết tay mà Ludwig Nohl được xem đề ngày 27 tháng 4, không ghi năm; có lẽ năm 1810.'
+    loai: nam
+    truong: [thong_tin]
+    nguon: [henle-1347-vorwort, lvbwv-woo59]
+    ket_qua: da-sua
+    ghi_chu: 'Dữ liệu cũ: "Bản viết tay mà nhà nghiên cứu Ludwig Nohl được xem đề ngày 27 tháng 4 năm 1810". Henle: Nohl chép tiêu đề "Für Elise on 27 April in remembrance of L. v. Bthvn", "the 27th of April (without mention of a year)"; LvBWV: "datierte er ''27. April'', sie entstand wohl ebenfalls 1810". Năm 1810 là suy ra, không có trên bản viết tay. Đề xuất ở sua-A.yml.'
+  - id: n19
+    cau: 'Thông tin: Nohl in bài này lần đầu năm 1867, bốn mươi năm sau khi Beethoven mất; bản viết tay ấy nay đã thất lạc.'
+    loai: nam
+    truong: [thong_tin]
+    nguon: [henle-1347-vorwort, lvbwv-woo59]
+    ket_qua: dung
+    ghi_chu: 'Henle: in lần đầu 1867; bản viết tay mất từ cuối thế kỷ 19. 1867 − 1827 = 40.'
+  - id: n20
+    cau: 'Thông tin, giọng · nhịp · tốc độ: La thứ · 3/8 · Poco moto.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: *id001
+    ket_qua: dung
+  - id: n21
+    cau: 'Thông tin: Poco moto nghĩa là "hơi chuyển động".'
+    loai: dinh-nghia
+    truong: [thong_tin]
+    nguon: [cod-moto]
+    ket_qua: null
+    ghi_chu: 'chưa chắc: như hồ sơ trang (COD: moto "Motion"; chưa mở được nguồn cho poco).'
+  - id: n22
+    cau: 'Thông tin, hình thức: rondo nhỏ A–B–A–C–A; riêng đoạn A là một hình thức hai đoạn có tái hiện thu nhỏ.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: [mut-elise, omt-rondo, omt-binary]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: đoạn A: câu a nhắc lại, rồi b + a nhắc lại (‖: a :‖: b a :‖): hai đoạn có tái hiện (OMT Binary Form, rounded binary).'
+  - id: n23
+    cau: 'Thông tin, độ khó: khoảng ABRSM Grade 5 cho cả bài; RCM xếp bài ở Level 7 (đề cương 2022); riêng đoạn A khoảng Grade 3.'
+    loai: cap-do
+    truong: [thong_tin]
+    nguon: [rcm-2022, henle-hn1347]
+    ket_qua: da-sua
+    ghi_chu: 'Dữ liệu cũ: "Khoảng ABRSM Grade 5 cho cả bài (ước lượng); riêng đoạn A khoảng Grade 3". Bài có trong đề cương RCM 2022 (Level 7, List B, tr. 60 và 64: "Für Elise, WoO 59", đã mở PDF): ghi kỳ đề cương thay "(ước lượng)". Vế "đoạn A khoảng Grade 3" chưa có nguồn: đề xuất có điều kiện bỏ, ở sua-A.yml.'
+  - id: n24
+    cau: 'Thông tin, kỹ năng chính: chuyền tay liền mạch, nửa cung Mi–Rê♯ nhẹ và đều, hợp âm rải tay trái, nhịp chấm dôi và nốt láy, đường chạy móc ba, nốt lặp tay trái dưới hợp âm tay phải, bàn đạp theo hòa âm.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: *id001
+    ket_qua: dung
+  - id: n25
+    cau: 'Thông tin, bản nhạc: IMSLP (tìm "Für Elise, WoO 59"); bản Urtext G. Henle Verlag.'
+    loai: ten
+    truong: [thong_tin]
+    nguon: [imslp-elise, henle-hn1347]
+    ket_qua: dung
+  - id: n26
+    cau: 'Thông tin, bản nhạc: Wiener Urtext, Bärenreiter.'
+    loai: ten
+    truong: [thong_tin]
+    nguon: []
+    ket_qua: null
+    ghi_chu: 'chưa chắc: chưa mở được trang ấn bản WoO 59 của hai nhà này. Lượt 2 kiểm.'
+  - id: n27
+    cau: 'Hình cấu trúc: rondo nhỏ A–B–A–C–A; A La thứ (a, b + a), B Fa trưởng (đường chạy móc ba), A La thứ, C (nốt La trầm lặp lại), chuyển (rải La thứ, nửa cung đi xuống), A La thứ (kết); độ dài gần đúng theo số ô, không tính phần nhắc lại.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [mut-elise, lvbwv-woo59]
+    ket_qua: dung
+    ghi_chu: 'Độ rộng 22, 16, 20, 18, 5, 21. Đếm theo cách đánh số thường dùng (103 ô; Henle bình chú dẫn các ô song song 7, 21, 44, 58, 88, 102): A 1–22 (LvBWV: đoạn đầu 22 ô), B 23–37 (15), A 38–59 (22), C 60–76 (17), chuyển 77–81 (5), A 82–103 (22). Chênh 1–2 ô ở B, A, C, A cuối; chú thích đã ghi "gần đúng", không sai. Người giao có thể đổi thành 22, 15, 22, 17, 5, 22 (không bắt buộc).'
+  - id: n28
+    cau: 'Bản thu gợi ý: V. Gao, phạm vi công cộng, trang Commons; dài 176,59 giây.'
+    loai: ten
+    truong: [ban_thu]
+    nguon: [commons-gao]
+    ket_qua: dung
+    ghi_chu: 'Commons: Credit "Self-made -- V Gao (Gaodifan)", LicenseShortName "Public domain", length 176.59 (khớp d). Bản ghi không có licUrl (phạm vi công cộng, đúng).'

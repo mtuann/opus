@@ -12,15 +12,15 @@ lan:
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
   - so: 2
-    ngay: null
+    ngay: '2026-11-05'
     nhanh: moi/d6-l3
     ma_bam: null
     nguoi:
-      luot_1: null
+      luot_1: Claude Opus 5.5 (D6-L3 phần B)
       luot_2: null
       review: null
       kiem_mau: null
-ghi_chu: "Trang bài học cũ ../opus-zero/docs/piano/tac-pham/chopin-prelude-la-truong.md có (loai: bai-hoc là cấu trúc, không phải nhận định)."
+ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/chopin-prelude-la-truong.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Lần 2 (D6-L3, lượt 1 phần B): nhận định n6–n27 cho các trường chưa khóa (giong, nhip, thoi_ky, ky_nang_chinh, chip, thong_tin, hinh, ban_thu). Bản nhạc: Mutopia 470 (Peters). Sửa đề xuất: n14 (mốc "1835" không có nguồn; sua-B.yml). Chưa chắc: n21 (Wiener Urtext, trang UE không mở được).'
 nguon:
   - id: imslp-op28
     bac: 2
@@ -42,6 +42,30 @@ nguon:
     bac: 2
     ten: G. Henle Verlag, Levels of Difficulty (thang độ khó 1–9; trang không có bảng quy đổi sang ABRSM)
     link: https://www.henle.de/Levels-of-Difficulty/
+  - id: 'mut-470'
+    bac: 1
+    ten: 'Mutopia Project 470, Prelude Op. 28 No. 7 (Edition Peters, Magnus Lewis-Smith, Public Domain): \key a \major, \time 3/4, \tempo "Andantino", \partial 4, 16 ô, không có dấu nhắc lại; .ly tải ngày 05/11/2026'
+    link: 'https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=470'
+  - id: 'henle-hn882-vorwort'
+    bac: 2
+    ten: 'G. Henle Verlag, HN 882, Preface: Mallorca "at the turn of the year 1838/39"; "it remains unclear when Chopin began to conceive his Préludes, which may date back to the early 1830s"; thư 22/1/1839 gửi Pleyel; bản Pháp (Catelin, 8/1839) đề tặng Pleyel, bản Đức (Breitkopf & Härtel, 9/1839) đề tặng Kessler'
+    link: 'https://www.henle.de/media/cb/de/28/1690886065/0882-1690886065-sync.pdf'
+  - id: 'ne-numbering'
+    bac: 2
+    ten: 'Chopin National Edition, Numbering and Chronology of the Works: "28 24 Preludes 1831(?)-1839, I 1839" (năm hoàn tất, năm in)'
+    link: 'https://www.chopin-nationaledition.com/wp-content/uploads/2013/05/numbering_en.pdf'
+  - id: 'ne-site'
+    bac: 2
+    ten: 'Chopin National Edition (chopin-nationaledition.com): "Redaktorzy: Jan Ekier, Paweł Kamiński"; tập Preludes có Source Commentary và Performance Commentary'
+    link: 'https://chopin-nationaledition.com/wp-content/uploads/2023/03/Rules-of-the-Competition.pdf'
+  - id: 'imslp-chopin'
+    bac: 2
+    ten: 'IMSLP, Category:Chopin, Frédéric (wikitext): Born 1810/3/1, Died 1849/10/17, Time Period Romantic'
+    link: 'https://imslp.org/wiki/Category:Chopin,_Fr%C3%A9d%C3%A9ric'
+  - id: 'commons-ilic7'
+    bac: 2
+    ten: 'Wikimedia Commons, File:Ivan Ilić-Chopin - Prelude no. 7 in A major.ogg: {{cc-by-sa-3.0}}, performer Ivan Ilić, Paris 10/2005; API thời lượng 37,98 giây'
+    link: 'https://commons.wikimedia.org/wiki/File:Ivan_Ili%C4%87-Chopin_-_Prelude_no._7_in_A_major.ogg'
 nhan_dinh:
   - id: n1
     cau: "Tên bài: Prélude La trưởng, Op. 28 số 7 (bài thứ bảy trong 24 Prélude)."
@@ -109,3 +133,205 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ https://www.henle.de/en/Preludes/HN-882 ]
     luot_2_ghi_chu: Stage 4 = Grade 4-5; consistent with the Henle-calibrated estimate (about Grade 5), though no syllabus lists the piece.
+  - id: 'n6'
+    cau: 'Giọng: La trưởng.'
+    loai: 'cau-truc'
+    truong:
+    - 'giong'
+    nguon:
+    - 'mut-470'
+    - 'imslp-op28'
+    ket_qua: 'dung'
+    ghi_chu: 'Mutopia: \key a \major; IMSLP: "Andantino (A)".'
+  - id: 'n7'
+    cau: 'Nhịp: 3/4.'
+    loai: 'cau-truc'
+    truong:
+    - 'nhip'
+    nguon:
+    - 'mut-470'
+    ket_qua: 'dung'
+  - id: 'n8'
+    cau: 'Thời kỳ: Lãng mạn.'
+    loai: 'lich-su'
+    truong:
+    - 'thoi_ky'
+    nguon:
+    - 'imslp-op28'
+    - 'imslp-chopin'
+    ket_qua: 'dung'
+    ghi_chu: 'IMSLP Op. 28: Piece Style Romantic; Category Chopin: Time Period Romantic.'
+  - id: 'n9'
+    cau: 'Kỹ năng chính: làm nổi nốt trên của hợp âm, hợp âm rải lớn, bàn đạp của Chopin.'
+    loai: 'cau-truc'
+    truong:
+    - 'ky_nang_chinh'
+    nguon:
+    - 'mut-470'
+    ket_qua: 'dung'
+    ghi_chu: 'Mutopia: giai điệu ở nốt trên các hợp âm tay phải; hợp âm rải chín nốt ô 12; dấu bàn đạp theo câu (theo Peters). "Bàn đạp của Chopin" là cách nói: dấu ở bản Peters.'
+  - id: 'n10'
+    cau: 'Chip: "La trưởng · 3/4", "Andantino", "16 ô nhịp".'
+    loai: 'cau-truc'
+    truong:
+    - 'chip'
+    nguon:
+    - 'mut-470'
+    - 'imslp-op28'
+    ket_qua: 'dung'
+    ghi_chu: 'Mutopia: A, 3/4, Andantino, 16 ô (cộng một phách lấy đà).'
+  - id: 'n11'
+    cau: 'Chip cấp độ: ≈ Grade 3–4.'
+    loai: 'cap-do'
+    truong:
+    - 'chip'
+    nguon:
+    - 'henle-hn882'
+    - 'abrsm-1920'
+    - 'rcm-2022'
+    ket_qua: 'dung'
+    ghi_chu: 'Trùng grade đã khóa (lần 1 n4: ước lượng; không đề cương nào xếp bài; Henle mức 4). Đã mở lại trang Henle HN 882: "Prelude A major op. 28,7 4 medium".'
+  - id: 'n12'
+    cau: 'Thông tin, Nhà soạn nhạc: Frédéric Chopin (1810–1849).'
+    loai: 'nam'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'imslp-chopin'
+    ket_qua: 'dung'
+  - id: 'n13'
+    cau: 'Thông tin, Tác phẩm: bài thứ bảy trong 24 Prélude Op. 28; bộ prelude đi qua đủ 24 giọng theo vòng quãng năm, mỗi giọng trưởng kèm giọng thứ song song.'
+    loai: 'cau-truc'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'imslp-op28'
+    ket_qua: 'dung'
+    ghi_chu: 'IMSLP: 1 C, 2 a, 3 G, 4 e, 5 D, 6 b, 7 A, … 24 d.'
+  - id: 'n14'
+    cau: 'Thông tin, Sáng tác: bộ Op. 28 hoàn tất ở Mallorca mùa đông 1838–1839; vài bài có thể có từ đầu thập niên 1830.'
+    loai: 'nam'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'henle-hn882-vorwort'
+    - 'ne-numbering'
+    - 'imslp-op28'
+    ket_qua: 'da-sua'
+    ghi_chu: 'Dữ liệu ghi "Bộ Op. 28 viết trong khoảng 1835–1839, hoàn tất ở Mallorca mùa đông 1838–1839". Đề xuất: "Bộ Op. 28 hoàn tất ở Mallorca mùa đông 1838–1839 (vài bài có thể có từ đầu thập niên 1830)". Lý do: không nguồn nào ghi mốc 1835; Ấn bản Quốc gia ghi "1831(?)-1839", Henle: "may date back to the early 1830s", IMSLP ghi "1838-39". Xem sua-B.yml.'
+  - id: 'n15'
+    cau: 'Thông tin: in năm 1839; bản Pháp đề tặng Camille Pleyel, bản Đức đề tặng Joseph Christoph Kessler.'
+    loai: 'lich-su'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'imslp-op28'
+    - 'henle-hn882-vorwort'
+    ket_qua: 'dung'
+    ghi_chu: 'IMSLP: First Publication 1839; Dedication Pleyel (French edition), Kessler (German edition). Henle: bản Pháp 8/1839, bản Đức 9/1839.'
+  - id: 'n16'
+    cau: 'Thông tin, Giọng · nhịp · tốc độ: La trưởng · 3/4 · Andantino.'
+    loai: 'cau-truc'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'mut-470'
+    ket_qua: 'dung'
+  - id: 'n17'
+    cau: 'Thông tin, Hình thức: tám câu nhỏ, mỗi câu hai ô và mở bằng một nhịp lấy đà; hai nửa tám ô (ô 1–8 và ô 9–16) mở đầu giống nhau; 16 ô nhịp, không có dấu nhắc lại.'
+    loai: 'cau-truc'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'mut-470'
+    ket_qua: 'dung'
+    ghi_chu: 'Mutopia: Phrase 1–8; ô 9–10 như ô 1–2; không có \repeat.'
+  - id: 'n18'
+    cau: 'Thông tin, Độ khó: khoảng ABRSM Grade 3–4 (ước lượng); ít nốt, không có nét chạy, nhưng cân bằng hợp âm và bàn đạp đòi hỏi tai tốt.'
+    loai: 'cap-do'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'henle-hn882'
+    - 'abrsm-1920'
+    - 'rcm-2022'
+    ket_qua: 'dung'
+    ghi_chu: '"(Ước lượng)" đúng: bài không có trong đề cương ABRSM 2017–2028, Trinity hay RCM 2022 (lần 1 n4). Henle mức 4 (lần 1 review nêu Grade 3–4 có thể thấp; grade đã khóa, không đổi ở đây). "Không có nét chạy": Mutopia đúng.'
+  - id: 'n19'
+    cau: 'Thông tin, Kỹ năng chính: nổi nốt trên; hình chấm dôi nhẹ; hợp âm lặp; hai tay đan vào nhau; hợp âm rải lớn; bàn đạp theo câu; rubato trong câu ngắn.'
+    loai: 'cau-truc'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'mut-470'
+    ket_qua: 'dung'
+  - id: 'n20'
+    cau: 'Thông tin, Bản nhạc: bản Urtext có Ấn bản Quốc gia Ba Lan (Wydanie Narodowe, biên tập Jan Ekier) và G. Henle Verlag.'
+    loai: 'ten'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'ne-site'
+    - 'henle-hn882'
+    ket_qua: 'dung'
+  - id: 'n21'
+    cau: 'Thông tin, Bản nhạc: Wiener Urtext có bản Urtext của 24 Prélude.'
+    loai: 'ten'
+    truong:
+    - 'thong_tin'
+    nguon: []
+    ket_qua: null
+    ghi_chu: 'chưa chắc: kết quả tìm kiếm cho thấy trang Universal Edition "24 Preludes … op. 28" (UT 50005, Wiener Urtext, biên tập Bernhard Hansen), nhưng trang trả 403 cho công cụ, chưa mở được. Lượt 2 mở trang UE hay danh mục Wiener Urtext; không được thì đề nghị bỏ "Wiener Urtext" khỏi dòng Bản nhạc.'
+  - id: 'n22'
+    cau: 'Hình, chú thích: tám câu hai ô, câu nào cũng mở bằng một nhịp lấy đà; 16 ô nhịp.'
+    loai: 'cau-truc'
+    truong:
+    - 'hinh'
+    nguon:
+    - 'mut-470'
+    ket_qua: 'dung'
+  - id: 'n23'
+    cau: 'Hình, các đoạn: câu 1–2 ô 1–4 át → chủ (4); câu 3–4 ô 5–8 át → chủ (4); câu 5 ô 9–10 như câu 1 (2); câu 6 ô 11–12 hợp âm rải lớn (2); câu 7 ô 13–14 Si thứ → át (2); câu 8 ô 15–16 về La trưởng (2).'
+    loai: 'cau-truc'
+    truong:
+    - 'hinh'
+    nguon:
+    - 'mut-470'
+    ket_qua: 'dung'
+    ghi_chu: 'Mutopia: bè trầm Mi (ô 1, 5), La (ô 3, 7); ô 12 \arpeggio; ô 13 Si thứ, ô 14 Mi bảy; ô 15–16 La trưởng. 4+4+2+2+2+2 = 16.'
+  - id: 'n24'
+    cau: 'Hình, ghi chú: hai nửa tám ô mở đầu giống nhau; từ ô 11 hòa âm đổi mỗi ô.'
+    loai: 'cau-truc'
+    truong:
+    - 'hinh'
+    nguon:
+    - 'mut-470'
+    ket_qua: 'dung'
+    ghi_chu: 'Ô 11 La, ô 12 Fa♯ bảy, ô 13 Si thứ, ô 14 Mi bảy.'
+  - id: 'n25'
+    cau: 'Bản thu: người chơi Ivan Ilić.'
+    loai: 'ten'
+    truong:
+    - 'ban_thu'
+    nguon:
+    - 'commons-ilic7'
+    ket_qua: 'dung'
+    ghi_chu: 'Commons: "performer=[[Ivan Ilić]]", "Paris, October 2005", tải lên IMSLP lần đầu bởi chính Ivan Ilić.'
+  - id: 'n26'
+    cau: 'Bản thu: giấy phép CC BY-SA 3.0; trang https://commons.wikimedia.org/wiki/File:Ivan_Ilić-Chopin_-_Prelude_no._7_in_A_major.ogg.'
+    loai: 'ten'
+    truong:
+    - 'ban_thu'
+    nguon:
+    - 'commons-ilic7'
+    ket_qua: 'dung'
+    ghi_chu: 'Commons: {{cc-by-sa-3.0}}.'
+  - id: 'n27'
+    cau: 'Bản thu: file mp3 chuyển mã của Commons, nguồn ogg gốc trên upload.wikimedia.org; dài 37,98 giây.'
+    loai: 'so-lieu'
+    truong:
+    - 'ban_thu'
+    nguon:
+    - 'commons-ilic7'
+    ket_qua: 'dung'
+    ghi_chu: 'Commons API: duration 37.98204081632653; url …/4/40/Ivan_Ili%C4%87-Chopin_-_Prelude_no._7_in_A_major.ogg.'

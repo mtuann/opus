@@ -14,15 +14,15 @@ Mười sáu ô nhịp, chưa đến một phút: một trong những prélude n
 - **Một hợp âm rải thật lớn.** Hợp âm ở ô 12 trải từ Fa♯3 lên Đô♯6. Bạn học rải từ dưới lên sao cho nốt cao nhất đến đúng lúc và hát rõ nhất (xem [Nốt hoa mỹ](/opus/piano/not-hoa-my/)).
 - **Bàn đạp theo câu.** Bản nhạc ghi bàn đạp rất cụ thể: một lần đạp cho mỗi câu hai ô, nhả ở chỗ tay trái nghỉ. Làm theo, bạn sẽ thấy bàn đạp tạo hình câu nhạc chứ không chỉ làm tiếng to (xem [Bàn đạp](/opus/piano/ban-dap/)).
 - **Rubato trong khuôn nhỏ.** Tám câu cùng một nhịp điệu: chơi thẳng thì như máy, co giãn câu nào cũng giống câu nào thì thành khuôn. Đây là chỗ an toàn để tập co giãn có kế hoạch.
-- **Vừa sức sớm.** Có thể học bài này trước [Prélude Mi thứ](/opus/piano/tac-pham/chopin-prelude-mi-thu/), bài khó hơn về kiểm soát tiếng đàn.
+- **Vừa sức sớm.** Có thể học bài này trước [Prélude Mi thứ](/opus/piano/tac-pham/chopin-prelude-mi-thu/): Henle xếp cả hai ở mức 4, mức thấp nhất trong bộ Op. 28, nhưng bài này chỉ có 16 ô nhịp, bài Mi thứ 25 ô.
 
 ## Bối cảnh
 
 Câu chuyện của cả bộ Op. 28 (đảo Mallorca, George Sand, cây đàn Pleyel, lễ tang của Chopin) có ở trang [Prélude Mi thứ](/opus/piano/tac-pham/chopin-prelude-mi-thu/); dưới đây là phần tóm tắt. Hai mươi bốn prélude đi qua đủ 24 giọng, mỗi giọng trưởng theo sau là giọng thứ song song của nó, tiến theo vòng quãng năm: Đô trưởng, La thứ, Sol trưởng, Mi thứ, Rê trưởng, Si thứ, rồi La trưởng ở số 7. Mỗi bài là một bức tranh độc lập; có bài chỉ kéo dài vài chục giây.
 
-Bài số 7 đứng giữa Prélude Si thứ u buồn (số 6) và Prélude Fa♯ thứ dồn dập (số 8), như một khoảng lặng sáng sủa. Nhịp ba với hình chấm dôi ở phách 1 và hai hợp âm lặp ở phách 2–3 gợi điệu **mazurka**, điệu nhảy dân gian Ba Lan mà Chopin viết gần 60 bản (xem [Thể loại](/opus/piano/the-loai/)). Nhưng đây không phải một điệu nhảy thật: không có nhấn lệch, không có tiếng dậm chân, chỉ là một giai điệu nhẹ nhàng như nhớ lại một điệu nhảy.
+Bài số 7 đứng giữa Prélude Si thứ rất chậm (*Lento assai*, số 6) và Prélude Fa♯ thứ dồn dập (*Molto agitato*, số 8), như một khoảng lặng sáng sủa. Nhịp ba với hình chấm dôi ở phách 1 và hai hợp âm lặp ở phách 2–3 gợi điệu **mazurka**, điệu nhảy dân gian Ba Lan mà Chopin viết gần 60 bản (xem [Thể loại](/opus/piano/the-loai/)). Nhưng đây không phải một điệu nhảy thật: không có nhấn lệch, không có tiếng dậm chân, chỉ là một giai điệu nhẹ nhàng như nhớ lại một điệu nhảy.
 
-Nhà soạn nhạc Catalunya Federico Mompou về sau lấy chính prélude này làm chủ đề cho một bộ biến tấu cho piano, *Variaciones sobre un tema de Chopin* (Biến tấu trên một chủ đề của Chopin). Xem thêm [thời kỳ Lãng mạn](/opus/lich-su/thoi-ky/lang-man/).
+Nhà soạn nhạc Catalunya Federico Mompou về sau lấy chính prélude này làm chủ đề cho một bộ biến tấu cho piano, *Variations sur un thème de Chopin* (Biến tấu trên một chủ đề của Chopin). Xem thêm [thời kỳ Lãng mạn](/opus/lich-su/thoi-ky/lang-man/).
 
 ## Nghe trước khi tập
 
@@ -98,7 +98,7 @@ Nhịp lấy đà Mi4 vang một mình: tay trái nghỉ, bàn đạp chưa xu�
 | Hình chấm dôi ở phách 1 | Dễ thành nhịp hành khúc: nốt chấm dôi bị cắt ngắn, nốt móc kép to và bật | Đếm chia bốn trong phách; nốt móc kép nhẹ, nối thẳng vào hợp âm phách 2, như một hơi thở ngắn chứ không phải một cú bật |
 | Hai tay đan vào nhau (ô 1–2, 7–10) | Nốt cao của tay trái (Mi4) nằm trên nốt thấp của tay phải (Rê4 ở ô 1–2 và 9–10, Đô♯4 ở ô 7–8): hai ngón cái tranh chỗ | Tập hai tay thật chậm; quyết định ngón cái nào đặt sâu vào trong phím, ngón nào ở mép. Ở ô 7, ngón cái tay phải đặt sâu trên phím đen Đô♯4 |
 | Hợp âm lặp ở phách 2–3 | Hai tay cùng lặp hợp âm; dễ nặng và đều đều như máy | Hợp âm thứ hai nhẹ hơn hợp âm thứ nhất, như tiếng vọng; tay sát phím, phím chỉ trồi lên một phần |
-| Hợp âm rải lớn (ô 12) | Tay phải trải hơn một quãng mười (La♯4–Đô♯6), cả hợp âm từ Fa♯3; dễ rải chậm như đàn harp, hoặc nốt trên cùng bị chìm | Bài tập 3. Rải từ dưới lên, bắt đầu đúng phách; nốt Đô♯6 to nhất; bàn đạp xuống từ nốt đầu tiên để giữ các nốt dưới khi tay đi lên |
+| Hợp âm rải lớn (ô 12) | Tay phải trải một quãng mười (La♯4–Đô♯6), cả hợp âm từ Fa♯3; dễ rải chậm như đàn harp, hoặc nốt trên cùng bị chìm | Bài tập 3. Rải từ dưới lên, bắt đầu đúng phách; nốt Đô♯6 to nhất; bàn đạp xuống từ nốt đầu tiên để giữ các nốt dưới khi tay đi lên |
 | Bàn đạp | Giữ bàn đạp qua nhịp lấy đà làm các câu dính vào nhau; đổi muộn ở ô 11–14 làm hòa âm nhòe | Theo dấu trong bản nhạc: đạp cùng nốt trầm ở phách 1, nhả ở phách 3 của ô sau; từ ô 11 đến ô 14 đổi mỗi ô. Bài tập 2 |
 | Rubato | Tám câu cùng một nhịp điệu; co giãn ở mọi câu như nhau thì thành khuôn | Vẽ đường cong cho cả bài trước khi chơi (xem phần Diễn tấu); tay trái giữ nhịp, tay phải được thở |
 
@@ -202,7 +202,7 @@ Trong bản Peters mà trang này đối chiếu, mỗi câu có một lần đ�
 
 ### Hợp âm rải ở ô 12
 
-Đây là đỉnh của bài và là hợp âm lớn nhất: Fa♯ bảy, át của Si thứ, trải từ Fa♯3 lên Đô♯6. Theo lệ chung khi chơi Chopin (xem [Nốt hoa mỹ](/opus/piano/not-hoa-my/)), hợp âm rải bắt đầu đúng phách, từ nốt thấp nhất. Rải nhanh vừa phải, như một hơi thở sâu chứ không phải tiếng đàn harp; nốt trên cùng, Đô♯6, là nốt giai điệu và phải hát rõ nhất. Hãy xem bản Urtext của bạn ghi dấu rải thế nào: một đường liền qua hai khuông (rải liền một hơi từ tay trái lên tay phải) hay hai đường riêng (hai tay rải cùng lúc).
+Đây là đỉnh của bài và là hợp âm lớn nhất: Fa♯ bảy, át của Si thứ, trải từ Fa♯3 lên Đô♯6. Theo lệ chung khi chơi Chopin (xem [Nốt hoa mỹ](/opus/piano/not-hoa-my/)), hợp âm rải bắt đầu đúng phách, từ nốt thấp nhất. Rải nhanh vừa phải, như một hơi thở sâu chứ không phải tiếng đàn harp; nốt trên cùng, Đô♯6, là nốt giai điệu và phải hát rõ nhất. Hãy xem bản Urtext của bạn ghi dấu rải thế nào: một đường liền qua hai khuông (rải liền một hơi từ tay trái lên tay phải) hay hai đường riêng cho hai tay (không nhất thiết là hai tay rải cùng lúc).
 
 Chín nốt của hợp âm ô 12 theo bản Peters, từ dưới lên; bấm để nghe chúng vang lần lượt như khi rải:
 

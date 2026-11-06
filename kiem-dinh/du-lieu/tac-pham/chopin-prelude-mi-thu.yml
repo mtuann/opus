@@ -12,15 +12,15 @@ lan:
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
   - so: 2
-    ngay: null
+    ngay: '2026-11-05'
     nhanh: moi/d6-l3
     ma_bam: null
     nguoi:
-      luot_1: null
+      luot_1: Claude Opus 5.5 (D6-L3 phần B)
       luot_2: null
       review: null
       kiem_mau: null
-ghi_chu: "Trang bài học cũ ../opus-zero/docs/piano/tac-pham/chopin-prelude-mi-thu.md có (loai: bai-hoc là cấu trúc, không phải nhận định)."
+ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/chopin-prelude-mi-thu.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Lần 2 (D6-L3, lượt 1 phần B): nhận định n6–n26 cho các trường chưa khóa. Bản nhạc: Mutopia 468 (Peters 1879). Sửa đề xuất: n14 (mốc 1835), n18 (dòng Độ khó ghi RCM Level 7 thay "(ước lượng)"); sua-B.yml. Chưa chắc: n21 (Wiener Urtext).'
 nguon:
   - id: imslp-op28
     bac: 2
@@ -42,6 +42,30 @@ nguon:
     bac: 2
     ten: G. Henle Verlag, Levels of Difficulty (thang độ khó 1–9; trang không có bảng quy đổi sang ABRSM)
     link: https://www.henle.de/Levels-of-Difficulty/
+  - id: 'mut-468'
+    bac: 1
+    ten: 'Mutopia Project 468, Prelude Op. 28 No. 4 (Peters, 1879, Magnus Lewis-Smith, Public Domain): \key e \minor, \time 2/2, Largo, \partial 4, 25 ô; stretto ô 16, \f ô 17, smorz. ô 21, fermata ô 23; .ly tải ngày 05/11/2026'
+    link: 'https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=468'
+  - id: 'henle-hn882-vorwort'
+    bac: 2
+    ten: 'G. Henle Verlag, HN 882, Preface: Mallorca "at the turn of the year 1838/39"; "it remains unclear when Chopin began to conceive his Préludes, which may date back to the early 1830s"; thư 22/1/1839 gửi Pleyel; bản Pháp (Catelin, 8/1839) đề tặng Pleyel, bản Đức (Breitkopf & Härtel, 9/1839) đề tặng Kessler'
+    link: 'https://www.henle.de/media/cb/de/28/1690886065/0882-1690886065-sync.pdf'
+  - id: 'ne-numbering'
+    bac: 2
+    ten: 'Chopin National Edition, Numbering and Chronology of the Works: "28 24 Preludes 1831(?)-1839, I 1839" (năm hoàn tất, năm in)'
+    link: 'https://www.chopin-nationaledition.com/wp-content/uploads/2013/05/numbering_en.pdf'
+  - id: 'ne-site'
+    bac: 2
+    ten: 'Chopin National Edition (chopin-nationaledition.com): "Redaktorzy: Jan Ekier, Paweł Kamiński"; tập Preludes có Source Commentary và Performance Commentary'
+    link: 'https://chopin-nationaledition.com/wp-content/uploads/2023/03/Rules-of-the-Competition.pdf'
+  - id: 'imslp-chopin'
+    bac: 2
+    ten: 'IMSLP, Category:Chopin, Frédéric (wikitext): Born 1810/3/1, Died 1849/10/17, Time Period Romantic'
+    link: 'https://imslp.org/wiki/Category:Chopin,_Fr%C3%A9d%C3%A9ric'
+  - id: 'commons-ilic4'
+    bac: 2
+    ten: 'Wikimedia Commons, File:Ivan Ilić-Chopin Prelude Opus 28 n.4.ogg: {{cc-by-3.0}}, performer Ivan Ilić, Paris 10/2005; API thời lượng 109,81 giây'
+    link: 'https://commons.wikimedia.org/wiki/File:Ivan_Ili%C4%87-Chopin_Prelude_Opus_28_n.4.ogg'
 nhan_dinh:
   - id: n1
     cau: "Tên bài: Prélude Mi thứ Op. 28 số 4 (bài thứ tư trong 24 Prélude)."
@@ -109,3 +133,191 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf ]
     luot_2_ghi_chu: Stage 4 = Grade 4-5; consistent with about Grade 5.
+  - id: 'n6'
+    cau: 'Giọng: Mi thứ.'
+    loai: 'cau-truc'
+    truong:
+    - 'giong'
+    nguon:
+    - 'mut-468'
+    - 'imslp-op28'
+    ket_qua: 'dung'
+    ghi_chu: 'Mutopia: \key e \minor; IMSLP: "Largo (e)".'
+  - id: 'n7'
+    cau: 'Nhịp: 2/2.'
+    loai: 'cau-truc'
+    truong:
+    - 'nhip'
+    nguon:
+    - 'mut-468'
+    ket_qua: 'dung'
+    ghi_chu: 'Mutopia: \time 2/2.'
+  - id: 'n8'
+    cau: 'Thời kỳ: Lãng mạn.'
+    loai: 'lich-su'
+    truong:
+    - 'thoi_ky'
+    nguon:
+    - 'imslp-op28'
+    - 'imslp-chopin'
+    ket_qua: 'dung'
+  - id: 'n9'
+    cau: 'Kỹ năng chính: hợp âm khẽ và đều, giai điệu hát, bàn đạp.'
+    loai: 'cau-truc'
+    truong:
+    - 'ky_nang_chinh'
+    nguon:
+    - 'mut-468'
+    ket_qua: 'dung'
+    ghi_chu: 'Mutopia: tay trái tám hợp âm móc đơn mỗi ô dưới giai điệu nốt trắng chấm dôi; dấu bàn đạp theo hợp âm.'
+  - id: 'n10'
+    cau: 'Chip: "Mi thứ · 2/2", "Largo", "25 ô nhịp".'
+    loai: 'cau-truc'
+    truong:
+    - 'chip'
+    nguon:
+    - 'mut-468'
+    - 'imslp-op28'
+    ket_qua: 'dung'
+  - id: 'n11'
+    cau: 'Chip cấp độ: ≈ Grade 5.'
+    loai: 'cap-do'
+    truong:
+    - 'chip'
+    nguon:
+    - 'henle-hn882'
+    - 'rcm-2022'
+    ket_qua: 'dung'
+    ghi_chu: 'Trùng grade đã khóa (lần 1 n4). Henle HN 882: mức 4 (đã mở lại); RCM 2022 trang 65, Level 7: "Prelude in E Minor, op. 28, no. 4" (đã mở lại).'
+  - id: 'n12'
+    cau: 'Thông tin, Nhà soạn nhạc: Frédéric Chopin (1810–1849).'
+    loai: 'nam'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'imslp-chopin'
+    ket_qua: 'dung'
+  - id: 'n13'
+    cau: 'Thông tin, Tác phẩm: bài thứ tư trong 24 Prélude Op. 28, bộ prelude đi qua đủ 24 giọng theo vòng quãng năm.'
+    loai: 'cau-truc'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'imslp-op28'
+    ket_qua: 'dung'
+  - id: 'n14'
+    cau: 'Thông tin, Sáng tác: bộ Op. 28 hoàn tất ở Mallorca mùa đông 1838–1839; vài bài có thể có từ đầu thập niên 1830.'
+    loai: 'nam'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'henle-hn882-vorwort'
+    - 'ne-numbering'
+    - 'imslp-op28'
+    ket_qua: 'da-sua'
+    ghi_chu: 'Như chopin-prelude-la-truong n14: dữ liệu ghi "viết trong khoảng 1835–1839"; mốc 1835 không có nguồn (Ấn bản Quốc gia "1831(?)-1839", Henle "early 1830s", IMSLP "1838-39"). Henle: bản nháp số 2 và số 4 ghi "Palma, 28 9bra" (28/11/1838), nên bài này viết ở Mallorca. Xem sua-B.yml.'
+  - id: 'n15'
+    cau: 'Thông tin: in năm 1839; bản Pháp đề tặng Camille Pleyel, bản Đức đề tặng Joseph Christoph Kessler.'
+    loai: 'lich-su'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'imslp-op28'
+    - 'henle-hn882-vorwort'
+    ket_qua: 'dung'
+  - id: 'n16'
+    cau: 'Thông tin, Giọng · nhịp · tốc độ: Mi thứ · 2/2 · Largo.'
+    loai: 'cau-truc'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'mut-468'
+    ket_qua: 'dung'
+  - id: 'n17'
+    cau: 'Thông tin, Hình thức: hai câu nhạc lớn, ô 1–12 và ô 13–25; câu sau bắt đầu như câu trước rồi lên cao trào; bài mở đầu bằng nhịp lấy đà.'
+    loai: 'cau-truc'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'mut-468'
+    ket_qua: 'dung'
+    ghi_chu: 'Mutopia: ô 13 = ô 1; ô 12 dừng ở Si bảy; \partial 4.'
+  - id: 'n18'
+    cau: 'Thông tin, Độ khó: khoảng ABRSM Grade 5; RCM xếp bài ở Level 7 (đề cương 2022); Henle mức 4; ít nốt, nhưng đòi hỏi kiểm soát tiếng đàn rất tinh.'
+    loai: 'cap-do'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'rcm-2022'
+    - 'henle-hn882'
+    - 'abrsm-1920'
+    ket_qua: 'da-sua'
+    ghi_chu: 'Dữ liệu ghi "Khoảng ABRSM Grade 5 (ước lượng): ít nốt, nhưng đòi hỏi kiểm soát tiếng đàn rất tinh". Đề xuất: "Khoảng ABRSM Grade 5: RCM xếp bài ở Level 7 (đề cương 2022); Henle mức 4. Ít nốt, nhưng đòi hỏi kiểm soát tiếng đàn rất tinh". Lý do: bài có trong đề cương RCM 2022 (trang 65, Level 7), nên ghi kỳ đề cương như D6-L1-gom làm; ABRSM, Trinity không xếp bài (lần 1 n4). Grade đã khóa (Grade 5) giữ nguyên; RCM Level 7 cao hơn, người giao cân nhắc. Xem sua-B.yml.'
+  - id: 'n19'
+    cau: 'Thông tin, Kỹ năng chính: hợp âm lặp lại khẽ và đều, nghe các bè trong hợp âm, giai điệu dài cantabile, bàn đạp không nhòe, xây và tháo cao trào, giữ im lặng.'
+    loai: 'cau-truc'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'mut-468'
+    ket_qua: 'dung'
+  - id: 'n20'
+    cau: 'Thông tin, Bản nhạc: bản Urtext có Ấn bản Quốc gia Ba Lan (Wydanie Narodowe, biên tập Jan Ekier) và G. Henle Verlag.'
+    loai: 'ten'
+    truong:
+    - 'thong_tin'
+    nguon:
+    - 'ne-site'
+    - 'henle-hn882'
+    ket_qua: 'dung'
+  - id: 'n21'
+    cau: 'Thông tin, Bản nhạc: Wiener Urtext có bản Urtext của 24 Prélude.'
+    loai: 'ten'
+    truong:
+    - 'thong_tin'
+    nguon: []
+    ket_qua: null
+    ghi_chu: 'chưa chắc: như chopin-prelude-la-truong n21.'
+  - id: 'n22'
+    cau: 'Hình, chú thích: hai câu nhạc; câu sau bắt đầu như câu trước rồi lên cao trào; 25 ô nhịp.'
+    loai: 'cau-truc'
+    truong:
+    - 'hinh'
+    nguon:
+    - 'mut-468'
+    ket_qua: 'dung'
+  - id: 'n23'
+    cau: 'Hình, các đoạn: câu 1 ô 1–12 dừng ở hợp âm át (12); câu 2 ô 13–15 như ô 1 (3); stretto, cao trào ô 16–18, f (3); lắng xuống ô 19–22, smorz. (4); im lặng ô 23 (1); kết ô 24–25, pp (2).'
+    loai: 'cau-truc'
+    truong:
+    - 'hinh'
+    nguon:
+    - 'mut-468'
+    ket_qua: 'dung'
+    ghi_chu: 'Mutopia: ô 12 <b ds a''>; stretto ô 16, \f ô 17; smorz. ô 21; r\fermata ô 23; pp ô 24. 12+3+3+4+1+2 = 25.'
+  - id: 'n24'
+    cau: 'Bản thu: người chơi Ivan Ilić.'
+    loai: 'ten'
+    truong:
+    - 'ban_thu'
+    nguon:
+    - 'commons-ilic4'
+    ket_qua: 'dung'
+  - id: 'n25'
+    cau: 'Bản thu: giấy phép CC BY 3.0; trang https://commons.wikimedia.org/wiki/File:Ivan_Ilić-Chopin_Prelude_Opus_28_n.4.ogg.'
+    loai: 'ten'
+    truong:
+    - 'ban_thu'
+    nguon:
+    - 'commons-ilic4'
+    ket_qua: 'dung'
+    ghi_chu: 'Commons: {{cc-by-3.0}}.'
+  - id: 'n26'
+    cau: 'Bản thu: file mp3 chuyển mã của Commons, nguồn ogg gốc; dài 109,81 giây.'
+    loai: 'so-lieu'
+    truong:
+    - 'ban_thu'
+    nguon:
+    - 'commons-ilic4'
+    ket_qua: 'dung'
+    ghi_chu: 'Commons API: duration 109.81442176870749.'

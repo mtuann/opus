@@ -12,15 +12,15 @@ lan:
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
   - so: 2
-    ngay: null
+    ngay: 2026-11-05
     nhanh: moi/d6-l3
     ma_bam: null
     nguoi:
-      luot_1: null
+      luot_1: "Claude Opus 5.5 (D6-L3 phần A)"
       luot_2: null
       review: null
       kiem_mau: null
-ghi_chu: "Trang bài học cũ ../opus-zero/docs/piano/tac-pham/beethoven-op49-2.md có (loai: bai-hoc là cấu trúc, không phải nhận định)."
+ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/beethoven-op49-2.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Lần 2 (D6-L3, lượt 1 phần A): nhận định n7–n28 cho các trường chưa khóa (bản ghi không có luyen_nghe); bản nhạc Mutopia LVB_Sonate_49no2_1, lịch sử theo lời nói đầu Henle HN 1327, đề cương RCM 2022. Dữ liệu sai: n17, n22; đề xuất ở plans/lam-lai/bao-cao/d6-l3/sua-A.yml. Còn mở: n20, n25.'
 nguon:
   - id: imslp-op49-2
     bac: 2
@@ -42,6 +42,22 @@ nguon:
     bac: 2
     ten: G. Henle Verlag, Levels of Difficulty (thang độ khó 1–9; trang không có bảng quy đổi sang ABRSM)
     link: https://www.henle.de/Levels-of-Difficulty/
+  - id: mut-op49
+    bac: 1
+    ten: Mutopia Project, Sonata No. 20, chương 1, Op. 49 No. 2 (Breitkopf & Härtel 1862–1865; tệp LilyPond và MIDI)
+    link: https://www.mutopiaproject.org/ftp/BeethovenLv/O49/LVB_Sonate_49no2_1/LVB_Sonate_49no2_1.ly
+  - id: henle-1327-vorwort
+    bac: 2
+    ten: 'G. Henle Verlag, HN 1327: lời nói đầu (Norbert Gertsch, Murray Perahia, 2018), PDF'
+    link: https://www.henle.de/media/df/c7/fd/1697725885/1327-1697725884-sync.pdf
+  - id: commons-veesey
+    bac: 2
+    ten: Wikimedia Commons, Daniel Veesey – Sonata No. 20 in G Major, Op. 49 No. 2 – I. Allegro ma non troppo (.ogg; CC0; 298,40 giây; nguồn Free Music Archive)
+    link: https://commons.wikimedia.org/wiki/File:Daniel_Veesey_-_Sonata_No_20_in_G_Major_Op_49_No_2_-_I_Allegro_ma_non_troppo.ogg
+  - id: omt-meter
+    bac: 2
+    ten: Open Music Theory, Simple Meter and Time Signatures (2/2, cut time)
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/simple-meter-and-time-signatures/
 nhan_dinh:
   - id: n1
     cau: "Tên bài: Sonata Sol trưởng Op. 49 số 2, chương 1 (Allegro, ma non troppo)."
@@ -119,3 +135,153 @@ nhan_dinh:
     ghi_chu: '../opus-zero/docs/assets/js/practice.js, hằng SUGGEST[4] có ["piano/tac-pham/beethoven-op49-2/", "Beethoven: Sonata Op. 49 số 2"]; chặng 4 trùng chang 4 của bản ghi.'
     luot_2: dung
     luot_2_ghi_chu: Reasonable; not contradicted.
+  - id: n7
+    cau: Giọng của chương là Sol trưởng.
+    loai: cau-truc
+    truong: [giong]
+    nguon: [mut-op49, imslp-op49-2]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: \key g \major, kết Sol; IMSLP: "G major".'
+  - id: n8
+    cau: Nhịp của chương là 2/2.
+    loai: cau-truc
+    truong: [nhip]
+    nguon: &id001 [mut-op49]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: \time 2/2.'
+  - id: n9
+    cau: Tác phẩm thuộc thời kỳ Cổ điển.
+    loai: lich-su
+    truong: [thoi_ky]
+    nguon: [mut-op49, henle-1327-vorwort]
+    ket_qua: dung
+    ghi_chu: 'Mutopia style "Classical"; Henle: viết khoảng 1796–98, gần Op. 2, 7, 10.'
+  - id: n10
+    cau: 'Kỹ năng chính: hình thức sonata nghe từ bên trong, chùm ba và nhịp chấm dôi, gam chùm ba.'
+    loai: cau-truc
+    truong: [ky_nang_chinh]
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: Chùm ba ô 1, chấm dôi ô 3, gam chùm ba ô 36–43, 103–110 (Mutopia).
+  - id: n11
+    cau: 'Chip: "Sol trưởng · 2/2".'
+    loai: cau-truc
+    truong: [chip]
+    nguon: *id001
+    ket_qua: dung
+  - id: n12
+    cau: 'Chip: "Allegro, ma non troppo".'
+    loai: ten
+    truong: [chip]
+    nguon: [mut-op49, imslp-op49-2]
+    ket_qua: dung
+  - id: n13
+    cau: 'Chip cấp độ: "≈ Grade 5".'
+    loai: cap-do
+    truong: [chip]
+    nguon: [henle-hn1327, rcm-2022]
+    ket_qua: dung
+    ghi_chu: Trùng grade đã khóa (lần 1, n4).
+  - id: n14
+    cau: 'Chip: "Hình thức sonata, 122 ô nhịp".'
+    loai: cau-truc
+    truong: [chip]
+    nguon: [mut-op49, imslp-op49-2]
+    ket_qua: dung
+    ghi_chu: MIDI Mutopia 122 ô; IMSLP "122 bars".
+  - id: n15
+    cau: 'Thông tin, nhà soạn nhạc: Ludwig van Beethoven (1770–1827).'
+    loai: nam
+    truong: [thong_tin]
+    nguon: &id002 [henle-1327-vorwort]
+    ket_qua: dung
+    ghi_chu: Henle "(1770 – 1827)"; khớp nha-soan-nhac.yml (đã khóa).
+  - id: n16
+    cau: 'Thông tin, tác phẩm: Sonata piano số 20 cung Sol trưởng, Op. 49 số 2; chương 1 Allegro, ma non troppo (chương 2 Tempo di Menuetto).'
+    loai: ten
+    truong: [thong_tin]
+    nguon: [imslp-op49-2, henle-hn1327]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Piano Sonata No.20; "Allegro ma non troppo", "Tempo di minuet". Henle: "Tempo di Menuetto".'
+  - id: n17
+    cau: 'Thông tin: có lẽ viết năm 1796 (số 1 năm 1797/98), gần cùng thời với ba sonata Op. 10.'
+    loai: nam
+    truong: [thong_tin]
+    nguon: [henle-1327-vorwort, imslp-op49-2]
+    ket_qua: da-sua
+    ghi_chu: 'Dữ liệu cũ: "Viết khoảng 1796–1798, cùng thời với ba sonata Op. 10 (theo Henle)". Henle: "the 2nd Sonata was probably written in 1796, and the 1st Sonata in 1797/98 ... in close proximity to the three Sonatas op. 2 (1794/95), the Grande Sonate op. 7 (1796/97) and the three Sonatas op. 10 (1795 – 98)"; IMSLP: 1795–96. "1796–1798" là của cả cặp; bản ghi này là số 2. Đề xuất ở sua-A.yml.'
+  - id: n18
+    cau: 'Thông tin: in năm 1805 ở Vienna cùng sonata Op. 49 số 1, với tên Sonates faciles ("những sonata dễ").'
+    loai: nam
+    truong: [thong_tin]
+    nguon: *id002
+    ket_qua: dung
+    ghi_chu: 'Henle: "Deux Sonates faciles op. 49 ... published in January 1805 by the Wiener Kunst- und Industrie-Comptoir".'
+  - id: n19
+    cau: 'Thông tin, giọng · nhịp: Sol trưởng · 2/2 (alla breve).'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: [mut-op49, omt-meter]
+    ket_qua: dung
+  - id: n20
+    cau: 'Thông tin, tốc độ: Allegro, ma non troppo (nhanh, nhưng không quá).'
+    loai: dinh-nghia
+    truong: [thong_tin]
+    nguon: *id001
+    ket_qua: null
+    ghi_chu: 'chưa chắc: chữ chỉ tốc độ khớp Mutopia; nghĩa "ma non troppo" chưa có nguồn đã mở (như hồ sơ trang piano/tac-pham/beethoven-op49-2). Lượt 2 kiểm.'
+  - id: n21
+    cau: 'Thông tin, hình thức: hình thức sonata, 122 ô; trình bày ô 1–52 (có nhắc lại), phát triển ô 53–66, tái hiện ô 67–122.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: Dấu nhắc lại ở cuối ô 52; ô 53 Rê thứ; ô 67 chủ đề 1.
+  - id: n22
+    cau: 'Thông tin, độ khó: khoảng ABRSM Grade 5 (chặng 4 của site); RCM xếp chương 1 và 2 ở Level 8 (đề cương 2022); Henle xếp mức 3 (dễ) trên thang 1–9.'
+    loai: cap-do
+    truong: [thong_tin]
+    nguon: [rcm-2022, henle-hn1327, henle-thang]
+    ket_qua: da-sua
+    ghi_chu: 'Dữ liệu cũ: "Khoảng ABRSM Grade 5 (ước lượng; chặng 4 của site); Henle xếp mức 3 (dễ) trên thang 1–9". Bài có trong đề cương RCM 2022 (Level 8, List B, tr. 73: "Sonata in G Major, op. 49, no. 2 · 1st movement · 2nd movement", đã mở PDF), nên ghi kỳ đề cương thay "(ước lượng)". Không có trong ABRSM, Trinity (lần 1 n4). Đề xuất ở sua-A.yml.'
+  - id: n23
+    cau: 'Thông tin, kỹ năng chính: chùm ba móc đơn đều (hợp âm rải và gam), nhịp chấm dôi không bị "chùm ba hóa", láy rền có nốt kết, láy quanh, hình đệm nốt lặp ở tay trái, gam chùm ba ở cả hai tay, phát âm Cổ điển.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: Các yếu tố có trong chương (hồ sơ trang).
+  - id: n24
+    cau: 'Thông tin, bản nhạc: IMSLP (tìm "Piano Sonata No.20, Op.49 No.2"); bản Urtext G. Henle Verlag (HN 1327, in chung hai sonata Op. 49, ngón bấm của Murray Perahia).'
+    loai: ten
+    truong: [thong_tin]
+    nguon: [imslp-op49-2, henle-hn1327]
+    ket_qua: dung
+    ghi_chu: 'Henle: "Murray Perahia (Fingering Piano, Editor)", "Norbert Gertsch (Editor)".'
+  - id: n25
+    cau: 'Thông tin, bản nhạc: Wiener Urtext, Bärenreiter; ấn bản ABRSM (biên tập Barry Cooper) có chú thích hữu ích.'
+    loai: ten
+    truong: [thong_tin]
+    nguon: []
+    ket_qua: null
+    ghi_chu: 'chưa chắc: chưa mở được trang ấn bản Op. 49 của Wiener Urtext, Bärenreiter và ABRSM; "có chú thích hữu ích" là đánh giá. Lượt 2 kiểm.'
+  - id: n26
+    cau: 'Hình cấu trúc: 122 ô, độ dài theo số ô; chủ đề 1 Sol trưởng ô 1–14 (14), đoạn chuyển trên nốt Rê ô 15–20 (6), chủ đề 2 Rê trưởng ô 21–35 (15), nhóm kết gam chùm ba ô 36–52 (17), phát triển Rê thứ, La thứ, Mi thứ ô 53–66 (14), tái hiện chủ đề 1 Sol trưởng rẽ qua Đô trưởng ô 67–81 (15), đoạn chuyển ô 82–87 (6), chủ đề 2 Sol trưởng ô 88–102 (15), nhóm kết ô 103–122 (20); phần trình bày được nhắc lại.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: Độ rộng đúng bằng số ô từng đoạn; tổng 122. Ranh giới khớp MIDI (hồ sơ trang).
+  - id: n27
+    cau: 'Ghi chú của hình: số ô theo bản Breitkopf & Härtel (qua Mutopia); chủ đề 2 có nhịp lấy đà ở ô 20 và ô 87; đoạn chuyển gần như giống nhau ở hai nơi, lần đầu dẫn sang Rê trưởng, lần sau về Sol trưởng.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: *id001
+    ket_qua: dung
+  - id: n28
+    cau: 'Bản thu gợi ý: Daniel Veesey, giấy phép CC0, trang Commons; dài 298,4 giây.'
+    loai: ten
+    truong: [ban_thu]
+    nguon: [commons-veesey]
+    ket_qua: dung
+    ghi_chu: 'Commons: Artist Daniel Veesey, CC0, length 298.40 (khớp d). Liên kết mp3, src đúng tệp d/d6.'

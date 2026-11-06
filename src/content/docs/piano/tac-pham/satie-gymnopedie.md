@@ -11,18 +11,18 @@ tac_pham: satie-gymnopedie
 ## Vì sao nên học bài này
 
 - **Nhịp đều khi chậm.** Chơi đều ở tốc độ nhanh đã khó; ở tốc độ chậm, mọi chênh lệch nhỏ đều lộ ra. Bài này rèn "đồng hồ bên trong" của bạn.
-- **Mẫu đệm nốt trầm – hợp âm.** Tay trái đánh một nốt trầm rồi nhảy lên một hợp âm, ô nào cũng vậy. Đây là dạng đệm của valse, nocturne và vô số bài sau này, ở đây được tập chậm nhất có thể.
+- **Mẫu đệm nốt trầm – hợp âm.** Tay trái đánh một nốt trầm rồi nhảy lên một hợp âm, gần như ô nào cũng vậy. Đây là dạng đệm của valse, nocturne và vô số bài sau này, ở đây được tập chậm nhất có thể.
 - **Màu tiếng đàn.** Cả bài gần như ở *p* và *pp*; bạn học tạo khác biệt bằng cân bằng giữa ba lớp (nốt trầm, hợp âm, giai điệu), bằng bàn đạp và una corda, chứ không bằng to nhỏ.
-- **Cửa sổ sang thế kỷ 20.** Hợp âm bảy trưởng, màu điệu thức, sự lặp lại không phát triển: những thứ Debussy, Ravel và các nhạc sĩ tối giản về sau đi tiếp (xem [Điệu thức](/opus/nhac-ly/16-dieu-thuc-ngu-cung/) và [thế kỷ 20](/opus/lich-su/thoi-ky/the-ky-20/)).
+- **Cửa sổ sang thế kỷ 20.** Hợp âm bảy trưởng, màu điệu thức, sự lặp lại không phát triển: những hợp âm còn mới lạ năm 1888 cho thấy Satie là người đi tiên phong về hòa âm (xem [Điệu thức](/opus/nhac-ly/16-dieu-thuc-ngu-cung/) và [thế kỷ 20](/opus/lich-su/thoi-ky/the-ky-20/)).
 - **Dễ học thuộc, dễ biểu diễn.** Lượt hai gần như lặp lại lượt một.
 
 ## Bối cảnh
 
-Năm 1888, Satie hơn hai mươi tuổi, sống ở khu Montmartre của Paris, giữa giới nghệ sĩ và các quán cabaret. Âm nhạc châu Âu lúc ấy đang say mê sự đồ sộ của Wagner: dàn nhạc khổng lồ, hòa âm đặc, cảm xúc dâng trào. *Gymnopédies* đi theo hướng ngược lại hoàn toàn: vài lớp nhạc mỏng, một giai điệu đơn giản, không cao trào, không phát triển.
+Năm 1888, Satie hơn hai mươi tuổi, vừa rời nhà cha mẹ và sống ở khu Montmartre của Paris, giữa giới nghệ sĩ và các quán cabaret. *Gymnopédies* được viết thật giản dị: vài lớp nhạc mỏng, một giai điệu đơn giản, không cao trào, không phát triển.
 
-Tên gọi gợi đến *gymnopaedia*, một lễ hội ở Sparta thời cổ Hy Lạp có những điệu múa của các chàng trai trẻ. Satie thích những cái tên bí ẩn và hiếm khi giải thích chúng; đừng tìm một "câu chuyện" trong bài. Hãy nghe nó như một bức phù điêu: chậm, cân đối, xa xăm.
+Tên gọi gợi đến *gymnopaedia*, một lễ hội ở Sparta thời cổ Hy Lạp có những điệu múa của các chàng trai trẻ. Những lời Satie tự giải thích về bài (ông nói mình có cảm hứng khi đọc tiểu thuyết *Salammbô* của Flaubert) thường đầy mỉa mai; đừng tìm một "câu chuyện" trong bài. Hãy nghe nó như một bức phù điêu: chậm, cân đối, xa xăm.
 
-Bộ ba bài trở nên nổi tiếng một phần nhờ Debussy, bạn của Satie, người về sau phối khí cho dàn nhạc hai bài số 1 và số 3. Đến thế kỷ 20, *Gymnopédie* số 1 thành một trong những bản piano được nghe nhiều nhất, trong phim, quảng cáo, phòng chờ. Sự quen thuộc ấy là cái bẫy: rất dễ chơi nó như nhạc nền. Việc của bạn là làm người nghe lắng tai trở lại.
+Bộ ba bài trở nên nổi tiếng một phần nhờ Debussy, bạn của Satie, người về sau phối khí cho dàn nhạc hai bài số 1 và số 3. Ngày nay ba bài *Gymnopédie* là những bản piano nổi tiếng nhất của Satie. Sự quen thuộc ấy là cái bẫy: rất dễ chơi nó như nhạc nền. Việc của bạn là làm người nghe lắng tai trở lại.
 
 ## Nghe trước khi tập
 
@@ -144,7 +144,7 @@ Kế hoạch 4 tuần, mỗi ngày khoảng 30 phút.
 
 ### "Douloureux"
 
-"Đau đớn" ở đây không phải bi kịch. Đó là một nỗi buồn xa xăm, kiềm chế, như nhìn qua một lớp kính. Sắc thái hẹp, chỉ những đợt to nhỏ rất nhẹ theo câu; không có chỗ nào cần *f*.
+"Đau đớn" ở đây không phải bi kịch. Đó là một nỗi buồn xa xăm, kiềm chế, như nhìn qua một lớp kính. Sắc thái hẹp: bản in gốc ghi *pp* ở đầu bài và ở hai câu giai điệu, *p* ở đoạn giữa, và chỉ một chữ *f* mỗi lượt, dưới nốt Fa♯ ngân dài của câu 1 (ô 9 và ô 48). Ngoài chỗ ấy, chỉ những đợt to nhỏ rất nhẹ theo câu.
 
 ### Bàn đạp và una corda
 
@@ -190,7 +190,7 @@ Nốt nhạc gần như giống hệt, nhưng người nghe đã biết bài: h�
 - Nhẹ và vui
 + Chậm và đau đớn
 - Chậm dần rồi nhanh dần
-> "Đau đớn" ở đây là một nỗi buồn xa xăm, kiềm chế, không phải bi kịch; không chỗ nào cần f.
+> "Đau đớn" ở đây là một nỗi buồn xa xăm, kiềm chế, không phải bi kịch; sắc thái hẹp, gần như chỉ pp và p.
 ? Vì sao nốt trầm của mỗi ô cần bàn đạp?
 + Nốt trầm ghi là nốt trắng chấm dôi ngân cả ô, nhưng tay trái phải rời nó để đánh hợp âm ở phách 2
 - Để tiếng đàn to hơn
@@ -207,4 +207,5 @@ Nốt nhạc gần như giống hệt, nhưng người nghe đã biết bài: h�
 
 - Robert Orledge, *Satie the Composer*, Cambridge University Press, 1990.
 - Steven Moore Whiting, *Satie the Bohemian: From Cabaret to Concert Hall*, Oxford University Press, 1999.
-- Bản nhạc: [IMSLP](https://imslp.org/); nốt nhạc và chỉ dẫn được đối chiếu với bản chép LilyPond của [Mutopia Project](https://www.mutopiaproject.org/) (từ bản in lại bản gốc của Dover). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
+- G. Henle Verlag, *Satie: Gymnopédies* (HN 1072), [lời tựa](https://www.henle.de/media/d4/79/64/1697725847/1072-1697725846-sync.pdf) của Ulrich Krämer (2011): năm viết, lời đề tặng, Montmartre, bản phối khí của Debussy.
+- Bản nhạc: [IMSLP](https://imslp.org/); nốt nhạc, số ô và chỉ dẫn được đối chiếu với [bản in gốc](https://commons.wikimedia.org/wiki/File:IMSLP03213-Satie-GymnopediesOrEd.pdf) (bản quét trên Wikimedia Commons). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

@@ -12,7 +12,7 @@ Bản prelude mở đầu *Bình quân luật* quyển 1 trông như một bài 
 
 ## Vì sao nên học bài này
 
-- **Giữ nốt bằng ngón.** Tay trái đánh hai nốt rồi giữ chúng suốt nửa ô trong khi tay phải rải tiếp: cách tạo độ vang của thời chưa có bàn đạp, và nền của mọi lối đệm hợp âm rải về sau.
+- **Giữ nốt bằng ngón.** Tay trái đánh hai nốt rồi giữ chúng suốt nửa ô trong khi tay phải rải tiếp: cách tạo độ vang trên những cây đàn phím thời Bach, vốn chưa có bàn đạp vang.
 - **Đều tuyệt đối.** Gần như cả bài là móc kép liên tục trên cùng một hình nốt; một nốt to hơn hay vội hơn là lộ ngay.
 - **Hai tay chia một dòng nhạc.** Tay trái bắt đầu, tay phải nối tiếp, kín đến mức người nghe tưởng một bàn tay chơi cả.
 - **Nghe hòa âm bằng tay.** Mỗi ô là một hợp âm, không giai điệu nào che. Bạn chạm tay vào hợp âm bảy, bảy giảm, âm nền, và hiểu vì sao một hợp âm "muốn" đi tiếp (xem [Hòa âm chức năng](/opus/nhac-ly/12-hoa-am-chuc-nang/)).
@@ -26,9 +26,9 @@ Nếu móc kép đều ở hai tay còn khó, hãy làm các bài trong [Hợp �
 
 *Das Wohltemperierte Klavier* gồm 24 cặp prelude và fugue, đi lần lượt qua 12 giọng trưởng và 12 giọng thứ, từ Đô trưởng lên đến Si thứ. "Wohltemperiert" (lên dây tốt) chỉ một cách lên dây cho phép chơi hay ở mọi giọng, điều chưa hề hiển nhiên vào thời đó. Trên trang bìa, Bach ghi rằng tập nhạc dành cho những người trẻ ham học nhạc, và để giải trí cho những người đã thạo nghề: vừa là giáo trình, vừa là âm nhạc thật sự. Xem thêm [thời kỳ Baroque](/opus/lich-su/thoi-ky/baroque/).
 
-Bản prelude này khởi đầu như một bài dạy con. Trong *Clavier-Büchlein* viết cho Wilhelm Friedemann, khi đó chừng chín, mười tuổi, có một phiên bản sớm hơn, ngắn hơn. Ở bản chép sạch năm 1722, bài dài 35 ô nhịp như ta biết.
+Bản prelude này khởi đầu như một bài dạy con. Trong *Clavier-Büchlein* viết cho Wilhelm Friedemann, khi đó chừng chín, mười tuổi, có một phiên bản sớm hơn (BWV 846a). Ở bản chép sạch năm 1722, bài dài 35 ô nhịp như ta biết.
 
-Kiểu prelude dựng trên một chuỗi hợp âm rải theo khuôn cố định rất gần với lối dạo đầu ngẫu hứng của người chơi đàn phím thời ấy: thử đàn, thử giọng, dọn đường cho tai trước khi vào fugue. Không có giai điệu để dựa vào, chỉ còn hòa âm và cách bạn làm nó sống.
+Prelude (khúc dạo đầu) là bản nhạc đi trước một bản khác, ở đây là fugue. Bài này dựng trên một chuỗi hợp âm rải theo khuôn cố định: không có giai điệu để dựa vào, chỉ còn hòa âm và cách bạn làm nó sống.
 
 Suốt nhiều thập kỷ, tập nhạc chỉ truyền tay qua bản chép, nhưng được các nhạc sĩ đời sau học rất kỹ: Beethoven thời niên thiếu ở Bonn được thầy Christian Gottlob Neefe cho học tập này. Năm 1853, Charles Gounod viết thêm một giai điệu lên trên prelude, về sau thành bài *Ave Maria* nổi tiếng.
 
@@ -41,9 +41,9 @@ Bản nhạc dài khoảng hai phút. Nghe ít nhất ba lần, mỗi lần mộ
 1. **Hợp âm.** Ô nào nghe "căng" nhất? Ô nào nghe như về nhà? Đánh dấu bằng bút chì lên bản nhạc.
 2. **Bè trầm.** Chỉ nghe nốt thấp nhất của mỗi ô: nó đi xuống từng bậc thế nào, và dừng trên nốt Sol bao lâu ở gần cuối?
 3. **Độ vang.** Nghệ sĩ giữ nốt bằng ngón, bằng bàn đạp, hay cả hai? Tiếng đàn khô hay ướt?
-4. **Một giai điệu bên trên.** Năm 1853, Charles Gounod viết thêm một giai điệu lên trên prelude này, thành bài *Ave Maria* nổi tiếng. Nghe bản ấy rồi nghe lại bản gốc: hòa âm của Bach tự nó đã "hát" đến mức nào?
+4. **Một giai điệu bên trên.** Năm 1853, Charles Gounod viết thêm một giai điệu lên trên prelude này, về sau thành bài *Ave Maria* nổi tiếng. Nghe bản ấy rồi nghe lại bản gốc: hòa âm của Bach tự nó đã "hát" đến mức nào?
 
-Rồi so sánh vài nghệ sĩ đã thu trọn *Bình quân luật*, chẳng hạn Glenn Gould, Sviatoslav Richter và András Schiff. Gould nổi tiếng với lối chơi Bach rõ và tách tiếng; Schiff chủ trương chơi Bach không dùng bàn đạp vang. Ghi lại: ai chơi nhanh nhất, ai nghe vang nhất, ai để sắc thái thay đổi nhiều nhất? Nghe thêm một bản trên harpsichord để biết âm thanh mà Bach quen thuộc. Không có cách đúng duy nhất; điều quan trọng là bạn biết mình chọn gì và vì sao.
+Rồi so sánh vài nghệ sĩ đã thu trọn *Bình quân luật*, chẳng hạn Glenn Gould, Sviatoslav Richter và András Schiff. Schiff viết rằng có thể chơi trọn *Bình quân luật* mà không chạm tới bàn đạp vang. Ghi lại: ai chơi nhanh nhất, ai nghe vang nhất, ai để sắc thái thay đổi nhiều nhất? Nghe thêm một bản trên harpsichord để biết âm thanh mà Bach quen thuộc. Không có cách đúng duy nhất; điều quan trọng là bạn biết mình chọn gì và vì sao.
 
 ::khoi-nghe{moc="1 19 48 79 93 102 137 142 152"}
 
@@ -192,7 +192,7 @@ Bach không ghi tốc độ. Hãy chọn tốc độ đủ trôi để nghe đư
 Có hai cách đều chính đáng:
 
 - **Không bàn đạp.** Chỉ dùng ngón giữ nốt, đúng như Bach ghi. Tiếng đàn trong, mỗi hợp âm rõ ràng; gần nhất với âm thanh harpsichord và clavichord.
-- **Bàn đạp nhẹ, đổi mỗi ô.** Nhấn ngay sau nốt trầm, đổi đúng lúc nốt trầm mới vào (bàn đạp nối, xem [Bàn đạp](/opus/piano/ban-dap/)). Chỉ nhấn nông, vì ba nốt tay phải được nhắc lại hai lần trong mỗi nửa ô và tiếng vang tích tụ rất nhanh.
+- **Bàn đạp nhẹ, đổi mỗi ô.** Nhấn ngay sau nốt trầm, đổi đúng lúc nốt trầm mới vào (bàn đạp nối, xem [Bàn đạp](/opus/piano/ban-dap/)). Chỉ nhấn nông, vì ba nốt tay phải được chơi hai lượt trong mỗi nửa ô và tiếng vang tích tụ rất nhanh.
 
 Dù chọn cách nào, vẫn giữ nốt bằng ngón như bản nhạc ghi: bàn đạp là màu sắc, không phải cái nạng. Không bao giờ giữ bàn đạp qua hai hợp âm.
 
@@ -221,8 +221,8 @@ Một số ấn bản thế kỷ 19 chèn thêm một ô nhịp giữa ô 22 và
 ## Học tiếp
 
 - **Phức điệu:** [Bach: Invention số 1](/opus/piano/tac-pham/bach-invention-1/), bước tiếp theo tự nhiên: hai bè độc lập thay cho hợp âm rải.
-- **Cùng tập:** [Prelude và fugue Đô thứ BWV 847](/opus/piano/tac-pham/bach-prelude-fugue-do-thu/), ngay sau bài này trong quyển 1: cũng một hình nốt lặp lại, nhưng nhanh và mạnh hơn nhiều.
-- **Hòa âm trượt dần:** [Chopin: Prélude Mi thứ](/opus/piano/tac-pham/chopin-prelude-mi-thu/). 24 prelude Op. 28 của Chopin cũng đi qua đủ 24 giọng, theo gương Bach.
+- **Cùng tập:** [Prelude và fugue Đô thứ BWV 847](/opus/piano/tac-pham/bach-prelude-fugue-do-thu/), ngay sau bài này trong quyển 1: cũng dựng trên một hình nốt lặp lại, và là một trong số ít bài của quyển 1 có chỉ dẫn tốc độ của chính Bach.
+- **Hòa âm trượt dần:** [Chopin: Prélude Mi thứ](/opus/piano/tac-pham/chopin-prelude-mi-thu/). 24 prelude Op. 28 của Chopin cũng đi qua đủ 24 giọng.
 - **Ở cùng chặng:** [Für Elise](/opus/piano/tac-pham/fur-elise/), [Satie: Gymnopédie số 1](/opus/piano/tac-pham/satie-gymnopedie/); danh sách đầy đủ ở [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
 - **Nghe thêm:** [Bach: Goldberg Variations](/opus/nghe-nhac/bach-goldberg/).
 
@@ -255,7 +255,7 @@ Một số ấn bản thế kỷ 19 chèn thêm một ô nhịp giữa ô 22 và
 
 ## Nguồn
 
-- David Ledbetter, *Bach's Well-tempered Clavier: The 48 Preludes and Fugues*, Yale University Press, 2002.
-- Hans T. David, Arthur Mendel, Christoph Wolff (biên tập), *The New Bach Reader*, W. W. Norton, 1998 (bản dịch trang bìa *Bình quân luật* và nhiều tư liệu thời Bach).
-- Christoph Wolff, *Johann Sebastian Bach: The Learned Musician*, W. W. Norton, 2000.
-- Bản nhạc: [IMSLP](https://imslp.org/); khung hòa âm đối chiếu với bản chép LilyPond (phạm vi công cộng) của [Mutopia Project](https://www.mutopiaproject.org/). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
+- Bach, *Das Wohltemperierte Klavier* Teil I, G. Henle Verlag, HN 14 (biên tập Ernst-Günter Heinemann, ngón bấm András Schiff): [lời nói đầu và ghi chú diễn tấu](https://www.henle.de/en/The-Well-Tempered-Clavier-Part-I-BWV-846-869/HN-14) (trang bìa năm 1722, cách lên dây, chữ *Clavier*, bàn đạp, chỉ dẫn tốc độ và sắc thái).
+- Norbert Müllemann, ["On the lookout for the lost measure"](https://blog.henle.de/en/2012/04/16/on-the-lookout-for-the-lost-measure-bach%E2%80%99s-c-major-prelude-from-the-well-tempered-clavier-i/), blog của G. Henle Verlag, 2012 (ô nhịp Schwencke).
+- Alexander Wheelock Thayer, *The Life of Ludwig van Beethoven*, tập 1, bản tiếng Anh của Henry Edward Krehbiel, 1921, [bản số hóa](https://archive.org/details/lifeofludwigvanb01thay) (bài viết của Neefe năm 1783).
+- Bản nhạc: [IMSLP](https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)); khung hòa âm đối chiếu với bản chép LilyPond (phạm vi công cộng) của [Mutopia Project](https://www.mutopiaproject.org/) và bản Novello do Harold Brooke biên tập ([bản số hóa](https://archive.org/details/31761064484983)). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
