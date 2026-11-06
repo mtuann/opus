@@ -12,15 +12,15 @@ lan:
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
   - so: 2
-    ngay: null
+    ngay: 2026-11-05
     nhanh: moi/d6-l4
     ma_bam: null
     nguoi:
-      luot_1: null
+      luot_1: "Claude Opus 5.5 (D6-L4 phần A)"
       luot_2: null
       review: null
       kiem_mau: null
-ghi_chu: "Trang bài học cũ ../opus-zero/docs/piano/tac-pham/beethoven-anh-trang.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Trang hướng dẫn nghe nghe-nhac/beethoven-moonlight.md (cap) cũng có."
+ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/beethoven-anh-trang.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Trang hướng dẫn nghe nghe-nhac/beethoven-moonlight.md (cap) cũng có. Lần 2 (D6-L4, lượt 1 phần A): nhận định n7–n29 cho các trường chưa khóa; bản nhạc Mutopia moonlight (Winterberger 1908), lịch sử theo lời tựa Henle HN 1062, mức Henle HN 1820. Dữ liệu sai: n23 (dòng Độ khó: Henle có ghi mức riêng cho chương 1); đề xuất ở plans/lam-lai/bao-cao/d6-l4/sua-A.yml. Còn mở: n26. Gợi ý thuật ngữ cho luyen_nghe (n11).'
 nguon:
   - id: imslp-op27
     bac: 2
@@ -38,6 +38,34 @@ nguon:
     bac: 2
     ten: G. Henle Verlag, Levels of Difficulty (thang độ khó 1–9; trang không có bảng quy đổi sang ABRSM)
     link: https://www.henle.de/Levels-of-Difficulty/
+  - id: mut-moon
+    bac: 1
+    ten: Mutopia Project, Sonata No. 14 "Moonlight", chương 1 (Stewart Holmes; nguồn Winterberger 1908; .ly và MIDI, tải 05/11/2026)
+    link: https://www.mutopiaproject.org/ftp/BeethovenLv/O27/moonlight/moonlight-lys/moonlight1-a4.ly
+  - id: henle-1062-vorwort
+    bac: 2
+    ten: 'G. Henle Verlag, HN 1062: lời tựa (Norbert Gertsch, Murray Perahia, 2012), PDF'
+    link: https://www.henle.de/media/ca/21/5b/1697725842/1062-1697725842-sync.pdf
+  - id: henle-hn1820
+    bac: 2
+    ten: 'G. Henle Verlag, HN 1820 Beethoven, At the Piano – 9 well-known original pieces: "Adagio sostenuto from: Sonata c sharp minor (Moonlight) op. 27,2" mức 4 (medium)'
+    link: https://www.henle.de/en/At-the-Piano-9-well-known-original-pieces/HN-1820
+  - id: cod-adagio
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục adagio ("Slow")
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/adagio
+  - id: cod-sostenuto
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục sostenuto ("Sustained")
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/sostenuto
+  - id: fitch
+    bac: 2
+    ten: 'Graham Fitch, "Pedalling the Moonlight Sonata" (2017): "Completed in 1801, it was dedicated to his student, Countess Giulietta Guicciardi"'
+    link: https://practisingthepiano.com/pedalling-moonlight-sonata/
+  - id: commons-pitman
+    bac: 2
+    ten: Wikimedia Commons, Paul Pitman (Musopen), Sonata No. 14 chương 1 (.ogg; Music {{PD-old-100}}, Recording {{PD-author|musopen.com}}; 335,77 giây)
+    link: https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_sonata_no._14_in_c_sharp_minor_%27moonlight%27,_op._27_no._2_-_i._adagio_sostenuto.ogg
 nhan_dinh:
   - id: n1
     cau: "Tên bài: Sonata Ánh trăng Op. 27 số 2, chương 1 (Adagio sostenuto của Sonata số 14 cung Đô♯ thứ)."
@@ -114,3 +142,223 @@ nhan_dinh:
     ghi_chu: '../opus-zero/docs/assets/js/practice.js, hằng SUGGEST[5] có ["piano/tac-pham/beethoven-anh-trang/", "Beethoven: Ánh trăng, chương 1"]; chặng 5 trùng chang 5 của bản ghi. Chặng chưa kiểm xong (n5).'
     luot_2: dung
     luot_2_ghi_chu: Reasonable for the first movement alone; not contradicted.
+  - id: n7
+    cau: 'Giọng: Đô♯ thứ.'
+    loai: cau-truc
+    truong:
+      - giong
+    nguon:
+      - mut-moon
+      - imslp-op27
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Adagio sostenuto (C♯ minor, 69 bars)".'
+  - id: n8
+    cau: 'Nhịp: 2/2.'
+    loai: cau-truc
+    truong:
+      - nhip
+    nguon:
+      - mut-moon
+    ket_qua: dung
+    ghi_chu: \time 2/2.
+  - id: n9
+    cau: 'Thời kỳ: Cổ điển.'
+    loai: lich-su
+    truong:
+      - thoi_ky
+    nguon:
+      - imslp-op27
+      - mut-moon
+    ket_qua: dung
+    ghi_chu: 'IMSLP Comp. Period "Classical"; Mutopia style "Classical". (Nhà soạn nhạc: Cổ điển/Lãng mạn trong nha-soan-nhac.yml.)'
+  - id: n10
+    cau: 'Kỹ năng chính: ba lớp trong hai tay, giai điệu ngón 5, bàn đạp senza sordino.'
+    loai: cau-truc
+    truong:
+      - ky_nang_chinh
+    nguon:
+      - mut-moon
+      - henle-1062-vorwort
+    ket_qua: dung
+    ghi_chu: Hồ sơ trang n3, n79.
+  - id: n11
+    cau: 'Gợi ý luyện nghe: chùm ba (triplet) đều, tính chất fantasia.'
+    loai: cau-truc
+    truong:
+      - luyen_nghe
+    nguon:
+      - mut-moon
+      - henle-1062-vorwort
+    ket_qua: dung
+    ghi_chu: 'Chùm ba móc đơn suốt chương; tựa "Sonata quasi una fantasia". Thuật ngữ: dữ liệu ghi "Triplet"; hai trang của bản ghi nay dùng "chùm ba" (liên ba): người giao có thể đổi "Triplet đều" thành "Chùm ba đều" (không phải sửa vì sai). Người giao (chủ lô D6-L4) đã áp đề xuất ở src/data/tac-pham.yml: "Triplet đều" thành "Chùm ba đều", theo thuật ngữ hai trang của bản ghi.'
+  - id: n12
+    cau: 'Chip: "Đô♯ thứ · 2/2".'
+    loai: cau-truc
+    truong:
+      - chip
+    nguon:
+      - mut-moon
+    ket_qua: dung
+  - id: n13
+    cau: 'Chip: "Adagio sostenuto".'
+    loai: ten
+    truong:
+      - chip
+    nguon:
+      - mut-moon
+      - imslp-op27
+    ket_qua: dung
+  - id: n14
+    cau: 'Chip cấp độ: "≈ Grade 6–7".'
+    loai: cap-do
+    truong:
+      - chip
+    nguon:
+      - henle-hn1820
+    ket_qua: dung
+    ghi_chu: Trùng grade đã khóa (lần 1, n4, review giữ "khoảng Grade 6–7").
+  - id: n15
+    cau: 'Chip: "69 ô nhịp".'
+    loai: cau-truc
+    truong:
+      - chip
+    nguon:
+      - mut-moon
+      - imslp-op27
+    ket_qua: dung
+    ghi_chu: MIDI 69 ô; IMSLP "69 bars".
+  - id: n16
+    cau: 'Thông tin, nhà soạn nhạc: Ludwig van Beethoven (1770–1827).'
+    loai: nam
+    truong:
+      - thong_tin
+    nguon:
+      - henle-1062-vorwort
+    ket_qua: dung
+    ghi_chu: 'Henle: "(1770 – 1827)".'
+  - id: n17
+    cau: 'Thông tin, tác phẩm: Sonata piano số 14 cung Đô♯ thứ, Op. 27 số 2, Sonata quasi una fantasia ("sonata gần như một fantasia"); chương 1: Adagio sostenuto.'
+    loai: ten
+    truong:
+      - thong_tin
+    nguon:
+      - imslp-op27
+      - henle-1062-vorwort
+    ket_qua: dung
+    ghi_chu: 'Henle: bản in đầu "SONATA quasi una FANTASIA".'
+  - id: n18
+    cau: 'Thông tin: viết năm 1801, in năm 1802 ở Vienna.'
+    loai: nam
+    truong:
+      - thong_tin
+    nguon:
+      - henle-1062-vorwort
+      - fitch
+      - imslp-op27
+    ket_qua: dung
+    ghi_chu: 'Henle: "his 1801 Sonata"; in tháng 3/1802 ở Vienna (Johann Cappi); Fitch: "Completed in 1801". IMSLP ghi năm sáng tác 1802: hai nguồn khác nhau, giữ theo Henle (ấn bản Urtext, gần bản gốc hơn).'
+  - id: n19
+    cau: 'Thông tin: đề tặng nữ bá tước Giulietta Guicciardi, học trò của Beethoven.'
+    loai: lich-su
+    truong:
+      - thong_tin
+    nguon:
+      - henle-1062-vorwort
+      - fitch
+      - imslp-op27
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Dedication "Gräfin Giulietta Guicciardi"; Fitch: "his student".'
+  - id: n20
+    cau: 'Thông tin: tên "Ánh trăng" có sau, không phải của Beethoven.'
+    loai: lich-su
+    truong:
+      - thong_tin
+    nguon:
+      - henle-1062-vorwort
+    ket_qua: dung
+  - id: n21
+    cau: 'Thông tin, giọng · nhịp · tốc độ: Đô♯ thứ · 2/2 (alla breve) · Adagio sostenuto (chậm, ngân giữ).'
+    loai: dinh-nghia
+    truong:
+      - thong_tin
+    nguon:
+      - mut-moon
+      - cod-adagio
+      - cod-sostenuto
+    ket_qua: dung
+    ghi_chu: 'COD adagio: "Slow"; sostenuto: "Sustained".'
+  - id: n22
+    cau: 'Thông tin, hình thức: một chương liền, 69 ô, không nhắc lại: mở đầu, giai điệu ba lần qua nhiều giọng, đoạn trên nốt át ngân (ô 28–41), tái hiện (ô 42), coda (ô 60); có thể nghe như ba phần hoặc một hình thức sonata thu nhỏ.'
+    loai: cau-truc
+    truong:
+      - thong_tin
+    nguon:
+      - mut-moon
+    ket_qua: dung
+    ghi_chu: Hồ sơ trang n40, n47–n49.
+  - id: n23
+    cau: 'Thông tin, độ khó: khoảng ABRSM Grade 6–7 (ước lượng; chặng 5 của site): nốt không khó, cái khó nằm ở cân bằng âm thanh và bàn đạp. Henle xếp cả bản sonata, gồm chương 3 Presto agitato khó hơn nhiều, ở mức 7 (khó) trên thang 1–9; riêng chương 1, trong tuyển tập HN 1820, Henle xếp mức 4 (trung bình).'
+    loai: cap-do
+    truong:
+      - thong_tin
+    nguon:
+      - henle-hn1062
+      - henle-hn1820
+      - henle-thang
+    ket_qua: da-sua
+    ghi_chu: 'Dữ liệu cũ kết thúc bằng "trang của Henle không ghi mức riêng cho chương 1". Trang HN 1820 (At the Piano) ghi "Adagio sostenuto from: Sonata c sharp minor (Moonlight) op. 27,2 · 4 · medium" (lượt 2 của D2-0 cũng nêu). Không có đề cương nào xếp riêng chương 1 (lần 1 n4), nên giữ "(ước lượng)". Grade đã khóa không đổi; mức Henle 4 cũng được dùng cho bài ABRSM Grade 5–8 (lượt 2 D2-0), nên Grade 6–7 không lệch. Đề xuất ở sua-A.yml. Người giao (chủ lô D6-L4) đã áp ở src/data/tac-pham.yml.'
+  - id: n24
+    cau: 'Thông tin, kỹ năng chính: ba lớp trong hai tay; giai điệu nổi bằng ngón 4–5 trên chùm ba ngón 1–2–3 của cùng tay phải; chùm ba đều ở pp; nhịp chấm dôi đặt đúng so với chùm ba; bàn đạp đổi theo hòa âm; giữ mạch ở tốc độ chậm.'
+    loai: cau-truc
+    truong:
+      - thong_tin
+    nguon:
+      - mut-moon
+      - henle-1062-vorwort
+    ket_qua: dung
+    ghi_chu: Các yếu tố có trong chương (hồ sơ trang); ngón 1–2–3 là gợi ý.
+  - id: n25
+    cau: 'Thông tin, bản nhạc: IMSLP (tìm "Piano Sonata No.14, Op.27 No.2"); bản Urtext G. Henle Verlag (HN 1062, ngón bấm của Murray Perahia).'
+    loai: ten
+    truong:
+      - thong_tin
+    nguon:
+      - imslp-op27
+      - henle-hn1062
+    ket_qua: dung
+    ghi_chu: 'Henle HN 1062: "Murray Perahia (Editor, Fingering Piano)", "Perahia also provided the fingerings".'
+  - id: n26
+    cau: 'Thông tin, bản nhạc: Bärenreiter (biên tập Jonathan Del Mar), Wiener Urtext; ấn bản ABRSM (biên tập Barry Cooper).'
+    loai: ten
+    truong:
+      - thong_tin
+    nguon: []
+    ket_qua: null
+    ghi_chu: 'chưa chắc: chưa mở trang ấn bản của Bärenreiter, Wiener Urtext, ABRSM cho Op. 27 số 2. Lượt 2 kiểm.'
+  - id: n27
+    cau: 'Hình cấu trúc: 69 ô, độ dài theo số ô; mở đầu ô 1–4 (4), giai điệu ô 5–9 Đô♯ thứ → Mi trưởng (5), chuyển giọng ô 10–22 Mi thứ, quanh Si, sang Fa♯ thứ (13), giai điệu ô 23–27 Fa♯ thứ (5), Sol♯ ngân ô 28–41 át âm ở bè trầm (14), tái hiện ô 42–59 Đô♯ thứ (18), coda ô 60–69 giai điệu xuống bè trầm (10).'
+    loai: cau-truc
+    truong:
+      - hinh
+    nguon:
+      - mut-moon
+    ket_qua: dung
+    ghi_chu: Tổng 69; ranh giới khớp MIDI (hồ sơ trang).
+  - id: n28
+    cau: 'Ghi chú của hình: số ô theo bản Winterberger (qua Mutopia); có thể nghe như ba phần hay một hình thức sonata thu nhỏ; 69 ô, không nhắc lại.'
+    loai: cau-truc
+    truong:
+      - hinh
+    nguon:
+      - mut-moon
+    ket_qua: dung
+    ghi_chu: Không có \repeat.
+  - id: n29
+    cau: 'Bản thu gợi ý: Paul Pitman (Musopen), phạm vi công cộng, trang Commons; dài 335,77 giây.'
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-pitman
+    ket_qua: dung
+    ghi_chu: 'Commons: "performed by Paul Pitman for Musopen"; Recording {{PD-author|musopen.com}}; duration 335,769 giây (khớp d). Liên kết mp3 và src đúng tệp 4/48.'

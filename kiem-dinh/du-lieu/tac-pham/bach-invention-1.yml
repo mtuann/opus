@@ -12,15 +12,15 @@ lan:
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
   - so: 2
-    ngay: null
+    ngay: 2026-11-05
     nhanh: moi/d6-l4
     ma_bam: null
     nguoi:
-      luot_1: null
+      luot_1: "Claude Opus 5.5 (D6-L4 phần A)"
       luot_2: null
       review: null
       kiem_mau: null
-ghi_chu: "Trang bài học cũ ../opus-zero/docs/piano/tac-pham/bach-invention-1.md có (loai: bai-hoc là cấu trúc, không phải nhận định)."
+ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/bach-invention-1.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Lần 2 (D6-L4, lượt 1 phần A): nhận định n7–n28 cho các trường chưa khóa (bản ghi không có luyen_nghe); bản nhạc Mutopia bach-invention-01 (Bach-Gesellschaft), lịch sử theo lời tựa Henle HN 591, trang bìa 1723, đề cương ABRSM 2015–2016. Dữ liệu sai: không có; đề xuất có điều kiện ở plans/lam-lai/bao-cao/d6-l4/sua-A.yml (n20, n28). Còn mở: n20, n25, n28.'
 nguon:
   - id: imslp-inventions
     bac: 2
@@ -58,6 +58,42 @@ nguon:
     bac: 2
     ten: 'ABRSM, Piano Syllabus 2015 & 2016, Grade 4, List A số 4: "J. S. Bach Invention No. 1 in C, BWV 772" (bản lưu Wayback)'
     link: https://web.archive.org/web/20141127015939/http://gb.abrsm.org:80/fileadmin/user_upload/syllabuses/piano0415.pdf
+  - id: mut-inv
+    bac: 1
+    ten: Mutopia Project, Invention 1, BWV 772 (Jeff Covey; nguồn Bach-Gesellschaft; tệp LilyPond và MIDI, tải 05/11/2026)
+    link: https://www.mutopiaproject.org/ftp/BachJS/BWV772/bach-invention-01/bach-invention-01.ly
+  - id: henle-591-vorwort
+    bac: 2
+    ten: 'G. Henle Verlag, HN 591: lời tựa (Ullrich Scheideler, 2014), PDF'
+    link: https://www.henle.de/media/03/5b/b1/1697725929/0591-1697725929-sync.pdf
+  - id: henle-591-kb
+    bac: 2
+    ten: 'G. Henle Verlag, HN 591: bình chú (Comments), PDF (A2: bản chép sạch, P 610, "Anno Christi 1723")'
+    link: https://www.henle.de/media/41/38/59/1697725768/0591-1697725768-sync.pdf
+  - id: bc-anleitung
+    bac: 2
+    ten: 'Bach Cantatas Website, "Auffrichtige Anleitung": nguyên văn trang bìa 1723 ("Hochfürstlich Anhalt-Cöthenischen Capellmeister Anno Christi 1723"), PDF'
+    link: https://www.bach-cantatas.com/Ref/AuffrichtigeAnleitung.pdf
+  - id: imslp-inv15
+    bac: 2
+    ten: 'IMSLP, 15 Inventions, BWV 772-786 (Bach): trang tồn tại; bản thu "1. Invention in C major, BWV 772" 1:29'
+    link: https://imslp.org/wiki/15_Inventions,_BWV_772-786_(Bach,_Johann_Sebastian)
+  - id: imslp-invsinf
+    bac: 2
+    ten: 'IMSLP, Inventions and Sinfonias, BWV 772-801 (Bach): 15 inventions, 15 sinfonias; 1720–23; in 1801; Baroque'
+    link: https://imslp.org/wiki/Inventions_and_Sinfonias,_BWV_772-801_(Bach,_Johann_Sebastian)
+  - id: commons-meyer
+    bac: 2
+    ten: Wikimedia Commons, File:01 - Invention à 2 voix BWV 772 en do majeur.ogg (Author "Johann Sebastian Bach - Marcelle Meyer"; Date 1948; Source CD; {{PD-old}}; 59,13 giây)
+    link: https://commons.wikimedia.org/wiki/File:01_-_Invention_%C3%A0_2_voix_BWV_772_en_do_majeur.ogg
+  - id: copyright-gov
+    bac: 2
+    ten: 'U.S. Copyright Office, Classics Protection and Access Act (bản thu in lần đầu 1947–1956: 95 năm cộng 15 năm)'
+    link: https://www.copyright.gov/music-modernization/pre1972-soundrecordings/
+  - id: cod-invention
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục invention, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/invention
 nhan_dinh:
   - id: n1
     cau: "Tên bài: Invention số 1 BWV 772 (Invention Đô trưởng, bài đầu trong 15 Invention hai bè)."
@@ -130,3 +166,211 @@ nhan_dinh:
     ghi_chu: '../opus-zero/docs/assets/js/practice.js, hằng SUGGEST[5] có ["piano/tac-pham/bach-invention-1/", "Bach: Invention số 1"]; chặng 5 trùng chang 5 của bản ghi.'
     luot_2: dung
     luot_2_ghi_chu: Reasonable for a stage-5 learner (not contradicted); if n5 is corrected to stage 4 the suggestion could be moved with it.
+  - id: n7
+    cau: 'Giọng: Đô trưởng.'
+    loai: cau-truc
+    truong:
+    - giong
+    nguon:
+    - mut-inv
+    - imslp-inv15
+    ket_qua: dung
+    ghi_chu: 'Mutopia: không dấu hóa, kết <c g e> trên C; IMSLP: "Invention in C major, BWV 772".'
+  - id: n8
+    cau: 'Nhịp: 4/4.'
+    loai: cau-truc
+    truong:
+    - nhip
+    nguon:
+    - mut-inv
+    ket_qua: dung
+    ghi_chu: Mutopia không ghi \time (mặc định 4/4); mỗi ô 16 móc kép.
+  - id: n9
+    cau: 'Thời kỳ: Baroque.'
+    loai: lich-su
+    truong:
+    - thoi_ky
+    nguon:
+    - mut-inv
+    - imslp-invsinf
+    ket_qua: dung
+    ghi_chu: Mutopia style "Baroque"; IMSLP Comp. Period "Baroque".
+  - id: n10
+    cau: 'Kỹ năng chính: phức điệu hai bè, môtip và đảo môtip.'
+    loai: cau-truc
+    truong:
+    - ky_nang_chinh
+    nguon:
+    - mut-inv
+    - cod-invention
+    ket_qua: dung
+    ghi_chu: Hai bè; chủ đề và chủ đề đảo (ô 3–4, 9–12) (hồ sơ trang n10, n32, n34).
+  - id: n11
+    cau: 'Chip: "Đô trưởng · 4/4".'
+    loai: cau-truc
+    truong:
+    - chip
+    nguon:
+    - mut-inv
+    ket_qua: dung
+  - id: n12
+    cau: 'Chip: "Hai bè".'
+    loai: cau-truc
+    truong:
+    - chip
+    nguon:
+    - mut-inv
+    - cod-invention
+    ket_qua: dung
+  - id: n13
+    cau: 'Chip cấp độ: "≈ Grade 4–5".'
+    loai: cap-do
+    truong:
+    - chip
+    nguon:
+    - abrsm-1516-g4
+    - henle-hn591
+    ket_qua: dung
+    ghi_chu: 'Trùng grade đã khóa (lần 1, n4: ABRSM 2015–2016 Grade 4).'
+  - id: n14
+    cau: 'Chip: "Ba phần".'
+    loai: cau-truc
+    truong:
+    - chip
+    nguon:
+    - mut-inv
+    ket_qua: dung
+    ghi_chu: Ba phần khép bằng kết ở ô 7, 15, 22.
+  - id: n15
+    cau: 'Thông tin, nhà soạn nhạc: Johann Sebastian Bach (1685–1750).'
+    loai: nam
+    truong:
+    - thong_tin
+    nguon:
+    - henle-591-vorwort
+    ket_qua: dung
+    ghi_chu: 'Henle: "Johann Sebastian Bach (1685 – 1750)"; khớp nha-soan-nhac.yml (đã khóa).'
+  - id: n16
+    cau: 'Thông tin, tác phẩm: Invention số 1 Đô trưởng, BWV 772, bài đầu trong 15 Invention hai bè (BWV 772–786); cùng 15 Sinfonia ba bè (BWV 787–801) tạo thành tập Inventionen und Sinfonien.'
+    loai: ten
+    truong:
+    - thong_tin
+    nguon:
+    - imslp-invsinf
+    - imslp-inv15
+    - henle-591-vorwort
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "15 inventions, 15 sinfonias", BWV 772-801; 15 Inventions BWV 772-786.'
+  - id: n17
+    cau: 'Thông tin: bản chép sạch đề năm 1723, khi Bach còn là Kapellmeister ở Köthen.'
+    loai: nam
+    truong:
+    - thong_tin
+    nguon:
+    - bc-anleitung
+    - henle-591-kb
+    - henle-591-vorwort
+    ket_qua: dung
+    ghi_chu: 'Trang bìa: "Hochfürstlich Anhalt-Cöthenischen Capellmeister Anno Christi 1723"; Henle: Kapellmeister ở Cöthen từ 1717.'
+  - id: n18
+    cau: 'Thông tin: phiên bản sớm hơn, với tên Praeambulum, nằm trong Clavier-Büchlein mà Bach bắt đầu soạn năm 1720 cho con trai Wilhelm Friedemann.'
+    loai: lich-su
+    truong:
+    - thong_tin
+    nguon:
+    - henle-591-vorwort
+    ket_qua: dung
+    ghi_chu: 'Henle: Clavier-Büchlein "begun at Cöthen, 22 January 1720"; ở cuối sổ các Invention "still labelled here as Praeambula".'
+  - id: n19
+    cau: 'Thông tin, giọng · nhịp: Đô trưởng · 4/4; Bach không ghi tốc độ.'
+    loai: cau-truc
+    truong:
+    - thong_tin
+    nguon:
+    - mut-inv
+    ket_qua: dung
+    ghi_chu: Mutopia (Bach-Gesellschaft) không có chữ tốc độ.
+  - id: n20
+    cau: 'Thông tin, tốc độ: thường ♩ ≈ 60–80.'
+    loai: so-lieu
+    truong:
+    - thong_tin
+    nguon:
+    - commons-meyer
+    - imslp-inv15
+    ket_qua: null
+    ghi_chu: 'chưa chắc: hai bản thu đã đo cho ♩ ≈ 89 (Meyer, Commons, 88 phách trong 59,1 giây, kể cả dấu ngân cuối) và ♩ ≈ 59 (IMSLP, 1:29). Chưa có nguồn cho "thường". Đề xuất có điều kiện ở sua-A.yml: bỏ phần trong ngoặc, hoặc ghi khoảng đã đo.'
+  - id: n21
+    cau: 'Thông tin, hình thức: ba phần, mỗi phần khép bằng một kết: Đô trưởng → Sol trưởng (ô 7) → La thứ (ô 15) → Đô trưởng (ô 22).'
+    loai: cau-truc
+    truong:
+    - thong_tin
+    nguon:
+    - mut-inv
+    ket_qua: dung
+  - id: n22
+    cau: 'Thông tin, độ khó: khoảng ABRSM Grade 4–5; ABRSM xếp bài ở Grade 4 (đề cương 2015–2016); các invention khó hơn ở Grade 5 và 6.'
+    loai: cap-do
+    truong:
+    - thong_tin
+    nguon:
+    - abrsm-1516-g4
+    - abrsm-2122
+    - henle-hn591
+    ket_qua: dung
+    ghi_chu: 'Đã mở lại ABRSM 2015–2016 (Grade 4, List A số 4: "Invention No. 1 in C, BWV 772"), 2021–2022 và 2027–2028 (Grade 5: số 8; Grade 6: số 6) (nguồn của lần 1: abrsm-1516-g4, abrsm-2122). Henle: số 1 mức 3, số 8 mức 4, số 6 mức 3 nhưng "ABRSM: Piano Grade 6 recommended", nên "khó hơn" là theo đề cương ABRSM. Kỳ đề cương đã ghi (không có "ước lượng").'
+  - id: n23
+    cau: 'Thông tin, kỹ năng chính: độc lập hai tay, phát âm (móc kép liền, móc đơn tách), ngón bấm cố định, nhận ra chủ đề và chủ đề đảo, chuỗi, nốt hoa mỹ Baroque.'
+    loai: cau-truc
+    truong:
+    - thong_tin
+    nguon:
+    - mut-inv
+    ket_qua: dung
+    ghi_chu: Các yếu tố có trong bài (hồ sơ trang); "móc kép liền, móc đơn tách" là lựa chọn phát âm (khuyen-tap ở trang).
+  - id: n24
+    cau: 'Thông tin, bản nhạc: IMSLP (tìm "15 Inventions, BWV 772-786"); bản Urtext G. Henle Verlag.'
+    loai: ten
+    truong:
+    - thong_tin
+    nguon:
+    - imslp-inv15
+    - henle-591-vorwort
+    ket_qua: dung
+    ghi_chu: Trang IMSLP "15 Inventions, BWV 772-786" có; Henle HN 591 là bản Urtext.
+  - id: n25
+    cau: 'Thông tin, bản nhạc: bản Urtext Bärenreiter, Wiener Urtext.'
+    loai: ten
+    truong:
+    - thong_tin
+    nguon: []
+    ket_qua: null
+    ghi_chu: 'chưa chắc: chưa mở trang ấn bản Inventions của Bärenreiter và Wiener Urtext (như D6-L3 với các bản ghi khác). Lượt 2 kiểm.'
+  - id: n26
+    cau: 'Hình cấu trúc: 22 ô; phần 1 ô 1–7 Đô → Sol trưởng (6,5), phần 2 ô 7–15 chủ đề đảo → La thứ (8), phần 3 ô 15–18 nốt dài, chuỗi (3,5), kết ô 19–22 về Đô (4); chú thích "ba phần, mỗi phần khép bằng một kết (22 ô nhịp)".'
+    loai: cau-truc
+    truong:
+    - hinh
+    nguon:
+    - mut-inv
+    ket_qua: dung
+    ghi_chu: 'Tổng 22; kết đầu ô 7 và đầu ô 15 nên 6,5 và 8 là độ rộng gần đúng. Hình tách phần 3 thành hai ô (15–18, 19–22) trong khi chú thích nói "ba phần": không sai (cùng phần 3), người giao có thể ghi rõ hơn.'
+  - id: n27
+    cau: 'Bản thu gợi ý: Marcelle Meyer, thu năm 1948, trang Commons; dài 59,13 giây.'
+    loai: ten
+    truong:
+    - ban_thu
+    nguon:
+    - commons-meyer
+    ket_qua: dung
+    ghi_chu: 'Commons: Author Marcelle Meyer, Date 1948, duration 59,133 giây (khớp d). parts chỉ có link (và src), không có mp3: site chỉ dẫn link.'
+  - id: n28
+    cau: 'Bản thu gợi ý: giấy phép phạm vi công cộng.'
+    loai: ten
+    truong:
+    - ban_thu
+    nguon:
+    - commons-meyer
+    - copyright-gov
+    ket_qua: null
+    ghi_chu: 'chưa chắc: Commons ghi {{PD-old}} ("Public domain"); nhưng ở Mỹ bản thu in lần đầu năm 1947–1956 còn bảo hộ tới hết 95 + 15 năm (copyright.gov), như trang bài học nói. "Phạm vi công cộng" không kèm "ở đâu" thì lệch với trang. Đề xuất có điều kiện ở sua-A.yml.'

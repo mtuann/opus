@@ -1,30 +1,30 @@
 ---
 title: "Beethoven: Sonata Ánh trăng, Op. 27 số 2, chương 1"
-description: "Chương nhạc nổi tiếng nhất của Beethoven có rất ít nốt khó. Cái khó nằm ở âm thanh: tay phải vừa rải chùm ba đều như hơi thở vừa hát giai điệu bằng ngón 5…"
+description: "Chương 1 của bản sonata nổi tiếng này có rất ít nốt khó. Cái khó nằm ở âm thanh: tay phải vừa rải chùm ba đều như hơi thở vừa hát giai điệu bằng ngón 5…"
 tac_pham: beethoven-anh-trang
 ---
 
-Chương nhạc nổi tiếng nhất của Beethoven có rất ít nốt khó. Cái khó nằm ở âm thanh: tay phải vừa rải chùm ba đều như hơi thở vừa hát giai điệu bằng ngón 5, trên những quãng tám trầm ngân dài, gần như suốt bài trong *pp*, dưới một chỉ dẫn bàn đạp mà người chơi vẫn còn bàn luận. Trang này hướng dẫn tập để ba lớp ấy tách bạch, bàn đạp không làm nhòe, và tốc độ chậm không bao giờ đứng lại.
+Chương 1 của bản sonata nổi tiếng này có rất ít nốt khó. Cái khó nằm ở âm thanh: tay phải vừa rải chùm ba đều như hơi thở vừa hát giai điệu bằng ngón 5, trên những quãng tám trầm ngân dài, gần như suốt bài trong *pp*, dưới một chỉ dẫn bàn đạp mà người chơi vẫn còn bàn luận. Trang này hướng dẫn tập để ba lớp ấy tách bạch, bàn đạp không làm nhòe, và tốc độ chậm không bao giờ đứng lại.
 
 ::hop-tac-pham
 
 ## Vì sao nên học bài này
 
-- **Ba lớp, một bàn tay hai việc.** Tay phải vừa rải **chùm ba** (liên ba móc đơn) bằng ngón 1–2–3, vừa hát giai điệu bằng ngón 4–5; tay trái giữ bè trầm quãng tám. Bạn sẽ gặp lại kết cấu này rất nhiều trong nhạc piano Lãng mạn, từ nocturne của Chopin đến các bài ca không lời của Mendelssohn.
+- **Ba lớp, một bàn tay hai việc.** Tay phải vừa rải **chùm ba** (liên ba móc đơn) bằng ngón 1–2–3, vừa hát giai điệu bằng ngón 4–5; tay trái giữ bè trầm quãng tám.
 - **Âm thanh trước, nốt sau.** Đọc nốt mất một tuần; tiếng đàn mới là việc của nhiều tháng: *pp* đều, giai điệu nổi mà không gắt, bè trầm sâu mà không nặng.
 - **Bàn đạp có lịch sử.** Chỉ dẫn *senza sordino* buộc bạn nghĩ về cây đàn của Beethoven và cây đàn của chính mình, rồi chọn bằng tai.
 - **Chậm mà không đứng.** 69 ô nhịp ở tốc độ chậm, nhịp alla breve: bài học về mạch nhạc dài.
 - **Hòa âm đáng nghe từng hợp âm.** Hợp âm Napoli ở ô 3, những lần đổi sang giọng thứ, nốt át ngân suốt hơn chục ô: đây là bài để [phân tích](/opus/nhac-ly/26-phan-tich/) bằng chính đôi tay.
 
 :::tip[Chưa sẵn sàng?]
-Nếu chưa rải hợp âm đều và nhẹ, học trước [Bach: Prelude Đô trưởng](/opus/piano/tac-pham/bach-prelude-do/). Nếu chưa làm nổi được giai điệu trên phần đệm của cùng một tay, học [Schumann: Träumerei](/opus/piano/tac-pham/schumann-traumerei/), bài có cùng kỹ năng ba lớp ở dạng nhẹ nhàng hơn. Muốn trước hết một chương sonata trọn vẹn và sáng sủa hơn: [Op. 49 số 2](/opus/piano/tac-pham/beethoven-op49-2/).
+Nếu chưa rải hợp âm đều và nhẹ, học trước [Bach: Prelude Đô trưởng](/opus/piano/tac-pham/bach-prelude-do/). Nếu chưa làm nổi được giai điệu trên phần đệm của cùng một tay, học [Schumann: Träumerei](/opus/piano/tac-pham/schumann-traumerei/), bài cùng chặng 5, nơi một bàn tay cũng phải vừa hát vừa đệm. Muốn trước hết một chương sonata trọn vẹn ở chặng 4: [Op. 49 số 2](/opus/piano/tac-pham/beethoven-op49-2/).
 :::
 
 ## Bối cảnh
 
-Năm 1802, Beethoven cho in hai sonata Op. 27 và đặt cho cả hai tên *Sonata quasi una fantasia*, "sonata gần như một fantasia". Thay vì mở đầu bằng một chương nhanh theo hình thức sonata như thông lệ, Op. 27 số 2 mở bằng một *Adagio* tĩnh lặng, tiếp theo là một *Allegretto* nhỏ nhắn ở Rê♭ trưởng, và để chương nhanh, kịch tính nhất, *Presto agitato*, ở cuối. Bản sonata được đề tặng nữ bá tước trẻ Giulietta Guicciardi, học trò của ông.
+Năm 1802, Beethoven cho in hai sonata Op. 27 và đặt cho cả hai tên *Sonata quasi una fantasia*, "sonata gần như một fantasia". Thay vì mở đầu bằng một chương nhanh theo hình thức sonata như thông lệ, Op. 27 số 2 mở bằng một *Adagio* tĩnh lặng, tiếp theo là một *Allegretto* ngắn ở Rê♭ trưởng, và để chương nhanh, *Presto agitato*, ở cuối. Bản sonata được đề tặng nữ bá tước trẻ Giulietta Guicciardi, học trò của ông.
 
-Cây đàn quan trọng để hiểu chương này. Trên nhiều cây đàn Vienna khoảng năm 1800, **bộ giảm âm** (những miếng nỉ đè lên dây để chặn tiếng) được nhấc lên bằng cần gạt đầu gối, còn đàn cũ hơn nữa dùng nút gạt bằng tay; tiếng đàn tắt nhanh và âm trầm mỏng hơn đàn hiện đại nhiều. Vì vậy chỉ dẫn bàn đạp ở đầu chương (xem phần Diễn tấu) không thể áp dụng y nguyên lên một cây đàn cánh ngày nay. Xem thêm [Lịch sử cây đàn piano](/opus/piano/lich-su-dan/) và [thời kỳ Cổ điển](/opus/lich-su/thoi-ky/co-dien/).
+Cây đàn quan trọng để hiểu chương này. Trên nhiều cây đàn Vienna khoảng năm 1800, **bộ giảm âm** (những miếng nỉ đè lên dây để chặn tiếng) được nhấc lên bằng cần gạt đầu gối, còn đàn cũ hơn nữa dùng nút gạt bằng tay; tiếng đàn tắt nhanh hơn đàn hiện đại nhiều. Vì vậy chỉ dẫn bàn đạp ở đầu chương (xem phần Diễn tấu) không thể áp dụng y nguyên lên một cây đàn cánh ngày nay. Xem thêm [Lịch sử cây đàn piano](/opus/piano/lich-su-dan/) và [thời kỳ Cổ điển](/opus/lich-su/thoi-ky/co-dien/).
 
 Biệt danh **"Ánh trăng"** không phải của Beethoven. Nhà thơ, nhà phê bình Ludwig Rellstab (1799–1860), người viết lời cho nhiều ca khúc trong tập *Schwanengesang* của Schubert, đã tả chương này bằng hình ảnh mặt hồ lặng dưới ánh trăng mờ, sóng khẽ vỗ vào bờ tối, trong truyện ngắn *Theodor* đăng trên một tạp chí âm nhạc ở Berlin khoảng năm 1823–1824, tức khi Beethoven còn sống. Câu chuyện quen thuộc rằng năm 1832 Rellstab ví bài với con thuyền dưới trăng trên hồ Lucerne bắt nguồn từ cuốn *Beethoven et ses trois styles* (1852) của Wilhelm von Lenz. Lenz chỉ viết rằng Rellstab so sánh như thế "hai mươi năm trước"; năm 1832 là con số người đời sau suy ra từ câu ấy. Văn bản của Rellstab tả một mặt hồ, không có con thuyền nào và không nhắc tên hồ. Đến khoảng năm 1840, tên *Mondscheinsonate* (Sonata ánh trăng) đã quen thuộc ở Đức.
 
@@ -50,7 +50,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | … | **Mở đầu** (ô 1–4): chỉ có chùm ba và quãng tám trầm Đô♯ – Si – La – Fa♯ – Sol♯; ở nửa sau ô 3, hợp âm Rê trưởng (hợp âm Napoli) làm màu nhạc tối đi |
 | … | **Giai điệu lần 1** (nhịp lấy đà cuối ô 5, ô 6–9): nốt Sol♯ lặp với nhịp chấm dôi, rồi La, Sol♯, Fa♯, Si; câu kết ở Mi trưởng (ô 9) |
 | … | **Giai điệu ở Mi thứ** (ô 10–15): Sol♮ thay Sol♯ trong chùm ba và giai điệu; nhạc dừng ở Si (ô 15) |
-| … | **Quanh nốt Si** (ô 16–22): bè trầm đi nốt đen; giai điệu Đô♮ – La♯ – Si nói hai lần; rồi nhạc trượt xuống, dừng trên hợp âm Đô♯ bảy |
+| … | **Quanh nốt Si** (ô 16–22): bè trầm đi nốt đen; giai điệu Đô♮ – La♯ – Si nói hai lần; rồi nhạc trượt xuống, dừng trên hợp âm Đô♯ trưởng |
 | … | **Giai điệu ở Fa♯ thứ** (nhịp lấy đà cuối ô 23, ô 24–27): cao hơn lần đầu, trên nốt Đô♯; to dần rồi nhỏ lại |
 | … | **Nốt Sol♯ ngân** (ô 28–41): giai điệu tan vào chùm ba; chùm ba leo lên cao nhất (ô 32–35) rồi đổ xuống thấp; một sự chờ đợi dài |
 | … | **Tái hiện** (ô 42–59): chùm ba, bè trầm và giai điệu trở lại như ô 5; lần này nhạc ở lại quanh Đô♯ thứ |
@@ -67,7 +67,7 @@ Chương nhạc không có dấu nhắc lại. Có thể nghe nó như ba phần
 | Mở đầu | 1–4 | Chỉ có chùm ba và quãng tám trầm; nửa sau ô 3 là **hợp âm Napoli** (Rê trưởng, thể đảo một); ô 4 trên nốt trầm Sol♯ (át âm) | Đô♯ thứ |
 | Giai điệu lần 1 | 5–9 | Giai điệu vào ở nhịp lấy đà cuối ô 5, trên nốt Sol♯4 | Đô♯ thứ → Mi trưởng |
 | Giai điệu lần 2 | 10–15 | Sol♮ thay Sol♯; hợp âm Đô trưởng ở ô 12; kết ở Si thứ, rồi chuyển sang Si trưởng (ô 15) | Mi thứ → Si |
-| Quanh nốt Si | 16–22 | Bè trầm đi nốt đen trên nền nốt Si; giai điệu Đô♮ – La♯ – Si nói hai lần; hợp âm Sol trưởng (Napoli của Fa♯ thứ) ở ô 21; dừng trên Đô♯ bảy | → Fa♯ thứ |
+| Quanh nốt Si | 16–22 | Bè trầm đi nốt đen trên nền nốt Si; giai điệu Đô♮ – La♯ – Si nói hai lần; hợp âm Sol trưởng (Napoli của Fa♯ thứ) ở ô 21; dừng trên hợp âm Đô♯ trưởng (át của Fa♯ thứ) | → Fa♯ thứ |
 | Giai điệu lần 3 | 23–27 | Giai điệu trên nốt Đô♯5, cao hơn lần đầu; to dần rồi nhỏ lại; dẫn về Đô♯ thứ và nốt Sol♯ | Fa♯ thứ → Đô♯ thứ |
 | Nốt át ngân | 28–41 | Quãng tám Sol♯ ở bè trầm suốt 12 ô (28–39); giai điệu tan vào nốt đầu của các chùm ba; chùm ba leo lên tới Rê♯6 (cuối ô 35) rồi đổ xuống; ô 40–41: bè trầm Sol♯ – La – Fa♯ – Sol♯ | Đô♯ thứ |
 | Tái hiện | 42–59 | Ô 42–45 giống ô 5–8; ô 51–55 ứng với ô 15–19, nay trên nốt Đô♯, với giai điệu Rê♮ – Si♯ – Đô♯ | Đô♯ thứ |
@@ -212,13 +212,13 @@ Trên đàn của ông, giữ bộ giảm âm nhấc suốt chỉ tạo một l�
 |---|---|---|
 | Theo sát chữ | Giữ bàn đạp suốt chương, hoặc gần như suốt. Charles Rosen đọc chỉ dẫn theo nghĩa này | Gần nhất với "làn sương" mà Beethoven nghe thấy; trên đàn hiện đại dễ nhòe, cần chơi thật nhỏ; hợp hơn với fortepiano hoặc phòng rất khô |
 | Đổi theo hòa âm | Coi chỉ dẫn là "dùng bàn đạp suốt chương", và đổi bằng **bàn đạp nối** mỗi khi nốt trầm hoặc hòa âm đổi | Sạch, rõ; là cách thông dụng trên đàn hiện đại, nhưng đổi quá kỹ thì tiếng khô và mất vẻ mơ hồ |
-| Ở giữa | Đổi nhanh nhưng không nhả hết (đổi một phần), hoặc giữ bàn đạp ở gần điểm bắt và điều chỉnh rất nhỏ, không bao giờ đạp sâu hết hay nhả hết; đàn có bàn đạp giữa thì có thể dùng nó giữ quãng tám trầm | Giữ được chút sương mà không nhòe; cần tai tốt và phải thử trên từng cây đàn, từng căn phòng |
+| Ở giữa | Đổi nhanh nhưng không nhả hết (đổi một phần), hoặc giữ bàn đạp ở gần điểm bắt và điều chỉnh rất nhỏ, không bao giờ đạp sâu hết hay nhả hết | Giữ được chút sương mà không nhòe; cần tai tốt và phải thử trên từng cây đàn, từng căn phòng |
 
 Lời khuyên cho người học: tập trước với cách thứ hai cho đến khi bàn đạp nối thật sạch (bài tập 2). Sau đó, ở những chỗ hòa âm đổi chậm, thử đổi một phần để giữ lại chút vang của hòa âm trước. Giữ đúng *sempre pp*: chơi càng nhỏ, cộng hưởng càng ít nhòe. Khi bè trầm ngân qua nhiều ô có dấu nối, giữ phím quãng tám bằng tay trái thì đổi bàn đạp vẫn không mất nốt trầm. Thu âm và nghe lại từ xa: điều bạn nghe ở ghế đàn khác điều người nghe ở cuối phòng. Xem [Bàn đạp](/opus/piano/ban-dap/).
 
 ### Ấn bản
 
-Bản Urtext cho bạn đúng chữ của Beethoven. Các ấn bản cũ thường thêm ký hiệu bàn đạp, sắc thái và ngón bấm của người biên tập; bản Winterberger, chẳng hạn, ghi ngón đổi 5–4 và 4–5 trên các nốt giai điệu ngân dài ở ô 7–8. Ngón bấm cho chùm ba khác nhau nhiều giữa các ấn bản (1–2–3, 1–2–4 hay 1–3–5): chọn theo bàn tay của bạn, miễn ngón 4–5 luôn sẵn cho giai điệu.
+Bản Urtext cho bạn đúng chữ của Beethoven. Các ấn bản cũ có thể thêm ký hiệu bàn đạp, sắc thái và ngón bấm của người biên tập; bản Winterberger, chẳng hạn, ghi ngón đổi 5–4 và 4–5 trên các nốt giai điệu ngân dài ở ô 7–8. Ngón cho chùm ba đổi theo thế tay (ngay bản Winterberger ghi 1–3–5 ở ô 1, 1–2–4 ở đầu ô 3): chọn theo bàn tay của bạn, miễn ngón 4–5 luôn sẵn cho giai điệu.
 
 ## Lỗi thường gặp
 
@@ -233,7 +233,7 @@ Bản Urtext cho bạn đúng chữ của Beethoven. Các ấn bản cũ thườ
 
 ## Học tiếp
 
-- **Cả bản sonata:** chương 2 (*Allegretto*, Rê♭ trưởng) là bước tiếp theo nhẹ nhàng; chương 3 (*Presto agitato*) cần tốc độ và sức bền ở mức Grade 8 trở lên.
+- **Cả bản sonata:** chương 2 (*Allegretto*, Rê♭ trưởng, 60 ô nhịp) ngắn; chương 3 (*Presto agitato*, 200 ô nhịp) khó hơn nhiều: Henle xếp cả bản sonata ở mức 7 và ghi ABRSM ARSM, bằng sau Grade 8.
 - **Cùng kỹ năng ba lớp:** [Pathétique, chương 2](/opus/piano/tac-pham/pathetique-adagio/).
 - **Hát trên phím đàn:** [Chopin: Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/), [Debussy: Clair de lune](/opus/piano/tac-pham/debussy-clair-de-lune/).
 - **Bàn đạp:** đọc kỹ trang [Bàn đạp](/opus/piano/ban-dap/), nhất là phần về Beethoven.
@@ -272,6 +272,6 @@ Bản Urtext cho bạn đúng chữ của Beethoven. Các ấn bản cũ thườ
 - Bài viết về nguồn gốc tên *Moonlight* trên [crumey.co.uk](https://crumey.co.uk/beethoven_5_why_moonlight_sonata.html): truyện *Theodor* của Rellstab (1824), sách của Wilhelm von Lenz (1852), tên *Mondscheinsonate* quanh năm 1840.
 - Graham Fitch, ["Pedalling the Moonlight Sonata"](https://practisingthepiano.com/pedalling-moonlight-sonata/), *Practising the Piano* (2017): hai lần ghi chỉ dẫn bàn đạp, cách đọc của Charles Rosen, cách đạp từng phần.
 - Bản dàn trang công cộng của [Mutopia Project](https://www.mutopiaproject.org/) (người nhập: Stewart Holmes; nguồn: ấn bản do A. Winterberger biên tập, 1908): nguồn của đoạn trích, số ô nhịp và các chi tiết nốt nhạc trên trang này.
-- Charles Rosen, *Beethoven's Piano Sonatas: A Short Companion*, Yale University Press, 2002.
-- David Rowland, *A History of Pianoforte Pedalling*, Cambridge University Press, 1993.
+- Charles Rosen, *Beethoven's Piano Sonatas: A Short Companion*, Yale University Press, 2002, tr. 108: đoạn về chỉ dẫn bàn đạp, trích trong bài của Fitch ở trên.
+- G. Henle Verlag, [blog về *una corda*, *con sord.*](https://blog.henle.de/en/2013/06/24/una-corda-%e2%80%93-con-sord-%e2%80%93-mit-verschiebung-how-do-i-%e2%80%98mute%e2%80%99-my-piano/) (Norbert Müllemann, 2013): *senza sordino* là "với bàn đạp phải"; *una corda* trong các sonata cuối của Beethoven.
 - Bản nhạc: [IMSLP](https://imslp.org/). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

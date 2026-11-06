@@ -4,26 +4,686 @@ nguon_cu: ../opus-zero/docs/piano/tac-pham/mozart-k545.md
 tang: tac-pham
 lan:
   - so: 1
-    ngay: null
+    ngay: 2026-11-05
     nhanh: moi/d6-l4
     ma_bam: null
     nguoi:
-      luot_1: null
+      luot_1: Claude Opus 5.5 (D6-L4 phần A)
       luot_2: null
       review: null
       kiem_mau: null
-nguon: []
-nhan_dinh: []
+ghi_chu: 'Bài học K. 545 (tầng Tác phẩm). Bản nhạc: Mutopia K545-1, K545-2, K545-3 (nguồn IMSLP; .ly, .mid tải 05/11/2026, User-Agent opus-kiem-dinh), đọc .ly và in nốt MIDI theo ô bằng script Python (mido): chương 1 có 73 ô, mọi số ô trên trang khớp. Lịch sử: lời tựa Henle HN 164 (Herttrich 2012), IMSLP (K. 543, 550, 551), Tafelmusik. Sửa trang: n4, n6, n8, n9, n10, n11, n14, n15, n20, n21, n24, n25, n27 (ô 12 là hợp âm Sol trưởng, không phải Rê trưởng, ở hai bảng), n30 (bỏ "có sf" ở hai bảng: sf là của người biên tập), n38, n61, n68, n70, n80. Không có chỗ chưa chắc. Giữ cho hồ sơ khác: mục Cấu trúc (từng ô), Chỗ khó và cách tập, Bài tập chuẩn bị, Kế hoạch tập, Diễn tấu (hinh-thuc/sonata n13, piano/index n7); đệm Alberti trầm – cao – giữa – cao (piano/hop-am-rai n37, piano/hai-tay n34); láy rền ở ô 4, có nốt kết (piano/not-hoa-my n116, n15): đã kiểm trên bản nhạc, đúng. Sức khỏe: n45, n54 (cổ tay cứng, mỏi) xếp quy-tac, nguồn BAPAM. Không tính là nhận định: tiêu đề mục, tiêu đề cột bảng, chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng (thuộc hồ sơ bản ghi), mốc trong ::khoi-nghe (8 mốc cho 10 dòng bảng: hai dòng chương 2, 3 không có mốc). Thuật ngữ: láy rền, acciaccatura, non legato, rubato (có trong thuat-ngu.yml hay trang đã khóa); "Alberti" chưa có bản ghi trong thuat-ngu.yml (cho người giao).'
+nguon:
+  - id: mut-k545-1
+    bac: 1
+    ten: Mutopia Project, Sonata Facile, chương 1 Allegro, K. 545 (Alejandro Sierra; nguồn IMSLP; tệp LilyPond và MIDI, tải 05/11/2026)
+    link: https://www.mutopiaproject.org/ftp/MozartWA/KV545/K545-1/K545-1.ly
+  - id: mut-k545-2
+    bac: 1
+    ten: Mutopia Project, K. 545, chương 2 Andante (tệp LilyPond)
+    link: https://www.mutopiaproject.org/ftp/MozartWA/KV545/K545-2/K545-2.ly
+  - id: mut-k545-3
+    bac: 1
+    ten: Mutopia Project, K. 545, chương 3 Rondo (tệp LilyPond)
+    link: https://www.mutopiaproject.org/ftp/MozartWA/KV545/K545-3/K545-3.ly
+  - id: imslp-k545
+    bac: 2
+    ten: 'IMSLP, Piano Sonata No.16 in C major, K.545 (Mozart): Allegro (73 bars), Andante (G major, 74 bars), Rondo. Allegretto (73 bars); 1788 (June 26); in 1805; bản thu Rondo 1:32, 1:34; Allegro 3:23'
+    link: https://imslp.org/wiki/Piano_Sonata_No.16_in_C_major,_K.545_(Mozart,_Wolfgang_Amadeus)
+  - id: henle-164
+    bac: 2
+    ten: 'G. Henle Verlag, HN 164 Piano Sonata C major K. 545 (Sonata facile): trang sản phẩm (mức 5)'
+    link: https://www.henle.de/en/Piano-Sonata-C-major-K.-545-Sonata-facile/HN-164
+  - id: henle-164-vorwort
+    bac: 2
+    ten: 'G. Henle Verlag, HN 164: lời tựa (Ernst Herttrich, 2012), PDF'
+    link: https://www.henle.de/media/76/b6/93/1697725878/0164-1697725878-sync.pdf
+  - id: imslp-k543
+    bac: 2
+    ten: 'IMSLP, Symphony No.39, K.543 (Mozart): "1788-06-26 in Vienna"'
+    link: https://imslp.org/wiki/Symphony_No.39,_K.543_(Mozart,_Wolfgang_Amadeus)
+  - id: imslp-k550
+    bac: 2
+    ten: 'IMSLP, Symphony No.40 in G minor, K.550 (Mozart): "1788 (completed 25 July)"'
+    link: https://imslp.org/wiki/Symphony_No.40_in_G_minor,_K.550_(Mozart,_Wolfgang_Amadeus)
+  - id: imslp-k551
+    bac: 2
+    ten: 'IMSLP, Symphony No.41, K.551 (Mozart): "1788 (August 10)"'
+    link: https://imslp.org/wiki/Symphony_No.41,_K.551_(Mozart,_Wolfgang_Amadeus)
+  - id: tafelmusik
+    bac: 2
+    ten: 'Tafelmusik, Mozart’s Piano: The Fortepiano (đàn theo mẫu Anton Walter: "just over five octaves (from FF to g’’’)"; "Knee levers are used to raise the dampers"; "at the time of his death Mozart owned an early-period Walter")'
+    link: https://tafelmusik.org/explore-baroque/articles/mozarts-piano-fortepiano/
+  - id: cod-alberti
+    bac: 2
+    ten: 'The Concise Oxford Dictionary of Music, mục Alberti bass, qua Encyclopedia.com ("broken triads of which the notes are played in the order: lowest, highest, middle, highest")'
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/alberti-bass
+  - id: cod-allegro
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục allegro ("Merry, i.e. quick, lively, bright")
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/allegro
+  - id: cod-acciaccatura
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục acciaccatura ("a small note with its stem crossed through ... crushed in as quickly as possible before the prin. note")
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/acciaccatura
+  - id: dolmetsch-orn
+    bac: 2
+    ten: 'Dolmetsch Online, Music Theory: Ornaments (trích Clive Brown: láy rền bắt đầu từ nốt trên là lối chơi chủ đạo giữa thế kỷ 18; với Mozart còn tranh luận)'
+    link: https://www.dolmetsch.com/musictheory23.htm
+  - id: bapam
+    bac: 2
+    ten: BAPAM, The Healthy Pianist ("no clenching of elbow, shoulder or wrist"; "tension or fatigue ... warning signs"; "avoid any technique involving repetition at the stretch for more than short periods"); như hồ sơ đã khóa piano/quang-tam-buoc-nhay
+    link: https://www.bapam.org.uk/?p=59585
+nhan_dinh:
+  - id: n1
+    cau: 'Tiêu đề: "Mozart: Sonata Đô trưởng, K. 545".'
+    loai: ten
+    nguon:
+      - imslp-k545
+      - henle-164
+    ket_qua: dung
+  - id: n2
+    cau: Chính Mozart ghi bài này là sonata "cho người mới học".
+    loai: lich-su
+    nguon:
+      - henle-164-vorwort
+    ket_qua: dung
+    ghi_chu: 'Henle: trong danh mục của mình, ngày 26/6/1788, "Eine kleine klavier Sonate für anfänger".'
+  - id: n3
+    cau: Mọi nốt đều lộ ra, không có bàn đạp hay hòa âm dày để che lỗi; trang tập trung vào chương 1, kèm ghi chú cho chương 2, 3.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Mutopia chương 1 không có ký hiệu bàn đạp.
+  - id: n4
+    cau: Chương 1 là một hình thức sonata hoàn chỉnh trong 73 ô nhịp, trình bày, phát triển, tái hiện đều ngắn và rõ (link hình thức sonata).
+    loai: cau-truc
+    nguon:
+      - mut-k545-1
+      - imslp-k545
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "trong bốn, năm phút". Bản thu: Musopen 2:14 (Commons), Renzi 3:23 (IMSLP); bốn, năm phút chỉ đúng khi chơi đủ hai lần nhắc. Thay bằng số ô (MIDI Mutopia 73 ô; IMSLP "73 bars"). doi_chu. Link /opus/hinh-thuc/sonata/ có.'
+  - id: n5
+    cau: Đệm Alberti là hợp âm rải theo thứ tự trầm – cao – giữa – cao.
+    loai: dinh-nghia
+    nguon:
+      - cod-alberti
+    ket_qua: dung
+    ghi_chu: 'COD: "lowest, highest, middle, highest". Giữ đúng điều hồ sơ piano/hop-am-rai n37 và piano/hai-tay n34 dựa vào.'
+  - id: n6
+    cau: Alberti là lối đệm rất hay gặp trong nhạc piano thế kỷ 18; tập cho đều và nhẹ ở bài này thì dùng lại được ở nhiều bài khác.
+    loai: dinh-nghia
+    nguon:
+      - cod-alberti
+      - henle-164-vorwort
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "là \"xương sống\" của nhạc Cổ điển. Nếu nó đều và nhẹ ở bài này, bạn sẽ chơi được hàng trăm bài khác": hình ảnh và con số không kiểm được. COD: "Simple (and often commonplace) acc."; tên lấy từ Domenico Alberti (thế kỷ 18). doi_chu.'
+  - id: n7
+    cau: Các chuỗi gam ở đoạn chuyển và phần phát triển (link Gam).
+    loai: cau-truc
+    nguon: &id001
+      - mut-k545-1
+    ket_qua: dung
+    ghi_chu: Gam móc kép ô 5–10, ô 35–40. Link /opus/piano/gam/ có.
+  - id: n8
+    cau: Không có bàn đạp và hòa âm dày, nốt lệch nhịp hay to hơn đều nghe thấy; đây là một bài luyện tai tốt cho sự sạch sẽ.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Câu cũ: "trường luyện tai tốt nhất": so sánh không kiểm được, bỏ "nhất" (doi_chu).'
+  - id: n9
+    cau: 'Chưa sẵn sàng? Clementi Op. 36 số 1: cùng ngôn ngữ Cổ điển, chương I chỉ 38 ô nhịp (link).'
+    loai: ve-site
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "cùng ngôn ngữ, ngắn hơn, chậm hơn". Trang đích piano/tac-pham/clementi-sonatina: "đủ trình bày, phát triển và tái hiện trong 38 ô nhịp"; tốc độ đích ở trang ấy ♩ ≈ 120–132, bằng K. 545 (♩ ≈ 120–132), nên bỏ "chậm hơn". doi_chu.'
+  - id: n10
+    cau: 'Một bước đệm khác là Beethoven Op. 49 số 2, chương 1: cũng hình thức sonata, ở chặng 4 (link).'
+    loai: ve-site
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "ít Alberti hơn": chưa đếm trên bản nhạc, thay bằng chặng (src/data/tac-pham.yml đã khóa: beethoven-op49-2 chặng 4; mozart-k545 chặng 5). Trang đích có hình thức sonata 122 ô.'
+  - id: n11
+    cau: Mùa hè 1788 là một giai đoạn sáng tác rất sung sức của Mozart.
+    loai: lich-su
+    nguon:
+      - henle-164-vorwort
+    ket_qua: da-sua
+    ghi_chu: 'Henle: "The summer of 1788 was a highly productive period for Mozart". Câu cũ: "một trong những giai đoạn sung sức nhất": bỏ so sánh nhất (doi_chu).'
+  - id: n12
+    cau: Cùng ngày ghi K. 545 vào danh mục (26/6/1788), Mozart ghi cả Giao hưởng số 39.
+    loai: nam
+    nguon:
+      - imslp-k543
+      - imslp-k545
+      - henle-164-vorwort
+    ket_qua: dung
+    ghi_chu: 'IMSLP K. 543: "1788-06-26"; K. 545: "Entered into Mozart''s own catalog June 26".'
+  - id: n13
+    cau: Trong vài tuần sau đó ông hoàn thành hai giao hưởng cuối cùng, số 40 và số 41.
+    loai: nam
+    nguon:
+      - imslp-k550
+      - imslp-k551
+      - henle-164-vorwort
+    ket_qua: dung
+    ghi_chu: 'K. 550: 25/7/1788; K. 551: 10/8/1788; Henle: "the three last great symphonies" giữa tháng 6 và tháng 8.'
+  - id: n14
+    cau: Gần như không biết gì về hoàn cảnh ra đời của bài, kể cả "người mới học" là ai.
+    loai: lich-su
+    nguon:
+      - henle-164-vorwort
+    ket_qua: da-sua
+    ghi_chu: 'Henle: "practically nothing is known about the origins of the piece". Câu cũ: "Mozart dạy đàn để kiếm sống, và bài này rất có thể dành cho học trò": không có nguồn đã mở; bỏ (doi_chu).'
+  - id: n15
+    cau: Ngày 2 tháng 8, Mozart gửi cho chị gái "những bài piano mới nhất" của mình, trong đó hẳn có K. 545.
+    loai: lich-su
+    nguon:
+      - henle-164-vorwort
+    ket_qua: da-sua
+    ghi_chu: 'Câu mới, thay vế đã bỏ ở n14. Henle: "On 2 August he sent his sister \"my latest piano pieces with this post coach\", which certainly also contained K. 545".'
+  - id: n16
+    cau: Bản thảo viết tay đã thất lạc.
+    loai: lich-su
+    nguon:
+      - henle-164-vorwort
+    ket_qua: dung
+    ghi_chu: '"the autograph of the Sonata is lost".'
+  - id: n17
+    cau: Ấn bản đầu tiên, do Bureau d'Arts et d'Industrie in ở Vienna năm 1805, đặt tên Sonate facile; cái tên "dễ" là của nhà xuất bản, không phải của Mozart.
+    loai: lich-su
+    nguon:
+      - henle-164-vorwort
+    ket_qua: dung
+    ghi_chu: 'Henle: "the first edition was released under the title Sonate facile by the Viennese publisher Bureau d’Arts et d’Industrie in 1805"; Mozart ghi "für anfänger".'
+  - id: n18
+    cau: Theo lời tựa Henle, các nguồn gốc không có một ký hiệu sắc thái nào, khác hẳn những sonata khác của ông.
+    loai: lich-su
+    nguon:
+      - henle-164-vorwort
+    ket_qua: dung
+    ghi_chu: '"contrary to his usual custom – Mozart generally supplied his other piano sonatas with a profusion of dynamic markings, he made not one single dynamic indication".'
+  - id: n19
+    cau: Mọi chữ p, f trong bản nhạc phổ thông đều do người biên tập thêm; bạn phải tự quyết định sắc thái.
+    loai: lich-su
+    nguon:
+      - henle-164-vorwort
+      - mut-k545-1
+    ket_qua: dung
+    ghi_chu: Suy ra từ n18; bản IMSLP qua Mutopia có \p, \mp, \f, \sf.
+  - id: n20
+    cau: Đàn của Mozart là fortepiano kiểu Vienna; khi qua đời ông có một cây đàn của Anton Walter.
+    loai: lich-su
+    nguon:
+      - tafelmusik
+    ket_qua: da-sua
+    ghi_chu: 'Tafelmusik: "at the time of his death Mozart owned an early-period Walter". Câu cũ: "fortepiano khung gỗ": đổi theo nguồn (doi_chu).'
+  - id: n21
+    cau: Âm vực đàn kiểu Walter hơn năm quãng tám một chút, từ Fa1 đến Sol6; bộ giảm âm nhấc bằng cần gạt đầu gối.
+    loai: so-lieu
+    nguon:
+      - tafelmusik
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "âm vực khoảng năm quãng tám (từ Fa1 đến Fa6), tiếng nhẹ, tắt nhanh, búa bọc da". Tafelmusik (đàn theo mẫu Walter): "just over five octaves (from FF to g’’’)", "Knee levers are used to raise the dampers". FF = Fa1, g’’’ = Sol6, như hồ sơ beethoven-op49-2 n25. "tiếng nhẹ, tắt nhanh, búa bọc da" không có trong nguồn đã mở: bỏ (như op49-2). doi_chu.'
+  - id: n22
+    cau: Trên đàn hiện đại, "thu nhỏ" tay trái, giữ tiếng sáng, gọn (link thời kỳ Cổ điển).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Link /opus/lich-su/thoi-ky/co-dien/ có.
+  - id: n23
+    cau: Ba câu hỏi khi nghe; ô 42 chủ đề mở đầu quay lại ở một giọng khác.
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: 'Ô 42 Fa trưởng (MIDI: F5 A5 C6 trên Alberti F4 C5 A4 C5).'
+  - id: n24
+    cau: So sánh một bản thu trên đàn hiện đại với một bản trên fortepiano.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Câu cũ nêu Mitsuko Uchida, Maria João Pires, András Schiff "đều thu trọn bộ sonata Mozart" và "tiếng đàn cũ mỏng và nhanh tắt khiến các chuỗi gam rõ như hạt ngọc": chưa mở trang bản thu; vế sau là đánh giá. Bỏ (doi_chu).'
+  - id: n25
+    cau: Đọc hướng dẫn nghe Sonata K. 331 để nghe một sonata khác của Mozart (link).
+    loai: ve-site
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "để thấy Mozart viết thế nào khi không nghĩ đến người mới học": đánh giá, bỏ. Trang đích chưa chuyển; ../opus-zero/docs/nghe-nhac/mozart-k331.md có (Sonata La trưởng K. 331). doi_chu.'
+  - id: n26
+    cau: 'Chương 1, chủ đề 1 (ô 1–4): giai điệu đơn giản trên đệm Alberti của tay trái; láy rền ở ô 4.'
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: 'Tay trái ô 1 C G E G (Alberti); ô 4 "f8\trill e16 f": láy rền có nốt kết. Giữ đúng điều hồ sơ piano/not-hoa-my n116, n15 dựa vào.'
+  - id: n27
+    cau: 'Đoạn chuyển (ô 5–12): chuỗi gam móc kép đi xuống trên hợp âm tay trái; dừng trên hợp âm Sol trưởng.'
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ (bảng Theo dõi và bảng Cấu trúc): "dừng trên hợp âm Rê trưởng". MIDI ô 12: tay phải D5, B4 D5 G5, G4; tay trái G2 G3 G2: hợp âm Sol trưởng (Rê trưởng không có ở ô 11–12). Ô 5–8 mỗi ô một gam lên rồi xuống, bắt đầu A, G, F, E: chuỗi đi xuống. doi_chu (hai bảng).'
+  - id: n28
+    cau: 'Chủ đề 2 (ô 13–25): Sol trưởng; tay trái mở đầu bằng hình móc kép lắc qua lại (ô 13), giai điệu mới có láy rền (ô 14–15); láy rền dài trước kết (ô 25).'
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: Ô 13 tay trái C#4 D4 C#4 D4...; ô 15 "g8.\trill"; ô 25 "a1\startTrillSpan" có nốt kết g a.
+  - id: n29
+    cau: 'Kết trình bày (ô 26–28): hợp âm rải móc kép, rồi ba hợp âm kết ở Sol trưởng; cả phần trình bày nhắc lại.'
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: 'Ô 28: g4 <d b> <b g> r; \repeat volta 2 { ptrh strh }.'
+  - id: n30
+    cau: 'Phát triển (ô 29–41): chất liệu kết trình bày đi qua Sol thứ, Rê thứ, La thứ; chuỗi gam lên xuống.'
+    loai: cau-truc
+    nguon:
+      - mut-k545-1
+      - henle-164-vorwort
+    ket_qua: da-sua
+    ghi_chu: 'Ô 29–30 hình rải của ô 26–27 ở Sol thứ (bes), ô 33–34 Rê thứ, ô 36–38 La thứ (gis). Câu cũ có "có sf" (hai bảng): sf là ký hiệu sắc thái, mà Henle nói nguồn gốc "not one single dynamic indication"; sf của bản IMSLP là của người biên tập. Bỏ (doi_chu).'
+  - id: n31
+    cau: 'Tái hiện (ô 42): chủ đề 1 ở Fa trưởng (giọng hạ át); đoạn chuyển đưa nhạc về Đô trưởng.'
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: \transpose c f { \ptrha } ở đầu phần hai; Si♭ ô 43.
+  - id: n32
+    cau: 'Chủ đề 2 ở Đô trưởng (ô 58–73): láy rền dài, rồi kết chương; bản nhạc có dấu nhắc lại cho phát triển và tái hiện.'
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: \transpose d g, { \strha }; láy rền dài d1 ở ô 70; \repeat volta 2 cho phần hai.
+  - id: n33
+    cau: 'Chương 2, Andante: Sol trưởng, giai điệu hát trên lớp Alberti; phần giữa tối lại ở Sol thứ, rồi chủ đề trở về và một coda ngắn.'
+    loai: cau-truc
+    nguon:
+      - mut-k545-2
+      - imslp-k545
+    ket_qua: dung
+    ghi_chu: 'Mutopia: \key g \major, 3/4; tay trái Alberti (g d b d); phần strh/stlh ở Sol thứ (bes); rồi ptrh và cdrh.'
+  - id: n34
+    cau: 'Chương 3, Rondo: tay trái bắt chước tay phải như trò đuổi bắt; đoạn xen ở Sol trưởng, đoạn giữa ở La thứ, rồi chủ đề quay lại và kết.'
+    loai: cau-truc
+    nguon:
+      - mut-k545-3
+    ket_qua: dung
+    ghi_chu: Hình e dis f e tay phải rồi tay trái nhắc lại (phần giữa); đoạn xen thứ nhất tay trái Alberti c g e g, b g d g ở Sol trưởng; phần giữa La thứ (gis).
+  - id: n35
+    cau: Chương 1, Allegro, 73 ô nhịp; số ô theo bản Urtext, các sách phân tích có thể lệch nhau một ô ở ranh giới.
+    loai: cau-truc
+    nguon:
+      - mut-k545-1
+      - imslp-k545
+    ket_qua: dung
+    ghi_chu: 73 ô (MIDI, IMSLP). Ranh giới trong bảng khớp Mutopia; câu "có thể lệch một ô" là lời dặn.
+  - id: n36
+    cau: 'Bảng Cấu trúc chương 1 (bảy hàng: 1–4, 5–12, 13–25, 26–28, 29–41, 42–57, 58–73) với nội dung và giọng như bảng Theo dõi.'
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: 'Như n26–n32; hàng 42–57: Fa → Đô; hàng 58–73: Đô trưởng.'
+  - id: n37
+    cau: 'Chương 2, Andante (Sol trưởng, 3/4): tay trái đệm Alberti gần như suốt chương.'
+    loai: cau-truc
+    nguon:
+      - mut-k545-2
+      - henle-164-vorwort
+    ket_qua: dung
+    ghi_chu: 'Henle: "The left hand, especially in the first two movements, unfolds broadly in Alberti figures".'
+  - id: n38
+    cau: 'Chương 2: phần đầu dài mười sáu ô nhịp (chủ đề tám ô rồi tám ô tiếp nối), có nhắc lại.'
+    loai: cau-truc
+    nguon:
+      - mut-k545-2
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "một chủ đề tám ô nhịp rồi biến thể của nó": ô 9–16 không lặp lại chủ đề mà đi tiếp tới kết ở Sol (ô 16). doi_chu.'
+  - id: n39
+    cau: 'Chương 2: phần thứ hai mở ở giọng át rồi quay về; phần giữa tối lại ở Sol thứ, đi qua Si♭ trưởng và Đô thứ, trước khi chủ đề trở về và một coda ngắn.'
+    loai: cau-truc
+    nguon:
+      - mut-k545-2
+    ket_qua: dung
+    ghi_chu: 'ptbrh mở ở Rê trưởng (tay trái d a fis a), rồi ptendrh về Sol; strh: Sol thứ, Si♭ (bes f d f), Đô thứ (c ees g); cdrh coda 11 ô.'
+  - id: n40
+    cau: 'Chương 2: khó nhất là giữ giai điệu hát trên lớp Alberti ở tốc độ chậm.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n41
+    cau: 'Chương 3, Rondo (Đô trưởng, 2/4): có chỗ tay trái bắt chước tay phải; đoạn xen thứ nhất ở Sol trưởng (lại có Alberti), đoạn giữa ở La thứ.'
+    loai: cau-truc
+    nguon:
+      - mut-k545-3
+    ket_qua: dung
+    ghi_chu: \time 2/4; như n34.
+  - id: n42
+    cau: Chương 3 ngắn, khoảng 1,5 phút.
+    loai: so-lieu
+    nguon:
+      - imslp-k545
+    ket_qua: dung
+    ghi_chu: 'Bản thu trên IMSLP: Rondo 1:32 (Renzi), 1:34.'
+  - id: n43
+    cau: Chương 3 nhanh và đòi hỏi hai tay ngang tài nhau.
+    loai: cap-do
+    nguon:
+      - henle-164-vorwort
+      - mut-k545-3
+    ket_qua: dung
+    ghi_chu: 'Henle: "the closing Rondo ... introduces new figures and noticeably raises the level of difficulty"; hai tay cùng mang hình e dis f e.'
+  - id: n44
+    cau: 'Chỗ khó, đệm Alberti (ô 1–4, chương 2): ngón cái (nốt lặp) dễ nặng, ngón 5 (nốt trầm) dễ mất; cách tập hợp âm khối rồi rải.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Ô 1–4 tay trái Alberti, chương 2 Alberti (Mutopia).
+  - id: n45
+    cau: Cổ tay cứng khi chơi Alberti gây mỏi; rải với cổ tay xoay nhẹ, không nhấc ngón cao.
+    loai: quy-tac
+    nguon:
+      - bapam
+    ket_qua: dung
+    ghi_chu: 'Yếu tố sức khỏe: xếp quy-tac. BAPAM: "no clenching of elbow, shoulder or wrist"; căng hay mỏi là "warning signs".'
+  - id: n46
+    cau: 'Chuỗi gam đoạn chuyển (ô 5–12) và phát triển: tập theo nhịp chấm, theo nhóm 4 nốt, đặt ngón cái sẵn (link Cách tập).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Link /opus/piano/cach-tap/ có.
+  - id: n47
+    cau: Láy rền dài có nốt kết ở cuối trình bày và tái hiện; viết ra số nốt, bắt đầu từ nốt trên, nốt kết là hai nốt cuối (link Nốt hoa mỹ).
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: Ô 25 a1 trill + g a; ô 70 d1 trill + c d. Phần cách tập là lời khuyên.
+  - id: n48
+    cau: 'Phát âm Cổ điển: đọc dấu luyến trong bản Urtext, nốt cuối dấu luyến nhẹ và ngắn lại (link Tạo tiếng đàn).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Link /opus/piano/tieng-dan/ có.
+  - id: n49
+    cau: 'Hai tay lệch nhau: tập với máy đếm nhịp theo phách đen, rồi phách trắng (link máy đếm nhịp).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Link /opus/luyen-tap/metronome/ có.
+  - id: n50
+    cau: 'Tốc độ ổn định: chọn tốc độ của đoạn khó nhất, thu âm rồi đo (link thu âm).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n51
+    cau: 'Ô 42 (tái hiện ở Fa trưởng): tay quen Đô trưởng dễ trượt về Si♮; tập riêng ô 42–45 đối chiếu ô 1–4 (link Học thuộc và biểu diễn).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Fa trưởng có Si♭ (MIDI ô 43 tay trái A#4 = Si♭). Link /opus/piano/hoc-thuoc-bieu-dien/ có.
+  - id: n52
+    cau: Các bài tập soạn riêng cho trang này.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Ba khối abc ghi "(soạn cho trang này)".
+  - id: n53
+    cau: 'Bài tập 1: chơi mỗi nhóm bốn nốt thành hợp âm khối rồi rải; tay phải mf, tay trái p.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Khối 1 (khuong_nhac).
+  - id: n54
+    cau: Tăng dần từ ♩ = 72 lên ♩ = 116 qua vài tuần, không bao giờ để cổ tay cứng.
+    loai: quy-tac
+    nguon:
+      - bapam
+    ket_qua: dung
+    ghi_chu: 'Vế cổ tay: yếu tố sức khỏe (BAPAM như n45); tốc độ là lời khuyên.'
+  - id: n55
+    cau: 'Bài tập 2: đi lên 1-2-3, luồn ngón cái sang Fa, 1-2-3-4-5; đi xuống 5-4-3-2-1, vắt ngón 3 qua, 3-2-1; tay trái hợp âm rơi cùng nốt tay phải ở mỗi phách đen.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Khối 2: ngón ghi trên Đô trưởng (c d e f... ) khớp; ngón chuẩn của gam Đô trưởng như trang đã khóa piano/gam.'
+  - id: n56
+    cau: 'Tập bốn kiểu: đều; dài – ngắn; ngắn – dài; nhóm bốn nốt.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n57
+    cau: 'Bài tập 3: ô 1 viết ra từng nốt: láy rền bắt đầu từ nốt trên (Si), mười bốn nốt móc kép, rồi nốt kết Sol – La và rơi vào Sol ở phách mạnh; ô 3 là cùng nội dung viết bằng ký hiệu.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Khối 3: b a ×7 (14 nốt) rồi g a, ô 2 g4; ô 3 !trill!a12 g2 a2.'
+  - id: n58
+    cau: Khi đã đều, giảm số nốt nếu cần.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n59
+    cau: Kế hoạch 8 tuần cho chương 1, 45–60 phút mỗi ngày, bảng việc và tốc độ; lời dặn đừng vội đạt ♩ = 132.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Các ô nêu (1–12, 13–28, 29–41, 42–73) khớp cấu trúc.
+  - id: n60
+    cau: Allegro nghĩa là vui, nhanh; thời Mozart là nhanh vừa, không phải chạy đua.
+    loai: dinh-nghia
+    nguon:
+      - cod-allegro
+    ket_qua: dung
+    ghi_chu: 'COD: "Merry, i.e. quick, lively, bright". "Không phải chạy đua" là lời khuyên.'
+  - id: n61
+    cau: Nghĩ theo hai phách trắng mỗi ô; giữ tốc độ ổn định, chỉ cho phép hơi thở rất nhỏ ở cuối phần.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Câu cũ: "nhạc Cổ điển gần như không có rubato": nhận định chung chưa có nguồn; viết lại thành lời khuyên, như hồ sơ beethoven-op49-2 n89 (doi_chu).'
+  - id: n62
+    cau: 'Sắc thái: vì nguồn gốc không có sắc thái, tự quyết định dựa vào cấu trúc.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Vế "nguồn gốc không có sắc thái" như n18.
+  - id: n63
+    cau: 'Phát âm: dấu luyến như hơi thở; nốt không luyến thường hơi tách (non legato); ba hợp âm kết gọn.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Không trái thuat-ngu non-legato ("Nhạc thế kỷ 18 thường được chơi tách hơn").
+  - id: n64
+    cau: 'Bàn đạp: hầu như không cần; không dùng để nối chuỗi gam (link Bàn đạp).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Link /opus/piano/ban-dap/ có.
+  - id: n65
+    cau: Láy rền thời Cổ điển thường bắt đầu từ nốt trên.
+    loai: quy-tac
+    nguon:
+      - dolmetsch-orn
+    ket_qua: dung
+    ghi_chu: 'Dolmetsch (Clive Brown): bắt đầu từ nốt trên "was undoubtedly the dominant practice in the mid-eighteenth century"; với Mozart "arguments for and against". Trang đã khóa piano/not-hoa-my: Cổ điển "phần lớn vẫn từ nốt trên". "Thường" khớp.'
+  - id: n66
+    cau: Các láy rền dài kết thúc bằng hai nốt kết đã viết sẵn.
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: 'Ô 25, 70: \afterGrace ... {g16 a}, {c16 d}.'
+  - id: n67
+    cau: Acciaccatura (nốt nhỏ gạch chéo) chơi ngắn, sát phách.
+    loai: dinh-nghia
+    nguon:
+      - cod-acciaccatura
+      - mut-k545-1
+    ket_qua: dung
+    ghi_chu: 'COD: nốt nhỏ gạch chéo, "crushed in as quickly as possible before the prin. note"; K. 545 có acciaccatura ở ô 15, 17, 22–24.'
+  - id: n68
+    cau: 'Ấn bản: mọi p, f, sf, cresc. trong một ấn bản (như bản IMSLP mà Mutopia chép lại) là của người biên tập; dùng bản Urtext.'
+    loai: lich-su
+    nguon:
+      - henle-164-vorwort
+      - mut-k545-1
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "các ấn bản phổ thông thường in rất nhiều p, f, cresc.": "thường", "rất nhiều" không kiểm được; viết theo điều đã thấy (Mutopia: \mp, \p, \f, \sf, crescendo) và Henle (n18). doi_chu.'
+  - id: n69
+    cau: Lỗi thường gặp (bảy dòng).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: '"Lạc giọng ở ô 42" khớp n31.'
+  - id: n70
+    cau: 'Học tiếp: Mozart Sonata K. 330 hoặc K. 283; nghe trước Sonata K. 331 (link).'
+    loai: ve-site
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Cùng phong cách, khó hơn": so sánh chưa có nguồn; đổi thành "Cùng tác giả" (doi_chu). Trang K. 331 có ở site cũ.'
+  - id: n71
+    cau: 'Bước sang Beethoven: Ánh trăng chương 1 ở cùng chặng, rồi Pathétique chương 2 (link).'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'tac-pham.yml (đã khóa): mozart-k545 5, beethoven-anh-trang 5, pathetique-adagio 6. Pathétique chưa chuyển; ../opus-zero/docs/piano/tac-pham/pathetique-adagio.md có, nói "ba lớp âm thanh".'
+  - id: n72
+    cau: 'Pathétique chương 2: tiếng đàn hát và nhiều lớp hơn.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Trang cũ pathetique-adagio: "giai điệu, phần đệm móc kép và bè trầm cùng nằm gọn trong hai bàn tay ... ba lớp âm thanh".'
+  - id: n73
+    cau: 'Hai bè độc lập: Bach Invention số 1 (link).'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Trang có; hồ sơ bach-invention-1 n6.
+  - id: n74
+    cau: Xem thứ tự gợi ý ở Tác phẩm theo cấp độ (link).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: /opus/piano/tac-pham-theo-cap/ có.
+  - id: n75
+    cau: 'Câu hỏi 1: ở ô 42 chủ đề 1 trở lại ở Fa trưởng, giọng hạ át; đoạn chuyển sau đó đưa nhạc về Đô.'
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: Như n31.
+  - id: n76
+    cau: 'Câu hỏi 2: đệm Alberti là hợp âm rải theo thứ tự trầm – cao – giữa – cao.'
+    loai: dinh-nghia
+    nguon:
+      - cod-alberti
+    ket_qua: dung
+  - id: n77
+    cau: 'Câu hỏi 3: tập chuỗi gam theo nhịp chấm, nhóm 4 nốt, đặt ngón cái sẵn; không dùng bàn đạp.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n78
+    cau: 'Câu hỏi 4: các nguồn gốc không có một ký hiệu sắc thái nào; mọi p, f trong bản phổ thông là của người biên tập.'
+    loai: lich-su
+    nguon:
+      - henle-164-vorwort
+    ket_qua: dung
+  - id: n79
+    cau: 'Mục Nguồn: lời tựa Henle HN 164 (ngày ghi danh mục, ấn bản 1805, không có sắc thái, K. 547a không phải của Mozart).'
+    loai: lich-su
+    nguon:
+      - henle-164-vorwort
+    ket_qua: dung
+    ghi_chu: 'Henle: Rondo chuyển sang Fa trưởng in năm 1799 (Breitkopf), K. 547a, "this arrangement was not made by Mozart personally".'
+  - id: n80
+    cau: 'Mục Nguồn: IMSLP; Mutopia (nguồn IMSLP); link tài liệu tham khảo.'
+    loai: ve-site
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ có Gerber "Musical Insights" (macromusic.org, 1997) và Rosen, The Classical Style: chưa mở; bỏ, thêm Mutopia (doi_chu). /opus/tai-lieu-tham-khao/ có.'
 khuong_nhac:
   - khoi: 1
-    loai: null
-    kiem: []
-    ket_qua: null
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+      - so-ngon
+      - hai-tay
+    ket_qua: dung
+    ghi_chu: '4 ô 4/4, L:1/16, đủ 16 phần mỗi ô ở hai tay. Tay trái Alberti trầm – cao – giữa – cao: Đô (C G E G), Sol7 (B G F G), Fa/Đô (C A F A), Sol (B G D G), rồi hợp âm Đô; tay phải nốt trắng, đen hát trên đó (Mi ở ô 3 là nốt lướt trên Fa/Đô). mf tay phải, p tay trái đúng lời dẫn. Ngón 5-1-3-1, 5-1-2-1 chơi được.'
   - khoi: 2
-    loai: null
-    kiem: []
-    ket_qua: null
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - so-ngon
+      - hai-tay
+    ket_qua: dung
+    ghi_chu: 3 ô 4/4. Ô 1 gam Đô trưởng lên xuống (1-2-3, 1-2-3-4-5; 5-4-3-2-1, 3-2-1), ô 2 từ Si (1-2-3, 1-2-3-4-5; 5-4-3-2, 1, 3-2-1), ô 3 kết; tay trái hợp âm Đô, Sol7 mỗi phách đen. Đúng lời dẫn; ngón chuẩn của gam Đô (piano/gam đã khóa).
   - khoi: 3
-    loai: null
-    kiem: []
-    ket_qua: null
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - hop-am
+      - not-hoa-my
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: '4 ô 4/4. Ô 1 láy rền viết ra: Si–La bảy lần (14 móc kép) rồi nốt kết Sol – La, rơi vào Sol ở ô 2; ô 3 cùng nội dung bằng ký hiệu (!trill! La 12/16, Sol, La). Tay trái Rê – [Fa♯ La Đô] (Rê7) → Sol, như kết ở Sol trưởng của ô 25. Ngón 4-3, 2-3, 1 chơi được.'
+doi_chu:
+  - cu: Chương 1 khoảng ABRSM Grade 6 (ước lượng); chương 3 khó hơn chương 1 một chút
+    moi: "Chương 1: ABRSM xếp ở Grade 6 (đề cương 2027–2028); chương 3 (Rondo) cũng có ở Grade 6 (đề cương 2017–2018) và, theo lời tựa Henle, khó hơn rõ rệt hai chương đầu"
+    ly_do: "Dòng Độ khó của thong_tin (hồ sơ bản ghi du-lieu/tac-pham/mozart-k545 n20, plans/lam-lai/bao-cao/d6-l4/sua-A.yml): ABRSM xếp chương 1 ở Grade 6 (đề cương 2027–2028), chương 3 ở Grade 6 (2017–2018), nên bỏ \"(ước lượng)\"; lời tựa Henle HN 164 nói Rondo khó hơn rõ rệt (\"noticeably raises the level of difficulty\"), không phải \"một chút\"."
+  - cu:
+      - Một hình thức sonata hoàn chỉnh trong bốn, năm phút. Trình bày, phát triển, tái hiện đều ngắn và rõ. Học bài này là cách nhanh nhất để hiểu hình thức sonata bằng chính đôi tay.
+      - Đệm Alberti (hợp âm rải theo thứ tự trầm – cao – giữa – cao) là "xương sống" của nhạc Cổ điển. Nếu nó đều và nhẹ ở bài này, bạn sẽ chơi được hàng trăm bài khác.
+    moi:
+      - Một hình thức sonata hoàn chỉnh trong 73 ô nhịp. Trình bày, phát triển, tái hiện đều ngắn và rõ. Học bài này là cách nhanh nhất để hiểu hình thức sonata bằng chính đôi tay.
+      - Đệm Alberti (hợp âm rải theo thứ tự trầm – cao – giữa – cao) là lối đệm rất hay gặp trong nhạc piano thế kỷ 18. Tập cho nó đều và nhẹ ở bài này, bạn sẽ dùng lại được ở nhiều bài khác.
+    ly_do: "n4: bản thu dài 2–3,5 phút khi không nhắc lại; thay bằng số ô (Mutopia, IMSLP). n6: hình ảnh và con số không kiểm được; COD Alberti bass."
+  - cu: Trong suốt. Không có bàn đạp và hòa âm dày, từng nốt lệch nhịp hay to hơn nốt bên cạnh đều nghe thấy. Đó là trường luyện tai tốt nhất cho sự sạch sẽ.
+    moi: Trong suốt. Không có bàn đạp và hòa âm dày, từng nốt lệch nhịp hay to hơn nốt bên cạnh đều nghe thấy. Đó là một bài luyện tai tốt cho sự sạch sẽ.
+    ly_do: "n8: bỏ so sánh nhất."
+  - cu: "Nếu Alberti và gam móc kép ở ♩ = 100 còn vất vả, hãy học trước Clementi: Sonatina Op. 36 số 1: cùng ngôn ngữ, ngắn hơn, chậm hơn. Một bước đệm khác là Beethoven: Sonata Op. 49 số 2, chương 1: cũng hình thức sonata, ít Alberti hơn."
+    moi: "Nếu Alberti và gam móc kép ở ♩ = 100 còn vất vả, hãy học trước Clementi: Sonatina Op. 36 số 1: cùng ngôn ngữ Cổ điển, chương I chỉ 38 ô nhịp. Một bước đệm khác là Beethoven: Sonata Op. 49 số 2, chương 1: cũng hình thức sonata, ở chặng 4."
+    ly_do: 'n9, n10: "chậm hơn" trái trang Clementi (cùng ♩ ≈ 120–132); "ít Alberti hơn" chưa kiểm; thay bằng số ô và chặng.'
+  - cu: 'Mùa hè 1788 là một trong những giai đoạn sung sức nhất của Mozart: cùng ngày ghi K. 545 vào danh mục, ông ghi cả Giao hưởng số 39, và trong vài tuần sau đó hoàn thành hai giao hưởng cuối cùng (số 40 và số 41). Không ai biết chắc "người mới học" ở đây là ai; Mozart dạy đàn để kiếm sống, và bài này rất có thể dành cho học trò.'
+    moi: 'Mùa hè 1788 là một giai đoạn sáng tác rất sung sức của Mozart: cùng ngày ghi K. 545 vào danh mục, ông ghi cả Giao hưởng số 39, và trong vài tuần sau đó hoàn thành hai giao hưởng cuối cùng (số 40 và số 41). Gần như không biết gì về hoàn cảnh ra đời của bài, kể cả "người mới học" ở đây là ai; ngày 2 tháng 8, Mozart gửi cho chị gái "những bài piano mới nhất" của mình, trong đó hẳn có K. 545.'
+    ly_do: "n11, n14, n15: theo lời tựa Henle HN 164; bỏ vế dạy đàn kiếm sống (không nguồn)."
+  - cu: Đàn của Mozart là fortepiano khung gỗ, âm vực khoảng năm quãng tám (từ Fa1 đến Fa6), tiếng nhẹ, tắt nhanh, búa bọc da. Trên đàn hiện đại, bạn cần "thu nhỏ" tay trái và giữ tiếng sáng, gọn. Xem thêm thời kỳ Cổ điển.
+    moi: 'Đàn của Mozart là fortepiano kiểu Vienna, như cây đàn của Anton Walter mà ông sở hữu lúc qua đời: âm vực hơn năm quãng tám một chút (từ Fa1 đến Sol6), bộ giảm âm nhấc bằng cần gạt đầu gối. Trên đàn hiện đại, bạn cần "thu nhỏ" tay trái và giữ tiếng sáng, gọn. Xem thêm thời kỳ Cổ điển.'
+    ly_do: 'n20, n21: Tafelmusik ("FF to g’’’", knee levers); bỏ chi tiết không có trong nguồn đã mở.'
+  - cu: "So sánh một nghệ sĩ chơi đàn hiện đại (Mitsuko Uchida, Maria João Pires hay András Schiff đều thu trọn bộ sonata Mozart) với một bản thu trên fortepiano: tiếng đàn cũ mỏng và nhanh tắt khiến các chuỗi gam rõ như hạt ngọc. Sau đó đọc hướng dẫn nghe Sonata K. 331 để thấy Mozart viết thế nào khi không nghĩ đến người mới học."
+    moi: "So sánh một bản thu trên đàn hiện đại với một bản trên fortepiano: nghe xem các chuỗi gam và tay trái khác nhau thế nào. Sau đó đọc hướng dẫn nghe Sonata K. 331 để nghe một sonata khác của Mozart."
+    ly_do: "n24, n25: chưa mở trang bản thu; bỏ đánh giá."
+  - cu: "Đoạn chuyển (ô 5–12): chuỗi gam móc kép đi xuống trên hợp âm tay trái; dừng trên hợp âm Rê trưởng"
+    moi: "Đoạn chuyển (ô 5–12): chuỗi gam móc kép đi xuống trên hợp âm tay trái; dừng trên hợp âm Sol trưởng"
+    ly_do: "n27: Mutopia ô 12 là hợp âm Sol trưởng. n27 (bảng Cấu trúc)."
+  - cu: "Phát triển (ô 29–41): chất liệu kết trình bày đi qua Sol thứ, Rê thứ, La thứ; chuỗi gam lên xuống có sf"
+    moi: "Phát triển (ô 29–41): chất liệu kết trình bày đi qua Sol thứ, Rê thứ, La thứ; chuỗi gam lên xuống"
+    ly_do: "n30: sf là của người biên tập (Henle: nguồn gốc không có ký hiệu sắc thái). n30 (bảng Cấu trúc)."
+  - cu: Chuỗi gam móc kép đi xuống, tay trái hợp âm; dừng trên hợp âm Rê trưởng
+    moi: Chuỗi gam móc kép đi xuống, tay trái hợp âm; dừng trên hợp âm Sol trưởng
+    ly_do: "n27: Mutopia ô 12 là hợp âm Sol trưởng. n27 (bảng Cấu trúc)."
+  - cu: Chất liệu kết trình bày ở Sol thứ, Rê thứ, La thứ; chuỗi gam lên xuống có sf
+    moi: Chất liệu kết trình bày ở Sol thứ, Rê thứ, La thứ; chuỗi gam lên xuống
+    ly_do: "n30: sf là của người biên tập (Henle: nguồn gốc không có ký hiệu sắc thái). n30 (bảng Cấu trúc)."
+  - cu: "Chương 2, Andante (Sol trưởng, 3/4): tay trái đệm Alberti gần như suốt chương. Phần đầu là một chủ đề tám ô nhịp rồi biến thể của nó, có nhắc lại; phần thứ hai mở ở giọng át rồi quay về; phần giữa tối lại ở Sol thứ, đi qua Si♭ trưởng và Đô thứ, trước khi chủ đề trở về và một coda ngắn khép lại. Khó nhất là giữ giai điệu hát trên lớp Alberti ở tốc độ chậm, nơi mọi nốt không đều đều lộ ra."
+    moi: "Chương 2, Andante (Sol trưởng, 3/4): tay trái đệm Alberti gần như suốt chương. Phần đầu dài mười sáu ô nhịp (một chủ đề tám ô rồi tám ô tiếp nối), có nhắc lại; phần thứ hai mở ở giọng át rồi quay về; phần giữa tối lại ở Sol thứ, đi qua Si♭ trưởng và Đô thứ, trước khi chủ đề trở về và một coda ngắn khép lại. Khó nhất là giữ giai điệu hát trên lớp Alberti ở tốc độ chậm, nơi mọi nốt không đều đều lộ ra."
+    ly_do: "n38: ô 9–16 không phải biến thể của chủ đề (Mutopia K545-2)."
+  - cu: "Allegro thời Mozart là vui, nhanh vừa, không phải chạy đua. Nghĩ theo hai phách trắng mỗi ô: giai điệu sẽ có hướng đi. Giữ tốc độ ổn định; nhạc Cổ điển gần như không có rubato, chỉ hơi thở rất nhỏ ở cuối phần."
+    moi: "Allegro thời Mozart là vui, nhanh vừa, không phải chạy đua. Nghĩ theo hai phách trắng mỗi ô: giai điệu sẽ có hướng đi. Giữ tốc độ ổn định; chỉ cho phép hơi thở rất nhỏ ở cuối phần."
+    ly_do: "n61: nhận định chung không nguồn; viết lại thành lời khuyên."
+  - cu: Vì không có sắc thái gốc, các ấn bản phổ thông thường in rất nhiều p, f, cresc. mà người đọc tưởng là của Mozart. Dùng một bản Urtext để biết đâu là của tác giả, rồi tự viết sắc thái của mình bằng bút chì.
+    moi: Vì không có sắc thái gốc, mọi p, f, sf, cresc. trong một ấn bản (như bản trên IMSLP mà Mutopia chép lại) đều của người biên tập, dù người đọc dễ tưởng là của Mozart. Dùng một bản Urtext để biết đâu là của tác giả, rồi tự viết sắc thái của mình bằng bút chì.
+    ly_do: "n68: viết theo điều đã thấy trên bản nhạc."
+  - cu: "Cùng phong cách, khó hơn: Mozart Sonata K. 330 hoặc K. 283; nghe trước Sonata K. 331."
+    moi: "Cùng tác giả: Mozart Sonata K. 330 hoặc K. 283; nghe trước Sonata K. 331."
+    ly_do: "n70: so sánh độ khó chưa có nguồn."
+  - cu:
+      - 'Gerber, "Musical Insights" (macromusic.org, 1997) và các phân tích Schenker của chương 1: ranh giới phát triển (ô 29–41) và tái hiện ở Fa trưởng (ô 42).'
+      - Charles Rosen, The Classical Style, Norton (bản mở rộng 1997).
+      - "Bản nhạc: IMSLP. Xem thêm tài liệu tham khảo."
+    moi: "Bản nhạc: IMSLP; số ô nhịp và các chi tiết nốt nhạc trên trang này đối chiếu với bản chép LilyPond (nguồn IMSLP) của Mutopia Project. Xem thêm tài liệu tham khảo."
+    ly_do: "n80: bỏ nguồn chưa mở; thêm Mutopia."

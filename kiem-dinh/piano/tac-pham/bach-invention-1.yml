@@ -4,33 +4,678 @@ nguon_cu: ../opus-zero/docs/piano/tac-pham/bach-invention-1.md
 tang: tac-pham
 lan:
   - so: 1
-    ngay: null
+    ngay: 2026-11-05
     nhanh: moi/d6-l4
     ma_bam: null
     nguoi:
-      luot_1: null
+      luot_1: Claude Opus 5.5 (D6-L4 phần A)
       luot_2: null
       review: null
       kiem_mau: null
-nguon: []
-nhan_dinh: []
+ghi_chu: 'Bài học Invention số 1 (tầng Tác phẩm). Bản nhạc: Mutopia bach-invention-01 (nguồn Bach-Gesellschaft; .ly, .mid tải 05/11/2026, User-Agent opus-kiem-dinh), đọc .ly và in nốt MIDI theo ô bằng script Python (mido): 22 ô, mọi số ô trên trang khớp. Lịch sử: lời tựa và bình chú Henle HN 591 (Scheideler 2014), trang bìa 1723 (bach-cantatas.com), Tomita (QUB, bản lưu Wayback). Sửa trang: n7, n20, n21, n26, n47, n52, n61, n64, n65, n66, n73, n76, n80, n82. Còn mở: n71 (ấn bản cũ thêm dấu). Giữ cho hồ sơ khác: khối chính theo Bach-Gesellschaft, nốt hoa mỹ "chưa ghi"; "láy rền ngắn" ở nốt Si ô 1 (piano/not-hoa-my n116; chữ mới gọi ký hiệu là láy trên, vẫn nói cách chơi là láy rền ngắn); hai bè quan trọng ngang nhau (piano/tieng-dan n59); invention hai bè (minuet-sol n71): đã kiểm trên bản nhạc, đúng. Không tính là nhận định: tiêu đề mục, tiêu đề cột bảng, chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng (thuộc hồ sơ bản ghi), mốc trong ::khoi-nghe. Thuật ngữ: láy trên, láy dưới (thuat-ngu mordent), láy rền; "invention", "inventio", "phức điệu", "chủ đề đảo", "chuỗi" chưa có bản ghi trong thuat-ngu.yml (cho người giao). Hai mục doi_chu đầu (chip và dòng Độ khó) là của D2-0.'
+nguon:
+  - id: mut-inv
+    bac: 1
+    ten: Mutopia Project, Invention 1, BWV 772 (Jeff Covey; nguồn Bach-Gesellschaft; tệp LilyPond và MIDI, tải 05/11/2026)
+    link: https://www.mutopiaproject.org/ftp/BachJS/BWV772/bach-invention-01/bach-invention-01.ly
+  - id: henle-591
+    bac: 2
+    ten: 'G. Henle Verlag, HN 591 Two Part Inventions: trang sản phẩm (mức khó từng bài: số 1 mức 3, số 4 mức 3, số 8 mức 4 và "ABRSM: Piano Grade 5")'
+    link: https://www.henle.de/en/Two-Part-Inventions/HN-591
+  - id: henle-591-vorwort
+    bac: 2
+    ten: 'G. Henle Verlag, HN 591: lời tựa (Ullrich Scheideler, 2014), PDF'
+    link: https://www.henle.de/media/03/5b/b1/1697725929/0591-1697725929-sync.pdf
+  - id: henle-591-kb
+    bac: 2
+    ten: 'G. Henle Verlag, HN 591: bình chú (Comments), PDF'
+    link: https://www.henle.de/media/41/38/59/1697725768/0591-1697725768-sync.pdf
+  - id: bc-anleitung
+    bac: 2
+    ten: 'Bach Cantatas Website, "Auffrichtige Anleitung": nguyên văn trang bìa 1723 và bản dịch tiếng Anh, PDF'
+    link: https://www.bach-cantatas.com/Ref/AuffrichtigeAnleitung.pdf
+  - id: tomita
+    bac: 2
+    ten: Yo Tomita, "The Inventions and Sinfonias" (Queen's University Belfast, 1999; đọc bản lưu Wayback 2026, trang gốc trả 403)
+    link: https://www.qub.ac.uk/tomita/essay/inventions.html
+  - id: cod-invention
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục invention, qua Encyclopedia.com ("highly contrapuntal ... Each works out some short melodic motif")
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/invention
+  - id: cod-inversion
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục inversion, qua Encyclopedia.com ("the turning upside down of a ... theme")
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/inversion
+  - id: cod-sequence
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục sequence, qua Encyclopedia.com ("the more or less exact repetition of a passage at a higher or lower level of pitch")
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/sequence
+  - id: cod-polyphony
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục polyphony, qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/polyphony
+  - id: abrsm-2122
+    bac: 2
+    ten: 'ABRSM, Piano Syllabus 2021 & 2022 (Grade 5: Invention No. 8 BWV 779; Grade 6: Invention No. 6 BWV 777), PDF'
+    link: https://www.abrsm.org/sites/default/files/2023-09/piano-2021-2022-syllabus-rev-sep-2020-final.pdf
+  - id: commons-meyer
+    bac: 2
+    ten: Wikimedia Commons, File:01 - Invention à 2 voix BWV 772 en do majeur.ogg (Marcelle Meyer; Date 1948; Source CD; {{PD-old}}; 59,13 giây)
+    link: https://commons.wikimedia.org/wiki/File:01_-_Invention_%C3%A0_2_voix_BWV_772_en_do_majeur.ogg
+  - id: copyright-gov
+    bac: 2
+    ten: 'U.S. Copyright Office, Classics Protection and Access Act (bản thu trước 1972: in lần đầu 1947–1956 được bảo hộ 95 năm cộng 15 năm)'
+    link: https://www.copyright.gov/music-modernization/pre1972-soundrecordings/
+  - id: dolmetsch-orn
+    bac: 2
+    ten: 'Dolmetsch Online, Music Theory: Ornaments (trích Clive Brown: láy rền bắt đầu từ nốt trên là lối chơi chủ đạo giữa thế kỷ 18; Pralltriller sau bước xuống liền bậc)'
+    link: https://www.dolmetsch.com/musictheory23.htm
+  - id: imslp-inv
+    bac: 2
+    ten: 'IMSLP, Inventions and Sinfonias, BWV 772-801 và 15 Inventions, BWV 772-786 (Bach): 1720–23, in 1801; Baroque'
+    link: https://imslp.org/wiki/15_Inventions,_BWV_772-786_(Bach,_Johann_Sebastian)
+nhan_dinh:
+  - id: n1
+    cau: 'Tiêu đề: "Bach: Invention số 1 Đô trưởng, BWV 772".'
+    loai: ten
+    nguon:
+      - imslp-inv
+      - henle-591
+    ket_qua: dung
+    ghi_chu: 'Henle: "Invention 1 C major BWV 772".'
+  - id: n2
+    cau: Bài có hai mươi hai ô nhịp, hai bè.
+    loai: cau-truc
+    nguon: &id001
+      - mut-inv
+    ket_qua: dung
+    ghi_chu: 'Mutopia: 22 ô (ô cuối có dấu |.), hai khuông, mỗi khuông một bè.'
+  - id: n3
+    cau: Chủ đề (ý nhạc chính) dài nửa ô nhịp.
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: 'Ô 1: dấu lặng móc kép rồi bảy móc kép, tức hai phách.'
+  - id: n4
+    cau: 'Invention số 1 là một bài phức điệu: hai tay cùng nói, đối đáp và nhại nhau, không chia vai giai điệu và đệm.'
+    loai: dinh-nghia
+    nguon:
+      - cod-polyphony
+      - cod-invention
+      - mut-inv
+    ket_qua: dung
+    ghi_chu: 'COD polyphony: các bè "combined contrapuntally, as opposed to ... homophonic mus. (one melodic line, the other parts acting as acc.)"; COD invention: "highly contrapuntal, being largely in the nature of imitation".'
+  - id: n5
+    cau: Bach để lại gần như hoàn toàn cho người chơi việc quyết định cách phát âm.
+    loai: lich-su
+    nguon:
+      - henle-591-vorwort
+      - mut-inv
+    ket_qua: dung
+    ghi_chu: 'Henle HN 591: "Bach''s musical text contains hardly any indications as regards phrasing"; Mutopia (Bach-Gesellschaft) không có dấu luyến hay staccato.'
+  - id: n6
+    cau: Mỗi tay là một giọng độc lập, quan trọng ngang nhau.
+    loai: cau-truc
+    nguon:
+      - mut-inv
+      - cod-invention
+    ket_qua: dung
+    ghi_chu: Hai bè cùng mang chủ đề (tay phải ô 1, tay trái ô 1 và ô 7...). Giữ đúng điều hồ sơ piano/tieng-dan n59 dựa vào.
+  - id: n7
+    cau: Phức điệu hai bè là kỹ năng cần cho các sinfonia, fugue và nhiều bài khác của Bach (link Đối âm).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Câu cũ: "Đây là nền cho mọi fugue, sinfonia và phần lớn nhạc Bach": "mọi", "phần lớn" không kiểm được; viết lại thành lời khuyên (doi_chu). Link /opus/nhac-ly/22-doi-am/ có.'
+  - id: n8
+    cau: Bach gần như không ghi dấu luyến hay staccato.
+    loai: lich-su
+    nguon:
+      - henle-591-vorwort
+      - mut-inv
+    ket_qua: dung
+    ghi_chu: Như n5.
+  - id: n9
+    cau: Tự chọn cách nối và ngắt cho từng loại nốt, rồi giữ nhất quán.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n10
+    cau: 'Gần như mọi nốt trong bài đến từ chủ đề ở ô 1: nguyên dạng, đảo ngược, chuyển giọng, nối thành chuỗi.'
+    loai: cau-truc
+    nguon:
+      - mut-inv
+      - cod-invention
+    ket_qua: dung
+    ghi_chu: 'Mutopia: mọi nhóm bốn móc kép là chủ đề hay chủ đề đảo (ô 1–2, 3–4 đảo, 7–8, 9–10 đảo cả hai tay, 11–12, 13–21); nốt móc đơn đi kèm. COD: "Each works out some short melodic motif". Link nhac-ly/30-phat-trien-motip có.'
+  - id: n11
+    cau: Một tay chạy móc kép trong khi tay kia đi móc đơn, rồi đổi vai.
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: 'Ô 3–4: tay phải móc kép, tay trái móc đơn; ô 11–12 ngược lại. Phần "liền tiếng, tách tiếng" là lựa chọn phát âm (n61).'
+  - id: n12
+    cau: Chủ đề, nhại, chuỗi, kết là những khái niệm gặp lại trong fugue (link hinh-thuc/fugue).
+    loai: dinh-nghia
+    nguon:
+      - cod-invention
+      - cod-sequence
+    ket_qua: dung
+    ghi_chu: Link /opus/hinh-thuc/fugue/ có (src/content/docs).
+  - id: n13
+    cau: Bach dùng các invention và sinfonia để dạy con trai Wilhelm Friedemann, rồi các học trò khác.
+    loai: lich-su
+    nguon:
+      - henle-591-vorwort
+    ket_qua: dung
+    ghi_chu: 'Henle: "Bach did, in fact, use the Inventions and Sinfonias not only to educate his son Wilhelm Friedemann, but other pupils too"; bản đầu nằm trong Clavier-Büchlein cho Friedemann (1720).'
+  - id: n14
+    cau: Năm 1723, khi chép sạch cả tập, Bach viết một trang bìa dài.
+    loai: nam
+    nguon:
+      - henle-591-vorwort
+      - henle-591-kb
+      - bc-anleitung
+    ket_qua: dung
+    ghi_chu: 'Henle: "In 1723 Bach wrote out the Inventions and Sinfonias ... in fair copy ... an added title page and preface"; bình chú: P 610, lá 1r có tựa chi tiết, ghi "Anno Christi 1723".'
+  - id: n15
+    cau: 'Diễn ý trang bìa: hướng dẫn cho người yêu đàn phím, nhất là người ham học, học chơi sạch hai bè, rồi ba bè; tìm được ý nhạc hay và phát triển chúng; trên hết là đạt lối chơi như hát (cantabile) và nếm trước nghề sáng tác.'
+    loai: lich-su
+    nguon:
+      - bc-anleitung
+      - tomita
+    ket_qua: dung
+    ghi_chu: 'Nguyên văn: "Auffrichtige Anleitung, Wormit denen Liebhabern des Clavires, besonders aber denen Lehrbegierigen ... (1) mit 2 Stimmen reine spielen zu lernen ... (2) mit dreyen obligaten Partien ... gute inventiones ... selbige wohl durchzuführen, am allermeisten aber eine cantable Art im Spielen zu erlangen, und darneben einen starcken Vorschmack von der Composition zu überkommen". Bản diễn ý khớp từng vế.'
+  - id: n16
+    cau: 'Inventio là một từ của tu từ học: tìm ra một ý tưởng rồi khai triển nó.'
+    loai: dinh-nghia
+    nguon:
+      - tomita
+    ket_qua: dung
+    ghi_chu: 'Tomita: "The word originally belonged to the term in rhetoric, and here Bach used to describe the idea that could be used as a compositional theme"; Cicero: inventio, dispositio...'
+  - id: n17
+    cau: Mỗi invention là một bài học về cách một ý nhạc nhỏ sinh ra cả một tác phẩm.
+    loai: lich-su
+    nguon:
+      - tomita
+      - cod-invention
+    ket_qua: dung
+    ghi_chu: 'Tomita: "how one can discover a good musical idea for a piece, and how to develop that into a full-scale composition".'
+  - id: n18
+    cau: Mục tiêu cao nhất Bach nêu ra trên trang bìa là lối chơi như hát, không phải sự nhanh nhẹn của ngón tay.
+    loai: lich-su
+    nguon:
+      - bc-anleitung
+      - tomita
+    ket_qua: dung
+    ghi_chu: '"am allermeisten aber eine cantable Art im Spielen" ("above all ... a cantabile manner of performance").'
+  - id: n19
+    cau: Hãy nhớ mục tiêu ấy mỗi khi muốn tăng tốc độ.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n20
+    cau: Bach viết cho đàn phím thời ấy (trang bìa gọi chung là Clavier).
+    loai: lich-su
+    nguon:
+      - bc-anleitung
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Bach viết cho đàn phím thời ấy (harpsichord, clavichord)". Trang bìa chỉ ghi "Liebhabern des Clavires"; chưa có nguồn đã mở nêu riêng hai đàn. Viết theo chữ trang bìa (doi_chu).'
+  - id: n21
+    cau: Trên piano hiện đại, bạn có độ ngân dài hơn và dải sắc thái rộng hơn; hãy dùng chúng tiết chế.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Câu cũ: "bạn có sắc thái và độ ngân mà ông không có": clavichord có sắc thái theo lực ngón, nên "không có" là quá; viết lại (doi_chu).'
+  - id: n22
+    cau: Link thời kỳ Baroque.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: /opus/lich-su/thoi-ky/baroque/ có trong src/content/docs.
+  - id: n23
+    cau: Chủ đề gồm bảy nốt Đô – Rê – Mi – Fa – Rê – Mi – Đô; dạng lộn ngược đi xuống thay vì đi lên.
+    loai: cau-truc
+    nguon:
+      - mut-inv
+      - cod-inversion
+    ket_qua: dung
+    ghi_chu: 'Ô 1: c d e f d e c; dạng đảo ô 3: a g f e g f a.'
+  - id: n24
+    cau: 'Ba điểm kết: Sol trưởng, La thứ, rồi Đô.'
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: Đầu ô 7 (Sol), đầu ô 15 (La thứ, có Sol♯), ô 22 (Đô).
+  - id: n25
+    cau: 'Cách nghe: đếm chủ đề, tìm ba điểm kết, theo riêng tay trái.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n26
+    cau: So sánh vài bản thu rất khác nhau trên piano hiện đại, cùng một bản trên harpsichord hoặc clavichord; ghi lại phát âm, sắc thái, tốc độ.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Câu cũ nêu Glenn Gould ("nổi tiếng với lối chơi Bach rõ, tách tiếng"), András Schiff, Angela Hewitt: chưa mở trang bản thu nào, và vế về Gould là đánh giá. Bỏ tên (doi_chu), như D6-L3 làm với bản thu chưa thấy trang.'
+  - id: n27
+    cau: Bản thu gợi ý của Marcelle Meyer, thu năm 1948, nằm trên Wikimedia Commons.
+    loai: nam
+    nguon:
+      - commons-meyer
+    ket_qua: dung
+    ghi_chu: 'Commons: Author "Johann Sebastian Bach - Marcelle Meyer", Date 1948, Source CD.'
+  - id: n28
+    cau: Ở Mỹ, bản thu này vẫn còn được bảo hộ.
+    loai: quy-tac
+    nguon:
+      - copyright-gov
+    ket_qua: dung
+    ghi_chu: 'Bản thu trước 15/2/1972 in lần đầu 1947–1956: 95 năm cộng 15 năm, tức tới cuối năm 2058 cho bản in năm 1948; in muộn hơn (đến trước 1972) thì tới 15/2/2067. Commons ghi {{PD-old}} (luật nơi khác).'
+  - id: n29
+    cau: Site đặt ở Mỹ; khối nghe chỉ dẫn link, không phát trực tiếp; mốc tham khảo tính theo file ấy.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'GitHub Pages; src/data/tac-pham.yml ban_thu bach-invention-1 chỉ có parts[].link (và src), không có mp3; src/scripts/nghe.js readRec: linkOnly khi mọi phần không có mp3 mà có link, "không phát trên trang; mốc tham khảo vẫn hiện".'
+  - id: n30
+    cau: 'Ô 1: tay phải chơi bảy móc kép Đô – Rê – Mi – Fa – Rê – Mi – Đô; nửa ô sau, tay trái nhại lại thấp hơn một quãng tám.'
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: 'Tay phải C4 D E F D E C; tay trái từ phách 3: C3 D E F D E C.'
+  - id: n31
+    cau: 'Ô 2: chủ đề ở Sol, cùng hình dáng, bắt đầu từ bậc V.'
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: d | G A B C A B G.
+  - id: n32
+    cau: 'Ô 3–4: chủ đề đảo ở tay phải đi xuống thành chuỗi, tay trái đi móc đơn.'
+    loai: cau-truc
+    nguon:
+      - mut-inv
+      - cod-sequence
+    ket_qua: dung
+    ghi_chu: Tay phải a g f e g f a, f e d c e d f, d c b a c b d, b a g fis a g b; tay trái móc đơn.
+  - id: n33
+    cau: Đầu ô 7 kết ở Sol trưởng; hai tay đổi vai, tay trái mở đầu bằng chủ đề, tay phải nhại.
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: 'Tay trái ô 7: r g a b c a b g; tay phải vào ở phách 3.'
+  - id: n34
+    cau: 'Ô 9–10: hai bè cùng chơi dạng lộn ngược của chủ đề.'
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: Tay phải d c b a c b d, e d c b d cis e; tay trái g f e d f e g, a g f e g f a.
+  - id: n35
+    cau: 'Ô 11–12: tay phải đi móc đơn, tay trái chạy chuỗi chủ đề đảo.'
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+  - id: n36
+    cau: Đầu ô 15 kết ở La thứ, Sol♯ dẫn tới điểm dừng thứ hai.
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: Sol♯ từ ô 12–14 (gis); ô 15 a / a,.
+  - id: n37
+    cau: 'Ô 15–18: một tay giữ nốt dài trong khi tay kia chạy chủ đề, khi xuôi khi đảo, đi xuống theo chuỗi; nốt trắng nối sang ô sau.'
+    loai: cau-truc
+    nguon:
+      - mut-inv
+      - cod-sequence
+    ket_qua: dung
+    ghi_chu: Tay phải g2~ (15), f2~ (16), f2~ (17), e2~ (18); tay trái d2~, b2~, c2~ (16–18); chủ đề xuôi ô 16 tay phải, đảo ô 15, 17.
+  - id: n38
+    cau: Ô 19–22 về Đô; Si♭ ở ô 21 hướng về hạ át trước kết; hợp âm Đô ở ô 22.
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: Ô 21 tay phải c bes a g f a g bes (Si♭ cũng có ở tay trái ô 18–19); ô 22 <c g e> trên <c c,>.
+  - id: n39
+    cau: 'Bảng Cấu trúc: phần 1 ô 1–7 (Đô → Sol), phần 2 ô 7–15 (Sol → La thứ), phần 3 ô 15–22 (La thứ → Đô), với các chi tiết như bảng Theo dõi.'
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: Khớp n30–n38.
+  - id: n40
+    cau: 'Hai ô đầu: sau một dấu lặng móc kép là bảy móc kép, tiếp theo là bốn móc đơn Sol – Đô – Si – Đô; lời đáp của tay trái.'
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: g8 c b c.
+  - id: n41
+    cau: Khối nhạc đối chiếu với bản Bach-Gesellschaft; nốt hoa mỹ chưa ghi.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Khối abc 1 không có dấu láy; Mutopia (nguồn Bach-Gesellschaft) có láy ở ô 1, 2 (khuong_nhac khối 1). Giữ đúng điều hồ sơ piano/not-hoa-my n116 dựa vào.
+  - id: n42
+    cau: 'Ô 2: nốt móc kép đầu tiên của tay phải (Rê) thay chỗ dấu lặng, và chủ đề bắt đầu lại từ Sol.'
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+  - id: n43
+    cau: Cả bài giữ hình dáng chủ đề, đổi độ cao, đổi điểm bắt đầu.
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: Như n10.
+  - id: n44
+    cau: 'Chỗ khó, độc lập hai tay: một tay móc kép liền, tay kia móc đơn tách; cách tập tay riêng, ghép ở nửa tốc độ, một tay f tay kia p.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n45
+    cau: 'Chỗ khó, phát âm: không có dấu nào trên bản nhạc.'
+    loai: lich-su
+    nguon:
+      - henle-591-vorwort
+      - mut-inv
+    ket_qua: dung
+    ghi_chu: Như n5.
+  - id: n46
+    cau: 'Cách tập phát âm: quyết định một lần, ghi bằng bút chì, cùng môtip cùng phát âm ở cả hai tay.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n47
+    cau: 'Ngón bấm: chủ đề đi lên ở tay phải có thể dùng 1-2-3-4-2-3-1; ở tay trái 5-4-3-2-4-3-5.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Câu cũ: "thường dùng": không có nguồn về thói quen; đổi "có thể dùng" (doi_chu). Ngón chơi được trên C D E F D E C.'
+  - id: n48
+    cau: 'Nhận ra chủ đề và chủ đề đảo: tô màu, chơi riêng các lần xuất hiện, hát một bè.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n49
+    cau: 'Chuỗi ở ô 3–4, 11–12, 15–18: các nhóm nốt giống nhau nhưng mỗi lần lệch một bậc.'
+    loai: cau-truc
+    nguon:
+      - mut-inv
+      - cod-sequence
+    ket_qua: dung
+    ghi_chu: 'Ô 3–4: nhóm bắt đầu a, f, d, b (mỗi nhóm thấp hơn một quãng ba trong chuỗi bước xuống); ô 11–12 tay trái; ô 15–18. "Lệch một bậc" đúng với chuỗi theo nửa ô (g–f–e ở nốt dài ô 15–18).'
+  - id: n50
+    cau: 'Cách tập chuỗi: gọi tên nốt đầu mỗi nhóm, chơi khung.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n51
+    cau: Nốt dài ô 15–18 là nốt trắng nối sang ô sau.
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: Như n37.
+  - id: n52
+    cau: 'Nốt hoa mỹ: láy trên và láy dưới làm rối nhịp nếu thêm quá sớm; học bài không có nốt hoa mỹ trước (link Nốt hoa mỹ).'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Câu cũ: "Láy rền và láy": đổi tên theo thuật ngữ đã khóa (thuat-ngu mordent; piano/not-hoa-my: không gạch là láy trên, có gạch là láy dưới); bản Bach-Gesellschaft chỉ có hai ký hiệu ấy (\prall, \mordent). doi_chu.'
+  - id: n53
+    cau: 'Ba điểm kết: nới rất nhẹ trước ô 7 và ô 15, chỉ ô 22 mới thật sự dừng.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n54
+    cau: Các bài tập soạn riêng cho trang này.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Khối abc 2, 3 có "(soạn cho trang này)".
+  - id: n55
+    cau: 'Bài tập 1: chủ đề và chủ đề đảo qua ba giọng (Đô, Sol, Rê); tay trái ngón 5-4-3-2-4-3-5 cho chủ đề đi lên; dấu luyến chỉ bảy móc kép liền tiếng.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Khối 2 (khuong_nhac).
+  - id: n56
+    cau: 'Bài tập 2: tay chơi móc kép liền, tay chơi móc đơn tách; ở ô 2 hai tay đổi vai.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Khối 3 (khuong_nhac).
+  - id: n57
+    cau: Lời dặn bài tập 1, 2 (tự chuyển sang Fa trưởng, La thứ; thử làm ngược lại).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n58
+    cau: Kế hoạch 6 tuần, mỗi ngày khoảng 40 phút, với bảng việc và tốc độ máy đếm nhịp (link thu âm).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Link /opus/luyen-tap/thu-am/ có.
+  - id: n59
+    cau: Không có chỉ dẫn tốc độ.
+    loai: lich-su
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: 'Mutopia (Bach-Gesellschaft): không có chữ tốc độ.'
+  - id: n60
+    cau: Chọn tốc độ để móc kép vẫn hát được, thường quanh ♩ = 66–76; giữ nhịp ổn định, nới nhẹ ở các điểm kết.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên; khối 1 ghi Q:1/4=66. Bản thu Meyer ≈ ♩ 89, bản Lucas-coelho trên IMSLP ≈ ♩ 59 (88 phách trong 59 giây và 89 giây): tốc độ gợi ý nằm giữa.'
+  - id: n61
+    cau: 'Phát âm: một lựa chọn hợp lý là móc kép liền tiếng, móc đơn tách nhẹ, nốt dài giữ đủ; áp dụng như nhau cho cùng một môtip ở cả hai tay; cũng có người chơi móc kép hơi tách.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Câu cũ: "Một lựa chọn phổ biến và hợp lý": "phổ biến" là nhận định về thói quen chưa có nguồn; bỏ (doi_chu). Tomita: cantabile thời ấy là phát âm rõ theo tính chất từng môtip, không trái lời khuyên.'
+  - id: n62
+    cau: Bach không ghi sắc thái.
+    loai: lich-su
+    nguon:
+      - henle-591-vorwort
+      - mut-inv
+    ket_qua: dung
+    ghi_chu: 'Mutopia (Bach-Gesellschaft) không có ký hiệu sắc thái; Henle: văn bản của Bach gần như không có chỉ dẫn.'
+  - id: n63
+    cau: 'Sắc thái theo cấu trúc: chủ đề rõ hơn, chuỗi đi lên căng dần...'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n64
+    cau: Trong bản Bach-Gesellschaft có ký hiệu láy trên (không gạch; theo bảng của Bach là một láy rền ngắn) ở vài nốt móc đơn, như nốt Si ở ô 1 và nốt Fa ở ô 2.
+    loai: cau-truc
+    nguon:
+      - mut-inv
+    ket_qua: da-sua
+    ghi_chu: 'Mutopia: b^\prall (ô 1), f^\prall (ô 2), cũng ô 6, ô 8. Câu cũ: "có láy rền ngắn ở vài nốt móc đơn": tên ký hiệu đổi theo thuật ngữ đã khóa (thuat-ngu mordent: "Không gạch là láy trên"; piano/not-hoa-my), giữ vế "láy rền ngắn" là cách chơi theo bảng 1720 (not-hoa-my: "không gạch là một láy rền ngắn") để hồ sơ piano/not-hoa-my n116 vẫn đúng. doi_chu.'
+  - id: n65
+    cau: Bản ấy có láy dưới (có gạch) ở hai nốt móc đơn chấm dôi, ô 5 và ô 13.
+    loai: cau-truc
+    nguon:
+      - mut-inv
+    ket_qua: da-sua
+    ghi_chu: 'Mutopia: c''8.^\mordent (ô 5, tay phải), d''8.^\mordent (ô 13, tay trái). Câu cũ: "và láy ở vài nốt móc đơn chấm dôi": ghi rõ tên và ô (doi_chu).'
+  - id: n66
+    cau: Theo thói quen thời Baroque, láy rền thường bắt đầu từ nốt trên và rơi đúng phách; láy dưới đi nốt chính – nốt dưới – nốt chính.
+    loai: quy-tac
+    nguon:
+      - dolmetsch-orn
+      - henle-591-vorwort
+    ket_qua: da-sua
+    ghi_chu: 'Dolmetsch (Clive Brown): bắt đầu từ nốt trên "was undoubtedly the dominant practice in the mid-eighteenth century"; trang đã khóa piano/not-hoa-my cùng ý. Chỉ đổi "láy (mordent)" thành "láy dưới" (thuat-ngu mordent).'
+  - id: n67
+    cau: Chính Bach viết một bảng giải thích các ký hiệu này trong Clavier-Büchlein của Wilhelm Friedemann; một số ấn bản in lại bảng này.
+    loai: lich-su
+    nguon:
+      - henle-591-vorwort
+    ket_qua: dung
+    ghi_chu: 'Henle: "Bach wrote an extensive table of ornaments at the beginning of the Clavier-Büchlein for Wilhelm Friedemann Bach (see table on p. VIII)": Henle in lại.'
+  - id: n68
+    cau: Kiểm tra ký hiệu trong bản bạn dùng (link Nốt hoa mỹ).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n69
+    cau: 'Bàn đạp: gần như không cần; nếu dùng chỉ chạm nông.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n70
+    cau: 'Ấn bản: dùng bản Urtext.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n71
+    cau: Nhiều ấn bản cũ thêm dấu luyến, sắc thái và tốc độ của người biên tập.
+    loai: lich-su
+    nguon:
+      - henle-591-vorwort
+    ket_qua: null
+    ghi_chu: 'chưa chắc: Henle chỉ nói văn bản của Bach gần như không có chỉ dẫn và Henle ghi dấu thêm của người biên tập trong ngoặc; chưa mở một ấn bản cũ (Czerny, Busoni...) để thấy cụ thể. Lượt 2 kiểm, hoặc bỏ vế này.'
+  - id: n72
+    cau: 'Lỗi thường gặp (bảy dòng): ô 15–18, ô 7, 15 như trong bài.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Các ô nêu khớp Mutopia.
+  - id: n73
+    cau: 'Invention khác: số 4 (Rê thứ) Henle xếp cùng mức 3 như số 1; số 8 (Fa trưởng) Henle mức 4, ABRSM Grade 5.'
+    loai: cap-do
+    nguon:
+      - henle-591
+      - abrsm-2122
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "số 4 và số 8 là hai bước tiếp phổ biến": "phổ biến" không kiểm được; thay bằng mức Henle (Invention 1: 3, Invention 4: 3, Invention 8: 4, "ABRSM: Piano Grade 5") và ABRSM 2021–2022 Grade 5 cho số 8 (doi_chu).'
+  - id: n74
+    cau: Sau đó là các sinfonia ba bè và Prelude và fugue Đô thứ BWV 847, fugue ba bè nên học đầu tiên (link).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Trang đích chưa chuyển; ../opus-zero/docs/piano/tac-pham/bach-prelude-fugue-do-thu.md: "Fugue ba bè vừa sức để bắt đầu"; chặng 6 (tac-pham.yml). Lô chuyển trang ấy giữ ý "fugue ba bè vừa sức để bắt đầu".'
+  - id: n75
+    cau: 'Cùng tác giả: Prelude Đô trưởng BWV 846 (link).'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: /opus/piano/tac-pham/bach-prelude-do/ có.
+  - id: n76
+    cau: 'Chặng sau: Mozart Sonata K. 545, Schumann Träumerei.'
+    loai: ve-site
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Cùng chặng". src/data/tac-pham.yml (đã khóa): bach-invention-1 chặng 4, mozart-k545 chặng 5, schumann-traumerei chặng 5. Đổi thành "Chặng sau" (doi_chu). Hai trang đích có.'
+  - id: n77
+    cau: 'Nghe thêm: Goldberg Variations; đọc về fugue (link).'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: /opus/nghe-nhac/bach-goldberg/, /opus/hinh-thuc/fugue/ có.
+  - id: n78
+    cau: 'Câu hỏi 1: ba điểm kết lần lượt ở Sol trưởng (ô 7), La thứ (ô 15), Đô trưởng (ô 22); lời giải thích: mỗi phần khép bằng một kết.'
+    loai: cau-truc
+    nguon: *id001
+    ket_qua: dung
+    ghi_chu: Như n24.
+  - id: n79
+    cau: 'Câu hỏi 2: chủ đề đảo là chủ đề lộn ngược, đi xuống ở chỗ bản gốc đi lên; trong bài tập 1, Đô – Rê – Mi – Fa – Rê – Mi – Đô đảo thành Đô – Si – La – Sol – Si – La – Đô.'
+    loai: dinh-nghia
+    nguon:
+      - cod-inversion
+      - mut-inv
+    ket_qua: dung
+    ghi_chu: Khối 2 khớp.
+  - id: n80
+    cau: 'Câu hỏi 3: một lựa chọn phát âm hợp lý là móc kép liền tiếng, móc đơn tách nhẹ, nốt dài giữ đủ.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Câu cũ có "phổ biến và hợp lý": bỏ "phổ biến" như n61 (doi_chu).'
+  - id: n81
+    cau: 'Câu hỏi 4: tập chuỗi bằng cách gọi tên nốt đầu nhóm, chơi khung.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n82
+    cau: 'Mục Nguồn: lời tựa, bình chú và trang Henle HN 591; trang bìa 1723 (bach-cantatas.com); bài của Yo Tomita; IMSLP; Mutopia; link tài liệu tham khảo.'
+    loai: ve-site
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: Câu cũ liệt kê sách in chưa đọc (The New Bach Reader 1998, Wolff 2000) và "Bärenreiter, Wiener Urtext". Thay bằng nguồn đã mở (doi_chu). /opus/tai-lieu-tham-khao/ có.
 khuong_nhac:
   - khoi: 1
-    loai: null
-    kiem: []
-    ket_qua: null
+    loai: trich-doan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - not-tay-phai
+      - not-tay-trai
+      - doi-chieu-an-ban
+    ket_qua: dung
+    ghi_chu: 'Ô 1–2 (trong 22 ô), 4/4, L:1/16. Ấn bản: Bach-Gesellschaft qua Mutopia bach-invention-01 (.ly, .mid; tải 05/11/2026). Công cụ: đọc .ly (\relative) và in nốt MIDI theo ô bằng script Python (mido). Kết quả: khớp từng nốt cả hai tay (tay phải z C4 D E F D E C G4 C5 B4 C5 | D5 G4 A B C5 A4 B G D5 G5 F5 G5; tay trái z8 z C3 D E F D E C | G3 G2 z4 z G3 A B C4 A3 B G). Nốt hoa mỹ của bản gốc (\prall ở Si ô 1, Fa ô 2) cố ý không ghi, như trang nói.'
   - khoi: 2
-    loai: null
-    kiem: []
-    ket_qua: null
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - so-ngon
+    ket_qua: dung
+    ghi_chu: '4 ô 4/4, L:1/16; ô 1–3 mỗi nửa ô một dấu lặng móc kép cộng bảy móc kép (đủ 16), ô 4 nốt tròn. Chủ đề và chủ đề đảo ở Đô, Sol (Fa♯), Rê (Fa♯, Đô♯), đúng "qua ba giọng". Ngón 1-2-3-4-2-3-1 cho chủ đề đi lên, 5-4-3-2-4-3-5 cho chủ đề đảo ở tay phải: chơi được.'
   - khoi: 3
-    loai: null
-    kiem: []
-    ket_qua: null
+    loai: vi-du-soan
+    kiem:
+      - cu-phap
+      - nhip
+      - giong
+      - so-ngon
+      - hai-tay
+    ket_qua: dung
+    ghi_chu: '3 ô 4/4, L:1/16; ô 1–2 đủ 16 móc kép mỗi tay; ô 3 là hợp âm kết dài nửa ô ([CEG]8, C,8), như các ô kết có dấu |]. Ô 1 tay phải móc kép luyến, tay trái móc đơn staccato; ô 2 đổi vai: đúng lời dẫn. Ngón 1 bắt đầu mỗi nhóm, 5 ở tay trái: chơi được.'
 doi_chu:
   - cu: Đô trưởng · 4/4 Hai bè ≈ Grade 6 Ba phần
     moi: Đô trưởng · 4/4 Hai bè ≈ Grade 4–5 Ba phần
     ly_do: "Chip cấp độ dựng từ bản ghi tac-pham/bach-invention-1: D2-0 sửa grade Grade 6 thành Grade 4–5 theo lượt 2 và review (ABRSM 2015–2016 xếp Invention số 1 ở Grade 4, List A số 4; hồ sơ du-lieu/tac-pham/bach-invention-1 n4, n5)."
   - cu: Khoảng ABRSM Grade 6 (ước lượng)
     moi: "Khoảng ABRSM Grade 4–5: ABRSM xếp bài ở Grade 4 (đề cương 2015–2016); các invention khó hơn ở Grade 5 và 6"
-    ly_do: "Dòng Độ khó của thong_tin sửa ở D2-0 cùng grade (hồ sơ du-lieu/tac-pham/bach-invention-1 n4); lượt 1 D6-L4 kiểm lại ở hồ sơ bản ghi."
+    ly_do: Dòng Độ khó của thong_tin sửa ở D2-0 cùng grade (hồ sơ du-lieu/tac-pham/bach-invention-1 n4); lượt 1 D6-L4 kiểm lại ở hồ sơ bản ghi.
+  - cu: Bước đầu vào phức điệu. Mỗi tay là một giọng hát độc lập, quan trọng ngang nhau. Đây là nền cho mọi fugue, sinfonia và phần lớn nhạc Bach (xem Đối âm).
+    moi: Bước đầu vào phức điệu. Mỗi tay là một giọng hát độc lập, quan trọng ngang nhau. Đây là kỹ năng bạn sẽ cần cho các sinfonia, fugue và nhiều bài khác của Bach (xem Đối âm).
+    ly_do: 'n7: "mọi", "phần lớn" không kiểm được; viết lại thành lời khuyên.'
+  - cu: Bach viết cho đàn phím thời ấy (harpsichord, clavichord); trên piano hiện đại, bạn có sắc thái và độ ngân mà ông không có, nên phải dùng chúng một cách tiết chế. Xem thêm thời kỳ Baroque.
+    moi: Bach viết cho đàn phím thời ấy (trang bìa gọi chung là Clavier); trên piano hiện đại, bạn có độ ngân dài hơn và dải sắc thái rộng hơn, nên hãy dùng chúng một cách tiết chế. Xem thêm thời kỳ Baroque.
+    ly_do: 'n20, n21: trang bìa 1723 chỉ ghi "Clavier"; clavichord có sắc thái theo lực ngón nên "không có" là quá.'
+  - cu: "So sánh vài cách chơi rất khác nhau, chẳng hạn Glenn Gould (nổi tiếng với lối chơi Bach rõ, tách tiếng), András Schiff và Angela Hewitt, cùng một bản trên harpsichord hoặc clavichord. Ghi lại: ai chơi móc kép liền, ai tách; ai dùng sắc thái nhiều; tốc độ chênh nhau bao nhiêu?"
+    moi: "So sánh vài bản thu rất khác nhau trên piano hiện đại, cùng một bản trên harpsichord hoặc clavichord. Ghi lại: ai chơi móc kép liền, ai tách; ai dùng sắc thái nhiều; tốc độ chênh nhau bao nhiêu?"
+    ly_do: "n26: chưa mở trang bản thu của ba nghệ sĩ; vế về Gould là đánh giá."
+  - cu: Chủ đề đi lên ở tay phải thường dùng 1-2-3-4-2-3-1; ở tay trái 5-4-3-2-4-3-5. Chọn cho từng lần xuất hiện, ghi lại, giữ nguyên
+    moi: Chủ đề đi lên ở tay phải có thể dùng 1-2-3-4-2-3-1; ở tay trái 5-4-3-2-4-3-5. Chọn cho từng lần xuất hiện, ghi lại, giữ nguyên
+    ly_do: 'n47: "thường dùng" là nhận định về thói quen chưa có nguồn.'
+  - cu: Láy rền và láy làm rối nhịp nếu thêm quá sớm
+    moi: Láy trên và láy dưới làm rối nhịp nếu thêm quá sớm
+    ly_do: "n52: tên theo thuật ngữ đã khóa (src/data/thuat-ngu.yml mục mordent; piano/not-hoa-my)."
+  - cu: "Một lựa chọn phổ biến và hợp lý: móc kép liền tiếng, móc đơn tách nhẹ (không phải staccato ngắn), nốt dài giữ đủ. Áp dụng như nhau cho cùng một môtip ở cả hai tay, để người nghe nhận ra chủ đề mỗi khi nó xuất hiện. Cũng có người chơi móc kép hơi tách; điều quan trọng là nhất quán và có lý do. Hai bè phải nghe như hai người hát, mỗi người một hơi thở."
+    moi: "Một lựa chọn hợp lý: móc kép liền tiếng, móc đơn tách nhẹ (không phải staccato ngắn), nốt dài giữ đủ. Áp dụng như nhau cho cùng một môtip ở cả hai tay, để người nghe nhận ra chủ đề mỗi khi nó xuất hiện. Cũng có người chơi móc kép hơi tách; điều quan trọng là nhất quán và có lý do. Hai bè phải nghe như hai người hát, mỗi người một hơi thở."
+    ly_do: 'n61: "phổ biến" chưa có nguồn. n80: như n61.'
+  - cu: Trong bản Bach-Gesellschaft có láy rền ngắn ở vài nốt móc đơn (ví dụ nốt Si ở ô 1, nốt Fa ở ô 2) và láy ở vài nốt móc đơn chấm dôi. Theo thói quen thời Baroque, láy rền thường bắt đầu từ nốt trên và rơi đúng phách; láy (mordent) đi nốt chính – nốt dưới – nốt chính. Chính Bach đã viết một bảng giải thích các ký hiệu này trong Clavier-Büchlein của Wilhelm Friedemann; một số ấn bản in lại bảng này. Kiểm tra ký hiệu trong bản bạn dùng, và xem Nốt hoa mỹ.
+    moi: Trong bản Bach-Gesellschaft có ký hiệu láy trên (răng cưa không gạch; theo bảng của Bach là một láy rền ngắn) ở vài nốt móc đơn (ví dụ nốt Si ở ô 1, nốt Fa ở ô 2) và láy dưới (có gạch) ở hai nốt móc đơn chấm dôi (ô 5 và ô 13). Theo thói quen thời Baroque, láy rền thường bắt đầu từ nốt trên và rơi đúng phách; láy dưới đi nốt chính – nốt dưới – nốt chính. Chính Bach đã viết một bảng giải thích các ký hiệu này trong Clavier-Büchlein của Wilhelm Friedemann; một số ấn bản in lại bảng này. Kiểm tra ký hiệu trong bản bạn dùng, và xem Nốt hoa mỹ.
+    ly_do: 'n64–n66: tên ký hiệu theo thuật ngữ đã khóa; ghi rõ hai chỗ có láy dưới (Mutopia: \mordent ở ô 5, ô 13); giữ "láy rền ngắn" cho cách chơi (piano/not-hoa-my n116).'
+  - cu: "Invention khác: số 4 (Rê thứ) và số 8 (Fa trưởng) là hai bước tiếp phổ biến; sau đó là các sinfonia ba bè và Prelude và fugue Đô thứ BWV 847, fugue ba bè nên học đầu tiên."
+    moi: "Invention khác: số 4 (Rê thứ; Henle xếp cùng mức 3 như số 1) và số 8 (Fa trưởng; Henle mức 4, ABRSM Grade 5) là hai bước tiếp; sau đó là các sinfonia ba bè và Prelude và fugue Đô thứ BWV 847, fugue ba bè nên học đầu tiên."
+    ly_do: 'Chip cấp độ dựng từ bản ghi tac-pham/bach-invention-1: D2-0 sửa grade Grade 6 thành Grade 4–5 theo lượt 2 và review (ABRSM 2015–2016 xếp Invention số 1 ở Grade 4, List A số 4; hồ sơ du-lieu/tac-pham/bach-invention-1 n4, n5). n73: "phổ biến" không kiểm được; thay bằng mức Henle HN 591 và đề cương ABRSM 2021–2022.'
+  - cu: "Cùng chặng: Mozart: Sonata K. 545, Schumann: Träumerei."
+    moi: "Chặng sau: Mozart: Sonata K. 545, Schumann: Träumerei."
+    ly_do: "n76: dữ liệu đã khóa: bach-invention-1 chặng 4 (D2-0 đổi từ 5), mozart-k545 và schumann-traumerei chặng 5."
+  - cu:
+      - Hans T. David, Arthur Mendel, Christoph Wolff (biên tập), The New Bach Reader, W. W. Norton, 1998 (bản dịch trang bìa năm 1723).
+      - "Christoph Wolff, Johann Sebastian Bach: The Learned Musician, W. W. Norton, 2000."
+      - Bach, Inventionen und Sinfonien, bản Urtext của G. Henle Verlag, Bärenreiter, Wiener Urtext.
+    moi:
+      - "Bach, Two Part Inventions, G. Henle Verlag, HN 591 (biên tập Ullrich Scheideler, 2014): trang ấn bản (mức độ khó từng bài), lời tựa và bình chú (Clavier-Büchlein 1720, bản chép sạch 1723, bảng nốt hoa mỹ, các bản chép của học trò)."
+      - "Trang bìa năm 1723, nguyên văn tiếng Đức và bản dịch tiếng Anh: bach-cantatas.com; Yo Tomita, \"The Inventions and Sinfonias\" (Queen's University Belfast, 1999): chữ inventio trong tu từ học."
+    ly_do: "n82: bỏ sách in chưa đọc; thay bằng nguồn đã mở."
+  - cu: "câu hỏi: Một lựa chọn phát âm phổ biến và hợp lý cho bài này là gì? | ✓ Móc kép liền tiếng, móc đơn tách nhẹ, nốt dài giữ đủ | Tất cả liền tiếng như một bài hát | Tất cả tách tiếng như staccato | Điều quan trọng là nhất quán: cùng một môtip thì cùng một cách phát âm, ở cả hai tay, để người nghe nhận ra chủ đề mỗi khi nó xuất hiện."
+    moi: "câu hỏi: Một lựa chọn phát âm hợp lý cho bài này là gì? | ✓ Móc kép liền tiếng, móc đơn tách nhẹ, nốt dài giữ đủ | Tất cả liền tiếng như một bài hát | Tất cả tách tiếng như staccato | Điều quan trọng là nhất quán: cùng một môtip thì cùng một cách phát âm, ở cả hai tay, để người nghe nhận ra chủ đề mỗi khi nó xuất hiện."
+    ly_do: 'n61: "phổ biến" chưa có nguồn. n80: như n61.'

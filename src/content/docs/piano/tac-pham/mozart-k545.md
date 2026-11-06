@@ -10,22 +10,22 @@ Bản sonata mà chính Mozart ghi là "cho người mới học" thật ra là 
 
 ## Vì sao nên học bài này
 
-- **Một hình thức sonata hoàn chỉnh trong bốn, năm phút.** Trình bày, phát triển, tái hiện đều ngắn và rõ. Học bài này là cách nhanh nhất để hiểu [hình thức sonata](/opus/hinh-thuc/sonata/) bằng chính đôi tay.
-- **Đệm Alberti** (hợp âm rải theo thứ tự trầm – cao – giữa – cao) là "xương sống" của nhạc Cổ điển. Nếu nó đều và nhẹ ở bài này, bạn sẽ chơi được hàng trăm bài khác.
+- **Một hình thức sonata hoàn chỉnh trong 73 ô nhịp.** Trình bày, phát triển, tái hiện đều ngắn và rõ. Học bài này là cách nhanh nhất để hiểu [hình thức sonata](/opus/hinh-thuc/sonata/) bằng chính đôi tay.
+- **Đệm Alberti** (hợp âm rải theo thứ tự trầm – cao – giữa – cao) là lối đệm rất hay gặp trong nhạc piano thế kỷ 18. Tập cho nó đều và nhẹ ở bài này, bạn sẽ dùng lại được ở nhiều bài khác.
 - **Gam là âm nhạc.** Các chuỗi gam ở đoạn chuyển và phần phát triển cho thấy luyện [gam](/opus/piano/gam/) hằng ngày được dùng vào việc gì.
-- **Trong suốt.** Không có bàn đạp và hòa âm dày, từng nốt lệch nhịp hay to hơn nốt bên cạnh đều nghe thấy. Đó là trường luyện tai tốt nhất cho sự sạch sẽ.
+- **Trong suốt.** Không có bàn đạp và hòa âm dày, từng nốt lệch nhịp hay to hơn nốt bên cạnh đều nghe thấy. Đó là một bài luyện tai tốt cho sự sạch sẽ.
 
 :::tip[Chưa sẵn sàng?]
-Nếu Alberti và gam móc kép ở ♩ = 100 còn vất vả, hãy học trước [Clementi: Sonatina Op. 36 số 1](/opus/piano/tac-pham/clementi-sonatina/): cùng ngôn ngữ, ngắn hơn, chậm hơn. Một bước đệm khác là [Beethoven: Sonata Op. 49 số 2, chương 1](/opus/piano/tac-pham/beethoven-op49-2/): cũng hình thức sonata, ít Alberti hơn.
+Nếu Alberti và gam móc kép ở ♩ = 100 còn vất vả, hãy học trước [Clementi: Sonatina Op. 36 số 1](/opus/piano/tac-pham/clementi-sonatina/): cùng ngôn ngữ Cổ điển, chương I chỉ 38 ô nhịp. Một bước đệm khác là [Beethoven: Sonata Op. 49 số 2, chương 1](/opus/piano/tac-pham/beethoven-op49-2/): cũng hình thức sonata, ở chặng 4.
 :::
 
 ## Bối cảnh
 
-Mùa hè 1788 là một trong những giai đoạn sung sức nhất của Mozart: cùng ngày ghi K. 545 vào danh mục, ông ghi cả Giao hưởng số 39, và trong vài tuần sau đó hoàn thành hai giao hưởng cuối cùng (số 40 và số 41). Không ai biết chắc "người mới học" ở đây là ai; Mozart dạy đàn để kiếm sống, và bài này rất có thể dành cho học trò.
+Mùa hè 1788 là một giai đoạn sáng tác rất sung sức của Mozart: cùng ngày ghi K. 545 vào danh mục, ông ghi cả Giao hưởng số 39, và trong vài tuần sau đó hoàn thành hai giao hưởng cuối cùng (số 40 và số 41). Gần như không biết gì về hoàn cảnh ra đời của bài, kể cả "người mới học" ở đây là ai; ngày 2 tháng 8, Mozart gửi cho chị gái "những bài piano mới nhất" của mình, trong đó hẳn có K. 545.
 
 Bản thảo viết tay đã thất lạc. Ấn bản đầu tiên, do Bureau d'Arts et d'Industrie in ở Vienna năm 1805, đặt tên *Sonate facile*; cái tên "dễ" đó là của nhà xuất bản, không phải của Mozart. Theo lời tựa ấn bản Henle, các nguồn gốc **không có một ký hiệu sắc thái nào**, khác hẳn những sonata khác của ông. Mọi chữ *p*, *f* bạn thấy trong bản nhạc phổ thông đều do người biên tập thêm vào: bạn được, và phải, tự quyết định sắc thái.
 
-Đàn của Mozart là fortepiano khung gỗ, âm vực khoảng năm quãng tám (từ Fa1 đến Fa6), tiếng nhẹ, tắt nhanh, búa bọc da. Trên đàn hiện đại, bạn cần "thu nhỏ" tay trái và giữ tiếng sáng, gọn. Xem thêm [thời kỳ Cổ điển](/opus/lich-su/thoi-ky/co-dien/).
+Đàn của Mozart là fortepiano kiểu Vienna, như cây đàn của Anton Walter mà ông sở hữu lúc qua đời: âm vực hơn năm quãng tám một chút (từ Fa1 đến Sol6), bộ giảm âm nhấc bằng cần gạt đầu gối. Trên đàn hiện đại, bạn cần "thu nhỏ" tay trái và giữ tiếng sáng, gọn. Xem thêm [thời kỳ Cổ điển](/opus/lich-su/thoi-ky/co-dien/).
 
 ## Nghe trước khi tập
 
@@ -35,7 +35,7 @@ Nghe cả ba chương, mỗi lần một câu hỏi:
 2. **Ô 42:** bạn có nhận ra chủ đề mở đầu quay lại, nhưng ở một giọng khác?
 3. **Tốc độ:** chương 1 nhanh đến đâu mà các chuỗi gam vẫn còn hát?
 
-So sánh một nghệ sĩ chơi đàn hiện đại (Mitsuko Uchida, Maria João Pires hay András Schiff đều thu trọn bộ sonata Mozart) với một bản thu trên fortepiano: tiếng đàn cũ mỏng và nhanh tắt khiến các chuỗi gam rõ như hạt ngọc. Sau đó đọc [hướng dẫn nghe Sonata K. 331](/opus/nghe-nhac/mozart-k331/) để thấy Mozart viết thế nào khi không nghĩ đến người mới học.
+So sánh một bản thu trên đàn hiện đại với một bản trên fortepiano: nghe xem các chuỗi gam và tay trái khác nhau thế nào. Sau đó đọc [hướng dẫn nghe Sonata K. 331](/opus/nghe-nhac/mozart-k331/) để nghe một sonata khác của Mozart.
 
 ::khoi-nghe{moc="2 9 23 46 - 52 75 103"}
 
@@ -46,11 +46,11 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | Thời điểm | Sự kiện |
 |---|---|
 | … | **Chương 1, chủ đề 1** (ô 1–4): giai điệu đơn giản trên đệm Alberti của tay trái; láy rền ở ô 4 |
-| … | **Đoạn chuyển** (ô 5–12): chuỗi gam móc kép đi xuống trên hợp âm tay trái; dừng trên hợp âm Rê trưởng |
+| … | **Đoạn chuyển** (ô 5–12): chuỗi gam móc kép đi xuống trên hợp âm tay trái; dừng trên hợp âm Sol trưởng |
 | … | **Chủ đề 2** (ô 13–25): Sol trưởng; tay trái mở đầu bằng hình móc kép lắc qua lại, giai điệu mới có láy rền; láy rền dài trước kết |
 | … | **Kết trình bày** (ô 26–28): hợp âm rải móc kép, rồi ba hợp âm kết ở Sol trưởng |
 | … | **Trình bày nhắc lại** (ô 1–28): nghệ sĩ có đổi màu sắc ở lần hai không? |
-| … | **Phát triển** (ô 29–41): chất liệu kết trình bày đi qua Sol thứ, Rê thứ, La thứ; chuỗi gam lên xuống có *sf* |
+| … | **Phát triển** (ô 29–41): chất liệu kết trình bày đi qua Sol thứ, Rê thứ, La thứ; chuỗi gam lên xuống |
 | … | **Tái hiện** (ô 42): chủ đề 1 trở lại nhưng ở Fa trưởng; đoạn chuyển đưa nhạc về Đô trưởng |
 | … | **Chủ đề 2 ở Đô trưởng** (ô 58–73): láy rền dài, rồi kết chương; bản nhạc còn có dấu nhắc lại cho phát triển và tái hiện, nếu nghệ sĩ giữ nó thì hai phần này vang thêm một lần |
 | … | **Chương 2, *Andante***: Sol trưởng, giai điệu hát trên lớp Alberti; phần giữa tối lại ở Sol thứ, rồi chủ đề trở về và một coda ngắn khép lại |
@@ -65,14 +65,14 @@ Chương 1, Allegro (73 ô nhịp; số ô nhịp theo bản Urtext, các sách 
 | Phần | Ô nhịp | Nội dung | Giọng |
 |---|---|---|---|
 | Trình bày: chủ đề 1 | 1–4 | Giai điệu đơn giản trên đệm Alberti; láy rền ở ô 4 | Đô trưởng |
-| Đoạn chuyển | 5–12 | Chuỗi gam móc kép đi xuống, tay trái hợp âm; dừng trên hợp âm Rê trưởng | Đô → Sol |
+| Đoạn chuyển | 5–12 | Chuỗi gam móc kép đi xuống, tay trái hợp âm; dừng trên hợp âm Sol trưởng | Đô → Sol |
 | Chủ đề 2 | 13–25 | Ô 13: tay trái mở đầu bằng hình móc kép lắc qua lại; ô 14: giai điệu mới có láy rền; láy rền dài trước kết | Sol trưởng |
 | Kết trình bày | 26–28 | Hợp âm rải móc kép, ba hợp âm kết; cả phần trình bày nhắc lại | Sol trưởng |
-| Phát triển | 29–41 | Chất liệu kết trình bày ở Sol thứ, Rê thứ, La thứ; chuỗi gam lên xuống có *sf* | nhiều giọng |
+| Phát triển | 29–41 | Chất liệu kết trình bày ở Sol thứ, Rê thứ, La thứ; chuỗi gam lên xuống | nhiều giọng |
 | Tái hiện: chủ đề 1 | 42–57 | Chủ đề 1 ở **Fa trưởng** (giọng hạ át); đoạn chuyển đưa nhạc về Đô trưởng | Fa → Đô |
 | Tái hiện: chủ đề 2 và kết | 58–73 | Chủ đề 2 ở Đô trưởng; láy rền dài; kết | Đô trưởng |
 
-**Chương 2, Andante** (Sol trưởng, 3/4): tay trái đệm Alberti gần như suốt chương. Phần đầu là một chủ đề tám ô nhịp rồi biến thể của nó, có nhắc lại; phần thứ hai mở ở giọng át rồi quay về; phần giữa tối lại ở Sol thứ, đi qua Si♭ trưởng và Đô thứ, trước khi chủ đề trở về và một coda ngắn khép lại. Khó nhất là giữ giai điệu hát trên lớp Alberti ở tốc độ chậm, nơi mọi nốt không đều đều lộ ra.
+**Chương 2, Andante** (Sol trưởng, 3/4): tay trái đệm Alberti gần như suốt chương. Phần đầu dài mười sáu ô nhịp (một chủ đề tám ô rồi tám ô tiếp nối), có nhắc lại; phần thứ hai mở ở giọng át rồi quay về; phần giữa tối lại ở Sol thứ, đi qua Si♭ trưởng và Đô thứ, trước khi chủ đề trở về và một coda ngắn khép lại. Khó nhất là giữ giai điệu hát trên lớp Alberti ở tốc độ chậm, nơi mọi nốt không đều đều lộ ra.
 
 **Chương 3, Rondo** (Đô trưởng, 2/4): chủ đề vui, có chỗ tay trái bắt chước tay phải như một trò đuổi bắt; đoạn xen thứ nhất ở Sol trưởng (lại có Alberti), đoạn giữa ở La thứ; chủ đề quay lại và kết. Ngắn (khoảng 1,5 phút) nhưng nhanh và đòi hỏi hai tay ngang tài nhau.
 
@@ -173,7 +173,7 @@ Kế hoạch 8 tuần cho chương 1, tập 45–60 phút mỗi ngày (thêm 2�
 
 ### Tốc độ và nhịp
 
-*Allegro* thời Mozart là vui, nhanh vừa, không phải chạy đua. Nghĩ theo **hai phách trắng mỗi ô**: giai điệu sẽ có hướng đi. Giữ tốc độ ổn định; nhạc Cổ điển gần như không có rubato, chỉ hơi thở rất nhỏ ở cuối phần.
+*Allegro* thời Mozart là vui, nhanh vừa, không phải chạy đua. Nghĩ theo **hai phách trắng mỗi ô**: giai điệu sẽ có hướng đi. Giữ tốc độ ổn định; chỉ cho phép hơi thở rất nhỏ ở cuối phần.
 
 ### Sắc thái
 
@@ -195,7 +195,7 @@ Láy rền thời Cổ điển thường bắt đầu từ **nốt trên**. Các
 
 ### Ấn bản
 
-Vì không có sắc thái gốc, các ấn bản phổ thông thường in rất nhiều *p*, *f*, *cresc.* mà người đọc tưởng là của Mozart. Dùng một bản Urtext để biết đâu là của tác giả, rồi tự viết sắc thái của mình bằng bút chì.
+Vì không có sắc thái gốc, mọi *p*, *f*, *sf*, *cresc.* trong một ấn bản (như bản trên IMSLP mà Mutopia chép lại) đều của người biên tập, dù người đọc dễ tưởng là của Mozart. Dùng một bản Urtext để biết đâu là của tác giả, rồi tự viết sắc thái của mình bằng bút chì.
 
 ## Lỗi thường gặp
 
@@ -209,7 +209,7 @@ Vì không có sắc thái gốc, các ấn bản phổ thông thường in rấ
 
 ## Học tiếp
 
-- **Cùng phong cách, khó hơn:** Mozart Sonata K. 330 hoặc K. 283; nghe trước [Sonata K. 331](/opus/nghe-nhac/mozart-k331/).
+- **Cùng tác giả:** Mozart Sonata K. 330 hoặc K. 283; nghe trước [Sonata K. 331](/opus/nghe-nhac/mozart-k331/).
 - **Bước sang Beethoven:** [Sonata *Ánh trăng*, chương 1](/opus/piano/tac-pham/beethoven-anh-trang/) ở cùng chặng, rồi [Pathétique, chương 2](/opus/piano/tac-pham/pathetique-adagio/), nơi tiếng đàn hát và nhiều lớp hơn.
 - **Hai bè độc lập:** [Bach: Invention số 1](/opus/piano/tac-pham/bach-invention-1/) rèn sự đều tay theo một hướng khác.
 - Xem thứ tự gợi ý ở [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
@@ -244,6 +244,4 @@ Vì không có sắc thái gốc, các ấn bản phổ thông thường in rấ
 ## Nguồn
 
 - Mozart, *Klaviersonate C-dur KV 545*, G. Henle Verlag (HN 164), lời tựa: ngày ghi vào danh mục, ấn bản 1805, việc nguồn gốc không có sắc thái, phiên bản chuyển giọng của chương Rondo (K. 547a) không phải do Mozart.
-- Gerber, "Musical Insights" (macromusic.org, 1997) và các phân tích Schenker của chương 1: ranh giới phát triển (ô 29–41) và tái hiện ở Fa trưởng (ô 42).
-- Charles Rosen, *The Classical Style*, Norton (bản mở rộng 1997).
-- Bản nhạc: [IMSLP](https://imslp.org/). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
+- Bản nhạc: [IMSLP](https://imslp.org/); số ô nhịp và các chi tiết nốt nhạc trên trang này đối chiếu với bản chép LilyPond (nguồn IMSLP) của [Mutopia Project](https://www.mutopiaproject.org/). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

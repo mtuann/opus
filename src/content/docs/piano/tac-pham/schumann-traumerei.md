@@ -19,9 +19,9 @@ tac_pham: schumann-traumerei
 
 Schumann viết *Kinderszenen* năm 1838, khi đang yêu Clara Wieck; câu chuyện ra đời của tập nhạc ở [hướng dẫn nghe](/opus/nghe-nhac/schumann-kinderszenen/).
 
-Đây là nhạc **về** tuổi thơ cho người lớn, không phải nhạc cho trẻ em (Schumann viết riêng tập *Album für die Jugend* Op. 68 cho con mình, xem [Schumann: Album cho tuổi trẻ](/opus/piano/tac-pham/schumann-album/)). Các tên bài, theo lời Schumann, chỉ là những gợi ý tinh tế cho cách chơi và cách hiểu. *Träumerei* đứng đúng giữa chu trình, bài thứ 7 trên 13.
+Đây là nhạc **về** tuổi thơ cho người lớn, không phải nhạc cho trẻ em (nhạc cho người trẻ tập đàn là tập *Album für die Jugend* Op. 68, Schumann viết mười năm sau, xem [Schumann: Album cho tuổi trẻ](/opus/piano/tac-pham/schumann-album/)). Các tên bài, theo lời Schumann, chỉ là những gợi ý tinh tế cho cách chơi và cách hiểu. *Träumerei* đứng đúng giữa chu trình, bài thứ 7 trên 13.
 
-Về tốc độ: số máy đếm nhịp ♩ = 100 có từ ấn bản đầu tiên (trong một lần in lại), và Schumann đã để nguyên khi duyệt bản in. Con số này nhanh hơn nhiều so với thói quen chơi rất chậm sau này. Nhà nghiên cứu Michael Struck (nhóm biên tập Henle) cho rằng câu chuyện "máy đếm nhịp của Schumann bị hỏng" là một huyền thoại, và Henle in con số này như chỉ dẫn của tác giả. Clara Schumann, trong ấn bản của bà, gợi ý chậm hơn (♩ = 80). Xem thêm [thời kỳ Lãng mạn](/opus/lich-su/thoi-ky/lang-man/).
+Về tốc độ: số máy đếm nhịp ♩ = 100 có từ ấn bản đầu tiên (trong một lần in lại), và Schumann đã để nguyên khi duyệt bản in. Con số này nhanh hơn nhiều so với thói quen chơi rất chậm sau này. Michael Struck, chuyên gia về Schumann và biên tập viên của Henle, cho rằng câu chuyện "máy đếm nhịp của Schumann bị hỏng" là một huyền thoại, và Henle in con số này như chỉ dẫn của tác giả. Clara Schumann, trong ấn bản của bà, gợi ý chậm hơn (♩ = 80). Xem thêm [thời kỳ Lãng mạn](/opus/lich-su/thoi-ky/lang-man/).
 
 ## Nghe trước khi tập
 
@@ -31,7 +31,7 @@ Về tốc độ: số máy đếm nhịp ♩ = 100 có từ ấn bản đầu t
 2. **Câu nhạc dài bao nhiêu?** Nghệ sĩ lấy hơi ở đâu?
 3. **Tốc độ:** bản thu nào gần ♩ = 100, bản nào gần ♩ = 80 hoặc chậm hơn nữa?
 
-Vladimir Horowitz hay chơi bài này như một bản encore: trong buổi hòa nhạc trở lại Carnegie Hall năm 1965 và trong buổi diễn ở Moskva năm 1986 (bản ghi hình cho thấy khán giả rơi lệ). Cách chơi của ông chậm, tự do, rất hát, khác hẳn một bản thu theo đúng ♩ = 100. So sánh hai cách ấy với bản thu trọn *Kinderszenen* của một nghệ sĩ khác (ví dụ Martha Argerich hoặc Alfred Brendel) để tự quyết định tốc độ của mình. Muốn biết thêm về các nghệ sĩ, xem [Nghệ sĩ piano và bản thu](/opus/piano/nghe-si/).
+Vladimir Horowitz chơi bài này ở cuối buổi hòa nhạc trở lại Carnegie Hall ngày 9/5/1965 và trong buổi diễn ở Moskva năm 1986; cả hai buổi đều có đĩa thu trực tiếp. So sánh tốc độ của ông với ♩ = 100 và với bản thu trọn *Kinderszenen* của một nghệ sĩ khác (ví dụ Martha Argerich, Deutsche Grammophon) để tự quyết định tốc độ của mình. Muốn biết thêm về các nghệ sĩ, xem [Nghệ sĩ piano và bản thu](/opus/piano/nghe-si/).
 
 ::khoi-nghe{moc="1 24 47 93 114 137 161 179"}
 
@@ -62,7 +62,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | B | 9–12 | Câu 3: mở đầu như cũ nhưng hòa âm tối lại, hướng về Sol thứ | Các đường nét bè trong chuyền từ tay trái sang tay phải |
 | B | 13–16 | Câu 4: lên cao hơn qua Si♭ trưởng rồi Rê thứ | *ritard.* ở ô 16, ngay trước khi chủ đề trở lại |
 | A' | 17–20 | Câu 5: chủ đề trở lại nguyên vẹn | Như một kỷ niệm, mềm hơn lần đầu |
-| A' | 21–24 | Câu 6: lên đến La, hợp âm đỉnh có dấu lặng ngân (fermata) duy nhất của bài, rồi *ritardando* về kết | Dồn hết ý nghĩa của bài vào hợp âm ngân này |
+| A' | 21–24 | Câu 6: lên đến La, hợp âm đỉnh có dấu ngân (fermata) duy nhất của bài, rồi *ritardando* về kết | Dồn hết ý nghĩa của bài vào hợp âm ngân này |
 
 Mỗi câu đều bắt đầu bằng cùng một cử chỉ: một hợp âm rải đi lên từ nhịp lấy đà. Học thuộc bài này nghĩa là nhớ sáu cách khác nhau mà cử chỉ ấy đi tiếp.
 
@@ -178,7 +178,7 @@ Schumann chỉ ghi *ritard.* ở ba chỗ, nơi các đoạn nối vào nhau, v�
 
 ### Ấn bản
 
-Ấn bản của Clara Schumann sửa nhiều dấu nhấn và đổi tốc độ; nhiều bản in phổ thông dựa vào đó. Dùng bản Urtext để thấy ký hiệu của chính Schumann.
+Ấn bản của Clara Schumann đổi các số máy đếm nhịp (*Träumerei*: ♩ = 80). Dùng bản Urtext để thấy ký hiệu của bản in đầu.
 
 ## Lỗi thường gặp
 
@@ -227,8 +227,9 @@ Schumann chỉ ghi *ritard.* ở ba chỗ, nơi các đoạn nối vào nhau, v�
 
 ## Nguồn
 
-- Schumann, *Kinderszenen* Op. 15, G. Henle Verlag; bài viết của Henle về tốc độ *Träumerei* và phỏng vấn Michael Struck về các số máy đếm nhịp của Schumann (henle.de).
-- Henle Blog, "Schumann's metronome markings in his Kinderszenen: opportunity, not nuisance" (2021).
-- Rob Kapilow, phân tích *Träumerei* (cấu trúc 24 ô nhịp, các vùng giọng của đoạn B).
-- Chương trình hòa nhạc của Vladimir Horowitz ở Carnegie Hall (9/5/1965) và Moskva (1986).
+- G. Henle Verlag, [*Scenes from Childhood* op. 15, HN 44](https://www.henle.de/en/Scenes-from-Childhood-op.-15/HN-44): lời tựa (Ernst Herttrich, 2007) và phần Comments (các số máy đếm nhịp có từ lần in sửa của bản in đầu, 1839).
+- Wolf-Dieter Seiffert, ["From deep sleep to MM 100"](https://www.henle.de/media/0a/2b/f0/1687445046/essay_traeumerei.pdf) (Henle, 2010): ba chỗ *ritardando*, một fermata, ♩ = 100.
+- [Phỏng vấn Michael Struck](https://www.henle.de/media/54/e7/73/1687438503/interview_struck.pdf) (Henle, 2010) và Henle Blog, ["Schumann's metronome markings in his Kinderszenen: opportunity, not nuisance"](https://blog.henle.de/en/2021/12/06/schumanns-metronome-markings-in-his-kinderszenen-opportunity-not-nuisance/) (2021).
+- Bản nhạc đối chiếu: bản gõ lại của Mutopia Project (theo *Leichte Stücke*, 1900) và ấn bản Peters trên [Internet Archive](https://archive.org/details/robschumannswerk01schu).
+- Đĩa của Vladimir Horowitz: *Carnegie Hall Concert, May 9, 1965* (Sony Classical) và *Horowitz in Moscow* (Deutsche Grammophon, 1986).
 - Bản nhạc: [IMSLP](https://imslp.org/). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

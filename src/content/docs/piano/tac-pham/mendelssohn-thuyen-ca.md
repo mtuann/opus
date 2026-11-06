@@ -10,8 +10,8 @@ tac_pham: mendelssohn-thuyen-ca
 
 ## Vì sao nên học bài này
 
-- **Hát bằng hai nốt cùng lúc.** Suốt phần chủ đề, giai điệu đi thành từng cặp **quãng ba** hoặc **quãng sáu** trong tay phải, như hai giọng hát song song. Bạn phải cho nốt trên nổi lên và nốt dưới lùi lại trong cùng một cú đánh. Đây là kỹ năng nền cho Chopin, Schumann, Brahms về sau (xem mục cân bằng trong [Tạo tiếng đàn](/opus/piano/tieng-dan/) và [Nốt lặp, nốt kép](/opus/piano/not-lap-not-kep/)).
-- **Một kiểu đệm kinh điển.** Nốt trầm, hợp âm, nốt giữa, hai lần mỗi ô: nhịp đung đưa của **barcarolle**, bài ca người chèo thuyền (xem [Thể loại](/opus/piano/the-loai/)). Học kỹ ở đây, bạn sẽ gặp lại nó ở Chopin, Fauré, Tchaikovsky.
+- **Hát bằng hai nốt cùng lúc.** Suốt phần chủ đề, giai điệu đi thành từng cặp **quãng ba** hoặc **quãng sáu** trong tay phải, như hai giọng hát song song. Bạn phải cho nốt trên nổi lên và nốt dưới lùi lại trong cùng một cú đánh. Đây là kỹ năng nền cho nhiều bài Lãng mạn về sau, như [*Träumerei*](/opus/piano/tac-pham/schumann-traumerei/) của Schumann (xem mục cân bằng trong [Tạo tiếng đàn](/opus/piano/tieng-dan/) và [Nốt lặp, nốt kép](/opus/piano/not-lap-not-kep/)).
+- **Một kiểu đệm kinh điển.** Nốt trầm, hợp âm, nốt giữa, hai lần mỗi ô: nhịp đung đưa của **barcarolle**, bài ca người chèo thuyền (xem [Thể loại](/opus/piano/the-loai/)). Học kỹ ở đây, bạn sẽ gặp lại nó ở các barcarolle khác.
 - **Bàn đạp theo nốt trầm.** Nhịp chậm, hòa âm đổi theo nốt trầm ở đầu các nửa ô: môi trường lý tưởng để luyện bàn đạp nối cho sạch (xem [Bàn đạp](/opus/piano/ban-dap/)).
 - **Ngắn mà trọn vẹn.** 46 ô nhịp có mở đầu, cao trào, chủ đề trở lại và coda. Học xong, bạn có một bài biểu diễn hoàn chỉnh và một cửa vào cả tám tập *Lieder ohne Worte*.
 
@@ -19,9 +19,9 @@ tac_pham: mendelssohn-thuyen-ca
 
 Mùa thu năm 1830, trong chuyến du hành lớn qua châu Âu, Mendelssohn, khi ấy 21 tuổi, đến Venice. Theo lời tựa của ấn bản Henle, bản viết tay còn lại của bài này đề tiêu đề *Auf einer Gondel* (Trên thuyền gondola) và ghi ngày 16/10/1830; đây là bài duy nhất trong bốn bài thuyền ca của ông được viết ngay tại Venice. Ông định gửi nó làm quà đáp lễ cho nữ nghệ sĩ piano trẻ Delphine von Schauroth ở München, người đã viết tặng ông một bài trong album. Lá thư gửi đi ngày 17/10 bị thất lạc trên đường bưu điện.
 
-Đầu năm 1832, Mendelssohn quyết định gom một loạt tiểu phẩm piano thành tập mang tên *Lieder ohne Worte* và chọn thuyền ca này làm bài cuối. Tập in năm 1832 ở London (nhà Novello) với tên tiếng Anh *Original Melodies for the Pianoforte*, và năm 1833 ở Paris và Bonn. Cái tên *Lieder ohne Worte* có lẽ do chính Mendelssohn nghĩ ra. Chị gái ông, Fanny, cũng viết nhiều bài hát cho piano, và một số nhà nghiên cứu cho rằng bà góp phần gợi ý cho thể loại này. Cả bộ gồm tám tập, mỗi tập sáu bài; hai tập cuối chỉ ra mắt sau khi ông mất.
+Đầu năm 1832, Mendelssohn quyết định gom một loạt tiểu phẩm piano thành tập mang tên *Lieder ohne Worte* và chọn thuyền ca này làm bài cuối. Tập in năm 1832 ở London (nhà Novello) với tên tiếng Anh *Original Melodies for the Pianoforte*, và năm 1833 ở Paris và Bonn. Cả bộ gồm tám tập, mỗi tập sáu bài; hai tập cuối chỉ ra mắt sau khi ông mất.
 
-Phần lớn những cái tên gắn với từng bài do các nhà xuất bản thêm vào về sau. *Venetianisches Gondellied* là một trong số rất ít tên gọi được coi là của chính Mendelssohn, và ông dùng nó thêm hai lần: Op. 30 số 6 (Fa♯ thứ, 1835) và Op. 62 số 5 (La thứ, in năm 1844). Thuyền ca mô phỏng bài hát của người chèo gondola: nhịp kép 6/8 hoặc 12/8, tay trái đung đưa đều như mái chèo, giai điệu trải dài phía trên. Xem thêm [thời kỳ Lãng mạn](/opus/lich-su/thoi-ky/lang-man/) và [các nhà soạn nhạc cho piano](/opus/piano/nha-soan-nhac/).
+Mendelssohn dùng tên *Venetianisches Gondellied* thêm hai lần: Op. 30 số 6 (Fa♯ thứ, 1835) và Op. 62 số 5 (La thứ, in năm 1844); trong một lá thư năm 1835, chính ông gọi bài Fa♯ thứ là "das Venetianische Gondolierlied". Thuyền ca mô phỏng bài hát của người chèo gondola: ở bài này là nhịp 6/8, tay trái đung đưa đều như mái chèo, giai điệu trải dài phía trên. Xem thêm [thời kỳ Lãng mạn](/opus/lich-su/thoi-ky/lang-man/) và [các nhà soạn nhạc cho piano](/opus/piano/nha-soan-nhac/).
 
 ## Nghe trước khi tập
 
@@ -33,7 +33,7 @@ Bài chỉ dài hai, ba phút, nên hãy nghe nhiều lần, mỗi lần với m
 4. **Lần trở lại.** Khi chủ đề quay về (cuối ô 34), điều gì mới xen vào?
 5. **Ô cuối.** Nốt Sol trầm cuối cùng được để vang bao lâu?
 
-Rồi so sánh ít nhất hai bản thu. Daniel Barenboim đã thu trọn tám tập *Lieder ohne Worte*; đặt bản của ông cạnh một nghệ sĩ khác và ghi lại: ai chơi chậm hơn, ai để tay trái đung đưa rõ hơn, ai dùng nhiều bàn đạp hơn ở đoạn staccato (ô 26–31)? Muốn biết thêm về các nghệ sĩ, xem [Nghệ sĩ piano và bản thu](/opus/piano/nghe-si/).
+Rồi so sánh ít nhất hai bản thu của hai nghệ sĩ khác nhau và ghi lại: ai chơi chậm hơn, ai để tay trái đung đưa rõ hơn, ai dùng nhiều bàn đạp hơn ở đoạn staccato (ô 26–31)? Muốn biết thêm về các nghệ sĩ, xem [Nghệ sĩ piano và bản thu](/opus/piano/nghe-si/).
 
 ::khoi-nghe{moc="0 17 27 43 64 88 103"}
 
@@ -220,7 +220,7 @@ Tay trái là con thuyền: giữ nó đều. Giai điệu được phép nán m
 
 ### Ấn bản
 
-Dùng một bản Urtext: Henle in cả trọn bộ *Lieder ohne Worte* lẫn tập riêng bốn bài thuyền ca (HN 1172). Bản Breitkopf & Härtel 1874–77 (bản Mutopia, miễn phí) đáng tin để đối chiếu nốt; nhiều bản in cũ trên IMSLP có thêm số ngón và dấu bàn đạp của người biên tập. Số ngón chỉ là gợi ý: chọn ngón giúp bè trên legato, và ghi vào bản nhạc ngay từ tuần đầu.
+Dùng một bản Urtext: Henle in cả trọn bộ *Lieder ohne Worte* lẫn tập riêng bốn bài thuyền ca (HN 1172). Bản Breitkopf & Härtel 1874–77 (bản Mutopia, miễn phí) dùng được để đối chiếu nốt. Số ngón chỉ là gợi ý: chọn ngón giúp bè trên legato, và ghi vào bản nhạc ngay từ tuần đầu.
 
 ## Lỗi thường gặp
 
@@ -235,7 +235,7 @@ Dùng một bản Urtext: Henle in cả trọn bộ *Lieder ohne Worte* lẫn t�
 
 ## Học tiếp
 
-- **Hai thuyền ca còn lại:** Op. 30 số 6 (Fa♯ thứ) và Op. 62 số 5 (La thứ), Henle xếp mức 5; cả bốn bài thuyền ca của Mendelssohn nằm trong tập Henle HN 1172.
+- **Hai bài *Venetianisches Gondellied* còn lại:** Op. 30 số 6 (Fa♯ thứ) và Op. 62 số 5 (La thứ), Henle xếp mức 5; tập Henle HN 1172 in cả bốn bài thuyền ca của Mendelssohn (thêm *Gondellied* La trưởng, không số opus).
 - **Nhiều bè hơn trong hai tay:** [Schumann: Träumerei](/opus/piano/tac-pham/schumann-traumerei/) (khoảng Grade 6).
 - **Họ hàng gần của thuyền ca:** [Chopin: Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/), giai điệu hát trên nhịp 12/8 với tay trái nốt trầm và hợp âm.
 - **Xa hơn:** [Schubert: Impromptu Sol♭ trưởng](/opus/piano/tac-pham/schubert-impromptu-sol-giang/), nơi giai điệu và dòng đệm nằm trong cùng tay phải suốt cả bài. Thứ tự gợi ý: [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/) và chặng 5 của [Lộ trình](/opus/piano/lo-trinh/).
@@ -270,6 +270,6 @@ Dùng một bản Urtext: Henle in cả trọn bộ *Lieder ohne Worte* lẫn t�
 ## Nguồn
 
 - G. Henle Verlag, [*Venetian Gondola Songs*, HN 1172](https://www.henle.de/Venetian-Gondola-Songs-for-Piano/HN-1172): nội dung tập và mức độ khó (Op. 19 số 6: mức 4; Op. 30 số 6 và Op. 62 số 5: mức 5); lời tựa của Ullrich Scheideler (2012): bản viết tay *Auf einer Gondel* ngày 16/10/1830, Delphine von Schauroth, các lần in năm 1832 và 1833.
-- [*Songs Without Words*](https://en.wikipedia.org/wiki/Songs_Without_Words), Wikipedia tiếng Anh: tám tập, mỗi tập sáu bài; tập 1 in ở London năm 1832 với tên *Original Melodies for the Pianoforte*; tên *Lieder ohne Worte*; vai trò có thể có của Fanny Mendelssohn.
+- Britannica, [*Songs Without Words*](https://www.britannica.com/topic/Songs-Without-Words) (Betsy Schwarm): 48 bài trong tám tập, hai tập cuối in sau khi Mendelssohn mất; tập 1 in ở Anh năm 1832 với tên *Original Melodies for the Pianoforte*.
 - Mutopia Project, [*Lieder ohne Worte: Venetianisches Gondellied, Op.19 No.6*](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1679) (Ryan Prince, CC BY 3.0, theo ấn bản Breitkopf & Härtel 1874–77): nguồn của đoạn trích ô 7–11, số ô nhịp, sắc thái và dấu bàn đạp nêu trên trang này.
 - Bản nhạc: [IMSLP](https://imslp.org/) (tìm "Lieder ohne Worte Op.19"). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

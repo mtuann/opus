@@ -10,7 +10,7 @@ Hai mươi hai ô nhịp, hai bè, một ý nhạc dài nửa ô nhịp: Inventi
 
 ## Vì sao nên học bài này
 
-- **Bước đầu vào phức điệu.** Mỗi tay là một giọng hát độc lập, quan trọng ngang nhau. Đây là nền cho mọi fugue, sinfonia và phần lớn nhạc Bach (xem [Đối âm](/opus/nhac-ly/22-doi-am/)).
+- **Bước đầu vào phức điệu.** Mỗi tay là một giọng hát độc lập, quan trọng ngang nhau. Đây là kỹ năng bạn sẽ cần cho các sinfonia, fugue và nhiều bài khác của Bach (xem [Đối âm](/opus/nhac-ly/22-doi-am/)).
 - **Học phát âm.** Bach gần như không ghi dấu luyến hay staccato. Bạn phải tự chọn cách nối và ngắt cho từng loại nốt, rồi giữ nhất quán. Đó là kỹ năng của một nhạc sĩ, không chỉ của ngón tay.
 - **Thấy một tác phẩm được xây từ một ý nhỏ.** Gần như mọi nốt trong bài đến từ chủ đề ở ô 1: nguyên dạng, đảo ngược, chuyển giọng, nối thành chuỗi (xem [Phát triển môtip](/opus/nhac-ly/30-phat-trien-motip/)).
 - **Độc lập hai tay thật sự.** Một tay chạy móc kép liền tiếng trong khi tay kia đi móc đơn tách tiếng, rồi đổi vai.
@@ -22,7 +22,7 @@ Bach viết các invention và sinfonia để dạy, trước hết là dạy co
 
 Hai điều đáng nhớ từ trang bìa ấy. Thứ nhất, *inventio* là một từ của tu từ học: "tìm ra" một ý tưởng rồi khai triển nó. Mỗi invention là một bài học về cách một ý nhạc nhỏ sinh ra cả một tác phẩm. Thứ hai, mục tiêu cao nhất Bach nêu ra là **lối chơi như hát**, không phải sự nhanh nhẹn của ngón tay. Hãy nhớ điều đó mỗi khi bạn muốn tăng tốc độ.
 
-Bach viết cho đàn phím thời ấy (harpsichord, clavichord); trên piano hiện đại, bạn có sắc thái và độ ngân mà ông không có, nên phải dùng chúng một cách tiết chế. Xem thêm [thời kỳ Baroque](/opus/lich-su/thoi-ky/baroque/).
+Bach viết cho đàn phím thời ấy (trang bìa gọi chung là *Clavier*); trên piano hiện đại, bạn có độ ngân dài hơn và dải sắc thái rộng hơn, nên hãy dùng chúng một cách tiết chế. Xem thêm [thời kỳ Baroque](/opus/lich-su/thoi-ky/baroque/).
 
 ## Nghe trước khi tập
 
@@ -32,7 +32,7 @@ Nghe vài lần, mắt theo bản nhạc:
 2. **Tìm ba điểm kết.** Nghe chỗ nhạc "dừng chân" ở Sol trưởng, ở La thứ, rồi về Đô.
 3. **Hai bè.** Nghe một lần chỉ theo tay trái từ đầu đến cuối.
 
-So sánh vài cách chơi rất khác nhau, chẳng hạn Glenn Gould (nổi tiếng với lối chơi Bach rõ, tách tiếng), András Schiff và Angela Hewitt, cùng một bản trên harpsichord hoặc clavichord. Ghi lại: ai chơi móc kép liền, ai tách; ai dùng sắc thái nhiều; tốc độ chênh nhau bao nhiêu?
+So sánh vài bản thu rất khác nhau trên piano hiện đại, cùng một bản trên harpsichord hoặc clavichord. Ghi lại: ai chơi móc kép liền, ai tách; ai dùng sắc thái nhiều; tốc độ chênh nhau bao nhiêu?
 
 Bản thu gợi ý của **Marcelle Meyer** (thu năm 1948) nằm trên Wikimedia Commons. Ở Mỹ, nơi đặt site, bản thu này vẫn còn được bảo hộ, nên khối dưới đây chỉ dẫn link, không phát trực tiếp; mốc tham khảo tính theo file ấy.
 
@@ -90,11 +90,11 @@ K:C
 |---|---|---|
 | Độc lập hai tay | Một tay móc kép liền, tay kia móc đơn tách; hai tay hay "lây" cách phát âm của nhau | Tay riêng đến khi thật chắc; ghép ở nửa tốc độ. Bài tập 2. Thử chơi một tay *f*, tay kia *p*, rồi đổi |
 | Chọn và giữ cách phát âm | Không có dấu nào trên bản nhạc; mỗi lần chơi một kiểu thì không bao giờ ổn định | Quyết định một lần, ghi bằng bút chì: cùng một môtip thì cùng một cách phát âm, ở cả hai tay. Xem phần Diễn tấu |
-| Ngón bấm | Chủ đề xuất hiện ở nhiều độ cao; đổi ngón tùy hứng làm tay lúng túng | Chủ đề đi lên ở tay phải thường dùng 1-2-3-4-2-3-1; ở tay trái 5-4-3-2-4-3-5. Chọn cho từng lần xuất hiện, ghi lại, giữ nguyên |
+| Ngón bấm | Chủ đề xuất hiện ở nhiều độ cao; đổi ngón tùy hứng làm tay lúng túng | Chủ đề đi lên ở tay phải có thể dùng 1-2-3-4-2-3-1; ở tay trái 5-4-3-2-4-3-5. Chọn cho từng lần xuất hiện, ghi lại, giữ nguyên |
 | Nhận ra chủ đề và chủ đề đảo | Không thấy cấu trúc thì học thuộc rất mệt và dễ lạc | Tô màu chủ đề và chủ đề đảo trên bản nhạc; chơi riêng các lần xuất hiện của chủ đề; hát một bè trong khi chơi bè kia |
 | Chuỗi (ô 3–4, 11–12, 15–18) | Các nhóm nốt trông giống nhau nhưng mỗi lần lệch một bậc; dễ nhảy nhầm nhóm | Gọi tên nốt đầu mỗi nhóm; chơi "khung" chỉ gồm nốt đầu các nhóm, rồi mới chơi đầy đủ |
 | Nốt dài ở ô 15–18 | Nốt trắng nối sang ô sau dễ bị nhấc sớm khi tay kia bận | Đếm to; giữ đủ trường độ; để nốt dài hát trong lúc bè kia chạy |
-| Nốt hoa mỹ | Láy rền và láy làm rối nhịp nếu thêm quá sớm | Học bài không có nốt hoa mỹ trước; thêm sau, chậm, viết rõ các nốt; xem [Nốt hoa mỹ](/opus/piano/not-hoa-my/) |
+| Nốt hoa mỹ | Láy trên và láy dưới làm rối nhịp nếu thêm quá sớm | Học bài không có nốt hoa mỹ trước; thêm sau, chậm, viết rõ các nốt; xem [Nốt hoa mỹ](/opus/piano/not-hoa-my/) |
 | Ba điểm kết | Hoặc không ai nhận ra, hoặc bị dừng hẳn như hết bài | Nới rất nhẹ trước ô 7 và ô 15, rồi đi tiếp ngay; chỉ ô 22 mới thật sự dừng |
 
 ## Bài tập chuẩn bị
@@ -156,7 +156,7 @@ Không có chỉ dẫn tốc độ. Hãy nhớ trang bìa: *cantabile*. Chọn t
 
 ### Phát âm
 
-Một lựa chọn phổ biến và hợp lý: **móc kép liền tiếng**, **móc đơn tách nhẹ** (không phải staccato ngắn), nốt dài giữ đủ. Áp dụng như nhau cho cùng một môtip ở cả hai tay, để người nghe nhận ra chủ đề mỗi khi nó xuất hiện. Cũng có người chơi móc kép hơi tách; điều quan trọng là nhất quán và có lý do. Hai bè phải nghe như hai người hát, mỗi người một hơi thở.
+Một lựa chọn hợp lý: **móc kép liền tiếng**, **móc đơn tách nhẹ** (không phải staccato ngắn), nốt dài giữ đủ. Áp dụng như nhau cho cùng một môtip ở cả hai tay, để người nghe nhận ra chủ đề mỗi khi nó xuất hiện. Cũng có người chơi móc kép hơi tách; điều quan trọng là nhất quán và có lý do. Hai bè phải nghe như hai người hát, mỗi người một hơi thở.
 
 ### Sắc thái
 
@@ -164,7 +164,7 @@ Bach không ghi sắc thái. Hãy để cấu trúc dẫn đường: mỗi lần
 
 ### Nốt hoa mỹ
 
-Trong bản Bach-Gesellschaft có láy rền ngắn ở vài nốt móc đơn (ví dụ nốt Si ở ô 1, nốt Fa ở ô 2) và láy ở vài nốt móc đơn chấm dôi. Theo thói quen thời Baroque, láy rền thường bắt đầu từ nốt trên và rơi đúng phách; láy (mordent) đi nốt chính – nốt dưới – nốt chính. Chính Bach đã viết một bảng giải thích các ký hiệu này trong *Clavier-Büchlein* của Wilhelm Friedemann; một số ấn bản in lại bảng này. Kiểm tra ký hiệu trong bản bạn dùng, và xem [Nốt hoa mỹ](/opus/piano/not-hoa-my/).
+Trong bản Bach-Gesellschaft có ký hiệu láy trên (răng cưa không gạch; theo bảng của Bach là một láy rền ngắn) ở vài nốt móc đơn (ví dụ nốt Si ở ô 1, nốt Fa ở ô 2) và láy dưới (có gạch) ở hai nốt móc đơn chấm dôi (ô 5 và ô 13). Theo thói quen thời Baroque, láy rền thường bắt đầu từ nốt trên và rơi đúng phách; láy dưới đi nốt chính – nốt dưới – nốt chính. Chính Bach đã viết một bảng giải thích các ký hiệu này trong *Clavier-Büchlein* của Wilhelm Friedemann; một số ấn bản in lại bảng này. Kiểm tra ký hiệu trong bản bạn dùng, và xem [Nốt hoa mỹ](/opus/piano/not-hoa-my/).
 
 ### Bàn đạp
 
@@ -186,9 +186,9 @@ Dùng bản Urtext. Nhiều ấn bản cũ thêm dấu luyến, sắc thái và 
 
 ## Học tiếp
 
-- **Invention khác:** số 4 (Rê thứ) và số 8 (Fa trưởng) là hai bước tiếp phổ biến; sau đó là các sinfonia ba bè và [Prelude và fugue Đô thứ BWV 847](/opus/piano/tac-pham/bach-prelude-fugue-do-thu/), fugue ba bè nên học đầu tiên.
+- **Invention khác:** số 4 (Rê thứ; Henle xếp cùng mức 3 như số 1) và số 8 (Fa trưởng; Henle mức 4, ABRSM Grade 5) là hai bước tiếp; sau đó là các sinfonia ba bè và [Prelude và fugue Đô thứ BWV 847](/opus/piano/tac-pham/bach-prelude-fugue-do-thu/), fugue ba bè nên học đầu tiên.
 - **Cùng tác giả:** [Prelude Đô trưởng BWV 846](/opus/piano/tac-pham/bach-prelude-do/), nếu bạn chưa chơi.
-- **Cùng chặng:** [Mozart: Sonata K. 545](/opus/piano/tac-pham/mozart-k545/), [Schumann: Träumerei](/opus/piano/tac-pham/schumann-traumerei/).
+- **Chặng sau:** [Mozart: Sonata K. 545](/opus/piano/tac-pham/mozart-k545/), [Schumann: Träumerei](/opus/piano/tac-pham/schumann-traumerei/).
 - **Nghe thêm:** [Bach: Goldberg Variations](/opus/nghe-nhac/bach-goldberg/); đọc về [fugue](/opus/hinh-thuc/fugue/) để thấy chủ đề và nhại đi xa đến đâu.
 
 ::hoc-tiep
@@ -206,7 +206,7 @@ Dùng bản Urtext. Nhiều ấn bản cũ thêm dấu luyến, sắc thái và 
 + Chủ đề lộn ngược: đi xuống ở chỗ bản gốc đi lên
 - Chủ đề chuyển sang tay kia
 > Trong bài tập 1, Đô – Rê – Mi – Fa – Rê – Mi – Đô đảo thành Đô – Si – La – Sol – Si – La – Đô.
-? Một lựa chọn phát âm phổ biến và hợp lý cho bài này là gì?
+? Một lựa chọn phát âm hợp lý cho bài này là gì?
 + Móc kép liền tiếng, móc đơn tách nhẹ, nốt dài giữ đủ
 - Tất cả liền tiếng như một bài hát
 - Tất cả tách tiếng như staccato
@@ -220,7 +220,6 @@ Dùng bản Urtext. Nhiều ấn bản cũ thêm dấu luyến, sắc thái và 
 
 ## Nguồn
 
-- Hans T. David, Arthur Mendel, Christoph Wolff (biên tập), *The New Bach Reader*, W. W. Norton, 1998 (bản dịch trang bìa năm 1723).
-- Christoph Wolff, *Johann Sebastian Bach: The Learned Musician*, W. W. Norton, 2000.
-- Bach, *Inventionen und Sinfonien*, bản Urtext của G. Henle Verlag, Bärenreiter, Wiener Urtext.
+- Bach, *Two Part Inventions*, G. Henle Verlag, HN 591 (biên tập Ullrich Scheideler, 2014): [trang ấn bản](https://www.henle.de/en/Two-Part-Inventions/HN-591) (mức độ khó từng bài), lời tựa và bình chú (Clavier-Büchlein 1720, bản chép sạch 1723, bảng nốt hoa mỹ, các bản chép của học trò).
+- Trang bìa năm 1723, nguyên văn tiếng Đức và bản dịch tiếng Anh: [bach-cantatas.com](https://www.bach-cantatas.com/Ref/AuffrichtigeAnleitung.pdf); Yo Tomita, ["The Inventions and Sinfonias"](https://www.qub.ac.uk/tomita/essay/inventions.html) (Queen's University Belfast, 1999): chữ *inventio* trong tu từ học.
 - Bản nhạc: [IMSLP](https://imslp.org/); đoạn trích đối chiếu với bản Bach-Gesellschaft qua bản chép LilyPond của [Mutopia Project](https://www.mutopiaproject.org/). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

@@ -10,7 +10,7 @@ Bản valse Chopin viết năm 19 tuổi và không bao giờ tự cho in: buồ
 
 ## Vì sao nên học bài này
 
-- **Bước tiếp sau Valse La thứ.** Vẫn tay trái nốt trầm – hợp âm – hợp âm, nhưng nốt trầm đổi liên tục (Si, Đô♯, La♯, Rê, Mi, Fa♯…), hợp âm đổi thế gần như mỗi ô, và bài dài gần gấp đôi.
+- **Bước tiếp sau Valse La thứ.** Vẫn tay trái nốt trầm – hợp âm – hợp âm, nhưng nốt trầm đổi liên tục (Si, Đô♯, La♯, Rê, Mi, Fa♯…), hợp âm đổi thế gần như mỗi ô, và bài dài hơn gấp đôi (144 ô so với 56 ô).
 - **Trang trí mà vẫn hát.** Láy quanh, nốt lân cận nửa cung, những chuỗi nửa cung đi xuống: trong bản nhạc chúng được viết bằng nốt thường. Việc của bạn là làm chúng nghe như hơi thở của giai điệu, không như bài tập ngón.
 - **Rubato thật sự.** Nhiều nốt ngân và câu nhạc dài: rất hợp để tập kiểu rubato của Chopin, tay phải co giãn còn tay trái giữ nhịp valse.
 - **Ba màu giọng.** Si thứ u buồn, Rê trưởng sôi nổi (*con anima*), Si trưởng ngọt ngào (*dolce*). Đổi màu mà không đổi mạch là một kỹ năng diễn tấu thật sự.
@@ -18,7 +18,7 @@ Bản valse Chopin viết năm 19 tuổi và không bao giờ tự cho in: buồ
 
 ## Bối cảnh
 
-Năm 1829, Chopin 19 tuổi và vẫn sống ở Warsaw; khoảng một năm sau ông rời Ba Lan và không bao giờ trở lại. Bản valse Si thứ ra đời trong những năm ấy, và Chopin không tự cho in nó. Bài được in lần đầu năm 1852, ba năm sau khi ông mất, cùng với bản Valse Fa thứ (sau này là Op. 70 số 2). Năm 1855, người bạn của Chopin là Julian Fontana in các tập tác phẩm di cảo, trong đó có hai tập valse Op. 69 và Op. 70; bản này trở thành Op. 69 số 2.
+Năm 1829, Chopin 19 tuổi và vẫn sống ở Warsaw; cuối năm 1830 ông rời Ba Lan, rồi sống ở Paris cho đến khi mất (1849). Bản valse Si thứ ra đời trong những năm ấy, và Chopin không tự cho in nó. Bài được in lần đầu năm 1852, ba năm sau khi ông mất, cùng với bản Valse Fa thứ (sau này là Op. 70 số 2). Năm 1855, người bạn của Chopin là Julian Fontana in các tập tác phẩm di cảo, trong đó có hai tập valse Op. 69 và Op. 70; bản này trở thành Op. 69 số 2.
 
 Về thể loại valse và chỗ đứng của nó trong các phòng khách Paris, xem lại trang [Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/). Valse của Chopin là nhạc để nghe hơn là để nhảy, và bản Si thứ là ví dụ rõ: nhịp 3 vẫn đều đặn ở tay trái, nhưng giai điệu như một lời than thở nhỏ.
 
@@ -35,7 +35,7 @@ Nghe trọn bài ít nhất ba lần, mỗi lần với một câu hỏi:
 3. **Màu giọng.** Đoạn Rê trưởng và trio Si trưởng khác nhau thế nào? Nghệ sĩ đổi tiếng đàn, hay chỉ đổi âm lượng?
 4. **Dấu nhắc lại.** Nghệ sĩ có nhắc lại đoạn B – A' (ô 33–64) không? Khi chủ đề trở lại ở ô 97, nó to hơn hay nhỏ hơn lần đầu?
 
-Bản thu các valse của Dinu Lipatti và của Arthur Rubinstein là hai điểm tựa quen thuộc; Alfred Cortot co giãn tự do hơn. Nghe một người rồi người kia và đánh dấu lên bản nhạc chỗ mỗi người nán lại: đó là bản đồ rubato đầu tiên của bạn. Xem thêm [Nghệ sĩ piano và bản thu nên nghe](/opus/piano/nghe-si/).
+Nghe hai bản thu của hai nghệ sĩ khác nhau, bản này rồi bản kia, và đánh dấu lên bản nhạc chỗ mỗi người nán lại: đó là bản đồ rubato đầu tiên của bạn. Xem thêm [Nghệ sĩ piano và bản thu nên nghe](/opus/piano/nghe-si/).
 
 ::khoi-nghe{moc="0 20 40 59 77 117 137 156 176"}
 
@@ -51,7 +51,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | … | **Đoạn A'** (ô 49–64): chủ đề trở lại, tô thêm bằng những nốt nửa cung (Sol♯ – Sol – Fa♯) |
 | … | **Nhắc lại B và A'** (ô 33–64): lần hai có khác lần đầu không? |
 | … | **Trio** (Si trưởng, *dolce*, ô 65–80): giai điệu ngọt, xoay quanh nốt Rê♯; những nốt lặp nhịp chấm dôi ở ô 69–72 |
-| … | **Trio, lần hai** (ô 81–96): giai điệu đi bằng quãng ba; từ ô 89 màu tối lại về Si thứ, rồi dẫn về chủ đề |
+| … | **Trio, lần hai** (ô 81–96): giai điệu đi bằng nốt kép, chủ yếu quãng ba; từ ô 89 màu tối lại về Si thứ, rồi dẫn về chủ đề |
 | … | **Đoạn A** (ô 97–112): chủ đề trở lại, mở đầu bằng một nốt Si rất trầm ở tay trái; ấn bản Peters ghi *f* |
 | … | **Đoạn B và A'** (ô 113–144): lần này không nhắc lại; cuối bài *calando e dimin.*, tắt dần |
 
@@ -67,8 +67,8 @@ Số ô dưới đây theo ấn bản Peters (bản Mutopia): 144 ô cộng mộ
 | A | 17–32 | Si thứ | Chủ đề lần hai; ô 32 rẽ sang Rê trưởng qua nốt Si♭ | Lần hai đừng y hệt lần đầu |
 | B | 33–48 | Rê trưởng | *con anima*: câu 8 ô nói hai lần, lần hai đổi đường đi; kết trên hợp âm át bảy của Si thứ | Si♭ đầu đoạn là một **appoggiatura** xuống La: nhấn rồi nhả |
 | A' | 49–64 | Si thứ | Chủ đề với những nốt lân cận nửa cung; cả ô 33–64 nhắc lại | Trang trí nhẹ, giai điệu chính vẫn rõ |
-| Trio | 65–96 | Si trưởng, rồi Si thứ | *dolce*: câu 8 ô nói hai lần (65–80); lần hai bằng quãng ba (81–88); từ ô 89 về Si thứ; ô 94 có một hợp âm sáu tăng dẫn về át âm | Tiếng ấm, tay trái nhẹ hơn nữa; quãng ba legato |
-| A – B – A' | 97–144 | Si thứ, Rê trưởng, Si thứ | Phần đầu trở lại, không nhắc lại; kết *calando e dimin.* | Ô 97: nốt trầm Si1, xa hợp âm hơn hai quãng tám |
+| Trio | 65–96 | Si trưởng, rồi Si thứ | *dolce*: câu 8 ô nói hai lần (65–80); lần hai bằng nốt kép, chủ yếu quãng ba (81–88; ô 85–88 xen quãng sáu); từ ô 89 về Si thứ; ô 94 có một hợp âm sáu tăng dẫn về át âm | Tiếng ấm, tay trái nhẹ hơn nữa; quãng ba legato |
+| A – B – A' | 97–144 | Si thứ, Rê trưởng, Si thứ | Phần đầu trở lại, không nhắc lại; kết *calando e dimin.* | Ô 97: nốt trầm Si1, thấp hơn nốt Si3 của hợp âm hai quãng tám |
 
 Hình thức tổng thể là ba phần, với trio ở giữa như trong một bản minuet hay scherzo (xem [Minuet và trio](/opus/hinh-thuc/minuet-trio/)). Hợp âm ở ô 94 (Sol – Si – Đô♯ – Mi♯) là một [hợp âm sáu tăng](/opus/nhac-ly/24-napoli-sau-tang/): Sol và Mi♯ tách ra hai phía về Fa♯, nên át âm ở ô 95 nghe như một cánh cửa mở ra.
 
@@ -108,7 +108,7 @@ Ba điều cần thấy ngay trên trang nhạc:
 | Chuỗi nửa cung đi xuống (ô 48, ô 56) | Sáu móc đơn liền nhau qua phím trắng và phím đen, dễ dính hoặc lệch nhịp | Ngón 3 trên phím đen, ngón 1 trên phím trắng, ngón 2 cho cặp phím trắng liền nhau (xem [Gam](/opus/piano/gam/)); tập chậm theo nhóm 3 nốt, rồi cả ô |
 | Cân bằng hai tay | Hợp âm ba nốt dễ át giai điệu một nốt | Tay trái riêng: nốt trầm *mp*, hợp âm *pp*. Ghép tay: tay phải hát, tay trái chỉ chạm phím. Xem [Tạo tiếng đàn](/opus/piano/tieng-dan/) |
 | Quãng ba tay phải (ô 81–88) | Hai nốt phải vang cùng lúc và nối liền; nốt trên là giai điệu | Nốt trên legato và to hơn, nốt dưới nhẹ; tập nốt trên riêng với đúng ngón sẽ dùng, rồi thêm nốt dưới. Bài tập 3. Xem [Nốt lặp và nốt kép](/opus/piano/not-lap-not-kep/) |
-| Nốt lặp nhịp chấm dôi (ô 69–72, 77–80) | Ba lần cùng một nốt; nốt móc kép dễ bị nuốt hoặc quá to | Đổi ngón trên nốt lặp (ví dụ 3 – 2 – 1), nhấc phím vừa đủ; móc kép nhẹ, nghiêng về nốt sau |
+| Nốt lặp nhịp chấm dôi (ô 69–72, 77–80) | Hai hoặc ba lần cùng một nốt; nốt móc kép dễ bị nuốt hoặc quá to | Đổi ngón trên nốt lặp (ví dụ 3 – 2 – 1), nhấc phím vừa đủ; móc kép nhẹ, nghiêng về nốt sau |
 | Rubato | Co giãn quá tay làm mất nhịp valse; chơi cứng thì bài mất hồn | Tập với máy đếm nhịp trước; sau đó mỗi câu 4 ô chỉ nán ở một chỗ, và trả lại thời gian ngay sau |
 
 ## Bài tập chuẩn bị
@@ -195,7 +195,7 @@ Kế hoạch 6 tuần, khoảng 30–45 phút mỗi ngày.
 
 ### Rubato
 
-Theo lời kể của các học trò Chopin, được Jean-Jacques Eigeldinger tập hợp, khi giai điệu co giãn thì tay đệm vẫn giữ nhịp. Trong bài này, những chỗ đáng nán lại là nốt Fa♯ ngân đầu mỗi câu, bước nhảy Si – Rê ở ô 5, nốt Rê cao có dấu *rf* ở ô 6; nán xong thì trả lại thời gian ngay. Chỉ ở những chỗ đã ghi *rit.* (như ô 14–15) hay *calando*, cả hai tay mới cùng chậm lại.
+Carl Mikuli, một học trò của Chopin, kể rằng ngay cả khi chơi rubato, Chopin vẫn để tay đệm giữ nhịp thật đều. Trong bài này, những chỗ đáng nán lại là nốt Fa♯ ngân đầu mỗi câu, bước nhảy Si – Rê ở ô 5, nốt Rê cao có dấu *rf* ở ô 6; nán xong thì trả lại thời gian ngay. Chỉ ở những chỗ đã ghi *rit.* (như ô 14–15) hay *calando*, cả hai tay mới cùng chậm lại.
 
 ### Bàn đạp
 
@@ -221,9 +221,9 @@ Vì bài có hai phiên bản, chi tiết giai điệu, trang trí và sắc th�
 
 ## Học tiếp
 
-- **[Chopin: Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/):** giai điệu hát với trang trí dày hơn trên tay trái rải rộng; bước tiếp tự nhiên ở chặng 6.
-- **Cùng chặng:** Nocturne Mi thứ Op. 72 số 1 của Chopin; [Mendelssohn: Thuyền ca Venice, Op. 19 số 6](/opus/piano/tac-pham/mendelssohn-thuyen-ca/), cũng là giai điệu hát trên nhịp đung đưa.
-- **Valse khó hơn:** Valse Đô♯ thứ Op. 64 số 2. Danh sách theo cấp: [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
+- **[Chopin: Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/):** giai điệu hát với trang trí dày hơn trên tay trái rải rộng; cùng chặng 6 với bài này.
+- **Chặng trước (chặng 5), cũng là giai điệu hát:** Nocturne Mi thứ Op. 72 số 1 của Chopin; [Mendelssohn: Thuyền ca Venice, Op. 19 số 6](/opus/piano/tac-pham/mendelssohn-thuyen-ca/), giai điệu hát trên nhịp đung đưa.
+- **Valse khó hơn:** Valse Đô♯ thứ Op. 64 số 2 (Henle mức 6, bài này mức 4). Danh sách theo cấp: [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
 - **Mục tiêu xa hơn:** [Fantaisie-Impromptu, Op. 66](/opus/piano/tac-pham/chopin-fantaisie-impromptu/), cũng được Fontana in năm 1855.
 
 ::hoc-tiep
@@ -255,8 +255,9 @@ Vì bài có hai phiên bản, chi tiết giai điệu, trang trí và sắc th�
 
 ## Nguồn
 
-- "Waltzes, Op. 69 (Chopin)", [Wikipedia](https://en.wikipedia.org/wiki/Waltzes,_Op._69_(Chopin)) (năm sáng tác, các lần in 1852 và 1855, cấu trúc).
+- IMSLP, [*Waltzes, Op.69* (Chopin)](https://imslp.org/wiki/Waltzes,_Op.69_(Chopin,_Fr%C3%A9d%C3%A9ric)): bản in đầu năm 1852 ở Kraków (Wildt), cùng Valse Fa thứ Op. 70 số 2; ấn bản Fontana năm 1855.
+- Chopin, Ấn bản Quốc gia Ba Lan, [bảng số và niên đại tác phẩm](https://www.chopin-nationaledition.com/wp-content/uploads/2013/05/numbering_en.pdf) (WN 19: sáng tác 1829, in 1852).
 - G. Henle Verlag, Chopin: *Waltzes*, biên tập Ewald Zimmermann, HN 131, [trang ấn bản](https://www.henle.de/Waltzes/HN-131) (mức độ khó 4; in cả hai phiên bản của Op. 69 số 2).
 - Chopin, *Walzer h-moll* Op. 69 số 2, ấn bản Peters (biên tập Herrmann Scholtz), bản gõ lại của Roland Goretzki cho [Mutopia Project](https://www.mutopiaproject.org/): nguồn của đoạn trích, số ô, sắc thái và dấu bàn đạp nêu trên trang này.
-- Jean-Jacques Eigeldinger, *Chopin: Pianist and Teacher as Seen by His Pupils*, Cambridge University Press, 1986 (rubato, cách dạy của Chopin).
+- Carl Mikuli, lời tựa ấn bản *Pianoforte-Werke* của Chopin (Kistner, Leipzig, 1879), [Internet Archive](https://archive.org/details/gb-lam-0156896) (rubato: tay đệm giữ nhịp).
 - Chopin, Ấn bản Quốc gia Ba Lan (*Wydanie Narodowe*), biên tập Jan Ekier. Bản nhạc: [IMSLP](https://imslp.org/). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

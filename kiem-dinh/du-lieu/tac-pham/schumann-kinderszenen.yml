@@ -1,60 +1,182 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/schumann-kinderszenen
 ban_ghi: tac-pham/schumann-kinderszenen
-ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/schumann-kinderszenen.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh. Bản ghi có cap trỏ sang piano/tac-pham/schumann-traumerei (cấu trúc, ngoài phạm vi)."
+ghi_chu: 'loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/schumann-kinderszenen.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh. Bản ghi có cap trỏ sang piano/tac-pham/schumann-traumerei (cấu trúc, ngoài phạm vi). Lần 2 (D6-L4, lượt 1 phần B): nhận định n4–n11 cho các trường chưa khóa (thoi_ky, luyen_nghe, hinh, ban_thu). Không sửa.'
 lan:
-  - so: 1
-    ngay: 2026-10-24
-    nhanh: moi/d2-0-du-lieu
-    ma_bam: sha256:b8087818696a7315c6c3c8faa1dddae5312dfba1a54445f8f2ac37f05d6d7b20
-    nguoi:
-      luot_1: Claude Sonnet 5.5 (D2-0 phần B)
-      luot_2: Claude Sonnet 5.5 (D2-0 lượt 2 phần B)
-      review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
-      kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
-    truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
-  - so: 2
-    ngay: null
-    nhanh: moi/d6-l4
-    ma_bam: null
-    nguoi:
-      luot_1: null
-      luot_2: null
-      review: null
-      kiem_mau: null
+- so: 1
+  ngay: 2026-10-24
+  nhanh: moi/d2-0-du-lieu
+  ma_bam: sha256:b8087818696a7315c6c3c8faa1dddae5312dfba1a54445f8f2ac37f05d6d7b20
+  nguoi:
+    luot_1: Claude Sonnet 5.5 (D2-0 phần B)
+    luot_2: Claude Sonnet 5.5 (D2-0 lượt 2 phần B)
+    review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
+    kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
+  truong:
+  - chang
+  - danh_muc
+  - gan_cho
+  - goi_y
+  - grade
+  - khuyet_danh
+  - loai
+  - tac_gia
+  - ten
+- so: 2
+  ngay: '2026-11-05'
+  nhanh: moi/d6-l4
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Opus 5.5 (D6-L4 phần B)
+    luot_2: null
+    review: null
+    kiem_mau: null
 nguon:
-  - id: imslp
-    bac: 2
-    ten: IMSLP, Kinderszenen, Op.15 (Schumann, Robert)
-    link: https://imslp.org/wiki/Kinderszenen,_Op.15_(Schumann,_Robert)
-  - id: henle
-    bac: 2
-    ten: G. Henle Verlag, Scenes from Childhood op. 15 (HN 44)
-    link: https://www.henle.de/Scenes-from-Childhood-op.-15/HN-44
+- id: imslp
+  bac: 2
+  ten: IMSLP, Kinderszenen, Op.15 (Schumann, Robert)
+  link: https://imslp.org/wiki/Kinderszenen,_Op.15_(Schumann,_Robert)
+- id: henle
+  bac: 2
+  ten: G. Henle Verlag, Scenes from Childhood op. 15 (HN 44)
+  link: https://www.henle.de/Scenes-from-Childhood-op.-15/HN-44
+- id: peters-ia
+  bac: 1
+  ten: 'Rob. Schumann''s Werke für Pianoforte solo, Bd. 1 (C. F. Peters, [188-?]), Kinderscenen (Internet Archive robschumannswerk01schu, ảnh trang): Träumerei "M.M. ♩ = 100", không chữ tốc độ'
+  link: https://archive.org/details/robschumannswerk01schu
+- id: mutopia-op15
+  bac: 1
+  ten: Mutopia Project, Schumann Op. 15 số 1–7 (.ly, .mid; "Leichte Stucke, 1900"; tải 05/11/2026)
+  link: https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/SchumannR/O15
+- id: commons-musopen-15
+  bac: 2
+  ten: 'Wikimedia Commons, 13 file "Robert Schumann - scenes from childhood, op. 15 - i.–xiii." (API imageinfo một lần cho 13 file: Public domain, Credit musopen.com, thời lượng từng file)'
+  link: https://commons.wikimedia.org/wiki/File:Robert_Schumann_-_scenes_from_childhood,_op._15_-_i._of_foreign_lands_and_peoples.ogg
+- id: henle-hn44p
+  bac: 2
+  ten: 'G. Henle Verlag, HN 44 (trang sản phẩm): 13 bài, tên theo bản in đầu'
+  link: https://www.henle.de/en/Scenes-from-Childhood-op.-15/HN-44
+- id: henle-seiffert
+  bac: 2
+  ten: 'W.-D. Seiffert, "From deep sleep to MM 100" (Henle, 2010): Träumerei "exactly in the middle of the 13"'
+  link: https://www.henle.de/media/0a/2b/f0/1687445046/essay_traeumerei.pdf
 nhan_dinh:
-  - id: n1
-    cau: Tên «Kinderszenen» chỉ chu trình 13 tiểu phẩm piano Kinderszenen (Scenes from Childhood) của Schumann.
-    loai: ten
-    truong: [ ten ]
-    nguon: [ imslp, henle ]
-    ket_qua: dung
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Kinderszenen,_Op.15_(Schumann,_Robert)", https://www.henle.de/Scenes-from-Childhood-op.-15/HN-44, https://id.loc.gov/authorities/names/n81089313.json ]
-    luot_2_ghi_chu: "IMSLP: Kinderszenen, Op.15, '13 pieces' (1838), piano. Henle HN 44: 'Scenes from Childhood op. 15'. LoC n81089313 (Grove): 'op. 15, Kinderscenen: leichte Stücke für das Pianoforte, 1838'."
-  - id: n2
-    cau: Tác giả là Robert Schumann.
-    loai: lich-su
-    truong: [ tac_gia ]
-    nguon: [ imslp, henle ]
-    ket_qua: dung
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Kinderszenen,_Op.15_(Schumann,_Robert)", https://www.henle.de/Scenes-from-Childhood-op.-15/HN-44, https://id.loc.gov/authorities/names/n81089313.json ]
-    luot_2_ghi_chu: "IMSLP composer field: Schumann, Robert. Henle: Robert Schumann. LoC heading 'Schumann, Robert, 1810-1856. Kinderscenen'."
-  - id: n3
-    cau: Op. 15 là số opus của Kinderszenen.
-    loai: danh-muc
-    truong: [ danh_muc ]
-    nguon: [ imslp, henle ]
-    ket_qua: dung
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Kinderszenen,_Op.15_(Schumann,_Robert)", https://www.henle.de/Scenes-from-Childhood-op.-15/HN-44, https://id.loc.gov/authorities/names/n81089313.json ]
-    luot_2_ghi_chu: "IMSLP Op./Cat. No. = Op.15. Henle 'op. 15'. LoC (New Grove / MGG): 'op. 15: Kinderszenen'."
+- id: n1
+  cau: Tên «Kinderszenen» chỉ chu trình 13 tiểu phẩm piano Kinderszenen (Scenes from Childhood) của Schumann.
+  loai: ten
+  truong:
+  - ten
+  nguon:
+  - imslp
+  - henle
+  ket_qua: dung
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/Kinderszenen,_Op.15_(Schumann,_Robert)
+  - https://www.henle.de/Scenes-from-Childhood-op.-15/HN-44
+  - https://id.loc.gov/authorities/names/n81089313.json
+  luot_2_ghi_chu: 'IMSLP: Kinderszenen, Op.15, ''13 pieces'' (1838), piano. Henle HN 44: ''Scenes from Childhood op. 15''. LoC n81089313 (Grove): ''op. 15, Kinderscenen: leichte Stücke für das Pianoforte, 1838''.'
+- id: n2
+  cau: Tác giả là Robert Schumann.
+  loai: lich-su
+  truong:
+  - tac_gia
+  nguon:
+  - imslp
+  - henle
+  ket_qua: dung
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/Kinderszenen,_Op.15_(Schumann,_Robert)
+  - https://www.henle.de/Scenes-from-Childhood-op.-15/HN-44
+  - https://id.loc.gov/authorities/names/n81089313.json
+  luot_2_ghi_chu: 'IMSLP composer field: Schumann, Robert. Henle: Robert Schumann. LoC heading ''Schumann, Robert, 1810-1856. Kinderscenen''.'
+- id: n3
+  cau: Op. 15 là số opus của Kinderszenen.
+  loai: danh-muc
+  truong:
+  - danh_muc
+  nguon:
+  - imslp
+  - henle
+  ket_qua: dung
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/Kinderszenen,_Op.15_(Schumann,_Robert)
+  - https://www.henle.de/Scenes-from-Childhood-op.-15/HN-44
+  - https://id.loc.gov/authorities/names/n81089313.json
+  luot_2_ghi_chu: 'IMSLP Op./Cat. No. = Op.15. Henle ''op. 15''. LoC (New Grove / MGG): ''op. 15: Kinderszenen''.'
+- id: n4
+  cau: 'Thời kỳ: Lãng mạn.'
+  loai: lich-su
+  truong:
+  - thoi_ky
+  nguon:
+  - imslp
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Piece Style Romantic.'
+- id: n5
+  cau: 'Luyện nghe: tập tiểu phẩm, chu trình 13 cảnh.'
+  loai: so-lieu
+  truong:
+  - luyen_nghe
+  nguon:
+  - imslp
+  - henle-hn44p
+  ket_qua: dung
+  ghi_chu: 'IMSLP: 13 pieces.'
+- id: n6
+  cau: 'Hình, chú thích: 13 cảnh nhỏ; Träumerei nằm đúng giữa.'
+  loai: so-lieu
+  truong:
+  - hinh
+  nguon:
+  - henle-seiffert
+  - imslp
+  ket_qua: dung
+  ghi_chu: 'Seiffert: "exactly in the middle of the 13". Màu (xanh dương giọng trưởng, đỏ giọng thứ, xanh lá Träumerei, xám lời kết) là cách vẽ của site.'
+- id: n7
+  cau: 'Hình, giọng 13 cảnh: 1 Sol trưởng, 2 Rê trưởng, 3 Si thứ, 4 Rê trưởng, 5 Rê trưởng, 6 La trưởng, 7 Fa trưởng, 8 Fa trưởng, 9 Đô trưởng, 10 Sol♯ thứ, 11 Mi thứ / Sol trưởng, 12 Mi thứ, 13 Sol trưởng.'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon: &id001
+  - peters-ia
+  - mutopia-op15
+  ket_qua: dung
+  ghi_chu: Như hồ sơ trang n21 (Mutopia số 1–7, Peters số 8–13). Tên tiếng Việt từng cảnh là lựa chọn của site.
+- id: n8
+  cau: 'Hình, ghi chú: chu trình mở và khép ở Sol trưởng; ba bản giọng thứ dồn về gần cuối (10–12), ngay trước lời kết.'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Số 1, 13 Sol trưởng; số 10, 11, 12 giọng thứ liền nhau (số 3 cũng giọng thứ, ở đầu).
+- id: n9
+  cau: 'Bản thu: Musopen, phạm vi công cộng; trang Commons của phần 1.'
+  loai: ten
+  truong:
+  - ban_thu
+  nguon:
+  - commons-musopen-15
+  ket_qua: dung
+  ghi_chu: 'Commons API: cả 13 file Public domain, Credit musopen.com, Artist "see Musopen for performance author information".'
+- id: n10
+  cau: 'Bản thu, tên 13 phần: 1. Von fremden Ländern und Menschen … 13. Der Dichter spricht (tên Đức, đúng thứ tự file i.–xiii.).'
+  loai: ten
+  truong:
+  - ban_thu
+  nguon:
+  - commons-musopen-15
+  - imslp
+  ket_qua: dung
+  ghi_chu: Tên file Commons (i. of foreign lands and peoples … xiii. the poet speaks) khớp thứ tự tên Đức của IMSLP.
+- id: n11
+  cau: 'Bản thu, độ dài 13 phần (giây): 111,88; 97,23; 37,17; 82,86; 89,94; 60,03; 203,0; 72,59; 43,99; 117,42; 122,51; 121,47; 164,78.'
+  loai: so-lieu
+  truong:
+  - ban_thu
+  nguon:
+  - commons-musopen-15
+  ket_qua: dung
+  ghi_chu: 'Commons API duration (làm tròn 2 chữ số): 111,882; 97,228; 37,172; 82,860; 89,940; 60,029; 202,998; 72,594; 43,990; 117,420; 122,514; 121,469; 164,780: khớp cả 13.'
