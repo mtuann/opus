@@ -12,6 +12,15 @@ lan:
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
+  - so: 2
+    ngay: '2026-11-06'
+    nhanh: moi/d6-l10
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5, agent con, D6-L10 phần A
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: imslp
     bac: 2
@@ -21,6 +30,38 @@ nguon:
     bac: 2
     ten: Beethoven-Haus Bonn, Symphony no. 5 (C minor) op. 67
     link: https://www.beethoven.de/en/work/view/6260401733894144
+  - id: imslp-2
+    bac: 2
+    ten: 'IMSLP, Symphony No.5, Op.67: "Allegro con brio (c, 502 bars)", "Andante con moto (Ab, 247 bars)", "Scherzo. Allegro (c) - Trio (C, 374 bars)", "Allegro (C, 446 bars)"; Piece Style Classical (wikitext qua api.php, 06/11/2026)'
+    link: https://imslp.org/wiki/Symphony_No.5,_Op.67_(Beethoven,_Ludwig_van)
+  - id: eulenburg
+    bac: 1
+    ten: 'Tổng phổ Symphony No. 5, Op. 67, Edition Eulenburg No. 402 (E.E. 3602), Max Unger hiệu đính; bản quét Internet Archive symphonyno5cmino0000unse. Chương 3 kết bằng "Attacca" (tr. 70)'
+    link: https://archive.org/details/symphonyno5cmino0000unse
+  - id: bhso
+    bac: 2
+    ten: 'Burgess Hill Symphony Orchestra, chú giải Beethoven: Symphony No. 5 (motto "permeate[s] virtually the entire piece"; chương 2 "variations based on two separate themes"; chương 3 "scherzo and trio in the key of C minor"; chương 4 "sonata principle movement, in the key of C major"; "the triumphant final allegro")'
+    link: https://www.bhso.org.uk/work/beethoven-symphony-no-5/
+  - id: bpo
+    bac: 2
+    ten: 'Buffalo Philharmonic Orchestra, chú giải chương trình Symphony No. 5: coda "serves as another, entirely new section of development"; cuối chương 3 "the barely audible motive pulsates in the timpani to make way for the fortissimo finale"'
+    link: https://audienceaccess.co/bio/BPO-124205
+  - id: dg-beethoven
+    bac: 2
+    ten: 'Deutsche Grammophon, Ludwig van Beethoven (tiểu sử): "a massive leap from Classicism to Romanticism"'
+    link: https://www.deutschegrammophon.com/en/composers/ludwig-van-beethoven
+  - id: cambridge-hoffmann
+    bac: 2
+    ten: 'Eighteenth-Century Music (Cambridge), "Hoffmann''s Musical Modernity and the Pursuit of Sentimental Unity": chú thích 86 dẫn Dahlhaus gọi bài điểm Giao hưởng số 5 của Hoffmann (1810) là "the founding document of musical romanticism"'
+    link: https://cambridge.org/core/journals/eighteenth-century-music/article/hoffmanns-musical-modernity-and-the-pursuit-of-sentimental-unity/E45A400318CB16EBE42EC1693683B645
+  - id: mb-kleiber
+    bac: 2
+    ten: 'MusicBrainz, DG 2530 516 (Kleiber, Wiener Philharmoniker, thu 1974): bốn track 7:15, 9:54, 4:57, 10:53'
+    link: https://musicbrainz.org/release/bb934503-6cd8-4942-8144-aa9609795c40
+  - id: mb-karajan
+    bac: 2
+    ten: 'MusicBrainz, DG 423 203-2 (Karajan, Berliner Philharmoniker): bốn track 7:18, 10:04, 4:54, 9:05'
+    link: https://musicbrainz.org/release/b5859bac-f18f-30f2-9f1c-44af4ccb75cf
 nhan_dinh:
   - id: n1
     cau: Tên «Giao hưởng số 5» chỉ Giao hưởng số 5 cung Đô thứ của Beethoven.
@@ -49,3 +90,66 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Symphony_No.5,_Op.67_(Beethoven,_Ludwig_van)", https://www.beethoven.de/en/work/view/6260401733894144/Symphony+no.+5+(C+minor)+op.+67, https://id.loc.gov/authorities/names/n81072943.json ]
     luot_2_ghi_chu: IMSLP Op./Cat. No. = Op.67 (C minor). Beethoven-Haus 'op. 67'. LoC 'no. 5, op. 67, C minor'.
+  - id: n4
+    cau: 'Thời kỳ: Cổ điển → Lãng mạn (chuyển tiếp).'
+    loai: lich-su
+    truong: [ thoi_ky ]
+    nguon: [ imslp-2, dg-beethoven, cambridge-hoffmann ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Piece Style "Classical". DG: Beethoven là bước "from Classicism to Romanticism" (từ Eroica, trước Giao hưởng số 5). Bài điểm Giao hưởng số 5 của Hoffmann (1810): Dahlhaus gọi là "the founding document of musical romanticism". Khớp nhãn "Cổ điển/Lãng mạn" của nha-soan-nhac.yml (đã khóa). Khác beethoven-pathetique (review D6-L5 chọn "Cổ điển" cho Op. 13, tác phẩm sớm); Giao hưởng số 5 thuộc giai đoạn giữa và có nguồn riêng cho ý Lãng mạn.'
+  - id: n5
+    cau: 'Luyện nghe: phát triển môtip.'
+    loai: cau-truc
+    truong: [ luyen_nghe ]
+    nguon: [ eulenburg, bhso, bpo ]
+    ket_qua: dung
+    ghi_chu: 'Tổng phổ chương 1: môtip bốn nốt chồng ở các bè dây (ô 6–21), mở rộng ở horn (ô 59–62), làm nền cho chủ đề 2, chia nhỏ tới hợp âm đơn lẻ ở phần phát triển (khoảng ô 228–239); horn nhắc nhịp môtip ở chương 3 (ô 19). BHSO: motto "permeate[s] virtually the entire piece"; BPO: coda như một phần phát triển mới.'
+  - id: n6
+    cau: 'Hình cấu trúc, chú thích: Giao hưởng số 5 là hành trình từ Đô thứ đến Đô trưởng.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ imslp-2, bhso ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: chương 1 "c", chương 4 "C". BHSO: chương 4 "in the key of C major", "the triumphant final allegro".'
+  - id: n7
+    cau: 'Hình cấu trúc, ô I: Allegro con brio, Đô thứ, hình thức sonata.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ imslp-2, eulenburg ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Allegro con brio (c, 502 bars)". Tổng phổ: trình bày ô 1–124 (có dấu nhắc lại), phát triển, tái hiện (oboe Adagio ô 268), coda.'
+  - id: n8
+    cau: 'Hình cấu trúc, ô II: Andante con moto, La♭ trưởng, biến tấu.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ imslp-2, bhso ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Andante con moto (Ab, 247 bars)". BHSO: "a set of orchestral variations based on two separate themes".'
+  - id: n9
+    cau: 'Hình cấu trúc, ô III: Scherzo, Đô thứ.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ imslp-2, eulenburg, bhso ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Scherzo. Allegro (c) - Trio (C)"; tổng phổ chỉ ghi "Allegro" ở đầu chương; BHSO: "a scherzo and trio in the key of C minor".'
+  - id: n10
+    cau: 'Hình cấu trúc, ô IV: Allegro, Đô trưởng.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ imslp-2, bhso ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Allegro (C, 446 bars)".'
+  - id: n11
+    cau: 'Hình cấu trúc, ghi chú: chương III nối thẳng sang chương IV (attacca).'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ eulenburg, bpo ]
+    ket_qua: dung
+    ghi_chu: 'Tổng phổ tr. 70: "Attacca" cuối chương 3. BPO: timpani "make way for the fortissimo finale".'
+  - id: n12
+    cau: 'Hình cấu trúc: độ rộng các ô (I 1; II 1,3; III 0,9; IV 1,4) theo gần đúng thời lượng các chương: chương 3 ngắn nhất, chương 2 và chương 4 dài hơn chương 1.'
+    loai: so-lieu
+    truong: [ hinh ]
+    nguon: [ mb-kleiber, mb-karajan ]
+    ket_qua: dung
+    ghi_chu: 'Kleiber: 7:15, 9:54, 4:57, 10:53 (tỉ lệ 1; 1,37; 0,68; 1,50). Karajan: 7:18, 10:04, 4:54, 9:05 (1; 1,38; 0,67; 1,24). Thứ tự ngắn dài đúng; ô III vẽ 0,9 rộng hơn tỉ lệ thật (khoảng 0,7), chu_thich không nói hình theo thời lượng nên không ghi là sai. Người giao có thể đổi 0.9 thành 0.7 nếu muốn hình sát thời lượng.'

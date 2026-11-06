@@ -12,6 +12,15 @@ lan:
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
+  - so: 2
+    ngay: '2026-11-06'
+    nhanh: moi/d6-l10
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5, agent con, D6-L10 phần A
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: imslp
     bac: 2
@@ -21,6 +30,22 @@ nguon:
     bac: 2
     ten: Beethoven-Haus Bonn, Quartet for 2 violins, viola and violoncello (A minor) op. 132
     link: https://www.beethoven.de/en/work/view/5899899358937088/Quartet+for+2+violins,+viola+and+violoncello+(A+minor)+op.+132
+  - id: imslp-late
+    bac: 2
+    ten: 'IMSLP, Template:String Quartets (Beethoven, Ludwig van): mục "Late Quartets" (Op. 127, 130, 133, 131, 132, 135) (wikitext qua api.php)'
+    link: https://imslp.org/wiki/Template:String_Quartets_(Beethoven,_Ludwig_van)
+  - id: cooper-cmslc
+    bac: 2
+    ten: 'Barry Cooper, chú giải "Beethoven: String Quartet No. 15 in A minor, Op. 132", Chamber Music Society of Lincoln Center'
+    link: https://www.chambermusicsociety.org/about-the-music/compositions/beethoven-op-132
+  - id: tong-pho-ga
+    bac: 1
+    ten: 'Tổng phổ Beethoven Werke (Breitkopf & Härtel, Serie 6, Nr. 51, 1863; bản in lại Dover), Internet Archive imslp-quartet-no15-op132-beethoven-ludwig-van, trang PDF 15–21'
+    link: https://archive.org/details/imslp-quartet-no15-op132-beethoven-ludwig-van
+  - id: omt-modes
+    bac: 2
+    ten: 'Open Music Theory, Diatonic Modes (đọc qua Wayback 2025)'
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/diatonic-modes/
 nhan_dinh:
   - id: n1
     cau: Tên «Tứ tấu Op. 132, chương 3» chỉ chương 3 («Heiliger Dankgesang», Molto adagio) của Tứ tấu đàn dây số 15 cung La thứ.
@@ -50,3 +75,45 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/String_Quartet_No.15,_Op.132_(Beethoven,_Ludwig_van)", "https://www.beethoven.de/en/work/view/5899899358937088/Quartet+for+2+violins,+viola+and+violoncello+(A+minor)+op.+132", https://id.loc.gov/authorities/names/no91026359.json ]
     luot_2_ghi_chu: IMSLP Op./Cat. No. = Op.132 (String Quartet No.15, A minor). Beethoven-Haus 'op. 132'. LoC 'no. 15, op. 132, A minor'.
+  - id: n4
+    cau: 'Thời kỳ: Beethoven cuối đời.'
+    loai: lich-su
+    truong: [ thoi_ky ]
+    nguon: [ imslp-late, cooper-cmslc, beethoven-haus ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP xếp Op. 132 vào "Late Quartets"; Cooper: "Beethoven''s other late quartets"; Beethoven-Haus: sáng tác đầu 1825 – tháng 7/1825 (Beethoven mất 1827).'
+  - id: n5
+    cau: 'Luyện nghe: điệu thức Lydian, nhạc thính phòng.'
+    loai: cau-truc
+    truong: [ luyen_nghe ]
+    nguon: [ beethoven-haus, cooper-cmslc, imslp ]
+    ket_qua: dung
+    ghi_chu: 'Tiêu đề chương "in der lydischen Tonart" (Beethoven-Haus); Cooper: Lydian là Fa trưởng có Si tự nhiên; IMSLP: 2 violins, viola, cello (tứ tấu đàn dây, nhạc thính phòng theo thuat-ngu.yml chamber-music).'
+  - id: n6
+    cau: 'Hình nghe: chú thích "Tứ tấu Op. 132, chương 3"; năm ô theo thứ tự A – B – A'' – B'' – A''''.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ beethoven-haus, cooper-cmslc, tong-pho-ga ]
+    ket_qua: dung
+    ghi_chu: 'Beethoven-Haus: "Molto adagio - Neue Kraft fühlend. Andante - Molto adagio - Andante - Molto adagio. Mit innigster Empfindung"; Cooper: thánh ca và hai biến tấu luân phiên với hai đoạn Rê trưởng. Độ rộng ô và màu là lựa chọn trình bày, không phải nhận định.'
+  - id: n7
+    cau: 'Ô A: thánh ca, Lydian.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ cooper-cmslc, omt-modes, tong-pho-ga ]
+    ket_qua: dung
+    ghi_chu: 'Cooper: "very slow chorale in block chords", tiêu đề "in der lydischen Tonart"; tổng phổ: không dấu hóa ở hóa biểu, kết trên Fa.'
+  - id: n8
+    cau: 'Ô B: "sức lực mới", Rê trưởng.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ beethoven-haus, cooper-cmslc, tong-pho-ga ]
+    ket_qua: dung
+    ghi_chu: '"Neue Kraft fühlend" (cảm thấy sức lực mới); Cooper: "in the contrasting key of D major"; tổng phổ: hóa biểu hai dấu thăng, 3/8.'
+  - id: n9
+    cau: 'Ô A'''': "cảm xúc sâu thẳm nhất".'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ beethoven-haus, tong-pho-ga ]
+    ket_qua: dung
+    ghi_chu: 'Phần cuối ghi "Mit innigster Empfindung" (Beethoven-Haus; tổng phổ tr. PDF 20).'

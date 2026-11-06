@@ -12,6 +12,15 @@ lan:
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
+  - so: 2
+    ngay: '2026-11-06'
+    nhanh: moi/d6-l10
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5, agent con, D6-L10 phần B
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: imslp
     bac: 2
@@ -25,6 +34,22 @@ nguon:
     bac: 2
     ten: BnF data (data.bnf.fr), Erlkönig. D 328 (chỉ có tiêu đề tác phẩm)
     link: https://data.bnf.fr/en/ark:/12148/cb139109809
+  - id: imslp-erl
+    bac: 2
+    ten: 'IMSLP, Erlkönig, D.328 (Schubert, Franz), wikitext qua api.php: D.328 ; Op.1; Key g; Schnell; Year/Date of Composition 1815; in 1821 Vienna: Diabelli & Cappi (bản thứ 4); Average Duration 4 minutes; lời Goethe; Piece Style Romantic; Instrumentation voice, piano; Tags lieder'
+    link: https://imslp.org/wiki/Erlk%C3%B6nig,_D.328_(Schubert,_Franz)
+  - id: imslp-schubert
+    bac: 2
+    ten: 'IMSLP, Category:Schubert, Franz (wikitext qua api.php): sinh 31/1/1797, mất 19/11/1828; Time Period Romantic'
+    link: https://imslp.org/wiki/Category:Schubert,_Franz
+  - id: peters-erl
+    bac: 1
+    ten: 'Schubert-Album, Sammlung der Lieder für eine Singstimme mit Pianofortebegleitung, Band I (Max Friedlaender biên tập), Leipzig: C. F. Peters, khoảng 1890, Internet Archive schubertalbumsam00schu_0: Erlkönig Op. 1, tr. 170–175, «Schnell (♩ = 152)», C (4/4), hai giáng; chú giải tr. 263: «Komponiert 1815 (in Schuberts 19. Lebensjahre)»'
+    link: https://archive.org/details/schubertalbumsam00schu_0
+  - id: lumen-erl
+    bac: 2
+    ten: "Lumen Learning, Music Appreciation (Tidewater Community College, giáo trình mở), chương Art Song: «The four characters … are usually all sung by a single vocalist with each character's part placed in a different vocal range»; Narrator «middle range», Father «low range, calming», Son «high range», mỗi lần «Mein Vater» «one step higher»; Erlking «major mode … softer dynamic»; tay phải liên ba «simulate the horse's galloping … throughout the whole piece, up until the last three bars»; tay trái «low-register leitmotif composed of successive triplets … dark and ominous»; «through-composed»"
+    link: https://courses.lumenlearning.com/vccs-tcc-music-rford/chapter/art-song
 nhan_dinh:
   - id: n1
     cau: "Tên «Erlkönig» đúng: tác phẩm Erlkönig của Schubert."
@@ -54,3 +79,17 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Erlk%C3%B6nig,_D.328_(Schubert,_Franz)", https://id.loc.gov/authorities/names/n97082928.json ]
     luot_2_ghi_chu: "IMSLP Op./Cat. No. = D.328 ; Op.1. LoC (New Grove): 'D. 328, Erlkönig'."
+  - id: n4
+    cau: 'Thời kỳ: Lãng mạn.'
+    loai: lich-su
+    truong: [ thoi_ky ]
+    nguon: [ imslp-erl, imslp-schubert ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Erlkönig «Piece Style Romantic»; Schubert «Time Period Romantic».'
+  - id: n5
+    cau: 'Luyện nghe: ca khúc nghệ thuật, một ca sĩ bốn vai.'
+    loai: cau-truc
+    truong: [ luyen_nghe ]
+    nguon: [ imslp-erl, lumen-erl, peters-erl ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: voice, piano, tag lieder; Lumen: bốn nhân vật «usually all sung by a single vocalist»; bản Peters chỉ có một dòng giọng hát cho cả bốn vai.'

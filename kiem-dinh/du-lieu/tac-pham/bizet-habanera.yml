@@ -12,6 +12,15 @@ lan:
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
+  - so: 2
+    ngay: '2026-11-06'
+    nhanh: moi/d6-l10
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5, agent con, D6-L10 phần B
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: imslp
     bac: 2
@@ -21,6 +30,26 @@ nguon:
     bac: 2
     ten: "Chandos (phát hành Naxos Historical), Bizet: Carmen (Michel, Jobin, 1950), HH 0238"
     link: https://www.chandos.net/products/catalogue/HH%200238
+  - id: imslp-carmen
+    bac: 2
+    ten: "IMSLP, Carmen (Bizet, Georges), wikitext qua api.php: Act I số 4 «Habanera: L'amour est un oiseau rebelle»; First Performance 1875/03/03 Paris: Opéra-Comique (Favart); Year/Date of Composition 1873-74; Related Works «El arreglito (Yradier) (basis of the Habanera)»; Cast «Carmen (mezzo-soprano)»; Piece Style Romantic"
+    link: https://imslp.org/wiki/Carmen_(Bizet,_Georges)
+  - id: imslp-bizet
+    bac: 2
+    ten: 'IMSLP, Category:Bizet, Georges (wikitext qua api.php): sinh 25/10/1838, mất 3/6/1875; Time Period Romantic'
+    link: https://imslp.org/wiki/Category:Bizet,_Georges
+  - id: choudens
+    bac: 1
+    ten: 'Bizet, Carmen, partition chant et piano (bản lời Ý–Đức), Paris: Choudens, khoảng 1900, 375 tr., Internet Archive carmenopraen4act00bize: số 5 «Avanera», tr. 45–55, Allegretto quasi andantino (♩ = 72), 2/4, Rê thứ rồi Rê trưởng'
+    link: https://archive.org/details/carmenopraen4act00bize
+  - id: schirmer
+    bac: 1
+    ten: 'Bizet, Carmen, opera in four acts, vocal score (Pháp–Anh), New York: G. Schirmer, 1895, Internet Archive carmenoperainfou00bize: tr. đầu «First performed at the Opéra-Comique, Paris, March 3, 1875», danh sách vai (Don José, Corporal of Dragoons; Carmen, a Gypsy-girl; Act I «A Public Square in Sevilla»), tóm tắt cốt truyện; No. 5 Habanera tr. 44–54, chú thích «Imitated from a Spanish song»'
+    link: https://archive.org/details/carmenoperainfou00bize
+  - id: cod-habanera
+    bac: 2
+    ten: 'Concise Oxford Dictionary of Music, mục «habanera» (encyclopedia.com): «Slow Cuban (orig. African) song and dance … in simple duple time and dotted rhythm»; habanera trong Carmen «an adaptation of a popular song by Yradier»'
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/habanera
 nhan_dinh:
   - id: n1
     cau: Tên «Habanera» chỉ aria Habanera («L'amour est un oiseau rebelle») ở màn 1 của opera Carmen.
@@ -41,3 +70,24 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Carmen_(Bizet,_Georges)", https://id.loc.gov/authorities/names/n81118710.json ]
     luot_2_ghi_chu: "IMSLP composer field: Bizet, Georges. LoC heading 'Bizet, Georges, 1838-1875. Carmen. Habanera'. (IMSLP notes the Habanera melody is based on Yradier's 'El arreglito'; Bizet is still the composer of the number as it stands in Carmen.)"
+  - id: n3
+    cau: 'Thời kỳ: Lãng mạn.'
+    loai: lich-su
+    truong: [ thoi_ky ]
+    nguon: [ imslp-carmen, imslp-bizet ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Carmen «Piece Style Romantic»; Bizet «Time Period Romantic».'
+  - id: n4
+    cau: 'Luyện nghe: opera, tiết tấu habanera.'
+    loai: cau-truc
+    truong: [ luyen_nghe ]
+    nguon: [ imslp-carmen, cod-habanera, choudens ]
+    ket_qua: dung
+    ghi_chu: 'Habanera là aria trong opera Carmen (IMSLP); bè trầm dùng tiết tấu habanera suốt bài (Choudens tr. 45–55; COD: tiết tấu chấm dôi nhịp đôi).'
+  - id: n5
+    cau: 'Hình cấu trúc (hinh.nghe): Habanera có hai lời, mỗi lời theo sau bằng điệp khúc có hợp xướng: Lời 1 (Carmen), Điệp khúc (+ hợp xướng), Lời 2 (Carmen), Điệp khúc (+ hợp xướng).'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ schirmer, choudens ]
+    ket_qua: dung
+    ghi_chu: "Schirmer tr. 44–54: lời 1 «L'amour est un oiseau rebelle» (Carmen một mình, Rê thứ); điệp khúc Rê trưởng với soprano, tenor, bass («Prends garde à toi!»); lời 2 «L'oiseau que tu croyais surprendre»; điệp khúc 2, kết cùng hợp xướng. Độ dài ô tương đối (1, 1, 1, 1) là lựa chọn vẽ của site."

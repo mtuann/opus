@@ -12,6 +12,15 @@ lan:
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
+  - so: 2
+    ngay: '2026-11-06'
+    nhanh: moi/d6-l10
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5, agent con, D6-L10 phần A
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: imslp
     bac: 2
@@ -21,6 +30,26 @@ nguon:
     bac: 2
     ten: G. Henle Verlag, Violin Concerto e minor op. 64 (HN 720)
     link: https://www.henle.de/en/Violin-Concerto-e-minor-op.-64/HN-720
+  - id: imslp-2
+    bac: 2
+    ten: 'IMSLP, Violin Concerto, Op.64 (Mendelssohn, Felix) (wikitext qua api.php, 06/11/2026): Piece Style Romantic; 3 chương Allegro molto appassionato, Andante - Allegretto non troppo, Allegro molto vivace'
+    link: https://imslp.org/wiki/Violin_Concerto,_Op.64_(Mendelssohn,_Felix)
+  - id: ia-score
+    bac: 1
+    ten: 'Breitkopf & Härtel, Partitur-Bibliothek, Konzert für die Violine op. 64, Part. B. 480 (tổng phổ; Internet Archive ldpd_11898794_000)'
+    link: https://archive.org/details/ldpd_11898794_000
+  - id: bso
+    bac: 2
+    ten: 'Boston Symphony Orchestra, chú giải Violin Concerto in E minor, Opus 64 (Steven Ledbetter)'
+    link: https://www.bso.org/works/mendelssohn-violin-concerto
+  - id: cle
+    bac: 2
+    ten: 'The Cleveland Orchestra, chú giải Violin Concerto (Peter Laki)'
+    link: https://www.clevelandorchestra.com/works/violin-concerto-mendelssohn
+  - id: indy
+    bac: 2
+    ten: 'Indianapolis Symphony Orchestra, chú giải Mendelssohn: Concerto in E Minor'
+    link: https://www.indianapolissymphony.org/backstage/program-notes/mendelssohn-concerto-in-e-minor/
 nhan_dinh:
   - id: n1
     cau: Tên «Concerto violin» chỉ Concerto cho violin cung Mi thứ của Mendelssohn.
@@ -51,3 +80,59 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Violin_Concerto,_Op.64_(Mendelssohn,_Felix)", https://id.loc.gov/authorities/names/n91030067.json ]
     luot_2_ghi_chu: IMSLP Op./Cat. No. = Op.64 ; MWV O 14 (E minor). LoC 'op. 64, E minor'.
+  - id: n4
+    cau: 'Thời kỳ: Lãng mạn.'
+    loai: lich-su
+    truong: [ thoi_ky ]
+    nguon: [ imslp-2 ]
+    ket_qua: dung
+    ghi_chu: IMSLP Piece Style Romantic; khớp thoi_ky của mendelssohn trong nha-soan-nhac.yml (đã khóa).
+  - id: n5
+    cau: 'Luyện nghe: concerto, cadenza đặt khác thường.'
+    loai: cau-truc
+    truong: [ luyen_nghe ]
+    nguon: [ ia-score, cle, bso ]
+    ket_qua: dung
+    ghi_chu: 'Cleveland: Mendelssohn dời cadenza "from its traditional place at the end of the movement to the middle"; BSO: "places it in the heart of the movement". Tổng phổ: "Cadenza ad libitum" ngay trước tái hiện.'
+  - id: n6
+    cau: 'Hình nghe, chú thích: Concerto violin cung Mi thứ, ba chương nối liền.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ imslp-2, ia-score, cle ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Key e, 3 chương; Cleveland: "the three movements of the concerto are played without pause"; tổng phổ: bassoon nối chương 1 sang 2, Allegretto non troppo nối sang chương 3.'
+  - id: n7
+    cau: 'Hình nghe, các ô chương 1: trình bày (violin vào ngay), phát triển, cadenza (trước tái hiện), tái hiện.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ ia-score, cle, bso ]
+    ket_qua: dung
+    ghi_chu: 'Tổng phổ: violin vào ở nửa sau ô 2; cadenza viết sẵn sau phần phát triển, dàn nhạc vào lại chủ đề chính (tái hiện) khi violin còn rải hợp âm. Cleveland: cadenza "grow organically out of the development section and naturally resolve in the recapitulation".'
+  - id: n8
+    cau: 'Hình nghe, ô nối: bassoon nối chương 1 sang chương 2.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ ia-score, bso ]
+    ket_qua: dung
+    ghi_chu: 'Tổng phổ: Fagotti giữ nốt qua chỗ dàn nhạc dừng sang Andante. BSO: "the first bassoon fails to cut off with the rest of the orchestra, but holds its note".'
+  - id: n9
+    cau: 'Hình nghe: chương II Andante ở Đô trưởng.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ ia-score, indy ]
+    ket_qua: dung
+    ghi_chu: 'Tổng phổ: Andante 6/8, không hóa biểu. Indianapolis: "an Andante in C major".'
+  - id: n10
+    cau: 'Hình nghe: một đoạn cầu nối giữa chương II và chương III.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ ia-score, indy, bso ]
+    ket_qua: dung
+    ghi_chu: 'Tổng phổ: Allegretto non troppo (Mi thứ, violin và dàn dây). Indianapolis: "Fourteen bars of transitional material"; BSO: "a brief transition".'
+  - id: n11
+    cau: 'Hình nghe: chương III Allegro (Allegro molto vivace) ở Mi trưởng.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ ia-score, imslp-2, bso ]
+    ket_qua: dung
+    ghi_chu: 'Tổng phổ: Allegro molto vivace, bốn dấu thăng. Nhãn "III. Allegro" là dạng rút gọn của chỉ dẫn tốc độ. BSO: "a return to the key of E (this time in the major mode)". Độ rộng các ô (1.2, 0.8…) và lớp màu là trình bày, không phải nhận định.'
