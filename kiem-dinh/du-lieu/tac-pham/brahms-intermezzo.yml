@@ -1,6 +1,6 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/brahms-intermezzo
 ban_ghi: tac-pham/brahms-intermezzo
-ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/brahms-intermezzo.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh."
+ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/brahms-intermezzo.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh. Lần 2 (D6-L8, lượt 1 phần A): nhận định n4–n15 cho các trường chưa khóa thoi_ky, luyen_nghe, hinh, ban_thu. Bản nhạc: bản in đầu Simrock 1893 (số bản in 10054, Internet Archive) và Mutopia (nguồn Simrock); 116 ô, không tính nốt lấy đà; ô 49–56 có dấu nhắc lại (hình đếm 8 ô, như chu_thich nói: độ dài theo số ô nhịp). PTNA 22831 chia đoạn đúng như hinh. Không có dữ liệu sai, không có mục trong file sửa; không có câu chưa chắc. Bản ghi không có chang/grade: chặng 6 của trang nghe chỉ ở piano/tac-pham-theo-cap (hồ sơ trang n52)."
 lan:
   - so: 1
     ngay: 2026-10-24
@@ -12,6 +12,15 @@ lan:
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
+  - so: 2
+    ngay: '2026-11-06'
+    nhanh: moi/d6-l8
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5, agent con, D6-L8 phần A
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: imslp
     bac: 2
@@ -21,6 +30,30 @@ nguon:
     bac: 2
     ten: G. Henle Verlag, Intermezzo A major op. 118 no. 2 (HN 1377)
     link: https://www.henle.de/en/Intermezzo-A-major-op.-118-no.-2/HN-1377
+  - id: simrock-1893
+    bac: 1
+    ten: 'Brahms, Klavierstücke Op. 118, bản in đầu, N. Simrock, Berlin [1893], số bản in 10054, bản quét của Brahms-Institut (IMSLP #23162), lưu trên Internet Archive; số 2 ở tr. 4–6'
+    link: https://archive.org/details/imslp-klavierstcke-op118-brahms-johannes
+  - id: mut-op118-2
+    bac: 1
+    ten: 'Mutopia Project, Brahms, 2. Intermezzo Op. 118 No. 2 (Aron Fay, 2013; tệp LilyPond, nguồn Simrock), đếm ô bằng chú thích "% measure" và vạch nhịp'
+    link: https://www.mutopiaproject.org/ftp/BrahmsJ/O118/intermezzo/intermezzo.ly
+  - id: ptna-22831
+    bac: 2
+    ten: 'PTNA Piano Encyclopedia, 6 Stücke Intermezzo A-Dur Op.118-2 (Yano Haruka, 2019): A (ô 1–48), B (49–76), A (77–116); B: a (49–56) Fa♯ thứ, b (57–64) Fa♯ trưởng, chất hợp xướng, a (65–76) Fa♯ thứ'
+    link: https://enc.piano.or.jp/en/musics/22831
+  - id: ptna-213
+    bac: 2
+    ten: 'PTNA Piano Encyclopedia, 6 Stücke Op.118: "One of Brahms''s very late works", sáng tác và in 1893'
+    link: https://enc.piano.or.jp/en/musics/213
+  - id: imslp-wt
+    bac: 2
+    ten: 'IMSLP, 6 Klavierstücke, Op.118 (Brahms): sáng tác 1893, in 11/1893 (Simrock), Piece Style Romantic (wikitext qua api.php)'
+    link: https://imslp.org/wiki/6_Klavierst%C3%BCcke,_Op.118_(Brahms,_Johannes)
+  - id: commons-musopen
+    bac: 2
+    ten: 'Wikimedia Commons, Johannes Brahms - klavierstucke, op. 118 - ii. intermezzo.ogg: Credit musopen.com; LicenseShortName "Public domain" (Recording: PD-author Musopen; Music: PD-old-100); duration 328,0457 giây (API imageinfo)'
+    link: https://commons.wikimedia.org/wiki/File:Johannes_Brahms_-_klavierstucke,_op._118_-_ii._intermezzo.ogg
 nhan_dinh:
   - id: n1
     cau: Tên «Intermezzo Op. 118 số 2» chỉ Intermezzo cung La trưởng (Andante teneramente), bản số 2 trong Sáu tiểu phẩm piano Op. 118.
@@ -50,3 +83,87 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/6_Klavierst%C3%BCcke,_Op.118_(Brahms,_Johannes)", https://id.loc.gov/authorities/names/n87823739.json, https://id.loc.gov/authorities/names/n83056934.json ]
     luot_2_ghi_chu: "IMSLP: Op.118 = 6 pieces (1893), no. 2 = Intermezzo in A major. LoC n83056934 (Grove): '(6) Clavierstücke, by 1893'; n87823739: Op. 118 no. 2, Intermezzo in A."
+  - id: n4
+    cau: 'Thời kỳ: Cuối Lãng mạn.'
+    loai: lich-su
+    truong: [ thoi_ky ]
+    nguon: [ imslp-wt, ptna-213 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Piece Style Romantic, sáng tác 1893; PTNA: "One of Brahms''s very late works". Site chia Lãng mạn khoảng 1820–1900 (lich-su/thoi-ky/lang-man), 1893 ở cuối.'
+  - id: n5
+    cau: 'Luyện nghe: ba đoạn, bè giữa, canon.'
+    loai: cau-truc
+    truong: [ luyen_nghe ]
+    nguon: [ ptna-22831, simrock-1893, mut-op118-2 ]
+    ket_qua: dung
+    ghi_chu: 'Ba đoạn A – B – A (PTNA); bè giữa và canon: ô 49–50 bè giữa nhắc lại bốn nốt mở đầu của bè trên (Đô♯ – Fa♯ – Mi – Rê) chậm một phách, thấp một quãng tám (hồ sơ trang n29).'
+  - id: n6
+    cau: 'Hình nghe, chú thích: Intermezzo Op. 118 số 2 có ba đoạn A – B – A; độ dài các ô theo số ô nhịp.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ ptna-22831, simrock-1893 ]
+    ket_qua: dung
+    ghi_chu: 'Tổng 48 + 8 + 8 + 12 + 40 = 116 ô, khớp bản in đầu và Mutopia (không tính nốt lấy đà). Ô 49–56 có dấu nhắc lại nên khi nghe dài gấp đôi; hình đếm số ô nhịp như chu_thich nói.'
+  - id: n7
+    cau: 'Hình nghe, A: La trưởng, ô 1–48 (48).'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ ptna-22831, simrock-1893, mut-op118-2 ]
+    ket_qua: dung
+    ghi_chu: 'PTNA: A (measures 1-48). Bản in đầu: hóa biểu ba thăng, più lento ô 46, kết ở ô 48 trước vạch nhắc lại ô 49.'
+  - id: n8
+    cau: 'Hình nghe, B: Fa♯ thứ, canon, ô 49–56 (8).'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ ptna-22831, simrock-1893, mut-op118-2 ]
+    ket_qua: dung
+    ghi_chu: 'PTNA: a (measures 49-56) Fa♯ thứ. Bản in đầu: "in tempo" và vạch nhắc lại ở ô 49, vạch nhắc lại đóng cuối ô 56. Canon: xem n5.'
+  - id: n9
+    cau: 'Hình nghe, hợp xướng: Fa♯ trưởng, ô 57–64 (8).'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ ptna-22831, simrock-1893 ]
+    ket_qua: dung
+    ghi_chu: 'PTNA: b (57-64) "modulates to F-sharp major and contains chorale elements". Bản in đầu ô 57: più lento, pp, u.c., legato.'
+  - id: n10
+    cau: 'Hình nghe, B'': Fa♯ thứ trở lại, ô 65–76 (12).'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ ptna-22831, simrock-1893 ]
+    ket_qua: dung
+    ghi_chu: 'PTNA: a (65-76) Fa♯ thứ. Bản in đầu: Tempo primo ô 65.'
+  - id: n11
+    cau: 'Hình nghe, A'': La trưởng, ô 77–116 (40).'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ ptna-22831, simrock-1893, mut-op118-2 ]
+    ket_qua: dung
+    ghi_chu: 'PTNA: A (77-116). Mutopia: vạch kết sau ô 116; bản in đầu: hợp âm rải cuối có dấu lặng.'
+  - id: n12
+    cau: 'Hình nghe, ghi chú: đoạn B tự nó cũng là ba đoạn nhỏ: Fa♯ thứ – Fa♯ trưởng – Fa♯ thứ.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ ptna-22831 ]
+    ket_qua: dung
+    ghi_chu: 'PTNA: "the B section can be subdivided into a (49-56) … F-sharp minor, b (57-64) … F-sharp major …, and a'' (65-76) which returns to F-sharp minor".'
+  - id: n13
+    cau: 'Bản thu: Musopen (người chơi không ghi tên).'
+    loai: ten
+    truong: [ ban_thu ]
+    nguon: [ commons-musopen ]
+    ket_qua: dung
+    ghi_chu: 'Commons: Credit http://www.musopen.com; Author "see Musopen for performance author information" (không ghi tên nghệ sĩ). Trường by: Musopen.'
+  - id: n14
+    cau: 'Bản thu: phạm vi công cộng; trang Wikimedia Commons của file; nguồn ogg và bản mp3 chuyển mã của Commons.'
+    loai: so-lieu
+    truong: [ ban_thu ]
+    nguon: [ commons-musopen ]
+    ket_qua: dung
+    ghi_chu: 'Commons: LicenseShortName "Public domain"; Permission: Music PD-old-100, Recording PD-author (Musopen), PermissionTicket 2008012110017088. Link page, src (upload.wikimedia.org/…/7/7e/…ogg) và mp3 (transcoded) đúng file này; người giao đã chạy check_audio.py --static --network: 0 lỗi.'
+  - id: n15
+    cau: 'Bản thu: dài 328,05 giây (khoảng 5:28).'
+    loai: so-lieu
+    truong: [ ban_thu ]
+    nguon: [ commons-musopen ]
+    ket_qua: dung
+    ghi_chu: 'Commons API: duration 328,0457 giây; d: 328.05 làm tròn đúng.'

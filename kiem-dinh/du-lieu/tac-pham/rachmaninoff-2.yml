@@ -1,6 +1,6 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/rachmaninoff-2
 ban_ghi: tac-pham/rachmaninoff-2
-ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/rachmaninoff-2.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh."
+ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/rachmaninoff-2.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh. Lần 2 (D6-L8, lượt 1 phần B): n4–n10 cho thoi_ky, luyen_nghe, hinh, ban_thu. Không có dữ liệu sai, không có câu chưa chắc."
 lan:
   - so: 1
     ngay: 2026-10-24
@@ -12,6 +12,15 @@ lan:
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: moi/d6-l8
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5, agent con, D6-L8 phần B
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: imslp
     bac: 2
@@ -21,6 +30,26 @@ nguon:
     bac: 2
     ten: G. Henle Verlag, Piano Concerto no. 2 c minor op. 18 (HN 1214)
     link: https://www.henle.de/HN-1214
+  - id: imslp-op18
+    bac: 2
+    ten: 'IMSLP, Piano Concerto No.2, Op.18 (Rachmaninoff): ba chương Moderato (c), Adagio sostenuto (E), Allegro scherzando (c – C); bản thu MusOpen "Uncredited Piano soloist, Skidmore College Orchestra / Anthony Holland" (wikitext qua api.php)'
+    link: https://imslp.org/wiki/Piano_Concerto_No.2,_Op.18_(Rachmaninoff,_Sergei)
+  - id: henle-1214
+    bac: 2
+    ten: 'G. Henle Verlag, HN 1214 Rachmaninoff, Piano Concerto no. 2: mục tác giả "continued and expanded the late-Romantic tradition"'
+    link: https://www.henle.de/en/Piano-Concerto-no.-2-c-minor-op.-18/HN-1214
+  - id: laphil
+    bac: 2
+    ten: 'LA Phil, Rachmaninoff Piano Concerto No. 2: hợp âm piano "tolling like bells for eight measures"; giai điệu chương 3 "one of his most popular melodies"'
+    link: https://www.laphil.com/works/piano-concerto-no-2-in-c-minor-op-18
+  - id: ia-tongpho-r
+    bac: 1
+    ten: 'Rachmaninoff, Piano Concerto No. 2 Op. 18, tổng phổ quét (nguồn IMSLP), Internet Archive (tr. 1: 8 ô hợp âm của piano)'
+    link: https://archive.org/details/rachmaninoff-1901-piano-concerto-no.-2-op.-18-full-score
+  - id: commons-musopen
+    bac: 2
+    ten: 'Wikimedia Commons, Sergei Rachmaninoff - piano concerto no. 2 … (ba file .ogg, Musopen): Public domain; 654,41 / 664,1 / 1152,1 giây; file chương 3 "13 minutes, then Scriabin Nocturne Op. 9, No. 2" (đọc qua API)'
+    link: https://commons.wikimedia.org/wiki/File:Sergei_Rachmaninoff_-_piano_concerto_no._2_in_c_minor,_op._18_-_i._moderato.ogg
 nhan_dinh:
   - id: n1
     cau: Tên «Concerto piano số 2» chỉ Concerto cho piano số 2 cung Đô thứ của Rachmaninoff.
@@ -49,3 +78,50 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Piano_Concerto_No.2,_Op.18_(Rachmaninoff,_Sergei)", https://id.loc.gov/authorities/names/n81147588.json ]
     luot_2_ghi_chu: IMSLP Op./Cat. No. = Op.18 (C minor). LoC 'no. 2, op. 18, C minor'.
+  - id: n4
+    cau: 'Thời kỳ: Cuối Lãng mạn.'
+    loai: lich-su
+    truong: [thoi_ky]
+    nguon: [henle-1214]
+    ket_qua: dung
+    ghi_chu: 'Henle: "continued and expanded the late-Romantic tradition"; IMSLP: Romantic.'
+  - id: n5
+    cau: 'Luyện nghe: concerto, giai điệu lớn.'
+    loai: lich-su
+    truong: [luyen_nghe]
+    nguon: [laphil]
+    ket_qua: dung
+  - id: n6
+    cau: 'Sơ đồ (hinh.nghe): ba chương; I. Moderato, Đô thứ, 8 hợp âm chuông; II. Adagio sostenuto, Mi trưởng; III. Allegro scherzando, Đô thứ → Đô trưởng.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [imslp-op18, ia-tongpho-r, laphil]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Moderato (c)", "Adagio sostenuto (E)", "Allegro scherzando (c - C)"; tổng phổ tr. 1: 8 ô hợp âm; LA Phil: "tolling like bells for eight measures". Độ dài ô 1,2 / 1,1 / 1,2 gần với thời lượng ba chương của bản thu (654 / 664 / khoảng 780 giây).'
+  - id: n7
+    cau: 'Bản thu: Skidmore College Orchestra, Anthony Holland chỉ huy (Musopen).'
+    loai: ten
+    truong: [ban_thu]
+    nguon: [imslp-op18, commons-musopen]
+    ket_qua: dung
+  - id: n8
+    cau: 'Ghi chú bản thu: không ghi tên người chơi piano; cuối file chương III còn tiếng vỗ tay và một bản bis.'
+    loai: so-lieu
+    truong: [ban_thu]
+    nguon: [imslp-op18, commons-musopen]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Uncredited Piano soloist"; Commons: "13 minutes, then Scriabin Nocturne Op. 9, No. 2".'
+  - id: n9
+    cau: 'Giấy phép bản thu: phạm vi công cộng.'
+    loai: ten
+    truong: [ban_thu]
+    nguon: [commons-musopen]
+    ket_qua: dung
+    ghi_chu: 'Commons: nhạc PD-RusEmpire/PD-old-80, bản thu {{PD-author|MusOpen}}. IMSLP ghi bản đăng ở đó là CC BY-SA 3.0; file dữ liệu dùng là file Commons, nên giữ phạm vi công cộng theo Commons.'
+  - id: n10
+    cau: 'Ba phần: I. Moderato (654,41 giây), II. Adagio sostenuto (664,1 giây), III. Allegro scherzando (1152,1 giây).'
+    loai: so-lieu
+    truong: [ban_thu]
+    nguon: [commons-musopen, imslp-op18]
+    ket_qua: dung
+    ghi_chu: 'check_audio.py --static --network của người giao: 0 lỗi.'

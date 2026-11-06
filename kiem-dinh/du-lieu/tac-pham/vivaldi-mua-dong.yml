@@ -1,6 +1,6 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/vivaldi-mua-dong
 ban_ghi: tac-pham/vivaldi-mua-dong
-ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/vivaldi-mua-dong.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh."
+ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/vivaldi-mua-dong.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh. Lần 2 (D6-L8, lượt 1 phần B): n4–n5 cho thoi_ky, luyen_nghe (bản ghi không có hinh, ban_thu). Không có dữ liệu sai. Ghi cho người giao: Commons có bản thu chương 1 của John Harrison (208,8 giây, CC BY-SA 4.0) nếu muốn thêm ban_thu."
 lan:
   - so: 1
     ngay: 2026-10-24
@@ -12,6 +12,15 @@ lan:
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: moi/d6-l8
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5, agent con, D6-L8 phần B
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: imslp-rv297
     bac: 2
@@ -25,6 +34,18 @@ nguon:
     bac: 2
     ten: G. Henle Verlag, The Four Seasons (HN 1020)
     link: https://www.henle.de/The-Four-Seasons/HN-1020
+  - id: imslp-rv297-2
+    bac: 2
+    ten: 'IMSLP, Violin Concerto in F minor, RV 297: Piece Style Baroque (wikitext qua api.php)'
+    link: https://imslp.org/wiki/Violin_Concerto_in_F_minor,_RV_297_(Vivaldi,_Antonio)
+  - id: mutopia-351
+    bac: 1
+    ten: 'Mutopia Project, L''Inverno / Winter, Mutopia-2010/02/08-351 (theo Performers'' Facsimiles): tổng phổ và sonnet gắn vào ô'
+    link: https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=351
+  - id: boston
+    bac: 2
+    ten: 'Boston Baroque, chú giải Vivaldi: The Four Seasons (Martin Pearlman)'
+    link: https://baroque.boston/vivaldi-four-seasons
 nhan_dinh:
   - id: n1
     cau: Tên «Mùa đông, chương 1» chỉ chương 1 (Allegro non molto) của Concerto «L'inverno» (Mùa đông) cung Fa thứ trong Bốn Mùa.
@@ -55,3 +76,16 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Violin_Concerto_in_F_minor,_RV_297_(Vivaldi,_Antonio)", "https://imslp.org/wiki/Il_cimento_dell'armonia_e_dell'inventione,_Op.8_(Vivaldi,_Antonio)", https://id.loc.gov/authorities/names/n82144279.json ]
     luot_2_ghi_chu: "IMSLP: Op./Cat. No. = RV 297 ; Op.8 No.4. IMSLP Op.8 page ('Il cimento dell'armonia e dell'inventione', 12 concertos; RV 269, 315, 293, 297, ...) lists 'Violin Concerto in F minor L'inverno' fourth. LoC n82144279 (Ryom): 'RV 297, op. 8, no. 4, L'inverno'."
+  - id: n4
+    cau: 'Thời kỳ: Baroque.'
+    loai: lich-su
+    truong: [thoi_ky]
+    nguon: [imslp-rv297-2]
+    ket_qua: dung
+  - id: n5
+    cau: 'Luyện nghe: ritornello, miêu tả cái rét.'
+    loai: cau-truc
+    truong: [luyen_nghe]
+    nguon: [mutopia-351, boston]
+    ket_qua: dung
+    ghi_chu: 'Tổng phổ: chất liệu dàn nhạc quay lại xen các đoạn độc tấu; câu thơ về cái rét gắn vào các ô (Mutopia), Boston: run, gió, giậm chân, răng va "are marked in the score".'

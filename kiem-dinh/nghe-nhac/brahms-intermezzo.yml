@@ -1,0 +1,480 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nghe-nhac/brahms-intermezzo
+trang: src/content/docs/nghe-nhac/brahms-intermezzo.md
+nguon_cu: ../opus-zero/docs/nghe-nhac/brahms-intermezzo.md
+tang: tac-pham
+lan:
+  - so: 1
+    ngay: '2026-11-06'
+    nhanh: moi/d6-l8
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5, agent con, D6-L8 phần A
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Hướng dẫn nghe Intermezzo La trưởng Op. 118 số 2 (tầng Tác phẩm; bản ghi tac-pham/brahms-intermezzo, loai nghe, không có chang/grade). Bản nhạc: bản in đầu Simrock (Berlin, cuối 1893, số bản in 10054), bản quét của Brahms-Institut qua IMSLP, tải từ Internet Archive (imslp-klavierstcke-op118-brahms-johannes), Op. 118 số 2 ở tr. 4–6; đối chiếu số ô với Mutopia (Aron Fay, nguồn Simrock). Quy ước đếm: không tính nốt lấy đà, bài hết ở ô 116; ô 49–56 có dấu nhắc lại (chơi hai lần). Ký hiệu đọc trên bản in đầu: Andante teneramente, 3/4, hóa biểu ba thăng suốt bài (không đổi hóa biểu ở đoạn Fa♯ trưởng); più lento ô 46; in tempo ô 49 (vạch nhắc lại); più lento, pp, u.c., legato ô 57; t.c., espress. ô 64, Tempo primo ô 65; f ô 69; più lento ô 114; hợp âm rải cuối có dấu lặng. Lịch sử: lời tựa và trang sản phẩm Henle HN 1377 (Katrin Eich, 2019), IMSLP, PTNA. Sửa: n12, n13, n17, n18, n29, n31, n32, n44–n47, n50, n51, n57, n62. Bỏ: n59, n60, n61 (dòng Nguồn sách in và Grove; nguồn đọc được gộp ở n62). Không tính là nhận định: tiêu đề mục, tiêu đề cột, câu dẫn ("Ghi lại thời điểm…"), chữ do ::hinh-cau-truc dựng (hinh.nghe, ở hồ sơ bản ghi), câu hỏi chỉ hỏi (trừ điều câu hỏi khẳng định: n43). Ví von (clarinet, viola, cello; "như một bài thánh ca vọng ra từ nhà thờ"; "như một kỷ niệm"; "như nói thầm với chính mình") là hình ảnh, không tách thành nhận định. Thuật ngữ: andante, una corda, tre corde, legato, rubato có bản ghi (thuat-ngu.yml đã khóa); "Andante" sửa theo nghĩa của bản ghi (n17). Chưa có bản ghi: intermezzo, teneramente, canon, chorale (hợp xướng), più lento (cho lô sau). Câu ve-site ở hồ sơ khác trỏ tới trang này: piano/tac-pham/liszt-liebestraum n96 (giai điệu ở giọng giữa, "bí mật nằm ở các bè giữa"): câu ấy giữ nguyên. Mốc ::khoi-nghe không đổi; bảng Theo dõi khi nghe không đổi (9 dòng, 9 mốc).'
+nguon:
+  - id: simrock-1893
+    bac: 1
+    ten: 'Brahms, Klavierstücke Op. 118, bản in đầu, N. Simrock, Berlin [1893], số bản in 10054, bản quét của Brahms-Institut (IMSLP #23162), lưu trên Internet Archive; số 2 ở tr. 4–6 (ảnh trang PDF 4–6)'
+    link: https://archive.org/details/imslp-klavierstcke-op118-brahms-johannes
+  - id: mut-op118-2
+    bac: 1
+    ten: 'Mutopia Project, Brahms, 2. Intermezzo Op. 118 No. 2 (Aron Fay, 2013; tệp LilyPond, ghi nguồn "N. Simrock, 1892"), đếm ô bằng chú thích "% measure" và vạch nhịp'
+    link: https://www.mutopiaproject.org/ftp/BrahmsJ/O118/intermezzo/intermezzo.ly
+  - id: imslp-op118
+    bac: 2
+    ten: 'IMSLP, 6 Klavierstücke, Op.118 (Brahms): tên khác "6 Piano Pieces"; sáu bài (4 intermezzo, ballade, romance); số 2 Andante teneramente (A major); đề tặng Clara Schumann; sáng tác 1893; in tháng 11/1893, Berlin, N. Simrock; Piece Style Romantic (wikitext qua api.php)'
+    link: https://imslp.org/wiki/6_Klavierst%C3%BCcke,_Op.118_(Brahms,_Johannes)
+  - id: imslp-op116-117-119
+    bac: 2
+    ten: 'IMSLP, 7 Fantasien Op.116 (1892, in 11/1892), 3 Intermezzi Op.117 (1892; số 1 Andante moderato, E♭ major), 4 Klavierstücke Op.119 (1893, in 11/1893) (wikitext qua api.php)'
+    link: https://imslp.org/wiki/3_Intermezzi,_Op.117_(Brahms,_Johannes)
+  - id: henle-1377
+    bac: 2
+    ten: 'G. Henle Verlag, HN 1377 Intermezzo A major op. 118 no. 2: mức khó 6 "medium", "ABRSM: Piano ARSM"; giới thiệu: Clara Schumann "one of the first to be allowed to get to know the new pieces … a wealth of sentiment in the smallest of dimensions"; niên biểu: 1833 sinh ở Hamburg, 1853 gặp Schumann, "A lifelong, intimate friendship develops with Clara Schumann", 1897 mất ở Wien'
+    link: https://www.henle.de/en/Intermezzo-A-major-op.-118-no.-2/HN-1377
+  - id: henle-1377-vorwort
+    bac: 2
+    ten: 'G. Henle Verlag, HN 1377: Vorwort/Preface (Katrin Eich, 2019), PDF: Op. 116, 117 in cuối 1892; Brahms viết các bài mới trong kỳ nghỉ hè ở Ischl năm 1893; gửi Clara Schumann nhiều bản thảo nhỏ từ cuối tháng 5 đến đầu tháng 9/1893; Op. 118 số 2 có lẽ tới tay Clara cuối tháng 8; bản in ra giữa 5 và 12/12/1893'
+    link: https://www.henle.de/media/c5/ba/0f/1697725857/1377-1697725857-sync.pdf
+  - id: henle-1377-bem
+    bac: 2
+    ten: 'G. Henle Verlag, HN 1377: Bemerkungen/Comments (Katrin Eich, 2019), PDF: nguồn chính E1 = Simrock, số bản in 10054, "published in late 1893"; số ô 16/17, 40/41, 48, 87, 108/109 khớp cách đếm 116 ô'
+    link: https://www.henle.de/media/9c/f6/3f/1697725681/1377-1697725681-sync.pdf
+  - id: ptna-22831
+    bac: 2
+    ten: 'PTNA Piano Encyclopedia, 6 Stücke Intermezzo A-Dur Op.118-2 (Yano Haruka, 2019): ba phần A (ô 1–48), B (49–76), A (77–116); B: a (49–56) Fa♯ thứ, b (57–64) Fa♯ trưởng, chất hợp xướng, a (65–76) Fa♯ thứ, espressivo; thời lượng 5 phút 30 giây'
+    link: https://enc.piano.or.jp/en/musics/22831
+  - id: ptna-213
+    bac: 2
+    ten: 'PTNA Piano Encyclopedia, 6 Stücke Op.118: sáng tác và in 1893, Simrock; năm tập tiểu phẩm từ Op. 76 đến Op. 119; số 2: "the same melodic motif appears repeatedly with various harmonic progressions" ở phần đầu'
+    link: https://enc.piano.or.jp/en/musics/213
+  - id: abrsm-arsm
+    bac: 2
+    ten: 'ABRSM, ARSM Repertoire List, Piano (bản lưu Wayback 25/7/2021), mục 29: "Intermezzo in A, Op.118 no.2"'
+    link: https://web.archive.org/web/20210725061338/https://gb.abrsm.org/media/14967/pianoarsm.pdf
+  - id: abrsm-2526
+    bac: 2
+    ten: ABRSM, Practical Music Grades Piano Syllabus 2025 & 2026 (không có bài Brahms nào trong danh sách Grade)
+    link: https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20&%202026%20Prac%20syllabus%2020240524_access.pdf
+  - id: cod-intermezzo
+    bac: 2
+    ten: 'The Concise Oxford Dictionary of Music, mục intermezzo, qua Encyclopedia.com: "In the middle … (5) Short independent pf. pieces by Brahms, Schumann, etc."'
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/intermezzo-0
+  - id: cod-tenero
+    bac: 2
+    ten: 'The Concise Oxford Dictionary of Music, mục tenero, qua Encyclopedia.com: "Tender. So … teneramente, tenderly"'
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/tenero
+  - id: mb-lupu
+    bac: 2
+    ten: 'MusicBrainz, Radu Lupu, Brahms: Two Rhapsodies, op. 79 / Piano Pieces, opp. 117~119, Decca Classics 417 599-2 (1987); "Intermezzo in A major, op. 118, no. 2" 5:56'
+    link: https://musicbrainz.org/release/0740c276-beb2-4f0e-a737-2102ac3d3f57
+  - id: mb-gould
+    bac: 2
+    ten: 'MusicBrainz, Glenn Gould, Brahms: 10 Intermezzi for Piano, Columbia Masterworks MS 6237 (1961); "Intermezzo in A major Op. 118 No. 2" 5:48'
+    link: https://musicbrainz.org/release/3375843a-8b63-453f-ac39-08b4d49d30fa
+  - id: mb-ax
+    bac: 2
+    ten: 'MusicBrainz, Emanuel Ax, Brahms: Variations and Fugue on a Theme by Handel / Six Piano Pieces / Two Rhapsodies, Sony Classical SK 48046 (2/6/1992); Op. 118 số 2 6:24'
+    link: https://musicbrainz.org/release/93eda41e-23a7-46cb-9e5f-40fabd788060
+  - id: commons-musopen
+    bac: 2
+    ten: 'Wikimedia Commons, Johannes Brahms - klavierstucke, op. 118 - ii. intermezzo.ogg (Musopen; Public domain; 328,05 giây), đọc qua API'
+    link: https://commons.wikimedia.org/wiki/File:Johannes_Brahms_-_klavierstucke,_op._118_-_ii._intermezzo.ogg
+  - id: ol-swafford
+    bac: 2
+    ten: 'Open Library, Jan Swafford, Johannes Brahms (first_publish_year 1997; Alfred A. Knopf)'
+    link: https://openlibrary.org/works/OL2699716W
+  - id: ol-avins
+    bac: 2
+    ten: 'Open Library, Johannes Brahms: Life and Letters, chọn và chú giải Styra Avins (Oxford University Press; ấn bản có trên Open Library: 2001)'
+    link: https://openlibrary.org/works/OL19123500W
+  - id: nsn
+    bac: 2
+    ten: 'src/data/nha-soan-nhac.yml (đã khóa): brahms 1833–1897; clara-schumann 1819–1896'
+    link: src/data/nha-soan-nhac.yml
+  - id: tn
+    bac: 2
+    ten: 'src/data/thuat-ngu.yml (đã khóa): andante ("Vừa phải, như bước đi"), una-corda ("Dùng bàn đạp trái"), tre-corde ("Nhả bàn đạp trái"), legato'
+    link: https://mtuann.github.io/opus/nhac-ly/tu-dien/
+nhan_dinh:
+  - id: n1
+    cau: 'Nhà soạn nhạc: Johannes Brahms (1833–1897).'
+    loai: nam
+    nguon: [nsn, henle-1377]
+    ket_qua: dung
+    ghi_chu: 'Khớp nha-soan-nhac.yml (đã khóa); niên biểu Henle: sinh 1833 ở Hamburg, mất 1897 ở Wien.'
+  - id: n2
+    cau: 'Tên đầy đủ: Intermezzo cung La trưởng, Op. 118 số 2 (Andante teneramente), trong Sechs Klavierstücke (Sáu tiểu phẩm cho piano), Op. 118.'
+    loai: ten
+    nguon: [imslp-op118, simrock-1893]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "6 Klavierstücke, Op.118", số 2 "Intermezzo. Andante teneramente (A major)". Bản in đầu tr. 4: "2. Intermezzo. Andante teneramente.", hóa biểu ba thăng.'
+  - id: n3
+    cau: Bài được viết vào mùa hè năm 1893 ở Bad Ischl (Áo).
+    loai: nam
+    nguon: [henle-1377-vorwort]
+    ket_qua: dung
+    ghi_chu: 'Henle: "Brahms worked on them during his summer holiday in Ischl in 1893" (thư gửi Simrock ngày 4/6/1893). Ischl (Bad Ischl) thuộc Áo.'
+  - id: n4
+    cau: Tập được nhà Simrock (Berlin) in vào cuối năm 1893.
+    loai: nam
+    nguon: [imslp-op118, henle-1377-vorwort, henle-1377-bem]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "1893 (November) - Berlin: N. Simrock"; Henle: in giữa 5 và 12/12/1893 ("published in late 1893", số bản in 10054).'
+  - id: n5
+    cau: 'Thời kỳ: Cuối Lãng mạn.'
+    loai: lich-su
+    nguon: [imslp-op118, ptna-213]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Piece Style Romantic; 1893 nằm ở cuối thời Lãng mạn theo cách chia của site (khoảng 1820–1900, lich-su/thoi-ky/lang-man). PTNA: "One of Brahms''s very late works". Bản ghi thoi_ky: Cuối Lãng mạn.'
+  - id: n6
+    cau: 'Thể loại: intermezzo, tiểu phẩm trữ tình cho piano.'
+    loai: dinh-nghia
+    nguon: [cod-intermezzo, ptna-22831]
+    ket_qua: dung
+    ghi_chu: 'COD: intermezzo (5) "Short independent pf. pieces by Brahms"; PTNA: Genre intermezzo, piano solo.'
+  - id: n7
+    cau: Độ dài khoảng 5–6 phút.
+    loai: so-lieu
+    nguon: [ptna-22831, commons-musopen, mb-lupu, mb-gould, mb-ax]
+    ket_qua: dung
+    ghi_chu: 'PTNA 5:30; Musopen 5:28; Gould 5:48; Lupu 5:56; Ax 6:24 (hơi quá 6 phút, vẫn là "khoảng").'
+  - id: n8
+    cau: Trong hai năm 1892–1893, Brahms viết bốn tập tiểu phẩm piano cuối cùng, từ Op. 116 đến Op. 119.
+    loai: nam
+    nguon: [imslp-op116-117-119, imslp-op118, ptna-213]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Op. 116 và 117 sáng tác 1892, Op. 118 và 119 năm 1893. PTNA: năm tập tiểu phẩm từ Op. 76 đến Op. 119 (Op. 119 là tập cuối).'
+  - id: n9
+    cau: Tập Op. 118 hoàn thành vào mùa hè 1893 ở thị trấn nghỉ dưỡng Bad Ischl.
+    loai: nam
+    nguon: [henle-1377-vorwort]
+    ket_qua: dung
+    ghi_chu: 'Henle: Brahms gửi Clara các bản thảo từ cuối tháng 5 đến đầu tháng 9/1893, trong kỳ nghỉ hè ở Ischl; về Wien ngày 27/9.'
+  - id: n10
+    cau: Op. 118 gồm bốn intermezzo, một ballade và một romance.
+    loai: cau-truc
+    nguon: [imslp-op118]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: số 1, 2, 4, 6 Intermezzo; số 3 Ballade; số 5 Romance.'
+  - id: n11
+    cau: Từ nơi nghỉ hè ấy, Brahms gửi bản chép tay cho Clara Schumann.
+    loai: lich-su
+    nguon: [henle-1377-vorwort]
+    ket_qua: dung
+    ghi_chu: 'Henle: "Ihr schickte Brahms zwischen Ende Mai und Anfang September 1893 mehrfach kleine Manuskripte mit noch unbetitelten Klavierstücken"; Op. 118 số 2 có lẽ tới tay Clara cuối tháng 8.'
+  - id: n12
+    cau: Clara Schumann là nghệ sĩ piano lừng danh và người bạn thân thiết của Brahms suốt hơn bốn mươi năm.
+    loai: lich-su
+    nguon: [henle-1377, nsn]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "suốt bốn mươi năm"; chữ mới: "suốt hơn bốn mươi năm". Henle: gặp nhau năm 1853, "A lifelong, intimate friendship develops with Clara Schumann"; Clara mất 1896 (nha-soan-nhac.yml), tức 43 năm.'
+  - id: n13
+    cau: Clara là một trong những người đầu tiên được biết các bản mới.
+    loai: lich-su
+    nguon: [henle-1377, henle-1377-vorwort]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Clara là một trong những người đầu tiên chơi các bản mới"; chữ mới: "… được biết các bản mới". Henle: "Clara Schumann was one of the first to be allowed to get to know the new pieces"; không nguồn nào nói bà chơi chúng đầu tiên (lời tựa: chính Brahms chơi cho bạn bè ở Ischl, rồi cho Wiener Tonkünstlerverein).'
+  - id: n14
+    cau: Clara khen các bản mới chứa cả một kho cảm xúc trong khuôn khổ nhỏ bé.
+    loai: lich-su
+    nguon: [henle-1377]
+    ket_qua: dung
+    ghi_chu: 'Henle: Clara "attested that they contained “a wealth of sentiment in the smallest of dimensions.”" Lời tựa Henle trích thêm thư Clara ngày 2/9/1893 ("welche Schätze sammle ich!", Litzmann, Briefe, Bd. 2, S. 526).'
+  - id: n15
+    cau: Intermezzo nghĩa đen là "khúc chen giữa".
+    loai: dinh-nghia
+    nguon: [cod-intermezzo]
+    ket_qua: dung
+    ghi_chu: 'COD: "In the middle"; nghĩa đầu tiên là phần giải trí chen giữa các phần khác. Trang piano/the-loai (đã khóa) cũng ghi "khúc chen giữa".'
+  - id: n16
+    cau: Ở Brahms cuối đời, intermezzo là tên ông đặt cho những bản nhạc piano ngắn, đứng riêng, mang tính trầm tư.
+    loai: dinh-nghia
+    nguon: [cod-intermezzo, ptna-213]
+    ket_qua: dung
+    ghi_chu: 'COD: "Short independent pf. pieces by Brahms"; PTNA: các tập cuối đời "gentle, melancholic melodies".'
+  - id: n17
+    cau: 'Bản số 2 ghi Andante teneramente: vừa phải như bước đi, dịu dàng.'
+    loai: dinh-nghia
+    nguon: [simrock-1893, tn, cod-tenero]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Andante teneramente: chậm vừa, dịu dàng"; chữ mới: "vừa phải như bước đi, dịu dàng". Theo bản ghi andante của thuat-ngu.yml (đã khóa: "Vừa phải, như bước đi"); teneramente = "tenderly" (COD, mục tenero). Bản in đầu ghi "Andante teneramente."'
+  - id: n18
+    cau: 'Ba nốt đầu tiên như một hạt giống: trong đoạn A, nhóm nốt ấy trở lại nhiều lần, mỗi lần trên một hòa âm khác.'
+    loai: cau-truc
+    nguon: [ptna-213, simrock-1893, mut-op118-2]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Gần như mọi giai điệu trong bài đều mọc lên từ **ba nốt đầu tiên**, như từ một hạt giống."; chữ mới: "**Ba nốt đầu tiên** như một hạt giống: trong đoạn A, nhóm nốt ấy trở lại nhiều lần, mỗi lần trên một hòa âm khác." "Gần như mọi giai điệu" không tìm được nguồn đọc được (bài phân tích của Rings trên Project MUSE bị chặn). PTNA: ở phần đầu "the same melodic motif appears repeatedly with various harmonic progressions". Bản nhạc: nhóm Đô♯ – Si rồi Rê (nốt lấy đà và ô 1) trở lại ở ô 4–5, 8–9, 12–13, 28–29.'
+  - id: n19
+    cau: 'Bài có ba đoạn: A – B – A.'
+    loai: cau-truc
+    nguon: [ptna-22831, simrock-1893]
+    ket_qua: dung
+    ghi_chu: 'PTNA: "three-part Lied form … A (measures 1-48), B (measures 49-76), and A (measures 77-116)".'
+  - id: n20
+    cau: Đoạn A ở La trưởng, gồm những câu nhạc bốn ô nhịp cân đối.
+    loai: cau-truc
+    nguon: [simrock-1893, mut-op118-2]
+    ket_qua: dung
+    ghi_chu: 'Bản in đầu: câu ô 1–4 (dừng ở hợp âm át), câu đáp ô 5–8 (kết ở Mi trưởng), lặp lại ô 9–16. "Như một bài hát ru" là ví von.'
+  - id: n21
+    cau: Đoạn A có một quãng giữa bấp bênh hơn trước khi giai điệu đầu quay về.
+    loai: cau-truc
+    nguon: [simrock-1893, mut-op118-2]
+    ket_qua: dung
+    ghi_chu: 'Ô 17–28: nốt đổi dấu (Đô thường, Fa thường, La♯, Si♯), hòa âm rời La trưởng; giai điệu đầu trở lại ở ô 29–30 (hợp âm rải giống ô 2), có espress., calando ô 33.'
+  - id: n22
+    cau: Đoạn B chuyển sang Fa♯ thứ, giọng thứ song song của La trưởng.
+    loai: cau-truc
+    nguon: [ptna-22831, simrock-1893, tn]
+    ket_qua: dung
+    ghi_chu: 'PTNA: a (ô 49–56) Fa♯ thứ. "Giọng thứ song song" theo nghĩa relative, quy ước của các trang đã khóa (d6-l1-gom.md, minuet-sol-thu n25); Fa♯ thứ cùng hóa biểu ba thăng với La trưởng. "Tối hơn, khắc khoải hơn" là cảm nhận.'
+  - id: n23
+    cau: Ở chính giữa đoạn B là một khúc hợp xướng (chorale) ở Fa♯ trưởng, chậm và rất nhỏ.
+    loai: cau-truc
+    nguon: [ptna-22831, simrock-1893]
+    ket_qua: dung
+    ghi_chu: 'PTNA: b (ô 57–64) "modulates to F-sharp major and contains chorale elements"; nằm giữa a (49–56) và a'' (65–76). Bản in đầu ô 57: più lento, pp, u.c., legato; ô 61 pp lần nữa.'
+  - id: n24
+    cau: Rồi Fa♯ thứ trở lại, và cuối cùng đoạn A trở về.
+    loai: cau-truc
+    nguon: [ptna-22831, simrock-1893]
+    ket_qua: dung
+    ghi_chu: 'PTNA: a'' (65–76) Fa♯ thứ, A (77–116). Bản in đầu: Tempo primo ô 65; a tempo ở phách 3 ô 76 dẫn vào ô 77.'
+  - id: n25
+    cau: Phần đệm là một mạng lưới những giọng nhỏ chuyển động chậm, không phải kiểu đệm "bùm-chát".
+    loai: cau-truc
+    nguon: [simrock-1893, mut-op118-2]
+    ket_qua: dung
+    ghi_chu: 'Bản nhạc: tay trái ô 1–4 là giọng trầm rải móc đơn và bè giữa nốt đen, không có mẫu bass – hợp âm. Câu "Bí mật của bản nhạc nằm ở các bè giữa" giữ nguyên vì piano/tac-pham/liszt-liebestraum n96 trỏ tới.'
+  - id: n26
+    cau: Nhiều chỗ mỗi tay phải chơi hai bè cùng lúc.
+    loai: cau-truc
+    nguon: [simrock-1893, mut-op118-2]
+    ket_qua: dung
+    ghi_chu: 'Bản in đầu ghi hai bè đuôi lên, đuôi xuống trong cùng khuông ở tay phải (ô 1–2, 5–6…) và tay trái (ô 3–4, 49–56); Mutopia tách bốn bè (voiceOne… voiceFour).'
+  - id: n27
+    cau: Ngón 4–5 hát giai điệu còn các ngón phía trong chơi nhẹ hơn.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên về cân bằng bè trong một tay; không trái trang piano/tieng-dan (mục làm nổi một bè).
+  - id: n28
+    cau: 'Trong đoạn Fa♯ thứ có ba lớp rõ rệt: bè trên, bè giữa và bè trầm chạy bằng chùm ba nốt.'
+    loai: cau-truc
+    nguon: [simrock-1893, mut-op118-2]
+    ket_qua: dung
+    ghi_chu: 'Ô 49–56: bè trên (tay phải), bè giữa (tay trái, đuôi lên, nốt đen có chấm), bè trầm móc đơn chùm ba ("3" ở ô 49; Mutopia \times 2/3). Clarinet, viola, cello là ví von.'
+  - id: n29
+    cau: 'Bè giữa đáp lại bè trên theo lối canon: nhắc lại bốn nốt mở đầu của bè trên (Đô♯ – Fa♯ – Mi – Rê), chậm hơn một phách.'
+    loai: cau-truc
+    nguon: [simrock-1893, mut-op118-2]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "nhắc lại đúng những nốt bè trên vừa hát, sau một khoảng ngắn"; chữ mới: "nhắc lại bốn nốt mở đầu của bè trên (Đô♯ – Fa♯ – Mi – Rê), chậm hơn một phách". Bản nhạc ô 49–50: bè trên Đô♯ (phách 1) Fa♯ Mi Rê; bè giữa Đô♯ (phách 2) Fa♯ | Mi Rê, thấp hơn một quãng tám; từ ô 51 bè giữa không còn nhắc đúng bè trên (Rê Đô♯ | Đô♯ Si), nên bỏ chữ "đúng những nốt".'
+  - id: n30
+    cau: Khi Fa♯ thứ trở lại, hai bè trên đổi vai để bè giữa dẫn dắt.
+    loai: cau-truc
+    nguon: [simrock-1893, mut-op118-2]
+    ket_qua: dung
+    ghi_chu: 'Ô 64–65: bè trong (espress.) vào trước với Đô♯ – Fa♯, bè trên theo sau một phách (Đô♯ Fa♯ Mi Rê ở ô 65).'
+  - id: n31
+    cau: Brahms giấu đối âm trong một khúc nhạc êm như bài hát ru.
+    loai: cau-truc
+    nguon: [simrock-1893]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Brahms là bậc thầy đối âm và say mê Bach; ở đây ông giấu đối âm trong một khúc hát ru"; chữ mới: "Brahms giấu đối âm trong một khúc nhạc êm như bài hát ru". Bỏ vế "bậc thầy đối âm và say mê Bach": không tìm được nguồn bậc 1–2 đọc được (Henle, PTNA không nói). Phần còn lại dựa trên canon ở n29.'
+  - id: n32
+    cau: Ở khúc hợp xướng, Brahms ghi una corda (viết tắt u.c., bàn đạp trái) và legato, rồi ghi tre corde khi Fa♯ thứ trở lại.
+    loai: cau-truc
+    nguon: [simrock-1893, mut-op118-2, tn]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Khúc hợp xướng rất nhỏ thường được chơi với **una corda** và [bàn đạp](/opus/piano/ban-dap/) thay muộn, để các hợp âm nối liền mà không nhòe."; chữ mới: "Ở khúc hợp xướng, Brahms ghi *una corda* (viết tắt *u.c.*: bàn đạp trái) và *legato*, rồi ghi *tre corde* khi Fa♯ thứ trở lại; thay [bàn đạp](/opus/piano/ban-dap/) phải muộn, để các hợp âm nối liền mà không nhòe." Bản in đầu ô 57: "pp", "u.c.", "legato"; ô 64: "t.c." (Mutopia: "tre corde" ô 65). Đây là chỉ dẫn của tác giả, không phải thói quen của người chơi. Nghĩa theo thuat-ngu.yml (una-corda, tre-corde).'
+  - id: n33
+    cau: Thay bàn đạp muộn để các hợp âm của khúc hợp xướng nối liền mà không nhòe.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Vế bàn đạp phải của câu n32; lời khuyên, không trái piano/ban-dap.'
+  - id: n34
+    cau: 'Bảng theo dõi, dòng 1: mở đầu La trưởng, giai điệu mọc lên từ ba nốt đầu; bên dưới, các bè giữa chuyển động chậm.'
+    loai: cau-truc
+    nguon: [simrock-1893]
+    ket_qua: dung
+    ghi_chu: Ô 1–4.
+  - id: n35
+    cau: 'Bảng theo dõi, dòng 2: câu trả lời bắt đầu giống câu đầu nhưng rẽ sang Mi trưởng.'
+    loai: cau-truc
+    nguon: [simrock-1893, mut-op118-2]
+    ket_qua: dung
+    ghi_chu: 'Ô 5–8: mở như ô 1, Rê♯ ở ô 6–7, kết hợp âm Mi trưởng ô 8.'
+  - id: n36
+    cau: 'Bảng theo dõi, dòng 3: quãng giữa của đoạn A, hòa âm bấp bênh, đổi màu liên tục.'
+    loai: cau-truc
+    nguon: [simrock-1893]
+    ket_qua: dung
+    ghi_chu: Ô 17–28 (xem n21).
+  - id: n37
+    cau: 'Bảng theo dõi, dòng 4: giai điệu đầu trở lại, khép đoạn A thật nhẹ.'
+    loai: cau-truc
+    nguon: [simrock-1893]
+    ket_qua: dung
+    ghi_chu: 'Ô 29–48: calando ô 33, p, più lento ô 46, kết p.'
+  - id: n38
+    cau: 'Bảng theo dõi, dòng 5: đoạn B Fa♯ thứ, ba lớp âm thanh; bè giữa bắt chước bè trên, bè trầm chạy chùm ba nốt.'
+    loai: cau-truc
+    nguon: [simrock-1893, ptna-22831]
+    ket_qua: dung
+    ghi_chu: Ô 49–56 (có dấu nhắc lại). Xem n28, n29.
+  - id: n39
+    cau: 'Bảng theo dõi, dòng 6: khúc hợp xướng Fa♯ trưởng, chậm lại, rất nhỏ.'
+    loai: cau-truc
+    nguon: [simrock-1893, ptna-22831]
+    ket_qua: dung
+    ghi_chu: 'Ô 57–64: più lento, pp.'
+  - id: n40
+    cau: 'Bảng theo dõi, dòng 7: Fa♯ thứ trở lại, chất liệu đầu đoạn B quay về; nhạc dâng lên cao trào rồi lắng xuống, mở đường cho đoạn A.'
+    loai: cau-truc
+    nguon: [simrock-1893, ptna-22831]
+    ket_qua: dung
+    ghi_chu: 'Ô 65–76: Tempo primo, cresc. ô 65, f ô 69, rồi p, rit., pp, dấu lặng ô 76.'
+  - id: n41
+    cau: 'Bảng theo dõi, dòng 8: đoạn A trở về ở La trưởng.'
+    loai: cau-truc
+    nguon: [simrock-1893, ptna-22831]
+    ket_qua: dung
+    ghi_chu: Ô 77.
+  - id: n42
+    cau: 'Bảng theo dõi, dòng 9: nhạc lắng dần vào hợp âm La trưởng cuối cùng.'
+    loai: cau-truc
+    nguon: [simrock-1893]
+    ket_qua: dung
+    ghi_chu: 'Ô 114–116: più lento, p, hợp âm rải La trưởng có dấu lặng.'
+  - id: n43
+    cau: Khi đoạn A trở về, các nốt gần như không đổi.
+    loai: cau-truc
+    nguon: [simrock-1893, mut-op118-2]
+    ket_qua: dung
+    ghi_chu: 'Trong câu hỏi thứ tư. Ô 77–116 nhắc lại giai điệu ô 1–40 gần như nguyên; khác ở tay trái (ô 79–86 hợp âm rải rộng hơn) và đoạn kết. "Gần như" đúng.'
+  - id: n44
+    cau: 'Radu Lupu: đĩa Decca các tiểu phẩm cuối đời của Brahms (Op. 79, Op. 117–119; CD 1987).'
+    loai: ten
+    nguon: [mb-lupu]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "**Radu Lupu**: bản thu các tiểu phẩm cuối đời của Brahms, tiếng đàn rất mềm, nhiều sắc thái nhỏ; nhiều người coi là chuẩn mực."; chữ mới: "**Radu Lupu**: đĩa Decca các tiểu phẩm cuối đời của Brahms (Op. 79, Op. 117–119; CD 1987); Op. 118 số 2 dài khoảng 5:56." Lời khen không kiểm được nên bỏ, ghi tên, hãng, năm như schubert-impromptu n34–n35. MusicBrainz: Decca Classics 417 599-2 (1/8/1987), có Op. 118 số 2. Năm thu gốc không có trên trang này nên ghi "CD 1987".'
+  - id: n45
+    cau: 'Bản Lupu: Op. 118 số 2 dài khoảng 5:56.'
+    loai: so-lieu
+    nguon: [mb-lupu]
+    ket_qua: da-sua
+    ghi_chu: 'Thêm khi viết lại n44 (MusicBrainz: 355,973 giây).'
+  - id: n46
+    cau: 'Glenn Gould: đĩa 10 Intermezzi for Piano (Columbia Masterworks, 1961), có Op. 118 số 2, dài khoảng 5:48.'
+    loai: ten
+    nguon: [mb-gould]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "**Glenn Gould**: đĩa mười intermezzo của Brahms, chậm và trầm tư khác thường, như chơi cho riêng mình nghe."; chữ mới: "**Glenn Gould**: đĩa *10 Intermezzi for Piano* (Columbia Masterworks, 1961), có Op. 118 số 2, dài khoảng 5:48." MusicBrainz: Columbia Masterworks MS 6237 (1961), Op. 118 số 2 5:48. "Chậm khác thường" sai với bài này: 5:48 nhanh hơn Lupu (5:56) và Ax (6:24); phần cảm nhận không kiểm được nên bỏ.'
+  - id: n47
+    cau: 'Emanuel Ax: đĩa Sony Classical năm 1992 (Biến tấu Handel, Op. 118, Op. 79); Op. 118 số 2 dài khoảng 6:24.'
+    loai: ten
+    nguon: [mb-ax]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "**Emanuel Ax**: một bản thu khác để đối chiếu; so tốc độ của anh với Gould để thấy tốc độ thay đổi tính cách bài nhạc thế nào."; chữ mới: "**Emanuel Ax**: đĩa Sony Classical năm 1992 (Biến tấu Handel, Op. 118, Op. 79); Op. 118 số 2 dài khoảng 6:24. So tốc độ ba bản để thấy tốc độ thay đổi tính cách bài nhạc thế nào." MusicBrainz: Sony Classical SK 48046 (2/6/1992), 383,6 giây.'
+  - id: n48
+    cau: So tốc độ ba bản thu để thấy tốc độ thay đổi tính cách bài nhạc thế nào.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Lời khuyên nghe; viết lại cùng n47 (trước so Ax với Gould, nay so ba bản).
+  - id: n49
+    cau: Op. 118 số 2 là một trong những bản Brahms dễ tiếp cận nhất.
+    loai: cap-do
+    nguon: [henle-1377]
+    ket_qua: dung
+    ghi_chu: 'Henle: "Due to its moderate level of difficulty, it also gives advanced students a foretaste of the cosmos of Brahms’ late work"; mức 6 "medium". Henle in riêng bài vì nó "numbers among the composer’s best-known miniatures".'
+  - id: n50
+    cau: Nhà Henle xếp bài ở mức 6 (trung bình) trên thang 1–9.
+    loai: cap-do
+    nguon: [henle-1377]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "nhà Henle xếp ở **mức 6** trên thang 1–9"; chữ mới: "nhà Henle xếp ở **mức 6** (trung bình) trên thang 1–9". Henle ghi "6 medium".'
+  - id: n51
+    cau: ABRSM đưa bài vào danh sách bằng ARSM, trên Grade 8.
+    loai: cap-do
+    nguon: [abrsm-arsm, henle-1377, abrsm-2526]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "; trên site, bài thuộc chặng 6 (khoảng Grade 7–8)."; chữ mới: ", còn ABRSM đưa bài vào danh sách bằng ARSM, trên Grade 8; trên site, bài thuộc chặng 6." ARSM Repertoire List mục 29 "Intermezzo in A, Op.118 no.2"; Henle: "ABRSM: Piano ARSM"; đề cương Grade 2025–2026 không có bài Brahms. Không có nguồn xếp bài vào Grade 7–8, nên bỏ Grade gắn với chặng. Ghi cho người giao: site đặt bài ở chặng 6 (≈ Grade 7–8), thấp hơn ABRSM một bậc; câu mới nói rõ cả hai.'
+  - id: n52
+    cau: Trên site, bài thuộc chặng 6.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Kiểm trên src/content/docs/piano/tac-pham-theo-cap.md: dòng 187 ("Brahms: Intermezzo La trưởng Op. 118 số 2; Intermezzo Mi♭ trưởng Op. 117 số 1") nằm trong mục "## Chặng 6. Nâng cao (≈ Grade 7–8)" (dòng 174–196). Bản ghi brahms-intermezzo không có chang (loai nghe), nên chỉ kiểm trên trang này.'
+  - id: n53
+    cau: Nốt không nhanh; cái khó là cân bằng các bè trong cùng một bàn tay, giữ legato bằng ngón và bàn đạp, và chơi chùm ba nốt ở bè trầm thật đều.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập; "nốt không nhanh" khớp Andante 3/4, nhịp nhỏ nhất là móc đơn chùm ba và móc kép ở ô 3, 7 (bản in đầu).'
+  - id: n54
+    cau: Một số hợp âm trải rộng.
+    loai: cau-truc
+    nguon: [simrock-1893]
+    ket_qua: dung
+    ghi_chu: 'Bản in đầu: hợp âm rải (dấu sóng) ở ô 2, 10, 30… và hợp âm cuối ô 116; tay trái có quãng rộng (ô 57 hợp âm Fa♯ – Đô♯ – La♯ trải quá quãng tám).'
+  - id: n55
+    cau: Tay nhỏ có thể chia lại nốt giữa hai tay hoặc để bàn đạp giữ một nốt.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên tập, không dính sức khỏe (không nói đau hay căng tay).'
+  - id: n56
+    cau: Chuẩn bị bằng Träumerei của Schumann (nhiều bè trong một tay), Prélude Mi thứ của Chopin (hợp âm chậm, làm nổi giai điệu), Valse Op. 39 số 15 của Brahms; đọc trang tiếng đàn về cách làm nổi một bè.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Trang đích có: src/content/docs/piano/tac-pham/schumann-traumerei.md, chopin-prelude-mi-thu.md, piano/tieng-dan.md (dòng 202 nói Träumerei "một bàn tay thường phải vừa hát vừa đệm", Prélude Mi thứ). Valse Op. 39 số 15 không có link; có ở piano/tac-pham-theo-cap dòng 169, mục Chặng 5 (trước chặng 6). Chọn bài chuẩn bị là lựa chọn của site.'
+  - id: n57
+    cau: Cùng chặng có Intermezzo Op. 117 số 1 (Mi♭ trưởng) của Brahms.
+    loai: ve-site
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "Cùng chặng có Intermezzo Op. 117 số 1 (Mi♭ trưởng), một khúc hát ru khác của Brahms."; chữ mới: "Cùng chặng có Intermezzo Op. 117 số 1 (Mi♭ trưởng) của Brahms." Chặng: piano/tac-pham-theo-cap dòng 187, mục Chặng 6. Giọng Mi♭ trưởng: n58. Bỏ "một khúc hát ru khác": Op. 118 số 2 không phải bài hát ru (chỉ được ví như vậy), và câu đề từ hát ru của Op. 117 số 1 chưa kiểm được trên bản in hay trang nhà xuất bản.'
+  - id: n58
+    cau: Intermezzo Op. 117 số 1 ở giọng Mi♭ trưởng.
+    loai: cau-truc
+    nguon: [imslp-op116-117-119]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Op. 117 số 1 "Andante moderato (E♭ major)". Vế cần nguồn của câu n57.'
+  - id: n59
+    cau: 'Nguồn: Jan Swafford, Johannes Brahms: A Biography (1997).'
+    loai: ten
+    nguon: [ol-swafford]
+    ket_qua: da-bo
+    ghi_chu: 'Chữ cũ: dòng "- Jan Swafford, *Johannes Brahms: A Biography* (1997)." Sách có thật (Open Library: Swafford, 1997, Knopf) nhưng là sách in, agent không đọc được, và không nhận định nào còn dựa riêng vào nó: các điều về năm 1893, Ischl, Clara nay dẫn lời tựa và trang Henle HN 1377 (n62). Bỏ.'
+  - id: n60
+    cau: 'Nguồn: Styra Avins (biên tập), Johannes Brahms: Life and Letters (Oxford University Press, 1997).'
+    loai: ten
+    nguon: [ol-avins]
+    ket_qua: da-bo
+    ghi_chu: 'Chữ cũ: dòng "- Styra Avins (biên tập), *Johannes Brahms: Life and Letters* (Oxford University Press, 1997)." Sách có thật (Open Library: OUP; chỉ thấy ấn bản 2001, chưa kiểm được năm 1997); sách in, không đọc được; lời khen của Clara nay dẫn Henle. Bỏ.'
+  - id: n61
+    cau: 'Nguồn: Grove Music Online.'
+    loai: ten
+    nguon: []
+    ket_qua: da-bo
+    ghi_chu: 'Chữ cũ: "- Grove Music Online. Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/)."; chữ mới: "- Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/)." Không chỉ mục nào, cần đăng nhập, không nhận định nào dựa vào. Bỏ, giữ link tài liệu tham khảo.'
+  - id: n62
+    cau: 'Nguồn: bản nhạc trên IMSLP gồm bản in đầu tiên của Simrock (Berlin, 1893); Henle có bản Urtext in riêng Op. 118 số 2, kèm lời tựa về thư từ giữa Brahms và Clara Schumann năm 1893; PTNA phân tích hình thức Op. 118 số 2.'
+    loai: ten
+    nguon: [imslp-op118, henle-1377, henle-1377-vorwort, ptna-22831]
+    ket_qua: da-sua
+    ghi_chu: 'Chữ cũ: "- Bản nhạc: [IMSLP](https://imslp.org/) (tìm \"6 Piano Pieces, Op.118 (Brahms, Johannes)\"); bản Urtext: [G. Henle Verlag](https://www.henle.de/) có bản in riêng Op. 118 số 2." và "- [PTNA Piano Encyclopedia](https://enc.piano.or.jp/): phân tích hình thức Op. 118 số 2."; chữ mới: link thẳng tới trang IMSLP của Op. 118 ("gồm bản in đầu tiên của Simrock (Berlin, 1893)"), trang Henle HN 1377 ("kèm lời tựa về thư từ giữa Brahms và Clara Schumann năm 1893") và trang PTNA 22831. IMSLP có bản in đầu Simrock 1893 (số bản in 10054); Henle HN 1377 là bản in riêng, lời tựa trích thư Brahms – Clara 1893; PTNA 22831 phân tích ba đoạn.'
+  - id: n63
+    cau: Link sang các nhà soạn nhạc nữ (về Clara Schumann), các thể loại nhạc piano (intermezzo), đối âm, bàn đạp, Nghệ sĩ piano và bản thu, mẫu ghi chép, Tác phẩm theo cấp độ, tài liệu tham khảo.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Trang đích có trong src/content/docs/: lich-su/nu-nha-soan-nhac (có Clara), piano/the-loai (dòng 126 mục Intermezzo, link ngược lại trang này), nhac-ly/22-doi-am, piano/ban-dap (dòng 38: una corda viết tắt u.c.), piano/nghe-si, piano/tac-pham-theo-cap, tai-lieu-tham-khao. nghe-nhac/mau chưa chuyển, có trong src/data/trang.yml (dòng 180), nên hiện "sắp có".'
+khuong_nhac: []

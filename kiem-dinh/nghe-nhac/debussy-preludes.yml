@@ -1,0 +1,872 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nghe-nhac/debussy-preludes
+trang: src/content/docs/nghe-nhac/debussy-preludes.md
+nguon_cu: ../opus-zero/docs/nghe-nhac/debussy-preludes.md
+tang: tac-pham
+lan:
+- so: 1
+  ngay: '2026-11-06'
+  nhanh: moi/d6-l8
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Opus 5.5, agent con, D6-L8 phần A
+    luot_2: null
+    review: null
+    kiem_mau: null
+ghi_chu: 'Hướng dẫn nghe Debussy, Préludes quyển 1 (tầng Tác phẩm, bản ghi debussy-preludes). Bản nhạc: bản in đầu Durand 1910 (D. & F. 7687, Internet Archive preludespourpian00debu, đọc ảnh trang). Lịch sử: lời tựa Lesure và Comments của Henle HN 383, Henle HN 643, PTNA (12 bài), IMSLP. Sửa: n5, n6 (buổi ra mắt: IMSLP và Henle lệch ngày 25/5 và 5/5/1910; Henle nói không có buổi ra mắt trọn quyển nên bỏ Jane Mortier), n16 (chưa đầy hai tháng), n30 (Marguerite Long), n34 (bản quyền Mỹ, bỏ ''nơi đặt site''), n39 (bỏ năm 1894, thêm Louvre), n50 (bỏ tarantella), n53 (trích chú thích Des pas), n68 (bỏ banjo, thêm quasi Tambouro), n70 (truyền thuyết Ys), n77–n79 (bản thu: hãng, năm, bỏ lời khen), n81 (ô 22–83), n95, n96 (mục Nguồn). Không bỏ câu nào. Bảng Theo dõi khi nghe giữ 12 dòng, thứ tự không đổi; ::khoi-nghe{moc} không đụng. Không có khuông nhạc. Thuật ngữ chưa có bản ghi trong thuat-ngu.yml: prélude (khúc dạo đầu), pentatonic (gam ngũ cung), impressionism (ấn tượng); whole-tone-scale có. Câu ve-site ở hồ sơ khác: nhac-ly/32 n8 (trang có Voiles, gam toàn cung: giữ, n41), cap-nhat n48 (bản thu trọn quyển Marcelle Meyer 1956 trên Commons, mốc đầu từng bản: giữ). Dữ liệu: ban_thu.lic ''phạm vi công cộng'' mâu thuẫn câu bản quyền Mỹ, đề xuất ở file sửa (hồ sơ bản ghi).'
+nguon:
+- id: imslp-l1
+  bac: 2
+  ten: 'IMSLP, Préludes, Livre 1, CD 125 ; L.117 (Debussy): 12 preludes; sáng tác 1909–10; biểu diễn đầu 25/5/1910 ở Paris (số 1, 2, 10, 11, Debussy) và 3/5/1911 Salle Pleyel (trọn quyển, Jane Mortier); in 1910 Durand, D. & F. 7687; Piece Style Romantic (wikitext qua api.php)'
+  link: https://imslp.org/wiki/Pr%C3%A9ludes,_Livre_1,_CD_125_(Debussy,_Claude)
+- id: imslp-l2
+  bac: 2
+  ten: 'IMSLP, Préludes, Livre 2, CD 131 ; L.123 (Debussy): 12 preludes; sáng tác 1912–13; in 1913 Durand (wikitext qua api.php)'
+  link: https://imslp.org/wiki/Pr%C3%A9ludes,_Livre_2,_CD_131_(Debussy,_Claude)
+- id: imslp-op28
+  bac: 2
+  ten: 'IMSLP, Preludes, Op.28 (Chopin): 24 preludes, Key {{Tons}} (mọi giọng); 1838–39 (wikitext qua api.php)'
+  link: https://imslp.org/wiki/Preludes,_Op.28_(Chopin,_Fr%C3%A9d%C3%A9ric)
+- id: imslp-wtc
+  bac: 2
+  ten: 'IMSLP, Das wohltemperierte Klavier I, BWV 846–869 (Bach): 24 preludes and fugues (wikitext qua api.php)'
+  link: https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)
+- id: imslp-bergamasque
+  bac: 2
+  ten: 'IMSLP, Suite bergamasque, CD 82 ; L.75 (Debussy): sáng tác 1890–1905; in 1905 (E. Fromont) (wikitext qua api.php)'
+  link: https://imslp.org/wiki/Suite_bergamasque_(Debussy,_Claude)
+- id: durand-1910
+  bac: 1
+  ten: Debussy, Préludes pour piano (1er livre), A. Durand & Fils, Paris, 1910 (D. & F. 7687), bản của Harold B. Lee Library (BYU) số hóa trên Internet Archive (preludespourpian00debu; có ghi chú bút chì cho harp của người dùng, không tính); xem ảnh trang 1–51 ngày 06/11/2026
+  link: https://archive.org/details/preludespourpian00debu
+- id: henle-383
+  bac: 2
+  ten: 'G. Henle Verlag, HN 383 Préludes, Premier livre: mức khó từng bài (Danseuses 5, Voiles 6, Le vent 7, Les sons 6, Anacapri 7, Des pas 5, Vent d''ouest 8, La fille 5 ''ABRSM: Piano Grade 8'', Sérénade 7, Cathédrale 6, Puck 7, Minstrels 6); mô tả ''in 1910 the recently composed Préludes, Premier Livre was published'', ''giving the pieces programmatic directions at the end of each Prélude''; niên biểu Debussy (1862 sinh; ''Impressionist tonal language''; ''music primarily characterized by its sound'')'
+  link: https://www.henle.de/en/Preludes-Premier-livre/HN-383
+- id: henle-383-vorwort
+  bac: 2
+  ten: 'G. Henle Verlag, HN 383: lời tựa (François Lesure, Paris, mùa xuân 1986), PDF: in 14/4/1910; Debussy ghi ngày bản thảo ''late December 1909, January, and the first days of February''; phác thảo ba bài trong sổ 1907–08; bài đầu xong 12 ngày sau thư 25/11/1909; ''not given their first performance as a self-contained cycle''; Debussy ra mắt số 1, 2, 10, 11 ngày 5/5/1910; Viñes số 5, 8, 9 (14/1/1911) và số 12; Liebich số 3, 4 (16/1/1911); Debussy số 3, 4, 6, 12 (29/3/1911); tên ở cuối, trong ngoặc; ''distaste at constantly being labelled an impressionist''; nguồn gốc tên (Bacchantes trên cột ở Louvre, Baudelaire, Leconte de Lisle, Ys, Shakespeare, Naples, Tây Ban Nha)'
+  link: https://www.henle.de/media/66/28/72/1690886073/0383-1690886073-sync.pdf
+- id: henle-383-comments
+  bac: 2
+  ten: 'G. Henle Verlag, HN 383: Comments (Ernst-Günter Heinemann, 1986), PDF: nguồn là bản thảo (Morgan Library) và bản in đầu Durand 1910 (BnF Vm 12/1186(1)); ''the parentheses around the time signatures and titles are all taken from the sources'''
+  link: https://www.henle.de/media/2e/ed/8a/1690886040/0383-1690886040-sync.pdf
+- id: henle-643
+  bac: 2
+  ten: 'G. Henle Verlag, HN 643 La Cathédrale engloutie: ''Debussy … left behind a recording on piano roll''; lời điểm của Music Teacher Magazine Henle dẫn: ''Debussy doubles the speed between bars 7 and 12, and between 22 and 83, being completely contrary to what is printed … the 89 bar piece'''
+  link: https://www.henle.de/en/La-Cathedrale-engloutie/HN-643
+- id: ptna-1
+  bac: 2
+  ten: 'PTNA Piano Encyclopedia, Préludes 1 số 1 (bình giải Shiraishi Yuriko, 2020, bản dịch máy tiếng Anh): Danseuses de Delphes: tượng ba nữ tư tế của Bacchus mà Debussy yêu thích; ô 1–10 kiểu sarabande, hợp âm song song; bè trầm chủ âm ngân (ô 11–14)'
+  link: https://enc.piano.or.jp/en/musics/22364
+- id: ptna-2
+  bac: 2
+  ten: 'PTNA Piano Encyclopedia, Préludes 1 số 2 (bình giải Shiraishi Yuriko, 2020, bản dịch máy tiếng Anh): Voiles: ''sails'' hay ''veils''; bè trầm B♭ từ ô 5 ''constantly resonates''; đoạn ô 42–47 có hợp âm rải nhanh'
+  link: https://enc.piano.or.jp/en/musics/22365
+- id: ptna-3
+  bac: 2
+  ten: 'PTNA Piano Encyclopedia, Préludes 1 số 3 (bình giải Shiraishi Yuriko, 2020, bản dịch máy tiếng Anh): Le vent dans la plaine: chuỗi hợp âm rải liên tục, ''aussi légèrement que possible''; hợp âm đánh mạnh ô 28–34'
+  link: https://enc.piano.or.jp/en/musics/22366
+- id: ptna-4
+  bac: 2
+  ten: 'PTNA Piano Encyclopedia, Préludes 1 số 4 (bình giải Shiraishi Yuriko, 2020, bản dịch máy tiếng Anh): Les sons et les parfums: câu trong Harmonie du soir của Baudelaire; ghi 3/4 nhưng mở đầu nghe như 5/4; ''melancholy waltz'', ''languid dizziness'' của bài thơ'
+  link: https://enc.piano.or.jp/en/musics/22367
+- id: ptna-5
+  bac: 2
+  ten: 'PTNA Piano Encyclopedia, Préludes 1 số 5 (bình giải Shiraishi Yuriko, 2020, bản dịch máy tiếng Anh): Les collines d''Anacapri: Anacapri là thị trấn trên đảo Capri; giai điệu kiểu dân ca; nhịp kiểu habanera ở đoạn giữa; ''dazzling light of Southern Europe'''
+  link: https://enc.piano.or.jp/en/musics/22368
+- id: ptna-6
+  bac: 2
+  ten: 'PTNA Piano Encyclopedia, Préludes 1 số 6 (bình giải Shiraishi Yuriko, 2020, bản dịch máy tiếng Anh): Des pas sur la neige: chỉ dẫn đầu bài ''This rhythm must have the sonic value of a sad and frozen landscape''; nhịp lê thê chi phối tới cuối'
+  link: https://enc.piano.or.jp/en/musics/22369
+- id: ptna-7
+  bac: 2
+  ten: 'PTNA Piano Encyclopedia, Préludes 1 số 7 (bình giải Shiraishi Yuriko, 2020, bản dịch máy tiếng Anh): Ce qu''a vu le vent d''ouest: ''the most tempestuous character within this collection''; hợp âm rải, tremolo, các đỉnh bão'
+  link: https://enc.piano.or.jp/en/musics/22370
+- id: ptna-8
+  bac: 2
+  ten: 'PTNA Piano Encyclopedia, Préludes 1 số 8 (bình giải Shiraishi Yuriko, 2020, bản dịch máy tiếng Anh): La fille aux cheveux de lin: Sol♭ trưởng; từ ca khúc theo thơ Leconte de Lisle (khoảng 1882)'
+  link: https://enc.piano.or.jp/en/musics/22371
+- id: ptna-9
+  bac: 2
+  ten: 'PTNA Piano Encyclopedia, Préludes 1 số 9 (bình giải Shiraishi Yuriko, 2020, bản dịch máy tiếng Anh): La sérénade interrompue: ý dạo đàn guitar ở mở đầu; liên hệ Tây Ban Nha; dạ ca bị cắt ngang nhiều lần'
+  link: https://enc.piano.or.jp/en/musics/22372
+- id: ptna-10
+  bac: 2
+  ten: 'PTNA Piano Encyclopedia, Préludes 1 số 10 (bình giải Shiraishi Yuriko, 2020, bản dịch máy tiếng Anh): La cathédrale engloutie: truyền thuyết Ys ở Bretagne; hợp âm quãng năm, quãng bốn đúng (ô 1–6); chuông (ô 7–13); nhà thờ hiện lên ff (ô 28–46); tiếng tu sĩ; tiếng vọng của câu ô 28 (ô 72–83); ô 84–89'
+  link: https://enc.piano.or.jp/en/musics/22373
+- id: ptna-11
+  bac: 2
+  ten: 'PTNA Piano Encyclopedia, Préludes 1 số 11 (bình giải Shiraishi Yuriko, 2020, bản dịch máy tiếng Anh): La danse de Puck: Giấc mộng đêm hè (minh họa Rackham); hình chấm dôi ở mở đầu'
+  link: https://enc.piano.or.jp/en/musics/22374
+- id: ptna-12
+  bac: 2
+  ten: 'PTNA Piano Encyclopedia, Préludes 1 số 12 (bình giải Shiraishi Yuriko, 2020, bản dịch máy tiếng Anh): Minstrels: Debussy xem minstrel show ở Eastbourne hè 1905; người da trắng bôi đen mặt; đoạn trữ tình ô 63–74'
+  link: https://enc.piano.or.jp/en/musics/22375
+- id: howat-presto
+  bac: 2
+  ten: 'Royal Academy of Music, kho PRESTO: Roy Howat, ''Between and beyond the perforations in Debussy''s Welte rolls'', trong Claude Debussy: die Klavieraufnahmen (Wolke, 2023), tr. 62–91; tóm tắt: 14 tác phẩm trên sáu cuộn Welte-Mignon phát hành 1913, thu ở Paris ''summer 1912'''
+  link: https://presto.ram.ac.uk/id/eprint/54/
+- id: commons-meyer
+  bac: 2
+  ten: 'Wikimedia Commons, file Préludes (Livre I) X. La Cathédrale engloutie (Marcelle Meyer, 1956): nguồn Médiathèque musicale Mahler, fonds Discophiles français (DF 211/2); ''Paris, Salle Adyar, February 15th 1956''; giấy phép PD-old-70-1923, PD-EU-audio, PD-US-record (wikitext qua API; 11 file kia cùng mô tả)'
+  link: https://commons.wikimedia.org/wiki/File:Claude_Debussy_-_Pr%C3%A9ludes_(Livre_I)_-_X._La_Cath%C3%A9drale_engloutie_(Marcelle_Meyer,_1956).flac
+- id: commons-cat-meyer
+  bac: 2
+  ten: 'Wikimedia Commons, Category:Marcelle Meyer (12 file Préludes quyển 1; độ dài đọc qua API imageinfo: 119,68–339,75 giây, tổng 2164,84 giây)'
+  link: https://commons.wikimedia.org/wiki/Category:Marcelle_Meyer
+- id: commons-pd-us-record
+  bac: 2
+  ten: 'Wikimedia Commons, Template:PD-US-record: theo Music Modernization Act (2018), bản thu cố định trước 15/2/1972: ''first published between 1947 and 1956 are copyrighted for a period of 110 years'', phát hành sau 1956 thì vào phạm vi công cộng ngày 15/2/2067'
+  link: https://commons.wikimedia.org/wiki/Template:PD-US-record
+- id: commons-pd-eu-audio
+  bac: 2
+  ten: 'Wikimedia Commons, Template:PD-EU-audio: bản thu phát hành ở EU hơn 50 hay 70 năm trước, quyền đã hết'
+  link: https://commons.wikimedia.org/wiki/Template:PD-EU-audio
+- id: loc-meyer
+  bac: 2
+  ten: 'Library of Congress Name Authority, Meyer, Marcelle (n86859550): ''French pianist'', sinh 22/5/1897 ở Lille, mất 1958 ở Paris; nguồn ''Debussy. Ses premiers interprètes'' (bản .json)'
+  link: https://id.loc.gov/authorities/names/n86859550.json
+- id: mb-gieseking
+  bac: 2
+  ten: 'MusicBrainz, Préludes, Livres I & II, Walter Gieseking, EMI CDH 7610042 (1987): chú thích ''Original Production: 1953 (Book I) and 1955 (Book II)'''
+  link: https://musicbrainz.org/release/dd586cc0-25fb-3053-822f-59eea1f926ad
+- id: warner-gieseking
+  bac: 2
+  ten: Warner Classics, Debussy – The Complete Piano Works, Walter Gieseking (phát hành lại 2022)
+  link: https://www.warnerclassics.com/release/walter-gieseking-debussy
+- id: mb-michelangeli
+  bac: 2
+  ten: MusicBrainz, Préludes, Volume 1, Arturo Benedetti Michelangeli, Deutsche Grammophon, 1978
+  link: https://musicbrainz.org/release/49af5f14-79e2-43c2-a135-59ff33a0677d
+- id: mb-zimerman
+  bac: 2
+  ten: 'MusicBrainz, Préludes, Krystian Zimerman, Deutsche Grammophon, 1994-01: hai đĩa, 12 + 12 bài (Danseuses de Delphes … Minstrels; Brouillards … Feux d''artifice)'
+  link: https://musicbrainz.org/release/94fe35ca-4fda-4757-b178-b901bc2faf89
+- id: grayson-2014
+  bac: 2
+  ten: 'David Grayson, bài điểm đĩa Debussy, Nineteenth-Century Music Review 11/2 (12/2014), Cambridge University Press, chú thích 9: Marguerite Long, At the Piano with Debussy (Dent, 1972), tr. 13: một câu Debussy hay nói là ''one must forget that the piano has hammers'''
+  link: https://www.cambridge.org/core/journals/nineteenth-century-music-review/article/claude-debussy-claude-debussy-album-debussy-le-compositeur-et-ses-interpretes-claude-debussy-and-ricardo-vines-pf-ninon-vallin-jane-bathori-claire-croiza-mary-garden-hector-dufranne-and-gerard-souzay-voice-camille-chevillard-and-arturo-toscanini-cond-aeon-1215-2012-3-cds-227-minutes-claude-debussy-clair-de-lune-natalie-dessay-sop-karine-deshayes-mezzosop-catherine-michel-harp-philippe-cassard-pf-le-jeune-choeur-de-paris-virgin-classics-7307692-2012-1-cd-73-minutes-claude-debussy-the-claude-debussy-collection-sony-193179-2012-18-cds-1148-minutes-claude-debussy-the-debussy-edition-deutsche-grammophon-47900566-18-cds-1032-minutes-claude-debussy-hommage-a-debussy-works-for-piano-julia-dahlkvist-chenyin-li-juliana-steinbach-and-amir-tebenikhin-pf-genuin-classics-12230-2012-4-cds-302-minutes-claude-debussy-piano-music-4-volumes-roy-howat-pf-tall-poppies-vol-1-94-1997-1-cd-79-minutes-vol-2-123-2000-1-cd-71-minutes-vol-3-164-2002-1-cd-75-minutes-vol-4-165-2003-1-cd-73-minutes/E1F1D03E3D57CC5B9671937E0A620D8D
+- id: pitt-minstrelsy
+  bac: 2
+  ten: 'University of Pittsburgh Library System, Center for American Music, ''Blackface Minstrelsy'': Thomas D. Rice, ''a white performer who by 1831 developed a song-and-dance routine in which he darkened his face''; Virginia Minstrels (New York, 1843); ''demeaning caricatures of Black people rooted in racism and white supremacy'''
+  link: https://library.pitt.edu/node/682
+- id: marmottan
+  bac: 2
+  ten: 'Musée Marmottan Monet, Notre collection: Claude Monet: Impression, soleil levant ''has gone down in history for inspiring the name of the movement'''
+  link: https://www.marmottan.fr/en/notre-collection/claude-monet/
+- id: tth2013
+  bac: 2
+  ten: 'Trần Thanh Hà, Thang năm âm người Việt dưới góc nhìn văn hóa học, Tạp chí Khoa học Xã hội số 1(173), 2013 (PDF): thang năm âm trong âm nhạc truyền thống người Việt'
+  link: https://vjol.info.vn/khxh/article/download/15034/13490/
+- id: nsn
+  bac: 2
+  ten: 'src/data/nha-soan-nhac.yml (đã khóa): debussy sinh 1862, mất 1918'
+  link: src/data/nha-soan-nhac.yml
+- id: tn
+  bac: 2
+  ten: 'src/data/thuat-ngu.yml (đã khóa): whole-tone-scale (gam toàn cung)'
+  link: https://mtuann.github.io/opus/nhac-ly/tu-dien/
+nhan_dinh:
+- id: n1
+  cau: 'Nhà soạn nhạc: Claude Debussy (1862–1918).'
+  loai: nam
+  nguon:
+  - nsn
+  - henle-383
+  ket_qua: dung
+  ghi_chu: 'Năm khớp nha-soan-nhac.yml (debussy 1862–1918, đã khóa); Henle HN 383 niên biểu: ''1862 Born in Saint-Germain-en-Laye on August 22''.'
+- id: n2
+  cau: 'Tên đầy đủ: Préludes, quyển 1 (Premier livre): mười hai prélude cho piano.'
+  loai: ten
+  nguon:
+  - imslp-l1
+  - durand-1910
+  ket_qua: dung
+  ghi_chu: 'IMSLP: ''Préludes, Premier Livre'', ''12 preludes''; bìa trong bản Durand 1910: ''Préludes pour Piano (1er Livre)'', mục lục 12 bài.'
+- id: n3
+  cau: Sáng tác từ tháng 12/1909 đến tháng 2/1910.
+  loai: nam
+  nguon:
+  - henle-383-vorwort
+  - imslp-l1
+  ket_qua: dung
+  ghi_chu: 'Lời tựa Henle: Debussy ghi ngày trên bản thảo ''late December 1909, January, and the first days of February''; bài đầu xong mười hai ngày sau thư 25/11/1909. IMSLP: 1909–10.'
+- id: n4
+  cau: Nhà Durand (Paris) in quyển 1 năm 1910.
+  loai: nam
+  nguon:
+  - henle-383-vorwort
+  - imslp-l1
+  - durand-1910
+  ket_qua: dung
+  ghi_chu: 'Lời tựa Henle: ''issued on 14 April 1910 by the publisher Durand''; IMSLP: 1910, Durand, D. & F. 7687; bản quét có số bản in D. & F. 7687 cuối bài XII.'
+- id: n5
+  cau: Debussy tự chơi ra mắt bốn bản (I, II, X và XI) tháng 5/1910 ở Paris.
+  loai: lich-su
+  nguon:
+  - henle-383-vorwort
+  - imslp-l1
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: ''ngày 25/5/1910 ở Paris''. Hai nguồn bậc 2 lệch ngày: IMSLP ''1910-05-25 in Paris (Nos.1, 2, 10, 11) Société musicale indépendante''; lời tựa Henle (Lesure): ''Debussy himself, on 5 May 1910, gave the first performances of four of the préludes: nos. 1, 2, 10 and 11''. Viết chung ''tháng 5/1910'' (chuẩn mục 2).'
+- id: n6
+  cau: Phần lớn các bản còn lại được Ricardo Viñes, Franz Liebich và chính Debussy chơi lần đầu ở Paris trong năm 1911.
+  loai: lich-su
+  nguon:
+  - henle-383-vorwort
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: ''trọn quyển do Jane Mortier chơi lần đầu ngày 3/5/1911 tại Salle Pleyel'' (theo IMSLP). Lời tựa Henle (Lesure, 1986): ''The Préludes were not given their first performance as a self-contained cycle''; Viñes số 5, 8, 9 (14/1/1911) và số 12; Liebich số 3, 4 (16/1/1911); Debussy số 3, 4, 6, 12 (29/3/1911); ''All of these performances took place in Paris''. Bản tiếng Anh ghi số 12 ngày 10/2/1912, bản tiếng Pháp ''le 10 février suivant'' (tức 1911; Debussy chơi số 12 ngày 29/3/1911): viết ''năm 1911''. Số VII không có trong danh sách nên viết ''phần lớn''. Mâu thuẫn hai nguồn về buổi trọn quyển: theo Lesure (gần nguồn gốc hơn), bỏ Jane Mortier.'
+- id: n7
+  cau: 'Thời kỳ: đầu thế kỷ 20, chủ nghĩa ấn tượng.'
+  loai: lich-su
+  nguon:
+  - henle-383
+  - henle-383-vorwort
+  ket_qua: dung
+  ghi_chu: 'Henle niên biểu: 1903–05 La Mer dùng ''Impressionist tonal language''; 1909–10 Préludes quyển 1. Lời tựa: Debussy bị gọi là ''impressionist''. IMSLP xếp Piece Style Romantic (phân loại thô của IMSLP); bản ghi thoi_ky: Ấn tượng.'
+- id: n8
+  cau: 'Thể loại: prélude, tiểu phẩm cho piano.'
+  loai: dinh-nghia
+  nguon:
+  - imslp-l1
+  - henle-383
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Tags ''preludes ; pf''; Henle niên biểu: ''these character pieces''.'
+- id: n9
+  cau: Độ dài khoảng 35–40 phút cả quyển; mỗi bản từ hai đến sáu phút.
+  loai: so-lieu
+  nguon:
+  - commons-cat-meyer
+  - mb-zimerman
+  ket_qua: dung
+  ghi_chu: 'Bản Meyer (Commons, API): 12 file từ 119,68 giây (La fille) đến 339,75 giây (Cathédrale), tổng 2164,84 giây ≈ 36 phút.'
+- id: n10
+  cau: Ở Bach, prelude dẫn vào một fugue.
+  loai: lich-su
+  nguon:
+  - imslp-wtc
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Das wohltemperierte Klavier I gồm ''24 preludes and fugues''.'
+- id: n11
+  cau: Link Prelude Đô trưởng (/opus/piano/tac-pham/bach-prelude-do/).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: src/content/docs/piano/tac-pham/bach-prelude-do.md có.
+- id: n12
+  cau: Chopin biến prelude thành một bản nhạc đứng riêng, ngắn, chỉ một ý; 24 prélude Op. 28 của ông đi qua đủ 24 giọng.
+  loai: lich-su
+  nguon:
+  - imslp-op28
+  - henle-383
+  ket_qua: dung
+  ghi_chu: 'IMSLP Op. 28: ''24 preludes'', Key {{Tons}} (mọi giọng), không kèm fugue. Henle HN 383: tên ''draws on a traditional form, following Chopin''s example''.'
+- id: n13
+  cau: Link Prélude Mi thứ (/opus/piano/tac-pham/chopin-prelude-mi-thu/).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: src/content/docs/piano/tac-pham/chopin-prelude-mi-thu.md có.
+- id: n14
+  cau: Debussy cũng viết 24 prélude, chia làm hai quyển, mỗi quyển mười hai bản; quyển 2 in năm 1913.
+  loai: so-lieu
+  nguon:
+  - imslp-l1
+  - imslp-l2
+  ket_qua: dung
+  ghi_chu: 'IMSLP: quyển 1 ''12 preludes''; quyển 2 ''12 preludes'', in 1913 (Durand).'
+- id: n15
+  cau: Các prélude của Debussy không theo vòng giọng nào.
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  ket_qua: dung
+  ghi_chu: 'Bản Durand 1910: hóa biểu lặp lại (III, VIII, IX đều có giáng nhiều; IV và VII cùng ba thăng; II và X không dấu), không theo trật tự giọng như Op. 28.'
+- id: n16
+  cau: Theo ngày Debussy ghi trên bản thảo, quyển 1 được viết xong trong chưa đầy hai tháng, từ tháng 12/1909 đến đầu tháng 2/1910, dù vài bản đã có phác thảo từ những năm 1907–1908.
+  loai: nam
+  nguon:
+  - henle-383-vorwort
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: ''Quyển 1 được viết trong chừng ba tháng, từ tháng 12/1909 đến tháng 2/1910.'' Lời tựa Henle: ''This gives the impression that he had completed the work in less than two months. However, the discovery of sketches to three of the préludes in a notebook of 1907–08 shows that he had already been working on the project for some time.'''
+- id: n17
+  cau: Mỗi bản có một cái tên gợi hình, in ở cuối bản nhạc, trong ngoặc đơn và sau dấu ba chấm, như (...Voiles).
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  - henle-383-vorwort
+  - henle-383-comments
+  ket_qua: dung
+  ghi_chu: 'Bản Durand 1910: cuối mỗi bài in ''(... Danseuses de Delphes)'', ''(... Voiles)'', ''(... Des pas sur la neige)'', ''(... La Cathédrale engloutie)''…; mục lục cũng có ''...'' trước tên. Henle Comments: ''the parentheses around … titles are all taken from the sources''.'
+- id: n18
+  cau: 'Người chơi và người nghe gặp âm nhạc trước rồi mới biết bức tranh: cái tên là một lời gợi ý, không phải câu chuyện bắt buộc phải theo.'
+  loai: lich-su
+  nguon:
+  - henle-383-vorwort
+  ket_qua: dung
+  ghi_chu: 'Lời tựa Henle: ''Debussy was clearly telling the performer that he need not know the title before playing the piece, and probably that the titles are not essential to the work''s interpretation.'''
+- id: n19
+  cau: 'Nguồn cảm hứng: ba vũ nữ chạm trên một cột đá cổ ở Delphi, một câu thơ của Baudelaire, một truyền thuyết xứ Bretagne, tinh linh Puck của Shakespeare, phong cảnh miền Nam nước Ý, những gánh hát giải trí của Mỹ.'
+  loai: lich-su
+  nguon:
+  - henle-383-vorwort
+  - ptna-1
+  - ptna-12
+  - pitt-minstrelsy
+  ket_qua: dung
+  ghi_chu: 'Lời tựa Henle: ''three Bacchantes atop a column'', Baudelaire Harmonie du soir, Breton legend of Ys, Shakespeare''s Midsummer Night''s Dream (Puck), Naples. PTNA số 12: minstrel show Debussy xem ở Eastbourne năm 1905; Pitt: minstrelsy là loại hình của Mỹ.'
+- id: n20
+  cau: Ở Mozart hay Beethoven, hòa âm như một con đường (rời nhà, căng thẳng, trở về); ở Debussy, mỗi hợp âm được nghe như một màu.
+  loai: lich-su
+  nguon:
+  - henle-383
+  ket_qua: dung
+  ghi_chu: 'Câu khái quát. Henle: âm nhạc Debussy ''primarily characterized by its sound''. Lượt 2 cân nhắc nếu cần nguồn riêng cho vế hòa âm cổ điển.'
+- id: n21
+  cau: Voiles dùng gam toàn cung, gam không có nốt chủ để 'về nhà'.
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  - tn
+  ket_qua: dung
+  ghi_chu: 'Bản Durand 1910, ô 1–9: các nốt Sol♯ (La♭), Mi, Fa♯, Rê, Đô, Si♭: đủ sáu nốt gam toàn cung từ Đô. thuat-ngu: whole-tone-scale, 6 nốt cách nhau một cung (không có nửa cung nên không có cảm âm).'
+- id: n22
+  cau: La fille aux cheveux de lin dùng gam ngũ cung.
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  ket_qua: dung
+  ghi_chu: 'Bản Durand 1910, ô 1–2: giai điệu Rê♭–Si♭–Sol♭–Mi♭–Sol♭–Si♭ (các nốt của ngũ cung Sol♭).'
+- id: n23
+  cau: Gam ngũ cung rất quen tai với người nghe nhạc Việt.
+  loai: lich-su
+  nguon:
+  - tth2013
+  ket_qua: dung
+  ghi_chu: 'Trần Thanh Hà 2013: thang năm âm là thang âm cơ bản của âm nhạc truyền thống người Việt (Kinh). Cùng ý với nhac-ly/16 (đã khóa).'
+- id: n24
+  cau: La cathédrale engloutie có những chuỗi hợp âm trượt song song như thánh ca thời Trung cổ.
+  loai: cau-truc
+  nguon:
+  - ptna-10
+  - durand-1910
+  ket_qua: dung
+  ghi_chu: 'PTNA: ''ascending chords of perfect 5ths and 4ths'' (ô 1–6); ''the chanting of monks is heard as a modal melody'' (ô 47–71). Bản Durand: hợp âm song song ô 1, 3, 5, 14…'
+- id: n25
+  cau: Debussy dùng những nốt trầm ngân dài làm nền cho cả một đoạn.
+  loai: cau-truc
+  nguon:
+  - ptna-1
+  - ptna-2
+  - durand-1910
+  ket_qua: dung
+  ghi_chu: 'PTNA số 1: ''parallel chords moving over a sustained tonic bass'' (ô 11–14); số 2: bè trầm Si♭ ''constantly resonates''.'
+- id: n26
+  cau: Giới phê bình gọi lối viết này là 'ấn tượng', theo tên trường phái hội họa của Monet.
+  loai: lich-su
+  nguon:
+  - henle-383-vorwort
+  - marmottan
+  ket_qua: dung
+  ghi_chu: 'Lời tựa Henle: Debussy ''constantly being labelled an "impressionist"''. Marmottan: Impression, soleil levant của Monet ''has gone down in history for inspiring the name of the movement''.'
+- id: n27
+  cau: Chính Debussy không ưa cái nhãn 'ấn tượng'.
+  loai: lich-su
+  nguon:
+  - henle-383-vorwort
+  ket_qua: dung
+  ghi_chu: 'Lời tựa Henle: ''the composer''s distaste at constantly being labelled an "impressionist"''.'
+- id: n28
+  cau: 'Tiếng đàn ở đây phụ thuộc nhiều vào bàn đạp và cách chạm phím: nốt trầm được giữ ngân trong khi hòa âm bên trên đổi màu, các tầng âm thanh trải từ đáy đến đỉnh bàn phím, phần lớn ở sắc thái rất nhỏ.'
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  - ptna-2
+  - ptna-10
+  ket_qua: dung
+  ghi_chu: 'Bản Durand 1910: Voiles Si♭ trầm dưới hòa âm thay đổi; Cathédrale hợp âm từ quãng tám trầm tới quãng tám cao (8va), ''Dans une brume doucement sonore''; phần lớn các bài ghi p, pp.'
+- id: n29
+  cau: Link Bàn đạp (/opus/piano/ban-dap/).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: src/content/docs/piano/ban-dap.md có.
+- id: n30
+  cau: Theo hồi ức của nghệ sĩ piano Marguerite Long, một câu Debussy hay nói là phải quên rằng cây đàn piano có búa.
+  loai: lich-su
+  nguon:
+  - grayson-2014
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: ''Debussy được kể là muốn người chơi làm cho người nghe quên rằng cây đàn có búa.'' Grayson (Nineteenth-Century Music Review 2014), chú thích 9: Long, At the Piano with Debussy (1972), tr. 13: một trong những câu Debussy hay nói là ''one must forget that the piano has hammers''. Viết lại có người kể.'
+- id: n31
+  cau: Bản thu gợi ý là của nghệ sĩ piano người Pháp Marcelle Meyer.
+  loai: ten
+  nguon:
+  - loc-meyer
+  - commons-meyer
+  ket_qua: dung
+  ghi_chu: 'LoC: ''French pianist'', 1897–1958; Commons: người chơi Marcelle Meyer.'
+- id: n32
+  cau: Bản thu Meyer thực hiện năm 1956.
+  loai: nam
+  nguon:
+  - commons-meyer
+  ket_qua: dung
+  ghi_chu: 'Commons: ''Paris, Salle Adyar, February 15th 1956''.'
+- id: n33
+  cau: Bản thu gồm đủ mười hai bản theo đúng thứ tự, nằm trên Wikimedia Commons.
+  loai: so-lieu
+  nguon:
+  - commons-cat-meyer
+  ket_qua: dung
+  ghi_chu: 'Commons: 12 file Préludes Livre I, I đến XII, cùng nguồn đĩa DF 211/2.'
+- id: n34
+  cau: Commons ghi bản thu Meyer thuộc phạm vi công cộng ở châu Âu, nhưng ở Mỹ nó vẫn còn được bảo hộ (theo luật Mỹ, bản thu thực hiện trước năm 1972 và phát hành từ năm 1947 trở đi vẫn còn được bảo hộ).
+  loai: quy-tac
+  nguon:
+  - commons-meyer
+  - commons-pd-eu-audio
+  - commons-pd-us-record
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: ''Ở Mỹ, nơi đặt site, bản thu này vẫn còn được bảo hộ''. Commons gắn PD-EU-audio và PD-US-record; chữ của PD-US-record (theo Music Modernization Act 2018): bản thu cố định trước 15/2/1972 ''first published between 1947 and 1956 are copyrighted for a period of 110 years'', phát hành sau 1956 thì tới 15/2/2067 mới vào phạm vi công cộng; bản thu 1956 nên dù phát hành năm 1956 hay muộn hơn vẫn còn bảo hộ ở Mỹ. Bỏ ''nơi đặt site'' (GitHub Pages ở Mỹ cần nguồn ngoài, không phải điều trang cần). Năm phát hành đĩa DF 211/2 chưa xác định (1956 hay muộn hơn), nên chữ trang nói chung ''phát hành từ năm 1947 trở đi''. Commons gắn PD-US-record cho file, nhưng chính chữ mẫu ấy nói bản thu như vậy còn bảo hộ ở Mỹ: nhãn của Commons không mâu thuẫn với câu trang.'
+- id: n35
+  cau: Khối nghe chỉ dẫn link tới từng bản, không phát trực tiếp; mốc tham khảo là lúc bắt đầu từng bản trong file ấy.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/data/tac-pham.yml: 12 parts chỉ có link (không mp3); src/scripts/nghe.js: linkOnly, ''Trang này chỉ dẫn link, không phát bản thu này''; moc 12 số khớp đầu từng bản (người giao đã kiểm).'
+- id: n36
+  cau: Muốn ghi mốc ngay tại trang, dán link YouTube hoặc link file của một bản thu khác vào khung.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/scripts/nghe.js: nhận link YouTube, link file âm thanh hay file trên máy.'
+- id: n37
+  cau: I. Danseuses de Delphes (Vũ nữ Delphi), Lent et grave.
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  ket_qua: dung
+  ghi_chu: 'Bản Durand: ''Lent et grave''.'
+- id: n38
+  cau: 'I: hợp âm chậm, nặng và trang nghiêm như một điệu múa nghi lễ.'
+  loai: cau-truc
+  nguon:
+  - ptna-1
+  - durand-1910
+  ket_qua: dung
+  ghi_chu: 'PTNA: hai ô chậm kiểu sarabande, nhấn phách hai, hợp âm song song.'
+- id: n39
+  cau: 'I: gợi hứng từ ba vũ nữ trên đỉnh một cột đá cổ ở Delphi (Hy Lạp), được bày ở bảo tàng Louvre (Paris).'
+  loai: lich-su
+  nguon:
+  - henle-383-vorwort
+  - ptna-1
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: ''gợi hứng từ ba vũ nữ chạm trên một cột đá cổ tìm thấy ở Delphi (Hy Lạp) năm 1894''. Lời tựa Henle: ''Danseuses de Delphes evokes three Bacchantes atop a column displayed in the Louvre''. Năm 1894 chỉ thấy ở Wikipedia và trang hướng dẫn du lịch delphimuseum.gr (''found during the Great Excavation in 1894''), không có nguồn bậc 2: bỏ năm, thêm Louvre theo Henle.'
+- id: n40
+  cau: 'II. Voiles: chữ Pháp mang cả hai nghĩa Cánh buồm và Tấm voan.'
+  loai: ten
+  nguon:
+  - ptna-2
+  ket_qua: dung
+  ghi_chu: 'PTNA: ''can be interpreted as either "sails" (feminine plural noun) or "veils" (masculine noun)''.'
+- id: n41
+  cau: 'II: gần như cả bài trên gam toàn cung, không có ''nhà'' để về.'
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  ket_qua: dung
+  ghi_chu: 'Bản Durand: trừ đoạn ô 42–47 (sáu dấu giáng), các ô dùng sáu nốt Đô, Rê, Mi, Fa♯, Sol♯, Si♭.'
+- id: n42
+  cau: 'II: nốt Si♭ ở bè trầm ngân gần suốt bài.'
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  - ptna-2
+  ket_qua: dung
+  ghi_chu: 'Bản Durand: Si♭ trầm từ ô 5 đến hết, kể cả đoạn phím đen; PTNA: ''bass … on B♭ appearing from measure 5'', ''constantly resonates''.'
+- id: n43
+  cau: 'II: một đoạn ngắn ở giữa chỉ dùng phím đen (ngũ cung), rồi gam toàn cung trở lại.'
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  - ptna-2
+  ket_qua: dung
+  ghi_chu: 'Bản Durand tr. 5: ''En animant'', hóa biểu sáu giáng (ô 42–47, PTNA: ''third episode (mm. 42-47)''), rồi trở lại không dấu.'
+- id: n44
+  cau: III. Le vent dans la plaine (Gió trên đồng), Animé.
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  ket_qua: dung
+  ghi_chu: 'Bản Durand: ''Animé''.'
+- id: n45
+  cau: 'III: một hình nốt lăn tăn rất nhanh và rất nhỏ gần như không dứt; vài cơn gió mạnh bất chợt bùng lên rồi tắt.'
+  loai: cau-truc
+  nguon:
+  - ptna-3
+  - durand-1910
+  ket_qua: dung
+  ghi_chu: 'PTNA: ''continuous rush of arpeggios'', ''aussi légèrement que possible'', hợp âm đánh mạnh ô 28–34; bản Durand: pp.'
+- id: n46
+  cau: 'IV: tên là một câu trong bài thơ Harmonie du soir của Baudelaire.'
+  loai: lich-su
+  nguon:
+  - henle-383-vorwort
+  - ptna-4
+  ket_qua: dung
+  ghi_chu: 'Henle: ''the third verse of Baudelaire''s Harmonie du soir''.'
+- id: n47
+  cau: 'IV: nhịp ba uể oải như một điệu valse chậm, hòa âm dày và mềm.'
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  - ptna-4
+  ket_qua: dung
+  ghi_chu: 'Bản Durand: ''Modéré (harmonieux et souple)'', 3/4 (kèm (5/4) ở đầu); PTNA: nhịp 3/4 bị phá có chủ ý, gắn với ''melancholy waltz'' và ''languid dizziness'' trong bài thơ.'
+- id: n48
+  cau: 'IV: gần cuối, những tiếng như tù và vọng lại từ xa.'
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  ket_qua: dung
+  ghi_chu: 'Bản Durand tr. 15: ''Comme une lointaine sonnerie de Cors'' (như tiếng tù và vọng từ xa).'
+- id: n49
+  cau: 'V. Les collines d''Anacapri: Anacapri ở trên đảo Capri.'
+  loai: ten
+  nguon:
+  - ptna-5
+  ket_qua: dung
+  ghi_chu: 'PTNA: ''Anacapri is the name of a town on the Italian island of Capri''.'
+- id: n50
+  cau: 'V: mở đầu bằng những nốt để ngân vang (quittez, en laissant vibrer), rồi một điệu nhảy nhanh, nhẹ (Vif) chen với một giai điệu kiểu dân ca (avec la liberté d''une chanson populaire), gợi không khí miền Nam nước Ý.'
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  - ptna-5
+  - henle-383-vorwort
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: ''mở đầu như tiếng chuông ngân, rồi nhịp tarantella sôi nổi của miền Nam nước Ý chen với một giai điệu kiểu dân ca Napoli''. Bản Durand: ''Très modéré'', ''quittez, en laissant vibrer'', ''Vif'', ''a Tempo (Avec la liberté d''une chanson populaire)''. Không nguồn nào đã mở gọi là tarantella; PTNA nói nhịp kiểu habanera ở đoạn giữa, giai điệu kiểu dân ca, ''Southern Europe''; Henle: ''Naples''. Viết theo chỉ dẫn in trên bản nhạc.'
+- id: n51
+  cau: VI. Des pas sur la neige (Những bước chân trên tuyết), Triste et lent.
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  ket_qua: dung
+  ghi_chu: 'Bản Durand: ''Triste et lent''.'
+- id: n52
+  cau: 'VI: một hình hai nốt lặp lại gần như suốt bài, như những bước chân nặng nề.'
+  loai: cau-truc
+  nguon:
+  - ptna-6
+  - durand-1910
+  ket_qua: dung
+  ghi_chu: 'PTNA: ''the dragging rhythm dominates the piece until the end''; bản Durand: hình Rê–Mi ở bè giữa từ ô 1.'
+- id: n53
+  cau: 'VI: Debussy ghi ngay ô đầu: Ce rythme doit avoir la valeur sonore d''un fond de paysage triste et glacé (nhịp điệu này phải có giá trị âm thanh của nền một phong cảnh buồn và giá lạnh).'
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  - ptna-6
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: ''Debussy dặn rằng nhịp điệu ấy phải vang lên như nền của một phong cảnh buồn và giá lạnh'' (diễn ý). Bản Durand tr. 22, dưới ô 1: ''Ce rythme doit avoir la valeur sonore d''un fond de paysage triste et glacé''. Trích nguyên văn, kèm dịch.'
+- id: n54
+  cau: 'VII. Ce qu''a vu le vent d''ouest (Điều gió tây đã thấy), Animé et tumultueux: bản dữ dội nhất quyển.'
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  - ptna-7
+  ket_qua: dung
+  ghi_chu: 'Bản Durand: ''Animé et tumultueux''; PTNA: ''the most tempestuous character within this collection''.'
+- id: n55
+  cau: 'VII: những đợt hợp âm rải và nốt chạy cuộn lên như sóng dữ, những cao trào rất mạnh.'
+  loai: cau-truc
+  nguon:
+  - ptna-7
+  - durand-1910
+  ket_qua: dung
+  ghi_chu: 'PTNA: hợp âm rải, tremolo, ba đỉnh bão (ô 23, 35–42, 47–53); bản Durand: ff, ''Furieux et rapide''.'
+- id: n56
+  cau: VIII. La fille aux cheveux de lin (Cô gái tóc lanh), Sol♭ trưởng.
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  - ptna-8
+  ket_qua: dung
+  ghi_chu: 'Bản Durand: hóa biểu sáu giáng, kết Sol♭; PTNA: ''G-flat major''.'
+- id: n57
+  cau: 'VIII: giai điệu mở đầu vang một mình, không đệm, gần như chỉ dùng các nốt của gam ngũ cung.'
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  ket_qua: dung
+  ghi_chu: 'Bản Durand tr. 31: ô 1 và gần hết ô 2 bè dưới nghỉ; giai điệu Rê♭, Si♭, Sol♭, Mi♭ (ngũ cung Sol♭), Fa và Mi♭–Rê♭ ở ô 3.'
+- id: n58
+  cau: 'VIII: tên lấy từ một bài thơ của Leconte de Lisle.'
+  loai: lich-su
+  nguon:
+  - henle-383-vorwort
+  - ptna-8
+  ket_qua: dung
+  ghi_chu: 'Henle: ''one of the Poèmes antiques by Leconte de Lisle that Debussy had set as a song … in 1882''.'
+- id: n59
+  cau: 'VIII: kết rất nhỏ.'
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  ket_qua: dung
+  ghi_chu: 'Bản Durand tr. 32: ''perdendo'', pp ở hợp âm cuối.'
+- id: n60
+  cau: 'IX. La sérénade interrompue (Bản dạ ca bị cắt ngang), Modérément animé: tiếng guitar gảy dạo kiểu Tây Ban Nha.'
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  - ptna-9
+  - henle-383-vorwort
+  ket_qua: dung
+  ghi_chu: 'Bản Durand: ''Modérément animé'', ''quasi guitarra'', ''pp (comme en prélude)''; PTNA: lên dây guitar, trích Albéniz; Henle: Spain.'
+- id: n61
+  cau: 'IX: một giai điệu như chàng trai hát dưới cửa sổ, bị cắt ngang mấy lần bởi những âm thanh khác hẳn.'
+  loai: cau-truc
+  nguon:
+  - ptna-9
+  ket_qua: dung
+  ghi_chu: 'PTNA: ''The pleading serenade is frequently interrupted by these motifs, and is ultimately completely cut off.'''
+- id: n62
+  cau: 'X. La cathédrale engloutie (Nhà thờ chìm), Profondément calme: những hợp âm quãng năm song song hiện ra như từ sương mù, tiếng chuông.'
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  - ptna-10
+  ket_qua: dung
+  ghi_chu: 'Bản Durand: ''Profondément calme (Dans une brume doucement sonore)''; PTNA: hợp âm quãng năm và quãng bốn đúng (ô 1–6), chuông (ô 7–13).'
+- id: n63
+  cau: 'X: nhà thờ dần nhô khỏi mặt nước và vang lên như đàn organ, rất mạnh, ở Đô trưởng.'
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  - ptna-10
+  ket_qua: dung
+  ghi_chu: 'Bản Durand tr. 39: bỏ hóa biểu, ff, ''Sonore sans dureté'' (ô 28); PTNA: ''with a powerful and grand ff sonority, the cathedral fully appears above the sea (mm. 28-46)''. ''Như đàn organ'' là hình ảnh nghe.'
+- id: n64
+  cau: 'X: rồi chìm xuống, giai điệu ấy trở lại rất nhỏ như một tiếng vọng.'
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  - ptna-10
+  ket_qua: dung
+  ghi_chu: 'Bản Durand tr. 41: ''Comme un écho de la phrase entendue précédemment'', pp; PTNA: tiếng vọng của câu ô 28 (ô 72–83).'
+- id: n65
+  cau: 'XI. La danse de Puck, Capricieux et léger: tinh linh trong Giấc mộng đêm hè của Shakespeare.'
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  - henle-383-vorwort
+  ket_qua: dung
+  ghi_chu: 'Bản Durand: ''Capricieux et léger''; Henle: ''Shakespeare''s Midsummer Night''s Dream (Act 2, Scene 1)''.'
+- id: n66
+  cau: 'XI: nhịp chấm dôi nhảy nhót, nhẹ như không.'
+  loai: cau-truc
+  nguon:
+  - ptna-11
+  - durand-1910
+  ket_qua: dung
+  ghi_chu: 'PTNA: ''The dotted motif at the beginning … presented lightly and capriciously''.'
+- id: n67
+  cau: 'XII. Minstrels: nhại không khí của những gánh hát giải trí kiểu Mỹ.'
+  loai: lich-su
+  nguon:
+  - ptna-12
+  - pitt-minstrelsy
+  ket_qua: dung
+  ghi_chu: 'PTNA: tên từ minstrel show Debussy xem ở Eastbourne năm 1905; Pitt: minstrelsy là loại hình của Mỹ.'
+- id: n68
+  cau: 'XII: Nerveux et avec humour; những nốt gảy giật cục, tiếng trống (quasi Tambouro), những câu đùa bất ngờ, một giai điệu trữ tình nửa đùa nửa thật.'
+  loai: cau-truc
+  nguon:
+  - durand-1910
+  - ptna-12
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: ''tiếng banjo gảy, tiếng trống, những câu đùa bất ngờ, một giai điệu tình cảm nửa đùa nửa thật''. Bản Durand: ''Modéré (Nerveux et avec humour)'', ''les gruppetti sur le temps'', ''f (Quasi Tambouro)''; không ghi banjo. PTNA: ''a lyrical episode (mm. 63-74)''. Thêm chỉ dẫn in trên bản nhạc, bỏ banjo.'
+- id: n69
+  cau: La cathédrale engloutie dựa trên truyền thuyết xứ Bretagne về thành Ys bị biển nhấn chìm.
+  loai: lich-su
+  nguon:
+  - henle-383-vorwort
+  - henle-643
+  - ptna-10
+  ket_qua: dung
+  ghi_chu: 'Henle: ''refers to the old Breton legend of the town of Ys, which sank into the sea''.'
+- id: n70
+  cau: Trong bản nhạc, nhà thờ của thành nhô lên khỏi mặt nước giữa tiếng chuông và tiếng hát của các tu sĩ, rồi lại chìm xuống.
+  loai: cau-truc
+  nguon:
+  - ptna-10
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: ''và vào những buổi sáng trời trong, nhà thờ của thành nhô lên khỏi mặt nước, vọng tiếng chuông, tiếng đàn organ và tiếng hát của các tu sĩ, rồi lại chìm xuống'' (chi tiết truyền thuyết chỉ có ở Wikipedia). PTNA tả đúng diễn biến ấy trong bản nhạc: chuông, nhà thờ hiện lên, ''the chanting of monks'', ''swallowed by the sea''. Viết lại thành điều bản nhạc làm.'
+- id: n71
+  cau: Minstrel show là loại hình giải trí ra đời ở Mỹ thế kỷ 19, trong đó diễn viên (thường là người da trắng) bôi đen mặt để nhại người da đen.
+  loai: lich-su
+  nguon:
+  - pitt-minstrelsy
+  - ptna-12
+  ket_qua: dung
+  ghi_chu: 'Pitt: Thomas D. Rice, ''a white performer who by 1831 developed a song-and-dance routine in which he darkened his face''; Virginia Minstrels ra mắt 1843 (New York). PTNA: ''white performers in blackface''.'
+- id: n72
+  cau: Ngày nay minstrel show được nhìn nhận là một hình thức phân biệt chủng tộc.
+  loai: lich-su
+  nguon:
+  - pitt-minstrelsy
+  ket_qua: dung
+  ghi_chu: 'Pitt: ''demeaning caricatures of Black people rooted in racism and white supremacy''.'
+- id: n73
+  cau: 'Che tên, nghe rồi tự đặt tên: đó cũng là cách Debussy muốn bạn nghe.'
+  loai: lich-su
+  nguon:
+  - henle-383-vorwort
+  ket_qua: dung
+  ghi_chu: 'Lời tựa Henle: tên đặt ở cuối, người chơi ''need not know the title before playing''.'
+- id: n74
+  cau: Clair de lune là bản Debussy bắt đầu viết khoảng hai mươi năm trước Préludes quyển 1.
+  loai: nam
+  nguon:
+  - imslp-bergamasque
+  - imslp-l1
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Suite bergamasque 1890–1905; Préludes quyển 1 1909–10: cách khoảng 19–20 năm.'
+- id: n75
+  cau: Link Clair de lune (/opus/piano/tac-pham/debussy-clair-de-lune/), hai chỗ.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: src/content/docs/piano/tac-pham/debussy-clair-de-lune.md có.
+- id: n76
+  cau: 'Marcelle Meyer: bản thu gợi ý ở trang này (link tới Wikimedia Commons), của một nghệ sĩ Pháp thuộc thế hệ sau Debussy.'
+  loai: lich-su
+  nguon:
+  - loc-meyer
+  - commons-meyer
+  ket_qua: dung
+  ghi_chu: 'LoC: French pianist, sinh 1897 (Debussy sinh 1862); có trong đĩa ''Debussy. Ses premiers interprètes''.'
+- id: n77
+  cau: 'Walter Gieseking (EMI): quyển 1 thu năm 1953, trong loạt thu nhạc piano solo của Debussy những năm 1950.'
+  loai: ten
+  nguon:
+  - mb-gieseking
+  - warner-gieseking
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: ''thu trọn nhạc piano solo của Debussy trong thập niên 1950; tiếng đàn rất nhẹ, nổi tiếng về những sắc thái pp''. MusicBrainz EMI CDH 7610042: ''Original Production: 1953 (Book I) and 1955 (Book II)''; Warner phát hành lại ''Debussy – The Complete Piano Works''. Bỏ lời khen không kiểm được, thêm hãng và năm (như schubert-impromptu n34–n35).'
+- id: n78
+  cau: 'Arturo Benedetti Michelangeli (Deutsche Grammophon, 1978): quyển 1.'
+  loai: ten
+  nguon:
+  - mb-michelangeli
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: ''(Deutsche Grammophon): từng nốt được kiểm soát tuyệt đối, âm thanh trong và sáng''. MusicBrainz: Préludes, Volume 1, DG, 1978. Bỏ lời khen, thêm năm.'
+- id: n79
+  cau: 'Krystian Zimerman (Deutsche Grammophon, 1994): trọn hai quyển.'
+  loai: ten
+  nguon:
+  - mb-zimerman
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: ''(Deutsche Grammophon): trọn hai quyển, rất kỹ về màu âm thanh''. MusicBrainz: Préludes, DG 1994-01, hai đĩa 12 + 12 bài. Bỏ lời khen, thêm năm.'
+- id: n80
+  cau: Mùa hè năm 1912 Debussy thu mười bốn tác phẩm piano của mình cho hãng Welte-Mignon; các cuộn piano phát hành năm 1913; trong đó có La cathédrale engloutie.
+  loai: nam
+  nguon:
+  - howat-presto
+  - henle-643
+  ket_qua: dung
+  ghi_chu: 'Howat (tóm tắt PRESTO): ''Fourteen of Debussy''s piano pieces … appear on six Welte-Mignon rolls issued in 1913'', thu ở Paris ''summer 1912''. Henle HN 643: Debussy ''left behind a recording on piano roll'' của Cathédrale.'
+- id: n81
+  cau: Trên cuộn piano ấy, ông chơi nhanh gấp đôi so với cách đọc thông thường bản nhạc in ở hai đoạn dài, từ ô 7 đến ô 12 và từ ô 22 đến ô 83; bản nhạc in không ghi những chỗ đổi tốc độ này.
+  loai: so-lieu
+  nguon:
+  - henle-643
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: ''từ ô 22 đến ô 84''. Henle HN 643 dẫn Music Teacher Magazine: ''Debussy doubles the speed between bars 7 and 12, and between 22 and 83, being completely contrary to what is printed'', bài 89 ô. PTNA cũng đặt tiếng vọng ở ô 72–83, đoạn kết ô 84–89. Bài điểm Gramophone ghi ở trang cũ không mở được (403).'
+- id: n82
+  cau: Câu 'Nghe một bản phát lại cuộn piano rồi so với một bản thu hiện đại.'
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+- id: n83
+  cau: Link Nghệ sĩ piano và bản thu (/opus/piano/nghe-si/).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: src/content/docs/piano/nghe-si.md có.
+- id: n84
+  cau: La fille aux cheveux de lin xếp ở chặng 6 trong Tác phẩm theo cấp độ (link).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/content/docs/piano/tac-pham-theo-cap.md, mục ''## Chặng 6. Nâng cao (≈ Grade 7–8)'', dòng 191: ''*La fille aux cheveux de lin* … Préludes quyển 1 số 8''.'
+- id: n85
+  cau: 'La fille: ít nốt, nhưng hợp âm phải cân bằng, bàn đạp phải sạch và câu nhạc phải thở tự nhiên.'
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+- id: n86
+  cau: Những bản còn lại thuộc chặng 7 (sau Grade 8).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'tac-pham-theo-cap.md, mục ''## Chặng 7. Sau Grade 8 (diploma trở lên)'', dòng 215: ''Debussy: Préludes quyển 1–2''.'
+- id: n87
+  cau: 'Des pas sur la neige ít nốt mà khó theo cách khác: giữ hình hai nốt thật đều và thật nhỏ trong khi giai điệu bên trên tự do.'
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+- id: n88
+  cau: Voiles và La cathédrale engloutie đòi bàn đạp tinh và tai nghe từng tầng; hợp âm của La cathédrale engloutie trải rộng, tay nhỏ cần rải hoặc chia nốt cho tay kia.
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+  ghi_chu: 'Bản Durand: hợp âm Cathédrale gồm quãng tám cộng quãng năm (ô 1, 28) nên khớp vế ''trải rộng''.'
+- id: n89
+  cau: Le vent dans la plaine, Ce qu'a vu le vent d'ouest, La danse de Puck và Minstrels cần ngón nhanh và nhẹ.
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+- id: n90
+  cau: Trước đó, học Clair de lune để quen với sắc thái pp, bàn đạp nửa và nhịp mơ hồ; đọc Bàn đạp và Tạo tiếng đàn.
+  loai: khuyen-tap
+  ket_qua: khong-can-nguon
+- id: n91
+  cau: Link Tạo tiếng đàn (/opus/piano/tieng-dan/) và Nhà soạn nhạc cho piano (/opus/piano/nha-soan-nhac/#claude-debussy-18621918), nơi có thứ tự gợi ý các bài Debussy khác.
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'src/content/docs/piano/tieng-dan.md có; piano/nha-soan-nhac.md dòng 194 ''### Claude Debussy (1862–1918)'' (id theo id-cu.mjs: claude-debussy-18621918), dòng 198 ''**Bắt đầu bằng:**'' thứ tự các bài.'
+- id: n92
+  cau: Link gam toàn cung (/opus/nhac-ly/32-ky-thuat-the-ky-20/#gam-toan-cung) và gam ngũ cung (/opus/nhac-ly/16-dieu-thuc-ngu-cung/#gam-ngu-cung).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: nhac-ly/32 dòng 8 '## Gam toàn cung'; nhac-ly/16 dòng 43 '## Gam ngũ cung' (id kiểu site cũ).
+- id: n93
+  cau: Link mẫu ghi chép (/opus/nghe-nhac/mau/).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: 'nghe-nhac/mau chưa chuyển (có trong src/data/trang.yml, thành ''sắp có''; ../opus-zero/docs/nghe-nhac/mau.md có): mẫu ghi chép cảm nhận khi nghe.'
+- id: n94
+  cau: 'Mục Nguồn: bản nhạc trên IMSLP, gồm bản in đầu của Durand (Paris, 1910).'
+  loai: ten
+  nguon:
+  - imslp-l1
+  ket_qua: dung
+  ghi_chu: 'IMSLP: nhiều bản Durand 1910, Plate D. & F. 7687.'
+- id: n95
+  cau: 'Mục Nguồn: ngày sáng tác, các buổi biểu diễn đầu và nguồn gốc tên từng bản theo lời tựa François Lesure (1986) cho ấn bản Henle HN 383; phân tích từng bản: PTNA.'
+  loai: ten
+  nguon:
+  - henle-383-vorwort
+  - ptna-1
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: ''Ngày sáng tác, các buổi biểu diễn đầu tiên và tên từng bản: Wikipedia, "Préludes (Debussy)" và "La cathédrale engloutie"''. Wikipedia không dùng làm nguồn duy nhất; thay bằng nguồn bậc 2 đã đối chiếu (lời tựa Henle ký ''Paris, spring 1986, François Lesure''; PTNA).'
+- id: n96
+  cau: 'Mục Nguồn: Roy Howat, ''Between and beyond the perforations in Debussy''s Welte rolls'', trong Claude Debussy: die Klavieraufnahmen (Wolke Verlag, 2023); các ô chơi nhanh gấp đôi theo ghi chú của ấn bản Henle HN 643, như lời điểm của Music Teacher Magazine mà Henle dẫn.'
+  loai: ten
+  nguon:
+  - howat-presto
+  - henle-643
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: ''… các ô chơi nhanh gấp đôi theo bài điểm đĩa trên Gramophone''. Trang Gramophone trả 403 (không đọc được, Wayback không mở được): thay bằng trang Henle HN 643 có lời điểm nêu ô 7–12, 22–83. Chương Howat có thật (PRESTO, tr. 62–91, Wolke 2023); thêm link PRESTO.'
+- id: n97
+  cau: 'Mục Nguồn: bản thu Marcelle Meyer trên Wikimedia Commons, từ bộ sưu tập Les Discophiles Français của Médiathèque musicale Mahler.'
+  loai: ten
+  nguon:
+  - commons-meyer
+  ket_qua: dung
+  ghi_chu: 'Commons: ''Médiathèque musicale Mahler - fonds discophiles français (ref. Les Discophiles Français DF 211/2)''.'
+- id: n98
+  cau: Link tài liệu tham khảo (/opus/tai-lieu-tham-khao/).
+  loai: ve-site
+  ket_qua: dung
+  ghi_chu: src/content/docs/tai-lieu-tham-khao.md có.
+khuong_nhac: []

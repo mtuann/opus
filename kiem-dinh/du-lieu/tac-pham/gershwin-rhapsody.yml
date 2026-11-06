@@ -1,6 +1,6 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/gershwin-rhapsody
 ban_ghi: tac-pham/gershwin-rhapsody
-ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/gershwin-rhapsody.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh. Không có danh_muc: IMSLP không ghi số danh mục hay opus."
+ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/gershwin-rhapsody.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh. Không có danh_muc: IMSLP không ghi số danh mục hay opus. Lần 2 (D6-L8, lượt 1 phần B): n4–n9 cho thoi_ky, luyen_nghe, ban_thu. Không có dữ liệu sai, không có câu chưa chắc."
 lan:
   - so: 1
     ngay: 2026-10-24
@@ -12,6 +12,15 @@ lan:
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: moi/d6-l8
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5, agent con, D6-L8 phần B
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: imslp
     bac: 2
@@ -21,6 +30,30 @@ nguon:
     bac: 2
     ten: gershwin.com (trang chính thức), Rhapsody in Blue
     link: https://gershwin.com/publications/rhapsody-in-blue/
+  - id: imslp-rib
+    bac: 2
+    ten: 'IMSLP, Rhapsody in Blue (Gershwin, George): Piece Style Early 20th century (wikitext qua api.php)'
+    link: https://imslp.org/wiki/Rhapsody_in_Blue_(Gershwin,_George)
+  - id: loc-blog
+    bac: 2
+    ten: 'Library of Congress, In the Muse, "Rhapsody in Blue at 100" (2024): buổi diễn quảng cáo là "An Experiment in Modern Music", tác phẩm ban đầu báo là "jazz concerto"; bản thu Victor 10/6/1924'
+    link: https://blogs.loc.gov/music/2024/02/rhapsody-in-blue-at-100/
+  - id: sfs
+    bac: 2
+    ten: 'San Francisco Symphony, chú giải Rhapsody in Blue: mở đầu clarinet "That opening glissando became an iconic sound of American music"'
+    link: https://www.sfsymphony.org/Buy-Tickets/2017-18/OR-Gershwin-Rhapsody-in-Blue
+  - id: loc-jb1
+    bac: 2
+    ten: 'Library of Congress, National Jukebox, Rhapsody in blue, part 1: Victor 55225, thu 10/6/1924, đĩa 12 inch, Gershwin piano, Paul Whiteman Concert Orchestra (Whiteman, Paul: Leader); trang Rights: bản thu 1923–1946 được bảo hộ 100 năm (bản .json)'
+    link: https://www.loc.gov/item/jukebox-70342/
+  - id: loc-jb2
+    bac: 2
+    ten: 'Library of Congress, National Jukebox, Rhapsody in blue, part 2: Victor 55225, thu 10/6/1924'
+    link: https://www.loc.gov/item/jukebox-70335/
+  - id: commons-wh
+    bac: 2
+    ten: 'Wikimedia Commons, Paul Whiteman Concert Orchestra - Rhapsody in Blue Part 01.mp3 (261,09 giây) và Part 02.mp3 (272,88 giây): ngày 1924-06-10, {{PD-US-expired}} (đọc qua API)'
+    link: https://commons.wikimedia.org/wiki/File:Paul_Whiteman_Concert_Orchestra_-_Rhapsody_in_Blue_Part_01.mp3
 nhan_dinh:
   - id: n1
     cau: Tên «Rhapsody in Blue» là tên tác phẩm cho piano và dàn nhạc của George Gershwin.
@@ -41,3 +74,43 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Rhapsody_in_Blue_(Gershwin,_George)", https://id.loc.gov/authorities/names/n81081332.json ]
     luot_2_ghi_chu: "IMSLP composer field: Gershwin, George. LoC heading 'Gershwin, George, 1898-1937. Rhapsody in blue'."
+  - id: n4
+    cau: 'Thời kỳ: Thế kỷ 20.'
+    loai: lich-su
+    truong: [thoi_ky]
+    nguon: [imslp-rib]
+    ket_qua: dung
+    ghi_chu: 'IMSLP Piece Style: Early 20th century.'
+  - id: n5
+    cau: 'Luyện nghe: jazz và giao hưởng, clarinet glissando.'
+    loai: lich-su
+    truong: [luyen_nghe]
+    nguon: [loc-blog, sfs]
+    ket_qua: dung
+  - id: n6
+    cau: 'Bản thu: George Gershwin (piano), Paul Whiteman Concert Orchestra, Paul Whiteman chỉ huy.'
+    loai: ten
+    truong: [ban_thu]
+    nguon: [loc-jb1, commons-wh]
+    ket_qua: dung
+  - id: n7
+    cau: 'Ghi chú bản thu: thu ngày 10/6/1924 cho hãng Victor, bản rút gọn trên hai mặt đĩa.'
+    loai: nam
+    truong: [ban_thu]
+    nguon: [loc-jb1, loc-jb2, loc-blog]
+    ket_qua: dung
+    ghi_chu: Victor 55225 part 1 và part 2, thu 10/6/1924; tổng 534 giây so với khoảng 15 phút của bản đầy đủ (IMSLP).
+  - id: n8
+    cau: 'Giấy phép bản thu: phạm vi công cộng.'
+    loai: ten
+    truong: [ban_thu]
+    nguon: [commons-wh, loc-jb1]
+    ket_qua: dung
+    ghi_chu: 'Commons: {{PD-US-expired}}, "Media uploaded for Public Domain Day 2025". LoC: bản thu phát hành 1923–1946 được bảo hộ 100 năm, nên bản 1924 hết bảo hộ ở Mỹ từ 1/1/2025.'
+  - id: n9
+    cau: 'Hai phần: Phần 1 (261,09 giây), Phần 2 (272,88 giây); trang Commons của Part 01.'
+    loai: so-lieu
+    truong: [ban_thu]
+    nguon: [commons-wh]
+    ket_qua: dung
+    ghi_chu: 'check_audio.py --static --network của người giao: 0 lỗi.'

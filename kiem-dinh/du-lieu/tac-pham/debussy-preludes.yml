@@ -1,6 +1,6 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/debussy-preludes
 ban_ghi: tac-pham/debussy-preludes
-ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/debussy-preludes.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh. Không có danh_muc: IMSLP ghi «CD 125 ; L.117» (có thể bổ sung, không bắt buộc)."
+ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/debussy-preludes.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh. Không có danh_muc: IMSLP ghi «CD 125 ; L.117» (có thể bổ sung, không bắt buộc). Lần 2 (D6-L8, lượt 1 phần A): nhận định n3–n13 cho các trường chưa khóa (thoi_ky, luyen_nghe, hinh, ban_thu). Bản nhạc: bản in đầu Durand 1910 (Internet Archive). Dữ liệu sai: ban_thu.lic (phạm vi công cộng chỉ ở châu Âu; ở Mỹ còn bảo hộ, trang nói vậy): plans/lam-lai/bao-cao/d6-l8/sua-A.yml. Không có câu chưa chắc."
 lan:
   - so: 1
     ngay: 2026-10-24
@@ -12,6 +12,15 @@ lan:
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: moi/d6-l8
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5, agent con, D6-L8 phần A
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: imslp
     bac: 2
@@ -21,6 +30,38 @@ nguon:
     bac: 2
     ten: G. Henle Verlag, Préludes, Premier livre (HN 383)
     link: https://www.henle.de/Preludes-Premier-livre/HN-383
+  - id: durand-1910
+    bac: 1
+    ten: "Debussy, Préludes pour piano (1er livre), A. Durand & Fils, Paris, 1910 (D. & F. 7687), bản BYU số hóa trên Internet Archive; chỉ dẫn tốc độ đầu từng bài"
+    link: https://archive.org/details/preludespourpian00debu
+  - id: henle-383-p
+    bac: 2
+    ten: "G. Henle Verlag, HN 383 Préludes, Premier livre: niên biểu Debussy (La Mer 'Impressionist tonal language'; 1909–10 Préludes quyển 1)"
+    link: https://www.henle.de/en/Preludes-Premier-livre/HN-383
+  - id: ptna-10
+    bac: 2
+    ten: "PTNA Piano Encyclopedia, Préludes 1 'La cathédrale engloutie': hợp âm quãng năm, quãng bốn đúng song song (ô 1–6)"
+    link: https://enc.piano.or.jp/en/musics/22373
+  - id: ptna-2
+    bac: 2
+    ten: "PTNA Piano Encyclopedia, Préludes 1 'Voiles'"
+    link: https://enc.piano.or.jp/en/musics/22365
+  - id: commons-cat-meyer
+    bac: 2
+    ten: "Wikimedia Commons, Category:Marcelle Meyer: 12 file Préludes Livre I (độ dài đọc qua API imageinfo, 06/11/2026)"
+    link: https://commons.wikimedia.org/wiki/Category:Marcelle_Meyer
+  - id: commons-meyer
+    bac: 2
+    ten: "Wikimedia Commons, file X. La Cathédrale engloutie (Marcelle Meyer, 1956): 'Paris, Salle Adyar, February 15th 1956'; nguồn Médiathèque musicale Mahler (DF 211/2); giấy phép PD-old-70-1923, PD-EU-audio, PD-US-record"
+    link: https://commons.wikimedia.org/wiki/File:Claude_Debussy_-_Pr%C3%A9ludes_(Livre_I)_-_X._La_Cath%C3%A9drale_engloutie_(Marcelle_Meyer,_1956).flac
+  - id: commons-pd-us-record
+    bac: 2
+    ten: "Wikimedia Commons, Template:PD-US-record (Music Modernization Act): bản thu phát hành 1947–1956 'copyrighted for a period of 110 years'; phát hành sau 1956 thì vào phạm vi công cộng ngày 15/2/2067"
+    link: https://commons.wikimedia.org/wiki/Template:PD-US-record
+  - id: commons-pd-eu-audio
+    bac: 2
+    ten: "Wikimedia Commons, Template:PD-EU-audio: bản thu phát hành ở EU hơn 50 hay 70 năm trước, quyền đã hết"
+    link: https://commons.wikimedia.org/wiki/Template:PD-EU-audio
 nhan_dinh:
   - id: n1
     cau: Tên «Préludes, quyển 1» chỉ quyển 1 (Livre 1, Premier livre) của Préludes cho piano, gồm 12 prélude.
@@ -41,3 +82,80 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Pr%C3%A9ludes,_Livre_1,_CD_125_(Debussy,_Claude)", https://id.loc.gov/authorities/names/n87807077.json ]
     luot_2_ghi_chu: "IMSLP composer field: Debussy, Claude. LoC heading 'Debussy, Claude, 1862-1918. Preludes, piano, book 1'."
+  - id: n3
+    cau: "Thời kỳ: Ấn tượng."
+    loai: lich-su
+    truong: [ thoi_ky ]
+    nguon: [ henle-383-p ]
+    ket_qua: dung
+    ghi_chu: "Henle niên biểu: La Mer (1903–05) dùng 'Impressionist tonal language'; Préludes quyển 1 1909–10. Trang hướng dẫn nghe ghi thêm Debussy không ưa nhãn này (hồ sơ trang n27)."
+  - id: n4
+    cau: "Luyện nghe: mười hai bức tranh: gam toàn cung, gam ngũ cung, hợp âm song song."
+    loai: cau-truc
+    truong: [ luyen_nghe ]
+    nguon: [ durand-1910, ptna-2, ptna-10 ]
+    ket_qua: dung
+    ghi_chu: "12 bài (IMSLP); Voiles gam toàn cung, đoạn giữa phím đen; La fille ngũ cung (bản Durand); Cathédrale hợp âm song song (PTNA). Xem hồ sơ trang n14, n21–n24."
+  - id: n5
+    cau: "Hình nghe, chú thích: mười hai bản, độ dài các ô theo thời lượng bản thu của Marcelle Meyer; xanh dương là bản chậm, tĩnh, đỏ là bản nhanh hay sôi nổi."
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ commons-cat-meyer, durand-1910 ]
+    ket_qua: dung
+    ghi_chu: "Độ dài kiểm ở n6; màu theo lớp a (chậm) và c (nhanh), kiểm ở n8."
+  - id: n6
+    cau: "Hình nghe, độ dài mười hai ô (giây, làm tròn): 144, 220, 120, 173, 154, 275, 200, 120, 139, 340, 155, 125, khớp thời lượng file bản thu Meyer."
+    loai: so-lieu
+    truong: [ hinh ]
+    nguon: [ commons-cat-meyer ]
+    ket_qua: dung
+    ghi_chu: "Commons (API): 144,44; 220,43; 120,4; 172,6; 153,89; 274,76; 199,51; 119,68; 139,36; 339,75; 154,73; 125,29 giây."
+  - id: n7
+    cau: "Hình nghe, tên mười hai ô: Vũ nữ Delphi; Voiles · gam toàn cung; Gió trên đồng; Âm thanh và hương thơm; Đồi Anacapri; Bước chân trên tuyết; Điều gió tây đã thấy; Cô gái tóc lanh; Dạ ca bị cắt ngang; Nhà thờ chìm; Điệu múa của Puck; Minstrels, theo thứ tự I–XII."
+    loai: ten
+    truong: [ hinh ]
+    nguon: [ durand-1910 ]
+    ket_qua: dung
+    ghi_chu: "Thứ tự và tên khớp mục lục bản Durand 1910 (dịch như bảng của trang)."
+  - id: n8
+    cau: "Hình nghe, phân loại: chậm, tĩnh: I, II, IV, VI, VIII, X; nhanh hay sôi nổi: III, V, VII, IX, XI, XII."
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ durand-1910 ]
+    ket_qua: dung
+    ghi_chu: "Chỉ dẫn đầu bài (bản Durand): I Lent et grave, II Modéré, IV Modéré, VI Triste et lent, VIII Très calme, X Profondément calme; III Animé, V Très modéré rồi Vif (phần lớn bài), VII Animé et tumultueux, IX Modérément animé, XI Capricieux et léger, XII Modéré (Nerveux et avec humour): XII không nhanh nhưng bồn chồn, hài hước, hợp chữ 'sôi nổi'."
+  - id: n9
+    cau: "Hình nghe, ghi chú: từ bản III đến bản XI, bản nhanh và bản chậm xen kẽ đều đặn; quyển khép lại bằng hai bản vui nhộn liền nhau."
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ durand-1910 ]
+    ket_qua: dung
+    ghi_chu: "Theo phân loại ở n8: III c, IV a, V c, VI a, VII c, VIII a, IX c, X a, XI c; XI (Capricieux et léger) và XII (avec humour) liền nhau."
+  - id: n10
+    cau: "Bản thu: Marcelle Meyer."
+    loai: ten
+    truong: [ ban_thu ]
+    nguon: [ commons-meyer ]
+    ket_qua: dung
+    ghi_chu: "Commons: 'by Marcelle Meyer (1956)'."
+  - id: n11
+    cau: "Bản thu: thu năm 1956."
+    loai: nam
+    truong: [ ban_thu ]
+    nguon: [ commons-meyer ]
+    ket_qua: dung
+    ghi_chu: "Commons: 'Paris, Salle Adyar, February 15th 1956'."
+  - id: n12
+    cau: "Bản thu: thuộc phạm vi công cộng ở châu Âu (theo Commons); ở Mỹ vẫn còn được bảo hộ."
+    loai: quy-tac
+    truong: [ ban_thu ]
+    nguon: [ commons-meyer, commons-pd-eu-audio, commons-pd-us-record ]
+    ket_qua: da-sua
+    ghi_chu: "Dữ liệu ghi lic: 'phạm vi công cộng' (không phân biệt nơi). Commons gắn PD-EU-audio (châu Âu: quyền đã hết) và PD-US-record, mà chữ mẫu này nói bản thu Mỹ cố định trước 1972, phát hành 1947–1956 còn bảo hộ 110 năm, sau 1956 thì tới 2067. Trang hướng dẫn nghe nói ở Mỹ bản thu còn bảo hộ (hồ sơ trang n34), và cap-nhat n48 đã sửa chữ 'phạm vi công cộng' vì mâu thuẫn này. Đề xuất lic: 'phạm vi công cộng ở châu Âu (theo Commons); ở Mỹ còn bảo hộ' (sua-A.yml). Chủ lô D6-L8: áp vào `note` (\"thu năm 1956; phạm vi công cộng ở châu Âu (theo Commons), ở Mỹ còn được bảo hộ\"), không vào `lic`: `lic` phải là tên giấy phép trong tools/audio/licenses.py (check_audio.py đối chiếu với Commons); khối nghe hiện `note` trong ngoặc sau tên người chơi (src/scripts/nghe.js)."
+  - id: n13
+    cau: "Bản thu: mười hai phần, tên I–XII, mỗi phần link tới đúng file Commons của bản ấy, độ dài d khớp file; trang danh mục Category:Marcelle Meyer."
+    loai: so-lieu
+    truong: [ ban_thu ]
+    nguon: [ commons-cat-meyer ]
+    ket_qua: dung
+    ghi_chu: "API imageinfo: 12 file có, độ dài khớp d (n6); tên file khớp t; file IX không ghi '(Marcelle Meyer, 1956)' trong tên nhưng mô tả Commons ghi Meyer 1956, cùng đĩa DF 211/2."

@@ -1,6 +1,6 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/grieg-concerto
 ban_ghi: tac-pham/grieg-concerto
-ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/grieg-concerto.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh."
+ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/grieg-concerto.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh. Lần 2 (D6-L8, lượt 1 phần B): n4–n13 cho thoi_ky, luyen_nghe, hinh, ban_thu. Bản nhạc: tổng phổ quét trên Internet Archive (từ IMSLP). Không có dữ liệu sai, không có câu chưa chắc."
 lan:
   - so: 1
     ngay: 2026-10-24
@@ -12,6 +12,15 @@ lan:
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: moi/d6-l8
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5, agent con, D6-L8 phần B
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: imslp
     bac: 2
@@ -21,6 +30,26 @@ nguon:
     bac: 2
     ten: G. Henle Verlag, Piano Concerto a minor op. 16 (HN 719)
     link: https://www.henle.de/Piano-Concerto-a-minor-op.-16/HN-719
+  - id: imslp-op16-2
+    bac: 2
+    ten: 'IMSLP, Piano Concerto, Op.16 (Grieg): tên ba chương (Allegro molto moderato; Adagio; Allegro moderato molto e marcato); Piece Style Romantic (wikitext qua api.php, 06/11/2026)'
+    link: https://imslp.org/wiki/Piano_Concerto,_Op.16_(Grieg,_Edvard)
+  - id: ia-tongpho
+    bac: 1
+    ten: Grieg, Piano Concerto Op. 16, tổng phổ ba chương (bản quét đăng lại từ IMSLP), Internet Archive imslp-concerto-op16-grieg-edvard (chi tiết trang ở hồ sơ nghe-nhac/grieg-concerto)
+    link: https://archive.org/details/imslp-concerto-op16-grieg-edvard
+  - id: commons-odoan
+    bac: 2
+    ten: 'Wikimedia Commons, Edvard Grieg - Concerto in A minor, 1st/2nd/3rd movement.ogg: Neal O''Doan, University of Washington Symphony, Peter Erős; CC BY-SA 2.0; 763,59 / 390,61 / 615,53 giây (đọc qua API)'
+    link: https://commons.wikimedia.org/wiki/File:Edvard_Grieg_-_Concerto_in_A_minor,_1st_movement.ogg
+  - id: stonybrook
+    bac: 2
+    ten: 'Stony Brook University Libraries, Grieg''s Piano Concerto in A minor, op. 16 (2018): mô-típ mở đầu gắn với dân ca Na Uy'
+    link: https://library.stonybrook.edu/?p=220133
+  - id: berliner
+    bac: 2
+    ten: 'Berliner Philharmoniker, chú giải Grieg Piano Concerto (Susanne Stähr): halling ở chương cuối'
+    link: https://berliner-philharmoniker.de/en/programme-notes/edvard-grieg-concerto-for-piano-and-orchestra-in-a-minor-op-16
 nhan_dinh:
   - id: n1
     cau: Tên «Concerto piano» chỉ Concerto cho piano và dàn nhạc cung La thứ của Grieg.
@@ -50,3 +79,72 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Piano_Concerto,_Op.16_(Grieg,_Edvard)", https://id.loc.gov/authorities/names/n81073732.json ]
     luot_2_ghi_chu: IMSLP Op./Cat. No. = Op.16 (A minor). LoC 'op. 16, A minor'.
+  - id: n4
+    cau: 'Thời kỳ: Lãng mạn.'
+    loai: lich-su
+    truong: [thoi_ky]
+    nguon: [imslp-op16-2]
+    ket_qua: dung
+    ghi_chu: 'IMSLP Piece Style: Romantic.'
+  - id: n5
+    cau: 'Luyện nghe: concerto, chất dân ca Na Uy.'
+    loai: lich-su
+    truong: [luyen_nghe]
+    nguon: [stonybrook, berliner]
+    ket_qua: dung
+    ghi_chu: 'Stony Brook: mô-típ mở đầu theo dân ca Na Uy; Berliner: nhịp halling ở chương cuối.'
+  - id: n6
+    cau: 'Sơ đồ (hinh.nghe), chương 1: Trình bày (La thứ → Đô trưởng), Phát triển, Tái hiện (chủ đề 2 ở La trưởng), Cadenza (piano một mình), Coda.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [ia-tongpho]
+    ket_qua: dung
+    ghi_chu: 'Tổng phổ chương 1: chủ đề 2 Più lento ở Đô trưởng (tr. 9), tái hiện chủ đề 2 ở ba dấu thăng (tr. 25), cadenza viết sẵn cho piano, coda kết bằng hình đổ xuống (tr. 33).'
+  - id: n7
+    cau: 'Sơ đồ, chương 2: II. Adagio, Rê♭ trưởng.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [ia-tongpho]
+    ket_qua: dung
+    ghi_chu: 'Tổng phổ chương 2 tr. 1: Adagio, năm dấu giáng.'
+  - id: n8
+    cau: 'Sơ đồ, chương 3: III. Halling (La thứ, 2/4), Chủ đề sáo (Fa trưởng), Halling trở lại, Quasi presto (3/4), Andante maestoso (chủ đề sáo, La trưởng).'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [ia-tongpho]
+    ket_qua: dung
+    ghi_chu: 'Tổng phổ chương 3: tr. 1 2/4; tr. 15 Poco più tranquillo, sáo I. Solo, có Si♭; tr. 31 Quasi Presto 3/4; tr. 36 Andante maestoso, ba dấu thăng.'
+  - id: n9
+    cau: 'Ghi chú sơ đồ: chương II nối thẳng sang chương III.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [ia-tongpho]
+    ket_qua: dung
+    ghi_chu: Cuối chương 2 (tr. 8) có vạch kép đổi sang hóa biểu và nhịp 2/4 của chương 3 ngay trên cùng dòng, không có chỗ dừng.
+  - id: n10
+    cau: 'Chú thích sơ đồ: độ dài các ô gần đúng theo thời lượng.'
+    loai: so-lieu
+    truong: [hinh]
+    nguon: [commons-odoan]
+    ket_qua: dung
+    ghi_chu: 'Tổng độ dài ô: chương 1 12,5; chương 2 6,5; chương 3 10. Bản thu O''Doan: 763,6 / 390,6 / 615,5 giây ≈ 12,7 / 6,5 / 10,3 phút: mỗi ô ≈ một phút.'
+  - id: n11
+    cau: 'Bản thu: Neal O''Doan (piano), University of Washington Symphony, Peter Erős chỉ huy; trang Commons của file chương 1.'
+    loai: ten
+    truong: [ban_thu]
+    nguon: [commons-odoan]
+    ket_qua: dung
+  - id: n12
+    cau: 'Giấy phép bản thu: CC BY-SA 2.0 (link creativecommons.org/licenses/by-sa/2.0).'
+    loai: ten
+    truong: [ban_thu]
+    nguon: [commons-odoan]
+    ket_qua: dung
+    ghi_chu: 'Commons: {{cc-by-sa-2.0}} (giấy phép EFF Open Audio License, tương đương CC BY-SA 2.0).'
+  - id: n13
+    cau: 'Ba phần của bản thu: I. Allegro molto moderato (763,59 giây), II. Adagio (390,61 giây), III. Allegro moderato molto e marcato (615,53 giây).'
+    loai: so-lieu
+    truong: [ban_thu]
+    nguon: [commons-odoan, imslp-op16-2]
+    ket_qua: dung
+    ghi_chu: 'Tên chương theo IMSLP; độ dài theo Commons (API); check_audio.py --static --network của người giao: 0 lỗi.'

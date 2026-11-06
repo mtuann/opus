@@ -1,6 +1,6 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/mussorgsky-tranh
 ban_ghi: tac-pham/mussorgsky-tranh
-ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/mussorgsky-tranh.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh. Không có danh_muc: IMSLP không ghi số danh mục hay opus."
+ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/mussorgsky-tranh.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh. Không có danh_muc: IMSLP không ghi số danh mục hay opus. Lần 2 (D6-L8, lượt 1 phần A): nhận định n3–n17 cho các trường chưa khóa thoi_ky, luyen_nghe, hinh (hinh.nghe), ban_thu. Bản nhạc: Mutopia (Knute Snortum, theo ấn bản Pavel Lamm, dựa trên bản thảo) cho giọng, nhịp; bản in đầu Bessel 1886 (bản Rimsky-Korsakov, Sibley qua Internet Archive) và lời tựa, lời bình Henle HN 477 (2 PDF). Độ dài các ô trong hinh.nghe so với mốc của bản thu Bertoglio (trang nghe-nhac/mussorgsky-tranh): gần đúng như chú thích nói. Không có dữ liệu sai; không có mục trong file sửa."
 lan:
   - so: 1
     ngay: 2026-10-24
@@ -12,6 +12,15 @@ lan:
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: moi/d6-l8
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5, agent con, D6-L8 phần A
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: imslp
     bac: 2
@@ -21,6 +30,42 @@ nguon:
     bac: 2
     ten: G. Henle Verlag, Pictures at an Exhibition (HN 477)
     link: https://www.henle.de/Pictures-at-an-Exhibition/HN-477
+  - id: imslp-wikitext
+    bac: 2
+    ten: 'IMSLP, Pictures at an Exhibition (Mussorgsky): wikitext qua api.php: 16 movements (Promenade [I]–[V], Cum mortuis); Year/Date of Composition 1874 (June 2-22); Dedication Vladimir Stassov; First Publication 1886, Bessel, Plate 1560; Piece Style Romantic; bản thu "PMLP03722-Quadri.mp3", Bertoglio, Chiara (piano), Creative Commons Attribution 3.0'
+    link: https://imslp.org/wiki/Pictures_at_an_Exhibition_(Mussorgsky,_Modest)
+  - id: mut-pictures
+    bac: 1
+    ten: 'Mutopia Project, Mussorgsky, Pictures at an Exhibition (Knute Snortum, nguồn: Pavel Lamm, CC BY-SA 4.0; tệp LilyPond từng bài): hóa biểu, số chỉ nhịp, tốc độ, sắc thái'
+    link: https://www.mutopiaproject.org/ftp/MussorgskyM/pictures-at-an-exhibition/
+  - id: bessel-1886
+    bac: 1
+    ten: 'Mussorgsky, Tableaux d''une exposition, V. Bessel & Co., St. Petersburg 1886 (bản biên tập Rimsky-Korsakov, số bản in 1560), bản Sibley Music Library số hóa trên Internet Archive (PDF 35 trang; lời giới thiệu Nga–Pháp của Stasov ở tr. 2–3; Bydło tr. 12–13)'
+    link: https://archive.org/details/imslp-at-an-exhibition-mussorgsky-modest
+  - id: henle-477-vorwort
+    bac: 2
+    ten: 'G. Henle Verlag, HN 477: lời tựa (Petra Weber-Bockholdt, 1992), PDF: bản thảo ký "22 June 1874", đề tặng Stasov; bản in đầu Bessel 1886 "heavily revised by Rimsky-Korsakov"'
+    link: https://www.henle.de/media/2b/89/f0/1690886055/0477-1690886055-sync.pdf
+  - id: henle-477-comments
+    bac: 2
+    ten: 'G. Henle Verlag, HN 477: Bemerkungen/Comments (Weber-Bockholdt, 1992), PDF: Andante non troppo sau Catacombae là "another variant of the Promenade"'
+    link: https://www.henle.de/media/b6/54/72/1690886035/0477-1690886035-sync.pdf
+  - id: bertoglio-file
+    bac: 2
+    ten: 'Bản thu Bertoglio trên máy (../opus-zero/_imslp/IMSLP251520-PMLP03722-Quadri.mp3, tải tay từ IMSLP): ffprobe đo 2023,949 giây'
+    link: https://imslp.org/wiki/File:PMLP03722-Quadri.mp3
+  - id: cc-by-3
+    bac: 2
+    ten: Creative Commons, Attribution 3.0 Unported (CC BY 3.0)
+    link: https://creativecommons.org/licenses/by/3.0/
+  - id: gresham-fw
+    bac: 2
+    ten: 'Marina Frolova-Walker, "Musorgsky: Pictures at an Exhibition (1874)", bài giảng Gresham College, 24/9/2020 (bản chữ PDF): Promenade là chân dung Mussorgsky dạo qua triển lãm, nhịp 5/4 xen 6/4; Promenade vang lần cuối giữa tiếng chuông của bài cuối'
+    link: https://www.gresham.ac.uk/sites/default/files/2020-09-24_Frolova-Walker_Musorgsky-T.pdf
+  - id: wss-notes
+    bac: 2
+    ten: 'Winston-Salem Symphony, program note Mussorgsky/Ravel, Pictures at an Exhibition: Ravel "chose to omit one of these" (Promenade)'
+    link: https://www.wssymphony.org/program-notes/modeste-mussorgsky-pictures-at-an-exhibition/
 nhan_dinh:
   - id: n1
     cau: Tên «Những bức tranh ở phòng triển lãm» là tên tiếng Việt của Pictures at an Exhibition của Mussorgsky.
@@ -41,3 +86,108 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Pictures_at_an_Exhibition_(Mussorgsky,_Modest)", https://id.loc.gov/authorities/names/n80149485.json ]
     luot_2_ghi_chu: "IMSLP composer field: Mussorgsky, Modest. LoC heading 'Mussorgsky, Modest Petrovich, 1839-1881. Kartinki s vystavki'."
+  - id: n3
+    cau: 'Thời kỳ: Lãng mạn.'
+    loai: lich-su
+    truong: [ thoi_ky ]
+    nguon: [ imslp-wikitext, henle ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Piece Style=Romantic" (năm sáng tác 1874). Trang hướng dẫn nghe ghi thêm "(trường phái dân tộc Nga)" (hồ sơ trang n6).'
+  - id: n4
+    cau: 'Luyện nghe: Promenade nối các bức tranh; có bản piano và bản phối cho dàn nhạc.'
+    loai: cau-truc
+    truong: [ luyen_nghe ]
+    nguon: [ imslp-wikitext, wss-notes ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP liệt kê Promenade [I]–[V] xen giữa các bài; IMSLP có trang các bản phối (bảng Nieweg), nổi tiếng nhất là của Ravel (Winston-Salem Symphony: "The popular orchestration … by Maurice Ravel was made in 1922").'
+  - id: n5
+    cau: 'Hình nghe, chú thích: bản piano gồm mười bức tranh nối với nhau bằng các Promenade; độ dài các ô gần đúng theo thời lượng.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ imslp-wikitext, henle-477-vorwort ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: mười bài đánh số 1–10, Promenade [I]–[V] và Cum mortuis xen giữa.'
+  - id: n6
+    cau: 'Hình nghe: Promenade đầu tiên ở Si♭ trưởng.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ mut-pictures, bessel-1886 ]
+    ket_qua: dung
+    ghi_chu: 'Mutopia promenade-1.ly: \key bes \major, nhịp 5/4 xen 6/4. (Incipit trên IMSLP ghi \key g \minor là lỗi của người gõ incipit; nốt G F B♭ C F D là đầu giai điệu Si♭ trưởng.)'
+  - id: n7
+    cau: 'Hình nghe, thứ tự 16 ô: Promenade, 1. Gnomus, Promenade, 2. Lâu đài cổ, Promenade, 3. Tuileries, 4. Bydło, Promenade, 5. Gà con, 6. Goldenberg và Schmuÿle, Promenade, 7. Limoges, 8. Catacombae, Cum mortuis, 9. Baba Yaga, 10. Cổng lớn Kiev.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ imslp-wikitext, mut-pictures ]
+    ket_qua: dung
+    ghi_chu: 'Khớp danh sách "16 movements" của IMSLP và thứ tự các tệp của Mutopia (promenade-1 … promenade-5, catacombae, promenade-6 = Cum mortuis).'
+  - id: n8
+    cau: 'Hình nghe: Promenade trước Limoges (Promenade thứ năm) là bài Ravel bỏ trong bản phối.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ wss-notes, imslp-wikitext ]
+    ket_qua: dung
+    ghi_chu: 'Winston-Salem Symphony: Promenade "recurs throughout the work … (Ravel chose to omit one of these)". Tổng phổ Ravel (Boosey & Hawkes 1929, Internet Archive ybimslp01545): sau Goldenberg là Limoges, không có Promenade; bốn Promenade còn lại ở tr. 5, 25, 42, 56 của PDF. Xem hồ sơ trang n31.'
+  - id: n9
+    cau: 'Hình nghe: Cum mortuis là Promenade ở giọng thứ.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ henle-477-comments, mut-pictures, bessel-1886 ]
+    ket_qua: dung
+    ghi_chu: 'Henle: Andante non troppo là "another variant of the Promenade"; Mutopia promenade-6.ly: \key b \minor; lời giới thiệu bản Bessel: "Andante H-Moll".'
+  - id: n10
+    cau: 'Hình nghe: ở bài 10 (Cổng lớn Kiev), Promenade trở lại.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ gresham-fw ]
+    ket_qua: dung
+    ghi_chu: 'Gresham: "Amongst the bells, we hear the Promenade one last time, now elevated to a grand, rousing hymn."'
+  - id: n11
+    cau: 'Hình nghe, tên các bài: Gnomus, Lâu đài cổ (Il vecchio castello), Tuileries, Bydło, Gà con (Vũ khúc gà con chưa nở), Goldenberg và Schmuÿle, Limoges, Catacombae, Baba Yaga, Cổng lớn Kiev.'
+    loai: ten
+    truong: [ hinh ]
+    nguon: [ imslp-wikitext ]
+    ket_qua: dung
+    ghi_chu: 'Tên rút gọn của các bài 1–10 theo IMSLP; tên tiếng Việt khớp bảng "Sơ đồ cấu trúc" của trang.'
+  - id: n12
+    cau: 'Hình nghe, độ dài các ô (phút, gần đúng): 1,5; 2,5; 0,8; 4; 0,5; 1; 2,5; 0,7; 1,2; 2,2; 1,3; 1,3; 1,7; 1,8; 3,3; 5.'
+    loai: so-lieu
+    truong: [ hinh ]
+    nguon: [ bertoglio-file ]
+    ket_qua: dung
+    ghi_chu: 'Đối chiếu mốc của bản Bertoglio (trang, ::khoi-nghe): Promenade + Gnomus 4,2 phút (dữ liệu 4,0); Promenade + Lâu đài cổ 5,4 (4,8); Promenade + Tuileries 1,4 (1,5); Bydło 3,1 (2,5); Promenade + gà con 2,1 (1,9); Goldenberg 1,9 (2,2); Promenade + Limoges 3,2 (2,6); Catacombae + Cum mortuis 4,7 (3,5); Baba Yaga 3,1 (3,3); Cổng lớn 4,7 (5,0). Tổng 31,3 phút so với 33,7: đúng mức "gần đúng" của chú thích.'
+  - id: n13
+    cau: 'Hình nghe, ghi chú: ô màu Promenade là chủ đề "người xem tranh"; Cum mortuis là biến thể của nó.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ gresham-fw, henle-477-comments ]
+    ket_qua: dung
+    ghi_chu: 'Gresham: Promenade "is Musorgsky''s self-portrait, depicting him strolling through the exhibition"; Henle: Cum mortuis "another variant of the Promenade".'
+  - id: n14
+    cau: 'Bản thu: Chiara Bertoglio chơi trọn tổ khúc (bản piano).'
+    loai: ten
+    truong: [ ban_thu ]
+    nguon: [ imslp-wikitext ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "File Name 1=PMLP03722-Quadri.mp3 | File Description 1=Complete Performance | Performer Categories=Bertoglio, Chiara=piano".'
+  - id: n15
+    cau: 'Bản thu: giấy phép CC BY 3.0 (link tới trang giấy phép).'
+    loai: lich-su
+    truong: [ ban_thu ]
+    nguon: [ imslp-wikitext, cc-by-3 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Copyright=Creative Commons Attribution 3.0"; licUrl trỏ đúng trang CC BY 3.0.'
+  - id: n16
+    cau: 'Bản thu: trang nguồn là trang tác phẩm trên IMSLP; link file là Special:ImagefromIndex/251520 và trang File:PMLP03722-Quadri.mp3.'
+    loai: ten
+    truong: [ ban_thu ]
+    nguon: [ imslp-wikitext, bertoglio-file ]
+    ket_qua: dung
+    ghi_chu: 'Số 251520 khớp tên file đã tải (IMSLP251520-PMLP03722-Quadri.mp3). Không mở trang tải (IMSLP có bước chờ).'
+  - id: n17
+    cau: 'Bản thu: dài 2023,95 giây (33:44).'
+    loai: so-lieu
+    truong: [ ban_thu ]
+    nguon: [ bertoglio-file ]
+    ket_qua: dung
+    ghi_chu: 'ffprobe: 2023.949250 giây.'
