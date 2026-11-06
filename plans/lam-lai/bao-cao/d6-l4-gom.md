@@ -153,3 +153,10 @@ Phần dữ liệu: `xuat du-lieu/tac-pham/<7 slug> --con-lai` ra 0 câu.
 - **Ba chỗ nhỏ agent con nêu** (n54, n55, n72 ở trên): chưa sửa, vì câu vẫn đúng.
 - **`ghi_chu` chung của hồ sơ `beethoven-anh-trang`** còn ghi "Còn mở: n17, n87". Hai câu này đã giải quyết ở review; chi tiết nằm ở `ghi_chu` của từng câu.
 - **Còn trống trong lần kiểm định cuối của 15 hồ sơ:** `nguoi.luot_2` (người làm lượt 2 và lượt 2 bổ sung) và `nguoi.kiem_mau`.
+
+## Lượt 2 bổ sung và trạng thái khóa (người gom)
+
+- Lượt 2 bổ sung (Claude Opus 5.5): `ket-qua-bo-sung.yml`, `beethoven-anh-trang` n84 (lời tựa Henle HN 1062, mục của Perahia) và `mendelssohn-thuyen-ca` n19 (lời tựa Henle HN 1172, thư gửi Klingemann 17/4/1835) đều `dung`; đã `nhap`.
+- Đã điền `nguoi.luot_2` cho 15 hồ sơ (8 trang, 7 bản ghi). Còn thiếu cho khóa: `nguoi.kiem_mau`.
+- Mẫu kiểm: 8 nhận định ở `d6-l4-gom/kiem-mau.yml` (`xuat D6-L4 --mau 8`).
+- Lượt 2 phần dữ liệu: agent gọi vài lần đường dẫn `/search` của henle.de (robots.txt cấm), rồi dừng, không dùng kết quả; các trang Henle dẫn đều tìm qua sitemap.
