@@ -12,6 +12,15 @@ lan:
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: moi/d6-l9
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (D6-L9 phần B)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: imslp
     bac: 2
@@ -21,6 +30,22 @@ nguon:
     bac: 2
     ten: Köchel-Verzeichnis online (Stiftung Mozarteum), KV 620 Die Zauberflöte (The Magic Flute)
     link: https://kv.mozarteum.at/en/work/die-zauberflote-the-magic-flute-7137
+  - id: imslp-wt
+    bac: 2
+    ten: 'IMSLP, Die Zauberflöte, K.620 (wikitext qua api.php): "Piece Style=Classical"'
+    link: https://imslp.org/wiki/Die_Zauberfl%C3%B6te,_K.620_(Mozart,_Wolfgang_Amadeus)
+  - id: kv-620
+    bac: 2
+    ten: 'Köchel-Verzeichnis online, KV 620: "Singspiel (\"Grand opera“) in 2 acts"; vai "Königin der Nacht, Sopran"'
+    link: https://kv.mozarteum.at/en/work/die-zauberflote-the-magic-flute-7137
+  - id: cod-coloratura
+    bac: 2
+    ten: 'The Concise Oxford Dictionary of Music (Encyclopedia.com), "coloratura": "a coloratura soprano is one whose v. is flexible enough to cope with these demands"'
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/coloratura
+  - id: nma-620
+    bac: 1
+    ten: 'Neue Mozart-Ausgabe II/5/19, Die Zauberflöte, aria số 14 (tr. 224–231) trên Digital Mozart Edition'
+    link: https://dme.mozarteum.at/DME/nma/nma_cont.php?vsep=73&p1=5
 nhan_dinh:
   - id: n1
     cau: Tên «Nữ hoàng bóng đêm» chỉ aria «Der Hölle Rache» của Nữ hoàng bóng đêm (màn 2, số 14) trong opera Die Zauberflöte (Cây sáo thần).
@@ -50,3 +75,17 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Die_Zauberfl%C3%B6te,_K.620_(Mozart,_Wolfgang_Amadeus)", https://id.loc.gov/authorities/names/n81081247.json ]
     luot_2_ghi_chu: "IMSLP Op./Cat. No. = K.620 (Die Zauberflöte, 2 acts). LoC n81081247 (Köchel 6): '620. Die Zauberflöte' (Singspiel in two acts, libretto Schikaneder)."
+  - id: n4
+    cau: 'Thời kỳ: Cổ điển.'
+    loai: lich-su
+    truong: [ thoi_ky ]
+    nguon: [ imslp-wt ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP "Piece Style=Classical".'
+  - id: n5
+    cau: 'Luyện nghe: opera, giọng coloratura.'
+    loai: cau-truc
+    truong: [ luyen_nghe ]
+    nguon: [ kv-620, cod-coloratura, nma-620 ]
+    ket_qua: dung
+    ghi_chu: 'Köchel: Singspiel (một loại opera, COD) hai màn, vai Nữ hoàng là soprano; NMA: aria có hai chuỗi nốt nhanh ô 24–32 và 69–79, lên Fa6 (hồ sơ trang n16, n17); COD: coloratura soprano.'

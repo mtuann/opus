@@ -12,6 +12,15 @@ lan:
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: moi/d6-l9
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (D6-L9 phần B)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: imslp
     bac: 2
@@ -21,6 +30,30 @@ nguon:
     bac: 2
     ten: Köchel-Verzeichnis online (Stiftung Mozarteum), KV 525 Eine kleine Nachtmusik
     link: https://kv.mozarteum.at/en/work/eine-kleine-nachtmusik-a-little-night-music-6049
+  - id: nma-525
+    bac: 1
+    ten: 'Neue Mozart-Ausgabe IV/12/6, "Serenade in G / Eine kleine Nachtmusik / für zwei Violinen, Viola, Violoncello und Kontrabaß", tổng phổ, ảnh trang 43–48 trên Digital Mozart Edition'
+    link: https://dme.mozarteum.at/DME/nma/nma_cont.php?vsep=125&p1=43
+  - id: kv-525-text
+    bac: 2
+    ten: 'Köchel-Verzeichnis online, KV 525: "Contrary to the genre designation Serenade, which originated not from Mozart but is only found in the first print, it is apparently a Divertimento"; "The original title refers to its use in the evening and at night"'
+    link: https://kv.mozarteum.at/en/work/eine-kleine-nachtmusik-a-little-night-music-6049
+  - id: imslp-wt
+    bac: 2
+    ten: 'IMSLP, Eine kleine Nachtmusik, K.525 (wikitext qua api.php): "Alternative Title=A Little Night Music ; Serenade No.13", "Piece Style=Classical", "Tags=serenades"'
+    link: https://imslp.org/wiki/Eine_kleine_Nachtmusik,_K.525_(Mozart,_Wolfgang_Amadeus)
+  - id: cod-sonata-form
+    bac: 2
+    ten: 'The Concise Oxford Dictionary of Music (Encyclopedia.com), "sonata form"'
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/sonata-form
+  - id: cod-serenade
+    bac: 2
+    ten: 'The Concise Oxford Dictionary of Music (Encyclopedia.com), "serenade": "The instr. serenade was developed towards the end of 18th cent. as type of work similar to cassation and divertimento, particularly by Mozart (e.g. his Eine kleine Nachtmusik)"'
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/serenade
+  - id: commons-api
+    bac: 2
+    ten: 'Wikimedia Commons API (imageinfo, extmetadata) cho File:Mozart - Eine kleine Nachtmusik - 1. Allegro.ogg: "length" 355,41333 giây; LicenseShortName "CC BY-SA 2.0"; LicenseUrl "https://creativecommons.org/licenses/by-sa/2.0"; ImageDescription "Selections from the season 05-06 of the Advent Chamber Orchestra, Roxanna Pavel Goldstein, Musical Director …"; Credit "The Al Goldstein collection in the Pandora Music repository at ibiblio.org"; DateTimeOriginal 2005. Hai link file (ogg gốc, mp3 chuyển mã) trả 206 khi yêu cầu Range (06/11/2026)'
+    link: https://commons.wikimedia.org/wiki/File:Mozart_-_Eine_kleine_Nachtmusik_-_1._Allegro.ogg
 nhan_dinh:
   - id: n1
     cau: Tên «Eine kleine Nachtmusik, chương 1» chỉ chương 1 (Allegro) của Eine kleine Nachtmusik cung Sol trưởng.
@@ -50,3 +83,38 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Eine_kleine_Nachtmusik,_K.525_(Mozart,_Wolfgang_Amadeus)", https://id.loc.gov/authorities/names/n81078994.json ]
     luot_2_ghi_chu: "IMSLP Op./Cat. No. = K.525 (G major). LoC cites Köchel 6: '525. Eine kleine Nachtmusik'."
+  - id: n4
+    cau: 'Thời kỳ: Cổ điển.'
+    loai: lich-su
+    truong: [ thoi_ky ]
+    nguon: [ imslp-wt ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP "Piece Style=Classical".'
+  - id: n5
+    cau: 'Luyện nghe: hình thức sonata (chương 1), serenade.'
+    loai: cau-truc
+    truong: [ luyen_nghe ]
+    nguon: [ nma-525, cod-sonata-form, cod-serenade, kv-525-text, imslp-wt ]
+    ket_qua: dung
+    ghi_chu: 'Chương 1 ở hình thức sonata: NMA (hồ sơ trang nghe-nhac/mozart-eine-kleine n11). "Serenade": NMA, IMSLP, COD đều gọi K. 525 là serenade; Köchel online nói tên này không do Mozart đặt, chỉ có từ bản in đầu, và coi tác phẩm là divertimento. Trang đã ghi rõ điều ấy ở bảng đầu trang; giữ chữ serenade ở luyen_nghe (tên thể loại thông dụng). Người gom có thể cân nhắc đổi thành "Hình thức sonata, nhạc cho đàn dây" nếu muốn theo sát Köchel.'
+  - id: n6
+    cau: 'Bản thu: Advent Chamber Orchestra, giấy phép CC BY-SA 2.0 (link https://creativecommons.org/licenses/by-sa/2.0), trang File:Mozart_-_Eine_kleine_Nachtmusik_-_1._Allegro.ogg trên Wikimedia Commons.'
+    loai: ten
+    truong: [ ban_thu ]
+    nguon: [ commons-api ]
+    ket_qua: dung
+    ghi_chu: 'Commons: mô tả "Advent Chamber Orchestra" (mùa 2005–06, giám đốc âm nhạc Roxanna Pavel Goldstein), giấy phép CC BY-SA 2.0. Trang Commons trả 200.'
+  - id: n7
+    cau: 'Bản thu, một phần: file gốc .ogg và bản .mp3 chuyển mã của Commons cho chương 1 (Allegro).'
+    loai: ten
+    truong: [ ban_thu ]
+    nguon: [ commons-api ]
+    ket_qua: dung
+    ghi_chu: 'src https://upload.wikimedia.org/wikipedia/commons/2/24/Mozart_-_Eine_kleine_Nachtmusik_-_1._Allegro.ogg (206, application/ogg); mp3 …/transcoded/2/24/…ogg.mp3 (206, audio/mpeg). python3 tools/audio/check_audio.py --static: 0 lỗi.'
+  - id: n8
+    cau: 'Bản thu, độ dài phần: 355,41 giây.'
+    loai: so-lieu
+    truong: [ ban_thu ]
+    nguon: [ commons-api ]
+    ket_qua: dung
+    ghi_chu: 'Commons API "length" 355,41333 giây; dữ liệu ghi d: 355.41.'

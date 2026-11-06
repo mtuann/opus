@@ -12,6 +12,15 @@ lan:
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: moi/d6-l9
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (D6-L9 phần B)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: imslp
     bac: 2
@@ -21,6 +30,18 @@ nguon:
     bac: 2
     ten: Köchel-Verzeichnis online (Stiftung Mozarteum), KV 626 (1) Requiem, bản Süßmayr hoàn thành
     link: https://kv.mozarteum.at/en/work/requiem-the-requiem-completed-by-franz-xaver-susmayr-in-the-traditional-form-7373
+  - id: imslp-wt
+    bac: 2
+    ten: 'IMSLP, Requiem in D minor, K.626 (wikitext qua api.php): "Piece Style=Classical", "Mixed Chorus (SATB)", 8 phần (Introitus; Kyrie; Sequentia: Dies irae, Tuba mirum, Rex tremendae, Recordare, Confutatis, Lacrimosa; Offertorium: Domine Jesu, Hostias; Sanctus; Benedictus; Agnus Dei; Communio: Lux aeterna)'
+    link: https://imslp.org/wiki/Requiem_in_D_minor,_K.626_(Mozart,_Wolfgang_Amadeus)
+  - id: nma-626
+    bac: 1
+    ten: 'Neue Mozart-Ausgabe I/1/Abt. 2/1, Requiem: Fragment (Leopold Nowak, 1965), tổng phổ phần Mozart viết (tr. 3–58: Introitus, Kyrie, Sequenz đến Lacrimosa 8 ô, Offertorium Domine Jesu và Hostias) và lời tựa tr. VII–IX ("Introitus und Kyrie sind von Mozart geschrieben, alle übrigen Teile von Süßmayr" ở bản chép hoàn chỉnh; "Die acht Takte des Lacrimosa sind Mozarts letzte Noten")'
+    link: https://dme.mozarteum.at/DME/nma/nma_cont.php?vsep=13&p1=3
+  - id: carus-chart
+    bac: 2
+    ten: 'Carus-Verlag, "The additions – Who wrote what? Mozart’s Requiem. A comparison of versions" (Ulrich Leisinger, PDF): cột tự bút Mozart: "1. Requiem complete"; "2. Kyrie main parts only, instrumental parts by person unknown"; "3. Dies irae main parts" … "7. Confutatis main parts"; "8. Lacrymosa main parts (bars 1-8 only)"; "9. Domine Jesu main parts", "10. Hostias main parts"; "11. Sanctus vocal parts?", "12. Benedictus vocal parts?", "13. Agnus Dei vocal parts?" (Süßmayr: "supposedly new music"); "14. Lux aeterna Instructions from Mozart?" (Süßmayr: "reused from section 1"), "Cum Sanctis tuis" ("reused from section 2")'
+    link: https://www.carusmedia.com/images-intern/medien//50/5162600/5162600sb.pdf
 nhan_dinh:
   - id: n1
     cau: Tên «Requiem» chỉ Requiem cung Rê thứ của Mozart.
@@ -50,3 +71,66 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Requiem_in_D_minor,_K.626_(Mozart,_Wolfgang_Amadeus)", https://id.loc.gov/authorities/names/n89644147.json ]
     luot_2_ghi_chu: IMSLP Op./Cat. No. = K.626 (D minor). LoC 'Requiem, K. 626, D minor'.
+  - id: n4
+    cau: 'Thời kỳ: Cổ điển.'
+    loai: lich-su
+    truong: [ thoi_ky ]
+    nguon: [ imslp-wt ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP "Piece Style=Classical".'
+  - id: n5
+    cau: 'Luyện nghe: hợp xướng, fugue kép.'
+    loai: cau-truc
+    truong: [ luyen_nghe ]
+    nguon: [ imslp-wt, nma-626 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: hợp xướng SATB; NMA tr. 10: Kyrie có hai chủ đề vào cùng lúc ("Kyrie eleison" ở bè bass, "Christe eleison" ở bè alto), tức fugue kép (hồ sơ trang n20).'
+  - id: n6
+    cau: 'Hình, chú thích: ai viết phần nào? Xanh: Mozart viết trọn. Vàng: Mozart viết bè hát và bè trầm, người khác hoàn thành phối khí (Lacrimosa: chỉ 8 ô nhịp đầu). Xám: chủ yếu Süssmayr. Đỏ: dùng lại nhạc Mozart ở phần mở đầu.'
+    loai: lich-su
+    truong: [ hinh ]
+    nguon: [ carus-chart, nma-626 ]
+    ket_qua: dung
+    ghi_chu: 'Ba loại khớp bảng của Carus ("complete"; "main parts" + người khác "orchestration"; Süßmayr "supposedly new music"; "reused from section 1/2"). "Bè hát và bè trầm": Carus gọi "main parts" (bè hát, bè trầm có số và vài dòng nhạc cụ chính), NMA in đúng như vậy. Màu: lớp k-a #a9c7e8 (xanh), k-b #f1d9a0 (vàng), k-x #ececec (xám), k-c #e9b3a6 (hồng cam, gọi "đỏ" là gần đúng) trong src/styles/thanh-phan.css: ghi cho người gom, không phải nhận định.'
+  - id: n7
+    cau: 'Hình: Introitus màu xanh (Mozart viết trọn).'
+    loai: lich-su
+    truong: [ hinh ]
+    nguon: [ carus-chart, nma-626 ]
+    ket_qua: dung
+    ghi_chu: 'Carus: "1. Requiem complete"; NMA tr. 3–9 đủ các bè.'
+  - id: n8
+    cau: 'Hình: Kyrie, Dies irae, Tuba mirum, Rex, Recordare, Confutatis màu vàng (Mozart viết bè hát và bè trầm, người khác phối khí).'
+    loai: lich-su
+    truong: [ hinh ]
+    nguon: [ carus-chart, nma-626 ]
+    ket_qua: dung
+    ghi_chu: 'Carus: Kyrie "main parts only, instrumental parts by person unknown"; Dies irae đến Confutatis "main parts", Süßmayr "orchestration". Kyrie: NMA lời tựa ghi Kyrie có trong phần Mozart viết, nhưng phối khí không phải của Mozart theo Carus, nên màu vàng là đúng.'
+  - id: n9
+    cau: 'Hình: Lacrimosa màu vàng, ghi "8 ô nhịp".'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ nma-626, carus-chart ]
+    ket_qua: dung
+    ghi_chu: 'NMA tr. 46: Lacrimosa 8 ô; Carus "bars 1-8 only", Süßmayr "orchestration, new music in bars 9-30".'
+  - id: n10
+    cau: 'Hình: Offertorium (Domine Jesu, Hostias) màu vàng.'
+    loai: lich-su
+    truong: [ hinh ]
+    nguon: [ carus-chart, nma-626 ]
+    ket_qua: dung
+    ghi_chu: 'Carus: "9. Domine Jesu main parts", "10. Hostias main parts"; NMA tr. 47–58.'
+  - id: n11
+    cau: 'Hình: Sanctus · Benedictus · Agnus Dei màu xám (chủ yếu Süssmayr).'
+    loai: lich-su
+    truong: [ hinh ]
+    nguon: [ carus-chart, nma-626 ]
+    ket_qua: dung
+    ghi_chu: 'Carus: tự bút Mozart không có (chỉ "vocal parts?", tức có thể có phác thảo đã mất), Süßmayr "supposedly new music"; NMA (phần Mozart viết) dừng ở Hostias. "Chủ yếu" phù hợp với dấu hỏi của Carus.'
+  - id: n12
+    cau: 'Hình: Communio màu đỏ, ghi "dùng lại nhạc mở đầu".'
+    loai: lich-su
+    truong: [ hinh ]
+    nguon: [ carus-chart ]
+    ket_qua: dung
+    ghi_chu: 'Carus: Lux aeterna "reused from section 1" (Introitus), Cum Sanctis tuis "reused from section 2" (Kyrie). Trọng số ô là cách vẽ của site.'
