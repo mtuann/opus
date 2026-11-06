@@ -13,14 +13,14 @@ Với rất nhiều người học đàn, đây là bài "Beethoven" đầu tiê
 - **Nhạc Cổ điển ở dạng giản dị nhất.** Câu nhạc bốn ô hỏi rồi đáp, dấu luyến hai nốt, nốt láy, kết rõ ràng: những viên gạch bạn sẽ gặp lại ở Clementi, Haydn, Mozart.
 - **Hai chương, hai tính cách.** Moderato duyên dáng và nhanh nhẹn; Romanze hát, mềm, có một khoảnh khắc dừng lại đầy chờ đợi. Đổi tính cách giữa hai chương là bài học biểu diễn đầu tiên.
 - **Tay trái học cách lùi lại.** Hợp âm hai nốt, hình **Alberti** (nốt trầm – nốt cao – nốt giữa – nốt cao), hình đệm 6/8: lúc nào cũng nhỏ hơn giai điệu.
-- **Bước đệm trước Clementi.** Ngắn và dễ hơn [Clementi: Sonatina Op. 36 số 1](/opus/piano/tac-pham/clementi-sonatina/), nhưng cùng một thế giới âm thanh.
+- **Bước đệm trước Clementi.** Ngắn hơn [Clementi: Sonatina Op. 36 số 1](/opus/piano/tac-pham/clementi-sonatina/) (hai chương thay vì ba), nhưng cùng một thế giới âm thanh.
 - **Học cách đọc ấn bản.** Một bài nổi tiếng dưới tên Beethoven mà không ai chứng minh được: dịp tốt để hiểu số danh mục, bản Urtext và những gì người biên tập thêm vào.
 
 ## Bối cảnh
 
 Danh mục chuẩn về tác phẩm Beethoven, do Georg Kinsky soạn và Hans Halm hoàn tất (1955), chia tác phẩm thành ba nhóm: có số opus; không có số opus (*WoO*, *Werke ohne Opuszahl*); và *Anhang*, phụ lục cho những tác phẩm mà quyền tác giả đáng ngờ. Hai sonatina Sol trưởng và Fa trưởng nằm ở mục thứ năm của phụ lục ấy, nên mang số Anh. 5.
 
-Những gì ta biết khá ít. Không còn bản viết tay, và không có thư từ hay ghi chép nào của Beethoven nhắc đến hai bài. Henle ghi rằng chúng được in khi Beethoven còn sống, khoảng năm 1807; bản in ấy (nhà Rudolphus ở Altona) ghi tên ông là tác giả. Phần giới thiệu ấn bản Wiener Urtext (2021) thì nói bản in đầu tiên ra đời sau khi ông mất. Toàn tập Breitkopf & Härtel ở thế kỷ 19 ghi nhà xuất bản gốc là August Cranz ở Hamburg, rất xa Vienna, nơi Beethoven sống từ năm 1792.
+Những gì ta biết khá ít. Không còn bản viết tay, và không có thư từ hay ghi chép nào của Beethoven nhắc đến hai bài. Henle ghi rằng chúng được in khi Beethoven còn sống, khoảng năm 1807; bản in ấy (nhà Rudolphus ở Altona) ghi tên ông là tác giả. Phần giới thiệu ấn bản Wiener Urtext (2020) thì nói bản in đầu tiên ra đời sau khi ông mất. Toàn tập Breitkopf & Härtel ở thế kỷ 19 ghi nhà xuất bản gốc là August Cranz ở Hamburg, rất xa Vienna, nơi Beethoven sống từ năm 1792.
 
 Nghi ngờ có từ rất sớm. Alexander Wheelock Thayer, người viết tiểu sử Beethoven, chỉ dám đoán rằng nếu là của Beethoven thì hai bài thuộc thời ông còn trẻ ở Bonn, kèm một dấu hỏi; năm 1868, Gustav Nottebohm, nhà nghiên cứu các sổ phác thảo của Beethoven, cũng nghi ngờ. Ngày nay Henle cho rằng rất khó có chuyện Beethoven là tác giả; Wiener Urtext viết rằng không thể chắc chắn, và cũng chưa ai tìm ra một tác giả khác. Nói ngắn gọn: một bản nhạc dễ thương, còn cái tên trên bìa là một câu hỏi.
 
@@ -36,7 +36,7 @@ Nghe cả hai chương ít nhất hai lần, mỗi lần một câu hỏi:
 4. **Romanze.** Bạn cảm mỗi ô hai phách hay sáu phách? Ở đâu nhạc dừng lại trên một dấu ngân (fermata)?
 5. **Nhắc lại.** Nghệ sĩ có chơi các dấu nhắc lại không? Lần nhắc lại có khác lần đầu không?
 
-Bài có mặt trong rất nhiều tuyển tập sonatina cho người học, nên bạn sẽ gặp đủ loại bản thu, từ nghệ sĩ chuyên nghiệp đến học sinh. Hãy chọn hai bản khác nhau rõ rệt và so sánh: tốc độ Moderato, độ ngắn của nốt láy, cách Romanze chuyển động (trôi hay kéo). Nếu tìm được, nghe thêm một bản trên fortepiano (đàn piano của thời ấy) để hình dung tiếng đàn mỏng và rõ mà bài này vốn hướng tới.
+Bài có mặt trong rất nhiều tuyển tập sonatina cho người học, nên bạn sẽ gặp đủ loại bản thu, từ nghệ sĩ chuyên nghiệp đến học sinh. Hãy chọn hai bản khác nhau rõ rệt và so sánh: tốc độ Moderato, độ ngắn của nốt láy, cách Romanze chuyển động (trôi hay kéo). Nếu tìm được, nghe thêm một bản trên fortepiano (đàn piano của thời ấy) để so tiếng đàn với đàn hiện đại.
 
 ::khoi-nghe{moc="0 25 50 73 121 153 - 181 229 258"}
 
@@ -216,7 +216,7 @@ Kế hoạch 5 tuần, khoảng 20–30 phút mỗi ngày. Chương II đầu ti
 
 ### Sắc thái
 
-Bản Breitkopf ghi khá ít, và những gì có đều đáng tôn trọng: *p* ở đầu chương I, nhỏ dần trên các cặp nốt đi xuống ở ô 2, *mf* ở đoạn B (ô 9) và ở coda (ô 25), *dolce* khi chủ đề trở lại ở ô 17. Ở Romanze: lớn dần ở ô 9, nhỏ dần trước dấu ngân ở ô 19, *p* ở coda. Giữa các chỉ dẫn đó, để câu nhạc tự lên xuống nhẹ theo giai điệu. Tay trái luôn nhỏ hơn tay phải một bậc. Các ấn bản khác có thể ghi khác; xem thêm [Tạo tiếng đàn](/opus/piano/tieng-dan/).
+Bản Breitkopf ghi khá ít, và những gì có đều đáng tôn trọng: *p* ở đầu chương I, nhỏ dần trên các cặp nốt đi xuống ở ô 2, *mf* ở đoạn B (ô 9) và ở coda (ô 25), *dolce* khi chủ đề trở lại ở ô 17. Ở Romanze: lớn dần ở ô 9, nhỏ dần ngay trên nốt có dấu ngân ở ô 19, *p* ở coda. Giữa các chỉ dẫn đó, để câu nhạc tự lên xuống nhẹ theo giai điệu. Tay trái luôn nhỏ hơn tay phải một bậc. Các ấn bản khác có thể ghi khác; xem thêm [Tạo tiếng đàn](/opus/piano/tieng-dan/).
 
 ### Bàn đạp
 
@@ -224,7 +224,7 @@ Chương I: không dùng; mọi thứ phải rõ bằng ngón. Romanze: có th�
 
 ### Ấn bản và tên tác giả
 
-Nhiều tuyển tập cho người học in bài dưới tên Beethoven mà không ghi chú gì, kèm sắc thái và số ngón của người biên tập. Bản Urtext ghi rõ số Anh. 5 và cho biết đâu là chỉ dẫn của nguồn. Khi giới thiệu bài trong một buổi biểu diễn, cách nói trung thực là: "Sonatina Sol trưởng, Anh. 5 số 1, gán cho Beethoven".
+Từ thế kỷ 19, bài được in nhiều lần dưới tên Beethoven mà không ghi chú gì về chuyện tác giả, như trong toàn tập Breitkopf & Härtel. Bản Urtext ghi rõ số Anh. 5 và cho biết đâu là chỉ dẫn của nguồn. Khi giới thiệu bài trong một buổi biểu diễn, cách nói trung thực là: "Sonatina Sol trưởng, Anh. 5 số 1, gán cho Beethoven".
 
 ## Lỗi thường gặp
 
@@ -274,7 +274,7 @@ Nhiều tuyển tập cho người học in bài dưới tên Beethoven mà khô
 ## Nguồn
 
 - G. Henle Verlag, HN 365 *2 Piano Sonatinas G major and F major, Anh. 5* (Otto von Irmer biên tập, số ngón của Walther Lampe): lời giới thiệu và mức độ khó trên [henle.de](https://www.henle.de/).
-- Wiener Urtext Edition, UT 50290 *Drei Sonatinen für Klavier* (Anh. 5 số 1 và 2, WoO 50; Jochen Reutter biên tập, 2021): phần giới thiệu của nhà xuất bản về quyền tác giả.
+- Wiener Urtext Edition, UT 50290 *Drei Sonatinen für Klavier* (Anh. 5 số 1 và 2, WoO 50; Jochen Reutter biên tập, 2020): phần giới thiệu của nhà xuất bản về quyền tác giả.
 - Georg Kinsky, Hans Halm, *Das Werk Beethovens. Thematisch-bibliographisches Verzeichnis seiner sämtlichen vollendeten Kompositionen*, G. Henle, München, 1955.
 - Alexander Wheelock Thayer, *Chronologisches Verzeichniss der Werke Ludwig van Beethoven's*, Berlin, 1865, số 24 ([Internet Archive](https://archive.org/details/chronologisches00thaygoog)).
 - Gustav Nottebohm, *Thematisches Verzeichniss der im Druck erschienenen Werke von Ludwig van Beethoven*, ấn bản 2, Breitkopf & Härtel, Leipzig, 1868, tr. 148 ([Internet Archive](https://archive.org/details/thematischesverz01nott)).

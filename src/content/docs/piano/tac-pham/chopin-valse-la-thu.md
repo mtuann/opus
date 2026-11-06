@@ -30,7 +30,7 @@ Chopin còn có **Valse La thứ Op. 34 số 2**: một bản *Lento* khó hơn 
 
 ## Nghe trước khi tập
 
-Các album valse kinh điển thường gồm 14 bản quen thuộc, và bản này không nằm trong số đó, nên bạn có thể phải tìm nó trong các bộ thu âm "toàn tập Chopin". Nghe ít nhất hai nghệ sĩ khác nhau, mỗi lần một câu hỏi:
+Một số album valse nổi tiếng chỉ gồm 14 bản, như album *14 Waltzes* của Dinu Lipatti, và bản này không nằm trong số đó, nên bạn có thể phải tìm nó trong các bộ thu âm "toàn tập Chopin". Nghe ít nhất hai nghệ sĩ khác nhau, mỗi lần một câu hỏi:
 
 1. **Tay trái.** Nốt trầm có rõ không? Hai hợp âm có nhẹ hơn nốt trầm không, hay nghe như "um-pa-pa" ồn ào?
 2. **Nốt hoa mỹ.** Những nốt nhỏ trong giai điệu vào nhẹ nhàng như một hơi luyến, hay rõ như một nốt chính?
@@ -164,7 +164,7 @@ Kế hoạch 5 tuần, khoảng 30–45 phút mỗi ngày.
 
 ### Rubato
 
-Các học trò của Chopin kể rằng khi ông co giãn giai điệu, tay đệm vẫn giữ nhịp (xem trang [Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/)). Với bài này, rubato chỉ cần đơn giản: nán một chút ở nốt cao nhất của câu hoặc ở một bước nhảy đẹp, rồi trả lại thời gian ngay sau đó; chậm lại nhẹ ở cuối đoạn A (câu thứ tư), trước khi vào đoạn B. Không co giãn ở mọi ô.
+Carl Mikuli, một học trò của Chopin, kể rằng khi ông co giãn giai điệu, tay đệm vẫn giữ đúng nhịp (xem trang [Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/)). Với bài này, rubato chỉ cần đơn giản: nán một chút ở nốt cao nhất của câu hoặc ở một bước nhảy đẹp, rồi trả lại thời gian ngay sau đó; chậm lại nhẹ ở cuối đoạn A (câu thứ tư), trước khi vào đoạn B. Không co giãn ở mọi ô.
 
 ### Bàn đạp
 
@@ -178,7 +178,7 @@ Luôn để tai quyết định: nếu nghe nhòe, đổi sớm hơn hoặc nôn
 
 ### Nốt hoa mỹ và sắc thái
 
-Nhiều chuyên gia về Chopin, trong đó có Jean-Jacques Eigeldinger, cho rằng các nốt hoa mỹ nhỏ trong nhạc Chopin thường vào đúng phách, cùng lúc với nốt trầm, chứ không chen vào trước phách. Hãy chơi chúng nhẹ và gọn. Phần lớn bài nằm trong vùng *p* đến *mf*; đoạn La trưởng sáng hơn nhưng không cần to hơn; kết bài nhỏ dần đến lặng.
+Lời bình của Ấn bản Quốc gia Ba Lan (Jan Ekier, Paweł Kamiński) cho bài này: chơi nốt đầu của các cặp nốt hoa mỹ cùng lúc với tay trái thì hợp phong cách hơn; nhưng điều quan trọng hơn là chúng nhẹ và nhanh, nên chơi chúng trước phách cũng được. Hãy chơi chúng nhẹ và gọn. Phần lớn bài nằm trong vùng *p* đến *mf*; đoạn La trưởng sáng hơn nhưng không cần to hơn; kết bài nhỏ dần đến lặng.
 
 ## Lỗi thường gặp
 
@@ -227,8 +227,8 @@ Nhiều chuyên gia về Chopin, trong đó có Jean-Jacques Eigeldinger, cho r�
 ## Nguồn
 
 - "Waltz in A minor, Op. posth. (Chopin)", [Wikipedia](https://en.wikipedia.org/wiki/Waltz_in_A_minor,_Op._posth._%28Chopin%29) (các số danh mục, niên đại, lịch sử in ấn, kể cả bản in năm 1860, cấu trúc). Trang tác phẩm trên [IMSLP](https://imslp.org/wiki/Waltz_in_A_minor,_B.150_(Chopin,_Fr%C3%A9d%C3%A9ric)) ghi cùng bản in đầu tiên: "1860 in 4 Pièces pour piano by Charlotte de Rothschild (No.3)".
-- Bản nhạc dùng để đối chiếu cấu trúc và số ô nhịp: bản khắc của André Van Ryckeghem cho Werner Icking Music Archive (1999), nay có trên [IMSLP](https://imslp.org/wiki/Waltz_in_A_minor,_B.150_(Chopin,_Fr%C3%A9d%C3%A9ric)); và bản LilyPond chép theo bản thảo của Chopin ở Thư viện Quốc gia Pháp, trong kho [rdj/music](https://github.com/rdj/music) trên GitHub. Hai bản cùng cho 56 ô nhịp, với dấu nhắc lại ở ô 17–24 và ô 25–40.
+- Bản nhạc dùng để đối chiếu cấu trúc và số ô nhịp: ấn bản Urtext của G. Henle Verlag (HN 1822, 2017; [trang mẫu](https://www.henle.de/media/2a/f6/a2/1686734195/hn_1822_a_chopin_s_6-7_sj.pdf)); và bản LilyPond chép theo bản thảo của Chopin ở Thư viện Quốc gia Pháp, trong kho [rdj/music](https://github.com/rdj/music) trên GitHub. Hai bản cùng cho 56 ô nhịp, với dấu nhắc lại ở ô 17–24 và ô 25–40.
 - Maurice J. E. Brown, *Chopin: An Index of His Works in Chronological Order*, Macmillan, 1960 (số B.).
 - Krystyna Kobylańska, *Frédéric Chopin: Thematisch-bibliographisches Werkverzeichnis*, G. Henle Verlag, 1979 (số KK).
-- Jean-Jacques Eigeldinger, *Chopin: Pianist and Teacher as Seen by His Pupils*, Cambridge University Press, 1986.
-- Chopin, Ấn bản Quốc gia Ba Lan (*Wydanie Narodowe*), biên tập Jan Ekier. Bản nhạc: [IMSLP](https://imslp.org/). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
+- Carl Mikuli, lời tựa ấn bản *Pianoforte-Werke* của Chopin (Kistner, Leipzig, 1879): cách Chopin chơi rubato ([Internet Archive](https://archive.org/details/gb-lam-0156896)).
+- Chopin, Ấn bản Quốc gia Ba Lan (*Wydanie Narodowe*), biên tập Jan Ekier; lời bình tập Valse loạt B của Jan Ekier và Paweł Kamiński (cách chơi nốt hoa mỹ). Bản nhạc: [IMSLP](https://imslp.org/). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

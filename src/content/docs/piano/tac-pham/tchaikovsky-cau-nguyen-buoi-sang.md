@@ -257,7 +257,7 @@ Bản nhạc phổ biến trên mạng thường là các bản in cũ, với t�
 + Rê trưởng, giọng át của Sol trưởng
 - Sol trưởng
 - Mi thứ
-> Ở ô 8, hợp âm La bảy dẫn về Rê trưởng, với nốt treo Sol xuống Fa♯ ở bè alto. Sol trưởng chỉ trở về hẳn ở ô 16.
+> Hợp âm La bảy ở phách 3 ô 7 dẫn về Rê trưởng ở ô 8, với nốt treo Sol xuống Fa♯ ở bè alto. Sol trưởng chỉ trở về hẳn ở ô 16.
 ? Âm nền ở coda là gì?
 + Nốt Sol trầm lặp đều bằng móc đơn trong khi hòa âm phía trên thay đổi
 - Nốt Sol cao nhất của bè trên

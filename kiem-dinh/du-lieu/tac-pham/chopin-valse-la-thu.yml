@@ -18,7 +18,7 @@ lan:
     nguoi:
       luot_1: Claude Opus 5.5 (D6-L2 phần B)
       luot_2: null
-      review: null
+      review: Claude Opus 5.5 (review D6-L2-gom, 05/11/2026)
       kiem_mau: null
 ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/chopin-valse-la-thu.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Cần cập nhật theo: chip.cap_do, dòng "Độ khó" trong thong_tin, trang chặng, bảng "Tác phẩm theo cấp độ" và gợi ý năm thứ hai trong lộ trình năm đầu (bài đang xếp ở chặng 3). Lần 2 (D6-L2, lượt 1 phần B): nhận định n6–n30 cho các trường chưa khóa (giong, nhip, thoi_ky, ky_nang_chinh, chip, thong_tin, hinh, ban_thu). Bản nhạc: bản LilyPond chép theo bản thảo (rdj/music). Chưa chắc: n17 (Maurice Brown ghi 1843), n18 (học giả cho là 1832–1833): chỉ thấy ở Wikipedia; Henle ghi 1843 không nói theo ai. Bản thu: Commons ghi phạm vi công cộng (PD-author, Musopen), IMSLP ghi cùng bản thu là CC BY 4.0 (n29).'
 nguon:
@@ -54,6 +54,10 @@ nguon:
   - { id: commons-higuchi, bac: 2, ten: 'Wikimedia Commons, File:Chopin - Waltz No. 19 in A minor, B. 150 (Aya Higuchi).flac: {{PD-author|Musopen}}, nguồn Kickstarter "Set Chopin Free", thời lượng 130,68 giây (API imageinfo)', link: 'https://commons.wikimedia.org/wiki/File:Chopin_-_Waltz_No._19_in_A_minor,_B._150_(Aya_Higuchi).flac' }
   - { id: omt-rondo, bac: 2, ten: 'Open Music Theory, Rondo', link: 'https://viva.pressbooks.pub/openmusictheory/chapter/rondo/' }
   - { id: wiki-b150, bac: 3, ten: 'Wikipedia, Waltz in A minor, Op. posth. (Chopin) (chỉ để tìm nguồn: Brown 1843, Belotti 1832–33)', link: 'https://en.wikipedia.org/wiki/Waltz_in_A_minor,_Op._posth._(Chopin)' }
+  - id: imslp-list-chopin
+    bac: 2
+    ten: 'IMSLP, List of works by Frédéric Chopin (cột B. theo Brown, Index of his works in chronological order, 1960)'
+    link: https://imslp.org/wiki/List_of_works_by_Fr%C3%A9d%C3%A9ric_Chopin
 nhan_dinh:
   - id: n1
     cau: "Tên bài: Valse La thứ, B. 150 (Waltz in A minor, không số opus)."
@@ -171,10 +175,11 @@ nhan_dinh:
     truong: [ chip ]
     nguon: [ rdj-b150, henle-hn1822, omt-rondo ]
     ket_qua: dung
-    ghi_chu: 'rdj: \key a \minor \time 3/4 \tempo Allegretto; Henle HN 1822: "Allegretto". Rondo nhỏ: n20 (A B A'' C A'''' và coda).'
+    ghi_chu: 'rdj: \key a \minor \time 3/4 \tempo Allegretto; Henle HN 1822: "Allegretto". Rondo nhỏ: n20 (A B A'' C A'''' và coda). Review D6-L2-gom: Review mở trang mẫu Henle HN 1822 (2017, hn_1822_a_chopin_s_6-7_sj.pdf; bậc 2, ấn bản Urtext in): đầu bài "Allegretto", 3/4, nhịp lấy đà (Mi); ô 1–16 La thứ; dấu nhắc lại ‖: ô 17–24 :‖ và ‖: ô 25–40 :‖; ô 25–28 là chủ đề (như ô 1–4, 41–44); ô 33–40 có Đô♯, Fa♯, Sol♯, tay trái hợp âm La–Đô♯–Mi xen Mi bảy (La trưởng); ô 41–52 chủ đề; ô 53–56 kết, láy rền ô 55; tổng 56 ô. Henle in thêm một dấu mở nhắc lại ở đầu ô 41 mà không có dấu đóng (ô 56 vạch kết). Lời bình Henle: "In m. 41 the theme returns in its original form and then leads into the close from m. 51". Khớp bản rdj (theo bản thảo BnF) mà lượt 1 dùng. Đúng (rondo nhỏ: chủ đề trở lại ở ô 25 và ô 41 xen hai đoạn khác, khớp OMT Rondo và trang hinh-thuc/rondo).'
     luot_2: khong-chac
     luot_2_nguon: [ "https://imslp.org/wiki/Waltz_in_A_minor,_B.150_(Chopin,_Fr%C3%A9d%C3%A9ric)" ]
     luot_2_ghi_chu: "'La thứ · 3/4' đúng (IMSLP, bản tự tay). Không đọc được bản in nào ghi 'Allegretto' (PDF IMSLP bị chặn bot; Mutopia không có bài; bản tự tay ở Commons là bản phác không ghi tốc độ). Hình thức 'rondo nhỏ' cũng chưa đối chiếu được trên bản nhạc."
+    review: dung
   - id: n11
     cau: 'Chip cấp độ: ≈ Grade 5–6.'
     loai: cap-do
@@ -239,40 +244,44 @@ nhan_dinh:
     cau: 'Thông tin, Sáng tác: Maurice Brown ghi năm 1843.'
     loai: nam
     truong: [ thong_tin ]
-    nguon: [ henle-hn131-bem, wiki-b150 ]
-    ket_qua: null
-    ghi_chu: 'chưa chắc: Henle Comments ghi "KK IVb no. 11 … Date of composition 1843" nhưng không nói theo Brown; Wikipedia (bậc 3) trích Brown, Chopin: An Index of His Works (1972), tr. 154: 1843. Nếu lượt 2 không mở được sách Brown, đề nghị viết "ấn bản Henle ghi 1843".'
+    nguon: [ imslp-list-chopin, henle-hn131-bem ]
+    ket_qua: dung
+    ghi_chu: 'chưa chắc: Henle Comments ghi "KK IVb no. 11 … Date of composition 1843" nhưng không nói theo Brown; Wikipedia (bậc 3) trích Brown, Chopin: An Index of His Works (1972), tr. 154: 1843. Nếu lượt 2 không mở được sách Brown, đề nghị viết "ấn bản Henle ghi 1843". Review D6-L2-gom: nguồn bậc 2 của lượt 2: danh sách tác phẩm Chopin trên IMSLP (cột B. theo Brown, Index … in Chronological Order, 1960): B.150, 1843; bảng niên đại Henle HN 131: KK IVb Nr. 11, 1843. Đúng.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/List_of_works_by_Fr%C3%A9d%C3%A9ric_Chopin", "https://www.henle.de/media/a3/c6/49/1697725591/0131-1697725590-sync.pdf" ]
     luot_2_ghi_chu: "Danh sách IMSLP (cột B. theo Brown, Index of his works in chronological order, 1960): B.150 Waltz in A minor, 1843. Lời tựa Henle HN 131: KK IVb Nr. 11, sáng tác 1843, in 1955. Không mở được sách của Brown; danh mục theo niên đại đặt B.150 vào 1843."
+    review: dung
   - id: n18
     cau: 'Thông tin, Sáng tác: có học giả cho là bài viết sớm hơn nhiều (1832–1833).'
     loai: nam
     truong: [ thong_tin ]
     nguon: [ wiki-b150 ]
-    ket_qua: null
-    ghi_chu: 'chưa chắc: chỉ thấy ở Wikipedia (theo Gastone Belotti, Chopin, 1984, tr. 462–464; sách in tiếng Ý). Henle HN 1822 cho rằng bản thảo ở nhà Rothschild "might point to a later composition date" (Charlotte học Chopin từ 1841), tức nghiêng về muộn. Nếu lượt 2 không có nguồn bậc 2, đề nghị bỏ vế này.'
+    ket_qua: da-bo
+    ghi_chu: 'chưa chắc: chỉ thấy ở Wikipedia (theo Gastone Belotti, Chopin, 1984, tr. 462–464; sách in tiếng Ý). Henle HN 1822 cho rằng bản thảo ở nhà Rothschild "might point to a later composition date" (Charlotte học Chopin từ 1841), tức nghiêng về muộn. Nếu lượt 2 không có nguồn bậc 2, đề nghị bỏ vế này. Review D6-L2-gom: cả hai lượt, agent con và review không tìm được nguồn bậc 1–2 cho niên đại 1832–1833 (chỉ Wikipedia, dẫn Belotti 1984, sách in). Ấn bản Quốc gia (review đọc PDF): "Walc a WN 63 – 1847–49 r.", "Najpóźniejszy z zachowanych … należy do grupy kilku ostatnich utworów Chopina". Bỏ vế ấy khỏi thong_tin. doi_chu ở hồ sơ trang.'
     luot_2: khong-chac
     luot_2_ghi_chu: Không tìm được nguồn bậc 2 nào nêu niên đại 1832–1833. Các nguồn đã mở chỉ ghi 1847–49 (NE, IMSLP, NIFC) và 1843 (Brown/Henle, NIFC '1843?'). Kết quả tìm kiếm chỉ có trang phổ thông nói ước lượng 'sớm nhất 1833'.
+    review: dung
   - id: n19
     cau: 'Thông tin, Giọng · nhịp · tốc độ: La thứ (đoạn C ở La trưởng) · 3/4 · Allegretto.'
     loai: cau-truc
     truong: [ thong_tin ]
     nguon: [ rdj-b150 ]
     ket_qua: dung
-    ghi_chu: 'rdj: \key a \minor, \time 3/4, \tempo Allegretto; ô 33–40 Đô♯, Fa♯, tay trái <e'' a cs> (La trưởng).'
+    ghi_chu: 'rdj: \key a \minor, \time 3/4, \tempo Allegretto; ô 33–40 Đô♯, Fa♯, tay trái <e'' a cs> (La trưởng). Review D6-L2-gom: Review mở trang mẫu Henle HN 1822 (2017, hn_1822_a_chopin_s_6-7_sj.pdf; bậc 2, ấn bản Urtext in): đầu bài "Allegretto", 3/4, nhịp lấy đà (Mi); ô 1–16 La thứ; dấu nhắc lại ‖: ô 17–24 :‖ và ‖: ô 25–40 :‖; ô 25–28 là chủ đề (như ô 1–4, 41–44); ô 33–40 có Đô♯, Fa♯, Sol♯, tay trái hợp âm La–Đô♯–Mi xen Mi bảy (La trưởng); ô 41–52 chủ đề; ô 53–56 kết, láy rền ô 55; tổng 56 ô. Henle in thêm một dấu mở nhắc lại ở đầu ô 41 mà không có dấu đóng (ô 56 vạch kết). Lời bình Henle: "In m. 41 the theme returns in its original form and then leads into the close from m. 51". Khớp bản rdj (theo bản thảo BnF) mà lượt 1 dùng. Đúng (rondo nhỏ: chủ đề trở lại ở ô 25 và ô 41 xen hai đoạn khác, khớp OMT Rondo và trang hinh-thuc/rondo).'
     luot_2: khong-chac
     luot_2_nguon: [ "https://imslp.org/wiki/Waltz_in_A_minor,_B.150_(Chopin,_Fr%C3%A9d%C3%A9ric)" ]
     luot_2_ghi_chu: La thứ và 3/4 đúng. Không đọc được bản in để xác nhận 'Allegretto' và đoạn C ở La trưởng (PDF IMSLP chặn bot, không có ở Mutopia/Commons; bản phác tự tay khó đọc, không ghi tốc độ).
+    review: dung
   - id: n20
     cau: 'Thông tin, Hình thức: rondo nhỏ A – B – A'' – C – A'''' và coda ngắn.'
     loai: cau-truc
     truong: [ thong_tin ]
     nguon: [ rdj-b150, omt-rondo ]
     ket_qua: dung
-    ghi_chu: 'rdj: A ô 1–16, B 17–24, A'' 25–32, C 33–40, A'''' 41–52, coda 53–56. OMT Rondo: refrain trở lại xen giữa các episode.'
+    ghi_chu: 'rdj: A ô 1–16, B 17–24, A'' 25–32, C 33–40, A'''' 41–52, coda 53–56. OMT Rondo: refrain trở lại xen giữa các episode. Review D6-L2-gom: Review mở trang mẫu Henle HN 1822 (2017, hn_1822_a_chopin_s_6-7_sj.pdf; bậc 2, ấn bản Urtext in): đầu bài "Allegretto", 3/4, nhịp lấy đà (Mi); ô 1–16 La thứ; dấu nhắc lại ‖: ô 17–24 :‖ và ‖: ô 25–40 :‖; ô 25–28 là chủ đề (như ô 1–4, 41–44); ô 33–40 có Đô♯, Fa♯, Sol♯, tay trái hợp âm La–Đô♯–Mi xen Mi bảy (La trưởng); ô 41–52 chủ đề; ô 53–56 kết, láy rền ô 55; tổng 56 ô. Henle in thêm một dấu mở nhắc lại ở đầu ô 41 mà không có dấu đóng (ô 56 vạch kết). Lời bình Henle: "In m. 41 the theme returns in its original form and then leads into the close from m. 51". Khớp bản rdj (theo bản thảo BnF) mà lượt 1 dùng. Đúng (rondo nhỏ: chủ đề trở lại ở ô 25 và ô 41 xen hai đoạn khác, khớp OMT Rondo và trang hinh-thuc/rondo).'
     luot_2: khong-chac
     luot_2_ghi_chu: Không có bản nhạc đọc được để đối chiếu hình thức A–B–A'–C–A''–coda. ABRSM ghi 'with first repeat', nên có dấu nhắc lại, nhưng điều đó chưa xác nhận được sơ đồ.
+    review: dung
   - id: n21
     cau: 'Thông tin, Độ khó: khoảng ABRSM Grade 5–6; ABRSM xếp bài ở Grade 6 (đề cương 2025–2026 và 2027–2028), RCM Level 6; Henle mức 3.'
     loai: cap-do
@@ -319,27 +328,30 @@ nhan_dinh:
     truong: [ hinh ]
     nguon: [ rdj-b150 ]
     ket_qua: dung
-    ghi_chu: 'rdj: \partial 4; 56 ô (\barNumberCheck #48, rồi 8 ô 49–56).'
+    ghi_chu: 'rdj: \partial 4; 56 ô (\barNumberCheck #48, rồi 8 ô 49–56). Review D6-L2-gom: Review mở trang mẫu Henle HN 1822 (2017, hn_1822_a_chopin_s_6-7_sj.pdf; bậc 2, ấn bản Urtext in): đầu bài "Allegretto", 3/4, nhịp lấy đà (Mi); ô 1–16 La thứ; dấu nhắc lại ‖: ô 17–24 :‖ và ‖: ô 25–40 :‖; ô 25–28 là chủ đề (như ô 1–4, 41–44); ô 33–40 có Đô♯, Fa♯, Sol♯, tay trái hợp âm La–Đô♯–Mi xen Mi bảy (La trưởng); ô 41–52 chủ đề; ô 53–56 kết, láy rền ô 55; tổng 56 ô. Henle in thêm một dấu mở nhắc lại ở đầu ô 41 mà không có dấu đóng (ô 56 vạch kết). Lời bình Henle: "In m. 41 the theme returns in its original form and then leads into the close from m. 51". Khớp bản rdj (theo bản thảo BnF) mà lượt 1 dùng. Đúng (rondo nhỏ: chủ đề trở lại ở ô 25 và ô 41 xen hai đoạn khác, khớp OMT Rondo và trang hinh-thuc/rondo).'
     luot_2: khong-chac
     luot_2_ghi_chu: "Không đếm được ô trên bản in (PDF IMSLP chặn bot, Mutopia không có; bản phác tự tay ở Commons có chỗ gạch xóa, khác bản chép sạch). Henle nhắc tới ô 38–39, NE nhắc ô 51: hợp với khoảng 56 ô nhưng chưa xác nhận."
+    review: dung
   - id: n26
     cau: 'Hình, các đoạn: A, La thứ, ô 1–16 (16); ‖: B :‖ La thứ, ô 17–24 (8); ‖: A'' La thứ, ô 25–32 (8); C :‖ La trưởng, ô 33–40 (8); A'''' ba câu đầu, ô 41–52 (12); Coda ô 53–56 (4).'
     loai: cau-truc
     truong: [ hinh ]
     nguon: [ rdj-b150 ]
     ket_qua: dung
-    ghi_chu: 'rdj: \barNumberCheck #17, #25, #41; \repeat volta 2 ô 17–24 và 25–40; ô 33–40 Đô♯, Fa♯; A'''' ô 41–52 ba câu (41–44, 45–48, 49–52); coda c'' b a g f … ô 53–56. Khớp kiem-dinh/cap-nhat.yml n28.'
+    ghi_chu: 'rdj: \barNumberCheck #17, #25, #41; \repeat volta 2 ô 17–24 và 25–40; ô 33–40 Đô♯, Fa♯; A'''' ô 41–52 ba câu (41–44, 45–48, 49–52); coda c'' b a g f … ô 53–56. Khớp kiem-dinh/cap-nhat.yml n28. Review D6-L2-gom: Review mở trang mẫu Henle HN 1822 (2017, hn_1822_a_chopin_s_6-7_sj.pdf; bậc 2, ấn bản Urtext in): đầu bài "Allegretto", 3/4, nhịp lấy đà (Mi); ô 1–16 La thứ; dấu nhắc lại ‖: ô 17–24 :‖ và ‖: ô 25–40 :‖; ô 25–28 là chủ đề (như ô 1–4, 41–44); ô 33–40 có Đô♯, Fa♯, Sol♯, tay trái hợp âm La–Đô♯–Mi xen Mi bảy (La trưởng); ô 41–52 chủ đề; ô 53–56 kết, láy rền ô 55; tổng 56 ô. Henle in thêm một dấu mở nhắc lại ở đầu ô 41 mà không có dấu đóng (ô 56 vạch kết). Lời bình Henle: "In m. 41 the theme returns in its original form and then leads into the close from m. 51". Khớp bản rdj (theo bản thảo BnF) mà lượt 1 dùng. Đúng (rondo nhỏ: chủ đề trở lại ở ô 25 và ô 41 xen hai đoạn khác, khớp OMT Rondo và trang hinh-thuc/rondo).'
     luot_2: khong-chac
     luot_2_ghi_chu: "Như n25: chưa có bản nhạc đọc được để kiểm từng đoạn, số ô và giọng La trưởng của đoạn C."
+    review: dung
   - id: n27
     cau: 'Hình, ghi chú: A'' và C nhắc lại cùng nhau.'
     loai: cau-truc
     truong: [ hinh ]
     nguon: [ rdj-b150 ]
     ket_qua: dung
-    ghi_chu: 'rdj: một \repeat volta 2 gồm ô 25–40.'
+    ghi_chu: 'rdj: một \repeat volta 2 gồm ô 25–40. Review D6-L2-gom: Review mở trang mẫu Henle HN 1822 (2017, hn_1822_a_chopin_s_6-7_sj.pdf; bậc 2, ấn bản Urtext in): đầu bài "Allegretto", 3/4, nhịp lấy đà (Mi); ô 1–16 La thứ; dấu nhắc lại ‖: ô 17–24 :‖ và ‖: ô 25–40 :‖; ô 25–28 là chủ đề (như ô 1–4, 41–44); ô 33–40 có Đô♯, Fa♯, Sol♯, tay trái hợp âm La–Đô♯–Mi xen Mi bảy (La trưởng); ô 41–52 chủ đề; ô 53–56 kết, láy rền ô 55; tổng 56 ô. Henle in thêm một dấu mở nhắc lại ở đầu ô 41 mà không có dấu đóng (ô 56 vạch kết). Lời bình Henle: "In m. 41 the theme returns in its original form and then leads into the close from m. 51". Khớp bản rdj (theo bản thảo BnF) mà lượt 1 dùng. Đúng (rondo nhỏ: chủ đề trở lại ở ô 25 và ô 41 xen hai đoạn khác, khớp OMT Rondo và trang hinh-thuc/rondo).'
     luot_2: khong-chac
     luot_2_ghi_chu: "Như n25: chưa xác nhận được cách đặt dấu nhắc lại. ABRSM ghi 'with first repeat', cho thấy bài có hơn một dấu nhắc lại."
+    review: dung
   - id: n28
     cau: 'Bản thu: người chơi Aya Higuchi (Musopen).'
     loai: ten

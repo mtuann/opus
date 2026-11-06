@@ -10,7 +10,7 @@ lan:
     nguoi:
       luot_1: "Claude Opus 5.5 (D6-L2 phần A)"
       luot_2: null
-      review: null
+      review: Claude Opus 5.5 (review D6-L2-gom, 05/11/2026)
       kiem_mau: null
 ghi_chu: 'Bài học Sonatina Sol trưởng Anh. 5 số 1, gán cho Beethoven (tầng Tác phẩm). Bản nhạc: bản mã hóa MEI của TROMPA (Werner Goebl, CC BY 4.0) theo Breitkopf & Härtel, Beethovens Werke Serie 16 No. 160 (B.160), kèm PDF dựng từ MEI; đọc bằng script Python (xml.etree) in nốt, dấu hóa, dấu luyến, sắc thái, fermata theo ô; đối chiếu từng nốt khối 1 (8 ô) và khối 2 (nhịp lấy đà + 4 ô). Nguồn lịch sử: Henle HN 365 (trang sản phẩm), mô tả của Wiener Urtext UT 50290 (chép lại trên trang bán lẻ), Centro Ricerche Musicali Beethoveniane (lvbeethoven.it, qua bản lưu Wayback: mạng chặn trang gốc), Thayer 1865 và Nottebohm 1868 (bản OCR trên Internet Archive), Deutsche Biographie (Kinsky, Nottebohm, Beethoven), DDB (bản ghi Kinsky–Halm). Sửa trang ở lượt 1: n11 (bản in 1807 ghi tên Beethoven: nguồn là lvbeethoven.it, không phải Henle), n12 (Wiener Urtext: "phần giới thiệu" của nhà xuất bản), n20 (hình thức: hai đoạn có tái hiện thêm coda, không phải ba đoạn, theo OMT và trang Hình thức nhỏ đã khóa), n21 (định nghĩa Romanze theo COD), n25 (thuật ngữ: "dấu lặng ngân" thành "dấu ngân", 8 chỗ; fermata ở ô 19 và ô 34 đặt trên nốt và hợp âm, không trên dấu lặng; thuat-ngu.yml fermata "Ngân dài tùy ý"), n72 (mục Nguồn: Wiener Urtext), n74 (thêm Thayer 1865, số trang Nottebohm). Chưa chắc: n53 (Moderato, chỉ thiếu nguồn bậc 2). Không tính là nhận định: tiêu đề, tiêu đề cột, chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng, mốc trong ::khoi-nghe (bản thu của León Egea: chương II không chơi dấu nhắc lại, khớp dòng "-" của mốc; khoảng cách mốc 153→181→229→258 ứng với 8, 13, 8 ô).'
 nguon:
@@ -90,6 +90,18 @@ nguon:
     bac: 2
     ten: ABRSM, Practical Music Grades Piano Syllabus 2025 & 2026 (Grade 2, danh sách A, mục 2; theo hồ sơ bản ghi lần 1)
     link: https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20&%202026%20Prac%20syllabus%2020240524_access.pdf
+  - id: dnb-50290
+    bac: 2
+    ten: 'Deutsche Nationalbibliothek, bản ghi ấn bản Wiener Urtext UT 50290 (Sonatinen für Klavier, Jochen Reutter): "Erscheinungsdatum: [2020] © 2020"'
+    link: https://d-nb.info/1228647941
+  - id: mut-cl-o36
+    bac: 1
+    ten: 'Mutopia Project, Clementi, Sonatina Op. 36 số 1 (theo Schirmer 1893; ba chương)'
+    link: https://www.mutopiaproject.org/ftp/ClementiM/O36/sonatina-1/sonatina-1.ly
+  - id: omt-notation
+    bac: 2
+    ten: 'Open Music Theory, Other Aspects of Notation (tempo: moderato thuộc nhóm tốc độ vừa)'
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/other-aspects-of-notation/
 nhan_dinh:
   - id: n1
     cau: Với rất nhiều người học đàn, đây là bài "Beethoven" đầu tiên, dù rất có thể ông không hề viết nó.
@@ -144,14 +156,15 @@ nhan_dinh:
     luot_2_nguon: [ "https://github.com/trompamusic-encodings/Beethoven_WoOAnh5_BreitkopfHaertel/blob/master/Beethoven_WoOAnh5-Breitkopf.pdf" ]
     luot_2_ghi_chu: "Bản Breitkopf & Härtel (Serie 16, No. 160, bản quét trong kho TROMPA) và bản MEI cùng kho: chương I ô 1–4 hợp âm hai nốt, ô 5–6 Alberti G–D–B–D (trầm–cao–giữa–cao); Romanze đệm nốt trầm + hai hợp âm 6/8."
   - id: n7
-    cau: 'Bài ngắn và dễ hơn Clementi Sonatina Op. 36 số 1 (link), cùng một thế giới âm thanh.'
+    cau: 'Bài ngắn hơn Clementi Sonatina Op. 36 số 1 (link): hai chương thay vì ba, cùng một thế giới âm thanh.'
     loai: cap-do
-    nguon: [ abrsm-2526, henle-365 ]
-    ket_qua: dung
-    ghi_chu: 'Ngắn hơn: Anh. 5/1 có 34 + 40 ô; Op. 36/1 có 38 + 26 + 70 ô (Mutopia, hồ sơ clementi-sonatina). Dễ hơn: ABRSM 2025–2026 xếp Moderato ở Grade 2, ABRSM 2023–2024 xếp Vivace của Op. 36/1 ở Grade 3 (hồ sơ bản ghi lần 1); Henle cùng mức 3. Link: src/content/docs/piano/tac-pham/clementi-sonatina.md có.'
+    nguon: [ trompa, mut-cl-o36 ]
+    ket_qua: da-sua
+    ghi_chu: 'Ngắn hơn: Anh. 5/1 có 34 + 40 ô; Op. 36/1 có 38 + 26 + 70 ô (Mutopia, hồ sơ clementi-sonatina). Dễ hơn: ABRSM 2025–2026 xếp Moderato ở Grade 2, ABRSM 2023–2024 xếp Vivace của Op. 36/1 ở Grade 3 (hồ sơ bản ghi lần 1); Henle cùng mức 3. Link: src/content/docs/piano/tac-pham/clementi-sonatina.md có. Review D6-L2-gom: lượt 2 khong-chac vế "dễ hơn": Henle xếp cả Anh. 5,1 (HN 365) và Op. 36,1 (HN 848) mức 3; ABRSM xếp chương I của bài này ở Grade 2 và chương III của Clementi ở Grade 3, không so được cả bài. Bỏ "dễ hơn"; "ngắn hơn" lượt 2 đã xác nhận, thêm lý do: hai chương (MEI) và ba chương (Mutopia). doi_chu.'
     luot_2: khong-chac
     luot_2_nguon: [ "https://henle.de/2-Piano-Sonatinas-G-major-and-F-major-Anh.-5/HN-365", "https://www.henle.de/en/Six-Piano-Sonatinas-op.-36/HN-848", "https://www.mutopiaproject.org/ftp/ClementiM/O36/sonatina-1/sonatina-1.ly" ]
     luot_2_ghi_chu: "Ngắn hơn: đúng (2 chương; Clementi Op. 36 số 1 có 3 chương, Mutopia). 'Dễ hơn' không được nguồn xác nhận: Henle xếp cả Anh. 5,1 và Op. 36,1 cùng mức 3 (easy)."
+    review: dung
   - id: n8
     cau: Danh mục chuẩn về tác phẩm Beethoven do Georg Kinsky soạn và Hans Halm hoàn tất (1955).
     loai: lich-su
@@ -175,27 +188,30 @@ nhan_dinh:
     loai: lich-su
     nguon: [ lvb-anh5 ]
     ket_qua: dung
-    ghi_chu: 'lvbeethoven.it: "I manoscritti originali sono sconosciuti. Beethoven non menzionò mai le sonatine durante la sua vita."'
+    ghi_chu: 'lvbeethoven.it: "I manoscritti originali sono sconosciuti. Beethoven non menzionò mai le sonatine durante la sua vita." Review D6-L2-gom: lvbeethoven.it (bản lưu Wayback 14/7/2026, review tự mở): "Le due sonatine Anhang 5 apparvero a stampa intorno al 1807, vivente Beethoven, presso Altona, Rudolphus. I manoscritti originali sono sconosciuti. Beethoven non menzionò mai le sonatine durante la sua vita." Lượt 2 không mở được trang; review mở được: đúng cả hai vế.'
     luot_2: khong-chac
     luot_2_ghi_chu: Không nguồn đã mở nào nói rõ không có bản viết tay hay thư từ nhắc tới. Thayer (1865) chỉ đoán có thể là 'Zwei vollständige kleine Stücke' trong danh mục đấu giá di sản (số 157).
+    review: dung
   - id: n11
     cau: 'Henle ghi rằng hai bài được in khi Beethoven còn sống, khoảng năm 1807; bản in ấy (nhà Rudolphus ở Altona) ghi tên ông là tác giả.'
     loai: nam
     nguon: [ henle-365, lvb-anh5 ]
     ket_qua: da-sua
-    ghi_chu: 'Henle: "published during Beethoven''s lifetime in ca. 1807" (không nói "dưới tên ông"). lvbeethoven.it: "1807 circa. Altona, Rudolphus ... Titolo: II SONATINES / pour le Piano-Forte / Composées par / L. van Beethoven". Chữ cũ: "Henle ghi rằng chúng được in khi Beethoven còn sống, khoảng năm 1807, dưới tên ông"; tách phần tên tác giả ra, dẫn đúng nguồn.'
+    ghi_chu: 'Henle: "published during Beethoven''s lifetime in ca. 1807" (không nói "dưới tên ông"). lvbeethoven.it: "1807 circa. Altona, Rudolphus ... Titolo: II SONATINES / pour le Piano-Forte / Composées par / L. van Beethoven". Chữ cũ: "Henle ghi rằng chúng được in khi Beethoven còn sống, khoảng năm 1807, dưới tên ông"; tách phần tên tác giả ra, dẫn đúng nguồn. Review D6-L2-gom: lvbeethoven.it (bản lưu Wayback 14/7/2026, review tự mở): "Le due sonatine Anhang 5 apparvero a stampa intorno al 1807, vivente Beethoven, presso Altona, Rudolphus. I manoscritti originali sono sconosciuti. Beethoven non menzionò mai le sonatine durante la sua vita." Henle: "published during Beethoven''s lifetime in ca. 1807" (lượt 2 xác nhận). Bản in Altona, Rudolphus khoảng 1807 có trong lvbeethoven.it; Nottebohm 1868 và Thayer 1865 không biết bản này, trang đã nói các nguồn khác nhau (n12). Giữ.'
     luot_2: khong-chac
     luot_2_nguon: [ "https://henle.de/2-Piano-Sonatinas-G-major-and-F-major-Anh.-5/HN-365", "https://archive.org/details/thematischesverz01nott", "https://archive.org/details/chronologisches00thaygoog" ]
     luot_2_ghi_chu: "Henle: 'published during Beethoven's lifetime in ca. 1807' (đúng). Không nguồn đã mở nào nhắc nhà Rudolphus ở Altona; Nottebohm (1868) và Thayer (1865) chỉ biết bản in sau khi Beethoven mất (Böhme, Cranz ở Hamburg)."
+    review: dung
   - id: n12
-    cau: Phần giới thiệu ấn bản Wiener Urtext (2021) nói bản in đầu tiên ra đời sau khi Beethoven mất.
+    cau: 'Phần giới thiệu ấn bản Wiener Urtext (2020) nói bản in đầu tiên ra đời sau khi Beethoven mất.'
     loai: lich-su
-    nguon: [ wu-50290, nott-1868 ]
+    nguon: [ wu-50290, nott-1868, dnb-50290 ]
     ket_qua: da-sua
-    ghi_chu: 'Mô tả Wiener Urtext: "In the first edition, which was published only after Beethoven''s death, they are attributed to Beethoven". Chữ cũ "lời giới thiệu ấn bản" thành "phần giới thiệu ấn bản": chưa đọc được lời tựa trong sách, chỉ đọc được mô tả của nhà xuất bản. Nottebohm 1868 cũng chỉ biết một bản in sau khi Beethoven mất (Böhme, Hamburg). Hai nguồn mâu thuẫn với n11; trang đã ghi cả hai, đúng chuẩn mục 2.'
+    ghi_chu: 'Mô tả Wiener Urtext: "In the first edition, which was published only after Beethoven''s death, they are attributed to Beethoven". Chữ cũ "lời giới thiệu ấn bản" thành "phần giới thiệu ấn bản": chưa đọc được lời tựa trong sách, chỉ đọc được mô tả của nhà xuất bản. Nottebohm 1868 cũng chỉ biết một bản in sau khi Beethoven mất (Böhme, Hamburg). Hai nguồn mâu thuẫn với n11; trang đã ghi cả hai, đúng chuẩn mục 2. Review D6-L2-gom: lượt 2 sai đúng: DNB (d-nb.info/1228647941, review tự mở): UT 50290, Reutter, "Erscheinungsdatum: [2020] © 2020". Chữ trang theo câu đúng của lượt 2, phần còn lại lượt 2 đã xác nhận. doi_chu.'
     luot_2: sai
     luot_2_nguon: [ "https://web.archive.org/web/2026/https://www.schott-music.com/en/3-sonatinas-for-piano-no446369.html", "https://portal.dnb.de/opac/simpleSearch?query=9783850557313" ]
     luot_2_ghi_chu: "câu đúng: Phần giới thiệu ấn bản Wiener Urtext (2020) nói bản in đầu tiên ra đời sau khi Beethoven mất.; Schott (Wiener Urtext UT 50290): 'In the first edition, which was published only after Beethoven's death'. Nhưng DNB ghi ấn bản 'Erscheinungsdatum: [2020] © 2020', không phải 2021."
+    review: dung
   - id: n13
     cau: Toàn tập Breitkopf & Härtel ở thế kỷ 19 ghi nhà xuất bản gốc là August Cranz ở Hamburg.
     loai: lich-su
@@ -264,19 +280,21 @@ nhan_dinh:
     loai: cau-truc
     nguon: [ trompa, omt-binary, omt-ternary ]
     ket_qua: da-sua
-    ghi_chu: 'MEI: chương I: A ô 1–8 (không nhắc), ‖: B ô 9–16, A ô 17–24 :‖, coda 25–34; chương II: ‖: nhịp lấy đà + A ô 1–8 :‖ ‖: B 9–21, A 22–29 :‖, coda 29–40. OMT Ternary Form: "A and B do not repeat together, and neither do B and A"; OMT Binary Form: rounded binary là hai phần nhắc lại, chủ đề đầu trở lại trong phần hai. Trang Hình thức nhỏ (đã khóa): "Hai đoạn có tái hiện: A B A'', ‖: A :‖ ‖: B A'' :‖". Chữ cũ: "cả hai đều là ba đoạn A – B – A thêm một coda". Không có phần phát triển hay giọng át cho chủ đề hai, nên không phải hình thức sonata.'
+    ghi_chu: 'MEI: chương I: A ô 1–8 (không nhắc), ‖: B ô 9–16, A ô 17–24 :‖, coda 25–34; chương II: ‖: nhịp lấy đà + A ô 1–8 :‖ ‖: B 9–21, A 22–29 :‖, coda 29–40. OMT Ternary Form: "A and B do not repeat together, and neither do B and A"; OMT Binary Form: rounded binary là hai phần nhắc lại, chủ đề đầu trở lại trong phần hai. Trang Hình thức nhỏ (đã khóa): "Hai đoạn có tái hiện: A B A'', ‖: A :‖ ‖: B A'' :‖". Chữ cũ: "cả hai đều là ba đoạn A – B – A thêm một coda". Không có phần phát triển hay giọng át cho chủ đề hai, nên không phải hình thức sonata. Review D6-L2-gom: đọc lại chỗ sửa của lượt 1 và kết quả lượt 2: chữ trang khớp nguồn (MEI TROMPA, COD, OMT, Thayer, Nottebohm). Đúng.'
     luot_2: dung
     luot_2_nguon: [ "https://github.com/trompamusic-encodings/Beethoven_WoOAnh5_BreitkopfHaertel/blob/master/Beethoven_WoOAnh5-Breitkopf.pdf", "https://viva.pressbooks.pub/openmusictheory/chapter/binary-form/" ]
     luot_2_ghi_chu: "Bản Breitkopf & Härtel (Serie 16, No. 160, bản quét trong kho TROMPA) và bản MEI cùng kho: chương I: A ô 1–8, ||: B 9–16, A 17–24 :||, coda 25–34; Romanze: ||: A :||, ||: B 9–21, A 22–29 :||, coda. OMT: rounded binary là khi đầu A trở lại ở giọng chủ giữa phần hai."
+    review: dung
   - id: n21
     cau: 'Romanze (romance) là cái tên không gắn với một hình thức cố định, thường gợi tính chất dịu dàng, riêng tư; Mozart đặt tên này cho chương chậm của Concerto piano Rê thứ K. 466.'
     loai: dinh-nghia
     nguon: [ cod-romance ]
     ket_qua: da-sua
-    ghi_chu: 'COD: "Title with no strict formal application ... Generally it implies a specially personal or tender quality. Mozart called the slow movt. of his pf. conc. No.20 in D minor (K466) a Romance." Chữ cũ: "là cái tên thời ấy hay đặt cho một chương chậm vừa, giản dị, có tính chất bài hát": chưa có nguồn nói đúng như vậy.'
+    ghi_chu: 'COD: "Title with no strict formal application ... Generally it implies a specially personal or tender quality. Mozart called the slow movt. of his pf. conc. No.20 in D minor (K466) a Romance." Chữ cũ: "là cái tên thời ấy hay đặt cho một chương chậm vừa, giản dị, có tính chất bài hát": chưa có nguồn nói đúng như vậy. Review D6-L2-gom: đọc lại chỗ sửa của lượt 1 và kết quả lượt 2: chữ trang khớp nguồn (MEI TROMPA, COD, OMT, Thayer, Nottebohm). Đúng.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Piano_Concerto_No.20_in_D_minor,_K.466_(Mozart,_Wolfgang_Amadeus)" ]
     luot_2_ghi_chu: "IMSLP K. 466: chương II 'Romanze'. Romanze không phải tên hình thức, là tên tính chất."
+    review: dung
   - id: n22
     cau: Chương hai của Eine kleine Nachtmusik của Mozart cũng mang tên Romanze.
     loai: ten
@@ -291,7 +309,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: 'src/content/docs/nhac-ly/31-hinh-thuc-nho.md có mục "Hai đoạn có tái hiện (rounded binary)"; lich-su/thoi-ky/co-dien.md có.'
+    ghi_chu: 'src/content/docs/nhac-ly/31-hinh-thuc-nho.md có mục "Hai đoạn có tái hiện (rounded binary)"; lich-su/thoi-ky/co-dien.md có. Review D6-L2-gom: nhac-ly/31-hinh-thuc-nho có mục "Hai đoạn có tái hiện (rounded binary)"; lich-su/thoi-ky/co-dien có trong bản xem. Đúng.'
+    review: dung
   - id: n24
     cau: 'Câu hỏi nghe: chương I, câu đầu (ô 1–4) dừng lửng, câu sau (ô 5–8) khép lại; ô 5 tay trái đổi từ hợp âm hai nốt sang Alberti; nốt láy; Romanze cảm hai hay sáu phách, chỗ dừng trên dấu ngân (fermata); có chơi dấu nhắc lại không.'
     loai: cau-truc
@@ -306,10 +325,11 @@ nhan_dinh:
     loai: dinh-nghia
     nguon: [ trompa ]
     ket_qua: da-sua
-    ghi_chu: 'Trang viết "dấu lặng ngân" 8 chỗ (dòng 36, 56, 71, 73, 129 hai lần, 219, 237); "dấu lặng" là dấu nghỉ, nhưng MEI và PDF đặt fermata trên nốt E5 và hợp âm Rê bảy ở ô 19, trên hợp âm Sol ở ô 34. thuat-ngu.yml (đã khóa): fermata "Ngân dài tùy ý", vòng cung có chấm đặt trên hay dưới nốt hay dấu lặng; trang mozart-minuet-k2 (D6-L1) gọi là "dấu ngân". Đổi thành "dấu ngân".'
+    ghi_chu: 'Trang viết "dấu lặng ngân" 8 chỗ (dòng 36, 56, 71, 73, 129 hai lần, 219, 237); "dấu lặng" là dấu nghỉ, nhưng MEI và PDF đặt fermata trên nốt E5 và hợp âm Rê bảy ở ô 19, trên hợp âm Sol ở ô 34. thuat-ngu.yml (đã khóa): fermata "Ngân dài tùy ý", vòng cung có chấm đặt trên hay dưới nốt hay dấu lặng; trang mozart-minuet-k2 (D6-L1) gọi là "dấu ngân". Đổi thành "dấu ngân". Review D6-L2-gom: đọc lại chỗ sửa của lượt 1 và kết quả lượt 2: chữ trang khớp nguồn (MEI TROMPA, COD, OMT, Thayer, Nottebohm). Đúng.'
     luot_2: dung
     luot_2_nguon: [ "https://github.com/trompamusic-encodings/Beethoven_WoOAnh5_BreitkopfHaertel/blob/master/Beethoven_WoOAnh5_Nr1_1-Breitkopf.mei", "https://github.com/trompamusic-encodings/Beethoven_WoOAnh5_BreitkopfHaertel/blob/master/Beethoven_WoOAnh5_Nr1_2-Breitkopf.mei", "https://viva.pressbooks.pub/openmusictheory/chapter/other-aspects-of-notation/" ]
     luot_2_ghi_chu: "MEI: fermata ở ô 34 chương I (hai khuông) và ô 19 Romanze (nốt tay phải và hợp âm tay trái). OMT: 'A fermata indicates that a note should be held longer than its regular duration.'"
+    review: dung
   - id: n26
     cau: Bài có mặt trong rất nhiều tuyển tập sonatina cho người học; bạn sẽ gặp đủ loại bản thu.
     loai: lich-su
@@ -320,12 +340,14 @@ nhan_dinh:
     luot_2_nguon: [ "https://henle.de/2-Piano-Sonatinas-G-major-and-F-major-Anh.-5/HN-365" ]
     luot_2_ghi_chu: "Henle: 'firmly established in the repertoire for beginners'."
   - id: n27
-    cau: 'Gợi ý nghe hai bản khác nhau, nghe thêm bản trên fortepiano (đàn piano của thời ấy) để hình dung tiếng đàn mỏng và rõ.'
+    cau: 'Gợi ý nghe hai bản khác nhau, nghe thêm bản trên fortepiano (đàn piano của thời ấy) để so tiếng đàn với đàn hiện đại.'
     loai: khuyen-tap
     nguon: []
     ket_qua: khong-can-nguon
+    ghi_chu: 'Review D6-L2-gom: soát nhãn: vế "để hình dung tiếng đàn mỏng và rõ mà bài này vốn hướng tới" là nhận xét về âm sắc fortepiano, cần nguồn, không có; bỏ vế ấy, giữ lời khuyên nghe (khuyen-tap). doi_chu.'
     luot_2: dung
     luot_2_ghi_chu: "Lời khuyên tập: nghe nhiều bản, có bản fortepiano: hợp lý."
+    review: dung
   - id: n28
     cau: 'Bảng Theo dõi khi nghe, I. Moderato, A (ô 1–8): p; giai điệu Sol trưởng có nốt láy; câu đầu dừng lửng ở ô 4, câu sau khép lại ở Sol.'
     loai: cau-truc
@@ -538,12 +560,13 @@ nhan_dinh:
   - id: n53
     cau: 'Moderato nghĩa là vừa phải.'
     loai: dinh-nghia
-    nguon: []
-    ket_qua: null
-    ghi_chu: 'chưa chắc (chỉ thiếu nguồn): khớp thuat-ngu.yml đã khóa (Moderato "Vừa"), nhưng chưa mở được nguồn bậc 2 (Encyclopedia.com chỉ có mục vần, Britannica không có bản lưu). Lượt 2 tìm một từ điển nhạc bậc 2.'
+    nguon: [ omt-notation ]
+    ket_qua: dung
+    ghi_chu: 'chưa chắc (chỉ thiếu nguồn): khớp thuat-ngu.yml đã khóa (Moderato "Vừa"), nhưng chưa mở được nguồn bậc 2 (Encyclopedia.com chỉ có mục vần, Britannica không có bản lưu). Lượt 2 tìm một từ điển nhạc bậc 2. Review D6-L2-gom: nguồn bậc 2 của lượt 2: OMT, Other Aspects of Notation, xếp moderato vào nhóm tốc độ vừa; khớp thuat-ngu.yml (đã khóa).'
     luot_2: dung
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/other-aspects-of-notation/" ]
     luot_2_ghi_chu: "OMT, Other Aspects of Notation: moderato thuộc 'Medium tempi'."
+    review: dung
   - id: n54
     cau: 'Khoảng ♩ = 100–112 là hợp lý cho Moderato; Romanze không ghi tốc độ, cảm hai phách mỗi ô (♩. ≈ 48–56).'
     loai: khuyen-tap
@@ -559,14 +582,15 @@ nhan_dinh:
     ket_qua: khong-can-nguon
     ghi_chu: 'Chi tiết bản nhạc (staccato dưới luyến ô 9; hai nốt hoa mỹ ở coda) đúng theo MEI. Link piano/not-hoa-my có.'
   - id: n56
-    cau: 'Sắc thái của bản Breitkopf: p ở đầu chương I, nhỏ dần trên các cặp nốt đi xuống ở ô 2, mf ở đoạn B (ô 9) và ở coda (ô 25), dolce ở ô 17; Romanze: lớn dần ở ô 9, nhỏ dần trước dấu ngân ở ô 19, p ở coda.'
+    cau: 'Sắc thái của bản Breitkopf: p ở đầu chương I, nhỏ dần trên các cặp nốt đi xuống ở ô 2, mf ở đoạn B (ô 9) và ở coda (ô 25), dolce ở ô 17; Romanze: lớn dần ở ô 9, nhỏ dần ngay trên nốt có dấu ngân ở ô 19, p ở coda.'
     loai: cau-truc
     nguon: [ trompa ]
-    ket_qua: dung
-    ghi_chu: 'MEI: p ô 1; hairpin dim ô 2 (phách 2 đến hết ô), cũng ở ô 18; mf ô 9, 25; dolce ô 17; chương II hairpin cres ô 9, hairpin dim ô 19 (phách 1–3,5) trước fermata, p ô 29.'
+    ket_qua: da-sua
+    ghi_chu: 'MEI: p ô 1; hairpin dim ô 2 (phách 2 đến hết ô), cũng ở ô 18; mf ô 9, 25; dolce ô 17; chương II hairpin cres ô 9, hairpin dim ô 19 (phách 1–3,5) trước fermata, p ô 29. Review D6-L2-gom: lượt 2 sai đúng: MEI Nr1_2 ô 19: hairpin form="dim" tstamp="1" tstamp2="0m+3.5", fermata startid nốt Mi5 ở phách 1 (và hợp âm tay trái): nhỏ dần bắt đầu ngay trên nốt có dấu ngân. Chữ trang theo câu đúng của lượt 2. doi_chu.'
     luot_2: sai
     luot_2_nguon: [ "https://github.com/trompamusic-encodings/Beethoven_WoOAnh5_BreitkopfHaertel/blob/master/Beethoven_WoOAnh5_Nr1_1-Breitkopf.mei", "https://github.com/trompamusic-encodings/Beethoven_WoOAnh5_BreitkopfHaertel/blob/master/Beethoven_WoOAnh5_Nr1_2-Breitkopf.mei", "https://github.com/trompamusic-encodings/Beethoven_WoOAnh5_BreitkopfHaertel/blob/master/Beethoven_WoOAnh5-Breitkopf.pdf" ]
     luot_2_ghi_chu: "câu đúng: Sắc thái của bản Breitkopf: p ở đầu chương I, nhỏ dần trên các cặp nốt đi xuống ở ô 2, mf ở đoạn B (ô 9) và ở coda (ô 25), dolce ở ô 17; Romanze: lớn dần ở ô 9, nhỏ dần ngay trên nốt có dấu ngân ở ô 19, p ở coda.; MEI và bản quét: chương I p ô 1, hairpin nhỏ dần ô 2 (và ô 18), mf ô 9, dolce ô 17, mf ô 25; Romanze cresc. ô 9, p ô 29: đúng. Nhưng hairpin nhỏ dần của Romanze bắt đầu ngay trên nốt có dấu ngân ở ô 19 (tstamp 1), không phải trước dấu ngân."
+    review: dung
   - id: n57
     cau: 'Giữa các chỉ dẫn, để câu nhạc tự lên xuống; tay trái luôn nhỏ hơn một bậc; các ấn bản khác có thể ghi khác (link Tạo tiếng đàn).'
     loai: khuyen-tap
@@ -580,13 +604,12 @@ nhan_dinh:
     ket_qua: khong-can-nguon
     ghi_chu: 'Link piano/ban-dap có.'
   - id: n59
-    cau: 'Nhiều tuyển tập cho người học in bài dưới tên Beethoven mà không ghi chú gì, kèm sắc thái và số ngón của người biên tập.'
+    cau: 'Từ thế kỷ 19, bài được in nhiều lần dưới tên Beethoven mà không ghi chú gì về chuyện tác giả, như trong toàn tập Breitkopf & Härtel.'
     loai: lich-su
     nguon: [ trompa, nott-1868 ]
-    ket_qua: dung
-    ghi_chu: 'Bản Breitkopf in "Zwei leichte Sonaten für das Pianoforte von L. van Beethoven", không ghi chú; Nottebohm 1868 liệt kê các ấn bản Breitkopf, Cranz, Böhme, Schott, Hofmeister dưới tên Beethoven. Phần "kèm sắc thái và số ngón của người biên tập" nói chung, chưa kiểm cụ thể tuyển tập nào; lượt 2 xem lại.'
-    luot_2: khong-chac
-    luot_2_ghi_chu: Không nguồn đã mở nào nói về cách các tuyển tập in bài (không ghi chú, sắc thái và số ngón của người biên tập).
+    ket_qua: da-sua
+    ghi_chu: 'Bản Breitkopf in "Zwei leichte Sonaten für das Pianoforte von L. van Beethoven", không ghi chú; Nottebohm 1868 liệt kê các ấn bản Breitkopf, Cranz, Böhme, Schott, Hofmeister dưới tên Beethoven. Phần "kèm sắc thái và số ngón của người biên tập" nói chung, chưa kiểm cụ thể tuyển tập nào; lượt 2 xem lại. Review D6-L2-gom: lượt 2 khong-chac ("Không nguồn đã mở nào nói về cách các tuyển tập in bài"). Bỏ vế "kèm sắc thái và số ngón của người biên tập" (không nguồn) và "tuyển tập cho người học"; viết theo nguồn đã có: Nottebohm 1868 liệt kê các bản in của Breitkopf, Cranz, Böhme, Schott, Hofmeister dưới tên Beethoven; bản Breitkopf (MEI, PDF TROMPA) in "Zwei leichte Sonaten für das Pianoforte von L. van Beethoven", không lời nào về chuyện tác giả. Gỡ kết quả lượt 2 cũ (khong-chac) để lượt 2 bổ sung. doi_chu.'
+    review: dung
   - id: n60
     cau: Bản Urtext ghi rõ số Anh. 5 và cho biết đâu là chỉ dẫn của nguồn.
     loai: lich-su
@@ -631,7 +654,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: 'src/data/tac-pham.yml: beethoven-sonatina-sol 3, clementi-sonatina 3, burgmuller-arabesque 3, bach-prelude-bwv939 3, fur-elise 4, mozart-k545 5. mozart-k545 chưa chuyển: ../opus-zero/docs/piano/tac-pham/mozart-k545.md có.'
+    ghi_chu: 'src/data/tac-pham.yml: beethoven-sonatina-sol 3, clementi-sonatina 3, burgmuller-arabesque 3, bach-prelude-bwv939 3, fur-elise 4, mozart-k545 5. mozart-k545 chưa chuyển: ../opus-zero/docs/piano/tac-pham/mozart-k545.md có. Review D6-L2-gom: tac-pham.yml (chang đã khóa): clementi-sonatina, burgmuller-arabesque, bach-prelude-bwv939 cùng chặng 3; fur-elise 4; mozart-k545 5 (chưa chuyển, hiện "sắp có"). Thứ tự đúng.'
+    review: dung
   - id: n66
     cau: Für Elise là "Beethoven thật".
     loai: lich-su
@@ -684,14 +708,15 @@ nhan_dinh:
     luot_2_nguon: [ "https://henle.de/2-Piano-Sonatinas-G-major-and-F-major-Anh.-5/HN-365" ]
     luot_2_ghi_chu: "Henle HN 365: 'Otto von Irmer (Editor)', 'Walther Lampe (Fingering Piano)'; trang có lời giới thiệu và mức khó (Anh. 5,1: 3 easy; ABRSM Grade 4)."
   - id: n72
-    cau: 'Mục Nguồn: Wiener Urtext UT 50290 Drei Sonatinen für Klavier (Anh. 5 số 1 và 2, WoO 50; Jochen Reutter biên tập, 2021): phần giới thiệu của nhà xuất bản về quyền tác giả.'
+    cau: 'Mục Nguồn: Wiener Urtext UT 50290 Drei Sonatinen für Klavier (Anh. 5 số 1 và 2, WoO 50; Jochen Reutter biên tập, 2020): phần giới thiệu của nhà xuất bản về quyền tác giả.'
     loai: lich-su
-    nguon: [ wu-50290 ]
+    nguon: [ wu-50290, dnb-50290 ]
     ket_qua: da-sua
-    ghi_chu: 'Hsiao Ya (mô tả Wiener Urtext): Reutter, Franke; Anh. 5/1, 5/2 và WoO 50. Năm 2021 và 24 trang theo các trang bán lẻ (pianodao.com bình 1/2022). Chữ cũ "lời giới thiệu về quyền tác giả" thành "phần giới thiệu của nhà xuất bản": chưa đọc lời tựa trong sách.'
+    ghi_chu: 'Hsiao Ya (mô tả Wiener Urtext): Reutter, Franke; Anh. 5/1, 5/2 và WoO 50. Năm 2021 và 24 trang theo các trang bán lẻ (pianodao.com bình 1/2022). Chữ cũ "lời giới thiệu về quyền tác giả" thành "phần giới thiệu của nhà xuất bản": chưa đọc lời tựa trong sách. Review D6-L2-gom: lượt 2 sai đúng: năm 2020 theo DNB (như n12). Chữ trang theo câu đúng của lượt 2. doi_chu.'
     luot_2: sai
     luot_2_nguon: [ "https://web.archive.org/web/2026/https://www.schott-music.com/en/3-sonatinas-for-piano-no446369.html", "https://portal.dnb.de/opac/simpleSearch?query=9783850557313" ]
     luot_2_ghi_chu: "câu đúng: Mục Nguồn: Wiener Urtext UT 50290 Drei Sonatinen für Klavier (Anh. 5 số 1 và 2, WoO 50; Jochen Reutter biên tập, 2020): phần giới thiệu của nhà xuất bản về quyền tác giả.; Schott: UT 50290, Jochen Reutter (Editor), 'Sonatinen Anh. 5/1 und 2 und WoO 50', lời giới thiệu về quyền tác giả: đúng. DNB ghi năm '[2020] © 2020', không phải 2021."
+    review: dung
   - id: n73
     cau: 'Mục Nguồn: Kinsky, Halm, Das Werk Beethovens. Thematisch-bibliographisches Verzeichnis seiner sämtlichen vollendeten Kompositionen, G. Henle, München, 1955.'
     loai: lich-su
@@ -706,17 +731,20 @@ nhan_dinh:
     loai: lich-su
     nguon: [ thayer-1865, nott-1868 ]
     ket_qua: da-sua
-    ghi_chu: 'Thêm dòng Thayer (nguồn của n15) và số trang, link Internet Archive cho Nottebohm. Nottebohm 1868 do Breitkopf & Härtel in (trang tên sách trong bản OCR).'
+    ghi_chu: 'Thêm dòng Thayer (nguồn của n15) và số trang, link Internet Archive cho Nottebohm. Nottebohm 1868 do Breitkopf & Härtel in (trang tên sách trong bản OCR). Review D6-L2-gom: đọc lại chỗ sửa của lượt 1 và kết quả lượt 2: chữ trang khớp nguồn (MEI TROMPA, COD, OMT, Thayer, Nottebohm). Đúng.'
     luot_2: dung
     luot_2_nguon: [ "https://archive.org/details/chronologisches00thaygoog", "https://archive.org/details/thematischesverz01nott" ]
     luot_2_ghi_chu: Thayer 1865 số 24; Nottebohm, Thematisches Verzeichniss, Breitkopf & Härtel 1868 (ấn bản 2, ấn bản đầu 1851), mục 'Zwei Sonatinen', chỉ mục ghi 'S. 148'.
+    review: dung
   - id: n75
     cau: 'Mục Nguồn: lvbeethoven.it, "Anhang 05": các lần in và ý kiến nghi ngờ.'
     loai: lich-su
     nguon: [ lvb-anh5 ]
     ket_qua: dung
+    ghi_chu: 'Review D6-L2-gom: link https://www.lvbeethoven.it/anhang_05/ có bản lưu Wayback (14/7/2026, 6/6/2026) với nội dung các lần in (Altona, Rudolphus khoảng 1807) và ý kiến nghi ngờ (Thayer, Nottebohm). Đúng.'
     luot_2: khong-chac
     luot_2_ghi_chu: Không mở được lvbeethoven.it (kết nối hết giờ), không tìm thấy trang 'Anhang 05'.
+    review: dung
   - id: n76
     cau: 'Mục Nguồn: Ludwig van Beethovens Werke, loạt 16, số 160, Breitkopf & Härtel (bản quét trên IMSLP); đoạn trích đối chiếu với bản MEI của TROMPA (Werner Goebl, CC BY 4.0) trên GitHub; link tài liệu tham khảo.'
     loai: lich-su
@@ -753,9 +781,9 @@ khuong_nhac:
     ket_qua: dung
     ghi_chu: '4 ô 6/8, đủ phách. Hình đệm nốt trầm + hai hợp âm (G – B D, F♯ – C D) như Romanze; giai điệu legato trên Sol và Rê bảy, kết Sol. Ngón tay phải 3-4-5-3, 4-2-1-2 chơi được.'
 doi_chu:
-  - cu: Những gì ta biết khá ít. Không còn bản viết tay, và không có thư từ hay ghi chép nào của Beethoven nhắc đến hai bài. Henle ghi rằng chúng được in khi Beethoven còn sống, khoảng năm 1807, dưới tên ông; lời giới thiệu ấn bản Wiener Urtext (2021) thì nói bản in đầu tiên ra đời sau khi ông mất. Toàn tập Breitkopf & Härtel ở thế kỷ 19 ghi nhà xuất bản gốc là August Cranz ở Hamburg, rất xa Vienna, nơi Beethoven sống từ năm 1792.
-    moi: Những gì ta biết khá ít. Không còn bản viết tay, và không có thư từ hay ghi chép nào của Beethoven nhắc đến hai bài. Henle ghi rằng chúng được in khi Beethoven còn sống, khoảng năm 1807; bản in ấy (nhà Rudolphus ở Altona) ghi tên ông là tác giả. Phần giới thiệu ấn bản Wiener Urtext (2021) thì nói bản in đầu tiên ra đời sau khi ông mất. Toàn tập Breitkopf & Härtel ở thế kỷ 19 ghi nhà xuất bản gốc là August Cranz ở Hamburg, rất xa Vienna, nơi Beethoven sống từ năm 1792.
-    ly_do: 'n11 (da-sua), n12 (da-sua): Henle không nói "dưới tên ông"; tên trên bản in Altona theo lvbeethoven.it; chỉ đọc được mô tả của Wiener Urtext, không phải lời tựa.'
+  - cu: 'Những gì ta biết khá ít. Không còn bản viết tay, và không có thư từ hay ghi chép nào của Beethoven nhắc đến hai bài. Henle ghi rằng chúng được in khi Beethoven còn sống, khoảng năm 1807, dưới tên ông; lời giới thiệu ấn bản Wiener Urtext (2021) thì nói bản in đầu tiên ra đời sau khi ông mất. Toàn tập Breitkopf & Härtel ở thế kỷ 19 ghi nhà xuất bản gốc là August Cranz ở Hamburg, rất xa Vienna, nơi Beethoven sống từ năm 1792.'
+    moi: 'Những gì ta biết khá ít. Không còn bản viết tay, và không có thư từ hay ghi chép nào của Beethoven nhắc đến hai bài. Henle ghi rằng chúng được in khi Beethoven còn sống, khoảng năm 1807; bản in ấy (nhà Rudolphus ở Altona) ghi tên ông là tác giả. Phần giới thiệu ấn bản Wiener Urtext (2020) thì nói bản in đầu tiên ra đời sau khi ông mất. Toàn tập Breitkopf & Härtel ở thế kỷ 19 ghi nhà xuất bản gốc là August Cranz ở Hamburg, rất xa Vienna, nơi Beethoven sống từ năm 1792.'
+    ly_do: 'n11 (da-sua), n12 (da-sua): Henle không nói "dưới tên ông"; tên trên bản in Altona theo lvbeethoven.it; chỉ đọc được mô tả của Wiener Urtext, không phải lời tựa. Review D6-L2-gom: n12 (lượt 2 sai): năm của ấn bản Wiener Urtext UT 50290 là 2020 (DNB d-nb.info/1228647941: "Erscheinungsdatum: [2020] © 2020"), không phải 2021.'
   - cu: 'Âm nhạc thuộc phong cách Cổ điển phổ biến cuối thế kỷ 18: giai điệu chia thành câu bốn ô, hòa âm chủ yếu là chủ âm và át âm, tay trái đệm bằng hợp âm hai nốt và hình Alberti. Tuy mang tên sonatina, không chương nào có hình thức sonata: cả hai đều là ba đoạn A – B – A thêm một coda (xem Hình thức nhỏ). Romanze (romance) là cái tên thời ấy hay đặt cho một chương chậm vừa, giản dị, có tính chất bài hát; chương hai của Eine kleine Nachtmusik (Một khúc nhạc đêm nhỏ) của Mozart cũng mang tên này. Xem thêm thời kỳ Cổ điển.'
     moi: 'Âm nhạc thuộc phong cách Cổ điển phổ biến cuối thế kỷ 18: giai điệu chia thành câu bốn ô, hòa âm chủ yếu là chủ âm và át âm, tay trái đệm bằng hợp âm hai nốt và hình Alberti. Tuy mang tên sonatina, không chương nào có hình thức sonata: cả hai đều là hình thức hai đoạn có tái hiện (A – B – A, trong đó B và A nhắc lại cùng nhau) thêm một coda (xem Hình thức nhỏ). Romanze (romance) là cái tên không gắn với một hình thức cố định, thường gợi tính chất dịu dàng, riêng tư; Mozart đặt tên này cho chương chậm của Concerto piano Rê thứ K. 466, và chương hai của Eine kleine Nachtmusik (Một khúc nhạc đêm nhỏ) cũng mang tên này. Xem thêm thời kỳ Cổ điển.'
     ly_do: 'n20 (da-sua): B và A nhắc lại cùng nhau là hai đoạn có tái hiện (OMT Ternary Form, Binary Form; trang Hình thức nhỏ). n21 (da-sua): định nghĩa romance theo COD.'
@@ -778,16 +806,25 @@ doi_chu:
     moi: Rải nhanh từ dưới lên; quyết định trước độ dài dấu ngân và giữ đúng như thế mỗi lần
     ly_do: 'n25 (da-sua): như trên.'
   - cu: 'Bản Breitkopf ghi khá ít, và những gì có đều đáng tôn trọng: p ở đầu chương I, nhỏ dần trên các cặp nốt đi xuống ở ô 2, mf ở đoạn B (ô 9) và ở coda (ô 25), dolce khi chủ đề trở lại ở ô 17. Ở Romanze: lớn dần ở ô 9, nhỏ dần trước dấu lặng ngân ở ô 19, p ở coda. Giữa các chỉ dẫn đó, để câu nhạc tự lên xuống nhẹ theo giai điệu. Tay trái luôn nhỏ hơn tay phải một bậc. Các ấn bản khác có thể ghi khác; xem thêm Tạo tiếng đàn.'
-    moi: 'Bản Breitkopf ghi khá ít, và những gì có đều đáng tôn trọng: p ở đầu chương I, nhỏ dần trên các cặp nốt đi xuống ở ô 2, mf ở đoạn B (ô 9) và ở coda (ô 25), dolce khi chủ đề trở lại ở ô 17. Ở Romanze: lớn dần ở ô 9, nhỏ dần trước dấu ngân ở ô 19, p ở coda. Giữa các chỉ dẫn đó, để câu nhạc tự lên xuống nhẹ theo giai điệu. Tay trái luôn nhỏ hơn tay phải một bậc. Các ấn bản khác có thể ghi khác; xem thêm Tạo tiếng đàn.'
-    ly_do: 'n25 (da-sua): như trên (đoạn Sắc thái, chỉ trích câu đổi).'
+    moi: 'Bản Breitkopf ghi khá ít, và những gì có đều đáng tôn trọng: p ở đầu chương I, nhỏ dần trên các cặp nốt đi xuống ở ô 2, mf ở đoạn B (ô 9) và ở coda (ô 25), dolce khi chủ đề trở lại ở ô 17. Ở Romanze: lớn dần ở ô 9, nhỏ dần ngay trên nốt có dấu ngân ở ô 19, p ở coda. Giữa các chỉ dẫn đó, để câu nhạc tự lên xuống nhẹ theo giai điệu. Tay trái luôn nhỏ hơn tay phải một bậc. Các ấn bản khác có thể ghi khác; xem thêm Tạo tiếng đàn.'
+    ly_do: 'n25 (da-sua): như trên (đoạn Sắc thái, chỉ trích câu đổi). Review D6-L2-gom: n56 (lượt 2 sai): MEI TROMPA (Nr1_2) ô 19: hairpin dim tstamp 1 tới 3,5, fermata đặt trên nốt Mi5 ở phách 1: nhỏ dần bắt đầu ngay trên nốt có dấu ngân, không phải trước nó.'
   - cu: Kéo dấu lặng ngân ở ô 19 quá lâu, hoặc bỏ qua nó.
     moi: Kéo dấu ngân ở ô 19 quá lâu, hoặc bỏ qua nó.
     ly_do: 'n25 (da-sua): như trên.'
   - cu: 'Wiener Urtext Edition, UT 50290 Drei Sonatinen für Klavier (Anh. 5 số 1 và 2, WoO 50; Jochen Reutter biên tập, 2021): lời giới thiệu về quyền tác giả.'
-    moi: 'Wiener Urtext Edition, UT 50290 Drei Sonatinen für Klavier (Anh. 5 số 1 và 2, WoO 50; Jochen Reutter biên tập, 2021): phần giới thiệu của nhà xuất bản về quyền tác giả.'
-    ly_do: 'n72 (da-sua): chỉ đọc được mô tả của nhà xuất bản.'
+    moi: 'Wiener Urtext Edition, UT 50290 Drei Sonatinen für Klavier (Anh. 5 số 1 và 2, WoO 50; Jochen Reutter biên tập, 2020): phần giới thiệu của nhà xuất bản về quyền tác giả.'
+    ly_do: 'n72 (da-sua): chỉ đọc được mô tả của nhà xuất bản. Review D6-L2-gom: n72 (lượt 2 sai): năm 2020 theo DNB (như n12).'
   - cu: Gustav Nottebohm, Thematisches Verzeichniss der im Druck erschienenen Werke von Ludwig van Beethoven, ấn bản 2, Breitkopf & Härtel, Leipzig, 1868.
     moi:
       - Alexander Wheelock Thayer, Chronologisches Verzeichniss der Werke Ludwig van Beethoven's, Berlin, 1865, số 24 (Internet Archive).
       - Gustav Nottebohm, Thematisches Verzeichniss der im Druck erschienenen Werke von Ludwig van Beethoven, ấn bản 2, Breitkopf & Härtel, Leipzig, 1868, tr. 148 (Internet Archive).
     ly_do: 'n74 (da-sua): thêm nguồn của câu về Thayer và số trang Nottebohm; hai dòng danh sách.'
+  - cu: 'Bước đệm trước Clementi. Ngắn và dễ hơn Clementi: Sonatina Op. 36 số 1, nhưng cùng một thế giới âm thanh.'
+    moi: 'Bước đệm trước Clementi. Ngắn hơn Clementi: Sonatina Op. 36 số 1 (hai chương thay vì ba), nhưng cùng một thế giới âm thanh.'
+    ly_do: 'Review D6-L2-gom: n7: bỏ "dễ hơn" (lượt 2 khong-chac: Henle xếp cả Anh. 5,1 và Op. 36,1 mức 3; ABRSM xếp hai chương khác nhau của hai bài, không so được cả bài); thêm lý do "ngắn hơn": hai chương thay vì ba (MEI TROMPA, Mutopia).'
+  - cu: 'Bài có mặt trong rất nhiều tuyển tập sonatina cho người học, nên bạn sẽ gặp đủ loại bản thu, từ nghệ sĩ chuyên nghiệp đến học sinh. Hãy chọn hai bản khác nhau rõ rệt và so sánh: tốc độ Moderato, độ ngắn của nốt láy, cách Romanze chuyển động (trôi hay kéo). Nếu tìm được, nghe thêm một bản trên fortepiano (đàn piano của thời ấy) để hình dung tiếng đàn mỏng và rõ mà bài này vốn hướng tới.'
+    moi: 'Bài có mặt trong rất nhiều tuyển tập sonatina cho người học, nên bạn sẽ gặp đủ loại bản thu, từ nghệ sĩ chuyên nghiệp đến học sinh. Hãy chọn hai bản khác nhau rõ rệt và so sánh: tốc độ Moderato, độ ngắn của nốt láy, cách Romanze chuyển động (trôi hay kéo). Nếu tìm được, nghe thêm một bản trên fortepiano (đàn piano của thời ấy) để so tiếng đàn với đàn hiện đại.'
+    ly_do: 'Review D6-L2-gom: n27: bỏ vế "để hình dung tiếng đàn mỏng và rõ mà bài này vốn hướng tới" (nhận xét về âm sắc fortepiano, không có nguồn), giữ lời khuyên nghe.'
+  - cu: 'Nhiều tuyển tập cho người học in bài dưới tên Beethoven mà không ghi chú gì, kèm sắc thái và số ngón của người biên tập. Bản Urtext ghi rõ số Anh. 5 và cho biết đâu là chỉ dẫn của nguồn. Khi giới thiệu bài trong một buổi biểu diễn, cách nói trung thực là: "Sonatina Sol trưởng, Anh. 5 số 1, gán cho Beethoven".'
+    moi: 'Từ thế kỷ 19, bài được in nhiều lần dưới tên Beethoven mà không ghi chú gì về chuyện tác giả, như trong toàn tập Breitkopf & Härtel. Bản Urtext ghi rõ số Anh. 5 và cho biết đâu là chỉ dẫn của nguồn. Khi giới thiệu bài trong một buổi biểu diễn, cách nói trung thực là: "Sonatina Sol trưởng, Anh. 5 số 1, gán cho Beethoven".'
+    ly_do: 'Review D6-L2-gom: n59: bỏ vế "kèm sắc thái và số ngón của người biên tập" (không nguồn; lượt 2 khong-chac); viết theo nguồn: Nottebohm 1868 liệt kê các bản in dưới tên Beethoven; bản Breitkopf in "von L. van Beethoven", không ghi chú (MEI TROMPA).'

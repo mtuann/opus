@@ -122,7 +122,7 @@ K:Am
 [V:LH] .A,, z .A,, z | .E,, z .E,, z | .A,, z .A,, z | .E,, z .E,, z | .A,, z .[A,,E,] z | !accent![A,,E,]2 z2 |]
 ```
 
-Nốt trầm ở phách, hợp âm ở giữa phách. Hai tay buông phím gọn gàng. Ô 1–2 rất nhỏ; ô 3–4 to dần; ô 5–6 *f*, nhưng tiếng vẫn tròn. Hợp âm cuối dùng sức nặng cánh tay, không đập.
+Nốt trầm ở phách, hợp âm ở giữa phách. Hai tay buông phím gọn gàng. Ô 1–2 nhỏ (*p*); ô 3–4 to dần; ô 5–6 *f*, nhưng tiếng vẫn tròn. Hợp âm cuối dùng sức nặng cánh tay, không đập.
 
 ### 3. Tay trái chạy, tay phải giữ
 
@@ -230,5 +230,5 @@ Burgmüller tự ghi số ngón cho tập Op. 100. Hãy dùng số ngón in sẵ
 
 - IMSLP, trang "25 Études faciles et progressives, Op.100 (Burgmüller, Friedrich)": lần in đầu (Paris: Benoît aîné, 1851) và tên các bài.
 - Bản dàn trang công cộng của *L'Arabesque* tại [Mutopia Project](https://www.mutopiaproject.org/): cấu trúc và chỉ dẫn sắc thái trên trang này theo bản đó.
-- "Friedrich Burgmüller", [Wikipedia](https://en.wikipedia.org/wiki/Friedrich_Burgm%C3%BCller) (năm sinh, năm mất, năm sang Paris).
+- *Deutsche Biographie*, mục "Burgmüller, Friedrich" ([deutsche-biographie.de](https://www.deutsche-biographie.de/pnd117168890.html)): năm sinh, năm mất, nơi sinh, năm sang Paris.
 - Bản nhạc: [IMSLP](https://imslp.org/). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

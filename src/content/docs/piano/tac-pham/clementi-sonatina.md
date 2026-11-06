@@ -33,7 +33,7 @@ Nghe cả ba chương ít nhất hai lần, mỗi lần một câu hỏi:
 3. **Tay trái chương II.** Lớp đệm chùm ba có bao giờ to hơn giai điệu không?
 4. **Tốc độ chương III.** Nghệ sĩ chơi nhanh đến đâu mà từng nốt vẫn rõ?
 
-Nếu có thể, nghe thêm một bản trên đàn fortepiano (đàn piano thời Clementi): tiếng mỏng và rõ hơn, giúp bạn hình dung độ trong của nhạc Cổ điển. Để nghe hình thức sonata ở quy mô lớn hơn, xem [hướng dẫn nghe Mozart, Sonata K. 331](/opus/nghe-nhac/mozart-k331/).
+Nếu có thể, nghe thêm một bản trên đàn fortepiano (đàn piano thời Clementi) để so tiếng đàn với đàn hiện đại. Để nghe hình thức sonata ở quy mô lớn hơn, xem [hướng dẫn nghe Mozart, Sonata K. 331](/opus/nghe-nhac/mozart-k331/).
 
 ::khoi-nghe{moc="0 - 18 27 45 70 100 126"}
 
