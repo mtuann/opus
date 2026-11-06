@@ -1,65 +1,149 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/beethoven-pathetique
 ban_ghi: tac-pham/beethoven-pathetique
-ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/beethoven-pathetique.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh. Bản ghi có cap trỏ sang piano/tac-pham/pathetique-adagio (cấu trúc, ngoài phạm vi)."
+ghi_chu: 'loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/beethoven-pathetique.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh. Bản ghi có cap trỏ sang piano/tac-pham/pathetique-adagio (cấu trúc, ngoài phạm vi). Lần 2 (D6-L5 phần A): Mutopia pathetique-1/2/3, Henle HN 1348, Commons API (ba tệp Veesey).'
 lan:
-  - so: 1
-    ngay: 2026-10-24
-    nhanh: moi/d2-0-du-lieu
-    ma_bam: sha256:db87c23347de76c31e5db866631baa9922c726289de92c0508be0219095952d2
-    nguoi:
-      luot_1: Claude Sonnet 5.5 (D2-0 phần B)
-      luot_2: Claude Sonnet 5.5 (D2-0 lượt 2 phần B)
-      review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
-      kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
-    truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
-  - so: 2
-    ngay: null
-    nhanh: moi/d6-l5
-    ma_bam: null
-    nguoi:
-      luot_1: null
-      luot_2: null
-      review: null
-      kiem_mau: null
+- so: 1
+  ngay: 2026-10-24
+  nhanh: moi/d2-0-du-lieu
+  ma_bam: sha256:db87c23347de76c31e5db866631baa9922c726289de92c0508be0219095952d2
+  nguoi:
+    luot_1: Claude Sonnet 5.5 (D2-0 phần B)
+    luot_2: Claude Sonnet 5.5 (D2-0 lượt 2 phần B)
+    review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
+    kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
+  truong: [chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten]
+- so: 2
+  ngay: '2026-11-05'
+  nhanh: moi/d6-l5
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Opus 5.5, agent con, D6-L5 phần A
+    luot_2: null
+    review: null
+    kiem_mau: null
 nguon:
-  - id: imslp
-    bac: 2
-    ten: IMSLP, Piano Sonata No.8, Op.13 (Beethoven, Ludwig van)
-    link: https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)
-  - id: beethoven-haus
-    bac: 2
-    ten: Beethoven-Haus Bonn, Sonata for piano (C minor) op. 13 (Sonata patétique)
-    link: https://www.beethoven.de/en/work/view/6166636289589248/sonate+f%C3%BCr+klavier+&
-  - id: henle
-    bac: 2
-    ten: G. Henle Verlag, Piano Sonata no. 8 c minor op. 13 (Grande Sonata Pathétique) (HN 1348)
-    link: https://www.henle.de/en/Piano-Sonata-no.-8-c-minor-op.-13-Grande-Sonata-Pathetique/HN-1348
+- id: imslp
+  bac: 2
+  ten: IMSLP, Piano Sonata No.8, Op.13 (Beethoven, Ludwig van)
+  link: https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)
+- id: beethoven-haus
+  bac: 2
+  ten: Beethoven-Haus Bonn, Sonata for piano (C minor) op. 13 (Sonata patétique)
+  link: https://www.beethoven.de/en/work/view/6166636289589248/sonate+f%C3%BCr+klavier+&
+- id: henle
+  bac: 2
+  ten: G. Henle Verlag, Piano Sonata no. 8 c minor op. 13 (Grande Sonata Pathétique) (HN 1348)
+  link: https://www.henle.de/en/Piano-Sonata-no.-8-c-minor-op.-13-Grande-Sonata-Pathetique/HN-1348
+- id: imslp-op13
+  bac: 2
+  ten: 'IMSLP, Piano Sonata No.8, Op.13 (Beethoven): 3 chương (Grave – Allegro di molto e con brio, Đô thứ; Adagio cantabile, La♭ trưởng; Rondo. Allegro, Đô thứ); sáng tác 1798; in 18/12/1799, Vienna: Hoffmeister; đề tặng Karl Lichnowsky; thời lượng trung bình 19–20 phút; Piece Style Classical; danh sách ấn bản có Bülow/Lebert'
+  link: https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)
+- id: mut-op13-1
+  bac: 1
+  ten: Mutopia Project, Sonata No. 8 "Pathétique", chương 1 (Chris Sawer, nguồn G. Schirmer 1894 và Berners 1908; tệp LilyPond và MIDI, tải 05/11/2026)
+  link: https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-1/pathetique-1.ly
+- id: mut-op13-2
+  bac: 1
+  ten: Mutopia Project, Sonata No. 8 "Pathétique", chương 2 Adagio cantabile (Chris Sawer, nguồn Berners 1908 do A. Winterberger biên tập và Köhler & Ruthardt, Peters 1910; tệp LilyPond và MIDI, tải 05/11/2026)
+  link: https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly
+- id: mut-op13-3
+  bac: 1
+  ten: Mutopia Project, Sonata No. 8 "Pathétique", chương 3 Rondo (Chris Sawer, nguồn Berners 1908; tệp LilyPond và MIDI, tải 05/11/2026)
+  link: https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-3/pathetique-3.ly
+- id: henle-hn1348-vorwort
+  bac: 2
+  ten: 'G. Henle Verlag, HN 1348: lời nói đầu (Norbert Gertsch, Murray Perahia, mùa thu 2018), PDF: phác thảo giữa 1797 – giữa 1798, phần chính xong khoảng giữa 1798; in mùa thu 1799 ở nhà Hoffmeister (Vienna), báo ngày 18/12 ghi "vừa in xong"; cùng Les Adieux op. 81a là sonata duy nhất Beethoven tự đặt tên; Grave quay lại hai lần'
+  link: https://www.henle.de/media/fc/b2/b2/1697725861/1348-1697725860-sync.pdf
+- id: commons-veesey-op13
+  bac: 2
+  ten: Wikimedia Commons, Daniel Veesey – Sonata 8 Pathetique, I / II / III (CC0, 2009; 384,52 s, 380,54 s, 269,67 s; nguồn Free Music Archive; API imageinfo 05/11/2026)
+  link: https://commons.wikimedia.org/wiki/File:Daniel_Veesey_-_02_-_Sonata_8_Pathetique_-_II_Adagio_cantabile.ogg
+- id: pieces-py
+  bac: 2
+  ten: Cấu hình căn mốc tools/audio/align/pieces.py của repo (chỉ số ô MIDI của từng dòng bảng; chú thích về bản thu chương I bị cắt)
+  link: tools/audio/align/pieces.py
 nhan_dinh:
-  - id: n1
-    cau: Tên «Sonata Pathétique» chỉ Sonata piano số 8 cung Đô thứ, Op. 13, đề «Grande Sonate pathétique».
-    loai: ten
-    truong: [ ten ]
-    nguon: [ imslp, beethoven-haus, henle ]
-    ket_qua: dung
-    ghi_chu: Beethoven-Haus ghi chính Beethoven đặt tên Grande Sonate pathétique.
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)", https://www.beethoven.de/en/work/view/ag9iZWV0aG92ZW4tdml1cjNyEQsSBHdvcmsYgICArN6Q-goM/Sonata+for+piano+&#040;C+minor&#041;+op.+13+&#040;Sonata+pat%C3%A9tique&#041;, https://id.loc.gov/authorities/names/n81133621.json ]
-    luot_2_ghi_chu: "IMSLP: Piano Sonata No.8, Op.13, C minor (alt. title 'Pathétique'). Beethoven-Haus op. 13 page: 'Beethoven himself gave it the title Grande Sonate pathétique' (the page text has a typo 'pathétiqu'; it also dates the work 1797-99). LoC n81133621: 'Sonatas, piano, no. 8, op. 13, C minor' (New Grove: Sonata no. 8 'Pathétique'); a title-page note reads 'Grande sonata [sic] pathétique'."
-  - id: n2
-    cau: Tác giả là Ludwig van Beethoven.
-    loai: lich-su
-    truong: [ tac_gia ]
-    nguon: [ imslp, beethoven-haus, henle ]
-    ket_qua: dung
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)", https://www.beethoven.de/en/work/view/ag9iZWV0aG92ZW4tdml1cjNyEQsSBHdvcmsYgICArN6Q-goM/Sonata+for+piano+&#040;C+minor&#041;+op.+13+&#040;Sonata+pat%C3%A9tique&#041;, https://id.loc.gov/authorities/names/n81133621.json ]
-    luot_2_ghi_chu: "IMSLP composer field: Beethoven, Ludwig van. Beethoven-Haus work page; LoC heading 'Beethoven, Ludwig van, 1770-1827'."
-  - id: n3
-    cau: Op. 13 là số opus của Sonata piano số 8 cung Đô thứ.
-    loai: danh-muc
-    truong: [ danh_muc ]
-    nguon: [ imslp, beethoven-haus, henle ]
-    ket_qua: dung
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)", https://www.beethoven.de/en/work/view/ag9iZWV0aG92ZW4tdml1cjNyEQsSBHdvcmsYgICArN6Q-goM/Sonata+for+piano+&#040;C+minor&#041;+op.+13+&#040;Sonata+pat%C3%A9tique&#041;, https://id.loc.gov/authorities/names/n81133621.json ]
-    luot_2_ghi_chu: IMSLP Op./Cat. No. = Op.13 (Piano Sonata No.8, C minor). Beethoven-Haus 'op. 13'. LoC 'no. 8, op. 13, C minor'.
+- id: n1
+  cau: Tên «Sonata Pathétique» chỉ Sonata piano số 8 cung Đô thứ, Op. 13, đề «Grande Sonate pathétique».
+  loai: ten
+  truong: [ten]
+  nguon: [imslp, beethoven-haus, henle]
+  ket_qua: dung
+  ghi_chu: Beethoven-Haus ghi chính Beethoven đặt tên Grande Sonate pathétique.
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)
+  - https://www.beethoven.de/en/work/view/ag9iZWV0aG92ZW4tdml1cjNyEQsSBHdvcmsYgICArN6Q-goM/Sonata+for+piano+&#040;C+minor&#041;+op.+13+&#040;Sonata+pat%C3%A9tique&#041;
+  - https://id.loc.gov/authorities/names/n81133621.json
+  luot_2_ghi_chu: 'IMSLP: Piano Sonata No.8, Op.13, C minor (alt. title ''Pathétique''). Beethoven-Haus op. 13 page: ''Beethoven himself gave it the title Grande Sonate pathétique'' (the page text has a typo ''pathétiqu''; it also dates the work 1797-99). LoC n81133621: ''Sonatas, piano, no. 8, op. 13, C minor'' (New Grove: Sonata no. 8 ''Pathétique''); a title-page note reads ''Grande sonata [sic] pathétique''.'
+- id: n2
+  cau: Tác giả là Ludwig van Beethoven.
+  loai: lich-su
+  truong: [tac_gia]
+  nguon: [imslp, beethoven-haus, henle]
+  ket_qua: dung
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)
+  - https://www.beethoven.de/en/work/view/ag9iZWV0aG92ZW4tdml1cjNyEQsSBHdvcmsYgICArN6Q-goM/Sonata+for+piano+&#040;C+minor&#041;+op.+13+&#040;Sonata+pat%C3%A9tique&#041;
+  - https://id.loc.gov/authorities/names/n81133621.json
+  luot_2_ghi_chu: 'IMSLP composer field: Beethoven, Ludwig van. Beethoven-Haus work page; LoC heading ''Beethoven, Ludwig van, 1770-1827''.'
+- id: n3
+  cau: Op. 13 là số opus của Sonata piano số 8 cung Đô thứ.
+  loai: danh-muc
+  truong: [danh_muc]
+  nguon: [imslp, beethoven-haus, henle]
+  ket_qua: dung
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)
+  - https://www.beethoven.de/en/work/view/ag9iZWV0aG92ZW4tdml1cjNyEQsSBHdvcmsYgICArN6Q-goM/Sonata+for+piano+&#040;C+minor&#041;+op.+13+&#040;Sonata+pat%C3%A9tique&#041;
+  - https://id.loc.gov/authorities/names/n81133621.json
+  luot_2_ghi_chu: IMSLP Op./Cat. No. = Op.13 (Piano Sonata No.8, C minor). Beethoven-Haus 'op. 13'. LoC 'no. 8, op. 13, C minor'.
+- id: n4
+  cau: 'Thời kỳ: Cổ điển → Lãng mạn.'
+  loai: lich-su
+  truong: [thoi_ky]
+  nguon: [imslp-op13]
+  ket_qua: null
+  ghi_chu: 'chưa chắc: IMSLP ghi Piece Style "Classical"; trang hướng dẫn nghe ghi "Cổ điển, giai đoạn đầu của Beethoven". "Cổ điển → Lãng mạn" là cách xếp của site (chưa có nguồn cho chữ "→ Lãng mạn" với Op. 13). Người giao quyết: giữ (lựa chọn của site) hay đổi thành "Cổ điển".'
+- id: n5
+  cau: 'Luyện nghe: phần mở đầu chậm quay lại, rondo.'
+  loai: cau-truc
+  truong: [luyen_nghe]
+  nguon: [mut-op13-1, mut-op13-3, henle-hn1348-vorwort]
+  ket_qua: dung
+  ghi_chu: Grave quay lại hai lần (Henle, Mutopia); chương 3 Rondo.
+- id: n6
+  cau: 'Hình cấu trúc chương 1: Grave mở đầu chậm Đô thứ; trình bày Allegro, chủ đề 2 ở Mi♭ thứ; Grave vài ô; phát triển; tái hiện Đô thứ; coda có Grave thoáng qua.'
+  loai: cau-truc
+  truong: [hinh]
+  nguon: [mut-op13-1]
+  ket_qua: dung
+  ghi_chu: 'Mutopia: theme I (Grave), II (Allegro, chủ đề 2 Mi♭ thứ ô 51), III (Grave 4 ô), IV–IX, X (Grave), XI (Allegro kết).'
+- id: n7
+  cau: 'Hình cấu trúc: II. Adagio cantabile, La♭ trưởng, rondo A B A C A; III. Rondo: Allegro, Đô thứ, các đoạn xen ở Mi♭ và La♭ trưởng.'
+  loai: cau-truc
+  truong: [hinh]
+  nguon: [mut-op13-2, mut-op13-3]
+  ket_qua: dung
+- id: n8
+  cau: 'Ghi chú của hình: phần Grave quay lại hai lần trong chương 1, ở đầu phần phát triển và trong coda; độ dài các ô chỉ minh họa.'
+  loai: cau-truc
+  truong: [hinh]
+  nguon: [mut-op13-1, henle-hn1348-vorwort]
+  ket_qua: dung
+- id: n9
+  cau: 'Bản thu gợi ý: Daniel Veesey, CC0, ba phần (I. Grave – Allegro di molto e con brio 384,52 s; II. Adagio cantabile 380,54 s; III. Rondo: Allegro 269,67 s), trang Commons.'
+  loai: ten
+  truong: [ban_thu]
+  nguon: [commons-veesey-op13]
+  ket_qua: dung
+  ghi_chu: 'Commons API: ba tệp, Artist Daniel Veesey, CC0, độ dài khớp d.'
+- id: n10
+  cau: 'Ghi chú bản thu: tệp chương I trên Commons dừng ở khoảng 6:24, giữa phần phát triển.'
+  loai: so-lieu
+  truong: [ban_thu]
+  nguon: [commons-veesey-op13, pieces-py, mut-op13-1]
+  ket_qua: dung
+  ghi_chu: 384,52 s = 6:24,5; giây cuối vẫn có tiếng (-15,8 dB, ffmpeg), tức bị cắt; căn MIDI (pieces.py) tới khoảng ô 170, phát triển ô 133–194.

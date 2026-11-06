@@ -1,6 +1,6 @@
 ---
 title: "Beethoven: Sonata Pathétique, Op. 13"
-description: "Năm 1798, Beethoven 27 tuổi, nổi tiếng ở Vienna trước hết như một nghệ sĩ piano ứng tác dữ dội. Sonata này nhanh chóng được yêu thích: Ignaz Moscheles kể rằng…"
+description: "Năm 1798, Beethoven 27 tuổi, đã nổi tiếng ở Vienna như một nghệ sĩ piano, nhất là tài ứng tác. Sonata này nhanh chóng được yêu thích: Ignaz Moscheles kể rằng năm…"
 tac_pham: beethoven-pathetique
 ---
 
@@ -15,17 +15,17 @@ tac_pham: beethoven-pathetique
 
 ## Điều cần biết trước khi nghe
 
-Năm 1798, Beethoven 27 tuổi, nổi tiếng ở Vienna trước hết như một **nghệ sĩ piano** ứng tác dữ dội. Sonata này nhanh chóng được yêu thích: Ignaz Moscheles kể rằng năm 1804, lúc mới 10 tuổi, ông phải chép tay bản nhạc ở thư viện vì không đủ tiền mua.
+Năm 1798, Beethoven 27 tuổi, đã nổi tiếng ở Vienna như một **nghệ sĩ piano**, nhất là tài ứng tác. Sonata này nhanh chóng được yêu thích: Ignaz Moscheles kể rằng năm 1804, lúc mới 10 tuổi, ông phải chép tay bản nhạc ở thư viện vì không đủ tiền mua.
 
-**Ai đặt tên *Pathétique*?** Trang bìa bản in đầu tiên ghi *Grande Sonate pathétique*. Theo Beethoven-Haus Bonn và ấn bản Urtext của Henle, chính Beethoven chọn tên này; cùng với *Les Adieux* Op. 81a, đây là một trong hai sonata piano có tên gọi từ tác giả (vài tài liệu khác cho rằng nhà xuất bản đặt và Beethoven đồng ý). *Pathétique* ở đây không có nghĩa "thảm hại" mà là "đầy **bi cảm**", gốc từ chữ *pathos* trong kịch Hy Lạp. Khác hẳn *Ánh trăng*, biệt danh do người khác gợi ra, chỉ phổ biến sau khi Beethoven mất ([hướng dẫn nghe](/opus/nghe-nhac/beethoven-moonlight/)).
+**Ai đặt tên *Pathétique*?** Trang bìa bản in đầu tiên ghi *Grande Sonate pathétique*. Theo Beethoven-Haus Bonn và ấn bản Urtext của Henle, chính Beethoven chọn tên này; cùng với *Les Adieux* Op. 81a, đây là một trong hai sonata piano có tên gọi từ tác giả. *Pathétique* ở đây không có nghĩa "thảm hại" mà là "đầy **bi cảm**", gốc từ chữ Hy Lạp *pathos*. Khác hẳn *Ánh trăng*: biệt danh ấy do người khác gợi ra, có lẽ từ một truyện của Ludwig Rellstab viết năm 1823 ([hướng dẫn nghe](/opus/nghe-nhac/beethoven-moonlight/)).
 
-**Chương 1, *Grave – Allegro di molto e con brio*.** Mở đầu là một phần **chậm** (*Grave*): hợp âm Đô thứ nặng nề, tương phản đột ngột giữa mạnh và nhỏ (*fp*), nhịp chấm dôi và những tiếng thở dài. Một chuỗi nốt chạy xuống rất nhanh lao vào phần **Allegro**: chủ đề tay phải vút lên qua hai quãng tám, trên tiếng rung **quãng tám rải** không ngừng của tay trái, như tremolo của bộ dây. Chủ đề thứ hai bất ngờ ở **Mi♭ thứ** chứ không phải Mi♭ trưởng như thường lệ; tay trái liên tục vắt qua tay phải để chơi những nốt láy ở âm vực cao. Phần trình bày khép lại ở Mi♭ trưởng. Điều mới mẻ nhất: phần Grave **quay lại hai lần**, ở đầu phần phát triển và trong coda, nên lời mở đầu chậm trở thành một nhân vật của câu chuyện. Xem lại [hình thức sonata](/opus/hinh-thuc/sonata/).
+**Chương 1, *Grave – Allegro di molto e con brio*.** Mở đầu là một phần **chậm** (*Grave*): hợp âm Đô thứ nặng nề, tương phản đột ngột giữa mạnh và nhỏ (*fp*), nhịp chấm dôi và những tiếng thở dài. Một chuỗi nốt chạy xuống rất nhanh lao vào phần **Allegro**: chủ đề tay phải vút lên qua hai quãng tám, trên tiếng rung **quãng tám rải** không ngừng của tay trái, như tremolo của bộ dây. Chủ đề thứ hai bất ngờ ở **Mi♭ thứ** chứ không phải Mi♭ trưởng như thường lệ; giai điệu nhảy qua lại giữa âm vực trầm và những nốt láy ở âm vực cao, vượt qua phần đệm ở giữa, nên hai tay liên tục vắt chéo nhau. Phần trình bày khép lại ở Mi♭ trưởng. Điều mới mẻ nhất: phần Grave **quay lại hai lần**, ở đầu phần phát triển và trong coda, nên lời mở đầu chậm trở thành một nhân vật của câu chuyện. Xem lại [hình thức sonata](/opus/hinh-thuc/sonata/).
 
-**Chương 2, *Adagio cantabile*** (La♭ trưởng, nhịp 2/4) là một trong những giai điệu đẹp nhất Beethoven viết. Lần đầu, giai điệu hát ở âm vực trầm ấm quanh Đô giữa (C4), trên một dòng móc kép êm ở bè giữa và bè trầm bên dưới: ba lớp âm thanh trong hai bàn tay. Rồi nó được nhắc lại **cao hơn một quãng tám**. Chương có dạng [rondo](/opus/hinh-thuc/rondo/) A–B–A–C–A: đoạn xen thứ nhất ở giọng thứ, như lời than; đoạn xen thứ hai ở **La♭ thứ**, phần đệm chuyển sang nhịp **chùm ba**, rồi trượt bất ngờ sang Mi trưởng. Lần trở lại cuối cùng, phần đệm giữ nhịp chùm ba ấy, dày và ấm hơn.
+**Chương 2, *Adagio cantabile*** (La♭ trưởng, nhịp 2/4). Lần đầu, giai điệu hát ở âm vực trầm ấm quanh Đô giữa (C4), trên một dòng móc kép êm ở bè giữa và bè trầm bên dưới: ba lớp âm thanh trong hai bàn tay. Rồi nó được nhắc lại **cao hơn một quãng tám**. Chương có dạng [rondo](/opus/hinh-thuc/rondo/) A–B–A–C–A: đoạn xen thứ nhất ở giọng thứ, như lời than; đoạn xen thứ hai ở **La♭ thứ**, phần đệm chuyển sang nhịp **chùm ba**, rồi trượt bất ngờ sang Mi trưởng. Lần trở lại cuối cùng, phần đệm giữ nhịp chùm ba ấy, dày và ấm hơn.
 
 **Chương 3, *Rondo: Allegro*** (Đô thứ). Bốn nốt đầu của chủ đề rondo đi y như chủ đề thứ hai của chương 1, chỉ khác giọng: một sợi chỉ nối hai chương. Các đoạn xen đi qua Mi♭ trưởng và La♭ trưởng (đoạn này viết kiểu đối âm, các bè đuổi nhau). Gần cuối, giọng La♭ trưởng thoáng hiện, nhẹ như một lời hồi tưởng, rồi bản nhạc đóng sập ở Đô thứ bằng một chuỗi nốt đổ xuống.
 
-**Nghe bằng tai người chơi piano.** Năm 1798, Beethoven chơi trên đàn Vienna khoảng năm quãng tám, tiếng mỏng và tắt nhanh (xem [lịch sử cây đàn piano](/opus/piano/lich-su-dan/)), nhưng ông viết cho nó như viết cho dàn nhạc. Trên đàn hiện đại, cái khó là giữ tremolo tay trái **nhẹ và đều** suốt nhiều trang mà không cứng cổ tay, và trong *Adagio*, cân bằng ba lớp để giai điệu luôn nổi trên dòng móc kép (xem [tạo tiếng đàn](/opus/piano/tieng-dan/)).
+**Nghe bằng tai người chơi piano.** Đàn kiểu Vienna thời ấy chỉ có âm vực khoảng năm quãng tám (xem [lịch sử cây đàn piano](/opus/piano/lich-su-dan/)). Trên đàn hiện đại, cái khó là giữ tremolo tay trái **nhẹ và đều** suốt nhiều trang mà không cứng cổ tay, và trong *Adagio*, cân bằng ba lớp để giai điệu luôn nổi trên dòng móc kép (xem [tạo tiếng đàn](/opus/piano/tieng-dan/)).
 
 ## Sơ đồ cấu trúc
 
@@ -43,7 +43,7 @@ Ghi lại thời điểm (phút:giây) bạn nghe thấy từng sự kiện tron
 |---|---|
 | … | **Grave**: hợp âm Đô thứ nặng, mạnh – nhỏ đột ngột; chuỗi nốt chạy xuống dẫn vào Allegro |
 | … | **Allegro, chủ đề 1**: tay phải vút lên trên tiếng rung quãng tám không ngừng của tay trái |
-| … | **Chủ đề 2**: Mi♭ thứ, tay trái vắt qua lại với những nốt láy; rồi phần trình bày khép lại ở Mi♭ trưởng |
+| … | **Chủ đề 2**: Mi♭ thứ, hai tay vắt chéo, giai điệu có những nốt láy; rồi phần trình bày khép lại ở Mi♭ trưởng |
 | … | **Nhắc lại phần trình bày** (nếu có): nghệ sĩ quay về đầu Allegro, hay về tận phần Grave? |
 | … | **Phát triển**: vài ô nhịp Grave trở lại, rồi Allegro lao đi qua nhiều giọng |
 | … | **Tái hiện và coda**: chủ đề trở lại ở Đô thứ; Grave thoáng qua lần cuối, rồi kết nhanh, dứt khoát |
@@ -64,15 +64,15 @@ Ghi lại thời điểm (phút:giây) bạn nghe thấy từng sự kiện tron
 
 ## So sánh bản thu
 
-- **Emil Gilels**: tiếng đàn lớn, sâu, kiến trúc vững chãi; phần Grave như tạc bằng đá.
-- **Angela Hewitt**: khi nhắc lại phần trình bày, bà quay về tận phần Grave, vì Beethoven không hề ghi rằng chỉ nhắc lại phần Allegro; đa số nghệ sĩ chỉ quay về đầu Allegro.
-- **Ronald Brautigam** (fortepiano): tiếng đàn thời Beethoven; tremolo và hợp âm *fp* gắt, kịch tính hơn.
+- **Emil Gilels**: nghe phần Grave: nặng và chậm đến đâu, các hợp âm *fp* tương phản thế nào?
+- **Angela Hewitt**: khi nhắc lại phần trình bày, bà quay về tận phần Grave, vì Beethoven không hề ghi rằng chỉ nhắc lại phần Allegro (theo bà, chỗ ấy do một nhà xuất bản thêm về sau); Rudolf Serkin cũng làm vậy.
+- **Ronald Brautigam** (fortepiano, loại đàn thời Beethoven): tremolo và hợp âm *fp* nghe khác đàn hiện đại thế nào?
 
 Xem thêm [Nghệ sĩ piano và bản thu](/opus/piano/nghe-si/).
 
 ## Nếu bạn muốn chơi
 
-**Adagio cantabile** là chương dễ nhất, khoảng **Grade 7**, và là cửa ngõ tuyệt vời vào Beethoven: ít nốt nhanh, nhưng đòi hỏi legato, cân bằng các bè và [bàn đạp](/opus/piano/ban-dap/) sạch. Bắt đầu từ [bài học Adagio](/opus/piano/tac-pham/pathetique-adagio/). **Rondo** khoảng Grade 8. **Chương 1** khó nhất vì tremolo quãng tám bền bỉ, vắt tay và tốc độ; hãy để sau cùng. Một chương chậm khác để tập: chương 1 [*Ánh trăng*](/opus/nghe-nhac/beethoven-moonlight/). Xem [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
+**Adagio cantabile**, khoảng **Grade 7–8** (ABRSM xếp chương này ở Grade 8), là cửa ngõ tuyệt vời vào Beethoven: ít nốt nhanh, nhưng đòi hỏi legato, cân bằng các bè và [bàn đạp](/opus/piano/ban-dap/) sạch. Bắt đầu từ [bài học Adagio](/opus/piano/tac-pham/pathetique-adagio/). **Rondo** cũng được ABRSM xếp ở Grade 8. **Chương 1** đòi tremolo quãng tám bền bỉ, vắt tay và tốc độ; hãy để sau cùng. Một chương chậm khác để tập: chương 1 [*Ánh trăng*](/opus/nghe-nhac/beethoven-moonlight/). Xem [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
 
 ## Ghi chép của bạn
 
@@ -81,6 +81,8 @@ Xem thêm [Nghệ sĩ piano và bản thu](/opus/piano/nghe-si/).
 ## Nguồn
 
 - Bản nhạc: [IMSLP](https://imslp.org/) (tìm "Piano Sonata No.8, Op.13"); ấn bản Urtext của [G. Henle Verlag](https://www.henle.de/) (biên tập Norbert Gertsch và Murray Perahia, 2018), có lời tựa về niên đại, bản in đầu tiên và tên gọi.
-- [Beethoven-Haus Bonn](https://www.beethoven.de/): thư mục tác phẩm Op. 13.
-- Charles Rosen, *Beethoven's Piano Sonatas: A Short Companion* (Yale University Press, 2002).
+- [Beethoven-Haus Bonn](https://www.beethoven.de/en/work/view/6166636289589248/sonate+f%C3%BCr+klavier+&): thư mục tác phẩm Op. 13.
+- Angela Hewitt, [lời giới thiệu đĩa Beethoven Piano Sonatas, Vol. 2](https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA67605) (Hyperion, 2007): tên gọi, việc nhắc lại phần trình bày từ Grave.
+- Ignaz Moscheles, lời kể trong bản dịch *Life of Beethoven* của Anton Schindler do ông biên tập ([Project Gutenberg](https://www.gutenberg.org/ebooks/39093)).
+- Đề cương thi piano của ABRSM 2027 & 2028 ([PDF](https://www.abrsm.org/sites/default/files/2026-06/Piano%20Performance%20Grades%20Syllabus%202027%20&%202028.pdf)): chương 2 và chương 3 ở Grade 8.
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

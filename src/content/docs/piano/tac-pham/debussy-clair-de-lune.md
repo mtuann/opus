@@ -24,9 +24,9 @@ Nếu bạn chưa làm nổi giai điệu trên hợp âm của cùng một tay,
 
 ## Bối cảnh
 
-Tên bài lấy từ bài thơ *Clair de lune* của Paul Verlaine trong tập *Fêtes galantes* (1869), bài thơ mà Debussy đã phổ nhạc thành ca khúc. Chữ *bergamasque* cũng đến từ chính bài thơ đó. Bài thơ tả những nhân vật đeo mặt nạ dưới ánh trăng, vui mà buồn; âm nhạc giữ đúng cái vẻ nửa sáng nửa tối ấy.
+Tên bài trùng tên bài thơ *Clair de lune* của Paul Verlaine, bài mở đầu tập *Fêtes galantes* (1869), bài thơ mà Debussy đã phổ nhạc thành ca khúc. Chữ *bergamasque* có ngay trong bài thơ ấy ("masques et bergamasques"); theo lời tựa của ấn bản Henle, tên tổ khúc thường được coi là một gợi nhớ tới tập thơ này. Bài thơ tả những nhân vật đeo mặt nạ dưới ánh trăng, vui mà buồn; âm nhạc giữ đúng cái vẻ nửa sáng nửa tối ấy.
 
-Debussy viết bộ tổ khúc khi khoảng 28 tuổi, nhưng chỉ in nó 15 năm sau, khi phong cách của ông đã khác hẳn. Bản in năm 1905 là bản đã sửa; bản thảo gốc không còn, nên không ai biết chắc phần nào thuộc năm 1890, phần nào thuộc năm 1905. Bài nằm ở ngưỡng giữa thế kỷ 19 và thế kỷ 20: hòa âm còn chức năng (có át, có kết rõ) nhưng màu sắc đã là của Debussy. Xem [thế kỷ 20](/opus/lich-su/thoi-ky/the-ky-20/).
+Debussy viết bộ tổ khúc khi khoảng 28 tuổi, nhưng chỉ in nó 15 năm sau; chính ông ghi năm 1890 lên bản in thử để cho biết đây là tác phẩm thời trẻ. Bản in năm 1905 là bản đã sửa; bản thảo gốc đến nay chưa tìm thấy, nên không ai biết chắc phần nào thuộc năm 1890, phần nào thuộc năm 1905. Bài nằm ở ngưỡng giữa thế kỷ 19 và thế kỷ 20: hòa âm còn chức năng (có át, có kết rõ) nhưng màu sắc đã là của Debussy. Xem [thế kỷ 20](/opus/lich-su/thoi-ky/the-ky-20/).
 
 ## Nghe trước khi tập
 
@@ -54,7 +54,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | … | **Cao trào** (ô 37–42): dồn lên điểm cao nhất của bài, quanh ô 41 |
 | … | **Calmato** (ô 43–50): lắng lại trên nền trầm lung linh |
 | … | **A'** (ô 51–65): tốc độ ban đầu trở lại; chủ đề mở đầu trên nền hợp âm rải, như một kỷ niệm |
-| … | **Coda** (ô 66–72): hợp âm rải, tay bắt chéo, tan dần đến hết; hợp âm cuối ngân thật lâu |
+| … | **Coda** (ô 66–72): hợp âm rải, tay bắt chéo, tan dần đến hết (*morendo jusqu'à la fin*) |
 
 ## Cấu trúc
 
@@ -170,7 +170,7 @@ Kế hoạch 9 tuần, 45–60 phút mỗi ngày. Tốc độ tính theo phách 
 
 ### Sắc thái và tầng âm thanh
 
-Bài sống trong vùng từ *pp* đến *p*, với vài lần lên *mf* và một cao trào ở đoạn B. Hãy có ít nhất ba mức nhỏ khác nhau: thì thầm, nhỏ, nhỏ mà ấm. Luôn có ba tầng: giai điệu, phần hòa âm, bè trầm. Bè trầm thường là nốt ngân dài: đánh nó sâu một chút để bàn đạp có thứ để giữ.
+Bài gần như chỉ sống trong vùng từ *ppp* đến *p*; chỉ một lần lên *f*, ở cao trào của đoạn B (ô 41). Hãy có ít nhất ba mức nhỏ khác nhau: thì thầm, nhỏ, nhỏ mà ấm. Luôn có ba tầng: giai điệu, phần hòa âm, bè trầm. Bè trầm thường là nốt ngân dài: đánh nó sâu một chút để bàn đạp có thứ để giữ.
 
 ### Bàn đạp và una corda
 
@@ -233,7 +233,5 @@ Bản thảo gốc đã thất lạc; các bản Urtext dựa vào ấn bản 19
 ## Nguồn
 
 - Debussy, *Suite bergamasque*, G. Henle Verlag (HN 381), lời tựa của François Lesure: niên đại, các tên gọi ban đầu, lịch sử xuất bản.
-- Gurminder Kaur Bhogal, *Claude Debussy's Clair de Lune*, Oxford University Press (Oxford Keynotes), 2018.
-- Roy Howat, *The Art of French Piano Music*, Yale University Press, 2009.
-- Paul Roberts, *Images: The Piano Music of Claude Debussy*, Amadeus Press, 1996.
-- Bản nhạc: [IMSLP](https://imslp.org/). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
+- Paul Verlaine, *Fêtes galantes*, bài *Clair de lune*, trong *Œuvres complètes*, tập 1 ([Project Gutenberg](https://www.gutenberg.org/ebooks/15112)).
+- Bản nhạc: [IMSLP](https://imslp.org/); bản chép LilyPond của [Mutopia Project](https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly) theo bản in E. Fromont 1905, dùng để đếm ô, đối chiếu chỉ dẫn và sắc thái. Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

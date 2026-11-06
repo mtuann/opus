@@ -1,122 +1,278 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/bach-prelude-fugue-do-thu
 ban_ghi: tac-pham/bach-prelude-fugue-do-thu
+ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/bach-prelude-fugue-do-thu.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Bach-Digital (bach-digital.de) không mở được: trang chỉ trả về thử thách chống bot ("Please wait a moment while we verify your connection"), nên không dùng. Lần 2 (D6-L5 phần A): bản nhạc Mutopia bwv847a, fuga2 (tải 05/11/2026), Henle HN 14/HN 1014, Commons API.'
 lan:
-  - so: 1
-    ngay: 2026-10-24
-    nhanh: moi/d2-0-du-lieu
-    ma_bam: sha256:488f0246da076eac573fc34d38c62e59570dd05486f2542a27e81f34289b718e
-    nguoi:
-      luot_1: Claude Sonnet 5.5 (D2-0 phần A)
-      luot_2: Claude Sonnet 5.5 (D2-0 lượt 2 phần A)
-      review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
-      kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
-    truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
-  - so: 2
-    ngay: null
-    nhanh: moi/d6-l5
-    ma_bam: null
-    nguoi:
-      luot_1: null
-      luot_2: null
-      review: null
-      kiem_mau: null
-ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/bach-prelude-fugue-do-thu.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Bach-Digital (bach-digital.de) không mở được: trang chỉ trả về thử thách chống bot ("Please wait a moment while we verify your connection"), nên không dùng.'
+- so: 1
+  ngay: 2026-10-24
+  nhanh: moi/d2-0-du-lieu
+  ma_bam: sha256:488f0246da076eac573fc34d38c62e59570dd05486f2542a27e81f34289b718e
+  nguoi:
+    luot_1: Claude Sonnet 5.5 (D2-0 phần A)
+    luot_2: Claude Sonnet 5.5 (D2-0 lượt 2 phần A)
+    review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
+    kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
+  truong: [chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten]
+- so: 2
+  ngay: '2026-11-05'
+  nhanh: moi/d6-l5
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Opus 5.5, agent con, D6-L5 phần A
+    luot_2: null
+    review: null
+    kiem_mau: null
 nguon:
-  - id: imslp-wtc1
-    bac: 2
-    ten: IMSLP, Das wohltemperierte Klavier I, BWV 846-869 (Bach)
-    link: https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)
-  - id: henle-hn14
-    bac: 2
-    ten: G. Henle Verlag, HN 14 The Well-Tempered Clavier Part I BWV 846-869 (mức khó từng prelude, fugue)
-    link: https://www.henle.de/en/The-Well-Tempered-Clavier-Part-I-BWV-846-869/HN-14
-  - id: abrsm-1516g8
-    bac: 2
-    ten: "ABRSM, Piano 2015 & 2016, Grade 8: danh sách tác phẩm (bản lưu của us.abrsm.org/media/62106/piano0815.pdf)"
-    link: https://web.archive.org/web/2020/https://us.abrsm.org/media/62106/piano0815.pdf
-  - id: rcm-2022
-    bac: 2
-    ten: The Royal Conservatory (RCM), Piano Syllabus, 2022 Edition
-    link: https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf
-  - id: henle-thang
-    bac: 2
-    ten: G. Henle Verlag, Levels of Difficulty (thang độ khó 1–9; trang không có bảng quy đổi sang ABRSM)
-    link: https://www.henle.de/Levels-of-Difficulty/
+- id: imslp-wtc1
+  bac: 2
+  ten: IMSLP, Das wohltemperierte Klavier I, BWV 846-869 (Bach)
+  link: https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)
+- id: henle-hn14
+  bac: 2
+  ten: G. Henle Verlag, HN 14 The Well-Tempered Clavier Part I BWV 846-869 (mức khó từng prelude, fugue)
+  link: https://www.henle.de/en/The-Well-Tempered-Clavier-Part-I-BWV-846-869/HN-14
+- id: abrsm-1516g8
+  bac: 2
+  ten: 'ABRSM, Piano 2015 & 2016, Grade 8: danh sách tác phẩm (bản lưu của us.abrsm.org/media/62106/piano0815.pdf)'
+  link: https://web.archive.org/web/2020/https://us.abrsm.org/media/62106/piano0815.pdf
+- id: rcm-2022
+  bac: 2
+  ten: The Royal Conservatory (RCM), Piano Syllabus, 2022 Edition
+  link: https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf
+- id: henle-thang
+  bac: 2
+  ten: G. Henle Verlag, Levels of Difficulty (thang độ khó 1–9; trang không có bảng quy đổi sang ABRSM)
+  link: https://www.henle.de/Levels-of-Difficulty/
+- id: mut-847-pre
+  bac: 1
+  ten: Mutopia Project, Das Wohltemperierte Clavier I, Praeludium II, BWV 847 (Davide Castellone, nguồn Breitkopf & Härtel 1866; tệp LilyPond và MIDI, tải 05/11/2026)
+  link: https://www.mutopiaproject.org/ftp/BachJS/BWV847/bwv847a/bwv847a.ly
+- id: mut-847-fug
+  bac: 1
+  ten: Mutopia Project, Das Wohltemperierte Clavier I, Fuga II a 3 voci, BWV 847 (Urs Metzger, nguồn Edition Peters; tệp LilyPond và MIDI, tải 05/11/2026)
+  link: https://www.mutopiaproject.org/ftp/BachJS/BWV847/fuga2/fuga2.ly
+- id: henle-hn1014
+  bac: 2
+  ten: 'G. Henle Verlag, HN 1014 The Well-Tempered Clavier Part I (Urtext, without fingering): trang sản phẩm'
+  link: https://www.henle.de/en/The-Well-Tempered-Clavier-Part-I-BWV-846-869/HN-1014
+- id: henle-hn14-vorwort
+  bac: 2
+  ten: 'G. Henle Verlag, HN 14: lời nói đầu (Ernst-Günter Heinemann, 1997), PDF: bản chép sạch 1722, nguyên văn trang bìa ("Praeludia, und Fugen durch alle Tone und Semitonia ... Zum Nutzen und Gebrauch der Lehrbegierigen Musicalischen Jugend, als auch derer in diesem studio schon habil seyenden ..."), lên dây bình quân cho phép chơi mọi giọng; tập nhạc in khoảng năm mươi năm sau khi Bach mất'
+  link: https://www.henle.de/media/f4/14/7f/1690886046/0014-1690886046-sync.pdf
+- id: henle-blog-wtc
+  bac: 2
+  ten: 'G. Henle Verlag blog (Annette Oppermann, 31/10/2022), "If that''s not reason enough to celebrate: 300 years of WTC I!": bản chép 1722 có trang bìa công phu; khoảng năm 1800 ba nhà xuất bản (Nägeli, Simrock, Hoffmeister & Kühnel) in tập nhạc'
+  link: https://blog.henle.de/en/2022/10/31/if-thats-not-reason-enough-to-celebrate-300-years-of-wtc-i/
+- id: commons-ishizaka-847
+  bac: 2
+  ten: Wikimedia Commons, Kimiko Ishizaka – Bach – Well-Tempered Clavier, Book 1 – 03 Prelude No. 2 / 04 Fugue No. 2 in C minor, BWV 847 (CC0; 107,29 s và 115,93 s; API imageinfo 05/11/2026)
+  link: https://commons.wikimedia.org/wiki/File:Kimiko_Ishizaka_-_Bach_-_Well-Tempered_Clavier,_Book_1_-_03_Prelude_No._2_in_C_minor,_BWV_847.ogg
 nhan_dinh:
-  - id: n1
-    cau: "Tên bài: Prelude và fugue Đô thứ, BWV 847 (cặp số 2 trong Das wohltemperierte Klavier, quyển 1)."
-    loai: ten
-    truong:
-      - ten
-    nguon:
-      - imslp-wtc1
-      - henle-hn14
-    ket_qua: dung
-    ghi_chu: 'IMSLP: "Das wohltemperierte Klavier I", BWV 846–869. Henle HN 14: "Prelude c minor BWV 847", "Fugue c minor BWV 847".'
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)" ]
-    luot_2_ghi_chu: 'IMSLP WTC I: "Prelude and Fugue in C minor, BWV 847" (second pair).'
-  - id: n2
-    cau: "Tác giả: Johann Sebastian Bach."
-    loai: lich-su
-    truong:
-      - tac_gia
-    nguon:
-      - imslp-wtc1
-      - henle-hn14
-    ket_qua: dung
-    ghi_chu: 'IMSLP: Composer "Bach, Johann Sebastian"; Henle HN 14 là ấn bản Urtext của Bach.'
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)" ]
-    luot_2_ghi_chu: "IMSLP composer: Bach, Johann Sebastian."
-  - id: n3
-    cau: "Số danh mục: BWV 847."
-    loai: danh-muc
-    truong:
-      - danh_muc
-    nguon:
-      - imslp-wtc1
-      - henle-hn14
-      - abrsm-1516g8
-    ket_qua: dung
-    ghi_chu: 'IMSLP: BWV 846–869 (cặp thứ hai là BWV 847). Henle: "Prelude c minor BWV 847". ABRSM 2015–2016: "Prelude and Fugue in C minor, BWV 847".'
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", https://www.henle.de/en/The-Well-Tempered-Clavier-Part-I-BWV-846-869/HN-14 ]
-    luot_2_ghi_chu: BWV 847.
-  - id: n4
-    cau: Bài tương đương khoảng ABRSM Grade 7–8.
-    loai: cap-do
-    truong:
-      - grade
-    nguon:
-      - abrsm-1516g8
-      - henle-hn14
-      - rcm-2022
-      - henle-thang
-    ket_qua: dung
-    ghi_chu: 'Đề cương chính thức: ABRSM Piano 2015 & 2016, Grade 8, danh sách A, mục 2: "J. S. Bach, Prelude and Fugue in C minor, BWV 847: No. 2 from Das wohltemperirte Clavier, Part 1". Henle mức 6 (prelude) và 5 (fugue); RCM 2022: Level 9. Grade 8 nằm trong khoảng Grade 7–8. Chỉ có một kỳ ABRSM (2015–2016) có file để đối chiếu.'
-    luot_2: dung
-    luot_2_nguon: [ https://web.archive.org/web/20160720134126/http://gb.abrsm.org/fileadmin/user_upload/syllabuses/piano0815.pdf, https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf, https://www.henle.de/en/The-Well-Tempered-Clavier-Part-I-BWV-846-869/HN-14 ]
-    luot_2_ghi_chu: 'ABRSM Piano 2015-16 Grade 8, List A no.2: "Prelude and Fugue in C minor, BWV 847: No. 2 from Das wohltemperirte Clavier, Part 1"; RCM 2022 Level 9 (Prelude and Fugue C minor BWV 847); Henle levels: prelude 6, fugue 5. Grade 8 lies inside 7-8.'
-  - id: n5
-    cau: Bài thuộc chặng 6 (Grade 7–8) của lộ trình piano.
-    loai: cap-do
-    truong:
-      - chang
-    nguon:
-      - abrsm-1516g8
-    ket_qua: dung
-    ghi_chu: Chặng 6 = Grade 7–8 (cap-do.yml); ABRSM Grade 8 nằm trong chặng này.
-    luot_2: dung
-    luot_2_nguon: [ https://web.archive.org/web/20160720134126/http://gb.abrsm.org/fileadmin/user_upload/syllabuses/piano0815.pdf ]
-    luot_2_ghi_chu: Stage 6 = Grade 7-8; ABRSM Grade 8.
-  - id: n6
-    cau: Bài được gợi ý ở chặng 6 trong hộp luyện tập của trang chủ.
-    loai: khuyen-tap
-    truong:
-      - goi_y
-    nguon: []
-    ket_qua: khong-can-nguon
-    ghi_chu: '../opus-zero/docs/assets/js/practice.js, hằng SUGGEST[6] có ["piano/tac-pham/bach-prelude-fugue-do-thu/", "Bach: Prelude và fugue Đô thứ"]; chặng 6 trùng chang 6 của bản ghi.'
-    luot_2: dung
-    luot_2_ghi_chu: Reasonable; not contradicted.
+- id: n1
+  cau: 'Tên bài: Prelude và fugue Đô thứ, BWV 847 (cặp số 2 trong Das wohltemperierte Klavier, quyển 1).'
+  loai: ten
+  truong: [ten]
+  nguon: [imslp-wtc1, henle-hn14]
+  ket_qua: dung
+  ghi_chu: 'IMSLP: "Das wohltemperierte Klavier I", BWV 846–869. Henle HN 14: "Prelude c minor BWV 847", "Fugue c minor BWV 847".'
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)
+  luot_2_ghi_chu: 'IMSLP WTC I: "Prelude and Fugue in C minor, BWV 847" (second pair).'
+- id: n2
+  cau: 'Tác giả: Johann Sebastian Bach.'
+  loai: lich-su
+  truong: [tac_gia]
+  nguon: [imslp-wtc1, henle-hn14]
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Composer "Bach, Johann Sebastian"; Henle HN 14 là ấn bản Urtext của Bach.'
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)
+  luot_2_ghi_chu: 'IMSLP composer: Bach, Johann Sebastian.'
+- id: n3
+  cau: 'Số danh mục: BWV 847.'
+  loai: danh-muc
+  truong: [danh_muc]
+  nguon: [imslp-wtc1, henle-hn14, abrsm-1516g8]
+  ket_qua: dung
+  ghi_chu: 'IMSLP: BWV 846–869 (cặp thứ hai là BWV 847). Henle: "Prelude c minor BWV 847". ABRSM 2015–2016: "Prelude and Fugue in C minor, BWV 847".'
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)
+  - https://www.henle.de/en/The-Well-Tempered-Clavier-Part-I-BWV-846-869/HN-14
+  luot_2_ghi_chu: BWV 847.
+- id: n4
+  cau: Bài tương đương khoảng ABRSM Grade 7–8.
+  loai: cap-do
+  truong: [grade]
+  nguon: [abrsm-1516g8, henle-hn14, rcm-2022, henle-thang]
+  ket_qua: dung
+  ghi_chu: 'Đề cương chính thức: ABRSM Piano 2015 & 2016, Grade 8, danh sách A, mục 2: "J. S. Bach, Prelude and Fugue in C minor, BWV 847: No. 2 from Das wohltemperirte Clavier, Part 1". Henle mức 6 (prelude) và 5 (fugue); RCM 2022: Level 9. Grade 8 nằm trong khoảng Grade 7–8. Chỉ có một kỳ ABRSM (2015–2016) có file để đối chiếu.'
+  luot_2: dung
+  luot_2_nguon:
+  - https://web.archive.org/web/20160720134126/http://gb.abrsm.org/fileadmin/user_upload/syllabuses/piano0815.pdf
+  - https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf
+  - https://www.henle.de/en/The-Well-Tempered-Clavier-Part-I-BWV-846-869/HN-14
+  luot_2_ghi_chu: 'ABRSM Piano 2015-16 Grade 8, List A no.2: "Prelude and Fugue in C minor, BWV 847: No. 2 from Das wohltemperirte Clavier, Part 1"; RCM 2022 Level 9 (Prelude and Fugue C minor BWV 847); Henle levels: prelude 6, fugue 5. Grade 8 lies inside 7-8.'
+- id: n5
+  cau: Bài thuộc chặng 6 (Grade 7–8) của lộ trình piano.
+  loai: cap-do
+  truong: [chang]
+  nguon: [abrsm-1516g8]
+  ket_qua: dung
+  ghi_chu: Chặng 6 = Grade 7–8 (cap-do.yml); ABRSM Grade 8 nằm trong chặng này.
+  luot_2: dung
+  luot_2_nguon:
+  - https://web.archive.org/web/20160720134126/http://gb.abrsm.org/fileadmin/user_upload/syllabuses/piano0815.pdf
+  luot_2_ghi_chu: Stage 6 = Grade 7-8; ABRSM Grade 8.
+- id: n6
+  cau: Bài được gợi ý ở chặng 6 trong hộp luyện tập của trang chủ.
+  loai: khuyen-tap
+  truong: [goi_y]
+  nguon: []
+  ket_qua: khong-can-nguon
+  ghi_chu: '../opus-zero/docs/assets/js/practice.js, hằng SUGGEST[6] có ["piano/tac-pham/bach-prelude-fugue-do-thu/", "Bach: Prelude và fugue Đô thứ"]; chặng 6 trùng chang 6 của bản ghi.'
+  luot_2: dung
+  luot_2_ghi_chu: Reasonable; not contradicted.
+- id: n7
+  cau: 'Giọng: Đô thứ.'
+  loai: cau-truc
+  truong: [giong]
+  nguon: [mut-847-pre, mut-847-fug, henle-hn14]
+  ket_qua: dung
+  ghi_chu: 'Hai tệp .ly: \key c \minor; Henle "c minor".'
+- id: n8
+  cau: 'Nhịp: 4/4 (prelude và fugue).'
+  loai: cau-truc
+  truong: [nhip]
+  nguon: [mut-847-pre, mut-847-fug]
+  ket_qua: dung
+  ghi_chu: \time 4/4 ở cả hai tệp.
+- id: n9
+  cau: 'Thời kỳ: Baroque.'
+  loai: lich-su
+  truong: [thoi_ky]
+  nguon: [imslp-wtc1, mut-847-pre]
+  ket_qua: dung
+  ghi_chu: IMSLP Piece Style Baroque; Mutopia style "Baroque".
+- id: n10
+  cau: 'Kỹ năng chính: móc kép đều ở hai tay, fugue ba bè, nghe và giữ từng bè.'
+  loai: cau-truc
+  truong: [ky_nang_chinh]
+  nguon: [mut-847-pre, mut-847-fug]
+  ket_qua: dung
+  ghi_chu: Prelude ô 1–24 móc kép hai tay; fugue "a 3 Voci".
+- id: n11
+  cau: 'Chip: "Đô thứ · 4/4".'
+  loai: cau-truc
+  truong: [chip]
+  nguon: [mut-847-pre, mut-847-fug]
+  ket_qua: dung
+- id: n12
+  cau: 'Chip: "Prelude · fugue ba bè".'
+  loai: cau-truc
+  truong: [chip]
+  nguon: [mut-847-fug]
+  ket_qua: dung
+- id: n13
+  cau: 'Chip cấp độ: "≈ Grade 7–8".'
+  loai: cap-do
+  truong: [chip]
+  nguon: [abrsm-1516g8, rcm-2022, henle-hn14]
+  ket_qua: dung
+  ghi_chu: 'Khớp grade đã khóa (lần 1 n4): ABRSM 2015–2016 Grade 8; RCM 2022 Level 9; Henle 6/5.'
+- id: n14
+  cau: 'Chip: "38 + 31 ô nhịp".'
+  loai: cau-truc
+  truong: [chip]
+  nguon: [mut-847-pre, mut-847-fug]
+  ket_qua: dung
+  ghi_chu: 'MIDI: prelude 38 ô, fugue 31 ô.'
+- id: n15
+  cau: 'Thông tin, nhà soạn nhạc: Johann Sebastian Bach (1685–1750).'
+  loai: nam
+  truong: [thong_tin]
+  nguon: [imslp-wtc1]
+  ket_qua: dung
+  ghi_chu: Khớp nha-soan-nhac.yml (đã khóa); Mutopia composer "Johann Sebastian Bach (1685–1750)".
+- id: n16
+  cau: 'Thông tin, tác phẩm: BWV 847, cặp số 2 trong Das Wohltemperierte Klavier (Bình quân luật) quyển 1, ngay sau Prelude Đô trưởng BWV 846.'
+  loai: danh-muc
+  truong: [thong_tin]
+  nguon: [imslp-wtc1, henle-hn14]
+  ket_qua: dung
+- id: n17
+  cau: 'Thông tin: Bach chép sạch quyển 1, kèm một trang bìa trang trọng, năm 1722, thời làm việc ở Köthen.'
+  loai: nam
+  truong: [thong_tin]
+  nguon: [henle-hn14-vorwort, henle-blog-wtc]
+  ket_qua: dung
+  ghi_chu: 'Henle: "autograph fair copy dating from the year 1722", trang bìa "HochFürstlich AnhaltCöthenischen CapelMeistern"; blog: "accurate fair copy with an elaborate title page".'
+- id: n18
+  cau: 'Thông tin: tập nhạc lưu hành bằng bản chép tay; khoảng năm 1800 mới có bản in, gần như cùng lúc từ ba nhà xuất bản Nägeli (Zürich), Simrock (Bonn), Hoffmeister & Kühnel (Vienna và Leipzig).'
+  loai: nam
+  truong: [thong_tin]
+  nguon: [henle-blog-wtc, henle-hn14-vorwort]
+  ket_qua: dung
+  ghi_chu: 'Blog Henle: "Around 1800, three firms – Hans Georg Nägeli …" (Simrock có hình trang bìa ấn bản đầu); Henle lời nói đầu: in khoảng 50 năm sau khi Bach mất, trước đó lưu hành "in innumerable handwritten copies".'
+- id: n19
+  cau: 'Thông tin, giọng · nhịp · tốc độ: đầu prelude không ghi tốc độ; về cuối có Presto (ô 28), Adagio (ô 34), Allegro (ô 35); fugue không ghi tốc độ.'
+  loai: cau-truc
+  truong: [thong_tin]
+  nguon: [mut-847-pre, mut-847-fug]
+  ket_qua: dung
+  ghi_chu: fuga2.ly không có chữ tốc độ.
+- id: n20
+  cau: 'Thông tin, hình thức: prelude 38 ô, móc kép liên tục ở hai tay, khép lại bằng ba đoạn đổi tốc độ; fugue ba bè, 31 ô, một chủ đề, hai đối đề, năm đoạn chuyển.'
+  loai: cau-truc
+  truong: [thong_tin]
+  nguon: [mut-847-pre, mut-847-fug]
+  ket_qua: dung
+  ghi_chu: Đoạn chuyển ô 5–6, 9–10, 13–14, 17–19, 22–26 (hồ sơ trang).
+- id: n21
+  cau: 'Thông tin, độ khó: ABRSM xếp bài ở Grade 8 (đề cương 2015–2016), RCM ở Level 9 (2022); chặng 6; Henle xếp prelude mức 6, fugue mức 5 trên thang 9 (cả hai "trung bình").'
+  loai: cap-do
+  truong: [thong_tin]
+  nguon: [abrsm-1516g8, rcm-2022, henle-hn14]
+  ket_qua: da-sua
+  ghi_chu: 'Dữ liệu cũ: "Khoảng ABRSM Grade 7–8 (ước lượng), chặng 6 …". Có đề cương thật (lần 1 n4), nên bỏ "(ước lượng)" và ghi kỳ đề cương, như D6-L3-gom. Henle: Prelude 6 medium, Fugue 5 medium. Đề xuất ở sua-A.yml.'
+- id: n22
+  cau: 'Thông tin, kỹ năng chính: móc kép đều và cân bằng ở hai tay; nghe và giữ ba bè độc lập; ngón bấm nối liền từng bè; phát âm nhất quán; chơi gần như không bàn đạp.'
+  loai: cau-truc
+  truong: [thong_tin]
+  nguon: [mut-847-pre, mut-847-fug]
+  ket_qua: dung
+- id: n23
+  cau: 'Thông tin, bản nhạc: Henle HN 1014 (biên tập Ernst-Günter Heinemann, không ghi ngón), HN 14 có ghi ngón.'
+  loai: ten
+  truong: [thong_tin]
+  nguon: [henle-hn14, henle-hn1014]
+  ket_qua: dung
+  ghi_chu: 'Trang HN 1014: "Ernst-Günter Heinemann (Editor)", "Urtext Edition, paperbound … without fingering"; "with fingerings (HN 14)".'
+- id: n24
+  cau: 'Thông tin, bản nhạc: Bärenreiter, Wiener Urtext cũng có ấn bản Urtext của quyển 1.'
+  loai: ten
+  truong: [thong_tin]
+  nguon: []
+  ket_qua: null
+  ghi_chu: 'chưa chắc: chưa mở trang ấn bản Bärenreiter, Wiener Urtext; lượt 2 kiểm.'
+- id: n25
+  cau: 'Hình cấu trúc: prelude ô 1–20 (Đô thứ → Mi♭ trưởng → Đô thứ, 20), âm nền át ô 21–27 (Sol ở bè trầm, 7), Presto · Adagio · Allegro ô 28–38 (kết Đô trưởng, 11); fugue trình bày ô 1–8 (alto, soprano, bass, 8), giữa fugue ô 9–25 (Mi♭ trưởng, Sol thứ, Đô thứ; các đoạn chuyển, 17), lần vào cuối ô 26–31 (bass, rồi soprano trên nốt Đô ngân, 6).'
+  loai: cau-truc
+  truong: [hinh]
+  nguon: [mut-847-pre, mut-847-fug]
+  ket_qua: dung
+  ghi_chu: Độ rộng bằng số ô; tổng 38 + 31. Ranh giới khớp bản nhạc (hồ sơ trang).
+- id: n26
+  cau: 'Ghi chú của hình: số ô theo bản Bach-Gesellschaft (prelude) và Edition Peters (fugue), qua Mutopia.'
+  loai: ten
+  truong: [hinh]
+  nguon: [mut-847-pre, mut-847-fug]
+  ket_qua: dung
+- id: n27
+  cau: 'Bản thu gợi ý: Kimiko Ishizaka, CC0, hai phần Prelude (107,29 s) và Fugue (115,93 s), trang Commons.'
+  loai: ten
+  truong: [ban_thu]
+  nguon: [commons-ishizaka-847]
+  ket_qua: dung
+  ghi_chu: 'Commons: "performed by Kimiko Ishizaka", CC0; độ dài 107,29 s và 115,93 s khớp d. Liên kết mp3, src đúng tệp.'

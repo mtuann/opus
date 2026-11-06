@@ -11,7 +11,7 @@ Chương chậm của *Pathétique* là một bài ca không lời: giai điệu
 ## Vì sao nên học bài này
 
 - **Một bàn tay, hai vai trò.** Ngay từ ô đầu, tay phải vừa hát giai điệu bằng ngón 3–4–5, vừa chơi phần đệm móc kép bằng ngón 1–2. Đây là kỹ năng trung tâm của nhạc piano từ Beethoven đến Brahms.
-- **Chủ đề quay lại ba lần, mỗi lần một kết cấu khác.** Bạn học cách giữ cùng một giai điệu đẹp trong ba hoàn cảnh khác nhau.
+- **Chủ đề vang lên ba lần, kết cấu đổi dần.** Lần đầu, chủ đề được nhắc lại cao hơn một quãng tám với phần đệm dày hơn; lần cuối, phần đệm chuyển sang chùm ba. Bạn học cách giữ cùng một giai điệu đẹp trong ba hoàn cảnh khác nhau.
 - **Chậm mà không đứng.** 2/4 *Adagio* dễ thành từng nốt rời rạc; bài này dạy bạn nghĩ theo câu dài.
 - **Bước vào Beethoven** mà không cần tốc độ hay sức mạnh của chương 1 và chương 3.
 
@@ -21,7 +21,7 @@ Nếu chưa làm nổi được giai điệu trên hợp âm của cùng một t
 
 ## Bối cảnh
 
-Beethoven viết *Pathétique* khi khoảng 27 tuổi, vài năm sau khi đến Vienna, lúc ông nổi tiếng như một nghệ sĩ piano biểu diễn ngẫu hứng hơn là một nhà soạn nhạc. Tên *Grande Sonate pathétique* có ngay trên bản in đầu tiên năm 1799 (chuyện cái tên ở [hướng dẫn nghe](/opus/nghe-nhac/beethoven-pathetique/)); "pathétique" ở đây gần nghĩa với "đầy xúc động, bi tráng", không phải "thảm hại".
+Beethoven viết *Pathétique* khi khoảng 27 tuổi, vài năm sau khi đến Vienna (1792), lúc ông đã nổi tiếng như một nghệ sĩ piano, nhất là tài ứng tác. Tên *Grande Sonate pathétique* có ngay trên bản in đầu tiên năm 1799 (chuyện cái tên ở [hướng dẫn nghe](/opus/nghe-nhac/beethoven-pathetique/)); "pathétique" ở đây gần nghĩa với "đầy xúc động, bi tráng", không phải "thảm hại".
 
 Sau chương 1 Đô thứ dữ dội, chương 2 chuyển sang La♭ trưởng, thấp hơn một quãng ba trưởng: một sự yên bình bất ngờ. Nhiều người nhận thấy giai điệu của nó rất gần với một chủ đề trong chương chậm của Sonata Đô thứ K. 457 của Mozart; hai sonata còn giống nhau ở giọng và cách chia chương. So sánh hai bản là một bài tập nghe thú vị về cách Beethoven học từ Mozart. Xem thêm [thời kỳ Cổ điển](/opus/lich-su/thoi-ky/co-dien/).
 
@@ -57,7 +57,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 
 ::hinh-cau-truc
 
-Đây là một [rondo](/opus/hinh-thuc/rondo/) nhỏ: chủ đề A quay lại ba lần, xen giữa là hai đoạn tương phản.
+Đây là một [rondo](/opus/hinh-thuc/rondo/) nhỏ: chủ đề A vang lên ba lần, xen giữa là hai đoạn tương phản.
 
 | Đoạn | Ô nhịp | Nội dung | Kết cấu, điều cần chú ý |
 |---|---|---|---|
@@ -180,7 +180,7 @@ Tôn trọng dấu luyến của Beethoven: chúng thường dài hơn ở giai 
 
 ### Bàn đạp
 
-Đàn của Beethoven năm 1798 có tiếng tắt nhanh hơn đàn hiện đại. Trên đàn hiện đại, đạp **nông** và đổi **theo hòa âm**, thường mỗi phách hoặc nửa phách. Giai điệu phải liền nhờ ngón tay trước, bàn đạp chỉ thêm độ ấm. Xem [Bàn đạp](/opus/piano/ban-dap/).
+Trên đàn hiện đại, đạp **nông** và đổi **theo hòa âm**, thường mỗi phách hoặc nửa phách. Giai điệu phải liền nhờ ngón tay trước, bàn đạp chỉ thêm độ ấm. Xem [Bàn đạp](/opus/piano/ban-dap/).
 
 ### Nốt hoa mỹ
 
@@ -205,7 +205,7 @@ Các bản thế kỷ 19 (như của Hans von Bülow) thêm nhiều sắc thái,
 - **Cả sonata:** chương 3 (Rondo: Allegro) là bước tiếp theo tự nhiên; chương 1 cần tốc độ và sức bền ở mức Grade 8 trở lên.
 - **Hát trên phím đàn:** [Chopin: Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/), [Debussy: Clair de lune](/opus/piano/tac-pham/debussy-clair-de-lune/).
 - **Beethoven khác:** [chương 1 Sonata *Ánh trăng*](/opus/piano/tac-pham/beethoven-anh-trang/) (nghe trước [hướng dẫn nghe](/opus/nghe-nhac/beethoven-moonlight/)).
-- **Cùng chặng:** [Bach: Prelude và fugue Đô thứ](/opus/piano/tac-pham/bach-prelude-fugue-do-thu/), [Schubert: Impromptu Sol♭ trưởng](/opus/piano/tac-pham/schubert-impromptu-sol-giang/).
+- **Cùng chặng:** [Bach: Prelude và fugue Đô thứ](/opus/piano/tac-pham/bach-prelude-fugue-do-thu/); chặng sau: [Schubert: Impromptu Sol♭ trưởng](/opus/piano/tac-pham/schubert-impromptu-sol-giang/).
 - Xem [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
 
 ::hoc-tiep
@@ -237,7 +237,6 @@ Các bản thế kỷ 19 (như của Hans von Bülow) thêm nhiều sắc thái,
 
 ## Nguồn
 
-- Beethoven, *Klaviersonate c-moll op. 13 (Pathétique)*, G. Henle Verlag; Beethoven, *The 35 Piano Sonatas*, ABRSM (biên tập Barry Cooper).
-- Barry Cooper, *Beethoven*, Oxford University Press (Master Musicians), 2000.
-- Charles Rosen, *Beethoven's Piano Sonatas: A Short Companion*, Yale University Press, 2002.
-- Bản nhạc: [IMSLP](https://imslp.org/). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
+- G. Henle Verlag, [*Piano Sonata no. 8 c minor op. 13 (Grande Sonate Pathétique)*, HN 1348](https://www.henle.de/en/Piano-Sonata-no.-8-c-minor-op.-13-Grande-Sonata-Pathetique/HN-1348) (biên tập Norbert Gertsch, Murray Perahia, 2018): lời nói đầu về niên đại, bản in đầu tiên và tên gọi.
+- Paul Badura-Skoda, lời giới thiệu đĩa Mozart, Sonata K. 457 ([PDF](https://eclassical.textalk.se/shop/17115/art99/4899599-2f7397-9003643989900.pdf)): đoạn xen La♭ trưởng trong chương chậm của K. 457 và chủ đề Adagio của *Pathétique*.
+- Bản nhạc: [IMSLP](https://imslp.org/); bản chép LilyPond của [Mutopia Project](https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly) (theo Berners 1908 và Peters 1910), dùng để đếm ô và đối chiếu cấu trúc. Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

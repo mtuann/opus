@@ -12,7 +12,7 @@ Cặp thứ hai của *Bình quân luật* quyển 1 gồm hai bài học bổ s
 
 - **Fugue ba bè vừa sức để bắt đầu.** 31 ô nhịp, chủ đề dễ nhận ra, ba bè vào lần lượt rất rõ. Chơi được một prelude và fugue mà các bè nghe rõ là một mốc của chặng 6 trong [lộ trình](/opus/piano/lo-trinh/).
 - **Prelude là bài kiểm tra độ đều.** Suốt 24 ô đầu, hai tay chơi cùng một kiểu hình móc kép; một nốt vội hay một nốt to là lộ ngay. Đây là bài luyện ngón tốt hơn mọi bài tập khô khan, vì nó có hòa âm để nghe.
-- **Hai cách nghĩ trong một cặp.** Prelude nghĩ theo hợp âm, giống [BWV 846](/opus/piano/tac-pham/bach-prelude-do/) nhưng nhanh và gắt hơn; fugue nghĩ theo đường nét. Bạn tập chuyển qua lại giữa hai lối nghe.
+- **Hai cách nghĩ trong một cặp.** Prelude nghĩ theo hợp âm, giống [BWV 846](/opus/piano/tac-pham/bach-prelude-do/): mỗi ô một hợp âm, rải bằng một hình nốt lặp lại; fugue nghĩ theo đường nét. Bạn tập chuyển qua lại giữa hai lối nghe.
 - **Học cách tập có phương pháp.** Chặn hợp âm, tập theo nhịp chấm dôi, tập từng bè và từng cặp bè: những cách này dùng được cho mọi tác phẩm phức điệu về sau.
 - **Cửa vào phần còn lại của Bach.** Sau bài này, các sinfonia, những cặp prelude và fugue khác của *Bình quân luật* và các partita sẽ bớt xa lạ.
 
@@ -33,7 +33,7 @@ Nghe vài lần, mắt theo bản nhạc, mỗi lần một nhiệm vụ:
 3. **Fugue: đếm chủ đề.** Chủ đề (kể cả đáp đề) vào tám lần. Bạn nghe ra được mấy lần?
 4. **Fugue: theo một bè.** Một lần chỉ theo bè bass, một lần chỉ theo bè alto, bè khó nghe nhất vì nằm giữa.
 
-Rồi so sánh vài cách chơi thật khác nhau: Glenn Gould (tách tiếng, nhịp sắc), Sviatoslav Richter, András Schiff, Angela Hewitt, tất cả đều thu âm *Bình quân luật*; và một bản trên harpsichord, chẳng hạn Gustav Leonhardt. Ghi lại: ai chơi móc kép liền, ai tách; ai dùng nhiều sắc thái; tốc độ fugue chênh nhau bao nhiêu? Nếu chưa nghe cặp đứng trước, nghe thêm [Prelude Đô trưởng](/opus/piano/tac-pham/bach-prelude-do/).
+Rồi so sánh vài cách chơi thật khác nhau: Glenn Gould, Sviatoslav Richter, András Schiff, Angela Hewitt, tất cả đều thu âm *Bình quân luật*; và một bản trên harpsichord, chẳng hạn Gustav Leonhardt. Ghi lại: ai chơi móc kép liền, ai tách; ai dùng nhiều sắc thái; tốc độ fugue chênh nhau bao nhiêu? Nếu chưa nghe cặp đứng trước, nghe thêm [Prelude Đô trưởng](/opus/piano/tac-pham/bach-prelude-do/).
 
 ::khoi-nghe{moc="0 10 49 65 76 108 115 128 135 192"}
 
@@ -314,6 +314,5 @@ Dùng bản Urtext. Nhiều ấn bản cũ thêm sắc thái, dấu luyến và 
 
 - G. Henle Verlag, trang ấn bản [*The Well-Tempered Clavier Part I BWV 846-869*, HN 1014](https://www.henle.de/The-Well-Tempered-Clavier-Part-I-BWV-846-869/HN-1014) (biên tập Ernst-Günter Heinemann): mức độ khó theo thang Henle.
 - G. Henle Verlag, blog: [*If that's not reason enough to celebrate: 300 years of WTC I!*](https://blog.henle.de/en/2022/10/31/if-thats-not-reason-enough-to-celebrate-300-years-of-wtc-i/) (2022): bản chép năm 1722, trang bìa, các bản in quanh năm 1800.
-- David Ledbetter, *Bach's Well-tempered Clavier: The 48 Preludes and Fugues*, Yale University Press, 2002.
-- Christoph Wolff, *Johann Sebastian Bach: The Learned Musician*, W. W. Norton, 2000.
-- Bản nhạc: [IMSLP](https://imslp.org/); các đoạn trích đối chiếu với bản chép LilyPond của [Mutopia Project](https://www.mutopiaproject.org/): prelude theo Breitkopf & Härtel 1866, fugue theo Edition Peters. Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
+- G. Henle Verlag, HN 14: [lời nói đầu](https://www.henle.de/media/f4/14/7f/1690886046/0014-1690886046-sync.pdf) của Ernst-Günter Heinemann (1997): trang bìa bản chép năm 1722, cách lên dây bình quân.
+- Bản nhạc: [IMSLP](https://imslp.org/); các đoạn trích đối chiếu với bản chép LilyPond của [Mutopia Project](https://www.mutopiaproject.org/): [prelude](https://www.mutopiaproject.org/ftp/BachJS/BWV847/bwv847a/bwv847a.ly) theo Breitkopf & Härtel 1866, [fugue](https://www.mutopiaproject.org/ftp/BachJS/BWV847/fuga2/fuga2.ly) theo Edition Peters. Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

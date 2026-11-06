@@ -3,34 +3,666 @@ trang: src/content/docs/piano/tac-pham/pathetique-adagio.md
 nguon_cu: ../opus-zero/docs/piano/tac-pham/pathetique-adagio.md
 tang: tac-pham
 lan:
-  - so: 1
-    ngay: null
-    nhanh: moi/d6-l5
-    ma_bam: null
-    nguoi:
-      luot_1: null
-      luot_2: null
-      review: null
-      kiem_mau: null
-nguon: []
-nhan_dinh: []
+- so: 1
+  ngay: '2026-11-05'
+  nhanh: moi/d6-l5
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Opus 5.5, agent con, D6-L5 phần A
+    luot_2: null
+    review: null
+    kiem_mau: null
+ghi_chu: 'Bài học Pathétique chương 2 (tầng Tác phẩm). Bản nhạc: Mutopia pathetique-2 (Berners 1908, Winterberger; Köhler & Ruthardt, Peters 1910), tải .ly và .mid 05/11/2026 với User-Agent opus-kiem-dinh; script Python (mido) in nốt theo ô: 73 ô 2/4; mọi số ô trên trang khớp (A 1–16, B 17–28, A 29–36, C 37–50 với Mi trưởng ô 42–47, bảy giảm ô 48–49, Mi♭7 ô 50, A 51–66 với ô 59 lên quãng tám, coda 66–73). Mốc ::khoi-nghe "1 45 88 155 198 222 259 297 330" (9 mốc / 9 dòng), bản thu Daniel Veesey (Commons, CC0, 380,54 s). Theo tools/audio/align/pieces.py mốc là ô 1, 9, 17, 29 (đo tay 154,5 s), 37, 43, 51, 59, 66: khớp các dòng bảng; dòng "Mi trưởng bất ngờ" đặt ở ô 43 (hợp âm Mi trưởng), trong khi Si7 và nốt sf đầu tiên ở ô 42, lệch một ô (khoảng 5 s), vẫn trong đoạn ấy. Không nghe lại bản thu. Thuật ngữ trang dùng (cantabile, chùm ba, láy quanh, enharmonic, staccato, legato, sf, rondo) có trong src/data/thuat-ngu.yml. Câu ve-site ở hồ sơ khác: piano/not-lap-not-kep n18 (đoạn C ô 37–50 có giai điệu và nốt lặp cùng một tay) và n43 (ô 17–28 tay trái, ô 37–50 tay phải): đúng theo bản nhạc, trang giữ số ô ấy. piano/tac-pham/beethoven-op49-2 n105, fur-elise n79 (link tới trang này): trang có. piano/nha-soan-nhac n57 (chặng 6): đúng. Không tính là nhận định: tiêu đề mục, tiêu đề cột bảng, chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng (thuộc hồ sơ bản ghi), mốc trong ::khoi-nghe. Giữ hai mục doi_chu của D2-0 ở đầu danh sách doi_chu.'
+nguon:
+- id: mut-op13-2
+  bac: 1
+  ten: Mutopia Project, Sonata No. 8 "Pathétique", chương 2 Adagio cantabile (Chris Sawer, nguồn Berners 1908 do A. Winterberger biên tập và Köhler & Ruthardt, Peters 1910; tệp LilyPond và MIDI, tải 05/11/2026)
+  link: https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly
+- id: henle-hn1348
+  bac: 2
+  ten: 'G. Henle Verlag, HN 1348 Piano Sonata no. 8 c minor op. 13 (Grande Sonate Pathétique): trang sản phẩm'
+  link: https://www.henle.de/en/Piano-Sonata-no.-8-c-minor-op.-13-Grande-Sonata-Pathetique/HN-1348
+- id: henle-hn1348-vorwort
+  bac: 2
+  ten: 'G. Henle Verlag, HN 1348: lời nói đầu (Norbert Gertsch, Murray Perahia, mùa thu 2018), PDF: phác thảo giữa 1797 – giữa 1798, phần chính xong khoảng giữa 1798; in mùa thu 1799 ở nhà Hoffmeister (Vienna), báo ngày 18/12 ghi "vừa in xong"; cùng Les Adieux op. 81a là sonata duy nhất Beethoven tự đặt tên; Grave quay lại hai lần'
+  link: https://www.henle.de/media/fc/b2/b2/1697725861/1348-1697725860-sync.pdf
+- id: beethoven-haus-op13
+  bac: 2
+  ten: 'Beethoven-Haus Bonn, Sonata for piano (C minor) op. 13 (Sonata patétique): đề tặng Karl Fürst von Lichnowsky; sáng tác 1797–1799; "Beethoven himself gave it the title Grande Sonate pathétique"; cùng Les Adieux là hai sonata có tên gốc'
+  link: https://www.beethoven.de/en/work/view/6166636289589248/sonate+f%C3%BCr+klavier+&
+- id: beethoven-haus-pianist
+  bac: 2
+  ten: 'Beethoven-Haus Bonn, Beethoven as a pianist (trang media): danh tiếng nghệ sĩ piano của Beethoven một phần nhờ tài ứng tác (lời Gelinek)'
+  link: https://www.beethoven.de/en/media/view/6362106559463424
+- id: imslp-op13
+  bac: 2
+  ten: 'IMSLP, Piano Sonata No.8, Op.13 (Beethoven): 3 chương (Grave – Allegro di molto e con brio, Đô thứ; Adagio cantabile, La♭ trưởng; Rondo. Allegro, Đô thứ); sáng tác 1798; in 18/12/1799, Vienna: Hoffmeister; đề tặng Karl Lichnowsky; thời lượng trung bình 19–20 phút; Piece Style Classical; danh sách ấn bản có Bülow/Lebert'
+  link: https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)
+- id: hyperion-hewitt
+  bac: 2
+  ten: 'Hyperion Records, CDA67605 Beethoven Piano Sonatas Vol. 2, Angela Hewitt: lời giới thiệu của Hewitt (2007): tên do Beethoven đặt; pathos; Moscheles; nhắc lại phần trình bày từ Grave ("Beethoven never indicated that the repeat ... should return only to the Allegro section. This was added at a later date by a publisher ... This is what I do (and what many other pianists, including Serkin, have opted to do as well)"); "perilous hand-crossing" ở chủ đề 2; Rondo kết với La♭ trưởng rồi Đô thứ'
+  link: https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA67605
+- id: badura-k457
+  bac: 2
+  ten: 'Paul Badura-Skoda, lời giới thiệu đĩa Mozart, Sonata K. 457 (PDF, eClassical): "the A flat major theme of the second episode is almost identical with the adagio theme of Beethoven''s Pathétique Sonata"'
+  link: https://eclassical.textalk.se/shop/17115/art99/4899599-2f7397-9003643989900.pdf
+- id: imslp-k457
+  bac: 2
+  ten: 'IMSLP, Piano Sonata No.14, K.457 (Mozart): Đô thứ, 3 chương, 1784'
+  link: https://imslp.org/wiki/Piano_Sonata_No.14,_K.457_(Mozart,_Wolfgang_Amadeus)
+- id: laphil-op13
+  bac: 2
+  ten: 'Los Angeles Philharmonic, About this Piece: Piano Sonata No. 8 "Pathétique" ("shows a kinship with some of Mozart''s piano works in C minor, especially the Fantasy K. 475 and Sonata K. 457")'
+  link: https://www.laphil.com/works/piano-sonata-no-8-in-c-minor-op-13-pathetique
+- id: abrsm-2324
+  bac: 2
+  ten: 'ABRSM, Piano Practical Grades Syllabus 2023 & 2024: Grade 8 danh sách B, Adagio cantabile (Op. 13)'
+  link: https://www.abrsm.org/sites/default/files/2023-10/Piano%202023%20&%202024%20Prac%20syllabus%2020230807.pdf
+- id: abrsm-2526
+  bac: 2
+  ten: 'ABRSM, Piano Practical Grades Syllabus 2025 & 2026: Grade 8 danh sách B, Adagio cantabile (Op. 13)'
+  link: https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20&%202026%20Prac%20syllabus%2020240524_access.pdf
+- id: abrsm-2728
+  bac: 2
+  ten: 'ABRSM, Piano Performance Grades Syllabus 2027 & 2028: Grade 8 danh sách A số 2 Rondo (chương 3 Op. 13), danh sách B số 6 Adagio cantabile (chương 2)'
+  link: https://www.abrsm.org/sites/default/files/2026-06/Piano%20Performance%20Grades%20Syllabus%202027%20&%202028.pdf
+- id: rcm-2022-arct
+  bac: 2
+  ten: 'RCM Piano Syllabus 2022: ARCT in Piano, Performer, List B "Sonata in C Minor, op. 13 (Pathétique)" (cả sonata)'
+  link: https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf
+- id: dolmetsch-orn
+  bac: 2
+  ten: 'Dolmetsch Online, Music Theory: Ornaments (turn: nốt trên, nốt chính, nốt dưới, nốt chính; mordent)'
+  link: https://www.dolmetsch.com/musictheory23.htm
+- id: thuat-ngu
+  bac: 2
+  ten: 'src/data/thuat-ngu.yml (đã khóa): mordent "Láy: chính – dưới – chính", una corda, con sordino/con sordina (về sau: una corda), cantabile "Như hát", enharmonic "Đồng âm khác tên", Grave, tremolo, rondo'
+  link: src/data/thuat-ngu.yml
+nhan_dinh:
+- id: n1
+  cau: 'Tiêu đề: "Beethoven: Sonata Pathétique, chương 2 (Adagio cantabile)".'
+  loai: ten
+  nguon: [imslp-op13, henle-hn1348]
+  ket_qua: dung
+  ghi_chu: 'IMSLP: chương 2 "Adagio cantabile (A♭ major)".'
+- id: n2
+  cau: Giai điệu, phần đệm móc kép và bè trầm cùng nằm trong hai bàn tay; một bàn tay (tay phải) thường lo hai việc cùng lúc.
+  loai: cau-truc
+  nguon: &id001 [mut-op13-2]
+  ket_qua: dung
+  ghi_chu: 'pathetique-2.ly: khuông trên hai bè (topmain giai điệu, topsecondary móc kép), khuông dưới bè trầm.'
+- id: n3
+  cau: Trang hướng dẫn cách tập để ba lớp tách bạch, câu nhạc liền, bàn đạp không làm nhòe.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n4
+  cau: Ngay từ ô đầu, tay phải vừa hát giai điệu bằng ngón 3–4–5, vừa chơi phần đệm móc kép bằng ngón 1–2.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Ô 1: giai điệu <c-4>4 <bes-3>, móc kép as16 es … (ngón 2 ghi ở ô 5 "bes_2"); bản Peters 1910 (Köhler & Ruthardt) qua Mutopia. Phần ngón là gợi ý chơi.'
+- id: n5
+  cau: Giai điệu trên đệm trong cùng một tay là kỹ năng trung tâm của nhạc piano từ Beethoven đến Brahms.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n6
+  cau: 'Chủ đề vang lên ba lần (ô 1, 29, 51), kết cấu đổi dần: lần đầu được nhắc lại cao hơn một quãng tám với phần đệm dày hơn; lần cuối phần đệm chuyển sang chùm ba.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "Chủ đề quay lại ba lần, mỗi lần một kết cấu khác." Chủ đề có ba lần (ô 1, 29, 51), tức chỉ quay lại hai lần; lần ô 29 cùng kết cấu với ô 1–8. Chữ mới theo bản nhạc (như D6-L3 sửa "quay lại ba lần" thành "vang lên ba lần" ở fur-elise).'
+- id: n7
+  cau: Bạn học cách giữ cùng một giai điệu đẹp trong ba hoàn cảnh khác nhau.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n8
+  cau: Chương ở nhịp 2/4, Adagio.
+  loai: cau-truc
+  nguon: [mut-op13-2, imslp-op13]
+  ket_qua: dung
+  ghi_chu: \time 2/4.
+- id: n9
+  cau: 'Chậm mà không đứng: bài dạy nghĩ theo câu dài; bước vào Beethoven mà không cần tốc độ hay sức mạnh của chương 1 và 3.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n10
+  cau: 'Aside: link Schumann Träumerei và Tạo tiếng đàn (mục legato).'
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: piano/tac-pham/schumann-traumerei chưa chuyển (../opus-zero/docs/piano/tac-pham/schumann-traumerei.md có, "sắp có"); piano/tieng-dan có trong src/content/docs.
+- id: n11
+  cau: Beethoven viết Pathétique khi khoảng 27 tuổi.
+  loai: nam
+  nguon: [henle-hn1348-vorwort, beethoven-haus-op13]
+  ket_qua: dung
+  ghi_chu: 'Sinh 12/1770 (nha-soan-nhac.yml 1770, đã khóa); Henle: phần chính xong khoảng giữa 1798 (Beethoven 27 tuổi); Beethoven-Haus 1797–1799.'
+- id: n12
+  cau: Beethoven đến Vienna năm 1792; Pathétique viết vài năm sau.
+  loai: nam
+  nguon: [hyperion-hewitt]
+  ket_qua: dung
+  ghi_chu: 'Hewitt: "When he went there in 1792". Chữ "(1792)" thêm ở lượt này.'
+- id: n13
+  cau: Lúc ấy ông đã nổi tiếng như một nghệ sĩ piano, nhất là tài ứng tác.
+  loai: lich-su
+  nguon: [beethoven-haus-pianist]
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "lúc ông nổi tiếng như một nghệ sĩ piano biểu diễn ngẫu hứng hơn là một nhà soạn nhạc". Beethoven-Haus: "Beethoven''s fame as a pianist was in part due to ... his talent for improvisation"; không nguồn nào đã mở so sánh hơn kém với danh tiếng nhà soạn nhạc (như D6-L3 bỏ "được biết đến trước hết như nghệ sĩ piano" ở beethoven-op49-2).'
+- id: n14
+  cau: Tên Grande Sonate pathétique có ngay trên bản in đầu tiên năm 1799.
+  loai: ten
+  nguon: [henle-hn1348-vorwort, beethoven-haus-op13, imslp-op13]
+  ket_qua: dung
+  ghi_chu: 'Henle: nguồn duy nhất là bản in gốc 1799; Beethoven-Haus: "op. 13 has always been the Pathétique ... Beethoven himself gave it the title".'
+- id: n15
+  cau: Link hướng dẫn nghe (/opus/nghe-nhac/beethoven-pathetique/) cho chuyện cái tên.
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Trang có (cùng lô); mục "Ai đặt tên Pathétique?".
+- id: n16
+  cau: '"Pathétique" ở đây gần nghĩa "đầy xúc động, bi tráng", không phải "thảm hại".'
+  loai: dinh-nghia
+  nguon: [hyperion-hewitt, henle-hn1348-vorwort]
+  ket_qua: dung
+  ghi_chu: 'Hewitt: nghĩa hiện đại "pitiable" chỉ dùng đùa; "the expression of exalted passion" (Behrend). Henle: "pronounced passionate character".'
+- id: n17
+  cau: Chương 1 ở Đô thứ; chương 2 ở La♭ trưởng, thấp hơn một quãng ba trưởng.
+  loai: cau-truc
+  nguon: [imslp-op13, mut-op13-2]
+  ket_qua: dung
+  ghi_chu: Đô → La♭ xuống 4 nửa cung (quãng ba trưởng).
+- id: n18
+  cau: Giai điệu chương 2 rất gần một chủ đề trong chương chậm của Sonata Đô thứ K. 457 của Mozart.
+  loai: lich-su
+  nguon: [badura-k457, laphil-op13]
+  ket_qua: dung
+  ghi_chu: 'Badura-Skoda: "the A flat major theme of the second episode is almost identical with the adagio theme of Beethoven''s Pathétique Sonata". LA Phil: "kinship ... especially ... Sonata K. 457".'
+- id: n19
+  cau: Hai sonata còn giống nhau ở giọng (Đô thứ) và cách chia chương (ba chương).
+  loai: cau-truc
+  nguon: [imslp-k457, imslp-op13]
+  ket_qua: dung
+  ghi_chu: 'IMSLP K. 457: Đô thứ, 3 chương; Op. 13: Đô thứ, 3 chương.'
+- id: n20
+  cau: So sánh hai bản là bài tập nghe về cách Beethoven học từ Mozart.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n21
+  cau: Link thời kỳ Cổ điển (/opus/lich-su/thoi-ky/co-dien/).
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Trang có (đã khóa).
+- id: n22
+  cau: Link hướng dẫn nghe Pathétique trong mục Nghe trước khi tập.
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: nghe-nhac/beethoven-pathetique có (cùng lô).
+- id: n23
+  cau: Đoạn C ở giọng thứ (La♭ thứ).
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Ô 37: <es ces> (Đô♭) — La♭ thứ.'
+- id: n24
+  cau: Wilhelm Kempff và Alfred Brendel đều thu trọn 32 sonata của Beethoven.
+  loai: ten
+  nguon: []
+  ket_qua: null
+  ghi_chu: 'chưa chắc: chưa mở trang hãng đĩa (DG, Philips/Decca, Vox) trong lô này; lượt 2 kiểm.'
+- id: n25
+  cau: Nghe hai bản thu khác nhau, ghi lại thời lượng chương 2 để thấy Adagio rộng hẹp thế nào.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n26
+  cau: Link Nghệ sĩ piano và bản thu (/opus/piano/nghe-si/).
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Trang có.
+- id: n27
+  cau: 'Theo dõi: Chủ đề ô 1–8, giai điệu ở âm vực giữa, bắt đầu từ Đô giữa; tay phải vừa hát vừa đệm móc kép, tay trái giữ bè trầm.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Ô 1 nốt đầu C4 (MIDI); khuông dưới as4 des …
+- id: n28
+  cau: 'Theo dõi: Chủ đề cao hơn một quãng tám ô 9–16; kết cấu đầy hơn, tay trái cũng tham gia phần móc kép.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Ô 9 giai điệu C5 (\clef treble c'4); khuông dưới ô 9–11 có bè móc kép as''16 es as es … trên bè trầm.
+- id: n29
+  cau: 'Theo dõi: Đoạn B ô 17–28, Fa thứ, qua Đô thứ, đến Mi♭ trưởng; tay trái hợp âm lặp lại; đoạn nối có bè trong đi xuống theo nửa cung; pp trước khi chủ đề trở lại.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Ô 18–19 <c g e>/<c as f> (Đô7 – Fa thứ), ô 21 <g es c> (Đô thứ), ô 22–23 Mi♭; móc kép lặp hợp âm ô 18–22; ô 24, 26–28 bè trong es d d c c b b bes, f fes fes es …; ô 28 pp.
+- id: n30
+  cau: 'Theo dõi: Chủ đề trở lại ô 29–36, chỉ tám ô, ở âm vực giữa.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+- id: n31
+  cau: 'Theo dõi: Đoạn C ô 37–50, La♭ thứ, phần đệm chuyển sang chùm ba móc kép; tay trái đáp lời ở âm vực trầm.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Ô 37 \times 2/3 <es ces>16 pp; khuông dưới ô 38, 40 bes8~ chùm ba đáp.
+- id: n32
+  cau: 'Theo dõi: Mi trưởng bất ngờ trong đoạn C, các nốt sf; rồi đoạn nối trên hợp âm bảy giảm và hợp âm át dẫn về chủ đề.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Ô 42–43 <fis dis b a> (Si7) → Mi trưởng, \sf; ô 48–49 <ces as d> + f (Rê–Fa–La♭–Đô♭, bảy giảm); ô 50 <bes g es des> (Mi♭7).
+- id: n33
+  cau: 'Theo dõi: Chủ đề lần cuối ô 51–66, phần đệm chùm ba; tám ô đầu ở âm vực giữa.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Ô 51 c!4 (C4), đệm \times 2/3.
+- id: n34
+  cau: 'Theo dõi: Chủ đề lên cao một quãng tám, tám ô tiếp theo, vẫn trên nền chùm ba.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Ô 59 c'4 (C5).
+- id: n35
+  cau: 'Theo dõi: Coda ô 66–73, chùm ba tiếp tục, chủ – át luân phiên, mảnh giai điệu và nốt hoa mỹ, tắt dần về pp.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Khuông dưới ô 66–69: <es c as> (La♭) xen <es des es,> (Mi♭7); nốt hoa (grace, turn) ô 67, 70–72; pp ô 66 và 73.'
+- id: n36
+  cau: Link rondo (/opus/hinh-thuc/rondo/).
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Trang có (đã khóa).
+- id: n37
+  cau: 'Đây là một rondo nhỏ: chủ đề A vang lên ba lần, xen giữa là hai đoạn tương phản.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "chủ đề A quay lại ba lần". A có ba lần (ô 1, 29, 51) nên chỉ quay lại hai lần. Sửa thành "vang lên ba lần". Sơ đồ A–B–A–C–A đúng.'
+- id: n38
+  cau: 'Bảng: A ô 1–8 chủ đề ở âm vực giữa (bắt đầu từ Đô giữa); tay phải giai điệu ở trên, móc kép ở dưới; tay trái bè trầm.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+- id: n39
+  cau: 'Bảng: A ô 9–16 chủ đề nhắc lại cao hơn một quãng tám, kết cấu đầy hơn, tay trái cũng tham gia phần móc kép.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+- id: n40
+  cau: 'Bảng: B ô 17–28 Fa thứ, qua Đô thứ, đến Mi♭ trưởng; đoạn nối bè trong đi xuống theo nửa cung; tay trái hợp âm lặp lại; pp trước khi chủ đề trở lại.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+- id: n41
+  cau: 'Bảng: A ô 29–36 chủ đề chỉ tám ô, ở âm vực giữa.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+- id: n42
+  cau: 'Bảng: C ô 37–50 La♭ thứ, đệm chùm ba móc kép; sang Mi trưởng (đổi tên enharmonic) với các nốt sf; đoạn nối trên hợp âm bảy giảm rồi hợp âm át.'
+  loai: cau-truc
+  nguon: [mut-op13-2, thuat-ngu]
+  ket_qua: dung
+  ghi_chu: Mi trưởng = Fa♭ trưởng viết đồng âm khác tên (enharmonic, thuat-ngu.yml).
+- id: n43
+  cau: 'Bảng: C là đoạn kịch tính nhất bài: tay phải vừa hát vừa đệm chùm ba; tay trái đáp lời ở âm vực trầm.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Chỉ đoạn C có sf, cresc. lên các hợp âm lớn (ô 41–43). "Kịch tính nhất" là nhận xét hợp bản nhạc.
+- id: n44
+  cau: 'Bảng: A ô 51–66 chủ đề lần cuối đệm chùm ba: tám ô ở giữa, tám ô cao hơn một quãng tám.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+- id: n45
+  cau: 'Bảng: Coda ô 66–73, chùm ba tiếp tục, chủ – át luân phiên, mảnh giai điệu và nốt hoa mỹ, tắt dần về pp.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+- id: n46
+  cau: Chương có 73 ô nhịp.
+  loai: cau-truc
+  nguon: [mut-op13-2, imslp-op13]
+  ket_qua: dung
+  ghi_chu: MIDI Mutopia 73 ô 2/4.
+- id: n47
+  cau: 'Cột "Kết cấu, điều cần chú ý": phải "nhớ" những gì vừa xảy ra; đừng để chùm ba nghe như vội; nói lời tạm biệt, không kéo lê.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n48
+  cau: 'Chỗ khó: ngón 1–2 chơi nhiều nốt hơn nên dễ to hơn; ngón 4–5 phải hát.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Móc kép (8 nốt mỗi ô) so với giai điệu (2–3 nốt mỗi ô).
+- id: n49
+  cau: 'Cách tập giai điệu và móc kép: chơi riêng giai điệu với ngón 3–4–5, thêm móc kép bấm câm, rồi pp; bài tập 1.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n50
+  cau: Link Tạo tiếng đàn (/opus/piano/tieng-dan/) và Bàn đạp (/opus/piano/ban-dap/) trong bảng Chỗ khó.
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Hai trang có.
+- id: n51
+  cau: 'Legato giai điệu: không bàn đạp nào nối được các nốt đi bậc liền mà không làm nhòe; đổi ngón trên phím, nối bằng ngón trước rồi mới thêm bàn đạp.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n52
+  cau: Hòa âm đổi mỗi phách hoặc nửa phách; giai điệu đi bậc.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Khuông dưới ô 1–2: as4 des | c g (đổi mỗi phách); ô 3 móc đơn.'
+- id: n53
+  cau: 'Bàn đạp nối: nhả đúng lúc đánh nốt trầm mới, nhấn lại ngay sau; đạp nông.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n54
+  cau: 'Ô 9–16: giữ trọng lượng tay, không đẩy tiếng.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n55
+  cau: 'Đoạn C: tay phải vừa hát vừa lặp hợp âm chùm ba (dễ mỏi): cổ tay mềm, ngón sát phím, tập chùm ba riêng ở pp.'
+  loai: quy-tac
+  nguon: [mut-op13-2]
+  ket_qua: null
+  ghi_chu: 'chưa chắc: vế "dễ mỏi" dính tới sức khỏe nên không xếp khuyen-tap; chưa mở nguồn y học nghệ thuật (BAPAM) cho trang này. Phần bản nhạc (tay phải giai điệu và hợp âm lặp chùm ba ô 37–41) đúng. Lượt 2 kiểm hay bỏ vế "dễ mỏi".'
+- id: n56
+  cau: 'Chuyển sang Mi trưởng: đọc nốt thăng sau cả trang dấu giáng.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Hóa biểu 4 giáng giữ nguyên; ô 42–47 viết bằng dấu thăng (fis, dis, gis, ais).
+- id: n57
+  cau: sf là nhấn theo bối cảnh p, không phải ff.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n58
+  cau: 'Phần A cuối: nhịp hai (giai điệu) chọi ba (đệm).'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Ô 51 giai điệu nốt đen, móc đơn trên đệm \times 2/3.
+- id: n59
+  cau: Đếm chùm ba "1-2-3, 2-2-3"; đánh số các lần chủ đề và ghi một "ý" cho mỗi lần.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n60
+  cau: Ba bài tập soạn riêng cho trang này, không trích bản nhạc gốc.
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Ba khối abc có "(soạn cho trang này)".
+- id: n61
+  cau: 'Bài tập 1: tay phải chỉ giai điệu (ngón 5–4–3); thêm móc kép ngón 1–2; ghép tay trái với ba mức âm lượng.'
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: 'Khối abc 1: giai điệu !5!c !4!B … !3!A; móc kép !1!E!2!A; mf/pp/p.'
+- id: n62
+  cau: 'Bài tập 2: ô 1 đánh Đô bằng ngón 5, giữa chừng thay bằng ngón 4 mà phím không nhả; ô 2 tương tự 5 → 3.'
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: 'Khối abc 2: !5!c4- !4!c4; !5!d4- !3!d4.'
+- id: n63
+  cau: Nhờ đổi ngón, ngón cần cho nốt tiếp theo luôn rảnh; chơi riêng giai điệu trước rồi mới thêm móc kép.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n64
+  cau: 'Bài tập 3: chữ Ped. nằm ở nốt thứ hai của mỗi hòa âm; nửa sau ô 3 cùng hòa âm, không đổi bàn đạp.'
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: 'Khối abc 3: "_Ped." đặt trước nốt thứ hai mỗi nhóm; ô 3 nửa sau (Mi♭ – Si♭ – Rê♭) không có Ped.'
+- id: n65
+  cau: 'Nghe nốt trầm: phải còn vang sau khi nhấn lại; nếu mất, đã nhấn lại quá muộn.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n66
+  cau: Kế hoạch 8 tuần, 45–60 phút mỗi ngày, tốc độ theo móc đơn từ ♪ = 50 lên khoảng 60–72.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n67
+  cau: Link Thu âm và Học thuộc và biểu diễn trong kế hoạch.
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: luyen-tap/thu-am và piano/hoc-thuoc-bieu-dien có.
+- id: n68
+  cau: Bảng kế hoạch chia theo các đoạn ô 1–16, 17–28, 29–50, 51–73.
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Khớp bảng Cấu trúc của chính trang.
+- id: n69
+  cau: 'Adagio cantabile: chậm, như hát.'
+  loai: dinh-nghia
+  nguon: [thuat-ngu]
+  ket_qua: dung
+  ghi_chu: 'thuat-ngu.yml cantabile: "Như hát".'
+- id: n70
+  cau: Nếu không còn cảm thấy 2/4 mà chỉ còn từng móc đơn rời rạc là đang chơi quá chậm; một câu tám ô là một cung đường lớn.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n71
+  cau: 'Âm thanh và cân bằng: giai điệu cantabile, móc kép đều rất nhẹ; sf là nhấn trong bối cảnh.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n72
+  cau: Bè trầm có hướng đi riêng, nhiều chỗ đi bậc như một giai điệu thứ hai.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Khuông dưới ô 1–8: as des c g as g f f'' es es, des des'' c f, bes, es (nhiều bước liền bậc).'
+- id: n73
+  cau: Dấu luyến của Beethoven thường dài hơn ở giai điệu và ngắn ở các mảnh đối đáp; có chấm staccato trong đoạn B và coda.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Luyến dài ô 1–2, 3–4 ("( … )" qua 2 ô); ô 7 c16^.( bes^. as^. g)^.; coda ô 66–70 các nốt -. trong chùm ba.
+- id: n74
+  cau: Nốt cuối của dấu luyến nhẹ hơn; các nốt staccato vẫn mềm.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n75
+  cau: Đàn của Beethoven năm 1798 có tiếng tắt nhanh hơn đàn hiện đại.
+  loai: lich-su
+  nguon: []
+  ket_qua: da-bo
+  ghi_chu: 'Đã bỏ khỏi trang: chưa có nguồn đã mở (Tafelmusik chỉ nói âm vực; như D6-L3 bỏ "tiếng nhẹ và tắt nhanh" ở beethoven-op49-2 n25).'
+- id: n76
+  cau: Trên đàn hiện đại đạp nông, đổi theo hòa âm; giai điệu liền nhờ ngón tay trước.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n77
+  cau: Láy quanh của Beethoven thường bắt đầu từ nốt trên.
+  loai: quy-tac
+  nguon: [dolmetsch-orn, mut-op13-2]
+  ket_qua: dung
+  ghi_chu: 'Dolmetsch: turn = "the note above, the note itself, the note below, then the note itself again". Mutopia ô 20, 21 ghi láy quanh với ngón "3212", "4321" (bắt đầu nốt trên).'
+- id: n78
+  cau: Nốt hoa mỹ chơi nhẹ hơn nốt chính, không vội; đọc chú thích bản Urtext.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n79
+  cau: Các bản thế kỷ 19, như của Hans von Bülow, thêm nhiều sắc thái, bàn đạp và thay đổi dấu luyến.
+  loai: lich-su
+  nguon: [imslp-op13]
+  ket_qua: null
+  ghi_chu: 'chưa chắc: IMSLP có ấn bản Bülow/Lebert (Cotta) của Op. 13; chưa đối chiếu nội dung ấn bản ấy với bản gốc. Lượt 2 kiểm.'
+- id: n80
+  cau: Ấn bản ABRSM của Barry Cooper có gợi ý ngón bấm, giải thích và ghi rõ phần nào là của người biên tập.
+  loai: ten
+  nguon: [abrsm-2728]
+  ket_qua: null
+  ghi_chu: 'chưa chắc: đề cương ABRSM có "Beethoven: The 35 Piano Sonatas, Vol. 1 (ABRSM)" nhưng chưa mở trang ấn bản (người biên tập, cách ghi). Lượt 2 kiểm.'
+- id: n81
+  cau: Dùng bản Urtext để biết đâu là của Beethoven.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n82
+  cau: 'Lỗi thường gặp (7 dòng): móc kép to hơn giai điệu; giai điệu đứt; bàn đạp đổi trễ; quá chậm; đoạn C quá to; chùm ba kéo giai điệu; ba lần chủ đề giống hệt nhau.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n83
+  cau: 'Chương 3 (Rondo: Allegro) là bước tiếp tự nhiên; chương 1 cần tốc độ và sức bền ở mức Grade 8 trở lên.'
+  loai: cap-do
+  nguon: [abrsm-2728, rcm-2022-arct, henle-hn1348]
+  ket_qua: dung
+  ghi_chu: 'ABRSM 2027–2028 Grade 8 danh sách A số 2: Rondo (chương 3). Cả sonata (gồm chương 1): RCM xếp ở ARCT (sau Level 10); Henle mức 7 cho cả sonata (trang HN 1348, lượt 2 lần 1 ghi "ABRSM: Piano ARSM").'
+- id: n84
+  cau: 'Học tiếp, hát trên phím: link Chopin Nocturne Op. 9 số 2, Debussy Clair de lune.'
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Hai trang có (src/content/docs).
+- id: n85
+  cau: 'Beethoven khác: link chương 1 Sonata Ánh trăng và hướng dẫn nghe Ánh trăng.'
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: piano/tac-pham/beethoven-anh-trang và nghe-nhac/beethoven-moonlight chưa chuyển, có ở ../opus-zero/docs ("sắp có").
+- id: n86
+  cau: 'Cùng chặng: Bach Prelude và fugue Đô thứ; chặng sau: Schubert Impromptu Sol♭ trưởng.'
+  loai: ve-site
+  nguon: []
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "Cùng chặng: Bach…, Schubert…". tac-pham.yml (chang đã khóa): pathetique-adagio 6, bach-prelude-fugue-do-thu 6, schubert-impromptu-sol-giang 7. Sửa thành "chặng sau" cho Schubert.'
+- id: n87
+  cau: Link Tác phẩm theo cấp độ (/opus/piano/tac-pham-theo-cap/).
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Trang có.
+- id: n88
+  cau: 'Câu hỏi 1: ở lần cuối (ô 51–66), phần đệm chuyển sang chùm ba móc kép, mang theo nhịp điệu của đoạn C.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+- id: n89
+  cau: 'Câu hỏi 2: đổi ngón trên phím để ngón cần cho nốt tiếp luôn rảnh, giai điệu liền bằng ngón.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n90
+  cau: 'Câu hỏi 3: Adagio cantabile nghĩa là chậm, như hát.'
+  loai: dinh-nghia
+  nguon: [thuat-ngu]
+  ket_qua: dung
+- id: n91
+  cau: 'Câu hỏi 4: bàn đạp nối: nhả đúng lúc đánh nốt trầm mới, nhấn lại ngay sau.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n92
+  cau: 'Nguồn: ấn bản Henle Op. 13 và ấn bản ABRSM The 35 Piano Sonatas (biên tập Barry Cooper).'
+  loai: ten
+  nguon: [henle-hn1348]
+  ket_qua: da-sua
+  ghi_chu: Dòng cũ gộp hai ấn bản; nay mục Nguồn ghi trang Henle HN 1348 (biên tập Gertsch, Perahia, 2018) đã đọc; ấn bản ABRSM nằm ở mục Ấn bản (nhận định riêng, chưa chắc).
+- id: n93
+  cau: 'Nguồn: hai sách in (Barry Cooper, Beethoven, OUP 2000; Charles Rosen, Beethoven''s Piano Sonatas: A Short Companion, Yale 2002).'
+  loai: ten
+  nguon: []
+  ket_qua: da-bo
+  ghi_chu: 'Đã bỏ khỏi mục Nguồn: sách in chưa đọc, không nhận định nào dựa vào (như D6-L3). Thay bằng lời giới thiệu của Badura-Skoda (K. 457) và tệp Mutopia đã dùng.'
+- id: n94
+  cau: 'Nguồn: Badura-Skoda, lời giới thiệu đĩa K. 457; bản chép LilyPond của Mutopia (Berners 1908, Peters 1910).'
+  loai: ten
+  nguon: [badura-k457, mut-op13-2]
+  ket_qua: da-sua
+  ghi_chu: Dòng mới.
+- id: n95
+  cau: Link Tài liệu tham khảo.
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Trang có.
 khuong_nhac:
-  - khoi: 1
-    loai: null
-    kiem: []
-    ket_qua: null
-  - khoi: 2
-    loai: null
-    kiem: []
-    ket_qua: null
-  - khoi: 3
-    loai: null
-    kiem: []
-    ket_qua: null
+- khoi: 1
+  loai: vi-du-soan
+  kiem: [cu-phap, nhip, giong, hop-am, so-ngon, sac-thai]
+  ket_qua: dung
+  ghi_chu: La♭ trưởng, 2/4, L:1/16, 4 ô đủ 8 phần. Giai điệu nốt đen (Đô5–Si♭4, Mi♭5–Rê♭5, Đô5–Si♭4, La♭4) ngón 5-4, 5-4, 4-3, 3 ở bè trên; móc kép E♭–A♭, G–B♭… ngón 1–2 ở bè dưới; tay trái La♭2, Sol2, Mi♭2, Đô3, quãng tám La♭. Hòa âm La♭ – Mi♭7 luân phiên; mf/pp/p đúng ba mức lời dẫn. Chơi được.
+- khoi: 2
+  loai: vi-du-soan
+  kiem: [cu-phap, nhip, giong, so-ngon]
+  ket_qua: dung
+  ghi_chu: 4 ô 2/4. Ô 1 Đô5 nối, ngón 5 → 4; ô 2 Rê♭5 nối, 5 → 3; ô 3 Mi♭5 (4) rồi Fa5 (5); đệm móc kép ngón 1–2. Tay trái La♭, Rê♭, Mi♭. Đúng lời dẫn (đổi ngón trên phím đang giữ).
+- khoi: 3
+  loai: vi-du-soan
+  kiem: [cu-phap, nhip, giong, hop-am, ban-dap, so-ngon]
+  ket_qua: dung
+  ghi_chu: 4 ô 2/4. Tay trái hợp âm rải móc kép (La♭, Mi♭7/Sol, Fa thứ, Si♭ thứ/Rê♭, Mi♭, Mi♭7, La♭); "Ped." đặt trước nốt thứ hai mỗi hòa âm; nửa sau ô 3 (Mi♭ Si♭ Rê♭ Si♭) cùng hòa âm Mi♭, không đổi bàn đạp. Đúng lời dẫn. Ngón 5-2-1-2 chơi được.
 doi_chu:
-  - cu: La♭ trưởng · 2/4 Adagio cantabile ≈ Grade 7 Rondo, 73 ô nhịp
-    moi: La♭ trưởng · 2/4 Adagio cantabile ≈ Grade 7–8 Rondo, 73 ô nhịp
-    ly_do: "Chip cấp độ dựng từ bản ghi tac-pham/pathetique-adagio: D2-0 sửa grade Grade 7 thành Grade 7–8 (ABRSM xếp chương 2 ở Grade 8, đề cương 2023–2024, 2025–2026, 2027–2028; plans/lam-lai/bao-cao/d2-0/sua-A.yml, hồ sơ du-lieu/tac-pham/pathetique-adagio n4)."
-  - cu: Khoảng ABRSM Grade 7 (ước lượng)
-    moi: "Khoảng ABRSM Grade 7–8: ABRSM xếp bài ở Grade 8 (đề cương 2023–2024, 2025–2026, 2027–2028)"
-    ly_do: "Dòng Độ khó của thong_tin sửa ở D2-0 cùng grade (sua-A.yml, hồ sơ du-lieu/tac-pham/pathetique-adagio n4); lượt 1 D6-L5 kiểm lại ở hồ sơ bản ghi."
+- cu: La♭ trưởng · 2/4 Adagio cantabile ≈ Grade 7 Rondo, 73 ô nhịp
+  moi: La♭ trưởng · 2/4 Adagio cantabile ≈ Grade 7–8 Rondo, 73 ô nhịp
+  ly_do: 'Chip cấp độ dựng từ bản ghi tac-pham/pathetique-adagio: D2-0 sửa grade Grade 7 thành Grade 7–8 (ABRSM xếp chương 2 ở Grade 8, đề cương 2023–2024, 2025–2026, 2027–2028; plans/lam-lai/bao-cao/d2-0/sua-A.yml, hồ sơ du-lieu/tac-pham/pathetique-adagio n4).'
+- cu: Khoảng ABRSM Grade 7 (ước lượng)
+  moi: 'Khoảng ABRSM Grade 7–8: ABRSM xếp bài ở Grade 8 (đề cương 2023–2024, 2025–2026, 2027–2028)'
+  ly_do: Dòng Độ khó của thong_tin sửa ở D2-0 cùng grade (sua-A.yml, hồ sơ du-lieu/tac-pham/pathetique-adagio n4); lượt 1 D6-L5 kiểm lại ở hồ sơ bản ghi.
+- cu: 'IMSLP (tìm "Piano Sonata No.8, Op.13 (Beethoven, Ludwig van)"); bản Urtext: G. Henle Verlag, Bärenreiter (biên tập Jonathan Del Mar), Wiener Urtext; ấn bản ABRSM (biên tập Barry Cooper) có chú thích hữu ích'
+  moi: 'IMSLP (tìm "Piano Sonata No.8, Op.13 (Beethoven, Ludwig van)"); bản Urtext: G. Henle Verlag, Bärenreiter (biên tập Jonathan Del Mar), Wiener Urtext; ấn bản ABRSM (biên tập Barry Cooper)'
+  ly_do: 'Dòng Bản nhạc của thong_tin (hồ sơ bản ghi tac-pham/pathetique-adagio n25; sua-A.yml): bỏ "có chú thích hữu ích", lời đánh giá không kiểm được (như D6-L3-gom ở beethoven-op49-2).'
+- cu: Chủ đề quay lại ba lần, mỗi lần một kết cấu khác. Bạn học cách giữ cùng một giai điệu đẹp trong ba hoàn cảnh khác nhau.
+  moi: Chủ đề vang lên ba lần, kết cấu đổi dần. Lần đầu, chủ đề được nhắc lại cao hơn một quãng tám với phần đệm dày hơn; lần cuối, phần đệm chuyển sang chùm ba. Bạn học cách giữ cùng một giai điệu đẹp trong ba hoàn cảnh khác nhau.
+  ly_do: 'n6 (da-sua): chủ đề có ba lần (ô 1, 29, 51), chỉ quay lại hai lần; lần ô 29 cùng kết cấu ô 1–8 (Mutopia).'
+- cu: Beethoven viết Pathétique khi khoảng 27 tuổi, vài năm sau khi đến Vienna, lúc ông nổi tiếng như một nghệ sĩ piano biểu diễn ngẫu hứng hơn là một nhà soạn nhạc. Tên Grande Sonate pathétique có ngay trên bản in đầu tiên năm 1799 (chuyện cái tên ở hướng dẫn nghe); "pathétique" ở đây gần nghĩa với "đầy xúc động, bi tráng", không phải "thảm hại".
+  moi: Beethoven viết Pathétique khi khoảng 27 tuổi, vài năm sau khi đến Vienna (1792), lúc ông đã nổi tiếng như một nghệ sĩ piano, nhất là tài ứng tác. Tên Grande Sonate pathétique có ngay trên bản in đầu tiên năm 1799 (chuyện cái tên ở hướng dẫn nghe); "pathétique" ở đây gần nghĩa với "đầy xúc động, bi tráng", không phải "thảm hại".
+  ly_do: 'n13 (da-sua): Beethoven-Haus nói danh tiếng nghệ sĩ piano nhờ tài ứng tác; vế so sánh với danh tiếng nhà soạn nhạc không nguồn. Thêm năm 1792 (Hewitt, Hyperion).'
+- cu: 'Đây là một rondo nhỏ: chủ đề A quay lại ba lần, xen giữa là hai đoạn tương phản.'
+  moi: 'Đây là một rondo nhỏ: chủ đề A vang lên ba lần, xen giữa là hai đoạn tương phản.'
+  ly_do: 'n37 (da-sua): A có ba lần nên "quay lại ba lần" sai.'
+- cu: Đàn của Beethoven năm 1798 có tiếng tắt nhanh hơn đàn hiện đại. Trên đàn hiện đại, đạp nông và đổi theo hòa âm, thường mỗi phách hoặc nửa phách. Giai điệu phải liền nhờ ngón tay trước, bàn đạp chỉ thêm độ ấm. Xem Bàn đạp.
+  moi: Trên đàn hiện đại, đạp nông và đổi theo hòa âm, thường mỗi phách hoặc nửa phách. Giai điệu phải liền nhờ ngón tay trước, bàn đạp chỉ thêm độ ấm. Xem Bàn đạp.
+  ly_do: 'n75 (da-bo): không nguồn đã mở.'
+- cu: 'Cùng chặng: Bach: Prelude và fugue Đô thứ, Schubert: Impromptu Sol♭ trưởng.'
+  moi: 'Cùng chặng: Bach: Prelude và fugue Đô thứ; chặng sau: Schubert: Impromptu Sol♭ trưởng.'
+  ly_do: 'n86 (da-sua): Schubert Impromptu Sol♭ ở chặng 7 (tac-pham.yml).'
+- cu:
+  - Beethoven, Klaviersonate c-moll op. 13 (Pathétique), G. Henle Verlag; Beethoven, The 35 Piano Sonatas, ABRSM (biên tập Barry Cooper).
+  - Barry Cooper, Beethoven, Oxford University Press (Master Musicians), 2000.
+  - 'Charles Rosen, Beethoven''s Piano Sonatas: A Short Companion, Yale University Press, 2002.'
+  - 'Bản nhạc: IMSLP. Xem thêm tài liệu tham khảo.'
+  moi:
+  - 'G. Henle Verlag, Piano Sonata no. 8 c minor op. 13 (Grande Sonate Pathétique), HN 1348 (biên tập Norbert Gertsch, Murray Perahia, 2018): lời nói đầu về niên đại, bản in đầu tiên và tên gọi.'
+  - 'Paul Badura-Skoda, lời giới thiệu đĩa Mozart, Sonata K. 457 (PDF): đoạn xen La♭ trưởng trong chương chậm của K. 457 và chủ đề Adagio của Pathétique.'
+  - 'Bản nhạc: IMSLP; bản chép LilyPond của Mutopia Project (theo Berners 1908 và Peters 1910), dùng để đếm ô và đối chiếu cấu trúc. Xem thêm tài liệu tham khảo.'
+  ly_do: 'n92: thay bằng trang Henle HN 1348 đã đọc. n93 (da-bo): sách in chưa đọc. n94: dòng bản nhạc thêm link tệp Mutopia đã dùng. n92: trang Henle HN 1348 đã đọc. n94: nguồn đã đọc cho nhận định K. 457. n94: tệp Mutopia đã dùng để đếm ô.'

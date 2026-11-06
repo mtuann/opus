@@ -1,131 +1,376 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/chopin-nocturne-op9-2
 ban_ghi: tac-pham/chopin-nocturne-op9-2
 lan:
-  - so: 1
-    ngay: 2026-10-24
-    nhanh: moi/d2-0-du-lieu
-    ma_bam: sha256:9cc37bc785b62dcc3aac7d2f68facc45dfe1db693a4243d52dcaa8d1b7cfa48e
-    nguoi:
-      luot_1: Claude Sonnet 5.5 (D2-0 phần A)
-      luot_2: Claude Sonnet 5.5 (D2-0 lượt 2 phần A)
-      review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
-      kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
-    truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
-  - so: 2
-    ngay: null
-    nhanh: moi/d6-l5
-    ma_bam: null
-    nguoi:
-      luot_1: null
-      luot_2: null
-      review: null
-      kiem_mau: null
-ghi_chu: "Trang bài học cũ ../opus-zero/docs/piano/tac-pham/chopin-nocturne-op9-2.md có (loai: bai-hoc là cấu trúc, không phải nhận định)."
+- so: 1
+  ngay: 2026-10-24
+  nhanh: moi/d2-0-du-lieu
+  ma_bam: sha256:9cc37bc785b62dcc3aac7d2f68facc45dfe1db693a4243d52dcaa8d1b7cfa48e
+  nguoi:
+    luot_1: Claude Sonnet 5.5 (D2-0 phần A)
+    luot_2: Claude Sonnet 5.5 (D2-0 lượt 2 phần A)
+    review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
+    kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
+  truong:
+  - chang
+  - danh_muc
+  - gan_cho
+  - goi_y
+  - grade
+  - khuyet_danh
+  - loai
+  - tac_gia
+  - ten
+- so: 2
+  ngay: '2026-11-05'
+  nhanh: moi/d6-l5
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Opus 5.5, agent con, D6-L5 phần B
+    luot_2: null
+    review: null
+    kiem_mau: null
+ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/chopin-nocturne-op9-2.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Lần 2 (D6-L5, lượt 1 phần B): nhận định n7–n26 cho các trường chưa khóa (giong, nhip, thoi_ky, ky_nang_chinh, luyen_nghe, chip, thong_tin, hinh, ban_thu); bản nhạc Mutopia (Schirmer 1881), IMSLP, chú giải Ấn bản Quốc gia Ba Lan, Henle HN 185, RCM 2022. Dữ liệu sai: n18, n22; đề xuất ở plans/lam-lai/bao-cao/d6-l5/sua-B.yml.'
 nguon:
-  - id: imslp-op9
-    bac: 2
-    ten: IMSLP, Nocturnes, Op.9 (Chopin)
-    link: https://imslp.org/wiki/Nocturnes,_Op.9_(Chopin,_Fr%C3%A9d%C3%A9ric)
-  - id: henle-hn185
-    bac: 2
-    ten: G. Henle Verlag, HN 185 Chopin, Nocturnes (mức khó từng nocturne)
-    link: https://www.henle.de/en/Nocturnes/HN-185
-  - id: abrsm-1718
-    bac: 2
-    ten: "ABRSM, Piano 2017 & 2018: các danh sách tác phẩm Grade 1–8 (bản lưu của us.abrsm.org/media/12152/piano_2017___2018.pdf)"
-    link: https://web.archive.org/web/2020/https://us.abrsm.org/media/12152/piano_2017___2018.pdf
-  - id: abrsm-1920
-    bac: 2
-    ten: ABRSM, Piano Syllabus 2019 & 2020 (bản đầy đủ; bản lưu của us.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf)
-    link: https://web.archive.org/web/2021/https://us.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf
-  - id: abrsm-2728
-    bac: 2
-    ten: ABRSM, Music Performance Grades Piano Syllabus (Section 3) 2027 & 2028 (danh sách tác phẩm giống Practical Grades)
-    link: https://www.abrsm.org/sites/default/files/2026-06/Piano%20Performance%20Grades%20Syllabus%202027%20&%202028.pdf
-  - id: rcm-2022
-    bac: 2
-    ten: The Royal Conservatory (RCM), Piano Syllabus, 2022 Edition
-    link: https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf
-  - id: henle-thang
-    bac: 2
-    ten: G. Henle Verlag, Levels of Difficulty (thang độ khó 1–9; trang không có bảng quy đổi sang ABRSM)
-    link: https://www.henle.de/Levels-of-Difficulty/
+- id: imslp-op9
+  bac: 2
+  ten: IMSLP, Nocturnes, Op.9 (Chopin)
+  link: https://imslp.org/wiki/Nocturnes,_Op.9_(Chopin,_Fr%C3%A9d%C3%A9ric)
+- id: henle-hn185
+  bac: 2
+  ten: G. Henle Verlag, HN 185 Chopin, Nocturnes (mức khó từng nocturne)
+  link: https://www.henle.de/en/Nocturnes/HN-185
+- id: abrsm-1718
+  bac: 2
+  ten: 'ABRSM, Piano 2017 & 2018: các danh sách tác phẩm Grade 1–8 (bản lưu của us.abrsm.org/media/12152/piano_2017___2018.pdf)'
+  link: https://web.archive.org/web/2020/https://us.abrsm.org/media/12152/piano_2017___2018.pdf
+- id: abrsm-1920
+  bac: 2
+  ten: ABRSM, Piano Syllabus 2019 & 2020 (bản đầy đủ; bản lưu của us.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf)
+  link: https://web.archive.org/web/2021/https://us.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf
+- id: abrsm-2728
+  bac: 2
+  ten: ABRSM, Music Performance Grades Piano Syllabus (Section 3) 2027 & 2028 (danh sách tác phẩm giống Practical Grades)
+  link: https://www.abrsm.org/sites/default/files/2026-06/Piano%20Performance%20Grades%20Syllabus%202027%20&%202028.pdf
+- id: rcm-2022
+  bac: 2
+  ten: The Royal Conservatory (RCM), Piano Syllabus, 2022 Edition
+  link: https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf
+- id: henle-thang
+  bac: 2
+  ten: G. Henle Verlag, Levels of Difficulty (thang độ khó 1–9; trang không có bảng quy đổi sang ABRSM)
+  link: https://www.henle.de/Levels-of-Difficulty/
+- id: mut-noct
+  bac: 1
+  ten: 'Mutopia Project, Chopin, Nocturne Op. 9 No. 2 (G. Schirmer 1881; tệp LilyPond): \key ef \major, \time 12/8, "Andante", 34 ô sau nhịp lấy đà; style "Romantic"'
+  link: https://www.mutopiaproject.org/ftp/ChopinFF/O9/chopin_nocturne_op9_n2/chopin_nocturne_op9_n2.ly
+- id: imslp-op9-2
+  bac: 2
+  ten: 'IMSLP, Nocturnes, Op.9 (Chopin): sáng tác 1830–31; Comp. Period Romantic; đề tặng "à Madame Camille Pleyel (Marie Pleyel, 1811–1875)"; ba bài Larghetto (B♭ minor), Andante (E♭ major), Allegretto (B major)'
+  link: https://imslp.org/wiki/Nocturnes,_Op.9_(Chopin,_Fr%C3%A9d%C3%A9ric)
+- id: ne-comm
+  bac: 2
+  ten: 'Ấn bản Quốc gia Ba Lan (Wydanie Narodowe, Jan Ekier, Paweł Kamiński), Nocturnes: chú giải nguồn (bản in đầu Pháp Schlesinger 20/12/1832; Đức Kistner 12/1832; Anh Wessel 6/1833; biến thể của Op. 9 số 2)'
+  link: https://www.chopin-nationaledition.com/wp-content/uploads/2017/05/nocturnes_commentaries.pdf
+- id: niecks
+  bac: 2
+  ten: 'Frederick Niecks, Frederick Chopin as a Man and Musician (1888), Project Gutenberg #4973: Madame Pleyel trong danh sách nghệ sĩ piano lớn ("Madame Pleyel a sibyl")'
+  link: https://www.gutenberg.org/ebooks/4973
+- id: henle-185-trang
+  bac: 2
+  ten: 'G. Henle Verlag, HN 185 Nocturnes: bảng mức khó (Nocturne E flat major op. 9,2: 6 medium)'
+  link: https://www.henle.de/en/Nocturnes/HN-185
+- id: wiener-50065
+  bac: 2
+  ten: 'Wiener Urtext UT 50065, Chopin, Nocturnes (Jan Ekier): mô tả của nhà xuất bản trên trang Fick’s Music (biến thể ở chú thích; Op. 9 số 2 in hai lần, lần hai có trọn biến thể)'
+  link: https://ficksmusic.com/products/chopin-nocturnes-wiener
+- id: rcm-2022-pdf
+  bac: 2
+  ten: 'The Royal Conservatory (RCM), Piano Syllabus 2022 Edition (PDF, bản S3): Level 9, Chopin "Nocturne in E flat Major, op. 9, no. 2" (tr. 83 của PDF)'
+  link: https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf
+- id: commons-levy
+  bac: 2
+  ten: 'Wikimedia Commons, File:Chopin - Nocturne No. 2 in E-flat major, Op. 9 No. 2 (Frank Levy).flac (API: Frank Lévy, Musopen Kickstarter "Set Chopin Free", Public domain, playtime 271,469 giây)'
+  link: https://commons.wikimedia.org/wiki/File:Chopin_-_Nocturne_No._2_in_E-flat_major,_Op._9_No._2_(Frank_Levy).flac
+- id: dolmetsch-tempo
+  bac: 2
+  ten: 'Dolmetsch Online, Music Theory: tempo ("andante moving along - walking pace")'
+  link: http://www.dolmetsch.com/musictheory5.htm
 nhan_dinh:
-  - id: n1
-    cau: "Tên bài: Nocturne Mi♭ trưởng Op. 9 số 2 (bài thứ hai trong bộ ba Nocturne Op. 9)."
-    loai: ten
-    truong:
-      - ten
-    nguon:
-      - imslp-op9
-      - henle-hn185
-    ket_qua: dung
-    ghi_chu: 'IMSLP: "Nocturnes, Op.9", mục 2 "Andante (E-flat major)". Henle HN 185: "Nocturne E flat major op. 9,2".'
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Nocturnes,_Op.9_(Chopin,_Fr%C3%A9d%C3%A9ric)", https://www.henle.de/en/Nocturne-E-flat-major-op.-9-no.-2/HN-664 ]
-    luot_2_ghi_chu: "IMSLP: Nocturnes Op.9, 3 nocturnes; no.2 Andante (E-flat major)."
-  - id: n2
-    cau: "Tác giả: Frédéric Chopin."
-    loai: lich-su
-    truong:
-      - tac_gia
-    nguon:
-      - imslp-op9
-      - henle-hn185
-    ket_qua: dung
-    ghi_chu: 'IMSLP: Composer "Chopin, Frédéric"; Henle HN 185.'
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Nocturnes,_Op.9_(Chopin,_Fr%C3%A9d%C3%A9ric)" ]
-    luot_2_ghi_chu: "IMSLP composer: Chopin, Frédéric."
-  - id: n3
-    cau: "Số danh mục: Op. 9 số 2."
-    loai: danh-muc
-    truong:
-      - danh_muc
-    nguon:
-      - imslp-op9
-      - henle-hn185
-    ket_qua: dung
-    ghi_chu: 'IMSLP: Op./Cat. No. "Op.9", mục 2. Henle: "op. 9,2".'
-    luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Nocturnes,_Op.9_(Chopin,_Fr%C3%A9d%C3%A9ric)", https://www.henle.de/en/Nocturne-E-flat-major-op.-9-no.-2/HN-664 ]
-    luot_2_ghi_chu: Op.9 No.2.
-  - id: n4
-    cau: Bài tương đương khoảng ABRSM Grade 7.
-    loai: cap-do
-    truong:
-      - grade
-    nguon:
-      - henle-hn185
-      - abrsm-1718
-      - abrsm-1920
-      - abrsm-2728
-      - rcm-2022
-      - henle-thang
-    ket_qua: dung
-    ghi_chu: "Nói theo kiểu tương đương: Op. 9 số 2 không có trong đề cương ABRSM 2017–2028 (cùng Grade 8 của 2015–2016) hay Trinity từ 2023. Henle xếp mức 6 (medium). Các nocturne khác của Chopin ở ABRSM: Nocturne Đô♯ thứ KK IVa/16 (Henle 5) Grade 7 (2017–2018), Nocturne Sol thứ Op. 37 số 1 (Henle 5) Grade 8 (2019–2020), Nocturne Mi thứ Op. 72 số 1 (Henle 5) Grade 8 (2027–2028). RCM 2022: Op. 9 số 2 ở Level 9. Kết luận: khoảng Grade 7–8; Grade 7 nằm trong sai số một cấp."
-    luot_2: dung
-    luot_2_nguon: [ https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf, https://www.henle.de/en/Nocturnes/HN-185, https://web.archive.org/web/20201112011213/https://gb.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf ]
-    luot_2_ghi_chu: No ABRSM/Trinity grade list 2013-26 includes Op.9/2 (not exhaustive). RCM 2022 Level 9, the same level as Op.37/1, which ABRSM sets at Grade 8 (2019-20); Henle level 6 (Op.37/1 is 5). Points to Grade 7-8; "khoảng Grade 7" is plausible (lower side).
-  - id: n5
-    cau: Bài thuộc chặng 6 (Grade 7–8) của lộ trình piano.
-    loai: cap-do
-    truong:
-      - chang
-    nguon:
-      - henle-hn185
-    ket_qua: dung
-    ghi_chu: Chặng 6 = Grade 7–8 (cap-do.yml); khớp với grade ở n4.
-    luot_2: dung
-    luot_2_nguon: [ https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf ]
-    luot_2_ghi_chu: Stage 6 = Grade 7-8; consistent.
-  - id: n6
-    cau: Bài được gợi ý ở chặng 6 trong hộp luyện tập của trang chủ.
-    loai: khuyen-tap
-    truong:
-      - goi_y
-    nguon: []
-    ket_qua: khong-can-nguon
-    ghi_chu: '../opus-zero/docs/assets/js/practice.js, hằng SUGGEST[6] có ["piano/tac-pham/chopin-nocturne-op9-2/", "Chopin: Nocturne Op. 9 số 2"]; chặng 6 trùng chang 6 của bản ghi.'
-    luot_2: dung
-    luot_2_ghi_chu: Reasonable; not contradicted.
+- id: n1
+  cau: 'Tên bài: Nocturne Mi♭ trưởng Op. 9 số 2 (bài thứ hai trong bộ ba Nocturne Op. 9).'
+  loai: ten
+  truong:
+  - ten
+  nguon:
+  - imslp-op9
+  - henle-hn185
+  ket_qua: dung
+  ghi_chu: 'IMSLP: "Nocturnes, Op.9", mục 2 "Andante (E-flat major)". Henle HN 185: "Nocturne E flat major op. 9,2".'
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/Nocturnes,_Op.9_(Chopin,_Fr%C3%A9d%C3%A9ric)
+  - https://www.henle.de/en/Nocturne-E-flat-major-op.-9-no.-2/HN-664
+  luot_2_ghi_chu: 'IMSLP: Nocturnes Op.9, 3 nocturnes; no.2 Andante (E-flat major).'
+- id: n2
+  cau: 'Tác giả: Frédéric Chopin.'
+  loai: lich-su
+  truong:
+  - tac_gia
+  nguon:
+  - imslp-op9
+  - henle-hn185
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Composer "Chopin, Frédéric"; Henle HN 185.'
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/Nocturnes,_Op.9_(Chopin,_Fr%C3%A9d%C3%A9ric)
+  luot_2_ghi_chu: 'IMSLP composer: Chopin, Frédéric.'
+- id: n3
+  cau: 'Số danh mục: Op. 9 số 2.'
+  loai: danh-muc
+  truong:
+  - danh_muc
+  nguon:
+  - imslp-op9
+  - henle-hn185
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Op./Cat. No. "Op.9", mục 2. Henle: "op. 9,2".'
+  luot_2: dung
+  luot_2_nguon:
+  - https://imslp.org/wiki/Nocturnes,_Op.9_(Chopin,_Fr%C3%A9d%C3%A9ric)
+  - https://www.henle.de/en/Nocturne-E-flat-major-op.-9-no.-2/HN-664
+  luot_2_ghi_chu: Op.9 No.2.
+- id: n4
+  cau: Bài tương đương khoảng ABRSM Grade 7.
+  loai: cap-do
+  truong:
+  - grade
+  nguon:
+  - henle-hn185
+  - abrsm-1718
+  - abrsm-1920
+  - abrsm-2728
+  - rcm-2022
+  - henle-thang
+  ket_qua: dung
+  ghi_chu: 'Nói theo kiểu tương đương: Op. 9 số 2 không có trong đề cương ABRSM 2017–2028 (cùng Grade 8 của 2015–2016) hay Trinity từ 2023. Henle xếp mức 6 (medium). Các nocturne khác của Chopin ở ABRSM: Nocturne Đô♯ thứ KK IVa/16 (Henle 5) Grade 7 (2017–2018), Nocturne Sol thứ Op. 37 số 1 (Henle 5) Grade 8 (2019–2020), Nocturne Mi thứ Op. 72 số 1 (Henle 5) Grade 8 (2027–2028). RCM 2022: Op. 9 số 2 ở Level 9. Kết luận: khoảng Grade 7–8; Grade 7 nằm trong sai số một cấp.'
+  luot_2: dung
+  luot_2_nguon:
+  - https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf
+  - https://www.henle.de/en/Nocturnes/HN-185
+  - https://web.archive.org/web/20201112011213/https://gb.abrsm.org/media/62972/piano_syllabus_2019___2020_complete.pdf
+  luot_2_ghi_chu: No ABRSM/Trinity grade list 2013-26 includes Op.9/2 (not exhaustive). RCM 2022 Level 9, the same level as Op.37/1, which ABRSM sets at Grade 8 (2019-20); Henle level 6 (Op.37/1 is 5). Points to Grade 7-8; "khoảng Grade 7" is plausible (lower side).
+- id: n5
+  cau: Bài thuộc chặng 6 (Grade 7–8) của lộ trình piano.
+  loai: cap-do
+  truong:
+  - chang
+  nguon:
+  - henle-hn185
+  ket_qua: dung
+  ghi_chu: Chặng 6 = Grade 7–8 (cap-do.yml); khớp với grade ở n4.
+  luot_2: dung
+  luot_2_nguon:
+  - https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf
+  luot_2_ghi_chu: Stage 6 = Grade 7-8; consistent.
+- id: n6
+  cau: Bài được gợi ý ở chặng 6 trong hộp luyện tập của trang chủ.
+  loai: khuyen-tap
+  truong:
+  - goi_y
+  nguon: []
+  ket_qua: khong-can-nguon
+  ghi_chu: '../opus-zero/docs/assets/js/practice.js, hằng SUGGEST[6] có ["piano/tac-pham/chopin-nocturne-op9-2/", "Chopin: Nocturne Op. 9 số 2"]; chặng 6 trùng chang 6 của bản ghi.'
+  luot_2: dung
+  luot_2_ghi_chu: Reasonable; not contradicted.
+- id: n7
+  cau: Giọng của bài là Mi♭ trưởng.
+  loai: cau-truc
+  truong:
+  - giong
+  nguon:
+  - mut-noct
+  - imslp-op9-2
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \key ef \major, kết hợp âm Mi♭; IMSLP: "Andante (E♭ major)".'
+- id: n8
+  cau: Nhịp của bài là 12/8.
+  loai: cau-truc
+  truong:
+  - nhip
+  nguon:
+  - mut-noct
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \time 12/8.'
+- id: n9
+  cau: Tác phẩm thuộc thời kỳ Lãng mạn.
+  loai: lich-su
+  truong:
+  - thoi_ky
+  nguon:
+  - imslp-op9-2
+  - mut-noct
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Comp. Period Romantic; Mutopia style "Romantic".'
+- id: n10
+  cau: 'Kỹ năng chính: cantabile, fioritura, rubato, bước nhảy tay trái.'
+  loai: cau-truc
+  truong:
+  - ky_nang_chinh
+  nguon:
+  - mut-noct
+  ket_qua: dung
+  ghi_chu: 'Mutopia: giai điệu hát dài; chùm móc ba ô 16, 24, cadenza ô 32; tay trái nốt trầm – hợp âm mỗi phách (quãng mười); "poco rubato" ô 26. Hồ sơ trang n4, n6, n39.'
+- id: n11
+  cau: 'Luyện nghe: giai điệu hát, rubato.'
+  loai: cau-truc
+  truong:
+  - luyen_nghe
+  nguon:
+  - mut-noct
+  ket_qua: dung
+  ghi_chu: Giai điệu cantabile ở tay phải; "poco rubato" ô 26, cadenza "senza tempo" ô 32 (Mutopia).
+- id: n12
+  cau: 'Chip: "Mi♭ trưởng · 12/8".'
+  loai: cau-truc
+  truong:
+  - chip
+  nguon:
+  - mut-noct
+  ket_qua: dung
+  ghi_chu: Như n7, n8.
+- id: n13
+  cau: 'Chip: "Andante".'
+  loai: ten
+  truong:
+  - chip
+  nguon:
+  - mut-noct
+  - imslp-op9-2
+  ket_qua: dung
+  ghi_chu: 'Mutopia: "Andante"; IMSLP: số 2 Andante.'
+- id: n14
+  cau: 'Chip: "≈ Grade 7".'
+  loai: cap-do
+  truong:
+  - chip
+  nguon:
+  - henle-185-trang
+  - rcm-2022-pdf
+  ket_qua: dung
+  ghi_chu: 'Khớp grade đã khóa "Grade 7" (lần 1, n4). Nguồn mới: RCM 2022 Level 9; Henle mức 6. Lần 1 đã ghi: không có trong ABRSM 2017–2028; khoảng Grade 7–8. Giữ chip theo grade đã khóa; chỗ lệch nhẹ ghi cho chủ repo (luot-1-B.md).'
+- id: n15
+  cau: 'Chip: "34 ô nhịp".'
+  loai: cau-truc
+  truong:
+  - chip
+  nguon:
+  - mut-noct
+  ket_qua: dung
+  ghi_chu: 'Mutopia: \partial 8 rồi 34 ô.'
+- id: n16
+  cau: 'Nhà soạn nhạc: Frédéric Chopin (1810–1849).'
+  loai: nam
+  truong:
+  - thong_tin
+  nguon:
+  - imslp-op9-2
+  ket_qua: dung
+  ghi_chu: Năm khớp nha-soan-nhac.yml (chopin 1810–1849, đã khóa); IMSLP trang tác giả "Chopin, Frédéric".
+- id: n17
+  cau: 'Tác phẩm: Nocturne Mi♭ trưởng, Op. 9 số 2, bài thứ hai trong bộ ba Nocturne Op. 9 (Si♭ thứ, Mi♭ trưởng, Si trưởng).'
+  loai: ten
+  truong:
+  - thong_tin
+  nguon:
+  - imslp-op9-2
+  ket_qua: dung
+  ghi_chu: 'IMSLP: 1. Larghetto (B♭ minor), 2. Andante (E♭ major), 3. Allegretto (B major).'
+- id: n18
+  cau: Sáng tác khoảng 1830–1831, khi Chopin mới ngoài 20 tuổi; in tháng 12 năm 1832 ở Paris (Schlesinger) và Leipzig (Kistner).
+  loai: nam
+  truong:
+  - thong_tin
+  nguon:
+  - imslp-op9-2
+  - ne-comm
+  ket_qua: da-sua
+  ghi_chu: 'Dữ liệu ghi: "Khoảng 1830–1832, khi Chopin mới ngoài 20 tuổi; xuất bản năm 1832". IMSLP: Composition Year 1830–31. NE: "FE1 … M. Schlesinger, Paris 20 XII 1832"; "GE1 … F. Kistner, Leipzig XII 1832". Chopin sinh 1810 (nha-soan-nhac.yml): 20–21 tuổi. Đề xuất ở sua-B.yml.'
+- id: n19
+  cau: Bộ Op. 9 đề tặng bà Marie Pleyel, một nghệ sĩ piano nổi tiếng ở Paris.
+  loai: lich-su
+  truong:
+  - thong_tin
+  nguon:
+  - imslp-op9-2
+  - niecks
+  ket_qua: dung
+  ghi_chu: 'IMSLP: Dedication "à Madame Camille Pleyel (Marie Pleyel, 1811–1875)"; Mutopia: "A M.me Marie Pleyel". Niecks: trong các nghệ sĩ piano lớn ở Paris "… Kalkbrenner a minstrel, Madame Pleyel a sibyl".'
+- id: n20
+  cau: 'Giọng · nhịp · tốc độ: Mi♭ trưởng · 12/8 · Andante.'
+  loai: cau-truc
+  truong:
+  - thong_tin
+  nguon:
+  - mut-noct
+  - dolmetsch-tempo
+  ket_qua: dung
+  ghi_chu: Như n7, n8, n13.
+- id: n21
+  cau: 'Hình thức: A A B A B A và coda, 34 ô nhịp; mỗi lần chủ đề trở lại được trang trí nhiều hơn.'
+  loai: cau-truc
+  truong:
+  - thong_tin
+  nguon:
+  - mut-noct
+  ket_qua: dung
+  ghi_chu: Hồ sơ trang n20, n30 (Mutopia; Henle HN 664 "more ornamented with each repetition").
+- id: n22
+  cau: 'Độ khó: RCM xếp bài ở Level 9 (đề cương 2022); Henle xếp mức 6 ("trung bình") trên thang 1–9; bài không có trong đề cương ABRSM 2017–2028.'
+  loai: cap-do
+  truong:
+  - thong_tin
+  nguon:
+  - rcm-2022-pdf
+  - henle-185-trang
+  ket_qua: da-sua
+  ghi_chu: 'Dữ liệu ghi: "Khoảng ABRSM Grade 7 (ước lượng); nhà xuất bản Henle xếp mức 6 trên thang 9 (\"trung bình\")". Bỏ ước lượng ABRSM không nguồn, ghi đề cương có (như D6-L3-gom, mục "Grade và dữ liệu"). RCM 2022 tr. 83: "Nocturne in E flat Major, op. 9, no. 2" ở Level 9. ABRSM 2017–2028: lần 1 n4 (D2-0) đã mở các đề cương. Grade đã khóa "Grade 7" không đổi. Đề xuất ở sua-B.yml.'
+- id: n23
+  cau: 'Kỹ năng chính (thong_tin): giai điệu cantabile, bước nhảy tay trái, chùm nốt hoa mỹ (fioritura), rubato, bàn đạp theo hòa âm.'
+  loai: cau-truc
+  truong:
+  - thong_tin
+  nguon:
+  - mut-noct
+  ket_qua: dung
+  ghi_chu: Như n10; Mutopia ghi Ped. theo hòa âm mỗi phách lớn.
+- id: n24
+  cau: 'Bản nhạc: IMSLP (Nocturnes, Op.9); bản Urtext Henle, Wiener Urtext (Jan Ekier biên tập, có in các biến thể trang trí của chính Chopin), Ấn bản Quốc gia Ba Lan (Wydanie Narodowe).'
+  loai: ten
+  truong:
+  - thong_tin
+  nguon:
+  - imslp-op9-2
+  - henle-185-trang
+  - wiener-50065
+  - ne-comm
+  ket_qua: dung
+  ghi_chu: Henle HN 185; Wiener Urtext UT 50065 (Ekier, biến thể ở chú thích); NE (Ekier, Kamiński) có chú giải tập Nocturnes.
+- id: n25
+  cau: 'Hình cấu trúc (bài học): 34 ô, độ dài theo số ô: A ô 1–4, A'' ô 5–8 thêm trang trí, B ô 9–12 quanh Si♭, A'''' ô 13–16, B'' ô 17–20, A'''''' ô 21–24 trang trí nhiều nhất, coda ô 25–34 có cadenza nhỏ; mỗi lần chủ đề trở lại được trang trí nhiều hơn.'
+  loai: cau-truc
+  truong:
+  - hinh
+  nguon:
+  - mut-noct
+  ket_qua: dung
+  ghi_chu: Độ rộng 4, 4, 4, 4, 4, 4, 10 = 34. Ranh giới theo Mutopia (hồ sơ trang n30–n36).
+- id: n26
+  cau: 'Bản thu gợi ý: Frank Lévy (Musopen), phạm vi công cộng, trang Commons; dài 271,47 giây.'
+  loai: ten
+  truong:
+  - ban_thu
+  nguon:
+  - commons-levy
+  ket_qua: dung
+  ghi_chu: 'Commons API: Artist Frédéric Chopin / Frank Lévy; Credit Musopen Kickstarter; LicenseShortName "Public domain"; playtime_seconds 271.469 (khớp d 271.47). mp3 và src trỏ đúng tệp 8/89.'

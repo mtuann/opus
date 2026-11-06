@@ -16,21 +16,21 @@ Bản nocturne nổi tiếng nhất của Chopin là một bài học trọn v�
 - **Tay trái kiểu valse trong nhịp 12/8.** Mỗi phách lớn là một nốt trầm và hai hợp âm. Bước nhảy này lặp lại trong vô số tác phẩm Lãng mạn: valse, mazurka, nocturne.
 - **Làm quen fioritura.** Những chùm nốt nhỏ không chia đều theo phách, bắt chước lối luyến láy của ca sĩ. Gặp chúng lần đầu trong một bài ngắn dễ hơn nhiều so với gặp trong một Ballade.
 - **Rubato có kỷ luật.** Bài này dạy bạn co giãn giai điệu mà không làm sụp nhịp.
-- **Ngắn mà trọn vẹn.** 34 ô nhịp, khoảng 4 phút: đủ để học kỹ trong hai tháng và biểu diễn được.
+- **Ngắn mà trọn vẹn.** 34 ô nhịp, khoảng bốn đến năm phút: đủ để học kỹ trong hai tháng và biểu diễn được.
 
 :::tip[Chưa sẵn sàng?]
-Nếu bước nhảy tay trái và chùm nốt nhỏ còn quá sức, hãy bắt đầu bằng những nocturne mà Henle xếp ở mức 5: Nocturne Mi thứ Op. 72 số 1 (di cảo) hoặc Nocturne Đô♯ thứ (di cảo, B. 49). Cả hai dạy cùng một cách hát nhưng ít trang trí hơn. Trên site, [Valse Si thứ Op. 69 số 2](/opus/piano/tac-pham/chopin-valse-si-thu/) cũng là một bước chuẩn bị tốt.
+Nếu bước nhảy tay trái và chùm nốt nhỏ còn quá sức, hãy bắt đầu bằng những nocturne mà Henle xếp ở mức 5: Nocturne Mi thứ Op. 72 số 1 (di cảo) hoặc Nocturne Đô♯ thứ (di cảo, B. 49). Trên site, [Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/) ở chặng 5 cũng là một bước chuẩn bị tốt.
 :::
 
 ## Bối cảnh
 
-**Nocturne** (khúc nhạc đêm) không phải do Chopin đặt ra. Người khởi xướng thể loại này cho piano là nhà soạn nhạc người Ireland **John Field** (1782–1837), với bản nocturne đầu tiên in năm 1812: một giai điệu hát ở tay phải trên lớp hợp âm rải rộng của tay trái, nhờ bàn đạp mà ngân vang. Chopin nhận lấy khuôn mẫu đó rồi làm nó phong phú hơn hẳn về hòa âm và trang trí.
+**Nocturne** (dạ khúc) không phải do Chopin đặt ra. Người khởi xướng thể loại này cho piano là nhà soạn nhạc người Ireland **John Field** (1782–1837): một giai điệu hát ở tay phải trên lớp hợp âm rải rộng của tay trái, nhờ bàn đạp mà ngân vang. Chopin nhận lấy khuôn mẫu đó rồi phát triển nó xa hơn.
 
-Nguồn cảm hứng thứ hai là **opera Ý**. Chopin mê lối hát *bel canto* ("hát đẹp") của các ca sĩ thời ông: những câu hát dài, nốt cao mềm, và những đoạn luyến láy ngẫu hứng mà ca sĩ thêm vào khi một giai điệu được hát lại. Đó chính là điều bạn nghe trong bài này: mỗi lần chủ đề A trở lại, nó được "hát" với nhiều nốt hoa mỹ hơn.
+Nguồn cảm hứng thứ hai là **opera Ý**. Chopin rất thích nhạc của Bellini, và khi dạy cách chơi láy quanh, nốt dựa, ông khuyên học trò lấy các ca sĩ Ý lớn làm mẫu. Lối hát *bel canto* ("hát đẹp") của họ chuộng những câu hát dài, liền tiếng, và ca sĩ thường tự thêm những đường luyến láy vào giai điệu. Đó chính là điều bạn nghe trong bài này: mỗi lần chủ đề A trở lại, nó được "hát" với nhiều nốt hoa mỹ hơn.
 
-Op. 9 là bộ nocturne đầu tiên Chopin xuất bản, viết trong những năm ông rời Warsaw (cuối năm 1830), sống ở Vienna rồi đến Paris (1831). Bài số 2 đến nay vẫn là một trong những bản nhạc piano được biết đến nhiều nhất.
+Op. 9 là bộ nocturne đầu tiên Chopin xuất bản, viết trong những năm ông rời Warsaw (cuối năm 1830), sống ở Vienna rồi đến Paris (1831). Nhà xuất bản Henle gọi bài số 2 là một trong những nocturne được yêu thích nhất, có lẽ cả trong toàn bộ tác phẩm của Chopin.
 
-Các học trò kể rằng Chopin thường thay đổi nét trang trí mỗi lần chơi, tùy cảm hứng. Một số biến thể do chính ông viết còn được lưu lại, và phần lớn chúng thuộc về chính bài này. Ấn bản Wiener Urtext của Jan Ekier in các biến thể ở chú thích, và với riêng Op. 9 số 2 còn in thêm một phiên bản thứ hai chứa trọn các biến thể.
+Khi chơi và khi dạy bài này, Chopin thêm vào bản in nhiều biến thể trang trí, lớn nhỏ khác nhau; nhiều biến thể ông tự tay ghi vào bản nhạc của học trò. Ấn bản Wiener Urtext của Jan Ekier in các biến thể ở chú thích (bài này có nhiều biến thể nhất trong tập), và với riêng Op. 9 số 2 còn in thêm một phiên bản thứ hai chứa trọn các biến thể.
 
 ## Nghe trước khi tập
 
@@ -40,7 +40,7 @@ Nghe ít nhất ba lần, mỗi lần với một câu hỏi:
 2. **Tay trái.** Lớp đệm có bao giờ to hơn giai điệu không? Nó có giữ nhịp khi giai điệu co giãn?
 3. **Trang trí.** So sánh chủ đề ở ô 1, ô 5, ô 13 và ô 21: cùng một giai điệu, mỗi lần thêm gì?
 
-Rồi nghe hai, ba nghệ sĩ khác nhau, ví dụ Arthur Rubinstein, Claudio Arrau và Maria João Pires (cả ba đều thu trọn bộ nocturne). Ghi lại: ai chơi trôi hơn, ai chậm và đậm hơn, ai co giãn nhiều nhất? Không có câu trả lời duy nhất; bạn đang tìm phiên bản *của mình*. Muốn hiểu "giọng hát" mà Chopin bắt chước, nghe thêm một aria bel canto, như "Casta diva" trong opera *Norma* của Bellini.
+Rồi nghe hai, ba nghệ sĩ khác nhau, ví dụ Arthur Rubinstein, Claudio Arrau và Maria João Pires (cả ba đều có bản thu các nocturne của Chopin). Ghi lại: ai chơi trôi hơn, ai chậm và đậm hơn, ai co giãn nhiều nhất? Không có câu trả lời duy nhất; bạn đang tìm phiên bản *của mình*. Muốn hiểu "giọng hát" mà Chopin bắt chước, nghe thêm một aria bel canto, như "Casta diva" trong opera *Norma* của Bellini.
 
 ::khoi-nghe{moc="1 32 60 88 118 145 175 231 248"}
 
@@ -72,7 +72,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | A'' | 13–16 | Chủ đề, trang trí dày hơn | Chùm nốt nhỏ thật sự khó đầu tiên |
 | B' | 17–20 | Đoạn B trở lại | Giữ mạch, đừng "nghỉ" ở đây |
 | A''' | 21–24 | Chủ đề lần cuối, trang trí nhiều nhất | Giai điệu chính vẫn phải nổi dưới lớp trang trí |
-| Coda | 25–34 | Cao trào, cadenza ngắn, rồi lắng xuống | Ô áp chót ghi *senza tempo* (không theo nhịp) |
+| Coda | 25–34 | Cao trào, cadenza ngắn, rồi lắng xuống | Ô 32 ghi *senza tempo* (không theo nhịp) |
 
 Mọi câu nhạc đều dài 4 ô nhịp, trừ hai ô cuối. Cấu trúc đều đặn này là lợi thế khi học thuộc: bạn chỉ cần nhớ thứ tự A – A – B – A – B – A và những gì thay đổi mỗi lần.
 
@@ -117,7 +117,7 @@ K:Eb clef=bass
 
 ### 2. Chùm nốt không chia đều trên nền tay trái đều
 
-Ô 1 có chùm 7 nốt trong thời gian của một phách lớn (đáng lẽ là 6 nốt móc kép); ô 2 có chùm 9 nốt. Tay trái giữ nhịp tuyệt đối đều, tay phải phải đáp vào nốt đích đúng lúc tay trái sang phách mới.
+Ô 1 của bài tập có chùm 7 nốt trong thời gian của một phách lớn (đáng lẽ là 6 nốt móc kép); ô 2 có chùm 9 nốt. Tay trái giữ nhịp tuyệt đối đều, tay phải phải đáp vào nốt đích đúng lúc tay trái sang phách mới.
 
 ```abc
 X:2
@@ -188,7 +188,7 @@ Nghĩ theo **bốn phách lớn** mỗi ô, không phải 12 móc đơn. *Andant
 
 ### Rubato
 
-Karol Mikuli, học trò của Chopin và về sau là người biên tập các tác phẩm của ông, kể rằng khi Chopin co giãn giai điệu, tay đệm vẫn tiếp tục chơi đúng nhịp, và rằng Chopin rất nghiêm khắc về việc giữ nhịp. Hãy coi đó là nguyên tắc tập luyện: tay trái là khung, tay phải là giọng hát, có thể đến sớm một chút, nán lại một chút, nhưng không làm sụp khung. Rubato không có nghĩa là chậm lại ở mọi chỗ đẹp.
+Karol Mikuli, học trò của Chopin và về sau là người biên tập các tác phẩm của ông, kể rằng khi Chopin co giãn giai điệu, tay đệm vẫn tiếp tục chơi đúng nhịp. Học trò của ông còn nhớ lời dặn: "Hãy để tay trái làm nhạc trưởng và luôn giữ nhịp". Hãy coi đó là nguyên tắc tập luyện: tay trái là khung, tay phải là giọng hát, có thể đến sớm một chút, nán lại một chút, nhưng không làm sụp khung. Rubato không có nghĩa là chậm lại ở mọi chỗ đẹp.
 
 ### Trang trí
 
@@ -220,7 +220,7 @@ Phần lớn bài ở *p* và *pp*; dải sắc thái hẹp nên từng nấc nh
 ## Học tiếp
 
 - **Nocturne khác:** Mi thứ Op. 72 số 1 và Đô♯ thứ (di cảo) nếu cần lùi một bước; Rê♭ trưởng Op. 27 số 2 (Henle mức 6) để tiến lên; Đô thứ Op. 48 số 1 và Si trưởng Op. 9 số 3 (Henle mức 7) khi đã vững.
-- **Cùng tác giả, trên site:** [Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/) và [Valse Si thứ](/opus/piano/tac-pham/chopin-valse-si-thu/) (dễ hơn), [Prélude Mi thứ](/opus/piano/tac-pham/chopin-prelude-mi-thu/), rồi [Fantaisie-Impromptu](/opus/piano/tac-pham/chopin-fantaisie-impromptu/) và [Ballade số 1](/opus/piano/tac-pham/chopin-ballade-1/) khi đã ở trình độ cao.
+- **Cùng tác giả, trên site:** [Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/) (chặng 5) và [Valse Si thứ](/opus/piano/tac-pham/chopin-valse-si-thu/) (cùng chặng 6), [Prélude Mi thứ](/opus/piano/tac-pham/chopin-prelude-mi-thu/), rồi [Fantaisie-Impromptu](/opus/piano/tac-pham/chopin-fantaisie-impromptu/) và [Ballade số 1](/opus/piano/tac-pham/chopin-ballade-1/) khi đã ở trình độ cao.
 - **Cùng kỹ năng hát:** [Schumann: Träumerei](/opus/piano/tac-pham/schumann-traumerei/), [Beethoven: Pathétique, chương 2](/opus/piano/tac-pham/pathetique-adagio/), [Schubert: Impromptu Sol♭ trưởng](/opus/piano/tac-pham/schubert-impromptu-sol-giang/); khó hơn, với giai điệu nằm ở giọng giữa: [Liszt: Liebestraum số 3](/opus/piano/tac-pham/liszt-liebestraum/).
 - **Nghe thêm:** vài nocturne của John Field để thấy khuôn mẫu mà Chopin kế thừa; các nghệ sĩ nên nghe ở [Nghệ sĩ piano và bản thu](/opus/piano/nghe-si/).
 
@@ -253,7 +253,7 @@ Phần lớn bài ở *p* và *pp*; dải sắc thái hẹp nên từng nấc nh
 
 ## Nguồn
 
-- Jean-Jacques Eigeldinger, *Chopin: Pianist and Teacher as Seen by His Pupils*, Cambridge University Press, 1986 (lời kể của Mikuli và các học trò về rubato, trang trí).
-- Jim Samson, *The Music of Chopin*, Routledge & Kegan Paul, 1985.
+- Frederick Niecks, *Frederick Chopin as a Man and Musician*, 1888 ([Project Gutenberg](https://www.gutenberg.org/ebooks/4973)): lời kể của Mikuli và các học trò về rubato, Chopin và Field, Chopin và opera Ý.
+- Jan Ekier và Paweł Kamiński, Ấn bản Quốc gia Ba Lan (Wydanie Narodowe), [chú giải tập Nocturnes](https://www.chopin-nationaledition.com/wp-content/uploads/2017/05/nocturnes_commentaries.pdf): các biến thể Chopin ghi vào bản nhạc của học trò.
 - Chopin, *Nocturnes*, G. Henle Verlag (HN 233, biên tập Ewald Zimmermann): mức độ khó theo thang Henle. Chopin, *Nocturnes*, Wiener Urtext Edition (biên tập Jan Ekier): các biến thể của tác giả.
 - Bản nhạc: [IMSLP](https://imslp.org/). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

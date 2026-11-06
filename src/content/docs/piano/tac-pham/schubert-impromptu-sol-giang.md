@@ -18,11 +18,11 @@ Một giai điệu dài như ca khúc hát chậm rãi trên dòng hợp âm r�
 
 ## Bối cảnh
 
-Năm 1827, năm trọn vẹn cuối cùng của đời mình, Schubert viết hai tập, mỗi tập bốn bản: D. 899 và D. 935. Cái tên *Impromptu* (ngẫu hứng) do nhà xuất bản Tobias Haslinger đặt cho tập đầu. Haslinger in bài số 1 và 2 ngay cuối năm 1827; bài số 3 và 4 phải chờ đến năm 1857, gần ba mươi năm sau khi Schubert mất, mới được con trai ông, Carl Haslinger, in ra. Toàn bộ câu chuyện có trong [hướng dẫn nghe](/opus/nghe-nhac/schubert-impromptu/); dưới đây chỉ là những điều ảnh hưởng trực tiếp đến việc tập.
+Năm 1827, năm trọn vẹn cuối cùng của đời mình, Schubert viết hai tập, mỗi tập bốn bản: D. 899 và D. 935. Cái tên *Impromptu* (ngẫu hứng) có lẽ do nhà xuất bản Tobias Haslinger đặt cho tập đầu: chính ông ghi tên này lên bản thảo bài số 1. Haslinger in bài số 1 và 2 ngay cuối năm 1827; bài số 3 và 4 phải chờ đến năm 1857, gần ba mươi năm sau khi Schubert mất, mới được con trai ông, Carl Haslinger, in ra. Toàn bộ câu chuyện có trong [hướng dẫn nghe](/opus/nghe-nhac/schubert-impromptu/); dưới đây chỉ là những điều ảnh hưởng trực tiếp đến việc tập.
 
 ### Sol♭ hay Sol?
 
-Lần in năm 1857 dịch bài lên **Sol trưởng** cho dễ đọc (chuyện này kể ở [hướng dẫn nghe](/opus/nghe-nhac/schubert-impromptu/)); dễ đọc hơn nhưng không dễ chơi hơn. Ở Sol♭ trưởng, năm trong bảy nốt của gam là phím đen; chỉ Đô♭ (chính là phím Si) và Fa là phím trắng. Phím đen cao và hẹp, nằm vừa dưới đầu các ngón dài: bàn tay đặt sâu vào trong phím, vững, dễ nối legato và dễ dồn trọng lượng sang ngón 4–5 để hát. Nếu bản nhạc trong tay bạn ở Sol trưởng, đó là bản theo lần in 1857; hãy đổi sang bản Urtext ở giọng gốc. Xem thêm [Hóa biểu](/opus/nhac-ly/08-hoa-bieu/) và [Dịch giọng](/opus/nhac-ly/17-khoa-do-dich-giong/).
+Lần in năm 1857 dịch bài lên **Sol trưởng** cho dễ chơi hơn (chuyện này kể ở [hướng dẫn nghe](/opus/nghe-nhac/schubert-impromptu/)); Henle nhận xét việc dịch giọng làm phai màu riêng của bài. Một dấu thăng dễ đọc hơn sáu dấu giáng, nhưng không vì thế mà dễ chơi hơn. Ở Sol♭ trưởng, năm trong bảy nốt của gam là phím đen; chỉ Đô♭ (chính là phím Si) và Fa là phím trắng. Phím đen cao và hẹp, nằm vừa dưới đầu các ngón dài: bàn tay đặt sâu vào trong phím, vững, dễ nối legato và dễ dồn trọng lượng sang ngón 4–5 để hát. Nếu bản nhạc trong tay bạn ở Sol trưởng, đó là bản theo lần in 1857; hãy đổi sang bản Urtext ở giọng gốc. Xem thêm [Hóa biểu](/opus/nhac-ly/08-hoa-bieu/) và [Dịch giọng](/opus/nhac-ly/17-khoa-do-dich-giong/).
 
 ::cong-cu{ten="piano" range="F3-C5" notes="Bb3 Db4 Gb4 Bb4" play="chord"}
 
@@ -57,7 +57,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | … | **Đoạn giữa mở ra** (ô 25–28): Mi♭ thứ, *f*; nốt giai điệu có dấu nhấn; bè trầm đi lên bằng những chùm ba nhỏ |
 | … | **Sáng tối xen kẽ** (ô 29–40): *f*, *p*, *pp*, cả *ppp* (ô 35); láy rền ở ô 29; hai cú nhấn *fz* (ô 36, 38) |
 | … | **Những tiếng thở dài** (ô 41–48): nốt nhấn rơi xuống một bậc (Sol♭–Fa, Mi♭–Rê); láy rền ở ô 46 |
-| … | **Mi♭ trưởng và đường về** (ô 49–54): giai điệu đứng yên trên Mi♭; bè trầm đi xuống tới láy rền rất trầm trên Sol♭1 (ô 53), rồi dấu ngân (ô 54) |
+| … | **Mi♭ trưởng và đường về** (ô 49–54): giai điệu dừng lại trên Mi♭ (ô 51–53); bè trầm đi xuống tới láy rền rất trầm trên Sol♭1 (ô 53), rồi dấu ngân (ô 54) |
 | … | **Chủ đề trở lại** (ô 55–74): như lần đầu nhưng rút gọn; câu cuối nói hai lần, lần hai bắt đầu *fp* (ô 71) |
 | … | **Coda** (ô 75–86): hòa âm rẽ rất xa và lên tới *ffz* (ô 80), rồi về Sol♭; nhịp điệu của ô đầu tiên vang lần cuối (ô 84–85); *ppp*, dấu ngân |
 
@@ -73,7 +73,7 @@ Số ô nhịp, sắc thái và vị trí các láy rền dưới đây theo ấ
 | A · câu dài | 9–16 | Giai điệu vươn cao (Fa♭5 ở ô 12), hòa âm đổi màu; *pp* ở ô 13 | Đỉnh câu ở ô 10–12; ô 13 lùi lại, nhỏ hơn hẳn |
 | A · câu dài nói lại | 17–24 | Cùng giai điệu, khác vài chi tiết; bè trầm mới, có láy rền đầu tiên (Rê♭2, ô 19); kết Sol♭ ở ô 24 | Đừng chơi y hệt ô 9–16: bè trầm xuống sâu hơn, hòa âm tối hơn (Mi♭♭ ở ô 21) |
 | B | 25–40 | Mi♭ thứ, *f*; nốt giai điệu có dấu nhấn; bè trầm đi lên bằng chùm ba; sắc thái đổi liên tục từ *f* tới *ppp*, có *fz*; láy rền ở ô 29 | Tương phản rõ nhưng tiếng không gắt; dòng chùm sáu vẫn đều khi sắc thái đổi |
-| B | 41–52 | Hình "thở dài": nốt nhấn rơi xuống một bậc (ô 41, 45); láy rền ở ô 46; ô 49–52 sáng lên Mi♭ trưởng, giai điệu đứng yên trên nốt Mi♭ | Nốt nhấn là trọng lượng, không phải cú đánh |
+| B | 41–52 | Hình "thở dài": nốt nhấn rơi xuống một bậc (ô 41, 45); láy rền ở ô 46; ô 49–52 sáng lên Mi♭ trưởng, rồi giai điệu đứng yên trên nốt Mi♭ (ô 51–53) | Nốt nhấn là trọng lượng, không phải cú đánh |
 | Đường về | 53–54 | Bè trầm xuống tới láy rền trên Sol♭1 (ô 53); dấu ngân ở ô 54 | Láy rền *pp* và đều; im lặng thật sự trước khi chủ đề trở lại |
 | A' | 55–74 | Chủ đề nguyên vẹn (ô 55–62), phần tiếp theo rút gọn; câu cuối nói hai lần (ô 67–70 và 71–74), lần hai *fp* | Như một kỷ niệm: nhẹ hơn nhưng không chậm hơn |
 | Coda | 75–86 | Hòa âm rẽ rất xa (ô 78–80; bản Breitkopf tạm đổi hóa biểu và viết bằng dấu thăng), lên tới *ffz* ở ô 80, rồi về Sol♭; nhịp điệu của ô 1 vang lần cuối (ô 84–85); *ppp*, dấu ngân | Chỗ rẽ hòa âm là cao trào cuối cùng; sau đó mọi thứ lắng xuống |
@@ -245,7 +245,7 @@ Một mốc khi mới tập: giai điệu *mp*, bè trầm *p*, dòng chùm sáu
 
 ### Láy rền
 
-Bản Breitkopf viết sẵn nốt kết cho phần lớn các láy rền (hai nốt hoa mỹ nhỏ ngay trước nốt sau). Nhiều nghệ sĩ bắt đầu láy rền của Schubert từ nốt chính; điều quan trọng hơn là nó nhỏ, đều, và tan vào nốt sau như tiếng sấm xa. Xem [Nốt hoa mỹ](/opus/piano/not-hoa-my/).
+Bản Breitkopf viết sẵn nốt kết cho phần lớn các láy rền (hai nốt hoa mỹ nhỏ ngay trước nốt sau). Điều quan trọng là láy rền nhỏ, đều, và tan vào nốt sau như tiếng sấm xa. Xem [Nốt hoa mỹ](/opus/piano/not-hoa-my/).
 
 ### Rubato
 
@@ -272,7 +272,7 @@ Dùng bản Urtext ở Sol♭ trưởng: Henle có ấn bản riêng cho bài n�
 - **Giai điệu nằm giữa dòng đệm:** [Liszt: Liebestraum](/opus/piano/tac-pham/liszt-liebestraum/).
 - **Schubert tiếp theo:** Impromptu La♭ trưởng D. 935 số 2 (dễ tiếp cận hơn một chút) và Impromptu Mi♭ trưởng D. 899 số 2 (dòng chùm ba nhanh của tay phải).
 - **Một tác phẩm lớn hơn:** [Chopin: Ballade số 1](/opus/piano/tac-pham/chopin-ballade-1/).
-- Nghe thêm: [hướng dẫn nghe Impromptu](/opus/nghe-nhac/schubert-impromptu/), [Ngũ tấu *Con cá hồi*](/opus/nghe-nhac/schubert-ca-hoi/). Nếu thấy bài còn quá sức, quay lại [Mendelssohn: Thuyền ca Venice](/opus/piano/tac-pham/mendelssohn-thuyen-ca/). Thứ tự gợi ý: [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/) và chặng 6 của [Lộ trình](/opus/piano/lo-trinh/).
+- Nghe thêm: [hướng dẫn nghe Impromptu](/opus/nghe-nhac/schubert-impromptu/), [Ngũ tấu *Con cá hồi*](/opus/nghe-nhac/schubert-ca-hoi/). Nếu thấy bài còn quá sức, quay lại [Mendelssohn: Thuyền ca Venice](/opus/piano/tac-pham/mendelssohn-thuyen-ca/). Thứ tự gợi ý: [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/) và chặng 7 của [Lộ trình](/opus/piano/lo-trinh/).
 
 ::hoc-tiep
 
@@ -283,7 +283,7 @@ Dùng bản Urtext ở Sol♭ trưởng: Henle có ấn bản riêng cho bài n�
 + Bài bị dịch sang Sol trưởng và các ô nhịp dài bị chia đôi
 - Bài được thêm một đoạn giữa mới
 - Bài in ở Sol♭ trưởng nhưng bỏ phần coda
-> Nhà xuất bản lo người chơi nghiệp dư ngại sáu dấu giáng. Bản Urtext ngày nay trả lại giọng Sol♭ trưởng và nhịp 4/2.
+> Nhà xuất bản đổi cho dễ chơi hơn: sáu dấu giáng và nhịp 4/2 là điều khác thường với một bản nhạc ngắn thời ấy. Bản Urtext ngày nay trả lại giọng Sol♭ trưởng và nhịp 4/2.
 ? Nhịp 4/2 của bài nên được cảm thế nào?
 + Bốn phách nốt trắng mỗi ô; mỗi phách chứa một nhóm sáu móc đơn của dòng đệm
 - Bốn phách nốt đen như nhịp 4/4
@@ -304,6 +304,6 @@ Dùng bản Urtext ở Sol♭ trưởng: Henle có ấn bản riêng cho bài n�
 ## Nguồn
 
 - G. Henle Verlag, [*Impromptu G flat major op. 90 no. 3 D 899*, HN 488](https://www.henle.de/en/Impromptu-G-flat-major-op.-90-no.-3-D-899/HN-488): mức độ khó 6; mô tả bài là "a mysterious reverie in pianissimo"; nhận xét rằng các bản dịch sang Sol trưởng làm phai màu sắc của tác phẩm.
-- [*Impromptus, Op. 90 (Schubert)*](https://en.wikipedia.org/wiki/Impromptus,_Op._90_%28Schubert%29), Wikipedia tiếng Anh: năm sáng tác, cái tên do Tobias Haslinger đặt, lần in năm 1857 ở Sol trưởng với ô nhịp chia đôi, nhận xét "dễ đọc hơn nhưng không dễ chơi hơn".
+- [PTNA Piano Encyclopedia, mục D 899](https://enc.piano.or.jp/en/musics/1580) và lời tựa Henle HN 4 (*Impromptus and Moments musicaux*): năm sáng tác, cái tên *Impromptu* trên bản thảo, lần in năm 1857 ở Sol trưởng với ô nhịp chia đôi.
 - Mutopia Project ([mutopiaproject.org](https://www.mutopiaproject.org/)), *Impromptu in Ges-dur*, D. 899 số 3 (Ph. Raynaud, phạm vi công cộng, theo ấn bản Breitkopf & Härtel 1888): nguồn của đoạn trích ô 1–4, số ô nhịp, sắc thái và vị trí các láy rền nêu trên trang này.
 - Bản nhạc: [IMSLP](https://imslp.org/) (tìm "4 Impromptus, D.899"). Xem thêm [hướng dẫn nghe](/opus/nghe-nhac/schubert-impromptu/) và [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

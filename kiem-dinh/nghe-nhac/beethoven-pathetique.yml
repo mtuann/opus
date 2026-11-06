@@ -3,15 +3,537 @@ trang: src/content/docs/nghe-nhac/beethoven-pathetique.md
 nguon_cu: ../opus-zero/docs/nghe-nhac/beethoven-pathetique.md
 tang: tac-pham
 lan:
-  - so: 1
-    ngay: null
-    nhanh: moi/d6-l5
-    ma_bam: null
-    nguoi:
-      luot_1: null
-      luot_2: null
-      review: null
-      kiem_mau: null
-nguon: []
-nhan_dinh: []
+- so: 1
+  ngay: '2026-11-05'
+  nhanh: moi/d6-l5
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Opus 5.5, agent con, D6-L5 phần A
+    luot_2: null
+    review: null
+    kiem_mau: null
+ghi_chu: 'Hướng dẫn nghe Pathétique, cả ba chương (tầng Tác phẩm). Bản nhạc: Mutopia pathetique-1 (Schirmer 1894, Berners 1908), pathetique-2 (Berners 1908, Peters 1910), pathetique-3 (Berners 1908), tải .ly và .mid 05/11/2026 với User-Agent opus-kiem-dinh; đọc tệp .ly theo từng đoạn (theme I–XI của chương 1) và in nốt MIDI theo ô bằng script Python (mido). Lịch sử: lời nói đầu Henle HN 1348 (PDF), Beethoven-Haus, IMSLP, lời giới thiệu của Angela Hewitt (Hyperion CDA67605), lời kể của Moscheles (Gutenberg). Bản thu và mốc: ::khoi-nghe có 11 mốc cho 12 dòng (dòng Tái hiện và coda chương I để "-"); ba tệp Veesey trên Commons đúng người chơi, CC0, độ dài khớp d trong ban_thu; mốc kiểm qua cấu hình pieces.py (xem nhận định mốc), không nghe lại toàn bộ; giây cuối tệp chương I vẫn có tiếng (-15,8 dB): tệp bị cắt. Câu ve-site ở hồ sơ khác: cap-nhat n80 (file chương I dừng khoảng 6:24, giữa phần phát triển; trang ghi rõ): đúng, note của ban_thu hiện trong khối nghe. piano/tac-pham/beethoven-op49-2 n36 (link hướng dẫn nghe Pathétique): trang có. hinh-thuc/sonata n35 (chương cuối là sonata-rondo): trang này chỉ gọi là Rondo, không mâu thuẫn. piano/quang-tam-buoc-nhay n25 (tremolo quãng tám ở tay trái chương 1): trang giữ. Không tính là nhận định: tiêu đề mục, tiêu đề cột, chữ do ::hinh-cau-truc dựng (thuộc hồ sơ bản ghi), mốc trong ::khoi-nghe (có nhận định riêng ở trên vì lời giao yêu cầu kiểm). Thuật ngữ trang dùng (Grave, tremolo, fp, rondo, cantabile, chùm ba) có trong src/data/thuat-ngu.yml.'
+nguon:
+- id: mut-op13-1
+  bac: 1
+  ten: Mutopia Project, Sonata No. 8 "Pathétique", chương 1 (Chris Sawer, nguồn G. Schirmer 1894 và Berners 1908; tệp LilyPond và MIDI, tải 05/11/2026)
+  link: https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-1/pathetique-1.ly
+- id: mut-op13-2
+  bac: 1
+  ten: Mutopia Project, Sonata No. 8 "Pathétique", chương 2 Adagio cantabile (Chris Sawer, nguồn Berners 1908 do A. Winterberger biên tập và Köhler & Ruthardt, Peters 1910; tệp LilyPond và MIDI, tải 05/11/2026)
+  link: https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly
+- id: mut-op13-3
+  bac: 1
+  ten: Mutopia Project, Sonata No. 8 "Pathétique", chương 3 Rondo (Chris Sawer, nguồn Berners 1908; tệp LilyPond và MIDI, tải 05/11/2026)
+  link: https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-3/pathetique-3.ly
+- id: imslp-op13
+  bac: 2
+  ten: 'IMSLP, Piano Sonata No.8, Op.13 (Beethoven): 3 chương (Grave – Allegro di molto e con brio, Đô thứ; Adagio cantabile, La♭ trưởng; Rondo. Allegro, Đô thứ); sáng tác 1798; in 18/12/1799, Vienna: Hoffmeister; đề tặng Karl Lichnowsky; thời lượng trung bình 19–20 phút; Piece Style Classical; danh sách ấn bản có Bülow/Lebert'
+  link: https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)
+- id: henle-hn1348
+  bac: 2
+  ten: 'G. Henle Verlag, HN 1348 Piano Sonata no. 8 c minor op. 13 (Grande Sonate Pathétique): trang sản phẩm'
+  link: https://www.henle.de/en/Piano-Sonata-no.-8-c-minor-op.-13-Grande-Sonata-Pathetique/HN-1348
+- id: henle-hn1348-vorwort
+  bac: 2
+  ten: 'G. Henle Verlag, HN 1348: lời nói đầu (Norbert Gertsch, Murray Perahia, mùa thu 2018), PDF: phác thảo giữa 1797 – giữa 1798, phần chính xong khoảng giữa 1798; in mùa thu 1799 ở nhà Hoffmeister (Vienna), báo ngày 18/12 ghi "vừa in xong"; cùng Les Adieux op. 81a là sonata duy nhất Beethoven tự đặt tên; Grave quay lại hai lần'
+  link: https://www.henle.de/media/fc/b2/b2/1697725861/1348-1697725860-sync.pdf
+- id: beethoven-haus-op13
+  bac: 2
+  ten: 'Beethoven-Haus Bonn, Sonata for piano (C minor) op. 13 (Sonata patétique): đề tặng Karl Fürst von Lichnowsky; sáng tác 1797–1799; "Beethoven himself gave it the title Grande Sonate pathétique"; cùng Les Adieux là hai sonata có tên gốc'
+  link: https://www.beethoven.de/en/work/view/6166636289589248/sonate+f%C3%BCr+klavier+&
+- id: beethoven-haus-pianist
+  bac: 2
+  ten: 'Beethoven-Haus Bonn, Beethoven as a pianist (trang media): danh tiếng nghệ sĩ piano của Beethoven một phần nhờ tài ứng tác (lời Gelinek)'
+  link: https://www.beethoven.de/en/media/view/6362106559463424
+- id: hyperion-hewitt
+  bac: 2
+  ten: 'Hyperion Records, CDA67605 Beethoven Piano Sonatas Vol. 2, Angela Hewitt: lời giới thiệu của Hewitt (2007): tên do Beethoven đặt; pathos; Moscheles; nhắc lại phần trình bày từ Grave ("Beethoven never indicated that the repeat ... should return only to the Allegro section. This was added at a later date by a publisher ... This is what I do (and what many other pianists, including Serkin, have opted to do as well)"); "perilous hand-crossing" ở chủ đề 2; Rondo kết với La♭ trưởng rồi Đô thứ'
+  link: https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA67605
+- id: schindler-moscheles
+  bac: 2
+  ten: 'Anton Schindler, The Life of Beethoven, Ignace Moscheles biên tập (London 1841), Project Gutenberg #39093: lời Moscheles ("I found there Beethoven''s Sonate pathétique. This was in the year 1804. My pocket-money would not suffice for the purchase of it, so I secretly copied it.")'
+  link: https://www.gutenberg.org/ebooks/39093
+- id: loc-moscheles
+  bac: 2
+  ten: 'Library of Congress Name Authority: Moscheles, Ignaz, 1794-1870 (trang tìm kiếm id.loc.gov)'
+  link: https://id.loc.gov/search/?q=Moscheles,+Ignaz&q=cs:http://id.loc.gov/authorities/names
+- id: henle-hn1062-vorwort
+  bac: 2
+  ten: 'G. Henle Verlag, HN 1062 Sonata op. 27 no. 2: lời nói đầu, PDF: biệt danh "Mondscheinsonate" có lẽ bắt nguồn từ truyện Theodor của Ludwig Rellstab (1823)'
+  link: https://www.henle.de/media/ca/21/5b/1697725842/1062-1697725842-sync.pdf
+- id: tafelmusik
+  bac: 2
+  ten: 'Tafelmusik, Mozart’s Piano: The Fortepiano (đàn kiểu Anton Walter: "just over five octaves (from FF to g’’’)"); như hồ sơ piano/tac-pham/beethoven-op49-2'
+  link: https://tafelmusik.org/explore-baroque/articles/mozarts-piano-fortepiano/
+- id: abrsm-2324
+  bac: 2
+  ten: 'ABRSM, Piano Practical Grades Syllabus 2023 & 2024: Grade 8 danh sách B, Adagio cantabile (Op. 13)'
+  link: https://www.abrsm.org/sites/default/files/2023-10/Piano%202023%20&%202024%20Prac%20syllabus%2020230807.pdf
+- id: abrsm-2526
+  bac: 2
+  ten: 'ABRSM, Piano Practical Grades Syllabus 2025 & 2026: Grade 8 danh sách B, Adagio cantabile (Op. 13)'
+  link: https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20&%202026%20Prac%20syllabus%2020240524_access.pdf
+- id: abrsm-2728
+  bac: 2
+  ten: 'ABRSM, Piano Performance Grades Syllabus 2027 & 2028: Grade 8 danh sách A số 2 Rondo (chương 3 Op. 13), danh sách B số 6 Adagio cantabile (chương 2)'
+  link: https://www.abrsm.org/sites/default/files/2026-06/Piano%20Performance%20Grades%20Syllabus%202027%20&%202028.pdf
+- id: rcm-2022-arct
+  bac: 2
+  ten: 'RCM Piano Syllabus 2022: ARCT in Piano, Performer, List B "Sonata in C Minor, op. 13 (Pathétique)" (cả sonata)'
+  link: https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf
+- id: commons-veesey-op13
+  bac: 2
+  ten: Wikimedia Commons, Daniel Veesey – Sonata 8 Pathetique, I / II / III (CC0, 2009; 384,52 s, 380,54 s, 269,67 s; nguồn Free Music Archive; API imageinfo 05/11/2026)
+  link: https://commons.wikimedia.org/wiki/File:Daniel_Veesey_-_02_-_Sonata_8_Pathetique_-_II_Adagio_cantabile.ogg
+- id: pieces-py
+  bac: 2
+  ten: Cấu hình căn mốc tools/audio/align/pieces.py của repo (chỉ số ô MIDI của từng dòng bảng; chú thích về bản thu chương I bị cắt)
+  link: tools/audio/align/pieces.py
+- id: thuat-ngu
+  bac: 2
+  ten: 'src/data/thuat-ngu.yml (đã khóa): mordent "Láy: chính – dưới – chính", una corda, con sordino/con sordina (về sau: una corda), cantabile "Như hát", enharmonic "Đồng âm khác tên", Grave, tremolo, rondo'
+  link: src/data/thuat-ngu.yml
+nhan_dinh:
+- id: n1
+  cau: 'Tiêu đề: "Beethoven: Sonata Pathétique, Op. 13".'
+  loai: ten
+  nguon: [imslp-op13, henle-hn1348]
+  ket_qua: dung
+- id: n2
+  cau: 'Nhà soạn nhạc: Ludwig van Beethoven (1770–1827).'
+  loai: nam
+  nguon: [henle-hn1348-vorwort]
+  ket_qua: dung
+  ghi_chu: Khớp nha-soan-nhac.yml (đã khóa).
+- id: n3
+  cau: 'Tên đầy đủ: Sonata piano số 8 cung Đô thứ, Op. 13, Grande Sonate pathétique.'
+  loai: ten
+  nguon: [imslp-op13, beethoven-haus-op13, henle-hn1348]
+  ket_qua: dung
+- id: n4
+  cau: Sáng tác chủ yếu năm 1798, phác thảo từ khoảng 1797.
+  loai: nam
+  nguon: [henle-hn1348-vorwort, imslp-op13]
+  ket_qua: dung
+  ghi_chu: 'Henle: phác thảo "made between mid 1797 and mid 1798", phần chính xong khoảng giữa 1798; IMSLP: 1798.'
+- id: n5
+  cau: In cuối năm 1799 ở Vienna, nhà Hoffmeister.
+  loai: nam
+  nguon: [henle-hn1348-vorwort, imslp-op13]
+  ket_qua: dung
+  ghi_chu: 'Henle: "issued in autumn 1799 by the publishing house Hoffmeister in Vienna", báo ngày 18/12 ghi vừa in xong; IMSLP: 1799/12/18.'
+- id: n6
+  cau: Đề tặng hoàng thân Karl von Lichnowsky.
+  loai: lich-su
+  nguon: [beethoven-haus-op13, imslp-op13]
+  ket_qua: dung
+  ghi_chu: 'Beethoven-Haus: Dedication "Karl Fürst von Lichnowsky".'
+- id: n7
+  cau: 'Thời kỳ: Cổ điển, giai đoạn đầu của Beethoven.'
+  loai: lich-su
+  nguon: [imslp-op13]
+  ket_qua: dung
+  ghi_chu: IMSLP Piece Style Classical; viết 1797–1798, cùng thời Op. 10, Op. 14 (Henle).
+- id: n8
+  cau: 'Thể loại: sonata piano, 3 chương.'
+  loai: so-lieu
+  nguon: [imslp-op13]
+  ket_qua: dung
+- id: n9
+  cau: Độ dài khoảng 17–20 phút.
+  loai: so-lieu
+  nguon: [imslp-op13]
+  ket_qua: dung
+  ghi_chu: 'IMSLP: "Average Duration 19-20 minutes". Hewitt (nhắc lại từ Grave) 21:36 theo MusicWeb; khoảng ghi trên trang là ước chừng.'
+- id: n10
+  cau: Năm 1798, Beethoven 27 tuổi.
+  loai: nam
+  nguon: [henle-hn1348-vorwort]
+  ket_qua: dung
+  ghi_chu: Sinh 12/1770.
+- id: n11
+  cau: Lúc ấy ông đã nổi tiếng ở Vienna như một nghệ sĩ piano, nhất là tài ứng tác.
+  loai: lich-su
+  nguon: [beethoven-haus-pianist]
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ (cả description): "nổi tiếng ở Vienna trước hết như một nghệ sĩ piano ứng tác dữ dội". Beethoven-Haus: danh tiếng nghệ sĩ piano một phần nhờ tài ứng tác; "trước hết", "dữ dội" không nguồn.'
+- id: n12
+  cau: Sonata này nhanh chóng được yêu thích.
+  loai: lich-su
+  nguon: [henle-hn1348-vorwort, schindler-moscheles]
+  ket_qua: dung
+  ghi_chu: Henle dẫn bài điểm báo AmZ 19/2/1800 khen ngợi; có bản in lại của Hoffmeister & Kühnel (1802) và Eder (1800/01).
+- id: n13
+  cau: Ignaz Moscheles kể rằng năm 1804, lúc mới 10 tuổi, ông phải chép tay bản nhạc ở thư viện vì không đủ tiền mua.
+  loai: lich-su
+  nguon: [schindler-moscheles, loc-moscheles]
+  ket_qua: dung
+  ghi_chu: 'Moscheles: "I found there Beethoven''s Sonate pathétique. This was in the year 1804. My pocket-money would not suffice for the purchase of it, so I secretly copied it." LoC: sinh 1794, nên năm 1804 khoảng 10 tuổi.'
+- id: n14
+  cau: Trang bìa bản in đầu tiên ghi Grande Sonate pathétique.
+  loai: ten
+  nguon: [henle-hn1348-vorwort, beethoven-haus-op13]
+  ket_qua: dung
+- id: n15
+  cau: Theo Beethoven-Haus Bonn và ấn bản Urtext của Henle, chính Beethoven chọn tên này.
+  loai: lich-su
+  nguon: [beethoven-haus-op13, henle-hn1348-vorwort]
+  ket_qua: dung
+  ghi_chu: 'Beethoven-Haus: "Beethoven himself gave it the title Grande Sonate pathétiqu[e]"; Henle: "the only one that Beethoven himself gave a distinctive name" (cùng Les Adieux).'
+- id: n16
+  cau: Cùng với Les Adieux Op. 81a, đây là một trong hai sonata piano có tên gọi từ tác giả.
+  loai: lich-su
+  nguon: [henle-hn1348-vorwort, beethoven-haus-op13]
+  ket_qua: dung
+- id: n17
+  cau: Vài tài liệu khác cho rằng nhà xuất bản đặt tên và Beethoven đồng ý.
+  loai: lich-su
+  nguon: []
+  ket_qua: da-bo
+  ghi_chu: 'Đã bỏ khỏi trang: không nguồn đã mở nói vậy; Henle, Beethoven-Haus, Hewitt đều nói Beethoven tự đặt.'
+- id: n18
+  cau: Pathétique không có nghĩa "thảm hại" mà là "đầy bi cảm", gốc từ chữ Hy Lạp pathos.
+  loai: dinh-nghia
+  nguon: [hyperion-hewitt]
+  ket_qua: da-sua
+  ghi_chu: 'Hewitt: "The word comes from the Greek pathos, meaning suffering, experience, emotion"; nghĩa "pitiable" chỉ là nghĩa hiện đại. Chữ cũ "gốc từ chữ pathos trong kịch Hy Lạp": vế "trong kịch" không nguồn, bỏ.'
+- id: n19
+  cau: 'Khác hẳn Ánh trăng: biệt danh ấy do người khác gợi ra, có lẽ từ một truyện của Ludwig Rellstab viết năm 1823.'
+  loai: lich-su
+  nguon: [henle-hn1062-vorwort, henle-hn1348-vorwort]
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "biệt danh do người khác gợi ra, chỉ phổ biến sau khi Beethoven mất". Henle HN 1062: liên tưởng "Mondscheinsonate" có lẽ bắt nguồn từ truyện Theodor của Rellstab (1823, in 1824), "bald" (chẳng bao lâu) thành biệt danh; không nguồn nào đã mở nói chỉ phổ biến sau năm 1827.'
+- id: n20
+  cau: Link hướng dẫn nghe Ánh trăng (/opus/nghe-nhac/beethoven-moonlight/).
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Chưa chuyển; ../opus-zero/docs/nghe-nhac/beethoven-moonlight.md có ("sắp có").
+- id: n21
+  cau: Chương 1 có tên Grave – Allegro di molto e con brio.
+  loai: ten
+  nguon: [mut-op13-1, imslp-op13]
+  ket_qua: dung
+- id: n22
+  cau: 'Mở đầu là phần chậm Grave: hợp âm Đô thứ nặng, tương phản đột ngột mạnh – nhỏ (fp), nhịp chấm dôi và những tiếng thở dài.'
+  loai: cau-truc
+  nguon: &id001 [mut-op13-1]
+  ket_qua: dung
+  ghi_chu: 'Ô 1: <c g ef>4 \fp ~ … c16. c32 (chấm dôi); các mảnh hai nốt có luyến đi xuống.'
+- id: n23
+  cau: Một chuỗi nốt chạy xuống rất nhanh lao vào phần Allegro.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Ô 10: móc năm, móc sáu đi xuống (\times 8/7 { a128 af g fs f e ef }) trước "attacca subito il Allegro".'
+- id: n24
+  cau: 'Chủ đề Allegro: tay phải vút lên qua hai quãng tám, trên tremolo quãng tám rải không ngừng của tay trái.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Ô 11–15 tay phải C4 → C6; tay trái c8 c' c, c' … (quãng tám rải).
+- id: n25
+  cau: Chủ đề thứ hai ở Mi♭ thứ chứ không phải Mi♭ trưởng như thường lệ.
+  loai: cau-truc
+  nguon: [mut-op13-1, hyperion-hewitt]
+  ket_qua: dung
+  ghi_chu: 'Ô 51: bf ef f gf (Sol♭) trên <ef gf>: Mi♭ thứ. "Như thường lệ": chủ đề 2 của sonata giọng thứ thường ở giọng trưởng song song (relative), như OMT Sonata Form.'
+- id: n26
+  cau: Ở chủ đề 2, giai điệu nhảy qua lại giữa âm vực trầm và những nốt láy ở âm vực cao, vượt qua phần đệm ở giữa, nên hai tay liên tục vắt chéo.
+  loai: cau-truc
+  nguon: [mut-op13-1, hyperion-hewitt]
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "tay trái liên tục vắt qua tay phải để chơi những nốt láy ở âm vực cao". Mutopia (Schirmer 1894): các nốt láy ở cao nằm ở khuông trên cùng với các nốt trầm của giai điệu, khuông dưới giữ Si♭ và hợp âm ở giữa; không rõ tay nào chơi nốt láy. Hewitt: "some rather perilous hand-crossing". Viết lại không nói tay nào.'
+- id: n27
+  cau: Phần trình bày khép lại ở Mi♭ trưởng.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'thIId: g4 ef''2 … ef4 ef,2 \f <g df>4 … Mi♭ trưởng tới dấu nhắc.'
+- id: n28
+  cau: Phần Grave quay lại hai lần, ở đầu phần phát triển và trong coda.
+  loai: cau-truc
+  nguon: [mut-op13-1, henle-hn1348-vorwort]
+  ket_qua: dung
+  ghi_chu: 'Mutopia: theme III (Grave) sau dấu nhắc, theme X (Grave) trước coda. Henle dẫn báo 1807: "The Grave returns within it with a few measures twice".'
+- id: n29
+  cau: Link hình thức sonata (/opus/hinh-thuc/sonata/).
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Trang có (đã khóa).
+- id: n30
+  cau: Chương 2 Adagio cantabile ở La♭ trưởng, nhịp 2/4.
+  loai: cau-truc
+  nguon: [mut-op13-2, imslp-op13]
+  ket_qua: dung
+- id: n31
+  cau: Chương 2 "là một trong những giai điệu đẹp nhất Beethoven viết".
+  loai: lich-su
+  nguon: []
+  ket_qua: da-bo
+  ghi_chu: 'Đã bỏ: đánh giá, không nguồn.'
+- id: n32
+  cau: 'Lần đầu, giai điệu hát ở âm vực trầm ấm quanh Đô giữa (C4), trên một dòng móc kép ở bè giữa và bè trầm bên dưới: ba lớp trong hai bàn tay.'
+  loai: cau-truc
+  nguon: &id002 [mut-op13-2]
+  ket_qua: dung
+- id: n33
+  cau: Rồi giai điệu được nhắc lại cao hơn một quãng tám.
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+  ghi_chu: Ô 9.
+- id: n34
+  cau: Chương 2 có dạng rondo A–B–A–C–A; đoạn xen thứ nhất ở giọng thứ; đoạn xen thứ hai ở La♭ thứ, phần đệm chuyển sang chùm ba, rồi trượt sang Mi trưởng.
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+  ghi_chu: B ô 17 Fa thứ; C ô 37 La♭ thứ chùm ba; ô 42–47 Mi trưởng.
+- id: n35
+  cau: Link rondo (/opus/hinh-thuc/rondo/).
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Trang có (đã khóa).
+- id: n36
+  cau: Lần trở lại cuối cùng, phần đệm giữ nhịp chùm ba ấy.
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+  ghi_chu: Ô 51–66.
+- id: n37
+  cau: 'Chương 3 Rondo: Allegro ở Đô thứ.'
+  loai: cau-truc
+  nguon: [mut-op13-3, imslp-op13]
+  ket_qua: dung
+- id: n38
+  cau: Bốn nốt đầu của chủ đề rondo đi y như chủ đề thứ hai của chương 1, chỉ khác giọng.
+  loai: cau-truc
+  nguon: [mut-op13-1, mut-op13-3]
+  ket_qua: dung
+  ghi_chu: 'Chương 3 nhịp lấy đà: G4 C5 D5 E♭5 (5–1–2–3 ở Đô thứ); chương 1 ô 51: B♭ E♭ F G♭ (5–1–2–3 ở Mi♭ thứ).'
+- id: n39
+  cau: Các đoạn xen đi qua Mi♭ trưởng và La♭ trưởng; đoạn La♭ trưởng viết kiểu đối âm, các bè đuổi nhau.
+  loai: cau-truc
+  nguon: [mut-op13-3]
+  ket_qua: dung
+  ghi_chu: Ô 25 "dolce" Mi♭ trưởng; ô 79 trở đi La♭ trưởng, hai bè vào lần lượt (pathetique-3.ly, %89 (1), (2)).
+- id: n40
+  cau: Gần cuối, giọng La♭ trưởng thoáng hiện, rồi bản nhạc đóng sập ở Đô thứ bằng một chuỗi nốt đổ xuống.
+  loai: cau-truc
+  nguon: [mut-op13-3, hyperion-hewitt]
+  ket_qua: dung
+  ghi_chu: 'MIDI ô 203–206 La♭ trưởng p; ô cuối E♭6 D6 C6 … C5 rồi hợp âm Đô thứ. Hewitt: "presenting itself in A flat major. But Beethoven ends defiantly in C minor".'
+- id: n41
+  cau: Đàn kiểu Vienna thời ấy chỉ có âm vực khoảng năm quãng tám.
+  loai: lich-su
+  nguon: [tafelmusik]
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "Năm 1798, Beethoven chơi trên đàn Vienna khoảng năm quãng tám, tiếng mỏng và tắt nhanh (…), nhưng ông viết cho nó như viết cho dàn nhạc." Tafelmusik: đàn kiểu Walter "just over five octaves". "Tiếng mỏng và tắt nhanh", "viết như cho dàn nhạc" không nguồn, bỏ (như D6-L3 ở beethoven-op49-2 n25).'
+- id: n42
+  cau: Link lịch sử cây đàn piano (/opus/piano/lich-su-dan/).
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Trang có.
+- id: n43
+  cau: Trên đàn hiện đại, cái khó là giữ tremolo tay trái nhẹ và đều suốt nhiều trang mà không cứng cổ tay; trong Adagio cân bằng ba lớp để giai điệu nổi.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n44
+  cau: Link Tạo tiếng đàn (/opus/piano/tieng-dan/).
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Trang có.
+- id: n45
+  cau: 'Theo dõi: Grave, hợp âm Đô thứ nặng, mạnh – nhỏ đột ngột; chuỗi nốt chạy xuống dẫn vào Allegro.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+- id: n46
+  cau: 'Theo dõi: Allegro chủ đề 1, tay phải vút lên trên tremolo quãng tám của tay trái.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+- id: n47
+  cau: 'Theo dõi: Chủ đề 2 ở Mi♭ thứ, hai tay vắt chéo, giai điệu có những nốt láy; rồi phần trình bày khép lại ở Mi♭ trưởng.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "tay trái vắt qua lại với những nốt láy". Sửa cùng lý do với nhận định chủ đề 2 ở trên.'
+- id: n48
+  cau: 'Theo dõi: Nhắc lại phần trình bày (nếu có), có nghệ sĩ quay về đầu Allegro, có người về tận phần Grave.'
+  loai: cau-truc
+  nguon: [hyperion-hewitt]
+  ket_qua: dung
+- id: n49
+  cau: 'Theo dõi: Phát triển, vài ô Grave trở lại, rồi Allegro lao đi qua nhiều giọng.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Grave 4 ô (theme III), rồi Allegro bắt đầu ở Mi thứ (\key a \minor = không dấu hóa) và chuyển giọng.
+- id: n50
+  cau: 'Theo dõi: Tái hiện và coda, chủ đề trở lại ở Đô thứ; Grave thoáng qua lần cuối, rồi kết nhanh, dứt khoát.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+- id: n51
+  cau: Theo dõi các dòng chương 2 và 3 (Adagio; đoạn xen 1; đoạn xen 2 La♭ thứ chùm ba, trượt sang Mi trưởng; lần cuối trên chùm ba, coda; Rondo Đô thứ, đoạn xen Mi♭ và La♭ trưởng; coda La♭ trưởng thoáng hiện, kết Đô thứ bằng chuỗi nốt đổ xuống).
+  loai: cau-truc
+  nguon: [mut-op13-2, mut-op13-3]
+  ket_qua: dung
+- id: n52
+  cau: 'Mốc tham khảo "1 109 139 208 312 - 386 473 582 644 766 993" ứng với 12 dòng bảng: chương I Grave, ô 11, ô 51, chỗ nhắc lại (về ô 11), phát triển (ô 133); dòng Tái hiện để trống; chương II ô 1, 17, 37, 51; chương III đầu chương, coda (ô 183).'
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: 'Bản thu Veesey ba phần (384,52 + 380,54 + 269,67 s). tools/audio/align/pieces.py: chương I MIDI piano-midi.de chỉ số 0, 10, 50, 132 (= đầu phần nhắc lại), 254 (= ô 133); chương II chỉ số 0, 16, 36, 50 (cộng 384,52 s: 386, 473, 582, 644 khớp mốc 1, 88, 198, 259 của trang pathetique-adagio); chương III đầu và chỉ số 183 (cộng 765,06 s). 11 mốc cho 12 dòng, mốc vượt không quá độ dài.'
+- id: n53
+  cau: Bản thu chương I của Daniel Veesey trên Commons dừng ở khoảng 6:24, giữa phần phát triển, nên dòng Tái hiện và coda không có mốc.
+  loai: so-lieu
+  nguon: [commons-veesey-op13, pieces-py]
+  ket_qua: dung
+  ghi_chu: 'Commons: độ dài 384,52 s (6:24,5). Đo âm lượng giây cuối (ffmpeg volumedetect): -15,8 dB, vẫn đang chơi, tức tệp bị cắt chứ không kết tự nhiên. pieces.py: căn tới chỉ số MIDI 291 (khoảng ô 170; phát triển ô 133–194). Ghi chú này hiện qua note của ban_thu (src/scripts/nghe.js dòng 158).'
+- id: n54
+  cau: 'Câu hỏi nghe chủ động (5 câu): Grave quay lại mấy lần; tremolo có dừng không; mấy lớp ở Adagio; cảm giác khi trượt sang Mi trưởng; so bốn nốt đầu rondo với chủ đề 2 chương 1.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n55
+  cau: Emil Gilels có bản thu Pathétique.
+  loai: ten
+  nguon: []
+  ket_qua: null
+  ghi_chu: 'Chữ đánh giá cũ "tiếng đàn lớn, sâu, kiến trúc vững chãi; phần Grave như tạc bằng đá" đã đổi thành câu hỏi nghe (đánh giá, không nguồn). chưa chắc: chưa mở trang hãng đĩa của bản thu Gilels; lượt 2 kiểm.'
+- id: n56
+  cau: Angela Hewitt, khi nhắc lại phần trình bày, quay về tận phần Grave, vì Beethoven không hề ghi rằng chỉ nhắc lại phần Allegro (theo bà, chỗ ấy do nhà xuất bản thêm về sau); Rudolf Serkin cũng làm vậy.
+  loai: lich-su
+  nguon: [hyperion-hewitt]
+  ket_qua: da-sua
+  ghi_chu: 'Hewitt: "Beethoven never indicated that the repeat of the exposition should return only to the Allegro section. This was added at a later date by a publisher ... This is what I do (and what many other pianists, including Serkin, have opted to do as well)". Chữ cũ "đa số nghệ sĩ chỉ quay về đầu Allegro": không nguồn, bỏ.'
+- id: n57
+  cau: Ronald Brautigam thu Pathétique trên fortepiano, loại đàn thời Beethoven.
+  loai: ten
+  nguon: []
+  ket_qua: null
+  ghi_chu: 'Chữ đánh giá cũ "tremolo và hợp âm fp gắt, kịch tính hơn" đổi thành câu hỏi nghe. chưa chắc: chưa mở trang BIS của tập có Op. 13; lượt 2 kiểm.'
+- id: n58
+  cau: Link Nghệ sĩ piano và bản thu.
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: piano/nghe-si có.
+- id: n59
+  cau: 'Adagio cantabile khoảng Grade 7–8: ABRSM xếp chương này ở Grade 8.'
+  loai: cap-do
+  nguon: [abrsm-2324, abrsm-2526, abrsm-2728]
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "là chương dễ nhất, khoảng Grade 7". ABRSM 2023–2028 xếp Adagio ở Grade 8 (không kỳ nào Grade 7); grade đã khóa của bản ghi pathetique-adagio là "Grade 7–8". "Dễ nhất" không nguồn (Rondo cũng Grade 8), bỏ.'
+- id: n60
+  cau: 'Adagio là cửa ngõ vào Beethoven: ít nốt nhanh, nhưng đòi legato, cân bằng các bè và bàn đạp sạch.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n61
+  cau: Link bài học Adagio, Bàn đạp, Ánh trăng, Tác phẩm theo cấp độ trong mục Nếu bạn muốn chơi.
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: pathetique-adagio, ban-dap, tac-pham-theo-cap có; nghe-nhac/beethoven-moonlight chưa chuyển ("sắp có").
+- id: n62
+  cau: Rondo cũng được ABRSM xếp ở Grade 8.
+  loai: cap-do
+  nguon: [abrsm-2728]
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ "Rondo khoảng Grade 8". ABRSM 2027 & 2028, Grade 8, danh sách A số 2: "Rondo (3rd movt from Sonata in C minor, Grande Sonate pathétique, Op. 13)". Viết theo đề cương.'
+- id: n63
+  cau: Chương 1 đòi tremolo quãng tám bền bỉ, vắt tay và tốc độ; hãy để sau cùng.
+  loai: cap-do
+  nguon: [mut-op13-1, rcm-2022-arct]
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ "Chương 1 khó nhất vì…": "khó nhất" không có đề cương xếp riêng chương 1; RCM xếp cả sonata ở ARCT. Giữ phần mô tả (có trong bản nhạc) và lời khuyên.'
+- id: n64
+  cau: 'Một chương chậm khác để tập: chương 1 Ánh trăng.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n65
+  cau: Link mẫu ghi chép (/opus/nghe-nhac/mau/).
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Chưa chuyển; ../opus-zero/docs/nghe-nhac/mau.md có ("sắp có").
+- id: n66
+  cau: 'Nguồn: ấn bản Urtext Henle (biên tập Norbert Gertsch và Murray Perahia, 2018), có lời tựa về niên đại, bản in đầu tiên và tên gọi.'
+  loai: ten
+  nguon: [henle-hn1348-vorwort]
+  ket_qua: dung
+  ghi_chu: Lời nói đầu ký "Munich · London, autumn 2018 Norbert Gertsch · Murray Perahia".
+- id: n67
+  cau: 'Nguồn: Beethoven-Haus Bonn, thư mục tác phẩm Op. 13 (link trang tác phẩm).'
+  loai: ten
+  nguon: [beethoven-haus-op13]
+  ket_qua: da-sua
+  ghi_chu: Link cũ trỏ trang chủ beethoven.de; nay trỏ trang tác phẩm (link như hồ sơ bản ghi beethoven-pathetique).
+- id: n68
+  cau: 'Nguồn: Charles Rosen, Beethoven''s Piano Sonatas: A Short Companion (Yale 2002).'
+  loai: ten
+  nguon: []
+  ket_qua: da-bo
+  ghi_chu: 'Đã bỏ: sách in chưa đọc. Thay bằng lời giới thiệu của Hewitt (Hyperion), lời kể của Moscheles (Gutenberg) và đề cương ABRSM 2027–2028 đã đọc.'
+- id: n69
+  cau: 'Nguồn mới: Hewitt (Hyperion 2007), Moscheles trong Life of Beethoven của Schindler (Gutenberg), đề cương ABRSM 2027 & 2028 (chương 2, 3 ở Grade 8).'
+  loai: ten
+  nguon: [hyperion-hewitt, schindler-moscheles, abrsm-2728]
+  ket_qua: da-sua
+  ghi_chu: Dòng mới.
+- id: n70
+  cau: Link Tài liệu tham khảo.
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Trang có.
 khuong_nhac: []
+doi_chu:
+- cu:
+  - 'Năm 1798, Beethoven 27 tuổi, nổi tiếng ở Vienna trước hết như một nghệ sĩ piano ứng tác dữ dội. Sonata này nhanh chóng được yêu thích: Ignaz Moscheles kể rằng năm 1804, lúc mới 10 tuổi, ông phải chép tay bản nhạc ở thư viện vì không đủ tiền mua.'
+  - Ai đặt tên Pathétique? Trang bìa bản in đầu tiên ghi Grande Sonate pathétique. Theo Beethoven-Haus Bonn và ấn bản Urtext của Henle, chính Beethoven chọn tên này; cùng với Les Adieux Op. 81a, đây là một trong hai sonata piano có tên gọi từ tác giả (vài tài liệu khác cho rằng nhà xuất bản đặt và Beethoven đồng ý). Pathétique ở đây không có nghĩa "thảm hại" mà là "đầy bi cảm", gốc từ chữ pathos trong kịch Hy Lạp. Khác hẳn Ánh trăng, biệt danh do người khác gợi ra, chỉ phổ biến sau khi Beethoven mất (hướng dẫn nghe).
+  - 'Chương 1, Grave – Allegro di molto e con brio. Mở đầu là một phần chậm (Grave): hợp âm Đô thứ nặng nề, tương phản đột ngột giữa mạnh và nhỏ (fp), nhịp chấm dôi và những tiếng thở dài. Một chuỗi nốt chạy xuống rất nhanh lao vào phần Allegro: chủ đề tay phải vút lên qua hai quãng tám, trên tiếng rung quãng tám rải không ngừng của tay trái, như tremolo của bộ dây. Chủ đề thứ hai bất ngờ ở Mi♭ thứ chứ không phải Mi♭ trưởng như thường lệ; tay trái liên tục vắt qua tay phải để chơi những nốt láy ở âm vực cao. Phần trình bày khép lại ở Mi♭ trưởng. Điều mới mẻ nhất: phần Grave quay lại hai lần, ở đầu phần phát triển và trong coda, nên lời mở đầu chậm trở thành một nhân vật của câu chuyện. Xem lại hình thức sonata.'
+  - 'Chương 2, Adagio cantabile (La♭ trưởng, nhịp 2/4) là một trong những giai điệu đẹp nhất Beethoven viết. Lần đầu, giai điệu hát ở âm vực trầm ấm quanh Đô giữa (C4), trên một dòng móc kép êm ở bè giữa và bè trầm bên dưới: ba lớp âm thanh trong hai bàn tay. Rồi nó được nhắc lại cao hơn một quãng tám. Chương có dạng rondo A–B–A–C–A: đoạn xen thứ nhất ở giọng thứ, như lời than; đoạn xen thứ hai ở La♭ thứ, phần đệm chuyển sang nhịp chùm ba, rồi trượt bất ngờ sang Mi trưởng. Lần trở lại cuối cùng, phần đệm giữ nhịp chùm ba ấy, dày và ấm hơn.'
+  moi:
+  - 'Năm 1798, Beethoven 27 tuổi, đã nổi tiếng ở Vienna như một nghệ sĩ piano, nhất là tài ứng tác. Sonata này nhanh chóng được yêu thích: Ignaz Moscheles kể rằng năm 1804, lúc mới 10 tuổi, ông phải chép tay bản nhạc ở thư viện vì không đủ tiền mua.'
+  - 'Ai đặt tên Pathétique? Trang bìa bản in đầu tiên ghi Grande Sonate pathétique. Theo Beethoven-Haus Bonn và ấn bản Urtext của Henle, chính Beethoven chọn tên này; cùng với Les Adieux Op. 81a, đây là một trong hai sonata piano có tên gọi từ tác giả. Pathétique ở đây không có nghĩa "thảm hại" mà là "đầy bi cảm", gốc từ chữ Hy Lạp pathos. Khác hẳn Ánh trăng: biệt danh ấy do người khác gợi ra, có lẽ từ một truyện của Ludwig Rellstab viết năm 1823 (hướng dẫn nghe).'
+  - 'Chương 1, Grave – Allegro di molto e con brio. Mở đầu là một phần chậm (Grave): hợp âm Đô thứ nặng nề, tương phản đột ngột giữa mạnh và nhỏ (fp), nhịp chấm dôi và những tiếng thở dài. Một chuỗi nốt chạy xuống rất nhanh lao vào phần Allegro: chủ đề tay phải vút lên qua hai quãng tám, trên tiếng rung quãng tám rải không ngừng của tay trái, như tremolo của bộ dây. Chủ đề thứ hai bất ngờ ở Mi♭ thứ chứ không phải Mi♭ trưởng như thường lệ; giai điệu nhảy qua lại giữa âm vực trầm và những nốt láy ở âm vực cao, vượt qua phần đệm ở giữa, nên hai tay liên tục vắt chéo nhau. Phần trình bày khép lại ở Mi♭ trưởng. Điều mới mẻ nhất: phần Grave quay lại hai lần, ở đầu phần phát triển và trong coda, nên lời mở đầu chậm trở thành một nhân vật của câu chuyện. Xem lại hình thức sonata.'
+  - 'Chương 2, Adagio cantabile (La♭ trưởng, nhịp 2/4). Lần đầu, giai điệu hát ở âm vực trầm ấm quanh Đô giữa (C4), trên một dòng móc kép êm ở bè giữa và bè trầm bên dưới: ba lớp âm thanh trong hai bàn tay. Rồi nó được nhắc lại cao hơn một quãng tám. Chương có dạng rondo A–B–A–C–A: đoạn xen thứ nhất ở giọng thứ, như lời than; đoạn xen thứ hai ở La♭ thứ, phần đệm chuyển sang nhịp chùm ba, rồi trượt bất ngờ sang Mi trưởng. Lần trở lại cuối cùng, phần đệm giữ nhịp chùm ba ấy, dày và ấm hơn.'
+  ly_do: 'n11 (da-sua): "trước hết", "dữ dội" không nguồn; Beethoven-Haus: danh tiếng nghệ sĩ piano nhờ tài ứng tác. n17 (da-bo), n18 (da-sua), n19 (da-sua): Henle, Beethoven-Haus, Hewitt. n26 (da-sua): Mutopia không cho biết tay nào chơi nốt láy; Hewitt: "perilous hand-crossing". n31 (da-bo): đánh giá không nguồn.'
+- cu: Nghe bằng tai người chơi piano. Năm 1798, Beethoven chơi trên đàn Vienna khoảng năm quãng tám, tiếng mỏng và tắt nhanh (xem lịch sử cây đàn piano), nhưng ông viết cho nó như viết cho dàn nhạc. Trên đàn hiện đại, cái khó là giữ tremolo tay trái nhẹ và đều suốt nhiều trang mà không cứng cổ tay, và trong Adagio, cân bằng ba lớp để giai điệu luôn nổi trên dòng móc kép (xem tạo tiếng đàn).
+  moi: Nghe bằng tai người chơi piano. Đàn kiểu Vienna thời ấy chỉ có âm vực khoảng năm quãng tám (xem lịch sử cây đàn piano). Trên đàn hiện đại, cái khó là giữ tremolo tay trái nhẹ và đều suốt nhiều trang mà không cứng cổ tay, và trong Adagio, cân bằng ba lớp để giai điệu luôn nổi trên dòng móc kép (xem tạo tiếng đàn).
+  ly_do: 'n41 (da-sua): Tafelmusik chỉ nói âm vực.'
+- cu: 'Chủ đề 2: Mi♭ thứ, tay trái vắt qua lại với những nốt láy; rồi phần trình bày khép lại ở Mi♭ trưởng'
+  moi: 'Chủ đề 2: Mi♭ thứ, hai tay vắt chéo, giai điệu có những nốt láy; rồi phần trình bày khép lại ở Mi♭ trưởng'
+  ly_do: 'n47 (da-sua): như chủ đề 2 ở trên.'
+- cu:
+  - 'Emil Gilels: tiếng đàn lớn, sâu, kiến trúc vững chãi; phần Grave như tạc bằng đá.'
+  - 'Angela Hewitt: khi nhắc lại phần trình bày, bà quay về tận phần Grave, vì Beethoven không hề ghi rằng chỉ nhắc lại phần Allegro; đa số nghệ sĩ chỉ quay về đầu Allegro.'
+  - 'Ronald Brautigam (fortepiano): tiếng đàn thời Beethoven; tremolo và hợp âm fp gắt, kịch tính hơn.'
+  moi:
+  - 'Emil Gilels: nghe phần Grave: nặng và chậm đến đâu, các hợp âm fp tương phản thế nào?'
+  - 'Angela Hewitt: khi nhắc lại phần trình bày, bà quay về tận phần Grave, vì Beethoven không hề ghi rằng chỉ nhắc lại phần Allegro (theo bà, chỗ ấy do một nhà xuất bản thêm về sau); Rudolf Serkin cũng làm vậy.'
+  - 'Ronald Brautigam (fortepiano, loại đàn thời Beethoven): tremolo và hợp âm fp nghe khác đàn hiện đại thế nào?'
+  ly_do: 'n55: đánh giá không nguồn đổi thành câu hỏi nghe. n56 (da-sua): theo lời giới thiệu của Hewitt (Hyperion). n57: đánh giá không nguồn đổi thành câu hỏi nghe.'
+- cu: 'Adagio cantabile là chương dễ nhất, khoảng Grade 7, và là cửa ngõ tuyệt vời vào Beethoven: ít nốt nhanh, nhưng đòi hỏi legato, cân bằng các bè và bàn đạp sạch. Bắt đầu từ bài học Adagio. Rondo khoảng Grade 8. Chương 1 khó nhất vì tremolo quãng tám bền bỉ, vắt tay và tốc độ; hãy để sau cùng. Một chương chậm khác để tập: chương 1 Ánh trăng. Xem Tác phẩm theo cấp độ.'
+  moi: 'Adagio cantabile, khoảng Grade 7–8 (ABRSM xếp chương này ở Grade 8), là cửa ngõ tuyệt vời vào Beethoven: ít nốt nhanh, nhưng đòi hỏi legato, cân bằng các bè và bàn đạp sạch. Bắt đầu từ bài học Adagio. Rondo cũng được ABRSM xếp ở Grade 8. Chương 1 đòi tremolo quãng tám bền bỉ, vắt tay và tốc độ; hãy để sau cùng. Một chương chậm khác để tập: chương 1 Ánh trăng. Xem Tác phẩm theo cấp độ.'
+  ly_do: 'n59 (da-sua), n62 (da-sua), n63 (da-sua): theo đề cương ABRSM 2023–2028, RCM 2022.'
+- cu: 'Charles Rosen, Beethoven''s Piano Sonatas: A Short Companion (Yale University Press, 2002).'
+  moi:
+  - 'Angela Hewitt, lời giới thiệu đĩa Beethoven Piano Sonatas, Vol. 2 (Hyperion, 2007): tên gọi, việc nhắc lại phần trình bày từ Grave.'
+  - Ignaz Moscheles, lời kể trong bản dịch Life of Beethoven của Anton Schindler do ông biên tập (Project Gutenberg).
+  - 'Đề cương thi piano của ABRSM 2027 & 2028 (PDF): chương 2 và chương 3 ở Grade 8.'
+  ly_do: 'n68 (da-bo): sách in chưa đọc. n69: nguồn đã đọc.'
+- cu: 'mô tả: Năm 1798, Beethoven 27 tuổi, nổi tiếng ở Vienna trước hết như một nghệ sĩ piano ứng tác dữ dội. Sonata này nhanh chóng được yêu thích: Ignaz Moscheles kể rằng…'
+  moi: 'mô tả: Năm 1798, Beethoven 27 tuổi, đã nổi tiếng ở Vienna như một nghệ sĩ piano, nhất là tài ứng tác. Sonata này nhanh chóng được yêu thích: Ignaz Moscheles kể rằng năm…'
+  ly_do: 'n11 (da-sua): "trước hết", "dữ dội" không nguồn; Beethoven-Haus: danh tiếng nghệ sĩ piano nhờ tài ứng tác.'

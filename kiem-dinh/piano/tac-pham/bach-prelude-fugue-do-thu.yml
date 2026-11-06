@@ -3,39 +3,830 @@ trang: src/content/docs/piano/tac-pham/bach-prelude-fugue-do-thu.md
 nguon_cu: ../opus-zero/docs/piano/tac-pham/bach-prelude-fugue-do-thu.md
 tang: tac-pham
 lan:
-  - so: 1
-    ngay: null
-    nhanh: moi/d6-l5
-    ma_bam: null
-    nguoi:
-      luot_1: null
-      luot_2: null
-      review: null
-      kiem_mau: null
-nguon: []
-nhan_dinh: []
+- so: 1
+  ngay: '2026-11-05'
+  nhanh: moi/d6-l5
+  ma_bam: null
+  nguoi:
+    luot_1: Claude Opus 5.5, agent con, D6-L5 phần A
+    luot_2: null
+    review: null
+    kiem_mau: null
+ghi_chu: 'Bài học BWV 847 (tầng Tác phẩm). Bản nhạc: Mutopia bwv847a (prelude, Breitkopf & Härtel 1866) và fuga2 (fugue, Edition Peters), tải .ly và .mid 05/11/2026 với User-Agent opus-kiem-dinh; đếm ô và in nốt theo ô bằng script Python (mido): prelude 38 ô, fugue 31 ô; mọi số ô trên trang khớp. Script tìm đầu chủ đề cho ra tám lần vào (ô 1, 3, 7, 11, 15, 20, 26, 29). Mốc ::khoi-nghe "0 10 49 65 76 108 115 128 135 192" (10 mốc / 10 dòng) dùng bản thu Ishizaka hai phần (prelude 107,29 s, fugue 115,93 s); theo tools/audio/align/pieces.py mốc là ô 5, 21, 28, 34 của prelude và ô 3, 7, 9, 26 của fugue (cộng 107,29 s): khớp các dòng bảng. Không nghe lại bản thu. Sửa trang: n10 (bỏ "nhanh và gắt hơn"), n30 (bỏ "(tách tiếng, nhịp sắc)"), mục Nguồn (n126, n127, n128: bỏ hai sách in chưa đọc, thêm lời nói đầu Henle HN 14 và link tệp Mutopia). Chưa chắc: n23, n30 (các nghệ sĩ thu âm), n116, n118. Câu ve-site ở hồ sơ khác: hinh-thuc/fugue n33, lich-su/thoi-ky/baroque n48 (link tới trang này): trang có ở đúng đường dẫn, là bài học BWV 847: đúng. hinh-thuc/fugue n16–n29, n42 (BWV 847 ba bè, 31 ô, kết Đô trưởng): trang này nói giống. piano/tac-pham/bach-prelude-do n86, n87: trang này giữ (cặp ngay sau; Presto, Adagio, Allegro). Không tính là nhận định: tiêu đề mục, tiêu đề cột bảng, chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng (thuộc hồ sơ bản ghi), mốc trong ::khoi-nghe. Thuật ngữ trang dùng (mordent, staccato, legato, non legato) có trong src/data/thuat-ngu.yml; "đáp đề điệu tính", "đối đề", "đoạn chuyển", "quãng 3 Picardy" dùng như trang đã khóa hinh-thuc/fugue.'
+nguon:
+- id: mut-847-pre
+  bac: 1
+  ten: Mutopia Project, Das Wohltemperierte Clavier I, Praeludium II, BWV 847 (Davide Castellone, nguồn Breitkopf & Härtel 1866; tệp LilyPond và MIDI, tải 05/11/2026)
+  link: https://www.mutopiaproject.org/ftp/BachJS/BWV847/bwv847a/bwv847a.ly
+- id: mut-847-fug
+  bac: 1
+  ten: Mutopia Project, Das Wohltemperierte Clavier I, Fuga II a 3 voci, BWV 847 (Urs Metzger, nguồn Edition Peters; tệp LilyPond và MIDI, tải 05/11/2026)
+  link: https://www.mutopiaproject.org/ftp/BachJS/BWV847/fuga2/fuga2.ly
+- id: henle-hn14
+  bac: 2
+  ten: 'G. Henle Verlag, HN 14 / HN 1014 The Well-Tempered Clavier Part I: trang sản phẩm (Prelude c minor BWV 847 mức 6, Fugue mức 5; Ernst-Günter Heinemann biên tập; HN 14 có ngón bấm, HN 1014 không)'
+  link: https://www.henle.de/en/The-Well-Tempered-Clavier-Part-I-BWV-846-869/HN-14
+- id: henle-hn1014
+  bac: 2
+  ten: 'G. Henle Verlag, HN 1014 The Well-Tempered Clavier Part I (Urtext, without fingering): trang sản phẩm'
+  link: https://www.henle.de/en/The-Well-Tempered-Clavier-Part-I-BWV-846-869/HN-1014
+- id: henle-hn14-vorwort
+  bac: 2
+  ten: 'G. Henle Verlag, HN 14: lời nói đầu (Ernst-Günter Heinemann, 1997), PDF: bản chép sạch 1722, nguyên văn trang bìa ("Praeludia, und Fugen durch alle Tone und Semitonia ... Zum Nutzen und Gebrauch der Lehrbegierigen Musicalischen Jugend, als auch derer in diesem studio schon habil seyenden ..."), lên dây bình quân cho phép chơi mọi giọng; tập nhạc in khoảng năm mươi năm sau khi Bach mất'
+  link: https://www.henle.de/media/f4/14/7f/1690886046/0014-1690886046-sync.pdf
+- id: henle-blog-wtc
+  bac: 2
+  ten: 'G. Henle Verlag blog (Annette Oppermann, 31/10/2022), "If that''s not reason enough to celebrate: 300 years of WTC I!": bản chép 1722 có trang bìa công phu; khoảng năm 1800 ba nhà xuất bản (Nägeli, Simrock, Hoffmeister & Kühnel) in tập nhạc'
+  link: https://blog.henle.de/en/2022/10/31/if-thats-not-reason-enough-to-celebrate-300-years-of-wtc-i/
+- id: imslp-wtc1
+  bac: 2
+  ten: IMSLP, Das wohltemperierte Klavier I, BWV 846–869 (Piece Style Baroque)
+  link: https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)
+- id: omt-fugue
+  bac: 2
+  ten: Open Music Theory, High Baroque Fugal Exposition (subject, answer, tonal answer, countersubject, episode); như hồ sơ đã khóa hinh-thuc/fugue
+  link: https://viva.pressbooks.pub/openmusictheory/chapter/high-baroque-fugal-exposition/
+- id: cod-tierce
+  bac: 2
+  ten: The Concise Oxford Dictionary of Music, mục tierce de Picardie, qua Encyclopedia.com; như hồ sơ đã khóa hinh-thuc/fugue
+  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/tierce-de-picardie
+- id: abrsm-1516g8
+  bac: 2
+  ten: 'ABRSM, Piano 2015 & 2016, Grade 8 (bản lưu Wayback): danh sách A số 2 "Prelude and Fugue in C minor, BWV 847"'
+  link: https://web.archive.org/web/2020/https://us.abrsm.org/media/62106/piano0815.pdf
+- id: rcm-2022
+  bac: 2
+  ten: The Royal Conservatory (RCM), Piano Syllabus, 2022 Edition
+  link: https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf
+- id: dolmetsch-orn
+  bac: 2
+  ten: 'Dolmetsch Online, Music Theory: Ornaments (turn: nốt trên, nốt chính, nốt dưới, nốt chính; mordent)'
+  link: https://www.dolmetsch.com/musictheory23.htm
+- id: thuat-ngu
+  bac: 2
+  ten: 'src/data/thuat-ngu.yml (đã khóa): mordent "Láy: chính – dưới – chính", una corda, con sordino/con sordina (về sau: una corda), cantabile "Như hát", enharmonic "Đồng âm khác tên", Grave, tremolo, rondo'
+  link: src/data/thuat-ngu.yml
+nhan_dinh:
+- id: n1
+  cau: 'Tiêu đề: "Bach: Prelude và fugue Đô thứ, BWV 847".'
+  loai: ten
+  nguon: [henle-hn14, imslp-wtc1]
+  ket_qua: dung
+  ghi_chu: 'Henle: "Prelude c minor BWV 847", "Fugue c minor BWV 847".'
+- id: n2
+  cau: BWV 847 là cặp thứ hai của Bình quân luật quyển 1 (mô tả và câu mở đầu).
+  loai: danh-muc
+  nguon: [imslp-wtc1, henle-hn14]
+  ket_qua: dung
+- id: n3
+  cau: Prelude dựng trên móc kép liên tục ở hai tay; fugue có ba bè (giọng) độc lập.
+  loai: cau-truc
+  nguon: [mut-847-pre, mut-847-fug]
+  ket_qua: dung
+  ghi_chu: 'Prelude ô 1–24 hai tay móc kép; fugue: subtitle "a 3 Voci", ba voice sopran, alt, bass trong .ly.'
+- id: n4
+  cau: 'Link Invention số 1 (/opus/piano/tac-pham/bach-invention-1/): bước từ một bè lên hai bè.'
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: 'Trang chưa chuyển, có ở ../opus-zero/docs/piano/tac-pham/bach-invention-1.md (Invention hai bè; tac-pham.yml: "Phức điệu hai bè"); hiện "sắp có". Điều cần giữ: bài học Invention số 1 hai bè.'
+- id: n5
+  cau: Fugue có 31 ô nhịp.
+  loai: cau-truc
+  nguon: &id002 [mut-847-fug]
+  ket_qua: dung
+  ghi_chu: 'MIDI Mutopia: 31 ô 4/4.'
+- id: n6
+  cau: Ba bè vào lần lượt rất rõ, chủ đề dễ nhận ra.
+  loai: cau-truc
+  nguon: [mut-847-fug, omt-fugue]
+  ket_qua: dung
+  ghi_chu: 'Alto ô 1 một mình, soprano ô 3, bass ô 7 (fuga2.ly: sopran R1 R1, bass R1*6).'
+- id: n7
+  cau: Chơi được một prelude và fugue mà các bè nghe rõ là một mốc của chặng 6 trong lộ trình (link /opus/piano/lo-trinh/).
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: 'src/content/docs/piano/lo-trinh.md, mục Chặng 6, "Sẵn sàng lên chặng tiếp khi…": "- [ ] Một prelude và fugue của Bach, các bè nghe rõ". tac-pham.yml: chang 6 (đã khóa).'
+- id: n8
+  cau: Suốt 24 ô đầu prelude, hai tay chơi cùng một kiểu hình móc kép.
+  loai: cau-truc
+  nguon: &id001 [mut-847-pre]
+  ket_qua: dung
+  ghi_chu: 'bwv847a.ly: ô 1–24 mỗi tay "\repeat unfold 2 { 8 móc kép }"; ô 25 đổi hình.'
+- id: n9
+  cau: 'Prelude là bài kiểm tra độ đều: một nốt vội hay một nốt to là lộ ngay; là bài luyện ngón có hòa âm để nghe.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n10
+  cau: 'Prelude nghĩ theo hợp âm, giống BWV 846: mỗi ô một hợp âm, rải bằng một hình nốt lặp lại; fugue nghĩ theo đường nét.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: da-sua
+  ghi_chu: 'Chữ cũ: "giống BWV 846 nhưng nhanh và gắt hơn". Chữ mới: "giống BWV 846: mỗi ô một hợp âm, rải bằng một hình nốt lặp lại". "Nhanh và gắt hơn" là đánh giá, không nguồn (như D6-L3 bỏ "nhanh và mạnh hơn nhiều" ở bach-prelude-do n87). Mutopia: mỗi ô 1–24 một hợp âm rải theo một hình. Link /opus/piano/tac-pham/bach-prelude-do/ có (ve-site).'
+- id: n11
+  cau: Chặn hợp âm, tập theo nhịp chấm dôi, tập từng bè và từng cặp bè dùng được cho mọi tác phẩm phức điệu về sau.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n12
+  cau: Sau bài này, các sinfonia, những cặp prelude và fugue khác và các partita sẽ bớt xa lạ.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n13
+  cau: 'Bình quân luật (Das Wohltemperierte Klavier) gồm 24 cặp prelude và fugue, mỗi cặp ở một giọng, đi lên từng nửa cung, giọng trưởng trước giọng thứ: Đô trưởng, Đô thứ, Đô♯ trưởng, Đô♯ thứ…'
+  loai: cau-truc
+  nguon: [imslp-wtc1, henle-hn14]
+  ket_qua: dung
+  ghi_chu: IMSLP BWV 846–869 (24 cặp); Henle liệt kê Prelude C major BWV 846, c minor BWV 847, C sharp major BWV 848…
+- id: n14
+  cau: Vì thế BWV 847 là cặp số 2.
+  loai: danh-muc
+  nguon: [imslp-wtc1]
+  ket_qua: dung
+- id: n15
+  cau: Trang bìa bản chép năm 1722 gọi tập nhạc là Praeludia und Fugen durch alle Tone und Semitonia, tức prelude và fugue qua mọi cung và nửa cung.
+  loai: lich-su
+  nguon: [henle-hn14-vorwort]
+  ket_qua: dung
+  ghi_chu: 'Henle (nguyên văn): "Das Wohltemperirte Clavier. oder Praeludia, und Fugen durch alle Tone und Semitonia ... Anno 1722".'
+- id: n16
+  cau: Tập nhạc viết cho những người trẻ ham học và cho cả những người đã thạo nghề.
+  loai: lich-su
+  nguon: [henle-hn14-vorwort, henle-blog-wtc]
+  ket_qua: dung
+  ghi_chu: '"Zum Nutzen und Gebrauch der Lehrbegierigen Musicalischen Jugend, als auch derer in diesem studio schon habil seyenden".'
+- id: n17
+  cau: Chữ wohltemperiert ("được điều hòa tốt") nói đến cách lên dây cho phép chơi ở mọi giọng.
+  loai: dinh-nghia
+  nguon: [henle-hn14-vorwort]
+  ket_qua: dung
+  ghi_chu: 'Henle: "tempered tuning ... allows performers to play in every key".'
+- id: n18
+  cau: 'Prelude trông như bài tập ngón: một hình nốt lặp lại ô này sang ô khác.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+- id: n19
+  cau: Gần cuối prelude, Bach ghi liền ba chỉ dẫn tốc độ Presto, Adagio, Allegro.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'bwv847a.ly (Breitkopf 1866): Presto ô 28, Adagio ô 34, Allegro ô 35.'
+- id: n20
+  cau: Adagio là một ô tự do đầy nốt trang trí, rồi Allegro lao về hợp âm cuối.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Ô 34: móc ba, móc bốn, dấu láy; ô 35–38 móc kép tới hợp âm Đô trưởng có dấu ngân.'
+- id: n21
+  cau: 'Fugue ngắn, chủ đề có nhịp điệu riêng: một vòng móc kép quanh nốt Đô rồi những bước nhảy móc đơn.'
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+  ghi_chu: 'Chủ đề: c16 b c8 g as c16 b c8 d | g, c16 b c8 d f,16 g as4 g16 f.'
+- id: n22
+  cau: Trang Fugue (/opus/hinh-thuc/fugue/) dùng chính bài này để giải thích hình thức.
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: hinh-thuc/fugue.md (đã khóa) phân tích Fugue BWV 847 (hồ sơ n16–n29, n44).
+- id: n23
+  cau: Bach viết cho đàn phím thời ấy (harpsichord, clavichord), không có bàn đạp vang.
+  loai: lich-su
+  nguon: [imslp-wtc1]
+  ket_qua: null
+  ghi_chu: 'chưa chắc: IMSLP ghi nhạc cụ "keyboard"; Mutopia ghi "Harpsichord, Piano". Chưa mở nguồn nói rõ harpsichord và clavichord; lượt 2 kiểm.'
+- id: n24
+  cau: Trên piano, độ liền và độ ngân phải đến từ ngón tay; bàn đạp, nếu có, chỉ là gia vị.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n25
+  cau: Link thời kỳ Baroque (/opus/lich-su/thoi-ky/baroque/).
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Trang có (đã khóa).
+- id: n26
+  cau: Mỗi nghệ sĩ xử lý Presto, Adagio, Allegro rất khác nhau.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n27
+  cau: Nốt đầu của mỗi hình nửa ô ở tay phải (thường cũng là nốt cao nhất) nối với nhau thành một đường nét chậm.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Ô 1–24 nốt đầu tay phải: C5 Ab4 B4 C5 Eb5 D5 D5 C5 C5 Bb4 Bb4 Ab4 Ab4 G4 F4 F4 F4 Eb4 … (thường là nốt cao nhất của hình).'
+- id: n28
+  cau: Trong fugue, chủ đề (kể cả đáp đề) vào tám lần.
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+  ghi_chu: 'Script tìm đầu chủ đề trong MIDI: ô 1 alto, 3 soprano, 7 bass, 11 soprano, 15 alto, 20 soprano, 26 bass, 29 soprano (8 lần; các đầu chủ đề ở ô 9–10, 22–24 là mảnh trong đoạn chuyển).'
+- id: n29
+  cau: Bè alto là bè khó nghe nhất vì nằm giữa.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n30
+  cau: Glenn Gould, Sviatoslav Richter, András Schiff, Angela Hewitt đều thu âm Bình quân luật; Gustav Leonhardt thu trên harpsichord.
+  loai: ten
+  nguon: []
+  ket_qua: null
+  ghi_chu: 'Đã sửa: bỏ "(tách tiếng, nhịp sắc)" sau tên Gould (đánh giá, không nguồn; như D6-L3 bỏ câu đánh giá về Gould ở bach-prelude-do n32). chưa chắc: chưa mở trang hãng đĩa hay danh mục bản thu của nghệ sĩ; lượt 2 kiểm.'
+- id: n31
+  cau: Link Prelude Đô trưởng (/opus/piano/tac-pham/bach-prelude-do/).
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Trang có (src/content/docs).
+- id: n32
+  cau: 'Theo dõi: Prelude mở đầu ô 1–4, hai tay cùng một kiểu hình móc kép trên nốt Đô trầm đứng yên.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Bè trầm C3 ở đầu mỗi nửa ô ô 1–6.
+- id: n33
+  cau: 'Theo dõi: Chuyển giọng ô 5–20, bè trầm đi xuống dần, hòa âm đổi mỗi ô; sáng lên quanh Mi♭ trưởng (ô 11–14) rồi về Đô thứ.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Bè trầm C (1–6), B♭ (7–8), A♭ (9–10), G (11); ô 11 Mi♭/Sol, ô 14 Mi♭; ô 18 Đô thứ.
+- id: n34
+  cau: 'Theo dõi: Âm nền át ô 21–27, bè trầm dừng trên Sol; từ ô 25 hình nốt biến đổi.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Bè trầm G2 ô 21–28; ô 25 tay trái chỉ G2 B2 D3, phần còn lại ở khuông dưới do tay phải.
+- id: n35
+  cau: 'Theo dõi: Presto ô 28–33, tay phải chạy trước, từ ô 29 tay trái đuổi theo cùng hình nốt.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+- id: n36
+  cau: 'Theo dõi: Adagio rồi Allegro ô 34–38, một ô chậm tự do đầy nốt trang trí, rồi về hợp âm Đô trưởng cuối bài.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Ô 38 kết E4 (Mi♮) có dấu ngân: hợp âm Đô trưởng.'
+- id: n37
+  cau: 'Theo dõi: Fugue ô 1–2, bè alto một mình với chủ đề.'
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+- id: n38
+  cau: 'Theo dõi: Đáp đề ô 3–4, soprano vào ở Sol thứ; alto chuyển sang chuỗi móc kép đi xuống (đối đề 1).'
+  loai: cau-truc
+  nguon: [mut-847-fug, omt-fugue]
+  ket_qua: dung
+  ghi_chu: 'Alto ô 3: es16 c'' b a g f es d (đi xuống).'
+- id: n39
+  cau: 'Theo dõi: Bè bass vào ô 7–8, đủ ba bè; lần đầu chủ đề và hai đối đề vang cùng lúc.'
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+- id: n40
+  cau: 'Theo dõi: Giữa fugue ô 9–25, chủ đề ở Mi♭ trưởng (ô 11), Sol thứ (ô 15), Đô thứ (ô 20), xen đoạn chuyển có móc kép chạy.'
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+- id: n41
+  cau: 'Theo dõi: Kết ô 26–31, bè bass vào lần cuối, rồi soprano trên nốt Đô trầm ngân dài; hợp âm cuối là Đô trưởng.'
+  loai: cau-truc
+  nguon: [mut-847-fug, cod-tierce]
+  ket_qua: dung
+  ghi_chu: Bass ô 26 phách 3 (c16…); soprano ô 29 phách 3; bass <c, c'> từ ô 29 tới hết; hợp âm cuối <g c> + e (Mi♮).
+- id: n42
+  cau: 'Bảng prelude, Mở đầu ô 1–4: nốt Đô trầm ở đầu mỗi nửa ô; mỗi ô một hợp âm, mỗi hình nửa ô chơi hai lần.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+- id: n43
+  cau: 'Bảng prelude, Chuyển giọng ô 5–20: bè trầm đi xuống Đô – Si♭ – La♭ – Sol (ô 6–11); hòa âm chạm Sol thứ (ô 7), Fa thứ (ô 9), Mi♭ trưởng (ô 11–14), qua hợp âm bảy giảm (ô 16–17) về Đô thứ (ô 18).'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Ô 6 Rê7/Đô → ô 7 Sol thứ/Si♭; ô 8 Đô7/Si♭ → ô 9 Fa thứ/La♭; ô 10 Si♭7/La♭ → ô 11 Mi♭/Sol; ô 16–17 Si–Rê–Fa–La♭ (bảy giảm); ô 18 Đô thứ.
+- id: n44
+  cau: 'Bảng prelude, Âm nền át ô 21–27: từ ô 25 tay trái chỉ đánh nốt Sol và hai nốt kế tiếp; tay phải nối dòng móc kép ở vùng giữa.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'bwv847a.ly ô 25: tay trái "sol, si re s16 s4 s2", tay phải \staffTwo "s8 s16 fa, lab fa mi fa si fa re'' si lab fa mi fa".'
+- id: n45
+  cau: 'Bảng prelude, Presto ô 28–33: trên nốt Sol giữ dài tay phải chạy; từ ô 29 tay trái nhắc lại hình ấy thấp hơn một quãng tám, chậm hơn một ô; ở ô 31–32 tay trái chơi lên tận vùng của tay phải.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Ô 27–28 tay trái sol,1~ sol16 (G2 giữ); ô 29 tay trái D4 C4 D4 E♭4… = ô 28 tay phải D5 C5 D5 E♭5… thấp quãng tám; ô 31 tay trái \staffOne (G4 F4 G4 A♭4…), ô 32 tới phách 3.
+- id: n46
+  cau: 'Bảng prelude, Adagio ô 34: hai hợp âm rải; giai điệu trang trí bằng móc ba, móc bốn.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Ô 34: do4\arpeggio hai lần ở tay trái; mi32, fa64.'
+- id: n47
+  cau: 'Bảng prelude, Allegro ô 35–38: móc kép trở lại, dồn về hợp âm Đô trưởng có dấu ngân.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Ô 38: mi4^\fermata.'
+- id: n48
+  cau: 'Câu dẫn khối 1: bốn ô đầu đối chiếu từng nốt với bản Breitkopf & Härtel 1866 (Bach-Gesellschaft) qua bản chép LilyPond của Mutopia.'
+  loai: ten
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'Header: source "Breitkopf & Hartel, 1866".'
+- id: n49
+  cau: 'Đọc theo hợp âm: ô 1 Đô thứ, ô 2 Fa thứ trên nốt Đô trầm, ô 3 hợp âm bảy giảm (Si♮ – Rê – Fa – La♭) trên nốt Đô trầm, ô 4 Đô thứ.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+- id: n50
+  cau: Cả 24 ô đầu đều xây theo cùng cách (mỗi ô một hợp âm rải theo một hình).
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+- id: n51
+  cau: Học thuộc prelude theo hợp âm chứ đừng theo từng nốt.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n52
+  cau: 'Câu dẫn khối 2: fugue theo bản Edition Peters, qua bản chép của Mutopia; cả hai bè đều ở khuông trên.'
+  loai: ten
+  nguon: *id002
+  ket_qua: dung
+  ghi_chu: Header source "Edition Peters"; right = sopran + alt.
+- id: n53
+  cau: Chủ đề đi Đô – Si – Đô rồi nhảy xuống Sol (quãng 4); đáp đề đi Sol – Fa♯ – Sol rồi nhảy xuống Đô (quãng 5), không xuống Rê.
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+  ghi_chu: 'Ô 1: C5 B4 C5 G4; ô 3: G5 F♯5 G5 C5.'
+- id: n54
+  cau: Chỉ nốt thứ tư ấy được chỉnh; mọi nốt còn lại đúng là chủ đề dịch lên một quãng 5.
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+  ghi_chu: 'So từng nốt ô 1–2 với ô 3–4: chủ đề +7 nửa cung trùng đáp đề trừ nốt thứ tư (G4 → C5 thay vì D5).'
+- id: n55
+  cau: 'Kiểu đáp này gọi là đáp đề điệu tính (tonal answer): nốt át âm của chủ đề được đáp bằng nốt chủ âm.'
+  loai: dinh-nghia
+  nguon: [omt-fugue]
+  ket_qua: dung
+  ghi_chu: 'OMT: tonal answer chỉnh nốt để giữ giọng chủ (5̂ đáp bằng 1̂); như hồ sơ đã khóa hinh-thuc/fugue.'
+- id: n56
+  cau: 'Trong lúc ấy bè alto chơi đối đề 1: chuỗi móc kép đi xuống rồi những móc đơn.'
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+  ghi_chu: 'Alto ô 3–4: es16 c b a g f es d c8 es d c | b a b c fis, g a fis.'
+- id: n57
+  cau: 'Ô 7–8: bè bass vào với chủ đề; soprano chơi đối đề 1 (bắt đầu từ Fa); alto chơi đối đề 2, những móc đơn ngắt quãng bởi dấu lặng.'
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+  ghi_chu: 'Soprano ô 7: f8 es16 d c b as g …; alto ô 7: c4 r r8 f es d; ô 8: r8 as g f g f16 es f8 d.'
+- id: n58
+  cau: Nốt Fa đầu ô 7 ở soprano được nối từ ô 6.
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+  ghi_chu: 'Soprano ô 6: "… f4~", ô 7 "f8 …".'
+- id: n59
+  cau: Ba đường nét (chủ đề, hai đối đề) còn gặp lại nhau, mỗi lần đổi bè, chẳng hạn ở ô 15–16 và ô 20–21.
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+  ghi_chu: 'Ô 15: alto chủ đề, soprano đối đề 1, bass đối đề 2; ô 20: soprano chủ đề, alto đối đề 1, bass đối đề 2.'
+- id: n60
+  cau: 'Bản đồ: ô 1–2 alto, Đô thứ, chủ đề một mình.'
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+- id: n61
+  cau: 'Bản đồ: ô 3–4 soprano (đáp đề), Sol thứ; alto đối đề 1.'
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+- id: n62
+  cau: 'Bản đồ: ô 5–6 đoạn chuyển 1, đầu chủ đề nhắc theo chuỗi đi lên ở soprano; alto chạy móc kép.'
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+  ghi_chu: 'Soprano ô 5: b8 es16 d es8 g, as f''16 es f8 a,; alto móc kép.'
+- id: n63
+  cau: 'Bản đồ: ô 7–8 bass, Đô thứ; soprano đối đề 1, alto đối đề 2; hết phần trình bày.'
+  loai: cau-truc
+  nguon: [mut-847-fug, omt-fugue]
+  ket_qua: dung
+- id: n64
+  cau: 'Bản đồ: ô 9–10 đoạn chuyển 2, bass chạy móc kép đi xuống; hai bè trên nhại đầu chủ đề.'
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+- id: n65
+  cau: 'Bản đồ: ô 11–12 soprano, Mi♭ trưởng; bass đối đề 1.'
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+  ghi_chu: 'Soprano ô 11: es8 es16 d es8 b c es16 d es8 f; bass: es16 as'' g f es des c b …'
+- id: n66
+  cau: 'Bản đồ: ô 13–14 đoạn chuyển 3, soprano chạy móc kép đi lên; alto và bass đi móc đơn.'
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+- id: n67
+  cau: 'Bản đồ: ô 15–16 alto (dạng đáp đề), Sol thứ; soprano đối đề 1, bass đối đề 2.'
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+- id: n68
+  cau: 'Bản đồ: ô 17–19 đoạn chuyển 4, các bè hỏi đáp bằng những mảnh chủ đề ngắn.'
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+  ghi_chu: 'Soprano ô 17–19: mảnh d''16 c d8, e16 d e8, fis16 e fis8 … xen dấu lặng.'
+- id: n69
+  cau: 'Bản đồ: ô 20–21 soprano, Đô thứ; alto đối đề 1, bass đối đề 2 hơi biến đổi.'
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+- id: n70
+  cau: 'Bản đồ: ô 22–26 đoạn chuyển 5, đầu chủ đề đi xuống theo chuỗi ở soprano; bass chạy móc kép.'
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+  ghi_chu: Soprano ô 22 C5–B4–C5–G4, ô 23 B♭4–A4–B♭4–F4; bass ô 22–24 móc kép.
+- id: n71
+  cau: 'Bản đồ: ô 26–28 bass (từ giữa ô 26), Đô thứ; lần vào cuối của bè trầm.'
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+- id: n72
+  cau: 'Bản đồ: ô 29–31 soprano (từ giữa ô 29), Đô thứ, trên quãng tám Đô ngân dài ở bè trầm; hợp âm cuối Đô trưởng (quãng 3 Picardy).'
+  loai: cau-truc
+  nguon: [mut-847-fug, cod-tierce]
+  ket_qua: dung
+- id: n73
+  cau: 'Chỗ khó, móc kép đều ở prelude: ngón 4, 5 yếu và ngón cái hay "gõ"; chặn hợp âm, nhịp chấm dôi, tăng máy đếm nhịp từng nấc nhỏ.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n74
+  cau: 'Chỗ khó, cân bằng hai tay ở prelude: tay phải ở vùng giữa, tay trái ở vùng trầm.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Tay phải ô 1–24 khoảng C4–E♭5, tay trái G2–A♭3.
+- id: n75
+  cau: 'Cách tập cân bằng: chơi riêng nốt đầu mỗi hình ở tay phải như giai điệu chậm, rồi riêng nốt trầm; khi ghép giữ các nốt giữa nhẹ hơn.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n76
+  cau: 'Chỗ khó, ô 25–33: hình nốt đổi; ở Presto hai tay đuổi nhau sát bên nhau, có chỗ chen vào cùng một vùng phím.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: Ô 31–32 tay trái lên khuông trên (G4–A♭4) cạnh tay phải.
+- id: n77
+  cau: 'Cách tập ô 25–33: tay riêng thật chậm, đánh dấu chỗ hai tay giao nhau, ghép từng ô.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n78
+  cau: 'Chỗ khó, Adagio ô 34: nhiều nốt nhỏ (móc ba, móc bốn) trong một ô chậm.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+- id: n79
+  cau: 'Cách tập Adagio: khi học nốt đếm theo móc kép; khi đã thuộc để nét nhạc tự do như lời nói.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n80
+  cau: 'Chỗ khó, ba bè trong fugue: bè alto nằm giữa, dễ bị hai bè ngoài che.'
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+- id: n81
+  cau: 'Cách tập ba bè: tập từng bè, từng cặp bè, hát một bè trong khi chơi hai bè kia, tô màu chủ đề và hai đối đề.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n82
+  cau: 'Chỗ khó, hai bè trong một tay: một bè giữ nốt dài trong khi bè kia chạy.'
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+  ghi_chu: Ví dụ alto ô 6 "as8~ as16 …" dưới soprano chạy; ô 12–14 alto ghi xuống khuông dưới cùng bass.
+- id: n83
+  cau: 'Cách tập hai bè trong một tay: chọn ngón theo kết cấu ba bè, thay ngón trên phím đang giữ, trượt ngón từ phím đen xuống phím trắng, chia bè giữa cho tay kia.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n84
+  cau: 'Chỗ khó, phát âm chủ đề và đối đề: quyết định cách nối và tách một lần, áp dụng cho mọi lần vào.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n85
+  cau: Chỗ khó, đoạn chuyển có móc kép chạy ở ô 9–10, 13–14, 22–24.
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+  ghi_chu: Bass móc kép ô 9–10; soprano ô 13–14; bass ô 22–24.
+- id: n86
+  cau: 'Cách tập đoạn chuyển: tập riêng với máy đếm nhịp, giữ trong khung sắc thái của câu.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n87
+  cau: 'Chỗ khó, ba ô cuối: tay trái giữ quãng tám Đô hơn hai ô trong khi tay phải chơi chủ đề kèm hợp âm.'
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+  ghi_chu: Bass <c, c'>2~ từ giữa ô 29 tới hết ô 31 (2,5 ô); alto có hợp âm ô 30–31.
+- id: n88
+  cau: Giữ quãng tám bằng ngón 5 và 1, không cần bàn đạp; nghe hợp âm Đô trưởng cuối thật tròn.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n89
+  cau: Các bài tập 1–3 soạn riêng cho trang này, không trích từ bản nhạc gốc; số ngón là gợi ý.
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Ba khối abc 4–6 có chữ "(soạn cho trang này)"; xem khuong_nhac khối 4–6.
+- id: n90
+  cau: 'Bài tập 1: ô 1 mỗi nửa ô là một hợp âm khối; ô 2 rải thành kiểu hình nốt của prelude; ô 3 cùng những nốt ấy theo nhịp dài – ngắn.'
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: 'Khối abc 4: ô 1 [GBd]16 [^FAc]16; ô 2 d2B2A2B2 G2B2A2B2… (hình prelude); ô 3 d3B A3B … (chấm dôi).'
+- id: n91
+  cau: 'Áp dụng bài tập 1 cho prelude: chặn mỗi nửa ô thành hợp âm, đi hết 24 ô đầu rồi mới rải.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n92
+  cau: 'Bài tập 2: ô 1–2 bè trên giữ nốt tròn, bè dưới chạy móc đơn; ở ô 2 đánh Fa bằng ngón 4 rồi đổi sang ngón 5 trên phím đang giữ, nhường ngón 4 cho Mi♭ bè dưới; ô 3 đổi vai, ngón cái giữ Đô; ô 4 ngón 2 vắt qua ngón cái xuống Si♮ trong lúc ngón 3 chơi Rê, rồi ngón cái luồn về Đô.'
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: 'Khối abc 5: ô 2 "4→5" trên f8, bè dưới !4!e; ô 3 !1!c8 dưới; ô 4 !3!d4 !4!e4 & !2!=B4 !1!c4.'
+- id: n93
+  cau: 'Bài tập 3: móc kép liền (dấu luyến), móc đơn tách nhẹ; ô 1 tay phải, ô 2 tay trái, ô 3 hai tay cùng lúc.'
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: 'Khối abc 6: (GABc) .d2.B2.G2.B2.d2; ô 2 tay trái cùng hình; ô 3 hai tay.'
+- id: n94
+  cau: Chấm staccato ở đây nghĩa là tách, không phải ngắn cụt.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n95
+  cau: 'Bài tập 4: tập fugue theo bè: từng bè riêng với đúng ngón khi chơi đủ ba bè, từng cặp, đủ ba bè cho một bè nổi, chơi hai bè hát bè thứ ba.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n96
+  cau: Trong bản chép Mutopia (theo Edition Peters), bè alto được ghi xuống khuông dưới ở ô 12–14 và một đoạn ngắn trong ô 20.
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+  ghi_chu: 'fuga2.ly, bè alt: \staffdown đầu ô 12, \staffup ở ô 15; ô 20: "c16 f es d \staffdown c b as g f8 \staffup as'' g f".'
+- id: n97
+  cau: Kế hoạch 8 tuần, mỗi ngày 45–60 phút, prelude và fugue tập song song; tốc độ máy đếm nhịp từng tuần như bảng.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n98
+  cau: Link Thu âm (/opus/luyen-tap/thu-am/) trong kế hoạch tuần 7.
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Trang có (src/content/docs/luyen-tap/thu-am.md).
+- id: n99
+  cau: Prelude không ghi tốc độ ở đầu bài; Presto ở ô 28.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'bwv847a.ly: không \tempo hiện ở ô 1; "\tempo 4 = 160 ... Presto" ở ô 28.'
+- id: n100
+  cau: 'Lập luận: phần trước Presto phải chậm hơn rõ; khoảng hợp lý ♩ ≈ 100–120; fugue ♩ = 66–80.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n101
+  cau: 'Phát âm prelude: liền tiếng bằng ngón không bàn đạp, hoặc tách rất nhẹ (non legato); chọn một, giữ cho cả hai tay.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n102
+  cau: 'Phát âm fugue: móc kép liền, móc đơn tách nhẹ; chủ đề ba nốt Đô – Si – Đô thành một nhóm; nốt dài giữ đủ trường độ.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n103
+  cau: 'Đối đề 2: móc đơn, mỗi nhóm bắt đầu sau một dấu lặng.'
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+- id: n104
+  cau: Bàn đạp gần như không cần; có thể chạm rất nông ở hai hợp âm rải của Adagio và ở hợp âm cuối.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n105
+  cau: Link Bàn đạp (/opus/piano/ban-dap/).
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Trang có (src/content/docs/piano/ban-dap.md).
+- id: n106
+  cau: Bach không ghi sắc thái nào.
+  loai: cau-truc
+  nguon: [mut-847-pre, mut-847-fug]
+  ket_qua: dung
+  ghi_chu: Hai tệp .ly (Breitkopf 1866, Peters) không có dấu sắc thái (\p, \f, cresc.).
+- id: n107
+  cau: 'Sắc thái theo hòa âm: căng dần trên âm nền át (ô 21–27), bùng ở Presto, lắng ở Adagio; fugue mỗi lần chủ đề vào chỉ rõ hơn một chút.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n108
+  cau: Ở Presto hai tay nhại nhau cách một ô.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+- id: n109
+  cau: 'Trong bản Bach-Gesellschaft (theo bản chép Mutopia), nốt Fa ở nửa sau ô 34 có dấu láy (mordent): nốt chính – nốt dưới – nốt chính.'
+  loai: cau-truc
+  nguon: [mut-847-pre, thuat-ngu, dolmetsch-orn]
+  ket_qua: dung
+  ghi_chu: 'Ô 34: "fa8[ ~ \mordent\arpeggio …"; thuat-ngu.yml mordent: "Láy: chính – dưới – chính".'
+- id: n110
+  cau: Link Nốt hoa mỹ (/opus/piano/not-hoa-my/).
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Trang có (src/content/docs/piano/not-hoa-my.md).
+- id: n111
+  cau: 'Allegro là đoạn về đích: giữ đều, đừng vội hơn Presto; Adagio rải hợp âm thong thả.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n112
+  cau: Dùng bản Urtext; nhiều ấn bản cũ thêm sắc thái, dấu luyến và tốc độ của người biên tập.
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n113
+  cau: Ở ô 18 của prelude (tay trái, đầu nửa ô sau), bản Bach-Gesellschaft ghi Đô, còn người chép bản Mutopia ghi Si♭ theo một bản Urtext và chú thích lại chỗ này.
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+  ghi_chu: 'bwv847a.ly ô 18 tay trái: dòng gốc bị chú thích "% \repeat unfold 2 { do mib re mib fa mib re mib }" và lời "I here followed the Urtext edition, that has sib (bf) instead of do (c)".'
+- id: n114
+  cau: Các đoạn trích trên trang theo bản Bach-Gesellschaft (prelude) và Edition Peters (fugue), qua Mutopia.
+  loai: ten
+  nguon: [mut-847-pre, mut-847-fug]
+  ket_qua: dung
+- id: n115
+  cau: 'Lỗi thường gặp (9 dòng): phần đầu prelude quá nhanh; móc kép nhanh dần; ngón cái gõ mạnh; bàn đạp che chỗ chưa đều; Adagio cứng hay rời rạc; fugue chỉ nghe soprano; phát âm chủ đề mỗi lần một kiểu; nhấc nốt dài sớm; đập mạnh mọi lần vào của chủ đề.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n116
+  cau: Các Sinfonia (invention ba bè) có số BWV 787–801.
+  loai: danh-muc
+  nguon: []
+  ket_qua: null
+  ghi_chu: 'chưa chắc: chưa mở trang IMSLP của Inventionen und Sinfonien trong lô này (bản ghi bach-invention-1 đã khóa ghi "15 Sinfonia ba bè (BWV 787–801)" ở thong_tin, trường chưa khóa); lượt 2 kiểm.'
+- id: n117
+  cau: 'Học tiếp: link Invention số 1, Prelude Đô trưởng BWV 846, Chopin Nocturne Op. 9 số 2, Pathétique chương 2, Fugue, Đối âm, Goldberg.'
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: bach-invention-1 chưa chuyển (../opus-zero có, "sắp có"); các trang còn lại có trong src/content/docs.
+- id: n118
+  cau: Fugue Rê thứ BWV 851 của quyển 1 có ba bè; fugue Đô trưởng BWV 846 có bốn bè.
+  loai: cau-truc
+  nguon: []
+  ket_qua: null
+  ghi_chu: 'chưa chắc: chưa mở bản nhạc BWV 851, BWV 846 (fugue) trong lô này; lượt 2 kiểm.'
+- id: n119
+  cau: 'Cùng chặng: Chopin Nocturne Op. 9 số 2 và Beethoven Pathétique chương 2 cùng chặng 6 với bài này.'
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: 'tac-pham.yml (chang đã khóa): bach-prelude-fugue-do-thu 6, chopin-nocturne-op9-2 6, pathetique-adagio 6.'
+- id: n120
+  cau: 'Câu hỏi 1: cuối prelude Bach ghi Presto, Adagio, Allegro theo thứ tự; Presto ô 28, Adagio ô 34, Allegro ô 35.'
+  loai: cau-truc
+  nguon: *id001
+  ket_qua: dung
+- id: n121
+  cau: 'Câu hỏi 2: ba bè vào theo thứ tự alto (ô 1), soprano (ô 3), bass (ô 7); soprano đáp ở Sol thứ.'
+  loai: cau-truc
+  nguon: *id002
+  ket_qua: dung
+- id: n122
+  cau: 'Câu hỏi 3: đáp đề khác "chủ đề dịch lên quãng 5" ở nốt thứ tư (nhảy xuống Đô thay vì Rê); đó là đáp đề điệu tính.'
+  loai: cau-truc
+  nguon: [mut-847-fug, omt-fugue]
+  ket_qua: dung
+- id: n123
+  cau: 'Câu hỏi 4: khi tập từng bè riêng, dùng đúng ngón sẽ dùng khi chơi đủ ba bè.'
+  loai: khuyen-tap
+  nguon: []
+  ket_qua: khong-can-nguon
+- id: n124
+  cau: 'Nguồn: Henle HN 1014 (biên tập Ernst-Günter Heinemann) ghi mức độ khó theo thang Henle.'
+  loai: ten
+  nguon: [henle-hn1014, henle-hn14]
+  ket_qua: dung
+  ghi_chu: Prelude mức 6, fugue mức 5 (trang HN 14 và HN 1014).
+- id: n125
+  cau: 'Nguồn: blog Henle 2022 "300 years of WTC I" nói về bản chép 1722, trang bìa, các bản in quanh năm 1800.'
+  loai: ten
+  nguon: [henle-blog-wtc]
+  ket_qua: dung
+- id: n126
+  cau: 'Nguồn: hai sách in (David Ledbetter, Bach''s Well-tempered Clavier, Yale 2002; Christoph Wolff, Johann Sebastian Bach: The Learned Musician, Norton 2000).'
+  loai: ten
+  nguon: []
+  ket_qua: da-bo
+  ghi_chu: 'Đã bỏ khỏi mục Nguồn: sách in chưa đọc, không nhận định nào dựa vào (như D6-L3 bỏ sách in chưa đọc ở bach-prelude-do n96–n99). Thay bằng lời nói đầu Henle HN 14 (PDF) đã đọc.'
+- id: n127
+  cau: 'Nguồn: lời nói đầu Henle HN 14 (Ernst-Günter Heinemann, 1997) nói về trang bìa bản chép 1722 và cách lên dây bình quân.'
+  loai: ten
+  nguon: [henle-hn14-vorwort]
+  ket_qua: da-sua
+  ghi_chu: Dòng mới thay hai sách in (xem nhận định trên). Ký "Munich, spring 1997 Ernst-Günter Heinemann".
+- id: n128
+  cau: 'Nguồn: bản nhạc IMSLP; đoạn trích đối chiếu với bản chép LilyPond của Mutopia, prelude theo Breitkopf & Härtel 1866, fugue theo Edition Peters (thêm link tệp .ly).'
+  loai: ten
+  nguon: [mut-847-pre, mut-847-fug]
+  ket_qua: da-sua
+  ghi_chu: Thêm link thẳng tới hai tệp .ly đã dùng.
+- id: n129
+  cau: Link Tài liệu tham khảo (/opus/tai-lieu-tham-khao/).
+  loai: ve-site
+  nguon: []
+  ket_qua: dung
+  ghi_chu: Trang có (src/content/docs/tai-lieu-tham-khao.md).
 khuong_nhac:
-  - khoi: 1
-    loai: null
-    kiem: []
-    ket_qua: null
-  - khoi: 2
-    loai: null
-    kiem: []
-    ket_qua: null
-  - khoi: 3
-    loai: null
-    kiem: []
-    ket_qua: null
-  - khoi: 4
-    loai: null
-    kiem: []
-    ket_qua: null
-  - khoi: 5
-    loai: null
-    kiem: []
-    ket_qua: null
-  - khoi: 6
-    loai: null
-    kiem: []
-    ket_qua: null
+- khoi: 1
+  loai: trich-doan
+  kiem: [cu-phap, nhip, giong, not-tay-phai, not-tay-trai, so-ngon, doi-chieu-an-ban]
+  ket_qua: dung
+  ghi_chu: 'Prelude ô 1–4, 4/4, L:1/16, K:Cm. Ấn bản Breitkopf & Härtel 1866 qua Mutopia bwv847a (.ly, .mid tải 05/11/2026). Công cụ: script Python (mido) in nốt MIDI theo ô và hai tay. Kết quả: 4/4 ô khớp cao độ và trường độ cả hai tay (ô 1 tay phải C5 E♭4 D4 E♭4 C4 E♭4 D4 E♭4 ×2, tay trái C3 G3 F3 G3 E♭3 G3 F3 G3 ×2; ô 2 A♭4 F4 E♮4 F4 C4… / C3 A♭3 G3 A♭3 F3…; ô 3 B♮4 F4 E♭4 F4 D4… / C3 A♭3 G3 A♭3 F3…; ô 4 C5 G4 F4 G4 E♭4… / C3 E♭3 D3 E♭3 G3…). Số ngón là gợi ý của trang, chơi được.'
+- khoi: 2
+  loai: trich-doan
+  kiem: [cu-phap, nhip, giong, not-tay-phai, doi-chieu-an-ban, chu-thich]
+  ket_qua: dung
+  ghi_chu: 'Fugue ô 1–4, cả hai bè ở khuông trên. Ấn bản Edition Peters qua Mutopia fuga2 (.ly, .mid). Đối chiếu từng nốt với MIDI: ô 1–2 alto chủ đề (r8 C5 B4 C5 G4 A♭4 C5 B4 C5 D5 | G4 C5 B4 C5 D5 F4 G4 A♭4 G4 F4); ô 3–4 soprano đáp đề (r8 G5 F♯5 G5 C5 E♭5 G5 F♯5 G5 A5 | D5 G5 F♯5 G5 A5 C5 D5 E♭5 D5 C5) và alto đối đề 1 (E♭4 C5 B4 A4 G4 F4 E♭4 D4 C4 E♭5 D5 C5 | B♭4 A4 B♭4 C5 F♯4 G4 A4 F♯4): khớp. Nhãn "Chủ đề (alto)", "Đáp đề (soprano)", "Đối đề 1 (alto)" đúng.'
+- khoi: 3
+  loai: trich-doan
+  kiem: [cu-phap, nhip, giong, not-tay-phai, not-tay-trai, doi-chieu-an-ban, chu-thich]
+  ket_qua: dung
+  ghi_chu: 'Fugue ô 7–8. Edition Peters qua Mutopia fuga2. Soprano (F5 nối từ ô 6) E♭5 D5 C5 B♭4 A♭4 G4 F4 A♭5 G5 F5 | E♭5 D5 E♭5 F5 B4 C5 D5 B4; alto C5 (đen) – lặng – F5 E♭5 D5 | r A♭4 G4 F4 G4 F4 E♭4 F4 D4; bass chủ đề r C4 B3 C4 G3 A♭3 C4 B3 C4 D4 | G3 C4 B3 C4 D4 F3 G3 A♭3 G3 F3: khớp MIDI (nốt F5 đầu ô 7 không có khởi âm trong MIDI vì nối từ ô 6). Nhãn đúng.'
+- khoi: 4
+  loai: vi-du-soan
+  kiem: [cu-phap, nhip, giong, hop-am, tiet-tau, so-ngon]
+  ket_qua: dung
+  ghi_chu: Sol thứ, L:1/32, mỗi ô 32 phần. Ô 1 hợp âm khối Sol thứ, Rê7 (Fa♯ La Đô + Rê ở tay trái); ô 2 rải theo hình prelude (nốt cao – hai nốt kề – nốt giữa); ô 3 cùng nốt theo nhịp dài – ngắn (3+1); ô 4 hợp âm Sol thứ. Đúng lời dẫn. Ngón 5-3-2-3-1 tay phải, 5-1-2-1-3 tay trái chơi được.
+- khoi: 5
+  loai: vi-du-soan
+  kiem: [cu-phap, nhip, giong, so-ngon, hai-be]
+  ket_qua: dung
+  ghi_chu: Đô thứ, 4/4, L:1/8, 4 ô đủ phách. Ô 1–2 bè trên Sol5 rồi Fa5 nốt tròn, bè dưới móc đơn liền; ô 2 ghi "4→5" trên Fa, bè dưới Mi♭ ngón 4; ô 3 bè dưới Đô5 nốt tròn ngón 1, bè trên móc đơn; ô 4 Rê–Mi♭ trên Si♮–Đô (3/2 rồi 4/1). Khớp lời dẫn (đổi ngón trên phím, ngón 2 vắt qua ngón cái). Chơi được.
+- khoi: 6
+  loai: vi-du-soan
+  kiem: [cu-phap, nhip, giong, phat-am, so-ngon]
+  ket_qua: dung
+  ghi_chu: Sol thứ, L:1/16, 4 ô đủ 16 phần. Móc kép có dấu luyến (G A B♭ C), móc đơn có chấm (D B♭ G B♭ D); ô 1 tay phải, ô 2 tay trái, ô 3 hai tay, ô 4 hợp âm Sol thứ. Đúng lời dẫn.
+doi_chu:
+- cu: Khoảng ABRSM Grade 7–8 (ước lượng), chặng 6 của lộ trình. Henle xếp prelude mức 6, fugue mức 5 trên thang 9 (cả hai "trung bình")
+  moi: ABRSM xếp bài ở Grade 8 (đề cương 2015–2016), RCM ở Level 9 (đề cương 2022); chặng 6 của lộ trình. Henle xếp prelude mức 6, fugue mức 5 trên thang 9 (cả hai "trung bình")
+  ly_do: 'Dòng Độ khó của thong_tin (bản ghi tac-pham/bach-prelude-fugue-do-thu, hồ sơ bản ghi n21; plans/lam-lai/bao-cao/d6-l5/sua-A.yml): bỏ "(ước lượng)", ghi đề cương có thật: ABRSM Grade 8 (2015–2016, lần 1 n4), RCM Level 9 (2022). Grade và chip đã khóa không đổi.'
+- cu: Hai cách nghĩ trong một cặp. Prelude nghĩ theo hợp âm, giống BWV 846 nhưng nhanh và gắt hơn; fugue nghĩ theo đường nét. Bạn tập chuyển qua lại giữa hai lối nghe.
+  moi: 'Hai cách nghĩ trong một cặp. Prelude nghĩ theo hợp âm, giống BWV 846: mỗi ô một hợp âm, rải bằng một hình nốt lặp lại; fugue nghĩ theo đường nét. Bạn tập chuyển qua lại giữa hai lối nghe.'
+  ly_do: 'n10 (da-sua): "nhanh và gắt hơn" là so sánh không nguồn; thay bằng điều kiểm được trên bản nhạc (Mutopia bwv847a: mỗi ô một hợp âm rải bằng hình nốt lặp lại).'
+- cu: 'Rồi so sánh vài cách chơi thật khác nhau: Glenn Gould (tách tiếng, nhịp sắc), Sviatoslav Richter, András Schiff, Angela Hewitt, tất cả đều thu âm Bình quân luật; và một bản trên harpsichord, chẳng hạn Gustav Leonhardt. Ghi lại: ai chơi móc kép liền, ai tách; ai dùng nhiều sắc thái; tốc độ fugue chênh nhau bao nhiêu? Nếu chưa nghe cặp đứng trước, nghe thêm Prelude Đô trưởng.'
+  moi: 'Rồi so sánh vài cách chơi thật khác nhau: Glenn Gould, Sviatoslav Richter, András Schiff, Angela Hewitt, tất cả đều thu âm Bình quân luật; và một bản trên harpsichord, chẳng hạn Gustav Leonhardt. Ghi lại: ai chơi móc kép liền, ai tách; ai dùng nhiều sắc thái; tốc độ fugue chênh nhau bao nhiêu? Nếu chưa nghe cặp đứng trước, nghe thêm Prelude Đô trưởng.'
+  ly_do: 'n30: bỏ lời đánh giá "(tách tiếng, nhịp sắc)" sau tên Gould, không có nguồn.'
+- cu:
+  - 'David Ledbetter, Bach''s Well-tempered Clavier: The 48 Preludes and Fugues, Yale University Press, 2002.'
+  - 'Christoph Wolff, Johann Sebastian Bach: The Learned Musician, W. W. Norton, 2000.'
+  moi: 'G. Henle Verlag, HN 14: lời nói đầu của Ernst-Günter Heinemann (1997): trang bìa bản chép năm 1722, cách lên dây bình quân.'
+  ly_do: 'n126–n128: bỏ hai sách in chưa đọc (Ledbetter, Wolff); thêm lời nói đầu Henle HN 14 đã mở và link tệp Mutopia đã dùng để đối chiếu.'
