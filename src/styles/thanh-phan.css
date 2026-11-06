@@ -546,6 +546,39 @@ html.oz-stand-open .main-pane {
 .oz-seg.k-coda { background: #d6d6d6; }
 .oz-seg.k-intro { background: #e3e3e3; }
 .oz-seg.k-x { background: #ececec; color: #444; }
+/* Sơ đồ tách tên tác phẩm thành các phần (nghe-nhac/doc-ten-tac-pham; lớp oz-anatomy của site cũ, D6-L7): mỗi phần một
+   ô màu, chữ thật; nền sáng chữ tối ở cả hai chế độ như các ô của sơ đồ đoạn; phần đủ xác định tác phẩm có viền */
+.oz-anatomy {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem;
+	align-items: stretch;
+}
+.sl-markdown-content .oz-anatomy > *,
+.sl-markdown-content .oz-anatomy span > * {
+	margin-top: 0;
+}
+.oz-anatomy span {
+	display: flex;
+	flex-direction: column;
+	padding: 0.35rem 0.6rem;
+	border-radius: 8px;
+	color: #1b1b1b;
+	line-height: 1.3;
+}
+.oz-anatomy b {
+	font-size: var(--sl-text-sm);
+}
+.oz-anatomy i {
+	font-size: var(--sl-text-xs);
+	font-style: normal;
+}
+.oz-anatomy .p1 { background: #a9c7e8; }
+.oz-anatomy .p2 { background: #f1d9a0; }
+.oz-anatomy .p3 { background: #e9b3a6; }
+.oz-anatomy .p4 { background: #c9b6dd; }
+.oz-anatomy .p5 { background: #b6dcc1; outline: 2px solid #2e7d4f; }
+.oz-anatomy .p6 { background: #e3e3e3; }
 /* Sơ đồ có nhóm (form-sonata): mỗi nhóm một tên phía trên các ô của nó; chật thì cả nhóm xuống dòng */
 .oz-form-nhom {
 	display: flex;
@@ -1722,6 +1755,7 @@ html.oz-stand-open .main-pane {
 		font-style: italic;
 	}
 	.oz-seg,
+	.oz-anatomy span,
 	.oz-ket,
 	.oz-chip {
 		-webkit-print-color-adjust: exact;
