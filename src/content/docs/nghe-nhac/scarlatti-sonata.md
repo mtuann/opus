@@ -17,9 +17,9 @@ tac_pham: scarlatti-sonata
 
 Domenico Scarlatti sinh năm 1685 ở Naples, **cùng năm với Bach và Handel**. Năm 1719 ông tới Lisbon và dạy nhạc cho công chúa Bồ Đào Nha Maria Magdalena Barbara. Khi bà về làm dâu hoàng gia Tây Ban Nha (về sau trở thành hoàng hậu), Scarlatti theo sang, sống ở Seville rồi Madrid đến cuối đời. Ông để lại **555 bản sonata** cho đàn phím; 30 bản đầu tiên được in năm 1738 với cái tên khiêm tốn *Essercizi* ("Bài tập").
 
-Chữ **K.** trước số hiệu là của **Ralph Kirkpatrick**, nghệ sĩ harpsichord đã lập danh mục năm 1953, cố gắng xếp các sonata theo thứ tự thời gian (dựa vào thứ tự trong các tập chép tay ở Venice); đừng nhầm với K. của Köchel trong nhạc Mozart. Các ấn bản cũ dùng số **L.** của Alessandro Longo (ấn bản 1906–1910). Xem [cách đọc tên tác phẩm](/opus/nghe-nhac/doc-ten-tac-pham/).
+Chữ **K.** trước số hiệu là của **Ralph Kirkpatrick**, nghệ sĩ harpsichord đã lập danh mục năm 1953, cố gắng xếp các sonata theo thứ tự thời gian; đừng nhầm với K. của Köchel trong nhạc Mozart. Các ấn bản cũ dùng số **L.** của Alessandro Longo (ấn bản 1906–1910). Xem [cách đọc tên tác phẩm](/opus/nghe-nhac/doc-ten-tac-pham/).
 
-**Mỗi sonata chỉ có một chương, ở hình thức hai đoạn.** Nửa đầu đi từ giọng chính sang một giọng mới; nửa sau đi xa hơn rồi trở về; mỗi nửa có dấu nhắc lại. Chìa khóa để nghe: phần **cuối** nửa đầu xuất hiện lại ở cuối nửa sau, nhưng ở giọng chính, như hai câu thơ **gieo vần** với nhau. Kirkpatrick gọi điểm mà từ đó hai nửa bắt đầu "vần" với nhau là **crux**. Xem thêm [hình thức nhỏ](/opus/nhac-ly/31-hinh-thuc-nho/).
+**Mỗi sonata chỉ có một chương, phần lớn ở hình thức hai đoạn.** Nửa đầu đi từ giọng chính sang một giọng mới; nửa sau đi xa hơn rồi trở về; mỗi nửa có dấu nhắc lại. Chìa khóa để nghe: phần **cuối** nửa đầu xuất hiện lại ở cuối nửa sau, nhưng ở giọng chính, như hai câu thơ **gieo vần** với nhau. Điểm ở nửa sau mà từ đó đoạn "vần" bắt đầu gọi là **crux**. Xem thêm [hình thức nhỏ](/opus/nhac-ly/31-hinh-thuc-nho/).
 
 **Vũ điệu và tiếng guitar.** Nhiều bản bắt chước bước nhảy của vũ điệu; những nốt lặp lại nhanh và hợp âm gõ mạnh gợi tiếng gảy **guitar**. Scarlatti cũng là bậc thầy của kỹ thuật **bắt chéo tay**: một tay vắt qua tay kia để chơi nốt ở xa.
 
@@ -50,12 +50,12 @@ Ghi lại thời điểm (phút:giây) bạn nghe thấy từng sự kiện tron
 | … | **K. 380**: lời gọi kèn ở mở đầu, như hai nhóm kèn đồng đáp nhau, một gần một xa |
 | … | **K. 380**: một môtip mới, trang trọng và kiêu hãnh hơn, có trill; nửa đầu khép lại ở giọng mới |
 | … | **K. 380**: nửa đầu được nhắc lại (nghệ sĩ có trang trí khác đi không?) |
-| … | **K. 380**: nửa sau đi qua các giọng xa, rồi đoạn "vần" trở lại ở Mi trưởng |
+| … | **K. 380**: nửa sau rời giọng chính, rồi đoạn "vần" trở lại ở Mi trưởng |
 | … | **K. 141**: nốt lặp lại dồn dập trên cùng một phím, như tiếng gảy guitar |
 | … | **K. 141**: hai tay bắt chéo, tay trái vắt lên chơi nốt cao |
-| … | **K. 141**: nửa sau kết ở Rê thứ, mạnh mẽ |
+| … | **K. 141**: nửa sau trở về giọng chính để kết |
 | … | **K. 466**: giai điệu chậm, buồn ở Fa thứ, hát như một aria |
-| … | **K. 466**: nửa sau trở về Fa thứ và khép lại lặng lẽ |
+| … | **K. 466**: nửa sau trở về giọng chính để khép lại |
 
 ## Câu hỏi để nghe chủ động
 

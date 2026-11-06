@@ -25,7 +25,7 @@ Cái tên "Goldberg" đến từ một **giai thoại**. Năm 1802, nhà viết 
 
 **Nghe bằng tai người chơi piano.** Bach viết cho harpsichord hai bàn phím, nên ở nhiều biến tấu (như 14, 20, 23, 26, 28) mỗi tay chạy trên một bàn phím riêng và có thể chồng lên nhau thoải mái. Trên piano chỉ có một bàn phím: hai tay phải **đan vào nhau**, nhường chỗ cho nhau từng nốt. Nghệ sĩ piano cũng phải tự làm rõ từng bè bằng **cách nhấn phím** và cân bằng âm lượng, vì gần như không dùng [bàn đạp](/opus/piano/ban-dap/) để "che" các đường nét.
 
-Một chi tiết thú vị: năm 1974, người ta tìm thấy ở Strasbourg bản in riêng của Bach, trong đó ông viết thêm **14 canon** trên tám nốt trầm đầu tiên của Aria (BWV 1087). Tám nốt ấy đây:
+Một chi tiết thú vị: khoảng năm 1974–1975, người ta tìm thấy ở Strasbourg bản in riêng của Bach, trong đó ông viết thêm **14 canon** trên tám nốt trầm đầu tiên của Aria (BWV 1087). Tám nốt ấy đây:
 
 ```abc
 X:1

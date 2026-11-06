@@ -55,7 +55,7 @@ Mẹo: số **K.** càng lớn thì tác phẩm Mozart càng muộn. K. 1 là t�
 
 ## Những cái bẫy thường gặp
 
-**Biệt danh không phải của tác giả.** Tên *"Ánh trăng"* của Sonata piano Op. 27 số 2 có lẽ bắt nguồn từ hình ảnh mặt hồ dưới trăng mà nhà phê bình Ludwig Rellstab dùng để tả chương 1, trong một truyện ngắn năm 1824; bản in đầu tiên (1802) chỉ ghi *Sonata quasi una fantasia*. *"Định mệnh"* của Giao hưởng số 5 cũng không phải tên Beethoven đặt. Biệt danh giúp dễ nhớ, nhưng đừng coi đó là ý đồ của nhà soạn nhạc.
+**Biệt danh không phải của tác giả.** Tên *"Ánh trăng"* của Sonata piano Op. 27 số 2 có lẽ bắt nguồn từ hình ảnh mặt hồ dưới trăng mà nhà phê bình Ludwig Rellstab dùng để tả chương 1, trong truyện ngắn *Theodor* đăng năm 1824; bản in đầu tiên (1802) chỉ ghi *Sonata quasi una fantasia*. *"Định mệnh"* của Giao hưởng số 5 cũng không phải tên Beethoven đặt. Biệt danh giúp dễ nhớ, nhưng đừng coi đó là ý đồ của nhà soạn nhạc.
 
 **Số thứ tự đã thay đổi.** Giao hưởng *Từ Thế giới mới* của Dvořák ngày nay là số 9, nhưng trong các ấn bản cũ từng được đánh số 5. Giao hưởng *"Lớn"* cung Đô trưởng của Schubert có lúc được gọi là số 7, số 8 hoặc số 9. Khi thấy số lạ, hãy tra số hiệu danh mục.
 

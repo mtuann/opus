@@ -21,7 +21,7 @@ Mozart viết concerto trước hết để **tự mình biểu diễn** trong c
 
 Ba chương theo khuôn mẫu **nhanh – chậm – nhanh** của [concerto Cổ điển](/opus/hinh-thuc/concerto/):
 
-- **Chương 1, *Allegro maestoso*** (bản thảo không ghi chỉ dẫn tốc độ; chữ *Allegro maestoso* lấy từ danh mục tác phẩm do Mozart tự ghi). Dàn nhạc trình bày trước; sau đó piano mới vào, với phần trình bày của riêng mình, kể cả một chủ đề mới ở **Sol thứ** khiến nhiều người nghĩ tới [Giao hưởng số 40](/opus/nghe-nhac/mozart-40/).
+- **Chương 1, *Allegro maestoso*** (bản thảo không ghi chỉ dẫn tốc độ; chữ *Allegro maestoso* lấy từ danh mục tác phẩm do Mozart tự ghi). Dàn nhạc trình bày trước; sau đó piano mới vào, với phần trình bày của riêng mình, kể cả một chủ đề mới ở **Sol thứ**. Theo PTNA, một môtip trong phần piano của chương này về sau xuất hiện lại trong [Giao hưởng số 40](/opus/nghe-nhac/mozart-40/).
 - **Chương 2, *Andante*** (Fa trưởng): trọng tâm của trang này.
 - **Chương 3, *Allegro vivace assai***: một rondo nhanh, tinh nghịch.
 
@@ -29,7 +29,7 @@ Ba chương theo khuôn mẫu **nhanh – chậm – nhanh** của [concerto C�
 
 **Cadenza và những chỗ "để trống".** Thời Mozart, gần cuối một chương nhanh, dàn nhạc dừng trên một hợp âm có dấu ngân (*fermata*); nghệ sĩ độc tấu chơi một mình rồi kết bằng một **láy rền** dài, làm hiệu cho dàn nhạc vào lại. Ở vài dấu ngân khác, người chơi còn ứng tác một đoạn nối ngắn gọi là ***Eingang*** ("lối vào"). Mozart thường tự ứng tác cadenza khi chơi; ông viết ra giấy nhiều cadenza cho chị gái và học trò, nhưng **không có cadenza nào của ông cho K. 467 còn lại**. Mỗi nghệ sĩ vì thế phải tự chọn: chơi cadenza của người đời sau, tự viết, hoặc ứng tác ngay trên sân khấu như nghệ sĩ kiêm học giả Robert Levin.
 
-**Nghe bằng tai người chơi piano.** Trong *Andante*, piano không có gì để khoe: chỉ một giai điệu dài trên nền chùm ba. Cái khó là giữ cho từng nốt dài vẫn **hát** khi tiếng đàn tắt dần, và trang trí mà không làm lệch nhịp đi đều đặn bên dưới. Ở Vienna, Mozart chơi fortepiano kiểu của Anton Walter, âm vực hơn năm quãng tám một chút, từ FF đến g''' (xem [lịch sử cây đàn piano](/opus/piano/lich-su-dan/)); trên đàn hiện đại, người chơi phải tiết chế [bàn đạp](/opus/piano/ban-dap/) và [cách nhấn phím](/opus/piano/tieng-dan/) để hòa vào tiếng dây gắn sordino.
+**Nghe bằng tai người chơi piano.** Trong *Andante*, piano không có gì để khoe: chỉ một giai điệu dài trên nền chùm ba. Cái khó là giữ cho từng nốt dài vẫn **hát** khi tiếng đàn tắt dần, và trang trí mà không làm lệch nhịp đi đều đặn bên dưới. Ở Vienna, Mozart chơi một cây fortepiano của Anton Walter trong các buổi hòa nhạc; đàn kiểu Walter có âm vực hơn năm quãng tám một chút, từ FF đến g''' (xem [lịch sử cây đàn piano](/opus/piano/lich-su-dan/)); trên đàn hiện đại, người chơi phải tiết chế [bàn đạp](/opus/piano/ban-dap/) và [cách nhấn phím](/opus/piano/tieng-dan/) để hòa vào tiếng dây gắn sordino.
 
 ## Sơ đồ cấu trúc
 

@@ -10,7 +10,7 @@ lan:
     nguoi:
       luot_1: Claude Opus 5.5 (D6-L7 phần B)
       luot_2: null
-      review: null
+      review: Claude Opus 5.5 (review D6-L7-gom)
       kiem_mau: null
 ghi_chu: 'Trang không có bản ghi (không tac_pham). Không có khối abc; có một khối quiz (5 câu) và hình oz-anatomy (chữ trong hình là nhận định n4). Nguồn chính: danh sách danh mục của Music Library Association (MLA, Thematic Indexes Used in LC/NACO), Köchel online, IMSLP (wikitext qua API), COD qua Encyclopedia.com, Henle (lời tựa HN 1062, 9813), Bärenreiter (TP 40), Breitkopf (BWV), CiNii (Deutsch 1951), LoC (Baselt), Lưu trữ Bartók Budapest, MusicBrainz, BBC Music Magazine, Eastman, Early Music America. Sửa: n8, n24, n37, n40, n42, n45, n46, n55. Câu trang khác dẫn tới giữ đúng: tiêu đề "Đọc tên tác phẩm và bản thu"; tiêu đề "## Các danh mục riêng" (id cac-danh-muc-rieng không đổi); dòng BWV (Schmieder 1950); đoạn "Chữ Anh. (Anhang, phụ lục) trong BWV…"; dòng "K. hoặc KV | Mozart | Ludwig von Köchel (1862)"; phần số danh mục khi không có opus; đoạn HIP (nhạc cụ thời đó, harpsichord thay piano, "thường A = 415 Hz cho nhạc Baroque", link /opus/nhac-ly/am-hoc/) chỉ đổi mốc năm và câu tả âm thanh; cách đọc thông tin bản thu. Thuật ngữ chưa có trong thuat-ngu.yml: HIP (biểu diễn theo phong cách lịch sử), danh mục tác phẩm (thematic catalogue), Op. posth., WoO, remaster. Đã có: opus.'
 nguon:
@@ -142,12 +142,17 @@ nguon:
     bac: 2
     ten: 'Informationsmittel für Bibliotheken (IfB), bài điểm sách BWV³ (2022): BWV 1 (Schmieder, Leipzig, Breitkopf & Härtel, 1950); trích lời tựa Schmieder: chia tác phẩm "echt" (phần chính) và "zweifelhaft" (Anhang II)'
     link: https://www.informationsmittel-fuer-bibliotheken.de/showfile.php?id=11543
+  - id: crumey
+    bac: 2
+    ten: 'Andrew Crumey, "Why Moonlight Sonata?": truyện Theodor: eine musikalische Skizze của Rellstab "serialised in the magazine [Berliner allgemeine musikalische Zeitung] in the summer of 1824" (nguồn của hướng dẫn nghe beethoven-moonlight, đã khóa)'
+    link: https://crumey.co.uk/beethoven_5_why_moonlight_sonata.html
 nhan_dinh:
   - id: n1
     cau: Trang này giải thích các phần của tên một tác phẩm và của thông tin bản thu, để tìm đúng tác phẩm và chọn bản thu.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm trên trang: các mục "Một cái tên đầy đủ gồm những gì?", "Opus là gì?", "Các danh mục riêng", "Đọc thông tin một bản thu", "Tìm bản thu tốt ở đâu?".'
+    ghi_chu: 'Kiểm trên trang: các mục "Một cái tên đầy đủ gồm những gì?", "Opus là gì?", "Các danh mục riêng", "Đọc thông tin một bản thu", "Tìm bản thu tốt ở đâu?". Review D6-L7-gom: kiểm trên trang và dữ liệu: tiêu đề (dòng 6) và năm mục ##.'
+    review: dung
   - id: n2
     cau: 'Ví dụ: Beethoven, Giao hưởng số 5 cung Đô thứ, Op. 67 ("Định mệnh").'
     loai: danh-muc
@@ -183,7 +188,8 @@ nhan_dinh:
     cau: Link Hình thức & thể loại và bài 8 (hóa biểu, giọng).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: src/content/docs/hinh-thuc/index.md và nhac-ly/08-hoa-bieu.md có.
+    ghi_chu: 'src/content/docs/hinh-thuc/index.md và nhac-ly/08-hoa-bieu.md có. Review D6-L7-gom: kiểm trên trang và dữ liệu: trang đích hinh-thuc/index, nhac-ly/08-hoa-bieu có (dòng 20, 22).'
+    review: dung
   - id: n6
     cau: "Bảng: biệt danh thường không phải do nhà soạn nhạc đặt."
     loai: lich-su
@@ -211,10 +217,11 @@ nhan_dinh:
     nguon:
       - cod-opus
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Số opus thường theo thứ tự xuất bản, không hẳn theo thứ tự sáng tác." Lý do: COD: "This numbering gives a rough idea of the order in which works were comp., but can be misleading … Dvořák allowed early works to be given late opus nos. by his publisher"; "thường theo thứ tự xuất bản" không có ở nguồn đã mở.'
+    ghi_chu: 'Chữ cũ: "Số opus thường theo thứ tự xuất bản, không hẳn theo thứ tự sáng tác." Lý do: COD: "This numbering gives a rough idea of the order in which works were comp., but can be misleading … Dvořák allowed early works to be given late opus nos. by his publisher"; "thường theo thứ tự xuất bản" không có ở nguồn đã mở. Review D6-L7-gom: đọc lại chữ trang, khớp câu (không còn chữ cũ đã bỏ); lượt 2 xác nhận chữ đã sửa.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/List_of_works_by_Ludwig_van_Beethoven" ]
     luot_2_ghi_chu: "IMSLP (danh sách Beethoven): giải thích vì sao Octet viết năm 1792 lại mang Op.103 trong khi Op.102, Op.104 viết năm 1815, 1817: số opus lớn ứng với tác phẩm in sau khi mất."
+    review: dung
   - id: n9
     cau: "Một opus có thể gồm nhiều tác phẩm nhỏ: Chopin Nocturne Op. 9 số 2 là bản thứ hai trong tập Op. 9."
     loai: danh-muc
@@ -384,25 +391,28 @@ nhan_dinh:
     luot_2_nguon: [ "https://imslp.org/wiki/List_of_works_by_Wolfgang_Amadeus_Mozart", "https://imslp.org/wiki/Requiem_in_D_minor,_K.626_(Mozart,_Wolfgang_Amadeus)", "https://imslp.org/wiki/Andante_in_C_major,_K.1a_(Mozart,_Wolfgang_Amadeus)" ]
     luot_2_ghi_chu: "IMSLP: K.1a Andante viết năm 1761 (Mozart 5 tuổi); K.626 Requiem 1791, 'unfinished at the time of his death'; danh sách Köchel xếp gần theo năm."
   - id: n24
-    cau: Tên "Ánh trăng" của Sonata piano Op. 27 số 2 có lẽ bắt nguồn từ hình ảnh mặt hồ dưới trăng mà nhà phê bình Ludwig Rellstab dùng để tả chương 1, trong một truyện ngắn năm 1824; bản in đầu tiên (1802) chỉ ghi Sonata quasi una fantasia.
+    cau: Tên "Ánh trăng" của Sonata piano Op. 27 số 2 có lẽ bắt nguồn từ hình ảnh mặt hồ dưới trăng mà nhà phê bình Ludwig Rellstab dùng để tả chương 1, trong truyện ngắn Theodor đăng năm 1824; bản in đầu tiên (1802) chỉ ghi Sonata quasi una fantasia.
     loai: lich-su
     nguon:
       - henle-1062
+      - crumey
     ket_qua: da-sua
-    ghi_chu: "Chữ cũ: \"Tên \\\"Ánh trăng\\\" … bắt nguồn từ hình ảnh mà nhà phê bình Ludwig Rellstab dùng để tả chương 1; cái tên chỉ trở nên phổ biến sau khi Beethoven mất.\" Lý do: Henle: \"may have its origin in Ludwig Rellstab's … Theodor … of 1823\" (in 1824, khi Beethoven còn sống), \"soon became established, for example in … 1840\"; vế \"chỉ trở nên phổ biến sau khi Beethoven mất\" bị review D7-gom bỏ ở trang cap-nhat (Henle: biệt danh có từ khi Beethoven còn sống). Bản in Cappi 1802: \"SONATA quasi una FANTASIA\". Khớp trang beethoven-anh-trang, nghe-nhac/beethoven-moonlight."
+    ghi_chu: "Chữ cũ: \"Tên \\\"Ánh trăng\\\" … bắt nguồn từ hình ảnh mà nhà phê bình Ludwig Rellstab dùng để tả chương 1; cái tên chỉ trở nên phổ biến sau khi Beethoven mất.\" Lý do: Henle: \"may have its origin in Ludwig Rellstab's … Theodor … of 1823\" (in 1824, khi Beethoven còn sống), \"soon became established, for example in … 1840\"; vế \"chỉ trở nên phổ biến sau khi Beethoven mất\" bị review D7-gom bỏ ở trang cap-nhat (Henle: biệt danh có từ khi Beethoven còn sống). Bản in Cappi 1802: \"SONATA quasi una FANTASIA\". Khớp trang beethoven-anh-trang, nghe-nhac/beethoven-moonlight. Review D6-L7-gom: lượt 2 khong-chac về năm 1824 (Henle ghi năm viết 1823). Làm như review D6-L5-gom ở beethoven-pathetique n19: truyện Theodor đăng năm 1824 (Crumey, review mở lại), Henle 1823 là năm viết; ghi tên truyện và \"đăng năm 1824\", khớp nghe-nhac/beethoven-moonlight (đã khóa). Không chạy lại. Chữ câu cũ: \"Tên \"Ánh trăng\" của Sonata piano Op. 27 số 2 có lẽ bắt nguồn từ hình ảnh mặt hồ dưới trăng mà nhà phê bình Ludwig Rellstab dùng để tả chương 1, trong một truyện ngắn năm 1824; bản in đầu tiên (1802) chỉ ghi Sonata quasi una fantasia.\". doi_chu."
     luot_2: khong-chac
     luot_2_nguon: [ "https://blog.henle.de/en/2017/09/18/4584/", "https://imslp.org/wiki/Piano_Sonata_No.14,_Op.27_No.2_(Beethoven,_Ludwig_van)" ]
     luot_2_ghi_chu: "Henle (blog, N. Gertsch): tên có thể bắt nguồn từ truyện 'Theodor – eine musikalische Skizze' của Rellstab, 'written in 1823', có hình ảnh mặt hồ dưới trăng; Beethoven gọi là 'Sonata quasi una fantasia'; IMSLP: in đầu năm 1802. Năm 1824 trong câu chưa xác nhận được (Henle ghi năm viết 1823)."
+    review: dung
   - id: n25
     cau: '"Định mệnh" của Giao hưởng số 5 không phải tên Beethoven đặt.'
     loai: lich-su
     nguon:
       - henle-9813
     ket_qua: dung
-    ghi_chu: 'Henle: "The often-cited image, probably contrived by Schindler, was responsible for the very unfortunate sobriquet Fate Symphony".'
+    ghi_chu: 'Henle: "The often-cited image, probably contrived by Schindler, was responsible for the very unfortunate sobriquet Fate Symphony". Review D6-L7-gom: lượt 2 không mở được nguồn nói ai đặt tên. Review mở lời tựa Henle HN 9813 (PDF, nguồn henle-9813): "nothing in the sources is indicative of fate … The often-cited image, probably contrived by Schindler, was responsible for the very unfortunate sobriquet Fate Symphony". Giữ.'
     luot_2: khong-chac
     luot_2_nguon: [ "https://imslp.org/wiki/Symphony_No.5,_Op.67_(Beethoven,_Ludwig_van)" ]
     luot_2_ghi_chu: IMSLP chỉ ghi 'Fate Symphony' là tên khác, không nói ai đặt. Không mở được nguồn bậc 2 (Beethoven-Haus, Grove) nói rõ nguồn gốc tên.
+    review: dung
   - id: n26
     cau: Biệt danh giúp dễ nhớ, nhưng đừng coi đó là ý đồ của nhà soạn nhạc.
     loai: khuyen-tap
@@ -509,19 +519,21 @@ nhan_dinh:
     nguon:
       - mb-labels
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Một số hãng nổi tiếng: …". Chữ mới: "Một số hãng đĩa nhạc cổ điển: …". Bỏ "nổi tiếng" (đánh giá). MusicBrainz có cả tám hãng (BIS "Swedish classical music label", Hyperion "UK classical").'
+    ghi_chu: 'Chữ cũ: "Một số hãng nổi tiếng: …". Chữ mới: "Một số hãng đĩa nhạc cổ điển: …". Bỏ "nổi tiếng" (đánh giá). MusicBrainz có cả tám hãng (BIS "Swedish classical music label", Hyperion "UK classical"). Review D6-L7-gom: đọc lại chữ trang, khớp câu (không còn chữ cũ đã bỏ); lượt 2 xác nhận chữ đã sửa.'
     luot_2: dung
     luot_2_nguon: [ "https://musicbrainz.org/label/5a584032-dcef-41bb-9f8b-19540116fb1c", "https://musicbrainz.org/label/f18f3b31-8263-4de3-966a-fda317492d3d", "https://musicbrainz.org/label/6eadf0d6-336c-4f25-a1eb-ab0cd98f6906", "https://musicbrainz.org/label/49809122-8421-40b9-acff-d7400b45c747", "https://musicbrainz.org/label/08e6c3c8-81ab-405f-9cff-10f6b8db064c", "https://musicbrainz.org/label/447147a3-c947-4422-9993-db1254234110", "https://musicbrainz.org/label/62004639-b095-4aaa-aab7-ae22ec9fad01", "https://musicbrainz.org/release/52da71c6-e5d6-4ac4-b2e5-0e8f03cbefa1" ]
     luot_2_ghi_chu: "MusicBrainz có các hãng: Deutsche Grammophon, Decca, Warner Classics, harmonia mundi, Hyperion ('UK classical'), BIS ('Swedish classical music label'), ECM New Series; Sony Classical (bản Perahia)."
+    review: dung
   - id: n38
     cau: Bản thu trước khoảng 1955 thường là mono.
     loai: lich-su
     nguon:
       - hifiplus-lp
     ket_qua: dung
-    ghi_chu: 'Hi-Fi+: các LP đầu tiên là mono; đĩa hai kênh một rãnh đầu tiên tháng 11/1957. Thu stereo trên băng có từ trước (Hi-Fi+), nên "thường" và "khoảng 1955" là hợp.'
+    ghi_chu: 'Hi-Fi+: các LP đầu tiên là mono; đĩa hai kênh một rãnh đầu tiên tháng 11/1957. Thu stereo trên băng có từ trước (Hi-Fi+), nên "thường" và "khoảng 1955" là hợp. Review D6-L7-gom: lượt 2 không tìm được nguồn. Review mở lại Hi-Fi+ (hifiplus-lp): "the first vinyl LPs contained mono recordings"; đĩa thương mại hai kênh một rãnh đầu tiên tháng 11/1957, đầu đọc stereo 1958; thu stereo trên băng có trước. "Thường là mono" trước khoảng 1955 khớp. Giữ.'
     luot_2: khong-chac
     luot_2_ghi_chu: Không mở được nguồn bậc 2 (Grove, Britannica, thư viện quốc gia) về mốc chuyển sang stereo; công cụ tìm kiếm chỉ ra diễn đàn, blog. Mốc khoảng 1955 hợp lý nhưng chưa kiểm.
+    review: dung
   - id: n39
     cau: Bản cũ có thể nghe rè nhưng có giá trị lịch sử; bản live có không khí và đôi khi tiếng khán giả; remaster là bản thu cũ được xử lý lại âm thanh.
     loai: dinh-nghia
@@ -539,10 +551,11 @@ nhan_dinh:
       - bbcmm-hip
       - ema-brass
     ket_qua: da-sua
-    ghi_chu: "Chữ cũ: \"Từ khoảng những năm 1960–1970\". Chữ mới: \"Từ khoảng những năm 1970\". Lý do: BBC Music Magazine: \"back in the 1970s and '80s the authenticity brigade\"; \"old woodwinds, valveless brass instruments and gut fiddles\". (Concentus Musicus của Harnoncourt có từ 1953; mốc \"khoảng 1970\" là lúc phong trào lan rộng.)"
+    ghi_chu: "Chữ cũ: \"Từ khoảng những năm 1960–1970\". Chữ mới: \"Từ khoảng những năm 1970\". Lý do: BBC Music Magazine: \"back in the 1970s and '80s the authenticity brigade\"; \"old woodwinds, valveless brass instruments and gut fiddles\". (Concentus Musicus của Harnoncourt có từ 1953; mốc \"khoảng 1970\" là lúc phong trào lan rộng.) Review D6-L7-gom: lượt 2 chỉ xác nhận English Baroque Soloists (1978). Review mở lại BBC Music Magazine (bbcmm-hip): \"back in the 1970s and '80s the authenticity brigade\"; \"Instruments had to be exactly matched to the period of the music being performed … old woodwinds, valveless brass instruments and gut fiddles\"; harpsichord thay piano là một trường hợp của \"nhạc cụ đúng thời\". Giữ."
     luot_2: khong-chac
     luot_2_nguon: [ "https://monteverdi.co.uk/about-us/english-baroque-soloists" ]
     luot_2_ghi_chu: Chỉ xác nhận được English Baroque Soloists (period instrument ensemble) lập năm 1978; chưa mở được nguồn bậc 2 về mốc 'từ khoảng những năm 1970' của cả phong trào và các chi tiết dây ruột, kèn không van.
+    review: dung
   - id: n41
     cau: HIP lên dây thấp hơn, thường A = 415 Hz cho nhạc Baroque.
     loai: so-lieu
@@ -550,23 +563,26 @@ nhan_dinh:
       - esm415
       - ema-brass
     ket_qua: dung
-    ghi_chu: "Eastman: \"period instruments, at low pitch (A=415)\"; EMA: \"a baroque orchestra tuned to a' = 415hz\". Câu này trang khác (nhac-ly/am-hoc) dẫn tới, giữ."
+    ghi_chu: "Eastman: \"period instruments, at low pitch (A=415)\"; EMA: \"a baroque orchestra tuned to a' = 415hz\". Câu này trang khác (nhac-ly/am-hoc) dẫn tới, giữ. Review D6-L7-gom: lượt 2 không mở được nguồn. Review mở lại Eastman (esm415): \"played on period instruments, at low pitch (A=415)\"; Early Music America (ema-brass): \"a baroque orchestra tuned to a' = 415hz\". Giữ."
     luot_2: khong-chac
     luot_2_ghi_chu: Chưa mở được nguồn bậc 2 về cao độ A = 415 Hz (Grove, sách về biểu diễn lịch sử bị chặn hay không tìm thấy).
+    review: dung
   - id: n42
     cau: Âm sắc khác hẳn, cách chọn tốc độ cũng khác, và ít rung (vibrato) hơn.
     loai: lich-su
     nguon:
       - bbcmm-hip
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Âm thanh thường nhẹ hơn, trong hơn, tốc độ nhanh hơn, ít rung (vibrato) hơn." Lý do: BBC Music Magazine: "Vibrato was out of the question"; "a startlingly different attitude to speeds, embellishments and even pitch as well as timbre"; "nhẹ hơn, trong hơn, nhanh hơn" không có ở nguồn đã mở.'
+    ghi_chu: 'Chữ cũ: "Âm thanh thường nhẹ hơn, trong hơn, tốc độ nhanh hơn, ít rung (vibrato) hơn." Lý do: BBC Music Magazine: "Vibrato was out of the question"; "a startlingly different attitude to speeds, embellishments and even pitch as well as timbre"; "nhẹ hơn, trong hơn, nhanh hơn" không có ở nguồn đã mở. Review D6-L7-gom: lượt 2 không mở được nguồn. Review mở lại BBC Music Magazine: "Vibrato was out of the question for string players and singers"; "a startlingly different attitude to speeds, embellishments and even pitch as well as timbre". Giữ.'
     luot_2: khong-chac
     luot_2_ghi_chu: Chưa mở được nguồn bậc 2 về vibrato và tốc độ trong biểu diễn lịch sử.
+    review: dung
   - id: n43
     cau: Link Âm học.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: src/content/docs/nhac-ly/am-hoc.md có, mục chuẩn cao độ nói 415 Hz và link ngược về trang này.
+    ghi_chu: 'src/content/docs/nhac-ly/am-hoc.md có, mục chuẩn cao độ nói 415 Hz và link ngược về trang này. Review D6-L7-gom: kiểm trên trang và dữ liệu: nhac-ly/am-hoc có, nói 415 Hz và link ngược về trang này (dòng 115).'
+    review: dung
   - id: n44
     cau: Không bên nào "đúng" hơn; hãy nghe cùng một tác phẩm Bach hoặc Vivaldi ở cả hai cách và tự chọn.
     loai: khuyen-tap
@@ -581,34 +597,38 @@ nhan_dinh:
       - bbcmm-hip
       - mco-ebs
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Nikolaus Harnoncourt, John Eliot Gardiner, Trevor Pinnock, William Christie, Jordi Savall, Il Giardino Armonico." Lý do: chỉ giữ tên có ở nguồn đã mở: BBC Music Magazine (Harnoncourt, Hogwood, Norrington); MCO (English Baroque Soloists của Gardiner là "period instrument ensemble"). Pinnock, Christie, Savall, Il Giardino Armonico chưa mở nguồn bậc 2: bỏ (lượt 2 có thể thêm lại nếu tìm được).'
+    ghi_chu: 'Chữ cũ: "Nikolaus Harnoncourt, John Eliot Gardiner, Trevor Pinnock, William Christie, Jordi Savall, Il Giardino Armonico." Lý do: chỉ giữ tên có ở nguồn đã mở: BBC Music Magazine (Harnoncourt, Hogwood, Norrington); MCO (English Baroque Soloists của Gardiner là "period instrument ensemble"). Pinnock, Christie, Savall, Il Giardino Armonico chưa mở nguồn bậc 2: bỏ (lượt 2 có thể thêm lại nếu tìm được). Review D6-L7-gom: lượt 2 xác nhận Gardiner và English Baroque Soloists; review mở lại BBC Music Magazine: "led by the likes of Nikolaus Harnoncourt, Christopher Hogwood and Norrington". Giữ.'
     luot_2: khong-chac
     luot_2_nguon: [ "https://monteverdi.co.uk/about-us/english-baroque-soloists" ]
     luot_2_ghi_chu: "Xác nhận: John Eliot Gardiner lập English Baroque Soloists năm 1978, nhóm nhạc cụ cổ. Chưa mở nguồn cho Harnoncourt, Hogwood, Norrington (tên quen thuộc của biểu diễn lịch sử, nhưng chưa kiểm ở nguồn)."
+    review: dung
   - id: n46
     cau: "Building a Library trong chương trình Record Review của BBC Radio 3 (có dạng podcast): mỗi kỳ một chuyên gia so sánh nhiều bản thu của một tác phẩm và chọn bản nên có."
     loai: ten
     nguon:
       - apple-rr
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "mỗi tuần … chọn bản nên có. Đây là nguồn tham khảo tốt nhất cho người mới." Bỏ câu đánh giá; "mỗi tuần" thành "mỗi kỳ" (podcast ghi "Biweekly", mô tả ghi "Each week"). Apple Podcasts: Record Review Podcast, BBC Radio 3, "Building a Library … ending with a recommendation for your library". Link podcast đúng chương trình.'
+    ghi_chu: 'Chữ cũ: "mỗi tuần … chọn bản nên có. Đây là nguồn tham khảo tốt nhất cho người mới." Bỏ câu đánh giá; "mỗi tuần" thành "mỗi kỳ" (podcast ghi "Biweekly", mô tả ghi "Each week"). Apple Podcasts: Record Review Podcast, BBC Radio 3, "Building a Library … ending with a recommendation for your library". Link podcast đúng chương trình. Review D6-L7-gom: đọc lại chữ trang, khớp câu (không còn chữ cũ đã bỏ); lượt 2 xác nhận chữ đã sửa.'
     luot_2: dung
     luot_2_nguon: [ "https://www.bbc.co.uk/programmes/m0033f6l", "https://www.bbc.co.uk/programmes/m0032t1x" ]
     luot_2_ghi_chu: "BBC Radio 3 Record Review (trang có mục Podcast): 'Building a Library: Conductor Jeremy Summerly joins Andrew to survey recordings of Handel's Semele and make a top recommendation.'"
+    review: dung
   - id: n47
     cau: "Gramophone: tạp chí và giải thưởng Gramophone Awards hằng năm."
     loai: ten
     nguon:
       - gramophone-awards
     ket_qua: dung
-    ghi_chu: Gramophone Classical Music Awards 2024 (bản lưu Wayback).
+    ghi_chu: 'Gramophone Classical Music Awards 2024 (bản lưu Wayback). Review D6-L7-gom: gramophone.co.uk trả 403 với User-Agent của dự án (cả với review). Review mở bản lưu Wayback (web.archive.org/web/2025/…/gramophone-classical-music-awards-2024): "the winners of the 2024 Gramophone Classical Music Awards", tạp chí "Est 1923". Giữ.'
     luot_2: khong-chac
     luot_2_ghi_chu: gramophone.co.uk trả 403 với User-Agent của dự án; chưa mở được nguồn khác.
+    review: dung
   - id: n48
     cau: Nhiều trang hướng dẫn nghe của site có gợi ý bản thu hoặc phần so sánh bản thu, và nhiều trang có sẵn một bản thu mở trong công cụ nghe.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/content/docs/nghe-nhac/*.md: các hướng dẫn nghe có mục "So sánh bản thu" và ::khoi-nghe; ban_thu trong src/data/tac-pham.yml (ví dụ chopin-etude, mozart-concerto-21, schumann-kinderszenen).'
+    ghi_chu: 'src/content/docs/nghe-nhac/*.md: các hướng dẫn nghe có mục "So sánh bản thu" và ::khoi-nghe; ban_thu trong src/data/tac-pham.yml (ví dụ chopin-etude, mozart-concerto-21, schumann-kinderszenen). Review D6-L7-gom: kiểm trên trang và dữ liệu: 10 hướng dẫn nghe có ::khoi-nghe; 9 trang có mục So sánh bản thu (beethoven-moonlight không có), nên "nhiều trang" đúng; trang dòng 92.'
+    review: dung
   - id: n49
     cau: "Thử nhiều bản: nghe 1–2 phút đầu của 3–4 bản thu, chọn bản làm bạn muốn nghe tiếp; đó cũng là bài luyện tai."
     loai: khuyen-tap
@@ -671,10 +691,11 @@ nhan_dinh:
     nguon:
       - henle-1062
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "…; cái tên chỉ phổ biến sau khi Beethoven mất." Như n24. Lời giải thích không dựa vào vị trí lựa chọn.'
+    ghi_chu: 'Chữ cũ: "…; cái tên chỉ phổ biến sau khi Beethoven mất." Như n24. Lời giải thích không dựa vào vị trí lựa chọn. Review D6-L7-gom: đọc lại chữ trang, khớp câu (không còn chữ cũ đã bỏ); lượt 2 xác nhận chữ đã sửa.'
     luot_2: dung
     luot_2_nguon: [ "https://blog.henle.de/en/2017/09/18/4584/", "https://imslp.org/wiki/Piano_Sonata_No.14,_Op.27_No.2_(Beethoven,_Ludwig_van)" ]
     luot_2_ghi_chu: "Henle blog: Rellstab tả Adagio bằng hình ảnh hồ dưới ánh trăng; Beethoven gọi là 'Sonata quasi una fantasia'. IMSLP: in 1802, tên 'Sonata quasi una fantasia'."
+    review: dung
   - id: n56
     cau: 'Câu hỏi 4: "Op. posth." nghĩa là xuất bản sau khi nhà soạn nhạc mất; lựa chọn sai "tác phẩm cuối cùng", "tác phẩm không hoàn thành"; giải thích: posthumous, di cảo.'
     loai: dinh-nghia
@@ -701,8 +722,8 @@ doi_chu:
     moi: "Số opus chỉ cho biết gần đúng thứ tự sáng tác, và có khi sai lệch: nhà xuất bản có thể gán số opus muộn cho một tác phẩm viết từ sớm."
     ly_do: "n8: COD opus."
   - cu: Biệt danh không phải của tác giả. Tên "Ánh trăng" của Sonata piano Op. 27 số 2 bắt nguồn từ hình ảnh mà nhà phê bình Ludwig Rellstab dùng để tả chương 1; cái tên chỉ trở nên phổ biến sau khi Beethoven mất. "Định mệnh" của Giao hưởng số 5 cũng không phải tên Beethoven đặt. Biệt danh giúp dễ nhớ, nhưng đừng coi đó là ý đồ của nhà soạn nhạc.
-    moi: Biệt danh không phải của tác giả. Tên "Ánh trăng" của Sonata piano Op. 27 số 2 có lẽ bắt nguồn từ hình ảnh mặt hồ dưới trăng mà nhà phê bình Ludwig Rellstab dùng để tả chương 1, trong một truyện ngắn năm 1824; bản in đầu tiên (1802) chỉ ghi Sonata quasi una fantasia. "Định mệnh" của Giao hưởng số 5 cũng không phải tên Beethoven đặt. Biệt danh giúp dễ nhớ, nhưng đừng coi đó là ý đồ của nhà soạn nhạc.
-    ly_do: "n24: Henle HN 1062."
+    moi: Biệt danh không phải của tác giả. Tên "Ánh trăng" của Sonata piano Op. 27 số 2 có lẽ bắt nguồn từ hình ảnh mặt hồ dưới trăng mà nhà phê bình Ludwig Rellstab dùng để tả chương 1, trong truyện ngắn Theodor đăng năm 1824; bản in đầu tiên (1802) chỉ ghi Sonata quasi una fantasia. "Định mệnh" của Giao hưởng số 5 cũng không phải tên Beethoven đặt. Biệt danh giúp dễ nhớ, nhưng đừng coi đó là ý đồ của nhà soạn nhạc.
+    ly_do: "n24: Henle HN 1062; tên truyện và năm đăng theo Crumey (review D6-L7-gom, như beethoven-moonlight)."
   - cu: "Một số hãng nổi tiếng: Deutsche Grammophon, Decca, Sony Classical, Warner Classics, Harmonia Mundi, Hyperion, BIS, ECM New Series"
     moi: "Một số hãng đĩa nhạc cổ điển: Deutsche Grammophon, Decca, Sony Classical, Warner Classics, Harmonia Mundi, Hyperion, BIS, ECM New Series"
     ly_do: "n37: bỏ đánh giá."

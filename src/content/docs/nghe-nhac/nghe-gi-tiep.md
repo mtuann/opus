@@ -1,9 +1,9 @@
 ---
 title: Nghe gì tiếp?
-description: Bạn đã thích một tác phẩm. Trang này gợi ý bước tiếp theo dựa trên sở thích, thay vì theo trình tự lịch sử. Mỗi gợi ý giải thích vì sao nó liên quan.
+description: Bạn đã thích một tác phẩm. Trang này gợi ý bước tiếp theo dựa trên sở thích, thay vì theo trình tự lịch sử. Bảng đầu tiên giải thích vì sao từng gợi ý liên quan.
 ---
 
-Bạn đã thích một tác phẩm. Trang này gợi ý bước tiếp theo **dựa trên sở thích**, thay vì theo trình tự lịch sử. Mỗi gợi ý giải thích *vì sao* nó liên quan.
+Bạn đã thích một tác phẩm. Trang này gợi ý bước tiếp theo **dựa trên sở thích**, thay vì theo trình tự lịch sử. Bảng đầu tiên giải thích *vì sao* từng gợi ý liên quan.
 
 ## Theo tác phẩm bạn đã thích
 
@@ -46,5 +46,5 @@ Bạn đã thích một tác phẩm. Trang này gợi ý bước tiếp theo **d
 |---|---|
 | 5 phút | Một nocturne, một prelude hoặc một aria |
 | 15 phút | Một chương giao hưởng hoặc concerto |
-| 30–45 phút | Trọn một giao hưởng của Mozart, Beethoven, Brahms |
+| 25–45 phút | Trọn một giao hưởng của Mozart, Beethoven, Brahms |
 | 1–3 tiếng | Một vở opera hoặc ballet trọn vẹn |

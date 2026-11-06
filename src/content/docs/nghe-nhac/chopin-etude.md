@@ -8,10 +8,10 @@ tac_pham: chopin-etude
 |---|---|
 | Nhà soạn nhạc | Frédéric Chopin (1810–1849) |
 | Tên đầy đủ | 12 Étude, Op. 10; trọng tâm: số 3 cung Mi trưởng (*Lento ma non troppo*) và số 12 cung Đô thứ (*Allegro con fuoco*) |
-| Sáng tác | Op. 10 viết trong các năm 1829–1832 (bản thảo nháp của số 3 đề ngày 25/8/1832); in năm 1833 ở Paris, Leipzig và London, đề tặng Franz Liszt |
+| Sáng tác | Op. 10 viết trong các năm 1829–1832 (bản thảo nháp của số 3 đề ngày 25/8/1832); in năm 1833 ở Paris và Leipzig, rồi ở London, đề tặng Franz Liszt |
 | Thời kỳ | Lãng mạn |
 | Thể loại | Étude cho piano |
-| Độ dài | Số 3 khoảng 4–5 phút; số 12 khoảng 2,5–3 phút; cả Op. 10 khoảng 30–35 phút |
+| Độ dài | Số 3 khoảng 3,5–4,5 phút; số 12 khoảng 2,5–3 phút; cả Op. 10 khoảng 27–30 phút |
 
 ## Điều cần biết trước khi nghe
 
@@ -79,6 +79,6 @@ Xem thêm [Nghệ sĩ piano và bản thu](/opus/piano/nghe-si/).
 ## Nguồn
 
 - Bản nhạc: [IMSLP](https://imslp.org/) (tìm "Études, Op.10 (Chopin)"); [G. Henle Verlag, *Etudes*, HN 124](https://www.henle.de/en/Etudes/HN-124): lời tựa (năm sáng tác) và ghi chú (các chỉ dẫn tốc độ trong bản thảo số 3).
-- Viện Fryderyk Chopin (Warsaw), [*mUltimate Chopin*](https://sm.multimatechopin.com/): mô tả bản thảo và các bản in đầu ở Paris, Leipzig, London (1833).
+- Viện Fryderyk Chopin (Warsaw), [*mUltimate Chopin*](https://sm.multimatechopin.com/): mô tả bản thảo và các bản in đầu ở Paris, Leipzig (1833) và London.
 - Frederick Niecks, *Frederick Chopin as a Man and Musician* (1888), [bản trên Project Gutenberg](https://www.gutenberg.org/ebooks/4973): giai thoại về Gutmann, thư gửi Hiller năm 1833.
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
