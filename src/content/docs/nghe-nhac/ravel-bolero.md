@@ -7,8 +7,8 @@ tac_pham: ravel-bolero
 | Mục | Thông tin |
 |---|---|
 | Nhà soạn nhạc | Maurice Ravel (1875–1937) |
-| Sáng tác | 1928, cho vũ công Ida Rubinstein |
-| Công diễn | 22/11/1928, Nhà hát Opéra, Paris (dạng ballet) |
+| Sáng tác | 1928, nhạc cho vở ballet của vũ công Ida Rubinstein (bản tổng phổ đề tặng bà); Durand in năm 1929 |
+| Công diễn | 22/11/1928, Nhà hát Opéra (Palais Garnier), Paris, dạng ballet; nhạc trưởng Walther Straram |
 | Thời kỳ | Thế kỷ 20 |
 | Độ dài | Khoảng 14–17 phút tùy nhạc trưởng |
 
@@ -16,11 +16,11 @@ tac_pham: ravel-bolero
 
 *Boléro* là một **thí nghiệm**: gần như không có phát triển, không có chuyển giọng (trừ một lần ở cuối), không có tương phản. Chỉ có:
 
-- **Một tiết tấu trống snare** lặp lại không ngừng từ đầu đến cuối;
+- **Một tiết tấu trống snare** lặp lại không ngừng từ ô đầu tiên, chỉ đổi ở hai ô cuối;
 - **Hai giai điệu** (gọi là A và B), luân phiên nhau, mỗi lần do một nhạc cụ hoặc một nhóm nhạc cụ khác chơi;
 - **Một crescendo duy nhất** kéo dài suốt tác phẩm, từ pianissimo đến fortissimo.
 
-Ravel tự nhận đây chủ yếu là một bài tập về **phối khí**, gần như "không có âm nhạc" theo nghĩa thông thường. Chính vì vậy, *Boléro* là **bài học nhận biết nhạc cụ** hay nhất có thể có: cùng một giai điệu, chỉ thay đổi âm sắc.
+Chính Ravel gọi bản nhạc là "một thí nghiệm theo một hướng rất đặc biệt và hẹp", và nói nó chỉ là "mô dệt của dàn nhạc, không có âm nhạc": điều thay đổi duy nhất là **phối khí** và cường độ. Chính vì vậy, *Boléro* là một **bài luyện nhận biết nhạc cụ** rất tốt: cùng một giai điệu, chỉ thay đổi âm sắc.
 
 ## Sơ đồ cấu trúc
 
@@ -39,19 +39,19 @@ Giai điệu chuyển qua lần lượt các nhạc cụ. Ghi mốc mỗi lần 
 | … | A | **Sáo** (rất nhỏ, trên nền snare và pizzicato đàn dây) |
 | … | A | **Clarinet** |
 | … | B | **Bassoon** (âm vực cao) |
-| … | B | Clarinet Mi♭ nhỏ, âm sắc chói |
-| … | A | **Oboe d'amore** (oboe trầm, êm) |
+| … | B | Clarinet Mi♭ (theo tổng phổ: *petite clarinette*, clarinet nhỏ) |
+| … | A | **Oboe d'amore** (một loại oboe, do người chơi oboe thứ hai đổi sang) |
 | … | A | Trumpet (có câm tiếng) và sáo |
 | … | B | **Saxophone tenor** |
-| … | B | Saxophone sopranino và soprano |
-| … | A | **Kèn horn, celesta và hai piccolo** chơi song song ở các quãng của **chuỗi bồi âm**: tạo ra một âm sắc mới như đàn organ |
+| … | B | Saxophone sopranino rồi soprano (theo tổng phổ; khi biểu diễn, người chơi thường dùng saxophone soprano cho cả hai) |
+| … | A | **Kèn horn, celesta và hai piccolo** chơi song song ở các quãng của **chuỗi bồi âm**: nghe như một nhạc cụ mới, không có thật |
 | … | A, B luân phiên | Các nhóm nhạc cụ ngày càng đông: kèn gỗ, trombone, rồi đàn dây |
 | … | A, rồi B | Cả dàn nhạc, fortissimo |
 | … | Kết | **Lần chuyển giọng duy nhất** sang Mi trưởng, rồi về Đô trưởng; toàn bộ âm nhạc đổ sụp trong vài ô nhịp |
 
 ## Câu hỏi để nghe chủ động
 
-- Đoạn horn, celesta và piccolo là phép màu phối khí nổi tiếng: Ravel dùng [chuỗi bồi âm](/opus/nhac-ly/am-hoc/) (bồi âm 1, 2, 3, 4, 5) để "tổng hợp" một âm sắc nhân tạo. Bạn nghe thấy một nhạc cụ hay năm nhạc cụ?
+- Ở đoạn horn, celesta và piccolo, Ravel dùng [chuỗi bồi âm](/opus/nhac-ly/am-hoc/): horn chơi giai điệu (bồi âm 1), celesta chơi ở bồi âm 2 và 4, hai piccolo ở bồi âm 3 và 5, để "tổng hợp" một âm sắc nhân tạo. Bạn nghe thấy một nhạc cụ hay năm bè nhạc cụ?
 - Một tác phẩm gần như không đổi gì ngoài âm sắc và cường độ có làm bạn chán không? Vì sao?
 - Lần chuyển giọng duy nhất ở cuối có tác động mạnh thế nào sau 15 phút ở cùng một giọng?
 
@@ -61,4 +61,6 @@ Giai điệu chuyển qua lần lượt các nhạc cụ. Ghi mốc mỗi lần 
 
 ## Nguồn
 
+- Tổng phổ: Durand 1929 (đề tặng Ida Rubinstein), bản quét trên Internet Archive (từ IMSLP); năm, buổi công diễn đầu, biên chế trên IMSLP.
+- Lời Ravel và phân tích phối khí: Gurminder K. Bhogal, "Orchestral Tissue, Subordinate Arabesques, and Turning Inward in Maurice Ravel's *Boléro*", *Music Theory Online* 26.2 (2020).
 - Về thời kỳ: [Thế kỷ 20](/opus/lich-su/thoi-ky/the-ky-20/); về nhạc cụ: [Dàn nhạc giao hưởng](/opus/nhac-cu/dan-nhac/).

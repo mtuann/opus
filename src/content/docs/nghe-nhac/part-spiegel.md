@@ -1,6 +1,6 @@
 ---
 title: "Pärt: Spiegel im Spiegel"
-description: 'Tên tác phẩm nghĩa là "Gương trong gương": hình ảnh phản chiếu vô tận. Từ giữa những năm 1970, Pärt phát triển phong cách tintinnabuli (tiếng Latin: "những…'
+description: 'Tên tác phẩm nghĩa là "Gương trong gương": mỗi câu nhạc đi lên được nối bằng một câu "soi gương" đi xuống. Năm 1976, Pärt tạo ra phong cách tintinnabuli (từ tintinnabulum…'
 tac_pham: part-spiegel
 ---
 
@@ -11,31 +11,31 @@ tac_pham: part-spiegel
 | Thời kỳ | Đương đại |
 | Giọng | Fa trưởng |
 | Độ dài | Khoảng 8–10 phút |
-| Bản thu gợi ý | Album *Alina* (ECM, 1999) |
+| Bản thu gợi ý | Album *Alina* (ECM New Series 1591, 1999): ba bản *Spiegel im Spiegel*, hai bản violin và piano, một bản cello và piano |
 
 ## Điều cần biết trước khi nghe
 
-Tên tác phẩm nghĩa là "Gương trong gương": hình ảnh phản chiếu vô tận. Từ giữa những năm 1970, Pärt phát triển phong cách **tintinnabuli** (tiếng Latin: "những chiếc chuông nhỏ"). Nguyên tắc rất đơn giản:
+Tên tác phẩm nghĩa là "Gương trong gương": mỗi câu nhạc đi lên được nối bằng một câu "soi gương" đi xuống. Năm 1976, Pärt tạo ra phong cách **tintinnabuli** (từ *tintinnabulum*, tiếng Latin: "chiếc chuông nhỏ"). Nguyên tắc gồm hai bè đi liền với nhau:
 
-- Một bè đi theo **gam**, từng bước một (bè giai điệu).
-- Một bè chỉ dùng các nốt của **hợp âm chủ** (Fa – La – Đô), vang như tiếng chuông.
+- Một bè giai điệu (bè M), phần lớn đi theo **gam**, từng bước một.
+- Một bè chỉ dùng ba nốt của **hợp âm ba chủ** (ở bản này: Fa – La – Đô), vang như tiếng chuông (bè T).
 
-Từ hai nguyên tắc đó, âm nhạc trở nên tĩnh lặng, trong suốt, gần như thiền định.
+Chất liệu của *Spiegel im Spiegel* rất ít: chỉ có giai điệu của nhạc cụ độc tấu và phần đệm ba nốt của piano.
 
-Minh họa nguyên tắc (không phải bản nhạc gốc): piano rải hợp âm Fa trưởng đi lên, violin đi từng bước quanh nốt La.
+Ví dụ dưới đây soạn riêng cho trang này, không lấy từ tác phẩm của Pärt, để thấy hai bè ấy: bè M đi xuống rồi đi lên từng bậc trong gam Rê thứ; mỗi nốt của bè T là nốt của hợp âm Rê thứ (Rê – Fa – La) gần nhất phía dưới nốt bè M.
 
 ```abc
 X:1
-T:Minh họa nguyên tắc tintinnabuli
+T:Bè M và bè T (soạn cho trang này)
+M:4/4
 L:1/4
-M:6/4
-Q:1/4=80
-%%score (V1 V2)
-V:V1
-V:V2 clef=bass
-K:F
-[V:V1] A6 | G6 | A6 | B6 | A6 |]
-[V:V2] F, A, C F, A, C | F, A, C F, A, C | F, A, C F, A, C | F, A, C F, A, C | F, A, C F, A, C |]
+Q:1/4=60
+%%score {RH LH}
+V:RH clef=treble
+V:LH clef=treble
+K:Dm
+[V:RH] d2 c2 | B2 A2 | G2 A2 | B2 c2 | d4 |]
+[V:LH] A2 A2 | A2 F2 | F2 F2 | A2 A2 | A4 |]
 ```
 
 ## Nghe kèm bản thu
@@ -46,15 +46,15 @@ K:F
 
 | Thời điểm | Sự kiện |
 |---|---|
-| … | Piano bắt đầu với chuỗi ba nốt đi lên, đều đặn như nhịp thở |
-| … | Violin vào bằng nốt La, rồi đi một bước lên hoặc xuống và quay về La |
-| … | Mỗi câu, giai điệu violin đi **xa hơn một bước** khỏi nốt La, lần lượt phía trên và phía dưới |
-| … | Bè trầm piano thêm các nốt thấp, như những tiếng chuông xa |
-| … | Kết thúc: giai điệu đã đi xa nhất, rồi quay về La; im lặng |
+| … | Piano bắt đầu với hình đệm ba nốt đi lên, lặp lại đều đặn |
+| … | Violin vào: câu đầu chỉ có hai nốt, kết về một nốt trung tâm |
+| … | Mỗi câu sau **thêm một nốt**, nên giai điệu đi xa dần khỏi nốt trung tâm; câu đi lên được nối bằng câu "soi gương" đi xuống, và câu nào cũng trở về nốt trung tâm |
+| … | Piano thêm những nốt tintinnabuli, như những chiếc chuông nhỏ, lần lượt vang phía trên và phía dưới giai điệu |
+| … | Những câu cuối dài nhất; giai điệu vẫn trở về nốt trung tâm |
 
 ## Câu hỏi để nghe chủ động
 
-- Bạn có nhận ra quy luật "mỗi lần đi xa thêm một bước" không?
+- Bạn có nhận ra quy luật "mỗi câu thêm một nốt" không?
 - Âm nhạc gần như không thay đổi gì lớn trong 10 phút. Cảm giác của bạn thay đổi ra sao theo thời gian?
 - So sánh với Bach [*Prelude cung Đô trưởng*](/opus/piano/tac-pham/bach-prelude-do/): cả hai đều là hợp âm rải lặp lại. Khác nhau ở đâu?
 
@@ -64,5 +64,5 @@ K:F
 
 ## Nguồn
 
-- Bản nhạc và tổng phổ: [IMSLP](https://imslp.org/) (tìm theo tên nhà soạn nhạc và số hiệu danh mục).
-- Bối cảnh lịch sử: Burkholder, Grout, Palisca, *A History of Western Music*; Grove Music Online. Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
+- Tác phẩm, buổi công diễn đầu và cách viết: trang *Spiegel im Spiegel* và tiểu sử Arvo Pärt của [Trung tâm Arvo Pärt](https://www.arvopart.ee/en/arvo-part/work/544/); bài "Formal algorithms of tintinnabuli in Arvo Pärt's music" (Jelena Tokun, 2011) trên cùng trang. Bản nhạc do Universal Edition giữ bản quyền.
+- Các phiên bản: bản ghi tác phẩm của Thư viện Quốc hội Mỹ (theo MGG). Bản thu và độ dài: MusicBrainz. Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

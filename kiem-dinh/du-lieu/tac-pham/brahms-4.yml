@@ -1,6 +1,6 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/brahms-4
 ban_ghi: tac-pham/brahms-4
-ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/brahms-4.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh."
+ghi_chu: 'loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/brahms-4.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh. Lần 2 (D6-L11): kiểm thoi_ky, luyen_nghe, hinh (các trường chưa khóa); các trường của đợt 2 không đụng.'
 lan:
   - so: 1
     ngay: 2026-10-24
@@ -12,6 +12,15 @@ lan:
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: moi/d6-l11
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (D6-L11 lượt 1, phần A)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: imslp
     bac: 2
@@ -21,6 +30,18 @@ nguon:
     bac: 2
     ten: G. Henle Verlag, Symphony no. 4 e minor op. 98 (HN 9856)
     link: https://www.henle.de/en/Symphony-no.-4-e-minor-op.-98/HN-9856
+  - id: simrock-1886
+    bac: 1
+    ten: Brahms, Vierte Symphonie (E moll) Op. 98, Partitur, N. Simrock, Berlin 1886 (bản in đầu tiên, số bản in 8686), bản số hóa của Brahms-Institut Lübeck (CC0); đọc ảnh 06/11/2026, chương 4 tr. 77–113
+    link: 'https://www.brahms-portal.de/objekt/dc00008360/'
+  - id: imslp-wt
+    bac: 2
+    ten: 'IMSLP, Symphony No.4, Op.98 (wikitext qua api.php, 06/11/2026): "Piece Style=Romantic"'
+    link: 'https://imslp.org/wiki/Symphony_No.4,_Op.98_(Brahms,_Johannes)'
+  - id: bi-werk
+    bac: 2
+    ten: 'Brahms-Institut Lübeck, Werkeinführung "Sinfonie Nr. 4 e-Moll": ostinato 8 ô của Passacaglia "in mehr als 30 verschiedenen Iterationen"'
+    link: 'https://www.brahms-portal.de/werk/dc00007469/'
 nhan_dinh:
   - id: n1
     cau: Tên «Giao hưởng số 4, chương 4» chỉ chương 4 (Allegro energico e passionato) của Giao hưởng số 4 cung Mi thứ.
@@ -50,3 +71,40 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Symphony_No.4,_Op.98_(Brahms,_Johannes)", https://id.loc.gov/authorities/names/n81016230.json ]
     luot_2_ghi_chu: IMSLP Op./Cat. No. = Op.98 (E minor). LoC 'no. 4, op. 98, E minor'.
+  - id: n4
+    cau: 'Thời kỳ: Lãng mạn.'
+    loai: lich-su
+    truong:
+    - thoi_ky
+    nguon:
+    - imslp-wt
+    ket_qua: dung
+    ghi_chu: IMSLP "Piece Style=Romantic"; nha-soan-nhac.yml (brahms, đã khóa) cũng ghi Lãng mạn.
+  - id: n5
+    cau: 'Luyện nghe: passacaglia, 30 biến tấu.'
+    loai: cau-truc
+    truong:
+    - luyen_nghe
+    nguon:
+    - simrock-1886
+    - bi-werk
+    ket_qua: dung
+    ghi_chu: 'Đếm trên bản in (xem hồ sơ trang nghe-nhac/brahms-4 n12): chủ đề ô 1–8, 30 biến tấu 8 ô (ô 9–248), nối ô 249–252, coda Più Allegro từ ô 253. Brahms-Institut gọi chương là Passacaglia, "mehr als 30" lần lặp.'
+  - id: n6
+    cau: 'Hình, chú thích: Giao hưởng số 4, chương 4: chủ đề 8 ô nhịp và 30 biến tấu (độ dài các ô gần đúng theo số biến tấu).'
+    loai: cau-truc
+    truong:
+    - hinh
+    nguon:
+    - simrock-1886
+    ket_qua: dung
+    ghi_chu: Như n5. Vế "độ dài các ô gần đúng" nói về cách vẽ.
+  - id: n7
+    cau: 'Hình, các ô: Chủ đề; BT 1–11 Mi thứ; BT 12 sáo; BT 13–15 Mi trưởng; BT 16–30 Mi thứ; Coda.'
+    loai: cau-truc
+    truong:
+    - hinh
+    nguon:
+    - simrock-1886
+    ket_qua: da-sua
+    ghi_chu: 'Dữ liệu cũ: ô thứ năm ghi [BT 16–30, "Mi thứ, dồn dập"]. Các mốc đúng theo bản in (BT 1–11 hóa biểu một thăng; BT 12 sáo độc tấu, 3/2, vẫn một thăng; BT 13–15 bốn thăng; BT 16 trở lại một thăng, 3/4; coda Più Allegro). Riêng chữ "dồn dập" cho cả BT 16–30 không khớp bản nhạc: có nhiều đoạn pp (tr. 96, 99–100) và dim. trước chữ K; trang đã sửa dòng 17–30 thành "mạnh mẽ xen vài đoạn lắng nhỏ". Sửa ô thành "Mi thứ" (sua-A.yml, chưa áp dụng vào src/data/). Trọng số và màu là cách vẽ.'

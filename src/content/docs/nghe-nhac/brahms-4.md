@@ -1,6 +1,6 @@
 ---
 title: "Brahms: Giao hưởng số 4, chương 4"
-description: "Brahms là nhà soạn nhạc Lãng mạn nhìn về quá khứ hơn ai hết: ông nghiên cứu sâu nhạc Bach, Handel, nhạc Phục hưng. Chương cuối Giao hưởng số 4 là minh chứng…"
+description: "Brahms là nhà soạn nhạc Lãng mạn quan tâm sâu tới âm nhạc quá khứ: ông học đối âm và nghiên cứu nhạc Bach. Chương cuối Giao hưởng số 4 là ví dụ nổi tiếng nhất…"
 tac_pham: brahms-4
 ---
 
@@ -15,9 +15,9 @@ tac_pham: brahms-4
 
 ## Điều cần biết trước khi nghe
 
-Brahms là nhà soạn nhạc Lãng mạn **nhìn về quá khứ** hơn ai hết: ông nghiên cứu sâu nhạc Bach, Handel, nhạc Phục hưng. Chương cuối Giao hưởng số 4 là minh chứng: một **passacaglia** (hay chaconne), hình thức Baroque gồm **một chủ đề 8 ô nhịp lặp lại liên tục**, với biến tấu mới ở mỗi lần (xem [Chủ đề và biến tấu](/opus/hinh-thuc/bien-tau/)).
+Brahms là nhà soạn nhạc Lãng mạn **quan tâm sâu tới âm nhạc quá khứ**: ông học đối âm và nghiên cứu nhạc Bach. Chương cuối Giao hưởng số 4 là ví dụ nổi tiếng nhất: một **passacaglia** (hay chaconne), hình thức Baroque gồm **một chủ đề ngắn (ở đây 8 ô nhịp) lặp lại liên tục**, với biến tấu mới ở mỗi lần (xem [Chủ đề và biến tấu](/opus/hinh-thuc/bien-tau/)).
 
-Chủ đề 8 ô nhịp được Brahms phỏng theo bè trầm trong chaconne kết thúc **cantata BWV 150** của Bach. Từ chủ đề đó, Brahms viết **30 biến tấu và một coda**. Mỗi biến tấu dài đúng 8 ô nhịp, vậy mà âm nhạc không hề đơn điệu.
+Chủ đề 8 ô nhịp được Brahms phỏng theo chaconne ở hợp xướng kết thúc **cantata BWV 150** của Bach. Từ chủ đề đó, Brahms viết **30 biến tấu và một coda**. Mỗi biến tấu dài đúng 8 ô nhịp, vậy mà âm nhạc không hề đơn điệu.
 
 ## Sơ đồ cấu trúc
 
@@ -31,14 +31,14 @@ Chủ đề 8 ô nhịp được Brahms phỏng theo bè trầm trong chaconne k
 
 | Thời điểm | Biến tấu | Sự kiện |
 |---|---|---|
-| … | Chủ đề | Kèn đồng và kèn gỗ, có **trombone** (lần đầu tiên xuất hiện trong bản giao hưởng), chơi 8 hợp âm trang nghiêm |
-| … | 1–3 | Chủ đề chuyển dần vào bè trầm, các bè trên bắt đầu chuyển động |
-| … | 4–11 | Đàn dây dẫn dắt, năng lượng tăng dần, nhiều kịch tính |
-| … | 12 | **Sáo độc tấu**: một giai điệu buồn, tự do, nhịp chậm lại (3/2), gần như ngừng thời gian |
-| … | 13–15 | Chuyển sang **Mi trưởng**: trombone và kèn gỗ chơi như thánh ca, yên tĩnh |
-| … | 16 | Chủ đề trở lại đột ngột ở Mi thứ, fortissimo, như bắt đầu lại từ đầu |
-| … | 17–30 | Ngày càng dồn dập, mạnh mẽ |
-| … | Coda | Nhanh hơn, cao trào cuối cùng, kết thúc ở **Mi thứ**: một trong số ít giao hưởng thế kỷ 19 kết ở giọng thứ |
+| … | Chủ đề | Kèn gỗ và kèn đồng, có **trombone** (lần đầu tiên xuất hiện trong bản giao hưởng), chơi 8 hợp âm, to (forte); đàn dây nghỉ |
+| … | 1–3 | Đàn dây vào bằng những nốt gảy (pizzicato); kèn gỗ hát một giai điệu mới, nhẹ; biến tấu 3 mạnh, nhấn rõ |
+| … | 4–11 | Đàn dây dẫn dắt, nhiều đoạn chạy nốt nhanh, kịch tính; tới biến tấu 11 nhạc lắng xuống |
+| … | 12 | **Sáo độc tấu** (espressivo), nhịp 3/2: trường độ nốt dài gấp đôi nên nhạc nghe chậm lại |
+| … | 13–15 | Chuyển sang **Mi trưởng**: kèn gỗ hát dịu dàng, rồi trombone cùng bassoon và horn chơi những hợp âm trang nghiêm, rất nhỏ |
+| … | 16 | Chủ đề trở lại ở Mi thứ, nhịp 3/4, kèn chơi to (forte, rồi fortissimo khi đàn dây vào), như bắt đầu lại từ đầu |
+| … | 17–30 | Các biến tấu mạnh mẽ xen vài đoạn lắng nhỏ; sau biến tấu 30 nhạc chậm lại một chút |
+| … | Coda | Nhanh hơn (Più Allegro), cao trào cuối cùng, kết thúc ở **Mi thứ** |
 
 ## Câu hỏi để nghe chủ động
 
@@ -52,5 +52,6 @@ Chủ đề 8 ô nhịp được Brahms phỏng theo bè trầm trong chaconne k
 
 ## Nguồn
 
-- Tổng phổ: [IMSLP](https://imslp.org/) (tìm "Brahms Op.98").
+- Tổng phổ: bản in đầu tiên (N. Simrock, Berlin, 1886), [bản số hóa của Brahms-Institut Lübeck](https://www.brahms-portal.de/objekt/dc00008360/); [IMSLP](https://imslp.org/wiki/Symphony_No.4,_Op.98_(Brahms,_Johannes)).
+- Lịch sử: [lời tựa ấn bản Henle HN 9856](https://www.henle.de/en/Symphony-no.-4-e-minor-op.-98/HN-9856) (Robert Pascall); [giới thiệu tác phẩm của Brahms-Institut Lübeck](https://www.brahms-portal.de/werk/dc00007469/); [tờ chương trình buổi công diễn đầu](https://www.brahms-portal.de/objekt/dc00002291/).
 - Về thời kỳ: [Lãng mạn](/opus/lich-su/thoi-ky/lang-man/).

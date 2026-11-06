@@ -1,6 +1,6 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/dvorak-9-largo
 ban_ghi: tac-pham/dvorak-9-largo
-ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/dvorak-9-largo.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh."
+ghi_chu: 'loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/dvorak-9-largo.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh. Lần 2 (D6-L11): kiểm thoi_ky, luyen_nghe, hinh (các trường chưa khóa); các trường của đợt 2 không đụng.'
 lan:
   - so: 1
     ngay: 2026-10-24
@@ -12,6 +12,15 @@ lan:
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: moi/d6-l11
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (D6-L11 lượt 1, phần A)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: imslp
     bac: 2
@@ -21,6 +30,18 @@ nguon:
     bac: 2
     ten: "Breitkopf & Härtel, Dvořák: Symphonie Nr. 9 e-moll op. 95"
     link: https://www.breitkopf.com/en/work/2169/symphony-no.-9-in-e-minor-op.-95
+  - id: imslp-wt
+    bac: 2
+    ten: 'IMSLP, Symphony No.9, Op.95 (wikitext qua api.php, 06/11/2026): "Piece Style=Romantic"; "Largo (127 bars*)"'
+    link: 'https://imslp.org/wiki/Symphony_No.9,_Op.95_(Dvo%C5%99%C3%A1k,_Anton%C3%ADn)'
+  - id: simrock-dv
+    bac: 1
+    ten: Dvořák, Symphonie no. 5 [i.e. no. 9] (E moll) op. 95, tổng phổ Simrock (số bản in 10139), bản Royal Academy of Music trên Internet Archive (13836-3001), chương 2 tr. 28–37; đọc ảnh 06/11/2026
+    link: 'https://archive.org/details/13836-3001'
+  - id: dv-work
+    bac: 2
+    ten: 'antonin-dvorak.cz, Symphony No. 9: Largo mở bằng chuỗi hợp âm kèn; chủ đề cor anglais trên đàn dây tắt tiếng, tính ngũ cung; đoạn giữa Đô♯ thứ, rồi đoạn quasi-scherzo Đô♯ trưởng có cao trào gồm chủ đề Largo, chủ đề chính và chủ đề kết của chương 1; chủ đề chính trở lại nhẹ nhàng, chuỗi hợp âm mở đầu xuất hiện lại ở cuối'
+    link: 'https://www.antonin-dvorak.cz/en/work/symphony-no-9/'
 nhan_dinh:
   - id: n1
     cau: Tên «Giao hưởng số 9, Largo» chỉ chương 2 (Largo) của Giao hưởng số 9 cung Mi thứ.
@@ -50,3 +71,42 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Symphony_No.9,_Op.95_(Dvo%C5%99%C3%A1k,_Anton%C3%ADn)", https://id.loc.gov/authorities/names/n79095294.json ]
     luot_2_ghi_chu: IMSLP Op./Cat. No. = Op.95 ; B.178 (E minor). LoC 'no. 9, op. 95, E minor'.
+  - id: n4
+    cau: 'Thời kỳ: Lãng mạn.'
+    loai: lich-su
+    truong:
+    - thoi_ky
+    nguon:
+    - imslp-wt
+    ket_qua: dung
+    ghi_chu: IMSLP "Piece Style=Romantic"; nha-soan-nhac.yml (dvorak, đã khóa) cũng ghi Lãng mạn.
+  - id: n5
+    cau: 'Luyện nghe: gam ngũ cung, cor anglais.'
+    loai: cau-truc
+    truong:
+    - luyen_nghe
+    nguon:
+    - simrock-dv
+    - dv-work
+    ket_qua: dung
+    ghi_chu: Chủ đề do "Corno inglese Solo" chơi (tổng phổ tr. 28); antonin-dvorak.cz nói về tính ngũ cung của giai điệu; hai câu đầu chỉ dùng nốt của ngũ cung Rê♭ (xem hồ sơ trang n11, n22).
+  - id: n6
+    cau: 'Hình, chú thích: Giao hưởng số 9, chương 2 (Largo): hình thức ba đoạn.'
+    loai: cau-truc
+    truong:
+    - hinh
+    nguon:
+    - dv-work
+    - simrock-dv
+    ket_qua: dung
+    ghi_chu: Chủ đề chính (A), đoạn giữa Đô♯ thứ / Đô♯ trưởng (B), chủ đề chính trở lại (A); có phần mở và kết bằng chuỗi hợp âm.
+  - id: n7
+    cau: 'Hình, các ô: Hợp âm mở đầu; A, cor anglais, Rê♭ trưởng; B, Đô♯ thứ; Đoạn sáng, chủ đề chương 1 vang lại; A, cor anglais; Kết.'
+    loai: cau-truc
+    truong:
+    - hinh
+    nguon:
+    - simrock-dv
+    - dv-work
+    ket_qua: dung
+    ghi_chu: 'Tổng phổ: hợp âm kèn ô 1–6; cor anglais, hóa biểu năm giáng; "Un poco più mosso" bốn thăng (Đô♯ thứ); "Poco più mosso" Đô♯ trưởng tới cao trào ff có chủ đề chương 1 (antonin-dvorak.cz); "Meno mosso, Tempo I" cor anglais; Molto Adagio kết bằng hợp âm. Trọng số và màu là cách vẽ.'

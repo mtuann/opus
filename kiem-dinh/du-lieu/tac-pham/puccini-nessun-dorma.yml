@@ -1,6 +1,6 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/puccini-nessun-dorma
 ban_ghi: tac-pham/puccini-nessun-dorma
-ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/puccini-nessun-dorma.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh. Không có danh_muc: IMSLP ghi SC 91 cho Turandot, catalog.puccini.it ghi số 91 (có thể bổ sung, không bắt buộc)."
+ghi_chu: 'loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/puccini-nessun-dorma.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh. Không có danh_muc: IMSLP ghi SC 91 cho Turandot, catalog.puccini.it ghi số 91 (có thể bổ sung, không bắt buộc). Lần 2 (D6-L11): kiểm thoi_ky, luyen_nghe (các trường chưa khóa); bản ghi không có hinh; các trường của đợt 2 không đụng.'
 lan:
   - so: 1
     ngay: 2026-10-24
@@ -12,6 +12,15 @@ lan:
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: moi/d6-l11
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (D6-L11 lượt 1, phần A)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: imslp
     bac: 2
@@ -21,6 +30,14 @@ nguon:
     bac: 2
     ten: Giacomo Puccini, Catalogue of the Works (catalog.puccini.it), Turandot
     link: https://catalog.puccini.it/works
+  - id: imslp-wt
+    bac: 2
+    ten: 'IMSLP, Turandot, SC 91 (wikitext qua api.php, 06/11/2026): "Piece Style=Romantic"; Act III "33. Cosi comanda Turandot", "34. Nessun dorma!"; vai "Calaf (tenor)"'
+    link: 'https://imslp.org/wiki/Turandot,_SC_91_(Puccini,_Giacomo)'
+  - id: ricordi-fs
+    bac: 1
+    ten: 'Puccini, Turandot, tổng phổ Ricordi (P.R. 117; bản in lại "Opera Full Score Series"), Internet Archive (giacomopuccinitu0000vari): màn 3 tr. 322–330 (sứ giả tr. 322, hợp xướng vọng lại tr. 323, aria từ tr. 324 "Andante sostenuto"), bè "IL PRINCIPE" (Calaf, tenor)'
+    link: 'https://archive.org/details/giacomopuccinitu0000vari'
 nhan_dinh:
   - id: n1
     cau: Tên «"Nessun dorma" (Turandot)» chỉ aria Nessun dorma ở màn 3 của opera Turandot.
@@ -41,3 +58,22 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Turandot,_SC_91_(Puccini,_Giacomo)", https://id.loc.gov/authorities/names/n81150111.json ]
     luot_2_ghi_chu: "IMSLP composer field: Puccini, Giacomo. LoC heading 'Puccini, Giacomo, 1858-1924. Turandot. Nessun dorma'. (IMSLP: the aria's orchestration is Puccini's own; Alfano completed only the end of Act III.)"
+  - id: n4
+    cau: 'Thời kỳ: Lãng mạn.'
+    loai: lich-su
+    truong:
+    - thoi_ky
+    nguon:
+    - imslp-wt
+    ket_qua: dung
+    ghi_chu: IMSLP "Piece Style=Romantic"; nha-soan-nhac.yml (puccini, đã khóa) cũng ghi Lãng mạn.
+  - id: n5
+    cau: 'Luyện nghe: aria opera, giọng tenor.'
+    loai: cau-truc
+    truong:
+    - luyen_nghe
+    nguon:
+    - imslp-wt
+    - ricordi-fs
+    ket_qua: dung
+    ghi_chu: '"Nessun dorma" là aria của Calaf (tenor) ở màn 3; tổng phổ ghi bè "Il Principe" khóa Sol tám độ thấp.'

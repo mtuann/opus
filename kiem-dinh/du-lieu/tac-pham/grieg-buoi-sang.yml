@@ -1,6 +1,6 @@
 # Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/grieg-buoi-sang
 ban_ghi: tac-pham/grieg-buoi-sang
-ghi_chu: "loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/grieg-buoi-sang.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh."
+ghi_chu: 'loai: nghe là cấu trúc, không phải nhận định; trang hướng dẫn nghe cũ ../opus-zero/docs/nghe-nhac/grieg-buoi-sang.md có tồn tại. Bản ghi không có goi_y, gan_cho, khuyet_danh. Lần 2 (D6-L11): kiểm thoi_ky, luyen_nghe (các trường chưa khóa); bản ghi không có hinh; các trường của đợt 2 không đụng.'
 lan:
   - so: 1
     ngay: 2026-10-24
@@ -12,6 +12,15 @@ lan:
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: moi/d6-l11
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (D6-L11 lượt 1, phần A)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: imslp-op23
     bac: 2
@@ -25,6 +34,14 @@ nguon:
     bac: 2
     ten: G. Henle Verlag, Peer Gynt Suites op. 46 và op. 55 (HN 1239)
     link: https://www.henle.de/de/Peer-Gynt-Suiten/HN-1239
+  - id: imslp-wt
+    bac: 2
+    ten: 'IMSLP, Peer Gynt, Op.23 và Peer Gynt Suite No.1, Op.46 (wikitext qua api.php, 06/11/2026): cả hai "Piece Style=Romantic"'
+    link: 'https://imslp.org/wiki/Peer_Gynt,_Op.23_(Grieg,_Edvard)'
+  - id: nb-score
+    bac: 1
+    ten: 'Grieg, Peer Gynt Op. 23, màn 4 (Mus.ms. 6900 [Akt 4], Thư viện Quốc gia Na Uy): bản in Peters 7188, Morgenstimmung tr. 3–16; đọc ảnh 06/11/2026'
+    link: 'https://www.nb.no/items/URN:NBN:no-nb_digimanus_137965'
 nhan_dinh:
   - id: n1
     cau: Tên «"Buổi sáng" (Peer Gynt)» chỉ Morning Mood (Morgenstemning), số mở đầu Peer Gynt Suite số 1, trích từ nhạc sân khấu Peer Gynt.
@@ -55,3 +72,21 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Peer_Gynt,_Op.23_(Grieg,_Edvard)", "https://imslp.org/wiki/Peer_Gynt_Suite_No.1,_Op.46_(Grieg,_Edvard)", https://id.loc.gov/authorities/names/n79117290.json ]
     luot_2_ghi_chu: "IMSLP: Peer Gynt (incidental music to Ibsen, voices/chorus/orchestra, 1874-75) = Op.23, and Morgenstemning is its no. 14 (Act 4 prelude). The orchestral Suite No.1 that also contains it is a separate Op.46. So Op. 23 is correct for the parent stage work as worded. LoC n79117290: 'Peer Gynt' = incidental music to Ibsen's play."
+  - id: n4
+    cau: 'Thời kỳ: Lãng mạn.'
+    loai: lich-su
+    truong:
+    - thoi_ky
+    nguon:
+    - imslp-wt
+    ket_qua: dung
+    ghi_chu: IMSLP "Piece Style=Romantic"; nha-soan-nhac.yml (grieg, đã khóa) cũng ghi Lãng mạn.
+  - id: n5
+    cau: 'Luyện nghe: gam ngũ cung, sáo và oboe.'
+    loai: cau-truc
+    truong:
+    - luyen_nghe
+    nguon:
+    - nb-score
+    ket_qua: dung
+    ghi_chu: 'Tổng phổ tr. 3–5: câu mở đầu của sáo chỉ dùng Mi, Fa♯, Sol♯, Si, Đô♯ (ngũ cung Mi trưởng); sáo và oboe chuyền giai điệu cho nhau (xem hồ sơ trang nghe-nhac/grieg-buoi-sang n22, n25).'
