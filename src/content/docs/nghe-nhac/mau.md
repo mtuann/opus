@@ -5,7 +5,7 @@ description: Một khung ghi chép cho bốn lần nghe theo phương pháp 4 l�
 
 Một khung ghi chép cho bốn lần nghe theo [phương pháp 4 lần nghe](/opus/nghe-nhac/#phuong-phap-4-lan-nghe). Chép khung dưới đây vào sổ tay hoặc ứng dụng ghi chú, mỗi tác phẩm một trang; vài dòng cho mỗi lần nghe là đủ. Ghi chép về buổi tập đàn thì để ở [Nhật ký luyện tập](/opus/luyen-tap/nhat-ky/).
 
-```markdown
+```markdown wrap
 # Tên nhà soạn nhạc: Tên tác phẩm
 
 | Mục | Thông tin |
