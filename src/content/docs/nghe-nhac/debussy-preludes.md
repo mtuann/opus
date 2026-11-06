@@ -40,7 +40,7 @@ Ghi lại thời điểm (phút:giây) mỗi bản bắt đầu trong bản thu 
 
 | Thời điểm | Sự kiện |
 |---|---|
-| … | **I. *Danseuses de Delphes*** (Vũ nữ Delphi), *Lent et grave*: hợp âm chậm, nặng và trang nghiêm như một điệu múa nghi lễ; gợi hứng từ ba vũ nữ trên đỉnh một cột đá cổ ở Delphi (Hy Lạp), được bày ở bảo tàng Louvre (Paris) |
+| … | **I. *Danseuses de Delphes*** (Vũ nữ Delphi), *Lent et grave*: hợp âm chậm, nặng và trang nghiêm như một điệu múa nghi lễ; gợi hứng từ ba vũ nữ trên đỉnh một cột đá cổ tìm thấy ở Delphi (Hy Lạp); bản đúc của cột được bày ở bảo tàng Louvre (Paris) |
 | … | **II. *Voiles*** (Cánh buồm, hay Tấm voan: chữ Pháp mang cả hai nghĩa): gần như cả bài trên gam toàn cung, không có "nhà" để về; nốt Si♭ ở bè trầm ngân gần suốt bài; một đoạn ngắn ở giữa chỉ dùng phím đen (ngũ cung), rồi gam toàn cung trở lại |
 | … | **III. *Le vent dans la plaine*** (Gió trên đồng), *Animé*: một hình nốt lăn tăn rất nhanh và rất nhỏ gần như không dứt; vài cơn gió mạnh bất chợt bùng lên rồi tắt |
 | … | **IV. *« Les sons et les parfums tournent dans l'air du soir »*** (Âm thanh và hương thơm quẩn quanh trong khí trời chiều): một câu trong bài thơ *Harmonie du soir* của Baudelaire; nhịp ba uể oải như một điệu valse chậm, hòa âm dày và mềm; gần cuối, những tiếng như tù và vọng lại từ xa |

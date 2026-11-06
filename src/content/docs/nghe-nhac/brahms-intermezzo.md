@@ -21,7 +21,7 @@ tac_pham: brahms-intermezzo
 
 **Ba đoạn: A – B – A.** Đoạn A ở La trưởng, gồm những câu nhạc bốn ô nhịp cân đối như một bài hát ru, có một quãng giữa bấp bênh hơn trước khi giai điệu đầu quay về. Đoạn B chuyển sang **Fa♯ thứ**, giọng thứ song song của La trưởng: tối hơn, khắc khoải hơn. Ở chính giữa đoạn B là một khúc **hợp xướng** (chorale) ở **Fa♯ trưởng**, chậm và rất nhỏ, như một bài thánh ca vọng ra từ nhà thờ. Rồi Fa♯ thứ trở lại, và cuối cùng đoạn A trở về, giờ nghe như một kỷ niệm.
 
-**Nghe bằng tai người chơi piano.** Bí mật của bản nhạc nằm ở các **bè giữa**. Phần đệm không phải kiểu "bùm-chát" mà là một mạng lưới những giọng nhỏ chuyển động chậm; nhiều chỗ mỗi tay phải chơi hai bè cùng lúc, ngón 4–5 hát giai điệu còn các ngón phía trong chơi nhẹ hơn. Trong đoạn Fa♯ thứ có ba lớp rõ rệt: bè trên như một cây clarinet, bè giữa như viola, bè trầm chạy bằng chùm ba nốt như cello. Bè giữa đáp lại bè trên theo lối **canon**: nhắc lại bốn nốt mở đầu của bè trên (Đô♯ – Fa♯ – Mi – Rê), chậm hơn một phách (xem [đối âm](/opus/nhac-ly/22-doi-am/)). Khi Fa♯ thứ trở lại, hai bè trên đổi vai để bè giữa dẫn dắt. Brahms giấu đối âm trong một khúc nhạc êm như bài hát ru. Ở khúc hợp xướng, Brahms ghi *una corda* (viết tắt *u.c.*: bàn đạp trái) và *legato*, rồi ghi *tre corde* khi Fa♯ thứ trở lại; thay [bàn đạp](/opus/piano/ban-dap/) phải muộn, để các hợp âm nối liền mà không nhòe.
+**Nghe bằng tai người chơi piano.** Bí mật của bản nhạc nằm ở các **bè giữa**. Phần đệm không phải kiểu "bùm-chát" mà là một mạng lưới những giọng nhỏ chuyển động chậm; nhiều chỗ mỗi tay phải chơi hai bè cùng lúc, ngón 4–5 hát giai điệu còn các ngón phía trong chơi nhẹ hơn. Trong đoạn Fa♯ thứ có ba lớp rõ rệt: bè trên như một cây clarinet, bè giữa như viola, bè trầm chạy bằng chùm ba nốt như cello. Bè giữa đáp lại bè trên theo lối **canon**: nhắc lại bốn nốt mở đầu của bè trên (Đô♯ – Fa♯ – Mi – Rê) ở quãng tám dưới, chậm hơn hai phách (xem [đối âm](/opus/nhac-ly/22-doi-am/)). Khi Fa♯ thứ trở lại, hai bè trên đổi vai để bè giữa dẫn dắt. Brahms giấu đối âm trong một khúc nhạc êm như bài hát ru. Ở khúc hợp xướng, Brahms ghi *una corda* (viết tắt *u.c.*: bàn đạp trái) và *legato*, rồi ghi *tre corde* khi Fa♯ thứ trở lại; thay [bàn đạp](/opus/piano/ban-dap/) phải muộn, để các hợp âm nối liền mà không nhòe.
 
 ## Sơ đồ cấu trúc
 
@@ -52,7 +52,7 @@ Ghi lại thời điểm (phút:giây) bạn nghe thấy từng sự kiện tron
 - Ba nốt đầu tiên xuất hiện lại bao nhiêu lần trong đoạn A? Có lúc nào chúng nằm ở bè giữa hay bè trầm không?
 - Trong đoạn Fa♯ thứ, thử chỉ nghe bè giữa: nó bắt chước bè trên sau bao lâu?
 - Khúc hợp xướng Fa♯ trưởng khác phần còn lại thế nào về âm lượng, âm vực và tốc độ?
-- Khi đoạn A trở về, các nốt gần như không đổi. Vì sao nó nghe khác lần đầu?
+- Khi đoạn A trở về, phần mở đầu được rút ngắn (16 ô còn 8 ô, viết khác đi); từ đó đến hết, các nốt gần như không đổi. Vì sao nó nghe khác lần đầu?
 - Nghe hai bản thu: bản nào để các bè giữa "nói" rõ hơn? Bản nào co giãn nhịp (rubato) nhiều hơn?
 
 ## So sánh bản thu

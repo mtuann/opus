@@ -34,8 +34,8 @@ Ghi lại thời điểm (phút:giây) bạn nghe thấy từng sự kiện tron
 | Thời điểm | Sự kiện |
 |---|---|
 | … | **Clarinet glissando** mở đầu: vuốt từ trầm lên cao |
-| … | Chủ đề chính đầu tiên: piano độc tấu, tiết tấu nảy |
-| … | Dàn nhạc vào, chủ đề được "mặc áo" giao hưởng |
+| … | Chủ đề chính đầu tiên: clarinet chơi tiếp, cả ban nhạc nhắc lại; rồi **piano** mới vào, độc tấu lần đầu |
+| … | Ban nhạc trở lại, chơi cùng piano |
 | … | Đoạn chậm, trữ tình ở giữa (*Andantino moderato*, Mi trưởng) |
 | … | Piano độc tấu virtuoso: chạy ngón tốc độ cao |
 | … | Trở lại chủ đề chính, dồn dập về kết |
