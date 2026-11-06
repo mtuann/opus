@@ -14,6 +14,9 @@ const coSw = fs.existsSync(path.join(DIST, 'sw.js'));
 // trang đã xem: trang có khuông nhạc (abcjs tải từ public/vendor/) nếu có trong bản build, không thì trang chủ
 const TRANG_XEM = ['nhac-ly/02-khuong-nhac-khoa/', 'bat-dau/'].find((t) => fs.existsSync(path.join(DIST, t, 'index.html'))) ?? '';
 const SACH = 'sach/nhac-ly-co-ban.html';
+// service worker đăng ký CHO_DANG_KY (8 giây) sau load, rồi chờ lúc rảnh (tối đa 5 giây), rồi mới cài và lưu sẵn:
+// trên máy CI chậm (Firefox) 20 giây không đủ cho lúc nhận điều khiển trang
+const CHO_SW = 45000;
 const coSach = fs.existsSync(path.join(DIST, SACH));
 
 for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
@@ -27,7 +30,7 @@ for (const [ten, loai] of Object.entries(TRINH_DUYET)) {
 			const g = await goc();
 			await p.goto(g + TRANG_XEM, { waitUntil: 'load' });
 			// sw.js cài xong (lưu sẵn), kích hoạt và nhận điều khiển trang (clients.claim)
-			await p.waitForFunction(() => navigator.serviceWorker?.controller?.state === 'activated', null, { timeout: 20000 });
+			await p.waitForFunction(() => navigator.serviceWorker?.controller?.state === 'activated', null, { timeout: CHO_SW });
 			const phien = await p.evaluate(async () => (await caches.keys()).filter((k) => k.startsWith('opus-sw-')));
 			assert.equal(phien.length, 1, 'một bộ nhớ đệm của phiên bản này');
 			// xem lại khi service worker đã điều khiển: trang và tệp của nó vào bộ nhớ đệm
@@ -116,7 +119,7 @@ test('chromium: khi service worker điều khiển trang, tìm kiếm vẫn ra k
 		const ctx = await trinhDuyet.newContext({ serviceWorkers: 'allow' });
 		const p = await ctx.newPage();
 		await p.goto(await goc(), { waitUntil: 'load' });
-		await p.waitForFunction(() => navigator.serviceWorker?.controller?.state === 'activated', null, { timeout: 20000 });
+		await p.waitForFunction(() => navigator.serviceWorker?.controller?.state === 'activated', null, { timeout: CHO_SW });
 		const tim = () =>
 			p.evaluate(async () => {
 				const pf = await import(`/opus/pagefind/pagefind.js?lan=${Math.random()}`);
