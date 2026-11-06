@@ -146,3 +146,9 @@ Các câu đổi chữ còn lại không chạy thêm lượt 2, theo quy ước
 - **Trang mẫu Henle HN 1822** có dấu mở nhắc lại ở ô 41 mà không có dấu đóng. Bản rdj không có dấu này. Trang không nhắc tới.
 - **Niên đại bản in đầu của Valse La thứ.** Trang và `cap-nhat` (đã khóa) viết "in năm 1860 dưới tên Charlotte de Rothschild", theo IMSLP và đã qua lượt 2. Nhưng Ấn bản Quốc gia và Henle chỉ nói bản in đầu tiên dưới tên Chopin là năm 1955 (*La Revue musicale*). Hai điều này không mâu thuẫn, nhưng chỉ có IMSLP nói về bản in năm 1860.
 - **Còn trống trong lần kiểm định cuối của 12 hồ sơ:** `nguoi.luot_2` (người làm lượt 2 và lượt 2 bổ sung) và `nguoi.kiem_mau`.
+
+## Lượt 2 bổ sung và trạng thái khóa (người gom)
+
+- Lượt 2 bổ sung (Claude Opus 5.5): `ket-qua-bo-sung.yml` 8 dung; đã `nhap`.
+- Đã điền `nguoi.luot_2` cho 12 hồ sơ (6 trang, 6 bản ghi). Còn thiếu cho khóa: `nguoi.kiem_mau`.
+- Mẫu kiểm: 8 nhận định ở `d6-l2-gom/kiem-mau.yml` (`xuat D6-L2 --mau 8`).
