@@ -4,7 +4,7 @@ description: "Bản valse Chopin viết năm 19 tuổi và không bao giờ tự
 tac_pham: chopin-valse-si-thu
 ---
 
-Bản valse Chopin viết năm 19 tuổi và không bao giờ tự cho in: buồn, mềm mại, hát nhiều hơn nhảy. Sau [Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/), đây là bước tiếp tự nhiên: tay trái đổi thế nhiều hơn, giai điệu nhiều trang trí hơn, và một trio Si trưởng có những câu nhạc đi bằng quãng ba.
+Bản valse Chopin viết năm 19 tuổi và không bao giờ tự cho in: buồn, mềm mại, hát nhiều hơn nhảy. Sau [Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/), đây là bước tiếp tự nhiên: tay trái đổi hợp âm gần như mỗi ô, giai điệu có những nốt trang trí viết ra bằng nốt thường, và một trio Si trưởng có những câu nhạc đi bằng quãng ba.
 
 ::hop-tac-pham
 
@@ -20,7 +20,7 @@ Bản valse Chopin viết năm 19 tuổi và không bao giờ tự cho in: buồ
 
 Năm 1829, Chopin 19 tuổi và vẫn sống ở Warsaw; cuối năm 1830 ông rời Ba Lan, rồi sống ở Paris cho đến khi mất (1849). Bản valse Si thứ ra đời trong những năm ấy, và Chopin không tự cho in nó. Bài được in lần đầu năm 1852, ba năm sau khi ông mất, cùng với bản Valse Fa thứ (sau này là Op. 70 số 2). Năm 1855, người bạn của Chopin là Julian Fontana in các tập tác phẩm di cảo, trong đó có hai tập valse Op. 69 và Op. 70; bản này trở thành Op. 69 số 2.
 
-Về thể loại valse và chỗ đứng của nó trong các phòng khách Paris, xem lại trang [Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/). Valse của Chopin là nhạc để nghe hơn là để nhảy, và bản Si thứ là ví dụ rõ: nhịp 3 vẫn đều đặn ở tay trái, nhưng giai điệu như một lời than thở nhỏ.
+Về thể loại valse và những năm Chopin sống ở Paris, xem lại trang [Valse La thứ](/opus/piano/tac-pham/chopin-valse-la-thu/). Valse của Chopin là nhạc để nghe hơn là để nhảy, và bản Si thứ là ví dụ rõ: nhịp 3 vẫn đều đặn ở tay trái, nhưng giai điệu như một lời than thở nhỏ.
 
 :::note[Hai phiên bản]
 Bài được truyền lại ở **hai phiên bản**. Ấn bản Henle in cả hai, một bản được ghi rõ là "phiên bản theo Fontana". Đoạn trích trên trang này lấy từ ấn bản Peters do Herrmann Scholtz biên tập, qua bản gõ lại của Mutopia Project. Nếu bạn học từ Henle hoặc Ấn bản Quốc gia Ba Lan, hãy biết mình đang đọc phiên bản nào, và đừng trộn chi tiết của hai bản.
@@ -65,7 +65,7 @@ Số ô dưới đây theo ấn bản Peters (bản Mutopia): 144 ô cộng mộ
 |---|---|---|---|---|
 | A | 1–16 | Si thứ | Chủ đề: bốn câu 4 ô; giai điệu đi xuống từ Fa♯ trên tay trái valse; *poco rit.* ở ô 14–15 | Nốt Fa♯ ngân qua vạch nhịp; tay trái vào đúng phách 1 |
 | A | 17–32 | Si thứ | Chủ đề lần hai; ô 32 rẽ sang Rê trưởng qua nốt Si♭ | Lần hai đừng y hệt lần đầu |
-| B | 33–48 | Rê trưởng | *con anima*: câu 8 ô nói hai lần, lần hai đổi đường đi; kết trên hợp âm át bảy của Si thứ | Si♭ đầu đoạn là một **appoggiatura** xuống La: nhấn rồi nhả |
+| B | 33–48 | Rê trưởng | *con anima*: câu 8 ô nói hai lần, lần hai đổi đường đi; kết trên hợp âm át bảy của Si thứ | Si♭ đầu đoạn là một nốt nghịch rơi đúng phách, rồi giải bậc xuống La: nhấn rồi nhả |
 | A' | 49–64 | Si thứ | Chủ đề với những nốt lân cận nửa cung; cả ô 33–64 nhắc lại | Trang trí nhẹ, giai điệu chính vẫn rõ |
 | Trio | 65–96 | Si trưởng, rồi Si thứ | *dolce*: câu 8 ô nói hai lần (65–80); lần hai bằng nốt kép, chủ yếu quãng ba (81–88; ô 85–88 xen quãng sáu); từ ô 89 về Si thứ; ô 94 có một hợp âm sáu tăng dẫn về át âm | Tiếng ấm, tay trái nhẹ hơn nữa; quãng ba legato |
 | A – B – A' | 97–144 | Si thứ, Rê trưởng, Si thứ | Phần đầu trở lại, không nhắc lại; kết *calando e dimin.* | Ô 97: nốt trầm Si1, thấp hơn nốt Si3 của hợp âm hai quãng tám |

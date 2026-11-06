@@ -47,7 +47,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | … | **Câu 3** (ô 9–12): mở đầu như cũ nhưng hòa âm tối lại, hướng về Sol thứ; đường nét bè trong chuyền giữa hai tay |
 | … | **Câu 4** (ô 13–16): lên cao hơn, qua Si♭ trưởng rồi Rê thứ; *ritard.* ở ô 16 |
 | … | **Câu 5** (ô 17–20): chủ đề trở lại nguyên vẹn, mềm hơn, như một kỷ niệm |
-| … | **Câu 6 và fermata** (ô 21–24): giai điệu lên đến La; hợp âm đỉnh mang dấu ngân (fermata) duy nhất của bài |
+| … | **Câu 6 và fermata** (ô 21–24): giai điệu lên đến La; hợp âm đỉnh ở ô 22 mang dấu ngân (fermata), dấu ngân duy nhất trước hợp âm cuối (hợp âm cuối cũng có dấu ngân) |
 | … | **Kết**: *ritardando*, bài khép lại ở Fa trưởng |
 
 ## Cấu trúc
@@ -62,7 +62,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | B | 9–12 | Câu 3: mở đầu như cũ nhưng hòa âm tối lại, hướng về Sol thứ | Các đường nét bè trong chuyền từ tay trái sang tay phải |
 | B | 13–16 | Câu 4: lên cao hơn qua Si♭ trưởng rồi Rê thứ | *ritard.* ở ô 16, ngay trước khi chủ đề trở lại |
 | A' | 17–20 | Câu 5: chủ đề trở lại nguyên vẹn | Như một kỷ niệm, mềm hơn lần đầu |
-| A' | 21–24 | Câu 6: lên đến La, hợp âm đỉnh có dấu ngân (fermata) duy nhất của bài, rồi *ritardando* về kết | Dồn hết ý nghĩa của bài vào hợp âm ngân này |
+| A' | 21–24 | Câu 6: lên đến La, hợp âm đỉnh có dấu ngân (fermata), rồi *ritardando* về kết; hợp âm cuối cũng có dấu ngân | Dồn hết ý nghĩa của bài vào hợp âm ngân này |
 
 Mỗi câu đều bắt đầu bằng cùng một cử chỉ: một hợp âm rải đi lên từ nhịp lấy đà. Học thuộc bài này nghĩa là nhớ sáu cách khác nhau mà cử chỉ ấy đi tiếp.
 
@@ -71,7 +71,7 @@ Mỗi câu đều bắt đầu bằng cùng một cử chỉ: một hợp âm r�
 | Chỗ khó | Vì sao khó | Cách tập |
 |---|---|---|
 | Giai điệu và hợp âm trong cùng tay phải | Ngón 4–5 yếu phải hát, ngón 1–2 khỏe phải thì thầm | Chơi riêng giai điệu với đúng ngón sẽ dùng; rồi chơi cả hợp âm nhưng các nốt dưới bấm câm; rồi cho chúng kêu thật khẽ. Dồn trọng lượng nghiêng về phía ngón út. Bài tập 1 |
-| Nốt dài của giai điệu (ô 2, ô 6…) | Nốt Fa cao tắt dần trong khi các bè khác tiếp tục; dễ "đánh thức" nốt sau quá to | Nghe nốt dài tắt đến đâu, cho các bè trong vào nhỏ hơn mức còn lại của nó; nốt giai điệu tiếp theo vào đúng độ to của đuôi nốt dài. Bài tập 2 |
+| Nốt dài của giai điệu (Fa cao ở ô 2, La cao ở ô 6…) | Nốt dài tắt dần trong khi các bè khác tiếp tục; dễ "đánh thức" nốt sau quá to | Nghe nốt dài tắt đến đâu, cho các bè trong vào nhỏ hơn mức còn lại của nó; nốt giai điệu tiếp theo vào đúng độ to của đuôi nốt dài. Bài tập 2 |
 | Bè tenor trong tay trái | Ngón cái trái dễ nặng; tenor và bè trầm cùng một tay | Tập riêng bè tenor như một giai điệu, hát theo; rồi thêm bè trầm thật nhẹ bên dưới |
 | Đường nét chuyền giữa hai tay (đoạn B) | Chỗ đổi tay dễ nghe thấy: nốt to lên, ngắt hơi | Chơi đường nét đó liền một hơi chỉ bằng một tay (nếu với tới) để nghe đích; rồi chia tay, nốt đầu của tay sau phải vào đúng độ to của nốt cuối tay trước. Bài tập 3 |
 | Legato hợp âm và bàn đạp | Không nối được hết bằng ngón; đổi bàn đạp muộn làm nhòe, sớm làm đứt | Bàn đạp nối: nhấn sau khi đánh, nhả và nhấn lại ngay sau mỗi hòa âm mới. Tập chậm, chỉ nghe chỗ đổi. Xem [Bàn đạp](/opus/piano/ban-dap/) |
@@ -163,7 +163,7 @@ Con số ♩ = 100 của Schumann cho thấy ông nghĩ bài này **trôi**, kh�
 
 ### Rubato và ritardando
 
-Schumann chỉ ghi *ritard.* ở ba chỗ, nơi các đoạn nối vào nhau, và chỉ một fermata, ngay trước câu kết. Đó là lời nhắc rằng phần còn lại cần chạy liền mạch. Rubato ở đây là hơi thở nhỏ: nán lại một chút ở đỉnh câu, bắt kịp khi giai điệu đi xuống; không phải chậm lại ở mọi cuối câu.
+Schumann chỉ ghi *ritard.* ở ba chỗ, nơi các đoạn nối vào nhau; ngoài dấu ngân ở hợp âm cuối, bài chỉ có một fermata, ở ô 22, ngay trước câu kết. Đó là lời nhắc rằng phần còn lại cần chạy liền mạch. Rubato ở đây là hơi thở nhỏ: nán lại một chút ở đỉnh câu, bắt kịp khi giai điệu đi xuống; không phải chậm lại ở mọi cuối câu.
 
 ### Âm thanh và cân bằng
 

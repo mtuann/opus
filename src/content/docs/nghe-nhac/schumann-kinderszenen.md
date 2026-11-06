@@ -46,7 +46,7 @@ Năm 1838, Schumann 27 tuổi, đã đính hôn với nghệ sĩ piano trẻ Cla
 **Mười ba bản nhỏ thành một tác phẩm nhờ đâu?**
 
 - **Giọng**: mở và khép ở **Sol trưởng**; phần lớn các bản ở những giọng gần Sol (Rê, La, Si thứ, Mi thứ). Ở giữa, chu trình rẽ sang Fa trưởng và Đô trưởng (số 7–9), rồi nhảy tới Sol♯ thứ, giọng xa nhất (số 10), trước khi trở về.
-- **Môtip chung**: năm nốt mở đầu số 1, một bước nhảy lên quãng 6 rồi bốn nốt đi xuống, vang lại ở nhiều bản sau, thường chỉ còn chuỗi đi xuống.
+- **Môtip chung**: năm nốt mở đầu số 1, một bước nhảy lên quãng 6 rồi bốn nốt đi xuống; số 4 có liên hệ rõ với chủ đề này.
 - **Các bản nối nhau**: số 4 hỏi, số 5 đáp; *Träumerei* và *Am Kamin* cùng mở bằng Đô–Fa; số 12 dừng lửng, số 13 tiếp lời và khép lại ở Sol trưởng.
 - **Thứ tự**: *Träumerei* là số 7 trong 13, nằm đúng giữa. Số 13 là lời kết: người kể chuyện, giờ đã lớn, bước ra nói với ta.
 

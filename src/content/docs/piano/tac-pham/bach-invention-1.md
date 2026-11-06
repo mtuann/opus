@@ -92,7 +92,7 @@ K:C
 | Chọn và giữ cách phát âm | Không có dấu nào trên bản nhạc; mỗi lần chơi một kiểu thì không bao giờ ổn định | Quyết định một lần, ghi bằng bút chì: cùng một môtip thì cùng một cách phát âm, ở cả hai tay. Xem phần Diễn tấu |
 | Ngón bấm | Chủ đề xuất hiện ở nhiều độ cao; đổi ngón tùy hứng làm tay lúng túng | Chủ đề đi lên ở tay phải có thể dùng 1-2-3-4-2-3-1; ở tay trái 5-4-3-2-4-3-5. Chọn cho từng lần xuất hiện, ghi lại, giữ nguyên |
 | Nhận ra chủ đề và chủ đề đảo | Không thấy cấu trúc thì học thuộc rất mệt và dễ lạc | Tô màu chủ đề và chủ đề đảo trên bản nhạc; chơi riêng các lần xuất hiện của chủ đề; hát một bè trong khi chơi bè kia |
-| Chuỗi (ô 3–4, 11–12, 15–18) | Các nhóm nốt trông giống nhau nhưng mỗi lần lệch một bậc; dễ nhảy nhầm nhóm | Gọi tên nốt đầu mỗi nhóm; chơi "khung" chỉ gồm nốt đầu các nhóm, rồi mới chơi đầy đủ |
+| Chuỗi (ô 3–4, 11–12, 15–18) | Các nhóm nốt trông giống nhau, mỗi lần dời xuống (ô 3–4, 11–12: một quãng ba; ô 15–18: một bậc); dễ nhảy nhầm nhóm | Gọi tên nốt đầu mỗi nhóm; chơi "khung" chỉ gồm nốt đầu các nhóm, rồi mới chơi đầy đủ |
 | Nốt dài ở ô 15–18 | Nốt trắng nối sang ô sau dễ bị nhấc sớm khi tay kia bận | Đếm to; giữ đủ trường độ; để nốt dài hát trong lúc bè kia chạy |
 | Nốt hoa mỹ | Láy trên và láy dưới làm rối nhịp nếu thêm quá sớm | Học bài không có nốt hoa mỹ trước; thêm sau, chậm, viết rõ các nốt; xem [Nốt hoa mỹ](/opus/piano/not-hoa-my/) |
 | Ba điểm kết | Hoặc không ai nhận ra, hoặc bị dừng hẳn như hết bài | Nới rất nhẹ trước ô 7 và ô 15, rồi đi tiếp ngay; chỉ ô 22 mới thật sự dừng |
@@ -215,7 +215,7 @@ Dùng bản Urtext. Nhiều ấn bản cũ thêm dấu luyến, sắc thái và 
 - Chơi nhanh nhiều lần cho quen tay
 + Gọi tên nốt đầu mỗi nhóm, chơi "khung" chỉ gồm nốt đầu các nhóm, rồi mới chơi đầy đủ
 - Chỉ tập tay phải, tay trái sẽ tự theo
-> Các nhóm nốt trông giống nhau nhưng mỗi lần lệch một bậc; chơi khung giúp bạn không nhảy nhầm nhóm.
+> Các nhóm nốt trông giống nhau, mỗi lần dời xuống; chơi khung giúp bạn không nhảy nhầm nhóm.
 ```
 
 ## Nguồn

@@ -74,7 +74,7 @@ Chương 1, Allegro (73 ô nhịp; số ô nhịp theo bản Urtext, các sách 
 
 **Chương 2, Andante** (Sol trưởng, 3/4): tay trái đệm Alberti gần như suốt chương. Phần đầu dài mười sáu ô nhịp (một chủ đề tám ô rồi tám ô tiếp nối), có nhắc lại; phần thứ hai mở ở giọng át rồi quay về; phần giữa tối lại ở Sol thứ, đi qua Si♭ trưởng và Đô thứ, trước khi chủ đề trở về và một coda ngắn khép lại. Khó nhất là giữ giai điệu hát trên lớp Alberti ở tốc độ chậm, nơi mọi nốt không đều đều lộ ra.
 
-**Chương 3, Rondo** (Đô trưởng, 2/4): chủ đề vui, có chỗ tay trái bắt chước tay phải như một trò đuổi bắt; đoạn xen thứ nhất ở Sol trưởng (lại có Alberti), đoạn giữa ở La thứ; chủ đề quay lại và kết. Ngắn (khoảng 1,5 phút) nhưng nhanh và đòi hỏi hai tay ngang tài nhau.
+**Chương 3, Rondo** (Đô trưởng, 2/4): chủ đề vui, có chỗ tay trái bắt chước tay phải như một trò đuổi bắt; đoạn xen thứ nhất ở Sol trưởng (lại có Alberti), đoạn giữa ở La thứ; chủ đề quay lại và kết. Ngắn (chưa tới 2 phút) nhưng nhanh và đòi hỏi hai tay ngang tài nhau.
 
 ## Chỗ khó và cách tập
 
@@ -173,7 +173,7 @@ Kế hoạch 8 tuần cho chương 1, tập 45–60 phút mỗi ngày (thêm 2�
 
 ### Tốc độ và nhịp
 
-*Allegro* thời Mozart là vui, nhanh vừa, không phải chạy đua. Nghĩ theo **hai phách trắng mỗi ô**: giai điệu sẽ có hướng đi. Giữ tốc độ ổn định; chỉ cho phép hơi thở rất nhỏ ở cuối phần.
+*Allegro* nghĩa là vui, nhanh, nhưng không phải chạy đua. Nghĩ theo **hai phách trắng mỗi ô**: giai điệu sẽ có hướng đi. Giữ tốc độ ổn định; chỉ cho phép hơi thở rất nhỏ ở cuối phần.
 
 ### Sắc thái
 

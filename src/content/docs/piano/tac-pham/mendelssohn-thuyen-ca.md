@@ -67,7 +67,7 @@ Số ô nhịp theo ấn bản Breitkopf & Härtel (bản Mutopia). Mỗi câu c
 | A' | 34–39 | Chủ đề trở lại, lần này *mf*; quãng tám Rê cao xen giữa các nốt giai điệu; *dim.*, rồi *pp* | Quãng tám là tiếng vọng, không lấn giai điệu |
 | Coda | 40–46 | Tiếng gọi Fa – Mi♭ – Rê trở lại *pp* trên bè trầm Fa – Si♭ – Đô – Rê; nhịp chèo thưa dần, kết trên Sol1 có dấu ngân | Giữ nhịp đều tới cùng; để âm thanh tự tan |
 
-Hình thức tổng thể là ba phần có mở đầu và coda (xem [Hình thức nhỏ](/opus/nhac-ly/31-hinh-thuc-nho/)). Đoạn B không đưa ra chủ đề mới mà làm giai điệu căng lên bằng hòa âm: hợp âm bảy giảm (xem [Hợp âm bảy](/opus/nhac-ly/11-hop-am-bay/)) và hợp âm sáu tăng (xem [Hợp âm Napoli và sáu tăng](/opus/nhac-ly/24-napoli-sau-tang/)).
+Hình thức tổng thể là ba phần có mở đầu và coda (xem [Hình thức nhỏ](/opus/nhac-ly/31-hinh-thuc-nho/)). Đoạn B làm giai điệu căng lên bằng hòa âm: hợp âm bảy giảm (xem [Hợp âm bảy](/opus/nhac-ly/11-hop-am-bay/)) và hợp âm sáu tăng (xem [Hợp âm Napoli và sáu tăng](/opus/nhac-ly/24-napoli-sau-tang/)).
 
 ### Chủ đề trong bản nhạc (ô 7–11)
 
@@ -163,7 +163,7 @@ K:Gm
 [V:LH] !p!"_Ped."!5!G,,3 "_Ped."D,,3 | "_Ped."G,,3 "_Ped."D,,3 | "_Ped."C,,3 "_Ped."D,,3 | "_Ped."G,,6 |]
 ```
 
-1. Chỉ chơi giai điệu (thân nốt hướng lên) với ngón 4–5, giữ đủ độ dài từng nốt.
+1. Chỉ chơi giai điệu (thân nốt hướng lên) với các ngón đã ghi (chủ yếu 4–5, riêng La ở ô 1 ngón 3), giữ đủ độ dài từng nốt.
 2. Chỉ chơi các hợp âm đệm (thân nốt hướng xuống) bằng ngón 1–2–3, *pp*, sát phím.
 3. Ghép lại: nốt giai điệu không được tắt khi các ngón trong đánh hợp âm. Ô 3 khó nhất: ngón 4 rồi ngón 5 giữ nốt dài trong khi các ngón trong đánh hợp âm hai lần. Đây chính là việc của tay phải ở ô 18–24 và 26–31.
 

@@ -22,11 +22,11 @@ Nếu chưa rải hợp âm đều và nhẹ, học trước [Bach: Prelude Đô
 
 ## Bối cảnh
 
-Năm 1802, Beethoven cho in hai sonata Op. 27 và đặt cho cả hai tên *Sonata quasi una fantasia*, "sonata gần như một fantasia". Thay vì mở đầu bằng một chương nhanh theo hình thức sonata như thông lệ, Op. 27 số 2 mở bằng một *Adagio* tĩnh lặng, tiếp theo là một *Allegretto* ngắn ở Rê♭ trưởng, và để chương nhanh, *Presto agitato*, ở cuối. Bản sonata được đề tặng nữ bá tước trẻ Giulietta Guicciardi, học trò của ông.
+Năm 1802, Beethoven cho in hai sonata Op. 27 và đặt cho cả hai tên *Sonata quasi una fantasia*, "sonata gần như một fantasia". Thay vì mở đầu bằng một chương nhanh theo hình thức sonata như thông lệ, Op. 27 số 2 mở bằng một *Adagio* tĩnh lặng, tiếp theo là một *Allegretto* ngắn ở Rê♭ trưởng, và để chương nhanh, *Presto agitato*, ở cuối. Bản sonata được đề tặng nữ bá tước Giulietta Guicciardi, học trò của ông.
 
-Cây đàn quan trọng để hiểu chương này. Trên nhiều cây đàn Vienna khoảng năm 1800, **bộ giảm âm** (những miếng nỉ đè lên dây để chặn tiếng) được nhấc lên bằng cần gạt đầu gối, còn đàn cũ hơn nữa dùng nút gạt bằng tay; tiếng đàn tắt nhanh hơn đàn hiện đại nhiều. Vì vậy chỉ dẫn bàn đạp ở đầu chương (xem phần Diễn tấu) không thể áp dụng y nguyên lên một cây đàn cánh ngày nay. Xem thêm [Lịch sử cây đàn piano](/opus/piano/lich-su-dan/) và [thời kỳ Cổ điển](/opus/lich-su/thoi-ky/co-dien/).
+Cây đàn quan trọng để hiểu chương này. Trên nhiều cây đàn Vienna khoảng năm 1800, **bộ giảm âm** (những miếng nỉ đè lên dây để chặn tiếng) được nhấc lên bằng cần gạt đầu gối. Murray Perahia, trong lời tựa ấn bản Henle, cho rằng chỉ dẫn bàn đạp ở đầu chương (xem phần Diễn tấu) không thể hiểu theo nghĩa đen. Xem thêm [Lịch sử cây đàn piano](/opus/piano/lich-su-dan/) và [thời kỳ Cổ điển](/opus/lich-su/thoi-ky/co-dien/).
 
-Biệt danh **"Ánh trăng"** không phải của Beethoven. Nhà thơ, nhà phê bình Ludwig Rellstab (1799–1860), người viết lời cho nhiều ca khúc trong tập *Schwanengesang* của Schubert, đã tả chương này bằng hình ảnh mặt hồ lặng dưới ánh trăng mờ, sóng khẽ vỗ vào bờ tối, trong truyện ngắn *Theodor* đăng trên một tạp chí âm nhạc ở Berlin khoảng năm 1823–1824, tức khi Beethoven còn sống. Câu chuyện quen thuộc rằng năm 1832 Rellstab ví bài với con thuyền dưới trăng trên hồ Lucerne bắt nguồn từ cuốn *Beethoven et ses trois styles* (1852) của Wilhelm von Lenz. Lenz chỉ viết rằng Rellstab so sánh như thế "hai mươi năm trước"; năm 1832 là con số người đời sau suy ra từ câu ấy. Văn bản của Rellstab tả một mặt hồ, không có con thuyền nào và không nhắc tên hồ. Đến khoảng năm 1840, tên *Mondscheinsonate* (Sonata ánh trăng) đã quen thuộc ở Đức.
+Biệt danh **"Ánh trăng"** không phải của Beethoven. Nhà thơ, nhà phê bình Ludwig Rellstab (1799–1860), người viết lời cho nhiều ca khúc trong tập *Schwanengesang* của Schubert, đã tả chương này bằng hình ảnh mặt hồ lặng dưới ánh trăng mờ, sóng khẽ vỗ vào bờ tối, trong truyện ngắn *Theodor* đăng trên một tạp chí âm nhạc ở Berlin khoảng năm 1823–1824, tức khi Beethoven còn sống. Câu chuyện quen thuộc rằng năm 1832 Rellstab ví bài với con thuyền dưới trăng trên hồ Lucerne bắt nguồn từ cuốn *Beethoven et ses trois styles* (1852) của Wilhelm von Lenz. Lenz không ghi năm: ông viết rằng biệt danh *Mondscheinsonate*, thứ "hai mươi năm trước" từng làm giới sành nhạc ở Đức phản đối, bắt nguồn từ lời so sánh của Rellstab; năm 1832 là con số người đời sau suy ra. Văn bản của Rellstab tả một mặt hồ, không có con thuyền nào và không nhắc tên hồ. Đến khoảng năm 1840, tên *Mondscheinsonate* (Sonata ánh trăng) đã quen thuộc ở Đức.
 
 ## Nghe trước khi tập
 
@@ -37,7 +37,7 @@ Biệt danh **"Ánh trăng"** không phải của Beethoven. Nhà thơ, nhà ph�
 3. **Bàn đạp:** khi hòa âm đổi, tiếng đàn sạch hẳn, hay còn vương một làn sương?
 4. **Tốc độ:** bạn cảm thấy hai phách hay bốn phách mỗi ô? Chương nhạc dài bao nhiêu phút trong bản thu ấy?
 
-So sánh một bản trên đàn hiện đại (ví dụ Artur Schnabel hoặc Wilhelm Kempff, hai người đều thu trọn 32 sonata) với một bản trên fortepiano (ví dụ Ronald Brautigam). Trên đàn cũ, tiếng tắt nhanh nên bàn đạp giữ lâu vẫn không nhòe như trên đàn hiện đại. Xem thêm [Nghệ sĩ piano và bản thu nên nghe](/opus/piano/nghe-si/).
+So sánh một bản trên đàn hiện đại (ví dụ Artur Schnabel hoặc Wilhelm Kempff, hai người đều thu trọn 32 sonata) với một bản trên fortepiano (ví dụ Ronald Brautigam). Nghe xem bàn đạp giữ lâu vang thế nào trên mỗi cây đàn. Xem thêm [Nghệ sĩ piano và bản thu nên nghe](/opus/piano/nghe-si/).
 
 ::khoi-nghe{moc="5 27 46 74 112 131 195 282"}
 
@@ -206,13 +206,13 @@ Trong bản Winterberger dùng trên trang này, toàn chương không có một
 
 Beethoven ghi chỉ dẫn này hai lần: một câu dài ở đầu bản nhạc, *Si deve suonare tutto questo pezzo delicatissimamente e senza sordino* ("cả chương này phải chơi hết sức tinh tế và không có bộ giảm âm"), và *sempre pp e senza sordino* giữa hai khuông. Tùy ấn bản, chữ này được in là *sordino* hoặc *sordini*; nghĩa như nhau. Thời Beethoven, *sordini* là bộ giảm âm, nên *senza sordino* nghĩa là bộ giảm âm luôn được nhấc lên: tương đương giữ **bàn đạp vang**. Đây không phải chỉ dẫn về bàn đạp trái; khi muốn *una corda*, Beethoven ghi riêng chữ ấy, chẳng hạn trong các sonata cuối đời.
 
-Trên đàn của ông, giữ bộ giảm âm nhấc suốt chỉ tạo một làn sương mỏng, vì tiếng tắt nhanh. Trên đàn cánh hiện đại, cộng hưởng dày và kéo dài hơn nhiều; giữ nguyên bàn đạp qua các lần đổi hòa âm, nhất là khi bè trầm đổi, sẽ thành một khối âm thanh nhòe. Người chơi hôm nay có ba cách đọc chính:
+Murray Perahia, trong lời tựa ấn bản Henle, cho rằng chỉ dẫn này không thể hiểu theo nghĩa đen: các hợp âm có thể hòa vào nhau, nhưng không được xóa mất nghĩa hòa âm, và chỗ hai hợp âm trái nhau (như trưởng và thứ ở ô 9–10) phải nghe rõ. Theo ông, chỉ dẫn có nghĩa là lúc nào cũng phải có tiếng bàn đạp. Giữ nguyên bàn đạp qua các lần đổi hòa âm, nhất là khi bè trầm đổi, sẽ làm nhòe đúng những chỗ ấy. Người chơi hôm nay có thể đọc chỉ dẫn theo ba cách:
 
 | Cách đọc | Làm thế nào | Được và mất |
 |---|---|---|
-| Theo sát chữ | Giữ bàn đạp suốt chương, hoặc gần như suốt. Charles Rosen đọc chỉ dẫn theo nghĩa này | Gần nhất với "làn sương" mà Beethoven nghe thấy; trên đàn hiện đại dễ nhòe, cần chơi thật nhỏ; hợp hơn với fortepiano hoặc phòng rất khô |
-| Đổi theo hòa âm | Coi chỉ dẫn là "dùng bàn đạp suốt chương", và đổi bằng **bàn đạp nối** mỗi khi nốt trầm hoặc hòa âm đổi | Sạch, rõ; là cách thông dụng trên đàn hiện đại, nhưng đổi quá kỹ thì tiếng khô và mất vẻ mơ hồ |
-| Ở giữa | Đổi nhanh nhưng không nhả hết (đổi một phần), hoặc giữ bàn đạp ở gần điểm bắt và điều chỉnh rất nhỏ, không bao giờ đạp sâu hết hay nhả hết | Giữ được chút sương mà không nhòe; cần tai tốt và phải thử trên từng cây đàn, từng căn phòng |
+| Theo sát chữ | Giữ bàn đạp suốt chương, hoặc gần như suốt | Gần nhất với chữ của chỉ dẫn; trên đàn hiện đại dễ nhòe, cần chơi thật nhỏ; hợp hơn ở phòng rất khô |
+| Đổi theo hòa âm | Coi chỉ dẫn là "dùng bàn đạp suốt chương", và đổi bằng **bàn đạp nối** mỗi khi nốt trầm hoặc hòa âm đổi | Sạch, rõ; nhưng đổi quá kỹ thì tiếng khô và mất vẻ mơ hồ |
+| Ở giữa | Đổi nhanh nhưng không nhả hết (đổi một phần), hoặc giữ bàn đạp ở gần điểm bắt và điều chỉnh rất nhỏ, không bao giờ đạp sâu hết hay nhả hết | Giữ được chút vang mà không nhòe; cần tai tốt và phải thử trên từng cây đàn, từng căn phòng |
 
 Lời khuyên cho người học: tập trước với cách thứ hai cho đến khi bàn đạp nối thật sạch (bài tập 2). Sau đó, ở những chỗ hòa âm đổi chậm, thử đổi một phần để giữ lại chút vang của hòa âm trước. Giữ đúng *sempre pp*: chơi càng nhỏ, cộng hưởng càng ít nhòe. Khi bè trầm ngân qua nhiều ô có dấu nối, giữ phím quãng tám bằng tay trái thì đổi bàn đạp vẫn không mất nốt trầm. Thu âm và nghe lại từ xa: điều bạn nghe ở ghế đàn khác điều người nghe ở cuối phòng. Xem [Bàn đạp](/opus/piano/ban-dap/).
 
@@ -248,7 +248,7 @@ Bản Urtext cho bạn đúng chữ của Beethoven. Các ấn bản cũ có th�
 + Không có bộ giảm âm: bộ giảm âm luôn nhấc lên, tức giữ bàn đạp vang
 - Không dùng bàn đạp trái (una corda)
 - Chơi không có tiếng đệm
-> Thời Beethoven, sordini là bộ giảm âm. Trên đàn hiện đại, người chơi thường đổi bàn đạp theo hòa âm, hoặc chỉ nhả một phần để giữ chút sương.
+> Thời Beethoven, sordini là bộ giảm âm. Murray Perahia (lời tựa ấn bản Henle) cho rằng chỉ dẫn này không thể hiểu theo nghĩa đen: lúc nào cũng có tiếng bàn đạp, nhưng hòa âm không được nhòe.
 ? Trong nhịp chấm dôi của giai điệu, nốt móc kép rơi vào đâu so với chùm ba?
 + Sau nốt thứ ba của chùm ba, sát phách sau
 - Cùng lúc với nốt thứ ba của chùm ba
@@ -268,10 +268,9 @@ Bản Urtext cho bạn đúng chữ của Beethoven. Các ấn bản cũ có th�
 
 ## Nguồn
 
-- Beethoven, *Piano Sonata no. 14 c sharp minor op. 27 no. 2 (Moonlight)*, G. Henle Verlag, HN 1062 (biên tập Norbert Gertsch, ngón bấm Murray Perahia): [trang ấn bản](https://www.henle.de/en/Piano-Sonata-no.-14-c-sharp-minor-op.-27-no.-2-Moonlight/HN-1062), mức độ khó và đoạn văn của Rellstab.
+- Beethoven, *Piano Sonata no. 14 c sharp minor op. 27 no. 2 (Moonlight)*, G. Henle Verlag, HN 1062 (biên tập Norbert Gertsch, ngón bấm Murray Perahia): [trang ấn bản](https://www.henle.de/en/Piano-Sonata-no.-14-c-sharp-minor-op.-27-no.-2-Moonlight/HN-1062), mức độ khó; [lời tựa](https://www.henle.de/media/ca/21/5b/1697725842/1062-1697725842-sync.pdf): đoạn văn của Rellstab, ý kiến của Murray Perahia về chỉ dẫn bàn đạp.
 - Bài viết về nguồn gốc tên *Moonlight* trên [crumey.co.uk](https://crumey.co.uk/beethoven_5_why_moonlight_sonata.html): truyện *Theodor* của Rellstab (1824), sách của Wilhelm von Lenz (1852), tên *Mondscheinsonate* quanh năm 1840.
-- Graham Fitch, ["Pedalling the Moonlight Sonata"](https://practisingthepiano.com/pedalling-moonlight-sonata/), *Practising the Piano* (2017): hai lần ghi chỉ dẫn bàn đạp, cách đọc của Charles Rosen, cách đạp từng phần.
+- Graham Fitch, ["Pedalling the Moonlight Sonata"](https://practisingthepiano.com/pedalling-moonlight-sonata/), *Practising the Piano* (2017): hai lần ghi chỉ dẫn bàn đạp, cách đạp từng phần.
 - Bản dàn trang công cộng của [Mutopia Project](https://www.mutopiaproject.org/) (người nhập: Stewart Holmes; nguồn: ấn bản do A. Winterberger biên tập, 1908): nguồn của đoạn trích, số ô nhịp và các chi tiết nốt nhạc trên trang này.
-- Charles Rosen, *Beethoven's Piano Sonatas: A Short Companion*, Yale University Press, 2002, tr. 108: đoạn về chỉ dẫn bàn đạp, trích trong bài của Fitch ở trên.
 - G. Henle Verlag, [blog về *una corda*, *con sord.*](https://blog.henle.de/en/2013/06/24/una-corda-%e2%80%93-con-sord-%e2%80%93-mit-verschiebung-how-do-i-%e2%80%98mute%e2%80%99-my-piano/) (Norbert Müllemann, 2013): *senza sordino* là "với bàn đạp phải"; *una corda* trong các sonata cuối của Beethoven.
 - Bản nhạc: [IMSLP](https://imslp.org/). Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
