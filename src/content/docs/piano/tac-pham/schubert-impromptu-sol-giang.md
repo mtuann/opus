@@ -104,7 +104,7 @@ K:Gb
 [V:LH] [B,,D,]4 [G,,E,]4 !arpeggio![D,,F,]8 |]
 ```
 
-Đọc theo ba lớp. **Giai điệu** (thân nốt hướng lên): một nốt Si♭4 ngân dài, rồi hai nốt Si♭ có chấm dưới dấu luyến (portato), như hai lời nhắc khẽ. **Dòng chùm sáu** (thân nốt hướng xuống): nhóm nào rơi đúng lúc giai điệu đánh xuống thì bắt đầu bằng dấu lặng, vì ngón tay đang bận; ở ô 3, dưới bốn nốt đen của giai điệu, nó đổi thành chùm ba. **Bè trầm**: những quãng rộng ngân dài, và ở ô 4 một hợp âm rải. Câu dừng trên hợp âm Rê♭ trưởng; nốt La♮ cuối ô 4 dẫn lên Si♭ ở ô 5.
+Đọc theo ba lớp. **Giai điệu** (thân nốt hướng lên): một nốt Si♭4 ngân dài, rồi hai nốt Si♭ có chấm dưới dấu luyến (portato), như hai lời nhắc khẽ. **Dòng chùm sáu** (thân nốt hướng xuống): nhóm nào rơi đúng lúc giai điệu đánh xuống thì bắt đầu bằng dấu lặng, vì ngón tay đang bận; ở ô 3, dưới bốn nốt đen của giai điệu, nó đổi thành chùm ba. **Bè trầm**: những quãng rộng ngân dài, và ở ô 4 một hợp âm rải. Câu dừng trên hợp âm Rê♭ trưởng. Ở giai điệu, nốt La♮ cuối ô 4 dẫn lên Si♭ ở ô 5.
 
 ## Chỗ khó và cách tập
 

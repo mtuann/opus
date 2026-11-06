@@ -44,7 +44,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | Thời điểm | Sự kiện |
 |---|---|
 | … | **Prelude, mở đầu** (ô 1–4): hai tay cùng một kiểu hình móc kép trên nốt Đô trầm đứng yên, đều như một cỗ máy |
-| … | **Prelude, chuyển giọng** (ô 5–20): bè trầm đi xuống dần, hòa âm đổi mỗi ô; nhạc sáng lên quanh Mi♭ trưởng (ô 11–14) rồi tối lại, về Đô thứ |
+| … | **Prelude, chuyển giọng** (ô 5–20): bè trầm nhìn chung đi xuống, hòa âm đổi mỗi ô; nhạc sáng lên quanh Mi♭ trưởng (ô 11–14) rồi tối lại, về Đô thứ |
 | … | **Âm nền át** (ô 21–27): bè trầm dừng trên nốt Sol, độ căng dồn lên; từ ô 25 hình nốt bắt đầu biến đổi |
 | … | **Presto** (ô 28–33): nhanh hẳn; tay phải chạy trước, từ ô 29 tay trái đuổi theo cùng hình nốt |
 | … | **Adagio, rồi Allegro** (ô 34–38): một ô chậm, tự do, đầy nốt trang trí; rồi lao về hợp âm Đô trưởng cuối bài |

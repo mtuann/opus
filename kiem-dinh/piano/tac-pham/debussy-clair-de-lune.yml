@@ -10,7 +10,7 @@ lan:
     nguoi:
       luot_1: Claude Opus 5.5, agent con, D6-L5 phần A
       luot_2: null
-      review: null
+      review: Claude Opus 5.5 (review D6-L5-gom, 05/11/2026)
       kiem_mau: null
 ghi_chu: 'Bài học Clair de lune (tầng Tác phẩm). Bản nhạc: Mutopia debussy_Ste_Bergamesq_Clair (Keith OHara, theo bản in E. Fromont 1905, IMSLP #02907), tải .ly và .mid 05/11/2026 với User-Agent opus-kiem-dinh; script Python (mido) in nốt theo ô (72 ô 9/8) và script đếm vạch nhịp trong \parallelMusic để gắn chỉ dẫn với số ô: Andante très expressif, pp, con sordina ô 1; Tempo rubato ô 15; peu à peu cresc. et animé ô 19; diminuendo molto ô 25; Un poco mosso ô 27; En animant (hóa biểu Đô♯ thứ) ô 37; f ô 41; Calmato ô 43; a Tempo 1º, ppp ô 51; morendo jusqu''à la fin, ppp ô 66. Không có mf nào. Lịch sử: lời tựa Henle HN 381 (PDF, Lesure 1983). Mốc ::khoi-nghe "2 57 71 97 140 162 201 268" (8 mốc / 8 dòng), bản thu Laurens Goedhart 2011 (Commons, phạm vi công cộng, 304,09 s); theo tools/audio/align/pieces.py mốc là ô 1, 15, 19, 27, 37, 43 (đo tay 162,3 s), 51, 66: khớp các dòng bảng. Không nghe lại bản thu. Câu ve-site ở hồ sơ khác: piano/hai-tay n47 (nhóm hai nốt trong 9/8) và n48 (link tới trang này, giữ "Rê♭ trưởng · 9/8" và cách đếm 9/8): trang giữ đúng. piano/not-lap-not-kep n43 (Clair de lune ô 1–14, nốt kép): đúng, quãng ba, quãng sáu ô 1–14. cap-nhat n51 (lối tắt "Chỉ muốn nghe?"): có. piano/tac-pham/satie-gymnopedie n67 (link tới trang này): có. Không tính là nhận định: tiêu đề mục, tiêu đề cột bảng, chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng (thuộc hồ sơ bản ghi), mốc trong ::khoi-nghe. Thuật ngữ trang dùng (una corda, con sordina, rubato, Andante, pp, legato, staccato) có trong src/data/thuat-ngu.yml; "đạp nửa", "rung bàn đạp", "điểm thoát (escapement)" chưa có bản ghi (ghi cho người giao).'
 nguon:
@@ -62,23 +62,67 @@ nguon:
     bac: 2
     ten: 'src/data/thuat-ngu.yml (đã khóa): mordent "Láy: chính – dưới – chính", una corda, con sordino/con sordina (về sau: una corda), cantabile "Như hát", enharmonic "Đồng âm khác tên", Grave, tremolo, rondo'
     link: src/data/thuat-ngu.yml
+  - id: l2-n11-1
+    bac: 2
+    ten: Nguồn lượt 2 D6-L5-gom (catalogue.bnf.fr)
+    link: "https://catalogue.bnf.fr/rechercher.do?motRecherche=Verlaine+F%C3%AAtes+galantes+1869&critereRecherche=0"
+  - id: l2-n24-1
+    bac: 2
+    ten: Nguồn lượt 2 D6-L5-gom (www.discogs.com)
+    link: "https://www.discogs.com/master/1213824"
+  - id: l2-n24-2
+    bac: 2
+    ten: Nguồn lượt 2 D6-L5-gom (www.discogs.com)
+    link: "https://www.discogs.com/master/2421907"
+  - id: l2-n77-1
+    bac: 2
+    ten: Nguồn lượt 2 D6-L5-gom (www.henle.de)
+    link: "https://www.henle.de/Suite-bergamasque/HN-381"
+  - id: l2-n77-2
+    bac: 2
+    ten: Nguồn lượt 2 D6-L5-gom (www.bongiovanni70.it)
+    link: "https://www.bongiovanni70.it/products/debussy-suite-bergamasque-per-pianoforte-durand"
+  - id: henle-blog-unacorda
+    bac: 2
+    ten: 'G. Henle Verlag blog (2013), "Una corda – con sord. – mit Verschiebung: How do I mute my piano?": con sordino là chỉ dẫn rõ nhất cho bàn đạp trái'
+    link: https://blog.henle.de/en/2013/06/24/una-corda-%e2%80%93-con-sord-%e2%80%93-mit-verschiebung-how-do-i-%e2%80%98mute%e2%80%99-my-piano/
+  - id: askenfelt-hammer
+    bac: 2
+    ten: A. Askenfelt, E. Jansson, "From touch to string vibration", trong Askenfelt (chủ biên), Five Lectures on the Acoustics of the Piano (KTH, 1990)
+    link: https://www.speech.kth.se/music/5_lectures/askenflt/pianist.html
+  - id: goebl-2004
+    bac: 2
+    ten: 'W. Goebl, R. Bresin, A. Galembo (2004), "Once again: The perception of piano touch and tone", ISMA 2004'
+    link: https://ofai.at/papers/oefai-tr-2004-02.pdf
+  - id: grayson-2014
+    bac: 2
+    ten: 'David Grayson (2014), bài điểm đĩa Debussy, Nineteenth-Century Music Review 11/2, doi:10.1017/S1479409814000299 (Cambridge): dẫn Marguerite Long, At the Piano with Debussy (Dent 1972), tr. 13: một câu Debussy "most frequent sayings" là "one must forget that the piano has hammers"'
+    link: https://www.cambridge.org/core/journals/nineteenth-century-music-review/article/claude-debussy-claude-debussy-album-debussy-le-compositeur-et-ses-interpretes-claude-debussy-and-ricardo-vines-pf-ninon-vallin-jane-bathori-claire-croiza-mary-garden-hector-dufranne-and-gerard-souzay-voice-camille-chevillard-and-arturo-toscanini-cond-aeon-1215-2012-3-cds-227-minutes-claude-debussy-clair-de-lune-natalie-dessay-sop-karine-deshayes-mezzosop-catherine-michel-harp-philippe-cassard-pf-le-jeune-choeur-de-paris-virgin-classics-7307692-2012-1-cd-73-minutes-claude-debussy-the-claude-debussy-collection-sony-193179-2012-18-cds-1148-minutes-claude-debussy-the-debussy-edition-deutsche-grammophon-47900566-18-cds-1032-minutes-claude-debussy-hommage-a-debussy-works-for-piano-julia-dahlkvist-chenyin-li-juliana-steinbach-and-amir-tebenikhin-pf-genuin-classics-12230-2012-4-cds-302-minutes-claude-debussy-piano-music-4-volumes-roy-howat-pf-tall-poppies-vol-1-94-1997-1-cd-79-minutes-vol-2-123-2000-1-cd-71-minutes-vol-3-164-2002-1-cd-75-minutes-vol-4-165-2003-1-cd-73-minutes/E1F1D03E3D57CC5B9671937E0A620D8D
+  - id: hs-liebestraum
+    bac: 2
+    ten: 'Hồ sơ bản ghi tac-pham/liszt-liebestraum (grade đã khóa "Grade 8 trở lên", n4: Henle HN 634, RCM 2022, ABRSM 2025–2026)'
+    link: kiem-dinh/du-lieu/tac-pham/liszt-liebestraum.yml
+  - id: hs-ballade-1
+    bac: 2
+    ten: 'Hồ sơ bản ghi tac-pham/chopin-ballade-1 (grade đã khóa "Sau Grade 8", n4: Henle HN 862, RCM 2022)'
+    link: kiem-dinh/du-lieu/tac-pham/chopin-ballade-1.yml
 nhan_dinh:
   - id: n1
     cau: 'Tiêu đề: "Debussy: Clair de lune" (Ánh trăng).'
     loai: ten
-    nguon: [ imslp-bergamasque, henle-hn381 ]
+    nguon: [imslp-bergamasque, henle-hn381]
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Suite_bergamasque,_CD_82_(Debussy,_Claude)" ]
+    luot_2_nguon: ["https://imslp.org/wiki/Suite_bergamasque,_CD_82_(Debussy,_Claude)"]
     luot_2_ghi_chu: "IMSLP: bài 3 'Clair de lune', Andante très expressif, Rê♭ trưởng."
   - id: n2
     cau: Gần như cả bài nằm trong vùng pp và p, với một nhịp điệu cố tình làm mờ phách.
     loai: cau-truc
-    nguon: &id001 [ mut-clair ]
+    nguon: &id001 [mut-clair]
     ket_qua: dung
     ghi_chu: 'Sắc thái trong tệp .ly (Fromont 1905): pp ô 1, 15, 27, 43; p ô 31–32; ppp ô 51, 66; chỉ một f ở ô 41. Nhịp: nốt bắt đầu sau phách, dấu nối qua phách, nhóm hai nốt (\times 3/2).'
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: "Sắc thái trong bản Fromont 1905 (qua Mutopia): pp, ppp, p, một lần f (ô 41); duplet và dấu nối qua phách trong 9/8."
   - id: n3
     cau: 'Trang hướng dẫn cách tập chơi: tiếng thật nhỏ, cân bằng quãng ba, quãng sáu, đếm 9/8, hợp âm rải chia hai tay, bàn đạp như bảng màu.'
@@ -90,7 +134,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: Id kiểu cũ của "## Bối cảnh" là boi-canh, "## Theo dõi khi nghe" là theo-doi-khi-nghe (src/plugins/id-cu.mjs). Khớp cap-nhat n51 (lối tắt cho người chỉ muốn nghe).
+    ghi_chu: 'Id kiểu cũ của "## Bối cảnh" là boi-canh, "## Theo dõi khi nghe" là theo-doi-khi-nghe (src/plugins/id-cu.mjs). Khớp cap-nhat n51 (lối tắt cho người chỉ muốn nghe). Review D6-L5-gom: kiểm trên trang và dữ liệu: Dòng 11; "## Bối cảnh" (dòng 25) id boi-canh, "## Theo dõi khi nghe" (dòng 44) id theo-doi-khi-nghe.'
+    review: dung
   - id: n5
     cau: 'Vì sao nên học: học chơi thật nhỏ mà vẫn rõ; bàn đạp thành công cụ tạo màu; nhịp điệu tự do có kỷ luật; hợp âm rải hai tay chuẩn bị cho Chopin, Liszt, Rachmaninoff.'
     loai: khuyen-tap
@@ -99,80 +144,85 @@ nhan_dinh:
   - id: n6
     cau: Bài kéo dài khoảng năm phút.
     loai: so-lieu
-    nguon: [ commons-goedhart ]
+    nguon: [commons-goedhart]
     ket_qua: dung
     ghi_chu: Bản thu Goedhart 304 s (5:04).
     luot_2: dung
-    luot_2_nguon: [ "https://musicbrainz.org/recording/e9f7b196-258e-47b6-a7d7-73b39825df74", "https://musicbrainz.org/recording/5310f375-2efd-48a4-8a03-05e0a91cd1e0", "https://musicbrainz.org/recording/8d1239ab-bb86-440c-ab44-df4c421b19f8" ]
+    luot_2_nguon: ["https://musicbrainz.org/recording/e9f7b196-258e-47b6-a7d7-73b39825df74", "https://musicbrainz.org/recording/5310f375-2efd-48a4-8a03-05e0a91cd1e0", "https://musicbrainz.org/recording/8d1239ab-bb86-440c-ab44-df4c421b19f8"]
     luot_2_ghi_chu: "MusicBrainz: Thibaudet 4:49, Gieseking khoảng 4:10–5:15, Arrau 6:46; 'khoảng năm phút' hợp lý."
   - id: n7
     cau: Đây là một trong những bản nhạc piano được yêu thích nhất.
     loai: lich-su
-    nguon: [ henle-hn381-vorwort ]
+    nguon: [henle-hn381-vorwort]
     ket_qua: dung
     ghi_chu: 'Henle: "The popularity ... especially Clair de lune ... becomes evident from the numerous transcriptions".'
     luot_2: dung
-    luot_2_nguon: [ "https://www.henle.de/Suite-bergamasque/HN-381" ]
+    luot_2_nguon: ["https://www.henle.de/Suite-bergamasque/HN-381"]
     luot_2_ghi_chu: "Henle: 'became popular in particular on account of the slow movement Clair de lune … Countless transcriptions … demonstrate the unbroken popularity'."
   - id: n8
     cau: 'Aside: link Träumerei và Gymnopédie số 1.'
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: schumann-traumerei chưa chuyển (../opus-zero có, "sắp có"); satie-gymnopedie có.
+    ghi_chu: 'schumann-traumerei chưa chuyển (../opus-zero có, "sắp có"); satie-gymnopedie có. Review D6-L5-gom: kiểm trên trang và dữ liệu: Dòng 22 (aside): schumann-traumerei và satie-gymnopedie đều có ở src/content/docs (traumerei nay đã chuyển; ghi_chu hồ sơ lỗi thời).'
+    review: dung
   - id: n9
     cau: The Little Shepherd là một bài trong tập Children's Corner của Debussy.
     loai: ten
-    nguon: [ imslp-childrens-corner ]
+    nguon: [imslp-childrens-corner]
     ket_qua: dung
     ghi_chu: 'IMSLP Children''s Corner, CD 119: 6 bài (bài 5 "The Little Shepherd").'
     luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Children's_Corner,_CD_119_(Debussy,_Claude)" ]
+    luot_2_nguon: ["https://imslp.org/wiki/Children's_Corner,_CD_119_(Debussy,_Claude)"]
     luot_2_ghi_chu: "Bài 5: 'The Little Shepherd'."
   - id: n10
     cau: Tên bài trùng tên bài thơ Clair de lune của Paul Verlaine, bài mở đầu tập Fêtes galantes.
     loai: ten
-    nguon: [ gutenberg-verlaine, henle-hn381-vorwort ]
+    nguon: [gutenberg-verlaine, henle-hn381-vorwort]
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Tên bài lấy từ bài thơ Clair de lune của Paul Verlaine trong tập Fêtes galantes". Gutenberg: Fêtes galantes mở đầu bằng "CLAIR DE LUNE". Henle chỉ nói tên tổ khúc thường được coi là gợi nhớ Fêtes galantes (có giả thuyết khác: Pierrot lunaire của Giraud); chương 3 lúc đầu tên Promenade sentimentale. Nên viết "trùng tên" thay "lấy từ".'
+    ghi_chu: 'Chữ cũ: "Tên bài lấy từ bài thơ Clair de lune của Paul Verlaine trong tập Fêtes galantes". Gutenberg: Fêtes galantes mở đầu bằng "CLAIR DE LUNE". Henle chỉ nói tên tổ khúc thường được coi là gợi nhớ Fêtes galantes (có giả thuyết khác: Pierrot lunaire của Giraud); chương 3 lúc đầu tên Promenade sentimentale. Nên viết "trùng tên" thay "lấy từ". Review D6-L5-gom: lượt 1 đã sửa; lượt 2 xác nhận chữ mới; review đọc lại chữ trang, khớp câu.'
     luot_2: dung
-    luot_2_nguon: [ "https://www.gutenberg.org/ebooks/15112", "https://www.gutenberg.org/cache/epub/15112/pg15112.txt" ]
+    luot_2_nguon: ["https://www.gutenberg.org/ebooks/15112", "https://www.gutenberg.org/cache/epub/15112/pg15112.txt"]
     luot_2_ghi_chu: Sau tiêu đề 'FÊTES GALANTES', bài đầu là 'CLAIR DE LUNE'.
+    review: dung
   - id: n11
     cau: Tập Fêtes galantes in năm 1869.
     loai: nam
-    nguon: []
-    ket_qua: null
-    ghi_chu: 'chưa chắc: bản Gutenberg không ghi năm in; chưa mở BnF hay nguồn khác; lượt 2 kiểm.'
+    nguon:
+      - l2-n11-1
+    ket_qua: dung
+    ghi_chu: 'chưa chắc: bản Gutenberg không ghi năm in; chưa mở BnF hay nguồn khác; lượt 2 kiểm. Review D6-L5-gom: lượt 1 chưa chắc; lượt 2 tìm được nguồn (thêm vào nguon của câu); ghi dung.'
     luot_2: dung
-    luot_2_nguon: [ "https://catalogue.bnf.fr/rechercher.do?motRecherche=Verlaine+F%C3%AAtes+galantes+1869&critereRecherche=0" ]
+    luot_2_nguon: ["https://catalogue.bnf.fr/rechercher.do?motRecherche=Verlaine+F%C3%AAtes+galantes+1869&critereRecherche=0"]
     luot_2_ghi_chu: "BnF: 'Fêtes galantes / Paul Verlaine, A. Lemerre, 1869'."
+    review: dung
   - id: n12
     cau: Debussy đã phổ bài thơ Clair de lune thành ca khúc.
     loai: lich-su
-    nguon: [ imslp-fetes-galantes ]
+    nguon: [imslp-fetes-galantes]
     ket_qua: dung
     ghi_chu: 'IMSLP Fêtes galantes, 1er recueil, CD 86: "Clair de lune", lời Paul Verlaine (1882, sửa 1891–92).'
     luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Fêtes_galantes,_1er_recueil,_CD_86_(Debussy,_Claude)" ]
+    luot_2_nguon: ["https://imslp.org/wiki/Fêtes_galantes,_1er_recueil,_CD_86_(Debussy,_Claude)"]
     luot_2_ghi_chu: Fêtes galantes tập 1 của Debussy, bài 3 'Clair de lune' (thơ Verlaine).
   - id: n13
     cau: Chữ bergamasque có ngay trong bài thơ ấy ("masques et bergamasques"); theo lời tựa Henle, tên tổ khúc thường được coi là gợi nhớ tập thơ này.
     loai: lich-su
-    nguon: [ gutenberg-verlaine, henle-hn381-vorwort ]
+    nguon: [gutenberg-verlaine, henle-hn381-vorwort]
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Chữ bergamasque cũng đến từ chính bài thơ đó." Bài thơ: "Que vont charmants masques et bergamasques". Henle: "the traditional belief of the work being a basic reflection of Verlaine''s Fêtes galantes", có giả thuyết khác. Viết theo Henle.'
+    ghi_chu: 'Chữ cũ: "Chữ bergamasque cũng đến từ chính bài thơ đó." Bài thơ: "Que vont charmants masques et bergamasques". Henle: "the traditional belief of the work being a basic reflection of Verlaine''s Fêtes galantes", có giả thuyết khác. Viết theo Henle. Review D6-L5-gom: lượt 1 đã sửa; lượt 2 xác nhận chữ mới; review đọc lại chữ trang, khớp câu.'
     luot_2: dung
-    luot_2_nguon: [ "https://www.gutenberg.org/cache/epub/15112/pg15112.txt", "https://www.henle.de/media/b8/d2/f2/1690886063/0381-1690886063-sync.pdf" ]
+    luot_2_nguon: ["https://www.gutenberg.org/cache/epub/15112/pg15112.txt", "https://www.henle.de/media/b8/d2/f2/1690886063/0381-1690886063-sync.pdf"]
     luot_2_ghi_chu: "Bài thơ: 'Que vont charmants masques et bergamasques'. Lời tựa Lesure: 'adhering to the traditional belief of the work being a basic reflection of Verlaine's Fêtes galantes' (có nhắc giả thuyết khác)."
+    review: dung
   - id: n14
     cau: Bài thơ tả những nhân vật đeo mặt nạ dưới ánh trăng, vui mà buồn.
     loai: lich-su
-    nguon: [ gutenberg-verlaine ]
+    nguon: [gutenberg-verlaine]
     ket_qua: dung
     ghi_chu: '"masques et bergamasques, / Jouant du luth et dansant et quasi / Tristes sous leurs déguisements fantasques ... Au calme clair de lune triste et beau".'
     luot_2: dung
-    luot_2_nguon: [ "https://www.gutenberg.org/cache/epub/15112/pg15112.txt" ]
+    luot_2_nguon: ["https://www.gutenberg.org/cache/epub/15112/pg15112.txt"]
     luot_2_ghi_chu: "'masques et bergamasques, / Jouant du luth et dansant et quasi / Tristes sous leurs déguisements fantasques'; 'Au calme clair de lune triste et beau'."
   - id: n15
     cau: Âm nhạc giữ đúng vẻ nửa sáng nửa tối ấy.
@@ -182,39 +232,41 @@ nhan_dinh:
   - id: n16
     cau: Debussy viết bộ tổ khúc khi khoảng 28 tuổi, nhưng chỉ in 15 năm sau.
     loai: nam
-    nguon: [ henle-hn381-vorwort ]
+    nguon: [henle-hn381-vorwort]
     ket_qua: dung
     ghi_chu: 'Debussy sinh 1862 (nha-soan-nhac.yml, đã khóa); Henle: viết 1890, in 1905 ("fifteen years earlier").'
     luot_2: dung
-    luot_2_nguon: [ "https://www.henle.de/media/b8/d2/f2/1690886063/0381-1690886063-sync.pdf" ]
+    luot_2_nguon: ["https://www.henle.de/media/b8/d2/f2/1690886063/0381-1690886063-sync.pdf"]
     luot_2_ghi_chu: "Lời tựa: 'Though not published until 1905, the Suite bergamasque actually originated fifteen years earlier'; Debussy sinh 8/1862, năm 1890 khoảng 28 tuổi."
   - id: n17
     cau: Chính Debussy ghi năm 1890 lên bản in thử để cho biết đây là tác phẩm thời trẻ.
     loai: lich-su
-    nguon: [ henle-hn381-vorwort ]
+    nguon: [henle-hn381-vorwort]
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "khi phong cách của ông đã khác hẳn" (không nguồn). Henle: "added the date 1890 to the galley-proofs in order to signify that the work was one stemming from the juvenile Debussy".'
+    ghi_chu: 'Chữ cũ: "khi phong cách của ông đã khác hẳn" (không nguồn). Henle: "added the date 1890 to the galley-proofs in order to signify that the work was one stemming from the juvenile Debussy". Review D6-L5-gom: lượt 1 đã sửa; lượt 2 xác nhận chữ mới; review đọc lại chữ trang, khớp câu.'
     luot_2: dung
-    luot_2_nguon: [ "https://www.henle.de/media/b8/d2/f2/1690886063/0381-1690886063-sync.pdf" ]
+    luot_2_nguon: ["https://www.henle.de/media/b8/d2/f2/1690886063/0381-1690886063-sync.pdf"]
     luot_2_ghi_chu: "'The composer added the date 1890 to the galley-proofs in order to signify that the work was one stemming from the juvenile Debussy'."
+    review: dung
   - id: n18
     cau: Bản in năm 1905 là bản đã sửa.
     loai: lich-su
-    nguon: [ henle-hn381-vorwort ]
+    nguon: [henle-hn381-vorwort]
     ket_qua: dung
     ghi_chu: 'Henle: bản đầu giao Choudens 1891; bản cuối Debussy đưa Fromont tháng 4/1905, in tháng 6/1905.'
     luot_2: dung
-    luot_2_nguon: [ "https://www.henle.de/media/b8/d2/f2/1690886063/0381-1690886063-sync.pdf", "https://www.henle.de/media/dc/30/a1/1690886037/0381-1690886037-sync.pdf" ]
+    luot_2_nguon: ["https://www.henle.de/media/b8/d2/f2/1690886063/0381-1690886063-sync.pdf", "https://www.henle.de/media/dc/30/a1/1690886037/0381-1690886037-sync.pdf"]
     luot_2_ghi_chu: "Lời tựa: bản cuối giao Fromont tháng 4/1905, in tháng 6; Comments: 'subjected to at least one further phase of correction'."
   - id: n19
     cau: Bản thảo gốc đến nay chưa tìm thấy, nên không ai biết chắc phần nào thuộc năm 1890, phần nào thuộc năm 1905.
     loai: lich-su
-    nguon: [ henle-hn381-vorwort ]
+    nguon: [henle-hn381-vorwort]
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "bản thảo gốc không còn". Henle: "The exact whereabouts of the autograph have remained untraceable" (chưa tìm thấy, không phải chắc chắn đã mất).'
+    ghi_chu: 'Chữ cũ: "bản thảo gốc không còn". Henle: "The exact whereabouts of the autograph have remained untraceable" (chưa tìm thấy, không phải chắc chắn đã mất). Review D6-L5-gom: lượt 1 đã sửa; lượt 2 xác nhận chữ mới; review đọc lại chữ trang, khớp câu.'
     luot_2: dung
-    luot_2_nguon: [ "https://www.henle.de/media/b8/d2/f2/1690886063/0381-1690886063-sync.pdf", "https://www.henle.de/Suite-bergamasque/HN-381" ]
+    luot_2_nguon: ["https://www.henle.de/media/b8/d2/f2/1690886063/0381-1690886063-sync.pdf", "https://www.henle.de/Suite-bergamasque/HN-381"]
     luot_2_ghi_chu: "'The exact whereabouts of the autograph have remained untraceable'; trang sản phẩm: 'the manuscript, now lost'. Vế sau là suy ra hợp lý từ đó."
+    review: dung
   - id: n20
     cau: 'Hòa âm còn chức năng: có hợp âm át, có kết rõ.'
     loai: cau-truc
@@ -222,7 +274,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: Ô 26 hợp âm La♭7 rải (át của Rê♭); ô 72 kết hợp âm Rê♭ trưởng.
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: Ô 26 dừng trên La♭–Mi♭–Sol♭–Đô (át bảy của Rê♭); bài kết trên hợp âm Rê♭ trưởng.
   - id: n21
     cau: Bài nằm ở ngưỡng giữa thế kỷ 19 và thế kỷ 20; màu sắc đã là của Debussy.
@@ -234,7 +286,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: Trang có (đã khóa).
+    ghi_chu: 'Trang có (đã khóa). Review D6-L5-gom: kiểm trên trang và dữ liệu: Dòng 29; src/content/docs/lich-su/thoi-ky/the-ky-20.md có.'
+    review: dung
   - id: n23
     cau: Bốn câu hỏi nghe (phách, tầng âm thanh, bàn đạp, màu sắc).
     loai: khuyen-tap
@@ -243,12 +296,15 @@ nhan_dinh:
   - id: n24
     cau: Walter Gieseking thu trọn nhạc piano solo của Debussy.
     loai: ten
-    nguon: []
-    ket_qua: null
-    ghi_chu: 'chưa chắc: chưa mở trang hãng đĩa (EMI/Warner); lượt 2 kiểm.'
+    nguon:
+      - l2-n24-1
+      - l2-n24-2
+    ket_qua: dung
+    ghi_chu: 'chưa chắc: chưa mở trang hãng đĩa (EMI/Warner); lượt 2 kiểm. Review D6-L5-gom: lượt 1 chưa chắc; lượt 2 tìm được nguồn (thêm vào nguon của câu); ghi dung.'
     luot_2: dung
-    luot_2_nguon: [ "https://www.discogs.com/master/1213824", "https://www.discogs.com/master/2421907" ]
+    luot_2_nguon: ["https://www.discogs.com/master/1213824", "https://www.discogs.com/master/2421907"]
     luot_2_ghi_chu: "Discogs (đọc qua API): 'Debussy – Walter Gieseking – Complete Piano Works' (EMI Classics) và 'The Complete Piano Works' (Warner Classics)."
+    review: dung
   - id: n25
     cau: Nghe cạnh một bản chậm nhiều rubato để thấy biên độ tự do; ghi lại thời lượng của từng bản.
     loai: khuyen-tap
@@ -261,7 +317,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'Ô 1: r8\pp <f af>( <f'' af>~ … ; "con sordina" ô 1; ô 1–8 các cặp quãng ba đi xuống, cặp nốt giữa hai lớp tạo quãng sáu (vd. Sol♭4–Mi♭5 ô 2).'
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: "Ô 1: 'r8\\pp', 'con sordina'; hai nốt đi xuống ở tay phải, bắt đầu sau móc đơn lặng, nối qua phách."
   - id: n27
     cau: 'Theo dõi: Tempo rubato ô 15–18, giai điệu rõ hơn trên các hợp âm.'
@@ -270,7 +326,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: \tempo "Tempo rubato" ô 15; hợp âm ba bốn nốt, giai điệu ở nốt trên.
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: "'Tempo rubato' ở ô 15; giai điệu ở nốt trên của các hợp âm móc đơn."
   - id: n28
     cau: 'Theo dõi: lớn dần, nhanh dần ô 19–26 (peu à peu cresc. et animé), dừng trên một hợp âm át rải.'
@@ -279,7 +335,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: Chỉ dẫn ô 19; ô 25–26 hợp âm rải (\arpeggio), ô 26 La♭7; "diminuendo molto" ô 25.
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: "'peu à peu, cresc. et animé . . .' ở ô 19; ô 25–26 hợp âm rải, ô 26 kết trên La♭7 (át)."
   - id: n29
     cau: 'Theo dõi: Un poco mosso ô 27–36, tay trái rải hợp âm liên tục như nước chảy, giai điệu ở tay phải.'
@@ -288,7 +344,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'Ô 27: tay trái móc kép Rê♭2 La♭2 Rê♭3 Fa3 La♭3 Rê♭4 …; tay phải Fa4/La♭4.'
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: "'Un poco mosso' ở ô 27; tay trái hợp âm rải móc kép liên tục, giai điệu ở tay phải; ô 37 đổi sang 'En animant'."
   - id: n30
     cau: 'Theo dõi: Cao trào ô 37–42, điểm cao nhất của bài quanh ô 41.'
@@ -297,7 +353,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: Ô 37 "En animant", "più cresc."; f duy nhất ở ô 41.
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: Ô 37–42 (Mi trưởng, 'En animant', 'più cresc.'); f ở ô 41, lần duy nhất trong bài.
   - id: n31
     cau: 'Theo dõi: Calmato ô 43–50, lắng lại trên nền trầm.'
@@ -306,7 +362,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: \tempo "Calmato" ô 43, pp.
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: "'Calmato' ở ô 43, pp, tay trái móc kép trên La♭ trầm (ô 43–46)."
   - id: n32
     cau: 'Theo dõi: A'' ô 51–65, tốc độ ban đầu trở lại; chủ đề mở đầu trên nền hợp âm rải.'
@@ -315,24 +371,25 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: '"a Tempo 1º" ô 51, ppp; tay phải <f af> như ô 1; tay trái f16 af c f af c (rải).'
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: "'a Tempo 1º' ở ô 51, ppp, chủ đề mở đầu ở tay phải trên hợp âm rải móc kép tay trái."
   - id: n33
     cau: 'Theo dõi: Coda ô 66–72, hợp âm rải, tay bắt chéo, tan dần đến hết (morendo jusqu''à la fin).'
     loai: cau-truc
     nguon: *id001
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "…tan dần đến hết; hợp âm cuối ngân thật lâu". Bản Fromont (Mutopia): ô 66 "morendo jusqu''à la fin", ppp; hợp âm cuối là nốt trắng chấm (2.) có dấu rải, rồi dấu lặng; không có dấu ngân. Tay bắt chéo: ô 67, 69 tay trái rải lên Sol♭4–La♭4, trên nốt Fa♭4 của bè dưới tay phải.'
+    ghi_chu: 'Chữ cũ: "…tan dần đến hết; hợp âm cuối ngân thật lâu". Bản Fromont (Mutopia): ô 66 "morendo jusqu''à la fin", ppp; hợp âm cuối là nốt trắng chấm (2.) có dấu rải, rồi dấu lặng; không có dấu ngân. Tay bắt chéo: ô 67, 69 tay trái rải lên Sol♭4–La♭4, trên nốt Fa♭4 của bè dưới tay phải. Review D6-L5-gom: lượt 1 đã sửa; lượt 2 xác nhận chữ mới; review đọc lại chữ trang, khớp câu.'
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: "'morendo jusqu'à la fin' ở ô 66; hợp âm rải; ô 69–70 tay trái chạy lên trên hợp âm tay phải đang giữ (bắt chéo); bài hết ô 72."
+    review: dung
   - id: n34
     cau: 'Bảng: A ô 1–14, Andante très expressif, pp con sordina; quãng ba, quãng sáu đi xuống ở tay phải; bắt đầu sau phách đầu, nhiều dấu nối qua phách.'
     loai: cau-truc
-    nguon: [ mut-clair, imslp-bergamasque ]
+    nguon: [mut-clair, imslp-bergamasque]
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: "'Andante très expressif', pp, 'con sordina' ở ô 1; các cặp nốt đi xuống tay phải; bắt đầu sau móc đơn lặng, nhiều dấu nối, có nhóm hai nốt."
   - id: n35
     cau: Đếm thật chính xác; hai nốt của quãng ba gần bằng nhau, nốt trên nhỉnh hơn.
@@ -345,7 +402,7 @@ nhan_dinh:
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: "'Tempo rubato' ô 15; 'peu à peu, cresc. et animé' ô 19; ô 26 hợp âm át bảy rải."
   - id: n37
     cau: 'Rubato có hướng: dồn tới rồi lắng.'
@@ -358,7 +415,7 @@ nhan_dinh:
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: Ô 27–36 Un poco mosso, tay trái hợp âm rải liên tục, giai điệu tay phải.
   - id: n39
     cau: Hợp âm rải nhẹ, đều, không lấn giai điệu; chia nốt giữa hai tay nếu cần.
@@ -371,7 +428,7 @@ nhan_dinh:
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: f ở ô 41, nằm trong đoạn ô 37–42.
   - id: n41
     cau: 'Bảng: B (lắng) ô 43–50, Calmato.'
@@ -379,7 +436,7 @@ nhan_dinh:
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: "'Calmato' ở ô 43; ô 51 là 'a Tempo 1º'."
   - id: n42
     cau: 'Bảng: A'' ô 51–65, tốc độ ban đầu trở lại, chủ đề mở đầu trên nền hợp âm rải.'
@@ -387,7 +444,7 @@ nhan_dinh:
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: "'a Tempo 1º' ô 51; chủ đề mở đầu trên hợp âm rải tay trái; ô 66 bắt đầu coda."
   - id: n43
     cau: 'Bảng: Coda ô 66–72, hợp âm rải, tay bắt chéo, tan dần đến hết.'
@@ -395,7 +452,7 @@ nhan_dinh:
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: "Ô 66–72: hợp âm rải, 'morendo jusqu'à la fin', tay trái vượt lên trên tay phải ở ô 69–70."
   - id: n44
     cau: Mỗi lần rải phải nhỏ hơn lần trước; ngân hợp âm cuối thật lâu.
@@ -405,21 +462,20 @@ nhan_dinh:
   - id: n45
     cau: Bài có 72 ô nhịp, 9/8, Rê♭ trưởng.
     loai: cau-truc
-    nguon: [ mut-clair, imslp-bergamasque ]
+    nguon: [mut-clair, imslp-bergamasque]
     ket_qua: dung
     ghi_chu: 'IMSLP: "D♭ major, 72 bars"; MIDI 72 ô 9/8. Ô 37–42 Mutopia đổi hóa biểu sang Đô♯ thứ, ô 43 về Rê♭ trưởng (trang không nói tới, không sai).'
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: Đếm 72 ô; nhịp 9/8; hóa biểu năm giáng (Rê♭ trưởng), kết trên Rê♭.
   - id: n46
-    cau: 'Phím đàn có "điểm thoát" (escapement): ấn quá chậm thì nốt không kêu, quá nhanh thì to.'
-    loai: dinh-nghia
-    nguon: []
-    ket_qua: null
-    ghi_chu: 'chưa chắc: chưa mở nguồn về bộ máy đàn piano trong lô này; lượt 2 kiểm (hay bỏ phần "escapement").'
-    luot_2: dung
-    luot_2_nguon: [ "https://www.howardpianoindustries.com/how-a-vertical-piano-action-works/" ]
-    luot_2_ghi_chu: "Thợ đàn Howard Piano Industries: ấn rất chậm thì búa đến sát dây rồi nhả, không đánh vào dây; đánh mạnh thì búa đánh hết vào dây. Vế 'nhanh thì to' là kiến thức chung, nguồn chỉ nói gián tiếp."
+    cau: 'Độ to theo tốc độ phím đi xuống: ấn quá chậm thì nốt không kêu, hơi nhanh là đã to.'
+    loai: quy-tac
+    nguon:
+      - askenfelt-hammer
+      - goebl-2004
+    ket_qua: da-sua
+    ghi_chu: 'chưa chắc: chưa mở nguồn về bộ máy đàn piano trong lô này; lượt 2 kiểm (hay bỏ phần "escapement"). Review D6-L5-gom: nguồn lượt 2 là trang của thợ đàn (bậc 3). Viết lại theo điều trang piano/tieng-dan (đã khóa) đã kiểm: độ to theo tốc độ phím đi xuống (Askenfelt, Goebl 2004: hồ sơ piano/tieng-dan n4), đẩy chậm quá thì nốt không kêu (tieng-dan n47, như review D4-gom). Bỏ chữ "điểm thoát (escapement)". Đổi loại sang quy-tac (doi_chu). Chữ mới có nội dung khác: lượt 2 bổ sung. Chữ câu cũ: "Phím đàn có "điểm thoát" (escapement): ấn quá chậm thì nốt không kêu, quá nhanh thì to.". Kết quả lượt 2 cũ (gỡ để vào lượt 2 bổ sung): dung; nguồn [''https://www.howardpianoindustries.com/how-a-vertical-piano-action-works/'']; ghi chú: Thợ đàn Howard Piano Industries: ấn rất chậm thì búa đến sát dây rồi nhả, không đánh vào dây; đánh mạnh thì búa đánh hết vào dây. Vế ''nhanh thì to'' là kiến thức chung, nguồn chỉ nói gián tiếp.'
   - id: n47
     cau: 'Cách tập pp: đặt ngón sát phím, ấn bằng trọng lượng tay thả lỏng, tìm "đáy" của phím; 10 lần liên tiếp pp đều nhau.'
     loai: khuyen-tap
@@ -430,7 +486,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: piano/tieng-dan, piano/ban-dap có.
+    ghi_chu: 'piano/tieng-dan, piano/ban-dap có. Review D6-L5-gom: kiểm trên trang và dữ liệu: Bảng Chỗ khó dòng 77 (tieng-dan) và 81 (ban-dap); hai trang có.'
+    review: dung
   - id: n49
     cau: 'Quãng ba, quãng sáu song song: tập riêng nốt trên, nốt dưới; nối nốt trên bằng ngón, nốt dưới nhờ bàn đạp.'
     loai: khuyen-tap
@@ -443,7 +500,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: \times 3/2 { … } (hai móc đơn chiếm ba) ở ô 3, 7, 13…; khớp piano/hai-tay n47 (đã khóa).
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: Nhóm hai nốt (duplet '2') trong 9/8 ở ô 3, 13, 14…; nhiều nốt bắt đầu sau phách và nối qua phách.
   - id: n51
     cau: Đếm to "1-2-3" theo móc đơn; ô có nhóm hai nốt đếm "1-và" cho phách đó.
@@ -457,7 +514,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'Ô 27: Rê♭2 – Rê♭4 (hai quãng tám, phần trên ghi ở khuông trên).'
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: "Ô 27: tay trái Rê♭–La♭–Rê♭–Fa rồi lên tiếp, rộng hơn một quãng tám."
   - id: n53
     cau: Chơi mỗi nhóm thành hợp âm khối để học thế tay; để tay phải lấy một hai nốt cao nhất của chuỗi rải.
@@ -486,19 +543,22 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: Ba khối abc có "(soạn cho trang này)".
+    ghi_chu: 'Ba khối abc có "(soạn cho trang này)". Review D6-L5-gom: kiểm trên trang và dữ liệu: Dòng 87; khối X:1–3 có "(soạn cho trang này)".'
+    review: dung
   - id: n58
     cau: 'Bài tập 1: tay trái giữ ba phách chấm đều; tay phải vào sau phách một móc đơn; nhóm hai nốt (số 2) chia đều thời gian của ba móc đơn.'
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: 'Khối abc 1: tay phải z [FA]2- …, (2[CE][B,D]; tay trái ba nốt chấm mỗi ô.'
+    ghi_chu: 'Khối abc 1: tay phải z [FA]2- …, (2[CE][B,D]; tay trái ba nốt chấm mỗi ô. Review D6-L5-gom: kiểm trên trang và dữ liệu: Khối X:1 (dòng 101–102): tay phải z rồi [FA]2- (vào sau phách một móc đơn, ô 1–2); (2[CE][B,D] ô 2 và (2[B,D][A,C] ô 3 trong 9/8; tay trái mỗi ô ba nốt chấm. Lời dẫn dòng 105–106.'
+    review: dung
   - id: n59
     cau: 'Bài tập 2: số ngón cho nốt trên (đổi 5 – 4 để nối legato); nốt dưới ngón cái, nối nhờ bàn đạp.'
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: 'Khối abc 2: !5![Af]3 !4![Ge]3 !5![Fd]3 …: các quãng sáu đi xuống.'
+    ghi_chu: 'Khối abc 2: !5![Af]3 !4![Ge]3 !5![Fd]3 …: các quãng sáu đi xuống. Review D6-L5-gom: kiểm trên trang và dữ liệu: Khối X:2 (dòng 121): ngón ghi trên nốt trên !5![Af] !4![Ge] !5![Fd] !4![Ec] !5![DB] !4![CA]; lời dẫn dòng 125.'
+    review: dung
   - id: n60
     cau: 'Thử bài tập 2 với una corda: màu tiếng thay đổi thế nào.'
     loai: khuyen-tap
@@ -509,7 +569,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: 'Khối abc 3 ô 1: Rê♭2 La♭2 Rê♭3 Fa3 La♭3 Fa3 Rê♭3 La♭2 Fa2, ngón 5 2 1 3 2 3 1 3 5.'
+    ghi_chu: 'Khối abc 3 ô 1: Rê♭2 La♭2 Rê♭3 Fa3 La♭3 Fa3 Rê♭3 La♭2 Fa2, ngón 5 2 1 3 2 3 1 3 5. Review D6-L5-gom: kiểm trên trang và dữ liệu: Khối X:3 (dòng 142): ô 1–3 tay trái chín móc đơn lên rồi xuống, ngón 5-2-1-3-2-3-1-3-5, nốt thứ năm là đỉnh (A, / D / E). Lời dẫn dòng 145. Lưu ý: ô 4 chỉ là nốt kết (D,,A,,F, A,6), không phải vòng cung.'
+    review: dung
   - id: n62
     cau: Ghép giai điệu tay phải mp–mf, tay trái pp; biến thể để tay phải lấy nốt đỉnh.
     loai: khuyen-tap
@@ -525,22 +586,25 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: Khớp bảng Cấu trúc của chính trang.
+    ghi_chu: 'Khớp bảng Cấu trúc của chính trang. Review D6-L5-gom: kiểm trên trang và dữ liệu: Bảng Kế hoạch dòng 155–163 (ô 1–14, 15–26, 27–36, 37–50, 51–72) khớp bảng Cấu trúc dòng 65–71.'
+    review: dung
   - id: n65
     cau: Link Thu âm, Học thuộc và biểu diễn.
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: Hai trang có.
+    ghi_chu: 'Hai trang có. Review D6-L5-gom: kiểm trên trang và dữ liệu: Dòng 161 (luyen-tap/thu-am) và 163 (piano/hoc-thuoc-bieu-dien); hai trang có.'
+    review: dung
   - id: n66
     cau: Andante là "đi", không phải đứng yên.
     loai: dinh-nghia
-    nguon: [ thuat-ngu ]
+    nguon: [thuat-ngu]
     ket_qua: dung
-    ghi_chu: 'thuat-ngu.yml (đã khóa) Andante: "Vừa phải, như bước đi".'
+    ghi_chu: 'thuat-ngu.yml (đã khóa) Andante: "Vừa phải, như bước đi". Review D6-L5-gom: Nguồn của câu là thuat-ngu.yml (đã khóa, đã kiểm định ở D3-L5): Andante "Vừa phải, như bước đi"; Wiktionary của lượt 2 chỉ là nguồn phụ, không cần thay.'
     luot_2: dung
-    luot_2_nguon: [ "https://en.wiktionary.org/wiki/andante" ]
+    luot_2_nguon: ["https://en.wiktionary.org/wiki/andante"]
     luot_2_ghi_chu: "Tiếng Ý: phân từ hiện tại của andare, 'going, walking'. Nguồn ngoài (Merriam-Webster…) chặn; review có thể thay nguồn tốt hơn."
+    review: dung
   - id: n67
     cau: Nghĩ theo một phách lớn mỗi ô khi đã thuộc; ở đoạn mở đầu sự mơ hồ đã nằm sẵn trong cách viết.
     loai: khuyen-tap
@@ -553,17 +617,18 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: Chữ "Tempo rubato" chỉ có ở ô 15.
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly"]
     luot_2_ghi_chu: Chữ 'Tempo rubato' chỉ có một lần (ô 15); các chỉ dẫn khác là Un poco mosso, En animant, Calmato, a Tempo 1º.
   - id: n69
     cau: Bài gần như chỉ sống trong vùng từ ppp đến p; chỉ một lần lên f, ở cao trào của đoạn B (ô 41).
     loai: cau-truc
     nguon: *id001
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Bài sống trong vùng từ pp đến p, với vài lần lên mf và một cao trào ở đoạn B." Bản Fromont 1905 (Mutopia) không có mf nào; có ppp ở ô 51, 66; f duy nhất ở ô 41.'
+    ghi_chu: 'Chữ cũ: "Bài sống trong vùng từ pp đến p, với vài lần lên mf và một cao trào ở đoạn B." Bản Fromont 1905 (Mutopia) không có mf nào; có ppp ở ô 51, 66; f duy nhất ở ô 41. Review D6-L5-gom: lượt 1 đã sửa; lượt 2 xác nhận chữ mới; review đọc lại chữ trang, khớp câu.'
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: "Sắc thái ghi: pp (ô 1, 15, 27, 43), p (ô 31, 32), ppp (ô 51, 66), f (ô 41) một lần; có cresc."
+    review: dung
   - id: n70
     cau: Có ít nhất ba mức nhỏ; luôn có ba tầng; đánh bè trầm sâu một chút để bàn đạp có thứ giữ.
     loai: khuyen-tap
@@ -572,20 +637,24 @@ nhan_dinh:
   - id: n71
     cau: Con sordina ở đầu bài nghĩa là dùng una corda (bàn đạp trái).
     loai: dinh-nghia
-    nguon: [ thuat-ngu, mut-clair ]
+    nguon:
+      - thuat-ngu
+      - mut-clair
+      - henle-blog-unacorda
     ket_qua: dung
-    ghi_chu: 'thuat-ngu.yml con sordino/con sordina: "Ở một số nhà soạn nhạc về sau ...: dùng bàn đạp trái una corda". Bản Fromont ghi "con sordina" ở ô 1.'
+    ghi_chu: 'thuat-ngu.yml con sordino/con sordina: "Ở một số nhà soạn nhạc về sau ...: dùng bàn đạp trái una corda". Bản Fromont ghi "con sordina" ở ô 1. Review D6-L5-gom: lượt 2 dẫn blog của nhà xuất bản Henle (bậc 2, trang của nhà xuất bản) cùng thuat-ngu.yml đã khóa và bản Fromont ("con sordina" ô 1). Đủ nguồn; thêm henle-blog-unacorda vào nguon.'
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://blog.henle.de/en/2013/06/24/una-corda-%e2%80%93-con-sord-%e2%80%93-mit-verschiebung-how-do-i-%e2%80%98mute%e2%80%99-my-piano/" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://blog.henle.de/en/2013/06/24/una-corda-%e2%80%93-con-sord-%e2%80%93-mit-verschiebung-how-do-i-%e2%80%98mute%e2%80%99-my-piano/"]
     luot_2_ghi_chu: "Bản Fromont (Mutopia) ghi 'con sordina' ô 1; blog Henle: con sordino là 'just about the clearest … designation for the left pedal'. Nguồn nói chung, không riêng Debussy."
+    review: dung
   - id: n72
     cau: Una corda làm tiếng mềm và đổi màu, không chỉ làm nhỏ.
     loai: dinh-nghia
-    nguon: [ thuat-ngu ]
+    nguon: [thuat-ngu]
     ket_qua: dung
     ghi_chu: 'thuat-ngu.yml una corda: "làm tiếng nhỏ hơn và đổi màu âm".'
     luot_2: dung
-    luot_2_nguon: [ "https://blog.henle.de/en/2013/06/24/una-corda-%e2%80%93-con-sord-%e2%80%93-mit-verschiebung-how-do-i-%e2%80%98mute%e2%80%99-my-piano/" ]
+    luot_2_nguon: ["https://blog.henle.de/en/2013/06/24/una-corda-%e2%80%93-con-sord-%e2%80%93-mit-verschiebung-how-do-i-%e2%80%98mute%e2%80%99-my-piano/"]
     luot_2_ghi_chu: "'The grand piano now sounds not only piano, but also fainter and softer, a change in sound colour …'."
   - id: n73
     cau: Có thể nhả una corda ở chỗ cần tiếng sáng hơn; đổi bàn đạp vang theo hòa âm, đạp nửa; một bàn đạp cho mỗi hòa âm trong đoạn rải; hợp âm cuối giữ bàn đạp đến khi tắt.
@@ -593,14 +662,12 @@ nhan_dinh:
     nguon: []
     ket_qua: khong-can-nguon
   - id: n74
-    cau: Debussy được kể là muốn người chơi làm người nghe quên rằng piano có búa.
+    cau: 'Marguerite Long kể một câu Debussy hay nói: phải quên rằng piano có búa.'
     loai: lich-su
-    nguon: []
-    ket_qua: null
-    ghi_chu: 'chưa chắc: chưa mở nguồn ghi lời này (thường dẫn từ Marguerite Long); lượt 2 kiểm hay bỏ.'
-    luot_2: dung
-    luot_2_nguon: [ "https://djupdal.org/karstein/debussy/method/m08.shtml" ]
-    luot_2_ghi_chu: "Trang dẫn Marguerite Long: \"'One must forget that the piano has hammers,' was one of his most frequent sayings\" và Vallas. Nguồn thứ cấp (trang cá nhân dẫn sách)."
+    nguon:
+      - grayson-2014
+    ket_qua: da-sua
+    ghi_chu: 'chưa chắc: chưa mở nguồn ghi lời này (thường dẫn từ Marguerite Long); lượt 2 kiểm hay bỏ. Review D6-L5-gom: nguồn lượt 2 là trang cá nhân dẫn sách. Review tìm được bài của David Grayson trên Nineteenth-Century Music Review (Cambridge, 2014; tải 05/11/2026, User-Agent opus-kiem-dinh) dẫn Long, At the Piano with Debussy, tr. 13. Viết lại theo nguồn ấy; vế "Hãy để tiếng đàn như không bắt đầu bằng một cú đánh" thành lời khuyên. doi_chu. Có tên người kể (Long): lượt 2 bổ sung. Chữ câu cũ: "Debussy được kể là muốn người chơi làm người nghe quên rằng piano có búa.". Kết quả lượt 2 cũ (gỡ để vào lượt 2 bổ sung): dung; nguồn [''https://djupdal.org/karstein/debussy/method/m08.shtml'']; ghi chú: Trang dẫn Marguerite Long: "''One must forget that the piano has hammers,'' was one of his most frequent sayings" và Vallas. Nguồn thứ cấp (trang cá nhân dẫn sách).'
   - id: n75
     cau: Chạm phím từ rất gần, ngón phẳng hơn; hợp âm lớn dùng trọng lượng cả cánh tay.
     loai: khuyen-tap
@@ -609,21 +676,25 @@ nhan_dinh:
   - id: n76
     cau: Các bản Urtext dựa vào ấn bản 1905 và bản in thử, có phần chú thích các chỗ khác nhau giữa các nguồn.
     loai: lich-su
-    nguon: [ henle-hn381-bem, henle-hn381-vorwort ]
+    nguon: [henle-hn381-bem, henle-hn381-vorwort]
     ket_qua: dung
     ghi_chu: 'Henle Bemerkungen: nguồn F = bản in thử Debussy sửa, O = ấn bản gốc.'
     luot_2: dung
-    luot_2_nguon: [ "https://www.henle.de/media/dc/30/a1/1690886037/0381-1690886037-sync.pdf" ]
+    luot_2_nguon: ["https://www.henle.de/media/dc/30/a1/1690886037/0381-1690886037-sync.pdf"]
     luot_2_ghi_chu: "Comments HN 381: lấy bản in đầu làm gốc, bản in thử Debussy duyệt; chỗ xóa trong bản in thử 'are referred to in the comments'. Chỉ kiểm được Henle."
   - id: n77
     cau: Có thể dùng Henle hoặc ấn bản Œuvres complètes.
     loai: ten
-    nguon: [ henle-hn381 ]
-    ket_qua: null
-    ghi_chu: 'Henle HN 381 có. chưa chắc: chưa mở trang ấn bản Œuvres complètes de Claude Debussy (Durand); lượt 2 kiểm.'
+    nguon:
+      - henle-hn381
+      - l2-n77-1
+      - l2-n77-2
+    ket_qua: dung
+    ghi_chu: 'Henle HN 381 có. chưa chắc: chưa mở trang ấn bản Œuvres complètes de Claude Debussy (Durand); lượt 2 kiểm. Review D6-L5-gom: lượt 1 chưa chắc; lượt 2 tìm được nguồn (thêm vào nguon của câu); ghi dung.'
     luot_2: dung
-    luot_2_nguon: [ "https://www.henle.de/Suite-bergamasque/HN-381", "https://www.bongiovanni70.it/products/debussy-suite-bergamasque-per-pianoforte-durand" ]
+    luot_2_nguon: ["https://www.henle.de/Suite-bergamasque/HN-381", "https://www.bongiovanni70.it/products/debussy-suite-bergamasque-per-pianoforte-durand"]
     luot_2_ghi_chu: Henle HN 381 có Clair de lune (mức 5); bản Durand là trích từ 'Complete Works of Claude Debussy, Series I, volume 1'.
+    review: dung
   - id: n78
     cau: 'Nhiều bản phổ thông thêm bàn đạp và ngón bấm của người biên tập mà không ghi rõ: dùng Urtext.'
     loai: khuyen-tap
@@ -637,51 +708,68 @@ nhan_dinh:
   - id: n80
     cau: 'Debussy tiếp theo: Rêverie, Arabesque số 1, các bài trong Children''s Corner, rồi tập Préludes.'
     loai: ten
-    nguon: [ imslp-reverie, imslp-arabesques, imslp-childrens-corner ]
+    nguon: [imslp-reverie, imslp-arabesques, imslp-childrens-corner]
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Rêverie,_CD_76_(Debussy,_Claude)", "https://imslp.org/wiki/2_Arabesques,_CD_74_(Debussy,_Claude)", "https://imslp.org/wiki/Children's_Corner,_CD_119_(Debussy,_Claude)", "https://imslp.org/wiki/Préludes,_Livre_1,_CD_125_(Debussy,_Claude)" ]
+    luot_2_nguon: ["https://imslp.org/wiki/Rêverie,_CD_76_(Debussy,_Claude)", "https://imslp.org/wiki/2_Arabesques,_CD_74_(Debussy,_Claude)", "https://imslp.org/wiki/Children's_Corner,_CD_119_(Debussy,_Claude)", "https://imslp.org/wiki/Préludes,_Livre_1,_CD_125_(Debussy,_Claude)"]
     luot_2_ghi_chu: Cả bốn là tác phẩm piano của Debussy (IMSLP).
   - id: n81
     cau: Link hướng dẫn nghe Préludes quyển 1 (/opus/nghe-nhac/debussy-preludes/).
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: Chưa chuyển; ../opus-zero/docs/nghe-nhac/debussy-preludes.md có ("sắp có").
+    ghi_chu: 'Chưa chuyển; ../opus-zero/docs/nghe-nhac/debussy-preludes.md có ("sắp có"). Review D6-L5-gom: kiểm trên trang và dữ liệu: Dòng 201; ../opus-zero/docs/nghe-nhac/debussy-preludes.md có ("Debussy: Préludes, quyển 1"), chưa chuyển.'
+    review: dung
   - id: n82
     cau: 'Cùng kỹ năng hát và bàn đạp: link Chopin Nocturne Op. 9 số 2, Pathétique chương 2.'
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: Hai trang có.
+    ghi_chu: 'Hai trang có. Review D6-L5-gom: kiểm trên trang và dữ liệu: Dòng 202; chopin-nocturne-op9-2, pathetique-adagio có.'
+    review: dung
   - id: n83
-    cau: 'Sau Grade 8: Liszt Liebestraum số 3 và Chopin Ballade số 1.'
+    cau: 'Học tiếp, sau Grade 8: link Liszt Liebestraum số 3 và Chopin Ballade số 1 (hai bài chặng 7).'
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: 'tac-pham.yml (grade, chang đã khóa): liszt-liebestraum chặng 7 "Grade 8 trở lên", chopin-ballade-1 chặng 7 "Sau Grade 8". Hai trang chưa chuyển (../opus-zero có, "sắp có").'
+    ghi_chu: 'tac-pham.yml (grade, chang đã khóa): liszt-liebestraum chặng 7 "Grade 8 trở lên", chopin-ballade-1 chặng 7 "Sau Grade 8". Hai trang chưa chuyển (../opus-zero có, "sắp có"). Review D6-L5-gom: kiểm trên trang và dữ liệu: dòng 203; liszt-liebestraum, chopin-ballade-1 chặng 7 trong tac-pham.yml (đã khóa); hai trang ở ../opus-zero/docs. Soát nhãn (agent con): phần Grade là cap-do, tách sang n93. Chữ câu cũ: "Sau Grade 8: Liszt Liebestraum số 3 và Chopin Ballade số 1.".'
+    review: dung
+  - id: n93
+    cau: Liebestraum số 3 và Ballade số 1 ở mức sau ABRSM Grade 8.
+    loai: cap-do
+    nguon:
+      - hs-liebestraum
+      - hs-ballade-1
+    ket_qua: dung
+    ghi_chu: 'Review D6-L5-gom: tách từ n83 (soát nhãn): phần Grade của dòng 203 là cap-do. Khớp grade đã khóa của hai bản ghi (Liebestraum "Grade 8 trở lên", Ballade "Sau Grade 8"); nguồn là hồ sơ hai bản ghi ấy. Lượt 2 bổ sung.'
   - id: n84
     cau: Link Tác phẩm theo cấp độ và Nghệ sĩ piano và bản thu.
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: Hai trang có.
+    ghi_chu: 'Hai trang có. Review D6-L5-gom: kiểm trên trang và dữ liệu: Dòng 204; piano/tac-pham-theo-cap, piano/nghe-si có.'
+    review: dung
   - id: n85
     cau: 'Câu hỏi 1: ở đoạn Un poco mosso (ô 27–36), tay trái rải hợp âm liên tục dưới giai điệu tay phải.'
     loai: cau-truc
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: Ô 27–36 tay trái rải hợp âm liên tục dưới giai điệu tay phải.
   - id: n86
     cau: 'Câu hỏi 2: con sordina ở đầu bài nghĩa là dùng una corda.'
     loai: dinh-nghia
-    nguon: [ thuat-ngu ]
+    nguon:
+      - thuat-ngu
+      - henle-blog-unacorda
+      - mut-clair
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://blog.henle.de/en/2013/06/24/una-corda-%e2%80%93-con-sord-%e2%80%93-mit-verschiebung-how-do-i-%e2%80%98mute%e2%80%99-my-piano/" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://blog.henle.de/en/2013/06/24/una-corda-%e2%80%93-con-sord-%e2%80%93-mit-verschiebung-how-do-i-%e2%80%98mute%e2%80%99-my-piano/"]
     luot_2_ghi_chu: Như n71.
+    review: dung
+    ghi_chu: 'Review D6-L5-gom: lượt 2 dẫn blog của nhà xuất bản Henle (bậc 2, trang của nhà xuất bản) cùng thuat-ngu.yml đã khóa và bản Fromont ("con sordina" ô 1). Đủ nguồn; thêm henle-blog-unacorda vào nguon.'
   - id: n87
     cau: 'Câu hỏi 3: chơi pp đều: ngón sát phím, trọng lượng tay thả lỏng, tìm "đáy" phím.'
     loai: khuyen-tap
@@ -699,63 +787,66 @@ nhan_dinh:
   - id: n89
     cau: 'Nguồn: Henle HN 381, lời tựa của François Lesure: niên đại, các tên gọi ban đầu, lịch sử xuất bản.'
     loai: ten
-    nguon: [ henle-hn381-vorwort ]
+    nguon: [henle-hn381-vorwort]
     ket_qua: dung
     ghi_chu: Ký "Paris, autumn 1983 François Lesure".
     luot_2: dung
-    luot_2_nguon: [ "https://www.henle.de/Suite-bergamasque/HN-381", "https://www.henle.de/media/b8/d2/f2/1690886063/0381-1690886063-sync.pdf" ]
+    luot_2_nguon: ["https://www.henle.de/Suite-bergamasque/HN-381", "https://www.henle.de/media/b8/d2/f2/1690886063/0381-1690886063-sync.pdf"]
     luot_2_ghi_chu: "Trang sản phẩm: 'François Lesure (Preface)'; lời tựa nói về 1890/1905, tên ban đầu ('Promenade sentimentale'), lịch sử in (Choudens 1891, Fromont 1902, 1905)."
   - id: n90
     cau: 'Nguồn: ba sách in (Bhogal, Clair de Lune, OUP 2018; Howat, The Art of French Piano Music, Yale 2009; Roberts, Images, Amadeus 1996).'
     loai: ten
     nguon: []
     ket_qua: da-bo
-    ghi_chu: 'Đã bỏ: sách in chưa đọc. Thay bằng Verlaine (Gutenberg) và tệp Mutopia đã dùng.'
+    ghi_chu: 'Đã bỏ: sách in chưa đọc. Thay bằng Verlaine (Gutenberg) và tệp Mutopia đã dùng. Review D6-L5-gom: Lượt 1 bỏ ba sách in chưa đọc; lượt 2 (Open Library) chỉ xác nhận sách có thật. Giữ bỏ.'
     luot_2: dung
-    luot_2_nguon: [ "https://openlibrary.org/works/OL20597475W", "https://openlibrary.org/works/OL14991245W", "https://openlibrary.org/works/OL3752942W" ]
+    luot_2_nguon: ["https://openlibrary.org/works/OL20597475W", "https://openlibrary.org/works/OL14991245W", "https://openlibrary.org/works/OL3752942W"]
     luot_2_ghi_chu: "Open Library: Bhogal (OUP 2018), Howat (Yale 2009), Roberts (Amadeus 1996)."
+    review: dung
   - id: n91
     cau: 'Nguồn mới: Verlaine, Fêtes galantes (Gutenberg); bản chép Mutopia theo bản in Fromont 1905.'
     loai: ten
-    nguon: [ gutenberg-verlaine, mut-clair ]
+    nguon: [gutenberg-verlaine, mut-clair]
     ket_qua: da-sua
-    ghi_chu: Dòng mới.
+    ghi_chu: 'Dòng mới. Review D6-L5-gom: lượt 1 đã sửa; lượt 2 xác nhận chữ mới; review đọc lại chữ trang, khớp câu.'
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1778", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.gutenberg.org/ebooks/15112" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1778", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.gutenberg.org/ebooks/15112"]
     luot_2_ghi_chu: "Mutopia id 1778: 'Source: E. Fromont (1905)'. Gutenberg: Fêtes galantes nằm trong ebook 15112 (Verlaine, Œuvres complètes, tập 1), không phải ebook riêng."
+    review: dung
   - id: n92
     cau: Link Tài liệu tham khảo.
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: Trang có.
+    ghi_chu: 'Trang có. Review D6-L5-gom: kiểm trên trang và dữ liệu: Dòng 237; tai-lieu-tham-khao có.'
+    review: dung
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
-    kiem: [ cu-phap, nhip, giong, tiet-tau, so-ngon ]
+    kiem: [cu-phap, nhip, giong, tiet-tau, so-ngon]
     ket_qua: dung
     ghi_chu: 'Rê♭ trưởng, 9/8, L:1/8, 4 ô đủ 9 móc đơn (ô 2, 3 có (2: hai nốt chiếm ba móc đơn). Tay phải vào sau phách một móc đơn (z), quãng ba có dấu nối; tay trái ba phách chấm (Rê♭–La♭–Fa; Sol♭–Rê♭–Si♭; La♭–Mi♭–Sol♭; Rê♭/La♭). Đúng lời dẫn.'
   - khoi: 2
     loai: vi-du-soan
-    kiem: [ cu-phap, nhip, giong, so-ngon ]
+    kiem: [cu-phap, nhip, giong, so-ngon]
     ket_qua: dung
     ghi_chu: '3 ô 9/8: quãng sáu đi xuống La♭4/Fa5, Sol♭4/Mi♭5, Fa4/Rê♭5, Mi♭4/Đô5, Rê♭4/Si♭4, Đô4/La4… ngón 5-4-5-4-5-4 cho nốt trên; tay trái quãng năm ngân. Đúng lời dẫn.'
   - khoi: 3
     loai: vi-du-soan
-    kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
+    kiem: [cu-phap, nhip, giong, hop-am, so-ngon]
     ket_qua: dung
     ghi_chu: '4 ô 9/8. Tay trái mỗi ô một vòng cung chín móc đơn (Rê♭, Sol♭, La♭7, Rê♭), ngón 5-2-1-3-2-3-1-3-5: đi lên ngón 3 vắt qua ngón cái, đi xuống ngón cái luồn; nốt thứ năm là đỉnh. Tay phải giai điệu Fa5–Mi♭5, Rê♭5–Đô5, Si♭4–La♭4. Đúng lời dẫn.'
 doi_chu:
   - cu: Khoảng ABRSM Grade 8 (ước lượng)
-    moi: Trinity xếp bài ở Grade 8 (danh sách từ 2023); không có trong đề cương ABRSM; RCM xếp ở Level 10 (đề cương 2022); Henle xếp mức 5 (trung bình) trên thang 1–9
-    ly_do: 'Dòng Độ khó của thong_tin (hồ sơ bản ghi tac-pham/debussy-clair-de-lune n22; sua-A.yml): bỏ ước lượng ABRSM không nguồn; Trinity Grade 8 (từ 2023, lần 1 n4), RCM Level 10 (2022), Henle HN 381 mức 5; ABRSM không xếp bài. Chip đã khóa không đổi.'
+    moi: Trinity xếp bài ở Grade 8 (danh sách từ 2023); không có trong đề cương các Grade của ABRSM, nhưng danh sách bằng ARSM của ABRSM (từ 2024) cho chọn một chương bất kỳ của Suite bergamasque; RCM xếp ở Level 10 (đề cương 2022); Henle xếp mức 5 (trung bình) trên thang 1–9
+    ly_do: 'Dòng Độ khó của thong_tin (hồ sơ bản ghi tac-pham/debussy-clair-de-lune n22; sua-A.yml): bỏ ước lượng ABRSM không nguồn; Trinity Grade 8 (từ 2023, lần 1 n4), RCM Level 10 (2022), Henle HN 381 mức 5; ABRSM không xếp bài. Chip đã khóa không đổi. Review D6-L5-gom: lượt 2 sai ở vế ABRSM: danh sách ARSM 6/2024 có "Any one from Suite bergamasque" (hồ sơ bản ghi n22).'
   - cu:
       - Tên bài lấy từ bài thơ Clair de lune của Paul Verlaine trong tập Fêtes galantes (1869), bài thơ mà Debussy đã phổ nhạc thành ca khúc. Chữ bergamasque cũng đến từ chính bài thơ đó. Bài thơ tả những nhân vật đeo mặt nạ dưới ánh trăng, vui mà buồn; âm nhạc giữ đúng cái vẻ nửa sáng nửa tối ấy.
       - 'Debussy viết bộ tổ khúc khi khoảng 28 tuổi, nhưng chỉ in nó 15 năm sau, khi phong cách của ông đã khác hẳn. Bản in năm 1905 là bản đã sửa; bản thảo gốc không còn, nên không ai biết chắc phần nào thuộc năm 1890, phần nào thuộc năm 1905. Bài nằm ở ngưỡng giữa thế kỷ 19 và thế kỷ 20: hòa âm còn chức năng (có át, có kết rõ) nhưng màu sắc đã là của Debussy. Xem thế kỷ 20.'
     moi:
       - Tên bài trùng tên bài thơ Clair de lune của Paul Verlaine, bài mở đầu tập Fêtes galantes (1869), bài thơ mà Debussy đã phổ nhạc thành ca khúc. Chữ bergamasque có ngay trong bài thơ ấy ("masques et bergamasques"); theo lời tựa của ấn bản Henle, tên tổ khúc thường được coi là một gợi nhớ tới tập thơ này. Bài thơ tả những nhân vật đeo mặt nạ dưới ánh trăng, vui mà buồn; âm nhạc giữ đúng cái vẻ nửa sáng nửa tối ấy.
       - 'Debussy viết bộ tổ khúc khi khoảng 28 tuổi, nhưng chỉ in nó 15 năm sau; chính ông ghi năm 1890 lên bản in thử để cho biết đây là tác phẩm thời trẻ. Bản in năm 1905 là bản đã sửa; bản thảo gốc đến nay chưa tìm thấy, nên không ai biết chắc phần nào thuộc năm 1890, phần nào thuộc năm 1905. Bài nằm ở ngưỡng giữa thế kỷ 19 và thế kỷ 20: hòa âm còn chức năng (có át, có kết rõ) nhưng màu sắc đã là của Debussy. Xem thế kỷ 20.'
-    ly_do: 'n10 (da-sua), n13 (da-sua): Gutenberg (Verlaine), Henle HN 381. n17 (da-sua), n19 (da-sua): theo lời tựa Henle HN 381.'
+    ly_do: 'n10 (da-sua), n13 (da-sua): Gutenberg (Verlaine), Henle HN 381. n17 (da-sua), n19 (da-sua): theo lời tựa Henle HN 381. Review D6-L5-gom: lượt 2 sai ở vế ABRSM: danh sách ARSM 6/2024 có "Any one from Suite bergamasque" (hồ sơ bản ghi n22).'
   - cu: 'Coda (ô 66–72): hợp âm rải, tay bắt chéo, tan dần đến hết; hợp âm cuối ngân thật lâu'
     moi: 'Coda (ô 66–72): hợp âm rải, tay bắt chéo, tan dần đến hết (morendo jusqu''à la fin)'
     ly_do: 'n33 (da-sua): bản Fromont ghi morendo jusqu''à la fin, hợp âm cuối không có dấu ngân.'
@@ -770,4 +861,10 @@ doi_chu:
     moi:
       - Paul Verlaine, Fêtes galantes, bài Clair de lune, trong Œuvres complètes, tập 1 (Project Gutenberg).
       - 'Bản nhạc: IMSLP; bản chép LilyPond của Mutopia Project theo bản in E. Fromont 1905, dùng để đếm ô, đối chiếu chỉ dẫn và sắc thái. Xem thêm tài liệu tham khảo.'
-    ly_do: 'n90 (da-bo): sách in chưa đọc. n91: tệp Mutopia đã dùng. n91: nguồn đã đọc.'
+    ly_do: 'n90 (da-bo): sách in chưa đọc. n91: tệp Mutopia đã dùng. n91: nguồn đã đọc. Review D6-L5-gom: lượt 2 sai ở vế ABRSM: danh sách ARSM 6/2024 có "Any one from Suite bergamasque" (hồ sơ bản ghi n22).'
+  - cu: 'Phím đàn có "điểm thoát" (escapement): ấn quá chậm thì nốt không kêu, quá nhanh thì to'
+    moi: 'Độ to theo tốc độ phím đi xuống: ấn quá chậm thì nốt không kêu, hơi nhanh là đã to'
+    ly_do: 'n46 (review D6-L5-gom): nguồn lượt 2 là trang thợ đàn; viết theo điều trang piano/tieng-dan (đã khóa) đã kiểm, bỏ chữ "điểm thoát".'
+  - cu: 'Debussy được kể là muốn người chơi làm người nghe quên rằng piano có búa: tiếng đàn như không bắt đầu bằng một cú đánh. Chạm phím từ rất gần, ngón phẳng hơn, phần thịt của đầu ngón. Ở những hợp âm lớn, dùng trọng lượng cả cánh tay rơi xuống, cổ tay mềm như lò xo.'
+    moi: 'Marguerite Long kể một câu Debussy hay nói: phải quên rằng piano có búa. Hãy để tiếng đàn như không bắt đầu bằng một cú đánh. Chạm phím từ rất gần, ngón phẳng hơn, phần thịt của đầu ngón. Ở những hợp âm lớn, dùng trọng lượng cả cánh tay rơi xuống, cổ tay mềm như lò xo.'
+    ly_do: 'n74 (review D6-L5-gom): ghi người kể theo nguồn (Grayson 2014, dẫn Long, At the Piano with Debussy, tr. 13).'

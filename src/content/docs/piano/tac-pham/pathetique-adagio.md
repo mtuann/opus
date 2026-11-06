@@ -75,7 +75,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 |---|---|---|
 | Giai điệu và móc kép trong cùng tay phải (ô 1–8) | Ngón 1–2 chơi nhiều nốt hơn nên dễ to hơn; ngón 4–5 phải hát | Chơi riêng giai điệu với đúng ngón 3–4–5, hát theo; rồi thêm móc kép bấm câm; rồi móc kép *pp*. Bài tập 1 và mục cân bằng của [Tạo tiếng đàn](/opus/piano/tieng-dan/) |
 | Legato của giai điệu | Không có bàn đạp nào nối được các nốt giai điệu đi bậc liền mà không làm nhòe | Đổi ngón trên phím (giữ phím, thay ngón khác vào) để ngón cần dùng luôn sẵn sàng; nối giai điệu bằng ngón trước rồi mới thêm bàn đạp. Bài tập 2 |
-| Bàn đạp | Hòa âm đổi mỗi phách hoặc nửa phách; giai điệu đi bậc | Bàn đạp nối (nhấn sau khi đánh): nhả đúng lúc đánh nốt trầm mới, nhấn lại ngay sau. Đạp nông. Bài tập 3 và [Bàn đạp](/opus/piano/ban-dap/) |
+| Bàn đạp | Hòa âm đổi mỗi phách hoặc nửa phách; giai điệu phần lớn đi bậc, có vài bước nhảy | Bàn đạp nối (nhấn sau khi đánh): nhả đúng lúc đánh nốt trầm mới, nhấn lại ngay sau. Đạp nông. Bài tập 3 và [Bàn đạp](/opus/piano/ban-dap/) |
 | Ô 9–16, chủ đề cao một quãng tám | Âm vực sáng dễ gắt; phần đệm dày hơn dễ lấn | Giữ trọng lượng tay, không đẩy tiếng; luyện cân bằng như ô 1–8 |
 | Đoạn C, chùm ba móc kép | Tay phải vừa hát vừa lặp hợp âm chùm ba: dễ to | Cổ tay mềm, ngón sát phím; tập chùm ba riêng ở *pp* với máy đếm nhịp; ghép giai điệu sau |
 | Chuyển sang Mi trưởng | Đọc nốt thăng sau cả trang dấu giáng; *sf* dễ thành đập | Viết tên hợp âm lên bản nhạc; *sf* là nhấn theo bối cảnh *p*, không phải *ff* |
@@ -176,7 +176,7 @@ Kế hoạch 8 tuần, 45–60 phút mỗi ngày. Tốc độ tính theo móc đ
 
 ### Phát âm
 
-Tôn trọng dấu luyến của Beethoven: chúng thường dài hơn ở giai điệu và ngắn ở các mảnh đối đáp. Nốt cuối của dấu luyến nhẹ hơn. Các nốt có chấm staccato trong đoạn B và coda vẫn mềm, như những giọt nước.
+Tôn trọng dấu luyến của Beethoven: ở chủ đề, dấu luyến thường nối qua hai ô; ở đoạn B, dấu luyến ngắn hơn, mỗi dấu luyến gọn trong một ô. Nốt cuối của dấu luyến nhẹ hơn. Các nốt có chấm staccato trong đoạn C và coda vẫn mềm, như những giọt nước.
 
 ### Bàn đạp
 
@@ -188,7 +188,7 @@ Các láy quanh và nốt hoa mỹ trong giai điệu thuộc về câu hát: ch
 
 ### Ấn bản
 
-Các bản thế kỷ 19 (như của Hans von Bülow) thêm nhiều sắc thái, bàn đạp và thay đổi dấu luyến. Dùng bản Urtext để biết đâu là của Beethoven; nếu muốn có gợi ý ngón bấm và giải thích, ấn bản ABRSM của Barry Cooper ghi rõ phần nào là của người biên tập.
+Các bản thế kỷ 19 (như của Hans von Bülow) thêm nhiều sắc thái, bàn đạp và thay đổi dấu luyến. Dùng bản Urtext để biết đâu là của Beethoven; nếu muốn có lời bình về nguồn và cách chơi, có ấn bản ABRSM *The 35 Piano Sonatas* do Barry Cooper biên tập.
 
 ## Lỗi thường gặp
 

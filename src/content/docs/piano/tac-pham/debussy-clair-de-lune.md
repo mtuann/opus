@@ -74,7 +74,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 
 | Chỗ khó | Vì sao khó | Cách tập |
 |---|---|---|
-| *pp* đều ngay từ nốt đầu | Phím đàn có "điểm thoát" (escapement): ấn quá chậm thì nốt không kêu, quá nhanh thì to | Đặt ngón sát phím, ấn từ trọng lượng tay thả lỏng chứ không từ cú gõ; tìm "đáy" của phím. Tập riêng trên một nốt rồi một quãng ba: 10 lần liên tiếp *pp* đều nhau. Xem [Tạo tiếng đàn](/opus/piano/tieng-dan/) |
+| *pp* đều ngay từ nốt đầu | Độ to theo tốc độ phím đi xuống: ấn quá chậm thì nốt không kêu, hơi nhanh là đã to | Đặt ngón sát phím, ấn từ trọng lượng tay thả lỏng chứ không từ cú gõ; tìm "đáy" của phím. Tập riêng trên một nốt rồi một quãng ba: 10 lần liên tiếp *pp* đều nhau. Xem [Tạo tiếng đàn](/opus/piano/tieng-dan/) |
 | Quãng ba, quãng sáu song song | Hai nốt phải vào cùng lúc; nốt trên cần nổi nhẹ; legato giữa các quãng khó | Tập riêng nốt trên với đúng ngón, rồi riêng nốt dưới; ghép với nốt trên *mp*, nốt dưới *pp*. Nối nốt trên bằng ngón, nốt dưới nhờ bàn đạp. Bài tập 2 |
 | Nhịp mơ hồ, nhóm hai nốt trong 9/8 | Mắt quen đọc nhóm ba; nốt bắt đầu sau phách và nối qua phách | Đếm to "1-2-3, 1-2-3, 1-2-3" (móc đơn) khi tập chậm; ô có nhóm hai nốt đếm "1-2-3, 1-và, 1-và" cho phách đó. Tay trái hoặc máy đếm nhịp giữ phách chấm. Bài tập 1 |
 | Hợp âm rải đoạn *Un poco mosso* | Tay trái trải rộng hơn một quãng tám; dễ to, dễ vấp chỗ đổi thế tay | Chơi mỗi nhóm thành hợp âm khối để học thế tay; rải chậm với cổ tay xoay theo hướng đi; khi cần, để tay phải lấy một hai nốt cao nhất của chuỗi rải. Bài tập 3 |
@@ -181,7 +181,7 @@ Bài gần như chỉ sống trong vùng từ *ppp* đến *p*; chỉ một lầ
 
 ### Âm sắc
 
-Debussy được kể là muốn người chơi làm người nghe quên rằng piano có búa: tiếng đàn như không bắt đầu bằng một cú đánh. Chạm phím từ rất gần, ngón phẳng hơn, phần thịt của đầu ngón. Ở những hợp âm lớn, dùng trọng lượng cả cánh tay rơi xuống, cổ tay mềm như lò xo.
+Marguerite Long kể một câu Debussy hay nói: phải quên rằng piano có búa. Hãy để tiếng đàn như không bắt đầu bằng một cú đánh. Chạm phím từ rất gần, ngón phẳng hơn, phần thịt của đầu ngón. Ở những hợp âm lớn, dùng trọng lượng cả cánh tay rơi xuống, cổ tay mềm như lò xo.
 
 ### Ấn bản
 

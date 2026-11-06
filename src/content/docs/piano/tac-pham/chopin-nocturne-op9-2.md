@@ -14,7 +14,7 @@ Bản nocturne nổi tiếng nhất của Chopin là một bài học trọn v�
 
 - **Học hát bằng ngón tay.** Tiếng piano tắt dần ngay sau khi đánh. Muốn giai điệu nghe liền như giọng hát, bạn phải nghe đuôi của từng nốt dài và cho nốt sau vào đúng độ to mà nốt trước còn lại lúc đó. Đây là kỹ năng cốt lõi của mọi bản nhạc chậm (xem [Tạo tiếng đàn](/opus/piano/tieng-dan/)).
 - **Tay trái kiểu valse trong nhịp 12/8.** Mỗi phách lớn là một nốt trầm và hai hợp âm. Bước nhảy này lặp lại trong vô số tác phẩm Lãng mạn: valse, mazurka, nocturne.
-- **Làm quen fioritura.** Những chùm nốt nhỏ không chia đều theo phách, bắt chước lối luyến láy của ca sĩ. Gặp chúng lần đầu trong một bài ngắn dễ hơn nhiều so với gặp trong một Ballade.
+- **Làm quen fioritura.** Những nét trang trí hoa mỹ cho giai điệu, bắt chước lối luyến láy của ca sĩ; ở Chopin, chúng thường viết bằng nốt nhỏ, thành chùm không chia đều theo phách. Gặp chúng lần đầu trong một bài ngắn dễ hơn nhiều so với gặp trong một Ballade.
 - **Rubato có kỷ luật.** Bài này dạy bạn co giãn giai điệu mà không làm sụp nhịp.
 - **Ngắn mà trọn vẹn.** 34 ô nhịp, khoảng bốn đến năm phút: đủ để học kỹ trong hai tháng và biểu diễn được.
 
@@ -195,7 +195,7 @@ Karol Mikuli, học trò của Chopin và về sau là người biên tập các
 - Nốt hoa mỹ luôn **nhỏ hơn** giai điệu chính và nghe như một hơi luyến, không như một đoạn gam.
 - Quyết định trước nốt nào của chùm rơi cùng nốt nào của tay trái, rồi giữ quyết định đó ổn định khi tập. Sự tự do chỉ đến sau khi đã chắc.
 - Láy rền, láy quanh bắt đầu từ nốt nào: đọc chú thích trong ấn bản Urtext bạn dùng, và xem [Nốt hoa mỹ](/opus/piano/not-hoa-my/).
-- Khi đã thuộc bài, thử một biến thể của chính Chopin (trong ấn bản Wiener Urtext) ở lần nhắc lại cuối. Đó cũng là cách Chopin làm: mỗi lần một khác.
+- Khi đã thuộc bài, thử một dị bản của chính Chopin (in trong Wiener Urtext) ở lần nhắc lại cuối. Chính Chopin cũng thường thay đổi phần trang trí khi chơi và khi dạy.
 
 ### Bàn đạp
 
@@ -236,9 +236,9 @@ Phần lớn bài ở *p* và *pp*; dải sắc thái hẹp nên từng nấc nh
 > Cấu trúc A A B A B A và coda, 34 ô nhịp, giống như ca sĩ bel canto thêm luyến láy mỗi khi hát lại một giai điệu.
 ? Fioritura là gì?
 - Một kiểu đệm tay trái trong nhịp 12/8
-+ Những chùm nốt hoa mỹ nhỏ không chia đều theo phách, bắt chước lối luyến láy của ca sĩ
++ Những nét trang trí hoa mỹ cho giai điệu, bắt chước lối luyến láy của ca sĩ
 - Chỉ dẫn chơi không theo nhịp ở cuối bài
-> Chúng luôn nhỏ hơn giai điệu chính, và cả chùm phải lọt vừa phách trong khi tay trái vẫn giữ nhịp.
+> Ở Chopin, chúng thường viết bằng nốt nhỏ, thành chùm không chia đều theo phách. Chơi nhẹ hơn giai điệu chính, và cả chùm phải lọt vừa phách trong khi tay trái vẫn giữ nhịp.
 ? Theo lời kể của Karol Mikuli, rubato của Chopin là gì?
 + Giai điệu co giãn trong khi tay đệm vẫn chơi đúng nhịp
 - Cả hai tay cùng chậm lại ở mọi chỗ đẹp

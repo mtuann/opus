@@ -11,7 +11,7 @@ lan:
       luot_2: Claude Sonnet 5.5 (D2-0 lượt 2 phần A)
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
-    truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
+    truong: [chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten]
   - so: 2
     ngay: '2026-11-05'
     nhanh: moi/d6-l5
@@ -19,7 +19,7 @@ lan:
     nguoi:
       luot_1: Claude Opus 5.5, agent con, D6-L5 phần A
       luot_2: null
-      review: null
+      review: Claude Opus 5.5 (review D6-L5-gom, 05/11/2026)
       kiem_mau: null
 nguon:
   - id: imslp-bergamasque
@@ -62,42 +62,54 @@ nguon:
     bac: 2
     ten: 'Wikimedia Commons, Clair de lune (Claude Debussy) Suite bergamasque.ogg: Laurens Goedhart (piano), 2011, phạm vi công cộng, 304,09 s (API imageinfo 05/11/2026)'
     link: https://commons.wikimedia.org/wiki/File:Clair_de_lune_(Claude_Debussy)_Suite_bergamasque.ogg
+  - id: l2-n24-1
+    bac: 2
+    ten: Nguồn lượt 2 D6-L5-gom (imslp.org)
+    link: "https://imslp.org/wiki/Suite_bergamasque_(Debussy,_Claude)"
+  - id: l2-n24-3
+    bac: 2
+    ten: Nguồn lượt 2 D6-L5-gom (web.archive.org)
+    link: "https://web.archive.org/web/20190621090300/http://debussy.fr/encd/catalog/works_82.php"
+  - id: abrsm-arsm-2024
+    bac: 2
+    ten: 'ABRSM, ARSM Repertoire (June 2024, Piano): Debussy "Any one from Suite bergamasque"'
+    link: https://www.abrsm.org/sites/default/files/2024-06/ARSM%20Repertoire%20(June%202024%20-%20Piano)%20PROOF4%20(Final)%20(1).pdf
 nhan_dinh:
   - id: n1
     cau: 'Tên bài: Clair de lune (chương 3 của Suite bergamasque).'
     loai: ten
-    truong: [ ten ]
-    nguon: [ imslp-bergamasque, henle-hn381 ]
+    truong: [ten]
+    nguon: [imslp-bergamasque, henle-hn381]
     ket_qua: dung
     ghi_chu: 'IMSLP: "Suite bergamasque", mục 3 "Clair de lune, Andante très expressif (D♭ major, 72 bars)". Henle HN 381: "Clair de lune D flat major".'
     luot_2: dung
-    luot_2_nguon: [ 'https://imslp.org/wiki/Suite_bergamasque,_CD_82_(Debussy,_Claude)' ]
+    luot_2_nguon: ['https://imslp.org/wiki/Suite_bergamasque,_CD_82_(Debussy,_Claude)']
     luot_2_ghi_chu: 'IMSLP: Suite bergamasque, mvt 3 "Clair de lune" (Andante très expressif, D-flat major).'
   - id: n2
     cau: 'Tác giả: Claude Debussy.'
     loai: lich-su
-    truong: [ tac_gia ]
-    nguon: [ imslp-bergamasque, henle-hn381 ]
+    truong: [tac_gia]
+    nguon: [imslp-bergamasque, henle-hn381]
     ket_qua: dung
     ghi_chu: 'IMSLP: Composer "Debussy, Claude"; Henle HN 381.'
     luot_2: dung
-    luot_2_nguon: [ 'https://imslp.org/wiki/Suite_bergamasque,_CD_82_(Debussy,_Claude)' ]
+    luot_2_nguon: ['https://imslp.org/wiki/Suite_bergamasque,_CD_82_(Debussy,_Claude)']
     luot_2_ghi_chu: 'IMSLP composer: Debussy, Claude.'
   - id: n3
     cau: 'Số danh mục: L. 75 (ghi cho cả Suite bergamasque; Clair de lune là chương 3).'
     loai: danh-muc
-    truong: [ danh_muc ]
-    nguon: [ imslp-bergamasque ]
+    truong: [danh_muc]
+    nguon: [imslp-bergamasque]
     ket_qua: dung
     ghi_chu: 'IMSLP: Op./Cat. No. "CD 82 ; L.75" cho Suite bergamasque; Clair de lune là chương 3.'
     luot_2: dung
-    luot_2_nguon: [ 'https://imslp.org/wiki/Suite_bergamasque,_CD_82_(Debussy,_Claude)' ]
+    luot_2_nguon: ['https://imslp.org/wiki/Suite_bergamasque,_CD_82_(Debussy,_Claude)']
     luot_2_ghi_chu: 'IMSLP: "CD 82 ; L.75" for the Suite bergamasque. L. 75 is the older Lesure number (CD/L 82 is the revised-catalogue number); the claim''s "L. 75" is valid, adding "CD 82" would be more complete.'
   - id: n4
     cau: Bài tương đương khoảng ABRSM Grade 8.
     loai: cap-do
-    truong: [ grade ]
-    nguon: [ trinity-2023, henle-hn381, henle-hn383, rcm-2022, abrsm-2526, henle-thang ]
+    truong: [grade]
+    nguon: [trinity-2023, henle-hn381, henle-hn383, rcm-2022, abrsm-2526, henle-thang]
     ket_qua: dung
     ghi_chu: 'Đề cương chính thức: Trinity (danh sách từ 2023, bản tháng 8/2026) xếp "Claude Debussy, Clair de lune (3rd movt from Suite bergamasque)" ở Grade 8 (sách Piano Exam Pieces Plus Exercises from 2023: Grade 8). ABRSM không có Clair de lune trong các danh sách 2017–2028 (và Grade 8 của 2015–2016) nhưng xếp "La fille aux cheveux de lin" (Prélude, Henle 5, như Clair de lune) ở Grade 8 (2025–2026). Henle mức 5 (medium); RCM 2022: Suite bergamasque ở Level 10.'
     luot_2: dung
@@ -111,17 +123,17 @@ nhan_dinh:
   - id: n5
     cau: Bài thuộc chặng 6 (Grade 7–8) của lộ trình piano.
     loai: cap-do
-    truong: [ chang ]
-    nguon: [ trinity-2023 ]
+    truong: [chang]
+    nguon: [trinity-2023]
     ket_qua: dung
     ghi_chu: Chặng 6 = Grade 7–8 (cap-do.yml); Trinity Grade 8 nằm trong chặng này.
     luot_2: dung
-    luot_2_nguon: [ 'https://www.trinitycollege.com/qualifications/music/grade-exams/piano/piano-grade-8' ]
+    luot_2_nguon: ['https://www.trinitycollege.com/qualifications/music/grade-exams/piano/piano-grade-8']
     luot_2_ghi_chu: Stage 6 = Grade 7-8; Trinity Grade 8.
   - id: n6
     cau: Bài được gợi ý ở chặng 6 trong hộp luyện tập của trang chủ.
     loai: khuyen-tap
-    truong: [ goi_y ]
+    truong: [goi_y]
     nguon: []
     ket_qua: khong-can-nguon
     ghi_chu: '../opus-zero/docs/assets/js/practice.js, hằng SUGGEST[6] có ["piano/tac-pham/debussy-clair-de-lune/", "Debussy: Clair de lune"]; chặng 6 trùng chang 6 của bản ghi.'
@@ -130,190 +142,201 @@ nhan_dinh:
   - id: n7
     cau: 'Giọng: Rê♭ trưởng.'
     loai: cau-truc
-    truong: [ giong ]
-    nguon: [ mut-clair, imslp-bergamasque, henle-hn381 ]
+    truong: [giong]
+    nguon: [mut-clair, imslp-bergamasque, henle-hn381]
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf", "https://imslp.org/wiki/Suite_bergamasque_(Debussy,_Claude)" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf", "https://imslp.org/wiki/Suite_bergamasque_(Debussy,_Claude)"]
     luot_2_ghi_chu: "Hóa biểu năm dấu giáng; IMSLP: Clair de lune (D♭ major)."
   - id: n8
     cau: 'Nhịp: 9/8.'
     loai: cau-truc
-    truong: [ nhip ]
-    nguon: &id001 [ mut-clair ]
+    truong: [nhip]
+    nguon: &id001 [mut-clair]
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: Nhịp 9/8.
   - id: n9
-    cau: 'Thời kỳ: Ấn tượng.'
+    cau: 'Thời kỳ: Cuối thế kỷ 19.'
     loai: lich-su
-    truong: [ thoi_ky ]
-    nguon: [ imslp-bergamasque ]
-    ket_qua: null
-    ghi_chu: 'chưa chắc: IMSLP ghi Piece Style "Romantic" cho Suite bergamasque; Mutopia style "Modern"; Henle: tác phẩm thời trẻ (1890), sửa 1905. Xếp Debussy vào "Ấn tượng" là lựa chọn của site (như trang lich-su/thoi-ky/the-ky-20). Người giao quyết.'
+    truong: [thoi_ky]
+    nguon:
+      - imslp-bergamasque
+      - henle-hn381-vorwort
+    ket_qua: da-sua
+    ghi_chu: 'chưa chắc: IMSLP ghi Piece Style "Romantic" cho Suite bergamasque; Mutopia style "Modern"; Henle: tác phẩm thời trẻ (1890), sửa 1905. Xếp Debussy vào "Ấn tượng" là lựa chọn của site (như trang lich-su/thoi-ky/the-ky-20). Người giao quyết. Review D6-L5-gom: lượt 1 chưa chắc, lượt 2 khong-chac ("Ấn tượng" không khớp IMSLP Romantic; Henle: hòa âm còn "conventional"). Chọn "Cuối thế kỷ 19" theo năm sáng tác 1890 (Henle HN 381: Debussy tự ghi 1890 lên bản in thử), như satie-gymnopedie (1888, "Cuối thế kỷ 19", D6-L3); trang bài học cũng viết bài "ở ngưỡng giữa thế kỷ 19 và thế kỷ 20". thoi_ky không hiện trên trang nào, nên không có doi_chu. "Ấn tượng" giữ cho debussy-preludes (1909–1913). Không chạy lại lượt 2: chỉ là nhãn của site dựng từ năm lượt 2 đã kiểm. Chữ câu cũ: "Thời kỳ: Ấn tượng.".'
     luot_2: khong-chac
-    luot_2_nguon: [ "https://imslp.org/wiki/Suite_bergamasque_(Debussy,_Claude)", "https://www.henle.de/en/Clair-de-lune/HN-391" ]
+    luot_2_nguon: ["https://imslp.org/wiki/Suite_bergamasque_(Debussy,_Claude)", "https://www.henle.de/en/Clair-de-lune/HN-391"]
     luot_2_ghi_chu: 'Nguồn lệch nhau: IMSLP xếp Suite bergamasque vào thời kỳ và phong cách Romantic; Henle HN 391 nói hòa âm của bài còn "conventional", chỉ báo trước phong cách sau này. Cách xếp "Ấn tượng" phổ biến nhưng không có trong danh sách thời kỳ của site (Trung cổ … Đương đại, hay "A/B"); có thể cân nhắc "Lãng mạn/Thế kỷ 20".'
+    review: dung
   - id: n10
     cau: 'Kỹ năng chính: sắc thái pp, bàn đạp nửa, tự do nhịp.'
     loai: cau-truc
-    truong: [ ky_nang_chinh ]
+    truong: [ky_nang_chinh]
     nguon: *id001
     ket_qua: dung
     ghi_chu: pp/ppp phần lớn bài; Tempo rubato ô 15.
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: 'Bản nhạc: pp, con sordina, Tempo rubato; "bàn đạp nửa" là lời khuyên phổ biến (bản nhạc không ghi).'
   - id: n11
     cau: 'Luyện nghe: không khí, nhịp mơ hồ.'
     loai: cau-truc
-    truong: [ luyen_nghe ]
+    truong: [luyen_nghe]
     nguon: *id001
     ket_qua: dung
     ghi_chu: Nốt bắt đầu sau phách, dấu nối qua phách, nhóm hai nốt trong 9/8.
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: Nhóm hai nốt (duolet) trong 9/8 làm nhịp mơ hồ.
   - id: n12
     cau: 'Chip: "Rê♭ trưởng · 9/8".'
     loai: cau-truc
-    truong: [ chip ]
+    truong: [chip]
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: Rê♭ trưởng, 9/8.
   - id: n13
     cau: 'Chip: "Andante très expressif".'
     loai: ten
-    truong: [ chip ]
-    nguon: [ mut-clair, imslp-bergamasque ]
+    truong: [chip]
+    nguon: [mut-clair, imslp-bergamasque]
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf", "https://imslp.org/wiki/Suite_bergamasque_(Debussy,_Claude)" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf", "https://imslp.org/wiki/Suite_bergamasque_(Debussy,_Claude)"]
     luot_2_ghi_chu: 'Bản Fromont (Mutopia) và IMSLP: "Andante très expressif".'
   - id: n14
     cau: 'Chip cấp độ: "≈ Grade 8".'
     loai: cap-do
-    truong: [ chip ]
-    nguon: [ henle-hn381 ]
+    truong: [chip]
+    nguon: [henle-hn381]
     ket_qua: dung
     ghi_chu: 'Khớp grade đã khóa (lần 1 n4: Trinity Grade 8).'
     luot_2: dung
-    luot_2_nguon: [ "https://www.trinitycollege.com/resource?id=10125" ]
+    luot_2_nguon: ["https://www.trinitycollege.com/resource?id=10125"]
     luot_2_ghi_chu: Trinity Grade 8 (danh sách từ 2023).
   - id: n15
     cau: 'Chip: "72 ô nhịp".'
     loai: cau-truc
-    truong: [ chip ]
-    nguon: [ mut-clair, imslp-bergamasque ]
+    truong: [chip]
+    nguon: [mut-clair, imslp-bergamasque]
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf", "https://imslp.org/wiki/Suite_bergamasque_(Debussy,_Claude)" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf", "https://imslp.org/wiki/Suite_bergamasque_(Debussy,_Claude)"]
     luot_2_ghi_chu: "Đếm ô bản Mutopia (ô 69–72 ở hệ cuối) và IMSLP: 72 bars."
   - id: n16
     cau: 'Thông tin, nhà soạn nhạc: Claude Debussy (1862–1918).'
     loai: nam
-    truong: [ thong_tin ]
-    nguon: [ commons-goedhart ]
+    truong: [thong_tin]
+    nguon: [commons-goedhart]
     ket_qua: dung
     ghi_chu: Khớp nha-soan-nhac.yml (đã khóa).
     luot_2: dung
-    luot_2_nguon: [ "https://www.henle.de/en/Suite-bergamasque/HN-381" ]
+    luot_2_nguon: ["https://www.henle.de/en/Suite-bergamasque/HN-381"]
     luot_2_ghi_chu: "Tiểu sử Henle: sinh 1862 ở Saint-Germain-en-Laye, mất ở Paris 1918."
   - id: n17
     cau: 'Thông tin, tác phẩm: Clair de lune, chương 3 của Suite bergamasque (Prélude, Menuet, Clair de lune, Passepied), L. 75.'
     loai: ten
-    truong: [ thong_tin ]
-    nguon: [ imslp-bergamasque, henle-hn381-vorwort ]
+    truong: [thong_tin]
+    nguon: [imslp-bergamasque, henle-hn381-vorwort]
     ket_qua: dung
     ghi_chu: 'IMSLP: 1. Prélude, 2. Menuet, 3. Clair de lune, 4. Passepied; "CD 82; L.75".'
     luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Suite_bergamasque_(Debussy,_Claude)" ]
+    luot_2_nguon: ["https://imslp.org/wiki/Suite_bergamasque_(Debussy,_Claude)"]
     luot_2_ghi_chu: "IMSLP: Suite bergamasque, L.75 (CD 82), 4 chương: Prélude, Menuet, Clair de lune, Passepied."
   - id: n18
     cau: 'Thông tin: bắt đầu khoảng 1890 (Debussy tự ghi năm 1890 trên bản in thử); sửa lại và được Fromont in năm 1905.'
     loai: nam
-    truong: [ thong_tin ]
-    nguon: [ henle-hn381-vorwort ]
+    truong: [thong_tin]
+    nguon: [henle-hn381-vorwort]
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: [ "https://www.henle.de/media/b8/d2/f2/1690886063/0381-1690886063-sync.pdf", "https://web.archive.org/web/20190621090300/http://debussy.fr/encd/catalog/works_82.php", "https://imslp.org/wiki/Suite_bergamasque_(Debussy,_Claude)" ]
+    luot_2_nguon: ["https://www.henle.de/media/b8/d2/f2/1690886063/0381-1690886063-sync.pdf", "https://web.archive.org/web/20190621090300/http://debussy.fr/encd/catalog/works_82.php", "https://imslp.org/wiki/Suite_bergamasque_(Debussy,_Claude)"]
     luot_2_ghi_chu: "Lời tựa Henle (Lesure): Debussy ghi năm 1890 trên bản in thử; bản cuối đưa Fromont tháng 4/1905, in tháng 6/1905; debussy.fr: Fromont, June 1905."
   - id: n19
     cau: 'Thông tin: tên ban đầu của chương này là Promenade sentimentale.'
     loai: ten
-    truong: [ thong_tin ]
-    nguon: [ henle-hn381-vorwort ]
+    truong: [thong_tin]
+    nguon: [henle-hn381-vorwort]
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: [ "https://www.henle.de/media/b8/d2/f2/1690886063/0381-1690886063-sync.pdf" ]
+    luot_2_nguon: ["https://www.henle.de/media/b8/d2/f2/1690886063/0381-1690886063-sync.pdf"]
     luot_2_ghi_chu: 'Lời tựa Henle: chương 3 thoạt đầu tên "Promenade sentimentale".'
   - id: n20
     cau: 'Thông tin, giọng · nhịp · tốc độ: Rê♭ trưởng · 9/8 · Andante très expressif (chậm vừa, rất biểu cảm); bắt đầu pp con sordina.'
     loai: cau-truc
-    truong: [ thong_tin ]
+    truong: [thong_tin]
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: "Bản nhạc: Andante très expressif, pp, con sordina; Rê♭ trưởng, 9/8."
   - id: n21
     cau: 'Thông tin, hình thức: ba phần A – B – A'' và coda, 72 ô nhịp.'
     loai: cau-truc
-    truong: [ thong_tin ]
+    truong: [thong_tin]
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf", "https://imslp.org/wiki/Suite_bergamasque_(Debussy,_Claude)" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf", "https://imslp.org/wiki/Suite_bergamasque_(Debussy,_Claude)"]
     luot_2_ghi_chu: "Bản nhạc: A ô 1–26, B \"Un poco mosso\" ô 27–50, A' \"a Tempo 1º\" ô 51, \"morendo jusqu'à la fin\" ô 66 (coda); 72 ô."
   - id: n22
-    cau: 'Thông tin, độ khó: Trinity xếp bài ở Grade 8 (danh sách từ 2023); không có trong đề cương ABRSM; RCM xếp Suite bergamasque ở Level 10 (2022); Henle mức 5.'
+    cau: 'Thông tin, độ khó: Trinity xếp bài ở Grade 8 (danh sách từ 2023); bài không có trong đề cương các Grade của ABRSM, nhưng danh sách bằng ARSM của ABRSM (từ 2024) cho chọn một chương bất kỳ của Suite bergamasque; RCM xếp Suite bergamasque ở Level 10 (2022); Henle mức 5.'
     loai: cap-do
-    truong: [ thong_tin ]
-    nguon: [ henle-hn381, rcm-2022 ]
+    truong: [thong_tin]
+    nguon:
+      - henle-hn381
+      - rcm-2022
+      - abrsm-arsm-2024
+      - trinity-2023
     ket_qua: da-sua
-    ghi_chu: 'Dữ liệu cũ: "Khoảng ABRSM Grade 8 (ước lượng)". Ước lượng ABRSM không nguồn; lần 1 (n4) đã có Trinity Grade 8 và ABRSM không xếp bài. Henle: "Clair de lune D flat major 5 medium"; RCM 2022: Suite bergamasque, Clair de lune ở Level 10. Viết theo nguồn như D6-L3-gom. Đề xuất ở sua-A.yml.'
+    ghi_chu: 'Dữ liệu cũ: "Khoảng ABRSM Grade 8 (ước lượng)". Ước lượng ABRSM không nguồn; lần 1 (n4) đã có Trinity Grade 8 và ABRSM không xếp bài. Henle: "Clair de lune D flat major 5 medium"; RCM 2022: Suite bergamasque, Clair de lune ở Level 10. Viết theo nguồn như D6-L3-gom. Đề xuất ở sua-A.yml. Review D6-L5-gom: lượt 2 sai: danh sách ARSM 6/2024 có "Any one from Suite bergamasque". Sửa thong_tin theo câu đúng của lượt 2 (doi_chu trang); không chạy lại. Chữ câu cũ: "Thông tin, độ khó: Trinity xếp bài ở Grade 8 (danh sách từ 2023); không có trong đề cương ABRSM; RCM xếp Suite bergamasque ở Level 10 (2022); Henle mức 5.".'
     luot_2: sai
-    luot_2_nguon: [ "https://www.trinitycollege.com/resource?id=10125", "https://www.abrsm.org/sites/default/files/2024-06/ARSM%20Repertoire%20(June%202024%20-%20Piano)%20PROOF4%20(Final)%20(1).pdf", "https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf", "https://www.henle.de/en/Suite-bergamasque/HN-381", "https://www.abrsm.org/sites/default/files/2023-09/piano-2021-2022-syllabus-rev-sep-2020-final.pdf", "https://www.abrsm.org/sites/default/files/2024-06/Piano%202023%20%26%202024%20Prac%20syllabus%2020230807.pdf", "https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26%202026%20Prac%20syllabus%2020240524_access.pdf", "https://www.abrsm.org/sites/default/files/2026-06/Piano%20Practical%20Grades%20Qualification%20Specification%202027%20%26%202028.pdf" ]
+    luot_2_nguon: ["https://www.trinitycollege.com/resource?id=10125", "https://www.abrsm.org/sites/default/files/2024-06/ARSM%20Repertoire%20(June%202024%20-%20Piano)%20PROOF4%20(Final)%20(1).pdf", "https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf", "https://www.henle.de/en/Suite-bergamasque/HN-381", "https://www.abrsm.org/sites/default/files/2023-09/piano-2021-2022-syllabus-rev-sep-2020-final.pdf", "https://www.abrsm.org/sites/default/files/2024-06/Piano%202023%20%26%202024%20Prac%20syllabus%2020230807.pdf", "https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26%202026%20Prac%20syllabus%2020240524_access.pdf", "https://www.abrsm.org/sites/default/files/2026-06/Piano%20Practical%20Grades%20Qualification%20Specification%202027%20%26%202028.pdf"]
     luot_2_ghi_chu: "câu đúng: Thông tin, độ khó: Trinity xếp bài ở Grade 8 (danh sách từ 2023); bài không có trong đề cương các Grade của ABRSM, nhưng danh sách bằng ARSM của ABRSM (từ 2024) cho chọn một chương bất kỳ của Suite bergamasque; RCM xếp Suite bergamasque ở Level 10 (2022); Henle mức 5.; Trinity Grade 8, RCM Level 10 (Suite bergamasque), Henle mức 5 đều đúng. Nhưng \"không có trong đề cương ABRSM\" sai: danh sách tác phẩm bằng ARSM của ABRSM (6/2024) có mục Debussy \"Any one from 'Suite bergamasque'\". Bài chỉ không có trong đề cương các Grade 2021–2028."
+    review: dung
   - id: n23
     cau: 'Thông tin, kỹ năng chính: sắc thái pp, cân bằng hợp âm và quãng song song, nhịp mơ hồ (nhóm hai nốt trong 9/8), hợp âm rải chia hai tay, una corda, đạp nửa, rubato.'
     loai: cau-truc
-    truong: [ thong_tin ]
+    truong: [thong_tin]
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: "Hợp với bản nhạc: pp, quãng và hợp âm song song, duolet trong 9/8, hợp âm rải chia hai tay (Un poco mosso), con sordina, Tempo rubato."
   - id: n24
     cau: 'Thông tin, bản nhạc: IMSLP; Henle (Suite bergamasque, HN 381); ấn bản phê bình Œuvres complètes de Claude Debussy (Durand).'
     loai: ten
-    truong: [ thong_tin ]
-    nguon: [ henle-hn381 ]
-    ket_qua: null
-    ghi_chu: 'Henle HN 381 có. chưa chắc: chưa mở trang Œuvres complètes (Durand); lượt 2 kiểm.'
+    truong: [thong_tin]
+    nguon:
+      - henle-hn381
+      - l2-n24-3
+    ket_qua: dung
+    ghi_chu: 'Henle HN 381 có. chưa chắc: chưa mở trang Œuvres complètes (Durand); lượt 2 kiểm. Review D6-L5-gom: lượt 1 chưa chắc; lượt 2 tìm được nguồn (thêm vào nguon của câu); ghi dung. debussy.fr (Wayback): Durand 2000, Œuvres complètes I/1.'
     luot_2: dung
-    luot_2_nguon: [ "https://imslp.org/wiki/Suite_bergamasque_(Debussy,_Claude)", "https://www.henle.de/en/Suite-bergamasque/HN-381", "https://web.archive.org/web/20190621090300/http://debussy.fr/encd/catalog/works_82.php" ]
+    luot_2_nguon: ["https://imslp.org/wiki/Suite_bergamasque_(Debussy,_Claude)", "https://www.henle.de/en/Suite-bergamasque/HN-381", "https://web.archive.org/web/20190621090300/http://debussy.fr/encd/catalog/works_82.php"]
     luot_2_ghi_chu: "HN 381 Suite bergamasque; debussy.fr: Durand 2000, édition critique des Œuvres complètes, I/1."
+    review: dung
   - id: n25
     cau: 'Hình cấu trúc: ba đoạn A (rất nhỏ, mơ hồ), B (hợp âm rải, dâng lên), A'' (trở lại, tan dần), độ rộng bằng nhau.'
     loai: cau-truc
-    truong: [ hinh ]
+    truong: [hinh]
     nguon: *id001
     ket_qua: dung
     ghi_chu: A ô 1–26, B ô 27–50 (rải, cao trào ô 41), A' ô 51–72 (morendo). Độ rộng bằng nhau là minh họa, không theo số ô.
     luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
+    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"]
     luot_2_ghi_chu: Ba đoạn ô 1–26, 27–50, 51–72 (26/24/22 ô), gần bằng nhau; mô tả tính chất hợp với bản nhạc.
   - id: n26
     cau: 'Bản thu gợi ý: Laurens Goedhart, thu năm 2011, phạm vi công cộng, 304,09 s, trang Commons.'
     loai: ten
-    truong: [ ban_thu ]
-    nguon: [ commons-goedhart ]
+    truong: [ban_thu]
+    nguon: [commons-goedhart]
     ket_qua: dung
     ghi_chu: 'Commons: "performed by Laurens Goedhart (pf) in 2011", Public domain, 304,09 s.'
     luot_2: dung
-    luot_2_nguon: [ "https://commons.wikimedia.org/wiki/File:Clair_de_lune_(Claude_Debussy)_Suite_bergamasque.ogg" ]
+    luot_2_nguon: ["https://commons.wikimedia.org/wiki/File:Clair_de_lune_(Claude_Debussy)_Suite_bergamasque.ogg"]
     luot_2_ghi_chu: "Commons: Laurens Goedhart, 2011-08-20, phạm vi công cộng, 304,09 s."

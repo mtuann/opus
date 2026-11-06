@@ -68,7 +68,7 @@ Ghi lại thời điểm (phút:giây) bạn nghe thấy từng sự kiện tron
 Ba bản thu trọn hai tập Impromptu D. 899 và D. 935 để so sánh:
 
 - **Radu Lupu** (Decca).
-- **Alfred Brendel** (Decca, phát hành năm 1989).
+- **Alfred Brendel** (Philips, phát hành năm 1989).
 - **Krystian Zimerman** (Deutsche Grammophon, phát hành năm 1991).
 
 Nghe cùng một đoạn trong ba bản: ai chơi nhỏ nhất mà giai điệu vẫn hát, ai để dòng đệm mỏng nhất, ai giữ câu nhạc rộng và liền nhất?
