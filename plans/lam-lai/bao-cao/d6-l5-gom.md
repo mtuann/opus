@@ -140,3 +140,11 @@ Hồ sơ được ghi lại bằng ruamel.yaml. Cách viết YAML đổi ở và
 - **Hồ sơ ngoài lô** (không sửa): `chopin-valse-la-thu` n67 (đã khóa) dẫn câu "ít trang trí hơn" của trang Nocturne cũ, như `d6-l5.md` đã ghi. Câu n67 vẫn đúng theo bản nhạc.
 - **Còn trống** trong lần kiểm định cuối của 13 hồ sơ: `nguoi.luot_2` và `nguoi.kiem_mau`.
 - **Mạng**: mọi yêu cầu của review dùng User-Agent `opus-kiem-dinh/1.0 (https://mtuann.github.io/opus/)`: blog Henle, Mutopia `pathetique-2.ly`, Forsyths, bài Grayson và một trang khác trên cambridge.org. Thêm hai lượt tìm kiếm trên web. Không vòng chặn. Agent con không dùng mạng.
+
+## Lượt 2 bổ sung và trạng thái khóa (người gom)
+
+- Lượt 2 bổ sung (Claude Opus 5.5): `ket-qua-bo-sung.yml` 4 dung (`nghe-nhac/schubert-impromptu` n1; `debussy-clair-de-lune` n46, n74; `pathetique-adagio` n73), 1 khong-chac (`debussy-clair-de-lune` n93: Liebestraum số 3 không có nguồn ABRSM sau Grade 8, chỉ Henle mức 7; Ballade số 1 có trong danh sách LRSM 2023); đã `nhap`.
+- Người gom: dòng Học tiếp "Sau Grade 8" đổi thành "Chặng 7" (đúng `chang` đã khóa của hai bản ghi, n83 đã kiểm), n93 `da-bo`, `doi_chu`. Không cần chạy lại lượt 2 (chỉ bỏ vế lượt 2 không xác nhận).
+- Đã điền `nguoi.luot_2` cho 13 hồ sơ (7 trang, 6 bản ghi). Còn thiếu cho khóa: `nguoi.kiem_mau`.
+- Mẫu kiểm: 8 nhận định ở `d6-l5-gom/kiem-mau.yml` (`xuat D6-L5 --mau 8`).
+- Chủ repo: `grade` đã khóa của `liszt-liebestraum` ("Grade 8 trở lên") chưa có nguồn ABRSM; xem lại ở D6-L6 hay khi mở khóa.

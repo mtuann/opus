@@ -9,7 +9,7 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: Claude Opus 5.5, agent con, D6-L5 phần A
-      luot_2: null
+      luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L5, 06/11/2026, bốn phần; bổ sung sau review)
       review: Claude Opus 5.5 (review D6-L5-gom, 05/11/2026)
       kiem_mau: null
 ghi_chu: 'Bài học Pathétique chương 2 (tầng Tác phẩm). Bản nhạc: Mutopia pathetique-2 (Berners 1908, Winterberger; Köhler & Ruthardt, Peters 1910), tải .ly và .mid 05/11/2026 với User-Agent opus-kiem-dinh; script Python (mido) in nốt theo ô: 73 ô 2/4; mọi số ô trên trang khớp (A 1–16, B 17–28, A 29–36, C 37–50 với Mi trưởng ô 42–47, bảy giảm ô 48–49, Mi♭7 ô 50, A 51–66 với ô 59 lên quãng tám, coda 66–73). Mốc ::khoi-nghe "1 45 88 155 198 222 259 297 330" (9 mốc / 9 dòng), bản thu Daniel Veesey (Commons, CC0, 380,54 s). Theo tools/audio/align/pieces.py mốc là ô 1, 9, 17, 29 (đo tay 154,5 s), 37, 43, 51, 59, 66: khớp các dòng bảng; dòng "Mi trưởng bất ngờ" đặt ở ô 43 (hợp âm Mi trưởng), trong khi Si7 và nốt sf đầu tiên ở ô 42, lệch một ô (khoảng 5 s), vẫn trong đoạn ấy. Không nghe lại bản thu. Thuật ngữ trang dùng (cantabile, chùm ba, láy quanh, enharmonic, staccato, legato, sf, rondo) có trong src/data/thuat-ngu.yml. Câu ve-site ở hồ sơ khác: piano/not-lap-not-kep n18 (đoạn C ô 37–50 có giai điệu và nốt lặp cùng một tay) và n43 (ô 17–28 tay trái, ô 37–50 tay phải): đúng theo bản nhạc, trang giữ số ô ấy. piano/tac-pham/beethoven-op49-2 n105, fur-elise n79 (link tới trang này): trang có. piano/nha-soan-nhac n57 (chặng 6): đúng. Không tính là nhận định: tiêu đề mục, tiêu đề cột bảng, chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng (thuộc hồ sơ bản ghi), mốc trong ::khoi-nghe. Giữ hai mục doi_chu của D2-0 ở đầu danh sách doi_chu.'
@@ -98,20 +98,20 @@ nhan_dinh:
   - id: n1
     cau: 'Tiêu đề: "Beethoven: Sonata Pathétique, chương 2 (Adagio cantabile)".'
     loai: ten
-    nguon: [imslp-op13, henle-hn1348]
+    nguon: [ imslp-op13, henle-hn1348 ]
     ket_qua: dung
     ghi_chu: 'IMSLP: chương 2 "Adagio cantabile (A♭ major)".'
     luot_2: dung
-    luot_2_nguon: ["https://www.beethoven.de/en/work/view/6166636289589248"]
+    luot_2_nguon: [ "https://www.beethoven.de/en/work/view/6166636289589248" ]
     luot_2_ghi_chu: 'BH: "2. Adagio cantabile".'
   - id: n2
     cau: Giai điệu, phần đệm móc kép và bè trầm cùng nằm trong hai bàn tay; một bàn tay (tay phải) thường lo hai việc cùng lúc.
     loai: cau-truc
-    nguon: &id001 [mut-op13-2]
+    nguon: &id001 [ mut-op13-2 ]
     ket_qua: dung
     ghi_chu: 'pathetique-2.ly: khuông trên hai bè (topmain giai điệu, topsecondary móc kép), khuông dưới bè trầm.'
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: "Ô 1–8: giai điệu và móc kép cùng ở khuông trên (tay phải), bè trầm tay trái."
   - id: n3
     cau: Trang hướng dẫn cách tập để ba lớp tách bạch, câu nhạc liền, bàn đạp không làm nhòe.
@@ -125,7 +125,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'Ô 1: giai điệu <c-4>4 <bes-3>, móc kép as16 es … (ngón 2 ghi ở ô 5 "bes_2"); bản Peters 1910 (Köhler & Ruthardt) qua Mutopia. Phần ngón là gợi ý chơi.'
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741" ]
     luot_2_ghi_chu: Bản Bülow (Kunkel) ghi ngón 3/4/5 cho giai điệu, 1–2 cho móc kép bè giữa ở ô 1–2.
   - id: n5
     cau: Giai điệu trên đệm trong cùng một tay là kỹ năng trung tâm của nhạc piano từ Beethoven đến Brahms.
@@ -139,7 +139,7 @@ nhan_dinh:
     ket_qua: da-sua
     ghi_chu: 'Chữ cũ: "Chủ đề quay lại ba lần, mỗi lần một kết cấu khác." Chủ đề có ba lần (ô 1, 29, 51), tức chỉ quay lại hai lần; lần ô 29 cùng kết cấu với ô 1–8. Chữ mới theo bản nhạc (như D6-L3 sửa "quay lại ba lần" thành "vang lên ba lần" ở fur-elise). Review D6-L5-gom: lượt 1 đã sửa; lượt 2 xác nhận chữ mới; review đọc lại chữ trang, khớp câu.'
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly", "https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA67605"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly", "https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA67605" ]
     luot_2_ghi_chu: Chủ đề ở ô 1, 29, 51; ô 9–16 cao một quãng tám, tay trái thêm móc kép; ô 51 trở đi đệm chùm ba.
     review: dung
   - id: n7
@@ -150,11 +150,11 @@ nhan_dinh:
   - id: n8
     cau: Chương ở nhịp 2/4, Adagio.
     loai: cau-truc
-    nguon: [mut-op13-2, imslp-op13]
+    nguon: [ mut-op13-2, imslp-op13 ]
     ket_qua: dung
     ghi_chu: \time 2/4.
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: Nhịp 2/4, Adagio cantabile.
   - id: n9
     cau: 'Chậm mà không đứng: bài dạy nghĩ theo câu dài; bước vào Beethoven mà không cần tốc độ hay sức mạnh của chương 1 và 3.'
@@ -171,39 +171,39 @@ nhan_dinh:
   - id: n11
     cau: Beethoven viết Pathétique khi khoảng 27 tuổi.
     loai: nam
-    nguon: [henle-hn1348-vorwort, beethoven-haus-op13]
+    nguon: [ henle-hn1348-vorwort, beethoven-haus-op13 ]
     ket_qua: dung
     ghi_chu: 'Sinh 12/1770 (nha-soan-nhac.yml 1770, đã khóa); Henle: phần chính xong khoảng giữa 1798 (Beethoven 27 tuổi); Beethoven-Haus 1797–1799.'
     luot_2: dung
-    luot_2_nguon: ["https://www.beethoven.de/en/beethoven", "https://www.henle.de/media/fc/b2/b2/1697725861/1348-1697725860-sync.pdf"]
+    luot_2_nguon: [ "https://www.beethoven.de/en/beethoven", "https://www.henle.de/media/fc/b2/b2/1697725861/1348-1697725860-sync.pdf" ]
     luot_2_ghi_chu: 'Sinh 1770, Pathétique viết chủ yếu 1797–1798: 26–27 tuổi, "khoảng 27" đúng.'
   - id: n12
     cau: Beethoven đến Vienna năm 1792; Pathétique viết vài năm sau.
     loai: nam
-    nguon: [hyperion-hewitt]
+    nguon: [ hyperion-hewitt ]
     ket_qua: dung
     ghi_chu: 'Hewitt: "When he went there in 1792". Chữ "(1792)" thêm ở lượt này.'
     luot_2: dung
-    luot_2_nguon: ["https://internet.beethoven.de/en/exhibition/beethovens-capital/", "https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA67605", "https://www.henle.de/media/fc/b2/b2/1697725861/1348-1697725860-sync.pdf"]
+    luot_2_nguon: [ "https://internet.beethoven.de/en/exhibition/beethovens-capital/", "https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA67605", "https://www.henle.de/media/fc/b2/b2/1697725861/1348-1697725860-sync.pdf" ]
     luot_2_ghi_chu: 'BH: "In 1792, Beethoven went again to Vienna"; Henle: phần chính viết xong giữa 1798.'
   - id: n13
     cau: Lúc ấy ông đã nổi tiếng như một nghệ sĩ piano, nhất là tài ứng tác.
     loai: lich-su
-    nguon: [beethoven-haus-pianist]
+    nguon: [ beethoven-haus-pianist ]
     ket_qua: da-sua
     ghi_chu: 'Chữ cũ: "lúc ông nổi tiếng như một nghệ sĩ piano biểu diễn ngẫu hứng hơn là một nhà soạn nhạc". Beethoven-Haus: "Beethoven''s fame as a pianist was in part due to ... his talent for improvisation"; không nguồn nào đã mở so sánh hơn kém với danh tiếng nhà soạn nhạc (như D6-L3 bỏ "được biết đến trước hết như nghệ sĩ piano" ở beethoven-op49-2). Review D6-L5-gom: lượt 1 đã sửa; lượt 2 xác nhận chữ mới; review đọc lại chữ trang, khớp câu.'
     luot_2: dung
-    luot_2_nguon: ["https://www.beethoven.de/en/media/view/6362106559463424", "https://www.beethoven.de/en/work/view/6583658152460288"]
+    luot_2_nguon: [ "https://www.beethoven.de/en/media/view/6362106559463424", "https://www.beethoven.de/en/work/view/6583658152460288" ]
     luot_2_ghi_chu: Như nghe-nhac n11.
     review: dung
   - id: n14
     cau: Tên Grande Sonate pathétique có ngay trên bản in đầu tiên năm 1799.
     loai: ten
-    nguon: [henle-hn1348-vorwort, beethoven-haus-op13, imslp-op13]
+    nguon: [ henle-hn1348-vorwort, beethoven-haus-op13, imslp-op13 ]
     ket_qua: dung
     ghi_chu: 'Henle: nguồn duy nhất là bản in gốc 1799; Beethoven-Haus: "op. 13 has always been the Pathétique ... Beethoven himself gave it the title".'
     luot_2: dung
-    luot_2_nguon: ["https://www.henle.de/media/fc/b2/b2/1697725861/1348-1697725860-sync.pdf", "https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA67605"]
+    luot_2_nguon: [ "https://www.henle.de/media/fc/b2/b2/1697725861/1348-1697725860-sync.pdf", "https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA67605" ]
     luot_2_ghi_chu: Bản in gốc Hoffmeister 1799 mang tên "Grande Sonate pathétique".
   - id: n15
     cau: Link hướng dẫn nghe (/opus/nghe-nhac/beethoven-pathetique/) cho chuyện cái tên.
@@ -215,38 +215,38 @@ nhan_dinh:
   - id: n16
     cau: '"Pathétique" ở đây gần nghĩa "đầy xúc động, bi tráng", không phải "thảm hại".'
     loai: dinh-nghia
-    nguon: [hyperion-hewitt, henle-hn1348-vorwort]
+    nguon: [ hyperion-hewitt, henle-hn1348-vorwort ]
     ket_qua: dung
     ghi_chu: 'Hewitt: nghĩa hiện đại "pitiable" chỉ dùng đùa; "the expression of exalted passion" (Behrend). Henle: "pronounced passionate character".'
     luot_2: dung
-    luot_2_nguon: ["https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA67605"]
+    luot_2_nguon: [ "https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA67605" ]
     luot_2_ghi_chu: 'Hewitt: gốc pathos (suffering, emotion), nghĩa thẩm mỹ "exalted passion", không phải "pitiable".'
   - id: n17
     cau: Chương 1 ở Đô thứ; chương 2 ở La♭ trưởng, thấp hơn một quãng ba trưởng.
     loai: cau-truc
-    nguon: [imslp-op13, mut-op13-2]
+    nguon: [ imslp-op13, mut-op13-2 ]
     ket_qua: dung
     ghi_chu: Đô → La♭ xuống 4 nửa cung (quãng ba trưởng).
     luot_2: dung
-    luot_2_nguon: ["https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)"]
+    luot_2_nguon: [ "https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)" ]
     luot_2_ghi_chu: Đô thứ, La giáng trưởng; La giáng thấp hơn Đô một quãng ba trưởng.
   - id: n18
     cau: Giai điệu chương 2 rất gần một chủ đề trong chương chậm của Sonata Đô thứ K. 457 của Mozart.
     loai: lich-su
-    nguon: [badura-k457, laphil-op13]
+    nguon: [ badura-k457, laphil-op13 ]
     ket_qua: dung
     ghi_chu: 'Badura-Skoda: "the A flat major theme of the second episode is almost identical with the adagio theme of Beethoven''s Pathétique Sonata". LA Phil: "kinship ... especially ... Sonata K. 457".'
     luot_2: dung
-    luot_2_nguon: ["https://eclassical.textalk.se/shop/17115/art99/4899599-2f7397-9003643989900.pdf"]
+    luot_2_nguon: [ "https://eclassical.textalk.se/shop/17115/art99/4899599-2f7397-9003643989900.pdf" ]
     luot_2_ghi_chu: "Badura-Skoda: chủ đề La giáng trưởng của đoạn xen thứ hai trong Adagio K. 457 \"almost identical with the adagio theme of Beethoven's Pathétique\"."
   - id: n19
     cau: Hai sonata còn giống nhau ở giọng (Đô thứ) và cách chia chương (ba chương).
     loai: cau-truc
-    nguon: [imslp-k457, imslp-op13]
+    nguon: [ imslp-k457, imslp-op13 ]
     ket_qua: dung
     ghi_chu: 'IMSLP K. 457: Đô thứ, 3 chương; Op. 13: Đô thứ, 3 chương.'
     luot_2: dung
-    luot_2_nguon: ["https://eclassical.textalk.se/shop/17115/art99/4899599-2f7397-9003643989900.pdf", "https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)"]
+    luot_2_nguon: [ "https://eclassical.textalk.se/shop/17115/art99/4899599-2f7397-9003643989900.pdf", "https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)" ]
     luot_2_ghi_chu: K. 457 ở Đô thứ, ba chương (Molto allegro, Adagio, Allegro assai); Op. 13 Đô thứ, ba chương.
   - id: n20
     cau: So sánh hai bản là bài tập nghe về cách Beethoven học từ Mozart.
@@ -274,7 +274,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'Ô 37: <es ces> (Đô♭) — La♭ thứ.'
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: 'Ô 37: đổi sang 7 dấu giáng (La giáng thứ), "dolente".'
   - id: n24
     cau: Wilhelm Kempff và Alfred Brendel đều thu trọn 32 sonata của Beethoven.
@@ -285,7 +285,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'chưa chắc: chưa mở trang hãng đĩa (DG, Philips/Decca, Vox) trong lô này; lượt 2 kiểm. Review D6-L5-gom: lượt 1 chưa chắc; lượt 2 tìm được nguồn (thêm vào nguon của câu); ghi dung.'
     luot_2: dung
-    luot_2_nguon: ["https://musicbrainz.org/release/c6d9285c-9c3f-4005-b804-3b9649f6f3c1", "https://musicbrainz.org/release/2b5f940b-6bac-4a1c-af76-6a883a170f28"]
+    luot_2_nguon: [ "https://musicbrainz.org/release/c6d9285c-9c3f-4005-b804-3b9649f6f3c1", "https://musicbrainz.org/release/2b5f940b-6bac-4a1c-af76-6a883a170f28" ]
     luot_2_ghi_chu: 'MusicBrainz: Kempff "The 32 Piano Sonatas" (DG); Brendel "The Complete Piano Sonatas" (Philips).'
     review: dung
   - id: n25
@@ -307,7 +307,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: Ô 1 nốt đầu C4 (MIDI); khuông dưới as4 des …
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: Ô 1–8, giai điệu bắt đầu C4; tay phải giai điệu và móc kép, tay trái bè trầm.
   - id: n28
     cau: 'Theo dõi: Chủ đề cao hơn một quãng tám ô 9–16; kết cấu đầy hơn, tay trái cũng tham gia phần móc kép.'
@@ -316,7 +316,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: Ô 9 giai điệu C5 (\clef treble c'4); khuông dưới ô 9–11 có bè móc kép as''16 es as es … trên bè trầm.
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: "Ô 9–16: cao một quãng tám, tay trái cũng chơi móc kép."
   - id: n29
     cau: 'Theo dõi: Đoạn B ô 17–28, Fa thứ, qua Đô thứ, đến Mi♭ trưởng; tay trái hợp âm lặp lại; đoạn nối có bè trong đi xuống theo nửa cung; pp trước khi chủ đề trở lại.'
@@ -325,7 +325,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: Ô 18–19 <c g e>/<c as f> (Đô7 – Fa thứ), ô 21 <g es c> (Đô thứ), ô 22–23 Mi♭; móc kép lặp hợp âm ô 18–22; ô 24, 26–28 bè trong es d d c c b b bes, f fes fes es …; ô 28 pp.
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: Ô 17 Fa thứ, ô 21 hợp âm Đô thứ, ô 22–23 về Mi giáng trưởng; tay trái hợp âm lặp; ô 26–28 bè trong đi xuống nửa cung (es–d–c–ces–bes; f–fes–es–d–des); bản Peters ghi pp ở ô 28 (bản Bülow ghi p).
   - id: n30
     cau: 'Theo dõi: Chủ đề trở lại ô 29–36, chỉ tám ô, ở âm vực giữa.'
@@ -333,7 +333,7 @@ nhan_dinh:
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: Ô 29–36, tám ô, âm vực giữa (khóa Fa).
   - id: n31
     cau: 'Theo dõi: Đoạn C ô 37–50, La♭ thứ, phần đệm chuyển sang chùm ba móc kép; tay trái đáp lời ở âm vực trầm.'
@@ -342,7 +342,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: Ô 37 \times 2/3 <es ces>16 pp; khuông dưới ô 38, 40 bes8~ chùm ba đáp.
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: Ô 37–50 La giáng thứ, đệm chùm ba móc kép, tay trái đáp ở âm vực trầm.
   - id: n32
     cau: 'Theo dõi: Mi trưởng bất ngờ trong đoạn C, các nốt sf; rồi đoạn nối trên hợp âm bảy giảm và hợp âm át dẫn về chủ đề.'
@@ -351,7 +351,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: Ô 42–43 <fis dis b a> (Si7) → Mi trưởng, \sf; ô 48–49 <ces as d> + f (Rê–Fa–La♭–Đô♭, bảy giảm); ô 50 <bes g es des> (Mi♭7).
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: Ô 42–43 Mi trưởng (dấu thăng), sf; ô 47–49 hợp âm bảy giảm (D–F–A♭–C♭) rồi hợp âm Mi giáng (át) ở ô 50, về chủ đề ô 51.
   - id: n33
     cau: 'Theo dõi: Chủ đề lần cuối ô 51–66, phần đệm chùm ba; tám ô đầu ở âm vực giữa.'
@@ -360,7 +360,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: Ô 51 c!4 (C4), đệm \times 2/3.
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: Ô 51–58 âm vực giữa, đệm chùm ba.
   - id: n34
     cau: 'Theo dõi: Chủ đề lên cao một quãng tám, tám ô tiếp theo, vẫn trên nền chùm ba.'
@@ -369,7 +369,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: Ô 59 c'4 (C5).
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: Ô 59–66 cao một quãng tám (khóa Sol), vẫn chùm ba.
   - id: n35
     cau: 'Theo dõi: Coda ô 66–73, chùm ba tiếp tục, chủ – át luân phiên, mảnh giai điệu và nốt hoa mỹ, tắt dần về pp.'
@@ -378,7 +378,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'Khuông dưới ô 66–69: <es c as> (La♭) xen <es des es,> (Mi♭7); nốt hoa (grace, turn) ô 67, 70–72; pp ô 66 và 73.'
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: "Ô 66–73: chùm ba tiếp, hợp âm chủ và át (E♭7) luân phiên, mảnh giai điệu, kết pp ở ô 73."
   - id: n36
     cau: Link rondo (/opus/hinh-thuc/rondo/).
@@ -394,7 +394,7 @@ nhan_dinh:
     ket_qua: da-sua
     ghi_chu: 'Chữ cũ: "chủ đề A quay lại ba lần". A có ba lần (ô 1, 29, 51) nên chỉ quay lại hai lần. Sửa thành "vang lên ba lần". Sơ đồ A–B–A–C–A đúng. Review D6-L5-gom: lượt 1 đã sửa; lượt 2 xác nhận chữ mới; review đọc lại chữ trang, khớp câu.'
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: A (1–16) – B (17–28) – A (29–36) – C (37–50) – A (51–66) – coda.
     review: dung
   - id: n38
@@ -403,7 +403,7 @@ nhan_dinh:
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: Như n27.
   - id: n39
     cau: 'Bảng: A ô 9–16 chủ đề nhắc lại cao hơn một quãng tám, kết cấu đầy hơn, tay trái cũng tham gia phần móc kép.'
@@ -411,7 +411,7 @@ nhan_dinh:
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: Như n28.
   - id: n40
     cau: 'Bảng: B ô 17–28 Fa thứ, qua Đô thứ, đến Mi♭ trưởng; đoạn nối bè trong đi xuống theo nửa cung; tay trái hợp âm lặp lại; pp trước khi chủ đề trở lại.'
@@ -419,7 +419,7 @@ nhan_dinh:
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: Như n29.
   - id: n41
     cau: 'Bảng: A ô 29–36 chủ đề chỉ tám ô, ở âm vực giữa.'
@@ -427,16 +427,16 @@ nhan_dinh:
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: Như n30.
   - id: n42
     cau: 'Bảng: C ô 37–50 La♭ thứ, đệm chùm ba móc kép; sang Mi trưởng (đổi tên enharmonic) với các nốt sf; đoạn nối trên hợp âm bảy giảm rồi hợp âm át.'
     loai: cau-truc
-    nguon: [mut-op13-2, thuat-ngu]
+    nguon: [ mut-op13-2, thuat-ngu ]
     ket_qua: dung
     ghi_chu: Mi trưởng = Fa♭ trưởng viết đồng âm khác tên (enharmonic, thuat-ngu.yml).
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: Như n31, n32; La giáng thứ → Fa giáng trưởng viết thành Mi trưởng.
   - id: n43
     cau: 'Bảng: C là đoạn kịch tính nhất bài: tay phải vừa hát vừa đệm chùm ba; tay trái đáp lời ở âm vực trầm.'
@@ -445,7 +445,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: Chỉ đoạn C có sf, cresc. lên các hợp âm lớn (ô 41–43). "Kịch tính nhất" là nhận xét hợp bản nhạc.
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: Đổi giọng xa, sf, hợp âm bảy giảm; tay phải vừa giai điệu vừa chùm ba, tay trái đáp ở âm vực trầm.
   - id: n44
     cau: 'Bảng: A ô 51–66 chủ đề lần cuối đệm chùm ba: tám ô ở giữa, tám ô cao hơn một quãng tám.'
@@ -453,7 +453,7 @@ nhan_dinh:
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: Như n33, n34.
   - id: n45
     cau: 'Bảng: Coda ô 66–73, chùm ba tiếp tục, chủ – át luân phiên, mảnh giai điệu và nốt hoa mỹ, tắt dần về pp.'
@@ -461,16 +461,16 @@ nhan_dinh:
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: Như n35.
   - id: n46
     cau: Chương có 73 ô nhịp.
     loai: cau-truc
-    nguon: [mut-op13-2, imslp-op13]
+    nguon: [ mut-op13-2, imslp-op13 ]
     ket_qua: dung
     ghi_chu: MIDI Mutopia 73 ô 2/4.
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: "Đếm trên bản Kunkel (Bülow) và Peters (Mutopia): 73 ô."
   - id: n47
     cau: 'Cột "Kết cấu, điều cần chú ý": phải "nhớ" những gì vừa xảy ra; đừng để chùm ba nghe như vội; nói lời tạm biệt, không kéo lê.'
@@ -484,7 +484,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: Móc kép (8 nốt mỗi ô) so với giai điệu (2–3 nốt mỗi ô).
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: Ngón 1–2 chơi móc kép liên tục (nhiều nốt hơn), giai điệu ở ngón 4–5.
   - id: n49
     cau: 'Cách tập giai điệu và móc kép: chơi riêng giai điệu với ngón 3–4–5, thêm móc kép bấm câm, rồi pp; bài tập 1.'
@@ -512,7 +512,7 @@ nhan_dinh:
     ket_qua: da-sua
     ghi_chu: 'Khuông dưới ô 1–2: as4 des | c g (đổi mỗi phách); ô 3 móc đơn. Review D6-L5-gom: lượt 2 khong-chac: giai điệu có bước nhảy (ô 2 Si♭–Mi♭, ô 3 rải Đô–Mi♭–La♭–Si♭). Sửa theo đề nghị của lượt 2 (doi_chu); không chạy lại lượt 2. Chữ câu cũ: "Hòa âm đổi mỗi phách hoặc nửa phách; giai điệu đi bậc.".'
     luot_2: khong-chac
-    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly", "https://archive.org/details/b10332741"]
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly", "https://archive.org/details/b10332741" ]
     luot_2_ghi_chu: 'Hòa âm đổi theo phách hay nửa phách: đúng. Nhưng giai điệu không chỉ đi bậc: ô 2 nhảy B♭–E♭, ô 3 rải C–E♭–A♭–B♭, ô 4 E♭ nhảy xuống; nên viết "phần lớn đi bậc, có vài bước nhảy".'
     review: dung
   - id: n53
@@ -528,11 +528,11 @@ nhan_dinh:
   - id: n55
     cau: 'Đoạn C: tay phải vừa hát vừa lặp hợp âm chùm ba: cổ tay mềm, ngón sát phím, tập chùm ba riêng ở pp.'
     loai: cau-truc
-    nguon: [mut-op13-2]
+    nguon: [ mut-op13-2 ]
     ket_qua: da-sua
     ghi_chu: 'Chủ lô: bỏ vế "dễ mỏi" khỏi hàng Chỗ khó (dính sức khỏe, không có nguồn; như D6-L3 bỏ vế "cẳng tay dễ mỏi" ở chopin-prelude-mi-thu); phần còn lại là bản nhạc, đổi loại sang cau-truc. Ghi chú lượt 1: vế "dễ mỏi" dính tới sức khỏe nên không xếp khuyen-tap; chưa mở nguồn y học nghệ thuật (BAPAM) cho trang này. Phần bản nhạc (tay phải giai điệu và hợp âm lặp chùm ba ô 37–41) đúng. Lượt 2 kiểm hay bỏ vế "dễ mỏi". Review D6-L5-gom: lượt 1 đã sửa; lượt 2 xác nhận chữ mới; review đọc lại chữ trang, khớp câu.'
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: Ô 37–41 tay phải giai điệu trên hợp âm lặp chùm ba.
     review: dung
   - id: n56
@@ -542,7 +542,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: Hóa biểu 4 giáng giữ nguyên; ô 42–47 viết bằng dấu thăng (fis, dis, gis, ais).
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: Ô 42–43 dấu thăng (F♯, D♯, G♯…) giữa trang dấu giáng.
   - id: n57
     cau: sf là nhấn theo bối cảnh p, không phải ff.
@@ -556,7 +556,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: Ô 51 giai điệu nốt đen, móc đơn trên đệm \times 2/3.
     luot_2: dung
-    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: "Ô 51–66: giai điệu theo móc đơn và móc kép (nhịp đôi) trên chùm ba móc kép."
   - id: n59
     cau: Đếm chùm ba "1-2-3, 2-2-3"; đánh số các lần chủ đề và ghi một "ý" cho mỗi lần.
@@ -625,11 +625,11 @@ nhan_dinh:
   - id: n69
     cau: 'Adagio cantabile: chậm, như hát.'
     loai: dinh-nghia
-    nguon: [thuat-ngu]
+    nguon: [ thuat-ngu ]
     ket_qua: dung
     ghi_chu: 'thuat-ngu.yml cantabile: "Như hát".'
     luot_2: dung
-    luot_2_nguon: ["https://en.wikisource.org/wiki/A_Dictionary_of_Music_and_Musicians/Adagio", "https://en.wikisource.org/wiki/A_Dictionary_of_Music_and_Musicians/Cantabile"]
+    luot_2_nguon: [ "https://en.wikisource.org/wiki/A_Dictionary_of_Music_and_Musicians/Adagio", "https://en.wikisource.org/wiki/A_Dictionary_of_Music_and_Musicians/Cantabile" ]
     luot_2_ghi_chu: "Grove: adagio \"at ease, leisurely\", chỉ nhịp chậm; cantabile \"singable … to be 'sung' with feeling\"."
   - id: n70
     cau: Nếu không còn cảm thấy 2/4 mà chỉ còn từng móc đơn rời rạc là đang chơi quá chậm; một câu tám ô là một cung đường lớn.
@@ -648,7 +648,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'Khuông dưới ô 1–8: as des c g as g f f'' es es, des des'' c f, bes, es (nhiều bước liền bậc).'
     luot_2: dung
-    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: "Bè trầm ô 1–8: A♭–D♭–C–G–A♭–G–F… có nhiều chỗ đi bậc."
   - id: n73
     cau: Ở chủ đề, dấu luyến thường nối qua hai ô; ở đoạn B, dấu luyến ngắn hơn, mỗi dấu luyến gọn trong một ô; có chấm staccato ở đoạn C và coda.
@@ -656,6 +656,9 @@ nhan_dinh:
     nguon: *id001
     ket_qua: da-sua
     ghi_chu: "Luyến dài ô 1–2, 3–4 (\"( … )\" qua 2 ô); ô 7 c16^.( bes^. as^. g)^.; coda ô 66–70 các nốt -. trong chùm ba. Review D6-L5-gom: lượt 2 khong-chac: đoạn B (ô 17–28) không có chấm staccato (Peters, Bülow); có ở ô 7, 15, 35 (cuối câu chủ đề), đoạn C (ô 42–44) và coda. Ý độ dài dấu luyến chưa có nguồn: review đọc lại pathetique-2.ly (Mutopia, Peters 1910; tải 05/11/2026): tay phải ô 1–2, 4–5, 6–7 luyến qua hai ô; ô 17–22, 25–26 các dấu luyến nằm gọn trong một ô. Viết lại theo đó (doi_chu). Vế dấu luyến là chữ mới: lượt 2 bổ sung. Chữ câu cũ: \"Dấu luyến của Beethoven thường dài hơn ở giai điệu và ngắn ở các mảnh đối đáp; có chấm staccato trong đoạn B và coda.\". Kết quả lượt 2 cũ (gỡ để vào lượt 2 bổ sung): khong-chac; nguồn ['https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly', 'https://archive.org/details/b10332741']; ghi chú: Có chấm staccato ở coda (ô 66–68) và ở đoạn C (ô 42–44), nốt dẫn cuối ô 8; nhưng ở đoạn B (ô 17–28) bản Peters và bản Bülow đều không thấy chấm staccato. Ý về độ dài dấu luyến là nhận xét chung, chưa có nguồn."
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=295", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
+    luot_2_ghi_chu: "Mutopia 295 (nguồn Berners 1908, Winterberger; Peters 1910), đọc nguồn LilyPond sinh ra PDF. Chủ đề ô 1–8: luyến c–bes | es–des nối ô 1–2, ô 4–5 (es–e | f), ô 5–7 (bes–…–des) qua ô; ô 3 gọn trong ô. Đoạn B (ô 17–28, Fa thứ): mọi dấu luyến tay phải gọn trong một ô (như 'c16( as' g f)' ô 17–19, ô 20–23, 26). Chấm staccato có ở đoạn C (ô 37–50: hợp âm ba ô 42–43 có '-.', bè giữa 47–50) và coda (ô 66–73). Lưu ý: chủ đề ô 7 và 15 cũng có chấm dưới luyến (c16 bes as g), và nhạc đệm chùm ba ở A' (ô 51–66) có chấm: câu không nói 'chỉ', nên vẫn đúng. Đây là ấn bản có hiệu đính (phrasing của Winterberger chỉ chép một phần), không phải Urtext; bản Breitkopf Gesamtausgabe trên IMSLP không tải được bằng công cụ."
   - id: n74
     cau: Nốt cuối của dấu luyến nhẹ hơn; các nốt staccato vẫn mềm.
     loai: khuyen-tap
@@ -668,7 +671,7 @@ nhan_dinh:
     ket_qua: da-bo
     ghi_chu: 'Đã bỏ khỏi trang: chưa có nguồn đã mở (Tafelmusik chỉ nói âm vực; như D6-L3 bỏ "tiếng nhẹ và tắt nhanh" ở beethoven-op49-2 n25). Review D6-L5-gom: lượt 2 dẫn phân tích một fortepiano Hafner năm 1830 (Đại học Bergen), không phải đàn năm 1798. Giữ bỏ: trang không cần câu này.'
     luot_2: dung
-    luot_2_nguon: ["https://www.researchcatalogue.net/view/3043444/3517901", "https://www.hmb.ch/en/museums/eguides/a/e/fortepiano-vienna-1816"]
+    luot_2_nguon: [ "https://www.researchcatalogue.net/view/3043444/3517901", "https://www.hmb.ch/en/museums/eguides/a/e/fortepiano-vienna-1816" ]
     luot_2_ghi_chu: 'Phân tích âm của Đại học Bergen: so với Steinway D, tiếng của fortepiano Hafner (1830) "decay … much shorter"; đàn năm 1798 còn nhỏ, nhẹ hơn nữa.'
     review: dung
   - id: n76
@@ -679,11 +682,11 @@ nhan_dinh:
   - id: n77
     cau: Láy quanh của Beethoven thường bắt đầu từ nốt trên.
     loai: quy-tac
-    nguon: [dolmetsch-orn, mut-op13-2]
+    nguon: [ dolmetsch-orn, mut-op13-2 ]
     ket_qua: dung
     ghi_chu: 'Dolmetsch: turn = "the note above, the note itself, the note below, then the note itself again". Mutopia ô 20, 21 ghi láy quanh với ngón "3212", "4321" (bắt đầu nốt trên).'
     luot_2: dung
-    luot_2_nguon: ["https://en.wikisource.org/wiki/A_Dictionary_of_Music_and_Musicians/Turn"]
+    luot_2_nguon: [ "https://en.wikisource.org/wiki/A_Dictionary_of_Music_and_Musicians/Turn" ]
     luot_2_ghi_chu: 'Grove, "Turn": láy quanh gồm nốt trên, nốt viết, nốt dưới, nốt viết; có ví dụ của Beethoven.'
   - id: n78
     cau: Nốt hoa mỹ chơi nhẹ hơn nốt chính, không vội; đọc chú thích bản Urtext.
@@ -701,7 +704,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'chưa chắc: IMSLP có ấn bản Bülow/Lebert (Cotta) của Op. 13; chưa đối chiếu nội dung ấn bản ấy với bản gốc. Lượt 2 kiểm. Review D6-L5-gom: lượt 1 chưa chắc; lượt 2 tìm được nguồn (thêm vào nguon của câu); ghi dung. Lượt 2 so bản Kunkel (Bülow) với bản Peters.'
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: Bản Kunkel (Bülow) thêm brillante, ff, dolente, tranquillo, nhiều dấu bàn đạp, đổi dấu luyến so với bản Peters.
     review: dung
   - id: n80
@@ -712,7 +715,7 @@ nhan_dinh:
     ket_qua: da-sua
     ghi_chu: 'chưa chắc: đề cương ABRSM có "Beethoven: The 35 Piano Sonatas, Vol. 1 (ABRSM)" nhưng chưa mở trang ấn bản (người biên tập, cách ghi). Lượt 2 kiểm. Review D6-L5-gom: lượt 2 khong-chac: Forsyths xác nhận Barry Cooper biên tập và lời bình mỗi sonata ("full assessment of the sources and detailed notes on interpretation"); chưa có nguồn cho "gợi ý ngón bấm" và "ghi rõ phần nào là của người biên tập". Bỏ hai vế ấy (doi_chu). Chữ mới chỉ giữ điều lượt 2 đã kiểm: không chạy lại. Chữ câu cũ: "Ấn bản ABRSM của Barry Cooper có gợi ý ngón bấm, giải thích và ghi rõ phần nào là của người biên tập.".'
     luot_2: khong-chac
-    luot_2_nguon: ["https://www.forsyths.co.uk/music/sheet-music/instruments/keyboard-instruments/piano/7193-beethoven-lv-the-35-piano-sonatas-volume-1-9781860962455.html"]
+    luot_2_nguon: [ "https://www.forsyths.co.uk/music/sheet-music/instruments/keyboard-instruments/piano/7193-beethoven-lv-the-35-piano-sonatas-volume-1-9781860962455.html" ]
     luot_2_ghi_chu: Forsyths xác nhận người biên tập Barry Cooper và lời bình mỗi sonata ("history, full assessment of the sources and detailed notes on interpretation"); chưa mở được trang nào nói về ngón bấm (David Ward) và cách tách phần của người biên tập.
     review: dung
   - id: n81
@@ -728,11 +731,11 @@ nhan_dinh:
   - id: n83
     cau: 'Chương 3 (Rondo: Allegro) là bước tiếp tự nhiên; chương 1 cần tốc độ và sức bền ở mức Grade 8 trở lên.'
     loai: cap-do
-    nguon: [abrsm-2728, rcm-2022-arct, henle-hn1348]
+    nguon: [ abrsm-2728, rcm-2022-arct, henle-hn1348 ]
     ket_qua: dung
     ghi_chu: 'ABRSM 2027–2028 Grade 8 danh sách A số 2: Rondo (chương 3). Cả sonata (gồm chương 1): RCM xếp ở ARCT (sau Level 10); Henle mức 7 cho cả sonata (trang HN 1348, lượt 2 lần 1 ghi "ABRSM: Piano ARSM").'
     luot_2: dung
-    luot_2_nguon: ["https://www.abrsm.org/sites/default/files/2026-06/Piano%20Practical%20Grades%20Qualification%20Specification%202027%20%26%202028.pdf", "https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA67605"]
+    luot_2_nguon: [ "https://www.abrsm.org/sites/default/files/2026-06/Piano%20Practical%20Grades%20Qualification%20Specification%202027%20%26%202028.pdf", "https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA67605" ]
     luot_2_ghi_chu: "ABRSM 2027 & 2028: Rondo ở Grade 8 List A; chương 1 không có trong đề cương; Hewitt nói về tremolo, vắt tay và tốc độ của chương 1."
   - id: n84
     cau: 'Học tiếp, hát trên phím: link Chopin Nocturne Op. 9 số 2, Debussy Clair de lune.'
@@ -768,7 +771,7 @@ nhan_dinh:
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: ["https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly", "https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA67605"]
+    luot_2_nguon: [ "https://archive.org/details/b10332741", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly", "https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA67605" ]
     luot_2_ghi_chu: "Ô 51–66 đệm chùm ba; Hewitt: chùm ba của đoạn xen thứ hai thành phần đệm cho chủ đề."
   - id: n89
     cau: 'Câu hỏi 2: đổi ngón trên phím để ngón cần cho nốt tiếp luôn rảnh, giai điệu liền bằng ngón.'
@@ -778,10 +781,10 @@ nhan_dinh:
   - id: n90
     cau: 'Câu hỏi 3: Adagio cantabile nghĩa là chậm, như hát.'
     loai: dinh-nghia
-    nguon: [thuat-ngu]
+    nguon: [ thuat-ngu ]
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: ["https://en.wikisource.org/wiki/A_Dictionary_of_Music_and_Musicians/Adagio", "https://en.wikisource.org/wiki/A_Dictionary_of_Music_and_Musicians/Cantabile"]
+    luot_2_nguon: [ "https://en.wikisource.org/wiki/A_Dictionary_of_Music_and_Musicians/Adagio", "https://en.wikisource.org/wiki/A_Dictionary_of_Music_and_Musicians/Cantabile" ]
     luot_2_ghi_chu: Như n69.
   - id: n91
     cau: 'Câu hỏi 4: bàn đạp nối: nhả đúng lúc đánh nốt trầm mới, nhấn lại ngay sau.'
@@ -791,11 +794,11 @@ nhan_dinh:
   - id: n92
     cau: 'Nguồn: ấn bản Henle Op. 13 và ấn bản ABRSM The 35 Piano Sonatas (biên tập Barry Cooper).'
     loai: ten
-    nguon: [henle-hn1348]
+    nguon: [ henle-hn1348 ]
     ket_qua: da-sua
     ghi_chu: 'Dòng cũ gộp hai ấn bản; nay mục Nguồn ghi trang Henle HN 1348 (biên tập Gertsch, Perahia, 2018) đã đọc; ấn bản ABRSM nằm ở mục Ấn bản (nhận định riêng, chưa chắc). Review D6-L5-gom: lượt 1 đã sửa; lượt 2 xác nhận chữ mới; review đọc lại chữ trang, khớp câu.'
     luot_2: dung
-    luot_2_nguon: ["https://www.henle.de/media/fc/b2/b2/1697725861/1348-1697725860-sync.pdf", "https://www.forsyths.co.uk/music/sheet-music/instruments/keyboard-instruments/piano/7193-beethoven-lv-the-35-piano-sonatas-volume-1-9781860962455.html", "https://www.abrsm.org/sites/default/files/2026-06/Piano%20Practical%20Grades%20Qualification%20Specification%202027%20%26%202028.pdf"]
+    luot_2_nguon: [ "https://www.henle.de/media/fc/b2/b2/1697725861/1348-1697725860-sync.pdf", "https://www.forsyths.co.uk/music/sheet-music/instruments/keyboard-instruments/piano/7193-beethoven-lv-the-35-piano-sonatas-volume-1-9781860962455.html", "https://www.abrsm.org/sites/default/files/2026-06/Piano%20Practical%20Grades%20Qualification%20Specification%202027%20%26%202028.pdf" ]
     luot_2_ghi_chu: Henle HN 1348; ABRSM "The 35 Piano Sonatas", ed. Barry Cooper, Vol. 1 có Op. 13.
     review: dung
   - id: n93
@@ -805,17 +808,17 @@ nhan_dinh:
     ket_qua: da-bo
     ghi_chu: 'Đã bỏ khỏi mục Nguồn: sách in chưa đọc, không nhận định nào dựa vào (như D6-L3). Thay bằng lời giới thiệu của Badura-Skoda (K. 457) và tệp Mutopia đã dùng. Review D6-L5-gom: Lượt 1 bỏ hai sách in chưa đọc; lượt 2 (Open Library) chỉ xác nhận sách có thật. Giữ bỏ.'
     luot_2: dung
-    luot_2_nguon: ["https://openlibrary.org/works/OL3460605W", "https://openlibrary.org/works/OL1858938W"]
+    luot_2_nguon: [ "https://openlibrary.org/works/OL3460605W", "https://openlibrary.org/works/OL1858938W" ]
     luot_2_ghi_chu: "Open Library: Barry Cooper, Beethoven (The Master Musicians), OUP 2000; Rosen, Yale 2002."
     review: dung
   - id: n94
     cau: 'Nguồn: Badura-Skoda, lời giới thiệu đĩa K. 457; bản chép LilyPond của Mutopia (Berners 1908, Peters 1910).'
     loai: ten
-    nguon: [badura-k457, mut-op13-2]
+    nguon: [ badura-k457, mut-op13-2 ]
     ket_qua: da-sua
     ghi_chu: 'Dòng mới. Review D6-L5-gom: lượt 1 đã sửa; lượt 2 xác nhận chữ mới; review đọc lại chữ trang, khớp câu.'
     luot_2: dung
-    luot_2_nguon: ["https://eclassical.textalk.se/shop/17115/art99/4899599-2f7397-9003643989900.pdf", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly"]
+    luot_2_nguon: [ "https://eclassical.textalk.se/shop/17115/art99/4899599-2f7397-9003643989900.pdf", "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly" ]
     luot_2_ghi_chu: Booklet đĩa Gramola của Paul Badura-Skoda (K. 457); file Mutopia ghi source "Berners, 1908 (edited by A. Winterberger); Peters, 1910".
     review: dung
   - id: n95
@@ -828,17 +831,17 @@ nhan_dinh:
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
-    kiem: [cu-phap, nhip, giong, hop-am, so-ngon, sac-thai]
+    kiem: [ cu-phap, nhip, giong, hop-am, so-ngon, sac-thai ]
     ket_qua: dung
     ghi_chu: La♭ trưởng, 2/4, L:1/16, 4 ô đủ 8 phần. Giai điệu nốt đen (Đô5–Si♭4, Mi♭5–Rê♭5, Đô5–Si♭4, La♭4) ngón 5-4, 5-4, 4-3, 3 ở bè trên; móc kép E♭–A♭, G–B♭… ngón 1–2 ở bè dưới; tay trái La♭2, Sol2, Mi♭2, Đô3, quãng tám La♭. Hòa âm La♭ – Mi♭7 luân phiên; mf/pp/p đúng ba mức lời dẫn. Chơi được.
   - khoi: 2
     loai: vi-du-soan
-    kiem: [cu-phap, nhip, giong, so-ngon]
+    kiem: [ cu-phap, nhip, giong, so-ngon ]
     ket_qua: dung
     ghi_chu: 4 ô 2/4. Ô 1 Đô5 nối, ngón 5 → 4; ô 2 Rê♭5 nối, 5 → 3; ô 3 Mi♭5 (4) rồi Fa5 (5); đệm móc kép ngón 1–2. Tay trái La♭, Rê♭, Mi♭. Đúng lời dẫn (đổi ngón trên phím đang giữ).
   - khoi: 3
     loai: vi-du-soan
-    kiem: [cu-phap, nhip, giong, hop-am, ban-dap, so-ngon]
+    kiem: [ cu-phap, nhip, giong, hop-am, ban-dap, so-ngon ]
     ket_qua: dung
     ghi_chu: 4 ô 2/4. Tay trái hợp âm rải móc kép (La♭, Mi♭7/Sol, Fa thứ, Si♭ thứ/Rê♭, Mi♭, Mi♭7, La♭); "Ped." đặt trước nốt thứ hai mỗi hòa âm; nửa sau ô 3 (Mi♭ Si♭ Rê♭ Si♭) cùng hòa âm Mi♭, không đổi bàn đạp. Đúng lời dẫn. Ngón 5-2-1-2 chơi được.
 doi_chu:
