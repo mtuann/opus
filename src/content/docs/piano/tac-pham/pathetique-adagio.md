@@ -77,7 +77,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | Legato của giai điệu | Không có bàn đạp nào nối được các nốt giai điệu đi bậc liền mà không làm nhòe | Đổi ngón trên phím (giữ phím, thay ngón khác vào) để ngón cần dùng luôn sẵn sàng; nối giai điệu bằng ngón trước rồi mới thêm bàn đạp. Bài tập 2 |
 | Bàn đạp | Hòa âm đổi mỗi phách hoặc nửa phách; giai điệu đi bậc | Bàn đạp nối (nhấn sau khi đánh): nhả đúng lúc đánh nốt trầm mới, nhấn lại ngay sau. Đạp nông. Bài tập 3 và [Bàn đạp](/opus/piano/ban-dap/) |
 | Ô 9–16, chủ đề cao một quãng tám | Âm vực sáng dễ gắt; phần đệm dày hơn dễ lấn | Giữ trọng lượng tay, không đẩy tiếng; luyện cân bằng như ô 1–8 |
-| Đoạn C, chùm ba móc kép | Tay phải vừa hát vừa lặp hợp âm chùm ba: dễ mỏi, dễ to | Cổ tay mềm, ngón sát phím; tập chùm ba riêng ở *pp* với máy đếm nhịp; ghép giai điệu sau |
+| Đoạn C, chùm ba móc kép | Tay phải vừa hát vừa lặp hợp âm chùm ba: dễ to | Cổ tay mềm, ngón sát phím; tập chùm ba riêng ở *pp* với máy đếm nhịp; ghép giai điệu sau |
 | Chuyển sang Mi trưởng | Đọc nốt thăng sau cả trang dấu giáng; *sf* dễ thành đập | Viết tên hợp âm lên bản nhạc; *sf* là nhấn theo bối cảnh *p*, không phải *ff* |
 | Phần A cuối với đệm chùm ba | Nhịp hai (giai điệu) chọi ba (đệm) dễ làm giai điệu bị kéo theo | Đếm chùm ba "1-2-3, 2-2-3"; đặt nốt giai điệu chính xác trên phách rồi mới thả lỏng |
 | Giữ mạch cả chương | Tốc độ chậm, ba lần chủ đề dễ nghe đơn điệu | Đánh số các lần chủ đề quay lại và ghi một "ý" cho mỗi lần (dịu, ấm, tạm biệt) |
