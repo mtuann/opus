@@ -12,14 +12,14 @@ lan:
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
   - so: 2
-    ngay: '2026-11-05'
-    nhanh: moi/d6-l2
-    ma_bam: null
+    ngay: '2026-11-06'
+    nhanh: moi/d6-kiem-mau
+    ma_bam: sha256:34285df806aa7878ef66900162774c21e33ba1e6ba299c303288476105583bd3
     nguoi:
       luot_1: Claude Opus 5.5 (D6-L2 phần B)
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L2, 06/11/2026, ba phần; bổ sung sau review)
       review: Claude Opus 5.5 (review D6-L2-gom, 05/11/2026)
-      kiem_mau: null
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L2, 8 đúng, 0 sai (bao-cao/d6-l2-gom/kiem-mau-ket-qua.yml)"
 ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/tchaikovsky-cau-nguyen-buoi-sang.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Cần cập nhật theo: chip.cap_do và dòng "Độ khó" trong thong_tin. Lần 2 (D6-L2, lượt 1 phần B): nhận định n6–n30 cho các trường chưa khóa (giong, nhip, thoi_ky, ky_nang_chinh, chip, thong_tin, hinh, ban_thu). Bản nhạc: Mutopia 2032 (Schirmer 1904). Sai: n27 (nhãn đoạn Coda của hinh ghi "pp" trong khi coda mở bằng f): đề xuất trong plans/lam-lai/bao-cao/d6-l2/sua-B.yml.'
 nguon:
   - id: imslp-op39
@@ -350,9 +350,10 @@ nhan_dinh:
     cau: 'Bản thu: file audio/tchaikovsky-cau-nguyen-buoi-sang.mp3 dài 79,8 giây.'
     loai: so-lieu
     truong: [ ban_thu ]
-    nguon: []
+    nguon:
+      - imslp-kolodin-morning
     ket_qua: dung
-    ghi_chu: 'ffprobe public/audio/tchaikovsky-cau-nguyen-buoi-sang.mp3: 79,80 s.'
+    ghi_chu: 'ffprobe public/audio/tchaikovsky-cau-nguyen-buoi-sang.mp3: 79,80 s. Kiểm mẫu D6 (Claude, chủ repo giao, 06/11/2026): khóa đòi nguồn cho so-lieu; ghi nguồn là file IMSLP mà bản thu của site lấy về, độ dài đo trên file của site như các hồ sơ đã khóa cùng loại.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/File:PMLP19418-Y2mate.mx_-_Luis_Kolodin_plays_Tchaikovsky's_Morning_Prayer_(128_kbps).mp3" ]
     luot_2_ghi_chu: "Đo tại máy: afinfo public/audio/tchaikovsky-cau-nguyen-buoi-sang.mp3 'estimated duration: 79.830204 sec' (ffprobe 79.80). Khớp 79,8 giây."

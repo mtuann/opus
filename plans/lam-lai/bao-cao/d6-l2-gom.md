@@ -152,3 +152,9 @@ Các câu đổi chữ còn lại không chạy thêm lượt 2, theo quy ước
 - Lượt 2 bổ sung (Claude Opus 5.5): `ket-qua-bo-sung.yml` 8 dung; đã `nhap`.
 - Đã điền `nguoi.luot_2` cho 12 hồ sơ (6 trang, 6 bản ghi). Còn thiếu cho khóa: `nguoi.kiem_mau`.
 - Mẫu kiểm: 8 nhận định ở `d6-l2-gom/kiem-mau.yml` (`xuat D6-L2 --mau 8`).
+
+## Kiểm mẫu và khóa (06/11/2026)
+
+Chủ repo giao Claude Opus 5.5 (phiên Cowork) kiểm mẫu thay, điền `kiem_mau` và khóa; người kiểm không phải chủ repo (`nguoi.kiem_mau` ghi rõ). 8 nhận định ở `d6-l2-gom/kiem-mau.yml`, kết quả `d6-l2-gom/kiem-mau-ket-qua.yml`: không câu nào sai. Nguồn ngoài mở lại bằng agent đọc trang web; file .ly của Mutopia đọc trên bản GitHub của MutopiaProject; câu về site kiểm trên repo. Câu chỉ kiểm được một phần ghi rõ trong `ghi_chu` của file kết quả. Khóa mọi trang và bản ghi của lô; bản build thật 231 trang (cùng D6-L1 đến D6-L10).
+
+Khi khóa, `khoa` báo mười câu thiếu nguồn (lượt 1 để trống, lượt 2 và review không bắt): bốn câu độ dài bản thu trong bản ghi (`bach-prelude-bwv939` n25, `beethoven-sonatina-sol` n23, `burgmuller-arabesque`, `tchaikovsky-cau-nguyen-buoi-sang`) ghi nguồn là file IMSLP của bản thu, như các hồ sơ đã khóa cùng loại; bốn câu định nghĩa thuật ngữ (`burgmuller-arabesque` n27, n57, n69, n70; `chopin-valse-la-thu` n46) ghi nguồn là `src/data/thuat-ngu.yml` (đã khóa); `chopin-valse-la-thu` n24 (lời khuyên tập đã đổi chữ) đổi `da-sua` thành `khong-can-nguon`.

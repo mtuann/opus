@@ -4,14 +4,14 @@ nguon_cu: ../opus-zero/docs/piano/tac-pham/burgmuller-arabesque.md
 tang: tac-pham
 lan:
   - so: 1
-    ngay: '2026-11-05'
-    nhanh: moi/d6-l2
-    ma_bam: null
+    ngay: '2026-11-06'
+    nhanh: moi/d6-kiem-mau
+    ma_bam: sha256:310f767347d00f43c23baed4634e1e9d0fc573815b68d284edb04f82863edd94
     nguoi:
       luot_1: Claude Opus 5.5 (D6-L2 phần B)
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L2, 06/11/2026, ba phần; bổ sung sau review)
       review: Claude Opus 5.5 (review D6-L2-gom, 05/11/2026)
-      kiem_mau: null
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L2, 8 đúng, 0 sai (bao-cao/d6-l2-gom/kiem-mau-ket-qua.yml)"
 ghi_chu: 'Bài học Arabesque Op. 100 số 2 (tầng Tác phẩm). Bản nhạc: Mutopia 203 (25EF-02, Bas Wassink theo Collection Litolff, phạm vi công cộng), .ly, PDF A4 và MIDI tải ngày 05/11/2026; MIDI tải mới khác file ../opus-zero/_imslp/mid/mut_burg02.mid ở phần đầu (tên track), nốt giống nhau. Bản Mutopia không đánh số ô; số ô ở hồ sơ đếm trên .ly (dẫn nhập ô 1–2, A ô 3–10 với hai kết, B ô 11–18, A'' ô 19–26 với hai kết, coda ô 27–31; 31 ô đã viết). Tiểu sử: Deutsche Biographie, NDB, PTNA. Chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng thuộc hồ sơ du-lieu/tac-pham/burgmuller-arabesque. Sửa trang: n1 (bỏ đánh giá "được yêu thích nhất", "nghe khó hơn thực tế"; cả description), n3 và n10 ("chưa đầy một phút" thành "khoảng một phút": bản thu gợi ý dài 65 giây), n14 (Burgmüller không mất ở Paris; "thầy dạy piano được ưa chuộng" thành "dạy piano"), n29 (bỏ "được thu rất nhiều"), n65 (link cùng chặng: Valse La thứ nay ở chặng 5, thay bằng Cầu nguyện buổi sáng, chặng 3). Khuông: ba khối đều là ví dụ soạn, đúng. Thuật ngữ trang dùng (scherzando, leggiero, dolce, a tempo, sforzando, staccato, legato) có trong src/data/thuat-ngu.yml; risoluto chưa có bản ghi thuật ngữ (cho lô sau): nghĩa đã kiểm ở n35 (Treccani).'
 nguon:
   - id: mutopia-203
@@ -78,6 +78,10 @@ nguon:
     bac: 3
     ten: Wikipedia, Friedrich Burgmüller (chỉ để đối chiếu mục Nguồn của trang)
     link: https://en.wikipedia.org/wiki/Friedrich_Burgm%C3%BCller
+  - id: thuat-ngu
+    bac: 1
+    ten: 'src/data/thuat-ngu.yml (đã khóa): scherzando "Đùa vui", sforzando "Nhấn mạnh đột ngột"'
+    link: src/data/thuat-ngu.yml
 nhan_dinh:
   - id: n1
     cau: Arabesque là bài số 2 trong tập étude Op. 100 của Burgmüller.
@@ -313,9 +317,9 @@ nhan_dinh:
   - id: n27
     cau: Scherzando nghĩa là "đùa vui".
     loai: dinh-nghia
-    nguon: []
+    nguon: [ thuat-ngu ]
     ket_qua: dung
-    ghi_chu: Khớp Từ điển của site (src/data/thuat-ngu.yml, mục scherzando, nghia "Đùa vui", đã khóa ở D3-L5).
+    ghi_chu: 'Khớp Từ điển của site (src/data/thuat-ngu.yml, mục scherzando, nghia "Đùa vui", đã khóa ở D3-L5). Kiểm mẫu D6 (Claude, chủ repo giao, 06/11/2026): khóa đòi nguồn; ghi nguồn là Từ điển của site (src/data/thuat-ngu.yml, đã khóa), như hồ sơ đã khóa pathetique-adagio.'
     luot_2: dung
     luot_2_nguon: [ "https://web.archive.org/web/20260512073643/https://www.merriam-webster.com/dictionary/scherzando" ]
     luot_2_ghi_chu: "Merriam-Webster: 'in sportive manner : playfully'."
@@ -538,9 +542,9 @@ nhan_dinh:
   - id: n57
     cau: sf là nhấn đột ngột một nốt, không phải đổi cả đoạn sang f.
     loai: dinh-nghia
-    nguon: []
+    nguon: [ thuat-ngu ]
     ket_qua: dung
-    ghi_chu: 'Khớp Từ điển của site (src/data/thuat-ngu.yml, mục sforzando: "Nhấn mạnh đột ngột"), đã khóa.'
+    ghi_chu: 'Khớp Từ điển của site (src/data/thuat-ngu.yml, mục sforzando: "Nhấn mạnh đột ngột"), đã khóa. Kiểm mẫu D6 (Claude, chủ repo giao, 06/11/2026): khóa đòi nguồn; ghi nguồn là Từ điển của site (src/data/thuat-ngu.yml, đã khóa), như hồ sơ đã khóa pathetique-adagio.'
     luot_2: dung
     luot_2_nguon: [ "https://web.archive.org/web/20251008142822/https://www.merriam-webster.com/dictionary/sforzando", "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-02/25EF-02.ly", "https://viva.pressbooks.pub/openmusictheory/chapter/other-aspects-of-notation/" ]
     luot_2_ghi_chu: "Merriam-Webster: sforzando 'played with prominent stress or accent', danh từ 'an accented tone or chord'. Bản Mutopia đặt \\sf trên từng nốt (ví dụ 'e4-5_\\sf'), sắc thái f ghi riêng. OMT: sfz/sf là dấu nhấn, 'placed directly above or below the note to which they apply'."
@@ -632,18 +636,18 @@ nhan_dinh:
   - id: n69
     cau: 'Câu hỏi 2: scherzando nghĩa là đùa vui; bài ở La thứ nhưng không buồn.'
     loai: dinh-nghia
-    nguon: []
+    nguon: [ thuat-ngu ]
     ket_qua: dung
-    ghi_chu: Như n27 (thuat-ngu.yml); La thứ ở Mutopia \key a\minor. Phần tính cách là diễn giải.
+    ghi_chu: "Như n27 (thuat-ngu.yml); La thứ ở Mutopia \\key a\\minor. Phần tính cách là diễn giải. Kiểm mẫu D6 (Claude, chủ repo giao, 06/11/2026): khóa đòi nguồn; ghi nguồn là Từ điển của site (src/data/thuat-ngu.yml, đã khóa), như hồ sơ đã khóa pathetique-adagio."
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-02/25EF-02.ly", "https://web.archive.org/web/20260512073643/https://www.merriam-webster.com/dictionary/scherzando" ]
     luot_2_ghi_chu: "Mutopia 25EF-02: '\\key a\\minor', 'Allegro scherzando'; scherzando = playfully (Merriam-Webster). 'Không buồn' là cách hiểu suy từ chỉ dẫn này."
   - id: n70
     cau: 'Câu hỏi 3: sf yêu cầu nhấn đột ngột một nốt, không đổi cả đoạn sang f.'
     loai: dinh-nghia
-    nguon: []
+    nguon: [ thuat-ngu ]
     ket_qua: dung
-    ghi_chu: Như n57.
+    ghi_chu: "Như n57. Kiểm mẫu D6 (Claude, chủ repo giao, 06/11/2026): khóa đòi nguồn; ghi nguồn là Từ điển của site (src/data/thuat-ngu.yml, đã khóa), như hồ sơ đã khóa pathetique-adagio."
     luot_2: dung
     luot_2_nguon: [ "https://web.archive.org/web/20251008142822/https://www.merriam-webster.com/dictionary/sforzando" ]
     luot_2_ghi_chu: "Merriam-Webster: sforzando 'played with prominent stress or accent' (một nốt hay hợp âm được nhấn), khác với f là sắc thái của cả đoạn."

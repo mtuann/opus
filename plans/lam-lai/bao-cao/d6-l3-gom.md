@@ -162,3 +162,7 @@ Các câu đổi chữ khác không chạy thêm lượt 2. Đó là những câ
 - Đã điền `nguoi.luot_2` cho 14 hồ sơ (7 trang, 7 bản ghi). Còn thiếu cho khóa: `nguoi.kiem_mau`.
 - Mẫu kiểm: 8 nhận định ở `d6-l3-gom/kiem-mau.yml` (`xuat D6-L3 --mau 8`).
 - Lượt 2 phần dữ liệu: một agent con dùng User-Agent trình duyệt khi thử tìm đề cương ABRSM qua DuckDuckGo (bị chặn, không thử lại). Trái quy tắc mạng; từ D6-L4 lời giao ghi rõ quy tắc cho cả agent con.
+
+## Kiểm mẫu và khóa (06/11/2026)
+
+Chủ repo giao Claude Opus 5.5 (phiên Cowork) kiểm mẫu thay, điền `kiem_mau` và khóa; người kiểm không phải chủ repo (`nguoi.kiem_mau` ghi rõ). 8 nhận định ở `d6-l3-gom/kiem-mau.yml`, kết quả `d6-l3-gom/kiem-mau-ket-qua.yml`: không câu nào sai. Nguồn ngoài mở lại bằng agent đọc trang web; file .ly của Mutopia đọc trên bản GitHub của MutopiaProject; câu về site kiểm trên repo. Câu chỉ kiểm được một phần ghi rõ trong `ghi_chu` của file kết quả. Khóa mọi trang và bản ghi của lô; bản build thật 231 trang (cùng D6-L1 đến D6-L10).

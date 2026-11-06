@@ -5,13 +5,13 @@ tang: tac-pham
 lan:
   - so: 1
     ngay: 2026-11-06
-    nhanh: moi/d6-l7
-    ma_bam: null
+    nhanh: moi/d6-kiem-mau
+    ma_bam: sha256:b8de5b94875671a9afbdf9c03771b9381c29efab0b74b7980de32b7276df7211
     nguoi:
       luot_1: Claude Opus 5.5 (D6-L7 phần B)
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L7, 06/11/2026, ba phần; bổ sung sau review do Claude Sonnet 5.5 làm)
       review: Claude Opus 5.5 (review D6-L7-gom)
-      kiem_mau: null
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L7, 8 đúng (doc-ten-tac-pham n10: thêm nguồn COD op. posth. vì trang Dolmetsch không hiện mục ấy), 0 sai (bao-cao/d6-l7-gom/kiem-mau-ket-qua.yml)"
 ghi_chu: 'Trang không có bản ghi (không tac_pham). Không có khối abc; có một khối quiz (5 câu) và hình oz-anatomy (chữ trong hình là nhận định n4). Nguồn chính: danh sách danh mục của Music Library Association (MLA, Thematic Indexes Used in LC/NACO), Köchel online, IMSLP (wikitext qua API), COD qua Encyclopedia.com, Henle (lời tựa HN 1062, 9813), Bärenreiter (TP 40), Breitkopf (BWV), CiNii (Deutsch 1951), LoC (Baselt), Lưu trữ Bartók Budapest, MusicBrainz, BBC Music Magazine, Eastman, Early Music America. Sửa: n8, n24, n37, n40, n42, n45, n46, n55. Câu trang khác dẫn tới giữ đúng: tiêu đề "Đọc tên tác phẩm và bản thu"; tiêu đề "## Các danh mục riêng" (id cac-danh-muc-rieng không đổi); dòng BWV (Schmieder 1950); đoạn "Chữ Anh. (Anhang, phụ lục) trong BWV…"; dòng "K. hoặc KV | Mozart | Ludwig von Köchel (1862)"; phần số danh mục khi không có opus; đoạn HIP (nhạc cụ thời đó, harpsichord thay piano, "thường A = 415 Hz cho nhạc Baroque", link /opus/nhac-ly/am-hoc/) chỉ đổi mốc năm và câu tả âm thanh; cách đọc thông tin bản thu. Thuật ngữ chưa có trong thuat-ngu.yml: HIP (biểu diễn theo phong cách lịch sử), danh mục tác phẩm (thematic catalogue), Op. posth., WoO, remaster. Đã có: opus.'
 nguon:
   - id: imslp-beet5
@@ -34,6 +34,10 @@ nguon:
     bac: 2
     ten: "The Concise Oxford Dictionary of Music, mục WoO: \"Werk ohne Opuszahl (Work without opus number). Applied, for example, to Beethoven's works in Kinsky's catalogue\""
     link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/woo
+  - id: cod-op-posth
+    bac: 2
+    ten: "The Concise Oxford Dictionary of Music (qua Encyclopedia.com), op. posth.: \"Posthumous work, i.e. work pubd. after composer's death.\" (truy cập 06/11/2026)"
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/op-posth
   - id: dolmetsch-p
     bac: 2
     ten: "Dolmetsch Online, Music dictionary P (defsp2): \"Posthumous: published after the author's death\"; \"post. abbreviation of posthum (German), posthumous\""
@@ -238,8 +242,9 @@ nhan_dinh:
     loai: dinh-nghia
     nguon:
       - dolmetsch-p
+      - cod-op-posth
     ket_qua: dung
-    ghi_chu: "Dolmetsch: \"Posthumous: published after the author's death\"."
+    ghi_chu: "Dolmetsch: \"Posthumous: published after the author's death\". Kiểm mẫu D6 (Claude, chủ repo giao, 06/11/2026): công cụ đọc trang không thấy mục ấy trên trang defsp2 (chỉ thấy Post mortem); thêm nguồn COD op. posth.: \"Posthumous work, i.e. work pubd. after composer's death.\""
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/List_of_works_by_Ludwig_van_Beethoven", "https://imslp.org/wiki/List_of_works_by_Franz_Schubert", "https://imslp.org/wiki/List_of_works_by_Fr%C3%A9d%C3%A9ric_Chopin" ]
     luot_2_ghi_chu: "IMSLP: Beethoven 'later numbers were published posthumously'; Schubert 'an asterisk (*) indicates a posthumous publication'; Chopin số opus do Fontana gán cho các bài in sau khi ông mất."
@@ -701,6 +706,7 @@ nhan_dinh:
     loai: dinh-nghia
     nguon:
       - dolmetsch-p
+      - cod-op-posth
     ket_qua: dung
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/List_of_works_by_Ludwig_van_Beethoven", "https://imslp.org/wiki/List_of_works_by_Franz_Schubert" ]

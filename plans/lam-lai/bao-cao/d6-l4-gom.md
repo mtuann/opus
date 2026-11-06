@@ -160,3 +160,9 @@ Phần dữ liệu: `xuat du-lieu/tac-pham/<7 slug> --con-lai` ra 0 câu.
 - Đã điền `nguoi.luot_2` cho 15 hồ sơ (8 trang, 7 bản ghi). Còn thiếu cho khóa: `nguoi.kiem_mau`.
 - Mẫu kiểm: 8 nhận định ở `d6-l4-gom/kiem-mau.yml` (`xuat D6-L4 --mau 8`).
 - Lượt 2 phần dữ liệu: agent gọi vài lần đường dẫn `/search` của henle.de (robots.txt cấm), rồi dừng, không dùng kết quả; các trang Henle dẫn đều tìm qua sitemap.
+
+## Kiểm mẫu và khóa (06/11/2026)
+
+Chủ repo giao Claude Opus 5.5 (phiên Cowork) kiểm mẫu thay, điền `kiem_mau` và khóa; người kiểm không phải chủ repo (`nguoi.kiem_mau` ghi rõ). 8 nhận định ở `d6-l4-gom/kiem-mau.yml`, kết quả `d6-l4-gom/kiem-mau-ket-qua.yml`: không câu nào sai. Nguồn ngoài mở lại bằng agent đọc trang web; file .ly của Mutopia đọc trên bản GitHub của MutopiaProject; câu về site kiểm trên repo. Câu chỉ kiểm được một phần ghi rõ trong `ghi_chu` của file kết quả. Khóa mọi trang và bản ghi của lô; bản build thật 231 trang (cùng D6-L1 đến D6-L10).
+
+Sửa theo kiểm mẫu: `beethoven-anh-trang` n103, mục Nguồn ghi "biên tập Norbert Gertsch và Murray Perahia, ngón bấm Murray Perahia" (Henle: "Murray Perahia (Editor, Fingering Piano)").

@@ -12,14 +12,14 @@ lan:
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
   - so: 2
-    ngay: 2026-11-05
-    nhanh: moi/d6-l2
-    ma_bam: null
+    ngay: 2026-11-06
+    nhanh: moi/d6-kiem-mau
+    ma_bam: sha256:ce6b9ac7256748fcf8c6a0de105e593ff5c4a2cf2dcb0f03afb32f2a0a137b88
     nguoi:
       luot_1: "Claude Opus 5.5 (D6-L2 phần A)"
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L2, 06/11/2026, ba phần; bổ sung sau review)
       review: Claude Opus 5.5 (review D6-L2-gom, 05/11/2026)
-      kiem_mau: null
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L2, 8 đúng, 0 sai (bao-cao/d6-l2-gom/kiem-mau-ket-qua.yml)"
 ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/bach-prelude-bwv939.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Bach-Digital (bach-digital.de) không mở được: trang chỉ trả về thử thách chống bot ("Please wait a moment while we verify your connection"), nên không dùng. Lần 2 (D6-L2, lượt 1 phần A): nhận định n7–n25 cho các trường chưa khóa (giong, nhip, thoi_ky, ky_nang_chinh, chip, thong_tin, hinh, ban_thu); bản nhạc đối chiếu Mutopia bwv-939 (Bach-Gesellschaft); nguồn chép tay theo Bach Digital (bản lưu Wayback). Không có chỗ sai; một ghi chú về năm in Peters (1843 hay 1844).'
 nguon:
   - id: imslp-bwv939
@@ -342,9 +342,10 @@ nhan_dinh:
     cau: 'Bản thu dài 30,59 giây (d: 30.59).'
     loai: so-lieu
     truong: [ ban_thu ]
-    nguon: []
+    nguon:
+      - imslp-kolodin
     ket_qua: dung
-    ghi_chu: 'Đo trên public/audio/bach-prelude-bwv939.mp3 (afinfo: 30,589 giây).'
+    ghi_chu: 'Đo trên public/audio/bach-prelude-bwv939.mp3 (afinfo: 30,589 giây). Kiểm mẫu D6 (Claude, chủ repo giao, 06/11/2026): khóa đòi nguồn cho so-lieu; ghi nguồn là file IMSLP mà public/audio/NGUON.txt dẫn, như hồ sơ đã khóa minuet-sol-thu (cùng loại câu); độ dài đo trên file của site (đã cắt khoảng lặng).'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/File:PMLP797208-Little_Prelude_in_C_Major_BWV_939_(320_kbps).mp3" ]
     luot_2_ghi_chu: "Đo tại máy: afinfo public/audio/bach-prelude-bwv939.mp3 'estimated duration: 30.589388 sec'. File gốc trên IMSLP (1,73 MB, 320 kbps) dài hơn chút; file của site đã cắt khoảng lặng (theo public/audio/NGUON.txt)."

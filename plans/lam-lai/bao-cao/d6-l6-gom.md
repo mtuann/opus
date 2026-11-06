@@ -125,3 +125,7 @@ Review đếm lại trên bản in đầu Kistner: BSB `bsb00051595` (ảnh IIIF
 - Lượt 2 bổ sung (Claude Opus 5.5): `ket-qua-bo-sung.yml` 4 dung (Ballade n54, n83 theo BAPAM *The Healthy Pianist* và bản in Pháp đầu; Liebestraum n47 và dữ liệu n31: tự đếm lại bản Kistner BSB, 85 ô, khớp quy ước câu ghi); đã `nhap`.
 - Đã điền `nguoi.luot_2` cho 7 hồ sơ (4 trang, 3 bản ghi). Còn thiếu cho khóa: `nguoi.kiem_mau`.
 - Mẫu kiểm: 8 nhận định ở `d6-l6-gom/kiem-mau.yml` (`xuat D6-L6 --mau 8`).
+
+## Kiểm mẫu và khóa (06/11/2026)
+
+Chủ repo giao Claude Opus 5.5 (phiên Cowork) kiểm mẫu thay, điền `kiem_mau` và khóa; người kiểm không phải chủ repo (`nguoi.kiem_mau` ghi rõ). 8 nhận định ở `d6-l6-gom/kiem-mau.yml`, kết quả `d6-l6-gom/kiem-mau-ket-qua.yml`: không câu nào sai. Nguồn ngoài mở lại bằng agent đọc trang web; file .ly của Mutopia đọc trên bản GitHub của MutopiaProject; câu về site kiểm trên repo. Câu chỉ kiểm được một phần ghi rõ trong `ghi_chu` của file kết quả. Khóa mọi trang và bản ghi của lô; bản build thật 231 trang (cùng D6-L1 đến D6-L10).

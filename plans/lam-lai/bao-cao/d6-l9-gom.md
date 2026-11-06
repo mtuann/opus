@@ -113,3 +113,7 @@ Không có. `node tools/khoa.mjs xuat D6-L9 --con-lai` ra 0 nhận định, nên
 - Đã điền `nguoi.luot_2` cho 16 hồ sơ (8 trang, 8 bản ghi). Còn thiếu cho khóa: `nguoi.kiem_mau`.
 - Mẫu kiểm: 8 nhận định ở `d6-l9-gom/kiem-mau.yml` (`xuat D6-L9 --mau 8`).
 - Casals ở trang khác: `nhac-cu/cello` (đã khóa) chỉ viết Casals "làm sống lại sự quan tâm… qua việc biểu diễn sáu tổ khúc", không nói "đầu tiên": không mâu thuẫn với chữ mới của `bach-cello-1`.
+
+## Kiểm mẫu và khóa (06/11/2026)
+
+Chủ repo giao Claude Opus 5.5 (phiên Cowork) kiểm mẫu thay, điền `kiem_mau` và khóa; người kiểm không phải chủ repo (`nguoi.kiem_mau` ghi rõ). 8 nhận định ở `d6-l9-gom/kiem-mau.yml`, kết quả `d6-l9-gom/kiem-mau-ket-qua.yml`: không câu nào sai. Nguồn ngoài mở lại bằng agent đọc trang web; file .ly của Mutopia đọc trên bản GitHub của MutopiaProject; câu về site kiểm trên repo. Câu chỉ kiểm được một phần ghi rõ trong `ghi_chu` của file kết quả. Khóa mọi trang và bản ghi của lô; bản build thật 231 trang (cùng D6-L1 đến D6-L10).

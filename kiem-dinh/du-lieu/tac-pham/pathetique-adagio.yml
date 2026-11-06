@@ -11,16 +11,16 @@ lan:
       luot_2: Claude Sonnet 5.5 (D2-0 lượt 2 phần A)
       review: Claude Opus 5.5 (chủ lô D2-0, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
-    truong: [chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten]
+    truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
   - so: 2
-    ngay: '2026-11-05'
-    nhanh: moi/d6-l5
-    ma_bam: null
+    ngay: '2026-11-06'
+    nhanh: moi/d6-kiem-mau
+    ma_bam: sha256:edadfe26aecfcffe53b4898481f6f75ba8b27b4b40d44baa01b41ed46e8f1a0d
     nguoi:
       luot_1: Claude Opus 5.5, agent con, D6-L5 phần A
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L5, 06/11/2026, bốn phần; bổ sung sau review)
       review: Claude Opus 5.5 (review D6-L5-gom, 05/11/2026)
-      kiem_mau: null
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L5, 8 đúng, 0 sai (bao-cao/d6-l5-gom/kiem-mau-ket-qua.yml)"
 nguon:
   - id: imslp-op13
     bac: 2
@@ -86,8 +86,8 @@ nhan_dinh:
   - id: n1
     cau: 'Tên bài: Pathétique Op. 13, chương 2 (Adagio cantabile của Sonata số 8, "Grande Sonate pathétique").'
     loai: ten
-    truong: [ten]
-    nguon: [imslp-op13, henle-hn1348]
+    truong: [ ten ]
+    nguon: [ imslp-op13, henle-hn1348 ]
     ket_qua: dung
     ghi_chu: 'IMSLP: "Piano Sonata No.8, Op.13", tên khác "Pathétique"; chương 2 "Adagio cantabile (A♭ major)". Henle HN 1348: "Piano Sonata no. 8 c minor op. 13 (Grande Sonata Pathétique)".'
     luot_2: dung
@@ -98,28 +98,28 @@ nhan_dinh:
   - id: n2
     cau: 'Tác giả: Ludwig van Beethoven.'
     loai: lich-su
-    truong: [tac_gia]
-    nguon: [imslp-op13, henle-hn1348]
+    truong: [ tac_gia ]
+    nguon: [ imslp-op13, henle-hn1348 ]
     ket_qua: dung
     ghi_chu: 'IMSLP: Composer "Beethoven, Ludwig van"; Henle HN 1348.'
     luot_2: dung
-    luot_2_nguon: ['https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)']
+    luot_2_nguon: [ 'https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)' ]
     luot_2_ghi_chu: 'IMSLP composer: Beethoven, Ludwig van.'
   - id: n3
     cau: 'Số danh mục: Op. 13.'
     loai: danh-muc
-    truong: [danh_muc]
-    nguon: [imslp-op13, henle-hn1348]
+    truong: [ danh_muc ]
+    nguon: [ imslp-op13, henle-hn1348 ]
     ket_qua: dung
     ghi_chu: 'IMSLP: Op./Cat. No. "Op.13". Henle: "op. 13".'
     luot_2: dung
-    luot_2_nguon: ['https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)']
+    luot_2_nguon: [ 'https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)' ]
     luot_2_ghi_chu: Op.13.
   - id: n4
     cau: Bài (chương 2) tương đương khoảng ABRSM Grade 7–8.
     loai: cap-do
-    truong: [grade]
-    nguon: [abrsm-2324, abrsm-2526, abrsm-2728, henle-hn1348, henle-thang]
+    truong: [ grade ]
+    nguon: [ abrsm-2324, abrsm-2526, abrsm-2728, henle-hn1348, henle-thang ]
     ket_qua: da-sua
     ghi_chu: 'Dữ liệu ghi "Grade 7"; sửa thành "Grade 7–8". Đề cương chính thức: ABRSM xếp "Beethoven, Adagio cantabile (2nd movt from Sonata in C minor ''Pathétique'', Op. 13)" ở Grade 8, danh sách B, trong ba kỳ liền: 2023 & 2024 (mục 12), 2025 & 2026 (mục 6) và 2027 & 2028 (mục 6); không kỳ nào xếp Grade 7. Henle xếp cả sonata mức 7.'
     luot_2: dung
@@ -131,8 +131,8 @@ nhan_dinh:
   - id: n5
     cau: Bài thuộc chặng 6 (Grade 7–8) của lộ trình piano.
     loai: cap-do
-    truong: [chang]
-    nguon: [abrsm-2324, abrsm-2526, abrsm-2728]
+    truong: [ chang ]
+    nguon: [ abrsm-2324, abrsm-2526, abrsm-2728 ]
     ket_qua: dung
     ghi_chu: Chặng 6 = Grade 7–8 (cap-do.yml); Grade 7–8 khớp (không đổi chặng).
     luot_2: dung
@@ -142,7 +142,7 @@ nhan_dinh:
   - id: n6
     cau: Bài được gợi ý ở chặng 6 trong hộp luyện tập của trang chủ.
     loai: khuyen-tap
-    truong: [goi_y]
+    truong: [ goi_y ]
     nguon: []
     ket_qua: khong-can-nguon
     ghi_chu: '../opus-zero/docs/assets/js/practice.js, hằng SUGGEST[6] có ["piano/tac-pham/pathetique-adagio/", "Beethoven: Pathétique, chương 2"]; chặng 6 trùng chang 6 của bản ghi.'
@@ -151,169 +151,169 @@ nhan_dinh:
   - id: n7
     cau: 'Giọng: La♭ trưởng.'
     loai: cau-truc
-    truong: [giong]
-    nguon: [mut-op13-2, imslp-op13]
+    truong: [ giong ]
+    nguon: [ mut-op13-2, imslp-op13 ]
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf"]
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf" ]
     luot_2_ghi_chu: Hóa biểu bốn dấu giáng, La♭ trưởng.
   - id: n8
     cau: 'Nhịp: 2/4.'
     loai: cau-truc
-    truong: [nhip]
-    nguon: &id001 [mut-op13-2]
+    truong: [ nhip ]
+    nguon: &id001 [ mut-op13-2 ]
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf"]
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf" ]
     luot_2_ghi_chu: Nhịp 2/4.
   - id: n9
     cau: 'Thời kỳ: Cổ điển.'
     loai: lich-su
-    truong: [thoi_ky]
-    nguon: [imslp-op13]
+    truong: [ thoi_ky ]
+    nguon: [ imslp-op13 ]
     ket_qua: dung
     ghi_chu: IMSLP Piece Style Classical; Mutopia style "Classical".
     luot_2: dung
-    luot_2_nguon: ["https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)"]
+    luot_2_nguon: [ "https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)" ]
     luot_2_ghi_chu: "IMSLP: Comp. Period Classical."
   - id: n10
     cau: 'Kỹ năng chính: giai điệu hát giữa phần đệm, ba lớp trong hai tay.'
     loai: cau-truc
-    truong: [ky_nang_chinh]
+    truong: [ ky_nang_chinh ]
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf"]
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf" ]
     luot_2_ghi_chu: "Ô 1–16: giai điệu và đệm móc kép cùng tay phải, bè trầm tay trái."
   - id: n11
     cau: 'Chip: "La♭ trưởng · 2/4".'
     loai: cau-truc
-    truong: [chip]
+    truong: [ chip ]
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf"]
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf" ]
     luot_2_ghi_chu: La♭ trưởng, 2/4.
   - id: n12
     cau: 'Chip: "Adagio cantabile".'
     loai: ten
-    truong: [chip]
-    nguon: [imslp-op13]
+    truong: [ chip ]
+    nguon: [ imslp-op13 ]
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf", "https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)"]
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf", "https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)" ]
     luot_2_ghi_chu: '"Adagio cantabile".'
   - id: n13
     cau: 'Chip cấp độ: "≈ Grade 7–8".'
     loai: cap-do
-    truong: [chip]
-    nguon: [abrsm-2728, abrsm-2526, abrsm-2324]
+    truong: [ chip ]
+    nguon: [ abrsm-2728, abrsm-2526, abrsm-2324 ]
     ket_qua: dung
     ghi_chu: Khớp grade đã khóa (lần 1 n4); ABRSM Grade 8 nằm trong khoảng.
     luot_2: dung
-    luot_2_nguon: ["https://www.abrsm.org/sites/default/files/2024-06/Piano%202023%20%26%202024%20Prac%20syllabus%2020230807.pdf", "https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26%202026%20Prac%20syllabus%2020240524_access.pdf", "https://www.abrsm.org/sites/default/files/2026-06/Piano%20Practical%20Grades%20Qualification%20Specification%202027%20%26%202028.pdf"]
+    luot_2_nguon: [ "https://www.abrsm.org/sites/default/files/2024-06/Piano%202023%20%26%202024%20Prac%20syllabus%2020230807.pdf", "https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26%202026%20Prac%20syllabus%2020240524_access.pdf", "https://www.abrsm.org/sites/default/files/2026-06/Piano%20Practical%20Grades%20Qualification%20Specification%202027%20%26%202028.pdf" ]
     luot_2_ghi_chu: ABRSM Grade 8 các kỳ 2023–2028.
   - id: n14
     cau: 'Chip: "Rondo, 73 ô nhịp".'
     loai: cau-truc
-    truong: [chip]
+    truong: [ chip ]
     nguon: *id001
     ket_qua: dung
     ghi_chu: MIDI 73 ô; A–B–A–C–A + coda.
     luot_2: dung
-    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf"]
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf" ]
     luot_2_ghi_chu: "Đếm ô (MIDI và PDF Mutopia): 73 ô; hình thức rondo (xem n21)."
   - id: n15
     cau: 'Thông tin, nhà soạn nhạc: Ludwig van Beethoven (1770–1827).'
     loai: nam
-    truong: [thong_tin]
-    nguon: [henle-hn1348-vorwort]
+    truong: [ thong_tin ]
+    nguon: [ henle-hn1348-vorwort ]
     ket_qua: dung
     ghi_chu: Khớp nha-soan-nhac.yml (đã khóa).
     luot_2: dung
-    luot_2_nguon: ["https://www.henle.de/en/Piano-Sonata-no.-8-c-minor-op.-13-Grande-Sonata-Pathetique/HN-1348"]
+    luot_2_nguon: [ "https://www.henle.de/en/Piano-Sonata-no.-8-c-minor-op.-13-Grande-Sonata-Pathetique/HN-1348" ]
     luot_2_ghi_chu: "Tiểu sử Henle: rửa tội 17/12/1770 ở Bonn, mất ở Vienna 26/3/1827."
   - id: n16
     cau: 'Thông tin, tác phẩm: Sonata piano số 8 cung Đô thứ, Op. 13, Grande Sonate pathétique; chương 2 Adagio cantabile.'
     loai: ten
-    truong: [thong_tin]
-    nguon: [imslp-op13, beethoven-haus-op13]
+    truong: [ thong_tin ]
+    nguon: [ imslp-op13, beethoven-haus-op13 ]
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: ["https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)"]
+    luot_2_nguon: [ "https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)" ]
     luot_2_ghi_chu: 'IMSLP: Piano Sonata No.8, Op.13, "Grande Sonate Pathétique", chương 2 Adagio cantabile (A♭ major).'
   - id: n17
     cau: 'Thông tin: viết năm 1798, in năm 1799.'
     loai: nam
-    truong: [thong_tin]
-    nguon: [imslp-op13, henle-hn1348-vorwort]
+    truong: [ thong_tin ]
+    nguon: [ imslp-op13, henle-hn1348-vorwort ]
     ket_qua: dung
     ghi_chu: 'IMSLP 1798, in 18/12/1799; Henle: phần chính xong khoảng giữa 1798, in mùa thu 1799.'
     luot_2: dung
-    luot_2_nguon: ["https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)", "https://www.henle.de/media/fc/b2/b2/1697725861/1348-1697725860-sync.pdf"]
+    luot_2_nguon: [ "https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)", "https://www.henle.de/media/fc/b2/b2/1697725861/1348-1697725860-sync.pdf" ]
     luot_2_ghi_chu: "IMSLP: sáng tác 1798, in 18/12/1799 (Hoffmeister, Vienna); lời tựa Henle: phần chính viết xong khoảng giữa 1798, in mùa thu 1799."
   - id: n18
     cau: 'Thông tin: đề tặng Hoàng thân Karl von Lichnowsky.'
     loai: lich-su
-    truong: [thong_tin]
-    nguon: [beethoven-haus-op13, imslp-op13]
+    truong: [ thong_tin ]
+    nguon: [ beethoven-haus-op13, imslp-op13 ]
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: ["https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)", "https://www.beethoven.de/en/media/view/5026432329711616"]
+    luot_2_nguon: [ "https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)", "https://www.beethoven.de/en/media/view/5026432329711616" ]
     luot_2_ghi_chu: "IMSLP: Dedication Karl Lichnowsky (1761–1814); Beethoven-Haus nêu Op. 13 đề tặng ông."
   - id: n19
     cau: 'Thông tin: Lichnowsky là người bảo trợ của Beethoven.'
     loai: lich-su
-    truong: [thong_tin]
+    truong: [ thong_tin ]
     nguon:
       - l2-n19-1
     ket_qua: dung
     ghi_chu: 'chưa chắc: chưa mở nguồn nói vai trò bảo trợ (Beethoven-Haus trang tác phẩm chỉ ghi đề tặng); lượt 2 kiểm. Review D6-L5-gom: lượt 1 chưa chắc; lượt 2 tìm được nguồn (thêm vào nguon của câu); ghi dung. Beethoven-Haus: Lichnowsky "one of the most important patrons of the composer".'
     luot_2: dung
-    luot_2_nguon: ["https://www.beethoven.de/en/media/view/5026432329711616"]
+    luot_2_nguon: [ "https://www.beethoven.de/en/media/view/5026432329711616" ]
     luot_2_ghi_chu: 'Beethoven-Haus: "one of the most important patrons of the composer".'
     review: dung
   - id: n20
     cau: 'Thông tin, giọng · nhịp · tốc độ: La♭ trưởng · 2/4 · Adagio cantabile (chậm, như hát).'
     loai: cau-truc
-    truong: [thong_tin]
-    nguon: [mut-op13-2, thuat-ngu]
+    truong: [ thong_tin ]
+    nguon: [ mut-op13-2, thuat-ngu ]
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf"]
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf" ]
     luot_2_ghi_chu: La♭ trưởng, 2/4, Adagio cantabile.
   - id: n21
     cau: 'Thông tin, hình thức: Rondo A – B – A – C – A và coda, 73 ô nhịp.'
     loai: cau-truc
-    truong: [thong_tin]
+    truong: [ thong_tin ]
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf"]
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf" ]
     luot_2_ghi_chu: "Đối chiếu bản nhạc: A 1–16, B 17–28, A 29–36, C 37–50, A 51–66, coda; tổng 73 ô."
   - id: n22
     cau: 'Thông tin, độ khó: khoảng ABRSM Grade 7–8; ABRSM xếp bài ở Grade 8 (đề cương 2023–2024, 2025–2026, 2027–2028).'
     loai: cap-do
-    truong: [thong_tin]
-    nguon: [abrsm-2324, abrsm-2526, abrsm-2728]
+    truong: [ thong_tin ]
+    nguon: [ abrsm-2324, abrsm-2526, abrsm-2728 ]
     ket_qua: dung
     ghi_chu: 'Ba đề cương: Grade 8 danh sách B (2023–24 số 12, 2025–26 số 6, 2027–28 số 6).'
     luot_2: dung
-    luot_2_nguon: ["https://www.abrsm.org/sites/default/files/2024-06/Piano%202023%20%26%202024%20Prac%20syllabus%2020230807.pdf", "https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26%202026%20Prac%20syllabus%2020240524_access.pdf", "https://www.abrsm.org/sites/default/files/2026-06/Piano%20Practical%20Grades%20Qualification%20Specification%202027%20%26%202028.pdf"]
+    luot_2_nguon: [ "https://www.abrsm.org/sites/default/files/2024-06/Piano%202023%20%26%202024%20Prac%20syllabus%2020230807.pdf", "https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26%202026%20Prac%20syllabus%2020240524_access.pdf", "https://www.abrsm.org/sites/default/files/2026-06/Piano%20Practical%20Grades%20Qualification%20Specification%202027%20%26%202028.pdf" ]
     luot_2_ghi_chu: Mục Grade 8 của ba đề cương có "Adagio cantabile (2nd movt from Sonata in C minor 'Pathétique', Op. 13)".
   - id: n23
     cau: 'Thông tin, kỹ năng chính: ba lớp âm thanh trong hai tay, giai điệu và phần đệm trong cùng tay phải, legato bằng ngón và đổi ngón trên phím, bàn đạp nối, câu nhạc dài, đệm chùm ba.'
     loai: cau-truc
-    truong: [thong_tin]
+    truong: [ thong_tin ]
     nguon: *id001
     ket_qua: dung
     luot_2: dung
-    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf"]
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf" ]
     luot_2_ghi_chu: "Hợp với bản nhạc: ba lớp, ngón đổi trên phím (4-5, 3212…), câu dài, đệm chùm ba ở đoạn C và A cuối."
   - id: n24
     cau: 'Thông tin, bản nhạc: IMSLP; Henle Urtext; Bärenreiter (biên tập Jonathan Del Mar); Wiener Urtext; ấn bản ABRSM (biên tập Barry Cooper).'
     loai: ten
-    truong: [thong_tin]
+    truong: [ thong_tin ]
     nguon:
       - henle-hn1348
       - abrsm-2728
@@ -323,38 +323,38 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'Henle HN 1348 có; đề cương ABRSM ghi "Beethoven: The 35 Piano Sonatas, Vol. 1 (ABRSM)". chưa chắc: chưa mở trang Bärenreiter (Del Mar), Wiener Urtext và trang ấn bản ABRSM (tên Barry Cooper); lượt 2 kiểm. Review D6-L5-gom: lượt 1 chưa chắc; lượt 2 tìm được nguồn (thêm vào nguon của câu); ghi dung. Bärenreiter BA 10851 (Del Mar), Wiener Urtext UT 50435, ABRSM Signature Series (Cooper).'
     luot_2: dung
-    luot_2_nguon: ["https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)", "https://www.henle.de/en/Piano-Sonata-no.-8-c-minor-op.-13-Grande-Sonata-Pathetique/HN-1348", "https://www.barenreiter.co.uk/piano-sonata-in-c-minor-op-13-pathetique.html", "https://scorestore.co.uk/piano/beethoven-sonata-no8-c-min-opus-13-pathetique-for-piano-published-by-wiener-urtext.html", "https://www.forsyths.co.uk/music/sheet-music/instruments/keyboard-instruments/piano/7483-beethoven-lv-sonata-in-c-minor-op-13-pathetique-9781860967467.html"]
+    luot_2_nguon: [ "https://imslp.org/wiki/Piano_Sonata_No.8,_Op.13_(Beethoven,_Ludwig_van)", "https://www.henle.de/en/Piano-Sonata-no.-8-c-minor-op.-13-Grande-Sonata-Pathetique/HN-1348", "https://www.barenreiter.co.uk/piano-sonata-in-c-minor-op-13-pathetique.html", "https://scorestore.co.uk/piano/beethoven-sonata-no8-c-min-opus-13-pathetique-for-piano-published-by-wiener-urtext.html", "https://www.forsyths.co.uk/music/sheet-music/instruments/keyboard-instruments/piano/7483-beethoven-lv-sonata-in-c-minor-op-13-pathetique-9781860967467.html" ]
     luot_2_ghi_chu: Henle HN 1348; Bärenreiter BA 10851 (Del Mar, Urtext); Wiener Urtext UT 50435; ABRSM (Signature Series) biên tập Barry Cooper.
     review: dung
   - id: n25
     cau: 'Thông tin, bản nhạc: ấn bản ABRSM "có chú thích hữu ích".'
     loai: ten
-    truong: [thong_tin]
+    truong: [ thong_tin ]
     nguon:
       - l2-n24-5
     ket_qua: da-sua
     ghi_chu: 'Đánh giá, không kiểm được; đề xuất bỏ vế này (như D6-L3-gom bỏ "có chú thích hữu ích" ở beethoven-op49-2 n25). Đề xuất ở sua-A.yml. Review D6-L5-gom: lượt 1 bỏ "có chú thích hữu ích"; lượt 2 xác nhận ấn bản có lời dẫn và chú giải (Forsyths), "hữu ích" là nhận xét. Phần còn lại của dòng có nguồn ở n24.'
     luot_2: dung
-    luot_2_nguon: ["https://www.forsyths.co.uk/music/sheet-music/instruments/keyboard-instruments/piano/7483-beethoven-lv-sonata-in-c-minor-op-13-pathetique-9781860967467.html"]
+    luot_2_nguon: [ "https://www.forsyths.co.uk/music/sheet-music/instruments/keyboard-instruments/piano/7483-beethoven-lv-sonata-in-c-minor-op-13-pathetique-9781860967467.html" ]
     luot_2_ghi_chu: 'Mô tả ấn bản: có lời dẫn và chú giải gồm lịch sử, đánh giá nguồn và "detailed notes on interpretation". "Hữu ích" là nhận xét.'
     review: dung
   - id: n26
     cau: 'Hình cấu trúc: A ô 1–16 La♭ trưởng (16), B ô 17–28 Fa thứ → Mi♭ (12), A ô 29–36 (8), C ô 37–50 La♭ thứ → Mi trưởng, chùm ba (14), A ô 51–66 đệm chùm ba (16), coda ô 66–73 (7); độ dài theo số ô, tổng 73.'
     loai: cau-truc
-    truong: [hinh]
+    truong: [ hinh ]
     nguon: *id001
     ket_qua: dung
     ghi_chu: Ranh giới khớp bản nhạc (hồ sơ trang).
     luot_2: dung
-    luot_2_nguon: ["https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf"]
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf" ]
     luot_2_ghi_chu: "Đối chiếu bản nhạc: B ô 17 Fa thứ, ô 23 Mi♭; C ô 37 La♭ thứ, ô 42–44 Mi trưởng, đệm chùm ba; A ô 51 đệm chùm ba; coda đến ô 73."
   - id: n27
     cau: 'Bản thu gợi ý: Daniel Veesey, CC0, 380,54 s, trang Commons.'
     loai: ten
-    truong: [ban_thu]
-    nguon: [commons-veesey-op13]
+    truong: [ ban_thu ]
+    nguon: [ commons-veesey-op13 ]
     ket_qua: dung
     ghi_chu: 'Commons: Artist Daniel Veesey, CC0, length 380,54 s (khớp d).'
     luot_2: dung
-    luot_2_nguon: ["https://commons.wikimedia.org/wiki/File:Daniel_Veesey_-_02_-_Sonata_8_Pathetique_-_II_Adagio_cantabile.ogg"]
+    luot_2_nguon: [ "https://commons.wikimedia.org/wiki/File:Daniel_Veesey_-_02_-_Sonata_8_Pathetique_-_II_Adagio_cantabile.ogg" ]
     luot_2_ghi_chu: "Commons: Daniel Veesey, CC0, 380,54 s."

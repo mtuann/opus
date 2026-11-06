@@ -268,7 +268,7 @@ Bản Urtext cho bạn đúng chữ của Beethoven. Các ấn bản cũ có th�
 
 ## Nguồn
 
-- Beethoven, *Piano Sonata no. 14 c sharp minor op. 27 no. 2 (Moonlight)*, G. Henle Verlag, HN 1062 (biên tập Norbert Gertsch, ngón bấm Murray Perahia): [trang ấn bản](https://www.henle.de/en/Piano-Sonata-no.-14-c-sharp-minor-op.-27-no.-2-Moonlight/HN-1062), mức độ khó; [lời tựa](https://www.henle.de/media/ca/21/5b/1697725842/1062-1697725842-sync.pdf): đoạn văn của Rellstab, ý kiến của Murray Perahia về chỉ dẫn bàn đạp.
+- Beethoven, *Piano Sonata no. 14 c sharp minor op. 27 no. 2 (Moonlight)*, G. Henle Verlag, HN 1062 (biên tập Norbert Gertsch và Murray Perahia, ngón bấm Murray Perahia): [trang ấn bản](https://www.henle.de/en/Piano-Sonata-no.-14-c-sharp-minor-op.-27-no.-2-Moonlight/HN-1062), mức độ khó; [lời tựa](https://www.henle.de/media/ca/21/5b/1697725842/1062-1697725842-sync.pdf): đoạn văn của Rellstab, ý kiến của Murray Perahia về chỉ dẫn bàn đạp.
 - Bài viết về nguồn gốc tên *Moonlight* trên [crumey.co.uk](https://crumey.co.uk/beethoven_5_why_moonlight_sonata.html): truyện *Theodor* của Rellstab (1824), sách của Wilhelm von Lenz (1852), tên *Mondscheinsonate* quanh năm 1840.
 - Graham Fitch, ["Pedalling the Moonlight Sonata"](https://practisingthepiano.com/pedalling-moonlight-sonata/), *Practising the Piano* (2017): hai lần ghi chỉ dẫn bàn đạp, cách đạp từng phần.
 - Bản dàn trang công cộng của [Mutopia Project](https://www.mutopiaproject.org/) (người nhập: Stewart Holmes; nguồn: ấn bản do A. Winterberger biên tập, 1908): nguồn của đoạn trích, số ô nhịp và các chi tiết nốt nhạc trên trang này.

@@ -4,14 +4,14 @@ nguon_cu: ../opus-zero/docs/piano/tac-pham/chopin-valse-la-thu.md
 tang: tac-pham
 lan:
   - so: 1
-    ngay: '2026-11-05'
-    nhanh: moi/d6-l2
-    ma_bam: null
+    ngay: '2026-11-06'
+    nhanh: moi/d6-kiem-mau
+    ma_bam: sha256:5d7fc8ee229f8ac238e3ad3e1b94d62bb74624eb9bea1a1435174de89bab9999
     nguoi:
       luot_1: Claude Opus 5.5 (D6-L2 phần B)
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L2, 06/11/2026, ba phần; bổ sung sau review)
       review: Claude Opus 5.5 (review D6-L2-gom, 05/11/2026)
-      kiem_mau: null
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L2, 8 đúng, 0 sai (bao-cao/d6-l2-gom/kiem-mau-ket-qua.yml)"
 ghi_chu: 'Bài học Valse La thứ B. 150 (tầng Tác phẩm). Bản nhạc: bản LilyPond chép theo bản thảo ở Paris (kho rdj/music trên GitHub, chopin-b150-waltz-in-a-minor.ly, tải ngày 05/11/2026; có \barNumberCheck): A ô 1–16, ‖: B :‖ ô 17–24, ‖: A'' C :‖ ô 25–40, A'''' ô 41–52, coda ô 53–56, 56 ô và một phách lấy đà. Bản IMSLP (PDF) không mở (bị chặn). Lịch sử: IMSLP (wikitext), Henle HN 131 (Bemerkungen/Comments, Vorwort), Henle HN 1822 (trang mẫu có lời bình Valse La thứ), Ấn bản Quốc gia Ba Lan (bảng số WN), Henle blog (valse 2024). Chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng thuộc hồ sơ du-lieu/tac-pham/chopin-valse-la-thu. Sửa trang: n1 (bỏ "với nhiều người là bản Chopin đầu tiên", thay bằng mức Henle; cả description), n4 (chặng: "vừa sức người mới qua chặng sơ cấp" sai với chặng 5 đã khóa), n10, n12 (bối cảnh valse: bỏ "món không thể thiếu của các phòng khách", "khoảnh khắc ngẫu hứng" thành "chỗ co giãn nhịp"), n16 (bỏ Prod''homme 1939 và "số đặc biệt": không mở được nguồn), n20 (Op. 34 số 2: bỏ "dài hơn", thêm mức Henle), n24 (bỏ đánh giá về Lipatti, Rubinstein), n33 và n34 (coda: bỏ "nhỏ dần đến lặng", bản thảo không ghi), n69 (link cùng chặng: Clementi, Arabesque ở chặng 3; thay bằng hai bài chặng 5). Chưa chắc: n56 (học trò kể về rubato), n62 (nốt hoa mỹ vào đúng phách, theo Eigeldinger), n78 (bản WIMA 1999 và 56 ô), n79 (sách Brown 1960): chỉ có sách in hay PDF IMSLP bị chặn. Khuông: ba khối đều là ví dụ soạn, đúng. Thuật ngữ (Allegretto, rubato, rondo, trill, legato) có trong src/data/thuat-ngu.yml; "đạp trễ" là chữ của trang piano/ban-dap (đã khóa, mục Bàn đạp nối).'
 nguon:
   - id: rdj-b150
@@ -98,6 +98,10 @@ nguon:
     bac: 2
     ten: 'Open Library, Maurice John Edwin Brown, Chopin: an index of his works in chronological order (Macmillan, 1960)'
     link: https://openlibrary.org/works/OL4533864W
+  - id: thuat-ngu
+    bac: 1
+    ten: 'src/data/thuat-ngu.yml (đã khóa): allegretto "Hơi nhanh"'
+    link: src/data/thuat-ngu.yml
 nhan_dinh:
   - id: n1
     cau: Đây là valse dễ nhất của Chopin theo thang độ khó của Henle.
@@ -301,8 +305,8 @@ nhan_dinh:
     cau: Nghe Valse Si thứ Op. 69 số 2, bản học tiếp, qua hai bản thu khác nhau và tự so sánh.
     loai: khuyen-tap
     nguon: []
-    ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "… qua bản thu của Dinu Lipatti và Arthur Rubinstein. Nhiều người thấy Lipatti thanh thoát và chặt chẽ hơn, Rubinstein ung dung như đang trò chuyện: hãy tự nghe và quyết định." Chữ mới: "… qua hai bản thu khác nhau: bản nào thanh thoát và chặt chẽ hơn, bản nào ung dung như đang trò chuyện? Hãy tự nghe và quyết định." Lý do: "nhiều người thấy" là đánh giá không có nguồn; bản thu Op. 69 số 2 của Rubinstein không mở được nguồn bậc 2 (trang đĩa chặn công cụ). Câu mới là lời khuyên nghe.'
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Chữ cũ: "… qua bản thu của Dinu Lipatti và Arthur Rubinstein. Nhiều người thấy Lipatti thanh thoát và chặt chẽ hơn, Rubinstein ung dung như đang trò chuyện: hãy tự nghe và quyết định." Chữ mới: "… qua hai bản thu khác nhau: bản nào thanh thoát và chặt chẽ hơn, bản nào ung dung như đang trò chuyện? Hãy tự nghe và quyết định." Lý do: "nhiều người thấy" là đánh giá không có nguồn; bản thu Op. 69 số 2 của Rubinstein không mở được nguồn bậc 2 (trang đĩa chặn công cụ). Câu mới là lời khuyên nghe. Kiểm mẫu D6 (Claude, chủ repo giao, 06/11/2026): khóa đòi nguồn; lời khuyên tập đã đổi chữ, không dính sức khỏe: ket_qua da-sua thành khong-can-nguon (như hồ sơ đã khóa nhan-dien/nghe-mu n2); chữ cũ ghi ở trên.'
   - id: n25
     cau: Valse Si thứ Op. 69 số 2 là bản học tiếp; muốn hiểu lối hát của Chopin, nghe bản thu kèm bản đồ nghe trong bài học Nocturne Op. 9 số 2.
     loai: ve-site
@@ -467,9 +471,9 @@ nhan_dinh:
   - id: n46
     cau: Allegretto là "hơi nhanh", không phải chậm.
     loai: dinh-nghia
-    nguon: []
+    nguon: [ thuat-ngu ]
     ket_qua: dung
-    ghi_chu: 'Khớp Từ điển của site (src/data/thuat-ngu.yml, mục allegretto: "Hơi nhanh"), đã khóa. Bài ghi Allegretto: rdj \tempo Allegretto; Henle HN 1822 "Allegretto".'
+    ghi_chu: 'Khớp Từ điển của site (src/data/thuat-ngu.yml, mục allegretto: "Hơi nhanh"), đã khóa. Bài ghi Allegretto: rdj \tempo Allegretto; Henle HN 1822 "Allegretto". Kiểm mẫu D6 (Claude, chủ repo giao, 06/11/2026): khóa đòi nguồn; ghi nguồn là Từ điển của site (src/data/thuat-ngu.yml, đã khóa), như hồ sơ đã khóa pathetique-adagio.'
     luot_2: dung
     luot_2_nguon: [ "https://en.wikisource.org/wiki/A_Dictionary_of_Music_and_Musicians/Allegretto", "https://raw.githubusercontent.com/rdj/music/HEAD/chopin-b150-waltz-in-a-minor.ly" ]
     luot_2_ghi_chu: "Grove: Allegretto 'diminutive of allegro', chậm hơn allegro, nhanh hơn andante. Bản thảo (LY) ghi Allegretto; Henle cũng ghi Allegretto."

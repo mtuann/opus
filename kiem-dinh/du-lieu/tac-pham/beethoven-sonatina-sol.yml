@@ -12,14 +12,14 @@ lan:
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-0 đúng (d2-0-kiem-mau.yml)
     truong: [ chang, danh_muc, gan_cho, goi_y, grade, khuyet_danh, loai, tac_gia, ten ]
   - so: 2
-    ngay: 2026-11-05
-    nhanh: moi/d6-l2
-    ma_bam: null
+    ngay: 2026-11-06
+    nhanh: moi/d6-kiem-mau
+    ma_bam: sha256:d45f17ac671b36bafdfaa3b453d3aad915a5e606c75fe92028604b3b334d075b
     nguoi:
       luot_1: "Claude Opus 5.5 (D6-L2 phần A)"
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L2, 06/11/2026, ba phần; bổ sung sau review)
       review: Claude Opus 5.5 (review D6-L2-gom, 05/11/2026)
-      kiem_mau: null
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L2, 8 đúng, 0 sai (bao-cao/d6-l2-gom/kiem-mau-ket-qua.yml)"
 ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/beethoven-sonatina-sol.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Lần 2 (D6-L2, lượt 1 phần A): nhận định n6–n23 cho các trường chưa khóa (giong, thoi_ky, ky_nang_chinh, chip, thong_tin, hinh, ban_thu; bản ghi không có trường nhip); bản nhạc đối chiếu MEI của TROMPA (Breitkopf Serie 16 No. 160); lịch sử in theo Henle, lvbeethoven.it, Nottebohm 1868, mô tả Wiener Urtext. Không có chỗ sai; dòng Độ khó ghi "(ước lượng)" dù ABRSM 2025–2026 có xếp chương I ở Grade 2 (ghi ở báo cáo).'
 nguon:
   - id: imslp-anh5
@@ -58,6 +58,14 @@ nguon:
     bac: 2
     ten: hebu-music (nhà bán), Bärenreiter BA 6560 Beethoven, Easy Piano Pieces and Dances (Leichte Klavierstücke und Tänze), Michael Töpel
     link: https://www.hebu-music.com/en/article/ludwig-van-beethoven/baerenreiter-verlag/easy-piano-pieces-and-dances.379841
+  - id: imslp-egea-1
+    bac: 2
+    ten: IMSLP, File:PMLP96125-Beethoven - Sonatina in G major Anh.5 I Moderato.mp3 (Ramón León Egea, CC BY-SA 4.0)
+    link: https://imslp.org/wiki/File:PMLP96125-Beethoven_-_Sonatina_in_G_major_Anh.5_I_Moderato.mp3
+  - id: imslp-egea-2
+    bac: 2
+    ten: IMSLP, File:PMLP96125-Beethoven - Sonatina in G major Anh.5 II Romance performed by Ramón León Egea.mp3 (CC BY-SA 4.0)
+    link: https://imslp.org/wiki/File:PMLP96125-Beethoven_-_Sonatina_in_G_major_Anh.5_II_Romance_performed_by_Ram%C3%B3n_Le%C3%B3n_Egea.mp3
   - id: db-beethoven
     bac: 2
     ten: Deutsche Biographie, Beethoven, Ludwig van (1770–1827)
@@ -308,9 +316,11 @@ nhan_dinh:
     cau: 'Bản thu dài 152,5 giây (chương I) và 150,38 giây (chương II).'
     loai: so-lieu
     truong: [ ban_thu ]
-    nguon: []
+    nguon:
+      - imslp-egea-1
+      - imslp-egea-2
     ket_qua: dung
-    ghi_chu: 'afinfo: public/audio/beethoven-sonatina-sol-1.mp3 152,496 giây; -2.mp3 150,384 giây.'
+    ghi_chu: 'afinfo: public/audio/beethoven-sonatina-sol-1.mp3 152,496 giây; -2.mp3 150,384 giây. Kiểm mẫu D6 (Claude, chủ repo giao, 06/11/2026): khóa đòi nguồn cho so-lieu; ghi nguồn là hai file IMSLP (lượt 2 đã mở), độ dài đo trên file của site như các hồ sơ đã khóa cùng loại.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/File:PMLP96125-Beethoven_-_Sonatina_in_G_major_Anh.5_I_Moderato.mp3", "https://imslp.org/wiki/File:PMLP96125-Beethoven_-_Sonatina_in_G_major_Anh.5_II_Romance_performed_by_Ram%C3%B3n_Le%C3%B3n_Egea.mp3" ]
     luot_2_ghi_chu: "Đo tại máy: afinfo public/audio/beethoven-sonatina-sol-1.mp3 'estimated duration: 152.496000 sec', beethoven-sonatina-sol-2.mp3 '150.384000 sec'."
