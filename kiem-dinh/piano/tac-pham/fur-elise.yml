@@ -3,672 +3,873 @@ trang: src/content/docs/piano/tac-pham/fur-elise.md
 nguon_cu: ../opus-zero/docs/piano/tac-pham/fur-elise.md
 tang: tac-pham
 lan:
-- so: 1
-  ngay: 2026-11-05
-  nhanh: moi/d6-l3
-  ma_bam: null
-  nguoi:
-    luot_1: Claude Opus 5.5 (D6-L3 phần A)
-    luot_2: null
-    review: null
-    kiem_mau: null
+  - so: 1
+    ngay: 2026-11-05
+    nhanh: moi/d6-l3
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5 (D6-L3 phần A)
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Bài học Für Elise WoO 59 (tầng Tác phẩm; trang đã chuyển ở D1.8, kiểm định lần đầu). Bản nhạc: Mutopia fur_Elise_WoO59 (Breitkopf & Härtel 1888; .ly, .mid tải 05/11/2026, User-Agent opus-kiem-dinh), đọc bằng script Python (mido) theo ô. Lịch sử: lời nói đầu và bình chú Henle HN 1347 (PDF), mục WoO 59 của danh mục Beethoven (Henle 2014, PDF), Beethoven-Haus. Sửa trang: n2, n8, n10, n24, n25, n31, n70, n74, n81, n83, n87, n88, n89. Còn mở: n14, n16, n30, n84 (đánh giá "những năm sáng tác dồi dào nhất"; nghĩa của bagatelle và poco: chưa mở được từ điển). Giữ cho hồ sơ khác: 8 ô đầu như Beethoven viết, hai tay thay phiên, móc kép, 3/8 (piano/10-bai-dau-tien n2, n34; khối 1 khớp bản 1888); đoạn C nốt La lặp tay trái (piano/not-lap-not-kep n10, n41); rondo A–B–A–C–A (hinh-thuc/rondo n20: ghi chú hồ sơ ấy chép chữ cũ "quay lại ba lần", nay là "vang lên ba lần"; câu n20 chỉ nói về link nên vẫn đúng); link từ piano/hai-tay n16, tai-lieu-tham-khao t32, blog phiên bản 15 n7 không bị chạm. Không tính là nhận định: tiêu đề mục, tiêu đề cột bảng, chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng (thuộc hồ sơ bản ghi), mốc trong ::khoi-nghe. Thuật ngữ trang dùng (rondo, appoggiatura, móc ba, chùm ba, Urtext) có trong src/data/thuat-ngu.yml; "bagatelle", "poco moto" chưa có bản ghi thuật ngữ (cho D3-L5 hay người giao).'
 nguon:
-- id: mut-elise
-  bac: 1
-  ten: Mutopia Project, Für Elise, WoO 59 (Stelios Samelis, nguồn Breitkopf & Härtel 1888; tệp LilyPond và MIDI)
-  link: https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly
-- id: imslp-elise
-  bac: 2
-  ten: IMSLP, Für Elise, WoO 59 (Beethoven)
-  link: https://imslp.org/wiki/F%C3%BCr_Elise,_WoO_59_(Beethoven,_Ludwig_van)
-- id: imslp-op33
-  bac: 2
-  ten: IMSLP, 7 Bagatelles, Op.33 (Beethoven)
-  link: https://imslp.org/wiki/7_Bagatelles,_Op.33_(Beethoven,_Ludwig_van)
-- id: henle-1347
-  bac: 2
-  ten: G. Henle Verlag, HN 1347 Bagatelle in a minor WoO 59 (Für Elise), trang sản phẩm
-  link: https://www.henle.de/en/Bagatelle-in-a-minor-WoO-59-Fuer-Elise/HN-1347
-- id: henle-1347-vorwort
-  bac: 2
-  ten: 'G. Henle Verlag, HN 1347: lời nói đầu (Joanna Cobb Biermann, 2016), PDF'
-  link: https://www.henle.de/media/53/13/68/1697725822/1347-1697725821-sync.pdf
-- id: henle-1347-bem
-  bac: 2
-  ten: 'G. Henle Verlag, HN 1347: Bemerkungen / Comments (nguồn A1, A2, B1 Nohl 1867, B2 Kahnt 1870; khác biệt giữa B1 và B2), PDF'
-  link: https://www.henle.de/media/61/79/23/1697725639/1347-1697725639-sync.pdf
-- id: lvbwv-woo59
-  bac: 2
-  ten: 'Ludwig van Beethoven. Thematisch-bibliographisches Werkverzeichnis (G. Henle Verlag, 2014), mục WoO 59, tr. 145–147 (PDF): phác thảo 1808 16 ô, đoạn đầu 22 ô; Malfatti, Unger, Cooper, Kopitz, Lorenz, Steblin'
-  link: https://www.henle.de/download/KB_ausfuehrlich/2207_2_153-155.pdf
-- id: bh-woo59
-  bac: 2
-  ten: Beethoven-Haus Bonn, trang tác phẩm Bagatelle WoO 59 ("no records of a female acquaintance named Elise"; "in love with Therese Malfatti, whom he intended to marry")
-  link: https://www.beethoven.de/en/work/view/5327609864912896
-- id: bh-116
-  bac: 2
-  ten: Beethoven-Haus Bonn, tờ phác thảo BH 116 (Für Elise, WoO 19, Egmont op. 84; "gave her piano lessons")
-  link: https://www.beethoven.de/en/media/view/5010945952710656
-- id: bh-ohr
-  bac: 2
-  ten: Beethoven-Haus Bonn, triển lãm "Mit Beethovens Ohr gehört" (thư 1801, Di chúc Heiligenstadt 1802, ống nghe 1812)
-  link: https://www.beethoven.de/en/g/Mit-Beethovens-Ohr-gehoert
-- id: omt-rondo
-  bac: 2
-  ten: Open Music Theory, Rondo
-  link: https://viva.pressbooks.pub/openmusictheory/chapter/rondo/
-- id: cod-moto
-  bac: 2
-  ten: The Concise Oxford Dictionary of Music, mục moto ("Motion"), qua Encyclopedia.com
-  link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/moto
-- id: commons-gao
-  bac: 2
-  ten: Wikimedia Commons, FurElise.ogg (V. Gao, phạm vi công cộng; 176,59 giây)
-  link: https://commons.wikimedia.org/wiki/File:FurElise.ogg
-- id: tafelmusik
-  bac: 2
-  ten: 'Tafelmusik, Mozart’s Piano: The Fortepiano'
-  link: https://tafelmusik.org/explore-baroque/articles/mozarts-piano-fortepiano/
-- id: fitch-chromatic
-  bac: 2
-  ten: 'Graham Fitch, Practising the Piano: Nimble Chromatics ("3rd finger on black keys; thumb on white keys ... E-F and B-C ... 2nd finger"); như trang đã khóa piano/gam'
-  link: https://practisingthepiano.com/nimble-chromatics/
-- id: bapam
-  bac: 2
-  ten: BAPAM, The Healthy Pianist ("avoid any technique involving repetition ... for more than short periods"; "tension or fatigue ... warning signs"); như hồ sơ đã khóa piano/quang-tam-buoc-nhay
-  link: https://www.bapam.org.uk/?p=59585
+  - id: mut-elise
+    bac: 1
+    ten: Mutopia Project, Für Elise, WoO 59 (Stelios Samelis, nguồn Breitkopf & Härtel 1888; tệp LilyPond và MIDI)
+    link: https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly
+  - id: imslp-elise
+    bac: 2
+    ten: IMSLP, Für Elise, WoO 59 (Beethoven)
+    link: https://imslp.org/wiki/F%C3%BCr_Elise,_WoO_59_(Beethoven,_Ludwig_van)
+  - id: imslp-op33
+    bac: 2
+    ten: IMSLP, 7 Bagatelles, Op.33 (Beethoven)
+    link: https://imslp.org/wiki/7_Bagatelles,_Op.33_(Beethoven,_Ludwig_van)
+  - id: henle-1347
+    bac: 2
+    ten: G. Henle Verlag, HN 1347 Bagatelle in a minor WoO 59 (Für Elise), trang sản phẩm
+    link: https://www.henle.de/en/Bagatelle-in-a-minor-WoO-59-Fuer-Elise/HN-1347
+  - id: henle-1347-vorwort
+    bac: 2
+    ten: 'G. Henle Verlag, HN 1347: lời nói đầu (Joanna Cobb Biermann, 2016), PDF'
+    link: https://www.henle.de/media/53/13/68/1697725822/1347-1697725821-sync.pdf
+  - id: henle-1347-bem
+    bac: 2
+    ten: 'G. Henle Verlag, HN 1347: Bemerkungen / Comments (nguồn A1, A2, B1 Nohl 1867, B2 Kahnt 1870; khác biệt giữa B1 và B2), PDF'
+    link: https://www.henle.de/media/61/79/23/1697725639/1347-1697725639-sync.pdf
+  - id: lvbwv-woo59
+    bac: 2
+    ten: 'Ludwig van Beethoven. Thematisch-bibliographisches Werkverzeichnis (G. Henle Verlag, 2014), mục WoO 59, tr. 145–147 (PDF): phác thảo 1808 16 ô, đoạn đầu 22 ô; Malfatti, Unger, Cooper, Kopitz, Lorenz, Steblin'
+    link: https://www.henle.de/download/KB_ausfuehrlich/2207_2_153-155.pdf
+  - id: bh-woo59
+    bac: 2
+    ten: Beethoven-Haus Bonn, trang tác phẩm Bagatelle WoO 59 ("no records of a female acquaintance named Elise"; "in love with Therese Malfatti, whom he intended to marry")
+    link: https://www.beethoven.de/en/work/view/5327609864912896
+  - id: bh-116
+    bac: 2
+    ten: Beethoven-Haus Bonn, tờ phác thảo BH 116 (Für Elise, WoO 19, Egmont op. 84; "gave her piano lessons")
+    link: https://www.beethoven.de/en/media/view/5010945952710656
+  - id: bh-ohr
+    bac: 2
+    ten: Beethoven-Haus Bonn, triển lãm "Mit Beethovens Ohr gehört" (thư 1801, Di chúc Heiligenstadt 1802, ống nghe 1812)
+    link: https://www.beethoven.de/en/g/Mit-Beethovens-Ohr-gehoert
+  - id: omt-rondo
+    bac: 2
+    ten: Open Music Theory, Rondo
+    link: https://viva.pressbooks.pub/openmusictheory/chapter/rondo/
+  - id: cod-moto
+    bac: 2
+    ten: The Concise Oxford Dictionary of Music, mục moto ("Motion"), qua Encyclopedia.com
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/moto
+  - id: commons-gao
+    bac: 2
+    ten: Wikimedia Commons, FurElise.ogg (V. Gao, phạm vi công cộng; 176,59 giây)
+    link: https://commons.wikimedia.org/wiki/File:FurElise.ogg
+  - id: tafelmusik
+    bac: 2
+    ten: 'Tafelmusik, Mozart’s Piano: The Fortepiano'
+    link: https://tafelmusik.org/explore-baroque/articles/mozarts-piano-fortepiano/
+  - id: fitch-chromatic
+    bac: 2
+    ten: 'Graham Fitch, Practising the Piano: Nimble Chromatics ("3rd finger on black keys; thumb on white keys ... E-F and B-C ... 2nd finger"); như trang đã khóa piano/gam'
+    link: https://practisingthepiano.com/nimble-chromatics/
+  - id: bapam
+    bac: 2
+    ten: BAPAM, The Healthy Pianist ("avoid any technique involving repetition ... for more than short periods"; "tension or fatigue ... warning signs"); như hồ sơ đã khóa piano/quang-tam-buoc-nhay
+    link: https://www.bapam.org.uk/?p=59585
 nhan_dinh:
-- id: n1
-  cau: 'Tiêu đề: "Beethoven: Für Elise, WoO 59".'
-  loai: ten
-  nguon: [imslp-elise, henle-1347]
-  ket_qua: dung
-- id: n2
-  cau: 'Mô tả và câu mở đầu: Für Elise là một trong những tác phẩm nổi tiếng nhất của Beethoven, nhưng bài không dừng ở tám ô nhịp đầu.'
-  loai: lich-su
-  nguon: [henle-1347-vorwort]
-  ket_qua: da-sua
-  ghi_chu: 'Câu cũ (cả description): "Tám ô nhịp đầu của Für Elise thuộc loại nổi tiếng nhất trong nhạc piano". "Nổi tiếng nhất trong nhạc piano" không kiểm được; Henle: "one of Ludwig van Beethoven''s (1770 – 1827) best-known works. The popular piano piece...". Viết theo Henle.'
-- id: n3
-  cau: 'Học trọn bài, bạn gặp ba nhân vật rất khác nhau: chủ đề La thứ trôi như nước, đoạn Fa trưởng duyên dáng với những đường chạy nhanh, đoạn kịch tính trên nốt La trầm gõ liên tục.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-  ghi_chu: 'Mutopia: A La thứ (móc kép liên tục), B Fa trưởng có hai đường chạy móc ba, C tay trái móc kép La2 liên tục. Tính từ là cách tả.'
-- id: n4
-  cau: Ở chủ đề, dòng móc kép đi từ tay trái sang tay phải.
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-  ghi_chu: 'Ô 2: tay trái A2 E3 A3, tay phải C4 E4 A4.'
-- id: n5
-  cau: Link Phối hợp hai tay (/opus/piano/hai-tay/).
-  loai: ve-site
-  nguon: []
-  ket_qua: dung
-  ghi_chu: Trang có (đã khóa).
-- id: n6
-  cau: Cặp Mi–Rê♯ lặp đi lặp lại phải nhẹ, đều, như một tiếng thở dài.
-  loai: khuyen-tap
-  nguon: []
-  ket_qua: khong-can-nguon
-  ghi_chu: Cặp Mi–Rê♯ có ở ô 1, 4–5 và các chuỗi nối (Mutopia).
-- id: n7
-  cau: Ba tính cách trong ba phút.
-  loai: so-lieu
-  nguon: [commons-gao]
-  ket_qua: dung
-  ghi_chu: Bản thu gợi ý (V. Gao) dài 176,59 giây (2 phút 57 giây).
-- id: n8
-  cau: 'Rondo thu nhỏ: chủ đề vang lên ba lần, xen giữa là hai đoạn tương phản.'
-  loai: cau-truc
-  nguon: [mut-elise, omt-rondo]
-  ket_qua: da-sua
-  ghi_chu: 'Câu cũ: "Chủ đề quay lại ba lần, xen hai đoạn tương phản". Chủ đề có ba lần (A B A C A), tức quay lại hai lần; "quay lại ba lần" dễ hiểu thành bốn lần. OMT Rondo: refrain (A) trở lại, xen các episode B, C. Chữ trang hinh-thuc/rondo không đổi; ghi chú ở hinh-thuc/rondo n20 dùng chữ cũ.'
-- id: n9
-  cau: Link rondo (/opus/hinh-thuc/rondo/).
-  loai: ve-site
-  nguon: []
-  ket_qua: dung
-  ghi_chu: Trang có (đã khóa).
-- id: n10
-  cau: 'Đi hết bài: tám ô đầu chỉ là một phần nhỏ của bài.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: da-sua
-  ghi_chu: 'Câu cũ: "Rất nhiều người dừng ở tám ô đầu." Không kiểm được: thay bằng điều kiểm được. MIDI Mutopia: khoảng 103 ô (theo cách đánh số thường dùng, Henle bình chú nhắc tới ô 102). Câu "Chơi trọn vẹn và hay cả bài là một bước trưởng thành" là lời khuyên.'
-- id: n11
-  cau: Năm 1810 Beethoven 39 tuổi.
-  loai: nam
-  nguon: [henle-1347-vorwort]
-  ket_qua: dung
-  ghi_chu: 'Henle: Beethoven 1770–1827; tháng 4/1810 ông 39 tuổi (sinh tháng 12/1770, nha-soan-nhac.yml).'
-- id: n12
-  cau: Năm 1810 cùng thời với nhạc cho vở kịch Egmont.
-  loai: lich-su
-  nguon: [henle-1347-vorwort, bh-116]
-  ket_qua: dung
-  ghi_chu: 'Henle: bản nháp mùa xuân 1810 trên tờ có phác thảo Egmont op. 84 và WoO 19; Beethoven-Haus: Egmont "up to the summer of 1810".'
-- id: n13
-  cau: Năm 1810 thính giác của Beethoven đã suy giảm nhiều.
-  loai: lich-su
-  nguon: [bh-ohr]
-  ket_qua: dung
-  ghi_chu: 'Beethoven-Haus: thư tháng 6/1801 "My hearing has been getting weaker and weaker for 3 years"; Di chúc Heiligenstadt 1802; ống nghe 1812.'
-- id: n14
-  cau: Câu "ở giữa những năm sáng tác dồi dào nhất".
-  loai: lich-su
-  nguon: []
-  ket_qua: null
-  ghi_chu: 'chưa chắc: đánh giá chung, chưa tìm được nguồn đã mở. Lượt 2 xem; không có nguồn thì bỏ vế này.'
-- id: n15
-  cau: Bên cạnh sonata và giao hưởng, Beethoven viết nhiều tiểu phẩm ngắn để tặng, mà ông gọi là bagatelle; Für Elise là một bài như thế.
-  loai: lich-su
-  nguon: [henle-1347-vorwort, imslp-op33]
-  ket_qua: dung
-  ghi_chu: 'Henle: Beethoven tặng bản viết tay của WoO 59; năm 1822 định xếp WoO 59 vào một tập "Bagatelles" (số 12). IMSLP: 7 Bagatelles Op. 33. "Để chơi trong nhà" là cách tả.'
-- id: n16
-  cau: 'Nghĩa của chữ bagatelle: "chuyện vặt".'
-  loai: dinh-nghia
-  nguon: []
-  ket_qua: null
-  ghi_chu: 'chưa chắc: chưa mở được từ điển (Merriam-Webster, Cambridge trả 403; COD trên Encyclopedia.com không có mục). Lượt 2 kiểm.'
-- id: n17
-  cau: Link Các thể loại nhạc piano (/opus/piano/the-loai/).
-  loai: ve-site
-  nguon: []
-  ket_qua: dung
-  ghi_chu: Trang có.
-- id: n18
-  cau: Beethoven không xuất bản Für Elise lúc sinh thời.
-  loai: lich-su
-  nguon: [henle-1347-vorwort, lvbwv-woo59]
-  ket_qua: dung
-  ghi_chu: 'Henle: "was not printed during his lifetime".'
-- id: n19
-  cau: Bài chỉ đến với công chúng năm 1867, khi Ludwig Nohl in lại từ một bản viết tay mà ông được xem; bản ấy về sau thất lạc.
-  loai: lich-su
-  nguon: [henle-1347-vorwort, lvbwv-woo59]
-  ket_qua: dung
-  ghi_chu: 'Henle: Nohl tìm thấy bản viết tay năm 1865 ở nhà Babette Bredl, được chép và in; in năm 1867; bản viết tay "lost since the end of the 19th century".'
-- id: n20
-  cau: Các ấn bản ngày nay chủ yếu dựa vào bản in của Nohl, cùng những trang phác thảo còn lại của Beethoven.
-  loai: lich-su
-  nguon: [henle-1347-vorwort, henle-1347-bem]
-  ket_qua: dung
-  ghi_chu: 'Henle: "his edition represents the primary source for the present edition"; nguồn A1 (phác thảo 1808), A2 (bản nháp 1810).'
-- id: n21
-  cau: Elise là ai? Không ai biết chắc; chưa giả thuyết nào được chứng minh.
-  loai: lich-su
-  nguon: [bh-woo59, henle-1347-vorwort]
-  ket_qua: dung
-  ghi_chu: 'Beethoven-Haus: "there are no records of a female acquaintance named ''Elise''"; "the title cannot be verified".'
-- id: n22
-  cau: 'Giả thuyết Therese Malfatti: học trò mà Beethoven được cho là muốn cầu hôn khoảng năm 1810.'
-  loai: lich-su
-  nguon: [bh-woo59, bh-116, lvbwv-woo59]
-  ket_qua: dung
-  ghi_chu: 'Beethoven-Haus: "in love with Therese Malfatti, whom he intended to marry"; BH 116: "gave her piano lessons". LvBWV: "die Beethoven 1810 umwarb (zu einem möglichen Heiratsantrag ...)".'
-- id: n23
-  cau: Theo giả thuyết này, Nohl đã đọc nhầm chữ "Therese" trong nét chữ khó đọc của Beethoven thành "Elise".
-  loai: lich-su
-  nguon: [henle-1347-vorwort, lvbwv-woo59]
-  ket_qua: dung
-  ghi_chu: 'Henle: Max Unger cho rằng Nohl đọc nhầm; Henle thêm: so nét chữ "Th" và "El" thì cách giải thích này khó đứng vững (Jürgen May, 2014). Câu trang chỉ nêu giả thuyết, khớp.'
-- id: n24
-  cau: 'Giả thuyết Elisabeth Röckel, về sau là vợ nhà soạn nhạc Johann Nepomuk Hummel: giả thuyết của Klaus Martin Kopitz, đã bị Michael Lorenz phản bác.'
-  loai: lich-su
-  nguon: [lvbwv-woo59]
-  ket_qua: da-sua
-  ghi_chu: 'Câu cũ: "một nữ ca sĩ trẻ trong vòng bạn bè của Beethoven (có tài liệu gọi bà là "Elise"), về sau là vợ nhà soạn nhạc Johann Nepomuk Hummel." LvBWV: "Klaus Martin Kopitz'' Identifikation der ''Elise'' mit Elisabeth Röckel, verh. Hummel, wurde unter anderem von Michael Lorenz in Frage gestellt". "Nữ ca sĩ", "có tài liệu gọi bà là Elise" chỉ thấy ở Wikipedia: bỏ.'
-- id: n25
-  cau: 'Giả thuyết Elise (Lisette) Barensfeld, có thể là học trò piano của Therese Malfatti năm 1810: giả thuyết của Rita Steblin.'
-  loai: lich-su
-  nguon: [lvbwv-woo59]
-  ket_qua: da-sua
-  ghi_chu: 'Câu cũ: "một cô bé ca sĩ có tài, quê ở Regensburg, sống ở Vienna vào thời gian đó." LvBWV: "Rita Steblin sieht als weitere Kandidatin Lisette (Elise) Barensfeld, 1810 eine mögliche Klavierschülerin Therese Malfattis". Quê Regensburg, ca sĩ: chưa có nguồn đã mở, bỏ.'
-- id: n26
-  cau: Bản nhạc là một món quà nhỏ, thân mật, không phải một tác phẩm hòa nhạc đồ sộ.
-  loai: lich-su
-  nguon: [henle-1347-vorwort]
-  ket_qua: dung
-  ghi_chu: 'Henle: Beethoven tặng bản viết tay; Nohl gọi là "Klavierstückchen" (LvBWV). Vế "với người chơi đàn, điều đó không thay đổi gì" là lời bình.'
-- id: n27
-  cau: Link thời kỳ Cổ điển (/opus/lich-su/thoi-ky/co-dien/).
-  loai: ve-site
-  nguon: []
-  ket_qua: dung
-  ghi_chu: Trang có.
-- id: n28
-  cau: Bốn câu hỏi khi nghe (đánh dấu A, B, C; nghe riêng tay trái; cảm giác của đoạn C; tốc độ đoạn chuyển).
-  loai: khuyen-tap
-  nguon: []
-  ket_qua: khong-can-nguon
-- id: n29
-  cau: Đoạn chuyển về chủ đề lần cuối là hợp âm rải đi lên, rồi chuỗi nửa cung đi xuống.
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-  ghi_chu: 'Mutopia: chùm ba móc kép La thứ đi lên tới La6, rồi B♭ A G♯ G F♯ F E D♯ D C♯ C B B♭ A G♯ G F♯ F.'
-- id: n30
-  cau: Poco moto nghĩa là "hơi chuyển động"; chủ đề không cần chậm và mơ màng.
-  loai: dinh-nghia
-  nguon: [cod-moto]
-  ket_qua: null
-  ghi_chu: 'chưa chắc: COD: moto "Motion"; chưa mở được nguồn cho "poco" (một chút). Câu cũ có "nhiều người chơi chủ đề rất chậm và mơ màng": nhận định về người chơi không kiểm được, viết lại thành lời khuyên (doi_chu).'
-- id: n31
-  cau: Fortepiano là loại đàn piano thời Beethoven; nghe để biết tiếng đàn và bàn đạp khác piano hiện đại thế nào.
-  loai: lich-su
-  nguon: [tafelmusik]
-  ket_qua: da-sua
-  ghi_chu: 'Câu cũ: "loại đàn piano thời Beethoven: tiếng nhẹ hơn, tắt nhanh hơn, và bàn đạp nghe khác hẳn." Ba đặc điểm âm thanh chưa có nguồn đã mở: bỏ. Tafelmusik: fortepiano (đàn kiểu Walter), cần gối nâng bộ giảm âm thay bàn đạp.'
-- id: n32
-  cau: 'Khối nghe: dán link một bản thu hay chọn file, rồi bấm ghi mốc.'
-  loai: ve-site
-  nguon: []
-  ket_qua: dung
-  ghi_chu: Thành phần khoi-nghe.
-- id: n33
-  cau: 'Theo dõi khi nghe, đoạn A câu a: chủ đề Mi–Rê♯ ở pp; hợp âm rải chuyền giữa hai tay như một dòng nhạc; câu kết ở nốt La.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-  ghi_chu: \pp ở nhịp lấy đà; ô 8 A4.
-- id: n34
-  cau: Câu a nhắc lại.
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-  ghi_chu: \repeat volta 2 quanh câu a.
-- id: n35
-  cau: 'Câu b và câu a: câu b ngắn ở Đô trưởng, rồi một chuỗi Mi–Rê♯ kéo về câu a.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-  ghi_chu: 'Câu b: Đô (e. g f e) – Sol (d. f e d) – La thứ – Mi, rồi chuỗi E–D♯ (tay trái cũng chơi Mi4–Mi5).'
-- id: n36
-  cau: 'Câu b và câu a nhắc lại: đoạn A khép lại ở La thứ.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-- id: n37
-  cau: 'Đoạn B (Fa trưởng): giai điệu có nốt láy, nhịp chấm dôi trên hợp âm rải tay trái; sáng và ấm hơn.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-  ghi_chu: \grace { f' a' } c''4 f''16. e''32; tay trái F A C rải.
-- id: n38
-  cau: 'Đường chạy móc ba: hai đường chạy trên hòa âm Đô, rồi chuỗi Mi–Rê♯ dẫn về chủ đề.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-  ghi_chu: Hai dòng c''32 g'' g' g'' … giống nhau; tay trái nghỉ, hòa âm Đô (C E G B♭ trước đó).
-- id: n39
-  cau: 'Đoạn A trở lại: chủ đề, lần này không nhắc lại.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-  ghi_chu: Không có dấu nhắc lại (a, b, a viết liền).
-- id: n40
-  cau: 'Đoạn C: tay trái gõ nốt La trầm liên tục, tay phải đánh hợp âm; bè trầm bò lên từng nửa cung La – Si♭ – Si – Đô.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-  ghi_chu: Tay trái a, móc kép; về sau bes, ×18, b, ×6, c4. Giữ cho piano/not-lap-not-kep n10, n41.
-- id: n41
-  cau: 'Đoạn chuyển: hợp âm rải La thứ đi lên qua ba quãng tám (pp), rồi một chuỗi nửa cung đi xuống.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-  ghi_chu: Từ La3 lên La6 (ba quãng tám) rồi lên Mi7; \pp ở đầu.
-- id: n42
-  cau: 'Đoạn A lần cuối: chủ đề, kết thật nhẹ ở La.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-  ghi_chu: Kết a'8 tay phải, A1 A2 tay trái.
-- id: n43
-  cau: 'Bảng Cấu trúc, A: La thứ (câu giữa sang Đô trưởng); chủ đề Mi–Rê♯ trên hợp âm rải chuyền giữa hai tay; câu a nhắc lại; câu b ngắn ở Đô trưởng, chuỗi Mi–Rê♯ kéo về câu a; cặp b + a cũng nhắc lại; bắt đầu pp, mỗi câu kết ở nốt La.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-- id: n44
-  cau: 'Bảng Cấu trúc, B: Fa trưởng; giai điệu có nốt láy, nhịp chấm dôi trên hợp âm rải tay trái; hai đường chạy móc ba trên hòa âm Đô (át của Fa); chuỗi Mi–Rê♯ dẫn về A.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-- id: n45
-  cau: 'Bảng Cấu trúc, A trở lại: La thứ, không nhắc lại.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-- id: n46
-  cau: 'Bảng Cấu trúc, C: quanh Rê thứ và La thứ; tay trái gõ La trầm liên tục bằng móc kép, tay phải hợp âm; bè trầm bò lên La – Si♭ – Si – Đô.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-  ghi_chu: Hợp âm C♯ E G B♭ → D F A (Rê thứ), kết về E – La thứ.
-- id: n47
-  cau: 'Bảng Cấu trúc, chuyển: La thứ; hợp âm rải La thứ đi lên qua ba quãng tám thành chùm ba móc kép, rồi chuỗi nửa cung đi xuống; bắt đầu pp.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-  ghi_chu: \tuplet 3/2 móc kép.
-- id: n48
-  cau: 'Bảng Cấu trúc, A lần cuối: La thứ, kết ở La.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-- id: n49
-  cau: Cột "Điều cần chú ý" của bảng Cấu trúc (trôi, nhẹ; sáng và ấm; giữ chủ đề tươi; kịch tính có kiểm soát; đều như làn sóng; kết nhẹ).
-  loai: khuyen-tap
-  nguon: []
-  ket_qua: khong-can-nguon
-- id: n50
-  cau: 'Khối 1: nhịp lấy đà và tám ô đầu, ô 8 theo lần chơi thứ nhất; đối chiếu với bản Breitkopf & Härtel năm 1888.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-  ghi_chu: Xem khuong_nhac khối 1. Giữ cho piano/10-bai-dau-tien n2, n34 (8 ô đầu như Beethoven viết, hai tay thay phiên, móc kép, 3/8).
-- id: n51
-  cau: 'Ô 2: tay phải đánh La cùng lúc với La trầm của tay trái, tay trái rải La–Mi–La, rồi tay phải đi tiếp Đô–Mi–La; sáu móc kép ấy là một dòng nhạc chia cho hai tay.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-- id: n52
-  cau: 'Chỗ khó, cặp Mi–Rê♯: hai ngón kề nhau lặp lại nhanh, ở sắc thái nhỏ.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-  ghi_chu: pp; E5–D♯5 móc kép.
-- id: n53
-  cau: 'Chỗ khó, hợp âm rải tay trái: khoảng cách một quãng tám (La2–Mi3–La3).'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-- id: n54
-  cau: 'Chỗ khó, đường chạy móc ba ở đoạn B: một dòng nốt đi lên xen kẽ với nốt Sol cao lặp lại.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-  ghi_chu: 'c g'' g'''' / a g'''' b g'''' / c g'''' d g''''…: Sol5 lặp xen nốt đi lên.'
-- id: n55
-  cau: 'Chỗ khó, nốt La lặp lại ở đoạn C: nhiều ô móc kép trên cùng một phím, dễ mỏi, căng, to dần ngoài ý muốn; động tác nhỏ từ cổ tay, đổi ngón 3–2–1 hay giữ một ngón.'
-  loai: quy-tac
-  nguon: [mut-elise, bapam]
-  ket_qua: dung
-  ghi_chu: 'Mutopia: tay trái La2 móc kép nhiều ô. Có yếu tố sức khỏe (mỏi, căng): xếp quy-tac, BAPAM: tránh lặp động tác kéo dài; căng hay mỏi là dấu hiệu cảnh báo. Lời khuyên không trái BAPAM.'
-- id: n56
-  cau: 'Chỗ khó, hợp âm tay phải ở đoạn C: ba, bốn nốt phải vào cùng lúc.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-  ghi_chu: Hợp âm 3–4 nốt (e' g' bes' cis''…).
-- id: n57
-  cau: 'Chỗ khó, hợp âm rải đi lên và chuỗi nửa cung: đổi thế tay mỗi ô.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-- id: n58
-  cau: Chuỗi nửa cung dùng ngón 3 cho phím đen, ngón 1 cho phím trắng (1–2 ở chỗ hai phím trắng liền nhau).
-  loai: quy-tac
-  nguon: [fitch-chromatic]
-  ket_qua: dung
-  ghi_chu: 'Fitch: "3rd finger on black keys; thumb on white keys – except on the two adjacent pairs of white keys ... where 2nd finger acts as a substitute thumb". Khớp trang đã khóa piano/gam.'
-- id: n59
-  cau: 'Chỗ khó, bàn đạp: giữ qua ô Mi–Rê♯ thì hai hòa âm nhòe vào nhau.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-  ghi_chu: Ô Mi–Rê♯ là hòa âm át (Mi), ô trước là La thứ.
-- id: n60
-  cau: Phần còn lại của bảng Chỗ khó (khe hở giữa hai tay, chọn ngón 5–4 hay 4–3, ngón 5–2–1, đếm móc ba khi tập chậm, tập theo nhóm, đặt sẵn hợp âm, nhả bàn đạp).
-  loai: khuyen-tap
-  nguon: []
-  ket_qua: khong-can-nguon
-- id: n61
-  cau: 'Links trong bảng Chỗ khó: Nốt hoa mỹ, Bàn đạp.'
-  loai: ve-site
-  nguon: []
-  ket_qua: dung
-  ghi_chu: Hai trang có.
-- id: n62
-  cau: Các bài tập chuẩn bị soạn riêng cho trang này.
-  loai: ve-site
-  nguon: []
-  ket_qua: dung
-  ghi_chu: Khối 2–4 là ví dụ soạn.
-- id: n63
-  cau: Các bước tập bài tập 1–3.
-  loai: khuyen-tap
-  nguon: []
-  ket_qua: khong-can-nguon
-- id: n64
-  cau: 'Bài tập 2 luyện kiểu bàn tay của đường chạy ở đoạn B: ngón 5 nhắc lại một nốt cao, các ngón còn lại đi lên đi xuống bên dưới.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-  ghi_chu: Khối 3 khớp kiểu của đường chạy ở đoạn B (nốt cao lặp xen dòng dưới), xem n54.
-- id: n65
-  cau: Kế hoạch 6 tuần, tốc độ ghi theo nốt móc đơn.
-  loai: khuyen-tap
-  nguon: []
-  ket_qua: khong-can-nguon
-- id: n66
-  cau: Link thu âm (/opus/luyen-tap/thu-am/).
-  loai: ve-site
-  nguon: []
-  ket_qua: dung
-  ghi_chu: Trang có.
-- id: n67
-  cau: 'Diễn tấu, tốc độ: chủ đề cần trôi; khi đã thuộc, cảm mỗi ô như một phách; đoạn C có thể dồn lên một chút.'
-  loai: khuyen-tap
-  nguon: []
-  ket_qua: khong-can-nguon
-- id: n68
-  cau: 'Bản nhạc ghi rất ít chỉ dẫn sắc thái: bản Breitkopf & Härtel 1888 chỉ có pp ở đầu bài và ở hợp âm rải đi lên.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-  ghi_chu: 'Mutopia: chỉ có hai \pp (nhịp lấy đà, đầu đoạn chuyển); không có dấu sắc thái khác, không cresc.'
-- id: n69
-  cau: Gợi ý sắc thái cho A, B, C và đoạn chuyển.
-  loai: khuyen-tap
-  nguon: []
-  ket_qua: khong-can-nguon
-- id: n70
-  cau: Bản Breitkopf & Härtel 1888 ghi bàn đạp cho từng ô có hợp âm rải tay trái ở chủ đề, nhả trước ô Mi–Rê♯.
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: da-sua
-  ghi_chu: 'Câu cũ: "Bản Breitkopf & Härtel và nhiều ấn bản khác ghi bàn đạp...". "Nhiều ấn bản khác" chưa kiểm: bỏ. Mutopia: \sustainOn đầu mỗi ô có La–Mi–La, \sustainOff cuối ô; ô Mi–Rê♯ không có bàn đạp.'
-- id: n71
-  cau: Nguyên tắc dùng bàn đạp ở đoạn A, B, C.
-  loai: khuyen-tap
-  nguon: []
-  ket_qua: khong-can-nguon
-- id: n72
-  cau: Ở đoạn B có hai nốt láy nhỏ trước nốt Đô đầu tiên, một nốt appoggiatura và những chùm móc ba nhỏ.
-  loai: cau-truc
-  nguon: [mut-elise, henle-1347-bem]
-  ket_qua: dung
-  ghi_chu: 'Mutopia: \grace { f'' a'' } c''''4; \appoggiatura bes''32 a''32 g'' a'' bes''. Henle bình chú ô 23 nói về các nốt nhỏ này.'
-- id: n73
-  cau: Các nốt trang trí luôn nhẹ hơn nốt chính; quyết định chúng rơi vào phách hay trước phách rồi giữ nhất quán.
-  loai: khuyen-tap
-  nguon: []
-  ket_qua: khong-can-nguon
-- id: n74
-  cau: Vì bản viết tay đã mất, các ấn bản có thể khác nhau ở vài chi tiết như dấu luyến.
-  loai: lich-su
-  nguon: [henle-1347-bem]
-  ket_qua: da-sua
-  ghi_chu: 'Câu cũ: "... như dấu luyến hay bàn đạp." Henle: B2 (Kahnt 1870) thêm dấu luyến theo các ô song song (ô 12–14, 49, 94 f.); khác biệt về bàn đạp chưa thấy ở nguồn đã mở, bỏ.'
-- id: n75
-  cau: Dùng một bản Urtext, đọc chú thích của người biên tập; khi học bài thật, tránh các bản "đơn giản hóa".
-  loai: khuyen-tap
-  nguon: []
-  ket_qua: khong-can-nguon
-  ghi_chu: 'Câu cũ: "Các bản ''đơn giản hóa'' cho người mới học thường cắt bớt đoạn B và C hoặc đổi tay trái" là nhận định chung không kiểm được: viết lại thành lời khuyên (doi_chu).'
-- id: n76
-  cau: Lỗi thường gặp (tám dòng).
-  loai: khuyen-tap
-  nguon: []
-  ket_qua: khong-can-nguon
-  ghi_chu: Trừ dòng về mỏi tay ở đoạn C (n77).
-- id: n77
-  cau: 'Lỗi thường gặp, đoạn C: tay trái cứng và to dần, mỏi trước khi hết đoạn.'
-  loai: quy-tac
-  nguon: [bapam]
-  ket_qua: dung
-  ghi_chu: 'Có yếu tố sức khỏe (mỏi): BAPAM "tension or fatigue ... warning signs".'
-- id: n78
-  cau: 'Cùng chặng: Bach Prelude Đô trưởng, Chopin Prélude Mi thứ, Satie Gymnopédie số 1.'
-  loai: ve-site
-  nguon: []
-  ket_qua: dung
-  ghi_chu: 'tac-pham.yml (chang đã khóa): fur-elise, bach-prelude-do, chopin-prelude-mi-thu, satie-gymnopedie đều chặng 4; ba trang có trong src/content/docs.'
-- id: n79
-  cau: 'Beethoven tiếp theo: Sonata Op. 49 số 2, Pathétique chương 2 (links).'
-  loai: ve-site
-  nguon: []
-  ket_qua: dung
-  ghi_chu: beethoven-op49-2 có; pathetique-adagio chưa chuyển (site cũ có).
-- id: n80
-  cau: Op. 33 và Op. 119 là các tập bagatelle của Beethoven.
-  loai: danh-muc
-  nguon: [imslp-op33, lvbwv-woo59]
-  ket_qua: dung
-  ghi_chu: 'IMSLP: "Seven Bagatelles", Op. 33; LvBWV: "die Bagatellen op. 119".'
-- id: n81
-  cau: 'Mozart: Sonata K. 545, một sonata Cổ điển ở chặng sau.'
-  loai: ve-site
-  nguon: []
-  ket_qua: da-sua
-  ghi_chu: 'Câu cũ: "cùng lối viết trong sáng nhưng dài hơi hơn": đánh giá, không kiểm được. tac-pham.yml: mozart-k545 chặng 5 (fur-elise chặng 4). Trang chưa chuyển, hiện "sắp có".'
-- id: n82
-  cau: 'Nghe thêm: Beethoven Sonata Ánh trăng (/opus/nghe-nhac/beethoven-moonlight/).'
-  loai: ve-site
-  nguon: []
-  ket_qua: dung
-  ghi_chu: Trang chưa chuyển; ../opus-zero/docs/nghe-nhac/beethoven-moonlight.md có.
-- id: n83
-  cau: 'Câu hỏi 1: Für Elise là rondo nhỏ A–B–A–C–A; chủ đề Mi–Rê♯ vang lên ba lần, xen giữa là đoạn Fa trưởng (B) và đoạn kịch tính trên nốt La trầm (C).'
-  loai: cau-truc
-  nguon: [mut-elise, omt-rondo]
-  ket_qua: da-sua
-  ghi_chu: 'Như n8: "quay lại ba lần" thành "vang lên ba lần".'
-- id: n84
-  cau: 'Câu hỏi 2: Poco moto nghĩa là hơi chuyển động.'
-  loai: dinh-nghia
-  nguon: [cod-moto]
-  ket_qua: null
-  ghi_chu: 'chưa chắc: như n30.'
-- id: n85
-  cau: 'Câu hỏi 3: ở chủ đề, nhấn bàn đạp sau nốt trầm của mỗi ô hợp âm rải, nhả hẳn trước ô Mi–Rê♯.'
-  loai: cau-truc
-  nguon: [mut-elise]
-  ket_qua: dung
-  ghi_chu: Khớp bàn đạp của bản Breitkopf 1888 (Mutopia). Lời giải thích là lời khuyên.
-- id: n86
-  cau: 'Câu hỏi 4: tập chỗ chuyền tay chậm, nhắm mắt, thu âm.'
-  loai: khuyen-tap
-  nguon: []
-  ket_qua: khong-can-nguon
-- id: n87
-  cau: 'Nguồn: Henle HN 1347 (biên tập Joanna Cobb Biermann), lời nói đầu và bình chú.'
-  loai: ten
-  nguon: [henle-1347-vorwort, henle-1347-bem, henle-1347]
-  ket_qua: da-sua
-  ghi_chu: 'Mục Nguồn cũ dẫn ba sách in chưa đọc (Cooper, The Beethoven Compendium; Lockwood, Beethoven: The Music and the Life; Kinsky–Halm, Das Werk Beethovens 1955): thay bằng nguồn đã mở. Lời nói đầu ký "Tuscaloosa/USA, spring 2016, Joanna Cobb Biermann".'
-- id: n88
-  cau: 'Nguồn: Ludwig van Beethoven. Thematisch-bibliographisches Werkverzeichnis, Henle 2014 (danh mục, nơi đặt ký hiệu WoO), mục WoO 59.'
-  loai: ten
-  nguon: [lvbwv-woo59, henle-1347-vorwort]
-  ket_qua: da-sua
-  ghi_chu: Thay Kinsky–Halm 1955 bằng bản mới (Dorfmüller, Gertsch, Ronge 2014) mà Henle dùng cho số WoO; mục WoO 59 đọc được.
-- id: n89
-  cau: 'Nguồn: Beethoven-Haus Bonn, trang tác phẩm WoO 59 và tờ phác thảo BH 116.'
-  loai: ten
-  nguon: [bh-woo59, bh-116]
-  ket_qua: da-sua
-  ghi_chu: Nguồn mới.
-- id: n90
-  cau: 'Nguồn: bản nhạc IMSLP; đoạn trích đối chiếu với bản Breitkopf & Härtel 1888 qua bản chép LilyPond của Mutopia; link tài liệu tham khảo.'
-  loai: ten
-  nguon: [imslp-elise, mut-elise]
-  ket_qua: dung
-  ghi_chu: Link IMSLP trỏ tới trang tác phẩm (chữ không đổi). /opus/tai-lieu-tham-khao/ có.
+  - id: n1
+    cau: 'Tiêu đề: "Beethoven: Für Elise, WoO 59".'
+    loai: ten
+    nguon: [ imslp-elise, henle-1347 ]
+    ket_qua: dung
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/F%C3%BCr_Elise,_WoO_59_(Beethoven,_Ludwig_van)", "https://www.henle.de/us/Bagatelle-in-a-minor-WoO-59-Fuer-Elise/HN-1347" ]
+    luot_2_ghi_chu: IMSLP và Henle HN 1347 ghi tên Für Elise, số WoO 59; tác giả Beethoven.
+  - id: n2
+    cau: 'Mô tả và câu mở đầu: Für Elise là một trong những tác phẩm nổi tiếng nhất của Beethoven, nhưng bài không dừng ở tám ô nhịp đầu.'
+    loai: lich-su
+    nguon: [ henle-1347-vorwort ]
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ (cả description): "Tám ô nhịp đầu của Für Elise thuộc loại nổi tiếng nhất trong nhạc piano". "Nổi tiếng nhất trong nhạc piano" không kiểm được; Henle: "one of Ludwig van Beethoven''s (1770 – 1827) best-known works. The popular piano piece...". Viết theo Henle.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/53/13/68/1697725822/1347-1697725821-sync.pdf", "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: "Lời nói đầu Henle: \"one of Ludwig van Beethoven's best-known works\". Bản B&H 1888 (Mutopia) dài hơn 100 ô, tám ô đầu chỉ là câu a của đoạn A."
+  - id: n3
+    cau: 'Học trọn bài, bạn gặp ba nhân vật rất khác nhau: chủ đề La thứ trôi như nước, đoạn Fa trưởng duyên dáng với những đường chạy nhanh, đoạn kịch tính trên nốt La trầm gõ liên tục.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: A La thứ (móc kép liên tục), B Fa trưởng có hai đường chạy móc ba, C tay trái móc kép La2 liên tục. Tính từ là cách tả.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: "Đối chiếu bản B&H 1888 (file .ly của Mutopia): A La thứ, chuỗi móc kép; B Fa trưởng có nốt láy và đường chạy móc ba (32nd); C với La trầm (a,16) lặp liên tục ở tay trái."
+  - id: n4
+    cau: Ở chủ đề, dòng móc kép đi từ tay trái sang tay phải.
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    ghi_chu: 'Ô 2: tay trái A2 E3 A3, tay phải C4 E4 A4.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: "Ô 2: tay trái a,16 e a (La2–Mi3–La3), rồi tay phải c' e' a' (Đô4–Mi4–La4): dòng móc kép đi từ tay trái sang tay phải."
+  - id: n5
+    cau: Link Phối hợp hai tay (/opus/piano/hai-tay/).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Trang có (đã khóa).
+  - id: n6
+    cau: Cặp Mi–Rê♯ lặp đi lặp lại phải nhẹ, đều, như một tiếng thở dài.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Cặp Mi–Rê♯ có ở ô 1, 4–5 và các chuỗi nối (Mutopia).
+  - id: n7
+    cau: Ba tính cách trong ba phút.
+    loai: so-lieu
+    nguon: [ commons-gao ]
+    ket_qua: dung
+    ghi_chu: Bản thu gợi ý (V. Gao) dài 176,59 giây (2 phút 57 giây).
+    luot_2: dung
+    luot_2_nguon: [ "https://enc.piano.or.jp/en/musics/446", "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: PTNA ghi thời lượng 3 phút 30 giây; MIDI của Mutopia (♩ = 72) dài khoảng 2 phút 10 giây; các bản thu thường 2½–3½ phút. "Ba phút" là con số tròn chấp nhận được.
+  - id: n8
+    cau: 'Rondo thu nhỏ: chủ đề vang lên ba lần, xen giữa là hai đoạn tương phản.'
+    loai: cau-truc
+    nguon: [ mut-elise, omt-rondo ]
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Chủ đề quay lại ba lần, xen hai đoạn tương phản". Chủ đề có ba lần (A B A C A), tức quay lại hai lần; "quay lại ba lần" dễ hiểu thành bốn lần. OMT Rondo: refrain (A) trở lại, xen các episode B, C. Chữ trang hinh-thuc/rondo không đổi; ghi chú ở hinh-thuc/rondo n20 dùng chữ cũ.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly", "https://viva.pressbooks.pub/openmusictheory/chapter/rondo/", "https://enc.piano.or.jp/en/musics/446" ]
+    luot_2_ghi_chu: 'Bản B&H 1888: A – B (Fa trưởng) – A – C (La trầm lặp) – A, chủ đề ba lần. Open Music Theory, chương Rondo: dạng ABACA (rondo năm phần). PTNA ghi "ロンド形式" (hình thức rondo).'
+  - id: n9
+    cau: Link rondo (/opus/hinh-thuc/rondo/).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Trang có (đã khóa).
+  - id: n10
+    cau: 'Đi hết bài: tám ô đầu chỉ là một phần nhỏ của bài.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Rất nhiều người dừng ở tám ô đầu." Không kiểm được: thay bằng điều kiểm được. MIDI Mutopia: khoảng 103 ô (theo cách đánh số thường dùng, Henle bình chú nhắc tới ô 102). Câu "Chơi trọn vẹn và hay cả bài là một bước trưởng thành" là lời khuyên.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: Bản B&H 1888 dài hơn 100 ô (Henle nhắc tới ô 102); tám ô đầu là phần nhỏ.
+  - id: n11
+    cau: Năm 1810 Beethoven 39 tuổi.
+    loai: nam
+    nguon: [ henle-1347-vorwort ]
+    ket_qua: dung
+    ghi_chu: 'Henle: Beethoven 1770–1827; tháng 4/1810 ông 39 tuổi (sinh tháng 12/1770, nha-soan-nhac.yml).'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/us/Bagatelle-in-a-minor-WoO-59-Fuer-Elise/HN-1347", "https://www.henle.de/media/53/13/68/1697725822/1347-1697725821-sync.pdf" ]
+    luot_2_ghi_chu: "Henle (tiểu sử): Beethoven chịu lễ rửa tội ngày 17/12/1770, có lẽ sinh 16/12/1770. Bài hoàn thành mùa xuân 1810 (lời nói đầu Henle), lúc ấy ông 39 tuổi."
+  - id: n12
+    cau: Năm 1810 cùng thời với nhạc cho vở kịch Egmont.
+    loai: lich-su
+    nguon: [ henle-1347-vorwort, bh-116 ]
+    ket_qua: dung
+    ghi_chu: 'Henle: bản nháp mùa xuân 1810 trên tờ có phác thảo Egmont op. 84 và WoO 19; Beethoven-Haus: Egmont "up to the summer of 1810".'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.beethoven.de/en/media/view/5010945952710656", "https://www.henle.de/media/53/13/68/1697725822/1347-1697725821-sync.pdf" ]
+    luot_2_ghi_chu: 'Beethoven-Haus (BH 116): tờ phác thảo có cả nhạc Egmont op. 84, "Beethoven was working on up to the summer of 1810". Henle: giấy và phác thảo Egmont cho phép đặt bản nháp vào mùa xuân 1810.'
+  - id: n13
+    cau: Năm 1810 thính giác của Beethoven đã suy giảm nhiều.
+    loai: lich-su
+    nguon: [ bh-ohr ]
+    ket_qua: dung
+    ghi_chu: 'Beethoven-Haus: thư tháng 6/1801 "My hearing has been getting weaker and weaker for 3 years"; Di chúc Heiligenstadt 1802; ống nghe 1812.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.beethoven.de/en/media/view/5075813951078400/scan/0" ]
+    luot_2_ghi_chu: 'Thư gửi Wegeler, Wien 2/5/1810 (Beethoven-Haus, W 19): ông viết lẽ ra mình có thể là một trong những người hạnh phúc nhất nếu không có "con quỷ trong tai", tức bệnh điếc.'
+  - id: n14
+    cau: Câu "ở giữa những năm sáng tác dồi dào nhất".
+    loai: lich-su
+    nguon: []
+    ket_qua: null
+    ghi_chu: 'chưa chắc: đánh giá chung, chưa tìm được nguồn đã mở. Lượt 2 xem; không có nguồn thì bỏ vế này.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/us/Bagatelle-in-a-minor-WoO-59-Fuer-Elise/HN-1347" ]
+    luot_2_ghi_chu: "Tiểu sử Beethoven trên trang Henle: \"1803–10/12 Frenzy of creativity; these years are dubbed Beethoven's 'heroic period'\". Năm 1810 nằm trong giai đoạn này."
+  - id: n15
+    cau: Bên cạnh sonata và giao hưởng, Beethoven viết nhiều tiểu phẩm ngắn để tặng, mà ông gọi là bagatelle; Für Elise là một bài như thế.
+    loai: lich-su
+    nguon: [ henle-1347-vorwort, imslp-op33 ]
+    ket_qua: dung
+    ghi_chu: 'Henle: Beethoven tặng bản viết tay của WoO 59; năm 1822 định xếp WoO 59 vào một tập "Bagatelles" (số 12). IMSLP: 7 Bagatelles Op. 33. "Để chơi trong nhà" là cách tả.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/53/13/68/1697725822/1347-1697725821-sync.pdf", "https://imslp.org/wiki/7_Bagatelles,_Op.33_(Beethoven,_Ludwig_van)", "https://imslp.org/wiki/11_Bagatelles,_Op.119_(Beethoven,_Ludwig_van)" ]
+    luot_2_ghi_chu: 'Henle: Beethoven tặng bản viết tay và không giữ bản sao; mùa thu 1822 ông định đưa WoO 59 vào một tập "Bagatellen" (số 12), tập về sau in thành Op. 119; Henle gọi bài là Bagatelle. Op. 33, Op. 119 là các tập bagatelle của chính ông. Câu hơi khái quát (không phải mọi bagatelle đều để tặng), nhưng không sai.'
+  - id: n16
+    cau: 'Nghĩa của chữ bagatelle: "chuyện vặt".'
+    loai: dinh-nghia
+    nguon: []
+    ket_qua: null
+    ghi_chu: 'chưa chắc: chưa mở được từ điển (Merriam-Webster, Cambridge trả 403; COD trên Encyclopedia.com không có mục). Lượt 2 kiểm.'
+    luot_2: dung
+    luot_2_nguon: [ "https://en.wiktionary.org/wiki/bagatelle" ]
+    luot_2_ghi_chu: 'Wiktionary: bagatelle "A trifle; an insubstantial thing" (từ tiếng Ý bagattella). "Chuyện vặt" đúng nghĩa. Chưa mở được Merriam-Webster, Collins (403).'
+  - id: n17
+    cau: Link Các thể loại nhạc piano (/opus/piano/the-loai/).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Trang có.
+  - id: n18
+    cau: Beethoven không xuất bản Für Elise lúc sinh thời.
+    loai: lich-su
+    nguon: [ henle-1347-vorwort, lvbwv-woo59 ]
+    ket_qua: dung
+    ghi_chu: 'Henle: "was not printed during his lifetime".'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/53/13/68/1697725822/1347-1697725821-sync.pdf" ]
+    luot_2_ghi_chu: 'Henle: "was not printed during his lifetime".'
+  - id: n19
+    cau: Bài chỉ đến với công chúng năm 1867, khi Ludwig Nohl in lại từ một bản viết tay mà ông được xem; bản ấy về sau thất lạc.
+    loai: lich-su
+    nguon: [ henle-1347-vorwort, lvbwv-woo59 ]
+    ket_qua: dung
+    ghi_chu: 'Henle: Nohl tìm thấy bản viết tay năm 1865 ở nhà Babette Bredl, được chép và in; in năm 1867; bản viết tay "lost since the end of the 19th century".'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/53/13/68/1697725822/1347-1697725821-sync.pdf" ]
+    luot_2_ghi_chu: "Henle: năm 1865 Nohl tìm thấy bản viết tay trọn vẹn ở nhà Babette Bredl (München), được xem, chép và in; in năm 1867 trong Neue Briefe Beethovens; bản viết tay thất lạc từ cuối thế kỷ 19."
+  - id: n20
+    cau: Các ấn bản ngày nay chủ yếu dựa vào bản in của Nohl, cùng những trang phác thảo còn lại của Beethoven.
+    loai: lich-su
+    nguon: [ henle-1347-vorwort, henle-1347-bem ]
+    ket_qua: dung
+    ghi_chu: 'Henle: "his edition represents the primary source for the present edition"; nguồn A1 (phác thảo 1808), A2 (bản nháp 1810).'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/53/13/68/1697725822/1347-1697725821-sync.pdf", "https://www.henle.de/media/61/79/23/1697725639/1347-1697725639-sync.pdf" ]
+    luot_2_ghi_chu: "Henle: bản in của Nohl (B1) là nguồn chính; phần bình chú dùng thêm bản nháp BH 116 (A2) và phác thảo 1808 (A1) để sửa chỗ sai (ví dụ ô 7, ô 74)."
+  - id: n21
+    cau: Elise là ai? Không ai biết chắc; chưa giả thuyết nào được chứng minh.
+    loai: lich-su
+    nguon: [ bh-woo59, henle-1347-vorwort ]
+    ket_qua: dung
+    ghi_chu: 'Beethoven-Haus: "there are no records of a female acquaintance named ''Elise''"; "the title cannot be verified".'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/53/13/68/1697725822/1347-1697725821-sync.pdf" ]
+    luot_2_ghi_chu: 'Henle: danh tính Elise đã có "a wealth of attempts"; giả thuyết của Unger bị coi là không đứng vững, giả thuyết của May chỉ là phỏng đoán. Chưa giả thuyết nào được chứng minh.'
+  - id: n22
+    cau: 'Giả thuyết Therese Malfatti: học trò mà Beethoven được cho là muốn cầu hôn khoảng năm 1810.'
+    loai: lich-su
+    nguon: [ bh-woo59, bh-116, lvbwv-woo59 ]
+    ket_qua: dung
+    ghi_chu: 'Beethoven-Haus: "in love with Therese Malfatti, whom he intended to marry"; BH 116: "gave her piano lessons". LvBWV: "die Beethoven 1810 umwarb (zu einem möglichen Heiratsantrag ...)".'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.beethoven.de/en/media/view/5010945952710656", "https://www.beethoven.de/de/media/view/5525208693735424/scan/0", "https://www.henle.de/media/53/13/68/1697725822/1347-1697725821-sync.pdf" ]
+    luot_2_ghi_chu: 'Beethoven-Haus: Beethoven dạy piano cho Therese Malfatti và bị cô cuốn hút; mùa xuân 1810 ông yêu Therese và có ý định cưới (nhờ Wegeler gửi giấy rửa tội), Therese từ chối. "Được cho là muốn cầu hôn" là cách nói thận trọng, đúng.'
+  - id: n23
+    cau: Theo giả thuyết này, Nohl đã đọc nhầm chữ "Therese" trong nét chữ khó đọc của Beethoven thành "Elise".
+    loai: lich-su
+    nguon: [ henle-1347-vorwort, lvbwv-woo59 ]
+    ket_qua: dung
+    ghi_chu: 'Henle: Max Unger cho rằng Nohl đọc nhầm; Henle thêm: so nét chữ "Th" và "El" thì cách giải thích này khó đứng vững (Jürgen May, 2014). Câu trang chỉ nêu giả thuyết, khớp.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/53/13/68/1697725822/1347-1697725821-sync.pdf" ]
+    luot_2_ghi_chu: 'Henle: Max Unger (1922/23) cho rằng Nohl đã đọc nhầm "Therese" thành "Elise". (Henle nói thêm: so nét chữ "Th" và "El" cho thấy giả thuyết này khó đứng.)'
+  - id: n24
+    cau: 'Giả thuyết Elisabeth Röckel, về sau là vợ nhà soạn nhạc Johann Nepomuk Hummel: giả thuyết của Klaus Martin Kopitz, đã bị Michael Lorenz phản bác.'
+    loai: lich-su
+    nguon: [ lvbwv-woo59 ]
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "một nữ ca sĩ trẻ trong vòng bạn bè của Beethoven (có tài liệu gọi bà là "Elise"), về sau là vợ nhà soạn nhạc Johann Nepomuk Hummel." LvBWV: "Klaus Martin Kopitz'' Identifikation der ''Elise'' mit Elisabeth Röckel, verh. Hummel, wurde unter anderem von Michael Lorenz in Frage gestellt". "Nữ ca sĩ", "có tài liệu gọi bà là Elise" chỉ thấy ở Wikipedia: bỏ.'
+    luot_2: dung
+    luot_2_nguon: [ "http://www.michaelorenz.at/beethovens_elise" ]
+    luot_2_ghi_chu: "Bài của Michael Lorenz, \"Die 'Enttarnte Elise'. Elisabeth Röckels kurze Karriere als Beethovens 'Elise'\", Bonner Beethoven-Studien 9 (2011): phản bác Klaus Martin Kopitz; Röckel lấy Johann Nepomuk Hummel năm 1813."
+  - id: n25
+    cau: 'Giả thuyết Elise (Lisette) Barensfeld, có thể là học trò piano của Therese Malfatti năm 1810: giả thuyết của Rita Steblin.'
+    loai: lich-su
+    nguon: [ lvbwv-woo59 ]
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "một cô bé ca sĩ có tài, quê ở Regensburg, sống ở Vienna vào thời gian đó." LvBWV: "Rita Steblin sieht als weitere Kandidatin Lisette (Elise) Barensfeld, 1810 eine mögliche Klavierschülerin Therese Malfattis". Quê Regensburg, ca sĩ: chưa có nguồn đã mở, bỏ.'
+    luot_2: khong-chac
+    luot_2_nguon: [ "https://charlespetzold.com/beethoven250/day239.html" ]
+    luot_2_ghi_chu: "Xác nhận được: Rita Steblin (The Musical Times, 2014, \"Who was Beethoven's 'Elise'? A new solution to the mystery\") đề xuất Elise Barensfeld, ca sĩ thần đồng 13 tuổi sống cạnh nhà Malfatti (bài của Charles Petzold). Không mở được bài gốc (JSTOR); chi tiết \"có thể là học trò piano của Therese Malfatti\" chỉ thấy ở Wikipedia, chưa có nguồn bậc 2."
+  - id: n26
+    cau: Bản nhạc là một món quà nhỏ, thân mật, không phải một tác phẩm hòa nhạc đồ sộ.
+    loai: lich-su
+    nguon: [ henle-1347-vorwort ]
+    ket_qua: dung
+    ghi_chu: 'Henle: Beethoven tặng bản viết tay; Nohl gọi là "Klavierstückchen" (LvBWV). Vế "với người chơi đàn, điều đó không thay đổi gì" là lời bình.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/53/13/68/1697725822/1347-1697725821-sync.pdf", "https://www.beethoven.de/en/media/view/5010945952710656" ]
+    luot_2_ghi_chu: 'Henle: Beethoven tặng bản viết tay; Nohl gọi bài là "bản piano nhỏ, không quan trọng lắm nhưng rất duyên dáng"; lời đề tặng "zur Erinnerung".'
+  - id: n27
+    cau: Link thời kỳ Cổ điển (/opus/lich-su/thoi-ky/co-dien/).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Trang có.
+  - id: n28
+    cau: Bốn câu hỏi khi nghe (đánh dấu A, B, C; nghe riêng tay trái; cảm giác của đoạn C; tốc độ đoạn chuyển).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n29
+    cau: Đoạn chuyển về chủ đề lần cuối là hợp âm rải đi lên, rồi chuỗi nửa cung đi xuống.
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: chùm ba móc kép La thứ đi lên tới La6, rồi B♭ A G♯ G F♯ F E D♯ D C♯ C B B♭ A G♯ G F♯ F.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: "Bản B&H 1888: sau đoạn C là chùm ba móc kép rải La thứ đi lên (a c' e' … tới e''''), rồi chuỗi nửa cung đi xuống (bes''' a''' gis''' … f''), vào lại e'' dis''."
+  - id: n30
+    cau: Poco moto nghĩa là "hơi chuyển động"; chủ đề không cần chậm và mơ màng.
+    loai: dinh-nghia
+    nguon: [ cod-moto ]
+    ket_qua: null
+    ghi_chu: 'chưa chắc: COD: moto "Motion"; chưa mở được nguồn cho "poco" (một chút). Câu cũ có "nhiều người chơi chủ đề rất chậm và mơ màng": nhận định về người chơi không kiểm được, viết lại thành lời khuyên (doi_chu).'
+    luot_2: dung
+    luot_2_nguon: [ "https://dictionary.onmusic.org/terms/2652-poco", "https://www.musicca.com/dictionary/italian/moto" ]
+    luot_2_ghi_chu: 'OnMusic Dictionary: poco = "a little"; Musicca: moto = "movement, motion". Vế sau là cách hiểu khi chơi, hợp với nghĩa chữ.'
+  - id: n31
+    cau: Fortepiano là loại đàn piano thời Beethoven; nghe để biết tiếng đàn và bàn đạp khác piano hiện đại thế nào.
+    loai: lich-su
+    nguon: [ tafelmusik ]
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "loại đàn piano thời Beethoven: tiếng nhẹ hơn, tắt nhanh hơn, và bàn đạp nghe khác hẳn." Ba đặc điểm âm thanh chưa có nguồn đã mở: bỏ. Tafelmusik: fortepiano (đàn kiểu Walter), cần gối nâng bộ giảm âm thay bàn đạp.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.sjsu.edu/beethoven/collection/keyboards/" ]
+    luot_2_ghi_chu: "Ira F. Brilliant Center for Beethoven Studies (SJSU), bộ sưu tập đàn phím: fortepiano là cây đàn búa thời ấy, búa bọc da, khung như harpsichord, cách làm bàn đạp mỗi nhà làm đàn một khác; trưng bày để so với piano hiện đại."
+  - id: n32
+    cau: 'Khối nghe: dán link một bản thu hay chọn file, rồi bấm ghi mốc.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Thành phần khoi-nghe.
+  - id: n33
+    cau: 'Theo dõi khi nghe, đoạn A câu a: chủ đề Mi–Rê♯ ở pp; hợp âm rải chuyền giữa hai tay như một dòng nhạc; câu kết ở nốt La.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    ghi_chu: \pp ở nhịp lấy đà; ô 8 A4.
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: "Bản B&H 1888: e''16 dis'' … ở pp (ghi pp ở nhịp lấy đà), hợp âm rải tay trái chuyền sang tay phải, câu kết ở a' (La)."
+  - id: n34
+    cau: Câu a nhắc lại.
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    ghi_chu: \repeat volta 2 quanh câu a.
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: \repeat volta 2 bao câu a đầu bài.
+  - id: n35
+    cau: 'Câu b và câu a: câu b ngắn ở Đô trưởng, rồi một chuỗi Mi–Rê♯ kéo về câu a.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    ghi_chu: 'Câu b: Đô (e. g f e) – Sol (d. f e d) – La thứ – Mi, rồi chuỗi E–D♯ (tay trái cũng chơi Mi4–Mi5).'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: "Câu b: e''8. g'16 f'' e'' | d''8. f'16 … trên c g c' / g, g b (Đô trưởng, Sol), ngắn (khoảng 4 ô), rồi chuỗi e'' dis'' lặp kéo về câu a."
+  - id: n36
+    cau: 'Câu b và câu a nhắc lại: đoạn A khép lại ở La thứ.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: Phần b + a nằm trong \repeat volta 2 thứ hai, kết a' trên La (La thứ).
+  - id: n37
+    cau: 'Đoạn B (Fa trưởng): giai điệu có nốt láy, nhịp chấm dôi trên hợp âm rải tay trái; sáng và ấm hơn.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    ghi_chu: \grace { f' a' } c''4 f''16. e''32; tay trái F A C rải.
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: "Đoạn B: hóa biểu Si♭ hiện qua nốt, tay trái f a c' a c' a (Fa trưởng, móc kép rải); giai điệu c''4 f''16. e''32 (chấm dôi) có nốt láy \\grace {f' a'} và appoggiatura bes'32."
+  - id: n38
+    cau: 'Đường chạy móc ba: hai đường chạy trên hòa âm Đô, rồi chuỗi Mi–Rê♯ dẫn về chủ đề.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    ghi_chu: Hai dòng c''32 g'' g' g'' … giống nhau; tay trái nghỉ, hòa âm Đô (C E G B♭ trước đó).
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: Hai ô móc ba c''32 g'' g' g'' … lặp hai lần, tay trái <c' e'> <f' g'> <e' g'> <d' f' g'> (hòa âm Đô, át của Fa), rồi e'' f'' e'' dis'' … dẫn về chủ đề.
+  - id: n39
+    cau: 'Đoạn A trở lại: chủ đề, lần này không nhắc lại.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    ghi_chu: Không có dấu nhắc lại (a, b, a viết liền).
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: Sau B, A viết ra một lượt (a, b, a), không có dấu nhắc lại.
+  - id: n40
+    cau: 'Đoạn C: tay trái gõ nốt La trầm liên tục, tay phải đánh hợp âm; bè trầm bò lên từng nửa cung La – Si♭ – Si – Đô.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    ghi_chu: Tay trái a, móc kép; về sau bes, ×18, b, ×6, c4. Giữ cho piano/not-lap-not-kep n10, n41.
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: "Đoạn C: tay trái a, móc kép lặp liên tục; tay phải hợp âm (<e' g' bes' cis''>, <f' a' d''>…); về sau bè trầm a, → bes, → b, → c (La – Si♭ – Si – Đô)."
+  - id: n41
+    cau: 'Đoạn chuyển: hợp âm rải La thứ đi lên qua ba quãng tám (pp), rồi một chuỗi nửa cung đi xuống.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    ghi_chu: Từ La3 lên La6 (ba quãng tám) rồi lên Mi7; \pp ở đầu.
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: Chùm ba móc kép rải La thứ từ a (La3) lên tới a''' và e'''' (hơn ba quãng tám), ghi pp, rồi chuỗi nửa cung đi xuống.
+  - id: n42
+    cau: 'Đoạn A lần cuối: chủ đề, kết thật nhẹ ở La.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    ghi_chu: Kết a'8 tay phải, A1 A2 tay trái.
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: Đoạn A cuối kết a'8 trên <a,, a,> (La). Không có thêm sắc thái sau pp của đoạn chuyển, nên "kết thật nhẹ" hợp với bản nhạc.
+  - id: n43
+    cau: 'Bảng Cấu trúc, A: La thứ (câu giữa sang Đô trưởng); chủ đề Mi–Rê♯ trên hợp âm rải chuyền giữa hai tay; câu a nhắc lại; câu b ngắn ở Đô trưởng, chuỗi Mi–Rê♯ kéo về câu a; cặp b + a cũng nhắc lại; bắt đầu pp, mỗi câu kết ở nốt La.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: "Khớp bản B&H 1888: La thứ, câu b sang Đô trưởng; a nhắc lại; b + a nhắc lại; pp ở đầu; các câu kết ở a'."
+  - id: n44
+    cau: 'Bảng Cấu trúc, B: Fa trưởng; giai điệu có nốt láy, nhịp chấm dôi trên hợp âm rải tay trái; hai đường chạy móc ba trên hòa âm Đô (át của Fa); chuỗi Mi–Rê♯ dẫn về A.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: "Khớp: Fa trưởng, nốt láy, nhịp chấm dôi trên hợp âm rải tay trái, hai ô móc ba trên hòa âm Đô (C, G7/C), chuỗi Mi–Rê♯ về A."
+  - id: n45
+    cau: 'Bảng Cấu trúc, A trở lại: La thứ, không nhắc lại.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: A trở lại viết ra một lượt, không dấu nhắc lại.
+  - id: n46
+    cau: 'Bảng Cấu trúc, C: quanh Rê thứ và La thứ; tay trái gõ La trầm liên tục bằng móc kép, tay phải hợp âm; bè trầm bò lên La – Si♭ – Si – Đô.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    ghi_chu: Hợp âm C♯ E G B♭ → D F A (Rê thứ), kết về E – La thứ.
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: Hợp âm tay phải quanh Rê thứ (<f' a' d''>, <gis' d'' f''>) và La thứ (<a' c'' e''>); tay trái a,16 lặp; bè trầm La – Si♭ – Si – Đô.
+  - id: n47
+    cau: 'Bảng Cấu trúc, chuyển: La thứ; hợp âm rải La thứ đi lên qua ba quãng tám thành chùm ba móc kép, rồi chuỗi nửa cung đi xuống; bắt đầu pp.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    ghi_chu: \tuplet 3/2 móc kép.
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: \tuplet 3/2 móc kép (chùm ba), La thứ, \pp ở nốt đầu, rồi chuỗi nửa cung đi xuống.
+  - id: n48
+    cau: 'Bảng Cấu trúc, A lần cuối: La thứ, kết ở La.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: "Kết a'8 / <a,, a,>8: La thứ, kết ở La."
+  - id: n49
+    cau: Cột "Điều cần chú ý" của bảng Cấu trúc (trôi, nhẹ; sáng và ấm; giữ chủ đề tươi; kịch tính có kiểm soát; đều như làn sóng; kết nhẹ).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n50
+    cau: 'Khối 1: nhịp lấy đà và tám ô đầu, ô 8 theo lần chơi thứ nhất; đối chiếu với bản Breitkopf & Härtel năm 1888.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    ghi_chu: Xem khuong_nhac khối 1. Giữ cho piano/10-bai-dau-tien n2, n34 (8 ô đầu như Beethoven viết, hai tay thay phiên, móc kép, 3/8).
+    luot_2: khong-chac
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: "Phần về bản B&H 1888 đúng: nhịp lấy đà e''16, tám ô, ô 8 có hai lần chơi (lần 1 a'4). Lượt 2 không được mở trang nên không đối chiếu được chính khối ABC; cần review xem khối trên bản xem."
+  - id: n51
+    cau: 'Ô 2: tay phải đánh La cùng lúc với La trầm của tay trái, tay trái rải La–Mi–La, rồi tay phải đi tiếp Đô–Mi–La; sáu móc kép ấy là một dòng nhạc chia cho hai tay.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: "Ô 2: tay phải a'8 cùng lúc với a,16 của tay trái; tay trái a, e a (La2–Mi3–La3), tay phải c' e' a': sáu móc kép."
+  - id: n52
+    cau: 'Chỗ khó, cặp Mi–Rê♯: hai ngón kề nhau lặp lại nhanh, ở sắc thái nhỏ.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    ghi_chu: pp; E5–D♯5 móc kép.
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: e'' dis'' e'' dis'' móc kép ở pp; hai nốt nửa cung kề nhau, đánh bằng hai ngón kề nhau.
+  - id: n53
+    cau: 'Chỗ khó, hợp âm rải tay trái: khoảng cách một quãng tám (La2–Mi3–La3).'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: a,16 e a = La2–Mi3–La3, khoảng cách một quãng tám.
+  - id: n54
+    cau: 'Chỗ khó, đường chạy móc ba ở đoạn B: một dòng nốt đi lên xen kẽ với nốt Sol cao lặp lại.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    ghi_chu: 'c g'' g'''' / a g'''' b g'''' / c g'''' d g''''…: Sol5 lặp xen nốt đi lên.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: "c''32 g'' g' g'' a' g'' b' g'' c'' g'' d'' g'' e'' g'' c''' b'': dòng nốt dưới đi lên (g' a' b' c'' d'' e''), xen với g'' lặp lại."
+  - id: n55
+    cau: 'Chỗ khó, nốt La lặp lại ở đoạn C: nhiều ô móc kép trên cùng một phím, dễ mỏi, căng, to dần ngoài ý muốn; động tác nhỏ từ cổ tay, đổi ngón 3–2–1 hay giữ một ngón.'
+    loai: quy-tac
+    nguon: [ mut-elise, bapam ]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: tay trái La2 móc kép nhiều ô. Có yếu tố sức khỏe (mỏi, căng): xếp quy-tac, BAPAM: tránh lặp động tác kéo dài; căng hay mỏi là dấu hiệu cảnh báo. Lời khuyên không trái BAPAM.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: "Tay trái a,16 lặp liên tục (30 nốt, rồi tiếp hàng chục nốt nữa) ở đoạn C: vế mô tả đúng. Cách chống mỏi (cổ tay, đổi ngón) là lời khuyên kỹ thuật phổ biến, không có hại."
+  - id: n56
+    cau: 'Chỗ khó, hợp âm tay phải ở đoạn C: ba, bốn nốt phải vào cùng lúc.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    ghi_chu: Hợp âm 3–4 nốt (e' g' bes' cis''…).
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: Hợp âm tay phải ba, bốn nốt (<e' g' bes' cis''>, <gis' d'' f''>…).
+  - id: n57
+    cau: 'Chỗ khó, hợp âm rải đi lên và chuỗi nửa cung: đổi thế tay mỗi ô.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: "Mỗi ô của chùm ba móc kép lên một quãng tám (a–c'–e' … rồi a'–c''–e'' …): phải đổi thế tay mỗi ô."
+  - id: n58
+    cau: Chuỗi nửa cung dùng ngón 3 cho phím đen, ngón 1 cho phím trắng (1–2 ở chỗ hai phím trắng liền nhau).
+    loai: quy-tac
+    nguon: [ fitch-chromatic ]
+    ket_qua: dung
+    ghi_chu: 'Fitch: "3rd finger on black keys; thumb on white keys – except on the two adjacent pairs of white keys ... where 2nd finger acts as a substitute thumb". Khớp trang đã khóa piano/gam.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.piano-keyboard-guide.com/?p=254" ]
+    luot_2_ghi_chu: "Ngón bấm gam nửa cung chuẩn: phím đen ngón 3, phím trắng ngón 1, ở chỗ hai phím trắng liền nhau (Mi–Fa, Si–Đô) dùng 1–2."
+  - id: n59
+    cau: 'Chỗ khó, bàn đạp: giữ qua ô Mi–Rê♯ thì hai hòa âm nhòe vào nhau.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    ghi_chu: Ô Mi–Rê♯ là hòa âm át (Mi), ô trước là La thứ.
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: Bản B&H 1888 nhả bàn đạp cuối mỗi ô hợp âm rải, không giữ qua ô Mi–Rê♯; Mi và Rê♯ (nửa cung) cùng ngân thì nghịch tai.
+  - id: n60
+    cau: Phần còn lại của bảng Chỗ khó (khe hở giữa hai tay, chọn ngón 5–4 hay 4–3, ngón 5–2–1, đếm móc ba khi tập chậm, tập theo nhóm, đặt sẵn hợp âm, nhả bàn đạp).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n61
+    cau: 'Links trong bảng Chỗ khó: Nốt hoa mỹ, Bàn đạp.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Hai trang có.
+  - id: n62
+    cau: Các bài tập chuẩn bị soạn riêng cho trang này.
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Khối 2–4 là ví dụ soạn.
+  - id: n63
+    cau: Các bước tập bài tập 1–3.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n64
+    cau: 'Bài tập 2 luyện kiểu bàn tay của đường chạy ở đoạn B: ngón 5 nhắc lại một nốt cao, các ngón còn lại đi lên đi xuống bên dưới.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    ghi_chu: Khối 3 khớp kiểu của đường chạy ở đoạn B (nốt cao lặp xen dòng dưới), xem n54.
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: Khớp với hình đường chạy (g'' cao lặp, các nốt dưới đi lên đi xuống).
+  - id: n65
+    cau: Kế hoạch 6 tuần, tốc độ ghi theo nốt móc đơn.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    luot_2: dung
+    luot_2_ghi_chu: "Kế hoạch 6 tuần, tốc độ theo móc đơn (nhịp 3/8): hợp lý."
+  - id: n66
+    cau: Link thu âm (/opus/luyen-tap/thu-am/).
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Trang có.
+  - id: n67
+    cau: 'Diễn tấu, tốc độ: chủ đề cần trôi; khi đã thuộc, cảm mỗi ô như một phách; đoạn C có thể dồn lên một chút.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n68
+    cau: 'Bản nhạc ghi rất ít chỉ dẫn sắc thái: bản Breitkopf & Härtel 1888 chỉ có pp ở đầu bài và ở hợp âm rải đi lên.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: chỉ có hai \pp (nhịp lấy đà, đầu đoạn chuyển); không có dấu sắc thái khác, không cresc.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: "Trong file .ly của bản B&H 1888 chỉ có hai dấu sắc thái: \\pp ở nhịp lấy đà và \\pp ở nốt đầu hợp âm rải đi lên."
+  - id: n69
+    cau: Gợi ý sắc thái cho A, B, C và đoạn chuyển.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    luot_2: dung
+    luot_2_ghi_chu: "Gợi ý sắc thái: hợp lý; bản nhạc chỉ ghi pp ở hai chỗ nên gợi ý phải tách khỏi chỉ dẫn gốc (trang đã nói ý này ở n68)."
+  - id: n70
+    cau: Bản Breitkopf & Härtel 1888 ghi bàn đạp cho từng ô có hợp âm rải tay trái ở chủ đề, nhả trước ô Mi–Rê♯.
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "Bản Breitkopf & Härtel và nhiều ấn bản khác ghi bàn đạp...". "Nhiều ấn bản khác" chưa kiểm: bỏ. Mutopia: \sustainOn đầu mỗi ô có La–Mi–La, \sustainOff cuối ô; ô Mi–Rê♯ không có bàn đạp.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: "Dòng bàn đạp của bản B&H 1888: sustainOn đầu mỗi ô có hợp âm rải tay trái, nhả ở cuối ô; ô Mi–Rê♯ không có bàn đạp."
+  - id: n71
+    cau: Nguyên tắc dùng bàn đạp ở đoạn A, B, C.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n72
+    cau: Ở đoạn B có hai nốt láy nhỏ trước nốt Đô đầu tiên, một nốt appoggiatura và những chùm móc ba nhỏ.
+    loai: cau-truc
+    nguon: [ mut-elise, henle-1347-bem ]
+    ket_qua: dung
+    ghi_chu: 'Mutopia: \grace { f'' a'' } c''''4; \appoggiatura bes''32 a''32 g'' a'' bes''. Henle bình chú ô 23 nói về các nốt nhỏ này.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: \grace {f'16 a'} trước c''4 đầu tiên của B; \appoggiatura bes'32; các chùm móc ba (32nd) a'32 g' a' bes' và c''32 g'' g' g''…
+  - id: n73
+    cau: Các nốt trang trí luôn nhẹ hơn nốt chính; quyết định chúng rơi vào phách hay trước phách rồi giữ nhất quán.
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n74
+    cau: Vì bản viết tay đã mất, các ấn bản có thể khác nhau ở vài chi tiết như dấu luyến.
+    loai: lich-su
+    nguon: [ henle-1347-bem ]
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "... như dấu luyến hay bàn đạp." Henle: B2 (Kahnt 1870) thêm dấu luyến theo các ô song song (ô 12–14, 49, 94 f.); khác biệt về bàn đạp chưa thấy ở nguồn đã mở, bỏ.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/61/79/23/1697725639/1347-1697725639-sync.pdf" ]
+    luot_2_ghi_chu: "Bình chú Henle: B2 (Kahnt 1870) thêm dấu luyến ở ô 12–14, 49, 94 f.; B1 thiếu dấu luyến ở 94 f. Các ấn bản khác nhau ở chi tiết như dấu luyến."
+  - id: n75
+    cau: Dùng một bản Urtext, đọc chú thích của người biên tập; khi học bài thật, tránh các bản "đơn giản hóa".
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Câu cũ: "Các bản ''đơn giản hóa'' cho người mới học thường cắt bớt đoạn B và C hoặc đổi tay trái" là nhận định chung không kiểm được: viết lại thành lời khuyên (doi_chu).'
+  - id: n76
+    cau: Lỗi thường gặp (tám dòng).
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: Trừ dòng về mỏi tay ở đoạn C (n77).
+    luot_2: dung
+    luot_2_ghi_chu: Lời khuyên tập; hợp lý, không có hại.
+  - id: n77
+    cau: 'Lỗi thường gặp, đoạn C: tay trái cứng và to dần, mỏi trước khi hết đoạn.'
+    loai: quy-tac
+    nguon: [ bapam ]
+    ket_qua: dung
+    ghi_chu: 'Có yếu tố sức khỏe (mỏi): BAPAM "tension or fatigue ... warning signs".'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: "Đoạn C dài nhiều ô móc kép trên cùng phím La: lỗi mô tả hợp lý, không có hại."
+  - id: n78
+    cau: 'Cùng chặng: Bach Prelude Đô trưởng, Chopin Prélude Mi thứ, Satie Gymnopédie số 1.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'tac-pham.yml (chang đã khóa): fur-elise, bach-prelude-do, chopin-prelude-mi-thu, satie-gymnopedie đều chặng 4; ba trang có trong src/content/docs.'
+  - id: n79
+    cau: 'Beethoven tiếp theo: Sonata Op. 49 số 2, Pathétique chương 2 (links).'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: beethoven-op49-2 có; pathetique-adagio chưa chuyển (site cũ có).
+  - id: n80
+    cau: Op. 33 và Op. 119 là các tập bagatelle của Beethoven.
+    loai: danh-muc
+    nguon: [ imslp-op33, lvbwv-woo59 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: "Seven Bagatelles", Op. 33; LvBWV: "die Bagatellen op. 119".'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/7_Bagatelles,_Op.33_(Beethoven,_Ludwig_van)", "https://imslp.org/wiki/11_Bagatelles,_Op.119_(Beethoven,_Ludwig_van)" ]
+    luot_2_ghi_chu: "IMSLP: 7 Bagatelles Op. 33, 11 Bagatelles Op. 119 (còn có Op. 126)."
+  - id: n81
+    cau: 'Mozart: Sonata K. 545, một sonata Cổ điển ở chặng sau.'
+    loai: ve-site
+    nguon: []
+    ket_qua: da-sua
+    ghi_chu: 'Câu cũ: "cùng lối viết trong sáng nhưng dài hơi hơn": đánh giá, không kiểm được. tac-pham.yml: mozart-k545 chặng 5 (fur-elise chặng 4). Trang chưa chuyển, hiện "sắp có".'
+  - id: n82
+    cau: 'Nghe thêm: Beethoven Sonata Ánh trăng (/opus/nghe-nhac/beethoven-moonlight/).'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: Trang chưa chuyển; ../opus-zero/docs/nghe-nhac/beethoven-moonlight.md có.
+  - id: n83
+    cau: 'Câu hỏi 1: Für Elise là rondo nhỏ A–B–A–C–A; chủ đề Mi–Rê♯ vang lên ba lần, xen giữa là đoạn Fa trưởng (B) và đoạn kịch tính trên nốt La trầm (C).'
+    loai: cau-truc
+    nguon: [ mut-elise, omt-rondo ]
+    ket_qua: da-sua
+    ghi_chu: 'Như n8: "quay lại ba lần" thành "vang lên ba lần".'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly", "https://viva.pressbooks.pub/openmusictheory/chapter/rondo/", "https://enc.piano.or.jp/en/musics/446" ]
+    luot_2_ghi_chu: "Khớp bản nhạc: A–B–A–C–A, chủ đề ba lần, B Fa trưởng, C trên La trầm lặp."
+  - id: n84
+    cau: 'Câu hỏi 2: Poco moto nghĩa là hơi chuyển động.'
+    loai: dinh-nghia
+    nguon: [ cod-moto ]
+    ket_qua: null
+    ghi_chu: 'chưa chắc: như n30.'
+    luot_2: dung
+    luot_2_nguon: [ "https://dictionary.onmusic.org/terms/2652-poco", "https://www.musicca.com/dictionary/italian/moto" ]
+    luot_2_ghi_chu: poco = a little; moto = motion.
+  - id: n85
+    cau: 'Câu hỏi 3: ở chủ đề, nhấn bàn đạp sau nốt trầm của mỗi ô hợp âm rải, nhả hẳn trước ô Mi–Rê♯.'
+    loai: cau-truc
+    nguon: [ mut-elise ]
+    ket_qua: dung
+    ghi_chu: Khớp bàn đạp của bản Breitkopf 1888 (Mutopia). Lời giải thích là lời khuyên.
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly", "https://hub.yamaha.com/music-educators/instruments/piano/piano-pedagogy-pedaling" ]
+    luot_2_ghi_chu: 'Bản B&H 1888 nhấn bàn đạp ở đầu mỗi ô hợp âm rải và nhả trước ô Mi–Rê♯. Nhấn ngay sau nốt trầm là cách bàn đạp nối (Yamaha: "a split second after the new notes have been played"), hợp với ghi chép này.'
+  - id: n86
+    cau: 'Câu hỏi 4: tập chỗ chuyền tay chậm, nhắm mắt, thu âm.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n87
+    cau: 'Nguồn: Henle HN 1347 (biên tập Joanna Cobb Biermann), lời nói đầu và bình chú.'
+    loai: ten
+    nguon: [ henle-1347-vorwort, henle-1347-bem, henle-1347 ]
+    ket_qua: da-sua
+    ghi_chu: 'Mục Nguồn cũ dẫn ba sách in chưa đọc (Cooper, The Beethoven Compendium; Lockwood, Beethoven: The Music and the Life; Kinsky–Halm, Das Werk Beethovens 1955): thay bằng nguồn đã mở. Lời nói đầu ký "Tuscaloosa/USA, spring 2016, Joanna Cobb Biermann".'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/us/Bagatelle-in-a-minor-WoO-59-Fuer-Elise/HN-1347" ]
+    luot_2_ghi_chu: Henle HN 1347, Joanna Cobb Biermann biên tập (Rolf Koenen soạn ngón), có Preface và Comments.
+  - id: n88
+    cau: 'Nguồn: Ludwig van Beethoven. Thematisch-bibliographisches Werkverzeichnis, Henle 2014 (danh mục, nơi đặt ký hiệu WoO), mục WoO 59.'
+    loai: ten
+    nguon: [ lvbwv-woo59, henle-1347-vorwort ]
+    ket_qua: da-sua
+    ghi_chu: Thay Kinsky–Halm 1955 bằng bản mới (Dorfmüller, Gertsch, Ronge 2014) mà Henle dùng cho số WoO; mục WoO 59 đọc được.
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/53/13/68/1697725822/1347-1697725821-sync.pdf" ]
+    luot_2_ghi_chu: 'Henle: "The WoO number follows Ludwig van Beethoven. Thematisch-bibliographisches Werkverzeichnis, ed. by Georg Kinsky/Hans Halm, new edition by Kurt Dorfmüller/Norbert Gertsch/Julia Ronge, Munich, 2014" (Henle xuất bản). Ghi chú: ký hiệu WoO có từ bản Kinsky–Halm 1955; bản 2014 là bản mới của cùng danh mục.'
+  - id: n89
+    cau: 'Nguồn: Beethoven-Haus Bonn, trang tác phẩm WoO 59 và tờ phác thảo BH 116.'
+    loai: ten
+    nguon: [ bh-woo59, bh-116 ]
+    ket_qua: da-sua
+    ghi_chu: Nguồn mới.
+    luot_2: dung
+    luot_2_nguon: [ "https://www.beethoven.de/en/media/view/5010945952710656", "https://www.henle.de/media/61/79/23/1697725639/1347-1697725639-sync.pdf" ]
+    luot_2_ghi_chu: Beethoven-Haus có trang số hóa tờ phác thảo BH 116 (WoO 59, WoO 19, op. 84); Henle dẫn BH 116 là nguồn A2.
+  - id: n90
+    cau: 'Nguồn: bản nhạc IMSLP; đoạn trích đối chiếu với bản Breitkopf & Härtel 1888 qua bản chép LilyPond của Mutopia; link tài liệu tham khảo.'
+    loai: ten
+    nguon: [ imslp-elise, mut-elise ]
+    ket_qua: dung
+    ghi_chu: Link IMSLP trỏ tới trang tác phẩm (chữ không đổi). /opus/tai-lieu-tham-khao/ có.
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/F%C3%BCr_Elise,_WoO_59_(Beethoven,_Ludwig_van)", "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly" ]
+    luot_2_ghi_chu: IMSLP có trang Für Elise, WoO 59; Mutopia có bản LilyPond ghi nguồn "Breitkopf & Härtel, 1888".
 khuong_nhac:
-- khoi: 1
-  loai: trich-doan
-  kiem: [cu-phap, nhip, giong, not-tay-phai, not-tay-trai, sac-thai, doi-chieu-an-ban]
-  ket_qua: dung
-  ghi_chu: 'Nhịp lấy đà và ô 1–8 (ô 8 lần một), 3/8, L:1/16, K:Am. Ấn bản: Breitkopf & Härtel 1888 qua Mutopia fur_Elise_WoO59 (.ly và .mid, tải 05/11/2026). Công cụ: đọc .ly và MIDI (mido) theo ô. Kết quả: khớp cả hai tay từng nốt: nhịp lấy đà E5 D♯5; ô 1 E D♯ E B D C; ô 2 A4 (móc đơn) + C4 E4 A4, tay trái A2 E3 A3; ô 3 B4 + E4 G♯4 B4, tay trái E2 E3 G♯3; ô 4 C5 + E4 E5 D♯5; ô 5–7 như ô 1–3 (ô 7 E4 C5 B4); ô 8 A4 nốt đen, tay trái A2 E3 A3; "Poco moto" và pp ở nhịp lấy đà khớp. Khối không ghi bàn đạp (bản gốc có): trang không nói khối ghi bàn đạp. Không có số ngón.'
-- khoi: 2
-  loai: vi-du-soan
-  kiem: [cu-phap, nhip, giong, hop-am, so-ngon, hai-tay]
-  ket_qua: dung
-  ghi_chu: '8 ô 3/8, mỗi ô 6 móc kép: tay trái ba nốt rải, tay phải ba nốt tiếp, đúng kiểu chuyền tay của chủ đề. Hòa âm La thứ, Rê thứ, Mi, La thứ, Fa, Rê thứ, Mi, La thứ. Ngón tay trái 5-?-1, tay phải 1 ở nốt đầu: chơi được.'
-- khoi: 3
-  loai: vi-du-soan
-  kiem: [cu-phap, nhip, giong, so-ngon]
-  ket_qua: dung
-  ghi_chu: '5 ô 3/8, L:1/32, mỗi ô 12 nốt móc ba: ngón 5 lặp một nốt cao (Rê, Mi, Fa, Sol), dòng dưới đi lên đi xuống bằng ngón 1–4, như lời dẫn và giống kiểu đường chạy đoạn B (Sol5 lặp). Ô cuối Đô nốt dài. Ngón chơi được.'
-- khoi: 4
-  loai: vi-du-soan
-  kiem: [cu-phap, nhip, giong, hop-am, sac-thai]
-  ket_qua: dung
-  ghi_chu: 4 ô 3/8, K:Em. Tay trái Mi1 móc kép liên tục (6 mỗi ô) pp, tay phải hợp âm Mi thứ, Si bảy (D♯ F♯ A), Mi thứ – Đô/Mi, Si; p với dấu to dần như lời dẫn "tăng dần sắc thái". Giống kiểu đoạn C (nốt trầm lặp dưới hợp âm) ở giọng khác.
+  - khoi: 1
+    loai: trich-doan
+    kiem: [ cu-phap, nhip, giong, not-tay-phai, not-tay-trai, sac-thai, doi-chieu-an-ban ]
+    ket_qua: dung
+    ghi_chu: 'Nhịp lấy đà và ô 1–8 (ô 8 lần một), 3/8, L:1/16, K:Am. Ấn bản: Breitkopf & Härtel 1888 qua Mutopia fur_Elise_WoO59 (.ly và .mid, tải 05/11/2026). Công cụ: đọc .ly và MIDI (mido) theo ô. Kết quả: khớp cả hai tay từng nốt: nhịp lấy đà E5 D♯5; ô 1 E D♯ E B D C; ô 2 A4 (móc đơn) + C4 E4 A4, tay trái A2 E3 A3; ô 3 B4 + E4 G♯4 B4, tay trái E2 E3 G♯3; ô 4 C5 + E4 E5 D♯5; ô 5–7 như ô 1–3 (ô 7 E4 C5 B4); ô 8 A4 nốt đen, tay trái A2 E3 A3; "Poco moto" và pp ở nhịp lấy đà khớp. Khối không ghi bàn đạp (bản gốc có): trang không nói khối ghi bàn đạp. Không có số ngón.'
+  - khoi: 2
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, hop-am, so-ngon, hai-tay ]
+    ket_qua: dung
+    ghi_chu: '8 ô 3/8, mỗi ô 6 móc kép: tay trái ba nốt rải, tay phải ba nốt tiếp, đúng kiểu chuyền tay của chủ đề. Hòa âm La thứ, Rê thứ, Mi, La thứ, Fa, Rê thứ, Mi, La thứ. Ngón tay trái 5-?-1, tay phải 1 ở nốt đầu: chơi được.'
+  - khoi: 3
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, so-ngon ]
+    ket_qua: dung
+    ghi_chu: '5 ô 3/8, L:1/32, mỗi ô 12 nốt móc ba: ngón 5 lặp một nốt cao (Rê, Mi, Fa, Sol), dòng dưới đi lên đi xuống bằng ngón 1–4, như lời dẫn và giống kiểu đường chạy đoạn B (Sol5 lặp). Ô cuối Đô nốt dài. Ngón chơi được.'
+  - khoi: 4
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, hop-am, sac-thai ]
+    ket_qua: dung
+    ghi_chu: 4 ô 3/8, K:Em. Tay trái Mi1 móc kép liên tục (6 mỗi ô) pp, tay phải hợp âm Mi thứ, Si bảy (D♯ F♯ A), Mi thứ – Đô/Mi, Si; p với dấu to dần như lời dẫn "tăng dần sắc thái". Giống kiểu đoạn C (nốt trầm lặp dưới hợp âm) ở giọng khác.
 doi_chu:
-- cu: 'Tám ô nhịp đầu của Für Elise thuộc loại nổi tiếng nhất trong nhạc piano, nhưng bài không dừng ở đó. Học trọn bài, bạn gặp ba nhân vật rất khác nhau: chủ đề La thứ trôi như nước, đoạn Fa trưởng duyên dáng với những đường chạy nhanh, và đoạn kịch tính trên nốt La trầm gõ liên tục.'
-  moi: 'Für Elise là một trong những tác phẩm nổi tiếng nhất của Beethoven, nhưng bài không dừng ở tám ô nhịp đầu. Học trọn bài, bạn gặp ba nhân vật rất khác nhau: chủ đề La thứ trôi như nước, đoạn Fa trưởng duyên dáng với những đường chạy nhanh, và đoạn kịch tính trên nốt La trầm gõ liên tục.'
-  ly_do: 'n2 (da-sua): Henle HN 1347: "one of Ludwig van Beethoven''s best-known works".'
-- cu: Bản viết tay mà nhà nghiên cứu Ludwig Nohl được xem đề ngày 27 tháng 4 năm 1810. Nohl in bài này lần đầu năm 1867, bốn mươi năm sau khi Beethoven mất; bản viết tay ấy nay đã thất lạc
-  moi: Bản viết tay mà nhà nghiên cứu Ludwig Nohl được xem đề ngày 27 tháng 4, không ghi năm (có lẽ năm 1810). Nohl in bài này lần đầu năm 1867, bốn mươi năm sau khi Beethoven mất; bản viết tay ấy nay đã thất lạc
-  ly_do: 'Dữ liệu (thong_tin, hiện qua ::hop-tac-pham) sửa theo sua-A.yml, nhận định n18 của hồ sơ bản ghi: Henle HN 1347: "the 27th of April (without mention of a year)"; LvBWV: bản viết tay "wohl ebenfalls 1810". Chữ hiện qua ::hop-tac-pham: người giao thêm doi_chu cho trang sau khi áp.'
-- cu: Khoảng ABRSM Grade 5 cho cả bài (ước lượng); riêng đoạn A khoảng Grade 3
-  moi: Khoảng ABRSM Grade 5 cho cả bài; RCM xếp bài ở Level 7 (đề cương 2022); riêng đoạn A khoảng Grade 3
-  ly_do: 'Dữ liệu (thong_tin, hiện qua ::hop-tac-pham) sửa theo sua-A.yml, nhận định n23 của hồ sơ bản ghi: Bài có trong đề cương RCM 2022 (Level 7, List B): ghi kỳ đề cương thay "(ước lượng)". Có điều kiện: bỏ "riêng đoạn A khoảng Grade 3" nếu lượt 2 không tìm được nguồn; khi ấy sửa luôn chip.'
-- cu:
-  - Rondo thu nhỏ. Chủ đề quay lại ba lần, xen hai đoạn tương phản; bạn hiểu rondo bằng chính đôi tay.
-  - Đi hết bài. Rất nhiều người dừng ở tám ô đầu. Chơi trọn vẹn và hay cả bài là một bước trưởng thành thật sự.
-  moi:
-  - Rondo thu nhỏ. Chủ đề vang lên ba lần, xen giữa là hai đoạn tương phản; bạn hiểu rondo bằng chính đôi tay.
-  - Đi hết bài. Tám ô đầu chỉ là một phần nhỏ của bài. Chơi trọn vẹn và hay cả bài là một bước trưởng thành thật sự.
-  ly_do: 'n8 (da-sua): chủ đề có ba lần trong A–B–A–C–A. n10 (da-sua): "rất nhiều người dừng ở tám ô đầu" không kiểm được.'
-- cu:
-  - Elisabeth Röckel, một nữ ca sĩ trẻ trong vòng bạn bè của Beethoven (có tài liệu gọi bà là "Elise"), về sau là vợ nhà soạn nhạc Johann Nepomuk Hummel.
-  - Elise Barensfeld, một cô bé ca sĩ có tài, quê ở Regensburg, sống ở Vienna vào thời gian đó.
-  moi:
-  - Elisabeth Röckel, về sau là vợ nhà soạn nhạc Johann Nepomuk Hummel. Đây là giả thuyết của Klaus Martin Kopitz; Michael Lorenz đã phản bác.
-  - Elise (Lisette) Barensfeld, có thể là học trò piano của Therese Malfatti năm 1810. Đây là giả thuyết của Rita Steblin.
-  ly_do: 'n24 (da-sua): theo LvBWV (Henle 2014); bỏ chi tiết chỉ có ở Wikipedia. n25 (da-sua): theo LvBWV (Henle 2014); quê Regensburg, ca sĩ: chưa có nguồn đã mở. n25 (da-sua): theo LvBWV (Henle 2014).'
-- cu: 'So sánh vài bản thu. Để ý tốc độ: nhiều người chơi chủ đề rất chậm và mơ màng, trong khi Poco moto nghĩa là "hơi chuyển động". Nếu tìm được, nghe thêm một bản trên fortepiano, loại đàn piano thời Beethoven: tiếng nhẹ hơn, tắt nhanh hơn, và bàn đạp nghe khác hẳn.'
-  moi: 'So sánh vài bản thu. Để ý tốc độ: Poco moto nghĩa là "hơi chuyển động", nên chủ đề không cần chậm và mơ màng. Nếu tìm được, nghe thêm một bản trên fortepiano, loại đàn piano thời Beethoven, để nghe tiếng đàn và bàn đạp khác piano hiện đại thế nào.'
-  ly_do: 'n30, n31 (da-sua): bỏ nhận định về người chơi và về tiếng fortepiano chưa có nguồn.'
-- cu: 'Bản Breitkopf & Härtel và nhiều ấn bản khác ghi bàn đạp cho từng ô có hợp âm rải tay trái ở chủ đề, nhả trước ô Mi–Rê♯. Nguyên tắc chung: đổi theo hòa âm, nhả hẳn khi giai điệu đi một mình. Ở đoạn B, dùng bàn đạp nông, đổi theo hợp âm; với đường chạy móc ba, giảm bàn đạp để từng nốt còn rõ. Ở đoạn C, bàn đạp ngắn cho từng hợp âm, hoặc rất ít, để nốt La lặp lại không thành tiếng ù.'
-  moi: 'Bản Breitkopf & Härtel 1888 ghi bàn đạp cho từng ô có hợp âm rải tay trái ở chủ đề, nhả trước ô Mi–Rê♯. Nguyên tắc chung: đổi theo hòa âm, nhả hẳn khi giai điệu đi một mình. Ở đoạn B, dùng bàn đạp nông, đổi theo hợp âm; với đường chạy móc ba, giảm bàn đạp để từng nốt còn rõ. Ở đoạn C, bàn đạp ngắn cho từng hợp âm, hoặc rất ít, để nốt La lặp lại không thành tiếng ù.'
-  ly_do: 'n70 (da-sua): "nhiều ấn bản khác" chưa kiểm.'
-- cu: 'Vì bản viết tay đã mất, các ấn bản có thể khác nhau ở vài chi tiết như dấu luyến hay bàn đạp. Hãy dùng một bản Urtext và đọc phần chú thích của người biên tập. Các bản "đơn giản hóa" cho người mới học thường cắt bớt đoạn B và C hoặc đổi tay trái: tránh chúng khi bạn học bài thật.'
-  moi: Vì bản viết tay đã mất, các ấn bản có thể khác nhau ở vài chi tiết như dấu luyến. Hãy dùng một bản Urtext và đọc phần chú thích của người biên tập. Khi học bài thật, tránh các bản "đơn giản hóa" cho người mới học.
-  ly_do: 'n74 (da-sua), n75: bỏ "bàn đạp" và nhận định chung về bản đơn giản hóa (không nguồn).'
-- cu: 'Cổ điển: Mozart: Sonata K. 545, cùng lối viết trong sáng nhưng dài hơi hơn.'
-  moi: 'Cổ điển: Mozart: Sonata K. 545, một sonata Cổ điển ở chặng sau.'
-  ly_do: 'n81 (da-sua): bỏ đánh giá "dài hơi hơn".'
-- cu:
-  - Barry Cooper (biên tập), The Beethoven Compendium, Thames & Hudson, 1991.
-  - 'Lewis Lockwood, Beethoven: The Music and the Life, W. W. Norton, 2003.'
-  - Georg Kinsky, Hans Halm, Das Werk Beethovens, G. Henle Verlag, 1955 (danh mục, nơi đặt ký hiệu WoO).
-  moi:
-  - 'Beethoven, Bagatelle in a minor WoO 59 (Für Elise), G. Henle Verlag, HN 1347 (biên tập Joanna Cobb Biermann): lời nói đầu và bình chú trên trang ấn bản (phác thảo 1808 và 1810, Nohl và bản in 1867, các giả thuyết về Elise).'
-  - 'Ludwig van Beethoven. Thematisch-bibliographisches Werkverzeichnis, G. Henle Verlag, 2014 (danh mục, nơi đặt ký hiệu WoO): mục WoO 59.'
-  - 'Beethoven-Haus Bonn: trang tác phẩm WoO 59 và tờ phác thảo BH 116.'
-  ly_do: 'n87 (da-sua): mục Nguồn thay sách in chưa đọc bằng nguồn đã mở. n88 (da-sua): danh mục bản 2014 thay bản 1955. n87 (da-sua): nguồn mới. n89 (da-sua): nguồn mới.'
-- cu: 'mô tả: Tám ô nhịp đầu của Für Elise thuộc loại nổi tiếng nhất trong nhạc piano, nhưng bài không dừng ở đó. Học trọn bài, bạn gặp ba nhân vật rất khác nhau: chủ đề La…'
-  moi: 'mô tả: Für Elise là một trong những tác phẩm nổi tiếng nhất của Beethoven, nhưng bài không dừng ở tám ô nhịp đầu. Học trọn bài, bạn gặp ba nhân vật rất khác nhau: chủ đề La…'
-  ly_do: 'n2 (da-sua): Henle HN 1347: "one of Ludwig van Beethoven''s best-known works".'
-- cu: 'câu hỏi: Für Elise có hình thức gì? | ✓ Rondo nhỏ A–B–A–C–A | Hình thức sonata | Chủ đề và biến tấu | Chủ đề Mi–Rê♯ quay lại ba lần, xen giữa là đoạn Fa trưởng (B) và đoạn kịch tính trên nốt La trầm (C).'
-  moi: 'câu hỏi: Für Elise có hình thức gì? | ✓ Rondo nhỏ A–B–A–C–A | Hình thức sonata | Chủ đề và biến tấu | Chủ đề Mi–Rê♯ vang lên ba lần, xen giữa là đoạn Fa trưởng (B) và đoạn kịch tính trên nốt La trầm (C).'
-  ly_do: 'n83 (da-sua): như Rondo thu nhỏ.'
+  - cu: 'Tám ô nhịp đầu của Für Elise thuộc loại nổi tiếng nhất trong nhạc piano, nhưng bài không dừng ở đó. Học trọn bài, bạn gặp ba nhân vật rất khác nhau: chủ đề La thứ trôi như nước, đoạn Fa trưởng duyên dáng với những đường chạy nhanh, và đoạn kịch tính trên nốt La trầm gõ liên tục.'
+    moi: 'Für Elise là một trong những tác phẩm nổi tiếng nhất của Beethoven, nhưng bài không dừng ở tám ô nhịp đầu. Học trọn bài, bạn gặp ba nhân vật rất khác nhau: chủ đề La thứ trôi như nước, đoạn Fa trưởng duyên dáng với những đường chạy nhanh, và đoạn kịch tính trên nốt La trầm gõ liên tục.'
+    ly_do: 'n2 (da-sua): Henle HN 1347: "one of Ludwig van Beethoven''s best-known works".'
+  - cu: Bản viết tay mà nhà nghiên cứu Ludwig Nohl được xem đề ngày 27 tháng 4 năm 1810. Nohl in bài này lần đầu năm 1867, bốn mươi năm sau khi Beethoven mất; bản viết tay ấy nay đã thất lạc
+    moi: Bản viết tay mà nhà nghiên cứu Ludwig Nohl được xem đề ngày 27 tháng 4, không ghi năm (có lẽ năm 1810). Nohl in bài này lần đầu năm 1867, bốn mươi năm sau khi Beethoven mất; bản viết tay ấy nay đã thất lạc
+    ly_do: 'Dữ liệu (thong_tin, hiện qua ::hop-tac-pham) sửa theo sua-A.yml, nhận định n18 của hồ sơ bản ghi: Henle HN 1347: "the 27th of April (without mention of a year)"; LvBWV: bản viết tay "wohl ebenfalls 1810". Chữ hiện qua ::hop-tac-pham: người giao thêm doi_chu cho trang sau khi áp.'
+  - cu: Khoảng ABRSM Grade 5 cho cả bài (ước lượng); riêng đoạn A khoảng Grade 3
+    moi: Khoảng ABRSM Grade 5 cho cả bài; RCM xếp bài ở Level 7 (đề cương 2022); riêng đoạn A khoảng Grade 3
+    ly_do: 'Dữ liệu (thong_tin, hiện qua ::hop-tac-pham) sửa theo sua-A.yml, nhận định n23 của hồ sơ bản ghi: Bài có trong đề cương RCM 2022 (Level 7, List B): ghi kỳ đề cương thay "(ước lượng)". Có điều kiện: bỏ "riêng đoạn A khoảng Grade 3" nếu lượt 2 không tìm được nguồn; khi ấy sửa luôn chip.'
+  - cu:
+      - Rondo thu nhỏ. Chủ đề quay lại ba lần, xen hai đoạn tương phản; bạn hiểu rondo bằng chính đôi tay.
+      - Đi hết bài. Rất nhiều người dừng ở tám ô đầu. Chơi trọn vẹn và hay cả bài là một bước trưởng thành thật sự.
+    moi:
+      - Rondo thu nhỏ. Chủ đề vang lên ba lần, xen giữa là hai đoạn tương phản; bạn hiểu rondo bằng chính đôi tay.
+      - Đi hết bài. Tám ô đầu chỉ là một phần nhỏ của bài. Chơi trọn vẹn và hay cả bài là một bước trưởng thành thật sự.
+    ly_do: 'n8 (da-sua): chủ đề có ba lần trong A–B–A–C–A. n10 (da-sua): "rất nhiều người dừng ở tám ô đầu" không kiểm được.'
+  - cu:
+      - Elisabeth Röckel, một nữ ca sĩ trẻ trong vòng bạn bè của Beethoven (có tài liệu gọi bà là "Elise"), về sau là vợ nhà soạn nhạc Johann Nepomuk Hummel.
+      - Elise Barensfeld, một cô bé ca sĩ có tài, quê ở Regensburg, sống ở Vienna vào thời gian đó.
+    moi:
+      - Elisabeth Röckel, về sau là vợ nhà soạn nhạc Johann Nepomuk Hummel. Đây là giả thuyết của Klaus Martin Kopitz; Michael Lorenz đã phản bác.
+      - Elise (Lisette) Barensfeld, có thể là học trò piano của Therese Malfatti năm 1810. Đây là giả thuyết của Rita Steblin.
+    ly_do: 'n24 (da-sua): theo LvBWV (Henle 2014); bỏ chi tiết chỉ có ở Wikipedia. n25 (da-sua): theo LvBWV (Henle 2014); quê Regensburg, ca sĩ: chưa có nguồn đã mở. n25 (da-sua): theo LvBWV (Henle 2014).'
+  - cu: 'So sánh vài bản thu. Để ý tốc độ: nhiều người chơi chủ đề rất chậm và mơ màng, trong khi Poco moto nghĩa là "hơi chuyển động". Nếu tìm được, nghe thêm một bản trên fortepiano, loại đàn piano thời Beethoven: tiếng nhẹ hơn, tắt nhanh hơn, và bàn đạp nghe khác hẳn.'
+    moi: 'So sánh vài bản thu. Để ý tốc độ: Poco moto nghĩa là "hơi chuyển động", nên chủ đề không cần chậm và mơ màng. Nếu tìm được, nghe thêm một bản trên fortepiano, loại đàn piano thời Beethoven, để nghe tiếng đàn và bàn đạp khác piano hiện đại thế nào.'
+    ly_do: 'n30, n31 (da-sua): bỏ nhận định về người chơi và về tiếng fortepiano chưa có nguồn.'
+  - cu: 'Bản Breitkopf & Härtel và nhiều ấn bản khác ghi bàn đạp cho từng ô có hợp âm rải tay trái ở chủ đề, nhả trước ô Mi–Rê♯. Nguyên tắc chung: đổi theo hòa âm, nhả hẳn khi giai điệu đi một mình. Ở đoạn B, dùng bàn đạp nông, đổi theo hợp âm; với đường chạy móc ba, giảm bàn đạp để từng nốt còn rõ. Ở đoạn C, bàn đạp ngắn cho từng hợp âm, hoặc rất ít, để nốt La lặp lại không thành tiếng ù.'
+    moi: 'Bản Breitkopf & Härtel 1888 ghi bàn đạp cho từng ô có hợp âm rải tay trái ở chủ đề, nhả trước ô Mi–Rê♯. Nguyên tắc chung: đổi theo hòa âm, nhả hẳn khi giai điệu đi một mình. Ở đoạn B, dùng bàn đạp nông, đổi theo hợp âm; với đường chạy móc ba, giảm bàn đạp để từng nốt còn rõ. Ở đoạn C, bàn đạp ngắn cho từng hợp âm, hoặc rất ít, để nốt La lặp lại không thành tiếng ù.'
+    ly_do: 'n70 (da-sua): "nhiều ấn bản khác" chưa kiểm.'
+  - cu: 'Vì bản viết tay đã mất, các ấn bản có thể khác nhau ở vài chi tiết như dấu luyến hay bàn đạp. Hãy dùng một bản Urtext và đọc phần chú thích của người biên tập. Các bản "đơn giản hóa" cho người mới học thường cắt bớt đoạn B và C hoặc đổi tay trái: tránh chúng khi bạn học bài thật.'
+    moi: Vì bản viết tay đã mất, các ấn bản có thể khác nhau ở vài chi tiết như dấu luyến. Hãy dùng một bản Urtext và đọc phần chú thích của người biên tập. Khi học bài thật, tránh các bản "đơn giản hóa" cho người mới học.
+    ly_do: 'n74 (da-sua), n75: bỏ "bàn đạp" và nhận định chung về bản đơn giản hóa (không nguồn).'
+  - cu: 'Cổ điển: Mozart: Sonata K. 545, cùng lối viết trong sáng nhưng dài hơi hơn.'
+    moi: 'Cổ điển: Mozart: Sonata K. 545, một sonata Cổ điển ở chặng sau.'
+    ly_do: 'n81 (da-sua): bỏ đánh giá "dài hơi hơn".'
+  - cu:
+      - Barry Cooper (biên tập), The Beethoven Compendium, Thames & Hudson, 1991.
+      - 'Lewis Lockwood, Beethoven: The Music and the Life, W. W. Norton, 2003.'
+      - Georg Kinsky, Hans Halm, Das Werk Beethovens, G. Henle Verlag, 1955 (danh mục, nơi đặt ký hiệu WoO).
+    moi:
+      - 'Beethoven, Bagatelle in a minor WoO 59 (Für Elise), G. Henle Verlag, HN 1347 (biên tập Joanna Cobb Biermann): lời nói đầu và bình chú trên trang ấn bản (phác thảo 1808 và 1810, Nohl và bản in 1867, các giả thuyết về Elise).'
+      - 'Ludwig van Beethoven. Thematisch-bibliographisches Werkverzeichnis, G. Henle Verlag, 2014 (danh mục, nơi đặt ký hiệu WoO): mục WoO 59.'
+      - 'Beethoven-Haus Bonn: trang tác phẩm WoO 59 và tờ phác thảo BH 116.'
+    ly_do: 'n87 (da-sua): mục Nguồn thay sách in chưa đọc bằng nguồn đã mở. n88 (da-sua): danh mục bản 2014 thay bản 1955. n87 (da-sua): nguồn mới. n89 (da-sua): nguồn mới.'
+  - cu: 'mô tả: Tám ô nhịp đầu của Für Elise thuộc loại nổi tiếng nhất trong nhạc piano, nhưng bài không dừng ở đó. Học trọn bài, bạn gặp ba nhân vật rất khác nhau: chủ đề La…'
+    moi: 'mô tả: Für Elise là một trong những tác phẩm nổi tiếng nhất của Beethoven, nhưng bài không dừng ở tám ô nhịp đầu. Học trọn bài, bạn gặp ba nhân vật rất khác nhau: chủ đề La…'
+    ly_do: 'n2 (da-sua): Henle HN 1347: "one of Ludwig van Beethoven''s best-known works".'
+  - cu: 'câu hỏi: Für Elise có hình thức gì? | ✓ Rondo nhỏ A–B–A–C–A | Hình thức sonata | Chủ đề và biến tấu | Chủ đề Mi–Rê♯ quay lại ba lần, xen giữa là đoạn Fa trưởng (B) và đoạn kịch tính trên nốt La trầm (C).'
+    moi: 'câu hỏi: Für Elise có hình thức gì? | ✓ Rondo nhỏ A–B–A–C–A | Hình thức sonata | Chủ đề và biến tấu | Chủ đề Mi–Rê♯ vang lên ba lần, xen giữa là đoạn Fa trưởng (B) và đoạn kịch tính trên nốt La trầm (C).'
+    ly_do: 'n83 (da-sua): như Rondo thu nhỏ.'
