@@ -10,7 +10,7 @@ lan:
     nguoi:
       luot_1: "Claude Opus 5.5 (D6-L9 phần A)"
       luot_2:
-      review:
+      review: Claude Opus 5.5 (review D6-L9-gom)
       kiem_mau:
 ghi_chu: 'Hướng dẫn nghe Tổ khúc cello số 1 BWV 1007, Prelude (tầng Tác phẩm; bản ghi tac-pham/bach-cello-1; loai: nghe là cấu trúc). Không có khối abc, không có ::hinh-cau-truc; ::khoi-nghe không có bản thu (không sửa). Bản nhạc: Mutopia bwv1007 (Schirmer 1916; .ly tải 06/11/2026), Prelude 42 ô, 4/4, Sol trưởng; cao độ từng ô tính bằng script (relative → tuyệt đối, đã chuyển quãng tám như \transpose c c, của file score): ô 1–4 trên nốt Sol2 (dây Sol buông), ô 22 fermata trên Rê4, ô 31–36 nốt La3 lặp lại, ô 37–38 nốt Rê3 lặp lại xen chuỗi nửa cung Fa3 → Fa♯4, ô 39–40 nốt cao nhất Sol4, ô 42 hợp âm Sol. Lịch sử: lời tựa Henle HN 666 (PDF), IMSLP (wikitext: 7 chương, bản in đầu Janet et Cotelle 1824, Piece Style), niên biểu Fundació Pau Casals, Gran Enciclopèdia Catalana (Casals), MusicBrainz (bản thu Casals EMI/HMV, Yo-Yo Ma CBS 1982, Sony 1997), Concise Oxford Dictionary of Music (sarabande, bariolage, broken chord). Sửa trang: n3, n7–n9, n11, n12, n14–n16, n20, n24–n26, n29, n32 (mục Nguồn), mô tả trang; bỏ n10 ("thế kỷ 19 coi là bài tập kỹ thuật"), n13 ("tập hơn chục năm"). Câu ở hồ sơ khác trỏ tới trang này (nhac-ly/31-hinh-thuc-nho n15, nhac-cu/cello n17, nhan-dien/the-loai n35, lich-su/thoi-ky/baroque n49): trang giữ địa chỉ, là hướng dẫn nghe Tổ khúc cello số 1 của Bach, giữ "Tổ khúc: Prelude và 5 điệu nhảy" và trật tự Prelude – Allemande – Courante – Sarabande – Menuet I và II – Gigue. Không tính là nhận định: tiêu đề mục, tiêu đề cột, mốc trong ::khoi-nghe. Thuật ngữ trang dùng mà thuat-ngu.yml chưa có: bariolage, hợp âm rải (arpeggio, có ở trang nhạc lý đã khóa), dây buông, sarabande, allemande, courante, gigue, prelude.'
 nguon:
@@ -70,6 +70,10 @@ nguon:
     bac: 2
     ten: 'data.bnf.fr, Johann Sebastian Bach (1685-1750)'
     link: https://data.bnf.fr/ark:/12148/cb118897907
+  - id: strad-casals
+    bac: 2
+    ten: 'The Strad, "Pablo Casals and the Bach cello suites: journey to a masterpiece" (lượt 2 đọc): Casals "was also not the first cellist to perform an entire Bach suite in public… as he liked to claim"; "Grützmacher in 1867, Alfredo Piatti in 1873, and Julius Klengel in 1894 and 1904"; Casals đưa trọn một tổ khúc vào chương trình từ khoảng 1902, người đầu tiên thu âm trọn bộ'
+    link: https://thestrad.com/for-subscribers/pablo-casals-and-the-bach-cello-suites-journey-to-a-masterpiece/16957.article
 nhan_dinh:
   - id: n1
     cau: 'Bảng: Johann Sebastian Bach (1685–1750).'
@@ -94,10 +98,11 @@ nhan_dinh:
     loai: nam
     nguon: [ henle-666, imslp-1007 ]
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Khoảng 1720, ở Köthen". Henle: "generally thought to have originated in or around 1720 during his tenure as court chapel-master in Cöthen" (năm chưa chắc, chỉ là nhận định chung); IMSLP "1717-23". Thêm "theo nhận định chung".'
+    ghi_chu: 'Chữ cũ: "Khoảng 1720, ở Köthen". Henle: "generally thought to have originated in or around 1720 during his tenure as court chapel-master in Cöthen" (năm chưa chắc, chỉ là nhận định chung); IMSLP "1717-23". Thêm "theo nhận định chung". Review D6-L9-gom: lượt 2 xác nhận chữ mới; đã đối chiếu chữ trang: khớp câu.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/6_Cello_Suites,_BWV_1007-1012_(Bach,_Johann_Sebastian)", "https://www.henle.de/Six-Suites-BWV-1007-1012-for-Violoncello-Solo/HN-666", "https://interlude.hk/the-special-meaning-of-bachs-solo-cello-suites/" ]
     luot_2_ghi_chu: "IMSLP: 'Composition Year 1717-23'. Henle (niên biểu Bach): 1717–23 là Kapellmeister ở Köthen. Interlude: 'believed to have been composed around 1720'."
+    review: dung
   - id: n4
     cau: 'Bảng: Thời kỳ Baroque.'
     loai: lich-su
@@ -130,91 +135,101 @@ nhan_dinh:
     loai: ten
     nguon: [ mb-casals, paucasals ]
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Pablo Casals (thu 1936–1939)". MusicBrainz: Prelude BWV 1007 "recorded in Paris 1938-06-02", phát hành lại trong "The Complete HMV Recordings, 1926-1955" và EMI CHS 7 61027 2; Suite 2 ở Abbey Road 1936, Suite 4–5 ở Paris 1939. Niên biểu Fundació Pau Casals: thu sáu tổ khúc ở London và Paris 1936–1939. Thêm hãng và năm theo yêu cầu của lô.'
+    ghi_chu: 'Chữ cũ: "Pablo Casals (thu 1936–1939)". MusicBrainz: Prelude BWV 1007 "recorded in Paris 1938-06-02", phát hành lại trong "The Complete HMV Recordings, 1926-1955" và EMI CHS 7 61027 2; Suite 2 ở Abbey Road 1936, Suite 4–5 ở Paris 1939. Niên biểu Fundació Pau Casals: thu sáu tổ khúc ở London và Paris 1936–1939. Thêm hãng và năm theo yêu cầu của lô. Review D6-L9-gom: lượt 2 xác nhận chữ mới; đã đối chiếu chữ trang: khớp câu.'
     luot_2: dung
     luot_2_nguon: [ "https://api.discogs.com/releases/3544215", "https://thestrad.com/for-subscribers/pablo-casals-and-the-bach-cello-suites-journey-to-a-masterpiece/16957.article", "https://www.classical-music.com/features/recordings/js-bach-cello-suites" ]
     luot_2_ghi_chu: "Discogs (HMV RLS 712): 'Suite no 2 & 3 recorded November 1936; Suite no 1 & 6 recorded June 1938; Suite no 4 & 5 recorded June 1939'. The Strad: suites 1 và 6 thu ở Paris tháng 6/1938; thu cho Fred Gaisberg (HMV). Classical Music: 'EMI', London và Paris 1936–1939."
+    review: dung
   - id: n8
     cau: 'Bảng: Bản thu gợi ý: Yo-Yo Ma (CBS Masterworks, thu 1982; Sony Classical, 1997).'
     loai: ten
     nguon: [ mb-ma, mb-ma2 ]
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Yo-Yo Ma" (không hãng, năm). MusicBrainz: thu ở Vanguard Studios 23/02/1982, phát hành "The 6 Unaccompanied Cello Suites" (CBS Records Masterworks M2K 37867); bản "The Cello Suites: Inspired by Bach" (Sony Classical S2K 63203, 1997).'
+    ghi_chu: 'Chữ cũ: "Yo-Yo Ma" (không hãng, năm). MusicBrainz: thu ở Vanguard Studios 23/02/1982, phát hành "The 6 Unaccompanied Cello Suites" (CBS Records Masterworks M2K 37867); bản "The Cello Suites: Inspired by Bach" (Sony Classical S2K 63203, 1997). Review D6-L9-gom: lượt 2 xác nhận chữ mới; đã đối chiếu chữ trang: khớp câu.'
     luot_2: dung
     luot_2_nguon: [ "https://librarycatalog.ecu.edu/catalog/3280522", "https://musicbrainz.org/release/c0cac0c5-60b4-4798-bde0-ca01ebd4d3bf" ]
     luot_2_ghi_chu: "Thư mục ECU: 'Recorded at Vanguard Studios, New York, N.Y. Feb. 23–May 12, 1982… Originally released as CBS Masterworks M2K 37867 in 1983'. MusicBrainz: 'The Cello Suites: Inspired by Bach', Sony Classical S2K 63203, 1997."
+    review: dung
   - id: n9
     cau: 'Bản viết tay của Bach đã mất; sáu tổ khúc còn lại qua bốn bản chép tay thế kỷ 18, trong đó bản của vợ ông, Anna Magdalena (chép trong khoảng 1727–1731), được coi là gần bản gốc nhất.'
     loai: lich-su
     nguon: [ henle-666 ]
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Bản viết tay của Bach đã mất; sáu tổ khúc cho cello còn lại chủ yếu qua bản chép tay của vợ ông, Anna Magdalena." Henle: bản viết tay không còn; bốn bản chép tay (A Anna Magdalena 1727–1731, B Kellner 1726, C hai người chép nửa sau thế kỷ 18, D cuối thế kỷ 18) và một bản in; "A is the source with the closest proximity to Bach’s original". "Chủ yếu qua" không đúng: có bốn bản. Mô tả trang viết lại theo câu này.'
+    ghi_chu: 'Chữ cũ: "Bản viết tay của Bach đã mất; sáu tổ khúc cho cello còn lại chủ yếu qua bản chép tay của vợ ông, Anna Magdalena." Henle: bản viết tay không còn; bốn bản chép tay (A Anna Magdalena 1727–1731, B Kellner 1726, C hai người chép nửa sau thế kỷ 18, D cuối thế kỷ 18) và một bản in; "A is the source with the closest proximity to Bach’s original". "Chủ yếu qua" không đúng: có bốn bản. Mô tả trang viết lại theo câu này. Review D6-L9-gom: lượt 2 xác nhận chữ mới; đã đối chiếu chữ trang: khớp câu.'
     luot_2: dung
     luot_2_nguon: [ "https://interlude.hk/the-special-meaning-of-bachs-solo-cello-suites/", "https://imslp.org/wiki/6_Cello_Suites,_BWV_1007-1012_(Bach,_Johann_Sebastian)", "https://www.barenreiter.co.uk/six-suites-for-violoncello-bwv-1007-1012.html", "https://www.georgcello.com/bachcellosuites.htm" ]
     luot_2_ghi_chu: "Interlude: bản gốc của Bach đã mất. IMSLP: bốn bản chép tay thế kỷ 18 (Anna Magdalena 'ca.1727-31', Kellner ca.1726, Schober và một người chép khuyết danh, và một bản khuyết danh cuối thế kỷ 18). Bärenreiter: năm nguồn (bốn bản chép cộng bản in 1824), bản Anna Magdalena là 'the most reliable of the sources'. Georg Mertens: 'regarded as possibly the closest to the original'. Có người cho rằng bà chép từ một bản trung gian, nên 'được coi là' là cách nói đúng mức."
+    review: dung
   - id: n10
     cau: 'Suốt thế kỷ 19, các tổ khúc bị coi là bài tập kỹ thuật.'
     loai: lich-su
     nguon: []
     ket_qua: da-bo
-    ghi_chu: 'Không tìm được nguồn bậc 1–2 đọc được (Henle, IMSLP, niên biểu Casals không nói). Bỏ ở trang và mô tả trang; thay bằng n11.'
+    ghi_chu: 'Không tìm được nguồn bậc 1–2 đọc được (Henle, IMSLP, niên biểu Casals không nói). Bỏ ở trang và mô tả trang; thay bằng n11. Review D6-L9-gom: giữ bỏ. Lượt 2 thấy nguồn mâu thuẫn (Siblin nói bị coi là bài tập; The Strad nói được in và chơi nhiều lần từ 1824); câu không cần cho hướng dẫn nghe, viết mềm thì vẫn cần nguồn bậc 2. Chữ không còn trên trang và mô tả trang.'
     luot_2: khong-chac
     luot_2_nguon: [ "https://groveatlantic.com/book/the-cello-suites/", "https://thestrad.com/for-subscribers/pablo-casals-and-the-bach-cello-suites-journey-to-a-masterpiece/16957.article" ]
     luot_2_ghi_chu: "Nguồn mâu thuẫn. Siblin (Grove Atlantic) nói những người biết các tổ khúc 'thought they were more technical exercises than anything fit for the concert hall'. Nhưng The Strad nói từ năm 1824 tới năm 1890 chúng 'had been not only edited and published repeatedly but also performed', có người chơi trọn tổ khúc (Grützmacher 1867, Piatti 1873). Nên viết mềm hơn: 'Suốt thế kỷ 19, các tổ khúc thường bị coi là bài tập kỹ thuật, ít được chơi trong hòa nhạc'."
+    review: dung
   - id: n11
     cau: 'Bản in đầu tiên ra ở Paris năm 1824.'
     loai: nam
     nguon: [ imslp-suites, imslp-1007 ]
     ket_qua: da-sua
-    ghi_chu: 'Câu mới thay n10. IMSLP: "Year of First Publication=1824* - Paris: Janet & Cotelle".'
+    ghi_chu: 'Câu mới thay n10. IMSLP: "Year of First Publication=1824* - Paris: Janet & Cotelle". Review D6-L9-gom: lượt 2 xác nhận chữ mới; đã đối chiếu chữ trang: khớp câu.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/6_Cello_Suites,_BWV_1007-1012_(Bach,_Johann_Sebastian)", "https://thestrad.com/for-subscribers/pablo-casals-and-the-bach-cello-suites-journey-to-a-masterpiece/16957.article" ]
     luot_2_ghi_chu: "IMSLP: 'First Publication 1824 – Paris: Janet & Cotelle'. The Strad: 'the first edition of the Cello Suites in Paris in 1824'."
+    review: dung
   - id: n12
     cau: 'Năm 1890, cậu bé 13 tuổi Pablo Casals tìm thấy một ấn bản (do Friedrich Grützmacher biên tập) ở Barcelona.'
     loai: lich-su
     nguon: [ paucasals, gec-casals ]
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Năm 1890, cậu bé 13 tuổi Pablo Casals tình cờ tìm thấy một ấn bản ở một cửa hàng ở Barcelona". Niên biểu: 1890, "Ed. Grützmacher", carrer Ample, Barcelona; Casals sinh 29/12/1876 nên năm 1890 là 13 tuổi. GEC: "en un magatzem de la Barcelona vella". Bỏ "tình cờ" (không nguồn), "cửa hàng" viết chung lại; thêm tên người biên tập.'
+    ghi_chu: 'Chữ cũ: "Năm 1890, cậu bé 13 tuổi Pablo Casals tình cờ tìm thấy một ấn bản ở một cửa hàng ở Barcelona". Niên biểu: 1890, "Ed. Grützmacher", carrer Ample, Barcelona; Casals sinh 29/12/1876 nên năm 1890 là 13 tuổi. GEC: "en un magatzem de la Barcelona vella". Bỏ "tình cờ" (không nguồn), "cửa hàng" viết chung lại; thêm tên người biên tập. Review D6-L9-gom: lượt 2 xác nhận chữ mới; đã đối chiếu chữ trang: khớp câu.'
     luot_2: dung
     luot_2_nguon: [ "https://thestrad.com/for-subscribers/pablo-casals-and-the-bach-cello-suites-journey-to-a-masterpiece/16957.article", "https://interlude.hk/the-special-meaning-of-bachs-solo-cello-suites/" ]
     luot_2_ghi_chu: "The Strad: 'Casals first came across an edition of the Cello Suites in Barcelona in 1890, when he was 13 years old'; 'what he had found was an 1866 concert edition… by Friedrich Grützmacher'. Interlude: 'an edition by cellist Friedrich Grützmacher'."
+    review: dung
   - id: n13
     cau: 'Casals tập các tổ khúc hơn chục năm trước khi biểu diễn công khai.'
     loai: lich-su
     nguon: []
     ket_qua: da-bo
-    ghi_chu: 'Chỉ thấy ở blog, bài báo phổ thông; niên biểu Fundació Pau Casals và GEC không ghi số năm. Bỏ.'
+    ghi_chu: 'Chỉ thấy ở blog, bài báo phổ thông; niên biểu Fundació Pau Casals và GEC không ghi số năm. Bỏ. Review D6-L9-gom: giữ bỏ. Lượt 2 chỉ có sách phổ thông (Siblin) cho con số 12 năm; câu không cần cho hướng dẫn nghe. Chữ không còn trên trang.'
     luot_2: dung
     luot_2_nguon: [ "https://groveatlantic.com/book/the-cello-suites/" ]
     luot_2_ghi_chu: "Siblin (Grove Atlantic): 'Casals would play the suites every day for twelve years before finally performing them in public'."
+    review: dung
   - id: n14
-    cau: 'Về sau Casals chơi trọn các tổ khúc trước công chúng, điều trước đó chưa ai làm.'
+    cau: 'Về sau, từ khoảng năm 1902, Casals đưa trọn từng tổ khúc vào chương trình hòa nhạc; ông là người đầu tiên thu âm trọn bộ.'
     loai: lich-su
-    nguon: [ gec-casals ]
+    nguon: [ gec-casals, strad-casals ]
     ket_qua: da-sua
-    ghi_chu: 'Câu mới, thay vế "tập chúng hơn chục năm trước khi biểu diễn công khai". GEC: "ningú abans no havia gosat tocar-les senceres en públic".'
+    ghi_chu: 'Câu mới, thay vế "tập chúng hơn chục năm trước khi biểu diễn công khai". GEC: "ningú abans no havia gosat tocar-les senceres en públic". Review D6-L9-gom: lượt 2 sai, có câu đúng (The Strad: Grützmacher 1867, Piatti 1873, Klengel 1894 đã chơi trọn một tổ khúc; Casals đưa trọn tổ khúc vào chương trình từ khoảng 1902, là người đầu tiên thu âm trọn bộ). Sửa trang theo câu đúng: bỏ vế "điều trước đó chưa ai làm" (GEC chép lời Casals tự nhận), thay bằng "từ khoảng năm 1902, ông đưa trọn từng tổ khúc vào chương trình hòa nhạc", thêm "lần đầu cả bộ được thu âm" sau năm thu. Không thêm vế Grützmacher, Piatti (không cần cho hướng dẫn nghe). Chữ mới lấy từ câu đúng của lượt 2: không chạy lại.'
     luot_2: sai
     luot_2_nguon: [ "https://thestrad.com/for-subscribers/pablo-casals-and-the-bach-cello-suites-journey-to-a-masterpiece/16957.article" ]
     luot_2_ghi_chu: "câu đúng: Về sau Casals đưa trọn từng tổ khúc vào chương trình hòa nhạc (từ khoảng năm 1902) và góp phần lớn làm chúng nổi tiếng. Ông hay nói trước ông chưa ai chơi trọn một tổ khúc, nhưng thật ra Grützmacher (1867), Piatti (1873) và Klengel (1894) đã làm vậy. Casals là người đầu tiên thu âm trọn bộ.; The Strad: Casals 'was also not the first cellist to perform an entire Bach suite in public… as he liked to claim'. 'A number of 19th-century cellists played an entire Bach suite in concert: Grützmacher in 1867, Alfredo Piatti in 1873, and Julius Klengel in 1894 and 1904'. Casals bắt đầu đưa trọn một tổ khúc vào chương trình hòa nhạc khoảng năm 1902. Ông là người đầu tiên thu âm trọn bộ."
+    review: dung
   - id: n15
     cau: 'Casals thu âm cả sáu tổ khúc trong các năm 1936–1939 ở London và Paris.'
     loai: nam
     nguon: [ paucasals, mb-casals ]
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "rồi thu âm trọn bộ cuối những năm 1930". Niên biểu: "Entre els anys 1936 i 1939 … enregistra a Londres i a París les Sis Suites"; MusicBrainz: Abbey Road 1936, Paris 1938, 1939. Viết cụ thể.'
+    ghi_chu: 'Chữ cũ: "rồi thu âm trọn bộ cuối những năm 1930". Niên biểu: "Entre els anys 1936 i 1939 … enregistra a Londres i a París les Sis Suites"; MusicBrainz: Abbey Road 1936, Paris 1938, 1939. Viết cụ thể. Review D6-L9-gom: lượt 2 xác nhận chữ mới; đã đối chiếu chữ trang: khớp câu.'
     luot_2: dung
     luot_2_nguon: [ "https://www.classical-music.com/features/recordings/js-bach-cello-suites", "https://api.discogs.com/releases/3544215", "https://thestrad.com/for-subscribers/pablo-casals-and-the-bach-cello-suites-journey-to-a-masterpiece/16957.article" ]
     luot_2_ghi_chu: "Classical Music: thu 'in the recording studios in London and Paris from 1936 to 1939'. Discogs: các ngày 11/1936, 6/1938, 6/1939. The Strad: London 11/1936, Paris 6/1938."
+    review: dung
   - id: n16
     cau: 'Từ Casals, các tổ khúc này có chỗ thường trực trong tiết mục của mọi nghệ sĩ cello.'
     loai: lich-su
     nguon: [ henle-666 ]
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Từ đó chúng trở thành "kinh thánh" của cây cello." (hình ảnh, không nguồn). Henle: "Ever since the days of Pablo Casals, Bach’s cello suites have enjoyed a permanent place in the repertoire of every cellist".'
+    ghi_chu: 'Chữ cũ: "Từ đó chúng trở thành "kinh thánh" của cây cello." (hình ảnh, không nguồn). Henle: "Ever since the days of Pablo Casals, Bach’s cello suites have enjoyed a permanent place in the repertoire of every cellist". Review D6-L9-gom: lượt 2 xác nhận chữ mới; đã đối chiếu chữ trang: khớp câu.'
     luot_2: dung
     luot_2_nguon: [ "https://groveatlantic.com/book/the-cello-suites/", "https://thestrad.com/for-subscribers/pablo-casals-and-the-bach-cello-suites-journey-to-a-masterpiece/16957.article" ]
     luot_2_ghi_chu: "Siblin trích Laurence Lesser: từ khi Casals chơi chúng, 'we now know how lucky we are to possess these extraordinary masterworks'. The Strad: Casals đưa các tổ khúc ra ánh sáng và là người đầu tiên thu trọn bộ."
+    review: dung
   - id: n17
     cau: 'Bach viết hòa âm cho một nhạc cụ chủ yếu chỉ chơi được một nốt mỗi lúc; lời giải là hợp âm rải.'
     loai: cau-truc
@@ -237,16 +252,18 @@ nhan_dinh:
     cau: 'Link Prelude cung Đô trưởng (/opus/piano/tac-pham/bach-prelude-do/).'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/content/docs/piano/tac-pham/bach-prelude-do.md có (D6-L3, hồ sơ kiem-dinh/piano/tac-pham/bach-prelude-do.yml; chưa khóa thì ở bản thật hiện "sắp có"); id có trong src/data/trang.yml.'
+    ghi_chu: 'src/content/docs/piano/tac-pham/bach-prelude-do.md có (D6-L3, hồ sơ kiem-dinh/piano/tac-pham/bach-prelude-do.yml; chưa khóa thì ở bản thật hiện "sắp có"); id có trong src/data/trang.yml. Review D6-L9-gom: src/content/docs/piano/tac-pham/bach-prelude-do.md có, id trong trang.yml; dist/piano/tac-pham/bach-prelude-do/ có ở bản xem (bản thật hiện "sắp có" tới khi khóa). Đúng.'
+    review: dung
   - id: n20
     cau: 'Prelude này giống Prelude cung Đô trưởng cho đàn phím (cùng dựng trên hợp âm rải), nhưng trên một cây đàn dây.'
     loai: cau-truc
     nguon: [ mutopia-846, mutopia-1007 ]
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "nhưng trên một dây đàn" (dễ hiểu thành một sợi dây, sai: Prelude dùng cả bốn dây). Mutopia BWV 846: mỗi ô một hợp âm rải; BWV 1007 như n17.'
+    ghi_chu: 'Chữ cũ: "nhưng trên một dây đàn" (dễ hiểu thành một sợi dây, sai: Prelude dùng cả bốn dây). Mutopia BWV 846: mỗi ô một hợp âm rải; BWV 1007 như n17. Review D6-L9-gom: lượt 2 xác nhận chữ mới; đã đối chiếu chữ trang: khớp câu.'
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BachJS/BWV1007/bwv1007/bwv1007-lys.zip", "https://www.mutopiaproject.org/ftp/BachJS/BWV846/wtk1-prelude1/wtk1-prelude1.ly" ]
     luot_2_ghi_chu: "Prelude BWV 1007 (Mutopia): hợp âm rải móc kép suốt bài. Prelude cung Đô trưởng BWV 846 (Mutopia): mỗi ô là một hợp âm rải ('r8 g16 c' e' g c' e'…')."
+    review: dung
   - id: n21
     cau: 'Tổ khúc theo trật tự: Prelude – Allemande – Courante – Sarabande – Menuet I và II – Gigue.'
     loai: cau-truc
@@ -279,28 +296,31 @@ nhan_dinh:
     loai: cau-truc
     nguon: [ mutopia-1007 ]
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Nhạc dừng lại trên một nốt La (âm át của giọng Rê trưởng), như lấy hơi". Mutopia ô 22: "c,( a'' d) fis a cis d8\fermata": dấu fermata trên nốt Rê4, sau hợp âm Rê7 (Đô bình ở bè trầm ô 21–22), tức dừng trên âm át của Sol trưởng. Không có fermata trên nốt La.'
+    ghi_chu: 'Chữ cũ: "Nhạc dừng lại trên một nốt La (âm át của giọng Rê trưởng), như lấy hơi". Mutopia ô 22: "c,( a'' d) fis a cis d8\fermata": dấu fermata trên nốt Rê4, sau hợp âm Rê7 (Đô bình ở bè trầm ô 21–22), tức dừng trên âm át của Sol trưởng. Không có fermata trên nốt La. Review D6-L9-gom: lượt 2 xác nhận chữ mới; đã đối chiếu chữ trang: khớp câu.'
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BachJS/BWV1007/bwv1007/bwv1007-a4-pdfs.zip", "https://www.mutopiaproject.org/ftp/BachJS/BWV1007/bwv1007/bwv1007-lys.zip" ]
     luot_2_ghi_chu: "Ô 22: 'd8\\fermata' trên nốt Rê (Rê4), sau chuỗi La, Rê, Fa♯, La, Đô♯: âm át của Sol trưởng."
+    review: dung
   - id: n25
     cau: 'Theo dõi, dòng 4: đoạn bariolage, nốt La lặp lại (đúng cao độ dây La buông của cello) xen kẽ liên tục với các nốt khác.'
     loai: cau-truc
     nguon: [ mutopia-1007, cod-bariolage ]
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Đoạn bariolage: nốt La trên dây buông xen kẽ liên tục với những nốt bấm đi lên, tạo tiếng ngân vang như chuông". Mutopia ô 31–36: La3 (cao độ dây La buông) xen với Fa♯3, Rê3, Mi3, Sol3, rồi Si3, Đô4, Rê4: các nốt khác đi lên rồi đi xuống, không chỉ đi lên. Bản nhạc không ghi dây nào chơi nốt La, nên viết "đúng cao độ dây La buông". COD bariolage: "Rapid alternation of open and stopped str.". Bỏ hình ảnh "như chuông".'
+    ghi_chu: 'Chữ cũ: "Đoạn bariolage: nốt La trên dây buông xen kẽ liên tục với những nốt bấm đi lên, tạo tiếng ngân vang như chuông". Mutopia ô 31–36: La3 (cao độ dây La buông) xen với Fa♯3, Rê3, Mi3, Sol3, rồi Si3, Đô4, Rê4: các nốt khác đi lên rồi đi xuống, không chỉ đi lên. Bản nhạc không ghi dây nào chơi nốt La, nên viết "đúng cao độ dây La buông". COD bariolage: "Rapid alternation of open and stopped str.". Bỏ hình ảnh "như chuông". Review D6-L9-gom: lượt 2 xác nhận chữ mới; đã đối chiếu chữ trang: khớp câu.'
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BachJS/BWV1007/bwv1007/bwv1007-a4-pdfs.zip", "https://www.mutopiaproject.org/ftp/BachJS/BWV1007/bwv1007/bwv1007-lys.zip" ]
     luot_2_ghi_chu: "Ô 31–36: nốt La (dòng trên khóa Fa, La3 = dây La buông) xen kẽ liên tục với các nốt khác ('fis a d, a' g a e a…'); bè trên ô 33–36 chỉ toàn La."
+    review: dung
   - id: n26
     cau: 'Theo dõi, dòng 5: nốt Rê lặp lại xen kẽ với các nốt đi lên theo nửa cung, căng thẳng dần đến nốt cao nhất của bài.'
     loai: cau-truc
     nguon: [ mutopia-1007 ]
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Giai điệu đi lên theo nửa cung, căng thẳng dần đến điểm cao nhất". Mutopia ô 37–38: Rê3 xen với Fa3, Fa♯3, Sol3, Sol♯3, La3, Si♭3, Si3, Đô4, Đô♯4, Rê4, Mi♭4, Mi4, Fa4, Fa♯4; ô 39–40 lên Sol4, nốt cao nhất cả bài (script đọc mọi ô). Thêm nốt Rê lặp lại.'
+    ghi_chu: 'Chữ cũ: "Giai điệu đi lên theo nửa cung, căng thẳng dần đến điểm cao nhất". Mutopia ô 37–38: Rê3 xen với Fa3, Fa♯3, Sol3, Sol♯3, La3, Si♭3, Si3, Đô4, Đô♯4, Rê4, Mi♭4, Mi4, Fa4, Fa♯4; ô 39–40 lên Sol4, nốt cao nhất cả bài (script đọc mọi ô). Thêm nốt Rê lặp lại. Review D6-L9-gom: lượt 2 xác nhận chữ mới; đã đối chiếu chữ trang: khớp câu.'
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BachJS/BWV1007/bwv1007/bwv1007-a4-pdfs.zip", "https://www.mutopiaproject.org/ftp/BachJS/BWV1007/bwv1007/bwv1007-lys.zip" ]
     luot_2_ghi_chu: "Ô 37–38: Rê trầm xen kẽ với các nốt đi lên theo nửa cung ('d, e f d fis d g d gis d a' d, bes' d, | b' d, c' d, cis' d, d' d, ees' d, e' d, f' d, fis' d,'), tới Sol4 ở ô 39, nốt cao nhất bài (bản PDF)."
+    review: dung
   - id: n27
     cau: 'Theo dõi, dòng 6: những hợp âm cuối cùng, kết về Sol trưởng.'
     loai: cau-truc
@@ -323,29 +343,33 @@ nhan_dinh:
     loai: cau-truc
     nguon: [ mutopia-1007, cod-sarabande ]
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "một điệu nhảy chậm, nhịp 3/4, trọng âm rơi vào phách 2". Mutopia bwv1007_sarabande.ly: \time 3/4; COD: "slow triple time". Vế "trọng âm phách 2" không có nguồn bậc 1–2 đọc được (COD không nói); cùng cách xử lý ở piano/the-loai (D4-gom bỏ "thường nhấn vào phách 2").'
+    ghi_chu: 'Chữ cũ: "một điệu nhảy chậm, nhịp 3/4, trọng âm rơi vào phách 2". Mutopia bwv1007_sarabande.ly: \time 3/4; COD: "slow triple time". Vế "trọng âm phách 2" không có nguồn bậc 1–2 đọc được (COD không nói); cùng cách xử lý ở piano/the-loai (D4-gom bỏ "thường nhấn vào phách 2"). Review D6-L9-gom: lượt 2 xác nhận chữ mới; đã đối chiếu chữ trang: khớp câu.'
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BachJS/BWV1007/bwv1007/bwv1007-lys.zip" ]
     luot_2_ghi_chu: "Sarabande (Mutopia): '\\time 3/4'. Sarabande là điệu nhảy chậm (Mutopia không ghi tốc độ; theo cách hiểu chung)."
+    review: dung
   - id: n30
     cau: 'Link mẫu ghi chép (/opus/nghe-nhac/mau/).'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/content/docs/nghe-nhac/mau.md có; id có trong src/data/trang.yml.'
+    ghi_chu: 'src/content/docs/nghe-nhac/mau.md có; id có trong src/data/trang.yml. Review D6-L9-gom: src/content/docs/nghe-nhac/mau.md có (khung, hồ sơ nghe-nhac/mau), id có trong src/data/trang.yml; bản xem dựng dist/nghe-nhac/mau/. Đúng.'
+    review: dung
   - id: n31
     cau: 'Link về thời kỳ Baroque (/opus/lich-su/thoi-ky/baroque/).'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/content/docs/lich-su/thoi-ky/baroque.md có, đã khóa (kiem-dinh/khoa.json).'
+    ghi_chu: 'src/content/docs/lich-su/thoi-ky/baroque.md có, đã khóa (kiem-dinh/khoa.json). Review D6-L9-gom: src/content/docs/lich-su/thoi-ky/baroque.md có, đã khóa. Đúng.'
+    review: dung
   - id: n32
     cau: 'Mục Nguồn: Mutopia (Schirmer 1916), IMSLP, lời tựa Henle HN 666, niên biểu Fundació Pau Casals, MusicBrainz.'
     loai: ten
     nguon: [ mutopia-1007, imslp-suites, henle-666, paucasals, mb-casals ]
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Tổng phổ và bản chép tay: IMSLP (tìm "BWV 1007")". Thay bằng nguồn đã đọc, link thẳng.'
+    ghi_chu: 'Chữ cũ: "Tổng phổ và bản chép tay: IMSLP (tìm "BWV 1007")". Thay bằng nguồn đã đọc, link thẳng. Review D6-L9-gom: lượt 2 xác nhận chữ mới; đã đối chiếu chữ trang: khớp câu.'
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BachJS/BWV1007/bwv1007/bwv1007-lys.zip", "https://imslp.org/wiki/6_Cello_Suites,_BWV_1007-1012_(Bach,_Johann_Sebastian)", "https://www.henle.de/Six-Suites-BWV-1007-1012-for-Violoncello-Solo/HN-666", "https://www.paucasals.org/en/", "https://musicbrainz.org/release/c0cac0c5-60b4-4798-bde0-ca01ebd4d3bf" ]
     luot_2_ghi_chu: "Mutopia: 'source = Schirmer, 1916'. IMSLP có trang tác phẩm. Henle HN 666 có lời tựa ('Preface'). Fundació Pau Casals (paucasals.org) có mục 'Chronology'. MusicBrainz có các bản ghi."
+    review: dung
 khuong_nhac: []
 doi_chu:
   - cu: 'mô tả: Bản viết tay của Bach đã mất; sáu tổ khúc cho cello còn lại chủ yếu qua bản chép tay của vợ ông, Anna Magdalena. Suốt thế kỷ 19, chúng bị coi là bài tập kỹ…'
@@ -358,8 +382,8 @@ doi_chu:
     moi: 'Pablo Casals (HMV, thu 1936–1939; Prelude số 1 thu ở Paris năm 1938); Yo-Yo Ma (CBS Masterworks, thu 1982; Sony Classical, 1997)'
     ly_do: 'n7, n8: MusicBrainz, niên biểu Fundació Pau Casals.'
   - cu: 'Bản viết tay của Bach đã mất; sáu tổ khúc cho cello còn lại chủ yếu qua bản chép tay của vợ ông, Anna Magdalena. Suốt thế kỷ 19, chúng bị coi là bài tập kỹ thuật. Năm 1890, cậu bé 13 tuổi Pablo Casals tình cờ tìm thấy một ấn bản ở một cửa hàng ở Barcelona, tập chúng hơn chục năm trước khi biểu diễn công khai, rồi thu âm trọn bộ cuối những năm 1930. Từ đó chúng trở thành "kinh thánh" của cây cello.'
-    moi: 'Bản viết tay của Bach đã mất; sáu tổ khúc cho cello còn lại qua bốn bản chép tay thế kỷ 18, trong đó bản của vợ ông, Anna Magdalena (chép trong khoảng 1727–1731), được coi là gần bản gốc nhất. Bản in đầu tiên ra ở Paris năm 1824. Năm 1890, cậu bé 13 tuổi Pablo Casals tìm thấy một ấn bản (do Friedrich Grützmacher biên tập) ở Barcelona; về sau ông chơi trọn các tổ khúc trước công chúng, điều trước đó chưa ai làm, rồi thu âm cả sáu bản trong các năm 1936–1939 ở London và Paris. Từ Casals, các tổ khúc này có chỗ thường trực trong tiết mục của mọi nghệ sĩ cello.'
-    ly_do: 'n9–n16: Henle HN 666, IMSLP, niên biểu Fundació Pau Casals, Gran Enciclopèdia Catalana, MusicBrainz.'
+    moi: 'Bản viết tay của Bach đã mất; sáu tổ khúc cho cello còn lại qua bốn bản chép tay thế kỷ 18, trong đó bản của vợ ông, Anna Magdalena (chép trong khoảng 1727–1731), được coi là gần bản gốc nhất. Bản in đầu tiên ra ở Paris năm 1824. Năm 1890, cậu bé 13 tuổi Pablo Casals tìm thấy một ấn bản (do Friedrich Grützmacher biên tập) ở Barcelona; về sau, từ khoảng năm 1902, ông đưa trọn từng tổ khúc vào chương trình hòa nhạc, rồi thu âm cả sáu bản trong các năm 1936–1939 ở London và Paris, lần đầu cả bộ được thu âm. Từ Casals, các tổ khúc này có chỗ thường trực trong tiết mục của mọi nghệ sĩ cello.'
+    ly_do: 'n9–n16: Henle HN 666, IMSLP, niên biểu Fundació Pau Casals, Gran Enciclopèdia Catalana, MusicBrainz; n14 theo câu đúng của lượt 2 (The Strad), review D6-L9-gom.'
   - cu: 'Thử thách của Bach: viết hòa âm cho một nhạc cụ chủ yếu chỉ chơi được một nốt mỗi lúc. Lời giải là hợp âm rải: các nốt của hợp âm vang lên lần lượt, tai người nghe tự ghép chúng lại. Giống Prelude cung Đô trưởng cho đàn phím, nhưng trên một dây đàn.'
     moi: 'Thử thách của Bach: viết hòa âm cho một nhạc cụ chủ yếu chỉ chơi được một nốt mỗi lúc. Lời giải là hợp âm rải: các nốt của hợp âm vang lên lần lượt, tai người nghe tự ghép chúng lại. Giống Prelude cung Đô trưởng cho đàn phím, nhưng trên một cây đàn dây.'
     ly_do: 'n20: Mutopia BWV 1007 dùng cả bốn dây.'

@@ -11,7 +11,7 @@ tac_pham: mozart-nu-hoang-bong-dem
 | Công diễn | Vienna, ngày 30/9/1791, hơn hai tháng trước khi Mozart mất |
 | Aria | *Der Hölle Rache kocht in meinem Herzen* (Lửa thù địa ngục sôi sục trong tim ta), màn 2, số 14 |
 | Giọng | Soprano màu sắc (coloratura) |
-| Độ dài | Khoảng 3–4 phút |
+| Độ dài | Khoảng 3 phút |
 | Bản thu gợi ý | Diana Damrau trong dàn dựng của David McVicar ở Royal Opera House, London, chỉ huy Colin Davis (thu năm 2003, DVD của Opus Arte) |
 
 ## Điều cần biết trước khi nghe

@@ -12,13 +12,13 @@ tac_pham: mozart-requiem
 | Hoàn thành | Chủ yếu bởi học trò Franz Xaver Süssmayr |
 | Thời kỳ | Cổ điển |
 | Thể loại | Lễ cầu hồn cho hợp xướng, 4 giọng độc xướng và dàn nhạc |
-| Độ dài | Khoảng 50–55 phút; phần trong bảng "Theo dõi khi nghe" (từ *Introitus* đến *Lacrimosa*) khoảng 30 phút |
+| Độ dài | Khoảng 45–55 phút; phần trong bảng "Theo dõi khi nghe" (từ *Introitus* đến *Lacrimosa*) khoảng 25–30 phút |
 
 ## Điều cần biết trước khi nghe
 
 Mùa hè năm 1791, Mozart nhận đơn đặt hàng **giấu tên** viết một bản Requiem. Người đặt về sau được biết là **bá tước Franz von Walsegg**, muốn tưởng nhớ người vợ vừa mất (và có lẽ định nhận là tác phẩm của mình). Mozart viết Requiem xen với *Cây sáo thần* và vở opera *La clemenza di Tito*; ông nằm liệt giường từ ngày 20/11/1791 và mất khi bản nhạc còn dang dở. Quanh sự ra đời của Requiem có nhiều giai thoại và truyền thuyết.
 
-Ai viết phần nào? Mozart hoàn thành trọn vẹn **Introitus**; viết các bè hát, bè trầm và nhiều gợi ý dàn nhạc từ **Kyrie** đến **Hostias**; và chỉ viết **8 ô nhịp đầu** của **Lacrimosa**. Mozart để lại nhiều nợ; vợ ông, Constanze, nhờ bạn bè của Mozart hoàn thành bản nhạc, và sau hai lần không thành, việc đến tay học trò Süssmayr. Ngày nay có nhiều phiên bản hoàn thành khác nhau; phiên bản Süssmayr là phiên bản truyền thống, được biết đến nhiều nhất.
+Ai viết phần nào? Mozart viết gần trọn **Introitus**, kể cả phối khí; viết các bè hát, bè trầm và nhiều gợi ý dàn nhạc từ **Kyrie** đến **Hostias**; và chỉ viết **8 ô nhịp đầu** của **Lacrimosa**. Mozart để lại nhiều nợ; vợ ông, Constanze, nhờ bạn bè của Mozart hoàn thành bản nhạc, và sau vài lần không thành, việc đến tay học trò Süssmayr. Ngày nay có nhiều phiên bản hoàn thành khác nhau; phiên bản Süssmayr là phiên bản truyền thống, được biết đến nhiều nhất.
 
 **Requiem** (lễ cầu hồn) là thánh lễ Công giáo cho người đã mất, hát bằng tiếng Latin. Đoạn *Dies irae* ("Ngày thịnh nộ") mô tả ngày phán xét cuối cùng.
 
@@ -47,7 +47,7 @@ Bảng đi qua các đoạn đầu của Requiem, từ *Introitus* đến *Lacri
 
 ## Câu hỏi để nghe chủ động
 
-- Ở thời Baroque, trombone chỉ được dùng trong nhạc nhà thờ. Tiếng trombone ở *Tuba mirum* tạo cảm giác gì?
+- Ở thời Baroque, trombone chủ yếu được dùng trong nhạc nhà thờ. Tiếng trombone ở *Tuba mirum* tạo cảm giác gì?
 - Ở *Confutatis*, bạn có nghe ra sự đối lập giữa bè nam và bè nữ không?
 - Biết rằng Lacrimosa chỉ có 8 ô nhịp của Mozart, bạn có nghe ra chỗ "đổi người viết" không?
 

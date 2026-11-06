@@ -16,7 +16,7 @@ tac_pham: bach-cello-1
 
 ## Điều cần biết trước khi nghe
 
-Bản viết tay của Bach đã mất; sáu tổ khúc cho cello còn lại qua bốn bản chép tay thế kỷ 18, trong đó bản của vợ ông, Anna Magdalena (chép trong khoảng 1727–1731), được coi là gần bản gốc nhất. Bản in đầu tiên ra ở Paris năm 1824. Năm 1890, cậu bé 13 tuổi **Pablo Casals** tìm thấy một ấn bản (do Friedrich Grützmacher biên tập) ở Barcelona; về sau ông chơi trọn các tổ khúc trước công chúng, điều trước đó chưa ai làm, rồi thu âm cả sáu bản trong các năm 1936–1939 ở London và Paris. Từ Casals, các tổ khúc này có chỗ thường trực trong tiết mục của mọi nghệ sĩ cello.
+Bản viết tay của Bach đã mất; sáu tổ khúc cho cello còn lại qua bốn bản chép tay thế kỷ 18, trong đó bản của vợ ông, Anna Magdalena (chép trong khoảng 1727–1731), được coi là gần bản gốc nhất. Bản in đầu tiên ra ở Paris năm 1824. Năm 1890, cậu bé 13 tuổi **Pablo Casals** tìm thấy một ấn bản (do Friedrich Grützmacher biên tập) ở Barcelona; về sau, từ khoảng năm 1902, ông đưa trọn từng tổ khúc vào chương trình hòa nhạc, rồi thu âm cả sáu bản trong các năm 1936–1939 ở London và Paris, lần đầu cả bộ được thu âm. Từ Casals, các tổ khúc này có chỗ thường trực trong tiết mục của mọi nghệ sĩ cello.
 
 Thử thách của Bach: viết **hòa âm** cho một nhạc cụ chủ yếu chỉ chơi được **một nốt mỗi lúc**. Lời giải là **hợp âm rải**: các nốt của hợp âm vang lên lần lượt, tai người nghe tự ghép chúng lại. Giống [Prelude cung Đô trưởng](/opus/piano/tac-pham/bach-prelude-do/) cho đàn phím, nhưng trên một cây đàn dây.
 

@@ -32,7 +32,7 @@ Một truyền thống thú vị: ở Anh, **khán giả** đôi khi vẫn **đ�
 | Đoạn 1 | "for the Lord God omnipotent reigneth" (vì Chúa Toàn Năng đang trị vì) | Các bè hát đồng âm (cùng giai điệu, cách nhau quãng tám) trước, rồi lần lượt vào đuổi nhau, xen kẽ tiếng hô Hallelujah |
 | Đoạn 2 | "The kingdom of this world is become…" (nước thế gian đã trở nên…) | Bốn bè cùng nhịp, nốt dài, như thánh ca |
 | Đoạn 3 | "and He shall reign for ever and ever" (Ngài sẽ trị vì đời đời) | **Fugue**: chủ đề mở bằng một bước nhảy quãng lớn, các bè vào lần lượt: bass, tenor, alto, soprano |
-| Cao trào | "King of kings, and Lord of Lords" (Vua các vua, Chúa các chúa) | Soprano (lúc đầu cùng alto) giữ một nốt dài, rồi mỗi lần lên cao hơn một bậc, trumpet giữ cùng nốt; các bè khác đáp "for ever and ever, Hallelujah" |
+| Cao trào | "King of kings, and Lord of Lords" (Vua các vua, Chúa các chúa) | Soprano (lúc đầu cùng alto) giữ nốt La dài hai lần, rồi lên Rê và từ đó mỗi lần lên cao hơn một bậc (Rê, Mi, Fa♯, Sol); trumpet giữ cùng nốt (lúc còn ở La thì cao hơn một quãng tám); các bè khác đáp "for ever and ever, Hallelujah" |
 | Kết | Cả hợp xướng và dàn nhạc im lặng hai phách, rồi tiếng "Hallelujah" cuối bằng nốt dài | — |
 
 ## Nghe kèm bản thu
@@ -47,7 +47,7 @@ Một truyền thống thú vị: ở Anh, **khán giả** đôi khi vẫn **đ�
 | … | **"for the Lord God omnipotent reigneth"**: các bè hát cùng một giai điệu trước, rồi tách ra đuổi nhau, tiếng "Hallelujah" xen vào giữa |
 | … | **"The kingdom of this world is become…"**: nhạc chùng xuống, bốn bè hát cùng nhịp bằng nốt dài, như một bài thánh ca |
 | … | **"and He shall reign for ever and ever"**: bè bass cất lên chủ đề mở bằng một bước nhảy quãng lớn, rồi tenor, alto, soprano lần lượt đuổi theo; đây là đoạn **fugue** (xem [Fugue](/opus/hinh-thuc/fugue/)) |
-| … | **"King of kings, and Lord of Lords"**: soprano (cùng trumpet) giữ một nốt dài, rồi mỗi lần lên cao hơn một bậc, các bè khác đáp "for ever and ever, Hallelujah" |
+| … | **"King of kings, and Lord of Lords"**: soprano (cùng trumpet) giữ nốt La dài hai lần, rồi lên Rê và từ đó mỗi lần lên cao hơn một bậc, các bè khác đáp "for ever and ever, Hallelujah" |
 | … | Đột ngột **im lặng** hai phách, rồi một tiếng "Hallelujah" cuối cùng bằng nốt dài khép lại |
 
 ## Câu hỏi để nghe chủ động
