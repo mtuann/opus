@@ -2971,6 +2971,10 @@ ul.oz-ds-bai > li:last-child {
 	border-radius: 8px;
 	background: var(--sl-color-gray-7, var(--sl-color-gray-6));
 }
+/* Không có JavaScript thì bộ lọc không làm gì: ẩn cho tới khi danh-muc.js gắn (data-san), vẫn giữ chỗ để bố cục không nhảy (CLS) */
+.oz-danh-muc:not([data-san]) .oz-dm-loc {
+	visibility: hidden;
+}
 .oz-danh-muc .oz-dm-loc > * {
 	margin-top: 0; /* Starlight đặt lề trên cho phần tử liền sau trong bài: các ô cùng hàng phải thẳng nhau */
 }

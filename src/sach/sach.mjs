@@ -7,6 +7,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { THU_MUC_TAC_PHAM, banGhiCuaTrang } from '../ban-build.mjs';
 import { duLieuDaKiem } from '../du-lieu.mjs';
 import { dinhNghiaKyHieu } from '../scripts/ve.js';
 import { chuCua, docCay, doiCon, ghi, lop, tim, timHet } from './html.mjs';
@@ -26,36 +27,35 @@ export const THU_TU_TAC_PHAM = {
 };
 
 /**
- * Chương tác phẩm của sách (D6-L11), đọc từ src/data/tac-pham.yml để tác phẩm thêm sau đợt 6 tự vào sách:
- * - `bai-hoc`: trang chính của mọi bản ghi bài học (piano/tac-pham/<slug>/);
- * - `nghe`: trang chính của mọi bản ghi hướng dẫn nghe, cộng trang cap trong nghe-nhac/ mà bài học dùng chung bản ghi (như
- *   nghe-nhac/beethoven-moonlight của beethoven-anh-trang).
- * Trang có trong THU_TU_TAC_PHAM giữ thứ tự ấy; trang mới: bài học chen vào sau bài cuối cùng có chặng không lớn hơn (giữ
- * thứ tự chặng của cuốn), hướng dẫn nghe thêm vào cuối; nhiều trang mới thì theo thứ tự trong tac-pham.yml. Trang thứ tự cũ mà
- * dữ liệu không còn thì bỏ. Chỉ đọc slug, loai, cap, chang để xếp chương: chương chỉ vào sách khi trang có trong bản build
- * (bản thật: trang đã khóa), nên không hiện trường nào của bản ghi.
+ * Chương tác phẩm của sách (D6-L11), đọc từ dữ liệu để tác phẩm thêm sau đợt 6 tự vào sách: các trang trong thư mục của
+ * loại (piano/tac-pham/ hay nghe-nhac/) khai tac_pham là một bản ghi của src/data/tac-pham.yml (`cuaTrang`,
+ * banGhiCuaTrang của src/ban-build.mjs, dùng chung với danh mục tác phẩm): trang chính của bản ghi, trang cap dùng chung bản
+ * ghi (như nghe-nhac/beethoven-moonlight của beethoven-anh-trang) và trang cap có bản ghi riêng (là trang chính của bản ghi
+ * ấy) đều vào một lần.
+ * Trang có trong THU_TU_TAC_PHAM giữ thứ tự ấy; trang mới: bài học chen vào trước bài đầu tiên có chặng lớn hơn (không có thì
+ * cuối; thứ tự cũ không tăng dần hẳn, nên không chen sau bài cuối cùng cùng chặng), hướng dẫn nghe thêm vào cuối; nhiều
+ * trang mới thì theo thứ tự trong tac-pham.yml. Trang thứ tự cũ mà dữ liệu không còn thì bỏ. Chỉ đọc slug, loai, chang để
+ * xếp chương: chương chỉ vào sách khi trang có trong bản build (bản thật: trang đã khóa), nên không hiện trường nào của bản ghi.
  * @returns {string[]} địa chỉ như "piano/tac-pham/fur-elise/"
  */
-export function chuongTacPham(loai, tacPham = duLieuDaKiem()['tac-pham'], thuTu = THU_TU_TAC_PHAM[loai]) {
-	const goc = loai === 'bai-hoc' ? 'piano/tac-pham/' : 'nghe-nhac/';
+export function chuongTacPham(loai, tacPham = duLieuDaKiem()['tac-pham'], thuTu = THU_TU_TAC_PHAM[loai], cuaTrang = banGhiCuaTrang()) {
+	const goc = THU_MUC_TAC_PHAM[loai];
 	const chang = new Map(); // trang -> chặng (bài học)
-	const coRieng = new Set(tacPham.map((r) => (r.loai === 'bai-hoc' ? 'piano/tac-pham/' : 'nghe-nhac/') + r.slug));
 	const trang = [];
 	for (const r of tacPham) {
-		if (r.loai === loai) {
-			trang.push(goc + r.slug);
-			chang.set(goc + r.slug, r.chang);
-		} else if (r.cap?.startsWith(goc) && !coRieng.has(r.cap)) trang.push(r.cap);
+		for (const [t, s] of cuaTrang) {
+			if (s !== r.slug || !t.startsWith(goc)) continue;
+			trang.push(t);
+			if (r.loai === 'bai-hoc' && r.chang !== undefined) chang.set(t, r.chang);
+		}
 	}
 	const co = new Set(trang);
 	const ds = thuTu.map((n) => goc + n).filter((t) => co.has(t));
 	for (const t of trang) {
 		if (ds.includes(t)) continue;
-		let i = ds.length;
-		if (loai === 'bai-hoc' && chang.get(t) !== undefined) {
-			i = ds.findLastIndex((x) => (chang.get(x) ?? 0) <= chang.get(t)) + 1;
-		}
-		ds.splice(i, 0, t);
+		let i = -1;
+		if (loai === 'bai-hoc' && chang.has(t)) i = ds.findIndex((x) => (chang.get(x) ?? 0) > chang.get(t));
+		ds.splice(i < 0 ? ds.length : i, 0, t);
 	}
 	return ds.map((t) => `${t}/`);
 }

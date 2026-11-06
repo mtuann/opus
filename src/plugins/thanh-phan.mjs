@@ -6,7 +6,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { markdownToHtml } from 'satteri';
 import { parse as parseYaml } from 'yaml';
-import { DUONG_GOC, trangCuaDiaChi, trangTrongBan } from '../ban-build.mjs';
+import { DUONG_GOC, banGhiCuaTrang, loaiTrangTacPham, trangCuaDiaChi, trangTrongBan } from '../ban-build.mjs';
 import { chiDaKhoa, coTruongDaKhoa, duLieuDaKiem } from '../du-lieu.mjs';
 import { docKhoa, truongDaKhoa } from '../khoa.mjs';
 import { GIONG, midiCua, soDauGon, tenVietCua } from '../scripts/nhac-ly.js';
@@ -1020,52 +1020,48 @@ function soGrade(g) {
 }
 
 const LOAI_TRANG = { 'bai-hoc': 'Bài học', nghe: 'Hướng dẫn nghe' };
-const loaiCuaTrang = (t) => (t.startsWith('piano/tac-pham/') ? 'bai-hoc' : 'nghe');
 
 /**
- * Các mục của danh mục tác phẩm: mỗi trang tác phẩm có trong bản build (`trang`, dạng trangTrongBan) một mục. Trang chính
- * của bản ghi (trangTacPham), và trang cap dùng chung bản ghi (trang ấy không có bản ghi riêng, như
- * nghe-nhac/beethoven-moonlight của beethoven-anh-trang). Trang chưa có trong bản build thì không vào danh mục; ở bản thật
- * đó là trang chưa khóa.
+ * Các mục của danh mục tác phẩm: mỗi trang tác phẩm có trong bản build (`trang`, dạng trangTrongBan) một mục. Trang nào
+ * thuộc bản ghi nào đọc từ frontmatter tac_pham của trang (`cuaTrang`, banGhiCuaTrang của src/ban-build.mjs; khóa cùng
+ * trang), không từ trường cap của bản ghi: nhờ vậy trang cap dùng chung bản ghi (như nghe-nhac/beethoven-moonlight của
+ * beethoven-anh-trang) vẫn vào danh mục ở bản thật khi cap chưa khóa. Trang cap có bản ghi riêng khai slug của bản ghi ấy,
+ * nên là mục của bản ghi ấy. Loại của mục theo đường dẫn của trang. Trang chưa có trong bản build thì không vào danh mục;
+ * ở bản thật đó là trang chưa khóa.
  *
  * Trường hiện ra (thoi_ky, chang, grade, ky_nang_chinh, luyen_nghe, cap) đọc qua `doc`: ở trang đã khóa (`daKhoa`, như
  * truongDaKhoa) trường chưa khóa coi như không có, nên danh mục không làm hỏng build khi một bản ghi mới khóa một phần (chỉ
  * bớt chữ, bớt lựa chọn lọc). Tên (ten, tac_gia, khuyet_danh, gan_cho) đọc thẳng như trang chặng: bản ghi đi qua chiDaKhoa,
- * nên tên chưa khóa thì build hỏng. `tacPham`: bản ghi đã lọc coTruongDaKhoa (trang đã khóa); `tatCa`: mọi bản ghi (chỉ đọc
- * slug, để biết trang cap có bản ghi riêng không).
+ * nên tên chưa khóa thì build hỏng. `tacPham`: bản ghi đã lọc coTruongDaKhoa (trang đã khóa); trang của bản ghi không có
+ * trong `tacPham` thì không vào danh mục.
+ * Trang cùng tác phẩm (`kem`): trang khác cùng bản ghi (theo frontmatter, kể cả trang chưa có trong bản build: "sắp có");
+ * không có thì trang cap của bản ghi khi cap đã khóa (như trang cap có bản ghi riêng).
  * `theoChang`: xếp theo chặng và Grade trước (danh mục bài học).
  * @returns {{ trang: string, loai: string, rec: object, thoiKy?: string, chang?: number, grade?: string, moTa?: string, kem?: string }[]}
  */
-export function mucDanhMuc({ tacPham, tatCa = tacPham, nguoi, daKhoa = null, trang = trangTrongBan(), theoChang = false }) {
-	const co = new Set(trang);
-	const slugCo = new Set(tatCa.map((r) => r.slug));
+export function mucDanhMuc({ tacPham, nguoi, daKhoa = null, trang = trangTrongBan(), cuaTrang = banGhiCuaTrang(), theoChang = false }) {
+	const banGhi = new Map(tacPham.map((r) => [r.slug, r]));
 	const doc = (r, t) => (!daKhoa || daKhoa('tac-pham', r.slug, t) ? r[t] : undefined);
+	// các trang của mỗi bản ghi theo frontmatter
+	const trangCua = new Map();
+	for (const [t, s] of cuaTrang) trangCua.set(s, [...(trangCua.get(s) ?? []), t]);
 	const muc = [];
-	for (const r of tacPham) {
-		const loai = doc(r, 'loai');
-		if (!loai) continue;
-		const chinh = (loai === 'bai-hoc' ? 'piano/tac-pham/' : 'nghe-nhac/') + r.slug;
+	for (const t of trang) {
+		const r = cuaTrang.has(t) ? banGhi.get(cuaTrang.get(t)) : undefined;
+		const l = loaiTrangTacPham(t);
+		if (!r || !l) continue;
 		const cap = doc(r, 'cap');
-		const trangR = [chinh];
-		// trang cap không có bản ghi riêng thì dùng chung bản ghi này: một mục nữa, loại theo đường dẫn của trang ấy
-		// (slug của trang cap khác slug của bản ghi này và là slug của một bản ghi khác thì trang ấy có bản ghi riêng, như hocTiep)
-		const seg = cap?.split('/').pop();
-		if (cap && (seg === r.slug || !slugCo.has(seg))) trangR.push(cap);
-		for (const t of trangR) {
-			if (!co.has(t)) continue;
-			const l = loaiCuaTrang(t);
-			const kia = t === chinh ? cap : chinh;
-			muc.push({
-				trang: t,
-				loai: l,
-				rec: r,
-				thoiKy: doc(r, 'thoi_ky'),
-				chang: l === 'bai-hoc' ? doc(r, 'chang') : undefined,
-				grade: l === 'bai-hoc' ? doc(r, 'grade') : undefined,
-				moTa: l === 'bai-hoc' ? doc(r, 'ky_nang_chinh') : doc(r, 'luyen_nghe'),
-				kem: kia,
-			});
-		}
+		const kem = (trangCua.get(r.slug) ?? []).find((x) => x !== t) ?? (cap && cap !== t ? cap : undefined);
+		muc.push({
+			trang: t,
+			loai: l,
+			rec: r,
+			thoiKy: doc(r, 'thoi_ky'),
+			chang: l === 'bai-hoc' ? doc(r, 'chang') : undefined,
+			grade: l === 'bai-hoc' ? doc(r, 'grade') : undefined,
+			moTa: l === 'bai-hoc' ? doc(r, 'ky_nang_chinh') : doc(r, 'luyen_nghe'),
+			kem,
+		});
 	}
 	const sinh = (m) => {
 		const tg = !m.rec.khuyet_danh && nguoi.get(m.rec.tac_gia);
@@ -1102,9 +1098,9 @@ function oChon(ten, nhan, luaChon) {
  * Không có JavaScript thì hiện đủ danh sách (bộ lọc không làm gì); src/scripts/danh-muc.js ẩn mục không hợp lựa chọn.
  * data-sinh: chữ sinh từ dữ liệu (so chữ với site cũ bỏ qua). Một trang chỉ có một danh mục (id của ô chọn cố định).
  */
-export function danhMucTacPham({ loai, ...ngu }, { base = DUONG_GOC, trang = trangTrongBan() } = {}) {
+export function danhMucTacPham({ loai, ...ngu }, { base = DUONG_GOC, trang = trangTrongBan(), cuaTrang = banGhiCuaTrang() } = {}) {
 	if (loai !== undefined && !LOAI_TRANG[loai]) throw new Error(`::danh-muc-tac-pham: loai "${loai}" không có (chỉ nhận: bai-hoc, nghe)`);
-	const tatCaMuc = mucDanhMuc({ ...ngu, trang, theoChang: loai === 'bai-hoc' });
+	const tatCaMuc = mucDanhMuc({ ...ngu, trang, cuaTrang, theoChang: loai === 'bai-hoc' });
 	const ds = loai ? tatCaMuc.filter((m) => m.loai === loai) : tatCaMuc;
 	if (!ds.length)
 		return `<p class="oz-danh-muc-trong" data-sinh>Chưa có ${loai === 'nghe' ? 'hướng dẫn nghe' : loai === 'bai-hoc' ? 'bài học tác phẩm' : 'trang tác phẩm'} nào trên site.</p>`;
@@ -1139,7 +1135,7 @@ export function danhMucTacPham({ loai, ...ngu }, { base = DUONG_GOC, trang = tra
 				m.thoiKy ? `<span>${esc(m.thoiKy)}</span>` : '',
 			].filter(Boolean);
 			const kem = m.kem
-				? `<p class="oz-dm-kem">Cùng tác phẩm: ${lienKet(`${base}${m.kem}/`, loaiCuaTrang(m.kem) === 'nghe' ? 'hướng dẫn nghe' : 'bài học', co.has(m.kem))}</p>`
+				? `<p class="oz-dm-kem">Cùng tác phẩm: ${lienKet(`${base}${m.kem}/`, loaiTrangTacPham(m.kem) === 'nghe' ? 'hướng dẫn nghe' : 'bài học', co.has(m.kem))}</p>`
 				: '';
 			const tt = [
 				['loai', m.loai],

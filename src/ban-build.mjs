@@ -61,6 +61,32 @@ export function trangCuaDiaChi(diaChi, base, trang) {
 	return [p || 'index', `${p}/index`].find((t) => trang.includes(t));
 }
 
+/** Thư mục trang tác phẩm theo loại (trang chính của bản ghi: thư mục + slug). */
+export const THU_MUC_TAC_PHAM = { 'bai-hoc': 'piano/tac-pham/', nghe: 'nghe-nhac/' };
+/** Loại của trang tác phẩm theo đường dẫn: bai-hoc (piano/tac-pham/…), nghe (nghe-nhac/…), hay undefined. */
+export const loaiTrangTacPham = (t) => Object.keys(THU_MUC_TAC_PHAM).find((l) => t.startsWith(THU_MUC_TAC_PHAM[l]));
+
+/**
+ * Trang tác phẩm và bản ghi của nó (D6-L11): Map trang -> slug, đọc từ trường tac_pham ở frontmatter của các trang trong
+ * piano/tac-pham/ và nghe-nhac/ (trang không khai tac_pham, như mục lục, thì không có). Frontmatter khóa cùng trang, nên
+ * cách nhận này không cần trường cap của bản ghi (có thể chưa khóa). Trang chính của bản ghi và trang cap dùng chung bản
+ * ghi mang cùng một slug; trang cap có bản ghi riêng (như nghe-nhac/schumann-kinderszenen của schumann-traumerei) mang
+ * slug của bản ghi ấy (tests/du-lieu.test.mjs kiểm frontmatter khớp tac-pham.yml). Dùng chung cho danh mục tác phẩm
+ * (mucDanhMuc) và chương tác phẩm của sách in (chuongTacPham).
+ * @param {string[]} trang trang cần đọc (mặc định: mọi trang trong src/content/docs/)
+ */
+export function banGhiCuaTrang(trang = tatCaTrang(), docs = DOCS) {
+	const m = new Map();
+	for (const t of trang) {
+		if (!loaiTrangTacPham(t) || t.endsWith('/index')) continue;
+		const f = path.join(docs, `${t}.md`);
+		if (!fs.existsSync(f)) continue;
+		const fm = parse(/^---\n([\s\S]*?)\n---/.exec(fs.readFileSync(f, 'utf8'))?.[1] ?? '') ?? {};
+		if (fm.tac_pham) m.set(t, String(fm.tac_pham));
+	}
+	return m;
+}
+
 /** Đường dẫn trang của một mục trong bộ docs (theo file nguồn; trang mục lục giữ đuôi /index). */
 export const trangCuaMuc = (muc) => muc.filePath?.replace(/^src\/content\/docs\//, '').replace(/\.mdx?$/, '');
 

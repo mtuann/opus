@@ -62,7 +62,7 @@ const CHI_THI = {
 	// piano/tac-pham/index: loai="bai-hoc", nghe-nhac/index: mọi loại); trường chưa khóa của bản ghi coi như không có
 	'danh-muc-tac-pham': {
 		thuocTinh: ['loai'],
-		ve: ({ tt, tacPham, tatCa, nguoi, daKhoa, base }) => danhMucTacPham({ loai: tt.loai, tacPham, tatCa, nguoi, daKhoa }, { base }),
+		ve: ({ tt, tacPham, nguoi, daKhoa, base }) => danhMucTacPham({ loai: tt.loai, tacPham, nguoi, daKhoa }, { base }),
 	},
 };
 
