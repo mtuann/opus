@@ -146,7 +146,6 @@ function khiGan(el, fn) {
 
 const daNap = [];
 const sauKhiTai = (fn) => (document.readyState === 'complete' ? fn() : addEventListener('load', fn, { once: true }));
-const khiRanh = (fn) => (window.requestIdleCallback ? requestIdleCallback(fn, { timeout: 5000 }) : setTimeout(fn, 3000));
 
 function quet() {
 	const t = dich();
@@ -174,8 +173,10 @@ function quet() {
 				.catch((e) => console.error(e));
 		};
 		els.forEach((el) => ngayBayGio.push(ngay ? khoi(el) : khiGan(el, () => khoi(el))));
-		// Tải sẵn lúc trình duyệt rảnh, để in (Ctrl+P) có đủ khuông nhạc
-		sauKhiTai(() => khiRanh(() => lay().then((m) => m.taiSan?.(), () => {})));
+		// Tải sẵn ngay sau khi trang tải xong, để in (Ctrl+P) sớm vẫn có đủ khuông nhạc: lúc trang vừa mở chỉ khối đang hiện
+		// được khởi tạo (lề 0), nên phải có sẵn module và mã của nó. taiSan chỉ tải về, không chạy (abc.js), nên không làm
+		// trang đứng; trước đây chờ lúc rảnh thì trên máy chậm in sau một giây vẫn chưa có gì (0/10 khuông ở CI).
+		sauKhiTai(() => lay().then((m) => m.taiSan?.(), () => {}));
 	}
 	giuDich(ngayBayGio, t, tren);
 }
