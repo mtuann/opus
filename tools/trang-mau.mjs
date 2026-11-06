@@ -76,6 +76,8 @@ export const KHOI = {
 	'phiếu nghe mù': 'class="oz-phieu-nghe-mu',
 	'ngày rà lại': 'class="oz-ra-lai',
 	'dòng ngoài lộ trình': 'class="oz-ngoai-lo-trinh',
+	// D6-L11: danh mục tác phẩm sinh từ dữ liệu, có bộ lọc (::danh-muc-tac-pham, src/scripts/danh-muc.js)
+	'danh mục tác phẩm': 'class="oz-danh-muc"',
 };
 
 /** Số trang đã đổi của nhánh được lấy làm mẫu: một lô của đợt 3 có tới 8 trang. */

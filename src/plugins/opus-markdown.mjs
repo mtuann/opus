@@ -13,7 +13,7 @@ import { fileURLToPath } from 'node:url';
 import { parse } from 'yaml';
 import { chiDaKhoa, coTruongDaKhoa, duLieuDaKiem } from '../du-lieu.mjs';
 import { docKhoa, truongDaKhoa } from '../khoa.mjs';
-import { bangNhaSoanNhac, congCu, danhSachBai, docBaiBlog, docMoc, dongThoiGian, duLieuCho, hinh, hinhCauTruc, hocTiep, hopTacPham, khoiNghe, khuongAbc, quiz, tacPhamMoi, tuDien } from './thanh-phan.mjs';
+import { bangNhaSoanNhac, congCu, danhSachBai, docBaiBlog, docMoc, dongThoiGian, duLieuCho, hinh, hinhCauTruc, danhMucTacPham, hocTiep, hopTacPham, khoiNghe, khuongAbc, quiz, tacPhamMoi, tuDien } from './thanh-phan.mjs';
 import { docDanhSach } from '../scripts/dong-thoi-gian.js';
 
 /** Loại của trang tác phẩm theo đường dẫn: bai-hoc (piano/tac-pham/), nghe (nghe-nhac/). */
@@ -58,6 +58,12 @@ const CHI_THI = {
 	// danh sách bài blog có trong bản build (trang blog/index) và nhật ký tác phẩm mới theo them_ngay (trang Cập nhật), D7-L3
 	'danh-sach-bai': { ve: ({ base }) => danhSachBai(docBaiBlog(), base) },
 	'tac-pham-moi': { ve: ({ tacPham, nguoi, base }) => tacPhamMoi(tacPham, nguoi, undefined, base) },
+	// danh mục các trang tác phẩm có trong bản build, lọc theo loại, chặng, thời kỳ, tác giả (D6-L11; trang
+	// piano/tac-pham/index: loai="bai-hoc", nghe-nhac/index: mọi loại); trường chưa khóa của bản ghi coi như không có
+	'danh-muc-tac-pham': {
+		thuocTinh: ['loai'],
+		ve: ({ tt, tacPham, tatCa, nguoi, daKhoa, base }) => danhMucTacPham({ loai: tt.loai, tacPham, tatCa, nguoi, daKhoa }, { base }),
+	},
 };
 
 /** Tiêu đề mục chứa bảng mốc, ngay sau ::khoi-nghe{moc}. */
@@ -142,7 +148,7 @@ export function opusMarkdown({ base, docsDir, khoa = docKhoa }) {
 				if (muc.tacPham && !rec) throw loi(`::${node.name} cần trường tac_pham ở frontmatter (slug trong src/data/tac-pham.yml)`);
 				const nguoi = new Map(duLieu['nha-soan-nhac'].map((r) => [r.id, boc('nha-soan-nhac')(r)]));
 				try {
-					const html = muc.ve({ rec, tt, base, trang, nguoi, tacPham, tatCa, rieng });
+					const html = muc.ve({ rec, tt, base, trang, nguoi, tacPham, tatCa, rieng, daKhoa });
 					if (node.name === 'khoi-nghe' && choMoc) throw new Error(`khối nghe trước có moc mà chưa gặp bảng "${TIEU_DE_MOC}"`);
 					if (node.name === 'khoi-nghe' && tt.moc !== undefined) choMoc = { so: docMoc(tt.moc).length, trongMuc: false };
 					return { type: 'html', value: html };

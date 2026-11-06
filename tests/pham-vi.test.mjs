@@ -52,7 +52,9 @@ const THEM = {
 	// hồ sơ bản ghi khóa từng phần: lần kiểm định mới cho trường chưa khóa (đợt 6 khóa nốt bản ghi tác phẩm) không làm khóa
 	// cũ thành "hồ sơ chưa đủ" (loiHoSo của tools/khoa.mjs, tests/khoa-tung-phan.test.mjs); nên gộp riêng vào main trước lô
 	'D6-L1': ['tools/khoa.mjs', 'tests/khoa.test.mjs', 'tests/pham-vi.test.mjs'],
-	'D6-L11': ['src/pages/', 'src/ban-build.mjs', 'src/nhom.mjs', 'src/sach/', 'src/plugins/opus-markdown.mjs'],
+	// danh mục tác phẩm làm bằng chỉ thị ::danh-muc-tac-pham trong hai trang mục lục (không thêm trang src/pages/); loại khối
+	// mới vào KHOI của tools/trang-mau.mjs (trang mẫu cho kiểm thử trình duyệt, Lighthouse); THEM của chính file này
+	'D6-L11': ['src/pages/', 'src/ban-build.mjs', 'src/nhom.mjs', 'src/sach/', 'src/plugins/opus-markdown.mjs', 'tools/trang-mau.mjs', 'tests/pham-vi.test.mjs'],
 };
 
 /** File `file` (đường dẫn từ gốc repo) có thuộc phạm vi của lô `lo` ("D3-L2"), với các trang `trangLo`, không. */

@@ -2956,3 +2956,102 @@ ul.oz-ds-bai > li:last-child {
 		display: none;
 	}
 }
+
+/* ---------- Danh mục tác phẩm (D6-L11; ::danh-muc-tac-pham, src/scripts/danh-muc.js) ----------
+   Bộ lọc: các ô chọn xuống dòng khi hẹp (nhãn ở trên ô), ô cao 44 px trên màn hình cảm ứng. Danh sách: mỗi trang một mục,
+   tên đậm, dòng phụ (loại, chặng, thời kỳ) nhỏ, nhạt. */
+.oz-dm-loc {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem 1rem;
+	align-items: flex-end;
+	margin: 1rem 0 0.5rem;
+	padding: 0.75rem;
+	border: 1px solid var(--sl-color-hairline);
+	border-radius: 8px;
+	background: var(--sl-color-gray-7, var(--sl-color-gray-6));
+}
+.oz-danh-muc .oz-dm-loc > * {
+	margin-top: 0; /* Starlight đặt lề trên cho phần tử liền sau trong bài: các ô cùng hàng phải thẳng nhau */
+}
+.oz-dm-o {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+	font-size: var(--sl-text-sm);
+	color: var(--sl-color-gray-2);
+	min-width: 0;
+	max-width: 100%;
+}
+.oz-dm-o select {
+	appearance: none;
+	-webkit-appearance: none;
+	font: inherit;
+	max-width: 100%;
+	min-height: 2.25rem;
+	padding: 0.3rem 1.8rem 0.3rem 0.55rem;
+	border: 1px solid var(--sl-color-gray-4);
+	border-radius: 8px;
+	color: var(--sl-color-white);
+	background-color: var(--sl-color-black);
+	background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+	background-position:
+		calc(100% - 0.95rem) 55%,
+		calc(100% - 0.6rem) 55%;
+	background-size: 0.35rem 0.35rem;
+	background-repeat: no-repeat;
+}
+.oz-dm-bo {
+	min-height: 2.25rem;
+}
+@media (pointer: coarse) {
+	.oz-dm-o select,
+	.oz-dm-bo {
+		min-height: 44px;
+		min-width: 44px;
+	}
+}
+.oz-dm-dem {
+	margin: 0.5rem 0 0;
+	font-size: var(--sl-text-sm);
+	color: var(--sl-color-gray-3);
+}
+ul.oz-dm-ds {
+	list-style: none;
+	padding-left: 0;
+	margin-top: 0.5rem;
+}
+ul.oz-dm-ds > li {
+	margin: 0;
+	padding: 0.6rem 0;
+	border-bottom: 1px solid var(--sl-color-hairline);
+}
+ul.oz-dm-ds > li[hidden] {
+	display: none;
+}
+.oz-danh-muc p {
+	margin: 0;
+}
+.oz-dm-ten {
+	font-weight: 600;
+	line-height: 1.35;
+}
+.oz-dm-ten a,
+.oz-dm-meta a,
+.oz-dm-kem a {
+	display: inline-block;
+	padding-block: 0.25rem;
+}
+.oz-dm-meta,
+.oz-dm-kem {
+	font-size: var(--sl-text-sm);
+	color: var(--sl-color-gray-3);
+}
+.oz-dm-mo-ta {
+	font-size: var(--sl-text-sm);
+}
+@media print {
+	ul.oz-dm-ds > li[hidden] {
+		display: block;
+	}
+}

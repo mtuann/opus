@@ -7,6 +7,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { duLieuDaKiem } from '../du-lieu.mjs';
 import { dinhNghiaKyHieu } from '../scripts/ve.js';
 import { chuCua, docCay, doiCon, ghi, lop, tim, timHet } from './html.mjs';
 
@@ -14,6 +15,50 @@ import { chuCua, docCay, doiCon, ghi, lop, tim, timHet } from './html.mjs';
 export const TRANG_SACH_IN = 'bat-dau/sach-in';
 
 const L = (...ten) => ten.map((n) => `nhac-ly/${n}/`);
+
+/**
+ * Thứ tự chương tác phẩm đã có (BOOKS của books.py cũ, D7-L3): bài học theo chặng như bảng mục lục cũ, hướng dẫn nghe theo
+ * menu cũ. Danh sách chương lấy từ dữ liệu (chuongTacPham, D6-L11); thứ tự này chỉ để giữ chỗ của các trang đã có.
+ */
+export const THU_TU_TAC_PHAM = {
+	'bai-hoc': ['mozart-minuet-k2', 'minuet-sol', 'minuet-sol-thu', 'musette-re', 'schumann-album', 'burgmuller-la-candeur', 'tchaikovsky-bai-ca-phap-co', 'beethoven-sonatina-sol', 'clementi-sonatina', 'burgmuller-arabesque', 'bach-prelude-bwv939', 'tchaikovsky-cau-nguyen-buoi-sang', 'chopin-valse-la-thu', 'chopin-prelude-la-truong', 'grieg-arietta', 'satie-gymnopedie', 'bach-prelude-do', 'chopin-prelude-mi-thu', 'fur-elise', 'beethoven-op49-2', 'mendelssohn-thuyen-ca', 'chopin-valse-si-thu', 'bach-invention-1', 'mozart-k545', 'schumann-traumerei', 'beethoven-anh-trang', 'pathetique-adagio', 'chopin-nocturne-op9-2', 'bach-prelude-fugue-do-thu', 'schubert-impromptu-sol-giang', 'debussy-clair-de-lune', 'chopin-fantaisie-impromptu', 'liszt-liebestraum', 'chopin-ballade-1'],
+	nghe: ['scarlatti-sonata', 'bach-goldberg', 'mozart-k331', 'mozart-concerto-21', 'beethoven-pathetique', 'beethoven-moonlight', 'schubert-impromptu', 'chopin-etude', 'schumann-kinderszenen', 'liszt-liebestraum', 'grieg-concerto', 'mussorgsky-tranh', 'brahms-intermezzo', 'rachmaninoff-2', 'debussy-preludes', 'gershwin-rhapsody', 'vivaldi-mua-xuan', 'vivaldi-mua-dong', 'bach-cello-1', 'bach-air', 'handel-hallelujah', 'haydn-94', 'mozart-40', 'mozart-nu-hoang-bong-dem', 'mozart-requiem', 'mozart-eine-kleine', 'beethoven-5', 'beethoven-op132', 'schubert-erlkonig', 'schubert-ca-hoi', 'mendelssohn-violin', 'bizet-habanera', 'tchaikovsky-ho-thien-nga', 'tchaikovsky-1812', 'brahms-4', 'dvorak-9-largo', 'grieg-buoi-sang', 'puccini-nessun-dorma', 'ravel-bolero', 'stravinsky-sacre', 'shostakovich-5', 'part-spiegel'],
+};
+
+/**
+ * Chương tác phẩm của sách (D6-L11), đọc từ src/data/tac-pham.yml để tác phẩm thêm sau đợt 6 tự vào sách:
+ * - `bai-hoc`: trang chính của mọi bản ghi bài học (piano/tac-pham/<slug>/);
+ * - `nghe`: trang chính của mọi bản ghi hướng dẫn nghe, cộng trang cap trong nghe-nhac/ mà bài học dùng chung bản ghi (như
+ *   nghe-nhac/beethoven-moonlight của beethoven-anh-trang).
+ * Trang có trong THU_TU_TAC_PHAM giữ thứ tự ấy; trang mới: bài học chen vào sau bài cuối cùng có chặng không lớn hơn (giữ
+ * thứ tự chặng của cuốn), hướng dẫn nghe thêm vào cuối; nhiều trang mới thì theo thứ tự trong tac-pham.yml. Trang thứ tự cũ mà
+ * dữ liệu không còn thì bỏ. Chỉ đọc slug, loai, cap, chang để xếp chương: chương chỉ vào sách khi trang có trong bản build
+ * (bản thật: trang đã khóa), nên không hiện trường nào của bản ghi.
+ * @returns {string[]} địa chỉ như "piano/tac-pham/fur-elise/"
+ */
+export function chuongTacPham(loai, tacPham = duLieuDaKiem()['tac-pham'], thuTu = THU_TU_TAC_PHAM[loai]) {
+	const goc = loai === 'bai-hoc' ? 'piano/tac-pham/' : 'nghe-nhac/';
+	const chang = new Map(); // trang -> chặng (bài học)
+	const coRieng = new Set(tacPham.map((r) => (r.loai === 'bai-hoc' ? 'piano/tac-pham/' : 'nghe-nhac/') + r.slug));
+	const trang = [];
+	for (const r of tacPham) {
+		if (r.loai === loai) {
+			trang.push(goc + r.slug);
+			chang.set(goc + r.slug, r.chang);
+		} else if (r.cap?.startsWith(goc) && !coRieng.has(r.cap)) trang.push(r.cap);
+	}
+	const co = new Set(trang);
+	const ds = thuTu.map((n) => goc + n).filter((t) => co.has(t));
+	for (const t of trang) {
+		if (ds.includes(t)) continue;
+		let i = ds.length;
+		if (loai === 'bai-hoc' && chang.get(t) !== undefined) {
+			i = ds.findLastIndex((x) => (chang.get(x) ?? 0) <= chang.get(t)) + 1;
+		}
+		ds.splice(i, 0, t);
+	}
+	return ds.map((t) => `${t}/`);
+}
 
 /**
  * Bảy cuốn như BOOKS của books.py cũ (cùng id, tên, thứ tự chương). Mô tả không ghi số trang hay số bài: sách chỉ gồm
@@ -48,7 +93,9 @@ export const SACH = [
 		id: 'huong-dan-nghe',
 		ten: 'Hướng dẫn nghe',
 		mo_ta: 'Cách đọc tên tác phẩm và bản thu, cùng các hướng dẫn nghe từng bước, có chỗ để ghi mốc thời gian bằng tay.',
-		trang: ['nghe-nhac/doc-ten-tac-pham/', ...['scarlatti-sonata', 'bach-goldberg', 'mozart-k331', 'mozart-concerto-21', 'beethoven-pathetique', 'beethoven-moonlight', 'schubert-impromptu', 'chopin-etude', 'schumann-kinderszenen', 'liszt-liebestraum', 'grieg-concerto', 'mussorgsky-tranh', 'brahms-intermezzo', 'rachmaninoff-2', 'debussy-preludes', 'gershwin-rhapsody', 'vivaldi-mua-xuan', 'vivaldi-mua-dong', 'bach-cello-1', 'bach-air', 'handel-hallelujah', 'haydn-94', 'mozart-40', 'mozart-nu-hoang-bong-dem', 'mozart-requiem', 'mozart-eine-kleine', 'beethoven-5', 'beethoven-op132', 'schubert-erlkonig', 'schubert-ca-hoi', 'mendelssohn-violin', 'bizet-habanera', 'tchaikovsky-ho-thien-nga', 'tchaikovsky-1812', 'brahms-4', 'dvorak-9-largo', 'grieg-buoi-sang', 'puccini-nessun-dorma', 'ravel-bolero', 'stravinsky-sacre', 'shostakovich-5', 'part-spiegel'].map((n) => `nghe-nhac/${n}/`)],
+		get trang() {
+			return ['nghe-nhac/doc-ten-tac-pham/', ...chuongTacPham('nghe')];
+		},
 	},
 	{
 		id: 'piano-ky-thuat',
@@ -60,7 +107,9 @@ export const SACH = [
 		id: 'piano-tac-pham',
 		ten: 'Piano: 10 bài đầu tiên và bài học tác phẩm',
 		mo_ta: '10 bài hai tay có số ngón, tác phẩm theo cấp độ và các bài học tác phẩm, từ Minuet Fa trưởng của Mozart đến Ballade số 1 của Chopin: cấu trúc, chỗ khó, bài tập chuẩn bị, kế hoạch tập.',
-		trang: ['piano/10-bai-dau-tien/', 'piano/tac-pham-theo-cap/', ...['mozart-minuet-k2', 'minuet-sol', 'minuet-sol-thu', 'musette-re', 'schumann-album', 'burgmuller-la-candeur', 'tchaikovsky-bai-ca-phap-co', 'beethoven-sonatina-sol', 'clementi-sonatina', 'burgmuller-arabesque', 'bach-prelude-bwv939', 'tchaikovsky-cau-nguyen-buoi-sang', 'chopin-valse-la-thu', 'chopin-prelude-la-truong', 'grieg-arietta', 'satie-gymnopedie', 'bach-prelude-do', 'chopin-prelude-mi-thu', 'fur-elise', 'beethoven-op49-2', 'mendelssohn-thuyen-ca', 'chopin-valse-si-thu', 'bach-invention-1', 'mozart-k545', 'schumann-traumerei', 'beethoven-anh-trang', 'pathetique-adagio', 'chopin-nocturne-op9-2', 'bach-prelude-fugue-do-thu', 'schubert-impromptu-sol-giang', 'debussy-clair-de-lune', 'chopin-fantaisie-impromptu', 'liszt-liebestraum', 'chopin-ballade-1'].map((n) => `piano/tac-pham/${n}/`)],
+		get trang() {
+			return ['piano/10-bai-dau-tien/', 'piano/tac-pham-theo-cap/', ...chuongTacPham('bai-hoc')];
+		},
 	},
 ];
 

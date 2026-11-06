@@ -58,6 +58,8 @@ const LUAT = [
 	['.oz-nang-luc, .oz-tien-bo', () => import('./nang-luc.js'), false],
 	// nghe mù và phiếu nghe mù (D8-L1): ô dựng sẵn; bản thu chỉ tải khi người học bấm phát
 	['.oz-nghe-mu, .oz-phieu-nghe-mu', () => import('./nghe-mu.js'), false],
+	// khởi tạo ngay: bộ lọc của danh mục tác phẩm ở đầu trang mục lục (D6-L11), áp lựa chọn trình duyệt giữ khi quay lại
+	['.oz-danh-muc', () => import('./danh-muc.js'), true],
 ];
 const LE = 600;
 const cho = new Map(); // phần tử đang chờ tới gần màn hình -> hàm khởi tạo (trả về promise)

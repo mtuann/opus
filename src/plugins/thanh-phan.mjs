@@ -45,10 +45,11 @@ export const esc = (s) =>
 
 /** HTML đã dựng của trang có khối cần JavaScript (khuông nhạc, câu hỏi, khối nghe, danh sách việc, bài kiểm tra đầu vào,
  * chặng piano, ô gợi ý tập, bàn phím, vòng quãng năm, luyện hóa biểu, công cụ âm học, thẻ ghi nhớ, trạng thái bài đã học,
- * luyện tai, máy đếm nhịp, bài đang tập, kế hoạch tập, đoán phong cách, các công cụ Luyện tập của D7-L1, D7-L2, nghe mù)
+ * luyện tai, máy đếm nhịp, bài đang tập, kế hoạch tập, đoán phong cách, các công cụ Luyện tập của D7-L1, D7-L2, nghe mù,
+ * nút tập bài, danh mục tác phẩm)
  * không: MarkdownContent.astro chỉ tải bộ tải thành phần ở những trang này. */
 export const canTaiScript = (html) =>
-	/\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec|oz-placement|oz-muc-do|oz-goi-y|oz-ban-phim|oz-vong|oz-lhb|oz-boi-am|oz-pho|oz-len-day|oz-the-nho|oz-trang-thai-bai|oz-lt|oz-may-dem-nhip|oz-bai-dang-tap|oz-ke-hoach|oz-nd|oz-midi|oz-chon-am|oz-tra-phim|oz-doc-not|oz-chep|oz-sao-luu|oz-so-cao-do|oz-choi-theo|oz-hat-lai|oz-xay|oz-giay-khuong|oz-phieu|oz-thu-am|oz-tiet-tau|oz-thi-tau|oz-thi-tau-hai-tay|oz-nhat-ky|oz-nang-luc|oz-tien-bo|oz-nghe-mu|oz-phieu-nghe-mu|oz-piece-actions)[\s"]/.test(html);
+	/\sclass="(?:[^"]*\s)?(?:abc-notation|oz-quiz|oz-listen|oz-viec|oz-placement|oz-muc-do|oz-goi-y|oz-ban-phim|oz-vong|oz-lhb|oz-boi-am|oz-pho|oz-len-day|oz-the-nho|oz-trang-thai-bai|oz-lt|oz-may-dem-nhip|oz-bai-dang-tap|oz-ke-hoach|oz-nd|oz-midi|oz-chon-am|oz-tra-phim|oz-doc-not|oz-chep|oz-sao-luu|oz-so-cao-do|oz-choi-theo|oz-hat-lai|oz-xay|oz-giay-khuong|oz-phieu|oz-thu-am|oz-tiet-tau|oz-thi-tau|oz-thi-tau-hai-tay|oz-nhat-ky|oz-nang-luc|oz-tien-bo|oz-nghe-mu|oz-phieu-nghe-mu|oz-piece-actions|oz-danh-muc)[\s"]/.test(html);
 
 /** HTML đã dựng có hình hóa biểu (vẽ bằng <use href="#oz-kh-…">) không: MarkdownContent.astro thêm định nghĩa ký hiệu một lần. */
 export const canKyHieu = (html) => html.includes('href="#oz-kh-');
@@ -1004,5 +1005,167 @@ export function tacPhamMoi(tacPham, nguoi, trang = trangTrongBan(), base = DUONG
 			)
 			.join('') +
 		`</ul>`
+	);
+}
+
+// ---------- Danh mục tác phẩm (D6-L11; src/scripts/danh-muc.js) ----------
+
+/** Số đầu của Grade để xếp ("Grade 2–3" -> 2; "trước Grade 1" -> 0; "Sau Grade 8", "… trở lên" -> 9). */
+function soGrade(g) {
+	const s = String(g ?? '').toLowerCase();
+	if (s.startsWith('trước')) return 0;
+	if (s.startsWith('sau') || s.includes('trở lên') || s.includes('diploma')) return 9;
+	const n = s.match(/\d+/);
+	return n ? Number(n[0]) : 99;
+}
+
+const LOAI_TRANG = { 'bai-hoc': 'Bài học', nghe: 'Hướng dẫn nghe' };
+const loaiCuaTrang = (t) => (t.startsWith('piano/tac-pham/') ? 'bai-hoc' : 'nghe');
+
+/**
+ * Các mục của danh mục tác phẩm: mỗi trang tác phẩm có trong bản build (`trang`, dạng trangTrongBan) một mục. Trang chính
+ * của bản ghi (trangTacPham), và trang cap dùng chung bản ghi (trang ấy không có bản ghi riêng, như
+ * nghe-nhac/beethoven-moonlight của beethoven-anh-trang). Trang chưa có trong bản build thì không vào danh mục; ở bản thật
+ * đó là trang chưa khóa.
+ *
+ * Trường hiện ra (thoi_ky, chang, grade, ky_nang_chinh, luyen_nghe, cap) đọc qua `doc`: ở trang đã khóa (`daKhoa`, như
+ * truongDaKhoa) trường chưa khóa coi như không có, nên danh mục không làm hỏng build khi một bản ghi mới khóa một phần (chỉ
+ * bớt chữ, bớt lựa chọn lọc). Tên (ten, tac_gia, khuyet_danh, gan_cho) đọc thẳng như trang chặng: bản ghi đi qua chiDaKhoa,
+ * nên tên chưa khóa thì build hỏng. `tacPham`: bản ghi đã lọc coTruongDaKhoa (trang đã khóa); `tatCa`: mọi bản ghi (chỉ đọc
+ * slug, để biết trang cap có bản ghi riêng không).
+ * `theoChang`: xếp theo chặng và Grade trước (danh mục bài học).
+ * @returns {{ trang: string, loai: string, rec: object, thoiKy?: string, chang?: number, grade?: string, moTa?: string, kem?: string }[]}
+ */
+export function mucDanhMuc({ tacPham, tatCa = tacPham, nguoi, daKhoa = null, trang = trangTrongBan(), theoChang = false }) {
+	const co = new Set(trang);
+	const slugCo = new Set(tatCa.map((r) => r.slug));
+	const doc = (r, t) => (!daKhoa || daKhoa('tac-pham', r.slug, t) ? r[t] : undefined);
+	const muc = [];
+	for (const r of tacPham) {
+		const loai = doc(r, 'loai');
+		if (!loai) continue;
+		const chinh = (loai === 'bai-hoc' ? 'piano/tac-pham/' : 'nghe-nhac/') + r.slug;
+		const cap = doc(r, 'cap');
+		const trangR = [chinh];
+		// trang cap không có bản ghi riêng thì dùng chung bản ghi này: một mục nữa, loại theo đường dẫn của trang ấy
+		// (slug của trang cap khác slug của bản ghi này và là slug của một bản ghi khác thì trang ấy có bản ghi riêng, như hocTiep)
+		const seg = cap?.split('/').pop();
+		if (cap && (seg === r.slug || !slugCo.has(seg))) trangR.push(cap);
+		for (const t of trangR) {
+			if (!co.has(t)) continue;
+			const l = loaiCuaTrang(t);
+			const kia = t === chinh ? cap : chinh;
+			muc.push({
+				trang: t,
+				loai: l,
+				rec: r,
+				thoiKy: doc(r, 'thoi_ky'),
+				chang: l === 'bai-hoc' ? doc(r, 'chang') : undefined,
+				grade: l === 'bai-hoc' ? doc(r, 'grade') : undefined,
+				moTa: l === 'bai-hoc' ? doc(r, 'ky_nang_chinh') : doc(r, 'luyen_nghe'),
+				kem: kia,
+			});
+		}
+	}
+	const sinh = (m) => {
+		const tg = !m.rec.khuyet_danh && nguoi.get(m.rec.tac_gia);
+		return tg && (!daKhoa || daKhoa('nha-soan-nhac', tg.id, 'sinh')) ? (tg.sinh ?? 9999) : 9999;
+	};
+	const ten = (m) => tenTrongDanhSach(m.rec, nguoi);
+	// theoChang (danh mục bài học): theo chặng, Grade, rồi như dưới; không thì theo năm sinh tác giả (gần theo thời gian),
+	// rồi tên, rồi đường dẫn (bài học trước hướng dẫn nghe cùng tên)
+	return muc.sort(
+		(a, b) =>
+			(theoChang ? (a.chang ?? 99) - (b.chang ?? 99) || soGrade(a.grade) - soGrade(b.grade) : 0) ||
+			sinh(a) - sinh(b) ||
+			ten(a).localeCompare(ten(b), 'vi') ||
+			a.trang.localeCompare(b.trang),
+	);
+}
+
+/** Một ô chọn của bộ lọc: nhãn, tên (data-loc), các lựa chọn [giá trị, chữ]. */
+function oChon(ten, nhan, luaChon) {
+	const id = `oz-dm-${ten}`;
+	return (
+		`<label class="oz-dm-o" for="${id}"><span>${esc(nhan)}</span>` +
+		`<select id="${id}" data-loc="${esc(ten)}"><option value="">Tất cả</option>` +
+		luaChon.map(([v, chu]) => `<option value="${esc(v)}">${esc(chu)}</option>`).join('') +
+		`</select></label>`
+	);
+}
+
+/**
+ * ::danh-muc-tac-pham (D6-L11; trang piano/tac-pham/index với loai="bai-hoc", nghe-nhac/index không ghi loai): danh mục các
+ * trang tác phẩm có trong bản build (mucDanhMuc), dựng lúc build từ src/data/, kèm bộ lọc theo loại (khi không ghi loai),
+ * chặng, thời kỳ, tác giả. Mỗi mục: tên (link), loại, chặng (link tới trang chặng) và Grade tương đương, thời kỳ, kỹ năng
+ * chính (bài học) hay điều luyện nghe (hướng dẫn nghe), và trang cùng tác phẩm (cap; chưa có trong bản build thì "sắp có").
+ * Không có JavaScript thì hiện đủ danh sách (bộ lọc không làm gì); src/scripts/danh-muc.js ẩn mục không hợp lựa chọn.
+ * data-sinh: chữ sinh từ dữ liệu (so chữ với site cũ bỏ qua). Một trang chỉ có một danh mục (id của ô chọn cố định).
+ */
+export function danhMucTacPham({ loai, ...ngu }, { base = DUONG_GOC, trang = trangTrongBan() } = {}) {
+	if (loai !== undefined && !LOAI_TRANG[loai]) throw new Error(`::danh-muc-tac-pham: loai "${loai}" không có (chỉ nhận: bai-hoc, nghe)`);
+	const tatCaMuc = mucDanhMuc({ ...ngu, trang, theoChang: loai === 'bai-hoc' });
+	const ds = loai ? tatCaMuc.filter((m) => m.loai === loai) : tatCaMuc;
+	if (!ds.length)
+		return `<p class="oz-danh-muc-trong" data-sinh>Chưa có ${loai === 'nghe' ? 'hướng dẫn nghe' : loai === 'bai-hoc' ? 'bài học tác phẩm' : 'trang tác phẩm'} nào trên site.</p>`;
+	const { nguoi, daKhoa = null } = ngu;
+	const docNguoi = (p, t) => (p && (!daKhoa || daKhoa('nha-soan-nhac', p.id, t)) ? p[t] : undefined);
+	// lựa chọn lọc lấy từ chính các mục, theo thứ tự xuất hiện đầu tiên (chặng: tăng dần; tác giả: theo năm sinh)
+	const tacGia = new Map();
+	const thoiKy = new Map(); // thời kỳ -> năm sinh nhỏ nhất của tác giả có mục mang thời kỳ ấy, để xếp gần theo thời gian
+	for (const m of ds) {
+		const p = !m.rec.khuyet_danh ? nguoi.get(m.rec.tac_gia) : undefined;
+		const s = docNguoi(p, 'sinh') ?? 9999;
+		if (p && !tacGia.has(p.id)) tacGia.set(p.id, { ten: p.ten, sinh: s });
+		if (m.thoiKy) thoiKy.set(m.thoiKy, Math.min(thoiKy.get(m.thoiKy) ?? 9999, s));
+	}
+	const chang = [...new Set(ds.map((m) => m.chang).filter((c) => c !== undefined))].sort((a, b) => a - b);
+	const loc = [
+		!loai && new Set(ds.map((m) => m.loai)).size > 1 ? oChon('loai', 'Loại', Object.entries(LOAI_TRANG).filter(([k]) => ds.some((m) => m.loai === k))) : '',
+		chang.length ? oChon('chang', 'Chặng', chang.map((c) => [String(c), `Chặng ${c}`])) : '',
+		thoiKy.size ? oChon('thoi-ky', 'Thời kỳ', [...thoiKy].sort((a, b) => a[1] - b[1] || a[0].localeCompare(b[0], 'vi')).map(([t]) => [t, t])) : '',
+		tacGia.size ? oChon('tac-gia', 'Tác giả', [...tacGia].sort((a, b) => a[1].sinh - b[1].sinh || a[1].ten.localeCompare(b[1].ten, 'vi')).map(([id, p]) => [id, p.ten])) : '',
+	].join('');
+	const co = new Set(trang);
+	const muc = ds
+		.map((m) => {
+			const href = `${base}${m.trang}/`;
+			const tenChu = md(tenTrongDanhSach(m.rec, nguoi)).replace(/<\/?a\b[^>]*>/g, '');
+			const meta = [
+				!loai ? `<span class="oz-dm-loai">${LOAI_TRANG[m.loai]}</span>` : '',
+				m.chang !== undefined
+					? `<span><a href="${esc(diaChiChang(m.chang, base))}">Chặng ${m.chang}</a>${m.grade ? `, ${esc(ganDung(m.grade))}` : ''}</span>`
+					: '',
+				m.thoiKy ? `<span>${esc(m.thoiKy)}</span>` : '',
+			].filter(Boolean);
+			const kem = m.kem
+				? `<p class="oz-dm-kem">Cùng tác phẩm: ${lienKet(`${base}${m.kem}/`, loaiCuaTrang(m.kem) === 'nghe' ? 'hướng dẫn nghe' : 'bài học', co.has(m.kem))}</p>`
+				: '';
+			const tt = [
+				['loai', m.loai],
+				['chang', m.chang],
+				['thoi-ky', m.thoiKy],
+				['tac-gia', m.rec.khuyet_danh ? undefined : m.rec.tac_gia],
+			]
+				.filter(([, v]) => v !== undefined && v !== null)
+				.map(([k, v]) => ` data-${k}="${esc(v)}"`)
+				.join('');
+			return (
+				`<li${tt}><p class="oz-dm-ten"><a href="${esc(href)}">${tenChu}</a></p>` +
+				(meta.length ? `<p class="oz-dm-meta">${meta.join(' · ')}</p>` : '') +
+				(m.moTa ? `<p class="oz-dm-mo-ta">${md(m.moTa)}</p>` : '') +
+				kem +
+				`</li>`
+			);
+		})
+		.join('');
+	return (
+		`<div class="oz-danh-muc" data-sinh>` +
+		`<div class="oz-dm-loc oz-khong-in" role="group" aria-label="Lọc danh mục" data-pagefind-ignore>${loc}` +
+		`<button type="button" class="oz-btn oz-dm-bo" disabled>Bỏ lọc</button></div>` +
+		`<p class="oz-dm-dem" aria-live="polite" data-pagefind-ignore>Hiện ${ds.length} trên ${ds.length} trang.</p>` +
+		`<ul class="oz-dm-ds">${muc}</ul>` +
+		`<p class="oz-dm-trong" hidden>Không có trang nào hợp các lựa chọn.</p>` +
+		`</div>`
 	);
 }

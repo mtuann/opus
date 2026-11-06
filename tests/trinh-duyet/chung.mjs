@@ -106,6 +106,8 @@ function khoiCho(ten) {
 		),
 		// nghe mù, phiếu nghe mù (D8-L1): như trên
 		...document.querySelectorAll(':is(.oz-nghe-mu, .oz-phieu-nghe-mu):not([data-san])'),
+		// danh mục tác phẩm (D6-L11): bộ lọc dựng sẵn, script gắn rồi đặt data-san
+		...document.querySelectorAll('.oz-danh-muc:not([data-san])'),
 	];
 	if (ten) return cho.map((e) => `${e.className} "${e.textContent.trim().slice(0, 30)}"`);
 	cho[0]?.scrollIntoView({ block: 'center' });
