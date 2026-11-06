@@ -11,7 +11,7 @@ tac_pham: mendelssohn-violin
 | Sáng tác | Hoàn thành năm 1844 |
 | Công diễn | 13/3/1845, Leipzig; độc tấu Ferdinand David |
 | Thời kỳ | Lãng mạn |
-| Độ dài | Khoảng 24–27 phút, 3 chương nối liền nhau |
+| Độ dài | Khoảng 25–30 phút, 3 chương nối liền nhau |
 
 ## Điều cần biết trước khi nghe
 
@@ -21,7 +21,7 @@ Mendelssohn phá ba thói quen của concerto Cổ điển (xem [Concerto và ri
 
 1. **Violin vào gần như ngay lập tức**, chỉ sau một ô nhịp rưỡi, thay vì chờ dàn nhạc trình bày.
 2. **Cadenza được viết sẵn** và đặt **trước phần tái hiện**, thay vì gần cuối chương; nó trở thành cây cầu nối phát triển và tái hiện.
-3. **Ba chương nối liền**: một nốt giữ dài của bassoon nối chương 1 sang chương 2, để khán giả không vỗ tay chen giữa.
+3. **Ba chương nối liền**: một nốt giữ dài của bassoon nối chương 1 sang chương 2, có lẽ để khán giả không vỗ tay chen giữa.
 
 ## Sơ đồ cấu trúc
 

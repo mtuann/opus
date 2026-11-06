@@ -8,7 +8,7 @@ tac_pham: schubert-ca-hoi
 |---|---|
 | Nhà soạn nhạc | Franz Schubert (1797–1828) |
 | Tên đầy đủ | Ngũ tấu piano cung La trưởng, D. 667 *"Die Forelle"* |
-| Sáng tác | 1819, sau một mùa hè ở Steyr (Áo) |
+| Sáng tác | Có lẽ năm 1819, trong hay sau mùa hè ở Steyr (Áo) |
 | Thời kỳ | Đầu Lãng mạn |
 | Biên chế | Piano, violin, viola, cello, **contrabass** |
 | Chương 4 | Andantino: chủ đề và biến tấu, khoảng 7–8 phút |
