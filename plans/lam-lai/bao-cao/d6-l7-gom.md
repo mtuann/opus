@@ -126,3 +126,10 @@ Bản ghi: không có câu bổ sung.
   - Wikimedia Commons (API tìm ảnh chép tay Scarlatti); GitHub API (thư mục Scarlatti của Mutopia); một lần tìm qua html.duckduckgo.com (không có kết quả dùng được).
 
   Agent con không dùng mạng.
+
+## Lượt 2 bổ sung và trạng thái khóa (người gom)
+
+- Lượt 2 bổ sung (Claude Sonnet 5.5): `nghe-nhac/mozart-concerto-21` n13 `khong-chac` (vế PTNA đúng; vế cấu trúc không mở được tổng phổ). Người gom: lượt 2 đầu (Opus) đã đối chiếu tổng phổ NMA cho chính các vế cấu trúc ấy (`ket-qua-trang-1.yml`), nên hai lượt cộng lại xác nhận đủ; giữ câu, ghi ở `ghi_chu`.
+- Đã điền `nguoi.luot_2` cho 13 hồ sơ (8 trang, 5 bản ghi). Còn thiếu cho khóa: `nguoi.kiem_mau`.
+- Mẫu kiểm: 8 nhận định ở `d6-l7-gom/kiem-mau.yml` (`xuat D6-L7 --mau 8`).
+- Lượt 2 phần dữ liệu: agent gọi một lần `imslp.org/index.php?…&action=raw` trước khi đọc robots.txt (đường dẫn bị cấm), gặp trang Bot Check, không dùng nội dung; sau đó chỉ dùng `api.php` và `/wiki/`.
