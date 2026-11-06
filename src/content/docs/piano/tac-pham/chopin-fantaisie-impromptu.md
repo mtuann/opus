@@ -23,7 +23,7 @@ Bạn nên chơi vững hai chọi ba và đã quen ba chọi bốn ở mức b�
 
 **Impromptu** nghĩa là "ngẫu hứng": một bản nhạc như bật ra tức thì. Chopin tự cho in ba bản impromptu (Op. 29, Op. 36, Op. 51). Bản này, theo Fontana viết năm 1834, ông không cho in. Sau khi Chopin mất, người bạn Julian Fontana in nó năm 1855, cùng với các valse Op. 69 và Op. 70 (trong đó có [Valse Si thứ](/opus/piano/tac-pham/chopin-valse-si-thu/)). Theo Henle, bản tay của Chopin chỉ ghi chỉ dẫn tốc độ, bản chép của Auguste Franchomme ghi "Impromptu"; cái tên ghép *Fantaisie-Impromptu* nhiều khả năng do Fontana đặt.
 
-Một bản tay của chính Chopin, đề "Paris Vendredi 1835" (Paris, thứ Sáu, 1835), nằm trong một album của Nam tước phu nhân d'Este, ghi rằng bài được "soạn cho" bà; sau này bản tay thuộc bộ sưu tập của Arthur Rubinstein, và Rubinstein cho in nó năm 1962 (G. Schirmer). Theo Henle, đây có thể là một bản chép lại sau của bài đã viết năm trước; bản Fontana in khác bản tay khá nhiều, và nhiều chỗ khác ấy khớp với bản chép của Franchomme.
+Một bản tay của chính Chopin, đề "Paris Vendredi 1835" (Paris, thứ Sáu, 1835), nằm trong một album của Nam tước phu nhân d'Este, ghi rằng bài được "soạn cho" bà; sau này bản tay thuộc bộ sưu tập của Arthur Rubinstein. Theo Henle, đây có thể là một bản chép lại sau của bài đã viết năm trước; bản Fontana in khác bản tay khá nhiều, và nhiều chỗ khác ấy khớp với bản chép của Franchomme.
 
 :::note[Hai phiên bản]
 Ngày nay có hai phiên bản: bản Fontana, quen thuộc nhất, và bản d'Este. Ấn bản Henle in cả hai cạnh nhau để bạn so sánh. Các ấn bản cũ, kể cả bản Scholtz mà trang này trích, ra đời trước khi bản d'Este được in, nên đi theo văn bản của Fontana. Mọi số ô trên trang này theo bản ấy.
@@ -84,7 +84,7 @@ Số ô theo ấn bản Scholtz (bản Mutopia): 138 ô.
 | Hình móc kép quanh một nốt trục (ô 5–12) | Nhiều nốt nửa cung: Fa thăng kép là phím Sol, Si♯ là phím Đô; nhanh nên dễ dính, lệch | Viết ngón bấm ngay tuần đầu và giữ nguyên; tập theo nhóm bốn nốt có dừng, rồi nhóm tám, rồi cả ô; tập tay phải riêng với nhịp chấm dôi (dài – ngắn, rồi ngắn – dài). Bài tập 1 |
 | Gam nửa cung đi xuống (ô 33–36) | Hơn hai quãng tám liền, vừa nhanh vừa lớn dần | Ngón 3 trên phím đen, 1 trên phím trắng (xem [Gam](/opus/piano/gam/)); tay sát phím; lớn dần bằng trọng lượng, không bằng tăng tốc. Bài tập 2 |
 | Tay trái rải rộng (cả hai phần nhanh) | Từ Đô♯3 lên Mi4 là quãng mười: không thể "với" bằng ngón | Xoay cẳng tay như vặn nắm cửa: lăn về phía ngón cái khi đi lên, về phía ngón út khi đi xuống. Một cách bấm hợp lý: 5–3–1, ngón 2 vắt qua ngón cái lên nốt cao nhất, rồi 1–3. Bài tập 3; xem [Hợp âm rải](/opus/piano/hop-am-rai/) |
-| Vọt lên cao (ô 7) và cao trào *ff* (ô 37–40) | Tay phải vọt lên Si6; tay trái quãng tám đi xuống liên tục | "Nhảy rồi dừng": đặt tay sẵn trên đích trước khi đánh; mắt nhìn trước; quãng tám bằng cổ tay và cánh tay, không bằng ngón. Xem [Quãng tám và bước nhảy](/opus/piano/quang-tam-buoc-nhay/) |
+| Vọt lên cao (ô 7) và cao trào *ff* (ô 37–40) | Tay phải vọt lên Si6; tay trái quãng tám đi xuống rồi xoay quanh Sol♯ | "Nhảy rồi dừng": đặt tay sẵn trên đích trước khi đánh; mắt nhìn trước; quãng tám bằng cổ tay và cánh tay, không bằng ngón. Xem [Quãng tám và bước nhảy](/opus/piano/quang-tam-buoc-nhay/) |
 | Đoạn giữa: giai điệu và nốt hoa mỹ (ô 43–82) | Láy rền ngắn (ô 43), nhóm nốt nhỏ trước nốt chính (ô 49), nhóm liên bảy (ô 60, 72); tay trái rải rộng mà phải rất nhỏ | Hát giai điệu không trang trí trước; thêm nốt hoa mỹ sau, nhẹ và gọn; tay trái riêng thật nhỏ. Xem [Nốt hoa mỹ](/opus/piano/not-hoa-my/) |
 | Coda: giai điệu ở tay trái (ô 129–135) | Tay phải vẫn chạy móc kép, dễ che mất giai điệu bên dưới | Tập tay trái riêng như một bài hát; rồi ghép với tay phải *pp*, nhẹ như gió |
 | Sức bền | Hai lần 36 ô móc kép gần như không nghỉ, cộng coda | Tập theo khối 4 rồi 8 ô; chỉ chơi liền cả phần A một, hai lần mỗi buổi; tập từng đợt khoảng 20 phút, xen 10 phút nghỉ; dừng ngay nếu đau. Xem [Giữ đôi tay khỏe](/opus/piano/suc-khoe/) |
@@ -267,7 +267,7 @@ Chọn một phiên bản (xem khung *Hai phiên bản* ở trên), ghi rõ lên
 > Ấn bản Scholtz ghi il canto un poco marcato. Bài kết trên hợp âm Đô♯ trưởng rải.
 ? Bản thảo d'Este là gì?
 - Bản phác thảo đầu tiên của Chopin, năm 1834
-+ Bản tay của Chopin đề năm 1835, "soạn cho Nam tước phu nhân d'Este", sau thuộc bộ sưu tập của Arthur Rubinstein và được in năm 1962
++ Bản tay của Chopin đề năm 1835, "soạn cho Nam tước phu nhân d'Este", sau thuộc bộ sưu tập của Arthur Rubinstein
 - Bản in đầu tiên của Fontana, năm 1855
 > Ngày nay có hai phiên bản, Fontana và d'Este; ấn bản Henle in cả hai cạnh nhau.
 ```

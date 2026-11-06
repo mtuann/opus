@@ -64,7 +64,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | Dồn lên cao trào | 37–60 | *sempre stringendo* | Chuyển giọng liên tục, nhanh dần; ở đỉnh, giai điệu vang bằng quãng tám rồi tan thành hợp âm rải. Đoạn khó nhất bài. Cadenza 2 ở cuối đoạn |
 | A'' | 61–85 | *Tempo I* · La♭ trưởng | Giai điệu lần cuối, lắng dần đến kết |
 
-Số ô nhịp đếm trên bản in đầu (Kistner, 1850), bản mà ấn bản Henle dựa vào: mỗi cadenza in trong một ô duy nhất (ô 25 và ô 60), không tính nốt lấy đà. Piano Encyclopedia (Hội giáo viên piano Nhật Bản, PTNA) đặt *Più animato* ở ô 27, tức đếm cadenza thứ nhất thành hai ô; ấn bản của bạn cũng có thể đếm lệch một ô quanh các cadenza.
+Số ô nhịp đếm trên bản in đầu (Kistner, 1850), bản mà ấn bản Henle dựa vào: không tính nốt lấy đà, và mỗi khúc không chia vạch nhịp nằm giữa hai vạch nhịp tính là một ô: cadenza thứ nhất là ô 25; trước cadenza thứ hai (ô 60, *leggiero*) còn ô 59, chuỗi nốt hai tay *dimin.* cũng không chia vạch nhịp. Piano Encyclopedia (Hội giáo viên piano Nhật Bản, PTNA) đặt *Più animato* ở ô 27; ấn bản của bạn cũng có thể đếm lệch một ô quanh các cadenza.
 
 **Vì sao Si trưởng nghe sáng đến vậy?** Si trưởng cùng âm với Đô♭ trưởng, tức giọng dựng trên bậc III hạ của La♭ trưởng. Hai hợp âm trưởng cách nhau quãng ba và chỉ chung một nốt (Mi♭) là quan hệ trung âm hóa (chromatic mediant); bước chuyển này không đi qua giọng át hay hạ át (xem [Át phụ và chuyển giọng](/opus/nhac-ly/19-at-phu-chuyen-giong/)). Trên phím, bạn đi từ bốn dấu giáng sang năm dấu thăng: địa hình dưới tay đổi hẳn, nên phải học đoạn này như một bài mới.
 

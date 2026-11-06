@@ -68,7 +68,7 @@ Cách chọn và so sánh bản thu: xem [Nghệ sĩ piano và bản thu](/opus/
 
 ## Nếu bạn muốn chơi
 
-Liebestraum số 3 thuộc chặng 7 (≈ sau Grade 8). Cái khó không nằm ở tốc độ mà ở **sự cân bằng**: ngón cái hát giai điệu trong khi các ngón khác rải hợp âm thật nhẹ, rồi hai cadenza và đoạn cao trào với quãng tám ở cả hai tay. Lộ trình chuẩn bị và cách tập từng phần có ở [bài học tác phẩm Liebestraum số 3](/opus/piano/tac-pham/liszt-liebestraum/).
+Liebestraum số 3 thuộc chặng 7; Henle xếp bài ở mức 7 trên thang 9 ("khó"). Cái khó không nằm ở tốc độ mà ở **sự cân bằng**: ngón cái hát giai điệu trong khi các ngón khác rải hợp âm thật nhẹ, rồi hai cadenza và đoạn cao trào với quãng tám ở cả hai tay. Lộ trình chuẩn bị và cách tập từng phần có ở [bài học tác phẩm Liebestraum số 3](/opus/piano/tac-pham/liszt-liebestraum/).
 
 ## Ghi chép của bạn
 

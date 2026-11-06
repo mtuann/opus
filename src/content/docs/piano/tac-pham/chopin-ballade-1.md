@@ -58,7 +58,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | … | **Đoạn valse** (Mi♭ trưởng): nhẹ nhàng, lướt *leggiero* ở tay phải trên bè trầm kiểu valse |
 | … | **Chủ đề 2 trở lại** (Mi♭ trưởng): lại *fortissimo*, hùng tráng |
 | … | **Chủ đề 1 trở lại** (Sol thứ, *sotto voce*): trên âm nền Rê kéo dài, lớn dần tới *il più forte possibile* rồi ập vào coda |
-| … | **Coda** (*Presto con fuoco*, từ ô 208): hợp âm *ff*, gam quãng tám hai tay; kết bằng chuỗi quãng tám nửa cung hai tay chạy ngược chiều |
+| … | **Coda** (*Presto con fuoco*, từ ô 208): hợp âm nhấn *fz*, gam quãng tám hai tay; kết bằng chuỗi quãng tám nửa cung hai tay chạy ngược chiều |
 
 ## Cấu trúc
 
@@ -75,7 +75,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | Đoạn valse | Mi♭ trưởng | Một đoạn mới, nhẹ nhàng, dáng điệu valse; lướt *leggiero* tay phải trên bè trầm kiểu valse | Nhẹ, nhanh, trong; đổi sắc thái liên tục |
 | Chủ đề 2 trở lại | Mi♭ trưởng | Lại *fortissimo*, hùng tráng | Sức bền; không để mất tiếng vì mỏi |
 | Chủ đề 1 trở lại | Sol thứ | *Meno mosso*, *sotto voce*, trên âm nền Rê kéo dài; lớn dần tới *il più forte possibile* | Xây cao trào từ tiếng rất nhỏ |
-| Coda (từ ô 208) | Sol thứ | *Presto con fuoco*: hợp âm *ff*, gam quãng tám hai tay; kết bằng chuỗi quãng tám nửa cung hai tay chạy ngược chiều | Tốc độ, nhảy xa, quãng tám, an toàn cho cơ thể |
+| Coda (từ ô 208) | Sol thứ | *Presto con fuoco*: hợp âm nhấn *fz*, gam quãng tám hai tay; kết bằng chuỗi quãng tám nửa cung hai tay chạy ngược chiều | Tốc độ, nhảy xa, quãng tám, an toàn cho cơ thể |
 
 **Kế hoạch giọng khác thường.** Theo thông lệ, một tác phẩm Sol thứ sẽ đưa chủ đề 2 sang Si♭ trưởng (giọng trưởng song song). Chopin chọn Mi♭ trưởng (bậc VI), và ở phần giữa đưa chủ đề 2 sang La trưởng, cách Mi♭ một quãng ba cung, xa nhất có thể. Trong phần trở lại, hai chủ đề xuất hiện theo thứ tự ngược: chủ đề 2 trước, chủ đề 1 sau, và chủ đề 1 không bao giờ tìm được một kết trọn vẹn trước khi coda ập đến. Đó là lý do bài nghe như một câu chuyện có kết cục bi thảm hơn là một hình thức khép tròn. So sánh với [hình thức sonata](/opus/hinh-thuc/sonata/) chuẩn để thấy Chopin đã bẻ cong nó thế nào.
 
@@ -88,7 +88,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | Chủ đề 2 và các bè trong | Giai điệu ở trên nhưng các nốt hòa âm cùng tay dễ lấn | Chơi riêng giai điệu; rồi hợp âm với các nốt dưới bấm câm; rồi *pp*. Xem [Tạo tiếng đàn](/opus/piano/tieng-dan/) |
 | Hợp âm và quãng tám *ff* (chủ đề 2 ở La trưởng và Mi♭ trưởng) | Dễ đập, dễ căng vai, mỏi nhanh | Âm lượng từ trọng lượng cánh tay rơi tự do, cổ tay mềm, thả lỏng ngay sau khi đánh. Tập *mf* trước, chỉ thêm âm lượng khi đã thả lỏng hoàn toàn |
 | Đoạn valse, lướt *leggiero* | Nhanh mà phải nhẹ và trong; tay trái valse phải đều | Ngón sát phím, cổ tay nhẹ; tập theo nhịp chấm và theo nhóm; tay trái nốt trầm sâu, hợp âm nhẹ. Bài tập 3 |
-| Coda: nhảy xa, quãng tám, gam xen kẽ | Tốc độ *Presto* cộng mệt mỏi cuối bài | Tập coda khi tay còn tươi, nhưng không quá 10–15 phút liền; tập chậm có chủ đích; quãng tám bằng cổ tay và cánh tay, không bằng ngón. Bài tập 2 |
+| Coda: nhảy xa, quãng tám, gam xen kẽ | Tốc độ *Presto* cộng mệt mỏi cuối bài | Tập coda khi tay còn tươi, từng đợt khoảng 20 phút, xen 10 phút nghỉ; tập chậm có chủ đích; quãng tám bằng cổ tay và cánh tay, không bằng ngón. Bài tập 2 |
 | Sức bền cả bài | Phần khó nhất nằm ở cuối | Từ tuần 6, mỗi ngày chơi liền từ chủ đề 2 trở lại đến hết; từ tuần 9, chơi liền cả bài một lần mỗi ngày, không quá một lần |
 | Học thuộc một hình thức dài | Chủ đề quay lại ở nhiều giọng; dễ "nhảy" nhầm phần | Lập bản đồ: tên mỗi phần, giọng, ô bắt đầu; tập bắt đầu từ 10–12 "điểm neo" bất kỳ. Xem [Học thuộc và biểu diễn](/opus/piano/hoc-thuoc-bieu-dien/) |
 
@@ -188,7 +188,7 @@ Bài không có một tốc độ duy nhất: *Largo*, *Moderato*, *agitato*, *m
 - Chủ đề 1: giọng kể, nhỏ và giản dị, không phải giọng hát opera.
 - Chủ đề 2: hát nhưng giản dị; dành tiếng to cho những lần nó quay lại.
 - Hai lần chủ đề 2 vang *fortissimo* (La trưởng, rồi Mi♭ trưởng): tiếng to phải đến từ trọng lượng, các nốt dưới của hợp âm vẫn nhỏ hơn giai điệu.
-- Coda: ấn bản Klindworth ghi *ff* ngay từ đầu và *fff* ở những ô cuối; giữ tiếng to mà tròn, dành phần to nhất cho những ô cuối.
+- Coda: bản in đầu chỉ ghi *fz* ở hợp âm đầu, ngay sau *il più forte possibile*; ấn bản Klindworth ghi *ff* ngay từ đầu và *fff* ở những ô cuối; giữ tiếng to mà tròn, dành phần to nhất cho những ô cuối.
 
 ### Bàn đạp
 
@@ -240,7 +240,7 @@ Hợp âm kết thúc phần *Largo* (ô 7) có một nốt tay trái mà các �
 - Đánh từ trên cao xuống thật nhanh
 > Tập ở mf trước, chỉ thêm âm lượng khi đã thả lỏng hoàn toàn; các nốt dưới của hợp âm vẫn nhỏ hơn giai điệu.
 ? Tập coda thế nào cho an toàn?
-+ Khi tay còn tươi, không quá 10–15 phút liền, chậm có chủ đích; dừng lại nếu thấy căng hay đau
++ Khi tay còn tươi, từng đợt khoảng 20 phút xen nghỉ, chậm có chủ đích; dừng lại nếu thấy căng hay đau
 - Tập nhiều giờ liền để quen tốc độ
 - Chỉ tập ở tốc độ cuối để cảm được tính cách
 > Tập coda nhiều giờ liền khi tay đã mỏi là con đường ngắn nhất đến chấn thương. Nếu đến tuần 8 coda vẫn căng cứng, hãy kéo dài kế hoạch.
