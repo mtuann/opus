@@ -38,8 +38,12 @@ jobs:
           # Bỏ qua: abrsm.org (chặn robot: máy của GitHub nhận 307 lặp lại), trang chủ Oxford Music Online (chuyển hướng
           # vòng quanh trang đăng nhập), iframe_api của YouTube, và chính site cùng repo (repo còn riêng tư: người ngoài
           # nhận 404; link nội bộ đã kiểm ở bản build).
+          # --base-url: link nội bộ trong Markdown viết /opus/… (gốc site); lychee từ 0.2x báo lỗi "Cannot resolve
+          # root-relative link" khi không biết gốc. Gắn gốc https://mtuann.github.io/ thì chúng thành link của chính site,
+          # bị luật --exclude của chính site bỏ qua (link nội bộ đã kiểm ở tests/link.test.mjs).
           args: >-
             --no-progress
+            --base-url https://mtuann.github.io/
             --max-retries 3
             --timeout 30
             --scheme https
