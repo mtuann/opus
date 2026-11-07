@@ -40,6 +40,8 @@ Bấm câm (không cho kêu) hợp âm Đô4–Mi4–Sol4 và giữ phím. Tay k
 | *laissez vibrer* (*l.v.*) | Để tiếng tự tan, không chặn |
 | *senza sordino* (thời Beethoven) | "Không có bộ giảm âm": giữ bàn đạp vang |
 
+::hinh{ten="ky-hieu-ban-dap"}
+
 Chữ *senza sordino* của Beethoven là chỉ dẫn về bộ giảm âm (bàn đạp vang), không phải bàn đạp trái. Các ký hiệu biểu diễn khác ở bài [ký hiệu biểu diễn](/opus/nhac-ly/14-ky-hieu-bieu-dien/).
 
 ## Đặt chân

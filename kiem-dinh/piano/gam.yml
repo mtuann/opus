@@ -21,6 +21,15 @@ lan:
       luot_2: "Claude Opus 5.5 (lượt 2 mo/link-hong, 07/11/2026)"
       review: "Claude Opus 5.5 (review mo/link-hong, 07/11/2026: ba câu lượt 2 khong-chac sửa theo đề xuất, đối chiếu lại nguồn mới và bản lưu)"
       kiem_mau: "Claude Opus 5.5 (người gom mo/link-hong, kiểm thay chủ repo theo lời giao 07/11/2026): mẫu 4 nguồn mới tải lại bằng curl (bản lưu Wayback LCS Ritornello, slide MIT OCW Harris 2006 có \"sequence in b\" ở La stravaganza, hai địa chỉ mới Hollywood Bowl /works/… trả 200 đúng bài): khớp nhận định; 0 sai"
+  - so: 3
+    ngay: null
+    nhanh: mo/hinh-dot-3a
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (đợt hình 3a, mo/hinh-dot-3a, 07/11/2026)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: evansville
     bac: 2
@@ -370,6 +379,12 @@ nhan_dinh:
     loai: khuyen-tap
     ket_qua: khong-can-nguon
     ghi_chu: "Review D4-gom: câu mới thay phần cuối n17; lời khuyên, không trái trang khác."
+  - id: n36
+    cau: "Hình sau mục \"Cách đọc bảng\" (::hinh{ten=\"ngon-gam\"}) vẽ mười hai bàn phím nhỏ theo thứ tự của \"Bảng ngón bấm 12 gam trưởng\" (Đô, Sol, Rê, La, Mi, Si, Fa♯ = Sol♭, Rê♭ = Đô♯, La♭, Mi♭, Si♭, Fa): mỗi bàn phím tô tám nốt của gam một quãng tám đi lên và ghi số ngón tay phải (hình tròn), tay trái (hình vuông) trên từng phím, đúng từng ô của cột \"Tay phải\", \"Tay trái\"; số trong ngoặc của bảng vẽ viền đứt, chú thích ghi số ấy chỉ dùng ở đầu mút của gam (nốt cao nhất của tay phải, nốt thấp nhất của tay trái)."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 07/11/2026: HTML trong dist/<trang>/index.html), module dựng hình và ảnh chụp 360 và 1280 px. src/scripts/ve-piano-3.js (NGON_GAM chép nguyên 12 dòng của bảng, hinhNgonGam dùng veBanPhim của đợt hình 1). tests/piano-3.test.mjs so NGON_GAM với bảng trong trang từng ô, so cột \"Ngón 4 tay phải/trái\" với nốt có ngón 4 (không kể số trong ngoặc) và đọc lại số ngón từng phím trong SVG. Câu chú thích về số trong ngoặc lấy từ gạch đầu \"Số trong ngoặc\" của \"Cách đọc bảng\"."
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -438,3 +453,6 @@ mo_khoa:
   - ngay: 2026-11-06
     nhanh: mo/link-hong
     ly_do: "link ngoài hỏng (lychee 07/11/2026): đổi link chết sang bản lưu Wayback, địa chỉ mới hay nguồn khác đọc được"
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-3a
+    ly_do: "thêm hình (đợt hình 3): ngón bấm 12 gam trưởng trên phím vẽ lại bảng ngón bấm"

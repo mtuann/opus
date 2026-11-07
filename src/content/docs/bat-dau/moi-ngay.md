@@ -15,6 +15,8 @@ Một buổi tập piano tốt có cấu trúc: khởi động, kỹ thuật, b�
 | 5 phút | Đọc nốt hoặc thị tấu một bài dễ | [Đọc nốt](/opus/luyen-tap/doc-not/), [Thị tấu](/opus/luyen-tap/thi-tau/) |
 | 2 phút | Ghi nhật ký: hôm nay sửa được gì, mai làm gì | [Nhật ký](/opus/luyen-tap/nhat-ky/) |
 
+::hinh{ten="buoi-tap"}
+
 Ngoài giờ ngồi đàn, dành thêm 10 phút cho **nghe chủ động** hoặc **một bài nhạc lý** (lúc đi đường, lúc nghỉ trưa). Tai và đầu học được cả khi tay nghỉ.
 
 ## Buổi dài hơn (khi đã qua năm đầu)

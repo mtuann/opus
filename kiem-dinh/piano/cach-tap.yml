@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 4, 28/10/2026; bổ sung sau review)
       review: Claude (review D4-gom, nhóm A, 28/10/2026)
       kiem_mau: 'chủ repo, 10 nhận định mẫu của đợt 4 (D4-L1 đến D4-L4): 10 đúng (3 có điều kiện, đã sửa theo: nguồn Versuch §5 và láy rền thường, Frère Jacques "bài hát Pháp truyền thống", quãng tám trong gợi ý ngón của mẫu galant), 0 sai (bao-cao/d4-gom/kiem-mau-ket-qua.yml)'
+  - so: 2
+    ngay: null
+    nhanh: mo/hinh-dot-3a
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (đợt hình 3a, mo/hinh-dot-3a, 07/11/2026)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: ericsson
     bac: 2
@@ -456,6 +465,12 @@ nhan_dinh:
     ket_qua: da-sua
     ghi_chu: 'Câu cũ: "Trang này gom lại những điều mà giáo viên giỏi và các nghiên cứu về học kỹ năng vận động đều đồng ý…" Khẳng định "đều đồng ý" không có nguồn; bỏ. Đã sửa cả mô tả (description) ở đầu trang. Review D4-gom: description và câu mở đầu đều là "Trang này gom lại một cách tập: …".'
     review: dung
+  - id: n61
+    cau: "Hình sau bảng \"Ví dụ một thang máy đếm nhịp\" (::hinh{ten=\"thang-may\"}) vẽ bốn thanh trên trục ♩ = 58–78: ngày 1 từ 60 tới 68, ngày 2 từ 64 tới 72, ngày 3 từ 66 tới 76, ngày 4 từ 68 tới 76; từ ngày 2, vạch đứt ở mức cao nhất hôm trước (68, 72, 76), thanh của ngày bắt đầu thấp hơn vạch ấy. Chú thích: tốc độ không tăng đều mỗi ngày."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 07/11/2026: HTML trong dist/<trang>/index.html), module dựng hình và ảnh chụp 360 và 1280 px. src/scripts/ve-piano-3.js (THANG_MAY, hinhThangMay, dùng veThoiGian). Khớp cột \"Bắt đầu\", \"Cao nhất trong buổi\" (tests/piano-3.test.mjs so với bảng trong trang), ghi chú ngày 2 \"Bắt đầu thấp hơn mức cao nhất hôm qua\" và câu \"Tốc độ không tăng đều mỗi ngày\". Ghi chú ngày 3, 4 (căng tay, ổn định ở 76) không vẽ."
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -535,3 +550,7 @@ doi_chu:
   - cu: 'mô tả: Ba mươi phút tập đúng cách có ích hơn hai giờ "chơi đi chơi lại từ đầu". Trang này gom lại những điều mà giáo viên giỏi và các nghiên cứu về học kỹ năng đều…'
     moi: 'mô tả: Ba mươi phút tập đúng cách có ích hơn hai giờ "chơi đi chơi lại từ đầu". Trang này gom lại một cách tập: quy trình học một bài mới từ trang nhạc đầu tiên đến lúc chơi được cho người khác…'
     ly_do: 'n60: mô tả bỏ "giáo viên giỏi và các nghiên cứu… đều đồng ý" vì không có nguồn cho sự đồng thuận ấy.'
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-3a
+    ly_do: "thêm hình (đợt hình 3): thang máy đếm nhịp vẽ lại bảng 4 ngày"

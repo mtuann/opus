@@ -21,6 +21,15 @@ lan:
       luot_2: "không có lượt 2 ngoài: mỗi sửa đổi đối chiếu với chỗ báo cáo D6 đã chỉ ra (khối nhạc trên trang, dữ liệu đã khóa, IMSLP), ghi ở ghi_chu"
       review: Claude Opus 5.5 (mo/sua-nho, 07/11/2026)
       kiem_mau: chủ repo yêu cầu sửa (07/11/2026); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
+  - so: 3
+    ngay: null
+    nhanh: mo/hinh-dot-3a
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (đợt hình 3a, mo/hinh-dot-3a, 07/11/2026)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: omt-intervals
     bac: 2
@@ -637,6 +646,12 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "Tất cả tồn tại ở opus-zero/docs/ (kiểm bằng lệnh). Điều từng trang phải giữ: xem các n ve-site phía trên (các ô nhịp, nốt trầm Si1 ở ô 97, tiếng rung quãng tám Pathétique, quãng tám chủ đề Op. 10 số 12, v.v.). choi-cung-nguoi-khac: có phần ca khúc (Erlkönig) nói piano là tiếng vó ngựa. Review: đã kiểm từng link: metronome, nghe-nhac/beethoven-pathetique, nghe-nhac/chopin-etude, các trang tac-pham và tai-lieu-tham-khao có ở ../opus-zero/docs/; piano/choi-cung-nguoi-khac và piano/suc-khoe nay đã có trong dist/. Link schubert-impromptu-sol-giang đã bỏ cùng n46."
     review: dung
+  - id: n66
+    cau: "Hình sau đoạn đầu mục \"Bước nhảy: nhảy sớm, đánh đúng lúc\" (::hinh{ten=\"buoc-nhay\"}) vẽ hai làn trên hai phách (phách 1: nốt trước, phách 2: nốt đích): \"Gộp làm một (lỗi)\": đánh, rồi \"vừa bay vừa đập xuống\", nốt đích \"trễ, trượt\" sau phách 2; \"Tách hai việc\": đánh, \"rời ngay, bay thấp\", \"chạm phím, chờ\", \"đánh đúng lúc\" đúng phách 2. Chú thích nói độ dài các ô chỉ để so sánh."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 07/11/2026: HTML trong dist/<trang>/index.html), module dựng hình và ảnh chụp 360 và 1280 px. src/scripts/ve-piano-3.js (hinhBuocNhay, dùng veThoiGian của đợt hình 2a). Khớp đoạn \"Một bước nhảy gồm hai việc tách bạch: di chuyển và đánh … tay vừa bay vừa đập xuống, nên vừa trễ vừa trượt. Hãy rời nốt trước ngay khi nó đã kêu, đến đích sớm, chạm nhẹ mặt phím, rồi mới đánh đúng lúc bằng một động tác ngắn từ sát phím\" và gạch \"Đường đi thấp: một vòng thấp\". Hình không ghi số đo thời gian nào; vị trí nốt đích của làn đúng ở vạch phách 2, làn lỗi sau vạch (tests/piano-3.test.mjs)."
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -739,3 +754,6 @@ mo_khoa:
   - ngay: 2026-11-07
     nhanh: mo/sua-nho
     ly_do: "Sửa nhỏ theo kế hoạch mở rộng mục 4 (chủ repo yêu cầu 07/11/2026): lệch nhỏ đã ghi trong báo cáo các lô D6"
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-3a
+    ly_do: "thêm hình (đợt hình 3): dải thời gian bước nhảy vẽ lại chữ mục Bước nhảy"

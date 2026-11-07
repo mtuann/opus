@@ -57,6 +57,8 @@ Mỗi biến thể chơi 3–5 lần, chậm, thả lỏng, rồi mới quay v�
 | 3 | ♩ = 66 | ♩ = 76 | Ở 76 bắt đầu căng tay: dừng tăng tốc độ và xem lại cách chơi |
 | 4 | ♩ = 68 | ♩ = 76 | Ổn định ở 76 rồi mới đi tiếp |
 
+::hinh{ten="thang-may"}
+
 Tốc độ không tăng đều mỗi ngày, và điều đó hoàn toàn bình thường.
 
 ## Sửa một lỗi cho dứt điểm

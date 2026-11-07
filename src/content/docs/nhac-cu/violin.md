@@ -13,6 +13,8 @@ Opus tập trung vào piano; trang này giúp bạn **nghe hiểu** nhạc cụ 
 
 Bốn dây lên theo quãng 5: **Sol3 – Rê4 – La4 – Mi5**. Người chơi kéo vĩ (*arco*) hoặc gảy dây bằng ngón (*pizzicato*), và có thể chơi hai dây cùng lúc (nốt kép). Âm vực thường dùng từ Sol3 đến khoảng La7. Violin đọc **khóa Sol** và không phải nhạc cụ dịch giọng: nốt viết sao vang vậy.
 
+::cong-cu{ten="piano" range="G3-E5" notes="G3 D4 A4 E5" ngoac="G3-D4:quãng_5 D4-A4:quãng_5 A4-E5:quãng_5"}
+
 ## Vai trò
 
 - **Dàn nhạc**: violin 1 thường chơi bè cao hơn, violin 2 chơi bè thấp hơn. Người ngồi đầu bè violin 1 (concertmaster) cũng là người đứng đầu nhạc công của cả dàn nhạc.

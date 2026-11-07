@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 4, 28/10/2026; bổ sung sau review)
       review: Claude (review D4-gom, nhóm B, 28/10/2026)
       kiem_mau: 'chủ repo, 10 nhận định mẫu của đợt 4 (D4-L1 đến D4-L4): 10 đúng (3 có điều kiện, đã sửa theo: nguồn Versuch §5 và láy rền thường, Frère Jacques "bài hát Pháp truyền thống", quãng tám trong gợi ý ngón của mẫu galant), 0 sai (bao-cao/d4-gom/kiem-mau-ket-qua.yml)'
+  - so: 2
+    ngay: null
+    nhanh: mo/hinh-dot-3a
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (đợt hình 3a, mo/hinh-dot-3a, 07/11/2026)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: wiki-pedals
     bac: 3
@@ -632,6 +641,12 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'Đã có: piano/tu-the, hop-am-rai, tieng-dan, nhac-ly/14-ky-hieu-bieu-dien, nhac-ly/am-hoc. Chưa chuyển, đã kiểm ở ../opus-zero/docs/: luyen-tap/thu-am; piano/chon-dan (bàn đạp liên tục, bàn đạp giữa sostenuto/đàn đứng là bàn đạp tập, nâng cấp ở Grade 4–5); piano/lich-su-dan (cần đầu gối của Stein, Walter; ba bàn đạp; senza sordino; bảng sáng chế nói Steinway 1874 cho sostenuto, trong khi Wikipedia Piano pedals ghi Boisselot 1844, Debain 1860, Montal 1862, Steinway hoàn thiện và đăng ký 1874: người giao xem lại câu ở lich-su-dan khi chuyển); piano/tac-pham/beethoven-anh-trang (mục "### Bàn đạp: *senza sordino*", slug ban-ap-senza-sordino: có, khớp anchor); bach-prelude-do (giữ nốt và bàn đạp); mozart-k545 (gần như không bàn đạp); chopin-nocturne-op9-2 (đổi bàn đạp theo nốt trầm); debussy-clair-de-lune (una corda, đạp nửa); tai-lieu-tham-khao. Lô chuyển các trang đó phải giữ các nội dung ấy. Mục thuat-ngu.yml trỏ tới ban-dap/#beethoven và #ky-hieu: hai tiêu đề này có ("### Beethoven", "## Ký hiệu"). Review D4-gom: Review: đã kiểm từng link trên trang: tu-the, hop-am-rai, tieng-dan, lich-su-dan (nay đã chuyển), nhac-ly/14-ky-hieu-bieu-dien, nhac-ly/am-hoc có trong dist/; luyen-tap/thu-am, piano/chon-dan, tac-pham/bach-prelude-do (mục Giữ nốt và bàn đạp), beethoven-anh-trang (### Bàn đạp: *senza sordino*, slug ban-ap-senza-sordino), chopin-nocturne-op9-2, debussy-clair-de-lune, mozart-k545, tai-lieu-tham-khao có ở ../opus-zero/docs/. dist/piano/ban-dap/index.html có id "ba-ban-ap", "ky-hieu", "beethoven" (hồ sơ lich-su-dan, thuat-ngu trỏ tới).'
     review: dung
+  - id: n63
+    cau: "Hình sau bảng \"Ký hiệu\" (::hinh{ten=\"ky-hieu-ban-dap\"}) vẽ một khuông hai ô nhịp và dưới đó hai cách ghi cùng một cách đạp: kiểu chữ (Ped. ở đầu ô 1, Ped. mới ở đầu ô 2 không có dấu sao trước đó, dấu sao ở cuối ô 2) và kiểu đường kẻ (vạch dọc ở đầu, chỗ gãy nhọn ∧ ở đầu ô 2, vạch dọc ở cuối); dóng thẳng hàng với ba chữ \"nhấn\", \"nhả rồi nhấn lại (đổi bàn đạp)\", \"nhả\"."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 07/11/2026: HTML trong dist/<trang>/index.html), module dựng hình và ảnh chụp 360 và 1280 px. Hình tĩnh src/components/hinh/ky-hieu-ban-dap.html. Khớp hai dòng đầu của bảng: \"Nhấn bàn đạp vang ở Ped., nhả ở dấu sao … một chữ Ped. mới mà không có dấu sao trước đó nghĩa là đổi bàn đạp: nhả rồi nhấn lại\" (chú thích giữ \"như trong các bài trên site này\") và \"Nhấn ở đầu đường kẻ, giữ đến vạch dọc ở cuối thì nhả; chỗ gãy nhọn (∧) … là nhả rồi nhấn lại ngay (đổi bàn đạp)\". Nghĩa \"nửa bàn đạp\" của ∧ ở vài ấn bản không vẽ. Khuông không có nốt."
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -776,3 +791,7 @@ doi_chu:
   - cu: "câu hỏi: Trên đàn cánh, bàn đạp una corda làm gì? | Hạ một dải nỉ vào giữa búa và dây | ✓ Dịch bộ máy sang bên để búa gõ ít dây hơn | Đưa búa lại gần dây | Hạ dải nỉ là bàn đạp tập của đàn đứng; đưa búa lại gần dây là bàn đạp trái của đàn đứng."
     moi: "câu hỏi: Trên đàn cánh, bàn đạp una corda làm gì? | Giữ nhấc bộ giảm âm của những phím đang giữ | ✓ Dịch bộ máy sang bên để búa gõ ít dây hơn | Đưa búa lại gần dây | Giữ nhấc bộ giảm âm của những phím đang giữ là việc của bàn đạp giữa (sostenuto); đưa búa lại gần dây là bàn đạp trái của đàn đứng."
     ly_do: n58 (da-sua, review D4-gom).
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-3a
+    ly_do: "thêm hình (đợt hình 3): ký hiệu bàn đạp dưới khuông vẽ lại bảng Ký hiệu"

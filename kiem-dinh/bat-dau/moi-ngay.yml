@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (D2-L1 lượt 2 phần 2/2)
       review: Claude Opus 5.5 (review D2-L1, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-L1 đúng (d2-l1-kiem-mau.yml)
+  - so: 2
+    ngay: null
+    nhanh: mo/hinh-dot-3a
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (đợt hình 3a, mo/hinh-dot-3a, 07/11/2026)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: >-
   Trang chỉ có lời khuyên tập (khuyen-tap): khuôn buổi tập, lịch tuần, khi nào đổi bài, khi đau. Không có tên tác phẩm, số liệu nhạc lý hay chi tiết mau cũ (ứng dụng, giá, thiết bị, sự kiện). Mỗi lời khuyên đã đối chiếu với các trang lõi cũ cùng chủ đề trong ../opus-zero/docs/: piano/cach-tap.md (mục "Mẫu buổi tập", "Kế hoạch một tuần khi học với thầy", "Tập khi không có đàn"), piano/suc-khoe.md, piano/10-bai-dau-tien.md, bat-dau/lo-trinh-choi.md, nghe-nhac/index.md (phương pháp 4 lần nghe), bat-dau/index.md; không thấy chỗ nào trái nhau. Link nội bộ trỏ tới trang có trong kế hoạch (tu-the, nam-ngon, gam, cach-tap, doc-not, thi-tau, nhat-ky, bai-tap-ngon, thu-am, suc-khoe), chưa lên site thì hiện "sắp có"; neo #mau-buoi-tap là id của mục "Mẫu buổi tập" ở trang cũ. Không sửa chữ nào của trang.
 nguon: []
@@ -88,4 +97,14 @@ nhan_dinh:
     ghi_chu: 'Khớp piano/suc-khoe.md: mục "Đau vì chơi đàn: phổ biến, nhưng không bình thường", bảng dấu hiệu cảnh báo ("Đau ở một điểm, xuất hiện khi chơi và còn sau khi dừng: Dừng buổi tập, nghỉ chơi đàn vài ngày; không đỡ thì đi khám") và câu hỏi kiểm tra ("Tập liền ba tiếng không nghỉ cho quen áp lực" là đáp án sai). Lời khuyên y tế chi tiết thuộc trang suc-khoe (lô D4-L3), trang này chỉ dẫn sang. Cập nhật D4-gom (28/10/2026): hàng đầu bảng cảnh báo nay viết theo BAPAM ("Dừng buổi tập và cho tay nghỉ"); mục, bảng và câu hỏi kiểm tra vẫn còn, trang này chỉ dẫn sang nên vẫn khớp.'
     luot_2: dung
     luot_2_ghi_chu: "Đúng nguyên tắc an toàn: đau tay, cổ tay hay cẳng tay khi tập là tín hiệu dừng lại, kiểm tra tư thế, giảm thời gian."
+  - id: n10
+    cau: "Hình sau bảng \"Buổi 30 phút (chuẩn)\" (::hinh{ten=\"buoi-tap\"}) vẽ năm thanh nối tiếp trên trục 30 phút, theo thứ tự của bảng: khởi động 3 phút, kỹ thuật 5, bài đang học 15, đọc nốt, thị tấu 5, nhật ký 2; mỗi thanh dài theo số phút."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 07/11/2026: HTML trong dist/<trang>/index.html), module dựng hình và ảnh chụp 360 và 1280 px. src/scripts/ve-piano-3.js (BUOI_30, hinhBuoiTap, dùng veThoiGian). tests/piano-3.test.mjs so cột \"Thời gian\" của bảng với BUOI_30, tên việc với cột \"Việc làm\", và vị trí, độ dài từng thanh (phần trăm của 30 phút). 3 + 5 + 15 + 5 + 2 = 30."
 khuong_nhac: []
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-3a
+    ly_do: "thêm hình (đợt hình 3): dải thời gian buổi 30 phút vẽ lại bảng"

@@ -89,6 +89,8 @@ Cách đọc bảng:
 - **Si♭ trưởng**: một số bảng ngón bấm (như PianoScales) cho nốt Si♭ đầu tiên của tay phải dùng ngón 2 (2 1 2 3 1 2 3 4); từ quãng tám thứ hai trở đi, Si♭ luôn là ngón 4.
 - Rê♭ trưởng cùng phím với Đô♯ trưởng, Sol♭ trưởng cùng phím với Fa♯ trưởng: cùng ngón bấm.
 
+::hinh{ten="ngon-gam"}
+
 ## Gam thứ hòa âm
 
 Gam thứ hòa âm nâng bậc 7 lên nửa cung để có cảm âm (xem [gam thứ](/opus/nhac-ly/07-gam-thu/)). Ngón bấm theo cùng các quy tắc nhóm ngón; năm giọng La, Mi, Rê, Sol, Đô thứ dùng đúng ngón của Đô trưởng.

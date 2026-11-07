@@ -137,6 +137,8 @@ Một quy tắc cho cả hai tay: **1–5 trên phím trắng, 1–4 trên phím
 
 Một bước nhảy gồm hai việc tách bạch: **di chuyển** và **đánh**. Lỗi phổ biến nhất là gộp làm một: tay vừa bay vừa đập xuống, nên vừa trễ vừa trượt. Hãy rời nốt trước ngay khi nó đã kêu, đến đích sớm, chạm nhẹ mặt phím, rồi mới đánh đúng lúc bằng một động tác ngắn từ sát phím.
 
+::hinh{ten="buoc-nhay"}
+
 - **Mắt đi trước tay**: nhìn đích trước khi rời nốt cũ, không phải lúc đang bay; nếu chỉ kịp nhìn một chỗ, nhìn đích xa hơn.
 - **Tìm phím bằng xúc giác**: nhóm hai và nhóm ba phím đen là "chữ nổi" của bàn phím (xem [Bản đồ bàn phím](/opus/piano/ban-do-ban-phim/)).
 - **Đường đi thấp**: một vòng thấp, vừa đủ để không quệt phím; vòng cao mất thời gian, đi sát ngang thì dễ vấp phím đen. Nhảy xa thì cánh tay dẫn, vai xoay theo.

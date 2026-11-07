@@ -13,6 +13,8 @@ Opus tập trung vào piano; trang này giúp bạn **nghe hiểu** nhạc cụ 
 
 Cello có 4 dây lên theo quãng 5: **Đô2 – Sol2 – Rê3 – La3**, thấp hơn viola đúng một quãng tám. Người chơi **ngồi**, đàn tựa giữa hai đầu gối, chân chống (endpin) tì xuống sàn. Âm vực thường dùng từ Đô2 đến khoảng Đô6.
 
+::cong-cu{ten="piano" range="C2-A3" notes="C2 G2 D3 A3" ngoac="C2-G2:quãng_5 G2-D3:quãng_5 D3-A3:quãng_5"}
+
 Cello đọc **khóa Fa** ở âm vực thấp và vừa, chuyển sang **khóa Đô tenor** khi lên cao, đôi khi cả **khóa Sol** ở âm vực rất cao (xem [bài 17](/opus/nhac-ly/17-khoa-do-dich-giong/) về khóa Đô). Người chơi cello vì vậy đọc cả ba khóa.
 
 Như violin, cello **không phải nhạc cụ dịch giọng**: nốt viết sao vang vậy.
