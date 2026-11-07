@@ -56,9 +56,32 @@ Mọi câu là "chỉ vẽ lại": không câu nào đem điều mới, không c
 
 Không commit, ở `/private/tmp/claude-501/-Users-mitu-Desktop-work-projects-opus/7f80c6a8-7bce-46e5-8918-954e4e4384ee/scratchpad/hinh3a-anh/`: mỗi hình một ảnh 1280 px sáng và 360 px tối (độ phân giải gấp đôi), tên `<nhóm>_<trang>_<số hình>-<cỡ>[-toi].png`. Tiêu biểu: `piano_gam_0-1280.png`, `piano_ban-dap_0-360-toi.png`, `piano_quang-tam-buoc-nhay_0-360-toi.png`, `piano_cach-tap_0-360-toi.png`. (Ảnh 1280 của `gam` có thanh tìm kiếm dính của trang đè ở trên: ảnh chụp cả phần tử cao hơn màn hình, không phải lỗi hình.)
 
+## Soát (review mã và kiểm mẫu gộp, thủ tục hình)
+
+Claude Opus 5.5 (không phải người vẽ), 07/11/2026.
+
+**Review mã (mức "Vừa"): đạt, không phải sửa.**
+
+- `hinhNgonGam` sửa chuỗi SVG của `veBanPhim`: thay `aria-label` đầu tiên (của thẻ `<svg>` gốc, luôn đứng trước mọi phần tử con) và thêm `oz-ngon--mut` vào đúng `<g class="oz-ngon oz-ngon--<tay>" data-phim="…">`. Mỗi cặp tay và phím chỉ có một dấu, và không thấy thì ném lỗi có tên hình, nên `veBanPhim` đổi định dạng thì build hỏng chứ không im lặng sai. Cách gọn hơn là cho `veBanPhim` nhận `mut` trong từng mục `ngon` và một nhãn đầy đủ thay `aria-label`; để lại cho lúc gộp các nhánh 3b, 3c (đụng `ve.js` dùng chung), không đáng làm bây giờ.
+- Màu: dấu viền đứt dùng `--oz-ngon-phai`, `--oz-ngon-trai` (cùng giá trị ở sáng, tối, in) trên nền trắng (phím trắng sáng ở mọi chế độ). Hình bàn đạp dùng `currentColor` và `--oz-h-do`. Chữ thật; mỗi bàn phím có `aria-label` đọc tên giọng và số ngón từng nốt, tên giọng hiện bằng chữ `aria-hidden` (không đọc lặp). Lưới một cột ở 360 px. Hình là `oz-figure` nên sách in giữ; `break-inside: avoid` khi in. Kiểm thử đọc lại số ngón từ SVG và so bảng trong trang: hợp lý.
+
+**Soát bảy hình trên bản xem (`npm run build:xem`, `dist/<trang>/index.html`): bảy câu `review: dung`.**
+
+| Câu | Đối chiếu |
+|---|---|
+| `gam` n36 | Đọc từng dấu trong SVG của 12 bàn phím: số ngón hai tay khớp từng ô của bảng; 14 số trong ngoặc viền đứt đúng nốt đầu mút; cột "Ngón 4" hai tay khớp nốt mang ngón 4. |
+| `ban-dap` n63 | Vị trí *Ped.*, dấu sao, vạch dọc, chỗ gãy khớp hai dòng đầu bảng. "Cùng một cách đạp" suy thẳng từ bảng (cả hai dòng ghi chỗ ấy là đổi bàn đạp). **Sửa**: chú thích hình thêm "(vài ấn bản dùng nó cho nửa bàn đạp, như bảng ghi)", để hình không bỏ giới hạn bảng đã nêu. |
+| `quang-tam-buoc-nhay` n66 | Chữ trong hai hàng khớp đoạn đầu mục và gạch "Đường đi thấp"; phách là trục sơ đồ, chú thích ghi độ dài chỉ để so sánh. |
+| `violin` n32, `cello` n33 | Phím tô Sol3, Rê4, La4, Mi5 và Đô2, Sol2, Rê3, La3; mỗi ngoặc "quãng 5" đúng 7 nửa cung. |
+| `moi-ngay` n10 | 3, 5, 15, 5, 2 phút theo thứ tự bảng, tổng 30. |
+| `cach-tap` n61 | 60→68, 64→72, 66→76, 68→76; vạch đứt 68, 72, 76; "mỗi ngày bắt đầu thấp hơn" suy từ số của bảng. |
+
+Bảy hồ sơ: `review: dung` và đoạn "Soát hình 3A …" nối vào `ghi_chu` của câu; lần cuối của `lan` có `luot_2` "không cần (câu ve-site, thủ tục hình)", `review` và `kiem_mau` cùng tên người soát. Chưa khóa (việc của người gom, sau khi xem ảnh).
+
+Kiểm sau khi sửa: `npm run build:xem` không cảnh báo `[opus]`; `node tools/khoa.mjs tinh` thoát 0; `npm test` 329 đạt, 2 bỏ qua, 0 hỏng.
+
 ## Việc cho người gom
 
-- Review mã (mức "Vừa", commit mã riêng).
-- Một người soát (không phải người vẽ): review và kiểm mẫu gộp theo thủ tục hình cho 7 câu `ve-site` (bảng trên), đối chiếu từng hình với chữ trang trên bản xem; `nguoi.luot_2`: "không cần (câu ve-site, thủ tục hình)".
+- Review mã và soát bảy câu: xong (mục "Soát").
 - Xem ảnh chụp rồi khóa lại bảy trang.
 - Xung đột khi gộp với nhánh 3b, 3c: dòng import và `HINH` của `thanh-phan.mjs`, `KHOI` của `tools/trang-mau.mjs`, mục `AGENTS.md`, cuối `thanh-phan.css` (chỉ thêm khối). `kiem-ban-phim-chu.mjs` đổi một dòng.
