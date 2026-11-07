@@ -123,7 +123,7 @@ K:Gb
 
 ## Bài tập chuẩn bị
 
-Các bài dưới đây **soạn riêng cho trang này**, không trích từ bản nhạc gốc. Chúng ở chính giọng Sol♭ trưởng và nhịp 4/2 với móc đơn chùm sáu, để tay và mắt quen trước khi mở bản nhạc thật.
+Các bài dưới đây **soạn riêng cho trang này**, không trích từ bản nhạc gốc. Chúng ở chính giọng Sol♭ trưởng và nhịp 4/2, phần lớn với móc đơn chùm sáu (bài láy rền dùng móc kép), để tay và mắt quen trước khi mở bản nhạc thật.
 
 ### 1. Ba ngón trong, hai ngón ngoài
 

@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L1, 06/11/2026, bốn phần; bổ sung sau review)
       review: Claude Opus 5.5 (review D6-L1-gom, 05/11/2026)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L1, 8 đúng, 0 sai (bao-cao/d6-l1-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-07
+    nhanh: mo/sua-nho
+    ma_bam: sha256:50c537d4f1d40d106b684ad23c25d7be10ad3659f2caace79a61da590117f11a
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/sua-nho, 07/11/2026: sửa lệch nhỏ theo kế hoạch mở rộng mục 4)"
+      luot_2: "không có lượt 2 ngoài: mỗi sửa đổi đối chiếu với chỗ báo cáo D6 đã chỉ ra (khối nhạc trên trang, dữ liệu đã khóa, IMSLP), ghi ở ghi_chu"
+      review: Claude Opus 5.5 (mo/sua-nho, 07/11/2026)
+      kiem_mau: chủ repo yêu cầu sửa (07/11/2026); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
 ghi_chu: 'Bài học ba tiểu phẩm Op. 68 số 1, 8, 10 (tầng Tác phẩm). Không có trích đoạn: ba khối abc là ví dụ soạn. Bản nhạc: Mutopia 647, 655, 659 (Peters, CC BY-SA 2.5; tựa và chỉ dẫn tiếng Pháp), thêm hai bản in trên Internet Archive (Schuberth 1867 bản Klauser; một bản không ghi tên) để xem chỉ dẫn tốc độ tiếng Đức. Lịch sử: lời tựa và Bemerkungen của Henle HN 45 (Herttrich 2007), PDF tải từ trang sản phẩm. Chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng thuộc hồ sơ du-lieu/tac-pham/schumann-album. Hai mục doi_chu đầu (chip cấp độ, dòng Độ khó) do người giao ghi, giữ nguyên. Sửa trang: n47, n78; bỏ: n64. Chưa chắc: n56, n72 (Nicht schnell ở Melodie).'
 nguon:
   - id: henle-hn45-vorwort
@@ -685,10 +694,10 @@ nhan_dinh:
     luot_2_nguon: [ "https://imslp.org/wiki/Album_f%C3%BCr_die_Jugend,_Op.68_(Schumann,_Robert)", "https://www.henle.de/media/90/21/08/1697725681/0045-1697725681-sync.pdf" ]
     luot_2_ghi_chu: "IMSLP và Henle: số 3 Trällerliedchen, 5 Stückchen, 7 Jägerliedchen, 9 Volksliedchen, 17 Kleiner Morgenwanderer, 18 Schnitterliedchen; phần hai mở bằng số 19 Kleine Romanze."
   - id: n69
-    cau: 'Học tiếp: cùng chặng trên site Petzold: Minuet Sol trưởng; bước tiếp theo Clementi: Sonatina Op. 36 số 1 và Burgmüller: Arabesque; cùng tác giả Schumann: Träumerei (bản nổi tiếng nhất của Kinderszenen); link Tác phẩm theo cấp độ.'
+    cau: 'Học tiếp: cùng chặng trên site Petzold: Minuet Sol trưởng; bước tiếp theo Clementi: Sonatina Op. 36 số 1 và Burgmüller: Arabesque; cùng tác giả Schumann: Träumerei (có lẽ là bản nổi tiếng nhất của Kinderszenen); link Tác phẩm theo cấp độ.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/data/tac-pham.yml: minuet-sol chang 2 (bằng trang này, chang 2); clementi-sonatina, burgmuller-arabesque chang 3 (bước tiếp). minuet-sol cùng lô (phần A); clementi-sonatina, burgmuller-arabesque, schumann-traumerei chưa chuyển (site cũ có). piano/tac-pham-theo-cap có. Vế "bản nổi tiếng nhất của Kinderszenen" là nhận định ở trang Träumerei, không tách ở đây; tác giả Petzold là tac_gia đã khóa của minuet-sol. Review D6-L1-gom: tac-pham.yml: minuet-sol chặng 2 (bằng trang này), clementi-sonatina, burgmuller-arabesque chặng 3; Träumerei chưa chuyển (site cũ có); tac-pham-theo-cap có. Đúng.'
+    ghi_chu: 'src/data/tac-pham.yml: minuet-sol chang 2 (bằng trang này, chang 2); clementi-sonatina, burgmuller-arabesque chang 3 (bước tiếp). minuet-sol cùng lô (phần A); clementi-sonatina, burgmuller-arabesque, schumann-traumerei chưa chuyển (site cũ có). piano/tac-pham-theo-cap có. Vế "bản nổi tiếng nhất của Kinderszenen" là nhận định ở trang Träumerei, không tách ở đây; tác giả Petzold là tac_gia đã khóa của minuet-sol. Review D6-L1-gom: tac-pham.yml: minuet-sol chặng 2 (bằng trang này), clementi-sonatina, burgmuller-arabesque chặng 3; Träumerei chưa chuyển (site cũ có); tac-pham-theo-cap có. Đúng. Sửa nhỏ (mo/sua-nho, 07/11/2026, kế hoạch mở rộng mục 4): thêm "có lẽ": xếp hạng mức độ nổi tiếng không có nguồn nói tuyệt đối (Seiffert dùng cách nói tương đối; d6-l4).'
     review: dung
   - id: n70
     cau: 'Cùng ý tưởng: Album cho tuổi trẻ Op. 39 của Tchaikovsky (1878) và tập For Children của Bartók.'
@@ -826,30 +835,37 @@ doi_chu:
   - cu: Op. 68 số 1, 8, 10 Ba tiểu phẩm ngắn ≈ Grade 1–3
     moi: Op. 68 số 1, 8, 10 Ba tiểu phẩm ngắn ≈ Grade 1–4
     ly_do: "Chip cấp độ dựng từ bản ghi tac-pham/schumann-album: D2-0 sửa grade Grade 1–3 thành Grade 1–4 (số 10 ở ABRSM Grade 4, 2017 & 2018; plans/lam-lai/bao-cao/d2-0/sua-A.yml, hồ sơ du-lieu/tac-pham/schumann-album n4)."
-  - cu: "Số 1: khoảng ABRSM Grade 1; số 8: khoảng Grade 2; số 10: khoảng Grade 2–3 (ước lượng)"
-    moi: ABRSM xếp số 1 ở Grade 1 (đề cương 2021–2022), số 8 ở Grade 3 (2023–2028), số 10 ở Grade 4 (2017–2018)
-    ly_do: "Dòng Độ khó của thong_tin sửa ở D2-0 theo đề cương ABRSM (sua-A.yml: số 8 ở Grade 3, số 10 ở Grade 4, không phải Grade 2 và 2–3 như trang cũ); lượt 1 D6-L1 kiểm lại ở hồ sơ bản ghi."
-  - cu: Ba bài đều xây từ những câu 4 ô, nhắc lại và biến đổi. Đây chính là các hình thức nhỏ bạn học trong phần nhạc lý, ở dạng gọn nhất.
-    moi: Ba bài đều xây từ những câu ngắn, phần lớn 4 ô, nhắc lại và biến đổi. Đây chính là các hình thức nhỏ bạn học trong phần nhạc lý, ở dạng gọn nhất.
-    ly_do: "n47 (da-sua): đoạn b của số 10 dài 6 ô (Mutopia 659 ô 9–14; bảng Cấu trúc của trang cũng ghi 6 ô)."
-  - cu: "Số 2 Soldatenmarsch (Hành khúc người lính, Sol trưởng): nhịp hành khúc với tiết tấu chấm dôi và hợp âm ngắn ở cả hai tay. Một bài staccato hợp âm đầu tiên rất tốt: hai tay buông phím cùng lúc, nhịp đều như bước chân, không chạy vội ở nốt ngắn. Nhiều người học bài này trước cả Wilder Reiter."
-    moi: "Số 2 Soldatenmarsch (Hành khúc người lính, Sol trưởng): nhịp hành khúc với tiết tấu chấm dôi và hợp âm ngắn ở cả hai tay. Một bài staccato hợp âm đầu tiên rất tốt: hai tay buông phím cùng lúc, nhịp đều như bước chân, không chạy vội ở nốt ngắn."
-    ly_do: 'n64 (da-bo): "Nhiều người học bài này trước cả Wilder Reiter" không kiểm được.'
-  - cu: "Bản nhạc: IMSLP; bản dàn trang công cộng theo ấn bản Peters tại Mutopia Project. Xem thêm tài liệu tham khảo."
-    moi: "Bản nhạc: IMSLP; bản dàn trang theo ấn bản Peters (giấy phép CC BY-SA 2.5) tại Mutopia Project. Xem thêm tài liệu tham khảo."
-    ly_do: "n78 (da-sua): bản Op. 68 trên Mutopia mang giấy phép CC BY-SA 2.5, không phải phạm vi công cộng."
-  - cu: Mỗi bài là một hình thức nhỏ dựng từ các câu 4 ô (xem Cấu trúc)
-    moi: Mỗi bài là một hình thức nhỏ dựng từ các câu ngắn, phần lớn 4 ô (xem Cấu trúc)
-    ly_do: "n22 của hồ sơ bản ghi tac-pham/schumann-album (da-sua, D6-L1 lượt 1; plans/lam-lai/bao-cao/d6-l1/sua-B.yml): dòng Hình thức của thong_tin; đoạn b của số 10 dài 6 ô (Mutopia 659 ô 9–14), nên không phải mọi câu đều 4 ô."
   - cu: "Số 1 Melodie (Giai điệu): Đô trưởng · 4/4 · Nicht schnell (không nhanh). Số 8 Wilder Reiter (Kỵ sĩ hoang dã): La thứ · 6/8 · nhanh, sôi nổi. Số 10 Fröhlicher Landmann, von der Arbeit zurückkehrend (Người nông dân vui vẻ đi làm về): Fa trưởng · 4/4 · Frisch und munter (tươi tắn, vui vẻ)"
     moi: "Số 1 Melodie (Giai điệu): Đô trưởng · 4/4 · bản in đầu không ghi tốc độ (nhiều ấn bản thêm Nicht schnell, không nhanh). Số 8 Wilder Reiter (Kỵ sĩ hoang dã): La thứ · 6/8 · nhanh, sôi nổi. Số 10 Fröhlicher Landmann, von der Arbeit zurückkehrend (Người nông dân vui vẻ đi làm về): Fa trưởng · 4/4 · Frisch und munter (tươi tắn, vui vẻ)"
     ly_do: "Review D6-L1-gom (dữ liệu, du-lieu/tac-pham/schumann-album n19): bản in đầu (BSB bsb11108083) không ghi tốc độ cho Melodie; Nicht schnell là của người biên tập."
+  - cu: Mỗi bài là một hình thức nhỏ dựng từ các câu 4 ô (xem Cấu trúc)
+    moi: Mỗi bài là một hình thức nhỏ dựng từ các câu ngắn, phần lớn 4 ô (xem Cấu trúc)
+    ly_do: "n22 của hồ sơ bản ghi tac-pham/schumann-album (da-sua, D6-L1 lượt 1; plans/lam-lai/bao-cao/d6-l1/sua-B.yml): dòng Hình thức của thong_tin; đoạn b của số 10 dài 6 ô (Mutopia 659 ô 9–14), nên không phải mọi câu đều 4 ô."
+  - cu: "Số 1: khoảng ABRSM Grade 1; số 8: khoảng Grade 2; số 10: khoảng Grade 2–3 (ước lượng)"
+    moi: ABRSM xếp số 1 ở Grade 1 (đề cương 2021–2022), số 8 ở Grade 3 (2023–2028), số 10 ở Grade 4 (2017–2018)
+    ly_do: "Dòng Độ khó của thong_tin sửa ở D2-0 theo đề cương ABRSM (sua-A.yml: số 8 ở Grade 3, số 10 ở Grade 4, không phải Grade 2 và 2–3 như trang cũ); lượt 1 D6-L1 kiểm lại ở hồ sơ bản ghi."
   - cu: Schumann định đặt tên Weihnachtsalbum für Kinder (Album Giáng sinh cho trẻ em) để in kịp Giáng sinh. Nhà Breitkopf & Härtel từ chối in; nhà xuất bản Julius Schuberth ở Hamburg nhận lời, nhưng đề nghị bỏ chữ "Giáng sinh" để tập nhạc bán được quanh năm. Bản in đầu tiên ra tháng 12/1848, với tranh bìa trong của họa sĩ Ludwig Richter (bốn góc vẽ bốn mùa). Trang bìa ghi nhầm "40 bản nhạc" dù tập có đủ 43 bài. Trong vòng một năm, nhà xuất bản quảng cáo đã bán gần 2.000 bản.
     moi: Schumann định đặt tên Weihnachtsalbum für Kinder (Album Giáng sinh cho trẻ em) để in kịp Giáng sinh. Nhà Breitkopf & Härtel từ chối in; nhà xuất bản Julius Schuberth ở Hamburg nhận lời, nhưng đề nghị bỏ chữ "Giáng sinh" để tập nhạc bán được quanh năm. Bản in đầu tiên ra tháng 12/1848, với tranh bìa trong của họa sĩ Ludwig Richter (bốn góc vẽ bốn mùa). Trang bìa ghi nhầm "40 bản nhạc" dù tập có đủ 43 bài. Tháng 8 năm 1850, nhà xuất bản quảng cáo rằng chỉ trong vòng một năm album đã bán được gần 2.000 bản.
     ly_do: "Review D6-L1-gom (n18): thêm thời điểm quảng cáo (8/1850, Signale für die musikalische Welt) theo lời tựa Henle HN 45, viết theo nguyên văn tiếng Đức."
+  - cu: Ba bài đều xây từ những câu 4 ô, nhắc lại và biến đổi. Đây chính là các hình thức nhỏ bạn học trong phần nhạc lý, ở dạng gọn nhất.
+    moi: Ba bài đều xây từ những câu ngắn, phần lớn 4 ô, nhắc lại và biến đổi. Đây chính là các hình thức nhỏ bạn học trong phần nhạc lý, ở dạng gọn nhất.
+    ly_do: "n47 (da-sua): đoạn b của số 10 dài 6 ô (Mutopia 659 ô 9–14; bảng Cấu trúc của trang cũng ghi 6 ô)."
   - cu: 'Nicht schnell nghĩa là "không nhanh", không phải "chậm". Giai điệu như một bài hát đơn giản, mỗi dấu luyến là một hơi thở. Dùng rất ít bàn đạp, hoặc không dùng: legato phải đến từ ngón tay. Nếu dùng, đổi theo từng nửa ô và giữ thật nông.'
     moi: 'Bản in đầu (Schuberth, 1848) không ghi chỉ dẫn tốc độ cho Melodie. Nhiều ấn bản về sau thêm Nicht schnell (bản Peters: pas vite), có bản in chữ ấy trong ngoặc: đó là chỉ dẫn của người biên tập. Chữ ấy nghĩa là "không nhanh", không phải "chậm". Giai điệu như một bài hát đơn giản, mỗi dấu luyến là một hơi thở. Dùng rất ít bàn đạp, hoặc không dùng: legato phải đến từ ngón tay. Nếu dùng, đổi theo từng nửa ô và giữ thật nông.'
     ly_do: "Review D6-L1-gom (n56): Nicht schnell không có ở bản in đầu."
+  - cu: "Số 2 Soldatenmarsch (Hành khúc người lính, Sol trưởng): nhịp hành khúc với tiết tấu chấm dôi và hợp âm ngắn ở cả hai tay. Một bài staccato hợp âm đầu tiên rất tốt: hai tay buông phím cùng lúc, nhịp đều như bước chân, không chạy vội ở nốt ngắn. Nhiều người học bài này trước cả Wilder Reiter."
+    moi: "Số 2 Soldatenmarsch (Hành khúc người lính, Sol trưởng): nhịp hành khúc với tiết tấu chấm dôi và hợp âm ngắn ở cả hai tay. Một bài staccato hợp âm đầu tiên rất tốt: hai tay buông phím cùng lúc, nhịp đều như bước chân, không chạy vội ở nốt ngắn."
+    ly_do: 'n64 (da-bo): "Nhiều người học bài này trước cả Wilder Reiter" không kiểm được.'
+  - cu: "Cùng tác giả: Schumann: Träumerei, bản nổi tiếng nhất của Kinderszenen."
+    moi: "Cùng tác giả: Schumann: Träumerei, có lẽ là bản nổi tiếng nhất của Kinderszenen."
+    ly_do: "mo/sua-nho (07/11/2026, kế hoạch mở rộng mục 4): sửa lệch nhỏ đã ghi trong báo cáo D6, xem ghi_chu của nhận định cùng chỗ."
+  - cu: "Bản nhạc: IMSLP; bản dàn trang công cộng theo ấn bản Peters tại Mutopia Project. Xem thêm tài liệu tham khảo."
+    moi: "Bản nhạc: IMSLP; bản dàn trang theo ấn bản Peters (giấy phép CC BY-SA 2.5) tại Mutopia Project. Xem thêm tài liệu tham khảo."
+    ly_do: "n78 (da-sua): bản Op. 68 trên Mutopia mang giấy phép CC BY-SA 2.5, không phải phạm vi công cộng."
   - cu: 'câu hỏi: Chỉ dẫn Nicht schnell ở đầu Melodie nghĩa là gì? | Chậm | ✓ Không nhanh | Nhanh và nhẹ | "Không nhanh" không có nghĩa là "chậm": giai điệu như một bài hát đơn giản, mỗi dấu luyến là một hơi thở.'
     moi: 'câu hỏi: Nhiều ấn bản ghi Nicht schnell ở đầu Melodie (người biên tập thêm; bản in đầu không ghi). Chữ ấy nghĩa là gì? | Chậm | ✓ Không nhanh | Nhanh và nhẹ | "Không nhanh" không có nghĩa là "chậm": giai điệu như một bài hát đơn giản, mỗi dấu luyến là một hơi thở.'
     ly_do: "Review D6-L1-gom (n72): như n56."
+mo_khoa:
+  - ngay: 2026-11-07
+    nhanh: mo/sua-nho
+    ly_do: "Sửa nhỏ theo kế hoạch mở rộng mục 4 (chủ repo yêu cầu 07/11/2026): lệch nhỏ đã ghi trong báo cáo các lô D6"

@@ -213,8 +213,8 @@ Quãng tám lặp và bước nhảy dễ làm mỏi tay nếu tập lâu hoặc
 | Chặng | Việc chính | Gặp ở đâu |
 |---|---|---|
 | 4 (≈ Grade 4–5) | Khung tay (bài 1); nốt trầm – hợp âm chậm (bài 5, ô 1–4) | Tay trái của [Gymnopédie số 1](/opus/piano/tac-pham/satie-gymnopedie/); [Op. 49 số 2](/opus/piano/tac-pham/beethoven-op49-2/) ô 15–19; [Prélude Mi thứ](/opus/piano/tac-pham/chopin-prelude-mi-thu/) ô 16–18 |
-| 5 (≈ Grade 6) | Staccato cổ tay (bài 2); quãng tám trầm nối bằng bàn đạp; bài 5, 6 | [*Ánh trăng*](/opus/piano/tac-pham/beethoven-anh-trang/): quãng tám Sol♯ trầm ô 28–39; [Thuyền ca Venice](/opus/piano/tac-pham/mendelssohn-thuyen-ca/) ô 36–39; [Valse Si thứ](/opus/piano/tac-pham/chopin-valse-si-thu/) ô 97 |
-| 6 (≈ Grade 7–8) | Quãng tám legato, quãng tám lặp (bài 3, 4); gam quãng tám hai tay; nhảy nhanh | Tay trái của [Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/) |
+| 5 (≈ Grade 6) | Staccato cổ tay (bài 2); quãng tám trầm nối bằng bàn đạp; bài 5, 6 | [*Ánh trăng*](/opus/piano/tac-pham/beethoven-anh-trang/): quãng tám Sol♯ trầm ô 28–39; [Thuyền ca Venice](/opus/piano/tac-pham/mendelssohn-thuyen-ca/) ô 36–39 |
+| 6 (≈ Grade 7–8) | Quãng tám legato, quãng tám lặp (bài 3, 4); gam quãng tám hai tay; nhảy nhanh | Tay trái của [Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/); [Valse Si thứ](/opus/piano/tac-pham/chopin-valse-si-thu/) ô 97 |
 | 7 (sau Grade 8) | Quãng tám nhanh, *ff*, sức bền; nhảy xa ở tốc độ cao | [Fantaisie-Impromptu](/opus/piano/tac-pham/chopin-fantaisie-impromptu/) ô 7 và ô 37–40; [Liebestraum số 3](/opus/piano/tac-pham/liszt-liebestraum/) ô 37–60; [Ballade số 1](/opus/piano/tac-pham/chopin-ballade-1/) (đoạn *agitato*, coda) |
 
 Xa hơn nữa: Czerny, *6 Octave Studies* (Sáu étude quãng tám) Op. 553; Theodor Kullak, *Die Schule des Octavenspiels* (Giáo trình chơi quãng tám) Op. 48; Étude Op. 25 số 10 của Chopin, étude quãng tám cho cả hai tay. Chủ đề Étude Op. 10 số 12 cũng đi bằng quãng tám ở tay phải ([hướng dẫn nghe](/opus/nghe-nhac/chopin-etude/)).

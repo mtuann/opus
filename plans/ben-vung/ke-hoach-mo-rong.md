@@ -59,19 +59,32 @@ Xếp theo mức ảnh hưởng. Nguồn ghi tắt: `d6-l4` là `plans/lam-lai/b
 
 ## 4. Sửa trang đã khóa
 
-Mỗi việc theo thủ tục mở khóa (`plans/ben-vung/chuan-kiem-dinh.md` mục 7), nhánh `mo/<tên ngắn>`, báo cáo `plans/ben-vung/bao-cao/mo-<tên ngắn>.md`. Gom các sửa nhỏ cùng trang vào một nhánh.
+Mỗi việc theo thủ tục mở khóa (`plans/ben-vung/chuan-kiem-dinh.md` mục 7), nhánh `mo/<tên ngắn>`. Gom các sửa nhỏ cùng trang vào một nhánh.
 
-1. Valse Si thứ đang ở hàng "chặng 5" của `piano/not-lap-not-kep` và `piano/quang-tam-buoc-nhay` trong khi dữ liệu ghi chặng 6. `d6-l4-gom`. Nhỏ.
-2. `hinh-thuc/minuet-trio` dẫn `haydn-94` và `mozart-40` làm hướng dẫn nghe cho chương 3, nhưng hai trang nói chương 2 và chương 1; xem cả `mozart-eine-kleine`. `d6-l9-gom`, `d6-l1-gom`. Nhỏ.
-3. `piano/lo-trinh` n37: "khoảng năm phút" (Liebestraum khoảng 4–5 phút). `d6-l6-gom`. Nhỏ.
-4. Thuật ngữ lệch: "láy rền ngắn" (`piano/not-hoa-my`, `minuet-sol`) và "láy trên" (`thuat-ngu.yml`, `minuet-sol-thu`); "nốt cảm" và "cảm âm"; fermata "dấu ngân" và "ngân dài tùy ý". `d6-l1`, `d6-l4`, `d6-l10`. Nhỏ.
-5. *Clair de lune*, dòng Học tiếp ghi "Sau Grade 8" trong khi `grade` Liebestraum là "Grade 8 trở lên". `d6-l5-gom`. Nhỏ.
-6. Câu nhỏ agent con đã nêu: `schubert-impromptu-sol-giang` n61, `debussy-clair-de-lune` n61, `chopin-nocturne-op9-2` n9, `nghe-nhac/liszt-liebestraum` n35, D6-L4 n54, n55, n72. `d6-l5-gom`, `d6-l6-gom`, `d6-l4-gom`. Nhỏ.
-7. Ba sonata Scarlatti: phần cuối chưa đối chiếu bản nhạc (bản Longo trên Internet Archive). `d6-l7-gom`. Vừa.
-8. Bỏ "(ước lượng)" ở dòng Độ khó của các bài có trong đề cương ABRSM/Trinity, làm một lần cho mọi bài (kiểm lại trước: lô 3–4 đã bỏ). `d6-l1`, `d6-l2`. Vừa.
-9. `schumann-album` n69 thêm "có lẽ" (Seiffert); Valse La thứ, câu "in năm 1860 dưới tên Charlotte de Rothschild" chỉ có IMSLP đỡ; link NIFC ở Prélude Mi thứ đổi sang bản lưu; `description` của Mùa xuân. `d6-l4`, `d6-l2-gom`, `d6-l3`, `d6-l8`. Nhỏ.
-10. Trang nghệ sĩ: Pires ngừng biểu diễn sau đột quỵ 11/2025; kiểm không còn link tới `luonghuetrinh.com`. Làm cùng lần rà 2027-10. `d2-0`. Nhỏ.
-11. `ghi_chu` lỗi thời trong hồ sơ đã khóa (không đổi trang, không cần mở khóa vì mã băm chỉ tính trang): nhiều câu `ve-site` còn ghi "chưa chuyển, sắp có"; `beethoven-anh-trang` "Còn mở: n17, n87"; `piano/not-lap-not-kep` n11 ghi "Sol♯". `d6-l10`, `d6-l7`, `d6-l4`. Vừa.
+### 4.1 Đã sửa (nhánh `mo/sua-nho`, 07/11/2026; báo cáo `plans/ben-vung/bao-cao/mo-sua-nho.md`)
+
+- Valse Si thứ chuyển từ hàng chặng 5 sang hàng chặng 6 ở `piano/not-lap-not-kep` và `piano/quang-tam-buoc-nhay` (dữ liệu: chặng 6).
+- `hinh-thuc/minuet-trio`: link ghi rõ "Hướng dẫn nghe chương 1" (Eine kleine, số 40) và "chương 2" (số 94); câu dẫn ví dụ thành "cùng tác phẩm với hướng dẫn nghe chương 1".
+- `piano/lo-trinh` n37: "khoảng năm phút" thành "khoảng 4–5 phút".
+- `schumann-traumerei` n54 (nốt dưới "thật nhỏ", khối ghi *p*), n72 ("các bè độc lập hơn (hai bè ngang nhau)"); `mozart-k545` n55 ("sang Fa (ô 2: sang Mi)"); `debussy-clair-de-lune` n61 (vòng cung ở ô 1–3); `schubert-impromptu-sol-giang` n61 ("phần lớn với móc đơn chùm sáu"); `schumann-album` n69 ("có lẽ là bản nổi tiếng nhất").
+- Chỉ sửa hồ sơ (trang không đổi): `chopin-nocturne-op9-2` n9 đổi nhãn thành `khuyen-tap`; `nghe-nhac/liszt-liebestraum` n35 bỏ chữ "Link"; `piano/not-lap-not-kep` n11 bỏ chữ "Sol♯" sai.
+- Dữ liệu: `bizet-habanera` thêm `danh_muc: GB 9; WD 31` (IMSLP).
+
+### 4.2 Đã xem, không sửa
+
+- "Láy rền ngắn" và "láy trên": `piano/not-hoa-my` dùng cả hai và giải thích (cách đọc Baroque của ký hiệu răng cưa không gạch là một láy rền ngắn; tên ký hiệu là láy trên), khớp Từ điển. Không lệch.
+- "Nốt cảm", "dấu ngân": không còn trên trang (đã sửa ở các lô trước).
+- *Clair de lune*, "Sau Grade 8" và Liebestraum "Grade 8 trở lên": là chữ của trường `grade` đã khóa, gộp vào quyết định 3.1.
+- Link NIFC ở Prélude Mi thứ: kiểm link hằng tuần không báo hỏng; giữ.
+- `description` của Mùa xuân: câu bị cắt trước phần đã sửa, không trái với thân trang (`d6-l8`); giữ.
+- Valse La thứ, "in năm 1860 dưới tên Charlotte de Rothschild": IMSLP (bậc 2) đỡ; giữ.
+
+### 4.3 Còn lại
+
+1. Ba sonata Scarlatti: phần cuối chưa đối chiếu bản nhạc (bản Longo trên Internet Archive). `d6-l7-gom`. Vừa.
+2. Bỏ "(ước lượng)" ở dòng Độ khó của các bài có trong đề cương ABRSM/Trinity, làm một lần cho mọi bài (kiểm lại trước: lô 3–4 đã bỏ). `d6-l1`, `d6-l2`. Vừa.
+3. Trang nghệ sĩ: Pires ngừng biểu diễn sau đột quỵ 11/2025; kiểm không còn link tới `luonghuetrinh.com`. Làm cùng lần rà 2027-10 (cần nguồn tin). `d2-0`. Nhỏ.
+4. `ghi_chu` lỗi thời trong hồ sơ đã khóa (không đổi trang, không cần mở khóa vì mã băm chỉ tính trang): nhiều câu `ve-site` còn ghi "chưa chuyển, sắp có"; `beethoven-anh-trang` "Còn mở: n17, n87". `d6-l10`, `d6-l7`, `d6-l4`. Vừa.
 
 ## 5. Dữ liệu
 
@@ -94,7 +107,7 @@ Mỗi việc theo thủ tục mở khóa (`plans/ben-vung/chuan-kiem-dinh.md` m�
 
 - Mốc chưa đo (đo tay, ghi bằng `tools/audio/attach.py --ref`): `schubert-impromptu` dòng 3; `mozart-concerto-21` dòng 10; Scarlatti K. 380 dòng 2; Gershwin 6 dòng; Grieg 3 dòng; Rachmaninoff 1 dòng. `d6-l5`, `d6-l7-gom`, `d6-l8-gom`. Vừa.
 - Thiếu bản thu: bảy trang không có bản thu (có `mozart-requiem`), K. 141, K. 466; K. 545 chỉ có chương 1; có thể thêm Mùa đông chương 1 (John Harrison, CC BY-SA 4.0). Theo dõi các bản thu cũ vào phạm vi công cộng ở Mỹ: 2028 (Pertile, Kennedy Scott, Landon Ronald), 2030 (Koussevitzky), 2031 (Ravel), 2034 (Barbirolli).
-- `bizet-habanera` thiếu `danh_muc` (IMSLP: "GB 9 ; WD 31"). `d6-l10`. Nhỏ.
+- `bizet-habanera` `danh_muc`: đã thêm (mục 4.1).
 
 ### 5.3 Thuật ngữ còn thiếu trong `src/data/thuat-ngu.yml`
 

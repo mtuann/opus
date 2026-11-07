@@ -173,7 +173,7 @@ Mục tiêu: chơi những tác phẩm lớn được yêu thích nhất, với 
 Những hướng đi:
 
 - **Bài học trên site**: [trang chặng 7](/opus/piano/lo-trinh/chang-7/).
-- **Những bài đầu tiên của chặng**: [Chopin: *Fantaisie-Impromptu*](/opus/piano/tac-pham/chopin-fantaisie-impromptu/) và [Liszt: *Liebestraum* số 3](/opus/piano/tac-pham/liszt-liebestraum/): kỹ thuật lớn (ba chọi bốn, quãng tám, cadenza) trong khuôn khổ năm phút.
+- **Những bài đầu tiên của chặng**: [Chopin: *Fantaisie-Impromptu*](/opus/piano/tac-pham/chopin-fantaisie-impromptu/) và [Liszt: *Liebestraum* số 3](/opus/piano/tac-pham/liszt-liebestraum/): kỹ thuật lớn (ba chọi bốn, quãng tám, cadenza) trong khuôn khổ khoảng 4–5 phút.
 - **Mỗi năm một tác phẩm lớn**: [Chopin: Ballade số 1](/opus/piano/tac-pham/chopin-ballade-1/), một sonata giữa hoặc cuối đời của Beethoven, một Partita của Bach, trọn tập *Kinderszenen* hay *Kreisleriana* của Schumann, *Préludes* của Debussy.
 - **Chơi cùng người khác**: song tấu bốn tay, sonata violin và piano, tam tấu, đệm hát. Đây là một cách rất tốt để tiến bộ về nhịp và lắng nghe (xem [Chơi cùng người khác](/opus/piano/choi-cung-nguoi-khac/)).
 - **Concerto**: học một concerto Mozart với người chơi phần dàn nhạc trên piano thứ hai.

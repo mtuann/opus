@@ -188,7 +188,7 @@ Một người nông dân đi làm về, vừa đi vừa hát: chắc khỏe, vu
 
 - **Các bài khác của phần một:** *Trällerliedchen* (số 3), *Stückchen* (số 5), *Jägerliedchen* (số 7), *Volksliedchen* (số 9), *Kleiner Morgenwanderer* (số 17), *Schnitterliedchen* (số 18). Sau đó thử phần hai, bắt đầu từ *Kleine Romanze* (số 19).
 - **Cùng chặng trên site:** [Petzold: Minuet Sol trưởng](/opus/piano/tac-pham/minuet-sol/); bước tiếp theo là [Clementi: Sonatina Op. 36 số 1](/opus/piano/tac-pham/clementi-sonatina/) và [Burgmüller: Arabesque](/opus/piano/tac-pham/burgmuller-arabesque/).
-- **Cùng tác giả:** [Schumann: Träumerei](/opus/piano/tac-pham/schumann-traumerei/), bản nổi tiếng nhất của *Kinderszenen*.
+- **Cùng tác giả:** [Schumann: Träumerei](/opus/piano/tac-pham/schumann-traumerei/), có lẽ là bản nổi tiếng nhất của *Kinderszenen*.
 - **Cùng ý tưởng:** *Album cho tuổi trẻ* Op. 39 của Tchaikovsky (1878) và tập *For Children* của Bartók. Danh sách theo cấp: [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
 
 ::hoc-tiep

@@ -21,6 +21,15 @@ lan:
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L10, 06/11/2026, ba phần; phần Mendelssohn và Schubert chạy lại)
       review: Claude Opus 5.5 (review D6-L10-gom)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L10, 8 đúng (tchaikovsky-1812 n31 có điều kiện: rallentando theo tổng phổ lượt 1), 0 sai (bao-cao/d6-l10-gom/kiem-mau-ket-qua.yml)"
+  - so: 3
+    ngay: 2026-11-07
+    nhanh: mo/sua-nho
+    ma_bam: sha256:d49d05b2c41875612c1b6b5fa717da2c85fe5d1163e3d6c4a97e094e6af170ac
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/sua-nho, 07/11/2026: sửa lệch nhỏ theo kế hoạch mở rộng mục 4)"
+      luot_2: "không có lượt 2 ngoài: mỗi sửa đổi đối chiếu với chỗ báo cáo D6 đã chỉ ra (khối nhạc trên trang, dữ liệu đã khóa, IMSLP), ghi ở ghi_chu"
+      review: Claude Opus 5.5 (mo/sua-nho, 07/11/2026)
+      kiem_mau: chủ repo yêu cầu sửa (07/11/2026); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
 nguon:
   - id: imslp
     bac: 2
@@ -100,3 +109,21 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://archive.org/details/carmenoperainfou1875bize", "https://archive.org/details/carmenopraen4act00bize" ]
     luot_2_ghi_chu: "Libretto 1875 (bản Anh của Hersee): 'La Habanera' gồm hai đoạn lời, sau đoạn 1 là điệp khúc, sau đoạn 2 ghi 'When Love, &c.' (điệp khúc lặp). Bản chant-piano (Choudens, Avanera N° 5, tr. 45–52): điệp khúc có bè Soprani, Tenori, Bassi của hợp xướng ('trema per te') ở cả hai lần."
+  - id: n6
+    cau: "Số danh mục của Carmen: GB 9; WD 31."
+    loai: danh-muc
+    truong:
+      - danh_muc
+    nguon:
+      - imslp
+    ket_qua: dung
+    ghi_chu: 'IMSLP (API, 07/11/2026): "Opus/Catalogue Number=GB 9 ; WD 31". Thêm theo ghi chú của hồ sơ và d6-l10.md.'
+    luot_2: dung
+    luot_2_nguon:
+      - https://imslp.org/wiki/Carmen_(Bizet,_Georges)
+    luot_2_ghi_chu: "Mở lại trang IMSLP qua API: khớp."
+    review: dung
+mo_khoa:
+  - ngay: 2026-11-07
+    nhanh: mo/sua-nho
+    ly_do: "Sửa nhỏ theo kế hoạch mở rộng mục 4 (chủ repo yêu cầu 07/11/2026): lệch nhỏ đã ghi trong báo cáo các lô D6"

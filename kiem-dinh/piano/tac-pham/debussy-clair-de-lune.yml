@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L5, 06/11/2026, bốn phần; bổ sung sau review)
       review: Claude Opus 5.5 (review D6-L5-gom, 05/11/2026)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L5, 8 đúng, 0 sai (bao-cao/d6-l5-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-07
+    nhanh: mo/sua-nho
+    ma_bam: sha256:84d0b755c143e26c2b94e6850f6d2e2a0948f550514bac871ce6199a2bd148bf
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/sua-nho, 07/11/2026: sửa lệch nhỏ theo kế hoạch mở rộng mục 4)"
+      luot_2: "không có lượt 2 ngoài: mỗi sửa đổi đối chiếu với chỗ báo cáo D6 đã chỉ ra (khối nhạc trên trang, dữ liệu đã khóa, IMSLP), ghi ở ghi_chu"
+      review: Claude Opus 5.5 (mo/sua-nho, 07/11/2026)
+      kiem_mau: chủ repo yêu cầu sửa (07/11/2026); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
 ghi_chu: 'Bài học Clair de lune (tầng Tác phẩm). Bản nhạc: Mutopia debussy_Ste_Bergamesq_Clair (Keith OHara, theo bản in E. Fromont 1905, IMSLP #02907), tải .ly và .mid 05/11/2026 với User-Agent opus-kiem-dinh; script Python (mido) in nốt theo ô (72 ô 9/8) và script đếm vạch nhịp trong \parallelMusic để gắn chỉ dẫn với số ô: Andante très expressif, pp, con sordina ô 1; Tempo rubato ô 15; peu à peu cresc. et animé ô 19; diminuendo molto ô 25; Un poco mosso ô 27; En animant (hóa biểu Đô♯ thứ) ô 37; f ô 41; Calmato ô 43; a Tempo 1º, ppp ô 51; morendo jusqu''à la fin, ppp ô 66. Không có mf nào. Lịch sử: lời tựa Henle HN 381 (PDF, Lesure 1983). Mốc ::khoi-nghe "2 57 71 97 140 162 201 268" (8 mốc / 8 dòng), bản thu Laurens Goedhart 2011 (Commons, phạm vi công cộng, 304,09 s); theo tools/audio/align/pieces.py mốc là ô 1, 15, 19, 27, 37, 43 (đo tay 162,3 s), 51, 66: khớp các dòng bảng. Không nghe lại bản thu. Câu ve-site ở hồ sơ khác: piano/hai-tay n47 (nhóm hai nốt trong 9/8) và n48 (link tới trang này, giữ "Rê♭ trưởng · 9/8" và cách đếm 9/8): trang giữ đúng. piano/not-lap-not-kep n43 (Clair de lune ô 1–14, nốt kép): đúng, quãng ba, quãng sáu ô 1–14. cap-nhat n51 (lối tắt "Chỉ muốn nghe?"): có. piano/tac-pham/satie-gymnopedie n67 (link tới trang này): có. Không tính là nhận định: tiêu đề mục, tiêu đề cột bảng, chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng (thuộc hồ sơ bản ghi), mốc trong ::khoi-nghe. Thuật ngữ trang dùng (una corda, con sordina, rubato, Andante, pp, legato, staccato) có trong src/data/thuat-ngu.yml; "đạp nửa", "rung bàn đạp", "điểm thoát (escapement)" chưa có bản ghi (ghi cho người giao).'
 nguon:
   - id: mut-clair
@@ -568,11 +577,11 @@ nhan_dinh:
     nguon: []
     ket_qua: khong-can-nguon
   - id: n61
-    cau: 'Bài tập 3: mỗi ô tay trái là một vòng cung lên rồi xuống; đi lên ngón 3 vắt qua ngón cái, đi xuống ngón cái luồn dưới; nốt đỉnh là nốt thứ năm.'
+    cau: 'Bài tập 3: tay trái ô 1–3 mỗi ô một vòng cung lên rồi xuống, ô cuối đi lên rồi giữ hợp âm kết; đi lên ngón 3 vắt qua ngón cái, đi xuống ngón cái luồn dưới; nốt đỉnh là nốt thứ năm.'
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: 'Khối abc 3 ô 1: Rê♭2 La♭2 Rê♭3 Fa3 La♭3 Fa3 Rê♭3 La♭2 Fa2, ngón 5 2 1 3 2 3 1 3 5. Review D6-L5-gom: kiểm trên trang và dữ liệu: Khối X:3 (dòng 142): ô 1–3 tay trái chín móc đơn lên rồi xuống, ngón 5-2-1-3-2-3-1-3-5, nốt thứ năm là đỉnh (A, / D / E). Lời dẫn dòng 145. Lưu ý: ô 4 chỉ là nốt kết (D,,A,,F, A,6), không phải vòng cung.'
+    ghi_chu: 'Khối abc 3 ô 1: Rê♭2 La♭2 Rê♭3 Fa3 La♭3 Fa3 Rê♭3 La♭2 Fa2, ngón 5 2 1 3 2 3 1 3 5. Review D6-L5-gom: kiểm trên trang và dữ liệu: Khối X:3 (dòng 142): ô 1–3 tay trái chín móc đơn lên rồi xuống, ngón 5-2-1-3-2-3-1-3-5, nốt thứ năm là đỉnh (A, / D / E). Lời dẫn dòng 145. Lưu ý: ô 4 chỉ là nốt kết (D,,A,,F, A,6), không phải vòng cung. Sửa nhỏ (mo/sua-nho, 07/11/2026, kế hoạch mở rộng mục 4): khối bài tập 3: ô 4 tay trái D,, A,, F, rồi A,6 (giữ); chữ cũ chỉ đúng ô 1–3 (d6-l5-gom).'
     review: dung
   - id: n62
     cau: Ghép giai điệu tay phải mp–mf, tay trái pp; biến thể để tay phải lấy nốt đỉnh.
@@ -852,32 +861,39 @@ doi_chu:
     ly_do: 'Dòng Độ khó của thong_tin (hồ sơ bản ghi tac-pham/debussy-clair-de-lune n22; sua-A.yml): bỏ ước lượng ABRSM không nguồn; Trinity Grade 8 (từ 2023, lần 1 n4), RCM Level 10 (2022), Henle HN 381 mức 5; ABRSM không xếp bài. Chip đã khóa không đổi. Review D6-L5-gom: lượt 2 sai ở vế ABRSM: danh sách ARSM 6/2024 có "Any one from Suite bergamasque" (hồ sơ bản ghi n22).'
   - cu:
       - Tên bài lấy từ bài thơ Clair de lune của Paul Verlaine trong tập Fêtes galantes (1869), bài thơ mà Debussy đã phổ nhạc thành ca khúc. Chữ bergamasque cũng đến từ chính bài thơ đó. Bài thơ tả những nhân vật đeo mặt nạ dưới ánh trăng, vui mà buồn; âm nhạc giữ đúng cái vẻ nửa sáng nửa tối ấy.
-      - 'Debussy viết bộ tổ khúc khi khoảng 28 tuổi, nhưng chỉ in nó 15 năm sau, khi phong cách của ông đã khác hẳn. Bản in năm 1905 là bản đã sửa; bản thảo gốc không còn, nên không ai biết chắc phần nào thuộc năm 1890, phần nào thuộc năm 1905. Bài nằm ở ngưỡng giữa thế kỷ 19 và thế kỷ 20: hòa âm còn chức năng (có át, có kết rõ) nhưng màu sắc đã là của Debussy. Xem thế kỷ 20.'
+      - "Debussy viết bộ tổ khúc khi khoảng 28 tuổi, nhưng chỉ in nó 15 năm sau, khi phong cách của ông đã khác hẳn. Bản in năm 1905 là bản đã sửa; bản thảo gốc không còn, nên không ai biết chắc phần nào thuộc năm 1890, phần nào thuộc năm 1905. Bài nằm ở ngưỡng giữa thế kỷ 19 và thế kỷ 20: hòa âm còn chức năng (có át, có kết rõ) nhưng màu sắc đã là của Debussy. Xem thế kỷ 20."
     moi:
       - Tên bài trùng tên bài thơ Clair de lune của Paul Verlaine, bài mở đầu tập Fêtes galantes (1869), bài thơ mà Debussy đã phổ nhạc thành ca khúc. Chữ bergamasque có ngay trong bài thơ ấy ("masques et bergamasques"); theo lời tựa của ấn bản Henle, tên tổ khúc thường được coi là một gợi nhớ tới tập thơ này. Bài thơ tả những nhân vật đeo mặt nạ dưới ánh trăng, vui mà buồn; âm nhạc giữ đúng cái vẻ nửa sáng nửa tối ấy.
-      - 'Debussy viết bộ tổ khúc khi khoảng 28 tuổi, nhưng chỉ in nó 15 năm sau; chính ông ghi năm 1890 lên bản in thử để cho biết đây là tác phẩm thời trẻ. Bản in năm 1905 là bản đã sửa; bản thảo gốc đến nay chưa tìm thấy, nên không ai biết chắc phần nào thuộc năm 1890, phần nào thuộc năm 1905. Bài nằm ở ngưỡng giữa thế kỷ 19 và thế kỷ 20: hòa âm còn chức năng (có át, có kết rõ) nhưng màu sắc đã là của Debussy. Xem thế kỷ 20.'
+      - "Debussy viết bộ tổ khúc khi khoảng 28 tuổi, nhưng chỉ in nó 15 năm sau; chính ông ghi năm 1890 lên bản in thử để cho biết đây là tác phẩm thời trẻ. Bản in năm 1905 là bản đã sửa; bản thảo gốc đến nay chưa tìm thấy, nên không ai biết chắc phần nào thuộc năm 1890, phần nào thuộc năm 1905. Bài nằm ở ngưỡng giữa thế kỷ 19 và thế kỷ 20: hòa âm còn chức năng (có át, có kết rõ) nhưng màu sắc đã là của Debussy. Xem thế kỷ 20."
     ly_do: 'n10 (da-sua), n13 (da-sua): Gutenberg (Verlaine), Henle HN 381. n17 (da-sua), n19 (da-sua): theo lời tựa Henle HN 381. Review D6-L5-gom: lượt 2 sai ở vế ABRSM: danh sách ARSM 6/2024 có "Any one from Suite bergamasque" (hồ sơ bản ghi n22).'
-  - cu: 'Coda (ô 66–72): hợp âm rải, tay bắt chéo, tan dần đến hết; hợp âm cuối ngân thật lâu'
-    moi: 'Coda (ô 66–72): hợp âm rải, tay bắt chéo, tan dần đến hết (morendo jusqu''à la fin)'
-    ly_do: 'n33 (da-sua): bản Fromont ghi morendo jusqu''à la fin, hợp âm cuối không có dấu ngân.'
-  - cu: 'Bài sống trong vùng từ pp đến p, với vài lần lên mf và một cao trào ở đoạn B. Hãy có ít nhất ba mức nhỏ khác nhau: thì thầm, nhỏ, nhỏ mà ấm. Luôn có ba tầng: giai điệu, phần hòa âm, bè trầm. Bè trầm thường là nốt ngân dài: đánh nó sâu một chút để bàn đạp có thứ để giữ.'
-    moi: 'Bài gần như chỉ sống trong vùng từ ppp đến p; chỉ một lần lên f, ở cao trào của đoạn B (ô 41). Hãy có ít nhất ba mức nhỏ khác nhau: thì thầm, nhỏ, nhỏ mà ấm. Luôn có ba tầng: giai điệu, phần hòa âm, bè trầm. Bè trầm thường là nốt ngân dài: đánh nó sâu một chút để bàn đạp có thứ để giữ.'
-    ly_do: 'n69 (da-sua): bản Fromont 1905 không có mf; f duy nhất ở ô 41.'
+  - cu: "Coda (ô 66–72): hợp âm rải, tay bắt chéo, tan dần đến hết; hợp âm cuối ngân thật lâu"
+    moi: "Coda (ô 66–72): hợp âm rải, tay bắt chéo, tan dần đến hết (morendo jusqu'à la fin)"
+    ly_do: "n33 (da-sua): bản Fromont ghi morendo jusqu'à la fin, hợp âm cuối không có dấu ngân."
+  - cu: 'Phím đàn có "điểm thoát" (escapement): ấn quá chậm thì nốt không kêu, quá nhanh thì to'
+    moi: "Độ to theo tốc độ phím đi xuống: ấn quá chậm thì nốt không kêu, hơi nhanh là đã to"
+    ly_do: 'n46 (review D6-L5-gom): nguồn lượt 2 là trang thợ đàn; viết theo điều trang piano/tieng-dan (đã khóa) đã kiểm, bỏ chữ "điểm thoát".'
+  - cu: "Tay trái riêng: mỗi ô là một vòng cung lên rồi xuống. Đi lên, ngón 3 vắt qua ngón cái; đi xuống, ngón cái luồn dưới. Cổ tay đi theo hướng của chuỗi nốt, không nhấc ngón cao. Nốt đỉnh của vòng cung (nốt thứ năm) không được to lên."
+    moi: "Tay trái riêng: mỗi ô 1–3 là một vòng cung lên rồi xuống; ô cuối đi lên rồi giữ hợp âm kết. Đi lên, ngón 3 vắt qua ngón cái; đi xuống, ngón cái luồn dưới. Cổ tay đi theo hướng của chuỗi nốt, không nhấc ngón cao. Nốt đỉnh của vòng cung (nốt thứ năm) không được to lên."
+    ly_do: "mo/sua-nho (07/11/2026, kế hoạch mở rộng mục 4): sửa lệch nhỏ đã ghi trong báo cáo D6, xem ghi_chu của nhận định cùng chỗ."
+  - cu: "Bài sống trong vùng từ pp đến p, với vài lần lên mf và một cao trào ở đoạn B. Hãy có ít nhất ba mức nhỏ khác nhau: thì thầm, nhỏ, nhỏ mà ấm. Luôn có ba tầng: giai điệu, phần hòa âm, bè trầm. Bè trầm thường là nốt ngân dài: đánh nó sâu một chút để bàn đạp có thứ để giữ."
+    moi: "Bài gần như chỉ sống trong vùng từ ppp đến p; chỉ một lần lên f, ở cao trào của đoạn B (ô 41). Hãy có ít nhất ba mức nhỏ khác nhau: thì thầm, nhỏ, nhỏ mà ấm. Luôn có ba tầng: giai điệu, phần hòa âm, bè trầm. Bè trầm thường là nốt ngân dài: đánh nó sâu một chút để bàn đạp có thứ để giữ."
+    ly_do: "n69 (da-sua): bản Fromont 1905 không có mf; f duy nhất ở ô 41."
+  - cu: "Debussy được kể là muốn người chơi làm người nghe quên rằng piano có búa: tiếng đàn như không bắt đầu bằng một cú đánh. Chạm phím từ rất gần, ngón phẳng hơn, phần thịt của đầu ngón. Ở những hợp âm lớn, dùng trọng lượng cả cánh tay rơi xuống, cổ tay mềm như lò xo."
+    moi: "Marguerite Long kể một câu Debussy hay nói: phải quên rằng piano có búa. Hãy để tiếng đàn như không bắt đầu bằng một cú đánh. Chạm phím từ rất gần, ngón phẳng hơn, phần thịt của đầu ngón. Ở những hợp âm lớn, dùng trọng lượng cả cánh tay rơi xuống, cổ tay mềm như lò xo."
+    ly_do: "n74 (review D6-L5-gom): ghi người kể theo nguồn (Grayson 2014, dẫn Long, At the Piano with Debussy, tr. 13)."
+  - cu: "Sau Grade 8: Liszt: Liebestraum số 3 cho giai điệu ở giọng giữa và bàn đạp; Chopin: Ballade số 1, một tác phẩm lớn."
+    moi: "Chặng 7: Liszt: Liebestraum số 3 cho giai điệu ở giọng giữa và bàn đạp; Chopin: Ballade số 1, một tác phẩm lớn."
+    ly_do: "n93 (lượt 2 bổ sung khong-chac): chỉ Ballade số 1 có nguồn ABRSM sau Grade 8 (danh sách LRSM 2023); Liebestraum số 3 chỉ có mức Henle 7, không có nguồn ABRSM. Ghi theo chặng của site (chang đã khóa của hai bản ghi là 7; n83)."
   - cu:
       - Gurminder Kaur Bhogal, Claude Debussy's Clair de Lune, Oxford University Press (Oxford Keynotes), 2018.
       - Roy Howat, The Art of French Piano Music, Yale University Press, 2009.
-      - 'Paul Roberts, Images: The Piano Music of Claude Debussy, Amadeus Press, 1996.'
-      - 'Bản nhạc: IMSLP. Xem thêm tài liệu tham khảo.'
+      - "Paul Roberts, Images: The Piano Music of Claude Debussy, Amadeus Press, 1996."
+      - "Bản nhạc: IMSLP. Xem thêm tài liệu tham khảo."
     moi:
       - Paul Verlaine, Fêtes galantes, bài Clair de lune, trong Œuvres complètes, tập 1 (Project Gutenberg).
-      - 'Bản nhạc: IMSLP; bản chép LilyPond của Mutopia Project theo bản in E. Fromont 1905, dùng để đếm ô, đối chiếu chỉ dẫn và sắc thái. Xem thêm tài liệu tham khảo.'
+      - "Bản nhạc: IMSLP; bản chép LilyPond của Mutopia Project theo bản in E. Fromont 1905, dùng để đếm ô, đối chiếu chỉ dẫn và sắc thái. Xem thêm tài liệu tham khảo."
     ly_do: 'n90 (da-bo): sách in chưa đọc. n91: tệp Mutopia đã dùng. n91: nguồn đã đọc. Review D6-L5-gom: lượt 2 sai ở vế ABRSM: danh sách ARSM 6/2024 có "Any one from Suite bergamasque" (hồ sơ bản ghi n22).'
-  - cu: 'Phím đàn có "điểm thoát" (escapement): ấn quá chậm thì nốt không kêu, quá nhanh thì to'
-    moi: 'Độ to theo tốc độ phím đi xuống: ấn quá chậm thì nốt không kêu, hơi nhanh là đã to'
-    ly_do: 'n46 (review D6-L5-gom): nguồn lượt 2 là trang thợ đàn; viết theo điều trang piano/tieng-dan (đã khóa) đã kiểm, bỏ chữ "điểm thoát".'
-  - cu: 'Debussy được kể là muốn người chơi làm người nghe quên rằng piano có búa: tiếng đàn như không bắt đầu bằng một cú đánh. Chạm phím từ rất gần, ngón phẳng hơn, phần thịt của đầu ngón. Ở những hợp âm lớn, dùng trọng lượng cả cánh tay rơi xuống, cổ tay mềm như lò xo.'
-    moi: 'Marguerite Long kể một câu Debussy hay nói: phải quên rằng piano có búa. Hãy để tiếng đàn như không bắt đầu bằng một cú đánh. Chạm phím từ rất gần, ngón phẳng hơn, phần thịt của đầu ngón. Ở những hợp âm lớn, dùng trọng lượng cả cánh tay rơi xuống, cổ tay mềm như lò xo.'
-    ly_do: 'n74 (review D6-L5-gom): ghi người kể theo nguồn (Grayson 2014, dẫn Long, At the Piano with Debussy, tr. 13).'
-  - cu: "Sau Grade 8: Liszt: Liebestraum số 3 cho giai điệu ở giọng giữa và bàn đạp; Chopin: Ballade số 1, một tác phẩm lớn."
-    moi: "Chặng 7: Liszt: Liebestraum số 3 cho giai điệu ở giọng giữa và bàn đạp; Chopin: Ballade số 1, một tác phẩm lớn."
-    ly_do: 'n93 (lượt 2 bổ sung khong-chac): chỉ Ballade số 1 có nguồn ABRSM sau Grade 8 (danh sách LRSM 2023); Liebestraum số 3 chỉ có mức Henle 7, không có nguồn ABRSM. Ghi theo chặng của site (chang đã khóa của hai bản ghi là 7; n83).'
+mo_khoa:
+  - ngay: 2026-11-07
+    nhanh: mo/sua-nho
+    ly_do: "Sửa nhỏ theo kế hoạch mở rộng mục 4 (chủ repo yêu cầu 07/11/2026): lệch nhỏ đã ghi trong báo cáo các lô D6"

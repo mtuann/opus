@@ -100,7 +100,7 @@ K:F
 
 1. Tay phải chỉ giai điệu, ngón 5–4–3 như ghi; nghe độ dài từng nốt.
 2. Thêm các nốt dưới nhưng bấm câm (đẩy phím xuống chậm đến mức không kêu).
-3. Cho các nốt dưới kêu ở *pp*; giai điệu vẫn *mf*. Nếu không nghe rõ hai lớp, quay lại bước 2.
+3. Cho các nốt dưới kêu thật nhỏ (khối nhạc ghi *p*, càng nhỏ hơn giai điệu càng tốt); giai điệu vẫn *mf*. Nếu không nghe rõ hai lớp, quay lại bước 2.
 
 ### 2. Nốt dài ở trên, bè tenor hát ở tay trái
 
@@ -195,7 +195,7 @@ Schumann chỉ ghi *ritard.* ở ba chỗ, nơi các đoạn nối vào nhau; ng
 - **Cùng chu trình:** học thêm *Von fremden Ländern und Menschen* (bài 1) và *Der Dichter spricht* (bài 13) để chơi một nhóm ba bài.
 - **Hát trên phím đàn, cùng chặng:** [Mendelssohn: Thuyền ca Venice](/opus/piano/tac-pham/mendelssohn-thuyen-ca/), [Beethoven: *Ánh trăng*, chương 1](/opus/piano/tac-pham/beethoven-anh-trang/).
 - **Hát trên phím đàn, khó hơn:** [Chopin: Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/), [Beethoven: Pathétique, chương 2](/opus/piano/tac-pham/pathetique-adagio/).
-- **Nhiều bè độc lập hơn:** [Bach: Invention số 1](/opus/piano/tac-pham/bach-invention-1/).
+- **Các bè độc lập hơn (hai bè ngang nhau):** [Bach: Invention số 1](/opus/piano/tac-pham/bach-invention-1/).
 - Xem thứ tự gợi ý ở [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
 
 ::hoc-tiep

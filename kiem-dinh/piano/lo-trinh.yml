@@ -21,6 +21,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 4, 28/10/2026; bổ sung sau review)
       review: Claude Opus 5.5 (người gom D4, 28/10/2026)
       kiem_mau: 'chủ repo, 10 nhận định mẫu của đợt 4 (D4-L1 đến D4-L4): 10 đúng (3 có điều kiện, đã sửa theo: nguồn Versuch §5 và láy rền thường, Frère Jacques "bài hát Pháp truyền thống", quãng tám trong gợi ý ngón của mẫu galant), 0 sai (bao-cao/d4-gom/kiem-mau-ket-qua.yml)'
+  - so: 3
+    ngay: 2026-11-07
+    nhanh: mo/sua-nho
+    ma_bam: sha256:5f2c822ad583ec4e36bf1e5ad03d0c857c42b6dd2f2873d8b3cf9a1b58074dc5
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/sua-nho, 07/11/2026: sửa lệch nhỏ theo kế hoạch mở rộng mục 4)"
+      luot_2: "không có lượt 2 ngoài: mỗi sửa đổi đối chiếu với chỗ báo cáo D6 đã chỉ ra (khối nhạc trên trang, dữ liệu đã khóa, IMSLP), ghi ở ghi_chu"
+      review: Claude Opus 5.5 (mo/sua-nho, 07/11/2026)
+      kiem_mau: chủ repo yêu cầu sửa (07/11/2026); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
 ghi_chu: 'Lượt 1 kiểm mọi câu có thể đúng hay sai; câu điều hướng (link sang trang khác, "Năm đầu tiên được viết chi tiết ở…") và câu chỉ tả trang không tính. Lời khuyên (khuyen-tap) gom theo dòng bảng cùng loại của nhiều chặng. Hai thay đổi cấu trúc giao cho D2-L1: bảng Tổng quan (dữ liệu chặng viết tay) thay bằng sơ đồ ::hinh{ten="lo-trinh"} sinh từ cap-do.yml (D2-0 kiểm định, khóa cả bản ghi); dòng Tác phẩm của chặng 2–6 bỏ danh sách bài học trên site, thay bằng link tới trang chặng sinh từ tac-pham.yml (nên chặng của Valse La thứ, Valse Si thứ theo dữ liệu D2-0, không viết tay ở đây); chặng 1 và chặng 7 thêm link tới trang chặng. Đề cương ABRSM, RCM, Trinity và trang Henle đã tải và đọc ngày 24/10/2026. Open Music Theory chặn truy cập tự động (HTTP 403) nên hai câu nhạc lý dùng giáo trình mở khác.'
 nguon:
   - id: abrsm-2526
@@ -566,14 +575,14 @@ nhan_dinh:
     luot_2_nguon: [ https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20&%202026%20Prac%20syllabus%2020240524_access.pdf, https://support.trinitycollege.com/support/solutions/articles/202000096383-entry-requirements-graded-diploma-levels ]
     luot_2_ghi_chu: "ABRSM: \"ABRSM's diploma offer, beginning with the performance-only ARSM... The LRSM and FRSM Diplomas are progressive from the ARSM\". Trinity: Performance Diploma Levels (ATCL, LTCL, FTCL), dùng cho cấp sau Grade 8."
   - id: n37
-    cau: 'Fantaisie-Impromptu và Liebestraum số 3 là những bài đầu tiên của chặng 7: kỹ thuật lớn (ba chọi bốn, quãng tám, cadenza) trong khuôn khổ khoảng năm phút.'
+    cau: 'Fantaisie-Impromptu và Liebestraum số 3 là những bài đầu tiên của chặng 7: kỹ thuật lớn (ba chọi bốn, quãng tám, cadenza) trong khuôn khổ khoảng 4–5 phút.'
     loai: cap-do
     nguon:
       - rcm-2022
       - commons-op66
       - commons-s541
     ket_qua: dung
-    ghi_chu: 'Review (24/10/2026): giữ: Henle xếp cả hai bài mức 7; trang ghi "khuôn khổ năm phút" (các bản thu 4–5,5 phút). Lượt 1: RCM 2022, danh sách ARCT (trên Level 10): "Fantaisie-Impromptu in C sharp Minor, op. 66", "Liebestraum No. 3, S 541/3"; Ballade số 1 ở danh sách LRCM (cao hơn). Thời lượng bản thu trên Commons: Fantaisie-Impromptu (Frank Lévy) "length 5 min 27 s", Liebestraum số 3 (Wilhelm Backhaus) "length 3 min 58 s". Ba chọi bốn, quãng tám, cadenza: khớp trang bài học cũ ../opus-zero/docs/piano/tac-pham/chopin-fantaisie-impromptu.md, liszt-liebestraum.md (bài học kiểm định ở đợt 6). Dữ liệu D2-0 xếp cả hai ở chặng 7.'
+    ghi_chu: 'Review (24/10/2026): giữ: Henle xếp cả hai bài mức 7; trang ghi "khuôn khổ năm phút" (các bản thu 4–5,5 phút). Lượt 1: RCM 2022, danh sách ARCT (trên Level 10): "Fantaisie-Impromptu in C sharp Minor, op. 66", "Liebestraum No. 3, S 541/3"; Ballade số 1 ở danh sách LRCM (cao hơn). Thời lượng bản thu trên Commons: Fantaisie-Impromptu (Frank Lévy) "length 5 min 27 s", Liebestraum số 3 (Wilhelm Backhaus) "length 3 min 58 s". Ba chọi bốn, quãng tám, cadenza: khớp trang bài học cũ ../opus-zero/docs/piano/tac-pham/chopin-fantaisie-impromptu.md, liszt-liebestraum.md (bài học kiểm định ở đợt 6). Dữ liệu D2-0 xếp cả hai ở chặng 7. Sửa nhỏ (mo/sua-nho, 07/11/2026, kế hoạch mở rộng mục 4): "khoảng năm phút" thành "khoảng 4–5 phút": ba bản thu Liebestraum trên Commons dài 3:58–4:43 (d6-l6).'
     luot_2: dung
     luot_2_nguon: [ https://www.henle.de/en/Fantaisie-Impromptu-c-sharp-minor-op.-post.-66/HN-1320, https://www.henle.de/Liebestraeume-3-Notturnos/HN-634, "https://commons.wikimedia.org/wiki/File:Fantaisie-impromptu,_Op.66_(IA_imslp-op66-chopin-frdric).pdf", "https://commons.wikimedia.org/wiki/File:Liebestr%C3%A4ume,_S.541_(IA_imslp-s541-liszt-franz).pdf" ]
     luot_2_ghi_chu: 'Henle: Fantaisie-Impromptu op. 66 mức 7 và Liebesträume số 3 "O lieb, so lang du lieben kannst" mức 7 (mức thấp nhất của nhóm "khó" 7–9), khớp "những bài đầu tiên của chặng 7". Bản nhạc (IMSLP, bản lưu trên Wikimedia Commons): Fantaisie-Impromptu có tay trái sextuplet đối với tay phải móc kép (nhịp chéo ba chọi bốn); Liebestraum số 3 có quãng tám và đoạn cadenza chạy 8va. Thời lượng "khoảng năm phút" chưa kiểm được bằng nguồn bậc 2 (các bản thu thường 4–5 phút).'
@@ -732,16 +741,17 @@ doi_chu:
     ly_do: "n14: phần trong ngoặc thiếu chủ đề của bài 27 (Ký hiệu hợp âm pop và jazz)."
   - cu: "Beethoven: Pathétique, chương 2, Chopin: Nocturne Op. 9 số 2, Debussy: Clair de lune, Schubert: Impromptu Sol♭ trưởng và các Impromptu khác trong Op. 90, Brahms: Intermezzo Op. 118 số 2, Bach: Prelude và fugue Đô thứ BWV 847 và các Sinfonia, Mozart: Sonata K. 330."
     moi: "Bài học trên site: trang chặng 6. Ngoài ra: Debussy: The Little Shepherd, Schubert: Impromptu Op. 142 số 2, các Sinfonia của Bach, Mozart: Sonata K. 330; cuối chặng, gần chặng 7: Brahms: Intermezzo Op. 118 số 2."
-    ly_do: 'Như chặng 2: bài học của chặng ở trang chặng. Bài ngoài site giữ (n33, n34); Impromptu Op. 142 số 2 thay "các Impromptu khác trong Op. 90" (n32, da-sua: Impromptu Sol♭ Op. 90 số 3 đã lên chặng 7 theo D2-0; Op. 142 số 2 ở ABRSM Grade 8). Review (24/10/2026): The Little Shepherd từ chặng 5 sang (n28, ABRSM Grade 7); Brahms Op. 118 số 2 ghi "cuối chặng, gần chặng 7" (n33: Henle mức 6, ABRSM ARSM).; Kế hoạch D2-L1: mỗi mục chặng dẫn sang trang chặng.'
-  - moi: "Bài học trên site: trang chặng 7."
-    ly_do: "Kế hoạch D2-L1: mỗi mục chặng dẫn sang trang chặng."
+    ly_do: 'Như chặng 2: bài học của chặng ở trang chặng. Bài ngoài site giữ (n33, n34); Impromptu Op. 142 số 2 thay "các Impromptu khác trong Op. 90" (n32, da-sua: Impromptu Sol♭ Op. 90 số 3 đã lên chặng 7 theo D2-0; Op. 142 số 2 ở ABRSM Grade 8). Review (24/10/2026): The Little Shepherd từ chặng 5 sang (n28, ABRSM Grade 7); Brahms Op. 118 số 2 ghi "cuối chặng, gần chặng 7" (n33: Henle mức 6, ABRSM ARSM).; Kế hoạch D2-L1: mỗi mục chặng dẫn sang trang chặng.; Kế hoạch D2-L1: mỗi mục chặng dẫn sang trang chặng.; Kế hoạch D2-L1: mỗi mục chặng dẫn sang trang chặng.'
   - cu:
+      - "Những bài đầu tiên của chặng: Chopin: Fantaisie-Impromptu và Liszt: Liebestraum số 3: kỹ thuật lớn (ba chọi bốn, quãng tám, cadenza) trong khuôn khổ năm phút."
       - "Mỗi năm một tác phẩm lớn: Chopin: Ballade số 1, một sonata giữa hoặc cuối đời của Beethoven, một Partita của Bach, Kinderszenen hay Kreisleriana của Schumann, Préludes của Debussy."
       - "Chơi cùng người khác: song tấu bốn tay, sonata violin và piano, tam tấu, đệm hát. Đây là cách nhanh nhất để tiến bộ về nhịp và lắng nghe (xem Chơi cùng người khác)."
     moi:
+      - "Bài học trên site: trang chặng 7."
+      - "Những bài đầu tiên của chặng: Chopin: Fantaisie-Impromptu và Liszt: Liebestraum số 3: kỹ thuật lớn (ba chọi bốn, quãng tám, cadenza) trong khuôn khổ khoảng 4–5 phút."
       - "Mỗi năm một tác phẩm lớn: Chopin: Ballade số 1, một sonata giữa hoặc cuối đời của Beethoven, một Partita của Bach, trọn tập Kinderszenen hay Kreisleriana của Schumann, Préludes của Debussy."
       - "Chơi cùng người khác: song tấu bốn tay, sonata violin và piano, tam tấu, đệm hát. Đây là một cách rất tốt để tiến bộ về nhịp và lắng nghe (xem Chơi cùng người khác)."
-    ly_do: 'n38 (da-sua): Henle xếp từng bài của Kinderszenen ở mức 4–5; RCM đưa trọn tập vào danh sách diploma LRCM, nên ghi "trọn tập".; n39 (lời khuyên, đã sửa): so sánh nhất ("cách nhanh nhất") không kiểm được.'
+    ly_do: 'n38 (da-sua): Henle xếp từng bài của Kinderszenen ở mức 4–5; RCM đưa trọn tập vào danh sách diploma LRCM, nên ghi "trọn tập".; n39 (lời khuyên, đã sửa): so sánh nhất ("cách nhanh nhất") không kiểm được.; mo/sua-nho (07/11/2026, kế hoạch mở rộng mục 4): sửa lệch nhỏ đã ghi trong báo cáo D6, xem ghi_chu của nhận định cùng chỗ.'
   - cu: 'Gần như ai cũng có những tháng thấy mình "đứng yên"; thường đó là lúc tay đang tiêu hóa những gì đã học. Nếu kéo dài, đi qua danh sách kiểm tra ở Cách tập: khi bị giậm chân tại chỗ, và nghe lại bản thu cũ của mình sau ba tháng: bạn sẽ thấy mình đã đi xa hơn mình nghĩ.'
     moi: 'Gần như ai cũng có những tháng thấy mình "đứng yên". Nếu kéo dài, đi qua danh sách kiểm tra ở Cách tập: khi bị giậm chân tại chỗ, và nghe lại bản thu cũ của mình sau ba tháng: bạn sẽ thấy mình đã đi xa hơn mình nghĩ.'
     ly_do: 'n40 (lời khuyên, đã sửa): bỏ vế nói nguyên nhân ("tay đang tiêu hóa những gì đã học"), không có nguồn.'
@@ -749,3 +759,6 @@ mo_khoa:
   - ngay: 2026-10-28
     nhanh: moi/d4-gom
     ly_do: "D4-gom: dòng Đọc nhạc chặng 3, 4 ghi 'đọc trước nửa ô nhịp / một ô nhịp', lệch trang Thị tấu (khoảng mắt–tay theo Perra 2021: vài nốt, hiếm khi tới trọn một ô nhịp)."
+  - ngay: 2026-11-07
+    nhanh: mo/sua-nho
+    ly_do: "Sửa nhỏ theo kế hoạch mở rộng mục 4 (chủ repo yêu cầu 07/11/2026): lệch nhỏ đã ghi trong báo cáo các lô D6"

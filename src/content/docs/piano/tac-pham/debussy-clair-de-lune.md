@@ -142,7 +142,7 @@ K:Db
 [V:LH] !pp!"_Ped."!5!D,,!2!A,,!1!D, !3!F,!2!A,!3!F, !1!D,!3!A,,!5!F,, | "_Ped."!5!G,,!2!D,!1!G, !3!B,!2!D!3!B, !1!G,!3!D,!5!B,, | "_Ped."!5!A,,!2!E,!1!G, !3!C!2!E!3!C !1!G,!3!E,!5!C, | "_Ped."!5!D,,!2!A,,!1!F, !3!A,6 |]
 ```
 
-1. Tay trái riêng: mỗi ô là một vòng cung lên rồi xuống. Đi lên, ngón 3 vắt qua ngón cái; đi xuống, ngón cái luồn dưới. Cổ tay đi theo hướng của chuỗi nốt, không nhấc ngón cao. Nốt đỉnh của vòng cung (nốt thứ năm) không được to lên.
+1. Tay trái riêng: mỗi ô 1–3 là một vòng cung lên rồi xuống; ô cuối đi lên rồi giữ hợp âm kết. Đi lên, ngón 3 vắt qua ngón cái; đi xuống, ngón cái luồn dưới. Cổ tay đi theo hướng của chuỗi nốt, không nhấc ngón cao. Nốt đỉnh của vòng cung (nốt thứ năm) không được to lên.
 2. Ghép giai điệu: tay phải *mp* đến *mf*, tay trái *pp*.
 3. Biến thể: để tay phải lấy nốt đỉnh của mỗi vòng cung (ngón cái) trong khi vẫn giữ giai điệu. Nghe xem có lộ chỗ nối tay không.
 

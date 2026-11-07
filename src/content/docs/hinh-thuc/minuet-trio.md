@@ -17,7 +17,7 @@ Toàn bộ chương vì vậy có dạng **ABA**, một hình thức ba đoạn 
 
 ## Đi qua một tác phẩm: Mozart, Eine kleine Nachtmusik, chương 3
 
-*Menuetto (Allegretto)* cung Sol trưởng — đúng tác phẩm trong [hướng dẫn nghe](/opus/nghe-nhac/mozart-eine-kleine/):
+*Menuetto (Allegretto)* cung Sol trưởng — cùng tác phẩm với [hướng dẫn nghe chương 1](/opus/nghe-nhac/mozart-eine-kleine/):
 
 | Phần | Giọng | Điều xảy ra |
 |---|---|---|
@@ -35,9 +35,9 @@ Từ Beethoven, minuet thường được thay bằng **[scherzo](/opus/hinh-thu
 
 | Tác phẩm | Điều cần tìm | Hướng dẫn |
 |---|---|---|
-| [Mozart, Eine kleine Nachtmusik, chương 3](/opus/nghe-nhac/mozart-eine-kleine/) | Minuet Sol trưởng – Trio Rê trưởng | [Hướng dẫn nghe](/opus/nghe-nhac/mozart-eine-kleine/) |
-| Haydn, Giao hưởng *Surprise* số 94, chương 3 | Minuet hay "scherzo đội lốt"? Nghe tốc độ | [Hướng dẫn nghe](/opus/nghe-nhac/haydn-94/) |
-| Mozart, Giao hưởng số 40, chương 3 | Minuet trong giao hưởng giọng Sol thứ: nghe giọng thứ đổi tính cách minuet thế nào | [Hướng dẫn nghe](/opus/nghe-nhac/mozart-40/) |
+| Mozart, Eine kleine Nachtmusik, chương 3 | Minuet Sol trưởng – Trio Rê trưởng | [Hướng dẫn nghe chương 1](/opus/nghe-nhac/mozart-eine-kleine/) |
+| Haydn, Giao hưởng *Surprise* số 94, chương 3 | Minuet hay "scherzo đội lốt"? Nghe tốc độ | [Hướng dẫn nghe chương 2](/opus/nghe-nhac/haydn-94/) |
+| Mozart, Giao hưởng số 40, chương 3 | Minuet trong giao hưởng giọng Sol thứ: nghe giọng thứ đổi tính cách minuet thế nào | [Hướng dẫn nghe chương 1](/opus/nghe-nhac/mozart-40/) |
 
 ## Nguồn
 

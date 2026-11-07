@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 4, 28/10/2026; bổ sung sau review)
       review: Claude (review D4-gom, nhóm B, 28/10/2026)
       kiem_mau: 'chủ repo, 10 nhận định mẫu của đợt 4 (D4-L1 đến D4-L4): 10 đúng (3 có điều kiện, đã sửa theo: nguồn Versuch §5 và láy rền thường, Frère Jacques "bài hát Pháp truyền thống", quãng tám trong gợi ý ngón của mẫu galant), 0 sai (bao-cao/d4-gom/kiem-mau-ket-qua.yml)'
+  - so: 2
+    ngay: 2026-11-07
+    nhanh: mo/sua-nho
+    ma_bam: sha256:f0e4156dcfa16e27ff33b8ee8e2fbeb58b71eba0e80acdb0a511b4f924d92fd2
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/sua-nho, 07/11/2026: sửa lệch nhỏ theo kế hoạch mở rộng mục 4)"
+      luot_2: "không có lượt 2 ngoài: mỗi sửa đổi đối chiếu với chỗ báo cáo D6 đã chỉ ra (khối nhạc trên trang, dữ liệu đã khóa, IMSLP), ghi ở ghi_chu"
+      review: Claude Opus 5.5 (mo/sua-nho, 07/11/2026)
+      kiem_mau: chủ repo yêu cầu sửa (07/11/2026); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
 nguon:
   - id: yamaha-mech
     bac: 2
@@ -191,11 +200,11 @@ nhan_dinh:
     ghi_chu: "Trang cũ grieg-arietta (chưa chuyển): bốn nốt giai điệu lặp cùng cao độ ở ô 1–4 (dòng 44, 58 của opus-zero/docs/piano/tac-pham/grieg-arietta.md). Trang cũ beethoven-anh-trang (chưa chuyển): nhịp lấy đà cuối ô 5, ô 6–9 nốt Sol♯ lặp với nhịp chấm dôi (dòng 61). Trang mới tac-pham/fur-elise đã chuyển: đoạn C tay trái gõ La trầm liên tục, bài tập 3 đổi ngón 3–2–1 (dòng 59, 107). Lô chuyển Arietta và Ánh trăng phải giữ các ô nhịp này. Review: đã kiểm bảng dòng 27–32 và trang cũ (chưa chuyển): ../opus-zero/docs/piano/tac-pham/grieg-arietta.md dòng 44 (bốn nốt giai điệu lặp); beethoven-anh-trang.md dòng 61 (nhịp lấy đà cuối ô 5, ô 6–9, Sol♯ lặp chấm dôi); fur-elise có trong dist/. Lô chuyển Arietta, Ánh trăng giữ các ô ấy."
     review: dung
   - id: n11
-    cau: "Nốt Sol♯ lặp ở Valse Si thứ: ô 69–72 và 77–80, đổi ngón 3-2-1."
+    cau: "Nốt lặp nhịp chấm dôi ở Valse Si thứ: ô 69–72 và 77–80, đổi ngón 3-2-1."
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "chưa chắc: trang cũ chopin-valse-si-thu (chưa chuyển) ghi trio ô 65–80 và \"những nốt lặp nhịp chấm dôi ở ô 69–72\" (dòng 63); không thấy ô 77–80. Lô chuyển trang đó phải giữ ô 69–72 và kiểm ô 77–80 trên bản nhạc. Review: đã kiểm ../opus-zero/docs/piano/tac-pham/chopin-valse-si-thu.md (chưa chuyển): dòng 123 bảng chỗ khó \"Nốt lặp nhịp chấm dôi (ô 69–72, 77–80) … Đổi ngón trên nốt lặp (ví dụ 3 – 2 – 1)\"; dòng 82 trio là câu 8 ô nói hai lần (65–80), nên 77–80 ứng với 69–72. Lô chuyển giữ hai cụm ô này."
+    ghi_chu: "chưa chắc: trang cũ chopin-valse-si-thu (chưa chuyển) ghi trio ô 65–80 và \"những nốt lặp nhịp chấm dôi ở ô 69–72\" (dòng 63); không thấy ô 77–80. Lô chuyển trang đó phải giữ ô 69–72 và kiểm ô 77–80 trên bản nhạc. Review: đã kiểm ../opus-zero/docs/piano/tac-pham/chopin-valse-si-thu.md (chưa chuyển): dòng 123 bảng chỗ khó \"Nốt lặp nhịp chấm dôi (ô 69–72, 77–80) … Đổi ngón trên nốt lặp (ví dụ 3 – 2 – 1)\"; dòng 82 trio là câu 8 ô nói hai lần (65–80), nên 77–80 ứng với 69–72. Lô chuyển giữ hai cụm ô này. Sửa nhỏ (mo/sua-nho, 07/11/2026, kế hoạch mở rộng mục 4): Valse Si thứ (dữ liệu chặng 6, Grade 7–8) chuyển từ hàng chặng 5 sang hàng chặng 6 của bảng (d6-l4-gom). Sửa nhỏ (mo/sua-nho, 07/11/2026, kế hoạch mở rộng mục 4): bỏ chữ \"Sol♯\" sai ở câu hồ sơ (nốt lặp không phải Sol♯; trang không ghi tên nốt)."
     review: dung
   - id: n12
     cau: "Beethoven, Sonata Op. 49 số 2: hình đệm nốt lặp tay trái ở ô 6–8, 21–24, nốt lặp ở ô 59–62 và quãng ba ngân ở ô 44–48."
@@ -318,7 +327,7 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Trang cũ chopin-valse-si-thu: trio lần hai bằng quãng ba (81–88, dòng 82, 122). Trang cũ mendelssohn-thuyen-ca: câu 1 vào bằng quãng ba (ô 7–17, dòng 58), A' ô 34–39 xen quãng tám Rê và nhảy từ quãng ba, quãng sáu (dòng 80, 116). Chưa chuyển; lô chuyển phải giữ các ô này. Review: đã kiểm chopin-valse-si-thu.md (chưa chuyển) dòng 82 và 122 (quãng ba ô 81–88); mendelssohn-thuyen-ca.md dòng 17 (A ô 7–17, A' ô 34–39) và dòng 80. Lô chuyển giữ các ô này."
+    ghi_chu: "Trang cũ chopin-valse-si-thu: trio lần hai bằng quãng ba (81–88, dòng 82, 122). Trang cũ mendelssohn-thuyen-ca: câu 1 vào bằng quãng ba (ô 7–17, dòng 58), A' ô 34–39 xen quãng tám Rê và nhảy từ quãng ba, quãng sáu (dòng 80, 116). Chưa chuyển; lô chuyển phải giữ các ô này. Review: đã kiểm chopin-valse-si-thu.md (chưa chuyển) dòng 82 và 122 (quãng ba ô 81–88); mendelssohn-thuyen-ca.md dòng 17 (A ô 7–17, A' ô 34–39) và dòng 80. Lô chuyển giữ các ô này. Sửa nhỏ (mo/sua-nho, 07/11/2026, kế hoạch mở rộng mục 4): Valse Si thứ (dữ liệu chặng 6, Grade 7–8) chuyển từ hàng chặng 5 sang hàng chặng 6 của bảng (d6-l4-gom)."
     review: dung
   - id: n28
     cau: "Bài 3 (ba cặp ngón của quãng ba): tay phải ô 1–2, tay trái ô 3–4, hai tay ô 5–6."
@@ -450,7 +459,7 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Trang cũ khớp từng mục (xem các n ve-site phía trên), trừ ô 77–80 của Valse Si thứ đã ghi chưa chắc. Review: đã kiểm hàng chặng 5 (dòng 199) với trang cũ: Ánh trăng (n10), Valse Si thứ ô 69–72, 77–80, 81–88 (n11, n27), Thuyền ca ô 7–17, 34–39 (n27)."
+    ghi_chu: "Trang cũ khớp từng mục (xem các n ve-site phía trên), trừ ô 77–80 của Valse Si thứ đã ghi chưa chắc. Review: đã kiểm hàng chặng 5 (dòng 199) với trang cũ: Ánh trăng (n10), Valse Si thứ ô 69–72, 77–80, 81–88 (n11, n27), Thuyền ca ô 7–17, 34–39 (n27). Sửa nhỏ (mo/sua-nho, 07/11/2026, kế hoạch mở rộng mục 4): Valse Si thứ (dữ liệu chặng 6, Grade 7–8) chuyển từ hàng chặng 5 sang hàng chặng 6 của bảng (d6-l4-gom)."
     review: dung
   - id: n43
     cau: "Cột \"Gặp ở đâu\" chặng 6: Adagio Pathétique ô 17–28 (tay trái), ô 37–50 (tay phải); Clair de lune ô 1–14."
@@ -704,6 +713,12 @@ doi_chu:
   - cu: "Quãng ba nửa cung là một trong những kỹ thuật khó nhất của piano: ngón bấm đặc biệt, mỗi sách một kiểu, và đòi hỏi bàn tay đã thật thả lỏng ở quãng ba thường. Đừng tập trước khi gam quãng ba đã trôi chảy. Đích đến nổi tiếng là Étude Op. 25 số 6 (Sol♯ thứ) của Chopin, một étude về quãng ba; cùng tập ấy, số 8 (Rê♭ trưởng) là étude về quãng sáu. Trong 12 Études, Debussy cũng viết riêng Pour les tierces (cho quãng ba), Pour les sixtes (cho quãng sáu) và Pour les notes répétées (cho nốt lặp)."
     moi: Quãng ba nửa cung cần ngón bấm riêng (Graham Fitch có một mục về quãng ba thứ nửa cung trong bài "Nimble Chromatics") và đòi hỏi bàn tay đã thật thả lỏng ở quãng ba thường. Đừng tập trước khi gam quãng ba đã trôi chảy. Đích đến nổi tiếng là Étude Op. 25 số 6 (Sol♯ thứ) của Chopin, một étude về quãng ba; cùng tập ấy, số 8 (Rê♭ trưởng) là étude về quãng sáu. Trong 12 Études, Debussy cũng viết riêng Pour les tierces (cho quãng ba), Pour les sixtes (cho quãng sáu) và Pour les notes répétées (cho nốt lặp).
     ly_do: "n35 (da-sua, review D4-gom): bỏ đánh giá không kiểm được; dẫn Fitch."
+  - cu: Ánh trăng cuối ô 5, ô 6–9; Valse Si thứ ô 69–72, 77–80 (nốt lặp), ô 81–88 (quãng ba); Thuyền ca Venice ô 7–17, 34–39
+    moi: Ánh trăng cuối ô 5, ô 6–9; Thuyền ca Venice ô 7–17, 34–39
+    ly_do: "mo/sua-nho (07/11/2026, kế hoạch mở rộng mục 4): sửa lệch nhỏ đã ghi trong báo cáo D6, xem ghi_chu của nhận định cùng chỗ."
+  - cu: Adagio Pathétique ô 17–28 (tay trái), ô 37–50 (tay phải); Clair de lune ô 1–14
+    moi: Adagio Pathétique ô 17–28 (tay trái), ô 37–50 (tay phải); Valse Si thứ ô 69–72, 77–80 (nốt lặp), ô 81–88 (quãng ba); Clair de lune ô 1–14
+    ly_do: "mo/sua-nho (07/11/2026, kế hoạch mở rộng mục 4): sửa lệch nhỏ đã ghi trong báo cáo D6, xem ghi_chu của nhận định cùng chỗ."
   - cu:
       - Seymour Fink, Mastering Piano Technique (Amadeus Press, 1992).
       - Graham Fitch, Practising the Piano.
@@ -719,3 +734,7 @@ doi_chu:
       - "câu hỏi: Khi không thể nối cả hai bè của chuỗi quãng ba, nên ưu tiên gì? | ✓ Giữ bè trên legato, cho bè dưới hở một chút | Giữ bè dưới legato vì ngón cái khỏe hơn | Bỏ legato, chơi tất cả staccato | Bè trên thường là giai điệu, và tai người nghe có xu hướng ưu tiên bè cao nhất."
       - "câu hỏi: Trong quãng sáu legato, bè trên thường được nối bằng gì? | ✓ Ngón 4 và 5 luân phiên, ngón 4 thường trên phím đen | Ngón cái trượt | Bàn đạp, không cần ngón | Ngón cái giữ bè dưới và chỉ trượt được từ phím đen xuống phím trắng."
     ly_do: "n51 (da-sua, review D4-gom): như n25.; n52 (review D4-gom): đáp án câu hỏi 5 khớp n30."
+mo_khoa:
+  - ngay: 2026-11-07
+    nhanh: mo/sua-nho
+    ly_do: "Sửa nhỏ theo kế hoạch mở rộng mục 4 (chủ repo yêu cầu 07/11/2026): lệch nhỏ đã ghi trong báo cáo các lô D6"

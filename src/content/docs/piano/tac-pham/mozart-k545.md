@@ -128,7 +128,7 @@ K:C
 [V:LH] [C,E,G,]4 [C,E,G,]4 [C,E,G,]4 [C,E,G,]4 | [G,,B,,F,]4 [G,,B,,F,]4 [G,,B,,F,]4 [G,,B,,F,]4 | [C,E,G,]4 [G,,B,,F,]4 [C,,C,]8 |]
 ```
 
-1. Đi lên: 1-2-3, luồn ngón cái sang Fa, 1-2-3-4-5. Đi xuống: 5-4-3-2-1, vắt ngón 3 qua, 3-2-1.
+1. Đi lên: 1-2-3, luồn ngón cái sang Fa (ô 2: sang Mi), 1-2-3-4-5. Đi xuống: 5-4-3-2-1, vắt ngón 3 qua, 3-2-1.
 2. Tập bốn kiểu: đều; nhịp chấm dài – ngắn; ngắn – dài; nhóm bốn nốt dừng trên nốt đầu nhóm.
 3. Tay trái hợp âm phải rơi đúng cùng lúc với nốt tay phải ở mỗi phách đen.
 
