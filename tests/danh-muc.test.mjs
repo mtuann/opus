@@ -231,7 +231,13 @@ test('chuongTacPham: bản ghi mới như them-tac-pham.mjs tạo (bản ghi và
 test('dist/: danh mục ở hai trang mục lục liệt kê đúng các trang tác phẩm có trong bản build', { skip: !coDist && 'chưa build' }, () => {
 	const coTrang = (t) => fs.existsSync(path.join(DIST, t, 'index.html'));
 	// trang tác phẩm: trang khai tac_pham ở frontmatter (cách danh mục nhận trang của bản ghi), có trong bản build
-	const tatCa = [...banGhiCuaTrang().keys()].filter(coTrang).sort();
+	const cuaTrang = banGhiCuaTrang();
+	const tatCa = [...cuaTrang.keys()].filter(coTrang).sort();
+	// trang mục lục đã khóa bỏ qua bản ghi chưa khóa trường nào (coTruongDaKhoa): ở bản xem, bản ghi đang mở khóa cả bản
+	// ghi (như khi thêm hinh vào bản ghi đã khóa) thì trang của nó có trong bản build mà không vào danh mục
+	const khoa = JSON.parse(fs.readFileSync(path.join(ROOT, 'kiem-dinh/khoa.json'), 'utf8'));
+	const daKhoa = truongDaKhoa();
+	const coKhoa = (t) => coTruongDaKhoa({ slug: cuaTrang.get(t) }, 'tac-pham', daKhoa);
 	for (const [trang, loc] of [
 		['piano/tac-pham', (t) => t.startsWith('piano/tac-pham/')],
 		['nghe-nhac', () => true],
@@ -240,7 +246,8 @@ test('dist/: danh mục ở hai trang mục lục liệt kê đúng các trang t
 		if (!fs.existsSync(f)) continue;
 		const h = fs.readFileSync(f, 'utf8');
 		const ds = ten(h);
-		assert.deepEqual([...ds].sort(), tatCa.filter(loc), trang);
+		const trangKhoa = `${trang}/index` in khoa.trang;
+		assert.deepEqual([...ds].sort(), tatCa.filter(loc).filter((t) => !trangKhoa || coKhoa(t)), trang);
 		assert.equal(new Set(ds).size, ds.length, `${trang}: trùng mục`);
 		assert.match(h, new RegExp(`Hiện ${ds.length} trên ${ds.length} trang\\.`));
 		// trang mục lục có danh mục thì tải bộ tải thành phần (script lọc)

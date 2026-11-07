@@ -1619,6 +1619,92 @@ html.oz-stand-open .main-pane {
 	font-size: var(--sl-text-xs);
 	white-space: nowrap;
 }
+/* năm đầu trên một hình (hình tĩnh nam-dau, đợt hình 3c): bốn quý, mỗi quý ba tháng (ba cột khi đủ chỗ, một cột ở màn
+   hẹp, theo bề rộng của hình); mỗi tháng ba mảng theo thứ tự cố định, màu làn ở viền trái, mốc có ★ */
+.oz-nam-dau {
+	--oz-nd-dan: var(--oz-h-xanh);
+	--oz-nd-ly: var(--oz-h-luc);
+	--oz-nd-nghe: var(--oz-h-vang);
+	--oz-nd-moc: var(--oz-h-do);
+	font-size: var(--sl-text-sm);
+	line-height: 1.35;
+	container-type: inline-size;
+}
+.sl-markdown-content .oz-nam-dau :is(p, ol, li, span, a) {
+	margin: 0;
+}
+.oz-nam-dau ol {
+	padding: 0;
+	list-style: none;
+}
+.sl-markdown-content .oz-nam-dau .oz-nd-chu {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.3rem 0.6rem;
+	margin-bottom: 0.5rem;
+	font-size: var(--sl-text-xs);
+}
+.oz-nd-quy {
+	display: grid;
+	gap: 0.6rem;
+}
+.oz-nd-quy-ten {
+	display: block;
+	padding: 0.2rem 0;
+	font-weight: 600;
+	color: var(--sl-color-white);
+}
+.oz-nd-thang {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 0.4rem;
+}
+.oz-nd-thang > li {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+	padding: 0.35rem 0.45rem 0.45rem;
+	border: 1px solid var(--sl-color-hairline);
+	border-radius: 0.4rem;
+	break-inside: avoid;
+}
+.oz-nd-ten {
+	display: block;
+	text-decoration: none;
+	color: var(--sl-color-white);
+}
+.oz-nd-ten small {
+	color: var(--sl-color-gray-2);
+	font-size: var(--sl-text-xs);
+}
+.oz-nam-dau :is(.oz-nd-l, .oz-nd-moc) {
+	display: block;
+	padding: 0.1rem 0.35rem;
+	border-left: 4px solid var(--oz-nd-c);
+	background: color-mix(in srgb, var(--oz-nd-c) 14%, transparent);
+	font-size: var(--sl-text-xs);
+}
+.oz-nam-dau .oz-nd-chu :is(.oz-nd-l, .oz-nd-moc) {
+	display: inline-block;
+}
+.oz-nd-dan {
+	--oz-nd-c: var(--oz-nd-dan);
+}
+.oz-nd-ly {
+	--oz-nd-c: var(--oz-nd-ly);
+}
+.oz-nd-nghe {
+	--oz-nd-c: var(--oz-nd-nghe);
+}
+.oz-nam-dau .oz-nd-moc {
+	--oz-nd-c: var(--oz-nd-moc);
+	font-weight: 600;
+}
+@container (max-width: 30rem) {
+	.oz-nd-thang {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
 .oz-nct-the small {
 	font-size: var(--sl-text-xs);
 	line-height: 1.35;
@@ -1959,7 +2045,8 @@ html.oz-stand-open .main-pane {
 	.oz-anatomy span,
 	.oz-ket,
 	.oz-chip,
-	.oz-galant-giu {
+	.oz-galant-giu,
+	.oz-nam-dau :is(.oz-nd-l, .oz-nd-moc) {
 		-webkit-print-color-adjust: exact;
 		print-color-adjust: exact;
 	}

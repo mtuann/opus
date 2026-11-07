@@ -50,6 +50,7 @@ export const KHOI = {
 	// đợt hình 3 (mo/hinh-dot-3b): khối hình thức có ô cao theo tốc độ (overture), bốn vai và ba tiếng kêu (Erlkönig)
 	'khối tốc độ overture': 'oz-form-toc-do',
 	'bốn vai Erlkönig': 'oz-erlkonig',
+	'bản đồ năm đầu': 'class="oz-nam-dau"',
 	'công cụ âm học': 'oz-boi-am',
 	'thẻ ghi nhớ': 'class="oz-the-nho',
 	'trạng thái bài': 'class="oz-trang-thai-bai',
