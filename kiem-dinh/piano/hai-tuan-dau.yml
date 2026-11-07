@@ -18,8 +18,8 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: "Claude Opus 5.5 (mo/hinh-dot-1, 06/11/2026: thêm bàn phím có số ngón, nhãn, ngoặc; đối chiếu hình với chữ, bảng và khuông của trang)"
-      luot_2: null
-      review: null
+      luot_2: "không cần (câu ve-site không qua lượt 2)"
+      review: "Claude Opus 5.5 (review mo/hinh-dot-1, 06/11/2026: đối chiếu từng số ngón, phím, nhãn, ngoặc trong SVG của bản xem với thông số ::cong-cu, chữ, bảng và khuông abc cùng mục; 2 câu, đều dung)"
       kiem_mau: null
 nguon:
   - id: yamaha-weighted
@@ -418,13 +418,15 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp range=\"C3-G4\" phai=\"C4:1 D4:2 E4:3 F4:4 G4:5\" trai=\"C3:5 D3:4 E3:3 F3:2 G3:1\". Khớp câu ngày 2–3 (\"ngón 1 trên Đô giữa, mỗi ngón một phím trắng, ngón 5 trên Sol4\"; \"ngón 5 trên Đô3, ngón 1 trên Sol3\") và khuông 1 (khởi động 1: tay phải !1!C … !5!G, tay trái !5!C, … !1!G,)."
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp range=\"C3-G4\" phai=\"C4:1 D4:2 E4:3 F4:4 G4:5\" trai=\"C3:5 D3:4 E3:3 F3:2 G3:1\". Khớp câu ngày 2–3 (\"ngón 1 trên Đô giữa, mỗi ngón một phím trắng, ngón 5 trên Sol4\"; \"ngón 5 trên Đô3, ngón 1 trên Sol3\") và khuông 1 (khởi động 1: tay phải !1!C … !5!G, tay trái !5!C, … !1!G,). Review hình đợt 1 (06/11/2026): SVG trong dist/piano/hai-tuan-dau/index.html (bản xem): phải 1–5 Đô4–Sol4, trái 5–1 Đô3–Sol3, mười phím tô; khuông khởi động 1: phải !1!C … !5!G, trái !5!C, … !1!G,. Khớp chữ ngày 2–3."
+    review: dung
   - id: n43
     cau: "Hình bàn phím ở ngày 5–6 (Sol2–Sol4): tay phải vẫn ở thế Đô (ngón 1–5 trên Đô4–Sol4), tay trái ở thế Sol (ngón 5 trên Sol2 … ngón 1 trên Rê3)."
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp range=\"G2-G4\" phai=\"C4:1 D4:2 E4:3 F4:4 G4:5\" trai=\"G2:5 A2:4 B2:3 C3:2 D3:1\". Khớp câu ngày 5–6 (\"thế Sol (ngón 5 trên Sol2, ngón 1 trên Rê3), còn tay phải vẫn ở thế Đô\") và cùng thế tay với hình bài 1 của piano/10-bai-dau-tien (n110 ở hồ sơ ấy)."
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp range=\"G2-G4\" phai=\"C4:1 D4:2 E4:3 F4:4 G4:5\" trai=\"G2:5 A2:4 B2:3 C3:2 D3:1\". Khớp câu ngày 5–6 (\"thế Sol (ngón 5 trên Sol2, ngón 1 trên Rê3), còn tay phải vẫn ở thế Đô\") và cùng thế tay với hình bài 1 của piano/10-bai-dau-tien (n110 ở hồ sơ ấy). Review hình đợt 1 (06/11/2026): SVG: phải 1–5 Đô4–Sol4, trái 5 Sol2, 4 La2, 3 Si2, 2 Đô3, 1 Rê3, giống hệt hình bài 1 của piano/10-bai-dau-tien (n110 ở hồ sơ ấy). Khớp chữ ngày 5–6."
+    review: dung
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan

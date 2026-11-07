@@ -53,6 +53,27 @@ Không commit (chỉ để người gom xem), ở scratchpad của phiên:
 - Cả trang, 360 và 1280 px (`OPUS_CHI_TRANG_DOI=1 node tools/chup-anh.mjs`): `/private/tmp/claude-501/-Users-mitu-Desktop-work-projects-opus/7f80c6a8-7bce-46e5-8918-954e4e4384ee/scratchpad/anh-chup/` (bốn trang `nhac-ly--09-quang`, `piano--nam-ngon`, `piano--10-bai-dau-tien`, `piano--hai-tuan-dau`, cộng trang chủ, 404, `bat-dau--tom-tat`).
 - Từng bàn phím (1280 px sáng, 360 px tối, độ phân giải gấp đôi): `/private/tmp/claude-501/-Users-mitu-Desktop-work-projects-opus/7f80c6a8-7bce-46e5-8918-954e4e4384ee/scratchpad/xem/`. Tiêu biểu: `nhac-ly_09-quang_0-360.png` (thước nửa cung), `nhac-ly_09-quang_1-1280.png` (đảo quãng), `piano_nam-ngon_1-1280.png` (thế Đô giữa, hai ngón cái chung phím), `piano_nam-ngon_10-1280.png` (Rê♭, nhãn "thứ").
 
+## Review
+
+Claude Opus 5.5, 06/11/2026, không phải người làm lượt 1 hay lượt 2. Review nội dung (câu `ve-site` và n67), không review mã.
+
+- Cách kiểm: `npm run build:xem`, rồi đọc từng SVG `oz-phim--chu` trong `dist/<trang>/index.html`: tâm x và `data-m` của từng phím, dấu số ngón (lớp `oz-ngon--phai`, `oz-ngon--trai`) ứng với phím chứa nó, nhãn (`oz-phim-nhan`), ngoặc (`oz-phim-ngoac`: hai đầu path ở tâm hai phím, tầng), phím tô, chữ nút nghe. Đối chiếu với thông số `::cong-cu` trong trang, chữ, bảng và khuông `abc` cùng mục (ký hiệu `!n!` của từng nốt). Xem thêm ảnh chụp từng bàn phím của lượt 1.
+- Kết quả: 13 câu, 13 `dung`, 0 `sai`; không sửa trang hay thông số hình. Mỗi câu có `review: dung` và đoạn "Review hình đợt 1 (06/11/2026): …" trong `ghi_chu`. `nguoi.review` điền ở lần 2 của bốn hồ sơ; `nguoi.luot_2` ghi "không cần (câu ve-site không qua lượt 2)" ở `nam-ngon`, `10-bai-dau-tien`, `hai-tuan-dau` (`09-quang` đã có lượt 2 cho n67).
+
+| Trang | Câu | Đã kiểm |
+|---|---|---|
+| `nhac-ly/09-quang` | n66, n67, n68 | Thước: 13 nhãn đều ở phím MIDI 60 + số nửa cung, số và tên quãng khớp từng dòng bảng (0 = 1 đúng … 12 = 8 đúng; phím đen 2 thứ, 3 thứ, 4 tăng/5 giảm, 6 thứ, 7 thứ). Đảo quãng: ngoặc Đô4–Mi4 (4), Mi4–Đô5 (8) cùng tầng, Đô4–Đô5 (12) tầng trên; tự đếm lại 4 + 8 = 12 (n67, lượt 1 và lượt 2 cùng dung, nhãn `quy-tac` đúng). |
+| `piano/nam-ngon` | n10, n62, n63 | Bốn thế tay khớp từng ô bảng thế tay (thế Đô giữa: hai dấu nhỏ trên Đô4; thế Fa: Si♭ dưới ngón 4 phải, ngón 2 trái). Mười hai giọng: năm phím có số ngón là cột "Năm nốt", nhãn "thứ" ở phím nửa cung dưới bậc 3 (cột "Thế thứ", kể cả phím Mi cho Fa♭, phím Si cho Đô♭). |
+| `piano/10-bai-dau-tien` | n110–n114 | Số ngón của năm hình không mâu thuẫn khuông 1, 2, 4, 8, 11. Bài 2: Sol3 ngón 1 tay trái có ở ô 4 chứ không ở ô 1–2, nhưng hình vẽ vị trí tay theo chữ ("Sol3 ngón 1"), không trái khuông. Bài 10: hình là ô 2 (tay trái cũng ô 4, 6, 8); ô 3, 7 không vẽ. |
+| `piano/hai-tuan-dau` | n42, n43 | Ngày 2–3 khớp khuông khởi động 1; ngày 5–6 giống hình bài 1. |
+
+Ghi nhận, không phải lỗi (không sửa):
+
+- `09-quang`: tên quãng ở phím đen chỉ đúng với cách viết giáng của cột ví dụ (Đô–Rê♭ là 2 thứ; Đô–Đô♯ cùng phím là 1 tăng). Câu dẫn đã nói "bảng dưới ghi cùng các quãng ấy, kèm ví dụ từ Đô", và bảng cũng xếp theo số nửa cung, nên hình không nói khác bảng. Nếu muốn chặt hơn, đợt sau có thể thêm vào câu dẫn "phím đen đọc theo tên trong cột ví dụ".
+- `10-bai-dau-tien` bài 2: nhãn "mở / rộng" hai dòng nên chữ "mở" in đậm như dòng đầu của mọi nhãn (dòng số ở `09-quang`). Chỉ là kiểu chữ.
+
+Kiểm sau review: `node tools/khoa.mjs tinh` thoát 0 (mọi mục đã khóa khớp); `npm test` (trên bản xem) 303 đạt, 2 bỏ qua, 0 hỏng. Còn lại trước khi khóa lại: kiểm mẫu (`kiem_mau`), rồi `node tools/khoa.mjs khoa` bốn trang.
+
 ## Việc cho người gom
 
 - Review mã (mức "Vừa", commit mã riêng).

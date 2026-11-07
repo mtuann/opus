@@ -18,8 +18,8 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: "Claude Opus 5.5 (mo/hinh-dot-1, 06/11/2026: thêm bàn phím có số ngón, nhãn, ngoặc; đối chiếu hình với chữ, bảng và khuông của trang)"
-      luot_2: null
-      review: null
+      luot_2: "không cần (câu ve-site không qua lượt 2)"
+      review: "Claude Opus 5.5 (review mo/hinh-dot-1, 06/11/2026: đối chiếu từng số ngón, phím, nhãn, ngoặc trong SVG của bản xem với thông số ::cong-cu, chữ, bảng và khuông abc cùng mục; 3 câu, đều dung)"
       kiem_mau: null
 nguon:
   - id: omt-aspn
@@ -182,7 +182,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Lần 1: ::cong-cu{ten=\"piano\" range=\"C3-G4\" notes=\"C3 D3 E3 F3 G3 C4 D4 E4 F4 G4\"}, review dung. mo/hinh-dot-1 (06/11/2026): đổi thành ::cong-cu{ten=\"piano\" range=\"C3-G4\" phai=\"C4:1 D4:2 E4:3 F4:4 G4:5\" trai=\"C3:5 D3:4 E3:3 F3:2 G3:1\"}; phím có số ngón là phím được tô (docThongSoBanPhim), nên vẫn đúng mười phím và nút nghe phát mười nốt. Số ngón khớp dòng Thế Đô của bảng (\"Ngón 1 trên Đô4 … ngón 5 trên Sol4\", \"Ngón 5 trên Đô3 … ngón 1 trên Sol3\"). Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Câu dẫn giữ nguyên. Cần review lại."
+    ghi_chu: "Lần 1: ::cong-cu{ten=\"piano\" range=\"C3-G4\" notes=\"C3 D3 E3 F3 G3 C4 D4 E4 F4 G4\"}, review dung. mo/hinh-dot-1 (06/11/2026): đổi thành ::cong-cu{ten=\"piano\" range=\"C3-G4\" phai=\"C4:1 D4:2 E4:3 F4:4 G4:5\" trai=\"C3:5 D3:4 E3:3 F3:2 G3:1\"}; phím có số ngón là phím được tô (docThongSoBanPhim), nên vẫn đúng mười phím và nút nghe phát mười nốt. Số ngón khớp dòng Thế Đô của bảng (\"Ngón 1 trên Đô4 … ngón 5 trên Sol4\", \"Ngón 5 trên Đô3 … ngón 1 trên Sol3\"). Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Câu dẫn giữ nguyên. Cần review lại. Review hình đợt 1 (06/11/2026): SVG trong dist/piano/nam-ngon/index.html (bản xem): mười phím tô Đô3–Sol3, Đô4–Sol4; dấu tròn tay phải 1–5 trên Đô4–Sol4, dấu vuông tay trái 5–1 trên Đô3–Sol3, có dòng chú giải hai tay; không có play nên nút là \"Nghe các nốt được tô\" (thanh-phan.mjs), phát mười phím tô (ban-phim.js); câu dẫn giữ nguyên. Khớp dòng Thế Đô của bảng."
+    review: dung
   - id: n11
     cau: "Tay trái là ảnh gương của tay phải: khi hai tay cùng đi lên (sang phải), tay phải đi 1 → 5 còn tay trái đi 5 → 1; khi hai tay đi ngược chiều từ hai ngón cái ra ngoài, hai tay dùng cùng số ngón cùng lúc."
     loai: cau-truc
@@ -643,13 +644,15 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp: thế Đô giữa range=\"F3-G4\" phai=\"C4:1 … G4:5\" trai=\"F3:5 G3:4 A3:3 B3:2 C4:1\"; thế Sol range=\"G2-D5\" phai=\"G4:1 A4:2 B4:3 C5:4 D5:5\" trai=\"G2:5 A2:4 B2:3 C3:2 D3:1\"; thế Fa range=\"F2-C5\" phai=\"F4:1 G4:2 A4:3 Bb4:4 C5:5\" trai=\"F2:5 G2:4 A2:3 Bb2:2 C3:1\". Đối chiếu từng ô với bảng (dòng 2–4) và ghi chú của dòng Thế Fa (\"Si♭ (ngón 4 tay phải, ngón 2 tay trái)\"); câu dẫn \"Thế Đô giữa: hai ngón cái chung phím Đô4\" lặp ghi chú của dòng Thế Đô giữa. Phím chung Đô4 có hai dấu cạnh nhau (tay trái vuông, tay phải tròn)."
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp: thế Đô giữa range=\"F3-G4\" phai=\"C4:1 … G4:5\" trai=\"F3:5 G3:4 A3:3 B3:2 C4:1\"; thế Sol range=\"G2-D5\" phai=\"G4:1 A4:2 B4:3 C5:4 D5:5\" trai=\"G2:5 A2:4 B2:3 C3:2 D3:1\"; thế Fa range=\"F2-C5\" phai=\"F4:1 G4:2 A4:3 Bb4:4 C5:5\" trai=\"F2:5 G2:4 A2:3 Bb2:2 C3:1\". Đối chiếu từng ô với bảng (dòng 2–4) và ghi chú của dòng Thế Fa (\"Si♭ (ngón 4 tay phải, ngón 2 tay trái)\"); câu dẫn \"Thế Đô giữa: hai ngón cái chung phím Đô4\" lặp ghi chú của dòng Thế Đô giữa. Phím chung Đô4 có hai dấu cạnh nhau (tay trái vuông, tay phải tròn). Review hình đợt 1 (06/11/2026): SVG trong dist/piano/nam-ngon/index.html: thế Đô giữa (Fa3–Sol4) tay trái 5 Fa3, 4 Sol3, 3 La3, 2 Si3, 1 Đô4, tay phải 1 Đô4 … 5 Sol4, phím Đô4 có hai dấu nhỏ cạnh nhau (vuông x 103, tròn x 115), tô 9 phím; thế Sol (Sol2–Rê5) phải 1–5 Sol4 La4 Si4 Đô5 Rê5, trái 5–1 Sol2 La2 Si2 Đô3 Rê3; thế Fa (Fa2–Đô5) phải 1 Fa4, 2 Sol4, 3 La4, 4 Si♭4 (phím đen), 5 Đô5, trái 5 Fa2, 4 Sol2, 3 La2, 2 Si♭2 (phím đen), 1 Đô3. Khớp từng ô của bảng thế tay và các câu dẫn."
+    review: dung
   - id: n63
     cau: "Mười hai hình bàn phím sau bảng \"Năm ngón trưởng và thứ ở mười hai giọng\" ghi số ngón tay phải 1–5 trên năm nốt (bậc 1–5) của từng giọng, xếp theo bốn nhóm của bảng (Đô, Sol, Fa; Rê, La, Mi; Rê♭, La♭, Mi♭; Fa♯, Si♭, Si), và nhãn \"thứ\" dưới (hay trên) phím của bậc 3 ở thế thứ."
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Đối chiếu từng hình với bảng: năm phím có số ngón là cột \"Năm nốt\"; phím đen có số ngón khớp cột \"Phím đen (ngón tay phải)\" (Fa: Si♭ 4; Rê: Fa♯ 3; La: Đô♯ 3; Mi: Fa♯ 2, Sol♯ 3; Rê♭: Rê♭ 1, Mi♭ 2, Sol♭ 4, La♭ 5; La♭: La♭ 1, Si♭ 2, Rê♭ 4, Mi♭ 5; Mi♭: Mi♭ 1, La♭ 4, Si♭ 5; Fa♯: Fa♯ 1, Sol♯ 2, La♯ 3, Đô♯ 5; Si♭: Si♭ 1, Mi♭ 4; Si: Đô♯ 2, Rê♯ 3, Fa♯ 5); nhãn \"thứ\" ở phím của cột \"Thế thứ: bậc 3 thành\" (Mi♭, Si♭, La♭, Fa, Đô, Sol, phím Mi cho Fa♭, phím Si cho Đô♭, Sol♭, La, Rê♭, Rê). Ngón k trên bậc k theo định nghĩa thế năm ngón của trang (câu đầu mục \"Thế tay năm ngón là gì\": \"năm phím liền nhau, ứng với năm bậc đầu\") và câu \"ngón 3 của cả hai tay dịch xuống một phím\". Quãng tám 4 (hay 4–5) là chọn để vẽ; bảng không ghi quãng tám. Câu dẫn và bốn dòng nhóm lặp tên nhóm, tên giọng của bảng."
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Đối chiếu từng hình với bảng: năm phím có số ngón là cột \"Năm nốt\"; phím đen có số ngón khớp cột \"Phím đen (ngón tay phải)\" (Fa: Si♭ 4; Rê: Fa♯ 3; La: Đô♯ 3; Mi: Fa♯ 2, Sol♯ 3; Rê♭: Rê♭ 1, Mi♭ 2, Sol♭ 4, La♭ 5; La♭: La♭ 1, Si♭ 2, Rê♭ 4, Mi♭ 5; Mi♭: Mi♭ 1, La♭ 4, Si♭ 5; Fa♯: Fa♯ 1, Sol♯ 2, La♯ 3, Đô♯ 5; Si♭: Si♭ 1, Mi♭ 4; Si: Đô♯ 2, Rê♯ 3, Fa♯ 5); nhãn \"thứ\" ở phím của cột \"Thế thứ: bậc 3 thành\" (Mi♭, Si♭, La♭, Fa, Đô, Sol, phím Mi cho Fa♭, phím Si cho Đô♭, Sol♭, La, Rê♭, Rê). Ngón k trên bậc k theo định nghĩa thế năm ngón của trang (câu đầu mục \"Thế tay năm ngón là gì\": \"năm phím liền nhau, ứng với năm bậc đầu\") và câu \"ngón 3 của cả hai tay dịch xuống một phím\". Quãng tám 4 (hay 4–5) là chọn để vẽ; bảng không ghi quãng tám. Câu dẫn và bốn dòng nhóm lặp tên nhóm, tên giọng của bảng. Review hình đợt 1 (06/11/2026): SVG trong dist/piano/nam-ngon/index.html: 12 hình theo đúng thứ tự và nhóm của bảng; mỗi hình năm dấu tay phải 1–5 trên năm nốt của cột \"Năm nốt\" (Đô C–G; Sol G–D; Fa F G A B♭ C; Rê D E F♯ G A; La A B C♯ D E; Mi E F♯ G♯ A B; Rê♭ D♭ E♭ F G♭ A♭; La♭ A♭ B♭ C D♭ E♭; Mi♭ E♭ F G A♭ B♭; Fa♯ F♯ G♯ A♯ B C♯; Si♭ B♭ C D E♭ F; Si B C♯ D♯ E F♯), nên phím đen có số ngón khớp cột \"Phím đen (ngón tay phải)\"; mỗi hình một nhãn \"thứ\", ở phím nửa cung dưới bậc 3 (E♭4, B♭4, A♭4, F4, C5, G4, phím E4 cho Fa♭, phím B4 cho Đô♭, G♭4, A4, D♭5, D5), khớp cột \"Thế thứ\". Dải bắt đầu hay kết thúc ở phím đen mở tới phím trắng kề (quy ước range), không tô thêm phím nào."
+    review: dung
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
