@@ -2,7 +2,7 @@
 
 Áp dụng cho trang thuộc tầng Tác phẩm của site mới: bài học trong `src/content/docs/piano/tac-pham/` và hướng dẫn nghe trong `src/content/docs/nghe-nhac/`. Mục tiêu: thêm một tác phẩm chỉ tạo file mới và nối thêm dữ liệu, không sửa trang nào khác, nên review chỉ cần đọc phần thêm.
 
-**Trạng thái:** dùng được từ sau đợt 6 của `plans/lam-lai/README.md`, khi bản ghi tác phẩm đã đủ trường. `tools/audio/` đọc và ghi bản thu trong bản ghi, công cụ ở mục 2 và kiểm thử ở mục 4 đã có từ việc chuẩn bị D6-0 (`plans/lam-lai/bao-cao/d6-0.md`). Trước khi đợt 6 xong không thêm tác phẩm. Còn chờ D6-L11: danh mục tác phẩm, và sách in đọc danh sách tác phẩm từ dữ liệu (lúc D6-0, chương sách in còn liệt kê tay trong `src/sach/sach.mjs`; menu đã tự thêm trang mới vào nhóm Tác phẩm). Ba bài làm thử đầu tiên: xem `README.md` mục "Vận hành sau khi làm lại".
+**Trạng thái:** dùng được từ sau đợt 6 của `plans/lam-lai/README.md`, khi bản ghi tác phẩm đã đủ trường. `tools/audio/` đọc và ghi bản thu trong bản ghi, công cụ ở mục 2 và kiểm thử ở mục 4 đã có từ việc chuẩn bị D6-0 (`plans/lam-lai/bao-cao/d6-0.md`). Trước khi đợt 6 xong không thêm tác phẩm. Từ D6-L11, danh mục tác phẩm (`::danh-muc-tac-pham` ở hai trang mục lục) và chương tác phẩm của sách in (`chuongTacPham`, `src/sach/sach.mjs`) đọc từ dữ liệu: tác phẩm thêm sau tự vào (bài học chen trước bài đầu tiên có chặng lớn hơn, hướng dẫn nghe vào cuối); menu tự thêm trang mới vào nhóm Tác phẩm. Ba bài làm thử đầu tiên: xem `README.md` mục "Vận hành sau khi làm lại".
 
 ## 1. Khảo sát và duyệt
 

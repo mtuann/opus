@@ -10,7 +10,7 @@ tac_pham: part-spiegel
 | Sáng tác | 1978, ban đầu cho violin và piano; có nhiều phiên bản cho cello, viola và nhạc cụ khác |
 | Thời kỳ | Đương đại |
 | Giọng | Fa trưởng |
-| Độ dài | Khoảng 8–10 phút |
+| Độ dài | Khoảng 10 phút |
 | Bản thu gợi ý | Album *Alina* (ECM New Series 1591, 1999): ba bản *Spiegel im Spiegel*, hai bản violin và piano, một bản cello và piano |
 
 ## Điều cần biết trước khi nghe
@@ -46,7 +46,7 @@ K:Dm
 
 | Thời điểm | Sự kiện |
 |---|---|
-| … | Piano bắt đầu với hình đệm ba nốt đi lên, lặp lại đều đặn |
+| … | Piano chơi hình đệm ba nốt đi lên, lặp lại đều đặn |
 | … | Violin vào: câu đầu chỉ có hai nốt, kết về một nốt trung tâm |
 | … | Mỗi câu sau **thêm một nốt**, nên giai điệu đi xa dần khỏi nốt trung tâm; câu đi lên được nối bằng câu "soi gương" đi xuống, và câu nào cũng trở về nốt trung tâm |
 | … | Piano thêm những nốt tintinnabuli, như những chiếc chuông nhỏ, lần lượt vang phía trên và phía dưới giai điệu |

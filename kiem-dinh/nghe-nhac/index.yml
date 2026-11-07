@@ -9,8 +9,8 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: Claude Opus 5.5 (chủ lô D6-L11)
-      luot_2: null
-      review: null
+      luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L11, 06/11/2026, ba phần)
+      review: Claude Opus 5.5 (review D6-L11-gom)
       kiem_mau: null
 ghi_chu: 'Trang lối vào mục Nghe nhạc (tầng khung). Hai bảng viết tay của trang cũ ("Nhạc piano"; "Dàn nhạc, giọng hát và thính phòng", cột Thời kỳ, Luyện nghe) thay bằng danh mục sinh từ src/data/tac-pham.yml (::danh-muc-tac-pham, D6-L11): mọi trang tác phẩm có trong bản build, gồm cả bài học, lọc theo loại, chặng, thời kỳ, tác giả; tên, thoi_ky, luyen_nghe, ky_nang_chinh là trường dữ liệu đã kiểm định ở hồ sơ bản ghi, không lập nhận định lại ở đây (trang đã khóa chỉ hiện trường đã khóa). Chữ viết tay còn lại: lời mở đầu, phương pháp 4 lần nghe (khuyen-tap), câu về công cụ và trang khác của site (ve-site). Không có khối abc. Câu ve-site ở hồ sơ khác trỏ tới trang: tai-lieu-tham-khao t32, nhan-dien/nghe-mu n12, nhan-dien/so-sanh-thoi-ky n97 (đường dẫn /opus/nghe-nhac/ còn, trang vẫn là chỉ mục các hướng dẫn nghe); cap-nhat n66, n71, n105 kể thay đổi của site cũ (chia hai bảng nhạc piano và dàn nhạc, "18 tác phẩm"): là nhật ký, đúng với lúc ấy; trang mới không còn chia hai bảng mà có ô lọc. Cụm "kỹ năng quan trọng nhất" của trang cũ bỏ (xếp hạng không kiểm được).'
 nguon: []
@@ -19,9 +19,10 @@ nhan_dinh:
     cau: Nghe chủ động là ngồi yên nghe một tác phẩm, không làm việc khác, mỗi lần với một câu hỏi; nhạc cổ điển bật lên làm nhạc nền thì dễ trôi qua; nghe nhiều lần, mỗi lần một câu hỏi khác, tác phẩm dần mở ra.
     loai: khuyen-tap
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ "Nghe chủ động là kỹ năng quan trọng nhất để hiểu nhạc cổ điển. Nhạc cổ điển thường "khó" với người mới vì nó bị nghe như nhạc nền.": bỏ xếp hạng "quan trọng nhất" và câu nhân quả về người mới (không có nguồn); viết lại thành lời khuyên. description đổi theo (description cũ chép đoạn này).'
+    ghi_chu: 'Chữ cũ "Nghe chủ động là kỹ năng quan trọng nhất để hiểu nhạc cổ điển. Nhạc cổ điển thường "khó" với người mới vì nó bị nghe như nhạc nền.": bỏ xếp hạng "quan trọng nhất" và câu nhân quả về người mới (không có nguồn); viết lại thành lời khuyên. description đổi theo (description cũ chép đoạn này). Review D6-L11-gom: lời khuyên viết lại, không còn "quan trọng nhất"; lượt 2 dung; đã đối chiếu chữ trang và mô tả trang: khớp câu.'
     luot_2: dung
     luot_2_ghi_chu: Lời khuyên nghe chủ động hợp lý.
+    review: dung
   - id: n2
     cau: 'Phương pháp 4 lần nghe, mỗi tác phẩm (hay một chương) cho cả tuần: lần 1 cảm nhận; lần 2 tìm giai điệu chính (ngân nga, phút thứ mấy, nhạc cụ nào); lần 3 theo dõi cấu trúc, vẽ sơ đồ A B A với mốc thời gian; lần 4 nghe một bản thu khác và so sánh.'
     loai: khuyen-tap
@@ -39,42 +40,50 @@ nhan_dinh:
     cau: Sau mỗi lần nghe, ghi vài dòng theo mẫu nhật ký nghe (nghe-nhac/mau).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'nghe-nhac/mau (bản xem): "Một khung ghi chép cho bốn lần nghe theo phương pháp 4 lần nghe", link ngược về /opus/nghe-nhac/#phuong-phap-4-lan-nghe (id còn: tiêu đề "## Phương pháp 4 lần nghe" giữ nguyên).'
+    ghi_chu: 'nghe-nhac/mau (bản xem): "Một khung ghi chép cho bốn lần nghe theo phương pháp 4 lần nghe", link ngược về /opus/nghe-nhac/#phuong-phap-4-lan-nghe (id còn: tiêu đề "## Phương pháp 4 lần nghe" giữ nguyên). Review D6-L11-gom: src/content/docs/nghe-nhac/mau.md có ("Mẫu nhật ký nghe"), có ở src/content/docs/ và bản xem; chưa khóa nên bản thật hiện "sắp có" (hợp lệ); dòng 6 link về /opus/nghe-nhac/#phuong-phap-4-lan-nghe, id còn (tiêu đề "## Phương pháp 4 lần nghe"). Đúng.'
+    review: dung
   - id: n5
     cau: Các hướng dẫn nghe đi từng bước; mỗi trang có công cụ Nghe kèm bản thu, nhiều trang có sẵn một bản thu mở; người học dán được link YouTube của bản thu mình chọn rồi bấm "Ghi mốc" trong bảng; trước khi chọn bản thu nên đọc Đọc tên tác phẩm và bản thu.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'MUC.nghe (tools/them-tac-pham.mjs, tests/tac-pham.test.mjs): mọi hướng dẫn nghe có mục "Nghe kèm bản thu" với ::khoi-nghe và "Theo dõi khi nghe". tac-pham.yml: 15/39 bản ghi hướng dẫn nghe có ban_thu (cộng các trang dùng chung bản ghi bài học, như beethoven-moonlight), nên "nhiều trang". src/scripts/nghe.js: dán link YouTube hay file, nút Ghi mốc. nghe-nhac/doc-ten-tac-pham có ở bản xem (D6-L7).'
+    ghi_chu: 'MUC.nghe (tools/them-tac-pham.mjs, tests/tac-pham.test.mjs): mọi hướng dẫn nghe có mục "Nghe kèm bản thu" với ::khoi-nghe và "Theo dõi khi nghe". tac-pham.yml: 15/39 bản ghi hướng dẫn nghe có ban_thu (cộng các trang dùng chung bản ghi bài học, như beethoven-moonlight), nên "nhiều trang". src/scripts/nghe.js: dán link YouTube hay file, nút Ghi mốc. nghe-nhac/doc-ten-tac-pham có ở bản xem (D6-L7). Review D6-L11-gom: tools/them-tac-pham.mjs MUC.nghe và tests/tac-pham.test.mjs: mọi hướng dẫn nghe có ::khoi-nghe và "Theo dõi khi nghe"; src/scripts/nghe.js dòng 2: dán link YouTube, link file hay chọn file, nút "Ghi mốc"; tac-pham.yml: 15/39 bản ghi nghe có ban_thu ("nhiều trang"); nghe-nhac/doc-ten-tac-pham có ở src/content/docs/ và bản xem; chưa khóa nên bản thật hiện "sắp có" (hợp lệ). Đúng.'
+    review: dung
   - id: n6
     cau: Danh mục dựng từ dữ liệu của site, gồm cả các bài học tác phẩm; bài học nào cũng có bản thu gợi ý và bảng "Theo dõi khi nghe" ngay trong trang.
     loai: ve-site
     ket_qua: da-sua
-    ghi_chu: 'Thay đoạn cũ "Mười sáu hướng dẫn về nhạc piano cũng được gom riêng trong menu, theo thứ tự thời gian từ Scarlatti đến Gershwin. Ba tác phẩm piano trong bảng (…) có bản thu và bản đồ nghe ngay trong bài học tương ứng; các bài học khác cũng vậy.": menu mới (src/nhom.mjs) không gom riêng nhóm nhạc piano; danh mục nay liệt kê thẳng mọi bài học. 34/34 bài học có ban_thu (tac-pham.yml) và mục "Theo dõi khi nghe" (MUC["bai-hoc"]).'
+    ghi_chu: 'Thay đoạn cũ "Mười sáu hướng dẫn về nhạc piano cũng được gom riêng trong menu, theo thứ tự thời gian từ Scarlatti đến Gershwin. Ba tác phẩm piano trong bảng (…) có bản thu và bản đồ nghe ngay trong bài học tương ứng; các bài học khác cũng vậy.": menu mới (src/nhom.mjs) không gom riêng nhóm nhạc piano; danh mục nay liệt kê thẳng mọi bài học. 34/34 bài học có ban_thu (tac-pham.yml) và mục "Theo dõi khi nghe" (MUC["bai-hoc"]). Review D6-L11-gom: tac-pham.yml: 34/34 bản ghi bai-hoc có ban_thu; MUC["bai-hoc"] có "Theo dõi khi nghe"; danh mục không ghi loai nên gồm cả bài học (danhMucTacPham, src/plugins/thanh-phan.mjs). Menu mới (src/nhom.mjs) không gom riêng nhạc piano. Đúng.'
+    review: dung
   - id: n7
     cau: Danh mục lọc được theo loại trang, thời kỳ, chặng (bài học) hay tác giả; mỗi hướng dẫn ghi điều người nghe sẽ luyện nghe.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'danhMucTacPham (src/plugins/thanh-phan.mjs): bốn ô lọc khi không ghi loai; dòng mô tả của mục hướng dẫn nghe là luyen_nghe (39/39 bản ghi nghe có; bài học dùng chung bản ghi với hướng dẫn nghe cũng có). src/scripts/danh-muc.js; tests/danh-muc.test.mjs, tests/trinh-duyet/kiem-danh-muc.mjs.'
+    ghi_chu: 'danhMucTacPham (src/plugins/thanh-phan.mjs): bốn ô lọc khi không ghi loai; dòng mô tả của mục hướng dẫn nghe là luyen_nghe (39/39 bản ghi nghe có; bài học dùng chung bản ghi với hướng dẫn nghe cũng có). src/scripts/danh-muc.js; tests/danh-muc.test.mjs, tests/trinh-duyet/kiem-danh-muc.mjs. Review D6-L11-gom: danhMucTacPham (src/plugins/thanh-phan.mjs), src/scripts/danh-muc.js: không ghi loai thì có bốn ô lọc (loại, chặng, thời kỳ, tác giả); dòng mô tả của hướng dẫn nghe là luyen_nghe (39/39 bản ghi nghe có). Đúng ở bản xem. Lưu ý khi khóa trang: ở trang đã khóa danh mục chỉ đọc trường đã khóa, mà hiện thoi_ky, luyen_nghe chưa khóa ở bản ghi nào (khoa.json chỉ khóa trường đợt 2), nên bản thật sẽ không có ô thời kỳ và dòng luyện nghe. Khóa trang sau khi khóa các trường ấy (xem báo cáo d6-l11-gom.md).'
+    review: dung
   - id: n8
     cau: Với tác phẩm chưa có hướng dẫn, dùng mẫu nhật ký nghe; muốn luyện nhận ra thời kỳ và tác giả thì xem mục Nhận diện; nghe hết thì xem Nghe gì tiếp.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: nghe-nhac/mau, nghe-nhac/nghe-gi-tiep (bản xem, D6-L7); nhan-dien/index (đã khóa, mục nhận diện thời kỳ và phong cách).
+    ghi_chu: 'nghe-nhac/mau, nghe-nhac/nghe-gi-tiep (bản xem, D6-L7); nhan-dien/index (đã khóa, mục nhận diện thời kỳ và phong cách). Review D6-L11-gom: nghe-nhac/mau, nghe-nhac/nghe-gi-tiep có ở src/content/docs/ và bản xem; chưa khóa nên bản thật hiện "sắp có" (hợp lệ); nhan-dien/index ("Nghe để nhận diện") có, đã khóa, bàn cách nhận ra thời kỳ. Đúng.'
+    review: dung
   - id: n9
     cau: Người học piano xem cột "Tai và nghe" của Lộ trình piano năm đầu, mỗi tháng một tác phẩm đi cùng bài đang tập.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'bat-dau/lo-trinh-choi (đã khóa): 12 mục "### Tháng N", mỗi mục một bảng cột "Tai và nghe" gợi ý tác phẩm (tháng 1: Bach Prelude Đô trưởng).'
+    ghi_chu: 'bat-dau/lo-trinh-choi (đã khóa): 12 mục "### Tháng N", mỗi mục một bảng cột "Tai và nghe" gợi ý tác phẩm (tháng 1: Bach Prelude Đô trưởng). Review D6-L11-gom: bat-dau/lo-trinh-choi có, đã khóa: 12 mục "### Tháng N", 12 bảng có cột "Tai và nghe". Đúng.'
+    review: dung
   - id: n10
     cau: Người chỉ muốn nghe theo Lộ trình nghe hiểu và nhạc lý, sáu tháng, mỗi tháng một chủ đề.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'bat-dau/lo-trinh-nghe (đã khóa): "## Tháng 1: Tai làm quen" … "## Tháng 6: Thế kỷ 20 và hôm nay".'
+    ghi_chu: 'bat-dau/lo-trinh-nghe (đã khóa): "## Tháng 1: Tai làm quen" … "## Tháng 6: Thế kỷ 20 và hôm nay". Review D6-L11-gom: bat-dau/lo-trinh-nghe có, đã khóa: "## Tháng 1: Tai làm quen" … "## Tháng 6: Thế kỷ 20 và hôm nay". Đúng.'
+    review: dung
   - id: n11
     cau: Danh sách 30 tác phẩm piano nên nghe, kèm nghệ sĩ gợi ý, ở Nghệ sĩ piano và bản thu.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'piano/nghe-si (đã khóa): mục "## 30 tác phẩm piano nên nghe", 30 mục, mỗi mục "Nghe: <nghệ sĩ>".'
+    ghi_chu: 'piano/nghe-si (đã khóa): mục "## 30 tác phẩm piano nên nghe", 30 mục, mỗi mục "Nghe: <nghệ sĩ>". Review D6-L11-gom: piano/nghe-si có, đã khóa: mục "## 30 tác phẩm piano nên nghe" (dòng 137). Đúng.'
+    review: dung
 khuong_nhac: []
 doi_chu:
   - cu: Nghe chủ động là kỹ năng quan trọng nhất để hiểu nhạc cổ điển. Nhạc cổ điển thường "khó" với người mới vì nó bị nghe như nhạc nền. Khi ngồi yên nghe một tác phẩm nhiều lần, mỗi lần với một câu hỏi khác nhau, nó sẽ dần mở ra.

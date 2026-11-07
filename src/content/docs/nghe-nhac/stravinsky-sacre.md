@@ -1,6 +1,6 @@
 ---
 title: "Stravinsky: Le Sacre du printemps (Nghi lễ mùa xuân)"
-description: "Ballet mô tả nghi lễ của người Slav cổ: để đón mùa xuân, một thiếu nữ được chọn và nhảy múa đến chết làm vật hiến tế. Buổi công diễn năm 1913 gây náo loạn…"
+description: "Ballet mô tả nghi lễ ngoại giáo của nước Nga cổ: để đón mùa xuân, một thiếu nữ được chọn và nhảy múa đến chết làm vật hiến tế. Buổi công diễn năm 1913 gây náo loạn…"
 tac_pham: stravinsky-sacre
 ---
 
@@ -15,7 +15,7 @@ tac_pham: stravinsky-sacre
 
 ## Điều cần biết trước khi nghe
 
-Ballet mô tả nghi lễ của người Slav cổ: để đón mùa xuân, một thiếu nữ được chọn và nhảy múa đến chết làm vật hiến tế. Buổi công diễn năm 1913 gây náo loạn trong khán phòng, một phần vì âm nhạc, một phần vì vũ đạo "thô ráp" của Nijinsky. Ngày nay, đây được coi là một trong những tác phẩm có ảnh hưởng lớn nhất tới âm nhạc thế kỷ 20.
+Ballet mô tả nghi lễ ngoại giáo của nước Nga cổ: để đón mùa xuân, một thiếu nữ được chọn và nhảy múa đến chết làm vật hiến tế. Buổi công diễn năm 1913 gây náo loạn trong khán phòng, một phần vì âm nhạc, một phần vì vũ đạo "thô ráp" của Nijinsky. Ngày nay, đây được coi là một trong những tác phẩm có ảnh hưởng lớn nhất tới âm nhạc thế kỷ 20.
 
 Những gì mới mẻ: **tiết tấu** trở thành nhân vật chính; **trọng âm bất thường** không theo phách mạnh; **nghịch tai** được dùng như màu sắc chứ không cần giải quyết; có đoạn số chỉ nhịp đổi gần như mỗi ô, như Vũ điệu hiến tế ở cuối tác phẩm (xem [bài 15](/opus/nhac-ly/15-tiet-tau-nang-cao/)).
 

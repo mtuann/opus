@@ -9,8 +9,8 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: Claude Opus 5.5 (chủ lô D6-L11)
-      luot_2: null
-      review: null
+      luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L11, 06/11/2026, ba phần)
+      review: Claude Opus 5.5 (review D6-L11-gom)
       kiem_mau: null
 ghi_chu: 'Trang lối vào nhóm Tác phẩm (tầng khung). Bảng 34 tác phẩm viết tay của trang cũ thay bằng danh mục sinh từ src/data/tac-pham.yml (::danh-muc-tac-pham{loai="bai-hoc"}, D6-L11): chặng, Grade, thời kỳ, kỹ năng chính là trường dữ liệu đã kiểm định ở hồ sơ bản ghi (đợt 2 và các lô D6), không lập nhận định lại ở đây; trang đã khóa chỉ hiện trường đã khóa. Con số "34" bỏ khỏi chữ (danh mục tự đếm). Chữ viết tay còn lại: mô tả cấu trúc bài học (ve-site, đối chiếu MUC của tools/them-tac-pham.mjs và các trang bài học), cách dùng (khuyen-tap; bước 5 có vế sức khỏe nên xếp quy-tac, nguồn BAPAM), chuỗi bài theo mục tiêu (thứ tự đối chiếu chặng trong dữ liệu), nguồn. Không có khối abc. Câu ve-site ở hồ sơ khác trỏ tới trang: tai-lieu-tham-khao t32 (đường dẫn còn), blog/posts/2026-10-21-trong-tam-piano n15 (bài học "chia theo chặng": danh mục xếp và lọc theo chặng). Thuật ngữ trang dùng (legato, rubato, cantabile, fioritura…) đã có hay không cần bản ghi mới.'
 nguon:
@@ -43,37 +43,44 @@ nhan_dinh:
     cau: Các bài học tác phẩm đi từ Minuet Fa trưởng K. 2 của Mozart đến Ballade số 1 của Chopin (cả ở description).
     loai: ve-site
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ "Ba mươi tư tác phẩm, từ…": bỏ con số (danh mục tự đếm, tác phẩm thêm sau đợt 6 không làm chữ sai). Kiểm src/data/tac-pham.yml: mozart-minuet-k2 chặng 2 (chặng thấp nhất có bài học), chopin-ballade-1 chặng 7, "Sau Grade 8" (cao nhất).'
+    ghi_chu: 'Chữ cũ "Ba mươi tư tác phẩm, từ…": bỏ con số (danh mục tự đếm, tác phẩm thêm sau đợt 6 không làm chữ sai). Kiểm src/data/tac-pham.yml: mozart-minuet-k2 chặng 2 (chặng thấp nhất có bài học), chopin-ballade-1 chặng 7, "Sau Grade 8" (cao nhất). Review D6-L11-gom: tac-pham.yml (chang, grade đã khóa): mozart-minuet-k2 chặng 2, Grade 1–2 (mức thấp nhất của các bài học, cùng minuet-sol); chopin-ballade-1 chặng 7, "Sau Grade 8" (cao nhất). Câu nói phạm vi, không nói thứ tự xếp. Trang và mô tả trang khớp. Đúng.'
+    review: dung
   - id: n2
     cau: Mỗi bài học hướng dẫn nghe gì, bài được xây dựng thế nào, chỗ nào khó và tập ra sao, tuần này làm gì; trang này nói mỗi bài học làm gì, dùng thế nào, chọn bài theo mục tiêu.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Các mục bắt buộc của bài học (MUC["bai-hoc"] trong tools/them-tac-pham.mjs, tests/tac-pham.test.mjs kiểm mọi bài học): Nghe trước khi tập, Cấu trúc, Chỗ khó và cách tập, Kế hoạch tập. Ba mục của trang này có thật.'
+    ghi_chu: 'Các mục bắt buộc của bài học (MUC["bai-hoc"] trong tools/them-tac-pham.mjs, tests/tac-pham.test.mjs kiểm mọi bài học): Nghe trước khi tập, Cấu trúc, Chỗ khó và cách tập, Kế hoạch tập. Ba mục của trang này có thật. Review D6-L11-gom: MUC["bai-hoc"] (tools/them-tac-pham.mjs): Nghe trước khi tập, Cấu trúc, Chỗ khó và cách tập, Kế hoạch tập; trang có ba mục Mỗi bài học có gì, Cách dùng một bài học, Chọn bài theo mục tiêu. Đúng.'
+    review: dung
   - id: n3
     cau: Mọi bài học có ở mục Danh mục bài học bên dưới; danh mục đầy đủ xếp theo 7 chặng, gồm cả nhiều bài chưa có bài học, ở Tác phẩm theo cấp độ; chặng của mỗi bài học ở đó và ở đây là một.
     loai: ve-site
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ "đó cũng là nơi quyết định một bài thuộc chặng nào": nay chặng ghi ở dữ liệu (tac-pham.yml, khóa ở D2-0); tests/tac-pham-theo-cap.test.mjs bắt chặng trên trang ấy khớp dữ liệu, và danh mục ở đây dựng từ cùng dữ liệu (tests/danh-muc.test.mjs). Trang tac-pham-theo-cap có 7 mục "## Chặng N" và nhiều dòng không link (bài chưa có bài học).'
+    ghi_chu: 'Chữ cũ "đó cũng là nơi quyết định một bài thuộc chặng nào": nay chặng ghi ở dữ liệu (tac-pham.yml, khóa ở D2-0); tests/tac-pham-theo-cap.test.mjs bắt chặng trên trang ấy khớp dữ liệu, và danh mục ở đây dựng từ cùng dữ liệu (tests/danh-muc.test.mjs). Trang tac-pham-theo-cap có 7 mục "## Chặng N" và nhiều dòng không link (bài chưa có bài học). Review D6-L11-gom: Danh mục bài học (#danh-muc-bai-hoc) dựng từ tac-pham.yml; piano/tac-pham-theo-cap có, đã khóa, 7 mục "## Chặng N", nhiều dòng không link; tests/tac-pham-theo-cap.test.mjs bắt chặng trên trang ấy khớp dữ liệu. Đúng.'
+    review: dung
   - id: n4
     cau: Thẻ tóm tắt ở đầu bài học có giọng, nhịp, cấp độ; nút "Tôi đang tập bài này" để bài vào kế hoạch hôm nay; bảng thông tin (tác giả, số tác phẩm, hình thức, ấn bản nên dùng) thu gọn.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'hopTacPham (src/plugins/thanh-phan.mjs): chip (giọng · nhịp, cấp độ…), <details> "Thông tin tác phẩm và bản nhạc nên dùng" (dòng Nhà soạn nhạc, Tác phẩm, Hình thức, Bản nhạc: DONG_THONG_TIN của tools/them-tac-pham.mjs), hàng nút .oz-piece-actions (tap-bai.js, D6-L1); kế hoạch tập (ke-hoach.js) đọc store.repertoire.'
+    ghi_chu: 'hopTacPham (src/plugins/thanh-phan.mjs): chip (giọng · nhịp, cấp độ…), <details> "Thông tin tác phẩm và bản nhạc nên dùng" (dòng Nhà soạn nhạc, Tác phẩm, Hình thức, Bản nhạc: DONG_THONG_TIN của tools/them-tac-pham.mjs), hàng nút .oz-piece-actions (tap-bai.js, D6-L1); kế hoạch tập (ke-hoach.js) đọc store.repertoire. Review D6-L11-gom: hopTacPham (src/plugins/thanh-phan.mjs dòng 201: chip giọng · nhịp, tốc độ, cấp độ, hình thức), <details> "Thông tin tác phẩm và bản nhạc nên dùng", hàng nút .oz-piece-actions (tap-bai.js) có "Tôi đang tập bài này"; ke-hoach.js đọc store.repertoire. Đúng.'
+    review: dung
   - id: n5
     cau: Mỗi bài học có các mục Vì sao nên học bài này, Bối cảnh, Nghe trước khi tập (link tới hướng dẫn nghe nếu có), Cấu trúc (sơ đồ hình thức và bảng các đoạn), Chỗ khó và cách tập, Kế hoạch tập (theo tuần, kèm tốc độ máy đếm nhịp), Diễn tấu, Lỗi thường gặp, Học tiếp, Kiểm tra nhanh, như bảng "Mỗi bài học có gì".
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'MUC["bai-hoc"] (tools/them-tac-pham.mjs), tests/tac-pham.test.mjs kiểm đủ mục, đúng thứ tự cho mọi bài học trong src/content/docs/piano/tac-pham/; ::hinh-cau-truc đầu mục Cấu trúc; ::hoc-tiep cuối Học tiếp; câu hỏi ```quiz ở Kiểm tra nhanh.'
+    ghi_chu: 'MUC["bai-hoc"] (tools/them-tac-pham.mjs), tests/tac-pham.test.mjs kiểm đủ mục, đúng thứ tự cho mọi bài học trong src/content/docs/piano/tac-pham/; ::hinh-cau-truc đầu mục Cấu trúc; ::hoc-tiep cuối Học tiếp; câu hỏi ```quiz ở Kiểm tra nhanh. Review D6-L11-gom: MUC["bai-hoc"] (tools/them-tac-pham.mjs dòng 33) có đủ các mục câu kể, theo thứ tự, và tests/tac-pham.test.mjs kiểm mọi bài học. Đúng.'
+    review: dung
   - id: n6
     cau: Mục Theo dõi khi nghe có bản thu gợi ý (mỗi bài học gợi ý một bản thu giấy phép mở, phần lớn phát được ngay trên trang), hay dán link YouTube, link file âm thanh, chọn file trên máy; bấm ghi mốc; lần sau nghe lại, dòng đang vang được tô sáng.
     loai: ve-site
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ "(cả 34 bài đều có một bản thu giấy phép mở)": bỏ con số; 34/34 bản ghi bài học có ban_thu với giấy phép phạm vi công cộng, CC0, CC BY, CC BY-SA; 33 phát được (mp3 trên site), bach-invention-1 chỉ có link (nên "phần lớn"). src/scripts/nghe.js: ô dán link YouTube hay file .mp3/.ogg, input type=file, "Ghi mốc", activeRow tô sáng dòng theo mốc.'
+    ghi_chu: 'Chữ cũ "(cả 34 bài đều có một bản thu giấy phép mở)": bỏ con số; 34/34 bản ghi bài học có ban_thu với giấy phép phạm vi công cộng, CC0, CC BY, CC BY-SA; 33 phát được (mp3 trên site), bach-invention-1 chỉ có link (nên "phần lớn"). src/scripts/nghe.js: ô dán link YouTube hay file .mp3/.ogg, input type=file, "Ghi mốc", activeRow tô sáng dòng theo mốc. Review D6-L11-gom: tac-pham.yml: 34/34 bản ghi bai-hoc có ban_thu, giấy phép phạm vi công cộng, CC0, CC BY, CC BY-SA; 33 có mp3, bach-invention-1 chỉ có file .ogg trên Commons ("phần lớn"). src/scripts/nghe.js: ô dán link (YouTube, file âm thanh), input type="file", nút Ghi mốc, activeRow tô dòng đang vang. Đúng.'
+    review: dung
   - id: n7
-    cau: Mục Bài tập chuẩn bị có hai, ba bài tập ngắn soạn riêng, viết trên khuông hai tay có số ngón, bấm nghe được.
+    cau: Mục Bài tập chuẩn bị có hai, ba bài tập ngắn soạn riêng trên khuông nhạc, phần lớn cho hai tay và có số ngón, bấm nghe được.
     loai: ve-site
-    ket_qua: dung
-    ghi_chu: 'Đếm khối ```abc trong mục "## Bài tập chuẩn bị" của 34 bài học: 30 bài có 3, 4 bài có 2. Khuông abc có trình phát (abc.js).'
+    ket_qua: da-sua
+    ghi_chu: 'Đếm khối ```abc trong mục "## Bài tập chuẩn bị" của 34 bài học: 30 bài có 3, 4 bài có 2. Khuông abc có trình phát (abc.js). Review D6-L11-gom: câu cũ sai một phần. Đếm 98 khối abc trong mục "## Bài tập chuẩn bị" của 34 bài học: 30 bài có 3 khối, 4 bài có 2 (đúng); nhưng 8 khối chỉ một khuông (một tay: bach-invention-1, bach-prelude-bwv939, bach-prelude-do, chopin-nocturne-op9-2, chopin-valse-la-thu, chopin-valse-si-thu, fur-elise, satie-gymnopedie) và 2 khối không ghi số ngón (burgmuller-arabesque khối 2, fur-elise khối 3). Sửa trang: "Hai, ba bài tập ngắn soạn riêng trên khuông nhạc, phần lớn cho hai tay và có số ngón, bấm nghe được" (doi_chu). Câu mới đúng. Chữ câu trước review: "Mục Bài tập chuẩn bị có hai, ba bài tập ngắn soạn riêng, viết trên khuông hai tay có số ngón, bấm nghe được."'
+    review: sai
   - id: n8
     cau: 'Cách dùng một bài học, bước 1–4 và 6: nghe hai, ba bản thu trước khi mở bản nhạc; đánh dấu các đoạn bằng bút chì, đoạn lặp lại chỉ học một lần; tập chỗ khó từ tuần đầu; tập bài tập chuẩn bị trước hay song song; khi nốt đã chắc thì đọc phần diễn tấu, thu âm, so với các bản thu đã nghe.'
     loai: khuyen-tap
@@ -94,22 +101,26 @@ nhan_dinh:
     cau: Quy trình chung để học một bài mới ở trang Cách tập một bản nhạc; ghi tiến độ ở nhật ký luyện tập.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: piano/cach-tap (đã khóa, tiêu đề "Cách tập hiệu quả", bàn quy trình học bài mới), luyen-tap/nhat-ky (đã khóa, công cụ nhật ký).
+    ghi_chu: 'piano/cach-tap (đã khóa, tiêu đề "Cách tập hiệu quả", bàn quy trình học bài mới), luyen-tap/nhat-ky (đã khóa, công cụ nhật ký). Review D6-L11-gom: piano/cach-tap có, đã khóa (tiêu đề "Cách tập piano hiệu quả"), mục "## Học một bài mới: 12 bước"; luyen-tap/nhat-ky có, đã khóa. Đúng.'
+    review: dung
   - id: n11
     cau: Cấp là ước lượng theo thang ABRSM; "chặng" là chặng tương ứng trong lộ trình piano; cách đọc cấp và thang Henle ở mục Cách đọc danh mục của Tác phẩm theo cấp độ.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'piano/tac-pham-theo-cap (đã khóa), mục "## Cách đọc danh mục" (id cach-oc-danh-muc): "Cấp chỉ là ước lượng… Site dùng cấp của ABRSM làm thước đo chung", "Thang Henle 1–9". Danh mục ghi "≈ Grade" (ganDung).'
+    ghi_chu: 'piano/tac-pham-theo-cap (đã khóa), mục "## Cách đọc danh mục" (id cach-oc-danh-muc): "Cấp chỉ là ước lượng… Site dùng cấp của ABRSM làm thước đo chung", "Thang Henle 1–9". Danh mục ghi "≈ Grade" (ganDung). Review D6-L11-gom: piano/tac-pham-theo-cap có, đã khóa; mục "## Cách đọc danh mục" (id cach-oc-danh-muc): "Cấp chỉ là ước lượng… Site dùng cấp của ABRSM", "Thang Henle 1–9". Đúng.'
+    review: dung
   - id: n12
     cau: Bài nằm giữa hai cấp được xếp vào chặng của kỹ năng chính mà bài dạy.
     loai: ve-site
     ket_qua: da-bo
-    ghi_chu: 'Câu nói cách site chọn chặng, nhưng không có chỗ nào của site ghi quy tắc này để đối chiếu, và chặng là trường dữ liệu đã khóa (D2-0) theo đề cương thi và Henle. Bỏ.'
+    ghi_chu: 'Câu nói cách site chọn chặng, nhưng không có chỗ nào của site ghi quy tắc này để đối chiếu, và chặng là trường dữ liệu đã khóa (D2-0) theo đề cương thi và Henle. Bỏ. Review D6-L11-gom: không có chỗ nào của site ghi quy tắc này, chặng là trường dữ liệu theo đề cương thi và Henle; giữ bỏ. Trang không còn câu "Bài nằm giữa hai cấp".'
+    review: sai
   - id: n13
     cau: Danh mục dựng từ dữ liệu của site, lọc theo chặng, thời kỳ hay tác giả; mỗi bài ghi kỹ năng chính mà bài dạy.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: danhMucTacPham (src/plugins/thanh-phan.mjs), src/scripts/danh-muc.js; ô lọc chặng, thời kỳ, tác giả (loai="bai-hoc" nên không có ô loại); dòng kỹ năng là ky_nang_chinh. tests/danh-muc.test.mjs, tests/trinh-duyet/kiem-danh-muc.mjs.
+    ghi_chu: 'danhMucTacPham (src/plugins/thanh-phan.mjs), src/scripts/danh-muc.js; ô lọc chặng, thời kỳ, tác giả (loai="bai-hoc" nên không có ô loại); dòng kỹ năng là ky_nang_chinh. tests/danh-muc.test.mjs, tests/trinh-duyet/kiem-danh-muc.mjs. Review D6-L11-gom: danhMucTacPham với loai="bai-hoc": ô lọc chặng, thời kỳ, tác giả (không có ô loại); dòng kỹ năng là ky_nang_chinh. Đúng ở bản xem. Lưu ý khi khóa trang: thoi_ky, ky_nang_chinh chưa khóa ở bản ghi nào, nên bản thật sẽ không có ô thời kỳ và dòng kỹ năng; khóa trang sau khi khóa các trường ấy (xem báo cáo d6-l11-gom.md).'
+    review: dung
   - id: n14
     cau: Mỗi bài dạy nhiều thứ, nhưng có một hai kỹ năng nó dạy tốt nhất; người học biết mình yếu ở đâu thì đi theo các chuỗi bài theo mục tiêu.
     loai: khuyen-tap
@@ -120,12 +131,14 @@ nhan_dinh:
     cau: 'Các chuỗi bài theo mục tiêu đi từ dễ đến khó: Legato và tiếng hát; Ngón đều và nhanh; Phức điệu; Bàn đạp; Rubato; Hình thức sonata; Nghe hòa âm; Chuyền tay và bước nhảy; Nhiều lớp âm thanh.'
     loai: ve-site
     ket_qua: da-sua
-    ghi_chu: 'Đối chiếu chặng trong tac-pham.yml (khóa ở D2-0): ba chuỗi trang cũ đi ngược chặng sau khi dữ liệu xếp lại chặng. Bàn đạp: Valse La thứ (chặng 5) đứng trước Prélude La trưởng, Gymnopédie (chặng 4): đưa Valse La thứ sau Gymnopédie. Rubato: Valse La thứ (5) trước Prélude Mi thứ (4): đổi chỗ. Nhiều lớp âm thanh: Impromptu Sol♭ (7) trước Clair de lune (6): đổi chỗ. Các chuỗi khác không giảm chặng. Mỗi bài trong chuỗi có kỹ năng ấy trong ky_nang_chinh hay trong bài học (chỉ là gợi ý chọn bài).'
+    ghi_chu: 'Đối chiếu chặng trong tac-pham.yml (khóa ở D2-0): ba chuỗi trang cũ đi ngược chặng sau khi dữ liệu xếp lại chặng. Bàn đạp: Valse La thứ (chặng 5) đứng trước Prélude La trưởng, Gymnopédie (chặng 4): đưa Valse La thứ sau Gymnopédie. Rubato: Valse La thứ (5) trước Prélude Mi thứ (4): đổi chỗ. Nhiều lớp âm thanh: Impromptu Sol♭ (7) trước Clair de lune (6): đổi chỗ. Các chuỗi khác không giảm chặng. Mỗi bài trong chuỗi có kỹ năng ấy trong ky_nang_chinh hay trong bài học (chỉ là gợi ý chọn bài). Review D6-L11-gom: đối chiếu chang (đã khóa) của từng bài trong chín chuỗi: không chuỗi nào giảm chặng (Legato 3,4,4,5,5,6,6,7; Ngón đều 2,3,3,4,5,6,7,7; Phức điệu 2,2,4,6; Bàn đạp 4,4,5,5,5,6,7; Rubato 4,5,6,6,7; Sonata 3,3,4,5; Hòa âm 3,4,4,6; Chuyền tay 4,4,6,6,7; Nhiều lớp 3,4,5,5,6,6,7,7). Đúng.'
+    review: dung
   - id: n16
     cau: 'Chuỗi phức điệu kết bằng các Sinfonia và fugue khác trong danh mục Tác phẩm theo cấp độ; chuỗi đa tiết tấu bắt đầu bằng bài 9 và 10 ở trang Phối hợp hai tay.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'piano/tac-pham-theo-cap (đã khóa) chặng 6: "Bach: Sinfonia (Invention ba bè) BWV 787–801; Prelude và fugue Đô thứ BWV 847"; chặng 7: Bình quân luật. piano/hai-tay (đã khóa), mục "## Ba chọi bốn": "Bài 9. Ba chọi bốn trên lưới 12", "Bài 10. Ba chọi bốn viết bằng liên ba".'
+    ghi_chu: 'piano/tac-pham-theo-cap (đã khóa) chặng 6: "Bach: Sinfonia (Invention ba bè) BWV 787–801; Prelude và fugue Đô thứ BWV 847"; chặng 7: Bình quân luật. piano/hai-tay (đã khóa), mục "## Ba chọi bốn": "Bài 9. Ba chọi bốn trên lưới 12", "Bài 10. Ba chọi bốn viết bằng liên ba". Review D6-L11-gom: piano/tac-pham-theo-cap (đã khóa) chặng 6 dòng 184: Sinfonia BWV 787–801, BWV 847; piano/hai-tay (đã khóa) mục "## Ba chọi bốn": "Bài 9…", "Bài 10…". Đúng.'
+    review: dung
   - id: n17
     cau: Fantaisie-Impromptu luyện ba chọi bốn.
     loai: cau-truc
@@ -139,7 +152,8 @@ nhan_dinh:
     cau: 'Chương trình nhỏ ba bài của ba thời kỳ ở tầm gần nhau: Musette Rê trưởng, Minuet K. 2, Bài ca Pháp cổ; BWV 939, Sonatina Clementi, Arabesque; Prelude Đô trưởng, Für Elise, Prélude Mi thứ; Invention số 1, K. 545 chương 1, Träumerei; BWV 847, Impromptu Sol♭ trưởng, Clair de lune.'
     loai: ve-site
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ "ở cùng tầm". Theo tac-pham.yml: ba bộ đầu cùng chặng (2; 3; 4); bộ 4 chặng 4, 5, 5 (Grade 4–5, 6, 6); bộ 5 chặng 6, 7, 6. Nên "tầm gần nhau". Thời kỳ (thoi_ky): mỗi bộ ba thời kỳ khác nhau (Baroque, Cổ điển, Lãng mạn; bộ cuối Baroque, Lãng mạn, Cuối thế kỷ 19).'
+    ghi_chu: 'Chữ cũ "ở cùng tầm". Theo tac-pham.yml: ba bộ đầu cùng chặng (2; 3; 4); bộ 4 chặng 4, 5, 5 (Grade 4–5, 6, 6); bộ 5 chặng 6, 7, 6. Nên "tầm gần nhau". Thời kỳ (thoi_ky): mỗi bộ ba thời kỳ khác nhau (Baroque, Cổ điển, Lãng mạn; bộ cuối Baroque, Lãng mạn, Cuối thế kỷ 19). Review D6-L11-gom: tac-pham.yml: chặng (đã khóa) 2,2,2; 3,3,3; 4,4,4; 4,5,5; 6,7,6: "tầm gần nhau" đúng. thoi_ky (chưa khóa, kiểm ở hồ sơ bản ghi của các lô D6): mỗi bộ ba thời kỳ khác nhau. Đúng.'
+    review: dung
   - id: n19
     cau: Ghép ba bài như vậy để có một chương trình nhỏ biểu diễn; xem thêm Học thuộc và biểu diễn.
     loai: khuyen-tap
@@ -151,7 +165,8 @@ nhan_dinh:
     cau: 'Một số bài học có thêm hướng dẫn nghe cho cả tác phẩm (dòng "Cùng tác phẩm" trong danh mục): Kinderszenen (cho Träumerei), Ánh trăng, Pathétique, Impromptu Sol♭ trưởng, Liebestraum số 3; các bài học khác có bản thu gợi ý và bảng "Theo dõi khi nghe" ngay trong trang; các hướng dẫn khác ở Nghe nhạc.'
     loai: ve-site
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ "Năm bài học…", "đã có sẵn bản thu". Năm bản ghi bài học có cap (tac-pham.yml): schumann-traumerei → nghe-nhac/schumann-kinderszenen, beethoven-anh-trang → beethoven-moonlight, pathetique-adagio → beethoven-pathetique, schubert-impromptu-sol-giang → schubert-impromptu, liszt-liebestraum → liszt-liebestraum. Bỏ con số để tác phẩm thêm sau không làm chữ sai; "có sẵn" thành "có … gợi ý" vì bản thu của Invention số 1 chỉ là link.'
+    ghi_chu: 'Chữ cũ "Năm bài học…", "đã có sẵn bản thu". Năm bản ghi bài học có cap (tac-pham.yml): schumann-traumerei → nghe-nhac/schumann-kinderszenen, beethoven-anh-trang → beethoven-moonlight, pathetique-adagio → beethoven-pathetique, schubert-impromptu-sol-giang → schubert-impromptu, liszt-liebestraum → liszt-liebestraum. Bỏ con số để tác phẩm thêm sau không làm chữ sai; "có sẵn" thành "có … gợi ý" vì bản thu của Invention số 1 chỉ là link. Review D6-L11-gom: tac-pham.yml: năm bản ghi bai-hoc có cap (schumann-traumerei, beethoven-anh-trang, pathetique-adagio, schubert-impromptu-sol-giang, liszt-liebestraum), năm trang nghe-nhac/ tương ứng có ở src/content/docs/ và bản xem; chưa khóa nên bản thật hiện "sắp có" (hợp lệ); dòng "Cùng tác phẩm" do mucDanhMuc dựng. Đúng.'
+    review: dung
   - id: n21
     cau: Ấn bản Urtext của G. Henle Verlag kèm mức độ khó 1–9 cho từng tác phẩm.
     loai: so-lieu
@@ -173,10 +188,11 @@ nhan_dinh:
     cau: Jane Magrath, The Pianist's Guide to Standard Teaching and Performance Literature (Alfred, 1995).
     loai: ten
     ket_qua: da-bo
-    ghi_chu: Sách in, không đọc được nội dung; site không dẫn nó cho điều nào. Bỏ khỏi mục Nguồn như các lô D6 khác (bỏ nguồn chưa đọc).
+    ghi_chu: 'Sách in, không đọc được nội dung; site không dẫn nó cho điều nào. Bỏ khỏi mục Nguồn như các lô D6 khác (bỏ nguồn chưa đọc). Review D6-L11-gom: giữ bỏ. Sách có thật (lượt 2), nhưng không đọc và site không dẫn nó cho điều nào; trang không còn "Magrath".'
     luot_2: dung
     luot_2_nguon: [ "https://archive.org/details/pianistsguidetos0000magr" ]
     luot_2_ghi_chu: "Internet Archive: 'The pianist's guide to standard teaching and performance literature', Van Nuys, CA: Alfred Publishing, 1995 (Jane Magrath)."
+    review: dung
 khuong_nhac: []
 doi_chu:
   - cu: 'Ba mươi tư tác phẩm, từ Minuet Fa trưởng K. 2 của Mozart đến Ballade số 1 của Chopin, được hướng dẫn tỉ mỉ như trong một buổi học với thầy: nghe gì, bài được xây dựng thế nào, chỗ nào khó và tập ra sao, tuần này làm gì. Trang này là nơi bắt đầu một bài học: mỗi bài học làm gì, dùng thế nào, chọn bài theo mục tiêu. Danh mục đầy đủ xếp theo 7 chặng, gồm cả rất nhiều bài chưa có bài học, nằm ở Tác phẩm theo cấp độ; đó cũng là nơi quyết định một bài thuộc chặng nào.'
@@ -356,3 +372,6 @@ doi_chu:
   - cu: 'id: 34-tac-pham-theo-cap-o'
     moi: 'id: danh-muc-bai-hoc'
     ly_do: 'Id mới theo tiêu đề mới, đặt cố định {#danh-muc-bai-hoc}; grep site, dữ liệu, hồ sơ và site cũ: không có link tới #34-tac-pham-theo-cap-o.'
+  - cu: Hai, ba bài tập ngắn soạn riêng, viết trên khuông hai tay có số ngón, bấm nghe được
+    moi: Hai, ba bài tập ngắn soạn riêng trên khuông nhạc, phần lớn cho hai tay và có số ngón, bấm nghe được
+    ly_do: 'n7 (review D6-L11-gom): trong 98 khối abc của mục Bài tập chuẩn bị ở 34 bài học, 90 khối có hai khuông, 8 khối một khuông (một tay), 2 khối không ghi số ngón.'

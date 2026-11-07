@@ -19,7 +19,7 @@ tac_pham: grieg-buoi-sang
 
 **Edvard Grieg** (1843–1907) là nhà soạn nhạc nổi tiếng nhất của Na Uy, cùng thời với Tchaikovsky và Brahms. Ông viết *Peer Gynt* theo lời mời của nhà viết kịch Henrik Ibsen: Ibsen cần nhạc cho vở kịch thơ cùng tên, Grieg sáng tác trong hai năm 1874–1875, và vở diễn ra mắt năm 1876. Sau đó Grieg chọn một số đoạn, soạn thành hai tổ khúc hòa nhạc (Op. 46 và Op. 55) — "Buổi sáng" là bản mở đầu tổ khúc thứ nhất. (Xem [chân dung Grieg](/opus/lich-su/nha-soan-nhac/#edvard-grieg-18431907).)
 
-*Peer Gynt* kể chuyện một chàng trai Na Uy phiêu lưu khắp thế giới, từ quê nhà đến tận Bắc Phi. "Buổi sáng" là khúc dạo đầu của màn 4, và màn này **không diễn ra ở Na Uy** — mà ở Ma-rốc và sa mạc Sahara. Ở đầu màn, Peer bị bạn đồng hành cướp mất du thuyền, bỏ lại một mình trên bờ biển; rạng sáng hôm sau anh phải ngồi trên cây, cầm cành gãy đuổi lũ khỉ! Ghi chú trong tổng phổ cho biết Grieg viết bản nhạc này lúc đầu để mở cảnh "Sáng sớm" của màn 4: một vùng núi đá nhìn ra sa mạc.
+*Peer Gynt* kể chuyện một chàng trai Na Uy phiêu lưu khắp thế giới, từ quê nhà đến tận Bắc Phi. "Buổi sáng" là khúc dạo đầu của màn 4, và màn này **không diễn ra ở Na Uy** — mà ở Bắc Phi: bờ biển Ma-rốc, sa mạc Sahara, rồi Ai Cập. Ở đầu màn, Peer bị bạn đồng hành cướp mất du thuyền, bỏ lại một mình trên bờ biển; rạng sáng hôm sau anh phải ngồi trên cây, cầm cành gãy đuổi lũ khỉ! Một ghi chú dán trong bản tổng phổ dùng cho màn 4 cho biết Grieg viết bản nhạc này lúc đầu để mở cảnh "Sáng sớm" của màn 4: một vùng núi đá nhìn ra sa mạc.
 
 Câu giai điệu mở đầu chỉ dùng các nốt của **gam ngũ cung** (5 nốt, xem [bài 16](/opus/nhac-ly/16-dieu-thuc-ngu-cung/)), và Grieg ghi tốc độ *Allegretto pastorale*: hơi nhanh, kiểu đồng quê.
 
