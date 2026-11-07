@@ -1511,6 +1511,87 @@ html.oz-stand-open .main-pane {
 .sl-markdown-content .oz-fig-grid > * {
 	margin-top: 0;
 }
+/* sáu thẻ đường nét của âm ngoài hợp âm (hình tĩnh am-ngoai, đợt hình 2): hai cột ở màn hẹp, tối đa ba cột */
+.oz-fig-grid.oz-nct {
+	grid-template-columns: repeat(auto-fill, minmax(max(9rem, calc((100% - 1.2rem) / 3)), 1fr));
+}
+.oz-nct-the {
+	display: flex;
+	flex-direction: column;
+	padding: 0.4rem 0.5rem;
+	border: 1px solid var(--sl-color-hairline);
+	border-radius: 0.4rem;
+	break-inside: avoid;
+}
+.sl-markdown-content .oz-nct-the > * {
+	margin: 0;
+}
+/* trang tổng phổ giản lược (hình tĩnh tong-pho, đợt hình 2): hẹp hơn oz-fig-mid, chữ gần cỡ chữ nhỏ của trang */
+.sl-markdown-content .oz-figure > svg.oz-tong-pho {
+	max-width: 26rem;
+}
+/* tám mẫu galant, bậc khoanh tròn (hình tĩnh galant, đợt hình 2): giai điệu trên, bass dưới, cùng cột là cùng bước */
+.oz-galant-the {
+	padding: 0.45rem 0.6rem 0.55rem;
+	border: 1px solid var(--sl-color-hairline);
+	border-radius: 0.4rem;
+	break-inside: avoid;
+}
+.sl-markdown-content .oz-galant-the > * {
+	margin: 0;
+}
+.oz-galant-hang {
+	display: flex;
+	align-items: center;
+	gap: 0.3rem;
+	margin-top: 0.3rem;
+}
+.oz-galant-nhan {
+	flex: 0 0 4.3rem;
+	font-size: var(--sl-text-xs);
+	color: var(--sl-color-gray-2);
+}
+.oz-galant-bac {
+	display: inline-flex;
+	flex: 0 0 auto;
+	align-items: center;
+	justify-content: center;
+	width: 1.9rem;
+	height: 1.9rem;
+	border: 2px solid var(--oz-h-xanh);
+	border-radius: 50%;
+	font-size: var(--sl-text-sm);
+	font-weight: 600;
+	line-height: 1;
+	white-space: nowrap;
+}
+.oz-galant-bass .oz-galant-bac {
+	border-color: var(--oz-h-vang);
+}
+.oz-galant-cach {
+	flex: 0 0 1rem;
+	text-align: center;
+	color: var(--sl-color-gray-3);
+}
+.oz-galant-giu {
+	display: flex;
+	flex: 0 0 auto;
+	align-items: center;
+	gap: 0.4rem;
+	min-width: calc(var(--n) * 1.9rem + (var(--n) - 1) * 0.3rem);
+	padding-right: 0.7rem;
+	border-radius: 1rem;
+	background: color-mix(in srgb, var(--oz-h-vang) 22%, transparent);
+}
+.oz-galant-giu small {
+	font-size: var(--sl-text-xs);
+	white-space: nowrap;
+}
+.oz-nct-the small {
+	font-size: var(--sl-text-xs);
+	line-height: 1.35;
+	color: var(--sl-color-gray-2);
+}
 .sl-markdown-content .oz-figure > svg.oz-fig-mid {
 	max-width: 32rem;
 }

@@ -39,6 +39,10 @@ export const KHOI = {
 	'bảy điệu thức': 'class="oz-fig oz-dieu-thuc"',
 	'hình tĩnh SVG': '<figure class="oz-figure not-content" data-sinh><svg',
 	'hình tĩnh lưới': '<figure class="oz-figure not-content" data-sinh><div class="oz-fig-grid',
+	// đợt hình 2 (mo/hinh-dot-2c): hai hình tĩnh vẽ lại bảng của trang
+	'thẻ âm ngoài hợp âm': 'class="oz-fig-grid oz-nct"',
+	'tổng phổ giản lược': 'class="oz-fig oz-fig-mid oz-tong-pho"',
+	'thẻ mẫu galant': 'class="oz-fig-grid oz-galant"',
 	'công cụ âm học': 'oz-boi-am',
 	'thẻ ghi nhớ': 'class="oz-the-nho',
 	'trạng thái bài': 'class="oz-trang-thai-bai',
