@@ -50,7 +50,8 @@ function do_() {
 		for (const [s, h] of chu) if (h.l < khung.l - 0.5 || h.r > khung.r + 0.5) loi.push(`hình ${i}: chữ "${s}" ra ngoài hình`);
 		for (const [s, h] of chu) for (const k of phim.values()) if (giao(h, hop(k.getBoundingClientRect())) > 1) loi.push(`hình ${i}: chữ "${s}" đè lên phím ${k.dataset.m}`);
 		const coNgon = svg.querySelector('.oz-ngon');
-		const giai = svg.closest('.oz-ban-phim').querySelector('.oz-phim-chu-giai');
+		// bàn phím của công cụ piano (.oz-ban-phim), hay hình nhiều bàn phím tĩnh (.oz-figure, ::hinh{ten="ngon-gam"}): chú giải chung
+		const giai = svg.closest('.oz-ban-phim, .oz-figure').querySelector('.oz-phim-chu-giai');
 		if (coNgon && !(giai && giai.getBoundingClientRect().height > 0)) loi.push(`hình ${i}: thiếu chú giải hai tay`);
 	});
 	return loi;

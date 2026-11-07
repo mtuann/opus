@@ -41,6 +41,7 @@ import { veNgheMu, vePhieuNgheMu } from '../scripts/nghe-mu.js';
 import { HINH_THOI_GIAN } from '../scripts/ve-thoi-gian.js';
 import { bangHep } from './bang-hep.mjs';
 import { hinhKhuongKepPhim } from '../scripts/ve-khuong-phim.js';
+import { HINH_PIANO_3 } from '../scripts/ve-piano-3.js';
 
 export const esc = (s) =>
 	String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
@@ -422,6 +423,8 @@ const HINH = {
 	lifespans: (trang) => veVongDoi(chonNguoi(docDanhSach(NGUOI_VONG_DOI), duLieuCho(trang).nguoi)),
 	// lưới phách, dải thời gian (đợt hình 2a): src/scripts/ve-thoi-gian.js
 	...HINH_THOI_GIAN,
+	// ngón bấm 12 gam trưởng, bước nhảy, buổi tập, thang máy đếm nhịp (đợt hình 3a): src/scripts/ve-piano-3.js
+	...HINH_PIANO_3,
 };
 
 /** ::hinh{ten="…"}: hình minh họa không thuộc bản ghi tác phẩm (vùng <!-- fig:… --> của trang cũ, trừ hình cấu trúc). */

@@ -39,6 +39,8 @@ export const KHOI = {
 	'bảy điệu thức': 'class="oz-fig oz-dieu-thuc"',
 	'khuông kép nối phím': 'class="oz-figure oz-khuong-phim',
 	'lưới phách, dải thời gian': 'class="oz-figure oz-tg',
+	// đợt hình 3a: mười hai bàn phím nhỏ có số ngón (src/scripts/ve-piano-3.js)
+	'ngón bấm 12 gam': 'class="oz-figure oz-ngon-gam',
 	'hình tĩnh SVG': '<figure class="oz-figure not-content" data-sinh><svg',
 	'hình tĩnh lưới': '<figure class="oz-figure not-content" data-sinh><div class="oz-fig-grid',
 	// đợt hình 2 (mo/hinh-dot-2c): hai hình tĩnh vẽ lại bảng của trang

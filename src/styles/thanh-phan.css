@@ -3437,3 +3437,52 @@ ul.oz-dm-ds > li[hidden] {
 	height: 1.7em;
 	vertical-align: -0.55em;
 }
+
+/* ---------- Ngón bấm 12 gam trưởng (::hinh{ten="ngon-gam"}; src/scripts/ve-piano-3.js, đợt hình 3a) ----------
+   Mười hai bàn phím nhỏ (veBanPhim, không bấm được) xếp lưới: một cột ở màn hẹp, hai cột khi đủ chỗ. Bàn phím giãn theo ô
+   (không cần vùng bấm 44 px). Số trong ngoặc của bảng (chỉ ở đầu mút): dấu nền trắng, viền đứt và chữ màu của tay. */
+.oz-ngon-gam-luoi {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(17rem, 100%), 1fr));
+	gap: 0.8rem 1.2rem;
+}
+.oz-ngon-gam-o {
+	min-width: 0;
+}
+.oz-ngon-gam-ten {
+	display: block;
+	font-size: var(--sl-text-sm);
+	margin-bottom: 0.2rem;
+}
+.oz-ngon-gam .oz-phim {
+	width: 100%;
+}
+.oz-ngon--mut :is(circle, rect) {
+	fill: #fff;
+	stroke-width: 1.5px;
+	stroke-dasharray: 2.5 1.5;
+}
+.oz-ngon--mut.oz-ngon--phai :is(circle, rect) {
+	stroke: var(--oz-ngon-phai);
+}
+.oz-ngon--mut.oz-ngon--trai :is(circle, rect) {
+	stroke: var(--oz-ngon-trai);
+}
+.oz-ngon--mut.oz-ngon--phai text {
+	fill: var(--oz-ngon-phai);
+}
+.oz-ngon--mut.oz-ngon--trai text {
+	fill: var(--oz-ngon-trai);
+}
+@media print {
+	.oz-ngon-gam-o {
+		break-inside: avoid;
+	}
+}
+
+/* ---------- Ký hiệu bàn đạp dưới khuông (::hinh{ten="ky-hieu-ban-dap"}, hình tĩnh, đợt hình 3a) ---------- */
+.sl-markdown-content .oz-fig-vua,
+.oz-fig-vua {
+	max-width: 34rem;
+	margin-inline: auto;
+}
