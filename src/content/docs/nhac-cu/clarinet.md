@@ -19,6 +19,10 @@ Clarinet dùng **dăm đơn** (single reed): một miếng dăm mỏng rung khi 
 
 **Clarinet là nhạc cụ dịch giọng.** Loại phổ biến nhất là **clarinet Si♭**: nốt viết Đô vang thành Si♭ — **thấp hơn một cung** (quãng 2 trưởng) so với nốt viết. Loại **clarinet La** (hợp với bản nhạc có nhiều dấu thăng) vang thấp hơn **quãng 3 thứ**. Bản nhạc clarinet được viết theo loại kèn sẽ dùng; khi nghe, nhớ rằng âm thanh thực tế trầm hơn nốt viết.
 
+Trên phím đàn: nốt viết Đô4, và âm vang lên của hai loại kèn.
+
+::cong-cu{ten="piano" range="G3-C4" notes="A3 Bb3 C4" nhan="C4:viết_Đô" ngoac="Bb3-C4:clarinet_Si♭:_một_cung A3-C4:clarinet_La:_3_thứ"}
+
 Âm vực viết khoảng **Mi3 đến Đô7** (vang thấp hơn tùy loại kèn). Đọc **khóa Sol**.
 
 ## Vai trò

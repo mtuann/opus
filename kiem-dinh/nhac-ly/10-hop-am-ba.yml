@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 3, 28/10/2026; bổ sung sau review)
       review: Claude (review D3-gom, nhóm A, 28/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 3 (D3-L2 đến D3-L6): 6 đúng, 4 câu về site và lời khuyên tập không kiểm độc lập được (người gom kiểm lại trên repo, đúng), 0 sai (bao-cao/d3-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: null
+    nhanh: mo/hinh-dot-2b
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (đợt hình 2b, lượt 1, 06/11/2026; thủ tục hình, plans/ben-vung/chuan-kiem-dinh.md mục 7)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Trang hợp âm ba (tầng lõi). Nguồn chính: Open Music Theory (OMT), Triads, Roman Numerals, Chord Symbols; đối chiếu Mount (FFF) ch. 13 (xếp chồng quãng 3 cho từng loại), 16 (gam thứ hòa âm), 17 (vii°). WebFetch ngày 27/10/2026 (trả bản tóm tắt chữ, không phải HTML thô; chữ trích đã hỏi lại nhiều chiều). Chỗ sửa trang: mô tả và đoạn mở đầu ("cơ bản nhất" thành "ít nốt nhất"); cột Cảm giác của bảng bốn loại theo OMT Triads; mục giọng thứ (gam tự nhiên, riêng V và vii° nâng bậc 7; ghi chú về III+); câu hỏi kiểm tra cuối trang; mục Nguồn. Mục doi_chu tự viết (không build được); người giao chạy lại so-chu --doi-chu để chuẩn hóa dấu nháy. Chưa chắc: không có. Nguồn không nói thẳng: bảng La thứ suy ra từ định nghĩa chất lượng hợp âm của OMT/Mount và gam La thứ tự nhiên/hòa âm (nguồn không liệt kê đủ bảy hợp âm của giọng thứ). Câu về site: các trang chưa chuyển (luyen-tap/ban-phim, luyen-tai/nghe-hop-am, luyen-tap/xay-hop-am, piano/hop-am-rai) kiểm trên ../opus-zero/docs/ và JavaScript cũ. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): root (nốt gốc), third, fifth (nốt ba, nốt năm), major/minor/diminished/augmented triad (hợp âm trưởng, thứ, giảm, tăng), Roman numeral (số La Mã), harmonic minor (gam thứ hòa âm), natural minor (gam thứ tự nhiên); đã có: chord, triad, leading tone.'
 nguon:
   - id: omt-triads
@@ -375,6 +384,18 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/triads/", "https://viva.pressbooks.pub/openmusictheory/chapter/roman-numerals/" ]
     luot_2_ghi_chu: Khớp nguồn.
+  - id: n36
+    cau: "Bốn hình bàn phím Đô4–La4 ở mục \"Bốn loại hợp âm ba\", theo thứ tự của bảng, mỗi hình có dòng tên ngay trên: \"Trưởng (C): Đô – Mi – Sol.\", \"Thứ (Cm): Đô – Mi♭ – Sol.\", \"Giảm (C°): Đô – Mi♭ – Sol♭.\", \"Tăng (C+): Đô – Mi – Sol♯.\"; mỗi hình tô ba nốt ấy, nút \"Nghe hợp âm\", và hai ngoặc dưới là hai quãng 3 từ dưới lên như cột \"Cấu tạo\": 3 trưởng + 3 thứ; 3 thứ + 3 trưởng; 3 thứ + 3 thứ; 3 trưởng + 3 trưởng."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Bốn ::cong-cu{ten=\"piano\" range=\"C4-A4\" play=\"chord\" notes=\"…\" ngoac=\"…\"}. Tên, ký hiệu và nốt khớp các cột \"Loại\", \"Ví dụ từ Đô\", \"Ký hiệu\" của bảng (ký hiệu thứ nhất của mỗi dòng); hai quãng 3 khớp cột \"Cấu tạo (từ dưới lên)\". Kiểm lại theo bảng nửa cung của bài 9 (3 trưởng 4, 3 thứ 3): Đô4 60, Mi♭4 63, Mi4 64, Sol♭4 66, Sol4 67, Sol♯4 68. Câu dẫn chung: \"Bốn hợp âm trên phím đàn, theo thứ tự của bảng: hai ngoặc dưới là hai quãng 3 chồng lên nhau (từ dưới lên), ngoặc trên là quãng 5 giữa nốt gốc và nốt năm.\" Nhãn ngoặc dùng tên quãng như bảng, không ghi số nửa cung (trang không ghi)."
+  - id: n37
+    cau: "Ngoặc trên của bốn hình nối nốt gốc với nốt năm: 5 đúng (trưởng, thứ), 5 giảm (giảm), 5 tăng (tăng)."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Khớp đoạn ngay trên: \"Hợp âm trưởng và thứ đều có quãng 5 đúng giữa nốt gốc và nốt năm … Hợp âm giảm có quãng 5 giảm, hợp âm tăng có quãng 5 tăng.\" Ngoặc dài ở tầng trên hai ngoặc quãng 3 (xepNgoac)."
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -429,3 +450,15 @@ doi_chu:
   - cu: "câu hỏi: Vì sao giọng thứ dùng gam hòa âm để xây hợp âm bậc V? | ✓ Để bậc V có cảm âm và trở thành hợp âm trưởng | Để hợp âm bậc I trở thành trưởng | Vì gam tự nhiên không có bậc V | Cảm âm (bậc 7 được nâng) tạo lực kéo mạnh về chủ âm."
     moi: "câu hỏi: Vì sao giọng thứ nâng bậc 7 khi xây hợp âm bậc V? | ✓ Để bậc V có cảm âm và trở thành hợp âm trưởng | Để hợp âm bậc I trở thành trưởng | Vì gam tự nhiên không có bậc V | Bậc 7 được nâng thành cảm âm, nên bậc V thành hợp âm trưởng và có đà đi về chủ âm."
     ly_do: 'n35 (da-sua): khớp câu sửa ở mục Hợp âm trong giọng thứ.; n35 (da-sua): "lực kéo mạnh" đổi theo chữ OMT ("momentum toward the tonic").'
+  - cu: null
+    moi:
+      - "Bốn hợp âm trên phím đàn, theo thứ tự của bảng: hai ngoặc dưới là hai quãng 3 chồng lên nhau (từ dưới lên), ngoặc trên là quãng 5 giữa nốt gốc và nốt năm."
+      - "Trưởng (C): Đô – Mi – Sol."
+      - "Thứ (Cm): Đô – Mi♭ – Sol."
+      - "Giảm (C°): Đô – Mi♭ – Sol♭."
+      - "Tăng (C+): Đô – Mi – Sol♯."
+    ly_do: "Đợt hình 2 (mo/hinh-dot-2b): câu dẫn của hình mới (plans/ben-vung/de-xuat-hinh.md, đề xuất 9). Hình có data-sinh nên so-chu không tính chữ trong hình. Câu thuộc n36, n37."
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-2b
+    ly_do: "thêm hình (đợt hình 2): bốn loại hợp âm ba là chồng hai quãng 3 trên phím (plans/ben-vung/de-xuat-hinh.md)"

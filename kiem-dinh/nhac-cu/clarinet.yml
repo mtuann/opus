@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 8, 05/11/2026); Claude Opus 5.5 (lượt 2 làm lại cho câu khong-chac của lượt 2 bổ sung)
       review: Claude Opus 5.5 (review D8-gom, 05/11/2026)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 05/11/2026 (chủ repo không tự kiểm): 12 nhận định mẫu của đợt 8, 9 đúng, 2 sai đã sửa (nhac-cu/trumpet n8 Si♭ và Đô là hai loại dùng nhiều nhất; n19 bè Baroque nay chơi bằng piccolo hoặc trumpet tự nhiên kiểu cổ; sửa theo cả n16, n25), 1 không kiểm được (nu-nha-soan-nhac n84: nguồn chỉ có bản lưu Wayback, bị chặn) (bao-cao/d8-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: null
+    nhanh: mo/hinh-dot-2b
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (đợt hình 2b, lượt 1, 06/11/2026; thủ tục hình, plans/ben-vung/chuan-kiem-dinh.md mục 7)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: cod-clarinet
     bac: 2
@@ -330,6 +339,12 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'Kiểm: src/content/docs/tai-lieu-tham-khao.md có, đã khóa; có dòng IMSLP với link https://imslp.org/. Review D8-gom: tai-lieu-tham-khao.md (đã khóa) dòng 39: IMSLP.'
     review: dung
+  - id: n34
+    cau: "Hình bàn phím Sol3–Đô4 ngay sau đoạn \"Clarinet là nhạc cụ dịch giọng\": nhãn \"viết Đô\" dưới Đô4; tô Đô4, Si♭3, La3; ngoặc Si♭3–Đô4 \"clarinet Si♭: một cung\" và La3–Đô4 \"clarinet La: 3 thứ\" (tầng trên). Câu dẫn: nốt viết Đô4 và âm vang lên của hai loại kèn."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp ::cong-cu{ten=\"piano\" range=\"G3-C4\" notes=\"A3 Bb3 C4\" nhan=\"C4:viết_Đô\" ngoac=\"Bb3-C4:clarinet_Si♭:_một_cung A3-C4:clarinet_La:_3_thứ\"}. Khớp đoạn ngay trên: clarinet Si♭ viết Đô vang thành Si♭, thấp hơn một cung; clarinet La vang thấp hơn quãng 3 thứ. Hình chọn Đô4 làm nốt viết (trong âm vực viết Mi3–Đô7 của trang); một cung dưới Đô4 là Si♭3 (MIDI 58), 3 thứ (3 nửa cung) là La3 (57)."
 khuong_nhac: []
 ghi_chu: 'Trang Đọc thêm (ngoại vi), không có khối abc. Nguồn chính: COD (Encyclopedia.com: clarinet, transposing instruments, chalumeau), Britannica (clarinet, Goodman, Shaw, qua Wayback), Orchestral Library và Woodwind Fingering Guide (âm vực và tên ba âm vực), IMSLP (số hiệu), Indianapolis Symphony (Rhapsody in Blue), trang Copland (Boosey & Hawkes), trang nghệ sĩ. Chỗ sửa trang (da-sua): n1 đến n5, n11, n12, n16, n18, n19, n20, n28; đã bỏ (da-bo): n29, n30. Chữ "ba âm vực chalumeau, clarion, altissimo" giữ tên, bỏ các tính từ âm sắc. Giới hạn âm vực lấy từ Woodwind Fingering Guide: "E 3 to B 4 / B 4 to C 6 / C 6 to G 6" (dấu hóa ở B 4 không hiện trong chữ của trang, thực tế là Si♭4), nên viết "khoảng". Câu ve-site: n24 (gershwin-rhapsody chưa chuyển nên "sắp có"), n31, n32, n33. Chưa chắc: không có. Câu "tứ tấu clarinet" trong bản cũ (Thính phòng) bỏ vì không rõ ý. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có bản ghi, cho D3-L5: nhạc cụ dịch giọng (transposing instrument), dăm đơn (single reed), embouchure, chalumeau, clarion, altissimo, glissando (đã có).'
 doi_chu:
@@ -369,3 +384,10 @@ doi_chu:
   - cu: 'Clarinet là lựa chọn phổ biến cho người mới học kèn: dễ phát tiếng hơn sáo hay oboe, nhạc cụ học sinh giá vừa phải. Khó nhất là hơi thở (cần luồng hơi ổn định, khỏe) và âm vực cao (altissimo) đòi hỏi kỹ thuật. Học với giáo viên để chỉnh thế ngậm dăm (embouchure) ngay từ đầu — ngậm sai lâu ngày rất khó sửa.'
     moi: Nên học với giáo viên ngay từ đầu nếu có điều kiện, để chỉnh thế ngậm dăm (embouchure).
     ly_do: 'n28 (da-sua), n29, n30 (da-bo): bỏ "phổ biến", "dễ hơn sáo hay oboe", "giá vừa phải", hơi thở, "ngậm sai khó sửa" (không có nguồn bậc 1-2; hơi thở/thế ngậm là sức khỏe).'
+  - cu: null
+    moi: "Trên phím đàn: nốt viết Đô4, và âm vang lên của hai loại kèn."
+    ly_do: "Đợt hình 2 (mo/hinh-dot-2b): câu dẫn của hình mới (plans/ben-vung/de-xuat-hinh.md, đề xuất 27). Hình có data-sinh nên so-chu không tính chữ trong hình. Câu thuộc n34."
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-2b
+    ly_do: "thêm hình (đợt hình 2): nốt viết và nốt vang của clarinet Si♭, La trên phím (plans/ben-vung/de-xuat-hinh.md)"

@@ -19,6 +19,10 @@ Gam **Đô trưởng** dùng toàn phím trắng, vì hai nửa cung tự nhiên
 |---|---|---|---|---|---|---|---|
 | Khoảng cách | cung | cung | **nửa cung** | cung | cung | cung | **nửa cung** |
 
+Trên phím đàn, ngoặc giữa từng cặp nốt ghi khoảng cách như bảng: 1 là một cung, ½ là nửa cung.
+
+::cong-cu{ten="piano" range="C4-C5" notes="C4 D4 E4 F4 G4 A4 B4 C5" ngoac="C4-D4:1 D4-E4:1 E4-F4:½ F4-G4:1 G4-A4:1 A4-B4:1 B4-C5:½"}
+
 ```abc
 X:1
 T:Gam Đô trưởng
@@ -37,7 +41,7 @@ Vậy **gam Sol trưởng có một dấu thăng: Fa♯**.
 
 Gam Sol trưởng trên bàn phím (phím được tô):
 
-::cong-cu{ten="piano" range="G3-G4" notes="G3 A3 B3 C4 D4 E4 F#4 G4"}
+::cong-cu{ten="piano" range="G3-G4" notes="G3 A3 B3 C4 D4 E4 F#4 G4" ngoac="G3-A3:1 A3-B3:1 B3-C4:½ C4-D4:1 D4-E4:1 E4-F#4:1 F#4-G4:½"}
 
 Thay vì viết dấu thăng trước mọi nốt Fa, người ta viết nó một lần ở đầu khuông, ngay sau khóa. Đó là **hóa biểu**:
 

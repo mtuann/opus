@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 3, 28/10/2026; bổ sung sau review)
       review: Claude (review D3-gom, nhóm A, 28/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 3 (D3-L2 đến D3-L6): 6 đúng, 4 câu về site và lời khuyên tập không kiểm độc lập được (người gom kiểm lại trên repo, đúng), 0 sai (bao-cao/d3-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: null
+    nhanh: mo/hinh-dot-2b
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (đợt hình 2b, lượt 1, 06/11/2026; thủ tục hình, plans/ben-vung/chuan-kiem-dinh.md mục 7)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Trang khóa Đô và dịch giọng (tầng lõi), ba khối abc, không có hình. Nguồn: OMT, Clefs (khóa alto, tenor); Britannica, Clef (bản in; Britannica mở được qua đường /print/article/…); Harmony and Musicianship (Pressbooks) về khóa alto, tenor; bảng khoảng dịch của teoria.com (Alvira), LilyPond Music Glossary, Oxford Dictionary of Music (encyclopedia.com), Met Museum (clarinet in A), Radius Music và Wikipedia (bậc 3, chỉ để đối chiếu); giai điệu Ode to Joy đối chiếu Mutopia ode.ly và hồ sơ 04-nhip.yml. WebFetch ngày 28/10/2026 (bản tóm tắt chữ, không phải HTML thô; chỗ quan trọng đã hỏi lại để lấy nguyên văn). Chỗ sửa trang: (1) hình khóa Đô "hai chữ C quay lưng vào nhau" thành "vẽ cách điệu từ chữ C"; (2) bỏ "đôi khi trombone alto"; (3) khối abc 2: ô 3 sai (E E F G thành C C D E) và ô 4 thêm nhịp chấm dôi; (4) lý do dịch giọng của nhạc cụ ("kích thước ống kèn" thành chuyện kèn đồng chưa có van); (5) bỏ "Phổ biến nhất" ở bảng và câu về tổng phổ concert pitch (chỉ bậc 3); (6) mục Nguồn. Chưa chắc: n22 (người đệm đàn dịch ngay khi chơi; nhãn khuyen-tap, review soát nhãn); n21 chỉ có nguồn bậc 3 (Radius). Trang đích chưa chuyển: /opus/luyen-tap/doc-not/ (n14: công cụ có hai lựa chọn "Khóa Đô (alto)", "Khóa Đô (tenor)"), /opus/tai-lieu-tham-khao/. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): C clef / alto clef / tenor clef (khóa Đô, Đô alto, Đô tenor), transposition (dịch giọng; trang dùng "dịch giọng" còn site gọi modulation là "chuyển giọng", cần phân biệt trong Từ điển), transposing instrument (nhạc cụ dịch giọng), concert pitch (cao độ thật), ledger line (đã có), viola, woodwinds/brass (xem 20). Đã có: clef, key-signature, interval, pitch.'
 nguon:
   - id: brit-clef
@@ -505,6 +514,12 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://www.soundslice.com/help/en/creating/basics/83/transposing-instruments", "https://mymusictheory.com/instruments-transposition-and-clefs/" ]
     luot_2_ghi_chu: Âm thật thấp hơn nốt viết một quãng tám.
+  - id: n45
+    cau: "Hình bàn phím Rê3–Đô4 ngay dưới bảng \"Nhạc cụ dịch giọng\" vẽ bốn dòng đầu của bảng: nhãn \"viết Đô\" dưới phím Đô4; tô Đô4 và bốn phím vang; bốn ngoặc từ phím vang tới Đô4, xếp tầng: Si♭3 \"clarinet, trumpet in B♭: 2 trưởng\", La3 \"clarinet in A: 3 thứ\", Fa3 \"horn in F: 5 đúng\", Mi♭3 \"saxophone alto in E♭: 6 trưởng\". Câu dẫn: nốt viết Đô4, ngoặc nối tới âm vang lên của từng nhạc cụ, ghi tên nhạc cụ và quãng thấp hơn."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp ::cong-cu{ten=\"piano\" range=\"D3-C4\" notes=\"Eb3 F3 A3 Bb3 C4\" nhan=\"C4:viết_Đô\" ngoac=\"Bb3-C4:… A3-C4:… F3-C4:… Eb3-C4:…\"}. Tên nhạc cụ, âm vang (Si♭, La, Fa, Mi♭) và quãng khớp cột \"Nhạc cụ\" và \"Viết Đô thì vang lên\" của bảng. Bảng chỉ nói \"viết Đô\"; hình chọn Đô4 để vẽ (câu dẫn nói rõ). Phím vang đếm theo bảng nửa cung của bài 9 (đã khóa): 2 trưởng 2, 3 thứ 3, 5 đúng 7, 6 trưởng 9 nửa cung dưới Đô4 (MIDI 60) là Si♭3 58, La3 57, Fa3 53, Mi♭3 51. Hai dòng quãng tám (guitar, contrabass, piccolo) không vẽ."
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -573,3 +588,10 @@ doi_chu:
       K:C clef=alto
       E E F G | G F E D | C C D E | E3/2 D/ D2 |]
     ly_do: "khuông 2 (da-sua): Mutopia ode.ly và D3-L1 (04-nhip.yml): ô 3 là Đô Đô Rê Mi, ô 4 là Mi chấm dôi, Rê móc đơn, Rê trắng."
+  - cu: null
+    moi: "Bốn dòng đầu của bảng trên phím đàn: nốt viết Đô4, và ngoặc nối tới âm vang lên của từng nhạc cụ, ghi tên nhạc cụ và quãng thấp hơn."
+    ly_do: "Đợt hình 2 (mo/hinh-dot-2b): câu dẫn của hình mới (plans/ben-vung/de-xuat-hinh.md, đề xuất 27). Hình có data-sinh nên so-chu không tính chữ trong hình. Câu thuộc n45."
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-2b
+    ly_do: "thêm hình (đợt hình 2): nốt viết và nốt vang của nhạc cụ dịch giọng trên phím (plans/ben-vung/de-xuat-hinh.md)"

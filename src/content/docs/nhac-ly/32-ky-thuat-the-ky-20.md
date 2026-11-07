@@ -23,6 +23,10 @@ K:C
 [V:B] [C,E,^G,]4- | [C,E,^G,]4 |]
 ```
 
+Trên phím đàn, ngoặc giữa từng cặp nốt đều ghi 1 (một cung):
+
+::cong-cu{ten="piano" range="C4-C5" notes="C4 D4 E4 F#4 G#4 A#4 C5" ngoac="C4-D4:1 D4-E4:1 E4-F#4:1 F#4-G#4:1 G#4-A#4:1 A#4-C5:1"}
+
 Vì mọi khoảng cách đều bằng nhau, gam này **không có chủ âm rõ ràng**, không có cảm giác "về nhà". Âm thanh mơ hồ, lơ lửng, như trong mơ: gắn với **Debussy** (*Voiles*, trong tập [*Préludes* quyển 1](/opus/nghe-nhac/debussy-preludes/)).
 
 ## Gam bát cung
@@ -38,6 +42,10 @@ Q:1/4=90
 K:C
 C _D _E =E | ^F G A _B | c4 |]
 ```
+
+Trên phím đàn, ngoặc xen kẽ ½ (nửa cung) và 1 (một cung):
+
+::cong-cu{ten="piano" range="C4-C5" notes="C4 Db4 Eb4 E4 F#4 G4 A4 Bb4 C5" ngoac="C4-Db4:½ Db4-Eb4:1 Eb4-E4:½ E4-F#4:1 F#4-G4:½ G4-A4:1 A4-Bb4:½ Bb4-C5:1"}
 
 ## Hợp âm theo quãng 4
 

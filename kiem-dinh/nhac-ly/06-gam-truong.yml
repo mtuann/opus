@@ -12,6 +12,15 @@ lan:
       luot_2: "Claude Opus 5.5 (D3-L1 lượt 2, phần B); lượt 2 bổ sung sau review: Claude Sonnet 5.5"
       review: "Claude Opus 5.5 (review D3-L1, 24/10/2026; câu ve-site: Claude Sonnet 5.5)"
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D3-L1 đúng (d3-l1-kiem-mau.yml)
+  - so: 2
+    ngay: null
+    nhanh: mo/hinh-dot-2b
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (đợt hình 2b, lượt 1, 06/11/2026; thủ tục hình, plans/ben-vung/chuan-kiem-dinh.md mục 7)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Trang gam trưởng (tầng lõi). Nguồn chính: Open Music Theory (OMT), mở từng chương bằng curl ngày 24/10/2026 (công cụ đọc web bị trang chặn, theo lời giao việc của lô); bổ sung khi OMT không nói: Andre Mount (FFF) ch. 6, 8, 16, MT21C 2.2. Câu về site (n9, n13, n24, n29): kiểm trên bài 8 (cùng lô), bản cũ ../opus-zero/docs/ và JavaScript cũ vì trang đích chưa chuyển; riêng bàn phím kiểm với thành phần mới của lô. Sửa trang: n15 và n16 ("Ba bậc quan trọng nhất:" thành "Ba bậc cần nhớ trước:") và mục Nguồn (thay link chung tới OMT và musictheory.net bằng các chương đã đọc; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, agent không đọc được chữ). Thuật ngữ cho D3-L5: bậc đánh số La Mã (trang này, thuat-ngu.yml) hay số Ả Rập (bài 7, 8; OMT); các tên "chủ âm", "át âm", "cảm âm" đã có trong thuat-ngu.yml. Không tính là nhận định: tên tiêu đề, "Bài tập 3" đã tính ở n25.'
 nguon:
   - id: omt-steps
@@ -402,6 +411,18 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ https://musictheory.pugetsound.edu/mt21c/TheMajorScale.html, https://viva.pressbooks.pub/openmusictheory/chapter/half-and-whole-steps/ ]
     luot_2_ghi_chu: "Đáp án khớp mt21c 2.2 (mỗi tên nốt chỉ một lần): A♯ trong F major sẽ lặp tên La và thiếu Si. A♯ vẫn tồn tại (cùng phím với B♭, OMT Half Steps…), nên phương án 'La♯ không tồn tại' đúng là sai."
+  - id: n34
+    cau: "Hình bàn phím Đô4–Đô5 ngay dưới bảng \"Từ – đến | Khoảng cách\" tô tám nốt gam Đô trưởng; bảy ngoặc giữa từng cặp nốt liền nhau ghi 1, 1, ½, 1, 1, 1, ½ (Đô–Rê, Rê–Mi, Mi–Fa, Fa–Sol, Sol–La, La–Si, Si–Đô), như hàng \"Khoảng cách\" của bảng; câu dẫn: 1 là một cung, ½ là nửa cung."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp ::cong-cu{ten=\"piano\" range=\"C4-C5\" notes=\"C4 D4 E4 F4 G4 A4 B4 C5\" ngoac=\"C4-D4:1 D4-E4:1 E4-F4:½ F4-G4:1 G4-A4:1 A4-B4:1 B4-C5:½\"}. Bảy ngoặc khớp từng ô của bảng ngay trên (cung, cung, nửa cung, cung, cung, cung, nửa cung) và công thức \"Cung – Cung – Nửa cung – Cung – Cung – Cung – Nửa cung\"."
+  - id: n35
+    cau: "Bàn phím gam Sol trưởng (Sol3–Sol4) có thêm bảy ngoặc giữa từng cặp nốt: 1, 1, ½, 1, 1, 1, ½ (Sol–La, La–Si, Si–Đô, Đô–Rê, Rê–Mi, Mi–Fa♯, Fa♯–Sol)."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Thêm ngoac=\"G3-A3:1 A3-B3:1 B3-C4:½ C4-D4:1 D4-E4:1 E4-F#4:1 F#4-G4:½\" vào bàn phím đã có (n10 vẫn đúng: tô 8 phím). Khớp công thức gam trưởng của trang và chữ mục \"Gam trưởng bắt đầu từ nốt khác\": từ Mi lên Fa♯ một cung, Fa♯–Sol nửa cung. Đếm MIDI: Sol3 55, La3 57, Si3 59, Đô4 60, Rê4 62, Mi4 64, Fa♯4 66, Sol4 67. Lời dẫn cũ \"Gam Sol trưởng trên bàn phím (phím được tô):\" giữ nguyên; nghĩa của 1 và ½ đã nói ở hình trước (n34)."
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -437,3 +458,10 @@ doi_chu:
       - "Open Music Theory: Major Scales, Scale Degrees, and Key Signatures; Half Steps, Whole Steps, and Accidentals; Minor Scales, Scale Degrees, and Key Signatures; Introduction to Harmony, Cadences, and Phrase Endings."
       - "Andre Mount, Fundamentals, Function, and Form: chương 6. Major Scales và 16. Minor Scale Variants; Robert Hutchinson, Music Theory for the 21st-Century Classroom: 2.2 The Major Scale."
     ly_do: "Mục Nguồn: thay link chung tới Open Music Theory bằng link tới đúng các chương đã đọc khi kiểm định (lượt 1), thêm giáo trình mở và trang IMSLP đã dùng; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, không đọc được chữ để kiểm."
+  - cu: null
+    moi: "Trên phím đàn, ngoặc giữa từng cặp nốt ghi khoảng cách như bảng: 1 là một cung, ½ là nửa cung."
+    ly_do: "Đợt hình 2 (mo/hinh-dot-2b): câu dẫn của hình mới (plans/ben-vung/de-xuat-hinh.md, đề xuất 13). Hình có data-sinh nên so-chu không tính chữ trong hình. Câu thuộc n34, n35."
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-2b
+    ly_do: "thêm hình (đợt hình 2): công thức gam trưởng trên phím (ngoặc 1, ½) (plans/ben-vung/de-xuat-hinh.md)"

@@ -29,7 +29,9 @@ A, B, C D | E F G A |]
 
 So với gam trưởng, điểm khác quyết định là **bậc 3**: trong La thứ, từ La lên Đô chỉ có 3 nửa cung (quãng 3 thứ), còn trong La trưởng là 4 nửa cung (La lên Đô♯). Bậc 3 thấp hơn này có mặt ở cả ba dạng gam thứ.
 
-::cong-cu{ten="piano" range="A3-A4" notes="A3 B3 C4 D4 E4 F4 G4 A4"}
+Trên phím đàn, ngoặc giữa từng cặp nốt ghi khoảng cách như bảng trên: 1 là một cung, ½ là nửa cung.
+
+::cong-cu{ten="piano" range="A3-A4" notes="A3 B3 C4 D4 E4 F4 G4 A4" ngoac="A3-B3:1 B3-C4:½ C4-D4:1 D4-E4:1 E4-F4:½ F4-G4:1 G4-A4:1"}
 
 ## Giọng thứ song song và giọng thứ cùng tên
 
@@ -59,6 +61,10 @@ A, B, C D | E F ^G A |]
 
 Khoảng cách giữa Fa và Sol♯ là 3 nửa cung. Đây là bước nhảy đặc trưng của gam thứ hòa âm.
 
+Gam La thứ hòa âm trên phím đàn: ngoặc Fa – Sol♯ ghi 1½, tức một cung rưỡi (3 nửa cung).
+
+::cong-cu{ten="piano" range="A3-A4" notes="A3 B3 C4 D4 E4 F4 G#4 A4" nhan="G#4:bậc_7" ngoac="A3-B3:1 B3-C4:½ C4-D4:1 D4-E4:1 E4-F4:½ F4-G#4:1½ G#4-A4:½"}
+
 ## Gam thứ giai điệu
 
 Để tránh bước nhảy 3 nửa cung khi viết giai điệu, người ta nâng **cả bậc 6 và bậc 7** khi **đi lên** (Fa♯, Sol♯), và trở về gam tự nhiên khi **đi xuống**.
@@ -72,6 +78,10 @@ Q:1/4=90
 K:Am
 A, B, C D | E ^F ^G A | A =G =F E | D C B, A, |]
 ```
+
+Gam La thứ giai điệu đi lên trên phím đàn, với bậc 6 Fa♯ và bậc 7 Sol♯:
+
+::cong-cu{ten="piano" range="A3-A4" notes="A3 B3 C4 D4 E4 F#4 G#4 A4" nhan="F#4:bậc_6 G#4:bậc_7" ngoac="A3-B3:1 B3-C4:½ C4-D4:1 D4-E4:1 E4-F#4:1 F#4-G#4:1 G#4-A4:½"}
 
 ## So sánh ba dạng (từ La)
 

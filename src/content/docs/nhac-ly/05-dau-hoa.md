@@ -14,6 +14,10 @@ Giữa hầu hết các cặp phím trắng có một phím đen, nên chúng c�
 
 Hãy nhớ kỹ hai cặp này: chúng là chìa khóa để hiểu gam sau này.
 
+Trên bàn phím dưới đây, mỗi ngoặc ghi khoảng cách giữa hai phím: ½ là nửa cung, 1 là một cung. Giữa Đô và Rê có một phím đen: hai nửa cung, cộng lại thành một cung. Mi – Fa và Si – Đô (phím được tô) không có phím đen xen giữa: hai nửa cung tự nhiên.
+
+::cong-cu{ten="piano" range="C4-C5" notes="E4 F4 B4 C5" ngoac="C4-Db4:½ Db4-D4:½ C4-D4:1 E4-F4:½ B4-C5:½"}
+
 ## Ba dấu hóa
 
 | Dấu | Tên | Tác dụng |

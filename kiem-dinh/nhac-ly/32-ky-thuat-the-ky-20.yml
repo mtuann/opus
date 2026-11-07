@@ -21,6 +21,15 @@ lan:
       luot_2: "Claude Opus 5.5 (lượt 2 mo/link-hong, 07/11/2026)"
       review: "Claude Opus 5.5 (review mo/link-hong, 07/11/2026: ba câu lượt 2 khong-chac sửa theo đề xuất, đối chiếu lại nguồn mới và bản lưu)"
       kiem_mau: "Claude Opus 5.5 (người gom mo/link-hong, kiểm thay chủ repo theo lời giao 07/11/2026): mẫu 4 nguồn mới tải lại bằng curl (bản lưu Wayback LCS Ritornello, slide MIT OCW Harris 2006 có \"sequence in b\" ở La stravaganza, hai địa chỉ mới Hollywood Bowl /works/… trả 200 đúng bài): khớp nhận định; 0 sai"
+  - so: 3
+    ngay: null
+    nhanh: mo/hinh-dot-2b
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (đợt hình 2b, lượt 1, 06/11/2026; thủ tục hình, plans/ben-vung/chuan-kiem-dinh.md mục 7)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Trang kỹ thuật thế kỷ 20 (tầng lõi), 5 khối abc soạn riêng. Nguồn chính: OMT (Collections, Twelve-Tone), Hutchinson (Polychords), Britannica, COD (minimalism), Reich (1968), IRCAM, Berliner Philharmoniker, lizhogg, BBC Music Magazine; WebFetch ngày 28/10/2026. CHƯA CHẮC (null): n7 phần "quyển 1" (bậc 3), n14 (Rimsky-Korsakov, Stravinsky với bát cung), n17 đến n20 (hợp âm quãng 4, Hindemith, jazz: chỉ Wikipedia), n39 (cơ chế lệch pha), n43 (đồng xu, xúc xắc, Kinh Dịch), n46 (Pärt, chỉ bậc 3). Thuật ngữ trang dùng, có hồ sơ riêng ở lô này: octatonic-scale, polytonality, twelve-tone, minimalism. Chưa có ở thuat-ngu.yml (cho D3-L5): ostinato, phasing (lệch pha), additive process (cộng dồn), aleatoric/chance music (nhạc ngẫu nhiên), quartal harmony (hợp âm quãng 4), polychord (hợp âm kép), whole-tone scale (gam toàn cung), row (dãy 12 âm).'
 nguon:
   - id: omt-col
@@ -685,6 +694,18 @@ nhan_dinh:
     luot_2: khong-chac
     luot_2_nguon: [ "https://stevereich.com/composition/piano-phase/" ]
     luot_2_ghi_chu: Phần "lệch pha là kỹ thuật của Reich" đúng (trang Reich mô tả phasing); phần Piano Phase 1967 chưa xác nhận bằng nguồn bậc 2 đã mở (xem n40).
+  - id: n54
+    cau: "Hình bàn phím Đô4–Đô5 ở mục \"Gam toàn cung\" tô Đô, Rê, Mi, Fa♯, Sol♯, La♯, Đô như khuông ngay trên (C D E ^F ^G ^A c); sáu ngoặc giữa từng cặp nốt đều ghi 1 (một cung), như câu dẫn và chữ \"chỉ gồm các cung, không có nửa cung: 6 nốt chia đều quãng 8\"."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp ::cong-cu{ten=\"piano\" range=\"C4-C5\" notes=\"C4 D4 E4 F#4 G#4 A#4 C5\" ngoac=\"C4-D4:1 D4-E4:1 E4-F#4:1 F#4-G#4:1 G#4-A#4:1 A#4-C5:1\"}. MIDI 60, 62, 64, 66, 68, 70, 72: mỗi bước hai phím (một cung, định nghĩa bài 5)."
+  - id: n55
+    cau: "Hình bàn phím Đô4–Đô5 ở mục \"Gam bát cung\" tô Đô, Rê♭, Mi♭, Mi, Fa♯, Sol, La, Si♭, Đô như khuông ngay trên (C _D _E =E ^F G A _B c); tám ngoặc xen kẽ ½ và 1, bắt đầu bằng ½, như câu dẫn, chữ \"nửa cung và cung xen kẽ, 8 nốt\" và tiêu đề khuông \"(nửa cung – cung)\"."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp ::cong-cu{ten=\"piano\" range=\"C4-C5\" notes=\"C4 Db4 Eb4 E4 F#4 G4 A4 Bb4 C5\" ngoac=\"C4-Db4:½ Db4-Eb4:1 Eb4-E4:½ E4-F#4:1 F#4-G4:½ G4-A4:1 A4-Bb4:½ Bb4-C5:1\"}. MIDI 60, 61, 63, 64, 66, 67, 69, 70, 72: bước 1, 2, 1, 2, 1, 2, 1, 2 nửa cung."
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -783,7 +804,16 @@ doi_chu:
       - 'Wikipedia: Octatonic scale (Stravinsky, Bartók, Messiaen), Quartal and quintal harmony (hợp âm quãng 4 không có âm gốc rõ ràng; jazz), Polytonality, The Rite of Spring (hợp âm dậm đi dậm lại ở "Augurs of Spring": Mi♭7 chồng lên Fa♭ trưởng), Twelve-tone technique (Schoenberg phát triển năm 1923, nhớ đã dùng từ 1921), Violin Concerto (Berg) (dãy chứa các hợp âm Sol thứ, Rê trưởng, La thứ, Mi trưởng; bốn nốt cuối đi lên từng cung), Minimalism (music) (lệch pha của Reich, quá trình cộng dồn của Glass), Piano Phase, Aleatoric music (để người chơi quyết định thứ tự các đoạn; Cage dùng Kinh Dịch để chọn trường độ, tốc độ, sắc thái), Spiegel im Spiegel (Pärt, 1978; một ví dụ của nhạc tối giản; giai điệu violin thêm một nốt mỗi câu).'
       - "The Listeners' Club, \"Debussy's Voiles\": Voiles là bản thứ hai của quyển 1 Préludes, xuất bản năm 1910, dựa trên gam toàn cung."
     ly_do: "Mục Nguồn: thay bằng các nguồn đã mở khi kiểm định (lượt 1 D3-L4); bỏ nguồn không đọc được chữ (musictheory.net)."
+  - cu: null
+    moi: "Trên phím đàn, ngoặc giữa từng cặp nốt đều ghi 1 (một cung):"
+    ly_do: "Đợt hình 2 (mo/hinh-dot-2b): câu dẫn của hình mới (plans/ben-vung/de-xuat-hinh.md, đề xuất 29). Hình có data-sinh nên so-chu không tính chữ trong hình. Câu thuộc n54, n55."
+  - cu: null
+    moi: "Trên phím đàn, ngoặc xen kẽ ½ (nửa cung) và 1 (một cung):"
+    ly_do: "Đợt hình 2 (mo/hinh-dot-2b): câu dẫn của hình mới (plans/ben-vung/de-xuat-hinh.md, đề xuất 29). Hình có data-sinh nên so-chu không tính chữ trong hình. Câu thuộc n54, n55."
 mo_khoa:
   - ngay: 2026-11-06
     nhanh: mo/link-hong
     ly_do: "link ngoài hỏng (lychee 07/11/2026): đổi link chết sang bản lưu Wayback, địa chỉ mới hay nguồn khác đọc được"
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-2b
+    ly_do: "thêm hình (đợt hình 2): gam toàn cung và gam bát cung trên phím (ngoặc 1, ½) (plans/ben-vung/de-xuat-hinh.md)"

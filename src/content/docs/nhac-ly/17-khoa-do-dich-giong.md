@@ -78,6 +78,10 @@ Một số nhạc cụ được viết bản nhạc ở cao độ **khác** vớ
 | Guitar, contrabass | **Đô** thấp hơn một quãng tám | Để tránh quá nhiều dòng kẻ phụ dưới khuông |
 | Piccolo | **Đô** cao hơn một quãng tám | |
 
+Bốn dòng đầu của bảng trên phím đàn: nốt viết Đô4, và ngoặc nối tới âm vang lên của từng nhạc cụ, ghi tên nhạc cụ và quãng thấp hơn.
+
+::cong-cu{ten="piano" range="D3-C4" notes="Eb3 F3 A3 Bb3 C4" nhan="C4:viết_Đô" ngoac="Bb3-C4:clarinet,_trumpet_in_B♭:_2_trưởng A3-C4:clarinet_in_A:_3_thứ F3-C4:horn_in_F:_5_đúng Eb3-C4:saxophone_alto_in_E♭:_6_trưởng"}
+
 Khi đọc **tổng phổ** (bài 20), bè clarinet in B♭ có hóa biểu khác với các bè còn lại: đó không phải lỗi in, mà là nhạc cụ dịch giọng.
 
 ## Bài tập viết

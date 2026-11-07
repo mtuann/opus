@@ -12,6 +12,15 @@ lan:
       luot_2: "Claude Opus 5.5 (D3-L1 lượt 2, phần B); lượt 2 bổ sung sau review: Claude Sonnet 5.5"
       review: "Claude Opus 5.5 (review D3-L1, 24/10/2026; câu ve-site: Claude Sonnet 5.5)"
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D3-L1 đúng (d3-l1-kiem-mau.yml)
+  - so: 2
+    ngay: null
+    nhanh: mo/hinh-dot-2b
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (đợt hình 2b, lượt 1, 06/11/2026; thủ tục hình, plans/ben-vung/chuan-kiem-dinh.md mục 7)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Trang cung, nửa cung và dấu hóa (tầng lõi). Nguồn chính: Open Music Theory (OMT), mở từng chương bằng curl ngày 24/10/2026 (công cụ đọc web bị trang chặn, theo lời giao việc của lô); chỗ OMT không nói (hiệu lực của dấu hóa đến hết ô nhịp, dấu hóa nhắc, dấu hóa kép dùng khi nào): Andre Mount (FFF) ch. 5 và 8, MT21C 1.4 và 1.5, MyMusicTheory, UMass Unit 7. Câu về site (n12, n13, n22, n24, n29): kiểm trên bản cũ ../opus-zero/docs/ và JavaScript cũ, vì trang đích chưa chuyển; riêng bàn phím kiểm với thành phần mới của lô (src/scripts/ve.js, ban-phim.js). Sửa trang: n18 (ví dụ và câu về dấu hóa nhắc: dời dấu bình lên nốt Fa đầu ô 2) và mục Nguồn (thay link chung tới OMT và musictheory.net bằng các chương đã đọc; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, agent không đọc được chữ). Thuật ngữ cho D3-L5: "đồng âm khác tên" (enharmonic), "dấu thăng kép, giáng kép", "dấu hóa nhắc" (courtesy accidental) chưa có trong src/data/thuat-ngu.yml; "dấu hóa bất thường" (accidental) đã có. Không tính là nhận định: tên tiêu đề, "Ba dấu hóa" (tiêu đề bảng), lời dẫn "Nghe đi lên…" (đã gộp vào n14).'
 nguon:
   - id: omt-steps
@@ -407,6 +416,12 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ https://viva.pressbooks.pub/openmusictheory/chapter/half-and-whole-steps/ ]
     luot_2_ghi_chu: "OMT, Example 5: phím đen giữa D và E là D♯/E♭. D♭ là phím giữa C và D, E♯ = F nên hai phương án sai đều sai."
+  - id: n35
+    cau: "Hình bàn phím Đô4–Đô5 ở mục \"Nửa cung và cung\" (sau danh sách hai nửa cung tự nhiên) tô Mi4, Fa4, Si4, Đô5 và có năm ngoặc: Đô4–Đô♯4 \"½\", Đô♯4–Rê4 \"½\", Đô4–Rê4 \"1\" (tầng trên), Mi4–Fa4 \"½\", Si4–Đô5 \"½\". Câu dẫn: ½ là nửa cung, 1 là một cung; giữa Đô và Rê có một phím đen nên Đô – Rê là hai nửa cung cộng thành một cung; Mi – Fa và Si – Đô không có phím đen xen giữa, là hai nửa cung tự nhiên."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp ::cong-cu{ten=\"piano\" range=\"C4-C5\" notes=\"E4 F4 B4 C5\" ngoac=\"C4-Db4:½ Db4-D4:½ C4-D4:1 E4-F4:½ B4-C5:½\"}. Khớp chữ đầu mục: hai phím liền kề (tính cả phím đen) là nửa cung, hai nửa cung là một cung; giữa hầu hết các cặp phím trắng có một phím đen nên cách một cung; Mi – Fa, Si – Đô không có phím đen xen giữa là nửa cung tự nhiên. Đếm theo số MIDI: Đô4 60, Đô♯4 61, Rê4 62, Mi4 64, Fa4 65, Si4 71, Đô5 72. Hình không thêm điều trang chưa nói."
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -454,3 +469,10 @@ doi_chu:
       - "Open Music Theory: Half Steps, Whole Steps, and Accidentals; Intervals."
       - "Andre Mount, Fundamentals, Function, and Form: chương 5. Pitch và 8. Major Keys and Key Signatures (dấu hóa bất thường, dấu hóa nhắc)."
     ly_do: "Mục Nguồn: thay link chung tới Open Music Theory bằng link tới đúng các chương đã đọc khi kiểm định (lượt 1), thêm giáo trình mở và trang IMSLP đã dùng; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, không đọc được chữ để kiểm."
+  - cu: null
+    moi: "Trên bàn phím dưới đây, mỗi ngoặc ghi khoảng cách giữa hai phím: ½ là nửa cung, 1 là một cung. Giữa Đô và Rê có một phím đen: hai nửa cung, cộng lại thành một cung. Mi – Fa và Si – Đô (phím được tô) không có phím đen xen giữa: hai nửa cung tự nhiên."
+    ly_do: "Đợt hình 2 (mo/hinh-dot-2b): câu dẫn của hình mới (plans/ben-vung/de-xuat-hinh.md, đề xuất 13). Hình có data-sinh nên so-chu không tính chữ trong hình. Câu thuộc n35."
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-2b
+    ly_do: "thêm hình (đợt hình 2): cung và nửa cung trên phím (ngoặc 1, ½) (plans/ben-vung/de-xuat-hinh.md)"

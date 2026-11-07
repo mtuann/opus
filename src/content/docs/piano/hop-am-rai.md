@@ -17,6 +17,20 @@ Hợp âm ba có ba thể: **thể gốc** (nốt gốc ở dưới: Đô–Mi�
 
 Ở thể đảo 1, quãng 4 nằm trên, nên tay phải dùng ngón 2 cho nốt giữa để khoảng 2–5 đủ rộng. Ở thể đảo 2, quãng 4 nằm dưới, nên tay trái dùng ngón 2 cho nốt giữa để khoảng 5–2 đủ rộng. Tay phải ở thể đảo 2 cũng có người dùng 1-2-4; chọn một cách và giữ nguyên.
 
+Ba thể trên phím đàn, với số ngón của bảng (hai tay trên cùng ba nốt của cột ví dụ) và khoảng giữa các nốt, từ dưới lên:
+
+Thể gốc: Đô–Mi–Sol.
+
+::cong-cu{ten="piano" range="C4-E5" play="chord" phai="C4:1 E4:3 G4:5" trai="C4:5 E4:3 G4:1" ngoac="C4-E4:quãng_3 E4-G4:quãng_3"}
+
+Thể đảo 1: Mi–Sol–Đô.
+
+::cong-cu{ten="piano" range="C4-E5" play="chord" phai="E4:1 G4:2 C5:5" trai="E4:5 G4:3 C5:1" ngoac="E4-G4:quãng_3 G4-C5:quãng_4"}
+
+Thể đảo 2: Sol–Đô–Mi.
+
+::cong-cu{ten="piano" range="C4-E5" play="chord" phai="G4:1 C5:3 E5:5" trai="G4:5 C5:2 E5:1" ngoac="G4-C5:quãng_4 C5-E5:quãng_3"}
+
 Để đi qua các thể đảo mà âm thanh vẫn liền:
 
 - **Tạo hình trước.** Trong lúc hợp âm này còn vang, bàn tay đã định hình hợp âm kế tiếp trên không, ngay phía trên phím.

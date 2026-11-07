@@ -88,6 +88,8 @@ K:C
 Bản nhạc piano viết trên **khuông kép**: khóa Sol thường dành cho tay phải, khóa Fa cho tay trái, và Đô giữa nằm trên dòng kẻ phụ ở giữa hai khuông. Thuộc vài **nốt mốc** (Fa3 trên dòng 4 khóa Fa, Sol4 trên dòng 2 khóa Sol), rồi đếm từ nốt mốc gần nhất thay vì đếm từ dòng thấp nhất: xem [Đọc nhạc và thị tấu](/opus/piano/thi-tau/).
 :::
 
+::hinh{ten="khuong-kep-phim"}
+
 ## Bài tập
 
 1. Luyện với [công cụ đọc nốt](/opus/luyen-tap/doc-not/), chọn "Khóa Sol, Trong khuông" đến khi đúng 9/10 lần.

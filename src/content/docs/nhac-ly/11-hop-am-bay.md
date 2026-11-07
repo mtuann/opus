@@ -25,6 +25,20 @@ K:C
 
 Các con số "6" và "6/4" đến từ **bè trầm số** (figured bass) thời Baroque: chúng ghi các quãng tính từ nốt trầm. Ký hiệu kiểu C/E (hợp âm C, bè trầm Mi) thuộc hệ ký hiệu hợp âm của jazz và nhạc pop.
 
+Ba thể của Đô trưởng trên phím đàn: nhãn dưới phím ghi nốt gốc, nốt ba, nốt năm; ngoặc ghi quãng tính từ nốt trầm mà con số ghi lại (6 ở đảo 1; 6 và 4 ở đảo 2).
+
+Thể gốc: Đô – Mi – Sol.
+
+::cong-cu{ten="piano" range="C4-E5" play="chord" notes="C4 E4 G4" nhan="C4:nốt_gốc E4:nốt_ba G4:nốt_năm"}
+
+Đảo 1: Mi – Sol – Đô.
+
+::cong-cu{ten="piano" range="C4-E5" play="chord" notes="E4 G4 C5" nhan="E4:nốt_ba G4:nốt_năm C5:nốt_gốc" ngoac="E4-C5:quãng_6"}
+
+Đảo 2: Sol – Đô – Mi.
+
+::cong-cu{ten="piano" range="C4-E5" play="chord" notes="G4 C5 E5" nhan="G4:nốt_năm C5:nốt_gốc E5:nốt_ba" ngoac="G4-C5:quãng_4 G4-E5:quãng_6"}
+
 Thể đảo không đổi **tên** hợp âm (nốt gốc vẫn là nốt gốc), chỉ đổi nốt ở bè trầm. Thể đảo 2 được xử lý đặc biệt: nốt năm ở bè trầm tạo quãng 4 nghịch với bè trầm. Dạng thường gặp là **6/4 kết**, trang trí cho hợp âm V ở chỗ kết.
 
 ## Hợp âm bảy

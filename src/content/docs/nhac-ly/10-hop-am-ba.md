@@ -34,6 +34,24 @@ K:C
 
 Hợp âm trưởng và thứ đều có **quãng 5 đúng** giữa nốt gốc và nốt năm; chúng chỉ khác nhau ở **nốt ba**. Hợp âm giảm có quãng 5 giảm, hợp âm tăng có quãng 5 tăng.
 
+Bốn hợp âm trên phím đàn, theo thứ tự của bảng: hai ngoặc dưới là hai quãng 3 chồng lên nhau (từ dưới lên), ngoặc trên là quãng 5 giữa nốt gốc và nốt năm.
+
+Trưởng (C): Đô – Mi – Sol.
+
+::cong-cu{ten="piano" range="C4-A4" play="chord" notes="C4 E4 G4" ngoac="C4-E4:3_trưởng E4-G4:3_thứ C4-G4:5_đúng"}
+
+Thứ (Cm): Đô – Mi♭ – Sol.
+
+::cong-cu{ten="piano" range="C4-A4" play="chord" notes="C4 Eb4 G4" ngoac="C4-Eb4:3_thứ Eb4-G4:3_trưởng C4-G4:5_đúng"}
+
+Giảm (C°): Đô – Mi♭ – Sol♭.
+
+::cong-cu{ten="piano" range="C4-A4" play="chord" notes="C4 Eb4 Gb4" ngoac="C4-Eb4:3_thứ Eb4-Gb4:3_thứ C4-Gb4:5_giảm"}
+
+Tăng (C+): Đô – Mi – Sol♯.
+
+::cong-cu{ten="piano" range="C4-A4" play="chord" notes="C4 E4 G#4" ngoac="C4-E4:3_trưởng E4-G#4:3_trưởng C4-G#4:5_tăng"}
+
 ## Hợp âm trên các bậc của gam trưởng
 
 Xây hợp âm ba trên từng nốt của gam, chỉ dùng nốt trong gam, ta được 7 hợp âm. Chúng được đánh số La Mã: **chữ hoa** cho hợp âm trưởng, **chữ thường** cho hợp âm thứ, thêm **°** cho hợp âm giảm.

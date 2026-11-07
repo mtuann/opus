@@ -15,6 +15,10 @@ Trumpet tạo âm bằng **môi rung** (như thổi "bờ" môi) vào miệng k�
 
 **Hai loại trumpet dùng nhiều nhất là trumpet Si♭ và trumpet Đô.** Trumpet Si♭ là nhạc cụ dịch giọng: nốt viết Đô vang thành Si♭ — **thấp hơn một cung** so với nốt viết. Âm vực viết khoảng **Fa♯3 đến Đô6**. Đọc **khóa Sol**.
 
+Trên phím đàn: nốt viết Đô4 của trumpet Si♭ vang thành Si♭3.
+
+::cong-cu{ten="piano" range="G3-C4" notes="Bb3 C4" nhan="C4:viết_Đô" ngoac="Bb3-C4:trumpet_Si♭:_một_cung"}
+
 Trumpet Đô không dịch giọng, vang đúng nốt viết. Trumpet piccolo nhỏ hơn, vang cao hơn trumpet thường khoảng một quãng tám (loại Si♭ cao vang cao hơn nốt viết một quãng 7 thứ); ngày nay nhiều người chơi dùng nó cho các bè trumpet cao vút thời Baroque như Concerto Brandenburg số 2 của Bach (nguyên bản viết cho trumpet tự nhiên không van), số khác dùng trumpet tự nhiên kiểu cổ.
 
 ## Vai trò

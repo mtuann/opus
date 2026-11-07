@@ -21,6 +21,15 @@ lan:
       luot_2: "Claude Opus 5.5 (lượt 2 mo/link-hong, 07/11/2026)"
       review: "Claude Opus 5.5 (review mo/link-hong, 07/11/2026: ba câu lượt 2 khong-chac sửa theo đề xuất, đối chiếu lại nguồn mới và bản lưu)"
       kiem_mau: "Claude Opus 5.5 (người gom mo/link-hong, kiểm thay chủ repo theo lời giao 07/11/2026): mẫu 4 nguồn mới tải lại bằng curl (bản lưu Wayback LCS Ritornello, slide MIT OCW Harris 2006 có \"sequence in b\" ở La stravaganza, hai địa chỉ mới Hollywood Bowl /works/… trả 200 đúng bài): khớp nhận định; 0 sai"
+  - so: 3
+    ngay: null
+    nhanh: mo/hinh-dot-2b
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (đợt hình 2b, lượt 1, 06/11/2026; thủ tục hình, plans/ben-vung/chuan-kiem-dinh.md mục 7)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: baylor-inv
     bac: 2
@@ -718,6 +727,18 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'KHỚP: kiem-dinh/nhac-ly/10-hop-am-ba, 11-hop-am-bay, 12-hoa-am-chuc-nang, bat-dau/lo-trinh-choi, piano/10-bai-dau-tien, piano/index, luyen-tai/choi-bang-tai, luyen-tai/nghe-tien-trinh. Các neo có trong dist: bon-kieu-hinh-em, hoa-am-ban-phim-vong-ket-iiviv7i, 3-bass-alberti. piano/index: hop-am-rai có mục Hợp âm ba ở các thể đảo, Bốn kiểu hình đệm, vòng kết I–IV–I–V7–I: đủ. Chữ "mọi giọng" trong piano/index chỉ là mô tả; trang chứa bảng bảy giọng (Đô, Sol, Fa, Rê, Si♭, La, Mi♭) và ví dụ La thứ. Review: đã kiểm bảng thể đảo (dòng 13–16), hình đệm valse và Alberti (### 2., ### 3.), dist/piano/hop-am-rai/index.html có id="bon-kieu-hinh-em", "hoa-am-ban-phim-vong-ket-iiviv7i", "3-bass-alberti"; khối 4 IV [C,F,A,] thể đảo 2, V [B,,D,G,] thể đảo 1; bảng vòng kết có Đô, Sol, Fa.'
     review: dung
+  - id: n73
+    cau: "Ba hình bàn phím Đô4–Mi5 ở mục \"Hợp âm ba ở các thể đảo\", mỗi hình có dòng tên (\"Thể gốc: Đô–Mi–Sol.\", \"Thể đảo 1: Mi–Sol–Đô.\", \"Thể đảo 2: Sol–Đô–Mi.\") và số ngón hai tay của bảng trên cùng ba phím: thể gốc tay phải 1-3-5, tay trái 5-3-1; thể đảo 1 phải 1-2-5, trái 5-3-1; thể đảo 2 phải 1-3-5, trái 5-2-1; nút \"Nghe hợp âm\"."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Ba ::cong-cu{ten=\"piano\" range=\"C4-E5\" play=\"chord\" phai=\"…\" trai=\"…\" ngoac=\"…\"}. Số ngón khớp cột \"Tay phải\", \"Tay trái\" của bảng (nốt thấp → cao), và khuông ngay dưới (\"^1-3-5\", \"^1-2-5\", \"_5-3-1\", \"_5-2-1\"). Hai tay vẽ trên cùng ba phím của cột ví dụ (câu dẫn nói vậy); khuông chơi tay trái thấp hơn hai quãng tám. Cách 1-2-4 ở thể đảo 2 (chữ ngay trên) không vẽ."
+  - id: n74
+    cau: "Ngoặc của ba hình ghi khoảng giữa hai nốt liền nhau, từ dưới lên, như cột \"Khoảng, từ dưới lên\": thể gốc quãng 3 + quãng 3; thể đảo 1 quãng 3 + quãng 4; thể đảo 2 quãng 4 + quãng 3."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Khớp bảng và chữ đầu mục (\"ở thể đảo, một trong hai khoảng trở thành quãng 4\"; \"ở thể đảo 1, quãng 4 nằm trên … ở thể đảo 2, quãng 4 nằm dưới\"). Đếm bậc: Mi–Sol ba tên nốt, Sol–Đô bốn, Đô–Mi ba."
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -850,7 +871,17 @@ doi_chu:
   - cu: "University of Evansville, Scale and Arpeggio Fingerings: ngón bấm hợp âm rải."
     moi: "University of Evansville, Scale and Arpeggio Fingerings (bản lưu): ngón bấm hợp âm rải."
     ly_do: "mo/link-hong (06/11/2026): link ngoài hỏng (lychee 07/11/2026); trang Evansville trả 404, đổi sang bản lưu Wayback 29/07/2024."
+  - cu: null
+    moi:
+      - "Ba thể trên phím đàn, với số ngón của bảng (hai tay trên cùng ba nốt của cột ví dụ) và khoảng giữa các nốt, từ dưới lên:"
+      - "Thể gốc: Đô–Mi–Sol."
+      - "Thể đảo 1: Mi–Sol–Đô."
+      - "Thể đảo 2: Sol–Đô–Mi."
+    ly_do: "Đợt hình 2 (mo/hinh-dot-2b): câu dẫn của hình mới (plans/ben-vung/de-xuat-hinh.md, đề xuất 9). Hình có data-sinh nên so-chu không tính chữ trong hình. Câu thuộc n73, n74."
 mo_khoa:
   - ngay: 2026-11-06
     nhanh: mo/link-hong
     ly_do: "link ngoài hỏng (lychee 07/11/2026): đổi link chết sang bản lưu Wayback, địa chỉ mới hay nguồn khác đọc được"
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-2b
+    ly_do: "thêm hình (đợt hình 2): thể đảo với số ngón hai tay và quãng 3, quãng 4 trên phím (plans/ben-vung/de-xuat-hinh.md)"
