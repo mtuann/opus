@@ -50,6 +50,8 @@ Nếu chỉ có 20 phút, rút ngắn phần bài đang tập nhưng đừng b�
 
 **Ngày 2–3.** Hai tay được đánh số giống nhau: **ngón cái là 1**, ngón út là 5. Đặt tay phải vào **thế Đô**: ngón 1 trên Đô giữa, mỗi ngón một phím trắng, ngón 5 trên Sol4. Tay trái là ảnh gương: ngón 5 trên Đô3, ngón 1 trên Sol3 ([Vị trí năm ngón](/opus/piano/nam-ngon/)). Chơi thật chậm, nối mỗi nốt liền vào nốt sau (**legato**), và nghe xem năm nốt có to đều nhau không. Nếu ngón 4 và 5 chưa đều bằng các ngón khác, đó là chuyện bình thường khi mới tập: đừng bù bằng cách ép mạnh.
 
+::cong-cu{ten="piano" range="C3-G4" phai="C4:1 D4:2 E4:3 F4:4 G4:5" trai="C3:5 D3:4 E3:3 F3:2 G3:1"}
+
 Từ ngày 3, hãy **đếm to** "một – hai – ba – bốn" thành tiếng, và giữ tiếng đếm cả khi đang chơi. **Nốt tròn** ngân 4 phách, **nốt trắng** 2 phách, **nốt đen** 1 phách.
 
 ::cong-cu{ten="metronome"}
@@ -57,6 +59,8 @@ Từ ngày 3, hãy **đếm to** "một – hai – ba – bốn" thành tiếng
 **Ngày 4.** Học **khuông kép**: khuông khóa Sol ở trên (thường cho tay phải), khuông khóa Fa ở dưới (thường cho tay trái). Chỉ cần thuộc ba **nốt mốc**: Đô giữa nằm trên dòng kẻ phụ giữa hai khuông; Sol4 nằm trên dòng thứ hai của khóa Sol, dòng mà khóa Sol quấn quanh; Fa3 nằm trên dòng thứ tư của khóa Fa, giữa hai dấu chấm của khóa. Nốt nào khác cũng đọc theo khoảng cách tới mốc gần nhất.
 
 **Ngày 5–6.** Bài đầu tiên. Trong *Au clair de la lune*, giai điệu chuyền từ tay này sang tay kia, nên bạn tập đọc cả hai khóa và đổi tay đúng nhịp trước khi phải cho hai tay chơi cùng lúc. Đặt tay đúng vị trí ghi ở đầu bài và làm theo số ngón trên bản nhạc. Bài này cũng là lần đầu tay trái rời thế Đô: tay trái chuyển sang **thế Sol** (ngón 5 trên Sol2, ngón 1 trên Rê3), còn tay phải vẫn ở thế Đô; xem bảng các thế tay ở [Vị trí năm ngón](/opus/piano/nam-ngon/).
+
+::cong-cu{ten="piano" range="G2-G4" phai="C4:1 D4:2 E4:3 F4:4 G4:5" trai="G2:5 A2:4 B2:3 C3:2 D3:1"}
 
 **Ngày 7.** Lần thu âm đầu tiên. Chơi khởi động 1 và bài 1 như đang có người nghe, rồi nghe lại một lần, không phán xét: nhịp có đều không, bạn dừng ở đâu? Giữ bản thu này cho ngày 14.
 

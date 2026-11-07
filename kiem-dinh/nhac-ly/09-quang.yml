@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 3, 28/10/2026; bổ sung sau review)
       review: Claude (review D3-gom, nhóm A, 28/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 3 (D3-L2 đến D3-L6): 6 đúng, 4 câu về site và lời khuyên tập không kiểm độc lập được (người gom kiểm lại trên repo, đúng), 0 sai (bao-cao/d3-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: mo/hinh-dot-1
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/hinh-dot-1, 06/11/2026: thêm bàn phím có số ngón, nhãn, ngoặc; đối chiếu hình với chữ, bảng và khuông của trang)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Trang quãng (tầng lõi). Nguồn chính: Open Music Theory (OMT), Intervals; Mount (FFF) ch. 11 đối chiếu bảng nửa cung, quy tắc đảo, quãng ghép; quãng thuận/nghịch theo OMT Introduction to Species Counterpoint; tritone: Concise Oxford Dictionary of Music (qua encyclopedia.com, như D3-L1). Trang đọc bằng WebFetch của agent ngày 27/10/2026 (máy chủ repo không ra mạng); công cụ này trả bản tóm tắt chữ của trang, không phải HTML thô, nên chữ trích đã đối chiếu bằng nhiều câu hỏi; riêng bảng Example 13 (quãng thuận hòa âm) của OMT Intervals, bản tóm tắt có chỗ không khớp quy tắc (xếp 7 trưởng/thứ vào cột thuận), nên trang theo OMT Species Counterpoint. Chỗ sửa trang: tritone (bỏ "rất căng", "gọi đùa", thêm câu Oxford), mẹo nhanh (bỏ "giảm" ở quãng 1), quãng ghép (bỏ "giữa bè trầm với bè cao" và C13), bảng thuận/nghịch (cột Cảm giác thành Độ ổn định; quãng 4 đúng nói rõ điều kiện), mục Nguồn; mục doi_chu tự viết (không build được), người giao chạy lại so-chu --doi-chu để chuẩn hóa dấu nháy. Chưa chắc: n46 (OMT Intervals và Species Counterpoint xếp quãng 4 đúng khác nhau, xem ghi_chu) và n32 (Mount 11 tự mâu thuẫn về quãng 1 giảm). Câu về site: link sang các trang chưa chuyển (luyen-tai, luyen-tap, piano, tai-lieu-tham-khao, nhac-ly/27) đều kiểm trên ../opus-zero/docs/. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): melodic interval, harmonic interval (quãng giai điệu, quãng hòa âm), compound interval (quãng ghép), perfect, major, minor, augmented, diminished (đúng, trưởng, thứ, tăng, giảm), tritone, interval inversion (đảo quãng), unison, octave; đã có: interval, semitone, consonance, dissonance.'
 nguon:
   - id: omt-intervals
@@ -612,6 +621,26 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/intervals/" ]
     luot_2_ghi_chu: Khớp nguồn.
+  - id: n66
+    cau: "Hình bàn phím Đô4–Đô5 ở mục \"Bước 2: tính chất\" ghi ở mỗi phím số nửa cung tính từ Đô4 và tên quãng (phím trắng ghi bên dưới, phím đen bên trên): Đô4 0 (1 đúng), Đô♯/Rê♭ 1 (2 thứ), Rê 2 (2 trưởng), Rê♯/Mi♭ 3 (3 thứ), Mi 4 (3 trưởng), Fa 5 (4 đúng), Fa♯/Sol♭ 6 (4 tăng, 5 giảm), Sol 7 (5 đúng), Sol♯/La♭ 8 (6 thứ), La 9 (6 trưởng), La♯/Si♭ 10 (7 thứ), Si 11 (7 trưởng), Đô5 12 (8 đúng); bảng dưới ghi cùng các quãng ấy, kèm ví dụ từ Đô."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp ::cong-cu{ten=\"piano\" range=\"C4-C5\" nhan=\"C4:0|1_đúng Db4:1|2_thứ … C5:12|8_đúng\"}: 13 nhãn, mỗi nhãn đúng số nửa cung và tên quãng của dòng tương ứng trong bảng (n11–n23, đã kiểm định với OMT Example 16 và Mount Table 11-2); phím của nhãn là phím cách Đô4 đúng số nửa cung ấy (Đô4 = MIDI 60, nhãn ở MIDI 60 + số). Ảnh chụp 360 và 1280 px: nhãn phím trắng dưới bàn phím (tên quãng xếp so le hai hàng vì dài hơn bề rộng phím), nhãn phím đen trên bàn phím. Bảng giữ nguyên (câu đã khóa n10–n23)."
+  - id: n67
+    cau: "Đô4 – Mi4 (quãng 3 trưởng, 4 nửa cung) và Mi4 – Đô5 (quãng 6 thứ, 8 nửa cung) nối nhau thành quãng tám Đô4 – Đô5, nên số nửa cung cộng lại là 12: 4 + 8 = 12."
+    loai: quy-tac
+    nguon: 
+      - omt-intervals
+      - fff-intervals
+    ket_qua: dung
+    ghi_chu: "Ba con số lấy từ bảng nửa cung đã kiểm định của trang: 3 trưởng = 4 (n15), 6 thứ = 8 (n19), 8 đúng = 12 (n23) (OMT Intervals Example 16, Mount Table 11-2); Đô4–Mi4 và Mi4–Đô5 chung nốt Mi4 nên ghép lại đúng bằng Đô4–Đô5. Khớp ví dụ đảo quãng đã khóa (n42: Đô – Mi đảo thành Mi – Đô, 6 thứ). Lượt 2 kiểm câu này (nguồn ngoài)."
+  - id: n68
+    cau: "Hình bàn phím Đô4–Đô5 ở mục \"Đảo quãng\" tô Đô4, Mi4, Đô5 và có ba ngoặc: Đô4–Mi4 \"3 trưởng, 4 nửa cung\", Mi4–Đô5 \"6 thứ, 8 nửa cung\", Đô4–Đô5 \"8 đúng, 12 nửa cung\" (ngoặc dài ở tầng trên); nút \"Nghe các nốt được tô\" phát ba nốt."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp ::cong-cu{ten=\"piano\" range=\"C4-C5\" notes=\"C4 E4 C5\" ngoac=\"C4-E4:3_trưởng|4_nửa_cung E4-C5:6_thứ|8_nửa_cung C4-C5:8_đúng|12_nửa_cung\"}. Ba ngoặc khớp câu dẫn (n67) và bảng (n15, n19, n23). Ảnh chụp 1280 px: hai ngoặc ngắn cùng tầng (chung đầu Mi4), ngoặc Đô4–Đô5 ở trên."
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -652,3 +681,13 @@ doi_chu:
       - "Andre Mount, Fundamentals, Function, and Form: chương 11. Intervals."
       - The Concise Oxford Dictionary of Music, mục tritone (đọc qua encyclopedia.com).
     ly_do: "Mục Nguồn: thay link chung tới Open Music Theory bằng các chương đã đọc khi kiểm định (lượt 1), thêm Mount ch. 11 và Concise Oxford Dictionary of Music (tritone); bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, agent không đọc được chữ để kiểm."
+  - cu: null
+    moi: "Ở mỗi phím: số nửa cung tính từ Đô4, rồi tên quãng (phím trắng ghi bên dưới, phím đen ghi bên trên). Bảng dưới ghi cùng các quãng ấy, kèm ví dụ từ Đô:"
+    ly_do: "Đợt hình 1 (mo/hinh-dot-1): câu dẫn của hình bàn phím mới (bàn phím có số ngón, nhãn, ngoặc; plans/ben-vung/de-xuat-hinh.md, thành phần A). Hình có data-sinh nên so-chu không tính chữ trong hình. Câu thuộc n66."
+  - cu: null
+    moi: "Trên phím, Đô4 – Mi4 và Mi4 – Đô5 nối nhau thành đúng một quãng tám, nên số nửa cung cộng lại là 12: 4 + 8 = 12."
+    ly_do: "Đợt hình 1 (mo/hinh-dot-1): câu dẫn của hình bàn phím mới (bàn phím có số ngón, nhãn, ngoặc; plans/ben-vung/de-xuat-hinh.md, thành phần A). Hình có data-sinh nên so-chu không tính chữ trong hình. Câu thuộc n67."
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-1
+    ly_do: "thêm hình (đợt hình 1): bàn phím có số ngón, nhãn, ngoặc (thành phần A, plans/ben-vung/de-xuat-hinh.md)"

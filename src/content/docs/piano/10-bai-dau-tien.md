@@ -57,6 +57,8 @@ Mỗi bài mất vài ngày đến vài tuần tùy người; [Lộ trình piano
 
 Tay phải ở thế Đô (ngón 1 trên Đô giữa). Tay trái ở **thế Sol**: ngón 5 trên Sol2, ngón 1 trên Rê3. Ở các đoạn tay phải hát, tay trái chỉ giữ nốt trầm Đô (ngón 2) và Sol (ngón 5).
 
+::cong-cu{ten="piano" range="G2-G4" phai="C4:1 D4:2 E4:3 F4:4 G4:5" trai="G2:5 A2:4 B2:3 C3:2 D3:1"}
+
 ```abc
 X:1
 T:Au clair de la lune (soạn hai tay)
@@ -81,6 +83,10 @@ K:C
 *Dân ca Pháp; Mozart viết 12 biến tấu trên giai điệu này (K. 265).* Đô trưởng. **Học được:** tay trái đổi nốt trầm theo hòa âm, với ba nốt Đô – Fa – Sol (chủ âm, hạ át âm, át âm).
 
 Ở ô 1–2, tay phải **mở rộng**: ngón 4 trên Sol, ngón 5 trên La. Sang ô 3, thu tay về thế Đô (ngón 4 trên Fa). Tay trái ở thế Đô: Đô3 ngón 5, Fa3 ngón 2, Sol3 ngón 1.
+
+Hai tay ở ô 1–2:
+
+::cong-cu{ten="piano" range="C3-A4" phai="C4:1 G4:4 A4:5" trai="C3:5 F3:2 G3:1" nhan="A4:mở|rộng"}
 
 ```abc
 X:2
@@ -127,6 +133,14 @@ K:C
 ## 4. Hänschen klein
 
 *Bài hát thiếu nhi Đức.* Đô trưởng. **Học được:** **hợp âm ba nốt** ở tay trái và đổi giữa hai hình: hợp âm chủ **Đô – Mi – Sol** (ngón 5-3-1) và hợp âm bảy át **Si – Fa – Sol** (ngón 5-2-1). Ngón cái giữ nguyên trên Sol; ngón 5 dời xuống Si, ngón 2 đặt lên Fa.
+
+Hợp âm chủ:
+
+::cong-cu{ten="piano" range="B2-G3" trai="C3:5 E3:3 G3:1" play="chord"}
+
+Hợp âm bảy át:
+
+::cong-cu{ten="piano" range="B2-G3" trai="B2:5 F3:2 G3:1" play="chord"}
 
 ```abc
 X:4
@@ -221,6 +235,8 @@ K:C
 
 Tay trái đi xuống từng bậc La – Sol – Fa – Mi (ngón 1-2-3-4), mỗi nốt giữ trọn ô nhịp.
 
+::cong-cu{ten="piano" range="E2-A2" trai="A2:1 G2:2 F2:3 E2:4"}
+
 ```abc
 X:8
 T:Greensleeves (soạn hai tay)
@@ -297,6 +313,8 @@ K:G
 *Beethoven, Bagatelle La thứ WoO 59 (1810).* La thứ, nhịp 3/8. **Học được:** hai tay **thay phiên** nhau thành một dòng chảy liền như của một bàn tay: tay trái rải La – Mi – La, tay phải đón tiếp Đô – Mi – La.
 
 Đây là **nguyên văn** hai tay của Beethoven ở đoạn mở đầu (trong bản gốc, câu này được nhắc lại; ở đây khép tạm bằng nốt La để thành bài tập). Tay trái: ngón 5-2-1.
+
+::cong-cu{ten="piano" range="A2-A4" trai="A2:5 E3:2 A3:1" phai="C4:1 E4:2 A4:4"}
 
 ```abc
 X:11

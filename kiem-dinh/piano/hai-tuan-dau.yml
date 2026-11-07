@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 4, 28/10/2026; bổ sung sau review)
       review: Claude (review D4-gom, nhóm A, 28/10/2026)
       kiem_mau: 'chủ repo, 10 nhận định mẫu của đợt 4 (D4-L1 đến D4-L4): 10 đúng (3 có điều kiện, đã sửa theo: nguồn Versuch §5 và láy rền thường, Frère Jacques "bài hát Pháp truyền thống", quãng tám trong gợi ý ngón của mẫu galant), 0 sai (bao-cao/d4-gom/kiem-mau-ket-qua.yml)'
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: mo/hinh-dot-1
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/hinh-dot-1, 06/11/2026: thêm bàn phím có số ngón, nhãn, ngoặc; đối chiếu hình với chữ, bảng và khuông của trang)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: yamaha-weighted
     bac: 2
@@ -404,6 +413,18 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'piano/lo-trinh (đã chuyển): "Chặng 1. Khởi đầu (0–6 tháng)"; bat-dau/lo-trinh-choi đã chuyển (tồn tại ở site mới). Review D4-gom: src/content/docs/piano/lo-trinh.md: "Chặng 1. Khởi đầu (0–6 tháng)"; link bat-dau/lo-trinh-choi sống.'
     review: dung
+  - id: n42
+    cau: "Hình bàn phím ở ngày 2–3 (Đô3–Sol4): thế Đô của hai tay, tay phải ngón 1–5 trên Đô4–Sol4, tay trái ngón 5–1 trên Đô3–Sol3."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp range=\"C3-G4\" phai=\"C4:1 D4:2 E4:3 F4:4 G4:5\" trai=\"C3:5 D3:4 E3:3 F3:2 G3:1\". Khớp câu ngày 2–3 (\"ngón 1 trên Đô giữa, mỗi ngón một phím trắng, ngón 5 trên Sol4\"; \"ngón 5 trên Đô3, ngón 1 trên Sol3\") và khuông 1 (khởi động 1: tay phải !1!C … !5!G, tay trái !5!C, … !1!G,)."
+  - id: n43
+    cau: "Hình bàn phím ở ngày 5–6 (Sol2–Sol4): tay phải vẫn ở thế Đô (ngón 1–5 trên Đô4–Sol4), tay trái ở thế Sol (ngón 5 trên Sol2 … ngón 1 trên Rê3)."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp range=\"G2-G4\" phai=\"C4:1 D4:2 E4:3 F4:4 G4:5\" trai=\"G2:5 A2:4 B2:3 C3:2 D3:1\". Khớp câu ngày 5–6 (\"thế Sol (ngón 5 trên Sol2, ngón 1 trên Rê3), còn tay phải vẫn ở thế Đô\") và cùng thế tay với hình bài 1 của piano/10-bai-dau-tien (n110 ở hồ sơ ấy)."
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -487,3 +508,7 @@ doi_chu:
   - cu: "câu hỏi: Vì sao nên thu âm vào ngày 7 và ngày 14? | ✓ Để nghe ra những điều không nhận thấy khi đang chơi, và so sánh tiến bộ | Để gửi đi thi | Vì máy đếm nhịp không đủ chính xác | Lúc chơi, tai bận theo dõi tay; khi nghe lại, bạn nghe được nhịp và âm thanh thật của mình."
     moi: "câu hỏi: Vì sao nên thu âm vào ngày 7 và ngày 14? | ✓ Để nghe lại chính mình và so sánh hai bản thu | Để gửi đi thi | Vì máy đếm nhịp không đủ chính xác | Nghe hai bản thu liền nhau cho bạn một cách so sánh cụ thể giữa tuần 1 và tuần 2."
     ly_do: 'n40 (da-sua): đáp án "nghe ra những điều không nhận thấy khi đang chơi" là khẳng định tâm lý không có nguồn; đáp án mới chỉ nói điều chắc chắn (nghe lại và so sánh hai bản thu).; n40 (da-sua): như dòng trên, giải thích khớp đáp án mới.'
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-1
+    ly_do: "thêm hình (đợt hình 1): bàn phím có số ngón, nhãn, ngoặc (thành phần A, plans/ben-vung/de-xuat-hinh.md)"

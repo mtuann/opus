@@ -21,6 +21,10 @@ Con số **không phụ thuộc vào dấu hóa**: Đô → Mi, Đô → Mi♭ v
 
 Tính chất được xác định bằng **số nửa cung** chính xác:
 
+::cong-cu{ten="piano" range="C4-C5" nhan="C4:0|1_đúng Db4:1|2_thứ D4:2|2_trưởng Eb4:3|3_thứ E4:4|3_trưởng F4:5|4_đúng Gb4:6|4_tăng|5_giảm G4:7|5_đúng Ab4:8|6_thứ A4:9|6_trưởng Bb4:10|7_thứ B4:11|7_trưởng C5:12|8_đúng"}
+
+Ở mỗi phím: số nửa cung tính từ Đô4, rồi tên quãng (phím trắng ghi bên dưới, phím đen ghi bên trên). Bảng dưới ghi cùng các quãng ấy, kèm ví dụ từ Đô:
+
 | Quãng | Số nửa cung | Ví dụ từ Đô |
 |---|---|---|
 | 1 đúng | 0 | Đô – Đô |
@@ -74,6 +78,10 @@ Quãng **lớn hơn quãng 8** gọi là **quãng ghép**. Trừ đi 7 để đ�
 - Tính chất đổi: **trưởng ↔ thứ**, **tăng ↔ giảm**, **đúng vẫn là đúng**.
 
 Ví dụ: Đô – Mi (3 trưởng) đảo thành Mi – Đô (6 thứ).
+
+Trên phím, Đô4 – Mi4 và Mi4 – Đô5 nối nhau thành đúng một quãng tám, nên số nửa cung cộng lại là 12: 4 + 8 = 12.
+
+::cong-cu{ten="piano" range="C4-C5" notes="C4 E4 C5" ngoac="C4-E4:3_trưởng|4_nửa_cung E4-C5:6_thứ|8_nửa_cung C4-C5:8_đúng|12_nửa_cung"}
 
 ## Thuận tai và nghịch tai
 

@@ -18,7 +18,19 @@ Năm ngón đặt trên năm phím liền nhau, ứng với năm bậc đầu c�
 
 Thế Đô của hai tay trên bàn phím (bấm nút nghe để nghe mười nốt):
 
-::cong-cu{ten="piano" range="C3-G4" notes="C3 D3 E3 F3 G3 C4 D4 E4 F4 G4"}
+::cong-cu{ten="piano" range="C3-G4" phai="C4:1 D4:2 E4:3 F4:4 G4:5" trai="C3:5 D3:4 E3:3 F3:2 G3:1"}
+
+Thế Đô giữa: hai ngón cái chung phím Đô4.
+
+::cong-cu{ten="piano" range="F3-G4" phai="C4:1 D4:2 E4:3 F4:4 G4:5" trai="F3:5 G3:4 A3:3 B3:2 C4:1"}
+
+Thế Sol:
+
+::cong-cu{ten="piano" range="G2-D5" phai="G4:1 A4:2 B4:3 C5:4 D5:5" trai="G2:5 A2:4 B2:3 C3:2 D3:1"}
+
+Thế Fa: phím đen Si♭ dưới ngón 4 tay phải và ngón 2 tay trái.
+
+::cong-cu{ten="piano" range="F2-C5" phai="F4:1 G4:2 A4:3 Bb4:4 C5:5" trai="F2:5 G2:4 A2:3 Bb2:2 C3:1"}
 
 :::tip[Cùng nốt, số ngón ngược nhau]
 Tay trái là ảnh gương của tay phải. Khi hai tay **cùng đi lên** (sang phải), tay phải đi 1 → 5 còn tay trái đi 5 → 1. Ngược lại, khi hai tay **đi ngược chiều** từ hai ngón cái ra ngoài, hai tay dùng **cùng số ngón** cùng lúc. Vì vậy chuyển động ngược chiều thường là cách dễ nhất để bắt đầu chơi hai tay.
@@ -42,6 +54,40 @@ Năm nốt trưởng luôn theo mẫu **cung – cung – nửa cung – cung**.
 | 4. riêng lẻ | Fa♯ (= Sol♭) | Fa♯ Sol♯ La♯ Si Đô♯ | Fa♯ (1), Sol♯ (2), La♯ (3), Đô♯ (5) | La |
 | | Si♭ | Si♭ Đô Rê Mi♭ Fa | Si♭ (1), Mi♭ (4) | Rê♭ |
 | | Si | Si Đô♯ Rê♯ Mi Fa♯ | Đô♯ (2), Rê♯ (3), Fa♯ (5) | Rê |
+
+Năm ngón tay phải của mười hai giọng trên phím, theo bốn nhóm của bảng. Nhãn "thứ" đánh dấu phím của bậc 3 ở thế thứ: ngón 3 dịch xuống phím ấy.
+
+Nhóm 1, trắng – trắng – trắng: Đô, Sol, Fa.
+
+::cong-cu{ten="piano" range="C4-G4" phai="C4:1 D4:2 E4:3 F4:4 G4:5" nhan="Eb4:thứ"}
+
+::cong-cu{ten="piano" range="G4-D5" phai="G4:1 A4:2 B4:3 C5:4 D5:5" nhan="Bb4:thứ"}
+
+::cong-cu{ten="piano" range="F4-C5" phai="F4:1 G4:2 A4:3 Bb4:4 C5:5" nhan="Ab4:thứ"}
+
+Nhóm 2, trắng – đen – trắng: Rê, La, Mi.
+
+::cong-cu{ten="piano" range="D4-A4" phai="D4:1 E4:2 F#4:3 G4:4 A4:5" nhan="F4:thứ"}
+
+::cong-cu{ten="piano" range="A4-E5" phai="A4:1 B4:2 C#5:3 D5:4 E5:5" nhan="C5:thứ"}
+
+::cong-cu{ten="piano" range="E4-B4" phai="E4:1 F#4:2 G#4:3 A4:4 B4:5" nhan="G4:thứ"}
+
+Nhóm 3, đen – trắng – đen: Rê♭, La♭, Mi♭.
+
+::cong-cu{ten="piano" range="Db4-Ab4" phai="Db4:1 Eb4:2 F4:3 Gb4:4 Ab4:5" nhan="E4:thứ"}
+
+::cong-cu{ten="piano" range="Ab4-Eb5" phai="Ab4:1 Bb4:2 C5:3 Db5:4 Eb5:5" nhan="B4:thứ"}
+
+::cong-cu{ten="piano" range="Eb4-Bb4" phai="Eb4:1 F4:2 G4:3 Ab4:4 Bb4:5" nhan="Gb4:thứ"}
+
+Nhóm 4, riêng lẻ: Fa♯, Si♭, Si.
+
+::cong-cu{ten="piano" range="F#4-C#5" phai="F#4:1 G#4:2 A#4:3 B4:4 C#5:5" nhan="A4:thứ"}
+
+::cong-cu{ten="piano" range="Bb4-F5" phai="Bb4:1 C5:2 D5:3 Eb5:4 F5:5" nhan="Db5:thứ"}
+
+::cong-cu{ten="piano" range="B4-F#5" phai="B4:1 C#5:2 D#5:3 E5:4 F#5:5" nhan="D5:thứ"}
 
 Rê♭ thứ cần tám dấu giáng nên không có hóa biểu, còn La♭ thứ cần bảy. Trên bản nhạc, có thể viết hai giọng này thành **Đô♯ thứ** (bốn dấu thăng) và **Sol♯ thứ** (năm dấu thăng): cùng phím đàn, ít dấu hóa hơn.
 
