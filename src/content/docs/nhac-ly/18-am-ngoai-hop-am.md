@@ -16,6 +16,8 @@ Nếu giai điệu chỉ dùng các nốt thuộc hợp âm đang vang, nó sẽ
 | **Nốt đón trước** (anticipation) | Không có quy định | Giữ nguyên sang hợp âm sau | Nốt của hợp âm sau vang lên sớm |
 | **Âm nền** (pedal point) | Một nốt **giữ dài** ở bè trầm | Trong khi hợp âm bên trên thay đổi | Sol giữ ở bè trầm qua nhiều hợp âm |
 
+::hinh{ten="am-ngoai"}
+
 ## Nghe từng loại
 
 **Nốt lướt** (bè trầm giữ hợp âm Đô trưởng, giai điệu đi qua Rê và Fa):

@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 3, 28/10/2026; bổ sung sau review)
       review: Claude (review D3-gom, nhóm A, 28/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 3 (D3-L2 đến D3-L6): 6 đúng, 4 câu về site và lời khuyên tập không kiểm độc lập được (người gom kiểm lại trên repo, đúng), 0 sai (bao-cao/d3-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: mo/hinh-dot-2c
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/hinh-dot-2c, 06/11/2026: thêm hình tĩnh am-ngoai; đối chiếu chữ trong hình với bảng và khuông của trang; thủ tục hình rút gọn, chuan-kiem-dinh mục 7)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Trang âm ngoài hợp âm (tầng lõi), bốn khối abc, không có hình. Nguồn chính: OMT, Embellishing Tones (định nghĩa passing, neighbor, appoggiatura, suspension, anticipation, pedal tone); Sierra College, Equipping the Musical Ear 13.06 (ví dụ 4–3 y như khối 2); Oxford Dictionary of Music, appoggiatura; Mutopia BWV 846 (âm nền át ô 24–31, âm nền chủ ô 32–35). WebFetch ngày 28/10/2026 (bản tóm tắt chữ). Chỗ sửa trang: (1) cột "Đến bằng" của nốt đón trước thành "Không có quy định" (OMT: N/A); (2) bỏ câu nốt dựa là "chữ ký" Cổ điển và Lãng mạn; (3) đoạn "Vì sao quan trọng khi nghe nhạc?": bỏ "động cơ cảm xúc" và quan hệ với Mozart, Bach, viết lại theo OMT; (4) mục Nguồn. Chưa chắc: không có (n1, n21 là khuyen-tap, review soát nhãn). Nguồn gốc của đa số nhận định là OMT nên đã khớp "thứ bậc nguồn". Trang đích chưa chuyển: /opus/piano/tac-pham/bach-prelude-do/ (n19: giữ mục "Âm nền át" ô 24–31 và "Âm nền chủ" ô 32–35), /opus/tai-lieu-tham-khao/. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): non-chord tone / embellishing tone (âm ngoài hợp âm; OMT gọi chính là embellishing tones), passing tone (nốt lướt), neighbor tone (nốt thêu), suspension (nốt treo), anticipation (nốt đón trước), pedal point / pedal tone (âm nền), retardation (nếu dùng); đã có: appoggiatura, nhưng nghĩa trong thuat-ngu.yml ("Nốt dựa, đúng phách, lấy bớt độ dài của nốt chính"; nhom Piano; ghi chú "Nốt nhỏ không gạch") là nghĩa ký hiệu trang trí, còn bài 18 dùng nghĩa hòa âm (nốt ngoài hợp âm, đến bằng nhảy, rời bằng bước): Từ điển cần ghi cả hai nghĩa.'
 nguon:
   - id: omt-embellishing
@@ -297,6 +306,12 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://www.britannica.com/art/appoggiatura", "https://viva.pressbooks.pub/openmusictheory/chapter/embellishing-tones/" ]
     luot_2_ghi_chu: 'Britannica: appoggiare, "to lean".'
+  - id: n29
+    cau: "Hình ::hinh{ten=\"am-ngoai\"} ngay dưới bảng \"Các loại chính\" vẽ sáu thẻ theo đúng sáu dòng bảng (nốt lướt, nốt thêu, nốt treo, nốt dựa, nốt đón trước, âm nền), chấm đặc là nốt hợp âm, chấm rỗng là âm ngoài hợp âm, mũi tên ngắn là bước liền, mũi tên dài là nhảy, cung nối là giữ nguyên, vạch đứt là đổi hợp âm, thanh dài là âm nền; chữ dưới mỗi thẻ chép cột \"Đến bằng\" và \"Rời bằng\"; tên nốt theo cột ví dụ (Đô–Rê–Mi, Mi–Fa–Mi, Fa giữ rồi xuống Mi, Đô đón trước rồi giữ, Sol ở bè trầm) và khuông \"Nốt dựa\" (Sol nhảy lên Rê ở phách mạnh, bước xuống Đô)."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và file src/components/hinh/am-ngoai.html. Từng thẻ: nốt lướt Đô (đặc) bước lên Rê (rỗng) bước tiếp lên Mi (đặc), cùng hướng; nốt thêu Mi lên Fa (rỗng) quay lại Mi; nốt treo Fa (đặc, hợp âm trước), vạch đứt đổi hợp âm, cung nối sang Fa (rỗng), mũi tên ngắn xuống Mi; nốt dựa Sol nhảy lên Rê (rỗng, dòng chữ \"phách mạnh\"), bước xuống Đô, khớp khuông X:3 (G4 | d2 c2); nốt đón trước: \"?\" và mũi tên nét đứt (cột Đến bằng: không có quy định), Đô (rỗng) trước vạch đổi hợp âm, cung nối sang Đô (đặc), khớp khuông X:4 (c2 | c4); âm nền: thanh dài Sol ở dưới, ba hợp âm bên trên có vạch đổi giữa (cột ví dụ: Sol giữ ở bè trầm qua nhiều hợp âm). Chữ dưới thẻ đúng chữ hai cột bảng (tests/hinh-ve-lai-bang.test.mjs so tự động). Hình không thêm loại, quy tắc hay ví dụ nào ngoài bảng và khuông. Không thêm câu dẫn trong trang (chú thích hình có data-sinh)."
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -354,3 +369,7 @@ doi_chu:
       - "Sierra College, Equipping the Musical Ear: 13.06 Suspensions. The Oxford Dictionary of Music (qua encyclopedia.com): appoggiatura."
       - "Bach, Prelude cung Đô trưởng, BWV 846: bản Mutopia."
     ly_do: "Mục Nguồn: thay link chung bằng link tới đúng các chương và trang đã đọc khi kiểm định (lượt 1); bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, không đọc được chữ để kiểm."
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-2c
+    ly_do: "thêm hình (đợt hình 2): sáu thẻ đường nét của các loại âm ngoài hợp âm (đề xuất 19, plans/ben-vung/de-xuat-hinh.md)"

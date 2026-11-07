@@ -26,6 +26,8 @@ Trong các ví dụ, số trong vòng tròn là bậc: phía trên khuông là g
 | Ponte | 5–7–2 | 5 giữ nguyên | V, V7 kéo dài | sau vạch nhắc lại, chờ trên át âm |
 | Quiescenza | ♭7–6–♮7–1 | 1 giữ nguyên | V7 của IV – IV6/4 – V7 – I, trên âm nền chủ âm | sau kết cuối |
 
+::hinh{ten="galant"}
+
 ## Ba cách mở đầu
 
 ### Romanesca

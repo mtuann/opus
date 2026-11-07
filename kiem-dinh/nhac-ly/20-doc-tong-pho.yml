@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 3, 28/10/2026; bổ sung sau review)
       review: Claude (review D3-gom, nhóm A, 28/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 3 (D3-L2 đến D3-L6): 6 đúng, 4 câu về site và lời khuyên tập không kiểm độc lập được (người gom kiểm lại trên repo, đúng), 0 sai (bao-cao/d3-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: mo/hinh-dot-2c
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/hinh-dot-2c, 06/11/2026: thêm hình tĩnh tong-pho; đối chiếu chữ trong hình với bảng và khuông của trang; thủ tục hình rút gọn, chuan-kiem-dinh mục 7)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Trang đọc tổng phổ (tầng lõi), hình ::hinh{ten="seating"} (src/components/hinh/seating.html) và một khối abc. Nguồn chính: Britannica (Score), Dolmetsch lesson 26, Berlin Phil (xếp chỗ), Absil và Blake (viết tắt, bậc 3), sơ đồ dàn nhạc của một trường và của bsolive (bậc 3; không rõ dàn nhạc), Understanding Music (Haydn 94), Burgess Hill SO và Indianapolis SO (Beethoven 5). WebFetch ngày 28/10/2026 (bản tóm tắt chữ; chỗ quan trọng đã hỏi lại nguyên văn). Chỗ sửa trang: (1) "từ cao xuống thấp" thành "thường từ cao xuống thấp"; (2) viết tắt: Klar. thành Kl., bỏ Cr., Tba. thành Tuba, Pf. thành Pno., Vl. thành Vln. (cũng đổi "Vl. I/II" trong abc thành "Vn. I/II"); (3) câu về chỗ ngồi trên sân khấu viết lại vì chữ cũ tự mâu thuẫn (n11); (4) "YouTube" thành "các trang chia sẻ video"; (5) mục Nguồn (thêm Haydn 94). Hình seating: không sửa; vị trí chi tiết (horn, trumpet, hạc, timpani) thay đổi giữa các dàn nhạc, chú thích dưới hình đã dè dặt; người giao nên đọc lại n12 và quyết có đổi chữ aria-label "bộ đồng phía sau" không (thứ tự các bộ khớp ba nguồn). Chưa chắc: n4 (viết tắt chủ yếu từ nguồn bậc 3; lượt 2 nên đối chiếu một bảng viết tắt của nhà xuất bản), n24 (Bärenreiter chưa mở), n25 (hai hợp âm cuối của vòng Canon chưa đối chiếu bản nhạc, như bài 12). Trang đích chưa chuyển: /opus/nghe-nhac/haydn-94/, /opus/nghe-nhac/mozart-40/, /opus/nghe-nhac/beethoven-5/ (n21; beethoven-5 cũ cần giữ câu "chủ đề 2 được kèn horn giới thiệu" cho bài tập 3), /opus/tai-lieu-tham-khao/. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): score / full score (tổng phổ), study score (tổng phổ khổ nhỏ), woodwind (bộ gỗ), brass (bộ đồng), percussion (bộ gõ), strings (bộ dây), transposing instrument (nhạc cụ dịch giọng), contrabass, conductor (nhạc trưởng); các tên nhạc cụ (violin, viola, cello, timpani, oboe...) chưa kiểm có trong từ điển hay không. Bản ghi string-quartet đã có hồ sơ riêng (cùng phần 1/2).'
 nguon:
   - id: brit-score
@@ -402,6 +411,12 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/clefs/" ]
     luot_2_ghi_chu: "OMT Clefs: khóa alto có Đô4 ở dòng giữa (dòng 3); chủ yếu cho viola."
+  - id: n33
+    cau: "Hình ::hinh{ten=\"tong-pho\"} (đặt ngay trên hình chỗ ngồi seating) vẽ một trang tổng phổ giản lược theo bảng \"Thứ tự các bè\": từ trên xuống bộ gỗ (Fl., Ob., Cl., Bsn.), bộ đồng (Hn., Tpt., Trb., Tuba), bộ gõ (Timp., Perc.), đàn hạc, piano, celesta, độc tấu, hợp xướng (nếu có, khuông nét đứt), bộ dây (Vln. I, Vln. II, Vla., Vcl., DB), mỗi bè một khuông trống; thanh ngoặc mỗi bộ cùng màu với bộ ấy trong hình chỗ ngồi."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và file src/components/hinh/tong-pho.html. Thứ tự sáu nhóm và tên viết tắt đúng thứ tự dòng và cột \"Nhạc cụ\" của bảng (n2 thứ tự, n4–n7 tên viết tắt; n3: trong mỗi bộ thường từ cao xuống thấp, hình giữ đúng thứ tự bảng); \"Violin I, Violin II (Vln.)\" vẽ thành hai khuông Vln. I, Vln. II; dòng đàn hạc, piano, celesta (bảng không ghi viết tắt) một khuông có nhãn chữ đầy đủ; dòng độc tấu, hợp xướng ghi \"(nếu có)\" như bảng. Màu thanh ngoặc lấy đúng màu ô trong seating.html: bộ gỗ #8cc49a (ô Sáo, Oboe, Clarinet, Bassoon), bộ đồng #e0b45e, bộ gõ #c9a0dc (ô Timpani · bộ gõ), đàn hạc #9fd0d0 (ô Harp), bộ dây #7aa6d6 (tests/hinh-ve-lai-bang.test.mjs so tự động). Chú thích hình nói lại câu của trang (bộ gỗ trên cùng, bộ dây dưới cùng; n11). Hình không thêm nhạc cụ, khóa nhạc hay quy ước nào ngoài bảng; khuông để trống, không vẽ khóa."
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -495,3 +510,7 @@ doi_chu:
   - cu: "câu hỏi: Khi mới tập theo dõi tổng phổ, nên bám vào bè nào? | ✓ Violin I | Contrabass | Timpani | Giai điệu chính thường ở violin I."
     moi: "câu hỏi: Khi mới tập theo dõi tổng phổ, nên bám vào bè nào? | ✓ Violin I | Contrabass | Timpani | Violin I là dòng đầu tiên của bộ dây, dễ tìm trên mỗi trang; khi violin I nghỉ, tìm bè khác đang chơi giai điệu."
     ly_do: "n30 (soát nhãn, review D3-gom): bỏ nhận định tần suất không có nguồn khỏi lời giải thích câu hỏi."
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-2c
+    ly_do: "thêm hình (đợt hình 2): thứ tự các bè trong tổng phổ, cùng màu với hình chỗ ngồi (đề xuất 21, plans/ben-vung/de-xuat-hinh.md)"

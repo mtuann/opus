@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 4, 28/10/2026; bổ sung sau review)
       review: Claude (review D4-gom, nhóm E, 28/10/2026)
       kiem_mau: 'chủ repo, 10 nhận định mẫu của đợt 4 (D4-L1 đến D4-L4): 10 đúng (3 có điều kiện, đã sửa theo: nguồn Versuch §5 và láy rền thường, Frère Jacques "bài hát Pháp truyền thống", quãng tám trong gợi ý ngón của mẫu galant), 0 sai (bao-cao/d4-gom/kiem-mau-ket-qua.yml)'
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: mo/hinh-dot-2c
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/hinh-dot-2c, 06/11/2026: thêm hình tĩnh galant; đối chiếu chữ trong hình với bảng và khuông của trang; thủ tục hình rút gọn, chuan-kiem-dinh mục 7)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: omt-gs
     bac: 2
@@ -907,6 +916,12 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "Đã mở cả hai ngày 28/10/2026. Review: hai link OMT (galant-schemas, galant-schemas-summary) review đã mở lại ngày 28/10/2026."
     review: dung
+  - id: n88
+    cau: "Hình ::hinh{ten=\"galant\"} ngay dưới bảng đầu trang vẽ tám mẫu của bảng, mỗi mẫu một thẻ: hàng trên là bậc giai điệu, hàng dưới là bậc bass, trong vòng tròn, cùng cột là cùng một bước; \"…\" ngăn hai cặp nốt (Meyer, Fonte, Monte); \"giữ nguyên\" là thanh dài (Ponte, Quiescenza). Các bậc đúng cột Giai điệu và Bass của bảng."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và file src/components/hinh/galant.html. Từng thẻ đọc lại thành chữ khớp bảng: Romanesca 1–5–1–1 / 1–7–6–3; Do–Re–Mi 1–2–3 / 1–7–1; Meyer 1–7 … 4–3 / 1–2 … 7–1; Prinner 6–5–4–3 / 4–3–2–1; Fonte 5–4 … 4–3 / ♯1–2 … 7–1; Monte ♭7–6 … 1–7 / 3–4 … ♯4–5; Ponte 5–7–2 / 5 giữ nguyên (thanh dài ba bước); Quiescenza ♭7–6–♮7–1 / 1 giữ nguyên (bốn bước) (tests/hinh-ve-lai-bang.test.mjs so tự động; kiểm thử trình duyệt đo bước giai điệu và bass cùng cột). Cách đọc vòng tròn trang đã nói (\"số trong vòng tròn là bậc: phía trên khuông là giai điệu, phía dưới là bass\"). Không vẽ cột hòa âm, \"Thường đứng ở\", hay hai nửa lệch bậc của Fonte/Monte (đề xuất 26 có ý này nhưng trang không viết thành chữ), nên hình không nói điều mới."
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -1043,3 +1058,7 @@ doi_chu:
   - cu: "mô tả: Âm nhạc thế kỷ 18 được ghép từ những khung hai bè quen thuộc: một chuỗi bậc ở bass đi cùng một chuỗi bậc ở giai điệu. Trang này dạy tám khung thông dụng nhất…"
     moi: "mô tả: Âm nhạc thế kỷ 18 được ghép từ những khung hai bè quen thuộc: một chuỗi bậc ở bass đi cùng một chuỗi bậc ở giai điệu. Trang này dạy tám khung quen thuộc…"
     ly_do: 'n74: mô tả đổi theo câu mở đầu, "thông dụng nhất" thành "quen thuộc".'
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-2c
+    ly_do: "thêm hình (đợt hình 2): tám mẫu galant, bậc giai điệu và bass khoanh tròn theo bảng đầu trang (đề xuất 26, plans/ben-vung/de-xuat-hinh.md)"

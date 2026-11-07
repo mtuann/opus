@@ -24,6 +24,8 @@ Lưu ý hai điều đã học ở [bài 17](/opus/nhac-ly/17-khoa-do-dich-giong
 
 Thứ tự trong tổng phổ không giống chỗ ngồi trên sân khấu. Trên sân khấu, từ **trước ra sau** là bộ dây, bộ gỗ, bộ đồng, bộ gõ; trong tổng phổ, bộ gỗ ở trên cùng và bộ dây ở dưới cùng:
 
+::hinh{ten="tong-pho"}
+
 ::hinh{ten="seating"}
 
 ## Cách theo dõi khi mới bắt đầu
