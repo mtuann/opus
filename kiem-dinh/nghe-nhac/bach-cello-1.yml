@@ -18,9 +18,9 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: "Claude Opus 5.5 (mo/hinh-dot-3c, 06/11/2026: thêm sơ đồ đoạn ::hinh-cau-truc, hinh.nghe vẽ lại bảng của trang; đối chiếu từng ô với từng dòng bảng; thủ tục hình rút gọn, chuan-kiem-dinh mục 7)"
-      luot_2: null
-      review: null
-      kiem_mau: null
+      luot_2: "không cần (câu ve-site, thủ tục hình)"
+      review: "Claude Opus 5.5 (soát hình 3C, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
+      kiem_mau: "Claude Opus 5.5 (soát hình 3C, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
 ghi_chu: 'Hướng dẫn nghe Tổ khúc cello số 1 BWV 1007, Prelude (tầng Tác phẩm; bản ghi tac-pham/bach-cello-1; loai: nghe là cấu trúc). Không có khối abc, không có ::hinh-cau-truc; ::khoi-nghe không có bản thu (không sửa). Bản nhạc: Mutopia bwv1007 (Schirmer 1916; .ly tải 06/11/2026), Prelude 42 ô, 4/4, Sol trưởng; cao độ từng ô tính bằng script (relative → tuyệt đối, đã chuyển quãng tám như \transpose c c, của file score): ô 1–4 trên nốt Sol2 (dây Sol buông), ô 22 fermata trên Rê4, ô 31–36 nốt La3 lặp lại, ô 37–38 nốt Rê3 lặp lại xen chuỗi nửa cung Fa3 → Fa♯4, ô 39–40 nốt cao nhất Sol4, ô 42 hợp âm Sol. Lịch sử: lời tựa Henle HN 666 (PDF), IMSLP (wikitext: 7 chương, bản in đầu Janet et Cotelle 1824, Piece Style), niên biểu Fundació Pau Casals, Gran Enciclopèdia Catalana (Casals), MusicBrainz (bản thu Casals EMI/HMV, Yo-Yo Ma CBS 1982, Sony 1997), Concise Oxford Dictionary of Music (sarabande, bariolage, broken chord). Sửa trang: n3, n7–n9, n11, n12, n14–n16, n20, n24–n26, n29, n32 (mục Nguồn), mô tả trang; bỏ n10 ("thế kỷ 19 coi là bài tập kỹ thuật"), n13 ("tập hơn chục năm"). Câu ở hồ sơ khác trỏ tới trang này (nhac-ly/31-hinh-thuc-nho n15, nhac-cu/cello n17, nhan-dien/the-loai n35, lich-su/thoi-ky/baroque n49): trang giữ địa chỉ, là hướng dẫn nghe Tổ khúc cello số 1 của Bach, giữ "Tổ khúc: Prelude và 5 điệu nhảy" và trật tự Prelude – Allemande – Courante – Sarabande – Menuet I và II – Gigue. Không tính là nhận định: tiêu đề mục, tiêu đề cột, mốc trong ::khoi-nghe. Thuật ngữ trang dùng mà thuat-ngu.yml chưa có: bariolage, hợp âm rải (arpeggio, có ở trang nhạc lý đã khóa), dây buông, sarabande, allemande, courante, gigue, prelude.'
 nguon:
   - id: mutopia-1007
@@ -384,7 +384,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: 'Kiểm trên bản xem (npm run build:xem, 06/11/2026): sơ đồ trong dist/nghe-nhac/bach-cello-1/index.html và hinh.nghe trong src/data/tac-pham.yml; đối chiếu từng ô với từng dòng bảng "Theo dõi khi nghe" (6 dòng, 6 ô), cùng các nhận định đã kiểm định của hồ sơ này: n22, n23, n24, n25, n26, n27. Trang chưa có mục "Sơ đồ cấu trúc": thêm tiêu đề theo thứ tự mẫu hướng dẫn nghe (AGENTS.md, Mẫu trang; ../opus-zero/AGENTS.md), ngay trước "Nghe kèm bản thu"; doi_chu ghi.'
+    ghi_chu: 'Kiểm trên bản xem (npm run build:xem, 06/11/2026): sơ đồ trong dist/nghe-nhac/bach-cello-1/index.html và hinh.nghe trong src/data/tac-pham.yml; đối chiếu từng ô với từng dòng bảng "Theo dõi khi nghe" (6 dòng, 6 ô), cùng các nhận định đã kiểm định của hồ sơ này: n22, n23, n24, n25, n26, n27. Trang chưa có mục "Sơ đồ cấu trúc": thêm tiêu đề theo thứ tự mẫu hướng dẫn nghe (AGENTS.md, Mẫu trang; ../opus-zero/AGENTS.md), ngay trước "Nghe kèm bản thu"; doi_chu ghi. Soát hình 3C (gộp review và kiểm mẫu): đối chiếu trên bản xem (npm run build:xem, 07/11/2026, dist/nghe-nhac/bach-cello-1/index.html, sơ đồ oz-seg): 6 ô Mở đầu, Đi xa dần, Fermata, Bariolage, Dồn lên, Kết theo đúng thứ tự 6 dòng bảng Theo dõi; chữ trong ô (dây Sol buông, I – IV – V – I, Rê trưởng giọng át, dừng trên Rê, nốt La lặp lại, nửa cung đi lên tới nốt cao nhất, Sol trưởng) đều có trong dòng tương ứng. Không có điều trang không viết. Kết quả: dung.'
+    review: dung
 khuong_nhac: []
 doi_chu:
   - cu: 'mô tả: Bản viết tay của Bach đã mất; sáu tổ khúc cho cello còn lại chủ yếu qua bản chép tay của vợ ông, Anna Magdalena. Suốt thế kỷ 19, chúng bị coi là bài tập kỹ…'

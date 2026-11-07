@@ -80,3 +80,19 @@ Không commit, ở `/private/tmp/claude-501/-Users-mitu-Desktop-work-projects-op
 - Ánh trăng (`nghe-nhac/beethoven-moonlight`): còn chờ, xem trên.
 - Xem ảnh chụp, rồi khóa 14 trang và 13 bản ghi.
 - Gộp với hai nhánh song song: `src/styles/thanh-phan.css` (khối mới ngay sau `.oz-galant-giu small`; nhóm `print-color-adjust`), `tools/trang-mau.mjs` (`KHOI`, sau "thẻ mẫu galant"), `AGENTS.md` (mục ngay sau "Đợt hình 2c") có thể xung đột vị trí; nội dung độc lập.
+
+## Soát
+
+Claude Opus 5.5, 07/11/2026 (người soát, không vẽ hình, không làm lượt 2). Thủ tục hình: gộp review và kiểm mẫu.
+
+- **Review mã** (mức "Vừa", commit `c9fd724`): đạt.
+  - `nam-dau.html`: màu chỉ qua `--oz-h-*` (ba chế độ, có `print-color-adjust`), chữ thật, tên làn trong `sr-only`, ★ `aria-hidden`; 16 link tới đúng id `slugCu` của tiêu đề (kiểm thử so); container query 30rem hợp lý vì khung nội dung ở 1280 px chỉ khoảng 37rem.
+  - `tests/danh-muc.test.mjs`: không làm yếu kiểm thử. Bộ lọc chỉ áp khi trang mục lục đã khóa, và dùng chính `coTruongDaKhoa` của bản build. Bản thật không đổi, vì trang của bản ghi chưa khóa không có trong bản build. Danh mục vẫn phải liệt kê đúng, không thiếu, không thừa.
+  - Kiểm thử mới đủ chặt (số ô bằng số dòng bảng; tiêu đề, id, thứ tự ba làn, tháng có mốc).
+  - Sửa một chỗ nhỏ: chú thích hình ghi "★ là một số mốc trong danh sách việc", nhưng mốc tháng 4 lấy từ ô bảng ("bài 8 … bàn đạp lần đầu"), mốc tháng 6 và 12 còn lấy cả câu của trang. Nay ghi "mốc trang nêu ở tháng ấy (danh sách việc, bảng hay câu của tháng)".
+- **Hình** (đối chiếu trên `npm run build:xem`, `dist/`):
+  - 13 sơ đồ đoạn khớp số ô, thứ tự và chữ của bảng mà chú thích nói tới: 2, 6, 7, 5, 6, 8, 5, 5, 4, 9, 7, 5, 6 ô. `bach-air`: độ rộng 6:12 theo đoạn "Điều cần biết". `vivaldi-mua-dong`: màu xanh và vàng đúng cột Sự kiện, dòng 4 (thay phiên) màu xám.
+  - Bản đồ năm đầu: 4 quý, 12 tháng, 36 ô làn đều rút gọn từ ô bảng của tháng ấy; mốc ★ ở tháng 4, 5, 6, 12 đúng chữ trang.
+  - Không hình nào nói điều trang không viết.
+  - 14 câu `ve-site`: `review: dung`. 13 câu `cau-truc` của hồ sơ bản ghi (đã có lượt 2): `review: dung`. `nguoi.review` và `nguoi.kiem_mau` ghi ở lần cuối của 27 hồ sơ; hồ sơ trang có `luot_2` "không cần".
+- Kiểm: `node tools/khoa.mjs tinh`, `npm run build:xem`, `npm test`: tinh đạt (mọi mục khớp), build không cảnh báo `[opus]`, 313 đạt, 2 bỏ qua, 0 hỏng. Chưa khóa lại; người gom xem ảnh rồi khóa 14 trang và 13 bản ghi (cả bản ghi).
