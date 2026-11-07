@@ -86,7 +86,7 @@ Mỗi chặng có trang riêng: các bài học tác phẩm của chặng và b�
 
 <ol class="oz-steps" role="list">
 <li><b>Đối chiếu với nguồn</b> <span>Mỗi ý trong bài được kiểm lại; ý cần nguồn được đối chiếu với nguồn, chỗ sai được sửa.</span></li>
-<li><b>Kiểm lần hai</b> <span>Một lượt kiểm khác soát lại, rồi review.</span></li>
+<li><b>Kiểm lần hai</b> <span>Ý cần nguồn được một lượt khác kiểm độc lập (trang Đọc thêm: một mẫu), rồi review soát lại.</span></li>
 <li><b>Lên site</b> <span>Chỉ trang đã kiểm tra xong mới hiện ở đây; bài thêm sau cũng qua cùng các bước.</span></li>
 </ol>
 

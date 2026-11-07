@@ -15,12 +15,12 @@ lan:
   - so: 2
     ngay: 2026-11-06
     nhanh: moi/d9-hoan-tat
-    ma_bam: null
+    ma_bam: sha256:c21b87324bee6d5971503174cdee3b71ba681d44447014dd1bf918446b93c26e
     nguoi:
       luot_1: "Claude Opus 5.5 (đợt 9, 06/11/2026): đổi n2, n3, n4; thêm n153–n159; đều ve-site, kiểm trên khoa.json, kế hoạch, mã và bản xem"
       luot_2: "không cần (trang khung; câu ve-site không qua lượt 2)"
-      review: null
-      kiem_mau: null
+      review: "Claude Opus 5.5 (review đợt 9, 06/11/2026; không làm lượt 1): n2–n4, n153–n159: 10 câu ve-site, 10 dung"
+      kiem_mau: "Claude Opus 5.5 (người gom đợt 9, kiểm thay chủ repo theo lời giao 07/11/2026): mẫu 8 câu ve-site của bốn trang (blog n4, n6, n10, n20, n22; index n3; 404 n3; cap-nhat n156) kiểm lại trên dữ liệu, dist/ bản xem, src/scripts và địa chỉ Opus Zero (HTTP 200): 8 đúng, 0 sai"
 doi_chu:
   - cu: null
     moi:
@@ -300,17 +300,20 @@ nhan_dinh:
     cau: 'Site đã được làm lại ở địa chỉ này, dưới tên Opus: mọi trang đã được kiểm định, và trang thêm sau chỉ lên site khi đã được kiểm định.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Đợt 9 (đổi câu, lượt 1): kiem-dinh/khoa.json trên main 4bb09b4 khóa cả 233 trang của src/data/trang.yml (và 404); 73/73 bản ghi tác phẩm khóa cả bản ghi. Nhánh moi/d9-hoan-tat mở index, 404, cap-nhat và thêm bài blog mới; người gom khóa lại trước khi gộp. Trang thêm sau: bản thật chỉ gồm trang trong khoa.json (src/ban-build.mjs chiTrangTrongBan; chuan-kiem-dinh.md mục 6); them-tac-pham.md. Câu cũ: "Site đang được làm lại ở địa chỉ này, dưới tên Opus: mỗi trang chỉ lên site khi đã được kiểm định." (review D7-gom: dung).'
+    ghi_chu: 'Đợt 9 (đổi câu, lượt 1): kiem-dinh/khoa.json trên main 4bb09b4 khóa cả 233 trang của src/data/trang.yml (và 404); 73/73 bản ghi tác phẩm khóa cả bản ghi. Nhánh moi/d9-hoan-tat mở index, 404, cap-nhat và thêm bài blog mới; người gom khóa lại trước khi gộp. Trang thêm sau: bản thật chỉ gồm trang trong khoa.json (src/ban-build.mjs chiTrangTrongBan; chuan-kiem-dinh.md mục 6); them-tac-pham.md. Câu cũ: "Site đang được làm lại ở địa chỉ này, dưới tên Opus: mỗi trang chỉ lên site khi đã được kiểm định." (review D7-gom: dung). Review D9: khoa.json ở main: 234 trang; src/ban-build.mjs (chiTrangTrongBan); them-tac-pham.md. Đúng khi bốn trang đợt 9 khóa trước khi gộp.'
+    review: dung
   - id: n3
     cau: Các phiên bản 1–15 dưới đây là của Opus Zero, bản trước của site, ở https://mtuann.github.io/opus-zero/, nên các mục ấy kể về site lúc đó.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: "../opus-zero/LICENSE-CONTENT dòng 4 ghi địa chỉ https://mtuann.github.io/opus-zero/; ../opus-zero/docs/cap-nhat.md có đúng mười lăm phiên bản (1, 2, 3, 4, 5, 6, 7, 8, 8.1, 8.2, 9, 10, 11, 12, 13, 14, 15). Review D7-gom: dung. Đợt 9 thêm vế \"nên các mục ấy kể về site lúc đó\" (lượt 1): các mục 1–15 chép nhật ký của site cũ (nguon_cu), như n66 tả trang Nghe & nhận diện của Opus Zero chia hai bảng; trang nghe-nhac hiện tại (title Nghe nhạc) dùng danh mục lọc, nên vế này nói rõ thì hiện tại trong các mục ấy là của site cũ. n66 giữ nguyên (câu đúng với site cũ)."
+    ghi_chu: "../opus-zero/LICENSE-CONTENT dòng 4 ghi địa chỉ https://mtuann.github.io/opus-zero/; ../opus-zero/docs/cap-nhat.md có đúng mười lăm phiên bản (1, 2, 3, 4, 5, 6, 7, 8, 8.1, 8.2, 9, 10, 11, 12, 13, 14, 15). Review D7-gom: dung. Đợt 9 thêm vế \"nên các mục ấy kể về site lúc đó\" (lượt 1): các mục 1–15 chép nhật ký của site cũ (nguon_cu), như n66 tả trang Nghe & nhận diện của Opus Zero chia hai bảng; trang nghe-nhac hiện tại (title Nghe nhạc) dùng danh mục lọc, nên vế này nói rõ thì hiện tại trong các mục ấy là của site cũ. n66 giữ nguyên (câu đúng với site cũ). Review D9: ../opus-zero/docs/cap-nhat.md: 15 phiên bản; dist/cap-nhat/index.html; vế mới chỉ nói các mục ấy là nhật ký của site cũ."
+    review: dung
   - id: n4
     cau: Link trong các mục này dẫn tới trang tương ứng ở site mới.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Đợt 9 (bỏ vế "trang chưa lên site thì ghi sắp có", lượt 1): mọi trang đã lên; npm run build:xem 06/11/2026: dist/cap-nhat/index.html không còn chữ "sắp có"; tests/link.test.mjs đạt (link nội bộ tới trang và #mục có thật). Trước đó (D7-gom): 125 link /opus/… đều trỏ tới id trong src/data/trang.yml.'
+    ghi_chu: 'Đợt 9 (bỏ vế "trang chưa lên site thì ghi sắp có", lượt 1): mọi trang đã lên; npm run build:xem 06/11/2026: dist/cap-nhat/index.html không còn chữ "sắp có"; tests/link.test.mjs đạt (link nội bộ tới trang và #mục có thật). Trước đó (D7-gom): 125 link /opus/… đều trỏ tới id trong src/data/trang.yml. Review D9: dist/cap-nhat/index.html (build:xem): 0 chữ "sắp có"; tests/link.test.mjs.'
+    review: dung
   - id: n_l15
     cau: Các link của mục Phiên bản 15 (30 link) dẫn tới đúng trang và đúng mục (#…) nói trong chữ link.
     loai: ve-site
@@ -1312,37 +1315,44 @@ nhan_dinh:
     cau: "Mục \"11/2026: Opus (làm lại xong)\": ngày 07/11/2026, Opus Zero được làm lại thành Opus."
     loai: ve-site
     ket_qua: dung
-    ghi_chu: "Đợt 9, lượt 1. plans/lam-lai/README.md (đầu file, Quyết định: tên Opus, site mới ở /opus/); ngày ra mắt là date của bài blog blog/posts/2026-11-07-opus-da-len-du (đăng cùng lần gộp đợt 9). Nếu ngày gộp khác 07/11/2026 thì sửa cả bài blog lẫn câu này trước khi khóa."
+    ghi_chu: "Đợt 9, lượt 1. plans/lam-lai/README.md (đầu file, Quyết định: tên Opus, site mới ở /opus/); ngày ra mắt là date của bài blog blog/posts/2026-11-07-opus-da-len-du (đăng cùng lần gộp đợt 9). Nếu ngày gộp khác 07/11/2026 thì sửa cả bài blog lẫn câu này trước khi khóa. Review D9: date: 2026-11-07 của src/content/docs/blog/posts/2026-11-07-opus-da-len-du.md; cùng ngày ở trang Cập nhật và bài blog. Gộp ngày khác thì sửa cả hai."
+    review: dung
   - id: n154
     cau: Opus có đủ 233 trang của bản trước, giữ nguyên đường dẫn dưới /opus/ (trừ bài blog).
     loai: ve-site
     ket_qua: dung
-    ghi_chu: "Đợt 9, lượt 1. Script đối chiếu đợt 9 (bao-cao/d9.md): 233/233 trang của anh-xa.md có trang cùng đường dẫn trong src/content/docs/ và src/data/trang.yml, khớp 233 file .md của ../opus-zero/docs; luật 4 của README (giữ đường dẫn). Bài blog: site cũ ở /opus-zero/blog/2026/10/<ngày>/<tên>/ (plugin blog MkDocs, .cache/site-cu/blog/2026/10/), site mới ở /opus/blog/posts/<yyyy-mm-dd>-<tên>/ (README đợt 7: đường dẫn theo cú pháp site mới), nên ghi \"trừ bài blog\"."
+    ghi_chu: "Đợt 9, lượt 1. Script đối chiếu đợt 9 (bao-cao/d9.md): 233/233 trang của anh-xa.md có trang cùng đường dẫn trong src/content/docs/ và src/data/trang.yml, khớp 233 file .md của ../opus-zero/docs; luật 4 của README (giữ đường dẫn). Bài blog: site cũ ở /opus-zero/blog/2026/10/<ngày>/<tên>/ (plugin blog MkDocs, .cache/site-cu/blog/2026/10/), site mới ở /opus/blog/posts/<yyyy-mm-dd>-<tên>/ (README đợt 7: đường dẫn theo cú pháp site mới), nên ghi \"trừ bài blog\". Review D9: bao-cao/d9.md (233/233); site cũ /opus-zero/blog/2026/10/…, site mới /opus/blog/posts/… (.cache/site-cu/blog, dist/blog/posts). Câu nói về 233 trang nên \"trừ bài blog\" đủ (trang lưu trữ, chuyên mục do plugin sinh không thuộc 233)."
+    review: dung
   - id: n155
     cau: Mỗi trang đã được kiểm tra lại từ đầu, theo quy trình ở cuối trang này.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: "Đợt 9, lượt 1. khoa.json trên main: 234 trang khóa; mục \"Quy trình giữ nội dung luôn đúng\" ở cuối trang (link #quy-trinh-giu-noi-dung-luon-ung có trong dist/cap-nhat/index.html, link.test đạt) tả đúng các bước của chuan-kiem-dinh.md mục 3, 6, 7."
+    ghi_chu: "Đợt 9, lượt 1. khoa.json trên main: 234 trang khóa; mục \"Quy trình giữ nội dung luôn đúng\" ở cuối trang (link #quy-trinh-giu-noi-dung-luon-ung có trong dist/cap-nhat/index.html, link.test đạt) tả đúng các bước của chuan-kiem-dinh.md mục 3, 6, 7. Review D9: id quy-trinh-giu-noi-dung-luon-ung có trong dist/cap-nhat/index.html; mục ấy khớp chuan-kiem-dinh.md mục 3, 6, 7 và deploy.yml."
+    review: dung
   - id: n156
     cau: "Link \"Opus đã lên đủ\" dẫn tới bài blog thông báo lần ra mắt."
     loai: ve-site
     ket_qua: dung
-    ghi_chu: "Đợt 9, lượt 1. /opus/blog/posts/2026-11-07-opus-da-len-du/ có trong bản xem (title Opus đã lên đủ); bản thật: có khi bài được khóa cùng lúc."
+    ghi_chu: "Đợt 9, lượt 1. /opus/blog/posts/2026-11-07-opus-da-len-du/ có trong bản xem (title Opus đã lên đủ); bản thật: có khi bài được khóa cùng lúc. Review D9: dist/blog/posts/2026-11-07-opus-da-len-du/index.html (title Opus đã lên đủ)."
+    review: dung
   - id: n157
     cau: 7 chặng của lộ trình piano có trang riêng, liệt kê các bài học tác phẩm của chặng.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: "Đợt 9, lượt 1. src/pages/piano/lo-trinh/[chang].astro; dist/piano/lo-trinh/chang-1 … chang-7; chang-3 có link tới các bài học /opus/piano/tac-pham/<slug>/ của chặng. Mới ở Opus: anh-xa.md (7 trang mới sinh từ dữ liệu), Opus Zero không có trang chặng riêng."
+    ghi_chu: "Đợt 9, lượt 1. src/pages/piano/lo-trinh/[chang].astro; dist/piano/lo-trinh/chang-1 … chang-7; chang-3 có link tới các bài học /opus/piano/tac-pham/<slug>/ của chặng. Mới ở Opus: anh-xa.md (7 trang mới sinh từ dữ liệu), Opus Zero không có trang chặng riêng. Review D9: dist/piano/lo-trinh/chang-1 … chang-7; chang-3 liệt kê link bài học của chặng."
+    review: dung
   - id: n158
     cau: Bài học tác phẩm và hướng dẫn nghe lọc được theo chặng, thời kỳ và tác giả.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: "Đợt 9, lượt 1. dist/piano/tac-pham/index.html và dist/nghe-nhac/index.html: ô lọc oz-dm-chang, oz-dm-thoi-ky, oz-dm-tac-gia (::danh-muc-tac-pham, D6-L11; src/scripts/danh-muc.js); trường thoi_ky đã khóa ở cả 73 bản ghi."
+    ghi_chu: "Đợt 9, lượt 1. dist/piano/tac-pham/index.html và dist/nghe-nhac/index.html: ô lọc oz-dm-chang, oz-dm-thoi-ky, oz-dm-tac-gia (::danh-muc-tac-pham, D6-L11; src/scripts/danh-muc.js); trường thoi_ky đã khóa ở cả 73 bản ghi. Review D9: oz-dm-chang, oz-dm-thoi-ky, oz-dm-tac-gia trong dist/piano/tac-pham/index.html và dist/nghe-nhac/index.html."
+    review: dung
   - id: n159
     cau: Tiến độ đã lưu ở Opus Zero vẫn hiện ở Opus, trên cùng trình duyệt.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: "Đợt 9, lượt 1. Hai site cùng gốc https://mtuann.github.io; src/scripts/tien-do.js KHOA = 'opus-zero:v1' cùng khóa và định dạng với site cũ; src/scripts/kho-thu.js IndexedDB 'opus-zero-recordings' như recorder.js cũ (README mục Rủi ro: cùng tên miền nên dữ liệu còn). Như n20 của bài blog mới."
+    ghi_chu: "Đợt 9, lượt 1. Hai site cùng gốc https://mtuann.github.io; src/scripts/tien-do.js KHOA = 'opus-zero:v1' cùng khóa và định dạng với site cũ; src/scripts/kho-thu.js IndexedDB 'opus-zero-recordings' như recorder.js cũ (README mục Rủi ro: cùng tên miền nên dữ liệu còn). Như n20 của bài blog mới. Review D9: tien-do.js 'opus-zero:v1', kho-thu.js 'opus-zero-recordings' như progress.js, recorder.js cũ; cùng gốc mtuann.github.io."
+    review: dung
 khuong_nhac: []
 ghi_chu: 'Trang khung (D7-L3, phần 1/2), nhật ký phiên bản của Opus Zero (site cũ) nên phần lớn câu là ve-site kiểm trên ../opus-zero (HEAD 5d08189), lịch sử git của nó (git ghi v2–v4 và v10–v11 gộp trong một commit nên số liệu riêng từng phiên bản chỉ kiểm được ở mức cộng dồn: n117, n137, n140, n143, n144 ghi "chưa chắc") và gh run list (thời gian deploy). Một chỗ sửa: n91 (Rellstab 1823–1824). Vế ngoài tách riêng, cần lượt 2 hoặc nguồn bậc 1–2 tốt hơn: tên và năm bản thu, bản quyền Mỹ, Rellstab, Kleiber 1974, ba sonata Chopin, Lieder ohne Worte, 1812, Rhapsody, Mariage d''Amour, clavichord, trio. Link: 125 link /opus/… đều trỏ tới trang có trong src/data/trang.yml; #mục kiểm trên site cũ. Mục mới viết theo site mới (n1–n4, n146–n152) kiểm trên repo mới. Lần 2 (đợt 9, mở khóa): câu mở đầu nhật ký viết lại vì đã làm lại xong (n2, n3, n4 đổi câu, bỏ review cũ, chờ review lại); thêm mục "11/2026: Opus (làm lại xong)" (n153–n159, ve-site, lượt 1); doi_chu ghi chỗ đổi. n66 (trang Nghe & nhận diện chia hai bảng) giữ: câu nằm trong mục phiên bản của Opus Zero, tiêu đề link là tên cũ của trang, và câu mở đầu (n3) nay nói rõ các mục ấy kể về site lúc đó.'
 mo_khoa:

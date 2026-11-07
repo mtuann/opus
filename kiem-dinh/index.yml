@@ -23,42 +23,46 @@ lan:
   - so: 3
     ngay: 2026-11-06
     nhanh: moi/d9-hoan-tat
-    ma_bam: null
+    ma_bam: sha256:4d51620fceb43cc06f6621132686f0d5606115a4b7a209986fdd6a9b0aa82779
     nguoi:
       luot_1: "Claude Opus 5.5 (đợt 9, 06/11/2026): 5 câu ve-site của phần viết lại, kiểm trên kế hoạch, khoa.json, bản xem"
       luot_2: "không cần (trang khung; câu ve-site không qua lượt 2)"
-      review: null
-      kiem_mau: null
+      review: "Claude Opus 5.5 (review đợt 9, 06/11/2026; không làm lượt 1): 5 câu ve-site: 4 dung, 1 sai (n3, đã sửa bước 2)"
+      kiem_mau: "Claude Opus 5.5 (người gom đợt 9, kiểm thay chủ repo theo lời giao 07/11/2026): mẫu 8 câu ve-site của bốn trang (blog n4, n6, n10, n20, n22; index n3; 404 n3; cap-nhat n156) kiểm lại trên dữ liệu, dist/ bản xem, src/scripts và địa chỉ Opus Zero (HTTP 200): 8 đúng, 0 sai"
 ghi_chu: >-
-  Lần 3 (đợt 9, Hoàn tất): mọi trang đã lên site thật nên bỏ ô ":::note[Đang làm lại]" (câu thông báo của kế hoạch, link sang Opus Zero "trong lúc chờ") và chữ "đang được làm lại" ở description; description mới: "… Mọi trang đã được kiểm tra lại từ đầu." Mục "Từng phần lên site thế nào" thành "Mỗi trang được kiểm tra thế nào" (vẫn ba bước oz-steps: đối chiếu với nguồn, kiểm lần hai, lên site; bài thêm sau cũng qua cùng các bước); thêm một dòng: Opus là bản làm lại của Opus Zero (link địa chỉ cũ), dẫn sang bài blog thông báo. Phần còn lại giữ nguyên. Lần này có 5 nhận định ve-site (phần viết lại), kiểm trên kế hoạch, chuẩn kiểm định, khoa.json và bản xem; không có nhận định cần nguồn ngoài. tests/khung.test.mjs đổi theo: trang chủ không còn câu "đang được làm lại". Trang chủ viết mới (không chuyển từ trang cũ), nên không có doi_chu.
-  Lần 2 (D2-L1): trang chủ thật thay trang chủ tạm, viết mới (tầng khung, chuan-kiem-dinh.md mục 3: không có nhận định). Giữ bố cục D1.2b (dải mực, thẻ 8 nhóm) và câu thông báo của kế hoạch; thêm: nút "Bắt đầu từ số 0" (Bài 0) và "Đã biết chơi" (kiểm tra đầu vào) ở dải mực; link sang bản cũ Opus Zero trong lúc chưa chuyển hết bài (review cuối đợt 1); ba lối vào theo người đọc như trang chủ cũ (các bước chỉ là link tới trang, không có số liệu); sơ đồ 7 chặng sinh từ cap-do.yml (::hinh{ten="lo-trinh"}); thẻ 8 nhóm dẫn tới trang mở đầu của nhóm (src/nhom.mjs, chưa lên thì "sắp có"); mô tả nhóm Đọc thêm bỏ chữ opera; mục "Hôm nay tập gì?" có ô gợi ý tập (::cong-cu{ten="goi-y-tap"}, như khối "Hôm nay" của trang chủ cũ): người chưa có kết quả thấy lời mời làm bài kiểm tra đầu vào; người đã lưu chặng piano hay kết quả nhạc lý (trong trình duyệt) thấy chặng của mình và bài nên bắt đầu, chọn theo goi_y và chang của dữ liệu đã khóa (chiDaKhoa), và mục được đưa lên trước các lối vào. Lần 1: trang chủ tạm (D1.1, D1.2b), viết mới, không chuyển từ trang chủ cũ.
+  Lần 3 (đợt 9, Hoàn tất): mọi trang đã lên site thật nên bỏ ô ":::note[Đang làm lại]" (câu thông báo của kế hoạch, link sang Opus Zero "trong lúc chờ") và chữ "đang được làm lại" ở description; description mới: "… Mọi trang đã được kiểm tra lại từ đầu." Mục "Từng phần lên site thế nào" thành "Mỗi trang được kiểm tra thế nào" (vẫn ba bước oz-steps: đối chiếu với nguồn, kiểm lần hai, lên site; bài thêm sau cũng qua cùng các bước); thêm một dòng: Opus là bản làm lại của Opus Zero (link địa chỉ cũ), dẫn sang bài blog thông báo. Phần còn lại giữ nguyên. Lần này có 5 nhận định ve-site (phần viết lại), kiểm trên kế hoạch, chuẩn kiểm định, khoa.json và bản xem; không có nhận định cần nguồn ngoài. tests/khung.test.mjs đổi theo: trang chủ không còn câu "đang được làm lại". Trang chủ viết mới (không chuyển từ trang cũ), nên không có doi_chu. Lần 2 (D2-L1): trang chủ thật thay trang chủ tạm, viết mới (tầng khung, chuan-kiem-dinh.md mục 3: không có nhận định). Giữ bố cục D1.2b (dải mực, thẻ 8 nhóm) và câu thông báo của kế hoạch; thêm: nút "Bắt đầu từ số 0" (Bài 0) và "Đã biết chơi" (kiểm tra đầu vào) ở dải mực; link sang bản cũ Opus Zero trong lúc chưa chuyển hết bài (review cuối đợt 1); ba lối vào theo người đọc như trang chủ cũ (các bước chỉ là link tới trang, không có số liệu); sơ đồ 7 chặng sinh từ cap-do.yml (::hinh{ten="lo-trinh"}); thẻ 8 nhóm dẫn tới trang mở đầu của nhóm (src/nhom.mjs, chưa lên thì "sắp có"); mô tả nhóm Đọc thêm bỏ chữ opera; mục "Hôm nay tập gì?" có ô gợi ý tập (::cong-cu{ten="goi-y-tap"}, như khối "Hôm nay" của trang chủ cũ): người chưa có kết quả thấy lời mời làm bài kiểm tra đầu vào; người đã lưu chặng piano hay kết quả nhạc lý (trong trình duyệt) thấy chặng của mình và bài nên bắt đầu, chọn theo goi_y và chang của dữ liệu đã khóa (chiDaKhoa), và mục được đưa lên trước các lối vào. Lần 1: trang chủ tạm (D1.1, D1.2b), viết mới, không chuyển từ trang chủ cũ.
 nguon: []
 nhan_dinh:
   - id: n1
     cau: "Mọi trang đã được kiểm tra lại từ đầu."
     loai: ve-site
     ket_qua: dung
-    ghi_chu: "description. kiem-dinh/khoa.json trên main (4bb09b4): 234 trang khóa, gồm cả 233 trang của src/data/trang.yml và 404; 73/73 bản ghi tác phẩm khóa cả bản ghi (plans/lam-lai/README.md, bảng Tiến độ, đợt 6). Hai trang mở ở nhánh này (index, bài blog mới) khóa lại trước khi gộp."
+    ghi_chu: "description. kiem-dinh/khoa.json trên main (4bb09b4): 234 trang khóa, gồm cả 233 trang của src/data/trang.yml và 404; 73/73 bản ghi tác phẩm khóa cả bản ghi (plans/lam-lai/README.md, bảng Tiến độ, đợt 6). Hai trang mở ở nhánh này (index, bài blog mới) khóa lại trước khi gộp. Review D9: khoa.json ở main (git show main:kiem-dinh/khoa.json): 234 trang khóa; ở nhánh 231 (index, 404, cap-nhat mở) và 377 khóa bản ghi; 7 trang chặng chỉ đọc trường đã khóa (chiDaKhoa). Đúng khi bốn trang của đợt 9 được khóa lại trước khi gộp."
+    review: dung
   - id: n2
     cau: "Mỗi ý trong bài được kiểm lại; ý cần nguồn được đối chiếu với nguồn, chỗ sai được sửa."
     loai: ve-site
     ket_qua: dung
-    ghi_chu: "Bước 1 của oz-steps. plans/ben-vung/chuan-kiem-dinh.md mục 1 (mọi câu đúng/sai là một nhận định; loại cần nguồn), mục 3 (lượt 1: kiểm từng mục, sửa trang nếu sai; ve-site kiểm trên site, khuyen-tap không cần nguồn)."
+    ghi_chu: "Bước 1 của oz-steps. plans/ben-vung/chuan-kiem-dinh.md mục 1 (mọi câu đúng/sai là một nhận định; loại cần nguồn), mục 3 (lượt 1: kiểm từng mục, sửa trang nếu sai; ve-site kiểm trên site, khuyen-tap không cần nguồn). Review D9: chuan-kiem-dinh.md mục 1 (mọi câu đúng/sai là nhận định, có loại cần nguồn) và mục 3 bước 1; dist/index.html (bước 1 của oz-steps)."
+    review: dung
   - id: n3
-    cau: "Một lượt kiểm khác soát lại, rồi review."
+    cau: "Ý cần nguồn được một lượt khác kiểm độc lập (trang Đọc thêm: một mẫu), rồi review soát lại."
     loai: ve-site
-    ket_qua: dung
-    ghi_chu: "Bước 2. chuan-kiem-dinh.md mục 3: lượt 2 độc lập (Đọc thêm: mẫu khoảng 5 câu; lời khuyên tập: mẫu 3 câu; ve-site không qua lượt 2) rồi review. Câu nói chung \"soát lại\", không nói mọi câu qua lượt 2. Trang khung không có nhận định cần nguồn nên không có lượt 2, nhưng có review (lan.nguoi.review trong hồ sơ)."
+    ket_qua: da-sua
+    ghi_chu: "Bước 2. chuan-kiem-dinh.md mục 3: lượt 2 độc lập (Đọc thêm: mẫu khoảng 5 câu; lời khuyên tập: mẫu 3 câu; ve-site không qua lượt 2) rồi review. Câu nói chung \"soát lại\", không nói mọi câu qua lượt 2. Trang khung không có nhận định cần nguồn nên không có lượt 2, nhưng có review (lan.nguoi.review trong hồ sơ). Review D9: chữ cũ \"Một lượt kiểm khác soát lại, rồi review.\" nói như mọi trang đều qua lượt 2; theo chuan-kiem-dinh.md mục 3, lượt 2 chỉ kiểm câu cần nguồn (Đọc thêm: khoảng 5 câu mẫu; ve-site và trang khung không qua lượt 2), còn review thì trang nào cũng có. Đã sửa bước 2 của oz-steps trong src/content/docs/index.md; kiểm lại trên dist/index.html (build:xem)."
+    review: sai
   - id: n4
     cau: "Chỉ trang đã kiểm tra xong mới hiện ở đây; bài thêm sau cũng qua cùng các bước."
     loai: ve-site
     ket_qua: dung
-    ghi_chu: "Bước 3. Bản thật chỉ đưa trang có trong khoa.json (chuan-kiem-dinh.md mục 6; src/ban-build.mjs); 7 trang chặng sinh từ dữ liệu chỉ đọc trường đã khóa (chiDaKhoa). Bài thêm sau: plans/ben-vung/them-tac-pham.md (lượt 1, lượt 2, review, kiểm mẫu, khóa) và tools/them-tac-pham.mjs."
+    ghi_chu: "Bước 3. Bản thật chỉ đưa trang có trong khoa.json (chuan-kiem-dinh.md mục 6; src/ban-build.mjs); 7 trang chặng sinh từ dữ liệu chỉ đọc trường đã khóa (chiDaKhoa). Bài thêm sau: plans/ben-vung/them-tac-pham.md (lượt 1, lượt 2, review, kiểm mẫu, khóa) và tools/them-tac-pham.mjs. Review D9: src/ban-build.mjs (chiTrangTrongBan: bản thật chỉ gồm trang có trong khoa.json), chuan-kiem-dinh.md mục 6; plans/ben-vung/them-tac-pham.md (lượt 1, lượt 2, review, kiểm mẫu, khóa)."
+    review: dung
   - id: n5
     cau: "Opus là bản làm lại của Opus Zero."
     loai: ve-site
     ket_qua: dung
-    ghi_chu: "plans/lam-lai/README.md, đầu file: site mới làm lại từ repo cũ mtuann/opus-zero, tên đổi thành Opus (bản trước tên Opus Zero). Link https://mtuann.github.io/opus-zero/ trả 200 ngày 06/11/2026 (curl, User-Agent opus-kiem-dinh/1.0). Link bài blog /opus/blog/posts/2026-11-07-opus-da-len-du/ có trong bản xem (tests/link.test.mjs đạt)."
+    ghi_chu: "plans/lam-lai/README.md, đầu file: site mới làm lại từ repo cũ mtuann/opus-zero, tên đổi thành Opus (bản trước tên Opus Zero). Link https://mtuann.github.io/opus-zero/ trả 200 ngày 06/11/2026 (curl, User-Agent opus-kiem-dinh/1.0). Link bài blog /opus/blog/posts/2026-11-07-opus-da-len-du/ có trong bản xem (tests/link.test.mjs đạt). Review D9: plans/lam-lai/README.md đầu file; curl 06/11/2026 (User-Agent opus-kiem-dinh/1.0) https://mtuann.github.io/opus-zero/ trả 200; link bài blog có trong dist/ (build:xem)."
+    review: dung
 khuong_nhac: []
 mo_khoa:
   - ngay: 2026-10-24

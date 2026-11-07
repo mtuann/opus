@@ -24,7 +24,7 @@ Mỗi câu có thể đúng hay sai trong bài được ghi lại và kiểm tr�
 - review xem lại chỗ hai lượt khác nhau, chỗ đã sửa và các câu nói về chính site;
 - cuối cùng, vài câu chọn ngẫu nhiên được kiểm thêm một lần.
 
-Trang đã kiểm tra xong thì được khóa: muốn sửa phải mở khóa và kiểm lại phần bị chạm. Các con số, cấp độ, link và khuông nhạc trên site được kiểm tự động mỗi lần cập nhật. Tác phẩm thêm sau này cũng qua cùng các bước.
+Trang đã kiểm tra xong thì được khóa: muốn sửa phải mở khóa và kiểm lại phần bị chạm. Số liệu lấy từ dữ liệu, chặng của từng bài, link trong site và khuông nhạc được kiểm tự động mỗi lần cập nhật. Tác phẩm thêm sau này cũng qua cùng các bước.
 
 ## Tiến độ của bạn vẫn còn
 
