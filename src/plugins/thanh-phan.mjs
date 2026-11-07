@@ -39,6 +39,7 @@ import { veNhatKy } from '../scripts/nhat-ky.js';
 import { veNangLuc, veTienBo } from '../scripts/nang-luc.js';
 import { veNgheMu, vePhieuNgheMu } from '../scripts/nghe-mu.js';
 import { bangHep } from './bang-hep.mjs';
+import { hinhKhuongKepPhim } from '../scripts/ve-khuong-phim.js';
 
 export const esc = (s) =>
 	String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
@@ -414,6 +415,8 @@ const HINH = {
 	circle: () => hinhVongQuangNam(),
 	functions: () => hinhChucNang(),
 	modes: () => hinhDieuThuc(),
+	// khuông kép nối xuống phím qua ba nốt mốc (đợt hình 2, bài nhạc lý 2): src/scripts/ve-khuong-phim.js
+	'khuong-kep-phim': () => hinhKhuongKepPhim(),
 	// biểu đồ vòng đời từ 1650 (D5-L1), dựng từ nha-soan-nhac.yml thay hình tĩnh cũ: năm luôn khớp dữ liệu
 	lifespans: (trang) => veVongDoi(chonNguoi(docDanhSach(NGUOI_VONG_DOI), duLieuCho(trang).nguoi)),
 };

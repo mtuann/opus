@@ -1415,6 +1415,38 @@ html.oz-stand-open .main-pane {
 	fill: none;
 }
 
+/* ---------- Khuông kép nối phím (::hinh{ten="khuong-kep-phim"}, đợt hình 2; src/scripts/ve-khuong-phim.js) ----------
+   Dòng mốc (dòng 2 khóa Sol, dòng 4 khóa Fa) và nét nối nốt mốc xuống phím theo màu nhựa thông; số dòng theo màu chữ phụ.
+   Phần bàn phím dùng lớp của veBanPhim (màu phím, nhãn). */
+.oz-khuong-phim .oz-kp {
+	max-width: 36rem;
+}
+.oz-kp .oz-hb-dong path.oz-kp-dong-moc {
+	stroke: var(--oz-accent);
+	stroke-width: 1.6;
+}
+.oz-kp-ngoac,
+.oz-kp-noi {
+	fill: none;
+	stroke: currentColor;
+}
+.oz-kp-ngoac {
+	stroke-width: 1.5;
+}
+.oz-kp-noi {
+	stroke: var(--oz-accent);
+	stroke-width: 1.2;
+	stroke-dasharray: 3 2;
+}
+.oz-kp .oz-phim-nhan {
+	font-size: 7px;
+}
+.oz-kp-so {
+	font-size: 6.5px;
+	text-anchor: middle;
+	fill: var(--sl-color-gray-3);
+}
+
 /* ---------- Mười lăm hóa biểu (::hinh{ten="keysigs"}) ---------- */
 .oz-ks-luoi {
 	display: grid;
