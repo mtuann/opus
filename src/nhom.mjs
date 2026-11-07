@@ -34,7 +34,7 @@ export const NHOM = [
 ].map((n) => ({ ...n, bieu_tuong: BIEU_TUONG[n.id] }));
 
 /** Trang của nhóm "Thêm", ngoài mục blog. */
-const THEM = ['cap-nhat', 'tai-nguyen', 'tai-lieu-tham-khao', 'bat-dau/sach-in'];
+const THEM = ['cap-nhat', 'ke-hoach', 'tai-nguyen', 'tai-lieu-tham-khao', 'bat-dau/sach-in'];
 
 /** [đầu đường dẫn, nhóm], thử theo thứ tự như nhom_menu(). */
 const THEO_DUONG_DAN = [
@@ -312,6 +312,7 @@ const THU_TU = [
 	['tai-nguyen', 'Tài nguyên'],
 	['tai-lieu-tham-khao', 'Tài liệu tham khảo'],
 	['cap-nhat', 'Cập nhật'],
+	['ke-hoach', 'Kế hoạch phát triển'],
 ];
 
 /** Nhóm menu của trang (id như trong NHOM, hay "them"); undefined với trang chủ và trang 404. */

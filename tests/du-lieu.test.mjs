@@ -17,11 +17,13 @@ test('dữ liệu trong src/data/ đúng schema và kiểm chéo, đủ số b�
 	assert.deepEqual(loi, []);
 	assert.equal(duLieu['cap-do'].length, 7);
 	// 233 trang của site cũ (plans/lam-lai/anh-xa.md); sau đợt 6 có thêm trang tác phẩm mới (tools/them-tac-pham.mjs):
-	// tầng tac-pham, là trang chính của một bản ghi; từ đợt 9 có thêm bài blog mới (blog/posts/<yyyy-mm-dd>-<tên>, tầng khung)
+	// tầng tac-pham, là trang chính của một bản ghi; từ đợt 9 có thêm bài blog mới (blog/posts/<yyyy-mm-dd>-<tên>, tầng khung);
+	// và trang mới của site ghi trong TRANG_MOI (ke-hoach, plans/ben-vung/ke-hoach-mo-rong.md)
+	const TRANG_MOI = new Set(['ke-hoach']);
 	const cu = new Set([...fs.readFileSync(path.join(ROOT, 'plans/lam-lai/anh-xa.md'), 'utf8').matchAll(/^\| `([^`]+)` \|/gm)].map((m) => m[1]));
 	const trangChinh = new Set(duLieu['tac-pham'].map((r) => (r.loai === 'bai-hoc' ? 'piano/tac-pham/' : 'nghe-nhac/') + r.slug));
 	assert.equal(duLieu.trang.filter((t) => cu.has(t.id)).length, 233, 'trang.yml phải có đủ 233 trang của site cũ');
-	assert.deepEqual(duLieu.trang.filter((t) => !cu.has(t.id) && !(t.tang === 'tac-pham' && trangChinh.has(t.id)) && !(t.tang === 'khung' && BAI_BLOG.test(t.id))).map((t) => t.id), [], 'trang ngoài site cũ chỉ là trang tác phẩm mới hay bài blog mới');
+	assert.deepEqual(duLieu.trang.filter((t) => !cu.has(t.id) && !(t.tang === 'tac-pham' && trangChinh.has(t.id)) && !(t.tang === 'khung' && BAI_BLOG.test(t.id)) && !TRANG_MOI.has(t.id)).map((t) => t.id), [], 'trang ngoài site cũ chỉ là trang tác phẩm mới, bài blog mới hay trang trong TRANG_MOI');
 	assert.equal(duLieu['tac-pham'].filter((r) => r.loai === 'bai-hoc' && cu.has(`piano/tac-pham/${r.slug}`)).length, 34, 'đủ 34 bài học của site cũ');
 	assert.ok(duLieu['thuat-ngu'].length >= 150);
 	assert.ok(duLieu['nha-soan-nhac'].length >= 100);

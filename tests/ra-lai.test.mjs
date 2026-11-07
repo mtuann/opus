@@ -78,9 +78,9 @@ test('tools/ra-lai.mjs: thoát 1 khi có trang đến hạn và ghi nội dung i
 	assert.equal(chay('--thang', '2027-13').status, 2);
 });
 
-test('đủ 10 trang tham chiếu có hạn, trang nào cũng có ra_lai', () => {
+test('đủ 11 trang tham chiếu có hạn (10 trang của đợt 8 và trang ke-hoach), trang nào cũng có ra_lai', () => {
 	const trang = parse(fs.readFileSync(path.join(ROOT, 'src/data/trang.yml'), 'utf8')).filter((r) => r.tang === 'tham-chieu');
-	assert.equal(trang.length, 10);
+	assert.equal(trang.length, 11);
 	for (const r of trang) assert.ok(r.ra_lai, r.id);
 });
 
