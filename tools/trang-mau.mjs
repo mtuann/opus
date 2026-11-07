@@ -45,6 +45,9 @@ export const KHOI = {
 	'thẻ âm ngoài hợp âm': 'class="oz-fig-grid oz-nct"',
 	'tổng phổ giản lược': 'class="oz-fig oz-fig-mid oz-tong-pho"',
 	'thẻ mẫu galant': 'class="oz-fig-grid oz-galant"',
+	// đợt hình 3 (mo/hinh-dot-3b): khối hình thức có ô cao theo tốc độ (overture), bốn vai và ba tiếng kêu (Erlkönig)
+	'khối tốc độ overture': 'oz-form-toc-do',
+	'bốn vai Erlkönig': 'oz-erlkonig',
 	'công cụ âm học': 'oz-boi-am',
 	'thẻ ghi nhớ': 'class="oz-the-nho',
 	'trạng thái bài': 'class="oz-trang-thai-bai',
