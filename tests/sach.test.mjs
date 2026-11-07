@@ -45,13 +45,18 @@ test('lamChuong: bỏ công cụ (và mục chỉ dẫn tới nó), câu hỏi k
 		'<div class="oz-lt oz-tool not-content" data-sinh><button>Nghe</button></div>' +
 		'<div class="sl-heading-wrapper level-h2"><h2 id="muc-2">Mục 2</h2></div><p>Chữ.</p>' +
 		'<div class="oz-ban-phim not-content"><svg></svg></div><p>Còn chữ sau bàn phím.</p>' +
+		'<div class="oz-ban-phim not-content" data-sinh><div class="oz-phim-cuon"><svg class="oz-phim oz-phim--chu"><text>5</text></svg></div>' +
+		'<p class="oz-phim-chu-giai">số ngón tay trái</p><p class="oz-stats oz-phim-ten">Bấm vào phím</p><div class="oz-row"><button>Nghe các nốt được tô</button></div><noscript><p>JS</p></noscript></div>' +
 		'<noscript><p>Cần JavaScript.</p></noscript><p class="oz-nguon-am" data-sinh>Mẫu âm.</p>' +
 		'</div>';
 	const t = docTrang(`<html><head><style>x{}</style><link rel="stylesheet" href="/opus/_astro/a.css"></head><body><h1 id="_top">3. Trường độ</h1>${html}</body></html>`);
 	assert.equal(t.ten, '3. Trường độ');
 	assert.deepEqual(t.css, ['<style>x{}</style>', '<link rel="stylesheet" href="/opus/_astro/a.css">']);
 	const c = lamChuong(t.noiDung, 'nhac-ly/04-nhip/', 2, SITE);
-	assert.doesNotMatch(c, /oz-tool|oz-ban-phim|oz-quiz|noscript|oz-nguon-am|sl-anchor-link|Luyện với công cụ|Bấm để nghe/);
+	assert.doesNotMatch(c, /oz-tool|oz-ban-phim not-content"><svg><\/svg>|oz-quiz|noscript|oz-nguon-am|sl-anchor-link|Luyện với công cụ|Bấm để nghe/);
+	// bàn phím có số ngón, nhãn, ngoặc là hình của bài: giữ hình và chú giải, bỏ dòng tên nốt và nút nghe
+	assert.match(c, /<div class="oz-ban-phim not-content" data-sinh><div class="oz-phim-cuon"><svg class="oz-phim oz-phim--chu"><text>5<\/text><\/svg><\/div><p class="oz-phim-chu-giai">số ngón tay trái<\/p><\/div>/);
+	assert.doesNotMatch(c, /oz-phim-ten|Nghe các nốt được tô/);
 	// mục 2 còn chữ khác ngoài công cụ: giữ mục, chỉ bỏ công cụ
 	assert.match(c, /<h2 id="c2-muc-2">Mục 2<\/h2>/);
 	assert.match(c, /Còn chữ sau bàn phím/);
@@ -117,7 +122,9 @@ test('dist/sach/: bảy cuốn, mỗi cuốn đủ chương có trong bản buil
 test('dist/sach/: không còn công cụ, câu hỏi bấm được, khối nghe hay script của trang; câu hỏi có đáp án cuối chương', { skip: !coDist && 'chưa build' }, () => {
 	for (const s of SACH) {
 		const h = fs.readFileSync(path.join(DIST, 'sach', `${s.id}.html`), 'utf8');
-		assert.doesNotMatch(h, /class="[^"]*\b(oz-tool|oz-ban-phim|oz-listen|oz-quiz|oz-chua-co|sl-anchor-link)\b/, s.id);
+		assert.doesNotMatch(h, /class="[^"]*\b(oz-tool|oz-listen|oz-quiz|oz-chua-co|sl-anchor-link|oz-phim-ten|oz-row)\b/, s.id);
+		// bàn phím chỉ còn loại có chữ thêm (số ngón, nhãn, ngoặc: hình của bài), không có dòng tên nốt, nút nghe
+		for (const m of h.matchAll(/class="oz-ban-phim[^"]*"[^>]*>(.{0,400})/g)) assert.match(m[1], /oz-phim--chu/, s.id);
 		assert.doesNotMatch(h, /<noscript|data-quiz=|data-pagefind-body/, s.id);
 		assert.equal((h.match(/<script\b/g) ?? []).length, 2, `${s.id}: chỉ abcjs và script vẽ khuông, in`);
 		for (const ch of h.split('<section class="chapter"').slice(1)) {

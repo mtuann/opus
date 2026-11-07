@@ -1,6 +1,6 @@
 // Bàn phím có chữ thêm (đợt hình 1: ::cong-cu{ten="piano" phai trai nhan ngoac}; veBanPhim trong src/scripts/ve.js) trên ba
 // trình duyệt, ba cỡ màn hình: trang không tràn ngang; dấu số ngón nằm gọn trong phím của nó; nhãn và chữ của ngoặc không
-// đè lên nhau, không đè lên phím; sau khi bàn phím chạy (ban-phim.js), tên đọc được của phím có số ngón và nhãn; có chú
+// đè lên nhau, không đè lên phím, không ra ngoài hình; sau khi bàn phím chạy (ban-phim.js), tên đọc được của phím có số ngón và nhãn; có chú
 // giải hai tay; bấm phím có số ngón vẫn đọc tên. Trang lấy từ bản build (mọi trang có bàn phím loại này); không có thì bỏ qua.
 import { after, test } from 'node:test';
 import assert from 'node:assert/strict';
@@ -45,6 +45,9 @@ function do_() {
 		});
 		for (let x = 0; x < chu.length; x++)
 			for (let y = x + 1; y < chu.length; y++) if (chu[x][2] !== chu[y][2] && giao(chu[x][1], chu[y][1]) > 1) loi.push(`hình ${i}: chữ "${chu[x][0]}" đè lên "${chu[y][0]}"`);
+		// chữ nằm trong hình (không bị cắt ở mép viewBox)
+		const khung = hop(svg.getBoundingClientRect());
+		for (const [s, h] of chu) if (h.l < khung.l - 0.5 || h.r > khung.r + 0.5) loi.push(`hình ${i}: chữ "${s}" ra ngoài hình`);
 		for (const [s, h] of chu) for (const k of phim.values()) if (giao(h, hop(k.getBoundingClientRect())) > 1) loi.push(`hình ${i}: chữ "${s}" đè lên phím ${k.dataset.m}`);
 		const coNgon = svg.querySelector('.oz-ngon');
 		const giai = svg.closest('.oz-ban-phim').querySelector('.oz-phim-chu-giai');

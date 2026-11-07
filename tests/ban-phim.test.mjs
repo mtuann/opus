@@ -170,7 +170,8 @@ test('::cong-cu{ten="piano"}: số ngón (phai, trai), nhãn (nhan), ngoặc (ng
 	const ts = docThongSoBanPhim({ range: 'F3-G4', phai: 'C4:1 D4:2 E4:3 F4:4 G4:5', trai: 'F3:5 G3:4 A3:3 B3:2 C4:1' });
 	assert.deepEqual(ts.ngon.slice(0, 2), [{ m: 60, tay: 'phai', so: 1 }, { m: 62, tay: 'phai', so: 2 }]);
 	assert.deepEqual(ts.ngon.filter((n) => n.m === 60).map((n) => n.tay), ['phai', 'trai'], 'hai ngón cái chung Đô giữa');
-	assert.deepEqual(ts.to, [60, 62, 64, 65, 67, 53, 55, 57, 59], 'phím có số ngón là phím được tô, không trùng');
+	assert.deepEqual(ts.to, [53, 55, 57, 59, 60, 62, 64, 65, 67], 'phím có số ngón là phím được tô, không trùng, theo cao độ');
+	assert.deepEqual(docThongSoBanPhim({ range: 'C3-C5', notes: 'C5 C3 C4' }).to, [72, 48, 60], 'không có số ngón: giữ thứ tự của notes (HTML cũ không đổi)');
 	assert.deepEqual(docThongSoBanPhim({ nhan: 'C4:0|1_đúng F#4:6|4_tăng|5_giảm' }).nhanPhim, [
 		{ m: 60, dong: ['0', '1 đúng'] },
 		{ m: 66, dong: ['6', '4 tăng', '5 giảm'] },
@@ -228,6 +229,11 @@ test('::cong-cu{ten="piano"}: số ngón (phai, trai), nhãn (nhan), ngoặc (ng
 	assert.ok(le[37][1] > le[13][1], 'Rê4 lùi xuống hàng dưới');
 	const ngan = dongNhan(veBanPhim(docThongSoBanPhim({ nhan: 'C4:0|a D4:2|b' })).svg);
 	assert.equal(ngan[13][1], ngan[37][1], 'nhãn ngắn: không so le');
+	// chữ dài ở phím đầu, phím cuối: dịch vào trong hình
+	const mep = veBanPhim(docThongSoBanPhim({ range: 'C4-E4', nhan: 'C4:một_nhãn_dài E4:nhãn_dài_nữa' })).svg;
+	const xs = [...mep.matchAll(/<tspan x="([\d.]+)"[^>]*>([^<]+)</g)].map((m) => [Number(m[1]), m[2]]);
+	for (const [x, s2] of xs) assert.ok(x - (s2.length * 3.6) / 2 >= 1 && x + (s2.length * 3.6) / 2 <= 3 * 24 + 1, `${s2} ở x ${x}`);
+	assert.ok(xs[0][0] > 13 && xs[1][0] < 61, 'đã dịch vào trong');
 	// không có chữ thêm: hình như trước (các bàn phím đã khóa không đổi)
 	assert.doesNotMatch(veBanPhim({ thap: 60, cao: 72, to: [60] }).svg, /oz-phim--chu|oz-ngon|data-mo-ta|y="(?!1"|\d+(\.\d+)?" aria-hidden)/);
 	assert.match(veBanPhim({ thap: 60, cao: 72 }).svg, /viewBox="0 0 194 106"/);

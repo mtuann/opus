@@ -273,8 +273,15 @@ export function veBanPhim({ thap, cao, to = [], to2 = [], nhan: nhanRieng, ngon 
 	}
 
 	// nhãn: phím đen ở dải trên (sát đỉnh phím), phím trắng ở dải dưới
+	// chữ ở phím đầu hay cuối có thể dài quá mép hình (bị cắt): dịch dòng ấy vào trong, theo bề rộng ước lượng (nhân 1,1
+	// cho dòng đậm và chỗ ước lượng hụt); không nới viewBox, để phím không nhỏ đi (vùng bấm 44 px)
+	const rongHinh = soTrang * PHIM_RONG + 2;
+	const trongHinh = (cx, s) => {
+		const nua = (rongChu(s) * 1.1) / 2;
+		return Math.min(Math.max(cx, 1 + nua), rongHinh - 1 - nua);
+	};
 	const dongChu = (ds, cx, yDau, lop, lui = 0) =>
-		`<text class="${lop}" aria-hidden="true">${ds.map((s, i) => `<tspan x="${so(cx)}" y="${so(yDau + i * DONG + (i ? lui : 0))}">${esc(s)}</tspan>`).join('')}</text>`;
+		`<text class="${lop}" aria-hidden="true">${ds.map((s, i) => `<tspan x="${so(trongHinh(cx, s))}" y="${so(yDau + i * DONG + (i ? lui : 0))}">${esc(s)}</tspan>`).join('')}</text>`;
 	const nhanSvg = [
 		...nhanDen.map((n) => {
 			const lui = soLeDen && thuTu(n.m) % 2 ? lDen * DONG + LE : 0;

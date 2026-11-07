@@ -649,7 +649,10 @@ export function docThongSoBanPhim({ range = 'C4-C5', notes = '', play, phai, tra
 		if (tu >= den) throw new Error(`công cụ "piano": ngoac "${muc}" phải từ nốt thấp tới nốt cao`);
 		cacNgoac.push({ tu, den, dong: chuNhan(chu, 'ngoac', muc) });
 	}
-	return { thap, cao, to: [...new Set([...to, ...ngon.map((n) => n.m)])], hopAm: play === 'chord', ngon, nhanPhim, ngoac: cacNgoac };
+	// có số ngón thì phím được tô xếp theo cao độ (tên đọc được của hình đi từ trái sang phải); không có thì giữ thứ tự của
+	// notes, để HTML của các bàn phím cũ không đổi
+	const cacTo = [...new Set([...to, ...ngon.map((n) => n.m)])];
+	return { thap, cao, to: ngon.length ? cacTo.sort((a, b) => a - b) : cacTo, hopAm: play === 'chord', ngon, nhanPhim, ngoac: cacNgoac };
 }
 
 /** Chú giải hai tay dưới bàn phím có số ngón: hình của từng tay (như trên phím) và chữ. */

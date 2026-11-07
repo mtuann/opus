@@ -74,6 +74,16 @@ Ghi nhận, không phải lỗi (không sửa):
 
 Kiểm sau review: `node tools/khoa.mjs tinh` thoát 0 (mọi mục đã khóa khớp); `npm test` (trên bản xem) 303 đạt, 2 bỏ qua, 0 hỏng. Còn lại trước khi khóa lại: kiểm mẫu (`kiem_mau`), rồi `node tools/khoa.mjs khoa` bốn trang.
 
+## Sửa theo review mã
+
+Review mã của người gom: gộp được, sửa ba chỗ (một commit mới; trang và hồ sơ không đổi).
+
+1. **Sách in bỏ mất hình.** `src/sach/sach.mjs` bỏ mọi `oz-ban-phim`, nên bàn phím có số ngón, nhãn, ngoặc của `nam-ngon`, `hai-tuan-dau`, `09-quang`, `10-bai-dau-tien` không vào sách. Nay khối có `svg.oz-phim--chu` là hình của bài: giữ trong sách (không tính là công cụ, nên mục chứa nó không bị bỏ), chỉ bỏ dòng tên nốt, nút nghe (`oz-phim-ten`, `oz-row`) và `<noscript>` bên trong, như `@media print`. Bàn phím chỉ tô phím vẫn bỏ như cũ. Bản xem: `piano-ky-thuat` 18 hình (16 `nam-ngon`, 2 `hai-tuan-dau`), `nhac-ly-co-ban` 2, `piano-tac-pham` 6. Kiểm thử `tests/sach.test.mjs`: `lamChuong` giữ hình và chú giải, bỏ tên nốt và nút; mọi `oz-ban-phim` trong `dist/sach/` đều có `oz-phim--chu`, không còn `oz-phim-ten`, `oz-row`.
+2. **Thứ tự phím tô trong tên đọc được.** Trước: notes, rồi tay phải, rồi tay trái. Nay có số ngón thì `to` xếp theo cao độ; không có số ngón thì giữ thứ tự `notes` (HTML bàn phím cũ không đổi). Kiểm thử ở `tests/ban-phim.test.mjs`.
+3. **Chữ ở mép hình bị cắt.** Nhãn hay chữ ngoặc ở phím đầu, phím cuối dài hơn nửa phím thì vượt `viewBox`. Nay mỗi dòng dịch vào trong theo bề rộng ước lượng nhân 1,1 (`trongHinh` trong `veBanPhim`); không nới `viewBox`, để phím không nhỏ đi dưới 44 px. Kiểm thử Node (nhãn dài ở Đô4 và Mi4 nằm trong hình) và trình duyệt (`kiem-ban-phim-chu.mjs`: khung mỗi `tspan` nằm trong `svg`).
+
+Kiểm lại: `npm run build:xem` (không `[opus]`), `npm test` 303 đạt, 2 bỏ qua; `node --test tests/ban-phim.test.mjs tests/sach.test.mjs` 25 đạt; `OPUS_TRANG` 4 trang `npm run test:trinh-duyet` 771 đạt, 1 bỏ qua, 0 hỏng (ba trình duyệt). Bản xem là bản build cuối.
+
 ## Việc cho người gom
 
 - Review mã (mức "Vừa", commit mã riêng).

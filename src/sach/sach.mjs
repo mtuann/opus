@@ -114,13 +114,19 @@ export const SACH = [
 ];
 
 /**
- * Phần tử bị bỏ khỏi sách: công cụ bấm được (lớp oz-tool, bàn phím, trạng thái bài, khối nghe), dòng ghi nguồn mẫu âm
+ * Phần tử bị bỏ khỏi sách: công cụ bấm được (lớp oz-tool, bàn phím chỉ tô phím, trạng thái bài, khối nghe), dòng ghi nguồn mẫu âm
  * của công cụ, ô "chưa chuyển", phần chỉ để xem trên màn hình (oz-khong-in), <noscript>, script, link # cạnh tiêu đề.
  */
 const LOP_BO = new Set(['oz-tool', 'oz-ban-phim', 'oz-trang-thai-bai', 'oz-listen', 'oz-nguon-am', 'oz-chua-co', 'oz-khong-in', 'sl-anchor-link']);
-const laBo = (n) => n.ten === 'noscript' || n.ten === 'script' || lop(n).some((c) => LOP_BO.has(c));
+/**
+ * Bàn phím có chữ thêm (số ngón, nhãn, ngoặc: svg.oz-phim--chu, đợt hình 1) là hình của bài, nên giữ trong sách như khi in
+ * trang (@media print): chỉ bỏ dòng tên nốt và nút nghe (oz-phim-ten, oz-row) bên trong. Bàn phím chỉ tô phím thì vẫn bỏ.
+ */
+const laHinhPhim = (n) => lop(n).includes('oz-ban-phim') && !!tim(n, (x) => x.ten === 'svg' && lop(x).includes('oz-phim--chu'));
+const LOP_BO_TRONG_HINH_PHIM = ['oz-phim-ten', 'oz-row'];
+const laBo = (n) => n.ten === 'noscript' || n.ten === 'script' || (!laHinhPhim(n) && lop(n).some((c) => LOP_BO.has(c)));
 /** Phần tử là công cụ (để bỏ cả mục chỉ dẫn tới nó), khác phần bỏ vì chỉ là phần phụ. */
-const laCongCu = (n) => lop(n).some((c) => ['oz-tool', 'oz-ban-phim', 'oz-listen'].includes(c));
+const laCongCu = (n) => !laHinhPhim(n) && lop(n).some((c) => ['oz-tool', 'oz-ban-phim', 'oz-listen'].includes(c));
 
 const CHU_CAI = 'ABCDEFGH';
 const khoangTrang = (n) => 'chu' in n && !n.chu.trim();
@@ -174,7 +180,8 @@ export function docTrang(html) {
 export function lamChuong(noiDung, url, so, site) {
 	const dapAn = [];
 	let soCau = 1;
-	doiCon(noiDung, (con) => {
+	doiCon(noiDung, (con, cha) => {
+		if (laHinhPhim(cha)) return con.filter((n) => 'chu' in n || !(n.ten === 'noscript' || lop(n).some((c) => LOP_BO_TRONG_HINH_PHIM.includes(c))));
 		const coCongCu = con.some((n) => !('chu' in n) && laCongCu(n));
 		let ra = con.filter((n) => 'chu' in n || !laBo(n));
 		// mục h2 chỉ còn lời dẫn (nhiều nhất một đoạn) tới công cụ vừa bỏ: bỏ cả mục, như books.py cũ
