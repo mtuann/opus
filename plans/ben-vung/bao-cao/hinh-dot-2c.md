@@ -60,3 +60,23 @@ Không commit, ở `/private/tmp/claude-501/-Users-mitu-Desktop-work-projects-op
 - Xem ảnh chụp, rồi `node tools/khoa.mjs khoa` ba trang.
 - Gộp với hai nhánh song song: `src/styles/thanh-phan.css` (khối mới đặt ngay sau `.oz-fig-grid > *`), `tools/trang-mau.mjs` (`KHOI`, sau "hình tĩnh lưới"), `AGENTS.md` (mục mới đặt trước "D6-L1") có thể xung đột vị trí; nội dung độc lập.
 - Ở màn 360 px, thẻ galant xếp một cột (tám thẻ khá dài). Nếu thấy dài, đợt sau có thể thu vòng tròn nhỏ hơn để hai cột.
+
+## Soát
+
+Claude Opus 5.5, người soát (không phải người vẽ), 07/11/2026: review mã mức "Vừa" và soát hình (gộp review và kiểm mẫu, thủ tục hình rút gọn).
+
+**Mã: đạt**, một sửa nhỏ. Ba hình tĩnh dùng biến `--oz-h-*` (đủ tối, sáng, in), chữ thật (`<text>` trong SVG, `<span>` trong galant), `role="img"` và `aria-label` kể đủ đường nét ở từng SVG; galant là HTML nên máy đọc màn hình đọc thẳng chữ. Không biến màu mới. Sách in giữ hình (`dist/sach/nhac-ly-nang-cao.html` có am-ngoai và tong-pho, `piano-ky-thuat.html` có galant; CSS chung `middleware.*.css` có các lớp mới). Kiểm thử Node đọc bảng của trang và so với hình (sửa bảng mà quên hình thì hỏng); kiểm thử trình duyệt chờ `load` và `document.fonts.ready`, không chờ cố định. Ảnh chụp 360 px tối và 1280 px: không đè, không tràn.
+
+- Đã sửa: thanh "giữ nguyên" của galant (`.oz-galant-giu`) là màu nền CSS, trình duyệt bỏ khi in (mặc định không in nền): thêm vào nhóm `print-color-adjust: exact` của `@media print` (cùng `.oz-seg`, `.oz-chip`…). Chữ "giữ nguyên" vẫn in được trước khi sửa, nên không mất thông tin, chỉ mất thanh.
+
+**Hình: ba câu đều `dung`.**
+
+| Câu | Trang | Đối chiếu |
+|---|---|---|
+| n29 | `nhac-ly/18-am-ngoai-hop-am` | Sáu thẻ theo sáu dòng bảng; hướng và cỡ bước: lướt lên, lên (cùng hướng); thêu lên rồi quay lại; treo giữ (cung nối qua vạch đổi hợp âm) rồi xuống một bậc; dựa nhảy lên bốn bậc Sol–Rê ở phách mạnh rồi xuống một bậc tới Đô (khuông X:3); đón trước "?" (không có quy định), giữ sang hợp âm sau (khuông X:4); âm nền thanh Sol dưới ba hợp âm đổi. |
+| n33 | `nhac-ly/20-doc-tong-pho` | Sáu nhóm và 15 tên viết tắt đúng thứ tự bảng; "(nếu có)" khuông nét đứt; mỗi ngoặc phủ đúng các khuông của bộ; màu ngoặc bằng màu ô `seating` (gỗ, đồng, gõ, Harp, dây). |
+| n88 | `piano/hoa-am/mau-galant` | Tám thẻ, đọc lại từng bậc (cả ♯1, ♭7, ♯4, ♮7) khớp cột Giai điệu và Bass; "…" ở Meyer, Fonte, Monte; thanh giữ nguyên dài ba bước (Ponte), bốn bước (Quiescenza). |
+
+Hình không nói điều trang không viết. Hồ sơ: `review: dung` và ghi chú "Soát hình 2C…" ở n29, n33, n88; lần 2 của `lan`: `review`, `kiem_mau` cùng chuỗi người soát, `luot_2: "không cần (câu ve-site, thủ tục hình)"`. Chưa khóa (việc của người gom sau khi xem ảnh).
+
+Kiểm: `npm run build:xem` không cảnh báo `[opus]`; `node tools/khoa.mjs tinh` khớp hết; `npm test` 306 đạt, 2 bỏ qua, 0 hỏng.
