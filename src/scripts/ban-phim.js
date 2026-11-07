@@ -34,7 +34,8 @@ export function ganBanPhim(svg, { thongBao, khiBam, midi = true } = {}) {
 	for (const k of phim) {
 		k.setAttribute('role', 'button');
 		k.setAttribute('tabindex', k === dau ? '0' : '-1');
-		k.setAttribute('aria-label', k.dataset.ten + (k.classList.contains('to') ? ', được tô' : ''));
+		// số ngón, nhãn của phím (data-mo-ta, veBanPhim): đọc kèm tên phím
+		k.setAttribute('aria-label', k.dataset.ten + (k.classList.contains('to') ? ', được tô' : '') + (k.dataset.moTa ? `, ${k.dataset.moTa}` : ''));
 	}
 	const nhay = (m) => {
 		const k = phim.find((x) => Number(x.dataset.m) === m);

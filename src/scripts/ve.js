@@ -152,44 +152,175 @@ export function soPhimTrang(thap, cao) {
 	return n;
 }
 
+/** Tâm (x) của phím m trên hình bàn phím bắt đầu ở phím trắng `thap` (đơn vị của viewBox). */
+export function tamPhim(thap, m) {
+	const x = 1 + (soPhimTrang(thap, m) - (laPhimDen(m) ? 0 : 1)) * PHIM_RONG;
+	return laPhimDen(m) ? x : x + PHIM_RONG / 2;
+}
+
+const DONG = 7.5; // cao một dòng chữ của nhãn và ngoặc (cỡ chữ 6,5)
+/** Bề rộng ước lượng của một dòng chữ cỡ 6,5 (để xếp các ngoặc không đè chữ lên nhau). */
+const rongChu = (s) => [...s].length * 3.6;
+const TAY = { phai: 'tay phải', trai: 'tay trái' };
+
+/** Xếp các ngoặc vào tầng: tầng 0 sát bàn phím; ngoặc chồng lên ngoặc khác (cả phần chữ) thì lên tầng trên. */
+function xepNgoac(thap, ngoac) {
+	const tang = []; // mỗi tầng: khoảng x đã dùng, gồm cả chữ
+	return [...ngoac]
+		.sort((a, b) => a.tu - b.tu || a.den - b.den)
+		.map((n) => {
+			const [x1, x2] = [tamPhim(thap, n.tu), tamPhim(thap, n.den)];
+			const giua = (x1 + x2) / 2;
+			const nua = Math.max(...n.dong.map(rongChu)) / 2;
+			const [trai, phai] = [Math.min(x1, giua - nua), Math.max(x2, giua + nua)];
+			let t = tang.findIndex((ds) => ds.every(([a, b]) => b <= trai + 0.5 || a >= phai - 0.5));
+			if (t < 0) t = tang.push([]) - 1;
+			tang[t].push([trai, phai]);
+			return { ...n, x1, x2, giua, t };
+		});
+}
+
 /**
  * Bàn phím piano bằng SVG, từ phím `thap` đến `cao` (số MIDI, hai đầu là phím trắng), tô các phím trong `to`. Phím trắng
  * ghi tên hai hệ (Đô, Rê… và chữ cái; phím Đô ghi cả số quãng tám: C4). Mỗi phím mang data-m (số MIDI) và
  * data-ten (tên đọc lên khi bấm). Hình dựng sẵn lúc build để hiện ngay, không xô bố cục; src/scripts/ban-phim.js thêm
  * phần bấm được (vai trò nút, phím mũi tên) khi trang chạy JavaScript. Hình phím của công cụ luyện tai (src/scripts/luyen-tai.js)
  * tô thêm nhóm phím thứ hai `to2` (lớp to-2, màu khác; phím có cả trong `to` thì theo `to`) và đặt nhãn riêng `nhan`.
+ *
+ * Chữ thêm trên hình (đợt hình 1; ::cong-cu{ten="piano" phai trai nhan ngoac}):
+ * - `ngon`: [{ m, tay: 'phai' | 'trai', so }]: số ngón trên phím; tay phải trong hình tròn, tay trái trong hình vuông bo góc
+ *   (hai màu, và khác hình để không chỉ dựa vào màu); hai tay chung một phím thì hai dấu cạnh nhau.
+ * - `nhanPhim`: [{ m, dong: [chữ…] }]: nhãn ngắn (tối đa ba dòng); phím trắng ghi dưới bàn phím, phím đen ghi trên.
+ * - `ngoac`: [{ tu, den, dong: [chữ…] }]: ngoặc nối tâm hai phím, chữ phía trên; ngoặc chồng nhau thì xếp tầng.
+ * Chữ trong hình là chữ thật (aria-hidden: số ngón và nhãn đã ở aria-label của từng phím qua data-mo-ta, và ở aria-label
+ * của cả hình).
  */
-export function veBanPhim({ thap, cao, to = [], to2 = [], nhan: nhanRieng }) {
+export function veBanPhim({ thap, cao, to = [], to2 = [], nhan: nhanRieng, ngon = [], nhanPhim = [], ngoac = [] }) {
+	const ngoacXep = xepNgoac(thap, ngoac);
+	const soDong = (ds) => Math.max(0, ...ds.map((n) => n.dong.length));
+	const tangCao = [];
+	for (const n of ngoacXep) tangCao[n.t] = Math.max(tangCao[n.t] ?? 0, n.dong.length * DONG + 6);
+	const caoNgoac = tangCao.reduce((a, b) => a + b, 0);
+	const nhanDen = nhanPhim.filter((n) => laPhimDen(n.m));
+	const nhanTrang = nhanPhim.filter((n) => !laPhimDen(n.m));
+	// nhãn của hai phím kề nhau (phím trắng cạnh nhau, hay phím đen cùng nhóm) dài quá khoảng cách giữa hai phím thì xếp so
+	// le hai hàng (phím thứ hai, thứ tư… lùi xa bàn phím hơn): phím trắng chỉ lùi các dòng sau dòng đầu khi dòng đầu vừa
+	// (dòng đầu thẳng hàng, như số nửa cung), không thì lùi cả nhãn; phím đen lùi cả nhãn
+	const dangDe = (ds, tu, den) =>
+		[...ds]
+			.sort((a, b) => a.m - b.m)
+			.some((n, i, xs) => {
+				const tr = xs[i - 1];
+				if (!tr || tamPhim(thap, n.m) - tamPhim(thap, tr.m) > PHIM_RONG + 0.5) return false;
+				const r = (x) => Math.max(0, ...x.dong.slice(tu, den).map(rongChu)) / 2;
+				return r(tr) + r(n) > PHIM_RONG - 1.5;
+			});
+	const thuTu = (m) => Math.floor((tamPhim(thap, m) - 1) / PHIM_RONG); // vị trí phím, để chọn hàng so le
+	const lDen = soDong(nhanDen);
+	const soLeDen = dangDe(nhanDen, 0);
+	const caoNhanDen = nhanDen.length ? (soLeDen ? 2 : 1) * lDen * DONG + 3 : 0;
+	const y0 = caoNgoac + caoNhanDen; // đỉnh phím
+	const lTrang = soDong(nhanTrang);
+	const soLeTrang = dangDe(nhanTrang, 0, 1) ? 'ca' : dangDe(nhanTrang, 1) ? 'sau' : '';
+	const caoNhanTrang = nhanTrang.length ? (lTrang + (soLeTrang === 'ca' ? lTrang : soLeTrang ? lTrang - 1 : 0)) * DONG + 4 : 0;
+	const moTa = new Map();
+	const themMoTa = (m, s) => moTa.set(m, [...(moTa.get(m) ?? []), s]);
+	for (const n of ngon) themMoTa(n.m, `${TAY[n.tay]} ngón ${n.so}`);
+	for (const n of nhanPhim) themMoTa(n.m, n.dong.join(', '));
 	const trang = [];
 	const den = [];
 	let x = 1;
 	const coTo = (m) => (to.includes(m) ? ' to' : to2.includes(m) ? ' to-2' : '');
+	const dataMoTa = (m) => (moTa.has(m) ? ` data-mo-ta="${esc(moTa.get(m).join('; '))}"` : '');
 	for (let m = thap; m <= cao; m++) {
 		if (laPhimDen(m)) continue;
 		const pc = ((m % 12) + 12) % 12;
 		const l = [0, 2, 4, 5, 7, 9, 11].indexOf(pc);
 		const giua = so(x + PHIM_RONG / 2);
 		trang.push(
-			`<rect class="oz-phim-trang${coTo(m)}" x="${x}" y="1" width="${PHIM_RONG}" height="${PHIM_CAO}" rx="3" data-m="${m}" data-ten="${esc(tenPhim(m))}"/>` +
+			`<rect class="oz-phim-trang${coTo(m)}" x="${x}" y="${so(1 + y0)}" width="${PHIM_RONG}" height="${PHIM_CAO}" rx="3" data-m="${m}" data-ten="${esc(tenPhim(m))}"${dataMoTa(m)}/>` +
 				// chữ trên phím chỉ để nhìn: tên phím đã ở aria-label của nút (ban-phim.js), không đọc lặp
-				`<text class="oz-phim-chu" x="${giua}" y="${PHIM_CAO - 7}" aria-hidden="true">${SOLFEGE[l]}</text>` +
-				`<text class="oz-phim-chu oz-phim-chu--nho" x="${giua}" y="${PHIM_CAO - 19}" aria-hidden="true">${CHU[l]}${l === 0 ? Math.floor(m / 12) - 1 : ''}</text>`,
+				`<text class="oz-phim-chu" x="${giua}" y="${so(y0 + PHIM_CAO - 7)}" aria-hidden="true">${SOLFEGE[l]}</text>` +
+				`<text class="oz-phim-chu oz-phim-chu--nho" x="${giua}" y="${so(y0 + PHIM_CAO - 19)}" aria-hidden="true">${CHU[l]}${l === 0 ? Math.floor(m / 12) - 1 : ''}</text>`,
 		);
 		if (m + 1 <= cao && laPhimDen(m + 1))
 			den.push(
-				`<rect class="oz-phim-den${coTo(m + 1)}" x="${so(x + PHIM_RONG - DEN_RONG / 2)}" y="1" width="${DEN_RONG}" height="${DEN_CAO}" rx="2" data-m="${m + 1}" data-ten="${esc(tenPhim(m + 1))}"/>`,
+				`<rect class="oz-phim-den${coTo(m + 1)}" x="${so(x + PHIM_RONG - DEN_RONG / 2)}" y="${so(1 + y0)}" width="${DEN_RONG}" height="${DEN_CAO}" rx="2" data-m="${m + 1}" data-ten="${esc(tenPhim(m + 1))}"${dataMoTa(m + 1)}/>`,
 			);
 		x += PHIM_RONG;
 	}
 	const soTrang = trang.length;
-	const nhan = nhanRieng
+
+	// số ngón: phím trắng ở ngay dưới phím đen (y 71), phím đen ở cuối phím đen; hai tay chung phím thì đặt cạnh (hay chồng) nhau
+	const dau = [];
+	const theoPhim = ngon.reduce((mp, n) => mp.set(n.m, [...(mp.get(n.m) ?? []), n]), new Map());
+	for (const [m, ds] of theoPhim) {
+		const cx = tamPhim(thap, m);
+		const laDen = laPhimDen(m);
+		const hai = ds.length > 1;
+		const r = laDen ? (hai ? 5 : 6) : hai ? 5.5 : 7;
+		[...ds].sort((a, b) => (a.tay === 'trai' ? 0 : 1) - (b.tay === 'trai' ? 0 : 1)).forEach((n, i) => {
+			const dx = hai && !laDen ? (i ? 6 : -6) : 0;
+			const cy = y0 + (laDen ? (hai ? (i ? 56 : 44) : 53) : 71);
+			const [px, py] = [cx + dx, cy];
+			const hinh =
+				n.tay === 'phai'
+					? `<circle cx="${so(px)}" cy="${so(py)}" r="${r}"/>`
+					: `<rect x="${so(px - r)}" y="${so(py - r)}" width="${2 * r}" height="${2 * r}" rx="${so(r / 3)}"/>`;
+			dau.push(`<g class="oz-ngon oz-ngon--${n.tay}" data-phim="${m}" aria-hidden="true">${hinh}<text x="${so(px)}" y="${so(py + (hai ? 2.6 : 3))}"${hai ? ' class="oz-ngon-nho"' : ''}>${n.so}</text></g>`);
+		});
+	}
+
+	// nhãn: phím đen ở dải trên (sát đỉnh phím), phím trắng ở dải dưới
+	const dongChu = (ds, cx, yDau, lop, lui = 0) =>
+		`<text class="${lop}" aria-hidden="true">${ds.map((s, i) => `<tspan x="${so(cx)}" y="${so(yDau + i * DONG + (i ? lui : 0))}">${esc(s)}</tspan>`).join('')}</text>`;
+	const nhanSvg = [
+		...nhanDen.map((n) => {
+			const lui = soLeDen && thuTu(n.m) % 2 ? lDen * DONG : 0;
+			return dongChu(n.dong, tamPhim(thap, n.m), y0 - 4 - (n.dong.length - 1) * DONG - lui, 'oz-phim-nhan');
+		}),
+		...nhanTrang.map((n) => {
+			const le = soLeTrang && thuTu(n.m) % 2;
+			const yDau = y0 + PHIM_CAO + 2 + 6.5 + (le && soLeTrang === 'ca' ? lTrang * DONG : 0);
+			return dongChu(n.dong, tamPhim(thap, n.m), yDau, 'oz-phim-nhan', le && soLeTrang === 'sau' ? (lTrang - 1) * DONG : 0);
+		}),
+	];
+
+	// ngoặc: tầng 0 ở ngay trên dải nhãn phím đen
+	const dayTang = [];
+	let yTang = caoNgoac;
+	tangCao.forEach((h, t) => {
+		dayTang[t] = yTang; // y của nét ngang (đáy tầng)
+		yTang -= h;
+	});
+	const ngoacSvg = ngoacXep.map((n) => {
+		const y = dayTang[n.t] - 2;
+		return (
+			`<g class="oz-phim-ngoac" aria-hidden="true"><path d="M${so(n.x1)} ${so(y + 3)}V${so(y)}H${so(n.x2)}V${so(y + 3)}"/>` +
+			dongChu(n.dong, n.giua, y - 2.5 - (n.dong.length - 1) * DONG, 'oz-phim-ngoac-chu') +
+			`</g>`
+		);
+	});
+
+	let nhan = nhanRieng
 		? `${nhanRieng}: ${[...new Set([...to2, ...to])].map(tenPhim).join(', ')}`
 		: `Bàn phím piano từ ${tenPhim(thap)} đến ${tenPhim(cao)}` + (to.length ? `; các phím được tô: ${to.map(tenPhim).join(', ')}` : '');
+	for (const tay of ['phai', 'trai']) {
+		const ds = ngon.filter((n) => n.tay === tay).sort((a, b) => a.m - b.m);
+		if (ds.length) nhan += `; ${TAY[tay]}: ${ds.map((n) => `ngón ${n.so} trên ${tenPhim(n.m)}`).join(', ')}`;
+	}
+	if (nhanPhim.length) nhan += `; nhãn: ${[...nhanPhim].sort((a, b) => a.m - b.m).map((n) => `${tenPhim(n.m)}: ${n.dong.join(', ')}`).join(', ')}`;
+	if (ngoac.length) nhan += `; ngoặc: ${[...ngoac].sort((a, b) => a.tu - b.tu).map((n) => `${tenPhim(n.tu)} đến ${tenPhim(n.den)}: ${n.dong.join(', ')}`).join(', ')}`;
+	const coChu = ngon.length || nhanPhim.length || ngoac.length;
+	const caoHinh = y0 + PHIM_CAO + 2 + caoNhanTrang;
 	return {
 		soTrang,
 		svg:
-			`<svg class="oz-phim" viewBox="0 0 ${soTrang * PHIM_RONG + 2} ${PHIM_CAO + 2}" role="img" aria-label="${esc(nhan)}" style="--phim:${soTrang}">` +
-			`<g class="oz-phim-nhom">${trang.join('')}</g><g class="oz-phim-nhom">${den.join('')}</g></svg>`,
+			`<svg class="oz-phim${coChu ? ' oz-phim--chu' : ''}" viewBox="0 0 ${soTrang * PHIM_RONG + 2} ${so(caoHinh)}" role="img" aria-label="${esc(nhan)}" style="--phim:${soTrang}">` +
+			(ngoacSvg.length ? `<g class="oz-phim-nhom">${ngoacSvg.join('')}</g>` : '') +
+			`<g class="oz-phim-nhom">${trang.join('')}</g><g class="oz-phim-nhom">${den.join('')}</g>` +
+			(dau.length || nhanSvg.length ? `<g class="oz-phim-nhom">${nhanSvg.join('')}${dau.join('')}</g>` : '') +
+			`</svg>`,
 	};
 }
 

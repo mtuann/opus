@@ -580,37 +580,103 @@ function notPhim(chu, ten) {
 	return m;
 }
 
+/** Chữ của nhãn hay ngoặc: "_" là khoảng trắng, "|" là xuống dòng (tối đa ba dòng). */
+function chuNhan(chu, ten, muc) {
+	const dong = chu.split('|').map((d) => d.replace(/_/g, ' ').trim());
+	if (!chu || dong.some((d) => !d)) throw new Error(`công cụ "piano": ${ten} "${muc}" thiếu chữ sau dấu ":" (viết như C4:0, khoảng trắng viết "_", xuống dòng viết "|")`);
+	if (dong.length > 3) throw new Error(`công cụ "piano": ${ten} "${muc}" quá ba dòng`);
+	return dong;
+}
+
+/** Danh sách mục "trước:sau" cách nhau bằng khoảng trắng (thông số phai, trai, nhan, ngoac). */
+const cacMuc = (gt) => String(gt ?? '').split(/\s+/).filter(Boolean);
+const tachMuc = (muc, ten, mau) => {
+	const i = muc.indexOf(':');
+	if (i < 1) throw new Error(`công cụ "piano": ${ten} "${muc}" phải dạng ${mau}`);
+	return [muc.slice(0, i), muc.slice(i + 1)];
+};
+
 /**
  * Thông số của bàn phím (như data-range, data-notes, data-play của khối oz-piano cũ): range="C3-C5" (mặc định C4-C5, như
  * piano.js cũ; đầu hay cuối là phím đen thì mở rộng ra phím trắng bên cạnh), notes="C3 C4 C5" (phím được tô; phải nằm
  * trong khoảng), play="chord" (nút nghe phát cùng lúc như hợp âm). Viết sai hay thông số lạ thì build hỏng.
+ *
+ * Thêm ở đợt hình 1 (chữ trên hình, veBanPhim): phai="C4:1 D4:2" và trai="C3:5 G3:1" (số ngón 1–5 của tay phải, tay trái;
+ * phím có số ngón cũng là phím được tô), nhan="C4:0 Db4:1|2_thứ" (nhãn ngắn của phím: "_" là khoảng trắng, "|" xuống
+ * dòng, tối đa ba dòng), ngoac="E4-F4:½ C4-E4:3_trưởng" (ngoặc nối hai phím, kèm chữ). Mọi nốt phải nằm trong range; một
+ * phím chỉ một số ngón mỗi tay, một nhãn.
  */
-export function docThongSoBanPhim({ range = 'C4-C5', notes = '', play, ...thua }) {
+export function docThongSoBanPhim({ range = 'C4-C5', notes = '', play, phai, trai, nhan, ngoac, ...thua }) {
 	const la = Object.keys(thua);
-	if (la.length) throw new Error(`công cụ "piano" không nhận thông số ${la.join(', ')} (nhận: range, notes, play)`);
+	if (la.length) throw new Error(`công cụ "piano" không nhận thông số ${la.join(', ')} (nhận: range, notes, play, phai, trai, nhan, ngoac)`);
 	const hai = String(range).split('-');
 	if (hai.length !== 2) throw new Error(`công cụ "piano": range "${range}" phải dạng "C3-C5"`);
 	const [thap, cao] = khoangPhim(notPhim(hai[0], 'range'), notPhim(hai[1], 'range'));
 	if (thap >= cao) throw new Error(`công cụ "piano": range "${range}" phải từ nốt thấp tới nốt cao`);
+	const trong = (m, ten) => {
+		if (m < thap || m > cao) throw new Error(`công cụ "piano": ${ten} có nốt ngoài range "${range}"`);
+		return m;
+	};
 	const to = String(notes).split(/\s+/).filter(Boolean).map((n) => notPhim(n, 'notes'));
 	const ngoai = to.filter((m) => m < thap || m > cao);
 	if (ngoai.length) throw new Error(`công cụ "piano": notes có nốt ngoài range "${range}"`);
 	if (play !== undefined && play !== 'chord') throw new Error(`công cụ "piano": play chỉ nhận "chord" (gặp "${play}")`);
-	return { thap, cao, to: [...new Set(to)], hopAm: play === 'chord' };
+	const ngon = [];
+	for (const [tay, gt] of [['phai', phai], ['trai', trai]]) {
+		const da = new Set();
+		for (const muc of cacMuc(gt)) {
+			const [n, s] = tachMuc(muc, tay, '"C4:1"');
+			const m = trong(notPhim(n, tay), tay);
+			if (!/^[1-5]$/.test(s)) throw new Error(`công cụ "piano": ${tay} "${muc}": số ngón phải từ 1 đến 5`);
+			if (da.has(m)) throw new Error(`công cụ "piano": ${tay} ghi hai lần phím ${n}`);
+			da.add(m);
+			ngon.push({ m, tay, so: Number(s) });
+		}
+	}
+	const nhanPhim = [];
+	for (const muc of cacMuc(nhan)) {
+		const [n, chu] = tachMuc(muc, 'nhan', '"C4:0"');
+		const m = trong(notPhim(n, 'nhan'), 'nhan');
+		if (nhanPhim.some((x) => x.m === m)) throw new Error(`công cụ "piano": nhan ghi hai lần phím ${n}`);
+		nhanPhim.push({ m, dong: chuNhan(chu, 'nhan', muc) });
+	}
+	const cacNgoac = [];
+	for (const muc of cacMuc(ngoac)) {
+		const [hp, chu] = tachMuc(muc, 'ngoac', '"E4-F4:½"');
+		const hn = hp.split('-');
+		if (hn.length !== 2) throw new Error(`công cụ "piano": ngoac "${muc}" phải dạng "E4-F4:½"`);
+		const [tu, den] = hn.map((n) => trong(notPhim(n, 'ngoac'), 'ngoac'));
+		if (tu >= den) throw new Error(`công cụ "piano": ngoac "${muc}" phải từ nốt thấp tới nốt cao`);
+		cacNgoac.push({ tu, den, dong: chuNhan(chu, 'ngoac', muc) });
+	}
+	return { thap, cao, to: [...new Set([...to, ...ngon.map((n) => n.m)])], hopAm: play === 'chord', ngon, nhanPhim, ngoac: cacNgoac };
+}
+
+/** Chú giải hai tay dưới bàn phím có số ngón: hình của từng tay (như trên phím) và chữ. */
+function chuGiaiTay(ngon) {
+	const co = ['phai', 'trai'].filter((tay) => ngon.some((n) => n.tay === tay));
+	if (!co.length) return '';
+	const hinh = (tay) =>
+		`<svg class="oz-ngon oz-ngon--${tay}" viewBox="0 0 14 14" width="14" height="14" aria-hidden="true" focusable="false">` +
+		(tay === 'phai' ? '<circle cx="7" cy="7" r="6.5"/>' : '<rect x="0.5" y="0.5" width="13" height="13" rx="2.2"/>') +
+		`</svg>`;
+	return `<p class="oz-phim-chu-giai">${co.map((tay) => `<span>${hinh(tay)} số ngón ${tay === 'phai' ? 'tay phải' : 'tay trái'}</span>`).join(' ')}</p>`;
 }
 
 /**
  * Bàn phím piano (::cong-cu{ten="piano" …}, như khối oz-piano của piano.js cũ): hình bàn phím dựng sẵn (veBanPhim, hiện cả
- * khi chưa có JavaScript), dòng đọc tên nốt vừa bấm, nút nghe các nốt được tô (khi có notes). src/scripts/ban-phim.js thêm
- * phần bấm được. Không có khung viền như các công cụ khác, để bàn phím dùng hết bề ngang của bài.
+ * khi chưa có JavaScript), dòng đọc tên nốt vừa bấm, nút nghe các nốt được tô (khi có notes hay số ngón). src/scripts/ban-phim.js thêm
+ * phần bấm được. Không có khung viền như các công cụ khác, để bàn phím dùng hết bề ngang của bài. Có số ngón thì thêm dòng
+ * chú giải hai tay.
  */
 export function banPhim(thongSo) {
-	const { thap, cao, to, hopAm } = docThongSoBanPhim(thongSo);
+	const { thap, cao, to, hopAm, ngon, nhanPhim, ngoac } = docThongSoBanPhim(thongSo);
 	return (
 		`<div class="oz-ban-phim not-content" data-sinh data-pagefind-ignore${hopAm ? ' data-choi="hop-am"' : ''}>` +
 		// khung cuộn nhận tiêu điểm tới khi ban-phim.js gắn phím (bàn phím ở xa màn hình khởi tạo muộn, và khi không có
 		// JavaScript): người dùng bàn phím máy tính vẫn Tab tới và cuộn được (axe: scrollable-region-focusable)
-		`<div class="oz-phim-cuon" tabindex="0" role="group" aria-label="Bàn phím piano, cuộn ngang">${veBanPhim({ thap, cao, to }).svg}</div>` +
+		`<div class="oz-phim-cuon" tabindex="0" role="group" aria-label="Bàn phím piano, cuộn ngang">${veBanPhim({ thap, cao, to, ngon, nhanPhim, ngoac }).svg}</div>` +
+		chuGiaiTay(ngon) +
 		`<p class="oz-stats oz-phim-ten" aria-live="polite">Bấm vào phím để nghe và xem tên nốt.</p>` +
 		(to.length ? `<div class="oz-row"><button type="button" class="oz-btn" data-k="nghe">${hopAm ? 'Nghe hợp âm' : 'Nghe các nốt được tô'}</button></div>` : '') +
 		`${canJs('Bật JavaScript trong trình duyệt để bấm phím và nghe.')}</div>`

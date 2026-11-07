@@ -137,11 +137,12 @@ test('hình bàn phím: phím trắng, phím đen đúng chỗ, tên hai hệ, p
 });
 
 test('::cong-cu{ten="piano"}: thông số như khối oz-piano cũ; viết sai thì build hỏng; nút nghe theo play', () => {
-	assert.deepEqual(docThongSoBanPhim({}), { thap: 60, cao: 72, to: [], hopAm: false }, 'mặc định C4-C5 như piano.js cũ');
-	assert.deepEqual(docThongSoBanPhim({ range: 'C4-B4' }), { thap: 60, cao: 71, to: [], hopAm: false });
+	const RONG = { ngon: [], nhanPhim: [], ngoac: [] };
+	assert.deepEqual(docThongSoBanPhim({}), { thap: 60, cao: 72, to: [], hopAm: false, ...RONG }, 'mặc định C4-C5 như piano.js cũ');
+	assert.deepEqual(docThongSoBanPhim({ range: 'C4-B4' }), { thap: 60, cao: 71, to: [], hopAm: false, ...RONG });
 	assert.deepEqual(docThongSoBanPhim({ range: 'G3-G4', notes: 'G3 A3 B3 C4 D4 E4 F#4 G4' }).to, [55, 57, 59, 60, 62, 64, 66, 67]);
 	assert.equal(docThongSoBanPhim({ range: 'F3-C5', notes: 'Bb3 Db4 Gb4 Bb4', play: 'chord' }).hopAm, true);
-	assert.deepEqual(docThongSoBanPhim({ range: 'C#4-A#4' }), { thap: 60, cao: 71, to: [], hopAm: false }, 'đầu, cuối là phím đen thì mở ra phím trắng');
+	assert.deepEqual(docThongSoBanPhim({ range: 'C#4-A#4' }), { thap: 60, cao: 71, to: [], hopAm: false, ...RONG }, 'đầu, cuối là phím đen thì mở ra phím trắng');
 	for (const [ts, loi] of [
 		[{ range: 'C4' }, /range "C4" phải dạng "C3-C5"/],
 		[{ range: 'C5-C4' }, /từ nốt thấp tới nốt cao/],
@@ -163,6 +164,81 @@ test('::cong-cu{ten="piano"}: thông số như khối oz-piano cũ; viết sai t
 	assert.ok(canTaiScript(html), 'trang có bàn phím tải bộ tải thành phần');
 	assert.ok(coAmPiano(html), 'trang có bàn phím ghi nguồn mẫu âm');
 	assert.match(nguonAmPiano('/opus/'), /Salamander Grand Piano V3 của Alexander Holm.*CC BY 3\.0.*href="\/opus\/mau-am\/piano\/LICENSE\.txt"/);
+});
+
+test('::cong-cu{ten="piano"}: số ngón (phai, trai), nhãn (nhan), ngoặc (ngoac) của đợt hình 1; viết sai thì build hỏng', () => {
+	const ts = docThongSoBanPhim({ range: 'F3-G4', phai: 'C4:1 D4:2 E4:3 F4:4 G4:5', trai: 'F3:5 G3:4 A3:3 B3:2 C4:1' });
+	assert.deepEqual(ts.ngon.slice(0, 2), [{ m: 60, tay: 'phai', so: 1 }, { m: 62, tay: 'phai', so: 2 }]);
+	assert.deepEqual(ts.ngon.filter((n) => n.m === 60).map((n) => n.tay), ['phai', 'trai'], 'hai ngón cái chung Đô giữa');
+	assert.deepEqual(ts.to, [60, 62, 64, 65, 67, 53, 55, 57, 59], 'phím có số ngón là phím được tô, không trùng');
+	assert.deepEqual(docThongSoBanPhim({ nhan: 'C4:0|1_đúng F#4:6|4_tăng|5_giảm' }).nhanPhim, [
+		{ m: 60, dong: ['0', '1 đúng'] },
+		{ m: 66, dong: ['6', '4 tăng', '5 giảm'] },
+	]);
+	assert.deepEqual(docThongSoBanPhim({ ngoac: 'E4-F4:½ C4-E4:3_trưởng|4_nửa_cung' }).ngoac, [
+		{ tu: 64, den: 65, dong: ['½'] },
+		{ tu: 60, den: 64, dong: ['3 trưởng', '4 nửa cung'] },
+	]);
+	for (const [t, loi] of [
+		[{ phai: 'C4' }, /phai "C4" phải dạng "C4:1"/],
+		[{ phai: 'C4:6' }, /số ngón phải từ 1 đến 5/],
+		[{ trai: 'C4:1 C4:2' }, /trai ghi hai lần phím C4/],
+		[{ phai: 'C3:1' }, /phai có nốt ngoài range/],
+		[{ trai: 'H4:1' }, /trai "H4" không phải nốt/],
+		[{ nhan: 'C4:' }, /nhan "C4:" thiếu chữ/],
+		[{ nhan: 'C4:a|b|c|d' }, /quá ba dòng/],
+		[{ nhan: 'C4:a C4:b' }, /nhan ghi hai lần phím C4/],
+		[{ ngoac: 'E4:½' }, /ngoac "E4:½" phải dạng "E4-F4:½"/],
+		[{ ngoac: 'F4-E4:½' }, /phải từ nốt thấp tới nốt cao/],
+		[{ ngoac: 'C4-D6:x' }, /ngoac "D6"|ngoac có nốt ngoài range/],
+		[{ ngon: 'C4:1' }, /không nhận thông số ngon \(nhận: range, notes, play, phai, trai, nhan, ngoac\)/],
+	])
+		assert.throws(() => docThongSoBanPhim(t), loi, JSON.stringify(t));
+
+	// SVG: dấu số ngón (tròn: tay phải, vuông: tay trái), chữ thật, mô tả trong aria-label của hình và của từng phím
+	const { svg } = veBanPhim(docThongSoBanPhim({ range: 'F3-G4', phai: 'C4:1 F#4:4', trai: 'F3:5 C4:1', nhan: 'G4:mở|rộng Bb3:x', ngoac: 'E4-F4:½' }));
+	assert.match(svg, /^<svg class="oz-phim oz-phim--chu" viewBox="0 0 218 /);
+	assert.equal((svg.match(/<g class="oz-ngon oz-ngon--phai" data-phim="\d+" aria-hidden="true"><circle /g) ?? []).length, 2);
+	assert.equal((svg.match(/<g class="oz-ngon oz-ngon--trai" data-phim="\d+" aria-hidden="true"><rect /g) ?? []).length, 2);
+	assert.match(svg, /<text x="[\d.]+" y="[\d.]+" class="oz-ngon-nho">1<\/text>/, 'hai tay chung một phím: dấu nhỏ hơn');
+	assert.match(svg, /data-m="60" data-ten="Đô \(C4\)" data-mo-ta="tay phải ngón 1; tay trái ngón 1"/);
+	assert.match(svg, /data-m="67" data-ten="Sol \(G4\)" data-mo-ta="mở, rộng"/);
+	assert.match(svg, /<text class="oz-phim-nhan" aria-hidden="true"><tspan x="205" y="[\d.]+">mở<\/tspan><tspan x="205" y="[\d.]+">rộng<\/tspan><\/text>/);
+	assert.match(svg, /<g class="oz-phim-ngoac" aria-hidden="true"><path d="M157 [\d.]+V[\d.]+H181V[\d.]+"\/><text class="oz-phim-ngoac-chu" aria-hidden="true"><tspan x="169" /, 'ngoặc từ tâm Mi4 đến tâm Fa4');
+	assert.match(
+		svg,
+		/aria-label="Bàn phím piano từ Fa \(F3\) đến Sol \(G4\); các phím được tô: [^"]*; tay phải: ngón 1 trên Đô \(C4\), ngón 4 trên Fa♯\/Sol♭ \(F♯\/G♭4\); tay trái: ngón 5 trên Fa \(F3\), ngón 1 trên Đô \(C4\); nhãn: La♯\/Si♭ \(A♯\/B♭3\): x, Sol \(G4\): mở, rộng; ngoặc: Mi \(E4\) đến Fa \(F4\): ½"/,
+	);
+	// nhãn phím đen ở trên bàn phím, nhãn phím trắng ở dưới; ngoặc ở trên cùng
+	const y = (re) => Number(re.exec(svg)[1]);
+	const dinhPhim = y(/<rect class="oz-phim-trang[^"]*" x="1" y="([\d.]+)"/);
+	assert.ok(y(/<tspan x="73" y="([\d.]+)">x</) < dinhPhim, 'nhãn phím đen (Si♭3) trên đỉnh phím');
+	assert.ok(y(/<tspan x="205" y="([\d.]+)">mở</) > dinhPhim + 104, 'nhãn phím trắng dưới bàn phím');
+	assert.ok(y(/<tspan x="169" y="([\d.]+)">½</) < y(/<tspan x="73" y="([\d.]+)">x</), 'ngoặc trên nhãn phím đen');
+	// ngoặc chồng nhau thì xếp tầng: Đô4–Đô5 lên tầng trên hai ngoặc Đô4–Mi4, Mi4–Đô5 (chung đầu Mi4 thì cùng tầng)
+	const hai = veBanPhim(docThongSoBanPhim({ ngoac: 'C4-E4:a E4-C5:b C4-C5:c' })).svg;
+	const ngang = Object.fromEntries([...hai.matchAll(/<path d="M[\d.]+ [\d.]+V([\d.]+)H[\d.]+V[\d.]+"\/><text[^>]*><tspan x="[\d.]+" y="[\d.]+">(\w)</g)].map((m) => [m[2], Number(m[1])]));
+	assert.equal(ngang.a, ngang.b);
+	assert.ok(ngang.c < ngang.a);
+	// nhãn dài quá bề rộng phím: dòng sau dòng đầu xếp so le hai hàng (dòng đầu thẳng hàng); nhãn ngắn thì một hàng
+	const dongNhan = (svg2) => Object.fromEntries([...svg2.matchAll(/<text class="oz-phim-nhan"[^>]*><tspan x="([\d.]+)" y="([\d.]+)">[^<]*<\/tspan>(?:<tspan x="[\d.]+" y="([\d.]+)">)?/g)].map((m) => [m[1], [Number(m[2]), Number(m[3])]]));
+	const le = dongNhan(veBanPhim(docThongSoBanPhim({ nhan: 'C4:0|1_đúng D4:2|2_trưởng E4:4|3_trưởng' })).svg);
+	assert.equal(le[13][0], le[37][0], 'dòng đầu (số) thẳng hàng');
+	assert.equal(le[13][1], le[61][1]);
+	assert.ok(le[37][1] > le[13][1], 'Rê4 lùi xuống hàng dưới');
+	const ngan = dongNhan(veBanPhim(docThongSoBanPhim({ nhan: 'C4:0|a D4:2|b' })).svg);
+	assert.equal(ngan[13][1], ngan[37][1], 'nhãn ngắn: không so le');
+	// không có chữ thêm: hình như trước (các bàn phím đã khóa không đổi)
+	assert.doesNotMatch(veBanPhim({ thap: 60, cao: 72, to: [60] }).svg, /oz-phim--chu|oz-ngon|data-mo-ta|y="(?!1"|\d+(\.\d+)?" aria-hidden)/);
+	assert.match(veBanPhim({ thap: 60, cao: 72 }).svg, /viewBox="0 0 194 106"/);
+
+	// công cụ: chú giải hai tay (chữ thật), nút nghe các phím có số ngón
+	const html = banPhim({ range: 'C3-G4', phai: 'C4:1 G4:5', trai: 'C3:5' });
+	assert.match(html, /<p class="oz-phim-chu-giai"><span><svg class="oz-ngon oz-ngon--phai"[^>]*aria-hidden="true"[^>]*>.*?<\/svg> số ngón tay phải<\/span> <span><svg class="oz-ngon oz-ngon--trai".*?<\/svg> số ngón tay trái<\/span><\/p>/);
+	assert.match(html, /data-k="nghe">Nghe các nốt được tô</);
+	assert.doesNotMatch(banPhim({ range: 'C4-C5', nhan: 'C4:0' }), /oz-phim-chu-giai|data-k="nghe"/, 'chỉ có nhãn: không chú giải tay, không nút nghe');
+	assert.match(dung('::cong-cu{ten="piano" range="C4-C5" phai="C4:1" ngoac="E4-F4:½"}'), /oz-phim--chu/);
+	assert.throws(() => dung('::cong-cu{ten="piano" range="C4-C5" phai="C4:7"}'), /01-cao-do-ten-not\.md: công cụ "piano": phai "C4:7": số ngón phải từ 1 đến 5/);
 });
 
 test('mọi bàn phím trong các trang: thông số đọc được (cả trang thử bài 10 của D1.8)', () => {

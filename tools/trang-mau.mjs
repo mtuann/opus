@@ -29,6 +29,7 @@ export const KHOI = {
 	'chọn chặng piano': 'class="oz-muc-do',
 	'ô gợi ý tập': 'class="oz-goi-y',
 	'bàn phím': 'class="oz-ban-phim',
+	'bàn phím có số ngón, nhãn, ngoặc': 'class="oz-phim oz-phim--chu',
 	'hóa biểu': 'class="oz-hb"',
 	'mười lăm hóa biểu': 'oz-ks-hinh',
 	'vòng quãng năm tĩnh': 'oz-vong-tinh',
