@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 3, 28/10/2026; bổ sung sau review)
       review: Claude (review D3-gom, nhóm A, 28/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 3 (D3-L2 đến D3-L6): 6 đúng, 4 câu về site và lời khuyên tập không kiểm độc lập được (người gom kiểm lại trên repo, đúng), 0 sai (bao-cao/d3-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: mo/link-hong
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/link-hong, 06/11/2026: kiểm link lỗi của lychee, đổi link, đối chiếu nội dung nguồn mới)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Trang át phụ và chuyển giọng (tầng lõi), hình ::hinh{ten="keymap"} (src/components/hinh/keymap.html) và hai khối abc. Nguồn chính: OMT, Tonicization (át phụ, cảm âm phụ, ai được chủ âm hóa), Extended Tonicization and Modulation to Closely Related Keys (chuyển giọng, giọng gần, hợp âm chung, chuyển giọng trực tiếp), Sonata Form (chủ đề 2 ở V hay III), Introduction to Harmony (V về I); bài giảng SFCM, trang tác phẩm của Hollywood Bowl và lời giới thiệu của Indianapolis Symphony cho Mozart 40. WebFetch ngày 28/10/2026 (bản tóm tắt chữ; chỗ quan trọng đã hỏi lại để lấy nguyên văn). Chỗ sửa trang: (1) "mọi hợp âm" thành "mọi hợp âm ba trưởng hay thứ" (OMT: vii° và ii° không được chủ âm hóa; cũng sửa mô tả đầu trang); (2) "kết trọn" thành "kết" ở định nghĩa chuyển giọng; (3) "Cách mượt nhất" thành "Một cách thường dùng, mượt hơn đổi giọng đột ngột"; (4) bỏ câu về nhạc pop nâng tông nửa cung; (5) câu Mozart 40: "chuyển đột ngột sang một giọng rất xa" thành "chuyển đột ngột sang Fa♯ thứ, một giọng xa giọng chính" (Hollywood Bowl, SFCM); (6) bỏ "Đây là lý do hình thức sonata vận hành được"; (7) mục Nguồn. Chưa chắc (ket_qua null): n32, chú thích dưới hình "Giọng xa ... tạo cảm giác bất ngờ" (chữ nằm trong hình keymap.html; không sửa: người giao quyết, xem n32). Ghi chú n27: số ô và ấn bản của chỗ chuyển sang Fa♯ thứ chưa đối chiếu bản nhạc. Trang đích chưa chuyển: /opus/luyen-tap/hoa-bieu/#vong-quang-nam (n21), /opus/nghe-nhac/mozart-40/ (n38; trang cũ nói "chuyển giọng đột ngột sang một giọng rất xa": lô chuyển nên sửa theo), /opus/tai-lieu-tham-khao/. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): secondary dominant (át phụ), secondary leading-tone chord (hợp âm cảm âm phụ), tonicization (chủ âm hóa), pivot chord (hợp âm chung / bản lề), closely related keys (giọng gần), direct modulation / phrase modulation (chuyển giọng trực tiếp), relative key (giọng song song, cách gọi của site; OMT dùng relative), diminished seventh chord (hợp âm bảy giảm, đã dùng ở bài 11). Bản ghi modulation, exposition, development, recapitulation đã có hồ sơ riêng (cùng phần 1/2). Giọng "át", "hạ át" dùng như ở bài 12. Review D3-gom (28/10/2026): sửa hình src/components/hinh/keymap.html, aria-label: "(cạnh nhau trên vòng quãng năm)" thành "(hai bên Đô trưởng trên vòng quãng năm)" (n30, lượt 2 sai); sửa câu n20 trên trang cùng lý do.'
 nguon:
   - id: omt-intro-harmony
@@ -29,7 +38,7 @@ nguon:
   - id: hollywood-mozart40
     bac: 2
     ten: Hollywood Bowl (Los Angeles Philharmonic), Symphony No. 40 in G Minor, K. 550 (trang tác phẩm)
-    link: https://www.hollywoodbowl.com/musicdb/pieces/5203/symphony-no-40
+    link: https://www.hollywoodbowl.com/works/symphony-no-40-in-g-minor-k-550
   - id: sfcm-dev
     bac: 2
     ten: San Francisco Conservatory of Music, Sonata form developments (bài giảng phân tích)
@@ -295,7 +304,7 @@ nhan_dinh:
       - hollywood-mozart40
       - sfcm-dev
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "chuyển đột ngột sang một giọng rất xa". Chữ mới: "chuyển đột ngột sang Fa♯ thứ, một giọng xa giọng chính". Lý do: nêu tên giọng. Hollywood Bowl (trang tác phẩm): phần phát triển của chương đầu mở bằng "the abrupt lurch into F-sharp minor" (nên giữ "đột ngột"); San Francisco Conservatory, Sonata form developments: "Symphony 40 moves quickly to main theme in F-sharp minor" (bản tóm tắt khác của công cụ: "modulates to F-sharp minor, then states P"; bài giảng không ghi chương). "Xa": Fa♯ thứ (3♯) và Sol thứ (2♭) cách nhau 5 dấu hóa, ngoài "within one accidental" của OMT; bỏ "rất" vì không có thang đo nào trong nguồn. Chưa chắc: số ô (khoảng m. 101) và ấn bản chưa đối chiếu bản nhạc (PDF IMSLP chặn bot); nếu muốn ghi số ô, lượt 2 hay review mở IMSLP K. 550. Trang cũ nghe-nhac/mozart-40.md cũng nói "chuyển giọng đột ngột sang một giọng rất xa": lô chuyển (đợt 5) xem lại cho khớp. Review D3-gom: chữ mới có trên trang; giữ.'
+    ghi_chu: 'Chữ cũ: "chuyển đột ngột sang một giọng rất xa". Chữ mới: "chuyển đột ngột sang Fa♯ thứ, một giọng xa giọng chính". Lý do: nêu tên giọng. Hollywood Bowl (trang tác phẩm): phần phát triển của chương đầu mở bằng "the abrupt lurch into F-sharp minor" (nên giữ "đột ngột"); San Francisco Conservatory, Sonata form developments: "Symphony 40 moves quickly to main theme in F-sharp minor" (bản tóm tắt khác của công cụ: "modulates to F-sharp minor, then states P"; bài giảng không ghi chương). "Xa": Fa♯ thứ (3♯) và Sol thứ (2♭) cách nhau 5 dấu hóa, ngoài "within one accidental" của OMT; bỏ "rất" vì không có thang đo nào trong nguồn. Chưa chắc: số ô (khoảng m. 101) và ấn bản chưa đối chiếu bản nhạc (PDF IMSLP chặn bot); nếu muốn ghi số ô, lượt 2 hay review mở IMSLP K. 550. Trang cũ nghe-nhac/mozart-40.md cũng nói "chuyển giọng đột ngột sang một giọng rất xa": lô chuyển (đợt 5) xem lại cho khớp. Review D3-gom: chữ mới có trên trang; giữ. mo/link-hong (06/11/2026): Hollywood Bowl chuyển trang từ /musicdb/pieces/5203/… (nay 404) sang /works/symphony-no-40-in-g-minor-k-550, cùng bài của John Henken; đã đối chiếu: "the abrupt lurch into F-sharp minor for the development section of the opening movement".'
     luot_2: dung
     luot_2_nguon: [ "https://sfcm.edu/sites/default/files/sfcm-theory/analysis_lectures/18_sonata_form_devo/sonata_form_developments.pdf" ]
     luot_2_ghi_chu: Phần phát triển mở bằng đoạn chuyển ngắn sang Fa♯ thứ rồi nêu chủ đề; Fa♯ thứ xa Sol thứ (3♯ so với 2♭).
@@ -488,3 +497,7 @@ doi_chu:
   - cu: 'mô tả: Ở bài 12, hợp âm V kéo mạnh về I. Bài này mở rộng ý tưởng đó: mọi hợp âm đều có thể có một "hợp âm V của riêng nó", và từ đó âm nhạc có thể chuyển hẳn sang…'
     moi: 'mô tả: Ở bài 12, hợp âm V kéo mạnh về I. Bài này mở rộng ý tưởng đó: mọi hợp âm ba trưởng hay thứ trong giọng đều có thể có một "hợp âm V của riêng nó"…'
     ly_do: Mô tả trang lấy từ đoạn đầu, đổi theo n3.
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/link-hong
+    ly_do: "link ngoài hỏng (lychee 07/11/2026): đổi link chết sang bản lưu Wayback, địa chỉ mới hay nguồn khác đọc được"

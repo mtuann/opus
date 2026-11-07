@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 3, 28/10/2026; bổ sung sau review)
       review: Claude (review D3-gom, nhóm B, 28/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 3 (D3-L2 đến D3-L6): 6 đúng, 4 câu về site và lời khuyên tập không kiểm độc lập được (người gom kiểm lại trên repo, đúng), 0 sai (bao-cao/d3-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: mo/link-hong
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/link-hong, 06/11/2026: kiểm link lỗi của lychee, đổi link, đối chiếu nội dung nguồn mới)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Trang chuỗi hòa âm (tầng lõi), 2 khối abc soạn riêng. Nguồn chính: OMT (Diatonic Sequences in Middles, Chromatic Sequences, ii-V-I), COD (sequence), Listen 8e chương 9, Gjerdingen chương 2; Wikipedia chỉ bậc 3 và không là nguồn duy nhất. WebFetch ngày 28/10/2026 (bản tóm tắt chữ, đã hỏi lại để lấy nguyên văn chỗ quan trọng). Chỗ sai đã sửa: câu mở đầu (n2, n3), quan hệ át – chủ (n8), quãng Fa – Si (n10), cột Gặp ở và cột Bè trầm của hàng bảng (n13, n15, n21), câu Pachelbel – Romanesca (n17), câu hỏi 3 (n34). Đã bỏ: ba ví dụ nghe (Vivaldi Mùa xuân, Handel Hallelujah, Bach Prelude BWV 847; n26–n28), thay bằng ba ví dụ của OMT (n22, n24, n25). Câu ve-site trỏ tới trang chưa chuyển: nhan-dien/so-sanh-thoi-ky (n4), piano/hoa-am/mau-galant (n18), nghe-nhac/vivaldi-mua-dong (n23), luyen-tap/ban-phim (n31), tai-lieu-tham-khao (n35). Chỗ người giao cần biết: trang piano/hoa-am/mau-galant (đợt 4) ghi Romanesca galant với bè trầm 1–7–6–3 trong khi bài 29 nói bè trầm Pachelbel mở đầu bằng công thức Romanesca 1–5–6–3: nên ghi rõ hai dạng. Thuật ngữ trang dùng: sequence (có hồ sơ riêng, lô này). Thuật ngữ chưa có ở thuat-ngu.yml (cho D3-L5): Romanesca, descending fifths sequence (chuỗi quãng 5 đi xuống), 5–6 sequence (chuỗi 5–6), Pachelbel sequence.'
 nguon:
   - id: omt-diat
@@ -32,12 +41,12 @@ nguon:
     link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/sequence
   - id: listen-bq
     bac: 2
-    ten: Listen, bản 8 (Macmillan Learning), chương 9, phần nghe Bach Brandenburg số 5
+    ten: "Listen, bản 8 (Macmillan Learning), chương 9, phần nghe Bach Brandenburg số 5 (trang không còn từ 11/2026: tên miền không phân giải, Wayback Machine không lưu; chỉ còn ở nhận định đã bỏ n26)"
     link: https://digfir-published.macmillanusa.com/listen8e/listen8e_ch9_16.html
   - id: gjerdingen2
     bac: 2
-    ten: Robert Gjerdingen, Music in the Galant Style (2007), chương 2 (bản trích của UC Irvine)
-    link: https://music.arts.uci.edu/abauer/5.2/readings/Gjerdingen%20_Music_in_the_Galant_Style_Ch_2.pdf
+    ten: Robert Gjerdingen, Music in the Galant Style (2007), chương 2 (bản trích của UC Irvine; bản lưu Wayback Machine 09/02/2026, trang gốc trả 404 từ 11/2026)
+    link: https://web.archive.org/web/20260209143103/https://music.arts.uci.edu/abauer/5.2/readings/Gjerdingen%20_Music_in_the_Galant_Style_Ch_2.pdf
   - id: wiki-seq
     bac: 3
     ten: Wikipedia, Sequence (music) (bậc 3, chỉ để tìm nguồn)
@@ -50,6 +59,10 @@ nguon:
     bac: 3
     ten: Wikipedia, Romanesca (bậc 3, chỉ để tìm nguồn)
     link: https://en.wikipedia.org/wiki/Romanesca
+  - id: mit-harris
+    bac: 2
+    ten: "MIT OpenCourseWare, 21M.011 Introduction to Western Music (Spring 2006), Ellen T. Harris, Lecture III: Baroque (PDF)"
+    link: https://ocw.mit.edu/courses/21m-011-introduction-to-western-music-spring-2006/70eb2414c59c44cc0d10d699e222a167_week03_lecture03.pdf
 nhan_dinh:
   - id: n1
     cau: Chuỗi (sequence) là một mẫu nhạc ngắn được lặp lại liên tiếp ở các cao độ khác nhau, đi lên hoặc đi xuống đều đặn như những bậc cầu thang.
@@ -66,20 +79,20 @@ nhan_dinh:
     cau: Chuỗi rất hay gặp trong nhạc tonal, nhất là thời Baroque.
     loai: lich-su
     nguon:
-      - listen-bq
+      - mit-harris
       - wiki-seq
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Đây là một trong những khuôn mẫu phổ biến nhất của nhạc tonal, đặc biệt thời Baroque". Chữ mới: "Chuỗi rất hay gặp trong nhạc tonal, nhất là thời Baroque." Lý do: không tìm được nguồn xếp hạng "một trong những khuôn mẫu phổ biến nhất". Listen 8e: "One easily recognized feature of Baroque melodies is their frequent use of sequence"; "Sequences provide Baroque music with one of its most effective means of forward motion". Wikipedia (bậc 3): "widespread throughout Western music history", "stereotypically associated with Baroque music". Phần description của trang bị cắt giữa chừng ("Đây là một trong…") nên bỏ phần cắt. Review D3-gom: lượt 2 (khong-chac) không mở được nguồn bậc 2 cho vế Baroque. Review mở lại Listen 8e, chương 9 (listen-bq, sách giáo khoa của Macmillan Learning): "One easily recognized feature of Baroque melodies is their frequent use of sequence"; "Sequences provide Baroque music with one of its most effective means of forward motion." OMT Diatonic Sequences có ví dụ chuỗi từ nhiều thời (Vivaldi, Albéniz, Maier). Chữ trang chỉ nói "rất hay gặp …, nhất là thời Baroque": giữ.'
+    ghi_chu: 'Chữ cũ: "Đây là một trong những khuôn mẫu phổ biến nhất của nhạc tonal, đặc biệt thời Baroque". Chữ mới: "Chuỗi rất hay gặp trong nhạc tonal, nhất là thời Baroque." Lý do: không tìm được nguồn xếp hạng "một trong những khuôn mẫu phổ biến nhất". Listen 8e: "One easily recognized feature of Baroque melodies is their frequent use of sequence"; "Sequences provide Baroque music with one of its most effective means of forward motion". Wikipedia (bậc 3): "widespread throughout Western music history", "stereotypically associated with Baroque music". Phần description của trang bị cắt giữa chừng ("Đây là một trong…") nên bỏ phần cắt. Review D3-gom: lượt 2 (khong-chac) không mở được nguồn bậc 2 cho vế Baroque. Review mở lại Listen 8e, chương 9 (listen-bq, sách giáo khoa của Macmillan Learning): "One easily recognized feature of Baroque melodies is their frequent use of sequence"; "Sequences provide Baroque music with one of its most effective means of forward motion." OMT Diatonic Sequences có ví dụ chuỗi từ nhiều thời (Vivaldi, Albéniz, Maier). Chữ trang chỉ nói "rất hay gặp …, nhất là thời Baroque": giữ. mo/link-hong (06/11/2026): Listen 8e không còn (tên miền không phân giải, Wayback không lưu); thay bằng MIT OCW 21M.011 (Harris): đặc điểm giai điệu Baroque "extended (spinning out ''endlessly''), ornamented and ornate, embedded use of sequence".'
     luot_2: khong-chac
     luot_2_ghi_chu: "Không có nguồn bậc 2 mở được nói chuỗi đặc biệt hay gặp ở Baroque (chỉ Wikipedia: 'stereotypically associated with Baroque'); OMT không nêu."
   - id: n3
     cau: Nghe thấy chuỗi là một manh mối để nhận diện nhạc Baroque, như nhạc Bach và Vivaldi.
     loai: lich-su
     nguon:
-      - listen-bq
+      - mit-harris
       - omt-diat
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "nghe thấy chuỗi là một manh mối mạnh để nhận diện nhạc Vivaldi, Bach, Handel". Chữ mới: "…một manh mối để nhận diện nhạc Baroque, như nhạc Bach và Vivaldi." Lý do: Listen 8e nêu chuỗi ở chủ đề chương 1 Brandenburg số 5 của Bach; OMT nêu một chuỗi 5–6 đi lên ở Vivaldi, Op. 8 số 4, chương 2, ô 11–13. Không tìm được nguồn nào nói Handel; "mạnh" là mức đánh giá không có nguồn. Review D3-gom: như n2: Listen 8e gọi chuỗi là "easily recognized feature of Baroque melodies" (ví dụ Bach, Brandenburg số 5); OMT nêu chuỗi 5–6 ở Vivaldi Op. 8 số 4. Câu chỉ nói "một manh mối", không nói dấu hiệu duy nhất; giữ.'
+    ghi_chu: 'Chữ cũ: "nghe thấy chuỗi là một manh mối mạnh để nhận diện nhạc Vivaldi, Bach, Handel". Chữ mới: "…một manh mối để nhận diện nhạc Baroque, như nhạc Bach và Vivaldi." Lý do: Listen 8e nêu chuỗi ở chủ đề chương 1 Brandenburg số 5 của Bach; OMT nêu một chuỗi 5–6 đi lên ở Vivaldi, Op. 8 số 4, chương 2, ô 11–13. Không tìm được nguồn nào nói Handel; "mạnh" là mức đánh giá không có nguồn. Review D3-gom: như n2: Listen 8e gọi chuỗi là "easily recognized feature of Baroque melodies" (ví dụ Bach, Brandenburg số 5); OMT nêu chuỗi 5–6 ở Vivaldi Op. 8 số 4. Câu chỉ nói "một manh mối", không nói dấu hiệu duy nhất; giữ. mo/link-hong (06/11/2026): như n2; MIT (Harris) còn nêu "sequence in b" ở ritornello chương 1 Vivaldi, La stravaganza, Op. 4 số 12. OMT giữ (Vivaldi Op. 8 số 4).'
     luot_2: khong-chac
     luot_2_ghi_chu: "Như n2: chưa có nguồn bậc 2 cho việc dùng chuỗi làm manh mối nhận diện Baroque; chuỗi có ở mọi thời nên quá mạnh nếu là dấu hiệu duy nhất."
   - id: n4
@@ -219,7 +232,7 @@ nhan_dinh:
       - wiki-pach
       - wiki-rom
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "bè trầm đi bậc 1–5–6–3, gần với bè trầm 1–7–6–3 của mẫu Romanesca, chỉ khác nốt thứ hai nhảy xuống quãng 4 thay vì đi một bậc". Chữ mới: "bè trầm đi bậc 1–5–6–3–4–1–4–5, mở đầu bằng công thức bè trầm Romanesca". Lý do: Gjerdingen (chương 2, bản trích): bè trầm Romanesca được gọi theo "prima di tono, quinta di tono, sesta di tono" (bậc 1, 5, 6) và "Pachelbel Canon (ca. 1680) … first three-voice combination, in measure 5, presents an obvious Romanesca"; Wikipedia Romanesca: bè trầm III–VII–i–V (ở giọng trưởng song song: 1–5–6–3). Dạng 1–7–6–3 là mẫu Romanesca của phong cách galant (chỉ có Wikipedia, bậc 3, bảng Galant Schemata); chưa mở được nguồn bậc 2 cho dạng ấy, nên bỏ phép so sánh khỏi trang. Chữ "1–5–6–3–4–1–4–5": Wikipedia Pachelbel Canon, bảng tám hợp âm D A Bm F♯m G D G A. Review D3-gom: lượt 2 (khong-chac) không mở được nguồn bậc 2. Review mở lại Gjerdingen ch. 2 (gjerdingen2): bè trầm Romanesca được tả là "prima di tono, quinta di tono, sesta di tono" (bậc 1, 5, 6); dạng nhảy: "a bass that alternates descending leaps of a fourth with ascending steps of a second" (tr. 29); Canon của Pachelbel (tr. 27) là ví dụ; "the leaping variant (Pachelbel and Handel) is more characteristic of the seventeenth and very early eighteenth centuries", dạng đi bậc của cuối thế kỷ 18 (tr. 32); bè trầm galant: "The first three tones of the galant bass match the stepwise variant, while its third through fifth tones match the leaping variant" (tr. 33), tức 1–7–6–3. Thống nhất giữa các trang: bài 29 nói dạng nhảy 1–5–6–3; luyen-tai/nghe-tien-trinh ("Romanesca: Đô – Si – La – Mi") và trang mau-galant cũ (1–7–6–3) nói dạng galant. Để người đọc không thấy hai trang trái nhau, chữ cũ "…, mở đầu bằng công thức bè trầm Romanesca;" thành "…; bốn nốt đầu là dạng bè trầm nhảy (xuống 4, lên một bậc) của mẫu Romanesca, còn dạng galant về sau đi 1–7–6–3;". Mục Nguồn (Gjerdingen) thêm câu về hai dạng.'
+    ghi_chu: 'Chữ cũ: "bè trầm đi bậc 1–5–6–3, gần với bè trầm 1–7–6–3 của mẫu Romanesca, chỉ khác nốt thứ hai nhảy xuống quãng 4 thay vì đi một bậc". Chữ mới: "bè trầm đi bậc 1–5–6–3–4–1–4–5, mở đầu bằng công thức bè trầm Romanesca". Lý do: Gjerdingen (chương 2, bản trích): bè trầm Romanesca được gọi theo "prima di tono, quinta di tono, sesta di tono" (bậc 1, 5, 6) và "Pachelbel Canon (ca. 1680) … first three-voice combination, in measure 5, presents an obvious Romanesca"; Wikipedia Romanesca: bè trầm III–VII–i–V (ở giọng trưởng song song: 1–5–6–3). Dạng 1–7–6–3 là mẫu Romanesca của phong cách galant (chỉ có Wikipedia, bậc 3, bảng Galant Schemata); chưa mở được nguồn bậc 2 cho dạng ấy, nên bỏ phép so sánh khỏi trang. Chữ "1–5–6–3–4–1–4–5": Wikipedia Pachelbel Canon, bảng tám hợp âm D A Bm F♯m G D G A. Review D3-gom: lượt 2 (khong-chac) không mở được nguồn bậc 2. Review mở lại Gjerdingen ch. 2 (gjerdingen2): bè trầm Romanesca được tả là "prima di tono, quinta di tono, sesta di tono" (bậc 1, 5, 6); dạng nhảy: "a bass that alternates descending leaps of a fourth with ascending steps of a second" (tr. 29); Canon của Pachelbel (tr. 27) là ví dụ; "the leaping variant (Pachelbel and Handel) is more characteristic of the seventeenth and very early eighteenth centuries", dạng đi bậc của cuối thế kỷ 18 (tr. 32); bè trầm galant: "The first three tones of the galant bass match the stepwise variant, while its third through fifth tones match the leaping variant" (tr. 33), tức 1–7–6–3. Thống nhất giữa các trang: bài 29 nói dạng nhảy 1–5–6–3; luyen-tai/nghe-tien-trinh ("Romanesca: Đô – Si – La – Mi") và trang mau-galant cũ (1–7–6–3) nói dạng galant. Để người đọc không thấy hai trang trái nhau, chữ cũ "…, mở đầu bằng công thức bè trầm Romanesca;" thành "…; bốn nốt đầu là dạng bè trầm nhảy (xuống 4, lên một bậc) của mẫu Romanesca, còn dạng galant về sau đi 1–7–6–3;". Mục Nguồn (Gjerdingen) thêm câu về hai dạng. mo/link-hong (06/11/2026): bản trích UC Irvine trả 404; đổi sang bản lưu Wayback 09/02/2026, đã đối chiếu: "Its first three-voice combination, in measure 5, presents an obvious Romanesca"; Romanesca "first widely noticed and named by musicians in the sixteenth century, and during the seventeenth century it reigned as one of the most common ground basses"; hình 2.1 "A schema of the Romanesca with a leaping bass".'
     luot_2: dung
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/galant-schemas-summary/", "https://essaysonmusic.com/?p=25952" ]
     luot_2_ghi_chu: "OMT: Romanesca galant có bè trầm 1-7-6-3. Leaping Romanesca có các giai đoạn chẵn tiếp cận bằng quãng 4 đi xuống, khớp 1-5-6-3. Nguồn bậc 2 không nêu thẳng Pachelbel dùng dạng này; phần 1-5-6-3-4-1-4-5 là bè trầm quen thuộc của Canon."
@@ -366,13 +379,13 @@ nhan_dinh:
     luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/diatonic-sequences/" ]
     luot_2_ghi_chu: "Đô-Fa-Si-Mi: xuống 5 rồi lên 4 (Fa lên Si là 4 tăng) xen kẽ: đúng."
   - id: n34
-    cau: 'Câu hỏi 3: "Chuỗi là một đặc điểm dễ nhận ra của giai điệu thời kỳ nào?" Đáp án: Baroque (giải thích: giai điệu Baroque dùng chuỗi rất thường xuyên, như chủ đề chương 1 Brandenburg số 5 của Bach).'
+    cau: 'Câu hỏi 3: "Chuỗi là một đặc điểm dễ nhận ra của giai điệu thời kỳ nào?" Đáp án: Baroque (giải thích: giai điệu Baroque dùng chuỗi rất thường xuyên, như ritornello chương 1 concerto La stravaganza (Op. 4 số 12) của Vivaldi).'
     loai: lich-su
     nguon:
-      - listen-bq
+      - mit-harris
       - wiki-seq
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Chuỗi hòa âm là đặc trưng nổi bật của thời kỳ nào?" ... "Vivaldi, Bach, Handel dùng rất nhiều." Lý do: "đặc trưng nổi bật" và "Handel" như n2, n3; Wikipedia: chuỗi "widespread throughout Western music history", "stereotypically associated with Baroque". Các lựa chọn sai (Trung cổ, tối giản thế kỷ 20) vẫn sai. Review D3-gom: lượt 2 (khong-chac): không có nguồn cho "được nhắc tới nhiều nhất" và "có mặt ở mọi thời". Chữ cũ: câu hỏi "Chuỗi thường được nhắc tới nhiều nhất khi nói về nhạc của thời kỳ nào?", giải thích "Chuỗi có mặt ở mọi thời, nhưng đặc biệt dễ nghe thấy trong nhạc Baroque, như Bach và Vivaldi." Chữ mới: "Chuỗi là một đặc điểm dễ nhận ra của giai điệu thời kỳ nào?", giải thích "Giai điệu Baroque dùng chuỗi rất thường xuyên, như chủ đề chương 1 Brandenburg số 5 của Bach." Nguồn: Listen 8e ch. 9: "One easily recognized feature of Baroque melodies is their frequent use of sequence", ví dụ Brandenburg số 5. Lựa chọn sai (Trung cổ, tối giản thế kỷ 20) giữ.'
+    ghi_chu: 'Chữ cũ: "Chuỗi hòa âm là đặc trưng nổi bật của thời kỳ nào?" ... "Vivaldi, Bach, Handel dùng rất nhiều." Lý do: "đặc trưng nổi bật" và "Handel" như n2, n3; Wikipedia: chuỗi "widespread throughout Western music history", "stereotypically associated with Baroque". Các lựa chọn sai (Trung cổ, tối giản thế kỷ 20) vẫn sai. Review D3-gom: lượt 2 (khong-chac): không có nguồn cho "được nhắc tới nhiều nhất" và "có mặt ở mọi thời". Chữ cũ: câu hỏi "Chuỗi thường được nhắc tới nhiều nhất khi nói về nhạc của thời kỳ nào?", giải thích "Chuỗi có mặt ở mọi thời, nhưng đặc biệt dễ nghe thấy trong nhạc Baroque, như Bach và Vivaldi." Chữ mới: "Chuỗi là một đặc điểm dễ nhận ra của giai điệu thời kỳ nào?", giải thích "Giai điệu Baroque dùng chuỗi rất thường xuyên, như chủ đề chương 1 Brandenburg số 5 của Bach." Nguồn: Listen 8e ch. 9: "One easily recognized feature of Baroque melodies is their frequent use of sequence", ví dụ Brandenburg số 5. Lựa chọn sai (Trung cổ, tối giản thế kỷ 20) giữ. mo/link-hong (06/11/2026): Listen 8e (nguồn duy nhất đọc được cho ví dụ Brandenburg số 5) không còn và không có bản lưu; không tìm được nguồn bậc 1–2 đọc được nói chuỗi ở chủ đề Brandenburg số 5, nên đổi ví dụ trong lời giải thích sang Vivaldi, La stravaganza, chương 1: MIT OCW 21M.011 (Harris): "segmented ritornello (here abc) … sequence in b"; giai điệu Baroque "embedded use of sequence". Câu hỏi và lựa chọn giữ.'
     luot_2: dung
     luot_2_nguon: [ "https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/25-diatonic-descending-fifth-sequences/" ]
     luot_2_ghi_chu: "Mount: chuỗi xuất hiện nhiều nhất trong nhạc Baroque. Chuỗi cũng có ở thời kỳ khác nên đáp án là mức độ thường gặp."
@@ -442,13 +455,17 @@ doi_chu:
     moi:
       - "Open Music Theory: chương Diatonic Sequences in Middles (John Peterson): chuỗi là một mẫu được nhắc lại và dịch cao độ; chuỗi quãng 5 đi xuống (gốc hợp âm đi xuống quãng 5 hay lên quãng 4; ví dụ Albéniz, Catalonia), chuỗi quãng 3 đi xuống (còn gọi là chuỗi Pachelbel; ví dụ Amanda Maier, Sáu tiểu phẩm cho violin số 6), chuỗi 5–6 đi lên (ví dụ Vivaldi, Concerto violin Op. 8 số 4, chương 2, ô 11–13); chương Chromatic Sequences (Bryn Hughes): chuỗi quãng 5 có các hợp âm át nối nhau, chuỗi đi xuống từng nửa cung (ví dụ của Chopin), được dùng suốt thế kỷ 19; chương ii–V–I (Megan Lavengood): nhạc jazz nối các vòng ii–V–I ở nhiều giọng thành chuỗi."
       - "The Concise Oxford Dictionary of Music, mục sequence, qua Encyclopedia.com: chuỗi là sự lặp lại gần như chính xác một đoạn nhạc ở cao độ cao hơn hay thấp hơn."
-      - "Listen, bản 8 (Macmillan Learning), chương 9: chuỗi là một đặc điểm dễ nhận ra của giai điệu Baroque, ví dụ ở chủ đề chương 1 của Bach, Brandenburg số 5."
-      - 'Robert Gjerdingen, Music in the Galant Style (2007), chương 2 (bản trích): Canon của Pachelbel ở ô 5 "presents an obvious Romanesca"; Romanesca là một công thức bè trầm Ý, được chú ý từ thế kỷ 16 và phổ biến trong thế kỷ 17; dạng bè trầm nhảy (Pachelbel, Handel) đặc trưng cho thế kỷ 17 và đầu thế kỷ 18, dạng đi bậc cho cuối thế kỷ 18.'
+      - "MIT OpenCourseWare, 21M.011 (Ellen T. Harris, 2006), bài giảng III: Baroque: giai điệu Baroque dùng chuỗi như một phần quen thuộc, ví dụ đoạn b trong ritornello chương 1 concerto La stravaganza (Op. 4 số 12) của Vivaldi."
+      - 'Robert Gjerdingen, Music in the Galant Style (2007), chương 2 (bản trích, bản lưu): Canon của Pachelbel ở ô 5 "presents an obvious Romanesca"; Romanesca là một công thức bè trầm Ý, được chú ý từ thế kỷ 16 và phổ biến trong thế kỷ 17; dạng bè trầm nhảy (Pachelbel, Handel) đặc trưng cho thế kỷ 17 và đầu thế kỷ 18, dạng đi bậc cho cuối thế kỷ 18.'
       - "Wikipedia, Sequence (music): chuỗi quãng 5 có gốc Đô – Fa – Si – Mi – La – Rê; chuỗi quãng 3 đi xuống; dạng Pachelbel (bè trầm xuống quãng 4 rồi lên một bậc); chuỗi 5–6 đi lên. Pachelbel's Canon: bè trầm Rê – La – Si – Fa♯ – Sol – Rê – Sol – La, tám hợp âm lặp lại."
-    ly_do: 'n17, n26, n27, n28: chỉ ghi nguồn đã mở và có nói điều ấy.; n34 (da-sua, review D3-gom): "nhiều nhất" không có nguồn; Listen 8e: "One easily recognized feature of Baroque melodies is their frequent use of sequence".; n34 (da-sua, review D3-gom): giữ điều có nguồn (Listen 8e ch. 9).; Mục Nguồn (review D3-gom, theo n17): Gjerdingen ch. 2, tr. 32–33.'
+    ly_do: 'n17, n26, n27, n28: chỉ ghi nguồn đã mở và có nói điều ấy.; n34 (da-sua, review D3-gom): "nhiều nhất" không có nguồn; Listen 8e: "One easily recognized feature of Baroque melodies is their frequent use of sequence".; n34 (da-sua, review D3-gom): giữ điều có nguồn (Listen 8e ch. 9).; Mục Nguồn (review D3-gom, theo n17): Gjerdingen ch. 2, tr. 32–33. mo/link-hong (06/11/2026): link ngoài hỏng (lychee 07/11/2026); Listen 8e không còn và không có bản lưu, thay bằng bài giảng MIT OCW (n2, n3, n34). mo/link-hong (06/11/2026): link ngoài hỏng (lychee 07/11/2026); bản trích UC Irvine trả 404, đổi sang bản lưu Wayback 09/02/2026 (n17).'
   - cu: "mô tả: Chuỗi (sequence) là một mẫu nhạc ngắn được lặp lại liên tiếp ở các cao độ khác nhau, đi lên hoặc đi xuống đều đặn như những bậc cầu thang. Đây là một trong…"
     moi: "mô tả: Chuỗi (sequence) là một mẫu nhạc ngắn được lặp lại liên tiếp ở các cao độ khác nhau, đi lên hoặc đi xuống đều đặn như những bậc cầu thang."
     ly_do: Mô tả trang lấy từ đoạn mở đầu, đổi theo chỗ sửa ở đoạn ấy (lượt 1 D3-L4, xem nhận định của đoạn mở đầu).
   - cu: "câu hỏi: Chuỗi hòa âm là đặc trưng nổi bật của thời kỳ nào? | ✓ Baroque | Trung cổ | Tối giản thế kỷ 20 | Vivaldi, Bach, Handel dùng rất nhiều."
-    moi: "câu hỏi: Chuỗi là một đặc điểm dễ nhận ra của giai điệu thời kỳ nào? | ✓ Baroque | Trung cổ | Tối giản thế kỷ 20 | Giai điệu Baroque dùng chuỗi rất thường xuyên, như chủ đề chương 1 Brandenburg số 5 của Bach."
-    ly_do: "n34 (da-sua): như n2, n3."
+    moi: "câu hỏi: Chuỗi là một đặc điểm dễ nhận ra của giai điệu thời kỳ nào? | ✓ Baroque | Trung cổ | Tối giản thế kỷ 20 | Giai điệu Baroque dùng chuỗi rất thường xuyên, như ritornello chương 1 concerto La stravaganza (Op. 4 số 12) của Vivaldi."
+    ly_do: "n34 (da-sua): như n2, n3. mo/link-hong (06/11/2026): link ngoài hỏng (lychee 07/11/2026); ví dụ Brandenburg số 5 chỉ có nguồn là Listen 8e, nay không còn và không có bản lưu; đổi ví dụ sang Vivaldi theo MIT OCW (n34)."
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/link-hong
+    ly_do: "link ngoài hỏng (lychee 07/11/2026): đổi link chết sang bản lưu Wayback, địa chỉ mới hay nguồn khác đọc được"

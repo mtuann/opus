@@ -283,7 +283,7 @@ Bài tập hằng ngày: mở một bài thánh ca hay một bản nhạc dễ, 
 
 - Willard A. Palmer, Morton Manus, Amanda Vick Lethco, *The Complete Book of Scales, Chords, Arpeggios & Cadences* (Alfred): hợp âm, hợp âm rải và vòng kết ở mọi giọng.
 - ABRSM, các tập *Piano Scales & Arpeggios* theo từng cấp.
-- University of Evansville, [Scale and Arpeggio Fingerings](https://faculty.evansville.edu/gu2/Scales.htm): ngón bấm hợp âm rải.
+- University of Evansville, [Scale and Arpeggio Fingerings](https://web.archive.org/web/20240729232213/https://faculty.evansville.edu/gu2/Scales.htm) (bản lưu): ngón bấm hợp âm rải.
 - MuseScore, *All About Piano*: ["Inverting major triads"](https://musescore.com/articles/all-about-piano/inverting-major-triads), ngón bấm hợp âm ba ở các thể đảo.
 - Stefan Kostka, Dorothy Payne, *Tonal Harmony* (McGraw-Hill): dẫn giọng và chức năng hòa âm.
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

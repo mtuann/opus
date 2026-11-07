@@ -265,7 +265,7 @@ Các mốc trên là gợi ý của trang này để bạn tự đo tiến bộ,
 
 ## Nguồn
 
-- University of Evansville, [Scale and Arpeggio Fingerings](https://faculty.evansville.edu/gu2/Scales.htm): bảng ngón bấm gam trưởng, thứ, nửa cung và hợp âm rải.
+- University of Evansville, [Scale and Arpeggio Fingerings](https://web.archive.org/web/20240729232213/https://faculty.evansville.edu/gu2/Scales.htm) (bản lưu): bảng ngón bấm gam trưởng, thứ, nửa cung và hợp âm rải.
 - PianoScales.org: [gam trưởng](https://pianoscales.org/major.html) và [gam thứ hòa âm](https://pianoscales.org/minor-harmonic.html), ngón bấm từng giọng.
 - Graham Fitch, ["Nimble Chromatics"](https://practisingthepiano.com/nimble-chromatics/), Practising the Piano: ngón bấm gam nửa cung cơ bản và nâng cao.
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).

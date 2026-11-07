@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 3, 28/10/2026; bổ sung sau review)
       review: Claude (review D3-gom, nhóm B, 28/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 3 (D3-L2 đến D3-L6): 6 đúng, 4 câu về site và lời khuyên tập không kiểm độc lập được (người gom kiểm lại trên repo, đúng), 0 sai (bao-cao/d3-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: mo/link-hong
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/link-hong, 06/11/2026: kiểm link lỗi của lychee, đổi link, đối chiếu nội dung nguồn mới)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Trang kỹ thuật thế kỷ 20 (tầng lõi), 5 khối abc soạn riêng. Nguồn chính: OMT (Collections, Twelve-Tone), Hutchinson (Polychords), Britannica, COD (minimalism), Reich (1968), IRCAM, Berliner Philharmoniker, lizhogg, BBC Music Magazine; WebFetch ngày 28/10/2026. CHƯA CHẮC (null): n7 phần "quyển 1" (bậc 3), n14 (Rimsky-Korsakov, Stravinsky với bát cung), n17 đến n20 (hợp âm quãng 4, Hindemith, jazz: chỉ Wikipedia), n39 (cơ chế lệch pha), n43 (đồng xu, xúc xắc, Kinh Dịch), n46 (Pärt, chỉ bậc 3). Thuật ngữ trang dùng, có hồ sơ riêng ở lô này: octatonic-scale, polytonality, twelve-tone, minimalism. Chưa có ở thuat-ngu.yml (cho D3-L5): ostinato, phasing (lệch pha), additive process (cộng dồn), aleatoric/chance music (nhạc ngẫu nhiên), quartal harmony (hợp âm quãng 4), polychord (hợp âm kép), whole-tone scale (gam toàn cung), row (dãy 12 âm).'
 nguon:
   - id: omt-col
@@ -54,10 +63,6 @@ nguon:
     bac: 2
     ten: IRCAM BRAHMS, Berg, Violinkonzert
     link: https://brahms.ircam.fr/en/work/violinkonzert-6
-  - id: berl
-    bac: 2
-    ten: Berliner Philharmoniker, lời giới thiệu Concerto violin của Berg
-    link: https://www.berliner-philharmoniker.de/en/programme-notes/alban-berg-concerto-for-violin-and-orchestra-to-the-memory-of-an-angel
   - id: lizhogg
     bac: 2
     ten: Bài giảng MUS347W (lizhogg.com), dãy 12 âm của Berg
@@ -154,6 +159,10 @@ nguon:
     bac: 2
     ten: John Cage Trust (johncage.org), 4'33"
     link: https://johncage.org/pp/John-Cage-Work-Detail.cfm?work_ID=17
+  - id: sfs-shaham
+    bac: 2
+    ten: San Francisco Symphony, tập sách kèm đĩa SACD Gil Shaham (SFS Media, 2021), bài về Concerto violin của Berg (PDF trên bach-cantatas.com)
+    link: https://bach-cantatas.com/~bachcant/Pic-NonVocal-BIG/Shaham-G-T02c%5BSFS-SACD-booklet%5D.pdf
 nhan_dinh:
   - id: n1
     cau: Từ đầu thế kỷ 20, nhiều nhà soạn nhạc rời bỏ hệ thống trưởng, thứ và hòa âm chức năng.
@@ -460,11 +469,10 @@ nhan_dinh:
     cau: Dãy 12 âm của Concerto violin của Alban Berg (1935) chứa nhiều hợp âm ba ẩn bên trong.
     loai: lich-su
     nguon:
-      - berl
-      - ircam-berg
       - lizhogg
+      - ircam-berg
     ket_qua: dung
-    ghi_chu: 'IRCAM: viết năm 1935. Berliner Phil.: dãy dựng từ các hợp âm ba xen nhau. lizhogg: dãy G B♭ D F♯ A C E G♯ B C♯ E♭ F. Review D3-gom: lượt 2 (khong-chac) không mở trang Berliner Philharmoniker. Review mở lại (berl): "constructing the underlying twelve-tone row from interlocking traditional triads – a kind of pseudo-tonal idiom"; "Date of composition: 1935"; dãy "concludes" bằng ba bước một cung. Giữ.'
+    ghi_chu: 'IRCAM: viết năm 1935. Berliner Phil.: dãy dựng từ các hợp âm ba xen nhau. lizhogg: dãy G B♭ D F♯ A C E G♯ B C♯ E♭ F. Review D3-gom: lượt 2 (khong-chac) không mở trang Berliner Philharmoniker. Review mở lại (berl): "constructing the underlying twelve-tone row from interlocking traditional triads – a kind of pseudo-tonal idiom"; "Date of composition: 1935"; dãy "concludes" bằng ba bước một cung. Giữ. mo/link-hong (06/11/2026): trang Berliner Philharmoniker trả 404; bản lưu Wayback duy nhất (01/02/2026) không có chữ của bài; bỏ nguồn berl. Vế hợp âm ba theo lizhogg: "Berg''s row is almost tonal in its opening G minor triad … If viewed as overlapping triads, an E major triad then follows"; năm 1935 theo IRCAM và lizhogg ("in 1935").'
     luot_2: khong-chac
     luot_2_nguon: [ "https://imslp.org/wiki/Violin%20Concerto%20(Berg,%20Alban)" ]
     luot_2_ghi_chu: IMSLP xác nhận năm 1935. Nhưng dãy chứa nhiều hợp âm ba (Sol thứ, Rê trưởng, La thứ, Mi trưởng) chỉ thấy ở Wikipedia; trang LA Phil và các trang khác đã mở không nêu.
@@ -481,9 +489,8 @@ nhan_dinh:
     loai: cau-truc
     nguon:
       - lizhogg
-      - berl
     ket_qua: dung
-    ghi_chu: 'Xem khuong_nhac khối 5: mười hai lớp cao độ khác nhau, đúng thứ tự lizhogg.'
+    ghi_chu: 'Xem khuong_nhac khối 5: mười hai lớp cao độ khác nhau, đúng thứ tự lizhogg. mo/link-hong (06/11/2026): bỏ berl (xem n32); dãy theo lizhogg: "G-B-flat-D-F#-A-C-E-G#-B-C#-E-flat-F".'
     luot_2: dung
     luot_2_nguon: [ "https://openmusictheory.github.io/twelveToneBasics.html" ]
     luot_2_ghi_chu: "Tự kiểm: 12 nốt Sol Si♭ Rê Fa♯ La Đô Mi Sol♯ Si Đô♯ Mi♭ Fa đủ 12 lớp cao độ, mỗi lớp một lần (OMT: định nghĩa dãy). Không kiểm việc đây đúng là dãy của Berg (xem n32)."
@@ -491,10 +498,10 @@ nhan_dinh:
     cau: Sol, Si♭, Rê (Sol thứ); Rê, Fa♯, La (Rê trưởng); La, Đô, Mi (La thứ); Mi, Sol♯, Si (Mi trưởng); rồi bốn nốt cuối đi lên từng cung.
     loai: cau-truc
     nguon:
-      - berl
       - lizhogg
+      - sfs-shaham
     ket_qua: dung
-    ghi_chu: 'G B♭ D = Sol thứ; D F♯ A = Rê trưởng; A C E = La thứ; E G♯ B = Mi trưởng; bốn nốt cuối Si, Đô♯, Mi♭, Fa cách nhau từng cung. Berliner Phil.: kết bằng ba bước một cung.'
+    ghi_chu: 'G B♭ D = Sol thứ; D F♯ A = Rê trưởng; A C E = La thứ; E G♯ B = Mi trưởng; bốn nốt cuối Si, Đô♯, Mi♭, Fa cách nhau từng cung. Berliner Phil.: kết bằng ba bước một cung. mo/link-hong (06/11/2026): bỏ berl (xem n32). Bốn nốt cuối đi từng cung: San Francisco Symphony (tập sách đĩa Shaham): bốn nốt đầu bài choral "corresponded exactly to the final four notes of his tone row. The chorale melody is striking in that it begins with a succession of three whole tones". Các hợp âm ba: lizhogg nhìn dãy "as overlapping triads" (Sol thứ, Mi trưởng…); việc gom Rê–Fa♯–La, La–Đô–Mi là tự kiểm như lượt 2.'
     luot_2: dung
     luot_2_nguon: [ "https://openmusictheory.github.io/triads.html" ]
     luot_2_ghi_chu: "Tự kiểm: Sol-Si♭-Rê = Sol thứ; Rê-Fa♯-La = Rê trưởng; La-Đô-Mi = La thứ; Mi-Sol♯-Si = Mi trưởng; Si-Đô♯-Mi♭-Fa cách nhau từng cung. Các nốt đầu nối nhau (Rê, La, Mi, Si dùng chung)."
@@ -766,10 +773,14 @@ doi_chu:
       - 'Robert Hutchinson, Music Theory for the 21st-Century Classroom, mục Polychords trên LibreTexts: hợp âm Mi♭7 chồng lên hợp âm Fa♭ trưởng trong Le Sacre du printemps, ở "Dance of the Adolescents".'
       - "Encyclopaedia Britannica: Whole-tone scale (sáu nốt cách nhau một cung; Debussy, Dukas và những người khác dùng khoảng năm 1900; Voiles là ví dụ), Polytonality (hai hay nhiều giọng cùng lúc), 12-tone music (Schoenberg được coi là người phát minh), Ostinato (một câu giai điệu ngắn lặp suốt tác phẩm), Aleatory music (gieo xúc xắc, Kinh Dịch, người chơi chọn thứ tự trình bày; John Cage), Arvo Pärt (phong cách dựa trên sự biến đổi chậm của âm thanh)."
       - 'The Concise Oxford Dictionary of Music, mục minimalism, qua Encyclopedia.com: phong cách từ thập niên 1960, lặp lại các môtip ngắn; Glass, Riley, Reich là những nhà tối giản tiêu biểu. Steve Reich, "Music as a Gradual Process" (1968), đoạn trích: quá trình âm nhạc "should happen extremely gradually".'
-      - "Berg, Concerto violin: IRCAM, BRAHMS (viết năm 1935); Berliner Philharmoniker, lời giới thiệu (dãy dựng từ các hợp âm ba xen nhau, kết bằng ba bước một cung); bài giảng MUS347W (dãy Sol – Si♭ – Rê – Fa♯ – La – Đô – Mi – Sol♯ – Si – Đô♯ – Mi♭ – Fa)."
+      - "Berg, Concerto violin: IRCAM, BRAHMS (viết năm 1935); bài giảng MUS347W (dãy Sol – Si♭ – Rê – Fa♯ – La – Đô – Mi – Sol♯ – Si – Đô♯ – Mi♭ – Fa, nhìn như các hợp âm ba chồng lên nhau); San Francisco Symphony, tập sách kèm đĩa của Gil Shaham (bốn nốt cuối của dãy trùng phần mở đầu bài choral Es ist genug, đi ba bước một cung)."
       - "IRCAM, BRAHMS: Arnold Schoenberg (áp dụng kỹ thuật chuỗi năm 1923), Piano Phase (Steve Reich, 1967, cho hai piano hoặc hai marimba)."
-    ly_do: "Mục Nguồn: thay bằng các nguồn đã mở khi kiểm định (lượt 1 D3-L4); bỏ nguồn không đọc được chữ (musictheory.net).; n19, n20 (da-sua, review D3-gom): Hindemith chỉ có nguồn bậc 3; ví dụ mới theo MT21C 32.3 và Berklee Online.; Mục Nguồn (review D3-gom): theo n14, n17–n20, n23, n24, n38–n40, n43, n46."
+    ly_do: "Mục Nguồn: thay bằng các nguồn đã mở khi kiểm định (lượt 1 D3-L4); bỏ nguồn không đọc được chữ (musictheory.net).; n19, n20 (da-sua, review D3-gom): Hindemith chỉ có nguồn bậc 3; ví dụ mới theo MT21C 32.3 và Berklee Online.; Mục Nguồn (review D3-gom): theo n14, n17–n20, n23, n24, n38–n40, n43, n46. mo/link-hong (06/11/2026): link ngoài hỏng (lychee 07/11/2026); trang Berliner Philharmoniker trả 404, bản lưu không có chữ của bài; bỏ, vế hợp âm ba theo MUS347W, vế ba bước một cung theo San Francisco Symphony (n32, n34, n35)."
   - moi:
       - 'Wikipedia: Octatonic scale (Stravinsky, Bartók, Messiaen), Quartal and quintal harmony (hợp âm quãng 4 không có âm gốc rõ ràng; jazz), Polytonality, The Rite of Spring (hợp âm dậm đi dậm lại ở "Augurs of Spring": Mi♭7 chồng lên Fa♭ trưởng), Twelve-tone technique (Schoenberg phát triển năm 1923, nhớ đã dùng từ 1921), Violin Concerto (Berg) (dãy chứa các hợp âm Sol thứ, Rê trưởng, La thứ, Mi trưởng; bốn nốt cuối đi lên từng cung), Minimalism (music) (lệch pha của Reich, quá trình cộng dồn của Glass), Piano Phase, Aleatoric music (để người chơi quyết định thứ tự các đoạn; Cage dùng Kinh Dịch để chọn trường độ, tốc độ, sắc thái), Spiegel im Spiegel (Pärt, 1978; một ví dụ của nhạc tối giản; giai điệu violin thêm một nốt mỗi câu).'
       - "The Listeners' Club, \"Debussy's Voiles\": Voiles là bản thứ hai của quyển 1 Préludes, xuất bản năm 1910, dựa trên gam toàn cung."
     ly_do: "Mục Nguồn: thay bằng các nguồn đã mở khi kiểm định (lượt 1 D3-L4); bỏ nguồn không đọc được chữ (musictheory.net)."
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/link-hong
+    ly_do: "link ngoài hỏng (lychee 07/11/2026): đổi link chết sang bản lưu Wayback, địa chỉ mới hay nguồn khác đọc được"

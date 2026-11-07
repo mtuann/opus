@@ -79,14 +79,14 @@ Nghe bè trầm: Đô – Fa – Si – Mi – La – Rê – Sol – Đô, cứ
 + Baroque
 - Trung cổ
 - Tối giản thế kỷ 20
-> Giai điệu Baroque dùng chuỗi rất thường xuyên, như chủ đề chương 1 *Brandenburg* số 5 của Bach.
+> Giai điệu Baroque dùng chuỗi rất thường xuyên, như ritornello chương 1 concerto *La stravaganza* (Op. 4 số 12) của Vivaldi.
 ```
 
 ## Nguồn
 
 - Open Music Theory: chương [Diatonic Sequences in Middles](https://viva.pressbooks.pub/openmusictheory/chapter/diatonic-sequences/) (John Peterson): chuỗi là một mẫu được nhắc lại và dịch cao độ; chuỗi quãng 5 đi xuống (gốc hợp âm đi xuống quãng 5 hay lên quãng 4; ví dụ Albéniz, *Catalonia*), chuỗi quãng 3 đi xuống (còn gọi là chuỗi Pachelbel; ví dụ Amanda Maier, *Sáu tiểu phẩm cho violin* số 6), chuỗi 5–6 đi lên (ví dụ Vivaldi, Concerto violin Op. 8 số 4, chương 2, ô 11–13); chương [Chromatic Sequences](https://viva.pressbooks.pub/openmusictheory/chapter/chromatic-sequences/) (Bryn Hughes): chuỗi quãng 5 có các hợp âm át nối nhau, chuỗi đi xuống từng nửa cung (ví dụ của Chopin), được dùng suốt thế kỷ 19; chương [ii–V–I](https://viva.pressbooks.pub/openmusictheory/chapter/ii-v-i/) (Megan Lavengood): nhạc jazz nối các vòng ii–V–I ở nhiều giọng thành chuỗi.
 - *The Concise Oxford Dictionary of Music*, mục [sequence](https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/sequence), qua Encyclopedia.com: chuỗi là sự lặp lại gần như chính xác một đoạn nhạc ở cao độ cao hơn hay thấp hơn.
-- *Listen*, bản 8 (Macmillan Learning), [chương 9](https://digfir-published.macmillanusa.com/listen8e/listen8e_ch9_16.html): chuỗi là một đặc điểm dễ nhận ra của giai điệu Baroque, ví dụ ở chủ đề chương 1 của Bach, *Brandenburg* số 5.
-- Robert Gjerdingen, *Music in the Galant Style* (2007), [chương 2](https://music.arts.uci.edu/abauer/5.2/readings/Gjerdingen%20_Music_in_the_Galant_Style_Ch_2.pdf) (bản trích): Canon của Pachelbel ở ô 5 "presents an obvious Romanesca"; Romanesca là một công thức bè trầm Ý, được chú ý từ thế kỷ 16 và phổ biến trong thế kỷ 17; dạng bè trầm nhảy (Pachelbel, Handel) đặc trưng cho thế kỷ 17 và đầu thế kỷ 18, dạng đi bậc cho cuối thế kỷ 18.
+- MIT OpenCourseWare, 21M.011 (Ellen T. Harris, 2006), [bài giảng III: Baroque](https://ocw.mit.edu/courses/21m-011-introduction-to-western-music-spring-2006/70eb2414c59c44cc0d10d699e222a167_week03_lecture03.pdf): giai điệu Baroque dùng chuỗi như một phần quen thuộc, ví dụ đoạn b trong ritornello chương 1 concerto *La stravaganza* (Op. 4 số 12) của Vivaldi.
+- Robert Gjerdingen, *Music in the Galant Style* (2007), [chương 2](https://web.archive.org/web/20260209143103/https://music.arts.uci.edu/abauer/5.2/readings/Gjerdingen%20_Music_in_the_Galant_Style_Ch_2.pdf) (bản trích, bản lưu): Canon của Pachelbel ở ô 5 "presents an obvious Romanesca"; Romanesca là một công thức bè trầm Ý, được chú ý từ thế kỷ 16 và phổ biến trong thế kỷ 17; dạng bè trầm nhảy (Pachelbel, Handel) đặc trưng cho thế kỷ 17 và đầu thế kỷ 18, dạng đi bậc cho cuối thế kỷ 18.
 - Wikipedia, [Sequence (music)](https://en.wikipedia.org/wiki/Sequence_%28music%29): chuỗi quãng 5 có gốc Đô – Fa – Si – Mi – La – Rê; chuỗi quãng 3 đi xuống; dạng Pachelbel (bè trầm xuống quãng 4 rồi lên một bậc); chuỗi 5–6 đi lên. [Pachelbel's Canon](https://en.wikipedia.org/wiki/Pachelbel%27s_Canon): bè trầm Rê – La – Si – Fa♯ – Sol – Rê – Sol – La, tám hợp âm lặp lại.
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
