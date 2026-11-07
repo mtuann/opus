@@ -53,6 +53,8 @@ Trong chương 1 Giao hưởng số 5, Beethoven dùng nhiều kỹ thuật tron
 | **Trình bày** (presentation) | 1–4 | Một **ý cơ bản** 2 ô nhịp, rồi **nhắc lại** ngay (có thể ở hợp âm khác) |
 | **Tiếp nối** (continuation) | 5–8 | **Chia nhỏ** ý cơ bản thành mảnh ngắn hơn, nhịp điệu dồn dập hơn, rồi kết bằng một **kết** |
 
+::hinh{ten="cau-nhac"}
+
 Ví dụ kinh điển: 8 ô nhịp mở đầu Sonata piano số 1 của Beethoven, Op. 2 số 1 (Fa thứ): một hợp âm rải đi lên 2 ô nhịp, nhắc lại ở hợp âm át, rồi các mảnh ngắn dần dồn tới kết nửa.
 
 **So sánh:** đoạn nhạc nghe như **hỏi – đáp**; câu nghe như **nói – nhắc lại – rồi dồn tới**.

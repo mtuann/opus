@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 4, 28/10/2026; bổ sung sau review)
       review: Claude (review D4-gom, nhóm B, 28/10/2026)
       kiem_mau: 'chủ repo, 10 nhận định mẫu của đợt 4 (D4-L1 đến D4-L4): 10 đúng (3 có điều kiện, đã sửa theo: nguồn Versuch §5 và láy rền thường, Frère Jacques "bài hát Pháp truyền thống", quãng tám trong gợi ý ngón của mẫu galant), 0 sai (bao-cao/d4-gom/kiem-mau-ket-qua.yml)'
+  - so: 2
+    ngay: null
+    nhanh: mo/hinh-dot-2a
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (đợt hình 2a, mo/hinh-dot-2a, 06/11/2026)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: hkb
     bac: 2
@@ -718,6 +727,18 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "nam-ngon, 15-tiet-tau-nang-cao đã có. cach-tap, tai-lieu-tham-khao chưa chuyển: ../opus-zero/docs/piano/cach-tap.md và ../opus-zero/docs/tai-lieu-tham-khao.md có. Review: đã kiểm mục Nguồn: nam-ngon, cach-tap, 15-tiet-tau-nang-cao có trong dist/; tai-lieu-tham-khao chưa chuyển, ../opus-zero/docs/tai-lieu-tham-khao.md có."
     review: dung
+  - id: n78
+    cau: "Hình sau bảng \"Lưới 6\" (::hinh{ten=\"hai-choi-ba\"}) vẽ một phách chia sáu phần: tay phải (chơi ba) ba thanh đều bắt đầu ở phần 1, 3, 5; tay trái (chơi hai) hai thanh đều bắt đầu ở phần 1, 4; hàng \"Câu đọc\" ghi \"Một\" ở phần 1, \"ly\" ở 3, \"cà\" ở 4, \"phê\" ở 5. Chú thích: nốt thứ hai của tay trái rơi giữa \"ly\" và \"phê\", đúng vào chữ \"cà\"."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026: HTML trong dist/<trang>/index.html) và module dựng hình (src/scripts/ve-thoi-gian.js, hàm ghi dưới; vị trí mỗi mục là phần trăm của trục, tests/thoi-gian.test.mjs đọc lại); ảnh chụp 360 và 1280 px. hinhHaiChoiBa. Khớp bảng \"Lưới 6\" (dấu ● của hai hàng tay, hàng \"Câu đọc\"), câu \"tay phải gõ ở 1, 3, 5, tay trái ở 1, 4\" và câu \"Nốt ấy phải rơi đúng giữa \"ly\" và \"phê\", tức đúng vào chữ \"cà\"\". Trang ghi \"tay chơi hai (tay trái)\" nên chú thích viết \"tay trái\". Mỗi nốt vẽ thành thanh dài tới nốt sau của cùng tay (ba nốt đều, hai nốt đều trong cùng một phách, như câu định nghĩa hai chọi ba)."
+  - id: n79
+    cau: "Hình sau bảng \"Lưới 12\" (::hinh{ten=\"ba-choi-bon\"}) vẽ mười hai phần: tay phải (chơi bốn) bốn thanh đều bắt đầu ở phần 1, 4, 7, 10; tay trái (chơi ba) ba thanh đều bắt đầu ở 1, 5, 9; hàng \"Đọc\" ghi \"một hai ba\" bốn lần; hàng \"Hình chung\" là sáu ô dài 3, 1, 2, 2, 1, 3 phần. Chú thích: tay trái đánh ở chữ \"một\" đầu tiên, chữ \"hai\" của nhóm thứ hai, chữ \"ba\" của nhóm thứ ba."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026: HTML trong dist/<trang>/index.html) và module dựng hình (src/scripts/ve-thoi-gian.js, hàm ghi dưới; vị trí mỗi mục là phần trăm của trục, tests/thoi-gian.test.mjs đọc lại); ảnh chụp 360 và 1280 px. hinhBaChoiBon. Khớp bảng \"Lưới 12\", đoạn \"Đọc mười hai phần thành bốn nhóm ba tiếng đều nhau … tay chơi ba đánh ở chữ \"một\" đầu tiên, chữ \"hai\" của nhóm thứ hai và chữ \"ba\" của nhóm thứ ba. Hình chung, tính theo phần lưới, là 3 – 1 – 2 – 2 – 1 – 3\". Tự tính lại: nốt của hai tay ở phần 1, 4, 5, 7, 9, 10, khoảng cách 3, 1, 2, 2, 1, 3 (tests/thoi-gian.test.mjs kiểm). Câu tiếng Anh \"pass the golden butter\" không vẽ."
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -893,3 +914,7 @@ doi_chu:
         [V:RH] !mf!!1!c4 !3!e2 !5!g2 | !4!f2 !3!e2 !2!d4 | !5!g2 !4!f2 !3!e2 !2!d2 | !1!c8 |]
         [V:LH] !p!!5!C,!1!G,!3!E,!1!G, C,G,E,G, | !5!C,!1!A,!2!F,A, !5!B,,!1!G,!3!D,G, | !5!C,G,E,G, B,,G,D,G, | C,G,E,G, C,4 |]
     ly_do: "khuong_nhac 4 và 5 (da-sua): trang ghi bài tập ở ♩ = 50–60; tempo 66 vượt khoảng ấy nên đưa về 60."
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-2a
+    ly_do: "thêm hình (đợt hình 2): lưới phách, dải thời gian vẽ lại chữ và bảng của trang"

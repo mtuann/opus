@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 3, 28/10/2026; bổ sung sau review)
       review: Claude (review D3-gom, nhóm A, 28/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 3 (D3-L2 đến D3-L6): 6 đúng, 4 câu về site và lời khuyên tập không kiểm độc lập được (người gom kiểm lại trên repo, đúng), 0 sai (bao-cao/d3-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: null
+    nhanh: mo/hinh-dot-2a
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (đợt hình 2a, mo/hinh-dot-2a, 06/11/2026)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Bài nhạc lý 14 (ký hiệu biểu diễn: tốc độ, cường độ, cách diễn tấu, thuật ngữ tính cách, dấu nhắc lại và chỉ đường, nốt hoa mỹ, 8va/Ped./pizz.). Nguồn chính: Open Music Theory, Other Aspects of Notation và Glossary (động lực, tốc độ, articulation, D.C., D.S., fermata, coda); Trinity College London, "Musical terms and directions for performance" (bảng thuật ngữ, dùng cho thuật ngữ tính cách, volta, pizz., una corda, M.D./M.S.); Dolmetsch Online (Music Theory Online bài 5, 21, 23, Musical Symbols, vần O/F/P); Concise Oxford Dictionary of Music qua Encyclopedia.com (rubato, trill, mordent, gruppetto, appoggiatura, acciaccatura, fermata); Britannica (Musical expression); Met Museum (Cristofori). WebFetch ngày 27/10/2026 (bản tóm tắt chữ, không phải HTML thô). Sửa chữ ở lượt 1: (1) câu mở đầu: "ngôn ngữ chung của âm nhạc từ thời Baroque" thành "loại thuật ngữ được đưa vào từ thế kỷ 17" (Britannica); (2) "Tất cả thuật ngữ trong bài đều có trong từ điển" thành "Hầu hết" (thiếu pralltriller, 8va/8vb, decresc., segno, al Coda); (3) rubato: bỏ "rất phổ biến khi chơi Chopin" (COD: "particularly contentious"); (4) piano: bỏ "mà vẫn đủ vang"; (5) fermata: "hình con mắt" thành mô tả "vòng cung có chấm"; (6) D.S.: bỏ mô tả hình dấu segno; (7) láy trên: bỏ vế trong ngoặc về nhạc Baroque; (8) mục Nguồn; (9) mô tả trang (frontmatter) đổi theo (1). Chưa chắc (ket_qua null): hình "vạch kép có hai chấm" của dấu nhắc lại (nghĩa đúng), và tên "pralltriller" cho láy trên (cấu trúc nốt chính-trên-chính đúng theo Dolmetsch). Lưu ý cho người giao: hộp "Trên phím đàn" nói Ped. "chỉ gặp trên bản nhạc piano" (Ped. còn dùng cho organ) và trang Nốt hoa mỹ có ba loại láy chứ không hai; không sai nên chưa sửa. src/data/thuat-ngu.yml còn ghi_chu rubato "Đặc trưng khi chơi Chopin" và tre corde "viết tắt t.c." (xem hồ sơ thuật ngữ). Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): pralltriller (láy trên), 8va / 8vb, decresc. (decrescendo), segno, al Coda, dấu nhắc lại (repeat sign), tên "dấu luyến" (slur); đã có: legato, staccato, tenuto, accent, fermata, trill, mordent, turn, appoggiatura, acciaccatura, ped., una corda, tre corde, da capo, dal segno, fine, coda, prima/seconda volta, m.d. / m.s., ottava. Khối abc: ba khối soạn, không có trích đoạn tác phẩm. Không tính là nhận định: tiêu đề mục và cột bảng. Mỗi dòng bảng là một nhận định.'
 nguon:
   - id: omt-notation
@@ -775,6 +784,12 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'Bản cũ ../opus-zero/docs/tai-lieu-tham-khao.md tồn tại. Trang đích chưa chuyển ("sắp có"). Review: ../opus-zero/docs/tai-lieu-tham-khao.md có; trang đích chưa chuyển.'
     review: dung
+  - id: n64
+    cau: "Hình sau bảng \"Cách diễn tấu\" (::hinh{ten=\"dien-tau\"}) vẽ bốn nốt Đô, Rê, Mi, Fa thành thanh \"phím đang giữ\": staccato (ngắt ngắn) thanh ngắn, legato (liền mạch) và tenuto (giữ đủ độ dài) thanh dài trọn nốt; fermata một nốt có phần ngân thêm gạch đứt ghi \"tùy ý\". Chú thích: độ dài chỉ để so sánh; phần gạch đứt của fermata là ngân dài tùy ý."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026: HTML trong dist/<trang>/index.html) và module dựng hình (src/scripts/ve-thoi-gian.js, hàm ghi dưới; vị trí mỗi mục là phần trăm của trục, tests/thoi-gian.test.mjs đọc lại); ảnh chụp 360 và 1280 px. hinhDienTau. Khớp cột \"Nghĩa\" của bảng: staccato \"Ngắt ngắn\", legato \"Chơi liền mạch\", tenuto \"Giữ đủ độ dài, hơi nhấn\", fermata \"Ngân dài tùy ý\". Accent (\"Nhấn\") không nói về độ dài nên không vẽ; \"hơi nhấn\" của tenuto cũng không vẽ (hình chỉ về độ dài)."
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -840,3 +855,7 @@ doi_chu:
   - cu: "mô tả: Ngoài cao độ và trường độ, bản nhạc còn cho biết chơi nhanh hay chậm, to hay nhỏ, liền hay ngắt. Phần lớn các ký hiệu này dùng tiếng Ý, ngôn ngữ chung của âm…"
     moi: "mô tả: Ngoài cao độ và trường độ, bản nhạc còn cho biết chơi nhanh hay chậm, to hay nhỏ, liền hay ngắt. Phần lớn các ký hiệu này dùng tiếng Ý, loại thuật ngữ được đưa…"
     ly_do: Mô tả trang lấy từ đoạn đầu, đổi theo n2.
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-2a
+    ly_do: "thêm hình (đợt hình 2): lưới phách, dải thời gian vẽ lại chữ và bảng của trang"

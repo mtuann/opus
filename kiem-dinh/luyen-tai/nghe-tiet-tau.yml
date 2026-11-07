@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 3, 28/10/2026; bổ sung sau review)
       review: Claude (review D3-gom, nhóm C, 28/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 3 (D3-L2 đến D3-L6): 6 đúng, 4 câu về site và lời khuyên tập không kiểm độc lập được (người gom kiểm lại trên repo, đúng), 0 sai (bao-cao/d3-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: null
+    nhanh: mo/hinh-dot-2a
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (đợt hình 2a, mo/hinh-dot-2a, 06/11/2026)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: "Trang nghe tiết tấu (tầng lõi). Nguồn: OMT Simple Meter, Compound Meters, Other Rhythmic Essentials; Iowa State 1.2 (thứ tự mạnh nhẹ); COD (syncopation, waltz, minuet, polka, march); Wikipedia Common time (bậc 3). Câu về site: bản cũ luyen-tap/tiet-tau.md ('Nghe mẫu', 2 ô 4/4) và luyen-tap/metronome.md (30–240 BPM); cả hai trang chưa chuyển. Các ví dụ còn lại trong bước 4 'jazz/Latin' là lời khuyên tập, không tính là nhận định. Câu ket_qua null: phách mạnh 'thường nhấn bằng tiếng trầm', nhịp đơn 'gọn' và nhịp kép 'đu đưa', syncopation 'nảy, bất ngờ'. Thuật ngữ chưa có trong src/data/thuat-ngu.yml: syncopation (đảo phách), accent (phách mạnh), polka, waltz (valse), march (hành khúc), nhịp 2/3/4 (duple, triple, quadruple); đã có simple-meter, compound-meter, beat, measure, minuet, tempo."
 nguon:
   - id: iowa-meter
@@ -292,6 +301,18 @@ nhan_dinh:
     cau: "Quiz: khi gõ lại một câu tiết tấu lạ, bước đầu là tìm phách, gõ chân đều."
     loai: khuyen-tap
     ket_qua: khong-can-nguon
+  - id: n29
+    cau: "Hình sau hai gạch đầu dòng \"Nhịp đơn\", \"Nhịp kép\" (::hinh{ten=\"nhip-don-kep\"}) vẽ hai phách cùng độ dài cho mỗi họ nhịp: nhịp đơn chia mỗi phách làm 2 ô, đếm \"1 và 2 và\"; nhịp kép chia mỗi phách làm 3 ô, đếm \"1 la li 2 la li\". Chú thích: nhịp đơn đếm \"và\" một lần, nhịp kép đếm \"la li\"."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026: HTML trong dist/<trang>/index.html) và module dựng hình (src/scripts/ve-thoi-gian.js, hàm ghi dưới; vị trí mỗi mục là phần trăm của trục, tests/thoi-gian.test.mjs đọc lại); ảnh chụp 360 và 1280 px. hinhNhipDonKep. Khớp hai gạch đầu dòng của mục \"Nhịp đơn và nhịp kép: nghe cách chia phách\" và câu \"Mẹo: giữa hai phách, đếm \"và\" một lần (nhịp đơn) hay \"la li\" hai lần (nhịp kép)\". Hai phách vẽ cùng độ dài để thấy cách chia; trang không nói gì về tốc độ, hình cũng không."
+  - id: n30
+    cau: "Hình sau ví dụ \"đen – móc đơn móc đơn – đen\" (::hinh{ten=\"dem-to\"}) vẽ tám vị trí đếm \"1 và 2 và 3 và 4 và\" của nhịp 4/4, tô các vị trí có nốt (1, 2, \"và\" sau 2, 3); dưới là bốn thanh nốt (đen dài hai vị trí, mỗi móc đơn một vị trí) và tên hình nốt \"đen\", \"2 móc đơn\", \"đen\"."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026: HTML trong dist/<trang>/index.html) và module dựng hình (src/scripts/ve-thoi-gian.js, hàm ghi dưới; vị trí mỗi mục là phần trăm của trục, tests/thoi-gian.test.mjs đọc lại); ảnh chụp 360 và 1280 px. hinhDemTo. Khớp đoạn \"Ví dụ câu \"đen – móc đơn móc đơn – đen\" trong nhịp 4/4: đếm \"1 và 2–và 3 và 4 và\" — nốt rơi vào 1, 2, \"và\", 3\" và bước 2 (\"mỗi âm tiết là một vị trí có thể có nốt\"). Độ dài thanh: nốt đen là một phách (hai vị trí \"số, và\"), móc đơn nửa phách, theo bài 3 mà trang dẫn tới; câu này chỉ có ba phách, vị trí 4 và \"và\" cuối để trống như chữ trang."
 khuong_nhac: []
 doi_chu:
   - cu:
@@ -333,3 +354,7 @@ doi_chu:
       - 'câu hỏi: Phân biệt nhịp đơn và nhịp kép bằng cách nào nhanh nhất? | ✓ Đếm giữa hai phách: một tiếng "và" là nhịp đơn, hai tiếng ("la li") là nhịp kép | Nghe xem bản nhạc nhanh hay chậm | Đếm tổng số nốt trong một ô nhịp | Nhịp đơn chia phách làm 2, nhịp kép chia làm 3 — đếm thành tiếng là thấy ngay.'
       - 'câu hỏi: Syncopation là gì? | Nốt rất dài cuối bản nhạc | ✓ Nốt nhấn rơi vào phách yếu hoặc vào "và", làm lệch chỗ nhấn đều đặn của nhịp | Nhịp đổi liên tục giữa 3/4 và 4/4 | Đảo phách: năng lượng dồn vào chỗ yếu thay vì chỗ mạnh như thường lệ.'
     ly_do: "n27 (da-sua, review D3-gom): như n20."
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-2a
+    ly_do: "thêm hình (đợt hình 2): lưới phách, dải thời gian vẽ lại chữ và bảng của trang"

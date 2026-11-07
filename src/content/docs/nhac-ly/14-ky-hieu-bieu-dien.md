@@ -56,6 +56,8 @@ K:C
 | Gạch ngang ngắn | tenuto | Giữ đủ độ dài, hơi nhấn |
 | Vòng cung có chấm | fermata | Ngân dài tùy ý |
 
+::hinh{ten="dien-tau"}
+
 ```abc
 X:1
 T:Staccato – legato – accent – tenuto – fermata

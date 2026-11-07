@@ -35,6 +35,8 @@ Khi nốt đã kêu, chỉ giữ phím bằng lực vừa đủ để phím khô
 - **Dính** (nhả muộn): hai nốt kêu chồng lên nhau, nghe nhòe.
 - Ở giai điệu chậm, nhiều nghệ sĩ cho hai nốt **chồng nhau một chút xíu** (*legatissimo*) để câu hát liền hơn. Chỉ làm vậy khi tai bạn đã phân biệt rõ hở và dính.
 
+::hinh{ten="legato"}
+
 Bài tập nhỏ: chơi năm nốt Đô – Rê – Mi – Fa – Sol thật chậm, mỗi nốt hai giây, và chỉ nghe đúng một thứ: chỗ nối giữa hai nốt. Không hở, không dính.
 
 ### Ngón bấm phục vụ legato
@@ -71,6 +73,8 @@ K:C
 | Tenuto | gạch ngang trên nốt | Giữ đủ giá trị, nhấn nhẹ bằng trọng lượng | Nốt quan trọng trong câu |
 | Accent | > | Nhấn rõ hơn các nốt xung quanh | Phách mạnh, nốt nghịch |
 | Sforzando | *sf*, *sfz* | Nhấn mạnh, đột ngột | Beethoven dùng rất nhiều |
+
+::hinh{ten="kieu-ngat"}
 
 ```abc
 X:2

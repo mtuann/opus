@@ -17,6 +17,8 @@ Mỗi hình nốt dài gấp đôi hình nốt nhỏ hơn kế tiếp. Số phá
 | Nốt móc đơn | eighth note / quaver | đầu đặc, đuôi có 1 móc | ½ |
 | Nốt móc kép | sixteenth note / semiquaver | đầu đặc, đuôi có 2 móc | ¼ |
 
+::hinh{ten="truong-do"}
+
 Nghe từng ô nhịp dưới đây: mỗi ô đều dài 4 phách, chỉ khác cách chia.
 
 ```abc
@@ -49,6 +51,8 @@ Một **chấm nhỏ bên phải nốt** làm nốt dài thêm **một nửa** �
 
 - Nốt trắng chấm dôi = 2 + 1 = **3 phách**.
 - Nốt đen chấm dôi = 1 + ½ = **1½ phách**.
+
+::hinh{ten="cham-doi"}
 
 ```abc
 X:1

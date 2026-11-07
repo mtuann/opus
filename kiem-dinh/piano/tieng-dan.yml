@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 4, 28/10/2026; bổ sung sau review)
       review: Claude (review D4-gom, nhóm C, 28/10/2026)
       kiem_mau: 'chủ repo, 10 nhận định mẫu của đợt 4 (D4-L1 đến D4-L4): 10 đúng (3 có điều kiện, đã sửa theo: nguồn Versuch §5 và láy rền thường, Frère Jacques "bài hát Pháp truyền thống", quãng tám trong gợi ý ngón của mẫu galant), 0 sai (bao-cao/d4-gom/kiem-mau-ket-qua.yml)'
+  - so: 2
+    ngay: null
+    nhanh: mo/hinh-dot-2a
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (đợt hình 2a, mo/hinh-dot-2a, 06/11/2026)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: goebl-2004
     bac: 2
@@ -807,6 +816,18 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "Tất cả tồn tại ở opus-zero/docs/ (kiểm bằng lệnh). suc-khoe phải giữ \"Dấu hiệu cảnh báo\". Đã chuyển: nhac-ly/13-ket, 18-am-ngoai-hop-am, am-hoc, piano/ban-dap, gam, tu-the. Review: đã kiểm ../opus-zero/docs/: luyen-tap/thu-am.md, piano/suc-khoe.md (có \"Dấu hiệu cảnh báo\"), piano/tac-pham/bach-invention-1.md, chopin-prelude-mi-thu.md, schumann-traumerei.md, tai-lieu-tham-khao.md đều có; trang đã chuyển: nhac-ly/13-ket, 18-am-ngoai-hop-am, am-hoc, piano/ban-dap, gam, tu-the có trong src/content/docs."
     review: dung
+  - id: n83
+    cau: "Hình sau ba gạch đầu dòng của mục \"Legato: nối liền bằng ngón\" (::hinh{ten=\"legato\"}) vẽ bốn nốt Đô, Rê, Mi, Fa thành thanh \"phím đang giữ\" ở bốn hàng: hở (nhả sớm: khoảng trống giữa hai thanh), nối đúng (thanh trước hết đúng lúc thanh sau bắt đầu), legatissimo (hai thanh chồng một chút xíu), dính (nhả muộn: hai thanh chồng nhiều hơn, màu khác)."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026: HTML trong dist/<trang>/index.html) và module dựng hình (src/scripts/ve-thoi-gian.js, hàm ghi dưới; vị trí mỗi mục là phần trăm của trục, tests/thoi-gian.test.mjs đọc lại); ảnh chụp 360 và 1280 px. hinhLegato. Khớp câu \"legato bằng ngón là chuyện thời điểm nhả: ngón trước rời phím đúng lúc ngón sau chạm đáy phím\", ba gạch đầu dòng \"Hở (nhả sớm)\", \"Dính (nhả muộn): hai nốt kêu chồng lên nhau\", \"chồng nhau một chút xíu (legatissimo)\" và bài tập Đô – Rê – Mi – Fa – Sol (hình lấy bốn nốt đầu). Trang không nói dính chồng bao nhiêu; hình vẽ dính chồng nhiều hơn legatissimo vì legatissimo là \"một chút xíu\" và dính \"nghe nhòe\". Độ dài thanh chỉ để so sánh, không phải số đo."
+  - id: n84
+    cau: "Hình sau bảng \"Staccato và các kiểu ngắt\" (::hinh{ten=\"kieu-ngat\"}) vẽ cùng bốn nốt ở năm cách phát âm, thanh dài dần ngắn: legato (nối liền) và tenuto (giữ đủ giá trị) dài trọn nốt, portato (hơi tách) ngắn hơn một chút, staccato (ngắn) ngắn hơn, staccatissimo (rất ngắn) ngắn nhất. Chú thích: độ dài thanh chỉ để so sánh theo chữ của bảng, không phải số đo."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026: HTML trong dist/<trang>/index.html) và module dựng hình (src/scripts/ve-thoi-gian.js, hàm ghi dưới; vị trí mỗi mục là phần trăm của trục, tests/thoi-gian.test.mjs đọc lại); ảnh chụp 360 và 1280 px. hinhKieuNgat. Khớp cột \"Chuyển động\" của bảng (Staccatissimo \"Rất ngắn\", Portato \"Hơi tách\", Tenuto \"Giữ đủ giá trị\"), câu \"Staccato là nốt ngắn, có khoảng lặng phía sau\", mục Legato (\"nối nhau không hở\") và ví dụ \"Cùng bốn nốt, năm cách phát âm\". Thứ tự portato dài hơn staccato là cách đọc \"hơi tách\" so với \"ngắn, có khoảng lặng phía sau\"; trang không cho số. Accent, sforzando (nói về độ nhấn) và ba kiểu staccato ngón, cổ tay, cẳng tay (khác chuyển động, không khác độ dài) không vẽ."
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -920,3 +941,7 @@ doi_chu:
     moi: "câu hỏi: sf (sforzando) yêu cầu gì? | Chơi nhỏ đột ngột | ✓ Nhấn mạnh, đột ngột một nốt hay hợp âm | Giữ nốt thêm một phách | sforzando, viết tắt sf hay sfz: nhấn mạnh một nốt hay hợp âm. Trong đoạn p, nhấn đến đâu thì nghe theo câu nhạc."
     ly_do: 'Chuyển trang: site cũ hiện nguyên dấu * trong câu hỏi (quiz cũ không dựng Markdown); site mới dựng chữ nghiêng như AGENTS.md quy định cho câu hỏi.; n72 (da-sua, review D4-gom): câu hỏi theo định nghĩa của ODM; bỏ "nhấn tương đối" (không nguồn).; n72 (da-sua, review D4-gom): lời giải thích theo ODM.'
 ghi_chu: 'Review D4-gom (nhóm C, 28/10/2026): quyết các câu null và khong-chac; sửa trang ở n33, n35, n38, n41 (bỏ câu lặp), n47, n57, n59, n63, n65, n67, n72; bảng "Phát âm theo phong cách" và các câu lời khuyên (n39, n47, n61–n65, n67) đổi nhãn thành khuyen-tap; năm câu tả khối abc (n25, n34, n43, n48, n52) đổi nhãn thành ve-site. Không có câu "tai người nghe theo bè trên" trên trang này.'
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-2a
+    ly_do: "thêm hình (đợt hình 2): lưới phách, dải thời gian vẽ lại chữ và bảng của trang"

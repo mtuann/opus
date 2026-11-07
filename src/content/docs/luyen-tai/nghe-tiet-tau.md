@@ -24,6 +24,8 @@ Mỗi phách còn được **chia nhỏ** — và cách chia tạo ra hai họ n
 - **Nhịp đơn** (2/4, 3/4, 4/4): mỗi phách chia 2 — đếm "1 **và** 2 **và**…".
 - **Nhịp kép** (6/8, 9/8, 12/8): mỗi phách chia 3 — đếm "1 **la li** 2 **la li**…".
 
+::hinh{ten="nhip-don-kep"}
+
 Nhiều người nghe nhịp đơn gọn, như bước đi, còn nhịp kép đu đưa.
 
 Mẹo: giữa hai phách, đếm "và" một lần (nhịp đơn) hay "la li" hai lần (nhịp kép)? Tai phân biệt được ngay khi bạn đếm thành tiếng.
@@ -38,6 +40,8 @@ Nghe một câu tiết tấu lạ, đừng cố nhớ nguyên câu. Hãy:
 4. **Gõ lại** đúng những vị trí đó.
 
 Ví dụ câu "đen – móc đơn móc đơn – đen" trong nhịp 4/4: đếm "**1** và **2**–và **3** và **4** và" — nốt rơi vào 1, 2, "và", 3. Trong [công cụ tiết tấu](/opus/luyen-tap/tiet-tau/), bấm **Nghe mẫu** trước khi gõ để tai "chụp" được mẫu.
+
+::hinh{ten="dem-to"}
 
 ## Syncopation: nốt rơi vào chỗ yếu
 

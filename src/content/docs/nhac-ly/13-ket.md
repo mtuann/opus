@@ -81,6 +81,8 @@ K:C
 "C"E E F G | "G"G F E D | "C"C C D E | "G"D3/2 "C"C/ C2 |]
 ```
 
+::hinh{ten="doan-nhac"}
+
 Bạn sẽ gặp cấu trúc câu hỏi – câu trả lời thường xuyên trong nhạc cổ điển phương Tây.
 
 :::tip[Trên phím đàn]

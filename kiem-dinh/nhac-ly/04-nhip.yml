@@ -12,6 +12,15 @@ lan:
       luot_2: "Claude Opus 5.5 (D3-L1 lượt 2, phần A); lượt 2 bổ sung sau review: Claude Sonnet 5.5"
       review: "Claude Opus 5.5 (review D3-L1, 24/10/2026; câu ve-site: Claude Sonnet 5.5)"
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D3-L1 đúng (d3-l1-kiem-mau.yml)
+  - so: 2
+    ngay: null
+    nhanh: mo/hinh-dot-2a
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (đợt hình 2a, mo/hinh-dot-2a, 06/11/2026)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Bài nhạc lý 4 (phách, ô nhịp, vạch nhịp, số chỉ nhịp 2/4, 3/4, 4/4, 6/8, nhịp đơn và nhịp kép). Nguồn chính: Open Music Theory (OMT), mở từng chương bằng curl ngày 24/10/2026 (WebFetch trả 403); bổ sung Mount (Fundamentals, Function, and Form ch. 1), MT21C (Puget Sound), Equipping the Musical Ear (Sierra College, LibreTexts) cho cảm giác mạnh nhẹ, Dolmetsch Online bài 3, 4, 15, Encyclopædia Britannica 1911 (Polka, Minuet, Barcarole; Wikisource) và Lumen Learning (gigue) cho điệu nhảy. Sửa chữ ở lượt 1: (1) n7: thêm gạch đầu dòng "Riêng 6/8: số trên đếm 6 nốt móc đơn trong ô (8 = nốt móc đơn); cứ ba nốt gộp thành một phách, nên mỗi ô có 2 phách", vì hai gạch đầu dòng cũ nói chung "số trên: mỗi ô nhịp có bao nhiêu phách; số dưới: hình nốt được tính là 1 phách (… 8 = nốt móc đơn)" mâu thuẫn với dòng 6/8 của bảng (ở 6/8 phách là nốt đen chấm dôi, số trên đếm phần chia): cách sửa theo hồ sơ bat-dau/tom-tat (n24); (2) n23: câu giới thiệu khối Ode to Joy nói rõ đây là 8 ô nhịp đầu, chuyển sang Đô trưởng, viết ở nhịp 4/4 (bản gốc ở Rê trưởng); (3) n39 (bài tập 3): "…khi nó xuất hiện lần đầu ở bè cello và contrabass" thành "…khi bè cello và contrabass trình bày nó đầy đủ lần đầu", vì kèn gỗ đã gợi hai ô nhịp đầu của giai điệu trước đó (xem n39); (4) mục ## Nguồn (link từng chương, thêm ấn bản bản nhạc đã đối chiếu, bỏ musictheory.net vì chưa đối chiếu nội dung). Ví dụ Ode to Joy (khuông 1) là trích đoạn tác phẩm thật: đối chiếu từng nốt với ba bản phổ công cộng, xem khuong_nhac khối 1. Hai khuông còn lại (3/4, 6/8) là ví dụ soạn cho trang. Không tính là nhận định: tiêu đề mục, bài tập 1 "Mở máy đếm nhịp…" (tính ở n34), nhãn "Cảm giác" khi chỉ nhắc lại (tính ở n9, n12, n15, n19). Chỗ cần review chú ý: n10, n13, n20 (điệu nhảy thường đi với số chỉ nhịp nào) dựa trên từ điển, không phải mọi bản của điệu đó đều ở nhịp ấy; n20 (gigue ở 6/8): Lumen chỉ nói "compound meter", Dolmetsch nói 6/8 dùng cho jig. Thuật ngữ tiếng Việt chưa có trong src/data/thuat-ngu.yml, ghi cho D3-L5: "nhịp đơn" / "nhịp kép" (simple / compound meter; giáo trình tiếng Việt novaspro.vn gọi "nhịp phức" hay "nhịp kép" là nhịp ghép từ hai nhịp đơn trở lên, gồm cả 4/4, nên khác trang ở 4/4: xem n27, n28), "vạch nhịp" và "vạch kép" (bar line, final double bar; giáo trình đó gọi "vạch nhịp đôi hay vạch nhịp kép", loại một nét đậm để kết tác phẩm: xem n3), "phách mạnh / nhẹ", "ô nhịp" đã có.'
 nguon:
   - id: omt-simple
@@ -580,6 +589,12 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ https://viva.pressbooks.pub/openmusictheory/chapter/simple-meter-and-time-signatures/ ]
     luot_2_ghi_chu: "OMT: common time (C) = 4/4; 2/2 là cut time (¢ có nét gạch), không phải C."
+  - id: n46
+    cau: "Hình lưới phách ngay sau bảng \"Số chỉ nhịp\" (::hinh{ten=\"nhip\"}) vẽ bốn nhịp trên cùng một trục tám nốt móc đơn, mỗi nhịp hai hàng: hàng phách ghi cảm giác như cột \"Cảm giác\" (2/4 MẠNH – nhẹ; 3/4 MẠNH – nhẹ – nhẹ; 4/4 MẠNH – nhẹ – vừa – nhẹ; 6/8 hai phách lớn, MẠNH và vừa), ô phách mạnh tô đậm, phách vừa tô vừa; hàng dưới là các nốt móc đơn: mỗi phách của 2/4, 3/4, 4/4 hai ô, mỗi phách của 6/8 ba ô đánh số 1–6 (1 và 4 in đậm). Chú thích: nhịp đơn chia mỗi phách làm hai, 6/8 chia mỗi phách làm ba, nên chỉ có 2 phách lớn."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026: HTML trong dist/<trang>/index.html) và module dựng hình (src/scripts/ve-thoi-gian.js, hàm ghi dưới; vị trí mỗi mục là phần trăm của trục, tests/thoi-gian.test.mjs đọc lại); ảnh chụp 360 và 1280 px. hinhNhip. Khớp bảng (cột \"Ý nghĩa\", \"Cảm giác\"), gạch đầu dòng \"Riêng 6/8\" (6 nốt móc đơn, ba nốt gộp thành một phách, 2 phách), đoạn 6/8 (\"2 phách lớn, mỗi phách chia ba\", đếm \"1-2-3-4-5-6\"), đoạn \"Nhịp đơn và nhịp kép\" (nhịp đơn mỗi phách chia đôi: một nốt đen = hai móc đơn) và lời giải thích câu hỏi 3 (\"nhấn vào 1 và 4\"). Phách lớn thứ hai của 6/8 ghi \"vừa\" vì cột \"Cảm giác\" ghi móc đơn thứ tư là \"vừa\". Hình không ghi chữ đếm cho móc đơn của nhịp đơn (trang không ghi)."
 khuong_nhac:
   - khoi: 1
     loai: trich-doan
@@ -628,3 +643,7 @@ doi_chu:
       - "Andre Mount, Fundamentals, Function, and Form: chương 1. Introduction to Rhythm and Meter; Dolmetsch Online, Music Theory Online: bài 3 (ô nhịp, vạch nhịp), bài 4 (số chỉ nhịp) và bài 15 (nhịp đơn và nhịp kép)."
       - "Bản nhạc: Beethoven, Giao hưởng số 9, Op. 125, chương 4 (Breitkopf & Härtel, khoảng 1864, trên IMSLP); Chopin, Valse Op. 64 số 2, trong Forty Piano Compositions (hiệu đính James Huneker, Boston: Oliver Ditson, 1903; bản scan trên Internet Archive)."
     ly_do: "Mục Nguồn: thay link chung tới Open Music Theory bằng link tới đúng các chương đã đọc khi kiểm định (lượt 1), thêm giáo trình mở và bản nhạc đã dùng; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, không đọc được chữ để kiểm."
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-2a
+    ly_do: "thêm hình (đợt hình 2): lưới phách, dải thời gian vẽ lại chữ và bảng của trang"

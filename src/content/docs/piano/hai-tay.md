@@ -164,6 +164,8 @@ Mẹo là tìm một **lưới chung**. Bội số chung nhỏ nhất của 2 v�
 | Gọi tên tay | **Cả** | | phải | trái | phải | |
 | Câu tiếng Anh | **nice** | | cup | of | tea | |
 
+::hinh{ten="hai-choi-ba"}
+
 Hình tiết tấu chung của hai tay là **dài – ngắn – ngắn – dài**. Câu "**Một** – ly cà phê" (hay "nice cup of tea" của người học tiếng Anh) giữ đúng hình ấy: "Một" là hai tay cùng đánh, "ly" và "phê" là tay chơi ba, "cà" là tay chơi hai. Nếu bạn hay nhầm tay, đọc thẳng "**Cả** – phải – trái – phải".
 
 1. **Gõ trên mặt bàn.** Đếm to từ 1 đến 6 thật đều; tay phải gõ ở 1, 3, 5, tay trái ở 1, 4. Rồi đổi vai hai tay.
@@ -210,6 +212,8 @@ Ba chọi bốn khó hơn vì lưới chung có **mười hai** phần:
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Tay chơi bốn (tay phải) | ● | | | ● | | | ● | | | ● | | |
 | Tay chơi ba (tay trái) | ● | | | | ● | | | | ● | | | |
+
+::hinh{ten="ba-choi-bon"}
 
 Đọc mười hai phần thành bốn nhóm ba tiếng đều nhau: "**một** hai ba, **một** hai ba, **một** hai ba, **một** hai ba". Tay chơi bốn đánh ở mỗi chữ "một"; tay chơi ba đánh ở chữ "một" đầu tiên, chữ "hai" của nhóm thứ hai và chữ "ba" của nhóm thứ ba. Hình chung, tính theo phần lưới, là 3 – 1 – 2 – 2 – 1 – 3; người học tiếng Anh hay dùng câu "pass the golden butter" cho hình này.
 

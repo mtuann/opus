@@ -22,6 +22,8 @@ Các phách trong âm nhạc thường được nhóm lại theo chu kỳ, trong
 | 4/4 | 4 phách nốt đen | MẠNH – nhẹ – vừa – nhẹ | Phổ biến nhất, còn ký hiệu là **C** |
 | 6/8 | 6 nốt móc đơn, nhóm thành 2 phách | MẠNH – nhẹ – nhẹ – vừa – nhẹ – nhẹ | Barcarolle, gigue |
 
+::hinh{ten="nhip"}
+
 ### 4/4
 
 Giai điệu *Ode to Joy* (8 ô nhịp đầu) trong chương cuối Giao hưởng số 9 của Beethoven, chuyển sang Đô trưởng và viết ở nhịp 4/4 cho dễ đọc (bản gốc ở Rê trưởng):

@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Opus 5.5 (D3-L1 lượt 2, phần A)
       review: "Claude Opus 5.5 (review D3-L1, 24/10/2026; câu ve-site: Claude Sonnet 5.5)"
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D3-L1 đúng (d3-l1-kiem-mau.yml)
+  - so: 2
+    ngay: null
+    nhanh: mo/hinh-dot-2a
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (đợt hình 2a, mo/hinh-dot-2a, 06/11/2026)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Bài nhạc lý 3 (trường độ, hình nốt, dấu lặng, chấm dôi, dấu nối). Nguồn chính: Open Music Theory (OMT), mở từng chương bằng curl ngày 24/10/2026 (WebFetch trả 403); bổ sung MT21C (Puget Sound, 4.2–4.4) và bài giảng Weinreich về âm học piano (Viện Hàn lâm Âm nhạc Hoàng gia Thụy Điển) cho n20. Không sửa chữ của trang (chỉ sửa mục ## Nguồn: thay link chung bằng link từng chương đã dùng, bỏ musictheory.net vì chưa đối chiếu nội dung). Không tính là nhận định: tiêu đề mục; câu hỏi của phần Bài tập (chỉ tính câu trả lời trong khối thu gọn). Câu "trường hợp phổ biến nhất" (n5): suy từ MT21C 4.2 (số chỉ nhịp phổ biến nhất hiện nay là 4/4, phách là nốt đen); OMT chỉ nói số dưới "usually" là 2, 4 hay 8. Thuật ngữ tiếng Việt chưa có trong src/data/thuat-ngu.yml, ghi cho D3-L5: "nốt tròn / trắng / đen / móc đơn / móc kép" (whole, half, quarter, eighth, sixteenth note), "dấu lặng" và "lặng đơn / lặng kép" (cách gọi tắt của lặng móc đơn / móc kép), "chấm dôi" (dot), "dấu nối" (tie), "dấu luyến" (slur), "gạch ngang" (beam), "đuôi" (stem) và "móc" (flag). Đối chiếu "Giáo trình môn Lý thuyết âm nhạc cơ bản" (tệp PDF https://novaspro.vn/upload/files/giao_trinh_mon_ly_thuyet_am_nhac_co_ban.pdf; không ghi tác giả, bậc 3, chỉ để chứng thực cách gọi ở Việt Nam): có "nốt tròn, nốt trắng, nốt đen, nốt móc đơn, nốt móc kép", "dấu lặng" (bảng lặng tròn, trắng, đen, móc đơn, móc kép; bảng thuật ngữ cuối sách: quaver rest = "lặng đơn", semiquaver rest = "lặng kép"), "dấu chấm dôi", "dấu nối", "dấu luyến", "đuôi nốt nhạc" và "nét móc ở đuôi nốt nhạc"; cái tương ứng với beam là "vạch nối đuôi nốt nhạc" (không có "gạch ngang"). Chú ý trùng chữ: thuat-ngu.yml mô tả dấu tenuto là "gạch ngang ngắn trên nốt", nên "gạch ngang" (beam) ở trang này dễ lẫn: D3-L5 chọn tên khác cho beam (như "vạch nối đuôi nốt") hay giữ và thêm "(beam)".'
 nguon:
   - id: omt-notation
@@ -358,6 +367,18 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ https://viva.pressbooks.pub/openmusictheory/chapter/notating-rhythm/ ]
     luot_2_ghi_chu: Nốt móc kép = ¼ nốt đen; 4 nốt móc kép = 1 nốt đen.
+  - id: n34
+    cau: "Hình sau bảng \"Các hình nốt\" (::hinh{ten=\"truong-do\"}) vẽ một ô nhịp 4 phách (hàng \"Phách\" 1–4) lấp lần lượt bằng 1 nốt tròn, 2 nốt trắng, 4 nốt đen, 8 nốt móc đơn, 16 nốt móc kép, mỗi nốt một ô dài đúng số phách của nó; nhãn hàng ghi tên và số phách như bảng (4, 2, 1, ½, ¼), mỗi ô có hình nốt (tròn và trắng đầu rỗng, đen và móc đầu đặc; trắng, đen, móc có đuôi; móc đơn 1 móc, móc kép 2 móc)."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026: HTML trong dist/<trang>/index.html) và module dựng hình (src/scripts/ve-thoi-gian.js, hàm ghi dưới; vị trí mỗi mục là phần trăm của trục, tests/thoi-gian.test.mjs đọc lại); ảnh chụp 360 và 1280 px. hinhTruongDo, hinhNot. Khớp câu \"Mỗi hình nốt dài gấp đôi hình nốt nhỏ hơn kế tiếp\", \"nốt đen bằng 1 phách\", cột \"Hình dạng\" và \"Số phách\" của bảng, câu \"mỗi ô đều dài 4 phách, chỉ khác cách chia\" và khuông đầu bài (C4 | C2 C2 | C C C C | 8 móc đơn). Hàng móc kép không có trong khuông nhưng có trong bảng (¼ phách, 16 nốt cho 4 phách)."
+  - id: n35
+    cau: "Hình sau hai gạch đầu dòng của mục \"Dấu chấm dôi\" (::hinh{ten=\"cham-doi\"}) vẽ trên trục 4 phách: nốt trắng chấm dôi là ô 2 phách cộng ô 1 phách (3 phách); nốt đen chấm dôi là ô 1 phách cộng ô ½ phách (1½ phách). Chú thích: phần sau dấu cộng là độ dài chấm dôi thêm vào, một nửa độ dài của chính nốt."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026: HTML trong dist/<trang>/index.html) và module dựng hình (src/scripts/ve-thoi-gian.js, hàm ghi dưới; vị trí mỗi mục là phần trăm của trục, tests/thoi-gian.test.mjs đọc lại); ảnh chụp 360 và 1280 px. hinhChamDoi. Khớp câu \"Một chấm nhỏ bên phải nốt làm nốt dài thêm một nửa độ dài của chính nó\" và hai gạch đầu dòng \"Nốt trắng chấm dôi = 2 + 1 = 3 phách\", \"Nốt đen chấm dôi = 1 + ½ = 1½ phách\"."
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -397,3 +418,7 @@ doi_chu:
       - "Open Music Theory: Notating Rhythm; Simple Meter and Time Signatures (phách, gạch ngang nối nốt); Other Aspects of Notation (dấu luyến)."
       - "Robert Hutchinson, Music Theory for the 21st-Century Classroom: 4.2 Durational Symbols, 4.3 Dots and Ties và 4.4 Meter; Gabriel Weinreich, Motion of piano strings, trong Five lectures on the acoustics of the piano (Royal Swedish Academy of Music, 1990)."
     ly_do: "Mục Nguồn: thay link chung tới Open Music Theory bằng link tới đúng các chương đã đọc khi kiểm định (lượt 1), thêm giáo trình mở và bản nhạc đã dùng; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, không đọc được chữ để kiểm."
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-2a
+    ly_do: "thêm hình (đợt hình 2): lưới phách, dải thời gian vẽ lại chữ và bảng của trang"
