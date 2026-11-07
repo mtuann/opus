@@ -218,11 +218,12 @@ export function veBanPhim({ thap, cao, to = [], to2 = [], nhan: nhanRieng, ngon 
 	const thuTu = (m) => Math.floor((tamPhim(thap, m) - 1) / PHIM_RONG); // vị trí phím, để chọn hàng so le
 	const lDen = soDong(nhanDen);
 	const soLeDen = dangDe(nhanDen, 0);
-	const caoNhanDen = nhanDen.length ? (soLeDen ? 2 : 1) * lDen * DONG + 3 : 0;
+	const LE = 2; // khoảng hở thêm giữa hai hàng so le
+	const caoNhanDen = nhanDen.length ? (soLeDen ? 2 * lDen * DONG + LE : lDen * DONG) + 3 : 0;
 	const y0 = caoNgoac + caoNhanDen; // đỉnh phím
 	const lTrang = soDong(nhanTrang);
 	const soLeTrang = dangDe(nhanTrang, 0, 1) ? 'ca' : dangDe(nhanTrang, 1) ? 'sau' : '';
-	const caoNhanTrang = nhanTrang.length ? (lTrang + (soLeTrang === 'ca' ? lTrang : soLeTrang ? lTrang - 1 : 0)) * DONG + 4 : 0;
+	const caoNhanTrang = nhanTrang.length ? (lTrang + (soLeTrang === 'ca' ? lTrang : soLeTrang ? lTrang - 1 : 0)) * DONG + (soLeTrang ? LE : 0) + 4 : 0;
 	const moTa = new Map();
 	const themMoTa = (m, s) => moTa.set(m, [...(moTa.get(m) ?? []), s]);
 	for (const n of ngon) themMoTa(n.m, `${TAY[n.tay]} ngón ${n.so}`);
@@ -251,17 +252,17 @@ export function veBanPhim({ thap, cao, to = [], to2 = [], nhan: nhanRieng, ngon 
 	}
 	const soTrang = trang.length;
 
-	// số ngón: phím trắng ở ngay dưới phím đen (y 71), phím đen ở cuối phím đen; hai tay chung phím thì đặt cạnh (hay chồng) nhau
+	// số ngón: phím trắng ở ngay dưới phím đen (y 72,5, giữa đáy phím đen và tên phím), phím đen ở cuối phím đen; hai tay chung phím thì đặt cạnh (hay chồng) nhau
 	const dau = [];
 	const theoPhim = ngon.reduce((mp, n) => mp.set(n.m, [...(mp.get(n.m) ?? []), n]), new Map());
 	for (const [m, ds] of theoPhim) {
 		const cx = tamPhim(thap, m);
 		const laDen = laPhimDen(m);
 		const hai = ds.length > 1;
-		const r = laDen ? (hai ? 5 : 6) : hai ? 5.5 : 7;
+		const r = laDen ? (hai ? 5 : 6) : hai ? 5.5 : 6.5;
 		[...ds].sort((a, b) => (a.tay === 'trai' ? 0 : 1) - (b.tay === 'trai' ? 0 : 1)).forEach((n, i) => {
 			const dx = hai && !laDen ? (i ? 6 : -6) : 0;
-			const cy = y0 + (laDen ? (hai ? (i ? 56 : 44) : 53) : 71);
+			const cy = y0 + (laDen ? (hai ? (i ? 56 : 44) : 53) : 72.5);
 			const [px, py] = [cx + dx, cy];
 			const hinh =
 				n.tay === 'phai'
@@ -276,13 +277,13 @@ export function veBanPhim({ thap, cao, to = [], to2 = [], nhan: nhanRieng, ngon 
 		`<text class="${lop}" aria-hidden="true">${ds.map((s, i) => `<tspan x="${so(cx)}" y="${so(yDau + i * DONG + (i ? lui : 0))}">${esc(s)}</tspan>`).join('')}</text>`;
 	const nhanSvg = [
 		...nhanDen.map((n) => {
-			const lui = soLeDen && thuTu(n.m) % 2 ? lDen * DONG : 0;
+			const lui = soLeDen && thuTu(n.m) % 2 ? lDen * DONG + LE : 0;
 			return dongChu(n.dong, tamPhim(thap, n.m), y0 - 4 - (n.dong.length - 1) * DONG - lui, 'oz-phim-nhan');
 		}),
 		...nhanTrang.map((n) => {
 			const le = soLeTrang && thuTu(n.m) % 2;
-			const yDau = y0 + PHIM_CAO + 2 + 6.5 + (le && soLeTrang === 'ca' ? lTrang * DONG : 0);
-			return dongChu(n.dong, tamPhim(thap, n.m), yDau, 'oz-phim-nhan', le && soLeTrang === 'sau' ? (lTrang - 1) * DONG : 0);
+			const yDau = y0 + PHIM_CAO + 2 + 6.5 + (le && soLeTrang === 'ca' ? lTrang * DONG + LE : 0);
+			return dongChu(n.dong, tamPhim(thap, n.m), yDau, 'oz-phim-nhan', le && soLeTrang === 'sau' ? (lTrang - 1) * DONG + LE : 0);
 		}),
 	];
 

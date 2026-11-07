@@ -37,7 +37,12 @@ function do_() {
 			if (k.classList.contains('oz-phim-trang'))
 				for (const den of svg.querySelectorAll('.oz-phim-den')) if (giao(a, hop(den.getBoundingClientRect())) > 0.5) loi.push(`hình ${i}: số ngón của phím ${d.dataset.phim} bị phím đen che`);
 		}
-		const chu = [...svg.querySelectorAll('.oz-phim-nhan tspan, .oz-phim-ngoac-chu tspan')].map((t) => [t.textContent, hop(t.getBoundingClientRect()), t.parentNode]);
+		const chu = [...svg.querySelectorAll('.oz-phim-nhan tspan, .oz-phim-ngoac-chu tspan')].map((t) => {
+			// khung chữ của trình duyệt gồm cả khoảng trên, dưới của phông (khoảng 1,2 em): bớt mỗi bên 15% để đo phần nét chữ
+			const h = hop(t.getBoundingClientRect());
+			const bot = (h.b - h.t) * 0.15;
+			return [t.textContent, { ...h, t: h.t + bot, b: h.b - bot }, t.parentNode];
+		});
 		for (let x = 0; x < chu.length; x++)
 			for (let y = x + 1; y < chu.length; y++) if (chu[x][2] !== chu[y][2] && giao(chu[x][1], chu[y][1]) > 1) loi.push(`hình ${i}: chữ "${chu[x][0]}" đè lên "${chu[y][0]}"`);
 		for (const [s, h] of chu) for (const k of phim.values()) if (giao(h, hop(k.getBoundingClientRect())) > 1) loi.push(`hình ${i}: chữ "${s}" đè lên phím ${k.dataset.m}`);
