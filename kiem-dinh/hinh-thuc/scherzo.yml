@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 5, 29/10/2026; bổ sung sau review)
       review: Claude (review D5-gom, nhóm C, 29/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 5 (D5-L1 đến D5-L3): 7 đúng (2 có điều kiện, đã sửa theo: chữ concerto ở hinh-thuc/index, bỏ hai mốc chưa kiểm trong ghi chú Stravinsky; bỏ link COD Notre Dame school 404), 0 sai, 3 câu về site không kiểm độc lập được trên máy kiểm (người gom kiểm lại, khớp) (bao-cao/d5-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: mo/hinh-dot-3b
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/hinh-dot-3b, 06/11/2026: thêm hình tĩnh form-scherzo; đối chiếu chữ trong hình với chữ và bảng của trang; thủ tục hình rút gọn, chuan-kiem-dinh mục 7)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: cod-scherzo
     bac: 2
@@ -389,6 +398,12 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "Đã viết lại mục Nguồn chỉ dẫn trang đã mở ngày 29/10/2026 và chữ mô tả khớp s1–s5, s19–s26. Mục Nguồn cũ dựa chủ yếu vào Wikipedia (bậc 3) và nêu chi tiết (buổi diễn 2/4/1800, trio fugue…) không kiểm được bằng nguồn bậc 1–2; bỏ. ../opus-zero/docs/tai-lieu-tham-khao.md có tồn tại. Review: đã kiểm mục Nguồn trên trang; /opus/tai-lieu-tham-khao/ nay có ở src/content/docs/tai-lieu-tham-khao.md."
     review: dung
+  - id: s36
+    cau: "Hình ::hinh{ten=\"form-scherzo\"} ngay dưới bảng mục \"Đi qua một tác phẩm: Beethoven, Giao hưởng số 5, chương 3\" vẽ chương 3 gồm Scherzo (Đô thứ), Trio (Đô trưởng, đối âm), Scherzo da capo (pizzicato, rất nhỏ), Đoạn chuyển (không ngắt), rồi chương 4 (vào ngay, attacca, Đô trưởng); hai khối scherzo cùng màu; chú thích nói đó là khung ABA của minuet rồi đoạn nối dẫn thẳng sang chương cuối."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên file src/components/hinh/form-scherzo.html và bản xem (npm run build:xem, 06/11/2026). Năm ô theo năm dòng bảng, chữ lấy từ bảng (Trio: Đô trưởng, đối âm; da capo: pizzicato, rất nhỏ; đoạn chuyển: không ngắt; chương 4: attacca, Đô trưởng) và câu đầu mục (chương cung Đô thứ, chảy thẳng vào chương cuối). Khung Scherzo – Trio – Scherzo da capo là câu mục \"Từ minuet đến scherzo\". Không ghi giọng cho scherzo da capo (bảng không ghi). Không có câu dẫn mới trong trang."
 khuong_nhac: []
 doi_chu:
   - cu: Scherzo trong tiếng Ý nghĩa là "trò đùa" — và đúng như tên gọi, đây là chương nhạc của sự bất ngờ, hóm hỉnh và năng lượng dồn nén. Beethoven là người đưa scherzo vào giao hưởng, thay thế minuet lịch thiệp của thời Cổ điển.
@@ -470,3 +485,7 @@ doi_chu:
   - cu: 'mô tả: Scherzo trong tiếng Ý nghĩa là "trò đùa" — và đúng như tên gọi, đây là chương nhạc của sự bất ngờ, hóm hỉnh và năng lượng dồn nén. Beethoven là người đưa…'
     moi: 'mô tả: Scherzo trong tiếng Ý nghĩa là "trò đùa". Đó là chương nhạc nhanh, thường ở nhịp 3, nhiều bất ngờ về cường độ và màu dàn nhạc. Beethoven viết scherzo cho gần…'
     ly_do: 'Mô tả (lượt 1 D5-L2): đổi theo câu mở đầu đã sửa. Bỏ "đúng như tên gọi".'
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-3b
+    ly_do: "thêm hình (đợt hình 3): khung scherzo – trio – scherzo da capo và đoạn chuyển sang chương 4 của Giao hưởng số 5"

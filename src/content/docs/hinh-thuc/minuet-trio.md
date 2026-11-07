@@ -13,6 +13,8 @@ Minuet là **điệu múa Pháp**, vốn là điệu dân gian rồi thành đi�
 | **Trio** (B) | Tương phản, thường dịu hơn minuet; thường đổi giọng, hoặc đổi trưởng – thứ trên cùng chủ âm. Tên "trio" (bộ ba) có từ thời Baroque, khi đoạn này thường viết cho ba nhạc cụ hay ba bè. |
 | **Minuet da capo** (A) | Chơi lại minuet từ đầu (thường không nhắc lại các đoạn nhỏ). |
 
+::hinh{ten="form-minuet-trio"}
+
 Toàn bộ chương vì vậy có dạng **ABA**, một hình thức ba đoạn "kép". Bên trong, mỗi khối minuet và trio thường lại là một [hình thức hai đoạn có tái hiện](/opus/nhac-ly/31-hinh-thuc-nho/#hai-oan-co-tai-hien-rounded-binary) ‖: a :‖ ‖: b a' :‖, được giải thích ở bài nhạc lý 31.
 
 ## Đi qua một tác phẩm: Mozart, Eine kleine Nachtmusik, chương 3

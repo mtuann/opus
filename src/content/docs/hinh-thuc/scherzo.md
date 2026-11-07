@@ -29,6 +29,8 @@ Chương scherzo cung **Đô thứ** này không kết thúc độc lập: nó *
 | Đoạn chuyển | Một đoạn nối dẫn thẳng sang chương cuối, không ngắt |
 | → Chương 4 | Vào ngay (attacca), ở **Đô trưởng** |
 
+::hinh{ten="form-scherzo"}
+
 Nghe chương 3 và 4 liền nhau ([hướng dẫn nghe](/opus/nghe-nhac/beethoven-5/)): hãy chú ý đoạn nối giữa hai chương.
 
 ## Scherzo ở vị trí lạ

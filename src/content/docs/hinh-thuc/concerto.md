@@ -29,6 +29,8 @@ Concerto thời Cổ điển thường có **3 chương: nhanh – chậm – nh
 - **Chương 2**: chậm.
 - **Chương 3**: nhanh, thường ở hình thức rondo.
 
+::hinh{ten="form-concerto-co-dien"}
+
 Thời Lãng mạn, nhà soạn nhạc thay đổi dần khuôn mẫu: Mendelssohn bỏ phần trình bày riêng của dàn nhạc, cho violin vào gần như ngay lập tức, và nối các chương liền nhau; Rachmaninoff mở đầu Concerto số 2 bằng piano độc tấu.
 
 ## Nghe thêm

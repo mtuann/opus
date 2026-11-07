@@ -27,6 +27,8 @@ Người nghe thường được cho một **chương trình** (program) — và
 | 6 | Thác ghềnh St. John | Dàn nhạc ào ạt, dữ dội nhất |
 | 7 | Qua Prague, đổ ra sông Elbe | Giai điệu *Moldau* trở lại, hùng tráng rồi xa dần |
 
+::hinh{ten="form-moldau"}
+
 Nghe một mạch và đánh dấu: mỗi lần cảnh đổi, âm nhạc đổi thế nào? Đây là bài tập nghe **âm nhạc miêu tả** tuyệt vời.
 
 ## Các tác phẩm nên biết

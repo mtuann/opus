@@ -57,6 +57,8 @@ K:Gm
 | … | Người cha phi nhanh hơn, piano dồn dập |
 | … | Về đến nơi: **piano ngừng**, người kể nói rằng đứa con đã chết, gần như bằng giọng nói |
 
+::hinh{ten="erlkonig"}
+
 ## Câu hỏi để nghe chủ động
 
 - Không biết tiếng Đức, bạn có phân biệt được bốn nhân vật không? Bằng dấu hiệu nào?

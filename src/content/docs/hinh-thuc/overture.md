@@ -12,6 +12,8 @@ Thời Baroque có hai kiểu overture cho opera:
 - **Overture Pháp** (Lully): chậm – nhanh – chậm; phần chậm mở đầu có tiết tấu chấm (dotted), phần nhanh theo lối bắt chước. Nghe trong các tổ khúc dàn nhạc của Bach và trong oratorio của Handel, như *Messiah*.
 - **Overture Ý** (nhanh – chậm – nhanh): là **mẫu cho những bản giao hưởng đầu tiên**, vốn có ba chương; về sau giao hưởng thường có bốn chương.
 
+::hinh{ten="form-overture"}
+
 ## Overture hòa nhạc: một chương, một câu chuyện
 
 Thế kỷ 19, các nhà soạn nhạc viết **concert overture**: một chương độc lập cho dàn nhạc, không mở đầu cho tác phẩm kịch nào. Nhiều bản dùng [hình thức sonata](/opus/hinh-thuc/sonata/); một số bản gần với [symphonic poem](/opus/hinh-thuc/symphonic-poem/) khi kể một câu chuyện hoặc vẽ một cảnh:

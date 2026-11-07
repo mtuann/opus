@@ -29,6 +29,15 @@ lan:
       luot_2: "Claude Opus 5.5 (lượt 2 mo/link-hong, 07/11/2026)"
       review: "Claude Opus 5.5 (review mo/link-hong, 07/11/2026: ba câu lượt 2 khong-chac sửa theo đề xuất, đối chiếu lại nguồn mới và bản lưu)"
       kiem_mau: "Claude Opus 5.5 (người gom mo/link-hong, kiểm thay chủ repo theo lời giao 07/11/2026): mẫu 4 nguồn mới tải lại bằng curl (bản lưu Wayback LCS Ritornello, slide MIT OCW Harris 2006 có \"sequence in b\" ở La stravaganza, hai địa chỉ mới Hollywood Bowl /works/… trả 200 đúng bài): khớp nhận định; 0 sai"
+  - so: 4
+    ngay: 2026-11-06
+    nhanh: mo/hinh-dot-3b
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/hinh-dot-3b, 06/11/2026: thêm hình tĩnh form-concerto-co-dien; đối chiếu chữ trong hình với chữ và bảng của trang; thủ tục hình rút gọn, chuan-kiem-dinh mục 7)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: cod-concerto
     bac: 2
@@ -430,6 +439,12 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "Đối chiếu từng ô, nhãn và nhánh của hình với khối mermaid cũ (doi_chu) và với chữ trên trang; kiểm thử tests/hinh-tinh.test.mjs kiểm chữ của hình. Ảnh chụp bản build ở màn hình rộng và điện thoại, sáng và tối: đọc được, không tràn ngang. Lượt 2 (agent độc lập): giữ đủ nhãn, nhánh, thứ tự; góp ý đã làm: hình fugue chuyển xuống dưới đoạn giới thiệu BWV 847, đoạn chuyển một ô trải hai bè, đáp đề cùng màu chủ đề; rondo không xuống dòng trên điện thoại."
     review: dung
+  - id: n36
+    cau: "Hình ::hinh{ten=\"form-concerto-co-dien\"} cuối danh sách mục \"Concerto thời Cổ điển và Lãng mạn\" vẽ ba chương nhanh – chậm – nhanh; chương 1: dàn nhạc trình bày, rồi độc tấu trình bày, \"…\", cadenza (độc tấu một mình; chú thích: dàn nhạc dừng trên một hợp âm để nghệ sĩ độc tấu chơi cadenza), dàn nhạc vào lại để kết; chương 2 chậm; chương 3 nhanh, thường là rondo; dàn nhạc màu xanh, độc tấu màu vàng như hình ritornello cùng trang."
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: "Kiểm trên file src/components/hinh/form-concerto-co-dien.html và bản xem (npm run build:xem, 06/11/2026). Mỗi ô chép một vế của danh sách: ba chương nhanh – chậm – nhanh; phần trình bày của dàn nhạc trước rồi của nghệ sĩ độc tấu; cadenza gần cuối chương 1, dàn nhạc dừng trên một hợp âm, độc tấu một mình, rồi dàn nhạc vào lại để kết; chương 3 thường rondo. Phần giữa chương 1 chỉ ghi \"…\": trang nói chương 1 kết hợp hình thức sonata nhưng không kể các phần còn lại, nên hình không vẽ phát triển, tái hiện (đề xuất 22 có, đã bỏ để giữ \"chỉ vẽ lại\"). Không vẽ chuyện ứng tác hay khuôn mẫu Lãng mạn. Không có câu dẫn mới trong trang."
 khuong_nhac: []
 ghi_chu: 'Trang concerto và ritornello (tầng lõi), không có khối abc (chỉ bảng, một sơ đồ mermaid và quiz). Nguồn chính: COD qua Encyclopedia.com (concerto, concerto grosso, cadenza), Listen 8e và LCS Productions (ritornello), OMT (Rondo, điệp khúc ở chủ âm), Humanities LibreTexts và Carnegie Mellon (concerto Cổ điển, double exposition), Teoria (Vivaldi, Mùa xuân), IMSLP (Corelli, Handel Op. 6), chú giải chương trình của Bach Choir of Bethlehem, Cleveland Orchestra, Indianapolis Symphony, LA Phil, Reading Symphony (WebFetch ngày 29/10/2026, bản tóm tắt chữ; chỗ quan trọng đã hỏi lại để lấy câu nguyên văn). Chữ đã sửa: bỏ "Vivaldi và Bach dùng" (Bach không có nguồn) thành "Concerto Baroque, như của Vivaldi" (n3), "điệp khúc nhỏ" thành "lần quay lại nhỏ" (n4), bỏ "khoe kỹ thuật, chuyển giọng" (n7), sơ đồ không còn nói ritornello đầu ở "giọng chính" (n8), so sánh với rondo (n9), "mẫu mực" (n13), "Từ Mozart" (n14), cadenza ứng tác (n17), bỏ "trữ tình, như một aria không lời" (n18), Mendelssohn không còn nói "ô nhịp thứ hai" (n20), "phá dần khuôn mẫu" (n22), Brandenburg số 5 "đoạn độc tấu dài như cadenza" (n25), Rachmaninoff "8 ô nhịp" (n28), mục Nguồn. Lô trước yêu cầu giữ (grep hinh-thuc/concerto trong kiem-dinh/): lịch sử Baroque (n44): giữ đường dẫn /opus/hinh-thuc/concerto/ và tiêu đề "Concerto và ritornello": KHỚP. Thống nhất với trang đã khóa: piano/the-loai (concerto thường ba chương, có cadenza): khớp; piano/hoa-am/ket (cadenza bắt đầu từ hợp âm 6/4 ở kết): trang concerto nói dàn nhạc dừng lại trên một hợp âm rồi độc tấu một mình, COD (cadenza) nói cadenza bắt đầu từ hợp âm chủ thể đảo hai (6/4): không mâu thuẫn; lịch sử Baroque (concerto và concerto grosso, Brandenburg số 5): khớp. Chữ trang không có năm sinh–mất nhà soạn nhạc. Câu ve-site trỏ trang chưa chuyển: n12, n24 (nghe-nhac/vivaldi-mua-xuan), n27 (nghe-nhac/mendelssohn-violin), n29 (nghe-nhac/rachmaninoff-2), n31 (tai-lieu-tham-khao). Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): ritornello, tutti, concerto grosso, concertino, ripieno; concerto, cadenza, rondo, sonata đã có. Chưa chắc: không còn.'
 doi_chu:
@@ -493,3 +508,6 @@ mo_khoa:
   - ngay: 2026-11-06
     nhanh: mo/link-hong
     ly_do: "link ngoài hỏng (lychee 07/11/2026): đổi link chết sang bản lưu Wayback, địa chỉ mới hay nguồn khác đọc được"
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-3b
+    ly_do: "thêm hình (đợt hình 3): concerto thời Cổ điển, hai lần trình bày và cadenza"
