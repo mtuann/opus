@@ -15,12 +15,12 @@ lan:
   - so: 2
     ngay: 2026-11-06
     nhanh: mo/link-hong
-    ma_bam: null
+    ma_bam: sha256:5bfe66fed7779653ee02161de38e38e0bd379bf8441de5d73058c1359fda7691
     nguoi:
       luot_1: "Claude Opus 5.5 (mo/link-hong, 06/11/2026: kiểm link lỗi của lychee, đổi link, đối chiếu nội dung nguồn mới)"
-      luot_2: null
-      review: null
-      kiem_mau: null
+      luot_2: "Claude Opus 5.5 (lượt 2 mo/link-hong, 07/11/2026)"
+      review: "Claude Opus 5.5 (review mo/link-hong, 07/11/2026: ba câu lượt 2 khong-chac sửa theo đề xuất, đối chiếu lại nguồn mới và bản lưu)"
+      kiem_mau: "Claude Opus 5.5 (người gom mo/link-hong, kiểm thay chủ repo theo lời giao 07/11/2026): mẫu 4 nguồn mới tải lại bằng curl (bản lưu Wayback LCS Ritornello, slide MIT OCW Harris 2006 có \"sequence in b\" ở La stravaganza, hai địa chỉ mới Hollywood Bowl /works/… trả 200 đúng bài): khớp nhận định; 0 sai"
 ghi_chu: 'Trang phát triển môtip và cấu trúc câu (tầng lõi), 2 khối abc soạn riêng. Nguồn chính: OMT (Foundational Concepts, Phrase Archetypes, Expansion and Contraction), COD (motif, diminution), Listen 8e bảng nghe Giao hưởng số 5, tệp LilyPond Mutopia của Sonata Op. 2 số 1 (đọc qua WebFetch). WebFetch ngày 28/10/2026. Chữ sửa: "nổi tiếng nhất" (n4), ô nhịp 3–5 của Beethoven (n10), phần phát triển (n21), độ dài câu (n26), mở rộng câu (n31), lời giải thích câu hỏi 2 (n37). CHỖ CHƯA CHẮC cần review/lượt 2: n6 và n10 (cao độ Sol Sol Sol Mi♭ rồi Fa Fa Fa Rê ở bản gốc; không mở được tổng phổ: Mutopia Symphony5_1 chỉ có zip và PDF không trích nốt; IMSLP PDF bị chặn). Câu ve-site trỏ tới trang chưa chuyển: nghe-nhac/beethoven-5 (n5), hinh-thuc/sonata (n22), tai-lieu-tham-khao (n40). Thuật ngữ trang dùng: motif, sequence, inversion (giai điệu), augmentation, diminution, fragmentation (đều có hồ sơ riêng ở lô này: motif, sequence, inversion-giai-dieu, augmentation, diminution, fragmentation). Thuật ngữ chưa có ở thuat-ngu.yml (cho D3-L5): retrograde (ngược), sentence (câu), presentation (trình bày), continuation (tiếp nối), basic idea (ý cơ bản), codetta (đoạn đuôi), intervallic change (đổi quãng), period (đoạn nhạc, đã dùng ở bài 13).'
 nguon:
   - id: omt-found
@@ -258,21 +258,23 @@ nhan_dinh:
       - roch-b5
       - bhso-b5
     ket_qua: dung
-    ghi_chu: 'Rochester: môtip lặp ở nhiều cao độ, "Virtually every measure of the symphony uses the fate motive in some form", "it finally develops beyond the initial motive". Listen: chia nhỏ ở phần phát triển (n21). mo/link-hong (06/11/2026): bảng nghe Listen 8e không còn (tên miền digfir-published.macmillanusa.com không phân giải, Wayback không lưu); bỏ listen-b5, thêm BHSO (chương 1: trình bày, phát triển, tái hiện, coda; horn call là "an expanded version of the motto").'
+    ghi_chu: "Rochester: môtip lặp ở nhiều cao độ, \"Virtually every measure of the symphony uses the fate motive in some form\", \"it finally develops beyond the initial motive\". Listen: chia nhỏ ở phần phát triển (n21). mo/link-hong (06/11/2026): bảng nghe Listen 8e không còn (tên miền digfir-published.macmillanusa.com không phân giải, Wayback không lưu); bỏ listen-b5, thêm BHSO (chương 1: trình bày, phát triển, tái hiện, coda; horn call là \"an expanded version of the motto\"). Review link-hong (07/11/2026): Rochester (đã mở): \"the main motive is reduced to just two- and then one-note conversations between strings and winds\"; BHSO (đã mở): \"the horn call is played twice\", \"minim chords are passed between the strings and wind\", horn call \"an expanded version of the motto\". Đủ \"nhiều kỹ thuật\"."
     luot_2: dung
-    luot_2_nguon: [ "https://digfir-published.macmillanusa.com/listen8e/listen8e_ch15_12.html", "https://digfir-published.macmillanusa.com/listen8e/listen8e_ch15_13.html" ]
-    luot_2_ghi_chu: "Macmillan: môtip được lặp ở nhiều cao độ, chia nhỏ ở phần phát triển, nhắc lại liên tục ở phần tái hiện."
+    luot_2_nguon: [ "https://www.bhso.org.uk/work/beethoven-symphony-no-5/", "https://www.esm.rochester.edu/beethoven/symphony-no-5/" ]
+    luot_2_ghi_chu: "mo/link-hong (07/11/2026): BHSO: horn call \"an expanded version of the motto\" (nới rộng), chủ đề 2 \"an inversion of the horn phrase\" (đảo), motto \"expanded and developed\"; Rochester: motive \"imitated in the strings\", ở cuối phần phát triển \"the main motive is reduced to just two- and then one-note conversations\" (chia nhỏ). \"Nhiều kỹ thuật\": đúng."
+    review: dung
   - id: n21
-    cau: 'Phần phát triển (chương 1 Giao hưởng số 5) cũng dùng chia nhỏ: một mảnh nhạc rút từ chủ đề cầu nối bị cắt còn hai nốt, rồi một nốt, chuyền qua lại giữa bộ dây và bộ gỗ.'
+    cau: "Phần phát triển (chương 1 Giao hưởng số 5) cũng dùng chia nhỏ: sau khi lời gọi của kèn horn vang lên hai lần, chất liệu bị cắt còn hai nốt, rồi một nốt, chuyền qua lại giữa bộ dây và bộ hơi."
     loai: cau-truc
     nguon:
       - roch-b5
       - bhso-b5
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "Phần phát triển … đặc biệt dùng nhiều chia nhỏ: môtip bị cắt ngắn dần, chuyền qua lại giữa các bè, căng thẳng tăng dần." Chữ mới như trên. Lý do: Listen 8e (bảng nghe): 3:39 "Fragmentation of bridge theme to two notes, alternating between strings and winds"; 3:49 chủ đề cầu nối còn một nốt, cũng chuyền giữa dây và gỗ, chơi nhẹ (p). Đó là chủ đề cầu nối, không phải bốn nốt mở đầu; "đặc biệt dùng nhiều" không có nguồn xếp hạng; "căng thẳng tăng dần" không có nguồn (bảng ghi chơi nhẹ). Review D3-gom: chữ mới có trên trang; lượt 2 xác nhận bảng nghe Listen 8e. mo/link-hong (06/11/2026): Listen 8e không còn (xem n20). Thay bằng Rochester: cuối phần phát triển "the main motive is reduced to just two- and then one-note conversations between strings and winds"; BHSO: phần phát triển, sau khi "the horn call is played twice", "minim chords are passed between the strings and wind". Hai nguồn đỡ: hai nốt rồi một nốt, chuyền giữa dây và bộ hơi, ngay sau tiếng kèn horn (chủ đề cầu nối). Người gom xem lại hai chỗ: Rochester gọi mảnh nhạc là "main motive", không gọi là chủ đề cầu nối; nguồn ghi "winds" (bộ hơi), trang ghi "bộ gỗ".'
-    luot_2: dung
-    luot_2_nguon: [ "https://digfir-published.macmillanusa.com/listen8e/listen8e_ch15_13.html", "https://digfir-published.macmillanusa.com/listen8e/listen8e_ch15_12.html" ]
-    luot_2_ghi_chu: "Macmillan: ở phần phát triển, chủ đề cầu nối bị cắt thành mảnh hai nốt chuyền giữa dây và gỗ, rồi còn một nốt lặp, vẫn xen kẽ hai nhóm."
+    ghi_chu: "Chữ cũ: \"Phần phát triển … đặc biệt dùng nhiều chia nhỏ: môtip bị cắt ngắn dần, chuyền qua lại giữa các bè, căng thẳng tăng dần.\" Chữ mới như trên. Lý do: Listen 8e (bảng nghe): 3:39 \"Fragmentation of bridge theme to two notes, alternating between strings and winds\"; 3:49 chủ đề cầu nối còn một nốt, cũng chuyền giữa dây và gỗ, chơi nhẹ (p). Đó là chủ đề cầu nối, không phải bốn nốt mở đầu; \"đặc biệt dùng nhiều\" không có nguồn xếp hạng; \"căng thẳng tăng dần\" không có nguồn (bảng ghi chơi nhẹ). Review D3-gom: chữ mới có trên trang; lượt 2 xác nhận bảng nghe Listen 8e. mo/link-hong (06/11/2026): Listen 8e không còn (xem n20). Thay bằng Rochester: cuối phần phát triển \"the main motive is reduced to just two- and then one-note conversations between strings and winds\"; BHSO: phần phát triển, sau khi \"the horn call is played twice\", \"minim chords are passed between the strings and wind\". Hai nguồn đỡ: hai nốt rồi một nốt, chuyền giữa dây và bộ hơi, ngay sau tiếng kèn horn (chủ đề cầu nối). Người gom xem lại hai chỗ: Rochester gọi mảnh nhạc là \"main motive\", không gọi là chủ đề cầu nối; nguồn ghi \"winds\" (bộ hơi), trang ghi \"bộ gỗ\". Review link-hong (07/11/2026): lượt 2 khong-chac: không nguồn còn đọc được nào gọi mảnh ấy là \"chủ đề cầu nối\", nguồn ghi \"winds\" chứ không phải bộ gỗ. Rochester (đã mở): \"the main motive is reduced to just two- and then one-note conversations between strings and winds\"; BHSO (đã mở): \"the horn call is played twice\", \"minim chords are passed between the strings and wind\". Chữ cũ (trước link-hong): \"một mảnh nhạc rút từ chủ đề cầu nối bị cắt còn hai nốt, rồi một nốt, chuyền qua lại giữa bộ dây và bộ gỗ\"; chữ mới theo đề xuất lượt 2, bỏ \"những hợp âm\" của đề xuất vì \"hợp âm hai nốt\" đọc thành hợp âm có hai nốt, trong khi nguồn nói mảnh hai nốt rồi một nốt (\"two- and then one-note conversations\"). Chỉ bỏ hay thu hẹp theo nguồn, không cần lượt 2 lại."
+    luot_2: khong-chac
+    luot_2_nguon: [ "https://www.esm.rochester.edu/beethoven/symphony-no-5/", "https://www.bhso.org.uk/work/beethoven-symphony-no-5/" ]
+    luot_2_ghi_chu: "mo/link-hong (07/11/2026): Rochester: \"at the end of the development (3:18-3:50) … the main motive is reduced to just two- and then one-note conversations between strings and winds\". BHSO: sau khi \"the horn call is played twice … minim chords are passed between the strings and wind, all the time widening in pitch distance and ending with a quiet … repetition of the same chords\". Hai nguồn đỡ: chia nhỏ còn hai rồi một nốt, chuyền giữa dây và \"winds\". Không nguồn nào gọi mảnh ấy là \"chủ đề cầu nối\" (Rochester nói \"main motive\"; BHSO chỉ đặt nó ngay sau lời gọi của kèn horn, tức đoạn dẫn vào chủ đề 2); \"bộ gỗ\" hẹp hơn \"winds\". Đề xuất: \"Phần phát triển (chương 1 Giao hưởng số 5) cũng dùng chia nhỏ: sau khi lời gọi của kèn horn vang lên hai lần, chất liệu bị cắt còn những hợp âm hai nốt, rồi một nốt, chuyền qua lại giữa bộ dây và bộ hơi.\""
+    review: dung
   - id: n22
     cau: Link [Hình thức sonata](/opus/hinh-thuc/sonata/).
     loai: ve-site
@@ -412,10 +414,11 @@ nhan_dinh:
       - omt-phrase
       - roch-b5
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ của lời giải thích: "Kỹ thuật yêu thích của Beethoven ở phần phát triển." Chữ mới: "Phần phát triển chương 1 Giao hưởng số 5 cũng dùng cách này." Lý do: "yêu thích" không có nguồn; Listen 8e ghi chia nhỏ ở phần phát triển (n21). Review D3-gom: chữ mới có trên trang (giải thích câu hỏi 2, không dựa vào vị trí lựa chọn). mo/link-hong (06/11/2026): Listen 8e không còn (xem n20); vế phần phát triển chương 1 dùng chia nhỏ nay theo Rochester (như n21).'
+    ghi_chu: "Chữ cũ của lời giải thích: \"Kỹ thuật yêu thích của Beethoven ở phần phát triển.\" Chữ mới: \"Phần phát triển chương 1 Giao hưởng số 5 cũng dùng cách này.\" Lý do: \"yêu thích\" không có nguồn; Listen 8e ghi chia nhỏ ở phần phát triển (n21). Review D3-gom: chữ mới có trên trang (giải thích câu hỏi 2, không dựa vào vị trí lựa chọn). mo/link-hong (06/11/2026): Listen 8e không còn (xem n20); vế phần phát triển chương 1 dùng chia nhỏ nay theo Rochester (như n21). Review link-hong (07/11/2026): Rochester (đã mở) có câu trích; lời giải thích câu hỏi 2 khớp, không dựa vào vị trí lựa chọn."
     luot_2: dung
-    luot_2_nguon: [ "https://human.libretexts.org/Bookshelves/Music/Music_Theory/Music_Theory_for_the_21st-Century_Classroom_(Hutchinson)/11%3A_Melodic_Analysis/11.03%3A_Fragment", "https://digfir-published.macmillanusa.com/listen8e/listen8e_ch15_12.html" ]
-    luot_2_ghi_chu: Fragment là giữ một mảnh; phần phát triển chương 1 Giao hưởng số 5 chia nhỏ môtip.
+    luot_2_nguon: [ "https://www.esm.rochester.edu/beethoven/symphony-no-5/" ]
+    luot_2_ghi_chu: "mo/link-hong (07/11/2026): Rochester: \"the main motive is reduced to just two- and then one-note conversations between strings and winds\": phần phát triển dùng chia nhỏ. Định nghĩa chia nhỏ theo OMT (không đổi)."
+    review: dung
   - id: n38
     cau: 'Câu hỏi 3: trong cấu trúc câu, phần trình bày gồm một ý cơ bản và lần nhắc lại của nó (giải thích: phần tiếp nối mới chia nhỏ và dẫn tới kết).'
     loai: dinh-nghia
@@ -470,8 +473,8 @@ doi_chu:
     moi: Fa Fa Fa Rê (Beethoven cũng nhắc môtip ở nhiều cao độ khác nhau)
     ly_do: "n10 (da-sua): không kiểm được số ô 3–5 và cao độ ở tổng phổ; Rochester chỉ nói môtip lặp ở nhiều cao độ."
   - cu: "Trong chương 1 Giao hưởng số 5, Beethoven dùng nhiều kỹ thuật trong số này. Phần phát triển (xem Hình thức sonata) đặc biệt dùng nhiều chia nhỏ: môtip bị cắt ngắn dần, chuyền qua lại giữa các bè, căng thẳng tăng dần."
-    moi: "Trong chương 1 Giao hưởng số 5, Beethoven dùng nhiều kỹ thuật trong số này. Phần phát triển (xem Hình thức sonata) cũng dùng chia nhỏ: một mảnh nhạc rút từ chủ đề cầu nối bị cắt còn hai nốt, rồi một nốt, chuyền qua lại giữa bộ dây và bộ gỗ."
-    ly_do: 'n21 (da-sua): Listen 8e: chủ đề cầu nối bị chia nhỏ còn hai nốt rồi một nốt, dây và gỗ luân phiên, chơi nhẹ; "đặc biệt dùng nhiều" và "căng thẳng tăng dần" không có nguồn.'
+    moi: "Trong chương 1 Giao hưởng số 5, Beethoven dùng nhiều kỹ thuật trong số này. Phần phát triển (xem Hình thức sonata) cũng dùng chia nhỏ: sau khi lời gọi của kèn horn vang lên hai lần, chất liệu bị cắt còn hai nốt, rồi một nốt, chuyền qua lại giữa bộ dây và bộ hơi."
+    ly_do: 'n21 (da-sua): "đặc biệt dùng nhiều" và "căng thẳng tăng dần" không có nguồn. Review mo/link-hong: Listen 8e không còn; theo Rochester ("two- and then one-note conversations between strings and winds") và BHSO ("the horn call is played twice", hợp âm chuyền giữa dây và "wind"): bỏ "chủ đề cầu nối", "bộ gỗ" thành "bộ hơi".'
   - cu: "Ở bài 13, bạn đã gặp đoạn nhạc (period): câu hỏi kết nửa, câu trả lời kết trọn. Nhạc Cổ điển còn một cấu trúc phổ biến không kém, gọi là câu (sentence), thường dài 8 ô nhịp:"
     moi: "Ở bài 13, bạn đã gặp đoạn nhạc (period): câu hỏi kết nửa, câu trả lời kết trọn. Nhạc Cổ điển còn một cấu trúc phổ biến không kém, gọi là câu (sentence), thường dài 4 hoặc 8 ô nhịp; bảng dưới là một câu 8 ô nhịp:"
     ly_do: "n26 (da-sua): OMT ghi câu mẫu dài 4 hoặc 8 ô nhịp."

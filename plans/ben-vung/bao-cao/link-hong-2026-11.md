@@ -66,3 +66,36 @@ Nên sửa khi các trang ấy được mở khóa lần sau.
 - Đã build lại bản xem. `node tools/khoa.mjs tinh`: mọi mục còn khóa đều khớp.
 
 Việc còn lại cho người gom: lượt 2 và review các nhận định đã chạm (theo bảng trên), giải quyết ba điểm ở mục "Người gom cần xem lại", rồi `node tools/khoa.mjs khoa <trang>` cho 13 trang.
+
+## Review
+
+Claude Opus 5.5, 07/11/2026, không làm lượt 1 hay lượt 2. Lượt 2 (chưa commit lúc review) kiểm 63 nhận định ở 13 hồ sơ: 60 `dung`, 3 `khong-chac`.
+
+Cách kiểm: mọi nguồn mới hay link mới tải lại bằng `curl` (User-Agent `opus-kiem-dinh/1.0`), bản lưu Wayback tải bản gốc (`id_`), PDF lọc chữ bằng pypdf; câu trích lượt 1 ghi trong `ghi_chu` được tìm nguyên văn trong chữ đã tải. Mọi câu trích đều có, trừ vài câu chỉ khác kiểu dấu nháy (đã xem tay). Ba bản lưu trước đây chưa ai mở lại (Berliner Philharmoniker 20/01/2026, macromusic.org 13/02/2026, Gjerdingen 09/02/2026) đều có chữ của bài. Không có câu `ve-site` mới.
+
+Ba câu `khong-chac` của lượt 2 đã sửa trang theo đề xuất. Mỗi câu chỉ bỏ hay thu hẹp vế không có nguồn, nên không cần lượt 2 lại. Các câu đều ghi `ket_qua: da-sua`, `review: dung`, và `doi_chu` đã cập nhật (`so-chu.mjs --doi-chu`: đủ):
+
+| Trang | Nhận định | Chữ mới |
+|---|---|---|
+| `hinh-thuc/concerto` | n7 | "nhạc cụ độc tấu chơi những đoạn khó, điêu luyện hơn" (bỏ "nhanh": chỉ *Listen* nói, mà *Listen* không còn) |
+| `nhac-ly/30-phat-trien-motip` | n21 | "sau khi lời gọi của kèn horn vang lên hai lần, chất liệu bị cắt còn hai nốt, rồi một nốt, chuyền qua lại giữa bộ dây và bộ hơi". Bỏ "những hợp âm" trong đề xuất của lượt 2, vì "hợp âm hai nốt" đọc thành hợp âm có hai nốt; nguồn nói "two- and then one-note conversations" |
+| `nhac-cu/dan-nhac` | d24 | "lần lượt giới thiệu từng nhạc cụ theo từng bộ (gỗ, dây, đồng, gõ), phần lớn từ cao xuống thấp". Thứ tự bốn bộ có ở Hollywood Bowl ("The percussion section gets a dazzling cadenza") |
+
+Các việc khác:
+
+- `piano/gam` n23 có thêm `pianoscales` trong `nguon`. Nguồn này đã có trong danh sách `nguon` của hồ sơ (`https://pianoscales.org/major.html`, cùng link lượt 2 dùng). Chỗ khác nhau giữa Evansville và PianoScales (mục 4 ở trên) có từ trước; câu theo PianoScales.
+- Nhận định lượt 1 đã chạm (đổi nguồn hay ghi chú đối chiếu), 41 câu: mỗi câu có `review: dung` và `ghi_chu` "Review link-hong (07/11/2026): …". Riêng `nhac-ly/29-chuoi-hoa-am` n34 đổi ví dụ sang Vivaldi, *La stravaganza*: bài giảng của Harris ghi "sequence in b" trong ritornello, lượt 2 `dung`. Review chấp nhận.
+- `nguoi.review` của lần cuối đã điền ở cả 13 hồ sơ. Chỉ còn thiếu `kiem_mau` (theo `loiHoSo`).
+
+Kiểm thử sau review:
+
+- `node tools/khoa.mjs tinh`: đạt.
+- `npm run build:xem`: 242 trang, không có cảnh báo `[opus]`.
+- `npm test`: 302 đạt, 2 bỏ qua, 0 hỏng.
+
+Còn lại: kiểm mẫu, rồi `node tools/khoa.mjs khoa` cho 13 trang.
+
+## Kiểm mẫu và khóa (người gom)
+
+- Kiểm mẫu (Claude Opus 5.5, kiểm thay chủ repo theo lời giao, 07/11/2026): tải lại 4 nguồn mới — bản lưu Wayback LCS Ritornello, slide MIT OCW Harris 2006 ("segmented ritornello… sequence in b" ở *La stravaganza*), hai địa chỉ mới của Hollywood Bowl (`/works/…`, 200, đúng bài): khớp nhận định.
+- Đã khóa lại 13 trang. Đề xuất cho chủ repo: thêm `piano-midi.de` (418) và `bach-digital.de` (chặn bot) vào `--exclude` của `kiem-link.yml`; theo dõi `chopin.nifc.pl`, `lvbeethoven.it`.

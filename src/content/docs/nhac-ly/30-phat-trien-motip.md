@@ -42,7 +42,7 @@ K:Cm
 "^chuỗi" z F F F | D4 | "^đảo" z G G G | =B4 | "^nới rộng" z2 G2 | G2 G2 | E4- | E4 | "^chia nhỏ" z G G G | z G G G | z G G G | G4 |]
 ```
 
-Trong chương 1 Giao hưởng số 5, Beethoven dùng nhiều kỹ thuật trong số này. Phần phát triển (xem [Hình thức sonata](/opus/hinh-thuc/sonata/)) cũng dùng **chia nhỏ**: một mảnh nhạc rút từ chủ đề cầu nối bị cắt còn hai nốt, rồi một nốt, chuyền qua lại giữa bộ dây và bộ gỗ.
+Trong chương 1 Giao hưởng số 5, Beethoven dùng nhiều kỹ thuật trong số này. Phần phát triển (xem [Hình thức sonata](/opus/hinh-thuc/sonata/)) cũng dùng **chia nhỏ**: sau khi lời gọi của kèn horn vang lên hai lần, chất liệu bị cắt còn hai nốt, rồi một nốt, chuyền qua lại giữa bộ dây và bộ hơi.
 
 ## Cấu trúc câu nhạc: "câu" và "đoạn"
 

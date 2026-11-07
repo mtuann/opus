@@ -10,7 +10,7 @@ description: Concerto là tác phẩm cho một (hoặc vài) nhạc cụ độc
 Concerto Baroque, như của Vivaldi, thường dùng hình thức **ritornello** (tiếng Ý: "lần quay lại nhỏ"):
 
 - **Ritornello** do **cả dàn nhạc** (*tutti*) chơi, mở đầu và kết thúc chương, và quay lại nhiều lần ở giữa, thường **ở các giọng khác nhau** và có khi chỉ một đoạn ngắn.
-- Xen giữa là các **đoạn độc tấu** (*solo*): nhạc cụ độc tấu chơi nhanh và điêu luyện hơn.
+- Xen giữa là các **đoạn độc tấu** (*solo*): nhạc cụ độc tấu chơi những đoạn khó, điêu luyện hơn.
 
 ::hinh{ten="form-ritornello"}
 

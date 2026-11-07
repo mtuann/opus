@@ -57,7 +57,7 @@ Mỗi nhạc cụ chỉ chơi được trong một khoảng cao độ nhất đ�
 
 **Prokofiev – *Peter và chó sói*** (1936): một câu chuyện có người kể, mỗi nhân vật do một nhạc cụ thể hiện. Peter là bộ dây, chú chim là sáo, con vịt là oboe, con mèo là clarinet, ông nội là bassoon, chó sói là ba kèn horn, và tiếng súng của thợ săn là timpani cùng trống lớn.
 
-**Britten – *The Young Person's Guide to the Orchestra*** (1946): dùng một chủ đề của Henry Purcell, lần lượt giới thiệu từng nhạc cụ từ cao xuống thấp trong từng bộ, rồi kết thúc bằng một fugue lớn với tất cả cùng tham gia.
+**Britten – *The Young Person's Guide to the Orchestra*** (1946): dùng một chủ đề của Henry Purcell, lần lượt giới thiệu từng nhạc cụ theo từng bộ (gỗ, dây, đồng, gõ), phần lớn từ cao xuống thấp, rồi kết thúc bằng một fugue lớn với tất cả cùng tham gia.
 
 ## Bài tập nghe
 

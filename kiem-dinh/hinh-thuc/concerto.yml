@@ -23,12 +23,12 @@ lan:
   - so: 3
     ngay: 2026-11-06
     nhanh: mo/link-hong
-    ma_bam: null
+    ma_bam: sha256:aa0506cd61649fe316cd45c00ed559a3605041a91468c581b4f731e376423881
     nguoi:
       luot_1: "Claude Opus 5.5 (mo/link-hong, 06/11/2026: kiểm link lỗi của lychee, đổi link, đối chiếu nội dung nguồn mới)"
-      luot_2: null
-      review: null
-      kiem_mau: null
+      luot_2: "Claude Opus 5.5 (lượt 2 mo/link-hong, 07/11/2026)"
+      review: "Claude Opus 5.5 (review mo/link-hong, 07/11/2026: ba câu lượt 2 khong-chac sửa theo đề xuất, đối chiếu lại nguồn mới và bản lưu)"
+      kiem_mau: "Claude Opus 5.5 (người gom mo/link-hong, kiểm thay chủ repo theo lời giao 07/11/2026): mẫu 4 nguồn mới tải lại bằng curl (bản lưu Wayback LCS Ritornello, slide MIT OCW Harris 2006 có \"sequence in b\" ở La stravaganza, hai địa chỉ mới Hollywood Bowl /works/… trả 200 đúng bài): khớp nhận định; 0 sai"
 nguon:
   - id: cod-concerto
     bac: 2
@@ -121,19 +121,22 @@ nhan_dinh:
       - lcs-rit
       - teoria-spring
     ket_qua: da-sua
-    ghi_chu: 'LCS: ritornello "typical of the first and frequently also the last movement" của concerto Baroque; Teoria: chương 1 Mùa xuân của Vivaldi "uses the ritornello form". Chữ cũ: "Vivaldi và Bach dùng hình thức ritornello": nguồn đã mở không nói về Bach (Brandenburg số 5 chỉ có ghi chú về harpsichord, không nói ritornello). mo/link-hong (06/11/2026): LCS đổi sang bản lưu Wayback 11/02/2020, đã đối chiếu: "The Ritornello form is a term often used for the typical form of the first and frequently also the last movement of the baroque concerto".'
+    ghi_chu: "LCS: ritornello \"typical of the first and frequently also the last movement\" của concerto Baroque; Teoria: chương 1 Mùa xuân của Vivaldi \"uses the ritornello form\". Chữ cũ: \"Vivaldi và Bach dùng hình thức ritornello\": nguồn đã mở không nói về Bach (Brandenburg số 5 chỉ có ghi chú về harpsichord, không nói ritornello). mo/link-hong (06/11/2026): LCS đổi sang bản lưu Wayback 11/02/2020, đã đối chiếu: \"The Ritornello form is a term often used for the typical form of the first and frequently also the last movement of the baroque concerto\". Review link-hong (07/11/2026): bản lưu Wayback LCS 11/02/2020 (tải bản gốc id_) có nguyên văn câu trích của lượt 1; chữ trang không đổi, khớp câu."
     luot_2: dung
-    luot_2_nguon: [ "https://gcp-web.sjsu.edu/people/gordon.haramaki/courses/baroque/s1/9.-Vivaldi-and-Ritornello-Form.pdf", "https://teoria.com/en/articles/2021/vivaldi-seasons/primavera/01.php" ]
+    luot_2_nguon: [ "https://web.archive.org/web/20200211003928/https://lcsproductions.net/MusicHistory/MusHistRev/MusicalForms/Ritornello.html", "https://teoria.com/en/articles/2021/vivaldi-seasons/primavera/01.php" ]
+    luot_2_ghi_chu: "mo/link-hong (07/11/2026): Bản lưu LCS: \"The Ritornello form is a term often used for the typical form of the first and frequently also the last movement of the baroque concerto\"; Teoria: chương 1 Mùa xuân của Vivaldi \"uses the ritornello form\". Đủ hai vế."
+    review: dung
   - id: n4
     cau: Ritornello là tiếng Ý, nghĩa là "lần quay lại nhỏ".
     loai: ten
     nguon:
       - lcs-rit
     ket_qua: da-sua
-    ghi_chu: 'LCS: tên nghĩa là "little return". Chữ cũ: "điệp khúc nhỏ"; dịch sát hơn. mo/link-hong (06/11/2026): LCS đổi sang bản lưu Wayback 11/02/2020, đã đối chiếu: "The name, ''little return,'' …".'
+    ghi_chu: "LCS: tên nghĩa là \"little return\". Chữ cũ: \"điệp khúc nhỏ\"; dịch sát hơn. mo/link-hong (06/11/2026): LCS đổi sang bản lưu Wayback 11/02/2020, đã đối chiếu: \"The name, 'little return,' …\". Review link-hong (07/11/2026): bản lưu Wayback LCS 11/02/2020 (tải bản gốc id_) có nguyên văn câu trích của lượt 1 (\"The name, 'little return,'\"); chữ trang không đổi."
     luot_2: dung
-    luot_2_nguon: [ "https://www.britannica.com/art/ritornello" ]
-    luot_2_ghi_chu: "Britannica: 'return'. Sắc thái 'nhỏ' (đuôi -ello) không có trong nguồn đã mở; ngữ pháp Ý đúng."
+    luot_2_nguon: [ "https://web.archive.org/web/20200211003928/https://lcsproductions.net/MusicHistory/MusHistRev/MusicalForms/Ritornello.html" ]
+    luot_2_ghi_chu: "mo/link-hong (07/11/2026): Bản lưu LCS: \"The name, 'little return,' …\". Khớp \"lần quay lại nhỏ\"."
+    review: dung
   - id: n5
     cau: Ritornello do cả dàn nhạc (tutti) chơi, mở đầu và kết thúc chương.
     loai: cau-truc
@@ -141,38 +144,44 @@ nhan_dinh:
       - mit-rit
       - lcs-rit
     ket_qua: dung
-    ghi_chu: 'Listen: ritornello là "the orchestral music that typically starts the movement off"; chương kết bằng ritornello ở chủ âm. LCS: các đoạn tutti tạo nên ritornello. mo/link-hong (06/11/2026): trang Listen 8e (digfir-published.macmillanusa.com) không còn: tên miền không phân giải, Wayback Machine không lưu trang này; bỏ nguồn listen-rit, thay bằng MIT OCW 21M.011: ritornello là "a repeating orchestral section that returns throughout the form", "the full ritornello is typically only heard at the beginning and end". LCS (bản lưu 11/02/2020): "an alternation of tutti and solo sections … The tutti sections therefore form the ritornello".'
+    ghi_chu: "Listen: ritornello là \"the orchestral music that typically starts the movement off\"; chương kết bằng ritornello ở chủ âm. LCS: các đoạn tutti tạo nên ritornello. mo/link-hong (06/11/2026): trang Listen 8e (digfir-published.macmillanusa.com) không còn: tên miền không phân giải, Wayback Machine không lưu trang này; bỏ nguồn listen-rit, thay bằng MIT OCW 21M.011: ritornello là \"a repeating orchestral section that returns throughout the form\", \"the full ritornello is typically only heard at the beginning and end\". LCS (bản lưu 11/02/2020): \"an alternation of tutti and solo sections … The tutti sections therefore form the ritornello\". Review link-hong (07/11/2026): MIT OCW 21M.011 (Goetjen) đã mở, có nguyên văn các câu trích (\"a repeating orchestral section…\", \"the full ritornello is typically only heard at the beginning and end\"); LCS bản lưu có \"The tutti sections therefore form the ritornello\". Đủ câu."
     luot_2: dung
-    luot_2_nguon: [ "https://gcp-web.sjsu.edu/people/gordon.haramaki/courses/baroque/s1/9.-Vivaldi-and-Ritornello-Form.pdf", "https://teoria.com/en/articles/2021/vivaldi-seasons/primavera/01.php" ]
+    luot_2_nguon: [ "https://ocw.mit.edu/courses/21m-011-introduction-to-western-music-fall-2024/pages/week-6-recitation-6a-listening-reading-goetjen", "https://web.archive.org/web/20200211003928/https://lcsproductions.net/MusicHistory/MusHistRev/MusicalForms/Ritornello.html" ]
+    luot_2_ghi_chu: "mo/link-hong (07/11/2026): MIT (Goetjen): ritornello là \"a repeating orchestral section that returns throughout the form\"; \"the full ritornello is typically only heard at the beginning and end\"; Vivaldi Op. 4 số 12: \"Opening ritornello\" … \"Closing ritornello\". Bản lưu LCS: \"The tutti sections therefore form the ritornello\"."
+    review: dung
   - id: n6
     cau: Ritornello quay lại nhiều lần ở giữa chương, thường ở các giọng khác nhau và có khi chỉ một đoạn ngắn.
     loai: cau-truc
     nguon:
       - mit-rit
     ket_qua: dung
-    ghi_chu: 'Listen: quay lại nhiều lần, "often in fragments rather than in full", ở các giọng khác nhau. mo/link-hong (06/11/2026): Listen 8e không còn (xem n5); MIT OCW 21M.011: các câu của ritornello "can be reordered and recombined, presented in different keys or modes"; "the middle ritornellos are shorter than the opening one and the closing one"; Vivaldi Op. 4 số 12: "Ritornello 2 … (partial ritornello)". Đỡ đủ câu.'
+    ghi_chu: "Listen: quay lại nhiều lần, \"often in fragments rather than in full\", ở các giọng khác nhau. mo/link-hong (06/11/2026): Listen 8e không còn (xem n5); MIT OCW 21M.011: các câu của ritornello \"can be reordered and recombined, presented in different keys or modes\"; \"the middle ritornellos are shorter than the opening one and the closing one\"; Vivaldi Op. 4 số 12: \"Ritornello 2 … (partial ritornello)\". Đỡ đủ câu. Review link-hong (07/11/2026): MIT OCW 21M.011 (Goetjen) đã mở, có nguyên văn các câu trích (\"presented in different keys or modes\", \"the middle ritornellos are shorter\", \"partial ritornello\"). Đủ câu."
     luot_2: dung
-    luot_2_nguon: [ "https://gcp-web.sjsu.edu/people/gordon.haramaki/courses/baroque/s1/9.-Vivaldi-and-Ritornello-Form.pdf", "https://teoria.com/en/articles/2021/vivaldi-seasons/primavera/01.php" ]
-    luot_2_ghi_chu: "Teoria: ritornello 2-3 chỉ còn một câu; giọng khác nhau."
+    luot_2_nguon: [ "https://ocw.mit.edu/courses/21m-011-introduction-to-western-music-fall-2024/pages/week-6-recitation-6a-listening-reading-goetjen", "https://en.wikipedia.org/wiki/Ritornello" ]
+    luot_2_ghi_chu: "mo/link-hong (07/11/2026): MIT: các câu của ritornello \"presented in different keys or modes\"; \"the middle ritornellos are shorter than the opening one and the closing one\"; Op. 4 số 12: \"Ritornello 2 … (partial ritornello)\". Wikipedia (Burkhart): \"Later statements of the ritornello are usually partial\"."
+    review: dung
   - id: n7
-    cau: "Xen giữa các ritornello là các đoạn độc tấu: nhạc cụ độc tấu chơi nhanh và điêu luyện hơn."
+    cau: "Xen giữa các ritornello là các đoạn độc tấu: nhạc cụ độc tấu chơi những đoạn khó, điêu luyện hơn."
     loai: cau-truc
     nguon:
       - lt-baroque
     ket_qua: da-sua
-    ghi_chu: 'Listen: soloist chơi "faster and more brilliant" (virtuoso). Chữ cũ: "khoe kỹ thuật, chuyển giọng"; bỏ "chuyển giọng" (không nguồn). mo/link-hong (06/11/2026): Listen 8e không còn (xem n5); LibreTexts 8.2: nghệ sĩ độc tấu "will perform typically very challenging and demanding music. The soloist is often a virtuoso". Vế "điêu luyện hơn" có nguồn; vế "nhanh" chưa có nguồn đọc được thay Listen ("faster and more brilliant"): người gom xem lại, giữ hay bỏ chữ "nhanh".'
-    luot_2: dung
-    luot_2_nguon: [ "https://gcp-web.sjsu.edu/people/gordon.haramaki/courses/baroque/s1/9.-Vivaldi-and-Ritornello-Form.pdf", "https://www.britannica.com/art/ritornello" ]
+    ghi_chu: "Listen: soloist chơi \"faster and more brilliant\" (virtuoso). Chữ cũ: \"khoe kỹ thuật, chuyển giọng\"; bỏ \"chuyển giọng\" (không nguồn). mo/link-hong (06/11/2026): Listen 8e không còn (xem n5); LibreTexts 8.2: nghệ sĩ độc tấu \"will perform typically very challenging and demanding music. The soloist is often a virtuoso\". Vế \"điêu luyện hơn\" có nguồn; vế \"nhanh\" chưa có nguồn đọc được thay Listen (\"faster and more brilliant\"): người gom xem lại, giữ hay bỏ chữ \"nhanh\". Review link-hong (07/11/2026): lượt 2 khong-chac vế \"nhanh\": Listen 8e (nguồn duy nhất) không còn; LibreTexts 8.2 (đã mở): \"very challenging and demanding music … The soloist is often a virtuoso\"; MIT, LCS không nói đoạn độc tấu nhanh hơn. Bỏ \"nhanh\" theo đề xuất của lượt 2. Chữ cũ (trước link-hong): \"nhạc cụ độc tấu chơi nhanh và điêu luyện hơn\"; chữ mới: \"nhạc cụ độc tấu chơi những đoạn khó, điêu luyện hơn\" (chỉ bỏ vế không có nguồn, nên không cần lượt 2 lại)."
+    luot_2: khong-chac
+    luot_2_nguon: [ "https://human.libretexts.org/Courses/Prince_Georges_Community_College/Music_Appreciation%3A_A_Topical_Approach_to_Music_Genre_and_Style/08%3A_The_Instrumental_Concerto/8.02%3A_Concertos_in_the_Baroque_Period", "https://ocw.mit.edu/courses/21m-011-introduction-to-western-music-fall-2024/pages/week-6-recitation-6a-listening-reading-goetjen", "https://toddtarantino.com/hum/ritornelloform.html", "https://en.wikipedia.org/wiki/Ritornello" ]
+    luot_2_ghi_chu: "mo/link-hong (07/11/2026): LibreTexts 8.2: độc tấu \"very challenging and demanding music. The soloist is often a virtuoso\": đỡ vế \"điêu luyện\". Vế \"nhanh (hơn)\": MIT, Teoria, Todd Tarantino (Ritornello Form), Wikipedia Ritornello đều không nói đoạn độc tấu nhanh hơn ritornello; không tìm được nguồn đọc được nào thay Listen. Chương nhanh thì ritornello cũng nhanh; đoạn độc tấu thường dày nốt hơn nhưng không có nguồn. Đề xuất bỏ \"nhanh\": \"Xen giữa các ritornello là các đoạn độc tấu: nhạc cụ độc tấu chơi những đoạn khó, điêu luyện hơn.\""
+    review: dung
   - id: n8
     cau: "Sơ đồ ritornello: ritornello mở đầu, độc tấu, ritornello giọng khác, độc tấu, ritornello giọng khác, độc tấu, ritornello giọng chính."
     loai: cau-truc
     nguon:
       - mit-rit
     ket_qua: da-sua
-    ghi_chu: 'Listen: ritornello ở giọng khác khi chương tiến triển, trở lại chủ âm ở cuối. Chữ cũ ghi ritornello đầu ở "giọng chính"; nguồn đã mở không nói giọng của lần đầu nên sơ đồ ghi "mở đầu". Sơ đồ chỉ là mẫu. Kiểm mẫu D5: chủ repo không mở được trang Listen (tên miền phụ không phân giải trên máy kiểm), kết luận đúng theo Grout/Palisca (qua Wikipedia, Ritornello): "The first and last statements are in the tonic". Người gom mở lại trang Listen ngày 29/10/2026: ritornello "usually it is played in different keys as the movement proceeds", cuối chương "the orchestral ritornello returns in the tonic key". mo/d5-hinh: sơ đồ nay là hình tĩnh của site (trước đây khối mermaid hiện nguyên mã); chữ và thứ tự giữ nguyên. mo/link-hong (06/11/2026): Listen 8e không còn (xem n5); MIT OCW 21M.011: sơ đồ ritornello giả định, "a ''there and back again'' trajectory in terms of key, as the form begins and ends in the tonic or home key but journeys to other keys (or modes) in the middle"; ritornello xen các đoạn solo. Đỡ sơ đồ (ritornello giữa ở giọng khác, ritornello cuối ở giọng chính).'
+    ghi_chu: "Listen: ritornello ở giọng khác khi chương tiến triển, trở lại chủ âm ở cuối. Chữ cũ ghi ritornello đầu ở \"giọng chính\"; nguồn đã mở không nói giọng của lần đầu nên sơ đồ ghi \"mở đầu\". Sơ đồ chỉ là mẫu. Kiểm mẫu D5: chủ repo không mở được trang Listen (tên miền phụ không phân giải trên máy kiểm), kết luận đúng theo Grout/Palisca (qua Wikipedia, Ritornello): \"The first and last statements are in the tonic\". Người gom mở lại trang Listen ngày 29/10/2026: ritornello \"usually it is played in different keys as the movement proceeds\", cuối chương \"the orchestral ritornello returns in the tonic key\". mo/d5-hinh: sơ đồ nay là hình tĩnh của site (trước đây khối mermaid hiện nguyên mã); chữ và thứ tự giữ nguyên. mo/link-hong (06/11/2026): Listen 8e không còn (xem n5); MIT OCW 21M.011: sơ đồ ritornello giả định, \"a 'there and back again' trajectory in terms of key, as the form begins and ends in the tonic or home key but journeys to other keys (or modes) in the middle\"; ritornello xen các đoạn solo. Đỡ sơ đồ (ritornello giữa ở giọng khác, ritornello cuối ở giọng chính). Review link-hong (07/11/2026): MIT OCW 21M.011 (Goetjen) đã mở, có nguyên văn các câu trích (\"there and back again\", \"journeys to other keys (or modes) in the middle\"). Sơ đồ khớp."
     luot_2: dung
-    luot_2_nguon: [ "https://gcp-web.sjsu.edu/people/gordon.haramaki/courses/baroque/s1/9.-Vivaldi-and-Ritornello-Form.pdf", "https://teoria.com/en/articles/2021/vivaldi-seasons/primavera/01.php" ]
-    luot_2_ghi_chu: Sơ đồ rút gọn (4 ritornello, 3 độc tấu); SJSU nói Vivaldi thường dùng 5 ritornello xen 4 đoạn độc tấu. Số lần lặp thay đổi nên vẫn chấp nhận được.
+    luot_2_nguon: [ "https://ocw.mit.edu/courses/21m-011-introduction-to-western-music-fall-2024/pages/week-6-recitation-6a-listening-reading-goetjen", "https://en.wikipedia.org/wiki/Ritornello" ]
+    luot_2_ghi_chu: "mo/link-hong (07/11/2026): MIT: sơ đồ ritornello giả định, \"the form begins and ends in the tonic or home key but journeys to other keys (or modes) in the middle\"; ritornello xen đoạn solo. Wikipedia (Burkhart): \"The first and last statements are in the tonic\". Sơ đồ rút gọn, khớp."
+    review: dung
   - id: n9
     cau: Khác với rondo, nơi điệp khúc luôn trở lại ở chủ âm, ritornello quay lại ở giọng khác nhau và thường chỉ là một phần của đoạn gốc.
     loai: cau-truc
@@ -180,10 +189,11 @@ nhan_dinh:
       - omt-rondo
       - mit-rit
     ket_qua: da-sua
-    ghi_chu: 'OMT, Rondo: điệp khúc "always heard in the tonic key"; Listen: ritornello ở các giọng khác, thường từng mảnh. Chữ cũ: "thường bị rút ngắn; vừa là điệp khúc, vừa là cột mốc chuyển giọng"; bỏ ẩn dụ "cột mốc". mo/link-hong (06/11/2026): Listen 8e không còn (xem n5); MIT OCW 21M.011: ritornello "presented in different keys or modes", các lần giữa ngắn hơn (chỉ một phần). OMT Rondo giữ.'
+    ghi_chu: "OMT, Rondo: điệp khúc \"always heard in the tonic key\"; Listen: ritornello ở các giọng khác, thường từng mảnh. Chữ cũ: \"thường bị rút ngắn; vừa là điệp khúc, vừa là cột mốc chuyển giọng\"; bỏ ẩn dụ \"cột mốc\". mo/link-hong (06/11/2026): Listen 8e không còn (xem n5); MIT OCW 21M.011: ritornello \"presented in different keys or modes\", các lần giữa ngắn hơn (chỉ một phần). OMT Rondo giữ. Review link-hong (07/11/2026): MIT OCW 21M.011 (Goetjen) đã mở, có nguyên văn các câu trích (giọng khác, các lần giữa ngắn hơn); OMT Rondo không đổi. Đủ ba vế."
     luot_2: dung
-    luot_2_nguon: [ "https://viva.pressbooks.pub/openmusictheory/chapter/rondo/", "https://teoria.com/en/articles/2021/vivaldi-seasons/primavera/01.php" ]
-    luot_2_ghi_chu: "OMT: refrain rondo luôn ở giọng chủ; Teoria: ritornello sau rút ngắn, đổi giọng."
+    luot_2_nguon: [ "https://ocw.mit.edu/courses/21m-011-introduction-to-western-music-fall-2024/pages/week-6-recitation-6a-listening-reading-goetjen", "https://en.wikipedia.org/wiki/Ritornello" ]
+    luot_2_ghi_chu: "mo/link-hong (07/11/2026): MIT: ritornello \"presented in different keys or modes\", các lần giữa ngắn hơn; Wikipedia: ritornello form \"differs from the later Classical form rondo, in which the recurring section remains in the same key\"; \"Later statements … usually partial\". Đủ ba vế."
+    review: dung
   - id: n10
     cau: "Concerto grosso: một nhóm nhỏ nhạc cụ độc tấu (concertino) đối đáp với cả dàn nhạc (ripieno)."
     loai: dinh-nghia
@@ -390,9 +400,11 @@ nhan_dinh:
       - mit-rit
       - lcs-rit
     ket_qua: dung
-    ghi_chu: "Như n5, n7. mo/link-hong (06/11/2026): như n5."
+    ghi_chu: "Như n5, n7. mo/link-hong (06/11/2026): như n5. Review link-hong (07/11/2026): như n5."
     luot_2: dung
-    luot_2_nguon: [ "https://gcp-web.sjsu.edu/people/gordon.haramaki/courses/baroque/s1/9.-Vivaldi-and-Ritornello-Form.pdf", "https://teoria.com/en/articles/2021/vivaldi-seasons/primavera/01.php" ]
+    luot_2_nguon: [ "https://ocw.mit.edu/courses/21m-011-introduction-to-western-music-fall-2024/pages/week-6-recitation-6a-listening-reading-goetjen", "https://web.archive.org/web/20200211003928/https://lcsproductions.net/MusicHistory/MusHistRev/MusicalForms/Ritornello.html" ]
+    luot_2_ghi_chu: "mo/link-hong (07/11/2026): Như n5: MIT \"a repeating orchestral section\", Op. 4 số 12 xen \"orchestral ritornello and solo sections\"; LCS \"alternation of tutti and solo sections … The tutti sections therefore form the ritornello\"."
+    review: dung
   - id: n33
     cau: "Quiz: cadenza là đoạn độc tấu tự do khi dàn nhạc dừng lại; giải thích: vốn được ứng tác, về sau nhà soạn nhạc ngày càng viết sẵn."
     loai: dinh-nghia
@@ -432,9 +444,9 @@ doi_chu:
       - flowchart LR R1["Ritornello<br/>giọng chính"] --> S1["Độc tấu"] --> R2["Ritornello<br/>giọng khác"] --> S2["Độc tấu"] --> R3["Ritornello<br/>giọng khác"] --> S3["Độc tấu"] --> R4["Ritornello<br/>giọng chính"]
       - Khác với rondo, ritornello quay lại ở giọng khác nhau và thường bị rút ngắn; nó vừa là điệp khúc, vừa là "cột mốc" chuyển giọng.
     moi:
-      - "Xen giữa là các đoạn độc tấu (solo): nhạc cụ độc tấu chơi nhanh và điêu luyện hơn."
+      - "Xen giữa là các đoạn độc tấu (solo): nhạc cụ độc tấu chơi những đoạn khó, điêu luyện hơn."
       - Khác với rondo, nơi điệp khúc luôn trở lại ở chủ âm, ritornello quay lại ở giọng khác nhau và thường chỉ là một phần của đoạn gốc.
-    ly_do: 'n7 (da-sua): Listen; bỏ "chuyển giọng" không nguồn.; n8 (da-sua): nguồn không nói giọng của ritornello đầu.; n9 (da-sua): OMT Rondo và Listen; bỏ ẩn dụ "cột mốc".; mo/d5-hinh: sơ đồ mermaid (site mới không vẽ, hiện nguyên mã) thay bằng hình tĩnh ::hinh{ten="form-ritornello"}, giữ chữ của sơ đồ.'
+    ly_do: 'n7 (da-sua): Listen; bỏ "chuyển giọng" không nguồn. Review mo/link-hong: Listen không còn, bỏ "nhanh" (không nguồn đọc được), "những đoạn khó, điêu luyện" theo LibreTexts.; n8 (da-sua): nguồn không nói giọng của ritornello đầu.; n9 (da-sua): OMT Rondo và Listen; bỏ ẩn dụ "cột mốc".; mo/d5-hinh: sơ đồ mermaid (site mới không vẽ, hiện nguyên mã) thay bằng hình tĩnh ::hinh{ten="form-ritornello"}, giữ chữ của sơ đồ.'
   - cu: "Đi qua một tác phẩm: Vivaldi Mùa xuân, chương 1 là ví dụ mẫu mực, có hướng dẫn nghe chi tiết."
     moi: "Đi qua một tác phẩm: Vivaldi Mùa xuân, chương 1 là một ví dụ rõ về ritornello, có hướng dẫn nghe chi tiết."
     ly_do: 'n13 (da-sua): bỏ xếp hạng "mẫu mực".'
