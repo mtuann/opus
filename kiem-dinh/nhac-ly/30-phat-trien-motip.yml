@@ -27,9 +27,9 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: "Claude Opus 5.5 (đợt hình 2a, mo/hinh-dot-2a, 06/11/2026)"
-      luot_2: null
-      review: null
-      kiem_mau: null
+      luot_2: "không cần (câu ve-site, thủ tục hình)"
+      review: "Claude Opus 5.5 (soát hình 2A, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
+      kiem_mau: "Claude Opus 5.5 (soát hình 2A, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
 ghi_chu: 'Trang phát triển môtip và cấu trúc câu (tầng lõi), 2 khối abc soạn riêng. Nguồn chính: OMT (Foundational Concepts, Phrase Archetypes, Expansion and Contraction), COD (motif, diminution), Listen 8e bảng nghe Giao hưởng số 5, tệp LilyPond Mutopia của Sonata Op. 2 số 1 (đọc qua WebFetch). WebFetch ngày 28/10/2026. Chữ sửa: "nổi tiếng nhất" (n4), ô nhịp 3–5 của Beethoven (n10), phần phát triển (n21), độ dài câu (n26), mở rộng câu (n31), lời giải thích câu hỏi 2 (n37). CHỖ CHƯA CHẮC cần review/lượt 2: n6 và n10 (cao độ Sol Sol Sol Mi♭ rồi Fa Fa Fa Rê ở bản gốc; không mở được tổng phổ: Mutopia Symphony5_1 chỉ có zip và PDF không trích nốt; IMSLP PDF bị chặn). Câu ve-site trỏ tới trang chưa chuyển: nghe-nhac/beethoven-5 (n5), hinh-thuc/sonata (n22), tai-lieu-tham-khao (n40). Thuật ngữ trang dùng: motif, sequence, inversion (giai điệu), augmentation, diminution, fragmentation (đều có hồ sơ riêng ở lô này: motif, sequence, inversion-giai-dieu, augmentation, diminution, fragmentation). Thuật ngữ chưa có ở thuat-ngu.yml (cho D3-L5): retrograde (ngược), sentence (câu), presentation (trình bày), continuation (tiếp nối), basic idea (ý cơ bản), codetta (đoạn đuôi), intervallic change (đổi quãng), period (đoạn nhạc, đã dùng ở bài 13).'
 nguon:
   - id: omt-found
@@ -460,7 +460,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026: HTML trong dist/<trang>/index.html) và module dựng hình (src/scripts/ve-thoi-gian.js, hàm ghi dưới; vị trí mỗi mục là phần trăm của trục, tests/thoi-gian.test.mjs đọc lại); ảnh chụp 360 và 1280 px. hinhCauNhac. Khớp bảng (Trình bày 1–4: \"Một ý cơ bản 2 ô nhịp, rồi nhắc lại ngay\"; Tiếp nối 5–8: \"Chia nhỏ ý cơ bản thành mảnh ngắn hơn, nhịp điệu dồn dập hơn, rồi kết bằng một kết\") và câu \"So sánh: … câu nghe như nói – nhắc lại – rồi dồn tới\". Bảng không ghi độ dài từng mảnh của phần tiếp nối, nên hình không chia ô 5–8 (đề xuất cũ \"2 + 2 + 1 + 1 + 2\" không vẽ)."
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026: HTML trong dist/<trang>/index.html) và module dựng hình (src/scripts/ve-thoi-gian.js, hàm ghi dưới; vị trí mỗi mục là phần trăm của trục, tests/thoi-gian.test.mjs đọc lại); ảnh chụp 360 và 1280 px. hinhCauNhac. Khớp bảng (Trình bày 1–4: \"Một ý cơ bản 2 ô nhịp, rồi nhắc lại ngay\"; Tiếp nối 5–8: \"Chia nhỏ ý cơ bản thành mảnh ngắn hơn, nhịp điệu dồn dập hơn, rồi kết bằng một kết\") và câu \"So sánh: … câu nghe như nói – nhắc lại – rồi dồn tới\". Bảng không ghi độ dài từng mảnh của phần tiếp nối, nên hình không chia ô 5–8 (đề xuất cũ \"2 + 2 + 1 + 1 + 2\" không vẽ). Soát hình 2A (gộp review và kiểm mẫu): đối chiếu trên bản xem (npm run build:xem 07/11/2026, dist/<trang>/index.html) và module src/scripts/ve-thoi-gian.js. Ô 1–2 \"ý cơ bản\", ô 3–4 \"nhắc lại\" cùng màu, ô 5–8 một khối \"chia nhỏ, dồn dập hơn → kết\", khác màu; khớp bảng \"Cấu trúc câu nhạc\"; không chia ô 5–8 vì bảng không cho độ dài từng mảnh. Đúng."
+    review: dung
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan

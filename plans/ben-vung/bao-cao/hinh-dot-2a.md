@@ -65,3 +65,31 @@ Không commit, ở `/private/tmp/claude-501/-Users-mitu-Desktop-work-projects-op
 - Xem ảnh chụp rồi khóa lại tám trang.
 - Xung đột khi gộp với nhánh 2b, 2c: chỉ ở dòng import và `HINH` của `thanh-phan.mjs`, `KHOI` của `tools/trang-mau.mjs`, mục `AGENTS.md`, cuối `thanh-phan.css` (thêm khối, không sửa khối có sẵn).
 - Thành phần B dùng được tiếp cho đề xuất 14 (`quang-tam-buoc-nhay`, bước nhảy) và nhạc lý 15 (liên ba, đảo phách).
+
+## Soát
+
+Claude Opus 5.5, 07/11/2026; người soát không phải người vẽ. Review mã (mức "Vừa") và soát hình (review và kiểm mẫu gộp, thủ tục hình) trên bản xem.
+
+### Review mã: đạt, có ba chỗ nhỏ đã sửa
+
+Module dựng HTML và CSS đúng như mô tả: chữ thật, `role="img"` và `aria-label` đủ ý ở khung hình, chú thích ngoài khung, hình nốt `aria-hidden`; vị trí theo phần trăm; nền ô sáng chữ tối cố định ở cả hai chế độ (như sơ đồ đoạn), phần còn lại theo màu chữ; in có `print-color-adjust: exact`, sách in giữ 10 hình (luyện tai không có trong sách). `kiemMoTa` chặn mục ngoài trục, làn, vạch; lỗi qua plugin ghi tên file. Kiểm thử trình duyệt chờ `load` và `document.fonts.ready`, không chờ cố định.
+
+- **Vạch đầu thanh mất ở chế độ tối** (hình `legato`): hàng nhiều làn có viền trên, dưới trong suốt và `background-clip: padding-box`, nên viền trái 4 px (màu mờ) nằm trên nền trang: chế độ tối không thấy, chế độ sáng thò vào khe giữa hai làn. Sửa: vạch đầu thanh vẽ bằng bóng trong (`--oz-tg-dau`, `inset 4px 0 0`), cùng màu cho tay phải, tay trái; xem lại ảnh 360 px tối và 1280 px sáng.
+- **Lỗi mô tả không ghi tên hình**: `HINH_THOI_GIAN` bọc từng hàm, lỗi thành `::hinh{ten="…"}: hình thời gian: …`.
+- **Kiểm thử Node thiếu sáu hình** (`nhip-don-kep`, `dem-to`, `kieu-ngat`, `dien-tau`, `doan-nhac`, `cau-nhac`): thêm một phép thử đọc lại số liệu (chữ đếm, vị trí và độ dài nốt của câu đếm to, thứ tự độ dài các kiểu ngắt, ô nhịp và màu của đoạn nhạc, câu nhạc).
+
+### Soát hình: 12 câu dung, 0 sai
+
+Đối chiếu từng hình trên `dist/<trang>/index.html` với chữ, bảng, khuông của trang (ghi ở `ghi_chu` từng câu, đoạn "Soát hình 2A"). Ba chỗ hình đọc chữ thành độ dài đều là **chỉ vẽ lại**, không cần lượt 2:
+
+- `tieng-dan` n83: trang tách legatissimo ("chồng nhau một chút xíu", chỉ làm khi tai đã phân biệt rõ hở và dính) khỏi dính ("chồng lên nhau, nghe nhòe"); chỗ khác nhau chỉ có thể là mức chồng. Đã thêm vào chú thích hình "độ hở, độ chồng chỉ để so sánh, không phải số đo" (báo cáo vẽ nói chú thích có câu này, hình `legato` chưa có).
+- `tieng-dan` n84: bảng ghi portato (mezzo-staccato) "hơi tách", staccato "nốt ngắn, có khoảng lặng phía sau", staccatissimo "rất ngắn": thứ tự đọc thẳng từ chữ bảng, chú thích ghi không phải số đo.
+- `nghe-tiet-tau` n30: bước 2 của trang (mỗi âm tiết là một vị trí) và vị trí nốt (1, 2, "và", 3) cho đen ở 1 kéo tới 2, móc đơn một vị trí; đen ở 3 cùng hình nốt nên cùng độ dài; bài 3 trang dẫn tới ghi đen 1 phách, móc đơn ½.
+
+Lần mới trong `lan` của tám hồ sơ: `review`, `kiem_mau` là "Claude Opus 5.5 (soát hình 2A, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)", `luot_2` "không cần (câu ve-site, thủ tục hình)". Chưa khóa: người gom xem ảnh rồi khóa.
+
+### Kiểm sau khi sửa
+
+- `npm run build:xem`: không cảnh báo `[opus]`; `node tools/khoa.mjs tinh`: khớp (thoát 0); `npm test`: 314 đạt, 2 bỏ qua, 0 hỏng (`tests/thoi-gian.test.mjs` 11 đạt).
+- `node --test tests/trinh-duyet/kiem-thoi-gian.mjs` (ba trình duyệt × 360 tối, 768, 1280): 9/9 đạt sau khi đổi vạch đầu thanh.
+- Ảnh chụp cũ ở thư mục ảnh của người vẽ chụp trước khi sửa: hình `legato` (`piano_tieng-dan_0-*`) cần chụp lại trước khi khóa.

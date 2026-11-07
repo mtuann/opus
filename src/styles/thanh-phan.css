@@ -3371,12 +3371,17 @@ ul.oz-dm-ds > li[hidden] {
 	border: 1.5px dashed currentColor;
 	font-style: italic;
 }
-/* thanh "phím đang giữ": vạch đậm ở đầu là lúc phím xuống */
+/* thanh "phím đang giữ": vạch đậm ở đầu là lúc phím xuống. Vẽ bằng bóng trong (không bằng viền): hàng nhiều làn có viền
+   trên, dưới trong suốt và nền chỉ trong phần đệm, nên viền trái sẽ nằm trên nền trang (mất ở chế độ tối, thò ra khe làn). */
 .oz-tg--thanh,
 .oz-tg--dinh,
 .oz-tg--phai,
 .oz-tg--trai {
-	border-inline-start: 4px solid rgb(27 27 27 / 0.55);
+	--oz-tg-dau: rgb(27 27 27 / 0.55);
+	box-shadow:
+		inset 4px 0 0 var(--oz-tg-dau),
+		inset 0 0 0 1px rgb(27 27 27 / 0.3);
+	padding-inline-start: 4px;
 	border-radius: 2px;
 }
 .oz-tg--thanh {
@@ -3387,11 +3392,11 @@ ul.oz-dm-ds > li[hidden] {
 }
 .oz-tg--phai {
 	background-color: var(--oz-ngon-phai);
-	border-inline-start-color: #0d2a4d;
+	--oz-tg-dau: #0d2a4d;
 }
 .oz-tg--trai {
 	background-color: var(--oz-ngon-trai);
-	border-inline-start-color: #4a1508;
+	--oz-tg-dau: #4a1508;
 }
 .oz-tg-vach {
 	position: absolute;

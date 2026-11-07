@@ -144,3 +144,31 @@ test('::hinh{ten} dựng hình thời gian', () => {
 	assert.match(h, /class="oz-figure oz-tg not-content" data-sinh/);
 	assert.match(dung('::hinh{ten="hai-choi-ba"}\n', 'piano/hai-tay'), /Tay phải \(chơi ba\)/);
 });
+
+test('các hình còn lại (soát 2A): nhịp đơn/kép, đếm to, kiểu ngắt, diễn tấu, đoạn nhạc, câu nhạc khớp chữ trang', () => {
+	// luyen-tai/nghe-tiet-tau: hai phách cùng độ dài; "1 và 2 và" / "1 la li 2 la li"
+	const dk = hang(HINH_THOI_GIAN['nhip-don-kep']());
+	assert.deepEqual(dk[1].muc.map((m) => m.chu), ['1', 'và', '2', 'và']);
+	assert.deepEqual(dk[3].muc.map((m) => m.chu), ['1', 'la', 'li', '2', 'la', 'li']);
+	assert.deepEqual(dk[0].muc.map((m) => m.rong), dk[2].muc.map((m) => m.rong));
+	// "đen – móc đơn móc đơn – đen": nốt ở 1, 2, "và", 3; đen hai vị trí, móc đơn một
+	const dt = hang(HINH_THOI_GIAN['dem-to']());
+	assert.deepEqual(dt[0].muc.filter((m) => m.lop === 'co').map((m) => m.chu), ['1', '2', 'và', '3']);
+	assert.deepEqual(dt[1].muc.map((m) => [Math.round((m.trai / 100) * 8), Math.round((m.rong / 100) * 8)]), [[0, 2], [2, 1], [3, 1], [4, 2]]);
+	// tieng-dan: legato = tenuto (trọn nốt) > portato > staccato > staccatissimo
+	const kn = hang(HINH_THOI_GIAN['kieu-ngat']()).map((h) => [h.ten.split(' ')[0], h.muc[0].rong]);
+	assert.deepEqual(kn.map(([t]) => t), ['Legato', 'Tenuto', 'Portato', 'Staccato', 'Staccatissimo']);
+	assert.ok(gan(kn[0][1], 25) && gan(kn[1][1], 25) && kn[1][1] > kn[2][1] && kn[2][1] > kn[3][1] && kn[3][1] > kn[4][1], JSON.stringify(kn));
+	// 14-ky-hieu-bieu-dien: staccato ngắn hơn legato, tenuto; fermata có phần "tùy ý"
+	const dien = hang(HINH_THOI_GIAN['dien-tau']());
+	assert.ok(dien[0].muc[0].rong < dien[1].muc[0].rong && gan(dien[1].muc[0].rong, dien[2].muc[0].rong));
+	assert.deepEqual(dien[3].muc.map((m) => m.lop), ['thanh', 'tuy-y']);
+	// 13-ket: câu hỏi 1–4, trả lời 5–8; ô 1–3 và 5–7 cùng màu; kết nửa ô 4, kết trọn ô 8
+	const dn = hang(HINH_THOI_GIAN['doan-nhac']());
+	assert.deepEqual(dn[1].muc.map((m) => [m.chu, m.trai, m.rong]), [['Câu hỏi', 0, 50], ['Câu trả lời', 50, 50]]);
+	assert.deepEqual(dn[2].muc.map((m) => [m.lop, m.trai, m.rong]), [['a', 0, 37.5], ['ket', 37.5, 12.5], ['a', 50, 37.5], ['c', 87.5, 12.5]]);
+	assert.deepEqual(dn[2].muc.filter((m) => m.lop !== 'a').map((m) => m.chu), ['kết nửa', 'kết trọn']);
+	// 30-phat-trien-motip: trình bày 1–4 (ý cơ bản 2 ô, nhắc lại 2 ô), tiếp nối 5–8 không chia
+	const cn = hang(HINH_THOI_GIAN['cau-nhac']());
+	assert.deepEqual(cn[2].muc.map((m) => [m.chu.split(',')[0], m.trai, m.rong]), [['ý cơ bản', 0, 25], ['nhắc lại', 25, 25], ['chia nhỏ', 50, 50]]);
+});

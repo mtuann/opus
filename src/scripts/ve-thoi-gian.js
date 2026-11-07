@@ -302,7 +302,7 @@ function hinhLegato() {
 		moTa:
 			'Bốn nốt Đô, Rê, Mi, Fa; mỗi thanh là lúc phím đang giữ. Hở: nhả sớm, có khoảng trống giữa hai nốt. ' +
 			'Nối đúng: nốt trước nhả đúng lúc nốt sau xuống. Legatissimo: hai nốt chồng nhau một chút xíu. Dính: nhả muộn, hai nốt chồng lên nhau.',
-		chuThich: 'Mỗi thanh là lúc phím đang được giữ; vạch dọc mờ là lúc nốt sau bắt đầu. Chỗ cần nghe là chỗ nối giữa hai thanh.',
+		chuThich: 'Mỗi thanh là lúc phím đang được giữ; vạch dọc mờ là lúc nốt sau bắt đầu. Chỗ cần nghe là chỗ nối giữa hai thanh; độ hở, độ chồng chỉ để so sánh, không phải số đo.',
 		hang: [
 			{ ten: '<b>Hở</b> (nhả sớm)', lan: 2, vach: VACH_NOT, muc: bonNot(8) },
 			{ ten: '<b>Nối đúng</b>', lan: 2, nhom: true, vach: VACH_NOT, muc: bonNot(12) },
@@ -430,8 +430,8 @@ function hinhCauNhac() {
 	});
 }
 
-/** Tên hình (::hinh{ten="…"}) -> hàm dựng HTML. Thêm vào HINH của src/plugins/thanh-phan.mjs. */
-export const HINH_THOI_GIAN = {
+/** Tên hình (::hinh{ten="…"}) -> hàm dựng HTML. Thêm vào HINH của src/plugins/thanh-phan.mjs. Lỗi mô tả ghi tên hình. */
+const HAM = {
 	nhip: hinhNhip,
 	'nhip-don-kep': hinhNhipDonKep,
 	'dem-to': hinhDemTo,
@@ -445,3 +445,15 @@ export const HINH_THOI_GIAN = {
 	'doan-nhac': hinhDoanNhac,
 	'cau-nhac': hinhCauNhac,
 };
+export const HINH_THOI_GIAN = Object.fromEntries(
+	Object.entries(HAM).map(([ten, f]) => [
+		ten,
+		() => {
+			try {
+				return f();
+			} catch (e) {
+				throw new Error(`::hinh{ten="${ten}"}: ${e.message}`);
+			}
+		},
+	]),
+);

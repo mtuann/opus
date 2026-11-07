@@ -18,9 +18,9 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: "Claude Opus 5.5 (đợt hình 2a, mo/hinh-dot-2a, 06/11/2026)"
-      luot_2: null
-      review: null
-      kiem_mau: null
+      luot_2: "không cần (câu ve-site, thủ tục hình)"
+      review: "Claude Opus 5.5 (soát hình 2A, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
+      kiem_mau: "Claude Opus 5.5 (soát hình 2A, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
 ghi_chu: 'Bài nhạc lý 3 (trường độ, hình nốt, dấu lặng, chấm dôi, dấu nối). Nguồn chính: Open Music Theory (OMT), mở từng chương bằng curl ngày 24/10/2026 (WebFetch trả 403); bổ sung MT21C (Puget Sound, 4.2–4.4) và bài giảng Weinreich về âm học piano (Viện Hàn lâm Âm nhạc Hoàng gia Thụy Điển) cho n20. Không sửa chữ của trang (chỉ sửa mục ## Nguồn: thay link chung bằng link từng chương đã dùng, bỏ musictheory.net vì chưa đối chiếu nội dung). Không tính là nhận định: tiêu đề mục; câu hỏi của phần Bài tập (chỉ tính câu trả lời trong khối thu gọn). Câu "trường hợp phổ biến nhất" (n5): suy từ MT21C 4.2 (số chỉ nhịp phổ biến nhất hiện nay là 4/4, phách là nốt đen); OMT chỉ nói số dưới "usually" là 2, 4 hay 8. Thuật ngữ tiếng Việt chưa có trong src/data/thuat-ngu.yml, ghi cho D3-L5: "nốt tròn / trắng / đen / móc đơn / móc kép" (whole, half, quarter, eighth, sixteenth note), "dấu lặng" và "lặng đơn / lặng kép" (cách gọi tắt của lặng móc đơn / móc kép), "chấm dôi" (dot), "dấu nối" (tie), "dấu luyến" (slur), "gạch ngang" (beam), "đuôi" (stem) và "móc" (flag). Đối chiếu "Giáo trình môn Lý thuyết âm nhạc cơ bản" (tệp PDF https://novaspro.vn/upload/files/giao_trinh_mon_ly_thuyet_am_nhac_co_ban.pdf; không ghi tác giả, bậc 3, chỉ để chứng thực cách gọi ở Việt Nam): có "nốt tròn, nốt trắng, nốt đen, nốt móc đơn, nốt móc kép", "dấu lặng" (bảng lặng tròn, trắng, đen, móc đơn, móc kép; bảng thuật ngữ cuối sách: quaver rest = "lặng đơn", semiquaver rest = "lặng kép"), "dấu chấm dôi", "dấu nối", "dấu luyến", "đuôi nốt nhạc" và "nét móc ở đuôi nốt nhạc"; cái tương ứng với beam là "vạch nối đuôi nốt nhạc" (không có "gạch ngang"). Chú ý trùng chữ: thuat-ngu.yml mô tả dấu tenuto là "gạch ngang ngắn trên nốt", nên "gạch ngang" (beam) ở trang này dễ lẫn: D3-L5 chọn tên khác cho beam (như "vạch nối đuôi nốt") hay giữ và thêm "(beam)".'
 nguon:
   - id: omt-notation
@@ -372,13 +372,15 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026: HTML trong dist/<trang>/index.html) và module dựng hình (src/scripts/ve-thoi-gian.js, hàm ghi dưới; vị trí mỗi mục là phần trăm của trục, tests/thoi-gian.test.mjs đọc lại); ảnh chụp 360 và 1280 px. hinhTruongDo, hinhNot. Khớp câu \"Mỗi hình nốt dài gấp đôi hình nốt nhỏ hơn kế tiếp\", \"nốt đen bằng 1 phách\", cột \"Hình dạng\" và \"Số phách\" của bảng, câu \"mỗi ô đều dài 4 phách, chỉ khác cách chia\" và khuông đầu bài (C4 | C2 C2 | C C C C | 8 móc đơn). Hàng móc kép không có trong khuông nhưng có trong bảng (¼ phách, 16 nốt cho 4 phách)."
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026: HTML trong dist/<trang>/index.html) và module dựng hình (src/scripts/ve-thoi-gian.js, hàm ghi dưới; vị trí mỗi mục là phần trăm của trục, tests/thoi-gian.test.mjs đọc lại); ảnh chụp 360 và 1280 px. hinhTruongDo, hinhNot. Khớp câu \"Mỗi hình nốt dài gấp đôi hình nốt nhỏ hơn kế tiếp\", \"nốt đen bằng 1 phách\", cột \"Hình dạng\" và \"Số phách\" của bảng, câu \"mỗi ô đều dài 4 phách, chỉ khác cách chia\" và khuông đầu bài (C4 | C2 C2 | C C C C | 8 móc đơn). Hàng móc kép không có trong khuông nhưng có trong bảng (¼ phách, 16 nốt cho 4 phách). Soát hình 2A (gộp review và kiểm mẫu): đối chiếu trên bản xem (npm run build:xem 07/11/2026, dist/<trang>/index.html) và module src/scripts/ve-thoi-gian.js. Trục 16 phần, phách 4 phần: tròn 1 ô 16, trắng 2 ô 8, đen 4 ô 4, móc đơn 8 ô 2, móc kép 16 ô 1; nhãn 4, 2, 1, ½, ¼ như cột \"Số phách\"; hình nốt khớp cột \"Hình dạng\" (đầu rỗng hay đặc, đuôi, 1 và 2 móc). Đúng."
+    review: dung
   - id: n35
     cau: "Hình sau hai gạch đầu dòng của mục \"Dấu chấm dôi\" (::hinh{ten=\"cham-doi\"}) vẽ trên trục 4 phách: nốt trắng chấm dôi là ô 2 phách cộng ô 1 phách (3 phách); nốt đen chấm dôi là ô 1 phách cộng ô ½ phách (1½ phách). Chú thích: phần sau dấu cộng là độ dài chấm dôi thêm vào, một nửa độ dài của chính nốt."
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026: HTML trong dist/<trang>/index.html) và module dựng hình (src/scripts/ve-thoi-gian.js, hàm ghi dưới; vị trí mỗi mục là phần trăm của trục, tests/thoi-gian.test.mjs đọc lại); ảnh chụp 360 và 1280 px. hinhChamDoi. Khớp câu \"Một chấm nhỏ bên phải nốt làm nốt dài thêm một nửa độ dài của chính nó\" và hai gạch đầu dòng \"Nốt trắng chấm dôi = 2 + 1 = 3 phách\", \"Nốt đen chấm dôi = 1 + ½ = 1½ phách\"."
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026: HTML trong dist/<trang>/index.html) và module dựng hình (src/scripts/ve-thoi-gian.js, hàm ghi dưới; vị trí mỗi mục là phần trăm của trục, tests/thoi-gian.test.mjs đọc lại); ảnh chụp 360 và 1280 px. hinhChamDoi. Khớp câu \"Một chấm nhỏ bên phải nốt làm nốt dài thêm một nửa độ dài của chính nó\" và hai gạch đầu dòng \"Nốt trắng chấm dôi = 2 + 1 = 3 phách\", \"Nốt đen chấm dôi = 1 + ½ = 1½ phách\". Soát hình 2A (gộp review và kiểm mẫu): đối chiếu trên bản xem (npm run build:xem 07/11/2026, dist/<trang>/index.html) và module src/scripts/ve-thoi-gian.js. Trắng chấm dôi: ô 8/16 (2 phách) cộng ô 4/16 (1 phách); đen chấm dôi: ô 4/16 (1) cộng ô 2/16 (½); khớp hai gạch đầu dòng và câu \"dài thêm một nửa độ dài của chính nó\". Đúng."
+    review: dung
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
