@@ -6,8 +6,8 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
-import { cacPhan, fileDoi, laNoiDung, phanLoai } from '../tools/chon-phan-ci.mjs';
-import { KHOI, chiTrangDoi, trangMau } from '../tools/trang-mau.mjs';
+import { DEPLOY_DU, DEPLOY_GON, cacPhan, chiTrangDoi as chiTrangDoiCi, fileDoi, laNoiDung, phanDeploy, phanLoai } from '../tools/chon-phan-ci.mjs';
+import { KHOI, chiTrangDoi, trangDaDoi, trangMau } from '../tools/trang-mau.mjs';
 
 test('phân loại file: nhóm nội dung', () => {
 	for (const f of [
@@ -80,6 +80,46 @@ test('các phần theo loại', () => {
 	assert.deepEqual(cacPhan('ma', { anhChup: true }).at(-1), 'anh-chup');
 });
 
+test('chỉ trang đã đổi: nhánh nội dung không có src/data/; có dữ liệu thì Chromium chạy đủ trang mẫu', () => {
+	assert.equal(chiTrangDoiCi(['src/content/docs/a.md', 'kiem-dinh/a.yml']), true);
+	assert.equal(chiTrangDoiCi(['src/content/docs/a.md', 'src/data/tac-pham.yml']), false);
+	assert.equal(chiTrangDoiCi(['src/data/cap-do.yml']), false);
+	assert.equal(chiTrangDoiCi(['src/content/docs/a.md'], { du: true }), false);
+	assert.equal(chiTrangDoiCi(['src/content/docs/a.md', 'src/scripts/abc.js']), false);
+	assert.equal(chiTrangDoiCi([]), false);
+	// có dữ liệu thì vẫn bỏ WebKit, Firefox
+	assert.deepEqual(cacPhan(phanLoai(['src/data/tac-pham.yml'])), ['npm-test', 'chromium', 'lighthouse']);
+});
+
+test('các phần của deploy.yml', () => {
+	assert.deepEqual(DEPLOY_DU, ['chromium', 'webkit', 'firefox', 'lighthouse']);
+	assert.deepEqual(DEPLOY_GON, ['chromium', 'lighthouse']);
+	// test.yml chưa đạt ở commit này: đủ, dù file đổi từ mốc chỉ là nội dung
+	assert.deepEqual(phanDeploy({ daDat: false, daDu: false, kieuTuMoc: 'noi-dung' }), DEPLOY_DU);
+	assert.deepEqual(phanDeploy({ daDat: false, daDu: true, kieuTuMoc: 'noi-dung' }), DEPLOY_DU);
+	// đã chạy đủ ở nhánh: bỏ WebKit, Firefox
+	assert.deepEqual(phanDeploy({ daDat: true, daDu: true, kieuTuMoc: 'ma' }), DEPLOY_GON);
+	// chỉ rút gọn: theo file đổi từ lần deploy đạt gần nhất
+	assert.deepEqual(phanDeploy({ daDat: true, daDu: false, kieuTuMoc: 'noi-dung' }), DEPLOY_GON);
+	assert.deepEqual(phanDeploy({ daDat: true, daDu: false, kieuTuMoc: 'ma' }), DEPLOY_DU);
+});
+
+test('deploy: mốc là lần deploy đạt gần nhất, không phải commit trước', (t) => {
+	// main: m (đã đăng) -> c1 (mã, deploy hỏng) -> c2 (nội dung). So với commit trước (c1) chỉ là nội dung; so với mốc (m)
+	// có mã, nên phải chạy đủ.
+	const goc = repoTam({ 'src/scripts/x.js': 'x' });
+	t.after(() => fs.rmSync(goc, { recursive: true, force: true }));
+	const git = (...a) => execFileSync('git', ['-C', goc, '-c', 'user.name=t', '-c', 'user.email=t@t', '-c', 'commit.gpgsign=false', ...a], { encoding: 'utf8' }).trim();
+	const c1 = git('rev-parse', 'HEAD');
+	fs.writeFileSync(path.join(goc, 'src/content/docs/a.md'), 'a2');
+	git('commit', '-q', '-am', 'c2');
+	assert.equal(phanLoai(fileDoi(c1, goc)), 'noi-dung');
+	assert.equal(phanLoai(fileDoi('main', goc)), 'ma');
+	assert.deepEqual(phanDeploy({ daDat: true, daDu: false, kieuTuMoc: phanLoai(fileDoi('main', goc)) }), DEPLOY_DU);
+	// không có mốc (API lỗi): đủ
+	assert.deepEqual(phanDeploy({ daDat: true, daDu: false, kieuTuMoc: phanLoai(fileDoi('', goc)) }), DEPLOY_DU);
+});
+
 /** Repo git tạm: main có một trang, nhánh đổi `doi` (đường dẫn -> nội dung). */
 function repoTam(doi) {
 	const goc = fs.mkdtempSync(path.join(os.tmpdir(), 'opus-ci-'));
@@ -130,6 +170,17 @@ test('trang mẫu: OPUS_CHI_TRANG_DOI=1 bỏ phần trang mẫu theo loại kh�
 	assert.equal(chiTrangDoi({}), false);
 	assert.equal(chiTrangDoi({ OPUS_CHI_TRANG_DOI: '1' }), true);
 	assert.deepEqual(trangMau(dist, goc, {}), ['', '404.html', 'doi/b/', 'khoi/abc/', 'khoi/quiz/']);
-	assert.deepEqual(trangMau(dist, goc, { OPUS_CHI_TRANG_DOI: '1' }), ['', '404.html', 'doi/b/']);
-	assert.deepEqual(trangMau(dist, goc, { OPUS_CHI_TRANG_DOI: '1', OPUS_TRANG: 'them' }), ['', '404.html', 'doi/b/', 'them/']);
+	// chỉ trang đã đổi, cộng trang có khuông nhạc (KHOI_CO_DINH) để Lighthouse luôn có ba trang
+	assert.deepEqual(trangMau(dist, goc, { OPUS_CHI_TRANG_DOI: '1' }), ['', '404.html', 'doi/b/', 'khoi/abc/']);
+	assert.deepEqual(trangMau(dist, goc, { OPUS_CHI_TRANG_DOI: '1', OPUS_TRANG: 'them' }), ['', '404.html', 'doi/b/', 'khoi/abc/', 'them/']);
+});
+
+test('trang đã đổi: tính cả trang đổi tên hay chuyển chỗ', (t) => {
+	const goc = repoTam({ 'plans/x.md': 'x' });
+	t.after(() => fs.rmSync(goc, { recursive: true, force: true }));
+	const git = (...a) => execFileSync('git', ['-C', goc, '-c', 'user.name=t', '-c', 'user.email=t@t', '-c', 'commit.gpgsign=false', ...a], { stdio: 'ignore' });
+	fs.mkdirSync(path.join(goc, 'src/content/docs/moi'), { recursive: true });
+	git('mv', 'src/content/docs/a.md', 'src/content/docs/moi/a.md');
+	git('commit', '-q', '-m', 'chuyển chỗ');
+	assert.deepEqual(trangDaDoi(goc), ['moi/a/']);
 });

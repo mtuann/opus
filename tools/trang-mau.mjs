@@ -2,7 +2,8 @@
 // đều được kiểm. Thứ tự: trang chủ, trang 404, các trang nhánh đang làm đã đổi so với main (tối đa TOI_DA_TRANG_DOI: trang của lô), rồi
 // với mỗi loại khối, trang đầu tiên (theo thứ tự chữ cái) có khối ấy; cộng trang ghi trong biến môi trường OPUS_TRANG
 // ("nhac-ly/10-hop-am-ba/,piano/gam/"). OPUS_CHI_TRANG_DOI=1 (CI, nhánh chỉ đổi nội dung: tools/chon-phan-ci.mjs) thì bỏ
-// phần trang mẫu theo loại khối: chỉ trang chủ, trang 404, trang đã đổi và OPUS_TRANG.
+// phần trang mẫu theo loại khối: chỉ trang chủ, trang 404, trang đã đổi, một trang cố định (KHOI_CO_DINH, để Lighthouse
+// luôn đo đủ ba trang dù nhánh không đổi trang nào) và OPUS_TRANG.
 import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -97,7 +98,7 @@ function tatCa(dist) {
 		.sort();
 }
 
-/** Trang (trong src/content/docs/) nhánh đang làm đã đổi so với main; rỗng nếu đang ở main hay không đọc được git. */
+/** Trang (trong src/content/docs/) nhánh đang làm đã thêm, sửa hay đổi tên/chuyển chỗ so với main; rỗng nếu đang ở main hay không đọc được git. */
 export function trangDaDoi(goc = GOC) {
 	const git = (...ts) => execFileSync('git', ['-C', goc, ...ts], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
 	try {
@@ -109,7 +110,7 @@ export function trangDaDoi(goc = GOC) {
 			}
 		});
 		if (!nen) return [];
-		const doi = git('diff', '--name-only', '--diff-filter=AM', git('merge-base', 'HEAD', nen), '--', 'src/content/docs');
+		const doi = git('diff', '--name-only', '--diff-filter=AMR', git('merge-base', 'HEAD', nen), '--', 'src/content/docs');
 		return doi
 			.split('\n')
 			.map((f) => /^src\/content\/docs\/(.+)\.md$/.exec(f)?.[1])
@@ -119,6 +120,9 @@ export function trangDaDoi(goc = GOC) {
 		return [];
 	}
 }
+
+/** Loại khối mà chế độ chỉ trang đã đổi vẫn lấy một trang: trang có khuông nhạc (khối nặng nhất cho Lighthouse). */
+export const KHOI_CO_DINH = ['khuông nhạc'];
 
 /** Chỉ lấy trang chủ, trang 404, trang đã đổi (và OPUS_TRANG), không lấy trang mẫu theo loại khối? */
 export const chiTrangDoi = (env = process.env) => env.OPUS_CHI_TRANG_DOI === '1';
@@ -130,7 +134,7 @@ export function trangMau(dist, goc = GOC, env = process.env) {
 	const html = new Map(co.map((t) => [t, fs.readFileSync(fileCua(dist, t), 'utf8')]));
 	const ra = ['', ...(fs.existsSync(path.join(dist, '404.html')) ? ['404.html'] : [])];
 	ra.push(...trangDaDoi(goc).filter((t) => html.has(t)).slice(0, TOI_DA_TRANG_DOI));
-	for (const dau of chiTrangDoi(env) ? [] : Object.values(KHOI)) {
+	for (const dau of chiTrangDoi(env) ? KHOI_CO_DINH.map((k) => KHOI[k]) : Object.values(KHOI)) {
 		const t = co.find((x) => x && html.get(x).includes(dau));
 		if (t !== undefined) ra.push(t);
 	}

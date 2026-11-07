@@ -62,15 +62,19 @@ runs:
       shell: bash
     # apt của máy CI có lúc rất chậm (firefox từng mất 26 phút, job bị hủy): mỗi lần thử tối đa 4 phút, hỏng hay quá giờ
     # thì thử lại một lần (tổng khoảng 8 phút; bước của action dạng composite không nhận timeout-minutes nên giới hạn bằng
-    # lệnh timeout, lệnh này dừng cả nhóm tiến trình con, kể cả apt-get chạy qua sudo)
+    # lệnh timeout). timeout gửi tín hiệu cho nhóm tiến trình của nó, nhưng sudo có thể chạy apt-get ở nhóm khác: apt-get
+    # của lần trước có thể còn chạy và giữ khóa dpkg. Trước lần hai: cho apt chờ khóa tối đa 2 phút thay vì hỏng ngay
+    # (DPkg::Lock::Timeout), rồi hoàn tất các gói cài dở.
     - name: Cài thư viện hệ thống cho ${{ steps.pw.outputs.trinh-duyet }}
       if: inputs.phan != 'npm-test'
       run: |
         for lan in 1 2; do
           if timeout --kill-after=20s 240 npx playwright install-deps "$TRINH_DUYET"; then exit 0; fi
           echo "::warning::Cài thư viện hệ thống cho $TRINH_DUYET lần $lan hỏng hay quá 4 phút"
-          # lần trước bị dừng giữa chừng: hoàn tất các gói đang cài dở trước khi thử lại
-          timeout 60 sudo dpkg --configure -a || true
+          if [ "$lan" = 1 ]; then
+            echo 'DPkg::Lock::Timeout "120";' | sudo tee /etc/apt/apt.conf.d/99opus-cho-khoa > /dev/null || true
+            timeout 60 sudo dpkg --configure -a || true
+          fi
         done
         exit 1
       env:

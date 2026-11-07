@@ -35,7 +35,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          # bước "Đã kiểm ở nhánh?" so commit này với commit trước trên main (github.event.before): cần đủ lịch sử
+          # bước "Đã kiểm ở nhánh?" so commit này với commit của lần deploy đạt gần nhất: cần đủ lịch sử
           fetch-depth: 0
       - uses: ./.github/actions/kiem-thu
         with:
@@ -44,23 +44,21 @@ jobs:
       # Lô gộp vào main kiểu fast-forward: commit này đã qua test.yml ở nhánh (lần chạy do push hay bấm chạy tay, kiểm
       # đúng commit này; lần chạy của pull request kiểm bản gộp nên không tính) với bản xem. Bản thật dựng khác bản xem
       # (link tới trang chưa khóa thành "sắp có", nút của dải mực tự ẩn, không có dải "Chưa kiểm định", trang mẫu khác),
-      # nên vẫn kiểm trên Chromium (axe, hiển thị, thành phần, đủ trang mẫu) và Lighthouse; WebKit và Firefox thì:
-      # - test.yml đã chạy đủ (có job webkit và firefox đạt): bỏ;
-      # - test.yml chỉ chạy phần rút gọn (nhánh chỉ đổi nội dung, tools/chon-phan-ci.mjs: Chromium trên trang đã đổi): tự
-      #   phân loại file đổi so với commit trước trên main; chỉ nội dung thì bỏ (không đổi mã nên ba trình duyệt cho cùng
-      #   kết quả, thành phần đã kiểm ở lần đăng trước), có mã thì chạy;
-      # - push thẳng lên main hay test.yml chưa đạt ở commit này: chạy đủ bốn phần; bấm chạy tay (không có commit trước để
-      #   so) mà test.yml chỉ chạy rút gọn: cũng đủ.
+      # nên vẫn kiểm trên Chromium (axe, hiển thị, thành phần, đủ trang mẫu) và Lighthouse. WebKit và Firefox
+      # (phanDeploy trong tools/chon-phan-ci.mjs):
+      # - test.yml đã chạy đủ ở commit này (job webkit và firefox đạt): bỏ;
+      # - test.yml chỉ chạy phần rút gọn (nhánh chỉ đổi nội dung so với main): phân loại file đổi từ mốc là commit của
+      #   lần deploy.yml đạt gần nhất trên main (không dùng commit trước, github.event.before: commit mã chưa đăng được vì
+      #   hỏng ở WebKit, hay lần chạy bị concurrency hủy, vẫn phải tính); chỉ nội dung thì bỏ (không đổi mã so với bản đã
+      #   đăng nên ba trình duyệt cho cùng kết quả), có mã thì chạy;
+      # - test.yml chưa đạt ở commit này, không lấy được mốc hay git không đọc được: chạy đủ bốn phần.
       - name: Đã kiểm ở nhánh?
         id: da-kiem
         env:
           GH_TOKEN: ${{ github.token }}
           REPO: ${{ github.repository }}
           SHA: ${{ github.sha }}
-          TRUOC: ${{ github.event.before }}
         run: |
-          du='["chromium","webkit","firefox","lighthouse"]'
-          gon='["chromium","lighthouse"]'
           lan=$(gh api "repos/$REPO/actions/workflows/test.yml/runs?head_sha=$SHA&status=success" \
             -q '[.workflow_runs[] | select(.event == "push" or .event == "workflow_dispatch") | .id | tostring] | join(" ")' || echo "")
           da_dat=0; da_du=0
@@ -70,15 +68,11 @@ jobs:
               -q '[.jobs[] | select(.conclusion == "success") | select(.name | test("webkit|firefox"))] | length' || echo 0)
             if [ "${n:-0}" -ge 2 ]; then da_du=1; fi
           done
-          if [ "$da_dat" = 0 ]; then
-            echo "test.yml chưa đạt ở $SHA: chạy đủ"; p=$du
-          elif [ "$da_du" = 1 ]; then
-            echo "test.yml đã đạt đủ phần ở $SHA: bỏ WebKit, Firefox"; p=$gon
-          else
-            kieu=$(node tools/chon-phan-ci.mjs --nen "$TRUOC" --kieu)
-            echo "test.yml chỉ chạy phần rút gọn ở $SHA; file đổi so với ${TRUOC:-(không có)}: $kieu"
-            if [ "$kieu" = noi-dung ]; then p=$gon; else p=$du; fi
-          fi
+          moc=$(gh api "repos/$REPO/actions/workflows/deploy.yml/runs?branch=main&status=success&per_page=1" \
+            -q '.workflow_runs[0].head_sha // ""' || echo "")
+          p=$(node tools/chon-phan-ci.mjs --deploy --da-dat "$da_dat" --da-du "$da_du" --nen "$moc") \
+            || p='["chromium","webkit","firefox","lighthouse"]'
+          echo "test.yml đã đạt ở $SHA: $da_dat, đủ phần: $da_du; mốc (deploy đạt gần nhất): ${moc:-(không có)}; các phần: $p"
           echo "cac-phan=$p" >> "$GITHUB_OUTPUT"
         shell: bash
       - uses: actions/upload-pages-artifact@v5
