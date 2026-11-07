@@ -18,9 +18,9 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: "Claude Opus 5.5 (đợt hình 2b, lượt 1, 06/11/2026; thủ tục hình, plans/ben-vung/chuan-kiem-dinh.md mục 7)"
-      luot_2: null
-      review: null
-      kiem_mau: null
+      luot_2: "Claude Sonnet 5.5 (lượt 2 mo/hinh-dot-2b, n42, n43; 07/11/2026)"
+      review: "Claude Opus 5.5 (soát hình 2B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
+      kiem_mau: "Claude Opus 5.5 (soát hình 2B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
 ghi_chu: 'Trang gam thứ (tầng lõi). Nguồn chính: Open Music Theory (OMT), mở từng chương bằng curl ngày 24/10/2026 (công cụ đọc web bị trang chặn, theo lời giao việc của lô); bổ sung: Andre Mount (FFF) ch. 7, 9, 16, MT21C 3.2; giọng của ba tác phẩm theo IMSLP (trang tác phẩm mở được). Câu về site (n11, n28, n31, n35): kiểm trên bản cũ ../opus-zero/docs/ và JavaScript cũ vì trang đích chưa chuyển; riêng bàn phím kiểm với thành phần mới của lô. Sửa trang: n1 (câu mở đầu và mô tả trang), n2 đến n4 (thêm giọng của ba tác phẩm; Bach thêm số BWV), n10 (bỏ "bậc 3 tạo nên màu tối"), n22 (bỏ "nghe hơi phương Đông", "âm thanh" đổi thành "bước nhảy") và mục Nguồn (thay link chung tới OMT và musictheory.net bằng các chương đã đọc; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, agent không đọc được chữ). Thuật ngữ cho D3-L5: "giọng thứ song song" (relative minor), "giọng thứ cùng tên" (parallel minor), "gam thứ tự nhiên, hòa âm, giai điệu", tính chất quãng ("quãng 2 tăng", "4 tăng", "3 thứ") chưa có trong src/data/thuat-ngu.yml; bài 7 và 8 viết bậc bằng số Ả Rập ("bậc 3, 6, 7") còn bài 6 dùng số La Mã; bản cũ luyen-tai/nghe-gam viết "Thứ hòa thanh" còn bài 7 và công cụ cũ viết "gam thứ hòa âm" (cần một tên). Không tính là nhận định: tên tiêu đề, "Bài tập" mục 1 và 2 (là câu hỏi, đáp án đã tính ở n33, n34).'
 nguon:
   - id: omt-steps
@@ -503,19 +503,28 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Thêm ngoac=\"A3-B3:1 B3-C4:½ C4-D4:1 D4-E4:1 E4-F4:½ F4-G4:1 G4-A4:1\" vào bàn phím đã có (n12 vẫn đúng: tô 8 phím, ngay sau đoạn về bậc 3; câu dẫn mới chen giữa đoạn ấy và bàn phím). Bảy ngoặc khớp từng ô của bảng và công thức \"Cung – Nửa cung – Cung – Cung – Nửa cung – Cung – Cung\"."
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Thêm ngoac=\"A3-B3:1 B3-C4:½ C4-D4:1 D4-E4:1 E4-F4:½ F4-G4:1 G4-A4:1\" vào bàn phím đã có (n12 vẫn đúng: tô 8 phím, ngay sau đoạn về bậc 3; câu dẫn mới chen giữa đoạn ấy và bàn phím). Bảy ngoặc khớp từng ô của bảng và công thức \"Cung – Nửa cung – Cung – Cung – Nửa cung – Cung – Cung\". Soát hình 2B (gộp review và kiểm mẫu): đối chiếu SVG trong dist/ (npm run build:xem, 07/11/2026; aria-label của hình và ảnh 360/1280 px) với chữ trang: La3–La4, ngoặc 1, ½, 1, 1, ½, 1, 1 đúng từng cặp; khớp bảng La thứ tự nhiên và công thức. Kết quả: dung."
+    review: dung
   - id: n42
     cau: "Hình bàn phím La3–La4 ở mục \"Gam thứ hòa âm\" tô La3, Si3, Đô4, Rê4, Mi4, Fa4, Sol♯4, La4 (như khuông \"La thứ hòa âm\"), nhãn \"bậc 7\" trên Sol♯4; ngoặc 1, ½, 1, 1, ½, 1½, ½; câu dẫn: ngoặc Fa – Sol♯ ghi 1½, tức một cung rưỡi (3 nửa cung)."
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp ::cong-cu{ten=\"piano\" range=\"A3-A4\" notes=\"A3 B3 C4 D4 E4 F4 G#4 A4\" nhan=\"G#4:bậc_7\" ngoac=\"… F4-G#4:1½ G#4-A4:½\"}. Năm ngoặc đầu như gam tự nhiên (bảng); Fa – Sol♯ là 3 nửa cung (chữ ngay trên: \"Khoảng cách giữa Fa và Sol♯ là 3 nửa cung\"), 1½ cung = 3 nửa cung theo định nghĩa hai nửa cung là một cung; Sol♯ – La: bậc 7 cách chủ âm một cung, nâng lên nửa cung thì còn nửa cung (MIDI Sol♯4 68, La4 69). Bậc 7 là Sol♯ như bảng \"So sánh ba dạng\"."
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp ::cong-cu{ten=\"piano\" range=\"A3-A4\" notes=\"A3 B3 C4 D4 E4 F4 G#4 A4\" nhan=\"G#4:bậc_7\" ngoac=\"… F4-G#4:1½ G#4-A4:½\"}. Năm ngoặc đầu như gam tự nhiên (bảng); Fa – Sol♯ là 3 nửa cung (chữ ngay trên: \"Khoảng cách giữa Fa và Sol♯ là 3 nửa cung\"), 1½ cung = 3 nửa cung theo định nghĩa hai nửa cung là một cung; Sol♯ – La: bậc 7 cách chủ âm một cung, nâng lên nửa cung thì còn nửa cung (MIDI Sol♯4 68, La4 69). Bậc 7 là Sol♯ như bảng \"So sánh ba dạng\". Soát hình 2B (gộp review và kiểm mẫu): đối chiếu SVG trong dist/ (npm run build:xem, 07/11/2026; aria-label của hình và ảnh 360/1280 px) với chữ trang: tô các nốt của khuông La thứ hòa âm (A, B, C D E F ^G A), nhãn bậc 7 trên Sol♯4, ngoặc 1, ½, 1, 1, ½, 1½, ½; Fa – Sol♯ 3 nửa cung như chữ trang, Sol♯ – La ½ suy từ nâng bậc 7 nửa cung; lượt 2 (OMT, dung) xác nhận, nên không tính là điều mới. Kết quả: dung."
+    luot_2: dung
+    luot_2_nguon: ["https://web.archive.org/web/2024/https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/"]
+    luot_2_ghi_chu: "Open Music Theory, Minor Scales: gam thứ hòa âm đi lên W-H-W-W-H-3Hs-H, vậy trong La thứ: La-Si 1, Si-Đô ½, Đô-Rê 1, Rê-Mi 1, Mi-Fa ½, Fa-Sol♯ 1½ (3 nửa cung), Sol♯-La ½. Khớp ngoặc 1, ½, 1, 1, ½, 1½, ½ ở dòng 66 của trang."
+    review: dung
   - id: n43
     cau: "Hình bàn phím La3–La4 ở mục \"Gam thứ giai điệu\" (gam đi lên) tô La3, Si3, Đô4, Rê4, Mi4, Fa♯4, Sol♯4, La4 (như khuông, nửa đi lên), nhãn \"bậc 6\" trên Fa♯4 và \"bậc 7\" trên Sol♯4; ngoặc 1, ½, 1, 1, 1, 1, ½."
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp ::cong-cu{ten=\"piano\" range=\"A3-A4\" notes=\"A3 B3 C4 D4 E4 F#4 G#4 A4\" nhan=\"F#4:bậc_6 G#4:bậc_7\" ngoac=\"A3-B3:1 B3-C4:½ C4-D4:1 D4-E4:1 E4-F#4:1 F#4-G#4:1 G#4-A4:½\"}. Bậc 6 Fa♯, bậc 7 Sol♯ như chữ mục và bảng \"So sánh ba dạng\". Ba ngoặc Mi–Fa♯, Fa♯–Sol♯, Sol♯–La trang không ghi bằng chữ; hình đếm phím theo định nghĩa của bài 5 (hai phím liền kề là nửa cung): MIDI Mi4 64, Fa♯4 66, Sol♯4 68, La4 69, nên 1, 1, ½. Bốn ngoặc đầu như gam tự nhiên (bảng)."
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp ::cong-cu{ten=\"piano\" range=\"A3-A4\" notes=\"A3 B3 C4 D4 E4 F#4 G#4 A4\" nhan=\"F#4:bậc_6 G#4:bậc_7\" ngoac=\"A3-B3:1 B3-C4:½ C4-D4:1 D4-E4:1 E4-F#4:1 F#4-G#4:1 G#4-A4:½\"}. Bậc 6 Fa♯, bậc 7 Sol♯ như chữ mục và bảng \"So sánh ba dạng\". Ba ngoặc Mi–Fa♯, Fa♯–Sol♯, Sol♯–La trang không ghi bằng chữ; hình đếm phím theo định nghĩa của bài 5 (hai phím liền kề là nửa cung): MIDI Mi4 64, Fa♯4 66, Sol♯4 68, La4 69, nên 1, 1, ½. Bốn ngoặc đầu như gam tự nhiên (bảng). Soát hình 2B (gộp review và kiểm mẫu): đối chiếu SVG trong dist/ (npm run build:xem, 07/11/2026; aria-label của hình và ảnh 360/1280 px) với chữ trang: tô các nốt của nửa đi lên của khuông (A, B, C D E ^F ^G A), nhãn bậc 6 Fa♯4, bậc 7 Sol♯4 như mục và bảng So sánh ba dạng; ngoặc 1, ½, 1, 1, 1, 1, ½; ba ngoặc cuối đếm phím theo định nghĩa bài 5, lượt 2 (OMT, dung) xác nhận. Kết quả: dung."
+    luot_2: dung
+    luot_2_nguon: ["https://web.archive.org/web/2024/https://viva.pressbooks.pub/openmusictheory/chapter/minor-scales/"]
+    luot_2_ghi_chu: "Open Music Theory, Minor Scales: gam thứ giai điệu đi lên W-H-W-W-W-W-H, vậy trong La thứ: La-Si 1, Si-Đô ½, Đô-Rê 1, Rê-Mi 1, Mi-Fa♯ 1, Fa♯-Sol♯ 1, Sol♯-La ½. Khớp ngoặc ở dòng 84 của trang."
+    review: dung
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan

@@ -18,9 +18,9 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: "Claude Opus 5.5 (đợt hình 2b, lượt 1, 06/11/2026; thủ tục hình, plans/ben-vung/chuan-kiem-dinh.md mục 7)"
-      luot_2: null
-      review: null
-      kiem_mau: null
+      luot_2: "không cần (câu ve-site, thủ tục hình)"
+      review: "Claude Opus 5.5 (soát hình 2B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
+      kiem_mau: "Claude Opus 5.5 (soát hình 2B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
 ghi_chu: 'Trang hợp âm ba (tầng lõi). Nguồn chính: Open Music Theory (OMT), Triads, Roman Numerals, Chord Symbols; đối chiếu Mount (FFF) ch. 13 (xếp chồng quãng 3 cho từng loại), 16 (gam thứ hòa âm), 17 (vii°). WebFetch ngày 27/10/2026 (trả bản tóm tắt chữ, không phải HTML thô; chữ trích đã hỏi lại nhiều chiều). Chỗ sửa trang: mô tả và đoạn mở đầu ("cơ bản nhất" thành "ít nốt nhất"); cột Cảm giác của bảng bốn loại theo OMT Triads; mục giọng thứ (gam tự nhiên, riêng V và vii° nâng bậc 7; ghi chú về III+); câu hỏi kiểm tra cuối trang; mục Nguồn. Mục doi_chu tự viết (không build được); người giao chạy lại so-chu --doi-chu để chuẩn hóa dấu nháy. Chưa chắc: không có. Nguồn không nói thẳng: bảng La thứ suy ra từ định nghĩa chất lượng hợp âm của OMT/Mount và gam La thứ tự nhiên/hòa âm (nguồn không liệt kê đủ bảy hợp âm của giọng thứ). Câu về site: các trang chưa chuyển (luyen-tap/ban-phim, luyen-tai/nghe-hop-am, luyen-tap/xay-hop-am, piano/hop-am-rai) kiểm trên ../opus-zero/docs/ và JavaScript cũ. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): root (nốt gốc), third, fifth (nốt ba, nốt năm), major/minor/diminished/augmented triad (hợp âm trưởng, thứ, giảm, tăng), Roman numeral (số La Mã), harmonic minor (gam thứ hòa âm), natural minor (gam thứ tự nhiên); đã có: chord, triad, leading tone.'
 nguon:
   - id: omt-triads
@@ -389,13 +389,15 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Bốn ::cong-cu{ten=\"piano\" range=\"C4-A4\" play=\"chord\" notes=\"…\" ngoac=\"…\"}. Tên, ký hiệu và nốt khớp các cột \"Loại\", \"Ví dụ từ Đô\", \"Ký hiệu\" của bảng (ký hiệu thứ nhất của mỗi dòng); hai quãng 3 khớp cột \"Cấu tạo (từ dưới lên)\". Kiểm lại theo bảng nửa cung của bài 9 (3 trưởng 4, 3 thứ 3): Đô4 60, Mi♭4 63, Mi4 64, Sol♭4 66, Sol4 67, Sol♯4 68. Câu dẫn chung: \"Bốn hợp âm trên phím đàn, theo thứ tự của bảng: hai ngoặc dưới là hai quãng 3 chồng lên nhau (từ dưới lên), ngoặc trên là quãng 5 giữa nốt gốc và nốt năm.\" Nhãn ngoặc dùng tên quãng như bảng, không ghi số nửa cung (trang không ghi)."
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Bốn ::cong-cu{ten=\"piano\" range=\"C4-A4\" play=\"chord\" notes=\"…\" ngoac=\"…\"}. Tên, ký hiệu và nốt khớp các cột \"Loại\", \"Ví dụ từ Đô\", \"Ký hiệu\" của bảng (ký hiệu thứ nhất của mỗi dòng); hai quãng 3 khớp cột \"Cấu tạo (từ dưới lên)\". Kiểm lại theo bảng nửa cung của bài 9 (3 trưởng 4, 3 thứ 3): Đô4 60, Mi♭4 63, Mi4 64, Sol♭4 66, Sol4 67, Sol♯4 68. Câu dẫn chung: \"Bốn hợp âm trên phím đàn, theo thứ tự của bảng: hai ngoặc dưới là hai quãng 3 chồng lên nhau (từ dưới lên), ngoặc trên là quãng 5 giữa nốt gốc và nốt năm.\" Nhãn ngoặc dùng tên quãng như bảng, không ghi số nửa cung (trang không ghi). Soát hình 2B (gộp review và kiểm mẫu): đối chiếu SVG trong dist/ (npm run build:xem, 07/11/2026; aria-label của hình và ảnh 360/1280 px) với chữ trang: bốn bàn phím Đô4–La4 theo thứ tự bảng, dòng tên đúng như câu, tô Đô Mi Sol; Đô Mi♭ Sol; Đô Mi♭ Sol♭; Đô Mi Sol♯ (khớp cột Ví dụ và khuông abc), nút Nghe hợp âm; hai ngoặc dưới 3 trưởng + 3 thứ, 3 thứ + 3 trưởng, 3 thứ + 3 thứ, 3 trưởng + 3 trưởng khớp cột Cấu tạo (từ dưới lên). Kết quả: dung."
+    review: dung
   - id: n37
     cau: "Ngoặc trên của bốn hình nối nốt gốc với nốt năm: 5 đúng (trưởng, thứ), 5 giảm (giảm), 5 tăng (tăng)."
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Khớp đoạn ngay trên: \"Hợp âm trưởng và thứ đều có quãng 5 đúng giữa nốt gốc và nốt năm … Hợp âm giảm có quãng 5 giảm, hợp âm tăng có quãng 5 tăng.\" Ngoặc dài ở tầng trên hai ngoặc quãng 3 (xepNgoac)."
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Khớp đoạn ngay trên: \"Hợp âm trưởng và thứ đều có quãng 5 đúng giữa nốt gốc và nốt năm … Hợp âm giảm có quãng 5 giảm, hợp âm tăng có quãng 5 tăng.\" Ngoặc dài ở tầng trên hai ngoặc quãng 3 (xepNgoac). Soát hình 2B (gộp review và kiểm mẫu): đối chiếu SVG trong dist/ (npm run build:xem, 07/11/2026; aria-label của hình và ảnh 360/1280 px) với chữ trang: ngoặc trên Đô–Sol 5 đúng (trưởng, thứ), Đô–Sol♭ 5 giảm, Đô–Sol♯ 5 tăng, xếp tầng trên hai ngoặc quãng 3; khớp đoạn ngay sau khuông (quãng 5 đúng ở trưởng và thứ, 5 giảm ở giảm, 5 tăng ở tăng). Kết quả: dung."
+    review: dung
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan

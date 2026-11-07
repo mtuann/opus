@@ -27,9 +27,9 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: "Claude Opus 5.5 (đợt hình 2b, lượt 1, 06/11/2026; thủ tục hình, plans/ben-vung/chuan-kiem-dinh.md mục 7)"
-      luot_2: null
-      review: null
-      kiem_mau: null
+      luot_2: "không cần (câu ve-site, thủ tục hình)"
+      review: "Claude Opus 5.5 (soát hình 2B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
+      kiem_mau: "Claude Opus 5.5 (soát hình 2B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
 ghi_chu: 'Trang kỹ thuật thế kỷ 20 (tầng lõi), 5 khối abc soạn riêng. Nguồn chính: OMT (Collections, Twelve-Tone), Hutchinson (Polychords), Britannica, COD (minimalism), Reich (1968), IRCAM, Berliner Philharmoniker, lizhogg, BBC Music Magazine; WebFetch ngày 28/10/2026. CHƯA CHẮC (null): n7 phần "quyển 1" (bậc 3), n14 (Rimsky-Korsakov, Stravinsky với bát cung), n17 đến n20 (hợp âm quãng 4, Hindemith, jazz: chỉ Wikipedia), n39 (cơ chế lệch pha), n43 (đồng xu, xúc xắc, Kinh Dịch), n46 (Pärt, chỉ bậc 3). Thuật ngữ trang dùng, có hồ sơ riêng ở lô này: octatonic-scale, polytonality, twelve-tone, minimalism. Chưa có ở thuat-ngu.yml (cho D3-L5): ostinato, phasing (lệch pha), additive process (cộng dồn), aleatoric/chance music (nhạc ngẫu nhiên), quartal harmony (hợp âm quãng 4), polychord (hợp âm kép), whole-tone scale (gam toàn cung), row (dãy 12 âm).'
 nguon:
   - id: omt-col
@@ -699,13 +699,15 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp ::cong-cu{ten=\"piano\" range=\"C4-C5\" notes=\"C4 D4 E4 F#4 G#4 A#4 C5\" ngoac=\"C4-D4:1 D4-E4:1 E4-F#4:1 F#4-G#4:1 G#4-A#4:1 A#4-C5:1\"}. MIDI 60, 62, 64, 66, 68, 70, 72: mỗi bước hai phím (một cung, định nghĩa bài 5)."
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp ::cong-cu{ten=\"piano\" range=\"C4-C5\" notes=\"C4 D4 E4 F#4 G#4 A#4 C5\" ngoac=\"C4-D4:1 D4-E4:1 E4-F#4:1 F#4-G#4:1 G#4-A#4:1 A#4-C5:1\"}. MIDI 60, 62, 64, 66, 68, 70, 72: mỗi bước hai phím (một cung, định nghĩa bài 5). Soát hình 2B (gộp review và kiểm mẫu): đối chiếu SVG trong dist/ (npm run build:xem, 07/11/2026; aria-label của hình và ảnh 360/1280 px) với chữ trang: Đô4–Đô5, tô Đô Rê Mi Fa♯ Sol♯ La♯ Đô như khuông (C D E ^F ^G ^A c), sáu ngoặc đều 1; khớp chữ chỉ gồm các cung, 6 nốt chia đều quãng 8. Kết quả: dung."
+    review: dung
   - id: n55
     cau: "Hình bàn phím Đô4–Đô5 ở mục \"Gam bát cung\" tô Đô, Rê♭, Mi♭, Mi, Fa♯, Sol, La, Si♭, Đô như khuông ngay trên (C _D _E =E ^F G A _B c); tám ngoặc xen kẽ ½ và 1, bắt đầu bằng ½, như câu dẫn, chữ \"nửa cung và cung xen kẽ, 8 nốt\" và tiêu đề khuông \"(nửa cung – cung)\"."
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp ::cong-cu{ten=\"piano\" range=\"C4-C5\" notes=\"C4 Db4 Eb4 E4 F#4 G4 A4 Bb4 C5\" ngoac=\"C4-Db4:½ Db4-Eb4:1 Eb4-E4:½ E4-F#4:1 F#4-G4:½ G4-A4:1 A4-Bb4:½ Bb4-C5:1\"}. MIDI 60, 61, 63, 64, 66, 67, 69, 70, 72: bước 1, 2, 1, 2, 1, 2, 1, 2 nửa cung."
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp ::cong-cu{ten=\"piano\" range=\"C4-C5\" notes=\"C4 Db4 Eb4 E4 F#4 G4 A4 Bb4 C5\" ngoac=\"C4-Db4:½ Db4-Eb4:1 Eb4-E4:½ E4-F#4:1 F#4-G4:½ G4-A4:1 A4-Bb4:½ Bb4-C5:1\"}. MIDI 60, 61, 63, 64, 66, 67, 69, 70, 72: bước 1, 2, 1, 2, 1, 2, 1, 2 nửa cung. Soát hình 2B (gộp review và kiểm mẫu): đối chiếu SVG trong dist/ (npm run build:xem, 07/11/2026; aria-label của hình và ảnh 360/1280 px) với chữ trang: tô Đô Rê♭ Mi♭ Mi Fa♯ Sol La Si♭ Đô như khuông (C _D _E =E ^F G A _B c), tám ngoặc ½, 1, ½, 1, ½, 1, ½, 1 đúng từng cặp; khớp chữ nửa cung và cung xen kẽ, 8 nốt và tiêu đề khuông (nửa cung – cung). Kết quả: dung."
+    review: dung
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan

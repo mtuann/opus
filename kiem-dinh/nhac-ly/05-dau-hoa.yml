@@ -18,9 +18,9 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: "Claude Opus 5.5 (đợt hình 2b, lượt 1, 06/11/2026; thủ tục hình, plans/ben-vung/chuan-kiem-dinh.md mục 7)"
-      luot_2: null
-      review: null
-      kiem_mau: null
+      luot_2: "không cần (câu ve-site, thủ tục hình)"
+      review: "Claude Opus 5.5 (soát hình 2B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
+      kiem_mau: "Claude Opus 5.5 (soát hình 2B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
 ghi_chu: 'Trang cung, nửa cung và dấu hóa (tầng lõi). Nguồn chính: Open Music Theory (OMT), mở từng chương bằng curl ngày 24/10/2026 (công cụ đọc web bị trang chặn, theo lời giao việc của lô); chỗ OMT không nói (hiệu lực của dấu hóa đến hết ô nhịp, dấu hóa nhắc, dấu hóa kép dùng khi nào): Andre Mount (FFF) ch. 5 và 8, MT21C 1.4 và 1.5, MyMusicTheory, UMass Unit 7. Câu về site (n12, n13, n22, n24, n29): kiểm trên bản cũ ../opus-zero/docs/ và JavaScript cũ, vì trang đích chưa chuyển; riêng bàn phím kiểm với thành phần mới của lô (src/scripts/ve.js, ban-phim.js). Sửa trang: n18 (ví dụ và câu về dấu hóa nhắc: dời dấu bình lên nốt Fa đầu ô 2) và mục Nguồn (thay link chung tới OMT và musictheory.net bằng các chương đã đọc; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, agent không đọc được chữ). Thuật ngữ cho D3-L5: "đồng âm khác tên" (enharmonic), "dấu thăng kép, giáng kép", "dấu hóa nhắc" (courtesy accidental) chưa có trong src/data/thuat-ngu.yml; "dấu hóa bất thường" (accidental) đã có. Không tính là nhận định: tên tiêu đề, "Ba dấu hóa" (tiêu đề bảng), lời dẫn "Nghe đi lên…" (đã gộp vào n14).'
 nguon:
   - id: omt-steps
@@ -421,7 +421,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp ::cong-cu{ten=\"piano\" range=\"C4-C5\" notes=\"E4 F4 B4 C5\" ngoac=\"C4-Db4:½ Db4-D4:½ C4-D4:1 E4-F4:½ B4-C5:½\"}. Khớp chữ đầu mục: hai phím liền kề (tính cả phím đen) là nửa cung, hai nửa cung là một cung; giữa hầu hết các cặp phím trắng có một phím đen nên cách một cung; Mi – Fa, Si – Đô không có phím đen xen giữa là nửa cung tự nhiên. Đếm theo số MIDI: Đô4 60, Đô♯4 61, Rê4 62, Mi4 64, Fa4 65, Si4 71, Đô5 72. Hình không thêm điều trang chưa nói."
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp ::cong-cu{ten=\"piano\" range=\"C4-C5\" notes=\"E4 F4 B4 C5\" ngoac=\"C4-Db4:½ Db4-D4:½ C4-D4:1 E4-F4:½ B4-C5:½\"}. Khớp chữ đầu mục: hai phím liền kề (tính cả phím đen) là nửa cung, hai nửa cung là một cung; giữa hầu hết các cặp phím trắng có một phím đen nên cách một cung; Mi – Fa, Si – Đô không có phím đen xen giữa là nửa cung tự nhiên. Đếm theo số MIDI: Đô4 60, Đô♯4 61, Rê4 62, Mi4 64, Fa4 65, Si4 71, Đô5 72. Hình không thêm điều trang chưa nói. Soát hình 2B (gộp review và kiểm mẫu): đối chiếu SVG trong dist/ (npm run build:xem, 07/11/2026; aria-label của hình và ảnh 360/1280 px) với chữ trang: Đô4–Đô5, tô Mi4, Fa4, Si4, Đô5; ngoặc Đô–Đô♯ ½, Đô♯–Rê ½, Đô–Rê 1 (tầng trên), Mi–Fa ½, Si–Đô ½; khớp định nghĩa ngay trên (hai phím liền kề là nửa cung, hai nửa cung là một cung, nửa cung tự nhiên Mi – Fa, Si – Đô). Câu dẫn nói lại các ý ấy. Kết quả: dung."
+    review: dung
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan

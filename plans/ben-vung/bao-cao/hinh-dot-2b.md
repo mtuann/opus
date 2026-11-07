@@ -65,3 +65,22 @@ Không commit, ở `/private/tmp/claude-501/-Users-mitu-Desktop-work-projects-op
 - Review mã (mức "Vừa", commit mã riêng): `ve-khuong-phim.js`, đăng ký trong `HINH`, CSS, hai kiểm thử.
 - Người soát (không phải tôi): review và kiểm mẫu gộp cho 19 câu `ve-site` mới của 11 trang, đối chiếu SVG trong `dist/` với chữ trang; quyết định hai câu ở 07 (mục trên).
 - Xem ảnh, rồi khóa lại 11 trang. Nhánh này sửa `src/plugins/thanh-phan.mjs` (một import, một mục `HINH`), `thanh-phan.css`, `tools/trang-mau.mjs` (`KHOI`), `AGENTS.md`: có thể xung đột nhỏ với hai nhánh song song khi gộp.
+
+## Soát
+
+Claude Opus 5.5, 07/11/2026, không phải người vẽ; review mã và soát hình gộp review với kiểm mẫu (thủ tục hình, `plans/ben-vung/chuan-kiem-dinh.md` mục 7).
+
+**Review mã (mức "Vừa"): đạt, không sửa.** `ve-khuong-phim.js` là module thuần dựng lúc build, dùng lại `veBanPhim`, `tamPhim` và ký hiệu chung `#oz-kh-…` (trang và sách in có định nghĩa: `nhac-ly-co-ban.html` có `oz-kh-khoa-sol`). Màu theo biến site: dòng mốc và nét nối `--oz-accent` (sáng, tối), số dòng `--sl-color-gray-3`, phím và nhãn dùng lớp của bàn phím (đã có bản in); CSS `.oz-kp` vào `dist/_astro/` đúng (không dính lỗi `border-image` của bộ nén). Một `role="img"` với `aria-label` nói đủ ý, chữ trong hình `aria-hidden`, `figcaption` chữ thật, `data-sinh`. Đăng ký trong `HINH` gọn (một import, một dòng). Kiểm thử Node kiểm điều quan trọng (dòng của từng nốt mốc đọc từ SVG, dòng tô, dòng kẻ phụ chỉ ở Đô4, tâm nốt bằng tâm phím, ba phím tô, nhãn, một vai trò, `::hinh` dựng đúng); kiểm thử trình duyệt chờ `load` và `document.fonts.ready`, không chờ cố định, đo tràn ngang, nốt lệch phím, nét nối chạm phím, chữ đè. Ghi nhận nhỏ, không sửa: số dòng 6,5 đơn vị viewBox, ở 360 px còn khoảng 7 px (kiểm thử chỉ đòi 7 px cho nhãn phím); đọc được trong ảnh 360 px.
+
+**Soát hình: 19/19 câu `dung`, 0 `sai`, không sửa hình, câu hay `doi_chu`.** Bản xem (`npm run build:xem`, không cảnh báo `[opus]`): đọc `aria-label` của 22 hình trong `dist/` (liệt kê từng phím tô, nhãn, số ngón, ngoặc) và đối chiếu với chữ, bảng, khuông abc của từng mục; xem thêm ảnh 360/1280 px của người vẽ (02, 05, 10, 17, hop-am-rai).
+
+- 05: ngoặc ½ Đô–Đô♯, ½ Đô♯–Rê, 1 Đô–Rê (tầng trên), ½ Mi–Fa, ½ Si–Đô khớp định nghĩa ngay trên. 06: 1 1 ½ 1 1 1 ½ ở Đô trưởng và Sol trưởng khớp bảng, công thức, đoạn Fa♯. 07: tự nhiên khớp bảng; hòa âm 1½ ở Fa–Sol♯ khớp "3 nửa cung"; giai điệu bậc 6, 7 khớp bảng "So sánh ba dạng". n42, n43 có lượt 2 OMT (dung), nên ngoặc ½, 1, 1 đếm phím không phải điều mới.
+- 10: bốn hợp âm đúng nốt của cột "Ví dụ" và khuông; ngoặc quãng 3 khớp cột "Cấu tạo"; ngoặc quãng 5 đúng, đúng, giảm, tăng khớp đoạn sau khuông. 11: ba thể đúng quãng tám của khuông `[CEG] [EGc] [Gce]`, nhãn gốc/ba/năm đúng vai trò; quãng 6 (đảo 1), quãng 4 và 6 (đảo 2) tính từ nốt trầm khớp cột "Ký hiệu số", câu bè trầm số và đáp án "6 và 4".
+- hop-am-rai: số ngón hai tay từng phím khớp bảng (phải 1-3-5, 1-2-5, 1-3-5; trái 5-3-1, 5-3-1, 5-2-1, từ dưới lên); ngoặc quãng 3/4 khớp cột "Khoảng, từ dưới lên".
+- 32: toàn cung tô đúng khuông, sáu ngoặc 1; bát cung tô đúng khuông (Đô Rê♭ Mi♭ Mi Fa♯ Sol La Si♭ Đô), ½ và 1 xen kẽ bắt đầu bằng ½ như tiêu đề khuông.
+- 17, clarinet, trumpet: nốt vang Si♭3, La3, Fa3, Mi♭3 dưới Đô4 đúng 2 trưởng, 3 thứ, 5 đúng, 6 trưởng như bảng (clarinet: một cung, 3 thứ; trumpet: một cung). Ngoặc "horn in F" rút gọn "Kèn horn in F" của bảng, không đổi nghĩa.
+- 02: Fa3 trên dòng 4 khóa Fa, Đô4 trên dòng kẻ phụ (ngoài cả hai khuông), Sol4 trên dòng 2 khóa Sol, dòng đánh số từ dưới lên, nét đứt xuống đúng phím; `aria-label` và chú thích chỉ nói lại mục Khóa Sol, Khóa Fa, Dòng kẻ phụ, Khuông kép, tip "Trên phím đàn".
+
+Hồ sơ: 19 câu có `review: dung` và ghi chú "Soát hình 2B (gộp review và kiểm mẫu): …"; lần cuối của 11 hồ sơ có `review` và `kiem_mau` cùng chuỗi, `luot_2` "không cần (câu ve-site, thủ tục hình)" (07 giữ lượt 2 Sonnet cho n42, n43). Còn lại cho người gom: xem ảnh rồi khóa lại 11 trang.
+
+Kiểm sau soát: `node tools/khoa.mjs tinh` thoát 0; `npm test` (bản xem) 308 đạt, 2 bỏ qua, 0 hỏng.

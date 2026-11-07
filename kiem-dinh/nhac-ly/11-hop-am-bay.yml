@@ -18,9 +18,9 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: "Claude Opus 5.5 (đợt hình 2b, lượt 1, 06/11/2026; thủ tục hình, plans/ben-vung/chuan-kiem-dinh.md mục 7)"
-      luot_2: null
-      review: null
-      kiem_mau: null
+      luot_2: "không cần (câu ve-site, thủ tục hình)"
+      review: "Claude Opus 5.5 (soát hình 2B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
+      kiem_mau: "Claude Opus 5.5 (soát hình 2B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
 ghi_chu: 'Trang thể đảo và hợp âm bảy (tầng lõi). Nguồn chính: Open Music Theory (OMT), Inversion, Figured Bass and Roman Numerals with Figures, Seventh Chords, Chord Symbols, 6/4 Chords as Forms of Prolongation; đối chiếu Mount (FFF) ch. 13 (thể đảo triad), 18 (hợp âm bảy, Table 18-1/18-2), 19 (V7), 21 (bè trầm số: "a Baroque compositional practice"). WebFetch ngày 27/10/2026 (bản tóm tắt chữ, không phải HTML thô). Chỗ sửa trang: bỏ "màu sắc, vững nhất, nhẹ và linh hoạt hơn" của thể đảo (thay bằng điều OMT nói về 6/4); C/E "phổ biến" thành "thuộc hệ ký hiệu hợp âm của jazz và nhạc pop"; bỏ "quan trọng nhất" ở V7; bỏ "quãng căng nhất" và "rất rõ" ở mục V7; mục Nguồn. Mục doi_chu tự viết (không build được); người giao chạy lại so-chu --doi-chu để chuẩn hóa dấu nháy. Chưa chắc: n10 ("thường gặp": OMT chỉ nói "common embellishment"). Ký hiệu "B°7" và "Bø7" của trang là ký hiệu Bo7 và B∅7 của OMT. Câu về site: các trang chưa chuyển (piano/hop-am-rai, luyen-tap/ban-phim, xay-hop-am, luyen-tai/nghe-hop-am) kiểm trên ../opus-zero/docs/ và JavaScript cũ. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): seventh chord (hợp âm bảy), dominant seventh (bảy át), major/minor/half-diminished/diminished seventh (bảy trưởng, thứ, nửa giảm, giảm), root position (thể gốc), first/second/third inversion (đảo 1, 2, 3), bass (bè trầm), figured bass (bè trầm số), slash chord, chordal seventh (nốt bảy), tritone, cadential 6/4 (6/4 kết); đã có: inversion, chord, triad, leading tone, dominant.'
 nguon:
   - id: omt-inversion
@@ -449,13 +449,15 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Ba ::cong-cu{ten=\"piano\" range=\"C4-E5\" play=\"chord\" notes=\"…\" nhan=\"…\"}. Khớp bảng (thể, nốt ở bè trầm, ví dụ Đô trưởng) và khuông ngay trên ([CEG] [EGc] [Gce]: cùng các nốt, cùng quãng tám). Nốt gốc, nốt ba, nốt năm của Đô trưởng theo bài 10 (Đô – Mi – Sol)."
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Ba ::cong-cu{ten=\"piano\" range=\"C4-E5\" play=\"chord\" notes=\"…\" nhan=\"…\"}. Khớp bảng (thể, nốt ở bè trầm, ví dụ Đô trưởng) và khuông ngay trên ([CEG] [EGc] [Gce]: cùng các nốt, cùng quãng tám). Nốt gốc, nốt ba, nốt năm của Đô trưởng theo bài 10 (Đô – Mi – Sol). Soát hình 2B (gộp review và kiểm mẫu): đối chiếu SVG trong dist/ (npm run build:xem, 07/11/2026; aria-label của hình và ảnh 360/1280 px) với chữ trang: ba bàn phím Đô4–Mi5, dòng tên như cột Ví dụ Đô trưởng, tô Đô4 Mi4 Sol4; Mi4 Sol4 Đô5; Sol4 Đô5 Mi5 (đúng quãng tám của khuông [CEG] [EGc] [Gce]); nhãn nốt gốc Đô, nốt ba Mi, nốt năm Sol ở cả ba hình; nốt thấp nhất khớp cột Nốt ở bè trầm; nút Nghe hợp âm. Kết quả: dung."
+    review: dung
   - id: n37
     cau: "Ngoặc của hai hình thể đảo ghi quãng tính từ nốt trầm: đảo 1 Mi4–Đô5 \"quãng 6\"; đảo 2 Sol4–Đô5 \"quãng 4\" và Sol4–Mi5 \"quãng 6\" (tầng trên); câu dẫn: \"ngoặc ghi quãng tính từ nốt trầm mà con số ghi lại (6 ở đảo 1; 6 và 4 ở đảo 2)\"."
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Khớp chữ trang: các con số \"6\", \"6/4\" ghi các quãng tính từ nốt trầm; đảo 2 \"nốt năm ở bè trầm tạo quãng 4 nghịch với bè trầm\"; câu hỏi cuối trang \"Nốt năm ở bè trầm: các quãng tính từ bè trầm là 6 và 4\". Đếm bậc: Mi–Đô sáu tên nốt (Mi Fa Sol La Si Đô), Sol–Đô bốn, Sol–Mi sáu. Đảo 1 chỉ vẽ quãng 6 vì ký hiệu của bảng là \"6\"."
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Khớp chữ trang: các con số \"6\", \"6/4\" ghi các quãng tính từ nốt trầm; đảo 2 \"nốt năm ở bè trầm tạo quãng 4 nghịch với bè trầm\"; câu hỏi cuối trang \"Nốt năm ở bè trầm: các quãng tính từ bè trầm là 6 và 4\". Đếm bậc: Mi–Đô sáu tên nốt (Mi Fa Sol La Si Đô), Sol–Đô bốn, Sol–Mi sáu. Đảo 1 chỉ vẽ quãng 6 vì ký hiệu của bảng là \"6\". Soát hình 2B (gộp review và kiểm mẫu): đối chiếu SVG trong dist/ (npm run build:xem, 07/11/2026; aria-label của hình và ảnh 360/1280 px) với chữ trang: đảo 1 ngoặc Mi4–Đô5 quãng 6; đảo 2 Sol4–Đô5 quãng 4, Sol4–Mi5 quãng 6 (tầng trên); khớp cột Ký hiệu số (6, 6/4), câu bè trầm số ghi các quãng tính từ nốt trầm, câu quãng 4 nghịch với bè trầm và đáp án câu hỏi cuối trang (6 và 4). Đảo 1 không vẽ quãng 3 Mi–Sol, đúng như câu dẫn (chỉ quãng con số ghi lại). Kết quả: dung."
+    review: dung
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan

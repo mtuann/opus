@@ -18,9 +18,9 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: "Claude Opus 5.5 (đợt hình 2b, lượt 1, 06/11/2026; thủ tục hình, plans/ben-vung/chuan-kiem-dinh.md mục 7)"
-      luot_2: null
-      review: null
-      kiem_mau: null
+      luot_2: "không cần (câu ve-site, thủ tục hình)"
+      review: "Claude Opus 5.5 (soát hình 2B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
+      kiem_mau: "Claude Opus 5.5 (soát hình 2B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
 ghi_chu: 'Trang gam trưởng (tầng lõi). Nguồn chính: Open Music Theory (OMT), mở từng chương bằng curl ngày 24/10/2026 (công cụ đọc web bị trang chặn, theo lời giao việc của lô); bổ sung khi OMT không nói: Andre Mount (FFF) ch. 6, 8, 16, MT21C 2.2. Câu về site (n9, n13, n24, n29): kiểm trên bài 8 (cùng lô), bản cũ ../opus-zero/docs/ và JavaScript cũ vì trang đích chưa chuyển; riêng bàn phím kiểm với thành phần mới của lô. Sửa trang: n15 và n16 ("Ba bậc quan trọng nhất:" thành "Ba bậc cần nhớ trước:") và mục Nguồn (thay link chung tới OMT và musictheory.net bằng các chương đã đọc; bỏ musictheory.net vì bài giảng của site ấy chạy bằng JavaScript, agent không đọc được chữ). Thuật ngữ cho D3-L5: bậc đánh số La Mã (trang này, thuat-ngu.yml) hay số Ả Rập (bài 7, 8; OMT); các tên "chủ âm", "át âm", "cảm âm" đã có trong thuat-ngu.yml. Không tính là nhận định: tên tiêu đề, "Bài tập 3" đã tính ở n25.'
 nguon:
   - id: omt-steps
@@ -416,13 +416,15 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp ::cong-cu{ten=\"piano\" range=\"C4-C5\" notes=\"C4 D4 E4 F4 G4 A4 B4 C5\" ngoac=\"C4-D4:1 D4-E4:1 E4-F4:½ F4-G4:1 G4-A4:1 A4-B4:1 B4-C5:½\"}. Bảy ngoặc khớp từng ô của bảng ngay trên (cung, cung, nửa cung, cung, cung, cung, nửa cung) và công thức \"Cung – Cung – Nửa cung – Cung – Cung – Cung – Nửa cung\"."
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp ::cong-cu{ten=\"piano\" range=\"C4-C5\" notes=\"C4 D4 E4 F4 G4 A4 B4 C5\" ngoac=\"C4-D4:1 D4-E4:1 E4-F4:½ F4-G4:1 G4-A4:1 A4-B4:1 B4-C5:½\"}. Bảy ngoặc khớp từng ô của bảng ngay trên (cung, cung, nửa cung, cung, cung, cung, nửa cung) và công thức \"Cung – Cung – Nửa cung – Cung – Cung – Cung – Nửa cung\". Soát hình 2B (gộp review và kiểm mẫu): đối chiếu SVG trong dist/ (npm run build:xem, 07/11/2026; aria-label của hình và ảnh 360/1280 px) với chữ trang: Đô4–Đô5, tô tám nốt, ngoặc 1, 1, ½, 1, 1, 1, ½ đúng từng cặp; khớp hàng Khoảng cách của bảng và công thức Cung – Cung – Nửa cung – Cung – Cung – Cung – Nửa cung. Kết quả: dung."
+    review: dung
   - id: n35
     cau: "Bàn phím gam Sol trưởng (Sol3–Sol4) có thêm bảy ngoặc giữa từng cặp nốt: 1, 1, ½, 1, 1, 1, ½ (Sol–La, La–Si, Si–Đô, Đô–Rê, Rê–Mi, Mi–Fa♯, Fa♯–Sol)."
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Thêm ngoac=\"G3-A3:1 A3-B3:1 B3-C4:½ C4-D4:1 D4-E4:1 E4-F#4:1 F#4-G4:½\" vào bàn phím đã có (n10 vẫn đúng: tô 8 phím). Khớp công thức gam trưởng của trang và chữ mục \"Gam trưởng bắt đầu từ nốt khác\": từ Mi lên Fa♯ một cung, Fa♯–Sol nửa cung. Đếm MIDI: Sol3 55, La3 57, Si3 59, Đô4 60, Rê4 62, Mi4 64, Fa♯4 66, Sol4 67. Lời dẫn cũ \"Gam Sol trưởng trên bàn phím (phím được tô):\" giữ nguyên; nghĩa của 1 và ½ đã nói ở hình trước (n34)."
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Thêm ngoac=\"G3-A3:1 A3-B3:1 B3-C4:½ C4-D4:1 D4-E4:1 E4-F#4:1 F#4-G4:½\" vào bàn phím đã có (n10 vẫn đúng: tô 8 phím). Khớp công thức gam trưởng của trang và chữ mục \"Gam trưởng bắt đầu từ nốt khác\": từ Mi lên Fa♯ một cung, Fa♯–Sol nửa cung. Đếm MIDI: Sol3 55, La3 57, Si3 59, Đô4 60, Rê4 62, Mi4 64, Fa♯4 66, Sol4 67. Lời dẫn cũ \"Gam Sol trưởng trên bàn phím (phím được tô):\" giữ nguyên; nghĩa của 1 và ½ đã nói ở hình trước (n34). Soát hình 2B (gộp review và kiểm mẫu): đối chiếu SVG trong dist/ (npm run build:xem, 07/11/2026; aria-label của hình và ảnh 360/1280 px) với chữ trang: Sol3–Sol4, ngoặc Sol–La 1, La–Si 1, Si–Đô ½, Đô–Rê 1, Rê–Mi 1, Mi–Fa♯ 1, Fa♯–Sol ½; khớp công thức và đoạn Gam trưởng bắt đầu từ nốt khác (Mi lên một cung cần Fa♯, Fa♯–Sol nửa cung). Kết quả: dung."
+    review: dung
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan

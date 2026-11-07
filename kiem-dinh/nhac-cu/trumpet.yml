@@ -18,9 +18,9 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: "Claude Opus 5.5 (đợt hình 2b, lượt 1, 06/11/2026; thủ tục hình, plans/ben-vung/chuan-kiem-dinh.md mục 7)"
-      luot_2: null
-      review: null
-      kiem_mau: null
+      luot_2: "không cần (câu ve-site, thủ tục hình)"
+      review: "Claude Opus 5.5 (soát hình 2B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
+      kiem_mau: "Claude Opus 5.5 (soát hình 2B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
 ghi_chu: 'Trang Đọc thêm (ngoại vi), không có khối abc. Nguồn chính mở được ngày 05/11/2026: Concise Oxford Dictionary of Music (Encyclopedia.com), VSL Academy (đọc qua công cụ đọc web; curl chỉ ra vỏ JavaScript trống), IMSLP, Weakley (University of Florida) cho áp lực môi. Chỗ sửa lớn: mô tả âm sắc (a1, a3), "dịch giọng/phổ biến nhất" (a8), bỏ trumpet Đô "dùng nhiều" (a13), piccolo Si♭ (a15), vai trò dàn nhạc (a18), Baroque (a19: bỏ Handel, Purcell), jazz (a20–a22: bỏ cup, plunger), Kind of Blue (a29), phần "Nếu muốn học" (a33–a39: bỏ 15–20 phút, giá, môi nhanh mỏi; áp lực môi theo nguồn). Chưa quyết: a27 (Tchaikovsky 1812: nghe kèn đồng ở đoạn trận chiến, ket_qua null). Câu về sức khỏe (áp lực môi, a34) xếp quy-tac, cần lượt 2. Mô tả trang (description) đổi theo a1. doi_chu viết tay từ khối của dist/ cũ (dist chưa build lại sau sửa): người giao chạy node tools/chuyen/so-chu.mjs nhac-cu/trumpet --doi-chu sau khi build để đối chiếu; dòng "Opus tập trung vào piano" người giao ghi (dist cũ còn "Opus Zero"). Thuật ngữ trang dùng chưa có bản ghi ở src/data/thuat-ngu.yml (cho D3-L5; không tạo): dịch giọng (transposing), piccolo (trumpet piccolo), van piston, clarino, sordino/mute (chỉ có con-sordino), fanfare, harmon mute, khóa Sol.'
 nguon:
   - id: vsl-trumpet-c
@@ -436,7 +436,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp ::cong-cu{ten=\"piano\" range=\"G3-C4\" notes=\"Bb3 C4\" nhan=\"C4:viết_Đô\" ngoac=\"Bb3-C4:trumpet_Si♭:_một_cung\"}. Khớp chữ ngay trên: trumpet Si♭ viết Đô vang thành Si♭, thấp hơn một cung. Đô4 nằm trong âm vực viết Fa♯3–Đô6 của trang; một cung dưới là Si♭3 (MIDI 58)."
+    ghi_chu: "Kiểm trên bản xem (npm run build:xem, 06/11/2026) và module dựng hình: veBanPhim (src/scripts/ve.js), docThongSoBanPhim (src/plugins/thanh-phan.mjs). Cú pháp ::cong-cu{ten=\"piano\" range=\"G3-C4\" notes=\"Bb3 C4\" nhan=\"C4:viết_Đô\" ngoac=\"Bb3-C4:trumpet_Si♭:_một_cung\"}. Khớp chữ ngay trên: trumpet Si♭ viết Đô vang thành Si♭, thấp hơn một cung. Đô4 nằm trong âm vực viết Fa♯3–Đô6 của trang; một cung dưới là Si♭3 (MIDI 58). Soát hình 2B (gộp review và kiểm mẫu): đối chiếu SVG trong dist/ (npm run build:xem, 07/11/2026; aria-label của hình và ảnh 360/1280 px) với chữ trang: Sol3–Đô4, tô Si♭3, Đô4, nhãn viết Đô, ngoặc Si♭3–Đô4 trumpet Si♭: một cung; khớp câu nốt viết Đô vang thành Si♭, thấp hơn một cung. Không thêm điều trang không viết. Kết quả: dung."
+    review: dung
 khuong_nhac: []
 doi_chu:
   - cu: "Trumpet là giọng lệnh của dàn nhạc: sáng, vang xa, xuyên qua mọi âm thanh khác. Từ tiếng kèn trận thời xưa đến những đoạn cao trào chói lọi trong giao hưởng, trumpet là nhạc cụ của sự hùng tráng — nhưng cũng có thể thủ thỉ rất tình cảm khi chơi nhỏ và dùng sordino (nút bịt)."
