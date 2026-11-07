@@ -38,6 +38,7 @@ import { veThiTauHaiTay } from '../scripts/thi-tau-hai-tay.js';
 import { veNhatKy } from '../scripts/nhat-ky.js';
 import { veNangLuc, veTienBo } from '../scripts/nang-luc.js';
 import { veNgheMu, vePhieuNgheMu } from '../scripts/nghe-mu.js';
+import { HINH_THOI_GIAN } from '../scripts/ve-thoi-gian.js';
 import { bangHep } from './bang-hep.mjs';
 import { hinhKhuongKepPhim } from '../scripts/ve-khuong-phim.js';
 
@@ -419,6 +420,8 @@ const HINH = {
 	'khuong-kep-phim': () => hinhKhuongKepPhim(),
 	// biểu đồ vòng đời từ 1650 (D5-L1), dựng từ nha-soan-nhac.yml thay hình tĩnh cũ: năm luôn khớp dữ liệu
 	lifespans: (trang) => veVongDoi(chonNguoi(docDanhSach(NGUOI_VONG_DOI), duLieuCho(trang).nguoi)),
+	// lưới phách, dải thời gian (đợt hình 2a): src/scripts/ve-thoi-gian.js
+	...HINH_THOI_GIAN,
 };
 
 /** ::hinh{ten="…"}: hình minh họa không thuộc bản ghi tác phẩm (vùng <!-- fig:… --> của trang cũ, trừ hình cấu trúc). */

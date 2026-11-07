@@ -38,6 +38,7 @@ export const KHOI = {
 	'vòng chức năng': 'class="oz-fig oz-chuc-nang"',
 	'bảy điệu thức': 'class="oz-fig oz-dieu-thuc"',
 	'khuông kép nối phím': 'class="oz-figure oz-khuong-phim',
+	'lưới phách, dải thời gian': 'class="oz-figure oz-tg',
 	'hình tĩnh SVG': '<figure class="oz-figure not-content" data-sinh><svg',
 	'hình tĩnh lưới': '<figure class="oz-figure not-content" data-sinh><div class="oz-fig-grid',
 	// đợt hình 2 (mo/hinh-dot-2c): hai hình tĩnh vẽ lại bảng của trang
