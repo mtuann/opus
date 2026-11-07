@@ -39,6 +39,10 @@ K:Gm
 !f!(3[G,G][G,G][G,G] (3[G,G][G,G][G,G] (3[G,G][G,G][G,G] (3[G,G][G,G][G,G] | (3[G,G][G,G][G,G] (3[G,G][G,G][G,G] (3[G,G][G,G][G,G] (3[G,G][G,G][G,G] |]
 ```
 
+## Sơ đồ cấu trúc
+
+::hinh-cau-truc
+
 ## Nghe kèm bản thu
 
 ::khoi-nghe

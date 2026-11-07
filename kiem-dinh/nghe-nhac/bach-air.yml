@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L9, 06/11/2026, ba phần)
       review: Claude Opus 5.5 (review D6-L9-gom)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L9, 8 đúng (mozart-requiem n33 có điều kiện: chưa kiểm lại tên Nowak, năm 1965 trên DME), 0 sai (bao-cao/d6-l9-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: mo/hinh-dot-3c
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/hinh-dot-3c, 06/11/2026: thêm sơ đồ đoạn ::hinh-cau-truc, hinh.nghe vẽ lại bảng của trang; đối chiếu từng ô với từng dòng bảng; thủ tục hình rút gọn, chuan-kiem-dinh mục 7)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Hướng dẫn nghe Air, Tổ khúc cho dàn nhạc số 3 BWV 1068 (tầng Tác phẩm; bản ghi tac-pham/bach-air; loai: nghe là cấu trúc). Không có khối abc, không có ::hinh-cau-truc; ::khoi-nghe không có bản thu (không sửa). Bản nhạc: Mutopia bach-air (Bach-Gesellschaft; .ly tải 06/11/2026): bốn bè Violino I, Violino II, Viola, Continuo; 4/4, Rê trưởng; nửa đầu 5 ô cộng ô kết (6 ô khi chơi), nửa sau 12 ô (ô 8–19); đọc giọng từng ô. Lịch sử: lời tựa Bärenreiter TP 194 (Urtext NBA, Besseler/Grüß), IMSLP (wikitext: 6 chương, InstrDetail, Piece Style), Concise Oxford Dictionary of Music (Air on the G String; air). Độ dài: MusicBrainz. Sửa trang: n3, n7, n11–n22, n26 (mục Nguồn), mô tả trang; bỏ n9 (đánh giá "một trong những giai điệu nổi tiếng nhất"). Không có chỗ chưa chắc. Không tính là nhận định: tiêu đề mục, tiêu đề cột, câu dẫn "Ghi lại thời điểm…", mốc trong ::khoi-nghe. Thuật ngữ trang dùng mà thuat-ngu.yml chưa có: continuo, air; "giọng thứ song song" theo nghĩa relative (d6-l1-gom); "nốt móc đơn" có ở trang nhạc lý đã khóa.'
 nguon:
   - id: mutopia-air
@@ -285,6 +294,12 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BachJS/BWV1068/bach-air/bach-air-lys.zip", "https://imslp.org/wiki/Orchestral_Suite_No.3_in_D_major,_BWV_1068_(Bach,_Johann_Sebastian)", "https://www.barenreiter.co.uk/orchestral-suite-overture-no-3-in-d-major-bwv-1068-study-score.html" ]
     luot_2_ghi_chu: "Ba nguồn đầu có thật: Mutopia ghi 'source = Bach-Gesellschaft'; trang IMSLP BWV 1068; Bärenreiter TP 194 là tổng phổ nhỏ BWV 1068 (ISMN 9790006201631, có lời tựa theo NBA). Mục 'Concise Oxford Dictionary of Music (Air on the G String)' không mở được: Oxford Reference trả 403, nên chưa xác nhận có mục từ ấy."
     review: dung
+  - id: n27
+    cau: 'Hình ::hinh-cau-truc (hinh.nghe của tac-pham/bach-air) ở mục "Sơ đồ cấu trúc": 2 ô (Hai ô theo đoạn "Điều cần biết trước khi nghe" (nửa đầu 6 ô nhịp, nửa sau 12 ô, mỗi nửa nhắc lại; bản gốc Rê trưởng) và các dòng 2–4 của bảng "Theo dõi khi nghe" (nửa đầu kết ở La trưởng; nửa sau qua Si thứ, La trưởng, về Rê trưởng); độ rộng theo số ô nhịp (6 và 12)): Nửa đầu (6 ô · Rê trưởng, kết ở La trưởng (giọng át) · nhắc lại); Nửa sau (12 ô · qua Si thứ, La trưởng, về Rê trưởng · nhắc lại). Chú thích: "Air: hai nửa, mỗi nửa nhắc lại (độ dài các ô theo số ô nhịp)." Chữ trong ô chép rút gọn chữ của dòng (và đoạn) ấy; không thêm đoạn, tên, giọng hay sự kiện nào ngoài trang; độ rộng và màu ô là cách vẽ.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Kiểm trên bản xem (npm run build:xem, 06/11/2026): sơ đồ trong dist/nghe-nhac/bach-air/index.html và hinh.nghe trong src/data/tac-pham.yml; đối chiếu từng ô với đoạn và dòng bảng nêu trong câu, cùng các nhận định đã kiểm định của hồ sơ này: n14, n15, n18, n19, n20, n21, n22. Trang chưa có mục "Sơ đồ cấu trúc": thêm tiêu đề theo thứ tự mẫu hướng dẫn nghe (AGENTS.md, Mẫu trang; ../opus-zero/AGENTS.md), ngay trước "Nghe kèm bản thu"; doi_chu ghi.'
 khuong_nhac: []
 doi_chu:
   - cu: 'mô tả: Air ("giai điệu" trong tiếng Pháp) là chương 2 của Tổ khúc số 3 — một trong những giai điệu nổi tiếng nhất của Bach, và của cả nhạc cổ điển. Tổ khúc gồm 6…'
@@ -326,3 +341,17 @@ doi_chu:
       - 'Nguồn bản nhạc và năm sáng tác: lời tựa ấn bản Urtext Bärenreiter TP 194 (Neue Bach-Ausgabe).'
       - 'Bản Wilhelmj: The Concise Oxford Dictionary of Music, mục Air on the G String. Xem thêm tài liệu tham khảo.'
     ly_do: 'n26: bỏ sách in và Grove chưa đọc, thay bằng nguồn đã đọc.'
+  - cu: null
+    moi:
+      - Sơ đồ cấu trúc
+      - Nửa đầu6 ô · Rê trưởng, kết ở La trưởng (giọng át) · nhắc lại
+      - Nửa sau12 ô · qua Si thứ, La trưởng, về Rê trưởng · nhắc lại
+      - "Air: hai nửa, mỗi nửa nhắc lại (độ dài các ô theo số ô nhịp)."
+    ly_do: 'Thêm hình (đợt hình 3c): sơ đồ đoạn ::hinh-cau-truc dựng từ hinh.nghe của bản ghi, vẽ lại đoạn "Điều cần biết" và bảng "Theo dõi khi nghe" của trang; tiêu đề "Sơ đồ cấu trúc" theo thứ tự mẫu hướng dẫn nghe. Nhận định n27 (ve-site).'
+  - cu: null
+    moi: "id: so-o-cau-truc"
+    ly_do: Id của tiêu đề mới "Sơ đồ cấu trúc" (thêm theo mẫu hướng dẫn nghe để đặt sơ đồ đoạn, đợt hình 3c).
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-3c
+    ly_do: "thêm hình (đợt hình 3): sơ đồ đoạn ::hinh-cau-truc vẽ lại bảng của trang"

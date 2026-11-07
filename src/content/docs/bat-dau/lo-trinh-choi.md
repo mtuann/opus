@@ -11,6 +11,8 @@ Thời gian chỉ là gợi ý. Đi chậm hơn một nửa vẫn hoàn toàn �
 3 phút khởi động · 5 phút năm ngón hoặc gam · 15 phút bài đang học (đoạn khó trước) · 5 phút đọc nốt hoặc thị tấu · 2 phút ghi [nhật ký](/opus/luyen-tap/nhat-ky/). Nhạc lý, luyện tai và nghe nhạc làm thêm ngoài giờ ngồi đàn, khoảng 10 phút. Chi tiết: [Thói quen mỗi ngày](/opus/bat-dau/moi-ngay/); buổi 20 phút cho những tháng đầu ở [Mẫu buổi tập](/opus/piano/cach-tap/#mau-buoi-tap).
 :::
 
+::hinh{ten="nam-dau"}
+
 ## Trước khi bắt đầu
 
 - [ ] Chuẩn bị đàn, ghế, máy đếm nhịp và điện thoại để thu âm theo danh sách [Trước ngày đầu tiên](/opus/piano/hai-tuan-dau/#truoc-ngay-au-tien)

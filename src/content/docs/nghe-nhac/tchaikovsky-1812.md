@@ -24,6 +24,10 @@ Nghe cuộc "đọ sức": *Marseillaise* trở lại nhiều lần, rồi lần
 
 Lúc viết, Tchaikovsky cho rằng overture "sẽ rất to và ồn ào", và vì viết không có tình cảm nồng nhiệt nên có lẽ thiếu giá trị nghệ thuật. Nhưng từ buổi ra mắt, nó luôn nằm trong số tác phẩm được biết đến và được diễn nhiều nhất của ông; chính Tchaikovsky chỉ huy nó 13 lần, nhiều hơn mọi tác phẩm khác của mình.
 
+## Sơ đồ cấu trúc
+
+::hinh-cau-truc
+
 ## Nghe kèm bản thu
 
 ::khoi-nghe

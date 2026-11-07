@@ -21,6 +21,10 @@ tac_pham: vivaldi-mua-dong
 
 Đã nghe *[Mùa xuân](/opus/nghe-nhac/vivaldi-mua-xuan/)*? Hai concerto này là một cặp đối xứng: xuân–đông, trưởng–thứ, ấm–lạnh.
 
+## Sơ đồ cấu trúc
+
+::hinh-cau-truc
+
 ## Nghe kèm bản thu
 
 ::khoi-nghe

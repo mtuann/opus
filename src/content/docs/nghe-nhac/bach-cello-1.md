@@ -22,6 +22,10 @@ Thử thách của Bach: viết **hòa âm** cho một nhạc cụ chủ yếu c
 
 Tổ khúc theo trật tự quen thuộc: **Prelude** – Allemande – Courante – Sarabande – **Menuet I và II** – Gigue.
 
+## Sơ đồ cấu trúc
+
+::hinh-cau-truc
+
 ## Nghe kèm bản thu
 
 ::khoi-nghe

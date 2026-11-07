@@ -26,6 +26,8 @@ Một truyền thống thú vị: ở Anh, **khán giả** đôi khi vẫn **đ�
 
 ## Sơ đồ cấu trúc
 
+::hinh-cau-truc
+
 | Phần | Điều xảy ra | Kỹ thuật |
 |---|---|---|
 | Mở đầu | Dàn nhạc dạo ba ô, rồi cả hợp xướng hô "Hallelujah!" | Bốn bè cùng nhịp (chủ điệu), môtip ngắn |

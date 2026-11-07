@@ -25,6 +25,10 @@ Trang này nói về chương 1 (*Allegro*), viết ở **hình thức sonata** 
 
 Chi tiết lịch sử: tác phẩm vốn có **5 chương**, nhưng chương 2 (một minuet có trio) đã thất lạc, nên bản chúng ta nghe ngày nay chỉ còn 4 chương. Chương 3 (*Menuetto*) được phân tích ở trang [Minuet và Trio](/opus/hinh-thuc/minuet-trio/#i-qua-mot-tac-pham-mozart-eine-kleine-nachtmusik-chuong-3).
 
+## Sơ đồ cấu trúc
+
+::hinh-cau-truc
+
 ## Nghe kèm bản thu
 
 ::khoi-nghe{moc="1 19 32 50 63 199 233 281"}

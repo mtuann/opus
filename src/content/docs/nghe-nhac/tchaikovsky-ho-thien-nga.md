@@ -19,6 +19,10 @@ tac_pham: tchaikovsky-ho-thien-nga
 
 **Chủ đề thiên nga** buồn, đầy khao khát, ở giọng **Si thứ**.
 
+## Sơ đồ cấu trúc
+
+::hinh-cau-truc
+
 ## Nghe kèm bản thu
 
 ::khoi-nghe

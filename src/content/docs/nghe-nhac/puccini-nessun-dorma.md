@@ -26,6 +26,8 @@ Một chi tiết thú vị: để tạo màu sắc Trung Hoa, Puccini đưa vào
 
 ## Sơ đồ cấu trúc
 
+::hinh-cau-truc
+
 | Phần | Điều xảy ra |
 |---|---|
 | Mở đầu | Các sứ giả từ xa loan lệnh "không ai được ngủ", những giọng khác vọng lại; Calaf một mình nhắc lại "Nessun dorma!" giữa đêm |

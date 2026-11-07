@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L10, 06/11/2026, ba phần; phần Mendelssohn và Schubert chạy lại)
       review: Claude Opus 5.5 (review D6-L10-gom)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L10, 8 đúng (tchaikovsky-1812 n31 có điều kiện: rallentando theo tổng phổ lượt 1), 0 sai (bao-cao/d6-l10-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: mo/hinh-dot-3c
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/hinh-dot-3c, 06/11/2026: thêm sơ đồ đoạn ::hinh-cau-truc, hinh.nghe vẽ lại bảng của trang; đối chiếu từng ô với từng dòng bảng; thủ tục hình rút gọn, chuan-kiem-dinh mục 7)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: tr-swan
     bac: 2
@@ -250,6 +259,12 @@ nhan_dinh:
     luot_2_nguon: [ "https://archive.org/details/imslp-lake-ballet-op20-tchaikovsky-pyotr", "https://en.tchaikovsky-research.net/pages/Swan_Lake" ]
     luot_2_ghi_chu: Internet Archive có tổng phổ Swan Lake theo từng số (No. 10). Trang Tchaikovsky Research Swan Lake có năm sáng tác, công diễn và cốt truyện 1877.
     review: dung
+  - id: n25
+    cau: 'Hình ::hinh-cau-truc (hinh.nghe của tac-pham/tchaikovsky-ho-thien-nga) ở mục "Sơ đồ cấu trúc": 5 ô theo đúng 5 dòng của bảng "Theo dõi khi nghe", theo thứ tự: Mặt hồ ban đêm (đàn hạc rải · dây tremolo); Chủ đề thiên nga (oboe); Nhắc lại (thêm nhạc cụ · to dần); Fortissimo (kèn đồng và cả dàn nhạc); Lắng xuống (huyền bí). Chú thích: "Hồ thiên nga, cảnh mở đầu màn 2: mỗi ô một dòng của bảng "Theo dõi khi nghe" (độ rộng các ô chỉ minh họa)." Chữ trong ô chép rút gọn chữ của dòng (và đoạn) ấy; không thêm đoạn, tên, giọng hay sự kiện nào ngoài trang; độ rộng và màu ô là cách vẽ.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Kiểm trên bản xem (npm run build:xem, 06/11/2026): sơ đồ trong dist/nghe-nhac/tchaikovsky-ho-thien-nga/index.html và hinh.nghe trong src/data/tac-pham.yml; đối chiếu từng ô với từng dòng bảng "Theo dõi khi nghe" (5 dòng, 5 ô), cùng các nhận định đã kiểm định của hồ sơ này: n14, n15, n16, n17, n18. Trang chưa có mục "Sơ đồ cấu trúc": thêm tiêu đề theo thứ tự mẫu hướng dẫn nghe (AGENTS.md, Mẫu trang; ../opus-zero/AGENTS.md), ngay trước "Nghe kèm bản thu"; doi_chu ghi.'
 khuong_nhac: []
 ghi_chu: 'Hướng dẫn nghe Hồ thiên nga, Scène số 10 (tầng Tác phẩm). Bản nhạc: tổng phổ số 10 trên Internet Archive (bản khắc B.B. 59, tr. 223–234), đọc từng trang. Lịch sử: Tchaikovsky Research (mã wiki), IMSLP. Sửa trang: cốt truyện (n2, n10: bỏ "phù thủy Rothbart biến thành thiên nga", theo bản 1877), công diễn (n11, n12: Tchaikovsky Research nói bản dựng 1877 "went well", diễn tới 1882/83; câu "không thành công" bỏ), bỏ "nổi tiếng nhất" (n13), dòng Nghe thêm (n20), mục Nguồn (n23 bỏ, n24 thêm). Bảng Theo dõi (5 dòng) giữ nguyên, cột đầu "…", trang không có mốc. Câu ở hồ sơ khác vẫn đúng: piano/tac-pham/tchaikovsky-cau-nguyen-buoi-sang n73, lich-su/thoi-ky/lang-man n37, nhan-dien/dau-van-tay n52 (đường dẫn, tên). Thuật ngữ chưa có trong thuat-ngu.yml: ballet, oboe, đàn hạc (harp), kèn horn, Scène (cảnh); tremolo và fortissimo đã có.'
 doi_chu:
@@ -271,3 +286,20 @@ doi_chu:
   - cu: "mô tả: Hồ thiên nga kể chuyện hoàng tử Siegfried yêu Odette, nàng công chúa bị phù thủy Rothbart biến thành thiên nga, chỉ hóa lại thành người vào ban đêm. Buổi công…"
     moi: "mô tả: Hồ thiên nga kể chuyện hoàng tử Siegfried yêu Odette, nàng công chúa bị phép thuật giữ làm thiên nga ban ngày, chỉ hóa lại thành người vào ban đêm. Bản dựng…"
     ly_do: "n2 (da-sua), n10 (da-sua): lượt 1 D6-L10; chữ cũ, chữ mới, lý do và nguồn ở ghi_chu của các nhận định ấy."
+  - cu: null
+    moi:
+      - Sơ đồ cấu trúc
+      - Mặt hồ ban đêmđàn hạc rải · dây tremolo
+      - Chủ đề thiên ngaoboe
+      - Nhắc lạithêm nhạc cụ · to dần
+      - Fortissimokèn đồng và cả dàn nhạc
+      - Lắng xuốnghuyền bí
+      - 'Hồ thiên nga, cảnh mở đầu màn 2: mỗi ô một dòng của bảng "Theo dõi khi nghe" (độ rộng các ô chỉ minh họa).'
+    ly_do: 'Thêm hình (đợt hình 3c): sơ đồ đoạn ::hinh-cau-truc dựng từ hinh.nghe của bản ghi, vẽ lại bảng "Theo dõi khi nghe" của trang; tiêu đề "Sơ đồ cấu trúc" theo thứ tự mẫu hướng dẫn nghe. Nhận định n25 (ve-site).'
+  - cu: null
+    moi: "id: so-o-cau-truc"
+    ly_do: Id của tiêu đề mới "Sơ đồ cấu trúc" (thêm theo mẫu hướng dẫn nghe để đặt sơ đồ đoạn, đợt hình 3c).
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-3c
+    ly_do: "thêm hình (đợt hình 3): sơ đồ đoạn ::hinh-cau-truc vẽ lại bảng của trang"

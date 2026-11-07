@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L11, 06/11/2026, ba phần)
       review: Claude Opus 5.5 (review D6-L11-gom)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L11, 8 đúng (4 có điều kiện: ravel-bolero h3, brahms-4 n12, dvorak-9-largo n6 dựa một phần vào tổng phổ lượt 1 đã đọc; số biến tấu Brahms các nguồn đếm khác nhau), 0 sai (bao-cao/d6-l11-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: mo/hinh-dot-3c
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/hinh-dot-3c, 06/11/2026: thêm sơ đồ đoạn ::hinh-cau-truc, hinh.nghe vẽ lại bảng của trang; đối chiếu từng ô với từng dòng bảng; thủ tục hình rút gọn, chuan-kiem-dinh mục 7)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Hướng dẫn nghe "Nessun dorma" (Turandot) (tầng Tác phẩm; bản ghi tac-pham/puccini-nessun-dorma; loai: nghe là cấu trúc). Không có khối abc, không có ::hinh-cau-truc (bảng Sơ đồ cấu trúc viết tay, kiểm ở đây). ::khoi-nghe không có bản thu (không sửa). Bản quyền: Puccini mất 1924, tổng phổ và lời in 1926 (Ricordi); không thêm khuông nhạc. Bản nhạc: tổng phổ Ricordi P.R. 117 (bản in lại) trên Internet Archive, đọc ảnh màn 3 tr. 322–330; lời: bản in Ricordi 1926 trên Internet Archive. Lịch sử: IMSLP, catalog.puccini.it, COD, EWB (Encyclopedia.com), Sheppard 2015 (tóm tắt). Không đọc được: Papers Past (chặn bot), iris.unive.it và metopera.org (Cloudflare, hàng đợi), Lyric Opera (403). Sửa trang: n5, n8, n9, n11, n12, n14–n18, n20–n23, n25, n26, n28, n30, n31, n33, n36, n38 và mô tả trang; bỏ n35. Câu ở hồ sơ khác trỏ tới trang này: nghe-nhac/nghe-gi-tiep n26 (link Puccini Nessun dorma ở mục Giọng hát): vẫn đúng; du-lieu/tac-pham/bizet-habanera n1 chỉ nhắc tên bản ghi. Thuật ngữ chưa có trong thuat-ngu.yml: tenor, hợp xướng (chorus), dramma lirico (aria đã có).'
 nguon:
   - id: ricordi-fs
@@ -464,6 +473,12 @@ nhan_dinh:
     luot_2_nguon: [ "https://archive.org/details/isbn_9790041913582", "https://archive.org/details/turandotdrammali02adam", "https://imslp.org/wiki/Turandot_(Puccini,_Giacomo)", "https://www.cambridge.org/core/journals/journal-of-the-royal-musical-association/article/puccini-and-the-music-boxes/4ED3974A7C448D5B9625CCE512369D53" ]
     luot_2_ghi_chu: "Có thật: tổng phổ Ricordi 1926 trên Internet Archive (isbn_9790041913582, 'Turandot: Full Score'); lời opera Ricordi 1926 trên Internet Archive; trang IMSLP; số SC 91 theo danh mục Schickling (IMSLP ghi); bài W. Anthony Sheppard 'Puccini and the Music Boxes', JRMA 140/1. COD và Encyclopedia of World Biography là sách tham khảo có thật; lượt 2 không mở mục cụ thể."
     review: dung
+  - id: n39
+    cau: 'Hình ::hinh-cau-truc (hinh.nghe của tac-pham/puccini-nessun-dorma) ở mục "Sơ đồ cấu trúc", ngay trên bảng "Sơ đồ cấu trúc": 4 ô theo đúng 4 dòng của bảng "Sơ đồ cấu trúc", theo thứ tự: Mở đầu (lệnh "không ai được ngủ" · Calaf nhắc lại "Nessun dorma!"); Đoạn giữa (công chúa ngắm sao · bí mật tên chàng); Hợp xướng xen vào (giọng phụ nữ từ xa); Kết ("Vincerò!" · Si cao rất ngắn, La ngân dài). Chú thích: ""Nessun dorma": mỗi ô một dòng của bảng "Sơ đồ cấu trúc" ngay dưới (độ rộng các ô chỉ minh họa)." Chữ trong ô chép rút gọn chữ của dòng (và đoạn) ấy; không thêm đoạn, tên, giọng hay sự kiện nào ngoài trang; độ rộng và màu ô là cách vẽ.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Kiểm trên bản xem (npm run build:xem, 06/11/2026): sơ đồ trong dist/nghe-nhac/puccini-nessun-dorma/index.html và hinh.nghe trong src/data/tac-pham.yml; đối chiếu từng ô với từng dòng bảng "Sơ đồ cấu trúc" (4 dòng, 4 ô), cùng các nhận định đã kiểm định của hồ sơ này: n23, n24, n25, n26.'
 khuong_nhac: []
 doi_chu:
   - cu: 'Câu chuyện lấy bối cảnh Bắc Kinh huyền thoại: công chúa Turandot lạnh lùng ra điều kiện — ai muốn cưới nàng phải giải được ba câu đố, sai một câu là mất đầu. Hoàng tử Calaf (lưu vong, giấu tên thật) giải được cả ba, nhưng Turandot vẫn không chịu. Chàng bèn ra một "câu đố ngược": nếu trước bình minh nàng đoán được tên chàng, chàng sẽ chịu chết.'
@@ -529,3 +544,15 @@ doi_chu:
   - cu: 'mô tả: Puccini là nhà soạn nhạc opera Ý cuối thời Lãng mạn, nổi tiếng với những giai điệu "nghe một lần nhớ mãi" (La bohème, Tosca, Madama Butterfly). Turandot là…'
     moi: 'mô tả: Puccini là nhà soạn nhạc opera Ý, tác giả La bohème, Tosca, Madama Butterfly. Turandot là opera cuối cùng của ông, và ông không kịp hoàn thành…'
     ly_do: 'n9: bỏ lời đánh giá; COD (Puccini).'
+  - cu: null
+    moi:
+      - Mở đầulệnh "không ai được ngủ" · Calaf nhắc lại "Nessun dorma!"
+      - Đoạn giữacông chúa ngắm sao · bí mật tên chàng
+      - Hợp xướng xen vàogiọng phụ nữ từ xa
+      - Kết"Vincerò!" · Si cao rất ngắn, La ngân dài
+      - '"Nessun dorma": mỗi ô một dòng của bảng "Sơ đồ cấu trúc" ngay dưới (độ rộng các ô chỉ minh họa).'
+    ly_do: 'Thêm hình (đợt hình 3c): sơ đồ đoạn ::hinh-cau-truc dựng từ hinh.nghe của bản ghi, vẽ lại bảng "Sơ đồ cấu trúc" của trang. Nhận định n39 (ve-site).'
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-3c
+    ly_do: "thêm hình (đợt hình 3): sơ đồ đoạn ::hinh-cau-truc vẽ lại bảng của trang"

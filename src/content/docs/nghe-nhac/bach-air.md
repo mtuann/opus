@@ -21,6 +21,10 @@ Cái tên **"Air on the G String"** (Air trên dây Sol) đến từ bản chuy�
 
 Chương nhạc chia hai nửa, mỗi nửa nhắc lại: nửa đầu 6 ô nhịp, nửa sau 12 ô. Giai điệu violin 1 mở đầu bằng một nốt Fa♯ ngân dài hơn một ô nhịp rồi mới uốn lượn đi xuống. Nghe kỹ **đường bass**: nó đi đều bằng nốt móc đơn, phần lớn nhảy quãng tám, suốt cả chương.
 
+## Sơ đồ cấu trúc
+
+::hinh-cau-truc
+
 ## Nghe kèm bản thu
 
 ::khoi-nghe

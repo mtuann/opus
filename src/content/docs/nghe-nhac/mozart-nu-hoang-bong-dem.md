@@ -20,6 +20,10 @@ tac_pham: mozart-nu-hoang-bong-dem
 
 Ngay trước aria này, trong lời thoại, **Nữ hoàng bóng đêm** đưa cho Pamina một con dao và ra lệnh phải giết Sarastro, kẻ thù của bà; trong aria, bà thề sẽ từ bỏ con mãi mãi nếu Pamina không làm. Cơn giận được thể hiện bằng **những chuỗi nốt nhanh** vọt lên âm vực cực cao, đến **nốt Fa6**.
 
+## Sơ đồ cấu trúc
+
+::hinh-cau-truc
+
 ## Nghe kèm bản thu
 
 ::khoi-nghe

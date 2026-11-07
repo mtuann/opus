@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L11, 06/11/2026, ba phần)
       review: Claude Opus 5.5 (review D6-L11-gom)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L11, 8 đúng (4 có điều kiện: ravel-bolero h3, brahms-4 n12, dvorak-9-largo n6 dựa một phần vào tổng phổ lượt 1 đã đọc; số biến tấu Brahms các nguồn đếm khác nhau), 0 sai (bao-cao/d6-l11-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-06
+    nhanh: mo/hinh-dot-3c
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/hinh-dot-3c, 06/11/2026: thêm sơ đồ đoạn ::hinh-cau-truc, hinh.nghe vẽ lại bảng của trang; đối chiếu từng ô với từng dòng bảng; thủ tục hình rút gọn, chuan-kiem-dinh mục 7)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Hướng dẫn nghe "Buổi sáng" (Morgenstemning), Peer Gynt (tầng Tác phẩm; bản ghi tac-pham/grieg-buoi-sang; loai: nghe là cấu trúc). Không có khối abc, không có ::hinh-cau-truc (bảng Sơ đồ cấu trúc viết tay, kiểm ở đây). ::khoi-nghe không có bản thu (không sửa). Bản nhạc: tổng phổ màn 4 trong Mus.ms. 6900 của Thư viện Quốc gia Na Uy (bản in Edition Peters 7188 của Suite I dùng làm khúc dạo đầu màn 4, có chữ tay), đọc ảnh IIIF (giấy phép CC BY-NC-ND của thư viện: chỉ đọc, không chép hình); bản piano của tác giả (Schirmer) trên Internet Archive để đối chiếu giọng, nhịp. Phát hiện mới: ghi chú dán trong tổng phổ nói bản nhạc lúc đầu viết để mở cảnh 5 "Sáng sớm" của màn 4 (vùng núi đá nhìn ra sa mạc), không phải cảnh Peer trên cây (cảnh 4). Sửa trang: n3, n13–n15, n17–n23, n26, n27, n29, n30, n32, n33, n35–n38, n40, n42, n44; bỏ n21. Câu ở hồ sơ khác trỏ tới trang này: nghe-nhac/grieg-concerto n14 (hướng dẫn nghe Buổi sáng ở đường dẫn này): vẫn đúng. Thuật ngữ chưa có trong thuat-ngu.yml: nhạc sân khấu (incidental music), khúc dạo đầu (prelude), pastorale (trill, cantabile, Allegretto đã có).'
 nguon:
   - id: nb-score
@@ -523,6 +532,12 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.nb.no/items/URN:NBN:no-nb_digibok_2012110738007", "https://www.nb.no/items/URN:NBN:no-nb_digibok_2012032138022", "https://imslp.org/wiki/Peer_Gynt,_Op.23_(Grieg,_Edvard)", "https://www.gutenberg.org/ebooks/66239" ]
     luot_2_ghi_chu: Tổng phổ Peer Gynt (GGA tập 18) có ở Thư viện Quốc gia Na Uy (nb.no); IMSLP có trang Op.23; bản dịch Archer có ở Project Gutenberg (Collected Works, tập 4). COD và Store norske leksikon không mở.
     review: dung
+  - id: n45
+    cau: 'Hình ::hinh-cau-truc (hinh.nghe của tac-pham/grieg-buoi-sang) ở mục "Sơ đồ cấu trúc", ngay trên bảng "Sơ đồ cấu trúc": 5 ô theo đúng 5 dòng của bảng "Sơ đồ cấu trúc", theo thứ tự: Mở đầu (sáo độc tấu giai điệu ngũ cung · oboe đáp lại); Dâng lên (giai điệu lan khắp dàn nhạc · to dần); Cao trào (forte, rồi fortissimo · giai điệu ở đàn dây); Đoạn giữa (đàn dây chạy nốt nhanh · cuối đoạn horn độc tấu); Trở lại và kết (giai điệu mở đầu · êm dần). Chú thích: ""Buổi sáng": mỗi ô một dòng của bảng "Sơ đồ cấu trúc" ngay dưới (độ rộng các ô chỉ minh họa)." Chữ trong ô chép rút gọn chữ của dòng (và đoạn) ấy; không thêm đoạn, tên, giọng hay sự kiện nào ngoài trang; độ rộng và màu ô là cách vẽ.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Kiểm trên bản xem (npm run build:xem, 06/11/2026): sơ đồ trong dist/nghe-nhac/grieg-buoi-sang/index.html và hinh.nghe trong src/data/tac-pham.yml; đối chiếu từng ô với từng dòng bảng "Sơ đồ cấu trúc" (5 dòng, 5 ô), cùng các nhận định đã kiểm định của hồ sơ này: n27, n28, n29, n30, n31.'
 khuong_nhac: []
 doi_chu:
   - cu: Cao trào đến sớm ngay ở đoạn đầu, thay vì dồn về cuối như nhiều bản nhạc khác — cảm giác của bạn khác đi thế nào?
@@ -580,3 +595,16 @@ doi_chu:
       - 'Vở kịch: Henrik Ibsen, Peer Gynt, bản dịch tiếng Anh của William và Charles Archer (London, 1892), trên Internet Archive.'
       - 'Lịch sử: Concise Oxford Dictionary of Music, mục Grieg (qua Encyclopedia.com); Store norske leksikon, mục Edvard Grieg.'
     ly_do: 'n44: bỏ sách in và Grove chưa đọc, thay bằng nguồn đã đọc.'
+  - cu: null
+    moi:
+      - Mở đầusáo độc tấu giai điệu ngũ cung · oboe đáp lại
+      - Dâng lêngiai điệu lan khắp dàn nhạc · to dần
+      - Cao tràoforte, rồi fortissimo · giai điệu ở đàn dây
+      - Đoạn giữađàn dây chạy nốt nhanh · cuối đoạn horn độc tấu
+      - Trở lại và kếtgiai điệu mở đầu · êm dần
+      - '"Buổi sáng": mỗi ô một dòng của bảng "Sơ đồ cấu trúc" ngay dưới (độ rộng các ô chỉ minh họa).'
+    ly_do: 'Thêm hình (đợt hình 3c): sơ đồ đoạn ::hinh-cau-truc dựng từ hinh.nghe của bản ghi, vẽ lại bảng "Sơ đồ cấu trúc" của trang. Nhận định n45 (ve-site).'
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-3c
+    ly_do: "thêm hình (đợt hình 3): sơ đồ đoạn ::hinh-cau-truc vẽ lại bảng của trang"

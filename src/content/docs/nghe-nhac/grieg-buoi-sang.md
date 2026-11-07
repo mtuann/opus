@@ -27,6 +27,8 @@ Khi nghe, hãy để ý hai điều: giai điệu được **sáo và oboe chuy�
 
 ## Sơ đồ cấu trúc
 
+::hinh-cau-truc
+
 | Phần | Điều xảy ra |
 |---|---|
 | Mở đầu | Sáo độc tấu giai điệu ngũ cung, nhỏ; oboe đáp lại |

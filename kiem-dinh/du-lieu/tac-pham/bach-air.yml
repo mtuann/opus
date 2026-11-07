@@ -21,6 +21,15 @@ lan:
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L9, 06/11/2026, ba phần)
       review: Claude Opus 5.5 (review D6-L9-gom)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L9, 8 đúng (mozart-requiem n33 có điều kiện: chưa kiểm lại tên Nowak, năm 1965 trên DME), 0 sai (bao-cao/d6-l9-gom/kiem-mau-ket-qua.yml)"
+  - so: 3
+    ngay: 2026-11-06
+    nhanh: mo/hinh-dot-3c
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/hinh-dot-3c, 06/11/2026: thêm hinh.nghe, vẽ lại bảng của trang hướng dẫn nghe đã kiểm định; nguồn lấy từ các nhận định tương ứng của hồ sơ trang)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: imslp
     bac: 2
@@ -38,6 +47,14 @@ nguon:
     bac: 1
     ten: 'Mutopia Project, Air, BWV 1068 Mvmt. 2 (bach-air-notes.ly; source "Bach-Gesellschaft"; tải 06/11/2026)'
     link: https://www.mutopiaproject.org/ftp/BachJS/BWV1068/bach-air/
+  - id: cod-air-g
+    bac: 2
+    ten: "The Concise Oxford Dictionary of Music (Encyclopedia.com), \"Air on the G String\": \"The name given to an arr. for vn. and pf. by Wilhelmj in 1871 of the 2nd movement (Air) of J. S. Bach's Suite No.3 in D, in which the melody is transposed from D to C, the violinist playing on his lowest (G) str.\""
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/air-g-string
+  - id: imslp-1068
+    bac: 2
+    ten: 'IMSLP, Orchestral Suite No.3 in D major, BWV 1068 (wikitext qua api.php): "6 movements: Ouverture (244 bars), Air (36 bars), Gavotte I (52 bars), Gavotte II (64 bars), Bourrée (64 bars), Gigue (144 bars)"; "Year/Date of Composition=1730 ca."; "Piece Style=Baroque"; "InstrDetail=2 oboes, 3 trumpets, timpani, strings, continuo"; mục "For Violin, Piano and Strings (Wilhelmj)" (Raabe & Plothow, Berlin)'
+    link: https://imslp.org/wiki/Orchestral_Suite_No.3_in_D_major,_BWV_1068_(Bach,_Johann_Sebastian)
 nhan_dinh:
   - id: n1
     cau: Tên «Air (Tổ khúc số 3)» chỉ chương 2 (Air) của Tổ khúc cho dàn nhạc số 3 cung Rê trưởng.
@@ -87,3 +104,18 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=242", "https://www.mutopiaproject.org/ftp/BachJS/BWV1068/bach-air/bach-air-lys.zip" ]
     luot_2_ghi_chu: "Đọc bè continuo trong file LilyPond của Mutopia (Air BWV 1068, theo Bach-Gesellschaft): cả 19 ô là chuỗi móc đơn đều đặn, phần lớn nhảy quãng tám (d8 d' cis cis, …), dưới giai điệu violin 1. Câu là gợi ý luyện nghe, khớp bản nhạc."
+  - id: n6
+    cau: 'Hình nghe (hinh.nghe), chú thích "Air: hai nửa, mỗi nửa nhắc lại (độ dài các ô theo số ô nhịp)."; các ô: Nửa đầu (6 ô · Rê trưởng, kết ở La trưởng (giọng át) · nhắc lại); Nửa sau (12 ô · qua Si thứ, La trưởng, về Rê trưởng · nhắc lại).'
+    loai: cau-truc
+    truong:
+      - hinh
+    nguon:
+      - cod-air-g
+      - mutopia-air
+      - imslp-1068
+    ket_qua: dung
+    ghi_chu: 'Vẽ lại đoạn "Điều cần biết trước khi nghe" và bảng "Theo dõi khi nghe" của trang nghe-nhac/bach-air (trang đã khóa trước đợt hình 3; mở khóa cùng nhánh): mỗi ô ứng với một nửa của chương như trang viết, chữ rút gọn từ dòng ấy; không có điều gì ngoài trang. Căn cứ: nhận định n14, n15, n18, n19, n20, n21, n22 của hồ sơ trang (đã qua lượt 1, lượt 2, review), nguồn: cod-air-g, mutopia-air, imslp-1068. Độ rộng theo số ô nhịp như trang viết (n15 của hồ sơ trang); màu là cách vẽ. Đối chiếu trên trang trong bản xem: nhận định ve-site n27 của hồ sơ trang.'
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-3c
+    ly_do: "thêm hình (đợt hình 3): thêm hinh.nghe, sơ đồ đoạn vẽ lại bảng của trang nghe-nhac/bach-air"

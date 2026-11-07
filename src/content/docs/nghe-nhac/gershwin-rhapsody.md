@@ -21,6 +21,10 @@ Ngay tiếng đầu tiên đã rất đặc biệt: một nốt **[clarinet](/op
 
 Tác phẩm là một dòng chảy liền mạch (đúng nghĩa "rhapsody": một chương liền mạch, thường dựa trên những giai điệu đại chúng), hòa trộn giai điệu blues, tiết tấu jazz syncopation và hòa âm cổ điển. Phần dàn nhạc do Ferde Grofé phối: bản gốc năm 1924 cho ban nhạc jazz của Paul Whiteman, một bản năm 1926 cho dàn nhạc nhà hát, và bản năm 1942 cho dàn nhạc giao hưởng đầy đủ, lâu nay được chơi và thu âm nhiều nhất.
 
+## Sơ đồ cấu trúc
+
+::hinh-cau-truc
+
 ## Nghe kèm bản thu
 
 Bản thu dưới đây là bản thu đầu tiên của tác phẩm: chính **George Gershwin** chơi piano cùng dàn nhạc của **Paul Whiteman**, ngày 10/6/1924, cho hãng Victor. Để vừa hai mặt một đĩa hát thời đó, tác phẩm được rút gọn còn khoảng 9 phút; hết mặt thứ nhất, công cụ tự chuyển sang mặt thứ hai. Muốn nghe bản đầy đủ, dán link YouTube hoặc link file vào khung.

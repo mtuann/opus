@@ -21,6 +21,14 @@ lan:
       luot_2: "không cần (câu ve-site, thủ tục hình)"
       review: "Claude Opus 5.5 (soát hình 3B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
       kiem_mau: "Claude Opus 5.5 (soát hình 3B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
+    ngay: 2026-11-06
+    nhanh: mo/hinh-dot-3c
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/hinh-dot-3c, 06/11/2026: thêm sơ đồ đoạn ::hinh-cau-truc, hinh.nghe vẽ lại bảng của trang; đối chiếu từng ô với từng dòng bảng; thủ tục hình rút gọn, chuan-kiem-dinh mục 7)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: imslp-erl
     bac: 2
@@ -341,6 +349,11 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "Kiểm trên file src/components/hinh/erlkonig.html và bản xem (npm run build:xem, 06/11/2026). Bốn ô chép bảng \"Nhân vật | Cách Schubert viết\" (rút gọn). Thứ tự bảy ô bên dưới đúng dòng 4–7 (dòng 5: con kêu rồi cha trấn an; dòng 6: Vua tinh lần 2 rồi con kêu lần 2, cao hơn; dòng 7: Vua tinh lần 3, con kêu lần 3, cao nhất). Cột tiếng kêu chỉ cao dần (bảng nhân vật: mỗi lần kêu lại cao hơn một chút), không ghi cao độ. Không vẽ các dòng 1–3, 8, 9 và làn piano (đề xuất 25 có; muốn vẽ cả bài thì phải nói ai hát ở dòng 8, bảng không ghi). Không có câu dẫn mới trong trang. Soát hình 3B (gộp review và kiểm mẫu): Đối chiếu HTML/SVG trong dist/ (npm run build:xem, 07/11/2026), người soát không phải người vẽ. Bốn ô vai chép bảng nhân vật; bảy ô SVG đúng thứ tự dòng 4–7 (Vua tinh 1, con kêu 1, cha trấn an, Vua tinh 2, con kêu 2 cao hơn, Vua tinh 3, con kêu 3 cao nhất), ba cột kêu cùng đáy cao dần, màu làn bằng màu ô vai; aria-label kể đúng. Đã sửa chú thích: \"Vua tinh dỗ dành ba lần\" trái dòng 7 (lần 3: đe dọa, dùng sức mạnh), nay \"Vua tinh đến ba lần (lần 1 dỗ dành, lần 3 đe dọa)\". Sau sửa: dung."
     review: dung
+    cau: 'Hình ::hinh-cau-truc (hinh.nghe của tac-pham/schubert-erlkonig) ở mục "Sơ đồ cấu trúc": 9 ô theo đúng 9 dòng của bảng "Theo dõi khi nghe", theo thứ tự: Piano mở đầu (vó ngựa liên ba); Người kể (cha và con trong đêm); Cha và con (con thấy Vua tinh · cha: sương mù); Vua tinh 1 (dỗ dành · giọng trưởng); Con kêu 1 (cha: gió xào xạc); Vua tinh 2, con kêu 2 (cao hơn); Vua tinh 3, con kêu 3 (đe dọa · cao nhất); Phi nhanh hơn (piano dồn dập); Về đến nơi (piano ngừng · đứa con đã chết). Chú thích: "Erlkönig: mỗi ô một dòng của bảng "Theo dõi khi nghe" (độ rộng các ô chỉ minh họa)." Chữ trong ô chép rút gọn chữ của dòng (và đoạn) ấy; không thêm đoạn, tên, giọng hay sự kiện nào ngoài trang; độ rộng và màu ô là cách vẽ.'
+    loai: ve-site
+    nguon: []
+    ket_qua: dung
+    ghi_chu: 'Kiểm trên bản xem (npm run build:xem, 06/11/2026): sơ đồ trong dist/nghe-nhac/schubert-erlkonig/index.html và hinh.nghe trong src/data/tac-pham.yml; đối chiếu từng ô với từng dòng bảng "Theo dõi khi nghe" (9 dòng, 9 ô), cùng các nhận định đã kiểm định của hồ sơ này: n19, n20, n21, n22, n23, n24, n25, n26, n27. Trang chưa có mục "Sơ đồ cấu trúc": thêm tiêu đề theo thứ tự mẫu hướng dẫn nghe (AGENTS.md, Mẫu trang; ../opus-zero/AGENTS.md), ngay trước "Nghe kèm bản thu"; doi_chu ghi.'
 khuong_nhac:
   - khoi: 1
     loai: trich-doan
@@ -386,3 +399,24 @@ mo_khoa:
   - ngay: 2026-11-06
     nhanh: mo/hinh-dot-3b
     ly_do: "thêm hình (đợt hình 3): bốn vai và ba tiếng kêu cao dần"
+  - cu: null
+    moi:
+      - Sơ đồ cấu trúc
+      - Piano mở đầuvó ngựa liên ba
+      - Người kểcha và con trong đêm
+      - "Cha và concon thấy Vua tinh · cha: sương mù"
+      - Vua tinh 1dỗ dành · giọng trưởng
+      - "Con kêu 1cha: gió xào xạc"
+      - Vua tinh 2, con kêu 2cao hơn
+      - Vua tinh 3, con kêu 3đe dọa · cao nhất
+      - Phi nhanh hơnpiano dồn dập
+      - Về đến nơipiano ngừng · đứa con đã chết
+      - 'Erlkönig: mỗi ô một dòng của bảng "Theo dõi khi nghe" (độ rộng các ô chỉ minh họa).'
+    ly_do: 'Thêm hình (đợt hình 3c): sơ đồ đoạn ::hinh-cau-truc dựng từ hinh.nghe của bản ghi, vẽ lại bảng "Theo dõi khi nghe" của trang; tiêu đề "Sơ đồ cấu trúc" theo thứ tự mẫu hướng dẫn nghe. Nhận định n33 (ve-site).'
+  - cu: null
+    moi: "id: so-o-cau-truc"
+    ly_do: Id của tiêu đề mới "Sơ đồ cấu trúc" (thêm theo mẫu hướng dẫn nghe để đặt sơ đồ đoạn, đợt hình 3c).
+mo_khoa:
+  - ngay: 2026-11-06
+    nhanh: mo/hinh-dot-3c
+    ly_do: "thêm hình (đợt hình 3): sơ đồ đoạn ::hinh-cau-truc vẽ lại bảng của trang"

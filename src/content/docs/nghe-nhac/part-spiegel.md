@@ -38,6 +38,10 @@ K:Dm
 [V:LH] A2 A2 | A2 F2 | F2 F2 | A2 A2 | A4 |]
 ```
 
+## Sơ đồ cấu trúc
+
+::hinh-cau-truc
+
 ## Nghe kèm bản thu
 
 ::khoi-nghe
