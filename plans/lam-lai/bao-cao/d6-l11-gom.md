@@ -132,3 +132,9 @@ Không có, nên không có `d6-l11-gom/bo-sung.yml`. Lệnh `node tools/khoa.mj
 - Mẫu kiểm: 8 nhận định ở `d6-l11-gom/kiem-mau.yml` (`xuat D6-L11 --mau 8`).
 - AGENTS.md: áp `d6-l11/agents-md.patch` (danh mục tác phẩm, sách in đọc dữ liệu). `plans/ben-vung/them-tac-pham.md`: bỏ câu "Còn chờ D6-L11", ghi cách danh mục và sách in tự nhận tác phẩm thêm sau.
 - Thứ tự khóa: khóa `thoi_ky`, `luyen_nghe`, `ky_nang_chinh` của các bản ghi trước hay cùng lúc với hai trang mục lục (câu `ve-site` `nghe-nhac/index` n7, `piano/tac-pham/index` n13 nói về ô lọc thời kỳ và dòng mô tả).
+
+## Kiểm mẫu và khóa (06/11/2026)
+
+Chủ repo giao Claude Opus 5.5 (phiên Cowork) kiểm mẫu thay, điền `kiem_mau` và khóa; người kiểm không phải chủ repo (`nguoi.kiem_mau` ghi rõ). 8 nhận định ở `d6-l11-gom/kiem-mau.yml`, kết quả `d6-l11-gom/kiem-mau-ket-qua.yml`: 8 đúng, 4 có điều kiện (Boléro h3, Brahms n12, Dvořák n6 dựa một phần vào tổng phổ lượt 1 đã đọc; số biến tấu chương cuối Giao hưởng số 4 của Brahms các nguồn đếm khác nhau: 30 và coda theo bản in, 32 theo ghi chú chương trình Dayton).
+
+Thứ tự khóa theo mục "Trạng thái khóa": khóa 8 bản ghi trước; sau đó cả 73 bản ghi `tac-pham` đều khóa cả bản ghi (gồm `thoi_ky`, `luyen_nghe`, `ky_nang_chinh`), rồi khóa 8 hướng dẫn nghe và hai trang mục lục. Bản build thật 241 trang; trang mục lục có ô lọc thời kỳ. `khoa` báo `nghe-nhac/index` n1 (lời khuyên tập đã đổi chữ) thiếu nguồn: đổi `da-sua` thành `khong-can-nguon`. `npm test` 292 pass.
