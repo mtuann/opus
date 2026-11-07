@@ -157,6 +157,16 @@ Chỉ trong ba trường hợp:
 
 Cách làm: `node tools/khoa.mjs mo <trang> --ly-do "..."` (ghi lý do vào hồ sơ, gỡ dòng trong `khoa.json`, thêm một mục mới vào `lan`); sửa; kiểm định **chỉ những nhận định bị chạm** cộng các nhận định cùng đoạn; điền mục mới trong `lan`; khóa lại (`node tools/khoa.mjs khoa <trang>`). Commit mở khóa và commit khóa lại nằm cùng một nhánh (`mo/<tên ngắn>`), review như một việc lẻ; trên `main` trang luôn ở trạng thái khóa. Trang lõi bị sửa một định nghĩa hay một quy tắc thì liệt kê các trang link tới đoạn đó (kiểm thử anchor có sẵn giúp tìm) và ghi trong báo cáo trang nào cần sửa theo.
 
+### Thêm hình minh họa vào trang đã khóa (thủ tục rút gọn)
+
+Chủ repo chọn ngày 07/11/2026. Hình chỉ vẽ lại điều trang đã viết (số ngón, phím, quãng, nhịp, sơ đồ đoạn… đã có trong chữ, bảng hay khuông của trang; không thêm sự kiện, năm, tên, so sánh mới) là thêm hình "chỉ vẽ lại". Mở khóa vẫn thuộc trường hợp 3 ở trên (đợt thêm hình có trong kế hoạch, `plans/ben-vung/de-xuat-hinh.md`).
+
+1. Người vẽ hình làm lượt 1: mỗi hình một (hay vài) nhận định `ve-site` "hình … khớp chữ/bảng/khuông mục …"; câu dẫn mới viết cho hình cũng là `ve-site` nếu chỉ nói lại chữ trang. Câu nào đem điều mới (quy tắc nhạc lý chưa có trên trang, nguồn mới) thì không còn là "chỉ vẽ lại": câu ấy đi đủ các bước (lượt 2 nếu cần nguồn).
+2. Một người soát (không phải người vẽ) làm gộp review và kiểm mẫu: đối chiếu **mọi** hình với chữ trang trên bản xem (SVG trong `dist/`), ghi `review` từng câu, rồi ghi `nguoi.review` và `nguoi.kiem_mau` cùng tên (ghi rõ "review và kiểm mẫu gộp, thủ tục hình"). `nguoi.luot_2`: "không cần (câu ve-site, thủ tục hình)".
+3. Người gom xem ảnh chụp các hình (360 và 1280 px) trước khi khóa lại.
+
+Thành phần mới (mã) vẫn review mã như thường (`AGENTS.md`, "Review và gộp"). Hình có thông tin mới (mặt cắt bộ máy đàn, so sánh tư thế…) đi thủ tục đủ.
+
 Bản ghi khóa từng phần thì mở đúng khóa ấy (`du-lieu/<bộ>/<id>#<trường>,…`); sửa trường chưa khóa thì không cần mở khóa.
 
 ## 8. Lời giao việc kiểm định mẫu
