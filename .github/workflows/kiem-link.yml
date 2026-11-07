@@ -36,7 +36,8 @@ jobs:
           # 403 và 429: nhiều trang báo và trang thương mại chặn robot hoặc giới hạn tần suất; chấp nhận để tránh báo lỗi
           # giả, link hỏng thật thường trả về 404.
           # Bỏ qua: abrsm.org (chặn robot: máy của GitHub nhận 307 lặp lại), trang chủ Oxford Music Online (chuyển hướng
-          # vòng quanh trang đăng nhập), iframe_api của YouTube, và chính site cùng repo (repo còn riêng tư: người ngoài
+          # vòng quanh trang đăng nhập), piano-midi.de (luôn trả 418 cho máy) và bach-digital.de (chặn bot, quá giờ; chủ repo
+          # chọn bỏ qua 07/11/2026), iframe_api của YouTube, và chính site cùng repo (repo còn riêng tư: người ngoài
           # nhận 404; link nội bộ đã kiểm ở bản build).
           # --base-url: link nội bộ trong Markdown viết /opus/… (gốc site); lychee từ 0.2x báo lỗi "Cannot resolve
           # root-relative link" khi không biết gốc. Gắn gốc https://mtuann.github.io/ thì chúng thành link của chính site,
@@ -52,6 +53,8 @@ jobs:
             --exclude "^https://www\.youtube\.com/iframe_api"
             --exclude "^https://(www\.|us\.)?abrsm\.org/"
             --exclude "^https://www\.oxfordmusiconline\.com/?$"
+            --exclude "^https?://(www\.)?piano-midi\.de(/|$)"
+            --exclude "^https://www\.bach-digital\.de/"
             --exclude "^https://mtuann\.github\.io/opus/"
             --exclude "^https://github\.com/mtuann/opus(/|$)"
             "src/content/docs/**/*.md"
