@@ -13,7 +13,14 @@ Bài học tác phẩm và hướng dẫn nghe, theo ngày lên site, mới trư
 
 ## Nhật ký thay đổi
 
-Site đang được làm lại ở địa chỉ này, dưới tên Opus: mỗi trang chỉ lên site khi đã được kiểm định. Các phiên bản 1–15 dưới đây là của **Opus Zero**, bản trước của site, ở https://mtuann.github.io/opus-zero/. Link trong các mục này dẫn tới trang tương ứng ở site mới; trang chưa lên site thì ghi "sắp có".
+Site đã được làm lại ở địa chỉ này, dưới tên Opus: mọi trang đã được kiểm định, và trang thêm sau chỉ lên site khi đã được kiểm định. Các phiên bản 1–15 dưới đây là của **Opus Zero**, bản trước của site, ở https://mtuann.github.io/opus-zero/, nên các mục ấy kể về site lúc đó. Link trong các mục này dẫn tới trang tương ứng ở site mới.
+
+### 11/2026: Opus (làm lại xong)
+
+- **Ra mắt Opus, 07/11/2026:** Opus Zero được làm lại thành Opus. Đủ 233 trang của bản trước, giữ nguyên đường dẫn dưới `/opus/` (trừ bài blog); mỗi trang đã được kiểm tra lại từ đầu, theo [quy trình ở cuối trang này](#quy-trinh-giu-noi-dung-luon-ung). Bài viết: [Opus đã lên đủ](/opus/blog/posts/2026-11-07-opus-da-len-du/).
+- **Mỗi chặng một trang:** 7 chặng của [lộ trình piano](/opus/piano/lo-trinh/) có trang riêng, liệt kê các bài học tác phẩm của chặng.
+- **Danh mục tác phẩm:** [bài học tác phẩm](/opus/piano/tac-pham/) và [hướng dẫn nghe](/opus/nghe-nhac/) lọc được theo chặng, thời kỳ và tác giả.
+- **Tiến độ giữ nguyên:** tiến độ đã lưu ở Opus Zero vẫn hiện ở Opus, trên cùng trình duyệt.
 
 ### 10/2026: Phiên bản 15 (nhanh hơn, nguồn rõ hơn)
 

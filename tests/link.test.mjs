@@ -145,7 +145,9 @@ test('trang 404 bằng tiếng Việt, dẫn về trang chủ và mở ô tìm k
 	trangDist();
 	const html = fs.readFileSync(path.join(DIST, '404.html'), 'utf8');
 	assert.match(html, /<title>Không thấy trang \| Opus<\/title>/);
-	assert.match(html, /Opus đang được làm lại/);
+	// đợt 9: hết câu "đang được làm lại"; trang chỉ cách tìm trang cũ (đổi /opus-zero/ thành /opus/)
+	assert.match(html, /Trang bạn tìm không có trên Opus/);
+	assert.doesNotMatch(html, /đang được làm lại/);
 	assert.match(html, /<a [^>]*href="\/opus\/"[^>]*>\s*Về trang chủ/);
 	assert.match(html, /<a [^>]*href="#tim-trang-khac"[^>]*data-mo-tim-kiem/);
 	assert.doesNotMatch(html, /rel="(prev|next)"/, 'trang 404 không có link "Trước", "Tiếp"');
