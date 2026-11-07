@@ -42,7 +42,7 @@ runs:
       run: npm test
       shell: bash
     # trình duyệt của Playwright (Lighthouse và chụp ảnh dùng Chromium): lưu đệm theo phiên bản Playwright trong
-    # package-lock.json và theo trình duyệt (đỡ khoảng 2 phút mỗi lần); thư viện hệ thống thì cài mỗi lần
+    # package-lock.json và theo trình duyệt (đỡ khoảng 2 phút mỗi lần); thư viện hệ thống thì cài mỗi lần, ở bước riêng
     - name: Phiên bản Playwright
       if: inputs.phan != 'npm-test'
       id: pw
@@ -58,11 +58,23 @@ runs:
         key: playwright-${{ runner.os }}-${{ steps.pw.outputs.phien-ban }}-${{ steps.pw.outputs.trinh-duyet }}
     - name: Cài ${{ steps.pw.outputs.trinh-duyet }}
       if: inputs.phan != 'npm-test' && steps.luu-dem.outputs.cache-hit != 'true'
-      run: npx playwright install --with-deps ${{ steps.pw.outputs.trinh-duyet }}
+      run: npx playwright install ${{ steps.pw.outputs.trinh-duyet }}
       shell: bash
+    # apt của máy CI có lúc rất chậm (firefox từng mất 26 phút, job bị hủy): mỗi lần thử tối đa 4 phút, hỏng hay quá giờ
+    # thì thử lại một lần (tổng khoảng 8 phút; bước của action dạng composite không nhận timeout-minutes nên giới hạn bằng
+    # lệnh timeout, lệnh này dừng cả nhóm tiến trình con, kể cả apt-get chạy qua sudo)
     - name: Cài thư viện hệ thống cho ${{ steps.pw.outputs.trinh-duyet }}
-      if: inputs.phan != 'npm-test' && steps.luu-dem.outputs.cache-hit == 'true'
-      run: npx playwright install-deps ${{ steps.pw.outputs.trinh-duyet }}
+      if: inputs.phan != 'npm-test'
+      run: |
+        for lan in 1 2; do
+          if timeout --kill-after=20s 240 npx playwright install-deps "$TRINH_DUYET"; then exit 0; fi
+          echo "::warning::Cài thư viện hệ thống cho $TRINH_DUYET lần $lan hỏng hay quá 4 phút"
+          # lần trước bị dừng giữa chừng: hoàn tất các gói đang cài dở trước khi thử lại
+          timeout 60 sudo dpkg --configure -a || true
+        done
+        exit 1
+      env:
+        TRINH_DUYET: ${{ steps.pw.outputs.trinh-duyet }}
       shell: bash
     - name: Kiểm thử trình duyệt (${{ inputs.phan }})
       if: inputs.phan == 'chromium' || inputs.phan == 'webkit' || inputs.phan == 'firefox'

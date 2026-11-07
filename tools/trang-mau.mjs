@@ -1,7 +1,8 @@
 // Trang mẫu cho kiểm thử trình duyệt và Lighthouse (D1.7, sửa theo review): lấy từ chính bản build, để trang của mọi lô
 // đều được kiểm. Thứ tự: trang chủ, trang 404, các trang nhánh đang làm đã đổi so với main (tối đa TOI_DA_TRANG_DOI: trang của lô), rồi
 // với mỗi loại khối, trang đầu tiên (theo thứ tự chữ cái) có khối ấy; cộng trang ghi trong biến môi trường OPUS_TRANG
-// ("nhac-ly/10-hop-am-ba/,piano/gam/").
+// ("nhac-ly/10-hop-am-ba/,piano/gam/"). OPUS_CHI_TRANG_DOI=1 (CI, nhánh chỉ đổi nội dung: tools/chon-phan-ci.mjs) thì bỏ
+// phần trang mẫu theo loại khối: chỉ trang chủ, trang 404, trang đã đổi và OPUS_TRANG.
 import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -119,18 +120,21 @@ export function trangDaDoi(goc = GOC) {
 	}
 }
 
+/** Chỉ lấy trang chủ, trang 404, trang đã đổi (và OPUS_TRANG), không lấy trang mẫu theo loại khối? */
+export const chiTrangDoi = (env = process.env) => env.OPUS_CHI_TRANG_DOI === '1';
+
 /** Danh sách trang mẫu của bản build ở `dist`. */
-export function trangMau(dist, goc = GOC) {
+export function trangMau(dist, goc = GOC, env = process.env) {
 	if (!fs.existsSync(path.join(dist, 'index.html'))) throw new Error(`Chưa có ${path.relative(goc, dist) || dist}/index.html: chạy npm run build (hay build:xem) trước.`);
 	const co = tatCa(dist);
 	const html = new Map(co.map((t) => [t, fs.readFileSync(fileCua(dist, t), 'utf8')]));
 	const ra = ['', ...(fs.existsSync(path.join(dist, '404.html')) ? ['404.html'] : [])];
 	ra.push(...trangDaDoi(goc).filter((t) => html.has(t)).slice(0, TOI_DA_TRANG_DOI));
-	for (const dau of Object.values(KHOI)) {
+	for (const dau of chiTrangDoi(env) ? [] : Object.values(KHOI)) {
 		const t = co.find((x) => x && html.get(x).includes(dau));
 		if (t !== undefined) ra.push(t);
 	}
-	for (const t of (process.env.OPUS_TRANG ?? '').split(',').map((x) => x.trim()).filter(Boolean)) {
+	for (const t of (env.OPUS_TRANG ?? '').split(',').map((x) => x.trim()).filter(Boolean)) {
 		const t2 = t.endsWith('.html') || t.endsWith('/') ? t : t + '/';
 		if (!fs.existsSync(fileCua(dist, t2))) throw new Error(`OPUS_TRANG: bản build không có trang ${t2}`);
 		ra.push(t2);

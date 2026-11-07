@@ -3,11 +3,25 @@ name: Kiểm thử
 # Nhánh việc (moi/**: việc của kế hoạch và lô; mo/**: mở khóa; them/**: thêm tác phẩm), pull request, hay bấm chạy tay:
 # build bản xem (có cả trang chưa khóa, kèm dải "Chưa kiểm định"), kiểm thử, kiểm thử trình duyệt, Lighthouse, các phần
 # chạy song song. Không đăng gì. Nhánh main do deploy.yml kiểm thử trên bản thật trước khi đăng.
+# Phần nào chạy do job chon quyết theo file đổi so với main (tools/chon-phan-ci.mjs): nhánh chỉ đổi nội dung (trang, dữ
+# liệu, hồ sơ kiểm định, kế hoạch, bản thu, file .md ở gốc) thì npm test, Chromium trên trang đã đổi và Lighthouse; đổi
+# mã thì đủ: npm test, ba trình duyệt trên mọi trang mẫu, Lighthouse. Ảnh chụp chỉ chạy khi bấm chạy tay và chọn.
 on:
   push:
     branches: ['moi/**', 'mo/**', 'them/**']
+    # push chỉ đổi kế hoạch, báo cáo, sổ tay hay giấy phép: không chạy (như deploy.yml)
+    paths-ignore: ['plans/**', 'README.md', 'AGENTS.md', 'CLAUDE.md', 'LICENSE*']
   pull_request:
   workflow_dispatch:
+    inputs:
+      du:
+        description: Chạy đủ (ba trình duyệt trên mọi trang mẫu), kể cả khi nhánh chỉ đổi nội dung
+        type: boolean
+        default: false
+      anh-chup:
+        description: Chụp ảnh trang cho review (tệp anh-chup, giữ 7 ngày)
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -18,16 +32,44 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # Chọn phần theo file đổi: push so với origin/main, pull request so với nhánh đích. Không đọc được thì chạy đủ.
+  chon:
+    name: Chọn phần
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      cac-phan: ${{ steps.chon.outputs.cac-phan }}
+      chi-trang-doi: ${{ steps.chon.outputs.chi-trang-doi }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+      - name: Chọn phần theo file đổi
+        id: chon
+        run: node tools/chon-phan-ci.mjs --nen "origin/$NEN" ${DU:+--du} ${ANH_CHUP:+--anh-chup}
+        env:
+          NEN: ${{ github.base_ref || 'main' }}
+          DU: ${{ inputs.du && '1' || '' }}
+          ANH_CHUP: ${{ inputs.anh-chup && '1' || '' }}
+        shell: bash
+
   kiem-thu:
     name: Kiểm thử (bản xem, ${{ matrix.phan }})
+    needs: chon
     runs-on: ubuntu-latest
-    # sáu phần chạy song song (.github/actions/kiem-thu): npm test, kiểm thử trình duyệt trên từng trình duyệt, Lighthouse,
-    # ảnh chụp cho review. Một phần hỏng thì các phần khác vẫn chạy tới cuối, để thấy hết lỗi trong một lần
+    # các phần chạy song song (.github/actions/kiem-thu), do job chon chọn: npm test, kiểm thử trình duyệt trên từng trình
+    # duyệt, Lighthouse, ảnh chụp cho review. Một phần hỏng thì các phần khác vẫn chạy tới cuối, để thấy hết lỗi trong một lần
     strategy:
       fail-fast: false
       matrix:
-        phan: [npm-test, chromium, webkit, firefox, lighthouse, anh-chup]
-    # chặn đường treo (mặc định của GitHub là 6 giờ); phần lâu nhất thường khoảng 4 phút
+        phan: ${{ fromJSON(needs.chon.outputs.cac-phan) }}
+    # nhánh chỉ đổi nội dung: trang mẫu chỉ gồm trang chủ, 404 và trang đã đổi (tools/trang-mau.mjs)
+    env:
+      OPUS_CHI_TRANG_DOI: ${{ needs.chon.outputs.chi-trang-doi }}
+    # chặn đường treo (mặc định của GitHub là 6 giờ); phần lâu nhất (chromium, đủ trang mẫu) khoảng 8–11 phút
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v7
@@ -40,7 +82,8 @@ jobs:
           phan: ${{ matrix.phan }}
       # ảnh chụp các trang nhánh đã đổi và trang mẫu, 360 và 1280 px, để review xem (tools/chup-anh.mjs); không commit vào
       # repo. Tải về: gh run download <số lần chạy> -n anh-chup
-      # phần riêng (khoảng 2 phút), song song với kiểm thử; ảnh chỉ để xem: bước này hỏng thì không làm hỏng lần chạy
+      # phần riêng (khoảng 2 phút), chỉ khi bấm chạy tay và chọn anh-chup; ảnh chỉ để xem: bước này hỏng thì không làm hỏng
+      # lần chạy
       - name: Chụp ảnh trang cho review
         if: ${{ !cancelled() && matrix.phan == 'anh-chup' }}
         continue-on-error: true

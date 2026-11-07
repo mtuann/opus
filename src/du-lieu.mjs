@@ -9,7 +9,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse } from 'yaml';
 import { z } from 'astro/zod';
-import { trangTrongBan } from './ban-build.mjs';
+import { banGhiCuaTrang, trangTrongBan } from './ban-build.mjs';
 import { ban, docKhoa, truongDaKhoa } from './khoa.mjs';
 
 /** Tên bộ dữ liệu -> file trong thư mục dữ liệu. */
@@ -413,7 +413,7 @@ export const tepDauVet = () => [
 
 /**
  * Dấu vết của những gì HTML đã dựng của trang phụ thuộc, ngoài chính trang: dữ liệu, các file ở tepDauVet(), bản build
- * (thật hay xem), khóa và danh sách trang trong bản build.
+ * (thật hay xem), khóa, danh sách trang trong bản build và tac_pham ở frontmatter các trang tác phẩm.
  */
 export function dauVet() {
 	const h = createHash('sha256');
@@ -427,6 +427,9 @@ export function dauVet() {
 	h.update(ban());
 	h.update(JSON.stringify(docKhoa()));
 	h.update(trangTrongBan().join('\n'));
+	// frontmatter tac_pham của các trang tác phẩm: đổi thì danh mục tác phẩm (::danh-muc-tac-pham) ở hai trang mục lục
+	// đổi theo (banGhiCuaTrang, D6-L11), dù hai trang ấy không đổi
+	h.update(JSON.stringify([...banGhiCuaTrang()]));
 	return h.digest('hex');
 }
 
