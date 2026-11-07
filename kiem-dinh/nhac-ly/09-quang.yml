@@ -15,12 +15,12 @@ lan:
   - so: 2
     ngay: 2026-11-06
     nhanh: mo/hinh-dot-1
-    ma_bam: null
+    ma_bam: sha256:8a65411637148d7ba8df0c10db9bb9e6c0923f89ed06dd89c703649a8c150329
     nguoi:
       luot_1: "Claude Opus 5.5 (mo/hinh-dot-1, 06/11/2026: thêm bàn phím có số ngón, nhãn, ngoặc; đối chiếu hình với chữ, bảng và khuông của trang)"
       luot_2: Claude Sonnet 5.5 (lượt 2 mo/hinh-dot-1, 07/11/2026)
       review: "Claude Opus 5.5 (review mo/hinh-dot-1, 06/11/2026: đối chiếu từng số ngón, phím, nhãn, ngoặc trong SVG của bản xem với thông số ::cong-cu, chữ, bảng và khuông abc cùng mục; 3 câu, đều dung)"
-      kiem_mau: null
+      kiem_mau: "Claude Opus 5.5 (người gom hình đợt 1, kiểm thay chủ repo theo lời giao 07/11/2026): mẫu 3 hình đối chiếu lại với chữ trang — hai-tuan-dau ngày 5–6 (tay trái thế Sol: 5 trên Sol2, 1 trên Rê3; tay phải thế Đô 1–5 từ Đô4), hai-tuan-dau ngày 2–3 (thế Đô hai tay, ảnh gương), 09-quang thước nửa cung (0–12 khớp bảng, phím đen 2 thứ, 3 thứ, 4 tăng/5 giảm, 6 thứ, 7 thứ): khớp; 0 sai"
 ghi_chu: 'Trang quãng (tầng lõi). Nguồn chính: Open Music Theory (OMT), Intervals; Mount (FFF) ch. 11 đối chiếu bảng nửa cung, quy tắc đảo, quãng ghép; quãng thuận/nghịch theo OMT Introduction to Species Counterpoint; tritone: Concise Oxford Dictionary of Music (qua encyclopedia.com, như D3-L1). Trang đọc bằng WebFetch của agent ngày 27/10/2026 (máy chủ repo không ra mạng); công cụ này trả bản tóm tắt chữ của trang, không phải HTML thô, nên chữ trích đã đối chiếu bằng nhiều câu hỏi; riêng bảng Example 13 (quãng thuận hòa âm) của OMT Intervals, bản tóm tắt có chỗ không khớp quy tắc (xếp 7 trưởng/thứ vào cột thuận), nên trang theo OMT Species Counterpoint. Chỗ sửa trang: tritone (bỏ "rất căng", "gọi đùa", thêm câu Oxford), mẹo nhanh (bỏ "giảm" ở quãng 1), quãng ghép (bỏ "giữa bè trầm với bè cao" và C13), bảng thuận/nghịch (cột Cảm giác thành Độ ổn định; quãng 4 đúng nói rõ điều kiện), mục Nguồn; mục doi_chu tự viết (không build được), người giao chạy lại so-chu --doi-chu để chuẩn hóa dấu nháy. Chưa chắc: n46 (OMT Intervals và Species Counterpoint xếp quãng 4 đúng khác nhau, xem ghi_chu) và n32 (Mount 11 tự mâu thuẫn về quãng 1 giảm). Câu về site: link sang các trang chưa chuyển (luyen-tai, luyen-tap, piano, tai-lieu-tham-khao, nhac-ly/27) đều kiểm trên ../opus-zero/docs/. Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): melodic interval, harmonic interval (quãng giai điệu, quãng hòa âm), compound interval (quãng ghép), perfect, major, minor, augmented, diminished (đúng, trưởng, thứ, tăng, giảm), tritone, interval inversion (đảo quãng), unison, octave; đã có: interval, semitone, consonance, dissonance.'
 nguon:
   - id: omt-intervals
@@ -631,7 +631,7 @@ nhan_dinh:
   - id: n67
     cau: "Đô4 – Mi4 (quãng 3 trưởng, 4 nửa cung) và Mi4 – Đô5 (quãng 6 thứ, 8 nửa cung) nối nhau thành quãng tám Đô4 – Đô5, nên số nửa cung cộng lại là 12: 4 + 8 = 12."
     loai: quy-tac
-    nguon: 
+    nguon:
       - omt-intervals
       - fff-intervals
     ket_qua: dung

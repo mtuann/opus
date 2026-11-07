@@ -90,3 +90,8 @@ Kiểm lại: `npm run build:xem` (không `[opus]`), `npm test` 303 đạt, 2 b�
 - Lượt 2 cho n67 của `nhac-ly/09-quang` (`node tools/khoa.mjs xuat …`); review các câu `ve-site` mới và n10 của `nam-ngon`; kiểm mẫu; khóa lại bốn trang.
 - Trang `nam-ngon` dài thêm 15 bàn phím (mỗi cái có dòng "Bấm vào phím…" và nút nghe). Nếu thấy nặng: đợt sau có thể thêm thông số tắt dòng nhắc, hay xếp lưới các bàn phím nhỏ.
 - Đợt hình sau có thể dùng ngay thành phần A cho: `piano/gam` (ngón 12 gam, đề xuất 7), `piano/hop-am-rai`, `luyen-tai/choi-bang-tai`, nhạc lý 05, 06, 07, 10, 11 (đề xuất 9, dùng `ngoac`).
+
+## Kiểm mẫu và khóa (người gom)
+
+- Kiểm mẫu (Claude Opus 5.5, kiểm thay chủ repo theo lời giao, 07/11/2026): ba hình đối chiếu lại với chữ trang (hai-tuan-dau ngày 2–3 và 5–6; thước nửa cung của 09-quang): khớp.
+- Đã khóa lại `nhac-ly/09-quang`, `piano/nam-ngon`, `piano/10-bai-dau-tien`, `piano/hai-tuan-dau`.
