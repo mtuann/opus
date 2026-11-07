@@ -1,6 +1,6 @@
 ---
 title: Opus
-description: Sổ tay tiếng Việt học piano cổ điển cho người lớn tự học, từ con số 0. Opus đang được làm lại; từng phần lên site sau khi được kiểm tra lại từ đầu.
+description: Sổ tay tiếng Việt học piano cổ điển cho người lớn tự học, từ con số 0. Mọi trang đã được kiểm tra lại từ đầu.
 template: splash
 # Trang chủ không dẫn sang "trang tiếp" (Starlight tự lấy trang đầu của menu)
 next: false
@@ -21,10 +21,6 @@ hero:
       link: /opus/bat-dau/kiem-tra-dau-vao/
       variant: secondary
 ---
-
-:::note[Đang làm lại]
-Opus đang được làm lại; từng phần sẽ lên sau khi được kiểm tra lại từ đầu. Link có nhãn <span class="oz-sap-co-nhan">sắp có</span> là trang chưa lên. Trong lúc chờ, bản trước vẫn đọc được đủ bài: [Opus Zero](https://mtuann.github.io/opus-zero/).
-:::
 
 ## Bạn đang ở đâu?
 
@@ -86,10 +82,12 @@ Mỗi chặng có trang riêng: các bài học tác phẩm của chặng và b�
 <li class="oz-the" style="--c: var(--oz-c-doc-them)"><a href="/opus/nhac-cu/"><span class="oz-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5c3-1 6-1 8 1 2-2 5-2 8-1v14c-3-1-6-1-8 1-2-2-5-2-8-1z"/><path d="M12 6v14"/></svg></span><b>Đọc thêm</b> <span>Nhạc cụ, nhạc truyền thống Việt Nam, nhà soạn nhạc nữ</span></a></li>
 </ul>
 
-## Từng phần lên site thế nào
+## Mỗi trang được kiểm tra thế nào
 
 <ol class="oz-steps" role="list">
-<li><b>Bắt đầu từ bản cũ</b> <span>Lấy bài của bản trước làm điểm xuất phát.</span></li>
-<li><b>Kiểm tra lại từ đầu</b> <span>Đối chiếu từng ý với nguồn, sửa chỗ sai.</span></li>
-<li><b>Lên site</b> <span>Chỉ phần đã kiểm tra xong mới hiện ở đây.</span></li>
+<li><b>Đối chiếu với nguồn</b> <span>Mỗi ý trong bài được kiểm lại; ý cần nguồn được đối chiếu với nguồn, chỗ sai được sửa.</span></li>
+<li><b>Kiểm lần hai</b> <span>Một lượt kiểm khác soát lại, rồi review.</span></li>
+<li><b>Lên site</b> <span>Chỉ trang đã kiểm tra xong mới hiện ở đây; bài thêm sau cũng qua cùng các bước.</span></li>
 </ol>
+
+Opus là bản làm lại của [Opus Zero](https://mtuann.github.io/opus-zero/). Chuyện làm lại: bài [Opus đã lên đủ](/opus/blog/posts/2026-11-07-opus-da-len-du/).

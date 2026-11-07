@@ -2,7 +2,7 @@
 
 Sinh bằng `python3 plans/lam-lai/anh_xa.py` trên commit `5d08189 2026-10-23`. Mỗi trang của site cũ thuộc đúng một lô. Đường dẫn giữ nguyên: `../opus-zero/docs/<trang>.md` (site cũ) thành `src/content/docs/<trang>.md` ở site mới; trên web, `/opus-zero/<trang>/` thành `/opus/<trang>/` (riêng bài blog: xem đợt 7 trong `README.md`). Tầng lấy từ `plans/ben-vung/kiem-ke.md`; bạn đổi tầng ở đó thì chạy lại script này.
 
-Ngoài các trang dưới đây, site mới có 8 trang mới sinh từ dữ liệu: 7 trang chặng `piano/lo-trinh/chang-1` đến `chang-7` (đợt 2) và danh mục `tac-pham` (đợt 6).
+Ngoài các trang dưới đây, site mới có 7 trang mới sinh từ dữ liệu: 7 trang chặng `piano/lo-trinh/chang-1` đến `chang-7` (đợt 2). Danh mục tác phẩm (đợt 6) không thành trang riêng: D6-L11 làm thành chỉ thị `::danh-muc-tac-pham` trong hai trang mục lục `piano/tac-pham/index` và `nghe-nhac/index`. Đợt 9 đối chiếu lại (`bao-cao/d9.md`): cả 233 trang dưới đây có trang cùng đường dẫn trên site mới, không trang nào gộp hay bỏ. Bài blog mới viết sau khi chuyển (như bài thông báo của đợt 9) không thuộc bảng này.
 
 ## Tổng theo đợt
 

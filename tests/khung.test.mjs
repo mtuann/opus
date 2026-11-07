@@ -1,5 +1,5 @@
 // Kiểm thử khung site (D1.1) trên bản đã build trong dist/: chạy sau `npm run build`.
-// Kiểm: địa chỉ dưới /opus/ và dạng thư mục, tiếng Việt, trang chủ tạm, font tự host, mọi tài nguyên nội bộ có thật,
+// Kiểm: địa chỉ dưới /opus/ và dạng thư mục, tiếng Việt, trang chủ, font tự host, mọi tài nguyên nội bộ có thật,
 // phiên bản gói ghim chính xác, Node trong .nvmrc đủ yêu cầu của Astro. Link giữa các trang và anchor: D1.5.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
@@ -10,7 +10,8 @@ const ROOT = path.resolve(import.meta.dirname, '..');
 const DIST = path.join(ROOT, 'dist');
 const SITE = 'https://mtuann.github.io';
 const BASE = '/opus/';
-const NOTICE = 'Opus đang được làm lại; từng phần sẽ lên sau khi được kiểm tra lại từ đầu.';
+// Đợt 9 (Hoàn tất): mọi trang đã lên, trang chủ bỏ câu thông báo "đang được làm lại" của D1.1, D2-L1
+const NOTICE_CU = 'đang được làm lại';
 
 const read = (file) => fs.readFileSync(file, 'utf8');
 const readJson = (file) => JSON.parse(read(file));
@@ -51,10 +52,10 @@ function assetRefs(html) {
 }
 const cssUrls = (css) => [...css.matchAll(/url\(\s*["']?([^"')]+)["']?\s*\)/g)].map((m) => m[1]).filter((u) => !u.startsWith('data:'));
 
-test('trang chủ tạm: tiếng Việt, câu thông báo của kế hoạch, thẻ cho điện thoại và máy tìm kiếm', () => {
+test('trang chủ: tiếng Việt, hết câu thông báo "đang được làm lại" (đợt 9), thẻ cho điện thoại và máy tìm kiếm', () => {
 	const html = read(path.join(DIST, 'index.html'));
 	assert.match(html, /<html lang="vi"/);
-	assert.ok(html.includes(NOTICE), 'thiếu câu thông báo trang chủ tạm (plans/lam-lai/README.md, D1.1)');
+	assert.ok(!html.includes(NOTICE_CU), 'trang chủ còn câu thông báo "đang được làm lại" (đợt 9 đã bỏ)');
 	assert.match(html, /<title>Opus<\/title>/);
 	assert.match(html, /<meta name="viewport" content="width=device-width, initial-scale=1"\/?>/);
 	assert.match(html, /<meta name="description" content="[^"]+"/);
