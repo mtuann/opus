@@ -26,9 +26,9 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: "Claude Opus 5.5 (mo/hinh-dot-3b, 06/11/2026: thêm hình tĩnh form-moldau; đối chiếu chữ trong hình với chữ và bảng của trang; thủ tục hình rút gọn, chuan-kiem-dinh mục 7)"
-      luot_2: null
-      review: null
-      kiem_mau: null
+      luot_2: "không cần (câu ve-site, thủ tục hình)"
+      review: "Claude Opus 5.5 (soát hình 3B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
+      kiem_mau: "Claude Opus 5.5 (soát hình 3B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
 nguon:
   - id: cod-sp
     bac: 2
@@ -433,7 +433,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên file src/components/hinh/form-moldau.html và bản xem (npm run build:xem, 06/11/2026). Bảy ô đúng số thứ tự và chữ rút gọn từ cột \"Sự kiện\" và \"Nghe gì\" của bảng; giai điệu Moldau đánh dấu ở đoạn 2 và 7 đúng như bảng (cất lên; trở lại). Ô rộng bằng nhau, không nói độ dài từng đoạn; không vẽ dòng sông rộng dần (đề xuất 24 có, bảng chỉ nói \"sông lớn dần\" ở đoạn 2). Không có câu dẫn mới trong trang."
+    ghi_chu: "Kiểm trên file src/components/hinh/form-moldau.html và bản xem (npm run build:xem, 06/11/2026). Bảy ô đúng số thứ tự và chữ rút gọn từ cột \"Sự kiện\" và \"Nghe gì\" của bảng; giai điệu Moldau đánh dấu ở đoạn 2 và 7 đúng như bảng (cất lên; trở lại). Ô rộng bằng nhau, không nói độ dài từng đoạn; không vẽ dòng sông rộng dần (đề xuất 24 có, bảng chỉ nói \"sông lớn dần\" ở đoạn 2). Không có câu dẫn mới trong trang. Soát hình 3B (gộp review và kiểm mẫu): Đối chiếu HTML/SVG trong dist/ (npm run build:xem, 07/11/2026), người soát không phải người vẽ. Bảy ô đúng thứ tự và chữ bảy dòng bảng (đoạn 5: sáo, clarinet; violin, đàn hạc; đoạn 6: dữ dội nhất; đoạn 7: Qua Prague, giai điệu trở lại); hai ô giai điệu Moldau (2, 7) cùng màu. Đã sửa chú thích \"hai ô xanh\" thành \"hai ô xanh dương\" (ô đoạn 4 màu xanh lá). Sau sửa: dung."
+    review: dung
 khuong_nhac: []
 ghi_chu: 'Trang symphonic poem (tầng lõi), không có khối abc (chỉ bảng và hình mermaid không có; không có quiz). Nguồn chính: COD qua Encyclopedia.com (symphonic poem, concert overture), Britannica (Symphonic poem; Don Juan), BSO (Les Préludes, Finlandia), LA Phil (Moldau, La mer), Rhode Island Philharmonic (Till), Lansdowne Symphony Orchestra và Classic Note (nhạc cụ từng đoạn Moldau; Classic Note là blog, bậc 3, chỉ đi kèm nguồn bậc 2) (WebFetch ngày 29/10/2026, bản tóm tắt chữ; chỗ quan trọng đã hỏi lại). Mục Nguồn cũ dựa vào Wikipedia; đã thay bằng nguồn bậc 2 đã mở. Chữ đã sửa: bỏ "vào thập niên 1850" (n4), "4 chương, cấu trúc trừu tượng" thành "thuần túy, một chương" (n5), chữ Đức theo COD (n1), bỏ so sánh idée fixe và ví dụ biến hình không nguồn (n7, n8), "tự do, không theo khuôn sonata cứng nhắc" thành theo Britannica (n9), "nổi tiếng nhất" của Moldau và Les Préludes (n10, n20), đoạn 5 của bảng (n16), Till là "chàng láu cá" không phải "chàng hề" (n24), mục Phân biệt nhanh (n29, n30). Lô trước yêu cầu giữ (grep hinh-thuc/symphonic-poem trong kiem-dinh/): không có câu nào trỏ tới. Thống nhất với trang đã chuyển: lich-su/thoi-ky/lang-man (nhạc chương trình, thơ giao hưởng của Liszt): khớp. Chữ trang không có năm sinh–mất nhà soạn nhạc. Câu ve-site trỏ trang: n31 (hinh-thuc/overture, đã có ở nhánh), tai-lieu-tham-khao (ở mục Nguồn, link không phải nhận định). Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): symphonic poem (thơ giao hưởng), tone poem / Tondichtung, program music (nhạc chương trình), concert overture. Ghi chú cho người giao: La mer của Debussy nằm trong bảng "Các tác phẩm nên biết" nhưng Debussy gọi là "ba phác thảo giao hưởng", không phải symphonic poem; trang chỉ nói "ba phác thảo giao hưởng", không gán nhãn, nên không sai. Chưa chắc: không còn.'
 doi_chu:

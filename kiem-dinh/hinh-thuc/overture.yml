@@ -17,9 +17,9 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: "Claude Opus 5.5 (mo/hinh-dot-3b, 06/11/2026: thêm hình tĩnh form-overture; đối chiếu chữ trong hình với chữ và bảng của trang; thủ tục hình rút gọn, chuan-kiem-dinh mục 7)"
-      luot_2: null
-      review: null
-      kiem_mau: null
+      luot_2: "không cần (câu ve-site, thủ tục hình)"
+      review: "Claude Opus 5.5 (soát hình 3B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
+      kiem_mau: "Claude Opus 5.5 (soát hình 3B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
 nguon:
   - id: brit-ov
     bac: 2
@@ -323,7 +323,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên file src/components/hinh/form-overture.html và bản xem (npm run build:xem, 06/11/2026). Hai dải đúng thứ tự tốc độ của hai gạch đầu dòng (Pháp: chậm – nhanh – chậm; Ý: nhanh – chậm – nhanh); \"tiết tấu chấm\" ở phần chậm mở đầu, \"lối bắt chước\" ở phần nhanh, chép câu trang. Chiều cao ô chỉ phân biệt nhanh, chậm (chú thích nói vậy), không phải số đo tốc độ. Độ rộng ô bằng nhau, không nói độ dài từng phần. Không vẽ chuyện giao hưởng bốn chương về sau, Bach, Handel. Không có câu dẫn mới trong trang."
+    ghi_chu: "Kiểm trên file src/components/hinh/form-overture.html và bản xem (npm run build:xem, 06/11/2026). Hai dải đúng thứ tự tốc độ của hai gạch đầu dòng (Pháp: chậm – nhanh – chậm; Ý: nhanh – chậm – nhanh); \"tiết tấu chấm\" ở phần chậm mở đầu, \"lối bắt chước\" ở phần nhanh, chép câu trang. Chiều cao ô chỉ phân biệt nhanh, chậm (chú thích nói vậy), không phải số đo tốc độ. Độ rộng ô bằng nhau, không nói độ dài từng phần. Không vẽ chuyện giao hưởng bốn chương về sau, Bach, Handel. Không có câu dẫn mới trong trang. Soát hình 3B (gộp review và kiểm mẫu): Đối chiếu HTML/SVG trong dist/ (npm run build:xem, 07/11/2026), người soát không phải người vẽ. Pháp (Lully) chậm – nhanh – chậm, \"tiết tấu chấm\" chỉ ở phần chậm mở đầu, \"lối bắt chước\" ở phần nhanh; Ý nhanh – chậm – nhanh; ô nhanh cao hơn, cùng đáy; chú thích chép câu \"mẫu cho những bản giao hưởng đầu tiên, vốn có ba chương\". Khớp. Kết quả: dung."
+    review: dung
 khuong_nhac: []
 ghi_chu: 'Trang overture (tầng lõi), không có khối abc (chỉ bảng, danh sách và không có quiz). Nguồn chính: Britannica (Overture), COD qua Encyclopedia.com (overture, concert overture, symphony), Bach Choir of Bethlehem (BWV 1067), Mendelssohn in Scotland (Hebrides), The Orchestra Now (Berlioz), Tchaikovsky Research (1812, Romeo and Juliet), Classic Note (1812), IMSLP (Bach BWV 1066, Mozart K.527) (WebFetch ngày 29/10/2026, bản tóm tắt chữ; chỗ quan trọng đã hỏi lại). Mục Nguồn cũ dựa vào Wikipedia (kể cả bản tiếng Đức); đã thay bằng nguồn bậc 2 đã mở. Chữ đã sửa: câu mở đầu bỏ "ballet", "chơi khi màn còn đóng, để khán giả ổn định chỗ ngồi" (n1), overture Pháp (n5, n6), overture Ý "thêm chương 4" (n8), concert overture "thường kể chuyện, sonata thu gọn" (n10, n11), ba dòng của bảng (n14, n16, n17, n18), phần đi qua 1812 (n19, n20, n21), Don Giovanni "kinh điển" (n26), mục Nguồn. Lô trước yêu cầu giữ (grep hinh-thuc/overture trong kiem-dinh/): không có câu nào trỏ tới. Thống nhất với trang cùng lô: symphonic-poem (1812 là overture, Moldau là symphonic poem; symphonic poem phát triển từ concert overture): khớp. Chữ trang không có năm sinh–mất nhà soạn nhạc (có năm tác phẩm: 1829 Hebrides, 1812 là năm sự kiện). Câu ve-site trỏ trang chưa chuyển: n22, n23 (nghe-nhac/tchaikovsky-1812), n27 (tai-lieu-tham-khao); n12, n13 trỏ sonata và symphonic-poem (đã có ở nhánh). Thuật ngữ trang dùng mà src/data/thuat-ngu.yml chưa có (cho D3-L5): concert overture (overture hòa nhạc), French overture (overture Pháp), Italian overture (overture Ý), sinfonia; overture, symphony, suite, sonata form đã có. Chưa chắc: không còn. Lưu ý cho người giao: Roman Carnival và 1812 được liệt kê là overture hòa nhạc theo cách trang vốn viết; Tchaikovsky Research gọi 1812 là "festival overture" và Romeo và Juliet là "overture-fantasia" (cùng loại một chương độc lập).'
 doi_chu:

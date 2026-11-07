@@ -18,9 +18,9 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: "Claude Opus 5.5 (mo/hinh-dot-3b, 06/11/2026: thêm hình tĩnh erlkonig; đối chiếu chữ trong hình với chữ và bảng của trang; thủ tục hình rút gọn, chuan-kiem-dinh mục 7)"
-      luot_2: null
-      review: null
-      kiem_mau: null
+      luot_2: "không cần (câu ve-site, thủ tục hình)"
+      review: "Claude Opus 5.5 (soát hình 3B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
+      kiem_mau: "Claude Opus 5.5 (soát hình 3B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
 nguon:
   - id: imslp-erl
     bac: 2
@@ -339,7 +339,8 @@ nhan_dinh:
     loai: ve-site
     nguon: []
     ket_qua: dung
-    ghi_chu: "Kiểm trên file src/components/hinh/erlkonig.html và bản xem (npm run build:xem, 06/11/2026). Bốn ô chép bảng \"Nhân vật | Cách Schubert viết\" (rút gọn). Thứ tự bảy ô bên dưới đúng dòng 4–7 (dòng 5: con kêu rồi cha trấn an; dòng 6: Vua tinh lần 2 rồi con kêu lần 2, cao hơn; dòng 7: Vua tinh lần 3, con kêu lần 3, cao nhất). Cột tiếng kêu chỉ cao dần (bảng nhân vật: mỗi lần kêu lại cao hơn một chút), không ghi cao độ. Không vẽ các dòng 1–3, 8, 9 và làn piano (đề xuất 25 có; muốn vẽ cả bài thì phải nói ai hát ở dòng 8, bảng không ghi). Không có câu dẫn mới trong trang."
+    ghi_chu: "Kiểm trên file src/components/hinh/erlkonig.html và bản xem (npm run build:xem, 06/11/2026). Bốn ô chép bảng \"Nhân vật | Cách Schubert viết\" (rút gọn). Thứ tự bảy ô bên dưới đúng dòng 4–7 (dòng 5: con kêu rồi cha trấn an; dòng 6: Vua tinh lần 2 rồi con kêu lần 2, cao hơn; dòng 7: Vua tinh lần 3, con kêu lần 3, cao nhất). Cột tiếng kêu chỉ cao dần (bảng nhân vật: mỗi lần kêu lại cao hơn một chút), không ghi cao độ. Không vẽ các dòng 1–3, 8, 9 và làn piano (đề xuất 25 có; muốn vẽ cả bài thì phải nói ai hát ở dòng 8, bảng không ghi). Không có câu dẫn mới trong trang. Soát hình 3B (gộp review và kiểm mẫu): Đối chiếu HTML/SVG trong dist/ (npm run build:xem, 07/11/2026), người soát không phải người vẽ. Bốn ô vai chép bảng nhân vật; bảy ô SVG đúng thứ tự dòng 4–7 (Vua tinh 1, con kêu 1, cha trấn an, Vua tinh 2, con kêu 2 cao hơn, Vua tinh 3, con kêu 3 cao nhất), ba cột kêu cùng đáy cao dần, màu làn bằng màu ô vai; aria-label kể đúng. Đã sửa chú thích: \"Vua tinh dỗ dành ba lần\" trái dòng 7 (lần 3: đe dọa, dùng sức mạnh), nay \"Vua tinh đến ba lần (lần 1 dỗ dành, lần 3 đe dọa)\". Sau sửa: dung."
+    review: dung
 khuong_nhac:
   - khoi: 1
     loai: trich-doan

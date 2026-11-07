@@ -68,3 +68,16 @@ Không commit, ở `/private/tmp/claude-501/-Users-mitu-Desktop-work-projects-op
 - Người soát (không phải người vẽ): đối chiếu sáu hình với chữ trang trên bản xem, ghi `review` cho m28, s36, n36, n28, n35, n33; `nguoi.review` và `nguoi.kiem_mau` cùng tên ("review và kiểm mẫu gộp, thủ tục hình"); `nguoi.luot_2`: "không cần (câu ve-site, thủ tục hình)".
 - Xem ảnh chụp, rồi `node tools/khoa.mjs khoa` sáu trang.
 - Gộp với hai nhánh song song: `src/styles/thanh-phan.css` (khối mới ngay sau `svg.oz-fig-wide`), `tools/trang-mau.mjs` (`KHOI`, sau "thẻ mẫu galant"), `AGENTS.md` (mục mới ngay sau "Đợt hình 2c") có thể xung đột vị trí; nội dung độc lập.
+
+## Soát
+
+Claude Opus 5.5 (người soát, không phải người vẽ), 07/11/2026; thủ tục hình rút gọn, review và kiểm mẫu gộp.
+
+- Review mã (mức "Vừa"): đạt. Sáu hình tĩnh dùng lớp `oz-seg` có sẵn (nền sáng, chữ tối ở cả hai chế độ, in được); chữ ngoài ô của SVG Erlkönig là `currentColor`; mọi chữ là chữ thật; SVG có `role="img"` và `aria-label` kể đúng bảy ô. CSS chỉ thêm ba luật, không màu mới. Sách in giữ hình (`dist/sach/huong-dan-nghe.html` có `oz-erlkonig`). Kiểm thử Node đọc bảng của trang và so với hình; kiểm thử trình duyệt đo tràn ở 360/768/1280 px. Không sửa mã.
+- Soát nội dung trên `dist/` (`npm run build:xem`): thứ tự, nhãn, phần nhắc lại (minuet), tốc độ (overture), bảy đoạn Moldau, bốn vai và ba tiếng kêu Erlkönig khớp chữ, bảng của trang. Sửa ba chú thích hình:
+  - `erlkonig`: "Vua tinh dỗ dành ba lần" trái dòng 7 của bảng (lần 3: đe dọa, dùng sức mạnh), nay "Vua tinh đến ba lần (lần 1 dỗ dành, lần 3 đe dọa)".
+  - `form-moldau`: "hai ô xanh" thành "hai ô xanh dương" (ô đoạn 4 màu xanh lá).
+  - `form-concerto-co-dien`: "Chương 1 có" thành "Chương 1 thường có" (như trang), "(xanh)" thành "(xanh dương)" (ô chương 2 xanh lá).
+- m28, s36, n36, n28, n35, n33: `review: dung` (ba câu sau khi sửa chú thích), `ghi_chu` thêm "Soát hình 3B (gộp review và kiểm mẫu): …". Lần cuối của sáu hồ sơ: `luot_2` "không cần (câu ve-site, thủ tục hình)", `review` và `kiem_mau` "Claude Opus 5.5 (soát hình 3B, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)".
+- `node tools/khoa.mjs tinh`: khớp. `npm test` (bản xem): 318 đạt, 2 bỏ qua, 0 hỏng.
+- Còn lại cho người gom: xem ảnh chụp (chú thích ba hình đã đổi chữ, chụp lại nếu cần), khóa sáu trang.
