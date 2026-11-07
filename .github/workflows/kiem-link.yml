@@ -66,13 +66,14 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: echo "number=$(gh issue list --repo "$GITHUB_REPOSITORY" --label link-hong --state open --json number --jq '.[0].number // empty')" >> "$GITHUB_OUTPUT"
 
-      # lychee thoát 2 là lỗi cấu hình hay lỗi nội bộ, không phải link hỏng: làm hỏng job thay vì mở issue
+      # Mã thoát của lychee: 0 không có link hỏng; 2 có link hỏng (mở issue); 1 hay 3 là lỗi chạy hay lỗi cấu hình, không
+      # phải link hỏng: làm hỏng job thay vì mở issue
       - name: Lychee hỏng
-        if: steps.lychee.outputs.exit_code == 2
-        run: echo "lychee thoát với mã 2 (lỗi cấu hình hay lỗi nội bộ)" && exit 1
+        if: steps.lychee.outputs.exit_code != 0 && steps.lychee.outputs.exit_code != 2
+        run: echo "lychee thoát với mã ${{ steps.lychee.outputs.exit_code }} (lỗi chạy hay lỗi cấu hình)" && exit 1
 
       - name: Mở hoặc cập nhật issue nếu có link hỏng
-        if: steps.lychee.outputs.exit_code != 0 && hashFiles('lychee/out.md') != ''
+        if: steps.lychee.outputs.exit_code == 2 && hashFiles('lychee/out.md') != ''
         uses: peter-evans/create-issue-from-file@v6
         with:
           title: 'Báo cáo link hỏng'
