@@ -3,7 +3,7 @@ title: Hỏi đáp
 description: Những câu hỏi thường gặp của người mới. Chưa thấy câu hỏi của bạn? Hãy gửi qua trang GitHub của dự án, hoặc ghi lại trong nhật ký luyện tập để hỏi thầy ở buổi…
 ---
 
-Những câu hỏi thường gặp của người mới. Chưa thấy câu hỏi của bạn? Hãy gửi qua [trang GitHub của dự án](https://github.com/mtuann/opus-zero/issues), hoặc ghi lại trong [nhật ký luyện tập](/opus/luyen-tap/nhat-ky/) để hỏi thầy ở buổi học sau.
+Những câu hỏi thường gặp của người mới. Chưa thấy câu hỏi của bạn? Hãy gửi qua [trang GitHub của dự án](https://github.com/mtuann/opus/issues), hoặc ghi lại trong [nhật ký luyện tập](/opus/luyen-tap/nhat-ky/) để hỏi thầy ở buổi học sau.
 
 ## Về học piano
 

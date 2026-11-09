@@ -7,7 +7,7 @@ Trang này cho biết Opus sẽ thêm gì, cập nhật gì và giữ nội dung
 
 ## Opus hiện có gì
 
-Nội dung của site cũ (Opus Zero) đã chuyển sang và được kiểm tra lại với nguồn: lộ trình piano bảy chặng, nhạc lý, luyện tai, công cụ luyện tập, lịch sử và hình thức âm nhạc, bài học tác phẩm, hướng dẫn nghe, cùng các trang tham khảo và đọc thêm. Mỗi câu nêu sự kiện đều được đối chiếu với nguồn, phần lớn qua hai lượt kiểm độc lập, rồi trang được khóa để không bị sửa tùy tiện; muốn sửa phải mở khóa, ghi lý do và kiểm lại. Vẫn có thể còn sót: một số lỗi nhỏ đã biết đang chờ sửa theo cách này.
+Nội dung hiện có của site đã được kiểm tra lại với nguồn: lộ trình piano bảy chặng, nhạc lý, luyện tai, công cụ luyện tập, lịch sử và hình thức âm nhạc, bài học tác phẩm, hướng dẫn nghe, cùng các trang tham khảo và đọc thêm. Mỗi câu nêu sự kiện đều được đối chiếu với nguồn, phần lớn qua hai lượt kiểm độc lập, rồi trang được khóa để không bị sửa tùy tiện; muốn sửa phải mở khóa, ghi lý do và kiểm lại. Vẫn có thể còn sót: một số lỗi nhỏ đã biết đang chờ sửa theo cách này.
 
 ## Dự định thêm: tác phẩm
 

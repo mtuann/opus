@@ -18,8 +18,8 @@ Cách làm: bốn agent đọc các báo cáo (`plans/lam-lai/bao-cao/`, `plans/
 | Phần còn lại của đợt 9 | Theo `plans/lam-lai/bao-cao/d9.md` mục Việc còn lại: Lighthouse và kiểm link trên site thật sau khi đăng; theo dõi lỗi hai tuần (tới 21/11/2026); đổi hàng đợt 9 của bảng Tiến độ thành "Xong" | agent, chủ repo | nhỏ |
 | Chạy tay hai workflow hằng tuần lần đầu | Tab Actions: `ra-lai.yml`, `kiem-link.yml` (chưa chạy thật lần nào, `d8-gom`) | chủ repo | nhỏ |
 | Chủ repo đọc lại phần kiểm mẫu Claude làm thay | Đọc `kiem-mau-ket-qua.yml` của d7, d8, d6-l1…l11; các câu "đúng có điều kiện" ghi rõ phần nào chưa kiểm lại | chủ repo | vừa |
-| Repo cũ `mtuann/opus-zero` | Tạo release `v15` ở `5d08189`; quyết tắt hay giữ Pages. Tắt hay chỉ để trang chuyển hướng thì phải mở khóa sửa ba chỗ còn trỏ tới site cũ (bài blog `2026-11-07-opus-da-len-du` n22, dòng cuối trang chủ, xem `d9.md`) | chủ repo | nhỏ |
-| Khi repo `mtuann/opus` công khai | Thêm biểu tượng GitHub, chữ "MIT" ở chân trang, link issue của repo mới; đổi link issue `opus-zero` ở 4 trang (mở khóa từng trang) | agent | nhỏ |
+| Repo cũ `mtuann/opus-zero` | Tạo release `v15` ở `5d08189`; quyết tắt hay giữ Pages. Site mới không còn nhắc hay trỏ tới site cũ (`mo/bo-opus-zero`, 09/11/2026), trừ nhật ký phiên bản 1–15 ở `cap-nhat` (làm sau khi phiên ghi đợt hình gộp; bỏ ngoại lệ trong `tests/khung.test.mjs`) | chủ repo | nhỏ |
+| Khi repo `mtuann/opus` công khai | Thêm biểu tượng GitHub (`astro.config.mjs`). Link MIT ở chân trang và link issue đã trỏ repo `mtuann/opus` từ 09/11/2026 (`mo/bo-opus-zero`, chủ repo chọn dù repo còn riêng tư) | agent | nhỏ |
 
 ## 2. Lịch định kỳ
 

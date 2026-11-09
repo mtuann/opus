@@ -165,12 +165,18 @@ test('Node trong .nvmrc và Node đang chạy đủ yêu cầu của Astro', () 
 	assert.ok(atLeast(parse(process.versions.node), need), `Node ${process.versions.node} không đủ ${engine}`);
 });
 
-test('không link tới repo trên GitHub khi repo còn riêng tư (người đọc mở ra trang 404; chủ repo bỏ tạm ngày 24/10/2026)', () => {
-	// Repo công khai thì thêm lại biểu tượng GitHub (astro.config.mjs) và link MIT (src/components/Footer.astro), bỏ kiểm thử này.
+test('giấy phép MIT ở chân trang dẫn tới LICENSE của repo mtuann/opus (chủ repo chọn ngày 09/11/2026, kể cả khi repo còn riêng tư)', () => {
+	const html = fs.readFileSync(path.join(path.resolve(import.meta.dirname, '..'), 'dist', 'index.html'), 'utf8');
+	assert.match(html, /class="oz-license[^"]*"[^>]*>[\s\S]*?<a href="https:\/\/github\.com\/mtuann\/opus\/blob\/main\/LICENSE"[^>]*>MIT<\/a>/);
+});
+
+test('site không còn nhắc Opus Zero: không tên, không địa chỉ site cũ, không link repo cũ (chủ repo chọn ngày 09/11/2026)', () => {
+	// cap-nhat: phiên khác đang sửa trang này (ghi các đợt hình); bỏ tên cũ ở đó sau khi phiên ấy gộp, rồi xóa ngoại lệ này.
+	const NGOAI_LE = new Set([path.join('cap-nhat', 'index.html')]);
 	const DIST = path.join(path.resolve(import.meta.dirname, '..'), 'dist');
 	const co = fs
 		.readdirSync(DIST, { recursive: true })
-		.filter((f) => f.endsWith('.html'))
-		.filter((f) => /href="https:\/\/github\.com\/mtuann\/opus(?![\w-])/i.test(fs.readFileSync(path.join(DIST, f), 'utf8')));
+		.filter((f) => /\.(html|txt|xml|json|webmanifest)$/.test(f) && !NGOAI_LE.has(f))
+		.filter((f) => /opus-zero|opus zero/i.test(fs.readFileSync(path.join(DIST, f), 'utf8')));
 	assert.deepEqual(co, []);
 });

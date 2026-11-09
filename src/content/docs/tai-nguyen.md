@@ -3,7 +3,7 @@ title: Tài nguyên
 description: Danh sách được chọn lọc cho người tự học từ đầu. Hầu hết miễn phí; mục có phí được ghi rõ. Liên kết có thể thay đổi theo thời gian; nếu thấy link hỏng, hãy báo…
 ---
 
-Danh sách được chọn lọc cho người tự học từ đầu. Hầu hết miễn phí; mục có phí được ghi rõ. Liên kết có thể thay đổi theo thời gian; nếu thấy link hỏng, hãy báo qua [trang GitHub của dự án](https://github.com/mtuann/opus-zero/issues).
+Danh sách được chọn lọc cho người tự học từ đầu. Hầu hết miễn phí; mục có phí được ghi rõ. Liên kết có thể thay đổi theo thời gian; nếu thấy link hỏng, hãy báo qua [trang GitHub của dự án](https://github.com/mtuann/opus/issues).
 
 *Link ra ngoài trên toàn site được kiểm tra tự động mỗi tuần.* Tin tức và giải thưởng gần đây nằm ở [Âm nhạc hôm nay](/opus/lich-su/duong-dai/); thông tin trong nước ở [Nhạc cổ điển ở Việt Nam](/opus/lich-su/viet-nam/).
 

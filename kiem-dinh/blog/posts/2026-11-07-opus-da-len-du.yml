@@ -11,20 +11,29 @@ lan:
       luot_2: "không cần (trang khung, chỉ có câu ve-site)"
       review: "Claude Opus 5.5 (review đợt 9, 06/11/2026; không làm lượt 1): 24 câu ve-site: 23 dung, 1 sai (n18, đã sửa)"
       kiem_mau: "Claude Opus 5.5 (người gom đợt 9, kiểm thay chủ repo theo lời giao 07/11/2026): mẫu 8 câu ve-site của bốn trang (blog n4, n6, n10, n20, n22; index n3; 404 n3; cap-nhat n156) kiểm lại trên dữ liệu, dist/ bản xem, src/scripts và địa chỉ Opus Zero (HTTP 200): 8 đúng, 0 sai"
+  - so: 2
+    ngay: 2026-11-09
+    nhanh: mo/bo-opus-zero
+    ma_bam: sha256:f02f0b2b35b770df95f5e4c8d088951e7f7276456940a00d7e9506aa83e226e4
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/bo-opus-zero, 09/11/2026: bỏ mọi nhắc tới Opus Zero, link repo mtuann/opus)"
+      luot_2: "không có lượt 2: chỉ sửa câu về chính site"
+      review: Claude Opus 5.5 (mo/bo-opus-zero, 09/11/2026)
+      kiem_mau: chủ repo yêu cầu (09/11/2026, chọn "xóa sạch" tên và địa chỉ Opus Zero); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
 ghi_chu: "Bài blog mới của đợt 9 (Hoàn tất), viết mới, không có trang cũ (nên không có nguon_cu, doi_chu). Ngày đăng 07/11/2026 (date), viết ngày 06/11/2026. 24 nhận định, đều ve-site: chỉ nói về chính site (số trang, số tác phẩm, nhóm, công cụ, sách in, dùng khi mất mạng, cách kiểm định, chỗ lưu tiến độ, địa chỉ cũ, cách báo lỗi); không có câu cần nguồn ngoài. Số liệu lấy từ dữ liệu và bản xem (npm run build:xem, 06/11/2026), không viết theo trí nhớ: 233 trang (anh-xa.md, trang.yml, script đối chiếu đợt 9), 7 trang chặng, 34 bài học và 42 hướng dẫn nghe (danh mục ở nghe-nhac/index: 34 data-loai=bai-hoc, 42 data-loai=nghe), 73 bản ghi tac-pham.yml (34 bai-hoc, 39 nghe), 8 nhóm (src/nhom.mjs), 7 sách (SACH). Câu về cách kiểm định nói đúng mức theo tầng (Đọc thêm và lời khuyên tập chỉ mẫu; ve-site không qua lượt 2), không nói ai làm. Link báo lỗi giữ issue của repo cũ (README Quyết định 24/10/2026; AGENTS.md mục chuyển trang) cho tới khi repo mới công khai."
 nguon: []
 nhan_dinh:
   - id: n1
-    cau: "Opus Zero được làm lại thành Opus, ở địa chỉ mới."
+    cau: "Opus đã lên đủ 240 trang, và mỗi trang đã được kiểm tra lại từ đầu trước khi lên site."
     loai: ve-site
-    ket_qua: dung
-    ghi_chu: "plans/lam-lai/README.md, đầu file và mục Quyết định: tên đổi thành Opus, site ở https://mtuann.github.io/opus/, địa chỉ cũ /opus-zero/ không giữ. Review D9: plans/lam-lai/README.md đầu file; site ở /opus/, site cũ ở /opus-zero/."
+    ket_qua: da-sua
+    ghi_chu: "plans/lam-lai/README.md, đầu file và mục Quyết định: tên đổi thành Opus, site ở https://mtuann.github.io/opus/, địa chỉ cũ /opus-zero/ không giữ. Review D9: plans/lam-lai/README.md đầu file; site ở /opus/, site cũ ở /opus-zero/. mo/bo-opus-zero (09/11/2026): viết lại câu mở không nhắc Opus Zero; gộp n1 và n2. 240 = 233 trang chuyển sang và 7 trang chặng (n4 cũ, đã kiểm lúc ra bài); mỗi trang lên site đã qua kiểm định (khoa.json)."
     review: dung
   - id: n2
     cau: "Từ hôm nay mọi trang của bản trước đã có trên site mới."
     loai: ve-site
-    ket_qua: dung
-    ghi_chu: "Script đối chiếu đợt 9 (bao-cao/d9.md): 233/233 trang cũ của anh-xa.md có trong src/data/trang.yml và src/content/docs/, khớp 233 file .md của ../opus-zero/docs (commit 5d08189), không trang nào thiếu hay thừa. Cả 233 đã khóa trên main (khoa.json), nên có ở bản thật; trang chủ mở khóa ở nhánh này, khóa lại trước khi gộp. Ở cả description (cùng câu). Review D9: bao-cao/d9.md (đối chiếu 233/233); dist/ (build:xem) có 242 trang; ở bản thật đúng khi index, 404, cap-nhat và bài này được khóa trước khi gộp (khoa.json ở main: 234 trang)."
+    ket_qua: da-bo
+    ghi_chu: "Script đối chiếu đợt 9 (bao-cao/d9.md): 233/233 trang cũ của anh-xa.md có trong src/data/trang.yml và src/content/docs/, khớp 233 file .md của ../opus-zero/docs (commit 5d08189), không trang nào thiếu hay thừa. Cả 233 đã khóa trên main (khoa.json), nên có ở bản thật; trang chủ mở khóa ở nhánh này, khóa lại trước khi gộp. Ở cả description (cùng câu). Review D9: bao-cao/d9.md (đối chiếu 233/233); dist/ (build:xem) có 242 trang; ở bản thật đúng khi index, 404, cap-nhat và bài này được khóa trước khi gộp (khoa.json ở main: 234 trang). mo/bo-opus-zero (09/11/2026): gộp vào n1."
     review: dung
   - id: n3
     cau: "Mỗi trang đã được kiểm tra lại từ đầu."
@@ -33,10 +42,10 @@ nhan_dinh:
     ghi_chu: "kiem-dinh/khoa.json trên main 4bb09b4: 234 trang khóa (233 trang của trang.yml và 404), mỗi trang có hồ sơ kiem-dinh/<trang>.yml với lan đủ người; 73/73 bản ghi tác phẩm khóa cả bản ghi. Ở cả description. Review D9: khoa.json ở main: 234 trang khóa, 377 khóa bản ghi; mỗi trang có hồ sơ kiem-dinh/<trang>.yml."
     review: dung
   - id: n4
-    cau: "Site có đủ 233 trang của Opus Zero, cộng 7 trang mới."
+    cau: "Site có 240 trang, trong đó mỗi chặng của lộ trình piano có một trang riêng."
     loai: ve-site
-    ket_qua: dung
-    ghi_chu: "anh-xa.md: 233 trang cũ, tổng ở bảng Tổng theo đợt; 7 trang chặng piano/lo-trinh/chang-1 đến chang-7 sinh từ src/pages/piano/lo-trinh/[chang].astro (dist/piano/lo-trinh/chang-N/). Bản xem 242 trang = 233 + 7 + 404 + bài này. Review D9: anh-xa.md (233); dist/piano/lo-trinh/chang-1 … chang-7 (build:xem)."
+    ket_qua: da-sua
+    ghi_chu: "anh-xa.md: 233 trang cũ, tổng ở bảng Tổng theo đợt; 7 trang chặng piano/lo-trinh/chang-1 đến chang-7 sinh từ src/pages/piano/lo-trinh/[chang].astro (dist/piano/lo-trinh/chang-N/). Bản xem 242 trang = 233 + 7 + 404 + bài này. Review D9: anh-xa.md (233); dist/piano/lo-trinh/chang-1 … chang-7 (build:xem). mo/bo-opus-zero (09/11/2026): bỏ \"của Opus Zero\"; số 240 = 233 + 7 như câu cũ."
     review: dung
   - id: n5
     cau: "Mỗi chặng của lộ trình piano có một trang riêng, liệt kê các bài học tác phẩm của chặng."
@@ -131,20 +140,20 @@ nhan_dinh:
   - id: n20
     cau: "Opus dùng cùng chỗ lưu trong trình duyệt với Opus Zero, nên tiến độ đã lưu ở Opus Zero (bài đã làm, bài đang tập, nhật ký, bản thu) vẫn hiện ở Opus, trên cùng trình duyệt."
     loai: ve-site
-    ket_qua: dung
-    ghi_chu: "Hai site cùng gốc https://mtuann.github.io, nên dùng chung localStorage và IndexedDB. src/scripts/tien-do.js: KHOA = 'opus-zero:v1', cùng khóa và định dạng với site cũ (bài đã làm, days[ngày].note của nhật ký: nhat-ky.js); tap-bai.js: store.repertoire như practice.js cũ (bài đang tập); src/scripts/kho-thu.js: IndexedDB 'opus-zero-recordings', kho rec, như ../opus-zero/docs/assets/js/recorder.js. README mục Rủi ro: cùng tên miền nên dữ liệu còn. Review D9: src/scripts/tien-do.js KHOA = 'opus-zero:v1' như ../opus-zero/docs/assets/js/progress.js; src/scripts/kho-thu.js DB = 'opus-zero-recordings' như recorder.js cũ; tap-bai.js store.repertoire; hai site cùng gốc https://mtuann.github.io."
+    ket_qua: da-bo
+    ghi_chu: "Hai site cùng gốc https://mtuann.github.io, nên dùng chung localStorage và IndexedDB. src/scripts/tien-do.js: KHOA = 'opus-zero:v1', cùng khóa và định dạng với site cũ (bài đã làm, days[ngày].note của nhật ký: nhat-ky.js); tap-bai.js: store.repertoire như practice.js cũ (bài đang tập); src/scripts/kho-thu.js: IndexedDB 'opus-zero-recordings', kho rec, như ../opus-zero/docs/assets/js/recorder.js. README mục Rủi ro: cùng tên miền nên dữ liệu còn. Review D9: src/scripts/tien-do.js KHOA = 'opus-zero:v1' như ../opus-zero/docs/assets/js/progress.js; src/scripts/kho-thu.js DB = 'opus-zero-recordings' như recorder.js cũ; tap-bai.js store.repertoire; hai site cùng gốc https://mtuann.github.io. mo/bo-opus-zero (09/11/2026): bỏ mục \"Tiến độ của bạn vẫn còn\" (nói về chỗ lưu chung với Opus Zero); chủ repo chọn xóa sạch."
     review: dung
   - id: n21
     cau: "Dùng máy khác thì chuyển tiến độ bằng file sao lưu ở trang Dữ liệu của tôi."
     loai: ve-site
-    ket_qua: dung
-    ghi_chu: "Trang luyen-tap/du-lieu (title \"Dữ liệu của tôi\", đã khóa): nút Tải file sao lưu và Gộp vào máy này (::cong-cu{ten=\"data\"}, src/scripts/sao-luu.js, định dạng opus-zero-backup như site cũ, nhập được bản xuất từ site cũ). Review D9: src/content/docs/luyen-tap/du-lieu.md (title Dữ liệu của tôi, ::cong-cu{ten=\"data\"}); src/scripts/sao-luu.js."
+    ket_qua: da-bo
+    ghi_chu: "Trang luyen-tap/du-lieu (title \"Dữ liệu của tôi\", đã khóa): nút Tải file sao lưu và Gộp vào máy này (::cong-cu{ten=\"data\"}, src/scripts/sao-luu.js, định dạng opus-zero-backup như site cũ, nhập được bản xuất từ site cũ). Review D9: src/content/docs/luyen-tap/du-lieu.md (title Dữ liệu của tôi, ::cong-cu{ten=\"data\"}); src/scripts/sao-luu.js. mo/bo-opus-zero (09/11/2026): bỏ cùng mục với n20."
     review: dung
   - id: n22
     cau: "Bản trước vẫn đọc được ở địa chỉ cũ, https://mtuann.github.io/opus-zero/."
     loai: ve-site
-    ket_qua: dung
-    ghi_chu: "curl -I 06/11/2026 (User-Agent opus-kiem-dinh/1.0): HTTP 200. README Quyết định: tắt Pages của repo cũ để sau; đợt 9 ghi đó là quyết định của chủ repo. Tắt Pages thì phải mở khóa sửa câu này (ghi ở bao-cao/d9.md). Review D9: curl 06/11/2026 (User-Agent opus-kiem-dinh/1.0): https://mtuann.github.io/opus-zero/ trả 200."
+    ket_qua: da-bo
+    ghi_chu: "curl -I 06/11/2026 (User-Agent opus-kiem-dinh/1.0): HTTP 200. README Quyết định: tắt Pages của repo cũ để sau; đợt 9 ghi đó là quyết định của chủ repo. Tắt Pages thì phải mở khóa sửa câu này (ghi ở bao-cao/d9.md). Review D9: curl 06/11/2026 (User-Agent opus-kiem-dinh/1.0): https://mtuann.github.io/opus-zero/ trả 200. mo/bo-opus-zero (09/11/2026): bỏ mục \"Opus Zero vẫn còn\" và địa chỉ site cũ."
     review: dung
   - id: n23
     cau: "Mọi cập nhật từ nay chỉ có ở Opus."
@@ -153,9 +162,13 @@ nhan_dinh:
     ghi_chu: "AGENTS.md mục Site cũ và README Quyết định: repo cũ để nguyên, chỉ đọc, không sửa, commit hay push. Ngoại lệ có trong kế hoạch (README Rủi ro): có thể đăng lại Pages repo cũ chỉ với trang chuyển hướng; đó không phải cập nhật nội dung. Review D9: AGENTS.md mục Site cũ (repo cũ chỉ đọc); README Quyết định."
     review: dung
   - id: n24
-    cau: "Thấy chỗ nào sai hoặc khó hiểu, hãy báo qua trang GitHub của dự án (issue của repo opus-zero)."
+    cau: "Thấy chỗ nào sai hoặc khó hiểu, hãy báo qua trang GitHub của dự án (issue của repo mtuann/opus)."
     loai: ve-site
-    ket_qua: dung
-    ghi_chu: "Link https://github.com/mtuann/opus-zero/issues như tai-nguyen, tai-lieu-tham-khao, bat-dau/hoi-dap và bài phiên bản 15 (đã khóa); README Quyết định 24/10/2026: giữ link issue repo cũ (công khai) cho tới khi repo mới công khai. curl -I 06/11/2026: HTTP 200. Review D9: curl 06/11/2026: https://github.com/mtuann/opus-zero/issues trả 200; cùng link với tai-nguyen, tai-lieu-tham-khao, bat-dau/hoi-dap (AGENTS.md mục chuyển trang)."
+    ket_qua: da-sua
+    ghi_chu: "Link https://github.com/mtuann/opus-zero/issues như tai-nguyen, tai-lieu-tham-khao, bat-dau/hoi-dap và bài phiên bản 15 (đã khóa); README Quyết định 24/10/2026: giữ link issue repo cũ (công khai) cho tới khi repo mới công khai. curl -I 06/11/2026: HTTP 200. Review D9: curl 06/11/2026: https://github.com/mtuann/opus-zero/issues trả 200; cùng link với tai-nguyen, tai-lieu-tham-khao, bat-dau/hoi-dap (AGENTS.md mục chuyển trang). mo/bo-opus-zero (09/11/2026): câu nằm ở mục mới \"Góp ý\"; link báo lỗi đổi sang https://github.com/mtuann/opus/issues (repo của site; chủ repo chọn trỏ vào đó dù repo còn riêng tư)."
     review: dung
 khuong_nhac: []
+mo_khoa:
+  - ngay: 2026-11-09
+    nhanh: mo/bo-opus-zero
+    ly_do: "mo/bo-opus-zero: bỏ mọi nhắc tới Opus Zero (tên, địa chỉ site cũ, repo cũ); link báo lỗi và giấy phép MIT trỏ repo mtuann/opus (chủ repo yêu cầu 09/11/2026)"

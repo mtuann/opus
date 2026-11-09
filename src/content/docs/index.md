@@ -90,4 +90,4 @@ Mỗi chặng có trang riêng: các bài học tác phẩm của chặng và b�
 <li><b>Lên site</b> <span>Chỉ trang đã kiểm tra xong mới hiện ở đây; bài thêm sau cũng qua cùng các bước.</span></li>
 </ol>
 
-Opus là bản làm lại của [Opus Zero](https://mtuann.github.io/opus-zero/). Chuyện làm lại: bài [Opus đã lên đủ](/opus/blog/posts/2026-11-07-opus-da-len-du/).
+Các bước kiểm tra kể kỹ hơn trong bài [Opus đã lên đủ](/opus/blog/posts/2026-11-07-opus-da-len-du/).

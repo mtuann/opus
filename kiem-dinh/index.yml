@@ -29,6 +29,15 @@ lan:
       luot_2: "không cần (trang khung; câu ve-site không qua lượt 2)"
       review: "Claude Opus 5.5 (review đợt 9, 06/11/2026; không làm lượt 1): 5 câu ve-site: 4 dung, 1 sai (n3, đã sửa bước 2)"
       kiem_mau: "Claude Opus 5.5 (người gom đợt 9, kiểm thay chủ repo theo lời giao 07/11/2026): mẫu 8 câu ve-site của bốn trang (blog n4, n6, n10, n20, n22; index n3; 404 n3; cap-nhat n156) kiểm lại trên dữ liệu, dist/ bản xem, src/scripts và địa chỉ Opus Zero (HTTP 200): 8 đúng, 0 sai"
+  - so: 4
+    ngay: 2026-11-09
+    nhanh: mo/bo-opus-zero
+    ma_bam: sha256:4c210914dbf485f75714cfece7729d9fd114252a9786df2894b2a94e047d6acb
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/bo-opus-zero, 09/11/2026: bỏ mọi nhắc tới Opus Zero, link repo mtuann/opus)"
+      luot_2: "không có lượt 2: chỉ sửa câu về chính site"
+      review: Claude Opus 5.5 (mo/bo-opus-zero, 09/11/2026)
+      kiem_mau: chủ repo yêu cầu (09/11/2026, chọn "xóa sạch" tên và địa chỉ Opus Zero); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
 ghi_chu: >-
   Lần 3 (đợt 9, Hoàn tất): mọi trang đã lên site thật nên bỏ ô ":::note[Đang làm lại]" (câu thông báo của kế hoạch, link sang Opus Zero "trong lúc chờ") và chữ "đang được làm lại" ở description; description mới: "… Mọi trang đã được kiểm tra lại từ đầu." Mục "Từng phần lên site thế nào" thành "Mỗi trang được kiểm tra thế nào" (vẫn ba bước oz-steps: đối chiếu với nguồn, kiểm lần hai, lên site; bài thêm sau cũng qua cùng các bước); thêm một dòng: Opus là bản làm lại của Opus Zero (link địa chỉ cũ), dẫn sang bài blog thông báo. Phần còn lại giữ nguyên. Lần này có 5 nhận định ve-site (phần viết lại), kiểm trên kế hoạch, chuẩn kiểm định, khoa.json và bản xem; không có nhận định cần nguồn ngoài. tests/khung.test.mjs đổi theo: trang chủ không còn câu "đang được làm lại". Trang chủ viết mới (không chuyển từ trang cũ), nên không có doi_chu. Lần 2 (D2-L1): trang chủ thật thay trang chủ tạm, viết mới (tầng khung, chuan-kiem-dinh.md mục 3: không có nhận định). Giữ bố cục D1.2b (dải mực, thẻ 8 nhóm) và câu thông báo của kế hoạch; thêm: nút "Bắt đầu từ số 0" (Bài 0) và "Đã biết chơi" (kiểm tra đầu vào) ở dải mực; link sang bản cũ Opus Zero trong lúc chưa chuyển hết bài (review cuối đợt 1); ba lối vào theo người đọc như trang chủ cũ (các bước chỉ là link tới trang, không có số liệu); sơ đồ 7 chặng sinh từ cap-do.yml (::hinh{ten="lo-trinh"}); thẻ 8 nhóm dẫn tới trang mở đầu của nhóm (src/nhom.mjs, chưa lên thì "sắp có"); mô tả nhóm Đọc thêm bỏ chữ opera; mục "Hôm nay tập gì?" có ô gợi ý tập (::cong-cu{ten="goi-y-tap"}, như khối "Hôm nay" của trang chủ cũ): người chưa có kết quả thấy lời mời làm bài kiểm tra đầu vào; người đã lưu chặng piano hay kết quả nhạc lý (trong trình duyệt) thấy chặng của mình và bài nên bắt đầu, chọn theo goi_y và chang của dữ liệu đã khóa (chiDaKhoa), và mục được đưa lên trước các lối vào. Lần 1: trang chủ tạm (D1.1, D1.2b), viết mới, không chuyển từ trang chủ cũ.
 nguon: []
@@ -60,9 +69,15 @@ nhan_dinh:
   - id: n5
     cau: "Opus là bản làm lại của Opus Zero."
     loai: ve-site
-    ket_qua: dung
-    ghi_chu: "plans/lam-lai/README.md, đầu file: site mới làm lại từ repo cũ mtuann/opus-zero, tên đổi thành Opus (bản trước tên Opus Zero). Link https://mtuann.github.io/opus-zero/ trả 200 ngày 06/11/2026 (curl, User-Agent opus-kiem-dinh/1.0). Link bài blog /opus/blog/posts/2026-11-07-opus-da-len-du/ có trong bản xem (tests/link.test.mjs đạt). Review D9: plans/lam-lai/README.md đầu file; curl 06/11/2026 (User-Agent opus-kiem-dinh/1.0) https://mtuann.github.io/opus-zero/ trả 200; link bài blog có trong dist/ (build:xem)."
+    ket_qua: da-bo
+    ghi_chu: "plans/lam-lai/README.md, đầu file: site mới làm lại từ repo cũ mtuann/opus-zero, tên đổi thành Opus (bản trước tên Opus Zero). Link https://mtuann.github.io/opus-zero/ trả 200 ngày 06/11/2026 (curl, User-Agent opus-kiem-dinh/1.0). Link bài blog /opus/blog/posts/2026-11-07-opus-da-len-du/ có trong bản xem (tests/link.test.mjs đạt). Review D9: plans/lam-lai/README.md đầu file; curl 06/11/2026 (User-Agent opus-kiem-dinh/1.0) https://mtuann.github.io/opus-zero/ trả 200; link bài blog có trong dist/ (build:xem). mo/bo-opus-zero (09/11/2026): bỏ câu nhắc Opus Zero (chủ repo chọn xóa sạch tên và địa chỉ site cũ)."
     review: dung
+  - id: n6
+    cau: Các bước kiểm tra kể kỹ hơn trong bài Opus đã lên đủ.
+    loai: ve-site
+    ket_qua: dung
+    review: dung
+    ghi_chu: 'mo/bo-opus-zero (09/11/2026): câu mới thay dòng cuối cũ; bài blog 2026-11-07-opus-da-len-du có mục "Kiểm tra lại từ đầu" kể các lượt kiểm.'
 khuong_nhac: []
 mo_khoa:
   - ngay: 2026-10-24
@@ -71,3 +86,6 @@ mo_khoa:
   - ngay: 2026-11-06
     nhanh: moi/d9-hoan-tat
     ly_do: 'Đợt 9 (Hoàn tất) có trong kế hoạch: mọi trang đã lên site thật, bỏ ô "Đang làm lại" và chữ "đang được làm lại" ở mô tả, viết lại mục "Từng phần lên site thế nào" cho đúng hiện tại, dẫn sang bài blog thông báo'
+  - ngay: 2026-11-09
+    nhanh: mo/bo-opus-zero
+    ly_do: "mo/bo-opus-zero: bỏ mọi nhắc tới Opus Zero (tên, địa chỉ site cũ, repo cũ); link báo lỗi và giấy phép MIT trỏ repo mtuann/opus (chủ repo yêu cầu 09/11/2026)"

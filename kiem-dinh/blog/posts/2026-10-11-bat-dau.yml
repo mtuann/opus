@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 7, 05/11/2026)
       review: Claude Opus 5.5 (review D7-gom, 05/11/2026)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 05/11/2026 (chủ repo không tự kiểm): 19 nhận định mẫu của đợt 7 (11 ở D7-L1, D7-L2; 8 ở D7-L3), 19 đúng (2 có điều kiện: hat-lai n8 bằng chứng tương quan; cap-nhat n80 vị trí cắt file chưa nghe kiểm), 0 sai (bao-cao/d7-gom/kiem-mau-ket-qua.yml, kiem-mau-l3-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-09
+    nhanh: mo/bo-opus-zero
+    ma_bam: sha256:5508f8ac2be3543da263c5043da3ee575052a136c4a9a15e4095b65d3f599e4f
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/bo-opus-zero, 09/11/2026: bỏ mọi nhắc tới Opus Zero, link repo mtuann/opus)"
+      luot_2: "không có lượt 2: chỉ sửa câu về chính site"
+      review: Claude Opus 5.5 (mo/bo-opus-zero, 09/11/2026)
+      kiem_mau: chủ repo yêu cầu (09/11/2026, chọn "xóa sạch" tên và địa chỉ Opus Zero); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
 ghi_chu: "Trang khung (D7-L3, phần 2/2). Nhật ký có ngày, chữ giữ nguyên. 6 nhận định: 2 ve-site (dung), 4 khuyen-tap/khong-can-nguon (chuyện và mục tiêu cá nhân của người viết, không kiểm được). Không sửa trang."
 doi_chu:
   - cu: null
@@ -20,6 +29,9 @@ doi_chu:
   - cu: "categories: Nhật ký; dấu <!-- more -->"
     moi: null
     ly_do: "Cú pháp của plugin blog MkDocs, site mới không dùng; chữ của bài không đổi (so tay với .cache/site-cu/blog/2026/10/11/ngày-đầu-tiên-của-opus-zero/: giống hệt, id tiêu đề như cũ)."
+  - cu: "title: Ngày đầu tiên của Opus Zero"
+    moi: "title: Ngày đầu tiên của Opus"
+    ly_do: "mo/bo-opus-zero (09/11/2026, chủ repo chọn xóa sạch tên và địa chỉ Opus Zero): đổi tên site trong tiêu đề."
 nguon: []
 nhan_dinh:
   - id: n1
@@ -61,3 +73,7 @@ nhan_dinh:
     ghi_chu: "Git ../opus-zero bafcd78 (21/10) \"Chuyển trọng tâm sang piano cổ điển\"; bài 21/10 có trong dist/blog/posts/2026-10-21-trong-tam-piano/ và src/content/docs/blog/posts/; link đúng địa chỉ. Review D7-gom: bafcd78 (2026-10-21) \"Chuyển trọng tâm sang piano cổ điển\"; link tới dist/blog/posts/2026-10-21-trong-tam-piano/."
     review: dung
 khuong_nhac: []
+mo_khoa:
+  - ngay: 2026-11-09
+    nhanh: mo/bo-opus-zero
+    ly_do: "mo/bo-opus-zero: bỏ mọi nhắc tới Opus Zero (tên, địa chỉ site cũ, repo cũ); link báo lỗi và giấy phép MIT trỏ repo mtuann/opus (chủ repo yêu cầu 09/11/2026)"

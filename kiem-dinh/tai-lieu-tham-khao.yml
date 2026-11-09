@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 5, 29/10/2026; bổ sung sau review)
       review: Claude (review D5-gom, nhóm B, 29/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 5 (D5-L1 đến D5-L3): 7 đúng (2 có điều kiện, đã sửa theo: chữ concerto ở hinh-thuc/index, bỏ hai mốc chưa kiểm trong ghi chú Stravinsky; bỏ link COD Notre Dame school 404), 0 sai, 3 câu về site không kiểm độc lập được trên máy kiểm (người gom kiểm lại, khớp) (bao-cao/d5-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-09
+    nhanh: mo/bo-opus-zero
+    ma_bam: sha256:07ab66fdb06749e94381dbdf9bf3a27f9d4ccda18b35da480bcd8da49bceec2c
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/bo-opus-zero, 09/11/2026: bỏ mọi nhắc tới Opus Zero, link repo mtuann/opus)"
+      luot_2: "không có lượt 2: chỉ sửa câu về chính site"
+      review: Claude Opus 5.5 (mo/bo-opus-zero, 09/11/2026)
+      kiem_mau: chủ repo yêu cầu (09/11/2026, chọn "xóa sạch" tên và địa chỉ Opus Zero); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
 nguon:
   - id: grove
     bac: 2
@@ -207,11 +216,11 @@ nguon:
     link: ../opus-zero/tools/audio/align/NGUON.md
 nhan_dinh:
   - id: t1
-    cau: Link tới trang GitHub của dự án (https://github.com/mtuann/opus-zero/issues) để báo lỗi.
+    cau: Link tới trang GitHub của dự án (https://github.com/mtuann/opus/issues) để báo lỗi.
     loai: ve-site
     nguon: []
-    ket_qua: dung
-    ghi_chu: "Repo cũ mtuann/opus-zero công khai, có Issues. Repo mới chưa công khai (astro.config.mjs: link GitHub chỉ thêm lại khi repo công khai). Giữ link cũ cho tới khi repo mới công khai: người giao quyết lúc đó (đổi link sang repo mới). Review D5-gom: đã kiểm trang: link https://github.com/mtuann/opus-zero/issues ở đoạn mở đầu. Repo cũ công khai, có Issues (lượt 1); repo mới chưa công khai. Giữ link cũ; người giao quyết đổi khi repo mới công khai (ghi ở báo cáo)."
+    ket_qua: da-sua
+    ghi_chu: "Repo cũ mtuann/opus-zero công khai, có Issues. Repo mới chưa công khai (astro.config.mjs: link GitHub chỉ thêm lại khi repo công khai). Giữ link cũ cho tới khi repo mới công khai: người giao quyết lúc đó (đổi link sang repo mới). Review D5-gom: đã kiểm trang: link https://github.com/mtuann/opus-zero/issues ở đoạn mở đầu. Repo cũ công khai, có Issues (lượt 1); repo mới chưa công khai. Giữ link cũ; người giao quyết đổi khi repo mới công khai (ghi ở báo cáo). mo/bo-opus-zero (09/11/2026): link báo lỗi đổi sang https://github.com/mtuann/opus/issues (repo của site; chủ repo chọn trỏ vào đó dù repo còn riêng tư)."
     review: dung
   - id: t2
     cau: Link tới trang Cập nhật (/opus/cap-nhat/).
@@ -601,11 +610,11 @@ nhan_dinh:
     ghi_chu: 'Tiêu đề "## Âm thanh" và "## Phần mềm" sinh id am-thanh, phan-mem (Starlight bỏ chữ đ ở id khác, các id này không có chữ đ). Review D5-gom: đã kiểm dist/tai-lieu-tham-khao/index.html: tiêu đề có id="am-thanh" và id="phan-mem"; link [Âm thanh](#am-thanh), [Phần mềm](#phan-mem) ở mục Giấy phép khớp.'
     review: dung
   - id: t41
-    cau: Nội dung site giấy phép CC BY-SA 4.0; ví dụ ghi nguồn "Opus, https://mtuann.github.io/opus/, CC BY-SA 4.0"; mã nguồn giấy phép MIT; link tệp LICENSE-CONTENT và LICENSE trên GitHub.
+    cau: Nội dung site giấy phép CC BY-SA 4.0; ví dụ ghi nguồn "Opus, https://mtuann.github.io/opus/, CC BY-SA 4.0"; mã nguồn giấy phép MIT; link tệp LICENSE-CONTENT và LICENSE trên GitHub (repo mtuann/opus).
     loai: ve-site
     nguon: []
     ket_qua: da-sua
-    ghi_chu: 'LICENSE-CONTENT của repo mới ghi CC BY-SA 4.0 cho nội dung, địa chỉ https://mtuann.github.io/opus/; LICENSE là MIT. Link GitHub vẫn trỏ repo cũ mtuann/opus-zero (có LICENSE-CONTENT, LICENSE): giống t1, đổi khi repo mới công khai. Chữ cũ ví dụ ghi nguồn: "Opus Zero, https://mtuann.github.io/opus-zero/, CC BY-SA 4.0"; chữ mới "Opus, https://mtuann.github.io/opus/, CC BY-SA 4.0" theo LICENSE-CONTENT của repo mới. Review D5-gom: đã kiểm trang mục Giấy phép: CC BY-SA 4.0, ví dụ ghi nguồn "Opus, https://mtuann.github.io/opus/, CC BY-SA 4.0", mã nguồn MIT, link LICENSE-CONTENT và LICENSE còn trỏ repo cũ mtuann/opus-zero (giữ như t1, người giao quyết khi repo mới công khai).'
+    ghi_chu: 'LICENSE-CONTENT của repo mới ghi CC BY-SA 4.0 cho nội dung, địa chỉ https://mtuann.github.io/opus/; LICENSE là MIT. Link GitHub vẫn trỏ repo cũ mtuann/opus-zero (có LICENSE-CONTENT, LICENSE): giống t1, đổi khi repo mới công khai. Chữ cũ ví dụ ghi nguồn: "Opus Zero, https://mtuann.github.io/opus-zero/, CC BY-SA 4.0"; chữ mới "Opus, https://mtuann.github.io/opus/, CC BY-SA 4.0" theo LICENSE-CONTENT của repo mới. Review D5-gom: đã kiểm trang mục Giấy phép: CC BY-SA 4.0, ví dụ ghi nguồn "Opus, https://mtuann.github.io/opus/, CC BY-SA 4.0", mã nguồn MIT, link LICENSE-CONTENT và LICENSE còn trỏ repo cũ mtuann/opus-zero (giữ như t1, người giao quyết khi repo mới công khai). mo/bo-opus-zero (09/11/2026): hai link giấy phép đổi sang repo mtuann/opus; kiểm: LICENSE (MIT, Copyright (c) 2026 mtuann) và LICENSE-CONTENT (CC BY-SA 4.0) có ở gốc repo.'
     review: dung
   - id: t42
     cau: CC BY-SA 4.0 cho phép sao chép, chia sẻ, chỉnh sửa, kể cả thương mại, nếu ghi nguồn, nói rõ đã sửa đổi và chia sẻ theo cùng giấy phép.
@@ -701,3 +710,7 @@ doi_chu:
   - cu: 'Nội dung của site (chữ, ví dụ nhạc và bài tập soạn cho site, hình và sơ đồ): giấy phép CC BY-SA 4.0. Bạn được sao chép, chia sẻ và chỉnh sửa, kể cả cho mục đích thương mại, nếu ghi nguồn (ví dụ "Opus Zero, https://mtuann.github.io/opus-zero/, CC BY-SA 4.0"), nói rõ nếu đã sửa đổi, và chia sẻ bản chỉnh sửa theo cùng giấy phép. Toàn văn: tệp LICENSE-CONTENT trong kho mã.'
     moi: 'Nội dung của site (chữ, ví dụ nhạc và bài tập soạn cho site, hình và sơ đồ): giấy phép CC BY-SA 4.0. Bạn được sao chép, chia sẻ và chỉnh sửa, kể cả cho mục đích thương mại, nếu ghi nguồn (ví dụ "Opus, https://mtuann.github.io/opus/, CC BY-SA 4.0"), nói rõ nếu đã sửa đổi, và chia sẻ bản chỉnh sửa theo cùng giấy phép. Toàn văn: tệp LICENSE-CONTENT trong kho mã.'
     ly_do: "t41 (da-sua): theo LICENSE-CONTENT của repo mới."
+mo_khoa:
+  - ngay: 2026-11-09
+    nhanh: mo/bo-opus-zero
+    ly_do: "mo/bo-opus-zero: bỏ mọi nhắc tới Opus Zero (tên, địa chỉ site cũ, repo cũ); link báo lỗi và giấy phép MIT trỏ repo mtuann/opus (chủ repo yêu cầu 09/11/2026)"

@@ -12,20 +12,32 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 7, 05/11/2026)
       review: Claude Opus 5.5 (review D7-gom, 05/11/2026)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 05/11/2026 (chủ repo không tự kiểm): 19 nhận định mẫu của đợt 7 (11 ở D7-L1, D7-L2; 8 ở D7-L3), 19 đúng (2 có điều kiện: hat-lai n8 bằng chứng tương quan; cap-nhat n80 vị trí cắt file chưa nghe kiểm), 0 sai (bao-cao/d7-gom/kiem-mau-ket-qua.yml, kiem-mau-l3-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-09
+    nhanh: mo/bo-opus-zero
+    ma_bam: sha256:cb7e3e3b1088961a24c6f2f67aeaa148cc1d4964bdbff2eb45b9ace1bdca655e
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/bo-opus-zero, 09/11/2026: bỏ mọi nhắc tới Opus Zero, link repo mtuann/opus)"
+      luot_2: "không có lượt 2: chỉ sửa câu về chính site"
+      review: Claude Opus 5.5 (mo/bo-opus-zero, 09/11/2026)
+      kiem_mau: chủ repo yêu cầu (09/11/2026, chọn "xóa sạch" tên và địa chỉ Opus Zero); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
 ghi_chu: "Trang khung (D7-L3, phần 2/2). 26 nhận định: 20 ve-site (kiểm trên ../opus-zero ở commit bafcd78 và HEAD, trang đích), 1 danh-muc, 1 quy-tac, 2 khuyen-tap, 3 chưa chắc (n5 kho nhạc piano lớn nhất, n6 từ Bach, so-lieu/lich-su). Không sửa trang. Lưu ý cho người giao: n10 link /opus/nhac-cu/ chưa chuyển; ở menu site mới mục này tên \"Đọc thêm\", không còn \"Nhạc cụ & dàn nhạc\". Chữ giữ nguyên vì là nhật ký có ngày."
 doi_chu:
   - cu: null
-    moi: "description: Từ hôm nay, Opus Zero là sổ tay học piano cổ điển từ con số 0 đến những tác phẩm lớn."
-    ly_do: "Bài blog cần description: câu mở đầu của bài (og:description cũ dài hơn, bị cắt ở giữa câu thứ hai)."
+    moi: "description: Từ hôm nay, Opus là sổ tay học piano cổ điển từ con số 0 đến những tác phẩm lớn."
+    ly_do: "Bài blog cần description: câu mở đầu của bài (og:description cũ dài hơn, bị cắt ở giữa câu thứ hai). mo/bo-opus-zero (09/11/2026, chủ repo chọn xóa sạch tên và địa chỉ Opus Zero): \"Opus Zero\" thành \"Opus\"."
   - cu: Các bài học tác phẩm chia theo chặng (26 bài lúc bài viết này ra đời, nay là 34), từ Minuet Fa trưởng K. 2 của Mozart đến Ballade số 1 của Chopin. Mỗi bài có cấu trúc, chỗ khó và cách tập, bài tập chuẩn bị, kế hoạch theo tuần, bản đồ nghe theo bản thu và câu tự kiểm tra.
-    moi: Các bài học tác phẩm chia theo chặng (26 bài lúc bài viết này ra đời, 34 bài ở phiên bản cuối của Opus Zero), từ Minuet Fa trưởng K. 2 của Mozart đến Ballade số 1 của Chopin. Mỗi bài có cấu trúc, chỗ khó và cách tập, bài tập chuẩn bị, kế hoạch theo tuần, bản đồ nghe theo bản thu và câu tự kiểm tra.
-    ly_do: '"nay là 34" không đúng ở site mới (bài học tác phẩm lên site ở đợt 6): ghi 34 là số của site cũ. Phần còn lại so tay với .cache/site-cu/blog/2026/10/21/…: giống hệt.'
+    moi: Các bài học tác phẩm chia theo chặng (26 bài lúc bài viết này ra đời, nay là 34 bài), từ Minuet Fa trưởng K. 2 của Mozart đến Ballade số 1 của Chopin. Mỗi bài có cấu trúc, chỗ khó và cách tập, bài tập chuẩn bị, kế hoạch theo tuần, bản đồ nghe theo bản thu và câu tự kiểm tra.
+    ly_do: '"nay là 34" không đúng ở site mới (bài học tác phẩm lên site ở đợt 6): ghi 34 là số của site cũ. Phần còn lại so tay với .cache/site-cu/blog/2026/10/21/…: giống hệt. mo/bo-opus-zero (09/11/2026, chủ repo chọn xóa sạch tên và địa chỉ Opus Zero): site mới nay đã có đủ 34 bài học (src/data/tac-pham.yml), nên ghi "nay là 34 bài".'
   - cu: "categories: Cập nhật; dấu <!-- more -->"
     moi: null
     ly_do: Cú pháp của plugin blog MkDocs, site mới không dùng.
   - cu: Piano là một trong số ít nhạc cụ cho bạn nhìn thấy và chơi được cả giai điệu lẫn hòa âm cùng lúc, một mình. Mọi khái niệm của nhạc lý, từ quãng, gam đến hợp âm và kết, đều thành hình dạng dưới mười ngón tay. Kho nhạc viết cho piano cũng lớn hơn bất kỳ nhạc cụ nào khác, từ Bach đến Rachmaninoff, và rất nhiều bản trong đó nằm trong tầm tay người lớn tự học.
     moi: Trên piano, một mình bạn nhìn thấy và chơi được cả giai điệu lẫn hòa âm cùng lúc. Mọi khái niệm của nhạc lý, từ quãng, gam đến hợp âm và kết, đều thành hình dạng dưới mười ngón tay. Kho nhạc chơi được trên piano trải từ Bach đến Rachmaninoff, và rất nhiều bản trong đó nằm trong tầm tay người lớn tự học.
     ly_do: 'Review D7-gom: n3 (da-sua) bỏ vế so sánh "một trong số ít nhạc cụ" (không có nguồn bậc 1–2); n5 (da-bo) bỏ "lớn hơn bất kỳ nhạc cụ nào khác" (không có nguồn bậc 1–2); n6 (da-sua) "viết cho piano" thành "chơi được trên piano", vì Bach viết cho đàn phím trước piano (Henle HN 14 in cho piano solo). So tay với .cache/site-cu/blog/2026/10/21/….'
+  - cu: "title: Opus Zero chọn piano làm trục chính; Từ hôm nay, Opus Zero là sổ tay học piano cổ điển…"
+    moi: "title: Opus chọn piano làm trục chính; Từ hôm nay, Opus là sổ tay học piano cổ điển…"
+    ly_do: "mo/bo-opus-zero (09/11/2026, chủ repo chọn xóa sạch tên và địa chỉ Opus Zero): đổi tên site ở tiêu đề và câu mở đầu."
 nguon:
   - id: wiki-piano
     bac: 3
@@ -45,10 +57,10 @@ nguon:
     link: https://imslp.org/wiki/Minuet_in_F_major,_K.2_(Mozart,_Wolfgang_Amadeus)
 nhan_dinh:
   - id: n1
-    cau: "Từ hôm nay (21/10/2026), Opus Zero là sổ tay học piano cổ điển từ con số 0 đến những tác phẩm lớn."
+    cau: "Từ hôm nay (21/10/2026), Opus là sổ tay học piano cổ điển từ con số 0 đến những tác phẩm lớn."
     loai: ve-site
-    ket_qua: dung
-    ghi_chu: "Site cũ ../opus-zero, commit bafcd78 (21/10/2026, thêm bài blog này): mkdocs.yml site_description \"Sổ tay học piano cổ điển từ con số 0 đến nâng cao\"; copyright \"Opus Zero — sổ tay học piano cổ điển\"; commit \"Chuyển trọng tâm sang piano cổ điển\". Review D7-gom: bafcd78 (21/10/2026): mkdocs.yml site_description \"Sổ tay học piano cổ điển từ con số 0 đến nâng cao\"; bài blog thêm cùng commit."
+    ket_qua: da-sua
+    ghi_chu: "Site cũ ../opus-zero, commit bafcd78 (21/10/2026, thêm bài blog này): mkdocs.yml site_description \"Sổ tay học piano cổ điển từ con số 0 đến nâng cao\"; copyright \"Opus Zero — sổ tay học piano cổ điển\"; commit \"Chuyển trọng tâm sang piano cổ điển\". Review D7-gom: bafcd78 (21/10/2026): mkdocs.yml site_description \"Sổ tay học piano cổ điển từ con số 0 đến nâng cao\"; bài blog thêm cùng commit. mo/bo-opus-zero (09/11/2026): đổi tên Opus Zero thành Opus (chủ repo chọn xóa sạch tên cũ)."
     review: dung
   - id: n2
     cau: "Nhạc lý, luyện tai, lịch sử và nghe nhạc vẫn ở nguyên đó."
@@ -142,10 +154,10 @@ nhan_dinh:
     ghi_chu: "Site cũ ../opus-zero, commit bafcd78 (21/10/2026, thêm bài blog này): git ls-tree docs/piano/tac-pham: 26 bài (không tính index); piano/tac-pham/index \"Hai mươi sáu tác phẩm\". Trang đích có id piano/tac-pham/index ở trang.yml. Review D7-gom: git ls-tree bafcd78 docs/piano/tac-pham/: 26 bài ngoài index."
     review: dung
   - id: n16
-    cau: "34 bài học tác phẩm ở phiên bản cuối của Opus Zero."
+    cau: "Nay site có 34 bài học tác phẩm."
     loai: ve-site
-    ket_qua: dung
-    ghi_chu: "../opus-zero HEAD (v15): docs/piano/tac-pham có 34 bài ngoài index (35 file); cap-nhat v14 \"Cả 34 bài học tác phẩm\". Review D7-gom: ../opus-zero HEAD: docs/piano/tac-pham/ có 34 bài ngoài index."
+    ket_qua: da-sua
+    ghi_chu: "../opus-zero HEAD (v15): docs/piano/tac-pham có 34 bài ngoài index (35 file); cap-nhat v14 \"Cả 34 bài học tác phẩm\". Review D7-gom: ../opus-zero HEAD: docs/piano/tac-pham/ có 34 bài ngoài index. mo/bo-opus-zero (09/11/2026): \"34 bài ở phiên bản cuối của Opus Zero\" thành \"nay là 34 bài\"; kiểm: 34 bản ghi loai bai-hoc trong src/data/tac-pham.yml, 34 trang piano/tac-pham/*."
     review: dung
   - id: n17
     cau: "Bài học tác phẩm đi từ Minuet Fa trưởng K. 2 của Mozart đến Ballade số 1 của Chopin."
@@ -210,3 +222,7 @@ nhan_dinh:
     ghi_chu: "Trang đích đã chuyển (src/content/docs/cap-nhat.md); site cũ docs/cap-nhat.md bản bafcd78 ghi các thay đổi này. Review D7-gom: dist/cap-nhat/ có."
     review: dung
 khuong_nhac: []
+mo_khoa:
+  - ngay: 2026-11-09
+    nhanh: mo/bo-opus-zero
+    ly_do: "mo/bo-opus-zero: bỏ mọi nhắc tới Opus Zero (tên, địa chỉ site cũ, repo cũ); link báo lỗi và giấy phép MIT trỏ repo mtuann/opus (chủ repo yêu cầu 09/11/2026)"

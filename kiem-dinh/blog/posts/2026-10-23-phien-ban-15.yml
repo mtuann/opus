@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 7, 05/11/2026)
       review: Claude Opus 5.5 (review D7-gom, 05/11/2026)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 05/11/2026 (chủ repo không tự kiểm): 19 nhận định mẫu của đợt 7 (11 ở D7-L1, D7-L2; 8 ở D7-L3), 19 đúng (2 có điều kiện: hat-lai n8 bằng chứng tương quan; cap-nhat n80 vị trí cắt file chưa nghe kiểm), 0 sai (bao-cao/d7-gom/kiem-mau-ket-qua.yml, kiem-mau-l3-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-09
+    nhanh: mo/bo-opus-zero
+    ma_bam: sha256:85942f19e2b06b8c4bb39acbf0c9a3e6f41c78f5bfda326d896b9eb2d366b0b8
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/bo-opus-zero, 09/11/2026: bỏ mọi nhắc tới Opus Zero, link repo mtuann/opus)"
+      luot_2: "không có lượt 2: chỉ sửa câu về chính site"
+      review: Claude Opus 5.5 (mo/bo-opus-zero, 09/11/2026)
+      kiem_mau: chủ repo yêu cầu (09/11/2026, chọn "xóa sạch" tên và địa chỉ Opus Zero); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
 ghi_chu: "Trang khung (D7-L3, phần 2/2). 33 nhận định: 27 ve-site (kiểm trên ../opus-zero: git, cap-nhat.md, plans/v15-do-luong.md, workflows; trang đích), 1 dinh-nghia (Lighthouse), 1 quy-tac (CC BY-SA deed), 2 lich-su, 1 nam, 1 so-lieu. Đã sửa 1: n1. Chưa chắc: n14 (động cơ người lớn), n22 (bản thu 1924 là đầu tiên, Gershwin ở piano: nguồn chưa mở được). Điểm Lighthouse (n7): số đo của site cũ, kiểm trên báo cáo, không đo lại được. Trang đích chưa chuyển cần giữ: piano/tac-pham-theo-cap#ngoai-co-dien (n15), chopin-valse-la-thu (n26), piano/tac-pham/fur-elise đã chuyển."
 doi_chu:
   - cu: "Phiên bản 15 ít trang mới hơn mọi lần. Phần lớn công sức dành cho việc làm site nhanh hơn, đúng hơn và rõ nguồn hơn. Đây là những thay đổi bạn sẽ thấy khi dùng."
@@ -265,9 +274,13 @@ nhan_dinh:
     ghi_chu: "Trang đích đã chuyển (src/content/docs/cap-nhat.md, trang.yml id cap-nhat); site cũ docs/cap-nhat.md liệt kê v15 đầy đủ. Review D7-gom: dist/cap-nhat/ có."
     review: dung
   - id: n33
-    cau: "Thấy chỗ nào sai hoặc khó hiểu, hãy báo qua trang GitHub của dự án (https://github.com/mtuann/opus-zero/issues)."
+    cau: "Thấy chỗ nào sai hoặc khó hiểu, hãy báo qua trang GitHub của dự án (https://github.com/mtuann/opus/issues)."
     loai: ve-site
-    ket_qua: dung
-    ghi_chu: "Link giữ nguyên theo AGENTS.md (repo cũ công khai, repo mới chưa); site cũ ghi cùng đường dẫn issues. Review D7-gom: link issue repo cũ giữ theo AGENTS.md (Chuyển trang)."
+    ket_qua: da-sua
+    ghi_chu: "Link giữ nguyên theo AGENTS.md (repo cũ công khai, repo mới chưa); site cũ ghi cùng đường dẫn issues. Review D7-gom: link issue repo cũ giữ theo AGENTS.md (Chuyển trang). mo/bo-opus-zero (09/11/2026): link báo lỗi đổi sang https://github.com/mtuann/opus/issues (repo của site; chủ repo chọn trỏ vào đó dù repo còn riêng tư)."
     review: dung
 khuong_nhac: []
+mo_khoa:
+  - ngay: 2026-11-09
+    nhanh: mo/bo-opus-zero
+    ly_do: "mo/bo-opus-zero: bỏ mọi nhắc tới Opus Zero (tên, địa chỉ site cũ, repo cũ); link báo lỗi và giấy phép MIT trỏ repo mtuann/opus (chủ repo yêu cầu 09/11/2026)"

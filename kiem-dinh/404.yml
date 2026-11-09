@@ -29,6 +29,15 @@ lan:
       luot_2: "không cần (câu ve-site không qua lượt 2)"
       review: "Claude Opus 5.5 (review đợt 9, 06/11/2026; không làm lượt 1): 3 câu ve-site: 2 dung, 1 sai (n3, đã sửa: trang lưu trữ, chuyên mục blog cũ)"
       kiem_mau: "Claude Opus 5.5 (người gom đợt 9, kiểm thay chủ repo theo lời giao 07/11/2026): mẫu 8 câu ve-site của bốn trang (blog n4, n6, n10, n20, n22; index n3; 404 n3; cap-nhat n156) kiểm lại trên dữ liệu, dist/ bản xem, src/scripts và địa chỉ Opus Zero (HTTP 200): 8 đúng, 0 sai"
+  - so: 4
+    ngay: 2026-11-09
+    nhanh: mo/bo-opus-zero
+    ma_bam: sha256:e748577361d51234a173569a4b134f8eaac42266f281b44c18d04bf0574501f6
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/bo-opus-zero, 09/11/2026: bỏ mọi nhắc tới Opus Zero, link repo mtuann/opus)"
+      luot_2: "không có lượt 2: chỉ sửa câu về chính site"
+      review: Claude Opus 5.5 (mo/bo-opus-zero, 09/11/2026)
+      kiem_mau: chủ repo yêu cầu (09/11/2026, chọn "xóa sạch" tên và địa chỉ Opus Zero); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
 ghi_chu: >-
   Lần 3 (đợt 9, Hoàn tất): mọi trang đã lên nên bỏ chữ "đang được làm lại", "từng phần sẽ lên" ở description và tagline, và dòng "khi được chuyển xong, nó lên đúng địa chỉ này"; thay bằng: trang không có trên Opus; trang của Opus Zero giữ đường dẫn, đổi /opus-zero/ thành /opus/ (trừ bài blog, link Nhật ký học). 3 nhận định ve-site, lượt 1. Trang viết mới (không có trang cũ), không có doi_chu. Lần 1–2: trang 404 viết mới ở D1.5, không có nhận định về âm nhạc; chỉ báo site đang làm lại và cách tìm trang.
 nguon: []
@@ -42,8 +51,8 @@ nhan_dinh:
   - id: n2
     cau: "Trang của Opus Zero giữ nguyên đường dẫn: với link cũ, đổi /opus-zero/ thành /opus/ là ra trang ấy trên Opus."
     loai: ve-site
-    ket_qua: dung
-    ghi_chu: "description và dòng thứ hai của mục Tìm trang khác. README luật 4 (../opus-zero/docs/<trang>.md thành src/content/docs/<trang>.md; /opus-zero/<trang>/ thành /opus/<trang>/); script đối chiếu đợt 9: 233/233 trang cũ có trang cùng đường dẫn. Ngoại lệ ghi ở n3. Review D9: 233/233 trang của anh-xa.md có file cùng đường dẫn trong src/content/docs/ và dòng trong trang.yml (bao-cao/d9.md); thử https://mtuann.github.io/opus-zero/nhac-ly/10-hop-am-ba/ (200) và dist/nhac-ly/10-hop-am-ba/index.html có. Sách in cũng giữ tên file (.cache/site-cu/sach/ và dist/sach/: 7 file trùng tên). description sửa vế cuối theo n3."
+    ket_qua: da-bo
+    ghi_chu: "description và dòng thứ hai của mục Tìm trang khác. README luật 4 (../opus-zero/docs/<trang>.md thành src/content/docs/<trang>.md; /opus-zero/<trang>/ thành /opus/<trang>/); script đối chiếu đợt 9: 233/233 trang cũ có trang cùng đường dẫn. Ngoại lệ ghi ở n3. Review D9: 233/233 trang của anh-xa.md có file cùng đường dẫn trong src/content/docs/ và dòng trong trang.yml (bao-cao/d9.md); thử https://mtuann.github.io/opus-zero/nhac-ly/10-hop-am-ba/ (200) và dist/nhac-ly/10-hop-am-ba/index.html có. Sách in cũng giữ tên file (.cache/site-cu/sach/ và dist/sach/: 7 file trùng tên). description sửa vế cuối theo n3. mo/bo-opus-zero (09/11/2026): bỏ hướng dẫn đổi /opus-zero/ thành /opus/ (chủ repo chọn xóa sạch)."
     review: dung
   - id: n3
     cau: "Riêng blog khác: bài viết đổi địa chỉ, trang lưu trữ và chuyên mục của blog cũ không còn; tìm bài trong Nhật ký học."
@@ -51,6 +60,12 @@ nhan_dinh:
     ket_qua: da-sua
     ghi_chu: "Site cũ: /opus-zero/blog/2026/10/<ngày>/<tên>/ (.cache/site-cu/blog/2026/10/); site mới: /opus/blog/posts/<yyyy-mm-dd>-<tên>/ (README đợt 7). /opus/blog/ là trang blog/index, title \"Nhật ký học\", liệt kê mọi bài (::danh-sach-bai). Review D9: chữ cũ \"Riêng bài blog đổi địa chỉ: tìm trong Nhật ký học.\" bỏ sót ba trang do plugin blog của site cũ sinh: .cache/site-cu/blog/archive/2026/, blog/category/cập-nhật/, blog/category/nhật-ký/ không có trên Opus (dist/blog/ chỉ có index.html và posts/). Bài viết: site cũ /opus-zero/blog/2026/10/<ngày>/<tên>/, site mới /opus/blog/posts/<yyyy-mm-dd>-<tên>/; /opus/blog/ là Nhật ký học (::danh-sach-bai). Đã sửa dòng của mục Tìm trang khác và vế cuối description (\"riêng blog thì tìm bài ở Nhật ký học\"); trang viết mới nên không có doi_chu."
     review: sai
+  - id: n4
+    cau: Đi từ trang chủ để tìm theo mục; bài blog nằm trong Nhật ký học.
+    loai: ve-site
+    ket_qua: dung
+    review: dung
+    ghi_chu: "mo/bo-opus-zero (09/11/2026): câu mới thay n2; Nhật ký học là tiêu đề của blog/index; trang chủ /opus/ có thẻ dẫn tới tám nhóm nội dung. Trang 404 ẩn menu bên, nên câu không nhắc menu."
 khuong_nhac: []
 mo_khoa:
   - ngay: 2026-10-23
@@ -59,3 +74,6 @@ mo_khoa:
   - ngay: 2026-11-06
     nhanh: moi/d9-hoan-tat
     ly_do: 'Đợt 9 (Hoàn tất) có trong kế hoạch: mọi trang đã lên site thật, bỏ chữ "đang được làm lại", "từng phần sẽ lên" ở description, tagline và dòng "khi được chuyển xong"'
+  - ngay: 2026-11-09
+    nhanh: mo/bo-opus-zero
+    ly_do: "mo/bo-opus-zero: bỏ mọi nhắc tới Opus Zero (tên, địa chỉ site cũ, repo cũ); link báo lỗi và giấy phép MIT trỏ repo mtuann/opus (chủ repo yêu cầu 09/11/2026)"

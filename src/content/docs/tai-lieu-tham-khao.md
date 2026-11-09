@@ -3,7 +3,7 @@ title: Tài liệu tham khảo
 description: Những nguồn chính được dùng để viết và kiểm tra nội dung site. Các trang cụ thể ghi thêm nguồn riêng ở cuối trang. Nếu thấy thông tin sai, hãy đối chiếu với…
 ---
 
-Những nguồn chính được dùng để viết và kiểm tra nội dung site. Các trang cụ thể ghi thêm nguồn riêng ở cuối trang. Nếu thấy thông tin sai, hãy đối chiếu với các nguồn dưới đây và báo qua [trang GitHub của dự án](https://github.com/mtuann/opus-zero/issues); những thay đổi lớn được ghi ở [Cập nhật](/opus/cap-nhat/).
+Những nguồn chính được dùng để viết và kiểm tra nội dung site. Các trang cụ thể ghi thêm nguồn riêng ở cuối trang. Nếu thấy thông tin sai, hãy đối chiếu với các nguồn dưới đây và báo qua [trang GitHub của dự án](https://github.com/mtuann/opus/issues); những thay đổi lớn được ghi ở [Cập nhật](/opus/cap-nhat/).
 
 ## Từ điển và bách khoa
 
@@ -61,8 +61,8 @@ Những nguồn chính được dùng để viết và kiểm tra nội dung sit
 
 ## Giấy phép
 
-- **Nội dung của site** (chữ, ví dụ nhạc và bài tập soạn cho site, hình và sơ đồ): giấy phép [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Bạn được sao chép, chia sẻ và chỉnh sửa, kể cả cho mục đích thương mại, nếu ghi nguồn (ví dụ "Opus, https://mtuann.github.io/opus/, CC BY-SA 4.0"), nói rõ nếu đã sửa đổi, và chia sẻ bản chỉnh sửa theo cùng giấy phép. Toàn văn: tệp [LICENSE-CONTENT](https://github.com/mtuann/opus-zero/blob/main/LICENSE-CONTENT) trong kho mã.
-- **Mã nguồn**: giấy phép [MIT](https://github.com/mtuann/opus-zero/blob/main/LICENSE).
+- **Nội dung của site** (chữ, ví dụ nhạc và bài tập soạn cho site, hình và sơ đồ): giấy phép [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Bạn được sao chép, chia sẻ và chỉnh sửa, kể cả cho mục đích thương mại, nếu ghi nguồn (ví dụ "Opus, https://mtuann.github.io/opus/, CC BY-SA 4.0"), nói rõ nếu đã sửa đổi, và chia sẻ bản chỉnh sửa theo cùng giấy phép. Toàn văn: tệp [LICENSE-CONTENT](https://github.com/mtuann/opus/blob/main/LICENSE-CONTENT) trong kho mã.
+- **Mã nguồn**: giấy phép [MIT](https://github.com/mtuann/opus/blob/main/LICENSE).
 - **Giữ giấy phép riêng**: bản thu, mẫu âm piano, font và thư viện abcjs ở hai mục [Âm thanh](#am-thanh) và [Phần mềm](#phan-mem) phía trên; nội dung trích từ nguồn khác (ghi ở mục "Nguồn" của từng trang) thuộc về tác giả của nguồn đó.
 
 ## Về độ chính xác

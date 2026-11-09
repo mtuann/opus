@@ -12,11 +12,17 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 7, 05/11/2026)
       review: Claude Opus 5.5 (review D7-gom, 05/11/2026)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 05/11/2026 (chủ repo không tự kiểm): 19 nhận định mẫu của đợt 7 (11 ở D7-L1, D7-L2; 8 ở D7-L3), 19 đúng (2 có điều kiện: hat-lai n8 bằng chứng tương quan; cap-nhat n80 vị trí cắt file chưa nghe kiểm), 0 sai (bao-cao/d7-gom/kiem-mau-ket-qua.yml, kiem-mau-l3-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-09
+    nhanh: mo/bo-opus-zero
+    ma_bam: sha256:2150dc7844777a68814a72f9cdfade5b3ffe8d12fb165941cd8b240aecc49dfe
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/bo-opus-zero, 09/11/2026: bỏ mọi nhắc tới Opus Zero, link repo mtuann/opus)"
+      luot_2: "không có lượt 2: chỉ sửa câu về chính site"
+      review: Claude Opus 5.5 (mo/bo-opus-zero, 09/11/2026)
+      kiem_mau: chủ repo yêu cầu (09/11/2026, chọn "xóa sạch" tên và địa chỉ Opus Zero); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
 ghi_chu: "Trang khung (D7-L3, phần 2/2). 6 nhận định ve-site, đều dung; không sửa trang. Link trong trang (cap-nhat, luyen-tap/nhat-ky) đúng trang và có trong trang.yml. Danh sách bài sinh từ frontmatter ba bài, không so được chữ (đã ghi doi_chu)."
 doi_chu:
-  - cu: null
-    moi: Các bài tháng 10/2026 viết khi site còn tên Opus Zero, ở địa chỉ cũ https://mtuann.github.io/opus-zero/.
-    ly_do: "Thêm: ba bài blog chuyển nguyên chữ, có tên Opus Zero (tên cũ của site) và nói về các phiên bản của site cũ; nói một lần ở trang blog thay vì sửa từng bài đã ghi ngày."
   - cu: Danh sách bài do plugin blog của MkDocs tự sinh (tiêu đề, ngày, đoạn mở đầu trước <!-- more -->, chủ đề)
     moi: ::danh-sach-bai (tiêu đề là link, ngày, mô tả của bài; data-sinh)
     ly_do: Không so chữ được (tests/chuyen.test.mjs, KHONG_SO). Danh sách dựng lúc build từ frontmatter của bài có trong bản build (AGENTS.md mục D7-L3); bỏ chủ đề (categories) và trang Lưu trữ, Chủ đề của plugin blog cũ.
@@ -43,14 +49,14 @@ nhan_dinh:
   - id: n4
     cau: "Các bài tháng 10/2026 viết khi site còn tên Opus Zero."
     loai: ve-site
-    ket_qua: dung
-    ghi_chu: "Ngày ba bài: 11/10, 21/10, 23/10/2026 (dist/blog/index.html); AGENTS.md dòng đầu \"Opus (bản trước tên Opus Zero)\"; tiêu đề hai bài 11/10 và 21/10 có \"Opus Zero\"; site cũ ../opus-zero/mkdocs.yml: site_name Opus Zero (copyright \"Opus Zero — sổ tay học piano cổ điển\"). Bài 23/10 không nêu tên nhưng viết ở site cũ (commit 0294abc, 23/10/2026, ../opus-zero). Review D7-gom: ngày trong frontmatter: 2026-10-11, 10-21, 10-23; ../opus-zero/mkdocs.yml site_name Opus Zero; git log site cũ: bafcd78 (21/10), 0294abc (23/10)."
+    ket_qua: da-bo
+    ghi_chu: "Ngày ba bài: 11/10, 21/10, 23/10/2026 (dist/blog/index.html); AGENTS.md dòng đầu \"Opus (bản trước tên Opus Zero)\"; tiêu đề hai bài 11/10 và 21/10 có \"Opus Zero\"; site cũ ../opus-zero/mkdocs.yml: site_name Opus Zero (copyright \"Opus Zero — sổ tay học piano cổ điển\"). Bài 23/10 không nêu tên nhưng viết ở site cũ (commit 0294abc, 23/10/2026, ../opus-zero). Review D7-gom: ngày trong frontmatter: 2026-10-11, 10-21, 10-23; ../opus-zero/mkdocs.yml site_name Opus Zero; git log site cũ: bafcd78 (21/10), 0294abc (23/10). mo/bo-opus-zero (09/11/2026): bỏ câu nhắc tên cũ Opus Zero (chủ repo chọn xóa sạch)."
     review: dung
   - id: n5
     cau: "Địa chỉ cũ của site là https://mtuann.github.io/opus-zero/."
     loai: ve-site
-    ket_qua: dung
-    ghi_chu: "../opus-zero/mkdocs.yml dòng 4: site_url https://mtuann.github.io/opus-zero/; AGENTS.md (site mới: https://mtuann.github.io/opus/). Review D7-gom: ../opus-zero/mkdocs.yml: site_url https://mtuann.github.io/opus-zero/."
+    ket_qua: da-bo
+    ghi_chu: "../opus-zero/mkdocs.yml dòng 4: site_url https://mtuann.github.io/opus-zero/; AGENTS.md (site mới: https://mtuann.github.io/opus/). Review D7-gom: ../opus-zero/mkdocs.yml: site_url https://mtuann.github.io/opus-zero/. mo/bo-opus-zero (09/11/2026): bỏ địa chỉ site cũ (chủ repo chọn xóa sạch)."
     review: dung
   - id: n6
     cau: "Danh sách bài (::danh-sach-bai): mỗi bài có tiêu đề là link, ngày và mô tả, mới trước."
@@ -59,3 +65,7 @@ nhan_dinh:
     ghi_chu: "src/plugins/thanh-phan.mjs danhSachBai/docBaiBlog; dist/blog/index.html: ba mục 23/10/2026, 21/10/2026, 11/10/2026, mỗi mục tiêu đề link, <time>, mô tả (data-sinh). Review D7-gom: src/plugins/thanh-phan.mjs danhSachBai: sắp theo date giảm dần; dist/blog/index.html ba mục 23/10, 21/10, 11/10, mỗi mục link, <time>, mô tả."
     review: dung
 khuong_nhac: []
+mo_khoa:
+  - ngay: 2026-11-09
+    nhanh: mo/bo-opus-zero
+    ly_do: "mo/bo-opus-zero: bỏ mọi nhắc tới Opus Zero (tên, địa chỉ site cũ, repo cũ); link báo lỗi và giấy phép MIT trỏ repo mtuann/opus (chủ repo yêu cầu 09/11/2026)"

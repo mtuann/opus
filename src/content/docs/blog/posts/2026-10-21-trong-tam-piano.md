@@ -1,10 +1,10 @@
 ---
-title: Opus Zero chọn piano làm trục chính
+title: Opus chọn piano làm trục chính
 date: 2026-10-21
-description: "Từ hôm nay, Opus Zero là sổ tay học piano cổ điển từ con số 0 đến những tác phẩm lớn."
+description: "Từ hôm nay, Opus là sổ tay học piano cổ điển từ con số 0 đến những tác phẩm lớn."
 ---
 
-Từ hôm nay, Opus Zero là sổ tay **học piano cổ điển** từ con số 0 đến những tác phẩm lớn. Nhạc lý, luyện tai, lịch sử và nghe nhạc vẫn ở nguyên đó, nhưng giờ chúng xoay quanh một cây đàn.
+Từ hôm nay, Opus là sổ tay **học piano cổ điển** từ con số 0 đến những tác phẩm lớn. Nhạc lý, luyện tai, lịch sử và nghe nhạc vẫn ở nguyên đó, nhưng giờ chúng xoay quanh một cây đàn.
 
 ## Vì sao là piano?
 
@@ -15,7 +15,7 @@ Trước đây site có lộ trình cho bảy nhạc cụ, mỗi nhạc cụ m�
 ## Có gì mới?
 
 - Một mục [Piano](/opus/piano/) riêng: [lộ trình từ 0 đến nâng cao](/opus/piano/lo-trinh/), [hai tuần đầu tiên](/opus/piano/hai-tuan-dau/), [10 bài đầu tiên](/opus/piano/10-bai-dau-tien/) viết lại cho hai tay có số ngón, các trang kỹ thuật và cách tập.
-- [Các bài học tác phẩm](/opus/piano/tac-pham/) chia theo chặng (26 bài lúc bài viết này ra đời, 34 bài ở phiên bản cuối của Opus Zero), từ Minuet Fa trưởng K. 2 của Mozart đến Ballade số 1 của Chopin. Mỗi bài có cấu trúc, chỗ khó và cách tập, bài tập chuẩn bị, kế hoạch theo tuần, bản đồ nghe theo bản thu và câu tự kiểm tra.
+- [Các bài học tác phẩm](/opus/piano/tac-pham/) chia theo chặng (26 bài lúc bài viết này ra đời, nay là 34 bài), từ Minuet Fa trưởng K. 2 của Mozart đến Ballade số 1 của Chopin. Mỗi bài có cấu trúc, chỗ khó và cách tập, bài tập chuẩn bị, kế hoạch theo tuần, bản đồ nghe theo bản thu và câu tự kiểm tra.
 - **Trình phát luyện tập** trên mọi khuông nhạc: chỉnh tốc độ, lặp lại, nghe riêng từng tay, gõ nhịp, và chế độ giá nhạc phóng to khuông, giữ màn hình sáng khi tập.
 - **Theo dõi việc tập:** đánh dấu bài đang tập, danh sách việc bấm được và được nhớ, buổi tập hôm nay bắt đầu bên đàn; công cụ [thị tấu hai tay](/opus/luyen-tap/thi-tau-hai-tay/) theo bốn cấp.
 - Mục [Hòa âm bên phím và ứng tác](/opus/piano/hoa-am/): kết ở mọi giọng, đệm cho một giai điệu, các mẫu hòa âm thời Cổ điển, ứng tác.
