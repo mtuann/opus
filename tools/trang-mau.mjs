@@ -111,8 +111,11 @@ function tatCa(dist) {
 		.sort();
 }
 
-/** Trang (trong src/content/docs/) nhánh đang làm đã thêm, sửa hay đổi tên/chuyển chỗ so với main; rỗng nếu đang ở main hay không đọc được git. */
-export function trangDaDoi(goc = GOC) {
+/**
+ * Trang (trong src/content/docs/) nhánh đang làm đã thêm, sửa hay đổi tên/chuyển chỗ so với main; rỗng nếu đang ở main hay
+ * không đọc được git. OPUS_NEN (commit): so với commit ấy thay cho main (deploy.yml: mốc là lần deploy đạt gần nhất).
+ */
+export function trangDaDoi(goc = GOC, env = process.env) {
 	const git = (...ts) => execFileSync('git', ['-C', goc, ...ts], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
 	try {
 		const nen = ['main', 'origin/main'].find((b) => {
@@ -122,8 +125,9 @@ export function trangDaDoi(goc = GOC) {
 				return false;
 			}
 		});
-		if (!nen) return [];
-		const doi = git('diff', '--name-only', '--diff-filter=AMR', git('merge-base', 'HEAD', nen), '--', 'src/content/docs');
+		const moc = env.OPUS_NEN ? git('rev-parse', '--verify', '--quiet', `${env.OPUS_NEN}^{commit}`) : nen && git('merge-base', 'HEAD', nen);
+		if (!moc) return [];
+		const doi = git('diff', '--name-only', '--diff-filter=AMR', moc, '--', 'src/content/docs');
 		return doi
 			.split('\n')
 			.map((f) => /^src\/content\/docs\/(.+)\.md$/.exec(f)?.[1])
@@ -146,7 +150,7 @@ export function trangMau(dist, goc = GOC, env = process.env) {
 	const co = tatCa(dist);
 	const html = new Map(co.map((t) => [t, fs.readFileSync(fileCua(dist, t), 'utf8')]));
 	const ra = ['', ...(fs.existsSync(path.join(dist, '404.html')) ? ['404.html'] : [])];
-	ra.push(...trangDaDoi(goc).filter((t) => html.has(t)).slice(0, TOI_DA_TRANG_DOI));
+	ra.push(...trangDaDoi(goc, env).filter((t) => html.has(t)).slice(0, TOI_DA_TRANG_DOI));
 	for (const dau of chiTrangDoi(env) ? KHOI_CO_DINH.map((k) => KHOI[k]) : Object.values(KHOI)) {
 		const t = co.find((x) => x && html.get(x).includes(dau));
 		if (t !== undefined) ra.push(t);

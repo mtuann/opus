@@ -1,8 +1,14 @@
 name: Đăng site lên GitHub Pages
 
-# Mỗi lần push lên main (hay bấm chạy tay): build bản thật (chỉ trang đã khóa trong kiem-dinh/khoa.json), kiểm thử; kiểm
-# thử trình duyệt và Lighthouse chạy song song ở job trinh-duyet (commit đã qua test.yml ở nhánh: chỉ chromium và
-# Lighthouse; xem bước "Đã kiểm ở nhánh?"). Đạt hết thì đăng dist/. Hỏng bước nào thì không đăng: site giữ bản trước.
+# Mỗi lần push lên main (hay bấm chạy tay): build bản thật (chỉ trang đã khóa trong kiem-dinh/khoa.json), kiểm thử, đạt
+# thì đăng dist/. Hỏng bước nào thì không đăng: site giữ bản trước.
+# Gọn cho đỡ phút Actions (chủ repo chọn ngày 09/11/2026; repo riêng tư tính phút theo từng job, làm tròn lên): test.yml
+# chỉ chạy tay, nên đây là lần kiểm thử tự động duy nhất. Một job làm hết, không cài và build lại nhiều lần; việc chạy
+# theo file đổi từ lần deploy đạt gần nhất (viecDeploy trong tools/chon-phan-ci.mjs):
+# - chỉ nội dung (trang, dữ liệu, hồ sơ, bản thu): npm test và Chromium chạy song song; Chromium chỉ trên trang chủ, 404 và
+#   trang đã đổi (có đổi src/data/ thì đủ trang mẫu). Không WebKit, Firefox, Lighthouse: mã không đổi so với bản đã đăng.
+# - có mã (hay không có mốc): thêm Lighthouse (chạy riêng sau cùng, để đo không bị kiểm thử khác làm chậm), và WebKit,
+#   Firefox ở job ba-trinh-duyet song song với nhau.
 on:
   push:
     branches: [main]
@@ -10,89 +16,117 @@ on:
     paths-ignore: ['plans/**', 'README.md', 'AGENTS.md', 'CLAUDE.md', 'LICENSE', 'LICENSE-CONTENT']
   workflow_dispatch:
 
-# Quyền đăng Pages chỉ ở job deploy; job build (chạy npm ci, mã của gói bên thứ ba) chỉ đọc mã. Không dùng
-# configure-pages: nó cần quyền đọc Pages ở job build, mà Astro đã có site và base trong astro.config.mjs.
+# Quyền đăng Pages chỉ ở job deploy; job kiem (chạy npm ci, mã của gói bên thứ ba) chỉ đọc mã.
 permissions:
   contents: read
 
-# Mỗi lúc một lần đăng; lần push sau chờ lần trước xong, để bản cũ hơn không ghi đè bản mới.
+# Mỗi lúc một lần đăng. Push mới hủy lần đang chạy: chỉ bản mới nhất cần lên, đỡ phút Actions khi push liền nhau.
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
-  build:
+  kiem:
     name: Build và kiểm thử (bản thật)
     runs-on: ubuntu-latest
-    # chặn đường treo (mặc định của GitHub là 6 giờ); một lần chạy thường khoảng 1 phút
+    # chặn đường treo (mặc định của GitHub là 6 giờ)
     timeout-minutes: 30
-    # đọc các lần chạy của test.yml (bước "Đã kiểm ở nhánh?")
+    # đọc lần deploy đạt gần nhất (bước "Mốc")
     permissions:
       contents: read
       actions: read
     outputs:
-      cac-phan: ${{ steps.da-kiem.outputs.cac-phan }}
+      ba-trinh-duyet: ${{ steps.viec.outputs.ba-trinh-duyet }}
     steps:
       - uses: actions/checkout@v7
         with:
-          # bước "Đã kiểm ở nhánh?" so commit này với commit của lần deploy đạt gần nhất: cần đủ lịch sử
+          # so commit này với commit của lần deploy đạt gần nhất: cần đủ lịch sử
           fetch-depth: 0
-      - uses: ./.github/actions/kiem-thu
-        with:
-          ban: that
-          phan: npm-test
-      # Lô gộp vào main kiểu fast-forward: commit này đã qua test.yml ở nhánh (lần chạy do push hay bấm chạy tay, kiểm
-      # đúng commit này; lần chạy của pull request kiểm bản gộp nên không tính) với bản xem. Bản thật dựng khác bản xem
-      # (link tới trang chưa khóa thành "sắp có", nút của dải mực tự ẩn, không có dải "Chưa kiểm định", trang mẫu khác),
-      # nên vẫn kiểm trên Chromium (axe, hiển thị, thành phần, đủ trang mẫu) và Lighthouse. WebKit và Firefox
-      # (phanDeploy trong tools/chon-phan-ci.mjs):
-      # - test.yml đã chạy đủ ở commit này (job webkit và firefox đạt): bỏ;
-      # - test.yml chỉ chạy phần rút gọn (nhánh chỉ đổi nội dung so với main): phân loại file đổi từ mốc là commit của
-      #   lần deploy.yml đạt gần nhất trên main (không dùng commit trước, github.event.before: commit mã chưa đăng được vì
-      #   hỏng ở WebKit, hay lần chạy bị concurrency hủy, vẫn phải tính); chỉ nội dung thì bỏ (không đổi mã so với bản đã
-      #   đăng nên ba trình duyệt cho cùng kết quả), có mã thì chạy;
-      # - test.yml chưa đạt ở commit này, không lấy được mốc hay git không đọc được: chạy đủ bốn phần.
-      - name: Đã kiểm ở nhánh?
-        id: da-kiem
+      - name: Mốc và việc cần chạy
+        id: viec
         env:
           GH_TOKEN: ${{ github.token }}
           REPO: ${{ github.repository }}
-          SHA: ${{ github.sha }}
         run: |
-          lan=$(gh api "repos/$REPO/actions/workflows/test.yml/runs?head_sha=$SHA&status=success" \
-            -q '[.workflow_runs[] | select(.event == "push" or .event == "workflow_dispatch") | .id | tostring] | join(" ")' || echo "")
-          da_dat=0; da_du=0
-          for id in $lan; do
-            da_dat=1
-            n=$(gh api "repos/$REPO/actions/runs/$id/jobs?per_page=100" \
-              -q '[.jobs[] | select(.conclusion == "success") | select(.name | test("webkit|firefox"))] | length' || echo 0)
-            if [ "${n:-0}" -ge 2 ]; then da_du=1; fi
-          done
           moc=$(gh api "repos/$REPO/actions/workflows/deploy.yml/runs?branch=main&status=success&per_page=1" \
             -q '.workflow_runs[0].head_sha // ""' || echo "")
-          p=$(node tools/chon-phan-ci.mjs --deploy --da-dat "$da_dat" --da-du "$da_du" --nen "$moc") \
-            || p='["chromium","webkit","firefox","lighthouse"]'
-          echo "test.yml đã đạt ở $SHA: $da_dat, đủ phần: $da_du; mốc (deploy đạt gần nhất): ${moc:-(không có)}; các phần: $p"
-          echo "cac-phan=$p" >> "$GITHUB_OUTPUT"
+          echo "moc=$moc" >> "$GITHUB_OUTPUT"
+          node tools/chon-phan-ci.mjs --deploy --nen "$moc"
         shell: bash
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Build (bản thật)
+        run: npm run build
+      # npm test chạy kiểm thử Python của tools/audio (tests/ban-thu.test.mjs): cần Python và PyYAML
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - run: python3 -m pip install -r requirements.txt
+      # Chromium của Playwright: lưu đệm theo phiên bản; thư viện hệ thống thường đã có trên máy CI, chỉ cài khi Chromium
+      # không mở được (apt chậm, có lúc vài phút)
+      - name: Phiên bản Playwright
+        id: pw
+        run: echo "phien-ban=$(node -p "require('./node_modules/playwright/package.json').version")" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache@v6
+        id: luu-dem
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ steps.pw.outputs.phien-ban }}-chromium
+      - if: steps.luu-dem.outputs.cache-hit != 'true'
+        run: npx playwright install chromium
+      - name: Thư viện hệ thống cho Chromium (khi cần)
+        run: |
+          if node -e "require('playwright').chromium.launch().then((b) => b.close())" 2>/dev/null; then exit 0; fi
+          timeout --kill-after=20s 300 npx playwright install-deps chromium
+      # npm test và kiểm thử trình duyệt chạy cùng lúc; in lại nhật ký của từng phần, hỏng phần nào thì job hỏng
+      - name: npm test và kiểm thử Chromium (song song)
+        env:
+          OPUS_TRINH_DUYET: chromium
+          OPUS_CHI_TRANG_DOI: ${{ steps.viec.outputs.chi-trang-doi }}
+          OPUS_NEN: ${{ steps.viec.outputs.moc }}
+        run: |
+          npm test > npm-test.log 2>&1 & a=$!
+          npm run test:trinh-duyet > chromium.log 2>&1 & b=$!
+          wait $a; ra=$?; wait $b; rb=$?
+          echo "::group::npm test (thoát $ra)"; cat npm-test.log; echo "::endgroup::"
+          echo "::group::Chromium (thoát $rb)"; cat chromium.log; echo "::endgroup::"
+          if [ $ra -ne 0 ]; then echo "::error::npm test hỏng"; tail -40 npm-test.log; fi
+          if [ $rb -ne 0 ]; then echo "::error::kiểm thử Chromium hỏng"; tail -40 chromium.log; fi
+          [ $ra -eq 0 ] && [ $rb -eq 0 ]
+        shell: bash
+      - name: Lighthouse
+        if: steps.viec.outputs.lighthouse == '1'
+        run: LH_RA=lighthouse-ket-qua npm run lighthouse
+      # hỏng thì giữ JSON của Lighthouse để xem lại (tab Summary của lần chạy, 14 ngày)
+      - uses: actions/upload-artifact@v7
+        if: failure() && steps.viec.outputs.lighthouse == '1'
+        with:
+          name: lighthouse-that
+          path: lighthouse-ket-qua
+          retention-days: 14
+          if-no-files-found: ignore
       - uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
-  trinh-duyet:
+  # chỉ khi có đổi mã từ lần deploy đạt gần nhất: WebKit và Firefox, mỗi trình duyệt một job song song
+  ba-trinh-duyet:
     name: Kiểm thử (bản thật, ${{ matrix.phan }})
-    needs: build
+    needs: kiem
+    if: needs.kiem.outputs.ba-trinh-duyet == '1'
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
-        # các phần do bước "Đã kiểm ở nhánh?" chọn; đầu ra rỗng hay hỏng thì job hỏng, không đăng
-        phan: ${{ fromJSON(needs.build.outputs.cac-phan) }}
-    # phần lâu nhất thường khoảng 4 phút
+        phan: [webkit, firefox]
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v7
-      # tự build lại (vài giây, cùng commit nên cùng kết quả) thay vì chép dist/ từ job build
       - uses: ./.github/actions/kiem-thu
         with:
           ban: that
@@ -100,7 +134,9 @@ jobs:
 
   deploy:
     name: Đăng
-    needs: [build, trinh-duyet]
+    needs: [kiem, ba-trinh-duyet]
+    # ba-trinh-duyet bị bỏ (chỉ đổi nội dung) vẫn đăng; hỏng hay bị hủy thì không
+    if: ${{ !cancelled() && needs.kiem.result == 'success' && (needs.ba-trinh-duyet.result == 'success' || needs.ba-trinh-duyet.result == 'skipped') }}
     runs-on: ubuntu-latest
     # deploy-pages tự chờ tối đa 10 phút: để dư
     timeout-minutes: 15

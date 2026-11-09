@@ -1,17 +1,13 @@
 name: Kiểm thử
 
-# Nhánh việc (moi/**: việc của kế hoạch và lô; mo/**: mở khóa; them/**: thêm tác phẩm), pull request, hay bấm chạy tay:
-# build bản xem (có cả trang chưa khóa, kèm dải "Chưa kiểm định"), kiểm thử, kiểm thử trình duyệt, Lighthouse, các phần
-# chạy song song. Không đăng gì. Nhánh main do deploy.yml kiểm thử trên bản thật trước khi đăng.
-# Phần nào chạy do job chon quyết theo file đổi so với main (tools/chon-phan-ci.mjs): nhánh chỉ đổi nội dung (trang, dữ
-# liệu, hồ sơ kiểm định, kế hoạch, bản thu, file .md ở gốc) thì npm test, Chromium trên trang đã đổi và Lighthouse; đổi
-# mã thì đủ: npm test, ba trình duyệt trên mọi trang mẫu, Lighthouse. Ảnh chụp chỉ chạy khi bấm chạy tay và chọn.
+# Chỉ bấm chạy tay (tab Actions, chọn nhánh) (chủ repo chọn ngày 09/11/2026: push nhánh không tự chạy nữa, cho đỡ phút
+# Actions; nhánh tự kiểm ở máy bằng npm run build, npm test, npm run test:trinh-duyet; deploy.yml kiểm lại trên main trước
+# khi đăng). Build bản xem (có cả trang chưa khóa, kèm dải "Chưa kiểm định"), kiểm thử, kiểm thử trình duyệt, Lighthouse,
+# các phần chạy song song. Không đăng gì.
+# Phần nào chạy do job chon quyết theo file đổi so với main (tools/chon-phan-ci.mjs): nhánh chỉ đổi nội dung thì npm test,
+# Chromium trên trang đã đổi và Lighthouse; đổi mã thì đủ: npm test, ba trình duyệt trên mọi trang mẫu, Lighthouse.
+# Chọn du để chạy đủ; anh-chup để chụp ảnh trang cho review.
 on:
-  push:
-    branches: ['moi/**', 'mo/**', 'them/**']
-    # push chỉ đổi kế hoạch, báo cáo, sổ tay hay giấy phép: không chạy (như deploy.yml)
-    paths-ignore: ['plans/**', 'README.md', 'AGENTS.md', 'CLAUDE.md', 'LICENSE*']
-  pull_request:
   workflow_dispatch:
     inputs:
       du:
@@ -26,7 +22,7 @@ on:
 permissions:
   contents: read
 
-# Một nhánh, một lần chạy: push mới (hay pull request của cùng nhánh) hủy lần đang chạy
+# Một nhánh, một lần chạy: bấm chạy lại hủy lần đang chạy của cùng nhánh
 concurrency:
   group: kiem-thu-${{ github.head_ref || github.ref_name }}
   cancel-in-progress: true

@@ -1,11 +1,11 @@
-// Chọn phần kiểm thử của CI theo file đổi (nhánh ci-gon). Nhánh chỉ đổi nội dung (trang, dữ liệu, hồ sơ kiểm định, kế
+// Chọn phần kiểm thử của CI theo file đổi (nhánh ci-gon; deploy gọn lại ở mo/ci-gon, 09/11/2026). Nhánh chỉ đổi nội dung (trang, dữ liệu, hồ sơ kiểm định, kế
 // hoạch, bản thu, file .md ở gốc repo) thì không đổi mã: ba trình duyệt cho cùng kết quả, các thành phần đã kiểm ở main.
 // Khi ấy test.yml chỉ chạy npm test, Chromium trên trang đã đổi (OPUS_CHI_TRANG_DOI=1, tools/trang-mau.mjs) và
 // Lighthouse. Đổi bất cứ file nào khác (mã, kiểm thử, công cụ, gói, workflow, file tĩnh khác) thì chạy đủ.
 //
 //   node tools/chon-phan-ci.mjs [--nen origin/main] [--du] [--anh-chup]   in kieu=, cac-phan=, chi-trang-doi= (và ghi vào
 //                                                                       $GITHUB_OUTPUT khi có)
-//   node tools/chon-phan-ci.mjs --deploy --da-dat 0|1 --da-du 0|1 --nen <mốc>   in mảng các phần của deploy.yml
+//   node tools/chon-phan-ci.mjs --deploy --nen <mốc>    in kieu=, chi-trang-doi=, lighthouse=, ba-trinh-duyet= cho deploy.yml
 // Nhánh có đổi src/data/: dữ liệu hiện ở nhiều trang không đổi file, nên Chromium vẫn chạy đủ trang mẫu (không đặt
 // chi-trang-doi), chỉ bỏ WebKit, Firefox.
 import { execFileSync } from 'node:child_process';
@@ -42,22 +42,20 @@ export function chiTrangDoi(files, { du = false } = {}) {
 	return !du && phanLoai(files) === 'noi-dung' && !files.some((f) => f.trim().startsWith('src/data/'));
 }
 
-export const DEPLOY_DU = ['chromium', 'webkit', 'firefox', 'lighthouse'];
-export const DEPLOY_GON = ['chromium', 'lighthouse'];
-
 /**
- * Các phần của deploy.yml (job trinh-duyet). Bản thật luôn kiểm trên Chromium (đủ trang mẫu) và Lighthouse; WebKit,
- * Firefox bỏ khi:
- * - daDu: commit này đã qua test.yml ở nhánh với đủ phần (job webkit và firefox đạt);
- * - daDat mà lần chạy chỉ rút gọn, và mọi file đổi từ `kieuTuMoc` (mốc: commit của lần deploy.yml đạt gần nhất trên main,
- *   không phải commit trước: commit mã chưa đăng được, hay lần chạy bị hủy, vẫn tính) là nội dung.
- * Không có lần chạy đạt, hay không có mốc: đủ.
- * @param {{ daDat: boolean, daDu: boolean, kieuTuMoc: 'noi-dung' | 'ma' }} o
+ * Việc của deploy.yml (chủ repo chọn ngày 09/11/2026: test.yml chỉ chạy tay, nên deploy là lần kiểm thử tự động duy nhất;
+ * gọn cho đỡ phút Actions). Phân loại file đổi từ mốc là commit của lần deploy.yml đạt gần nhất trên main (không phải
+ * commit trước: commit mã chưa đăng được, hay lần chạy bị hủy, vẫn tính):
+ * - chỉ nội dung: npm test và Chromium trong một job; Chromium chỉ trên trang chủ, 404 và trang đã đổi từ mốc
+ *   (chiTrangDoi), trừ khi có đổi src/data/ (dữ liệu hiện ở nhiều trang: đủ trang mẫu); không WebKit, Firefox, Lighthouse;
+ * - có mã, hay không có mốc, git không đọc được: thêm Lighthouse, và WebKit, Firefox ở job song song.
+ * @param {string[] | null} files file đổi từ mốc
+ * @returns {{ kieu: 'noi-dung' | 'ma', chiTrangDoi: boolean, lighthouse: boolean, baTrinhDuyet: boolean }}
  */
-export function phanDeploy({ daDat, daDu, kieuTuMoc }) {
-	if (!daDat) return DEPLOY_DU;
-	if (daDu) return DEPLOY_GON;
-	return kieuTuMoc === 'noi-dung' ? DEPLOY_GON : DEPLOY_DU;
+export function viecDeploy(files) {
+	const kieu = phanLoai(files);
+	const ma = kieu === 'ma';
+	return { kieu, chiTrangDoi: !ma && chiTrangDoi(files), lighthouse: ma, baTrinhDuyet: ma };
 }
 
 /** File đổi từ `nen` tới HEAD (git diff nen...HEAD), hay null khi không có `nen` hoặc git hỏng. */
@@ -82,9 +80,11 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
 	const files = fileDoi(nen);
 	const kieu = phanLoai(files);
 	if (args.includes('--deploy')) {
-		const p = phanDeploy({ daDat: lay('--da-dat') === '1', daDu: lay('--da-du') === '1', kieuTuMoc: kieu });
-		console.error(`deploy: đã đạt ${lay('--da-dat')}, đủ ${lay('--da-du')}; file đổi từ mốc ${nen || '(không có)'}: ${files === null ? 'không đọc được' : files.length} (${kieu})`);
-		console.log(JSON.stringify(p));
+		const v = viecDeploy(files);
+		console.error(`deploy: file đổi từ mốc ${nen || '(không có)'}: ${files === null ? 'không đọc được' : files.length} (${v.kieu})`);
+		const dong = `kieu=${v.kieu}\nchi-trang-doi=${v.chiTrangDoi ? '1' : ''}\nlighthouse=${v.lighthouse ? '1' : ''}\nba-trinh-duyet=${v.baTrinhDuyet ? '1' : ''}\n`;
+		process.stdout.write(dong);
+		if (process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT, dong);
 	} else {
 		const du = args.includes('--du');
 		const ra = {

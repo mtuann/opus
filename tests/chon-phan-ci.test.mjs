@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
-import { DEPLOY_DU, DEPLOY_GON, cacPhan, chiTrangDoi as chiTrangDoiCi, fileDoi, laNoiDung, phanDeploy, phanLoai } from '../tools/chon-phan-ci.mjs';
+import { cacPhan, chiTrangDoi as chiTrangDoiCi, fileDoi, laNoiDung, phanLoai, viecDeploy } from '../tools/chon-phan-ci.mjs';
 import { KHOI, chiTrangDoi, trangDaDoi, trangMau } from '../tools/trang-mau.mjs';
 
 test('phân loại file: nhóm nội dung', () => {
@@ -91,17 +91,14 @@ test('chỉ trang đã đổi: nhánh nội dung không có src/data/; có dữ 
 	assert.deepEqual(cacPhan(phanLoai(['src/data/tac-pham.yml'])), ['npm-test', 'chromium', 'lighthouse']);
 });
 
-test('các phần của deploy.yml', () => {
-	assert.deepEqual(DEPLOY_DU, ['chromium', 'webkit', 'firefox', 'lighthouse']);
-	assert.deepEqual(DEPLOY_GON, ['chromium', 'lighthouse']);
-	// test.yml chưa đạt ở commit này: đủ, dù file đổi từ mốc chỉ là nội dung
-	assert.deepEqual(phanDeploy({ daDat: false, daDu: false, kieuTuMoc: 'noi-dung' }), DEPLOY_DU);
-	assert.deepEqual(phanDeploy({ daDat: false, daDu: true, kieuTuMoc: 'noi-dung' }), DEPLOY_DU);
-	// đã chạy đủ ở nhánh: bỏ WebKit, Firefox
-	assert.deepEqual(phanDeploy({ daDat: true, daDu: true, kieuTuMoc: 'ma' }), DEPLOY_GON);
-	// chỉ rút gọn: theo file đổi từ lần deploy đạt gần nhất
-	assert.deepEqual(phanDeploy({ daDat: true, daDu: false, kieuTuMoc: 'noi-dung' }), DEPLOY_GON);
-	assert.deepEqual(phanDeploy({ daDat: true, daDu: false, kieuTuMoc: 'ma' }), DEPLOY_DU);
+test('việc của deploy.yml', () => {
+	// chỉ trang: một job, Chromium trên trang đã đổi, không Lighthouse, không WebKit, Firefox
+	assert.deepEqual(viecDeploy(['src/content/docs/a.md', 'kiem-dinh/a.yml']), { kieu: 'noi-dung', chiTrangDoi: true, lighthouse: false, baTrinhDuyet: false });
+	// có dữ liệu: Chromium đủ trang mẫu
+	assert.deepEqual(viecDeploy(['src/data/tac-pham.yml']), { kieu: 'noi-dung', chiTrangDoi: false, lighthouse: false, baTrinhDuyet: false });
+	// có mã, hay không đọc được file đổi: đủ
+	assert.deepEqual(viecDeploy(['src/content/docs/a.md', 'src/scripts/x.js']), { kieu: 'ma', chiTrangDoi: false, lighthouse: true, baTrinhDuyet: true });
+	assert.deepEqual(viecDeploy(null), { kieu: 'ma', chiTrangDoi: false, lighthouse: true, baTrinhDuyet: true });
 });
 
 test('deploy: mốc là lần deploy đạt gần nhất, không phải commit trước', (t) => {
@@ -113,11 +110,10 @@ test('deploy: mốc là lần deploy đạt gần nhất, không phải commit t
 	const c1 = git('rev-parse', 'HEAD');
 	fs.writeFileSync(path.join(goc, 'src/content/docs/a.md'), 'a2');
 	git('commit', '-q', '-am', 'c2');
-	assert.equal(phanLoai(fileDoi(c1, goc)), 'noi-dung');
-	assert.equal(phanLoai(fileDoi('main', goc)), 'ma');
-	assert.deepEqual(phanDeploy({ daDat: true, daDu: false, kieuTuMoc: phanLoai(fileDoi('main', goc)) }), DEPLOY_DU);
+	assert.equal(viecDeploy(fileDoi(c1, goc)).kieu, 'noi-dung');
+	assert.equal(viecDeploy(fileDoi('main', goc)).baTrinhDuyet, true);
 	// không có mốc (API lỗi): đủ
-	assert.deepEqual(phanDeploy({ daDat: true, daDu: false, kieuTuMoc: phanLoai(fileDoi('', goc)) }), DEPLOY_DU);
+	assert.equal(viecDeploy(fileDoi('', goc)).baTrinhDuyet, true);
 });
 
 /** Repo git tạm: main có một trang, nhánh đổi `doi` (đường dẫn -> nội dung). */
@@ -183,4 +179,9 @@ test('trang đã đổi: tính cả trang đổi tên hay chuyển chỗ', (t) =
 	git('mv', 'src/content/docs/a.md', 'src/content/docs/moi/a.md');
 	git('commit', '-q', '-m', 'chuyển chỗ');
 	assert.deepEqual(trangDaDoi(goc), ['moi/a/']);
+	// OPUS_NEN: so với commit cho sẵn (deploy.yml, trên main): đứng ở main, mốc là main thì không có trang đổi
+	const main = execFileSync('git', ['-C', goc, 'rev-parse', 'main'], { encoding: 'utf8' }).trim();
+	assert.deepEqual(trangDaDoi(goc, { OPUS_NEN: main }), ['moi/a/']);
+	assert.deepEqual(trangDaDoi(goc, { OPUS_NEN: 'HEAD' }), []);
+	assert.deepEqual(trangDaDoi(goc, { OPUS_NEN: 'khong-co' }), []);
 });
