@@ -24,7 +24,7 @@ Site đã được làm lại ở địa chỉ này, dưới tên Opus: mọi tr
 - **Hình minh họa:** nhiều điều trước chỉ viết bằng chữ nay có hình vẽ ngay trong trang, có bản sáng và tối; chữ trong hình là chữ thật, đọc được bằng trình đọc màn hình:
     - bàn phím ghi số ngón hai tay, nhãn nốt và ngoặc cung, nửa cung: [Quãng](/opus/nhac-ly/09-quang/), [Năm ngón](/opus/piano/nam-ngon/), ngón bấm 12 gam trưởng ở trang [Gam](/opus/piano/gam/);
     - khuông kép nối xuống bàn phím: [Khuông nhạc và khóa](/opus/nhac-ly/02-khuong-nhac-khoa/);
-    - lưới phách và dải thời gian cho nhịp, trường độ, hai chọi ba, legato: [Nhịp](/opus/nhac-ly/04-nhip/), [Hai tay](/opus/piano/hai-tay/);
+    - lưới phách và dải thời gian cho trường độ, nhịp, hai chọi ba, legato: [Trường độ](/opus/nhac-ly/03-truong-do/), [Nhịp](/opus/nhac-ly/04-nhip/), [Hai tay](/opus/piano/hai-tay/), [Tạo tiếng đàn](/opus/piano/tieng-dan/);
     - sơ đồ hình thức ([Minuet và Trio](/opus/hinh-thuc/minuet-trio/), [Overture](/opus/hinh-thuc/overture/)…) và sơ đồ các đoạn cho 13 hướng dẫn nghe;
     - [bản đồ năm đầu](/opus/bat-dau/lo-trinh-choi/) trên một hình;
     - bộ máy đàn cánh và bộ giảm âm ([Lịch sử cây đàn](/opus/piano/lich-su-dan/), [Bàn đạp](/opus/piano/ban-dap/)), ghế cao, vừa, thấp ([Tư thế](/opus/piano/tu-the/)).
