@@ -66,6 +66,8 @@ export default defineConfig({
 		starlight({
 			title: 'Opus',
 			description: 'Sổ tay tiếng Việt học piano cổ điển cho người lớn tự học, từ con số 0.',
+			// Mô tả bị cắt dở "…" của trang chuyển từ site cũ: thẻ meta lấy trọn câu từ chữ của trang (src/mo-ta.mjs)
+			routeMiddleware: './src/route-mo-ta.mjs',
 			defaultLocale: 'root',
 			locales: { root: { label: 'Tiếng Việt', lang: 'vi' } },
 			// Logo khuông nhạc: bản mực cho nền sáng, bản kem cho nền tối

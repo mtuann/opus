@@ -308,15 +308,25 @@ export function soTrang(trang, dist = path.join(GOC, 'dist')) {
 	const moi = docMoi(moiHtml);
 	const h1 = (html, re) =>
 		giaiMa((re.exec(html)?.[1] ?? '').replace(/<a class="headerlink"[\s\S]*?<\/a>/, '').replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim();
-	// mô tả: bản cũ đọc og:description (thẻ description của site cũ không thoát dấu nháy), bản mới đọc thẻ description
+	// mô tả: bản cũ đọc og:description (thẻ description của site cũ không thoát dấu nháy), bản mới đọc description trong
+	// frontmatter của trang (thẻ meta của bản mới nối mô tả cắt dở cho trọn câu lúc build, src/mo-ta.mjs, nên không so thẻ)
 	const moTa = (html, re) => giaiMa(re.exec(html)?.[1] ?? '');
+	const moTaMoi = () => {
+		for (const duoi of ['.md', '.mdx']) {
+			const f = path.join(GOC, 'src', 'content', 'docs', trang + duoi);
+			if (!fs.existsSync(f)) continue;
+			const fm = /^---\n([\s\S]*?)\n---/.exec(fs.readFileSync(f, 'utf8'));
+			if (fm) return String(parse(fm[1])?.description ?? '');
+		}
+		return moTa(moiHtml, /<meta name="description" content="([^"]*)"/);
+	};
 	return {
 		khac: khacNhau(cu.khoi, moi.khoi),
 		abc: [cu.abc, moi.abc],
 		quiz: [cu.quiz, moi.quiz],
 		id: [cu.id, moi.id],
 		tieuDe: [h1(cuHtml, /<h1[^>]*>([\s\S]*?)<\/h1>/), h1(moiHtml, /<h1 id="_top"[^>]*>([\s\S]*?)<\/h1>/)],
-		moTa: [moTa(cuHtml, /<meta property="og:description" content="([^"]*)"/), moTa(moiHtml, /<meta name="description" content="([^"]*)"/)],
+		moTa: [moTa(cuHtml, /<meta property="og:description" content="([^"]*)"/), moTaMoi()],
 	};
 }
 
