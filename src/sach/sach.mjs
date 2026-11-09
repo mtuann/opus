@@ -22,7 +22,7 @@ const L = (...ten) => ten.map((n) => `nhac-ly/${n}/`);
  * menu cũ. Danh sách chương lấy từ dữ liệu (chuongTacPham, D6-L11); thứ tự này chỉ để giữ chỗ của các trang đã có.
  */
 export const THU_TU_TAC_PHAM = {
-	'bai-hoc': ['mozart-minuet-k2', 'minuet-sol', 'minuet-sol-thu', 'musette-re', 'schumann-album', 'burgmuller-la-candeur', 'tchaikovsky-bai-ca-phap-co', 'beethoven-sonatina-sol', 'clementi-sonatina', 'burgmuller-arabesque', 'bach-prelude-bwv939', 'tchaikovsky-cau-nguyen-buoi-sang', 'chopin-valse-la-thu', 'chopin-prelude-la-truong', 'grieg-arietta', 'satie-gymnopedie', 'bach-prelude-do', 'chopin-prelude-mi-thu', 'fur-elise', 'beethoven-op49-2', 'mendelssohn-thuyen-ca', 'chopin-valse-si-thu', 'bach-invention-1', 'mozart-k545', 'schumann-traumerei', 'beethoven-anh-trang', 'pathetique-adagio', 'chopin-nocturne-op9-2', 'bach-prelude-fugue-do-thu', 'schubert-impromptu-sol-giang', 'debussy-clair-de-lune', 'chopin-fantaisie-impromptu', 'liszt-liebestraum', 'chopin-ballade-1'],
+	'bai-hoc': ['mozart-minuet-k2', 'minuet-sol', 'minuet-sol-thu', 'musette-re', 'schumann-album', 'burgmuller-la-candeur', 'tchaikovsky-bai-ca-phap-co', 'beethoven-sonatina-sol', 'clementi-sonatina', 'burgmuller-arabesque', 'bach-prelude-bwv939', 'tchaikovsky-cau-nguyen-buoi-sang', 'chopin-prelude-la-truong', 'grieg-arietta', 'satie-gymnopedie', 'bach-prelude-do', 'chopin-prelude-mi-thu', 'fur-elise', 'beethoven-op49-2', 'bach-invention-1', 'chopin-valse-la-thu', 'mendelssohn-thuyen-ca', 'mozart-k545', 'schumann-traumerei', 'beethoven-anh-trang', 'chopin-valse-si-thu', 'pathetique-adagio', 'chopin-nocturne-op9-2', 'bach-prelude-fugue-do-thu', 'debussy-clair-de-lune', 'schubert-impromptu-sol-giang', 'chopin-fantaisie-impromptu', 'liszt-liebestraum', 'chopin-ballade-1'],
 	nghe: ['scarlatti-sonata', 'bach-goldberg', 'mozart-k331', 'mozart-concerto-21', 'beethoven-pathetique', 'beethoven-moonlight', 'schubert-impromptu', 'chopin-etude', 'schumann-kinderszenen', 'liszt-liebestraum', 'grieg-concerto', 'mussorgsky-tranh', 'brahms-intermezzo', 'rachmaninoff-2', 'debussy-preludes', 'gershwin-rhapsody', 'vivaldi-mua-xuan', 'vivaldi-mua-dong', 'bach-cello-1', 'bach-air', 'handel-hallelujah', 'haydn-94', 'mozart-40', 'mozart-nu-hoang-bong-dem', 'mozart-requiem', 'mozart-eine-kleine', 'beethoven-5', 'beethoven-op132', 'schubert-erlkonig', 'schubert-ca-hoi', 'mendelssohn-violin', 'bizet-habanera', 'tchaikovsky-ho-thien-nga', 'tchaikovsky-1812', 'brahms-4', 'dvorak-9-largo', 'grieg-buoi-sang', 'puccini-nessun-dorma', 'ravel-bolero', 'stravinsky-sacre', 'shostakovich-5', 'part-spiegel'],
 };
 
@@ -33,7 +33,7 @@ export const THU_TU_TAC_PHAM = {
  * ghi (như nghe-nhac/beethoven-moonlight của beethoven-anh-trang) và trang cap có bản ghi riêng (là trang chính của bản ghi
  * ấy) đều vào một lần.
  * Trang có trong THU_TU_TAC_PHAM giữ thứ tự ấy; trang mới: bài học chen vào trước bài đầu tiên có chặng lớn hơn (không có thì
- * cuối; thứ tự cũ không tăng dần hẳn, nên không chen sau bài cuối cùng cùng chặng), hướng dẫn nghe thêm vào cuối; nhiều
+ * cuối; bài học trong THU_TU_TAC_PHAM xếp tăng dần theo chặng, giữ thứ tự cũ trong cùng chặng, như menu: chủ repo chọn 09/11/2026), hướng dẫn nghe thêm vào cuối; nhiều
  * trang mới thì theo thứ tự trong tac-pham.yml. Trang thứ tự cũ mà dữ liệu không còn thì bỏ. Chỉ đọc slug, loai, chang để
  * xếp chương: chương chỉ vào sách khi trang có trong bản build (bản thật: trang đã khóa), nên không hiện trường nào của bản ghi.
  * @returns {string[]} địa chỉ như "piano/tac-pham/fur-elise/"

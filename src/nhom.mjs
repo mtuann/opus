@@ -6,7 +6,7 @@
 // chỗ: trang dưới piano/lo-trinh/ (các trang chặng của đợt 2) vào Lộ trình, nhom_menu() cho vào Piano; trang ngoài mọi
 // mục đã biết không có nhãn, nhom_menu() cho vào Nhạc cổ điển. Nhóm thứ chín của menu, "Thêm", không có nhãn.
 // Menu bên (thanh bên của Starlight) dựng ở menu() dưới đây: đủ 9 nhóm, trang trong mỗi nhóm theo thứ tự menu của site cũ
-// (THU_TU); nhóm chưa có trang nào trong bản build vẫn hiện, kèm nhãn "sắp có" (src/components/Sidebar.astro).
+// (THU_TU), riêng bài học tác phẩm xếp tăng dần theo chặng (giữ thứ tự cũ trong cùng chặng; chủ repo chọn 09/11/2026); nhóm chưa có trang nào trong bản build vẫn hiện, kèm nhãn "sắp có" (src/components/Sidebar.astro).
 
 /** Biểu tượng nét (24×24, stroke = currentColor), dùng chung cho nhãn và thẻ. */
 const BIEU_TUONG = {
@@ -132,7 +132,6 @@ const THU_TU = [
 	['piano/tac-pham/burgmuller-arabesque', 'Burgmüller: Arabesque'],
 	['piano/tac-pham/bach-prelude-bwv939', 'Bach: Prelude nhỏ BWV 939'],
 	['piano/tac-pham/tchaikovsky-cau-nguyen-buoi-sang', 'Tchaikovsky: Cầu nguyện buổi sáng'],
-	['piano/tac-pham/chopin-valse-la-thu', 'Chopin: Valse La thứ'],
 	['piano/tac-pham/chopin-prelude-la-truong', 'Chopin: Prélude La trưởng'],
 	['piano/tac-pham/grieg-arietta', 'Grieg: Arietta'],
 	['piano/tac-pham/satie-gymnopedie', 'Satie: Gymnopédie số 1'],
@@ -140,17 +139,18 @@ const THU_TU = [
 	['piano/tac-pham/chopin-prelude-mi-thu', 'Chopin: Prélude Mi thứ'],
 	['piano/tac-pham/fur-elise', 'Beethoven: Für Elise'],
 	['piano/tac-pham/beethoven-op49-2', 'Beethoven: Sonata Op. 49 số 2'],
-	['piano/tac-pham/mendelssohn-thuyen-ca', 'Mendelssohn: Thuyền ca Venice'],
-	['piano/tac-pham/chopin-valse-si-thu', 'Chopin: Valse Si thứ'],
 	['piano/tac-pham/bach-invention-1', 'Bach: Invention số 1'],
+	['piano/tac-pham/chopin-valse-la-thu', 'Chopin: Valse La thứ'],
+	['piano/tac-pham/mendelssohn-thuyen-ca', 'Mendelssohn: Thuyền ca Venice'],
 	['piano/tac-pham/mozart-k545', 'Mozart: Sonata K. 545'],
 	['piano/tac-pham/schumann-traumerei', 'Schumann: Träumerei'],
 	['piano/tac-pham/beethoven-anh-trang', 'Beethoven: Ánh trăng, chương 1'],
+	['piano/tac-pham/chopin-valse-si-thu', 'Chopin: Valse Si thứ'],
 	['piano/tac-pham/pathetique-adagio', 'Beethoven: Pathétique, chương 2'],
 	['piano/tac-pham/chopin-nocturne-op9-2', 'Chopin: Nocturne Op. 9 số 2'],
 	['piano/tac-pham/bach-prelude-fugue-do-thu', 'Bach: Prelude và fugue Đô thứ'],
-	['piano/tac-pham/schubert-impromptu-sol-giang', 'Schubert: Impromptu Sol♭ trưởng'],
 	['piano/tac-pham/debussy-clair-de-lune', 'Debussy: Clair de lune'],
+	['piano/tac-pham/schubert-impromptu-sol-giang', 'Schubert: Impromptu Sol♭ trưởng'],
 	['piano/tac-pham/chopin-fantaisie-impromptu', 'Chopin: Fantaisie-Impromptu'],
 	['piano/tac-pham/liszt-liebestraum', 'Liszt: Liebestraum số 3'],
 	['piano/tac-pham/chopin-ballade-1', 'Chopin: Ballade số 1'],

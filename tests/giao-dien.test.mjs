@@ -214,3 +214,15 @@ test('mỗi trang đã dựng mang nhãn nhóm của nó (tên, màu nhóm) phí
 	// bản thật đầu đợt 2 chỉ có trang chủ và trang 404, không thuộc nhóm nào
 	if (!co) t.skip('bản build chưa có trang nào thuộc một nhóm');
 });
+
+test('menu và sách: bài học tác phẩm xếp tăng dần theo chặng (chủ repo chọn 09/11/2026)', async () => {
+	const { THU_TU_TAC_PHAM } = await import('../src/sach/sach.mjs');
+	const chang = new Map(parse(fs.readFileSync(path.join(ROOT, 'src', 'data', 'tac-pham.yml'), 'utf8')).filter((r) => r.loai === 'bai-hoc').map((r) => [r.slug, r.chang]));
+	const tang = (ds) => ds.every((s, i) => i === 0 || chang.get(ds[i - 1]) <= chang.get(s));
+	const trang = [...chang.keys()].map((s) => `piano/tac-pham/${s}`);
+	const tp = menu(trang, new Map()).find((g) => g.items.some((x) => String(x.slug ?? '').startsWith('piano/tac-pham/')));
+	const menuBaiHoc = tp.items.map((x) => String(x.slug ?? '')).filter((s) => s.startsWith('piano/tac-pham/')).map((s) => s.slice('piano/tac-pham/'.length));
+	assert.equal(menuBaiHoc.length, chang.size);
+	assert.ok(tang(menuBaiHoc), `menu: ${menuBaiHoc.map((s) => `${s}(${chang.get(s)})`).join(' ')}`);
+	assert.ok(tang(THU_TU_TAC_PHAM['bai-hoc']), 'THU_TU_TAC_PHAM của sách');
+});
