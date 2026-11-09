@@ -7,6 +7,8 @@ description: '"Nhạc cổ điển" theo nghĩa rộng là truyền thống âm 
 
 Các mốc năm dưới đây là quy ước gần đúng; phong cách thay đổi dần dần chứ không đổi trong một đêm. Mỗi thời kỳ có một trang chi tiết (bối cảnh, đặc điểm âm nhạc, 10 tác phẩm để nghe): [Trung cổ](/opus/lich-su/thoi-ky/trung-co/), [Phục hưng](/opus/lich-su/thoi-ky/phuc-hung/), [Baroque](/opus/lich-su/thoi-ky/baroque/), [Cổ điển](/opus/lich-su/thoi-ky/co-dien/), [Lãng mạn](/opus/lich-su/thoi-ky/lang-man/), [Thế kỷ 20](/opus/lich-su/thoi-ky/the-ky-20/). Thời Đương đại có trang [Âm nhạc hôm nay](/opus/lich-su/duong-dai/): những nhà soạn nhạc nên nghe, tin đáng chú ý, tên tuổi Việt Nam và các cuộc thi lớn. Xem cả [dòng thời gian](/opus/lich-su/dong-thoi-gian/) và [Nhạc truyền thống Việt Nam và nhạc cổ điển](/opus/lich-su/nhac-truyen-thong-viet-nam/).
 
+Cùng nhóm Nhạc cổ điển còn có: [Hình thức và thể loại](/opus/hinh-thuc/) (sonata, fugue, rondo, giao hưởng, concerto…), [Nghe để nhận diện](/opus/nhan-dien/) (nghe một đoạn nhạc lạ, đoán thời kỳ, thể loại, tác giả), [chân dung nhà soạn nhạc](/opus/lich-su/nha-soan-nhac/), [Nhập môn opera](/opus/lich-su/opera/), [Dàn nhạc giao hưởng](/opus/nhac-cu/dan-nhac/) và [Nhạc cổ điển ở Việt Nam](/opus/lich-su/viet-nam/).
+
 | Thời kỳ | Khoảng thời gian | Một câu tóm tắt |
 |---|---|---|
 | Trung cổ | ~500–1400 | Thánh ca nhà thờ, từ một bè đến những bản nhiều bè đầu tiên |

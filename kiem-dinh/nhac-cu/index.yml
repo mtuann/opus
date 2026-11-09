@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 8, 05/11/2026); Claude Opus 5.5 (lượt 2 làm lại cho câu khong-chac của lượt 2 bổ sung)
       review: Claude Opus 5.5 (review D8-gom, 05/11/2026)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 05/11/2026 (chủ repo không tự kiểm): 12 nhận định mẫu của đợt 8, 9 đúng, 2 sai đã sửa (nhac-cu/trumpet n8 Si♭ và Đô là hai loại dùng nhiều nhất; n19 bè Baroque nay chơi bằng piccolo hoặc trumpet tự nhiên kiểu cổ; sửa theo cả n16, n25), 1 không kiểm được (nu-nha-soan-nhac n84: nguồn chỉ có bản lưu Wayback, bị chặn) (bao-cao/d8-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-09
+    nhanh: mo/tong-quan
+    ma_bam: sha256:262a5b2d8338e48b69be385127ed709c5e04ce59741dcf7aa0fb6ca23a27fa1d
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/tong-quan, 09/11/2026: rà các trang tổng quan)"
+      luot_2: "không có lượt 2: chỉ thêm câu về chính site (n33)"
+      review: Claude Opus 5.5 (mo/tong-quan, 09/11/2026)
+      kiem_mau: chủ repo yêu cầu rà và sửa (09/11/2026); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
 ghi_chu: 'Trang lối vào nhóm (tầng khung). Theo chuẩn tầng khung hồ sơ không có nhận định khi chữ sinh từ dữ liệu; trang này có chữ viết tay nói về âm nhạc (bảng họ nhạc cụ, "Piano chơi cùng ai?", "Nghe dàn nhạc trong tiếng piano"), nên lập nhận định cho các câu ấy có nguồn; câu chỉ là danh sách link của site xếp ve-site. Không có khối abc. Sửa chữ: x2, x5, x7, x8, x10 (cột "Mỗi loại một trang riêng" sai: piano và harp không có trang riêng), x18, x19, x20, x22–x25 (Les Adieux: bỏ quãng 3, 5, 6 và hợp âm Đô thứ, chưa kiểm được; Scarlatti và guitar: chưa chắc, ket_qua null). Nguồn: VSL, COD, IMSLP, Wigmore Hall, Pärt Centre, wssymphony.org, Hollywood Bowl, The Listeners'' Club (bậc 3), Wikipedia (bậc 3, chỉ đối chiếu). Chưa quyết: x25. Dòng x4, x6, x7b chỉ dẫn lại các hồ sơ dan-nhac (khóa). doi_chu viết tay từ khối của dist/ cũ (dist chưa build lại sau sửa): người giao chạy node tools/chuyen/so-chu.mjs nhac-cu/index --doi-chu sau khi build để đối chiếu. Thuật ngữ trang dùng: pizzicato và legato đã có bản ghi ở src/data/thuat-ngu.yml; chưa có (cho D3-L5; không tạo bản ghi): vibrato, Lied, concerto, tam tấu piano, ngũ tấu.'
 nguon:
   - id: cod-orchestra
@@ -453,10 +462,16 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'Kiểm: piano/lich-su-dan.md (có mục harpsichord) và nhan-dien/luyen-nghe.md ("Luyện nghe nhận diện") có trong bản build; nghe-nhac/ravel-bolero có trong trang.yml, chưa chuyển: "sắp có". Review D8-gom: piano/lich-su-dan.md (đã khóa, có hàng Harpsichord), nhan-dien/luyen-nghe.md (đã khóa, "Luyện nghe nhận diện"); nghe-nhac/ravel-bolero ở trang.yml ("sắp có").'
     review: dung
+  - id: n33
+    cau: "Cũng trong nhóm Đọc thêm: Nhạc truyền thống Việt Nam và nhạc cổ điển, và Các nhà soạn nhạc nữ."
+    loai: ve-site
+    ket_qua: dung
+    review: dung
+    ghi_chu: 'mo/tong-quan (09/11/2026): câu mới. Trang này là trang vào của nhóm Đọc thêm (src/nhom.mjs, vao: nhac-cu/index); thẻ trang chủ của nhóm ghi "Nhạc cụ, nhạc truyền thống Việt Nam, nhà soạn nhạc nữ" nhưng trang chưa link tới hai trang ấy. Kiểm: nhomCuaTrang cho lich-su/nhac-truyen-thong-viet-nam và lich-su/nu-nha-soan-nhac vào nhóm doc-them; tiêu đề hai trang đúng như câu; link kiểm trên bản build.'
 khuong_nhac: []
 doi_chu:
-  - cu: 'Site này tập trung vào piano. Các trang trong mục này thuộc phần nghe: giúp bạn nhận ra tiếng từng nhạc cụ, hiểu vai trò của chúng trong dàn nhạc và khi chơi cùng piano. Người học piano nghe kỹ các nhạc cụ khác sẽ chơi hay hơn, vì rất nhiều đoạn piano được viết để gợi tiếng dây, tiếng kèn hay giọng hát.'
-    moi: 'Site này tập trung vào piano. Các trang trong mục này thuộc phần nghe: giúp bạn nhận ra tiếng từng nhạc cụ, hiểu vai trò của chúng trong dàn nhạc và khi chơi cùng piano. Người học piano nghe kỹ các nhạc cụ khác sẽ dễ hiểu hơn những đoạn piano gợi tiếng dây, tiếng kèn hay giọng hát.'
+  - cu: "Site này tập trung vào piano. Các trang trong mục này thuộc phần nghe: giúp bạn nhận ra tiếng từng nhạc cụ, hiểu vai trò của chúng trong dàn nhạc và khi chơi cùng piano. Người học piano nghe kỹ các nhạc cụ khác sẽ chơi hay hơn, vì rất nhiều đoạn piano được viết để gợi tiếng dây, tiếng kèn hay giọng hát."
+    moi: "Site này tập trung vào piano. Các trang trong mục này thuộc phần nghe: giúp bạn nhận ra tiếng từng nhạc cụ, hiểu vai trò của chúng trong dàn nhạc và khi chơi cùng piano. Người học piano nghe kỹ các nhạc cụ khác sẽ dễ hiểu hơn những đoạn piano gợi tiếng dây, tiếng kèn hay giọng hát."
     ly_do: 'n2 (da-sua): bỏ hứa hẹn "chơi hay hơn" và "rất nhiều … được viết để".'
   - cu: Liền, ấm, thường có rung (vibrato); có thể gảy bằng ngón (pizzicato)
     moi: Kéo vĩ liền mạch, có thể rung (vibrato); có thể gảy bằng ngón (pizzicato)
@@ -469,25 +484,32 @@ doi_chu:
     ly_do: 'n9 (da-sua): theo VSL; bỏ "vang xa", "tròn".'
   - cu: Mỗi loại một trang riêng
     moi: Mỗi loại một âm sắc riêng (xem các trang ở cột bên)
-    ly_do: 'n11 (da-sua): chữ cũ sai (piano và harp không có trang riêng).'
-  - cu: 'Nhiều nhà soạn nhạc nghĩ bằng dàn nhạc khi viết cho piano. Khi tập một bài, hãy tự hỏi: đoạn này là nhạc cụ gì?'
-    moi: 'Có nhà soạn nhạc viết cho piano với âm sắc nhạc cụ khác trong đầu. Khi tập một bài, hãy tự hỏi: đoạn này là nhạc cụ gì?'
+    ly_do: "n11 (da-sua): chữ cũ sai (piano và harp không có trang riêng)."
+  - cu:
+      - 'Nhạc thính phòng: sonata cho violin và piano, cho cello và piano; tam tấu piano (piano, violin, cello); ngũ tấu như Con cá hồi của Schubert. Ở đây piano không phải "người đệm" mà là bạn diễn ngang hàng.'
+      - "Ca khúc nghệ thuật (Lied): trong Erlkönig, piano là tiếng vó ngựa và cơn bão, một người kể chuyện thứ hai."
+      - "Tĩnh lặng: Spiegel im Spiegel của Pärt, giai điệu violin trên những nốt piano chậm rãi."
+    moi:
+      - "Nhạc thính phòng: sonata cho violin và piano, cho cello và piano; tam tấu piano (piano, violin, cello); ngũ tấu như Con cá hồi của Schubert. Ở thể loại này, các phần đàn thường ngang hàng với nhau, piano không chỉ để đệm."
+      - "Ca khúc nghệ thuật (Lied): trong Erlkönig, phần piano gợi tiếng vó ngựa phi."
+      - "Tĩnh lặng: Spiegel im Spiegel của Pärt, giai điệu violin trên nền các nốt piano."
+    ly_do: 'n20 (da-sua): theo Wigmore Hall; bỏ "cơn bão", "người kể chuyện thứ hai".; n22 (da-sua): nguồn không nêu tốc độ.; n19 (da-sua): theo COD, Chamber music ("on equal terms"), bỏ tuyệt đối.'
+  - cu: "Nhiều nhà soạn nhạc nghĩ bằng dàn nhạc khi viết cho piano. Khi tập một bài, hãy tự hỏi: đoạn này là nhạc cụ gì?"
+    moi: "Có nhà soạn nhạc viết cho piano với âm sắc nhạc cụ khác trong đầu. Khi tập một bài, hãy tự hỏi: đoạn này là nhạc cụ gì?"
     ly_do: 'n24 (da-sua): "Nhiều … nghĩ bằng dàn nhạc" không kiểm được.'
-  - cu: Hai bè đi song song qua các quãng 3, 5, 6 ("quãng năm kèn horn") gợi tiếng tù và của kèn horn. Ba hợp âm Le-be-wohl mở đầu sonata Les Adieux Op. 81a của Beethoven bắt đầu như thế, rồi bất ngờ rẽ sang hợp âm Đô thứ ở nốt thứ ba.
-    moi: 'Lối hai bè quen thuộc của kèn horn tự nhiên ("quãng năm kèn horn") gợi tiếng kèn horn. Ba hợp âm Le-be-wohl mở đầu sonata Les Adieux Op. 81a của Beethoven dựa trên một hình nét kèn horn tự nhiên: hai bè đi qua quãng 3 trưởng, quãng 5 đúng, quãng 6 thứ.'
-    ly_do: 'n25, n26 (da-sua): bỏ "quãng 3, 5, 6", "quãng năm kèn horn", "hợp âm Đô thứ" (không nguồn); giữ ý theo Listeners'' Club, Wikipedia. Review D8-gom: n25, n26 viết lại theo Yamaha (horn fifths) và PTNA (Op. 81a: hình nét kèn horn tự nhiên, quãng 3 trưởng, 5 đúng, 6 thứ); bỏ "tù và săn bắn", "hợp âm thứ ba … bất ngờ" (chỉ nguồn bậc 3).'
-  - cu: Nốt lặp nhanh và hợp âm gõ trong các sonata của Scarlatti gợi guitar (hướng dẫn nghe).
-    moi: Trong các sonata của Scarlatti có những hợp âm rải bắt chước tiếng gảy dây guitar (hướng dẫn nghe).
-    ly_do: 'n27 (chưa chắc): bỏ "hợp âm gõ"; hạ giọng. Review D8-gom: n27 viết lại theo Hyperion (Hewitt, CDA67613).'
-  - cu: 'Ca khúc nghệ thuật (Lied): trong Erlkönig, piano là tiếng vó ngựa và cơn bão, một người kể chuyện thứ hai.'
-    moi: 'Ca khúc nghệ thuật (Lied): trong Erlkönig, phần piano gợi tiếng vó ngựa phi.'
-    ly_do: 'n20 (da-sua): theo Wigmore Hall; bỏ "cơn bão", "người kể chuyện thứ hai".'
-  - cu: 'Tĩnh lặng: Spiegel im Spiegel của Pärt, giai điệu violin trên những nốt piano chậm rãi.'
-    moi: 'Tĩnh lặng: Spiegel im Spiegel của Pärt, giai điệu violin trên nền các nốt piano.'
-    ly_do: 'n22 (da-sua): nguồn không nêu tốc độ.'
-  - cu: 'Nhạc thính phòng: sonata cho violin và piano, cho cello và piano; tam tấu piano (piano, violin, cello); ngũ tấu như Con cá hồi của Schubert. Ở đây piano không phải "người đệm" mà là bạn diễn ngang hàng.'
-    moi: 'Nhạc thính phòng: sonata cho violin và piano, cho cello và piano; tam tấu piano (piano, violin, cello); ngũ tấu như Con cá hồi của Schubert. Ở thể loại này, các phần đàn thường ngang hàng với nhau, piano không chỉ để đệm.'
-    ly_do: 'n19 (da-sua): theo COD, Chamber music ("on equal terms"), bỏ tuyệt đối.'
+  - cu:
+      - Hai bè đi song song qua các quãng 3, 5, 6 ("quãng năm kèn horn") gợi tiếng tù và của kèn horn. Ba hợp âm Le-be-wohl mở đầu sonata Les Adieux Op. 81a của Beethoven bắt đầu như thế, rồi bất ngờ rẽ sang hợp âm Đô thứ ở nốt thứ ba.
+      - Nốt lặp nhanh và hợp âm gõ trong các sonata của Scarlatti gợi guitar (hướng dẫn nghe).
+    moi:
+      - 'Lối hai bè quen thuộc của kèn horn tự nhiên ("quãng năm kèn horn") gợi tiếng kèn horn. Ba hợp âm Le-be-wohl mở đầu sonata Les Adieux Op. 81a của Beethoven dựa trên một hình nét kèn horn tự nhiên: hai bè đi qua quãng 3 trưởng, quãng 5 đúng, quãng 6 thứ.'
+      - Trong các sonata của Scarlatti có những hợp âm rải bắt chước tiếng gảy dây guitar (hướng dẫn nghe).
+    ly_do: "n25, n26 (da-sua): bỏ \"quãng 3, 5, 6\", \"quãng năm kèn horn\", \"hợp âm Đô thứ\" (không nguồn); giữ ý theo Listeners' Club, Wikipedia. Review D8-gom: n25, n26 viết lại theo Yamaha (horn fifths) và PTNA (Op. 81a: hình nét kèn horn tự nhiên, quãng 3 trưởng, 5 đúng, 6 thứ); bỏ \"tù và săn bắn\", \"hợp âm thứ ba … bất ngờ\" (chỉ nguồn bậc 3).; n27 (chưa chắc): bỏ \"hợp âm gõ\"; hạ giọng. Review D8-gom: n27 viết lại theo Hyperion (Hewitt, CDA67613)."
   - cu: "Violin, Cello, Guitar cổ điển, Sáo, Clarinet, Trumpet: âm thanh, vai trò, nên nghe gì, nghệ sĩ nên tìm, và vài lời khuyên nếu bạn muốn học chơi."
     moi: "Violin, Cello, Guitar cổ điển, Sáo, Clarinet, Trumpet: âm thanh, nên nghe gì, nghệ sĩ nên tìm, và vài lời khuyên nếu bạn muốn học chơi."
     ly_do: "Review D8-gom: n30 (ve-site sai), trang guitar không có mục Vai trò."
+  - moi: "Cũng trong nhóm Đọc thêm: Nhạc truyền thống Việt Nam và nhạc cổ điển và Các nhà soạn nhạc nữ."
+    ly_do: 'n33 (mo/tong-quan, 09/11/2026): thêm câu link tới hai trang còn lại của nhóm Đọc thêm.'
+mo_khoa:
+  - ngay: 2026-11-09
+    nhanh: mo/tong-quan
+    ly_do: "mo/tong-quan: rà các trang tổng quan (09/11/2026, chủ repo yêu cầu): trang vào nhóm Đọc thêm chưa link tới hai trang Việt Nam và nhà soạn nhạc nữ của nhóm, dù thẻ trang chủ nêu"

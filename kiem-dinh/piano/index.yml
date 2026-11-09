@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 4, 28/10/2026; bổ sung sau review)
       review: Claude (review D4-gom, nhóm A, 28/10/2026)
       kiem_mau: 'chủ repo, 10 nhận định mẫu của đợt 4 (D4-L1 đến D4-L4): 10 đúng (3 có điều kiện, đã sửa theo: nguồn Versuch §5 và láy rền thường, Frère Jacques "bài hát Pháp truyền thống", quãng tám trong gợi ý ngón của mẫu galant), 0 sai (bao-cao/d4-gom/kiem-mau-ket-qua.yml)'
+  - so: 2
+    ngay: 2026-11-09
+    nhanh: mo/tong-quan
+    ma_bam: sha256:3aeee1579e3b83e58ddeb47ef7fa00d640daf252087aafa7f89e5cd97efdb832
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/tong-quan, 09/11/2026: rà các trang tổng quan)"
+      luot_2: "không có lượt 2: câu về chính site (ghi_chu n18)"
+      review: Claude Opus 5.5 (mo/tong-quan, 09/11/2026)
+      kiem_mau: chủ repo yêu cầu rà và sửa (09/11/2026); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
 nguon:
   - id: simmons-2012
     bac: 2
@@ -160,11 +169,11 @@ nhan_dinh:
     ghi_chu: "Trang chưa chuyển, phải giữ: luyen-tap/ket-noi-midi (kết nối đàn điện qua MIDI, dùng phím thật trong công cụ), luyen-tap/choi-theo (chấm điểm khi chơi theo), luyen-tap/thu-am (thu âm, nghe lại). Đối chiếu nội dung khi chuyển. Review D4-gom: trang đích chưa chuyển: ../opus-zero/docs/luyen-tap/ket-noi-midi.md, choi-theo.md, thu-am.md có."
     review: dung
   - id: n18
-    cau: "Nghe nhạc: các hướng dẫn nghe tác phẩm piano (Bach: Biến tấu Goldberg, Beethoven: Ánh trăng và Pathétique, Chopin: Étude, Schumann: Kinderszenen, Rachmaninoff: Concerto số 2); mỗi bài học tác phẩm có bảng theo dõi khi nghe, kèm bản thu gợi ý khi có."
+    cau: "Nghe nhạc: các hướng dẫn nghe tác phẩm piano (Bach: Biến tấu Goldberg, Beethoven: Ánh trăng và Pathétique, Chopin: Étude, Schumann: Kinderszenen, Rachmaninoff: Concerto số 2); mỗi bài học tác phẩm có bảng theo dõi khi nghe và một bản thu gợi ý."
     loai: ve-site
     nguon: []
     ket_qua: da-sua
-    ghi_chu: 'Câu cũ: "mỗi bài học tác phẩm cũng có bản thu và bảng theo dõi khi nghe". Theo cách đã sửa ở bat-dau/bai-0: bản thu không phải bài nào cũng có, nên "kèm bản thu gợi ý khi có". Mọi bài học trong opus-zero/docs/piano/tac-pham có mục "Theo dõi khi nghe". Chỉ nghe-nhac/bach-goldberg đã chuyển; các trang beethoven-moonlight, beethoven-pathetique, chopin-etude, rachmaninoff-2, schumann-kinderszenen và nghe-nhac/ chưa chuyển, phải giữ tên và nội dung hướng dẫn. Review D4-gom: nghe-nhac/bach-goldberg đã chuyển; các hướng dẫn còn lại ở ../opus-zero/docs/nghe-nhac/; mọi bài học tác phẩm cũ có "Theo dõi khi nghe".'
+    ghi_chu: 'Câu cũ: "mỗi bài học tác phẩm cũng có bản thu và bảng theo dõi khi nghe". Theo cách đã sửa ở bat-dau/bai-0: bản thu không phải bài nào cũng có, nên "kèm bản thu gợi ý khi có". Mọi bài học trong opus-zero/docs/piano/tac-pham có mục "Theo dõi khi nghe". Chỉ nghe-nhac/bach-goldberg đã chuyển; các trang beethoven-moonlight, beethoven-pathetique, chopin-etude, rachmaninoff-2, schumann-kinderszenen và nghe-nhac/ chưa chuyển, phải giữ tên và nội dung hướng dẫn. Review D4-gom: nghe-nhac/bach-goldberg đã chuyển; các hướng dẫn còn lại ở ../opus-zero/docs/nghe-nhac/; mọi bài học tác phẩm cũ có "Theo dõi khi nghe". mo/tong-quan (09/11/2026): bỏ "khi có", như bat-dau/bai-0 n17: cả 34 bản ghi bài học (đã khóa) có ban_thu, bản build có khung nghe với tệp âm thanh hay link ở cả 34 trang bài học.'
     review: dung
   - id: n19
     cau: "Lịch sử: đặt mỗi tác phẩm vào thời kỳ của nó ở Lịch sử và chân dung nhà soạn nhạc."
@@ -230,8 +239,8 @@ doi_chu:
       - "Luyện tai: luyện nghe hợp âm và tiến trình hòa âm. Bài Chơi theo tai bên phím đàn đưa những kỹ năng ấy lên phím: tìm giai điệu, đệm, dịch giọng."
     ly_do: 'n15 (da-sua): bỏ "là nền của ngón bấm", đổi thành điều site có thật (gam bạn tập).; n15 (da-sua): bỏ "giúp học thuộc nhanh hơn hẳn", hiệu quả không có nguồn.; n16 (da-sua): bỏ "bạn tự phát hiện nốt sai, học thuộc bằng tai và đệm được cho người khác hát", hiệu quả không có nguồn.'
   - cu: "Nghe nhạc: các hướng dẫn nghe tác phẩm piano, như Bach: Biến tấu Goldberg, Beethoven: Ánh trăng, Beethoven: Pathétique, Chopin: Étude, Schumann: Kinderszenen và Rachmaninoff: Concerto số 2; mỗi bài học tác phẩm cũng có bản thu và bảng theo dõi khi nghe. Danh sách đầy đủ ở Nghe nhạc."
-    moi: "Nghe nhạc: các hướng dẫn nghe tác phẩm piano, như Bach: Biến tấu Goldberg, Beethoven: Ánh trăng, Beethoven: Pathétique, Chopin: Étude, Schumann: Kinderszenen và Rachmaninoff: Concerto số 2; mỗi bài học tác phẩm cũng có bảng theo dõi khi nghe, kèm bản thu gợi ý khi có. Danh sách đầy đủ ở Nghe nhạc."
-    ly_do: "n18 (da-sua): bản thu không phải bài học nào cũng có; theo cách sửa ở bat-dau/bai-0."
+    moi: "Nghe nhạc: các hướng dẫn nghe tác phẩm piano, như Bach: Biến tấu Goldberg, Beethoven: Ánh trăng, Beethoven: Pathétique, Chopin: Étude, Schumann: Kinderszenen và Rachmaninoff: Concerto số 2; mỗi bài học tác phẩm cũng có bảng theo dõi khi nghe và một bản thu gợi ý. Danh sách đầy đủ ở Nghe nhạc."
+    ly_do: "n18 (mo/tong-quan, 09/11/2026): bỏ \"khi có\", cả 34 bài học đã có bản thu. Trước đó: n18 (da-sua): bản thu không phải bài học nào cũng có; theo cách sửa ở bat-dau/bai-0."
   - cu:
       - Chậm và đều thắng nhanh và thất thường. 30 phút mỗi ngày hiệu quả hơn 3 tiếng vào cuối tuần. Ngón tay học bằng lặp lại đúng, không phải bằng cố gắng.
       - Nghe trước khi chơi. Biết mình đang hướng tới âm thanh nào thì tay học nhanh hơn. Mỗi bài học tác phẩm đều bắt đầu bằng phần "Nghe trước".
@@ -246,3 +255,7 @@ doi_chu:
   - cu: "mô tả: Piano là nhạc cụ tốt nhất để hiểu nhạc cổ điển. Một người với mười ngón tay chơi được cùng lúc giai điệu, hòa âm và bè trầm; bàn phím là tấm bản đồ nhìn thấy…"
     moi: "mô tả: Trên piano, một người với mười ngón tay chơi được cùng lúc giai điệu, hòa âm và bè trầm; bàn phím là tấm bản đồ nhìn thấy được của các khái niệm nhạc lý; và…"
     ly_do: Mô tả trang lấy từ đoạn đầu, đổi theo n1, n3 (bỏ "tốt nhất để hiểu nhạc cổ điển").
+mo_khoa:
+  - ngay: 2026-11-09
+    nhanh: mo/tong-quan
+    ly_do: 'mo/tong-quan: rà các trang tổng quan (09/11/2026, chủ repo yêu cầu): bỏ \"khi có\": cả 34 bài học tác phẩm đều có bản thu gợi ý'

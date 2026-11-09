@@ -41,3 +41,5 @@ Có nhà soạn nhạc viết cho piano với âm sắc nhạc cụ khác trong 
 - [Violin](/opus/nhac-cu/violin/), [Cello](/opus/nhac-cu/cello/), [Guitar cổ điển](/opus/nhac-cu/guitar/), [Sáo](/opus/nhac-cu/sao/), [Clarinet](/opus/nhac-cu/clarinet/), [Trumpet](/opus/nhac-cu/trumpet/): âm thanh, nên nghe gì, nghệ sĩ nên tìm, và vài lời khuyên nếu bạn muốn học chơi.
 - [Giọng hát, organ, harpsichord](/opus/nhac-cu/nhac-cu-khac/): ba "giọng nói" quan trọng khác. Harpsichord là cây đàn của phần lớn nhạc phím Baroque mà người chơi piano ngày nay vẫn học (xem [Lịch sử cây đàn piano](/opus/piano/lich-su-dan/)).
 - Nhận ra nhạc cụ bằng tai: [Luyện nghe nhận diện](/opus/nhan-dien/luyen-nghe/) và [Ravel: Boléro](/opus/nghe-nhac/ravel-bolero/).
+
+Cũng trong nhóm Đọc thêm: [Nhạc truyền thống Việt Nam và nhạc cổ điển](/opus/lich-su/nhac-truyen-thong-viet-nam/) và [Các nhà soạn nhạc nữ](/opus/lich-su/nu-nha-soan-nhac/).

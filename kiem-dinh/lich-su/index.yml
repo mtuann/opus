@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 5, 29/10/2026; bổ sung sau review)
       review: Claude (review D5-gom, nhóm A, 29/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 5 (D5-L1 đến D5-L3): 7 đúng (2 có điều kiện, đã sửa theo: chữ concerto ở hinh-thuc/index, bỏ hai mốc chưa kiểm trong ghi chú Stravinsky; bỏ link COD Notre Dame school 404), 0 sai, 3 câu về site không kiểm độc lập được trên máy kiểm (người gom kiểm lại, khớp) (bao-cao/d5-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-09
+    nhanh: mo/tong-quan
+    ma_bam: sha256:552f3fc27242220e18809d01ac2c56542d7441cb65ed2715ccd900589b0381cb
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/tong-quan, 09/11/2026: rà các trang tổng quan)"
+      luot_2: "không có lượt 2: chỉ thêm câu về chính site (n64)"
+      review: Claude Opus 5.5 (mo/tong-quan, 09/11/2026)
+      kiem_mau: chủ repo yêu cầu rà và sửa (09/11/2026); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
 nguon:
   - id: cod-classical
     bac: 2
@@ -835,12 +844,20 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "Trang đích chưa chuyển; có ở site cũ ../opus-zero/docs/tai-lieu-tham-khao.md (kiểm trên site cũ). Điều cần giữ: trang đích tồn tại ở đường dẫn /opus/tai-lieu-tham-khao/. Review: đã kiểm ../opus-zero/docs/tai-lieu-tham-khao.md có (trang chưa chuyển)."
     review: dung
+  - id: n64
+    cau: "Cùng nhóm Nhạc cổ điển còn có: Hình thức và thể loại (sonata, fugue, rondo, giao hưởng, concerto…), Nghe để nhận diện (nghe một đoạn nhạc lạ, đoán thời kỳ, thể loại, tác giả), chân dung nhà soạn nhạc, Nhập môn opera, Dàn nhạc giao hưởng và Nhạc cổ điển ở Việt Nam."
+    loai: ve-site
+    ket_qua: dung
+    review: dung
+    ghi_chu: 'mo/tong-quan (09/11/2026): câu mới. Trang này là trang vào của nhóm Nhạc cổ điển (src/nhom.mjs, vao: lich-su/index; thẻ trang chủ "Thời kỳ, hình thức, nhà soạn nhạc") nhưng chưa link tới các mục khác của nhóm. Kiểm: menu bên của bản build, nhóm Nhạc cổ điển gồm hinh-thuc/*, nhan-dien/*, nhac-cu/dan-nhac, lich-su/* (có nha-soan-nhac, opera, viet-nam); tiêu đề các trang: "Hình thức & thể loại", "Nghe để nhận diện", "Nhà soạn nhạc", "Nhập môn opera", "Dàn nhạc giao hưởng", "Nhạc cổ điển ở Việt Nam"; hinh-thuc/index có sonata, fugue, rondo và mục thể loại (giao hưởng, concerto); nhan-dien/index mở bằng nghe đoạn nhạc lạ để đoán thời kỳ, thể loại, tác giả. Link kiểm bằng ~/w/neo.py trên bản build.'
 khuong_nhac: []
 ghi_chu: 'Trang tổng quan lịch sử (tang khung). Nguồn chính: COD (Encyclopedia.com), Clark chương 2 đến 7, Britannica; năm sinh–mất kiểm với src/data/nha-soan-nhac.yml. Hình periods: chữ trong hình (7 thời kỳ, mốc năm, tên nhà soạn nhạc) khớp bảng của trang; Pärt, Adams, Shaw ở Đương đại khớp nha-soan-nhac.yml. Đã sửa/bỏ: mô tả "đặc điểm âm nhạc", bảng (Baroque, Đương đại), Trung cổ, Phục hưng, Baroque, Cổ điển, Lãng mạn (Beethoven), Thế kỷ 20 (ấn tượng), Đọc thêm, mục Nguồn. Chưa chắc: "Cuối thế kỷ" cho tối giản; Schoenberg và Copland không có trong nha-soan-nhac.yml; Reich và Glass ở Thế kỷ 20 trong trang nhưng ở Đương đại trong dữ liệu. Mốc các thời kỳ là quy ước của site. Review D5-gom (nhóm A): opera ra đời quanh 1600 (Peri), L''Orfeo là vở đầu tiên còn trong tiết mục; tối giản từ thập niên 1960; Reich, Glass ghi "site xếp vào thời Đương đại" theo dữ liệu đã khóa.'
 doi_chu:
   - cu: "Các mốc năm dưới đây là quy ước gần đúng; phong cách thay đổi dần dần chứ không đổi trong một đêm. Mỗi thời kỳ có một trang chi tiết (bối cảnh, âm thanh đặc trưng, nhạc cụ, 10 tác phẩm để nghe): Trung cổ, Phục hưng, Baroque, Cổ điển, Lãng mạn, Thế kỷ 20. Thời Đương đại có trang Âm nhạc hôm nay: những nhà soạn nhạc nên nghe, tin đáng chú ý, tên tuổi Việt Nam và các cuộc thi lớn. Xem cả dòng thời gian và Nhạc truyền thống Việt Nam và nhạc cổ điển."
-    moi: "Các mốc năm dưới đây là quy ước gần đúng; phong cách thay đổi dần dần chứ không đổi trong một đêm. Mỗi thời kỳ có một trang chi tiết (bối cảnh, đặc điểm âm nhạc, 10 tác phẩm để nghe): Trung cổ, Phục hưng, Baroque, Cổ điển, Lãng mạn, Thế kỷ 20. Thời Đương đại có trang Âm nhạc hôm nay: những nhà soạn nhạc nên nghe, tin đáng chú ý, tên tuổi Việt Nam và các cuộc thi lớn. Xem cả dòng thời gian và Nhạc truyền thống Việt Nam và nhạc cổ điển."
-    ly_do: 'n4 (da-sua): "âm thanh đặc trưng, nhạc cụ" thành "đặc điểm âm nhạc" vì trang thế kỷ 20 không có hai mục ấy.'
+    moi:
+      - "Các mốc năm dưới đây là quy ước gần đúng; phong cách thay đổi dần dần chứ không đổi trong một đêm. Mỗi thời kỳ có một trang chi tiết (bối cảnh, đặc điểm âm nhạc, 10 tác phẩm để nghe): Trung cổ, Phục hưng, Baroque, Cổ điển, Lãng mạn, Thế kỷ 20. Thời Đương đại có trang Âm nhạc hôm nay: những nhà soạn nhạc nên nghe, tin đáng chú ý, tên tuổi Việt Nam và các cuộc thi lớn. Xem cả dòng thời gian và Nhạc truyền thống Việt Nam và nhạc cổ điển."
+      - "Cùng nhóm Nhạc cổ điển còn có: Hình thức và thể loại (sonata, fugue, rondo, giao hưởng, concerto…), Nghe để nhận diện (nghe một đoạn nhạc lạ, đoán thời kỳ, thể loại, tác giả), chân dung nhà soạn nhạc, Nhập môn opera, Dàn nhạc giao hưởng và Nhạc cổ điển ở Việt Nam."
+    ly_do: 'n4 (da-sua): "âm thanh đặc trưng, nhạc cụ" thành "đặc điểm âm nhạc" vì trang thế kỷ 20 không có hai mục ấy.; n64 (mo/tong-quan, 09/11/2026): thêm đoạn link tới các mục khác của nhóm Nhạc cổ điển.'
   - cu: Nhiều trang trí, nhịp đều, bè trầm liên tục, ra đời opera
     moi: Nhiều trang trí, tương phản, bè trầm liên tục, ra đời opera
     ly_do: "n8 (da-sua): bỏ \"nhịp đều\".; n23 (da-sua): bỏ \"nhịp đều và mạnh\".; Bảng thời kỳ (lượt 1 D5-L1): Baroque bỏ \"nhịp đều và mạnh\" (không nguồn bậc 1–2).; n24 (da-sua, review D5-gom): opera ra đời với Peri (Dafne 1598, Euridice 1600, Britannica); L'Orfeo là vở đầu tiên còn trong tiết mục (Britannica)."
@@ -887,3 +904,7 @@ doi_chu:
       - Encyclopaedia Britannica; IMSLP (trang tác phẩm). Mốc năm của các thời kỳ là quy ước của site (các nguồn lệch nhau vài chục năm).
       - Xem tài liệu tham khảo.
     ly_do: "n52 (da-sua): mục Nguồn viết lại theo nguồn đã mở."
+mo_khoa:
+  - ngay: 2026-11-09
+    nhanh: mo/tong-quan
+    ly_do: "mo/tong-quan: rà các trang tổng quan (09/11/2026, chủ repo yêu cầu): trang vào nhóm Nhạc cổ điển chưa link tới Hình thức, Nhận diện, Nhà soạn nhạc, Opera, Việt Nam"

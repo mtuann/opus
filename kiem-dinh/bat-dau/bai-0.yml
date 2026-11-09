@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (D2-L1 lượt 2 phần 1/2)
       review: Claude Opus 5.5 (review D2-L1, 24/10/2026)
       kiem_mau: chủ repo, 5/5 nhận định mẫu của D2-L1 đúng (d2-l1-kiem-mau.yml)
+  - so: 2
+    ngay: 2026-11-09
+    nhanh: mo/tong-quan
+    ma_bam: sha256:268d16df941a47ec3be3919233a95bfe0bbfa08611d2ef481bec276d7fb0bcd5
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/tong-quan, 09/11/2026: rà các trang tổng quan)"
+      luot_2: "không có lượt 2: câu về chính site, kiểm bằng dữ liệu đã khóa và bản build (ghi_chu n17)"
+      review: Claude Opus 5.5 (mo/tong-quan, 09/11/2026)
+      kiem_mau: chủ repo yêu cầu rà và sửa (09/11/2026); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
 ghi_chu: >-
   Nhận định về nghiên cứu (học động tác, tập rải đều, amusia, "lệch tông", nghe không cần học) đối chiếu với bài báo khoa học; tóm tắt đọc qua Europe PMC hay Crossref (link trong nguon), vì PubMed và trang nhà xuất bản chặn truy cập tự động. Nhận định về site (nội dung trang khác, bài kiểm tra, bản thu) đối chiếu với trang cũ trong ../opus-zero/docs/ và dữ liệu D2-0 (nhánh moi/d2-0-du-lieu, đã kiểm lượt 1). Các trang được link tới (Hỏi đáp, Hai tuần đầu tiên, bài học tác phẩm) chưa lên site lúc D2-L1 gộp: link hiện "sắp có".
 nguon:
@@ -276,13 +285,14 @@ nhan_dinh:
     luot_2_nguon: [ https://pubmed.ncbi.nlm.nih.gov/16412412/ ]
     luot_2_ghi_chu: "Lời khuyên nghe nhạc. Phù hợp với nghiên cứu: người nghe không học nhạc vẫn có nhiều năng lực xử lý nhạc phương Tây thu nhận qua tiếp xúc (Bigand & Poulin-Charronnat 2006). Không hại."
   - id: n17
-    cau: Mỗi bài học tác phẩm có bảng "Theo dõi khi nghe", kèm bản thu gợi ý khi có, để bạn bắt đầu.
+    cau: Mỗi bài học tác phẩm có bảng "Theo dõi khi nghe" và một bản thu gợi ý để bạn bắt đầu.
     loai: so-lieu
     nguon: [ du-lieu-d20, mau-bai-hoc ]
     ket_qua: da-sua
-    ghi_chu: 'Review (24/10/2026): viết lại theo lượt 2 và review. Câu trước: "Mỗi bài học tác phẩm có bản thu và bảng ''Theo dõi khi nghe'' để bạn bắt đầu." Dữ liệu hiện có ban_thu cho cả 34 bản ghi bài học, nhưng ban_thu chưa kiểm định (đợt 6 kiểm từng bản thu, bản không đạt thì bỏ), và bài không có bản thu thì người học tự dán link hay chọn file (AGENTS.md, khối nghe), nên câu mới không hứa mọi bài có bản thu. Bảng "Theo dõi khi nghe" có ở mọi bài học theo mẫu trang. Lượt 1: Nhận định về site. Dữ liệu D2-0: cả 34 bản ghi bài học (loai bai-hoc) có ban_thu. Mẫu bài học (AGENTS.md): mục "Nghe trước khi tập" có ::khoi-nghe, bảng "Theo dõi khi nghe" ngay sau. Bài học tác phẩm lên site ở đợt 6; trước đó link hiện "sắp có".'
+    ghi_chu: 'Review (24/10/2026): viết lại theo lượt 2 và review. Câu trước: "Mỗi bài học tác phẩm có bản thu và bảng ''Theo dõi khi nghe'' để bạn bắt đầu." Dữ liệu hiện có ban_thu cho cả 34 bản ghi bài học, nhưng ban_thu chưa kiểm định (đợt 6 kiểm từng bản thu, bản không đạt thì bỏ), và bài không có bản thu thì người học tự dán link hay chọn file (AGENTS.md, khối nghe), nên câu mới không hứa mọi bài có bản thu. Bảng "Theo dõi khi nghe" có ở mọi bài học theo mẫu trang. Lượt 1: Nhận định về site. Dữ liệu D2-0: cả 34 bản ghi bài học (loai bai-hoc) có ban_thu. Mẫu bài học (AGENTS.md): mục "Nghe trước khi tập" có ::khoi-nghe, bảng "Theo dõi khi nghe" ngay sau. Bài học tác phẩm lên site ở đợt 6; trước đó link hiện "sắp có". mo/tong-quan (09/11/2026): bỏ "khi có". Đợt 6 đã kiểm và khóa bản thu của cả 34 bài học: dữ liệu src/data/tac-pham.yml (đã khóa) có ban_thu ở cả 34 bản ghi loai bai-hoc, và bản build có khung nghe với tệp âm thanh hay link ở cả 34 trang piano/tac-pham/*; nghe-nhac/index và piano/tac-pham/index (đã khóa) cũng nói mọi bài học có bản thu gợi ý.'
     luot_2: khong-chac
     luot_2_ghi_chu: "Đặc điểm của chính site (bản thu và bảng 'Theo dõi khi nghe' ở mọi bài học tác phẩm); không có nguồn ngoài. Lưu ý: theo AGENTS.md, bản thu gợi ý lấy từ 'ban_thu' của bản ghi và 'không có bản thu thì người học tự dán link hay chọn file', nên 'mỗi bài có bản thu' có thể nói quá; kiểm bằng dữ liệu 'ban_thu' của các bản ghi bài học."
+    review: dung
   - id: n18
     cau: Đã chơi được một chút? Làm bài kiểm tra đầu vào (phần piano khoảng 2 phút) để biết nên vào từ đâu.
     loai: so-lieu
@@ -329,9 +339,13 @@ doi_chu:
   - cu: 'Bạn không cần hát hay. Nhưng ngân nga (dù lệch) là công cụ học tốt nhất, vì nó buộc tai bạn chú ý đến cao độ. Phần lớn người tự nhận "lệch tông" thực ra chỉ chưa được luyện: khả năng nghe và hát đúng cao độ cải thiện rõ rệt sau vài tuần luyện tai đều đặn. Chỉ một tỉ lệ rất nhỏ dân số gặp khó khăn thật sự về nhận biết cao độ (amusia). Hãy cứ bắt đầu.'
     moi: 'Bạn không cần hát hay. Nhưng ngân nga (dù lệch) là công cụ học tốt nhất, vì nó buộc tai bạn chú ý đến cao độ. Phần lớn người tự nhận "lệch tông" thực ra chỉ chưa được luyện: luyện tai đều đặn giúp nghe cao độ chính xác hơn, còn muốn hát đúng thì cần tập cả hát. Chỉ một tỉ lệ rất nhỏ dân số gặp khó khăn thật sự về nhận biết cao độ (amusia). Hãy cứ bắt đầu.'
     ly_do: 'n14 (da-sua): bỏ "rõ rệt sau vài tuần": không có nguồn cho mốc thời gian (Wise và Sloboda 2008 chỉ cho thấy luyện thì cải thiện). Review (24/10/2026), n14: tách nghe và hát: luyện tai giúp nghe cao độ (Micheyl 2006), hát đúng cần tập hát (Zarate 2010).'
+  - cu: 'Hãy nghe kỹ bài mình sắp tập, và nghe rộng hơn những gì mình tập. Nghe nhạc cổ điển không cần năng khiếu hay biết đọc nốt; điều cần là biết nghe cái gì: nghe từng chương một, tìm giai điệu chính và nhận ra khi nó quay lại, nghe lại nhiều lần. Phương pháp nghe chủ động chỉ cách làm; mỗi bài học tác phẩm có bản thu và bảng "Theo dõi khi nghe" để bạn bắt đầu.'
+    moi: 'Hãy nghe kỹ bài mình sắp tập, và nghe rộng hơn những gì mình tập. Nghe nhạc cổ điển không cần năng khiếu hay biết đọc nốt; điều cần là biết nghe cái gì: nghe từng chương một, tìm giai điệu chính và nhận ra khi nó quay lại, nghe lại nhiều lần. Phương pháp nghe chủ động chỉ cách làm; mỗi bài học tác phẩm có bảng "Theo dõi khi nghe" và một bản thu gợi ý để bạn bắt đầu.'
+    ly_do: "n17 (mo/tong-quan, 09/11/2026): bỏ \"khi có\", cả 34 bài học đã có bản thu kiểm ở đợt 6. Trước đó: n17 (da-sua, review 24/10/2026): không hứa mọi bài học có bản thu: bản thu (ban_thu) kiểm định ở đợt 6, bài không có thì người học tự dán link."
   - cu: Đã chơi được một chút? Làm bài kiểm tra đầu vào (5 phút) để biết nên vào từ đâu. Chưa từng chơi thì bỏ qua bước này.
     moi: Đã chơi được một chút? Làm bài kiểm tra đầu vào (phần piano khoảng 2 phút) để biết nên vào từ đâu. Chưa từng chơi thì bỏ qua bước này.
     ly_do: 'n18 (da-sua): "(5 phút)" trái với trang Kiểm tra đầu vào (phần piano khoảng 2 phút, phần nhạc lý 5–10 phút); người đã chơi được một chút cần phần piano để biết chặng.'
-  - cu: 'Hãy nghe kỹ bài mình sắp tập, và nghe rộng hơn những gì mình tập. Nghe nhạc cổ điển không cần năng khiếu hay biết đọc nốt; điều cần là biết nghe cái gì: nghe từng chương một, tìm giai điệu chính và nhận ra khi nó quay lại, nghe lại nhiều lần. Phương pháp nghe chủ động chỉ cách làm; mỗi bài học tác phẩm có bản thu và bảng "Theo dõi khi nghe" để bạn bắt đầu.'
-    moi: 'Hãy nghe kỹ bài mình sắp tập, và nghe rộng hơn những gì mình tập. Nghe nhạc cổ điển không cần năng khiếu hay biết đọc nốt; điều cần là biết nghe cái gì: nghe từng chương một, tìm giai điệu chính và nhận ra khi nó quay lại, nghe lại nhiều lần. Phương pháp nghe chủ động chỉ cách làm; mỗi bài học tác phẩm có bảng "Theo dõi khi nghe", kèm bản thu gợi ý khi có, để bạn bắt đầu.'
-    ly_do: "n17 (da-sua, review 24/10/2026): không hứa mọi bài học có bản thu: bản thu (ban_thu) kiểm định ở đợt 6, bài không có thì người học tự dán link."
+mo_khoa:
+  - ngay: 2026-11-09
+    nhanh: mo/tong-quan
+    ly_do: 'mo/tong-quan: rà các trang tổng quan (09/11/2026, chủ repo yêu cầu): bỏ \"khi có\": cả 34 bài học tác phẩm đều có bản thu gợi ý'

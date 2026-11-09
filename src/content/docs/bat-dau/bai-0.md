@@ -21,7 +21,7 @@ Bạn không cần hát hay. Nhưng **ngân nga** (dù lệch) là công cụ h�
 
 ## Nghe là một nửa việc học
 
-Hãy nghe kỹ bài mình sắp tập, và nghe rộng hơn những gì mình tập. Nghe nhạc cổ điển không cần năng khiếu hay biết đọc nốt; điều cần là biết *nghe cái gì*: nghe từng chương một, tìm giai điệu chính và nhận ra khi nó quay lại, nghe lại nhiều lần. [Phương pháp nghe chủ động](/opus/nghe-nhac/) chỉ cách làm; mỗi [bài học tác phẩm](/opus/piano/tac-pham/) có bảng "Theo dõi khi nghe", kèm bản thu gợi ý khi có, để bạn bắt đầu.
+Hãy nghe kỹ bài mình sắp tập, và nghe rộng hơn những gì mình tập. Nghe nhạc cổ điển không cần năng khiếu hay biết đọc nốt; điều cần là biết *nghe cái gì*: nghe từng chương một, tìm giai điệu chính và nhận ra khi nó quay lại, nghe lại nhiều lần. [Phương pháp nghe chủ động](/opus/nghe-nhac/) chỉ cách làm; mỗi [bài học tác phẩm](/opus/piano/tac-pham/) có bảng "Theo dõi khi nghe" và một bản thu gợi ý để bạn bắt đầu.
 
 ## Bắt đầu từ đâu
 
