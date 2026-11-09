@@ -27,7 +27,7 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: 'Claude Opus 5.5 (đợt hình 4, lượt 1, 09/11/2026)'
-      luot_2: null
+      luot_2: 'Claude Opus 5.5 (lượt 2 đợt hình 4, 09/11/2026)'
       review: null
       kiem_mau: null
 nguon:
@@ -115,6 +115,14 @@ nguon:
     bac: 2
     ten: Roland, trang sản phẩm DP-10 (half-damper, dùng được như công tắc thường)
     link: https://www.roland.com/global/products/dp-10/
+  - id: pat-yamaha-halfpedal-grand
+    bac: 2
+    ten: 'Yamaha Corp. (S. Muramatsu), bằng sáng chế US 7.521.626 B2, Automatic player musical instrument… method for specifying half pedal point (công bố 21/4/2009; đàn cánh)'
+    link: https://patents.google.com/patent/US7521626B2/en
+  - id: pat-yamaha-halfpedal-2015
+    bac: 2
+    ten: 'Yamaha Corp. (Y. Fujiwara, Y. Oba), bằng sáng chế US 8.933.316 B2, Method and apparatus for identifying half pedal region in keyboard musical instrument (công bố 13/1/2015)'
+    link: https://patents.google.com/patent/US8933316B2/en
 nhan_dinh:
   - id: n1
     cau: "Bàn đạp phải là bàn đạp vang (damper, sustain): nhấc mọi bộ giảm âm khỏi dây, trên đàn đứng cũng vậy."
@@ -674,8 +682,12 @@ nhan_dinh:
     loai: quy-tac
     nguon:
       - yamaha-patent-half
+      - pat-yamaha-halfpedal-grand
+      - pat-yamaha-halfpedal-2015
     ket_qua: dung
     ghi_chu: 'Yamaha US 8.502.059, Definitions: bàn đạp "is firstly moved in the rest region, passes through the half-pedal region" rồi "finally enters the damper-free region"; vùng nghỉ: bộ giảm âm "still exerts the force on the string as large as the force at the rest position"; vùng nửa bàn đạp: "the damper is still in contact with the string"; vùng tự do: "the damper is spaced from the string". Bằng sáng chế mô tả đàn đứng (mute piano dựa trên upright), nhưng thứ tự vùng là của bộ giảm âm nói chung; cần lượt 2 đối chiếu cho đàn cánh. Điểm bắt theo định nghĩa của trang (mục "Đặt chân": điểm bộ giảm âm rời dây).'
+    luot_2: dung
+    luot_2_ghi_chu: 'Nguồn bậc 2 cho đàn cánh (khác bằng sáng chế đàn đứng của lượt 1): (1) Yamaha US 7.521.626 B2 (thử trên "the grand piano 30"): ba vùng theo hành trình bàn đạp vang, "restricting region, half pedal region and full stroke region"; "Although the weight of damper is born by the strings in the restricting region, the load on the strings is gradually decreased in the half pedal region"; "While the weight of dampers 36 is being left on the strings, the dampers 36 are held in contact with the strings 34, and are found in the half pedal region. When the weight of dampers 36 is perfectly removed from the strings, the dampers 36 are spaced from the strings 4, and enter the damper free region". (2) Yamaha US 8.933.316 B2: điểm cuối vùng nửa bàn đạp là lúc bộ giảm âm "gets out of contact with the corresponding string set". Thứ tự đỉnh (bộ giảm âm nằm trên dây với cả sức nặng) → vùng nửa bàn đạp (còn chạm, nhẹ dần) → điểm bộ giảm âm rời dây → đáy (tự do) khớp hình. Kết luận: đúng, cho đàn cánh; hình không cần sửa.'
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
