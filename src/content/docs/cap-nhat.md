@@ -13,14 +13,13 @@ Bài học tác phẩm và hướng dẫn nghe, theo ngày lên site, mới trư
 
 ## Nhật ký thay đổi
 
-Site đã được làm lại ở địa chỉ này, dưới tên Opus: mọi trang đã được kiểm định, và trang thêm sau chỉ lên site khi đã được kiểm định. Các phiên bản 1–15 dưới đây là của **Opus Zero**, bản trước của site, ở https://mtuann.github.io/opus-zero/, nên các mục ấy kể về site lúc đó. Link trong các mục này dẫn tới trang tương ứng ở site mới.
+Site đã được làm lại dưới tên Opus: mọi trang đã được kiểm định, và trang thêm sau chỉ lên site khi đã được kiểm định. Các phiên bản 1–15 dưới đây là của bản trước của site, nên các mục ấy kể về site lúc đó. Link trong các mục này dẫn tới trang tương ứng ở site mới.
 
 ### 11/2026: Opus (làm lại xong)
 
-- **Ra mắt Opus, 07/11/2026:** Opus Zero được làm lại thành Opus. Đủ 233 trang của bản trước, giữ nguyên đường dẫn dưới `/opus/` (trừ bài blog); mỗi trang đã được kiểm tra lại từ đầu, theo [quy trình ở cuối trang này](#quy-trinh-giu-noi-dung-luon-ung). Bài viết: [Opus đã lên đủ](/opus/blog/posts/2026-11-07-opus-da-len-du/).
+- **Ra mắt Opus, 07/11/2026:** site được làm lại từ đầu, đủ 233 trang của bản trước; mỗi trang đã được kiểm tra lại từ đầu, theo [quy trình ở cuối trang này](#quy-trinh-giu-noi-dung-luon-ung). Bài viết: [Opus đã lên đủ](/opus/blog/posts/2026-11-07-opus-da-len-du/).
 - **Mỗi chặng một trang:** 7 chặng của [lộ trình piano](/opus/piano/lo-trinh/) có trang riêng, liệt kê các bài học tác phẩm của chặng.
 - **Danh mục tác phẩm:** [bài học tác phẩm](/opus/piano/tac-pham/) và [hướng dẫn nghe](/opus/nghe-nhac/) lọc được theo chặng, thời kỳ và tác giả.
-- **Tiến độ giữ nguyên:** tiến độ đã lưu ở Opus Zero vẫn hiện ở Opus, trên cùng trình duyệt.
 - **Hình minh họa:** nhiều điều trước chỉ viết bằng chữ nay có hình vẽ ngay trong trang, có bản sáng và tối; chữ trong hình là chữ thật, đọc được bằng trình đọc màn hình:
     - bàn phím ghi số ngón hai tay, nhãn nốt và ngoặc cung, nửa cung: [Quãng](/opus/nhac-ly/09-quang/), [Năm ngón](/opus/piano/nam-ngon/), ngón bấm 12 gam trưởng ở trang [Gam](/opus/piano/gam/);
     - khuông kép nối xuống bàn phím: [Khuông nhạc và khóa](/opus/nhac-ly/02-khuong-nhac-khoa/);
@@ -67,7 +66,7 @@ Site đã được làm lại ở địa chỉ này, dưới tên Opus: mọi tr
 
 ### 10/2026: Phiên bản 14 (gọn lại quanh cây đàn)
 
-- **Cả 34 bài học tác phẩm đều có bản thu:** mười bài học có thêm bản thu từ [IMSLP](https://imslp.org/) (mười ba bản thu của Luis Kolodin, Ramón León Egea, Jewgeni Smirnow và nhóm Mississippi College Piano Pedagogy), lưu ngay trên site Opus Zero; Thuyền ca Venice và Musette Rê trưởng có bản thu từ Wikimedia Commons. Các bản thu mới đều có mốc tham khảo. Người chơi, giấy phép và nguồn của từng file: [tệp nguồn âm thanh](/opus/audio/NGUON.txt).
+- **Cả 34 bài học tác phẩm đều có bản thu:** mười bài học có thêm bản thu từ [IMSLP](https://imslp.org/) (mười ba bản thu của Luis Kolodin, Ramón León Egea, Jewgeni Smirnow và nhóm Mississippi College Piano Pedagogy), lưu ngay trên site; Thuyền ca Venice và Musette Rê trưởng có bản thu từ Wikimedia Commons. Các bản thu mới đều có mốc tham khảo. Người chơi, giấy phép và nguồn của từng file: [tệp nguồn âm thanh](/opus/audio/NGUON.txt).
 - **Hướng dẫn nghe mới: [Debussy, *Préludes* quyển 1](/opus/nghe-nhac/debussy-preludes/).** Mười hai bức tranh âm thanh, với bản thu trọn quyển của Marcelle Meyer (1956, trên Wikimedia Commons) và mốc đầu từng bản.
 - **Gộp những trang trùng nhau:** công cụ nhận biết quãng, hợp âm và gam nằm ngay cuối các bài [Luyện tai](/opus/luyen-tai/), cạnh phần hướng dẫn cách nghe; công cụ nhận biết kết chuyển sang [Nghe tiến trình hòa âm](/opus/luyen-tai/nghe-tien-trinh/#luyen-voi-cong-cu); vòng quãng năm vào trang [Hóa biểu](/opus/luyen-tap/hoa-bieu/#vong-quang-nam); giấy kẻ khuông vào [Phiếu bài tập](/opus/luyen-tap/phieu-bai-tap/#giay-ke-khuong); phổ âm thanh vào bài [Âm học](/opus/nhac-ly/am-hoc/#am-sac); máy lên dây vào trang [Hát lại](/opus/luyen-tap/hat-lai/#may-len-day). Ba hướng dẫn nghe (Prelude Đô trưởng của Bach, Nocturne Op. 9 số 2, *Clair de lune*) gộp vào bài học tác phẩm tương ứng, mỗi bài có lối tắt cho người chỉ muốn nghe. Hai lộ trình cho người chưa có đàn gộp thành [Lộ trình nghe hiểu và nhạc lý](/opus/bat-dau/lo-trinh-nghe/). Địa chỉ cũ vẫn dùng được và đưa thẳng tới đúng mục ở trang mới.
 - **Viết lại cho người tập đàn:** [Bài 0](/opus/bat-dau/bai-0/) (ba hiểu lầm của người lớn học piano, bắt đầu từ đâu); [Nghe tiến trình hòa âm](/opus/luyen-tai/nghe-tien-trinh/) với ví dụ hai tay và những tiến trình gặp trong bài đang tập; tháng 7–10 của [Lộ trình piano năm đầu](/opus/bat-dau/lo-trinh-choi/) dùng các bài học tác phẩm vừa sức.
@@ -110,7 +109,7 @@ Site đã được làm lại ở địa chỉ này, dưới tên Opus: mọi tr
 
 ### 10/2026: Phiên bản 10 (trọng tâm piano)
 
-Opus Zero chuyển thành sổ tay **học piano cổ điển** từ con số 0 đến nâng cao.
+Site chuyển thành sổ tay **học piano cổ điển** từ con số 0 đến nâng cao.
 
 - **Mục [Piano](/opus/piano/) mới:** [lộ trình bảy chặng](/opus/piano/lo-trinh/) từ 0 đến sau Grade 8; chọn đàn, tư thế, bản đồ bàn phím, hai tuần đầu tiên; 8 trang kỹ thuật (năm ngón, gam và ngón bấm cho 12 giọng, hợp âm và hình đệm, tạo tiếng đàn, bàn đạp, nốt hoa mỹ, phối hợp hai tay, bài tập ngón và étude); 5 trang tập luyện (cách tập, thị tấu, học thuộc và biểu diễn, giữ tay khỏe, học với thầy và thi cấp); [tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/); lịch sử cây đàn, thể loại, nhà soạn nhạc và nghệ sĩ piano.
 - **[10 bài đầu tiên](/opus/piano/10-bai-dau-tien/) soạn lại cho hai tay**, có số ngón; thêm nhiều bài tập hai tay trên khuông kép trong các trang kỹ thuật.

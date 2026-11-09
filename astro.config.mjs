@@ -76,8 +76,8 @@ export default defineConfig({
 			// Menu đủ 9 nhóm (src/nhom.mjs), chỉ trang có trong bản build này; nhóm chưa có trang hiện "sắp có"
 			// (src/components/Sidebar.astro). Đang chạy npm run dev mà thêm, xóa trang thì khởi động lại để menu cập nhật.
 			sidebar: menu(trangDocsTrongBan(), tang, { 'lo-trinh': { sau: 'piano/lo-trinh', muc: trangChangMenu } }),
-			// Biểu tượng GitHub (link tới repo): bỏ tạm khi repo còn riêng tư, vì người đọc mở ra trang 404 (chủ repo chọn
-			// 24/10/2026). Repo công khai thì thêm lại: social: [{ icon: 'github', label: 'Mã nguồn trên GitHub', href: … }]
+			// Biểu tượng GitHub ở thanh trên: repo đã công khai (09/11/2026)
+			social: [{ icon: 'github', label: 'Mã nguồn trên GitHub', href: 'https://github.com/mtuann/opus' }],
 			customCss: ['./src/styles/fonts.css', './src/styles/opus.css', './src/styles/thanh-phan.css'],
 			components: {
 				Banner: './src/components/Banner.astro',

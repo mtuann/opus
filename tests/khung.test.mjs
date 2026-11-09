@@ -171,12 +171,10 @@ test('giấy phép MIT ở chân trang dẫn tới LICENSE của repo mtuann/opu
 });
 
 test('site không còn nhắc Opus Zero: không tên, không địa chỉ site cũ, không link repo cũ (chủ repo chọn ngày 09/11/2026)', () => {
-	// cap-nhat: phiên khác đang sửa trang này (ghi các đợt hình); bỏ tên cũ ở đó sau khi phiên ấy gộp, rồi xóa ngoại lệ này.
-	const NGOAI_LE = new Set([path.join('cap-nhat', 'index.html')]);
 	const DIST = path.join(path.resolve(import.meta.dirname, '..'), 'dist');
 	const co = fs
 		.readdirSync(DIST, { recursive: true })
-		.filter((f) => /\.(html|txt|xml|json|webmanifest)$/.test(f) && !NGOAI_LE.has(f))
+		.filter((f) => /\.(html|txt|xml|json|webmanifest)$/.test(f))
 		.filter((f) => /opus-zero|opus zero/i.test(fs.readFileSync(path.join(DIST, f), 'utf8')));
 	assert.deepEqual(co, []);
 });
