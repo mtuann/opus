@@ -13,6 +13,8 @@ Bàn đạp nối những gì ngón tay không nối được, làm tiếng đà
 | Trái | **Una corda** (soft pedal) | Dịch cả bàn phím và bộ máy sang bên, để búa gõ ít dây hơn ở mỗi nốt. Tiếng nhỏ hơn và đổi màu | Đưa cả hàng búa lại gần dây; búa đi quãng ngắn hơn nên tiếng nhỏ hơn |
 | Giữa | **Bàn đạp giữ âm** (*sostenuto*) | Chỉ giữ nhấc những bộ giảm âm đang được nhấc vào lúc nhấn bàn đạp, tức của những phím đang giữ | Một số đàn đứng có sostenuto thật. Nếu bàn đạp giữa của đàn bạn không phải sostenuto, xem sách hướng dẫn của đàn để biết nó làm gì |
 
+::hinh{ten="ba-ban-dap"}
+
 *Una corda* nghĩa là "một dây". Hai cây đàn còn lại của Cristofori (1722 và 1726) có bàn phím trượt được sang bên, để búa chỉ gõ một trong hai dây của mỗi nốt. Lịch sử của bàn đạp, từ cần gạt bằng đầu gối đến sostenuto, ở trang [lịch sử cây đàn](/opus/piano/lich-su-dan/).
 
 **Piano điện.** Có bàn đạp chỉ là **công tắc** bật – tắt, và có bàn đạp dùng được **nửa bàn đạp** (*half-damper*). Nếu bạn định học đến trình độ trung cấp, bàn đạp dùng được nửa bàn đạp là khoản đáng đầu tư (xem [chọn đàn](/opus/piano/chon-dan/)).
@@ -23,6 +25,8 @@ Bàn đạp nối những gì ngón tay không nối được, làm tiếng đà
 - Bàn đạp vang nhấc **tất cả** bộ giảm âm cùng lúc. Nốt vẫn ngân sau khi nhả phím, và mọi dây khác cũng được tự do rung theo những nốt đang chơi: đó là **cộng hưởng giao cảm**. Vì vậy một nốt có bàn đạp nghe khác hẳn cùng nốt ấy giữ bằng ngón, dù dài như nhau.
 - Các nốt ở âm vực cao nhất (cỡ hai quãng tám trên cùng, tùy đàn) không có bộ giảm âm.
 - Bàn đạp không phải công tắc: có thể đạp nông hay sâu (như nửa bàn đạp, khi bộ giảm âm chỉ chạm nhẹ dây) và nhả nhanh hay chậm. Hãy tập cho chân quen những chuyển động nhỏ quanh điểm bộ giảm âm vừa rời dây.
+
+::hinh{ten="giam-am"}
 
 :::tip[Nghe cộng hưởng giao cảm]
 Bấm câm (không cho kêu) hợp âm Đô4–Mi4–Sol4 và giữ phím. Tay kia đánh mạnh rồi nhả ngay nốt Đô2. Bạn sẽ nghe hợp âm vang khẽ lên: các dây không bị chặn rung theo bồi âm của nốt Đô trầm. Bàn đạp vang làm điều đó với mọi dây cùng lúc. Về bồi âm, xem [âm học](/opus/nhac-ly/am-hoc/).

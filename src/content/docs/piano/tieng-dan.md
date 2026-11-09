@@ -9,6 +9,8 @@ Cùng một cây đàn, cùng một bản nhạc, hai người chơi có thể c
 
 Khi bạn bấm phím, bộ máy đàn **ném** chiếc búa bọc nỉ vào dây. Ngay trước khi chạm dây, búa tách khỏi cơ cấu (cơ chế thoát, *escapement*) và bay tự do, đập vào dây rồi bật ra. Từ khoảnh khắc đó bạn không còn tác động gì lên nốt nhạc nữa. Bạn chỉ còn hai lựa chọn: **giữ** cho dây ngân (bằng phím hoặc [bàn đạp](/opus/piano/ban-dap/)), hoặc **dừng** nó (nhả phím, búa chặn tiếng rơi xuống dây).
 
+::hinh{ten="bo-may-dan"}
+
 Từ đó có ba hệ quả rất thực tế:
 
 - **Độ to phụ thuộc vào tốc độ búa, tức là tốc độ phím đi xuống**, không phải lực bạn ấn vào đáy phím. Ấn thêm sau khi nốt đã kêu không làm nốt to hơn, chỉ làm tay căng.

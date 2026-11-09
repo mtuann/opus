@@ -98,6 +98,8 @@ Hiểu cây đàn hoạt động thế nào giúp bạn hiểu vì sao có nhữ
 5. **Dây đàn.** Ở vùng trầm nhất, mỗi nốt chỉ có một dây; lên cao hơn là hai dây, rồi ba dây ở các nốt cao. Một cây piano có hơn 200 dây (đàn concert Steinway D có 243 dây); tổng lực căng là 16 tấn vào năm 1862 và có thể lên tới 30 tấn ở đàn hiện đại, do khung gang gánh chịu.
 6. **Bảng cộng hưởng** (*soundboard*) bằng gỗ vân sam nhận rung động từ dây qua cầu ngựa. Chính bảng gỗ lớn này đẩy không khí và tạo ra âm lượng ta nghe được.
 
+::hinh{ten="bo-may-dan"}
+
 Ba bàn đạp (vang, *una corda*, *sostenuto*) và chỗ chúng khác nhau giữa đàn cánh và đàn đứng được giải thích ở trang [Bàn đạp](/opus/piano/ban-dap/#ba-ban-ap).
 
 :::note[Điều quan trọng nhất]

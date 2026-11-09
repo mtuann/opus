@@ -25,6 +25,8 @@ Hãy chỉnh ghế **trước** khi chơi nốt đầu tiên, mỗi buổi.
 
 ::hinh{ten="tu-the-ngoi"}
 
+::hinh{ten="ghe-cao-thap"}
+
 Nên dùng **ghế đàn chỉnh được độ cao** (có núm vặn hai bên): ghế cố định rất khó đưa cẳng tay về song song với mặt phím. Người nhỏ người, chân không chạm sàn: kê một bục thấp để bàn chân có chỗ tựa.
 
 ## Lưng, vai và cánh tay
