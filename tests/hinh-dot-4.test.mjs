@@ -23,6 +23,7 @@ test('mỗi hình đặt ở đúng trang', () => {
 test('ghe-cao-thap: ba thẻ theo dòng "Chiều cao" của bảng "Ghế và khoảng cách"', () => {
 	const dong = trang('piano/tu-the').split('\n').find((d) => d.startsWith('| **Chiều cao** |'));
 	assert.ok(dong);
+	assert.deepEqual(the(hinh('ghe-cao-thap')).map(([t]) => t), ['Ghế quá thấp', 'Vừa', 'Ghế quá cao']);
 	assert.deepEqual(the(hinh('ghe-cao-thap')).map(([, m]) => m), ['Cẳng tay dốc lên.', 'Cẳng tay gần song song với mặt phím.', 'Cẳng tay dốc xuống nhiều.']);
 	for (const cum of ['Cẳng tay gần song song với mặt phím', 'cẳng tay dốc lên là ghế quá thấp', 'dốc xuống nhiều là ghế quá cao']) assert.ok(dong.includes(cum), cum);
 });

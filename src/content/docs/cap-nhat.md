@@ -21,6 +21,13 @@ Site đã được làm lại ở địa chỉ này, dưới tên Opus: mọi tr
 - **Mỗi chặng một trang:** 7 chặng của [lộ trình piano](/opus/piano/lo-trinh/) có trang riêng, liệt kê các bài học tác phẩm của chặng.
 - **Danh mục tác phẩm:** [bài học tác phẩm](/opus/piano/tac-pham/) và [hướng dẫn nghe](/opus/nghe-nhac/) lọc được theo chặng, thời kỳ và tác giả.
 - **Tiến độ giữ nguyên:** tiến độ đã lưu ở Opus Zero vẫn hiện ở Opus, trên cùng trình duyệt.
+- **Hình minh họa:** nhiều điều trước chỉ viết bằng chữ nay có hình vẽ ngay trong trang, có bản sáng và tối; chữ trong hình là chữ thật, đọc được bằng trình đọc màn hình:
+    - bàn phím ghi số ngón hai tay, nhãn nốt và ngoặc cung, nửa cung: [Quãng](/opus/nhac-ly/09-quang/), [Năm ngón](/opus/piano/nam-ngon/), ngón bấm 12 gam trưởng ở trang [Gam](/opus/piano/gam/);
+    - khuông kép nối xuống bàn phím: [Khuông nhạc và khóa](/opus/nhac-ly/02-khuong-nhac-khoa/);
+    - lưới phách và dải thời gian cho nhịp, trường độ, hai chọi ba, legato: [Nhịp](/opus/nhac-ly/04-nhip/), [Hai tay](/opus/piano/hai-tay/);
+    - sơ đồ hình thức ([Minuet và Trio](/opus/hinh-thuc/minuet-trio/), [Overture](/opus/hinh-thuc/overture/)…) và sơ đồ các đoạn cho 13 hướng dẫn nghe;
+    - [bản đồ năm đầu](/opus/bat-dau/lo-trinh-choi/) trên một hình;
+    - bộ máy đàn cánh và bộ giảm âm ([Lịch sử cây đàn](/opus/piano/lich-su-dan/), [Bàn đạp](/opus/piano/ban-dap/)), ghế cao, vừa, thấp ([Tư thế](/opus/piano/tu-the/)).
 
 ### 10/2026: Phiên bản 15 (nhanh hơn, nguồn rõ hơn)
 
