@@ -20,6 +20,15 @@ lan:
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L2, 06/11/2026, ba phần; bổ sung sau review)
       review: Claude Opus 5.5 (review D6-L2-gom, 05/11/2026)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L2, 8 đúng, 0 sai (bao-cao/d6-l2-gom/kiem-mau-ket-qua.yml)"
+  - so: 3
+    ngay: 2026-11-10
+    nhanh: mo/hoan-thien
+    ma_bam: sha256:3c4db620bcd8d7320fe00abfb63ecb0f0366c9ce4c701387ef07d8e8d89b50cb
+    nguoi:
+      luot_1: 'Claude Opus 5.5 (mo/hoan-thien, 09/11/2026: dòng Độ khó ghi đề cương thay "(ước lượng)")'
+      luot_2: "không cần thêm: mọi dữ kiện đã qua lượt 2 ở n4 của hồ sơ này"
+      review: Claude Opus 5.5 (mo/hoan-thien, 09/11/2026)
+      kiem_mau: chủ repo giao Claude làm hết mục 3 của kế hoạch (09/11/2026); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
 ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/beethoven-sonatina-sol.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Lần 2 (D6-L2, lượt 1 phần A): nhận định n6–n23 cho các trường chưa khóa (giong, thoi_ky, ky_nang_chinh, chip, thong_tin, hinh, ban_thu; bản ghi không có trường nhip); bản nhạc đối chiếu MEI của TROMPA (Breitkopf Serie 16 No. 160); lịch sử in theo Henle, lvbeethoven.it, Nottebohm 1868, mô tả Wiener Urtext. Không có chỗ sai; dòng Độ khó ghi "(ước lượng)" dù ABRSM 2025–2026 có xếp chương I ở Grade 2 (ghi ở báo cáo).'
 nguon:
   - id: imslp-anh5
@@ -261,15 +270,19 @@ nhan_dinh:
     luot_2_ghi_chu: "Chương I đúng: trang mẫu Henle đếm được 34 ô, dấu nhắc lại bao ô 9–24, A ô 1–8, coda ô 25–34; PTNA: cả hai chương hình thức ABA và coda. Chương II (nhịp lấy đà, 40 ô, cách đặt dấu nhắc lại) chưa đếm được trên bản nhạc."
     review: dung
   - id: n18
-    cau: 'Thông tin, độ khó: khoảng ABRSM Grade 2–3 (ước lượng); Henle xếp mức 3 (dễ) trên thang 1–9.'
+    cau: 'Thông tin, độ khó: khoảng ABRSM Grade 2–3: ABRSM xếp chương 1 ở Grade 2 (đề cương 2025–2026), RCM Level 3; Henle xếp mức 3 (dễ) trên thang 1–9.'
     loai: cap-do
     truong: [ thong_tin ]
-    nguon: [ abrsm-2526, henle-hn365, rcm-2022 ]
-    ket_qua: dung
-    ghi_chu: 'Henle: "3 easy"; grade như lần 1. "(ước lượng)" thừa một phần: ABRSM 2025–2026 Grade 2 có chương I (hồ sơ lần 1 n4); ghi ở báo cáo cho người giao.'
+    nguon:
+      - abrsm-2526
+      - rcm-2022
+      - henle-hn365
+    ket_qua: da-sua
+    ghi_chu: 'Henle: "3 easy"; grade như lần 1. "(ước lượng)" thừa một phần: ABRSM 2025–2026 Grade 2 có chương I (hồ sơ lần 1 n4); ghi ở báo cáo cho người giao. mo/hoan-thien (09/11/2026, ke-hoach-mo-rong 4.3.2): bỏ "(ước lượng)": bài có trong đề cương ABRSM; dữ kiện lấy nguyên từ n4 (đã qua lượt 1, lượt 2, review: ABRSM 2025–2026 Grade 2 danh sách A mục 2, Moderato chương 1; RCM 2022 Level 3; Henle mức 3).'
     luot_2: dung
     luot_2_nguon: [ "https://www.henle.de/2-Piano-Sonatinas-G-major-and-F-major-Anh.-5/HN-365", "https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20&%202026%20Prac%20syllabus%2020240524_access.pdf" ]
     luot_2_ghi_chu: "Henle: Piano Sonatina G major Anh. 5,1 mức 3 'easy'; ABRSM 2025–2026 xếp chương I ở Grade 2. Ước lượng Grade 2–3 hợp lý."
+    review: dung
   - id: n19
     cau: 'Thông tin, kỹ năng chính: dấu luyến hai nốt, nốt láy ngắn, giai điệu trên hình đệm Alberti, nhịp 6/8 với hình đệm nốt trầm – hai hợp âm, tương phản sắc thái, giữ tay trái nhẹ.'
     loai: cau-truc
@@ -324,3 +337,7 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/File:PMLP96125-Beethoven_-_Sonatina_in_G_major_Anh.5_I_Moderato.mp3", "https://imslp.org/wiki/File:PMLP96125-Beethoven_-_Sonatina_in_G_major_Anh.5_II_Romance_performed_by_Ram%C3%B3n_Le%C3%B3n_Egea.mp3" ]
     luot_2_ghi_chu: "Đo tại máy: afinfo public/audio/beethoven-sonatina-sol-1.mp3 'estimated duration: 152.496000 sec', beethoven-sonatina-sol-2.mp3 '150.384000 sec'."
+mo_khoa:
+  - ngay: 2026-11-09
+    nhanh: mo/hoan-thien
+    ly_do: 'mo/hoan-thien (ke-hoach-mo-rong 4.3.2): bỏ "(ước lượng)" ở dòng Độ khó, ghi bài có trong đề cương ABRSM (nguồn đã có ở n4)'

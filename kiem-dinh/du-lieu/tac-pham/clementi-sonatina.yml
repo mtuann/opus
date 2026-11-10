@@ -20,6 +20,15 @@ lan:
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L2, 06/11/2026, ba phần; bổ sung sau review)
       review: Claude Opus 5.5 (review D6-L2-gom, 05/11/2026)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L2, 8 đúng, 0 sai (bao-cao/d6-l2-gom/kiem-mau-ket-qua.yml)"
+  - so: 3
+    ngay: 2026-11-10
+    nhanh: mo/hoan-thien
+    ma_bam: sha256:3d5ce3a8f6e826639f75b466013678da6af5467eaf049ce0959104e478c62c56
+    nguoi:
+      luot_1: 'Claude Opus 5.5 (mo/hoan-thien, 09/11/2026: dòng Độ khó ghi đề cương thay "(ước lượng)")'
+      luot_2: "không cần thêm: mọi dữ kiện đã qua lượt 2 ở n4 của hồ sơ này"
+      review: Claude Opus 5.5 (mo/hoan-thien, 09/11/2026)
+      kiem_mau: chủ repo giao Claude làm hết mục 3 của kế hoạch (09/11/2026); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
 ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/clementi-sonatina.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Lần 2 (D6-L2, lượt 1 phần A): nhận định n7–n23 cho các trường chưa khóa (giong, thoi_ky, ky_nang_chinh, chip, thong_tin, hinh, ban_thu; bản ghi không có trường nhip); bản nhạc đối chiếu Mutopia sonatina-1 (Sonatina Album, Schirmer 1893) và bản quét Schirmer; tiểu sử theo Treccani, Henle HN 848. Chưa chắc: n11, n17 (tên tốc độ chương I là Allegro), n21 (Wiener Urtext có in Op. 36 không).'
 nguon:
   - id: imslp-op36
@@ -280,15 +289,19 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/ClementiM/O36/sonatina-1/sonatina-1.ly" ]
     luot_2_ghi_chu: "Đếm trên .ly: I 38 ô (trình bày 1–15, phát triển 16–23 có Mi giáng, tái hiện 24–38); II 26 ô (A 1–8, B 9–18, A' 19–26); III 70 ô: A 1–16, B 17–34, A 35–50, phần kết 51–70 (dùng chất liệu B rồi hợp âm kết), gọi là coda được."
   - id: n19
-    cau: 'Thông tin, độ khó: khoảng ABRSM Grade 3 (ước lượng).'
+    cau: 'Thông tin, độ khó: khoảng ABRSM Grade 3: ABRSM xếp chương 3 (Vivace) ở Grade 3 (đề cương 2023–2024), RCM xếp chương 1 ở Level 3; Henle mức 3.'
     loai: cap-do
     truong: [ thong_tin ]
-    nguon: [ abrsm-2324, rcm-2022, henle-hn848 ]
-    ket_qua: dung
-    ghi_chu: 'Như grade đã khóa ở lần 1. "(ước lượng)" thừa một phần: ABRSM 2023–2024 Grade 3 có chương III (Vivace); ghi ở báo cáo.'
+    nguon:
+      - abrsm-2324
+      - rcm-2022
+      - henle-hn848
+    ket_qua: da-sua
+    ghi_chu: 'Như grade đã khóa ở lần 1. "(ước lượng)" thừa một phần: ABRSM 2023–2024 Grade 3 có chương III (Vivace); ghi ở báo cáo. mo/hoan-thien (09/11/2026, ke-hoach-mo-rong 4.3.2): bỏ "(ước lượng)": bài có trong đề cương ABRSM; dữ kiện lấy nguyên từ n4 (đã qua lượt 1, lượt 2, review: ABRSM 2023–2024 Grade 3 danh sách A mục 2, Vivace chương 3; RCM 2022 Level 3 chương 1; Henle mức 3).'
     luot_2: dung
     luot_2_nguon: [ "https://www.henle.de/Six-Piano-Sonatinas-op.-36/HN-848", "https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf" ]
     luot_2_ghi_chu: Như n12.
+    review: dung
   - id: n20
     cau: 'Thông tin, kỹ năng chính: gam và hợp âm rải trong bài, phát âm Cổ điển, hình đệm rải (Alberti, chùm ba), giữ nhịp ổn định, rõ ràng với rất ít bàn đạp.'
     loai: cau-truc
@@ -330,3 +343,7 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://commons.wikimedia.org/wiki/File:Clementi,_Sonatina_N.1_-_1_Mov._Allegro.ogg", "https://commons.wikimedia.org/wiki/File:Clementi,_Sonatina_N.1_-_2_Mov._Andante.ogg", "https://commons.wikimedia.org/wiki/File:Clementi,_Sonatina_N.1_-_3_Mov._Vivace.ogg" ]
     luot_2_ghi_chu: "Commons: Author Alessio Cesaroni, Source Musopen, giấy phép CC0 (Cc-zero); length 44,867 / 80,600 / 34,252 giây."
+mo_khoa:
+  - ngay: 2026-11-09
+    nhanh: mo/hoan-thien
+    ly_do: 'mo/hoan-thien (ke-hoach-mo-rong 4.3.2): bỏ "(ước lượng)" ở dòng Độ khó, ghi bài có trong đề cương ABRSM (nguồn đã có ở n4)'

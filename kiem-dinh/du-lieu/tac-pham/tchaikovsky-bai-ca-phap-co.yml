@@ -29,6 +29,15 @@ lan:
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L1, 06/11/2026, bốn phần; bổ sung sau review)
       review: Claude Opus 5.5 (review D6-L1-gom, 05/11/2026)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L1, 8 đúng, 0 sai (bao-cao/d6-l1-gom/kiem-mau-ket-qua.yml)"
+  - so: 3
+    ngay: 2026-11-10
+    nhanh: mo/hoan-thien
+    ma_bam: sha256:438dee428589d2903f2663430bd3e48bd1bff5ea2987bb42278df15ebd8d9c9b
+    nguoi:
+      luot_1: 'Claude Opus 5.5 (mo/hoan-thien, 09/11/2026: dòng Độ khó ghi đề cương thay "(ước lượng)")'
+      luot_2: "không cần thêm: mọi dữ kiện đã qua lượt 2 ở n4 của hồ sơ này"
+      review: Claude Opus 5.5 (mo/hoan-thien, 09/11/2026)
+      kiem_mau: chủ repo giao Claude làm hết mục 3 của kế hoạch (09/11/2026); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
 ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/tchaikovsky-bai-ca-phap-co.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Lần 2 (D6-L1, lượt 1 phần B): nhận định n6–n31 cho các trường chưa khóa (giong, nhip, thoi_ky, ky_nang_chinh, chip, thong_tin, hinh, ban_thu). Không có chỗ sai.'
 nguon:
   - id: imslp-op39
@@ -346,18 +355,19 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/TchaikovskyPI/O39/16OldFrenchSong/16OldFrenchSong.ly" ]
     luot_2_ghi_chu: "Đếm ô: nốt lấy đà Rê, A 8, A 8, B 8, A 8 = 32."
   - id: n23
-    cau: 'Thông tin, Độ khó: khoảng ABRSM Grade 2–3 (ước lượng).'
+    cau: 'Thông tin, độ khó: khoảng ABRSM Grade 2–3: ABRSM xếp bài ở Grade 3 (đề cương 2019–2020), RCM Level 4.'
     loai: cap-do
     truong:
       - thong_tin
     nguon:
       - abrsm-1920
       - rcm-2022
-    ket_qua: dung
-    ghi_chu: Như grade đã khóa (lần 1 n4).
+    ket_qua: da-sua
+    ghi_chu: 'Như grade đã khóa (lần 1 n4). mo/hoan-thien (09/11/2026, ke-hoach-mo-rong 4.3.2): bỏ "(ước lượng)": bài có trong đề cương ABRSM; dữ kiện lấy nguyên từ n4 (đã qua lượt 1, lượt 2, review: ABRSM 2019–2020 Grade 3 danh sách B mục 6; RCM 2022 Level 4).'
     luot_2: dung
     luot_2_nguon: [ "https://web.archive.org/web/20191116021626id_/https://us.abrsm.org/media/62100/grade_3_piano_syllabus_2019___2020.pdf" ]
     luot_2_ghi_chu: Grade 3 (2019–2020).
+    review: dung
   - id: n24
     cau: 'Thông tin, Kỹ năng chính: giai điệu hát (cantabile); tay trái hai bè (nốt trầm ngân và giọng giữa); hợp âm rải staccato dưới giai điệu legato; ba lớp sắc thái cùng lúc; nhịp chấm dôi kép.'
     loai: cau-truc
@@ -449,3 +459,7 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "public/audio/tchaikovsky-bai-ca-phap-co.mp3" ]
     luot_2_ghi_chu: afinfo 70,14 s (IMSLP 1:10).
+mo_khoa:
+  - ngay: 2026-11-09
+    nhanh: mo/hoan-thien
+    ly_do: 'mo/hoan-thien (ke-hoach-mo-rong 4.3.2): bỏ "(ước lượng)" ở dòng Độ khó, ghi bài có trong đề cương ABRSM (nguồn đã có ở n4)'
