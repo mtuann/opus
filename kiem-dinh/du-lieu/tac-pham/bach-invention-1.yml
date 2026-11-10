@@ -20,6 +20,15 @@ lan:
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L4, 05/11/2026, bốn phần; bổ sung sau review)
       review: "Claude Opus 5.5 (review D6-L4-gom, 05/11/2026)"
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L4, 8 đúng (1 có điều kiện, đã sửa: beethoven-anh-trang n103, Henle ghi Murray Perahia cùng biên tập), 0 sai (bao-cao/d6-l4-gom/kiem-mau-ket-qua.yml)"
+  - so: 3
+    ngay: 2026-11-10
+    nhanh: mo/hoan-thien
+    ma_bam: sha256:0aa19f8cc9f88d219ef05194da77dca8606b550c89bfe3f183f18c428033cd7d
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/hoan-thien, 09/11/2026: ghi chú giấy phép bản thu, quyết định 3.8)"
+      luot_2: Claude Opus 5.5 đối chiếu lại nguồn lúc sửa (Commons API, IMSLP wikitext, 09/11/2026); chỉ thêm ghi chú về giấy phép đã có trong hồ sơ
+      review: Claude Opus 5.5 (mo/hoan-thien, 09/11/2026)
+      kiem_mau: chủ repo giao Claude chốt các quyết định của kế hoạch (09/11/2026); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
 ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/bach-invention-1.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Lần 2 (D6-L4, lượt 1 phần A): nhận định n7–n28 cho các trường chưa khóa (bản ghi không có luyen_nghe); bản nhạc Mutopia bach-invention-01 (Bach-Gesellschaft), lịch sử theo lời tựa Henle HN 591, trang bìa 1723, đề cương ABRSM 2015–2016. Dữ liệu sai: không có; đề xuất có điều kiện ở plans/lam-lai/bao-cao/d6-l4/sua-A.yml (n20, n28). Còn mở: n20, n25, n28.'
 nguon:
   - id: imslp-inventions
@@ -426,17 +435,21 @@ nhan_dinh:
     luot_2_nguon: [ "https://commons.wikimedia.org/wiki/File:01_-_Invention_%C3%A0_2_voix_BWV_772_en_do_majeur.ogg" ]
     luot_2_ghi_chu: 'Commons: Artist "Johann Sebastian Bach - Marcelle Meyer", ngày 1948; độ dài 59,133 giây.'
   - id: n28
-    cau: 'Bản thu gợi ý: giấy phép phạm vi công cộng.'
+    cau: 'Bản thu gợi ý: giấy phép phạm vi công cộng; ghi chú: Commons ghi phạm vi công cộng, ở Mỹ còn được bảo hộ nên chỉ dẫn link.'
     loai: ten
     truong:
       - ban_thu
     nguon:
       - commons-meyer
       - copyright-gov
-    ket_qua: "dung"
-    ghi_chu: "chưa chắc: Commons ghi {{PD-old}} (\"Public domain\"); nhưng ở Mỹ bản thu in lần đầu năm 1947–1956 còn bảo hộ tới hết 95 + 15 năm (copyright.gov), như trang bài học nói. \"Phạm vi công cộng\" không kèm \"ở đâu\" thì lệch với trang. Đề xuất có điều kiện ở sua-A.yml. Review D6-L4-gom: giữ nhãn của Commons (\"Public domain\"; lượt 2 xác nhận). check_audio.py đối chiếu lic với Commons (--network), nên không ghi thêm \"ở Mỹ còn bảo hộ\" vào lic. Trang bài học (dòng 37) đã giải thích vì sao chỉ dẫn link. Ghi ở báo cáo (Chủ repo cần biết)."
+    ket_qua: "da-sua"
+    ghi_chu: "chưa chắc: Commons ghi {{PD-old}} (\"Public domain\"); nhưng ở Mỹ bản thu in lần đầu năm 1947–1956 còn bảo hộ tới hết 95 + 15 năm (copyright.gov), như trang bài học nói. \"Phạm vi công cộng\" không kèm \"ở đâu\" thì lệch với trang. Đề xuất có điều kiện ở sua-A.yml. Review D6-L4-gom: giữ nhãn của Commons (\"Public domain\"; lượt 2 xác nhận). check_audio.py đối chiếu lic với Commons (--network), nên không ghi thêm \"ở Mỹ còn bảo hộ\" vào lic. Trang bài học (dòng 37) đã giải thích vì sao chỉ dẫn link. Ghi ở báo cáo (Chủ repo cần biết). mo/hoan-thien (09/11/2026, quyết định 3.8 của ke-hoach-mo-rong): khối nghe in \"phạm vi công cộng\" trong khi trang Cập nhật nói bản thu ở Mỹ còn được bảo hộ: thêm vế ấy vào note. Commons (API 09/11/2026): LicenseShortName Public domain, thẻ PD-old; copyright.gov: bản thu in lần đầu 1947–1956 được bảo hộ 95 năm cộng 15 năm (tới hết 2058 với bản 1948)."
     luot_2: dung
     luot_2_nguon: [ "https://commons.wikimedia.org/wiki/File:01_-_Invention_%C3%A0_2_voix_BWV_772_en_do_majeur.ogg" ]
     luot_2_ghi_chu: 'Commons: License "Public domain".'
 
     review: "dung"
+mo_khoa:
+  - ngay: 2026-11-09
+    nhanh: mo/hoan-thien
+    ly_do: "mo/hoan-thien (quyết định 3.8 của ke-hoach-mo-rong, Claude chốt theo lời giao 09/11/2026): ghi chú giấy phép bản thu: bản thu Marcelle Meyer ở Mỹ còn được bảo hộ"

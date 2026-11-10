@@ -255,3 +255,15 @@ test('dist/: danh mục ở hai trang mục lục liệt kê đúng các trang t
 	}
 	assert.ok(tatCaTrang().includes('nghe-nhac/index') && tatCaTrang().includes('piano/tac-pham/index'));
 });
+
+test('thời kỳ: mọi thoi_ky của tac-pham.yml gom được về một trong bảy thời kỳ của site; bộ lọc chỉ có bảy giá trị ấy', async () => {
+	const { THOI_KY, nhomThoiKy } = await import('../src/plugins/thanh-phan.mjs');
+	const { parse } = await import('yaml');
+	const fs2 = await import('node:fs');
+	const ds = parse(fs2.readFileSync(new URL('../src/data/tac-pham.yml', import.meta.url), 'utf8'));
+	const la = ds.filter((r) => r.thoi_ky !== undefined && !nhomThoiKy(r.thoi_ky)).map((r) => `${r.slug}: ${r.thoi_ky}`);
+	assert.deepEqual(la, [], 'thêm cách ghi mới vào NHOM_THOI_KY (src/plugins/thanh-phan.mjs)');
+	assert.equal(nhomThoiKy('Beethoven cuối đời'), 'Lãng mạn');
+	assert.equal(nhomThoiKy('Ấn tượng'), 'Thế kỷ 20');
+	assert.ok(THOI_KY.every((t) => nhomThoiKy(t) === t));
+});

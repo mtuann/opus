@@ -1157,6 +1157,25 @@ export function mucDanhMuc({ tacPham, nguoi, daKhoa = null, trang = trangTrongBa
 	);
 }
 
+/**
+ * Bảy thời kỳ của site (lich-su/index, mốc năm là quy ước của site), theo thứ tự thời gian; bộ lọc "Thời kỳ" của danh mục
+ * chỉ dùng bảy giá trị này. thoi_ky của bản ghi có thể ghi rõ hơn (chữ ấy hiện ở mục và trên trang); NHOM_THOI_KY gom
+ * mỗi cách ghi về một thời kỳ, theo năm sáng tác và mốc năm của site (chủ repo giao Claude chốt ngày 09/11/2026): Giao hưởng
+ * số 5 (1808) là Cổ điển; Op. 132 (1825) là Lãng mạn như lich-su/index ghi về những năm cuối của Beethoven; Clair de lune,
+ * Gymnopédie (cuối thập niên 1880, 1890) là Lãng mạn; Ấn tượng thuộc trang Thế kỷ 20. Cách ghi mới phải thêm vào đây
+ * (tests/danh-muc.test.mjs kiểm mọi thoi_ky của tac-pham.yml).
+ */
+export const THOI_KY = ['Trung cổ', 'Phục hưng', 'Baroque', 'Cổ điển', 'Lãng mạn', 'Thế kỷ 20', 'Đương đại'];
+export const NHOM_THOI_KY = {
+	'Cổ điển → Lãng mạn': 'Cổ điển',
+	'Beethoven cuối đời': 'Lãng mạn',
+	'Cuối Lãng mạn': 'Lãng mạn',
+	'Cuối thế kỷ 19': 'Lãng mạn',
+	'Ấn tượng': 'Thế kỷ 20',
+};
+/** Thời kỳ (một trong THOI_KY) của một cách ghi thoi_ky; undefined khi không biết. */
+export const nhomThoiKy = (t) => (THOI_KY.includes(t) ? t : NHOM_THOI_KY[t]);
+
 /** Một ô chọn của bộ lọc: nhãn, tên (data-loc), các lựa chọn [giá trị, chữ]. */
 function oChon(ten, nhan, luaChon) {
 	const id = `oz-dm-${ten}`;
@@ -1186,18 +1205,19 @@ export function danhMucTacPham({ loai, ...ngu }, { base = DUONG_GOC, trang = tra
 	const docNguoi = (p, t) => (p && (!daKhoa || daKhoa('nha-soan-nhac', p.id, t)) ? p[t] : undefined);
 	// lựa chọn lọc lấy từ chính các mục, theo thứ tự xuất hiện đầu tiên (chặng: tăng dần; tác giả: theo năm sinh)
 	const tacGia = new Map();
-	const thoiKy = new Map(); // thời kỳ -> năm sinh nhỏ nhất của tác giả có mục mang thời kỳ ấy, để xếp gần theo thời gian
+	// thời kỳ của bộ lọc: bảy thời kỳ của site (nhomThoiKy), theo thứ tự thời gian
+	const coThoiKy = new Set(ds.map((m) => nhomThoiKy(m.thoiKy)).filter(Boolean));
+	const thoiKy = THOI_KY.filter((t) => coThoiKy.has(t));
 	for (const m of ds) {
 		const p = !m.rec.khuyet_danh ? nguoi.get(m.rec.tac_gia) : undefined;
 		const s = docNguoi(p, 'sinh') ?? 9999;
 		if (p && !tacGia.has(p.id)) tacGia.set(p.id, { ten: p.ten, sinh: s });
-		if (m.thoiKy) thoiKy.set(m.thoiKy, Math.min(thoiKy.get(m.thoiKy) ?? 9999, s));
 	}
 	const chang = [...new Set(ds.map((m) => m.chang).filter((c) => c !== undefined))].sort((a, b) => a - b);
 	const loc = [
 		!loai && new Set(ds.map((m) => m.loai)).size > 1 ? oChon('loai', 'Loại', Object.entries(LOAI_TRANG).filter(([k]) => ds.some((m) => m.loai === k))) : '',
 		chang.length ? oChon('chang', 'Chặng', chang.map((c) => [String(c), `Chặng ${c}`])) : '',
-		thoiKy.size ? oChon('thoi-ky', 'Thời kỳ', [...thoiKy].sort((a, b) => a[1] - b[1] || a[0].localeCompare(b[0], 'vi')).map(([t]) => [t, t])) : '',
+		thoiKy.length ? oChon('thoi-ky', 'Thời kỳ', thoiKy.map((t) => [t, t])) : '',
 		tacGia.size ? oChon('tac-gia', 'Tác giả', [...tacGia].sort((a, b) => a[1].sinh - b[1].sinh || a[1].ten.localeCompare(b[1].ten, 'vi')).map(([id, p]) => [id, p.ten])) : '',
 	].join('');
 	const co = new Set(trang);
@@ -1218,7 +1238,7 @@ export function danhMucTacPham({ loai, ...ngu }, { base = DUONG_GOC, trang = tra
 			const tt = [
 				['loai', m.loai],
 				['chang', m.chang],
-				['thoi-ky', m.thoiKy],
+				['thoi-ky', nhomThoiKy(m.thoiKy)],
 				['tac-gia', m.rec.khuyet_danh ? undefined : m.rec.tac_gia],
 			]
 				.filter(([, v]) => v !== undefined && v !== null)
