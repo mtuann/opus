@@ -173,7 +173,7 @@ export function mount(root) {
     (def ? '<p class="oz-stats oz-rec">Bản thu gợi ý: ' + credit(def) + ". " +
       (def.linkOnly ? openLinks(def.parts) + " Trang này chỉ dẫn link, không phát bản thu này; mốc tham khảo tính theo file ở link.</p>" :
         '<button class="oz-btn" data-act="default">Nghe bản này</button></p>') : "") +
-    khac.map(function (r, i) { return '<p class="oz-stats oz-rec oz-rec-khac">Bản thu khác: ' + credit(r) + '. <button class="oz-btn" data-act="khac" data-i="' + i + '">Nghe bản này</button></p>'; }).join("") +
+    khac.map(function (r, i) { return '<p class="oz-stats oz-rec oz-rec-khac">Bản thu khác: ' + credit(r) + '. <button class="oz-btn" data-act="khac" data-i="' + i + '" aria-label="Nghe bản thu của ' + esc(r.by || "nghệ sĩ khác") + (r.note ? ", " + esc(r.note) : "") + '">Nghe bản này</button></p>'; }).join("") +
     (hasRef ? '<div class="oz-ref-row"><label class="oz-ref-toggle"><input type="checkbox" class="oz-ref-on"> Hiện mốc tham khảo trong bảng</label>' +
       '<p class="oz-stats oz-ref-sum" aria-live="polite"></p></div>' : "") +
     '<div class="oz-row"><input type="url" class="oz-input" placeholder="Link YouTube hoặc link file .mp3, .ogg" aria-label="Link bản thu: YouTube hoặc file âm thanh">' +

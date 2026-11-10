@@ -421,6 +421,18 @@ if __name__ == "__main__":
 
 
 class LicenseTemplates(unittest.TestCase):
+    def test_license_attribution(self):
+        # mẫu {{Attribution}} của Commons (mo/ban-thu): nhận, nhãn không có ngoặc (mẫu NGUON.txt); thiếu phiên bản CC vẫn từ chối
+        import licenses
+        lab, url = licenses.parse("Attribution")
+        self.assertEqual(lab, licenses.ATTRIBUTION)
+        self.assertNotIn("(", lab)
+        self.assertEqual(url, licenses.ATTRIBUTION_URL)
+        self.assertEqual(licenses.parse(lab), (lab, url))
+        for bad in ("CC BY", "by-nc", "by-sa"):
+            with self.assertRaises(ValueError):
+                licenses.parse(bad)
+
     def test_license_templates(self):
         import commons
         text = "{{Information|...}}\n== {{int:license-header}} ==\n{{PD-old}}\n{{self|cc-by-sa-3.0}}\n{{Cc-by-4.0}}\n{{cc-by-nc-2.0}}"

@@ -15,7 +15,7 @@ Chạy trực tiếp để thử một tên giấy phép:  python3 tools/audio/l
 import re
 import sys
 
-ATTRIBUTION = "ghi công tác giả (Commons {{Attribution}})"
+ATTRIBUTION = "ghi công tác giả, mẫu Attribution của Commons"
 ATTRIBUTION_URL = "https://commons.wikimedia.org/wiki/Template:Attribution"
 PD = "phạm vi công cộng"            # tên ghi trên trang cho bản thu thuộc phạm vi công cộng (kể cả PDM)
 TYPES = ("by", "by-sa")             # CC BY, CC BY-SA
