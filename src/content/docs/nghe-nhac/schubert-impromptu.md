@@ -37,7 +37,7 @@ Năm 1827 là năm trọn vẹn cuối cùng trong đời Schubert; ông mất t
 
 ## Nghe kèm bản thu
 
-::khoi-nghe{moc="1 33 66 99 114 209 219 301"}
+::khoi-nghe{moc="1 33 94 99 114 209 219 301"}
 
 ## Theo dõi khi nghe
 

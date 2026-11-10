@@ -91,7 +91,7 @@ PIECES = {
     "schubert-impromptu-sol-giang": dict(page="piano/tac-pham/schubert-impromptu-sol-giang.md", jobs=[
         dict(SCHUBERT, rows={0: "first", 1: 4, 2: 8, 3: 16, 4: 24, 5: 28, 6: 40, 7: 48, 8: 54, 9: 74})]),
     "schubert-impromptu": dict(page="nghe-nhac/schubert-impromptu.md", jobs=[
-        dict(SCHUBERT, rows={0: "first", 1: 8, 2: 16, 3: 24, 4: 28, 5: 52, 6: 54, 7: 74})]),
+        dict(SCHUBERT, rows={0: "first", 1: 8, 2: 23, 3: 24, 4: 28, 5: 52, 6: 54, 7: 74})]),  # 2: ô 24 (chỉ số 0), cadence khép phần đầu
     "chopin-prelude-la-truong": dict(page="piano/tac-pham/chopin-prelude-la-truong.md", jobs=[
         # bài ngắn, mỗi câu mở bằng nốt lấy đà khẽ: lấy thẳng khởi âm của nốt lấy đà (Mi4, Rê5+Fa♯5, Sol♯4, La♯4…)
         dict(src="cpm_chpn-p7.mid", rows={0: "first", 1: 2.667, 2: 4.667, 3: 6.667, 4: 8.667, 5: 10.667, 6: 12.667, 7: 14.667},
