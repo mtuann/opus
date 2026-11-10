@@ -106,3 +106,14 @@ test('workflow ra-lai.yml, kiem-link.yml: chạy hằng tuần, bấm chạy tay
 	const mod = fs.readFileSync(path.join(ROOT, 'src/scripts/nghe-mu.js'), 'utf8');
 	for (const b of BAN_THU) for (const u of [b.trang, ...b.nguon.map((n) => n.src)]) assert.ok(mod.includes(u), u);
 });
+
+test('denHan: trang tầng khác có ra_soat cũng được liệt kê, đánh dấu rà soát hằng năm (09/11/2026)', () => {
+	const ds = [
+		{ id: 'a', tang: 'tham-chieu', ra_lai: '2027-04' },
+		{ id: 'b', tang: 'khung', ra_soat: '2027-03', ly_do_ra_soat: 'Web MIDI' },
+		{ id: 'c', tang: 'loi' },
+	];
+	const r = denHan(ds, '2027-04');
+	assert.deepEqual(r.map((x) => [x.id, x.ra_lai, !!x.soat, x.ly_do]), [['b', '2027-03', true, 'Web MIDI'], ['a', '2027-04', false, undefined]]);
+	assert.match(noiDungIssue(r, '05/04/2027'), /3\/2027 \(quá hạn 1 tháng\), rà soát hằng năm \(`ra_soat`\)/);
+});

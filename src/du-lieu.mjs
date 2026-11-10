@@ -165,11 +165,22 @@ export const schema = {
 				.regex(/^\d{4}-(0[1-9]|1[0-2])$/, 'ra_lai dạng năm-tháng, ví dụ 2027-01')
 				.optional(),
 			ly_do_ra_lai: chu.optional(),
+			// trang tầng khác có câu dễ cũ: hạn rà soát hằng năm, không hiện trên trang; tools/ra-lai.mjs liệt kê như ra_lai
+			// (chủ repo giao Claude chốt ngày 09/11/2026, ke-hoach-mo-rong mục 2)
+			ra_soat: z
+				.string()
+				.regex(/^\d{4}-(0[1-9]|1[0-2])$/, 'ra_soat dạng năm-tháng, ví dụ 2027-11')
+				.optional(),
+			ly_do_ra_soat: chu.optional(),
 		})
 		.strict()
 		.superRefine((r, ctx) => {
 			if ((r.tang === 'tham-chieu') !== (r.ra_lai !== undefined))
 				ctx.addIssue({ code: 'custom', path: ['ra_lai'], message: 'trang tham chiếu có hạn phải có ra_lai; trang khác thì không' });
+			if (r.ra_soat !== undefined && r.tang === 'tham-chieu')
+				ctx.addIssue({ code: 'custom', path: ['ra_soat'], message: 'trang tham chiếu có hạn dùng ra_lai, không dùng ra_soat' });
+			if (r.ly_do_ra_soat && !r.ra_soat)
+				ctx.addIssue({ code: 'custom', path: ['ly_do_ra_soat'], message: 'ly_do_ra_soat cần ra_soat' });
 			if (r.ly_do_ra_lai && !r.ra_lai)
 				ctx.addIssue({ code: 'custom', path: ['ly_do_ra_lai'], message: 'ly_do_ra_lai cần ra_lai' });
 		}),

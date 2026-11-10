@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Trang tham chiếu có hạn đến hạn rà lại (D8-L1): đọc ra_lai của src/data/trang.yml, liệt kê trang có ra_lai từ tháng này
+// Trang tham chiếu có hạn đến hạn rà lại (D8-L1): đọc ra_lai (và ra_soat của trang tầng khác) của src/data/trang.yml, liệt kê trang có ra_lai từ tháng này
 // trở về trước, kèm trạng thái khóa (kiem-dinh/khoa.json) và tháng kiểm của hồ sơ. Workflow hằng tuần
 // .github/workflows/ra-lai.yml dùng bản liệt kê làm nội dung issue "Trang cần rà lại" (nhãn ra-lai); không chặn deploy.
 //
@@ -29,8 +29,9 @@ export const thangNay = (d = new Date()) => `${d.getUTCFullYear()}-${String(d.ge
  */
 export function denHan(dsTrang, thang, trangThai = () => ({ khoa: false, kiem: null })) {
 	return dsTrang
+		.map((r) => (r.ra_lai ? r : r.ra_soat ? { ...r, ra_lai: r.ra_soat, ly_do_ra_lai: r.ly_do_ra_soat, soat: true } : r))
 		.filter((r) => r.ra_lai && soThang(r.ra_lai, thang) >= 0)
-		.map((r) => ({ id: r.id, ra_lai: r.ra_lai, ly_do: r.ly_do_ra_lai, tre: soThang(r.ra_lai, thang), ...trangThai(r.id) }))
+		.map((r) => ({ id: r.id, ra_lai: r.ra_lai, ly_do: r.ly_do_ra_lai, tre: soThang(r.ra_lai, thang), ...(r.soat ? { soat: true } : {}), ...trangThai(r.id) }))
 		.sort((a, b) => b.tre - a.tre || a.id.localeCompare(b.id));
 }
 
@@ -42,7 +43,7 @@ export function noiDungIssue(ds, ngay) {
 	const dong = ds.map((r) => {
 		const han = r.tre === 0 ? 'đến hạn tháng này' : `quá hạn ${r.tre} tháng`;
 		const kiem = r.khoa ? `đã khóa, kiểm tháng ${r.kiem ? thangViet(r.kiem) : '?'}` : 'chưa khóa: đặt lại `ra_lai` khi khóa';
-		return `| [\`${r.id}\`](${diaChi(r.id)}) | ${thangViet(r.ra_lai)} (${han}) | ${kiem} | ${r.ly_do ?? ''} |`;
+		return `| [\`${r.id}\`](${diaChi(r.id)}) | ${thangViet(r.ra_lai)} (${han})${r.soat ? ', rà soát hằng năm (`ra_soat`)' : ''} | ${kiem} | ${r.ly_do ?? ''} |`;
 	});
 	return [
 		`Lần kiểm tra tự động ngày ${ngay}: \`node tools/ra-lai.mjs\` thấy ${ds.length} trang tham chiếu có hạn đến hạn rà lại (\`ra_lai\` trong \`src/data/trang.yml\`).`,
@@ -55,7 +56,7 @@ export function noiDungIssue(ds, ngay) {
 		'',
 		'1. `node tools/khoa.mjs mo <trang> --ly-do "rà lại theo lịch (ra_lai)"`;',
 		'2. kiểm lại các nhận định dễ cũ (giá, ứng dụng, cuộc thi, lịch diễn, chương trình thi, link), sửa trang khi cần, điền lần mới trong `lan` của hồ sơ;',
-		'3. đặt `ra_lai` mới trong `src/data/trang.yml` (sau tháng kiểm, không quá 12 tháng), rồi `node tools/khoa.mjs khoa <trang>`.',
+		'3. đặt `ra_lai` (hay `ra_soat`) mới trong `src/data/trang.yml` (sau tháng kiểm, không quá 12 tháng), rồi `node tools/khoa.mjs khoa <trang>`.',
 		'',
 		'Issue tự đóng khi không còn trang nào đến hạn.',
 		'',
