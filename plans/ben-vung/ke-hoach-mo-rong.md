@@ -15,6 +15,7 @@ Cách làm: bốn agent đọc các báo cáo (`plans/lam-lai/bao-cao/`, `plans/
 
 | Việc | Cách làm | Ai | Cỡ |
 |---|---|---|---|
+| Đã làm 09/11/2026 (không cần chủ repo): menu và sách theo chặng; mô tả trang trọn câu (`src/mo-ta.mjs`); CI gọn (`test.yml` chạy tay, `deploy.yml` một job); đợt hình 1–4 và chuẩn hóa hình (`bao-cao/chuan-hoa-hinh.md`); rà trang tổng quan (`bao-cao/mo-tong-quan.md`) | | agent | |
 | Phần còn lại của đợt 9 | Theo `plans/lam-lai/bao-cao/d9.md` mục Việc còn lại: Lighthouse và kiểm link trên site thật sau khi đăng; theo dõi lỗi hai tuần (tới 21/11/2026); đổi hàng đợt 9 của bảng Tiến độ thành "Xong" | agent, chủ repo | nhỏ |
 | Chạy tay hai workflow hằng tuần lần đầu | Tab Actions: `ra-lai.yml`, `kiem-link.yml` (chưa chạy thật lần nào, `d8-gom`) | chủ repo | nhỏ |
 | Chủ repo đọc lại phần kiểm mẫu Claude làm thay | Đọc `kiem-mau-ket-qua.yml` của d7, d8, d6-l1…l11; các câu "đúng có điều kiện" ghi rõ phần nào chưa kiểm lại | chủ repo | vừa |
@@ -37,25 +38,25 @@ Cách làm: bốn agent đọc các báo cáo (`plans/lam-lai/bao-cao/`, `plans/
 | 2027-10 | `nhan-dien/nghe-mu`, `piano/chon-dan`, `piano/nghe-si` | 10 bản thu Commons; giá và mẫu đàn; tin nghệ sĩ |
 | 2027-02 | `ke-hoach` (trang kế hoạch) | Cập nhật việc đã xong, việc mới. Trang hứa ít: "dự định", không ngày; giữ như vậy |
 
-Nên thêm `ra_lai` (hay một lần rà mỗi năm) cho các trang dễ cũ chưa có hạn: `luyen-tap/ket-noi-midi` (hỗ trợ Web MIDI của trình duyệt), `tai-lieu-tham-khao`, `lich-su/nu-nha-soan-nhac`, và giấy phép bản thu của mọi trang tác phẩm (đọc trang mô tả file, vì `commons.py` có thể báo sai).
+Trang dễ cũ ở tầng khác có `ra_soat` (hạn rà soát hằng năm, không hiện trên trang; `tools/ra-lai.mjs` và workflow liệt kê như `ra_lai`): `luyen-tap/ket-noi-midi`, `tai-lieu-tham-khao`, `lich-su/nu-nha-soan-nhac`, hạn 2027-11. Giấy phép bản thu: job `ban-thu` của `kiem-link.yml` đối chiếu hằng tuần; trang Commons có nhiều mẫu giấy phép thì `check_audio.py` đọc wikitext (`commons.license_templates`).
 
 **Hằng năm**: rà mỗi trang tham chiếu ít nhất một lần; sao lưu repo bằng clone mirror (gồm `kiem-dinh/`) và thư mục `_imslp/` của chủ repo (chỉ có trên máy chủ repo).
 
-## 3. Quyết định chờ chủ repo
+## 3. Quyết định (chốt ngày 09/11/2026)
 
-Xếp theo mức ảnh hưởng. Nguồn ghi tắt: `d6-l4` là `plans/lam-lai/bao-cao/d6-l4.md`.
+Chủ repo chốt 3.1; giao Claude chốt các mục còn lại ("quyết định sao cho phù hợp"). Nguồn ghi tắt: `d6-l4` là `plans/lam-lai/bao-cao/d6-l4.md`.
 
-1. **Chính sách `grade` lệch nguồn** (sửa phải mở khóa `grade` của bản ghi): giữ "≈ Grade" theo cách ước lượng của site, hay theo nguồn. Danh sách ở mục 5.1. Nguồn: `d6-l2-gom` … `d6-l6-gom`. Vừa.
-2. **Chặng lệch ABRSM 2027–2028**: *Toccatina* (G4, site chặng 3), *Wilder Reiter* (G3, chặng 2), *The Little Shepherd* (G7, chặng 5), Nocturne B. 49 (G7, chặng 5), Nocturne Op. 72 số 1 (G8, chặng 5), Valse Op. 69 số 2 (ABRSM G8), Brahms Op. 118 số 2 (ARSM). Quyết ở lần rà tháng 1/2027. Nguồn: `d8-gom`, `d8-l1`. Vừa.
-3. **Thống nhất `thoi_ky`** (sửa phải mở khóa bản ghi): Beethoven ghi ba cách ("Cổ điển → Lãng mạn", "Cổ điển", "cuối đời"); Debussy *Clair de lune* "Ấn tượng" hay "Cuối thế kỷ 19" như trang mục lục; Satie. Nên chốt một bộ giá trị cố định trong schema. Nguồn: `d6-l10-gom`, `d6-l5`, `d6-l3`. Nhỏ.
-4. **`nghe-nhac/index` liệt kê cả 34 bài học** (ô lọc Loại): giữ, hay chỉ hướng dẫn nghe (`::danh-muc-tac-pham{loai="nghe"}`). Nguồn: `d6-l11-gom`. Nhỏ.
-5. **Thứ tự sách in** (`THU_TU_TAC_PHAM` theo chặng cũ) hay theo chặng trong dữ liệu. Nguồn: `d6-l11`. Nhỏ.
-6. **Trang Cập nhật**: giữ nhật ký v1–15 của Opus Zero hay rút thành một đoạn và link sang site cũ; `them_ngay` cho 73 bản ghi cũ (đề xuất: không đặt). Nguồn: `d7-l3`, `d6-0`. Nhỏ.
-7. **Lượt 2 bổ sung để thêm ý có nguồn mới**: Grieg "mặt trời ló dạng" (thư gửi Hennum 14/12/1875, GGA tập 18); Handel, vế "lời kể sớm nhất là thư năm 1780". Nguồn: `d6-l11-gom`, `d6-l9-gom`. Vừa.
-8. **Giấy phép bản thu cần ghi chú**: Rachmaninoff (Commons ghi phạm vi công cộng, IMSLP ghi CC BY-SA 3.0); Marcelle Meyer (khối nghe in "phạm vi công cộng" trong khi trang nói còn bảo hộ ở Mỹ): dùng `note` của `ban_thu` hay đổi cách `nghe.js` hiện nhãn. Nguồn: `d6-l8-gom`, `d6-l4-gom`. Nhỏ.
-9. **Có nhận cho tác phẩm mới**: bản thu chỉ dẫn link (không phát được), trích đoạn chép tay từ bản quét, cấp độ chỉ ước lượng (pianosyllabus, Henle) không. Quyết trước đợt thêm 2 (mục 6.1). Vừa.
-10. **Lựa chọn trình bày nhỏ**: chip "♩ = 100 (Schumann)" của *Träumerei*; chữ "Đỏ" cho màu #e9b3a6 ở ba hình; năm 1825 của Op. 132; tên *Ouverture solennelle "1812"*. Nguồn: `d6-l4`, `d6-l9`, `d6-l10`. Nhỏ.
-11. **Công cụ đọc nốt ở trang chủ** ("Thử ngay: đọc một nốt" của trang chủ cũ), mở khóa `index`. Nguồn: `README` đợt 7. Nhỏ.
+1. **`grade` lệch nguồn: giữ cách ước lượng của site** (chủ repo chốt). Bảng 5.1 giữ để tham khảo; không mở khóa `grade`.
+2. **Chặng lệch ABRSM 2027–2028**: để tới lần rà `piano/tac-pham-theo-cap` tháng 1/2027 như lịch (mục 2). Danh sách: *Toccatina* (G4, site chặng 3), *Wilder Reiter* (G3, chặng 2), *The Little Shepherd* (G7, chặng 5), Nocturne B. 49 (G7, chặng 5), Nocturne Op. 72 số 1 (G8, chặng 5), Valse Op. 69 số 2 (ABRSM G8), Brahms Op. 118 số 2 (ARSM).
+3. **`thoi_ky`: đã làm** (`mo/hoan-thien`). Chữ `thoi_ky` của bản ghi giữ nguyên (có trang in chữ ấy trong bảng, như "Cuối Lãng mạn"); bộ lọc "Thời kỳ" của danh mục gom về bảy thời kỳ của site theo năm sáng tác và mốc năm của `lich-su/index` (`THOI_KY`, `NHOM_THOI_KY` trong `src/plugins/thanh-phan.mjs`): "Cổ điển → Lãng mạn" (Giao hưởng số 5, 1808) là Cổ điển; "Beethoven cuối đời" (Op. 132, 1825), "Cuối Lãng mạn", "Cuối thế kỷ 19" là Lãng mạn; "Ấn tượng" là Thế kỷ 20. Cách ghi mới phải thêm vào bảng gom (kiểm thử `tests/danh-muc.test.mjs`).
+4. **`nghe-nhac/index` liệt kê cả 34 bài học: giữ.** Bài học nào cũng có bản thu gợi ý và bảng "Theo dõi khi nghe", nên cũng là một trang để nghe; ô lọc Loại tách được khi cần.
+5. **Thứ tự sách in: đã làm** (09/11/2026): bài học trong menu và sách xếp theo chặng của dữ liệu.
+6. **Trang Cập nhật: đã làm** (09/11/2026): bỏ tên và địa chỉ site cũ, giữ nhật ký v1–15 như lịch sử của "bản trước". `them_ngay` cho 73 bản ghi cũ: không đặt.
+7. **Lượt 2 bổ sung để thêm ý mới (Grieg "mặt trời ló dạng", thư Handel 1780): không làm bây giờ.** Trang không thiếu gì khi không có hai ý ấy; thêm thì làm khi trang được mở vì việc khác (ghi ở `d6-l11-gom`, `d6-l9-gom`).
+8. **Giấy phép bản thu: đã làm** (`mo/hoan-thien`): ghi ở `note` của `ban_thu`, không đổi `nghe.js`. Invention số 1 (Marcelle Meyer, 1948): "Commons ghi phạm vi công cộng, ở Mỹ còn được bảo hộ nên chỉ dẫn link"; *Préludes* của Debussy đã có ghi chú như vậy; Rachmaninoff số 2: "Commons ghi phạm vi công cộng, IMSLP ghi CC BY-SA 3.0".
+9. **Tác phẩm mới (bản thu chỉ dẫn link, trích đoạn chép tay từ bản quét, cấp chỉ ước lượng)**: thuộc phần thêm bài mới (mục 6), quyết trước đợt thêm 2.
+10. **Lựa chọn trình bày nhỏ: giữ cả bốn.** Chip "♩ = 100 (Schumann)" là chỉ dẫn tốc độ của chính tác giả, ghi rõ nguồn; chữ "Đỏ" là tên nhóm màu trong chú giải, khớp với các hình khác; năm 1825 của Op. 132 là năm sáng tác; tên *Ouverture solennelle "1812"* là tên gốc.
+11. **Công cụ đọc nốt ở trang chủ: không thêm.** Trang chủ đã có "Hôm nay tập gì?" và lối vào Luyện tập; giữ trang chủ nhẹ (Lighthouse).
 
 ## 4. Sửa trang đã khóa
 
@@ -81,10 +82,10 @@ Mỗi việc theo thủ tục mở khóa (`plans/ben-vung/chuan-kiem-dinh.md` m�
 
 ### 4.3 Còn lại
 
-1. Ba sonata Scarlatti: phần cuối chưa đối chiếu bản nhạc (bản Longo trên Internet Archive). `d6-l7-gom`. Vừa.
-2. Bỏ "(ước lượng)" ở dòng Độ khó của các bài có trong đề cương ABRSM/Trinity, làm một lần cho mọi bài (kiểm lại trước: lô 3–4 đã bỏ). `d6-l1`, `d6-l2`. Vừa.
+1. Ba sonata Scarlatti: phần cuối chưa đối chiếu bản nhạc. **Chưa làm được (09/11/2026)**: archive.org và kern.humdrum.org bị chặn ở máy làm việc; kho `craigsapp/scarlatti-keyboard-sonatas` (59 sonata) không có K. 141, K. 466, K. 380; PDF trên IMSLP qua cổng tải (không vượt cổng). Cần người có bản Longo hay Heugel đối chiếu ba dòng "nửa sau trở về giọng chính". `d6-l7-gom`. Vừa.
+2. **Đã làm** (`mo/hoan-thien`, 09/11/2026): trong 7 bài còn "(ước lượng)", 3 bài có trong đề cương ABRSM nay ghi đề cương (Sonatina Sol trưởng Anh. 5: chương 1, Grade 2, 2025–2026; Clementi Op. 36 số 1: chương 3, Grade 3, 2023–2024; Bài ca Pháp cổ: Grade 3, 2019–2020); 4 bài không có trong đề cương nào (BWV 939, *La candeur*, Minuet Sol trưởng, K. 2) giữ "(ước lượng)".
 3. Trang nghệ sĩ: Pires ngừng biểu diễn sau đột quỵ 11/2025; kiểm không còn link tới `luonghuetrinh.com`. Làm cùng lần rà 2027-10 (cần nguồn tin). `d2-0`. Nhỏ.
-4. `ghi_chu` lỗi thời trong hồ sơ đã khóa (không đổi trang, không cần mở khóa vì mã băm chỉ tính trang): nhiều câu `ve-site` còn ghi "chưa chuyển, sắp có"; `beethoven-anh-trang` "Còn mở: n17, n87". `d6-l10`, `d6-l7`, `d6-l4`. Vừa.
+4. **Đã chốt** (09/11/2026): `ghi_chu` là nhật ký lúc kiểm, không viết lại (`chuan-kiem-dinh.md` mục 5); "Còn mở" của `beethoven-anh-trang` nối câu ghi đã xong.
 
 ## 5. Dữ liệu
 
@@ -105,7 +106,7 @@ Mỗi việc theo thủ tục mở khóa (`plans/ben-vung/chuan-kiem-dinh.md` m�
 
 ### 5.2 Bản thu và mốc
 
-- Mốc chưa đo (đo tay, ghi bằng `tools/audio/attach.py --ref`): `schubert-impromptu` dòng 3; `mozart-concerto-21` dòng 10; Scarlatti K. 380 dòng 2; Gershwin 6 dòng; Grieg 3 dòng; Rachmaninoff 1 dòng. `d6-l5`, `d6-l7-gom`, `d6-l8-gom`. Vừa.
+- Mốc chưa đo: `schubert-impromptu` dòng 3 **đã đo** (09/11/2026, `tools/audio/align`, bản nhạc ASAP: ô 24 ở 94 giây). Còn lại cần người nghe đo tay (không có bản nhạc số để căn): `mozart-concerto-21` dòng 10; Scarlatti K. 380 dòng 2; Gershwin 6 dòng; Grieg 3 dòng; Rachmaninoff 1 dòng. Ghi bằng `tools/audio/attach.py --ref`. `d6-l5`, `d6-l7-gom`, `d6-l8-gom`. Vừa.
 - Thiếu bản thu: bảy trang không có bản thu (có `mozart-requiem`), K. 141, K. 466; K. 545 chỉ có chương 1; có thể thêm Mùa đông chương 1 (John Harrison, CC BY-SA 4.0). Theo dõi các bản thu cũ vào phạm vi công cộng ở Mỹ: 2028 (Pertile, Kennedy Scott, Landon Ronald), 2030 (Koussevitzky), 2031 (Ravel), 2034 (Barbirolli).
 - `bizet-habanera` `danh_muc`: đã thêm (mục 4.1).
 
@@ -177,13 +178,13 @@ Khối "Nhạc phím thời này" cho mỗi trang thời kỳ; hướng dẫn ng
 Xếp giảm dần.
 
 1. Khuông nhạc có thể câm khi iPhone ở chế độ im lặng (`src/scripts/abc.js`, Web Audio). `AGENTS.md` và `d8-gom` ghi khác nhau: thử trên máy thật trước. Vừa.
-2. Lighthouse của `bat-dau/tom-tat` sát ngưỡng 95 vì menu lớn (`src/nhom.mjs`, sidebar); đo lại với 241 trang. Vừa.
-3. Sửa `src/scripts/*.js` mà plugin dùng lúc build thì bản dev có thể không dựng lại (`d8-gom`; `AGENTS.md` ghi D8-L1 đã làm, kiểm lại). `dauVet` đã tính `tac_pham` của các trang (commit `9b9bb48`). Nhỏ.
-4. `tools/audio/commons.py` báo sai giấy phép khi trang mô tả có cả mẫu PD cho tác phẩm lẫn CC cho bản thu; `check_audio.py` không cho ghi `lic` khác Commons. Vừa.
+2. **Đã đo lại** (09/11/2026, 243 trang, ba lần): `bat-dau/tom-tat` hiệu năng trung vị 100 (một lần 92), trang chủ 100, `piano/gam` 100; trợ năng, thực hành tốt, SEO đều 100.
+3. **Đã kiểm** (09/11/2026): `tepDauVet` (`src/du-lieu.mjs`) tính cả `src/scripts/*.js`, `src/plugins/`, hình tĩnh; có kiểm thử ở `tests/du-lieu.test.mjs`.
+4. **Đã sửa** (09/11/2026): `commons.license_templates` đọc mọi mẫu giấy phép trong wikitext; `check_audio.py` nhận `lic` của bản ghi khi có trong các mẫu ấy (cảnh báo, không lỗi). Kiểm thử ở `tools/audio/tests/`.
 5. Schema dữ liệu: `khoang` áp cho cả cặp năm; `thoi_ky` là chữ tự do; `nha-soan-nhac.yml` thiếu trường vai trò. Vừa (dữ liệu dùng chung, review mức Lớn).
-6. Kiểm thử trình duyệt chập chờn (`tests/trinh-duyet/kiem-luyen-tap-d7.mjs:189` trên Firefox, trang Nghe mù). Nhỏ.
-7. `tools/chuyen/chuyen.mjs` không đặt nháy cho `description` có dấu `:`; nút chép của khối mã còn chữ tiếng Anh (`astro.config.mjs`). Nhỏ.
-8. Ghi thêm vào `chuan-kiem-dinh.md` các cách mở nguồn đã dùng: IIIF/LIDO của Brahms-Portal, `api.nb.no`, lời tựa Bärenreiter `/prefaces/<ISMN>.pdf`, BL `searcharchives` `.json`, API của IMSLP và Commons, bản Mutopia trên GitHub (`raw.githubusercontent.com/MutopiaProject/MutopiaProject/master/ftp/…`) khi mutopiaproject.org bị chặn. Nhỏ.
+6. **Đã sửa** (09/11/2026): nguyên nhân là `id` của bản thu là `Date.now()`, hai bản lưu cùng mili giây (Firefox làm tròn đồng hồ) ghi đè nhau. Nay `id` luôn lớn hơn mọi `id` đã có (`src/scripts/thu-am.js`). Phép thử ở trang Nghe mù chưa thấy lặp lại.
+7. **Đã xong** (09/11/2026): `chuyen.mjs` ghi frontmatter bằng `yaml.stringify`, đặt nháy đúng (đã thấy ở D8-L3); nút chép của khối mã nay là "Chép vào bộ nhớ tạm" / "Đã chép!" (`src/content/i18n/vi.json`).
+8. **Đã ghi** (09/11/2026) vào bảng "Nguồn và cách mở" của `chuan-kiem-dinh.md`.
 
 ## 8. Làm X thế nào
 
