@@ -1,0 +1,53 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/thuat-ngu/acoustic-beats
+ban_ghi: thuat-ngu/acoustic-beats
+lan:
+  - so: 1
+    ngay: 2026-11-10
+    nhanh: mo/thuat-ngu
+    ma_bam: sha256:a2de688cbc0b9cc5c9b08f704136cd13315b5ca61af1f4475cbfea88f827b8de
+    nguoi:
+      luot_1: Claude (agent con, mo/thuat-ngu lô T4 lượt 1, 10/11/2026)
+      luot_2: Claude (agent con khác, lượt 2 độc lập lô T4, không đọc lượt 1, 10/11/2026)
+      review: 'Claude Opus 5.5 (người gom mo/thuat-ngu: review mọi câu hai lượt khác nhau và các đề xuất của lượt 2, 10/11/2026)'
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo (chủ repo giao làm trọn phần thuật ngữ, 10/11/2026): 10 mục mẫu ngẫu nhiên, 2 mục mỗi lô (ritornello, intermezzo, ritenuto, larghetto, tie, natural-minor, passing-tone, well-temperament, horn, broken-chord), đọc lại chữ bản ghi với trích nguồn của hai lượt: 10 đúng, 0 sai (plans/ben-vung/bao-cao/mo-thuat-ngu.md)"
+ghi_chu: 'Thuật ngữ beats, nhóm Nhạc lý (Anh – Việt) (thêm ở mo/thuat-ngu, lô T4: hòa âm, đối âm, kết, âm học; danh sách gom từ ghi chú "thuat-ngu.yml chưa có" của các hồ sơ trang, kế hoạch mở rộng mục 5.3). Nhóm (nhom) và lời dịch tiếng Việt là lựa chọn của site, không phải nhận định; kiểm khái niệm khớp với nguồn. Nguồn đọc qua WebFetch ngày 10/11/2026.'
+nguon:
+  - id: dolmetsch-be
+    bac: 2
+    ten: Dolmetsch Online, Music Dictionary Be - Beik
+    link: https://www.dolmetsch.com/defsb1.htm
+  - id: mw-beat
+    bac: 2
+    ten: Merriam-Webster, "beat" (noun, physics sense)
+    link: https://www.merriam-webster.com/dictionary/beat
+nhan_dinh:
+  - id: n1
+    cau: 'beats: phách, sự dao động biên độ khi hai âm có tần số hơi khác nhau vang cùng lúc.'
+    loai: dinh-nghia
+    truong:
+      - thuat_ngu
+      - nghia
+    nguon:
+      - mw-beat
+      - dolmetsch-be
+    ket_qua: dung
+    ghi_chu: 'M-W: "each of the pulsations of amplitude" do "the union of sound... waves... having different frequencies" Review (mo/thuat-ngu, 10/11/2026): lượt 2 đề xuất thêm "(tiếng đập)" để khỏi nhầm với phách của nhịp (thuat-ngu beat); không đổi nghĩa.'
+    luot_2: dung
+    luot_2_nguon:
+      - https://www.merriam-webster.com/dictionary/beat
+      - https://oer.xyzhomework.com/ebooks/html/university-physics-volume-1/ch17/17-6-beats.html
+    luot_2_ghi_chu: 'M-W: "pulsations of amplitude produced by the union of sound ... waves" khác tần số. Lưu ý "phách" trùng nghĩa với phách nhịp (beat); nên ghi "phách (tiếng đập)".'
+    review: dung
+  - id: n2
+    cau: 'beats: phách thưa dần khi hai âm tiến tới đồng âm.'
+    loai: dinh-nghia
+    truong:
+      - ghi_chu
+    nguon:
+      - dolmetsch-be
+    ket_qua: dung
+    ghi_chu: 'Dolmetsch: "as the two notes approach a perfect unison, become less frequent"'
+    luot_2: dung
+    luot_2_nguon:
+      - https://oer.xyzhomework.com/ebooks/html/university-physics-volume-1/ch17/17-6-beats.html
+    luot_2_ghi_chu: 'University Physics: "the beats slow toward silence"; f_beat = |f2 − f1|.'

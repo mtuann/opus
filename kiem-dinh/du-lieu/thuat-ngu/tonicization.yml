@@ -1,0 +1,59 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/thuat-ngu/tonicization
+ban_ghi: thuat-ngu/tonicization
+lan:
+  - so: 1
+    ngay: 2026-11-10
+    nhanh: mo/thuat-ngu
+    ma_bam: sha256:586659ba2fc89bec211b7f8605ab7a53df7c33914f6c68d5308b54ceec0f60e5
+    nguoi:
+      luot_1: Claude (agent con, mo/thuat-ngu lô T4 lượt 1, 10/11/2026)
+      luot_2: Claude (agent con khác, lượt 2 độc lập lô T4, không đọc lượt 1, 10/11/2026)
+      review: 'Claude Opus 5.5 (người gom mo/thuat-ngu: review mọi câu hai lượt khác nhau và các đề xuất của lượt 2, 10/11/2026)'
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo (chủ repo giao làm trọn phần thuật ngữ, 10/11/2026): 10 mục mẫu ngẫu nhiên, 2 mục mỗi lô (ritornello, intermezzo, ritenuto, larghetto, tie, natural-minor, passing-tone, well-temperament, horn, broken-chord), đọc lại chữ bản ghi với trích nguồn của hai lượt: 10 đúng, 0 sai (plans/ben-vung/bao-cao/mo-thuat-ngu.md)"
+ghi_chu: 'Thuật ngữ tonicization, nhóm Nhạc lý (Anh – Việt) (thêm ở mo/thuat-ngu, lô T4: hòa âm, đối âm, kết, âm học; danh sách gom từ ghi chú "thuat-ngu.yml chưa có" của các hồ sơ trang, kế hoạch mở rộng mục 5.3). Nhóm (nhom) và lời dịch tiếng Việt là lựa chọn của site, không phải nhận định; kiểm khái niệm khớp với nguồn. Nguồn đọc qua WebFetch ngày 10/11/2026.'
+nguon:
+  - id: omt1-applied
+    bac: 2
+    ten: Open Music Theory 1.0, "Applied chords"
+    link: https://openmusictheory.github.io/appliedChords.html
+  - id: omt1-mixture
+    bac: 2
+    ten: Open Music Theory 1.0, "Modal mixture"
+    link: https://openmusictheory.github.io/modalMixture.html
+  - id: l2-n2
+    bac: 2
+    ten: Nguồn lượt 2 dẫn, dùng cho chữ đã sửa ở review
+    link: https://openmusictheory.github.io/appliedChords.html
+nhan_dinh:
+  - id: n1
+    cau: 'tonicization: chủ âm hóa, nhấn tạm thời một hợp âm không phải chủ bằng các hợp âm mượn từ giọng của nó.'
+    loai: dinh-nghia
+    truong:
+      - thuat_ngu
+      - nghia
+    nguon:
+      - omt1-applied
+    ket_qua: dung
+    ghi_chu: 'OMT 1.0: "the process of momentarily emphasizing a non-tonic chord by using chords borrowed from the key"'
+    luot_2: dung
+    luot_2_nguon:
+      - https://openmusictheory.github.io/appliedChords.html
+    luot_2_ghi_chu: 'OMT: "momentarily emphasizing a non-tonic chord ... by using chords borrowed from the key in which that chord is tonic." Lưu ý: "hợp âm mượn" trùng tên với hợp âm mượn của modal mixture; nên viết "hợp âm lấy từ giọng của nó (hợp âm át phụ/applied chords)".'
+  - id: n2
+    cau: 'tonicization: khác chuyển giọng ở chỗ thường không có kết ở giọng mới.'
+    loai: dinh-nghia
+    truong:
+      - ghi_chu
+    nguon:
+      - omt1-applied
+      - omt1-mixture
+      - l2-n2
+    ket_qua: da-sua
+    ghi_chu: 'OMT 1.0 (Modal mixture): "Without a cadence in a new key, the non-diatonic chords are simply borrowed"; Applied chords nêu tonicization không có kết ở giọng mới Review (mo/thuat-ngu, 10/11/2026): site gọi modulation là "chuyển giọng" (thuat-ngu modulation); lượt 2: OMT 2e coi hai khái niệm là một dải liên tục, thêm "thường". Chữ câu cũ: "tonicization: khác chuyển điệu ở chỗ không có kết ở giọng mới.".'
+    luot_2: dung
+    luot_2_nguon:
+      - https://openmusictheory.github.io/appliedChords.html
+      - https://openmusictheory.github.io/Modulation.html
+      - https://viva.pressbooks.pub/openmusictheory/chapter/extended-tonicization-and-modulation-to-closely-related-keys/
+    luot_2_ghi_chu: 'OMT 1: "Unlike modulation, there is no cadence in a new key". OMT 2e coi đây là phổ liên tục (độ dài, độ mạnh); có thể thêm "thường".'
+    review: dung

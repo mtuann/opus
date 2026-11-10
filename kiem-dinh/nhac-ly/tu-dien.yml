@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 3, 28/10/2026; bổ sung sau review)
       review: Claude (review D3-gom, nhóm C, 28/10/2026)
       kiem_mau: "chủ repo, 10 nhận định mẫu của đợt 3 (D3-L2 đến D3-L6): 6 đúng, 4 câu về site và lời khuyên tập không kiểm độc lập được (người gom kiểm lại trên repo, đúng), 0 sai (bao-cao/d3-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-10
+    nhanh: mo/thuat-ngu
+    ma_bam: sha256:d98328b2634812e6354ba66d519ac83726e7de96661049c43437092652a32ce8
+    nguoi:
+      luot_1: 'Claude Opus 5.5 (mở khóa mo/thuat-ngu, 10/11/2026: trang chỉ thêm mục "Nhạc cụ và giọng hát" và chỉ thị ::tu-dien; chữ bảng là dữ liệu, kiểm ở hồ sơ từng bản ghi)'
+      luot_2: Không có nhận định mới ở trang (tiêu đề mục và chỉ thị không tính là nhận định); nhận định của từng thuật ngữ qua lượt 2 ở hồ sơ bản ghi
+      review: "Claude Opus 5.5 (soát doi_chu: 11 khối hàng mới khớp bản ghi đã khóa)"
+      kiem_mau: Như hồ sơ bản ghi (10 mục mẫu, 10 đúng; plans/ben-vung/bao-cao/mo-thuat-ngu.md)
 ghi_chu: "Trang Từ điển (tầng lõi). Các hàng của bảng (150 mục cũ, 154 sau D3-L5) dựng từ src/data/thuat-ngu.yml bằng chỉ thị ::tu-dien (agent khác đang làm); mọi nhận định về nghĩa, ghi chú của hàng nằm ở hồ sơ từng bản ghi kiem-dinh/du-lieu/thuat-ngu/<id>.yml, không lặp ở đây. Tên nhóm (Tốc độ, Piano, Nhạc lý (Anh – Việt)…) và cột Nghĩa là lựa chọn của site. Hồ sơ trang này chỉ có chữ ngoài bảng: mô tả, đoạn mở đầu, đoạn mô tả thẻ ghi nhớ (câu ve-site: kiểm trên src/scripts/the-nho.js, bản chuyển từ ../opus-zero/docs/assets/js/flashcards.js, và trên tu-dien.md). Mục doi_chu liệt kê mọi ô bảng đổi chữ do D3-L5 sửa src/data/thuat-ngu.yml (cu = ô cũ của tu-dien.md, moi = ô mới sinh từ dữ liệu; cu null = hàng mới; moi null = ô bỏ trống). Chữ cần người giao sửa ở tu-dien.md: không có; tu-dien.md chưa đổi bảng sang chỉ thị nên khi gộp phải dựng lại từ dữ liệu, không giữ bảng cũ. Id thẻ ghi nhớ là chữ ô đầu (thuat_ngu): D3-L5 không đổi chữ nào ở cột đó, nên tiến độ ôn thẻ đã lưu vẫn khớp."
 nguon: []
 nhan_dinh:
@@ -135,3 +144,608 @@ doi_chu:
   - cu: Một giai điệu chính với bè đệm
     moi: Một giai điệu chính với bè đệm, hay các bè cùng tiết tấu
     ly_do: "Hàng homophony, cột Ghi chú. OMT, Texture: homorhythm là một kiểu của homophony (hồ sơ homophony, n2)."
+  - cu: null
+    moi:
+      - Larghetto
+      - Khá rộng rãi, hơi chậm
+      - Bớt chậm hơn largo một chút
+      - Alla breve
+      - Đếm phách bằng nốt trắng, nhịp hai hoặc nhịp bốn
+      - "Nghĩa đen: theo nốt breve"
+      - Con moto
+      - Có chuyển động, khá nhanh
+    ly_do: "Hàng mới của bảng (mo/thuat-ngu, 10/11/2026): thuật ngữ thêm ở lô T1–T5, mỗi mục một bản ghi đã khóa, hồ sơ ở kiem-dinh/du-lieu/thuat-ngu/<id>.yml (kế hoạch mở rộng mục 5.3)."
+  - cu: null
+    moi:
+      - Tempo primo
+      - Trở lại tốc độ như lúc đầu
+      - l'istesso tempo
+      - Giữ nguyên tốc độ phách như đoạn trước
+      - Dùng khi đổi số chỉ nhịp mà độ dài phách không đổi
+      - ritenuto
+      - Ghìm lại, giữ chậm lại
+      - allargando
+      - Chậm dần và trang trọng hơn
+      - "Nghĩa đen: mở rộng ra"
+      - stringendo
+      - Dồn nhanh dần, thường để tới cao trào
+      - "Từ stringere: siết chặt"
+      - calando
+      - Nhỏ dần và chậm dần
+      - poco
+      - Một chút, hơi
+      - Cũng viết un poco
+      - molto
+      - Nhiều, rất nhiều
+      - Cũng viết di molto
+      - sempre
+      - Luôn luôn, suốt
+      - più
+      - Hơn, nhiều hơn
+      - meno
+      - Ít hơn, kém hơn
+      - assai
+      - Rất; khá, tương đối
+    ly_do: "Hàng mới của bảng (mo/thuat-ngu, 10/11/2026): thuật ngữ thêm ở lô T1–T5, mỗi mục một bản ghi đã khóa, hồ sơ ở kiem-dinh/du-lieu/thuat-ngu/<id>.yml (kế hoạch mở rộng mục 5.3)."
+  - cu: null
+    moi:
+      - smorzando
+      - Chậm dần và nhỏ dần, lịm đi
+      - "Viết tắt smorz.; ít gặp hơn: smorzato"
+      - morendo
+      - "Lịm dần: nhỏ dần và chậm dần"
+      - "Nghĩa đen: đang chết dần"
+      - decrescendo
+      - Nhỏ dần, giảm dần âm lượng
+      - subito
+      - Đột ngột, ngay lập tức
+    ly_do: "Hàng mới của bảng (mo/thuat-ngu, 10/11/2026): thuật ngữ thêm ở lô T1–T5, mỗi mục một bản ghi đã khóa, hồ sơ ở kiem-dinh/du-lieu/thuat-ngu/<id>.yml (kế hoạch mở rộng mục 5.3)."
+  - cu: null
+    moi:
+      - portato
+      - Lối diễn tấu nửa ngắt, nửa liền
+      - "Từ portare: mang"
+      - slur
+      - "Dấu luyến: đường cong nối các nốt chơi liền không ngắt"
+      - "Trong thanh nhạc: các nốt hát trên cùng một âm tiết"
+      - pralltriller
+      - "Láy nhanh: đảo nốt chính với nốt trên"
+      - "Tiếng Đức: prallen (nảy lại) + Triller (láy rền)"
+      - mezza voce
+      - Âm lượng vừa phải, tiếng vừa
+      - tasto solo
+      - Chỉ chơi bè trầm, không thêm hợp âm
+      - "Dùng trong bè trầm số; nghĩa đen: chỉ phím"
+    ly_do: "Hàng mới của bảng (mo/thuat-ngu, 10/11/2026): thuật ngữ thêm ở lô T1–T5, mỗi mục một bản ghi đã khóa, hồ sơ ở kiem-dinh/du-lieu/thuat-ngu/<id>.yml (kế hoạch mở rộng mục 5.3)."
+  - cu: null
+    moi:
+      - pesante
+      - Nặng, một cách nặng nề
+      - risoluto
+      - Một cách quả quyết
+      - con anima
+      - Có hồn, đầy sức sống
+      - con fuoco
+      - Với lửa, rực lửa
+      - appassionato
+      - Say đắm, nồng nhiệt
+      - animato
+      - Sôi nổi, đầy sinh khí
+      - con bravura
+      - Phô diễn kỹ thuật, hoa mỹ và rực rỡ
+      - Trinity ghi dạng di bravura
+      - energico
+      - Một cách mạnh mẽ, đầy năng lượng
+      - misterioso
+      - Một cách huyền bí
+      - dolente
+      - Với nỗi đau buồn
+      - Cùng nghĩa doloroso
+    ly_do: "Hàng mới của bảng (mo/thuat-ngu, 10/11/2026): thuật ngữ thêm ở lô T1–T5, mỗi mục một bản ghi đã khóa, hồ sơ ở kiem-dinh/du-lieu/thuat-ngu/<id>.yml (kế hoạch mở rộng mục 5.3)."
+  - cu: null
+    moi:
+      - segno
+      - Dấu đánh chỗ bắt đầu hay kết thúc đoạn nhắc lại
+      - "Nghĩa đen: dấu; al segno: tới dấu"
+      - al Coda
+      - Tới phần coda (thường trong D.S. al Coda, D.C. al Coda)
+      - "Coda nghĩa đen: cái đuôi"
+      - repeat sign
+      - "Dấu nhắc lại: chơi lại một đoạn nhạc"
+      - Mặc định chơi đoạn đó hai lần
+      - 8vb (ottava bassa)
+      - Chơi thấp hơn một quãng tám so với nốt viết
+      - Còn ghi ottava sotto
+    ly_do: "Hàng mới của bảng (mo/thuat-ngu, 10/11/2026): thuật ngữ thêm ở lô T1–T5, mỗi mục một bản ghi đã khóa, hồ sơ ở kiem-dinh/du-lieu/thuat-ngu/<id>.yml (kế hoạch mở rộng mục 5.3)."
+  - cu: null
+    moi:
+      - hand crossing
+      - "Bắt chéo tay: một tay vượt qua tay kia để chơi"
+      - Nét kỹ thuật nổi bật trong sonata của Domenico Scarlatti
+      - thumb crossing
+      - Luồn ngón cái dưới các ngón dài khi chơi gam, chạy ngón
+      - Còn gọi thumb under
+      - finger substitution
+      - Thay ngón trên phím đang giữ để giải phóng ngón trước
+      - five-finger position
+      - Thế tay đặt năm ngón lên năm phím liền nhau
+      - arpeggio
+      - "Hợp âm rải: các nốt hợp âm chơi lần lượt, không cùng lúc"
+      - "Từ tiếng Ý arpeggiare: chơi như đàn harp"
+      - broken chord
+      - "Hợp âm rải: các nốt của hợp âm chơi lần lượt"
+      - Đôi khi gọi là arpeggio
+      - block chord
+      - "Hợp âm khối: hợp âm hai tay đánh cùng lúc, thường ở âm vực giữa"
+      - damper
+      - "Bộ giảm âm: miếng phớt chặn rung dây đàn piano"
+      - keyboard harmony
+      - "Hòa âm bên phím: học và thực hành hòa âm trên đàn phím"
+      - Gồm chơi bè trầm số, phối hòa âm cho giai điệu, chơi theo lead sheet
+      - partimento
+      - Bài tập ứng tác đối âm trên bè trầm số, thế kỷ 17–18
+      - galant schema
+      - "Mẫu galant: khuôn câu nhạc quen dùng làm khung giai điệu, hòa âm, tiết tấu"
+      - Khái niệm của Robert Gjerdingen (2007), gọi là stock musical phrases
+      - improvisation
+      - "Ứng tác: sáng tác, chơi hay hát ngay tại chỗ, không chuẩn bị"
+      - continuo (basso continuo)
+      - Bè trầm do đàn phím và/hoặc nhạc cụ dây trầm chơi trong nhạc Baroque
+      - Còn gọi figured bass, thoroughbass
+    ly_do: "Hàng mới của bảng (mo/thuat-ngu, 10/11/2026): thuật ngữ thêm ở lô T1–T5, mỗi mục một bản ghi đã khóa, hồ sơ ở kiem-dinh/du-lieu/thuat-ngu/<id>.yml (kế hoạch mở rộng mục 5.3)."
+  - cu: null
+    moi:
+      - scale degree
+      - "Bậc: vị trí của một nốt trong gam"
+      - perfect interval
+      - Quãng đúng
+      - Quãng 1, 4, 5, 8 ở dạng chuẩn
+      - major interval
+      - Quãng trưởng
+      - Chỉ có ở quãng 2, 3, 6, 7
+      - minor interval
+      - Quãng thứ
+      - Chỉ có ở quãng 2, 3, 6, 7
+      - augmented interval
+      - "Quãng tăng: lớn hơn quãng đúng hoặc trưởng nửa cung"
+      - diminished interval
+      - "Quãng giảm: nhỏ hơn quãng đúng hoặc thứ nửa cung"
+      - tritone
+      - "Tritone: quãng 4 tăng hoặc quãng 5 giảm"
+      - "Nghĩa đen: ba cung nguyên"
+      - compound interval
+      - "Quãng ghép: quãng lớn hơn quãng tám"
+      - melodic interval
+      - "Quãng giai điệu: hai nốt vang lần lượt"
+      - harmonic interval
+      - "Quãng hòa âm: hai nốt vang cùng lúc"
+      - interval inversion
+      - "Đảo quãng: đổi chỗ nốt trên và nốt dưới"
+      - Ví dụ Đô dưới Mi là đảo của Mi dưới Đô
+      - unison
+      - "Đồng âm: quãng giữa hai nốt cùng cao độ"
+      - Còn gọi là quãng 1 đúng
+      - octave
+      - "Quãng tám: mười hai nửa cung giữa hai nốt cùng tên"
+      - root
+      - "Nốt gốc: nốt thấp nhất khi hợp âm xếp chồng quãng ba"
+      - major triad
+      - "Hợp âm ba trưởng: quãng 3 trưởng, quãng 5 đúng"
+      - minor triad
+      - "Hợp âm ba thứ: quãng 3 thứ, quãng 5 đúng"
+      - diminished triad
+      - "Hợp âm ba giảm: quãng 3 thứ, quãng 5 giảm"
+      - augmented triad
+      - "Hợp âm ba tăng: quãng 3 trưởng, quãng 5 tăng"
+      - seventh chord
+      - "Hợp âm bảy: hợp âm bốn nốt xếp chồng quãng ba"
+      - dominant seventh chord
+      - "Hợp âm bảy át: hợp âm ba trưởng thêm quãng 7 thứ"
+      - Còn gọi là major-minor seventh chord
+      - diminished seventh chord
+      - "Hợp âm bảy giảm: hợp âm ba giảm thêm quãng 7 giảm"
+      - Còn gọi là fully diminished seventh chord
+      - half-diminished seventh chord
+      - "Hợp âm bảy nửa giảm: hợp âm ba giảm thêm quãng 7 thứ"
+      - root position
+      - "Thể gốc: nốt gốc ở bè trầm, các nốt xếp theo quãng ba"
+      - Roman numeral
+      - "Số La Mã: chỉ bậc của nốt gốc hợp âm trong giọng"
+      - figured bass
+      - "Bè trầm số: số và ký hiệu chỉ quãng trên nốt trầm"
+      - natural minor scale
+      - Gam thứ tự nhiên
+      - "Đi lên: C–N–C–C–N–C–C (C: cung, N: nửa cung)"
+      - harmonic minor scale
+      - Gam thứ hòa âm
+      - "Đi lên: C–N–C–C–N–(cung rưỡi)–N"
+      - melodic minor scale
+      - Gam thứ giai điệu
+      - "Đi lên: C–N–C–C–C–C–N; đi xuống theo mẫu khác"
+      - relative key
+      - "Giọng song song: giọng trưởng và thứ cùng hóa biểu"
+      - Không phải parallel key (giọng cùng tên)
+      - parallel key
+      - "Giọng cùng tên: giọng trưởng và thứ cùng chủ âm"
+      - Ví dụ Đô trưởng và Đô thứ
+      - closely related keys
+      - "Giọng gần: hóa biểu chênh nhau không quá một dấu"
+      - Ví dụ Đô trưởng và Son trưởng
+      - circle of fifths
+      - "Vòng quãng năm: sơ đồ quan hệ giữa các hóa biểu"
+      - chromatic
+      - "Crômatic (nửa cung): thuộc gam nửa cung, nốt ngoài giọng"
+      - Gam nửa cung gồm mười hai nửa cung liền nhau
+      - mode
+      - "Điệu thức: cách sắp xếp cung và nửa cung trong quãng tám"
+      - Lydian
+      - Điệu thức Lydian
+      - Như gam trưởng nhưng bậc 4 nâng lên
+      - transposition
+      - "Dịch giọng: chuyển toàn bộ cao độ đi một quãng"
+      - concert pitch
+      - "Cao độ thật: cao độ vang thực sự, không theo bản dịch giọng"
+      - "Nghĩa khác: chuẩn lên dây La 440 Hz"
+      - transposing instrument
+      - "Nhạc cụ dịch giọng: âm vang khác với nốt viết"
+      - Ví dụ kèn trumpet Si giáng vang thấp hơn nốt viết một cung
+      - C clef
+      - "Khóa Đô: tâm khóa đặt trên dòng của nốt Đô giữa (C4)"
+      - Gồm khóa Đô alto, tenor, soprano, mezzo-soprano, baritone
+      - middle C
+      - "Đô giữa: nốt Đô gần giữa bàn phím piano (C4)"
+      - Viết trên dòng kẻ phụ thứ nhất dưới khuông khóa Son
+      - double sharp
+      - "Dấu thăng kép: nâng nốt lên hai nửa cung"
+      - double flat
+      - "Dấu giáng kép: hạ nốt xuống hai nửa cung"
+      - scientific pitch notation
+      - "Ký hiệu cao độ khoa học: tên nốt kèm số quãng tám (C4)"
+      - Open Music Theory gọi là ASPN; số quãng tám đổi ở nốt Đô
+      - half note
+      - "Nốt trắng: bằng nửa nốt tròn, hai nốt đen"
+      - eighth note
+      - "Nốt móc đơn: bằng nửa nốt đen"
+      - sixteenth note
+      - "Nốt móc kép: bằng nửa nốt móc đơn"
+      - dotted note
+      - "Nốt chấm dôi: dấu chấm thêm một nửa trường độ"
+      - tie
+      - "Dấu nối: nối các nốt cùng cao độ, chỉ đánh nốt đầu"
+      - triplet
+      - "Chùm ba: chia một phách nhịp đơn thành ba phần"
+      - syncopation
+      - "Đảo phách: nhịp điệu đi ngược trọng âm của nhịp"
+      - anacrusis
+      - "Nhịp lấy đà: các nốt dẫn vào phách mạnh đầu tiên"
+      - Tiếng Anh còn gọi upbeat
+      - polyrhythm
+      - "Đa tiết tấu: nhiều tiết tấu tương phản vang cùng lúc"
+      - polychord
+      - "Hợp âm ghép: thường là hai hợp âm ba vang cùng lúc"
+      - harmonic function
+      - "Chức năng hòa âm: vai trò của hợp âm trong tiến trình hòa âm"
+      - "Ba chức năng: chủ (T), át (D), hạ át (S, còn gọi predominant)"
+      - voice leading
+      - "Dẫn bè: cách các bè riêng tiến hành trong tác phẩm nhiều bè"
+      - common tone
+      - "Nốt chung: âm được giữ lại giữa hai hợp âm liền nhau"
+      - doubling
+      - "Nhân đôi: một âm của hợp âm xuất hiện ở hai bè"
+      - Trong lối basso continuo, hợp âm 5/3 và 6/4 thường nhân đôi âm bass
+      - SATB
+      - "Bốn bè SATB: soprano, alto, tenor, bass"
+      - parallel fifths and octaves
+      - "Quãng 5, quãng 8 song song: hai quãng 5 (hay 8) đúng liền nhau giữa hai bè"
+      - Bị cấm trong dẫn bè chặt vì làm mất tính độc lập của các bè
+      - contrary motion
+      - "Chuyển động ngược: hai bè đi ngược hướng nhau"
+      - parallel motion
+      - "Chuyển động song song: hai bè đi cùng hướng, giữ nguyên quãng"
+      - voice crossing
+      - "Bắt chéo bè: bè trên tạm thời thấp hơn bè dưới, hoặc ngược lại"
+      - tendency tone
+      - "Âm có xu hướng: bậc âm có khuynh hướng đi tới một số âm nhất định"
+      - cadential 6/4
+      - "Hợp âm 6/4 kết: 6/4 trên âm át ở bè trầm, giải về 5/3"
+      - Có thể dùng trong kết trọn, kết chưa trọn hay kết nửa
+      - perfect authentic cadence
+      - "Kết trọn: V–I ở thể gốc, giai điệu kết ở chủ âm"
+      - Viết tắt PAC
+      - imperfect authentic cadence
+      - "Kết chưa trọn: V–I nhưng giai điệu không kết ở chủ âm"
+      - Giai điệu thường kết ở bậc 3, đôi khi bậc 5; viết tắt IAC
+      - half cadence
+      - "Kết nửa: câu nhạc dừng ở hợp âm át (V)"
+      - plagal cadence
+      - "Kết plagal: hạ át (IV) giải về chủ (I)"
+      - Còn gọi là amen cadence
+      - deceptive cadence
+      - "Kết lừa: hợp âm át giải về hợp âm khác chủ"
+      - Thường là V–vi; còn gọi interrupted cadence
+      - Picardy third
+      - "Quãng 3 Picardy: quãng 3 trưởng ở hợp âm cuối của bài giọng thứ"
+      - non-chord tone
+      - "Âm ngoài hợp âm: nốt tô điểm không thuộc hợp âm đang vang"
+      - "Ví dụ: nốt lướt, nốt thêu, nốt treo, nốt đón trước"
+      - passing tone
+      - "Nốt lướt: nốt tô điểm đi liền bậc giữa hai nốt ổn định"
+      - neighbor tone
+      - "Nốt thêu: rời nốt ổn định một bậc rồi trở về chính nốt đó"
+      - suspension
+      - "Nốt treo: âm của hợp âm trước được giữ sang hợp âm sau rồi giải xuống liền bậc"
+      - anticipation
+      - "Nốt đón trước: vang sớm một âm của hợp âm kế tiếp"
+      - pedal point
+      - "Âm nền: âm (thường là chủ hay át) ngân ở bè trầm dưới các hợp âm thay đổi"
+      - tonicization
+      - "Chủ âm hóa: nhấn tạm một hợp âm không phải chủ như thể nó là chủ"
+      - Khác chuyển giọng ở chỗ thường không có kết ở giọng mới
+      - pivot chord
+      - "Hợp âm chung: hợp âm thuộc cả giọng cũ lẫn giọng mới, dùng để chuyển giọng"
+      - modal mixture
+      - "Pha trộn điệu thức: mượn hợp âm của giọng cùng tên (trưởng – thứ)"
+      - Còn gọi modal borrowing; hợp âm như vậy gọi là borrowed chord
+      - Neapolitan chord
+      - "Hợp âm Napoli: hợp âm trưởng trên bậc II hạ"
+      - Gồm bậc 2 hạ, bậc 4 và bậc 6 hạ
+      - augmented sixth chord
+      - "Hợp âm sáu tăng: có quãng 6 tăng giữa bậc 6 hạ và bậc 4 nâng"
+      - counterpoint
+      - "Đối âm: nghệ thuật kết hợp nhiều giai điệu độc lập"
+      - cantus firmus
+      - "Cantus firmus: giai điệu có sẵn làm nền để viết đối âm"
+      - Tiếng Latinh, nghĩa đen là bài ca cố định
+      - species counterpoint
+      - "Đối âm theo loại: học đối âm chặt qua từng loại (species) tăng dần"
+      - harmonic series
+      - "Chuỗi bồi âm: dãy âm bồi có tần số là bội nguyên của âm cơ bản"
+      - overtone
+      - "Âm bồi: âm cao hơn vang cùng lúc với âm cơ bản"
+      - fundamental
+      - "Âm cơ bản: thành phần tần số thấp nhất của một âm phức hợp"
+      - timbre
+      - "Âm sắc: chất giọng riêng của một giọng hát hay nhạc cụ"
+      - Còn gọi tone colour; chịu ảnh hưởng của các âm bồi nổi trội
+      - frequency
+      - "Tần số: số dao động lặp lại trong một đơn vị thời gian"
+      - equal temperament
+      - "Bình quân: chia quãng 8 thành 12 nửa cung bằng nhau"
+      - just intonation
+      - "Quãng thuần: hệ lên dây tính các quãng theo quãng tự nhiên thuần"
+      - well temperament
+      - "Bình quân cải tiến: một lối lên dây tuần hoàn"
+      - Còn gọi circular hay circulating temperament
+      - Pythagorean comma
+      - "Dấu phẩy Pythagore: độ lệch khi chuỗi quãng 5 thuần vòng về nốt xuất phát"
+      - Khoảng 0,24 nửa cung
+      - beats
+      - "Phách (tiếng đập): tiếng dao động khi hai âm hơi lệch tần số vang cùng lúc"
+      - Phách thưa dần khi hai âm tiến tới đồng âm
+    ly_do: "Hàng mới của bảng (mo/thuat-ngu, 10/11/2026): thuật ngữ thêm ở lô T1–T5, mỗi mục một bản ghi đã khóa, hồ sơ ở kiem-dinh/du-lieu/thuat-ngu/<id>.yml (kế hoạch mở rộng mục 5.3)."
+  - cu: null
+    moi:
+      - binary form
+      - "Hình thức hai đoạn: tác phẩm gồm hai phần chính"
+      - Mỗi phần thường được gọi là reprise
+      - ternary form
+      - "Hình thức ba đoạn: ba phần riêng biệt theo sơ đồ A–B–A"
+      - Phần cuối nhắc lại phần đầu (ABA, không phải ABC)
+      - theme and variations
+      - "Chủ đề và biến tấu: chủ đề rồi các lần nhắc lại có biến đổi"
+      - Có thể biến đổi tiết tấu, giai điệu, hòa âm, giọng, tốc độ hay phần đệm
+      - trio
+      - Đoạn giữa tương phản của minuet, scherzo hay hành khúc
+      - Cũng chỉ tác phẩm cho ba bè hay ba nhạc cụ
+      - bagatelle
+      - Khúc nhạc ngắn, nhẹ nhàng, thường cho piano
+      - mazurka
+      - Điệu múa dân gian Ba Lan nhịp ba, tốc độ vừa
+      - Nhạc thường ở nhịp 3/4 hoặc 3/8
+      - polonaise
+      - Điệu múa rước trang trọng của Ba Lan, nhịp 3/4 vừa phải
+      - waltz
+      - Điệu nhảy đôi nhịp 3/4, nhấn mạnh phách đầu
+      - invention
+      - Khúc phím ngắn viết đối âm hai hoặc ba bè
+      - prelude
+      - Khúc mở đầu; cũng là bản độc lập ngắn dựa trên một motif
+      - Bản độc lập thường viết cho piano hoặc dàn nhạc
+      - barcarolle
+      - Bài ca thuyền Venice, nhịp 6/8 hay 12/8 gợi nhịp chèo
+      - Cũng chỉ khúc nhạc mô phỏng bài ca thuyền
+      - impromptu
+      - Tác phẩm gợi tính ngẫu hứng
+      - ballade
+      - Tác phẩm, thường cho piano, gợi chất bản ballad tự sự
+      - intermezzo
+      - Khúc chen giữa các phần lớn; cũng là bản khí nhạc độc lập ngắn
+      - "Nghĩa gốc: màn chen ngắn, nhẹ giữa các hồi"
+      - rhapsody
+      - Tác phẩm hình thức tự do, mang tính ngẫu hứng
+      - toccata
+      - Tác phẩm phong cách tự do cho organ hay harpsichord, nhiều chạy ngón nhanh
+      - canon
+      - "Tác phẩm đối âm: các bè lần lượt vào nhắc lại cùng chủ đề"
+      - double fugue
+      - "Fugue kép: fugue có hai chủ đề"
+      - Hai chủ đề có thể trình bày riêng rồi kết hợp, hoặc cùng lúc ngay từ đầu
+      - fughetta
+      - Fugue ngắn
+      - passacaglia
+      - Biến tấu trên bè trầm lặp lại, nhịp ba khá chậm
+      - Gốc là một điệu nhạc múa cổ của Ý hoặc Tây Ban Nha
+      - chaconne
+      - Biến tấu trên chuỗi hợp âm lặp lại, nhịp ba vừa phải
+      - Điệu múa cổ thịnh hành ở Tây Ban Nha, có lẽ gốc Mỹ Latinh
+      - allemande
+      - Chương nhạc tốc độ vừa, nhịp hai hay bốn, trong tổ khúc Baroque
+      - Gốc là điệu múa cung đình Pháp phát triển từ múa dân gian Đức
+      - courante
+      - Điệu múa gốc Ý với bước chạy nhanh; nhạc nhịp ba nhanh
+      - Có khi trộn nhịp 3/2 và 6/4
+      - sarabande
+      - Điệu múa cung đình trang trọng, nhịp ba chậm, nhấn phách hai
+      - gigue
+      - Chương múa sôi nổi trong tổ khúc, nhịp ba kép, viết lối fugue
+      - quodlibet
+      - Sự kết hợp hóm hỉnh các giai điệu hay lời quen thuộc
+      - Lied
+      - Ca khúc nghệ thuật tiếng Đức
+      - Tiêu biểu là ca khúc thế kỷ 19
+      - recitative
+      - Lối hát gần lời nói, tiết tấu tự do
+      - Dùng cho đối thoại và tự sự trong opera, oratorio
+      - Singspiel
+      - Nhạc kịch Đức xen lời thoại nói với bài hát
+      - Thịnh hành ở Đức nhất là cuối thế kỷ 18
+      - chorale
+      - "Thánh ca: bài hymn hát trong nhà thờ theo giai điệu truyền thống"
+      - Cũng chỉ bản phối hòa âm một giai điệu chorale
+      - ritornello
+      - Đoạn khí nhạc ngắn trở lại nhiều lần; đoạn tutti trong concerto
+      - tutti
+      - Tất cả cùng diễn; đoạn do toàn bộ người diễn thể hiện
+      - concerto grosso
+      - "Tác phẩm Baroque: nhóm nhỏ độc tấu đối lập với cả dàn nhạc"
+      - serenade
+      - Tác phẩm nhiều chương cho nhóm nhỏ, giữa tổ khúc và giao hưởng
+      - "Nghĩa gốc: khúc hát hay khúc đàn dạo ngoài trời ban đêm tặng người yêu"
+      - divertimento
+      - Tác phẩm thính phòng nhiều chương, thường nhẹ nhàng
+      - march
+      - "Hành khúc: nhịp hai hay bốn, phách nhấn rõ, để đi đều theo"
+      - Ländler
+      - Điệu múa đôi nông thôn Áo nhịp ba, tiền thân của valse
+      - Chậm hơn valse, bước nhảy có dậm chân
+      - ballet
+      - Nghệ thuật sân khấu dùng múa, âm nhạc và cảnh trí để kể chuyện, thể hiện chủ đề hay không khí
+      - Cũng chỉ phần nhạc viết cho một vở ballet
+      - symphonic poem
+      - "Thơ giao hưởng: tác phẩm chương trình cho dàn nhạc, hình thức tự do"
+      - program music
+      - "Nhạc chương trình: âm nhạc gợi một chuỗi hình ảnh hay sự việc"
+      - concert overture
+      - "Overture hòa nhạc: tác phẩm dàn nhạc độc lập một chương"
+      - Thường viết theo hình thức sonata
+      - French overture
+      - "Overture Pháp: phần chậm trang trọng, nhịp chấm dôi, rồi phần nhanh mô phỏng"
+      - Do Lully định hình; theo Oxford có thể có đoạn chậm kết (chậm – nhanh – chậm)
+      - cantata
+      - Tác phẩm thanh nhạc có đệm, gồm đơn ca, song ca, hát nói, hợp xướng
+      - mass
+      - "Lễ misa: phổ nhạc các phần thường lệ của Thánh lễ"
+      - transcription
+      - "Chuyển soạn: soạn lại tác phẩm cho nhạc cụ hay giọng khác bản gốc"
+      - subject
+      - "Chủ đề: giai điệu ngắn làm nền cho fugue, trở lại suốt bài"
+      - answer
+      - "Đáp đề: chủ đề fugue nhắc lại ở cao độ khác"
+      - Đôi khi hơi biến đổi so với chủ đề
+      - countersubject
+      - "Đối đề: bè giai điệu đi cùng, bổ sung cho chủ đề hay đáp đề"
+      - episode
+      - "Đoạn chuyển trong fugue: đoạn giữa các lần vào của chủ đề, không có chủ đề trọn vẹn"
+      - Trong rondo, episode là các đoạn xen không phải chủ đề chính
+      - stretto
+      - Các lần vào của chủ đề chồng gối nhau trong fugue
+      - Cũng chỉ đoạn kết diễn với tốc độ nhanh hơn
+    ly_do: "Hàng mới của bảng (mo/thuat-ngu, 10/11/2026): thuật ngữ thêm ở lô T1–T5, mỗi mục một bản ghi đã khóa, hồ sơ ở kiem-dinh/du-lieu/thuat-ngu/<id>.yml (kế hoạch mở rộng mục 5.3)."
+  - cu: null
+    moi:
+      - Nhạc cụ và giọng hát
+      - Thuật ngữ
+      - Nghĩa
+      - Ghi chú
+      - fortepiano
+      - Piano đời đầu, thế kỷ 18 – đầu thế kỷ 19
+      - Âm vực hẹp hơn, tiếng mềm hơn piano hiện đại
+      - harpsichord
+      - Đàn phím có dây được gảy bằng miếng gảy
+      - Dáng giống grand piano, thường có hai bàn phím
+      - strings
+      - "Bộ dây: các nhạc cụ dây của dàn nhạc"
+      - woodwind
+      - "Bộ gỗ: nhóm nhạc cụ hơi như flute, clarinet, oboe, bassoon"
+      - Phát âm nhờ dăm rung hoặc luồng hơi qua lỗ thổi
+      - brass
+      - "Bộ đồng: các nhạc cụ đồng của dàn nhạc"
+      - percussion
+      - "Bộ gõ: các nhạc cụ gõ của dàn nhạc"
+      - viola
+      - Đàn họ violin, cỡ và âm vực giữa violin và cello
+      - Lên dây thấp hơn violin một quãng 5
+      - cello
+      - Đàn trầm của họ violin
+      - Lên dây thấp hơn viola một quãng 8
+      - double bass (contrabass)
+      - "Contrabass: đàn dây lớn nhất, trầm nhất, lên dây theo quãng 4"
+      - "Tiếng Anh: double bass hay contrabass"
+      - oboe
+      - Kèn dăm kép bộ gỗ, ống hình nón, tiếng sáng và sắc
+      - oboe d'amore
+      - Oboe giọng mezzo-soprano, loa hình quả lê
+      - Tiếng đầy và trầm buồn
+      - cor anglais
+      - Kèn dăm kép họ oboe, ống dài hơn, thấp hơn oboe một quãng 5
+      - "Tiếng Anh Mỹ: English horn; tiếng Ý: corno inglese"
+      - bassoon
+      - Kèn dăm kép trầm, ống hình nón gập chữ U
+      - basset horn
+      - Clarinet giọng tenor cung Fa, thấp hơn clarinet thường
+      - horn (French horn)
+      - Kèn đồng cuộn tròn, có van, ống hình nón
+      - Thường gọi tắt là horn
+      - timpani
+      - Bộ trống định âm (kettledrum) do một người chơi
+      - snare drum
+      - Trống nhỏ hai mặt, có dây snare căng ở mặt dưới
+      - celesta
+      - Đàn phím có búa gõ vào thanh thép
+      - Tiếng gần giống glockenspiel
+      - piccolo
+      - Sáo nhỏ, cao hơn flute một quãng 8
+      - open string
+      - "Dây buông: dây đàn chơi không bấm ngón"
+      - single reed
+      - "Dăm đơn: một lá dăm buộc vào ống ngậm bằng khóa dăm"
+      - Dùng cho họ clarinet và saxophone
+      - embouchure
+      - "Khẩu hình thổi: cách đặt và dùng môi, lưỡi, răng khi chơi nhạc cụ hơi"
+      - "Nghĩa khác: ống ngậm, lỗ thổi"
+      - soprano
+      - Giọng hát cao nhất của nữ hoặc trẻ em trai
+      - Cũng là bè cao nhất trong hợp xướng bốn bè
+      - mezzo-soprano
+      - Giọng nữ có âm vực giữa soprano và contralto
+      - alto (contralto)
+      - Giọng nữ trầm nhất (contralto)
+      - Cũng là bè cao thứ hai trong hợp xướng bốn bè
+      - tenor
+      - Giọng nam tự nhiên cao nhất
+      - Cũng là bè thứ hai từ dưới lên trong hợp xướng bốn bè
+      - baritone
+      - Giọng nam có âm vực giữa bass và tenor
+      - bass
+      - Giọng nam trầm nhất
+      - coloratura
+      - Lối hát hoa mỹ, nhiều nét trang trí
+      - Cũng chỉ giọng soprano nhẹ, linh hoạt chuyên lối hát này
+      - score (full score)
+      - "Tổng phổ: bản nhạc ghi đủ mọi bè của tác phẩm"
+      - Mỗi bè thường nằm trên một khuông riêng
+      - conductor
+      - "Nhạc trưởng: người chỉ huy dàn nhạc, hợp xướng"
+      - concertmaster
+      - Người đứng đầu bè violin I của dàn nhạc
+      - Theo lệ thường là trợ lý của nhạc trưởng
+      - orchestration
+      - "Phối khí: soạn, sắp xếp tác phẩm cho dàn nhạc"
+    ly_do: "Hàng mới của bảng (mo/thuat-ngu, 10/11/2026): thuật ngữ thêm ở lô T1–T5, mỗi mục một bản ghi đã khóa, hồ sơ ở kiem-dinh/du-lieu/thuat-ngu/<id>.yml (kế hoạch mở rộng mục 5.3)."
+  - cu: null
+    moi: "id: nhac-cu-va-giong-hat"
+    ly_do: "Hàng mới của bảng (mo/thuat-ngu, 10/11/2026): thuật ngữ thêm ở lô T1–T5, mỗi mục một bản ghi đã khóa, hồ sơ ở kiem-dinh/du-lieu/thuat-ngu/<id>.yml (kế hoạch mở rộng mục 5.3)."
+mo_khoa:
+  - ngay: 2026-11-10
+    nhanh: mo/thuat-ngu
+    ly_do: "Thêm 228 thuật ngữ (mo/thuat-ngu, lô T1–T5, kế hoạch mở rộng mục 5.3): bảng các nhóm có thêm hàng; nhóm mới Nhạc cụ và giọng hát."

@@ -222,7 +222,7 @@ test('bản build: trang của lô D3-L5 không còn ô "chưa chuyển"; công 
 	assert.match(amHoc, /aria-label="Biên độ âm thanh khi bồi âm 5 của Đô4 gặp bồi âm 4 của Mi4/);
 	const tuDienHtml = doc('nhac-ly/tu-dien');
 	assert.ok(tuDienHtml.includes('class="oz-the-nho oz-tool'));
-	assert.equal((tuDienHtml.match(/<th[^>]*>Thuật ngữ<\/th>/g) ?? []).length, 10, 'mười bảng thuật ngữ cho thẻ ghi nhớ');
+	assert.equal((tuDienHtml.match(/<th[^>]*>Thuật ngữ<\/th>/g) ?? []).length, 11, 'mười một bảng thuật ngữ cho thẻ ghi nhớ (thêm Nhạc cụ và giọng hát ở mo/thuat-ngu)');
 	const mucLuc = doc('nhac-ly/');
 	assert.match(mucLuc, /<div class="oz-lesson-status">\s*<div class="oz-trang-thai-bai/);
 });

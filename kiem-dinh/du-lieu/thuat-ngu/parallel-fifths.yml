@@ -1,0 +1,52 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/thuat-ngu/parallel-fifths
+ban_ghi: thuat-ngu/parallel-fifths
+lan:
+  - so: 1
+    ngay: 2026-11-10
+    nhanh: mo/thuat-ngu
+    ma_bam: sha256:065ef1f160e839883fb47eec346e32c2903c85fd7f0c216eb024e9a7f1235702
+    nguoi:
+      luot_1: Claude (agent con, mo/thuat-ngu lô T4 lượt 1, 10/11/2026)
+      luot_2: Claude (agent con khác, lượt 2 độc lập lô T4, không đọc lượt 1, 10/11/2026)
+      review: 'Claude Opus 5.5 (người gom mo/thuat-ngu: review mọi câu hai lượt khác nhau và các đề xuất của lượt 2, 10/11/2026)'
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo (chủ repo giao làm trọn phần thuật ngữ, 10/11/2026): 10 mục mẫu ngẫu nhiên, 2 mục mỗi lô (ritornello, intermezzo, ritenuto, larghetto, tie, natural-minor, passing-tone, well-temperament, horn, broken-chord), đọc lại chữ bản ghi với trích nguồn của hai lượt: 10 đúng, 0 sai (plans/ben-vung/bao-cao/mo-thuat-ngu.md)"
+ghi_chu: 'Thuật ngữ parallel fifths and octaves, nhóm Nhạc lý (Anh – Việt) (thêm ở mo/thuat-ngu, lô T4: hòa âm, đối âm, kết, âm học; danh sách gom từ ghi chú "thuat-ngu.yml chưa có" của các hồ sơ trang, kế hoạch mở rộng mục 5.3). Nhóm (nhom) và lời dịch tiếng Việt là lựa chọn của site, không phải nhận định; kiểm khái niệm khớp với nguồn. Nguồn đọc qua WebFetch ngày 10/11/2026.'
+nguon:
+  - id: omt1-basso-continuo
+    bac: 2
+    ten: Open Music Theory 1.0, "Composing in basso-continuo style"
+    link: https://openmusictheory.github.io/bassoContinuo.html
+  - id: omt1-first-species
+    bac: 2
+    ten: Open Music Theory 1.0, "Composing a first-species counterpoint"
+    link: https://openmusictheory.github.io/firstSpecies.html
+nhan_dinh:
+  - id: n1
+    cau: 'parallel fifths and octaves: quãng 5, quãng 8 song song, hai quãng 5 (hay 8) đúng liền nhau giữa hai bè.'
+    loai: dinh-nghia
+    truong:
+      - thuat_ngu
+      - nghia
+    nguon:
+      - omt1-first-species
+    ket_qua: dung
+    ghi_chu: 'OMT 1.0: "Never, ever, ever use two perfect consonances of the same size in a row: P5–P5 or P8–P8."'
+    luot_2: dung
+    luot_2_nguon:
+      - https://musictheory.pugetsound.edu/mt21c/ObjectionableParallels.html
+      - https://musictheory.pugetsound.edu/mt21c/TypesOfMotion.html
+    luot_2_ghi_chu: 'MT21C: "avoid having any two voices move in parallel fifths or parallel octaves".'
+  - id: n2
+    cau: 'parallel fifths and octaves: bị cấm trong dẫn bè chặt vì làm mất tính độc lập của các bè.'
+    loai: dinh-nghia
+    truong:
+      - ghi_chu
+    nguon:
+      - omt1-first-species
+      - omt1-basso-continuo
+    ket_qua: dung
+    ghi_chu: 'OMT 1.0: "significantly promote tonal fusion over melodic independence"; "No parallel fifths or octaves between any pair of voices"'
+    luot_2: dung
+    luot_2_nguon:
+      - https://musictheory.pugetsound.edu/mt21c/ObjectionableParallels.html
+    luot_2_ghi_chu: 'MT21C: "these objectional parallels were thought to destroy the independence of the voices."'

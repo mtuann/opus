@@ -50,3 +50,7 @@ Mỗi ngày site đưa ra tối đa 10 thẻ mới và các thẻ đến hạn �
 ## Kết cấu, hình thức và kỹ thuật thế kỷ 20
 
 ::tu-dien{nhom="Kết cấu, hình thức và kỹ thuật thế kỷ 20"}
+
+## Nhạc cụ và giọng hát
+
+::tu-dien{nhom="Nhạc cụ và giọng hát"}

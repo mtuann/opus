@@ -1,0 +1,57 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/thuat-ngu/concert-pitch
+ban_ghi: thuat-ngu/concert-pitch
+lan:
+  - so: 1
+    ngay: 2026-11-10
+    nhanh: mo/thuat-ngu
+    ma_bam: sha256:a7d39e262d3e4c79b60d00efd5df5d0c8be0e338635eaef862ea9320876b732e
+    nguoi:
+      luot_1: Claude (agent con, mo/thuat-ngu lô T3 lượt 1, 10/11/2026)
+      luot_2: Claude (agent con khác, lượt 2 độc lập lô T3, không đọc lượt 1, 10/11/2026)
+      review: 'Claude Opus 5.5 (người gom mo/thuat-ngu: review mọi câu hai lượt khác nhau và các đề xuất của lượt 2, 10/11/2026)'
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo (chủ repo giao làm trọn phần thuật ngữ, 10/11/2026): 10 mục mẫu ngẫu nhiên, 2 mục mỗi lô (ritornello, intermezzo, ritenuto, larghetto, tie, natural-minor, passing-tone, well-temperament, horn, broken-chord), đọc lại chữ bản ghi với trích nguồn của hai lượt: 10 đúng, 0 sai (plans/ben-vung/bao-cao/mo-thuat-ngu.md)"
+ghi_chu: 'Thuật ngữ concert pitch, nhóm Nhạc lý (Anh – Việt) (thêm ở mo/thuat-ngu, lô T3: nhạc lý: quãng, hợp âm, giọng, ký hiệu; danh sách gom từ ghi chú "thuat-ngu.yml chưa có" của các hồ sơ trang, kế hoạch mở rộng mục 5.3). Nhóm (nhom) và lời dịch tiếng Việt là lựa chọn của site, không phải nhận định; kiểm khái niệm khớp với nguồn. Nguồn đọc qua WebFetch ngày 10/11/2026.'
+nguon:
+  - id: dolmetsch-score-formats
+    bac: 2
+    ten: Dolmetsch Online, Music Theory Online, "Score Formats"
+    link: https://www.dolmetsch.com/musictheory26.htm
+  - id: dolmetsch-transposition
+    bac: 2
+    ten: Dolmetsch Online, Music Theory Online, "Transposition"
+    link: https://www.dolmetsch.com/musictheory19.htm
+  - id: encyclopedia-concert-pitch
+    bac: 2
+    ten: Encyclopedia.com, "concert pitch" (Oxford Pocket Dictionary of Current English)
+    link: https://www.encyclopedia.com/humanities/dictionaries-thesauruses-pictures-and-press-releases/concert-pitch
+nhan_dinh:
+  - id: n1
+    cau: 'concert pitch: cao độ thật, cao độ vang thực sự (đối với nhạc cụ dịch giọng).'
+    loai: dinh-nghia
+    truong:
+      - thuat_ngu
+      - nghia
+    nguon:
+      - dolmetsch-score-formats
+      - dolmetsch-transposition
+    ket_qua: dung
+    ghi_chu: 'Dolmetsch, Score Formats: "The Bb trumpet part is transposed a whole tone above concert/sounding pitch."'
+    luot_2: dung
+    luot_2_nguon:
+      - https://intmus.github.io/inttheory/12-reading-scores/a1-insttransandrange.html
+      - https://dev-dictionary.onmusic.org/terms/876-concert_pitch
+    luot_2_ghi_chu: 'OnMusic: "The pitch that non-transposing instruments sound."; Intmus: sounding pitch khác written pitch.'
+  - id: n2
+    cau: 'concert pitch: còn là chuẩn lên dây A = 440 Hz.'
+    loai: dinh-nghia
+    truong:
+      - ghi_chu
+    nguon:
+      - encyclopedia-concert-pitch
+    ket_qua: dung
+    ghi_chu: 'Oxford Pocket (Encyclopedia.com): "the note A above middle C has a frequency of 440 Hz"; M-W cũng chỉ ghi nghĩa "international pitch". Hai nghĩa cùng tồn tại, không mâu thuẫn'
+    luot_2: dung
+    luot_2_nguon:
+      - https://www.dictionary.com/browse/concert%20pitch
+      - https://dev-dictionary.onmusic.org/terms/876-concert_pitch
+    luot_2_ghi_chu: 'Dictionary.com: "the frequency of 440 hertz assigned to the A above middle C".'
