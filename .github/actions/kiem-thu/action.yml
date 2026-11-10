@@ -67,16 +67,24 @@ runs:
     # (DPkg::Lock::Timeout), rồi hoàn tất các gói cài dở.
     - name: Cài thư viện hệ thống cho ${{ steps.pw.outputs.trinh-duyet }}
       if: inputs.phan != 'npm-test'
+      # Trình duyệt mở được (thư viện đã có trên máy CI) thì bỏ qua apt, như job kiem của deploy.yml. 10/11/2026: lần 1 quá
+      # 4 phút, apt-get của nó (chạy qua sudo, không bị timeout giết) giữ khóa dpkg suốt lần 2 nên job webkit hỏng: trước
+      # lần 2 giết hẳn apt-get, dpkg còn sót rồi hoàn tất các gói cài dở.
       run: |
+        mo() { node -e "require('playwright')['$TRINH_DUYET'].launch().then((b) => b.close())" 2>/dev/null; }
+        if mo; then exit 0; fi
         for lan in 1 2; do
           if timeout --kill-after=20s 240 npx playwright install-deps "$TRINH_DUYET"; then exit 0; fi
           echo "::warning::Cài thư viện hệ thống cho $TRINH_DUYET lần $lan hỏng hay quá 4 phút"
           if [ "$lan" = 1 ]; then
+            sudo pkill -9 -x apt-get || true
+            sudo pkill -9 -x dpkg || true
+            sleep 2
             echo 'DPkg::Lock::Timeout "120";' | sudo tee /etc/apt/apt.conf.d/99opus-cho-khoa > /dev/null || true
-            timeout 60 sudo dpkg --configure -a || true
+            timeout 120 sudo dpkg --configure -a || true
           fi
         done
-        exit 1
+        mo || exit 1
       env:
         TRINH_DUYET: ${{ steps.pw.outputs.trinh-duyet }}
       shell: bash
