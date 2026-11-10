@@ -7,7 +7,7 @@ Cùng một cây đàn, cùng một bản nhạc, hai người chơi có thể c
 
 ## Tiếng piano sinh ra thế nào
 
-Khi bạn bấm phím, bộ máy đàn **ném** chiếc búa bọc nỉ vào dây. Ngay trước khi chạm dây, búa tách khỏi cơ cấu (cơ chế thoát, *escapement*) và bay tự do, đập vào dây rồi bật ra. Từ khoảnh khắc đó bạn không còn tác động gì lên nốt nhạc nữa. Bạn chỉ còn hai lựa chọn: **giữ** cho dây ngân (bằng phím hoặc [bàn đạp](/opus/piano/ban-dap/)), hoặc **dừng** nó (nhả phím, búa chặn tiếng rơi xuống dây).
+Khi bạn bấm phím, bộ máy đàn **ném** chiếc búa bọc nỉ vào dây. Ngay trước khi chạm dây, búa tách khỏi cơ cấu (cơ chế thoát, *escapement*) và bay tự do, đập vào dây rồi bật ra. Từ khoảnh khắc đó bạn không còn tác động gì lên nốt nhạc nữa. Bạn chỉ còn hai lựa chọn: **giữ** cho dây ngân (bằng phím hoặc [bàn đạp](/opus/piano/ban-dap/)), hoặc **dừng** nó (nhả phím, bộ giảm âm rơi xuống dây).
 
 ::hinh{ten="bo-may-dan"}
 

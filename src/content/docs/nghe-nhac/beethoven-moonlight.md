@@ -23,6 +23,10 @@ Nghe kỹ **tay trái**: các quãng tám trầm (mở đầu là Đô♯ – Si
 
 Muốn tự chơi chương này? Xem [bài học tác phẩm *Ánh trăng*, chương 1](/opus/piano/tac-pham/beethoven-anh-trang/): cấu trúc từng đoạn, cách tập ba lớp âm thanh và chỉ dẫn bàn đạp *senza sordino*.
 
+## Sơ đồ cấu trúc
+
+::hinh-cau-truc
+
 ## Nghe kèm bản thu
 
 ::khoi-nghe{moc="5 27 112 149 195 282"}

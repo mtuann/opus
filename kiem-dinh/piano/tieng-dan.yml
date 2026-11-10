@@ -30,6 +30,15 @@ lan:
       luot_2: 'Claude Opus 5.5 (lượt 2 đợt hình 4, 09/11/2026)'
       review: 'Claude Opus 5.5 (review đợt hình 4, 09/11/2026; không làm lượt 1, lượt 2): n85, n86 (quy-tac), n87 (ve-site): 3 câu, 3 dung; cùng hình bo-may-dan với lich-su-dan n73–n75; đối chiếu chữ trang và dist/ bản xem'
       kiem_mau: 'Claude Opus 5.5 (người gom đợt hình 4, kiểm thay chủ repo theo lời giao, 09/11/2026): mẫu n85, n87: nguồn như n73 của lich-su-dan (Kawai, mở lại); n87 đối chiếu đoạn đầu mục với hình trên dist/: 2 đúng, 0 sai'
+  - so: 4
+    ngay: 2026-11-09
+    nhanh: mo/chuan-hoa-hinh
+    ma_bam: sha256:0acfa1c1f74009b3893c678264102e13bf1992e41882fdadf391837795f7b125
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/chuan-hoa-hinh, 09/11/2026: thống nhất tên bộ giảm âm)"
+      luot_2: "không có lượt 2: chỉ đổi tên gọi của cùng bộ phận, nguồn của n3 giữ nguyên"
+      review: Claude Opus 5.5 (mo/chuan-hoa-hinh, 09/11/2026)
+      kiem_mau: chủ repo yêu cầu chuẩn hóa sau đợt hình (09/11/2026); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
 nguon:
   - id: wiki-action
     bac: 3
@@ -175,16 +184,17 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.speech.kth.se/music/5_lectures/askenflt/pianist.html", "https://www.speech.kth.se/music/5_lectures/askenflt/askenflt.html" ]
     luot_2_ghi_chu: "Askenfelt: người chơi chỉ điều khiển gián tiếp qua tốc độ búa; độ to tương đối và thời điểm giữa các nốt quyết định cân bằng. Thời điểm nhả phím và bàn đạp là kiến thức nền (Oxford legato nói về giữ phím)."
   - id: n3
-    cau: Khi bấm phím, búa bọc nỉ tách khỏi cơ cấu ngay trước khi chạm dây (cơ chế thoát, escapement), bay tự do, đập dây rồi bật ra; từ đó người chơi không còn tác động lên nốt nữa, chỉ còn giữ (phím hoặc bàn đạp) hoặc dừng (nhả phím, búa chặn rơi xuống dây).
+    cau: Khi bấm phím, búa bọc nỉ tách khỏi cơ cấu ngay trước khi chạm dây (cơ chế thoát, escapement), bay tự do, đập dây rồi bật ra; từ đó người chơi không còn tác động lên nốt nữa, chỉ còn giữ (phím hoặc bàn đạp) hoặc dừng (nhả phím, bộ giảm âm rơi xuống dây).
     loai: cau-truc
     nguon:
       - askenfelt-hammer
       - yamaha-mech
-    ket_qua: dung
-    ghi_chu: "Askenfelt: búa chuyển động tự do sau khi thoát; người chơi chỉ quyết định được vận tốc cuối. Yamaha: cơ cấu thoát tách búa khỏi phím."
+    ket_qua: da-sua
+    ghi_chu: "Askenfelt: búa chuyển động tự do sau khi thoát; người chơi chỉ quyết định được vận tốc cuối. Yamaha: cơ cấu thoát tách búa khỏi phím. mo/chuan-hoa-hinh (09/11/2026): \"búa chặn tiếng\" thành \"bộ giảm âm\" (damper): cùng bộ phận, đổi cho thống nhất với hình bo-may-dan, trang ban-dap, lich-su-dan và Từ điển (src/data/thuat-ngu.yml). Nội dung câu không đổi; nguồn như trên (Yamaha: bộ giảm âm rơi xuống dây khi nhả phím)."
     luot_2: dung
     luot_2_nguon: [ "https://www.speech.kth.se/music/5_lectures/askenflt/pianist.html", "https://www.speech.kth.se/music/5_lectures/askenflt/timing.html" ]
     luot_2_ghi_chu: "Askenfelt: 'the mechanical contact between the key and the hammer is broken before the hammer strikes the string'; cơ cấu thoát (escapement) làm búa bay tự do."
+    review: dung
   - id: n4
     cau: Độ to phụ thuộc vào tốc độ búa, tức tốc độ phím đi xuống, không phải lực ấn vào đáy phím; ấn thêm sau khi nốt đã kêu không làm nốt to hơn.
     loai: quy-tac
@@ -895,11 +905,11 @@ nhan_dinh:
     luot_2_ghi_chu: 'Nguồn bậc 2 độc lập: (1) Alexander US 4.856.402 (bộ máy đàn cánh): "As the hammer 72 approaches the string 74, the jack tender 54 is tripped by the letoff button 56 and the jack 46 disengages" (con đẩy thoát ngay trước khi búa tới dây, búa đi nốt bằng quán tính); "when the key 30 is at full dip, the hammer 72 will fully descend and be caught in the backcheck 36. When pressure on the key 30 is relaxed, the backcheck 36 releases the hammer". (2) Howard Piano Industries (backcheck distance): búa "comes back down and the tail of the hammer catches on the back check ... it catches the hammer so it doesn''t fall down. So far, if we go all the way to rest, then it''s much further from the string"; checking distance thường "between a 1/2 inch and 5/8 of an inch" từ dây (búa giữ ở lưng chừng, cao hơn chỗ nghỉ). (3) Kawai US 5.932.820 A: bấm phím thì bộ giảm âm "rise to leave the string S ... before the hammer ... strikes the string"; "after the depressed key is released, the damper lever rotates in the reverse direction by its own weight to cause the damper head to fall so that the damper head comes in contact with the string ... stopping the sound". Cùng hình với lich-su-dan n74. Kết luận: đúng; ba thẻ khớp (phím nghỉ: giảm âm trên dây; bấm: đầu phím xuống, đuôi lên, con đẩy thoát, búa gõ, giảm âm nhấc; giữ: búa rơi về lưng chừng, giảm âm vẫn nhấc; nhả: giảm âm rơi, tiếng tắt). Hình không cần sửa.'
     review: dung
   - id: n87
-    cau: 'Hình bo-may-dan đặt sau đoạn đầu mục "Tiếng piano sinh ra thế nào" và vẽ lại đoạn ấy: bộ máy ném búa vào dây, búa tách khỏi cơ cấu ngay trước khi chạm dây (cơ chế thoát), bay tự do, đập vào dây rồi bật ra; sau đó chỉ còn giữ cho dây ngân hoặc dừng nó (nhả phím, bộ giảm âm rơi xuống dây). Trang gọi bộ giảm âm là "búa chặn tiếng"; hình dùng tên "bộ giảm âm" như trang ban-dap và lich-su-dan.'
+    cau: 'Hình bo-may-dan đặt sau đoạn đầu mục "Tiếng piano sinh ra thế nào" và vẽ lại đoạn ấy: bộ máy ném búa vào dây, búa tách khỏi cơ cấu ngay trước khi chạm dây (cơ chế thoát), bay tự do, đập vào dây rồi bật ra; sau đó chỉ còn giữ cho dây ngân hoặc dừng nó (nhả phím, bộ giảm âm rơi xuống dây).'
     loai: ve-site
     nguon: []
-    ket_qua: dung
-    ghi_chu: 'Đối chiếu đoạn đầu mục "Tiếng piano sinh ra thế nào" của src/content/docs/piano/tieng-dan.md với chữ trong src/components/hinh/bo-may-dan.html.'
+    ket_qua: da-sua
+    ghi_chu: 'Đối chiếu đoạn đầu mục "Tiếng piano sinh ra thế nào" của src/content/docs/piano/tieng-dan.md với chữ trong src/components/hinh/bo-may-dan.html. mo/chuan-hoa-hinh (09/11/2026): trang nay cũng gọi "bộ giảm âm" như hình (n3); bỏ vế nói trang gọi khác.'
     review: dung
 khuong_nhac:
   - khoi: 1
@@ -1013,6 +1023,9 @@ doi_chu:
   - cu: "câu hỏi: *sf* trong một đoạn *p* nghĩa là gì? | Chơi *ff* | ✓ Nhấn rõ so với xung quanh, không nhất thiết to như *f* | Chơi nhỏ đột ngột | sforzando là nhấn tương đối, theo ngữ cảnh."
     moi: "câu hỏi: sf (sforzando) yêu cầu gì? | Chơi nhỏ đột ngột | ✓ Nhấn mạnh, đột ngột một nốt hay hợp âm | Giữ nốt thêm một phách | sforzando, viết tắt sf hay sfz: nhấn mạnh một nốt hay hợp âm. Trong đoạn p, nhấn đến đâu thì nghe theo câu nhạc."
     ly_do: 'Chuyển trang: site cũ hiện nguyên dấu * trong câu hỏi (quiz cũ không dựng Markdown); site mới dựng chữ nghiêng như AGENTS.md quy định cho câu hỏi.; n72 (da-sua, review D4-gom): câu hỏi theo định nghĩa của ODM; bỏ "nhấn tương đối" (không nguồn).; n72 (da-sua, review D4-gom): lời giải thích theo ODM.'
+  - cu: "Khi bạn bấm phím, bộ máy đàn ném chiếc búa bọc nỉ vào dây. Ngay trước khi chạm dây, búa tách khỏi cơ cấu (cơ chế thoát, escapement) và bay tự do, đập vào dây rồi bật ra. Từ khoảnh khắc đó bạn không còn tác động gì lên nốt nhạc nữa. Bạn chỉ còn hai lựa chọn: giữ cho dây ngân (bằng phím hoặc bàn đạp), hoặc dừng nó (nhả phím, búa chặn tiếng rơi xuống dây)."
+    moi: "Khi bạn bấm phím, bộ máy đàn ném chiếc búa bọc nỉ vào dây. Ngay trước khi chạm dây, búa tách khỏi cơ cấu (cơ chế thoát, escapement) và bay tự do, đập vào dây rồi bật ra. Từ khoảnh khắc đó bạn không còn tác động gì lên nốt nhạc nữa. Bạn chỉ còn hai lựa chọn: giữ cho dây ngân (bằng phím hoặc bàn đạp), hoặc dừng nó (nhả phím, bộ giảm âm rơi xuống dây)."
+    ly_do: 'n3 (mo/chuan-hoa-hinh, 09/11/2026): "búa chặn tiếng" thành "bộ giảm âm", thống nhất với hình bo-may-dan, ban-dap, lich-su-dan, Từ điển.'
 ghi_chu: 'Review D4-gom (nhóm C, 28/10/2026): quyết các câu null và khong-chac; sửa trang ở n33, n35, n38, n41 (bỏ câu lặp), n47, n57, n59, n63, n65, n67, n72; bảng "Phát âm theo phong cách" và các câu lời khuyên (n39, n47, n61–n65, n67) đổi nhãn thành khuyen-tap; năm câu tả khối abc (n25, n34, n43, n48, n52) đổi nhãn thành ve-site. Không có câu "tai người nghe theo bè trên" trên trang này.'
 mo_khoa:
   - ngay: 2026-11-06
@@ -1021,3 +1034,6 @@ mo_khoa:
   - ngay: 2026-11-09
     nhanh: mo/hinh-dot-4
     ly_do: "Đợt hình 4 (plans/ben-vung/de-xuat-hinh.md, đề xuất 12 và 15): thêm hình bộ máy đàn, bộ giảm âm và bàn đạp, ghế cao vừa thấp; hình đưa thông tin mới nên đi thủ tục đủ (chuan-kiem-dinh.md mục 7)"
+  - ngay: 2026-11-09
+    nhanh: mo/chuan-hoa-hinh
+    ly_do: 'mo/chuan-hoa-hinh: thống nhất tên bộ phận: "búa chặn tiếng" thành "bộ giảm âm" như hình bo-may-dan, trang ban-dap, lich-su-dan và Từ điển (báo cáo hinh-dot-4, mục Còn mở)'
