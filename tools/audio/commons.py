@@ -116,6 +116,26 @@ def wikitext(name):
     return revs[0]["slots"]["main"]["content"] if revs else ""
 
 
+LIC_TEMPLATE = __import__("re").compile(r"\{\{\s*(?:self\s*\|[^}]*?)?((?:cc-[a-z-]+-\d(?:\.\d)?(?:-[a-z]{2})?)|cc-zero|cc0|pd-[a-z0-9-]+|pd)\b", __import__("re").I)
+
+
+def license_templates(text):
+    """Các giấy phép (tên ghi trên trang, như licenses.parse) đọc được từ mẫu giấy phép trong wikitext: {{Cc-by-sa-3.0}},
+    {{self|cc-by-sa-4.0}}, {{PD-old}}… Trang mô tả có thể có cả mẫu phạm vi công cộng cho tác phẩm và mẫu CC cho bản thu;
+    LicenseShortName của API chỉ trả một trong số đó (kế hoạch mở rộng, nợ kỹ thuật 4; sửa 09/11/2026)."""
+    found = []
+    for m in LIC_TEMPLATE.finditer(text or ""):
+        t = m.group(1).lower()
+        name = "Public domain" if t.startswith("pd") else ("CC0" if t in ("cc-zero", "cc0") else t.replace("cc-", "CC ", 1).replace("-", " ", 1).replace("by sa", "by-sa"))
+        try:
+            lab = licenses.parse(name)[0]
+        except ValueError:
+            continue
+        if lab not in found:
+            found.append(lab)
+    return found
+
+
 def search(query, limit=20):
     d = api(action="query", generator="search", gsrnamespace="6", gsrlimit=str(limit), gsrsearch="filetype:audio " + query, **PROPS)
     return sorted((row(p) for p in d.get("query", {}).get("pages", [])), key=lambda r: r["title"])

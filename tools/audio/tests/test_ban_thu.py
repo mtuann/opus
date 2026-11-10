@@ -418,3 +418,12 @@ class HamNho(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class LicenseTemplates(unittest.TestCase):
+    def test_license_templates(self):
+        import commons
+        text = "{{Information|...}}\n== {{int:license-header}} ==\n{{PD-old}}\n{{self|cc-by-sa-3.0}}\n{{Cc-by-4.0}}\n{{cc-by-nc-2.0}}"
+        self.assertEqual(commons.license_templates(text), ["phạm vi công cộng", "CC BY-SA 3.0", "CC BY 4.0"])
+        self.assertEqual(commons.license_templates("{{Cc-zero}}"), ["CC0"])
+        self.assertEqual(commons.license_templates(""), [])

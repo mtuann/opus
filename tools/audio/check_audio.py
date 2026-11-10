@@ -272,7 +272,16 @@ def main(argv=None):
             if abs(r["d"] - (p.get("d") or 0)) > D_TOL:
                 errs.append("%s phần %d: d = %s nhưng file Commons dài %.2f giây" % (where, i, p.get("d"), r["d"]))
             if r["lic"] != rec.get("lic"):
-                errs.append("%s phần %d: Commons ghi giấy phép %r (%s), bản ghi ghi %r" % (where, i, r["lic_raw"], r["lic"] or r["why"], rec.get("lic")))
+                # trang mô tả có nhiều mẫu giấy phép (tác phẩm và bản thu): API chỉ trả một; nhận khi giấy phép của bản ghi
+                # có trong các mẫu của trang (commons.license_templates)
+                try:
+                    khac = commons.license_templates(commons.wikitext(t))
+                except (OSError, RuntimeError, ValueError, http.client.HTTPException):
+                    khac = []
+                if rec.get("lic") in khac:
+                    warns.append("%s phần %d: Commons có nhiều giấy phép %s; API trả %r, bản ghi ghi %r (có trong trang)" % (where, i, khac, r["lic_raw"], rec.get("lic")))
+                else:
+                    errs.append("%s phần %d: Commons ghi giấy phép %r (%s), bản ghi ghi %r" % (where, i, r["lic_raw"], r["lic"] or r["why"], rec.get("lic")))
 
     for w in warns:
         print("chú ý:", w)

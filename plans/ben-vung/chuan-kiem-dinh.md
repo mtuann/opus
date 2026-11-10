@@ -58,6 +58,14 @@ Ghi từ đợt 2, để lô sau khỏi mò lại. Thấy cách mới thì thêm
 | Bach-Digital | Trang web chặn bot. Dùng IMSLP, Henle, hay API của Bach-Digital nếu mở được |
 | Köchel online, Beethoven-Haus | Trang tác phẩm mở được |
 | PubMed | Trang web chặn bot: đọc bản ghi qua NCBI E-utilities, dẫn link PubMed |
+| Brahms-Portal | Ảnh bản thảo và thư qua IIIF (`…/iiif/…/manifest`), mô tả qua LIDO XML; trang HTML có khi chặn |
+| Thư viện Quốc gia Na Uy | `api.nb.no` (tìm và đọc bản số hóa, như thư của Grieg) |
+| Bärenreiter | Lời tựa ấn bản: `…/prefaces/<ISMN>.pdf` |
+| British Library | Mục lục bản chép tay: `searcharchives.bl.uk` với đuôi `.json` |
+| IMSLP (dữ liệu) | API MediaWiki: `imslp.org/api.php?action=parse&page=<trang>&prop=wikitext&format=json` (người biểu diễn, giấy phép bản thu, ấn bản); không tải PDF qua cổng tải |
+| Wikimedia Commons | API: `commons.wikimedia.org/w/api.php?action=query&titles=File:<tên>&prop=imageinfo&iiprop=extmetadata` (giấy phép, độ dài); trang có nhiều mẫu giấy phép thì đọc wikitext (`tools/audio/commons.py`, `license_templates`) |
+| Mutopia | Khi mutopiaproject.org bị chặn: bản LilyPond trên GitHub, `raw.githubusercontent.com/MutopiaProject/MutopiaProject/master/ftp/<Tác giả>/…` |
+| KernScores | Khi kern.humdrum.org bị chặn: các kho của Craig Sapp trên GitHub (`raw.githubusercontent.com/craigsapp/<kho>/master/kern/…`), như `beethoven-piano-sonatas`, `scarlatti-keyboard-sonatas` (59 sonata, tên `L<số Longo>K<số Kirkpatrick>.krn`) |
 | Nhạc sĩ Việt Nam | `hoinhacsi.vn` (Hội Nhạc sĩ Việt Nam); báo chính thức (Nhân Dân) khi không có nguồn tốt hơn, ghi rõ loại nguồn. Vài trang cơ quan lỗi chứng chỉ |
 
 - Hết lượt tìm kiếm của công cụ (WebSearch) thì tìm tạm qua `https://html.duckduckgo.com/html/?q=<từ khóa>`; vẫn chỉ ghi vào hồ sơ trang đã mở, không ghi trang kết quả tìm kiếm.

@@ -117,7 +117,11 @@ export function mount(goc) {
 		const dur = (Date.now() - d.bat) / 1000;
 		const ten = (oTen.value.trim() || `Bản thu ${new Date().toLocaleString('vi-VN')}`).slice(0, 80);
 		try {
-			await idb('readwrite', (s) => s.put({ id: Date.now(), label: ten, date: homNay(), dur, mime: blob.type, blob }));
+			// id là Date.now() như site cũ, nhưng luôn lớn hơn mọi id đã có: hai bản lưu trong cùng một mili giây (hay đồng hồ
+			// làm tròn, như Firefox) không ghi đè nhau, bản mới luôn ở trên (kiểm thử chập chờn, kế hoạch mở rộng mục 7)
+			const ids = ((await idb('readonly', (s) => s.getAllKeys())) || []).map(Number).filter(Number.isFinite);
+			const id = Math.max(Date.now(), ...ids.map((x) => x + 1));
+			await idb('readwrite', (s) => s.put({ id, label: ten, date: homNay(), dur, mime: blob.type, blob }));
 			bao(`Đã lưu “${ten}” (${thoiGian(dur)}).`, 'ok');
 			ghiNgay('minutes', soPhut(dur));
 		} catch {
