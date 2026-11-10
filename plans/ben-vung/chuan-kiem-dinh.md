@@ -134,6 +134,8 @@ khuong_nhac:
 
 Giá trị `ket_qua`: `dung`, `da-sua` (kèm `ghi_chu`), `da-bo` (đã bỏ câu khỏi trang, kèm `ghi_chu`), `khong-can-nguon` (chỉ cho `khuyen-tap`).
 
+**`ghi_chu` ghi theo lúc kiểm** (chủ repo giao Claude chốt ngày 09/11/2026, kế hoạch mở rộng 4.3.4): hồ sơ là nhật ký kiểm định, nên không viết lại `ghi_chu` cũ khi site đổi sau đó. Khoảng 200 hồ sơ còn ghi "chưa chuyển", "sắp có": nghĩa là lúc kiểm, trang đích chưa lên site mới; từ 07/11/2026 mọi trang đã có (kiểm thử link nội bộ của bản thật bắt link hỏng). Ghi chú "Còn mở" mà sau đã xong thì nối một câu có ngày, không xóa câu cũ. Mở khóa trang vì lý do khác thì tiện sửa ghi chú của nhận định bị chạm.
+
 Kết quả lượt 2 vào hồ sơ bằng `node tools/khoa.mjs nhap <file lượt 2>`, không chép tay. Mỗi nhận định có thêm `luot_2`, `luot_2_nguon` (link lượt 2 đã mở) và `luot_2_ghi_chu` (câu đúng, ghi chú). Lệnh in các nhận định cần review: hai lượt khác nhau, hay lượt 1 đã sửa, đã bỏ, chưa có kết quả. Hồ sơ bản ghi dữ liệu nên ghi thêm `truong` ở mỗi nhận định (các trường mà nhận định nói tới), để biết khóa trường nào.
 
 Link trong `nguon` phải là trang đã mở và đọc, không phải kết quả tìm kiếm. Sách in ghi tên sách, lần in, số trang.
