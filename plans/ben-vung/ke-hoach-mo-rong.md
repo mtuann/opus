@@ -16,7 +16,7 @@ Cách làm: bốn agent đọc các báo cáo (`plans/lam-lai/bao-cao/`, `plans/
 | Việc | Cách làm | Ai | Cỡ |
 |---|---|---|---|
 | Đã làm 09/11/2026 (không cần chủ repo): menu và sách theo chặng; mô tả trang trọn câu (`src/mo-ta.mjs`); CI gọn (`test.yml` chạy tay, `deploy.yml` một job); đợt hình 1–4 và chuẩn hóa hình (`bao-cao/chuan-hoa-hinh.md`); rà trang tổng quan (`bao-cao/mo-tong-quan.md`) | | agent | |
-| Phần còn lại của đợt 9 | Theo `plans/lam-lai/bao-cao/d9.md` mục Việc còn lại: Lighthouse và kiểm link trên site thật sau khi đăng; theo dõi lỗi hai tuần (tới 21/11/2026); đổi hàng đợt 9 của bảng Tiến độ thành "Xong" | agent, chủ repo | nhỏ |
+| Phần còn lại của đợt 9 | **Đã làm 10/11/2026**: Lighthouse và kiểm link trên site thật, sửa link OMT (issue #1), hàng đợt 9 của bảng Tiến độ ghi "Xong". Còn theo dõi lỗi tới 21/11/2026 | chủ repo | nhỏ |
 | Chạy tay hai workflow hằng tuần lần đầu | Tab Actions: `ra-lai.yml`, `kiem-link.yml` (chưa chạy thật lần nào, `d8-gom`) | chủ repo | nhỏ |
 | Chủ repo đọc lại phần kiểm mẫu Claude làm thay | Đọc `kiem-mau-ket-qua.yml` của d7, d8, d6-l1…l11; các câu "đúng có điều kiện" ghi rõ phần nào chưa kiểm lại | chủ repo | vừa |
 | Repo cũ `mtuann/opus-zero` | Tạo release `v15` ở `5d08189`; quyết tắt hay giữ Pages. Site mới không còn nhắc hay trỏ tới site cũ (`mo/bo-opus-zero`, 09/11/2026) | chủ repo | nhỏ |
@@ -107,12 +107,14 @@ Mỗi việc theo thủ tục mở khóa (`plans/ben-vung/chuan-kiem-dinh.md` m�
 ### 5.2 Bản thu và mốc
 
 - Mốc chưa đo: `schubert-impromptu` dòng 3 **đã đo** (09/11/2026, `tools/audio/align`, bản nhạc ASAP: ô 24 ở 94 giây); Scarlatti K. 380 dòng 2 **đã đo** (09/11/2026, MIDI IMSLP: ô 19 ở 37 giây). Còn lại cần người nghe đo tay (không có bản nhạc số để căn): `mozart-concerto-21` dòng 10; Gershwin 6 dòng; Grieg 3 dòng; Rachmaninoff 1 dòng. Ghi bằng `tools/audio/attach.py --ref`. `d6-l5`, `d6-l7-gom`, `d6-l8-gom`. Vừa.
-- Thiếu bản thu: bảy trang không có bản thu (có `mozart-requiem`), K. 141, K. 466; K. 545 chỉ có chương 1; có thể thêm Mùa đông chương 1 (John Harrison, CC BY-SA 4.0). Theo dõi các bản thu cũ vào phạm vi công cộng ở Mỹ: 2028 (Pertile, Kennedy Scott, Landon Ronald), 2030 (Koussevitzky), 2031 (Ravel), 2034 (Barbirolli).
+- Thiếu bản thu: **đã làm phần lớn (10/11/2026, `mo/ban-thu`)**: 13 hướng dẫn nghe có bản thu Commons dùng tự do ở Mỹ (Bach Air, Tổ khúc cello 1, Beethoven 5, Habanera, Brahms 4, Dvořák Largo, Grieg, Hallelujah, Mozart 40, Nữ hoàng bóng đêm, Erlkönig, 1812, Mùa đông chương 1); K. 141, K. 466 (John Sankey) và K. 545 chương 2 (Jason M. C. Han) là "Bản thu khác" của khối nghe. Còn thiếu: Haydn 94, Beethoven Op. 132, Mendelssohn violin (bản Hankyung tải từ YouTube, chưa xác nhận giấy phép), Mozart Requiem, Puccini, Ravel, Schubert Cá hồi, Stravinsky, Hồ thiên nga (chỉ có bản thu còn bảo hộ ở Mỹ hay bản tổng hợp), Pärt, Shostakovich (tác phẩm còn bảo hộ); K. 545 chương 3. Theo dõi các bản thu cũ vào phạm vi công cộng ở Mỹ: 2028 (Pertile, Kennedy Scott, Landon Ronald), 2030 (Koussevitzky), 2031 (Ravel), 2034 (Barbirolli).
 - `bizet-habanera` `danh_muc`: đã thêm (mục 4.1).
 
 ### 5.3 Thuật ngữ còn thiếu trong `src/data/thuat-ngu.yml`
 
 Khoảng 200 mục, gom thành một việc dữ liệu riêng chia vài lô (mỗi lô kiểm định, khóa; trang Từ điển tự dựng bằng `::tu-dien`). Danh sách đủ ở ghi chú lượt 1 (`plans/lam-lai/bao-cao/d6-l*/luot-1-*.md`, `d6-l2.md` … `d6-l11.md`, `d8-l2.md`, `d8-l3.md`). Nhóm chính:
+
+**Đã làm (10/11/2026, `mo/thuat-ngu`)**: 228 thuật ngữ trong năm lô T1–T5 (hình thức và thể loại 50, chỉ dẫn diễn tấu 38, nhạc lý 94, piano 13, nhóm mới "Nhạc cụ và giọng hát" 33), mỗi bản ghi một hồ sơ, lượt 1 và lượt 2 do hai agent con khác nhau. Chưa thêm (không có nguồn bậc 1–2 đọc được): harmonic rhythm, secondary dominant, cent, double notes, half pedal. Danh sách dưới đây còn vài mục chưa làm (Singspiel đã có; Eingang, tintinnabuli, bariolage, Janissary…): làm khi có nguồn.
 
 - **Hình thức và thể loại**: trio, biến tấu kép, bagatelle, mazurka, invention, barcarolle, impromptu, ballade, intermezzo, prélude, rhapsody, fugue kép, canon, passacaglia, chaconne; các điệu nhảy của tổ khúc (allemande, courante, sarabande, gigue); Lied, recitative, Singspiel, chorale, ritornello, âm nhạc chương trình.
 - **Chỉ dẫn diễn tấu**: poco moto, ma non troppo, alla breve, smorzando, risoluto, con anima, calando, portato, con fuoco, pesante, stringendo, Tempo primo, tasto solo…
