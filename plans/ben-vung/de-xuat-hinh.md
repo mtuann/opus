@@ -2,6 +2,8 @@
 
 Khảo sát chỉ đọc, ngày 06/11/2026, trên `main` (eafff93). Không sửa file nào trong repo.
 
+**Trạng thái (09/11/2026): đã làm hết 30 đề xuất.** Đợt hình 1: 1, 3, 4; 2a: 5, 6, 8, 10, 16; 2b: 2, 9, 13, 27, 29; 2c: 19, 21, 26; 3a: 7, 11, 14, 28, 30; 3b: 18, 22, 23, 24, 25; 3c: 17 (13 hướng dẫn nghe) và 20; 4: 12, 15. Phần còn lại của đề xuất 17 (hướng dẫn nghe Ánh trăng) làm ở `mo/chuan-hoa-hinh` (báo cáo `bao-cao/chuan-hoa-hinh.md`). Báo cáo từng đợt: `bao-cao/hinh-dot-*.md`. Phần dưới giữ nguyên như lúc khảo sát.
+
 ## Lưu ý chung
 
 - **Mọi trang đều đã khóa**: 235/235 trang trong `src/content/docs/` có mã băm trong `kiem-dinh/khoa.json`, và bản ghi dữ liệu cũng khóa. Thêm hình nào cũng phải `node tools/khoa.mjs mo <trang> --ly-do "…"`, kiểm định câu trong hình (thường là câu `ve-site` hay nhận định nhạc lý mới), rồi khóa lại. Hình đề xuất dưới đây chủ yếu vẽ lại điều trang đã nói, nên ít nhận định mới; vẫn phải kiểm số liệu trong hình (số nửa cung, số ngón, ô nhịp).

@@ -21,14 +21,14 @@ lan:
       review: "Claude Opus 5.5 (review D6-L4-gom, 05/11/2026)"
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L4, 8 đúng (1 có điều kiện, đã sửa: beethoven-anh-trang n103, Henle ghi Murray Perahia cùng biên tập), 0 sai (bao-cao/d6-l4-gom/kiem-mau-ket-qua.yml)"
   - so: 3
-    ngay: 2026-11-09
+    ngay: 2026-11-10
     nhanh: mo/chuan-hoa-hinh
-    ma_bam: null
+    ma_bam: sha256:62555db5a495dd9f63efd938b539ade7129314f9195d7f5d946728c8292b7f4d
     nguoi:
       luot_1: 'Claude Opus 5.5 (mo/chuan-hoa-hinh, 09/11/2026: thêm hinh.nghe, vẽ lại bảng "Theo dõi khi nghe" của hướng dẫn nghe Ánh trăng; đề xuất hình 17 còn lại)'
-      luot_2: null
-      review: null
-      kiem_mau: null
+      luot_2: Claude Opus 5.5, agent lượt 2 độc lập (mo/chuan-hoa-hinh, 09/11/2026; không đọc hồ sơ)
+      review: Claude Opus 5.5, agent soát (review và kiểm mẫu gộp, thủ tục hình, mo/chuan-hoa-hinh, 09/11/2026)
+      kiem_mau: Claude Opus 5.5, agent soát (review và kiểm mẫu gộp, thủ tục hình, mo/chuan-hoa-hinh, 09/11/2026)
 ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/beethoven-anh-trang.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Trang hướng dẫn nghe nghe-nhac/beethoven-moonlight.md (cap) cũng có. Lần 2 (D6-L4, lượt 1 phần A): nhận định n7–n29 cho các trường chưa khóa; bản nhạc Mutopia moonlight (Winterberger 1908), lịch sử theo lời tựa Henle HN 1062, mức Henle HN 1820. Dữ liệu sai: n23 (dòng Độ khó: Henle có ghi mức riêng cho chương 1); đề xuất ở plans/lam-lai/bao-cao/d6-l4/sua-A.yml. Còn mở: n26. Gợi ý thuật ngữ cho luyen_nghe (n11).'
 nguon:
   - id: imslp-op27
@@ -449,8 +449,13 @@ nhan_dinh:
     nguon:
       - mut-moon
     ket_qua: dung
-    ghi_chu: 'Vẽ lại bảng "Theo dõi khi nghe" của trang nghe-nhac/beethoven-moonlight (đã khóa trước; mở khóa cùng nhánh): mỗi ô một dòng bảng, chữ rút gọn từ dòng ấy; không có điều gì ngoài trang. Căn cứ: nhận định n20–n25 của hồ sơ trang (đã qua lượt 1, lượt 2, review; nguồn mut-moon). Ranh giới ô: dòng bảng cho ô bắt đầu (1, 5, 23, 28, 42, 60) và ô cuối 69; ô kết của mỗi đoạn là ô ngay trước đoạn sau (22, 27, 41, 59), như hinh.bai-hoc cùng bản ghi (n27, đã kiểm trên Mutopia: giai điệu ô 23–27, Sol♯ ô 28–41, tái hiện ô 42–59, coda ô 60–69). Ô "Giai điệu chính" gộp ô 5–22 (bài học tách 5–9 và 10–22) vì bảng của trang không có dòng riêng cho đoạn chuyển giọng. Độ rộng theo số ô nhịp, màu là cách vẽ.'
+    ghi_chu: 'Vẽ lại bảng "Theo dõi khi nghe" của trang nghe-nhac/beethoven-moonlight (đã khóa trước; mở khóa cùng nhánh): mỗi ô một dòng bảng, chữ rút gọn từ dòng ấy; không có điều gì ngoài trang. Căn cứ: nhận định n20–n25 của hồ sơ trang (đã qua lượt 1, lượt 2, review; nguồn mut-moon). Ranh giới ô: dòng bảng cho ô bắt đầu (1, 5, 23, 28, 42, 60) và ô cuối 69; ô kết của mỗi đoạn là ô ngay trước đoạn sau (22, 27, 41, 59), như hinh.bai-hoc cùng bản ghi (n27, đã kiểm trên Mutopia: giai điệu ô 23–27, Sol♯ ô 28–41, tái hiện ô 42–59, coda ô 60–69). Ô "Giai điệu chính" gộp ô 5–22 (bài học tách 5–9 và 10–22) vì bảng của trang không có dòng riêng cho đoạn chuyển giọng. Độ rộng theo số ô nhịp, màu là cách vẽ.  Soát (agent khác người vẽ, 09/11/2026): đối chiếu từng ô với bảng "Theo dõi khi nghe" và đoạn "Điều cần biết", ảnh 1280/360 px sáng và tối: đọc được, không tràn; chữ ô rút gọn từ dòng bảng, điểm cuối 22 và 59 suy ra từ dòng sau. Kết quả: dung.'
+    luot_2: dung
+    luot_2_nguon:
+      - https://raw.githubusercontent.com/craigsapp/beethoven-piano-sonatas/master/kern/sonata14-1.krn
+    luot_2_ghi_chu: "Bản Humdrum của Craig Sapp: đúng 69 ô. Ô 1–4 chỉ chùm ba trên bè trầm; giai điệu vào phách cuối ô 5; ô 23 bè trầm Fa♯, giai điệu Fa♯ thứ; bè trầm Sol♯ ngân ô 28–39, ô 40–41 vẫn trên âm át, nên 28–41 hợp lý; ô 42 trở lại như ô 5; từ ô 60 nhịp chấm dôi xuống bè trầm. Mọi ô có trong chữ của trang hướng dẫn nghe. (Mutopia bị chặn nên dùng bản Humdrum.)"
+    review: dung
 mo_khoa:
-  - ngay: 2026-11-10
+  - ngay: 2026-11-09
     nhanh: mo/chuan-hoa-hinh
     ly_do: "mo/chuan-hoa-hinh: đề xuất hình 17 còn lại (đợt hình 3c bỏ qua): sơ đồ đoạn cho hướng dẫn nghe Ánh trăng, thêm hinh.nghe vào bản ghi dùng chung"

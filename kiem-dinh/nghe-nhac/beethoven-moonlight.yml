@@ -13,15 +13,15 @@ lan:
       review: "Claude Opus 5.5 (review D6-L4-gom, 05/11/2026)"
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L4, 8 đúng (1 có điều kiện, đã sửa: beethoven-anh-trang n103, Henle ghi Murray Perahia cùng biên tập), 0 sai (bao-cao/d6-l4-gom/kiem-mau-ket-qua.yml)"
   - so: 2
-    ngay: 2026-11-09
+    ngay: 2026-11-10
     nhanh: mo/chuan-hoa-hinh
-    ma_bam: null
+    ma_bam: sha256:a3477df24234b81abb1cb336a9aecbdd96558f0bad2b91696e7f97f467e94cde
     nguoi:
       luot_1: 'Claude Opus 5.5 (mo/chuan-hoa-hinh, 09/11/2026: thêm hinh.nghe, vẽ lại bảng "Theo dõi khi nghe" của hướng dẫn nghe Ánh trăng; đề xuất hình 17 còn lại); thủ tục hình rút gọn, chuan-kiem-dinh mục 7'
       luot_2: không cần (câu ve-site, thủ tục hình)
-      review: null
-      kiem_mau: null
-ghi_chu: 'Hướng dẫn nghe chương 1 Ánh trăng (tầng Tác phẩm; dùng chung bản ghi beethoven-anh-trang qua cap, là cấu trúc). Bản nhạc: Mutopia moonlight (Winterberger 1908; .ly, MIDI tải 05/11/2026), như hồ sơ piano/tac-pham/beethoven-anh-trang. Lịch sử: lời tựa Henle HN 1062, Crumey, IMSLP, Fitch. Sửa trang: n6 (Thời kỳ: Cổ điển, khớp bản ghi), n15–n18, n20–n25 (sáu dòng Theo dõi viết lại theo bản nhạc, có số ô, khớp mốc của bản Pitman và trang bài học), n26, n27, n29. Không có chỗ chưa chắc. Giữ cho hồ sơ khác: trang là hướng dẫn nghe chương 1 Ánh trăng và link sang bài học (fur-elise n82, piano/index n18): đúng. Không tính là nhận định: tiêu đề mục, tiêu đề cột bảng, mốc trong ::khoi-nghe. Trang không có ::hinh-cau-truc (bản ghi chỉ có hinh.bai-hoc). Thuật ngữ: "triplet" đổi thành "chùm ba (liên ba móc đơn)" như trang bài học; luyen_nghe của bản ghi vẫn ghi "Triplet đều" (đề xuất ở hồ sơ bản ghi).'
+      review: Claude Opus 5.5, agent soát (review và kiểm mẫu gộp, thủ tục hình, mo/chuan-hoa-hinh, 09/11/2026)
+      kiem_mau: Claude Opus 5.5, agent soát (review và kiểm mẫu gộp, thủ tục hình, mo/chuan-hoa-hinh, 09/11/2026)
+ghi_chu: 'Hướng dẫn nghe chương 1 Ánh trăng (tầng Tác phẩm; dùng chung bản ghi beethoven-anh-trang qua cap, là cấu trúc). Bản nhạc: Mutopia moonlight (Winterberger 1908; .ly, MIDI tải 05/11/2026), như hồ sơ piano/tac-pham/beethoven-anh-trang. Lịch sử: lời tựa Henle HN 1062, Crumey, IMSLP, Fitch. Sửa trang: n6 (Thời kỳ: Cổ điển, khớp bản ghi), n15–n18, n20–n25 (sáu dòng Theo dõi viết lại theo bản nhạc, có số ô, khớp mốc của bản Pitman và trang bài học), n26, n27, n29. Không có chỗ chưa chắc. Giữ cho hồ sơ khác: trang là hướng dẫn nghe chương 1 Ánh trăng và link sang bài học (fur-elise n82, piano/index n18): đúng. Không tính là nhận định: tiêu đề mục, tiêu đề cột bảng, mốc trong ::khoi-nghe. Trang có ::hinh-cau-truc từ hinh.nghe của bản ghi (n30, mo/chuan-hoa-hinh 09/11/2026). Thuật ngữ: "triplet" đổi thành "chùm ba (liên ba móc đơn)" như trang bài học; luyen_nghe của bản ghi vẫn ghi "Triplet đều" (đề xuất ở hồ sơ bản ghi).'
 nguon:
   - id: mut-moon
     bac: 1
@@ -355,7 +355,8 @@ nhan_dinh:
     cau: 'Hình ::hinh-cau-truc (hinh.nghe của tac-pham/beethoven-anh-trang) ở mục "Sơ đồ cấu trúc": 6 ô theo 6 dòng bảng "Theo dõi khi nghe" (n20–n25): Mở đầu ô 1–4; Giai điệu chính ô 5–22; Fa♯ thứ ô 23–27; Sol♯ ngân ô 28–41; Tái hiện ô 42–59; Coda ô 60–69. Chú thích: "Ánh trăng, chương 1 (69 ô nhịp; độ dài các ô theo số ô nhịp)." Chữ trong ô rút gọn chữ của dòng bảng; không thêm đoạn, giọng hay sự kiện nào ngoài trang; độ rộng và màu ô là cách vẽ.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Kiểm trên bản xem (npm run build:xem, 09/11/2026): sơ đồ trong dist/nghe-nhac/beethoven-moonlight/index.html và hinh.nghe trong src/data/tac-pham.yml; đối chiếu từng ô với dòng bảng. Trang chưa có mục "Sơ đồ cấu trúc": thêm tiêu đề theo thứ tự mẫu hướng dẫn nghe, ngay trước "Nghe kèm bản thu" (như đợt hình 3c); doi_chu ghi.'
+    ghi_chu: 'Kiểm trên bản xem (npm run build:xem, 09/11/2026): sơ đồ trong dist/nghe-nhac/beethoven-moonlight/index.html và hinh.nghe trong src/data/tac-pham.yml; đối chiếu từng ô với dòng bảng. Trang chưa có mục "Sơ đồ cấu trúc": thêm tiêu đề theo thứ tự mẫu hướng dẫn nghe, ngay trước "Nghe kèm bản thu" (như đợt hình 3c); doi_chu ghi.  Soát (agent khác người vẽ, 09/11/2026): đối chiếu từng ô với bảng "Theo dõi khi nghe" và đoạn "Điều cần biết", ảnh 1280/360 px sáng và tối: đọc được, không tràn; chữ ô rút gọn từ dòng bảng, điểm cuối 22 và 59 suy ra từ dòng sau. Kết quả: dung.'
+    review: dung
 khuong_nhac: []
 doi_chu:
   - cu: Cổ điển sang Lãng mạn
@@ -410,6 +411,6 @@ doi_chu:
     moi: "id: so-o-cau-truc"
     ly_do: Id của tiêu đề mới "Sơ đồ cấu trúc" (mo/chuan-hoa-hinh, như đợt hình 3c).
 mo_khoa:
-  - ngay: 2026-11-10
+  - ngay: 2026-11-09
     nhanh: mo/chuan-hoa-hinh
     ly_do: "mo/chuan-hoa-hinh: đề xuất hình 17 còn lại (đợt hình 3c bỏ qua): sơ đồ đoạn cho hướng dẫn nghe Ánh trăng, thêm hinh.nghe vào bản ghi dùng chung; thêm mục Sơ đồ cấu trúc"
