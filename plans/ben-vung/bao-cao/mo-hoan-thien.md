@@ -27,3 +27,10 @@ Chủ repo: làm hết mục 3 (việc agent làm được), mục 2 (quyết đ
 - 4.3.1 Scarlatti: không mở được bản nhạc (xem kế hoạch).
 - 5.2 các mốc còn lại: cần người nghe đo tay.
 - 7.1 khuông câm trên iPhone im lặng: cần thử trên máy thật.
+
+## Bổ sung: Scarlatti (nhánh `mo/scarlatti`, 09/11/2026)
+
+- Chủ repo tải tay ba MIDI trên IMSLP (K. 380, K. 141, K. 466; Pierre Gouin, Les Éditions Outremontaises 2013, CC BY-SA 4.0), để ở `.cache/imslp/` (không đưa lên git), và gửi ảnh trang 1 bản Longo.
+- Đọc MIDI (mido): K. 380 nửa đầu 40 ô kết ở Si trưởng, nửa sau 38 ô về Mi trưởng, ô 20–25 và 36–40 trở lại dịch xuống quãng năm ở ô 58–63, 66–69, 74–78 (đoạn "vần"); K. 141 kết Rê thứ; K. 466 nửa đầu 34 ô kết ở Đô thứ, nửa sau 42 ô về Fa thứ. Hồ sơ `nghe-nhac/scarlatti-sonata` (mở rồi khóa lại): n14, n29, n30, n31 lượt 2 từ `khong-chac` thành `dung`, n28 ghi ô của môtip mới.
+- Mốc K. 380 dòng 2: ô 19 (môtip nốt lặp nhịp chấm có trill ở Si trưởng, "a tempo" ở bản Longo), 36,6 giây ở cả ba biến thể của `tools/audio/align`; trang ghi 37. Dòng 4 (ô 41) căn lại ra 87,5–87,6 giây, khớp mốc 88 đã có. Job mới trong `pieces.py`, file ở `sources.json` (bộ `imslp-outremontaises`, tải tay), `NGUON.md`.
+- Kiểm: `npm run build`, `npm test`, `khoa.mjs tinh`, `so-chu.mjs --doi-chu`, `check_audio.py --static`, Chromium trên trang đổi (207 đạt).

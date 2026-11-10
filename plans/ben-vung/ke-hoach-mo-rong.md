@@ -82,7 +82,7 @@ Mỗi việc theo thủ tục mở khóa (`plans/ben-vung/chuan-kiem-dinh.md` m�
 
 ### 4.3 Còn lại
 
-1. Ba sonata Scarlatti: phần cuối chưa đối chiếu bản nhạc. **Chưa làm được (09/11/2026)**: archive.org và kern.humdrum.org bị chặn ở máy làm việc; kho `craigsapp/scarlatti-keyboard-sonatas` (59 sonata) không có K. 141, K. 466, K. 380; PDF trên IMSLP qua cổng tải (không vượt cổng). Cần người có bản Longo hay Heugel đối chiếu ba dòng "nửa sau trở về giọng chính". `d6-l7-gom`. Vừa.
+1. Ba sonata Scarlatti: phần cuối chưa đối chiếu bản nhạc. **Đã làm (09/11/2026, `mo/scarlatti`)**: chủ repo tải tay ba MIDI IMSLP (Pierre Gouin, Éditions Outremontaises 2013, CC BY-SA 4.0) và gửi ảnh trang 1 bản Longo; K. 141 kết Rê thứ, K. 466 nửa sau về Fa thứ, K. 380 có đoạn "vần" ở Mi trưởng. Hồ sơ `nghe-nhac/scarlatti-sonata`: n14, n29, n30, n31 lượt 2 thành `dung`. `d6-l7-gom`.
 2. **Đã làm** (`mo/hoan-thien`, 09/11/2026): trong 7 bài còn "(ước lượng)", 3 bài có trong đề cương ABRSM nay ghi đề cương (Sonatina Sol trưởng Anh. 5: chương 1, Grade 2, 2025–2026; Clementi Op. 36 số 1: chương 3, Grade 3, 2023–2024; Bài ca Pháp cổ: Grade 3, 2019–2020); 4 bài không có trong đề cương nào (BWV 939, *La candeur*, Minuet Sol trưởng, K. 2) giữ "(ước lượng)".
 3. Trang nghệ sĩ: Pires ngừng biểu diễn sau đột quỵ 11/2025; kiểm không còn link tới `luonghuetrinh.com`. Làm cùng lần rà 2027-10 (cần nguồn tin). `d2-0`. Nhỏ.
 4. **Đã chốt** (09/11/2026): `ghi_chu` là nhật ký lúc kiểm, không viết lại (`chuan-kiem-dinh.md` mục 5); "Còn mở" của `beethoven-anh-trang` nối câu ghi đã xong.
@@ -106,7 +106,7 @@ Mỗi việc theo thủ tục mở khóa (`plans/ben-vung/chuan-kiem-dinh.md` m�
 
 ### 5.2 Bản thu và mốc
 
-- Mốc chưa đo: `schubert-impromptu` dòng 3 **đã đo** (09/11/2026, `tools/audio/align`, bản nhạc ASAP: ô 24 ở 94 giây). Còn lại cần người nghe đo tay (không có bản nhạc số để căn): `mozart-concerto-21` dòng 10; Scarlatti K. 380 dòng 2; Gershwin 6 dòng; Grieg 3 dòng; Rachmaninoff 1 dòng. Ghi bằng `tools/audio/attach.py --ref`. `d6-l5`, `d6-l7-gom`, `d6-l8-gom`. Vừa.
+- Mốc chưa đo: `schubert-impromptu` dòng 3 **đã đo** (09/11/2026, `tools/audio/align`, bản nhạc ASAP: ô 24 ở 94 giây); Scarlatti K. 380 dòng 2 **đã đo** (09/11/2026, MIDI IMSLP: ô 19 ở 37 giây). Còn lại cần người nghe đo tay (không có bản nhạc số để căn): `mozart-concerto-21` dòng 10; Gershwin 6 dòng; Grieg 3 dòng; Rachmaninoff 1 dòng. Ghi bằng `tools/audio/attach.py --ref`. `d6-l5`, `d6-l7-gom`, `d6-l8-gom`. Vừa.
 - Thiếu bản thu: bảy trang không có bản thu (có `mozart-requiem`), K. 141, K. 466; K. 545 chỉ có chương 1; có thể thêm Mùa đông chương 1 (John Harrison, CC BY-SA 4.0). Theo dõi các bản thu cũ vào phạm vi công cộng ở Mỹ: 2028 (Pertile, Kennedy Scott, Landon Ronald), 2030 (Koussevitzky), 2031 (Ravel), 2034 (Barbirolli).
 - `bizet-habanera` `danh_muc`: đã thêm (mục 4.1).
 

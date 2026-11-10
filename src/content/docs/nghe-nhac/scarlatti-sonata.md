@@ -39,7 +39,7 @@ Ba bản trong trang này có ba tính cách khác hẳn nhau:
 
 Bản thu dưới đây chỉ có **K. 380**, do **Raymond Smullyan** chơi trên piano. Ông không chơi các dấu nhắc lại, nên dòng "nửa đầu được nhắc lại" trong bảng không có mốc. Muốn nghe K. 141 và K. 466, dán link YouTube hoặc link file của một bản thu khác vào khung.
 
-::khoi-nghe{moc="0 - - 88"}
+::khoi-nghe{moc="0 37 - 88"}
 
 ## Theo dõi khi nghe
 

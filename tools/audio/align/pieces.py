@@ -216,7 +216,14 @@ PIECES = {
     # chỉ ghi các dòng ứng với đầu một chương ("start"); dòng giữa chương để trống.
     # Smullyan chỉ chơi K. 380 và không chơi dấu nhắc lại: hợp âm Si trưởng khép nửa đầu ở 85,9 s, tắt hẳn ở 87,25 s;
     # nửa sau vào ở 87,5 s (khởi âm đầu tiên sau khoảng lặng)
-    "scarlatti-sonata": dict(page="nghe-nhac/scarlatti-sonata.md", jobs=[dict(rows={0: "start", 3: 87.5})]),
+    # K. 380 (bản thu Smullyan, không chơi nhắc lại). MIDI IMSLP (Pierre Gouin, Éditions Outremontaises 2013) đã viết ra
+    # cả hai dấu nhắc lại: chỉ số 0–39 = ô 1–40 (nửa đầu), 40–79 nửa đầu lần hai, 80–117 = ô 41–78 (nửa sau), 118–155
+    # nửa sau lần hai. Ô 1–8 mở đầu (hình nốt chấm, trill ở ô 2, 4, 6, 8); ô 19 môtip mới ở Si trưởng (nốt lặp nhịp chấm,
+    # trill ở ô 19–21, 27–29), chất liệu này trở lại ở Mi trưởng từ ô 58 (đoạn "vần"); ô 41 mở nửa sau. Dòng 4 trước đây
+    # ghi tay 87,5 s; căn lại ra 87,5–87,6 s
+    "scarlatti-sonata": dict(page="nghe-nhac/scarlatti-sonata.md", jobs=[
+        dict(rows={0: "start"}),
+        dict(src="imslp_Scarlatti_K380.mid", segs=[(0, 39), (80, 117)], rows={1: (0, 18), 3: (1, 80)})]),
     # chỉ có chương 3. Bốn giây đầu file là tiếng ồn nền (khoảng −50 dBFS) nên "start" bắt nhầm ở 0,1 s; theo phổ,
     # Đô trưởng vào ở 4,0 s (to rõ từ 5,0 s)
     "mozart-concerto-21": dict(page="nghe-nhac/mozart-concerto-21.md", jobs=[dict(rows={8: 4.0})]),
