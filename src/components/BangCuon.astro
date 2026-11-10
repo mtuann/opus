@@ -16,7 +16,8 @@
 	};
 	const gan = () =>
 		document.querySelectorAll<HTMLTableElement>('.sl-markdown-content table').forEach((b) => {
-			if (b.scrollWidth > b.clientWidth + 1) {
+			// tràn dù chỉ 1 px vẫn là vùng cuộn với axe (bảng Cách diễn tấu của Từ điển ở 360 px: 329 trên 328)
+			if (b.scrollWidth > b.clientWidth) {
 				b.tabIndex = 0;
 				// vùng nhận focus cần tên: "Bảng ở mục <tiêu đề gần nhất phía trên>"
 				if (!b.hasAttribute('aria-label')) b.setAttribute('aria-label', tenBang(b)), (b.dataset.tenTuDong = '');
