@@ -38,6 +38,15 @@ lan:
       luot_2: "không có lượt 2: chỉ sửa câu về chính site"
       review: Claude Opus 5.5 (mo/bo-opus-zero, 09/11/2026)
       kiem_mau: chủ repo yêu cầu (09/11/2026, chọn "xóa sạch" tên và địa chỉ Opus Zero); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
+  - so: 5
+    ngay: 2026-11-10
+    nhanh: mo/bo-thua
+    ma_bam: sha256:6774874264c151be1ff5876f9cd33da0019c712d33e61b62f4c1d9536bf9ae6e
+    nguoi:
+      luot_1: 'Claude Opus 5.5 (mo/bo-thua, 10/11/2026: bỏ mục "Mỗi trang được kiểm tra thế nào" và vế cuối mô tả theo chủ repo; n1–n4, n6 da-bo; không thêm chữ)'
+      luot_2: Không có nhận định mới (chỉ bỏ chữ)
+      review: "Claude Opus 5.5 (soát trang chủ trên bản build: không còn mục và vế đã bỏ, các link còn lại không đổi)"
+      kiem_mau: Chủ repo chọn bỏ (10/11/2026); không lấy mẫu
 ghi_chu: >-
   Lần 3 (đợt 9, Hoàn tất): mọi trang đã lên site thật nên bỏ ô ":::note[Đang làm lại]" (câu thông báo của kế hoạch, link sang Opus Zero "trong lúc chờ") và chữ "đang được làm lại" ở description; description mới: "… Mọi trang đã được kiểm tra lại từ đầu." Mục "Từng phần lên site thế nào" thành "Mỗi trang được kiểm tra thế nào" (vẫn ba bước oz-steps: đối chiếu với nguồn, kiểm lần hai, lên site; bài thêm sau cũng qua cùng các bước); thêm một dòng: Opus là bản làm lại của Opus Zero (link địa chỉ cũ), dẫn sang bài blog thông báo. Phần còn lại giữ nguyên. Lần này có 5 nhận định ve-site (phần viết lại), kiểm trên kế hoạch, chuẩn kiểm định, khoa.json và bản xem; không có nhận định cần nguồn ngoài. tests/khung.test.mjs đổi theo: trang chủ không còn câu "đang được làm lại". Trang chủ viết mới (không chuyển từ trang cũ), nên không có doi_chu. Lần 2 (D2-L1): trang chủ thật thay trang chủ tạm, viết mới (tầng khung, chuan-kiem-dinh.md mục 3: không có nhận định). Giữ bố cục D1.2b (dải mực, thẻ 8 nhóm) và câu thông báo của kế hoạch; thêm: nút "Bắt đầu từ số 0" (Bài 0) và "Đã biết chơi" (kiểm tra đầu vào) ở dải mực; link sang bản cũ Opus Zero trong lúc chưa chuyển hết bài (review cuối đợt 1); ba lối vào theo người đọc như trang chủ cũ (các bước chỉ là link tới trang, không có số liệu); sơ đồ 7 chặng sinh từ cap-do.yml (::hinh{ten="lo-trinh"}); thẻ 8 nhóm dẫn tới trang mở đầu của nhóm (src/nhom.mjs, chưa lên thì "sắp có"); mô tả nhóm Đọc thêm bỏ chữ opera; mục "Hôm nay tập gì?" có ô gợi ý tập (::cong-cu{ten="goi-y-tap"}, như khối "Hôm nay" của trang chủ cũ): người chưa có kết quả thấy lời mời làm bài kiểm tra đầu vào; người đã lưu chặng piano hay kết quả nhạc lý (trong trình duyệt) thấy chặng của mình và bài nên bắt đầu, chọn theo goi_y và chang của dữ liệu đã khóa (chiDaKhoa), và mục được đưa lên trước các lối vào. Lần 1: trang chủ tạm (D1.1, D1.2b), viết mới, không chuyển từ trang chủ cũ.
 nguon: []
@@ -45,26 +54,26 @@ nhan_dinh:
   - id: n1
     cau: "Mọi trang đã được kiểm tra lại từ đầu."
     loai: ve-site
-    ket_qua: dung
-    ghi_chu: "description. kiem-dinh/khoa.json trên main (4bb09b4): 234 trang khóa, gồm cả 233 trang của src/data/trang.yml và 404; 73/73 bản ghi tác phẩm khóa cả bản ghi (plans/lam-lai/README.md, bảng Tiến độ, đợt 6). Hai trang mở ở nhánh này (index, bài blog mới) khóa lại trước khi gộp. Review D9: khoa.json ở main (git show main:kiem-dinh/khoa.json): 234 trang khóa; ở nhánh 231 (index, 404, cap-nhat mở) và 377 khóa bản ghi; 7 trang chặng chỉ đọc trường đã khóa (chiDaKhoa). Đúng khi bốn trang của đợt 9 được khóa lại trước khi gộp."
+    ket_qua: da-bo
+    ghi_chu: "description. kiem-dinh/khoa.json trên main (4bb09b4): 234 trang khóa, gồm cả 233 trang của src/data/trang.yml và 404; 73/73 bản ghi tác phẩm khóa cả bản ghi (plans/lam-lai/README.md, bảng Tiến độ, đợt 6). Hai trang mở ở nhánh này (index, bài blog mới) khóa lại trước khi gộp. Review D9: khoa.json ở main (git show main:kiem-dinh/khoa.json): 234 trang khóa; ở nhánh 231 (index, 404, cap-nhat mở) và 377 khóa bản ghi; 7 trang chặng chỉ đọc trường đã khóa (chiDaKhoa). Đúng khi bốn trang của đợt 9 được khóa lại trước khi gộp. Lần 5 (mo/bo-thua, 10/11/2026): bỏ theo chủ repo (mục \"Mỗi trang được kiểm tra thế nào\" và vế cuối của mô tả trang thừa khi mọi trang trên site đều đã kiểm định; huy hiệu \"Đã kiểm định\" dưới tiêu đề cũng bỏ)."
     review: dung
   - id: n2
     cau: "Mỗi ý trong bài được kiểm lại; ý cần nguồn được đối chiếu với nguồn, chỗ sai được sửa."
     loai: ve-site
-    ket_qua: dung
-    ghi_chu: "Bước 1 của oz-steps. plans/ben-vung/chuan-kiem-dinh.md mục 1 (mọi câu đúng/sai là một nhận định; loại cần nguồn), mục 3 (lượt 1: kiểm từng mục, sửa trang nếu sai; ve-site kiểm trên site, khuyen-tap không cần nguồn). Review D9: chuan-kiem-dinh.md mục 1 (mọi câu đúng/sai là nhận định, có loại cần nguồn) và mục 3 bước 1; dist/index.html (bước 1 của oz-steps)."
+    ket_qua: da-bo
+    ghi_chu: "Bước 1 của oz-steps. plans/ben-vung/chuan-kiem-dinh.md mục 1 (mọi câu đúng/sai là một nhận định; loại cần nguồn), mục 3 (lượt 1: kiểm từng mục, sửa trang nếu sai; ve-site kiểm trên site, khuyen-tap không cần nguồn). Review D9: chuan-kiem-dinh.md mục 1 (mọi câu đúng/sai là nhận định, có loại cần nguồn) và mục 3 bước 1; dist/index.html (bước 1 của oz-steps). Lần 5 (mo/bo-thua, 10/11/2026): bỏ theo chủ repo (mục \"Mỗi trang được kiểm tra thế nào\" và vế cuối của mô tả trang thừa khi mọi trang trên site đều đã kiểm định; huy hiệu \"Đã kiểm định\" dưới tiêu đề cũng bỏ)."
     review: dung
   - id: n3
     cau: "Ý cần nguồn được một lượt khác kiểm độc lập (trang Đọc thêm: một mẫu), rồi review soát lại."
     loai: ve-site
-    ket_qua: da-sua
-    ghi_chu: "Bước 2. chuan-kiem-dinh.md mục 3: lượt 2 độc lập (Đọc thêm: mẫu khoảng 5 câu; lời khuyên tập: mẫu 3 câu; ve-site không qua lượt 2) rồi review. Câu nói chung \"soát lại\", không nói mọi câu qua lượt 2. Trang khung không có nhận định cần nguồn nên không có lượt 2, nhưng có review (lan.nguoi.review trong hồ sơ). Review D9: chữ cũ \"Một lượt kiểm khác soát lại, rồi review.\" nói như mọi trang đều qua lượt 2; theo chuan-kiem-dinh.md mục 3, lượt 2 chỉ kiểm câu cần nguồn (Đọc thêm: khoảng 5 câu mẫu; ve-site và trang khung không qua lượt 2), còn review thì trang nào cũng có. Đã sửa bước 2 của oz-steps trong src/content/docs/index.md; kiểm lại trên dist/index.html (build:xem)."
+    ket_qua: da-bo
+    ghi_chu: "Bước 2. chuan-kiem-dinh.md mục 3: lượt 2 độc lập (Đọc thêm: mẫu khoảng 5 câu; lời khuyên tập: mẫu 3 câu; ve-site không qua lượt 2) rồi review. Câu nói chung \"soát lại\", không nói mọi câu qua lượt 2. Trang khung không có nhận định cần nguồn nên không có lượt 2, nhưng có review (lan.nguoi.review trong hồ sơ). Review D9: chữ cũ \"Một lượt kiểm khác soát lại, rồi review.\" nói như mọi trang đều qua lượt 2; theo chuan-kiem-dinh.md mục 3, lượt 2 chỉ kiểm câu cần nguồn (Đọc thêm: khoảng 5 câu mẫu; ve-site và trang khung không qua lượt 2), còn review thì trang nào cũng có. Đã sửa bước 2 của oz-steps trong src/content/docs/index.md; kiểm lại trên dist/index.html (build:xem). Lần 5 (mo/bo-thua, 10/11/2026): bỏ theo chủ repo (mục \"Mỗi trang được kiểm tra thế nào\" và vế cuối của mô tả trang thừa khi mọi trang trên site đều đã kiểm định; huy hiệu \"Đã kiểm định\" dưới tiêu đề cũng bỏ)."
     review: sai
   - id: n4
     cau: "Chỉ trang đã kiểm tra xong mới hiện ở đây; bài thêm sau cũng qua cùng các bước."
     loai: ve-site
-    ket_qua: dung
-    ghi_chu: "Bước 3. Bản thật chỉ đưa trang có trong khoa.json (chuan-kiem-dinh.md mục 6; src/ban-build.mjs); 7 trang chặng sinh từ dữ liệu chỉ đọc trường đã khóa (chiDaKhoa). Bài thêm sau: plans/ben-vung/them-tac-pham.md (lượt 1, lượt 2, review, kiểm mẫu, khóa) và tools/them-tac-pham.mjs. Review D9: src/ban-build.mjs (chiTrangTrongBan: bản thật chỉ gồm trang có trong khoa.json), chuan-kiem-dinh.md mục 6; plans/ben-vung/them-tac-pham.md (lượt 1, lượt 2, review, kiểm mẫu, khóa)."
+    ket_qua: da-bo
+    ghi_chu: "Bước 3. Bản thật chỉ đưa trang có trong khoa.json (chuan-kiem-dinh.md mục 6; src/ban-build.mjs); 7 trang chặng sinh từ dữ liệu chỉ đọc trường đã khóa (chiDaKhoa). Bài thêm sau: plans/ben-vung/them-tac-pham.md (lượt 1, lượt 2, review, kiểm mẫu, khóa) và tools/them-tac-pham.mjs. Review D9: src/ban-build.mjs (chiTrangTrongBan: bản thật chỉ gồm trang có trong khoa.json), chuan-kiem-dinh.md mục 6; plans/ben-vung/them-tac-pham.md (lượt 1, lượt 2, review, kiểm mẫu, khóa). Lần 5 (mo/bo-thua, 10/11/2026): bỏ theo chủ repo (mục \"Mỗi trang được kiểm tra thế nào\" và vế cuối của mô tả trang thừa khi mọi trang trên site đều đã kiểm định; huy hiệu \"Đã kiểm định\" dưới tiêu đề cũng bỏ)."
     review: dung
   - id: n5
     cau: "Opus là bản làm lại của Opus Zero."
@@ -75,9 +84,9 @@ nhan_dinh:
   - id: n6
     cau: Các bước kiểm tra kể kỹ hơn trong bài Opus đã lên đủ.
     loai: ve-site
-    ket_qua: dung
+    ket_qua: da-bo
     review: dung
-    ghi_chu: 'mo/bo-opus-zero (09/11/2026): câu mới thay dòng cuối cũ; bài blog 2026-11-07-opus-da-len-du có mục "Kiểm tra lại từ đầu" kể các lượt kiểm.'
+    ghi_chu: 'mo/bo-opus-zero (09/11/2026): câu mới thay dòng cuối cũ; bài blog 2026-11-07-opus-da-len-du có mục "Kiểm tra lại từ đầu" kể các lượt kiểm. Lần 5 (mo/bo-thua, 10/11/2026): bỏ theo chủ repo (mục "Mỗi trang được kiểm tra thế nào" và vế cuối của mô tả trang thừa khi mọi trang trên site đều đã kiểm định; huy hiệu "Đã kiểm định" dưới tiêu đề cũng bỏ).'
 khuong_nhac: []
 mo_khoa:
   - ngay: 2026-10-24
@@ -89,3 +98,6 @@ mo_khoa:
   - ngay: 2026-11-09
     nhanh: mo/bo-opus-zero
     ly_do: "mo/bo-opus-zero: bỏ mọi nhắc tới Opus Zero (tên, địa chỉ site cũ, repo cũ); link báo lỗi và giấy phép MIT trỏ repo mtuann/opus (chủ repo yêu cầu 09/11/2026)"
+  - ngay: 2026-11-10
+    nhanh: mo/bo-thua
+    ly_do: 'Chủ repo chọn ngày 10/11/2026: bỏ mục "Mỗi trang được kiểm tra thế nào" (thừa khi mọi trang đã kiểm định, huy hiệu dưới tiêu đề cũng bỏ) và vế "Mọi trang đã được kiểm tra lại từ đầu." của mô tả.'

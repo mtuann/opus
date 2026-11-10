@@ -1,6 +1,6 @@
 ---
 title: Opus
-description: Sổ tay tiếng Việt học piano cổ điển cho người lớn tự học, từ con số 0. Mọi trang đã được kiểm tra lại từ đầu.
+description: Sổ tay tiếng Việt học piano cổ điển cho người lớn tự học, từ con số 0.
 template: splash
 # Trang chủ không dẫn sang "trang tiếp" (Starlight tự lấy trang đầu của menu)
 next: false
@@ -81,13 +81,3 @@ Mỗi chặng có trang riêng: các bài học tác phẩm của chặng và b�
 <li class="oz-the" style="--c: var(--oz-c-luyen-tap)"><a href="/opus/luyen-tap/"><span class="oz-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 21h8l-2.5-17h-3z"/><path d="M12 15l5-9"/></svg></span><b>Luyện tập</b> <span>Đọc nốt, luyện tai, máy đếm nhịp</span></a></li>
 <li class="oz-the" style="--c: var(--oz-c-doc-them)"><a href="/opus/nhac-cu/"><span class="oz-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5c3-1 6-1 8 1 2-2 5-2 8-1v14c-3-1-6-1-8 1-2-2-5-2-8-1z"/><path d="M12 6v14"/></svg></span><b>Đọc thêm</b> <span>Nhạc cụ, nhạc truyền thống Việt Nam, nhà soạn nhạc nữ</span></a></li>
 </ul>
-
-## Mỗi trang được kiểm tra thế nào
-
-<ol class="oz-steps" role="list">
-<li><b>Đối chiếu với nguồn</b> <span>Mỗi ý trong bài được kiểm lại; ý cần nguồn được đối chiếu với nguồn, chỗ sai được sửa.</span></li>
-<li><b>Kiểm lần hai</b> <span>Ý cần nguồn được một lượt khác kiểm độc lập (trang Đọc thêm: một mẫu), rồi review soát lại.</span></li>
-<li><b>Lên site</b> <span>Chỉ trang đã kiểm tra xong mới hiện ở đây; bài thêm sau cũng qua cùng các bước.</span></li>
-</ol>
-
-Các bước kiểm tra kể kỹ hơn trong bài [Opus đã lên đủ](/opus/blog/posts/2026-11-07-opus-da-len-du/).

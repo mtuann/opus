@@ -200,13 +200,13 @@ test('trang nào tải bộ tải thành phần: dò trên HTML đã dựng, kh�
 	assert.ok(canTaiScript(dung(trangTacPham('fur-elise', '::hop-tac-pham'))), 'hộp tác phẩm');
 });
 
-test('huy hiệu "Đã kiểm định": chỉ khi trang có trong khoa.json; ngày của lần kiểm định gần nhất; đếm nhận định', () => {
+test('kiemDinh (dòng tháng kiểm của trang tham chiếu): chỉ khi trang có trong khoa.json; ngày của lần kiểm định gần nhất; đếm nhận định', () => {
 	const khoa = { trang: { 'nhac-ly/10-hop-am-ba': 'sha256:ab', index: 'sha256:cd' } };
 	const hoSo = 'lan:\n  - so: 1\n    ngay: 2026-11-02\n  - so: 2\n    ngay: 2027-01-15\nnhan_dinh:\n  - id: n1\n  - id: n2\nkhuong_nhac:\n  - khoi: 1\n';
 	assert.deepEqual(kiemDinh('nhac-ly/10-hop-am-ba', khoa, hoSo), { ngay: '2027-01-15', nhanDinh: 3 });
-	assert.equal(kiemDinh('nhac-ly/11-hop-am-bay', khoa, hoSo), null, 'trang chưa khóa: không có huy hiệu');
+	assert.equal(kiemDinh('nhac-ly/11-hop-am-bay', khoa, hoSo), null, 'trang chưa khóa');
 	assert.equal(kiemDinh('index', undefined, undefined), null, 'chưa có kiem-dinh/khoa.json');
-	// Trang khóa mà hồ sơ không có nhận định (trang chủ tạm): nhanDinh 0, PageTitle không hiện huy hiệu
+	// Trang khóa mà hồ sơ không có nhận định (trang chủ tạm): nhanDinh 0
 	assert.deepEqual(kiemDinh('index', khoa, 'lan:\n  - so: 1\n    ngay: 2026-10-30\n'), { ngay: '2026-10-30', nhanDinh: 0 });
 	assert.equal(ngayViet('2027-01-15'), '15/1/2027');
 });

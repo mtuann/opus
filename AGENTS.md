@@ -123,7 +123,7 @@ Chủ repo yêu cầu (23/10/2026): site gọn, thân thiện. Điều gì giả
 
 ## Mẫu trang và khối đặc biệt
 
-Chốt ở D1.3. Mọi trang là Markdown trong `src/content/docs/<đường dẫn>.md`. Tiêu đề trang ghi ở frontmatter `title`; Starlight tự đặt nó làm H1, nên thân trang không có dòng `# …`. Nhãn nhóm phía trên tiêu đề và huy hiệu "Đã kiểm định" phía dưới hiện tự động (`src/components/PageTitle.astro`), không ghi gì trong trang.
+Chốt ở D1.3. Mọi trang là Markdown trong `src/content/docs/<đường dẫn>.md`. Tiêu đề trang ghi ở frontmatter `title`; Starlight tự đặt nó làm H1, nên thân trang không có dòng `# …`. Nhãn nhóm phía trên tiêu đề hiện tự động (huy hiệu "Đã kiểm định" phía dưới đã bỏ ngày 10/11/2026) (`src/components/PageTitle.astro`), không ghi gì trong trang.
 
 ### Bài học tác phẩm (`piano/tac-pham/<slug>.md`)
 
