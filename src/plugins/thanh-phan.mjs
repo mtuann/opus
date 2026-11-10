@@ -280,7 +280,10 @@ export function khoiNghe(rec, base, moc) {
 	const qua = ref?.find((x) => x !== null && dai !== undefined && x > dai);
 	if (qua !== undefined) throw new Error(`::khoi-nghe: mốc ${qua} giây quá độ dài bản thu (${dai} giây)`);
 	const rec2 = { ...ban, parts, ...(ref && { ref }) };
-	return `<div class="oz-listen" data-rec="${esc(JSON.stringify(rec2))}"></div>`;
+	// bản thu thứ hai trở đi (như mỗi sonata một nghệ sĩ): người học chọn nghe được; mốc tham khảo chỉ theo bản đầu tiên
+	const khac = rec.ban_thu.slice(1).map((b) => ({ ...b, parts: b.parts.map((p) => (p.mp3 && !/^https?:/.test(p.mp3) ? { ...p, mp3: base + p.mp3 } : p)) }));
+	const thuocTinhKhac = khac.length ? ` data-khac="${esc(JSON.stringify(khac))}"` : '';
+	return `<div class="oz-listen" data-rec="${esc(JSON.stringify(rec2))}"${thuocTinhKhac}></div>`;
 }
 
 // ---------- Hình minh họa, công cụ: thành phần các lô thêm dần ----------

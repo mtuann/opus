@@ -21,6 +21,15 @@ lan:
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L10, 06/11/2026, ba phần; phần Mendelssohn và Schubert chạy lại)
       review: Claude Opus 5.5 (review D6-L10-gom)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L10, 8 đúng (tchaikovsky-1812 n31 có điều kiện: rallentando theo tổng phổ lượt 1), 0 sai (bao-cao/d6-l10-gom/kiem-mau-ket-qua.yml)"
+  - so: 3
+    ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ma_bam: sha256:491bbe04da11afe12dead90d05f3d917d8ded320ef9b97f0802ff5abe653da32
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/ban-thu, 10/11/2026: tìm trên Commons bằng tools/audio/commons.py, kiểm bản quyền ở Mỹ, gắn bằng attach.py; check_audio.py --static --network 0 lỗi)"
+      luot_2: "Claude (agent con, lượt 2 độc lập: đọc wikitext và metadata Commons của mọi phần, DAHR cho bản Victor, 10/11/2026)"
+      review: "Claude Opus 5.5 (người gom mo/ban-thu: mọi câu hai lượt khác nhau; thay bản MIT bằng bản Edison 1916, bỏ bản Mendelssohn vì chưa xác nhận được giấy phép YouTube)"
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo (chủ repo giao làm trọn phần bản thu, 10/11/2026): mọi bản thu mở được trên trang đã dựng (npm run build, khối nghe), check_audio --network 0 lỗi"
 nguon:
   - id: imslp
     bac: 2
@@ -62,6 +71,10 @@ nguon:
     bac: 2
     ten: 'MusicBrainz, DG 423 203-2 (Karajan, Berliner Philharmoniker): bốn track 7:18, 10:04, 4:54, 9:05'
     link: https://musicbrainz.org/release/b5859bac-f18f-30f2-9f1c-44af4ccb75cf
+  - id: commons-bt-beethoven-5
+    bac: 2
+    ten: Wikimedia Commons, trang file của bản thu (Skidmore College Orchestra)
+    link: https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_i._allegro_con_brio.ogg
 nhan_dinh:
   - id: n1
     cau: Tên «Giao hưởng số 5» chỉ Giao hưởng số 5 cung Đô thứ của Beethoven.
@@ -182,3 +195,72 @@ nhan_dinh:
     luot_2_ghi_chu: "Thời lượng track của các bản thu Naxos trên trang IMSLP (giây, I/II/III/IV): Walter 376/689/356/523; 1960 483/593/347/683; 416/558/297/662; 458/576/337/683; Furtwängler 457/611/349/488; Skrowaczewski 419/572/295/653; 460/641/336/509. Ở mọi bản: III ngắn nhất, II và IV dài hơn I. Tỉ lệ 1 : 1,3 : 0,9 : 1,4 là gần đúng (III thực tế thường còn ngắn hơn, khoảng 0,7–0,8 của I), hợp với chữ 'gần đúng'."
 
     review: dung
+  - id: n13
+    cau: "Bản thu Beethoven, Giao hưởng số 5 Op. 67, bốn chương: Skidmore College Orchestra (qua Musopen)."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-beethoven-5
+    ket_qua: da-sua
+    ghi_chu: 'Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_i._allegro_con_brio.ogg Review (mo/ban-thu, 10/11/2026): lượt 2: cả bốn file ghi "Recording: {{PD-author|… Skidmore College orchestra}}"; người chơi là Skidmore College Orchestra, Musopen là nơi phát hành. Sửa by. Chữ cũ: "… Musopen."'
+    luot_2: sai
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_i._allegro_con_brio.ogg
+      - https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_ii._andante_con_moto.ogg
+      - https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_iii._allegro.ogg
+      - https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_iv._allegro.ogg
+    luot_2_ghi_chu: "Cả 4 file: 'Recording: {{PD-author|...Skidmore College orchestra}}'. Người trình bày là Skidmore College Orchestra; Musopen chỉ là nguồn phát hành."
+    review: dung
+  - id: n14
+    cau: "Giấy phép bản thu: phạm vi công cộng."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-beethoven-5
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_i._allegro_con_brio.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_i._allegro_con_brio.ogg
+      - https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_ii._andante_con_moto.ogg
+      - https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_iii._allegro.ogg
+      - https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_iv._allegro.ogg
+    luot_2_ghi_chu: "Cả 4 file: Recording {{PD-author}}, nguồn Musopen."
+  - id: n15
+    cau: "4 phần, tổng 2141,46 giây: I. Allegro con brio; II. Andante con moto; III. Allegro; IV. Allegro."
+    loai: so-lieu
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-beethoven-5
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_i._allegro_con_brio.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo|revisions&titles=File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_i._allegro_con_brio.ogg
+      - https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo|revisions&titles=File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_ii._andante_con_moto.ogg
+      - https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo|revisions&titles=File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_iii._allegro.ogg
+      - https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo|revisions&titles=File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_iv._allegro.ogg
+    luot_2_ghi_chu: 500.09+598.68+336.01+706.68 = 2141.46 s; tên chương khớp.
+  - id: n16
+    cau: "Bản thu thuộc phạm vi công cộng cả ở Mỹ: người thu dâng tặng phạm vi công cộng ({{PD-author}}, Skidmore College Orchestra, qua Musopen)."
+    loai: lich-su
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-beethoven-5
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_i._allegro_con_brio.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_i._allegro_con_brio.ogg
+      - https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_ii._andante_con_moto.ogg
+      - https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_iii._allegro.ogg
+      - https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_iv._allegro.ogg
+    luot_2_ghi_chu: "PD-author qua Musopen, VRT ticket 2008012110017088; Musopen FAQ: 'given a public domain license'. musopen.org không mở được từ đây."
+mo_khoa:
+  - ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ly_do: "Gắn bản thu có giấy phép mở từ Wikimedia Commons (mo/ban-thu, 10/11/2026, kế hoạch mở rộng mục 5.2): trường ban_thu."

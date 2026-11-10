@@ -20,6 +20,15 @@ lan:
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L4, 05/11/2026, bốn phần; bổ sung sau review)
       review: "Claude Opus 5.5 (review D6-L4-gom, 05/11/2026)"
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L4, 8 đúng (1 có điều kiện, đã sửa: beethoven-anh-trang n103, Henle ghi Murray Perahia cùng biên tập), 0 sai (bao-cao/d6-l4-gom/kiem-mau-ket-qua.yml)"
+  - so: 3
+    ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ma_bam: sha256:17e0a2895bb790fbca487f2af5b450568205a93e866ecd1a07f7590e2bc51e95
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/ban-thu, 10/11/2026: tìm trên Commons bằng tools/audio/commons.py, kiểm bản quyền ở Mỹ, gắn bằng attach.py; check_audio.py --static --network 0 lỗi)"
+      luot_2: "Claude (agent con, lượt 2 độc lập: đọc wikitext và metadata Commons của mọi phần, DAHR cho bản Victor, 10/11/2026)"
+      review: "Claude Opus 5.5 (người gom mo/ban-thu: mọi câu hai lượt khác nhau; thay bản MIT bằng bản Edison 1916, bỏ bản Mendelssohn vì chưa xác nhận được giấy phép YouTube)"
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo (chủ repo giao làm trọn phần bản thu, 10/11/2026): mọi bản thu mở được trên trang đã dựng (npm run build, khối nghe), check_audio --network 0 lỗi"
 ghi_chu: 'Trang bài học cũ ../opus-zero/docs/piano/tac-pham/mozart-k545.md có (loai: bai-hoc là cấu trúc, không phải nhận định). Lần 2 (D6-L4, lượt 1 phần A): nhận định n7–n26 cho các trường chưa khóa (bản ghi không có nhip, luyen_nghe); bản nhạc Mutopia K545-1/2/3, lịch sử theo lời tựa Henle HN 164, đề cương ABRSM 2017–2018, 2027–2028. Dữ liệu sai: n20 (dòng Độ khó); đề xuất ở plans/lam-lai/bao-cao/d6-l4/sua-A.yml. Còn mở: n23.'
 nguon:
   - id: imslp-k545
@@ -70,6 +79,10 @@ nguon:
     bac: 2
     ten: Wikimedia Commons, Mozart – sonata no. 16 in c major, k.545 sonata facile – i. allegro.ogg (Musopen; Recording {{PD-author|Musopen}}; 133,88 giây)
     link: https://commons.wikimedia.org/wiki/File:Wolfgang_Amadeus_Mozart_-_sonata_no._16_in_c_major,_k.545_%27sonata_facile%27_-_i._allegro.ogg
+  - id: commons-bt-mozart-k545
+    bac: 2
+    ten: Wikimedia Commons, trang file của bản thu (Jason M. C. Han)
+    link: https://commons.wikimedia.org/wiki/File:Mozart_C_Sonata_Autumn_2nd.ogg
 nhan_dinh:
   - id: n1
     cau: 'Tên bài: Sonata Đô trưởng K. 545 (Sonata piano số 16, "Sonata facile").'
@@ -404,3 +417,60 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://commons.wikimedia.org/wiki/File:Wolfgang_Amadeus_Mozart_-_sonata_no._16_in_c_major,_k.545_%27sonata_facile%27_-_i._allegro.ogg" ]
     luot_2_ghi_chu: "Commons: Credit musopen.com, Public domain; 133,878 giây."
+  - id: n27
+    cau: "Bản thu Mozart, Sonata K. 545, chương 2 (Andante): Jason M. C. Han."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-mozart-k545
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Mozart_C_Sonata_Autumn_2nd.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Mozart_C_Sonata_Autumn_2nd.ogg
+    luot_2_ghi_chu: "'Andante (2nd) Movement of Mozart' Major C, K. 545'; author Jason M. C., Han; source {{own}}."
+  - id: n28
+    cau: "Giấy phép bản thu: CC BY-SA 4.0."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-mozart-k545
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Mozart_C_Sonata_Autumn_2nd.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Mozart_C_Sonata_Autumn_2nd.ogg
+      - https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo|revisions&titles=File:Mozart_C_Sonata_Autumn_2nd.ogg
+    luot_2_ghi_chu: "{{self|cc-by-sa-4.0}}."
+  - id: n29
+    cau: 1 phần, tổng 179,09 giây.
+    loai: so-lieu
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-mozart-k545
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Mozart_C_Sonata_Autumn_2nd.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo|revisions&titles=File:Mozart_C_Sonata_Autumn_2nd.ogg
+    luot_2_ghi_chu: duration 179.09 s, 1 file.
+  - id: n30
+    cau: Người giữ quyền bản thu phát hành theo CC BY-SA 4.0 (trang Commons ghi người tải là chủ bản thu, có phiếu VRT, hay dẫn nguồn phát hành).
+    loai: lich-su
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-mozart-k545
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Mozart_C_Sonata_Autumn_2nd.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Mozart_C_Sonata_Autumn_2nd.ogg
+    luot_2_ghi_chu: Người tải tự chơi (own work, self); không phải album thương mại.
+mo_khoa:
+  - ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ly_do: "Gắn bản thu có giấy phép mở từ Wikimedia Commons (mo/ban-thu, 10/11/2026, kế hoạch mở rộng mục 5.2): trường ban_thu, thêm chương 2."

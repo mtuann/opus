@@ -21,6 +21,15 @@ lan:
       luot_2: Claude Opus 5.5 (kiểm lại n14, n28–n31 trên MIDI và ảnh trang 1 bản Longo; n29–n31, n14 đổi khong-chac thành dung)
       review: "Claude Opus 5.5 (đọc lại chữ trang: chỉ mốc ::khoi-nghe đổi, không phải nhận định; câu n28–n31 giữ nguyên)"
       kiem_mau: "Không lấy mẫu: lần mở chỉ thêm nguồn và một mốc, không đổi chữ trang"
+  - so: 3
+    ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ma_bam: sha256:6b81e252b0743effcdee1d1a618062b0eed32bf5ff9e89ea60763b4416ed8481
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/ban-thu, 10/11/2026: sửa đoạn giới thiệu bản thu: n24, n26, thêm n43)"
+      luot_2: "Claude (agent con, lượt 2 bản thu mo/ban-thu: Commons của hai bản Sankey, 10/11/2026)"
+      review: "Claude Opus 5.5 (người gom mo/ban-thu: xem khối nghe trên bản build, 10/11/2026)"
+      kiem_mau: Như hồ sơ bản ghi (mo/ban-thu)
 ghi_chu: 'Hướng dẫn nghe ba sonata Scarlatti K. 380, K. 141, K. 466 (tầng Tác phẩm; bản ghi tac-pham/scarlatti-sonata; loai: nghe là cấu trúc). Bản nhạc: ba sonata không có trên Mutopia, PDF IMSLP không tải; đọc trang đầu bản chép tay thế kỷ 18 trên Wikimedia Commons (K. 380 Parma X,23; K. 141 Worgan 41, British Library; K. 466 Venice XI,13) cho giọng, nhịp, chữ tốc độ, nốt lặp, bắt chéo tay; IMSLP cho giọng, chữ tốc độ, số L. Lịch sử: Dizionario Biografico degli Italiani (Treccani, Cristina Fernandes), lời tựa Henle HN 574, HN 1221, HN 581. Bản thu: Commons (Smullyan), MusicBrainz. Sửa trang: n5, n12, n13, n16, n20, n30, n21, n22, n23, n35, n36, n37, n38, n39. Chưa chắc: n14, n15 (hai nửa "gieo vần", tên crux của Kirkpatrick: chưa mở được nguồn bậc 1–2; Open Music Theory trả 403 với User-Agent của dự án, Wayback 429; sách Kirkpatrick 1953 là sách in). Câu ở hồ sơ khác (đã khóa): piano/hai-tay (Scarlatti "bậc thầy của kỹ thuật bắt chéo tay"), piano/not-lap-not-kep (K. 141 có nốt lặp lại cực nhanh gần như suốt bài), piano/nha-soan-nhac (hướng dẫn nghe ba sonata): trang giữ đúng cả ba (n18, n21). Không tính là nhận định: tiêu đề mục, tiêu đề cột, mốc trong ::khoi-nghe, chữ do ::hinh-cau-truc dựng. Thuật ngữ trang dùng mà thuat-ngu.yml chưa có: hình thức hai đoạn (binary), crux, bắt chéo tay, đảo phách (ghi cho người giao). Mở khóa 09/11/2026: ba MIDI IMSLP (imslp-midi-gouin) xác nhận n14 (vần ở K. 380), n29, n30, n31; mốc dòng 2 đo bằng tools/audio/align (n28). n15 (tên crux) giữ như cũ.'
 nguon:
   - id: treccani
@@ -75,6 +84,10 @@ nguon:
     bac: 2
     ten: "IMSLP, ba file MIDI do Pierre Gouin dựng (Montréal: Les Éditions Outremontaises, 2013; CC BY-SA 4.0), chủ repo tải tay ngày 09/11/2026, đọc bằng mido (cao độ, ô nhịp, hóa biểu): PMLP297350-Scarlatti_Sonate_K.380.mid (Mi trưởng, 3/4; hai dấu nhắc lại đã viết ra; nửa đầu 40 ô, kết ở hợp âm Si; nửa sau 38 ô, kết Mi2–Mi5); PMLP472479-Scarlatti_Sonate_K.141.mid (Rê thứ, 3/8; kết Rê2–Rê3); PMLP336146-Scarlatti_Sonate_K.466.mid (Fa thứ, 4/4; nửa đầu 34 ô, kết ở Đô (Đô thứ); nửa sau 42 ô, kết Fa2–Fa5). Kèm ảnh trang 1 bản Longo (L. 23, L. 422, L. 118) chủ repo gửi trong phiên làm việc"
     link: https://imslp.org/wiki/File:PMLP297350-Scarlatti_Sonate_K.380.mid
+  - id: commons-sankey
+    bac: 2
+    ten: "Wikimedia Commons, hai file của John Sankey: Sonata K. 141 (CC BY-SA 3.0) và K. 466 ({{Attribution}})"
+    link: https://commons.wikimedia.org/wiki/File:Scarlatti_K_466.ogg
 nhan_dinh:
   - id: n1
     cau: 'Bảng: Nhà soạn nhạc Domenico Scarlatti (1685–1757).'
@@ -294,14 +307,15 @@ nhan_dinh:
     luot_2_ghi_chu: 'IMSLP: Andante moderato, Fa thứ; bản chép Venice XI,13: hóa biểu bốn dấu giáng, nhịp C, "And.e Moderato". "Buồn, hát như aria" là cảm nhận.'
     review: dung
   - id: n24
-    cau: 'Bản thu dưới đây chỉ có K. 380, do Raymond Smullyan chơi trên piano.'
+    cau: 'Bản thu gợi ý dưới đây là K. 380, do Raymond Smullyan chơi trên piano.'
     loai: ten
     nguon: [ commons-smullyan ]
-    ket_qua: dung
-    ghi_chu: 'Commons: Artist Raymond Smullyan; file "Scarlatti Sonata E Major K380"; "also … at Piano Society" (piano).'
+    ket_qua: da-sua
+    ghi_chu: 'Commons: Artist Raymond Smullyan; file "Scarlatti Sonata E Major K380"; "also … at Piano Society" (piano). Mở khóa 10/11/2026 (mo/ban-thu): câu viết lại thành "Bản thu gợi ý dưới đây là K. 380, do Raymond Smullyan chơi trên piano" vì trang có thêm bản K. 141, K. 466; nghĩa không đổi. Chữ câu cũ: "Bản thu dưới đây chỉ có K. 380, do Raymond Smullyan chơi trên piano.".'
     luot_2: dung
     luot_2_nguon: [ "https://commons.wikimedia.org/wiki/File:Scarlatti_Sonata_E_Major_K380.ogg", "https://imslp.org/wiki/Keyboard_Sonata_in_E_major,_K.380_(Scarlatti,_Domenico)" ]
     luot_2_ghi_chu: "Commons: Scarlatti Sonata E Major K380, Raymond Smullyan, piano, CC BY-SA 2.0; IMSLP K.380 có Smullyan (Pandora/Goldstein Archive)."
+    review: dung
   - id: n25
     cau: 'Smullyan không chơi các dấu nhắc lại, nên dòng "nửa đầu được nhắc lại" trong bảng không có mốc.'
     loai: so-lieu
@@ -312,10 +326,10 @@ nhan_dinh:
     luot_2_nguon: [ "https://commons.wikimedia.org/wiki/File:Scarlatti_Sonata_E_Major_K380.ogg" ]
     luot_2_ghi_chu: "File dài 3:00. Tự đối chiếu sắc độ âm (chroma) của bản thu: 12 giây đầu không lặp lại ở đâu khác (độ tương đồng cao nhất ngoài chỗ gần 0,52, so với ~0,87 trong chính đoạn mở), nên nửa đầu không được nhắc lại."
   - id: n26
-    cau: 'Muốn nghe K. 141 và K. 466, dán link YouTube hoặc link file của một bản thu khác vào khung.'
+    cau: 'Chọn K. 141 và K. 466 ở dòng "Bản thu khác" trong khung; mốc tham khảo chỉ tính theo bản K. 380.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Khối nghe (src/scripts/ khối nghe: dán link, chọn file) như AGENTS.md mục Khối đặc biệt; ban_thu chỉ có K. 380. Review D6-L7-gom: kiểm trên trang và dữ liệu: src/scripts/nghe.js (ô dán link, chọn file); ban_thu chỉ có K. 380 (note "chỉ có Sonata K. 380"); trang dòng 40.'
+    ghi_chu: 'Khối nghe (src/scripts/ khối nghe: dán link, chọn file) như AGENTS.md mục Khối đặc biệt; ban_thu chỉ có K. 380. Review D6-L7-gom: kiểm trên trang và dữ liệu: src/scripts/nghe.js (ô dán link, chọn file); ban_thu chỉ có K. 380 (note "chỉ có Sonata K. 380"); trang dòng 40. Mở khóa 10/11/2026 (mo/ban-thu): khối nghe có dòng "Bản thu khác" cho hai bản Sankey (src/scripts/nghe.js, readKhac; src/plugins/thanh-phan.mjs, data-khac); mốc chỉ theo bản đầu (ref chỉ ở data-rec). Kiểm trên bản build. Chữ câu cũ: "Muốn nghe K. 141 và K. 466, dán link YouTube hoặc link file của một bản thu khác vào khung.".'
     review: dung
   - id: n27
     cau: 'Theo dõi: K. 380, lời gọi kèn ở mở đầu, như hai nhóm kèn đồng đáp nhau, một gần một xa.'
@@ -467,6 +481,18 @@ nhan_dinh:
     luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_E_major,_K.380_(Scarlatti,_Domenico)", "https://commons.wikimedia.org/wiki/File:Scarlatti,_Sonate_K._380_-_ms._Parme_X,23.jpg", "https://www.henle.de/Piano-Sonata-in-E-major-K.-380-L.-23/HN-574", "https://www.henle.de/Piano-Sonata-d-minor-Toccata-K.-141-L.-422/HN-1221", "https://commons.wikimedia.org/wiki/File:Scarlatti_Sonata_E_Major_K380.ogg" ]
     luot_2_ghi_chu: "Các nguồn có thật: IMSLP, ảnh bản chép trên Commons, Henle HN 574 và HN 1221, bản thu Smullyan trên Commons (IMSLP ghi thuộc Pandora/Goldstein Archive). Mục Treccani (Fernandes): trang https://www.treccani.it/enciclopedia/domenico-scarlatti_(Dizionario-Biografico)/ có thật (trả 200) nhưng nội dung dựng bằng JavaScript nên không đọc được chữ."
     review: dung
+  - id: n43
+    cau: K. 141 và K. 466 có bản của John Sankey, chơi trên bàn phím MIDI với âm thanh harpsichord tổng hợp.
+    loai: ten
+    nguon:
+      - commons-sankey
+    ket_qua: dung
+    ghi_chu: 'Commons: File:D._Scarlatti_K141.ogg ("Domenico Scarlatti, John Sankey"; nguồn archive.org JohnSankeyPlaysScarlatti), File:Scarlatti_K_466.ogg ("Recorded by John Sankey. Converted from MIDI to WAV"). Cùng nhận định ở hồ sơ bản ghi tac-pham/scarlatti-sonata (lần 2).'
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Scarlatti_K_466.ogg
+      - https://commons.wikimedia.org/wiki/File:D._Scarlatti_K141.ogg
+    luot_2_ghi_chu: 'Lượt 2 bản thu (mo/ban-thu): "Converted from MIDI to WAV by Wikimedia user StewartIM": âm thanh tổng hợp từ file MIDI của Sankey.'
 khuong_nhac: []
 doi_chu:
   - cu: Sonata một chương cho harpsichord
@@ -530,7 +556,13 @@ doi_chu:
   - cu: 'K. 466: nửa sau trở về Fa thứ và khép lại lặng lẽ'
     moi: 'K. 466: nửa sau trở về giọng chính để khép lại'
     ly_do: 'n31 (review D6-L7-gom): như n30.'
+  - cu: Bản thu dưới đây chỉ có K. 380, do Raymond Smullyan chơi trên piano. Ông không chơi các dấu nhắc lại, nên dòng "nửa đầu được nhắc lại" trong bảng không có mốc. Muốn nghe K. 141 và K. 466, dán link YouTube hoặc link file của một bản thu khác vào khung.
+    moi: 'Bản thu gợi ý dưới đây là K. 380, do Raymond Smullyan chơi trên piano. Ông không chơi các dấu nhắc lại, nên dòng "nửa đầu được nhắc lại" trong bảng không có mốc. K. 141 và K. 466 có bản của John Sankey, chơi trên bàn phím MIDI với âm thanh harpsichord tổng hợp: chọn ở dòng "Bản thu khác" trong khung. Mốc tham khảo chỉ tính theo bản K. 380.'
+    ly_do: "n24, n26, n43 (mo/ban-thu, 10/11/2026): trang có thêm hai bản thu John Sankey (K. 141, K. 466) ở dòng Bản thu khác của khối nghe; mốc tham khảo chỉ theo bản K. 380."
 mo_khoa:
   - ngay: 2026-11-09
     nhanh: mo/scarlatti
     ly_do: Mốc dòng 2 (K. 380, môtip mới có trill) đo bằng tools/audio/align trên MIDI IMSLP (Éditions Outremontaises 2013, Pierre Gouin); đối chiếu ba MIDI cho các vế 'nửa sau trở về giọng chính' (n29, n30, n31) và vế 'vần' (n14).
+  - ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ly_do: "Gắn bản thu có giấy phép mở từ Wikimedia Commons (mo/ban-thu, 10/11/2026, kế hoạch mở rộng mục 5.2): bản ghi tac-pham/scarlatti-sonata mở để thêm ban_thu; trang đọc bản ghi nên mở cùng."

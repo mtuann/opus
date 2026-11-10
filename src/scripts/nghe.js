@@ -80,6 +80,20 @@ function readRec(root) {
   r.ref = Array.isArray(r.ref) ? r.ref.map(function (x) { return typeof x === "number" && x >= 0 ? x : null; }) : [];
   return r;
 }
+/* Các bản thu khác của bản ghi (data-khac): cùng dạng data-rec, không có mốc tham khảo; bỏ bản chỉ dẫn link */
+function readKhac(root) {
+  let a = [];
+  if (root.dataset.khac) { try { a = JSON.parse(root.dataset.khac); } catch (e) { a = []; } }
+  return (Array.isArray(a) ? a : []).filter(function (r) { return r && r.parts && r.parts.length && r.parts[0].mp3; })
+    .map(function (r) { return Object.assign({}, r, { key: r.parts[0].mp3 }); });
+}
+/* Một dòng giới thiệu bản thu: người chơi (ghi chú) · giấy phép · nguồn · số phần */
+function credit(r) {
+  return esc(r.by || "bản thu có giấy phép mở") + (r.note ? " (" + esc(r.note) + ")" : "") +
+    (r.lic ? " · " + (r.licUrl ? '<a href="' + esc(r.licUrl) + '" target="_blank" rel="license noopener">' + esc(r.lic) + "</a>" : esc(r.lic)) : "") +
+    (r.page ? ' · <a href="' + esc(r.page) + '" target="_blank" rel="noopener">' + (/imslp\.org\//.test(r.page) ? "IMSLP" : "Wikimedia Commons") + "</a>" : "") +
+    (r.parts.length > 1 ? " · " + r.parts.length + " phần" : "");
+}
 /* Vị trí của thời điểm t (giây, tính liền qua các phần) trong danh sách phần: [phần, giây trong phần] */
 function partAt(t, durs) {
   let i = 0, acc = 0;
@@ -108,7 +122,7 @@ function activeRow(t, marks) {
   return best;
 }
 /* Hàm thuần, cho kiểm thử (tests/nghe.test.mjs), như window.OZListen của bản cũ */
-export { activeRow, audioUrl, compare, partAt, readRec, switchSource, tally, videoId };
+export { activeRow, audioUrl, compare, partAt, readKhac, readRec, switchSource, tally, videoId };
 
 function findTable(root) {
   const article = root.closest(".sl-markdown-content") || document;
@@ -138,6 +152,7 @@ export function mount(root) {
   const mine = function () { return store()[key] || store()[keyCu] || { url: "", marks: {} }; };
   const save = function (v) { const all = store(); all[key] = v; datKho("listen", all); };
   const def = readRec(root);
+  const khac = def ? readKhac(root) : [];
   const ref = def ? def.ref : [];
   const hasRef = ref.some(function (x) { return x !== null; });
   /* Bật/tắt mốc tham khảo: nhớ riêng cho từng trang, trên máy này */
@@ -155,12 +170,10 @@ export function mount(root) {
 
   root.innerHTML =
     '<p class="oz-stats">Nghe một bản thu: dán link YouTube hoặc link tới một file âm thanh (.mp3, .ogg…), hoặc chọn một file trên máy bạn. Rồi bấm <strong>Ghi mốc</strong> trong bảng bên dưới mỗi khi nghe thấy sự kiện tương ứng. Mốc được lưu trên máy bạn, riêng cho từng bản thu; bấm vào mốc để tua đến đó.</p>' +
-    (def ? '<p class="oz-stats oz-rec">Bản thu gợi ý: ' + esc(def.by || "bản thu có giấy phép mở") + (def.note ? " (" + esc(def.note) + ")" : "") +
-      (def.lic ? " · " + (def.licUrl ? '<a href="' + esc(def.licUrl) + '" target="_blank" rel="license noopener">' + esc(def.lic) + "</a>" : esc(def.lic)) : "") +
-      (def.page ? ' · <a href="' + esc(def.page) + '" target="_blank" rel="noopener">' + (/imslp\.org\//.test(def.page) ? "IMSLP" : "Wikimedia Commons") + "</a>" : "") +
-      (def.parts.length > 1 ? " · " + def.parts.length + " phần" : "") + ". " +
+    (def ? '<p class="oz-stats oz-rec">Bản thu gợi ý: ' + credit(def) + ". " +
       (def.linkOnly ? openLinks(def.parts) + " Trang này chỉ dẫn link, không phát bản thu này; mốc tham khảo tính theo file ở link.</p>" :
         '<button class="oz-btn" data-act="default">Nghe bản này</button></p>') : "") +
+    khac.map(function (r, i) { return '<p class="oz-stats oz-rec oz-rec-khac">Bản thu khác: ' + credit(r) + '. <button class="oz-btn" data-act="khac" data-i="' + i + '">Nghe bản này</button></p>'; }).join("") +
     (hasRef ? '<div class="oz-ref-row"><label class="oz-ref-toggle"><input type="checkbox" class="oz-ref-on"> Hiện mốc tham khảo trong bảng</label>' +
       '<p class="oz-stats oz-ref-sum" aria-live="polite"></p></div>' : "") +
     '<div class="oz-row"><input type="url" class="oz-input" placeholder="Link YouTube hoặc link file .mp3, .ogg" aria-label="Link bản thu: YouTube hoặc file âm thanh">' +
@@ -176,7 +189,7 @@ export function mount(root) {
   const fb = root.querySelector(".oz-feedback"), box = root.querySelector(".oz-video"), audio = root.querySelector("audio"), sel = root.querySelector(".oz-part");
   let yt = null, player = null, objUrl = null, curSrc = "";
   const saved = mine().url || "";
-  input.value = /^file:/.test(saved) || (def && saved === def.key) ? "" : saved;
+  input.value = /^file:/.test(saved) || (def && saved === def.key) || khac.some(function (r) { return r.key === saved; }) ? "" : saved;
   const say = function (msg, cls) { fb.textContent = msg; fb.className = "oz-feedback" + (cls ? " " + cls : ""); };
   const use = function (k) { const v = mine(); if (v.url !== k) { save(switchSource(v, k)); renderCells(); } };
 
@@ -367,6 +380,12 @@ export function mount(root) {
     showParts(def.parts);
     say(def.parts.length > 1 ? "Đã tải bản thu gợi ý, gồm " + def.parts.length + " phần; hết phần này trình phát tự sang phần sau. Bấm phát ▶; mốc của bản này được lưu riêng." : "Đã tải bản thu gợi ý. Bấm phát ▶; mốc của bản này được lưu riêng.", "ok");
   }
+  function loadKhac(i) {
+    const r = khac[i]; if (!r) return;
+    use(r.key); input.value = ""; curSrc = r.key;
+    showParts(r.parts);
+    say("Đã tải " + (r.note || r.by || "bản thu") + ". Bấm phát ▶; mốc của bản này được lưu riêng" + (hasRef ? ", mốc tham khảo chỉ theo bản thu gợi ý" : "") + ".", "ok");
+  }
   fileIn.addEventListener("change", function () {
     const f = fileIn.files && fileIn.files[0]; if (!f) return;
     if (objUrl) URL.revokeObjectURL(objUrl);
@@ -399,6 +418,7 @@ export function mount(root) {
     const b = e.target.closest("button[data-act]"); if (!b) return;
     if (b.dataset.act === "load") load();
     if (b.dataset.act === "default") loadDefault();
+    if (b.dataset.act === "khac") loadKhac(Number(b.dataset.i));
     if (b.dataset.act === "file") fileIn.click();
     if (b.dataset.act === "export") exportMd();
   });

@@ -76,3 +76,11 @@ test('tiến độ lưu ở khóa opus-zero:v1 như site cũ; ghi thêm không l
 		globalThis.document = cu.document;
 	}
 });
+
+test('bản thu khác (data-khac, mo/ban-thu): đọc danh sách, bỏ bản chỉ dẫn link, khóa là mp3 phần đầu', () => {
+	const el = (khac) => ({ dataset: { khac: JSON.stringify(khac) } });
+	const a = L.readKhac(el([{ by: 'A', parts: [{ mp3: 'https://x.org/a.mp3', d: 5 }] }, { by: 'B', parts: [{ link: 'https://x.org/b', d: 5 }] }]));
+	assert.deepEqual(a.map((r) => [r.by, r.key]), [['A', 'https://x.org/a.mp3']]);
+	assert.deepEqual(L.readKhac({ dataset: {} }), []);
+	assert.deepEqual(L.readKhac({ dataset: { khac: 'hỏng' } }), []);
+});

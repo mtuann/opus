@@ -30,6 +30,15 @@ lan:
       luot_2: "Claude Sonnet 5.5 (lượt 2 hinh mo/hinh-dot-3c, 07/11/2026)"
       review: "Claude Opus 5.5 (soát hình 3C, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
       kiem_mau: "Claude Opus 5.5 (soát hình 3C, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
+  - so: 4
+    ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ma_bam: sha256:8cd429987a79e03ab83a8f015139c19be686fbd2960a254b5055c2f6fd11e2b7
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/ban-thu, 10/11/2026: tìm trên Commons bằng tools/audio/commons.py, kiểm bản quyền ở Mỹ, gắn bằng attach.py; check_audio.py --static --network 0 lỗi)"
+      luot_2: "Claude (agent con, lượt 2 độc lập: đọc wikitext và metadata Commons của mọi phần, DAHR cho bản Victor, 10/11/2026)"
+      review: "Claude Opus 5.5 (người gom mo/ban-thu: mọi câu hai lượt khác nhau; thay bản MIT bằng bản Edison 1916, bỏ bản Mendelssohn vì chưa xác nhận được giấy phép YouTube)"
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo (chủ repo giao làm trọn phần bản thu, 10/11/2026): mọi bản thu mở được trên trang đã dựng (npm run build, khối nghe), check_audio --network 0 lỗi"
 nguon:
   - id: imslp
     bac: 2
@@ -55,6 +64,10 @@ nguon:
     bac: 1
     ten: 'Neue Mozart-Ausgabe II/5/19, Die Zauberflöte, aria số 14 (tr. 224–231) trên Digital Mozart Edition'
     link: https://dme.mozarteum.at/DME/nma/nma_cont.php?vsep=73&p1=5
+  - id: commons-bt-mozart-nu-hoang-bong-dem
+    bac: 2
+    ten: Wikimedia Commons, trang file của bản thu (Sandra Partridge (soprano), Siam Philharmonic Orchestra, Trisdee na Patalung chỉ huy)
+    link: https://commons.wikimedia.org/wiki/File:Der_Hoelle_Rache.ogg
 nhan_dinh:
   - id: n1
     cau: Tên «Nữ hoàng bóng đêm» chỉ aria «Der Hölle Rache» của Nữ hoàng bóng đêm (màn 2, số 14) trong opera Die Zauberflöte (Cây sáo thần).
@@ -117,7 +130,62 @@ nhan_dinh:
     luot_2_nguon: [ "kiem-dinh/nghe-nhac/mozart-nu-hoang-bong-dem.yml" ]
     luot_2_ghi_chu: "Các ô khớp thứ tự và số lượng các dòng của bảng cùng tên trên trang (đã đối chiếu từng ô: tên và chữ rút gọn); các nhận định tương ứng của hồ sơ trang đều có kết quả và lượt 2 dung hoặc đã sửa và review dung."
     review: dung
+  - id: n7
+    cau: 'Bản thu Mozart, aria "Der Hölle Rache" (Cây sáo thần): Sandra Partridge (soprano), Siam Philharmonic Orchestra, Trisdee na Patalung chỉ huy (thu trực tiếp năm 2006 ở Bangkok; aria thứ hai, Der Hölle Rache).'
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-mozart-nu-hoang-bong-dem
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Der_Hoelle_Rache.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Der_Hoelle_Rache.ogg
+    luot_2_ghi_chu: "'Sandra Partridge, soprano; Trisdee na Patalung, conductor; Siam Philharmonic Orchestra'; Bangkok Opera 2006."
+  - id: n8
+    cau: "Giấy phép bản thu: CC BY 2.5."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-mozart-nu-hoang-bong-dem
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Der_Hoelle_Rache.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Der_Hoelle_Rache.ogg
+    luot_2_ghi_chu: "{{Self|GFDL|Cc-by-sa-3.0-migrated|Cc-by-2.5}}: CC BY 2.5 là một lựa chọn."
+  - id: n9
+    cau: 1 phần, tổng 190,56 giây.
+    loai: so-lieu
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-mozart-nu-hoang-bong-dem
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Der_Hoelle_Rache.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo|revisions&titles=File:Der_Hoelle_Rache.ogg
+    luot_2_ghi_chu: duration 190.56 s.
+  - id: n10
+    cau: Người giữ quyền bản thu phát hành theo CC BY 2.5 (trang Commons ghi người tải là chủ bản thu, có phiếu VRT, hay dẫn nguồn phát hành).
+    loai: lich-su
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-mozart-nu-hoang-bong-dem
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Der_Hoelle_Rache.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Der_Hoelle_Rache.ogg
+    luot_2_ghi_chu: "Người tải là chính nhạc trưởng (own, self). Lưu ý: soprano/dàn nhạc/Bangkok Opera không có xác nhận riêng."
 mo_khoa:
   - ngay: 2026-11-06
     nhanh: mo/hinh-dot-3c
     ly_do: "thêm hình (đợt hình 3): thêm hinh.nghe, sơ đồ đoạn vẽ lại bảng của trang nghe-nhac/mozart-nu-hoang-bong-dem"
+  - ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ly_do: "Gắn bản thu có giấy phép mở từ Wikimedia Commons (mo/ban-thu, 10/11/2026, kế hoạch mở rộng mục 5.2): trường ban_thu."

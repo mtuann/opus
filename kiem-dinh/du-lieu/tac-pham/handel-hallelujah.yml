@@ -30,6 +30,15 @@ lan:
       luot_2: "Claude Sonnet 5.5 (lượt 2 hinh mo/hinh-dot-3c, 07/11/2026)"
       review: "Claude Opus 5.5 (soát hình 3C, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
       kiem_mau: "Claude Opus 5.5 (soát hình 3C, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
+  - so: 4
+    ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ma_bam: sha256:7397c23d16e38e25e21c592f2554fb0e6a01b3d5bebf27ea2e942ab097c94509
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/ban-thu, 10/11/2026: tìm trên Commons bằng tools/audio/commons.py, kiểm bản quyền ở Mỹ, gắn bằng attach.py; check_audio.py --static --network 0 lỗi)"
+      luot_2: "Claude (agent con, lượt 2 độc lập: đọc wikitext và metadata Commons của mọi phần, DAHR cho bản Victor, 10/11/2026)"
+      review: "Claude Opus 5.5 (người gom mo/ban-thu: mọi câu hai lượt khác nhau; thay bản MIT bằng bản Edison 1916, bỏ bản Mendelssohn vì chưa xác nhận được giấy phép YouTube)"
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo (chủ repo giao làm trọn phần bản thu, 10/11/2026): mọi bản thu mở được trên trang đã dựng (npm run build, khối nghe), check_audio --network 0 lỗi"
 nguon:
   - id: imslp
     bac: 2
@@ -51,6 +60,10 @@ nguon:
     bac: 2
     ten: 'The Concise Oxford Dictionary of Music (Encyclopedia.com), "Messiah": "Oratorio by Handel …"'
     link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/messiah
+  - id: commons-bt-handel-hallelujah
+    bac: 2
+    ten: Wikimedia Commons, trang file của bản thu (hãng Edison)
+    link: https://commons.wikimedia.org/wiki/File:Messiah_Hallelujah_Chorus_1916.ogg
 nhan_dinh:
   - id: n1
     cau: Tên «"Hallelujah" (Messiah)» chỉ hợp xướng Hallelujah của oratorio Messiah.
@@ -113,7 +126,68 @@ nhan_dinh:
     luot_2_nguon: [ "kiem-dinh/nghe-nhac/handel-hallelujah.yml" ]
     luot_2_ghi_chu: "6 ô khớp thứ tự và số lượng 6 dòng bảng \"Sơ đồ cấu trúc\"/\"Theo dõi khi nghe\". n23-n28 có kết quả; n27 lượt 2 sai đã sửa trang và review dung, chữ ô khớp."
     review: dung
+  - id: n7
+    cau: "Bản thu Handel, hợp xướng Hallelujah (Messiah): hãng Edison (đĩa Edison Diamond Disc, năm 1916; Commons không ghi tên hợp xướng)."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-handel-hallelujah
+    ket_qua: da-sua
+    ghi_chu: 'Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Messiah_Hallelujah_Chorus_1916.ogg Review (mo/ban-thu, 10/11/2026): bản MIT Concert Choir (CC BY-SA 2.0) bị thay vì lượt 2 không xác nhận được người giữ quyền phát hành theo CC; bản Edison 1916 thay vào, lượt 2 lại: ngày "5/1916" có thể là ngày phát hành, viết "năm 1916".'
+    luot_2: khong-chac
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Messiah_Hallelujah_Chorus_1916.ogg
+      - https://adp.library.ucsb.edu/index.php/matrix/refer/2000151892
+    luot_2_ghi_chu: "Commons: 'Source=Edison Diamond Disc. Matrix number: 4433-A-1-1', 'Date=1916-05', Author=Edison; không ghi hợp xướng. Nhưng DAHR: matrix 4435 kế bên thu 20/1/1916, nên 5/1916 có thể là ngày phát hành chứ không phải ngày thu."
+    review: dung
+  - id: n8
+    cau: "Giấy phép bản thu: phạm vi công cộng."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-handel-hallelujah
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Messiah_Hallelujah_Chorus_1916.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Messiah_Hallelujah_Chorus_1916.ogg
+      - https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo|revisions&titles=File:Messiah_Hallelujah_Chorus_1916.ogg
+    luot_2_ghi_chu: "{{PD-US}}; Permission=Public Domain; metadata: Public domain."
+  - id: n9
+    cau: 1 phần, tổng 222,96 giây.
+    loai: so-lieu
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-handel-hallelujah
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Messiah_Hallelujah_Chorus_1916.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo|revisions&titles=File:Messiah_Hallelujah_Chorus_1916.ogg
+    luot_2_ghi_chu: duration 222.96 s, 1 file.
+  - id: n10
+    cau: "Bản thu thuộc phạm vi công cộng cả ở Mỹ: thu năm 1916, trước 1923."
+    loai: lich-su
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-handel-hallelujah
+    ket_qua: da-sua
+    ghi_chu: 'Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Messiah_Hallelujah_Chorus_1916.ogg Review (mo/ban-thu, 10/11/2026): lượt 2: lý do viết "thu năm 1916, trước 1923" thay "xuất bản trước 1926".'
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Messiah_Hallelujah_Chorus_1916.ogg
+      - https://adp.library.ucsb.edu/index.php/matrix/refer/2000151892
+      - https://archive.org/details/EDIS-SRP-0195-06
+    luot_2_ghi_chu: Edison 1916 → PD ở Mỹ (thu trước 1923). Chưa xác nhận số đĩa phát hành (archive.org không mở được), nhưng bản thu trước 1923 vẫn PD dù chưa phát hành.
+    review: dung
 mo_khoa:
   - ngay: 2026-11-06
     nhanh: mo/hinh-dot-3c
     ly_do: "thêm hình (đợt hình 3): thêm hinh.nghe, sơ đồ đoạn vẽ lại bảng của trang nghe-nhac/handel-hallelujah"
+  - ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ly_do: "Gắn bản thu có giấy phép mở từ Wikimedia Commons (mo/ban-thu, 10/11/2026, kế hoạch mở rộng mục 5.2): trường ban_thu."

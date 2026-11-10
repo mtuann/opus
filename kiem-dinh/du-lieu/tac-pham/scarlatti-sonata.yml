@@ -21,6 +21,15 @@ lan:
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L7, 06/11/2026, ba phần; bổ sung sau review do Claude Sonnet 5.5 làm)
       review: Claude Opus 5.5 (review D6-L7-gom)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L7, 8 đúng (doc-ten-tac-pham n10: thêm nguồn COD op. posth. vì trang Dolmetsch không hiện mục ấy), 0 sai (bao-cao/d6-l7-gom/kiem-mau-ket-qua.yml)"
+  - so: 3
+    ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ma_bam: sha256:8cbbb6d78dcc91e48b725f0c4af9df7238d0419e17f8f59669ffee22aabfe235
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/ban-thu, 10/11/2026: tìm trên Commons bằng tools/audio/commons.py, kiểm bản quyền ở Mỹ, gắn bằng attach.py; check_audio.py --static --network 0 lỗi)"
+      luot_2: "Claude (agent con, lượt 2 độc lập: đọc wikitext và metadata Commons của mọi phần, DAHR cho bản Victor, 10/11/2026)"
+      review: "Claude Opus 5.5 (người gom mo/ban-thu: mọi câu hai lượt khác nhau; thay bản MIT bằng bản Edison 1916, bỏ bản Mendelssohn vì chưa xác nhận được giấy phép YouTube)"
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo (chủ repo giao làm trọn phần bản thu, 10/11/2026): mọi bản thu mở được trên trang đã dựng (npm run build, khối nghe), check_audio --network 0 lỗi"
 nguon:
   - id: imslp-k380
     bac: 2
@@ -66,6 +75,14 @@ nguon:
     bac: 2
     ten: 'Open Music Theory, "Binary Form", mục Balanced (nguồn lượt 2; review mở bản lưu Wayback 20/5/2024): chất liệu cuối reprise thứ nhất trở lại cuối reprise thứ hai ở giọng chính; "there needs to be a crux point"; ví dụ Scarlatti K. 322'
     link: https://viva.pressbooks.pub/openmusictheory/chapter/binary-form/
+  - id: commons-bt-scarlatti-sonata-1
+    bac: 2
+    ten: Wikimedia Commons, trang file của bản thu (John Sankey (harpsichord))
+    link: https://commons.wikimedia.org/wiki/File:D._Scarlatti_K141.ogg
+  - id: commons-bt-scarlatti-sonata-2
+    bac: 2
+    ten: Wikimedia Commons, trang file của bản thu (John Sankey (harpsichord))
+    link: https://commons.wikimedia.org/wiki/File:Scarlatti_K_466.ogg
 nhan_dinh:
   - id: n1
     cau: Tên «Ba bản sonata» chỉ ba sonata cho đàn phím K. 380 (Mi trưởng), K. 141 (Rê thứ) và K. 466 (Fa thứ).
@@ -168,3 +185,119 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://commons.wikimedia.org/wiki/File:Scarlatti_Sonata_E_Major_K380.ogg" ]
     luot_2_ghi_chu: "API Commons: 180,333 giây."
+  - id: n11
+    cau: "Bản thu Scarlatti, Sonata K. 141: John Sankey (harpsichord) (chơi trên bàn phím MIDI, âm thanh harpsichord tổng hợp)."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-scarlatti-sonata-1
+    ket_qua: da-sua
+    ghi_chu: 'Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:D._Scarlatti_K141.ogg Review (mo/ban-thu, 10/11/2026): như K. 466 (cùng nguồn Sankey, ghi bằng MIDI), thêm "chơi trên bàn phím MIDI, âm thanh harpsichord tổng hợp".'
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:D._Scarlatti_K141.ogg
+      - https://johnsankey.ca/scarlattirec.html
+    luot_2_ghi_chu: "'Domenico Scarlatti, sonata K. 141'; Author 'Domenico Scarlatti, John Sankey'. Sankey thu bằng bàn phím MIDI."
+    review: dung
+  - id: n12
+    cau: "Giấy phép bản thu: CC BY-SA 3.0."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-scarlatti-sonata-1
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:D._Scarlatti_K141.ogg Review (mo/ban-thu, 10/11/2026): lượt 2 khong-chac: thẻ {{cc-by-sa-3.0}} nhưng trường Permission dẫn by-sa/2.5. Giữ tên theo thẻ giấy phép của Commons (cùng loại BY-SA, hai bản đều được nhận); thông báo của Sankey cũng cho dùng tự do."
+    luot_2: khong-chac
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:D._Scarlatti_K141.ogg
+    luot_2_ghi_chu: Thẻ {{cc-by-sa-3.0}} nhưng trường Permission ghi 'creativecommons.org/licenses/by-sa/2.5/' — mâu thuẫn phiên bản.
+    review: dung
+  - id: n13
+    cau: 1 phần, tổng 130,2 giây.
+    loai: so-lieu
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-scarlatti-sonata-1
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:D._Scarlatti_K141.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo|revisions&titles=File:D._Scarlatti_K141.ogg
+    luot_2_ghi_chu: duration 130.20 s.
+  - id: n14
+    cau: "Bản thu dùng tự do kèm ghi công: thông báo cho phép của John Sankey (johnsankey.ca) và thẻ giấy phép trên Commons."
+    loai: lich-su
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-scarlatti-sonata-1
+    ket_qua: dung
+    ghi_chu: 'Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:D._Scarlatti_K141.ogg Review (mo/ban-thu, 10/11/2026): lượt 2 khong-chac: thông báo johnsankey.ca "Anyone may copy, link to, or distribute ... as long as this notice ... is distributed": dùng tự do, kèm ghi công; link Commons trên trang giữ thông báo.'
+    luot_2: khong-chac
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:D._Scarlatti_K141.ogg
+      - https://johnsankey.ca/
+      - https://archive.org/details/JohnSankeyPlaysScarlatti
+    luot_2_ghi_chu: "Site Sankey: 'Anyone may copy... as long as this notice of permission' — không nói CC; archive.org không mở được. Vẫn dùng tự do được theo thông báo của Sankey (kèm thông báo)."
+    review: dung
+  - id: n15
+    cau: "Bản thu Scarlatti, Sonata K. 466: John Sankey (harpsichord) (chơi trên bàn phím MIDI, âm thanh harpsichord tổng hợp)."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-scarlatti-sonata-2
+    ket_qua: da-sua
+    ghi_chu: 'Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Scarlatti_K_466.ogg Review (mo/ban-thu, 10/11/2026): lượt 2: "Converted from MIDI to WAV": Sankey chơi trên bàn phím MIDI, âm thanh harpsichord tổng hợp; ghi thêm vào note của bản thu và vào câu của trang (cả K. 141, cùng nguồn của Sankey).'
+    luot_2: khong-chac
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Scarlatti_K_466.ogg
+    luot_2_ghi_chu: "'Recorded by John Sankey. Converted from MIDI to WAV by Wikimedia user StewartIM' — âm thanh là bản tổng hợp từ MIDI, không phải thu đàn harpsichord thật."
+    review: dung
+  - id: n16
+    cau: "Giấy phép bản thu: ghi công tác giả (Commons {{Attribution}})."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-scarlatti-sonata-2
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Scarlatti_K_466.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Scarlatti_K_466.ogg
+    luot_2_ghi_chu: "{{Attribution}}."
+  - id: n17
+    cau: 1 phần, tổng 180,57 giây.
+    loai: so-lieu
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-scarlatti-sonata-2
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Scarlatti_K_466.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo|revisions&titles=File:Scarlatti_K_466.ogg
+    luot_2_ghi_chu: duration 180.57 s.
+  - id: n18
+    cau: "Bản thu dùng tự do kèm ghi công: thông báo cho phép của John Sankey (johnsankey.ca) và thẻ giấy phép trên Commons."
+    loai: lich-su
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-scarlatti-sonata-2
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Scarlatti_K_466.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Scarlatti_K_466.ogg
+      - https://johnsankey.ca/
+    luot_2_ghi_chu: "Sankey: 'Anyone may copy... No one may restrict their further use'. Điều kiện: kèm thông báo cho phép."
+mo_khoa:
+  - ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ly_do: "Gắn bản thu có giấy phép mở từ Wikimedia Commons (mo/ban-thu, 10/11/2026, kế hoạch mở rộng mục 5.2): trường ban_thu."

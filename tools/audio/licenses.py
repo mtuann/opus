@@ -1,7 +1,8 @@
 """Giấy phép bản thu được nhận trên site: nơi duy nhất trong code giữ danh sách này.
 
 Nhận: phạm vi công cộng (kể cả Public Domain Mark), CC0, CC BY và CC BY-SA từ 2.0 đến 4.0 (kể cả bản theo
-quốc gia, ví dụ CC BY-SA 3.0 DE). Không nhận: NC, ND, GFDL đơn thuần, "all rights reserved", hay bất cứ thứ gì
+quốc gia, ví dụ CC BY-SA 3.0 DE), và mẫu {{Attribution}} của Commons (dùng tự do, chỉ cần ghi tên tác giả; nhận từ
+ngày 10/11/2026 cho bản thu K. 466 của John Sankey, chủ repo chọn). Không nhận: NC, ND, GFDL đơn thuần, "all rights reserved", hay bất cứ thứ gì
 không đọc ra được.
 
     from licenses import parse, check
@@ -14,6 +15,8 @@ Chạy trực tiếp để thử một tên giấy phép:  python3 tools/audio/l
 import re
 import sys
 
+ATTRIBUTION = "ghi công tác giả (Commons {{Attribution}})"
+ATTRIBUTION_URL = "https://commons.wikimedia.org/wiki/Template:Attribution"
 PD = "phạm vi công cộng"            # tên ghi trên trang cho bản thu thuộc phạm vi công cộng (kể cả PDM)
 TYPES = ("by", "by-sa")             # CC BY, CC BY-SA
 VERSIONS = ("2.0", "2.5", "3.0", "4.0")
@@ -46,6 +49,8 @@ def parse(name):
         return PD, ""
     if re.match(r"(cc ?0|cc zero|cc-zero)\b", s):
         return "CC0", CC0_URL
+    if s in ("by", _norm(ATTRIBUTION)):
+        return ATTRIBUTION, ATTRIBUTION_URL
     m = re.match(r"cc (by(?:-sa)?)[ -]*(\d(?:\.\d)?)?(?:\s+([a-z]{2}))?\b", s)
     if not m:
         raise ValueError("không nhận ra giấy phép: %s" % name)

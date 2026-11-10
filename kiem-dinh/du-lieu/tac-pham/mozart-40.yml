@@ -21,6 +21,15 @@ lan:
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L9, 06/11/2026, ba phần)
       review: Claude Opus 5.5 (review D6-L9-gom)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L9, 8 đúng (mozart-requiem n33 có điều kiện: chưa kiểm lại tên Nowak, năm 1965 trên DME), 0 sai (bao-cao/d6-l9-gom/kiem-mau-ket-qua.yml)"
+  - so: 3
+    ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ma_bam: sha256:824f9515e483a4aa4a967af8971d2dc5e4d3e574b21e983c1d72795ab5079af9
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/ban-thu, 10/11/2026: tìm trên Commons bằng tools/audio/commons.py, kiểm bản quyền ở Mỹ, gắn bằng attach.py; check_audio.py --static --network 0 lỗi)"
+      luot_2: "Claude (agent con, lượt 2 độc lập: đọc wikitext và metadata Commons của mọi phần, DAHR cho bản Victor, 10/11/2026)"
+      review: "Claude Opus 5.5 (người gom mo/ban-thu: mọi câu hai lượt khác nhau; thay bản MIT bằng bản Edison 1916, bỏ bản Mendelssohn vì chưa xác nhận được giấy phép YouTube)"
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo (chủ repo giao làm trọn phần bản thu, 10/11/2026): mọi bản thu mở được trên trang đã dựng (npm run build, khối nghe), check_audio --network 0 lỗi"
 nguon:
   - id: imslp
     bac: 2
@@ -42,6 +51,10 @@ nguon:
     bac: 2
     ten: 'The Concise Oxford Dictionary of Music (Encyclopedia.com), "sonata form": exposition "often repeated", development, recapitulation "with the 2nd subject now in the tonic", "The recapitulation has a coda"'
     link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/sonata-form
+  - id: commons-bt-mozart-40
+    bac: 2
+    ten: Wikimedia Commons, trang file của bản thu (Musopen Symphony)
+    link: https://commons.wikimedia.org/wiki/File:Mozart_-_Symphony_No._40_in_G_minor,_K550_-_I._Molto_allegro_(Musopen_Symphony).flac
 nhan_dinh:
   - id: n1
     cau: Tên «Giao hưởng số 40, chương 1» chỉ chương 1 (Molto allegro) của Giao hưởng số 40 cung Sol thứ.
@@ -130,3 +143,59 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://commons.wikimedia.org/wiki/File:Symphony_No.40_in_G_minor,_K.550_(IA_imslp-no40-in-g-minor-k550-mozart-wolfgang-amadeus).pdf" ]
     luot_2_ghi_chu: "Bản Meves tr. 23–24: tái hiện chủ đề 1 ở Sol thứ; chủ đề 2 trở lại ở Sol thứ (tr. 24, sau dấu lặng); cuối chương có đoạn coda."
+  - id: n10
+    cau: "Bản thu Mozart, Giao hưởng số 40 K. 550, chương 1: Musopen Symphony (thu năm 2012)."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-mozart-40
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Mozart_-_Symphony_No._40_in_G_minor,_K550_-_I._Molto_allegro_(Musopen_Symphony).flac"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Mozart_-_Symphony_No._40_in_G_minor,_K550_-_I._Molto_allegro_(Musopen_Symphony).flac
+    luot_2_ghi_chu: "'Symphony No. 40 in G minor, K550 - I. Molto allegro'; Musopen Symphony; 2012."
+  - id: n11
+    cau: "Giấy phép bản thu: phạm vi công cộng."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-mozart-40
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Mozart_-_Symphony_No._40_in_G_minor,_K550_-_I._Molto_allegro_(Musopen_Symphony).flac"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Mozart_-_Symphony_No._40_in_G_minor,_K550_-_I._Molto_allegro_(Musopen_Symphony).flac
+    luot_2_ghi_chu: recording={{PD-author|Musopen}}.
+  - id: n12
+    cau: 1 phần, tổng 358,82 giây.
+    loai: so-lieu
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-mozart-40
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Mozart_-_Symphony_No._40_in_G_minor,_K550_-_I._Molto_allegro_(Musopen_Symphony).flac"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo|revisions&titles=File:Mozart_-_Symphony_No._40_in_G_minor,_K550_-_I._Molto_allegro_(Musopen_Symphony).flac
+    luot_2_ghi_chu: duration 358.82 s.
+  - id: n13
+    cau: "Bản thu thuộc phạm vi công cộng cả ở Mỹ: Musopen phát hành vào phạm vi công cộng."
+    loai: lich-su
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-mozart-40
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Mozart_-_Symphony_No._40_in_G_minor,_K550_-_I._Molto_allegro_(Musopen_Symphony).flac"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Mozart_-_Symphony_No._40_in_G_minor,_K550_-_I._Molto_allegro_(Musopen_Symphony).flac
+    luot_2_ghi_chu: Musopen Kickstarter 2012, Musopen dâng tặng PD.
+mo_khoa:
+  - ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ly_do: "Gắn bản thu có giấy phép mở từ Wikimedia Commons (mo/ban-thu, 10/11/2026, kế hoạch mở rộng mục 5.2): trường ban_thu."

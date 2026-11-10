@@ -30,6 +30,15 @@ lan:
       luot_2: "Claude Sonnet 5.5 (lượt 2 hinh mo/hinh-dot-3c, 07/11/2026)"
       review: "Claude Opus 5.5 (soát hình 3C, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
       kiem_mau: "Claude Opus 5.5 (soát hình 3C, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
+  - so: 4
+    ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ma_bam: sha256:c989cf3c57ef92f2874444248e545bc695818799c7e2c3901398cf5769e51b6b
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/ban-thu, 10/11/2026: tìm trên Commons bằng tools/audio/commons.py, kiểm bản quyền ở Mỹ, gắn bằng attach.py; check_audio.py --static --network 0 lỗi)"
+      luot_2: "Claude (agent con, lượt 2 độc lập: đọc wikitext và metadata Commons của mọi phần, DAHR cho bản Victor, 10/11/2026)"
+      review: "Claude Opus 5.5 (người gom mo/ban-thu: mọi câu hai lượt khác nhau; thay bản MIT bằng bản Edison 1916, bỏ bản Mendelssohn vì chưa xác nhận được giấy phép YouTube)"
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo (chủ repo giao làm trọn phần bản thu, 10/11/2026): mọi bản thu mở được trên trang đã dựng (npm run build, khối nghe), check_audio --network 0 lỗi"
 nguon:
   - id: imslp-rv297
     bac: 2
@@ -55,6 +64,10 @@ nguon:
     bac: 2
     ten: 'Boston Baroque, chú giải Vivaldi: The Four Seasons (Martin Pearlman)'
     link: https://baroque.boston/vivaldi-four-seasons
+  - id: commons-bt-vivaldi-mua-dong
+    bac: 2
+    ten: Wikimedia Commons, trang file của bản thu (John Harrison (violin), Wichita State University Chamber Players, Robert Turizziani chỉ huy)
+    link: https://commons.wikimedia.org/wiki/File:Vivaldi_-_Four_Seasons_4_Winter_mvt_1_Allegro_non_molto_-_John_Harrison_violin.oga
 nhan_dinh:
   - id: n1
     cau: Tên «Mùa đông, chương 1» chỉ chương 1 (Allegro non molto) của Concerto «L'inverno» (Mùa đông) cung Fa thứ trong Bốn Mùa.
@@ -117,7 +130,62 @@ nhan_dinh:
     luot_2_nguon: [ "kiem-dinh/nghe-nhac/vivaldi-mua-dong.yml" ]
     luot_2_ghi_chu: "6 ô khớp thứ tự và số lượng 6 dòng bảng; ghi chú màu (xanh/vàng) là cách vẽ, khớp cột \"cả dàn nhạc/violin độc tấu\" của bảng. n23-n28 đều có kết quả, lượt 2 dung."
     review: dung
+  - id: n7
+    cau: "Bản thu Vivaldi, Mùa đông RV 297, chương 1: John Harrison (violin), Wichita State University Chamber Players, Robert Turizziani chỉ huy."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-vivaldi-mua-dong
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Vivaldi_-_Four_Seasons_4_Winter_mvt_1_Allegro_non_molto_-_John_Harrison_violin.oga"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Vivaldi_-_Four_Seasons_4_Winter_mvt_1_Allegro_non_molto_-_John_Harrison_violin.oga
+    luot_2_ghi_chu: "'John Harrison — Violin / Robert Turizziani — Conductor / Wichita State University Chamber Players'; RV 297 mvt 1."
+  - id: n8
+    cau: "Giấy phép bản thu: CC BY-SA 4.0."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-vivaldi-mua-dong
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Vivaldi_-_Four_Seasons_4_Winter_mvt_1_Allegro_non_molto_-_John_Harrison_violin.oga"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Vivaldi_-_Four_Seasons_4_Winter_mvt_1_Allegro_non_molto_-_John_Harrison_violin.oga
+    luot_2_ghi_chu: "{{self|cc-by-sa-1.0+}} (1.0 hay bản sau), metadata hiển thị CC BY-SA 4.0."
+  - id: n9
+    cau: 1 phần, tổng 208,84 giây.
+    loai: so-lieu
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-vivaldi-mua-dong
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Vivaldi_-_Four_Seasons_4_Winter_mvt_1_Allegro_non_molto_-_John_Harrison_violin.oga"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo|revisions&titles=File:Vivaldi_-_Four_Seasons_4_Winter_mvt_1_Allegro_non_molto_-_John_Harrison_violin.oga
+    luot_2_ghi_chu: duration 208.84 s ('3m:28.840s').
+  - id: n10
+    cau: Người giữ quyền bản thu phát hành theo CC BY-SA 4.0 (trang Commons ghi người tải là chủ bản thu, có phiếu VRT, hay dẫn nguồn phát hành).
+    loai: lich-su
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-vivaldi-mua-dong
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Vivaldi_-_Four_Seasons_4_Winter_mvt_1_Allegro_non_molto_-_John_Harrison_violin.oga"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Vivaldi_-_Four_Seasons_4_Winter_mvt_1_Allegro_non_molto_-_John_Harrison_violin.oga
+    luot_2_ghi_chu: "'Recording copyright John Harrison'; Source By uploader; VRT {{PermissionTicket|id=2007022510020031}}."
 mo_khoa:
   - ngay: 2026-11-06
     nhanh: mo/hinh-dot-3c
     ly_do: "thêm hình (đợt hình 3): thêm hinh.nghe, sơ đồ đoạn vẽ lại bảng của trang nghe-nhac/vivaldi-mua-dong"
+  - ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ly_do: "Gắn bản thu có giấy phép mở từ Wikimedia Commons (mo/ban-thu, 10/11/2026, kế hoạch mở rộng mục 5.2): trường ban_thu."

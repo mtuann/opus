@@ -158,6 +158,11 @@ test('::khoi-nghe: không có bản thu trong dữ liệu thì để người h�
 	// chỉ số giây viết thường; moc rỗng là lỗi (review D1.3)
 	for (const x of ['0x10', '1e2', '-3', '+4', '.5', '9'.repeat(400)]) assert.throws(() => docMoc(x), /không phải số giây/, x.slice(0, 8));
 	assert.throws(() => docMoc('  '), /moc rỗng/);
+	// bản thu thứ hai trở đi vào data-khac (mp3 của site có base), không có mốc; một bản thì không có data-khac
+	const hai = khoiNghe({ ban_thu: [banGhi.ban_thu[0], { by: 'B', lic: 'CC0', page: 'https://x.org/p', parts: [{ mp3: 'audio/b.mp3', d: 9 }] }] }, '/opus/', '3 61 - 73');
+	const khac = JSON.parse(hai.match(/data-khac="([^"]*)"/)[1].replace(/&quot;/g, '"').replace(/&amp;/g, '&'));
+	assert.deepEqual([khac.length, khac[0].by, khac[0].parts[0].mp3, 'ref' in khac[0]], [1, 'B', '/opus/audio/b.mp3', false]);
+	assert.doesNotMatch(khoiNghe(banGhi, '/opus/'), /data-khac/);
 	assert.throws(() => khoiNghe({}, '/opus/', '3 4'), /có moc nhưng bản ghi không có ban_thu/);
 	// mốc không quá độ dài bản thu (60 + 30 giây)
 	assert.throws(() => khoiNghe(banGhi, '/opus/', '3 91'), /mốc 91 giây quá độ dài bản thu \(90 giây\)/);

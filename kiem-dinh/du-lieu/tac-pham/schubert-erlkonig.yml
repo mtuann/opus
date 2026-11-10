@@ -30,6 +30,15 @@ lan:
       luot_2: "Claude Sonnet 5.5 (lượt 2 hinh mo/hinh-dot-3c, 07/11/2026)"
       review: "Claude Opus 5.5 (soát hình 3C, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
       kiem_mau: "Claude Opus 5.5 (soát hình 3C, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
+  - so: 4
+    ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ma_bam: sha256:3f69c3dd1744f4c450e72dc38da27ae78468a9a078632710bd5740278c5dc051
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/ban-thu, 10/11/2026: tìm trên Commons bằng tools/audio/commons.py, kiểm bản quyền ở Mỹ, gắn bằng attach.py; check_audio.py --static --network 0 lỗi)"
+      luot_2: "Claude (agent con, lượt 2 độc lập: đọc wikitext và metadata Commons của mọi phần, DAHR cho bản Victor, 10/11/2026)"
+      review: "Claude Opus 5.5 (người gom mo/ban-thu: mọi câu hai lượt khác nhau; thay bản MIT bằng bản Edison 1916, bỏ bản Mendelssohn vì chưa xác nhận được giấy phép YouTube)"
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo (chủ repo giao làm trọn phần bản thu, 10/11/2026): mọi bản thu mở được trên trang đã dựng (npm run build, khối nghe), check_audio --network 0 lỗi"
 nguon:
   - id: imslp
     bac: 2
@@ -63,6 +72,10 @@ nguon:
     bac: 2
     ten: "Hyperion Records, Erlkönig, D328, ghi chú của Graham Johnson (1990): «October (?) 1815; published in 1821 as Op 1»; lời Goethe 1782; «Only at the very end does Schubert make use of recitative»; Vua tinh «an embellished vocal line in the major key»; «in one of these he re-writes the fiendish piano triplets as simple quaver duplets. He found it hard for his own piano technique…»"
     link: https://www.hyperion-records.co.uk/tw.asp?w=W1933
+  - id: commons-bt-schubert-erlkonig
+    bac: 2
+    ten: Wikimedia Commons, trang file của bản thu (Ernestine Schumann-Heink)
+    link: https://commons.wikimedia.org/wiki/File:Schubert_-_Schumann-Heink_-_Erlk%C3%B6nig.ogg
 nhan_dinh:
   - id: n1
     cau: "Tên «Erlkönig» đúng: tác phẩm Erlkönig của Schubert."
@@ -126,7 +139,65 @@ nhan_dinh:
     luot_2_nguon: [ "kiem-dinh/nghe-nhac/schubert-erlkonig.yml" ]
     luot_2_ghi_chu: "Các ô khớp thứ tự và số lượng các dòng của bảng cùng tên trên trang (đã đối chiếu từng ô: tên và chữ rút gọn); các nhận định tương ứng của hồ sơ trang đều có kết quả và lượt 2 dung hoặc đã sửa và review dung."
     review: dung
+  - id: n7
+    cau: "Bản thu Schubert, Erlkönig D. 328: Ernestine Schumann-Heink (bản thu hãng Victor, khoảng 1911–1913)."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-schubert-erlkonig
+    ket_qua: da-sua
+    ghi_chu: 'Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Schubert_-_Schumann-Heink_-_Erlk%C3%B6nig.ogg Review (mo/ban-thu, 10/11/2026): lượt 2: DAHR ghi Victor C-11339 thu lần đầu 7/12/1911; Commons ghi 1913. Viết "khoảng 1911–1913".'
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Schubert_-_Schumann-Heink_-_Erlk%C3%B6nig.ogg
+      - https://adp.library.ucsb.edu/index.php/mastertalent/detail/102274/Goethe_Johann_Wolfgang_von
+    luot_2_ghi_chu: "Commons: 'Recording in 1913 by Victor'. DAHR: Victor C-11339, Schumann-Heink, lần thu đầu 7/12/1911; chưa xác định take 1913."
+    review: dung
+  - id: n8
+    cau: "Giấy phép bản thu: phạm vi công cộng."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-schubert-erlkonig
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Schubert_-_Schumann-Heink_-_Erlk%C3%B6nig.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Schubert_-_Schumann-Heink_-_Erlk%C3%B6nig.ogg
+    luot_2_ghi_chu: "{{PD-old}} (thẻ chỉ nói về tác giả, không về bản thu Mỹ)."
+  - id: n9
+    cau: 1 phần, tổng 236,67 giây.
+    loai: so-lieu
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-schubert-erlkonig
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Schubert_-_Schumann-Heink_-_Erlk%C3%B6nig.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo|revisions&titles=File:Schubert_-_Schumann-Heink_-_Erlk%C3%B6nig.ogg
+    luot_2_ghi_chu: duration 236.67 s.
+  - id: n10
+    cau: "Bản thu thuộc phạm vi công cộng cả ở Mỹ: bản Victor thu trước 1923."
+    loai: lich-su
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-schubert-erlkonig
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Schubert_-_Schumann-Heink_-_Erlk%C3%B6nig.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Schubert_-_Schumann-Heink_-_Erlk%C3%B6nig.ogg
+      - https://adp.library.ucsb.edu/index.php/mastertalent/detail/102274/Goethe_Johann_Wolfgang_von
+    luot_2_ghi_chu: Bản Victor acoustic 1911–1913, phát hành trước 1923 → PD ở Mỹ (theo DAHR, không theo thẻ Commons).
 mo_khoa:
   - ngay: 2026-11-06
     nhanh: mo/hinh-dot-3c
     ly_do: "thêm hình (đợt hình 3): thêm hinh.nghe, sơ đồ đoạn vẽ lại bảng của trang nghe-nhac/schubert-erlkonig"
+  - ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ly_do: "Gắn bản thu có giấy phép mở từ Wikimedia Commons (mo/ban-thu, 10/11/2026, kế hoạch mở rộng mục 5.2): trường ban_thu."

@@ -37,7 +37,7 @@ Ba bản trong trang này có ba tính cách khác hẳn nhau:
 
 ## Nghe kèm bản thu
 
-Bản thu dưới đây chỉ có **K. 380**, do **Raymond Smullyan** chơi trên piano. Ông không chơi các dấu nhắc lại, nên dòng "nửa đầu được nhắc lại" trong bảng không có mốc. Muốn nghe K. 141 và K. 466, dán link YouTube hoặc link file của một bản thu khác vào khung.
+Bản thu gợi ý dưới đây là **K. 380**, do **Raymond Smullyan** chơi trên piano. Ông không chơi các dấu nhắc lại, nên dòng "nửa đầu được nhắc lại" trong bảng không có mốc. K. 141 và K. 466 có bản của **John Sankey**, chơi trên bàn phím MIDI với âm thanh harpsichord tổng hợp: chọn ở dòng "Bản thu khác" trong khung. Mốc tham khảo chỉ tính theo bản K. 380.
 
 ::khoi-nghe{moc="0 37 - 88"}
 

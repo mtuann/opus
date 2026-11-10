@@ -30,6 +30,15 @@ lan:
       luot_2: "Claude Sonnet 5.5 (lượt 2 hinh mo/hinh-dot-3c, 07/11/2026)"
       review: "Claude Opus 5.5 (soát hình 3C, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
       kiem_mau: "Claude Opus 5.5 (soát hình 3C, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
+  - so: 4
+    ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ma_bam: sha256:62f4298cf4fac6852b74c42ad0f1eb1f8b27f363cda77e833156cfa77ba6df77
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/ban-thu, 10/11/2026: tìm trên Commons bằng tools/audio/commons.py, kiểm bản quyền ở Mỹ, gắn bằng attach.py; check_audio.py --static --network 0 lỗi)"
+      luot_2: "Claude (agent con, lượt 2 độc lập: đọc wikitext và metadata Commons của mọi phần, DAHR cho bản Victor, 10/11/2026)"
+      review: "Claude Opus 5.5 (người gom mo/ban-thu: mọi câu hai lượt khác nhau; thay bản MIT bằng bản Edison 1916, bỏ bản Mendelssohn vì chưa xác nhận được giấy phép YouTube)"
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo (chủ repo giao làm trọn phần bản thu, 10/11/2026): mọi bản thu mở được trên trang đã dựng (npm run build, khối nghe), check_audio --network 0 lỗi"
 nguon:
   - id: imslp
     bac: 2
@@ -63,6 +72,10 @@ nguon:
     bac: 2
     ten: "Jessica Barbour (biên tập viên Grove Music/Oxford Music Online), bài về 1812 Overture trên blog Oxford University Press, 8/2013: mở đầu là \"Spasi, Gospodi, lyudi Tvoya\" (\"O Lord, Save Thy People\") do viola và cello độc tấu; Marseillaise xuất hiện từng đoạn; dân ca \"U vorot\"; God Save the Tsar \"the Russian Empire's national anthem during Tchaikovsky's lifetime\" lấn át giai điệu Pháp, kèm các phát đại bác cuối"
     link: http://blog.oup.com/2013/08/1812-overture-tchaikovsky-romantic-music/
+  - id: commons-bt-tchaikovsky-1812
+    bac: 2
+    ten: Wikimedia Commons, trang file của bản thu (Skidmore College Orchestra)
+    link: https://commons.wikimedia.org/wiki/File:Pyotr_Ilyich_Tchaikovsky_-_1812_overture.ogg
 nhan_dinh:
   - id: n1
     cau: Tên «1812 Overture» chỉ Overture 1812 của Tchaikovsky.
@@ -127,7 +140,62 @@ nhan_dinh:
     luot_2_nguon: [ "kiem-dinh/nghe-nhac/tchaikovsky-1812.yml" ]
     luot_2_ghi_chu: "Các ô khớp thứ tự và số lượng các dòng của bảng cùng tên trên trang (đã đối chiếu từng ô: tên và chữ rút gọn); các nhận định tương ứng của hồ sơ trang đều có kết quả và lượt 2 dung hoặc đã sửa và review dung."
     review: dung
+  - id: n7
+    cau: "Bản thu Tchaikovsky, 1812 Overture Op. 49: Skidmore College Orchestra (qua Musopen)."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-tchaikovsky-1812
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Pyotr_Ilyich_Tchaikovsky_-_1812_overture.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Pyotr_Ilyich_Tchaikovsky_-_1812_overture.ogg
+    luot_2_ghi_chu: "'Author=Music: Tchaikovsky; Recording: Skidmore College Orchestra'; Source musopen.com."
+  - id: n8
+    cau: "Giấy phép bản thu: phạm vi công cộng."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-tchaikovsky-1812
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Pyotr_Ilyich_Tchaikovsky_-_1812_overture.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Pyotr_Ilyich_Tchaikovsky_-_1812_overture.ogg
+    luot_2_ghi_chu: "'Recording: {{PD-author|Skidmore College Orchestra}}'."
+  - id: n9
+    cau: 1 phần, tổng 999,14 giây.
+    loai: so-lieu
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-tchaikovsky-1812
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Pyotr_Ilyich_Tchaikovsky_-_1812_overture.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo|revisions&titles=File:Pyotr_Ilyich_Tchaikovsky_-_1812_overture.ogg
+    luot_2_ghi_chu: duration 999.14 s.
+  - id: n10
+    cau: "Bản thu thuộc phạm vi công cộng cả ở Mỹ: Musopen phát hành vào phạm vi công cộng (Skidmore College Orchestra)."
+    loai: lich-su
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-tchaikovsky-1812
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Pyotr_Ilyich_Tchaikovsky_-_1812_overture.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Pyotr_Ilyich_Tchaikovsky_-_1812_overture.ogg
+    luot_2_ghi_chu: PD-author, VRT ticket 2008012110017088 (Musopen). Chưa đối chiếu musopen.org trực tiếp.
 mo_khoa:
   - ngay: 2026-11-06
     nhanh: mo/hinh-dot-3c
     ly_do: "thêm hình (đợt hình 3): thêm hinh.nghe, sơ đồ đoạn vẽ lại bảng của trang nghe-nhac/tchaikovsky-1812"
+  - ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ly_do: "Gắn bản thu có giấy phép mở từ Wikimedia Commons (mo/ban-thu, 10/11/2026, kế hoạch mở rộng mục 5.2): trường ban_thu."

@@ -30,6 +30,15 @@ lan:
       luot_2: "không có lượt 2 ngoài: mỗi sửa đổi đối chiếu với chỗ báo cáo D6 đã chỉ ra (khối nhạc trên trang, dữ liệu đã khóa, IMSLP), ghi ở ghi_chu"
       review: Claude Opus 5.5 (mo/sua-nho, 07/11/2026)
       kiem_mau: chủ repo yêu cầu sửa (07/11/2026); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
+  - so: 4
+    ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ma_bam: sha256:eb29fafdc55ff234e0c22b24ada3fbc317c0095f7a2094f0b40d7572f7a55d93
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/ban-thu, 10/11/2026: tìm trên Commons bằng tools/audio/commons.py, kiểm bản quyền ở Mỹ, gắn bằng attach.py; check_audio.py --static --network 0 lỗi)"
+      luot_2: "Claude (agent con, lượt 2 độc lập: đọc wikitext và metadata Commons của mọi phần, DAHR cho bản Victor, 10/11/2026)"
+      review: "Claude Opus 5.5 (người gom mo/ban-thu: mọi câu hai lượt khác nhau; thay bản MIT bằng bản Edison 1916, bỏ bản Mendelssohn vì chưa xác nhận được giấy phép YouTube)"
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo (chủ repo giao làm trọn phần bản thu, 10/11/2026): mọi bản thu mở được trên trang đã dựng (npm run build, khối nghe), check_audio --network 0 lỗi"
 nguon:
   - id: imslp
     bac: 2
@@ -59,6 +68,10 @@ nguon:
     bac: 2
     ten: 'Concise Oxford Dictionary of Music, mục «habanera» (encyclopedia.com): «Slow Cuban (orig. African) song and dance … in simple duple time and dotted rhythm»; habanera trong Carmen «an adaptation of a popular song by Yradier»'
     link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/habanera
+  - id: commons-bt-bizet-habanera
+    bac: 2
+    ten: Wikimedia Commons, trang file của bản thu (Jenny Lee Mitchell (giọng hát), Kevin MacLeod (phần đệm))
+    link: https://commons.wikimedia.org/wiki/File:Habanera_(ISRC_USUAN1100656).mp3
 nhan_dinh:
   - id: n1
     cau: Tên «Habanera» chỉ aria Habanera («L'amour est un oiseau rebelle») ở màn 1 của opera Carmen.
@@ -123,7 +136,64 @@ nhan_dinh:
       - https://imslp.org/wiki/Carmen_(Bizet,_Georges)
     luot_2_ghi_chu: "Mở lại trang IMSLP qua API: khớp."
     review: dung
+  - id: n7
+    cau: "Bản thu Bizet, Habanera (Carmen): Jenny Lee Mitchell (giọng hát), Kevin MacLeod (phần đệm)."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-bizet-habanera
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Habanera_(ISRC_USUAN1100656).mp3"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Habanera_(ISRC_USUAN1100656).mp3
+    luot_2_ghi_chu: "'Sung by Jenny Lee Mitchell... Habanera Kevin MacLeod (incompetech.com)'."
+  - id: n8
+    cau: "Giấy phép bản thu: CC BY 3.0."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-bizet-habanera
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Habanera_(ISRC_USUAN1100656).mp3"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Habanera_(ISRC_USUAN1100656).mp3
+      - https://incompetech.com/music/royalty-free/licenses/
+    luot_2_ghi_chu: "{{CC-BY-3.0}}; incompetech: 'Creative Commons — Free... Requires that you credit the music.'"
+  - id: n9
+    cau: 1 phần, tổng 247,72 giây.
+    loai: so-lieu
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-bizet-habanera
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Habanera_(ISRC_USUAN1100656).mp3"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo|revisions&titles=File:Habanera_(ISRC_USUAN1100656).mp3
+    luot_2_ghi_chu: duration 247.72 s (trang ghi Length 4:08).
+  - id: n10
+    cau: Người giữ quyền bản thu phát hành theo CC BY 3.0 (trang Commons ghi người tải là chủ bản thu, có phiếu VRT, hay dẫn nguồn phát hành).
+    loai: lich-su
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-bizet-habanera
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Habanera_(ISRC_USUAN1100656).mp3"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Habanera_(ISRC_USUAN1100656).mp3
+      - https://incompetech.com/music/royalty-free/licenses/
+    luot_2_ghi_chu: Nguồn là site của chính Kevin MacLeod với CC BY 3.0 (người tải Fæ chỉ chép lại); trang track không tải được nội dung.
 mo_khoa:
   - ngay: 2026-11-07
     nhanh: mo/sua-nho
     ly_do: "Sửa nhỏ theo kế hoạch mở rộng mục 4 (chủ repo yêu cầu 07/11/2026): lệch nhỏ đã ghi trong báo cáo các lô D6"
+  - ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ly_do: "Gắn bản thu có giấy phép mở từ Wikimedia Commons (mo/ban-thu, 10/11/2026, kế hoạch mở rộng mục 5.2): trường ban_thu."

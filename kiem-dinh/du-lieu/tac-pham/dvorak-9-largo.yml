@@ -21,6 +21,15 @@ lan:
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L11, 06/11/2026, ba phần)
       review: Claude Opus 5.5 (review D6-L11-gom)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L11, 8 đúng (4 có điều kiện: ravel-bolero h3, brahms-4 n12, dvorak-9-largo n6 dựa một phần vào tổng phổ lượt 1 đã đọc; số biến tấu Brahms các nguồn đếm khác nhau), 0 sai (bao-cao/d6-l11-gom/kiem-mau-ket-qua.yml)"
+  - so: 3
+    ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ma_bam: sha256:bfab7a00659eb4636c2c27744384101326412877a5462ede0abfcecf9f8d470a
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/ban-thu, 10/11/2026: tìm trên Commons bằng tools/audio/commons.py, kiểm bản quyền ở Mỹ, gắn bằng attach.py; check_audio.py --static --network 0 lỗi)"
+      luot_2: "Claude (agent con, lượt 2 độc lập: đọc wikitext và metadata Commons của mọi phần, DAHR cho bản Victor, 10/11/2026)"
+      review: "Claude Opus 5.5 (người gom mo/ban-thu: mọi câu hai lượt khác nhau; thay bản MIT bằng bản Edison 1916, bỏ bản Mendelssohn vì chưa xác nhận được giấy phép YouTube)"
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo (chủ repo giao làm trọn phần bản thu, 10/11/2026): mọi bản thu mở được trên trang đã dựng (npm run build, khối nghe), check_audio --network 0 lỗi"
 nguon:
   - id: imslp
     bac: 2
@@ -42,6 +51,10 @@ nguon:
     bac: 2
     ten: 'antonin-dvorak.cz, Symphony No. 9: Largo mở bằng chuỗi hợp âm kèn; chủ đề cor anglais trên đàn dây tắt tiếng, tính ngũ cung; đoạn giữa Đô♯ thứ, rồi đoạn quasi-scherzo Đô♯ trưởng có cao trào gồm chủ đề Largo, chủ đề chính và chủ đề kết của chương 1; chủ đề chính trở lại nhẹ nhàng, chuỗi hợp âm mở đầu xuất hiện lại ở cuối'
     link: 'https://www.antonin-dvorak.cz/en/work/symphony-no-9/'
+  - id: commons-bt-dvorak-9-largo
+    bac: 2
+    ten: Wikimedia Commons, trang file của bản thu (Musopen)
+    link: https://commons.wikimedia.org/wiki/File:Antonin_Dvorak_-_symphony_no._9_in_e_minor_%27from_the_new_world%27,_op._95_-_ii._largo.ogg
 nhan_dinh:
   - id: n1
     cau: Tên «Giao hưởng số 9, Largo» chỉ chương 2 (Largo) của Giao hưởng số 9 cung Mi thứ.
@@ -122,3 +135,60 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://www.antonin-dvorak.cz/en/work/symphony-no-9/", "https://imslp.org/wiki/Symphony_No.9,_Op.95_(Dvo%C5%99%C3%A1k,_Anton%C3%ADn)" ]
     luot_2_ghi_chu: "antonin-dvorak.cz: chuỗi hợp âm của kèn gỗ, kèn đồng ở đầu chương kết ở Rê♭ trưởng; chủ đề do cor anglais thổi; đoạn giữa 'in C sharp minor'; tiếp theo là đoạn gần như scherzo ở Đô♯ trưởng, cao trào gom chủ đề Largo, chủ đề chính và chủ đề kết của chương 1 (ô 'Đoạn sáng, chủ đề chương 1 vang lại'); kết bằng chủ đề chính trở lại và hợp âm mở đầu. Đủ khớp các ô của hình."
+  - id: n8
+    cau: "Bản thu Dvořák, Giao hưởng số 9 Op. 95, chương 2 (Largo): Musopen (Commons không ghi tên dàn nhạc)."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-dvorak-9-largo
+    ket_qua: da-sua
+    ghi_chu: 'Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Antonin_Dvorak_-_symphony_no._9_in_e_minor_%27from_the_new_world%27,_op._95_-_ii._largo.ogg Review (mo/ban-thu, 10/11/2026): lượt 2 khong-chac: Commons chỉ ghi "see Musopen for performance author information". Thêm ghi chú "Commons không ghi tên dàn nhạc"; by giữ Musopen (nơi phát hành).'
+    luot_2: khong-chac
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Antonin_Dvorak_-_symphony_no._9_in_e_minor_%27from_the_new_world%27,_op._95_-_ii._largo.ogg
+    luot_2_ghi_chu: "Author: '(see Musopen for performance author information)'; trang không nêu dàn nhạc, Musopen không mở được."
+    review: dung
+  - id: n9
+    cau: "Giấy phép bản thu: phạm vi công cộng."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-dvorak-9-largo
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Antonin_Dvorak_-_symphony_no._9_in_e_minor_%27from_the_new_world%27,_op._95_-_ii._largo.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Antonin_Dvorak_-_symphony_no._9_in_e_minor_%27from_the_new_world%27,_op._95_-_ii._largo.ogg
+    luot_2_ghi_chu: "'Recording{{PD-author|Musopen}}'."
+  - id: n10
+    cau: 1 phần, tổng 694,46 giây.
+    loai: so-lieu
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-dvorak-9-largo
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Antonin_Dvorak_-_symphony_no._9_in_e_minor_%27from_the_new_world%27,_op._95_-_ii._largo.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo|revisions&titles=File:Antonin_Dvorak_-_symphony_no._9_in_e_minor_%27from_the_new_world%27,_op._95_-_ii._largo.ogg
+    luot_2_ghi_chu: duration 694.46 s.
+  - id: n11
+    cau: "Bản thu thuộc phạm vi công cộng cả ở Mỹ: Musopen phát hành vào phạm vi công cộng."
+    loai: lich-su
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-dvorak-9-largo
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Antonin_Dvorak_-_symphony_no._9_in_e_minor_%27from_the_new_world%27,_op._95_-_ii._largo.ogg"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Antonin_Dvorak_-_symphony_no._9_in_e_minor_%27from_the_new_world%27,_op._95_-_ii._largo.ogg
+    luot_2_ghi_chu: PD-author do Musopen, VRT ticket 2008012110017088; FAQ Musopen 'given a public domain license'. Chưa đối chiếu trực tiếp musopen.org.
+mo_khoa:
+  - ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ly_do: "Gắn bản thu có giấy phép mở từ Wikimedia Commons (mo/ban-thu, 10/11/2026, kế hoạch mở rộng mục 5.2): trường ban_thu."

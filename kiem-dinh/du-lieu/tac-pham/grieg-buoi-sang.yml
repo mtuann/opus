@@ -30,6 +30,15 @@ lan:
       luot_2: "Claude Sonnet 5.5 (lượt 2 hinh mo/hinh-dot-3c, 07/11/2026)"
       review: "Claude Opus 5.5 (soát hình 3C, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
       kiem_mau: "Claude Opus 5.5 (soát hình 3C, review và kiểm mẫu gộp, thủ tục hình, 07/11/2026)"
+  - so: 4
+    ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ma_bam: sha256:6460aba623b14d510fc6fa6620cf293fee1b3b64c16c4725b32adc0a14bdeec2
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/ban-thu, 10/11/2026: tìm trên Commons bằng tools/audio/commons.py, kiểm bản quyền ở Mỹ, gắn bằng attach.py; check_audio.py --static --network 0 lỗi)"
+      luot_2: "Claude (agent con, lượt 2 độc lập: đọc wikitext và metadata Commons của mọi phần, DAHR cho bản Victor, 10/11/2026)"
+      review: "Claude Opus 5.5 (người gom mo/ban-thu: mọi câu hai lượt khác nhau; thay bản MIT bằng bản Edison 1916, bỏ bản Mendelssohn vì chưa xác nhận được giấy phép YouTube)"
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo (chủ repo giao làm trọn phần bản thu, 10/11/2026): mọi bản thu mở được trên trang đã dựng (npm run build, khối nghe), check_audio --network 0 lỗi"
 nguon:
   - id: imslp-op23
     bac: 2
@@ -51,6 +60,10 @@ nguon:
     bac: 1
     ten: 'Grieg, Peer Gynt Op. 23, màn 4 (Mus.ms. 6900 [Akt 4], Thư viện Quốc gia Na Uy): bản in Peters 7188, Morgenstimmung tr. 3–16; đọc ảnh 06/11/2026'
     link: 'https://www.nb.no/items/URN:NBN:no-nb_digimanus_137965'
+  - id: commons-bt-grieg-buoi-sang
+    bac: 2
+    ten: Wikimedia Commons, trang file của bản thu (Musopen Symphony)
+    link: https://commons.wikimedia.org/wiki/File:Grieg_-_Peer_Gynt_Suite_No._1,_Op._46_-_I._Morning_Mood_(Musopen_Symphony).flac
 nhan_dinh:
   - id: n1
     cau: Tên «"Buổi sáng" (Peer Gynt)» chỉ Morning Mood (Morgenstemning), số mở đầu Peer Gynt Suite số 1, trích từ nhạc sân khấu Peer Gynt.
@@ -118,7 +131,62 @@ nhan_dinh:
     luot_2_nguon: [ "kiem-dinh/nghe-nhac/grieg-buoi-sang.yml" ]
     luot_2_ghi_chu: "Các ô khớp thứ tự và số lượng các dòng của bảng cùng tên trên trang (đã đối chiếu từng ô: tên và chữ rút gọn); các nhận định tương ứng của hồ sơ trang đều có kết quả và lượt 2 dung hoặc đã sửa và review dung."
     review: dung
+  - id: n7
+    cau: 'Bản thu Grieg, "Buổi sáng" (Morning Mood), Tổ khúc Peer Gynt số 1 Op. 46: Musopen Symphony (Tổ khúc Peer Gynt số 1, thu năm 2012).'
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-grieg-buoi-sang
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Grieg_-_Peer_Gynt_Suite_No._1,_Op._46_-_I._Morning_Mood_(Musopen_Symphony).flac"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Grieg_-_Peer_Gynt_Suite_No._1,_Op._46_-_I._Morning_Mood_(Musopen_Symphony).flac
+    luot_2_ghi_chu: "'Peer Gynt Suite No. 1, Op. 46 - I. Morning Mood'; Artists: Musopen Symphony; 2012."
+  - id: n8
+    cau: "Giấy phép bản thu: phạm vi công cộng."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-grieg-buoi-sang
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Grieg_-_Peer_Gynt_Suite_No._1,_Op._46_-_I._Morning_Mood_(Musopen_Symphony).flac"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Grieg_-_Peer_Gynt_Suite_No._1,_Op._46_-_I._Morning_Mood_(Musopen_Symphony).flac
+    luot_2_ghi_chu: recording={{PD-author|Musopen}}.
+  - id: n9
+    cau: 1 phần, tổng 229,18 giây.
+    loai: so-lieu
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-grieg-buoi-sang
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Grieg_-_Peer_Gynt_Suite_No._1,_Op._46_-_I._Morning_Mood_(Musopen_Symphony).flac"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo|revisions&titles=File:Grieg_-_Peer_Gynt_Suite_No._1,_Op._46_-_I._Morning_Mood_(Musopen_Symphony).flac
+    luot_2_ghi_chu: duration 229.18 s.
+  - id: n10
+    cau: "Bản thu thuộc phạm vi công cộng cả ở Mỹ: Musopen phát hành vào phạm vi công cộng."
+    loai: lich-su
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-grieg-buoi-sang
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Grieg_-_Peer_Gynt_Suite_No._1,_Op._46_-_I._Morning_Mood_(Musopen_Symphony).flac"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Grieg_-_Peer_Gynt_Suite_No._1,_Op._46_-_I._Morning_Mood_(Musopen_Symphony).flac
+    luot_2_ghi_chu: Musopen Kickstarter 2012, Musopen dâng tặng PD.
 mo_khoa:
   - ngay: 2026-11-06
     nhanh: mo/hinh-dot-3c
     ly_do: "thêm hình (đợt hình 3): thêm hinh.nghe, sơ đồ đoạn vẽ lại bảng của trang nghe-nhac/grieg-buoi-sang"
+  - ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ly_do: "Gắn bản thu có giấy phép mở từ Wikimedia Commons (mo/ban-thu, 10/11/2026, kế hoạch mở rộng mục 5.2): trường ban_thu."

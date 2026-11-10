@@ -21,6 +21,15 @@ lan:
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L11, 06/11/2026, ba phần)
       review: Claude Opus 5.5 (review D6-L11-gom)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L11, 8 đúng (4 có điều kiện: ravel-bolero h3, brahms-4 n12, dvorak-9-largo n6 dựa một phần vào tổng phổ lượt 1 đã đọc; số biến tấu Brahms các nguồn đếm khác nhau), 0 sai (bao-cao/d6-l11-gom/kiem-mau-ket-qua.yml)"
+  - so: 3
+    ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ma_bam: sha256:cbd41c3bfb5703308c92373abe8c7009c1de44f1ee9f888ad9a8f519a4d6adf9
+    nguoi:
+      luot_1: "Claude Opus 5.5 (mo/ban-thu, 10/11/2026: tìm trên Commons bằng tools/audio/commons.py, kiểm bản quyền ở Mỹ, gắn bằng attach.py; check_audio.py --static --network 0 lỗi)"
+      luot_2: "Claude (agent con, lượt 2 độc lập: đọc wikitext và metadata Commons của mọi phần, DAHR cho bản Victor, 10/11/2026)"
+      review: "Claude Opus 5.5 (người gom mo/ban-thu: mọi câu hai lượt khác nhau; thay bản MIT bằng bản Edison 1916, bỏ bản Mendelssohn vì chưa xác nhận được giấy phép YouTube)"
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo (chủ repo giao làm trọn phần bản thu, 10/11/2026): mọi bản thu mở được trên trang đã dựng (npm run build, khối nghe), check_audio --network 0 lỗi"
 nguon:
   - id: imslp
     bac: 2
@@ -42,6 +51,10 @@ nguon:
     bac: 2
     ten: 'Brahms-Institut Lübeck, Werkeinführung "Sinfonie Nr. 4 e-Moll": ostinato 8 ô của Passacaglia "in mehr als 30 verschiedenen Iterationen"'
     link: 'https://www.brahms-portal.de/werk/dc00007469/'
+  - id: commons-bt-brahms-4
+    bac: 2
+    ten: Wikimedia Commons, trang file của bản thu (Musopen Symphony)
+    link: https://commons.wikimedia.org/wiki/File:Brahms_-_Symphony_No._4_in_E_minor,_Op._98_-_IV._Allegro_energico_e_passionato_-_Pi%C3%B9_allegro_(Musopen_Symphony).flac
 nhan_dinh:
   - id: n1
     cau: Tên «Giao hưởng số 4, chương 4» chỉ chương 4 (Allegro energico e passionato) của Giao hưởng số 4 cung Mi thứ.
@@ -121,3 +134,59 @@ nhan_dinh:
     luot_2_nguon: [ "http://www.kellydeanhansen.com/opus98.html", "https://theinstrumentalist.com/october-2010-flute-talk/flute-solo-from-the-brahms-symphony-4-final-movement/" ]
     luot_2_ghi_chu: "Hansen: phần một gồm biến tấu 1–11, nhịp 3/4, giọng chủ Mi thứ; biến tấu 12 là sáo độc tấu (nhịp 3/2); 13–15 ở Mi trưởng ('first variation in the major key (E major)'); từ biến tấu 16 'back in the minor key'; Coda từ ô 253. The Instrumentalist: biến tấu 12 là sáo, 13–15 ở Mi trưởng. Nhãn giọng ở hình là giọng chung của từng phần: trong đó biến tấu 10–11 bắt đầu ở La thứ, 27–28 ở Đô trưởng (Hansen). Đây là cách giản lược chấp nhận được, không sai."
     review: dung
+  - id: n8
+    cau: "Bản thu Brahms, Giao hưởng số 4 Op. 98, chương 4: Musopen Symphony (thu năm 2012)."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-brahms-4
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Brahms_-_Symphony_No._4_in_E_minor,_Op._98_-_IV._Allegro_energico_e_passionato_-_Pi%C3%B9_allegro_(Musopen_Symphony).flac"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Brahms_-_Symphony_No._4_in_E_minor,_Op._98_-_IV._Allegro_energico_e_passionato_-_Pi%C3%B9_allegro_(Musopen_Symphony).flac
+    luot_2_ghi_chu: "'Brahms - Symphony No. 4... IV. Allegro energico e passionato'; Artists: Musopen Symphony; date 2012."
+  - id: n9
+    cau: "Giấy phép bản thu: phạm vi công cộng."
+    loai: ten
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-brahms-4
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Brahms_-_Symphony_No._4_in_E_minor,_Op._98_-_IV._Allegro_energico_e_passionato_-_Pi%C3%B9_allegro_(Musopen_Symphony).flac"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Brahms_-_Symphony_No._4_in_E_minor,_Op._98_-_IV._Allegro_energico_e_passionato_-_Pi%C3%B9_allegro_(Musopen_Symphony).flac
+    luot_2_ghi_chu: recording={{PD-author|Musopen}}.
+  - id: n10
+    cau: 1 phần, tổng 667,7 giây.
+    loai: so-lieu
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-brahms-4
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Brahms_-_Symphony_No._4_in_E_minor,_Op._98_-_IV._Allegro_energico_e_passionato_-_Pi%C3%B9_allegro_(Musopen_Symphony).flac"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo|revisions&titles=File:Brahms_-_Symphony_No._4_in_E_minor,_Op._98_-_IV._Allegro_energico_e_passionato_-_Pi%C3%B9_allegro_(Musopen_Symphony).flac
+    luot_2_ghi_chu: duration 667.70 s.
+  - id: n11
+    cau: "Bản thu thuộc phạm vi công cộng cả ở Mỹ: Musopen phát hành vào phạm vi công cộng."
+    loai: lich-su
+    truong:
+      - ban_thu
+    nguon:
+      - commons-bt-brahms-4
+    ket_qua: dung
+    ghi_chu: "Commons (commons.py info, API, wikitext; check_audio.py --static --network 0 lỗi): https://commons.wikimedia.org/wiki/File:Brahms_-_Symphony_No._4_in_E_minor,_Op._98_-_IV._Allegro_energico_e_passionato_-_Pi%C3%B9_allegro_(Musopen_Symphony).flac"
+    luot_2: dung
+    luot_2_nguon:
+      - https://commons.wikimedia.org/wiki/File:Brahms_-_Symphony_No._4_in_E_minor,_Op._98_-_IV._Allegro_energico_e_passionato_-_Pi%C3%B9_allegro_(Musopen_Symphony).flac
+    luot_2_ghi_chu: Musopen (bên đặt thu, Kickstarter 2012) dâng tặng PD; nguồn musopen.org + archive.org MusopenCollectionAsFlac (không mở được từ đây).
+mo_khoa:
+  - ngay: 2026-11-10
+    nhanh: mo/ban-thu
+    ly_do: "Gắn bản thu có giấy phép mở từ Wikimedia Commons (mo/ban-thu, 10/11/2026, kế hoạch mở rộng mục 5.2): trường ban_thu."
