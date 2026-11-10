@@ -89,7 +89,9 @@ jobs:
           OPUS_TRINH_DUYET: chromium
           OPUS_CHI_TRANG_DOI: ${{ steps.viec.outputs.chi-trang-doi }}
           OPUS_NEN: ${{ steps.viec.outputs.moc }}
+        # shell của GitHub chạy với -e: tắt đi, để wait trả mã lỗi mà không dừng bước trước khi in nhật ký
         run: |
+          set +e
           npm test > npm-test.log 2>&1 & a=$!
           npm run test:trinh-duyet > chromium.log 2>&1 & b=$!
           wait $a; ra=$?; wait $b; rb=$?

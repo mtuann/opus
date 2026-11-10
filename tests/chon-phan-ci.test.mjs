@@ -178,7 +178,8 @@ test('trang đã đổi: tính cả trang đổi tên hay chuyển chỗ', (t) =
 	fs.mkdirSync(path.join(goc, 'src/content/docs/moi'), { recursive: true });
 	git('mv', 'src/content/docs/a.md', 'src/content/docs/moi/a.md');
 	git('commit', '-q', '-m', 'chuyển chỗ');
-	assert.deepEqual(trangDaDoi(goc), ['moi/a/']);
+	// env rỗng: trên CI, deploy.yml đặt OPUS_NEN cho cả bước này (mốc của repo thật, không có trong repo tạm)
+	assert.deepEqual(trangDaDoi(goc, {}), ['moi/a/']);
 	// OPUS_NEN: so với commit cho sẵn (deploy.yml, trên main): đứng ở main, mốc là main thì không có trang đổi
 	const main = execFileSync('git', ['-C', goc, 'rev-parse', 'main'], { encoding: 'utf8' }).trim();
 	assert.deepEqual(trangDaDoi(goc, { OPUS_NEN: main }), ['moi/a/']);
