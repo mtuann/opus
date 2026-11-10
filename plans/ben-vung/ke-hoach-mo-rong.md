@@ -9,6 +9,7 @@ Cách làm: bốn agent đọc các báo cáo (`plans/lam-lai/bao-cao/`, `plans/
 - 243 trang trên site thật (gồm bài blog của đợt 9 và trang kế hoạch), tất cả đã kiểm định và khóa; 73 bản ghi tác phẩm khóa cả bản ghi (34 bài học, 39 hướng dẫn nghe; 6 hướng dẫn nghe dùng chung bản ghi với bài học).
 - Bài học theo chặng 2–7: 7, 5, 8, 5, 5, 4 (đếm trên `src/data/tac-pham.yml`; khảo sát G6 cũ ghi khác, dùng số này). Chặng 1 không có bài học tác phẩm (có `piano/10-bai-dau-tien`, `piano/hai-tuan-dau`).
 - Bài học theo thời kỳ: 17/34 Lãng mạn, 7 bài Chopin; chưa có bài học Thế kỷ 20, chưa có Haydn, Scarlatti, Handel, Brahms (Scarlatti và Brahms chỉ có hướng dẫn nghe), chưa có nhà soạn nhạc nữ, chưa có tác phẩm Việt Nam.
+- Cập nhật 10/11/2026: Từ điển 382 thuật ngữ (thêm 228, `mo/thuat-ngu`); 63 bản ghi có bản thu (thêm 13 hướng dẫn nghe, `mo/ban-thu`), 11 hướng dẫn nghe còn chưa có bản thu phát được. Hướng dẫn nghe theo thời kỳ: Lãng mạn 14, Cổ điển 8, Baroque 7, Thế kỷ 20 4, Ấn tượng 1, Đương đại 1, chưa có Trung cổ, Phục hưng, nhà soạn nhạc nữ. Đợt 9 xong; về chức năng site đã hoàn thiện, việc còn lại là mở rộng tác phẩm, bảo trì và các việc của chủ repo ở mục 1.
 - Kiểm mẫu của đợt 7, 8, 6 do Claude làm thay chủ repo theo lời giao (ghi ở `nguoi.kiem_mau`); kết quả ở `bao-cao/d7-gom/`, `d8-gom/`, `d6-l*-gom/kiem-mau-ket-qua.yml`.
 
 ## 1. Việc trước tiên
@@ -124,7 +125,7 @@ Khoảng 200 mục, gom thành một việc dữ liệu riêng chia vài lô (m�
 
 ## 6. Mở rộng nội dung
 
-Tác phẩm chỉ thêm, theo `plans/ben-vung/them-tac-pham.md` (nhánh `them/<slug>`, `node tools/them-tac-pham.mjs`). Mở rộng lõi (nhạc lý, kỹ thuật, luyện tai) là "đợt mở rộng lõi": lập kế hoạch đợt như `plans/lam-lai/README.md`, kiểm định đủ trước khi gộp (`ben-vung/README.md`, Vận hành 4).
+Tác phẩm chỉ thêm, theo `plans/ben-vung/them-tac-pham.md` (nhánh `them/<slug>`, `node tools/them-tac-pham.mjs`). Lõi đã đủ cho trọn lộ trình 7 chặng (thống nhất với chủ repo ngày 10/11/2026): không mở đợt mở rộng lõi riêng. Mục 6.3–6.6 là ý tưởng, không phải chỗ thiếu; chỉ làm khi tác phẩm mới cần một bài lõi chưa có (như canon và mô phỏng cho Prelude và Fugue của Bach, nhịp 2/2, 6/4) hay khi góp ý của người học (6.7) chỉ ra chỗ vướng; khi ấy lô thêm tác phẩm làm luôn bài lõi. Mở rộng lõi (nhạc lý, kỹ thuật, luyện tai) là "đợt mở rộng lõi": lập kế hoạch đợt như `plans/lam-lai/README.md`, kiểm định đủ trước khi gộp (`ben-vung/README.md`, Vận hành 4).
 
 ### 6.1 Tác phẩm (bài học)
 
@@ -147,6 +148,8 @@ Chỗ cần lấp: chặng 7, Thế kỷ 20 và Ấn tượng, nhà soạn nhạ
 | 5 | Tác phẩm Việt Nam hết bảo hộ (tác giả mất từ 1975 trở về trước), bài chặng 1 dùng dân ca Việt Nam | 1–6 | Cần khảo sát bản quyền riêng | Nguồn bản nhạc |
 
 Chặng 6 sẽ đông nhất sau đợt 1 và 3 (khoảng 9–10 bài); cân nhắc khi chọn bài.
+
+Thứ tự gợi ý (10/11/2026, chủ repo chưa chọn): để cân thời kỳ, làm đợt 2 (Thế kỷ 20) và 3 (nhà soạn nhạc nữ) trước đợt 1, vì đợt 1 thêm Mozart, Debussy, Rachmaninoff vào chặng 6–7 vốn đã nghiêng về Lãng mạn; nếu cần thử quy trình thêm bài trước thì làm một bài của đợt 1 (*Alla turca* hay Arabesque số 1) rồi sang đợt 2.
 
 ### 6.2 Hướng dẫn nghe
 
