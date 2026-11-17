@@ -30,7 +30,7 @@ Bản thu gợi ý là của nghệ sĩ piano Romuald Greiss, thu năm 2000 tron
 3. Đoạn Fa♯ thứ khác đoạn La thứ ở điểm nào?
 4. Coda kết bằng gì?
 
-::khoi-nghe{moc="1 12 24 69 93 104 129 140 149"}
+::khoi-nghe{moc="1 12 24 69 93 104 129 140 150"}
 
 ## Theo dõi khi nghe
 
@@ -44,9 +44,9 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | … | **Đoạn Fa♯ thứ** (ô 33–56, *p*): dòng móc kép chạy liên tục ở tay phải |
 | … | Hành khúc La trưởng trở lại (ô 57–64) |
 | … | **Đoạn La thứ trở lại** (ô 65–88) |
-| … | Hành khúc lần thứ ba (ô 89–97), có kết 1 và kết 2 |
+| … | Hành khúc lần thứ ba (ô 89–97): tay phải rải quãng tám thành móc kép; có kết 1 và kết 2 |
 | … | **Coda** (từ ô 98, *f*): La trưởng, hợp âm tay phải, tay trái rải hợp âm và nốt lặp |
-| … | Giữa coda (*p*): tay trái rải hợp âm móc kép liên tục, tay phải hợp âm có nốt hoa mỹ |
+| … | Giữa coda (ô 110–116, *p*): tay trái rải hợp âm móc kép liên tục, tay phải giai điệu nốt đơn ở âm vực cao, có nốt hoa mỹ |
 
 ## Cấu trúc
 
@@ -61,8 +61,8 @@ Số ô đếm như bản Mutopia: không tính nhịp lấy đà; ô kết 1 v�
 | Đoạn Fa♯ thứ | 33–56 | *p*: dòng móc kép chạy liên tục ở tay phải, tay trái đệm móc đơn | Đều tay, không nhanh dần; nghe rõ hướng đi của câu |
 | Hành khúc | 57–64 | Như lần đầu | Giữ cùng tốc độ với đoạn trước |
 | Đoạn La thứ | 65–88 | Như ô 1–24 | Về lại *p* sau hành khúc |
-| Hành khúc | 89–97 | Như lần đầu, có kết 1 và kết 2 | Kết 2 dẫn vào coda |
-| Coda | 98–128 | La trưởng, *f*: hợp âm tay phải, tay trái rải hợp âm; giữa coda một đoạn *p*, tay trái móc kép liên tục | Giữ sức tới hợp âm cuối; đoạn *p* nhỏ thật sự |
+| Hành khúc | 89–97 | Tay phải rải quãng tám thành móc kép (nốt dưới rồi nốt trên); tay trái như lần đầu; có kết 1 và kết 2 | Móc kép đều, không vội; kết 2 dẫn vào coda |
+| Coda | 98–128 | La trưởng, *f*: hợp âm tay phải, tay trái rải hợp âm; giữa coda (ô 110–116) một đoạn *p*: tay trái móc kép liên tục, tay phải giai điệu nốt đơn ở âm vực cao, có nốt hoa mỹ; từ ô 117 trở lại *f* | Giữ sức tới hợp âm cuối; đoạn *p* nhỏ thật sự |
 
 ### Tám ô đầu trên khuông nhạc
 
@@ -176,7 +176,7 @@ Bản in đầu ghi *Allegrino*, một chỉ dẫn ít gặp; nhiều ấn bản
 
 ### Sắc thái
 
-Bản in đầu ghi *p* ở đầu bài và *f* ở đầu hành khúc. Đoạn La thứ nhẹ, các móc đơn tay trái ngắn; hành khúc to, rõ, nhưng không gắt. Coda có một đoạn *p* ở giữa, rồi trở lại *f*.
+Bản in đầu ghi *p* ở đầu bài và *f* ở đầu hành khúc. Đoạn La thứ nhẹ, các móc đơn tay trái ngắn; hành khúc to, rõ, nhưng không gắt. Coda có một đoạn *p* ở giữa (ô 110–116), rồi trở lại *f*.
 
 ### Bàn đạp
 

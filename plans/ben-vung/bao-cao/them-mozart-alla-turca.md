@@ -54,3 +54,19 @@ Nhánh `them/mozart-alla-turca`, 17/11/2026. Lượt 9 của `plans/ben-vung/lo-
 ## Lượt 2
 
 `node tools/khoa.mjs xuat piano/tac-pham/mozart-alla-turca du-lieu/tac-pham/mozart-alla-turca`: 37 nhận định.
+
+## Review
+
+Claude (agent riêng, không làm lượt 1, lượt 2), 17/11/2026. Mọi nhận định của hai hồ sơ có `review: dung`; `ket_qua` thành `da-sua` ở n15, n17, n24 của trang và n6 của bản ghi.
+
+- **n17 (lượt 2 sai, lượt 2 đúng).** Bản quét tr. 24 hệ 3–4 (300 dpi) và Mutopia `rightf` (file `.ly` tải lại từ GitHub MutopiaProject): đoạn *p* ô 110–116 tay phải là giai điệu nốt đơn ở âm vực cao (La5, Đô♯6, Rê6, Si5, Mi6) có nốt nhỏ; hợp âm có nốt nhỏ là ở phần *f* (ô 102, 108–109). *p* ở ô 110 khi tay trái sang khóa Sol, *f* ở ô 117. Đã sửa câu, dòng "Giữa coda" của bảng Theo dõi khi nghe, dòng Coda của bảng Cấu trúc và mục Sắc thái (thêm số ô); n24 sửa theo.
+- **Hành khúc cuối (ô 89–97).** Bảng Cấu trúc ghi "Như lần đầu" là sai: bản quét tr. 24 hệ 1 và Mutopia `rightco` cho tay phải rải quãng tám thành móc kép (nốt dưới rồi nốt trên). Sửa dòng bảng Cấu trúc, dòng Theo dõi khi nghe, và thêm vế này vào n15.
+- **Chip thời lượng.** "Khoảng 3–4 phút" không gồm bản thu gợi ý (2 phút 43) và cách chơi theo ABRSM; sửa thành "Khoảng 2–4 phút". Cách tính ghi ở n6 hồ sơ bản ghi: mọi dấu nhắc lại 222,5 ô, ở ♩ = 120–132 khoảng 3 phút 23 đến 3 phút 43 (Kolodin 3 phút 38); ABRSM "first, third and final repeat" 150,5 ô, khoảng 2 phút 17 đến 2 phút 31.
+- **Trích đoạn.** So từng nốt ở 400–600 dpi với bản quét tr. 22 hệ 1 và Mutopia `righta`, `lefta`: khớp, không sửa. Nét khó đọc ở tay trái ô 1–2 là dấu luyến ngắn nối La3 với hợp âm đầu (đúng chỗ Mutopia ghi `a8( <c' e'>)`); không chép, như mọi luyến và chấm ngắt khác của khối. Ba bài tập soạn: đủ phách, hòa âm (La thứ; La trưởng, Rê trưởng), số ngón và lời kèm đúng.
+- **Sự kiện chọn ngẫu nhiên** (seed 20261117): n1, n5, n6, n7, n8, n9 kiểm lại trên bản quét (bìa, tr. 22), Mutopia, PDF lời tựa Henle (đọc lại; lượt 1 chưa đọc): đều khớp. Thêm n10, n12, n13, n23.
+- **Mốc** (mp3 Commons tải lại; onset, chroma, độ to bằng librosa): 1, 12, 24, 69, 93, 104, 129, 140 khớp. Mốc 149 sửa thành **150**: ô 109 (*f*) vang tới khoảng 149,4 s, ô 110 (*p*) vào ở 149,79 s, độ to giảm từ khoảng −25 dB còn −29 đến −33 dB. Ghi bằng `attach.py --ref "1 12 24 69 93 104 129 140 150"`.
+- **Giấy phép bản thu.** Commons API: `{{PD-author|Romuald Greiss}}` (bản thu), `{{PD-old}}` (nhạc), vé VRT 2007081710004688, 180,53 s. Khớp `ban_thu`.
+- **`cap`.** Chấp nhận bỏ `cap` trong nhánh này; trang link tay sang `nghe-nhac/mozart-k331` ba chỗ (mở đầu, Bối cảnh, Học tiếp). Thêm `cap` hai chiều ở nhánh `mo/` sau khi gộp, như mục Việc ngoài phạm vi.
+- **Chữ, thuật ngữ.** Allegretto, presto, appoggiatura (nốt dựa, nốt nhỏ không gạch), coda, rondo khớp `thuat-ngu.yml`. Nhãn `ve-site` (n3, n28) và `khuyen-tap` (n20, n22, n25–n27) đúng.
+
+Kiểm thử sau review: `npm run build:xem` đạt; `OPUS_TRINH_DUYET=chromium OPUS_CHI_TRANG_DOI=1 OPUS_TRANG=piano/tac-pham/mozart-alla-turca/ npm run test:trinh-duyet` 194 đạt, 3 bỏ qua, 0 hỏng; `npm test` 352 đạt, 2 bỏ qua, 1 hỏng: `tests/tac-pham.test.mjs` ("them-tac-pham: thêm bản ghi ở cuối…"). Lỗi này vì nhánh chưa rebase lên commit `6c6ef8e` của `main` (kiểm thử dùng slug giả); không sửa file kiểm thử trong nhánh này.
