@@ -21,8 +21,8 @@ Mỗi dòng "Bắt đầu bằng" đi từ bản dễ đến bản khó. "Chặn
 | Schumann | [*Album für die Jugend*](/opus/piano/tac-pham/schumann-album/) | [*Träumerei*](/opus/piano/tac-pham/schumann-traumerei/), *Kinderszenen*, *Waldszenen* |
 | Liszt | *Nuages gris*, *Consolation* số 3 | *Liebestraum* số 3, *Un sospiro* |
 | Brahms | Valse Op. 39 số 15 | Intermezzo Op. 117 số 1, Op. 118 số 2 |
-| Debussy, Ravel | Debussy, *The Little Shepherd*; Ravel, *Menuet sur le nom d'Haydn* | Debussy, Arabesque số 1, [*Clair de lune*](/opus/piano/tac-pham/debussy-clair-de-lune/); Ravel, *Pavane* |
-| Rachmaninoff | Nocturne và étude của Chopin để có nền | Prelude Op. 3 số 2, Op. 23 số 4 |
+| Debussy, Ravel | Debussy, *The Little Shepherd*; Ravel, *Menuet sur le nom d'Haydn* | Debussy, [Arabesque số 1](/opus/piano/tac-pham/debussy-arabesque-1/), [*Clair de lune*](/opus/piano/tac-pham/debussy-clair-de-lune/); Ravel, *Pavane* |
+| Rachmaninoff | Nocturne và étude của Chopin để có nền | [Prelude Op. 3 số 2](/opus/piano/tac-pham/rachmaninoff-prelude-do-thang-thu/), Op. 23 số 4 |
 | Nhạc thế kỷ 20 | Bartók, *Mikrokosmos*; Kabalevsky, Op. 39 | Prokofiev, *Music for Children*; Bartók, *Romanian Folk Dances* |
 | Nhạc tĩnh lặng, tối giản | [Satie, *Gymnopédie* số 1](/opus/piano/tac-pham/satie-gymnopedie/) | Pärt, *Für Alina*; Glass, *Opening* |
 | Nhạc mang màu jazz | Gershwin, Prelude số 2 | Prelude số 1 và 3, rồi étude của Kapustin |
@@ -88,7 +88,7 @@ Kết cấu thường là **giai điệu và đệm**: tay phải hát, tay trá
 
 - **Đặc trưng khi chơi:** trong suốt. Ít nốt, nên mọi chỗ lệch nhịp hay to nhỏ không đều đều nghe thấy. Tay phải hát như giọng opera, nhiều luyến hai nốt như tiếng thở dài; tay trái đệm Alberti nhẹ và đều; gam phải mịn. Đừng phóng đại sắc thái.
 - **Tác phẩm chính:** 18 sonata, Fantasia Rê thứ K. 397, Rondo La thứ K. 511, các bộ biến tấu (như K. 265 trên giai điệu "Ah, vous dirai-je, maman"), các concerto (nghe [Concerto số 21](/opus/nghe-nhac/mozart-concerto-21/)).
-- **Bắt đầu bằng:** các bản nhỏ K. 1–5, viết lúc 5–6 tuổi, như [Minuet Fa trưởng K. 2](/opus/piano/tac-pham/mozart-minuet-k2/) (chặng 2) và Allegro K. 3 (Grade 3) → [Sonata Đô trưởng K. 545](/opus/piano/tac-pham/mozart-k545/), mà chính ông ghi là sonata nhỏ "cho người mới học" (chặng 5) → K. 283, K. 330 → Fantasia K. 397, [K. 331](/opus/nghe-nhac/mozart-k331/) → K. 310, K. 457, Rondo K. 511.
+- **Bắt đầu bằng:** các bản nhỏ K. 1–5, viết lúc 5–6 tuổi, như [Minuet Fa trưởng K. 2](/opus/piano/tac-pham/mozart-minuet-k2/) (chặng 2) và Allegro K. 3 (Grade 3) → [Sonata Đô trưởng K. 545](/opus/piano/tac-pham/mozart-k545/), mà chính ông ghi là sonata nhỏ "cho người mới học" (chặng 5) → K. 283, K. 330 → Fantasia K. 397, [K. 331](/opus/nghe-nhac/mozart-k331/) (chương 3, [*Alla turca*](/opus/piano/tac-pham/mozart-alla-turca/): chặng 6) → K. 310, K. 457, Rondo K. 511.
 - **Cuộc đời và các tác phẩm khác:** [Nhà soạn nhạc](/opus/lich-su/nha-soan-nhac/#wolfgang-amadeus-mozart-17561791).
 
 ### Muzio Clementi (1752–1832)
@@ -195,7 +195,7 @@ Thế kỷ 20 mở rộng vốn từ của đôi tay: màu sắc âm thanh, nh�
 
 - **Đặc trưng khi chơi:** âm thanh là trên hết: nhiều tầng *pianissimo*, chạm phím bằng phần thịt đầu ngón thay vì gõ, bàn đạp tạo những lớp vang (thay một nửa, giữ ngân qua nhiều hòa âm). Hợp âm song song, gam toàn cung, gam ngũ cung. Dưới lớp sương mờ, nhịp vẫn phải chính xác.
 - **Tác phẩm chính:** *Deux Arabesques*, *Suite bergamasque*, *Estampes* (1903), *L'isle joyeuse*, hai tập *Images*, *Children's Corner* (1906–1908, viết cho con gái), hai tập *Préludes* (24 bản, tên đặt ở cuối mỗi bản; xem [hướng dẫn nghe quyển 1](/opus/nghe-nhac/debussy-preludes/)), 12 *Études* (1915, tưởng nhớ Chopin).
-- **Bắt đầu bằng:** *The Little Shepherd* trong *Children's Corner* (Grade 7) → *Arabesque* số 1 → [*Clair de lune*](/opus/piano/tac-pham/debussy-clair-de-lune/) (chặng 6) → *La fille aux cheveux de lin*, *Rêverie* (cả hai Grade 8) → *Golliwogg's Cakewalk*, *Doctor Gradus ad Parnassum* (tên gợi tới tập luyện ngón *Gradus ad Parnassum* của Clementi) → các prelude khác, *Estampes*, *Images* → *Études*.
+- **Bắt đầu bằng:** *The Little Shepherd* trong *Children's Corner* (Grade 7) → [*Arabesque* số 1](/opus/piano/tac-pham/debussy-arabesque-1/) (chặng 6) → [*Clair de lune*](/opus/piano/tac-pham/debussy-clair-de-lune/) (chặng 6) → *La fille aux cheveux de lin*, *Rêverie* (cả hai Grade 8) → *Golliwogg's Cakewalk*, *Doctor Gradus ad Parnassum* (tên gợi tới tập luyện ngón *Gradus ad Parnassum* của Clementi) → các prelude khác, *Estampes*, *Images* → *Études*.
 - **Cuộc đời và các tác phẩm khác:** [Nhà soạn nhạc](/opus/lich-su/nha-soan-nhac/#claude-debussy-18621918).
 
 ### Erik Satie (1866–1925)
@@ -220,7 +220,7 @@ Thế kỷ 20 mở rộng vốn từ của đôi tay: màu sắc âm thanh, nh�
 
 - **Đặc trưng khi chơi:** viết cho bàn tay lớn: hợp âm dày trải rộng, tiếng chuông nhà thờ Nga ở âm vực trầm, giai điệu dài ẩn trong lớp hợp âm, hợp âm rải quét khắp bàn phím. Cần trọng lượng cánh tay để tiếng to mà không gắt, biết làm nổi nốt trên cùng của hợp âm, và sức bền.
 - **Tác phẩm chính:** *Morceaux de fantaisie* Op. 3 (1892, có Prelude Đô♯ thứ), 24 prelude (Op. 3 số 2, Op. 23, Op. 32), *Moments musicaux* Op. 16, *Études-tableaux* Op. 33 và Op. 39, Biến tấu Corelli Op. 42, bốn concerto và *Rhapsody on a Theme of Paganini*.
-- **Bắt đầu bằng:** xây nền bằng nocturne và étude của Chopin → *Élégie* Op. 3 số 1, Prelude Op. 3 số 2 → Prelude Op. 23 số 4 Rê trưởng, Op. 32 số 5 Sol trưởng → *Moments musicaux* (số 5: Grade 8), *Études-tableaux* → [Concerto số 2](/opus/nghe-nhac/rachmaninoff-2/).
+- **Bắt đầu bằng:** xây nền bằng nocturne và étude của Chopin → *Élégie* Op. 3 số 1, [Prelude Op. 3 số 2](/opus/piano/tac-pham/rachmaninoff-prelude-do-thang-thu/) (chặng 7) → Prelude Op. 23 số 4 Rê trưởng, Op. 32 số 5 Sol trưởng → *Moments musicaux* (số 5: Grade 8), *Études-tableaux* → [Concerto số 2](/opus/nghe-nhac/rachmaninoff-2/).
 - **Cuộc đời và các tác phẩm khác:** [Nhà soạn nhạc](/opus/lich-su/nha-soan-nhac/#sergei-rachmaninoff-18731943).
 
 ### Maurice Ravel (1875–1937)

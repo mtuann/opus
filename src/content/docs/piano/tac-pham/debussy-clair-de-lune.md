@@ -47,14 +47,14 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 
 | Thời điểm | Sự kiện |
 |---|---|
-| … | **Mở đầu** (ô 1–14): *pp con sordina*; quãng ba, quãng sáu đi xuống ở tay phải, bắt đầu sau phách đầu và nối qua phách, nên nhịp nghe mơ hồ |
+| … | **Mở đầu** (ô 1–14): *pp con sordina*; quãng ba, quãng sáu đi xuống ở tay phải; ô đầu không có nốt ở đầu phách (tay trái vào ở móc đơn thứ hai, tay phải ở móc đơn thứ ba) và nhiều nốt nối qua phách, nên nhịp nghe mơ hồ |
 | … | **Tempo rubato** (ô 15–18): giai điệu rõ hơn trên các hợp âm |
 | … | **Lớn dần, nhanh dần** (ô 19–26, *peu à peu cresc. et animé*): đoạn dừng lại trên một hợp âm át rải |
 | … | **Un poco mosso** (ô 27–36): tay trái rải hợp âm liên tục như nước chảy, giai điệu ở tay phải |
 | … | **Cao trào** (ô 37–42): dồn lên điểm cao nhất của bài, quanh ô 41 |
 | … | **Calmato** (ô 43–50): lắng lại trên nền trầm lung linh |
 | … | **A'** (ô 51–65): tốc độ ban đầu trở lại; chủ đề mở đầu trên nền hợp âm rải, như một kỷ niệm |
-| … | **Coda** (ô 66–72): hợp âm rải, tay bắt chéo, tan dần đến hết (*morendo jusqu'à la fin*) |
+| … | **Coda** (ô 66–72): hợp âm rải từ âm trầm đi lên, tan dần đến hết (*morendo jusqu'à la fin*) |
 
 ## Cấu trúc
 
@@ -62,13 +62,13 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 
 | Đoạn | Ô nhịp | Nội dung | Điều cần chú ý khi chơi |
 |---|---|---|---|
-| A | 1–14 | *Andante très expressif*, *pp con sordina*. Quãng ba, quãng sáu đi xuống ở tay phải; nhạc bắt đầu sau phách đầu, nhiều dấu nối qua phách | Đếm thật chính xác; hai nốt của quãng ba gần bằng nhau, nốt trên nhỉnh hơn một chút |
+| A | 1–14 | *Andante très expressif*, *pp con sordina*. Quãng ba, quãng sáu đi xuống ở tay phải; ô 1 không có nốt ở đầu phách: tay trái vào ở móc đơn thứ hai, tay phải ở móc đơn thứ ba, vẫn trong phách đầu; nhiều dấu nối qua phách | Đếm thật chính xác; hai nốt của quãng ba gần bằng nhau, nốt trên nhỉnh hơn một chút |
 | A (tiếp) | 15–26 | *Tempo rubato*; giai điệu rõ hơn trên hợp âm; từ ô 19 *peu à peu cresc. et animé* (lớn dần và nhanh dần từng chút); kết thúc trên hợp âm át rải | Rubato có hướng: dồn tới rồi lắng; giai điệu hát trên các hợp âm được nhấn nhẹ |
 | B | 27–36 | *Un poco mosso*: tay trái rải hợp âm liên tục như nước chảy, giai điệu ở tay phải | Hợp âm rải nhẹ, đều, không bao giờ lấn giai điệu; chia nốt giữa hai tay nếu cần |
 | B (cao trào) | 37–42 | Dồn lên điểm cao nhất của bài (quanh ô 41) | To nhất của bài vẫn là một tiếng tròn, không gắt |
 | B (lắng) | 43–50 | *Calmato*: lắng lại trên nền trầm lung linh | Giảm dần tốc độ và độ to để chuẩn bị cho A' |
 | A' | 51–65 | Tốc độ ban đầu trở lại; chủ đề mở đầu trên nền hợp âm rải | Không phải lặp lại: giờ chủ đề như một kỷ niệm, mềm hơn |
-| Coda | 66–72 | Hợp âm rải, tay bắt chéo, tan dần đến hết | Mỗi lần rải phải nhỏ hơn lần trước; ngân hợp âm cuối thật lâu |
+| Coda | 66–72 | Hợp âm rải từ âm trầm lên khuông trên, dưới hay xen giữa các nốt tay phải đang giữ; tan dần đến hết | Mỗi lần rải phải nhỏ hơn lần trước; ngân hợp âm cuối thật lâu |
 
 ## Chỗ khó và cách tập
 
@@ -80,7 +80,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | Hợp âm rải đoạn *Un poco mosso* | Tay trái trải rộng hơn một quãng tám; dễ to, dễ vấp chỗ đổi thế tay | Chơi mỗi nhóm thành hợp âm khối để học thế tay; rải chậm với cổ tay xoay theo hướng đi; khi cần, để tay phải lấy một hai nốt cao nhất của chuỗi rải. Bài tập 3 |
 | Bàn đạp | Hòa âm thay đổi, giai điệu đi bậc liền; giữ một bàn đạp quá lâu là thành tiếng ồn | Đạp theo hòa âm; ở chỗ giai điệu đi bậc trên một hòa âm, đạp nông hoặc rung bàn đạp (nhả một phần rất nhanh) để làm sạch. Xem [Bàn đạp](/opus/piano/ban-dap/) |
 | Cao trào và giữ sức | Bài kéo dài *pp* rồi bỗng lên to; người chơi dễ "đập" | Lập bản đồ sắc thái cho cả bài trên giấy: chỗ to nhất là một chỗ duy nhất. Dùng trọng lượng cánh tay, cổ tay mềm |
-| Coda tay bắt chéo | Nhìn và nghe cùng lúc; nốt cuối của mỗi lần rải dễ to | Tập riêng đường đi của tay vắt qua, mắt nhìn đích trước; mỗi lần rải kết thúc nhỏ hơn lúc bắt đầu |
+| Hợp âm rải ở coda | Tay trái rải lên tới chỗ tay phải đang giữ hợp âm, có ô chen giữa hai nốt tay phải; nốt cuối của mỗi lần rải dễ to | Tập riêng đường đi của tay trái, mắt nhìn đích trước; tay phải giữ nốt nhẹ, chừa chỗ; mỗi lần rải kết thúc nhỏ hơn lúc bắt đầu |
 
 ## Bài tập chuẩn bị
 
@@ -157,7 +157,7 @@ Kế hoạch 9 tuần, 45–60 phút mỗi ngày. Tốc độ tính theo phách 
 | 3 | Ô 15–26 (*Tempo rubato*): học chính xác trước khi co giãn; thêm bàn đạp cho ô 1–26 | ♩. = 34–38 |
 | 4 | Ô 27–36 (*Un poco mosso*): tay trái riêng; bài tập 3; chọn cách chia tay | ♩. = 36–40 |
 | 5 | Ô 37–50: cao trào và *Calmato*; ghép với phần trước | ♩. = 40–44 |
-| 6 | Ô 51–72: A' và coda; tập tay bắt chéo | ♩. = 40–44 |
+| 6 | Ô 51–72: A' và coda; tập hợp âm rải ở coda | ♩. = 40–44 |
 | 7 | Chơi liền cả bài mỗi ngày; [thu âm](/opus/luyen-tap/thu-am/); lập bản đồ sắc thái cả bài | ♩. ≈ 44–50 |
 | 8 | Rubato và màu sắc: una corda, đạp nửa; tập trên một cây đàn khác | Tự do quanh ♩. ≈ 46–54 |
 | 9 | Thuộc lòng (xem [Học thuộc và biểu diễn](/opus/piano/hoc-thuoc-bieu-dien/)); biểu diễn cho người khác nghe | Tốc độ bạn chọn |

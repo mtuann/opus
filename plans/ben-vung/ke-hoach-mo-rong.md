@@ -133,9 +133,9 @@ Chỗ cần lấp: chặng 7, Thế kỷ 20 và Ấn tượng, nhà soạn nhạ
 
 | Đợt thêm | Bài | Chặng | Sẵn sàng | Rủi ro, việc cần quyết |
 |---|---|---|---|---|
-| 1 (làm thử quy trình) | Mozart, *Alla turca* K. 331/III | 6 | Mutopia, kern; bản thu Greiss trên Commons, phát được | ABRSM 2027–2028 đã bỏ bài này; thêm `cap` phải mở khóa bản ghi `mozart-k331` |
-| 1 | Debussy, Arabesque số 1 | 6 | Mutopia (Durand 1904); bản thu Prati, phát được | Cấp chỉ ước lượng |
-| 1 | Rachmaninoff, Prelude Đô♯ thứ Op. 3 số 2 | 7 | Mutopia; bản thu của chính tác giả (1919), phát được | Ồn mặt đĩa; cấp lệch trang tham chiếu |
+| 1 (làm thử quy trình) | Mozart, *Alla turca* K. 331/III | 6 | **Xong 17/11/2026** (bản Artaria khoảng 1784; bản thu Greiss) | ABRSM 2027–2028 đã bỏ bài này; `cap` hai chiều với `mozart-k331` thêm ở `mo/sau-dot-1` |
+| 1 | Debussy, Arabesque số 1 | 6 | **Xong 17/11/2026** (bản Durand 1904; bản thu Prati) | Cấp chỉ ước lượng (Grade 7) |
+| 1 | Rachmaninoff, Prelude Đô♯ thứ Op. 3 số 2 | 7 | **Xong 17/11/2026** (bản Gutheil khoảng 1893; bản thu của tác giả) | Ồn mặt đĩa; trang tham chiếu sửa theo ở `mo/sau-dot-1` |
 | 2 (Thế kỷ 20) | Gretchaninov, *Grandfather's Album* Op. 119 (2–3 bài) | 3 | **Xong 17/11/2026** (số 1 và 7) | Cấp ước lượng |
 | 2 | Bartók, *Romanian Folk Dances* | 5 | **Xong 17/11/2026** (bản UE 1918) | Phải dùng bản in trước 1934 |
 | 2 | Bartók, *For Children* I/1, I/6 (bản 1909) | 2 | **Xong 17/11/2026** | Bản sửa 1946 còn bảo hộ ở Mỹ |
@@ -143,13 +143,13 @@ Chỗ cần lấp: chặng 7, Thế kỷ 20 và Ấn tượng, nhà soạn nhạ
 | 3 | Clara Schumann, Scherzo Op. 14 | 6 | Bản thu chỉ dẫn link | Xong 17/11/2026 (Grade 8 ước lượng) |
 | 3 | Fanny Hensel, *Mélodie* Op. 4 số 2 | 6 | **Chưa có bản thu được nhận** | Chốt 16/11/2026: làm Chaminade *Automne* (chặng 7) thay, xong 17/11/2026; *Klage* sang hướng dẫn nghe |
 | 4 (lấp chỗ trống) | Một sonata Haydn (Hob. XVI) | 4–5 | Cần khảo sát | Chưa có bài Haydn nào |
-| 4 | Chặng 7 không Lãng mạn: một Prelude và Fugue trong Bình quân luật; một sonata Beethoven trọn vẹn | 7 | Cần khảo sát | Chặng 7 hiện chỉ có 4 bài Lãng mạn |
+| 4 | Chặng 7 không Lãng mạn: một Prelude và Fugue trong Bình quân luật; một sonata Beethoven trọn vẹn | 7 | Cần khảo sát | Chặng 7 hiện có 6 bài, đều Lãng mạn (Rachmaninoff: cuối Lãng mạn) |
 | 4 | Dự phòng: Granados Op. 1; Bartók Sonatina; Debussy *Golliwogg's Cakewalk* | 4–6 | Một phần có bản thu phát được | Xem khảo sát |
 | 5 | Tác phẩm Việt Nam hết bảo hộ (tác giả mất từ 1975 trở về trước), bài chặng 1 dùng dân ca Việt Nam | 1–6 | Cần khảo sát bản quyền riêng | Nguồn bản nhạc |
 
 Chặng 6 sẽ đông nhất sau đợt 1 và 3 (khoảng 9–10 bài); cân nhắc khi chọn bài.
 
-**Thứ tự đã chốt (16/11/2026, chủ repo chọn): đợt 2, rồi đợt 3, rồi đợt 1, rồi đợt 4, đợt 5.** Đợt 2 xong ngày 17/11/2026 (báo cáo `plans/ben-vung/bao-cao/them-*.md`; việc sau đợt ở nhánh `mo/sau-dot-2`). Đợt 3 xong cùng ngày (*Pierrette*, Scherzo số 2 của Clara Schumann, *Automne* thay Hensel; việc sau đợt ở nhánh `mo/sau-dot-3`). Hiện trạng bài học theo chặng 2–7: 8, 6, 8, 6, 7, 5 (40 bài). Lời giao đầy đủ cho agent (từng bài, ấn bản, bản thu, file chủ repo phải tải, điều kiện xong): `plans/ben-vung/lo-trinh-them-tac-pham.md`.
+**Thứ tự đã chốt (16/11/2026, chủ repo chọn): đợt 2, rồi đợt 3, rồi đợt 1, rồi đợt 4, đợt 5.** Đợt 2 xong ngày 17/11/2026 (báo cáo `plans/ben-vung/bao-cao/them-*.md`; việc sau đợt ở nhánh `mo/sau-dot-2`). Đợt 3 xong cùng ngày (*Pierrette*, Scherzo số 2 của Clara Schumann, *Automne* thay Hensel; việc sau đợt ở nhánh `mo/sau-dot-3`). Đợt 1 xong cùng ngày (*Arabesque* số 1, Prelude Đô♯ thứ Op. 3 số 2, *Alla turca*; việc sau đợt ở nhánh `mo/sau-dot-1`). Hiện trạng bài học theo chặng 2–7: 8, 6, 8, 6, 9, 6 (43 bài). Lời giao đầy đủ cho agent (từng bài, ấn bản, bản thu, file chủ repo phải tải, điều kiện xong): `plans/ben-vung/lo-trinh-them-tac-pham.md`.
 
 ### 6.2 Hướng dẫn nghe
 

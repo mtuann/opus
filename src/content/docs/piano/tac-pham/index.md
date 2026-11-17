@@ -60,7 +60,7 @@ Muốn có một **chương trình nhỏ** để biểu diễn, ghép ba bài c�
 
 ## Nghe kèm
 
-Một số bài học có thêm hướng dẫn nghe cho cả tác phẩm (lịch sử, so sánh bản thu, các chương còn lại; dòng "Cùng tác phẩm" trong danh mục), nên đọc ở bước "nghe trước": [Schumann: Kinderszenen](/opus/nghe-nhac/schumann-kinderszenen/) (cho *Träumerei*), [Beethoven: *Ánh trăng*](/opus/nghe-nhac/beethoven-moonlight/), [Beethoven: Pathétique](/opus/nghe-nhac/beethoven-pathetique/), [Schubert: Impromptu Sol♭ trưởng](/opus/nghe-nhac/schubert-impromptu/) và [Liszt: Liebestraum số 3](/opus/nghe-nhac/liszt-liebestraum/). Các bài học khác đã có bản thu gợi ý và bảng "Theo dõi khi nghe" ngay trong trang. Các hướng dẫn khác, kể cả những tác phẩm bạn sẽ chơi trong vài năm tới, ở [Nghe nhạc](/opus/nghe-nhac/).
+Một số bài học có thêm hướng dẫn nghe cho cả tác phẩm (lịch sử, so sánh bản thu, các chương còn lại; dòng "Cùng tác phẩm" trong danh mục), nên đọc ở bước "nghe trước": [Schumann: Kinderszenen](/opus/nghe-nhac/schumann-kinderszenen/) (cho *Träumerei*), [Beethoven: *Ánh trăng*](/opus/nghe-nhac/beethoven-moonlight/), [Beethoven: Pathétique](/opus/nghe-nhac/beethoven-pathetique/), [Mozart: Sonata K. 331](/opus/nghe-nhac/mozart-k331/) (cho *Alla turca*), [Schubert: Impromptu Sol♭ trưởng](/opus/nghe-nhac/schubert-impromptu/) và [Liszt: Liebestraum số 3](/opus/nghe-nhac/liszt-liebestraum/). Các bài học khác đã có bản thu gợi ý và bảng "Theo dõi khi nghe" ngay trong trang. Các hướng dẫn khác, kể cả những tác phẩm bạn sẽ chơi trong vài năm tới, ở [Nghe nhạc](/opus/nghe-nhac/).
 
 ## Nguồn
 

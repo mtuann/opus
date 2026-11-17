@@ -29,6 +29,15 @@ lan:
       luot_2: "Claude Sonnet (agent riêng, 17/11/2026; câu mới cần nguồn: tac-pham-theo-cap n80, n81, n82, ke-hoach n7; 4 đúng)"
       review: Claude Sonnet 5.5 (agent riêng, 17/11/2026)
       kiem_mau: "Claude Sonnet (agent riêng), kiểm thay chủ repo theo lời giao 16/11/2026: câu mới tac-pham-theo-cap n80, n82, nu-nha-soan-nhac n107; 3 đúng"
+  - so: 4
+    ngay: 2026-11-17
+    nhanh: mo/sau-dot-1
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5 (lượt 1, mo/sau-dot-1, 17/11/2026)
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'D8-L1 phần 1/2, lượt 1 (05/11/2026). Việc chính: chặng của bốn bài có bản ghi khớp src/data/tac-pham.yml (n3, n38); bảng mức Henle kiểm trên trang sản phẩm henle.de của từng ấn bản (n10–n32, đã mở 05/11/2026; K. 545 sửa 4–5 thành 5); ABRSM kiểm trên hai PDF 2025 & 2026 và 2027 & 2028 (Practical và Performance); bảng chặng có 170 hàng ngoài bản ghi và mục ngoài cổ điển (6 bài) chỉ kiểm một phần: xem n49, n52–n54, n62–n71 (ket_qua null, "chưa chắc"). Người giao cần: (1) quyết chặng của Nocturne Op. 72 số 1 (ABRSM Grade 8 trong 2027 & 2028, Henle 5), Impromptu Op. 90 số 2 (n52, n53); (2) đồng bộ doi_chu (cu, moi viết theo chữ hiện ra; hàng bảng ghi "ô | ô"); (3) trang không có khuông nhạc (khối abc); (4) dòng "Kiểm tra lần cuối" của trang cũ không có ở trang này. Review D8-gom (Claude Opus 5.5): câu ve-site kiểm lại trên trang, src/data và bản xem (dist riêng trong scratchpad); câu lượt 2 khong-chac đã quyết (mở thêm nguồn, viết lại hay bỏ); kiểm từng hàng các bảng chặng (r1–r7, hai agent Sonnet chia theo chặng, review đọc lại); chi tiết bản nhạc ở mục ngoài cổ điển đối chiếu trang mẫu Musicnotes (s1–s6). Nocturne Op. 72 số 1 không có bản ghi trong src/data/tac-pham.yml: chặng 5 là lựa chọn của site, ô bảng nói thêm ABRSM Grade 8 và Henle 5.'
 nguon:
   - id: henle-levels
@@ -723,6 +732,10 @@ nguon:
     bac: 2
     ten: "IMSLP, 6 Études de concert, Op.35 (Chaminade, Cécile): số 2 Automne, Lento, Rê♭ trưởng; Piece Style Romantic"
     link: https://imslp.org/wiki/6_%C3%89tudes_de_concert,_Op.35_(Chaminade,_C%C3%A9cile)
+  - id: imslp-k331-tc
+    bac: 2
+    ten: "IMSLP, Piano Sonata No.11 in A major, K.331/300i (Mozart): ba chương, chương 3 Alla Turca; Piece Style Classical"
+    link: https://imslp.org/wiki/Piano_Sonata_No.11_in_A_major,_K.331/300i_(Mozart,_Wolfgang_Amadeus)
 nhan_dinh:
   - id: n1
     cau: Danh mục xếp tác phẩm theo đúng 7 chặng của lộ trình piano; mỗi chặng có một bảng gồm tác phẩm, thời kỳ và điều học được; bài có bài học chi tiết trên site được gắn link.
@@ -1632,7 +1645,7 @@ nhan_dinh:
       - r-194-2
       - r-195-1
     ket_qua: da-sua
-    ghi_chu: 'Review D8-gom (Claude Opus 5.5): kiểm từng hàng (agent Sonnet, review đọc lại; bảng kết quả trong scratchpad của phiên, hang-chang-5-7.yml). Bài có link (bản ghi đã khóa) không kiểm lại. Chặng là lựa chọn của site, không kiểm. Bỏ "54 ô nhịp" của Ravel Menuet (chỉ có nguồn bậc 3). "Fugue ba bè" của BWV 847: bản ghi đã khóa (bach-prelude-fugue-do-thu).'
+    ghi_chu: "Review D8-gom (Claude Opus 5.5): kiểm từng hàng (agent Sonnet, review đọc lại; bảng kết quả trong scratchpad của phiên, hang-chang-5-7.yml). Bài có link (bản ghi đã khóa) không kiểm lại. Chặng là lựa chọn của site, không kiểm. Bỏ \"54 ô nhịp\" của Ravel Menuet (chỉ có nguồn bậc 3). \"Fugue ba bè\" của BWV 847: bản ghi đã khóa (bach-prelude-fugue-do-thu). 17/11/2026 (mo/sau-dot-1): dòng Rachmaninoff Op. 3 số 2 chuyển sang bảng chặng 7, khớp chang 7 của bản ghi rachmaninoff-prelude-do-thang-thu (n83)."
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Piano_Sonata_No.10_in_C_major,_K.330/300h_(Mozart,_Wolfgang_Amadeus)", "https://imslp.org/wiki/Fantasia_in_D_minor,_K.397/385g_(Mozart,_Wolfgang_Amadeus)", "https://imslp.org/wiki/Sinfonias,_BWV_787-801_(Bach,_Johann_Sebastian)", "https://imslp.org/wiki/French_Suite_No.5_in_G_major,_BWV_816_(Bach,_Johann_Sebastian)", "https://imslp.org/wiki/4_Impromptus,_D.899_(Schubert,_Franz)", "https://imslp.org/wiki/6_Klavierstücke,_Op.118_(Brahms,_Johannes)", "https://imslp.org/wiki/3_Intermezzi,_Op.117_(Brahms,_Johannes)", "https://imslp.org/wiki/Waltzes,_Op.64_(Chopin,_Frédéric)", "https://imslp.org/wiki/Preludes,_Op.28_(Chopin,_Frédéric)", "https://w.mfiles.co.uk/scores/prelude15.htm", "https://imslp.org/wiki/Lyric_Pieces,_Op.65_(Grieg,_Edvard)", "https://imslp.org/wiki/Arabesques_(Debussy,_Claude)", "https://imslp.org/wiki/Préludes,_Livre_1_(Debussy,_Claude)", "https://imslp.org/wiki/Consolations,_S.172_(Liszt,_Franz)", "https://imslp.org/wiki/Morceaux_de_fantaisie,_Op.3_(Rachmaninoff,_Sergei)", "https://imslp.org/wiki/Menuet_sur_le_nom_d'Haydn,_M.58_(Ravel,_Maurice)", "https://thelistenersclub.com/2025/11/07/ravels-menuet-sur-le-nom-dhaydn-an-homage-in-code/", "https://imslp.org/wiki/3_Preludes_(Gershwin,_George)" ]
     luot_2_ghi_chu: "Kiểm từng hàng trên trang tác phẩm IMSLP (khung thông tin, đọc chữ thật bằng curl): K.330 Đô trưởng (1783); K.397 Rê thứ, mục Extra Information: 'The ending as it currently exists (last 10 measures) is believed to have been written by August Eberhard Müller' (khớp 'khoảng mười ô cuối có lẽ do A. E. Müller'); Sinfonias BWV 787–801 (15 bài); French Suite số 5 Sol trưởng BWV 816; D.899 số 2 Allegro Mi♭ trưởng; Op.118 số 2 Intermezzo Andante teneramente La trưởng; Op.117 số 1 Mi♭ trưởng; Op.64 số 1 Rê♭ trưởng, số 2 Đô♯ thứ; Op.28 số 15 Sostenuto Rê♭ trưởng 'Raindrop', đoạn giữa Đô♯ thứ theo mfiles (IMSLP chỉ ghi giọng chính); Grieg Op.65 số 6 là Bryllupsdag på Troldhaugen (câu chỉ ghi số, đúng có số 6); Arabesque số 1 Mi trưởng (CD 74, 1890–91); Préludes quyển 1 số 8 La fille aux cheveux de lin; Consolations S.172 số 3 Lento placido Rê♭ trưởng; Rachmaninoff Op.3 số 2 Prélude Đô♯ thứ; Ravel M.58, 1909, Sol trưởng, motif năm nốt từ tên Haydn (thelistenersclub, viết cho kỷ niệm 100 năm ngày mất Haydn; IMSLP không mô tả chủ đề); Gershwin 3 Preludes (1926). Không thấy hàng sai."
@@ -1798,6 +1811,17 @@ nhan_dinh:
     luot_2_nguon: [ "https://imslp.org/wiki/6_%C3%89tudes_de_concert,_Op.35_(Chaminade,_C%C3%A9cile)" ]
     luot_2_ghi_chu: "IMSLP: 6 Études de concert Op.35, số 2 là Automne (Lento), Romantic, in 1886. Đọc bản Enoch: trang đầu Lento p, giai điệu và nốt đệm cùng ở khuông tay phải; Con fuoco / a Tempo molto agitato nhanh (móc kép) ở đoạn giữa; hợp âm và quãng tám tutta forza tới fff (trang 14 của bản); a Tempo I lại chậm. Khớp trang bài học chaminade-automne. Dòng nằm đúng mục Chặng 7. Ghi thêm: IMSLP ghi giọng của số 2 là Db trong dòng liệt kê; câu này không nêu giọng nên không ảnh hưởng."
     review: dung
+  - id: n83
+    cau: "Link tới ba bài học mới: Debussy Arabesque số 1 và Mozart Alla turca (bảng chặng 6), Rachmaninoff Prelude Đô♯ thứ Op. 3 số 2 (bảng chặng 7, chuyển từ bảng chặng 6, chữ của dòng giữ nguyên); chặng của bảng khớp chang của bản ghi."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Lần mở 17/11/2026 (sau đợt 1). Bản ghi debussy-arabesque-1 chang 6, mozart-alla-turca chang 6, rachmaninoff-prelude-do-thang-thu chang 7 (src/data/tac-pham.yml, đã khóa ở lượt 7–9); tests/tac-pham-theo-cap.test.mjs và tests/link.test.mjs đạt trên bản xem. Dòng Rachmaninoff: tên, giọng, thời kỳ, học được gì như r6 (đã kiểm), chỉ đổi bảng và thêm link."
+  - id: n84
+    cau: "Bảng chặng 6: Mozart, Alla turca, chương 3 Sonata La trưởng K. 331; thời kỳ Cổ điển; học được hình móc kép vòng quanh nốt chính, nhẹ và rõ, hợp âm rải nhanh tay trái như tiếng trống, quãng tám tay phải."
+    loai: ten
+    nguon: [ imslp-k331-tc ]
+    ket_qua: dung
+    ghi_chu: "Dòng mới, link bài học piano/tac-pham/mozart-alla-turca (đã khóa, chang 6) và hướng dẫn nghe nghe-nhac/mozart-k331. Tên, chương, giọng La trưởng của sonata, thời kỳ: IMSLP (Piece Style Classical; chương 3 Alla Turca). Học được gì: chép ky_nang_chinh của bản ghi mozart-alla-turca (đã khóa; kiểm trên bản Artaria ở lượt 9), bỏ vế \"giữ nhịp 2/4 đều\"."
 khuong_nhac: []
 doi_chu:
   - cu: Danh mục này xếp những tác phẩm thật, từ bài đầu tiên đến sân khấu hòa nhạc, theo đúng 7 chặng của lộ trình piano, và là nơi site quyết định mỗi bài thuộc chặng nào. Mỗi chặng có một bảng gồm tác phẩm, thời kỳ và điều bạn học được từ nó; những bài có bài học chi tiết trên site được gắn link. Cuối trang có một mục riêng cho những bài phổ biến ngoài nhạc cổ điển, như Mariage d'Amour, River Flows in You hay Nuvole bianche.
@@ -1839,9 +1863,9 @@ doi_chu:
   - cu: "Notenbuch für Wolfgang (Sổ nhạc cho Wolfgang): Burleske, Minuet, Bourrée"
     moi: "Notenbuch für Wolfgang (Sổ nhạc cho Wolfgang): Minuet, Bourrée"
     ly_do: "Review D8-gom (r2): tên bài Burleske trong sổ không có nguồn bậc 1–2 (IMSLP ghi các minuet và Bourrée); bỏ tên ấy."
-  - cu: Cổ điển
+  - cu: null
     moi: Thế kỷ 19, phong cách Cổ điển
-    ly_do: 'Review D8-gom (r1, r3): Diabelli Op. 149 in 1831, Op. 151 và Op. 168 in khoảng 1839 (IMSLP xếp Romantic), nên không ghi "Cổ điển" như thời kỳ; ghi theo năm và phong cách.'
+    ly_do: 'Review D8-gom (r1, r3): Diabelli Op. 149 in 1831, Op. 151 và Op. 168 in khoảng 1839 (IMSLP xếp Romantic), nên không ghi "Cổ điển" như thời kỳ; ghi theo năm và phong cách. 17/11/2026 (mo/sau-dot-1): cu để null vì ô "Cổ điển" của dòng Alla turca (n84) khớp một ô cũ đã bỏ, so-chu tính theo số lần.'
   - cu: null
     moi:
       - Baroque
@@ -1972,6 +1996,48 @@ doi_chu:
   - cu: "mô tả: Danh mục này xếp những tác phẩm thật, từ bài đầu tiên đến sân khấu hòa nhạc, theo đúng 7 chặng của lộ trình piano, và là nơi site quyết định mỗi bài thuộc…"
     moi: "mô tả: Danh mục này xếp những tác phẩm thật, từ bài đầu tiên đến sân khấu hòa nhạc, theo đúng 7 chặng của lộ trình piano. Mỗi chặng có một bảng gồm tác phẩm, thời kỳ và điều bạn…"
     ly_do: 'Chặng của bài có bản ghi do src/data/tac-pham.yml quyết (khóa ở D2-0) và các trang piano/lo-trinh/chang-N sinh từ dữ liệu; trang này chỉ ghi lại (tests/tac-pham-theo-cap.test.mjs bắt chỗ lệch). Mô tả trang (frontmatter) bỏ cùng vế: "…theo đúng 7 chặng của lộ trình piano, và là nơi site quyết định mỗi bài thuộc…" thành "…theo đúng 7 chặng của lộ trình piano. Mỗi chặng có một bảng gồm tác phẩm, thời kỳ và điều bạn…".'
+  - cu: null
+    moi: "Gretchaninov: Grandfather's Album Op. 119: Meine liebe Mutti! (Mẹ yêu, số 1), Traurige Geschichte (Chuyện buồn, số 7)"
+    ly_do: "Dòng thêm ở mo/sau-dot-2 (n78), chưa ghi doi_chu lúc ấy (máy không có .cache/site-cu); ghi ở mo/sau-dot-1."
+  - cu: null
+    moi: "Giai điệu hát trên đệm hợp âm; hai bè trong một tay ở giọng thứ"
+    ly_do: "Dòng thêm ở mo/sau-dot-2 (n78), chưa ghi doi_chu lúc ấy (máy không có .cache/site-cu); ghi ở mo/sau-dot-1."
+  - cu: null
+    moi: "Mozart: Alla turca, chương 3 Sonata La trưởng K. 331"
+    ly_do: "17/11/2026 (mo/sau-dot-1): dòng mới Alla turca ở bảng chặng 6 (n84)."
+  - cu: null
+    moi: "Hình móc kép vòng quanh nốt chính, nhẹ và rõ; hợp âm rải nhanh tay trái như tiếng trống; quãng tám tay phải; nghe Sonata K. 331"
+    ly_do: "17/11/2026 (mo/sau-dot-1): dòng mới Alla turca ở bảng chặng 6 (n84)."
+  - cu: null
+    moi: "Chaminade: Pierrette (Air de ballet) Op. 41"
+    ly_do: "Dòng thêm ở mo/sau-dot-3 (n80, n81, n82), chưa ghi doi_chu lúc ấy (máy không có .cache/site-cu); ghi ở mo/sau-dot-1."
+  - cu: null
+    moi: "Móc kép nhẹ (luyến và staccato), nốt hoa mỹ và hợp âm nhấn của nhạc múa; sắc thái từ ppp đến fff"
+    ly_do: "Dòng thêm ở mo/sau-dot-3 (n80, n81, n82), chưa ghi doi_chu lúc ấy (máy không có .cache/site-cu); ghi ở mo/sau-dot-1."
+  - cu: null
+    moi: "Clara Schumann: Scherzo số 2 Đô thứ Op. 14"
+    ly_do: "Dòng thêm ở mo/sau-dot-3 (n80, n81, n82), chưa ghi doi_chu lúc ấy (máy không có .cache/site-cu); ghi ở mo/sau-dot-1."
+  - cu: null
+    moi: "Hợp âm rải nhanh qua hai tay, hợp âm lớn có dấu nhấn; tương phản giữa scherzo sôi nổi và trio êm"
+    ly_do: "Dòng thêm ở mo/sau-dot-3 (n80, n81, n82), chưa ghi doi_chu lúc ấy (máy không có .cache/site-cu); ghi ở mo/sau-dot-1."
+  - cu: null
+    moi: "Chaminade: Automne (Étude de concert) Op. 35 số 2"
+    ly_do: "Dòng thêm ở mo/sau-dot-3 (n80, n81, n82), chưa ghi doi_chu lúc ấy (máy không có .cache/site-cu); ghi ở mo/sau-dot-1."
+  - cu: null
+    moi: "Giai điệu và lớp đệm trong cùng tay phải; đoạn giữa nhanh, hợp âm và quãng tám tới fff"
+    ly_do: "Dòng thêm ở mo/sau-dot-3 (n80, n81, n82), chưa ghi doi_chu lúc ấy (máy không có .cache/site-cu); ghi ở mo/sau-dot-1."
+  - cu: null
+    moi: "Lãng mạn"
+    ly_do: "Dòng thêm ở mo/sau-dot-3 (n80, n81, n82), chưa ghi doi_chu lúc ấy (máy không có .cache/site-cu); ghi ở mo/sau-dot-1."
+  - cu: null
+    moi: "Lãng mạn"
+    ly_do: "Dòng thêm ở mo/sau-dot-3 (n80, n81, n82), chưa ghi doi_chu lúc ấy (máy không có .cache/site-cu); ghi ở mo/sau-dot-1."
+  - cu: null
+    moi: "Lãng mạn"
+    ly_do: "Dòng thêm ở mo/sau-dot-3 (n80, n81, n82), chưa ghi doi_chu lúc ấy (máy không có .cache/site-cu); ghi ở mo/sau-dot-1."
+  - cu: null
+    moi: "Thế kỷ 20"
+    ly_do: "Dòng thêm ở mo/sau-dot-2 (n78), chưa ghi doi_chu lúc ấy (máy không có .cache/site-cu); ghi ở mo/sau-dot-1."
 mo_khoa:
   - ngay: 2026-11-17
     nhanh: mo/sau-dot-2
@@ -1979,3 +2045,6 @@ mo_khoa:
   - ngay: 2026-11-17
     nhanh: mo/sau-dot-3
     ly_do: "Sau đợt 3 thêm tác phẩm (lộ trình, mục 2): link ba bài học nhà soạn nhạc nữ (Pierrette, Scherzo số 2 Op. 14, Automne)"
+  - ngay: 2026-11-17
+    nhanh: mo/sau-dot-1
+    ly_do: "Sau đợt 1 thêm tác phẩm (lộ trình, mục 2): link Arabesque số 1 (chặng 6), Alla turca (chặng 6); Prelude Op. 3 số 2 chuyển sang chặng 7 cho khớp bản ghi, có link"

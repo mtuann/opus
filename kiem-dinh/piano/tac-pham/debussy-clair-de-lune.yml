@@ -21,6 +21,15 @@ lan:
       luot_2: "không có lượt 2 ngoài: mỗi sửa đổi đối chiếu với chỗ báo cáo D6 đã chỉ ra (khối nhạc trên trang, dữ liệu đã khóa, IMSLP), ghi ở ghi_chu"
       review: Claude Opus 5.5 (mo/sua-nho, 07/11/2026)
       kiem_mau: chủ repo yêu cầu sửa (07/11/2026); không kiểm mẫu riêng, chủ repo đọc diff trước khi push
+  - so: 3
+    ngay: 2026-11-17
+    nhanh: mo/sau-dot-1
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5 (lượt 1, mo/sau-dot-1, 17/11/2026)
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Bài học Clair de lune (tầng Tác phẩm). Bản nhạc: Mutopia debussy_Ste_Bergamesq_Clair (Keith OHara, theo bản in E. Fromont 1905, IMSLP #02907), tải .ly và .mid 05/11/2026 với User-Agent opus-kiem-dinh; script Python (mido) in nốt theo ô (72 ô 9/8) và script đếm vạch nhịp trong \parallelMusic để gắn chỉ dẫn với số ô: Andante très expressif, pp, con sordina ô 1; Tempo rubato ô 15; peu à peu cresc. et animé ô 19; diminuendo molto ô 25; Un poco mosso ô 27; En animant (hóa biểu Đô♯ thứ) ô 37; f ô 41; Calmato ô 43; a Tempo 1º, ppp ô 51; morendo jusqu''à la fin, ppp ô 66. Không có mf nào. Lịch sử: lời tựa Henle HN 381 (PDF, Lesure 1983). Mốc ::khoi-nghe "2 57 71 97 140 162 201 268" (8 mốc / 8 dòng), bản thu Laurens Goedhart 2011 (Commons, phạm vi công cộng, 304,09 s); theo tools/audio/align/pieces.py mốc là ô 1, 15, 19, 27, 37, 43 (đo tay 162,3 s), 51, 66: khớp các dòng bảng. Không nghe lại bản thu. Câu ve-site ở hồ sơ khác: piano/hai-tay n47 (nhóm hai nốt trong 9/8) và n48 (link tới trang này, giữ "Rê♭ trưởng · 9/8" và cách đếm 9/8): trang giữ đúng. piano/not-lap-not-kep n43 (Clair de lune ô 1–14, nốt kép): đúng, quãng ba, quãng sáu ô 1–14. cap-nhat n51 (lối tắt "Chỉ muốn nghe?"): có. piano/tac-pham/satie-gymnopedie n67 (link tới trang này): có. Không tính là nhận định: tiêu đề mục, tiêu đề cột bảng, chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng (thuộc hồ sơ bản ghi), mốc trong ::khoi-nghe. Thuật ngữ trang dùng (una corda, con sordina, rubato, Andante, pp, legato, staccato) có trong src/data/thuat-ngu.yml; "đạp nửa", "rung bàn đạp", "điểm thoát (escapement)" chưa có bản ghi (ghi cho người giao).'
 nguon:
   - id: mut-clair
@@ -115,6 +124,10 @@ nguon:
     bac: 2
     ten: 'Hồ sơ bản ghi tac-pham/chopin-ballade-1 (grade đã khóa "Sau Grade 8", n4: Henle HN 862, RCM 2022)'
     link: kiem-dinh/du-lieu/tac-pham/chopin-ballade-1.yml
+  - id: fromont-1905
+    bac: 1
+    ten: "Debussy, Suite bergamasque, bản in đầu E. Fromont (Paris, 1905, số bản in E. 1404 F.), bản quét của Sibley Music Library (IMSLP #83536); Clair de lune ở trang in 14–19 (trang PDF 18–23); tệp ../opus-zero/_imslp/IMSLP83536-SIBLEY1802.12331.d9f9-39087013813482piano.pdf"
+    link: https://imslp.org/wiki/Special:ImagefromIndex/83536
 nhan_dinh:
   - id: n1
     cau: 'Tiêu đề: "Debussy: Clair de lune" (Ánh trăng).'
@@ -320,14 +333,11 @@ nhan_dinh:
     nguon: []
     ket_qua: khong-can-nguon
   - id: n26
-    cau: 'Theo dõi: Mở đầu ô 1–14, pp con sordina; quãng ba, quãng sáu đi xuống ở tay phải, bắt đầu sau phách đầu và nối qua phách.'
+    cau: "Theo dõi: Mở đầu ô 1–14, pp con sordina; quãng ba, quãng sáu đi xuống ở tay phải; ô đầu không có nốt ở đầu phách (tay trái vào ở móc đơn thứ hai, tay phải ở móc đơn thứ ba) và nhiều nốt nối qua phách."
     loai: cau-truc
-    nguon: *id001
-    ket_qua: dung
-    ghi_chu: 'Ô 1: r8\pp <f af>( <f'' af>~ … ; "con sordina" ô 1; ô 1–8 các cặp quãng ba đi xuống, cặp nốt giữa hai lớp tạo quãng sáu (vd. Sol♭4–Mi♭5 ô 2).'
-    luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
-    luot_2_ghi_chu: "Ô 1: 'r8\\pp', 'con sordina'; hai nốt đi xuống ở tay phải, bắt đầu sau móc đơn lặng, nối qua phách."
+    nguon: [ mut-clair, fromont-1905 ]
+    ket_qua: da-sua
+    ghi_chu: "Lần mở 17/11/2026 (mo/sau-dot-1): chữ cũ \"bắt đầu sau phách đầu và nối qua phách\" dễ hiểu là nhạc vào sau phách 1. Bản Fromont 1905 (trang PDF 18, ô 1, 9/8): khuông dưới (khóa Sol) móc đơn lặng rồi Fa4–La♭4 ở móc đơn thứ hai, nối sang nốt trắng chấm (tay trái); khuông trên hai móc đơn lặng rồi Fa5–La♭5 ở móc đơn thứ ba, nối qua (tay phải); hai móc đơn chung một đuôi nối hai khuông. Cả hai vẫn trong phách chấm đầu. Mutopia (.ly) khớp: r8 rồi <f af> ở khuông dưới, <f' af> ở khuông trên."
   - id: n27
     cau: 'Theo dõi: Tempo rubato ô 15–18, giai điệu rõ hơn trên các hợp âm.'
     loai: cau-truc
@@ -383,23 +393,17 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
     luot_2_ghi_chu: "'a Tempo 1º' ở ô 51, ppp, chủ đề mở đầu ở tay phải trên hợp âm rải móc kép tay trái."
   - id: n33
-    cau: 'Theo dõi: Coda ô 66–72, hợp âm rải, tay bắt chéo, tan dần đến hết (morendo jusqu''à la fin).'
+    cau: "Theo dõi: Coda ô 66–72, hợp âm rải từ âm trầm đi lên, tan dần đến hết (morendo jusqu'à la fin)."
     loai: cau-truc
-    nguon: *id001
+    nguon: [ mut-clair, fromont-1905 ]
     ket_qua: da-sua
-    ghi_chu: 'Chữ cũ: "…tan dần đến hết; hợp âm cuối ngân thật lâu". Bản Fromont (Mutopia): ô 66 "morendo jusqu''à la fin", ppp; hợp âm cuối là nốt trắng chấm (2.) có dấu rải, rồi dấu lặng; không có dấu ngân. Tay bắt chéo: ô 67, 69 tay trái rải lên Sol♭4–La♭4, trên nốt Fa♭4 của bè dưới tay phải. Review D6-L5-gom: lượt 1 đã sửa; lượt 2 xác nhận chữ mới; review đọc lại chữ trang, khớp câu.'
-    luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
-    luot_2_ghi_chu: "'morendo jusqu'à la fin' ở ô 66; hợp âm rải; ô 69–70 tay trái chạy lên trên hợp âm tay phải đang giữ (bắt chéo); bài hết ô 72."
-    review: dung
+    ghi_chu: "Lần mở 17/11/2026 (mo/sau-dot-1): bỏ \"tay bắt chéo\". Bản Fromont 1905 (trang PDF 23, ô 66–72) không ghi m.g., m.d. hay dấu nào chỉ tay ở coda. Mỗi lần rải là một chùm móc kép nối một nhịp từ nốt trầm (nốt đen chấm, khuông dưới) lên khuông trên; ô 66, 68 tay phải nghỉ; ô 67 tay trái rải tới La♭4, nằm giữa Fa♭4 và Rê♭5 của tay phải (hai tay chen nhau, không vắt qua nhau); ô 69, 70 tay trái (đổi sang khóa Sol) rải tới Fa♭5, dưới La♭5–Đô♭6 tay phải đang giữ; ô 71 rải lên, ô 72 hợp âm cuối có dấu rải. \"morendo jusqu'à la fin\" ô 66. Chú thích cũ (tay trái lên trên tay phải ở ô 69–70) không khớp bản in."
   - id: n34
-    cau: 'Bảng: A ô 1–14, Andante très expressif, pp con sordina; quãng ba, quãng sáu đi xuống ở tay phải; bắt đầu sau phách đầu, nhiều dấu nối qua phách.'
+    cau: "Bảng: A ô 1–14, Andante très expressif, pp con sordina; quãng ba, quãng sáu đi xuống ở tay phải; ô 1 không có nốt ở đầu phách: tay trái vào ở móc đơn thứ hai, tay phải ở móc đơn thứ ba, vẫn trong phách đầu; nhiều dấu nối qua phách."
     loai: cau-truc
-    nguon: [ mut-clair, imslp-bergamasque ]
-    ket_qua: dung
-    luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
-    luot_2_ghi_chu: "'Andante très expressif', pp, 'con sordina' ở ô 1; các cặp nốt đi xuống tay phải; bắt đầu sau móc đơn lặng, nhiều dấu nối, có nhóm hai nốt."
+    nguon: [ mut-clair, fromont-1905 ]
+    ket_qua: da-sua
+    ghi_chu: "Lần mở 17/11/2026 (mo/sau-dot-1): chữ cũ \"bắt đầu sau phách đầu\" viết rõ theo bản Fromont 1905 (trang PDF 18, ô 1), như n26."
   - id: n35
     cau: Đếm thật chính xác; hai nốt của quãng ba gần bằng nhau, nốt trên nhỉnh hơn.
     loai: khuyen-tap
@@ -456,13 +460,11 @@ nhan_dinh:
     luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
     luot_2_ghi_chu: "'a Tempo 1º' ô 51; chủ đề mở đầu trên hợp âm rải tay trái; ô 66 bắt đầu coda."
   - id: n43
-    cau: 'Bảng: Coda ô 66–72, hợp âm rải, tay bắt chéo, tan dần đến hết.'
+    cau: "Bảng: Coda ô 66–72, hợp âm rải từ âm trầm lên khuông trên, dưới hay xen giữa các nốt tay phải đang giữ; tan dần đến hết."
     loai: cau-truc
-    nguon: *id001
-    ket_qua: dung
-    luot_2: dung
-    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly", "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf" ]
-    luot_2_ghi_chu: "Ô 66–72: hợp âm rải, 'morendo jusqu'à la fin', tay trái vượt lên trên tay phải ở ô 69–70."
+    nguon: [ mut-clair, fromont-1905 ]
+    ket_qua: da-sua
+    ghi_chu: "Lần mở 17/11/2026 (mo/sau-dot-1): chữ cũ \"hợp âm rải, tay bắt chéo, tan dần đến hết\". Bản Fromont 1905 không ghi tay ở coda; ô 67 tay trái rải tới La♭4 giữa Fa♭4 và Rê♭5 của tay phải; ô 69–70 tới Fa♭5 dưới La♭5–Đô♭6 tay phải (chi tiết ở n33)."
   - id: n44
     cau: Mỗi lần rải phải nhỏ hơn lần trước; ngân hợp âm cuối thật lâu.
     loai: khuyen-tap
@@ -546,10 +548,10 @@ nhan_dinh:
     luot_2: dung
     luot_2_ghi_chu: Hợp cách dạy phổ biến; cổ tay mềm, dùng trọng lượng tay không có hại.
   - id: n56
-    cau: 'Coda tay bắt chéo: tập riêng đường đi của tay vắt qua, mắt nhìn đích trước.'
+    cau: "Hợp âm rải ở coda: tập riêng đường đi của tay trái, mắt nhìn đích trước; tay phải giữ nốt nhẹ, chừa chỗ; mỗi lần rải kết thúc nhỏ hơn lúc bắt đầu."
     loai: khuyen-tap
-    nguon: []
     ket_qua: khong-can-nguon
+    ghi_chu: "Lần mở 17/11/2026 (mo/sau-dot-1): chữ cũ \"Coda tay bắt chéo: tập riêng đường đi của tay vắt qua\". Lời khuyên tập; không trái trang piano/hop-am-rai."
   - id: n57
     cau: Ba bài tập soạn riêng cho trang này.
     loai: ve-site
@@ -839,6 +841,17 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'Trang có. Review D6-L5-gom: kiểm trên trang và dữ liệu: Dòng 237; tai-lieu-tham-khao có.'
     review: dung
+  - id: n94
+    cau: "Chỗ khó ở coda: tay trái rải lên tới chỗ tay phải đang giữ hợp âm, có ô chen giữa hai nốt tay phải; nốt cuối của mỗi lần rải dễ to."
+    loai: cau-truc
+    nguon: [ mut-clair, fromont-1905 ]
+    ket_qua: dung
+    ghi_chu: "Lần mở 17/11/2026 (mo/sau-dot-1), sửa dòng bảng Chỗ khó (chữ cũ \"Coda tay bắt chéo | Nhìn và nghe cùng lúc\"). Bản Fromont 1905 ô 67 (La♭4 tay trái giữa Fa♭4, Rê♭5 tay phải), ô 69–70 (như n33). Vế \"nốt cuối dễ to\" là chữ cũ, lời nhận xét khi tập."
+  - id: n95
+    cau: "Kế hoạch tuần, dòng 6: ô 51–72, A' và coda; tập hợp âm rải ở coda."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Lần mở 17/11/2026 (mo/sau-dot-1): chữ cũ \"tập tay bắt chéo\", đổi theo n33, n43. Khớp bảng Cấu trúc (Coda ô 66–72) của trang."
 khuong_nhac:
   - khoi: 1
     loai: vi-du-soan
@@ -867,8 +880,8 @@ doi_chu:
       - "Debussy viết bộ tổ khúc khi khoảng 28 tuổi, nhưng chỉ in nó 15 năm sau; chính ông ghi năm 1890 lên bản in thử để cho biết đây là tác phẩm thời trẻ. Bản in năm 1905 là bản đã sửa; bản thảo gốc đến nay chưa tìm thấy, nên không ai biết chắc phần nào thuộc năm 1890, phần nào thuộc năm 1905. Bài nằm ở ngưỡng giữa thế kỷ 19 và thế kỷ 20: hòa âm còn chức năng (có át, có kết rõ) nhưng màu sắc đã là của Debussy. Xem thế kỷ 20."
     ly_do: 'n10 (da-sua), n13 (da-sua): Gutenberg (Verlaine), Henle HN 381. n17 (da-sua), n19 (da-sua): theo lời tựa Henle HN 381. Review D6-L5-gom: lượt 2 sai ở vế ABRSM: danh sách ARSM 6/2024 có "Any one from Suite bergamasque" (hồ sơ bản ghi n22).'
   - cu: "Coda (ô 66–72): hợp âm rải, tay bắt chéo, tan dần đến hết; hợp âm cuối ngân thật lâu"
-    moi: "Coda (ô 66–72): hợp âm rải, tay bắt chéo, tan dần đến hết (morendo jusqu'à la fin)"
-    ly_do: "n33 (da-sua): bản Fromont ghi morendo jusqu'à la fin, hợp âm cuối không có dấu ngân."
+    moi: "Coda (ô 66–72): hợp âm rải từ âm trầm đi lên, tan dần đến hết (morendo jusqu'à la fin)"
+    ly_do: "n33 (da-sua): bản Fromont ghi morendo jusqu'à la fin, hợp âm cuối không có dấu ngân. 17/11/2026 (mo/sau-dot-1): bỏ \"tay bắt chéo\" (n33)."
   - cu: 'Phím đàn có "điểm thoát" (escapement): ấn quá chậm thì nốt không kêu, quá nhanh thì to'
     moi: "Độ to theo tốc độ phím đi xuống: ấn quá chậm thì nốt không kêu, hơi nhanh là đã to"
     ly_do: 'n46 (review D6-L5-gom): nguồn lượt 2 là trang thợ đàn; viết theo điều trang piano/tieng-dan (đã khóa) đã kiểm, bỏ chữ "điểm thoát".'
@@ -893,7 +906,31 @@ doi_chu:
       - Paul Verlaine, Fêtes galantes, bài Clair de lune, trong Œuvres complètes, tập 1 (Project Gutenberg).
       - "Bản nhạc: IMSLP; bản chép LilyPond của Mutopia Project theo bản in E. Fromont 1905, dùng để đếm ô, đối chiếu chỉ dẫn và sắc thái. Xem thêm tài liệu tham khảo."
     ly_do: 'n90 (da-bo): sách in chưa đọc. n91: tệp Mutopia đã dùng. n91: nguồn đã đọc. Review D6-L5-gom: lượt 2 sai ở vế ABRSM: danh sách ARSM 6/2024 có "Any one from Suite bergamasque" (hồ sơ bản ghi n22).'
+  - cu: "Mở đầu (ô 1–14): pp con sordina; quãng ba, quãng sáu đi xuống ở tay phải, bắt đầu sau phách đầu và nối qua phách, nên nhịp nghe mơ hồ"
+    moi: "Mở đầu (ô 1–14): pp con sordina; quãng ba, quãng sáu đi xuống ở tay phải; ô đầu không có nốt ở đầu phách (tay trái vào ở móc đơn thứ hai, tay phải ở móc đơn thứ ba) và nhiều nốt nối qua phách, nên nhịp nghe mơ hồ"
+    ly_do: "17/11/2026 (mo/sau-dot-1): đối chiếu bản in Fromont 1905: n26."
+  - cu: "Andante très expressif, pp con sordina. Quãng ba, quãng sáu đi xuống ở tay phải; nhạc bắt đầu sau phách đầu, nhiều dấu nối qua phách"
+    moi: "Andante très expressif, pp con sordina. Quãng ba, quãng sáu đi xuống ở tay phải; ô 1 không có nốt ở đầu phách: tay trái vào ở móc đơn thứ hai, tay phải ở móc đơn thứ ba, vẫn trong phách đầu; nhiều dấu nối qua phách"
+    ly_do: "17/11/2026 (mo/sau-dot-1): đối chiếu bản in Fromont 1905: n34."
+  - cu: "Hợp âm rải, tay bắt chéo, tan dần đến hết"
+    moi: "Hợp âm rải từ âm trầm lên khuông trên, dưới hay xen giữa các nốt tay phải đang giữ; tan dần đến hết"
+    ly_do: "17/11/2026 (mo/sau-dot-1): đối chiếu bản in Fromont 1905: n43."
+  - cu: "Coda tay bắt chéo"
+    moi: "Hợp âm rải ở coda"
+    ly_do: "17/11/2026 (mo/sau-dot-1): đối chiếu bản in Fromont 1905: n94."
+  - cu: "Nhìn và nghe cùng lúc; nốt cuối của mỗi lần rải dễ to"
+    moi: "Tay trái rải lên tới chỗ tay phải đang giữ hợp âm, có ô chen giữa hai nốt tay phải; nốt cuối của mỗi lần rải dễ to"
+    ly_do: "17/11/2026 (mo/sau-dot-1): đối chiếu bản in Fromont 1905: n94."
+  - cu: "Tập riêng đường đi của tay vắt qua, mắt nhìn đích trước; mỗi lần rải kết thúc nhỏ hơn lúc bắt đầu"
+    moi: "Tập riêng đường đi của tay trái, mắt nhìn đích trước; tay phải giữ nốt nhẹ, chừa chỗ; mỗi lần rải kết thúc nhỏ hơn lúc bắt đầu"
+    ly_do: "17/11/2026 (mo/sau-dot-1): đối chiếu bản in Fromont 1905: n56."
+  - cu: "Ô 51–72: A' và coda; tập tay bắt chéo"
+    moi: "Ô 51–72: A' và coda; tập hợp âm rải ở coda"
+    ly_do: "17/11/2026 (mo/sau-dot-1): đối chiếu bản in Fromont 1905: n95."
 mo_khoa:
   - ngay: 2026-11-07
     nhanh: mo/sua-nho
     ly_do: "Sửa nhỏ theo kế hoạch mở rộng mục 4 (chủ repo yêu cầu 07/11/2026): lệch nhỏ đã ghi trong báo cáo các lô D6"
+  - ngay: 2026-11-17
+    nhanh: mo/sau-dot-1
+    ly_do: "Đối chiếu bản in Fromont 1905 (17/11/2026): coda không ghi tay bắt chéo; nhịp vào của hai tay ở ô 1"

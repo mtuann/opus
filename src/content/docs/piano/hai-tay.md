@@ -152,7 +152,7 @@ Mắt nhìn đích trước. Tay trái rời phím ngay sau khi đánh nốt tr�
 
 ## Hai chọi ba
 
-**Đa tiết tấu** là khi hai tay chia cùng một khoảng thời gian theo hai cách khác nhau. Một dạng phổ biến là **hai chọi ba**: một tay chơi hai nốt đều, tay kia chơi ba nốt đều trong cùng một phách (ôn lại [liên ba](/opus/nhac-ly/15-tiet-tau-nang-cao/)). Nó thường gặp ở Brahms, Arabesque số 1 của Debussy có nhiều đoạn hai chọi ba, và [Clair de lune](/opus/piano/tac-pham/debussy-clair-de-lune/) xen những nhóm hai nốt (liên hai) vào nhịp 9/8 vốn chia ba.
+**Đa tiết tấu** là khi hai tay chia cùng một khoảng thời gian theo hai cách khác nhau. Một dạng phổ biến là **hai chọi ba**: một tay chơi hai nốt đều, tay kia chơi ba nốt đều trong cùng một phách (ôn lại [liên ba](/opus/nhac-ly/15-tiet-tau-nang-cao/)). Nó thường gặp ở Brahms, [Arabesque số 1](/opus/piano/tac-pham/debussy-arabesque-1/) của Debussy có nhiều đoạn hai chọi ba, và [Clair de lune](/opus/piano/tac-pham/debussy-clair-de-lune/) xen những nhóm hai nốt (liên hai) vào nhịp 9/8 vốn chia ba.
 
 Mẹo là tìm một **lưới chung**. Bội số chung nhỏ nhất của 2 và 3 là 6, nên chia phách thành sáu phần đều nhau:
 

@@ -173,7 +173,7 @@ Khi chơi Debussy, hãy coi bàn đạp là một phần màu âm thanh: để c
 - **Una corda** để đổi màu (mờ, xa), không chỉ để nhỏ.
 - Vẫn phải nghe hòa âm: nhòe có chủ ý khác với nhòe vì quên đổi.
 
-Áp dụng vào [Clair de lune](/opus/piano/tac-pham/debussy-clair-de-lune/).
+Áp dụng vào [Clair de lune](/opus/piano/tac-pham/debussy-clair-de-lune/), và thử nửa bàn đạp ở [Arabesque số 1](/opus/piano/tac-pham/debussy-arabesque-1/).
 
 ## Lỗi thường gặp
 

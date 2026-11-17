@@ -71,7 +71,7 @@ Ghi lại thời điểm (phút:giây) bạn nghe thấy từng sự kiện tron
 
 ## Nếu bạn muốn chơi
 
-Chương 1 và chương 3 ở khoảng chặng 6 (Henle xếp cả bản ở mức 6 trên thang 1–9 và ghi ABRSM Grade 8; xem [Nhà soạn nhạc cho piano](/opus/piano/nha-soan-nhac/#wolfgang-amadeus-mozart-17561791)); chủ đề chương 1 có thể tập sớm hơn để làm quen với nhịp 6/8 và cách trang trí kiểu Mozart. Chuẩn bị bằng [Sonata K. 545](/opus/piano/tac-pham/mozart-k545/) và [Sonatina Clementi](/opus/piano/tac-pham/clementi-sonatina/), luyện gam và hợp âm rải thật đều tay (xem [lộ trình piano](/opus/piano/lo-trinh/)), và đọc [nốt hoa mỹ](/opus/piano/not-hoa-my/). Ở chương 3, tập hợp âm rải tay trái thật nhẹ trước rồi mới tăng tốc.
+Chương 1 và chương 3 ở khoảng chặng 6 (Henle xếp cả bản ở mức 6 trên thang 1–9 và ghi ABRSM Grade 8; xem [Nhà soạn nhạc cho piano](/opus/piano/nha-soan-nhac/#wolfgang-amadeus-mozart-17561791)); chủ đề chương 1 có thể tập sớm hơn để làm quen với nhịp 6/8 và cách trang trí kiểu Mozart. Chuẩn bị bằng [Sonata K. 545](/opus/piano/tac-pham/mozart-k545/) và [Sonatina Clementi](/opus/piano/tac-pham/clementi-sonatina/), luyện gam và hợp âm rải thật đều tay (xem [lộ trình piano](/opus/piano/lo-trinh/)), và đọc [nốt hoa mỹ](/opus/piano/not-hoa-my/). Ở chương 3, tập hợp âm rải tay trái thật nhẹ trước rồi mới tăng tốc; chương này có [bài học riêng](/opus/piano/tac-pham/mozart-alla-turca/) (chặng 6).
 
 ## Ghi chép của bạn
 
