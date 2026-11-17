@@ -40,7 +40,8 @@ const capDo = (await getCollection('cap-do')).map(boc('cap-do')).sort((a, b) => 
 const tacPham = (await getCollection('tac-pham')).filter((e) => coTruongDaKhoa(e.data, 'tac-pham', daKhoa)).map(boc('tac-pham'));
 const nguoi = new Map((await getCollection('nha-soan-nhac')).map((e) => [e.data.id, boc('nha-soan-nhac')(e)]));
 const c = capDo.find((x) => x.id === id);
-const bai = tacPham.filter((r) => r.loai === 'bai-hoc' && r.chang === id);
+// xếp theo slug: thứ tự getCollection không theo thứ tự trong tac-pham.yml, và bài thêm sau nối cuối file
+const bai = tacPham.filter((r) => r.loai === 'bai-hoc' && r.chang === id).sort((a, b) => a.slug.localeCompare(b.slug));
 const nenBatDau = bai.filter((r) => r.goi_y);
 const khac = bai.filter((r) => !r.goi_y);
 

@@ -51,12 +51,12 @@ test('7 trang chặng: tiêu đề, nhãn nhóm, sơ đồ có chặng đang xem
 	}
 });
 
-test('trang chặng liệt kê đúng bài học tác phẩm của chặng (bài có goi_y trước), kèm Grade; chặng 1: trang khởi đầu', () => {
+test('trang chặng liệt kê đúng bài học tác phẩm của chặng (bài có goi_y trước, rồi theo slug), kèm Grade; chặng 1: trang khởi đầu', () => {
 	const diaChi = (r) => `/opus/piano/tac-pham/${r.slug}/`;
 	for (const c of capDo) {
 		const html = docTrang(`piano/lo-trinh/chang-${c.id}`);
 		// tác phẩm chưa khóa trường nào (vừa thêm bằng tools/them-tac-pham.mjs) chưa vào danh sách
-		const bai = du['tac-pham'].filter((r) => r.loai === 'bai-hoc' && r.chang === c.id && coTruongDaKhoa(r, 'tac-pham', daKhoa));
+		const bai = du['tac-pham'].filter((r) => r.loai === 'bai-hoc' && r.chang === c.id && coTruongDaKhoa(r, 'tac-pham', daKhoa)).sort((a, b) => a.slug.localeCompare(b.slug));
 		const danhSach = [...html.matchAll(/<ul class="oz-chang-bai">/g)].length;
 		const tatCa = [...html.matchAll(/<ul class="oz-chang-bai">([\s\S]*?)<\/ul>/g)].flatMap((m) => muc(`<ul class="oz-chang-bai">${m[1]}</ul>`, 'oz-chang-bai'));
 		if (!bai.length) {
