@@ -1,0 +1,314 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa piano/tac-pham/debussy-arabesque-1
+trang: src/content/docs/piano/tac-pham/debussy-arabesque-1.md
+tang: tac-pham
+lan:
+  - so: 1
+    ngay: null
+    nhanh: them/debussy-arabesque-1
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5 (lượt 1, them/debussy-arabesque-1, 17/11/2026)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Bài học mới (lộ trình thêm tác phẩm, lượt 7). Nốt nhạc, chữ chỉ dẫn, sắc thái chép từ bản quét Durand & Fils 1904, IMSLP #255354 (file IMSLP255354-PMLP02383-Debussy,_Claude-Deux_Arabesques_Durand_4395_filter.pdf, 11 trang; Arabesque số 1 ở trang PDF 1–5, số trang in 1–5; đọc toàn bài ở 110 dpi, các ô trích ở 300–400 dpi). Số ô đếm trên bản quét (16 + 21 + 25 + 24 + 21 = 107) và đối chiếu với barNumberCheck của bản Mutopia (ô 6, 13, 17, 26, 47, 55, 63, 76, 83, 87, 95) và với MIDI Mutopia (107 ô). Mốc: căn bằng tools/audio/align (DTW) với MIDI Mutopia (cấu hình và nguồn thêm vào pieces.py và sources.json trong worktree rồi trả lại như cũ vì ngoài phạm vi nhánh them/; bản vá ghi ở báo cáo); 10 dòng ba biến thể khớp trong 2 giây; dòng 6 (ô 39), 11 (ô 95), 13 (ô cuối) đo tay trên khởi âm và phổ (xem n16, n17, n24). Chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng thuộc hồ sơ du-lieu/tac-pham/debussy-arabesque-1.'
+nguon:
+  - id: durand-1904
+    bac: 1
+    ten: 'Debussy, Deux Arabesques, Durand & Fils, Paris, 1904 (chân trang 1: "Copyright by A. Durand & Fils 1904", "D.&F. 4395"; chân trang 5: "Gravure-Imp. Mounot, Nicolas fils & Cie, Paris"); bản quét IMSLP #255354, 1ère Arabesque ở trang 1–5'
+    link: https://imslp.org/wiki/Special:ImagefromIndex/255354
+  - id: mutopia
+    bac: 1
+    ten: 'Mutopia Project, Première Arabesque (DebussyC/L66/debussy_Arabesque_1), Mutopia-2011/10/25-1777, maintainer Keith OHara, source "Durand et Fils (1904)", copyright "Public Domain"; bản .ly ở GitHub commit 7b5b8ec4f473316f49604c7d5c1d985a823407a2; MIDI 107 ô (explore.py bars)'
+    link: https://www.mutopiaproject.org/ftp/DebussyC/L66/debussy_Arabesque_1/debussy_Arabesque_1.ly
+  - id: imslp-arab
+    bac: 2
+    ten: 'IMSLP, 2 Arabesques, CD 74 (Debussy, Claude) (API wikitext, 17/11/2026): Opus/Catalogue Number "CD 74 ; L.66"; số 1 Andantino con moto (E, 107 bars); Year/Date of Composition 1890-91; First Publication 1891 Paris: Durand; Extra Information: "first edition was published in November 1891, the second in 1904. The plate numbers (4395, 4396) were retained for the 1904 edition, even though it is an entirely new engraving"; bản quét Durand et Schoenewerk n.d.[1891] D.S. 4395-96; bản quét #255354 Durand & Fils 1904 D. & F. 4395-96'
+    link: https://imslp.org/wiki/2_Arabesques,_CD_74_(Debussy,_Claude)
+  - id: henle-hn380
+    bac: 2
+    ten: 'G. Henle Verlag, Debussy, Deux Arabesques, HN 380 (trang sản phẩm): "the most important of his early piano pieces"; "probably composed shortly before they was issued in November 1891"; "received little attention, but after 1906 it became one of the composer''s most popular works and now there are numerous transcriptions for other instruments"; "The elegant and flowing ornamentation of the first Arabesque"; Difficulty: Deux Arabesques 4 medium; tiểu sử: "Most important French composer around 1900"'
+    link: https://www.henle.de/en/Deux-Arabesques/HN-380
+  - id: commons-prati
+    bac: 1
+    ten: 'Wikimedia Commons, File:Claude Debussy - Première Arabesque - Patrizia Prati.ogg: "Live performance on piano by Patrizia Prati at Museum of Romanticism (Madrid) 2016-05-17"; {{self|cc-by-sa-4.0}}; PermissionTicket 2015120610013684; độ dài 292,99 s (API imageinfo); bản mp3 chuyển mã tải về 293,03 s'
+    link: https://commons.wikimedia.org/wiki/File:Claude_Debussy_-_Premi%C3%A8re_Arabesque_-_Patrizia_Prati.ogg
+  - id: abrsm-2324
+    bac: 2
+    ten: 'ABRSM, Piano Practical Grades 2023 & 2024 (PDF): Grade 8 số 2 "Debussy Arabesque No. 2 (from Deux arabesques, L. 66)" (tr. 39 của file); không có Arabesque No. 1 (tìm chữ "Arabesque", "Debussy")'
+    link: https://www.abrsm.org/sites/default/files/2023-10/Piano%202023%20&%202024%20Prac%20syllabus%2020230807.pdf
+  - id: abrsm-2526
+    bac: 2
+    ten: 'ABRSM, Piano Practical Grades 2025 & 2026 (PDF): Debussy chỉ có The Little Shepherd (Grade 7), La fille aux cheveux de lin, Rêverie (Grade 8); không có Arabesque'
+    link: https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26%202026%20Prac%20syllabus%2020240524_access.pdf
+  - id: abrsm-2728
+    bac: 2
+    ten: 'ABRSM, Piano Performance Grades Syllabus 2027 & 2028 (PDF): Debussy chỉ có The Little Shepherd (Grade 7), Rêverie (Grade 8); không có Arabesque của Debussy'
+    link: https://www.abrsm.org/sites/default/files/2026-06/Piano%20Performance%20Grades%20Syllabus%202027%20&%202028.pdf
+  - id: trinity-2023
+    bac: 2
+    ten: 'Trinity College London, Piano repertoire list, face-to-face and digital graded exams from 2023 (bản cập nhật tháng 8/2026), 38 trang: Debussy chỉ có Clair de lune, Minstrels (Grade 8); không có Arabesque của Debussy'
+    link: https://www.trinitycollege.com/resource?id=10125
+  - id: rcm-2022
+    bac: 2
+    ten: 'The Royal Conservatory, Piano Syllabus 2022 Edition: Level 10 (tr. 95), Debussy, Claude: Deux arabesques – Arabesque No. 1, Arabesque No. 2'
+    link: https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf
+  - id: larousse
+    bac: 2
+    ten: 'Larousse, dictionnaire français-anglais: "moins" adverbe: less; "un peu moins: a little less"; "vite" adverbe: fast, quickly; "roule moins vite: slow down, don''t drive so fast"'
+    link: https://www.larousse.fr/dictionnaires/francais-anglais/moins
+  - id: site-du-lieu
+    bac: 2
+    ten: 'Dữ liệu đã khóa của site: src/data/nha-soan-nhac.yml, bản ghi debussy (sinh 1862, mất 1918; khóa ten, sinh, mat, khoang, thoi_ky); src/data/thuat-ngu.yml, triplet ("Chùm ba: chia một phách nhịp đơn thành ba phần"), rubato ("Co giãn tốc độ tự do để diễn cảm")'
+    link: https://github.com/mtuann/opus/blob/main/src/data/nha-soan-nhac.yml
+  - id: site-hai-tay
+    bac: 2
+    ten: 'Trang piano/hai-tay (đã khóa), mục Hai chọi ba: lưới 6, tay chơi ba ở 1, 3, 5, tay chơi hai ở 1, 4; hình chung "dài – ngắn – ngắn – dài"'
+    link: https://mtuann.github.io/opus/piano/hai-tay/#hai-choi-ba
+nhan_dinh:
+  - id: n1
+    cau: 'Arabesque số 1 là bài đầu trong hai Arabesque Debussy viết cho piano (Deux Arabesques, L. 66).'
+    loai: ten
+    nguon: [ imslp-arab, durand-1904 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Deux Arabesques, 2 pieces, số 1 Andantino con moto (E), CD 74 ; L.66, Instrumentation piano. Bản quét tr. 1 "1ère Arabesque", tr. 6 "2ème Arabesque", "PIANO".'
+  - id: n2
+    cau: 'Debussy (1862–1918), nhà soạn nhạc người Pháp, viết hai bài lúc chưa tới ba mươi tuổi (khoảng 1890–1891).'
+    loai: nam
+    nguon: [ imslp-arab, henle-hn380, site-du-lieu ]
+    ket_qua: dung
+    ghi_chu: 'Năm sinh 1862, mất 1918 (dữ liệu đã khóa); viết 1890-91 (IMSLP), Henle: có lẽ viết ít lâu trước khi in tháng 11/1891; 1891 − 1862 = 29. Henle: "French composer".'
+  - id: n3
+    cau: 'Những hợp âm rải chảy từ tay này sang tay kia (ô 1–2: tay trái bắt đầu, tay phải nối tiếp lên cao); ở chủ đề, giai điệu chùm ba của tay phải lướt trên móc đơn đều của tay trái, kéo dài nhiều ô liền (hai chọi ba).'
+    loai: cau-truc
+    nguon: [ durand-1904, mutopia ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 1 hệ 1 ô 1–2: khuông dưới (khóa Sol) chùm ba đầu, khuông trên hai chùm ba giữa, khuông dưới chùm ba cuối. Ô 6–9 (tr. 1 hệ 2–3): tay phải chùm ba (có số 3 ở ô 6), tay trái tám móc đơn mỗi ô; tiếp tục tới ô 16 (tr. 1 hệ 3–4). Mutopia: rhUpE ô 6 \times2/3, lhUpE ô 6–16 tám móc đơn.'
+  - id: n4
+    cau: 'Bài có 107 ô nhịp.'
+    loai: cau-truc
+    nguon: [ durand-1904, imslp-arab, mutopia ]
+    ket_qua: dung
+    ghi_chu: 'Đếm trên bản quét: tr. 1: 3+4+4+5 = 16; tr. 2: 4+4+4+5+4 = 21; tr. 3: 5+5+4+5+6 = 25; tr. 4: 6+4+4+5+5 = 24; tr. 5: 4+4+4+4+5 = 21; tổng 107. IMSLP: 107 bars. MIDI Mutopia: 107 ô.'
+  - id: n5
+    cau: 'Bản thu trên trang (Patrizia Prati) dài gần năm phút.'
+    loai: so-lieu
+    nguon: [ commons-prati ]
+    ket_qua: dung
+    ghi_chu: '292,99 s = 4 phút 53 giây.'
+  - id: n6
+    cau: 'Bài ở chặng 6 của lộ trình trên site; sau Clair de lune, đây là bài học Debussy thứ hai ở chặng 6.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Bản ghi debussy-arabesque-1 chang: 6; tac-pham.yml: bản ghi bai-hoc khác của debussy chỉ có debussy-clair-de-lune (chang: 6); debussy-preludes là loai nghe.'
+  - id: n7
+    cau: 'Bài viết với hóa biểu bốn dấu thăng (Mi trưởng), nhịp 4/4; mở đầu ghi Andantino con moto.'
+    loai: cau-truc
+    nguon: [ durand-1904, imslp-arab ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 1 hệ 1: bốn dấu thăng ở cả hai khuông, 4/4, "Andantino con moto". IMSLP: key E. Ô cuối (tr. 5) về Mi.'
+  - id: n8
+    cau: 'Bản nhạc ghi nhiều chỗ chậm lại (Rit.), dồn lên (Stringendo, Mosso) và Tempo rubato; các chỗ Rit. thường theo ngay sau bằng a Tempo.'
+    loai: cau-truc
+    nguon: [ durand-1904 ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 1: Rit. - - - a Tempo (ô 5–6), Stringendo (ô 13), Rit. (ô 16); tr. 2: Rit., a Tempo, Rit., a Tempo (hệ 2–3); tr. 3: Tempo rubato (ô 39), Mosso (ô 47, 51), Rit. (ô 50), a Tempo (ô 55); tr. 4: Rit. (ô 67), 1° Tempo (ô 71), Rit. (ô 75), a Tempo (ô 76), Stringendo, Rit.; tr. 5: a Tempo (ô 87).'
+  - id: n9
+    cau: 'Theo Henle, hai Arabesque là những bài quan trọng nhất trong các bài piano thời trẻ của Debussy.'
+    loai: lich-su
+    nguon: [ henle-hn380 ]
+    ket_qua: dung
+    ghi_chu: 'Henle HN 380: "these Arabesques, the most important of his early piano pieces".'
+  - id: n10
+    cau: 'Nhà Durand et Schoenewerk ở Paris in lần đầu hai bài vào tháng 11 năm 1891.'
+    loai: nam
+    nguon: [ imslp-arab, henle-hn380 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: First Publication 1891 Paris: Durand; Extra Information: first edition published in November 1891; bản quét Durand et Schoenewerk n.d.[1891], D.S. 4395-96. Henle: issued in November 1891.'
+  - id: n11
+    cau: 'Năm 1904, nhà Durand & Fils khắc lại toàn bộ bản nhạc nhưng giữ số bản in cũ (4395 và 4396); bản nhạc dùng trên trang là bản in năm 1904 ấy.'
+    loai: nam
+    nguon: [ imslp-arab, durand-1904 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP Extra Information: "the second in 1904. The plate numbers (4395, 4396) were retained for the 1904 edition, even though it is an entirely new engraving". Bản quét tr. 1: "Copyright by A. Durand & Fils 1904", "D.&F. 4395"; tr. 6: "D.&F. 4396".'
+  - id: n12
+    cau: 'Henle viết: lúc mới in, hai bài ít được chú ý; sau năm 1906 chúng thành một trong những tác phẩm được ưa chuộng nhất của Debussy, và nay có rất nhiều bản chuyển soạn cho nhạc cụ khác.'
+    loai: lich-su
+    nguon: [ henle-hn380 ]
+    ket_qua: dung
+    ghi_chu: 'Henle HN 380: "Following the work''s publication, it received little attention, but after 1906 it became one of the composer''s most popular works and now there are numerous transcriptions for other instruments."'
+  - id: n13
+    cau: 'Henle tả bài số 1 bằng những đường trang trí uyển chuyển, trôi chảy.'
+    loai: lich-su
+    nguon: [ henle-hn380 ]
+    ket_qua: dung
+    ghi_chu: 'Henle HN 380: "The elegant and flowing ornamentation of the first Arabesque".'
+  - id: n14
+    cau: 'Bản thu gợi ý là của nghệ sĩ piano Patrizia Prati, thu trực tiếp ở Bảo tàng Lãng mạn (Museo del Romanticismo) tại Madrid năm 2016; giấy phép CC BY-SA 4.0, trên Wikimedia Commons.'
+    loai: ten
+    nguon: [ commons-prati ]
+    ket_qua: dung
+    ghi_chu: 'Trang mô tả file: "Live performance on piano by Patrizia Prati at Museum of Romanticism (Madrid) 2016-05-17"; es: "Museo del Romanticismo"; {{self|cc-by-sa-4.0}}.'
+  - id: n15
+    cau: 'Bảng Theo dõi khi nghe, dòng 1–4: ô 1 p, tay trái bắt đầu hợp âm rải, tay phải nối tiếp lên cao rồi đi xuống; ô 6 pp, a Tempo, chủ đề hai chọi ba; ô 13 Stringendo, sempre cresc.; ô 17 p, nốt trắng ở trên, hợp âm rải chùm ba ở dưới.'
+    loai: cau-truc
+    nguon: [ durand-1904, mutopia ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 1 hệ 1 (p ô 1), hệ 2 (a Tempo, pp ô 6), hệ 4 ô 2 (Stringendo, sempre cresc., ô 13); tr. 2 hệ 1 ô 1 (ô 17: p, tay phải La trắng có dấu hoàn rồi Sol♯ trắng ở trên, chùm ba Đô♯–Mi–Fa♯, Sol♯–Rê♯–Si ở dưới; tay trái chùm ba Đô♯–Mi–La như ô 1). Mutopia ô 17: rhUpE "a2 gs", rhDownE chùm ba, lhUpE \times2/3{cs8\p e a}. Mốc dòng 1–4 (2, 15, 33, 42 s): căn DTW với MIDI Mutopia, ba biến thể lệch nhau dưới 2 s; kiểm thêm ô 6: Mi5–Fa♯5 của chùm ba phách 2 ở 16,1–16,4 s; ô 13: Đô♯5 phách 2 ở 33,5 s.'
+  - id: n16
+    cau: 'Bảng Theo dõi khi nghe, dòng 5–8: ô 29 Poco mosso, cresc., hợp âm rải dâng lên; ô 39 La trưởng, Tempo rubato, p; ô 47 Mosso, p, cresc., hợp âm rải đi lên rồi tới f; ô 63 Risoluto, f, rồi dim. molto.'
+    loai: cau-truc
+    nguon: [ durand-1904, mutopia ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 2 hệ 4 ô 1 (ô 29: Poco mosso, cresc.; tay trái rải từ Fa♯1 lên, tr. 2 hệ 5 tay phải chùm ba đi lên); tr. 3 hệ 1 ô 2 (ô 39: vạch kép, ba dấu thăng, Tempo rubato (un peu moins vite), p); tr. 3 hệ 2 ô 5 (ô 47: Mosso, p, cresc., móc đơn đi lên ở khóa Fa), hệ 3 ô 2 (ô 49: f); tr. 4 hệ 1 (ô 63: Risoluto, f; ô 67: Rit., dim. molto). Mutopia: \tempo "Risoluto" ở barNumberCheck#63, "mosso" ở #47. Mốc 72, 98, 120, 164 s: dòng 5, 7, 8 ba biến thể khớp; ô 63 hợp âm f ở 164,2 s (khởi âm mạnh 5,7). Dòng 6 (ô 39) ba biến thể lệch (97,7 / 89,4 / 80,1): đo tay: hợp âm Mi giữ rất nhỏ (−50 dB) 91–98 s (ô 37–38), khởi âm La4/Si3 ở 98,1 s rồi Rê5 98,4 s, Mi5 98,9 s (ô 39), ghi 98.'
+  - id: n17
+    cau: 'Bảng Theo dõi khi nghe, dòng 9–13: ô 71 1° Tempo, p, về Mi trưởng; ô 76 a Tempo, p, chủ đề trở lại; ô 95 dim., hợp âm rải dài đi lên rồi đi xuống, nhỏ dần; ô 101 pp, chủ đề lần cuối; ô cuối ba nốt Mi ở ba quãng tám.'
+    loai: cau-truc
+    nguon: [ durand-1904, mutopia ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 4 hệ 2 ô 3 (ô 71: vạch kép, bốn dấu thăng, 1° Tempo, p); hệ 3 ô 4 (ô 76: a Tempo, p, chùm ba như ô 6); tr. 5 hệ 2 ô 1 (ô 95: 4/4 sau ô 2/4, dim., tay trái rải từ Fa♯2 lên, tay phải nối lên; MIDI Mutopia ô 96 đi xuống từ Mi6), hệ 3 ô 3 (ô 97 più dim.), hệ 4 ô 1 (ô 99 p), ô 3 (ô 101 pp, chùm ba như ô 6); hệ 5 ô cuối: tay phải Mi4, tay trái Mi3 và Mi2 (300 dpi; MIDI ô 107: E2 E3 E4). Mốc 187, 204, 272 s ba biến thể khớp; ô 71: La5 và Đô♯4 ở 187,2 s. Dòng 11 (ô 95) lệch: đo tay: Fa♯2 252,82 s, Đô♯3 253,10 s, La4 252,96 s (biến thể khởi-âm 252,7), ghi 253. Dòng 13 (ô cuối): Mi3 288,35 s, Mi4 288,39 s, sau đó tiếng tắt dần tới 290,4 s; ghi 288.'
+  - id: n18
+    cau: 'Cấu trúc, Mở đầu ô 1–5: Mi trưởng, Andantino con moto, p, hợp âm rải chia cho hai tay; Rit. ở ô 5.'
+    loai: cau-truc
+    nguon: [ durand-1904 ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 1 hệ 1–2: ô 1–2 rải chia hai tay; ô 3–4 tay trái chùm ba lên tay phải; ô 5 dưới "Rit. - - -", ô 6 "a Tempo".'
+  - id: n19
+    cau: 'Cấu trúc, Phần đầu ô 6–38: chủ đề pp hai chọi ba; Stringendo ở ô 13–16; hình mở đầu trở lại ở ô 17; Poco mosso ở ô 29.'
+    loai: cau-truc
+    nguon: [ durand-1904 ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 1 hệ 4: "Stringendo - - - … Rit." từ ô 13 tới ô 16; tr. 2 ô 17 (xem n15); ô 29 (xem n16); ô 38 (tr. 3 hệ 1 ô 1): Mi5 tròn, ô cuối trước vạch kép.'
+  - id: n20
+    cau: 'Cấu trúc, Đoạn giữa ô 39–62: đổi sang ba dấu thăng (La trưởng), Tempo rubato (un peu moins vite); Mosso ở ô 47 và 51, lên tới f; a Tempo ở ô 55.'
+    loai: cau-truc
+    nguon: [ durand-1904, mutopia ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 3: hệ 1 ô 2 vạch kép, ba dấu thăng, "Tempo rubato (un peu moins vite)"; hệ 2 ô 5 "Mosso"; hệ 3 ô 2 f, ô 4 "Mosso"; hệ 4 ô 2–3 "< f", ô 4 "a Tempo". Mutopia: \key a \major, \tempo "Tempo Rubato" \smaller "(un peu moins vite)"; "mosso" ở #47 và 4 ô sau; "a tempo" ở #55. Giọng La trưởng: ba dấu thăng, Mutopia \key a \major; ô 62 (tr. 3 hệ 5 ô cuối) hợp âm La.'
+  - id: n21
+    cau: 'Cấu trúc, ô 63–70: Risoluto, f, hợp âm có nhiều dấu hoàn; Rit., dim. molto, più dim.'
+    loai: cau-truc
+    nguon: [ durand-1904, mutopia ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 4 hệ 1: "Risoluto", f, hợp âm có dấu hoàn (♮) ở hầu hết ô 63–66; ô 67 "Rit.", "dim. molto"; hệ 2 ô 2 "più dim. . .". Mutopia đổi \key c \major ở #63.'
+  - id: n22
+    cau: 'Cấu trúc, ô 71–94: 1° Tempo, về bốn dấu thăng (Mi trưởng); mở đầu và chủ đề trở lại, có chỗ đổi; ô 94 nhịp 2/4.'
+    loai: cau-truc
+    nguon: [ durand-1904, mutopia ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 4 hệ 2 ô 3: vạch kép, bốn dấu thăng, 1° Tempo; ô 71 có La♮5 trắng ở trên (khác ô 1), ô 73–74 như ô 3–4, ô 76 như ô 6; tr. 5 hệ 1 ô 3–4 và hệ 2 (ô 89–93) khác phần đầu; tr. 5 hệ 2 ô 4 (ô 94): 2/4, ô sau trở lại 4/4. Mutopia: \time 2/4 trước #95, \time 4/4 ở #95.'
+  - id: n23
+    cau: 'Cấu trúc, Đoạn kết ô 95–107: hợp âm rải dài, dim., più dim.; chủ đề lần cuối pp ở ô 101; hợp âm pp ở ô 106.'
+    loai: cau-truc
+    nguon: [ durand-1904 ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 5 hệ 3: ô 95 dim., ô 97 più dim.; hệ 4: ô 99 p, ô 101 pp; hệ 5 ô 4 (ô 106): pp, ba hợp âm (đen, trắng, đen) có gạch ngang ở hai tay; ô 107 nốt Mi, lặng.'
+  - id: n24
+    cau: 'Mốc ::khoi-nghe{moc="2 15 33 42 72 98 120 164 187 204 253 272 288"} theo bản thu Prati.'
+    loai: so-lieu
+    nguon: [ commons-prati, mutopia ]
+    ket_qua: dung
+    ghi_chu: 'Mốc ghi bằng tools/audio/align/run.py --write (cấu hình cục bộ, không commit: MIDI mutopia_debussy_Arabesque_1.mid, sha256 6732dc10…4757; rows 0: first, 1: 5, 2: 12, 3: 16, 4: 28, 5: 38, 6: 46, 7: 62, 8: 70, 9: 75, 10: 94, 11: 100, 12: 106; fix 5: 98.1, 10: 252.8, 12: 288.2). Âm thanh 2,4–290,3 s. Cách đo tay ở n16, n17 (librosa CQT, độ to, onset theo 0,1–0,25 s; explore.py onsets).'
+  - id: n25
+    cau: 'Ô 1–2 (khối 1): khuông dưới viết khóa Sol; tay trái chơi chùm ba đầu và chùm ba cuối, tay phải hai chùm ba ở giữa. Ô 1: tay trái rải Đô♯–Mi–La, tay phải nối tiếp Đô♯–Mi–Fa♯ lên Sol♯ rồi quay xuống Rê♯–Si, tay trái đi tiếp xuống Sol♯–Rê♯–Si; ô 2 làm lại hình ấy, bắt đầu từ La thấp hơn.'
+    loai: cau-truc
+    nguon: [ durand-1904, mutopia ]
+    ket_qua: dung
+    ghi_chu: 'Xem khuong_nhac khối 1.'
+  - id: n26
+    cau: 'Ô 6–9 (khối 2): tay phải chùm ba, tay trái móc đơn đều; ô 8 bắt đầu bằng nốt Si, nốt cuối của câu trước, rồi một dấu lặng móc đơn.'
+    loai: cau-truc
+    nguon: [ durand-1904, mutopia ]
+    ket_qua: dung
+    ghi_chu: 'Xem khuong_nhac khối 2. Ô 8 (tr. 1 hệ 3 ô 1): Si3 móc đơn có đuôi, vòng luyến từ ô 6 kết ở nốt này (Mutopia "b8\) r"), rồi lặng móc đơn.'
+  - id: n27
+    cau: 'Chùm ba là ba móc đơn trong một phách; hai chọi ba: tay chơi ba và tay chơi hai đánh nốt đầu cùng lúc, hai nốt sau của tay chơi ba rơi trước và sau nốt thứ hai của tay chơi hai; hình chung "dài – ngắn – ngắn – dài".'
+    loai: dinh-nghia
+    nguon: [ site-du-lieu, site-hai-tay ]
+    ket_qua: dung
+    ghi_chu: 'Thuật ngữ triplet: "Chùm ba: chia một phách nhịp đơn thành ba phần". Trang hai-tay, lưới 6: tay chơi ba ở 1, 3, 5; tay chơi hai ở 1, 4 (nốt 3 trước 4, nốt 5 sau 4); hình chung dài – ngắn – ngắn – dài.'
+  - id: n28
+    cau: 'Ở ô 10 và 12, tay phải chơi chùm ba rồi chuyển sang móc đơn trong cùng ô.'
+    loai: cau-truc
+    nguon: [ durand-1904, mutopia ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 1 hệ 3 ô 3 (ô 10): chùm ba Si–La–Si rồi Đô♯ đen nối móc đơn, Mi–Rê♯–Mi móc đơn; hệ 4 ô 1 (ô 12): chùm ba Rê♯–Đô♯–Rê♯ rồi Mi, Sol♯–Fa♯–Sol♯ móc đơn. Mutopia: "\times2/3{b8( a b} cs4~cs8 e ds e" và "\times2/3{ds8( cs ds} e4~e8 gs fs gs".'
+  - id: n29
+    cau: 'Bài đổi hóa biểu hai lần (ô 39 sang ba dấu thăng, ô 71 về bốn dấu thăng); phần lớn bài nhỏ: mở đầu p, chủ đề pp; to nhất là f ở đoạn giữa và ở Risoluto; đoạn kết dim., più dim., rồi pp tới hết.'
+    loai: cau-truc
+    nguon: [ durand-1904 ]
+    ket_qua: dung
+    ghi_chu: 'Đọc cả 5 trang ở 110 dpi: sắc thái ghi p, pp, cresc., sempre cresc., poco a poco cresc., < >, f (tr. 3 hệ 3–4, tr. 4 hệ 1), sf (tr. 3 hệ 1 ô cuối, dấu nhấn trong khung < >), dim., dim. molto, più dim.; không thấy ff. Đoạn kết tr. 5 hệ 3–5: dim., più dim., p, pp, pp.'
+  - id: n30
+    cau: 'Bản nhạc ghi Andantino con moto ở đầu bài, không có số máy đếm nhịp.'
+    loai: cau-truc
+    nguon: [ durand-1904, mutopia ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 1 hệ 1: "Andantino con moto", không có số MM ở đâu trong 5 trang. Mutopia: \tempo"Andantino con moto" không kèm số (tempoWholesPerMinute chỉ cho MIDI).'
+  - id: n31
+    cau: 'Đoạn giữa ghi Tempo rubato (un peu moins vite); un peu moins vite là tiếng Pháp, "chậm hơn một chút"; rubato là co giãn tốc độ để diễn cảm.'
+    loai: dinh-nghia
+    nguon: [ durand-1904, larousse, site-du-lieu ]
+    ket_qua: dung
+    ghi_chu: 'Bản quét tr. 3 hệ 1: "Tempo rubato (un peu moins vite)". Larousse: un peu moins = a little less; moins vite = slow down, not so fast. Thuật ngữ rubato: "Co giãn tốc độ tự do để diễn cảm".'
+  - id: n32
+    cau: 'Bản Durand 1904 không ghi ký hiệu bàn đạp.'
+    loai: cau-truc
+    nguon: [ durand-1904, mutopia ]
+    ket_qua: dung
+    ghi_chu: 'Đọc cả 5 trang: không có Ped., dấu * hay đường bàn đạp. Mutopia: voice "pedal" rỗng, không có \sustainOn.'
+  - id: n33
+    cau: 'Lời khuyên tập (Vì sao nên học, cột Cách tập, Kế hoạch tập, Tốc độ, Bàn đạp, Lỗi thường gặp): đọc riêng chỗ đổi hóa biểu, tay trái nhỏ hơn tay phải, tập đều trước rồi mới co giãn, về tốc độ cũ ở a Tempo, bàn đạp đổi theo hòa âm của tay trái, nửa bàn đạp để giữ nốt trầm, kế hoạch 8 tuần 30–40 phút mỗi ngày với tốc độ gợi ý ♩ = 40 tới khoảng 80.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Nửa bàn đạp viết như trang piano/ban-dap (mục Các kiểu đạp khác, mục Debussy: "Nửa bàn đạp và đổi một phần: thử làm sạch âm vực cao mà vẫn giữ nốt trầm"). Tốc độ là gợi ý, trang ghi rõ bản nhạc không có số máy đếm nhịp.'
+  - id: n34
+    cau: 'Ba bài tập chuẩn bị (khối 3–5) soạn cho trang này: hai chọi ba trên hợp âm Mi trưởng, hợp âm rải chia hai tay, chùm ba rồi móc đơn trong một tay; lời kèm mỗi bài.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Khuông ở khuong_nhac khối 3–5.'
+  - id: n35
+    cau: 'Các link: Clair de lune, Hai tay (#hai-choi-ba), hợp âm rải (#hop-am-rai), bàn đạp (#cac-kieu-ap-khac, #debussy), Préludes quyển 1 (nghe-nhac/debussy-preludes), Thế kỷ 20, thu âm; trang Thế kỷ 20 xếp Debussy vào Ấn tượng.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'tests/link.test.mjs kiểm đích và #mục (npm test đạt, 17/11/2026). lich-su/thoi-ky/the-ky-20: bảng các trào lưu, dòng "Ấn tượng … Debussy, Ravel".'
+  - id: n36
+    cau: 'Câu hỏi kiểm tra: Mi trưởng, đoạn giữa La trưởng từ ô 39; ở chủ đề tay phải chia ba, tay trái chia hai; Tempo rubato (un peu moins vite) là tự do hơn và chậm hơn một chút; Deux Arabesques in lần đầu năm 1891 (Durand et Schoenewerk), 1904 là bản khắc lại của Durand & Fils, Debussy mất năm 1918.'
+    loai: nam
+    nguon: [ durand-1904, imslp-arab, larousse, site-du-lieu ]
+    ket_qua: dung
+    ghi_chu: 'Như n7, n3, n20, n31, n10, n11, n2. Lời giải thích không dựa vào vị trí lựa chọn.'
+  - id: n37
+    cau: 'Mục Nguồn: bản Mutopia do Keith OHara chép theo Durand & Fils 1904, phạm vi công cộng; ABRSM 2023–2024 có Arabesque số 2 (Grade 8); RCM 2022 xếp Arabesque số 1 ở Level 10.'
+    loai: cap-do
+    nguon: [ mutopia, abrsm-2324, rcm-2022 ]
+    ket_qua: dung
+    ghi_chu: 'Mutopia .ly: maintainer Keith OHara, source "Durand et Fils (1904)", copyright "Public Domain". ABRSM 2023–2024 tr. 39: Grade 8, "Debussy Arabesque No. 2 (from Deux arabesques, L. 66)". RCM 2022 tr. 95: Level 10, Deux arabesques: Arabesque No. 1.'
+khuong_nhac:
+  - khoi: 1
+    loai: trich-doan
+    kiem: [ cu-phap, nhip, giong, not, doi-chieu-an-ban ]
+    ket_qua: dung
+    ghi_chu: 'Ô 1–2, 4/4, K:E, L:1/8. Ấn bản: durand-1904 tr. 1 hệ 1, đọc ở 400 dpi (khuông trên khóa Sol; khuông dưới khóa Sol tới cuối ô 2, khóa Fa đặt cuối ô 2). Ô 1: tay phải nghỉ phách 1, chùm ba Đô♯5–Mi5–Fa♯5 (phách 2), Sol♯5–Rê♯5–Si4 (phách 3), nghỉ phách 4; tay trái chùm ba Đô♯4–Mi4–La4 (phách 1), nghỉ, chùm ba Sol♯4–Rê♯4–Si3 (phách 4). Ô 2: tay phải La4–Đô♯5–Rê♯5, Mi5–Si4–Sol♯4; tay trái La3–Đô♯4–Fa♯4, Mi4–Si3–Sol♯3. Đối chiếu Mutopia: rhDownE "\ohn cs8*2/3 s s cs'' e fs gs ds b s s \ohn b,", "a'' cs ds e b gs"; lhUpE "\times2/3{cs''8\p e'' a''} s2 \times2/3{gs'' ds'' b}", "a8*2/3 cs'' fs'' s2 e'' b gs": khớp. Bản in không ghi dấu lặng (các nốt ẩn của Mutopia giữ chỗ); abc ghi dấu lặng để đủ phách. p đặt ở khuông dưới (bản in đặt giữa hai khuông). Bỏ: vòng luyến dài nối bốn chùm ba của mỗi ô, chữ "Andantino con moto" (ghi trong lời dẫn).'
+  - khoi: 2
+    loai: trich-doan
+    kiem: [ cu-phap, nhip, giong, not, doi-chieu-an-ban ]
+    ket_qua: dung
+    ghi_chu: 'Ô 6–9, 4/4, K:E. Ấn bản: durand-1904 tr. 1 hệ 2 ô 3–4 và hệ 3 ô 1–2, đọc ở 300–350 dpi. Ô 6: tay phải lặng đen, chùm ba Mi5–Fa♯5–Đô♯5, Mi5–Si4–Đô♯5, Sol♯4–Si4–Fa♯4 (có số 3); tay trái pp, móc đơn Mi2–Si2–Mi3–Sol♯3–Si3–Sol♯3–Mi3–Si2. Ô 7: tay phải chùm ba Sol♯4–Mi4–Sol♯4 (bản in không in số 3, nhưng ô đủ 4 phách chỉ khi là chùm ba; Mutopia "gs8*2/3 e gs"), Rê♯4 trắng, Đô♯4 đen; tay trái Mi2–Đô♯3–Mi3–Sol♯3–Đô♯4–Sol♯3–Mi3–Si2. Ô 8: tay phải Si3 móc đơn, lặng móc đơn, ba chùm ba như ô 6; tay trái như ô 6. Ô 9: như ô 7. Đối chiếu Mutopia rhUpE ô 6–9 và lhUpE "e,8(\pp b, e gs b gs e b,)", "e,8( cs e gs cs'' gs e b,)": khớp. Bỏ: vòng luyến (tay phải ô 6–7 và 8–9, tay trái mỗi ô), chữ "a Tempo".'
+  - khoi: 3
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
+    ket_qua: dung
+    ghi_chu: '4 ô 2/4, Mi trưởng: tay phải chùm ba Mi4–Sol♯4–Si4, Mi5–Si4–Sol♯4 (ngón 1-2-3, 5-3-2) hai ô; Fa♯4–La4–Si4, Rê♯5–Si4–La4 (Si bảy) một ô; Mi4 trắng. Tay trái móc đơn Mi3–Si3 (5-1), Si2–Fa♯3 (5-1), Mi3 trắng. Mỗi phách tay phải ba nốt, tay trái hai nốt: hai chọi ba.'
+  - khoi: 4
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
+    ket_qua: dung
+    ghi_chu: '3 ô 4/4 theo hình ô 1 của bài: tay trái chùm ba Mi3–Sol♯3–Si3 (5-3-1), tay phải Mi4–Sol♯4–Si4 (1-2-3), Mi5–Si4–Sol♯4 (5-3-2), tay trái Si3–Sol♯3–Mi3 (1-3-5); ô 2 trên Si bảy (Rê♯3–Fa♯3–Si3; Fa♯4–La4–Si4, Rê♯5–Si4–La4); ô 3 hợp âm Mi trưởng. Mỗi ô đủ 8 móc đơn.'
+  - khoi: 5
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, so-ngon ]
+    ket_qua: dung
+    ghi_chu: '2 ô 4/4: tay phải chùm ba Sol♯4–Fa♯4–Mi4 (3-2-1), Fa♯4–Sol♯4–La4 (2-3-4), rồi móc đơn Si4–La4–Sol♯4–Fa♯4 (5-4-3-2), Mi4 tròn (1); tay trái đen Mi3–Si3–Mi3–Si3 (5-1), quãng năm Mi3–Si3 tròn. Như ô 10, 12 của bài: chùm ba rồi móc đơn trong một tay.'
