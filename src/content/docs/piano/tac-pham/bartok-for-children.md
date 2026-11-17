@@ -27,7 +27,7 @@ Cuối tập in lời các bài hát đã dùng, kèm nguồn:
 - **Số 1** dựng trên bài hát trẻ em *Süssünk, süssünk valamit* (tạm dịch: "Ta nướng, ta nướng món gì đây"), ghi ở Gyergyóújfalu. Lời bài kể về một chiếc bánh tròn bằng bột, có nhân, thật ngọt.
 - **Số 6** dựng trên bài *Hej tulipán, tulipán* (tạm dịch: "Này hoa tulip, hoa tulip"), lấy từ một tuyển tập trò chơi trẻ em của Kiss.
 
-Bản in năm 1909 chỉ đánh số các bài (I., II., …), không đặt tên và không ghi số máy đếm nhịp. Cuối năm 1943, khi đã sang Mỹ, Bartók sửa toàn bộ tập nhạc cho nhà xuất bản Boosey & Hawkes: thêm số máy đếm nhịp và thời lượng, sửa hòa âm, bỏ hai bài, đặt tên cho mọi bài. Bản sửa in năm 1946, sau khi ông mất (26/9/1945). Hai bài của trang này giữ nguyên số thứ tự ở bản sửa. Trích đoạn và mô tả trên trang theo bản in năm 1909.
+Bản in năm 1909 chỉ đánh số các bài (I., II., …), không đặt tên và không ghi số máy đếm nhịp. Cuối năm 1943, khi đã sang Mỹ, Bartók sửa toàn bộ tập nhạc cho nhà xuất bản Boosey & Hawkes: thêm số máy đếm nhịp và thời lượng, sửa hòa âm, bỏ bớt một số bài (cả tập còn 79 bài), đặt tên cho nhiều bài. Bản sửa in năm 1946, sau khi ông mất (26/9/1945). Hai bài của trang này giữ nguyên số thứ tự ở bản sửa. Trích đoạn và mô tả trên trang theo bản in năm 1909.
 
 Bartók cũng chơi các bài trong tập ở những buổi hòa nhạc của mình. Tháng 1/1945, trong một buổi hòa nhạc phát thanh, ông chơi một nhóm bài của tập I, có cả số 6.
 
@@ -232,7 +232,7 @@ Bản in đầu không ghi bàn đạp cho hai bài này. Chơi không bàn đ�
 + Chỉ đánh số (I., II., …), không có tên bài
 - Mỗi bài có tên tiếng Anh như "Children at Play"
 - Mỗi bài mang tên bài hát dân gian in ở đầu trang
-> Tên bài chỉ có từ bản sửa năm 1943 (in năm 1946). Lời các bài hát được in riêng ở cuối tập.
+> Tên bài (như "Children at Play" cho số 1) chỉ có từ bản sửa năm 1943, in năm 1946. Lời các bài hát được in riêng ở cuối tập.
 ? Trong số 1, dấu luyến nối những nốt nào của mỗi nhóm bốn móc đơn?
 - Nốt đầu với nốt thứ hai
 + Nốt thứ hai với nốt thứ ba, rồi nốt thứ tư với nốt đầu ô sau
