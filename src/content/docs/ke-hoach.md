@@ -15,9 +15,9 @@ Mỗi tác phẩm mới có trang riêng; trang chặng, [danh mục bài học]
 
 Thứ tự dự định:
 
-1. **Ba bài làm thử quy trình**: Mozart, *Alla turca*; Debussy, *Arabesque* số 1; Rachmaninoff, Prelude Đô♯ thứ Op. 3 số 2.
-2. **Nhạc thế kỷ 20 cho chặng 2–5**: Gretchaninov, *Grandfather's Album*; Bartók, *Romanian Folk Dances* và vài bài trong *For Children*.
-3. **Nhà soạn nhạc nữ**: Chaminade, *Pierrette*; Clara Schumann, Scherzo số 2; Fanny Hensel khi tìm được bản thu dùng được.
+1. **Nhạc thế kỷ 20 cho chặng 2–5**: Bartók, vài bài trong *For Children* và *Romanian Folk Dances*; Gretchaninov, *Grandfather's Album*.
+2. **Nhà soạn nhạc nữ**: Chaminade, *Pierrette*; Clara Schumann, Scherzo số 2; Fanny Hensel khi tìm được bản thu dùng được.
+3. **Những bài người học hay hỏi**: Mozart, *Alla turca*; Debussy, *Arabesque* số 1; Rachmaninoff, Prelude Đô♯ thứ Op. 3 số 2.
 4. **Lấp chỗ còn trống**: một sonata của Haydn; thêm bài cho chặng 7 ngoài nhạc Lãng mạn (Bach, Beethoven).
 5. **Tác phẩm Việt Nam** đã hết thời hạn bảo hộ, và bài cho người mới dùng dân ca Việt Nam, sau khi khảo sát bản quyền.
 
@@ -28,7 +28,6 @@ Hướng dẫn nghe sẽ thêm ở những mảng còn ít: nhạc Ấn tượng
 - **Nhạc lý**: các nhịp 2/2, 3/8, 6/4; canon và mô phỏng (chuẩn bị cho Bach); đọc nhiều bè trên một khuông; hộp "Trên phím đàn" cho các bài nhạc lý từ bài 15 đến bài 32.
 - **Kỹ thuật piano**: làm nổi một bè giữa nhiều bè; rubato và cách xử lý câu nhạc; lộ trình bài luyện ngón (etude) theo chặng; **đệm hát bằng ký hiệu hợp âm**.
 - **Luyện tai và đọc nhạc**: nhận ra loại kết, thể đảo của hợp âm, chỗ chuyển giọng; nghe và chép lại hai bè; bài tập thị tấu theo chặng có tự chấm.
-- **[Từ điển](/opus/nhac-ly/tu-dien/)**: thêm các thuật ngữ đã dùng trên site mà Từ điển chưa có (tên thể loại, chỉ dẫn diễn tấu, nhạc cụ).
 
 ## Cập nhật định kỳ
 

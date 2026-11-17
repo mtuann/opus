@@ -10,6 +10,7 @@ Phần "vì sao" của việc làm lại site. Mục tiêu: phần lõi (nền t
 | `kiem-ke.md` | Tầng đề xuất và số liệu của 233 trang cũ; sinh lại bằng `python3 plans/ben-vung/kiem_ke.py > plans/ben-vung/kiem-ke.md` |
 | `chuan-kiem-dinh.md` | Nhận định, thứ bậc nguồn, kiểm định hai lượt, hồ sơ, khóa, mở khóa |
 | `them-tac-pham.md` | Thêm một tác phẩm, dùng từ sau đợt 6 |
+| `lo-trinh-them-tac-pham.md` | Thứ tự và lời giao từng lượt thêm tác phẩm (chốt 16/11/2026: đợt 2, 3 trước đợt 1) |
 
 ## Vì sao phải làm lại
 
@@ -69,7 +70,7 @@ Danh sách từng trang: `kiem-ke.md`. Trang nào thuộc đợt, lô nào: `pla
 
 ## Vận hành sau khi làm lại
 
-1. **Tác phẩm mới** theo `them-tac-pham.md`. Làm thử trước ba bài của lô C trong `../opus-zero/plans/v16/khao-sat-g6.md`, đã có nguồn Mutopia để đối chiếu và bản thu phát được: Mozart, *Alla turca*; Debussy, Arabesque số 1; Rachmaninoff, Prelude Đô♯ thứ Op. 3 số 2. Sau đó phần còn lại của khảo sát đó (lô A, B) và `../opus-zero/plans/v16/khao-sat-g4c.md`; kiểm lại giấy phép và tình trạng file trước khi dùng.
+1. **Tác phẩm mới** theo `them-tac-pham.md`, thứ tự và từng bài ở `lo-trinh-them-tac-pham.md` (chốt 16/11/2026): đợt 2 (Thế kỷ 20), đợt 3 (nhà soạn nhạc nữ), rồi đợt 1 (*Alla turca*, Arabesque số 1, Rachmaninoff Op. 3 số 2), đợt 4, đợt 5. Kiểm lại giấy phép và tình trạng file trước khi dùng.
 2. **Trang tham chiếu có hạn** rà theo `ra_lai`; workflow hằng tuần mở issue khi quá hạn. Đầu tiên là Thầy và thi, Tác phẩm theo cấp độ khi chương trình piano ABRSM 2027–2028 bắt đầu dùng (tháng 1/2027).
 3. **Sửa trang đã khóa** chỉ theo thủ tục mở khóa (`chuan-kiem-dinh.md` mục 7).
 4. **Mở rộng lõi** (các ý ở mục "Ý tưởng để sau" của `../opus-zero/plans/ke-hoach-v15.md`) chỉ theo đợt có kế hoạch, kiểm định đủ trước khi gộp.

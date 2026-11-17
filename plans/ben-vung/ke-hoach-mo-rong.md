@@ -149,7 +149,7 @@ Chỗ cần lấp: chặng 7, Thế kỷ 20 và Ấn tượng, nhà soạn nhạ
 
 Chặng 6 sẽ đông nhất sau đợt 1 và 3 (khoảng 9–10 bài); cân nhắc khi chọn bài.
 
-Thứ tự gợi ý (10/11/2026, chủ repo chưa chọn): để cân thời kỳ, làm đợt 2 (Thế kỷ 20) và 3 (nhà soạn nhạc nữ) trước đợt 1, vì đợt 1 thêm Mozart, Debussy, Rachmaninoff vào chặng 6–7 vốn đã nghiêng về Lãng mạn; nếu cần thử quy trình thêm bài trước thì làm một bài của đợt 1 (*Alla turca* hay Arabesque số 1) rồi sang đợt 2.
+**Thứ tự đã chốt (16/11/2026, chủ repo chọn): đợt 2, rồi đợt 3, rồi đợt 1, rồi đợt 4, đợt 5.** Lời giao đầy đủ cho agent (từng bài, ấn bản, bản thu, file chủ repo phải tải, điều kiện xong): `plans/ben-vung/lo-trinh-them-tac-pham.md`.
 
 ### 6.2 Hướng dẫn nghe
 
