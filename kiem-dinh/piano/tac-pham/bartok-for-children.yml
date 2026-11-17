@@ -8,8 +8,8 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: Claude Opus 5.5 (lượt 1, them/bartok-for-children, 16/11/2026)
-      luot_2: null
-      review: null
+      luot_2: Claude Opus 5.5 (agent riêng, độc lập với lượt 1, 16/11/2026; 75 câu xuất bằng khoa.mjs xuat, 71 đúng, 1 sai, 3 không chắc)
+      review: Claude Opus 5.5 (agent riêng, không làm lượt 1, lượt 2; 16/11/2026)
       kiem_mau: null
 ghi_chu: 'Bài học mới (lộ trình thêm tác phẩm, lượt 1, chạy thử quy trình them-tac-pham.md). Hai bài số 1 và số 6 của For Children tập I, theo bản in đầu Rozsnyai 1909 (bản sửa Boosey & Hawkes 1946 không dùng: không lấy tên bài, số máy đếm nhịp của bản sửa). Nốt nhạc, cấu trúc, sắc thái của hai bài chép tay từ bản quét IMSLP #893790 (đọc ảnh trang 2, 6, 7 ở 170–400 dpi); lời bài hát ở trang Jegyzetek (trang 21 của file). Khảo sát G6 ghi số 6 "tay trái giữ giai điệu": sai với bản in 1909 (giai điệu ở tay phải, tay trái đánh quãng; tên "Study for the Left Hand" của bản sửa nói về phần đệm tay trái), trang viết theo bản in. Khảo sát (theo IMSLP) ghi số 6 "Rê Dorian": bản in có cả Si (tay trái Si–Sol, Sol–Si) và Si giáng, nên trang không gọi tên điệu thức, chỉ tả nốt. Chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng thuộc hồ sơ du-lieu/tac-pham/bartok-for-children.'
 nguon:
@@ -82,10 +82,11 @@ nhan_dinh:
     loai: cau-truc
     nguon: [ rozsnyai-1909 ]
     ket_qua: da-sua
-    ghi_chu: 'Bài VI, 57 ô: tay trái quãng móc đơn ở mọi ô trừ ô 29, 31, 33, 35, 41, 51, 54, 56 (nghỉ). Giai điệu tay phải f (ô 5), mf (17), p (29), pp (41), ppp (51). Lượt 1 sửa câu mở đầu "suốt bài" thành "gần như suốt bài".'
+    ghi_chu: 'Bài VI, 57 ô: tay trái quãng móc đơn ở mọi ô trừ ô 29, 31, 33, 35, 41, 51, 54, 56 (nghỉ). Giai điệu tay phải f (ô 5), mf (17), p (29), pp (41), ppp (51). Lượt 1 sửa câu mở đầu "suốt bài" thành "gần như suốt bài". Review (Claude Opus, 16/11/2026): xem bản quét tr. 6–7 (200–400 dpi): tay trái nghỉ đúng ô 29, 31, 33, 35, 41, 51, 54, 56, các ô khác là quãng móc đơn; sắc thái f, mf, p, pp, ppp ở ô 5, 17, 29, 41, 51. Câu đã sửa ở dòng 7 của trang (“gần như suốt bài”) đúng.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/893790" ]
     luot_2_ghi_chu: "Bản quét trang 6–7 (số VI): tay trái quãng móc đơn liên tục, chỉ nghỉ vài ô xen kẽ ở lần 3, 4 và đoạn kết; sắc thái f, mf, p, pp, ppp."
+    review: dung
   - id: n5
     cau: Bartók là một trong những nhà soạn nhạc quan trọng nhất của nửa đầu thế kỷ 20.
     loai: lich-su
@@ -99,7 +100,8 @@ nhan_dinh:
     cau: Hai bài này nằm ở chặng 2 của lộ trình trên site.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'chang: 2 trong bản ghi tac-pham/bartok-for-children (src/data/tac-pham.yml). Lượt 1 viết lại câu cũ "chơi được khi mới học vài tháng" (không kiểm được) thành câu về chặng.'
+    review: dung
+    ghi_chu: 'chang: 2 trong bản ghi tac-pham/bartok-for-children (src/data/tac-pham.yml). Lượt 1 viết lại câu cũ "chơi được khi mới học vài tháng" (không kiểm được) thành câu về chặng. Review (Claude Opus, 16/11/2026): bản ghi bartok-for-children có chang: 2 (src/data/tac-pham.yml); piano/tac-pham-theo-cap liệt kê For Children ở mục “Chặng 2. Sơ cấp”.'
   - id: n7
     cau: Bartók viết tập này vì thấy nhạc cho người mới học thường thiếu giá trị âm nhạc.
     loai: lich-su
@@ -150,19 +152,21 @@ nhan_dinh:
     loai: lich-su
     nguon: [ henle-hn1225-vorwort ]
     ket_qua: dung
-    ghi_chu: 'Henle (Preface) trích Béla Bartók Essays, tr. 426: "Already at the very beginning of my career as a composer I had the idea of writing some easy works for piano students ... with the exception of very few works – for instance, Bach''s easiest pieces and Schumann''s Jugendalbum ... At that time the best thing to do would be to use folk tunes. Folk melodies, in general, have great musical value; so, at least the thematical value would be secured."'
+    ghi_chu: 'Henle (Preface) trích Béla Bartók Essays, tr. 426: "Already at the very beginning of my career as a composer I had the idea of writing some easy works for piano students ... with the exception of very few works – for instance, Bach''s easiest pieces and Schumann''s Jugendalbum ... At that time the best thing to do would be to use folk tunes. Folk melodies, in general, have great musical value; so, at least the thematical value would be secured." Review (Claude Opus, 16/11/2026): đọc lời tựa Henle HN 1225 (PDF, phần tiếng Anh): đoạn trích Béla Bartók Essays tr. 426 khớp từng ý (very beginning of my career, no real musical value, Bach’s easiest pieces, Schumann’s Jugendalbum, use folk tunes, thematical value would be secured).'
     luot_2: dung
     luot_2_nguon: [ "https://www.henle.de/media/87/71/16/1697725809/1225-1697725809-sync.pdf" ]
     luot_2_ghi_chu: "Lời tựa Henle (bản tiếng Anh) trích nguyên văn bài giảng ở Mỹ năm 1940: easy works for piano students; no real musical value, trừ Bach's easiest pieces và Schumann's Jugendalbum; 'the best thing to do would be to use folk tunes … at least the thematical value would be secured'. Khớp từng ý."
+    review: dung
   - id: n13
     cau: Từ năm 1906, Bartók đi nhiều chuyến về nông thôn để ghi lại dân ca.
     loai: lich-su
     nguon: [ henle-hn1225-vorwort ]
     ket_qua: dung
-    ghi_chu: 'Henle: "real peasant music that had been scientifically collected and written down, something which Bartók had himself done on extended field trips since 1906".'
+    ghi_chu: 'Henle: "real peasant music that had been scientifically collected and written down, something which Bartók had himself done on extended field trips since 1906". Review (Claude Opus, 16/11/2026): lời tựa Henle: “something which Bartók had himself done on extended field trips since 1906”.'
     luot_2: dung
     luot_2_nguon: [ "https://www.henle.de/media/87/71/16/1697725809/1225-1697725809-sync.pdf" ]
     luot_2_ghi_chu: "Lời tựa Henle: 'something which Bartók had himself done on extended field trips since 1906'."
+    review: dung
   - id: n14
     cau: For Children dùng những bài hát thật của nông dân và trẻ em, đã được sưu tầm và ghi chép, của chính Bartók và của các nhà sưu tầm khác.
     loai: lich-su
@@ -177,10 +181,11 @@ nhan_dinh:
     loai: nam
     nguon: [ henle-hn1225-vorwort, henle-hn1225 ]
     ket_qua: dung
-    ghi_chu: 'Henle: "between 1908 and 1911 Bartók composed ... For Children"; "Bartók was apparently commissioned to write For Children by the Hungarian publisher Károly Rozsnyai". IMSLP ghi 1908-09 (năm sáng tác chung); trang viết theo Henle cho cả tập.'
+    ghi_chu: 'Henle: "between 1908 and 1911 Bartók composed ... For Children"; "Bartók was apparently commissioned to write For Children by the Hungarian publisher Károly Rozsnyai". IMSLP ghi 1908-09 (năm sáng tác chung); trang viết theo Henle cho cả tập. Review (Claude Opus, 16/11/2026): lời tựa Henle: “between 1908 and 1911 Bartók composed his first pedagogical collection For Children”, “apparently commissioned to write For Children by the Hungarian publisher Károly Rozsnyai”.'
     luot_2: dung
     luot_2_nguon: [ "https://www.henle.de/media/87/71/16/1697725809/1225-1697725809-sync.pdf" ]
     luot_2_ghi_chu: "Henle: 'between 1908 and 1911 … apparently commissioned … by the Hungarian publisher Károly Rozsnyai'. Bìa bản quét: Rozsnyai Károly, Budapest."
+    review: dung
   - id: n16
     cau: Bản in đầu ra thành bốn tập, tập I–II (1909) dựa trên nhạc Hungary, tập III–IV (1911) trên dân ca Slovakia, tổng cộng 85 bài.
     loai: so-lieu
@@ -240,33 +245,37 @@ nhan_dinh:
     loai: lich-su
     nguon: [ henle-hn1225-vorwort, henle-hn1225, imslp-sz42 ]
     ket_qua: da-sua
-    ghi_chu: 'Sửa theo lượt 2: câu cũ "bỏ hai bài, đặt tên cho mọi bài" sai: Henle chỉ nói hai bài bỏ ở phần Hungary (số 25, 29), cả bộ từ 85 xuống 79 bài (IMSLP); mục lục bản sửa trên trang Henle còn nhiều bài không tên (số 3, 11, 12, 14, 15…) dù câu giới thiệu ghi "every movement". Câu hỏi 1 sửa lời giải thích theo. Nguồn cũ: Henle: "in autumn 1943, together with his new publisher Boosey & Hawkes, he planned a new edition ... completely revised the collection"; "completed his revision by the end of 1943"; "As well as the inclusion of metronome markings and durations ... also revised the musical text, in particular the harmony. Two pieces from the early version (nos. 25 and 29 there) were deleted." Tên bài: trang sản phẩm. Sang Mỹ: tiểu sử Henle "1940 Emigrates to the United States".'
+    ghi_chu: 'Sửa theo lượt 2: câu cũ "bỏ hai bài, đặt tên cho mọi bài" sai: Henle chỉ nói hai bài bỏ ở phần Hungary (số 25, 29), cả bộ từ 85 xuống 79 bài (IMSLP); mục lục bản sửa trên trang Henle còn nhiều bài không tên (số 3, 11, 12, 14, 15…) dù câu giới thiệu ghi "every movement". Câu hỏi 1 sửa lời giải thích theo. Nguồn cũ: Henle: "in autumn 1943, together with his new publisher Boosey & Hawkes, he planned a new edition ... completely revised the collection"; "completed his revision by the end of 1943"; "As well as the inclusion of metronome markings and durations ... also revised the musical text, in particular the harmony. Two pieces from the early version (nos. 25 and 29 there) were deleted." Tên bài: trang sản phẩm. Sang Mỹ: tiểu sử Henle "1940 Emigrates to the United States". Review (Claude Opus, 16/11/2026): câu mới ở dòng 30 của trang (“bỏ bớt một số bài (cả tập còn 79 bài), đặt tên cho nhiều bài”) và lời giải thích câu hỏi 1 đã theo lượt 2. Lời tựa Henle: self-imposed exile in America, autumn 1943 với Boosey & Hawkes, completely revised, completed by the end of 1943, metronome markings and durations, harmony, nos. 25 và 29 deleted; IMSLP: 85 bài (bản đầu), 79 bài (bản sửa). Đúng.'
     luot_2: sai
     luot_2_nguon: [ "https://www.henle.de/media/87/71/16/1697725809/1225-1697725809-sync.pdf", "https://www.henle.de/en/For-Children-Volume-I/HN-1225", "https://imslp.org/wiki/For_Children,_Sz.42_(Bartók,_Béla)" ]
     luot_2_ghi_chu: "câu đúng: Cuối năm 1943, khi đã sang Mỹ, Bartók sửa toàn bộ tập nhạc cho Boosey & Hawkes: thêm số máy đếm nhịp và thời lượng, sửa hòa âm, bỏ hai bài của phần Hungary (số 25 và 29 của bản đầu), đặt tên cho nhiều bài.; Henle: 'two pieces from the early version (nos. 25 and 29 there) were deleted': đó là hai bài của phần Hungary (tập I–II); cả bộ từ 85 xuống 79 bài (IMSLP) nên bỏ sáu bài. Mục lục Henle HN 1225 vẫn để nhiều bài không tên (số 3, 11, 12, 14, 15…), dù câu giới thiệu của Henle nói 'gave every movement a title'. Các ý khác (cuối 1943, Boosey & Hawkes, số máy đếm nhịp, thời lượng, hòa âm) đúng."
+    review: dung
   - id: n23
     cau: Bản sửa in năm 1946, sau khi Bartók mất (26/9/1945).
     loai: nam
     nguon: [ henle-hn1225-vorwort ]
     ket_qua: dung
-    ghi_chu: 'Henle: "Boosey & Hawkes only issued the revised edition in 1946 ... shortly after Bartók had succumbed to a severe illness (leukaemia) on 26 September 1945."'
+    ghi_chu: 'Henle: "Boosey & Hawkes only issued the revised edition in 1946 ... shortly after Bartók had succumbed to a severe illness (leukaemia) on 26 September 1945." Review (Claude Opus, 16/11/2026): lời tựa Henle: B&H “only issued the revised edition in 1946”, Bartók mất “on 26 September 1945”.'
     luot_2: dung
     luot_2_nguon: [ "https://www.henle.de/media/87/71/16/1697725809/1225-1697725809-sync.pdf" ]
     luot_2_ghi_chu: "Henle: 'Boosey & Hawkes only issued the revised edition in 1946 … shortly after Bartók had succumbed … on 26 September 1945'."
+    review: dung
   - id: n24
     cau: Số 1 và số 6 giữ nguyên số thứ tự ở bản sửa.
     loai: cau-truc
     nguon: [ henle-hn1225-vorwort, henle-hn1225 ]
     ket_qua: dung
-    ghi_chu: 'Bảng đổi số của Henle: bản đầu tập I–II 1–24 = bản sửa tập I 1–24. Trang sản phẩm HN 1225 (bản sửa): No. 1 Children at Play, No. 6 Study for the Left Hand; nhạc trong bản quét 1909 khớp hai bài này (bản thu MCPP mang hai tên ấy).'
+    ghi_chu: 'Bảng đổi số của Henle: bản đầu tập I–II 1–24 = bản sửa tập I 1–24. Trang sản phẩm HN 1225 (bản sửa): No. 1 Children at Play, No. 6 Study for the Left Hand; nhạc trong bản quét 1909 khớp hai bài này (bản thu MCPP mang hai tên ấy). Review (Claude Opus, 16/11/2026): bảng đổi số trong lời tựa Henle: bản đầu tập I–II số 1–24 = bản sửa tập I số 1–24.'
     luot_2: dung
     luot_2_nguon: [ "https://www.henle.de/media/87/71/16/1697725809/1225-1697725809-sync.pdf", "https://www.henle.de/en/For-Children-Volume-I/HN-1225" ]
     luot_2_ghi_chu: "Bảng đổi số trong lời tựa Henle: bản đầu 1–24 → bản sửa 1–24. Mục lục Henle: 'No. 1 Children at Play', 'No. 6 Study for the Left Hand'."
+    review: dung
   - id: n25
     cau: Trích đoạn và mô tả trên trang theo bản in năm 1909.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Hai khối trích đoạn (khối 1, 2) chép từ rozsnyai-1909, có ghi "(bản in 1909)" trong tiêu đề; mọi câu về cấu trúc (n4, n9, n30–n40, n42–n47, n50) đối chiếu bản quét.'
+    review: dung
+    ghi_chu: 'Hai khối trích đoạn (khối 1, 2) chép từ rozsnyai-1909, có ghi "(bản in 1909)" trong tiêu đề; mọi câu về cấu trúc (n4, n9, n30–n40, n42–n47, n50) đối chiếu bản quét. Review (Claude Opus, 16/11/2026): tiêu đề khối 1, 2 ghi “(bản in 1909)”, dòng 30 và 78 của trang nói trích đoạn theo bản in 1909; nốt và các câu cấu trúc đã so lại với bản quét (khuong_nhac khối 1, 2; n4, n38, n40, n44).'
   - id: n26
     cau: Bartók cũng chơi các bài trong tập ở những buổi hòa nhạc của mình.
     loai: lich-su
@@ -281,15 +290,17 @@ nhan_dinh:
     loai: lich-su
     nguon: [ henle-hn1225-comments, henle-hn1225-vorwort ]
     ket_qua: dung
-    ghi_chu: 'Henle Comments, Rec-B3: "Recording of Bartók''s broadcast radio concert of nos. 3 – 4, 6, 10, 12 – 13, 15, 18 – 19, 21, 26, 34 – 35, 31, 30 from vol. I on 2 (?) January 1945 (New Jersey Kossuth Radio)". Số theo bản sửa; số 6 trùng ở hai bản (n24).'
+    ghi_chu: 'Henle Comments, Rec-B3: "Recording of Bartók''s broadcast radio concert of nos. 3 – 4, 6, 10, 12 – 13, 15, 18 – 19, 21, 26, 34 – 35, 31, 30 from vol. I on 2 (?) January 1945 (New Jersey Kossuth Radio)". Số theo bản sửa; số 6 trùng ở hai bản (n24). Review (Claude Opus, 16/11/2026): Henle Comments, Rec-B3: buổi hòa nhạc phát thanh 2 (?) tháng 1/1945 (New Jersey “Kossuth” Radio), số 3–4, 6, 10, 12–13, 15, 18–19, 21, 26, 34–35, 31, 30 của tập I; lời tựa: “a similar selection in January 1945 in a broadcast radio concert”.'
     luot_2: dung
     luot_2_nguon: [ "https://www.henle.de/media/3a/ac/86/1697725627/1225-1697725627-sync.pdf" ]
     luot_2_ghi_chu: "Henle Comments, nguồn Rec-B3: buổi hòa nhạc phát thanh ngày 2(?) tháng 1/1945 (New Jersey 'Kossuth' Radio) gồm số 3–4, 6, 10, 12–13, 15, 18–19, 21, 26, 34–35, 31, 30 của tập I."
+    review: dung
   - id: n28
     cau: Link "Thế kỷ 20" (/opus/lich-su/thoi-ky/the-ky-20/) cho Bartók và việc dùng dân ca ở thế kỷ 20.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Trang lich-su/thoi-ky/the-ky-20 có bảng xu hướng "Dân tộc ... Bartók, Kodály" và nói Bartók rời quê hương.'
+    review: dung
+    ghi_chu: 'Trang lich-su/thoi-ky/the-ky-20 có bảng xu hướng "Dân tộc ... Bartók, Kodály" và nói Bartók rời quê hương. Review (Claude Opus, 16/11/2026): trang lich-su/thoi-ky/the-ky-20 có dòng xu hướng “Dân tộc” (dựa vào nhạc dân gian, thu thập và ghi âm dân ca thật; Bartók, Kodály…) và nhắc Bartók rời quê hương; có trong bản xem, link không thành “sắp có”.'
   - id: n29
     cau: Bản thu gợi ý là của nhóm sư phạm piano Mississippi College, đăng trên IMSLP.
     loai: ten
@@ -376,10 +387,11 @@ nhan_dinh:
     loai: cau-truc
     nguon: [ rozsnyai-1909 ]
     ket_qua: dung
-    ghi_chu: 'Ô 29 "p"; tay trái nghỉ ô 29, 31, 33, 35, đánh Sol3–Si3 ô 30, 32, 34; từ ô 36 đánh liền Fa3–Si♭3. Mốc 51 s = 29,78 + 21,27 s.'
+    ghi_chu: 'Ô 29 "p"; tay trái nghỉ ô 29, 31, 33, 35, đánh Sol3–Si3 ô 30, 32, 34; từ ô 36 đánh liền Fa3–Si♭3. Mốc 51 s = 29,78 + 21,27 s. Review (Claude Opus, 16/11/2026): bản quét tr. 6 hàng 5: ô 29 p, tay trái nghỉ ô 29, 31, 33, 35, đánh Sol–Si (ngón 1 3) ô 30, 32, 34; tr. 7: từ ô 36 Fa–Si♭ (2 4) liền.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/893790" ]
     luot_2_ghi_chu: Ô 29 p, tay trái nghỉ; ô 30 Sol–Si (ngón 1 3); ô 31 nghỉ, 32 đánh, 33 nghỉ, 34 đánh…; từ ô 36 tay trái đánh liền (Fa–Si giáng).
+    review: dung
   - id: n39
     cau: 'Số 6, lần 4 (ô 41–49, pp): nhỏ hơn nữa; tay trái mở bằng quãng Fa–Đô.'
     loai: cau-truc
@@ -394,10 +406,11 @@ nhan_dinh:
     loai: cau-truc
     nguon: [ rozsnyai-1909 ]
     ket_qua: dung
-    ghi_chu: 'Ô 50 tay phải nghỉ (tay trái Rê–Si♭); ô 51 "ppp" Mi4 Fa4 Rê4, ô 54 Mi4 Fa4 Rê4, Rê ngân tới ô 57; tay trái Rê3–La3 ở ô 52, 53, 55, 57. Mốc 67 s = 29,78 + 36,9 s (ô 50; Mi4 ô 51 ở 37,71 s).'
+    ghi_chu: 'Ô 50 tay phải nghỉ (tay trái Rê–Si♭); ô 51 "ppp" Mi4 Fa4 Rê4, ô 54 Mi4 Fa4 Rê4, Rê ngân tới ô 57; tay trái Rê3–La3 ở ô 52, 53, 55, 57. Mốc 67 s = 29,78 + 36,9 s (ô 50; Mi4 ô 51 ở 37,71 s). Review (Claude Opus, 16/11/2026): bản quét tr. 7 hàng 3: ô 50 tay phải nghỉ, tay trái Rê–Si♭; ô 51 ppp Mi–Fa–Rê, ô 54 lặp; tay trái Rê–La (1 5) ô 52, 53, 55, 57, nghỉ ô 51, 54, 56.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/893790" ]
     luot_2_ghi_chu: "Trang 7: ô 50 tay phải nghỉ (tay trái còn Rê–Si giáng); ô 51 ppp Mi–Fa–Rê, ô 54 lặp; tay trái Rê–La ở ô 52, 53, 55, 57."
+    review: dung
   - id: n41
     cau: 'Mốc tham khảo của bảng "Theo dõi khi nghe" (1 10 14 18 23 30 33 42 51 60 67 giây, liền qua hai phần) khớp bản thu Mississippi College.'
     loai: so-lieu
@@ -430,10 +443,11 @@ nhan_dinh:
     loai: cau-truc
     nguon: [ rozsnyai-1909 ]
     ket_qua: dung
-    ghi_chu: 'Đếm ô trên bản quét: tr. 6 năm hàng × 7 ô = 35, tr. 7 hàng 7 + 7 + 8 = 22; tổng 57. Giai điệu ô 5–12, 17–24, 29–36, 41–48; Rê ngân 13–16, 25–28, 37–40, 49; kết 50–57.'
+    ghi_chu: 'Đếm ô trên bản quét: tr. 6 năm hàng × 7 ô = 35, tr. 7 hàng 7 + 7 + 8 = 22; tổng 57. Giai điệu ô 5–12, 17–24, 29–36, 41–48; Rê ngân 13–16, 25–28, 37–40, 49; kết 50–57. Review (Claude Opus, 16/11/2026): đếm lại trên bản quét: tr. 6 năm hàng 7 ô, tr. 7 hàng 7, 7, 8 ô: 57 ô; giai điệu ô 5–12, 17–24, 29–36, 41–48.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/893790" ]
     luot_2_ghi_chu: "Đếm: hệ 7+7+7+7+7 ô trang 6, 7+7+8 ô trang 7 = 57 ô; mở đầu 1–4, giai điệu 8 ô ở 5–12, 17–24, 29–36, 41–48, Rê ngân sau mỗi lần; đoạn kết 50–57 (8 ô)."
+    review: dung
   - id: n45
     cau: 'Giai điệu số 6 chỉ dùng năm nốt Rê, Mi, Fa, Sol, La và không đổi qua bốn lần; cái đổi là sắc thái (f, mf, p, pp, rồi ppp) và quãng của tay trái.'
     loai: cau-truc
@@ -457,7 +471,7 @@ nhan_dinh:
     loai: cau-truc
     nguon: [ rozsnyai-1909 ]
     ket_qua: dung
-    ghi_chu: 'Ô 1–19 tay trái Rê–La; các quãng khác ở n37–n40 (cả Sol–Si, Fa–Si♭, Fa–Đô).'
+    ghi_chu: 'Ô 1–19 tay trái Rê–La; các quãng khác ở n37–n40 (cả Sol–Si, Fa–Si♭, Fa–Đô, và Si2–Sol3 ở ô 46–47 theo review).'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/893790" ]
     luot_2_ghi_chu: "Ô 1–16 tay trái chỉ Rê–La; từ ô 20: Rê–Si giáng, Đô–La, Si–Sol; lần 3 còn Sol–Si, Fa–Si giáng; lần 4 Fa–Đô."
@@ -465,7 +479,8 @@ nhan_dinh:
     cau: Link "Điệu thức" (/opus/nhac-ly/16-dieu-thuc-ngu-cung/) cho hai nốt Si và Si giáng trong một bài không có hóa biểu.
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'Trang nhac-ly/16-dieu-thuc-ngu-cung có mục "Điệu thức". Bài VI có Si (Si2–Sol3, Sol3–Si3) và Si♭ (Rê–Si♭, Fa–Si♭) ở tay trái (n37–n40).'
+    review: dung
+    ghi_chu: 'Trang nhac-ly/16-dieu-thuc-ngu-cung có mục "Điệu thức". Bài VI có Si (Si2–Sol3, Sol3–Si3) và Si♭ (Rê–Si♭, Fa–Si♭) ở tay trái (n37–n40). Review (Claude Opus, 16/11/2026): trang nhac-ly/16-dieu-thuc-ngu-cung có mục “Điệu thức”, bảng Rê Dorian (thứ, bậc 6 nâng) và lời giải “Rê Dorian có Si tự nhiên thay vì Si♭”: đủ để người đọc hiểu vì sao bài không hóa biểu có cả Si và Si♭. Bản quét còn Si tự nhiên ở tay trái ô 46–47 (Rê–Si, ngón 1 5), không đổi câu.'
   - id: n49
     cau: Trích đoạn số 1 ô 1–4 và số 6 ô 5–8 chép tay từ bản in đầu (Rozsnyai, Budapest, 1909); số ngón tay phải như bản in ghi; bản in chỉ ghi Allegro, tốc độ của trình phát chỉ là gợi ý.
     loai: cau-truc
@@ -560,7 +575,8 @@ nhan_dinh:
     cau: 'Link trong trang: piano/tac-pham/schumann-album, piano/hai-tay/#3-legato-mot-tay-staccato-tay-kia, nhac-ly/14-ky-hieu-bieu-dien/#cach-dien-tau-articulation, piano/tac-pham-theo-cap, luyen-tap/thu-am đúng trang và mục được nói tới.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'hai-tay: mục "### 3. Legato một tay, staccato tay kia"; 14-ky-hieu-bieu-dien: "## Cách diễn tấu (articulation)"; tac-pham-theo-cap: bảng chặng 2 có Bartók For Children; luyen-tap/thu-am: công cụ thu âm. tests/link.test.mjs kiểm trang và #mục có thật.'
+    review: dung
+    ghi_chu: 'hai-tay: mục "### 3. Legato một tay, staccato tay kia"; 14-ky-hieu-bieu-dien: "## Cách diễn tấu (articulation)"; tac-pham-theo-cap: bảng chặng 2 có Bartók For Children; luyen-tap/thu-am: công cụ thu âm. tests/link.test.mjs kiểm trang và #mục có thật. Review (Claude Opus, 16/11/2026): bản xem có id 3-legato-mot-tay-staccato-tay-kia (piano/hai-tay, “### 3. Legato một tay, staccato tay kia”) và cach-dien-tau-articulation (nhac-ly/14-ky-hieu-bieu-dien, bảng chấm, luyến, gạch ngang); piano/tac-pham/schumann-album, piano/tac-pham-theo-cap (Chặng 2 có For Children), luyen-tap/thu-am có trang; trang dựng không có nhãn “sắp có”.'
   - id: n60
     cau: 'Vì sao nên học (gạch đầu dòng 2–3): mỗi bài là một bản nhạc trọn vẹn; hai bài dạy hai kỹ năng như mô tả.'
     loai: khuyen-tap
@@ -583,8 +599,9 @@ nhan_dinh:
     cau: 'Ba bài tập chuẩn bị soạn riêng cho trang và lời dùng kèm (giữ nốt, đặt sẵn thế tay, tập p rồi f).'
     loai: khuyen-tap
     nguon: []
-    ket_qua: khong-can-nguon
-    ghi_chu: Khuông kiểm ở khuong_nhac khối 3–5.
+    ket_qua: da-sua
+    review: sai
+    ghi_chu: 'Khuông kiểm ở khuong_nhac khối 3–5. Review (Claude Opus, 16/11/2026): lời dưới bài tập 1 (dòng 144 của trang) viết “nốt có gạch ngang giữ đủ hai phách”: Đô có gạch ngang ở ô 2, 4 là c2 với L:1/8, tức nốt đen, một phách của nhịp 2/4. Câu đúng: “nốt có gạch ngang giữ đủ một phách”. Phần còn lại của lời dùng kèm đúng với khối 3–5. Lượt 1 đã sửa theo review (16/11/2026): "giữ đủ một phách"; thêm, theo gợi ý của review, lời bài tập 2 "như sau mỗi lần giai điệu" thành "như sau ba lần đầu của giai điệu" (lần 4 Rê chỉ ngân ô 48–49).'
   - id: n64
     cau: 'Kế hoạch tập 3 tuần, khoảng 20 phút mỗi ngày, tốc độ máy đếm nhịp gợi ý từng tuần.'
     loai: khuyen-tap
@@ -602,39 +619,42 @@ nhan_dinh:
     loai: khuyen-tap
     nguon: []
     ket_qua: khong-can-nguon
+    ghi_chu: 'Review (Claude Opus, 16/11/2026): đọc bảy dòng của mục “Lỗi thường gặp” (dòng 212–218 của trang): mỗi dòng ứng một chỗ khó đã kiểm với bản quét (dấu chấm và luyến, tay trái liền, hai nốt Sol câu b, tay trái to hơn giai điệu, chậm lại khi nhỏ dần, cổ tay cứng, đếm thiếu ô Rê ngân); không có điều cần nguồn hay điều y khoa (mỏi tay là lời dặn kỹ thuật). Đúng nhãn khuyen-tap.'
     luot_2: khong-chac
     luot_2_ghi_chu: Câu chỉ ghi 'bảy dòng', không có chữ các lỗi; lượt 2 không được mở trang nên không đánh giá được.
+    review: dung
   - id: n67
     cau: 'Câu hỏi 2–4 (dấu luyến của số 1; điều thay đổi qua bốn lần của số 6; cách tập quãng lặp) và lời giải thích.'
     loai: cau-truc
     nguon: [ rozsnyai-1909 ]
     ket_qua: dung
-    ghi_chu: 'Câu 2 như n50; câu 3 như n45, n47; câu 4 là lời khuyên như n62. Lời giải thích không dựa vào vị trí lựa chọn.'
+    ghi_chu: 'Câu 2 như n50; câu 3 như n45, n47; câu 4 là lời khuyên như n62. Lời giải thích không dựa vào vị trí lựa chọn. Review (Claude Opus, 16/11/2026): đọc chữ câu hỏi 2–4 và lời giải thích (dòng 236–250 của trang): câu 2 khớp bản quét ô 1–2 số 1 (n50); câu 3 khớp n45, n47 (giai điệu giữ nguyên, f xuống pp, ppp ở đoạn kết, tay trái đổi quãng từ ô 20); câu 4 là lời khuyên như bảng Chỗ khó, bàn đạp như n56. Mỗi câu một đáp án đúng, lời giải thích không dựa vào vị trí lựa chọn.'
     luot_2: khong-chac
     luot_2_ghi_chu: Danh sách chỉ tóm tắt đề câu hỏi, không có chữ câu hỏi và lời giải thích, mà lượt 2 không được mở trang. Các ý được nêu (vị trí dấu luyến số 1; bốn lần số 6 đổi sắc thái và quãng tay trái) khớp bản in như n45, n50.
+    review: dung
 khuong_nhac:
   - khoi: 1
     loai: trich-doan
     kiem: [ cu-phap, nhip, giong, not, so-ngon, doi-chieu-an-ban ]
     ket_qua: dung
-    ghi_chu: 'Số 1 ô 1–4, 2/4, L:1/8, K:C, hai khuông khóa Sol. Ấn bản: Rozsnyai 1909 (rozsnyai-1909, tr. 2), chép tay, đối chiếu từng nốt trên ảnh 300–400 dpi. Tay phải: Sol5(chấm, 4) (Sol5 4, La5 chấm 5) (La5 5 | Sol5 chấm 4) (Sol5 4, Mi5 đen gạch ngang) | Fa5(chấm 3) (Fa5 3, Rê5 chấm 1) (Rê5 1 | Mi5 chấm 3) (Mi5 3, Đô5 đen gạch ngang). Tay trái: Mi4 Sol4 Fa4 Sol4 | Mi4 Sol4 Đô4 Sol4 | Rê4 Sol4 Fa4 Sol4 | Đô4 Sol4 Rê4 Sol4, "sempre legato". Khớp. Khác bản in: bỏ số ngón tay trái ô 1 (bản quét in mờ, chữ số dưới Mi4 không đọc chắc là 3); "p semplice" ghi thành !p! (chữ semplice ở câu dưới khuông, n55); Q:1/4=96 là của trang.'
+    ghi_chu: 'Số 1 ô 1–4, 2/4, L:1/8, K:C, hai khuông khóa Sol. Ấn bản: Rozsnyai 1909 (rozsnyai-1909, tr. 2), chép tay, đối chiếu từng nốt trên ảnh 300–400 dpi. Tay phải: Sol5(chấm, 4) (Sol5 4, La5 chấm 5) (La5 5 | Sol5 chấm 4) (Sol5 4, Mi5 đen gạch ngang) | Fa5(chấm 3) (Fa5 3, Rê5 chấm 1) (Rê5 1 | Mi5 chấm 3) (Mi5 3, Đô5 đen gạch ngang). Tay trái: Mi4 Sol4 Fa4 Sol4 | Mi4 Sol4 Đô4 Sol4 | Rê4 Sol4 Fa4 Sol4 | Đô4 Sol4 Rê4 Sol4, "sempre legato". Khớp. Khác bản in: bỏ số ngón tay trái ô 1 (bản quét in mờ, chữ số dưới Mi4 không đọc chắc là 3); "p semplice" ghi thành !p! (chữ semplice ở câu dưới khuông, n55); Q:1/4=96 là của trang. Review (Claude Opus, 16/11/2026): so từng nốt với bản quét tr. 2 (300 dpi): nốt, trường độ, chấm, luyến (nốt 2–3, nốt 4 sang nốt đầu ô sau), gạch ngang ở Mi5 ô 2 và Đô5 ô 4 (nốt đen), số ngón tay phải 4 4 5 5 | 4 4 | 3 3 1 1 | 3 3, p semplice, sempre legato, tay trái Mi Sol Fa Sol | Mi Sol Đô Sol | Rê Sol Fa Sol | Đô Sol Rê Sol: khớp. Bản quét ghi ngón tay trái 3 (dưới Mi4) và 1 (dưới Sol4) ở ô 1; trích đoạn bỏ, không sai.'
   - khoi: 2
     loai: trich-doan
     kiem: [ cu-phap, nhip, giong, not, so-ngon, doi-chieu-an-ban ]
     ket_qua: dung
-    ghi_chu: 'Số 6 ô 5–8, 2/4, K:C (không hóa biểu). Ấn bản: rozsnyai-1909, tr. 6. Tay phải: La4 ×4 staccato (ngón 2 1 2 1), "f molto marcato" | (Sol4 La4) luyến (2 3), Fa4 đen gạch ngang (1) | La4 ×4 staccato | (Sol4 La4), Fa4 gạch ngang. Tay trái: Rê3–La3 bốn móc đơn mỗi ô (không chấm ở ô 5–8; chấm chỉ ở ô 1). Khớp. Q:1/4=132 là của trang.'
+    ghi_chu: 'Số 6 ô 5–8, 2/4, K:C (không hóa biểu). Ấn bản: rozsnyai-1909, tr. 6. Tay phải: La4 ×4 staccato (ngón 2 1 2 1), "f molto marcato" | (Sol4 La4) luyến (2 3), Fa4 đen gạch ngang (1) | La4 ×4 staccato | (Sol4 La4), Fa4 gạch ngang. Tay trái: Rê3–La3 bốn móc đơn mỗi ô (không chấm ở ô 5–8; chấm chỉ ở ô 1). Khớp. Q:1/4=132 là của trang. Review (Claude Opus, 16/11/2026): so với bản quét tr. 6 hàng 1–2: La4 ×4 có chấm (ngón 2 1 2 1), f molto marcato, (Sol La) luyến ngón 2 3, Fa4 nốt đen gạch ngang ngón 1; ô 7 có chấm, ô 8 (Sol La) luyến và Fa gạch ngang; tay trái Rê3–La3 móc đơn không chấm: khớp.'
   - khoi: 3
     loai: vi-du-soan
     kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
     ket_qua: dung
-    ghi_chu: '4 ô 2/4, mỗi ô 4 móc đơn. Đúng điều trang nói: nốt chấm, cặp luyến không bắt đầu ở phách (như số 1), nốt gạch ngang hai phách ở ô 2, 4. Tay trái Đô3, Sol3, Đô3, Sol3–Đô3: hòa âm I–V–I–V–I hợp giai điệu. Ngón tay phải 1-1-3-3-2-2-1, 3-3-4-4-3-2-1: chơi được ở chặng 2.'
+    ghi_chu: '4 ô 2/4, mỗi ô 4 móc đơn. Đúng điều trang nói: nốt chấm, cặp luyến không bắt đầu ở phách (như số 1), nốt gạch ngang (nốt đen, một phách) ở ô 2, 4. Lượt 1 viết nhầm "hai phách" ở đây và ở lời dưới bài tập; đã sửa theo review. Tay trái Đô3, Sol3, Đô3, Sol3–Đô3: hòa âm I–V–I–V–I hợp giai điệu. Ngón tay phải 1-1-3-3-2-2-1, 3-3-4-4-3-2-1: chơi được ở chặng 2. Review (Claude Opus, 16/11/2026): nốt, nhịp, ngón đúng và chơi được ở chặng 2 (tay trái C, = Đô3, G, = Sol3, ngón 5 và 1). SAI ở lời dưới khối (dòng 144 của trang) và ở ghi_chu này: Đô có gạch ngang (c2, L:1/8) là nốt đen, một phách của nhịp 2/4, không phải hai phách. Câu đúng: “nốt có gạch ngang giữ đủ một phách” (xem n63).'
   - khoi: 4
     loai: vi-du-soan
     kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
     ket_qua: dung
-    ghi_chu: '5 ô 2/4. Tay phải Rê4 nối dây năm ô (như Rê ngân sau mỗi lần giai điệu của số 6). Tay trái móc đơn: Rê–La, Rê–Si♭, Đô–La, Si–Sol (đều có trong số 6, n37), Rê–La trắng. Si♭ chỉ trong ô 2 (dấu hóa giữ tới hết ô). Ngón 5–1 cho Rê–La như bản in; quãng sáu Rê–Si♭, Đô–La, Si–Sol vừa tay người lớn.'
+    ghi_chu: '5 ô 2/4. Tay phải Rê4 nối dây năm ô (như Rê ngân sau mỗi lần giai điệu của số 6). Tay trái móc đơn: Rê–La, Rê–Si♭, Đô–La, Si–Sol (đều có trong số 6, n37), Rê–La trắng. Si♭ chỉ trong ô 2 (dấu hóa giữ tới hết ô). Ngón 5–1 cho Rê–La như bản in; quãng sáu Rê–Si♭, Đô–La, Si–Sol vừa tay người lớn. Review (Claude Opus, 16/11/2026): 5 ô đủ phách; Si♭ ở ô 2 giữ tới hết ô; các quãng Rê–La, Rê–Si♭, Đô–La, Si–Sol đều có trong bản quét số 6 (ô 1–28); ngón 5 và 1 cho Rê–La như bản in; đúng lời dưới khối. Nên sửa nhỏ: “như sau mỗi lần giai điệu” đúng cho ba lần đầu (Rê ngân 5 ô), lần 4 Rê chỉ ngân ô 48–49.'
   - khoi: 5
     loai: vi-du-soan
     kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
     ket_qua: dung
-    ghi_chu: '4 ô 2/4, hai khuông khóa Sol như số 1. Ô 2, 4: tay phải nốt trắng (Đô6, Mi5), tay trái hai cặp móc đơn luyến (Mi4–Rê4, Rê4–Đô4; Rê4–Đô4, Đô4–Si3): kiểu hỏi đáp của câu b, c (n43). Ô 1, 3 tay trái nghỉ. Ngón tay phải 1-2-5, 4-3-1 (Mi5–Sol5–Đô6: quãng sáu, chơi được); tay trái 1-2-2-3, 2-3-3-4.'
+    ghi_chu: '4 ô 2/4, hai khuông khóa Sol như số 1. Ô 2, 4: tay phải nốt trắng (Đô6, Mi5), tay trái hai cặp móc đơn luyến (Mi4–Rê4, Rê4–Đô4; Rê4–Đô4, Đô4–Si3): kiểu hỏi đáp của câu b, c (n43). Ô 1, 3 tay trái nghỉ. Ngón tay phải 1-2-5, 4-3-1 (Mi5–Sol5–Đô6: quãng sáu, chơi được); tay trái 1-2-2-3, 2-3-3-4. Review (Claude Opus, 16/11/2026): tay phải Mi5–Sol5–Đô6 ngón 1-2-5 (quãng sáu thứ, vừa tay), nốt trắng giữ hai phách ở ô 2, 4; tay trái hai cặp luyến, ngón hợp lý; đúng lời dưới khối và kiểu hỏi đáp ô 10, 12 của số 1 (bản quét tr. 2).'

@@ -141,7 +141,7 @@ K:C
 [V:LH] !5!C,4 | !1!G,4 | !5!C,4 | !1!G,2 !5!C,2 |]
 ```
 
-Tay trái chỉ giữ nốt dài để bạn tập trung vào tay phải. Nốt có dấu chấm ngắn và nhẹ; hai nốt trong dấu luyến liền, nốt sau nhẹ hơn; nốt có gạch ngang giữ đủ hai phách. Khi chắc, thử lại ô 1–4 của số 1.
+Tay trái chỉ giữ nốt dài để bạn tập trung vào tay phải. Nốt có dấu chấm ngắn và nhẹ; hai nốt trong dấu luyến liền, nốt sau nhẹ hơn; nốt có gạch ngang giữ đủ một phách. Khi chắc, thử lại ô 1–4 của số 1.
 
 ### 2. Tay phải giữ, tay trái đổi quãng
 
@@ -159,7 +159,7 @@ K:C
 [V:LH] [D,A,][D,A,][D,A,][D,A,] | [D,_B,][D,B,][D,B,][D,B,] | [C,A,][C,A,][C,A,][C,A,] | [B,,G,][B,,G,][B,,G,][B,,G,] | [D,A,]4 |]
 ```
 
-Tay phải giữ nốt Rê suốt năm ô, như sau mỗi lần giai điệu của số 6. Tay trái đánh móc đơn đều, đổi quãng mỗi ô: Rê–La (ngón 5 và 1), Rê–Si giáng, Đô–La, Si–Sol, rồi về Rê–La. Đặt sẵn thế tay của quãng mới ngay khi đánh nốt cuối ô trước. Tập ở *p*, rồi ở *f* mà cổ tay vẫn mềm.
+Tay phải giữ nốt Rê suốt năm ô, như sau ba lần đầu của giai điệu trong số 6. Tay trái đánh móc đơn đều, đổi quãng mỗi ô: Rê–La (ngón 5 và 1), Rê–Si giáng, Đô–La, Si–Sol, rồi về Rê–La. Đặt sẵn thế tay của quãng mới ngay khi đánh nốt cuối ô trước. Tập ở *p*, rồi ở *f* mà cổ tay vẫn mềm.
 
 ### 3. Tay phải giữ, tay trái đáp
 
