@@ -8,7 +8,7 @@ lan:
     nguoi:
       luot_1: Claude Opus 5.5 (lượt 1, them/clara-schumann-scherzo-2, 17/11/2026)
       luot_2: Claude Opus 5.5 (agent riêng, độc lập với lượt 1, 17/11/2026; 32 câu, 32 đúng)
-      review: null
+      review: "Claude (agent riêng, không làm lượt 1, lượt 2; 17/11/2026)"
       kiem_mau: null
 ghi_chu: 'Bản ghi mới (tools/them-tac-pham.mjs, 17/11/2026); khóa cả bản ghi. Nguồn chung với hồ sơ trang piano/tac-pham/clara-schumann-scherzo-2. ban_thu ghi bằng attach.py (chỉ dẫn link, một file, d = 251,48 s theo ffprobe; note ghi nhà phát hành Felipe Sarro như lộ trình dặn). Sơ đồ (hinh) chia theo thời gian trên bản thu. them_ngay là dữ liệu nội bộ, không có nhận định.'
 nguon:
@@ -39,46 +39,55 @@ nhan_dinh:
     truong: [ ten, tac_gia, danh_muc, loai ]
     nguon: [ imslp-op14, breitkopf-1879 ]
     ket_qua: dung
+    ghi_chu: 'Review (Claude, 17/11/2026): IMSLP (API wikitext): Key c; tên trang Scherzo No.2, Op.14 (Schumann, Clara).'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Scherzo_No.2,_Op.14_(Schumann,_Clara)" ]
     luot_2_ghi_chu: "IMSLP: Scherzo No.2, Op.14, Key c, Schumann, Clara. 'Loại bài học' là phân loại của site."
+    review: dung
   - id: n2
     cau: 'Giọng Đô thứ, nhịp 3/4; chip "Đô thứ · 3/4".'
     loai: cau-truc
     truong: [ giong, nhip, chip ]
     nguon: [ imslp-op14, breitkopf-1879 ]
     ket_qua: dung
+    ghi_chu: 'Review (Claude, 17/11/2026): bản quét tr. 2 hệ 1: ba dấu giáng, 3/4.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Scherzo_No.2,_Op.14_(Schumann,_Clara)" ]
     luot_2_ghi_chu: "IMSLP Key c; bản quét #611197 trang 2 hệ 1: ba giáng, 3/4."
+    review: dung
   - id: n3
     cau: 'Thời kỳ: Lãng mạn.'
     loai: lich-su
     truong: [ thoi_ky ]
     nguon: [ imslp-op14 ]
     ket_qua: dung
-    ghi_chu: 'Viết năm 1845; nha-soan-nhac.yml xếp clara-schumann thời kỳ Lãng mạn.'
+    ghi_chu: 'Viết năm 1845; nha-soan-nhac.yml xếp clara-schumann thời kỳ Lãng mạn. Review (Claude, 17/11/2026): IMSLP (API wikitext): Piece Style Romantic.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Scherzo_No.2,_Op.14_(Schumann,_Clara)" ]
     luot_2_ghi_chu: "IMSLP Piece Style: Romantic."
+    review: dung
   - id: n4
     cau: 'Chặng 6, Grade 8 (ước lượng); chip ≈ Grade 8; dòng Độ khó: Op. 14 không có trong các đề cương ABRSM đã đọc; ABRSM 2025–2026 xếp Op. 15 số 4 (Scherzo) ở Grade 7 và Op. 15 số 2 ở Grade 8.'
     loai: cap-do
     truong: [ chang, grade, chip, thong_tin ]
     nguon: [ abrsm-2025, cap-do ]
     ket_qua: dung
+    ghi_chu: 'Review (Claude, 17/11/2026): PDF ABRSM 2025 & 2026: tr. 40 (Grade 7) Op. 15 số 4, tr. 43 (Grade 8) Op. 15 số 2; không có Op. 14.'
     luot_2: dung
     luot_2_nguon: [ "https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26%202026%20Prac%20syllabus%2020240524_access.pdf" ]
     luot_2_ghi_chu: "Như n18 của trang: Op. 15 số 4 ở Grade 7 (tr. 40), Op. 15 số 2 ở Grade 8 (tr. 43); Op. 14 không có trong đề cương 2021–2028 đã đọc. Chặng 6 ứng Grade 7–8 trong src/data/cap-do.yml, khớp Grade 8 ước lượng."
+    review: dung
   - id: n5
     cau: 'Chip "Viết và in năm 1845"; dòng Sáng tác / xuất bản: viết năm 1845, Breitkopf & Härtel (Leipzig) in cùng năm; đề tặng bà Tutein, nhũ danh Siboni (theo IMSLP).'
     loai: nam
     truong: [ chip, thong_tin ]
     nguon: [ imslp-op14 ]
     ket_qua: dung
+    ghi_chu: 'Review (Claude, 17/11/2026): IMSLP (API wikitext): Year/Date of Composition 1845, First Publication 1845 Leipzig Breitkopf und Härtel, Dedication Madame Tutein née Siboni.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Scherzo_No.2,_Op.14_(Schumann,_Clara)" ]
     luot_2_ghi_chu: "IMSLP: Composition 1845; First Publication 1845, Leipzig: Breitkopf und Härtel; Dedication: Madame Tutein née Siboni."
+    review: dung
   - id: n6
     cau: 'Chip "Khoảng 4 phút".'
     loai: so-lieu
@@ -88,35 +97,40 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Scherzo_No.2,_Op.14_(Schumann,_Clara)" ]
     luot_2_ghi_chu: Bản thu Kolodin dài 251,48 s (ffprobe), khoảng 4 phút.
+    review: dung
   - id: n7
     cau: 'Dòng Tác phẩm: Deuxième Scherzo (Scherzo thứ hai) cho piano, Op. 14; bản Breitkopf in lại năm 1879 ghi Zweites Scherzo; Clara còn một Scherzo số 1, Op. 10.'
     loai: ten
     truong: [ thong_tin ]
     nguon: [ imslp-op14, breitkopf-1879 ]
     ket_qua: dung
-    ghi_chu: 'IMSLP Alternative Title: Deuxième Scherzo pour le Pianoforte, Op. 14. Bản quét tr. 2: "Zweites Scherzo."; bìa: Erstes Scherzo Op. 10.'
+    ghi_chu: 'IMSLP Alternative Title: Deuxième Scherzo pour le Pianoforte, Op. 14. Bản quét tr. 2: "Zweites Scherzo."; bìa: Erstes Scherzo Op. 10. Review (Claude, 17/11/2026): IMSLP (API wikitext): Alternative Title Deuxième Scherzo pour le Pianoforte, Op. 14; bản quét tr. 2 "Zweites Scherzo."; bìa "Erstes Scherzo … Op. 10".'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Scherzo_No.2,_Op.14_(Schumann,_Clara)" ]
     luot_2_ghi_chu: "IMSLP Alternative Title: Deuxième Scherzo pour le Pianoforte, Op. 14. Bản quét 1879 (#611197) ghi 'Zweites Scherzo' (trang 1 và đầu trang 2); bìa có 'Erstes Scherzo Op. 10'."
+    review: dung
   - id: n8
     cau: 'Dòng Giọng · nhịp · tốc độ: Đô thứ · 3/4 · Con fuoco (nồng nhiệt), nốt trắng chấm dôi = 88 (số in trên bản Breitkopf 1879); trio un poco più tranquillo (yên hơn một chút).'
     loai: so-lieu
     truong: [ thong_tin ]
     nguon: [ breitkopf-1879 ]
-    ket_qua: dung
+    ket_qua: da-sua
+    ghi_chu: 'Review (Claude, 17/11/2026): bản quét tr. 2, tr. 5 hệ 3 khớp. Sửa nhỏ: nghĩa Con fuoco "nồng nhiệt" thành "rực lửa" cho khớp src/data/thuat-ngu.yml (con-fuoco) và trang.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Scherzo_No.2,_Op.14_(Schumann,_Clara)" ]
     luot_2_ghi_chu: "Bản quét #611197 trang 2: Đô thứ, 3/4, Con fuoco, nốt trắng chấm dôi = 88; trang 5 hệ 2: un poco più tranquillo ở đầu trio."
+    review: dung
   - id: n9
     cau: 'Dòng Hình thức: scherzo – trio – scherzo trở lại (Tempo I) – đoạn kết; sơ đồ hinh: Scherzo (chủ đề f), Giai điệu mới (p), Scherzo (f, kết phần đầu), Trio (un poco più tranquillo, p), Scherzo (Tempo I), Coda (sempre f); độ dài theo bản thu (khoảng 4 phút 10 giây).'
     loai: cau-truc
     truong: [ thong_tin, hinh ]
     nguon: [ breitkopf-1879, kolodin-ban-thu ]
-    ket_qua: dung
-    ghi_chu: 'Độ dài ô (giây) 40, 21, 36, 84, 51, 18 theo mốc 0, 40, 61, 97, 181, 232, 250. Như n12, n13 của hồ sơ trang.'
+    ket_qua: da-sua
+    ghi_chu: 'Độ dài ô (giây) 40, 21, 36, 84, 51, 18 theo mốc 0, 40, 61, 97, 181, 232, 250. Như n12, n13 của hồ sơ trang. Review (Claude, 17/11/2026): mốc 61 của trang sửa thành 63 (hợp âm f Sol trưởng ở 63,1 s, xem n12 hồ sơ trang), nên độ dài hai ô đầu của hinh đổi: Giai điệu mới 21 thành 23, Scherzo (f, kết phần đầu) 36 thành 34; tổng không đổi. Các mốc khác của hinh (97, 181/182, 232) khớp đo lại.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Scherzo_No.2,_Op.14_(Schumann,_Clara)" ]
     luot_2_ghi_chu: "Bản quét #611197: scherzo f (trang 2), giai điệu p (trang 3 hệ 4), scherzo f kết phần đầu (trang 4–5, hợp âm f trang 5 hệ 2), trio (trang 5–6), Tempo I (trang 7), sempre f (trang 9). Bản thu 251,48 s = khoảng 4 phút 11 giây."
+    review: dung
   - id: n10
     cau: 'Kỹ năng chính (ky_nang_chinh, dòng Kỹ năng chính): hợp âm rải nhanh nối từ tay trái sang tay phải; hợp âm lớn có dấu nhấn; hai bè trong một tay ở trio; tương phản scherzo sôi nổi và trio êm, liền tiếng; giữ tốc độ nhanh, nhịp một phách mỗi ô.'
     loai: cau-truc
@@ -127,21 +141,26 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Scherzo_No.2,_Op.14_(Schumann,_Clara)" ]
     luot_2_ghi_chu: "Bản quét #611197: rải hợp âm nối tay trái sang tay phải (trang 2 hệ 1); hợp âm lớn có > (trang 2, 4, 7); trio tay phải hai bè (nốt dài và nốt đen bè trên, trang 6 hệ 1–2); trio p ben legato đối với scherzo f; nốt trắng chấm dôi = 88."
+    review: dung
   - id: n11
     cau: 'Dòng Bản nhạc: IMSLP có bản quét bản Breitkopf & Härtel (Pianoforte-Werke, 1879); đối chiếu: chép tay từ bản quét ấy (số bản in 15120; IMSLP #611197).'
     loai: so-lieu
     truong: [ thong_tin, doi_chieu ]
     nguon: [ imslp-op14, breitkopf-1879 ]
     ket_qua: dung
+    ghi_chu: 'Review (Claude, 17/11/2026): IMSLP wikitext: Breitkopf und Härtel, Leipzig, 1879, số bản in 15120; số 15120 in ở bìa và chân trang bản quét.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Scherzo_No.2,_Op.14_(Schumann,_Clara)" ]
     luot_2_ghi_chu: "IMSLP: file #611197, Pianoforte-Werke zu zwei Händen, Breitkopf und Härtel, Leipzig 1879, plate 15120; số 15120 in ở bìa và chân mỗi trang bản quét."
+    review: dung
   - id: n12
     cau: 'Bản thu: Luis Kolodin, CC BY-SA 4.0, ghi chú nhà phát hành Felipe Sarro; trang IMSLP Scherzo No.2, Op.14; link #292506, file PMLP90408-FSarro_ClaraSchumann_Scherzo_Op.14.mp3, 251,48 s.'
     loai: so-lieu
     truong: [ ban_thu ]
     nguon: [ imslp-op14, kolodin-ban-thu ]
     ket_qua: dung
+    ghi_chu: 'Review (Claude, 17/11/2026): IMSLP (API wikitext): File Name PMLP90408-FSarro_ClaraSchumann_Scherzo_Op.14.mp3, Kolodin, Luis=piano, {{Sarro}}, CC BY-SA 4.0.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Scherzo_No.2,_Op.14_(Schumann,_Clara)" ]
     luot_2_ghi_chu: "IMSLP: #292506, File PMLP90408-FSarro_ClaraSchumann_Scherzo_Op.14.mp3, Kolodin, Luis (piano), Publisher Felipe Sarro, CC BY-SA 4.0. ffprobe: 251,482 s."
+    review: dung

@@ -12,7 +12,7 @@ Clara Schumann viết hai bản scherzo cho piano. Bản thứ hai, Op. 14, ở 
 
 - **Ở chặng 6 của lộ trình.** Bài nhanh, nhiều hợp âm lớn và hợp âm rải qua hai tay, cần sức bền và tay trái chắc.
 - **Hai tay như một.** Hợp âm rải bắt đầu ở tay trái rồi tay phải nối tiếp, nên chỗ nối phải liền, không lộ ra là hai tay.
-- **Hai tính cách trong một bài.** Phần scherzo *Con fuoco* (nồng nhiệt), phần trio *un poco più tranquillo* (yên hơn một chút) và *ben legato* (thật liền tiếng).
+- **Hai tính cách trong một bài.** Phần scherzo *Con fuoco* (rực lửa), phần trio *un poco più tranquillo* (yên hơn một chút) và *ben legato* (thật liền tiếng).
 - **Một nghệ sĩ piano viết cho piano.** Clara Schumann là một trong những nghệ sĩ piano lừng danh nhất thế kỷ 19; đây là bài học tác phẩm đầu tiên của bà trên site.
 
 ## Bối cảnh
@@ -32,7 +32,7 @@ Bản thu gợi ý là của nghệ sĩ piano Luis Kolodin, đăng trên IMSLP. 
 3. Khi scherzo trở lại (*Tempo I*), nó có giống hệt lần đầu không?
 4. Bài kết bằng gì?
 
-::khoi-nghe{moc="0 40 61 69 95 97 106 182 232 246"}
+::khoi-nghe{moc="0 40 63 72 95 97 106 182 232 246"}
 
 ## Theo dõi khi nghe
 
@@ -77,7 +77,7 @@ V:RH clef=treble
 V:LH clef=bass
 K:Cm
 [V:RH] z6 | z !f!CEAce | z DFAda | gfd=BGF | E2 z2 z2 |
-[V:LH] !f!C,,G,,C,E,G,C | A,4 A,2 & [C,E,]6 | !>![C,D,-F,-A,]6 | [=B,,D,F,G,]2 z2 z2 | C,,G,,C,E,G,C |
+[V:LH] !f!C,,G,,C,E,G,C | A,4 A,2 & [C,E,]6 | !>!([C,D,-F,-A,]6 | [=B,,D,F,G,]2) z2 z2 | C,,G,,C,E,G,C |
 ```
 
 Ô 1: tay trái rải hợp âm Đô thứ từ Đô rất thấp lên Đô giữa. Ô 2–3: tay phải nối tiếp, hai lần lên cao, trên hợp âm La♭ trưởng rồi trên hợp âm có dấu nhấn. Ô 4: chuỗi đi xuống có Si♮, trên hợp âm Sol bảy của tay trái. Ô 5: về Mi♭ của Đô thứ, và tay trái bắt đầu lại.
@@ -174,7 +174,7 @@ Bản Breitkopf 1879 ghi *Con fuoco* và nốt trắng chấm dôi = 88: mỗi �
 
 ### Sắc thái
 
-Phần scherzo phần lớn to (*f*, *sf*), xen những đoạn nhỏ dần và một giai điệu *p*. Trio nhỏ (*p*) và liền tiếng. Đoạn kết *sempre f*: luôn to cho tới hết.
+Phần scherzo phần lớn to (*f*, *sf*), xen những đoạn nhỏ dần và một giai điệu *p*. Trio bắt đầu nhỏ (*p*) và liền tiếng; về sau có dấu *mf*, to hơn một chút. Đoạn kết *sempre f*: luôn to cho tới hết.
 
 ### Bàn đạp
 
