@@ -75,3 +75,7 @@ Claude (agent riêng, không làm lượt 1, lượt 2), 17/11/2026. Mọi nhậ
 ## File chủ repo phải tải
 
 Không có (bản quét #893630 đã tải; bản thu ở Commons).
+
+## Kiểm mẫu và khóa
+
+Claude (agent riêng) kiểm thay chủ repo 5 nhận định mẫu (trang n18, n20, n29, n32; bản ghi n4) trên bản quét, ABRSM, Henle và bản thu: 5 đúng. Khóa trang và bản ghi 17/11/2026.
