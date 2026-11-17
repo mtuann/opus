@@ -13,7 +13,7 @@ tac_pham: chaminade-automne
 - **Ở chặng 7 của lộ trình.** Đề cương RCM 2022 đưa *Études de concert* Op. 35 (bài bất kỳ) vào danh sách bằng ARCT, mức diploma, sau Grade 8.
 - **Giai điệu và lớp đệm trong cùng một tay.** Ở phần chậm, tay phải vừa hát giai điệu vừa chơi các cặp nốt đệm phía trên: phải tách hai lớp tiếng trong một bàn tay.
 - **Hai tính cách trái ngược.** Phần *Lento* cần tiếng đàn hát và bàn đạp kỹ; đoạn giữa cần ngón nhanh, hợp âm và quãng tám mạnh tới *fff*.
-- **Giữ một bài dài.** Bài dài khoảng sáu phút, đổi tốc độ nhiều lần (*stringendo*, *slargando*, *a Tempo*): tập giữ mạch cả bài.
+- **Giữ một bài dài.** Bài đổi tốc độ nhiều lần (*stringendo*, *slargando*, *a Tempo*): tập giữ mạch cả bài.
 - **Bài thứ hai của Chaminade trên site,** sau [*Pierrette*](/opus/piano/tac-pham/chaminade-pierrette/) ở chặng 6.
 
 ## Bối cảnh
@@ -33,7 +33,7 @@ Bản thu gợi ý là của nghệ sĩ piano eldüendesüarez, đăng trên Wik
 3. Trước khi phần đầu trở lại, có những chỗ dừng hẳn. Bạn đếm được mấy chỗ?
 4. Bài kết to hay nhỏ, nhanh hay chậm dần?
 
-::khoi-nghe{moc="0 26 47 67 105 117 127 136 160 187 200 224 237 265 307 348"}
+::khoi-nghe{moc="0 26 46 66 105 117 131 144 160 187 200 223 237 265 306 347"}
 
 ## Theo dõi khi nghe
 
@@ -191,10 +191,10 @@ Bản in ghi chỗ đạp (*Ped.*) và chỗ nhả (✱) gần như ở mọi ô
 - Các cặp nốt đệm to bằng giai điệu ở phần *Lento*.
 - Giữ bàn đạp qua chỗ đổi hòa âm, tiếng nhòe.
 - Đoạn giữa nhanh hơn ♩ = 84 ngay từ đầu, không còn chỗ để dồn.
-- *Ff* và *fff* gắt vì ép từ ngón và cổ tay cứng.
+- Tiếng *ff* và *fff* gắt vì ép từ ngón và cổ tay cứng.
 - Không chờ đủ các chỗ dừng trước khi phần đầu trở lại.
 - Chủ đề trở lại to bằng lần đầu, quên *pp*.
-- *Rit. a piacere* ở cuối kéo quá dài, mất mạch.
+- Chỗ *rit. a piacere* cuối bài kéo quá dài, mất mạch.
 
 ## Học tiếp
 
