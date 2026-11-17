@@ -21,7 +21,7 @@ Lộ trình dặn tìm lại bản thu mở cho Op. 15 trước khi viết. Tran
 
 ## Kiểm định
 
-Lượt 1: 22 nhận định trang, 12 bản ghi, 4 khuông. Lượt 2 (agent riêng, 32 câu): 32 đúng; ghi chú: trio có một dấu *mf* (tr. 5 hệ 4), chữ *ben legato* ở nửa sau tr. 5 hệ 2; nguồn thêm NDB, Britannica, Treccani.
+Lượt 1: 22 nhận định trang, 12 bản ghi, 4 khuông. Lượt 2 (agent riêng, 32 câu): 32 đúng; ghi chú: trio có một dấu *mf* (tr. 5 hệ 4), chữ *ben legato* ở nửa sau tr. 5 hệ 2; nguồn thêm NDB, Britannica, Treccani. Review (agent thứ ba) sửa năm chỗ (mục Review). Kiểm mẫu: Claude kiểm thay chủ repo, 5/5 đúng. Khóa 17/11/2026; `npm run build` bản thật, `npm test`, Chromium đạt. Gộp `main` ở máy, chưa push.
 
 ## Review
 
