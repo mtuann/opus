@@ -169,7 +169,7 @@ function cacO(than, L, ghep, M) {
 
 /** Ô nhịp sai độ dài của một khối: danh sách chuỗi "bè …, ô …: … khác …". */
 export function oSai(abc) {
-	// phần đầu (tới K:) đặt nhịp, độ dài mặc định; dòng M:, L: trong phần thân áp cho bè đang viết, từ chỗ đó
+	// phần đầu (tới K:) đặt nhịp, độ dài mặc định; dòng M:, L: trong phần thân áp cho mọi bè, từ chỗ đó
 	let L = ps(1, 8);
 	let nhip = { M: null, ghep: false };
 	const dong = abc.split('\n');
@@ -180,11 +180,20 @@ export function oSai(abc) {
 		else if (/^M:/.test(l)) nhip = docNhip(l.slice(2));
 	}
 	const be = new Map();
+	// dòng M:, L: giữa phần thân áp cho mọi bè từ chỗ đó (như abcjs), kể cả bè bắt đầu sau dòng ấy; [M:…] trong dòng
+	// chỉ áp cho bè của dòng
+	const chung = [];
+	const vao = (k, x) => {
+		if (!be.has(k)) be.set(k, [...chung]);
+		be.get(k).push(x);
+	};
 	let k = '_';
 	let coNhip = Boolean(nhip.M);
 	for (const l of dauThan < 0 ? [] : dong.slice(dauThan + 1)) {
 		if (/^[ML]:/.test(l)) {
-			be.set(k, [...(be.get(k) ?? []), `[${l.slice(0, 2)}${l.slice(2).trim()}]`]);
+			const f = `[${l.slice(0, 2)}${l.slice(2).trim()}]`;
+			chung.push(f);
+			for (const v of be.values()) v.push(f);
 			if (/^M:/.test(l) && docNhip(l.slice(2)).M) coNhip = true;
 			continue;
 		}
@@ -193,7 +202,7 @@ export function oSai(abc) {
 		const mv = /^\[V:([^\]]+)\]\s*(.*)$/.exec(l);
 		if (mv) k = mv[1].trim();
 		if (/\[M:\s*(?!none\s*\])[^\]\s]/.test(l)) coNhip = true;
-		be.set(k, [...(be.get(k) ?? []), mv ? mv[2] : l]);
+		vao(k, mv ? mv[2] : l);
 	}
 	if (!coNhip) return [];
 	const sai = [];

@@ -25,6 +25,10 @@ test('bắt được ô nhịp sai độ dài, bè chồng lệch nhau, cảnh b
 	assert.deepEqual(oSai('X:1\nM:none\nL:1/8\nK:C\n[V:1] [M:2/4] cdef | [M:3/4] cdefga | c6 |]\n[V:2] [M:2/4] C4 | [M:3/4] C4 | C6 |]'), ['bè 2, ô 2: 1/2, cần 3/4']);
 	// vạch nhịp có kết 1, kết 2 vẫn đọc đúng
 	assert.deepEqual(oSai('X:1\nM:2/4\nL:1/8\nK:C\n|:cdef|[1g4:|[2a4|]'), []);
+	// dòng M:, L: giữa phần thân áp cho mọi bè (như abcjs); [M:…] trong dòng chỉ cho bè ấy
+	assert.deepEqual(oSai('X:1\nM:2/4\nL:1/4\nK:C\n[V:1] CD|EF|\n[V:2] CD|EF|\nM:3/4\n[V:1] CDE|FGA|]\n[V:2] CDE|FGA|]'), []);
+	assert.deepEqual(oSai('X:1\nM:2/4\nL:1/4\nK:C\nV:1\nCD|EF|\nV:2\nCD|EF|\nL:1/8\nV:1\nCDEF|CDEF|]\nV:2\nCDEF|CDEF|]'), []);
+	assert.deepEqual(oSai('X:1\nM:2/4\nL:1/4\nK:C\n[V:1] CD|EF|\n[V:2] CD|EF|\n[V:1] [M:3/4] CDE|CDE|]\n[V:2] CDE|CD|]'), ['bè 2, ô 3: 3/4, cần 1/2']);
 	// dòng V: đổi bè như [V:…]
 	assert.deepEqual(oSai('X:1\nM:2/4\nL:1/8\nK:C\nV:1\ncdef|g4|a4|]\nV:2\nC4|G,2|C4|]'), ['bè 2, ô 2: 1/4, cần 1/2']);
 	assert.deepEqual(canhBao('X:1\nM:4/4\nL:1/4\nK:C\nCDEF|G4|]'), []);

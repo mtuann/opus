@@ -25,7 +25,15 @@ Claude, 17/11/2026. Nhánh từ `main` (f41bd45), worktree riêng. Gom các ch�
 
 ## Review
 
-Nhánh chạm công cụ khóa (`tools/khoa.mjs`): mức **lớn** (Sonnet hay Opus review, có vòng kiểm lại) trước khi gộp. Chưa review, chưa gộp, chưa push.
+Nhánh chạm công cụ khóa (`tools/khoa.mjs`): mức **lớn**. Review: Claude (Opus), 17/11/2026, đọc diff độc lập.
+
+- **Đã sửa (vừa).** `khuong-nhac.mjs`: dòng `M:`, `L:` giữa phần thân chỉ áp cho bè đang viết, còn abcjs (bản trong `public/vendor/`, thử bằng `parseOnly`) áp cho mọi bè; khối nhiều bè đổi nhịp bằng dòng `M:` bị báo sai ở bè trước dòng ấy. Nay áp cho mọi bè từ chỗ đó, kể cả bè bắt đầu sau; `[M:…]` trong dòng vẫn chỉ cho bè của dòng (abcjs cũng vậy). Thêm ba phép thử ở `tests/khuong-nhac.test.mjs`, sửa câu ở `AGENTS.md`. Không khối nào của site dùng dòng `M:`, `L:` giữa thân nên không đổi kết quả.
+- **Hồi quy khối abc: không có.** So từng khối giữa bản `main` và bản nhánh (độ dài từng ô của từng bè): 400 khối, 399 giống hệt; khác duy nhất `bartok-romanian-folk-dances#4` (trước bỏ qua vì `M:none`, nay kiểm 8 ô, đạt). Thử thêm: ô lấy đà rồi đổi nhịp, `[M:]` giữa ô, `&` với nhịp đổi, `M:none` giữa khối, `[M:C]`, liên ba sau `[M:6/8]`, hợp âm ngay sau vạch nhịp: đúng.
+- **`khoa.mjs`: không mở lỗ ngoài phạm vi.** Chỉ `khuyen-tap`, `vi-du-soan` được miễn `nguon` (cả `da-sua`); loại khác, kể cả gõ sai tên loại, vẫn đòi nguồn. `vi-du-soan` không vào `mauLuot2` nên vẫn cần `luot_2` cho từng câu, và `xuat` vẫn xuất đủ (không lấy mẫu như `khuyen-tap`). Đề nghị (thấp, chưa sửa): ghi rõ ở `chuan-kiem-dinh.md` rằng câu `vi-du-soan` nói điều về bản gốc (bài tập lấy từ ô nào, nốt, ngón của bản in) thì phần ấy vẫn cần nguồn bản nhạc, như hai câu `vi-du-soan` đang có (`chaminade-automne`, `mozart-alla-turca`) đều ghi nguồn.
+- **Căn mốc.** `tune = 0` giữ nguyên khóa bộ nhớ đệm (chuỗi băm không đổi) và `fmin` (`LO + 0.0`). Chạy `run.py` không `--write`: `mozart-alla-turca`, `rachmaninoff-prelude-do-thang-thu`, `fur-elise` ra đúng mốc trên trang.
+- **`them-tac-pham`.** `boDinhDang` đúng với `*…*`, `**…**`, `***…***`, link, `` `…` ``, `\*`, `_` trong từ, `*` đứng riêng. Thấp: `*a*b` (nghiêng giữa từ) giữ nguyên dấu `*`; tên tác phẩm khó gặp, bỏ qua.
+- **Kiểm thử.** `npm run build` đạt. `npm test`: 354 đạt, 1 hỏng, 2 bỏ qua; chỗ hỏng là `tests/chuyen.test.mjs` (so chữ với site cũ: `lich-su/nu-nha-soan-nhac`, `piano/tac-pham-theo-cap` thiếu `doi_chu`) do commit `52e5bc9` đã ở `main`, không do nhánh (worktree có `.cache/site-cu` nên phép thử này chạy). `python3 -m unittest discover -s tools/audio/tests`: 25 đạt.
+- Kết luận: gộp được sau commit review này.
 
 ## Chỗ vướng của quy trình
 
