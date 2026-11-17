@@ -1,7 +1,7 @@
 ---
 title: "Debussy: Golliwogg's Cakewalk (Children's Corner)"
 description: "Bài cuối của Children's Corner, tổ khúc Debussy tặng con gái ba tuổi: một điệu cakewalk theo phong cách ragtime, giữa bài chen vào câu mở đầu Tristan und Isolde của Wagner."
-tac_pham: golliwogg-cakewalk
+tac_pham: debussy-golliwogg
 ---
 
 | Mục | Thông tin |

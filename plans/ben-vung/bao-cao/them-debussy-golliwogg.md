@@ -4,14 +4,14 @@ Nhánh `them/golliwogg-cakewalk`, 17/11/2026. Hướng dẫn nghe số 1 của `
 
 ## Kết quả
 
-- Trang `nghe-nhac/golliwogg-cakewalk` (tầng `tac-pham`), bản ghi `loai: nghe` cuối `src/data/tac-pham.yml` (`danh_muc: L. 113 số 6`, `thoi_ky: Ấn tượng` như `debussy-preludes`, `luyen_nghe`, `doi_chieu`, `hinh.nghe` bảy ô, `ban_thu`), dòng `trang.yml`, hai hồ sơ. Slug giữ `golliwogg-cakewalk` như worktree (các hướng dẫn nghe khác đặt `<tác giả>-<tên>`, như `debussy-preludes`; nếu muốn thống nhất thì `debussy-golliwogg` hợp hơn, nhưng đổi sau sẽ phải đổi cả nhánh).
+- Trang `nghe-nhac/debussy-golliwogg` (tầng `tac-pham`), bản ghi `loai: nghe` cuối `src/data/tac-pham.yml` (`danh_muc: L. 113 số 6`, `thoi_ky: Ấn tượng` như `debussy-preludes`, `luyen_nghe`, `doi_chieu`, `hinh.nghe` bảy ô, `ban_thu`), dòng `trang.yml`, hai hồ sơ. Slug `debussy-golliwogg` theo kiểu `<tác giả>-<tên>` của các hướng dẫn nghe khác (lúc đầu là `golliwogg-cakewalk` như tên nhánh và worktree; đổi theo lời giao của người gom, nhánh giữ tên cũ).
 - Nội dung: bảng đầu trang; bốn đoạn "Điều cần biết" (tổ khúc cho Chouchou; cakewalk và ragtime; nhân vật Golliwogg, viết trung tính, có nguồn, không minh họa; câu trích *Tristan und Isolde*); hai trích đoạn; sơ đồ; bảng "Theo dõi khi nghe" 14 dòng có số ô; câu hỏi; so sánh bản thu (chỉ những bản có trên IMSLP: cuộn piano của Debussy, Firkušný 1956, Ligoratti, bản phối Caplet); "Nếu bạn muốn chơi" (Henle mức 6; không có trong ABRSM 2025–2028, Trinity từ 2023) với link tới `debussy-clair-de-lune`, `debussy-arabesque-1`, `nghe-nhac/debussy-preludes`; Nguồn.
 - Trích đoạn (chép tay, chỉ giai điệu): khối 1 bè trên tay phải ô 10–13 (đảo phách móc kép – móc đơn – móc kép), khối 2 câu Wagner ô 61–63 (La♮3 – Fa4 – Mi♮4 – Mi♭4, K:Gb). Đo dòng kẻ và đầu nốt bằng máy ở 400–600 dpi; ghi từng ô trong `khuong_nhac`.
 - Số ô đếm trên bản quét: 25 + 27 + 25 + 24 + 27 = 128, khớp IMSLP và cách đánh số của Henle (Bemerkungen M 28/108, 36/116).
 - Bản thu: Commons, eldüendesüarez (người chơi tự tải lên), `{{cc-by-4.0}}`, 2023-12-21, 160,50 s, phát được. `commons.py rec` + `attach.py`.
 - Mốc (14 dòng): không có MIDI mở (Mutopia không có bài này), đo tay bằng librosa (độ to theo giây, khởi âm) trên mp3 chuyển mã; cách đo từng mốc ở hồ sơ trang n27, sai số ước ±1 s. Sơ đồ chia theo các mốc.
 - Hồ sơ lượt 1: trang 35 nhận định (1 `ve-site`, 1 `khuyen-tap`), 2 khuông (trích đoạn); bản ghi 7 nhận định. Xuất lượt 2: 41 câu, `/private/tmp/claude-501/-Users-mitu-Desktop-work-projects-opus/5aff8b71-fece-4be3-9817-e9eb6d2a985d/scratchpad/golliwogg-cakewalk/luot2/xuat.yml`.
-- Kiểm: `node tools/khuong-nhac.mjs` 402 khối, 0 lỗi; `npm run build:xem` đạt; `npm test` 353 đạt, 1 bỏ qua, 1 hỏng (`tests/chuyen.test.mjs`, không do nhánh này, xem mục Chỗ vướng); `OPUS_TRINH_DUYET=chromium OPUS_TRANG=nghe-nhac/golliwogg-cakewalk/ npm run test:trinh-duyet` 435/435 đạt.
+- Kiểm: `node tools/khuong-nhac.mjs` 402 khối, 0 lỗi; `npm run build:xem` đạt; `npm test` 353 đạt, 1 bỏ qua, 1 hỏng (`tests/chuyen.test.mjs`, không do nhánh này, xem mục Chỗ vướng); `OPUS_TRINH_DUYET=chromium OPUS_TRANG=nghe-nhac/debussy-golliwogg/ npm run test:trinh-duyet` 435/435 đạt.
 
 ## Nguồn
 
@@ -34,7 +34,9 @@ Nhánh `them/golliwogg-cakewalk`, 17/11/2026. Hướng dẫn nghe số 1 của `
 ## Chỗ vướng của quy trình
 
 - `tests/chuyen.test.mjs` hỏng ở worktree này vì `.cache/site-cu` (liên kết tới checkout chính) có mặt, nên phép so chữ chạy; nó báo các khối mới chưa ghi `doi_chu` ở `lich-su/nu-nha-soan-nhac` và `piano/tac-pham-theo-cap`, hai trang đã sửa ở `mo/sau-dot-2`, `mo/sau-dot-3` (có sẵn trên `main`). Không liên quan tới nhánh này; ở các worktree không có `.cache/site-cu` phép thử tự bỏ qua. Cần một nhánh `mo/` ghi `doi_chu` cho hai trang ấy.
-- Hướng dẫn nghe không có trích đoạn từ Mutopia nên phải tự viết script đo dòng kẻ (bản ở thư mục nháp `golliwogg-cakewalk/bin/`); `ann.py` của lượt trước giả định khuông khóa Sol và khóa Fa xen kẽ từ đầu ảnh, cắt ảnh lệch thì nhãn sai.
+- Hướng dẫn nghe không có trích đoạn từ Mutopia nên phải tự viết script đo dòng kẻ (bản ở thư mục nháp `debussy-golliwogg/bin/`); `ann.py` của lượt trước giả định khuông khóa Sol và khóa Fa xen kẽ từ đầu ảnh, cắt ảnh lệch thì nhãn sai.
+
+- `tests/pham-vi.test.mjs` lấy slug từ tên nhánh (`them/<slug>`): nhánh vẫn tên `them/golliwogg-cakewalk` mà file mang slug `debussy-golliwogg`, nên phép thử phạm vi báo bốn file mới "ngoài phạm vi". Đổi tên nhánh thành `them/debussy-golliwogg` (`git branch -m`) trước khi chạy lại `npm test` và trước khi khóa, thì phép thử đạt.
 
 ## Việc ngoài phạm vi
 
