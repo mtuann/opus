@@ -53,7 +53,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | … | **Điệu 2, Brâul** (*Allegro*, 2/4): *p*, giai điệu móc đơn tách nhẹ trên nốt trầm và hợp âm ngắn; cả điệu nhắc lại |
 | … | **Điệu 3, Giậm chân tại chỗ** (*Andante*, 2/4): tay trái mở *pp* một mình, rồi giai điệu rất cao ở tay phải, nhiều nốt láy; kết *ppp*, nhỏ dần rồi tắt (*smorzando*) |
 | … | **Điệu 4, Điệu múa Bucsum** (*Molto moderato*, 3/4): tay trái mở *p*; giai điệu *molto espressivo* có quãng hai tăng Si♭–Đô♯ |
-| … | **Điệu 5, Polka Romania** (*Allegro*, nhịp 2/4 và 3/4 xen nhau): *f*, giai điệu tách với nhiều nốt hoa mỹ; nhịp đổi liên tục; kết bằng một nốt có dấu ngân |
+| … | **Điệu 5, Polka Romania** (*Allegro*, nhịp 2/4 và 3/4 xen nhau): *f*, giai điệu tách với nhiều nốt hoa mỹ; nhịp đổi liên tục; kết bằng *sf*, dấu ngân (fermata) trên vạch kết |
 | … | **Điệu 6, Điệu múa nhanh** (*Allegro*, rồi *Più allegro*, 2/4): *f*, nhấn mạnh, nhiều *sf*; sang *Più allegro* đổi hóa biểu và nhanh hơn |
 
 ## Cấu trúc
