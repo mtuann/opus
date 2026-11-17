@@ -1,0 +1,312 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa nghe-nhac/golliwogg-cakewalk
+trang: src/content/docs/nghe-nhac/golliwogg-cakewalk.md
+tang: tac-pham
+lan:
+  - so: 1
+    ngay: null
+    nhanh: them/golliwogg-cakewalk
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5 (lượt 1, them/golliwogg-cakewalk, 17/11/2026)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Hướng dẫn nghe mới (lộ trình thêm tác phẩm, mục 7, hướng dẫn nghe số 1). Nốt nhạc, số ô, chỉ dẫn và sắc thái đọc trên bản quét Durand & Fils, IMSLP #252526 (file IMSLP252526-PMLP02387-Debussy,_Claude-Childrens_Corner_Durand_7188_filter.pdf, 30 trang PDF; Golliwogg ở trang PDF 26–30, số trang in 24–28). Bản quét là một lần in từ bản khắc 1908: tr. 24 ghi "Copyright by A. Durand & Fils 1908", tr. 28 ghi "D. & F. 7188 (VI)", "Février 1952 Imp. Mounot. Paris" (lần in tháng 2/1952, cùng bản khắc và số bản in; IMSLP ghi Durand & Fils 1908, D. & F. 7188). Đọc toàn bài ở 110–150 dpi; ô trích ở 400–600 dpi, đo dòng kẻ bằng tổng điểm đen theo hàng rồi suy cao độ. Số ô đếm trên bản quét: tr. 24 4+5+5+5+6 = 25; tr. 25 5+5+5+6+6 = 27 (ô 26–52); tr. 26 5+5+5+5+5 = 25 (ô 53–77); tr. 27 5+5+4+5+5 = 24 (ô 78–101); tr. 28 6+5+5+6+5 = 27 (ô 102–128); tổng 128, khớp IMSLP (128 bars) và cách đánh số của Henle (Bemerkungen: M 28/108, 36/116 là hai chỗ song song, lệch 80 ô như cách đếm này). Mốc: không có bản MIDI mở (Mutopia không có bài này) nên đo tay trên bản mp3 chuyển mã của Commons (160,5 s) bằng librosa: độ to theo từng giây và khởi âm (onset_detect); chi tiết ở n27. Chữ do ::hinh-cau-truc dựng (sơ đồ) thuộc hồ sơ du-lieu/tac-pham/golliwogg-cakewalk.'
+nguon:
+  - id: durand-1908
+    bac: 1
+    ten: 'Debussy, Children''s Corner, Petite Suite pour Piano seul, Durand & Fils, Paris; bản khắc 1908 (tr. 24 "Copyright by A. Durand & Fils 1908"; tr. 28 "D. & F. 7188 (VI)", lần in "Février 1952 Imp. Mounot. Paris"); bản quét IMSLP #252526; tr. 2 lời đề tặng và mục lục (PROGRAMME), Golliwogg''s cake walk ở tr. 24–28'
+    link: https://imslp.org/wiki/Special:ImagefromIndex/252526
+  - id: imslp-cc
+    bac: 2
+    ten: 'IMSLP, Children''s Corner, CD 119 (Debussy, Claude) (API wikitext, 17/11/2026): Alternative Title "Coin des enfants : petite suite pour piano seul"; Opus/Catalogue Number "CD 119 ; L.113"; 6 movements, số 6 "Golliwog''s Cake-walk, Allegro giusto (E-flat major, 128 bars)"; Dedication Chou-chou (Claude-Emma Debussy 1905-1919); Year/Date of Composition 1906-1908; First Publication 1908 Paris: Durand & Fils, Plate D. & F. 7188, 28 pages; First Performance 1908/12/18 Paris, Cercle musical, Harold Bauer (piano); 1911-03-25 Boston (Caplet''s orchestration); bản quét #252526 Durand & Fils 1908 D. & F. 7188; bản thu: Debussy, Claude (piano), "Complete Performance", "Piano rolls, ca.1904–1918", Reissue "Masters of the Piano Roll, Vol.2. Debussy plays Debussy", Dal Segno 2004; Firkušný, Rudolf (piano), Capitol Records 1956 P8350, Public Domain (6 bài); Ligoratti, Stefano (piano), Golliwogs Cakewalk (No.6), Creative Commons Attribution 4.0, "Live recording"'
+    link: https://imslp.org/wiki/Children%27s_Corner,_CD_119_(Debussy,_Claude)
+  - id: henle-hn382
+    bac: 2
+    ten: 'G. Henle Verlag, HN 382 Debussy, Children''s Corner (trang sản phẩm, 17/11/2026): "This little Suite was published in 1908 and was dedicated to the composer''s then three-year old daughter"; "To my beloved little Chouchou with the tender excuses of her father for what follows below"; "The first movement, Doctor Gradus ad Parnassum, alludes to a study by Muzio Clementi"; "The well-known number 6, Golliwogg''s Cakewalk, is in ragtime style and shows Debussy''s easy-going approach to popular trends in music"; mức khó: Doctor Gradus ad Parnassum 6 medium, The Little Shepherd 4 medium "ABRSM: Piano Grade 7", Golliwogg''s Cakewalk 6 medium'
+    link: https://www.henle.de/en/Children-s-Corner-Little-Suite-for-Piano/HN-382
+  - id: henle-382-vorwort
+    bac: 2
+    ten: 'G. Henle Verlag, HN 382: lời tựa (François Lesure, 1983), PDF: viết 1906–1908; Durand in "in late September 1908"; tặng con gái Chouchou "then barely three years old"; năm trong sáu bài tên tiếng Anh, vì Debussy "anglophile" và Chouchou có bảo mẫu người Anh, Miss Gibbs; Clementi, "a salutary and progressive form of physical exercise"; biểu diễn lần đầu "18 December 1908 by the English pianist Harold Bauer at the Cercle musical in Paris"; André Caplet phối cho dàn nhạc năm 1910'
+    link: https://www.henle.de/media/3f/8c/98/1690886064/0382-1690886064-sync.pdf
+  - id: henle-382-comments
+    bac: 2
+    ten: 'G. Henle Verlag, HN 382: Bemerkungen/Comments (Ernst-Günter Heinemann, 1983), PDF, mục Golliwogg''s Cakewalk: ghi chú ở M 26, 28/108 ("cf. M 36/116"), 73, 74 f.'
+    link: https://www.henle.de/media/50/a5/2d/1690886037/0382-1690886037-sync.pdf
+  - id: cod-cakewalk
+    bac: 2
+    ten: 'The Concise Oxford Dictionary of Music, mục cakewalk: "Dance popularized in 1890s by Amer. vaudeville team of Bert Williams and George Walker and by black dancer Charles Johnson. Originated when Amer. slaves parodied the whites'' manners and method of dancing—a prize (cake) was awarded to best dancers. It featured a strutting movt., with the couple arm-in-arm and performing high kicks. Debussy wrote ''Golliwogg''s Cakewalk'' in his Children''s Corner (1906–8)."'
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/cakewalk
+  - id: cod-ragtime
+    bac: 2
+    ten: 'The Concise Oxford Dictionary of Music, mục ragtime: "Early type of jazz, particularly for solo pf., and comp. rather than improvised. Famous exponent and composer of it was Scott Joplin. Popular from c. 1895–1920"'
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/ragtime
+  - id: cod-cedez
+    bac: 2
+    ten: 'The Concise Oxford Dictionary of Music, mục cédez: "(Fr.). Give way, i.e. diminish the speed"'
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/cedez
+  - id: cod-retenu
+    bac: 2
+    ten: 'The Concise Oxford Dictionary of Music, mục retenant; retenu: "(Fr.). Holding back; held back (immediately, like ritenuto, not gradually, like rallentando)"'
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/retenant
+  - id: cod-giusto
+    bac: 2
+    ten: 'The Concise Oxford Dictionary of Music, mục giusto: "allegro giusto means either a strict allegro or a moderate allegro (neither too fast nor too slow)"'
+    link: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/giusto
+  - id: larousse
+    bac: 2
+    ten: 'Larousse, dictionnaire français-anglais: "net, nette": clean, neat, clear; "sec": dry; "moins": less; "toujours": always, still; "émotion": emotion'
+    link: https://www.larousse.fr/dictionnaires/francais-anglais/nette
+  - id: jimcrow
+    bac: 2
+    ten: 'Jim Crow Museum (Ferris State University), The Golliwog Caricature: "The Golliwog (originally spelled Golliwogg) is the least known of the major anti-black caricatures"; "The Golliwog began life as a story book character created by Florence Kate Upton"; "In 1895, her book, entitled The Adventures of Two Dutch Dolls, was published in London"; "He was a caricature of American black faced minstrels"; "The Golliwogg was based on a Black minstrel doll that Upton had played with as a small child in New York"; "immensely popular in England, and Golliwogg became a national star"'
+    link: https://jimcrowmuseum.ferris.edu/golliwog/homepage.htm
+  - id: ptna-630
+    bac: 2
+    ten: 'PTNA Piano Encyclopedia, Children''s corner (Hayashikawa Takashi, cập nhật 18/4/2019): "Golliwog''s Cakewalk depicts the cheerful dancing of Golliwog, a mechanical doll, to the cakewalk, an American Black dance ... the middle section shifts to a languid mood, and it is particularly interesting how fragments of Wagner''s Tristan und Isolde melody appear"; "Total Performance Time: 2 min 30 sec" cho Golliwog''s cakewalk'
+    link: https://enc.piano.or.jp/en/musics/630
+  - id: laits-tristan
+    bac: 2
+    ten: 'University of Texas at Austin (LAITS), trang Tristan and Isolde, mục Debussy và Berg (Matthew Heisterman, John Weinstock, 2007): "a big change occurs sixty-one measures into the piece"; "Debussy has inserted the opening phrase of Tristan and Isolde! He uses only the Longing motive, and excludes ... the Tristan chord at the end"; "the final D-sharp (written here as an E-flat)"; "both composers do use the original pitches of the motive without transposition"; "Debussy trivializes Wagner''s dramatic theme"; "Debussy uses the Wagner quote as a joke"; "After each of the four statements of Longing, the music returns to the blithe, staccato eighth notes"; "left hand accompaniment with a syncopated right hand melody"'
+    link: https://laits.utexas.edu/tristan/DebBerg.php
+  - id: commons-elduende
+    bac: 1
+    ten: 'Wikimedia Commons, File:Debussy - Golliwog''s Cake Walk (Children''s Corner) (Piano Performance by eldüendesüarez).wav: mô tả "Debussy: Golliwog''s Cake Walk (Children''s Corner) (piano performance by eldüendesüarez)", date 2023-12-21, source "(Piano performance by eldüendesüarez)", giấy phép {{cc-by-4.0}}; người tải lên Elduendesuarez (API imageinfo); độ dài 160,50 s'
+    link: https://commons.wikimedia.org/wiki/File:Debussy_-_Golliwog%27s_Cake_Walk_(Children%27s_Corner)_(Piano_Performance_by_eld%C3%BCendes%C3%BCarez).wav
+  - id: abrsm-2526
+    bac: 2
+    ten: 'ABRSM, Piano Practical Grades 2025 & 2026 (PDF): Debussy chỉ có The Little Shepherd, La fille aux cheveux de lin, Rêverie; không có chữ "Golli"'
+    link: https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26%202026%20Prac%20syllabus%2020240524_access.pdf
+  - id: abrsm-2728
+    bac: 2
+    ten: 'ABRSM, Piano Performance Grades Syllabus 2027 & 2028 (PDF): Debussy chỉ có The Little Shepherd, Rêverie; không có chữ "Golli"'
+    link: https://www.abrsm.org/sites/default/files/2026-06/Piano%20Performance%20Grades%20Syllabus%202027%20&%202028.pdf
+  - id: trinity-2023
+    bac: 2
+    ten: 'Trinity College London, Piano repertoire list from 2023 (38 trang): Debussy chỉ có Clair de lune, Minstrels (from Préludes book 1); không có chữ "Golli"'
+    link: https://www.trinitycollege.com/resource?id=10125
+  - id: site-du-lieu
+    bac: 2
+    ten: 'Dữ liệu đã khóa của site: src/data/nha-soan-nhac.yml, bản ghi debussy (sinh 1862, mất 1918); src/data/thuat-ngu.yml: syncopation ("Đảo phách: nhịp điệu đi ngược trọng âm của nhịp"), a tempo ("Trở lại tốc độ ban đầu"), Tempo primo ("Trở lại tốc độ như lúc đầu")'
+    link: https://github.com/mtuann/opus/blob/main/src/data/thuat-ngu.yml
+nhan_dinh:
+  - id: n1
+    cau: 'Golliwogg''s Cake walk là bài số 6, bài cuối, của Children''s Corner (Coin des enfants), tổ khúc nhỏ cho piano, số danh mục L. 113; tổ khúc gồm sáu bài.'
+    loai: danh-muc
+    nguon: [ durand-1908, imslp-cc ]
+    ket_qua: dung
+    ghi_chu: 'Bản quét tr. 2 PROGRAMME: I–VI, VI GOLLIWOGG''S CAKE-WALK; tr. 24 "VI. Golliwogg''s cake walk"; bìa "CHILDREN''S CORNER (COIN DES ENFANTS) Petite Suite pour Piano seul". IMSLP: "CD 119 ; L.113", 6 movements.'
+  - id: n2
+    cau: 'Debussy (1862–1918) viết cả tổ khúc từ năm 1906 đến 1908; nhà Durand ở Paris in cuối tháng 9/1908.'
+    loai: nam
+    nguon: [ henle-382-vorwort, imslp-cc, durand-1908, site-du-lieu ]
+    ket_qua: dung
+    ghi_chu: 'Henle lời tựa: "written between 1906 and 1908", "appeared in late September 1908, published by Durand". IMSLP: 1906-1908, 1908 Paris Durand & Fils. Bản quét tr. 24: "Copyright by A. Durand & Fils 1908". Năm sinh–mất: dữ liệu đã khóa.'
+  - id: n3
+    cau: 'Biểu diễn lần đầu: nghệ sĩ piano người Anh Harold Bauer, ngày 18/12/1908 ở Paris.'
+    loai: lich-su
+    nguon: [ henle-382-vorwort, imslp-cc ]
+    ket_qua: dung
+    ghi_chu: 'Henle: "18 December 1908 by the English pianist Harold Bauer at the Cercle musical in Paris". IMSLP: 1908/12/18 Paris, Cercle musical, Harold Bauer.'
+  - id: n4
+    cau: 'Thời kỳ: đầu thế kỷ 20, chủ nghĩa ấn tượng; thể loại: tiểu phẩm cho piano theo phong cách ragtime.'
+    loai: lich-su
+    nguon: [ henle-hn382, imslp-cc ]
+    ket_qua: dung
+    ghi_chu: 'Năm 1908 (đầu thế kỷ 20). Henle: "is in ragtime style". Nhãn Ấn tượng theo tiền lệ bản ghi debussy-preludes (thoi_ky: Ấn tượng, 1909–1910) và trang lich-su/thoi-ky/the-ky-20 của site (Ấn tượng: Debussy, Ravel); IMSLP ghi Piece Style Romantic: nhãn thời kỳ là cách xếp của site.'
+  - id: n5
+    cau: 'Bài dài khoảng hai phút rưỡi đến ba phút.'
+    loai: so-lieu
+    nguon: [ ptna-630, commons-elduende ]
+    ket_qua: dung
+    ghi_chu: 'PTNA: Total Performance Time 2 min 30 sec. Bản thu Commons 160,5 s (2 phút 40 giây).'
+  - id: n6
+    cau: 'Children''s Corner gồm sáu bài, Debussy đề tặng con gái Claude-Emma, gọi thân mật là Chouchou, khi cô bé mới khoảng ba tuổi.'
+    loai: lich-su
+    nguon: [ henle-382-vorwort, henle-hn382, imslp-cc, durand-1908 ]
+    ket_qua: dung
+    ghi_chu: 'Henle: "dedicated to the composer''s then three-year old daughter"; lời tựa: "Chouchou, then barely three years old". IMSLP: Dedication Chou-chou (Debussy''s daughter), Claude-Emma Debussy (1905-1919). Bản quét tr. 2: "A ma chère petite Chouchou".'
+  - id: n7
+    cau: 'Lời đề tặng in đầu bản nhạc: "Gửi bé Chouchou yêu quý của bố, cùng lời xin lỗi dịu dàng của bố vì những gì sắp tới."'
+    loai: lich-su
+    nguon: [ durand-1908, henle-hn382 ]
+    ket_qua: dung
+    ghi_chu: 'Bản quét tr. 2: "A ma chère petite Chouchou, avec les tendres excuses de son Père pour ce qui va suivre. C. D." Henle dịch: "To my beloved little Chouchou with the tender excuses of her father for what follows below". Bản dịch tiếng Việt sát chữ.'
+  - id: n8
+    cau: 'Năm trong sáu bài mang tên tiếng Anh, một phần vì Debussy mê nước Anh, một phần vì Chouchou có cô bảo mẫu người Anh.'
+    loai: lich-su
+    nguon: [ henle-382-vorwort, durand-1908 ]
+    ket_qua: dung
+    ghi_chu: 'Lời tựa: "Five of the six pieces have English titles, testifying not only to Debussy''s anglophile tendencies but also to the fact that Chouchou was the charge of an English governess, Miss Gibbs." Bản quét tr. 2: năm bài có tên tiếng Anh, Doctor Gradus ad Parnassum là tên Latin.'
+  - id: n9
+    cau: 'Bài đầu, Doctor Gradus ad Parnassum, gợi tới tập bài luyện ngón Gradus ad Parnassum của Clementi.'
+    loai: lich-su
+    nguon: [ henle-hn382, henle-382-vorwort ]
+    ket_qua: dung
+    ghi_chu: 'Henle: "alludes to a study by Muzio Clementi"; lời tựa: "the allusion to Clementi", Debussy gọi là "a salutary and progressive form of physical exercise".'
+  - id: n10
+    cau: 'Cakewalk là điệu nhảy ra đời khi những người nô lệ ở Mỹ nhại lại dáng điệu và lối khiêu vũ của người da trắng; cặp nhảy đẹp nhất được thưởng một chiếc bánh; dáng đi ưỡn ngực, hai người khoác tay nhau, đá chân cao; thành mốt trên sân khấu Mỹ những năm 1890.'
+    loai: lich-su
+    nguon: [ cod-cakewalk ]
+    ket_qua: dung
+    ghi_chu: 'COD: "Originated when Amer. slaves parodied the whites'' manners and method of dancing—a prize (cake) was awarded to best dancers. It featured a strutting movt., with the couple arm-in-arm and performing high kicks"; "popularized in 1890s by Amer. vaudeville team of Bert Williams and George Walker".'
+  - id: n11
+    cau: 'Ragtime là loại nhạc viết sẵn chủ yếu cho piano, phổ biến khoảng 1895–1920, với Scott Joplin là tên tuổi lớn nhất.'
+    loai: dinh-nghia
+    nguon: [ cod-ragtime ]
+    ket_qua: dung
+    ghi_chu: 'COD: "particularly for solo pf., and comp. rather than improvised. Famous exponent and composer of it was Scott Joplin. Popular from c. 1895–1920".'
+  - id: n12
+    cau: 'Ở bài này tay trái giữ nhịp đều, nốt trầm ở phách mạnh xen với hợp âm, còn giai điệu tay phải liên tục đảo phách (trọng âm lệch khỏi phách).'
+    loai: cau-truc
+    nguon: [ durand-1908, laits-tristan, site-du-lieu ]
+    ket_qua: dung
+    ghi_chu: 'Bản quét tr. 24 hệ 2–5: tay trái móc đơn, nốt trầm ở phách, hợp âm ở nửa sau phách, đều suốt ô 5–25. Tay phải ô 10: móc kép – móc đơn – móc kép (nốt dài ở giữa phách). LAITS: "left hand accompaniment with a syncopated right hand melody". Định nghĩa đảo phách theo thuat-ngu.yml (syncopation).'
+  - id: n13
+    cau: 'Henle mô tả bài viết theo phong cách ragtime, cho thấy Debussy đón nhận các trào lưu nhạc đại chúng một cách thoải mái.'
+    loai: lich-su
+    nguon: [ henle-hn382 ]
+    ket_qua: dung
+    ghi_chu: 'Henle: "is in ragtime style and shows Debussy''s easy-going approach to popular trends in music".'
+  - id: n14
+    cau: 'Golliwogg là nhân vật búp bê trong loạt sách tranh thiếu nhi của Florence Kate Upton, cuốn đầu in ở London năm 1895, rất được ưa chuộng ở Anh; nhân vật được vẽ theo một con búp bê nhại những người diễn hát rong bôi mặt đen (minstrel) của Mỹ.'
+    loai: lich-su
+    nguon: [ jimcrow ]
+    ket_qua: dung
+    ghi_chu: 'Jim Crow Museum: "story book character created by Florence Kate Upton"; "In 1895, her book, entitled The Adventures of Two Dutch Dolls, was published in London"; "a caricature of American black faced minstrels"; "based on a Black minstrel doll that Upton had played with as a small child in New York"; "immensely popular in England".'
+  - id: n15
+    cau: 'Ngày nay hình ảnh Golliwogg được xem là một biếm họa phân biệt chủng tộc với người da đen.'
+    loai: lich-su
+    nguon: [ jimcrow ]
+    ket_qua: dung
+    ghi_chu: 'Jim Crow Museum: "the least known of the major anti-black caricatures"; các nghị sĩ Anh phê phán hình Golliwog là "racist". Trang viết trung tính, không minh họa.'
+  - id: n16
+    cau: 'Ở đoạn giữa, nhạc chậm lại (Cédez) và Debussy ghi avec une grande émotion ("với một xúc động lớn"), rồi chen vào câu mở đầu Tristan und Isolde của Wagner, đúng cao độ Wagner viết: La, Fa, Mi rồi Rê♯ (Debussy ghi là Mi♭).'
+    loai: cau-truc
+    nguon: [ durand-1908, laits-tristan, ptna-630, cod-cedez, larousse ]
+    ket_qua: dung
+    ghi_chu: 'Bản quét tr. 26 hệ 2 ô 61–62: "Cédez", "p avec une grande émotion"; giai điệu La♮3 – Fa4 – Mi♮4; ô 63 (tr. 26 hệ 3) bè dưới Mi♭4 có dấu giáng, nối từ Mi♮ (xem khuong_nhac khối 2). LAITS: "the opening phrase of Tristan and Isolde ... only the Longing motive"; "the final D-sharp (written here as an E-flat)"; "original pitches of the motive without transposition". PTNA: "fragments of Wagner''s Tristan und Isolde melody appear" ở đoạn giữa. COD cédez: "Give way, i.e. diminish the speed".'
+  - id: n17
+    cau: 'Câu nhạc ấy trở lại nhiều lần, lần nào cũng bị những hợp âm nhảy nhót cắt ngang; đặt nó vào điệu nhảy của búp bê là một lời đùa.'
+    loai: cau-truc
+    nguon: [ durand-1908, laits-tristan ]
+    ket_qua: dung
+    ghi_chu: 'Bản quét tr. 26–27: Cédez (câu trích) ở ô 61, 65, 69, 73, 76, mỗi lần tiếp theo là a Tempo với hợp âm móc đơn staccato (ô 63, 67, 71, 75, 78). LAITS: bốn lần trích Longing, "After each ... the music returns to the blithe, staccato eighth notes"; "Debussy uses the Wagner quote as a joke". Trang viết "nhiều lần" vì cách đếm (bốn hay năm) tùy việc tính câu ô 73 và ô 76.'
+  - id: n18
+    cau: 'Trích đoạn 1: giai điệu bè trên tay phải ô 10–13: nhóm ba nốt đầu mỗi ô là móc kép – móc đơn – móc kép, nốt giữa dài gấp đôi, trọng âm rơi vào giữa phách.'
+    loai: cau-truc
+    nguon: [ durand-1908 ]
+    ket_qua: dung
+    ghi_chu: 'Xem khuong_nhac khối 1. Ô 10, 11, 12 đều mở bằng móc kép (đuôi cụt), móc đơn, móc kép trong một phách; ô 13 là một nốt trắng.'
+  - id: n19
+    cau: 'Trích đoạn 2: câu của Wagner ở ô 61–63 (giai điệu); bản in đổi hóa biểu sang sáu dấu giáng từ ô 47.'
+    loai: cau-truc
+    nguon: [ durand-1908 ]
+    ket_qua: dung
+    ghi_chu: 'Xem khuong_nhac khối 2. Tr. 25 hệ 4 cuối ô 46: vạch kép và hóa biểu sáu dấu giáng; ô 47 "Un peu moins vite".'
+  - id: n20
+    cau: 'Bảng Theo dõi khi nghe, dòng 1–3: Mở đầu ô 1–4, Allegro giusto, f: hai tay cùng một câu cách nhau một quãng tám, rồi những chuỗi nốt lao xuống, kết bằng sff; ô 5–9 nhịp đệm: tay trái nốt trầm xen hợp âm, tay phải chen hợp âm ngắn; ô 10 chủ đề, très net et très sec (rất gọn và rất khô), hai lần dừng ở một nốt dài có dấu nhấn.'
+    loai: cau-truc
+    nguon: [ durand-1908, larousse, cod-giusto ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 24 hệ 1: "Allegro giusto", f; ô 1 hai khuông (cả hai khóa Sol) cùng hình Si♭–La♭–Si♭–Fa–Si♭, khuông trên cao hơn một quãng tám; ô 3–4 móc ba đi xuống (khóa Fa), ô 4 "più f < sff". Hệ 2: ô 5 tay phải nghỉ, tay trái nốt trầm + hợp âm; ô 6–9 tay phải "lặng, hợp âm" staccato. Hệ 3 ô 10: "très net et très sec" (Larousse: net = clean, neat, clear; sec = dry). Ô 13 và 21: Si♭3 trắng có dấu nhấn (v).'
+  - id: n21
+    cau: 'Dòng 4–6: ô 26 ý thứ hai, p, hợp âm nhẹ ngắn ở tay phải; ô 38–40 câu mở đầu trở lại, f lên ff; ô 41–46 thưa dần, hợp âm p cách nhau bằng ô lặng.'
+    loai: cau-truc
+    nguon: [ durand-1908 ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 25 hệ 1 ô 26: p, hợp âm tay phải, tay trái nốt trầm + hợp âm. Hệ 3 ô 38: f, hình Si♭–La♭–Si♭–Fa–Si♭ ở hai tay như ô 1; ô 40 móc ba đi xuống, ff (như ô 3). Hệ 4 ô 41–46: hợp âm p ở ô 41, 43, 45, ô lặng ở tay phải ô 42, 44, 46 (ô 46 tay trái Mi♭–Fa, più p).'
+  - id: n22
+    cau: 'Dòng 7: ô 47 đoạn giữa, Un peu moins vite (chậm hơn một chút), pp; sáu dấu giáng; nốt trầm ngân dài, bên trên hợp âm ngắn có nốt hoa mỹ.'
+    loai: cau-truc
+    nguon: [ durand-1908, larousse ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 25 hệ 5: "Un peu moins vite", pp; tay trái Rê♭ trắng có gạch tenuto ngân, cùng nốt staccato; tay phải hợp âm móc đơn staccato có nốt hoa mỹ (nốt nhỏ). Larousse: moins = less.'
+  - id: n23
+    cau: 'Dòng 8–9: ô 61 câu của Wagner, Cédez, rồi hợp âm a Tempo cắt ngang; ô 69–70 câu trích lên cao và to hơn, mf lên f.'
+    loai: cau-truc
+    nguon: [ durand-1908, site-du-lieu ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 26 hệ 2 ô 61–62 (như n16): La♮3 dưới khuông khóa Sol (hai dòng kẻ phụ); hệ 3 ô 63 "a Tempo", pp, hợp âm móc đơn có nốt hoa mỹ. Hệ 4 ô 69: "Cédez", La♮ có tenuto nằm trong khuông khóa Sol (cao hơn ô 61), hai tay cùng giai điệu cách một quãng tám, mf < f; ô 70 Fa – La♭ (dấu >) – Sol. a Tempo: thuat-ngu.yml.'
+  - id: n24
+    cau: 'Dòng 10–11: ô 79–80 cao trào của đoạn giữa, f lên ff; ô 83–89 tan dần: dim., Retenez, hợp âm ngân dài, rất nhỏ.'
+    loai: cau-truc
+    nguon: [ durand-1908, cod-retenu ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 27 hệ 1: ô 79 f <, ô 80 ff, ô 81 f. Hệ 2: ô 83 dim., hợp âm trắng nối dài; ô 85, 86 p; ô 87 "Retenez", più p; hệ 3 ô 88–89 pp. COD retenu: "held back".'
+  - id: n25
+    cau: 'Dòng 12–13: ô 90 chủ đề trở về, Toujours retenu (vẫn giữ chậm), pp, lại ba dấu giáng; ô 92 1° Tempo: phần đầu trở lại gần như nguyên vẹn.'
+    loai: cau-truc
+    nguon: [ durand-1908, henle-382-comments, cod-retenu, larousse, site-du-lieu ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 27 hệ 3 ô 90: vạch kép, hóa biểu ba dấu giáng (dấu bình hủy ba dấu giáng kia), "Toujours retenu", pp, hình Si♭–La♭–Si♭–Fa–Si♭ (như ô 10); hệ 4 ô 92 "1° Tempo" (như ô 12). Ô 90–125 đi song song ô 10–45 (lệch 80 ô): Henle ghi các chỗ song song M 28/108, 36/116; ô 110 khác ô 30 (hợp âm có dấu thăng). Toujours: always, still (Larousse). Tempo primo: thuat-ngu.yml.'
+  - id: n26
+    cau: 'Dòng 14: kết ô 126–128: thay vì thưa dần như ô 46, một chuỗi nốt chạy xuống f và hai hợp âm ff thật ngắn; chỉ ba ô cuối khác hẳn phần đầu.'
+    loai: cau-truc
+    nguon: [ durand-1908 ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 28 hệ 5: ô 125 hợp âm p như ô 45; ô 126 lặng đen, Đô♭ rồi móc ba đi xuống, f <; ô 127, 128 hợp âm móc đơn có dấu ^ và chấm staccato, ff, rồi lặng. Ô 46 (tr. 25): più p, tay trái Mi♭–Fa.'
+  - id: n27
+    cau: 'Mốc tham khảo (bản thu eldüendesüarez): 0 (ô 1), 5 (ô 5), 11 (ô 10), 27 (ô 26), 39 (ô 38), 42 (ô 41), 48 (ô 47), 68 (ô 61), 80 (ô 69), 97 (ô 79), 101 (ô 83), 115 (ô 90), 117 (ô 92), 153 (ô 126) giây.'
+    loai: so-lieu
+    nguon: [ commons-elduende, durand-1908 ]
+    ket_qua: dung
+    ghi_chu: 'Đo trên mp3 chuyển mã của Commons (160,50 s), librosa onset_detect và độ to theo giây. Ô 1: khởi âm 0,14 s. Ô 5: nhịp móc đơn đều của tay trái từ 5,50 s. Ô 10: 5,50 + 5 ô (khoảng 1,01–1,07 s mỗi ô) ≈ 10,6–10,8 s, khởi âm 10,57 và 10,84. Ô 26: khởi âm 26,91 (sau cụm ff của ô 24–25 ở khoảng 25–26,3 s; độ to giảm từ −14,9 dB ở giây 26 xuống −27,4 ở giây 27). Ô 38: khởi âm 39,03, độ to lên −13,8 dB ở giây 40 (f). Ô 41: khởi âm 42,42 (hợp âm p sau cụm ff). Ô 47: sau khoảng lặng ở giây 47 (−54 dB), khởi âm 48,11. Ô 61: khởi âm 67,80 (tay trái), 68,31 (La); trước đó yên lặng 65,6–67,8 (ô 60). Ô 69: khởi âm 80,46, độ to −15,0 dB ở giây 81 (f). Ô 79: khởi âm 97,27, độ to −12,9 dB ở giây 97 (ff). Ô 83: khởi âm 101,24. Ô 90: khởi âm 114,61 sau quãng gần lặng 108–114,6 (ô 88–89). Ô 92: móc đơn đều trở lại từ 117,19 s. Ô 126: 117,2 + 34 ô × 1,06 s ≈ 153,2; khởi âm 153,39 và 153,69 (chuỗi nốt f); hai hợp âm ff ở 155,30 và 157,18. Sai số ước khoảng ±1 s.'
+  - id: n28
+    cau: 'Bản thu gợi ý do người chơi ký tên eldüendesüarez tự thu và đăng lên Wikimedia Commons năm 2023, giấy phép CC BY 4.0.'
+    loai: ten
+    nguon: [ commons-elduende ]
+    ket_qua: dung
+    ghi_chu: 'Trang mô tả file: "(piano performance by eldüendesüarez)", date 2023-12-21, {{cc-by-4.0}}; người tải lên Elduendesuarez (API imageinfo), tức chính người chơi đăng.'
+  - id: n29
+    cau: 'Debussy chơi Children''s Corner trên cuộn piano tự chơi; IMSLP dẫn bản tái bản trong Masters of the Piano Roll, Vol. 2: Debussy plays Debussy (Dal Segno, 2004).'
+    loai: ten
+    nguon: [ imslp-cc ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP, mục bản thu: Performer Categories Debussy, Claude=piano; File Description 1 "Complete Performance"; "Piano rolls, ca.1904–1918"; Reissue "Masters of the Piano Roll, Vol.2. Debussy plays Debussy", Middlesex: Dal Segno, 2004.'
+  - id: n30
+    cau: 'Rudolf Firkušný thu trọn Children''s Corner cho Capitol Records năm 1956; Stefano Ligoratti có một bản thu trực tiếp trên IMSLP, giấy phép CC BY 4.0; André Caplet phối tổ khúc cho dàn nhạc.'
+    loai: ten
+    nguon: [ imslp-cc, henle-382-vorwort ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Firkušný, Rudolf (piano), Capitol Records 1956, P8350, sáu file (1. Doctor Gradus … 6. Golliwog''s Cake-walk); Ligoratti, Stefano, Golliwogs Cakewalk (No.6), Creative Commons Attribution 4.0, "Live recording"; Caplet''s orchestration (Boston 1911). Henle lời tựa: "André Caplet arranged the work for orchestra in 1910".'
+  - id: n31
+    cau: 'Henle xếp bài ở mức 6 trên thang 9 ("medium"), cùng mức với Doctor Gradus ad Parnassum và trên The Little Shepherd (mức 4).'
+    loai: cap-do
+    nguon: [ henle-hn382 ]
+    ket_qua: dung
+    ghi_chu: 'Henle HN 382: Doctor Gradus ad Parnassum 6 medium; The Little Shepherd 4 medium; Golliwogg''s Cakewalk 6 medium. Thang mức khó của Henle 1–9.'
+  - id: n32
+    cau: 'Đề cương ABRSM 2025–2028 và danh sách Trinity từ 2023 không có bài này.'
+    loai: cap-do
+    nguon: [ abrsm-2526, abrsm-2728, trinity-2023 ]
+    ket_qua: dung
+    ghi_chu: 'Tìm chữ "Golli" và "Debussy" trong ba PDF (17/11/2026): không có Golliwogg; Debussy chỉ có các bài ghi ở mục nguồn.'
+  - id: n33
+    cau: 'Préludes quyển 1 kết bằng bản Minstrels, cũng nhại không khí giải trí của Mỹ.'
+    loai: lich-su
+    nguon: [ trinity-2023 ]
+    ket_qua: dung
+    ghi_chu: 'Trang nghe-nhac/debussy-preludes (đã khóa) dòng XII Minstrels: "nhại không khí của những gánh hát giải trí kiểu Mỹ"; Trinity 2023: "Debussy Minstrels (from Préludes book 1)", kèm ghi chú Debussy gặp các buổi diễn minstrel ở châu Âu đầu những năm 1900. Bản XII là bản cuối của quyển (12 bản).'
+  - id: n34
+    cau: 'Lời khuyên (Câu hỏi nghe chủ động; Nếu bạn muốn chơi): gõ theo tay trái, so sánh với Tristan, chú ý ba ô cuối; giữ tay trái đều, nốt trầm và hợp âm ngắn, tay phải gọn và khô, đổi màu tiếng ở đoạn giữa với pp và Cédez; học Clair de lune hay Arabesque số 1 trước.'
+    loai: khuyen-tap
+    nguon: []
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Lời khuyên dựa trên chỉ dẫn của bản in (très net et très sec, pp, Cédez); không có điều về sức khỏe.'
+  - id: n35
+    cau: 'Các link: đảo phách (nhac-ly/15-tiet-tau-nang-cao#ao-phach), Nghệ sĩ piano và bản thu, Clair de lune, Arabesque số 1, Préludes quyển 1, mẫu ghi chép, tài liệu tham khảo.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'tests/link.test.mjs kiểm đích và #mục. Mục "## Đảo phách" của nhac-ly/15-tiet-tau-nang-cao có id ao-phach (id kiểu cũ bỏ chữ đ).'
+khuong_nhac:
+  - khoi: 1
+    loai: trich-doan
+    kiem: [ cu-phap, nhip, giong, not, doi-chieu-an-ban ]
+    ket_qua: dung
+    ghi_chu: 'Ô 10–13, 2/4, K:Eb, L:1/16, chỉ bè trên của tay phải (đuôi lên). Ấn bản: durand-1908 tr. 24 hệ 3 ô 1–4, đọc ở 400–600 dpi, đo dòng kẻ bằng máy (600 dpi, ô 10: dòng Fa5 107, Rê5 142, Si4 178, Sol4 214, Mi4 248 px). Ô 10: Si♭4 (móc kép, dấu >), La♭4 (móc đơn, tâm 196 px), Si♭4 (móc kép), Fa4 (móc đơn staccato, tâm 231 px), Si♭4 (móc đơn staccato). Ô 11: La♭4 (móc kép, >), Fa4 (móc đơn), Mi♭4 (móc kép), Đô4 (móc đơn staccato, có dòng kẻ phụ), Mi♭4 (móc đơn staccato). Ô 12 (600 dpi: dòng 104, 139, 174, 211, 247): Si♭3 (móc kép, >, tâm khoảng 308), Si♭3 (móc đơn staccato), Đô♮4 (móc kép, tâm 284), Si♭3 (móc đơn), hợp âm rải Mi♭4 (tâm 250) + Si♭4 (tâm 176) móc đơn staccato, sff. Ô 13: Si♭3 trắng, dấu nhấn (v). Bỏ: bè dưới của tay phải (hợp âm lệch phách) và cả tay trái; luyến; sff ở ô 12 và dấu v ở ô 13 (dấu > ở đầu ô 10–12 ghi bằng !accent!). Q:1/4=110 là tốc độ phát của khối, theo bản thu (móc đơn khoảng 0,27 s); bản in không ghi số máy đếm nhịp.'
+  - khoi: 2
+    loai: trich-doan
+    kiem: [ cu-phap, nhip, giong, not, doi-chieu-an-ban ]
+    ket_qua: dung
+    ghi_chu: 'Ô 61–63, 2/4, K:Gb (sáu dấu giáng như bản in từ ô 47), L:1/8, chỉ giai điệu. Ấn bản: durand-1908 tr. 26 hệ 2 ô 4–5 và hệ 3 ô 1, đọc ở 400–500 dpi (khuông trên đổi sang khóa Sol ở cuối ô 60). Ô 61: lặng đen, La♮3 đen (hai dòng kẻ phụ, dấu bình, gạch tenuto), p, "Cédez", "avec une grande émotion". Ô 62: Fa4 đen chấm dôi, Mi♮4 móc đơn (dấu bình); bè dưới giữ La♮3 (dấu nối từ ô 61) rồi một nốt móc đơn dưới Mi. Ô 63 ("a Tempo"): bè dưới hai nốt trắng Mi♭4 (có dấu giáng; ở 400 dpi tâm đầu nốt trùng dòng Mi4) và Đô♭4 (dòng kẻ phụ), luyến từ Mi♮ của ô 62; bè trên hợp âm móc đơn pp. Khối ghi giai điệu La – Fa – Mi – Mi♭: Mi♭4 trắng ở ô 63 (_E4, dấu giáng viết rõ như bản in). Bỏ: dấu nối La sang ô 62 (giai điệu chỉ ghi La đen), tay trái, bè dưới và hợp âm a Tempo ở ô 63, luyến. Q:1/4=60 là tốc độ phát gợi ý cho chỗ Cédez.'
