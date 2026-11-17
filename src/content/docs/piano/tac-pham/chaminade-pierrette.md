@@ -55,7 +55,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | … | **Chủ đề lần ba** (*a tempo*, *mp*) |
 | … | Sau một ô im lặng: **đoạn kết** bắt đầu *pp* với chùm ba như đoạn giữa; tay trái bắt chéo lên trên tay phải (*m.g.*) |
 | … | Hai hợp âm *sfff* |
-| … | Chuỗi móc ba đi xuống ở hai tay, nhỏ dần tới *ppp*; một ô im lặng; hai hợp âm *fff* kết bài |
+| … | Chuỗi móc ba đi xuống ở hai tay, nhỏ dần tới *ppp*; một khoảng lặng ngắn; hai hợp âm *fff* kết bài |
 
 ## Cấu trúc
 
@@ -69,7 +69,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | B, đoạn giữa | Nhiều màu xen nhau: chùm ba *pp*, hợp âm *ff* với nốt hoa mỹ tay trái, móc kép *pp leggierissimo*, rồi *ppp* lên rất cao | Đổi sắc thái ngay, không lớn dần hay nhỏ dần giữa các khối |
 | Chuyển | *mp*, *p marcato*, nhỏ dần và chậm lại một chút | Chậm vừa đủ để chủ đề trở lại tự nhiên |
 | A lần ba | Chủ đề *a tempo* | Về đúng tốc độ đầu bài |
-| Đoạn kết | Chùm ba *pp*, tay trái bắt chéo; hợp âm *sfff*; chuỗi móc ba đi xuống tới *ppp*; hai hợp âm *fff* | Giữ sức cho hai hợp âm cuối; ô im lặng trước chúng phải thật im |
+| Đoạn kết | Chùm ba *pp*, tay trái bắt chéo; hợp âm *sfff*; chuỗi móc ba đi xuống tới *ppp*; hai hợp âm *fff* | Giữ sức cho hai hợp âm cuối; khoảng lặng ngắn trước chúng phải thật im |
 
 ### Bốn ô mở đầu trên khuông nhạc
 
@@ -86,7 +86,7 @@ V:RH clef=treble
 V:LH clef=bass
 K:Eb
 [V:RH] z4 | z4 | z4 | z4 | z !p!([EG]/B/ [D^F]2) |
-[V:LH] z !>![E,G,B,]2 z & !mf!.E,, B,,2 B,,,/B,,,/ | z .[E,G,B,] z2 & .E,,.B,, z B,,, | z !>![E,G,B,]2 z & .E,, B,,2 B,,,/B,,,/ | z [E,G,B,] z2 & .E,,.B,, z B,,, | E,, B,2 B,,/B,,/ |
+[V:LH] z !>![E,G,B,]2 z & !mf!.E,, B,,2 B,,,/B,,,/ | z .[E,G,B,] z2 & .E,,.B,, z B,,, | z !>![E,G,B,]2 z & E,, B,,2 B,,,/B,,,/ | z [E,G,B,] z2 & .E,,.B,, z B,,, | E,, B,2 B,,/B,,/ |
 ```
 
 Tay trái chơi hai bè: bè dưới là nốt trầm Mi♭ và Si♭ ở rất thấp, bè trên là hợp âm Mi♭ trưởng rơi vào sau phách. Ở ô 5, chủ đề vào nhỏ (*p*): một cặp móc kép, rồi hợp âm Rê–Fa♯ có dấu thăng, lạ trong giọng Mi♭ trưởng.
@@ -178,7 +178,7 @@ Bản in ghi *Allegretto* (hơi nhanh) và ♩ = 104. Đây là điệu múa: nh
 
 ### Sắc thái
 
-Bài dùng gần hết thang sắc thái: *ppp*, *pp*, *p*, *mp*, *mf*, *f*, *ff*, *fff*, cùng *sf*, *sff*, *sfff* (nhấn mạnh bất ngờ). Phần lớn bài nhỏ và nhẹ; những chỗ to là điểm nhấn ngắn. *Leggierissimo* nghĩa là thật nhẹ; *marcatissimo* là thật rõ từng nốt; *sec* (tiếng Pháp) là khô, ngắn, nhấc tay ngay.
+Bài dùng gần hết thang sắc thái: *ppp*, *pp*, *p*, *mp*, *mf*, *f*, *ff*, *fff*, cùng *sf*, *sff*, *sfff* (nhấn mạnh đột ngột). Phần lớn bài nhỏ và nhẹ; những chỗ to là điểm nhấn ngắn. *Leggierissimo* nghĩa là thật nhẹ; *marcatissimo* là thật rõ từng nốt; *sec* (tiếng Pháp) là khô, ngắn, nhấc tay ngay.
 
 ### Bàn đạp
 
@@ -219,7 +219,7 @@ Bản in ghi chỗ đạp (*Ped.*) và chỗ nhả (✱) ở nhiều ô, thườ
 + Nốt ấy chơi bằng tay trái (main gauche)
 - Chơi to hơn một chút
 - Giữ bàn đạp
-> m.g. là viết tắt tiếng Pháp main gauche, tay trái. Ở những chỗ ấy tay trái bắt chéo lên trên tay phải.
+> m.g. là viết tắt tiếng Pháp main gauche, tay trái. Có chỗ tay trái chơi nốt viết ở khuông trên, dưới tay phải; có chỗ tay trái bắt chéo lên trên tay phải.
 ? Pierrette được in lần đầu ở đâu, năm nào?
 - Leipzig, năm 1845
 + Paris, năm 1889

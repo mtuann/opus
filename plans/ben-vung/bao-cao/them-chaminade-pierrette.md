@@ -22,3 +22,16 @@ Lượt 1: 28 nhận định trang, 13 bản ghi, 4 khuông.
 ## Việc ngoài phạm vi
 
 - `lich-su/nu-nha-soan-nhac` (đã khóa): thêm link sang bài học này, ở nhánh `mo/` sau đợt 3 (như lộ trình mục 4).
+
+## Review (Claude, 17/11/2026)
+
+Agent riêng, không làm lượt 1, lượt 2. Kiểm trên nguồn: n1, n2, n3 (PDF ABRSM tr. 44, C6), n5, n6, n7, n10–n12 (BnF qua API SRU), n14 (wikitext IMSLP, CC BY-SA 4.0), n15–n19, n23; khối abc 1 so từng nốt với bản quét ở 400–800 dpi; ba bài tập soạn; mốc khối nghe so với khoảng lặng và độ to của bản thu.
+
+Đã sửa:
+
+- Khối abc 1, ô 3: bỏ chấm staccato ở Mi♭2 (bản quét chỉ có chấm ở ô 1).
+- Bảng Theo dõi khi nghe (dòng cuối) và dòng Đoạn kết của bảng Cấu trúc: trước hai hợp âm *fff* không phải "một ô im lặng" (tay trái có một móc đơn ở phách 1 và quãng tám *fff* ở móc đơn cuối; bản thu lặng 0,37 s), nay là "một khoảng lặng ngắn".
+- Mục Sắc thái: "nhấn mạnh bất ngờ" thành "nhấn mạnh đột ngột", như `thuat-ngu.yml`.
+- Câu hỏi m.g.: lời giải thích không còn nói mọi chỗ m.g. đều bắt chéo (tr. 6 hệ 1, tr. 7 hệ 4 tay trái chơi dưới tay phải).
+
+Còn để ý: giữa khối *pp leggierissimo* và *ppp* 8va còn một khối *ff*–*mf* nữa (tr. 5 hệ 4); bảng Theo dõi khi nghe và Cấu trúc không nêu, không sai.
