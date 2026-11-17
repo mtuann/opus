@@ -95,33 +95,33 @@ test('them-tac-pham: thêm bản ghi ở cuối, một dòng trang.yml, trang kh
 	const doc = (f) => fs.readFileSync(path.join(goc, f), 'utf8');
 	try {
 		const truoc = { tp: doc('src/data/tac-pham.yml'), trang: doc('src/data/trang.yml') };
-		const doi = them({ slug: 'mozart-alla-turca', loai: 'bai-hoc', tacGia: 'mozart', ten: 'Rondo alla turca', chang: 5, grade: 'Grade 6', danhMuc: 'K. 331', ngay: '2027-01-15' }, goc, () => {});
+		const doi = them({ slug: 'vi-du-kiem-thu-them', loai: 'bai-hoc', tacGia: 'mozart', ten: 'Rondo alla turca', chang: 5, grade: 'Grade 6', danhMuc: 'K. 331', ngay: '2027-01-15' }, goc, () => {});
 		assert.deepEqual(doi, [
 			'src/data/tac-pham.yml',
 			'src/data/trang.yml',
-			'src/content/docs/piano/tac-pham/mozart-alla-turca.md',
-			'kiem-dinh/piano/tac-pham/mozart-alla-turca.yml',
-			'kiem-dinh/du-lieu/tac-pham/mozart-alla-turca.yml',
+			'src/content/docs/piano/tac-pham/vi-du-kiem-thu-them.md',
+			'kiem-dinh/piano/tac-pham/vi-du-kiem-thu-them.yml',
+			'kiem-dinh/du-lieu/tac-pham/vi-du-kiem-thu-them.yml',
 		]);
 		// chỉ thêm ở cuối, không sửa dòng có sẵn (them-tac-pham.md mục 4)
 		assert.ok(doc('src/data/tac-pham.yml').startsWith(truoc.tp));
-		assert.equal(doc('src/data/trang.yml'), truoc.trang + '- id: piano/tac-pham/mozart-alla-turca\n  tang: tac-pham\n');
+		assert.equal(doc('src/data/trang.yml'), truoc.trang + '- id: piano/tac-pham/vi-du-kiem-thu-them\n  tang: tac-pham\n');
 		const { duLieu, loi } = kiemTra(path.join(goc, 'src/data'));
 		assert.deepEqual(loi, []);
 		const r = duLieu['tac-pham'].at(-1);
-		assert.equal(r.slug, 'mozart-alla-turca');
+		assert.equal(r.slug, 'vi-du-kiem-thu-them');
 		assert.deepEqual([r.tac_gia, r.chang, r.grade, r.danh_muc, r.thoi_ky, r.them_ngay, r.goi_y], ['mozart', 5, 'Grade 6', 'K. 331', 'Cổ điển', '2027-01-15', false]);
 		assert.deepEqual(r.thong_tin[0], ['Nhà soạn nhạc', 'Wolfgang Amadeus Mozart (1756–1791)']);
 		assert.equal(r.ban_thu, undefined);
 		// kiểu viết như tac-pham.yml: hàng bảng một dòng, không đệm khoảng trắng trong []
 		assert.match(doc('src/data/tac-pham.yml'), /\n  - \[Nhà soạn nhạc, Wolfgang Amadeus Mozart \(1756–1791\)\]\n/);
-		const chu = doc('src/content/docs/piano/tac-pham/mozart-alla-turca.md');
+		const chu = doc('src/content/docs/piano/tac-pham/vi-du-kiem-thu-them.md');
 		assert.match(chu, /^---\ntitle: "Mozart: Rondo alla turca"\n/);
-		assert.ok(loiTacPham({ trang: 'piano/tac-pham/mozart-alla-turca', chu, rec: r }).every((l) => l.includes(DIEN) || l.includes('Nguồn')));
-		const hs = parse(doc('kiem-dinh/piano/tac-pham/mozart-alla-turca.yml'));
-		assert.equal(hs.trang, 'src/content/docs/piano/tac-pham/mozart-alla-turca.md');
+		assert.ok(loiTacPham({ trang: 'piano/tac-pham/vi-du-kiem-thu-them', chu, rec: r }).every((l) => l.includes(DIEN) || l.includes('Nguồn')));
+		const hs = parse(doc('kiem-dinh/piano/tac-pham/vi-du-kiem-thu-them.yml'));
+		assert.equal(hs.trang, 'src/content/docs/piano/tac-pham/vi-du-kiem-thu-them.md');
 		assert.equal(hs.tang, 'tac-pham');
-		assert.equal(parse(doc('kiem-dinh/du-lieu/tac-pham/mozart-alla-turca.yml')).ban_ghi, 'tac-pham/mozart-alla-turca');
+		assert.equal(parse(doc('kiem-dinh/du-lieu/tac-pham/vi-du-kiem-thu-them.yml')).ban_ghi, 'tac-pham/vi-du-kiem-thu-them');
 		// hướng dẫn nghe, cùng repo
 		them({ slug: 'debussy-arabesque-nghe', loai: 'nghe', tacGia: 'debussy', ten: 'Arabesque số 1' }, goc, () => {});
 		assert.deepEqual(kiemTra(path.join(goc, 'src/data')).loi, []);
