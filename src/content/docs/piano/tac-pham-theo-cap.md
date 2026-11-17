@@ -190,6 +190,8 @@ Những tác phẩm lớn được yêu thích nhất. Mỗi bài cần vài th�
 | Chopin: Prélude Rê♭ trưởng Op. 28 số 15 | Lãng mạn | Nốt lặp đều suốt bài, cao trào ở đoạn giữa Đô♯ thứ |
 | Grieg: *Bryllupsdag på Troldhaugen* (Ngày cưới ở Troldhaugen) Op. 65 số 6 | Lãng mạn | Hợp âm và quãng tám mạnh, đoạn giữa trữ tình |
 | Debussy: Arabesque số 1 (Mi trưởng); *La fille aux cheveux de lin* (Cô gái tóc lanh), *Préludes* quyển 1 số 8 | Ấn tượng | Hai chọi ba, bàn đạp nửa, câu nhạc tự do |
+| [Chaminade: *Pierrette* (Air de ballet) Op. 41](/opus/piano/tac-pham/chaminade-pierrette/) | Lãng mạn | Móc kép nhẹ (luyến và staccato), nốt hoa mỹ và hợp âm nhấn của nhạc múa; sắc thái từ *ppp* đến *fff* |
+| [Clara Schumann: Scherzo số 2 Đô thứ Op. 14](/opus/piano/tac-pham/clara-schumann-scherzo-2/) | Lãng mạn | Hợp âm rải nhanh qua hai tay, hợp âm lớn có dấu nhấn; tương phản giữa scherzo sôi nổi và trio êm |
 | Liszt: *Consolation* số 3 (Rê♭ trưởng) S. 172 | Lãng mạn | Giai điệu hát trên hợp âm rải rộng; bước chuẩn bị cho *Liebestraum* số 3 ở chặng 7 |
 | Rachmaninoff: Prelude Đô♯ thứ Op. 3 số 2 | Lãng mạn muộn | Hợp âm lớn trải rộng, dùng sức nặng cánh tay mà tiếng không gắt |
 | Ravel: *Menuet sur le nom d'Haydn* (Minuet trên tên Haydn, 1909) | Thế kỷ 20 | Bài ngắn, chủ đề tạo từ các chữ cái trong tên Haydn, hòa âm tinh tế |
@@ -205,6 +207,7 @@ Những tác phẩm lớn được yêu thích nhất. Mỗi bài cần vài th�
 | [Liszt: *Liebestraum* số 3](/opus/piano/tac-pham/liszt-liebestraum/) | Lãng mạn | Giai điệu ở giọng giữa do ngón cái hát, hai tay chia nhau phần đệm, hai cadenza, cao trào quãng tám; nghe [Liebestraum](/opus/nghe-nhac/liszt-liebestraum/) |
 | [Schubert: Impromptu Op. 90 (D. 899) số 3 (Sol♭ trưởng)](/opus/piano/tac-pham/schubert-impromptu-sol-giang/) | Lãng mạn | Giai điệu và phần đệm trong cùng tay phải; nghe [Impromptu](/opus/nghe-nhac/schubert-impromptu/) |
 | [Chopin: Ballade số 1 Sol thứ Op. 23](/opus/piano/tac-pham/chopin-ballade-1/) | Lãng mạn | Hình thức tự sự lớn, sức bền, coda *Presto con fuoco* |
+| [Chaminade: *Automne* (Étude de concert) Op. 35 số 2](/opus/piano/tac-pham/chaminade-automne/) | Lãng mạn | Giai điệu và lớp đệm trong cùng tay phải; đoạn giữa nhanh, hợp âm và quãng tám tới *fff* |
 | Chopin: Ballade số 2–4 (Op. 38, 47, 52); bốn Scherzo (Op. 20, 31, 39, 54); Études Op. 10 và Op. 25; Sonata Op. 35 và Op. 58; *Barcarolle* Op. 60 | Lãng mạn | Đỉnh cao kỹ thuật và hình thức của Chopin; nghe [Études](/opus/nghe-nhac/chopin-etude/) |
 | Bach: *Bình quân luật* (BWV 846–893); Partita (BWV 825–830); *Goldberg Variations* BWV 988 | Baroque | Fugue nhiều bè; tổ khúc lớn; nghe [Goldberg](/opus/nghe-nhac/bach-goldberg/) |
 | Beethoven: sonata giữa đời (*Waldstein* Op. 53, *Appassionata* Op. 57) và cuối đời (Op. 109, 110, 111) | Cổ điển | Kiến trúc lớn, sức bền; chương fugue của Op. 110 |

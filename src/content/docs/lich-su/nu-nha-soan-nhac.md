@@ -23,9 +23,11 @@ Lịch sử âm nhạc thường được kể qua những cái tên nam giới.
 
 **Clara Schumann** (1819–1896), Đức. Một trong những nghệ sĩ piano lừng danh nhất thế kỷ 19, vợ của Robert Schumann và bạn của Brahms. Bà vừa biểu diễn, vừa dạy, vừa sáng tác.
 *Nghe:* Concerto piano cung La thứ; Tam tấu piano cung Sol thứ.
+*Tập:* [Scherzo số 2 Đô thứ, Op. 14](/opus/piano/tac-pham/clara-schumann-scherzo-2/) (chặng 6).
 
 **Cécile Chaminade** (1857–1944), Pháp. Ca khúc và tiểu phẩm piano của bà từng rất được ưa chuộng ở châu Âu và Mỹ.
 *Nghe:* Concertino cho sáo, Op. 107.
+*Tập:* [*Pierrette*, Op. 41](/opus/piano/tac-pham/chaminade-pierrette/) (chặng 6); [*Automne*, Op. 35 số 2](/opus/piano/tac-pham/chaminade-automne/) (chặng 7).
 
 **Amy Beach** (1867–1944), Mỹ. Nhà soạn nhạc Mỹ tự học phần lớn; Giao hưởng *Gaelic* (1896) của bà được coi là giao hưởng lớn đầu tiên do một phụ nữ Mỹ sáng tác và xuất bản.
 *Nghe:* Giao hưởng *Gaelic*; Concerto piano.

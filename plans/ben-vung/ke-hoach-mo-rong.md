@@ -139,9 +139,9 @@ Chỗ cần lấp: chặng 7, Thế kỷ 20 và Ấn tượng, nhà soạn nhạ
 | 2 (Thế kỷ 20) | Gretchaninov, *Grandfather's Album* Op. 119 (2–3 bài) | 3 | **Xong 17/11/2026** (số 1 và 7) | Cấp ước lượng |
 | 2 | Bartók, *Romanian Folk Dances* | 5 | **Xong 17/11/2026** (bản UE 1918) | Phải dùng bản in trước 1934 |
 | 2 | Bartók, *For Children* I/1, I/6 (bản 1909) | 2 | **Xong 17/11/2026** | Bản sửa 1946 còn bảo hộ ở Mỹ |
-| 3 (nhà soạn nhạc nữ) | Chaminade, *Pierrette* Op. 41 | 6 | Bản thu chỉ dẫn link | Kiểm năm in đầu |
-| 3 | Clara Schumann, Scherzo Op. 14 | 6 | Bản thu chỉ dẫn link | Bằng chứng cấp yếu |
-| 3 | Fanny Hensel, *Mélodie* Op. 4 số 2 | 6 | **Chưa có bản thu được nhận** | Chốt 16/11/2026: làm Chaminade *Automne* (chặng 7) thay; *Klage* sang hướng dẫn nghe |
+| 3 (nhà soạn nhạc nữ) | Chaminade, *Pierrette* Op. 41 | 6 | Bản thu chỉ dẫn link | Xong 17/11/2026 (năm in đầu 1889, theo BnF) |
+| 3 | Clara Schumann, Scherzo Op. 14 | 6 | Bản thu chỉ dẫn link | Xong 17/11/2026 (Grade 8 ước lượng) |
+| 3 | Fanny Hensel, *Mélodie* Op. 4 số 2 | 6 | **Chưa có bản thu được nhận** | Chốt 16/11/2026: làm Chaminade *Automne* (chặng 7) thay, xong 17/11/2026; *Klage* sang hướng dẫn nghe |
 | 4 (lấp chỗ trống) | Một sonata Haydn (Hob. XVI) | 4–5 | Cần khảo sát | Chưa có bài Haydn nào |
 | 4 | Chặng 7 không Lãng mạn: một Prelude và Fugue trong Bình quân luật; một sonata Beethoven trọn vẹn | 7 | Cần khảo sát | Chặng 7 hiện chỉ có 4 bài Lãng mạn |
 | 4 | Dự phòng: Granados Op. 1; Bartók Sonatina; Debussy *Golliwogg's Cakewalk* | 4–6 | Một phần có bản thu phát được | Xem khảo sát |
@@ -149,7 +149,7 @@ Chỗ cần lấp: chặng 7, Thế kỷ 20 và Ấn tượng, nhà soạn nhạ
 
 Chặng 6 sẽ đông nhất sau đợt 1 và 3 (khoảng 9–10 bài); cân nhắc khi chọn bài.
 
-**Thứ tự đã chốt (16/11/2026, chủ repo chọn): đợt 2, rồi đợt 3, rồi đợt 1, rồi đợt 4, đợt 5.** Đợt 2 xong ngày 17/11/2026 (báo cáo `plans/ben-vung/bao-cao/them-*.md`; việc sau đợt ở nhánh `mo/sau-dot-2`). Hiện trạng bài học theo chặng 2–7: 8, 6, 8, 6, 5, 4 (37 bài). Lời giao đầy đủ cho agent (từng bài, ấn bản, bản thu, file chủ repo phải tải, điều kiện xong): `plans/ben-vung/lo-trinh-them-tac-pham.md`.
+**Thứ tự đã chốt (16/11/2026, chủ repo chọn): đợt 2, rồi đợt 3, rồi đợt 1, rồi đợt 4, đợt 5.** Đợt 2 xong ngày 17/11/2026 (báo cáo `plans/ben-vung/bao-cao/them-*.md`; việc sau đợt ở nhánh `mo/sau-dot-2`). Đợt 3 xong cùng ngày (*Pierrette*, Scherzo số 2 của Clara Schumann, *Automne* thay Hensel; việc sau đợt ở nhánh `mo/sau-dot-3`). Hiện trạng bài học theo chặng 2–7: 8, 6, 8, 6, 7, 5 (40 bài). Lời giao đầy đủ cho agent (từng bài, ấn bản, bản thu, file chủ repo phải tải, điều kiện xong): `plans/ben-vung/lo-trinh-them-tac-pham.md`.
 
 ### 6.2 Hướng dẫn nghe
 
