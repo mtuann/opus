@@ -33,3 +33,16 @@ Kiểm thử: `npm run build:xem` đạt; `npm test` 353 đạt, 2 bỏ qua, 0 h
 - Bảng mức Henle đầu `tac-pham-theo-cap`: không thêm ba bài (không bắt buộc).
 - Chuỗi bài "Chọn bài theo mục tiêu" ở `piano/tac-pham/index`: không thêm ba bài mới.
 - `tests/tac-pham.test.mjs` (slug ví dụ), cấu hình căn mốc `tools/audio/align/`: ngoài phạm vi nhánh này.
+
+## Review (Claude Opus 5.5, agent riêng, 17/11/2026)
+
+Đọc diff của 12 mục mở và chữ trên bản xem; đối chiếu ảnh bản Simrock 1893 (tr. PDF 5) và Fromont 1905 (tr. PDF 18, 22–23). Mọi nhận định mới hay sửa của lần mở ghi `review: dung`, `ghi_chu` thêm "Review (Claude, 17/11/2026): …"; `nguoi.review` điền ở lần cuối của 12 hồ sơ đã mở.
+
+- **Canon Brahms (n29)**: lượt 2 đúng (Đô♯5 nối từ phách 3 ô 48; bè giữa Đô♯4 phách 2 ô 49, mỗi nốt một phách). Chữ "hai phách sau khi bè trên vào" dễ hiểu là tính từ đầu ô 49 (đầu đoạn, có vạch nhắc lại), nên viết lại: "hai phách sau nốt Đô♯ mở đầu của bè trên, nó nhắc lại bốn nốt đầu ấy (…) ở quãng tám dưới, mỗi nốt một phách". Cùng nghĩa câu lượt 2 đã kiểm; câu không nói hai bè cùng trường độ. Sửa cả `cau`, `doi_chu`.
+- **Rachmaninoff ở `nha-soan-nhac`**: dời Prelude Op. 3 số 2 (chặng 7, sau Grade 8) xuống sau *Moments musicaux* (số 5: Grade 8), cùng bước với *Études-tableaux*; *Élégie* Op. 3 số 1 đứng riêng. Sửa n139 (`cau`), `doi_chu`.
+- **Clair de lune**: ô 1 và coda khớp bản Fromont (không có m.g., m.d.; ô 67 tay trái chen giữa hai nốt tay phải; ô 69–70 tay trái dưới hợp âm tay phải). Không còn chữ "bắt chéo" trên trang.
+- **`cap` hai chiều**: build không lỗi; bài học hiện "Nghe kèm: Mozart: Sonata K. 331". Hướng dẫn nghe không dùng `::hoc-tiep` (như các hướng dẫn khác), link tới bài học ở "Nếu bạn muốn chơi"; ghi chú n11 sửa cho đúng.
+- **`ke-hoach-mo-rong.md`**: đếm `loai: bai-hoc` theo `chang` trong `tac-pham.yml`: 8, 6, 8, 6, 9, 6 (43), khớp; chặng 7 có 6 bài, đều Lãng mạn.
+- Link, kiểu dòng ở `tac-pham-theo-cap`, `hai-tay`, `ban-dap`, `tac-pham/index`, `mozart-k331`, `ke-hoach`: đúng.
+
+Kiểm thử: `npm run build:xem` đạt; `npm test` 353 đạt, 2 bỏ qua, 0 hỏng (có `.cache/site-cu/`).

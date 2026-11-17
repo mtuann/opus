@@ -220,7 +220,7 @@ Thế kỷ 20 mở rộng vốn từ của đôi tay: màu sắc âm thanh, nh�
 
 - **Đặc trưng khi chơi:** viết cho bàn tay lớn: hợp âm dày trải rộng, tiếng chuông nhà thờ Nga ở âm vực trầm, giai điệu dài ẩn trong lớp hợp âm, hợp âm rải quét khắp bàn phím. Cần trọng lượng cánh tay để tiếng to mà không gắt, biết làm nổi nốt trên cùng của hợp âm, và sức bền.
 - **Tác phẩm chính:** *Morceaux de fantaisie* Op. 3 (1892, có Prelude Đô♯ thứ), 24 prelude (Op. 3 số 2, Op. 23, Op. 32), *Moments musicaux* Op. 16, *Études-tableaux* Op. 33 và Op. 39, Biến tấu Corelli Op. 42, bốn concerto và *Rhapsody on a Theme of Paganini*.
-- **Bắt đầu bằng:** xây nền bằng nocturne và étude của Chopin → *Élégie* Op. 3 số 1, [Prelude Op. 3 số 2](/opus/piano/tac-pham/rachmaninoff-prelude-do-thang-thu/) (chặng 7) → Prelude Op. 23 số 4 Rê trưởng, Op. 32 số 5 Sol trưởng → *Moments musicaux* (số 5: Grade 8), *Études-tableaux* → [Concerto số 2](/opus/nghe-nhac/rachmaninoff-2/).
+- **Bắt đầu bằng:** xây nền bằng nocturne và étude của Chopin → *Élégie* Op. 3 số 1 → Prelude Op. 23 số 4 Rê trưởng, Op. 32 số 5 Sol trưởng → *Moments musicaux* (số 5: Grade 8), [Prelude Op. 3 số 2](/opus/piano/tac-pham/rachmaninoff-prelude-do-thang-thu/) (chặng 7), *Études-tableaux* → [Concerto số 2](/opus/nghe-nhac/rachmaninoff-2/).
 - **Cuộc đời và các tác phẩm khác:** [Nhà soạn nhạc](/opus/lich-su/nha-soan-nhac/#sergei-rachmaninoff-18731943).
 
 ### Maurice Ravel (1875–1937)
