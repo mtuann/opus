@@ -3,17 +3,14 @@ trang: src/content/docs/piano/tac-pham/rachmaninoff-prelude-do-thang-thu.md
 tang: tac-pham
 lan:
   - so: 1
-    ngay: null
+    ngay: 2026-11-17
     nhanh: them/rachmaninoff-prelude-do-thang-thu
-    ma_bam: null
+    ma_bam: sha256:f289ef92588a2ce2eb6e352a2d7c9703af16bce93866ab17fe59d474dd0aed69
     nguoi:
-      luot_1: Claude Opus 5.5 (lượt 1, them/rachmaninoff-prelude-do-thang-thu,
-        17/11/2026)
-      luot_2: "Claude Opus 5.5 (agent riêng, độc lập với lượt 1, 17/11/2026; 49 câu,
-        49 đúng; đối chiếu bản Gutheil 1893 IMSLP #86365 và Bosworth 1896
-        #79003)"
+      luot_1: Claude Opus 5.5 (lượt 1, them/rachmaninoff-prelude-do-thang-thu, 17/11/2026)
+      luot_2: "Claude Opus 5.5 (agent riêng, độc lập với lượt 1, 17/11/2026; 49 câu, 49 đúng; đối chiếu bản Gutheil 1893 IMSLP #86365 và Bosworth 1896 #79003)"
       review: "Claude (agent riêng, không làm lượt 1, lượt 2; 17/11/2026)"
-      kiem_mau: null
+      kiem_mau: "Claude Sonnet (agent riêng), kiểm thay chủ repo theo lời giao 16/11/2026: 5 nhận định mẫu (khoa.mjs xuat --mau 5: trang n3, n6, n8, n9, n31), 5 đúng, 0 sai"
 ghi_chu: "Bài học mới (lộ trình thêm tác phẩm, lượt 8). Nốt nhạc, chữ chỉ dẫn đọc từ bản quét IMSLP #868299 (4 trang, in số trang 2–5; đọc ở 100–400 dpi; đo dòng kẻ cho ô 2). IMSLP ghi đây là bản khắc Gutheil (Moskva, [1893], số bản in A. 6516 G) do Boosey & Hawkes in lại năm 1992 trong Preludes for Piano (B. & H. 20707). Chân trang đầu của bản quét ghi \"© Copyright 1893 by Hawkes & Son (London) Ltd. Revised edition © Copyright 1992\"; không thấy số bản in Gutheil trên bản quét (chân trang ghi B&H 20707); chữ khắc (Agitato., Tempo primo., m.d./m.g.) là kiểu khắc cũ. Vì chữ \"Revised edition\", mọi ô chép trên trang (ô 1–4, 15–16) đều đối chiếu thêm với bản Mutopia (nguồn Bosworth 1896 và UE 1910, độc lập với bản in lại 1992): nốt, trường độ, dấu hóa trùng khớp hoàn toàn, nên không có gì thuộc phần sửa 1992. Số ô theo bản Mutopia: ô lấy đà là ô 1 (RH-001 \\partial 2), Agitato ở ô 15, Tempo primo ở ô 46, ô cuối 62; đếm lại trên bản quét: tr. 2 ô 1–14, tr. 3 ô 15–32, tr. 4 ô 33–48, tr. 5 ô 49–62. Mốc đo trên file Commons (227,91 s, mono 44,1 kHz): bản thu lệch khoảng −0,4 nửa cung (librosa.estimate_tuning −0,38; đỉnh phổ nốt La đầu bài 106,8 Hz thay vì 110 Hz), nên căn DTW của tools/audio/align (core.align với MIDI Mutopia) chỉ dùng được sau khi chỉnh cao độ, và vẫn sai ở đoạn Lento; các mốc lấy theo khởi âm (librosa onset, hop 256) kèm 5 cao độ mạnh nhất sau mỗi khởi âm, so với nốt MIDI Mutopia từng ô (chi tiết ở n24). Cấu hình căn mốc không thêm vào tools/audio/align/pieces.py (ngoài phạm vi nhánh them/). Chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng thuộc hồ sơ du-lieu/tac-pham/rachmaninoff-prelude-do-thang-thu. Review (Claude, 17/11/2026): ấn bản chính đổi sang bản quét Gutheil IMSLP #86365 (bản khắc đầu tiên, n.d. [1893], một lần in sau; hết bảo hộ), thay bản in lại B&H 1992 #868299 (chân trang ghi \"Revised edition © 1992\": phần sửa có thể còn bảo hộ). Hai bản cùng bản khắc A. 6516 G, cùng cách chia trang (tr. 2 ô 1–14, tr. 3 ô 15–32, tr. 4 ô 33–48, tr. 5 ô 49–62), nên số trang, hệ trong các ghi chú lượt 1 vẫn đúng với #86365. Review đọc lại trên #86365 (300–500 dpi) hai khối trích đoạn và các chỗ ghi ở n1, n6, n7, n9, n14, n25, n26, n28, n29, n33; đầu trang 3 của #86365 mất khuông trên (IMSLP: \"Pages 2-3 of No.2: Prélude damaged\"), nên tay phải ô 15–16 và chữ Agitato đối chiếu thêm Bosworth 1896 (#79003) và Mutopia. Năm in: IMSLP ghi 1893 (bản in không ghi năm, IMSLP ghi n.d. [1893]), Henle HN 1211 ghi \"First published in 1892\"; trang và bản ghi viết \"khoảng năm 1893 (bản in không ghi năm)\"."
 nguon:
   - id: gutheil-1893
@@ -30,29 +27,15 @@ nguon:
     link: https://imslp.org/wiki/Special:ImagefromIndex/79003
   - id: mutopia
     bac: 1
-    ten: 'Mutopia Project, Prelude in C# minor Op. 3 No. 2, Petro Kostandy,
-      Mutopia-2015/07/09-2033, CC BY-SA 4.0, source "Bosworth & Co. 1896;
-      Universal Edition 1910"; file .ly và .mid (tải 17/11/2026, HTTP 200); nốt
-      từng ô đọc từ MIDI bằng mido'
+    ten: 'Mutopia Project, Prelude in C# minor Op. 3 No. 2, Petro Kostandy, Mutopia-2015/07/09-2033, CC BY-SA 4.0, source "Bosworth & Co. 1896; Universal Edition 1910"; file .ly và .mid (tải 17/11/2026, HTTP 200); nốt từng ô đọc từ MIDI bằng mido'
     link: https://www.mutopiaproject.org/ftp/RachmaninoffS/O3/rach-prelude-op3-no2/rach-prelude-op3-no2.ly
   - id: imslp-op3
     bac: 2
-    ten: 'IMSLP, 5 Morceaux de fantaisie, Op.3 (Rachmaninoff, Sergei), đọc qua API
-      wikitext 17/11/2026: số 2 "Prélude / Прелюдия, Lento (c#) — also known as
-      The Bells of Moscow"; Year/Date of Composition 1892; First Performance
-      1892/09/20 in Moscow, Moscow Electrical Exhibition, Sergei Rachmaninoff
-      (piano); Year of First Publication 1893 – Moscow: A. Gutheil, Plates A.
-      6516-6519 G.; Dedication Anton Arensky (1861–1906); Piece Style Romantic;
-      file #868299: Publisher Information Gutheil, Moscow, n.d.[1893], A. 6516
-      G, Reprint Preludes for Piano (pp.2-5), Boosey & Hawkes, London, 1992, B.
-      & H. 20707'
+    ten: 'IMSLP, 5 Morceaux de fantaisie, Op.3 (Rachmaninoff, Sergei), đọc qua API wikitext 17/11/2026: số 2 "Prélude / Прелюдия, Lento (c#) — also known as The Bells of Moscow"; Year/Date of Composition 1892; First Performance 1892/09/20 in Moscow, Moscow Electrical Exhibition, Sergei Rachmaninoff (piano); Year of First Publication 1893 – Moscow: A. Gutheil, Plates A. 6516-6519 G.; Dedication Anton Arensky (1861–1906); Piece Style Romantic; file #868299: Publisher Information Gutheil, Moscow, n.d.[1893], A. 6516 G, Reprint Preludes for Piano (pp.2-5), Boosey & Hawkes, London, 1992, B. & H. 20707'
     link: https://imslp.org/wiki/Morceaux_de_fantaisie,_Op.3_(Rachmaninoff,_Sergei)
   - id: imslp-op23-32
     bac: 2
-    ten: 'IMSLP, 10 Preludes, Op.23 (Year/Date of Composition 1901–03; 10 preludes)
-      và 13 Preludes, Op.32 (1910; 13 pieces), đọc qua API wikitext 17/11/2026;
-      trường Key của cả hai trang: tất cả các giọng, cùng với Op. 23 hay Op. 32
-      và "Prelude in C# minor (No.2) from Morceaux de fantaisie, Op.3"'
+    ten: 'IMSLP, 10 Preludes, Op.23 (Year/Date of Composition 1901–03; 10 preludes) và 13 Preludes, Op.32 (1910; 13 pieces), đọc qua API wikitext 17/11/2026; trường Key của cả hai trang: tất cả các giọng, cùng với Op. 23 hay Op. 32 và "Prelude in C# minor (No.2) from Morceaux de fantaisie, Op.3"'
     link: https://imslp.org/wiki/13_Preludes,_Op.32_(Rachmaninoff,_Sergei)
   - id: imslp-rach
     bac: 2
@@ -60,84 +43,45 @@ nguon:
     link: https://imslp.org/wiki/Category:Rachmaninoff,_Sergei
   - id: henle-1211
     bac: 2
-    ten: 'G. Henle Verlag, Prélude c sharp minor op. 3 no. 2, HN 1211 (đọc
-      17/11/2026): "Possibly the most famous late Romantic piano work … First
-      published in 1892 as part of the piano cycle Morceaux de Fantaisie op. 3,
-      the work also soon became well known abroad, in particular due to the
-      concert tours given by the pianist Alexander Siloti, Rachmaninoff''s
-      cousin. And even Rachmaninoff himself was soon no longer able to perform
-      any concerts in America, without someone in the audience crying out C
-      sharp minor! at the end"; Difficulty: Prélude c sharp minor op. 3,2: 5
-      (medium)'
+    ten: 'G. Henle Verlag, Prélude c sharp minor op. 3 no. 2, HN 1211 (đọc 17/11/2026): "Possibly the most famous late Romantic piano work … First published in 1892 as part of the piano cycle Morceaux de Fantaisie op. 3, the work also soon became well known abroad, in particular due to the concert tours given by the pianist Alexander Siloti, Rachmaninoff''s cousin. And even Rachmaninoff himself was soon no longer able to perform any concerts in America, without someone in the audience crying out C sharp minor! at the end"; Difficulty: Prélude c sharp minor op. 3,2: 5 (medium)'
     link: https://www.henle.de/Prelude-c-sharp-minor-op.-3-no.-2/HN-1211
   - id: abrsm
     bac: 2
-    ten: 'ABRSM, Piano Practical Grades 2021 & 2022, 2023 & 2024, 2025 & 2026 (ba
-      PDF tải 17/11/2026, đọc bằng PyMuPDF, tìm "Rachmanin"): tác phẩm
-      Rachmaninoff duy nhất là Moment musical Op. 16 số 5 ở Grade 8 (2021–2022
-      tr. 36, 2023–2024 tr. 38, 2025–2026 tr. 44 của file); không có Op. 3. ARSM
-      Repertoire (6/2024): Prelude Op. 23 số 6, 7, Op. 32 số 5, 12; không có Op.
-      3'
+    ten: 'ABRSM, Piano Practical Grades 2021 & 2022, 2023 & 2024, 2025 & 2026 (ba PDF tải 17/11/2026, đọc bằng PyMuPDF, tìm "Rachmanin"): tác phẩm Rachmaninoff duy nhất là Moment musical Op. 16 số 5 ở Grade 8 (2021–2022 tr. 36, 2023–2024 tr. 38, 2025–2026 tr. 44 của file); không có Op. 3. ARSM Repertoire (6/2024): Prelude Op. 23 số 6, 7, Op. 32 số 5, 12; không có Op. 3'
     link: https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26%202026%20Prac%20syllabus%2020240524_access.pdf
   - id: pianosyllabus
     bac: 2
-    ten: 'pianosyllabus.com, Prelude in C# minor No 2 from Morceaux de fantaisie Op
-      3 (ref 3082417, đọc 17/11/2026): AMEB Cert. Perf.; AMEB PFL Cert. Perf.;
-      ANZCA A.Dip.A.; RCM 10; RIAM Snr. Cert.; AGME 7; GCSE 9; Piano St 8; PS
-      rating 9'
+    ten: 'pianosyllabus.com, Prelude in C# minor No 2 from Morceaux de fantaisie Op 3 (ref 3082417, đọc 17/11/2026): AMEB Cert. Perf.; AMEB PFL Cert. Perf.; ANZCA A.Dip.A.; RCM 10; RIAM Snr. Cert.; AGME 7; GCSE 9; Piano St 8; PS rating 9'
     link: https://pianosyllabus.com/x-detail.php?ref=3082417
   - id: commons-ban-thu
     bac: 1
-    ten: 'Wikimedia Commons, File:Sergei Rachmaninoff performs Rachmaninoff''s
-      Prelude in C sharp minor, Op. 3.ogg (trang mô tả đọc bằng
-      tools/audio/commons.py --fresh page, 17/11/2026): "performed by the author
-      himself. This is Edison Diamond Disc 82187-R, Matrix 6742-C-2-3 [2-1].
-      Recorded in 1919, released in December 1920"; Date 1920-12; thể loại
-      1919-04-24; "cleaned up and restored copy of File:Prelude 3 2 Rach
-      playing.ogg, restored by Adam Cuerden"; giấy phép
-      {{PD-old-auto-record-expired|deathyear=1943}}; ffprobe 227,908 s; file tải
-      về và đo bằng ffmpeg, librosa'
+    ten: 'Wikimedia Commons, File:Sergei Rachmaninoff performs Rachmaninoff''s Prelude in C sharp minor, Op. 3.ogg (trang mô tả đọc bằng tools/audio/commons.py --fresh page, 17/11/2026): "performed by the author himself. This is Edison Diamond Disc 82187-R, Matrix 6742-C-2-3 [2-1]. Recorded in 1919, released in December 1920"; Date 1920-12; thể loại 1919-04-24; "cleaned up and restored copy of File:Prelude 3 2 Rach playing.ogg, restored by Adam Cuerden"; giấy phép {{PD-old-auto-record-expired|deathyear=1943}}; ffprobe 227,908 s; file tải về và đo bằng ffmpeg, librosa'
     link: https://commons.wikimedia.org/wiki/File:Sergei_Rachmaninoff_performs_Rachmaninoff%27s_Prelude_in_C_sharp_minor,_Op._3.ogg
   - id: site-nghe-si
     bac: 2
-    ten: 'Trang piano/nghe-si (đã khóa): Sergei Rachmaninoff (1873–1943), "Một trong
-      những nghệ sĩ piano lớn nhất thời mình: tiếng rõ, nhịp chắc, không ủy mị"'
+    ten: 'Trang piano/nghe-si (đã khóa): Sergei Rachmaninoff (1873–1943), "Một trong những nghệ sĩ piano lớn nhất thời mình: tiếng rõ, nhịp chắc, không ủy mị"'
     link: https://mtuann.github.io/opus/piano/nghe-si/
   - id: site-lich-su
     bac: 2
-    ten: 'Trang lich-su/nha-soan-nhac (đã khóa), mục Sergei Rachmaninoff
-      (1873–1943): "Nghệ sĩ piano và nhà soạn nhạc Nga"'
+    ten: 'Trang lich-su/nha-soan-nhac (đã khóa), mục Sergei Rachmaninoff (1873–1943): "Nghệ sĩ piano và nhà soạn nhạc Nga"'
     link: https://mtuann.github.io/opus/lich-su/nha-soan-nhac/
   - id: thuat-ngu
     bac: 2
-    ten: 'src/data/thuat-ngu.yml (Từ điển của site, đã khóa): Lento "Chậm"; agitato
-      "Kích động, bồn chồn"; Tempo primo "Trở lại tốc độ như lúc đầu"; pesante
-      "Nặng, một cách nặng nề"; tenuto "Giữ đủ độ dài"'
+    ten: 'src/data/thuat-ngu.yml (Từ điển của site, đã khóa): Lento "Chậm"; agitato "Kích động, bồn chồn"; Tempo primo "Trở lại tốc độ như lúc đầu"; pesante "Nặng, một cách nặng nề"; tenuto "Giữ đủ độ dài"'
     link: https://mtuann.github.io/opus/nhac-ly/tu-dien/
 nhan_dinh:
   - id: n1
-    cau: 'Bài mở đầu bằng ba nốt rất to (ff), La – Sol♯ – Đô♯, mỗi nốt ở ba quãng
-      tám (tay phải La3, Sol♯3, Đô♯3; tay trái một quãng tám ở dưới); nốt Đô♯
-      ngân sang ô 3.'
+    cau: 'Bài mở đầu bằng ba nốt rất to (ff), La – Sol♯ – Đô♯, mỗi nốt ở ba quãng tám (tay phải La3, Sol♯3, Đô♯3; tay trái một quãng tám ở dưới); nốt Đô♯ ngân sang ô 3.'
     loai: cau-truc
     nguon: [ gutheil-1893, mutopia ]
     ket_qua: dung
     ghi_chu: "Bản quét tr. 2 hệ 1 (400 dpi): ô 1 hai nốt đen có dấu > (ff), tay phải La3 (dòng kẻ phụ thứ hai dưới khóa Sol), Sol♯3; tay trái quãng tám La1–La2, Sol♯1–Sol♯2; ô 2 nốt tròn Đô♯3 (đo: dòng kẻ phụ thứ tư ở y = 1161 px, đầu nốt ở 1175 px, nửa khoảng dưới dòng Rê3) và quãng tám Đô♯1–Đô♯2, có dấu nối sang ô 3. MIDI Mutopia ô 1–2: A3, G#3, C#3 (6 phách); A1+A2, G#1+G#2, C#1+C#2. Review (Claude, 17/11/2026): bản quét Gutheil #86365 tr. 2 hệ 1 (300–500 dpi): ff, dấu nhấn, tay phải La3, Sol♯3 rồi Đô♯3 nốt tròn nối sang ô 3, tay trái quãng tám La1–La2, Sol♯1–Sol♯2, Đô♯1–Đô♯2: khớp."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://imslp.org/wiki/Special:ImagefromIndex/86365",
-        "https://www.mutopiaproject.org/ftp/RachmaninoffS/O3/rach-prelude-op3\
-          -no2/rach-prelude-op3-no2.ly"
-      ]
-    luot_2_ghi_chu: "G trang 2, ô 1–2: ff, dấu nhấn, tay phải La3–Sol♯3–Đô♯3 (nốt
-      đơn), tay trái quãng tám La1–La2, Sol♯1–Sol♯2, Đô♯1–Đô♯2; Đô♯ nốt tròn nối
-      sang nốt trắng ô 3. Mu: a4-> gs-> | cs,1->~ (tay phải), <a,, a'> (tay
-      trái). BH, Bo giống."
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/86365", "https://www.mutopiaproject.org/ftp/RachmaninoffS/O3/rach-prelude-op3-no2/rach-prelude-op3-no2.ly" ]
+    luot_2_ghi_chu: "G trang 2, ô 1–2: ff, dấu nhấn, tay phải La3–Sol♯3–Đô♯3 (nốt đơn), tay trái quãng tám La1–La2, Sol♯1–Sol♯2, Đô♯1–Đô♯2; Đô♯ nốt tròn nối sang nốt trắng ô 3. Mu: a4-> gs-> | cs,1->~ (tay phải), <a,, a'> (tay trái). BH, Bo giống."
     review: dung
   - id: n2
-    cau: 'Nhà xuất bản Henle gọi đây có lẽ là bài piano nổi tiếng nhất của cuối thời
-      Lãng mạn.'
+    cau: 'Nhà xuất bản Henle gọi đây có lẽ là bài piano nổi tiếng nhất của cuối thời Lãng mạn.'
     loai: lich-su
     nguon: [ henle-1211 ]
     ket_qua: dung
@@ -153,14 +97,8 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "Commons: \"performed by the author himself\". Bản thu này là ban_thu đầu tiên của bản ghi (src/data/tac-pham.yml). Review (Claude, 17/11/2026): wikitext Commons (API, đọc lại): \"performed by the author himself\": khớp."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://commons.wikimedia.org/wiki/File:Sergei_Rachmaninoff_performs\
-          _Rachmaninoff%27s_Prelude_in_C_sharp_minor,_Op._3.ogg"
-      ]
-    luot_2_ghi_chu: 'Trang mô tả Commons: "performed by the author himself", Edison
-      Diamond Disc 82187-R. IMSLP (mục bản thu) cũng ghi người chơi là chính tác
-      giả.'
+    luot_2_nguon: [ "https://commons.wikimedia.org/wiki/File:Sergei_Rachmaninoff_performs_Rachmaninoff%27s_Prelude_in_C_sharp_minor,_Op._3.ogg" ]
+    luot_2_ghi_chu: 'Trang mô tả Commons: "performed by the author himself", Edison Diamond Disc 82187-R. IMSLP (mục bản thu) cũng ghi người chơi là chính tác giả.'
     review: dung
   - id: n4
     cau: 'Bài ở chặng 7 của lộ trình trên site.'
@@ -175,14 +113,8 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "Mutopia .ly: \"Bar RH-001\" \\partial 2 (ô lấy đà), ô cuối \"RH-062\" (cs1-- \\fermata \\bar \"|.\"). Đếm trên bản quét: tr. 2 bốn hệ 4+4+3+3 = 14 ô (ô 1 là ô lấy đà hai nốt đen, không có dấu lặng); tr. 3 năm hệ 3+3+4+4+4 = 18 ô (15–32); tr. 4 năm hệ 3+3+3+4+3 = 16 ô (33–48); tr. 5 ba hệ 3+3+8 = 14 ô (49–62). Review (Claude, 17/11/2026): bản quét Gutheil #86365: tr. 5 hệ 3 đếm lại 8 ô (55–62), ô cuối có dấu ngân: khớp 62 ô."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://www.mutopiaproject.org/ftp/RachmaninoffS/O3/rach-prelude-op3\
-          -no2/rach-prelude-op3-no2.ly",
-        "https://imslp.org/wiki/Special:ImagefromIndex/86365"
-      ]
-    luot_2_ghi_chu: "Mu: Bar 001 là \\partial 2, chú thích ô tới RH-062 (ô cuối có
-      fermata). Đếm trên G: ô lấy đà + 61 ô đủ = 62."
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/RachmaninoffS/O3/rach-prelude-op3-no2/rach-prelude-op3-no2.ly", "https://imslp.org/wiki/Special:ImagefromIndex/86365" ]
+    luot_2_ghi_chu: "Mu: Bar 001 là \\partial 2, chú thích ô tới RH-062 (ô cuối có fermata). Đếm trên G: ô lấy đà + 61 ô đủ = 62."
     review: dung
   - id: n6
     cau: 'Bài đòi sắc thái từ ppp tới sffff và có một đoạn giữa nhanh (Agitato).'
@@ -191,58 +123,36 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "Bản quét: ppp tr. 2 hệ 1 (ô 3), hệ 3 (ô 9), hệ 4 (ô 13); sffff tr. 4 hệ 5 (ô 47), tr. 5 hệ 1 (ô 50); Agitato. tr. 3 hệ 1 (ô 15), chùm ba móc đơn. Review (Claude, 17/11/2026): bản quét Gutheil #86365: ppp ô 3 (tr. 2 hệ 1), sffff ô 47 (tr. 4 hệ 5); Agitato theo Bosworth 1896 (tr. 4 hệ 1) vì đầu tr. 3 #86365 hỏng: khớp."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://imslp.org/wiki/Special:ImagefromIndex/86365",
-        "https://imslp.org/wiki/Special:ImagefromIndex/79003"
-      ]
-    luot_2_ghi_chu: 'G: ppp ô 3, sffff ô 47 và 50. Chữ Agitato ở ô 15: trang G bị
-      hỏng phần đầu nên không thấy; Bo 1896 trang 4 và BH ghi "Agitato."; Mu
-      cũng có.'
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/86365", "https://imslp.org/wiki/Special:ImagefromIndex/79003" ]
+    luot_2_ghi_chu: 'G: ppp ô 3, sffff ô 47 và 50. Chữ Agitato ở ô 15: trang G bị hỏng phần đầu nên không thấy; Bo 1896 trang 4 và BH ghi "Agitato."; Mu cũng có.'
     review: dung
   - id: n7
-    cau: 'Đoạn chủ đề trở lại viết trên bốn khuông, ghi fff pesante (pesante:
-      nặng).'
+    cau: 'Đoạn chủ đề trở lại viết trên bốn khuông, ghi fff pesante (pesante: nặng).'
     loai: cau-truc
     nguon: [ gutheil-1893, thuat-ngu ]
     ket_qua: dung
     ghi_chu: "Bản quét tr. 4 hệ 5: \"Tempo primo.\", bốn khuông, chữ m.d. (hai khuông trên) và m.g. (hai khuông dưới), \"fff pesante\" ở cả hai cặp khuông; bốn khuông tới hết ô 55 (tr. 5 hệ 3, ô đầu). Pesante: thuat-ngu.yml \"Nặng, một cách nặng nề\". Review (Claude, 17/11/2026): bản quét Gutheil #86365 tr. 4 hệ 5: Tempo primo., m.d. và m.g., fff pesante ở cả hai cặp khuông, sffff ô 47: khớp. Sửa ghi chú lượt 1: bốn khuông không dừng ở ô 55 mà kéo tới hết bài (tr. 5 hệ 3, ô 55–62 vẫn hai cặp khuông, mỗi khuông dưới giữ Đô♯ trầm nốt tròn). Câu này đúng; dòng \"Đọc bốn khuông\" của bảng Chỗ khó và Lỗi thường gặp sửa thành \"từ ô 46 (tới hết bài)\" (n34)."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://imslp.org/wiki/Special:ImagefromIndex/86365",
-        "https://www.dolmetsch.com/defsp1.htm"
-      ]
-    luot_2_ghi_chu: "G trang 4: Tempo primo, bốn khuông, fff pesante ở cả m.d. và
-      m.g. Dolmetsch: pesante = heavy, weighty."
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/86365", "https://www.dolmetsch.com/defsp1.htm" ]
+    luot_2_ghi_chu: "G trang 4: Tempo primo, bốn khuông, fff pesante ở cả m.d. và m.g. Dolmetsch: pesante = heavy, weighty."
     review: dung
   - id: n8
-    cau: 'Tiếng to phải đến từ sức nặng cánh tay, không từ vai cứng; thả sức nặng
-      cánh tay vào phím, cổ tay mềm, nhả ngay sau khi đánh.'
+    cau: 'Tiếng to phải đến từ sức nặng cánh tay, không từ vai cứng; thả sức nặng cánh tay vào phím, cổ tay mềm, nhả ngay sau khi đánh.'
     loai: khuyen-tap
     ket_qua: khong-can-nguon
     ghi_chu: "Khớp trang piano/nha-soan-nhac (mục Rachmaninoff: \"Cần trọng lượng cánh tay để tiếng to mà không gắt\") và cách tập hợp âm có dấu nhấn ở bài học clara-schumann-scherzo-2. Review (Claude, 17/11/2026): lời khuyên tập, không dính sức khỏe; hợp trang piano/tieng-dan."
     luot_2: dung
-    luot_2_ghi_chu: Lời khuyên hợp cách dạy phổ biến (dùng sức nặng cánh tay, cổ tay
-      mềm, nhả căng), không có hại.
+    luot_2_ghi_chu: Lời khuyên hợp cách dạy phổ biến (dùng sức nặng cánh tay, cổ tay mềm, nhả căng), không có hại.
     review: dung
   - id: n9
-    cau: 'Ở ô 3–4, bè trầm của hai tay nhắc lại ba nốt mở đầu (Đô♯, La, Sol♯), dưới
-      những hợp âm móc đơn ppp ở giữa.'
+    cau: 'Ở ô 3–4, bè trầm của hai tay nhắc lại ba nốt mở đầu (Đô♯, La, Sol♯), dưới những hợp âm móc đơn ppp ở giữa.'
     loai: cau-truc
     nguon: [ gutheil-1893, mutopia ]
     ket_qua: dung
     ghi_chu: "Xem khuong_nhac khối 1. Tay phải bè dưới: Đô♯3 trắng (nối từ ô 2), La3, Sol♯3 đen có chấm; tay trái bè dưới: Đô♯1–Đô♯2 trắng, La1–La2, Sol♯1–Sol♯2 đen có chấm; hợp âm móc đơn ở giữa có gạch tenuto. Review (Claude, 17/11/2026): bản quét Gutheil #86365 tr. 2 hệ 1, ô 3–4 (500 dpi): bè dưới tay phải Đô♯3 trắng, La3 (dấu bình nhắc), Sol♯3 đen có chấm; tay trái quãng tám cùng nốt; hợp âm móc đơn ở giữa: khớp."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://imslp.org/wiki/Special:ImagefromIndex/86365",
-        "https://www.mutopiaproject.org/ftp/RachmaninoffS/O3/rach-prelude-op3\
-          -no2/rach-prelude-op3-no2.ly"
-      ]
-    luot_2_ghi_chu: "G ô 3–4: bè dưới tay phải Đô♯ (trắng) – La – Sol♯ (đen), tay
-      trái quãng tám cùng nốt; ở giữa hợp âm móc đơn ppp. Mu RH-003v1/LH-003v1
-      giống."
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/86365", "https://www.mutopiaproject.org/ftp/RachmaninoffS/O3/rach-prelude-op3-no2/rach-prelude-op3-no2.ly" ]
+    luot_2_ghi_chu: "G ô 3–4: bè dưới tay phải Đô♯ (trắng) – La – Sol♯ (đen), tay trái quãng tám cùng nốt; ở giữa hợp âm móc đơn ppp. Mu RH-003v1/LH-003v1 giống."
     review: dung
   - id: n10
     cau: 'Rachmaninoff là một trong những nghệ sĩ piano lớn nhất thời mình.'
@@ -252,39 +162,27 @@ nhan_dinh:
     ghi_chu: "Như trang piano/nghe-si (đã khóa, đã kiểm định). Lượt 2 kiểm nguồn ngoài. Review (Claude, 17/11/2026): nguồn ngoài của lượt 2 (Steinway, dẫn Schonberg) đủ cho câu; cách nói \"một trong những\" thận trọng."
     luot_2: dung
     luot_2_nguon: [ "https://www.steinway.com/artists/sergei-rachmaninoff" ]
-    luot_2_ghi_chu: 'Trang nghệ sĩ của Steinway: "a towering virtuoso"; dẫn Harold
-      Schonberg (The Great Pianists) coi ông là "one of the purest, most
-      complete pianists who ever lived". Đủ ý "một trong những nghệ sĩ piano lớn
-      nhất thời mình".'
+    luot_2_ghi_chu: 'Trang nghệ sĩ của Steinway: "a towering virtuoso"; dẫn Harold Schonberg (The Great Pianists) coi ông là "one of the purest, most complete pianists who ever lived". Đủ ý "một trong những nghệ sĩ piano lớn nhất thời mình".'
     review: dung
   - id: n11
-    cau: 'Sergei Rachmaninoff (1873–1943) là nghệ sĩ piano và nhà soạn nhạc người
-      Nga.'
+    cau: 'Sergei Rachmaninoff (1873–1943) là nghệ sĩ piano và nhà soạn nhạc người Nga.'
     loai: nam
     nguon: [ imslp-rach, site-lich-su ]
     ket_qua: dung
     ghi_chu: "Năm khớp nha-soan-nhac.yml (1873, 1943) và IMSLP (sinh 1/4/1873, mất 28/3/1943). Review (Claude, 17/11/2026): IMSLP Category: 1873–1943, khớp nha-soan-nhac.yml."
     luot_2: dung
     luot_2_nguon: [ "https://id.loc.gov/authorities/names/n50054908.json" ]
-    luot_2_ghi_chu: 'LoC: "Rachmaninoff, Sergei, 1873-1943", "Russian-born American
-      pianist, conductor, and composer". Gọi "người Nga" là đúng (sinh ở Nga;
-      vào quốc tịch Mỹ cuối đời).'
+    luot_2_ghi_chu: 'LoC: "Rachmaninoff, Sergei, 1873-1943", "Russian-born American pianist, conductor, and composer". Gọi "người Nga" là đúng (sinh ở Nga; vào quốc tịch Mỹ cuối đời).'
     review: dung
   - id: n12
-    cau: 'Prelude Đô♯ thứ là bài thứ hai trong Morceaux de fantaisie (Năm tiểu phẩm
-      fantaisie), Op. 3.'
+    cau: 'Prelude Đô♯ thứ là bài thứ hai trong Morceaux de fantaisie (Năm tiểu phẩm fantaisie), Op. 3.'
     loai: ten
     nguon: [ imslp-op3 ]
     ket_qua: dung
     ghi_chu: "IMSLP: 5 Morceaux de fantaisie, Op.3; Number of Movements 5 pieces; số 2 Prélude, Lento, c#. Review (Claude, 17/11/2026): wikitext IMSLP Op. 3 (đọc lại): 5 pieces, số 2 Prélude, Lento (c#): khớp."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://imslp.org/wiki/Morceaux_de_fantaisie,_Op.3_(Rachmaninoff,_Se\
-          rgei)"
-      ]
-    luot_2_ghi_chu: "IMSLP (wikitext qua API): 5 Morceaux de fantaisie, Op.3, số 2
-      Prélude, Lento (c#)."
+    luot_2_nguon: [ "https://imslp.org/wiki/Morceaux_de_fantaisie,_Op.3_(Rachmaninoff,_Sergei)" ]
+    luot_2_ghi_chu: "IMSLP (wikitext qua API): 5 Morceaux de fantaisie, Op.3, số 2 Prélude, Lento (c#)."
     review: dung
   - id: n13
     cau: 'Bài được viết năm 1892.'
@@ -293,11 +191,7 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "IMSLP: Year/Date of Composition 1892. Review (Claude, 17/11/2026): wikitext IMSLP: Year/Date of Composition=1892: khớp."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://imslp.org/wiki/Morceaux_de_fantaisie,_Op.3_(Rachmaninoff,_Se\
-          rgei)"
-      ]
+    luot_2_nguon: [ "https://imslp.org/wiki/Morceaux_de_fantaisie,_Op.3_(Rachmaninoff,_Sergei)" ]
     luot_2_ghi_chu: "IMSLP: Year/Date of Composition=1892. Mu header date 1892."
     review: dung
   - id: n14
@@ -307,14 +201,8 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "IMSLP: Dedication Anton Arensky (1861–1906). Bản quét tr. 2 đầu trang: \"A MONSIEUR A. ARENSKY\". Review (Claude, 17/11/2026): bản quét Gutheil #86365 tr. 2: \"A Monsieur A. ARENSKY.\"; IMSLP Dedication Anton Arensky: khớp."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://imslp.org/wiki/Morceaux_de_fantaisie,_Op.3_(Rachmaninoff,_Se\
-          rgei)",
-        "https://imslp.org/wiki/Special:ImagefromIndex/86365"
-      ]
-    luot_2_ghi_chu: 'IMSLP: Dedication Anton Arensky (1861–1906). G trang 2: "A
-      Monsieur A. ARENSKY."'
+    luot_2_nguon: [ "https://imslp.org/wiki/Morceaux_de_fantaisie,_Op.3_(Rachmaninoff,_Sergei)", "https://imslp.org/wiki/Special:ImagefromIndex/86365" ]
+    luot_2_ghi_chu: 'IMSLP: Dedication Anton Arensky (1861–1906). G trang 2: "A Monsieur A. ARENSKY."'
     review: dung
   - id: n15
     cau: 'Rachmaninoff chơi bài lần đầu ở Moskva năm 1892.'
@@ -323,13 +211,8 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "IMSLP: First Performance 1892/09/20 in Moscow, Moscow Electrical Exhibition, Sergei Rachmaninoff (piano). Trang chỉ ghi năm (tránh lệch lịch cũ, lịch mới). Review (Claude, 17/11/2026): wikitext IMSLP: First Performance=1892/09/20 in Moscow, Moscow Electrical Exhibition, Sergei Rachmaninoff (piano): khớp."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://imslp.org/wiki/Morceaux_de_fantaisie,_Op.3_(Rachmaninoff,_Se\
-          rgei)"
-      ]
-    luot_2_ghi_chu: "IMSLP: First Performance 1892/09/20 in Moscow, Moscow
-      Electrical Exhibition, Sergei Rachmaninoff (piano)."
+    luot_2_nguon: [ "https://imslp.org/wiki/Morceaux_de_fantaisie,_Op.3_(Rachmaninoff,_Sergei)" ]
+    luot_2_ghi_chu: "IMSLP: First Performance 1892/09/20 in Moscow, Moscow Electrical Exhibition, Sergei Rachmaninoff (piano)."
     review: dung
   - id: n16
     cau: "Nhà Gutheil ở Moskva in bài khoảng năm 1893 (bản in không ghi năm)."
@@ -338,41 +221,28 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "IMSLP: Year of First Publication 1893 – Moscow: A. Gutheil, Plates A. 6516-6519 G. Henle ghi \"First published in 1892\": theo khảo sát (khao-sat-g6.md), trang viết năm in 1893 theo IMSLP; bản ghi ghi rõ \"(theo IMSLP)\". Review (Claude, 17/11/2026): câu lượt 1 \"in bài năm 1893\" theo IMSLP không sai, nhưng hai nguồn ghi khác nhau: IMSLP Year of First Publication 1893, file #86365 và #868299 ghi n.d. [1893] (năm IMSLP ước, bản in không ghi năm: chân trang chỉ có \"Moscou, A. Gutheil. A. 6516 G.\"); Henle HN 1211 \"First published in 1892\". Viết lại thận trọng: \"in bài khoảng năm 1893 (bản in không ghi năm)\"; dòng Sáng tác / xuất bản của bản ghi ghi cả hai năm."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://imslp.org/wiki/Morceaux_de_fantaisie,_Op.3_(Rachmaninoff,_Se\
-          rgei)"
-      ]
-    luot_2_ghi_chu: 'IMSLP: Year of First Publication 1893, Moscow: A. Gutheil,
-      Plates A. 6516-6519 G. Lưu ý: Henle HN 1211 viết "First published in
-      1892"; giữ 1893 theo IMSLP (gần bản in gốc hơn, có số bản in).'
+    luot_2_nguon: [ "https://imslp.org/wiki/Morceaux_de_fantaisie,_Op.3_(Rachmaninoff,_Sergei)" ]
+    luot_2_ghi_chu: 'IMSLP: Year of First Publication 1893, Moscow: A. Gutheil, Plates A. 6516-6519 G. Lưu ý: Henle HN 1211 viết "First published in 1892"; giữ 1893 theo IMSLP (gần bản in gốc hơn, có số bản in).'
     review: dung
   - id: n17
-    cau: 'Nhờ các buổi biểu diễn của Alexander Siloti, anh họ của Rachmaninoff, bài
-      sớm nổi tiếng ở nước ngoài.'
+    cau: 'Nhờ các buổi biểu diễn của Alexander Siloti, anh họ của Rachmaninoff, bài sớm nổi tiếng ở nước ngoài.'
     loai: lich-su
     nguon: [ henle-1211 ]
     ket_qua: dung
     ghi_chu: "Henle: \"soon became well known abroad, in particular due to the concert tours given by the pianist Alexander Siloti, Rachmaninoff's cousin\". Review (Claude, 17/11/2026): Henle HN 1211 đọc lại: \"in particular due to the concert tours given by the pianist Alexander Siloti, Rachmaninoff’s cousin\": khớp."
     luot_2: dung
     luot_2_nguon: [ "https://www.henle.de/Prelude-c-sharp-minor-op.-3-no.-2/HN-1211" ]
-    luot_2_ghi_chu: "Henle: \"soon became well known abroad, in particular due to
-      the concert tours given by the pianist Alexander Siloti, Rachmaninoff's
-      cousin\"."
+    luot_2_ghi_chu: "Henle: \"soon became well known abroad, in particular due to the concert tours given by the pianist Alexander Siloti, Rachmaninoff's cousin\"."
     review: dung
   - id: n18
-    cau: 'Ở Mỹ, hầu như buổi hòa nhạc nào của Rachmaninoff cũng có người la to đòi
-      "Đô♯ thứ!" ở cuối.'
+    cau: 'Ở Mỹ, hầu như buổi hòa nhạc nào của Rachmaninoff cũng có người la to đòi "Đô♯ thứ!" ở cuối.'
     loai: lich-su
     nguon: [ henle-1211 ]
     ket_qua: dung
     ghi_chu: "Henle: \"Rachmaninoff himself was soon no longer able to perform any concerts in America, without someone in the audience crying out C sharp minor! at the end\". Review (Claude, 17/11/2026): Henle đọc lại: \"no longer able to perform any concerts in America, without someone in the audience crying out “C sharp minor!” at the end\": khớp (\"hầu như\" mềm hơn nguồn)."
     luot_2: dung
     luot_2_nguon: [ "https://www.henle.de/Prelude-c-sharp-minor-op.-3-no.-2/HN-1211" ]
-    luot_2_ghi_chu: "Henle: \"Rachmaninoff himself was soon no longer able to
-      perform any concerts in America, without someone in the audience crying
-      out 'C sharp minor!' at the end\". \"Hầu như\" là cách nói mềm hơn nguồn,
-      không sai."
+    luot_2_ghi_chu: "Henle: \"Rachmaninoff himself was soon no longer able to perform any concerts in America, without someone in the audience crying out 'C sharp minor!' at the end\". \"Hầu như\" là cách nói mềm hơn nguồn, không sai."
     review: dung
   - id: n19
     cau: 'Bài còn được gọi là "Chuông Moskva" (The Bells of Moscow).'
@@ -381,38 +251,21 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "IMSLP, danh sách các bài: \"Prélude … Lento (c#) — also known as The Bells of Moscow\". Review (Claude, 17/11/2026): wikitext IMSLP: \"Lento (c#) — also known as \\\"The Bells of Moscow\\\"\": khớp."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://imslp.org/wiki/Morceaux_de_fantaisie,_Op.3_(Rachmaninoff,_Se\
-          rgei)"
-      ]
+    luot_2_nguon: [ "https://imslp.org/wiki/Morceaux_de_fantaisie,_Op.3_(Rachmaninoff,_Sergei)" ]
     luot_2_ghi_chu: "IMSLP: số 2 Prélude \"also known as 'The Bells of Moscow'\"."
     review: dung
   - id: n20
-    cau: 'Về sau Rachmaninoff viết thêm mười prelude Op. 23 (1901–1903) và mười ba
-      prelude Op. 32 (1910); cùng bài Đô♯ thứ, 24 prelude đi qua đủ 24 giọng
-      trưởng và thứ.'
+    cau: 'Về sau Rachmaninoff viết thêm mười prelude Op. 23 (1901–1903) và mười ba prelude Op. 32 (1910); cùng bài Đô♯ thứ, 24 prelude đi qua đủ 24 giọng trưởng và thứ.'
     loai: nam
     nguon: [ imslp-op23-32 ]
     ket_qua: dung
     ghi_chu: "IMSLP Op. 23: 10 preludes, 1901–03; Op. 32: 13 pieces, 1910; trường Key: tất cả các giọng, cùng Op. 23, Op. 32 và Prelude Đô♯ thứ Op. 3 số 2. 1 + 10 + 13 = 24. Review (Claude, 17/11/2026): wikitext IMSLP đọc lại: Op. 23 Year/Date 1901–03, 10 preludes; Op. 32 1910, 13 pieces; Key={{Tons}} cùng hai tập kia và Op. 3 số 2: khớp."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://imslp.org/wiki/10_Preludes,_Op.23_(Rachmaninoff,_Sergei)",
-        "https://imslp.org/wiki/13_Preludes,_Op.32_(Rachmaninoff,_Sergei)"
-      ]
-    luot_2_ghi_chu: 'IMSLP: Op.23 10 preludes, 1901–03; Op.32 13 pieces, 1910;
-      trường Key của cả hai ghi {{Tons}} (mọi giọng) "together with" Op.32/Op.23
-      và Prelude Đô♯ thứ Op.3 số 2.'
+    luot_2_nguon: [ "https://imslp.org/wiki/10_Preludes,_Op.23_(Rachmaninoff,_Sergei)", "https://imslp.org/wiki/13_Preludes,_Op.32_(Rachmaninoff,_Sergei)" ]
+    luot_2_ghi_chu: 'IMSLP: Op.23 10 preludes, 1901–03; Op.32 13 pieces, 1910; trường Key của cả hai ghi {{Tons}} (mọi giọng) "together with" Op.32/Op.23 và Prelude Đô♯ thứ Op.3 số 2.'
     review: dung
   - id: n21
-    cau: 'Các link trong trang: Nhà soạn nhạc cho piano
-      (#sergei-rachmaninoff-18731943), Prelude độc lập
-      (piano/the-loai#prelude-oc-lap), thu âm, tiếng đàn, bàn đạp, quãng tám và
-      bước nhảy, hình thức ba đoạn (nhac-ly/31-hinh-thuc-nho), Chopin
-      Fantaisie-Impromptu (cùng chặng 7, cùng giọng Đô♯ thứ), Concerto piano số
-      2.'
+    cau: 'Các link trong trang: Nhà soạn nhạc cho piano (#sergei-rachmaninoff-18731943), Prelude độc lập (piano/the-loai#prelude-oc-lap), thu âm, tiếng đàn, bàn đạp, quãng tám và bước nhảy, hình thức ba đoạn (nhac-ly/31-hinh-thuc-nho), Chopin Fantaisie-Impromptu (cùng chặng 7, cùng giọng Đô♯ thứ), Concerto piano số 2.'
     loai: ve-site
     ket_qua: dung
     ghi_chu: "tests/link.test.mjs kiểm đích và #mục; chopin-fantaisie-impromptu có chang: 7, giong: Đô♯ thứ trong tac-pham.yml; trang nhac-ly/31-hinh-thuc-nho có mục \"Hình thức ba đoạn (ternary)\". Review (Claude, 17/11/2026): các link trong trang; tests/link.test.mjs đạt trên bản xem (đích và #mục có thật); chopin-fantaisie-impromptu: chang 7, giong Đô♯ thứ trong tac-pham.yml; nhac-ly/31-hinh-thuc-nho có mục hình thức ba đoạn."
@@ -424,16 +277,8 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "Commons: Edison Diamond Disc 82187-R, Recorded in 1919, released in December 1920; thể loại 1919-04-24. Review (Claude, 17/11/2026): wikitext Commons: \"Recorded in 1919, released in December 1920\", Diamond Disc 82187-R: khớp."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://commons.wikimedia.org/wiki/File:Sergei_Rachmaninoff_performs\
-          _Rachmaninoff%27s_Prelude_in_C_sharp_minor,_Op._3.ogg",
-        "https://imslp.org/wiki/Morceaux_de_fantaisie,_Op.3_(Rachmaninoff,_Se\
-          rgei)"
-      ]
-    luot_2_ghi_chu: 'Commons: "Recorded in 1919, released in December 1920", Edison
-      Diamond Disc 82187-R. IMSLP: Edison Records 1920, 82187-R, "Recorded in
-      1919".'
+    luot_2_nguon: [ "https://commons.wikimedia.org/wiki/File:Sergei_Rachmaninoff_performs_Rachmaninoff%27s_Prelude_in_C_sharp_minor,_Op._3.ogg", "https://imslp.org/wiki/Morceaux_de_fantaisie,_Op.3_(Rachmaninoff,_Sergei)" ]
+    luot_2_ghi_chu: 'Commons: "Recorded in 1919, released in December 1920", Edison Diamond Disc 82187-R. IMSLP: Edison Records 1920, 82187-R, "Recorded in 1919".'
     review: dung
   - id: n23
     cau: 'Bản thu rất cũ nên còn tiếng ồn mặt đĩa.'
@@ -442,15 +287,8 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "Commons: bản phục hồi (cleaned up and restored) từ file Prelude 3 2 Rach playing.ogg. Đo: ở các chỗ im (94–104 s, 222–228 s) mức nền vẫn khoảng −50 đến −55 dBFS (RMS), không xuống tới im lặng; bộ dò khởi âm bắt hàng loạt khởi âm yếu không có cao độ rõ ở 213–220 s. Review (Claude, 17/11/2026): đo lại trên file Commons tải lại (227,908 s): mức nền giữa các tiếng đàn ở 214–217 s và 222–224 s là khoảng −51 đến −56 dB (RMS), không im: khớp."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://commons.wikimedia.org/wiki/File:Sergei_Rachmaninoff_performs\
-          _Rachmaninoff%27s_Prelude_in_C_sharp_minor,_Op._3.ogg"
-      ]
-    luot_2_ghi_chu: "Đo file Commons (librosa): đoạn trước tiếng đàn (0–1 s) và sau
-      khi tắt (223–228 s) vẫn có nền ồn khoảng −41 đến −47 dB so với đỉnh, không
-      phải im lặng số. Commons ghi đây là bản làm sạch, phục hồi (Adam Cuerden)
-      từ đĩa Edison."
+    luot_2_nguon: [ "https://commons.wikimedia.org/wiki/File:Sergei_Rachmaninoff_performs_Rachmaninoff%27s_Prelude_in_C_sharp_minor,_Op._3.ogg" ]
+    luot_2_ghi_chu: "Đo file Commons (librosa): đoạn trước tiếng đàn (0–1 s) và sau khi tắt (223–228 s) vẫn có nền ồn khoảng −41 đến −47 dB so với đỉnh, không phải im lặng số. Commons ghi đây là bản làm sạch, phục hồi (Adam Cuerden) từ đĩa Edison."
     review: dung
   - id: n24
     cau: "Mốc tham khảo theo bản thu Commons của chính tác giả: 1 s ba nốt mở đầu; 9 s hợp âm ppp ô 3; 39 s ô 7 mf; 105 s Agitato; 133 s ô 36 fff; 140 s ô 44 sfff; 146 s Tempo primo; 193 s coda ô 56; 220 s hợp âm cuối."
@@ -459,61 +297,28 @@ nhan_dinh:
     ket_qua: da-sua
     ghi_chu: "Khởi âm (librosa onset_strength, hop 256, trên file đã chỉnh cao độ +0,38 nửa cung) và 5 cao độ mạnh nhất trong 0,25 s sau đó, so với nốt MIDI Mutopia: 1,22 s (phổ hài của La, f0 106,8 Hz); 2,76 s Sol♯; 4,46 s Đô♯. Ô 3: hợp âm Đô♯–Sol♯–Đô♯ trên Mi–Sol♯–Mi ở 8,74 s (rồi La ở 11,87 s, phách 3). Ô 7: Sol♯ trầm khoảng 39,2 s (yếu); các cặp hợp âm Sol♯–Rê♯–Sol♯ 40,52, La–Mi–La 40,92, Fa♯ 41,42, Sol♯ 41,97, Mi–Si–Mi 42,46, Fa♯ 42,90 s đúng thứ tự ô 7: mốc 40 (lệch tối đa khoảng 1 s). Agitato: Mi 104,53, Rê♯ 105,54, Rê 106,17, Đô♯ 106,65, lặp ở 107,04–108,17, Sol♯ ô 17 ở 108,49 s; trước đó 94–104 s rất nhỏ (ô 13–14). Ô 35–36: Si5 131,42, La5 131,79, Rê6 132,04, Đô♯6 132,28, Fa♯6 (ô 36) 132,54, Mi6 132,78, hợp âm La6–Fa♯6–Đô6 fff 133,07 s. Ô 44: La 140,24, hợp âm Fa♯–Đô♯ 141,49; ô 45: Sol♯ 142,72, hợp âm 144,08; ô 46 (Đô♯ trầm, Tempo primo) 145,59 s. Coda: năm cặp nốt Đô♯ trầm rồi hợp âm 1,0–1,5 s sau (192,88/193,91; 196,50/197,66; 200,51/201,69; 204,95/206,32; 209,93/211,42) đúng ô 56–60 (nốt trầm phách 1, hợp âm phách 2); hợp âm cuối Đô♯–Mi–Sol♯ ở 220,25 s (một khởi âm nữa ở 221,07 s cùng cao độ). Căn DTW (core.align, MIDI Mutopia, sau chỉnh cao độ): ô 15 105,3, ô 36 132,5, ô 46 145,6 khớp; đoạn Lento và coda không khớp nên không dùng. Review (Claude, 17/11/2026): đo lại trên file Commons tải lại (librosa onset hop 256, CQT 5 cao độ mạnh nhất, sau chỉnh +0,38 nửa cung): 1,22 (La), 8,75 (hợp âm ô 3), 104,52 (Mi, Agitato), 132,54 (Fa♯6 đầu ô 36) rồi hợp âm fff 133,04, 140,24 (ô 44), 145,59 (ô 46), 192,85 (Đô♯ trầm ô 56), 220,3 (hợp âm cuối; 215,1 Đô♯ trầm ô 61, 217,6 và 218,2 hai hợp âm ô 61, 221,1 khởi âm nữa cùng cao độ). Mốc ô 7 sửa 40 thành 39: Sol♯ trầm đầu ô 7 ở 38,77 s (cả lượt 2 đo 38,8), hợp âm đầu tiên 40,25 s; ở 40 s ô 7 đã bắt đầu hơn 1 s. Ghi lại bằng attach.py --ref \"1 9 39 105 133 140 146 193 220\". Các mốc khác khớp trong 0,5 s; sơ đồ hinh không đổi."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://upload.wikimedia.org/wikipedia/commons/b/b9/Sergei_Rachmanin\
-          off_performs_Rachmaninoff%27s_Prelude_in_C_sharp_minor%2C_Op._3.ogg"
-      ]
-    luot_2_ghi_chu: "Đo onset và chroma trên file .ogg gốc: La mở đầu 1,24 s; hợp âm
-      ppp đầu tiên ô 3 (Đô♯–Sol♯–Đô♯) 8,7 s; ô 7: Sol♯ trầm 38,8 s, hợp âm mf
-      đầu 40,2 s; Agitato (Mi) 104,5 s; ô 36 phách 3 hợp âm fff Si♯–Fa♯–La ở âm
-      vực cao 133,1 s (đầu ô 132,5); ô 44 La quãng tám 140,3 s, ô 45 Sol♯ 142,7
-      s; Tempo primo (hợp âm Đô♯ thứ) 145,6 s; ô 56 Đô♯ trầm 192,9 s, hợp âm mf
-      193,9 s; hợp âm cuối 220,3 s. Mọi mốc lệch ≤ 1,2 s."
+    luot_2_nguon: [ "https://upload.wikimedia.org/wikipedia/commons/b/b9/Sergei_Rachmaninoff_performs_Rachmaninoff%27s_Prelude_in_C_sharp_minor%2C_Op._3.ogg" ]
+    luot_2_ghi_chu: "Đo onset và chroma trên file .ogg gốc: La mở đầu 1,24 s; hợp âm ppp đầu tiên ô 3 (Đô♯–Sol♯–Đô♯) 8,7 s; ô 7: Sol♯ trầm 38,8 s, hợp âm mf đầu 40,2 s; Agitato (Mi) 104,5 s; ô 36 phách 3 hợp âm fff Si♯–Fa♯–La ở âm vực cao 133,1 s (đầu ô 132,5); ô 44 La quãng tám 140,3 s, ô 45 Sol♯ 142,7 s; Tempo primo (hợp âm Đô♯ thứ) 145,6 s; ô 56 Đô♯ trầm 192,9 s, hợp âm mf 193,9 s; hợp âm cuối 220,3 s. Mọi mốc lệch ≤ 1,2 s."
     review: sai
   - id: n25
-    cau: 'Bảng Theo dõi khi nghe: ô 3 ppp, hợp âm giữa, ba nốt mở đầu ở bè trầm; ô 7
-      mf, hợp âm đi từng cặp trên nốt Sol♯ ngân ở dưới; ô 15 Agitato mf, chùm ba
-      ở tay phải, giai điệu đi xuống từng nửa cung; ô 36 fff, hợp âm luân phiên
-      hai tay; ô 44–45 sfff, hợp âm lớn ngân dài; ô 46 Tempo primo fff pesante,
-      bốn khuông; ô 56 mf, hợp âm chậm trên nốt Đô♯ trầm; hợp âm cuối ppp có dấu
-      ngân.'
+    cau: 'Bảng Theo dõi khi nghe: ô 3 ppp, hợp âm giữa, ba nốt mở đầu ở bè trầm; ô 7 mf, hợp âm đi từng cặp trên nốt Sol♯ ngân ở dưới; ô 15 Agitato mf, chùm ba ở tay phải, giai điệu đi xuống từng nửa cung; ô 36 fff, hợp âm luân phiên hai tay; ô 44–45 sfff, hợp âm lớn ngân dài; ô 46 Tempo primo fff pesante, bốn khuông; ô 56 mf, hợp âm chậm trên nốt Đô♯ trầm; hợp âm cuối ppp có dấu ngân.'
     loai: cau-truc
     nguon: [ gutheil-1893, mutopia ]
     ket_qua: dung
     ghi_chu: "Bản quét: tr. 2 hệ 2 ô 7 (mf; bè dưới tay phải và tay trái nốt tròn Sol♯ nối sang ô 8; hợp âm móc đơn có vòng luyến từng cặp); tr. 3 hệ 1 ô 15 (Agitato., mf, chùm ba có số 3, nốt đầu chùm có gạch tenuto: Mi–Rê♯–Rê♮–Đô♯); tr. 4 hệ 2 ô 36 (fff ở nửa sau ô; chùm ba móc đơn: hợp âm tay phải, tay trái, tay phải | trái, phải, trái); tr. 4 hệ 4 ô 44–45 (sfff dưới quãng tám nốt tròn, ff ở hợp âm trắng phách 3); tr. 4 hệ 5 ô 46; tr. 5 hệ 3 ô 56 (mf; Đô♯ trầm nốt tròn mỗi ô, hợp âm trắng chấm dôi sau lặng đen), ô 62 (ppp, dấu ngân trên hợp âm). Review (Claude, 17/11/2026): bản quét Gutheil #86365: ô 7 mf (tr. 2 hệ 2: Sol♯ nốt tròn nối, hợp âm từng cặp có luyến), ô 36 hợp âm luân phiên hai tay R–L–R | L–R–L (tr. 4 hệ 2), Tempo primo ô 46 (tr. 4 hệ 5), mf ô 56 và ppp có dấu ngân ô 62 (tr. 5 hệ 3): khớp; Agitato ô 15 theo Bosworth."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://imslp.org/wiki/Special:ImagefromIndex/86365",
-        "https://imslp.org/wiki/Special:ImagefromIndex/79003"
-      ]
-    luot_2_ghi_chu: "G: ô 3 ppp, hợp âm giữa, bè trầm Đô♯–La–Sol♯; ô 7 mf, cặp hợp
-      âm có luyến trên Sol♯ tròn nối; ô 15 mf, chùm ba tay phải, giai điệu
-      Mi–Rê♯–Rê–Đô♯ (chữ Agitato thấy ở Bo, BH vì G hỏng đầu trang); ô 36 fff
-      hợp âm luân phiên hai tay; ô 44–45 sfff (nốt tròn) cùng hợp âm ff; ô 46
-      Tempo primo fff pesante bốn khuông; ô 56 mf hợp âm trên Đô♯ trầm; hợp âm
-      cuối ppp có fermata."
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/86365", "https://imslp.org/wiki/Special:ImagefromIndex/79003" ]
+    luot_2_ghi_chu: "G: ô 3 ppp, hợp âm giữa, bè trầm Đô♯–La–Sol♯; ô 7 mf, cặp hợp âm có luyến trên Sol♯ tròn nối; ô 15 mf, chùm ba tay phải, giai điệu Mi–Rê♯–Rê–Đô♯ (chữ Agitato thấy ở Bo, BH vì G hỏng đầu trang); ô 36 fff hợp âm luân phiên hai tay; ô 44–45 sfff (nốt tròn) cùng hợp âm ff; ô 46 Tempo primo fff pesante bốn khuông; ô 56 mf hợp âm trên Đô♯ trầm; hợp âm cuối ppp có fermata."
     review: dung
   - id: n26
-    cau: 'Cấu trúc: A ô 1–14 (Lento; ô 7 mf); B ô 15–45 (Agitato; ff ô 28, fff ô 36,
-      hợp âm luân phiên hai tay; sfff ô 44–45); A ô 46–55 (Tempo primo, fff
-      pesante, bốn khuông; sffff ô 47 và ô 50; nhỏ dần ô 54–55); coda ô 56–62
-      (mf, hợp âm chậm trên nốt Đô♯ trầm, kết ppp, dấu ngân).'
+    cau: 'Cấu trúc: A ô 1–14 (Lento; ô 7 mf); B ô 15–45 (Agitato; ff ô 28, fff ô 36, hợp âm luân phiên hai tay; sfff ô 44–45); A ô 46–55 (Tempo primo, fff pesante, bốn khuông; sffff ô 47 và ô 50; nhỏ dần ô 54–55); coda ô 56–62 (mf, hợp âm chậm trên nốt Đô♯ trầm, kết ppp, dấu ngân).'
     loai: cau-truc
     nguon: [ gutheil-1893, mutopia ]
     ket_qua: dung
     ghi_chu: "Bản quét: ff tr. 3 hệ 4 ô cuối (ô 28, chủ đề Agitato lên quãng tám, tay trái Đô♯ trầm nốt tròn); fff tr. 4 hệ 2 (ô 36); sfff tr. 4 hệ 4 (ô 44, 45); sffff tr. 4 hệ 5 ô 47, tr. 5 hệ 1 ô 50; dim. tr. 5 hệ 2 ô cuối (ô 54) và hệ 3 ô đầu (ô 55); mf tr. 5 hệ 3 ô 56; ppp và dấu ngân ô 62. Hợp âm luân phiên hai tay từ ô 36 tới ô 43 (tr. 4 hệ 2–4). Đặt coda từ ô 56 là cách chia của trang (chỗ đổi kết cấu: hợp âm chậm trên Đô♯ trầm). Review (Claude, 17/11/2026): bản quét Gutheil #86365: fff ô 36, Tempo primo fff pesante ô 46, sffff ô 47, dim. ô 55 (tr. 5 hệ 3 ô đầu), mf ô 56, ppp ô 62: khớp."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://imslp.org/wiki/Special:ImagefromIndex/86365",
-        "https://www.mutopiaproject.org/ftp/RachmaninoffS/O3/rach-prelude-op3\
-          -no2/rach-prelude-op3-no2.ly"
-      ]
-    luot_2_ghi_chu: "Đếm ô trên G và đối chiếu chú thích ô của Mu: ff ô 28 (Mu
-      RH-028 \\ff), fff ô 36, sfff ô 44–45, Tempo primo fff pesante ô 46, sffff
-      ô 47 và 50, dim. ô 54 và 55, mf ô 56, ppp fermata ô 62."
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/86365", "https://www.mutopiaproject.org/ftp/RachmaninoffS/O3/rach-prelude-op3-no2/rach-prelude-op3-no2.ly" ]
+    luot_2_ghi_chu: "Đếm ô trên G và đối chiếu chú thích ô của Mu: ff ô 28 (Mu RH-028 \\ff), fff ô 36, sfff ô 44–45, Tempo primo fff pesante ô 46, sffff ô 47 và 50, dim. ô 54 và 55, mf ô 56, ppp fermata ô 62."
     review: dung
   - id: n27
     cau: "Ô 1–4 trên khuông nhạc chép từ bản khắc đầu tiên của nhà Gutheil (Moskva, khoảng 1893) và đối chiếu với bản Mutopia; ô 15–16 cùng nguồn, nhưng phần trên của trang này trong bản quét bị hỏng nên tay phải và chữ Agitato được đối chiếu thêm với bản Bosworth (1896) và bản Mutopia; bản in chỉ ghi Lento, không có số máy đếm nhịp."
@@ -522,54 +327,28 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "Bản quét tr. 2 hệ 1: \"Lento.\" không kèm số; cả bốn trang không có số máy đếm nhịp (Agitato., Tempo primo. cũng không có số). Q: trong khối abc chỉ để phát. Xem khuong_nhac khối 1. Review (Claude, 17/11/2026): câu viết lại theo ấn bản #86365 (bản khắc đầu tiên, khoảng 1893). Ô 1–4 so từng nốt với bản quét Gutheil #86365 tr. 2 hệ 1 (500 dpi): khớp; Lento không có số máy đếm nhịp. Ô 15–16: đầu tr. 3 #86365 mất khuông trên (IMSLP Misc. Notes: \"Pages 2-3 of No.2: Prélude damaged\"; đọc được tay trái, mf và các nốt dưới của chùm ba), tay phải và chữ \"Agitato.\" đối chiếu Bosworth 1896 tr. 4 hệ 1 (400 dpi) và Mutopia: khớp. Xem khuong_nhac khối 1–2."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://imslp.org/wiki/Special:ImagefromIndex/86365",
-        "https://www.mutopiaproject.org/ftp/RachmaninoffS/O3/rach-prelude-op3\
-          -no2/rach-prelude-op3-no2.ly"
-      ]
-    luot_2_ghi_chu: 'G trang 2 chỉ ghi "Lento.", không số máy đếm nhịp (Bo, BH cũng
-      vậy; Mu đặt tempo ẩn chỉ cho MIDI). So khối ABC ô 1–4 với G và Mu: nốt,
-      ppp, tenuto, staccato khớp.'
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/86365", "https://www.mutopiaproject.org/ftp/RachmaninoffS/O3/rach-prelude-op3-no2/rach-prelude-op3-no2.ly" ]
+    luot_2_ghi_chu: 'G trang 2 chỉ ghi "Lento.", không số máy đếm nhịp (Bo, BH cũng vậy; Mu đặt tempo ẩn chỉ cho MIDI). So khối ABC ô 1–4 với G và Mu: nốt, ppp, tenuto, staccato khớp.'
     review: dung
   - id: n28
-    cau: 'Ở ô 3–4, hai tay chơi hợp âm móc đơn ppp có dấu tenuto (giữ đủ độ dài);
-      phách 4 là hợp âm Sol♯ bảy (Sol♯ – Si♯ – Rê♯ – Fa♯), hợp âm át bảy của Đô♯
-      thứ.'
+    cau: 'Ở ô 3–4, hai tay chơi hợp âm móc đơn ppp có dấu tenuto (giữ đủ độ dài); phách 4 là hợp âm Sol♯ bảy (Sol♯ – Si♯ – Rê♯ – Fa♯), hợp âm át bảy của Đô♯ thứ.'
     loai: cau-truc
     nguon: [ gutheil-1893, mutopia, thuat-ngu ]
     ket_qua: dung
     ghi_chu: "Phách 4: bè trầm Sol♯1–Sol♯2 (tay trái), Sol♯3 (tay phải), hợp âm Si♯3–Fa♯4–Si♯4 (tay phải), Rê♯3–Fa♯3–Rê♯4 (tay trái): Sol♯, Si♯, Rê♯, Fa♯. Sol♯ là bậc V của Đô♯ thứ. Tenuto: thuat-ngu.yml \"Giữ đủ độ dài\", gạch ngang ngắn trên nốt (bản quét: gạch trên mọi hợp âm móc đơn). Review (Claude, 17/11/2026): bản quét Gutheil #86365 tr. 2 hệ 1 phách 4 ô 3 (500 dpi): tay phải Si♯3–Fa♯4–Si♯4, tay trái Rê♯3–Fa♯3–Rê♯4, bè trầm Sol♯: Sol♯ bảy; gạch tenuto trên mọi hợp âm: khớp."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://imslp.org/wiki/Special:ImagefromIndex/86365",
-        "https://www.mutopiaproject.org/ftp/RachmaninoffS/O3/rach-prelude-op3\
-          -no2/rach-prelude-op3-no2.ly"
-      ]
-    luot_2_ghi_chu: "G: hợp âm móc đơn có gạch tenuto, ppp. Phách 4 ô 3: Si♯–Fa♯–Si♯
-      (tay phải), Rê♯–Fa♯–Rê♯ (tay trái), Sol♯ trầm: Sol♯ bảy, át bảy của Đô♯
-      thứ (Mu: <bs fs' bs>--, <ds fs ds'>^-)."
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/86365", "https://www.mutopiaproject.org/ftp/RachmaninoffS/O3/rach-prelude-op3-no2/rach-prelude-op3-no2.ly" ]
+    luot_2_ghi_chu: "G: hợp âm móc đơn có gạch tenuto, ppp. Phách 4 ô 3: Si♯–Fa♯–Si♯ (tay phải), Rê♯–Fa♯–Rê♯ (tay trái), Sol♯ trầm: Sol♯ bảy, át bảy của Đô♯ thứ (Mu: <bs fs' bs>--, <ds fs ds'>^-)."
     review: dung
   - id: n29
-    cau: 'Ô 15–16: nốt đầu mỗi chùm ba ở tay phải là một nốt đen của giai điệu Mi –
-      Rê♯ – Rê – Đô♯, đi xuống từng nửa cung; tay trái đi xuống La♯ – La – Sol♯
-      trên nốt Đô♯ trầm ngân cả ô.'
+    cau: 'Ô 15–16: nốt đầu mỗi chùm ba ở tay phải là một nốt đen của giai điệu Mi – Rê♯ – Rê – Đô♯, đi xuống từng nửa cung; tay trái đi xuống La♯ – La – Sol♯ trên nốt Đô♯ trầm ngân cả ô.'
     loai: cau-truc
     nguon: [ gutheil-1893, bosworth-1896, mutopia ]
     ket_qua: dung
     ghi_chu: "Xem khuong_nhac khối 2. Ô 16 tay trái bè trên Si – La♯ – La – Sol♯. Review (Claude, 17/11/2026): bản quét Gutheil #86365 tr. 3 hệ 1: tay trái lặng đen, La♯2, La♮2, Sol♯2 có tenuto và luyến, Đô♯1–Đô♯2 nốt tròn; ô 16 Si2–La♯2–La♮2–Sol♯2 trên Đô♯2; nốt dưới của chùm ba Sol♯3, Fa𝄪3, Fa♯3 (♮♯)–Si♯3, Mi3–Sol♯3: khớp. Giai điệu Mi–Rê♯–Rê–Đô♯ (khuông trên mất ở #86365): Bosworth 1896 tr. 4 hệ 1 và Mutopia: khớp."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://imslp.org/wiki/Special:ImagefromIndex/86365",
-        "https://imslp.org/wiki/Special:ImagefromIndex/79003",
-        "https://www.mutopiaproject.org/ftp/RachmaninoffS/O3/rach-prelude-op3\
-          -no2/rach-prelude-op3-no2.ly"
-      ]
-    luot_2_ghi_chu: "G trang 3 và Bo trang 4, ô 15–16: nốt đầu chùm ba tay phải là
-      nốt đen thân lên Mi–Rê♯–Rê–Đô♯; tay trái lặng đen rồi La♯–La–Sol♯ trên Đô♯
-      quãng tám nốt tròn (ô 16: Si–La♯–La–Sol♯). Mu RH-015v1, LH-015v2 giống."
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/86365", "https://imslp.org/wiki/Special:ImagefromIndex/79003", "https://www.mutopiaproject.org/ftp/RachmaninoffS/O3/rach-prelude-op3-no2/rach-prelude-op3-no2.ly" ]
+    luot_2_ghi_chu: "G trang 3 và Bo trang 4, ô 15–16: nốt đầu chùm ba tay phải là nốt đen thân lên Mi–Rê♯–Rê–Đô♯; tay trái lặng đen rồi La♯–La–Sol♯ trên Đô♯ quãng tám nốt tròn (ô 16: Si–La♯–La–Sol♯). Mu RH-015v1, LH-015v2 giống."
     review: dung
   - id: n30
     cau: 'Bản in không ghi bàn đạp.'
@@ -578,101 +357,56 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "Bốn trang bản quét (200–400 dpi): không có chữ Ped., dấu * hay đường bàn đạp. Review (Claude, 17/11/2026): bản quét Gutheil #86365 tr. 2–5: không thấy Ped. hay dấu *; Mutopia không có bàn đạp."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://imslp.org/wiki/Special:ImagefromIndex/86365",
-        "https://www.mutopiaproject.org/ftp/RachmaninoffS/O3/rach-prelude-op3\
-          -no2/rach-prelude-op3-no2.ly"
-      ]
-    luot_2_ghi_chu: G (4 trang của bài) không có ký hiệu Ped.; Mu không có sustain.
-      Bo 1896 (biên tập J. A. Preston) có thêm số ngón; câu đúng với bản Gutheil
-      mà trang chép.
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/86365", "https://www.mutopiaproject.org/ftp/RachmaninoffS/O3/rach-prelude-op3-no2/rach-prelude-op3-no2.ly" ]
+    luot_2_ghi_chu: G (4 trang của bài) không có ký hiệu Ped.; Mu không có sustain. Bo 1896 (biên tập J. A. Preston) có thêm số ngón; câu đúng với bản Gutheil mà trang chép.
     review: dung
   - id: n31
-    cau: 'Lento nghĩa là chậm; Agitato là kích động, bồn chồn; Tempo primo là trở
-      lại tốc độ như lúc đầu.'
+    cau: 'Lento nghĩa là chậm; Agitato là kích động, bồn chồn; Tempo primo là trở lại tốc độ như lúc đầu.'
     loai: dinh-nghia
     nguon: [ thuat-ngu ]
     ket_qua: dung
     ghi_chu: "Đúng chữ trong thuat-ngu.yml. Review (Claude, 17/11/2026): thuat-ngu.yml: Lento \"Chậm\", agitato \"Kích động, bồn chồn\", Tempo primo \"Trở lại tốc độ như lúc đầu\": khớp."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://www.dolmetsch.com/defsl.htm",
-        "https://www.dolmetsch.com/defsa4.htm",
-        "https://www.dolmetsch.com/defst1.htm"
-      ]
-    luot_2_ghi_chu: "Dolmetsch: lento = slow; agitato = agitated, with emotion,
-      excited, restless, anxious; Tempo primo = the first tempo, at the original
-      tempo."
+    luot_2_nguon: [ "https://www.dolmetsch.com/defsl.htm", "https://www.dolmetsch.com/defsa4.htm", "https://www.dolmetsch.com/defst1.htm" ]
+    luot_2_ghi_chu: "Dolmetsch: lento = slow; agitato = agitated, with emotion, excited, restless, anxious; Tempo primo = the first tempo, at the original tempo."
     review: dung
   - id: n32
-    cau: 'Trong bản thu, Rachmaninoff chơi đoạn A rất chậm (14 ô đầu chiếm gần nửa
-      bản thu), đoạn B nhanh hẳn, rồi trở về chậm ở Tempo primo.'
+    cau: 'Trong bản thu, Rachmaninoff chơi đoạn A rất chậm (14 ô đầu chiếm gần nửa bản thu), đoạn B nhanh hẳn, rồi trở về chậm ở Tempo primo.'
     loai: so-lieu
     nguon: [ commons-ban-thu ]
     ket_qua: dung
     ghi_chu: "Đo (n24): ô 1–14 từ 1,2 tới 104,5 s (103 s / 227,9 s = 45%); ô 15–45 từ 104,5 tới 145,6 s (khoảng 1,3 s mỗi ô); ô 46–55 từ 145,6 tới 192,9 s (khoảng 4,7 s mỗi ô); ô 3–4 khoảng 6,7 s mỗi ô (hợp âm đầu ô 3 ở 8,74 s, ô 4 ở 15,42 s). Review (Claude, 17/11/2026): đo lại onset: tiếng đầu 1,22 s, Agitato 104,52 s, Tempo primo 145,59 s, ô 56 192,85 s: ô 1–14 chiếm 103 s / 227,9 s (45%): khớp."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://upload.wikimedia.org/wikipedia/commons/b/b9/Sergei_Rachmanin\
-          off_performs_Rachmaninoff%27s_Prelude_in_C_sharp_minor%2C_Op._3.ogg"
-      ]
-    luot_2_ghi_chu: "Đo: ô 1–14 từ 1,2 tới 104,5 s (103 s / 227,9 s, khoảng 45%);
-      đoạn B 31 ô trong 41 s (~1,3 s/ô, ô 3–4 ~7 s/ô); ô 46–55 trong 47 s (~4,7
-      s/ô): chậm lại rõ."
+    luot_2_nguon: [ "https://upload.wikimedia.org/wikipedia/commons/b/b9/Sergei_Rachmaninoff_performs_Rachmaninoff%27s_Prelude_in_C_sharp_minor%2C_Op._3.ogg" ]
+    luot_2_ghi_chu: "Đo: ô 1–14 từ 1,2 tới 104,5 s (103 s / 227,9 s, khoảng 45%); đoạn B 31 ô trong 41 s (~1,3 s/ô, ô 3–4 ~7 s/ô); ô 46–55 trong 47 s (~4,7 s/ô): chậm lại rõ."
     review: dung
   - id: n33
-    cau: 'Bản in ghi m.d. (tay phải) cho hai khuông trên và m.g. (tay trái) cho hai
-      khuông dưới; mỗi tay có hợp âm móc đơn ở khuông trên và hợp âm trầm ở
-      khuông dưới.'
+    cau: 'Bản in ghi m.d. (tay phải) cho hai khuông trên và m.g. (tay trái) cho hai khuông dưới; mỗi tay có hợp âm móc đơn ở khuông trên và hợp âm trầm ở khuông dưới.'
     loai: cau-truc
     nguon: [ gutheil-1893 ]
     ket_qua: dung
     ghi_chu: "Bản quét tr. 4 hệ 5 và tr. 5 hệ 1–2: chữ \"m.d.\" trước cặp khuông trên, \"m.g.\" trước cặp khuông dưới (main droite, main gauche); mỗi cặp: khuông trên hợp âm móc đơn sau lặng móc đơn, khuông dưới hợp âm trắng rồi hai nốt đen có >. Ô 46: cặp trên khóa Sol – Sol, cặp dưới khóa Fa – Fa. Review (Claude, 17/11/2026): bản quét Gutheil #86365 tr. 4 hệ 5: \"m.d.\" trước cặp khuông trên, \"m.g.\" trước cặp khuông dưới; mỗi cặp khuông trên hợp âm móc đơn sau lặng móc đơn, khuông dưới hợp âm trắng rồi quãng tám đen có dấu nhấn: khớp (đúng ở ô 46–55)."
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/86365" ]
-    luot_2_ghi_chu: 'G trang 4 (Tempo primo): "m.d." ở cặp khuông trên, "m.g." ở cặp
-      khuông dưới; mỗi cặp: khuông trên hợp âm móc đơn (sau lặng móc đơn),
-      khuông dưới hợp âm trầm. Có ở bản 1893, không chỉ ở BH 1992 (WR ghi
-      R.H./L.H.).'
+    luot_2_ghi_chu: 'G trang 4 (Tempo primo): "m.d." ở cặp khuông trên, "m.g." ở cặp khuông dưới; mỗi cặp: khuông trên hợp âm móc đơn (sau lặng móc đơn), khuông dưới hợp âm trầm. Có ở bản 1893, không chỉ ở BH 1992 (WR ghi R.H./L.H.).'
     review: dung
   - id: n34
-    cau: 'Bảng Chỗ khó và cách tập; ba bài tập chuẩn bị (quãng tám rơi bằng sức nặng
-      cánh tay; hợp âm giữa nhẹ, bè trầm hát; hợp âm luân phiên hai tay); kế
-      hoạch 8 tuần; mục Tốc độ (phần lời khuyên), Sắc thái, Bàn đạp; Lỗi thường
-      gặp.'
+    cau: 'Bảng Chỗ khó và cách tập; ba bài tập chuẩn bị (quãng tám rơi bằng sức nặng cánh tay; hợp âm giữa nhẹ, bè trầm hát; hợp âm luân phiên hai tay); kế hoạch 8 tuần; mục Tốc độ (phần lời khuyên), Sắc thái, Bàn đạp; Lỗi thường gặp.'
     loai: khuyen-tap
     ket_qua: khong-can-nguon
     ghi_chu: "Lời khuyên tập, không dính sức khỏe; hợp với trang piano/ban-dap (đổi bàn đạp theo hòa âm), piano/tieng-dan (cân bằng để giai điệu hát), piano/nha-soan-nhac (trọng lượng cánh tay). Tốc độ máy đếm nhịp trong kế hoạch là gợi ý; trang ghi rõ bản in không có số. Review (Claude, 17/11/2026): ba bài tập: xem khuong_nhac khối 3–5 (nhịp, hòa âm, số ngón, lời kèm đúng). Bảng Chỗ khó: dòng \"Đọc bốn khuông (ô 46–55)\" sửa thành \"(từ ô 46 tới hết bài)\", và Lỗi thường gặp \"(ô 46–55)\" thành \"(từ ô 46)\", vì #86365 tr. 5 hệ 3 giữ bốn khuông tới ô 62; phần cách tập ghi rõ kết cấu móc đơn/hợp âm trầm là của ô 46–55. Kế hoạch tuần 5–6 (ô 46–55, 46–62) giữ nguyên. Lời khuyên tập còn lại hợp lý."
     luot_2: dung
-    luot_2_ghi_chu: "Bảng chỗ khó, ba bài tập, kế hoạch 8 tuần, lời khuyên tốc độ,
-      sắc thái, bàn đạp, lỗi thường gặp: hợp lý, không trái trang lõi, không có
-      hại. Bài tập 1–3 (ABC) khớp mô tả: quãng tám ngón 1–5; bè trầm mp dưới hợp
-      âm pp; hợp âm luân phiên phải–trái theo chùm ba."
+    luot_2_ghi_chu: "Bảng chỗ khó, ba bài tập, kế hoạch 8 tuần, lời khuyên tốc độ, sắc thái, bàn đạp, lỗi thường gặp: hợp lý, không trái trang lõi, không có hại. Bài tập 1–3 (ABC) khớp mô tả: quãng tám ngón 1–5; bè trầm mp dưới hợp âm pp; hợp âm luân phiên phải–trái theo chùm ba."
     review: dung
   - id: n35
-    cau: 'Câu hỏi kiểm tra nhanh: ba nốt mở đầu La – Sol♯ – Đô♯; đoạn giữa ghi
-      Agitato (ô 15); bốn khuông từ ô 46 (m.d., m.g.); bản thu của chính
-      Rachmaninoff thu năm 1919, phát hành 12/1920; Arensky được đề tặng, Siloti
-      là anh họ.'
+    cau: 'Câu hỏi kiểm tra nhanh: ba nốt mở đầu La – Sol♯ – Đô♯; đoạn giữa ghi Agitato (ô 15); bốn khuông từ ô 46 (m.d., m.g.); bản thu của chính Rachmaninoff thu năm 1919, phát hành 12/1920; Arensky được đề tặng, Siloti là anh họ.'
     loai: cau-truc
     nguon: [ gutheil-1893, commons-ban-thu, imslp-op3, henle-1211 ]
     ket_qua: dung
     ghi_chu: "Lặp lại n1, n7, n14, n17, n22, n31, n33. Review (Claude, 17/11/2026): câu hỏi khớp n1, n7, n14, n17, n22, n31, n33; thứ tự lựa chọn trộn, lời giải thích không dựa vào vị trí."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://imslp.org/wiki/Special:ImagefromIndex/86365",
-        "https://imslp.org/wiki/Special:ImagefromIndex/79003",
-        "https://commons.wikimedia.org/wiki/File:Sergei_Rachmaninoff_performs\
-          _Rachmaninoff%27s_Prelude_in_C_sharp_minor,_Op._3.ogg",
-        "https://www.henle.de/Prelude-c-sharp-minor-op.-3-no.-2/HN-1211"
-      ]
-    luot_2_ghi_chu: Ba nốt, bốn khuông m.d./m.g. theo G; Agitato ô 15 theo Bo (G
-      hỏng đầu trang); 1919/12-1920 theo Commons; Arensky theo IMSLP và G;
-      Siloti anh họ theo Henle.
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/86365", "https://imslp.org/wiki/Special:ImagefromIndex/79003", "https://commons.wikimedia.org/wiki/File:Sergei_Rachmaninoff_performs_Rachmaninoff%27s_Prelude_in_C_sharp_minor,_Op._3.ogg", "https://www.henle.de/Prelude-c-sharp-minor-op.-3-no.-2/HN-1211" ]
+    luot_2_ghi_chu: Ba nốt, bốn khuông m.d./m.g. theo G; Agitato ô 15 theo Bo (G hỏng đầu trang); 1919/12-1920 theo Commons; Arensky theo IMSLP và G; Siloti anh họ theo Henle.
     review: dung
   - id: n36
     cau: "Mục Nguồn: bản khắc đầu tiên của A. Gutheil, Moskva [khoảng 1893], số bản in A. 6516 G, bản quét một lần in sau (thư viện Sibley) trên IMSLP; bản đối chiếu Rachmaninoff-Album, Bosworth 1896 (John A. Preston biên tập); bản Mutopia của Petro Kostandy, CC BY-SA 4.0, nguồn Bosworth 1896 và Universal Edition 1910; bản thu Edison Diamond Disc 82187-R, phạm vi công cộng."
@@ -681,46 +415,18 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "IMSLP file #868299: Gutheil n.d.[1893] A. 6516 G, Reprint Preludes for Piano, Boosey & Hawkes 1992, B. & H. 20707. Mutopia header: maintainer Petro Kostandy, source \"Bosworth & Co. 1896; Universal Edition 1910\", license CC BY-SA 4.0. Commons: Diamond Disc 82187-R; PD-old-auto-record-expired (bản ghi âm phát hành 1920: ở Mỹ, bản ghi âm phát hành trước 1923 hết bảo hộ từ 1/1/2022; tác giả mất 1943). Review (Claude, 17/11/2026): mục Nguồn viết lại: ấn bản chính là bản khắc đầu tiên của Gutheil [khoảng 1893], bản quét một lần in sau (thư viện Sibley, IMSLP #86365); thêm Bosworth 1896 (John A. Preston biên tập, IMSLP #79003) làm bản đối chiếu; bỏ bản in lại B&H 1992. Giấy phép bản thu: wikitext Commons {{PD-old-auto-record-expired|deathyear=1943}}; đĩa phát hành 12/1920, ở Mỹ thuộc phạm vi công cộng theo Classics Protection and Access Act (bản ghi âm phát hành trước 1923 hết bảo hộ từ 1/1/2022), tác giả và người chơi mất 1943; nguồn file là National Park Service (Edison). Trang chỉ ghi \"phạm vi công cộng\", không nói thêm về luật: đúng."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://imslp.org/wiki/Morceaux_de_fantaisie,_Op.3_(Rachmaninoff,_Se\
-          rgei)",
-        "https://www.mutopiaproject.org/ftp/RachmaninoffS/O3/rach-prelude-op3\
-          -no2/rach-prelude-op3-no2.ly",
-        "https://commons.wikimedia.org/wiki/File:Sergei_Rachmaninoff_performs\
-          _Rachmaninoff%27s_Prelude_in_C_sharp_minor,_Op._3.ogg"
-      ]
-    luot_2_ghi_chu: "IMSLP file PMLP5664-B&H-1992: Gutheil n.d.[1893], A. 6516 G, in
-      lại trong Preludes for Piano, Boosey & Hawkes London 1992 (B. & H. 20707);
-      chân trang G cũng ghi A. 6516 G. Mu header: maintainer Petro Kostandy, CC
-      BY-SA 4.0, source Bosworth 1896; Universal Edition 1910. Commons: 82187-R;
-      giấy phép PD-old-auto-record-expired: ở Mỹ thuộc phạm vi công cộng theo
-      Classics Protection and Access Act (17 U.S.C. § 1401) vì phát hành trước
-      1/1/1926."
+    luot_2_nguon: [ "https://imslp.org/wiki/Morceaux_de_fantaisie,_Op.3_(Rachmaninoff,_Sergei)", "https://www.mutopiaproject.org/ftp/RachmaninoffS/O3/rach-prelude-op3-no2/rach-prelude-op3-no2.ly", "https://commons.wikimedia.org/wiki/File:Sergei_Rachmaninoff_performs_Rachmaninoff%27s_Prelude_in_C_sharp_minor,_Op._3.ogg" ]
+    luot_2_ghi_chu: "IMSLP file PMLP5664-B&H-1992: Gutheil n.d.[1893], A. 6516 G, in lại trong Preludes for Piano, Boosey & Hawkes London 1992 (B. & H. 20707); chân trang G cũng ghi A. 6516 G. Mu header: maintainer Petro Kostandy, CC BY-SA 4.0, source Bosworth 1896; Universal Edition 1910. Commons: 82187-R; giấy phép PD-old-auto-record-expired: ở Mỹ thuộc phạm vi công cộng theo Classics Protection and Access Act (17 U.S.C. § 1401) vì phát hành trước 1/1/1926."
     review: dung
   - id: n37
-    cau: 'Mục Nguồn: Op. 3 số 2 không có trong đề cương ABRSM 2021–2022, 2023–2024,
-      2025–2026; pianosyllabus ghi RCM 10, AMEB Certificate of Performance,
-      ANZCA A.Dip.A.; Henle HN 1211 có ghi mức độ khó.'
+    cau: 'Mục Nguồn: Op. 3 số 2 không có trong đề cương ABRSM 2021–2022, 2023–2024, 2025–2026; pianosyllabus ghi RCM 10, AMEB Certificate of Performance, ANZCA A.Dip.A.; Henle HN 1211 có ghi mức độ khó.'
     loai: cap-do
     nguon: [ abrsm, pianosyllabus, henle-1211 ]
     ket_qua: dung
     ghi_chu: "ABRSM: ba PDF, tìm \"Rachmanin\": chỉ Moment musical Op. 16 số 5 (Grade 8). Lộ trình và khảo sát ghi \"ABRSM có Op. 3 số 1, 3, 4 ở Grade 8\": không thấy trong ba kỳ 2021–2026 (có thể ở các kỳ 2011–2020, không đọc lại); trang không nói điều này. Review (Claude, 17/11/2026): hai lượt khớp nhau (ba PDF ABRSM, pianosyllabus, Henle); không đọc lại PDF ABRSM."
     luot_2: dung
-    luot_2_nguon:
-      [
-        "https://www.abrsm.org/sites/default/files/2023-09/piano-2021-2022-sy\
-          llabus-rev-sep-2020-final.pdf",
-        "https://www.abrsm.org/sites/default/files/2023-10/Piano%202023%20%26\
-          %202024%20Prac%20syllabus%2020230807.pdf",
-        "https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26\
-          %202026%20Prac%20syllabus%2020240524_access.pdf",
-        "https://pianosyllabus.com/x-detail.php?ref=3082417",
-        "https://www.henle.de/Prelude-c-sharp-minor-op.-3-no.-2/HN-1211"
-      ]
-    luot_2_ghi_chu: "Ba đề cương ABRSM (đọc chữ PDF): Rachmaninoff chỉ có Moment
-      musical Op. 16 số 5 (Grade 8), không có Op. 3 số 2. pianosyllabus: RCM 10,
-      AMEB Cert. Perf., ANZCA A.Dip.A. Henle ghi mức khó 5 (medium)."
+    luot_2_nguon: [ "https://www.abrsm.org/sites/default/files/2023-09/piano-2021-2022-syllabus-rev-sep-2020-final.pdf", "https://www.abrsm.org/sites/default/files/2023-10/Piano%202023%20%26%202024%20Prac%20syllabus%2020230807.pdf", "https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26%202026%20Prac%20syllabus%2020240524_access.pdf", "https://pianosyllabus.com/x-detail.php?ref=3082417", "https://www.henle.de/Prelude-c-sharp-minor-op.-3-no.-2/HN-1211" ]
+    luot_2_ghi_chu: "Ba đề cương ABRSM (đọc chữ PDF): Rachmaninoff chỉ có Moment musical Op. 16 số 5 (Grade 8), không có Op. 3 số 2. pianosyllabus: RCM 10, AMEB Cert. Perf., ANZCA A.Dip.A. Henle ghi mức khó 5 (medium)."
     review: dung
 khuong_nhac:
   - khoi: 1

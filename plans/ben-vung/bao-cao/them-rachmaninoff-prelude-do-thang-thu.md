@@ -63,3 +63,7 @@ Claude (agent riêng, không làm lượt 1, lượt 2), 17/11/2026. Mọi nhậ
 - **Chữ, thuật ngữ, thời kỳ:** Lento, agitato, Tempo primo, pesante, tenuto, coda khớp `thuat-ngu.yml`; `thoi_ky: Cuối Lãng mạn` cùng nhãn với `rachmaninoff-2`.
 - Kiểm: `npm run build:xem` đạt; `npm test` 353 đạt, 0 hỏng, 2 bỏ qua. Chưa chạy kiểm thử trình duyệt (trang đổi chữ, không đổi mã).
 
+
+## Kiểm mẫu và khóa
+
+Claude (agent riêng) kiểm thay chủ repo 5 nhận định mẫu (trang n3, n6, n8, n9, n31) trên bản Gutheil #86365, Bosworth #79003, Commons và Từ điển: 5 đúng. Khóa trang và bản ghi 17/11/2026.
