@@ -68,3 +68,7 @@ Claude (agent riêng, không làm lượt 1, lượt 2), 17/11/2026. Mọi nhậ
 
 - Nhánh `mo/` (sau khi gộp): thêm hai file align ở trên; link tới trang mới ở `piano/hai-tay` (mục Hai chọi ba nhắc "Arabesque số 1 của Debussy" chưa có link), `piano/tac-pham-theo-cap` (dòng chặng 6 "Debussy: Arabesque số 1"), `piano/nha-soan-nhac` (bảng đầu trang và mục Debussy "Bắt đầu bằng"), `piano/ban-dap` mục Debussy (chỉ trỏ Clair de lune).
 - Dự phòng không dùng: bản thu Kolodin IMSLP #809126 (đã có trong `_imslp/`), eldüendesüarez trên Commons. Không cần chủ repo tải thêm file nào.
+
+## Kiểm mẫu và khóa
+
+Claude (agent riêng) kiểm thay chủ repo 5 nhận định mẫu (trang n2, n16, n31; bản ghi n3, n7): 5 đúng. Người gom xem lại bản quét tr. 1 ô 6–7 ở 300 dpi: nốt cuối tay trái ô 7 ở khe Đô3 (Đô♯3), bằng nốt thứ hai của ô, khác ô 6 (Si2); sửa của review đúng, Mutopia ghi `b,` ở chỗ này là sai. Khóa trang và bản ghi 17/11/2026.
