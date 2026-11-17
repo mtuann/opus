@@ -101,7 +101,7 @@ V:RH clef=treble
 V:LH clef=bass
 K:E
 [V:RH] z2 (3efc (3eBc (3GBF | (3GEG D4 C2 | B,z (3efc (3eBc (3GBF | (3GEG D4 C2 |
-[V:LH] !pp!E,,B,,E,G, B,G,E,B,, | E,,C,E,G, CG,E,B,, | E,,B,,E,G, B,G,E,B,, | E,,C,E,G, CG,E,B,, |
+[V:LH] !pp!E,,B,,E,G, B,G,E,B,, | E,,C,E,G, CG,E,C, | E,,B,,E,G, B,G,E,B,, | E,,C,E,G, CG,E,C, |
 ```
 
 Ở mỗi phách có chùm ba, nốt đầu của hai tay đánh cùng lúc; hai nốt sau của tay phải chen vào trước và sau nốt thứ hai của tay trái. Ô 8 bắt đầu bằng nốt Si, nốt cuối của câu trước, rồi một dấu lặng móc đơn.
@@ -177,7 +177,7 @@ Hai phách đầu chia ba, hai phách sau chia hai; tay trái giữ phách đề
 
 ## Kế hoạch tập
 
-Kế hoạch 8 tuần, khoảng 30–40 phút mỗi ngày. Bản nhạc không ghi số máy đếm nhịp: tốc độ dưới đây chỉ là gợi ý.
+Kế hoạch 8 tuần, khoảng 30–40 phút mỗi ngày. Bản nhạc không ghi số máy đếm nhịp: tốc độ dưới đây chỉ là gợi ý. Tốc độ tuần 8 là đích; chưa tới được thì giữ tốc độ chậm hơn mà đều.
 
 | Tuần | Việc chính | Máy đếm nhịp |
 |---|---|---|
@@ -187,8 +187,8 @@ Kế hoạch 8 tuần, khoảng 30–40 phút mỗi ngày. Bản nhạc không g
 | 4 | Đoạn giữa (ô 39–62): từng tay, rồi hai tay; giai điệu hát ở bè trên | ♩ = 46–56 |
 | 5 | Ô 63–94: *Risoluto*, phần đầu trở lại | ♩ = 52–60 |
 | 6 | Đoạn kết (ô 95–107); chơi liền từng nửa bài | ♩ = 56–66 |
-| 7 | Chơi liền cả bài; thêm co giãn (*Rit.*, *Stringendo*, *Tempo rubato*) | ♩ = 60–72 |
-| 8 | Tốc độ cuối; [thu âm](/opus/luyen-tap/thu-am/) và nghe lại | ♩ ≈ 66–80 |
+| 7 | Chơi liền cả bài; thêm co giãn (*Rit.*, *Stringendo*, *Tempo rubato*) | ♩ = 66–80 |
+| 8 | Tốc độ cuối; [thu âm](/opus/luyen-tap/thu-am/) và nghe lại | ♩ ≈ 80–92 |
 
 ## Diễn tấu
 
@@ -198,7 +198,7 @@ Bản nhạc ghi *Andantino con moto* ở đầu bài, không có số máy đ�
 
 ### Sắc thái
 
-Phần lớn bài nhỏ: mở đầu *p*, chủ đề *pp*. To nhất là đoạn giữa (*f*) và *Risoluto* (*f*). Đoạn kết ghi *dim.*, *più dim.*, rồi *pp* tới hết.
+Phần lớn bài nhỏ: mở đầu *p*, chủ đề *pp*. To nhất là đoạn giữa (*f*) và *Risoluto* (*f*). Đoạn kết ghi *dim.*, *più dim.*, *p* ở ô 99, rồi *pp* từ ô 101 tới hết.
 
 ### Bàn đạp
 
@@ -218,7 +218,7 @@ Bản Durand 1904 không ghi ký hiệu bàn đạp: người chơi tự chọn.
 
 - **Kỹ năng liên quan:** [hai chọi ba](/opus/piano/hai-tay/#hai-choi-ba); [hợp âm rải](/opus/piano/hop-am-rai/#hop-am-rai); [bàn đạp](/opus/piano/ban-dap/).
 - **Cùng nhà soạn nhạc:** [Debussy: *Clair de lune*](/opus/piano/tac-pham/debussy-clair-de-lune/); nghe [*Préludes* quyển 1](/opus/nghe-nhac/debussy-preludes/).
-- **Thời kỳ:** [Thế kỷ 20](/opus/lich-su/thoi-ky/the-ky-20/) (Ấn tượng).
+- **Thời kỳ:** bài viết năm 1890–1891; trang [Thế kỷ 20](/opus/lich-su/thoi-ky/the-ky-20/#cac-huong-chinh) xếp Debussy vào trường phái Ấn tượng.
 
 ::hoc-tiep
 

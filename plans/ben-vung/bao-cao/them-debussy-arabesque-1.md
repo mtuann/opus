@@ -1,6 +1,6 @@
 # Báo cáo: thêm Debussy, Arabesque số 1 Mi trưởng, L. 66 số 1 (lượt 7 của lộ trình)
 
-Nhánh `them/debussy-arabesque-1`, 17/11/2026. Lượt 7 của `plans/ben-vung/lo-trinh-them-tac-pham.md`, bài đầu của đợt 1 (những bài người học hay hỏi). Lượt 1 xong; chưa lượt 2, review, kiểm mẫu, chưa khóa.
+Nhánh `them/debussy-arabesque-1`, 17/11/2026. Lượt 7 của `plans/ben-vung/lo-trinh-them-tac-pham.md`, bài đầu của đợt 1 (những bài người học hay hỏi). Lượt 1, lượt 2 (46/46 đúng) và review xong; chưa kiểm mẫu, chưa khóa.
 
 ## Kết quả
 
@@ -12,6 +12,18 @@ Nhánh `them/debussy-arabesque-1`, 17/11/2026. Lượt 7 của `plans/ben-vung/l
 - Mốc (13 dòng): căn bằng `tools/audio/align` với MIDI Mutopia. 10 dòng ba biến thể khớp trong 2 giây; ba dòng đo tay trên khởi âm và phổ: ô 39 (98,1 s), ô 95 (252,8 s), ô cuối (288,2 s). Sơ đồ `hinh` chia theo các mốc.
 - Hồ sơ lượt 1: trang 37 nhận định (3 `ve-site`, 2 `khuyen-tap`), 5 khuông (2 trích đoạn, 3 soạn); bản ghi 11 nhận định. Xuất lượt 2: 46 câu.
 - Kiểm: `node tools/khuong-nhac.mjs` 0 lỗi (5 khối của trang 0 lỗi); `npm run build:xem` đạt; `npm test` 353 đạt, 0 hỏng, 2 bỏ qua (so chữ với site cũ, phạm vi nhánh lô); `OPUS_TRINH_DUYET=chromium npm run test:trinh-duyet` 430 đạt, 0 hỏng (trang mới có trong trang mẫu).
+
+## Review
+
+Claude (agent riêng, không làm lượt 1, lượt 2), 17/11/2026. Mọi nhận định của hai hồ sơ có `review`: `dung`, trừ n29 của trang (`sai`, đã sửa); khối abc 2 `da-sua`.
+
+- Khối abc 2 (ô 6–9) sai hai nốt: đo dòng kẻ và đầu nốt bằng máy ở 600 dpi (tr. 1 hệ 2–3, khuông dưới khóa Fa), nốt cuối tay trái ô 7 và ô 9 nằm ở khe Đô3 (cùng độ cao với nốt thứ hai của chính ô ấy), tức Đô♯3; ô 6 và ô 8 mới kết ở Si2. Mutopia ghi `b,` ở cả bốn ô, lượt 1 và lượt 2 đều theo Mutopia. Sửa theo bản quét: ô 7, 9 tay trái `E,,C,E,G, CG,E,C,`. Khối 1 (ô 1–2) so từng nốt ở 400 dpi: khớp.
+- Ba bài tập soạn: nhịp đủ (2/4 và 4/4), hòa âm Mi trưởng và Si bảy, số ngón chơi được, lời kèm đúng.
+- Kiểm lại trên nguồn: bản quét #255354 tr. 1, 3, 4, 5 (90–600 dpi): Andantino con moto, bốn dấu thăng, 4/4; chân trang "Copyright by A. Durand & Fils 1904", "D.&F. 4395"; ô 39 Tempo rubato (un peu moins vite), ba dấu thăng; Mosso ô 47, 51, a Tempo ô 55; Risoluto f ô 63, dim. molto ô 67, più dim. ô 69; 1° Tempo ô 71, a Tempo p ô 76; dim. ô 95, più dim. ô 97, p ô 99, pp ô 101 và 106; không có bàn đạp; đếm ô từng trang ra 107. Commons API (User-Agent `opus-kiem-dinh/1.0`): `{{self|cc-by-sa-4.0}}`, PermissionTicket 2015120610013684, Museum of Romanticism (Madrid) 2016-05-17, 292,99 s; mp3 tải lại 293,03 s. Đều khớp.
+- Mốc: đo lại 6/13 trên mp3 tải lại (librosa onset, CQT): 15 (15,32), 98 (98,16), 164 (164,25), 187 (187,23), 272 (272,44), 288 (288,41): lệch dưới 0,5 s, không sửa.
+- Ghi chú lượt 2: (a) mục Sắc thái thêm *p* ở ô 99 (thấy trên bản quét tr. 5 hệ 4): "*dim.*, *più dim.*, *p* ở ô 99, rồi *pp* từ ô 101 tới hết". (b) Kế hoạch tập: Prati chơi chủ đề khoảng ♩ = 95 (ô 6–13 trong khoảng 17,7 s), trung bình cả bài ♩ ≈ 89; nâng tuần 7 lên ♩ = 66–80, tuần 8 lên ♩ ≈ 80–92 và ghi "Tốc độ tuần 8 là đích; chưa tới được thì giữ tốc độ chậm hơn mà đều". Mục Diễn tấu không nêu số, vẫn nhất quán. (c) Ô 76: bản 1904 in *p*, Mutopia *pp*; trang theo 1904, đúng.
+- Thời kỳ: `Cuối thế kỷ 19`, cùng nhãn với `debussy-clair-de-lune`. Dòng Học tiếp "Thời kỳ: Thế kỷ 20 (Ấn tượng)" ngụ ý bài thuộc thế kỷ 20, lệch với bản ghi: đổi thành "bài viết năm 1890–1891; trang Thế kỷ 20 (mục Các hướng chính) xếp Debussy vào trường phái Ấn tượng".
+- Chữ và thuật ngữ: khớp `thuat-ngu.yml` (andantino, con moto, stringendo, più mosso, rubato, risoluto, a tempo, tempo primo, triplet); không thấy chữ thừa khác.
 
 ## Nguồn
 
