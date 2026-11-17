@@ -1,0 +1,253 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa piano/tac-pham/mozart-alla-turca
+trang: src/content/docs/piano/tac-pham/mozart-alla-turca.md
+tang: tac-pham
+lan:
+  - so: 1
+    ngay: 2026-11-17
+    nhanh: them/mozart-alla-turca
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5 (lượt 1, them/mozart-alla-turca, 17/11/2026)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Bài học mới (lộ trình thêm tác phẩm, lượt 9). Nốt nhạc và chữ chỉ dẫn chép từ bản quét bản in đầu Artaria (IMSLP #292670, PDF 40 trang; chương 3 ở trang PDF 20–22, số trang in 22–24); đọc ở 90–900 dpi, đo vị trí dòng kẻ bằng tổng điểm đen theo hàng (ảnh 400 dpi của hệ 1: dòng kẻ khóa Sol ở y ≈ 120/152/182/212/244, khóa Fa ở y ≈ 383/413/443/474/506) rồi suy cao độ. Đối chiếu: Mutopia KV331_3_RondoAllaTurca (Mutopia-2015/08/13-108, phạm vi công cộng, nguồn ghi "IMSLP"; file .ly ghim commit 2144afd của MutopiaProject) và kern sonata11-3.krn (Craig Sapp, theo Alte Mozart-Ausgabe; chỉ dùng trên máy để đánh số ô và căn mốc). Mốc: bộ căn tools/audio/align (kern, đối chiếu Mutopia; cấu hình tạm ngoài repo vì pieces.py ngoài phạm vi nhánh) không ổn định, kể cả khi hạ bản nhạc một nửa cung cho khớp đàn và neo nốt cuối ở 163,9 s; nên đo tay: tự tương quan chroma của bản thu (librosa chroma_cqt, hop 1024: chủ đề ở 1,0/6,5/35,1/40,5/104,4/109,9 s; phần Đô trưởng 12,6/46,6/116,0 s; hành khúc 24,0/29,7/58,3/63,9/93,1/98,9/129,3/135,0 s; Fa♯ thứ 69,5/75,1 s; coda 141,0 s), khởi âm (librosa onset_detect) và độ to, cộng số ô (một ô khoảng 0,69 s). Mốc 1: nốt đầu 1,0 s; 12: hai quãng ba lấy đà của ô 9 ở 12,10/12,27 s; 24: hai quãng tám lấy đà f ở 23,55/23,77 s; 69: lấy đà p của đoạn Fa♯ thứ 69,32 s; 93: lấy đà f 92,67 s; 104: chủ đề trở lại 104,4 s; 129: lấy đà khoảng 128,85 s (tính từ độ lệch của hành khúc đầu); 140: kết 2 (hợp âm f) 139,9 s, coda (ô 98) khoảng 140,4 s; 149: đoạn p giữa coda ước theo số ô từ ô 98 (12 ô) và độ to giảm, có thể lệch một giây. Nhạc từ 1,0 s tới hợp âm cuối khoảng 163,9 s, sau đó là tiếng vỗ tay. Chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng thuộc hồ sơ du-lieu/tac-pham/mozart-alla-turca. Không tính là nhận định: tiêu đề mục, tiêu đề cột, mốc trong ::khoi-nghe (cách đo ghi ở đây), câu hỏi để nghe.'
+nguon:
+  - id: artaria-1784
+    bac: 1
+    ten: 'W. A. Mozart, Trois Sonates pour le Clavecin ou Pianoforte, Oeuvre VI, Artaria, Vienna, n.d. [khoảng 1784], số bản in 47 (bìa: "Publiées à Vienne chez Artaria Comp."; số 47 ở bìa và chân trang); IMSLP ghi Editor: First edition. Bản quét IMSLP #292670, file PMLP01845-Mozart_-_Trois_Sonates_-K330-332-.pdf; K. 331 là SONATA II (trang PDF 13), chương cuối trang in 22–24 (trang PDF 20–22): "Allegrino", "Alla Turca"'
+    link: https://imslp.org/wiki/Special:ImagefromIndex/292670
+  - id: imslp-k331
+    bac: 2
+    ten: 'IMSLP, Piano Sonata No.11 in A major, K.331/300i (wikitext đọc qua API 17/11/2026): "K.331 ; K6 300i ; Op.6 No.2", "Year/Date of Composition=1783?", "Year of First Publication=1784 (ca.?)", "Alternative Title=Alla Turca"; file Artaria: "Editor={{FE}}", "Publisher Information={{P|Artaria||Vienna|n.d.(ca.1784)|||47}}", "Misc. Notes=Also contains K.330 and K.332."'
+    link: https://imslp.org/wiki/Piano_Sonata_No.11_in_A_major,_K.331/300i_(Mozart,_Wolfgang_Amadeus)
+  - id: mutopia-108
+    bac: 2
+    ten: 'Mutopia Project, Rondo Alla Turca KV 331 (Mutopia-2015/08/13-108; license "Public Domain"; source "IMSLP"; piece "Allegretto"); KV331_3_RondoAllaTurcaNotes.ly (commit 2144afd): righta/lefta (ô 1–8), \partial 4, \barNumberCheck #98 ở đầu coda (rightf)'
+    link: https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=108
+  - id: kern-sonata11-3
+    bac: 2
+    ten: 'Craig Stuart Sapp, mozart-piano-sonatas, kern/sonata11-3.krn (theo Alte Mozart-Ausgabe; CC BY-NC-SA 4.0, chỉ dùng trên máy): ô in 1–128, ô 96 kết 1, ô 97 kết 2, coda từ ô 98'
+    link: https://github.com/craigsapp/mozart-piano-sonatas/blob/0f1f49d914494f8461709b2a2642153bb240c6da/kern/sonata11-3.krn
+  - id: henle-hn1300
+    bac: 2
+    ten: 'G. Henle Verlag, HN 1300, lời tựa (Wolf-Dieter Seiffert, 2021; PDF): NMA (Plath/Rehm) "most probably composed in the year 1783 (in Vienna or Salzburg)", Seiffert cho là sớm hơn, ở Vienna; in "in August 1784 from the Viennese publishing house Artaria, along with … K. 330 … and … K. 332"; "Alla Turca" "apparently not added to the unusual tempo marking Allegrino (which appears in the copy and first edition) until printing of the first edition, either by Mozart or his publisher"; "janissary stop" (trích theo hồ sơ nghe-nhac/mozart-k331, nguồn henle-hn1300; lượt 1 không đọc lại PDF)'
+    link: https://www.henle.de/media/a0/fe/38/1697725845/1300-1697725845-sync.pdf
+  - id: henle-hn1300p
+    bac: 2
+    ten: 'G. Henle Verlag, HN 1300 (trang sản phẩm, tải 17/11/2026): "Piano Sonata (Alla Turca) A major K. 331 (300i) 6 medium ABRSM: Piano Grade 8"'
+    link: https://www.henle.de/en/Piano-Sonata-A-major-K.-331-Alla-Turca/HN-1300
+  - id: abrsm-2025
+    bac: 2
+    ten: 'ABRSM, Piano Practical Grades 2025 & 2026 (PDF), tr. 42 (trang PDF 43), GRADE 8, danh sách A số 1: "Mozart Alla Turca (3rd movt from Sonata in A, K. 331) with first, third and final repeat", Piano Exam Pieces 2025 & 2026, Grade 8 (ABRSM), nhãn NEW'
+    link: https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26%202026%20Prac%20syllabus%2020240524_access.pdf
+  - id: abrsm-2027
+    bac: 2
+    ten: 'ABRSM, Piano Practical Grades Qualification Specification 2027 & 2028 (PDF, tải 17/11/2026): tìm "331" và "Turca" chỉ thấy Grade 8 số 13 "Andante grazioso and Vars. 1–6 (1st movt from Sonata in A, K. 331)"; không có Alla Turca'
+    link: https://www.abrsm.org/sites/default/files/2026-06/Piano%20Practical%20Grades%20Qualification%20Specification%202027%20%26%202028.pdf
+  - id: commons-greiss
+    bac: 1
+    ten: 'Wikimedia Commons, File:Mozart-Marsz turecki-(Romuald Greiss).ogg (trang mô tả, đọc 17/11/2026): "Rondo alla turca (KV 331, 3. Movement) performed by Romuald Greiss on old Budynowicz piano from 1850"; tiếng Ba Lan: "Nagranie z koncertu w filharmonii w Zabrzu"; Date=2000; {{PD-author|Romuald Greiss}}, PermissionTicket 2007081710004688'
+    link: https://commons.wikimedia.org/wiki/File:Mozart-Marsz_turecki-(Romuald_Greiss).ogg
+  - id: greiss-file
+    bac: 1
+    ten: 'File gốc .ogg của bản thu Greiss (tải 17/11/2026; ffprobe 181,60 s, 22 050 Hz, khoảng 67 kbps; Commons ghi 180,53 s): đo chroma, khởi âm, độ to, cao độ (librosa pyin, estimate_tuning) bằng .venv-audio'
+    link: https://upload.wikimedia.org/wikipedia/commons/4/4e/Mozart-Marsz_turecki-%28Romuald_Greiss%29.ogg
+  - id: site-k331
+    bac: 2
+    ten: 'Trang nghe-nhac/mozart-k331 (đã khóa): Vienna những năm 1780 mê "nhạc Thổ", ban nhạc quân đội Janissary; hành khúc La trưởng, hợp âm tay trái rải thật nhanh như tiếng trống; bản in đầu ghi Allegrino, nhiều ấn bản về sau ghi Allegretto; gần như không cần bàn đạp'
+    link: https://mtuann.github.io/opus/nghe-nhac/mozart-k331/
+  - id: site-not-hoa-my
+    bac: 2
+    ten: 'Trang piano/not-hoa-my (đã khóa), mục "Appoggiatura và acciaccatura": appoggiatura (nốt dựa) rơi đúng phách và lấy thời gian của nốt chính; src/data/thuat-ngu.yml appoggiatura: "Nốt dựa, đúng phách, lấy bớt độ dài của nốt chính"; allegretto: "Hơi nhanh"'
+    link: https://mtuann.github.io/opus/piano/not-hoa-my/#appoggiatura-va-acciaccatura
+nhan_dinh:
+  - id: n1
+    cau: 'Alla turca là chương cuối (chương 3) của Sonata La trưởng K. 331 của Mozart; bản in đầu ghi Alla Turca.'
+    loai: ten
+    nguon: [ imslp-k331, artaria-1784 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: 3 chương, Key A, Alternative Title Alla Turca. Bản quét tr. in 22 (PDF 20) hệ 1: "Alla Turca" dưới khuông khóa Sol; đây là chương cuối của Sonata II (tr. in 24 kết bằng vạch kép).'
+  - id: n2
+    cau: 'Đoạn La thứ nhẹ nhàng xen với những đoạn hành khúc La trưởng mạnh mẽ, nơi tay trái bắt chước tiếng trống.'
+    loai: cau-truc
+    nguon: [ artaria-1784, site-k331 ]
+    ket_qua: dung
+    ghi_chu: 'Bản quét: đoạn La thứ p (tr. 22 hệ 1), hành khúc ba dấu thăng, f, tay trái ba nốt nhỏ rải rồi nốt chính và nốt lặp (tr. 22 hệ 3, tr. 23 hệ 2). "Bắt chước tiếng trống": trang nghe-nhac/mozart-k331 (đã khóa) viết "hợp âm tay trái rải thật nhanh như tiếng trống và chũm chọe".'
+  - id: n3
+    cau: 'Bài ở chặng 6 của lộ trình; cả bản sonata được giới thiệu ở hướng dẫn nghe Sonata La trưởng K. 331 trên site.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/data/tac-pham.yml: chang 6; trang nghe-nhac/mozart-k331 có trong bản build.'
+  - id: n4
+    cau: 'ABRSM xếp chương này ở Grade 8, danh sách A, trong đề cương 2025–2026, yêu cầu chơi dấu nhắc lại thứ nhất, thứ ba và cuối cùng; đề cương 2027–2028 không còn bài này.'
+    loai: cap-do
+    nguon: [ abrsm-2025, abrsm-2027 ]
+    ket_qua: dung
+    ghi_chu: 'PDF 2025 & 2026 tr. 42: Grade 8, chữ A ở cột trái (danh sách A), số 1 "with first, third and final repeat". PDF 2027 & 2028: chỉ có chương 1 K. 331 (Grade 8 số 13).'
+  - id: n5
+    cau: 'Hình móc kép vòng quanh một nốt (Si–La–Sol♯–La) mở đầu bài.'
+    loai: cau-truc
+    nguon: [ artaria-1784, mutopia-108 ]
+    ket_qua: dung
+    ghi_chu: 'Mutopia righta: h,16 a, gis, a, (Si4 La4 Sol♯4 La4). Bản in: nốt nhỏ Si4, La4 móc đơn, Sol♯4 La4 móc kép (xem khuong_nhac khối 1).'
+  - id: n6
+    cau: 'Đoạn La thứ nhỏ (p); hành khúc La trưởng to (f), quãng tám tay phải, tay trái rải hợp âm nhanh: ba nốt nhỏ rồi nốt chính.'
+    loai: cau-truc
+    nguon: [ artaria-1784, mutopia-108 ]
+    ket_qua: dung
+    ghi_chu: 'Bản quét tr. 22 hệ 1: p đầu bài. Tr. 23 hệ 2 (250 dpi): sau vạch nhắc lại, hai quãng tám La–Si móc đơn, f dưới khuông, Đô♯ quãng tám, rồi số 8 với đường gạch; tay trái mỗi ô bắt đầu bằng ba nốt nhỏ (La2–Đô♯3–Mi3) trước La3, rồi La3 lặp. Mutopia rightc: quãng tám <a a,> …; stra = \grace { a,32 cis e } a8.'
+  - id: n7
+    cau: 'Bản in đầu viết nhiều nốt hoa mỹ bằng nốt nhỏ: Si trước La ở nhịp lấy đà, Rê trước Đô ở ô 1, Fa trước Mi ở ô 2 (và Si trước La ở ô 3, hai nốt Sol–La trước Si ở ô 5–7).'
+    loai: cau-truc
+    nguon: [ artaria-1784 ]
+    ket_qua: dung
+    ghi_chu: 'Xem khuong_nhac khối 1 (đọc ở 400–900 dpi).'
+  - id: n8
+    cau: 'Mozart (1756–1791). Năm viết K. 331 chưa rõ: Neue Mozart-Ausgabe đoán năm 1783, ở Vienna hay Salzburg; lời tựa của Henle (2021) cho là sớm hơn, ở Vienna.'
+    loai: lich-su
+    nguon: [ henle-hn1300, imslp-k331 ]
+    ket_qua: dung
+    ghi_chu: 'Henle lời tựa (Seiffert 2021) như nguồn; IMSLP "1783?". Năm sinh–mất theo src/data/nha-soan-nhac.yml (mozart, đã khóa). Câu cùng ý với bảng đầu trang nghe-nhac/mozart-k331 (đã khóa).'
+  - id: n9
+    cau: 'Nhà Artaria ở Vienna in K. 331 lần đầu khoảng năm 1784, cùng K. 330 và K. 332, trong tập Trois Sonates pour le Clavecin ou Pianoforte, Oeuvre VI; số bản in 47.'
+    loai: lich-su
+    nguon: [ artaria-1784, imslp-k331, henle-hn1300 ]
+    ket_qua: dung
+    ghi_chu: 'Bìa bản quét: "Trois Sonates pour le Clavecin ou Pianoforte composées par W. A. Mozart, Oeuvre VI", "Publiées à Vienne chez Artaria Comp.", 47. IMSLP: n.d. (ca.1784), plate 47, "Also contains K.330 and K.332". Henle: tháng 8/1784.'
+  - id: n10
+    cau: 'Ở bản in đầu, chương cuối ghi tốc độ Allegrino và tên Alla Turca ("kiểu Thổ Nhĩ Kỳ"); theo lời tựa của Henle, tên này có lẽ chỉ được thêm vào lúc in, do Mozart hay nhà xuất bản.'
+    loai: lich-su
+    nguon: [ artaria-1784, henle-hn1300 ]
+    ket_qua: dung
+    ghi_chu: 'Bản quét tr. 22 hệ 1: "Allegrino" trên khuông, "Alla Turca" dưới khuông. Henle như nguồn. Nghĩa "kiểu Thổ Nhĩ Kỳ": trang hinh-thuc/rondo (đã khóa) gọi là thể loại alla turca, mô phỏng âm nhạc quân đội Ottoman.'
+  - id: n11
+    cau: 'Vienna khi ấy đang mê "nhạc Thổ", âm thanh của ban nhạc quân đội Janissary.'
+    loai: lich-su
+    nguon: [ site-k331, henle-hn1300 ]
+    ket_qua: dung
+    ghi_chu: 'Câu của trang nghe-nhac/mozart-k331 (đã khóa, đã qua hai lượt và review ở hồ sơ trang ấy); Henle nhắc "janissary stop".'
+  - id: n12
+    cau: 'Bản thu gợi ý: Romuald Greiss, thu năm 2000 trong một buổi hòa nhạc, trên một cây đàn năm 1850; phạm vi công cộng.'
+    loai: so-lieu
+    nguon: [ commons-greiss ]
+    ket_qua: dung
+    ghi_chu: 'Commons: Date 2000, "Nagranie z koncertu w filharmonii w Zabrzu" (bản thu từ buổi hòa nhạc ở nhà hòa nhạc Zabrze), "old Budynowicz piano from 1850", {{PD-author|Romuald Greiss}}.'
+  - id: n13
+    cau: 'Đàn trong bản thu nghe thấp hơn cao độ chuẩn ngày nay gần nửa cung.'
+    loai: so-lieu
+    nguon: [ greiss-file ]
+    ket_qua: dung
+    ghi_chu: 'Đo trên file gốc: các lớp cao độ mạnh nhất ở đoạn La thứ là Sol♯, Rê♯, La♯ thay cho La, Mi, Si (chroma lệch một nửa cung); pyin ở nhịp lấy đà: nốt viết Si4 vang khoảng 465 Hz (Si4 chuẩn 494), nốt viết Đô5 vang khoảng 493 Hz (Đô5 chuẩn 523); estimate_tuning +0,15 bậc so với lưới La = 440. Thấp khoảng 0,85 nửa cung (La khoảng 419 Hz). Bộ căn chỉ cho kết quả gần đúng khi hạ bản nhạc một nửa cung.'
+  - id: n14
+    cau: 'Người chơi trong bản thu chơi lại cả phần đầu (đoạn La thứ và hành khúc) trước khi sang đoạn Fa♯ thứ.'
+    loai: so-lieu
+    nguon: [ greiss-file ]
+    ket_qua: dung
+    ghi_chu: 'Tự tương quan chroma: chủ đề La thứ vang ở 1,0 và 35,1 s (và 6,5, 40,5 s: nhắc lại ô 1–8), phần Đô trưởng ở 12,6 và 46,6 s, hành khúc ở 24,0/29,7 và 58,3/63,9 s, Fa♯ thứ từ 69,5 s. Mỗi lần, ô 9–24 chỉ vang một lần.'
+  - id: n15
+    cau: 'Các đoạn và số ô (đếm như bản Mutopia, không tính nhịp lấy đà, ô kết 1 và kết 2 của hành khúc cuối tính là hai ô): đoạn La thứ ô 1–24 (ô 1–8 chủ đề; ô 9–24 sáng lên ở Đô trưởng rồi chủ đề trở lại), hành khúc La trưởng 25–32, đoạn Fa♯ thứ 33–56, hành khúc 57–64, đoạn La thứ 65–88 (như ô 1–24), hành khúc 89–97 có kết 1 và kết 2, coda 98–128; đoạn nào cũng có dấu nhắc lại, trừ coda.'
+    loai: cau-truc
+    nguon: [ artaria-1784, mutopia-108, kern-sonata11-3 ]
+    ket_qua: dung
+    ghi_chu: 'Kern: [1]–[24], [25]–[32] (La trưởng), [33]–[56], [57]–[64], [65]–[88], [89]–[95] + [96] kết 1 + [97] kết 2, [98]–[128]; Mutopia \barNumberCheck #98 ở đầu coda, các \repeat volta trong right/left. Bản quét (90–250 dpi): vạch nhắc lại sau ô 8 (tr. 22 hệ 1), sau ô 24 (hệ 3), sau hành khúc (hệ 4), đoạn Fa♯ thứ kết bằng vạch nhắc lại ở tr. 23 hệ 2, hành khúc thứ hai ở tr. 23 hệ 2–3, đoạn La thứ trở lại tr. 23 hệ 3–5 (vạch nhắc lại ở hệ 4 và cuối hệ 5), hành khúc cuối tr. 24 hệ 1–2 có kết "1", "2" rồi chữ "Coda"; coda không có vạch nhắc lại. Ô 9 mở bằng quãng ba Đô5–Mi5, Rê5–Fa5 (lấy đà) rồi Mi5–Sol5 trên Đô3 (Đô trưởng). Lượt 1 không đếm từng ô trên bản quét; số ô theo kern và Mutopia, nội dung từng đoạn đối chiếu bản quét.'
+  - id: n16
+    cau: 'Đoạn Fa♯ thứ (p): dòng móc kép chạy liên tục ở tay phải, tay trái đệm móc đơn.'
+    loai: cau-truc
+    nguon: [ artaria-1784, mutopia-108 ]
+    ket_qua: dung
+    ghi_chu: 'Bản quét tr. 22 hệ 4–5, tr. 23 hệ 1–2: ba dấu thăng, p, tay phải móc kép, tay trái nốt trầm rồi hợp âm móc đơn. Mutopia rightd, leftd (fis8 <a cis> …).'
+  - id: n17
+    cau: 'Coda (từ ô 98, f): La trưởng, hợp âm tay phải, tay trái rải hợp âm và nốt lặp; giữa coda một đoạn p, tay trái rải hợp âm móc kép liên tục, tay phải hợp âm có nốt hoa mỹ; rồi trở lại f.'
+    loai: cau-truc
+    nguon: [ artaria-1784, mutopia-108 ]
+    ket_qua: dung
+    ghi_chu: 'Bản quét tr. 24 hệ 2–5: "Coda", hợp âm tay phải, tay trái ba nốt nhỏ rải rồi nốt chính và nốt lặp; hệ 3: p, tay trái đổi sang khóa Sol, móc kép rải hợp âm; tay phải hợp âm có nốt nhỏ; hệ 4: f. Mutopia rightf/leftf: strum, \grace d''8 ( <cis'' a e>8 ), a16 e'' cis'' e''.'
+  - id: n18
+    cau: 'Trích đoạn nhịp lấy đà và ô 1–8 chép từ bản in Artaria (khoảng 1784), đối chiếu với bản Mutopia; mô tả: hình móc kép quanh La, Đô, Mi rồi quanh La cao (ô 1–3); Đô cao nốt đen (ô 4); Si cao có hai nốt nhỏ Sol–La, rồi các quãng ba móc đơn, tay trái đổi sang Mi (ô 5–7); về Mi, hết câu đầu, có dấu nhắc lại (ô 8). Bản in không ghi số máy đếm nhịp.'
+    loai: trich-doan
+    nguon: [ artaria-1784, mutopia-108 ]
+    ket_qua: dung
+    ghi_chu: 'Xem khuong_nhac khối 1. Bản quét tr. 22 không có số máy đếm nhịp; Q:1/4=100 trong khối là tốc độ tập (ghi trên trang).'
+  - id: n19
+    cau: 'Nốt nhỏ (nốt dựa, appoggiatura) chơi đúng phách, lấy thời gian của nốt chính, thành bốn móc kép đều Si–La–Sol♯–La; bản Mutopia viết thẳng thành bốn móc kép.'
+    loai: dinh-nghia
+    nguon: [ site-not-hoa-my, mutopia-108, kern-sonata11-3 ]
+    ket_qua: dung
+    ghi_chu: 'Định nghĩa theo trang piano/not-hoa-my và thuat-ngu.yml (appoggiatura). Mutopia righta: h,16 a, gis, a,; kern [0]: B4 A4 G#4 A4 (bốn nốt). Nốt nhỏ không gạch trong bản quét (900 dpi).'
+  - id: n20
+    cau: 'Chỗ khó và cách tập: hình móc kép (tập chậm, ngón 3-2-1-2 hay 4-3-2-3); nốt nhỏ đúng phách; hợp âm rải tay trái (tập chậm từng nốt rồi gom lại, cổ tay xoay nhẹ); quãng tám từ cổ tay; đoạn Fa♯ thứ với máy đếm nhịp; tương phản p và f.'
+    loai: khuyen-tap
+    ket_qua: dung
+    ghi_chu: 'Lời khuyên tập thông thường, khớp các trang piano/not-hoa-my, piano/quang-tam-buoc-nhay. Ngón 4-3-2-3 khớp số ngón 4 ở Si5 của Mutopia ô 3 (h-4 a gis a).'
+  - id: n21
+    cau: 'Ba bài tập soạn cho trang này: vòng quanh nốt chính (tay phải 3-2-1-2, tay trái ngón 5 ở La, 2 và 1 ở hợp âm); tiếng trống tay trái (rải chậm 5-3-2-1 rồi thành nốt nhỏ, nốt chính đúng phách); quãng tám từ cổ tay (ngón 1 nốt dưới, 5 trên phím trắng, 4 trên phím đen Đô♯, Sol♯).'
+    loai: vi-du-soan
+    ket_qua: dung
+    ghi_chu: 'Khuông ở khuong_nhac khối 2–4.'
+  - id: n22
+    cau: 'Kế hoạch 8 tuần, 30–40 phút mỗi ngày, máy đếm nhịp từ 60–72 lên 100–120 phách đen mỗi phút.'
+    loai: khuyen-tap
+    ket_qua: dung
+    ghi_chu: 'Gợi ý tập, như các bài chặng 6 khác (clara-schumann-scherzo-2: 8 tuần).'
+  - id: n23
+    cau: 'Bản in đầu ghi Allegrino, một chỉ dẫn ít gặp; nhiều ấn bản về sau ghi Allegretto (hơi nhanh); cả hai đều không phải Presto.'
+    loai: so-lieu
+    nguon: [ artaria-1784, henle-hn1300, mutopia-108, site-k331 ]
+    ket_qua: dung
+    ghi_chu: 'Bản quét: "Allegrino". Henle: "the unusual tempo marking Allegrino". Mutopia piece "Allegretto"; thuat-ngu.yml allegretto: Hơi nhanh. Câu cùng ý với trang nghe-nhac/mozart-k331.'
+  - id: n24
+    cau: 'Bản in đầu ghi p ở đầu bài và f ở đầu hành khúc; coda có một đoạn p ở giữa, rồi trở lại f.'
+    loai: cau-truc
+    nguon: [ artaria-1784 ]
+    ket_qua: dung
+    ghi_chu: 'Bản quét tr. 22 hệ 1 (p), tr. 23 hệ 2 (f ở hành khúc thứ hai; hành khúc đầu tr. 22 hệ 3), tr. 24 hệ 3 (p), hệ 4 (f).'
+  - id: n25
+    cau: 'Gần như không cần bàn đạp: độ rõ của móc kép và độ gọn của hợp âm rải tay trái làm nên tiếng "trống" của hành khúc.'
+    loai: khuyen-tap
+    nguon: [ site-k331 ]
+    ket_qua: dung
+    ghi_chu: 'Trang nghe-nhac/mozart-k331: "Gần như không cần bàn đạp; tiếng trống của hành khúc đến từ cách nhấn phím và độ gọn của hợp âm rải." Bản in đầu không có dấu bàn đạp.'
+  - id: n26
+    cau: 'Đoạn nào cũng có dấu nhắc lại, trừ coda; chơi một mình thì tự chọn dấu nhắc lại, giữ cân đối giữa các đoạn.'
+    loai: khuyen-tap
+    nguon: [ artaria-1784, mutopia-108 ]
+    ket_qua: dung
+    ghi_chu: 'Dấu nhắc lại: như n15.'
+  - id: n27
+    cau: 'Lỗi thường gặp: chơi quá nhanh, nốt nhỏ trước phách, tay trái nặng, hợp âm rải chậm và nốt chính trễ phách, quãng tám gắt, đoạn Fa♯ thứ nhanh dần, đoạn p sau hành khúc còn to.'
+    loai: khuyen-tap
+    ket_qua: dung
+    ghi_chu: 'Lỗi thường gặp suy từ các chỗ khó đã nêu.'
+  - id: n28
+    cau: 'Các link: nghe-nhac/mozart-k331, hinh-thuc/rondo, piano/not-hoa-my, piano/quang-tam-buoc-nhay, piano/ban-dap, luyen-tap/thu-am, piano/tac-pham/mozart-k545 (cùng tác giả, chặng trước).'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'tests/link.test.mjs kiểm đích; mozart-k545 có chang 5 trong tac-pham.yml.'
+  - id: n29
+    cau: 'Câu hỏi kiểm tra nhanh: bản in đầu ghi Allegrino (về sau Allegretto); hành khúc ở La trưởng, bài mở ở La thứ, đoạn giữa Fa♯ thứ; nốt Si nhỏ là nốt dựa, đúng phách, thành bốn móc kép (Mutopia viết thẳng); ABRSM 2025–2026 Grade 8 danh sách A, 2027–2028 không còn.'
+    loai: cau-truc
+    nguon: [ artaria-1784, mutopia-108, abrsm-2025, abrsm-2027 ]
+    ket_qua: dung
+    ghi_chu: 'Lặp lại n4, n15, n19, n23.'
+khuong_nhac:
+  - khoi: 1
+    loai: trich-doan
+    kiem: [ cu-phap, nhip, giong, not, doi-chieu-an-ban ]
+    ket_qua: dung
+    ghi_chu: 'Nhịp lấy đà và ô 1–8, 2/4, K:Am, L:1/16. Ấn bản: artaria-1784 tr. in 22 (PDF 20) hệ 1, đọc ở 300–900 dpi, cao độ suy từ vị trí dòng kẻ đo bằng máy. Nhịp lấy đà: tay phải nốt nhỏ Si4 (không gạch), La4 móc đơn, Sol♯4 La4 móc kép (vạch thứ hai chỉ trên hai nốt cuối); tay trái lặng đen. Ô 1: Đô5 móc đơn, lặng móc đơn, nốt nhỏ Rê5, Đô5 móc đơn, Si4 Đô5 móc kép; tay trái La3 rồi ba hợp âm Đô4–Mi4 móc đơn. Ô 2: Mi5 móc đơn, lặng, nốt nhỏ Fa5, Mi5 móc đơn, Rê♯5 Mi5 móc kép; tay trái như ô 1. Ô 3: hai lần [nốt nhỏ Si5] La5 móc đơn, Sol♯5 La5 móc kép; tay trái La3 [Đô4 Mi4] La3 [Đô4 Mi4]. Ô 4: Đô6 nốt đen, La5 Đô6 móc đơn; tay trái La3 và ba hợp âm Đô4–Mi4. Ô 5: hai nốt nhỏ Sol5 (có dấu bình) La5 (ba vạch), Si5 móc đơn, quãng ba Fa♯5–La5, Mi5–Sol5, Fa♯5–La5 móc đơn; tay trái Mi3 rồi ba hợp âm Si3–Mi4. Ô 6: như ô 5 (nốt nhỏ không có dấu bình). Ô 7: như ô 5, quãng ba cuối Rê♯5–Fa♯5; tay trái Mi3 [Si3 Mi4] Si2 Si3. Ô 8: Mi5 nốt đen; tay trái Mi3 nốt đen; vạch nhắc lại. Đối chiếu Mutopia righta/lefta: cùng nốt, cùng trường độ khi chơi (Mutopia viết nốt nhỏ ở nhịp lấy đà, ô 1–3 thành móc kép thật; ô 5–7 giữ \grace { g!32 a } như bản in). Bỏ: dấu staccato, luyến, số ngón, dấu nhấn của Mutopia (không có trong bản in); một nét ngắn khó đọc ở tay trái ô 1–2 bản in (có thể là dấu luyến) không chép.'
+  - khoi: 2
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
+    ket_qua: dung
+    ghi_chu: '4 ô 2/4, La thứ: tay phải hình vòng quanh Si–La–Sol♯–La, Rê–Đô–Si–Đô, Fa–Mi–Rê♯–Mi (3-2-1-2), Si–La–Sol♯–La cao (4-3-2-3), mỗi ô kết bằng nốt đen Đô5 (3), Mi5 (4), La5 (5), Đô6 (5); tay trái La3 và hợp âm Đô4–Mi4 (La thứ). Mỗi ô 8 móc kép.'
+  - khoi: 3
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
+    ket_qua: dung
+    ghi_chu: '4 ô 2/4, La trưởng: tay trái rải La2–Đô♯3–Mi3–La3 móc đơn (5-3-2-1), rồi cùng các nốt thành ba nốt nhỏ trước La3 và ba La3 lặp; tương tự trên Rê (Rê2–Fa♯2–La2–Rê3). Tay phải giữ hợp âm La trưởng (La4–Đô♯5–Mi5), Rê trưởng (Fa♯4–La4–Rê5).'
+  - khoi: 4
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
+    ket_qua: dung
+    ghi_chu: '4 ô 2/4, La trưởng: quãng tám tay phải La–Si–Đô♯–Si–La–Sol♯–La (ngón 5 phím trắng, 4 phím đen Đô♯, Sol♯; ngón 1 nốt dưới ghi trong lời kèm); tay trái quãng tám La2–La3, Mi2–Mi3 tách (5, 1).'
