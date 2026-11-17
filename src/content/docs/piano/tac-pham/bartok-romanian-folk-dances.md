@@ -38,7 +38,7 @@ Bản thu gợi ý là của nghệ sĩ piano Chris Breemer, đăng trên IMSLP,
 
 1. Điệu nào chậm nhất, điệu nào nhanh nhất? Hai điệu cuối có nối liền nhau không?
 2. Ở điệu 3, giai điệu nằm ở vùng nào của bàn phím? Tay trái làm gì suốt điệu?
-3. Ở điệu 4, bạn có nghe ra quãng nghe "lạ tai" giữa hai nốt liền nhau trong giai điệu không?
+3. Ở điệu 4, bạn có nghe ra màu "lạ tai" của nhóm nốt Đô♯–La–Si♭–Rê trong giai điệu không?
 4. Ở điệu 5, phách mạnh rơi đều như một điệu valse hay một điệu hành khúc, hay thay đổi liên tục?
 
 ::khoi-nghe{moc="3 76 111 182 227 260"}
@@ -52,7 +52,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | … | **Điệu 1, Điệu múa với gậy** (*Allegro moderato*, 2/4): *f*, giai điệu chắc ở tay phải trên các hợp âm nhấn của tay trái; kết bằng *sf poco allarg.* (hơi chậm lại) |
 | … | **Điệu 2, Brâul** (*Allegro*, 2/4): *p*, giai điệu móc đơn tách nhẹ trên nốt trầm và hợp âm ngắn; cả điệu nhắc lại |
 | … | **Điệu 3, Giậm chân tại chỗ** (*Andante*, 2/4): tay trái mở *pp* một mình, rồi giai điệu rất cao ở tay phải, nhiều nốt láy; kết *ppp*, nhỏ dần rồi tắt (*smorzando*) |
-| … | **Điệu 4, Điệu múa Bucsum** (*Molto moderato*, 3/4): tay trái mở *p*; giai điệu *molto espressivo* có quãng hai tăng Si♭–Đô♯ |
+| … | **Điệu 4, Điệu múa Bucsum** (*Molto moderato*, 3/4): tay trái mở *p*; giai điệu *molto espressivo* dùng thang La–Si♭–Đô♯–Rê, có quãng hai tăng Si♭–Đô♯ |
 | … | **Điệu 5, Polka Romania** (*Allegro*, nhịp 2/4 và 3/4 xen nhau): *f*, giai điệu tách với nhiều nốt hoa mỹ; nhịp đổi liên tục; kết bằng *sf*, dấu ngân (fermata) trên vạch kết |
 | … | **Điệu 6, Điệu múa nhanh** (*Allegro*, rồi *Più allegro*, 2/4): *f*, nhấn mạnh, nhiều *sf*; sang *Più allegro* đổi hóa biểu và nhanh hơn |
 
@@ -65,7 +65,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | 1 | *Allegro moderato*, ♩ = 80 | 2/4 · không hóa biểu | Tay phải giai điệu, tay trái nốt trầm và hợp âm | Nhấn rõ, nhiều chỗ *sf*; có chỗ hai tay chồng lên nhau, bản in ghi *sopra* (ở trên) và *sotto* (ở dưới) |
 | 2 | *Allegro*, ♩ = 144 | 2/4 · không hóa biểu | Tay phải móc đơn tách, tay trái nốt trầm rồi hợp âm | Cả điệu có dấu nhắc lại |
 | 3 | *Andante*, ♩ = 112 | 2/4 · hai dấu thăng | Tay trái phần lớn viết khóa Sol, lặp một hình nốt trầm – nốt cao; tay phải ở vùng rất cao | Nốt láy nhanh trên nốt dài; nhỏ dần tới *ppp* |
-| 4 | *Molto moderato*, ♩ = 100 | 3/4 · không hóa biểu | Tay trái lặp nốt trầm và hợp âm, tay phải giai điệu | Quãng hai tăng Si♭–Đô♯; *molto espr.*, sau là *mf più espr.* |
+| 4 | *Molto moderato*, ♩ = 100 | 3/4 · không hóa biểu | Tay trái lặp nốt trầm và hợp âm, tay phải giai điệu | Thang La–Si♭–Đô♯–Rê, giữa Si♭ và Đô♯ là quãng hai tăng; *molto espr.*, sau là *mf più espr.* |
 | 5 | *Allegro*, ♩ = 152 | 2/4 và 3/4 xen nhau · hai dấu thăng | Tay trái móc đơn nốt trầm – hợp âm tách | Đếm theo móc đơn để không lạc khi đổi nhịp |
 | 6 | *Allegro*, ♩ = 152; *Più allegro*, ♩ = 160 | 2/4 · hai dấu thăng, rồi một dấu thăng | Tay trái nốt trầm và hợp âm nhấn, rồi hợp âm móc đơn | Nhiều *sf*; đoạn *Più allegro* nhanh hơn, có *cresc.* |
 
@@ -95,7 +95,7 @@ Giai điệu tách nhẹ, đều; tay trái đánh nốt trầm Rê ở phách 1
 |---|---|---|
 | Nhảy nốt trầm – hợp âm của tay trái (điệu 1, 2, 5, 6) | Tay trái phải đi xa rồi về nhanh, dễ trượt nốt hay chậm nhịp | Tập riêng tay trái, nhìn trước nốt đích; hợp âm nhẹ hơn nốt trầm. Bài tập 1 |
 | Vùng rất cao của điệu 3 | Phím cao nhỏ tiếng, tay phải dễ đánh mạnh để bù | Chơi nhẹ và rõ, nốt láy nhanh và thật nhỏ; tay trái *pp* đều suốt điệu |
-| Quãng hai tăng của điệu 4 | Tay quen gam thường dễ đánh Si thay Si♭ hay Đô thay Đô♯ | Hát trước giai điệu; tập chậm chuỗi Rê–Đô♯–Si♭–La. Bài tập 2 |
+| Quãng hai tăng của điệu 4 | Tay quen gam thường dễ đánh Si thay Si♭ hay Đô thay Đô♯ | Hát trước giai điệu; tập chậm nhóm Đô♯–La–Si♭–Rê. Bài tập 2 |
 | Nhịp đổi liên tục của điệu 5 | Mỗi lần đổi 2/4 – 3/4, người chơi dễ thêm hay bớt một phách | Đếm theo móc đơn ("1-2-3-4" rồi "1-2-3-4-5-6"); tập với máy đếm nhịp đặt theo móc đơn. Bài tập 3 |
 | Tốc độ và *sf* của điệu 6 | Nhanh và nhấn nhiều nên tay dễ cứng, chạy vội | Tập chậm với đủ dấu nhấn trước; nhấn bằng sức nặng của tay chứ không bằng cách đập; tăng tốc từng chút |
 | Nối liền sáu điệu | Đổi tính cách và tốc độ ngay lập tức | Tập riêng chỗ chuyển giữa hai điệu: hai ô cuối điệu trước, hai ô đầu điệu sau |
@@ -138,7 +138,7 @@ K:C
 [V:LH] [D,A,]6 | [A,,E,]6 | [D,A,]6 | [D,A,]6 |]
 ```
 
-Giữa Si♭ và Đô♯ là quãng hai tăng: hai phím cách nhau xa hơn một quãng hai thường. Hát theo, nghe màu "lạ tai" ấy. Kiểu giai điệu của điệu 4.
+Giữa Si♭ và Đô♯ là quãng hai tăng: hai phím cách nhau xa hơn một quãng hai thường. Hát theo, nghe màu "lạ tai" ấy. Thang âm của điệu 4 (trong bài, Si♭ và Đô♯ không đứng liền nhau mà cách một nốt La: Đô♯–La–Si♭–Rê).
 
 ### 3. Đổi nhịp 2/4 và 3/4
 
@@ -152,7 +152,7 @@ Q:1/8=240
 V:RH clef=treble
 V:LH clef=bass
 K:Dm
-[V:RH] [M:2/4] !f!!1!.d!2!.e!3!.f!2!.e | [M:3/4] !1!.d!2!.e!3!.f!4!.g!5!.a!3!.f | [M:2/4] !2!.e!1!.d c2 | [M:3/4] !2!.d.e .f.e d2 |]
+[V:RH] [M:2/4] !f!!1!.d!2!.e!3!.f!2!.e | [M:3/4] !1!.d!2!.e!3!.f!4!.g!5!.a!3!.f | [M:2/4] !3!.e!2!.d !1!c2 | [M:3/4] !2!.d.e .f.e d2 |]
 [V:LH] [M:2/4] .[D,A,]2 .[D,A,]2 | [M:3/4] .[D,A,]2 .[D,A,]2 .[D,A,]2 | [M:2/4] .[A,,E,]2 .[A,,E,]2 | [M:3/4] .[D,A,]2 .[D,A,]2 [D,A,]2 |]
 ```
 
@@ -220,7 +220,7 @@ Bản in ghi bàn đạp bằng dấu ngoặc dưới khuông (chú thích ở t
 + Quãng hai tăng giữa Si♭ và Đô♯
 - Nhịp 5/8
 - Giai điệu chỉ dùng phím đen
-> Hai nốt liền nhau trong giai điệu cách nhau một quãng hai tăng, rộng hơn quãng hai thường.
+> Giai điệu dùng thang La–Si♭–Đô♯–Rê; giữa hai bậc liền nhau Si♭ và Đô♯ là quãng hai tăng, rộng hơn quãng hai thường.
 ? Bản in năm 1918 ghi tốc độ thế nào?
 - Chỉ ghi chữ, không có số
 + Ghi cả chữ và số máy đếm nhịp cho từng điệu

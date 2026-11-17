@@ -13,6 +13,10 @@ Lộ trình yêu cầu chứng minh bản quét IMSLP #918136 là bản in trư�
 - Bảng tên ba thứ tiếng, nghĩa và nơi tìm thấy của sáu điệu, chép từ bản in.
 - Bản thu: Chris Breemer, CC0 1.0, chỉ dẫn link một file 5:22; 6 mốc đầu điệu đo bằng khoảng lặng (điệu 5 và 6 nối liền, cách nhau khoảng lặng 0,6 s).
 
+## Kiểm định
+
+Lượt 1 (31 nhận định trang, 13 bản ghi, 4 khuông); lượt 2 bởi agent khác (41 câu: 41 đúng; ghi chú dấu ngân cuối điệu 5 nằm trên vạch kết, đã sửa câu); review bởi agent thứ ba bắt một lỗi nhạc lý của lượt 1: ở điệu 4, Si♭ và Đô♯ không đứng liền nhau trong giai điệu (giai điệu đi Đô♯–La–Si♭–Rê), quãng hai tăng nằm trong thang La–Si♭–Đô♯–Rê; đã sửa câu hỏi khi nghe, bảng, lời bài tập 2 và lời giải thích câu hỏi 3; thêm nguồn Open Music Theory cho định nghĩa quãng tăng; thêm ngón ở bài tập 3. Kiểm mẫu: Claude kiểm thay chủ repo, 5/5 đúng. Khóa 17/11/2026; `npm run build` bản thật, `npm test`, Chromium đạt. Gộp `main` ở máy, chưa push.
+
 ## Nguồn
 
 Bản quét UE 1918 (tải tay); Mutopia-2017/01/11-2162 (điệu 2); Henle HN 1402 (năm 1915, bản dàn nhạc, mức khó 3, 2, 3, 3, 4, 4); ABRSM 2015 & 2016 Grade 4 (điệu 3); Trinity từ 2023 Grade 5 (điệu 4, ô 1–18); IMSLP (giấy phép bản thu).
