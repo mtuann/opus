@@ -1,6 +1,6 @@
 ---
 title: "Chaminade: Pierrette (Air de ballet), Op. 41"
-description: Điệu múa ballet cho piano của Cécile Chaminade, in năm 1889. Bài dạy móc kép staccato nhẹ, nốt hoa mỹ, hợp âm nhấn và sắc thái từ ppp đến fff.
+description: Điệu múa ballet cho piano của Cécile Chaminade, in năm 1889. Bài dạy móc kép nhẹ, nốt hoa mỹ, hợp âm nhấn và sắc thái từ ppp đến fff.
 tac_pham: chaminade-pierrette
 ---
 
@@ -11,9 +11,9 @@ tac_pham: chaminade-pierrette
 ## Vì sao nên học bài này
 
 - **Ở chặng 6 của lộ trình.** Bài cần ngón tay nhanh và nhẹ, đọc được nhiều dấu hóa bất thường, và giữ tốc độ đều trong suốt bài.
-- **Nhẹ mà vẫn rõ.** Phần lớn bài là móc kép có chấm staccato ở sắc thái nhỏ: kỹ năng khó hơn chơi to và nhanh.
+- **Nhẹ mà vẫn rõ.** Phần lớn bài là móc kép nhẹ ở sắc thái nhỏ (*p*, *pp*), có chỗ luyến, có chỗ chấm staccato: kỹ năng khó hơn chơi to và nhanh.
 - **Hai tay đều bận.** Tay trái nhảy giữa nốt trầm và hợp âm, vuốt nốt hoa mỹ lên nốt nhấn, có chỗ bắt chéo lên trên tay phải.
-- **Sắc thái rất rộng.** Bản nhạc ghi từ *ppp* đến *fff*, có cả *sfff*: tập điều khiển âm lượng trong một bài ngắn.
+- **Sắc thái rất rộng.** Bản nhạc ghi từ *ppp* đến *fff*, có cả *sf*, *sff*, *sfff*: tập điều khiển âm lượng trong một bài ngắn.
 - **Một nhà soạn nhạc nữ.** Đây là bài học tác phẩm đầu tiên trên site của một nhà soạn nhạc nữ.
 
 ## Bối cảnh
@@ -42,7 +42,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | Thời điểm | Sự kiện |
 |---|---|
 | … | **Mở đầu** (ô 1–4, *mf*): chỉ có tay trái, nốt trầm Mi♭ xen với hợp âm sau phách |
-| … | **Chủ đề** (từ ô 5, *p*): tay phải móc kép nhẹ, nhiều chấm staccato; ô 5 dừng trên hợp âm Rê–Fa♯ |
+| … | **Chủ đề** (từ ô 5, *p*): tay phải móc kép nhẹ, xen nốt có chấm staccato; ô 5 dừng trên hợp âm Rê–Fa♯ |
 | … | Giai điệu leo lên theo nửa cung, rất nhỏ (*pp*), rồi lớn dần |
 | … | *f*: chuỗi chùm ba móc kép đi xuống, rồi bốn ô mở đầu trở lại (*marcatissimo*, nhỏ dần) |
 | … | **Chủ đề trở lại** (*p*) |
@@ -55,7 +55,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | … | **Chủ đề lần ba** (*a tempo*, *mp*) |
 | … | Sau một ô im lặng: **đoạn kết** bắt đầu *pp* với chùm ba như đoạn giữa; tay trái bắt chéo lên trên tay phải (*m.g.*) |
 | … | Hai hợp âm *sfff* |
-| … | Chuỗi móc kép đi xuống ở hai tay, nhỏ dần tới *ppp*; một ô im lặng; hai hợp âm *fff* kết bài |
+| … | Chuỗi móc ba đi xuống ở hai tay, nhỏ dần tới *ppp*; một ô im lặng; hai hợp âm *fff* kết bài |
 
 ## Cấu trúc
 
@@ -64,12 +64,12 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | Phần | Điều xảy ra | Điều cần chú ý |
 |---|---|---|
 | Mở đầu (ô 1–4) | Tay trái một mình: nốt trầm Mi♭, Si♭ và hợp âm Mi♭ trưởng sau phách | Ô 1 và 3 hợp âm có dấu nhấn, ngân một phách; ô 2 và 4 hợp âm chỉ dài một móc đơn |
-| A, chủ đề | Tay phải móc kép staccato trên lớp đệm của tay trái; giai điệu leo lên theo nửa cung, rồi *f* | Đọc trước các dấu hóa bất thường; giữ tay trái nhỏ hơn giai điệu |
+| A, chủ đề | Tay phải móc kép nhẹ, có luyến và có chấm staccato, trên lớp đệm của tay trái; giai điệu leo lên theo nửa cung, rồi *f* | Đọc trước các dấu hóa bất thường; giữ tay trái nhỏ hơn giai điệu |
 | Mở đầu trở lại, A | Bốn ô tay trái (*marcatissimo*), rồi chủ đề lần hai; kết bằng hợp âm *sff* và một ô im lặng | Ô im lặng cũng đếm đủ nhịp |
 | B, đoạn giữa | Nhiều màu xen nhau: chùm ba *pp*, hợp âm *ff* với nốt hoa mỹ tay trái, móc kép *pp leggierissimo*, rồi *ppp* lên rất cao | Đổi sắc thái ngay, không lớn dần hay nhỏ dần giữa các khối |
 | Chuyển | *mp*, *p marcato*, nhỏ dần và chậm lại một chút | Chậm vừa đủ để chủ đề trở lại tự nhiên |
 | A lần ba | Chủ đề *a tempo* | Về đúng tốc độ đầu bài |
-| Đoạn kết | Chùm ba *pp*, tay trái bắt chéo; hợp âm *sfff*; chuỗi móc kép đi xuống tới *ppp*; hai hợp âm *fff* | Giữ sức cho hai hợp âm cuối; ô im lặng trước chúng phải thật im |
+| Đoạn kết | Chùm ba *pp*, tay trái bắt chéo; hợp âm *sfff*; chuỗi móc ba đi xuống tới *ppp*; hai hợp âm *fff* | Giữ sức cho hai hợp âm cuối; ô im lặng trước chúng phải thật im |
 
 ### Bốn ô mở đầu trên khuông nhạc
 
@@ -96,7 +96,7 @@ Tay trái chơi hai bè: bè dưới là nốt trầm Mi♭ và Si♭ ở rất 
 | Chỗ khó | Vì sao khó | Cách tập |
 |---|---|---|
 | Tay trái nhảy giữa nốt trầm và hợp âm | Khoảng cách lớn, hợp âm dễ to hay vào trễ | Nhìn trước chỗ hợp âm, nhảy sớm, đánh đúng lúc; tập chậm. Bài tập 1 |
-| Móc kép staccato nhẹ | Nhẹ quá thì mất nốt, rõ quá thì nặng | Đầu ngón gần phím, cổ tay mềm; tập chậm *mf* rồi bớt dần tới *p*. Bài tập 2 |
+| Móc kép nhẹ, luyến hay staccato | Nhẹ quá thì mất nốt, rõ quá thì nặng | Đầu ngón gần phím, cổ tay mềm; tập chậm *mf* rồi bớt dần tới *p*. Bài tập 2 |
 | Dấu hóa bất thường | Nhiều dấu thăng, dấu bình trong giọng ba dấu giáng | Đọc riêng từng ô có dấu hóa trước khi tập hai tay; khoanh bằng bút chì |
 | Nốt hoa mỹ tay trái lên nốt nhấn | Ba nốt nhỏ dễ thành nhịp, hay làm nốt chính vào trễ | Ba nốt nhỏ vuốt sát trước phách, nốt chính đúng phách. Bài tập 3 |
 | Tay trái bắt chéo (*m.g.*) | Tay trái phải vượt qua trên tay phải đúng lúc | Tập riêng đường đi của tay trái, rồi ghép |
@@ -178,16 +178,16 @@ Bản in ghi *Allegretto* (hơi nhanh) và ♩ = 104. Đây là điệu múa: nh
 
 ### Sắc thái
 
-Bài dùng gần hết thang sắc thái: *ppp*, *pp*, *p*, *mp*, *mf*, *f*, *ff*, *fff*, cùng *sff*, *sfff* (nhấn mạnh bất ngờ). Phần lớn bài nhỏ và nhẹ; những chỗ to là điểm nhấn ngắn. *Leggierissimo* nghĩa là thật nhẹ; *marcatissimo* là thật rõ từng nốt; *sec* (tiếng Pháp) là khô, ngắn, nhấc tay ngay.
+Bài dùng gần hết thang sắc thái: *ppp*, *pp*, *p*, *mp*, *mf*, *f*, *ff*, *fff*, cùng *sf*, *sff*, *sfff* (nhấn mạnh bất ngờ). Phần lớn bài nhỏ và nhẹ; những chỗ to là điểm nhấn ngắn. *Leggierissimo* nghĩa là thật nhẹ; *marcatissimo* là thật rõ từng nốt; *sec* (tiếng Pháp) là khô, ngắn, nhấc tay ngay.
 
 ### Bàn đạp
 
-Bản in ghi chỗ đạp (*Ped.*) và chỗ nhả (✱) ở nhiều ô, thường đặt ở nốt trầm của tay trái. Giữ bàn đạp nông ở các đoạn móc kép staccato để nốt không nhòe vào nhau. Xem thêm [Bàn đạp](/opus/piano/ban-dap/).
+Bản in ghi chỗ đạp (*Ped.*) và chỗ nhả (✱) ở nhiều ô, thường đặt ở nốt trầm của tay trái. Giữ bàn đạp nông ở các đoạn móc kép để nốt không nhòe vào nhau. Xem thêm [Bàn đạp](/opus/piano/ban-dap/).
 
 ## Lỗi thường gặp
 
 - Hợp âm tay trái to hơn giai điệu, hay vào trễ sau nốt trầm.
-- Móc kép staccato chơi nặng, nhấc tay quá cao.
+- Móc kép chơi nặng; nhấc tay quá cao ở nốt staccato.
 - Bỏ sót dấu thăng, dấu bình ở những ô nửa cung.
 - Ba nốt hoa mỹ tay trái chơi chậm, làm nốt nhấn vào trễ.
 - Lớn dần hay nhỏ dần giữa các khối *ff* và *pp*, thay vì đổi ngay.
