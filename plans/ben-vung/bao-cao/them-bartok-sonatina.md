@@ -1,6 +1,6 @@
 # Báo cáo: thêm hướng dẫn nghe Bartók, Sonatina Sz. 55 (hướng dẫn nghe số 3 của lộ trình)
 
-Nhánh `them/bartok-sonatina`, 17/11/2026. Mục 7 của `plans/ben-vung/lo-trinh-them-tac-pham.md`, hướng dẫn nghe số 3 (Thế kỷ 20). Tới lượt 1 kiểm định: chưa có lượt 2, review, kiểm mẫu; chưa khóa.
+Nhánh `them/bartok-sonatina`, 17/11/2026. Mục 7 của `plans/ben-vung/lo-trinh-them-tac-pham.md`, hướng dẫn nghe số 3 (Thế kỷ 20). Đã qua lượt 1, lượt 2 (42 câu: 40 đúng, 2 sai) và review (mục Review); chưa kiểm mẫu, chưa khóa.
 
 ## Kết quả
 
@@ -45,11 +45,26 @@ Bản quét IMSLP #893630 (`../opus-zero/_imslp/`); wikitext IMSLP (API); Henle 
 - `commons.py rec` sinh `"t": ""` và `"note": ""` cho bản thu một phần; đã bỏ `t`, điền `note` tay.
 - `them-tac-pham.mjs` tạo `title` "Bartók: Sonatina" (đã thêm số Sz. 55 như các trang khác).
 
+## Review
+
+Claude (agent riêng, không làm lượt 1, lượt 2), 17/11/2026. Mọi nhận định của hai hồ sơ có `review: dung` (trang 35, bản ghi 9); n22 và n25 của trang (lượt 2 `sai`) đã sửa (`ket_qua: da-sua`).
+
+- **n22:** bản quét tr. 6: tay phải lặng trọn ô 1–3, ô 4 lặng đen, lặng móc đơn chấm rồi nốt đà móc kép Rê (*mp*). Trang (Điều cần biết, Chương 3) thành "tay trái chơi một mình ba ô; cuối ô 4 tay phải vào bằng một nốt đà rồi hát giai điệu thứ nhất"; dòng bảng Theo dõi khi nghe vẫn đúng, giữ.
+- **n25:** bản quét tr. 9: *tranquillo (coda)* *p*, *più tranquillo* *pp*, *Sostenuto molto*, *accel.* (*p cresc.*) *al Tempo I*, *sempre cresc.*, *allargando*, hợp âm kết *sf* trên *ff*. Câu cũ "rồi nhanh dần tới hợp âm kết" sửa ở đoạn Chương 3 và dòng coda của bảng. Đo lại trên file gốc (librosa): coda 191,19 s (mốc 191 giữ), *più tranquillo* 195,6, *Sostenuto molto* 199,3, *accel.* khoảng 203,7, *Tempo I* khoảng 207,3, *allargando* khoảng 213–215, hợp âm kết 215,5–217,7 s. Bảng vẫn 9 dòng nên mốc không đổi; không chạy `attach.py`.
+- **Tập Bihar:** năm in đậm trên bản quét (400 dpi) trông như "1918", nhưng cùng bộ chữ ấy "3953" trông như "8958"; lời bình Henle (PDF tải lại) ghi "Bukarest 1913, S. 337, Nr. 350": trang giữ 1913. Tên tập, "București", tên hạt Bihar viết như chú thích bản in.
+- **Ấn bản:** Henle lấy bản sửa làm nguồn chính ("Als Hauptquelle … diente die revidierte Ausgabe Rvrev"), nên chữ tốc độ theo bản sửa trên trang cũng là chữ của ấn bản Henle mà ABRSM chỉ định; chuyện hai bản in kể theo Henle; bảng tốc độ Henle đọc lại khớp cách đọc cột của lượt 1 (n14). Bản quyền: trang không có khối abc, đúng mục 2 lộ trình (bản sửa in sau 1930, không có bản quét bản in đầu 3929).
+- **Sự kiện kiểm ngẫu nhiên** (nguồn tải lại): n9 (1913), n11 (chú thích tr. 6), n14 (bảng tốc độ), n16 (Welte 7785, 23/12/1927), n17 (1931, BB 102b), n26 (ký hiệu bàn đạp 1908–1918), n32 (ABRSM hai kỳ, tr. 40, danh sách C số 4), n33 (Henle mức 4, Grade 7): đều khớp.
+- **Mốc đo lại:** 2 (2,55 s), 29 (29,33), 51 (51,06), 96 (96,43), 191 (191,19): khớp; không đổi mốc nào, sơ đồ `hinh` giữ.
+- **Giấy phép bản thu:** wikitext Commons đọc lại: phần bản thu `{{self|cc-by-sa-3.0|GFDL|migration=redundant|author=La Pianista}}`, phần sáng tác `{{PD-old-auto-1923|1945}}`; `extmetadata` của API báo "Public domain" (gốc lỗi của `commons.py`). `ban_thu` ghi CC BY-SA 3.0 đúng, được nhận theo mục 2. 220,598 s.
+- **Chữ, thuật ngữ:** khớp `thuat-ngu.yml` (allegretto, accelerando, allargando "chậm dần và trang trọng hơn", molto, sostenuto, tranquillo "yên tĩnh", pesante "nặng", più). *leggero* ("nhẹ"), *longa* ("ngân dài"), sonatina không có trong Từ điển; nghĩa trên trang theo nghĩa thông dụng (leggero: nhẹ, lướt; longa: dài), không đổi. Câu `ve-site` n34, n35 kiểm trên `cap-do.yml`, `tac-pham.yml`, hai trang Bartók và `tests/link.test.mjs`.
+
 ## Kiểm thử
 
 - `node tools/khuong-nhac.mjs`: 400 khối, 0 lỗi. `npm run build:xem` đạt.
 - `npm test`: 353 đạt, 2 bỏ qua, 0 hỏng (gồm `tests/tac-pham.test.mjs`, `tests/pham-vi.test.mjs`, `tests/link.test.mjs`, `tests/ban-thu.test.mjs`).
 - `OPUS_TRINH_DUYET=chromium npm run test:trinh-duyet`: 430/430 đạt (trang mẫu; trang mới chưa commit nên chưa vào trang đã đổi); thêm `OPUS_CHI_TRANG_DOI=1 OPUS_TRANG=nghe-nhac/bartok-sonatina/`: 193 đạt, 4 bỏ qua, 0 hỏng.
+
+- Sau review: `npm run build:xem` đạt; `npm test` 355 phép: 353 đạt, 1 bỏ qua, 1 hỏng: `tests/chuyen.test.mjs` (so chữ với site cũ) báo thiếu `doi_chu` ở `lich-su/nu-nha-soan-nhac` và `piano/tac-pham-theo-cap`, lỗi có sẵn ở `main` (đang sửa ở nhánh khác), không do nhánh này; không sửa.
 
 ## Việc ngoài phạm vi
 

@@ -37,7 +37,7 @@ Tên hai chương đầu là tiếng Hungary: *Dudások* là "những người t
 
 - **Chương 1:** ở đoạn đầu, nhiều ô mở bằng một quãng năm Rê–La nhấn mạnh ở bè trầm; tay phải hát giai điệu với chùm ba và nốt láy. Đoạn *Allegro* ở giữa nhẹ (*p leggero*), đổi nhịp 2/4 và 3/4 liên tục; rồi đoạn đầu trở lại (*Tempo I*) và kết bằng một hợp âm ngân dài.
 - **Chương 2:** ngắn nhất, chỉ khoảng nửa phút. *Pesante* (nặng): giai điệu ở quãng giữa bàn phím, tay trái nhảy xuống những nốt rất trầm. Từ ô 9, giai điệu chuyển xuống tay trái, tay phải chơi hợp âm nhấn ở trên.
-- **Chương 3:** tay trái mở đầu một mình rồi giai điệu thứ nhất vào ở tay phải. Đoạn *Sostenuto* mang giai điệu thứ hai, chậm, rồi nhanh dần về *Tempo I*, trên tay trái lặp rất nhanh hai nốt cạnh nhau; có lúc tay phải lặp hai nốt rất cao La–Si trong khi tay trái chơi giai điệu ở dưới. Cuối chương là coda *tranquillo* (yên tĩnh) nhắc lại giai điệu đầu, rồi nhanh dần tới hợp âm kết.
+- **Chương 3:** tay trái chơi một mình ba ô; cuối ô 4 tay phải vào bằng một nốt đà rồi hát giai điệu thứ nhất. Đoạn *Sostenuto* mang giai điệu thứ hai, chậm, rồi nhanh dần về *Tempo I*, trên tay trái lặp rất nhanh hai nốt cạnh nhau; có lúc tay phải lặp hai nốt rất cao La–Si trong khi tay trái chơi giai điệu ở dưới. Cuối chương là coda *tranquillo* (yên tĩnh) nhắc lại giai điệu đầu, nhỏ hơn, chậm hơn (*più tranquillo*, *pp*); rồi chậm hẳn lại (*Sostenuto molto*), nhanh dần (*accel.*) về *Tempo I* và mạnh dần, sau cùng chậm dần (*allargando*) vào các hợp âm kết rất mạnh (*ff*).
 - **Bàn đạp:** bản in dùng ký hiệu bàn đạp hình ngoặc vuông dưới khuông, chỉ rõ chỗ nhấn và chỗ nhả; theo ấn bản Henle, Bartók ưa ký hiệu này trong những năm 1908–1918.
 
 Muốn biết thêm về Bartók và nhạc dân tộc thế kỷ 20, xem [Thế kỷ 20](/opus/lich-su/thoi-ky/the-ky-20/).
@@ -66,7 +66,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | … | **III. Finale** (*Allegro vivace*, 2/4): tay trái mở đầu một mình, rồi giai điệu thứ nhất vào ở tay phải |
 | … | **III, *Sostenuto***: hóa biểu đổi, giai điệu thứ hai chậm, ngân dài trên tay trái lặp nhanh hai nốt; rồi nhanh dần về *Tempo I* |
 | … | **III**: tay phải lặp liên tục hai nốt rất cao La–Si, tay trái chơi giai điệu ở dưới |
-| … | **III, coda *tranquillo***: giai điệu đầu chương trở lại, nhỏ và chậm hơn (*più tranquillo*, *pp*); rồi nhanh dần tới hợp âm kết |
+| … | **III, coda *tranquillo***: giai điệu đầu chương trở lại, nhỏ và chậm hơn (*più tranquillo*, *pp*); rồi *Sostenuto molto*, nhanh dần về *Tempo I*, và chậm dần (*allargando*) vào hợp âm kết |
 
 ## Câu hỏi để nghe chủ động
 
