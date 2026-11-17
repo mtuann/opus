@@ -31,8 +31,9 @@ jobs:
   # Chọn phần theo file đổi: push so với origin/main, pull request so với nhánh đích. Không đọc được thì chạy đủ.
   chon:
     name: Chọn phần
-    # ghim Ubuntu 24.04: ubuntu-latest đã sang 26.04, thiếu libicudata.so.74 mà WebKit của Playwright 1.64.1 cần (17/11/2026).
-    # Bỏ ghim khi Playwright hỗ trợ Ubuntu 26.
+    # ghim Ubuntu 24.04 (17/11/2026): ubuntu-latest đã sang 26.04, đệm trình duyệt lưu ở máy 24.04 (WebKit dựng cho 24.04,
+    # cần libicudata.so.74) được dùng lại nên WebKit không mở được. Khóa đệm nay có bản Ubuntu; bỏ ghim sau khi test.yml (du)
+    # đạt trên ubuntu-latest.
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     outputs:

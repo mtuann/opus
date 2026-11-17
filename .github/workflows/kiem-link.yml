@@ -20,8 +20,7 @@ concurrency:
 
 jobs:
   kiem-link:
-    # ghim Ubuntu 24.04 như deploy.yml, test.yml (ubuntu-latest đã sang 26.04, WebKit của Playwright 1.64.1 không chạy): mọi
-    # workflow cùng một máy. Bỏ ghim khi Playwright hỗ trợ Ubuntu 26.
+    # ghim Ubuntu 24.04 như deploy.yml, test.yml (không dùng trình duyệt): mọi workflow cùng một máy, bỏ ghim cùng lúc
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:

@@ -28,8 +28,9 @@ concurrency:
 jobs:
   kiem:
     name: Build và kiểm thử (bản thật)
-    # ghim Ubuntu 24.04: ubuntu-latest đã sang 26.04, thiếu libicudata.so.74 mà WebKit của Playwright 1.64.1 cần (17/11/2026).
-    # Bỏ ghim khi Playwright hỗ trợ Ubuntu 26.
+    # ghim Ubuntu 24.04 (17/11/2026): ubuntu-latest đã sang 26.04, đệm trình duyệt lưu ở máy 24.04 (WebKit dựng cho 24.04,
+    # cần libicudata.so.74) được dùng lại nên WebKit không mở được. Khóa đệm nay có bản Ubuntu; bỏ ghim sau khi test.yml (du)
+    # đạt trên ubuntu-latest.
     runs-on: ubuntu-24.04
     # chặn đường treo (mặc định của GitHub là 6 giờ)
     timeout-minutes: 30
@@ -69,16 +70,18 @@ jobs:
           cache: pip
           cache-dependency-path: requirements.txt
       - run: python3 -m pip install -r requirements.txt
-      # Chromium của Playwright: lưu đệm theo phiên bản; thư viện hệ thống thường đã có trên máy CI, chỉ cài khi Chromium
-      # không mở được (apt chậm, có lúc vài phút)
+      # Chromium của Playwright: lưu đệm theo bản Ubuntu (Playwright tải bản dựng theo bản Ubuntu, như WebKit) và phiên bản
+      # Playwright; thư viện hệ thống thường đã có trên máy CI, chỉ cài khi Chromium không mở được (apt chậm, có lúc vài phút)
       - name: Phiên bản Playwright
         id: pw
-        run: echo "phien-ban=$(node -p "require('./node_modules/playwright/package.json').version")" >> "$GITHUB_OUTPUT"
+        run: |
+          echo "phien-ban=$(node -p "require('./node_modules/playwright/package.json').version")" >> "$GITHUB_OUTPUT"
+          echo "he=$(. /etc/os-release && echo "$ID$VERSION_ID")" >> "$GITHUB_OUTPUT"
       - uses: actions/cache@v6
         id: luu-dem
         with:
           path: ~/.cache/ms-playwright
-          key: playwright-${{ runner.os }}-${{ steps.pw.outputs.phien-ban }}-chromium
+          key: playwright-${{ runner.os }}-${{ steps.pw.outputs.he }}-${{ steps.pw.outputs.phien-ban }}-chromium
       - if: steps.luu-dem.outputs.cache-hit != 'true'
         run: npx playwright install chromium
       - name: Thư viện hệ thống cho Chromium (khi cần)

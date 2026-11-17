@@ -41,13 +41,16 @@ runs:
     - if: inputs.phan == 'npm-test'
       run: npm test
       shell: bash
-    # trình duyệt của Playwright (Lighthouse và chụp ảnh dùng Chromium): lưu đệm theo phiên bản Playwright trong
-    # package-lock.json và theo trình duyệt (đỡ khoảng 2 phút mỗi lần); thư viện hệ thống thì cài mỗi lần, ở bước riêng
+    # trình duyệt của Playwright (Lighthouse và chụp ảnh dùng Chromium): lưu đệm theo bản Ubuntu, phiên bản Playwright trong
+    # package-lock.json và trình duyệt (đỡ khoảng 2 phút mỗi lần); thư viện hệ thống thì cài mỗi lần, ở bước riêng. Bản
+    # Ubuntu phải có trong khóa: Playwright tải bản WebKit riêng cho từng bản Ubuntu; 17/11/2026 máy 26.04 lấy lại đệm của
+    # máy 24.04, bỏ qua bước cài, WebKit không mở được (thiếu libicudata.so.74)
     - name: Phiên bản Playwright
       if: inputs.phan != 'npm-test'
       id: pw
       run: |
         echo "phien-ban=$(node -p "require('./node_modules/playwright/package.json').version")" >> "$GITHUB_OUTPUT"
+        echo "he=$(. /etc/os-release && echo "$ID$VERSION_ID")" >> "$GITHUB_OUTPUT"
         echo "trinh-duyet=${{ (inputs.phan == 'lighthouse' || inputs.phan == 'anh-chup') && 'chromium' || inputs.phan }}" >> "$GITHUB_OUTPUT"
       shell: bash
     - uses: actions/cache@v6
@@ -55,7 +58,7 @@ runs:
       id: luu-dem
       with:
         path: ~/.cache/ms-playwright
-        key: playwright-${{ runner.os }}-${{ steps.pw.outputs.phien-ban }}-${{ steps.pw.outputs.trinh-duyet }}
+        key: playwright-${{ runner.os }}-${{ steps.pw.outputs.he }}-${{ steps.pw.outputs.phien-ban }}-${{ steps.pw.outputs.trinh-duyet }}
     - name: Cài ${{ steps.pw.outputs.trinh-duyet }}
       if: inputs.phan != 'npm-test' && steps.luu-dem.outputs.cache-hit != 'true'
       run: npx playwright install ${{ steps.pw.outputs.trinh-duyet }}

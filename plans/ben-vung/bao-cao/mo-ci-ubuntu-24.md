@@ -7,7 +7,7 @@ Nhánh `mo/ci-ubuntu-24` từ `main` (`9512e93`), Claude Opus 5.5, 17/11/2026.
 Lần deploy `44107926414` (push lên `main`, 17/11/2026) hỏng, site giữ bản trước.
 
 - Nhãn `ubuntu-latest` của GitHub đã sang Ubuntu 26.04 (máy chạy ghi "Image: ubuntu-26.04", ảnh `ubuntu26/20261111`; GitHub báo trước từ 19/10/2026, `actions/runner-images#14748`).
-- WebKit của Playwright 1.64.1 (`webkit-2370`, MiniBrowser WPE) dựng cho Ubuntu 24.04, cần `libicudata.so.74` (ICU 74). Ubuntu 26.04 không có thư viện này, nên WebKit không mở được: "error while loading shared libraries: libicudata.so.74", 70 phép thử hỏng.
+- WebKit trên máy (`webkit-2370`, MiniBrowser WPE) là bản dựng cho Ubuntu 24.04, cần `libicudata.so.74` (ICU 74). Ubuntu 26.04 không có thư viện này, nên WebKit không mở được: "error while loading shared libraries: libicudata.so.74", 70 phép thử hỏng. Bản ấy đến từ đệm: xem mục Review.
 - Job Firefox bị hủy do `fail-fast: true` của ma trận `ba-trinh-duyet`, không phải do lỗi của Firefox.
 - Job `kiem` (build, `npm test`, Chromium) đạt.
 
@@ -29,5 +29,15 @@ Không đổi:
 
 ## Còn mở
 
-- Bỏ ghim khi nâng Playwright lên bản hỗ trợ Ubuntu 26.04 (theo `plans/lam-lai/cong-nghe.md` mục 3), rồi chạy `test.yml` với `du` để thử cả ba trình duyệt.
+- Bỏ ghim: một nhánh đổi `runs-on` về `ubuntu-latest` trong `test.yml`, chạy tay với `du`; đạt thì bỏ ghim ở mọi workflow (xem mục Review).
 - GitHub giữ ảnh `ubuntu-24.04` thêm một thời gian rồi mới bỏ; chưa có ngày cụ thể.
+
+## Review
+
+Claude Opus 5.5, 17/11/2026, commit sau `7cd81f8`.
+
+- Chẩn đoán ban đầu chưa đúng. Playwright 1.64.1 hỗ trợ chính thức Ubuntu 26.04 (`hostPlatform` `ubuntu26.04-x64`, `isOfficiallySupportedPlatform`, `node_modules/playwright-core/lib/coreBundle.js`) và có bản WebKit riêng `webkit-ubuntu-26.04.zip`. Nhật ký job webkit của lần `44107926414`: "Cache hit for: playwright-Linux-1.64.1-webkit", bước "Cài webkit" bị bỏ qua. Đệm này lưu từ máy 24.04 (khóa chỉ có `runner.os`, là `Linux` ở cả hai), nên máy 26.04 chạy bản WebKit của 24.04. Chromium (Chrome for Testing) và Firefox dùng cùng một bản cho 24.04 và 26.04, nên chỉ WebKit hỏng.
+- Đã sửa: khóa đệm trình duyệt có thêm bản Ubuntu lấy từ `/etc/os-release` (`playwright-Linux-ubuntu24.04-1.64.1-webkit`), ở `.github/actions/kiem-thu/action.yml` và job `kiem` của `deploy.yml`. Lần chạy đầu sau khi gộp không trúng đệm, tải lại trình duyệt (khoảng 2 phút mỗi job).
+- Giữ ghim `ubuntu-24.04`: ảnh 26.04 chưa thử với các bước apt, Lighthouse. Chú thích trong workflow, dòng ở `AGENTS.md` và mục "Còn mở" sửa theo: bỏ ghim sau khi `test.yml` chạy `du` đạt trên `ubuntu-latest`, không phải đợi nâng Playwright.
+- Mục "Không đổi" về đệm phía trên đã cũ: không cần xóa đệm `playwright-Linux-1.64.1-*` bằng tay, khóa mới không trùng khóa cũ.
+- Kiểm: YAML của bốn workflow và `action.yml` đọc được bằng gói `yaml`; mọi job có `runs-on: ubuntu-24.04`; `actions/deploy-pages`, `upload-pages-artifact`, `setup-python` 3.12 có trên 24.04.
