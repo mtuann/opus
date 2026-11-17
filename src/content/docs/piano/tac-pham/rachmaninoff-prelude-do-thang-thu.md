@@ -19,7 +19,7 @@ Ba nốt quãng tám rất to, La – Sol♯ – Đô♯, rồi những hợp â
 
 Sergei Rachmaninoff (1873–1943) là nghệ sĩ piano và nhà soạn nhạc người Nga. Đọc thêm về ông ở [Nhà soạn nhạc cho piano](/opus/piano/nha-soan-nhac/#sergei-rachmaninoff-18731943).
 
-Prelude Đô♯ thứ là bài thứ hai trong *Morceaux de fantaisie* (Năm tiểu phẩm fantaisie), Op. 3, viết năm 1892 và đề tặng nhà soạn nhạc Anton Arensky. Rachmaninoff chơi bài lần đầu ở Moskva cùng năm; nhà Gutheil ở Moskva in năm 1893. Nhờ các buổi biểu diễn của Alexander Siloti, anh họ của Rachmaninoff, bài sớm nổi tiếng ở nước ngoài, tới mức ở Mỹ, hầu như buổi hòa nhạc nào của ông cũng có người la to đòi "Đô♯ thứ!" ở cuối. Bài còn được gọi là "Chuông Moskva".
+Prelude Đô♯ thứ là bài thứ hai trong *Morceaux de fantaisie* (Năm tiểu phẩm fantaisie), Op. 3, viết năm 1892 và đề tặng nhà soạn nhạc Anton Arensky. Rachmaninoff chơi bài lần đầu ở Moskva cùng năm; nhà Gutheil ở Moskva in bài khoảng năm 1893 (bản in không ghi năm). Nhờ các buổi biểu diễn của Alexander Siloti, anh họ của Rachmaninoff, bài sớm nổi tiếng ở nước ngoài, tới mức ở Mỹ, hầu như buổi hòa nhạc nào của ông cũng có người la to đòi "Đô♯ thứ!" ở cuối. Bài còn được gọi là "Chuông Moskva".
 
 Về sau Rachmaninoff viết thêm hai tập prelude: mười bài Op. 23 (1901–1903) và mười ba bài Op. 32 (1910). Cùng bài Đô♯ thứ này, 24 prelude đi qua đủ 24 giọng trưởng và thứ. Xem thêm [Prelude độc lập](/opus/piano/the-loai/#prelude-oc-lap).
 
@@ -32,7 +32,7 @@ Bản thu gợi ý do chính Rachmaninoff chơi, thu năm 1919 cho hãng Edison,
 3. Khi chủ đề trở lại (*Tempo primo*), nó khác lần đầu thế nào về âm lượng và độ dày?
 4. Rachmaninoff có giữ đúng một tốc độ suốt đoạn *Lento* không?
 
-::khoi-nghe{moc="1 9 40 105 133 140 146 193 220"}
+::khoi-nghe{moc="1 9 39 105 133 140 146 193 220"}
 
 ## Theo dõi khi nghe
 
@@ -65,11 +65,11 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 
 ### Bốn ô đầu trên khuông nhạc
 
-Ô 1–4, chép tay từ bản khắc Gutheil (Moskva, 1893) và đối chiếu với bản Mutopia. Bản in chỉ ghi *Lento*, không có số máy đếm nhịp; tốc độ phát ở đây chỉ là gợi ý.
+Ô 1–4, chép tay từ bản khắc đầu tiên của nhà Gutheil (Moskva, khoảng 1893) và đối chiếu với bản Mutopia. Bản in chỉ ghi *Lento*, không có số máy đếm nhịp; tốc độ phát ở đây chỉ là gợi ý.
 
 ```abc
 X:1
-T:Ô 1–4 (bản Gutheil 1893)
+T:Ô 1–4 (bản Gutheil)
 M:4/4
 L:1/8
 Q:1/4=40
@@ -85,11 +85,11 @@ K:C#m
 
 ### Hai ô đầu đoạn Agitato
 
-Ô 15–16, cùng nguồn. Tốc độ phát chỉ là gợi ý.
+Ô 15–16, cùng nguồn. Phần trên của trang này trong bản quét bị hỏng, nên tay phải và chữ *Agitato* được đối chiếu thêm với bản Bosworth (1896) và bản Mutopia. Tốc độ phát chỉ là gợi ý.
 
 ```abc
 X:2
-T:Ô 15–16, Agitato (bản Gutheil 1893)
+T:Ô 15–16, Agitato (bản Gutheil)
 M:4/4
 L:1/8
 Q:1/4=120
@@ -111,7 +111,7 @@ Nốt đầu của mỗi chùm ba ở tay phải cũng là một nốt đen củ
 | Ba lớp ở đoạn A | Hợp âm giữa dễ to hơn bè trầm | Tập riêng từng lớp; hợp âm giữa nhẹ nhất. Bài tập 2 |
 | Chùm ba ở đoạn *Agitato* | Giai điệu nằm ở nốt đầu mỗi chùm ba, dễ chìm | Chơi riêng giai điệu bằng ngón 5, rồi thêm hai nốt dưới thật nhẹ |
 | Hợp âm luân phiên hai tay (từ ô 36) | Nhanh, rất to, hai tay phải nối nhau như một | Tập chậm, từng ô; đếm chùm ba; mỗi tay rơi gọn vào hợp âm. Bài tập 3 |
-| Đọc bốn khuông (ô 46–55) | Mỗi tay đọc hai khuông, nhiều dấu hóa | Đọc riêng từng tay, gọi tên hợp âm; mỗi tay: khuông trên là hợp âm móc đơn, khuông dưới là hợp âm trầm |
+| Đọc bốn khuông (từ ô 46 tới hết bài) | Mỗi tay đọc hai khuông, nhiều dấu hóa | Đọc riêng từng tay, gọi tên hợp âm; ở ô 46–55, mỗi tay: khuông trên là hợp âm móc đơn, khuông dưới là hợp âm trầm |
 | Bàn đạp | Hợp âm dày, đổi hòa âm theo phách | Đổi bàn đạp theo nốt trầm; ở coda, đổi theo từng nốt Đô♯ trầm |
 
 ## Bài tập chuẩn bị
@@ -207,7 +207,7 @@ Bản in không ghi bàn đạp. Dùng bàn đạp theo hòa âm, đổi theo n�
 - Hợp âm giữa ở đoạn A to hơn bè trầm, ba nốt chủ đề bị chìm.
 - Đoạn *Agitato* quá nhanh từ đầu, không còn chỗ cho cao trào.
 - Giai điệu trong chùm ba không nổi.
-- Đọc sai dấu hóa ở bốn khuông (ô 46–55).
+- Đọc sai dấu hóa ở bốn khuông (từ ô 46).
 - Bàn đạp giữ qua chỗ đổi hòa âm, làm nhòe hợp âm.
 - Hợp âm cuối không đủ nhỏ, hay nhả trước khi hết dấu ngân.
 
@@ -247,8 +247,8 @@ Bản in không ghi bàn đạp. Dùng bàn đạp theo hòa âm, đổi theo n�
 
 ## Nguồn
 
-- Bản nhạc: Sergei Rachmaninoff, *Prélude*, Op. 3 số 2, bản khắc A. Gutheil, Moskva, [1893], số bản in A. 6516 G; Boosey & Hawkes in lại năm 1992 trong *Preludes for Piano*; bản quét trên [IMSLP](https://imslp.org/wiki/Morceaux_de_fantaisie,_Op.3_(Rachmaninoff,_Sergei)).
-- Bản đối chiếu: Mutopia Project, [Prelude in C# minor, Op. 3 No. 2](https://www.mutopiaproject.org/ftp/RachmaninoffS/O3/rach-prelude-op3-no2/rach-prelude-op3-no2.ly) (Petro Kostandy, CC BY-SA 4.0; nguồn Bosworth 1896 và Universal Edition 1910).
+- Bản nhạc: Sergei Rachmaninoff, *Prélude*, Op. 3 số 2, bản khắc đầu tiên của A. Gutheil, Moskva, [khoảng 1893], số bản in A. 6516 G; bản quét một lần in sau của bản khắc này (thư viện Sibley) trên [IMSLP](https://imslp.org/wiki/Morceaux_de_fantaisie,_Op.3_(Rachmaninoff,_Sergei)).
+- Bản đối chiếu: *Rachmaninoff-Album*, Bosworth & Co., Leipzig, 1896 (John A. Preston biên tập), bản quét trên [IMSLP](https://imslp.org/wiki/Morceaux_de_fantaisie,_Op.3_(Rachmaninoff,_Sergei)); Mutopia Project, [Prelude in C# minor, Op. 3 No. 2](https://www.mutopiaproject.org/ftp/RachmaninoffS/O3/rach-prelude-op3-no2/rach-prelude-op3-no2.ly) (Petro Kostandy, CC BY-SA 4.0; nguồn Bosworth 1896 và Universal Edition 1910).
 - IMSLP, [Morceaux de fantaisie, Op.3 (Rachmaninoff, Sergei)](https://imslp.org/wiki/Morceaux_de_fantaisie,_Op.3_(Rachmaninoff,_Sergei)) (năm viết, buổi chơi đầu, năm in, đề tặng, tên "The Bells of Moscow"); [10 Preludes, Op.23](https://imslp.org/wiki/10_Preludes,_Op.23_(Rachmaninoff,_Sergei)) và [13 Preludes, Op.32](https://imslp.org/wiki/13_Preludes,_Op.32_(Rachmaninoff,_Sergei)) (năm viết, 24 giọng).
 - G. Henle Verlag, [Prélude c sharp minor op. 3 no. 2, HN 1211](https://www.henle.de/Prelude-c-sharp-minor-op.-3-no.-2/HN-1211) (Siloti, tiếng la "C sharp minor!", mức độ khó).
 - ABRSM, [Piano Practical Grades 2025 & 2026](https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26%202026%20Prac%20syllabus%2020240524_access.pdf), cùng hai kỳ [2021 & 2022](https://www.abrsm.org/sites/default/files/2023-09/piano-2021-2022-syllabus-rev-sep-2020-final.pdf) và [2023 & 2024](https://www.abrsm.org/sites/default/files/2023-10/Piano%202023%20%26%202024%20Prac%20syllabus%2020230807.pdf): Op. 3 số 2 không có trong danh sách.
