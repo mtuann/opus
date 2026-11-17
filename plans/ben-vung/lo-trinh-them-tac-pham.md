@@ -13,7 +13,7 @@ Hiện trạng khi chốt (bài học theo chặng 2–7): 7, 5, 8, 5, 5, 4 (34 
 | 3 | 2 | Bartók, *Romanian Folk Dances* Sz. 56 | 5 |
 | 4 | 3 | Chaminade, *Pierrette* Op. 41 | 6 |
 | 5 | 3 | Clara Schumann, Scherzo số 2 Op. 14 | 6 |
-| 6 | 3 | Fanny Hensel, *Mélodie* Op. 4 số 2 nếu đã có bản thu được nhận; nếu chưa: Chaminade, *Automne* Op. 35 số 2 (chặng 7) | 6 hay 7 |
+| 6 | 3 | Chaminade, *Automne* Op. 35 số 2 (chốt 16/11/2026: không có bản thu Hensel được nhận) | 7 |
 | 7 | 1 | Debussy, Arabesque số 1 | 6 |
 | 8 | 1 | Rachmaninoff, Prelude Đô♯ thứ Op. 3 số 2 | 7 |
 | 9 | 1 | Mozart, *Alla turca* (K. 331, chương 3), cặp với `nghe-nhac/mozart-k331` | 6 |
@@ -22,7 +22,7 @@ Hiện trạng khi chốt (bài học theo chặng 2–7): 7, 5, 8, 5, 5, 4 (34 
 
 Hướng dẫn nghe xen giữa các lượt, mỗi lượt bài học xong có thể làm một hướng dẫn nghe (mục 5).
 
-Sau lượt 6 chặng 6 có 7–8 bài, sau lượt 9 có 9–10 bài: lượt 7–9 chỉ làm khi lượt 1–6 đã khóa. Nếu chặng 6 quá đông thì bỏ bớt một bài đợt 1 (gợi ý giữ Arabesque vì Ấn tượng còn mỏng, giữ Rachmaninoff vì lấp chặng 7).
+Sau lượt 6 chặng 6 có 7 bài, chặng 7 có 5; sau lượt 9 chặng 6 có 9 bài: lượt 7–9 chỉ làm khi lượt 1–6 đã khóa. Nếu chặng 6 quá đông thì bỏ bớt một bài đợt 1 (gợi ý giữ Arabesque vì Ấn tượng còn mỏng, giữ Rachmaninoff vì lấp chặng 7).
 
 ## 2. Quy tắc chung (mọi lượt)
 
@@ -32,7 +32,7 @@ Sau lượt 6 chặng 6 có 7–8 bài, sau lượt 9 có 9–10 bài: lượt 7
 - Bản quyền (tính đến 2026): tác giả mất từ 1975 trở về trước (Việt Nam) và ấn bản dùng cho trích đoạn xuất bản từ 1930 trở về trước (Mỹ). Bản thu: PD, CC0, CC BY, CC BY-SA 2.0–4.0, mẫu `{{Attribution}}` của Commons (`tools/audio/licenses.py`); phải dùng tự do cả ở Mỹ (bản thu 1926–1956 "PD ở EU" thì không). Không nhận NC, ND, nhạc dựng từ MIDI hay synthesizer.
 - Cấp độ: đề cương ABRSM, Trinity (đúng kỳ), trang Henle của đúng tác phẩm; không có thì ước lượng và ghi "(ước lượng)" như các bài đã có. Chặng suy từ Grade: chặng 2 Grade 1–2, 3 Grade 3, 4 Grade 4–5, 5 Grade 6, 6 Grade 7–8, 7 sau Grade 8.
 - Trích đoạn thật đối chiếu từng nốt với ấn bản hết bảo hộ (`chuan-kiem-dinh.md` mục 4); bài nào không có bản số mở thì chép tay từ bản quét và ghi trong hồ sơ.
-- Bản thu IMSLP: chỉ dẫn link (khối nghe không phát, mốc tính theo file ở link). Cần file gốc để đo độ dài và căn mốc: **chủ repo tải tay** (không vượt cổng tải IMSLP) vào `../opus-zero/_imslp/` hay thư mục ở `OPUS_IMSLP`; agent ghi danh sách file cần tải vào báo cáo trước khi bắt đầu lượt.
+- Bản thu IMSLP: chỉ dẫn link (khối nghe không phát, mốc tính theo file ở link). Cần file gốc để đo độ dài và căn mốc: **chủ repo tải tay** (không vượt cổng tải IMSLP) vào `../opus-zero/_imslp/` hay thư mục ở `OPUS_IMSLP`; agent ghi danh sách file cần tải vào báo cáo trước khi bắt đầu lượt. File cho lượt 1–9 và hướng dẫn nghe 1–3 đã tải đủ ngày 16/11/2026: mục 9.
 - Mỗi lượt xong khi: `npm run build:xem`, `npm test` (gồm `tests/tac-pham.test.mjs`, `tests/pham-vi.test.mjs`) đạt; trang và bản ghi đã khóa; `npm run build` đạt; `OPUS_TRINH_DUYET=chromium npm run test:trinh-duyet` đạt trên trang mới; báo cáo `plans/ben-vung/bao-cao/them-<slug>.md` (nguồn, chỗ chưa chắc, file chủ repo phải tải, việc ngoài phạm vi); commit; gộp `main` khi chủ repo đồng ý. Không push.
 - Sau mỗi đợt (nhánh `mo/`, có mở khóa): cập nhật `piano/tac-pham-theo-cap` (bài có bản ghi thì chặng phải khớp, `tests/tac-pham-theo-cap.test.mjs`), dòng tác phẩm ở `piano/nha-soan-nhac` nếu có ghi Grade lệch, danh sách "Thứ tự dự định" ở trang `ke-hoach`, và mục 6 của `ke-hoach-mo-rong.md`.
 
@@ -104,13 +104,13 @@ Liên hệ trang `lich-su/nu-nha-soan-nhac` (đã khóa): thêm link từ trang 
 | Chủ repo tải | `PMLP90408-FSarro_ClaraSchumann_Scherzo_Op.14.mp3` |
 | Ghi chú | Trước khi viết, tìm lại bản thu mở cho Op. 15 (ABRSM Grade 7–8, 2023–2028); có thì đổi sang Op. 15 số 4 hay số 1 (bằng chứng cấp mạnh hơn) |
 
-### Lượt 6. Fanny Hensel, *Mélodie* Op. 4 số 2, hay thay thế
+### Lượt 6. Chaminade, *Automne* Op. 35 số 2
 
 | Mục | Nội dung |
 |---|---|
-| Điều kiện | Tìm lại bản thu được nhận (Commons, IMSLP, Musopen: chủ repo tra Musopen bằng trình duyệt). Có thì làm Hensel; không thì làm thay thế |
-| Hensel | `hensel-melodie-op4-2`, tác giả `fanny-mendelssohn` (đã có, `cach_viet_khac`: "Fanny Mendelssohn Hensel"). Chặng 6: ABRSM Grade 7 danh sách B (2021–2028), Trinity Grade 7. Ấn bản Schlesinger, Berlin, 1847, S. 3294. Bản số WIMA (CC BY-NC-SA) chỉ dùng trên máy để đối chiếu, căn mốc |
-| Thay thế | Chaminade, *Automne*, *Études de concert* Op. 35 số 2: `chaminade-automne`, **chặng 7** (pianosyllabus mức diploma); Enoch, Paris, [1886]; bản thu Commons eldüendesüarez, CC BY-SA 4.0, 385,6 s, **phát được**. Lấp chặng 7 nhưng thành hai bài Chaminade. Thay thế khác: Backer Grøndahl, *Klage* Op. 36 số 1 (Commons, Tjako van Schie, CC BY-SA 4.0, 81 s, phát được; cần bản ghi tác giả mới `backer-grondahl`; cấp chưa có bằng chứng) |
+| Đã chốt | 16/11/2026: không có bản thu được nhận cho Hensel, *Mélodie* Op. 4 số 2 (Commons, trang IMSLP Op. 4 không có; chủ repo tra Musopen bằng trình duyệt: không có). Làm thay thế *Automne* |
+| Hensel (không làm) | `hensel-melodie-op4-2`, tác giả `fanny-mendelssohn` (đã có, `cach_viet_khac`: "Fanny Mendelssohn Hensel"). Chặng 6: ABRSM Grade 7 danh sách B (2021–2028), Trinity Grade 7. Ấn bản Schlesinger, Berlin, 1847, S. 3294. Bản số WIMA (CC BY-NC-SA) chỉ dùng trên máy để đối chiếu, căn mốc |
+| Làm: thay thế | Chaminade, *Automne*, *Études de concert* Op. 35 số 2: `chaminade-automne`, **chặng 7** (pianosyllabus mức diploma); Enoch, Paris, [1886]; bản thu Commons eldüendesüarez, CC BY-SA 4.0, 385,6 s, **phát được**. Lấp chặng 7 nhưng thành hai bài Chaminade. Bản nhạc đã tải: IMSLP #768244 (Enoch, trọn Op. 35). *Klage* của Backer Grøndahl chuyển sang hướng dẫn nghe (mục 7) |
 
 ## 5. Đợt 1: những bài người học hay hỏi (lượt 7–9)
 
@@ -142,8 +142,8 @@ Theo `ke-hoach-mo-rong.md` mục 6.2, ưu tiên mảng mỏng và bài đã có 
 | Thứ tự | Hướng dẫn nghe | Ghi chú |
 |---|---|---|
 | 1 | Debussy, *Golliwogg's Cakewalk* (Ấn tượng) | Commons eldüendesüarez CC BY 4.0, phát được; Durand 1908 |
-| 2 | Chaminade, *Automne* hay Backer Grøndahl, *Klage* (nhà soạn nhạc nữ) | Không trùng bài đã làm ở lượt 6 |
-| 3 | Bartók, Sonatina Sz. 55 (Thế kỷ 20) | Commons La Pianista, CC BY-SA 3.0 (`commons.py` báo nhầm PD: đọc trang mô tả); trích đoạn phải theo bản in 1919 (số 3929), bản quét IMSLP là bản sửa |
+| 2 | Backer Grøndahl, *Klage* Op. 36 số 1 (nhà soạn nhạc nữ) | *Automne* đã làm ở lượt 6. Commons, Tjako van Schie, CC BY-SA 4.0, 81 s, phát được; cần bản ghi tác giả mới `backer-grondahl`. Bản nhạc: Brødrene Hals [1895], IMSLP #82783 (không dùng #11480: bản "sửa" 1945) |
+| 3 | Bartók, Sonatina Sz. 55 (Thế kỷ 20) | Commons La Pianista, CC BY-SA 3.0 (`commons.py` báo nhầm PD: đọc trang mô tả); trích đoạn phải theo bản in 1919. Chưa thống nhất: khảo sát ghi số bản in 3929 và bản quét IMSLP là bản sửa, nhưng IMSLP #893630 (đăng 2024) ghi "First edition", Rózsavölgyi 1919, số bản in 3953: kiểm trên bản quét trước khi viết |
 | 4 | Mở thêm chương: *Ánh trăng* đủ ba chương; chương 3 cho `haydn-94`, `mozart-40`, `mozart-eine-kleine` | Sửa trang đã khóa: nhánh `mo/`, có mở khóa |
 
 Hướng dẫn nghe dùng `node tools/them-tac-pham.mjs <slug> --loai nghe …`, cùng quy trình và điều kiện xong như bài học.
@@ -151,3 +151,24 @@ Hướng dẫn nghe dùng `node tools/them-tac-pham.mjs <slug> --loai nghe …`,
 ## 8. Lời giao mẫu
 
 > Bạn làm **lượt N** của `plans/ben-vung/lo-trinh-them-tac-pham.md` trong repo opus: thêm **<tên>** (slug `<slug>`). Đọc `AGENTS.md`, `plans/ben-vung/them-tac-pham.md`, `plans/ben-vung/chuan-kiem-dinh.md`, mục 2 và mục của lượt N trong file lộ trình, và mục của bài trong `../opus-zero/plans/v16/khao-sat-g6.md`. Trước khi viết: đọc lại giấy phép bản thu và đề cương thi; liệt kê file IMSLP chủ repo cần tải tay. Tạo nhánh `them/<slug>` từ `main`, chỉ chạm file trong bảng mục 4 của `them-tac-pham.md`. Lượt 2 kiểm định giao cho một agent khác (không đưa nguồn, kết luận của lượt 1). Khi xong: các điều kiện ở mục 2 đạt, báo cáo `plans/ben-vung/bao-cao/them-<slug>.md`, commit. Không push, không gộp `main` khi chủ repo chưa đồng ý.
+
+## 9. File đã tải (chủ repo, 16/11/2026)
+
+Trong `../opus-zero/_imslp/`, tên file có tiền tố `IMSLP<số>-`. Link tải: `https://imslp.org/wiki/Special:ImagefromIndex/<số>`.
+
+| Lượt | Bản thu | Bản nhạc |
+|---|---|---|
+| 1 | #469932 (số 1), #469925 (số 6) | #893790 (Rozsnyai 1909) |
+| 2 | #517116 (số 1), #517119 (số 4), #517122 (số 7) | #269926 (Schott [1929]) |
+| 3 | #991622 (Breemer) | #918136 (UE; còn phải kiểm là bản in trước 1934) |
+| 4 | #848447 (Kolodin; đuôi `.mp3` nhưng là m4a, ffmpeg đọc được) | #07257 (M. Bernard) |
+| 5 | #292506 (Kolodin / Felipe Sarro) | #611197 (Breitkopf 1879; không dùng #41477: W. Müller khoảng 1965) |
+| 6 | Commons, không cần tải | #768244 (Enoch [1886]) |
+| 7 | Commons; dự phòng #809126 (Kolodin) | #255354 (Durand 1904) |
+| 8 | Commons; dự phòng #928449 (German Kitkin, flac) | #868299 (bản khắc Gutheil 1893, Boosey & Hawkes in lại 1992) |
+| 9 | Commons; dự phòng #815841 (Kolodin, có từ trước) | #292670 (Artaria 1784) |
+| Nghe 1 | Commons | #252526 (*Children's Corner*, Durand 1908) |
+| Nghe 2 | Commons | #82783 (Op. 36 tập 1, Brødrene Hals [1895]) |
+| Nghe 3 | Commons | #893630 (Rózsavölgyi 1919) |
+
+Còn chưa tải: lượt 10–11 (chưa khảo sát).
