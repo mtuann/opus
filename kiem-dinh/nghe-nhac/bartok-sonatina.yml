@@ -8,7 +8,7 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: Claude Opus 5.5 (lượt 1, them/bartok-sonatina, 17/11/2026)
-      luot_2: null
+      luot_2: Claude Opus 5.5 (agent riêng, độc lập với lượt 1, 17/11/2026; 42 câu, 40 đúng, 2 sai)
       review: null
       kiem_mau: null
 ghi_chu: 'Hướng dẫn nghe mới (lộ trình thêm tác phẩm, mục 7, hướng dẫn nghe số 3). Ấn bản: bản quét IMSLP #893630 (9 trang PDF: bìa, trang trắng, nhạc ở số trang in 3–9) là bản SỬA, không phải bản in đầu, dù IMSLP ghi "First edition", 1919: chân mọi trang ghi "R. és Tsa 3953" (lời bình Henle: bản in đầu 1919 số 3929, bản sửa không ghi năm, đầu thập niên 1930, số mới 3953, dùng lại bản khắc của bản in đầu); có thời lượng "Aufführungsdauer" cuối mỗi chương (1′30″, 32″, 1′45″) và chú thích ký hiệu bàn đạp ở trang 3, hai điều Henle nói là thêm ở bản sửa; chương 1 ghi Allegretto ♩ = 86 (Henle: bản 1919 ghi Molto moderato ♩ = 74). Dòng "Copyright 1919" ở bìa và trang 3 là năm bản quyền gốc, giữ nguyên khi in lại. IMSLP không có bản quét nào của bản in 3929 (wikitext 17/11/2026: các bản khác là Dover 1982, EMB 1952, Muzgiz 1933, Boosey & Hawkes 1950, đều in lại hay sửa). Vì vậy trang KHÔNG có trích đoạn (khối abc): bản sửa in sau 1930 nên không dùng cho trích đoạn theo quy tắc bản quyền của lộ trình (mục 2), và không có bản số mở. Mô tả cấu trúc (số ô, tay nào mang giai điệu, chữ tốc độ, hóa biểu, nhịp) đọc trên bản quét 3953 ở 100–300 dpi; đó là sự kiện về tác phẩm, không chép nốt; chữ tốc độ trên trang ghi rõ là theo bản sửa. Như hai bài học Bartók đã có (bartok-for-children theo Rozsnyai 1909, bartok-romanian-folk-dances theo UE 1918 đã kiểm là bản in trước 1934): trích đoạn chỉ từ bản in đầu; ở đây không có bản in đầu nên bỏ trích đoạn. Tác giả mất 1945, hết bảo hộ ở Việt Nam. Mốc ::khoi-nghe đo trên file gốc Commons (Bartok_-_Sonatina.ogg, 220,6 s) bằng librosa (venv-audio): độ to RMS (khoảng lặng 0–2,4; 27,9–29,2; 77,6–85,3 đuôi hợp âm cuối chương 1; 115,1–119,0 giữa chương 2 và 3; 147,6–148,7; 189,3–191,3), chroma_cqt từng giây và khởi âm (onset_detect) có chroma: dòng 1 nốt đầu 2,55 s (A D E); dòng 2 Allegro 29,33 s (E); dòng 3 Tempo I 51,06 s (D A); dòng 4 chương 2 85,40 s; dòng 5 ô 9 96,43 s (E A C♯: hợp âm Đô♯–Mi tay phải trên Mi tay trái); dòng 6 chương 3 119,19 s (D, tay trái một mình 119–122 s); dòng 7 Sostenuto 148,70 s (sau ô rallentando, D E); dòng 8 hai nốt cao La–Si từ 160,91 s (A B lặp tới 162 s); dòng 9 coda 191,19 s sau quãng lặng 189,3–191,3 (ô non rit. có dấu lặng). Mốc ghi bằng attach.py --ref, làm tròn xuống giây (148,70 → 148). Sơ đồ (hinh) chia theo các mốc ấy. Chữ do ::hinh-cau-truc dựng thuộc hồ sơ du-lieu/tac-pham/bartok-sonatina. Không tính là nhận định: tiêu đề mục, tiêu đề cột, mốc trong ::khoi-nghe (cách đo ghi ở đây), câu hỏi để nghe chủ động (không khẳng định gì), câu dẫn mặc định của bảng Theo dõi khi nghe.'
@@ -60,198 +60,297 @@ nhan_dinh:
     nguon: [ quet-3953, imslp-sz55, henle-bem ]
     ket_qua: dung
     ghi_chu: 'Năm sinh–mất khớp nha-soan-nhac.yml (đã khóa) và Commons "(1881-1945)". Bản quét tr. 3, 5, 6: "I. (DUDÁSOK)", "II. (MEDVETÁNC)", "III. (FINALE)". IMSLP: Sz.55, ba chương cùng tên. Henle: "Sonatina BB 69". Chữ "cho piano": bìa "pour le piano".'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Sonatina,_Sz.55_(Bart%C3%B3k,_B%C3%A9la)", "https://www.henle.de/en/Sonatina/HN-1401", "https://www.henle.de/media/44/c9/ff/1697725864/1401-1697725864-sync.pdf" ]
+    luot_2_ghi_chu: "IMSLP (wikitext qua API): Sz.55, ba chương Dudások, Medvetánc, Finale. Henle (trang sản phẩm, lời tựa): Sonatina BB 69; Bartók (1881–1945). Bản quét IMSLP #893630: (DUDÁSOK), (MEDVETÁNC), (FINALE)."
   - id: n2
     cau: 'Sáng tác năm 1915; in lần đầu năm 1919 (Rózsavölgyi, Budapest); bản sửa in đầu thập niên 1930.'
     loai: nam
     nguon: [ henle-bem, imslp-sz55, henle-hn1401 ]
     ket_qua: dung
     ghi_chu: 'Henle: bản thảo 1915; Rv1919 Erstausgabe Rózsavölgyi, copyright 1919; Rvrev "undatiert, Anfang der 1930er-Jahre". IMSLP: 1915. IMSLP ghi in lần đầu "1919 - Vienna: Universal Edition*, Simultaneously issued by Rózsavölgyi": khác Henle về nhà xuất bản; trang theo Henle (ấn bản phê bình, đọc bản in đầu ở Bartók-Archiv), chỉ nói Rózsavölgyi.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/0b/19/f2/1697725688/1401-1697725688-sync.pdf", "https://www.henle.de/media/44/c9/ff/1697725864/1401-1697725864-sync.pdf" ]
+    luot_2_ghi_chu: "Henle (Somfai), lời tựa: phác thảo xuân 1915 (có thể một phần từ 1914), Rózsavölgyi in lần đầu 1919; phần Comments: Rv1919 Budapest, Rózsavölgyi, copyright 1919; Rvrev 'Revised edition (no date, from the early 1930s)'. IMSLP ghi thêm UE Wien in đồng thời, không mâu thuẫn."
   - id: n3
     cau: 'Thời kỳ: Thế kỷ 20. Thể loại: ba chương ngắn cho piano, dựng trên giai điệu múa dân gian Romania. Độ dài khoảng 4 phút.'
     loai: so-lieu
     nguon: [ imslp-sz55, henle-hn1401, quet-3953 ]
     ket_qua: dung
     ghi_chu: 'IMSLP: "Piece Style=Early 20th century", "Average Duration=4 minutes", 3 movements. Henle: "melodies taken from Romanian instrumental folk music". Bản quét: thời lượng 1′30″ + 32″ + 1′45″ = 3′47″.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Sonatina,_Sz.55_(Bart%C3%B3k,_B%C3%A9la)", "https://www.henle.de/en/Sonatina/HN-1401" ]
+    luot_2_ghi_chu: "IMSLP: Piece Style 'Early 20th century', Average Duration 4 minutes. Henle: giai điệu lấy từ nhạc khí dân gian Romania. Thời lượng in trong bản quét: 1′30″ + 32″ + 1′45″ = 3′47″."
   - id: n4
     cau: 'Mỗi chương dựng trên một hay hai giai điệu múa lấy từ nhạc khí dân gian Romania mà Bartók đã sưu tầm; không có hình thức sonata với hai chủ đề và phần phát triển.'
     loai: cau-truc
     nguon: [ henle-hn1401, henle-bem, quet-3953 ]
     ket_qua: dung
     ghi_chu: 'Henle (trang sản phẩm): giai điệu từ nhạc khí dân gian Romania; Henle (lời bình): chú thích ghi nơi Bartók sưu tầm. Bản quét: chương 1 hai chú thích (tr. 3, 4), chương 2 một (tr. 5), chương 3 hai (tr. 6, 7); mỗi chương là giai điệu nhắc lại với bè đệm đổi, đoạn đầu trở lại (chương 1 Tempo I tr. 4; chương 3 coda tr. 9), không có phần phát triển chủ đề.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/en/Sonatina/HN-1401", "https://www.henle.de/media/44/c9/ff/1697725864/1401-1697725864-sync.pdf" ]
+    luot_2_ghi_chu: "Henle trang sản phẩm: 'different melodies taken from Romanian instrumental folk music'. Lời tựa: chương I và III ban đầu là chuỗi AB hai điệu múa, rồi thành ABA; chương II một điệu (bảng: 2, 1, 2 bản dân ca). Không có hình thức sonata (xem cả bản quét)."
   - id: n5
     cau: 'Theo Henle, tác phẩm hình thành dần trong năm 1915 từ một loạt bản chuyển soạn cho piano; tên "Sonatine" và tên các chương có lẽ chỉ được đặt khi chuẩn bị bản in.'
     loai: lich-su
     nguon: [ henle-hn1401, henle-bem ]
     ket_qua: dung
     ghi_chu: 'Trang sản phẩm: "in 1915, the piece slowly evolved out of a series of piano transcriptions". Lời bình, nguồn Rvproof: bản dùng để khắc (bản chép của Márta, Bartók sửa) "The title Sonatina and the titles of the movements were presumably introduced in this manuscript".'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/en/Sonatina/HN-1401", "https://www.henle.de/media/0b/19/f2/1697725688/1401-1697725688-sync.pdf" ]
+    luot_2_ghi_chu: "Trang sản phẩm Henle: 'in 1915, the piece slowly evolved out of a series of piano transcriptions of Romanian folk melodies'. Comments (nguồn Rvproof): 'The title \"Sonatina\" and the titles of the movements were presumably introduced in this manuscript' (bản khắc cho bản in)."
   - id: n6
     cau: 'Bản thảo năm 1915 của Bartók chứa cả Romanian Christmas Carols (Colinde), Romanian Folk Dances và Sonatina.'
     loai: lich-su
     nguon: [ henle-bem ]
     ket_qua: dung
     ghi_chu: 'Nguồn A: "Autograph draft complex of the three Romanian sets (1915): Romanian Christmas Carols (Colinde) BB 67, Romanian Folk Dances BB 68, and the Sonatina BB 69".'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/0b/19/f2/1697725688/1401-1697725688-sync.pdf" ]
+    luot_2_ghi_chu: "Henle Comments, nguồn A: 'Autograph draft complex of the three Romanian sets (1915): Romanian Christmas Carols (Colinde) BB 67, Romanian Folk Dances BB 68, and the Sonatina BB 69', Paul Sacher Stiftung."
   - id: n7
     cau: 'Mỗi điệu múa có một chú thích cuối trang bằng tiếng Hungary ghi tên điệu múa và nơi Bartók ghi lại nó.'
     loai: cau-truc
     nguon: [ quet-3953, henle-bem ]
     ket_qua: dung
     ghi_chu: 'Bản quét tr. 3 (**), 4, 5, 6, 7 (*): "… előadták …, … m." (tiếng Hungary). Henle: bản in đầu 1919 đã có các chú thích này ("footnotes concerning the names of the dances and the location where Bartók collected them").'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/893630", "https://www.henle.de/media/0b/19/f2/1697725688/1401-1697725688-sync.pdf" ]
+    luot_2_ghi_chu: "Bản quét (file IMSLP893630 trên máy) có 5 chú thích tiếng Hungary (dấu *), mỗi điệu múa một: tên điệu (riêng điệu 2 chương I chỉ ghi 'táncdallam' = giai điệu múa) và 'előadták …' (nơi ghi lại). Henle Rv1919: 'footnotes concerning the names of the dances and the location where Bartók collected them'."
   - id: n8
     cau: 'Chương 1, đoạn đầu: ardeleana, Cserbel (Hunyad).'
     loai: lich-su
     nguon: [ quet-3953 ]
     ket_qua: dung
     ghi_chu: 'Tr. 3 chú thích **: "„ardeleana" előadták Cserbelen, Hunyad m." (đọc 300 dpi). Tên làng bỏ đuôi chỉ nơi chốn -en của tiếng Hungary: Cserbel; "m." là megye (hạt).'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/893630" ]
+    luot_2_ghi_chu: "Bản quét tr. 3, chú thích **: '\"ardeleana\" előadták Cserbelen, Hunyad m.'"
   - id: n9
     cau: 'Chương 1, đoạn Allegro: một giai điệu múa (táncdallam), Vaskohmező (Câmp), Bihar; bản in dẫn Chansons populaires roumaines du département Bihar của Bartók (București, 1913), tr. 337, số 350.'
     loai: lich-su
     nguon: [ quet-3953, henle-bem ]
     ket_qua: dung
     ghi_chu: 'Tr. 4 chú thích *: "táncdallam; előadták Vaskohmezőn (Câmp), Bihar m. (Bartók: Chansons populaires roumaines du département Bihar; București, 1913; 337. lap, 350. szám.)". Năm in đậm trên bản quét trông như "1918" (chữ số 3 của bộ chữ này giống 8, như "3953" trông như "8958"); Henle ghi "Bucharest, 1913, p. 337, no. 350". táncdallam = tánc (múa) + dallam (giai điệu). Vaskohmezőn bỏ đuôi -n: Vaskohmező.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/893630", "https://www.henle.de/media/0b/19/f2/1697725688/1401-1697725688-sync.pdf" ]
+    luot_2_ghi_chu: "Bản quét tr. 4: 'táncdallam; előadták Vaskohmezőn (Câmp), Bihar m. (Bartók: Chansons populaires roumaines du département Bihar; București, 191?; 337. lap, 350. szám.)'. Chữ số cuối của năm in đậm trông như 8, nhưng cùng kiểu chữ ấy số bản in 3953 cũng trông như '8958' và '337' như '887', nên đọc là 3. Henle Comments xác nhận: 'Chansons populaires roumaines du département Bihar, Bucharest, 1913, p. 337, no. 350'. Câu chỉ nói năm in tập (1913), không nói năm sưu tầm."
   - id: n10
     cau: 'Chương 2: jocul ursului, Váncsfalva (Oncesti), Máramaros.'
     loai: lich-su
     nguon: [ quet-3953 ]
     ket_qua: dung
     ghi_chu: 'Tr. 5 chú thích *: "„jocul ursului" előadták Váncsfalván (Oncesti), Máramaros m.". Váncsfalván bỏ đuôi -n: Váncsfalva. Tên Romania viết như bản in (Oncesti, không dấu).'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/893630" ]
+    luot_2_ghi_chu: "Bản quét tr. 5: '\"jocul ursului\" előadták Váncsfalván (Oncesti), Máramaros m.'"
   - id: n11
     cau: 'Chương 3, đoạn đầu: jocul turcii: mărunţel, Felsőrépa (Râpa de sus), Marostorda.'
     loai: lich-su
     nguon: [ quet-3953 ]
     ket_qua: dung
     ghi_chu: 'Tr. 6 chú thích *: "„jocul turcii: mărunţel" előadták Felsőrépán (Râpa de sus) Marostorda m.". Felsőrépán bỏ đuôi -n: Felsőrépa.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/893630" ]
+    luot_2_ghi_chu: "Bản quét tr. 6: '\"jocul turcii; mărunţel\" előadták Felsőrépán (Râpa de sus) Marostorda m.'"
   - id: n12
     cau: 'Chương 3, đoạn Sostenuto: babaleuca, Keviszőllős (Seleuş), Torontál.'
     loai: lich-su
     nguon: [ quet-3953 ]
     ket_qua: dung
     ghi_chu: 'Tr. 7 chú thích * (đặt ở nốt đầu Sostenuto): "„babaleuca" előadták Keviszőllősön (Seleuş), Torontál m.". Keviszőllősön bỏ đuôi -ön: Keviszőllős.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/893630" ]
+    luot_2_ghi_chu: "Bản quét tr. 7: '\"babaleuca\" előadták Keviszőllősön (Seleuş), Torontál m.'"
   - id: n13
     cau: 'Dudások là "những người thổi kèn túi", Medvetánc là "điệu múa con gấu" (tiếng Hungary).'
     loai: ten
     nguon: [ abrsm-2025, imslp-sz55 ]
     ket_qua: dung
     ghi_chu: 'ABRSM: "Bagpipers: Allegretto (1st movt from Sonatina)". IMSLP: "Dudások (Bagpipes)", "Medvetánc (Bear Dance)". Chú thích chương 2 cũng ghi tên Romania "jocul ursului" (điệu múa của gấu).'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/44/c9/ff/1697725864/1401-1697725864-sync.pdf" ]
+    luot_2_ghi_chu: "Lời tựa Henle: 'Hungarian titles to the first two movements – Dudások (Bagpipers), Medvetánc (Bear Dance)'."
   - id: n14
     cau: 'Bản in đầu (Rózsavölgyi, 1919, số bản in 3929) ghi chương 1 là Molto moderato (♩ = 74); đầu thập niên 1930 Bartók sửa: chương 1 thành Allegretto (♩ = 86), tốc độ chương 1 và 3 tăng, mỗi chương có thêm thời lượng (1′30″, 32″, 1′45″).'
     loai: so-lieu
     nguon: [ henle-bem, quet-3953 ]
     ket_qua: dung
     ghi_chu: 'Henle: Rv1919 số 3929; RvBB "Überarbeitung der Tempoangaben und die Hinzufügung der Spieldauer"; bảng: Rv1919 Molto moderato ♩ = 74, Rvrev Allegretto ♩ = 86; "obwohl Bartók das Tempo in Rvrev für die Sätze I und III bereits etwas erhöht hatte" (74→86, 140→150, 152–140→154–146). Bản quét (bản sửa): tr. 3 "Allegretto (♩ = 86)", thời lượng tr. 5, 5, 9. Bảng của Henle trong PDF mất định dạng cột: thứ tự cột suy từ câu văn (Rvrev nhanh hơn Rv1919 ở chương 1, 3) và từ bản quét 3953 (khớp cột Rvrev).'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/0b/19/f2/1697725688/1401-1697725688-sync.pdf", "https://imslp.org/wiki/Special:ImagefromIndex/893630" ]
+    luot_2_ghi_chu: "Henle Comments: Rv1919 số bản in 'R. és Tsa 3929'; bảng tốc độ: I Molto moderato ♩=74 → Allegretto ♩=86 (đoạn Allegro 140 → 150), III Allegro vivace 152–140 → 154–146, II Moderato 80 không đổi; RvBB thêm thời lượng; Rvrev đầu thập niên 1930; 'in Rvrev Bartók slightly increased the tempo of movements I and III'. Bản quét ghi 1′30″, 32″, 1′45″."
   - id: n15
     cau: 'Bản quét trên IMSLP mang số 3953, tức bản sửa; đề cương ABRSM gọi chương 1 là "Bagpipers: Allegretto".'
     loai: ten
     nguon: [ quet-3953, henle-bem, abrsm-2025 ]
     ket_qua: dung
     ghi_chu: 'Chân tr. 3–9: "R. és Tsa 3953" (hay "Tsa 3953"). Henle: Rvrev số 3953. ABRSM 2025–2026 và 2027–2028: "Bagpipers: Allegretto".'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Sonatina,_Sz.55_(Bart%C3%B3k,_B%C3%A9la)", "https://www.henle.de/media/0b/19/f2/1697725688/1401-1697725688-sync.pdf", "https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26%202026%20Prac%20syllabus%2020240524_access.pdf" ]
+    luot_2_ghi_chu: "IMSLP wikitext file PMLP03799-Bartok-Sz55-Sonatina.pdf: 'R. és Tsa. 3953'; bản quét chân trang 'R. és Tsa 3953', có Allegretto ♩=86, thời lượng và chú thích ký hiệu bàn đạp = Rvrev theo Henle ('new plate number R. és Tsa 3953'). ABRSM 2025–2026 tr. 40: 'Bagpipers: Allegretto (1st movt from Sonatina)'."
   - id: n16
     cau: 'Năm 1927 Bartók tự chơi Sonatina vào một cuộn đàn tự động ở New York, còn nhanh hơn cả hai bản in.'
     loai: lich-su
     nguon: [ henle-bem ]
     ket_qua: dung
     ghi_chu: 'Henle: Welte-US-Notenrolle 7785, 23/12/1927, New York; "Die Tempi in Bartók/1927 sind schneller als in Rv1919 und Rvrev".'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/0b/19/f2/1697725688/1401-1697725688-sync.pdf", "https://www.henle.de/media/44/c9/ff/1697725864/1401-1697725864-sync.pdf" ]
+    luot_2_ghi_chu: "Henle: Welte-US Roll 7785, New York, 23/12/1927; 'The tempi of Bartók/1927 are faster than in Rv1919 and Rvrev'."
   - id: n17
     cau: 'Năm 1931 Bartók soạn lại tác phẩm cho dàn nhạc thành Transylvanian Dances (Sz. 96).'
     loai: lich-su
     nguon: [ imslp-sz55 ]
     ket_qua: dung
     ghi_chu: 'IMSLP: "Arranged by the composer for orchestra in 1931 as the Transylvanian Dances Sz.96".'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Transylvanian_Dances,_Sz.96_(Bart%C3%B3k,_B%C3%A9la)", "https://www.henle.de/media/44/c9/ff/1697725864/1401-1697725864-sync.pdf" ]
+    luot_2_ghi_chu: "IMSLP: Transylvanian Dances Sz.96, 1931, 'Composer's orchestration of the Sonatina Sz.55'. Henle lời tựa: Bartók phối cho dàn nhạc nhỏ năm 1931, Transylvanian Dances BB 102b."
   - id: n18
     cau: 'Chương 1, đoạn đầu: nhiều ô mở bằng quãng năm Rê–La nhấn ở bè trầm; tay phải có chùm ba và nốt láy; đoạn đầu kết ở ô 20 bằng hợp âm ngân dài (longa); Allegretto, 2/4.'
     loai: cau-truc
     nguon: [ quet-3953, henle-bem ]
     ket_qua: dung
     ghi_chu: 'Tr. 3: 2/4, hai dấu thăng; ô 1–4 tay trái quãng năm Rê–La có dấu nhấn ^, ô 5 trở đi phần lớn ô mở bằng quãng năm Rê–La sf ở khóa Fa rồi hợp âm khóa Sol (chroma bản thu 2–8 s: A, D). Chùm ba (số 3 trên nhóm móc kép) và nốt láy (nốt nhỏ) ở các hệ 2–5 tr. 3. Năm hệ 5+3+4+4+4 = 20 ô; ô 20 "longa" có dấu ngân, Henle "T 20 … fünf ♩". Chữ Allegretto theo bản sửa.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/893630" ]
+    luot_2_ghi_chu: "Bản quét tr. 3: Allegretto ♩=86, 2/4; tay trái quãng năm Rê–La có dấu nhấn (^, gạch ngang) ở đầu nhiều ô; tay phải chùm ba (số 3) và nốt láy; ô 20 (ô cuối hệ 5) rit., chữ 'longa' trên hợp âm có dấu ngân."
   - id: n19
     cau: 'Chương 1, đoạn Allegro: nhẹ (p leggero), đổi nhịp 2/4 và 3/4 liên tục, tay trái hợp âm ngắn, tách; rồi đoạn đầu trở lại (Tempo I), chương kết allargando trên hợp âm ngân dài.'
     loai: cau-truc
     nguon: [ quet-3953 ]
     ket_qua: dung
     ghi_chu: 'Tr. 4 hệ 1: "Allegro (♩ = 150)", "p leggero", hợp âm tay trái có chấm staccato; nhịp 3/4 ô 3, 2/4 ô 4, 3/4 ở hệ 2, 2/4 ở hệ 2, 3/4 hệ 4…; tr. 4 hệ 5 "Tempo I" trở lại hai dấu thăng; tr. 5 hệ 2 "allargando", "longa" và dấu ngân trên hợp âm cuối.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/893630" ]
+    luot_2_ghi_chu: "Bản quét tr. 4–5: Allegro ♩=150, p leggero, nhịp đổi 2/4–3/4 nhiều lần, tay trái hợp âm chấm (staccato); Tempo I; cuối chương 'allargando', 'longa' trên hợp âm có dấu ngân."
   - id: n20
     cau: 'Chương 2 ngắn nhất, khoảng nửa phút (32″); Moderato, 2/4, mf pesante; giai điệu ở quãng giữa bàn phím, tay trái nhảy xuống những nốt rất trầm.'
     loai: cau-truc
     nguon: [ quet-3953 ]
     ket_qua: dung
     ghi_chu: 'Tr. 5: "Moderato (♩ = 80)", 2/4, không hóa biểu, "mf pesante"; tay phải giai điệu quanh Đô4 (khóa Sol, nốt dưới khuông); tay trái mỗi phách xen nốt rồi nốt rất thấp nhiều dòng kẻ phụ dưới khóa Fa có dấu >. Thời lượng 32″ (ngắn nhất: 1′30″, 32″, 1′45″). Bản thu: 85,4–khoảng 117 s.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/893630" ]
+    luot_2_ghi_chu: "Bản quét tr. 5: Moderato ♩=80, 2/4, mf pesante; giai điệu tay phải quanh Mi4–Đô4; tay trái nhảy xuống nốt rất trầm (dấu nhấn, ngón 5); thời lượng 32″, ngắn nhất (1′30″, 32″, 1′45″)."
   - id: n21
     cau: 'Chương 2, từ ô 9 (p): giai điệu xuống tay trái, tay phải chơi hợp âm nhấn ở trên; cuối chương pp, chậm lại một chút (poco rallent.).'
     loai: cau-truc
     nguon: [ quet-3953 ]
     ket_qua: dung
     ghi_chu: 'Tr. 5 hệ 1 năm ô, hệ 2 ba ô rồi vạch kép; ô 9 "p" tay phải hợp âm có dấu >, tay trái khóa Fa chơi nhóm móc kép mang giai điệu. Hệ 4 "pp", ô cuối "poco rallent.".'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/893630" ]
+    luot_2_ghi_chu: "Bản quét tr. 5: sau vạch kép, ô 9 ghi p, tay trái giai điệu móc kép, tay phải hợp âm có dấu nhấn; cuối chương pp, 'poco rallent.'."
   - id: n22
     cau: 'Chương 3: Allegro vivace, 2/4; tay trái mở đầu một mình (bốn ô đầu tay phải nghỉ), rồi giai điệu thứ nhất vào ở tay phải.'
     loai: cau-truc
     nguon: [ quet-3953 ]
     ket_qua: dung
     ghi_chu: 'Tr. 6: "Allegro vivace (♩ = 154–146)", 2/4, hai dấu thăng; ô 1–3 tay phải dấu lặng ô, ô 4 dấu lặng rồi một nốt lấy đà mp có dấu *; tay trái ô 1–4 mf. Bản thu 119–122 s chỉ có Rê (tay trái).'
+    luot_2: sai
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/893630" ]
+    luot_2_ghi_chu: "câu đúng: Chương 3: Allegro vivace, 2/4; tay trái mở đầu một mình (ba ô đầu tay phải nghỉ; tay phải vào bằng một nốt đà cuối ô 4), rồi giai điệu thứ nhất vào ở tay phải.; Bản quét tr. 6: Allegro vivace (♩=154–146), 2/4. Tay phải nghỉ trọn ô 1–3; ô 4 có lặng đen, lặng móc đơn chấm rồi nốt móc kép Rê (mp, ngón 1) dẫn vào ô 5. Nên 'bốn ô đầu tay phải nghỉ' không đúng hẳn: chỉ ba ô rưỡi. Phần còn lại đúng. Lỗi nhỏ, có thể chỉ cần bỏ ngoặc."
   - id: n23
     cau: 'Chương 3, Sostenuto: hóa biểu đổi, giai điệu thứ hai chậm, ngân dài trên tay trái lặp rất nhanh hai nốt cạnh nhau; rồi nhanh dần (poco a poco accel.) về Tempo I.'
     loai: cau-truc
     nguon: [ quet-3953 ]
     ket_qua: dung
     ghi_chu: 'Tr. 7 hệ 2: vạch kép, hóa biểu một dấu thăng, "al Sostenuto", tay phải nốt trắng sf ngân qua ô, tay trái móc kép xen hai nốt (ngón 1 2 1 2); hệ 3 "poco a poco accel.", hệ 4 "al Tempo I". Tr. 8 lặp lại một lần nữa (rallentando molto al Sostenuto, accelerando, al Tempo I).'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/893630" ]
+    luot_2_ghi_chu: "Bản quét tr. 7–8: 'rallentando … al Sostenuto', hóa biểu đổi từ hai thăng sang một thăng; giai điệu nốt trắng ngân dài trên tay trái lặp nhanh Rê–Mi (ngón 2-1-2-1); 'poco a poco accel. … al Tempo I'."
   - id: n24
     cau: 'Chương 3: có lúc tay phải lặp liên tục hai nốt rất cao La–Si trong khi tay trái chơi giai điệu ở dưới.'
     loai: cau-truc
     nguon: [ quet-3953, lp-file ]
     ket_qua: dung
     ghi_chu: 'Tr. 8 hệ 1–3: tay phải móc kép La5 (dòng kẻ phụ thứ nhất trên khóa Sol) và Si5 xen nhau, "simile"; tay trái khóa Sol, p, nốt tách và nốt có gạch, hai bè. Bản thu 160,9–172 s chroma A, B trội.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/893630" ]
+    luot_2_ghi_chu: "Bản quét tr. 8: tay phải lặp móc kép Si5–La5 (dòng kẻ phụ thứ nhất và trên nó, 'simile') nhiều ô liền, tay trái chơi giai điệu bên dưới (khuông dưới chuyển khóa Sol)."
   - id: n25
     cau: 'Chương 3, coda tranquillo nhắc lại giai điệu đầu, nhỏ và chậm hơn (più tranquillo, pp), rồi nhanh dần tới hợp âm kết.'
     loai: cau-truc
     nguon: [ quet-3953 ]
     ket_qua: dung
     ghi_chu: 'Tr. 9 hệ 2: "tranquillo (coda)", p; hệ 3 "più tranquillo", "pp", hình móc kép có nốt láy giống ô 5 của chương (tr. 6); hệ 4 "Sostenuto molto", "accel.", hệ 5 "al Tempo I", hệ 6 "allargando", hợp âm kết sf. tranquillo = "Yên tĩnh" (thuat-ngu.yml).'
+    luot_2: sai
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/893630" ]
+    luot_2_ghi_chu: "câu đúng: Chương 3, coda tranquillo nhắc lại giai điệu đầu, nhỏ và chậm hơn (più tranquillo, pp); rồi Sostenuto molto, nhanh dần (accel.) về Tempo I, và chậm dần (allargando) tới hợp âm kết.; Bản quét tr. 9: 'tranquillo (coda)', 'più tranquillo' pp — đúng. Nhưng sau đó là 'Sostenuto molto', 'accel. … al Tempo I', rồi 'allargando' trước hợp âm kết (sf, ff). Câu 'rồi nhanh dần tới hợp âm kết' bỏ mất allargando nên tả sai đoạn cuối. Bản thu La Pianista khớp: Sostenuto molto ~199 s, Tempo I ~207 s, chậm dần ~214 s, hợp âm cuối ~217 s."
   - id: n26
     cau: 'Bản in dùng ký hiệu bàn đạp hình ngoặc vuông dưới khuông, chỉ rõ chỗ nhấn và chỗ nhả; theo Henle, Bartók ưa ký hiệu này trong những năm 1908–1918.'
     loai: lich-su
     nguon: [ quet-3953, henle-bem ]
     ket_qua: dung
     ghi_chu: 'Bản quét tr. 3 chú thích "* ⌊___⌋ = pedáljelzés (Pedalbezeichnung)", ngoặc dưới khuông tay trái suốt các chương. Henle: "bevorzugte Bartók zwischen 1908 und 1918 das eckige Pedalzeichen, das Anfang und Ende des Pedalgebrauchs präzise kennzeichnet". Henle nói chú thích ký hiệu ở trang 1 là của bản sửa; ký hiệu đã có ở bản 1919.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/0b/19/f2/1697725688/1401-1697725688-sync.pdf", "https://imslp.org/wiki/Special:ImagefromIndex/893630" ]
+    luot_2_ghi_chu: "Henle Editorial notes: 'between 1908 and 1918 Bartók favoured the bracket-shaped pedal sign, which marks the place of the press and release precisely'. Bản quét tr. 3: chú thích '* ⌊__⌋ = pedáljelzés (Pedalbezeichnung)', ngoặc dưới khuông dưới."
   - id: n27
     cau: 'Bản thu gợi ý: La Pianista, một thành viên Wikipedia, thu năm 2009, đăng trên Wikimedia Commons; trọn ba chương, khoảng 3 phút 40 giây.'
     loai: ten
     nguon: [ commons-lp ]
     ket_qua: dung
     ghi_chu: 'Commons: "performer = Wikipedian La Pianista", "performance_date = 2009"; 220,6 s = 3 phút 40,6 giây; nghe đủ ba chương (khoảng lặng 77,6–85,3 s, 115–119 s).'
+    luot_2: dung
+    luot_2_nguon: [ "https://commons.wikimedia.org/wiki/File:Bartok_-_Sonatina.ogg" ]
+    luot_2_ghi_chu: "Commons (API, wikitext): performer 'Wikipedian La Pianista', performance_date 2009; tải lên Commons; độ dài 220,6 s ≈ 3′40″; file trọn ba chương (đo bằng librosa: chương 1 ~2–84 s, chương 2 ~85–117 s, chương 3 ~119–220 s). Mốc của trang (2 29 51 85 96 119 148 161 191) đều rơi đúng sự kiện, sai số ≤1 s."
   - id: n28
     cau: 'Chữ tốc độ trong bảng Theo dõi khi nghe (Allegretto, Moderato, Allegro vivace) theo bản quét trên IMSLP (bản sửa).'
     loai: ten
     nguon: [ quet-3953 ]
     ket_qua: dung
     ghi_chu: 'Tr. 3 "Allegretto", tr. 5 "Moderato", tr. 6 "Allegro vivace".'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/893630" ]
+    luot_2_ghi_chu: "Bản quét (bản sửa, số 3953): I Allegretto (♩=86), II Moderato (♩=80), III Allegro vivace (♩=154–146); đoạn Allegro, Tempo I, Sostenuto cũng như bảng."
   - id: n29
     cau: 'So sánh bản thu: cuộn đàn Welte của Bartók, ghi ở New York tháng 12/1927, Hungaroton đưa vào bộ Bartók at the Piano 1920–1945 (HCD 12326, 1991); Bartók giữ các dấu ngân lâu.'
     loai: ten
     nguon: [ henle-bem ]
     ket_qua: dung
     ghi_chu: 'Henle: Welte-US-Notenrolle 7785, 23/12/1927, New York, 1991 Hungaroton HCD 12326 "Bartók at the Piano 1920–1945"; "da Bartók die Fermaten fast bis zum Verklingen des Klangs hielt (T 20 ca. fünf ♩, Schlussakkord ca. 13″)".'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/0b/19/f2/1697725688/1401-1697725688-sync.pdf" ]
+    luot_2_ghi_chu: "Henle Comments: 'Welte-US Roll 7785, recorded in New York on 23 December 1927 … 1991 on CD by Hungaroton in Bartók at the Piano 1920–1945 (HCD 12326)'; 'he sustained the fermatas almost as long as the sound died away (M 20 ca. five beats, closing chord ca. 13\")'."
   - id: n30
     cau: 'Jenő Jandó, Naxos, Bartók: Piano Music, Vol. 2 (8.554718); cùng đĩa có Romanian Folk Dances và Romanian Christmas Carols.'
     loai: ten
     nguon: [ musicweb-jando ]
     ket_qua: dung
     ghi_chu: 'MusicWeb: danh sách tác phẩm của đĩa gồm Romanian Folk Dances Sz.56, Sonatina Sz.55, Romanian Christmas Carols Sz.57; NAXOS 8.554718.'
+    luot_2: dung
+    luot_2_nguon: [ "https://musicweb-international.com/classrev/2002/Mar02/Bartock_Piano2.htm", "https://www.eclassical.com/jeno-jando/bartok-piano-music-vol-2-dance-suite-romanian-folk-dances.html" ]
+    luot_2_ghi_chu: "MusicWeb (bài điểm đĩa 3/2002): 'BARTOK Piano Music Vol 2', Jenő Jandó, NAXOS 8.554718; có Romanian Folk Dances Sz.56, Sonatina Sz.55, Romanian Christmas Carols Sz.57. eClassical: Naxos 8554718, Jandó, 'Bartok: Piano Music, Vol. 2'. Trang naxos.com trả 403."
   - id: n31
     cau: 'Transylvanian Dances (1931) là Sonatina do chính Bartók soạn lại cho dàn nhạc.'
     loai: lich-su
     nguon: [ imslp-sz55 ]
     ket_qua: dung
     ghi_chu: 'Như n17.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Transylvanian_Dances,_Sz.96_(Bart%C3%B3k,_B%C3%A9la)", "https://www.henle.de/media/44/c9/ff/1697725864/1401-1697725864-sync.pdf" ]
+    luot_2_ghi_chu: "Như n17: IMSLP 'Composer's orchestration of the Sonatina', 1931; Henle: phối cho dàn nhạc nhỏ năm 1931."
   - id: n32
     cau: 'Chương 1 có trong đề cương ABRSM Grade 7, danh sách C, các kỳ 2025–2026 và 2027–2028.'
     loai: cap-do
     nguon: [ abrsm-2025, abrsm-2027 ]
     ket_qua: dung
     ghi_chu: 'Cả hai đề cương: tr. 40, Grade 7, ô tròn "C" đầu danh sách thứ ba, số 4 Bartók "Bagpipers: Allegretto (1st movt from Sonatina)". Ở 2025–2026 không có nhãn NEW (có từ kỳ trước; khảo sát G6 ghi 2021–2028, không kiểm lại đề cương 2021–2024 nên trang chỉ nói hai kỳ).'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26%202026%20Prac%20syllabus%2020240524_access.pdf", "https://www.abrsm.org/sites/default/files/2026-06/Piano%20Practical%20Grades%20Qualification%20Specification%202027%20%26%202028.pdf" ]
+    luot_2_ghi_chu: "Cả hai PDF, trang 'Piano … Grade 7' (tr. 40 trong sách): danh sách C số 4, 'Bartók – Bagpipers: Allegretto (1st movt from Sonatina)', Bartók: Sonatina (EMB Zeneműkiadó or Henle). Nhãn C xem trên ảnh trang 2025–2026."
   - id: n33
     cau: 'Henle xếp cả Sonatina mức 4 trên thang 1–9, kèm nhãn ABRSM Grade 7.'
     loai: cap-do
     nguon: [ henle-hn1401 ]
     ket_qua: dung
     ghi_chu: 'Trang HN 1401: "4 medium", "ABRSM: Piano Grade 7". Thang 1–9 của Henle như các trang khác.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/en/Sonatina/HN-1401" ]
+    luot_2_ghi_chu: "Trang sản phẩm Henle HN 1401: 'Sonatina BB 69 — 4 medium — ABRSM: Piano Grade 7' (thang 1–9 của Henle)."
   - id: n34
     cau: 'Trên site, Grade 7 là chặng 6; For Children ở chặng 2, Romanian Folk Dances ở chặng 5; hai bài học ấy cũng dựng trên dân ca.'
     loai: ve-site
