@@ -13,13 +13,13 @@ lan:
   - so: 2
     ngay: 2026-11-17
     nhanh: mo/sau-dot-1
-    ma_bam: null
+    ma_bam: sha256:9fb42d66f737d7b86b6b851bffde314224136f26e28b2cbf04ff8fb4a794871c
     nguoi:
       luot_1: Claude Opus 5.5 (lượt 1, mo/sau-dot-1, 17/11/2026)
       luot_2: "Claude Opus 5.5 (agent riêng, 17/11/2026; 8 câu mới cần nguồn: tac-pham-theo-cap n84, nha-soan-nhac n192, brahms-intermezzo n29, debussy-clair-de-lune n26, n33, n34, n43, n94; 8 đúng)"
       review: Claude Opus 5.5 (review, agent riêng, mo/sau-dot-1, 17/11/2026)
-      kiem_mau: null
-ghi_chu: 'Bản ghi mới (tools/them-tac-pham.mjs, 17/11/2026); khóa cả bản ghi. Nguồn chung với hồ sơ trang piano/tac-pham/mozart-alla-turca. Không có trường cap: lộ trình dặn cap: nghe-nhac/mozart-k331, nhưng src/du-lieu.mjs (kiểm chéo) đòi bản ghi mozart-k331 (đã khóa) trỏ cap ngược lại, nên build hỏng nếu ghi một chiều; thêm cap ở cả hai bản ghi là việc của nhánh mo/ sau khi gộp (ghi ở báo cáo). ban_thu ghi bằng commons.py rec + attach.py (Commons, phát được; note theo trang mô tả). Sơ đồ (hinh) chia theo thời gian trên bản thu (đo ở hồ sơ trang). them_ngay là dữ liệu nội bộ, không có nhận định. Review (Claude, 17/11/2026): không có cap được chấp nhận (kiểm chéo đòi hai chiều, mozart-k331 đã khóa; việc của nhánh mo/ sau khi gộp, đã ghi ở báo cáo); trang link tay sang nghe-nhac/mozart-k331 ba chỗ.'
+      kiem_mau: "Claude Sonnet (agent riêng), kiểm thay chủ repo theo lời giao 16/11/2026: câu mới brahms-intermezzo n29, debussy-clair-de-lune n43, nha-soan-nhac n192; 3 đúng"
+ghi_chu: 'Bản ghi mới (tools/them-tac-pham.mjs, 17/11/2026); khóa cả bản ghi. Nguồn chung với hồ sơ trang piano/tac-pham/mozart-alla-turca. Không có trường cap: lộ trình dặn cap: nghe-nhac/mozart-k331, nhưng src/du-lieu.mjs (kiểm chéo) đòi bản ghi mozart-k331 (đã khóa) trỏ cap ngược lại, nên build hỏng nếu ghi một chiều; thêm cap ở cả hai bản ghi là việc của nhánh mo/ sau khi gộp (ghi ở báo cáo). ban_thu ghi bằng commons.py rec + attach.py (Commons, phát được; note theo trang mô tả). Sơ đồ (hinh) chia theo thời gian trên bản thu (đo ở hồ sơ trang). them_ngay là dữ liệu nội bộ, không có nhận định. Review (Claude, 17/11/2026): không có cap được chấp nhận (kiểm chéo đòi hai chiều, mozart-k331 đã khóa; việc của nhánh mo/ sau khi gộp, đã ghi ở báo cáo); trang link tay sang nghe-nhac/mozart-k331 ba chỗ. Lần mở 17/11/2026 (mo/sau-dot-1): thêm cap nghe-nhac/mozart-k331; cap là cấu trúc, không phải nhận định (như schumann-traumerei): hai bản ghi trỏ cap sang nhau, src/du-lieu.mjs kiểm chéo, build không lỗi, ::hoc-tiep của bài học hiện "Nghe kèm"; trang nghe-nhac/mozart-k331 link bài học ở mục "Nếu bạn muốn chơi" (hồ sơ trang n37). Review (Claude, 17/11/2026) đã kiểm. Nhận định n13 (ve-site) lượt 1 ghi tạm đã bỏ, vì hồ sơ bản ghi dữ liệu không có câu về chính site.'
 nguon:
   - id: artaria-1784
     bac: 1
@@ -198,13 +198,6 @@ nhan_dinh:
     luot_2_nguon: [ "https://commons.wikimedia.org/wiki/File:Mozart-Marsz_turecki-(Romuald_Greiss).ogg", "https://commons.wikimedia.org/w/api.php?action=query&titles=File:Mozart-Marsz_turecki-(Romuald_Greiss).ogg&prop=imageinfo&iiprop=size|metadata|mime&format=json" ]
     luot_2_ghi_chu: "Commons: Romuald Greiss, đàn Budynowicz 1850, buổi hòa nhạc ở filharmonia Zabrze, Date=2000, PD-author; API: file ogg, duration 180,529 s. Bản mp3 chuyển mã tải về được (ffprobe 181,64 s, dài hơn ogg ~1,1 s do chuyển mã)."
     review: dung
-  - id: n13
-    cau: "cap: nghe-nhac/mozart-k331 (hướng dẫn nghe cả bản Sonata K. 331, có bản ghi riêng; hai bản ghi trỏ cap sang nhau)."
-    loai: ve-site
-    truong: [ cap ]
-    ket_qua: dung
-    review: dung
-    ghi_chu: "Lần mở 17/11/2026 (sau đợt 1), việc ngoài phạm vi của them/mozart-alla-turca. Bài học là chương 3 của Sonata K. 331 (n1 đã kiểm); src/du-lieu.mjs kiểm chéo: cap của bài học phải là hướng dẫn nghe, và bản ghi mozart-k331 phải có cap piano/tac-pham/mozart-alla-turca (đã thêm). Như cặp schumann-traumerei / schumann-kinderszenen. Review (Claude, 17/11/2026): cap hai chiều; build:xem không lỗi; ::hoc-tiep của bài học hiện link \"Nghe kèm\" tới /opus/nghe-nhac/mozart-k331/."
 mo_khoa:
   - ngay: 2026-11-17
     nhanh: mo/sau-dot-1

@@ -46,3 +46,7 @@ Kiểm thử: `npm run build:xem` đạt; `npm test` 353 đạt, 2 bỏ qua, 0 h
 - Link, kiểu dòng ở `tac-pham-theo-cap`, `hai-tay`, `ban-dap`, `tac-pham/index`, `mozart-k331`, `ke-hoach`: đúng.
 
 Kiểm thử: `npm run build:xem` đạt; `npm test` 353 đạt, 2 bỏ qua, 0 hỏng (có `.cache/site-cu/`).
+
+## Kiểm mẫu và khóa
+
+Claude (agent riêng) kiểm thay chủ repo ba câu mới (brahms-intermezzo n29, debussy-clair-de-lune n43, nha-soan-nhac n192): 3 đúng. Khóa lại 12 mục 17/11/2026.
