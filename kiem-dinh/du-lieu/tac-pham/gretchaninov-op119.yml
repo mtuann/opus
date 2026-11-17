@@ -2,14 +2,14 @@
 ban_ghi: tac-pham/gretchaninov-op119
 lan:
   - so: 1
-    ngay: null
+    ngay: 2026-11-17
     nhanh: them/gretchaninov-op119
-    ma_bam: null
+    ma_bam: sha256:a343c215dd361213ab4fd70216a0005ea297e453cb5acecbebf0cf5f4e3fab38
     nguoi:
       luot_1: Claude Opus 5.5 (lượt 1, them/gretchaninov-op119, 17/11/2026)
-      luot_2: null
-      review: null
-      kiem_mau: null
+      luot_2: Claude Opus 5.5 (agent riêng, độc lập với lượt 1, 17/11/2026; 48 câu, 48 đúng)
+      review: Claude Opus 5.5 (agent riêng, không làm lượt 1, lượt 2; 17/11/2026)
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 17/11/2026: 5 nhận định mẫu (khoa.mjs xuat --mau 5: trang n8, n28; dữ liệu tác phẩm n5, n6, n14), 5 đúng, 0 sai"
 ghi_chu: 'Bản ghi mới (tools/them-tac-pham.mjs, 17/11/2026); khóa cả bản ghi. Không có giong, nhip (hai bài khác giọng). Nguồn chung với hồ sơ trang piano/tac-pham/gretchaninov-op119. thoi_ky "Thế kỷ 20" theo năm viết (1929) và theo cách site đã xếp các tập của Gretchaninov (piano/tac-pham-theo-cap: Op. 98, Op. 123 ở cột "Thế kỷ 20"); IMSLP ghi Piece Style "Romantic" cho Op. 119: ghi ở n2. ban_thu ghi bằng attach.py (chỉ dẫn link, hai phần). them_ngay là dữ liệu nội bộ, không có nhận định.'
 nguon:
   - id: schott-1929
@@ -35,139 +35,161 @@ nhan_dinh:
     truong: [ ten, tac_gia, danh_muc, loai ]
     nguon: [ imslp-op119, schott-1929 ]
     ket_qua: dung
-    ghi_chu: 'IMSLP: tựa trang "Grandfather''s Album, Op.119"; bản in: "Das Großvaterbuch … Op. 119", "A. Gretchaninoff".'
+    ghi_chu: 'IMSLP: tựa trang "Grandfather''s Album, Op.119"; bản in: "Das Großvaterbuch … Op. 119", "A. Gretchaninoff". Review (Claude Opus, 17/11/2026): tr. 1 bản quét: Das Großvaterbuch, A. Gretchaninoff, Op. 119; wikitext IMSLP Work Title Grandfather''s Album; loai bai-hoc đúng.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Grandfather's_Album,_Op.119_(Grechaninov,_Aleksandr)", "https://id.loc.gov/authorities/names/n79145180.json" ]
     luot_2_ghi_chu: "IMSLP: Work Title=Grandfather's Album, tên khác Das Großvaterbuch, Op.119. LoC có dạng 'Gretchaninov, Alexander'."
+    review: dung
   - id: n2
     cau: 'Thời kỳ: Thế kỷ 20 (tác phẩm viết, in năm 1929).'
     loai: lich-su
     truong: [ thoi_ky ]
     nguon: [ imslp-op119 ]
     ket_qua: dung
-    ghi_chu: 'IMSLP: Year/Date of Composition "1929?", First Publication 1929. IMSLP xếp Piece Style "Romantic" (theo phong cách); site xếp theo thời gian viết như các tập Op. 98, 123 ở piano/tac-pham-theo-cap.'
+    ghi_chu: 'IMSLP: Year/Date of Composition "1929?", First Publication 1929. IMSLP xếp Piece Style "Romantic" (theo phong cách); site xếp theo thời gian viết như các tập Op. 98, 123 ở piano/tac-pham-theo-cap. Review (Claude Opus, 17/11/2026): wikitext IMSLP: Year/Date of Composition 1929?, First Publication 1929 (Schott), Piece Style Romantic; Thế kỷ 20 theo cách chia của site.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/List_of_works_by_Aleksandr_Grechaninov", "https://imslp.org/wiki/Grandfather's_Album,_Op.119_(Grechaninov,_Aleksandr)" ]
     luot_2_ghi_chu: "Danh mục IMSLP: Op.119 (1929); trang tác phẩm: Year of Composition '1929?', First Publication 1929 (Schott). IMSLP gắn Piece Style=Romantic (phong cách), nhưng tác phẩm viết năm 1929 nên xếp Thế kỷ 20 theo cách chia của site là hợp lý."
+    review: dung
   - id: n3
     cau: 'Chặng 3, Grade 3 (ước lượng): số 1 và 7 không có trong các đề cương đã đọc; RCM 2022 xếp số 2, 4, 15, 16 của tập ở Level 4.'
     loai: cap-do
     truong: [ chang, grade, chip, thong_tin ]
     nguon: [ rcm-2022, cap-do ]
     ket_qua: dung
-    ghi_chu: 'RCM 2022 Level 4 có Op. 119 số 2, 4, 15, 16. Chặng 3 = Grade 3 (cap-do.yml). Dòng Độ khó ghi rõ "ước lượng".'
+    ghi_chu: 'RCM 2022 Level 4 có Op. 119 số 2, 4, 15, 16. Chặng 3 = Grade 3 (cap-do.yml). Dòng Độ khó ghi rõ "ước lượng". Review (Claude Opus, 17/11/2026): chang 3, grade Grade 3, chip ≈ Grade 3 và dòng Độ khó (ghi ước lượng) khớp câu và cap-do.yml.'
     luot_2: dung
     luot_2_nguon: [ "https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf" ]
     luot_2_ghi_chu: "RCM 2022 trang 42, Level 4: op. 119 số 2, 4, 15, 16; không có số 1, 7. Chặng 3 là phần của site; Grade 3 ghi ước lượng."
+    review: dung
   - id: n4
     cau: 'Kỹ năng chính: giai điệu nhịp chấm dôi hát trên hợp âm móc đơn của tay trái, nốt hoa mỹ (số 1); hai bè trong tay phải, giọng thứ, sắc thái và rall. (số 7).'
     loai: cau-truc
     truong: [ ky_nang_chinh, thong_tin ]
     nguon: [ schott-1929 ]
     ket_qua: dung
-    ghi_chu: Như hồ sơ trang n4, n5.
+    ghi_chu: 'Như hồ sơ trang n4, n5. Review (Claude Opus, 17/11/2026): ky_nang_chinh và dòng Kỹ năng chính khớp tr. 1, tr. 5.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/269926" ]
     luot_2_ghi_chu: "Khớp bản quét: số 1 nhịp chấm dôi trên hợp âm móc đơn, nốt hoa mỹ; số 7 tay phải hai bè, Mi thứ, mf/f/rall./dim."
+    review: dung
   - id: n5
     cau: 'Đối chiếu: chép tay từ bản quét bản in Schott (Mainz, khoảng 1929, số bản in 32355; IMSLP #269926).'
     loai: ten
     truong: [ doi_chieu ]
     nguon: [ schott-1929 ]
     ket_qua: dung
+    ghi_chu: 'Review (Claude Opus, 17/11/2026): doi_chieu khớp bản quét (chân trang 32355) và wikitext IMSLP.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Grandfather's_Album,_Op.119_(Grechaninov,_Aleksandr)", "https://imslp.org/wiki/Special:ImagefromIndex/269926" ]
     luot_2_ghi_chu: "File IMSLP269926-…gretchaninoffop119_grandfathersbook.pdf (12 trang) là bản Schott, chân trang 32355; IMSLP: B. Schott's Söhne, Mainz, n.d.(ca.1929), plate 32355."
+    review: dung
   - id: n6
     cau: Bài không vào gợi ý tập ở trang chủ (goi_y false).
     loai: khuyen-tap
     truong: [ goi_y ]
     nguon: []
     ket_qua: khong-can-nguon
+    ghi_chu: 'Review (Claude Opus, 17/11/2026): goi_y: false; lựa chọn của site.'
     luot_2: dung
     luot_2_ghi_chu: Lựa chọn của site, không có gì trái cách dạy.
+    review: dung
   - id: n7
-    cau: 'Chip: "Op. 119 số 1 và 7"; "Hai tiểu phẩm cho trẻ em, viết năm 1929".'
+    cau: 'Chip: "Op. 119 số 1 và 7"; "Hai tiểu phẩm cho trẻ em, viết khoảng năm 1929" (sửa theo review: IMSLP ghi năm sáng tác "1929?").'
     loai: lich-su
     truong: [ chip ]
     nguon: [ imslp-op119, schott-1929 ]
     ket_qua: dung
+    ghi_chu: 'Review (Claude Opus, 17/11/2026): chip khớp câu. Nên sửa: IMSLP ghi năm sáng tác 1929? (có dấu hỏi), bản in không ghi năm; chip nên viết khoảng năm 1929 như dòng Sáng tác / xuất bản.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/List_of_works_by_Aleksandr_Grechaninov", "https://imslp.org/wiki/Grandfather's_Album,_Op.119_(Grechaninov,_Aleksandr)" ]
     luot_2_ghi_chu: "Danh mục IMSLP: Op.119 … for Piano (1929); trang tác phẩm ghi năm sáng tác '1929?' (có dấu hỏi). Hai bài số 1, 7 là tiểu phẩm cho trẻ em (tập 17 bài)."
+    review: dung
   - id: n8
     cau: "Dòng Tác phẩm: Das Großvaterbuch (tạm dịch: Cuốn sách của ông), Op. 119: 17 bài piano ngắn cho trẻ em; tựa in bằng bốn thứ tiếng (Đức, Pháp, Anh, Nga; tiếng Anh Grandfather's Book, thường gọi Grandfather's Album); số 1 Meine liebe Mutti! (Mẹ yêu), số 7 Traurige Geschichte (Chuyện buồn)."
     loai: ten
     truong: [ thong_tin ]
     nguon: [ schott-1929, imslp-op119 ]
     ket_qua: dung
-    ghi_chu: 'Bản in: "Grandfathers book"; IMSLP đặt tên trang "Grandfather''s Album". "Cho trẻ em": RCM, IMSLP xếp vào bài cho người học; tên các bài (Mẹ yêu, Mèo con ốm, Đi dạo…) là cảnh của trẻ nhỏ.'
+    ghi_chu: 'Bản in: "Grandfathers book"; IMSLP đặt tên trang "Grandfather''s Album". "Cho trẻ em": RCM, IMSLP xếp vào bài cho người học; tên các bài (Mẹ yêu, Mèo con ốm, Đi dạo…) là cảnh của trẻ nhỏ. Review (Claude Opus, 17/11/2026): bản quét tr. 1 và wikitext IMSLP khớp dòng Tác phẩm.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Grandfather's_Album,_Op.119_(Grechaninov,_Aleksandr)", "https://imslp.org/wiki/Special:ImagefromIndex/269926" ]
     luot_2_ghi_chu: "Bản quét: tựa bốn thứ tiếng, tiếng Anh in 'Grandfathers book' (không có dấu nháy); IMSLP: Work Title Grandfather's Album, tên khác Grandfather's Book; 17 bài; tên số 1, số 7 khớp."
+    review: dung
   - id: n9
     cau: 'Dòng Sáng tác / xuất bản: Schott, Mainz, in khoảng năm 1929 (bản in không ghi năm; số bản in 32355).'
     loai: nam
     truong: [ thong_tin ]
     nguon: [ imslp-op119, schott-1929 ]
     ket_qua: dung
+    ghi_chu: 'Review (Claude Opus, 17/11/2026): wikitext IMSLP: n.d.(ca.1929), plate 32355.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Grandfather's_Album,_Op.119_(Grechaninov,_Aleksandr)", "https://imslp.org/wiki/Special:ImagefromIndex/269926" ]
     luot_2_ghi_chu: "Như n9, n30 của trang: Schott, Mainz, n.d. (ca.1929), plate 32355."
+    review: dung
   - id: n10
     cau: 'Dòng Giọng · nhịp · tốc độ: số 1 Fa trưởng, 3/4, Dolce; số 7 Mi thứ, 6/8, Moderato.'
     loai: cau-truc
     truong: [ thong_tin ]
     nguon: [ schott-1929 ]
     ket_qua: dung
+    ghi_chu: 'Review (Claude Opus, 17/11/2026): tr. 1, tr. 5 khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/269926" ]
     luot_2_ghi_chu: "Số 1: một giáng, 3/4, Dolce; số 7: một thăng, 6/8, Moderato."
+    review: dung
   - id: n11
     cau: 'Dòng Hình thức: hai bài cùng dạng ba đoạn A – B – A, nhắc lại từ đầu đoạn B; số 1 có 20 ô, số 7 có 24 ô.'
     loai: cau-truc
     truong: [ thong_tin ]
     nguon: [ schott-1929 ]
     ket_qua: dung
+    ghi_chu: 'Review (Claude Opus, 17/11/2026): đếm lại tr. 1 (20 ô), tr. 5 (24 ô); ||: đầu ô 9 ở cả hai.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/269926" ]
     luot_2_ghi_chu: "Đếm ô: số 1 có 20, số 7 có 24; dấu mở nhắc lại đầu ô 9 ở cả hai."
+    review: dung
   - id: n12
     cau: 'Dòng Nhà soạn nhạc: Alexander Gretchaninov (1864–1956).'
     loai: nam
     truong: [ thong_tin ]
     nguon: [ imslp-op119 ]
     ket_qua: dung
-    ghi_chu: Khớp bản ghi nha-soan-nhac/gretchaninov.
+    ghi_chu: 'Khớp bản ghi nha-soan-nhac/gretchaninov. Review (Claude Opus, 17/11/2026): khớp nha-soan-nhac.yml gretchaninov (1864, 1956).'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Category:Grechaninov,_Aleksandr", "https://id.loc.gov/authorities/names/n79145180.json" ]
     luot_2_ghi_chu: IMSLP 1864–1956; LoC 'Gretchaninov, Alexander, 1864-1956'.
+    review: dung
   - id: n13
     cau: 'Dòng Bản nhạc: IMSLP có bản quét bản in Schott.'
     loai: ten
     truong: [ thong_tin ]
     nguon: [ imslp-op119 ]
     ket_qua: dung
+    ghi_chu: 'Review (Claude Opus, 17/11/2026): wikitext IMSLP có bản Schott, Public Domain.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Grandfather's_Album,_Op.119_(Grechaninov,_Aleksandr)" ]
     luot_2_ghi_chu: IMSLP có ba file quét bản Schott (Public Domain).
+    review: dung
   - id: n14
     cau: 'Sơ đồ: số 1 A (ô 1–8, mf, câu 4 ô vang hai lần), B (9–16, có Sol♯ và Si♮), A (17–20, p, rit.); số 7 A (1–8, mf, tay phải hai bè), B (9–16, giai điệu một bè, f, rall.), A (17–24, a tempo, rall. e dim.); đoạn B và A trở lại được nhắc lại một lần.'
     loai: cau-truc
     truong: [ hinh ]
     nguon: [ schott-1929 ]
     ket_qua: da-sua
-    ghi_chu: 'Như hồ sơ trang n14–n22. Sửa theo ghi chú lượt 2: "frall." (bản in đặt f sát rall.) viết thành "f, rall.".'
+    ghi_chu: 'Như hồ sơ trang n14–n22. Sửa theo ghi chú lượt 2: "frall." (bản in đặt f sát rall.) viết thành "f, rall.". Review (Claude Opus, 17/11/2026): nội dung khớp tr. 1, tr. 5. Phải sửa dữ liệu: dòng [B, ô 9–16 · giai điệu một bè · f, rall., 8, b] của hinh (tac-pham.yml) là dãy YAML dạng ngoặc, dấu phẩy trong f, rall. tách phần tử nên build hỏng (doan.1 quá 4 phần tử); đặt nhãn trong nháy: [B, "ô 9–16 · giai điệu một bè · f, rall.", 8, b].'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/269926" ]
     luot_2_ghi_chu: Mọi điểm khớp bản quét (xem n14–n19 của trang). Lưu ý chữ 'frall.' là cách bản in đặt sát 'f rall.' (forte và rall.); nên viết 'f, rall.' để khỏi đọc thành một từ.
+    review: dung
   - id: n15
     cau: 'Bản thu: Jörg Römgens, giấy phép CC BY-SA 4.0, trên IMSLP; số 1 (#517116, 72,81 s), số 7 (#517122, 106,51 s), chỉ dẫn link.'
     loai: ten
     truong: [ ban_thu ]
     nguon: [ imslp-op119 ]
     ket_qua: dung
-    ghi_chu: 'IMSLP: File Name 1 PMLP437344-GRETCHANINOV_-_Op.119_No.1_-_My_Dear_Mummy.mp3, File Name 7 …No.7_-_Sad_Story.mp3; Römgens, Jörg=piano; Creative Commons Attribution-ShareAlike 4.0. Bản MCPP (số 2, 4, 15, 16) là NonCommercial: không dùng. Độ dài: ffprobe.'
+    ghi_chu: 'IMSLP: File Name 1 PMLP437344-GRETCHANINOV_-_Op.119_No.1_-_My_Dear_Mummy.mp3, File Name 7 …No.7_-_Sad_Story.mp3; Römgens, Jörg=piano; Creative Commons Attribution-ShareAlike 4.0. Bản MCPP (số 2, 4, 15, 16) là NonCommercial: không dùng. Độ dài: ffprobe. Review (Claude Opus, 17/11/2026): wikitext IMSLP: Römgens, Jörg=piano, File Name 1 …No.1_-_My_Dear_Mummy.mp3, File Name 7 …No.7_-_Sad_Story.mp3, Copyright=Creative Commons Attribution-ShareAlike 4.0; bản MCPP là NonCommercial, đúng là không dùng.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Grandfather's_Album,_Op.119_(Grechaninov,_Aleksandr)", "https://imslp.org/wiki/Special:ImagefromIndex/517116", "https://imslp.org/wiki/Special:ImagefromIndex/517122" ]
     luot_2_ghi_chu: "IMSLP: Römgens, Jörg, Copyright=Creative Commons Attribution-ShareAlike 4.0. ffprobe: số 1 72,806 s, số 7 106,510 s; thẻ artist Jörg Römgens."
+    review: dung

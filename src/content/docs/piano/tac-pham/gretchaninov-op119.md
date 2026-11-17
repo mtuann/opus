@@ -71,7 +71,7 @@ M:3/4
 L:1/8
 Q:1/4=88
 K:F
-!mf!(!2!c3/2d/2 c3 .f) | (!1!A3/2B/2 A3 .f) | (!3!A !2!^F2 !1!G {=B}AG) | (!3!d =B2 c g2) |
+!mf!(!2!c3/2d/2 c3 .f) | (!1!A3/2B/2 A3 .f) | (!3!A !2!^F2 !1!G {/=B}AG) | (!3!d =B2 c g2) |
 ```
 
 Nhịp chấm dôi (một nốt móc đơn chấm dôi, một nốt móc kép) mở hai ô đầu. Ô 3 có một nốt hoa mỹ nhỏ (Si♮) đánh ngay trước nốt La. Mỗi dấu luyến là một hơi; nốt Fa cuối ô 1 và ô 2 có dấu chấm, nhấc tay nhẹ trước câu sau.
@@ -84,7 +84,7 @@ Nhịp chấm dôi (một nốt móc đơn chấm dôi, một nốt móc kép) m
 | Tay trái nghỉ rồi đánh hợp âm (số 1) | Hợp âm rơi sau phách 1 nên dễ vào sớm, và dễ to hơn giai điệu | Đếm to "nghỉ-và-hai-và-ba-và"; tay trái riêng ở *p*, các nốt của hợp âm xuống cùng lúc |
 | Dấu hóa bất thường (Fa♯, Si♮ ở số 1; Fa♮ ở số 7) | Tay quen giọng chính sẽ chơi sai nốt | Khoanh các dấu hóa bằng bút chì trước khi tập; tập riêng các ô ấy |
 | Nốt hoa mỹ ở ô 3 số 1 | Nốt nhỏ dễ bị chơi dài, làm lệch nhịp | Chơi nốt nhỏ ngay trên phách, rất nhanh, rồi nốt chính; tập không nốt nhỏ trước. Bài tập 3 |
-| Hai bè trong tay phải (số 7) | Ngón giữ nốt dài hay nhấc theo các ngón hát giai điệu | Giữ nốt dài bằng ngón thấp nhất của tay, cổ tay mềm; nghe xem nốt dài có ngân đủ cả ô không. Bài tập 2 |
+| Hai bè trong tay phải (số 7) | Ngón giữ nốt dài hay nhấc theo các ngón hát giai điệu | Giữ nốt dài bằng ngón cái (ngón 1), cổ tay mềm; nghe xem nốt dài có ngân đủ cả ô không. Bài tập 2 |
 | Chậm lại và nhịp trở lại (số 7, ô 15–17) | Chậm quá nhiều, hay không về đúng tốc độ cũ ở *a tempo* | Tập ô 14–18 nhiều lần; đếm sáu phách đều trước khi chậm lại |
 
 ## Bài tập chuẩn bị
@@ -139,7 +139,7 @@ Q:1/4=72
 V:RH clef=treble
 V:LH clef=bass
 K:F
-[V:RH] !mp!!1!F2 !2!G2 {=B}!3!A2 | !2!G2 {=B}!3!A2 !2!G2 | !1!F6 |]
+[V:RH] !mp!!1!F2 !2!G2 {/=B}!3!A2 | !2!G2 {/=B}!3!A2 !2!G2 | !1!F6 |]
 [V:LH] [F,C]6 | [E,C]6 | [F,C]6 |]
 ```
 
@@ -182,7 +182,7 @@ Hai bài có thể chơi không bàn đạp. Nếu dùng ở số 7, đổi bàn
 ## Học tiếp
 
 - **Cùng ý tưởng, ở chặng trước:** [Bartók: For Children, số 1 và 6](/opus/piano/tac-pham/bartok-for-children/) và [Schumann: Album für die Jugend](/opus/piano/tac-pham/schumann-album/).
-- **Kỹ năng liên quan:** [Hai tay](/opus/piano/hai-tay/) (một tay giữ, một tay đi; giai điệu *f*, đệm *p*); [nốt hoa mỹ](/opus/piano/not-hoa-my/).
+- **Kỹ năng liên quan:** [Hai tay](/opus/piano/hai-tay/) (một tay giữ, một tay đi; giai điệu *f*, đệm *p*); [nốt hoa mỹ](/opus/piano/not-hoa-my/#appoggiatura-va-acciaccatura).
 - **Các bài khác của tập:** danh sách theo cấp ở [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
 
 ::hoc-tiep
