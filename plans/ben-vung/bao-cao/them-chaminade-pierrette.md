@@ -17,7 +17,7 @@ Nhánh `them/chaminade-pierrette`, 17/11/2026. Lượt 4 của `plans/ben-vung/l
 
 ## Kiểm định
 
-Lượt 1: 28 nhận định trang, 13 bản ghi, 4 khuông.
+Lượt 1: 28 nhận định trang, 13 bản ghi, 4 khuông. Lượt 2 (agent riêng, 38 câu): 35 đúng, 3 sai, đã sửa: móc kép của bài phần nhiều có luyến, không phải phần lớn staccato; thiếu *sf* trong danh sách sắc thái; chuỗi đi xuống ở đoạn kết là móc ba. Review (agent thứ ba) sửa thêm bốn chỗ (mục Review dưới). Kiểm mẫu: Claude kiểm thay chủ repo, 5/5 đúng. Khóa 17/11/2026; `npm run build` bản thật, `npm test`, Chromium đạt. Gộp `main` ở máy, chưa push.
 
 ## Việc ngoài phạm vi
 
