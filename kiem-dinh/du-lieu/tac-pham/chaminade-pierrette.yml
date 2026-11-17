@@ -1,0 +1,131 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/chaminade-pierrette
+ban_ghi: tac-pham/chaminade-pierrette
+lan:
+  - so: 1
+    ngay: null
+    nhanh: them/chaminade-pierrette
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5 (lượt 1, them/chaminade-pierrette, 17/11/2026)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Bản ghi mới (tools/them-tac-pham.mjs, 17/11/2026); khóa cả bản ghi. Nguồn chung với hồ sơ trang piano/tac-pham/chaminade-pierrette. ban_thu ghi bằng attach.py (chỉ dẫn link, một phần, d = 163,89 s theo ffprobe file tải từ IMSLP). Sơ đồ (hinh) chia theo thời gian trên bản thu gợi ý, không theo số ô (bản quét mờ, xem ghi_chu hồ sơ trang). them_ngay là dữ liệu nội bộ, không có nhận định.'
+nguon:
+  - id: bernard
+    bac: 1
+    ten: 'Chaminade, Pierrette, Air de ballet, Op. 41, M. Bernard, St. Petersburg, không ghi năm; bản quét IMSLP #07257'
+    link: https://imslp.org/wiki/Special:ImagefromIndex/07257
+  - id: imslp-op41
+    bac: 2
+    ten: 'IMSLP, Pierrette, Op.41 (Chaminade, Cécile): Air de ballet, Op.41, Piece Style Romantic; bản quét M. Bernard n.d.; bản thu Luis Kolodin #848447, CC BY-SA 4.0'
+    link: https://imslp.org/wiki/Pierrette,_Op.41_(Chaminade,_C%C3%A9cile)
+  - id: bnf-1889
+    bac: 2
+    ten: 'BnF: Pierrette, air de ballet pour piano. Op. 41, Enoch & Costallat (Paris), 1889, E. F. & C. 1641'
+    link: https://catalogue.bnf.fr/ark:/12148/cb42900932d
+  - id: bnf-soan-lai
+    bac: 2
+    ten: 'BnF: bản piano bốn tay 1897, măng-đô-lin 1899, dàn nhạc 1900 (Enoch); xem hồ sơ trang'
+    link: https://catalogue.bnf.fr/ark:/12148/cb41016296p
+  - id: abrsm-2025
+    bac: 2
+    ten: 'ABRSM, Piano Practical Grades 2025 & 2026: Grade 8 danh sách C số 6, Chaminade, Pierrette (Air de Ballet), Op. 41, Piano Music by Female Composers (4th revised edition 2011) (Schott)'
+    link: https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26%202026%20Prac%20syllabus%2020240524_access.pdf
+  - id: kolodin-ban-thu
+    bac: 1
+    ten: 'File bản thu Luis Kolodin (IMSLP #848447), ffprobe 163,886 s; khoảng lặng và độ to (xem hồ sơ trang)'
+    link: https://imslp.org/wiki/Special:ImagefromIndex/848447
+  - id: cap-do
+    bac: 2
+    ten: 'src/data/cap-do.yml (đã khóa): chặng 6 ứng với Grade 7–8'
+    link: https://github.com/mtuann/opus/blob/main/src/data/cap-do.yml
+nhan_dinh:
+  - id: n1
+    cau: 'Tên: Pierrette (Air de ballet) Op. 41; tác giả Cécile Chaminade; số danh mục Op. 41; loại bài học.'
+    loai: ten
+    truong: [ ten, tac_gia, danh_muc, loai ]
+    nguon: [ imslp-op41, bernard ]
+    ket_qua: dung
+    ghi_chu: 'Bản in: "PIERRETTE. AIR DE BALLET. C. CHAMINADE. Op. 41". IMSLP: Pierrette, Alternative Title Air de ballet, Op.41.'
+  - id: n2
+    cau: 'Giọng Mi♭ trưởng, nhịp 2/4.'
+    loai: cau-truc
+    truong: [ giong, nhip, chip ]
+    nguon: [ bernard ]
+    ket_qua: dung
+    ghi_chu: 'Hóa biểu ba dấu giáng, số chỉ nhịp 2/4 (tr. 3). Bốn ô mở đầu là nốt trầm Mi♭2, Si♭1 và hợp âm Mi♭–Sol–Si♭; bài kết bằng hai hợp âm fff trên nốt trầm Mi♭ (tr. 7, hai ô cuối).'
+  - id: n3
+    cau: 'Thời kỳ: Lãng mạn.'
+    loai: lich-su
+    truong: [ thoi_ky ]
+    nguon: [ imslp-op41, bnf-1889 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Composer Time Period Romantic, Piece Style Romantic; in năm 1889.'
+  - id: n4
+    cau: 'Chặng 6, Grade 8 (ABRSM Grade 8 danh sách C, đề cương 2025–2026); chip ≈ Grade 8; dòng Độ khó.'
+    loai: cap-do
+    truong: [ chang, grade, chip, thong_tin ]
+    nguon: [ abrsm-2025, cap-do ]
+    ket_qua: dung
+    ghi_chu: 'PDF ABRSM 2025 & 2026, Grade 8, danh sách C, số 6. Chặng 6 = Grade 7–8 (cap-do.yml).'
+  - id: n5
+    cau: 'Chip: "Air de ballet, in năm 1889"; dòng Sáng tác / xuất bản: Enoch & Costallat (Paris) in năm 1889 (Thư viện Quốc gia Pháp); nhiều bản soạn lại: piano bốn tay, dàn nhạc, măng-đô-lin, tam tấu.'
+    loai: nam
+    truong: [ chip, thong_tin ]
+    nguon: [ bnf-1889, bnf-soan-lai, imslp-op41 ]
+    ket_qua: dung
+    ghi_chu: 'Như n10, n11 của hồ sơ trang.'
+  - id: n6
+    cau: 'Chip "Khoảng 2 phút rưỡi".'
+    loai: so-lieu
+    truong: [ chip ]
+    nguon: [ kolodin-ban-thu ]
+    ket_qua: dung
+    ghi_chu: 'Tiếng đàn 147 s trong bản thu gợi ý.'
+  - id: n7
+    cau: 'Dòng Tác phẩm: Pierrette, Air de ballet (điệu múa ballet) cho piano, Op. 41.'
+    loai: ten
+    truong: [ thong_tin ]
+    nguon: [ bnf-1889 ]
+    ket_qua: dung
+  - id: n8
+    cau: 'Dòng Giọng · nhịp · tốc độ: Mi♭ trưởng · 2/4 · Allegretto, ♩ = 104 (số in trên bản nhạc).'
+    loai: so-lieu
+    truong: [ thong_tin ]
+    nguon: [ bernard ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 3: "Allegretto. ♩=104".'
+  - id: n9
+    cau: 'Dòng Hình thức: bốn ô mở đầu, chủ đề vang ba lần xen với một đoạn giữa nhiều màu, rồi đoạn kết; sơ đồ hinh tám ô: Mở đầu (tay trái, mf), A (chủ đề p), Mở đầu (marcatissimo), A (kết sff), B (đoạn giữa pp, ff, ppp), Chuyển (mp, poco rit.), A (a tempo, mp), Coda (pp, sfff, fff); độ dài theo bản thu (khoảng 2 phút 27 giây tiếng đàn).'
+    loai: cau-truc
+    truong: [ thong_tin, hinh ]
+    nguon: [ bernard, kolodin-ban-thu ]
+    ket_qua: dung
+    ghi_chu: 'Như n15, n16 của hồ sơ trang. Độ dài ô sơ đồ (giây): 4, 30, 5, 19, 25, 10, 20, 32, theo mốc 9, 13, 43, 48, 68, 93, 104, 124, 156 trên bản thu; tổng 145 s gần 147 s tiếng đàn.'
+  - id: n10
+    cau: 'Kỹ năng chính (ky_nang_chinh và dòng Kỹ năng chính): móc kép staccato nhẹ và hợp âm nhấn; nốt hoa mỹ ở cả hai tay; tay trái nhảy giữa nốt trầm và hợp âm; tay trái bắt chéo lên trên tay phải; sắc thái từ ppp đến fff.'
+    loai: cau-truc
+    truong: [ ky_nang_chinh, thong_tin ]
+    nguon: [ bernard ]
+    ket_qua: dung
+    ghi_chu: 'Như n5–n7 của hồ sơ trang. Nốt hoa mỹ tay phải: tr. 3 hệ 2 (ô 8), tr. 5–7 (nốt nhỏ trước hợp âm sff, fff).'
+  - id: n11
+    cau: 'Dòng Bản nhạc: IMSLP có bản quét bản in M. Bernard (St. Petersburg); ABRSM gợi ý tập Piano Music by Female Composers (Schott).'
+    loai: ten
+    truong: [ thong_tin ]
+    nguon: [ imslp-op41, abrsm-2025 ]
+    ket_qua: dung
+  - id: n12
+    cau: 'Đối chiếu: chép tay từ bản quét bản in M. Bernard (St. Petersburg, không ghi năm; IMSLP #07257).'
+    loai: so-lieu
+    truong: [ doi_chieu ]
+    nguon: [ bernard ]
+    ket_qua: dung
+  - id: n13
+    cau: 'Bản thu: Luis Kolodin, CC BY-SA 4.0, trang IMSLP Pierrette, Op.41; một phần, link #848447, file PMLP17439-chaminade-pierrette-op.41.mp3, 163,89 s.'
+    loai: so-lieu
+    truong: [ ban_thu ]
+    nguon: [ imslp-op41, kolodin-ban-thu ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Performer Luis Kolodin, Creative Commons Attribution-ShareAlike 4.0. ffprobe 163,886 s.'
