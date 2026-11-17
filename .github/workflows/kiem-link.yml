@@ -20,7 +20,9 @@ concurrency:
 
 jobs:
   kiem-link:
-    runs-on: ubuntu-latest
+    # ghim Ubuntu 24.04 như deploy.yml, test.yml (ubuntu-latest đã sang 26.04, WebKit của Playwright 1.64.1 không chạy): mọi
+    # workflow cùng một máy. Bỏ ghim khi Playwright hỗ trợ Ubuntu 26.
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v7
@@ -95,7 +97,7 @@ jobs:
   # độ dài, giấy phép), cùng NGUON.txt và mốc trong trang; không cần ffmpeg. Yêu cầu tới Commons gửi User-Agent
   # opus-kiem-dinh/1.0 (tools/audio/net.py), nghỉ 2,5 giây giữa hai yêu cầu.
   ban-thu:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v7

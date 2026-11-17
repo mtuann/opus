@@ -31,7 +31,9 @@ jobs:
   # Chọn phần theo file đổi: push so với origin/main, pull request so với nhánh đích. Không đọc được thì chạy đủ.
   chon:
     name: Chọn phần
-    runs-on: ubuntu-latest
+    # ghim Ubuntu 24.04: ubuntu-latest đã sang 26.04, thiếu libicudata.so.74 mà WebKit của Playwright 1.64.1 cần (17/11/2026).
+    # Bỏ ghim khi Playwright hỗ trợ Ubuntu 26.
+    runs-on: ubuntu-24.04
     timeout-minutes: 5
     outputs:
       cac-phan: ${{ steps.chon.outputs.cac-phan }}
@@ -55,7 +57,7 @@ jobs:
   kiem-thu:
     name: Kiểm thử (bản xem, ${{ matrix.phan }})
     needs: chon
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     # các phần chạy song song (.github/actions/kiem-thu), do job chon chọn: npm test, kiểm thử trình duyệt trên từng trình
     # duyệt, Lighthouse, ảnh chụp cho review. Một phần hỏng thì các phần khác vẫn chạy tới cuối, để thấy hết lỗi trong một lần
     strategy:

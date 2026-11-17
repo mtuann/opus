@@ -28,7 +28,9 @@ concurrency:
 jobs:
   kiem:
     name: Build và kiểm thử (bản thật)
-    runs-on: ubuntu-latest
+    # ghim Ubuntu 24.04: ubuntu-latest đã sang 26.04, thiếu libicudata.so.74 mà WebKit của Playwright 1.64.1 cần (17/11/2026).
+    # Bỏ ghim khi Playwright hỗ trợ Ubuntu 26.
+    runs-on: ubuntu-24.04
     # chặn đường treo (mặc định của GitHub là 6 giờ)
     timeout-minutes: 30
     # đọc lần deploy đạt gần nhất (bước "Mốc")
@@ -121,7 +123,7 @@ jobs:
     name: Kiểm thử (bản thật, ${{ matrix.phan }})
     needs: kiem
     if: needs.kiem.outputs.ba-trinh-duyet == '1'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     strategy:
       fail-fast: true
       matrix:
@@ -139,7 +141,7 @@ jobs:
     needs: [kiem, ba-trinh-duyet]
     # ba-trinh-duyet bị bỏ (chỉ đổi nội dung) vẫn đăng; hỏng hay bị hủy thì không
     if: ${{ !cancelled() && needs.kiem.result == 'success' && (needs.ba-trinh-duyet.result == 'success' || needs.ba-trinh-duyet.result == 'skipped') }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     # deploy-pages tự chờ tối đa 10 phút: để dư
     timeout-minutes: 15
     permissions:
