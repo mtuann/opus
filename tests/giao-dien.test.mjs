@@ -215,12 +215,31 @@ test('mỗi trang đã dựng mang nhãn nhóm của nó (tên, màu nhóm) phí
 	if (!co) t.skip('bản build chưa có trang nào thuộc một nhóm');
 });
 
+test('menu: bài học thêm sau (không có trong THU_TU) đứng sau bài cuối cùng có chặng không lớn hơn', () => {
+	const chang = new Map(parse(fs.readFileSync(path.join(ROOT, 'src', 'data', 'tac-pham.yml'), 'utf8')).filter((r) => r.loai === 'bai-hoc').map((r) => [`piano/tac-pham/${r.slug}`, r.chang]));
+	const cu = [...chang.keys()];
+	const moi = { 'piano/tac-pham/zz-moi-chang-1': 1, 'piano/tac-pham/zz-moi-chang-2': 2, 'piano/tac-pham/zz-moi-chang-5': 5, 'piano/tac-pham/zz-moi-chang-7': 7 };
+	const c = new Map([...chang, ...Object.entries(moi)]);
+	const tp = menu([...cu, ...Object.keys(moi)], new Map(), {}, c).find((g) => g.items.some((x) => String(x.slug ?? '').startsWith('piano/tac-pham/')));
+	const ds = tp.items.map((x) => String(x.slug ?? '')).filter((s) => s.startsWith('piano/tac-pham/') && c.has(s));
+	assert.equal(ds.length, cu.length + 4);
+	assert.ok(ds.every((s, i) => i === 0 || c.get(ds[i - 1]) <= c.get(s)), ds.map((s) => `${s}(${c.get(s)})`).join(' '));
+	// bài mới đứng cuối chặng của nó: ngay sau nó là bài chặng lớn hơn (hay hết danh sách)
+	for (const t of Object.keys(moi)) {
+		const i = ds.indexOf(t);
+		assert.ok(i === ds.length - 1 || c.get(ds[i + 1]) > c.get(t), `${t} chưa ở cuối chặng ${c.get(t)}`);
+	}
+	// không truyền chặng thì như trước: trang không có trong THU_TU ở cuối nhóm
+	const cuoi = menu([...cu, 'piano/tac-pham/zz-moi-chang-1'], new Map()).find((g) => g.items.some((x) => String(x.slug ?? '').startsWith('piano/tac-pham/')));
+	assert.equal(cuoi.items.at(-1).slug, 'piano/tac-pham/zz-moi-chang-1');
+});
+
 test('menu và sách: bài học tác phẩm xếp tăng dần theo chặng (chủ repo chọn 09/11/2026)', async () => {
 	const { THU_TU_TAC_PHAM } = await import('../src/sach/sach.mjs');
 	const chang = new Map(parse(fs.readFileSync(path.join(ROOT, 'src', 'data', 'tac-pham.yml'), 'utf8')).filter((r) => r.loai === 'bai-hoc').map((r) => [r.slug, r.chang]));
 	const tang = (ds) => ds.every((s, i) => i === 0 || chang.get(ds[i - 1]) <= chang.get(s));
 	const trang = [...chang.keys()].map((s) => `piano/tac-pham/${s}`);
-	const tp = menu(trang, new Map()).find((g) => g.items.some((x) => String(x.slug ?? '').startsWith('piano/tac-pham/')));
+	const tp = menu(trang, new Map(), {}, new Map(trang.map((t) => [t, chang.get(t.slice('piano/tac-pham/'.length))]))).find((g) => g.items.some((x) => String(x.slug ?? '').startsWith('piano/tac-pham/')));
 	const menuBaiHoc = tp.items.map((x) => String(x.slug ?? '')).filter((s) => s.startsWith('piano/tac-pham/')).map((s) => s.slice('piano/tac-pham/'.length));
 	assert.equal(menuBaiHoc.length, chang.size);
 	assert.ok(tang(menuBaiHoc), `menu: ${menuBaiHoc.map((s) => `${s}(${chang.get(s)})`).join(' ')}`);

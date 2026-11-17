@@ -21,6 +21,9 @@ const site = 'https://mtuann.github.io';
 // Tầng của trang (src/data/trang.yml): trang Đọc thêm xếp nhóm theo tầng. Dữ liệu sai thì báo lỗi ngay ở đây, như khi nạp
 // bộ dữ liệu (src/du-lieu.mjs).
 const tang = new Map(duLieuDaKiem().trang.map((r) => [r.id, r.tang]));
+// Chặng của bài học tác phẩm: bài thêm sau đứng đúng chỗ theo chặng trong menu (menu() của src/nhom.mjs). Chỉ dùng để xếp,
+// không hiện ra, như chương tác phẩm của sách in (chuongTacPham).
+const changBaiHoc = new Map(duLieuDaKiem()['tac-pham'].filter((r) => r.loai === 'bai-hoc').map((r) => [`piano/tac-pham/${r.slug}`, r.chang]));
 // Trang chặng trong menu, ngay sau trang lộ trình: "Chặng 3. Sơ trung cấp". Menu có ở mọi trang (luôn đăng), nên tên chặng
 // chỉ đọc trường đã khóa (chiDaKhoa).
 const trangChangMenu = duLieuCho('menu bên', { luonKhoa: true }).capDo.map((c) => ({ link: `/piano/lo-trinh/chang-${c.id}/`, label: `Chặng ${c.id}. ${c.ten}` }));
@@ -75,7 +78,7 @@ export default defineConfig({
 			favicon: '/favicon.svg',
 			// Menu đủ 9 nhóm (src/nhom.mjs), chỉ trang có trong bản build này; nhóm chưa có trang hiện "sắp có"
 			// (src/components/Sidebar.astro). Đang chạy npm run dev mà thêm, xóa trang thì khởi động lại để menu cập nhật.
-			sidebar: menu(trangDocsTrongBan(), tang, { 'lo-trinh': { sau: 'piano/lo-trinh', muc: trangChangMenu } }),
+			sidebar: menu(trangDocsTrongBan(), tang, { 'lo-trinh': { sau: 'piano/lo-trinh', muc: trangChangMenu } }, changBaiHoc),
 			// Biểu tượng GitHub ở thanh trên: repo đã công khai (09/11/2026)
 			social: [{ icon: 'github', label: 'Mã nguồn trên GitHub', href: 'https://github.com/mtuann/opus' }],
 			customCss: ['./src/styles/fonts.css', './src/styles/opus.css', './src/styles/thanh-phan.css'],

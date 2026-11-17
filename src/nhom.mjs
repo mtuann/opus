@@ -6,7 +6,8 @@
 // chỗ: trang dưới piano/lo-trinh/ (các trang chặng của đợt 2) vào Lộ trình, nhom_menu() cho vào Piano; trang ngoài mọi
 // mục đã biết không có nhãn, nhom_menu() cho vào Nhạc cổ điển. Nhóm thứ chín của menu, "Thêm", không có nhãn.
 // Menu bên (thanh bên của Starlight) dựng ở menu() dưới đây: đủ 9 nhóm, trang trong mỗi nhóm theo thứ tự menu của site cũ
-// (THU_TU), riêng bài học tác phẩm xếp tăng dần theo chặng (giữ thứ tự cũ trong cùng chặng; chủ repo chọn 09/11/2026); nhóm chưa có trang nào trong bản build vẫn hiện, kèm nhãn "sắp có" (src/components/Sidebar.astro).
+// (THU_TU), riêng bài học tác phẩm xếp tăng dần theo chặng (giữ thứ tự cũ trong cùng chặng; chủ repo chọn 09/11/2026; bài thêm
+// sau xếp theo chặng trong dữ liệu); nhóm chưa có trang nào trong bản build vẫn hiện, kèm nhãn "sắp có" (src/components/Sidebar.astro).
 
 /** Biểu tượng nét (24×24, stroke = currentColor), dùng chung cho nhãn và thẻ. */
 const BIEU_TUONG = {
@@ -328,11 +329,22 @@ export function nhomMenu(id, tang) {
  * trang chặng: { 'lo-trinh': { sau: 'piano/lo-trinh', muc: [{ link: '/piano/lo-trinh/chang-1/', label: 'Chặng 1' }] } }.
  * Nhóm chưa có trang nào: items rỗng, src/components/Sidebar.astro hiện tên nhóm kèm nhãn "sắp có". Nhóm thu gọn, trừ
  * nhóm có trang đang xem (Starlight tự mở).
+ * Bài học tác phẩm thêm sau (không có trong THU_TU, như trang do tools/them-tac-pham.mjs tạo) đứng sau bài cuối cùng của
+ * THU_TU có chặng không lớn hơn, theo `chang` (trang -> chặng, từ src/data/tac-pham.yml), như chương của sách in
+ * (chuongTacPham, src/sach/sach.mjs); không có chặng thì cuối nhóm như trước.
  * @param {string[]} trang
  * @param {Map<string, string>} tang tầng của trang (src/data/trang.yml): trang Đọc thêm xếp theo tầng
+ * @param {Map<string, number>} chang chặng của bài học tác phẩm, khóa là trang như "piano/tac-pham/fur-elise"
  */
-export function menu(trang, tang = new Map(), them = {}) {
+export function menu(trang, tang = new Map(), them = {}, chang = new Map()) {
 	const viTri = new Map(THU_TU.map(([t], i) => [t, i]));
+	// bài học mới: ngay sau bài cuối của THU_TU có chặng ≤ chặng của nó (cùng chỗ thì theo tên trang)
+	for (const t of trang) {
+		if (viTri.has(t) || !chang.has(t)) continue;
+		const truoc = THU_TU.map(([x], i) => [x, i]).filter(([x]) => chang.has(x) && chang.get(x) <= chang.get(t));
+		const dau = THU_TU.findIndex(([x]) => chang.has(x));
+		viTri.set(t, truoc.length ? truoc.at(-1)[1] + 0.5 : dau - 0.5);
+	}
 	const tenNgan = new Map(THU_TU.filter(([, l]) => l).map(([t, l]) => [t, l]));
 	return [...NHOM, NHOM_THEM].map((n) => {
 		const ds = trang
