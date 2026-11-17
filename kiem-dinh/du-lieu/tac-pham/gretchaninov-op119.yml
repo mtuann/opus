@@ -1,0 +1,129 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/gretchaninov-op119
+ban_ghi: tac-pham/gretchaninov-op119
+lan:
+  - so: 1
+    ngay: null
+    nhanh: them/gretchaninov-op119
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5 (lượt 1, them/gretchaninov-op119, 17/11/2026)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Bản ghi mới (tools/them-tac-pham.mjs, 17/11/2026); khóa cả bản ghi. Không có giong, nhip (hai bài khác giọng). Nguồn chung với hồ sơ trang piano/tac-pham/gretchaninov-op119. thoi_ky "Thế kỷ 20" theo năm viết (1929) và theo cách site đã xếp các tập của Gretchaninov (piano/tac-pham-theo-cap: Op. 98, Op. 123 ở cột "Thế kỷ 20"); IMSLP ghi Piece Style "Romantic" cho Op. 119: ghi ở n2. ban_thu ghi bằng attach.py (chỉ dẫn link, hai phần). them_ngay là dữ liệu nội bộ, không có nhận định.'
+nguon:
+  - id: schott-1929
+    bac: 1
+    ten: 'Gretchaninoff, Das Großvaterbuch Op. 119, Schott, Mainz [khoảng 1929], số bản in 32355; bản quét IMSLP #269926'
+    link: https://imslp.org/wiki/Special:ImagefromIndex/269926
+  - id: imslp-op119
+    bac: 2
+    ten: 'IMSLP, Grandfather''s Album, Op.119 (Grechaninov, Aleksandr) (wikitext qua API): 17 pieces, Schott ca.1929 plate 32355, Year/Date of Composition 1929?, Piece Style Romantic, bản thu Jörg Römgens CC BY-SA 4.0'
+    link: https://imslp.org/wiki/Grandfather's_Album,_Op.119_(Grechaninov,_Aleksandr)
+  - id: rcm-2022
+    bac: 2
+    ten: 'The Royal Conservatory, Piano Syllabus 2022 Edition, Level 4 (Op. 119 số 2, 4, 15, 16)'
+    link: https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf
+  - id: cap-do
+    bac: 2
+    ten: 'src/data/cap-do.yml (đã khóa): chặng 3 ứng với Grade 3'
+    link: https://github.com/mtuann/opus/blob/main/src/data/cap-do.yml
+nhan_dinh:
+  - id: n1
+    cau: "Tên: Grandfather's Album (Das Großvaterbuch) Op. 119, số 1 và 7; tác giả Alexander Gretchaninov; số danh mục Op. 119; loại bài học."
+    loai: ten
+    truong: [ten, tac_gia, danh_muc, loai]
+    nguon: [imslp-op119, schott-1929]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: tựa trang "Grandfather''s Album, Op.119"; bản in: "Das Großvaterbuch … Op. 119", "A. Gretchaninoff".'
+  - id: n2
+    cau: 'Thời kỳ: Thế kỷ 20 (tác phẩm viết, in năm 1929).'
+    loai: lich-su
+    truong: [thoi_ky]
+    nguon: [imslp-op119]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Year/Date of Composition "1929?", First Publication 1929. IMSLP xếp Piece Style "Romantic" (theo phong cách); site xếp theo thời gian viết như các tập Op. 98, 123 ở piano/tac-pham-theo-cap.'
+  - id: n3
+    cau: 'Chặng 3, Grade 3 (ước lượng): số 1 và 7 không có trong các đề cương đã đọc; RCM 2022 xếp số 2, 4, 15, 16 của tập ở Level 4.'
+    loai: cap-do
+    truong: [chang, grade, chip, thong_tin]
+    nguon: [rcm-2022, cap-do]
+    ket_qua: dung
+    ghi_chu: 'RCM 2022 Level 4 có Op. 119 số 2, 4, 15, 16. Chặng 3 = Grade 3 (cap-do.yml). Dòng Độ khó ghi rõ "ước lượng".'
+  - id: n4
+    cau: 'Kỹ năng chính: giai điệu nhịp chấm dôi hát trên hợp âm móc đơn của tay trái, nốt hoa mỹ (số 1); hai bè trong tay phải, giọng thứ, sắc thái và rall. (số 7).'
+    loai: cau-truc
+    truong: [ky_nang_chinh, thong_tin]
+    nguon: [schott-1929]
+    ket_qua: dung
+    ghi_chu: Như hồ sơ trang n4, n5.
+  - id: n5
+    cau: 'Đối chiếu: chép tay từ bản quét bản in Schott (Mainz, khoảng 1929, số bản in 32355; IMSLP #269926).'
+    loai: ten
+    truong: [doi_chieu]
+    nguon: [schott-1929]
+    ket_qua: dung
+  - id: n6
+    cau: Bài không vào gợi ý tập ở trang chủ (goi_y false).
+    loai: khuyen-tap
+    truong: [goi_y]
+    nguon: []
+    ket_qua: khong-can-nguon
+  - id: n7
+    cau: 'Chip: "Op. 119 số 1 và 7"; "Hai tiểu phẩm cho trẻ em, viết năm 1929".'
+    loai: lich-su
+    truong: [chip]
+    nguon: [imslp-op119, schott-1929]
+    ket_qua: dung
+  - id: n8
+    cau: "Dòng Tác phẩm: Das Großvaterbuch (tạm dịch: Cuốn sách của ông), Op. 119: 17 bài piano ngắn cho trẻ em; tựa in bằng bốn thứ tiếng (Đức, Pháp, Anh, Nga; tiếng Anh Grandfather's Book, thường gọi Grandfather's Album); số 1 Meine liebe Mutti! (Mẹ yêu), số 7 Traurige Geschichte (Chuyện buồn)."
+    loai: ten
+    truong: [thong_tin]
+    nguon: [schott-1929, imslp-op119]
+    ket_qua: dung
+    ghi_chu: 'Bản in: "Grandfathers book"; IMSLP đặt tên trang "Grandfather''s Album". "Cho trẻ em": RCM, IMSLP xếp vào bài cho người học; tên các bài (Mẹ yêu, Mèo con ốm, Đi dạo…) là cảnh của trẻ nhỏ.'
+  - id: n9
+    cau: 'Dòng Sáng tác / xuất bản: Schott, Mainz, in khoảng năm 1929 (bản in không ghi năm; số bản in 32355).'
+    loai: nam
+    truong: [thong_tin]
+    nguon: [imslp-op119, schott-1929]
+    ket_qua: dung
+  - id: n10
+    cau: 'Dòng Giọng · nhịp · tốc độ: số 1 Fa trưởng, 3/4, Dolce; số 7 Mi thứ, 6/8, Moderato.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: [schott-1929]
+    ket_qua: dung
+  - id: n11
+    cau: 'Dòng Hình thức: hai bài cùng dạng ba đoạn A – B – A, nhắc lại từ đầu đoạn B; số 1 có 20 ô, số 7 có 24 ô.'
+    loai: cau-truc
+    truong: [thong_tin]
+    nguon: [schott-1929]
+    ket_qua: dung
+  - id: n12
+    cau: 'Dòng Nhà soạn nhạc: Alexander Gretchaninov (1864–1956).'
+    loai: nam
+    truong: [thong_tin]
+    nguon: [imslp-op119]
+    ket_qua: dung
+    ghi_chu: Khớp bản ghi nha-soan-nhac/gretchaninov.
+  - id: n13
+    cau: 'Dòng Bản nhạc: IMSLP có bản quét bản in Schott.'
+    loai: ten
+    truong: [thong_tin]
+    nguon: [imslp-op119]
+    ket_qua: dung
+  - id: n14
+    cau: 'Sơ đồ: số 1 A (ô 1–8, mf, câu 4 ô vang hai lần), B (9–16, có Sol♯ và Si♮), A (17–20, p, rit.); số 7 A (1–8, mf, tay phải hai bè), B (9–16, giai điệu một bè, frall.), A (17–24, a tempo, rall. e dim.); đoạn B và A trở lại được nhắc lại một lần.'
+    loai: cau-truc
+    truong: [hinh]
+    nguon: [schott-1929]
+    ket_qua: dung
+    ghi_chu: Như hồ sơ trang n14–n22.
+  - id: n15
+    cau: 'Bản thu: Jörg Römgens, giấy phép CC BY-SA 4.0, trên IMSLP; số 1 (#517116, 72,81 s), số 7 (#517122, 106,51 s), chỉ dẫn link.'
+    loai: ten
+    truong: [ban_thu]
+    nguon: [imslp-op119]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: File Name 1 PMLP437344-GRETCHANINOV_-_Op.119_No.1_-_My_Dear_Mummy.mp3, File Name 7 …No.7_-_Sad_Story.mp3; Römgens, Jörg=piano; Creative Commons Attribution-ShareAlike 4.0. Bản MCPP (số 2, 4, 15, 16) là NonCommercial: không dùng. Độ dài: ffprobe.'
