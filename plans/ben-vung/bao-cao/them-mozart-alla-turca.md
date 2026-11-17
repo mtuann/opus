@@ -70,3 +70,7 @@ Claude (agent riêng, không làm lượt 1, lượt 2), 17/11/2026. Mọi nhậ
 - **Chữ, thuật ngữ.** Allegretto, presto, appoggiatura (nốt dựa, nốt nhỏ không gạch), coda, rondo khớp `thuat-ngu.yml`. Nhãn `ve-site` (n3, n28) và `khuyen-tap` (n20, n22, n25–n27) đúng.
 
 Kiểm thử sau review: `npm run build:xem` đạt; `OPUS_TRINH_DUYET=chromium OPUS_CHI_TRANG_DOI=1 OPUS_TRANG=piano/tac-pham/mozart-alla-turca/ npm run test:trinh-duyet` 194 đạt, 3 bỏ qua, 0 hỏng; `npm test` 352 đạt, 2 bỏ qua, 1 hỏng: `tests/tac-pham.test.mjs` ("them-tac-pham: thêm bản ghi ở cuối…"). Lỗi này vì nhánh chưa rebase lên commit `6c6ef8e` của `main` (kiểm thử dùng slug giả); không sửa file kiểm thử trong nhánh này.
+
+## Kiểm mẫu và khóa
+
+Claude (agent riêng) kiểm thay chủ repo 5 nhận định mẫu (trang n1, n6, n7, n11, n13) trên bản Artaria, IMSLP, lời tựa Henle và bản thu Commons: 5 đúng. Khóa trang và bản ghi 17/11/2026.
