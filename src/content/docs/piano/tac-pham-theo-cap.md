@@ -101,7 +101,7 @@ Những tác phẩm cổ điển thật đầu tiên: vũ khúc ngắn của th�
 | [Schumann: *Album für die Jugend* Op. 68](/opus/piano/tac-pham/schumann-album/): *Melodie* (số 1), *Wilder Reiter* (số 8), *Fröhlicher Landmann* (số 10); thêm *Soldatenmarsch* (số 2) | Lãng mạn | Giai điệu hát trên phần đệm, staccato chắc, giai điệu chuyển xuống tay trái (*Wilder Reiter*) |
 | Tchaikovsky: *Album for the Young* Op. 39: [*Old French Song* (Bài ca Pháp cổ)](/opus/piano/tac-pham/tchaikovsky-bai-ca-phap-co/), *The Sick Doll* (Búp bê ốm) | Lãng mạn | Giai điệu buồn hát trên hợp âm, sắc thái *p* và *pp*, "thở" ở cuối câu |
 | Kabalevsky: *24 Pieces for Children* Op. 39, ví dụ *Clowns* (Chú hề, số 20) | Thế kỷ 20 | Bài một trang, mỗi bài một hình ảnh; nhịp nhanh, staccato, tính hài hước |
-| Bartók: *For Children* (Cho thiếu nhi) Sz. 42 | Thế kỷ 20 | Dân ca Hungary và Slovakia: giai điệu hát legato trên phần đệm giản dị, điệu thức dân gian |
+| [Bartók: *For Children* (Cho thiếu nhi) Sz. 42](/opus/piano/tac-pham/bartok-for-children/) | Thế kỷ 20 | Dân ca Hungary và Slovakia: giai điệu hát legato trên phần đệm giản dị, điệu thức dân gian |
 | Gretchaninov: *Children's Album* Op. 98; *Glass Beads* (Chuỗi hạt thủy tinh) Op. 123 | Thế kỷ 20 | Bài ngắn giàu hình ảnh, nhiều kiểu chạm phím |
 | Shostakovich: *Children's Notebook* (Vở của bé) Op. 69: *March*, *Waltz*, *Bear* | Thế kỷ 20 | Hài hước, hòa âm bất ngờ, staccato nhẹ |
 | Burgmüller: *25 Études faciles et progressives* Op. 100: [*La candeur* (Ngây thơ, số 1)](/opus/piano/tac-pham/burgmuller-la-candeur/), *La pastorale* (số 3) | Lãng mạn | Étude có nhạc tính: legato, cân bằng giai điệu và phần đệm |
@@ -123,6 +123,7 @@ Những tác phẩm cổ điển thật đầu tiên: vũ khúc ngắn của th�
 | Tchaikovsky: *Album for the Young*: [*Morning Prayer* (Cầu nguyện buổi sáng)](/opus/piano/tac-pham/tchaikovsky-cau-nguyen-buoi-sang/), *Sweet Dreams* (Giấc mơ ngọt ngào), *Italian Song* (Bài ca Ý), *Waltz* | Lãng mạn | Giai điệu dài legato, đệm valse, bàn đạp |
 | Schumann: Op. 68: *Erster Verlust* (Mất mát đầu tiên, số 16) | Lãng mạn | Câu nhạc than thở trong giọng thứ, legato không đánh mạnh nốt cao; nên học kèm [bài học Op. 68](/opus/piano/tac-pham/schumann-album/) |
 | Kabalevsky: *Toccatina* Op. 27 số 12 | Thế kỷ 20 | Nhịp chắc, hợp âm nhẹ và đều ở tốc độ nhanh |
+| [Gretchaninov: *Grandfather's Album* Op. 119](/opus/piano/tac-pham/gretchaninov-op119/): *Meine liebe Mutti!* (Mẹ yêu, số 1), *Traurige Geschichte* (Chuyện buồn, số 7) | Thế kỷ 20 | Giai điệu hát trên đệm hợp âm; hai bè trong một tay ở giọng thứ |
 | Prokofiev: *Music for Children* Op. 65: *Morning* (Buổi sáng, số 1), *Promenade* (Dạo chơi, số 2) | Thế kỷ 20 | Âm vực rộng, legato, hòa âm chuyển bất ngờ |
 | Heller: *25 Studies for Rhythm and Expression* Op. 47 | Lãng mạn | Étude nhạc tính về tiết tấu và diễn cảm |
 | Pärt: *Für Alina* (1976) | Đương đại | Rất ít nốt: bài học về tiếng ngân, khoảng lặng và lắng nghe |
@@ -169,7 +170,7 @@ Chương sonata thật đầu tiên, phức điệu Bach có chủ đích, và *
 | Brahms: Valse La♭ trưởng Op. 39 số 15 | Lãng mạn | Giai điệu quãng ba, quãng sáu trong một tay, đệm valse mềm |
 | Kabalevsky: Sonatina Đô trưởng Op. 13 số 1 | Thế kỷ 20 | Hình thức sonatina với hòa âm thế kỷ 20 |
 | Debussy: *The Little Shepherd* (Chú mục đồng nhỏ), trong *Children's Corner* | Ấn tượng | Giai điệu độc tấu tự do như tiếng sáo, sắc thái *pp*, nhịp co giãn |
-| Bartók: *Romanian Folk Dances* (Vũ khúc dân gian Romania) Sz. 56 | Thế kỷ 20 | Sáu điệu múa ngắn, tương phản nhịp và màu sắc |
+| [Bartók: *Romanian Folk Dances* (Vũ khúc dân gian Romania) Sz. 56](/opus/piano/tac-pham/bartok-romanian-folk-dances/) | Thế kỷ 20 | Sáu điệu múa ngắn, tương phản nhịp và màu sắc |
 
 ## Chặng 6. Nâng cao (≈ Grade 7–8)
 

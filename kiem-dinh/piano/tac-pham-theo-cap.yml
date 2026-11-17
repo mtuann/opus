@@ -11,6 +11,15 @@ lan:
       luot_2: Claude Sonnet 5.5 (lượt 2 nhánh gom đợt 8, 05/11/2026); Claude Opus 5.5 (lượt 2 làm lại cho câu khong-chac của lượt 2 bổ sung)
       review: Claude Opus 5.5 (review D8-gom, 05/11/2026)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 05/11/2026 (chủ repo không tự kiểm): 12 nhận định mẫu của đợt 8, 9 đúng, 2 sai đã sửa (nhac-cu/trumpet n8 Si♭ và Đô là hai loại dùng nhiều nhất; n19 bè Baroque nay chơi bằng piccolo hoặc trumpet tự nhiên kiểu cổ; sửa theo cả n16, n25), 1 không kiểm được (nu-nha-soan-nhac n84: nguồn chỉ có bản lưu Wayback, bị chặn) (bao-cao/d8-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-17
+    nhanh: mo/sau-dot-2
+    ma_bam: sha256:e505f53676dc8157d4823fa23388f90ac2c760186a1eab2e70f7f326a1bc0c6e
+    nguoi:
+      luot_1: Claude Opus 5.5 (lượt 1, mo/sau-dot-2, 17/11/2026)
+      luot_2: "Claude Sonnet 5.5 (agent riêng, 17/11/2026; hai câu mới cần nguồn: ke-hoach n7, tac-pham-theo-cap n78; 2 đúng)"
+      review: Claude Sonnet 5.5 (agent riêng, 17/11/2026)
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 17/11/2026: ke-hoach n7, tac-pham-theo-cap n78, n79; 3 đúng"
 ghi_chu: 'D8-L1 phần 1/2, lượt 1 (05/11/2026). Việc chính: chặng của bốn bài có bản ghi khớp src/data/tac-pham.yml (n3, n38); bảng mức Henle kiểm trên trang sản phẩm henle.de của từng ấn bản (n10–n32, đã mở 05/11/2026; K. 545 sửa 4–5 thành 5); ABRSM kiểm trên hai PDF 2025 & 2026 và 2027 & 2028 (Practical và Performance); bảng chặng có 170 hàng ngoài bản ghi và mục ngoài cổ điển (6 bài) chỉ kiểm một phần: xem n49, n52–n54, n62–n71 (ket_qua null, "chưa chắc"). Người giao cần: (1) quyết chặng của Nocturne Op. 72 số 1 (ABRSM Grade 8 trong 2027 & 2028, Henle 5), Impromptu Op. 90 số 2 (n52, n53); (2) đồng bộ doi_chu (cu, moi viết theo chữ hiện ra; hàng bảng ghi "ô | ô"); (3) trang không có khuông nhạc (khối abc); (4) dòng "Kiểm tra lần cuối" của trang cũ không có ở trang này. Review D8-gom (Claude Opus 5.5): câu ve-site kiểm lại trên trang, src/data và bản xem (dist riêng trong scratchpad); câu lượt 2 khong-chac đã quyết (mở thêm nguồn, viết lại hay bỏ); kiểm từng hàng các bảng chặng (r1–r7, hai agent Sonnet chia theo chặng, review đọc lại); chi tiết bản nhạc ở mục ngoài cổ điển đối chiếu trang mẫu Musicnotes (s1–s6). Nocturne Op. 72 số 1 không có bản ghi trong src/data/tac-pham.yml: chặng 5 là lựa chọn của site, ô bảng nói thêm ABRSM Grade 8 và Henle 5.'
 nguon:
   - id: henle-levels
@@ -689,6 +698,10 @@ nguon:
     bac: 2
     ten: "Musicnotes, River Flows in You (Yiruma), Piano Solo MN0073222, La trưởng, q = 65: trang mẫu: tay trái rải hợp âm, đi lại một vòng bốn hợp âm (Fa♯ thứ – Rê – La – Mi) và lặp (lượt 2 bổ sung, truy cập 05/11/2026)"
     link: https://www.musicnotes.com/sheetmusic/yiruma/river-flows-in-you/MN0073222
+  - id: imslp-gret-op119
+    bac: 2
+    ten: "IMSLP, Grandfather's Album, Op.119 (Grechaninov, Aleksandr): 17 pieces, 1. Meine liebe Mutti! — My dear mummy, 7. Traurige Geschichte — Sad story; Schott ca.1929 (wikitext qua API, 17/11/2026)"
+    link: https://imslp.org/wiki/Grandfather's_Album,_Op.119_(Grechaninov,_Aleksandr)
 nhan_dinh:
   - id: n1
     cau: Danh mục xếp tác phẩm theo đúng 7 chặng của lộ trình piano; mỗi chặng có một bảng gồm tác phẩm, thời kỳ và điều học được; bài có bài học chi tiết trên site được gắn link.
@@ -1501,7 +1514,7 @@ nhan_dinh:
       - r-107-1
       - hl-kab39
     ket_qua: da-sua
-    ghi_chu: 'Review D8-gom (Claude Opus 5.5): kiểm từng hàng (agent Sonnet, review đọc lại; bảng kết quả trong scratchpad của phiên, hang-chang-1-4.yml). Bài có link (bản ghi đã khóa) không kiểm lại. Chặng là lựa chọn của site, không kiểm. Bỏ tên bài "Burleske" khỏi hàng Notenbuch für Wolfgang (chỉ có nguồn bậc 3). Tên ba bài Shostakovich: IMSLP Op. 69 (bài 1–3) cộng pianolibrary (bậc 3, không ghi làm nguồn).'
+    ghi_chu: 'Review D8-gom (Claude Opus 5.5): kiểm từng hàng (agent Sonnet, review đọc lại; bảng kết quả trong scratchpad của phiên, hang-chang-1-4.yml). Bài có link (bản ghi đã khóa) không kiểm lại. Chặng là lựa chọn của site, không kiểm. Bỏ tên bài "Burleske" khỏi hàng Notenbuch für Wolfgang (chỉ có nguồn bậc 3). Tên ba bài Shostakovich: IMSLP Op. 69 (bài 1–3) cộng pianolibrary (bậc 3, không ghi làm nguồn). Lần mở 17/11/2026 (mo/sau-dot-2): For Children nay có bản ghi bartok-for-children và link tới bài học (n79); chữ câu không đổi.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Notebook_for_Anna_Magdalena_Bach_(Bach,_Johann_Sebastian)", "https://imslp.org/wiki/Notebook_for_Wolfgang_(Mozart,_Leopold)", "https://imslp.org/wiki/Andante_in_C_major,_K.1a_(Mozart,_Wolfgang_Amadeus)", "https://imslp.org/wiki/Allegro_in_B-flat_major,_K.3_(Mozart,_Wolfgang_Amadeus)", "https://imslp.org/wiki/Album_f%C3%BCr_die_Jugend,_Op.68_(Schumann,_Robert)", "https://imslp.org/wiki/Children%27s_Album,_Op.39_(Tchaikovsky,_Pyotr)", "https://www.halleonard.com/product/296691/kabalevsky-24-pieces-for-children-opus-39", "https://imslp.org/wiki/For_Children,_Sz.42_(Bart%C3%B3k,_B%C3%A9la)", "https://imslp.org/wiki/Livre_d'enfants,_Op.98_(Grechaninov,_Aleksandr)", "https://imslp.org/wiki/Glass_Beads,_Op.123_(Grechaninov,_Aleksandr)", "https://www.halleonard.com/product/297102/shostakovich-childrens-notebook-opus-69", "https://imslp.org/wiki/25_%C3%89tudes_faciles_et_progressives,_Op.100_(Burgm%C3%BCller,_Friedrich)" ]
     luot_2_ghi_chu: "Từng hàng: sổ thứ hai (1725) của Anna Magdalena có 7. Menuet G-dur BWV Anh.116, 10. Polonaise g-moll BWV Anh.119, 16. Marche D-dur (Ph.E. Bach) BWV Anh.122 (IMSLP). Notebook for Wolfgang: khoảng 1762, có Menuet và Bourrée; IMSLP dẫn Plath (NMA): lời đề tặng là giả, đây là 'anonymous piano- and music-book from about 1750', khớp 'sổ khuyết danh giữa thế kỷ 18'. Mozart K.1a (Andante Đô trưởng), K.3 (Allegro Si♭ trưởng) có trang IMSLP. Schumann Op.68: số 2 Soldatenmarsch, số 8 Wilder Reiter, số 10 Fröhlicher Landmann (IMSLP). Tchaikovsky Op.39 có The Sick Doll (IMSLP). Kabalevsky Op.39 số 20 Clowns (Hal Leonard, bản Schirmer). Bartók For Children Sz.42: quyển 1 dân ca Hungary, quyển 2 dân ca Slovakia (IMSLP). Gretchaninov Livre d'enfants Op.98 và Glass Beads Op.123 có trang IMSLP. Shostakovich Children's Notebook Op.69: số 1 March, số 2 Waltz, số 3 The Bear (Hal Leonard). Burgmüller Op.100 số 3 La pastorale (IMSLP)."
@@ -1570,7 +1583,7 @@ nhan_dinh:
       - r-171-1
       - r-172-1
     ket_qua: dung
-    ghi_chu: "Review D8-gom (Claude Opus 5.5): kiểm từng hàng (agent Sonnet, review đọc lại; bảng kết quả trong scratchpad của phiên, hang-chang-5-7.yml). Bài có link (bản ghi đã khóa) không kiểm lại. Chặng là lựa chọn của site, không kiểm. Kabalevsky Op. 13 số 1: bách khoa PTNA (enc.piano.or.jp; còn bản quyền nên IMSLP không có trang)."
+    ghi_chu: "Review D8-gom (Claude Opus 5.5): kiểm từng hàng (agent Sonnet, review đọc lại; bảng kết quả trong scratchpad của phiên, hang-chang-5-7.yml). Bài có link (bản ghi đã khóa) không kiểm lại. Chặng là lựa chọn của site, không kiểm. Kabalevsky Op. 13 số 1: bách khoa PTNA (enc.piano.or.jp; còn bản quyền nên IMSLP không có trang). Lần mở 17/11/2026 (mo/sau-dot-2): Romanian Folk Dances nay có bản ghi và link tới bài học (n79); chữ câu không đổi."
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/15_Inventions,_BWV_772-786_(Bach,_Johann_Sebastian)", "https://www.mutopiaproject.org/ftp/BachJS/BWV775/bach-invention-04/bach-invention-04.ly", "https://imslp.org/wiki/Kinderszenen,_Op.15_(Schumann,_Robert)", "https://imslp.org/wiki/Keyboard_Sonata_in_C_major,_Hob.XVI:35_(Haydn,_Joseph)", "https://imslp.org/wiki/Moments_musicaux,_D.780_(Schubert,_Franz)", "https://henle.de/Waltz-op.-39-no.-15-Original-and-simplified-version/HN-1089", "https://enc.piano.or.jp/en/musics/3201", "https://imslp.org/wiki/Children's_Corner_(Debussy,_Claude)", "https://imslp.org/wiki/Romanian_Folk_Dances,_Sz.56_(Bartók,_Béla)" ]
     luot_2_ghi_chu: "Kiểm từng hàng. Bach Invention số 4 Rê thứ BWV 775, số 13 La thứ BWV 784 (IMSLP); nhịp 3/8: file .ly của Mutopia ghi '\\time 3/8'. Schumann Op. 15 số 1 Von fremden Ländern und Menschen (IMSLP). Haydn Hob. XVI:35 Đô trưởng (IMSLP). Schubert D. 780 số 3 Allegro moderato Fa thứ (IMSLP). Brahms Op. 39 số 15: Henle HN 1089 ghi bản gốc La♭ trưởng ('more demanding version in A-flat major'), bản dễ của tác giả ở La trưởng; IMSLP liệt kê số 15 La trưởng (theo bản dễ), nên câu La♭ trưởng đúng với bản gốc. Kabalevsky Sonatina số 1 Đô trưởng Op. 13 số 1 (Piano Encyclopedia PTNA: 'Op. 13, No. 1', C major, 1930). Debussy Children's Corner số 5 The Little Shepherd (IMSLP). Bartók Sz. 56 sáu điệu múa (IMSLP). Câu 'Nocturne Op. 72 số 1, B. 49: n52' chỉ là tham chiếu, không kiểm ở đây."
@@ -1714,6 +1727,23 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://www.musicnotes.com/sheetmusic/ludovico-einaudi/nuvole-bianche/MN0106486", "https://www.musicnotes.com/images/productimages/large/mtd/mn0106486.gif" ]
     luot_2_ghi_chu: "Ảnh trang 1 MN0106486: '♩ = ca. 40 allarg.' ở đoạn mở đầu 4/4; '♩. = 78 poco accel.' khi vào phần 12/8; tay phải hai bè: móc đơn lặp đuôi lên ở trên, nốt trắng chấm dôi ngân đuôi xuống ở dưới."
+  - id: n78
+    cau: "Bảng chặng 3: Gretchaninov, Grandfather's Album Op. 119: Meine liebe Mutti! (Mẹ yêu, số 1), Traurige Geschichte (Chuyện buồn, số 7); thời kỳ Thế kỷ 20; học được giai điệu hát trên đệm hợp âm, hai bè trong một tay ở giọng thứ."
+    loai: ten
+    nguon:
+      - imslp-gret-op119
+    ket_qua: dung
+    ghi_chu: "Dòng mới (lần mở 17/11/2026, sau đợt 2). Tên, số bài: IMSLP và bản in Schott (bài học piano/tac-pham/gretchaninov-op119, đã khóa). Thế kỷ 20: viết khoảng 1929, như Op. 98, 123 ở chặng 2. Phần học được gì khớp bài học đã khóa (đoạn A số 1: giai điệu trên hợp âm móc đơn; số 7: hai bè trong tay phải, Mi thứ). Giữ Op. 98, Op. 123 ở chặng 2 (lộ trình gợi ý thay Op. 98 bằng Op. 119; nhưng Op. 119 ở chặng 3, còn Op. 98 có trong RCM Level 1–2). Review (Claude Sonnet, 17/11/2026): chữ dòng mới (bảng chặng 3) khớp câu và bài học gretchaninov-op119 (số 1 giai điệu trên hợp âm, số 7 hai bè tay phải, Mi thứ)."
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Grandfather%27s_Album,_Op.119_(Grechaninov,_Aleksandr)", "https://imslp.org/wiki/Special:ImagefromIndex/269926" ]
+    luot_2_ghi_chu: "IMSLP: Grandfather's Album Op.119, số 1 Meine liebe Mutti! (My dear mummy, Fa trưởng), số 7 Traurige Geschichte (Sad story, Mi thứ), Schott 1929 (sáng tác 1929?), thế kỷ 20. Bản quét Schott: số 1 giai điệu tay phải trên hợp âm lặp ở tay trái (nhạc hóa Fa trưởng); số 7 (hóa biểu một thăng, Mi thứ) tay phải viết hai bè (cán lên và xuống, nốt đôi có legato)."
+    review: dung
+  - id: n79
+    cau: "Link tới ba bài học mới: Bartók For Children (bảng chặng 2), Romanian Folk Dances (bảng chặng 5), Gretchaninov Op. 119 (bảng chặng 3); chặng của bảng khớp chang của bản ghi."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Bản ghi bartok-for-children chang 2, gretchaninov-op119 chang 3, bartok-romanian-folk-dances chang 5 (đã khóa); tests/tac-pham-theo-cap.test.mjs và tests/link.test.mjs đạt. Review (Claude Sonnet, 17/11/2026): ba link đúng trang có thật, nằm ở bảng chặng 2, 3, 5 khớp chang của bản ghi (2, 3, 5)."
+    review: dung
 khuong_nhac: []
 doi_chu:
   - cu: Danh mục này xếp những tác phẩm thật, từ bài đầu tiên đến sân khấu hòa nhạc, theo đúng 7 chặng của lộ trình piano, và là nơi site quyết định mỗi bài thuộc chặng nào. Mỗi chặng có một bảng gồm tác phẩm, thời kỳ và điều bạn học được từ nó; những bài có bài học chi tiết trên site được gắn link. Cuối trang có một mục riêng cho những bài phổ biến ngoài nhạc cổ điển, như Mariage d'Amour, River Flows in You hay Nuvole bianche.
@@ -1888,3 +1918,7 @@ doi_chu:
   - cu: "mô tả: Danh mục này xếp những tác phẩm thật, từ bài đầu tiên đến sân khấu hòa nhạc, theo đúng 7 chặng của lộ trình piano, và là nơi site quyết định mỗi bài thuộc…"
     moi: "mô tả: Danh mục này xếp những tác phẩm thật, từ bài đầu tiên đến sân khấu hòa nhạc, theo đúng 7 chặng của lộ trình piano. Mỗi chặng có một bảng gồm tác phẩm, thời kỳ và điều bạn…"
     ly_do: 'Chặng của bài có bản ghi do src/data/tac-pham.yml quyết (khóa ở D2-0) và các trang piano/lo-trinh/chang-N sinh từ dữ liệu; trang này chỉ ghi lại (tests/tac-pham-theo-cap.test.mjs bắt chỗ lệch). Mô tả trang (frontmatter) bỏ cùng vế: "…theo đúng 7 chặng của lộ trình piano, và là nơi site quyết định mỗi bài thuộc…" thành "…theo đúng 7 chặng của lộ trình piano. Mỗi chặng có một bảng gồm tác phẩm, thời kỳ và điều bạn…".'
+mo_khoa:
+  - ngay: 2026-11-17
+    nhanh: mo/sau-dot-2
+    ly_do: "Sau đợt 2 thêm tác phẩm (lộ trình thêm tác phẩm, mục 2): link tới ba bài học mới (Bartók For Children, Romanian Folk Dances; Gretchaninov Op. 119 ở chặng 3)"

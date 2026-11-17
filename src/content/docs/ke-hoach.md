@@ -15,8 +15,8 @@ Mỗi tác phẩm mới có trang riêng; trang chặng, [danh mục bài học]
 
 Thứ tự dự định:
 
-1. **Nhạc thế kỷ 20 cho chặng 2–5**: Bartók, vài bài trong *For Children* và *Romanian Folk Dances*; Gretchaninov, *Grandfather's Album*.
-2. **Nhà soạn nhạc nữ**: Chaminade, *Pierrette*; Clara Schumann, Scherzo số 2; Fanny Hensel khi tìm được bản thu dùng được.
+1. **Nhạc thế kỷ 20 cho chặng 2–5** (đã có): Bartók, [*For Children* số 1 và 6](/opus/piano/tac-pham/bartok-for-children/) và [*Romanian Folk Dances*](/opus/piano/tac-pham/bartok-romanian-folk-dances/); Gretchaninov, [*Grandfather's Album* số 1 và 7](/opus/piano/tac-pham/gretchaninov-op119/).
+2. **Nhà soạn nhạc nữ**: Chaminade, *Pierrette* và *Automne*; Clara Schumann, Scherzo số 2. Fanny Hensel khi tìm được bản thu dùng được.
 3. **Những bài người học hay hỏi**: Mozart, *Alla turca*; Debussy, *Arabesque* số 1; Rachmaninoff, Prelude Đô♯ thứ Op. 3 số 2.
 4. **Lấp chỗ còn trống**: một sonata của Haydn; thêm bài cho chặng 7 ngoài nhạc Lãng mạn (Bach, Beethoven).
 5. **Tác phẩm Việt Nam** đã hết thời hạn bảo hộ, và bài cho người mới dùng dân ca Việt Nam, sau khi khảo sát bản quyền.

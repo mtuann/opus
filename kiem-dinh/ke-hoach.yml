@@ -29,6 +29,15 @@ lan:
       luot_2: "Không có nhận định mới cần nguồn: tên tác phẩm và số danh mục giữ nguyên (lượt 2 cũ), chỉ đổi thứ tự"
       review: Claude Opus 5.5 (đối chiếu thứ tự với lo-trinh-them-tac-pham.md; Từ điển 382 thuật ngữ)
       kiem_mau: Chủ repo chọn thứ tự (16/11/2026); không lấy mẫu
+  - so: 4
+    ngay: 2026-11-17
+    nhanh: mo/sau-dot-2
+    ma_bam: sha256:70c20c93d3cc5a586d5646ce1518978f4bfbda5a7a2c1fd20cd2840eb179e132
+    nguoi:
+      luot_1: Claude Opus 5.5 (lượt 1, mo/sau-dot-2, 17/11/2026)
+      luot_2: "Claude Sonnet 5.5 (agent riêng, 17/11/2026; hai câu mới cần nguồn: ke-hoach n7, tac-pham-theo-cap n78; 2 đúng)"
+      review: Claude Sonnet 5.5 (agent riêng, 17/11/2026)
+      kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 17/11/2026: ke-hoach n7, tac-pham-theo-cap n78, n79; 3 đúng"
 nguon:
   - id: ke-hoach-mo-rong
     bac: 1
@@ -74,6 +83,10 @@ nguon:
     bac: 2
     ten: IMSLP, Scherzo No.2, Op.14 (Schumann, Clara)
     link: https://imslp.org/wiki/Scherzo_No.2,_Op.14_(Schumann,_Clara)
+  - id: imslp-op35
+    bac: 2
+    ten: "IMSLP, 6 Études de concert, Op.35 (Chaminade, Cécile): 2. Automne; Enoch, Paris, n.d.[1886]"
+    link: https://imslp.org/wiki/6_%C3%89tudes_de_concert,_Op.35_(Chaminade,_C%C3%A9cile)
 nhan_dinh:
   - id: n1
     cau: Trang này là dự định, không phải lời hứa về ngày giờ; tác phẩm mới lên site được ghi ở trang Cập nhật (link /opus/cap-nhat/).
@@ -123,7 +136,7 @@ nhan_dinh:
     luot_2_ghi_chu: "Lượt 2: K. 331/III, L. 66/CD 74, Op. 3 số 2 đúng; thứ tự khớp kế hoạch."
     review: dung
   - id: n6
-    cau: "Thứ nhất, nhạc thế kỷ 20 cho chặng 2–5: Bartók, vài bài trong For Children và Romanian Folk Dances; Gretchaninov Grandfather's Album."
+    cau: "Thứ nhất, nhạc thế kỷ 20 cho chặng 2–5 (đã có): Bartók, For Children số 1 và 6 và Romanian Folk Dances; Gretchaninov, Grandfather's Album số 1 và 7, mỗi bài một link tới bài học."
     loai: ten
     nguon:
       - imslp-op119
@@ -131,26 +144,26 @@ nhan_dinh:
       - imslp-sz42
       - ke-hoach-mo-rong
     ket_qua: da-sua
-    ghi_chu: "IMSLP: Op. 119, Sz. 56, Sz. 42 có; chặng 3, 5, 2 theo ke-hoach-mo-rong.md 6.1. Lần mở 16/11/2026 (ke-hoach/tac-pham): chủ repo chốt thứ tự đợt 2, đợt 3 rồi đợt 1 (plans/ben-vung/lo-trinh-them-tac-pham.md mục 1; ke-hoach-mo-rong.md 6.1). Câu thành mục 1, Bartók viết trước (lượt 1 của lộ trình là For Children). Chữ câu cũ: \"Nhạc thế kỷ 20 cho chặng 2–5: Gretchaninov Grandfather's Album; Bartók Romanian Folk Dances và vài bài trong For Children.\"."
+    ghi_chu: "IMSLP: Op. 119, Sz. 56, Sz. 42 có; chặng 3, 5, 2 theo ke-hoach-mo-rong.md 6.1. Lần mở 16/11/2026 (ke-hoach/tac-pham): chủ repo chốt thứ tự đợt 2, đợt 3 rồi đợt 1 (plans/ben-vung/lo-trinh-them-tac-pham.md mục 1; ke-hoach-mo-rong.md 6.1). Câu thành mục 1, Bartók viết trước (lượt 1 của lộ trình là For Children). Chữ câu cũ: \"Nhạc thế kỷ 20 cho chặng 2–5: Gretchaninov Grandfather's Album; Bartók Romanian Folk Dances và vài bài trong For Children.\". Lần mở 17/11/2026 (mo/sau-dot-2): ba bài học đã khóa và gộp main (them/bartok-for-children, them/gretchaninov-op119, them/bartok-romanian-folk-dances); thêm \"(đã có)\", số bài và link; tên không đổi. Review (Claude Sonnet, 17/11/2026): câu mới đúng chữ trên trang; ba bài học có thật (bartok-for-children số 1 và 6, gretchaninov-op119 số 1 và 7, bartok-romanian-folk-dances) và link đúng; ý đúng."
     luot_2: dung
     luot_2_nguon:
       - ../opus-zero/plans/v16/khao-sat-g6.md
     luot_2_ghi_chu: 'Lượt 2: tên và số danh mục đúng; chữ cũ "các chặng giữa" sai (có chặng 2): đã sửa thành "chặng 2–5".'
     review: dung
   - id: n7
-    cau: "Nhà soạn nhạc nữ: Chaminade Pierrette; Clara Schumann Scherzo số 2; Fanny Hensel khi tìm được bản thu dùng được."
+    cau: "Nhà soạn nhạc nữ: Chaminade, Pierrette và Automne; Clara Schumann, Scherzo số 2. Fanny Hensel khi tìm được bản thu dùng được."
     loai: ten
     nguon:
       - imslp-op41
       - imslp-cs-op14
       - ke-hoach-mo-rong
-    ket_qua: dung
-    ghi_chu: "IMSLP: Op. 41, Op. 14 có; khao-sat-g6 lô B: Hensel chưa có bản thu được nhận. Lần mở 16/11/2026 (ke-hoach/tac-pham): chủ repo chốt thứ tự đợt 2, đợt 3 rồi đợt 1 (plans/ben-vung/lo-trinh-them-tac-pham.md mục 1; ke-hoach-mo-rong.md 6.1). Câu thành mục 2, chữ không đổi."
+      - imslp-op35
+    ket_qua: da-sua
+    ghi_chu: "IMSLP: Op. 41, Op. 14 có; khao-sat-g6 lô B: Hensel chưa có bản thu được nhận. Lần mở 16/11/2026 (ke-hoach/tac-pham): chủ repo chốt thứ tự đợt 2, đợt 3 rồi đợt 1 (plans/ben-vung/lo-trinh-them-tac-pham.md mục 1; ke-hoach-mo-rong.md 6.1). Câu thành mục 2, chữ không đổi. Lần mở 17/11/2026 (mo/sau-dot-2): thêm Chaminade Automne (Études de concert Op. 35 số 2; IMSLP 6 Études de concert, Op.35: \"2. Automne\") vì không tìm được bản thu Hensel (Commons, IMSLP, Musopen; chủ repo tra Musopen 16/11/2026); lộ trình chốt lượt 6 làm Automne. Review (Claude Sonnet, 17/11/2026): câu mới đúng chữ trên trang; Automne thay Hensel khớp lo-trinh-them-tac-pham.md mục 1 và lượt 6; trang không ghi con số về site."
     luot_2: dung
-    luot_2_nguon:
-      - ../opus-zero/plans/v16/khao-sat-g6.md
-    luot_2_ghi_chu: "Lượt 2: đúng."
     review: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Pierrette,_Op.41_(Chaminade,_C%C3%A9cile)", "https://imslp.org/wiki/6_%C3%89tudes_de_concert,_Op.35_(Chaminade,_C%C3%A9cile)", "https://imslp.org/wiki/Scherzo_No.2,_Op.14_(Schumann,_Clara)" ]
+    luot_2_ghi_chu: "IMSLP: Pierrette (Air de ballet) Op.41 của Chaminade; Six études de concert Op.35, số 2 là Automne (Lento, Rb trưởng); Clara Schumann Scherzo No.2 Op.14 (1845). Phần Fanny Hensel là điều kiện kế hoạch, không phải khẳng định thực tế."
   - id: n8
     cau: "Lấp chỗ trống: một sonata Haydn; bài chặng 7 ngoài nhạc Lãng mạn (Bach, Beethoven); tác phẩm Việt Nam hết bảo hộ và bài cho người mới dùng dân ca Việt Nam, sau khảo sát bản quyền."
     loai: ve-site
@@ -213,3 +226,6 @@ mo_khoa:
   - ngay: 2026-11-16
     nhanh: ke-hoach/tac-pham
     ly_do: Chủ repo chốt thứ tự thêm tác phẩm ngày 16/11/2026 (Thế kỷ 20 và nhà soạn nhạc nữ trước ba bài người học hay hỏi); Từ điển đã thêm thuật ngữ (mo/thuat-ngu, 10/11/2026) nên bỏ dòng dự định ấy.
+  - ngay: 2026-11-17
+    nhanh: mo/sau-dot-2
+    ly_do: "Sau đợt 2 thêm tác phẩm: mục Thứ tự dự định ghi đợt Thế kỷ 20 đã xong; đợt nhà soạn nhạc nữ chốt Automne thay Hensel (không có bản thu)"
