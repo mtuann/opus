@@ -33,7 +33,7 @@ Bản thu gợi ý là của nghệ sĩ piano eldüendesüarez, đăng trên Wik
 3. Trước khi phần đầu trở lại, có những chỗ dừng hẳn. Bạn đếm được mấy chỗ?
 4. Bài kết to hay nhỏ, nhanh hay chậm dần?
 
-::khoi-nghe{moc="0 26 47 67 105 117 127 136 160 187 200 224 237 265 303 341"}
+::khoi-nghe{moc="0 26 47 67 105 117 127 136 160 187 200 224 237 265 307 348"}
 
 ## Theo dõi khi nghe
 
