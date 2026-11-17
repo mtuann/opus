@@ -39,6 +39,9 @@ const KET_QUA_KHUONG = ['dung', 'da-sua'];
 export const MAU_NGOAI_VI = 5;
 /** Lời khuyên tập (loai khuyen-tap): lượt 2 chỉ kiểm mẫu, chừng này câu mỗi trang hay bản ghi (chuan-kiem-dinh.md mục 3). */
 export const MAU_KHUYEN_TAP = 3;
+/** Loại nhận định không cần nguồn ngoài (chuan-kiem-dinh.md mục 1): lời khuyên tập, và câu tả bài tập, ví dụ soạn riêng
+ * cho trang (kiểm trên khuông nhạc của chính trang, khuong_nhac của hồ sơ). Vẫn qua lượt 2 như loại của chúng. */
+const KHONG_NGUON = ['khuyen-tap', 'vi-du-soan'];
 /** Câu nói về chính site (loai ve-site): review kiểm trên trang và dữ liệu, không qua lượt 2. */
 const VE_SITE = 've-site';
 
@@ -142,7 +145,7 @@ export function loiHoSo(hs, muc, goc, { maBam } = {}) {
 		if (!KET_QUA.includes(n.ket_qua)) loi.push(`${ten}: ket_qua phải là ${KET_QUA.join(', ')}`);
 		if (!LUOT_2.includes(n.luot_2) && !(mauLuot2(n) && n.luot_2 == null)) loi.push(`${ten}: chưa có kết quả lượt 2 (luot_2: ${LUOT_2.join(', ')})`);
 		if ((n.ket_qua === 'da-sua' || n.ket_qua === 'da-bo') && !n.ghi_chu) loi.push(`${ten}: ${n.ket_qua} cần ghi_chu`);
-		if (n.ket_qua === 'khong-can-nguon' && n.loai !== 'khuyen-tap') loi.push(`${ten}: khong-can-nguon chỉ cho loai khuyen-tap`);
+		if (n.ket_qua === 'khong-can-nguon' && !KHONG_NGUON.includes(n.loai)) loi.push(`${ten}: khong-can-nguon chỉ cho loai ${KHONG_NGUON.join(', ')}`);
 		// câu về chính site: review kiểm trên trang, thành phần hay dữ liệu đã khóa và ghi kết quả (review); ghi_chu ghi đã
 		// kiểm ở đâu. Không qua lượt 2, nên không cho dùng để né lượt 2: không có ở bản ghi dữ liệu, không kèm nguồn ngoài
 		if (n.loai === VE_SITE) {
@@ -153,7 +156,8 @@ export function loiHoSo(hs, muc, goc, { maBam } = {}) {
 			if (n.review === 'sai' && n.ket_qua === 'dung') loi.push(`${ten}: review ghi sai mà kết quả dung: sửa câu (da-sua) hay bỏ (da-bo)`);
 		}
 		if (n.ket_qua !== 'khong-can-nguon' && n.ket_qua !== 'da-bo' && n.loai !== VE_SITE) {
-			if (!n.nguon?.length) loi.push(`${ten}: thiếu nguon`);
+			// lời khuyên tập, ví dụ soạn riêng: nguồn không bắt buộc, kể cả khi đã sửa (da-sua); có ghi thì phải có trong nguon
+			if (!n.nguon?.length && !KHONG_NGUON.includes(n.loai)) loi.push(`${ten}: thiếu nguon`);
 			for (const id of n.nguon ?? []) if (!nguon.has(id)) loi.push(`${ten}: nguồn "${id}" không có trong danh sách nguon`);
 		}
 		if ((n.luot_2 === 'sai' || n.luot_2 === 'khong-chac') && n.ket_qua === 'dung' && !n.ghi_chu)
@@ -451,8 +455,8 @@ export function lenh(thamSo, goc = GOC, in_ = console.log) {
 			if (trungId.length > 1) return loi.push(`${ten}: hồ sơ có ${trungId.length} nhận định cùng id ${d.id}`);
 			const nd = trungId[0];
 			if (!nd) return loi.push(`${ten}: hồ sơ không có nhận định ${d.id}`);
-			// lời khuyên tập (khuyen-tap) không cần nguồn
-			if (d.luot_2 !== 'khong-chac' && !d.nguon?.length && nd.get('loai') !== 'khuyen-tap') loi.push(`${ten}: ${d.luot_2} cần nguon (link đã mở)`);
+			// lời khuyên tập (khuyen-tap), ví dụ soạn riêng (vi-du-soan) không cần nguồn
+			if (d.luot_2 !== 'khong-chac' && !d.nguon?.length && !KHONG_NGUON.includes(nd.get('loai'))) loi.push(`${ten}: ${d.luot_2} cần nguon (link đã mở)`);
 			hs.dong.push([nd, d]);
 		});
 		if (loi.length) throw new Error(`${file}: chưa nhập gì, vì:\n- ${loi.join('\n- ')}`);

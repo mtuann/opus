@@ -15,10 +15,28 @@ test('bắt được ô nhịp sai độ dài, bè chồng lệch nhau, cảnh b
 	// hợp âm (hay [V:…]) mất "]" mà không còn "]" nào phía sau: báo lỗi, không treo (review D1.7)
 	assert.deepEqual(oSai('X:1\nM:4/4\nL:1/4\nK:C\nCDEF|G A B c|\nC D [E F'), ['bè _: hợp âm mở bằng "[" mà không đóng bằng "]"']);
 	assert.match(canhBao('X:1\nM:4/4\nL:1/4\nK:C\n!foo!CDEF|G4|]').join(), /Unknown decoration: foo/);
+	// nhịp đổi giữa khối: trường trong dòng [M:…] (kể cả khi M: ở đầu là none), dòng M: giữa phần thân, [L:…]
+	assert.deepEqual(oSai('X:1\nM:none\nL:1/8\nK:C\n[M:2/4] cdef | [M:3/4] cdefga | [M:2/4] c2 d2 |]'), []);
+	assert.deepEqual(oSai('X:1\nM:none\nL:1/8\nK:C\n[M:2/4] cdef | [M:3/4] cdef | gabcde | c6 |]'), ['bè _, ô 2: 1/2, cần 3/4']);
+	assert.deepEqual(oSai('X:1\nM:3/4\nL:1/4\nK:C\nCDE|FGA|\nM:2/4\nCD|EF|G2|]'), []);
+	assert.deepEqual(oSai('X:1\nM:3/4\nL:1/4\nK:C\nCDE|FGA|\nM:2/4\nCDE|EF|G2|]'), ['bè _, ô 3: 3/4, cần 1/2']);
+	assert.deepEqual(oSai('X:1\nM:2/4\nL:1/8\nK:C\ncdef|[L:1/16]cdefgabc|[L:1/8][M:3/4]cdefga|c6|]'), []);
+	assert.deepEqual(oSai('X:1\nM:2/4\nL:1/8\nK:C\ncdef|[M:none]cdefgabc cdefgabc|[M:2/4]cdef|]'), [], 'M:none giữa khối: ô ấy không kiểm');
+	assert.deepEqual(oSai('X:1\nM:none\nL:1/8\nK:C\n[V:1] [M:2/4] cdef | [M:3/4] cdefga | c6 |]\n[V:2] [M:2/4] C4 | [M:3/4] C4 | C6 |]'), ['bè 2, ô 2: 1/2, cần 3/4']);
+	// vạch nhịp có kết 1, kết 2 vẫn đọc đúng
+	assert.deepEqual(oSai('X:1\nM:2/4\nL:1/8\nK:C\n|:cdef|[1g4:|[2a4|]'), []);
+	// dòng V: đổi bè như [V:…]
+	assert.deepEqual(oSai('X:1\nM:2/4\nL:1/8\nK:C\nV:1\ncdef|g4|a4|]\nV:2\nC4|G,2|C4|]'), ['bè 2, ô 2: 1/4, cần 1/2']);
 	assert.deepEqual(canhBao('X:1\nM:4/4\nL:1/4\nK:C\nCDEF|G4|]'), []);
 });
 
 test('mọi khối ```abc trong các trang: abcjs không cảnh báo, ô nhịp đủ độ dài', () => {
 	const { loi } = kiemThuMuc();
 	assert.deepEqual(loi, [], 'xem chi tiết: node tools/khuong-nhac.mjs');
+});
+
+test('kiểm riêng một trang: đưa file .md thay cho thư mục', () => {
+	const { khoi, loi } = kiemThuMuc(new URL('../src/content/docs/piano/tac-pham/bartok-romanian-folk-dances.md', import.meta.url).pathname);
+	assert.ok(khoi >= 1);
+	assert.deepEqual(loi, []);
 });

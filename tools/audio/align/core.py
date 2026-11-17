@@ -7,6 +7,10 @@ rồi DTW tìm đường đi rẻ nhất. Kết quả là một hàm: giây tron
 Ba biến thể tham số (VARIANTS) được dùng để đối chiếu với nhau trong run.py: thường (chỉ phổ và chroma),
 khởi âm (thêm đặc trưng khởi âm, trọng số 0,4), thô→mịn (căn thô trên đặc trưng làm mượt 1,5 giây,
 rồi căn mịn trong dải ±3 giây quanh đường thô).
+
+Bản thu lệch cao độ (đàn lên dây thấp, đĩa cũ quay chậm) làm phổ nửa cung lệch sang ô bên cạnh: Params.tune (nửa
+cung, có thể lẻ) dời các ô CQT của bản thu theo đúng độ lệch ấy; estimate_tune ước lượng phần lẻ (dưới nửa cung)
+bằng librosa.estimate_tuning. Mặc định tune = 0: đặc trưng như trước (cùng bộ nhớ đệm).
 """
 import hashlib
 import os
@@ -31,6 +35,7 @@ class Params:
     won: float = 0.4                # trọng số đặc trưng khởi âm (0 = không dùng)
     coarse: float = 0.0             # giây: cửa sổ làm mượt cho bước căn thô (0 = tắt)
     band: float = 3.0               # giây: bước căn mịn chỉ tìm quanh đường căn thô trong khoảng này
+    tune: float = 0.0               # nửa cung: độ lệch cao độ của bản thu so với La 440 (âm: thấp hơn)
 
     @property
     def fps(self):
@@ -69,14 +74,17 @@ def _onorm(F, fps):
 def audio_raw(path, p):
     """(phổ nửa cung P, mức dB từng khung, độ dài giây) của bản thu, có bộ nhớ đệm trong features/."""
     st = os.stat(path)
-    key = hashlib.sha1(("%s|%d|%d|v3|%d" % (os.path.abspath(path), st.st_size, int(st.st_mtime), p.hop)).encode()).hexdigest()[:16]
+    tag = "%s|%d|%d|v3|%d" % (os.path.abspath(path), st.st_size, int(st.st_mtime), p.hop)
+    if p.tune:
+        tag += "|t%.3f" % p.tune
+    key = hashlib.sha1(tag.encode()).hexdigest()[:16]
     fn = net.cache_dir("features") / (key + ".npz")
     if fn.exists():
         d = np.load(fn)
         return d["P"], d["db"], float(d["dur"])
     y, _ = librosa.load(str(path), sr=SR, mono=True)
     dur = len(y) / SR
-    C = np.abs(librosa.cqt(y, sr=SR, hop_length=p.hop, fmin=librosa.midi_to_hz(LO), n_bins=NB * 3, bins_per_octave=36))
+    C = np.abs(librosa.cqt(y, sr=SR, hop_length=p.hop, fmin=librosa.midi_to_hz(LO + p.tune), n_bins=NB * 3, bins_per_octave=36))
     P = C.reshape(NB, 3, -1).max(axis=1)
     rms = librosa.feature.rms(y=y, frame_length=2048, hop_length=p.hop)[0]
     n = min(P.shape[1], len(rms))
@@ -84,6 +92,20 @@ def audio_raw(path, p):
     db = 20 * np.log10(rms + 1e-9)
     np.savez(fn, P=P, db=db, dur=dur)
     return P, db, dur
+
+
+def estimate_tune(path):
+    """Độ lệch cao độ của bản thu (nửa cung, trong [-0,5; 0,5)), librosa.estimate_tuning trên cả file; có bộ nhớ đệm.
+    Chỉ ước lượng được phần lẻ: bản thu lệch gần một nửa cung trở lên thì ghi số trong cấu hình (tuning của job)."""
+    st = os.stat(path)
+    key = hashlib.sha1(("%s|%d|%d|tune1" % (os.path.abspath(path), st.st_size, int(st.st_mtime))).encode()).hexdigest()[:16]
+    fn = net.cache_dir("features") / (key + ".tune.txt")
+    if fn.exists():
+        return float(fn.read_text())
+    y, _ = librosa.load(str(path), sr=SR, mono=True)
+    t = float(librosa.estimate_tuning(y=y, sr=SR, bins_per_octave=12))
+    fn.write_text("%.4f" % t)
+    return t
 
 
 def audio_feat(path, p, sil_db=32):

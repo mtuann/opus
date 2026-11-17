@@ -26,6 +26,8 @@ node tools/them-tac-pham.mjs <slug> --loai bai-hoc --tac-gia <id> --ten "<tên>"
 node tools/them-tac-pham.mjs <slug> --loai nghe --tac-gia <id> --ten "<tên>"
 ```
 
+Bài học thêm `--giong "<giọng>" --nhip <nhịp>` để điền sẵn hai trường ấy; trang dạy nhiều bài khác giọng hay nhịp (như `bartok-for-children`, `gretchaninov-op119`) thì `--nhieu-bai`: bản ghi không có `giong`, `nhip`, giọng và nhịp từng bài ghi ở dòng "Giọng · nhịp · tốc độ" của `thong_tin`. `title` của trang khung bỏ định dạng Markdown của `--ten` (`*For Children*` thành `For Children`); `ten` của bản ghi giữ Markdown.
+
 Công cụ làm ở D6-0, viết bằng Node thay cho `tools/them_tac_pham.py` ghi lúc đầu: dùng chung schema và kiểm chéo của `src/du-lieu.mjs`, lệnh `mau` của `tools/khoa.mjs` và cách đọc ghi YAML của bản build. Nó sinh:
 
 - một bản ghi cuối `src/data/tac-pham.yml`: trường như bản ghi cùng loại đã có, chỗ cần điền ghi `[[điền: …]]`; dòng "Nhà soạn nhạc" của bảng thông tin và chip cấp độ lấy từ dữ liệu;

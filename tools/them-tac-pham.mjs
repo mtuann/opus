@@ -2,8 +2,11 @@
 // Tạo khung cho một tác phẩm mới (D6-0; plans/ben-vung/them-tac-pham.md mục 2), sau khi ứng viên đã được duyệt:
 //   node tools/them-tac-pham.mjs <slug> --loai bai-hoc|nghe --tac-gia <id> --ten "<tên>" [--chang <1–7> --grade "Grade 3"]
 //        [--danh-muc "Op. 12 số 1"] [--thoi-ky "Lãng mạn"] [--cap <trang cùng tác phẩm>] [--ngay <yyyy-mm-dd>]
-//        [--khuyet-danh] [--goc <thư mục repo>]
-// Bài học (--loai bai-hoc) cần --chang và --grade. Tác giả phải có trong src/data/nha-soan-nhac.yml (chưa có thì thêm bản
+//        [--giong "Đô trưởng" --nhip 3/4 | --nhieu-bai] [--khuyet-danh] [--goc <thư mục repo>]
+// Bài học (--loai bai-hoc) cần --chang và --grade. --giong, --nhip điền sẵn hai trường ấy của bài học; trang dạy nhiều bài
+// khác giọng hay nhịp (một tập, như bartok-for-children) thì --nhieu-bai: bản ghi không có giong, nhip (ghi giọng, nhịp
+// từng bài ở dòng "Giọng · nhịp · tốc độ" của thong_tin).
+// title của trang khung là "<Họ tác giả>: <tên>", bỏ định dạng Markdown của --ten (*nghiêng*, **đậm**, [link](…)). Tác giả phải có trong src/data/nha-soan-nhac.yml (chưa có thì thêm bản
 // ghi ở đó trước, kèm hồ sơ kiểm định); tác phẩm khuyết danh: --khuyet-danh thay cho --tac-gia.
 // Làm:
 //   1. thêm một bản ghi ở cuối src/data/tac-pham.yml: trường như bản ghi cùng loại đã có (chip, thong_tin, hinh khung,
@@ -57,9 +60,9 @@ export function banGhiKhung(o, nguoi) {
 	else r.tac_gia = o.tacGia;
 	r.ten = o.ten;
 	r.danh_muc = o.danhMuc ?? d('số danh mục, như Op. 12 số 1; không có thì bỏ trường này');
-	if (o.loai === 'bai-hoc') {
-		r.giong = d('giọng, như Đô trưởng');
-		r.nhip = d('nhịp, như 3/4');
+	if (o.loai === 'bai-hoc' && !o.nhieuBai) {
+		r.giong = o.giong ?? d('giọng, như Đô trưởng');
+		r.nhip = o.nhip ?? d('nhịp, như 3/4');
 	}
 	r.thoi_ky = o.thoiKy ?? p?.thoi_ky ?? d('thời kỳ');
 	if (o.loai === 'bai-hoc') {
@@ -71,7 +74,7 @@ export function banGhiKhung(o, nguoi) {
 	if (o.cap) r.cap = o.cap;
 	if (o.loai === 'bai-hoc') {
 		r.goi_y = false;
-		r.chip = [d('giọng · nhịp'), d('đặc điểm'), { cap_do: `≈ ${o.grade}` }, d('hình thức, số ô nhịp')];
+		r.chip = [o.nhieuBai ? d('số danh mục, các bài') : o.giong && o.nhip ? `${o.giong} · ${o.nhip}` : d('giọng · nhịp'), d('đặc điểm'), { cap_do: `≈ ${o.grade}` }, d('hình thức, số ô nhịp')];
 		r.thong_tin = [
 			['Nhà soạn nhạc', tenNam(p)],
 			['Tác phẩm', d('tên đầy đủ, số danh mục')],
@@ -88,11 +91,21 @@ export function banGhiKhung(o, nguoi) {
 	return r;
 }
 
+/** Chữ thường của một dòng Markdown (cho title ở frontmatter: Starlight không đọc Markdown ở đó). */
+export function boDinhDang(chu) {
+	return chu
+		.replace(/!?\[([^\]]*)\]\([^)]*\)/g, '$1')
+		.replace(/`([^`]*)`/g, '$1')
+		.replace(/(\*\*|__)(?=\S)(.+?)(?<=\S)\1/g, '$2')
+		.replace(/(\*|_)(?=\S)(.+?)(?<=\S)\1(?![\p{L}\p{N}])/gu, '$2')
+		.replace(/\\([\\`*_[\]()#+\-.!])/g, '$1');
+}
+
 /** Trang khung theo mẫu của AGENTS.md ("Mẫu trang"). */
 export function trangKhung(r, nguoi) {
 	const p = r.tac_gia ? nguoi.get(r.tac_gia) : null;
 	const ho = p ? p.ten.split(' ').at(-1) : d('Nhà soạn nhạc');
-	const dau = ['---', `title: "${ho}: ${r.ten.replace(/"/g, '\\"')}"`, `description: "${d('một câu tóm tắt cho máy tìm kiếm và khi chia sẻ link')}"`, `tac_pham: ${r.slug}`, '---', ''];
+	const dau = ['---', `title: "${ho}: ${boDinhDang(r.ten).replace(/"/g, '\\"')}"`, `description: "${d('một câu tóm tắt cho máy tìm kiếm và khi chia sẻ link')}"`, `tac_pham: ${r.slug}`, '---', ''];
 	const bang = ['| Thời điểm | Sự kiện |', '|---|---|', `| … | **${d('Tên đoạn')}** (${d('ô 1–8')}): ${d('điều tai nghe thấy')} |`];
 	const dongTheoDoi = 'Dán link một bản thu vào khung phía trên (hoặc chọn một file trên máy), rồi bấm ghi mốc khi bạn nghe thấy từng sự kiện.';
 	const quiz = ['```quiz', `? ${d('câu hỏi về chính trang này')}`, `+ ${d('đáp án đúng')}`, `- ${d('đáp án sai')}`, `- ${d('đáp án sai')}`, `> ${d('giải thích, không dựa vào vị trí lựa chọn')}`, '```'];
@@ -335,6 +348,8 @@ export function them(o, goc = GOC, in_ = console.log) {
 	if (o.loai === 'bai-hoc' && (!o.chang || !o.grade)) throw new Error('bài học cần --chang <1–7> và --grade "Grade …" (theo khảo sát đã duyệt)');
 	if (o.chang !== undefined && !(Number.isInteger(o.chang) && o.chang >= 1 && o.chang <= 7)) throw new Error('--chang là số từ 1 đến 7');
 	if (o.ngay !== undefined && !/^\d{4}-\d{2}-\d{2}$/.test(o.ngay)) throw new Error('--ngay dạng yyyy-mm-dd');
+	if ((o.giong || o.nhip || o.nhieuBai) && o.loai !== 'bai-hoc') throw new Error('--giong, --nhip, --nhieu-bai chỉ dùng cho bài học');
+	if (o.nhieuBai && (o.giong || o.nhip)) throw new Error('--nhieu-bai không đi cùng --giong, --nhip (giọng, nhịp từng bài ghi ở thong_tin)');
 	const f = {
 		tacPham: path.join(goc, 'src/data/tac-pham.yml'),
 		trangYml: path.join(goc, 'src/data/trang.yml'),
@@ -380,7 +395,7 @@ export function them(o, goc = GOC, in_ = console.log) {
 	in_(
 		[
 			'Tiếp theo (plans/ben-vung/them-tac-pham.md, mục 3–6):',
-			`  - điền mọi chỗ "${DIEN} …]]" trong bản ghi và trang (hay bỏ trường không dùng: danh_muc, doi_chieu; hướng dẫn nghe không có sơ đồ thì bỏ hinh và ::hinh-cau-truc);`,
+			`  - điền mọi chỗ "${DIEN} …]]" trong bản ghi và trang (hay bỏ trường không dùng: danh_muc, doi_chieu, và giong, nhip khi trang dạy nhiều bài khác giọng hay nhịp; hướng dẫn nghe không có sơ đồ thì bỏ hinh và ::hinh-cau-truc);`,
 			`  - bản thu: python3 tools/audio/attach.py ${o.slug} … (tools/audio/README.md); mốc: --ref hay tools/audio/align/;`,
 			'  - thêm khối abc thì sửa khuong_nhac trong hồ sơ của trang; ghi lượt 1 vào hồ sơ;',
 			`  - npm run build:xem && npm test (tests/tac-pham.test.mjs kiểm trang và bản ghi).`,
@@ -405,6 +420,9 @@ function docThamSo(ts) {
 	o.thoiKy = lay('--thoi-ky');
 	o.cap = lay('--cap');
 	o.ngay = lay('--ngay');
+	o.giong = lay('--giong');
+	o.nhip = lay('--nhip');
+	o.nhieuBai = ts.includes('--nhieu-bai');
 	o.khuyetDanh = ts.includes('--khuyet-danh');
 	return { o, goc: lay('--goc') ? path.resolve(lay('--goc')) : GOC };
 }

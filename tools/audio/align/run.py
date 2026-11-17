@@ -5,6 +5,8 @@
     python3 tools/audio/align/run.py fur-elise --plot-all     # hình phổ cho mọi dòng
     python3 tools/audio/align/run.py fur-elise --write        # ghi mốc vào ::khoi-nghe{moc="…"} của trang
     python3 tools/audio/align/run.py --list                   # các cấu hình có trong pieces.py
+    python3 tools/audio/align/run.py fur-elise --tuning auto  # ước lượng lệch cao độ của bản thu, dời phổ trước khi căn
+    python3 tools/audio/align/run.py fur-elise --tuning off   # bỏ qua tuning của cấu hình (căn như bản thu đúng La 440)
 
 Mỗi dòng được căn ba lần với ba bộ tham số (core.VARIANTS). Nhận khi có hai lần lệch nhau không quá 2 giây (lấy
 trung bình hai lần đó); job có nguồn đối chiếu (check) thì kết quả còn phải khớp nguồn thứ hai trong 2 giây.
@@ -12,6 +14,8 @@ Dòng không nhận được ghi "-" (trang hiện "chưa có"), trừ khi đã 
 Bản thu là bản gợi ý trong bản ghi của trang (ban_thu đầu tiên trong src/data/tac-pham.yml, theo tac_pham ở frontmatter):
 file trên site (public/audio/) đọc thẳng, file trên mạng tải một lần vào bộ nhớ đệm. Mốc nằm ở trang (moc của
 ::khoi-nghe), vì mỗi trang có bảng "Theo dõi khi nghe" riêng; trang phải đã chuyển sang site mới.
+Lệch cao độ: tuning của job trong pieces.py ("auto" hay số nửa cung), hay --tuning cho mọi job (thay cấu hình).
+Không ghi gì thì căn như trước (không dời phổ). --tuning auto in độ lệch ước lượng được.
 """
 import argparse
 import itertools
@@ -73,12 +77,26 @@ def first_sound(audio):
     return core.first_last_sound(core.audio_feat(audio, p), p.fps)[0]
 
 
-def align_job(job, audio, verbose=True):
+def tune_of(job, audio, tuning=None):
+    """Độ lệch cao độ (nửa cung) dùng khi dựng đặc trưng bản thu: tuning (từ --tuning: "auto", "off" hay số) thay cho
+    tuning của job; không có thì 0."""
+    v = job.get("tuning", 0) if tuning is None else tuning
+    if v in ("off", None, 0):
+        return 0.0
+    if v == "auto":
+        return core.estimate_tune(audio)
+    return float(v)
+
+
+def align_job(job, audio, verbose=True, tuning=None):
     """Căn một job theo ba biến thể. Trả về (nốt, pos, danh sách (tên, hàm, thông tin))."""
     sc = scores.load(job)
     notes, pos = positions(sc, job.get("segs"))
     long = notes[:, 1].max() - notes[:, 0].min() > 420
-    base = core.Params(hop=2048 if long else 1024, wpitch=job.get("wpitch", 0.6))
+    tune = tune_of(job, audio, tuning)
+    if tune and verbose:
+        print("  lệch cao độ của bản thu: %+.2f nửa cung (dời phổ trước khi căn)" % tune)
+    base = core.Params(hop=2048 if long else 1024, wpitch=job.get("wpitch", 0.6), tune=tune)
     anchors = [(at(notes, pos, a), t) for a, t in job.get("anchors", [])]
     out = []
     for name, p in core.variants(base):
@@ -90,7 +108,7 @@ def align_job(job, audio, verbose=True):
     return notes, pos, out
 
 
-def run(name, plot=None, verbose=True):
+def run(name, plot=None, verbose=True, tuning=None):
     """Mốc của mọi dòng {dòng: giây tính liền qua các phần, hoặc None} và bảng in ra."""
     cfg = PIECES[name]
     md = page.md_path(cfg["page"])
@@ -120,7 +138,7 @@ def run(name, plot=None, verbose=True):
             res[r] = offs[part] + v
         if not rows_to_align:
             continue
-        notes, pos, V = align_job(job, audio)
+        notes, pos, V = align_job(job, audio, verbose, tuning)
         info = V[1][2]
         if verbose:
             print("[%s] phần %d: âm thanh %.1f–%.1f / %.1f s, bản nhạc %.1f s%s" % (
@@ -129,7 +147,7 @@ def run(name, plot=None, verbose=True):
         alt = {}
         if job.get("check"):
             chk = job["check"]
-            n2, pos2, V2 = align_job(chk, audio)
+            n2, pos2, V2 = align_job(dict(chk, tuning=job.get("tuning", 0)), audio, False, tuning)
             for r, spec in chk["rows"].items():
                 alt[r] = float(V2[1][1](at(n2, pos2, spec)))
         marks, flagged = [], []
@@ -176,6 +194,7 @@ def main():
     ap.add_argument("--plot", action="store_true", help="hình phổ cho các dòng chưa nhận")
     ap.add_argument("--plot-all", action="store_true", help="hình phổ cho mọi dòng")
     ap.add_argument("--write", action="store_true", help="ghi mốc vào trang")
+    ap.add_argument("--tuning", help="lệch cao độ của bản thu: auto (ước lượng), off, hay số nửa cung; thay tuning trong pieces.py")
     a = ap.parse_args()
     if a.list or not a.name:
         for k, v in PIECES.items():
@@ -183,7 +202,13 @@ def main():
         return
     if a.name not in PIECES:
         sys.exit("không có cấu hình %r trong pieces.py (xem --list)" % a.name)
-    md, rec, ref = run(a.name, plot="all" if a.plot_all else a.plot)
+    tuning = a.tuning
+    if tuning not in (None, "auto", "off"):
+        try:
+            tuning = float(tuning)
+        except ValueError:
+            sys.exit("--tuning cần auto, off hay một số (nửa cung): %r" % a.tuning)
+    md, rec, ref = run(a.name, plot="all" if a.plot_all else a.plot, tuning=tuning)
     if a.write:
         text = md.read_text(encoding="utf-8")
         errs = attach.moc_problems(rec, ref, text)

@@ -192,6 +192,7 @@ Ghi bản thu vào bản ghi trước (mục 2): `run.py` căn bản thu gợi �
     - `explore.py onsets <trang> <t0> <t1> Sol4:67 ... [--part N]` liệt kê khởi âm của từng cao độ.
     - Giây trong `fix`, `anchors` và `onsets` tính **trong phần** đó, không liền qua các phần như `moc`.
     - Tìm được thời điểm chắc chắn thì ghi vào `fix` kèm chú thích cách đo; không chắc thì để dòng đó `-`.
+    - Bản thu lệch cao độ (đàn lên dây thấp, đĩa cũ quay chậm) làm hỏng phổ nửa cung: `run.py <tên> --tuning auto` ước lượng phần lẻ (dưới nửa cung, `librosa.estimate_tuning`) và dời phổ bản thu trước khi căn. Kết quả tốt hơn thì ghi `tuning="auto"` vào job; lệch từ gần nửa cung trở lên (như `mozart-alla-turca`, đàn 1850 thấp khoảng 0,85 nửa cung) thì ghi số, ví dụ `tuning=-0.85`. Không ghi `tuning`: căn như trước (đặc trưng, bộ nhớ đệm không đổi).
 7. **Ghi.** `$PY tools/audio/align/run.py <tên> --write` ghi mốc vào trang (cùng phép kiểm như `attach.py`; trang đã khóa thì từ chối). Rồi chạy `check_audio.py`, build và test.
 
 Sửa `core.py` thì chạy `$PY tools/audio/align/evalset.py`: 14 mốc đã xác minh tay trên 6 bản thu, in sai số của từng bộ tham số. Không để sai số tăng.

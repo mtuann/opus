@@ -10,7 +10,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { parse } from 'yaml';
 import { kiemTra } from '../src/du-lieu.mjs';
-import { DIEN, MUC, loiTacPham, them, trangKhung, banGhiKhung } from '../tools/them-tac-pham.mjs';
+import { DIEN, MUC, loiTacPham, them, trangKhung, banGhiKhung, boDinhDang } from '../tools/them-tac-pham.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DOCS = path.join(ROOT, 'src/content/docs');
@@ -95,7 +95,7 @@ test('them-tac-pham: thêm bản ghi ở cuối, một dòng trang.yml, trang kh
 	const doc = (f) => fs.readFileSync(path.join(goc, f), 'utf8');
 	try {
 		const truoc = { tp: doc('src/data/tac-pham.yml'), trang: doc('src/data/trang.yml') };
-		const doi = them({ slug: 'vi-du-kiem-thu-them', loai: 'bai-hoc', tacGia: 'mozart', ten: 'Rondo alla turca', chang: 5, grade: 'Grade 6', danhMuc: 'K. 331', ngay: '2027-01-15' }, goc, () => {});
+		const doi = them({ slug: 'vi-du-kiem-thu-them', loai: 'bai-hoc', tacGia: 'mozart', ten: 'Bài *thử* **mẫu**', chang: 5, grade: 'Grade 6', danhMuc: 'K. 331', ngay: '2027-01-15', giong: 'La thứ', nhip: '2/4' }, goc, () => {});
 		assert.deepEqual(doi, [
 			'src/data/tac-pham.yml',
 			'src/data/trang.yml',
@@ -111,21 +111,31 @@ test('them-tac-pham: thêm bản ghi ở cuối, một dòng trang.yml, trang kh
 		const r = duLieu['tac-pham'].at(-1);
 		assert.equal(r.slug, 'vi-du-kiem-thu-them');
 		assert.deepEqual([r.tac_gia, r.chang, r.grade, r.danh_muc, r.thoi_ky, r.them_ngay, r.goi_y], ['mozart', 5, 'Grade 6', 'K. 331', 'Cổ điển', '2027-01-15', false]);
+		// --giong, --nhip điền sẵn; ten giữ Markdown, title bỏ định dạng
+		assert.deepEqual([r.ten, r.giong, r.nhip, r.chip[0]], ['Bài *thử* **mẫu**', 'La thứ', '2/4', 'La thứ · 2/4']);
 		assert.deepEqual(r.thong_tin[0], ['Nhà soạn nhạc', 'Wolfgang Amadeus Mozart (1756–1791)']);
 		assert.equal(r.ban_thu, undefined);
 		// kiểu viết như tac-pham.yml: hàng bảng một dòng, không đệm khoảng trắng trong []
 		assert.match(doc('src/data/tac-pham.yml'), /\n  - \[Nhà soạn nhạc, Wolfgang Amadeus Mozart \(1756–1791\)\]\n/);
 		const chu = doc('src/content/docs/piano/tac-pham/vi-du-kiem-thu-them.md');
-		assert.match(chu, /^---\ntitle: "Mozart: Rondo alla turca"\n/);
+		assert.match(chu, /^---\ntitle: "Mozart: Bài thử mẫu"\n/);
 		assert.ok(loiTacPham({ trang: 'piano/tac-pham/vi-du-kiem-thu-them', chu, rec: r }).every((l) => l.includes(DIEN) || l.includes('Nguồn')));
 		const hs = parse(doc('kiem-dinh/piano/tac-pham/vi-du-kiem-thu-them.yml'));
 		assert.equal(hs.trang, 'src/content/docs/piano/tac-pham/vi-du-kiem-thu-them.md');
 		assert.equal(hs.tang, 'tac-pham');
 		assert.equal(parse(doc('kiem-dinh/du-lieu/tac-pham/vi-du-kiem-thu-them.yml')).ban_ghi, 'tac-pham/vi-du-kiem-thu-them');
 		// hướng dẫn nghe, cùng repo
-		them({ slug: 'debussy-arabesque-nghe', loai: 'nghe', tacGia: 'debussy', ten: 'Arabesque số 1' }, goc, () => {});
+		them({ slug: 'vi-du-kiem-thu-nghe', loai: 'nghe', tacGia: 'debussy', ten: 'Bài nghe thử' }, goc, () => {});
 		assert.deepEqual(kiemTra(path.join(goc, 'src/data')).loi, []);
-		assert.match(doc('src/content/docs/nghe-nhac/debussy-arabesque-nghe.md'), /\| Nhà soạn nhạc \| Claude Debussy \(1862–1918\) \|/);
+		assert.match(doc('src/content/docs/nghe-nhac/vi-du-kiem-thu-nghe.md'), /\| Nhà soạn nhạc \| Claude Debussy \(1862–1918\) \|/);
+		// bài học nhiều bài: không có giong, nhip
+		them({ slug: 'vi-du-kiem-thu-tap', loai: 'bai-hoc', tacGia: 'schumann', ten: '*Tập* thử, số 1 và 2', chang: 2, grade: 'Grade 2', nhieuBai: true }, goc, () => {});
+		const k = kiemTra(path.join(goc, 'src/data'));
+		assert.deepEqual(k.loi, []);
+		const t = k.duLieu['tac-pham'].at(-1);
+		assert.deepEqual([t.slug, 'giong' in t, 'nhip' in t], ['vi-du-kiem-thu-tap', false, false]);
+		assert.ok(!t.chip[0].includes('giọng'));
+		assert.match(doc('src/content/docs/piano/tac-pham/vi-du-kiem-thu-tap.md'), /^---\ntitle: "Schumann: Tập thử, số 1 và 2"\n/);
 	} finally {
 		fs.rmSync(goc, { recursive: true, force: true });
 	}
@@ -147,6 +157,8 @@ test('them-tac-pham: sai thì báo và không để lại thay đổi nào', () 
 		thu({ slug: 'moi', tacGia: 'khong-co-ai' }, /nha-soan-nhac\.yml chưa có "khong-co-ai"/);
 		thu({ slug: 'moi', chang: undefined }, /cần --chang/);
 		thu({ slug: 'moi', khuyetDanh: true }, /đúng một trong hai/);
+		thu({ slug: 'moi', nhieuBai: true, giong: 'Đô trưởng' }, /--nhieu-bai không đi cùng/);
+		thu({ slug: 'moi', loai: 'nghe', nhip: '3/4' }, /chỉ dùng cho bài học/);
 		// cap tới trang có bản ghi riêng: bản ghi kia phải trỏ lại (sửa bản ghi đã có: việc riêng), kiểm chéo bắt và trả lại
 		thu({ slug: 'moi', cap: 'nghe-nhac/mozart-k331' }, /phải có cap "piano\/tac-pham\/moi"/);
 		// chip cấp độ lấy từ grade; grade không hợp chặng thì kiểm chéo bắt
@@ -154,4 +166,12 @@ test('them-tac-pham: sai thì báo và không để lại thay đổi nào', () 
 	} finally {
 		fs.rmSync(goc, { recursive: true, force: true });
 	}
+});
+
+test('boDinhDang: title không giữ Markdown của tên', () => {
+	assert.equal(boDinhDang('*For Children* (*Gyermekeknek*) Sz. 42, tập I số 1 và 6'), 'For Children (Gyermekeknek) Sz. 42, tập I số 1 và 6');
+	assert.equal(boDinhDang('**Đậm** và [link](/opus/piano/) và `mã`'), 'Đậm và link và mã');
+	assert.equal(boDinhDang('Op. 3 số 2'), 'Op. 3 số 2');
+	assert.equal(boDinhDang('a * b * c'), 'a * b * c');
+	assert.equal(boDinhDang('Valse \\*'), 'Valse *');
 });

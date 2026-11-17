@@ -385,6 +385,13 @@ test('nhap: đưa kết quả lượt 2 vào hồ sơ (kèm link, câu đúng); 
 		fs.writeFileSync(f, stringify(them));
 		ghi('l2.yml', dong('n4', 'dung'));
 		assert.doesNotMatch(chay('nhap', 'l2.yml'), /cần review/);
+		// câu tả bài tập soạn riêng (vi-du-soan): lượt 2 cũng không cần nguồn
+		const them2 = parse(fs.readFileSync(f, 'utf8'));
+		them2.nhan_dinh.push({ id: 'n5', cau: 'Bài tập soạn riêng: ba ô 2/4.', loai: 'vi-du-soan', ket_qua: 'dung' });
+		fs.writeFileSync(f, stringify(them2));
+		ghi('l2.yml', dong('n5', 'dung', ', ghi_chu: đọc trên khuông'));
+		assert.match(chay('nhap', 'l2.yml'), /1 dung/);
+		assert.equal(parse(fs.readFileSync(f, 'utf8')).nhan_dinh[4].luot_2, 'dung');
 		// `nguon:` để trống (null) với khong-chac: như không ghi nguồn
 		ghi('l2.yml', '- { trang: du-lieu/nha-soan-nhac/a, id: n3, luot_2: khong-chac, nguon: , ghi_chu: chưa tìm được }\n');
 		assert.match(chay('nhap', 'l2.yml'), /1 khong-chac/);
@@ -465,6 +472,16 @@ test('câu về chính site (ve-site) không qua lượt 2 nhưng cần ghi_chu;
 		assert.match(loi([du[0], du[1], kt(1, 'dung'), kt(2, 'dung'), kt(3), kt(4), kt(5)]), /lượt 2 phải kiểm mẫu ít nhất 3 câu \(mới có 2\)/);
 		assert.match(loi([du[0], du[1], kt(1, 'sai'), kt(2, 'dung'), kt(3, 'dung'), kt(4), kt(5)]), /mẫu lượt 2 có câu sai, nên lượt 2 phải kiểm mọi lời khuyên tập \(mới có 3\/5\)/);
 		assert.match(loi([nd('n1', 'dinh-nghia'), ...du.slice(1)]), /nhận định n1: chưa có kết quả lượt 2/);
+		// ví dụ soạn riêng (vi-du-soan) và lời khuyên tập: không bắt buộc nguồn (kể cả da-sua), vẫn cần lượt 2 như loại ấy
+		const vd = (them = {}) => ({ id: 'v1', cau: 'Bài tập soạn riêng.', loai: 'vi-du-soan', ket_qua: 'dung', luot_2: 'dung', ...them });
+		assert.equal(loi([...du, vd()]), '');
+		assert.equal(loi([...du, vd({ ket_qua: 'khong-can-nguon' })]), '');
+		assert.equal(loi([...du, vd({ ket_qua: 'da-sua', ghi_chu: 'sửa số ngón' })]), '');
+		assert.match(loi([...du, vd({ luot_2: undefined })]), /nhận định v1: chưa có kết quả lượt 2/);
+		assert.match(loi([...du, vd({ nguon: ['khong-co'] })]), /nguồn "khong-co" không có trong danh sách nguon/);
+		assert.equal(loi([du[0], du[1], { ...kt(1, 'dung'), ket_qua: 'da-sua', ghi_chu: 'viết lại' }, kt(2, 'dung'), kt(3, 'dung')]), '');
+		assert.match(loi([{ ...du[0], ket_qua: 'khong-can-nguon' }, ...du.slice(1)]), /khong-can-nguon chỉ cho loai khuyen-tap, vi-du-soan/);
+		assert.match(loi([{ ...du[0], nguon: [] }, ...du.slice(1)]), /nhận định n1: thiếu nguon/);
 		// xuat cho lượt 2: bỏ câu về site, lấy MAU_KHUYEN_TAP lời khuyên tập ngẫu nhiên, giữ mọi nhận định cần nguồn
 		ghi('kiem-dinh/bat-dau/a.yml', stringify(hs(du.map(({ luot_2, ...x }) => x))));
 		lenh(['xuat', 'bat-dau/a', '--ra', 'xuat.yml', '--goc', goc], ROOT, () => {});

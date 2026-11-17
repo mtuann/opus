@@ -18,6 +18,9 @@ PIECES[tên] = dict(page="đường dẫn trong src/content/docs/ (giữ như do
 - fix: {dòng: giây trong phần} giá trị đã kiểm tra tay trên phổ (khởi âm từng cao độ), dùng thay cho kết quả căn.
 - check: nguồn bản nhạc thứ hai (độc lập) để đối chiếu, dạng dict(src=..., read=..., qpm=..., segs=..., rows={...}).
 - wpitch, band: tham số căn (mặc định 0,6 và không giới hạn).
+- tuning: bản thu lệch cao độ so với La 440: "auto" (ước lượng phần lẻ bằng librosa.estimate_tuning) hay số nửa cung
+  (âm: thấp hơn; ghi số khi lệch từ gần nửa cung trở lên, như đàn cổ lên dây thấp). Phổ bản thu được dời trước khi căn.
+  Không ghi: không dời (như mọi cấu hình cũ). run.py --tuning thay giá trị này cho mọi job.
 Giây trong anchors, fix và mốc cố định tính trong phần; run.py cộng độ dài các phần trước để ra mốc của trang.
 Ghi chú bên phải: số ô trên bản nhạc in, hoặc cách đã đo mốc cố định.
 """
@@ -316,4 +319,37 @@ PIECES = {
              # 47,0–48,7 s); 10: lấy đà Đô♯6–Rê6 61,9 s, Fa♯3 62,3 s, khớp kết quả căn; 11: biến thể khởi-âm và thô→mịn cùng
              # căn coda vào khoảng 211 s, chỉ 3 giây trước khi hết bài; Đô♯6 nhấn mạnh mở ô 99 ở 188,6 s (biến thể thường 189,0)
              fix={9: 46.76, 11: 188.6})]),
+    "debussy-arabesque-1": dict(page="piano/tac-pham/debussy-arabesque-1.md", jobs=[
+        # MIDI Mutopia (theo Durand & Fils 1904): chỉ số ô = số ô in trừ 1, 107 ô
+        dict(src="mutopia_debussy_Arabesque_1.mid",
+             rows={0: "first", 1: 5, 2: 12, 3: 16, 4: 28, 5: 38, 6: 46, 7: 62, 8: 70, 9: 75, 10: 94, 11: 100, 12: 106},
+             # đo trên khởi âm (11/2026): 5: ô 39 (Tempo rubato) vào ở 98,1 s, sau hợp âm Mi giữ dài rất nhỏ; 10: ô 95, Fa♯2
+             # 252,82 s, Đô♯3 253,10 s, La4 252,96 s (biến thể khởi-âm 252,7); 12: ô cuối, Mi3 288,35 s, Mi4 288,39 s
+             fix={5: 98.1, 10: 252.8, 12: 288.2})]),
+    "rachmaninoff-prelude-do-thang-thu": dict(page="piano/tac-pham/rachmaninoff-prelude-do-thang-thu.md", jobs=[
+        # MIDI Mutopia (theo Bosworth 1896, UE 1910): MIDI bỏ qua nhịp lấy đà nên mỗi chỉ số bắt đầu ở phách 3 của một ô;
+        # ô b (số ô của trang, ô lấy đà là ô 1) ở chỉ số b - 1,5, trừ chỗ đổi tốc độ: ô 15 (Agitato) 13,763, ô 44 42,245.
+        # Ô 36: hợp âm fff ở phách 3 (chỉ số 35). Bản thu (Edison 1919) thấp khoảng 0,38 nửa cung.
+        dict(src="mutopia_rach-prelude-op3-no2.mid", tuning="auto", anchors=[(13.763, 104.52), (44.5, 145.59)],
+             rows={0: "first", 1: 1.5, 2: 5.5, 3: 13.763, 4: 35, 5: 42.245, 6: 44.5, 7: 54.5, 8: 60.5},
+             # neo và fix: khởi âm (librosa onset, hop 256) và 5 cao độ mạnh nhất sau chỉnh +0,38 nửa cung (hồ sơ trang,
+             # n24, 11/2026). Đoạn Lento (ô 3–14) và coda căn không ổn định kể cả khi đã chỉnh cao độ và neo.
+             # 1: hợp âm ppp ô 3 ở 8,75 s; 2: Sol♯ trầm đầu ô 7 ở 38,77 s (yếu; hợp âm đầu 40,25 s); 3: Mi mở Agitato
+             # 104,52 s; 5: La quãng tám ô 44 ở 140,24 s; 7: Đô♯ trầm ô 56 ở 192,85 s
+             fix={1: 8.75, 2: 38.77, 3: 104.52, 5: 140.24, 7: 192.85})]),
+    "mozart-alla-turca": dict(page="piano/tac-pham/mozart-alla-turca.md", jobs=[
+        # kern sonata11-3 (chỉ số ô như mozart-k331; nhãn [n] của kern là số ô của trang: 9 nhịp lấy đà ô 9, 26 lấy đà
+        # hành khúc, 35 lấy đà đoạn Fa♯ thứ, 104 kết 1, 105 kết 2, 106 ô 98). Bản thu Greiss (đàn Budynowicz 1850) chơi
+        # đoạn La thứ và hành khúc hai lần trước đoạn Fa♯ thứ (chroma, lượt 2), đoạn 9–24 và 41–56, 73–88 không nhắc lại.
+        dict(src="kern_sonata11-3.krn", read="kern", qpm=112, tuning=-0.85,
+             anchors=[((15, 70), 104.0), ((20, 106), 140.33), ((20, 136), 163.9)],
+             segs=[(0, 8), (0, 8), (9, 25), (26, 34), (26, 34), (0, 8), (0, 8), (9, 25), (26, 34), (26, 34), (35, 43),
+                   (35, 43), (44, 60), (61, 69), (61, 69), (70, 78), (70, 78), (79, 95), (96, 104), (96, 103), (105, 136)],
+             rows={0: (0, "first"), 1: (2, 9), 2: (3, 26), 3: (10, 35), 4: (13, 61), 5: (15, 70), 6: (18, 96),
+                   7: (20, 106), 8: (20, 118)},
+             # Đàn thấp khoảng 0,85 nửa cung (La trưởng nghe gần Sol♯ trưởng; estimate_tuning chỉ thấy phần lẻ +0,15 nên ghi số).
+             # Neo và fix đo trên khởi âm, chroma, độ to (hồ sơ trang, ghi_chu; 11/2026): chủ đề trở lại 104,0 s; ô 98
+             # 140,33 s; hợp âm cuối 163,9 s (sau đó vỗ tay). 1: hai quãng ba lấy đà ô 9 ở 12,10 s; 2: quãng tám lấy đà
+             # hành khúc 23,55 s; 4: lấy đà f 92,67 s; 6: lấy đà hành khúc thứ ba 128,85 s; 8: ô 110 (p) vào ở 149,79 s
+             fix={1: 12.10, 2: 23.55, 4: 92.67, 6: 128.85, 8: 149.79})]),
 }

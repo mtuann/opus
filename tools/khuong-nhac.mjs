@@ -2,9 +2,10 @@
 // tests/abc_bars.py của site cũ:
 // - abcjs không cảnh báo gì khi đọc khối (cú pháp abcjs không hiểu, nốt không vẽ được: lỗi abcjs bỏ qua lặng lẽ);
 // - mỗi ô nhịp đủ độ dài theo M: (ô đầu và ô cuối được ngắn hơn: nhịp lấy đà, ô kết), từng bè một; các bè chồng trong
-//   một ô (&) phải dài bằng nhau.
+//   một ô (&) phải dài bằng nhau. Nhịp đổi giữa khối (trường trong dòng [M:2/4], hay dòng M: giữa phần thân) thì ô từ
+//   đó theo nhịp mới; [L:…] cũng vậy.
 // Đọc abcjs đúng bản site dùng (public/vendor/abcjs-basic-min.js).
-//   node tools/khuong-nhac.mjs [thư mục trang, mặc định src/content/docs]
+//   node tools/khuong-nhac.mjs [thư mục trang hay một file .md, mặc định src/content/docs]
 import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
@@ -56,14 +57,27 @@ function docDoDai(s, i) {
 	return [v, i + m[0].length];
 }
 
+/** Giá trị của trường M: -> { M: độ dài ô (null: không có nhịp), ghep: nhịp kép (6/8, 9/8, 12/8) }. */
+function docNhip(v) {
+	v = v.trim();
+	return { M: v === 'none' || v === '' ? null : v === 'C' ? ps(4, 4) : v === 'C|' ? ps(2, 2) : docPs(v), ghep: /^(6|9|12)\//.test(v) };
+}
+
 /** Độ dài từng ô nhịp của phần thân một bè (như bar_lengths của abc_bars.py). Ô các bè chồng lệch nhau: null. */
 export function doDaiO(than, L, ghep = false) {
+	return cacO(than, L, ghep, null).map((x) => x.d);
+}
+
+/** Từng ô nhịp của phần thân một bè: [{ d: độ dài (null: bè chồng lệch nhau), M: nhịp của ô }]. M: nhịp lúc bắt
+ * đầu; trường trong dòng [M:…], [L:…] đổi nhịp, độ dài mặc định từ chỗ đó (đứng đầu ô thì áp cho cả ô ấy). */
+function cacO(than, L, ghep, M) {
 	const s = than
 		.replace(/"[^"]*"/g, '') // chữ, ký hiệu hợp âm
 		.replace(/![^!]*!/g, '') // ký hiệu trang trí
-		.replace(/\[[A-Z]:[^\]]*\]/g, '') // trường trong dòng
+		.replace(/\[(?![ML]:)[A-Z]:[^\]]*\]/g, '') // trường trong dòng (trừ M:, L:, đọc ở dưới)
 		.replace(/\{[^}]*\}/g, ''); // nốt hoa mỹ không chiếm thời gian
 	const o = [];
+	let nhipO = M; // nhịp của ô đang đọc
 	let cur = ps(0);
 	let i = 0;
 	let lien = 0; // số nốt còn lại của nhóm liên ba…
@@ -78,6 +92,16 @@ export function doDaiO(than, L, ghep = false) {
 	};
 	while (i < s.length) {
 		const c = s[i];
+		const truong = /^\[([ML]):([^\]]*)\]/.exec(s.slice(i));
+		if (truong) {
+			if (truong[1] === 'L') L = docPs(truong[2].trim());
+			else {
+				({ M, ghep } = docNhip(truong[2]));
+				if (!chong.length && bang(cur, ps(0))) nhipO = M;
+			}
+			i += truong[0].length;
+			continue;
+		}
 		if (c === '(' && /\d/.test(s[i + 1] ?? '')) {
 			// (p:q:r: p nốt trong thời gian của q nốt, cho r nốt tiếp theo
 			const m = /^\((\d)(?::(\d)?)?(?::(\d))?/.exec(s.slice(i));
@@ -97,15 +121,17 @@ export function doDaiO(than, L, ghep = false) {
 		}
 		if ('|:]'.includes(c) || (c === '[' && '|12'.includes(s[i + 1] ?? ''))) {
 			let j = i;
-			while (j < s.length && '|:]12['.includes(s[j])) j++;
+			// "[" chỉ thuộc vạch nhịp khi là "[|", "[1", "[2"; "[M:…]" ngay sau vạch là trường trong dòng
+			while (j < s.length && ('|:]12'.includes(s[j]) || (s[j] === '[' && '|12'.includes(s[j + 1] ?? '')))) j++;
 			if (s.slice(i, j).includes('|')) {
 				if (chong.length) {
 					chong.push(cur);
 					cur = chong.every((x) => bang(x, chong[0])) ? chong[0] : null;
 					chong = [];
 				}
-				o.push(cur);
+				o.push({ d: cur, M: nhipO });
 				cur = ps(0);
+				nhipO = M;
 			}
 			i = j;
 			continue;
@@ -137,43 +163,52 @@ export function doDaiO(than, L, ghep = false) {
 		}
 		i++;
 	}
-	if (cur && !bang(cur, ps(0))) o.push(cur);
+	if (cur && !bang(cur, ps(0))) o.push({ d: cur, M: nhipO });
 	return o;
 }
 
 /** Ô nhịp sai độ dài của một khối: danh sách chuỗi "bè …, ô …: … khác …". */
 export function oSai(abc) {
+	// phần đầu (tới K:) đặt nhịp, độ dài mặc định; dòng M:, L: trong phần thân áp cho bè đang viết, từ chỗ đó
 	let L = ps(1, 8);
-	let M = null;
-	let ghep = false;
+	let nhip = { M: null, ghep: false };
 	const dong = abc.split('\n');
-	for (const l of dong) {
+	const dauThan = dong.findIndex((l) => /^K:/.test(l));
+	const dau = dauThan < 0 ? dong : dong.slice(0, dauThan + 1);
+	for (const l of dau) {
 		if (/^L:/.test(l)) L = docPs(l.slice(2).trim());
-		else if (/^M:/.test(l)) {
-			const v = l.slice(2).trim();
-			M = v === 'none' || v === '' ? null : v === 'C' ? ps(4, 4) : v === 'C|' ? ps(2, 2) : docPs(v);
-			ghep = /^(6|9|12)\//.test(v);
-		}
+		else if (/^M:/.test(l)) nhip = docNhip(l.slice(2));
 	}
-	if (!M) return [];
 	const be = new Map();
-	for (const l of dong) {
+	let k = '_';
+	let coNhip = Boolean(nhip.M);
+	for (const l of dauThan < 0 ? [] : dong.slice(dauThan + 1)) {
+		if (/^[ML]:/.test(l)) {
+			be.set(k, [...(be.get(k) ?? []), `[${l.slice(0, 2)}${l.slice(2).trim()}]`]);
+			if (/^M:/.test(l) && docNhip(l.slice(2)).M) coNhip = true;
+			continue;
+		}
+		if (/^V:/.test(l)) k = l.slice(2).trim().split(/\s/)[0];
 		if (/^[A-Za-z]:/.test(l) || l.startsWith('%') || !l.trim()) continue;
 		const mv = /^\[V:([^\]]+)\]\s*(.*)$/.exec(l);
-		const k = mv ? mv[1].trim() : '_';
+		if (mv) k = mv[1].trim();
+		if (/\[M:\s*(?!none\s*\])[^\]\s]/.test(l)) coNhip = true;
 		be.set(k, [...(be.get(k) ?? []), mv ? mv[2] : l]);
 	}
+	if (!coNhip) return [];
 	const sai = [];
 	for (const [k, phan] of be) {
 		let o;
 		try {
-			o = doDaiO(phan.join(' '), L, ghep);
+			o = cacO(phan.join(' '), L, nhip.ghep, nhip.M);
 		} catch (e) {
 			sai.push(`bè ${k}: ${e.message}`);
 			continue;
 		}
-		o.forEach((d, i) => {
+		o.forEach(({ d, M }, i) => {
+			if (!M) return; // ô không có nhịp (M:none): không kiểm
 			if (d && bang(d, M)) return;
+			// ô đầu và ô cuối được ngắn hơn (nhịp lấy đà, ô kết)
 			if (d && nhoHon(d, M) && (i === 0 || i === o.length - 1)) return;
 			sai.push(`bè ${k}, ô ${i + 1}: ${d ? chu(d) : 'các bè chồng dài khác nhau'}, cần ${chu(M)}`);
 		});
@@ -181,12 +216,15 @@ export function oSai(abc) {
 	return sai;
 }
 
-/** Mọi khối ```abc (hay ~~~abc) trong các trang .md của thư mục: [{ khoa: "<trang>#<k>", abc }]. */
+/** Mọi khối ```abc (hay ~~~abc) trong các trang .md của thư mục (hay của một file): [{ khoa: "<trang>#<k>", abc }]. */
 export function cacKhoi(thuMuc = path.join(GOC, 'src/content/docs')) {
 	const ra = [];
-	for (const f of fs.readdirSync(thuMuc, { recursive: true }).filter((x) => /\.mdx?$/.test(x)).sort()) {
+	const motFile = fs.statSync(thuMuc).isFile();
+	const goc = motFile ? path.dirname(thuMuc) : thuMuc;
+	const ds = motFile ? [path.basename(thuMuc)] : fs.readdirSync(thuMuc, { recursive: true }).filter((x) => /\.mdx?$/.test(x)).sort();
+	for (const f of ds) {
 		const trang = f.replace(/\\/g, '/').replace(/\.mdx?$/, '');
-		const chuTrang = fs.readFileSync(path.join(thuMuc, f), 'utf8');
+		const chuTrang = fs.readFileSync(path.join(goc, f), 'utf8');
 		let k = 0;
 		for (const m of chuTrang.matchAll(/^(```|~~~)abc[ \t]*\n([\s\S]*?)^\1[ \t]*$/gm)) ra.push({ khoa: `${trang}#${++k}`, abc: m[2] });
 	}

@@ -18,6 +18,7 @@ Nhận định là mọi câu có thể đúng hoặc sai. Mỗi nhận định 
 | `lich-su` | bối cảnh, ảnh hưởng, người đề tặng | có |
 | `so-lieu` | con số khác (số chương, độ dài, tốc độ máy đếm nhịp do tác giả ghi) | có |
 | `khuyen-tap` | "Tập hai tay riêng trước, chậm." | không, nhưng không được trái với trang lõi khác |
+| `vi-du-soan` | câu tả bài tập, ví dụ soạn riêng cho trang: "Ba bài tập chuẩn bị: …" | không (kiểm trên chính khuông nhạc, `khuong_nhac` của hồ sơ); vẫn qua lượt 2 và review như nhận định thường |
 | `ve-site` | câu nói về chính site: "Bài kiểm tra có 28 câu", "xem trang chặng 3", "site chia 7 chặng", số bài, link sang trang khác | không; review kiểm thẳng trên trang, thành phần hay dữ liệu đã khóa và ghi `review: dung` hay `sai`; `ghi_chu` ghi đã kiểm ở đâu. Không qua lượt 2. Không kèm nguồn ngoài, không có ở hồ sơ bản ghi dữ liệu (công cụ khóa chặn) |
 
 - Câu viết chung chung đến mức không kiểm được ("bài này rất hay") thì viết lại cho cụ thể hoặc bỏ.
@@ -140,7 +141,7 @@ khuong_nhac:
     ket_qua: dung
 ```
 
-Giá trị `ket_qua`: `dung`, `da-sua` (kèm `ghi_chu`), `da-bo` (đã bỏ câu khỏi trang, kèm `ghi_chu`), `khong-can-nguon` (chỉ cho `khuyen-tap`).
+Giá trị `ket_qua`: `dung`, `da-sua` (kèm `ghi_chu`), `da-bo` (đã bỏ câu khỏi trang, kèm `ghi_chu`), `khong-can-nguon` (chỉ cho `khuyen-tap`, `vi-du-soan`). Hai loại này không bắt buộc `nguon`, cả ở lượt 1 (kể cả `da-sua`) lẫn khi nhập lượt 2 (`nhap`); có ghi thì nguồn phải có trong danh sách `nguon`.
 
 **`ghi_chu` ghi theo lúc kiểm** (chủ repo giao Claude chốt ngày 09/11/2026, kế hoạch mở rộng 4.3.4): hồ sơ là nhật ký kiểm định, nên không viết lại `ghi_chu` cũ khi site đổi sau đó. Khoảng 200 hồ sơ còn ghi "chưa chuyển", "sắp có": nghĩa là lúc kiểm, trang đích chưa lên site mới; từ 07/11/2026 mọi trang đã có (kiểm thử link nội bộ của bản thật bắt link hỏng). Ghi chú "Còn mở" mà sau đã xong thì nối một câu có ngày, không xóa câu cũ. Mở khóa trang vì lý do khác thì tiện sửa ghi chú của nhận định bị chạm.
 
