@@ -1,0 +1,102 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa du-lieu/tac-pham/bartok-sonatina
+ban_ghi: tac-pham/bartok-sonatina
+lan:
+  - so: 1
+    ngay: 2026-11-17
+    nhanh: them/bartok-sonatina
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5 (lượt 1, them/bartok-sonatina, 17/11/2026)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Bản ghi mới (tools/them-tac-pham.mjs, 17/11/2026), loai: nghe. Nguồn chung với hồ sơ trang nghe-nhac/bartok-sonatina (ấn bản, cách đo mốc ghi ở đó). Không có doi_chieu (trang không có trích đoạn: không có bản quét bản in đầu 1919), không có cap (chưa có bài học Sonatina). ban_thu: commons.py rec báo nhầm "phạm vi công cộng" (đọc mẫu {{PD-old-auto-1923}} của phần sáng tác); trang mô tả ghi phần bản thu {{self|cc-by-sa-3.0|GFDL}}: sửa JSON thành CC BY-SA 3.0 rồi attach.py --json. Sơ đồ (hinh) chia theo mốc đo trên bản thu (giây, làm tròn): 2,5–29; 29–51; 51–85; 85–96; 96–119; 119–148; 148–191; 191–220. them_ngay là dữ liệu nội bộ, không có nhận định.'
+nguon:
+  - id: quet-3953
+    bac: 1
+    ten: 'Bartók Béla, Sonatine pour le piano, Rózsavölgyi, "R. és Tsa 3953" (bản sửa đầu thập niên 1930), bản quét IMSLP #893630'
+    link: https://imslp.org/wiki/Special:ImagefromIndex/893630
+  - id: imslp-sz55
+    bac: 2
+    ten: 'IMSLP, Sonatina, Sz.55 (Bartók, Béla), wikitext 17/11/2026: "Sz.55", ba chương Dudások (Bagpipes), Medvetánc (Bear Dance), Finale; 1915; "Piece Style=Early 20th century"'
+    link: https://imslp.org/wiki/Sonatina,_Sz.55_(Bart%C3%B3k,_B%C3%A9la)
+  - id: henle-bem
+    bac: 2
+    ten: 'G. Henle Verlag, HN 1401, Bemerkungen/Comments (László Somfai, 2016): "Sonatine BB 69"; bản thảo 1915; chú thích tên điệu múa và nơi sưu tầm'
+    link: https://www.henle.de/media/0b/19/f2/1697725688/1401-1697725688-sync.pdf
+  - id: henle-hn1401
+    bac: 2
+    ten: 'G. Henle Verlag, Sonatina HN 1401 (trang sản phẩm): "Bartók used different melodies taken from Romanian instrumental folk music in his Sonatina"'
+    link: https://www.henle.de/en/Sonatina/HN-1401
+  - id: commons-lp
+    bac: 1
+    ten: 'Wikimedia Commons, File:Bartok - Sonatina.ogg: performer "Wikipedian La Pianista", performance_date 2009; bản thu {{self|cc-by-sa-3.0|GFDL}}; 220,5978 s'
+    link: https://commons.wikimedia.org/wiki/File:Bartok_-_Sonatina.ogg
+  - id: lp-file
+    bac: 1
+    ten: 'File gốc bản thu La Pianista, đo bằng librosa (độ to, chroma, khởi âm)'
+    link: https://upload.wikimedia.org/wikipedia/commons/1/1c/Bartok_-_Sonatina.ogg
+nhan_dinh:
+  - id: n1
+    cau: 'Tên: Sonatina; tác giả Béla Bartók; số danh mục Sz. 55, BB 69; loại hướng dẫn nghe.'
+    loai: danh-muc
+    truong: [ ten, tac_gia, danh_muc, loai ]
+    nguon: [ imslp-sz55, henle-bem, quet-3953 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP "Sz.55"; Henle "Sonatine BB 69"; bản quét bìa "Sonatine … par Béla Bartók", tr. 3 "Szonatina … Bartók Béla". Loại hướng dẫn nghe là phân loại của site (trang chính nghe-nhac/bartok-sonatina).'
+  - id: n2
+    cau: 'Thời kỳ: Thế kỷ 20.'
+    loai: lich-su
+    truong: [ thoi_ky ]
+    nguon: [ imslp-sz55 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP "Piece Style=Early 20th century"; sáng tác 1915. Khớp thoi_ky của bartok trong nha-soan-nhac.yml.'
+  - id: n3
+    cau: 'Luyện nghe: giai điệu múa dân gian Romania, nhịp đổi, tay trái lặp hình nốt.'
+    loai: cau-truc
+    truong: [ luyen_nghe ]
+    nguon: [ henle-hn1401, quet-3953 ]
+    ket_qua: dung
+    ghi_chu: 'Henle: giai điệu từ nhạc khí dân gian Romania. Bản quét: chương 1 Allegro đổi 2/4 và 3/4 (tr. 4); chương 3 tay trái lặp móc kép hai nốt ở Sostenuto và Tempo I (tr. 7–8), tay phải lặp La–Si (tr. 8).'
+  - id: n4
+    cau: 'Hình, chú thích: ba chương, mỗi chương dựng trên một hay hai giai điệu múa dân gian Romania; độ dài ô theo bản thu La Pianista; cùng màu là cùng giai điệu trở lại trong một chương.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ henle-hn1401, quet-3953, lp-file ]
+    ket_qua: dung
+    ghi_chu: 'Chú thích nơi sưu tầm: chương 1 hai giai điệu (tr. 3, 4), chương 2 một (tr. 5), chương 3 hai (tr. 6, 7). Độ dài ô là giây trên bản thu (ghi_chu hồ sơ). Màu: chương 1 a–b–a (Tempo I trở lại giai điệu đầu), chương 3 a–b–coda (coda nhắc giai điệu đầu).'
+  - id: n5
+    cau: 'Hình, chương 1: Dudások, điệu múa 1, ô 1–20; Allegro, điệu múa 2, nhịp 2/4 và 3/4; Tempo I, điệu múa 1 trở lại.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ quet-3953 ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 3: 20 ô (5+3+4+4+4), ô 20 longa; tr. 4: Allegro, 3/4 và 2/4 xen nhau; tr. 4 hệ 5 Tempo I, hai dấu thăng, giai điệu đầu trở lại.'
+  - id: n6
+    cau: 'Hình, chương 2: Medvetánc, giai điệu ở tay phải; từ ô 9 giai điệu xuống tay trái.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ quet-3953 ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 5: ô 1–8 giai điệu tay phải; vạch kép, ô 9 p, giai điệu móc kép ở tay trái, tay phải hợp âm.'
+  - id: n7
+    cau: 'Hình, chương 3: Finale, điệu múa 1; Sostenuto, điệu múa 2, chậm và nhanh xen nhau; Coda, tranquillo, điệu múa 1.'
+    loai: cau-truc
+    truong: [ hinh ]
+    nguon: [ quet-3953 ]
+    ket_qua: dung
+    ghi_chu: 'Tr. 6 chú thích điệu múa 1; tr. 7 chú thích điệu múa 2 ở nốt đầu Sostenuto; Sostenuto, poco a poco accel., Tempo I, rallentando molto al Sostenuto, accelerando, al Tempo I (tr. 7–8); tr. 9 "tranquillo (coda)", hình nốt của ô 5.'
+  - id: n8
+    cau: 'Bản thu: La Pianista, trọn ba chương, thu năm 2009; CC BY-SA 3.0; trang Commons.'
+    loai: ten
+    truong: [ ban_thu ]
+    nguon: [ commons-lp ]
+    ket_qua: dung
+    ghi_chu: 'Commons: performer "Wikipedian La Pianista", performance_date 2009; giấy phép bản thu {{self|cc-by-sa-3.0|GFDL}} (GFDL là giấy phép kép, site ghi CC BY-SA 3.0). File nghe đủ ba chương.'
+  - id: n9
+    cau: 'Bản thu, độ dài: 220,6 giây.'
+    loai: so-lieu
+    truong: [ ban_thu ]
+    nguon: [ commons-lp, lp-file ]
+    ket_qua: dung
+    ghi_chu: 'Commons imageinfo duration 220,5978 s; librosa đọc file gốc 220,598 s.'
