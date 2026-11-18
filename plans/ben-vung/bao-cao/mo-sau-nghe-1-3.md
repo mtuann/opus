@@ -47,3 +47,7 @@ Claude Opus 5.5 (agent riêng, 17/11/2026). Ghi `review: dung` cho 30 nhận đ�
 - **`leggiero` khóa cả bản ghi**, không phải khóa từng phần: `khoa.json` ở `main` ghi `"thuat-ngu/leggiero"` (không `#`), như cả 382 bản ghi thuật ngữ; `truong` ở lần 1 là dạng ghi của đợt 3. Lần 2 không cần `truong`; khóa lại bằng `node tools/khoa.mjs khoa du-lieu/thuat-ngu/leggiero` (mục "Chỗ chưa chắc" phía trên ghi nhầm).
 - Kiểm thử: `npm run build:xem` đạt; `npm test` 355 đạt, 2 bỏ qua, 0 hỏng.
 - Kiểm mẫu còn lại: `kiem_mau` để trống; nên lấy một câu trong nu-nha-soan-nhac n108–n111.
+
+## Kiểm mẫu và khóa
+
+Claude (agent riêng) kiểm thay chủ repo bốn câu (nu-nha-soan-nhac n109, tac-pham-theo-cap n85, thuat-ngu/slargando n1, thuat-ngu/lunga n1): 4 đúng. Khóa lại các mục đã mở và khóa 7 thuật ngữ mới 17/11/2026.
