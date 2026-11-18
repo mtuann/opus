@@ -32,3 +32,18 @@ Kiểm thử: `npm run build:xem` đạt; `npm test` 355 đạt, 2 bỏ qua, 0 h
 - Thuật ngữ khác trong báo cáo Sonatina (cuộn đàn tự động, kèn túi) và các chữ cakewalk, ragtime của *Golliwogg's Cakewalk*: chưa có trong lời giao; để lô thuật ngữ sau.
 - `lich-su/thoi-ky/the-ky-20` link sang hướng dẫn nghe Sonatina (báo cáo Sonatina gợi ý): không trong lời giao.
 - `piano/nha-soan-nhac`: không thêm link bài học *Romanian Folk Dances*, *For Children* ở dòng Bartók (chưa có trong lời giao); dòng 6.1 "Dự phòng: … Bartók Sonatina; Debussy *Golliwogg's Cakewalk*" của kế hoạch giữ nguyên (hai bài đã thành hướng dẫn nghe, ghi ở 6.2).
+
+## Review
+
+Claude Opus 5.5 (agent riêng, 17/11/2026). Ghi `review: dung` cho 30 nhận định mới hay sửa của lần mở này (18 câu qua lượt 2, 8 câu `ve-site`, nu-nha-soan-nhac n108–n111) và `nguoi.review` ở lần cuối của `lan` cả 17 hồ sơ (9 mục mở, 7 bản ghi mới, `nhac-ly/tu-dien`). Không câu nào sai.
+
+- **Backer Grøndahl**: đọc lại `snl.no/Agathe_Backer_Gr%C3%B8ndahl.json` (User-Agent `opus-kiem-dinh/1.0`): sinh 1.12.1847, mất 4.6.1907, khớp `nha-soan-nhac.yml`; ba câu tiểu sử dịch sát SNL/NBL. Tên, Op. 36 số 1, "Lời than" khớp hướng dẫn nghe đã khóa.
+- **Link sang ba hướng dẫn nghe**: chữ khớp `nghe-nhac/bartok-sonatina` (Grade 7 → chặng 6, 1915, giai điệu múa dân gian Romania, chương 1), `debussy-golliwogg` (bài số 6, cuối *Children's Corner*, cakewalk theo phong cách ragtime), `backer-grondahl-klage`; số hướng dẫn nghe theo thời kỳ ở `ke-hoach` n9 đếm lại đúng.
+- **Chặng 6 cho Sonatina**: hợp lý. `cap-do.yml` đặt chặng 6 là Grade 7–8; ABRSM Grade 7 (2025–2028); dòng mới viết như dòng Chopin Op. 72 số 1 cùng trang.
+- **Bản quét** IMSLP893630: xem lại tr. 3 ô 20 ("longa" trên dấu ngân) và tr. 4 ("p leggero"). `luot_2_ghi_chu` của tac-pham-theo-cap n86 viết nhầm "p leggiero"; chữ trang không nêu chữ này, ghi ở review.
+- **Từ điển**: nghĩa và ghi chú của 7 mục khớp Dolmetsch (curl lại defsl, defsl1, defss3, defst5), Trinity, Britannica; nhóm hợp lý. Hai chỗ sửa chữ (dữ liệu, hồ sơ bản ghi và `doi_chu` của `nhac-ly/tu-dien` sửa theo):
+  - `lunga`: giữ một mục, *longa* ở ghi chú (Dolmetsch không có mục *longa* nghĩa "ngân lâu", chỉ là tên trường độ cổ, "Latin, literally 'long'"); thêm "(tiếng Latin, cùng nghĩa)" để người đọc hiểu vì sao *longa* nằm ở mục *lunga*.
+  - `a piacere`: ghi chú thành "Như *ad libitum* (*ad lib.*): người chơi tự quyết, chẳng hạn có giữ đúng nhịp hay không" (câu cũ thiếu chủ ngữ).
+- **`leggiero` khóa cả bản ghi**, không phải khóa từng phần: `khoa.json` ở `main` ghi `"thuat-ngu/leggiero"` (không `#`), như cả 382 bản ghi thuật ngữ; `truong` ở lần 1 là dạng ghi của đợt 3. Lần 2 không cần `truong`; khóa lại bằng `node tools/khoa.mjs khoa du-lieu/thuat-ngu/leggiero` (mục "Chỗ chưa chắc" phía trên ghi nhầm).
+- Kiểm thử: `npm run build:xem` đạt; `npm test` 355 đạt, 2 bỏ qua, 0 hỏng.
+- Kiểm mẫu còn lại: `kiem_mau` để trống; nên lấy một câu trong nu-nha-soan-nhac n108–n111.
