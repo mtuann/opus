@@ -8,9 +8,9 @@ lan:
     nguoi:
       luot_1: Claude Opus 5.5 (lượt 1, them/golliwogg-cakewalk, 17/11/2026)
       luot_2: Claude Opus 5.5 (agent riêng, độc lập với lượt 1, 17/11/2026; 41 câu, 37 đúng, 4 sai)
-      review: null
+      review: "Claude (agent riêng, không làm lượt 1, lượt 2; 17/11/2026)"
       kiem_mau: null
-ghi_chu: 'Bản ghi mới (tools/them-tac-pham.mjs, 17/11/2026); sẽ khóa cả bản ghi. Nguồn chung với hồ sơ trang nghe-nhac/debussy-golliwogg. ban_thu ghi bằng commons.py rec + attach.py (Commons, phát được). Sơ đồ (hinh.nghe) chia theo mốc trên bản thu (0, 10,6, 27, 48, 68, 115, 153 s; tiếng đàn tới khoảng 158 s). them_ngay là dữ liệu nội bộ, không có nhận định.'
+ghi_chu: 'Bản ghi mới (tools/them-tac-pham.mjs, 17/11/2026); sẽ khóa cả bản ghi. Nguồn chung với hồ sơ trang nghe-nhac/debussy-golliwogg. ban_thu ghi bằng commons.py rec + attach.py (Commons, phát được). Sơ đồ (hinh.nghe) chia theo đầu các đoạn trên bản thu (lượt 1: 0, 10,6, 27, 48, 68, 115, 153 s; review đo lại: 0, 9,7, 26,8, 50,7, 67,75, 114,5, 154,2 s; tiếng đàn tới khoảng 158,3 s). them_ngay là dữ liệu nội bộ, không có nhận định.'
 nguon:
   - id: durand-1908
     bac: 1
@@ -47,10 +47,11 @@ nhan_dinh:
     nguon: [ imslp-cc, durand-1908 ]
     truong: [ ten, tac_gia, danh_muc, loai ]
     ket_qua: dung
-    ghi_chu: 'IMSLP: "CD 119 ; L.113", số 6 Golliwog''s Cake-walk. Bản quét tr. 24 "VI. Golliwogg''s cake walk" (cách viết hai chữ g của Debussy). danh_muc "L. 113 số 6" theo kiểu bản ghi debussy-arabesque-1 ("L. 66 số 1").'
+    ghi_chu: 'IMSLP: "CD 119 ; L.113", số 6 Golliwog''s Cake-walk. Bản quét tr. 24 "VI. Golliwogg''s cake walk" (cách viết hai chữ g của Debussy). danh_muc "L. 113 số 6" theo kiểu bản ghi debussy-arabesque-1 ("L. 66 số 1"). Review (Claude, 17/11/2026): bản quét tr. 24 "VI. Golliwogg''s cake walk" thấy lại; khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/api.php?action=parse&page=Children%27s_Corner,_CD_119_(Debussy,_Claude)&prop=wikitext&format=json" ]
     luot_2_ghi_chu: "IMSLP: L.113, số 6. Trang chính là hướng dẫn nghe (loai: nghe, trang nghe-nhac/debussy-golliwogg có trong worktree)."
+    review: dung
   - id: n2
     cau: 'Thời kỳ: Ấn tượng.'
     loai: lich-su
@@ -61,16 +62,18 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/impressionism" ]
     luot_2_ghi_chu: "Concise Oxford Dictionary of Music: ấn tượng là thuật ngữ áp cho nhạc Debussy."
+    review: dung
   - id: n3
     cau: 'Luyện nghe: đảo phách kiểu ragtime trên nhịp đệm đều; câu trích Tristan und Isolde giữa điệu nhảy.'
     loai: cau-truc
     nguon: [ henle-hn382, laits-tristan, ptna-630, durand-1908 ]
     truong: [ luyen_nghe ]
     ket_qua: dung
-    ghi_chu: 'Henle: "in ragtime style". LAITS: tay trái đệm, giai điệu tay phải đảo phách; câu mở đầu Tristan ở ô 61. Bản quét tr. 24 (nhịp đệm, đảo phách), tr. 26 (Cédez, avec une grande émotion).'
+    ghi_chu: 'Henle: "in ragtime style". LAITS: tay trái đệm, giai điệu tay phải đảo phách; câu mở đầu Tristan ở ô 61. Bản quét tr. 24 (nhịp đệm, đảo phách), tr. 26 (Cédez, avec une grande émotion). Review (Claude, 17/11/2026): trang Henle ("in ragtime style") và LAITS ("left hand accompaniment with a syncopated right hand melody", Tristan ở ô 61) tải lại; khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://www.henle.de/en/Children-s-Corner-Little-Suite-for-Piano/HN-382", "https://laits.utexas.edu/tristan/DebBerg.php" ]
     luot_2_ghi_chu: "Henle: phong cách ragtime; UT Austin: câu trích Tristan giữa bài. Bản quét: tay trái đều, tay phải đảo phách."
+    review: dung
   - id: n4
     cau: 'Đối chiếu: chép tay từ bản quét Durand & Fils (bản khắc 1908, D. & F. 7188), IMSLP #252526.'
     loai: ten
@@ -81,33 +84,37 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/api.php?action=parse&page=Children%27s_Corner,_CD_119_(Debussy,_Claude)&prop=wikitext&format=json" ]
     luot_2_ghi_chu: "IMSLP: file PMLP02387-Debussy,_Claude-Childrens_Corner_Durand_7188_filter.pdf, Durand & Fils, Paris, 1908, D. & F. 7188; file trên máy mang số IMSLP252526. Trang cuối bản quét ghi 'Février 1952 Imp. Mounot': lần in sau từ bản khắc 1908, khớp cách ghi 'bản khắc 1908'."
+    review: dung
   - id: n5
-    cau: 'Sơ đồ: 128 ô nhịp 2/4, ba phần, phần đầu trở lại sau đoạn giữa; Mở đầu ô 1–9 (nhịp đệm), Chủ đề ô 10–25 (Mi♭ trưởng, đảo phách), Ý thứ hai ô 26–46 (hợp âm p, thưa dần), Đoạn giữa ô 47–60 (chậm hơn, pp), Câu của Wagner ô 61–89 (Tristan und Isolde, cắt ngang), Phần đầu trở lại ô 90–125, Kết ô 126–128 (ff); chỉ ba ô cuối khác hẳn, kết bằng hai hợp âm ff thay vì thưa dần.'
+    cau: 'Sơ đồ: 128 ô nhịp 2/4, ba phần, phần đầu trở lại sau đoạn giữa; Mở đầu ô 1–9 (nhịp đệm), Chủ đề ô 10–25 (Mi♭ trưởng, đảo phách), Ý thứ hai ô 26–46 (hợp âm p, thưa dần), Đoạn giữa ô 47–60 (chậm hơn, pp), Câu của Wagner ô 61–89 (Tristan und Isolde, cắt ngang), Phần đầu trở lại ô 90–125, Kết ô 126–128 (ff); phần đầu trở lại gần như nguyên vẹn; ba ô cuối không thưa dần như lần đầu mà kết bằng hai tiếng Mi♭ ff thật ngắn, chồng quãng tám.'
     loai: cau-truc
     nguon: [ durand-1908, imslp-cc, henle-382-comments ]
     truong: [ hinh ]
-    ket_qua: dung
-    ghi_chu: 'Đếm ô trên bản quét (hồ sơ trang, ghi_chu): 25 + 27 + 25 + 24 + 27 = 128; IMSLP 128 bars, E-flat major; 2/4 ở tr. 24 hệ 1. Ô 47 Un peu moins vite pp (tr. 25 hệ 5); ô 61 Cédez (tr. 26 hệ 2); ô 90 Toujours retenu (tr. 27 hệ 3); ô 126–128 f rồi ff (tr. 28 hệ 5); ô 46 più p (tr. 25 hệ 4). Phần đầu trở lại song song ô 10–45, lệch 80 ô (Henle M 28/108, 36/116). Đoạn giữa ô 47–89 chia hai ô ở ô 61 cho dễ nhìn.'
+    ket_qua: da-sua
+    ghi_chu: 'Đếm ô trên bản quét (hồ sơ trang, ghi_chu): 25 + 27 + 25 + 24 + 27 = 128; IMSLP 128 bars, E-flat major; 2/4 ở tr. 24 hệ 1. Ô 47 Un peu moins vite pp (tr. 25 hệ 5); ô 61 Cédez (tr. 26 hệ 2); ô 90 Toujours retenu (tr. 27 hệ 3); ô 126–128 f rồi ff (tr. 28 hệ 5); ô 46 più p (tr. 25 hệ 4). Phần đầu trở lại song song ô 10–45, lệch 80 ô (Henle M 28/108, 36/116). Đoạn giữa ô 47–89 chia hai ô ở ô 61 cho dễ nhìn. Review (Claude, 17/11/2026): bản quét tr. 28 hệ 5: ô 127–128 tay phải Mi♭3, tay trái quãng tám Mi♭1–Mi♭2, móc đơn ff, không phải hợp âm; ô 110–111 khác hòa âm ô 30–31, nên bỏ vế "chỉ ba ô cuối khác hẳn" (xem hồ sơ trang n26). Sửa hinh.nghe ghi_chu theo câu mới. Số ô từng hệ đếm lại trên bản quét (tr. 24–28: 25 + 27 + 25 + 24 + 27 = 128), ranh giới các đoạn khớp.'
     luot_2: sai
     luot_2_nguon: [ "https://imslp.org/api.php?action=parse&page=Children%27s_Corner,_CD_119_(Debussy,_Claude)&prop=wikitext&format=json" ]
     luot_2_ghi_chu: "câu đúng: Sơ đồ: 128 ô nhịp 2/4, ba phần, phần đầu trở lại sau đoạn giữa; Mở đầu ô 1–9 (nhịp đệm), Chủ đề ô 10–25 (Mi♭ trưởng, đảo phách), Ý thứ hai ô 26–46 (hợp âm p, thưa dần), Đoạn giữa ô 47–60 (chậm hơn, pp), Câu của Wagner ô 61–89 (Tristan und Isolde, cắt ngang), Phần đầu trở lại ô 90–125, Kết ô 126–128 (ff); phần đầu trở lại gần như nguyên vẹn, ba ô cuối kết bằng hai tiếng Mi♭ ff (quãng tám) thay vì thưa dần.; Số ô, ranh giới các đoạn, 2/4, Mi♭ trưởng (IMSLP: E-flat major, 128 bars) đều đúng theo bản quét. Sai ở 'hai hợp âm ff': ô 127–128 chỉ là Mi♭ chồng quãng tám; và 'chỉ ba ô cuối khác hẳn' bỏ qua ô 110–111 đổi hòa âm (xem n26 của trang)."
+    review: sai
   - id: n6
-    cau: 'Độ dài các ô của sơ đồ theo bản thu: 11, 16, 21, 20, 47, 38, 5 giây.'
+    cau: 'Độ dài các ô của sơ đồ theo bản thu: 10, 17, 24, 17, 47, 40, 4 giây.'
     loai: so-lieu
     nguon: [ commons-elduende ]
     truong: [ hinh ]
-    ket_qua: dung
-    ghi_chu: 'Mốc đo (hồ sơ trang n27): ô 10 ≈ 10,6 s, ô 26 ≈ 27, ô 47 48,1, ô 61 ≈ 67,8, ô 90 114,6, ô 126 ≈ 153,2, tiếng đàn tới khoảng 158 s (hợp âm cuối 157,18 s; độ to dưới −50 dB từ giây 158). Làm tròn: 11, 16, 21, 20, 47, 38, 5.'
+    ket_qua: da-sua
+    ghi_chu: 'Mốc đo (hồ sơ trang n27): ô 10 ≈ 10,6 s, ô 26 ≈ 27, ô 47 48,1, ô 61 ≈ 67,8, ô 90 114,6, ô 126 ≈ 153,2, tiếng đàn tới khoảng 158 s (hợp âm cuối 157,18 s; độ to dưới −50 dB từ giây 158). Làm tròn: 11, 16, 21, 20, 47, 38, 5. Review (Claude, 17/11/2026): đầu các đoạn đo lại (hồ sơ trang n27): ô 10 9,71 s; ô 26 khoảng 26,8; ô 47 50,7; ô 61 67,75; ô 90 114,54; ô 126 khoảng 154,2 (lặng đen đầu ô; chuỗi nốt 155,2); tiếng đàn tắt khoảng 158,3 s (Mi♭ cuối 157,1; độ to dưới −60 dB từ 158,3). Độ dài 9,7; 17,1; 23,9; 17,05; 46,8; 39,7; 4,1 s, làm tròn 10, 17, 24, 17, 47, 40, 4. Lượt 2 ghi Kết 6 vì tính tới hết file (160,5 s, gồm khoảng lặng cuối); giữ cách lượt 1, tính tới lúc tiếng đàn tắt.'
     luot_2: sai
     luot_2_nguon: [ "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b2/Debussy_-_Golliwog%27s_Cake_Walk_%28Children%27s_Corner%29_%28Piano_Performance_by_eld%C3%BCendes%C3%BCarez%29.wav/Debussy_-_Golliwog%27s_Cake_Walk_%28Children%27s_Corner%29_%28Piano_Performance_by_eld%C3%BCendes%C3%BCarez%29.wav.mp3" ]
     luot_2_ghi_chu: "câu đúng: Độ dài các ô của sơ đồ theo bản thu: 10, 17, 24, 17, 47, 40, 6 giây.; Đo đầu ô trên bản thu (librosa): ô 10 ~9,7 s; ô 26 ~26,5; ô 47 ~50,3; ô 61 ~67,7; ô 90 ~114,5; ô 126 ~154,1; hết file 160,5. Số cũ tính theo mốc 48 cho ô 47 (sai 2,3 s, xem n27 của trang) nên Ý thứ hai ngắn đi ~3 s và Đoạn giữa dài thêm ~3 s; Phần đầu trở lại 38 thay vì ~40."
+    review: sai
   - id: n7
     cau: 'Bản thu: eldüendesüarez, CC BY 4.0, Wikimedia Commons, 160,5 s.'
     loai: ten
     nguon: [ commons-elduende ]
     truong: [ ban_thu ]
     ket_qua: dung
-    ghi_chu: 'Trang mô tả file: {{cc-by-4.0}}, "(piano performance by eldüendesüarez)"; API imageinfo: duration 160,496 s, người tải lên Elduendesuarez. Ghi bằng commons.py rec --by "eldüendesüarez" + attach.py (lic, licUrl, page, mp3, src, d do công cụ lấy từ Commons).'
+    ghi_chu: 'Trang mô tả file: {{cc-by-4.0}}, "(piano performance by eldüendesüarez)"; API imageinfo: duration 160,496 s, người tải lên Elduendesuarez. Ghi bằng commons.py rec --by "eldüendesüarez" + attach.py (lic, licUrl, page, mp3, src, d do công cụ lấy từ Commons). Review (Claude, 17/11/2026): API Commons đọc lại: {{cc-by-4.0}}, người tải lên Elduendesuarez, 2023-12-21; mp3 tải lại 160,50 s (ffprobe); khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://commons.wikimedia.org/w/api.php?action=query&titles=File:Debussy_-_Golliwog%27s_Cake_Walk_(Children%27s_Corner)_(Piano_Performance_by_eld%C3%BCendes%C3%BCarez).wav&prop=imageinfo&iiprop=extmetadata|metadata&format=json" ]
     luot_2_ghi_chu: "Commons: CC BY 4.0, playtime_seconds 160,496; ffprobe trên mp3 cũng ra 160,50 s."
+    review: dung

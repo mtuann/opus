@@ -1,6 +1,6 @@
 # Báo cáo: thêm hướng dẫn nghe Debussy, *Golliwogg's Cakewalk* (*Children's Corner* số 6)
 
-Nhánh `them/golliwogg-cakewalk`, 17/11/2026. Hướng dẫn nghe số 1 của `plans/ben-vung/lo-trinh-them-tac-pham.md` (mục 7), mảng Ấn tượng. Lượt 1 xong; chưa lượt 2, review, kiểm mẫu, chưa khóa.
+Nhánh `them/golliwogg-cakewalk`, 17/11/2026. Hướng dẫn nghe số 1 của `plans/ben-vung/lo-trinh-them-tac-pham.md` (mục 7), mảng Ấn tượng. Lượt 1, lượt 2 (41 câu: 37 đúng, 4 sai) và review xong; chưa kiểm mẫu, chưa khóa.
 
 ## Kết quả
 
@@ -43,3 +43,17 @@ Nhánh `them/golliwogg-cakewalk`, 17/11/2026. Hướng dẫn nghe số 1 của `
 - `piano/nha-soan-nhac` (mục Debussy, "Bắt đầu bằng" nhắc *Golliwogg's Cakewalk* không có link) và `piano/tac-pham/debussy-clair-de-lune` (Học tiếp nhắc *Children's Corner*): thêm link tới trang mới ở nhánh `mo/` sau khi gộp.
 - `nghe-nhac/debussy-preludes` (dòng *Minstrels*) có thể link sang trang mới.
 - Không cần chủ repo tải thêm file.
+
+## Review
+
+Claude (agent riêng, không làm lượt 1, lượt 2), 17/11/2026. Mọi nhận định của hai hồ sơ có `review`: `dung`, trừ n20, n26, n27 của trang và n5, n6 của bản ghi (`sai`, đã sửa, `ket_qua: da-sua`).
+
+- Phần kết (trang n26, bản ghi n5): bản quét tr. 28 hệ 5 ở 400–500 dpi: ô 127, 128 mỗi ô một móc đơn *ff* có dấu ^, tay phải Mi♭3, tay trái quãng tám Mi♭1–Mi♭2, không phải hợp âm. Ô 110–111 khác hòa âm ô 30–31 (và ô 113 ghi *sff* thay *ff* của ô 33), nên bỏ vế "chỉ ba ô cuối khác hẳn". Dòng 14 của bảng: "…một chuỗi nốt chạy xuống *f* rồi hai tiếng Mi♭ *ff* thật ngắn, hai tay cùng đánh Mi♭ chồng quãng tám"; `hinh.nghe` `ghi_chu` sửa theo. Bản ghi không có `thong_tin` (hướng dẫn nghe).
+- Ô 5 (trang n20, thêm): ô 5 là ô lặng ở cả hai tay (tr. 24 hệ 2), không phải tay trái đã vào như ghi chú lượt 1; dòng 2 của bảng thêm "sau một ô lặng ở cả hai tay". Trên bản thu: lặng 4,4–5,3 s, tay trái vào 5,4 s.
+- Mốc (trang n27): đo lại trên mp3 Commons tải lại (librosa: CQT 88 nốt, khởi âm, độ to từng 0,1 s; chroma so phần đầu với phần trở lại, lệch 105,4–105,7 s), đối chiếu bản quét. Đổi: ô 10 11 → 10 (Si♭4 La♭4 Si♭4 Fa Si♭4 từ 9,71 s); ô 38 39 → 40 (độ to lên −13,6 dB lúc 40,1); ô 41 42 → 44 (chuỗi *ff* của ô 40 tới 43,3 s, hợp âm *p* đầu tiên 43,85; lượt 2 đề nghị 43 nhưng 43,0 còn là nốt trầm *ff* cuối ô 40); ô 47 48 → 51 (ô 45 hợp âm từ 48,0; ô 46 Mi♭2 49,0, Fa2 49,7; ô 47 Sol♭2–Rê♭3 *pp* 50,7; lượt 2 đề nghị 50); ô 126 153 → 155 (ô 125 tới 154,1, lặng đen đầu ô 126 kéo tới 155,1, chuỗi nốt 155,2, hai tiếng Mi♭ 155,84 và 157,1; lượt 2 đề nghị 154, là đầu ô nhưng còn lặng). Giữ 0, 5, 27, 68, 80, 97, 101, 115, 117 (đo lại khớp trong 1 s). Ghi bằng `attach.py --ref`: `0 5 10 27 40 44 51 68 80 97 101 115 117 155`.
+- Sơ đồ (bản ghi n6): đầu các đoạn 0; 9,71; ~26,8; 50,7; 67,75; 114,54; ~154,2 s, tiếng đàn tắt ~158,3 s: 10, 17, 24, 17, 47, 40, 4 giây (lượt 2 ghi Kết 6 vì tính tới hết file 160,5 s; giữ cách lượt 1, tính tới lúc tiếng đàn tắt).
+- Hai khối abc so từng nốt với bản quét: khối 1 (ô 10–13) ở 400 và 600 dpi, dòng kẻ và đầu nốt đo bằng máy; khối 2 (ô 61–63) ở 450 dpi. Khớp, không sửa.
+- Kiểm lại trên nguồn (tải lại, User-Agent `opus-kiem-dinh/1.0`): lời tựa Lesure (Durand cuối tháng 9/1908; Bauer 18/12/1908, Cercle musical; Chouchou "barely three years old"; Miss Gibbs), trang Henle (ragtime style; mức 6, 6, 4), COD cakewalk, LAITS (ô 61, Rê♯ viết thành Mi♭, bốn lần, "a joke"), Jim Crow Museum. Đều khớp. Commons API: `{{cc-by-4.0}}`, 2023-12-21, người tải lên Elduendesuarez, 160,50 s; trường author ghi Debussy, người chơi ở description và source.
+- Golliwogg: đoạn ba câu, trung tính, có nguồn, nói rõ chỉ nhắc tên vì là tên bài; giữ. Sửa chữ một câu cho sát nguồn ("a caricature of American black faced minstrels"): "Nhân vật nhại những người diễn trò hát rong bôi mặt đen (*minstrel*) của Mỹ" thay "được vẽ theo một con búp bê nhại…" (n14, vẫn `dung`).
+- Thuật ngữ khớp `thuat-ngu.yml` (đảo phách, a tempo, Tempo primo, nốt hoa mỹ, dim.). Nhãn `khuyen-tap` (n34) và `ve-site` (n35) đúng loại.
+- Kiểm: YAML hai hồ sơ và `tac-pham.yml` đọc bằng `parseDocument` không lỗi; `node tools/khuong-nhac.mjs` 402 khối, 0 lỗi; `npm run build:xem` đạt; `npm test` 353 đạt, 1 bỏ qua, 1 hỏng (`tests/chuyen.test.mjs`: `doi_chu` của `lich-su/nu-nha-soan-nhac`, `piano/tac-pham-theo-cap`, lỗi đã sửa ở `main`, nhánh chưa rebase; không sửa ở đây); `OPUS_TRINH_DUYET=chromium OPUS_TRANG=nghe-nhac/debussy-golliwogg/ npm run test:trinh-duyet` 435/435 đạt.

@@ -20,7 +20,7 @@ tac_pham: debussy-golliwogg
 
 **Cakewalk và ragtime.** Cakewalk là một điệu nhảy ra đời khi những người nô lệ ở Mỹ nhại lại dáng điệu và lối khiêu vũ của người da trắng; cặp nào nhảy đẹp nhất được thưởng một chiếc bánh (*cake*). Điệu nhảy, với dáng đi ưỡn ngực, hai người khoác tay nhau và đá chân cao, thành mốt trên sân khấu Mỹ những năm 1890. Cùng thời ấy rộ lên **ragtime**, loại nhạc viết sẵn chủ yếu cho piano, phổ biến khoảng 1895–1920, với Scott Joplin là tên tuổi lớn nhất. Ở bài này, tay trái giữ nhịp đều như bước chân, nốt trầm ở phách mạnh xen với hợp âm, còn giai điệu tay phải liên tục [đảo phách](/opus/nhac-ly/15-tiet-tau-nang-cao/#ao-phach): trọng âm rơi lệch khỏi phách. Henle mô tả bài viết theo phong cách ragtime, cho thấy Debussy đón nhận các trào lưu nhạc đại chúng một cách thoải mái.
 
-**Golliwogg là ai?** Golliwogg là một nhân vật búp bê trong loạt sách tranh thiếu nhi của Florence Kate Upton, cuốn đầu in ở London năm 1895 và rất được ưa chuộng ở Anh thời ấy. Nhân vật được vẽ theo một con búp bê nhại những người diễn trò hát rong bôi mặt đen (*minstrel*) của Mỹ. Ngày nay hình ảnh Golliwogg được xem là một biếm họa phân biệt chủng tộc với người da đen; trang này chỉ nhắc cái tên vì đó là tên Debussy đặt cho bài nhạc.
+**Golliwogg là ai?** Golliwogg là một nhân vật búp bê trong loạt sách tranh thiếu nhi của Florence Kate Upton, cuốn đầu in ở London năm 1895 và rất được ưa chuộng ở Anh thời ấy. Nhân vật nhại những người diễn trò hát rong bôi mặt đen (*minstrel*) của Mỹ. Ngày nay hình ảnh Golliwogg được xem là một biếm họa phân biệt chủng tộc với người da đen; trang này chỉ nhắc cái tên vì đó là tên Debussy đặt cho bài nhạc.
 
 **Một câu Wagner lạc vào điệu nhảy.** Ở đoạn giữa, nhạc chậm lại và Debussy ghi *avec une grande émotion* ("với một xúc động lớn"), rồi chen vào câu mở đầu vở nhạc kịch *Tristan und Isolde* của Wagner, đúng cao độ Wagner viết: La, Fa, Mi rồi Rê♯ (Debussy ghi là Mi♭). Câu nhạc trang trọng ấy trở lại nhiều lần, và lần nào cũng bị những hợp âm nhảy nhót cắt ngang. Đặt câu nhạc nổi tiếng nhất của Wagner vào điệu nhảy của một con búp bê là một lời đùa.
 
@@ -56,7 +56,7 @@ K:Gb
 
 Bản thu gợi ý do người chơi ký tên **eldüendesüarez** tự thu và đăng lên Wikimedia Commons, giấy phép CC BY 4.0; mốc tham khảo trong bảng tính theo bản thu này.
 
-::khoi-nghe{moc="0 5 11 27 39 42 48 68 80 97 101 115 117 153"}
+::khoi-nghe{moc="0 5 10 27 40 44 51 68 80 97 101 115 117 155"}
 
 ## Theo dõi khi nghe
 
@@ -65,7 +65,7 @@ Ghi lại thời điểm (phút:giây) bạn nghe thấy từng sự kiện tron
 | Thời điểm | Sự kiện |
 |---|---|
 | … | **Mở đầu** (ô 1–4), *Allegro giusto*, *f*: hai tay chơi cùng một câu ngắn cách nhau một quãng tám, rồi những chuỗi nốt lao xuống thấp, kết bằng một cú nhấn *sff* |
-| … | **Nhịp đệm** (ô 5–9): tay trái nốt trầm ở phách xen hợp âm, đều như bước chân; tay phải chen những hợp âm ngắn, khô |
+| … | **Nhịp đệm** (ô 5–9): sau một ô lặng ở cả hai tay, tay trái nốt trầm ở phách xen hợp âm, đều như bước chân; tay phải chen những hợp âm ngắn, khô |
 | … | **Chủ đề** (ô 10), *très net et très sec* (rất gọn và rất khô): giai điệu tay phải nhảy lệch phách trên nhịp đệm của tay trái; hai lần dừng ở một nốt dài có dấu nhấn |
 | … | **Ý thứ hai** (ô 26), *p*: những hợp âm nhẹ, ngắn ở tay phải trên nốt trầm và hợp âm của tay trái |
 | … | **Câu mở đầu trở lại** (ô 38–40), *f* lên *ff* |
@@ -77,7 +77,7 @@ Ghi lại thời điểm (phút:giây) bạn nghe thấy từng sự kiện tron
 | … | **Tan dần** (ô 83–89): *dim.*, *Retenez* (giữ lại), những hợp âm ngân dài, rất nhỏ |
 | … | **Chủ đề trở về** (ô 90), *Toujours retenu* (vẫn giữ chậm), *pp*, lại ba dấu giáng: chủ đề khẽ khàng như nhớ lại |
 | … | **Tốc độ ban đầu** (ô 92, *1° Tempo*): phần đầu trở lại gần như nguyên vẹn |
-| … | **Kết** (ô 126–128): thay vì thưa dần như lần trước, một chuỗi nốt chạy xuống *f* và hai hợp âm *ff* thật ngắn |
+| … | **Kết** (ô 126–128): thay vì thưa dần như lần trước, một chuỗi nốt chạy xuống *f* rồi hai tiếng Mi♭ *ff* thật ngắn, hai tay cùng đánh Mi♭ chồng quãng tám |
 
 ## Câu hỏi để nghe chủ động
 
