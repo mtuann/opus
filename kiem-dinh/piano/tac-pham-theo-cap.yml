@@ -44,7 +44,7 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: Claude Opus 5.5 (lượt 1, mo/sau-nghe-1-3, 17/11/2026)
-      luot_2: null
+      luot_2: "Claude Opus 5.5 (agent riêng, 17/11/2026; 18 câu mới cần nguồn ở tac-pham-theo-cap, debussy-preludes, bartok-romanian-folk-dances và Từ điển: 18 đúng)"
       review: null
       kiem_mau: null
 ghi_chu: 'D8-L1 phần 1/2, lượt 1 (05/11/2026). Việc chính: chặng của bốn bài có bản ghi khớp src/data/tac-pham.yml (n3, n38); bảng mức Henle kiểm trên trang sản phẩm henle.de của từng ấn bản (n10–n32, đã mở 05/11/2026; K. 545 sửa 4–5 thành 5); ABRSM kiểm trên hai PDF 2025 & 2026 và 2027 & 2028 (Practical và Performance); bảng chặng có 170 hàng ngoài bản ghi và mục ngoài cổ điển (6 bài) chỉ kiểm một phần: xem n49, n52–n54, n62–n71 (ket_qua null, "chưa chắc"). Người giao cần: (1) quyết chặng của Nocturne Op. 72 số 1 (ABRSM Grade 8 trong 2027 & 2028, Henle 5), Impromptu Op. 90 số 2 (n52, n53); (2) đồng bộ doi_chu (cu, moi viết theo chữ hiện ra; hàng bảng ghi "ô | ô"); (3) trang không có khuông nhạc (khối abc); (4) dòng "Kiểm tra lần cuối" của trang cũ không có ở trang này. Review D8-gom (Claude Opus 5.5): câu ve-site kiểm lại trên trang, src/data và bản xem (dist riêng trong scratchpad); câu lượt 2 khong-chac đã quyết (mở thêm nguồn, viết lại hay bỏ); kiểm từng hàng các bảng chặng (r1–r7, hai agent Sonnet chia theo chặng, review đọc lại); chi tiết bản nhạc ở mục ngoài cổ điển đối chiếu trang mẫu Musicnotes (s1–s6). Nocturne Op. 72 số 1 không có bản ghi trong src/data/tac-pham.yml: chặng 5 là lựa chọn của site, ô bảng nói thêm ABRSM Grade 8 và Henle 5.'
@@ -1851,12 +1851,18 @@ nhan_dinh:
     nguon: [ abrsm-2527-sonatina, imslp-sz55 ]
     ket_qua: dung
     ghi_chu: "ABRSM 2025–2026 và 2027–2028: Grade 7, danh sách C số 4 \"Bagpipers: Allegretto (1st movt from Sonatina)\". Grade 7 thuộc chặng 6 (≈ Grade 7–8, tiêu đề mục; cap-do.yml). Sz. 55 và tên Dudások theo IMSLP; \"Những người thổi kèn túi\" như hướng dẫn nghe (đã khóa). Thời kỳ Thế kỷ 20 như bản ghi bartok-sonatina và tác giả bartok. Không có bài học: dòng không link ô đầu, chỉ link hướng dẫn nghe ở ô cuối (tests/tac-pham-theo-cap.test.mjs chỉ đọc link /opus/piano/tac-pham/)."
+    luot_2: dung
+    luot_2_nguon: [ "https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26%202026%20Prac%20syllabus%2020240524_access.pdf", "https://www.abrsm.org/sites/default/files/2026-06/Piano%20Practical%20Grades%20Qualification%20Specification%202027%20%26%202028.pdf", "https://www.henle.de/Sonatina/HN-1401", "https://imslp.org/api.php?action=parse&page=Sonatina,_Sz.55_(Bart%C3%B3k,_B%C3%A9la)&prop=wikitext&format=json" ]
+    luot_2_ghi_chu: "Đề cương ABRSM 2025 & 2026 và 2027 & 2028, tr. 41, Grade 7, danh sách C số 4: 'Bartók, Bagpipers: Allegretto (1st movt from Sonatina)', ấn bản EMB hay Henle. Henle HN 1401: 'ABRSM: Piano Grade 7'; lời tựa Henle: bản in đầu đặt tên tiếng Hung 'Dudások (Bagpipers)'; bản quét Rózsavölgyi 1919 ghi 'I. (DUDÁSOK)'. IMSLP: Sz.55, 1915, 'Early 20th century'. Chặng 6 của trang ứng với ≈ Grade 7–8."
   - id: n86
     cau: "Sonatina chương 1, học được gì: quãng năm nhấn ở bè trầm, giai điệu có chùm ba và nốt láy; đoạn Allegro nhẹ, nhịp đổi liên tục giữa 2/4 và 3/4."
     loai: cau-truc
     nguon: [ imslp-sz55 ]
     ket_qua: dung
     ghi_chu: "Theo bản quét #893630 và câu đã kiểm của hướng dẫn nghe (nghe-nhac/bartok-sonatina, mục Nghe bằng tai người chơi piano, chương 1): \"nhiều ô mở bằng một quãng năm Rê–La nhấn mạnh ở bè trầm; tay phải hát giai điệu với chùm ba và nốt láy. Đoạn Allegro ở giữa nhẹ (p leggero), đổi nhịp 2/4 và 3/4 liên tục\"."
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Sonatina,_Sz.55_(Bart%C3%B3k,_B%C3%A9la)" ]
+    luot_2_ghi_chu: "Đọc bản quét IMSLP893630 (Rózsavölgyi 1919, _imslp/), tr. 3–4: bè trầm quãng năm Rê–La có dấu nhấn ^ (ô 1–4), về sau sf ở đầu ô; giai điệu có nhóm chùm ba (số 3) và nốt láy (ô 8, 12, 16…); đoạn Allegro (♩=150) 'p leggiero', số chỉ nhịp đổi 2/4 → 3/4 → 2/4 nhiều lần (ít nhất 7 lần trong đoạn). 'liên tục' hơi mạnh nhưng đúng ý."
   - id: n87
     cau: "Link \"nghe Sonatina\" tới hướng dẫn nghe nghe-nhac/bartok-sonatina ở dòng Sonatina, chặng 6."
     loai: ve-site
