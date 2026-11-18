@@ -58,3 +58,7 @@ Claude (agent riêng, không làm lượt 1, lượt 2), 17/11/2026. Mọi nhậ
 
 - `lich-su/nu-nha-soan-nhac` (đã khóa): thêm Agathe Backer Grøndahl vào mục "Thế kỷ 19" (Na Uy; nghệ sĩ piano, ca khúc và tiểu phẩm piano) kèm link sang hướng dẫn nghe này.
 - Ghi `doi_chu` còn thiếu của `lich-su/nu-nha-soan-nhac` và `piano/tac-pham-theo-cap` (lỗi `tests/chuyen.test.mjs` ở máy có `.cache/site-cu/`).
+
+## Kiểm mẫu và khóa
+
+Claude (agent riêng) kiểm thay chủ repo 5 nhận định mẫu (trang n5, n20, n41, n48; bản ghi n2) trên IMSLP, bản quét, dữ liệu site: 5 đúng. Khóa trang, bản ghi tác phẩm, bản ghi tác giả 17/11/2026.
