@@ -8,7 +8,7 @@ lan:
     nguoi:
       luot_1: Claude Opus 5.5 (lượt 1, them/backer-grondahl-klage, 17/11/2026)
       luot_2: "Claude Opus 5.5 (agent riêng, độc lập với lượt 1, 17/11/2026; 55 câu cho trang, bản ghi, tác giả: 54 đúng, 1 sai)"
-      review: null
+      review: "Claude (agent riêng, không làm lượt 1, lượt 2; 17/11/2026)"
       kiem_mau: null
 ghi_chu: 'Bản ghi mới (tools/them-tac-pham.mjs, 17/11/2026), loai nghe, không có chang/grade/cap. Tác giả mới backer-grondahl (hồ sơ riêng). Nguồn chung với hồ sơ trang nghe-nhac/backer-grondahl-klage. ban_thu ghi bằng commons.py rec và attach.py (bản Commons phát được, một phần, d = 80,93 s). Sơ đồ (hinh.nghe) chia theo thời gian trên bản thu gợi ý (cách đo ở ghi_chu hồ sơ trang). them_ngay là dữ liệu nội bộ, không có nhận định.'
 nguon:
@@ -35,10 +35,11 @@ nhan_dinh:
     truong: [ ten, tac_gia, danh_muc, loai ]
     nguon: [ ban-in, imslp-op36 ]
     ket_qua: dung
-    ghi_chu: 'Bản in tr. 2: "Klage. … Agathe Backer Grøndahl, Op. 36 No 1."; IMSLP: Op.36, bài 1 Klage.'
+    ghi_chu: 'Bản in tr. 2: "Klage. … Agathe Backer Grøndahl, Op. 36 No 1."; IMSLP: Op.36, bài 1 Klage. Review (Claude, 17/11/2026): bản quét tr. 2: "Agathe Backer Grøndahl, Op. 36 No 1"; IMSLP: số 1 Klage.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/10_Fantasistykker,_Op.36_(Backer-Gr%C3%B8ndahl,_Agathe)" ]
     luot_2_ghi_chu: "IMSLP: Op.36, số 1 Klage; bản quét: 'Agathe Backer Grøndahl, Op. 36 Nº 1'. Loại hướng dẫn nghe theo site."
+    review: dung
   - id: n2
     cau: 'Thời kỳ: Lãng mạn.'
     loai: lich-su
@@ -49,6 +50,7 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/10_Fantasistykker,_Op.36_(Backer-Gr%C3%B8ndahl,_Agathe)" ]
     luot_2_ghi_chu: "IMSLP: Piece Style Romantic."
+    review: dung
   - id: n3
     cau: 'Luyện nghe: hai lớp âm thanh trong một bàn tay, kết lửng.'
     loai: cau-truc
@@ -59,33 +61,37 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/10_Fantasistykker,_Op.36_(Backer-Gr%C3%B8ndahl,_Agathe)" ]
     luot_2_ghi_chu: "Bản quét: ô 1–4 một tay phải hai lớp (hợp âm trên, móc kép dưới); kết trên Si trưởng có fermata, không về Mi thứ."
+    review: dung
   - id: n4
-    cau: 'Đối chiếu: chép tay từ bản quét bản in Norsk Musikforlag (Kristiania, số bản in 3837, theo ấn bản Brødrene Hals 1895; IMSLP #82783).'
+    cau: 'Đối chiếu: chép tay từ bản quét bản in lại của Norsk Musikforlag (Kristiania, sau năm 1909, số bản in 3837, theo ấn bản Brødrene Hals 1895; IMSLP #82783).'
     loai: trich-doan
     truong: [ doi_chieu ]
     nguon: [ ban-in, imslp-op36 ]
-    ket_qua: dung
-    ghi_chu: 'Chân trang tr. 2 "Norsk Musikforlag, Kristiania. 3837"; IMSLP ghi bản Brødrene Hals [1895] in lại bởi Norsk Musikforlag. Xem khuong_nhac khối 1 hồ sơ trang.'
+    ket_qua: da-sua
+    ghi_chu: 'Chân trang tr. 2 "Norsk Musikforlag, Kristiania. 3837"; IMSLP ghi bản Brødrene Hals [1895] in lại bởi Norsk Musikforlag. Xem khuong_nhac khối 1 hồ sơ trang. Review (Claude, 17/11/2026): IMSLP wikitext: Reprint Norsk Musikforlag, n.d.(after 1909), plate 3837; bản quét bìa và chân trang "Norsk Musikforlag, Kristiania", 3837. Thêm "bản in lại", "sau năm 1909" vào doi_chieu cho rõ đây không phải bản in đầu (như trang n49).'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/10_Fantasistykker,_Op.36_(Backer-Gr%C3%B8ndahl,_Agathe)" ]
     luot_2_ghi_chu: "Như n49 của trang: tên file IMSLP82783-PMLP28154-Op._36,_Fantasistykker.pdf; bìa và chân trang Norsk Musikforlag, Kristiania, 3837; IMSLP ghi ấn bản đầu Brødrene Hals 1895."
+    review: dung
   - id: n5
     cau: 'Sơ đồ (hinh.nghe), chú thích "hai câu, rồi câu đầu trở lại và dâng lên đỉnh f trước khi lịm dần", sáu ô: Câu 1 (ô 1–4, tay phải một mình, p) 16; Câu 2 (ô 5–8, tay trái vào, rit.) 16; Câu 1 trở lại (ô 9–10, p) 8; Dâng lên (ô 11–14, cresc.) 14; Đỉnh (ô 15–16, f, bàn đạp) 11; Lịm dần (ô 17–20, dim., morendo, dừng trên Si trưởng) 15; độ dài theo giây của bản thu Tjako van Schie.'
     loai: cau-truc
     truong: [ hinh ]
     nguon: [ ban-in, do-ban-thu ]
     ket_qua: dung
-    ghi_chu: 'Ký hiệu từng đoạn như hồ sơ trang n27–n38. Ranh giới trên bản thu: 0,9 / 17,2 / 32,9 / 40,7 / 54,6 / 66,0 / 80,9 s (xem ghi_chu hồ sơ trang); độ dài làm tròn tới giây. Chia ô 9–10 và 11–14: ô 11 là chỗ câu thứ hai bắt đầu khác câu đầu (tay phải đi xuống, tay trái vào ở phách 4).'
+    ghi_chu: 'Ký hiệu từng đoạn như hồ sơ trang n27–n38. Ranh giới trên bản thu: 0,9 / 17,2 / 32,9 / 40,7 / 54,6 / 66,0 / 80,9 s (xem ghi_chu hồ sơ trang); độ dài làm tròn tới giây. Chia ô 9–10 và 11–14: ô 11 là chỗ câu thứ hai bắt đầu khác câu đầu (tay phải đi xuống, tay trái vào ở phách 4). Review (Claude, 17/11/2026): ranh giới đo lại (onset): 17,19; 32,91; 66,01 s; hết 80,93 s; chữ các ô khớp bản quét (morendo cuối ô 18 nằm trong ô Lịm dần ô 17–20).'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/10_Fantasistykker,_Op.36_(Backer-Gr%C3%B8ndahl,_Agathe)", "https://commons.wikimedia.org/wiki/File:Klage-grondahl.ogg" ]
     luot_2_ghi_chu: "Bản quét: các nhãn ô khớp (p ô 1, 9; tay trái vào ô 5; rit. ô 8; cresc. ô 13; f và Ped. ô 15; dim. ô 17, morendo cuối ô 18, Si trưởng ô 20). Đo librosa bản thu: ô 5 ≈16,6 s, ô 9 ≈32,9 s, ô 11 ≈41 s, ô 15 ≈55 s, ô 17 ≈66,0 s, hết 80,9 s → 16/16/8/14/11/15 s khớp (tổng 80)."
+    review: dung
   - id: n6
     cau: 'Bản thu: Tjako van Schie, CC BY-SA 4.0, trang Commons; một phần, mp3 chuyển mã và file ogg gốc, 80,93 s.'
     loai: nghe
     truong: [ ban_thu ]
     nguon: [ commons ]
     ket_qua: dung
-    ghi_chu: 'commons.py info/rec, 17/11/2026: lic CC BY-SA 4.0 ({{self|cc-by-sa-4.0}}), d 80,93; người chơi theo mô tả file ("home recording by Tjako van Schie, piano").'
+    ghi_chu: 'commons.py info/rec, 17/11/2026: lic CC BY-SA 4.0 ({{self|cc-by-sa-4.0}}), d 80,93; người chơi theo mô tả file ("home recording by Tjako van Schie, piano"). Review (Claude, 17/11/2026): Commons API: {{self|cc-by-sa-4.0}}, duration 80,93 s; file ogg gốc tải được.'
     luot_2: dung
     luot_2_nguon: [ "https://commons.wikimedia.org/wiki/File:Klage-grondahl.ogg" ]
     luot_2_ghi_chu: "Commons: tác giả Tjako van Schie, cc-by-sa-4.0, length 80,93138 s; file gốc .ogg tại upload.wikimedia.org/…/2/22/Klage-grondahl.ogg (đã tải, ffprobe 80,93 s)."
+    review: dung

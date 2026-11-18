@@ -17,7 +17,7 @@ tac_pham: backer-grondahl-klage
 
 **Một nghệ sĩ piano lừng danh của Na Uy.** Agathe Backer Grøndahl sinh năm 1847 ở Holmestrand, từ năm 1857 học với nhà soạn nhạc Halfdan Kjerulf ở Christiania, rồi sang Berlin học piano ở học viện của Theodor Kullak; sau đó bà học thêm với Hans von Bülow và Liszt. Cha mẹ không muốn con gái theo nghề biểu diễn, và chính Kjerulf cũng khuyên bà đi "con đường bình thường của phụ nữ", giữ nghệ thuật làm đồ trang sức. Bà vẫn ra mắt ở Christiania, với Edvard Grieg chỉ huy dàn nhạc, rồi biểu diễn khắp Bắc Âu; năm 1889 bà chơi [Concerto La thứ của Grieg](/opus/nghe-nhac/grieg-concerto/) ở London và ở Hội chợ Thế giới Paris. Từ giữa tuổi ba mươi bà nghe kém dần; khi mất năm 1907 bà gần như điếc hẳn. Bà để lại khoảng 250 ca khúc và khoảng 150 bài piano, trong đó có 48 *fantasistykker* (tiểu phẩm fantasy) thuộc sáu số opus, từ Op. 36 đến Op. 66. Đây là hướng dẫn nghe đầu tiên của site về một nhà soạn nhạc nữ; các bà cùng thời được giới thiệu ở trang [Các nhà soạn nhạc nữ](/opus/lich-su/nu-nha-soan-nhac/).
 
-**Tập nhạc tặng con trai.** Bìa tập Op. 36 ghi lời đề tặng Frithjof Backer Grøndahl, con trai bà (tên thường viết là Fridtjof). Về sau Fridtjof Backer-Grøndahl cũng thành một nghệ sĩ piano tên tuổi; chính mẹ dạy ông tới ngày ra mắt. Mỗi bài trong mười bài có một cái tên, như *Klage* (Lời than), *Friskt Mod!* (Vững lòng lên!), *Vuggevise* (Hát ru), *Alfeleg* (Tiên nhảy múa). Dưới tên *Klage* ở đầu bài số 1, bản in ghi thêm tên bằng tiếng Anh, Pháp và Đức: *Lamentation*, *Plainte*, *Klage*.
+**Lời đề tặng.** Bìa tập Op. 36 ghi lời đề tặng Frithjof Backer Grøndahl. Bà có một con trai tên ấy, thường viết là Fridtjof (1885–1959), nên nhiều khả năng tập nhạc tặng cậu bé; bản in không nói rõ. Về sau Fridtjof Backer-Grøndahl cũng thành một nghệ sĩ piano tên tuổi; chính mẹ dạy ông tới ngày ra mắt. Mỗi bài trong mười bài có một cái tên, như *Klage* (Lời than), *Friskt Mod!* (Vững lòng lên!), *Vuggevise* (Hát ru), *Alfeleg* (Tiên nhảy múa). Dưới tên *Klage* ở đầu bài số 1, bản in ghi thêm tên bằng tiếng Anh, Pháp và Đức: *Lamentation*, *Plainte*, *Klage*.
 
 **Lời than viết cho một bàn tay.** Bài ở giọng **Mi thứ**, nhịp 4/4, *Andantino* (gần Andante), máy đếm nhịp ♩ = 72, mở đầu *p dolce* (nhỏ, ngọt ngào). Bốn ô đầu tay trái nghỉ hẳn: tay phải vừa giữ các hợp âm ở bè trên, vừa chạy một bè móc kép bên dưới, phần lớn đi từng [nửa cung](/opus/nhac-ly/05-dau-hoa/#nua-cung-va-cung) quanh nốt Mi. Ở bè trên của hai ô đầu, nửa sau mỗi ô là một vòng luyến nối hợp âm có nốt Mi cao xuống hợp âm có nốt Si, như một tiếng thở dài; hai hợp âm móc đơn ở giữa ô có chấm dưới vòng luyến, chơi nửa ngắt, nửa liền (*portato*).
 
@@ -55,7 +55,7 @@ Ghi lại thời điểm (phút:giây) bạn nghe thấy từng sự kiện tron
 | … | **Tay trái vào sớm** (phách cuối ô 11): bốn nốt đi lên từng nửa cung; từ đây nhạc dâng dần (*cresc.* ở ô 13) |
 | … | **Đỉnh** (ô 15–16): *f*, bàn đạp; tay trái quét xuống âm vực rất trầm |
 | … | **Lắng xuống** (ô 17–18): *dim.*, tay trái rải hợp âm Mi thứ từ nốt Mi thấp nhất của đàn |
-| … | **Lịm dần** (ô 19): *morendo*, *rit.*; tay phải đã nghỉ, chỉ còn những hợp âm chậm của tay trái |
+| … | **Lịm dần** (ô 19): *morendo* (ghi từ cuối ô 18), *rit.*; tay phải đã nghỉ, chỉ còn những hợp âm chậm của tay trái |
 | … | **Hợp âm cuối** (ô 20): Si trưởng, ngân dài; bài dừng ở đó, không về Mi thứ |
 
 ## Câu hỏi để nghe chủ động
@@ -69,7 +69,7 @@ Ghi lại thời điểm (phút:giây) bạn nghe thấy từng sự kiện tron
 ## So sánh bản thu
 
 - **Tjako van Schie**: bản thu tại nhà, đăng trên Wikimedia Commons năm 2014, dài khoảng 1:21.
-- **Anne Le Bozec**: đĩa *Songs & Piano Works* của Backer Grøndahl (Aparté, AP374, 2025; phần ca khúc với ca sĩ Karen Vourc'h); *Klage* dài khoảng 1:39. So hai bản để nghe tốc độ thay đổi tính cách một lời than ngắn thế nào.
+- **Anne Le Bozec**: đĩa *Songs & Piano Works* của Backer Grøndahl (Aparté, AP374, 2025; đĩa có cả ca khúc, đứng tên cùng Karen Vourc'h); *Klage* dài khoảng 1:39. So hai bản để nghe tốc độ thay đổi tính cách một lời than ngắn thế nào.
 
 Cách chọn và so sánh bản thu: xem [Nghệ sĩ piano và bản thu](/opus/piano/nghe-si/).
 
@@ -83,7 +83,7 @@ Site chưa xếp *Klage* vào chặng nào. Nốt không nhiều, nhưng bài đ
 
 ## Nguồn
 
-- Bản nhạc: [IMSLP, *10 Fantasistykker*, Op. 36](https://imslp.org/wiki/10_Fantasy_Pieces,_Op.36_(Backer-Gr%C3%B8ndahl,_Agathe)), bản quét tập 1 (số 1–5): bản in của Norsk Musikforlag, Kristiania, số bản in 3837, theo ấn bản đầu tiên của Brødrene Hals (1895). Trích đoạn chép từ bản quét này.
+- Bản nhạc: [IMSLP, *10 Fantasistykker*, Op. 36](https://imslp.org/wiki/10_Fantasy_Pieces,_Op.36_(Backer-Gr%C3%B8ndahl,_Agathe)), bản quét tập 1 (số 1–5): bản in lại (sau năm 1909) của Norsk Musikforlag, Kristiania, số bản in 3837, theo ấn bản đầu tiên của Brødrene Hals (1895). Trích đoạn chép từ bản quét này.
 - Tiểu sử: [Store norske leksikon / Norsk biografisk leksikon, "Agathe Backer Grøndahl"](https://snl.no/Agathe_Backer_Gr%C3%B8ndahl) (Cecilie Dahm, Rune J. Andersen; tiếng Na Uy).
 - Bản thu: [Wikimedia Commons, *Klage-grondahl.ogg*](https://commons.wikimedia.org/wiki/File:Klage-grondahl.ogg) (Tjako van Schie, CC BY-SA 4.0); [MusicBrainz, bản thu của Anne Le Bozec](https://musicbrainz.org/recording/665a5c89-9a88-4aa9-9745-e5813be5266b).
 - Xem [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
