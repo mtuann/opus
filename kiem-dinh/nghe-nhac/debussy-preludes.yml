@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L8, 06/11/2026, bốn phần)
       review: Claude Opus 5.5 (review D6-L8-gom)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L8, 8 đúng (grieg-concerto n46 có điều kiện: vế hợp âm của piano theo tổng phổ lượt 1), 0 sai (bao-cao/d6-l8-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: 2026-11-17
+    nhanh: mo/sau-nghe-1-3
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5 (lượt 1, mo/sau-nghe-1-3, 17/11/2026)
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Hướng dẫn nghe Debussy, Préludes quyển 1 (tầng Tác phẩm, bản ghi debussy-preludes). Bản nhạc: bản in đầu Durand 1910 (D. & F. 7687, Internet Archive preludespourpian00debu, đọc ảnh trang). Lịch sử: lời tựa Lesure và Comments của Henle HN 383, Henle HN 643, PTNA (12 bài), IMSLP. Sửa: n5, n6 (buổi ra mắt: IMSLP và Henle lệch ngày 25/5 và 5/5/1910; Henle nói không có buổi ra mắt trọn quyển nên bỏ Jane Mortier), n16 (chưa đầy hai tháng), n30 (Marguerite Long), n34 (bản quyền Mỹ, bỏ ''nơi đặt site''), n39 (bỏ năm 1894, thêm Louvre), n50 (bỏ tarantella), n53 (trích chú thích Des pas), n68 (bỏ banjo, thêm quasi Tambouro), n70 (truyền thuyết Ys), n77–n79 (bản thu: hãng, năm, bỏ lời khen), n81 (ô 22–83), n95, n96 (mục Nguồn). Không bỏ câu nào. Bảng Theo dõi khi nghe giữ 12 dòng, thứ tự không đổi; ::khoi-nghe{moc} không đụng. Không có khuông nhạc. Thuật ngữ chưa có bản ghi trong thuat-ngu.yml: prélude (khúc dạo đầu), pentatonic (gam ngũ cung), impressionism (ấn tượng); whole-tone-scale có. Câu ve-site ở hồ sơ khác: nhac-ly/32 n8 (trang có Voiles, gam toàn cung: giữ, n41), cap-nhat n48 (bản thu trọn quyển Marcelle Meyer 1956 trên Commons, mốc đầu từng bản: giữ). Dữ liệu: ban_thu.lic ''phạm vi công cộng'' mâu thuẫn câu bản quyền Mỹ, đề xuất ở file sửa (hồ sơ bản ghi).'
 nguon:
   - id: imslp-l1
@@ -170,6 +179,10 @@ nguon:
     bac: 2
     ten: 'Musée du Louvre, "La gypsothèque du Louvre": phòng tượng và bản đúc (galerie des sculptures et des moulages) có "Delphes avec le trésor de Siphnos ou la colonne des Danseuses"'
     link: https://www.louvre.fr/le-louvre-en-france-et-dans-le-monde/la-gypsotheque-du-louvre
+  - id: henle-golliwogg
+    bac: 2
+    ten: 'G. Henle Verlag, HN 382 Debussy, Children''s Corner (trang sản phẩm): Golliwogg''s Cakewalk là bài cuối, viết theo phong cách ragtime (theo hồ sơ nghe-nhac/debussy-golliwogg, đã khóa: nguồn henle-hn382)'
+    link: https://www.henle.de/en/Children-s-Corner-Little-Suite-for-Piano/HN-382
 nhan_dinh:
   - id: n1
     cau: 'Nhà soạn nhạc: Claude Debussy (1862–1918).'
@@ -1146,6 +1159,17 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'src/content/docs/tai-lieu-tham-khao.md có. Review D6-L8-gom: trang đích có trong src/content/docs/.'
     review: dung
+  - id: n99
+    cau: "Một bài khác của Debussy cũng mượn nhạc giải trí Mỹ: Golliwogg's Cakewalk, bài cuối của Children's Corner, một điệu cakewalk theo phong cách ragtime (link tới hướng dẫn nghe)."
+    loai: lich-su
+    nguon: [ henle-golliwogg ]
+    ket_qua: dung
+    ghi_chu: "Chữ theo hướng dẫn nghe nghe-nhac/debussy-golliwogg (đã khóa): bài số 6 (bài cuối) của Children's Corner; Henle mô tả bài viết theo phong cách ragtime (\"ragtime style\", trang HN 382, hồ sơ ấy); cakewalk là điệu nhảy trên sân khấu Mỹ. Câu không nói về niên đại hay ảnh hưởng qua lại với Minstrels. Link /opus/nghe-nhac/debussy-golliwogg/."
+  - id: n100
+    cau: "Link tới hướng dẫn nghe Golliwogg's Cakewalk ở đoạn nói về minstrel show."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Trang nghe-nhac/debussy-golliwogg đã khóa (khoa.json); tests/link.test.mjs."
 khuong_nhac: []
 doi_chu:
   - cu: Debussy tự chơi ra mắt bốn bản (I, II, X và XI) ngày 25/5/1910 ở Paris; trọn quyển do Jane Mortier chơi lần đầu ngày 3/5/1911 tại Salle Pleyel
@@ -1174,8 +1198,8 @@ doi_chu:
       - "La cathédrale engloutie dựa trên một truyền thuyết xứ Bretagne: thành Ys bị biển nhấn chìm, và vào những buổi sáng trời trong, nhà thờ của thành nhô lên khỏi mặt nước, vọng tiếng chuông, tiếng đàn organ và tiếng hát của các tu sĩ, rồi lại chìm xuống. Minstrel show là loại hình giải trí ra đời ở Mỹ thế kỷ 19, trong đó diễn viên (thường là người da trắng) bôi đen mặt để nhại người da đen; ngày nay nó được nhìn nhận là một hình thức phân biệt chủng tộc."
     moi:
       - "XII. Minstrels: nhại không khí của những gánh hát giải trí kiểu Mỹ, Nerveux et avec humour (bồn chồn và hài hước): những nốt gảy giật cục, tiếng trống (Debussy ghi quasi Tambouro), những câu đùa bất ngờ, một giai điệu trữ tình nửa đùa nửa thật"
-      - La cathédrale engloutie dựa trên truyền thuyết xứ Bretagne về thành Ys bị biển nhấn chìm. Trong bản nhạc, nhà thờ của thành nhô lên khỏi mặt nước giữa tiếng chuông và tiếng hát của các tu sĩ, rồi lại chìm xuống. Minstrel show là loại hình giải trí ra đời ở Mỹ thế kỷ 19, trong đó diễn viên (thường là người da trắng) bôi đen mặt để nhại người da đen; ngày nay nó được nhìn nhận là một hình thức phân biệt chủng tộc.
-    ly_do: "n68 (da-sua), n70 (da-sua): lượt 1 D6-L8; chữ cũ, chữ mới, lý do và nguồn ở ghi_chu của các nhận định ấy."
+      - "La cathédrale engloutie dựa trên truyền thuyết xứ Bretagne về thành Ys bị biển nhấn chìm. Trong bản nhạc, nhà thờ của thành nhô lên khỏi mặt nước giữa tiếng chuông và tiếng hát của các tu sĩ, rồi lại chìm xuống. Minstrel show là loại hình giải trí ra đời ở Mỹ thế kỷ 19, trong đó diễn viên (thường là người da trắng) bôi đen mặt để nhại người da đen; ngày nay nó được nhìn nhận là một hình thức phân biệt chủng tộc. Một bài khác của Debussy cũng mượn nhạc giải trí Mỹ: Golliwogg's Cakewalk, bài cuối của Children's Corner, một điệu cakewalk theo phong cách ragtime."
+    ly_do: "n68 (da-sua), n70 (da-sua): lượt 1 D6-L8; chữ cũ, chữ mới, lý do và nguồn ở ghi_chu của các nhận định ấy. 17/11/2026 (mo/sau-nghe-1-3): thêm câu cuối, link hướng dẫn nghe Golliwogg's Cakewalk (n99, n100)."
   - cu:
       - "Walter Gieseking: thu trọn nhạc piano solo của Debussy trong thập niên 1950; tiếng đàn rất nhẹ, nổi tiếng về những sắc thái pp."
       - "Arturo Benedetti Michelangeli (Deutsche Grammophon): từng nốt được kiểm soát tuyệt đối, âm thanh trong và sáng."
@@ -1194,3 +1218,7 @@ doi_chu:
       - "Ngày sáng tác, các buổi biểu diễn đầu tiên và nguồn gốc tên từng bản: lời tựa của François Lesure (1986) cho ấn bản Urtext G. Henle Verlag HN 383; phân tích từng bản: PTNA Piano Encyclopedia."
       - "Cuộn piano của Debussy: Roy Howat, \"Between and beyond the perforations in Debussy's Welte rolls\", trong Claude Debussy: die Klavieraufnahmen (Wolke Verlag, 2023); các ô chơi nhanh gấp đôi theo ghi chú của ấn bản Henle HN 643, như lời điểm sách của Music Teacher Magazine mà Henle dẫn."
     ly_do: "n95 (da-sua), n96 (da-sua): lượt 1 D6-L8; chữ cũ, chữ mới, lý do và nguồn ở ghi_chu của các nhận định ấy."
+mo_khoa:
+  - ngay: 2026-11-17
+    nhanh: mo/sau-nghe-1-3
+    ly_do: "Sau ba hướng dẫn nghe mới (Bartók Sonatina, Backer Grøndahl Klage, Debussy Golliwogg's Cakewalk; mo/sau-nghe-1-3): link và mục mới"

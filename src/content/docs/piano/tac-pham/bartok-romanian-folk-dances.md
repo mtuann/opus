@@ -198,6 +198,7 @@ Bản in ghi bàn đạp bằng dấu ngoặc dưới khuông (chú thích ở t
 ## Học tiếp
 
 - **Cùng tác giả, dễ hơn:** [Bartók: For Children, số 1 và 6](/opus/piano/tac-pham/bartok-for-children/).
+- **Cùng tác giả, khó hơn:** Sonatina, viết cùng năm 1915 từ giai điệu múa dân gian Romania (chương 1: chặng 6); nghe trước với [hướng dẫn nghe Sonatina](/opus/nghe-nhac/bartok-sonatina/).
 - **Kỹ năng liên quan:** [Nốt hoa mỹ](/opus/piano/not-hoa-my/), [Bàn đạp](/opus/piano/ban-dap/), [Điệu thức](/opus/nhac-ly/16-dieu-thuc-ngu-cung/).
 - **Bài cùng chặng và chặng sau:** danh sách theo cấp ở [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
 

@@ -21,7 +21,7 @@ Thứ tự dự định:
 4. **Lấp chỗ còn trống**: một sonata của Haydn; thêm bài cho chặng 7 ngoài nhạc Lãng mạn (Bach, Beethoven).
 5. **Tác phẩm Việt Nam** đã hết thời hạn bảo hộ, và bài cho người mới dùng dân ca Việt Nam, sau khi khảo sát bản quyền.
 
-Hướng dẫn nghe sẽ thêm ở những mảng còn ít: nhạc Ấn tượng, thế kỷ 20, Đương đại, và nhà soạn nhạc nữ (hiện chưa có hướng dẫn nghe nào); một số hướng dẫn hiện có sẽ mở rộng ra các chương khác của tác phẩm (ví dụ *Sonata Ánh trăng* đủ ba chương).
+Hướng dẫn nghe sẽ thêm ở những mảng còn ít: nhạc Ấn tượng, thế kỷ 20, Đương đại, và nhà soạn nhạc nữ. Đã có: Debussy, [*Golliwogg's Cakewalk*](/opus/nghe-nhac/debussy-golliwogg/); Bartók, [Sonatina](/opus/nghe-nhac/bartok-sonatina/); Agathe Backer Grøndahl, [*Klage*](/opus/nghe-nhac/backer-grondahl-klage/), hướng dẫn nghe đầu tiên về tác phẩm của một nhà soạn nhạc nữ. Một số hướng dẫn hiện có sẽ mở rộng ra các chương khác của tác phẩm (ví dụ *Sonata Ánh trăng* đủ ba chương).
 
 ## Dự định thêm: bài và công cụ
 

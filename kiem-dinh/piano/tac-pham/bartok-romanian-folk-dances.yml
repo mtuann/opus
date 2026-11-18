@@ -11,6 +11,15 @@ lan:
       luot_2: Claude Opus 5.5 (agent riêng, độc lập với lượt 1, 17/11/2026; 41 câu, 41 đúng)
       review: Claude Opus 5.5 (agent riêng, không làm lượt 1, lượt 2; 17/11/2026)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 17/11/2026: 5 nhận định mẫu (khoa.mjs xuat --mau 5: trang n1, n6, n12, n28; dữ liệu n7), 5 đúng, 0 sai"
+  - so: 2
+    ngay: 2026-11-17
+    nhanh: mo/sau-nghe-1-3
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5 (lượt 1, mo/sau-nghe-1-3, 17/11/2026)
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Bài học mới (lộ trình thêm tác phẩm, lượt 3). Ấn bản: bản quét Universal Edition IMSLP #918136; đã kiểm là bản in trước 1934 theo ba dấu hiệu lộ trình nêu: không có "(1915)" sau ô cuối (tr. 10), dòng "Copyright 1918 by Universal-Edition" (tr. 2, 3), điệu 4 tên "Tanz der Butschumer"; không thấy ghi thời lượng. Trang không đếm số ô từng điệu (bản quét nhiều hàng, dễ đếm sai), chỉ nói điều đọc chắc. Khối 4 (bài tập đổi nhịp) khai M:none và ghi nhịp trong dòng vì tools/khuong-nhac.mjs chỉ dùng dòng M: cuối; đã đếm tay. Chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng thuộc hồ sơ du-lieu/tac-pham/bartok-romanian-folk-dances.'
 nguon:
   - id: ue-1918
@@ -49,6 +58,10 @@ nguon:
     bac: 1
     ten: 'File bản thu Chris Breemer (IMSLP #991622), tải tay; ffprobe 322,01 s; khoảng lặng (silencedetect −45 dB, d 0,6 s): 0–2,59; 72,97–76,25; 107,78–111,49; 177,31–181,56; 223,53–227,03; khoảng lặng ngắn 259,58–260,15 (−35 dB) giữa điệu 5 và 6'
     link: https://imslp.org/wiki/File:PMLP3387-bartok-romanian-folk-dances-breemer.mp3
+  - id: henle-hn1401
+    bac: 2
+    ten: 'G. Henle Verlag, Sonatina HN 1401 (trang sản phẩm; theo hồ sơ nghe-nhac/bartok-sonatina, đã khóa): "Bartók used different melodies taken from Romanian instrumental folk music in his Sonatina"; "A look at the sources shows how, in 1915, the piece slowly evolved out of a series of piano transcriptions"; nhãn ABRSM Piano Grade 7'
+    link: https://www.henle.de/en/Sonatina/HN-1401
 nhan_dinh:
   - { id: n1, cau: 'Bartók viết sáu điệu múa này cho piano năm 1915.', loai: nam, nguon: [ henle-hn1402 ], ket_qua: dung, luot_2: dung, luot_2_nguon: [ "https://imslp.org/wiki/Romanian_Folk_Dances,_Sz.56_(Bart%C3%B3k,_B%C3%A9la)", "https://www.henle.de/en/Romanian-Folk-Dances/HN-1402" ], luot_2_ghi_chu: "IMSLP (wikitext qua API): Year/Date of Composition=1915, Instrumentation=piano, 6 dances. Henle HN 1402: 'composed in 1915'." }
   - { id: n2, cau: 'Mỗi điệu dựng trên một giai điệu múa dân gian của người Romania; bản in ghi nơi tìm thấy từng giai điệu.', loai: lich-su, nguon: [ ue-1918 ], ket_qua: dung, ghi_chu: 'Tựa "Rumänische Volkstänze aus Ungarn"; chân trang mỗi điệu: "aus / lelőhelye / din: <làng> (<hạt>)".', luot_2: dung, luot_2_nguon: [ "https://imslp.org/wiki/Special:ImagefromIndex/918136" ], luot_2_ghi_chu: "Bản quét UE 1918 (file tải tay): tựa 'Rumänische Volkstänze aus Ungarn', trang bìa trong 'gyűjtötte és zongorára két kézre átírta' (sưu tầm và soạn cho piano); mỗi điệu có chú thích chân trang 'aus / lelőhelye / din: <làng> (<hạt>)' (tr. 2, 4, 6, 7, 8)." }
@@ -81,6 +94,17 @@ nhan_dinh:
   - { id: n29, cau: 'Vì sao nên học (sáu tính cách, từng điệu học riêng được) và câu hỏi khi nghe.', loai: khuyen-tap, nguon: [], ket_qua: khong-can-nguon, luot_2: dung, luot_2_ghi_chu: "khuyen-tap. Phần 'từng điệu học riêng được' khớp việc ABRSM, Trinity chọn riêng điệu 3, điệu 4 và Henle chấm mức từng điệu.", ghi_chu: 'Review (Claude Opus, 17/11/2026): Nhãn khuyen-tap đúng: không có điều về sức khỏe hay sự kiện cần nguồn (phần ABRSM, Trinity nằm ở n6).', review: dung }
   - { id: n30, cau: 'Bảng "Chỗ khó và cách tập" (sáu dòng).', loai: khuyen-tap, nguon: [], ket_qua: khong-can-nguon, ghi_chu: 'Nhấn bằng sức nặng cánh tay, cổ tay mềm: khớp các trang lõi piano; không có nội dung y khoa. Review (Claude Opus, 17/11/2026): Nhãn khuyen-tap đúng; "tay dễ cứng", "nhấn bằng sức nặng" là lời khuyên kỹ thuật, không phải lời khuyên sức khỏe.', luot_2: dung, luot_2_ghi_chu: "khuyen-tap: không thấy dấu hiệu sai hay có hại từ mô tả; hợp cách dạy phổ biến.", review: dung }
   - { id: n31, cau: 'Ba bài tập soạn riêng và lời dùng kèm; kế hoạch 6 tuần; diễn tấu (tốc độ, phát âm, bàn đạp); lỗi thường gặp.', loai: khuyen-tap, nguon: [], ket_qua: khong-can-nguon, luot_2: dung, luot_2_ghi_chu: "khuyen-tap: không thấy dấu hiệu sai hay có hại từ mô tả; hợp cách dạy phổ biến.", ghi_chu: 'Review (Claude Opus, 17/11/2026): Nhãn khuyen-tap đúng; câu "Bản in ghi bàn đạp…" đã tách thành n25. Lời bài tập 2 "Kiểu giai điệu của điệu 4" nên đổi thành "thang âm của điệu 4", vì bài tập đi thẳng Đô♯–Si♭ còn điệu 4 không (xem n27).', review: dung }
+  - id: n32
+    cau: "Học tiếp, cùng tác giả, khó hơn: Sonatina, viết cùng năm 1915 từ giai điệu múa dân gian Romania."
+    loai: lich-su
+    nguon: [ henle-hn1401 ]
+    ket_qua: dung
+    ghi_chu: "Henle HN 1401: Sonatina dùng giai điệu nhạc khí dân gian Romania, hình thành năm 1915; Romanian Folk Dances viết năm 1915 (n1). Hướng dẫn nghe (đã khóa) ghi cả ba tập \"Romania\" năm 1915 trong cùng bản thảo. \"Khó hơn\": chương 1 ABRSM Grade 7 (chặng 6), bài này chặng 5 (n5)."
+  - id: n33
+    cau: "Học tiếp: Sonatina \"(chương 1: chặng 6)\", link tới hướng dẫn nghe nghe-nhac/bartok-sonatina."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Chặng 6 theo cách xếp của site (ABRSM Grade 7 → chặng 6, như hướng dẫn nghe và piano/tac-pham-theo-cap dòng mới); trang nghe-nhac/bartok-sonatina đã khóa (khoa.json). Bài học không có trang cũ ở site cũ (chuyen.test bỏ qua)."
 khuong_nhac:
   - khoi: 1
     loai: trich-doan
@@ -102,3 +126,7 @@ khuong_nhac:
     kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
     ket_qua: dung
     ghi_chu: 'Đổi nhịp 2/4 – 3/4 – 2/4 – 3/4 (M:none, nhịp ghi trong dòng): đếm tay, ô 1 bốn móc đơn, ô 2 sáu, ô 3 bốn, ô 4 sáu, cả hai bè. Rê thứ, giai điệu tách, tay trái quãng Rê–La, La–Mi. Review (Claude Opus, 17/11/2026): Đếm tay lại: hai bè 4, 6, 4, 6 móc đơn, khớp [M:2/4], [M:3/4] trong dòng; abcjs vẽ số nhịp ở mỗi chỉ thị [M:] trong thân bài. Nên sửa ngón ô 3: !2!e !1!d rồi c không ghi ngón buộc chéo ngón qua ngón cái; ghi !3!e !2!d !1!c hay thêm số ngón cho c. Ô 3 thêm ngón 3-2-1 (Mi–Rê–Đô), theo review.'
+mo_khoa:
+  - ngay: 2026-11-17
+    nhanh: mo/sau-nghe-1-3
+    ly_do: "Sau ba hướng dẫn nghe mới (Bartók Sonatina, Backer Grøndahl Klage, Debussy Golliwogg's Cakewalk; mo/sau-nghe-1-3): link và mục mới"

@@ -21,6 +21,15 @@ lan:
       luot_2: "Claude Sonnet (agent riêng, 17/11/2026; câu mới cần nguồn: tac-pham-theo-cap n80, n81, n82, ke-hoach n7; 4 đúng). Trang Đọc thêm: n106, n107 không vào mẫu lượt 2 (khoa.mjs xuat --con-lai không đòi)"
       review: Claude Sonnet 5.5 (agent riêng, 17/11/2026)
       kiem_mau: "Claude Sonnet (agent riêng), kiểm thay chủ repo theo lời giao 16/11/2026: câu mới tac-pham-theo-cap n80, n82, nu-nha-soan-nhac n107; 3 đúng"
+  - so: 3
+    ngay: 2026-11-17
+    nhanh: mo/sau-nghe-1-3
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5 (lượt 1, mo/sau-nghe-1-3, 17/11/2026)
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: vat-hil
     bac: 2
@@ -338,6 +347,14 @@ nguon:
     bac: 2
     ten: IMSLP, Pierrette, Op.41 và 6 Études de concert, Op.35 (số 2 Automne) (Chaminade, Cécile)
     link: https://imslp.org/wiki/6_%C3%89tudes_de_concert,_Op.35_(Chaminade,_C%C3%A9cile)
+  - id: snl-backer
+    bac: 2
+    ten: 'Store norske leksikon / Norsk biografisk leksikon, "Agathe Backer Grøndahl" (Cecilie Dahm, Rune J. Andersen), bản JSON của snl.no đọc 17/11/2026: sinh 1.12.1847, mất 4.6.1907; "var en norsk pianist og komponist"; "Hun var blant de aller fremste norske pianistene og hadde stor suksess både i Norge og i utlandet"; "I tillegg til 250 romanser har hun komponert rundt 150 klaverstykker"'
+    link: https://snl.no/Agathe_Backer_Gr%C3%B8ndahl
+  - id: imslp-op36-backer
+    bac: 2
+    ten: 'IMSLP, 10 Fantasy Pieces, Op.36 (Backer-Grøndahl, Agathe): Work Title 10 Fantasistykker; số 1 Klage (Lamentation. Plainte.); in 1895 (theo hồ sơ nghe-nhac/backer-grondahl-klage, đã khóa)'
+    link: https://imslp.org/wiki/10_Fantasy_Pieces,_Op.36_(Backer-Gr%C3%B8ndahl,_Agathe)
 nhan_dinh:
   - id: n1
     cau: Lịch sử âm nhạc thường được kể qua những cái tên nam giới; trong nhiều thế kỷ phụ nữ bị hạn chế học hành, xuất bản và biểu diễn công khai.
@@ -1155,6 +1172,35 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "Dòng mới. Tên, số: IMSLP (trang Pierrette Op.41 và Op.35). Chặng: chang của hai bản ghi (đã khóa). Review (Claude Sonnet, 17/11/2026): dòng \"Tập:\" khớp hai bản ghi (Pierrette chang 6, Automne chang 7, Op. 35 số 2); kiểm bản build: cùng đoạn, không vỡ đoạn."
     review: dung
+  - id: n108
+    cau: "Agathe Backer Grøndahl (1847–1907), Na Uy."
+    loai: nam
+    nguon: [ snl-backer ]
+    ket_qua: dung
+    ghi_chu: "Mục mới ở Thế kỷ 19 (sau Clara Schumann, theo năm sinh). SNL/NBL: sinh 1.12.1847 ở Holmestrand, mất 4.6.1907 ở Ormøya, \"norsk\". Khớp src/data/nha-soan-nhac.yml (backer-grondahl, đã khóa; tests/dong-thoi-gian.test.mjs kiểm năm viết tay). Tên viết như bản ghi và SNL (không gạch nối)."
+  - id: n109
+    cau: "Bà là nghệ sĩ piano và nhà soạn nhạc, một trong những nghệ sĩ piano hàng đầu của Na Uy, thành công cả trong nước lẫn nước ngoài."
+    loai: lich-su
+    nguon: [ snl-backer ]
+    ket_qua: dung
+    ghi_chu: "SNL: \"var en norsk pianist og komponist\"; \"Hun var blant de aller fremste norske pianistene og hadde stor suksess både i Norge og i utlandet\". Không viết \"thời bà\" hay \"nhất\": chỉ dịch \"blant de aller fremste\" (trong số những người hàng đầu)."
+  - id: n110
+    cau: "Bà để lại 250 ca khúc và khoảng 150 bản piano."
+    loai: so-lieu
+    nguon: [ snl-backer ]
+    ket_qua: dung
+    ghi_chu: "SNL: \"I tillegg til 250 romanser har hun komponert rundt 150 klaverstykker\" (romanse: ca khúc nghệ thuật; \"rundt\" = khoảng, chỉ cho số bản piano). SNL còn kể tác phẩm cho hợp xướng và dàn nhạc, trang không nhắc."
+  - id: n111
+    cau: "Nghe: Klage (Lời than), Op. 36 số 1, link tới hướng dẫn nghe."
+    loai: ten
+    nguon: [ imslp-op36-backer ]
+    ket_qua: dung
+    ghi_chu: "IMSLP: số 1 của 10 Fantasistykker Op. 36 là Klage (Lamentation. Plainte.). \"Lời than\" như tên dịch ở hướng dẫn nghe (đã khóa). Link /opus/nghe-nhac/backer-grondahl-klage/ (trang đã khóa; tests/link.test.mjs)."
+  - id: n112
+    cau: "Mục Nguồn thêm dòng \"Store norske leksikon: Agathe Backer Grøndahl\" (link snl.no)."
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: "Link https://snl.no/Agathe_Backer_Gr%C3%B8ndahl mở được (bản JSON, User-Agent opus-kiem-dinh/1.0, 17/11/2026), là nguồn của n108–n110."
 khuong_nhac: []
 ghi_chu: 'Trang Đọc thêm (ngoại vi), không có khối abc. Mọi nguồn truy cập 2026-11-05. Nguồn chính: IMSLP (năm sinh–mất, tên và năm tác phẩm), Encyclopedia.com (Women in World History: Clara, Chaminade, Clarke, Lili và Nadia Boulanger, Bacewicz), Vatican và Hildegard Publishing (Hildegard), EBSCO (Strozzi), CSO (Price), Yale và OUP (Fanny), Library of Congress (năm của Hildegard, Gubaidulina, Chin, Thorvaldsdottir, Frank), Boston Globe/NYT, BSO, CSO, ISCM (Gubaidulina), PBS/NYCR/Wise (Saariaho), Boosey (Chin), NPR/Princetonian (Shaw), ASO/Dallas Symphony (Montgomery), YourClassical (NPR) và Time Out (Frank), TTVH/Hội Nhạc sĩ VN/Dân trí (Nguyễn Thị Nhung), Hội Nhạc sĩ VN (Trần Kim Ngọc), Tuổi Trẻ/SGGP/TTVH (Sa Huỳnh). pulitzer.org, Britannica, Grove và PDF British Council trả 403 cho công cụ; Wikipedia chỉ để đối chiếu. Chỗ sửa trang (da-sua): n6, n8, n13, n20, n23, n24, n25, n29, n39, n50, n55, n65, n72, n77, n82, n83, n84, n89 đến n93, n95, n97, n98, n100, n102; đã bỏ (da-bo): Romance (1999) của Nguyễn Thị Nhung (n87), mục Nguồn cũ gồm sách Burkholder/Taruskin, Grove, Britannica (n103) và link PDF British Council (n104). Câu ''đầu tiên'' đã kiểm: Lili Boulanger Prix de Rome 1913 (Encyclopedia.com, dung); Price 1933 (CSO, dung); Beach Gaelic (Runyan Program Notes bậc 3, Britannica chặn: thêm ''lớn'', giữ ''được coi là''); Jacquet ''một trong những người đầu tiên'' (TSPR, Kvast; được bao hàm bởi ''first woman in France to compose an opera''); Nguyễn Thị Nhung ''tiên phong'' (TTVH: ''nữ nhạc sĩ đầu tiên sáng tác nhạc giao hưởng của Việt Nam''); ''người phụ nữ duy nhất nhận Giải thưởng Nhà nước đợt I'' đã bỏ (chỉ Wikipedia). Strozzi ''xuất bản nhiều nhất'' theo EBSCO (''most prolific composer of printed secular vocal music in Venice''). Gabriela Lena Frank giải Pulitzer Âm nhạc 2026: ĐÚNG (Picaflor: A Future Myth; YourClassical/NPR 4/5/2026, Time Out), giữ. Gubaidulina mất 13/3/2025 ở tuổi 93 (CSO, BSO, ISCM). Saariaho 1952–2023 (PBS, Wise). Shaw Pulitzer 2013 (NPR, Princetonian). Montgomery 1981 (ASO, Dallas Symphony), Thorvaldsdottir 1977 (Wise, LoC), Chin 1961 (Boosey, LoC). Năm sinh–mất khớp src/data/nha-soan-nhac.yml cho mọi người có bản ghi; không phát hiện bản ghi sai. Hồ sơ dữ liệu sa-huynh dặn xử lý ''tên khai sinh Nguyễn Sa Huỳnh'': đã sửa thành Lương Sa Huỳnh (Tuổi Trẻ 2015); sinh 1988 (Tuổi Trẻ). Có hai người nghệ danh Sa Huỳnh, trang nói về nhạc sĩ con gái Triều Dâng. Câu ve-site (n3, n76, n105): link /opus/lich-su/duong-dai/ chưa khóa (không có trong khoa.json) nên ''sắp có'' ở bản thật cho tới khi trang ấy khóa; /opus/tai-lieu-tham-khao/ đã khóa. Anchor #the-ky-19 (tiêu đề ''## Thế kỷ 19'') giữ nguyên vì piano/nha-soan-nhac trỏ vào. Dấu vân tay của Sa Huỳnh (n100) chỉ có nguồn bậc 3 (Doanh nhân Trẻ Việt Nam, lời nhận xét ''dưới góc nhìn của ca sĩ Tùng Dương''): chỗ cần lượt 2 hay review quyết, bỏ được. Thuật ngữ trang dùng, chưa có ở src/data/thuat-ngu.yml cho D3-L5 (đã có: concerto, symphony, sonata, string quartet, suite, oratorio): cantata, harpsichord, Prix de Rome, bayan, concertino, opera, thơ giao hưởng (symphonic poem), tam tấu piano (piano trio), spiritual, aria, madrigal, motet, sequence, antiphon, responsory, kịch nhạc (liturgical drama), thánh ca (hymn), psalm.'
 doi_chu:
@@ -1236,7 +1282,14 @@ doi_chu:
   - cu: "Cécile Chaminade (1857–1944), Pháp. Ca khúc và tiểu phẩm piano của bà từng rất được ưa chuộng ở châu Âu và Mỹ. Nghe: Concertino cho sáo, Op. 107."
     moi: "Cécile Chaminade (1857–1944), Pháp. Ca khúc và tiểu phẩm piano của bà từng rất được ưa chuộng ở châu Âu và Mỹ. Nghe: Concertino cho sáo, Op. 107. Tập: Pierrette, Op. 41 (chặng 6); Automne, Op. 35 số 2 (chặng 7)."
     ly_do: "Dòng \"Tập:\" thêm ở mo/sau-dot-3 (n106, n107), chưa ghi doi_chu lúc ấy (máy không có .cache/site-cu); ghi ở mo/sau-dot-1, chỉ sửa hồ sơ, không đổi trang."
+  - moi: "Agathe Backer Grøndahl (1847–1907), Na Uy. Nghệ sĩ piano và nhà soạn nhạc, một trong những nghệ sĩ piano hàng đầu của Na Uy, thành công cả trong nước lẫn nước ngoài. Bà để lại 250 ca khúc và khoảng 150 bản piano. Nghe: Klage (Lời than), Op. 36 số 1."
+    ly_do: "Mục mới ở mo/sau-nghe-1-3 (n108–n111): hướng dẫn nghe Klage đã có, tác giả backer-grondahl trong nha-soan-nhac.yml; theo Store norske leksikon."
+  - moi: "Store norske leksikon: Agathe Backer Grøndahl"
+    ly_do: "Mục Nguồn mới (n112), nguồn của mục Agathe Backer Grøndahl."
 mo_khoa:
   - ngay: 2026-11-17
     nhanh: mo/sau-dot-3
     ly_do: "Sau đợt 3 thêm tác phẩm (lộ trình, mục 2): link ba bài học nhà soạn nhạc nữ (Pierrette, Scherzo số 2 Op. 14, Automne)"
+  - ngay: 2026-11-17
+    nhanh: mo/sau-nghe-1-3
+    ly_do: "Sau ba hướng dẫn nghe mới (Bartók Sonatina, Backer Grøndahl Klage, Debussy Golliwogg's Cakewalk; mo/sau-nghe-1-3): link và mục mới"

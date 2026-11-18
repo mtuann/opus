@@ -195,6 +195,7 @@ Những tác phẩm lớn được yêu thích nhất. Mỗi bài cần vài th�
 | [Clara Schumann: Scherzo số 2 Đô thứ Op. 14](/opus/piano/tac-pham/clara-schumann-scherzo-2/) | Lãng mạn | Hợp âm rải nhanh qua hai tay, hợp âm lớn có dấu nhấn; tương phản giữa scherzo sôi nổi và trio êm |
 | Liszt: *Consolation* số 3 (Rê♭ trưởng) S. 172 | Lãng mạn | Giai điệu hát trên hợp âm rải rộng; bước chuẩn bị cho *Liebestraum* số 3 ở chặng 7 |
 | Ravel: *Menuet sur le nom d'Haydn* (Minuet trên tên Haydn, 1909) | Thế kỷ 20 | Bài ngắn, chủ đề tạo từ các chữ cái trong tên Haydn, hòa âm tinh tế |
+| Bartók: Sonatina Sz. 55, chương 1 *Dudások* (Những người thổi kèn túi) | Thế kỷ 20 | Quãng năm nhấn ở bè trầm, giai điệu có chùm ba và nốt láy; đoạn *Allegro* nhẹ, nhịp đổi liên tục giữa 2/4 và 3/4. Có trong danh sách Grade 7 của ABRSM (2025–2028); nghe [Sonatina](/opus/nghe-nhac/bartok-sonatina/) |
 | Gershwin: *Three Preludes* (Ba prelude) | Thế kỷ 20 | Đảo phách, hợp âm màu jazz |
 
 ## Chặng 7. Sau Grade 8 (diploma trở lên)

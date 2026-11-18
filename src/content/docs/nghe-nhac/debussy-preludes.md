@@ -53,7 +53,7 @@ Ghi lại thời điểm (phút:giây) mỗi bản bắt đầu trong bản thu 
 | … | **XI. *La danse de Puck*** (Điệu múa của Puck), *Capricieux et léger*: tinh linh tinh nghịch trong *Giấc mộng đêm hè* của Shakespeare; nhịp chấm dôi nhảy nhót, nhẹ như không |
 | … | **XII. *Minstrels***: nhại không khí của những gánh hát giải trí kiểu Mỹ, *Nerveux et avec humour* (bồn chồn và hài hước): những nốt gảy giật cục, tiếng trống (Debussy ghi *quasi Tambouro*), những câu đùa bất ngờ, một giai điệu trữ tình nửa đùa nửa thật |
 
-*La cathédrale engloutie* dựa trên truyền thuyết xứ Bretagne về thành Ys bị biển nhấn chìm. Trong bản nhạc, nhà thờ của thành nhô lên khỏi mặt nước giữa tiếng chuông và tiếng hát của các tu sĩ, rồi lại chìm xuống. *Minstrel show* là loại hình giải trí ra đời ở Mỹ thế kỷ 19, trong đó diễn viên (thường là người da trắng) bôi đen mặt để nhại người da đen; ngày nay nó được nhìn nhận là một hình thức phân biệt chủng tộc.
+*La cathédrale engloutie* dựa trên truyền thuyết xứ Bretagne về thành Ys bị biển nhấn chìm. Trong bản nhạc, nhà thờ của thành nhô lên khỏi mặt nước giữa tiếng chuông và tiếng hát của các tu sĩ, rồi lại chìm xuống. *Minstrel show* là loại hình giải trí ra đời ở Mỹ thế kỷ 19, trong đó diễn viên (thường là người da trắng) bôi đen mặt để nhại người da đen; ngày nay nó được nhìn nhận là một hình thức phân biệt chủng tộc. Một bài khác của Debussy cũng mượn nhạc giải trí Mỹ: [*Golliwogg's Cakewalk*](/opus/nghe-nhac/debussy-golliwogg/), bài cuối của *Children's Corner*, một điệu cakewalk theo phong cách ragtime.
 
 ## Câu hỏi để nghe chủ động
 

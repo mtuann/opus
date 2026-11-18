@@ -153,8 +153,9 @@ Chặng 6 sẽ đông nhất sau đợt 1 và 3 (khoảng 9–10 bài); cân nh�
 
 ### 6.2 Hướng dẫn nghe
 
-- Mỏng: Ấn tượng (1), Thế kỷ 20 (4), Đương đại (1); chưa có Trung cổ, Phục hưng, chưa có hướng dẫn nghe nào của nhà soạn nhạc nữ.
-- Ý tưởng sẵn bản thu phát được: *Golliwogg's Cakewalk*, Bartók Sonatina, Chaminade *Automne*, Backer Grøndahl *Klage*, Chopin B. 49 và Op. 64 số 2.
+- Mỏng: Ấn tượng (2), Thế kỷ 20 (5), Đương đại (1), nhà soạn nhạc nữ (1); chưa có Trung cổ, Phục hưng.
+- Đã có (**xong 17/11/2026**): *Golliwogg's Cakewalk* (`nghe-nhac/debussy-golliwogg`), Bartók Sonatina (`nghe-nhac/bartok-sonatina`), Backer Grøndahl *Klage* (`nghe-nhac/backer-grondahl-klage`, hướng dẫn nghe đầu tiên của nhà soạn nhạc nữ). Link sang ba trang từ các trang tham chiếu ở `mo/sau-nghe-1-3`.
+- Ý tưởng còn lại, sẵn bản thu phát được: Chaminade *Automne*, Chopin B. 49 và Op. 64 số 2.
 - Mở rộng theo chương: *Ánh trăng* đủ ba chương; chương 3 cho `haydn-94`, `mozart-40`, `mozart-eine-kleine` (cùng việc sửa `hinh-thuc/minuet-trio`).
 - Nhạc in sau 1930 còn bảo hộ ở Mỹ: chỉ trích dẫn ngắn, bản thu chỉ dẫn link.
 

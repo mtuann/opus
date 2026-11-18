@@ -198,7 +198,7 @@ Bản thảo gốc đã thất lạc; các bản Urtext dựa vào ấn bản 19
 
 ## Học tiếp
 
-- **Debussy tiếp theo:** *Rêverie*, *Arabesque* số 1, các bài trong *Children's Corner*, rồi tập *Préludes* (nghe trước với [hướng dẫn nghe quyển 1](/opus/nghe-nhac/debussy-preludes/)).
+- **Debussy tiếp theo:** *Rêverie*, [*Arabesque* số 1](/opus/piano/tac-pham/debussy-arabesque-1/), các bài trong *Children's Corner* (nghe trước bài cuối với [hướng dẫn nghe *Golliwogg's Cakewalk*](/opus/nghe-nhac/debussy-golliwogg/)), rồi tập *Préludes* (nghe trước với [hướng dẫn nghe quyển 1](/opus/nghe-nhac/debussy-preludes/)).
 - **Cùng kỹ năng hát và bàn đạp:** [Chopin: Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/), [Beethoven: Pathétique, chương 2](/opus/piano/tac-pham/pathetique-adagio/).
 - **Chặng 7:** [Liszt: Liebestraum số 3](/opus/piano/tac-pham/liszt-liebestraum/) cho giai điệu ở giọng giữa và bàn đạp; [Chopin: Ballade số 1](/opus/piano/tac-pham/chopin-ballade-1/), một tác phẩm lớn.
 - Xem thêm [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/) và [Nghệ sĩ piano và bản thu](/opus/piano/nghe-si/).

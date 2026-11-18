@@ -195,7 +195,7 @@ Thế kỷ 20 mở rộng vốn từ của đôi tay: màu sắc âm thanh, nh�
 
 - **Đặc trưng khi chơi:** âm thanh là trên hết: nhiều tầng *pianissimo*, chạm phím bằng phần thịt đầu ngón thay vì gõ, bàn đạp tạo những lớp vang (thay một nửa, giữ ngân qua nhiều hòa âm). Hợp âm song song, gam toàn cung, gam ngũ cung. Dưới lớp sương mờ, nhịp vẫn phải chính xác.
 - **Tác phẩm chính:** *Deux Arabesques*, *Suite bergamasque*, *Estampes* (1903), *L'isle joyeuse*, hai tập *Images*, *Children's Corner* (1906–1908, viết cho con gái), hai tập *Préludes* (24 bản, tên đặt ở cuối mỗi bản; xem [hướng dẫn nghe quyển 1](/opus/nghe-nhac/debussy-preludes/)), 12 *Études* (1915, tưởng nhớ Chopin).
-- **Bắt đầu bằng:** *The Little Shepherd* trong *Children's Corner* (Grade 7) → [*Arabesque* số 1](/opus/piano/tac-pham/debussy-arabesque-1/) (chặng 6) → [*Clair de lune*](/opus/piano/tac-pham/debussy-clair-de-lune/) (chặng 6) → *La fille aux cheveux de lin*, *Rêverie* (cả hai Grade 8) → *Golliwogg's Cakewalk*, *Doctor Gradus ad Parnassum* (tên gợi tới tập luyện ngón *Gradus ad Parnassum* của Clementi) → các prelude khác, *Estampes*, *Images* → *Études*.
+- **Bắt đầu bằng:** *The Little Shepherd* trong *Children's Corner* (Grade 7) → [*Arabesque* số 1](/opus/piano/tac-pham/debussy-arabesque-1/) (chặng 6) → [*Clair de lune*](/opus/piano/tac-pham/debussy-clair-de-lune/) (chặng 6) → *La fille aux cheveux de lin*, *Rêverie* (cả hai Grade 8) → [*Golliwogg's Cakewalk*](/opus/nghe-nhac/debussy-golliwogg/) (có hướng dẫn nghe), *Doctor Gradus ad Parnassum* (tên gợi tới tập luyện ngón *Gradus ad Parnassum* của Clementi) → các prelude khác, *Estampes*, *Images* → *Études*.
 - **Cuộc đời và các tác phẩm khác:** [Nhà soạn nhạc](/opus/lich-su/nha-soan-nhac/#claude-debussy-18621918).
 
 ### Erik Satie (1866–1925)
@@ -234,7 +234,7 @@ Thế kỷ 20 mở rộng vốn từ của đôi tay: màu sắc âm thanh, nh�
 
 - **Đặc trưng khi chơi:** piano như nhạc cụ gõ: tiếng chắc, dấu nhấn, staccato khô, ostinato lặp đi lặp lại. Nhịp lẻ từ dân ca Đông Âu (5/8, 7/8), điệu thức cổ, nghịch âm. Ký hiệu cực kỳ chính xác. Không gì rèn độc lập hai tay và nhịp tốt hơn.
 - **Tác phẩm chính:** *For Children* (dựa trên dân ca Hungary và Slovakia), *Mikrokosmos* (153 bài trong 6 tập), *Allegro barbaro* (1911), *Romanian Folk Dances* (1915), Sonatina, Suite Op. 14, *Out of Doors*, Sonata (1926), ba concerto.
-- **Bắt đầu bằng:** *Mikrokosmos* tập 1–2 (ngay từ những tháng đầu) → *For Children* (*Sorrow*: Grade 2; *Winter Solstice Song*: Grade 5) → *Mikrokosmos* tập 3–4 → *Romanian Folk Dances*, Sonatina (chương *Bagpipers*: Grade 7) → *Allegro barbaro*, Suite Op. 14 → *Out of Doors*, Sonata.
+- **Bắt đầu bằng:** *Mikrokosmos* tập 1–2 (ngay từ những tháng đầu) → *For Children* (*Sorrow*: Grade 2; *Winter Solstice Song*: Grade 5) → *Mikrokosmos* tập 3–4 → *Romanian Folk Dances*, [Sonatina](/opus/nghe-nhac/bartok-sonatina/) (chương *Bagpipers*: Grade 7, chặng 6; có hướng dẫn nghe) → *Allegro barbaro*, Suite Op. 14 → *Out of Doors*, Sonata.
 - **Cuộc đời và các tác phẩm khác:** [Nhà soạn nhạc](/opus/lich-su/nha-soan-nhac/#bela-bartok-18811945).
 
 ### Sergei Prokofiev (1891–1953)

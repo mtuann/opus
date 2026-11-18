@@ -25,6 +25,9 @@ Lịch sử âm nhạc thường được kể qua những cái tên nam giới.
 *Nghe:* Concerto piano cung La thứ; Tam tấu piano cung Sol thứ.
 *Tập:* [Scherzo số 2 Đô thứ, Op. 14](/opus/piano/tac-pham/clara-schumann-scherzo-2/) (chặng 6).
 
+**Agathe Backer Grøndahl** (1847–1907), Na Uy. Nghệ sĩ piano và nhà soạn nhạc, một trong những nghệ sĩ piano hàng đầu của Na Uy, thành công cả trong nước lẫn nước ngoài. Bà để lại 250 ca khúc và khoảng 150 bản piano.
+*Nghe:* [*Klage* (Lời than), Op. 36 số 1](/opus/nghe-nhac/backer-grondahl-klage/).
+
 **Cécile Chaminade** (1857–1944), Pháp. Ca khúc và tiểu phẩm piano của bà từng rất được ưa chuộng ở châu Âu và Mỹ.
 *Nghe:* Concertino cho sáo, Op. 107.
 *Tập:* [*Pierrette*, Op. 41](/opus/piano/tac-pham/chaminade-pierrette/) (chặng 6); [*Automne*, Op. 35 số 2](/opus/piano/tac-pham/chaminade-automne/) (chặng 7).
@@ -76,6 +79,7 @@ Lịch sử âm nhạc thường được kể qua những cái tên nam giới.
 - [Encyclopedia.com: Lili Boulanger](https://www.encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/boulanger-lili-1893-1918)
 - [Chicago Symphony Orchestra: Giao hưởng số 1 của Florence Price](https://cso.org/experience/article/17666/florence-prices-symphony-no-1)
 - [Thư viện Đại học Yale: Mendelssohn, Zwölf Gesänge Op. 8 (có ca khúc của Fanny)](https://musiclib-exhibits.library.yale.edu/exhibits/mendelssohn/zwoelf_gesaenge.htm)
+- [Store norske leksikon: Agathe Backer Grøndahl](https://snl.no/Agathe_Backer_Gr%C3%B8ndahl)
 - [YourClassical (NPR): Gabriela Lena Frank giành giải Pulitzer Âm nhạc 2026](https://www.yourclassical.org/story/2026/05/04/npr-gabriela-lena-frank-music-pulitzer-interview)
 - Xem thêm [tài liệu tham khảo](/opus/tai-lieu-tham-khao/).
 - [TTVH: Nguyễn Thị Nhung, nữ nhạc sĩ Việt Nam đầu tiên viết nhạc giao hưởng (bản lưu)](https://web.archive.org/web/20220808133657/https://thethaovanhoa.vn/giai-tri/nguyen-thi-nhung-nu-nhac-si-vn-dau-tien-viet-nhac-giao-huong-n20110117171502786.htm)
