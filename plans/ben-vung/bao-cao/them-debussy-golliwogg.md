@@ -57,3 +57,7 @@ Claude (agent riêng, không làm lượt 1, lượt 2), 17/11/2026. Mọi nhậ
 - Golliwogg: đoạn ba câu, trung tính, có nguồn, nói rõ chỉ nhắc tên vì là tên bài; giữ. Sửa chữ một câu cho sát nguồn ("a caricature of American black faced minstrels"): "Nhân vật nhại những người diễn trò hát rong bôi mặt đen (*minstrel*) của Mỹ" thay "được vẽ theo một con búp bê nhại…" (n14, vẫn `dung`).
 - Thuật ngữ khớp `thuat-ngu.yml` (đảo phách, a tempo, Tempo primo, nốt hoa mỹ, dim.). Nhãn `khuyen-tap` (n34) và `ve-site` (n35) đúng loại.
 - Kiểm: YAML hai hồ sơ và `tac-pham.yml` đọc bằng `parseDocument` không lỗi; `node tools/khuong-nhac.mjs` 402 khối, 0 lỗi; `npm run build:xem` đạt; `npm test` 353 đạt, 1 bỏ qua, 1 hỏng (`tests/chuyen.test.mjs`: `doi_chu` của `lich-su/nu-nha-soan-nhac`, `piano/tac-pham-theo-cap`, lỗi đã sửa ở `main`, nhánh chưa rebase; không sửa ở đây); `OPUS_TRINH_DUYET=chromium OPUS_TRANG=nghe-nhac/debussy-golliwogg/ npm run test:trinh-duyet` 435/435 đạt.
+
+## Kiểm mẫu và khóa
+
+Claude (agent riêng) kiểm thay chủ repo 5 nhận định mẫu (trang n8, n12, n19, n23, n28) trên bản quét Durand, lời tựa Henle, trang LAITS và Commons: 5 đúng. Khóa trang và bản ghi 17/11/2026.
