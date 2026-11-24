@@ -5,12 +5,12 @@ lan:
   - so: 1
     ngay: 2026-11-24
     nhanh: them/bach-prelude-fugue-sol-thu
-    ma_bam: null
+    ma_bam: sha256:543ef0d0280dd1505542eeea9aa26dbf469276c1b8c077eee47db9458ca04502
     nguoi:
       luot_1: Claude Opus 5.5 (lượt 1, them/bach-prelude-fugue-sol-thu, 24/11/2026)
       luot_2: Claude Opus 5.5 (agent riêng, độc lập với lượt 1, 24/11/2026; 53 câu, 52 đúng, 1 sai)
       review: "Claude (agent riêng, không làm lượt 1, lượt 2; 24/11/2026)"
-      kiem_mau: null
+      kiem_mau: "Claude Sonnet (agent riêng), kiểm thay chủ repo theo lời giao 16/11/2026: 5 nhận định mẫu (khoa.mjs xuat --mau 5: trang n1, n6, n12, n17, n20), 5 đúng, 0 sai"
 ghi_chu: 'Bài học mới (lộ trình thêm tác phẩm, lượt 10, khảo sát đợt 4: plans/ben-vung/khao-sat-dot-4.md ứng viên b1). Nốt nhạc và chữ chỉ dẫn đọc từ bản quét Bach-Gesellschaft Band 14 (IMSLP #173661, file IMSLP173661-PMLP05948-1.pdf, 126 trang; Praeludium XVI ở trang PDF 57 = số trang in 57, Fuga XVI "a 4." ở trang 58–59; số ô in 5, 10, 15 ở tr. 58, 20, 25, 30 ở tr. 59), render bằng PyMuPDF ở 110–500 dpi. Đối chiếu từng nốt với Mutopia BWV861_Praeludium16.ly (Mutopia-2006/08/17-806) và BWV861_Fuga16.ly (Mutopia-2011/10/12-805), cả hai ghi nguồn "Bach Gesselschaft Edition (1866)", Public Domain; và kern wtc1p16.krn, wtc1f16.krn (humdrum-tools/bach-wtc, chỉ dùng trên máy): script đọc kern ra từng nốt theo bè, tìm mọi lần vào của chủ đề (mẫu bước nhảy quãng 6 rồi nửa cung xuống, lên; nhịp móc đơn, móc đen) và của đối đề (mẫu móc kép đi xuống rồi lên). Một chỗ kern khác bản in: ô 28 soprano phách 3, kern ghi Fa4, bản in và Mutopia ghi Fa♯4; trang theo bản in. Mốc: tools/audio/align với cấu hình tạm ngoài repo (không sửa pieces.py): hai job, MIDI Mutopia của prelude và fugue chép vào bộ nhớ đệm (tên tam_mutopia_bwv861_prelude.mid, tam_mutopia_bwv861_fuga.mid); dòng 1–5 ở chỉ số ô first, 2, 6, 10, 17 của phần 0; dòng 6–13 ở first, 1.625, 4.125, 11.125, 16.125, 19.125, 27.125, 32.125 của phần 1. Rồi kiểm từng mốc bằng explore.py onsets trên mp3 Commons (giây trong phần): prelude Sol4 ô 3 ở 12,86; Si♭3 ô 7 ở 39,38; Đô3 và Đô5 ô 11 ở 65,25; Sol2 ô 18 ở 109,92. Fugue: Rê4 nốt đầu 0,65; Sol4 đáp đề 5,48; Rê3–Mi♭3–Sol2 bass ô 5 ở 13,14/13,47/13,79; Fa4–Sol4 alto ô 12 ở 34,64/35,02; Fa3 bass ô 17 phách 1,5 ở 50,06 (bộ căn cho 50,4; chọn theo khởi âm, 184); Sol3 bass ô 20 ở 59,3; ô 28: Rê4 alto và Rê3 phách 1 ở 82,85, Mi♭5 soprano phách 2 ở 83,68, Rê4 tenor phách 3,5 ở 84,89, nên Rê5 soprano phách 1,5 khoảng 83,25 (bộ căn cho 83,6; chọn 217); tenor ô 33: Rê4 98,87, Mi♭4 99,29, Sol3 99,66 (một biến thể căn cho 93,7, sai). Mốc fugue cộng 134,23 s (độ dài phần 1). Ghi bằng attach.py --ref "1 13 39 65 110 135 140 147 169 184 194 217 233". Chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng thuộc hồ sơ du-lieu/tac-pham/bach-prelude-fugue-sol-thu. Không tính là nhận định: tiêu đề mục, tiêu đề cột, mốc trong ::khoi-nghe (cách đo ghi ở đây), câu hỏi để nghe.'
 nguon:
   - id: bga-1866

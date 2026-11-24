@@ -44,3 +44,7 @@ Claude (agent riêng, không làm lượt 1, lượt 2), 24/11/2026. Mọi nhậ
 - **Mốc:** đo lại onset (librosa CQT) trên mp3 Commons tải lại: Si♭3 ô 7 prelude 39,45 s; Sol2 ô 18 110,04 s; fugue Rê3 bass ô 5 13,18 s, Fa3 bass ô 17 50,11 s, Sol3 ô 20 59,39 s, Rê4 tenor ô 33 98,92 s (cộng 134,23 s): mốc 39, 110, 147, 184, 194, 233 đều trong 0,5 s, không sửa.
 - **Bản thu:** API Commons cho cả hai file: CC0, `licUrl` creativecommons.org/publicdomain/zero/1.0, "performed by Kimiko Ishizaka", 134,23 s và 113,49 s: khớp `ban_thu`.
 - **Chữ, thuật ngữ:** chủ đề, đáp đề, đối đề, đoạn chuyển, stretto, láy rền, âm nền, nốt treo, cảm âm, chuỗi, quãng 3 Picardy khớp `thuat-ngu.yml`. Phần fugue đọc được cho người tự học sau khi viết rõ hai nửa chủ đề và chỗ các bè vào.
+
+## Kiểm mẫu và khóa
+
+Claude (agent riêng) kiểm thay chủ repo 5 nhận định mẫu (trang n1, n6, n12, n17, n20) trên bản Bach-Gesellschaft, blog Henle và trang hinh-thuc/fugue: 5 đúng. Khóa trang và bản ghi 24/11/2026.
