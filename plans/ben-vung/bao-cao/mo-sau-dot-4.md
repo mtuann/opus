@@ -35,3 +35,13 @@ Kiểm thử: `npm run build:xem` đạt; `npm test` 355 đạt, 2 bỏ qua, 0 h
 - `nghe-nhac/haydn-94`: không có mục "Nếu bạn muốn chơi" hay chỗ hợp lý để link bài học (thêm mục mới vào hướng dẫn nghe là đổi khuôn trang); bài học Haydn đã link sang trang này.
 - Bảng mức Henle đầu `tac-pham-theo-cap`, bảng "Muốn chơi…" của `nha-soan-nhac`: không thêm ba bài (không bắt buộc).
 - Cấu hình căn mốc (`tools/audio/align/sources.json`, `pieces.py`) cho K. 208 và Hob. XVI:27 (việc ngoài phạm vi của hai báo cáo): ngoài phạm vi nhánh này.
+
+## Review (Claude Opus 5.5, agent riêng, 24/11/2026)
+
+Kết quả: 16 nhận định mới hay sửa của lần mở này đều `review: dung` (9 câu cần nguồn, 7 câu `ve-site`), thêm r5 của `tac-pham-theo-cap` (chỉ nối ghi chú); `nguoi.review` điền ở lần cuối `lan` của bảy hồ sơ. Không sửa chữ trang.
+
+- Chữ mới khớp ba bài học và bản ghi đã khóa: dòng K. 208 và Hob. XVI:27 rút từ `ky_nang_chinh`; câu stretto ở `hinh-thuc/fugue` chép nguyên câu mục "Vì sao nên học" của BWV 861; "chủ đề ngắn 24 ô… đoạn Sol thứ" ở `bien-tau` như mở đầu và bảng Cấu trúc của bài Haydn; chỉ dùng "chủ đề và các biến tấu", không gọi tên hình thức nào khác. Link đều tới trang có trong `khoa.json`.
+- Dòng Hob. XVI:35: đồng ý giữ ở chặng 5 với chương 3 (Trinity Grade 6). Câu "Ngón nhẹ và nhanh, tính hài hước rất Haydn" giữ: chương 3 (Finale) là chương nhanh và nhẹ nên câu vẫn đúng cho riêng chương này; "chương này" ở câu sau trỏ rõ vào cột đầu.
+- `doi_chu`: mục Diabelli `cu: null` đúng với cách so theo ô (`node --test tests/chuyen.test.mjs` đạt, 18/18, có `.cache/site-cu/`).
+- Số bài theo chặng 2–7 trong `ke-hoach-mo-rong.md` (8, 6, 8, 8, 9, 7; 46) khớp khi đếm `loai: bai-hoc` theo `chang`. Câu `ke-hoach` n8 đúng: không có bài học Haydn, Scarlatti nào khác; chặng 7 trước BWV 861 có 6 bài, đều Lãng mạn hay Cuối Lãng mạn.
+- Bảy hồ sơ đọc bằng `parseDocument` không lỗi.
