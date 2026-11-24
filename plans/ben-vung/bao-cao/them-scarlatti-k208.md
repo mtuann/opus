@@ -65,3 +65,7 @@ Claude (agent riêng, không làm lượt 1, lượt 2), 24/11/2026. Mọi nhậ
 Chỗ vướng thêm của quy trình:
 
 4. `tools/khuong-nhac.mjs` cho ô đầu ngắn (lấy đà) mà không so độ dài giữa các bè, nên ô 1 thiếu phách ở một tay lọt qua cả lượt 1 lẫn lượt 2. Nên bắt khi các bè của ô lấy đà dài khác nhau (nhánh `mo/` sau đợt).
+
+## Kiểm mẫu và khóa
+
+Claude (agent riêng) kiểm thay chủ repo 5 nhận định mẫu (trang n12, n18, n19, n28, n31) trên IMSLP, Henle, Treccani, Giordano và khối abc: 5 đúng. Khóa trang và bản ghi 24/11/2026. Mốc và sơ đồ đúng là số ở mục Review (mục Kết quả ghi số của lượt 1).
