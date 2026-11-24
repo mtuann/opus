@@ -12,13 +12,13 @@ Sonata của Scarlatti là một bản nhạc một chương cho đàn phím, ch
 
 - **Bài Baroque của chặng 5.** Đề cương ABRSM xếp bài ở Grade 6 trong cả bốn kỳ 2021–2028, tức chặng 5 của lộ trình. Ở chặng này, đây là bài Baroque duy nhất: sau hai bài Bach ở chặng 4 ([Invention số 1](/opus/piano/tac-pham/bach-invention-1/), [Prelude Đô trưởng](/opus/piano/tac-pham/bach-prelude-do/)) và trước [Prelude và Fugue Đô thứ](/opus/piano/tac-pham/bach-prelude-fugue-do-thu/) ở chặng 6.
 - **Hát trên đàn phím.** Giai điệu chậm, có nốt dựa, trill và nhóm nốt nhanh; tay trái là một dòng nốt đen đều, khi một nốt, khi hai nốt. Phải giữ nhịp chậm mà không lê.
-- **Hình thức hai nửa.** Nửa đầu đi từ La trưởng sang Mi trưởng, nửa sau trở về La trưởng; gần cuối mỗi nửa đều có một trill. Đây là khuôn chung của sonata Scarlatti (xem [hướng dẫn nghe ba sonata Scarlatti](/opus/nghe-nhac/scarlatti-sonata/)).
+- **Hình thức hai nửa.** Nửa đầu đi từ La trưởng sang Mi trưởng, nửa sau trở về La trưởng; gần cuối mỗi nửa có một trill ghi *tr* (ô 11 và ô 25), ngoài vài dấu láy ngắn. Đây là khuôn chung của sonata Scarlatti (xem [hướng dẫn nghe ba sonata Scarlatti](/opus/nghe-nhac/scarlatti-sonata/)).
 - **Đọc một ấn bản cũ.** Bản in Longo (1906) đổi chỉ dẫn tốc độ, thêm sắc thái, dấu luyến, ngón và sửa vài nốt. So với bản theo bản chép tay, bạn học cách phân biệt chữ của nhà soạn nhạc với chữ của người biên tập.
 - **Bài học Scarlatti đầu tiên trên site.**
 
 ## Bối cảnh
 
-Domenico Scarlatti (1685–1757) sinh ở Naples, con của nhà soạn nhạc Alessandro Scarlatti. Năm 1719 ông đứng đầu nhà nguyện hoàng gia Bồ Đào Nha và viết nhạc đàn phím cho công chúa Maria Barbara; từ năm 1728 ông phục vụ triều đình Tây Ban Nha và viết chủ yếu cho đàn harpsichord. Danh mục của Ralph Kirkpatrick (chữ K.) đánh số 555 sonata. Đọc thêm về ông ở [hướng dẫn nghe ba sonata Scarlatti](/opus/nghe-nhac/scarlatti-sonata/) và [Nhà soạn nhạc cho piano](/opus/piano/nha-soan-nhac/#domenico-scarlatti-16851757).
+Domenico Scarlatti (1685–1757) sinh ở Naples, con của nhà soạn nhạc Alessandro Scarlatti. Năm 1719 ông đứng đầu nhà nguyện hoàng gia Bồ Đào Nha và viết nhạc đàn phím cho công chúa Maria Barbara. Năm 1729, sau khi bà kết hôn với thái tử Tây Ban Nha, ông theo bà sang Seville; từ đó ông phục vụ triều đình Tây Ban Nha và viết chủ yếu cho đàn harpsichord. Danh mục của Ralph Kirkpatrick (chữ K.) đánh số 555 sonata. Đọc thêm về ông ở [hướng dẫn nghe ba sonata Scarlatti](/opus/nghe-nhac/scarlatti-sonata/) và [Nhà soạn nhạc cho piano](/opus/piano/nha-soan-nhac/#domenico-scarlatti-16851757).
 
 Nguồn chính của các sonata là những tập chép tay sạch lưu ở Venice và Parma; trong những năm 1752–1757 Scarlatti cho chép nhiều tập sonata như vậy. Năm viết K. 208 không rõ. Longo ghi nguồn của bài là bản chép tay Venice, tập III, số 3.
 
@@ -26,11 +26,11 @@ Hai số danh mục: K. 208 theo Kirkpatrick, L. 238 theo Alessandro Longo, ngư
 
 ### Longo thêm gì
 
-Bản Longo dễ tìm, nhưng không giống bản chép tay. So với bản Gouin:
+Bản Longo dễ tìm, nhưng không giống bản chép tay. Dưới đây so bản Longo với bản Urtext của Pierre Gouin, gõ lại theo bản chép tay:
 
-- Chỉ dẫn tốc độ: bản chép tay ghi *Adagio e cantabile*; Longo đổi thành *Andantino cantabile* (♩ = 72), nhanh hơn *Adagio*.
+- Chỉ dẫn tốc độ: bản Gouin ghi *Adagio e cantabile*; Longo đổi thành *Andantino cantabile* (♩ = 72), nhanh hơn *Adagio*.
 - Sắc thái (*p*, *mf*, *cres.*, dấu lớn dần và nhỏ dần), dấu luyến dài, chấm staccato trên các nốt tay trái và số ngón đều do Longo thêm.
-- Ở ô 15, bản chép tay ghi chữ *tremulo* (tiếng Ý: run rẩy) trên nốt Si. Đây là một kiểu nốt hoa mỹ Scarlatti dùng trong khoảng hai chục sonata; từ điển Dolmetsch cho rằng nó khác láy rền ở chỗ dùng nốt phụ phía dưới. Longo thay bằng dấu *tr* (láy rền).
+- Ở ô 15, bản Gouin ghi chữ *tremulo* (tiếng Ý: run rẩy) trên nốt Si. Đây là một kiểu nốt hoa mỹ Scarlatti dùng trong khoảng hai chục sonata; từ điển Dolmetsch cho rằng nó khác láy rền ở chỗ dùng nốt phụ phía dưới. Longo thay bằng dấu *tr* (láy rền).
 - Longo sửa nốt ở ô 4, 13, 20 và 22; cách viết của bản chép tay in ở chú thích cuối trang, đánh dấu "C. V." (bản chép tay Venice).
 
 Chơi theo bản Longo vẫn được, nhưng hãy coi sắc thái và ngón của ông là gợi ý. Bản Urtext (như Henle) cho biết đâu là chữ của Scarlatti.
@@ -44,7 +44,7 @@ Bản thu gợi ý là của Robert Stephen Hill, đăng trên IMSLP (phạm vi 
 3. Lần nhắc lại, người chơi có thêm nốt hoa mỹ hay đổi gì so với lần đầu?
 4. Bài kết bằng gì: một hợp âm to, hay một nốt nhẹ sau trill?
 
-::khoi-nghe{moc="0 14 18 34 51 75 150 160 186 206 245"}
+::khoi-nghe{moc="0 14 18 34 51 75 150 160 187 205 248"}
 
 ## Theo dõi khi nghe
 
@@ -146,7 +146,7 @@ Q:1/4=50
 V:RH clef=treble
 V:LH clef=bass
 K:A
-[V:RH] !3!c4 {f}!4!e6 !3!d!2!c | !1!B8 z8 |]
+[V:RH] !3!c4 {f}!4!e6 !3!d!2!c !3!d4 | !1!B8 z8 |]
 [V:LH] !1!A,4 A,4 A,4 A,4 | !2!E,4 E,4 E,8 |]
 ```
 
@@ -162,7 +162,7 @@ Q:1/4=50
 V:RH clef=treble
 V:LH clef=bass
 K:A
-[V:RH] !3!c4 !accent!!5!f4 !4!e2 !3!d!2!c | !1!B8 z8 |]
+[V:RH] !3!c4 !accent!!5!f4 !4!e2 !3!d!2!c !3!d4 | !1!B8 z8 |]
 [V:LH] !1!A,4 A,4 A,4 A,4 | !2!E,4 E,4 E,8 |]
 ```
 
@@ -202,15 +202,15 @@ Kế hoạch 5 tuần, khoảng 30–40 phút mỗi ngày. Tốc độ cuối ch
 
 ### Tốc độ và nhịp
 
-*Adagio e cantabile*: chậm và hát. Bản chép tay không ghi số máy đếm nhịp; trong bản thu gợi ý, Hill chơi khoảng ♩ = 45–48. Con số ♩ = 72 là của Longo, đi với chữ *Andantino* ông thay vào. Nhịp 4/4 đi theo nốt đen của tay trái: giữ dòng ấy đều để tay phải hát thoải mái trong khuôn nhịp.
+*Adagio e cantabile*: chậm và hát. Bản Urtext của Gouin không ghi số máy đếm nhịp; trong bản thu gợi ý, Hill chơi khoảng ♩ = 45–48. Con số ♩ = 72 là của Longo, đi với chữ *Andantino* ông thay vào. Nhịp 4/4 đi theo nốt đen của tay trái: giữ dòng ấy đều để tay phải hát thoải mái trong khuôn nhịp.
 
 ### Sắc thái và phát âm
 
-Bản chép tay không ghi sắc thái. Trên piano hiện đại, hãy để giai điệu dẫn: lớn lên theo câu nhạc đi lên, nhỏ lại ở chỗ kết. Tay trái tách nhẹ, tay phải liền tiếng (*legato*). Xem [Tiếng đàn](/opus/piano/tieng-dan/#legato-noi-lien-bang-ngon).
+Bản Urtext của Gouin không ghi sắc thái. Trên piano hiện đại, hãy để giai điệu dẫn: lớn lên theo câu nhạc đi lên, nhỏ lại ở chỗ kết. Tay trái tách nhẹ, tay phải liền tiếng (*legato*). Xem [Tiếng đàn](/opus/piano/tieng-dan/#legato-noi-lien-bang-ngon).
 
 ### Bàn đạp
 
-Bản chép tay không ghi bàn đạp. Trên piano, chơi chủ yếu bằng ngón; có thể đạp rất ít, rất nông, ở vài nốt dài, nhưng đừng để tay trái nhòe thành một khối. Xem [Bàn đạp](/opus/piano/ban-dap/).
+Cả bản Gouin lẫn bản Longo đều không ghi bàn đạp. Trên piano, chơi chủ yếu bằng ngón; có thể đạp rất ít, rất nông, ở vài nốt dài, nhưng đừng để tay trái nhòe thành một khối. Xem [Bàn đạp](/opus/piano/ban-dap/).
 
 ### Nốt hoa mỹ
 
@@ -252,7 +252,7 @@ Nốt dựa đúng phách; trill bắt đầu từ nốt trên. Ở lần nhắc
 + Sắc thái, dấu luyến dài, staccato tay trái và số ngón
 - Chỉ các nốt hoa mỹ
 - Không có gì: bản Longo giống hệt bản chép tay
-> Bản chép tay không ghi sắc thái và ngón. Longo thêm những thứ ấy, đổi chỉ dẫn tốc độ và sửa vài nốt, có in cách viết gốc ở chú thích.
+> Bản Urtext (theo bản chép tay) không ghi sắc thái và ngón. Longo thêm những thứ ấy, đổi chỉ dẫn tốc độ và sửa vài nốt, có in cách viết gốc ở chú thích.
 ? Nốt dựa (appoggiatura) ở ô 1 nên chơi thế nào?
 - Thật nhanh, trước phách
 + Đúng phách, rồi chuyển sang nốt chính nhẹ hơn
@@ -272,6 +272,8 @@ Nốt dựa đúng phách; trill bắt đầu từ nốt trên. Ở lần nhắc
 - G. Henle Verlag, [*Selected Piano Sonatas*, tập IV](https://www.henle.de/Selected-Piano-Sonatas-Volume-IV/HN-581) (HN 581): mức khó của K. 208 và tiểu sử Scarlatti.
 - ABRSM, [đề cương piano 2025–2026](https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26%202026%20Prac%20syllabus%2020240524_access.pdf) (Grade 6, danh sách A; hướng dẫn về dấu nhắc lại) và [2027–2028](https://www.abrsm.org/sites/default/files/2026-06/Piano%20Practical%20Grades%20Qualification%20Specification%202027%20%26%202028.pdf); bài cũng có trong đề cương 2021–2022, 2023–2024.
 - The Royal Conservatory, [Piano Syllabus 2022 Edition](https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf), Level 7, danh sách A.
+- Nicholas Giordano, [*The Invention and Evolution of the Piano*](https://acousticstoday.org/the-invention-and-evolution-of-the-piano-nicholas-giordano/), *Acoustics Today* 12/1 (2016), và [ghi chú kèm bài](https://acousticstoday.org/the-invention-and-evolution-of-the-piano/) (tiếng fortepiano nhỏ hơn, tắt nhanh hơn).
+- *Dizionario Biografico degli Italiani*, [Scarlatti, Giuseppe Domenico](https://www.treccani.it/enciclopedia/giuseppe-domenico-scarlatti_(Dizionario-Biografico)/) (Treccani): năm 1719 sang Lisbon, năm 1729 theo Maria Barbara tới Seville.
 - Dolmetsch Online, [Music Dictionary: T](https://www.dolmetsch.com/defst4.htm) (*tremulo*).
 - Wikipedia, [List of solo keyboard sonatas by Domenico Scarlatti](https://en.wikipedia.org/wiki/List_of_solo_keyboard_sonatas_by_Domenico_Scarlatti) (số K., L., chỉ dẫn tốc độ).
 - Bản thu: Robert Stephen Hill (fortepiano), phạm vi công cộng, trên [IMSLP](https://imslp.org/wiki/Keyboard_Sonata_in_A_major,_K.208_(Scarlatti,_Domenico)).
