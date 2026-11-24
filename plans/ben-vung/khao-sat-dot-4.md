@@ -4,6 +4,10 @@
 
 Hiện trạng bài học theo chặng 2–7: 8, 6, 8, 6, 9, 6 (43 bài).
 
+## Đã duyệt
+
+Chủ repo duyệt 24/11/2026: làm cả ba bài trong lượt 10 (Bach BWV 861 chặng 7; Scarlatti K. 208 chặng 5; Haydn XVI:27 chương 3 chặng 5); chấp nhận bản thu IMSLP chỉ dẫn link cho Haydn và Scarlatti.
+
 ## Tóm tắt và đề xuất
 
 | Mảng | Đề xuất làm trong lượt 10 | Chặng | Cấp | Đối chiếu | Bản thu |
