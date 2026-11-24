@@ -7,7 +7,7 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: Claude Opus 5.5 (lượt 1, them/bach-prelude-fugue-sol-thu, 24/11/2026)
-      luot_2: null
+      luot_2: Claude Opus 5.5 (agent riêng, độc lập với lượt 1, 24/11/2026; 53 câu, 52 đúng, 1 sai)
       review: null
       kiem_mau: null
 ghi_chu: 'Bản ghi mới (tools/them-tac-pham.mjs, 24/11/2026); khóa cả bản ghi. Nguồn chung với hồ sơ trang piano/tac-pham/bach-prelude-fugue-sol-thu (cách đọc bản quét, kern, đo bản thu ghi ở đó). ban_thu ghi bằng commons.py rec và attach.py --json (hai phần Prelude, Fugue, phát được). Sơ đồ (hinh) chia theo thời gian trên bản thu gợi ý, từ các mốc đã đo. them_ngay, goi_y là dữ liệu nội bộ, không có nhận định.'
@@ -67,81 +67,123 @@ nhan_dinh:
     nguon: [ bga-1866, henle-hn14, imslp-wtc1 ]
     ket_qua: dung
     ghi_chu: 'Bản quét: Praeludium XVI, Fuga XVI; Henle: "Prelude g minor BWV 861". Cặp thứ 16 theo thứ tự nửa cung, trưởng trước thứ (xem n9 hồ sơ trang).'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/The-Well-Tempered-Clavier-Part-I-BWV-846-869/HN-14", "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)" ]
+    luot_2_ghi_chu: Như n1, n9 của trang.
   - id: n2
     cau: 'giong Sol thứ, nhip 4/4; chip "Sol thứ · 4/4".'
     loai: cau-truc
     nguon: [ bga-1866, mut-805, mut-806 ]
     ket_qua: dung
     ghi_chu: 'Bản quét tr. 57–59: hai dấu giáng, ký hiệu C; Mutopia \key g \minor \time 4/4.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)" ]
+    luot_2_ghi_chu: "BG: hóa biểu hai giáng, chữ C (4/4) ở cả prelude và fugue; kết ở Sol (Sol thứ, kết Sol trưởng)."
   - id: n3
     cau: 'thoi_ky Baroque.'
     loai: lich-su
     nguon: [ imslp-wtc1 ]
     ket_qua: dung
     ghi_chu: 'IMSLP Piece Style Baroque; Bach (1685–1750) theo nha-soan-nhac.yml (đã khóa).'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/f4/14/7f/1690886046/0014-1690886046-sync.pdf" ]
+    luot_2_ghi_chu: "Soạn và chép năm 1722: Baroque."
   - id: n4
     cau: 'chang 7, grade Sau Grade 8; dòng Độ khó: ABRSM đưa cặp này vào danh sách bằng ARSM (tháng 6/2024), bậc ngay sau Grade 8; chặng 7 của lộ trình.'
     loai: cap-do
     nguon: [ abrsm-arsm-2024, henle-hn14 ]
     ket_qua: dung
     ghi_chu: 'ARSM June 2024: "Prelude and Fugue No. 16 in G minor, BWV 861". Henle nhãn "ABRSM: Piano ARSM". Chặng 7 = "Sau Grade 8" (cap-do.yml); tools/them-tac-pham.mjs từ chối "ARSM" làm grade nên ghi "Sau Grade 8" như chaminade-automne, rachmaninoff-prelude-do-thang-thu.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.abrsm.org/sites/default/files/2024-06/ARSM%20Repertoire%20(June%202024%20-%20Piano)%20PROOF4%20(Final)%20(1).pdf", "https://web.archive.org/web/20260104075651/https://www.abrsm.org/en-es/other-assessments/diplomas/music-performance-arsm" ]
+    luot_2_ghi_chu: Như n8 của trang.
   - id: n5
     cau: 'Dòng Độ khó: Henle xếp prelude mức 5, fugue mức 6 trên thang 9 (cả hai "trung bình"), kèm nhãn ABRSM ARSM.'
     loai: cap-do
     nguon: [ henle-hn14 ]
     ket_qua: dung
     ghi_chu: 'Henle HN 14: "Prelude g minor BWV 861 5 medium ABRSM: Piano ARSM", "Fugue g minor BWV 861 6 medium ABRSM: Piano ARSM". Thang Henle 1–9 như bản ghi đã khóa bach-prelude-fugue-do-thu.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/The-Well-Tempered-Clavier-Part-I-BWV-846-869/HN-14" ]
+    luot_2_ghi_chu: "'Prelude g minor BWV 861 5 medium ABRSM: Piano ARSM; Fugue g minor BWV 861 6 medium ABRSM: Piano ARSM'."
   - id: n6
     cau: 'chip "Prelude · fugue bốn bè" và "19 + 34 ô nhịp".'
     loai: so-lieu
     nguon: [ bga-1866, mut-805, mut-806, kern-wtc1-16 ]
     ket_qua: dung
     ghi_chu: 'Bản quét tr. 58 "a 4."; prelude 19 ô, fugue 34 ô (số ô in 30 ở tr. 59 hệ 5, ba ô 32–34 ở hệ 6); MIDI Mutopia và kern cùng số ô.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)" ]
+    luot_2_ghi_chu: 19 + 34 ô, fugue 'a 4'.
   - id: n7
     cau: 'Sáng tác / xuất bản: Bach chép sạch quyển 1 kèm trang bìa trang trọng năm 1722, khi là nhạc trưởng cho ông hoàng xứ Anhalt-Köthen; lưu hành bằng bản chép tay; khoảng năm 1800 có bản in gần như cùng lúc từ Nägeli (Zürich), Simrock (Bonn), Hoffmeister & Kühnel (Vienna và Leipzig).'
     loai: lich-su
     nguon: [ henle-hn14-vorwort, henle-blog-wtc ]
     ket_qua: dung
     ghi_chu: 'Heinemann: "autographen Reinschrift von 1722", trang bìa "HochFürstlich AnhaltCöthenischen CapelMeistern … Anno 1722". Blog: "elaborate title page"; "Around 1800, three firms – Hans Georg Nägeli (Zurich), Nikolaus Simrock (Bonn) and the Bureau de Musique Hoffmeister & Kühnel (Vienna/Leipzig)".'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/f4/14/7f/1690886046/0014-1690886046-sync.pdf", "https://blog.henle.de/en/2022/10/31/if-thats-not-reason-enough-to-celebrate-300-years-of-wtc-i/" ]
+    luot_2_ghi_chu: Như n10, n12 của trang.
   - id: n8
     cau: 'Giọng · nhịp · tốc độ: bản Bach-Gesellschaft không ghi tốc độ cho cả prelude lẫn fugue.'
     loai: so-lieu
     nguon: [ bga-1866 ]
     ket_qua: dung
     ghi_chu: 'Bản quét tr. 57–59: không có chữ tốc độ (chỉ tiêu đề, "a 4.").'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)" ]
+    luot_2_ghi_chu: BG không ghi tốc độ.
   - id: n9
     cau: 'Hình thức: prelude 19 ô, nốt ngân có láy rền trên các bè chuyển động; ý mở đầu trở lại ở Si♭ trưởng (ô 7) và Đô thứ (ô 11), kết trên âm nền Sol. Fugue bốn bè, 34 ô: một chủ đề, một đối đề đi theo gần như mọi lần vào, hai chỗ stretto (ô 17, ô 28–29).'
     loai: cau-truc
     nguon: [ bga-1866, kern-wtc1-16, mut-805, mut-806 ]
     ket_qua: dung
     ghi_chu: 'Như hồ sơ trang n3, n5, n7, n17, n18, n20 (bản quét: tr ở ô 1, 3, 7, 11; kern: lần vào ô 17 bass + alto, ô 28–29 soprano, tenor, bass; đối đề đi cùng mọi lần vào trừ ô 1, 23, 28–29, 33).'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.mutopiaproject.org/ftp/BachJS/BWV861/BWV861_Fuga16/BWV861_Fuga16.mid" ]
+    luot_2_ghi_chu: Như n2, n5, n7, n18 của trang (láy rền ô 7 trên Si♭, ô 11 trên Đô; âm nền Sol ô 18–19).
   - id: n10
     cau: 'ky_nang_chinh và dòng Kỹ năng chính: láy rền dài trên nốt ngân trong khi các bè khác chuyển động; nhóm móc kép có móc ba; bốn bè trong hai tay; chia một bè cho hai tay; nghe và làm rõ stretto; phát âm chủ đề nhất quán.'
     loai: cau-truc
     nguon: [ bga-1866, mut-806, kern-wtc1-16 ]
     ket_qua: dung
     ghi_chu: 'Phần mô tả bản nhạc: tr trên nốt tròn (ô 1, 3, 7, 11), móc ba trong nhóm móc kép (ô 2: d'''' ees''''32 d''''), fugue "a 4.", stretto ô 17, 28–29; bè alto đi qua hai khuông ở ô 1–4 (bản in chia cho hai tay). Phát âm nhất quán là lời khuyên (không trái trang đã khóa bach-prelude-fugue-do-thu).'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)" ]
+    luot_2_ghi_chu: "Các kỹ năng có thật trong bản nhạc: láy rền trên nốt ngân, nhóm 16-16-32-32-16, bốn bè, alto đổi khuông (một bè hai tay), hai chỗ stretto."
   - id: n11
     cau: 'Bản nhạc: IMSLP (tìm "Das wohltemperierte Klavier I, BWV 846-869"; bản Bach-Gesellschaft 1866); bản Urtext Henle: HN 14 có ngón bấm của András Schiff, HN 1014 không ghi ngón.'
     loai: ten
     nguon: [ imslp-wtc1, bga-1866, henle-hn14, henle-hn1014 ]
     ket_qua: dung
     ghi_chu: 'IMSLP có tên tác phẩm như trên và bản Bach-Gesellschaft (#173661). Henle HN 14: "András Schiff (Fingering Piano)"; HN 1014: "without fingering".'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/The-Well-Tempered-Clavier-Part-I-BWV-846-869/HN-14", "https://www.henle.de/The-Well-Tempered-Clavier-Part-I-BWV-846-869/HN-1014", "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)" ]
+    luot_2_ghi_chu: "HN 14: 'András Schiff (Fingering Piano)'; HN 1014: 'Urtext Edition without fingering'. Trang IMSLP đúng tên 'Das wohltemperierte Klavier I, BWV 846-869', có bản BG."
   - id: n12
     cau: 'doi_chieu: chép từ bản quét Bach-Gesellschaft Band 14 (Breitkopf & Härtel 1866; IMSLP #173661), đối chiếu với bản Mutopia (theo Bach-Gesellschaft 1866).'
     loai: ten
     nguon: [ bga-1866, mut-805, mut-806 ]
     ket_qua: dung
     ghi_chu: 'Xem khuong_nhac của hồ sơ trang (khối 1–3). Mutopia ghi source "Bach Gesselschaft Edition (1866)".'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=805" ]
+    luot_2_ghi_chu: "Wikitext IMSLP (API): file PMLP05948-1.pdf, 'BachComplete|14|1866|XIV', biên tập Franz Kroll; tên file IMSLP173661. Mutopia: 'Source: Bach Gesellschaft Edition (1866)'."
   - id: n13
     cau: 'hinh.bai-hoc: độ dài ô theo bản thu (prelude khoảng 2 phút 14 giây, fugue khoảng 1 phút 53 giây): prelude ô 1–6 39 s, ô 7–10 26 s, ô 11–17 45 s, ô 18–19 24 s; fugue ô 1–11 35 s, ô 12–27 48 s, ô 28–34 31 s; số ô theo Bach-Gesellschaft.'
     loai: so-lieu
     nguon: [ do-ban-thu, commons-ishizaka, bga-1866 ]
     ket_qua: dung
     ghi_chu: 'Mốc (giây liền qua hai phần): ô 7 prelude 39, ô 11 65, ô 18 110, hết prelude 134,23; fugue ô 12 ở 169, ô 28 ở 217, hết 247,72. 39+26+45+24 = 134; 35+48+31 = 114 (113,49). Độ dài file: commons.py info 134,23 s và 113,49 s.'
+    luot_2: dung
+    luot_2_nguon: [ "https://commons.wikimedia.org/wiki/File:Kimiko_Ishizaka_-_Bach_-_Well-Tempered_Clavier,_Book_1_-_31_Prelude_No._16_in_G_minor,_BWV_861.ogg", "https://commons.wikimedia.org/wiki/File:Kimiko_Ishizaka_-_Bach_-_Well-Tempered_Clavier,_Book_1_-_32_Fugue_No._16_in_G_minor,_BWV_861.ogg" ]
+    luot_2_ghi_chu: "Đầu ô theo DTW: prelude ô 7 39,4 s, ô 11 65,3 s, ô 18 110,0 s, hết 134,2 s → 39/26/45/24 s. Fugue ô 12 34,2 s, ô 28 82,8 s, hết 113,5 s → 34–35/48–49/31 s. Mốc ::khoi-nghe (1 13 39 65 110 | 135 140 147 169 184 194 217 233, fugue cộng 134,23 s) đều rơi trong 0,5 s của sự kiện: nốt đầu prelude 0,86 s; ô 3 13,4; ô 7 39,4; ô 11 65,3; ô 18 110,0; fugue nốt đầu 0,70 (=134,9); soprano ô 2/3,5 ≈ 5,7 (=139,9); bass ô 5 ≈ 13,1 (=147,3); alto ô 12 ≈ 34,6 (=168,8); ô 17 49,7 (=183,9); bass ô 20 ≈ 59,3 (=193,5); ô 28 ≈ 83,2 (=217,4); tenor ô 33 ≈ 98,9 (=233,1)."
   - id: n14
     cau: 'ban_thu: Kimiko Ishizaka, CC0, hai phần Prelude (134,23 s) và Fugue (113,49 s), file Wikimedia Commons.'
     loai: ten
     nguon: [ commons-ishizaka ]
     ket_qua: dung
     ghi_chu: 'Trang mô tả hai file: "performed by Kimiko Ishizaka", {{cc-zero}}, date 2015-03-19, source welltemperedclavier.org. Ghi bằng commons.py rec + attach.py --json.'
+    luot_2: dung
+    luot_2_nguon: [ "https://commons.wikimedia.org/wiki/File:Kimiko_Ishizaka_-_Bach_-_Well-Tempered_Clavier,_Book_1_-_31_Prelude_No._16_in_G_minor,_BWV_861.ogg", "https://commons.wikimedia.org/wiki/File:Kimiko_Ishizaka_-_Bach_-_Well-Tempered_Clavier,_Book_1_-_32_Fugue_No._16_in_G_minor,_BWV_861.ogg" ]
+    luot_2_ghi_chu: "API Commons: LicenseShortName CC0, 'performed by Kimiko Ishizaka', duration 134,2267 và 113,4933 s; ffprobe file tải về cùng số."

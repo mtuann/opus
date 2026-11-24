@@ -8,7 +8,7 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: Claude Opus 5.5 (lượt 1, them/bach-prelude-fugue-sol-thu, 24/11/2026)
-      luot_2: null
+      luot_2: Claude Opus 5.5 (agent riêng, độc lập với lượt 1, 24/11/2026; 53 câu, 52 đúng, 1 sai)
       review: null
       kiem_mau: null
 ghi_chu: 'Bài học mới (lộ trình thêm tác phẩm, lượt 10, khảo sát đợt 4: plans/ben-vung/khao-sat-dot-4.md ứng viên b1). Nốt nhạc và chữ chỉ dẫn đọc từ bản quét Bach-Gesellschaft Band 14 (IMSLP #173661, file IMSLP173661-PMLP05948-1.pdf, 126 trang; Praeludium XVI ở trang PDF 57 = số trang in 57, Fuga XVI "a 4." ở trang 58–59; số ô in 5, 10, 15 ở tr. 58, 20, 25, 30 ở tr. 59), render bằng PyMuPDF ở 110–500 dpi. Đối chiếu từng nốt với Mutopia BWV861_Praeludium16.ly (Mutopia-2006/08/17-806) và BWV861_Fuga16.ly (Mutopia-2011/10/12-805), cả hai ghi nguồn "Bach Gesselschaft Edition (1866)", Public Domain; và kern wtc1p16.krn, wtc1f16.krn (humdrum-tools/bach-wtc, chỉ dùng trên máy): script đọc kern ra từng nốt theo bè, tìm mọi lần vào của chủ đề (mẫu bước nhảy quãng 6 rồi nửa cung xuống, lên; nhịp móc đơn, móc đen) và của đối đề (mẫu móc kép đi xuống rồi lên). Một chỗ kern khác bản in: ô 28 soprano phách 3, kern ghi Fa4, bản in và Mutopia ghi Fa♯4; trang theo bản in. Mốc: tools/audio/align với cấu hình tạm ngoài repo (không sửa pieces.py): hai job, MIDI Mutopia của prelude và fugue chép vào bộ nhớ đệm (tên tam_mutopia_bwv861_prelude.mid, tam_mutopia_bwv861_fuga.mid); dòng 1–5 ở chỉ số ô first, 2, 6, 10, 17 của phần 0; dòng 6–13 ở first, 1.625, 4.125, 11.125, 16.125, 19.125, 27.125, 32.125 của phần 1. Rồi kiểm từng mốc bằng explore.py onsets trên mp3 Commons (giây trong phần): prelude Sol4 ô 3 ở 12,86; Si♭3 ô 7 ở 39,38; Đô3 và Đô5 ô 11 ở 65,25; Sol2 ô 18 ở 109,92. Fugue: Rê4 nốt đầu 0,65; Sol4 đáp đề 5,48; Rê3–Mi♭3–Sol2 bass ô 5 ở 13,14/13,47/13,79; Fa4–Sol4 alto ô 12 ở 34,64/35,02; Fa3 bass ô 17 phách 1,5 ở 50,06 (bộ căn cho 50,4; chọn theo khởi âm, 184); Sol3 bass ô 20 ở 59,3; ô 28: Rê4 alto và Rê3 phách 1 ở 82,85, Mi♭5 soprano phách 2 ở 83,68, Rê4 tenor phách 3,5 ở 84,89, nên Rê5 soprano phách 1,5 khoảng 83,25 (bộ căn cho 83,6; chọn 217); tenor ô 33: Rê4 98,87, Mi♭4 99,29, Sol3 99,66 (một biến thể căn cho 93,7, sai). Mốc fugue cộng 134,23 s (độ dài phần 1). Ghi bằng attach.py --ref "1 13 39 65 110 135 140 147 169 184 194 217 233". Chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng thuộc hồ sơ du-lieu/tac-pham/bach-prelude-fugue-sol-thu. Không tính là nhận định: tiêu đề mục, tiêu đề cột, mốc trong ::khoi-nghe (cách đo ghi ở đây), câu hỏi để nghe.'
@@ -104,30 +104,45 @@ nhan_dinh:
     nguon: [ bga-1866, imslp-wtc1, henle-hn14 ]
     ket_qua: dung
     ghi_chu: 'Bản quét tr. 57: "PRAELUDIUM XVI.", hai dấu giáng (Sol thứ); Henle: "Prelude g minor BWV 861", "Fugue g minor BWV 861".'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.henle.de/The-Well-Tempered-Clavier-Part-I-BWV-846-869/HN-14", "https://www.abrsm.org/sites/default/files/2024-06/ARSM%20Repertoire%20(June%202024%20-%20Piano)%20PROOF4%20(Final)%20(1).pdf" ]
+    luot_2_ghi_chu: Henle liệt kê Prelude/Fugue g minor BWV 861 là cặp thứ 16 trong HN 14; ABRSM ghi 'Prelude and Fugue No. 16 in G minor, BWV 861' dưới WTC Part I.
   - id: n2
     cau: 'Fugue có bốn bè và 34 ô; prelude có 19 ô.'
     loai: cau-truc
     nguon: [ bga-1866, mut-805, mut-806 ]
     ket_qua: dung
     ghi_chu: 'Bản quét tr. 58: "a 4."; fugue: số ô in 30 ở đầu hệ 5 tr. 59, hệ 6 có ô 32–34. Prelude tr. 57: 19 ô. explore.py bars trên MIDI Mutopia: prelude 19 ô, fugue 34 ô; kern cùng số ô.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=805", "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=806" ]
+    luot_2_ghi_chu: "BG: 'FUGA XVI. a 4.', đếm 34 ô (số ô in 5, 10, 15, 20, 25, 30); Praeludium 19 ô. MIDI Mutopia cũng 34 và 19 ô."
   - id: n3
     cau: 'Prelude không phải dòng móc kép đều như BWV 847 mà là một nốt ngân dài có láy rền, bên dưới các bè khác chuyển động.'
     loai: cau-truc
     nguon: [ bga-1866, mut-806 ]
     ket_qua: dung
     ghi_chu: 'Tr. 57 ô 1: Sol5 nốt tròn có tr, nối sang ô 2; khuông dưới móc kép và Sol3 móc đơn. Mutopia: g''''1^\trill. Phần so với BWV 847 (móc kép liên tục hai tay) theo trang đã khóa piano/tac-pham/bach-prelude-fugue-do-thu.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.mutopiaproject.org/ftp/BachJS/BWV861/BWV861_Praeludium16/BWV861_Praeludium16.ly" ]
+    luot_2_ghi_chu: "BG ô 1: Sol5 tròn có tr, nối sang ô 2; hai bè dưới móc kép và Sol3 móc đơn lặp."
   - id: n4
     cau: 'Chủ đề fugue ngắn, có bước nhảy quãng 6 thứ đi xuống; bốn bè vào lần lượt trong bảy ô đầu.'
     loai: cau-truc
     nguon: [ bga-1866, kern-wtc1-16, wiki-bwv861 ]
     ket_qua: dung
     ghi_chu: 'Alto ô 1: Rê4 Mi♭4 Sol3 Fa♯3 Sol3 (Mi♭4 xuống Sol3: 8 nửa cung, quãng 6 thứ). Lần vào: alto ô 1, soprano ô 2 phách 3,5, bass ô 5 phách 1,5, tenor ô 6 phách 3,5 (kern; bản quét tr. 58 hệ 1–2 khớp). Wikipedia: "minor 6th leap in the first measure".'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.mutopiaproject.org/ftp/BachJS/BWV861/BWV861_Fuga16/BWV861_Fuga16.mid" ]
+    luot_2_ghi_chu: "Chủ đề Rê4–Mi♭4–Sol3 (Mi♭ xuống Sol = quãng 6 thứ). Lần vào: alto ô 1 phách 1,5; soprano ô 2 phách 3,5; bass ô 5 phách 1,5; tenor ô 6 phách 3,5 (đáp đề hết ở ô 7)."
   - id: n5
     cau: 'Ở ô 17 và ô 28–29 chủ đề vào ở bè mới khi bè trước chưa chơi xong (stretto); ở ô 28–29 ba bè vào liền nhau, mỗi bè cách bè trước nửa ô.'
     loai: cau-truc
     nguon: [ bga-1866, mut-805, kern-wtc1-16, earsense-16 ]
     ket_qua: dung
     ghi_chu: 'Kern: ô 17 bass Fa3 (phách 1,5) Sol3 Si♭2 La2 Si♭2, alto Đô5 (phách 3,5) Rê5 Fa4 Mi♭4 Fa4; ô 28 soprano Rê5 (phách 1,5) Mi♭5 Sol4 Fa♯4 Sol4, tenor Rê4 (phách 3,5) Mi♭4 Sol3 Fa♯3 Sol3; ô 29 bass Rê3 (phách 1,5) Mi♭3 Sol2 Fa♯2. Bản quét tr. 58 hệ 6 ô 2 (ô 17) và tr. 59 hệ 4 ô 3, hệ 5 ô 1 (ô 28–29) ở 300–500 dpi: khớp. Chủ đề dài một ô rưỡi (tới Si♭ móc đen phách 3 ô 2), nên các lần vào này chồng lên bè trước. Earsense: stretto ở nhiều chỗ.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.mutopiaproject.org/ftp/BachJS/BWV861/BWV861_Fuga16/BWV861_Fuga16.mid" ]
+    luot_2_ghi_chu: "Ô 17: bass (Fa3 Sol3 Si♭2 La2) phách 1,5, alto (Đô5 Rê5 Fa4 Mi♭4) phách 3,5. Ô 28–29: soprano 28/1,5, tenor 28/3,5, bass 29/1,5: cách nhau nửa ô."
   - id: n6
     cau: 'Trang Fugue (/opus/hinh-thuc/fugue/) giải thích stretto bằng chữ.'
     loai: ve-site
@@ -139,48 +154,71 @@ nhan_dinh:
     nguon: [ kern-wtc1-16, earsense-16, bga-1866 ]
     ket_qua: dung
     ghi_chu: 'Script tìm mẫu đối đề (móc kép, móc kép, móc đơn, móc kép, móc kép, móc đơn; xuống rồi lên) trong kern: ô 3 alto, ô 5 soprano, ô 7 bass, ô 12 tenor, ô 14 tenor, ô 15 bass, ô 17 soprano, ô 20 alto, ô 22 bass, ô 32 bass: đi cùng mọi lần vào trừ lần đầu (alto ô 1), alto ô 23, stretto ô 28–29 (alto chỉ có nửa đầu ở ô 28) và lần cuối (tenor ô 33). Earsense: "Every subject entry but the first and the last is set against this countersubject". Câu nói "gần như".'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BachJS/BWV861/BWV861_Fuga16/BWV861_Fuga16.mid" ]
+    luot_2_ghi_chu: "Tìm theo mẫu (2 móc kép xuống, móc đơn, 2 móc kép lên, rồi móc đơn có bước nhảy lên cảm âm): có ở ô 3, 5–6, 7, 12–13, 14, 15–16, 17–18, 20–21, 22, 32; thiếu ở lần vào ô 1, 23, 28–29, 33. 'Gần như' đúng."
   - id: n8
     cau: 'ABRSM đưa cặp này vào danh sách bài của bằng ARSM, bậc ngay sau Grade 8; mức của chặng 7.'
     loai: cap-do
     nguon: [ abrsm-arsm-2024, henle-hn14 ]
     ket_qua: dung
     ghi_chu: 'ARSM June 2024: "Prelude and Fugue No. 16 in G minor, BWV 861". Henle: nhãn "ABRSM: Piano ARSM" cho prelude và fugue. ARSM là bậc diploma đầu, sau Grade 8 (khảo sát đợt 4, mục 2); chặng 7 của src/data/cap-do.yml là "Sau Grade 8".'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.abrsm.org/sites/default/files/2024-06/ARSM%20Repertoire%20(June%202024%20-%20Piano)%20PROOF4%20(Final)%20(1).pdf", "https://web.archive.org/web/20260104075651/https://www.abrsm.org/en-es/other-assessments/diplomas/music-performance-arsm" ]
+    luot_2_ghi_chu: "Danh sách ARSM piano 6/2024 có BWV 861. Trang ARSM (bản Wayback 01/2026, abrsm.org trả 403): 'for learners beyond Grade 8', phải có Grade 8. Chặng 7 là cách xếp của site, hợp với mức này."
   - id: n9
     cau: 'Bình quân luật quyển 1 gồm 24 cặp prelude và fugue, mỗi cặp ở một giọng, đi lên từng nửa cung, giọng trưởng trước giọng thứ; Sol thứ đứng thứ 16, nên BWV 861 là cặp số 16.'
     loai: cau-truc
     nguon: [ imslp-wtc1, henle-hn14, bga-1866 ]
     ket_qua: dung
     ghi_chu: 'Henle liệt kê BWV 846 C, 847 c, 848 C♯, 849 c♯ … 861 g. Bản quét: Praeludium XVI, Fuga XVI. Đếm: Đô, Đô thứ, Đô♯, Đô♯ thứ, Rê, Rê thứ, Mi♭, Mi♭ thứ, Mi, Mi thứ, Fa, Fa thứ, Fa♯, Fa♯ thứ, Sol, Sol thứ: thứ 16.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/The-Well-Tempered-Clavier-Part-I-BWV-846-869/HN-14", "https://www.henle.de/media/f4/14/7f/1690886046/0014-1690886046-sync.pdf" ]
+    luot_2_ghi_chu: "Danh sách nội dung HN 14: C, c, C♯, c♯, D, d, E♭, e♭, E, e, F, f, F♯, f♯, G, g → Sol thứ thứ 16. Lời nói đầu: 'preludes and fugues in every key'."
   - id: n10
     cau: 'Bach chép sạch quyển 1, kèm một trang bìa trang trọng, năm 1722, khi ông là nhạc trưởng cho ông hoàng xứ Anhalt-Köthen.'
     loai: lich-su
     nguon: [ henle-hn14-vorwort, henle-blog-wtc ]
     ket_qua: dung
     ghi_chu: 'Heinemann: "autographen Reinschrift von 1722"; trang bìa "HochFürstlich AnhaltCöthenischen CapelMeistern und Directore derer Cammer Musiquen. Anno 1722"; bản tiếng Anh "chapel-master and director of chamber music to the Prince of Anhalt-Cöthen". Blog: "accurate fair copy with an elaborate title page".'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/f4/14/7f/1690886046/0014-1690886046-sync.pdf" ]
+    luot_2_ghi_chu: "Heinemann: 'complete autograph fair copy dating from the year 1722'; 'chapel-master and director of chamber music to the Prince of Anhalt-Cöthen'."
   - id: n11
     cau: 'Trang bìa nói tập nhạc dành cho những người trẻ ham học và cho cả những người đã thạo nghề.'
     loai: lich-su
     nguon: [ henle-hn14-vorwort, henle-blog-wtc ]
     ket_qua: dung
     ghi_chu: '"Zum Nutzen und Gebrauch der Lehrbegierigen Musicalischen Jugend, als auch derer in diesem studio schon habil seyenden"; blog: "for the use and benefit of inquisitive young musicians…and of those already well-versed in this study".'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/f4/14/7f/1690886046/0014-1690886046-sync.pdf" ]
+    luot_2_ghi_chu: "'for the use and benefit of inquisitive young musicians and for the special diversion of those already well-versed in this study'."
   - id: n12
     cau: 'Tập nhạc lưu hành bằng bản chép tay; khoảng năm 1800 mới có bản in, gần như cùng lúc từ Nägeli (Zürich), Simrock (Bonn), Hoffmeister & Kühnel (Vienna và Leipzig).'
     loai: lich-su
     nguon: [ henle-blog-wtc ]
     ket_qua: dung
     ghi_chu: 'Blog Henle như nguồn ("published in direct competition"); trước đó tập nhạc truyền qua bản chép (copies). Câu giống thong_tin đã khóa của bach-prelude-fugue-do-thu.'
+    luot_2: dung
+    luot_2_nguon: [ "https://blog.henle.de/en/2022/10/31/if-thats-not-reason-enough-to-celebrate-300-years-of-wtc-i/", "https://www.henle.de/media/f4/14/7f/1690886046/0014-1690886046-sync.pdf" ]
+    luot_2_ghi_chu: "Blog Henle: 'Around 1800, three firms – Hans Georg Nägeli (Zurich), Nikolaus Simrock (Bonn) and the Bureau de Musique Hoffmeister & Kühnel (Vienna/Leipzig) – published in direct competition editions of the WTC I'. Lời nói đầu: nhiều bản chép tay từ bản gốc."
   - id: n13
     cau: 'Bach viết cho đàn phím thời ấy (harpsichord, clavichord), không có bàn đạp vang.'
     loai: lich-su
     nguon: [ henle-hn14-vorwort ]
     ket_qua: dung
     ghi_chu: 'Schiff (HN 14): "Bach’s keyboard instruments all differ from the piano … they do not have a sustaining pedal"; cùng ghi chú nhắc harpsichord, clavichord và organ. Câu như n18 đã khóa của bach-prelude-fugue-do-thu.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/f4/14/7f/1690886046/0014-1690886046-sync.pdf" ]
+    luot_2_ghi_chu: "Ghi chú của Schiff: 'Clavier' là đàn phím, có bài cho harpsichord, có bài cho organ hay clavichord; 'they do not have a sustaining pedal'."
   - id: n14
     cau: 'Trên piano, nốt ngân và độ liền tiếng phải đến từ ngón tay.'
     loai: khuyen-tap
     nguon: []
     ket_qua: khong-can-nguon
     ghi_chu: 'Không trái piano/ban-dap, bach-prelude-fugue-do-thu (đã khóa).'
+    luot_2: dung
+    luot_2_ghi_chu: Hợp với ghi chú của Schiff (HN 14) về bàn đạp.
   - id: n15
     cau: 'Các link trên trang: lich-su/thoi-ky/baroque, piano/tac-pham/bach-prelude-fugue-do-thu, hinh-thuc/fugue, piano/not-hoa-my và #lay-ren, luyen-tap/thu-am, piano/ban-dap, piano/tac-pham/bach-invention-1, nhac-ly/28-ket-cau, nhac-ly/22-doi-am, nghe-nhac/bach-goldberg, tai-lieu-tham-khao.'
     loai: ve-site
@@ -192,90 +230,135 @@ nhan_dinh:
     nguon: [ mb-gould, mb-richter, mb-schiff, mb-hewitt, mb-leonhardt ]
     ket_qua: dung
     ghi_chu: 'Cùng câu và nguồn với n30 đã khóa của bach-prelude-fugue-do-thu (lượt 2 D6-L5-gom: MusicBrainz, Gould Sony, Richter RCA, Schiff Decca 1986, Hewitt Hyperion 1998 trên piano; Leonhardt BMG trên harpsichord). Lượt 1 không mở lại MusicBrainz.'
+    luot_2: dung
+    luot_2_nguon: [ "https://bach-cantatas.com/NonVocal/Klavier-WTC1-Part1.htm", "https://bach-cantatas.com/NonVocal/Klavier-WTC1-RichterS.htm" ]
+    luot_2_ghi_chu: "Danh mục đĩa WTC 1: Gould (Sony, 1962–65), Schiff (Decca 1984), Hewitt (Hyperion 1997), Richter (Melodiya/RCA, 1970), Leonhardt (Harpsichord, Deutsche Harmonia Mundi 1967). bach-cantatas.com là trang danh mục đĩa nghiệp dư."
   - id: n17
     cau: 'Ở ô 7 và ô 11 láy rền chuyển xuống bè trầm; bè tenor vào sau cùng (ô 6) và nằm ở giữa.'
     loai: cau-truc
     nguon: [ bga-1866, mut-806, kern-wtc1-16 ]
     ket_qua: dung
     ghi_chu: 'Bản quét tr. 57: ô 7 khuông dưới tr trên nốt tròn Si♭, ô 11 tr trên nốt tròn Đô. Mutopia khuông dưới bes1^\trill, c1^\trill; kern "[1B-T", "[1CT". Tenor (kern spine 2) vào đầu tiên ở ô 6 phách 3,5, sau alto (1), soprano (2), bass (5).'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.mutopiaproject.org/ftp/BachJS/BWV861/BWV861_Praeludium16/BWV861_Praeludium16.ly" ]
+    luot_2_ghi_chu: "BG prelude: tr trên Si♭3 tròn ô 7 và Đô3 tròn ô 11 ở khuông dưới. Fugue: tenor vào sau cùng, ô 6 phách 3,5, giữa alto và bass."
   - id: n18
     cau: 'Theo dõi khi nghe, prelude: ô 1–2 Sol cao ngân có láy rền, móc kép, Sol trầm lặp; ô 3–6 láy rền trên Sol thấp hơn một quãng tám, đi dần về Si♭ trưởng; ô 7–10 ý mở đầu ở Si♭ trưởng, láy rền ở bè trầm; ô 11–17 Đô thứ, láy rền trên Đô trầm, rồi về Sol thứ; ô 18–19 Sol trầm ngân, hợp âm cuối Sol trưởng.'
     loai: cau-truc
     nguon: [ bga-1866, kern-wtc1-16, wiki-bwv861 ]
     ket_qua: dung
     ghi_chu: 'Kern: ô 1 Sol5 nốt tròn T, bè giữa móc kép, bè trầm Sol3 móc đơn; ô 3 Sol4 T; ô 6 hợp âm Fa – La – Đô – Mi♭ (bè trầm Fa2); ô 7 bè trầm Si♭ T, tay phải móc kép; ô 11 Đô T; ô 18–19 bè trầm Sol2. Mutopia: hợp âm cuối có Si♮ và dấu ngân. Wikipedia: B♭ major, C minor ở mm. 11, G minor ở m. 14, pedal tone, Picardy third.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.mutopiaproject.org/ftp/BachJS/BWV861/BWV861_Praeludium16/BWV861_Praeludium16.ly" ]
+    luot_2_ghi_chu: "Láy rền: ô 1 Sol5, ô 3 Sol4, ô 7 Si♭3 (bè trầm), ô 11 Đô3. Ô 18–19 Sol2 ngân (đánh lại đầu phách 2 ô 19), hợp âm cuối Sol2–Rê3–Si♮3–Sol4 có dấu ngân."
   - id: n19
     cau: 'Theo dõi khi nghe, fugue: alto một mình (ba móc đơn, nhảy xuống quãng 6, chuỗi móc kép); soprano vào ở Rê thứ ô 2, alto chuyển sang đối đề; bass rồi tenor ô 5–7, mỗi lần vào có đối đề; Si♭ trưởng ô 12–16 (alto, bass, soprano); stretto ô 17–18 (bass, nửa ô sau alto); Đô thứ ô 20–24 (bass, soprano ở Đô thứ, alto ở Sol thứ); stretto ba bè ô 28–29 (soprano, tenor, bass); lần vào cuối tenor ô 33–34, hợp âm cuối Sol trưởng.'
     loai: cau-truc
     nguon: [ bga-1866, kern-wtc1-16, mut-805, wiki-bwv861 ]
     ket_qua: dung
     ghi_chu: 'Như bảng các lần vào (n28) và n24. Ô 5–7: đối đề ở soprano ô 5 phách 3,5 và bass ô 7 phách 1,5 (kern). Ô 12–16: alto Si♭ trưởng, bass dạng đáp đề Fa trưởng, soprano Fa trưởng; dòng gọi chung "sang giọng trưởng".'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.mutopiaproject.org/ftp/BachJS/BWV861/BWV861_Fuga16/BWV861_Fuga16.mid" ]
+    luot_2_ghi_chu: "Khớp phân tích MIDI và BG: alto 1; soprano 2 (Rê thứ); bass 5, tenor 6; alto 12, bass 13, soprano 15; bass 17 + alto 17/3,5; bass 20, soprano 21 (Đô thứ), alto 23 (Sol thứ); soprano 28, tenor 28, bass 29; tenor 33, cuối Si♮. Dòng ô 12–16 gộp cả lần vào ở Fa trưởng dưới nhãn Si♭ trưởng: chấp nhận được cho bảng nghe."
   - id: n20
     cau: 'Bảng prelude: ô 2 giai điệu móc kép có móc ba, kết ở Fa♯; ô 3–6 qua giọng át Rê rồi về Si♭ trưởng, ô 6 là hợp âm bảy át Fa – La – Đô – Mi♭; ô 9–10 chuỗi nhắc lại một mẫu ở cao độ thấp dần, sang Đô thứ; từ ô 14 về Sol thứ; ô 17 dừng trên hợp âm át Rê, bè trên giữ Sol rồi xuống Fa♯ (nốt treo); ô 18–19 âm nền Sol, hợp âm cuối Sol trưởng có dấu ngân.'
     loai: cau-truc
     nguon: [ bga-1866, kern-wtc1-16, wiki-bwv861 ]
     ket_qua: dung
     ghi_chu: 'Kern ô 2 tay phải kết bằng La4 Sol4 (móc ba) Fa♯4. Ô 6: bè trầm Fa2, các bè trên có La, Đô, Mi♭. Ô 9 bè trên Fa5…Mi♭5, ô 10 Rê5…Đô5: cùng mẫu thấp một bậc (Wikipedia: "sequence that lasts two measures and further establishes C minor"). Ô 14: Wikipedia "next measure begins on D, which leads to G minor". Ô 17: kern soprano Sol4 phách 3 (nối) rồi Fa♯4 phách 4, bè trầm Rê2 phách 4; Wikipedia "4-3 suspension in the soprano". Bè trầm Sol2 ô 18–19. Dấu ngân hợp âm cuối: bản quét tr. 57, Mutopia ^\fermata.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.mutopiaproject.org/ftp/BachJS/BWV861/BWV861_Praeludium16/BWV861_Praeludium16.mid" ]
+    luot_2_ghi_chu: "Ô 2 kết Fa♯4; ô 4 bass Đô♯ (A–Rê thứ); ô 6 bass Fa, có La, Đô, Mi♭ (F7 → Si♭ ô 7); ô 9–10 bè trên Si♭–Fa–Mi♭–Rê–Đô–Si đi xuống theo chuỗi, tới Đô thứ ô 11; ô 17 bass Rê, Sol4 giữ từ phách 2 xuống Fa♯4 phách 4; hợp âm cuối Sol trưởng, dấu ngân. Ghi chú: hợp âm át của Sol thứ đã có từ ô 12 (Fa♯3 bass) và ô 13; 'từ ô 14' là cách chia gần đúng."
   - id: n21
     cau: 'Khối 1 (prelude ô 1–2) đối chiếu từng nốt với bản Bach-Gesellschaft 1866 và bản Mutopia theo bản ấy; nốt Sol trầm ô 2 nối sang ô 3 ở bản in; ở ô 2 mỗi phách mở bằng hai móc kép, rồi hai móc ba và một móc kép.'
     loai: cau-truc
     nguon: [ bga-1866, mut-806 ]
     ket_qua: dung
     ghi_chu: 'Xem khuong_nhac khối 1. Bản quét tr. 57 hệ 1 ở 400 dpi: dấu nối từ Sol3 nốt tròn ô 2 sang ô 3; Mutopia g1 ~ g8. ở bè dưới. Ô 2 tay phải: g''''16 d'''' ees''''32 d'''' c''''16, lặp mẫu ở cả bốn phách.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.mutopiaproject.org/ftp/BachJS/BWV861/BWV861_Praeludium16/BWV861_Praeludium16.ly" ]
+    luot_2_ghi_chu: "Khối abc 1 khớp từng nốt với .ly/.mid (ô 2: g d e/d/c | d g c/B/A | B g c/B/A | B g A/G/^F; tay trái B,DCE B,DA,C…, Sol3 móc đơn, ô 2 Sol3 tròn). BG và .ly: Sol3 ô 2 nối sang ô 3 (g1 ~ g8.). Mỗi phách ô 2: 16-16-32-32-16."
   - id: n22
     cau: 'Láy rền thời Baroque bắt đầu từ nốt trên (ở đây La), đúng phách; kết bằng nốt kết dẫn vào nốt tiếp theo; khi mới học chốt một con số, khi đã chắc có thể bắt đầu thong thả rồi nhanh dần; không được làm trễ phách sau.'
     loai: quy-tac
     nguon: [ site-not-hoa-my ]
     ket_qua: dung
     ghi_chu: 'piano/not-hoa-my (đã khóa) mục Láy rền: "Bắt đầu từ nốt nào" (Baroque: nốt trên, đúng phách), "Nốt kết", "Bao nhiêu nốt" ("chốt một con số", "bắt đầu thong thả rồi nhanh dần", "không được phép là làm trễ phách sau"). Nốt liền trên Sol theo hóa biểu Sol thứ là La.'
+    luot_2: dung
+    luot_2_nguon: [ "https://casfaculty.case.edu/ross-duffin/?p=2296", "https://americanrecorder.org/docs/AR_Fall2020_Ornaments1_appog_trill.pdf" ]
+    luot_2_ghi_chu: "Duffin: láy rền là luân phiên nốt trên với nốt viết, chuẩn bị bằng nốt trên; có các kiểu kết dẫn vào nốt sau. American Recorder (2020): láy rền ngắn 'starts exactly on the beat'; láy rền dài 'start slowly and gradually increase in speed'. Phần 'chốt một con số khi mới học', 'không làm trễ phách sau' là lời khuyên tập, hợp lý. Không tìm được trang mở được trình bày bảng Explication của Bach."
   - id: n23
     cau: 'Khối 2: bản in viết bè alto lúc ở khuông trên, lúc ở khuông dưới; khối ghi trọn bè alto ở khuông dưới.'
     loai: cau-truc
     nguon: [ bga-1866 ]
     ket_qua: dung
     ghi_chu: 'Bản quét tr. 58 hệ 1 (300 dpi): ô 1 Rê4 Mi♭4 ở khuông trên, Sol3 Fa♯3 Sol3 ở khuông dưới; ô 2–3 ở khuông dưới (Đô♯4 cuối ô 3 nối gạch lên khuông trên); ô 4 alto ở khuông trên.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.mutopiaproject.org/ftp/BachJS/BWV861/BWV861_Fuga16/BWV861_Fuga16.ly" ]
+    luot_2_ghi_chu: BG ô 1–3 alto ở khuông dưới, ô 4 lên khuông trên (Rê4 móc đen chấm, Mi, Fa…). Khối abc 2 khớp .ly (ô 4 alto D6=E2 F2=E2F2G2).
   - id: n24
     cau: 'Chủ đề dài một ô rưỡi, hai nửa: ba móc đơn với bước nhảy quãng 6 thứ đi xuống (Mi♭ xuống Sol), dừng trên Fa♯ móc đen; rồi một chuỗi móc kép kết ở Si♭ móc đen.'
     loai: cau-truc
     nguon: [ bga-1866, mut-805, wiki-bwv861 ]
     ket_qua: da-sua
     ghi_chu: 'Alto ô 1–2: lặng móc đơn, Rê4 Mi♭4 Sol3 móc đơn, Fa♯3 Sol3 móc đen | lặng móc đơn, La3 Si♭3 móc kép, Đô4 móc đơn, Si♭3 La3 móc kép, Si♭3 móc đen (phách 3 ô 2); soprano vào phách 3,5. Đã sửa trong lượt 1: bản nháp viết "bốn móc đơn" (đếm cả dấu lặng), sửa thành "ba móc đơn" ở câu này, dòng Theo dõi khi nghe và mục Phát âm. "Chuỗi móc kép" có một Đô4 móc đơn ở giữa: mô tả gần đúng, chấp nhận.'
+    luot_2: sai
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.mutopiaproject.org/ftp/BachJS/BWV861/BWV861_Fuga16/BWV861_Fuga16.ly" ]
+    luot_2_ghi_chu: "câu đúng: Chủ đề dài khoảng một ô rưỡi, hai nửa: ba móc đơn Rê – Mi♭ – Sol (bước nhảy quãng 6 thứ đi xuống, Mi♭ xuống Sol), rồi hai móc đen Fa♯ – Sol; nửa sau, sau một lặng móc đơn, là một nhóm móc kép (La Si♭, Đô móc đơn, Si♭ La) kết ở Si♭ móc đen.; Bản in (và khối abc của chính trang): sau ba móc đơn là Fa♯ móc đen rồi Sol móc đen, rồi lặng móc đơn; câu viết 'dừng trên Fa♯ móc đen; rồi một chuỗi móc kép' bỏ mất nốt Sol móc đen. 'Chuỗi móc kép' có một móc đơn (Đô) ở giữa. Phần quãng 6 thứ, Si♭ móc đen kết đúng. Lỗi mô tả nhỏ, không đổi nốt nhạc."
   - id: n25
     cau: 'Đáp đề (ô 2) bắt đầu bằng Sol – Si♭ – Rê; nếu chỉ dịch chủ đề lên quãng 5 thì phải là La – Si♭ – Rê, nhưng nốt đầu đổi thành Sol để nốt át âm của chủ đề được đáp bằng nốt chủ âm: đáp đề điệu tính.'
     loai: dinh-nghia
     nguon: [ bga-1866, wiki-bwv861, omt-fugue ]
     ket_qua: dung
     ghi_chu: 'Soprano ô 2: Sol4 Si♭4 Rê4 Đô♯4 Rê4; chủ đề Rê Mi♭ Sol Fa♯ Sol lên quãng 5 là La Si♭ Rê Đô♯ Rê. Wikipedia: "begins in the dominant (D minor), even though the first note of the theme is a G in this instance". OMT: tonal answer đổi bậc 5 thành bậc 1.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)" ]
+    luot_2_ghi_chu: "BG ô 2: soprano Sol4–Si♭4–Rê4, Đô♯4 Rê4. Chủ đề Rê–Mi♭–Sol dịch lên quãng 5 là La–Si♭–Rê; nốt đầu (át âm Rê) đáp bằng Sol (chủ âm): đáp đề điệu tính."
   - id: n26
     cau: 'Từ ô 3, alto chơi đối đề: hai móc kép đi xuống, một móc đơn, hai móc kép đi lên, rồi bốn móc đơn kết bằng bước nhảy lên Đô♯ và về Rê; đối đề bắt đầu ngay sau nốt móc đen thứ nhất của đáp đề (Đô♯, cảm âm của Rê thứ), và ở các lần vào về sau cũng ở chỗ ấy.'
     loai: cau-truc
     nguon: [ bga-1866, kern-wtc1-16, earsense-16 ]
     ket_qua: dung
     ghi_chu: 'Alto ô 3: lặng móc đơn, La3 Sol3 móc kép, Fa3 móc đơn, Sol3 La3 móc kép, Si♭3 Sol3 Mi♮3 Đô♯4 móc đơn, Rê4 (ô 4); soprano ô 3 phách 1 Đô♯4 móc đen. Các lần đối đề khác (n7) bắt đầu nửa phách sau nốt móc đen thứ nhất của lần vào đi cùng (ví dụ bass vào ô 5 phách 1,5, Fa♯2 móc đen phách 3, soprano đối đề phách 3,5). Earsense: "begins precisely where the subject stalls: on the quarter note".'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.mutopiaproject.org/ftp/BachJS/BWV861/BWV861_Fuga16/BWV861_Fuga16.mid" ]
+    luot_2_ghi_chu: "Alto ô 3: lặng, La Sol (móc kép), Fa (móc đơn), Sol La (móc kép), Si♭ Sol Mi Đô♯ (móc đơn), Rê ô 4: đúng. Vị trí: đối đề vào phách 1,5, tức nửa phách sau khi Đô♯ móc đen vang lên (Đô♯ vẫn đang ngân); ở các lần vào sau cũng đúng chỗ ấy (ô 5/3,5; 7/1,5; 12/3,5; 14/1,5; 15/3,5; 17/3,5; 20/3,5; 22/1,5; 32/1,5). Đề nghị viết rõ hơn 'nửa phách sau khi nốt móc đen thứ nhất bắt đầu' (như câu ở khối 3: 'đúng lúc bè trước dừng trên nốt móc đen')."
   - id: n27
     cau: 'Trong stretto, bè thứ hai vào chủ đề cũng ở chỗ ấy (ngay sau nốt móc đen của bè trước).'
     loai: cau-truc
     nguon: [ kern-wtc1-16, earsense-16 ]
     ket_qua: dung
     ghi_chu: 'Ô 17: bass Fa3 phách 1,5, La2 móc đen phách 3, alto vào phách 3,5. Ô 28: soprano Rê5 phách 1,5, Fa♯4 móc đen phách 3, tenor vào phách 3,5; tenor Fa♯3 móc đen ô 29 phách 1, bass vào phách 1,5. Earsense (theo Altschuler): "precisely the same point where, during stretto, additional subject entries appear".'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.mutopiaproject.org/ftp/BachJS/BWV861/BWV861_Fuga16/BWV861_Fuga16.mid" ]
+    luot_2_ghi_chu: "Ô 17: bass La2 móc đen ở phách 3, alto vào phách 3,5; ô 28: soprano Fa♯4 móc đen phách 3, tenor vào 3,5; ô 29: tenor Fa♯3 phách 1, bass vào 1,5. Cùng vị trí với đối đề. Cách viết 'ngay sau' như ghi chú n26."
   - id: n28
     cau: 'Bảng các lần vào của fugue (16 dòng): alto ô 1; soprano ô 2 phách 3,5 (đáp đề, Rê thứ); bass ô 5; tenor ô 6 phách 3,5 (đáp đề), hết phần trình bày; đoạn chuyển ô 8–11 sang Si♭ trưởng; alto ô 12 (Si♭ trưởng); bass ô 13 phách 3,5 (đáp đề, Fa trưởng); soprano ô 15 (Fa trưởng); bass ô 17 (Si♭ trưởng) và alto phách 3,5 (Mi♭ thay Mi), stretto hai bè; bass ô 20 và soprano ô 21 phách 3,5 (Đô thứ); alto ô 23 (Sol thứ, Rê đầu thành móc kép, cuối đổi); đoạn chuyển ô 24–27, hai bè trên đi xuống theo chuỗi; stretto ba bè ô 28–30; alto ô 31 phách 3,5; tenor ô 33 lần cuối; bè chơi đối đề như bảng ghi.'
     loai: cau-truc
     nguon: [ bga-1866, kern-wtc1-16, mut-805, wiki-bwv861 ]
     ket_qua: dung
     ghi_chu: 'Kern (script): alto ô 1 Rê4 Mi♭4 Sol3; soprano ô 2 +3,5 Sol4 Si♭4 Rê4; bass ô 5 +1,5 Rê3 Mi♭3 Sol2; tenor ô 6 +3,5 Sol3 Si♭3 Rê3; alto ô 12 +1,5 Fa4 Sol4 Si♭3 La3 Si♭3 (Si♭ trưởng: bậc 5 6 1 7 1); bass ô 13 +3,5 Si♭2 Rê3 Fa2 Mi♮2 Fa2 (dạng đáp đề ở Fa trưởng); soprano ô 15 +1,5 Đô5 Rê5 Fa4 Mi♮4 Fa4; bass ô 17 +1,5 Fa3 Sol3 Si♭2 La2 Si♭2; alto ô 17 +3,5 Đô5 Rê5 Fa4 Mi♭4 Fa4; bass ô 20 +1,5 Sol3 La♭3 Đô3 Si♮2 Đô3; soprano ô 21 +3,5 Sol5 La♭5 Đô5 Si♮4 Đô5; alto ô 23 Đô5 Rê5 (móc kép) Mi♭5 Sol4 Fa♯4 Sol4, ô 24 La4 Si♭4 Đô5 Si♭4 La4 rồi Si♭4 móc kép và Rê4 Mi4 Fa♯4 Sol4 (khác đuôi chủ đề); ô 28–29 như n5; alto ô 31 +3,5 Rê5 Mi♭5 Sol4 Fa♯4 Sol4; tenor ô 33 +1,5 Rê4 Mi♭4 Sol3 Fa♯3 Sol3. Đối đề theo n7. Ô 25–27 bản quét tr. 59 hệ 3–4: soprano và alto đi xuống theo chuỗi. Wikipedia: thứ tự, giọng phần trình bày, đoạn chuyển đầu từ Rê sang Si♭ trưởng. Đầu chủ đề ở ô 12, 13, 15, 20, 21, 31, 33 so tay trên bản quét: khớp.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.mutopiaproject.org/ftp/BachJS/BWV861/BWV861_Fuga16/BWV861_Fuga16.ly", "https://www.mutopiaproject.org/ftp/BachJS/BWV861/BWV861_Fuga16/BWV861_Fuga16.mid" ]
+    luot_2_ghi_chu: "Mọi lần vào và mọi bè đối đề trong bảng khớp phân tích MIDI. Bass ô 13/3,5 Si♭2–Rê3–Fa2–Mi2–Fa2: đáp đề, Fa trưởng, đúng. Alto ô 23: Đô5 Rê5 móc kép, Mi♭5, Sol4, Fa♯4 móc đen; ô 24 nửa sau đổi (Si♭ móc kép, chạy Rê–Mi–Fa♯–Sol). Bass ô 29 lên La2 thay Sol. Soprano ô 15: BG ghi dấu bình trước Mi4 (Đô5 Rê5 Fa4 Mi♮4 Fa4: Fa trưởng, đúng như bảng); Mutopia ghi Mi♭4 ở chỗ này (ees'4): Mutopia lệch BG; ô 17–18 alto là Mi♭ ở cả hai bản. Không có khối abc nào chép ô 15, nên không ảnh hưởng trang."
   - id: n29
     cau: 'Hợp âm cuối fugue là Sol trưởng (quãng 3 Picardy), nốt Si♮ ở bè tenor; hợp âm cuối prelude cũng là Sol trưởng.'
     loai: cau-truc
     nguon: [ bga-1866, mut-805, mut-806, cod-tierce, wiki-bwv861 ]
     ket_qua: dung
     ghi_chu: 'Bản quét tr. 59 ô cuối: khuông dưới nốt trắng có dấu bình (Si♮3); Mutopia fugue khuông dưới "b2" cùng g,2, khuông trên a''2 g''2. Prelude: Mutopia b4^\trill (Si♮3) và g''2^\fermata; Wikipedia "ends with a Picardy third". COD: tierce de Picardie.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.mutopiaproject.org/ftp/BachJS/BWV861/BWV861_Fuga16/BWV861_Fuga16.ly" ]
+    luot_2_ghi_chu: "BG ô 34: tenor Si♮3 trắng (dấu bình), hợp âm Sol2–Si3–Rê4–Sol4. Prelude kết Sol–Rê–Si♮–Sol."
   - id: n30
     cau: 'Khối 3 (ô 28–29): soprano vào ở nửa sau phách 1 ô 28, tenor nửa ô sau, bass nửa sau phách 1 ô 29; bass không chơi hết chủ đề: sau Fa♯ nó lên La thay vì về Sol.'
     loai: cau-truc
     nguon: [ bga-1866, mut-805, kern-wtc1-16 ]
     ket_qua: dung
     ghi_chu: 'Xem khuong_nhac khối 3 và n5. Kern ô 29 bass: lặng móc đơn, Rê3 Mi♭3 Sol2 móc đơn, Fa♯2 móc đen, La2 móc đen.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.mutopiaproject.org/ftp/BachJS/BWV861/BWV861_Fuga16/BWV861_Fuga16.mid" ]
+    luot_2_ghi_chu: "Khối abc 3 khớp từng nốt với MIDI. BG ô 28 (ảnh phóng to): soprano Fa♯4 (có ♯) móc đen ở phách 3, tức Fa♯4, như Mutopia (fis'4) và khối abc. Bass ô 29: Rê3 Mi♭3 Sol2 Fa♯2 rồi La2."
   - id: n31
     cau: 'Câu nói về trang BWV 847: bài này là bước tiếp theo sau BWV 847; BWV 847 có fugue ba bè; đáp đề điệu tính như ở BWV 847.'
     loai: ve-site
@@ -293,12 +376,16 @@ nhan_dinh:
     nguon: []
     ket_qua: khong-can-nguon
     ghi_chu: 'Kiểm trên khuông (khuong_nhac khối 4). Hình tay trái B,DCE B,DA,C trùng bè giữa ô 1 khối 1 (bản in).'
+    luot_2: dung
+    luot_2_ghi_chu: "Ví dụ soạn: đọc khối abc 4 trong trang, mô tả khớp (ô 1 móc kép từ La, kết Fa♯ Sol; ô 2 móc ba rồi Fa♯2 Sol6; ô 3 tr; tay trái B,DCE B,DA,C như bè giữa ô 1)."
   - id: n34
     cau: 'Bài tập 2: chủ đề ở bè giữa từ Rê cao; hai nốt đầu tay phải (1, 2), ba nốt sau tay trái (1, 2, 1), ngón 5 hai tay giữ nốt dài; ô 2 nửa sau chủ đề về tay phải, ngón 5 giữ Sol cao.'
     loai: vi-du-soan
     nguon: []
     ket_qua: khong-can-nguon
     ghi_chu: 'Kiểm trên khuông (khuong_nhac khối 5).'
+    luot_2: dung
+    luot_2_ghi_chu: "Ví dụ soạn: khối abc 5 khớp (Rê5 Mi♭5 ngón 1, 2 tay phải; Sol4 Fa♯4 Sol4 ngón 1 2 1 tay trái; ngón 5 giữ Si♭5 và Sol3; ô 2 La Si♭ Đô Si♭ La Si♭ tay phải, ngón 5 giữ Sol5)."
   - id: n35
     cau: 'Bài tập 3 (tập fugue theo bè) và Kế hoạch tập 8 tuần.'
     loai: khuyen-tap
@@ -311,30 +398,43 @@ nhan_dinh:
     nguon: [ bga-1866, mut-805, mut-806 ]
     ket_qua: dung
     ghi_chu: 'Bản quét tr. 57–59: tiêu đề, "a 4.", tr, dấu ngân; không có chữ tốc độ, không có p/f. Mutopia không có sắc thái, chỉ tốc độ MIDI.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.henle.de/media/f4/14/7f/1690886046/0014-1690886046-sync.pdf" ]
+    luot_2_ghi_chu: "BG: chỉ 'PRAELUDIUM XVI.' và 'FUGA XVI. a 4.', không chữ tốc độ hay sắc thái. Schiff: Bach hầu như không ghi dấu phát âm; blog Henle: tốc độ, sắc thái 'not established by Bach'."
   - id: n37
     cau: 'Tốc độ gợi ý: prelude ♩ ≈ 40–56, fugue ♩ = 60–76.'
     loai: khuyen-tap
     nguon: []
     ket_qua: khong-can-nguon
     ghi_chu: 'Gợi ý của trang, nêu là "một khoảng hợp lý".'
+    luot_2: dung
+    luot_2_ghi_chu: Khoảng hợp lý; bản thu Ishizaka (♩ ≈ 37 và 78) nằm sát ngoài hai khoảng, như trang đã nói.
   - id: n38
     cau: 'Bản thu gợi ý (Kimiko Ishizaka) chơi prelude khoảng ♩ = 37, fugue khoảng ♩ = 78.'
     loai: so-lieu
     nguon: [ do-ban-thu ]
     ket_qua: dung
     ghi_chu: 'Prelude: nốt đầu 0,8 s, Sol2 ô 18 ở 109,92 s: 17 ô = 68 phách trong 109,1 s, ♩ ≈ 37,4. Fugue: Rê4 ô 1 phách 1,5 ở 0,65 s, Rê4 tenor ô 33 phách 1,5 ở 98,87 s: 32 ô = 128 phách trong 98,2 s, ♩ ≈ 78,2.'
+    luot_2: dung
+    luot_2_nguon: [ "https://commons.wikimedia.org/wiki/File:Kimiko_Ishizaka_-_Bach_-_Well-Tempered_Clavier,_Book_1_-_31_Prelude_No._16_in_G_minor,_BWV_861.ogg", "https://commons.wikimedia.org/wiki/File:Kimiko_Ishizaka_-_Bach_-_Well-Tempered_Clavier,_Book_1_-_32_Fugue_No._16_in_G_minor,_BWV_861.ogg" ]
+    luot_2_ghi_chu: "Đo bằng DTW: prelude ô 1–18 mỗi ô 6,2–6,9 s, ♩ ≈ 35–39 (trung bình 37); fugue ô 2–33 mỗi ô 2,9–3,3 s, ♩ ≈ 73–85 (trung bình 78)."
   - id: n39
     cau: 'Lời khuyên Diễn tấu: láy rền là màu, nhẹ hơn các bè dưới; phát âm chủ đề (tách nhẹ ba móc đơn, giữ đủ móc đen, nối móc kép) và đối đề; nốt dài giữ đủ; sắc thái theo hòa âm và các lần vào; dùng bản Urtext, so ấn bản khi gặp chỗ lạ.'
     loai: khuyen-tap
     nguon: []
     ket_qua: khong-can-nguon
     ghi_chu: 'Không trái bach-prelude-fugue-do-thu mục Diễn tấu (đã khóa).'
+    luot_2: dung
+    luot_2_ghi_chu: Lời khuyên tập hợp lý, hợp cách dạy phổ biến.
   - id: n40
     cau: 'Trong ghi chú ngón bấm của HN 14, András Schiff viết rằng có thể chơi trọn Bình quân luật mà không dùng bàn đạp vang (trừ cuối fugue La thứ của quyển 1), và nếu dùng thì dùng ít, sau khi đã chơi được bài không bàn đạp.'
     loai: lich-su
     nguon: [ henle-hn14-vorwort ]
     ket_qua: dung
     ghi_chu: 'Nguyên văn như nguon henle-hn14-vorwort.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/media/f4/14/7f/1690886046/0014-1690886046-sync.pdf" ]
+    luot_2_ghi_chu: "'The entire WTC can be played perfectly well without touching the pedal (with the exception of the end of the a-minor fugue in Book I…)'; 'it must be used sparingly, after the pianist has mastered the piece without its help'."
   - id: n41
     cau: 'Ở prelude, nốt ngân có láy rền tự giữ bằng ngón; có thể chạm bàn đạp rất nông ở hợp âm cuối.'
     loai: khuyen-tap
@@ -347,6 +447,9 @@ nhan_dinh:
     nguon: [ bga-1866, mut-805, mut-806 ]
     ket_qua: dung
     ghi_chu: 'Xem khuong_nhac khối 1–3; Mutopia ghi source "Bach Gesselschaft Edition (1866)" cho cả hai.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=805", "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=806" ]
+    luot_2_ghi_chu: "Ba khối trích (prelude ô 1–2, fugue ô 1–4, ô 28–29) khớp BG và Mutopia; Mutopia ghi nguồn 'Bach Gesellschaft Edition (1866)'. Lưu ý: Mutopia lệch BG ở soprano fugue ô 15 phách 3 (Mi♭ thay Mi♮), ngoài các đoạn trích."
   - id: n43
     cau: 'Lỗi thường gặp (láy rền, phát âm chủ đề, tenor ô 6–7 và ô 33, nhấc sớm Fa♯ móc đen, stretto, đối đề, bàn đạp).'
     loai: khuyen-tap
@@ -359,18 +462,27 @@ nhan_dinh:
     nguon: [ abrsm-arsm-2024 ]
     ket_qua: dung
     ghi_chu: 'ARSM June 2024: "Prelude and Fugue No. 12 in F minor, BWV 857", "No. 14 in F+ minor, BWV 859" (F+ là F♯ trong bản trích chữ), "No. 16 in G minor, BWV 861" dưới "The Well-Tempered Clavier, Part I". Quyển 2 có BWV 874, 878, 880, 885, 886.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.abrsm.org/sites/default/files/2024-06/ARSM%20Repertoire%20(June%202024%20-%20Piano)%20PROOF4%20(Final)%20(1).pdf" ]
+    luot_2_ghi_chu: "Mục WTC Part I trong danh sách: BWV 857 (Fa thứ), 859 (Fa♯ thứ), 861; không cặp nào khác của quyển 1."
   - id: n45
     cau: 'Câu hỏi kiểm tra nhanh: thứ tự vào alto, soprano, bass, tenor; bước nhảy quãng 6 thứ Mi♭ xuống Sol; stretto ba bè soprano, tenor, bass cách nửa ô; láy rền Baroque bắt đầu từ nốt trên (La).'
     loai: cau-truc
     nguon: [ bga-1866, kern-wtc1-16, site-not-hoa-my ]
     ket_qua: dung
     ghi_chu: 'Lặp n4, n5, n22, n24, n28.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.mutopiaproject.org/ftp/BachJS/BWV861/BWV861_Fuga16/BWV861_Fuga16.mid", "https://americanrecorder.org/docs/AR_Fall2020_Ornaments1_appog_trill.pdf" ]
+    luot_2_ghi_chu: "Thứ tự vào, quãng 6 thứ Mi♭–Sol, stretto soprano/tenor/bass cách nửa ô, láy rền từ nốt trên: như n4, n5, n22."
   - id: n46
     cau: 'Mô tả trang (description): prelude có láy rền trên nốt ngân dài; fugue bốn bè với chủ đề nhảy quãng 6 thứ, một đối đề đi theo gần như mọi lần vào, những chỗ stretto các bè vào cách nhau nửa ô.'
     loai: cau-truc
     nguon: [ bga-1866, kern-wtc1-16 ]
     ket_qua: dung
     ghi_chu: 'Lặp n3, n4, n5, n7.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)", "https://www.mutopiaproject.org/ftp/BachJS/BWV861/BWV861_Fuga16/BWV861_Fuga16.mid" ]
+    luot_2_ghi_chu: Tóm tắt n3, n4, n5, n7.
 khuong_nhac:
   - khoi: 1
     loai: trich-doan
