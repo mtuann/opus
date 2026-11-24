@@ -279,7 +279,7 @@ Dùng bản Urtext. Nhiều ấn bản cũ thêm sắc thái, dấu luyến và 
 ## Học tiếp
 
 - **Lùi một bước hoặc tập song song:** các *Sinfonia* (invention ba bè) BWV 787–801; ôn lại [Invention số 1](/opus/piano/tac-pham/bach-invention-1/) với con mắt của người đã chơi fugue.
-- **Trong *Bình quân luật*:** [Prelude Đô trưởng BWV 846](/opus/piano/tac-pham/bach-prelude-do/) nếu bạn chưa chơi; rồi các fugue ba bè khác của quyển 1, như Rê thứ BWV 851; fugue Đô trưởng BWV 846 có bốn bè, một bước tiếp theo.
+- **Trong *Bình quân luật*:** [Prelude Đô trưởng BWV 846](/opus/piano/tac-pham/bach-prelude-do/) nếu bạn chưa chơi; rồi các fugue ba bè khác của quyển 1, như Rê thứ BWV 851; fugue Đô trưởng BWV 846 có bốn bè, một bước tiếp theo. Một fugue bốn bè có bài học trên site: [Prelude và fugue Sol thứ BWV 861](/opus/piano/tac-pham/bach-prelude-fugue-sol-thu/) (chặng 7), ngắn (34 ô), có stretto.
 - **Cùng chặng:** [Chopin: Nocturne Op. 9 số 2](/opus/piano/tac-pham/chopin-nocturne-op9-2/), [Beethoven: *Pathétique*, chương 2](/opus/piano/tac-pham/pathetique-adagio/).
 - **Đọc và nghe thêm:** [Fugue](/opus/hinh-thuc/fugue/), [Đối âm](/opus/nhac-ly/22-doi-am/), [Bach: Goldberg Variations](/opus/nghe-nhac/bach-goldberg/).
 

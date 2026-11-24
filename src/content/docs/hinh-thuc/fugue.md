@@ -37,6 +37,8 @@ Hợp âm trưởng ở cuối một bài giọng thứ có tên riêng: **quãn
 
 **Cách nghe:** lần đầu, chỉ đếm số lần chủ đề xuất hiện. Lần sau, đoán xem chủ đề đang ở bè nào: cao, giữa hay thấp. Nghe kèm video có bản nhạc chạy theo (tìm *"BWV 847 score"*) sẽ dễ hơn nhiều. Muốn tự chơi bài này, xem [bài học Prelude và fugue Đô thứ](/opus/piano/tac-pham/bach-prelude-fugue-do-thu/).
 
+**Stretto trong một fugue bốn bè:** ở fugue Sol thứ BWV 861 (cũng trong *Bình quân luật* quyển 1), ô 17 và ô 28–29, chủ đề vào ở bè mới khi bè trước chưa chơi xong; ở ô 28–29 ba bè vào liền nhau, mỗi bè cách bè trước nửa ô. Xem [bài học Prelude và fugue Sol thứ](/opus/piano/tac-pham/bach-prelude-fugue-sol-thu/).
+
 ## Nghe thêm
 
 - Bach, *Fugue cung Sol thứ*, BWV 578, cho organ.

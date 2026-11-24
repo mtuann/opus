@@ -56,6 +56,7 @@ C C | G G | A A | G2 | F F | E E | D D | C2 |]
 ## Nghe thêm
 
 - [Haydn Giao hưởng số 94, chương 2](/opus/nghe-nhac/haydn-94/): biến tấu trên một chủ đề có "bất ngờ".
+- [Haydn, chương 3 Sonata Sol trưởng Hob. XVI:27](/opus/piano/tac-pham/haydn-xvi-27/): một chủ đề ngắn 24 ô và các biến tấu của nó, có một đoạn Sol thứ; có bài học để tự chơi (chặng 5).
 - [Schubert *Con cá hồi*, chương 4](/opus/nghe-nhac/schubert-ca-hoi/): biến tấu trên ca khúc của chính Schubert.
 - Bach *Goldberg Variations*: 30 biến tấu trên vòng bè trầm của một aria.
 - Rachmaninoff *Rhapsody on a Theme of Paganini*: biến tấu số 18 lật ngược chủ đề của Paganini thành một giai điệu trữ tình nổi tiếng.

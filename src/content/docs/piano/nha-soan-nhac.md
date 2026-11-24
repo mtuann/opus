@@ -51,13 +51,13 @@ Phần lớn nhạc phím thời này viết cho harpsichord, clavichord hay org
 
 - **Đặc trưng khi chơi:** mỗi sonata là một bài toán cho đôi tay: vắt tay, nốt lặp đổi ngón, nhảy quãng rộng, gam nhanh, những chùm nốt nghịch tai. Thường chỉ có hai bè, nên chỗ nào không đều đều lộ ra.
 - **Tác phẩm chính:** 555 sonata, phần lớn một chương hai phần (xem [hướng dẫn nghe](/opus/nghe-nhac/scarlatti-sonata/)); 30 bản đầu tiên in ở London năm 1738 với tên *Essercizi per gravicembalo*.
-- **Bắt đầu bằng:** K. 32 Rê thứ, *Aria* → K. 1 Rê thứ, K. 466 Fa thứ → K. 380 Mi trưởng (Grade 7) → K. 141 Rê thứ với chuỗi nốt lặp rất nhanh.
+- **Bắt đầu bằng:** K. 32 Rê thứ, *Aria* → [K. 208 La trưởng](/opus/piano/tac-pham/scarlatti-k208/) (chặng 5), K. 1 Rê thứ, K. 466 Fa thứ → K. 380 Mi trưởng (Grade 7) → K. 141 Rê thứ với chuỗi nốt lặp rất nhanh.
 
 ### Johann Sebastian Bach (1685–1750)
 
 - **Đặc trưng khi chơi:** phức điệu. Mỗi tay thường giữ hai bè, bè nào cũng phải hát. Hãy tự chọn cách phát âm cho chủ đề (nối hay tách từng nốt) và giữ nhất quán mỗi lần nó trở lại. Ghi ngón từ đầu, tập từng bè, ghép hai bè trong một tay rồi mới ghép hai tay.
 - **Tác phẩm chính:** *Notebook for Anna Magdalena Bach* (1725), *Little Preludes*, 15 Invention và 15 Sinfonia, *French Suites*, *English Suites*, sáu *Partita*, hai quyển *Bình quân luật*, *Goldberg Variations* (1741). Xem [Fugue](/opus/hinh-thuc/fugue/).
-- **Bắt đầu bằng:** [Minuet Sol trưởng](/opus/piano/tac-pham/minuet-sol/) của Petzold trong *Notebook* (chặng 2) → *Little Preludes* như [BWV 939](/opus/piano/tac-pham/bach-prelude-bwv939/) (chặng 3), BWV 999 (Grade 4) → [Prelude Đô trưởng BWV 846](/opus/piano/tac-pham/bach-prelude-do/) (chặng 4) → [Invention số 1](/opus/piano/tac-pham/bach-invention-1/) (chặng 4), số 4, số 8 (Grade 5) → Sinfonia, các chương trong *French Suites*, [Prelude và fugue Đô thứ BWV 847](/opus/piano/tac-pham/bach-prelude-fugue-do-thu/) (chặng 6) → các prelude và fugue khác trong *Bình quân luật*, *Partita* → [*Goldberg*](/opus/nghe-nhac/bach-goldberg/).
+- **Bắt đầu bằng:** [Minuet Sol trưởng](/opus/piano/tac-pham/minuet-sol/) của Petzold trong *Notebook* (chặng 2) → *Little Preludes* như [BWV 939](/opus/piano/tac-pham/bach-prelude-bwv939/) (chặng 3), BWV 999 (Grade 4) → [Prelude Đô trưởng BWV 846](/opus/piano/tac-pham/bach-prelude-do/) (chặng 4) → [Invention số 1](/opus/piano/tac-pham/bach-invention-1/) (chặng 4), số 4, số 8 (Grade 5) → Sinfonia, các chương trong *French Suites*, [Prelude và fugue Đô thứ BWV 847](/opus/piano/tac-pham/bach-prelude-fugue-do-thu/) (chặng 6) → các prelude và fugue khác trong *Bình quân luật*, như [BWV 861 Sol thứ](/opus/piano/tac-pham/bach-prelude-fugue-sol-thu/) (chặng 7), *Partita* → [*Goldberg*](/opus/nghe-nhac/bach-goldberg/).
 - **Cuộc đời và các tác phẩm khác:** [Nhà soạn nhạc](/opus/lich-su/nha-soan-nhac/#johann-sebastian-bach-16851750).
 
 ### George Frideric Handel (1685–1759)
@@ -81,7 +81,7 @@ Kết cấu thường là **giai điệu và đệm**: tay phải hát, tay trá
 
 - **Đặc trưng khi chơi:** hóm hỉnh: dấu lặng đặt bẫy, kết giả, đổi giọng bất ngờ, những câu ngắn hỏi đáp nhau. Cần phát âm rõ, staccato nhẹ và một chút diễn kịch.
 - **Tác phẩm chính:** khoảng 60 sonata (Hob. XVI), bản cuối, Hob. XVI:52, viết ở London năm 1794; Biến tấu Fa thứ Hob. XVII:6 (1793).
-- **Bắt đầu bằng:** minuet, *German Dance* và các sonata sớm, ngắn (Menuet và Trio trong Hob. XVI:1: Grade 4; Hob. XVI:6: Grade 6) → Sonata Đô trưởng Hob. XVI:35 → Rê trưởng Hob. XVI:37 (Grade 8), Mi thứ Hob. XVI:34 → Mi♭ trưởng Hob. XVI:52, Biến tấu Fa thứ.
+- **Bắt đầu bằng:** minuet, *German Dance* và các sonata sớm, ngắn (Menuet và Trio trong Hob. XVI:1: Grade 4; Hob. XVI:6: Grade 6) → [chương 3 Sonata Sol trưởng Hob. XVI:27](/opus/piano/tac-pham/haydn-xvi-27/) (chặng 5), Sonata Đô trưởng Hob. XVI:35 → Rê trưởng Hob. XVI:37 (Grade 8), Mi thứ Hob. XVI:34 → Mi♭ trưởng Hob. XVI:52, Biến tấu Fa thứ.
 - **Cuộc đời và các tác phẩm khác:** [Nhà soạn nhạc](/opus/lich-su/nha-soan-nhac/#joseph-haydn-17321809).
 
 ### Wolfgang Amadeus Mozart (1756–1791)

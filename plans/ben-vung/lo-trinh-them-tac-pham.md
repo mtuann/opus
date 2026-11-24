@@ -17,7 +17,7 @@ Hiện trạng khi chốt (bài học theo chặng 2–7): 7, 5, 8, 5, 5, 4 (34 
 | 7 | 1 | Debussy, Arabesque số 1 | 6 |
 | 8 | 1 | Rachmaninoff, Prelude Đô♯ thứ Op. 3 số 2 | 7 |
 | 9 | 1 | Mozart, *Alla turca* (K. 331, chương 3), cặp với `nghe-nhac/mozart-k331` | 6 |
-| 10 | 4 | Đã khảo sát và duyệt 24/11/2026 (`plans/ben-vung/khao-sat-dot-4.md`): Bach, Prelude và Fugue Sol thứ BWV 861 (chặng 7); Scarlatti, Sonata K. 208 (chặng 5); Haydn, Sonata Hob. XVI:27 chương 3 (chặng 5). Để sau: *Pathétique* trọn sonata, Scarlatti K. 380 | 5–7 |
+| 10 | 4 | Đã khảo sát và duyệt 24/11/2026 (`plans/ben-vung/khao-sat-dot-4.md`): Bach, Prelude và Fugue Sol thứ BWV 861 (chặng 7); Scarlatti, Sonata K. 208 (chặng 5); Haydn, Sonata Hob. XVI:27 chương 3 (chặng 5). **Ba bài xong 24/11/2026** (báo cáo `plans/ben-vung/bao-cao/them-*.md`; việc sau đợt ở nhánh `mo/sau-dot-4`). Còn để sau: *Pathétique* trọn sonata, Scarlatti K. 380 | 5–7 |
 | 11 | 5 | Khảo sát bản quyền rồi thêm tác phẩm Việt Nam hết bảo hộ, bài chặng 1–2 dùng dân ca Việt Nam | 1–6 |
 
 Hướng dẫn nghe xen giữa các lượt, mỗi lượt bài học xong có thể làm một hướng dẫn nghe (mục 5).
@@ -127,6 +127,8 @@ Liên hệ trang `lich-su/nu-nha-soan-nhac` (đã khóa): thêm link từ trang 
 `mozart-alla-turca`, `mozart`, `cap: nghe-nhac/mozart-k331`. Chặng 6: ABRSM Grade 8 danh sách A (2025–2026; không có ở 2027–2028); Henle HN 1300 mức 6. Ấn bản Artaria 1784 (IMSLP #292670); Alte Mozart-Ausgabe 1878. Đối chiếu: Mutopia `KV331_3_RondoAllaTurca` (PD; đã có trong `sources.json`), kern `sonata11-3.krn`. Bản thu: Commons, Romuald Greiss (thu 2000), PD-author, 180,53 s, **phát được** (thay thế: Luis Kolodin, IMSLP #815841, đã có trong `_imslp/`). **Việc ngoài phạm vi:** bản ghi `mozart-k331` (đã khóa) phải trỏ `cap` ngược lại, và đoạn "Năm bài học…" ở `piano/tac-pham/index`: làm ở nhánh `mo/` có mở khóa, sau khi `them/mozart-alla-turca` gộp.
 
 ## 6. Đợt 4 và 5 (lượt 10–11): khảo sát trước
+
+Lượt 10 (đợt 4): khảo sát ở `plans/ben-vung/khao-sat-dot-4.md`; ba bài (Bach BWV 861, Scarlatti K. 208, Haydn Hob. XVI:27 chương 3) xong 24/11/2026. Còn để sau: *Pathétique* trọn sonata (chặng 7), Scarlatti K. 380.
 
 Chưa có khảo sát đủ. Agent làm khảo sát như mục 1 của `them-tac-pham.md` (bảng: bản quyền, ấn bản, nguồn đối chiếu, bản thu, cấp, chỗ đứng), ghi `plans/ben-vung/khao-sat-dot-4.md` (hay `-dot-5.md`), chủ repo duyệt rồi mới viết.
 

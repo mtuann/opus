@@ -30,6 +30,15 @@ lan:
       luot_2: "Claude Opus 5.5 (agent riêng, 17/11/2026; 18 câu mới cần nguồn ở tac-pham-theo-cap, debussy-preludes, bartok-romanian-folk-dances và Từ điển: 18 đúng)"
       review: Claude Opus 5.5 (review, agent riêng, mo/sau-nghe-1-3, 17/11/2026)
       kiem_mau: "Claude Sonnet (agent riêng), kiểm thay chủ repo theo lời giao 16/11/2026: nu-nha-soan-nhac n109, tac-pham-theo-cap n85, thuat-ngu/slargando n1, thuat-ngu/lunga n1; 4 đúng"
+  - so: 4
+    ngay: null
+    nhanh: mo/sau-dot-4
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (lượt 1, mo/sau-dot-4, 24/11/2026)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 nguon:
   - id: du-nsn
     bac: 2
@@ -387,6 +396,18 @@ nguon:
     bac: 2
     ten: WorldCat, The Pianist's Guide to Standard Teaching and Performance Literature, Alfred 1995 (lượt 2 đã mở)
     link: https://search.worldcat.org/title/32658097
+  - id: "d4-imslp-k208"
+    bac: 2
+    ten: "IMSLP, Keyboard Sonata in A major, K.208 (Scarlatti, Domenico): K.208; L.238; giọng La trưởng (như hồ sơ bài học piano/tac-pham/scarlatti-k208)"
+    link: "https://imslp.org/wiki/Keyboard_Sonata_in_A_major,_K.208_(Scarlatti,_Domenico)"
+  - id: "d4-imslp-xvi27"
+    bac: 2
+    ten: "IMSLP, Keyboard Sonata in G major, Hob.XVI:27 (Haydn, Joseph): giọng Sol trưởng, ba chương, chương 3 Finale. Presto (như hồ sơ bài học piano/tac-pham/haydn-xvi-27)"
+    link: "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)"
+  - id: "d4-imslp-wtc1"
+    bac: 2
+    ten: "IMSLP, Das wohltemperierte Klavier I, BWV 846–869: 24 cặp prelude và fugue; số 16 Sol thứ BWV 861"
+    link: "https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)"
 nhan_dinh:
   - id: n1
     cau: Trang tóm tắt cảm giác khi chơi nhạc của hơn 30 nhà soạn nhạc piano.
@@ -2217,6 +2238,17 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: "Lần mở 17/11/2026. Grade 7 đã kiểm ở n147, n148 (ABRSM); chặng 6 theo quy ước đầu trang và piano/tac-pham-theo-cap (chặng 6 ≈ Grade 7–8; dòng mới n85 ở hồ sơ ấy); Sonatina không có bản ghi bài học nên chặng là cách xếp của site theo Grade 7, như hướng dẫn nghe (\"Trên site, Grade 7 là chặng 6\"). Trang nghe-nhac/bartok-sonatina đã khóa. Review (Claude, 17/11/2026): đúng; Grade 7 như n147, n148; chặng 6 theo cap-do.yml (Grade 7–8) và câu của hướng dẫn nghe đã khóa; link đúng."
     review: dung
+  - id: "n195"
+    cau: "Bắt đầu bằng: Scarlatti K. 208 La trưởng; Bach BWV 861 Sol thứ là một prelude và fugue của Bình quân luật; Haydn Hob. XVI:27 là Sonata Sol trưởng, bài học là chương 3."
+    loai: "ten"
+    nguon: [ "d4-imslp-k208", "d4-imslp-wtc1", "d4-imslp-xvi27" ]
+    ket_qua: "dung"
+    ghi_chu: "Tên, giọng, số danh mục: IMSLP (K.208 La trưởng; BWV 861 là số 16 Sol thứ của quyển 1, BWV 846–869; Hob.XVI:27 Sol trưởng, chương 3 Finale. Presto). Trùng với bản ghi đã khóa của ba bài học (scarlatti-k208, bach-prelude-fugue-sol-thu, haydn-xvi-27). Phần chặng là ve-site (n196)."
+  - id: "n196"
+    cau: "Link tới ba bài học mới ở dòng \"Bắt đầu bằng\": K. 208 (Scarlatti, chặng 5), BWV 861 (Bach, chặng 7), chương 3 Hob. XVI:27 (Haydn, chặng 5)."
+    loai: "ve-site"
+    ket_qua: "dung"
+    ghi_chu: "Lần mở 24/11/2026 (mo/sau-dot-4). Chặng khớp trường chang của src/data/tac-pham.yml (scarlatti-k208 5, bach-prelude-fugue-sol-thu 7, haydn-xvi-27 5; đã khóa), \"(chặng N)\" theo quy ước đầu trang. Thứ tự dễ đến khó: K. 208 (ABRSM Grade 6) cùng bước với K. 1, K. 466, trước K. 380 (Grade 7); BWV 861 sau BWV 847 (chặng 6); Hob. XVI:27 chương 3 sau Hob. XVI:6 (Grade 6), cùng bước với Hob. XVI:35, trước Hob. XVI:37 (Grade 8). Ba câu cũ n20, n27, n39 không đổi chữ (chỉ chen thêm bài). Ba trang bài học có trong kiem-dinh/khoa.json; tests/link.test.mjs."
 khuong_nhac: []
 doi_chu:
   - cu: '"≈ Grade 5" là ước lượng theo thang ABRSM; "sau Grade 8" là trình độ diploma trở lên. Tay nhỏ sẽ thấy Rachmaninoff khó hơn, người đọc nhạc chậm sẽ thấy Bach khó hơn. Đối chiếu với Lộ trình và Tác phẩm theo cấp độ.'
@@ -2251,14 +2283,14 @@ doi_chu:
     moi:
       - "Đặc trưng khi chơi: mỗi sonata là một bài toán cho đôi tay: vắt tay, nốt lặp đổi ngón, nhảy quãng rộng, gam nhanh, những chùm nốt nghịch tai. Thường chỉ có hai bè, nên chỗ nào không đều đều lộ ra."
       - "Tác phẩm chính: 555 sonata, phần lớn một chương hai phần (xem hướng dẫn nghe); 30 bản đầu tiên in ở London năm 1738 với tên Essercizi per gravicembalo."
-      - "Bắt đầu bằng: K. 32 Rê thứ, Aria → K. 1 Rê thứ, K. 466 Fa thứ → K. 380 Mi trưởng (Grade 7) → K. 141 Rê thứ với chuỗi nốt lặp rất nhanh."
-    ly_do: 'n19 (da-sua): Câu cũ: "K. 380 Mi trưởng (≈ Grade 8)". ABRSM xếp K. 380 ở Grade 7 (2021–22, 2023–24, 2025–26); Henle HN 574: "Piano Grade 7".; n18 (da-sua, review D4-gom): bỏ "bắt chước guitar Tây Ban Nha" (Britannica không nói; không có nguồn mở).; n17 (da-sua, review D4-gom): IMSLP: Essercizi K. 1–30 in ở London năm 1738.; n19, n20 (da-sua, review D4-gom): giữ Grade 7 cho K. 380 (ABRSM); bỏ Grade cho K. 32, K. 1, K. 466, K. 141 (không có trong đề cương).'
+      - "Bắt đầu bằng: K. 32 Rê thứ, Aria → K. 208 La trưởng (chặng 5), K. 1 Rê thứ, K. 466 Fa thứ → K. 380 Mi trưởng (Grade 7) → K. 141 Rê thứ với chuỗi nốt lặp rất nhanh."
+    ly_do: 'n19 (da-sua): Câu cũ: "K. 380 Mi trưởng (≈ Grade 8)". ABRSM xếp K. 380 ở Grade 7 (2021–22, 2023–24, 2025–26); Henle HN 574: "Piano Grade 7".; n18 (da-sua, review D4-gom): bỏ "bắt chước guitar Tây Ban Nha" (Britannica không nói; không có nguồn mở).; n17 (da-sua, review D4-gom): IMSLP: Essercizi K. 1–30 in ở London năm 1738.; n19, n20 (da-sua, review D4-gom): giữ Grade 7 cho K. 380 (ABRSM); bỏ Grade cho K. 32, K. 1, K. 466, K. 141 (không có trong đề cương). n195, n196 (mo/sau-dot-4, 24/11/2026): thêm K. 208 La trưởng (chặng 5), link bài học.'
   - cu: "Đặc trưng khi chơi: phức điệu. Mỗi tay thường giữ hai bè, bè nào cũng phải hát. Bản gốc gần như không ghi sắc thái hay dấu luyến, nên bạn tự chọn cách phát âm cho chủ đề và giữ nhất quán mỗi lần nó trở lại. Ghi ngón từ đầu, tập từng bè, ghép hai bè trong một tay rồi mới ghép hai tay."
     moi: "Đặc trưng khi chơi: phức điệu. Mỗi tay thường giữ hai bè, bè nào cũng phải hát. Hãy tự chọn cách phát âm cho chủ đề (nối hay tách từng nốt) và giữ nhất quán mỗi lần nó trở lại. Ghi ngón từ đầu, tập từng bè, ghép hai bè trong một tay rồi mới ghép hai tay."
     ly_do: 'n22 (da-sua, review D4-gom): bỏ câu "bản gốc gần như không ghi sắc thái hay dấu luyến" (không tìm được nguồn bậc 1–2), giữ lời khuyên.'
   - cu: "Bắt đầu bằng: Minuet Sol trưởng của Petzold trong Notebook (≈ Grade 1–2) → Little Preludes như BWV 939, BWV 999 (≈ Grade 3–5) → Prelude Đô trưởng BWV 846 (≈ Grade 4–5) → Invention số 1, số 4, số 8 (≈ Grade 6) → Sinfonia, các chương trong French Suites, Prelude và fugue Đô thứ BWV 847 (≈ Grade 7–8) → các prelude và fugue khác trong Bình quân luật, Partita (sau Grade 8) → Goldberg."
-    moi: "Bắt đầu bằng: Minuet Sol trưởng của Petzold trong Notebook (chặng 2) → Little Preludes như BWV 939 (chặng 3), BWV 999 (Grade 4) → Prelude Đô trưởng BWV 846 (chặng 4) → Invention số 1 (chặng 4), số 4, số 8 (Grade 5) → Sinfonia, các chương trong French Suites, Prelude và fugue Đô thứ BWV 847 (chặng 6) → các prelude và fugue khác trong Bình quân luật, Partita → Goldberg."
-    ly_do: 'n25 (da-sua): Câu cũ: "(≈ Grade 6)". tac-pham.yml (đã khóa): Invention số 1 chặng 4, Grade 4–5; Henle: mức 3, 3, 4; ABRSM: Invention 8 ở Grade 5.; n24, n25, n26, n27 (da-sua, review D4-gom): bài học của site ghi chặng (tac-pham.yml); BWV 999 Grade 4 (ABRSM 2021–22), Invention 8 Grade 5 (ABRSM 2021–22, 2025–26; Henle); bỏ "sau Grade 8".; n152 (da-sua, review D4-gom): Gershwin không có trong đề cương ABRSM đã mở; bỏ Grade.'
+    moi: "Bắt đầu bằng: Minuet Sol trưởng của Petzold trong Notebook (chặng 2) → Little Preludes như BWV 939 (chặng 3), BWV 999 (Grade 4) → Prelude Đô trưởng BWV 846 (chặng 4) → Invention số 1 (chặng 4), số 4, số 8 (Grade 5) → Sinfonia, các chương trong French Suites, Prelude và fugue Đô thứ BWV 847 (chặng 6) → các prelude và fugue khác trong Bình quân luật, như BWV 861 Sol thứ (chặng 7), Partita → Goldberg."
+    ly_do: 'n25 (da-sua): Câu cũ: "(≈ Grade 6)". tac-pham.yml (đã khóa): Invention số 1 chặng 4, Grade 4–5; Henle: mức 3, 3, 4; ABRSM: Invention 8 ở Grade 5.; n24, n25, n26, n27 (da-sua, review D4-gom): bài học của site ghi chặng (tac-pham.yml); BWV 999 Grade 4 (ABRSM 2021–22), Invention 8 Grade 5 (ABRSM 2021–22, 2025–26; Henle); bỏ "sau Grade 8".; n152 (da-sua, review D4-gom): Gershwin không có trong đề cương ABRSM đã mở; bỏ Grade. n195, n196 (mo/sau-dot-4, 24/11/2026): thêm BWV 861 Sol thứ (chặng 7), link bài học.'
   - cu: "Bắt đầu bằng: các minuet, gavotte ngắn (≈ Grade 2–3) → Sarabande HWV 437 cùng hai biến tấu (≈ Grade 4–5) → các chương trong tổ khúc (≈ Grade 6–7) → trọn The Harmonious Blacksmith, Chaconne HWV 435 (≈ Grade 8 trở lên)."
     moi: "Bắt đầu bằng: các minuet, gavotte ngắn (Gavotte Đô trưởng: Grade 1; Gavotte Sol trưởng HWV 491: Grade 3) → Sarabande trong Tổ khúc HWV 437 → các chương khác trong tổ khúc → trọn The Harmonious Blacksmith, Chaconne HWV 435."
     ly_do: 'n30 (da-sua): Câu cũ: "(≈ Grade 2–3)". ABRSM: Gavotte in C ở Grade 1 (nhiều đề cương), Gavotte in G HWV 491 ở Grade 3.; n30, n31 (da-sua, review D4-gom): Gavotte Đô trưởng Grade 1 (ABRSM 2023–24, 2025–26), Gavotte HWV 491 Grade 3 (ABRSM 2021–22); bỏ Grade khác và "cùng hai biến tấu" (IMSLP HWV 437 không nêu).'
@@ -2279,8 +2311,8 @@ doi_chu:
       - "Bắt đầu bằng: minuet, German Dance và các sonata sớm, ngắn mà thời ấy thường gọi là divertimento hay partita (≈ Grade 3–5) → Sonata Đô trưởng Hob. XVI:35 (≈ Grade 6–7) → Rê trưởng Hob. XVI:37, Mi thứ Hob. XVI:34 (≈ Grade 7–8) → Mi♭ trưởng Hob. XVI:52, Biến tấu Fa thứ (sau Grade 8)."
     moi:
       - "Tác phẩm chính: khoảng 60 sonata (Hob. XVI), bản cuối, Hob. XVI:52, viết ở London năm 1794; Biến tấu Fa thứ Hob. XVII:6 (1793)."
-      - "Bắt đầu bằng: minuet, German Dance và các sonata sớm, ngắn (Menuet và Trio trong Hob. XVI:1: Grade 4; Hob. XVI:6: Grade 6) → Sonata Đô trưởng Hob. XVI:35 → Rê trưởng Hob. XVI:37 (Grade 8), Mi thứ Hob. XVI:34 → Mi♭ trưởng Hob. XVI:52, Biến tấu Fa thứ."
-    ly_do: 'n37 (da-sua, review D4-gom): IMSLP: Hob. XVI:52 viết năm 1794 ở London; "khoảng 1794–1795" chưa có nguồn.; n39 (da-sua, review D4-gom): Hob. XVI:1 (Menuet và Trio) Grade 4, Hob. XVI:37 Grade 8 (ABRSM 2025–26), Hob. XVI:6 Grade 6 (ABRSM 2021–22, 2025–26); bỏ "thời ấy thường gọi là divertimento hay partita" (không có nguồn mở) và các Grade ước lượng.'
+      - "Bắt đầu bằng: minuet, German Dance và các sonata sớm, ngắn (Menuet và Trio trong Hob. XVI:1: Grade 4; Hob. XVI:6: Grade 6) → chương 3 Sonata Sol trưởng Hob. XVI:27 (chặng 5), Sonata Đô trưởng Hob. XVI:35 → Rê trưởng Hob. XVI:37 (Grade 8), Mi thứ Hob. XVI:34 → Mi♭ trưởng Hob. XVI:52, Biến tấu Fa thứ."
+    ly_do: 'n37 (da-sua, review D4-gom): IMSLP: Hob. XVI:52 viết năm 1794 ở London; "khoảng 1794–1795" chưa có nguồn.; n39 (da-sua, review D4-gom): Hob. XVI:1 (Menuet và Trio) Grade 4, Hob. XVI:37 Grade 8 (ABRSM 2025–26), Hob. XVI:6 Grade 6 (ABRSM 2021–22, 2025–26); bỏ "thời ấy thường gọi là divertimento hay partita" (không có nguồn mở) và các Grade ước lượng. n195, n196 (mo/sau-dot-4, 24/11/2026): thêm chương 3 Hob. XVI:27 (chặng 5), link bài học.'
   - cu: 'Bắt đầu bằng: các bản nhỏ K. 1–5, viết lúc 5–6 tuổi (≈ Grade 1–3) → Sonata Đô trưởng K. 545, mà chính ông ghi là sonata nhỏ "cho người mới học" (≈ Grade 6) → K. 283, K. 330 (≈ Grade 7) → Fantasia K. 397, K. 331 (≈ Grade 7–8) → K. 310, K. 457, Rondo K. 511 (sau Grade 8).'
     moi: "Bắt đầu bằng: các bản nhỏ K. 1–5, viết lúc 5–6 tuổi, như Minuet Fa trưởng K. 2 (chặng 2) và Allegro K. 3 (Grade 3) → Sonata Đô trưởng K. 545, mà chính ông ghi là sonata nhỏ \"cho người mới học\" (chặng 5) → K. 283, K. 330 → Fantasia K. 397, K. 331 (chương 3, Alla turca: chặng 6) → K. 310, K. 457, Rondo K. 511."
     ly_do: "n42, n43, n44 (da-sua, review D4-gom): K. 2 có bài học chặng 2 (tac-pham.yml); Allegro K. 3 Grade 3 (ABRSM 2023–24, 2025–26); K. 545 chặng 5; bỏ Grade ước lượng của K. 283, 330, 397, 331, 310, 457, 511. 17/11/2026 (mo/sau-dot-1): thêm link và chặng bài học mới (n191, n192)."
@@ -2453,3 +2485,6 @@ mo_khoa:
   - ngay: 2026-11-17
     nhanh: mo/sau-nghe-1-3
     ly_do: "Sau ba hướng dẫn nghe mới (Bartók Sonatina, Backer Grøndahl Klage, Debussy Golliwogg's Cakewalk; mo/sau-nghe-1-3): link và mục mới"
+  - ngay: 2026-11-24
+    nhanh: mo/sau-dot-4
+    ly_do: "Sau đợt 4 thêm tác phẩm (lượt 10, mo/sau-dot-4): link ba bài học mới ở dòng Bắt đầu bằng của Scarlatti, Bach, Haydn"

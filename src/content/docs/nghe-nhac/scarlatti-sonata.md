@@ -73,7 +73,7 @@ Ghi lại thời điểm (phút:giây) bạn nghe thấy từng sự kiện tron
 
 ## Nếu bạn muốn chơi
 
-Sonata Scarlatti vừa là bài kỹ thuật vừa là nhạc để nghe, hợp với người chơi piano trung cấp trở lên. K. 380 ở khoảng chặng 6 (ABRSM Grade 7 theo trang của Henle, mức 5 trên thang 1–9; xem [Nhà soạn nhạc cho piano](/opus/piano/nha-soan-nhac/#domenico-scarlatti-16851757)); K. 141 khó hơn (Henle mức 7) vì nốt lặp lại nhanh và bắt chéo tay. Hãy bắt đầu bằng những bản ngắn, chậm như **K. 32** (Rê thứ, *Aria*) hoặc **K. 34** (Rê thứ, *Larghetto*), đồng thời tập [nốt hoa mỹ](/opus/piano/not-hoa-my/), [phối hợp và bắt chéo hai tay](/opus/piano/hai-tay/) và [staccato nhẹ](/opus/piano/tieng-dan/). Xem thêm [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
+Sonata Scarlatti vừa là bài kỹ thuật vừa là nhạc để nghe, hợp với người chơi piano trung cấp trở lên. K. 380 ở khoảng chặng 6 (ABRSM Grade 7 theo trang của Henle, mức 5 trên thang 1–9; xem [Nhà soạn nhạc cho piano](/opus/piano/nha-soan-nhac/#domenico-scarlatti-16851757)); K. 141 khó hơn (Henle mức 7) vì nốt lặp lại nhanh và bắt chéo tay. Hãy bắt đầu bằng những bản ngắn, chậm như **K. 32** (Rê thứ, *Aria*) hoặc **K. 34** (Rê thứ, *Larghetto*), đồng thời tập [nốt hoa mỹ](/opus/piano/not-hoa-my/), [phối hợp và bắt chéo hai tay](/opus/piano/hai-tay/) và [staccato nhẹ](/opus/piano/tieng-dan/). Một bản chậm khác, **K. 208** (La trưởng, *Adagio e cantabile*), có [bài học riêng](/opus/piano/tac-pham/scarlatti-k208/) ở chặng 5 (ABRSM Grade 6). Xem thêm [Tác phẩm theo cấp độ](/opus/piano/tac-pham-theo-cap/).
 
 ## Ghi chép của bạn
 

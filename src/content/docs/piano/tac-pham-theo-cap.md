@@ -159,12 +159,14 @@ Chương sonata thật đầu tiên, phức điệu Bach có chủ đích, và *
 |---|---|---|
 | [Mozart: Sonata Đô trưởng K. 545](/opus/piano/tac-pham/mozart-k545/) | Cổ điển | Hình thức sonata, Alberti nhanh và đều, gam, phát âm Cổ điển |
 | Bach: Invention số 4 (Rê thứ, BWV 775) và số 13 (La thứ, BWV 784) | Baroque | Số 4: chuỗi móc kép liền mạch nhịp 3/8; số 13: hợp âm rải chạy trong cả hai tay |
+| [Scarlatti: Sonata La trưởng K. 208 (L. 238)](/opus/piano/tac-pham/scarlatti-k208/) | Baroque | Giai điệu chậm có nốt hoa mỹ (nốt dựa, trill) trên dòng nốt đen đều của tay trái; hình thức hai nửa của sonata Scarlatti; nghe [ba sonata Scarlatti](/opus/nghe-nhac/scarlatti-sonata/) |
 | [Schumann: *Träumerei*, *Kinderszenen* Op. 15 số 7](/opus/piano/tac-pham/schumann-traumerei/) | Lãng mạn | Ba lớp âm thanh, câu nhạc dài, bàn đạp tinh |
 | Schumann: *Von fremden Ländern und Menschen* (Về những xứ sở và con người xa lạ), *Kinderszenen* Op. 15 số 1 | Lãng mạn | Giai điệu, chùm ba nốt đệm và bè trầm chia trong hai tay; nghe [Kinderszenen](/opus/nghe-nhac/schumann-kinderszenen/) |
 | [Beethoven: Sonata Op. 27 số 2 (*Ánh trăng*), chương 1](/opus/piano/tac-pham/beethoven-anh-trang/) | Cổ điển | Chùm ba nốt đều, giai điệu nổi trên cùng, bàn đạp đổi theo hòa âm; nghe [hướng dẫn](/opus/nghe-nhac/beethoven-moonlight/) |
 | [Chopin: Valse La thứ, B. 150](/opus/piano/tac-pham/chopin-valse-la-thu/) | Lãng mạn | Đệm valse tay trái, giai điệu hát, bàn đạp theo ô nhịp, rubato đầu tiên |
 | Chopin: Nocturne Mi thứ Op. 72 số 1; Nocturne Đô♯ thứ (di cảo, B. 49) | Lãng mạn | Rubato; giai điệu hát trên hợp âm rải rộng của tay trái. Op. 72 số 1 có trong danh sách Grade 8 của ABRSM (2027–2028), còn Henle xếp mức 5 |
-| Haydn: Sonata Đô trưởng Hob. XVI:35 | Cổ điển | Ngón nhẹ và nhanh, tính hài hước rất Haydn |
+| [Haydn: *Finale* (Presto), chương 3 Sonata Sol trưởng Hob. XVI:27](/opus/piano/tac-pham/haydn-xvi-27/) | Cổ điển | Presto 2/4 nhẹ và đều, móc kép rõ từng nốt, phát âm Cổ điển; nhận ra một chủ đề qua các biến tấu |
+| Haydn: Sonata Đô trưởng Hob. XVI:35, chương 3 (*Finale*) | Cổ điển | Ngón nhẹ và nhanh, tính hài hước rất Haydn. Trinity xếp chương này ở Grade 6; đề cương RCM (Canada) xếp trọn bản sonata ở Level 10 |
 | [Mendelssohn: *Lieder ohne Worte* (Bài ca không lời) Op. 19 số 6, *Venetianisches Gondellied* (Sol thứ)](/opus/piano/tac-pham/mendelssohn-thuyen-ca/) | Lãng mạn | Giai điệu hát trên nhịp đung đưa của bài ca chèo thuyền |
 | Schubert: *Moments musicaux* D. 780 số 3 (Fa thứ) | Lãng mạn | Staccato nhẹ, nhịp đều, giai điệu mang màu dân ca |
 | Brahms: Valse La♭ trưởng Op. 39 số 15 | Lãng mạn | Giai điệu quãng ba, quãng sáu trong một tay, đệm valse mềm |
@@ -211,7 +213,7 @@ Những tác phẩm lớn được yêu thích nhất. Mỗi bài cần vài th�
 | [Chaminade: *Automne* (Étude de concert) Op. 35 số 2](/opus/piano/tac-pham/chaminade-automne/) | Lãng mạn | Giai điệu và lớp đệm trong cùng tay phải; đoạn giữa nhanh, hợp âm và quãng tám tới *fff* |
 | [Rachmaninoff: Prelude Đô♯ thứ Op. 3 số 2](/opus/piano/tac-pham/rachmaninoff-prelude-do-thang-thu/) | Lãng mạn muộn | Hợp âm lớn trải rộng, dùng sức nặng cánh tay mà tiếng không gắt |
 | Chopin: Ballade số 2–4 (Op. 38, 47, 52); bốn Scherzo (Op. 20, 31, 39, 54); Études Op. 10 và Op. 25; Sonata Op. 35 và Op. 58; *Barcarolle* Op. 60 | Lãng mạn | Đỉnh cao kỹ thuật và hình thức của Chopin; nghe [Études](/opus/nghe-nhac/chopin-etude/) |
-| Bach: *Bình quân luật* (BWV 846–893); Partita (BWV 825–830); *Goldberg Variations* BWV 988 | Baroque | Fugue nhiều bè; tổ khúc lớn; nghe [Goldberg](/opus/nghe-nhac/bach-goldberg/) |
+| Bach: *Bình quân luật* (BWV 846–893), như [Prelude và fugue Sol thứ BWV 861](/opus/piano/tac-pham/bach-prelude-fugue-sol-thu/) (quyển 1); Partita (BWV 825–830); *Goldberg Variations* BWV 988 | Baroque | Fugue nhiều bè và stretto; tổ khúc lớn; nghe [Goldberg](/opus/nghe-nhac/bach-goldberg/) |
 | Beethoven: sonata giữa đời (*Waldstein* Op. 53, *Appassionata* Op. 57) và cuối đời (Op. 109, 110, 111) | Cổ điển | Kiến trúc lớn, sức bền; chương fugue của Op. 110 |
 | Haydn: Sonata Mi♭ trưởng Hob. XVI:52; Mozart: Sonata La thứ K. 310, Concerto số 21 Đô trưởng K. 467 | Cổ điển | Sonata Cổ điển ở quy mô lớn nhất; concerto với dàn nhạc hoặc piano thứ hai; nghe [Concerto số 21](/opus/nghe-nhac/mozart-concerto-21/) |
 | Schubert: ba sonata cuối D. 958, 959, 960; *Wanderer-Fantasie* D. 760 | Lãng mạn | Câu nhạc rất dài, kiến trúc rộng, sức bền tinh thần |
@@ -388,7 +390,7 @@ Những bài cùng loại khác mà người lớn hay hỏi cũng theo cùng ng
 ## Nguồn
 
 - Thang mức độ khó 1–9: [G. Henle Verlag](https://www.henle.de/), "Levels of Difficulty"; các mức Henle trích ở trang này lấy từ trang của từng ấn bản tương ứng.
-- Chương trình thi: [ABRSM](https://www.abrsm.org/), [Trinity College London](https://www.trinitycollege.com/).
+- Chương trình thi: [ABRSM](https://www.abrsm.org/), [Trinity College London](https://www.trinitycollege.com/). Haydn Hob. XVI:35: Trinity, [Piano repertoire list from 2023](https://www.trinitycollege.com/resource?id=10125) (bản cập nhật 8/2026, Grade 6); RCM, [Piano Syllabus 2022](https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf) (Level 10, tr. 94).
 - Jane Magrath, *The Pianist's Guide to Standard Teaching and Performance Literature* (Alfred, 1995).
 - Maurice Hinson và Wesley Roberts, *Guide to the Pianist's Repertoire*, ấn bản 4 (Indiana University Press, 2013).
 - Bản nhạc: [IMSLP](https://imslp.org/) (tìm theo tên tác phẩm kèm số Op., BWV, K., D. hoặc Hob.).

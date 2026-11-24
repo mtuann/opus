@@ -12,6 +12,15 @@ lan:
       luot_2: Claude Opus 5.5 (lượt 2 nhánh gom D6-L5, 06/11/2026, bốn phần; bổ sung sau review)
       review: Claude Opus 5.5 (review D6-L5-gom, 05/11/2026)
       kiem_mau: "Claude Opus 5.5, kiểm thay chủ repo theo lời giao 06/11/2026 (chủ repo không tự kiểm): 8 nhận định mẫu của D6-L5, 8 đúng, 0 sai (bao-cao/d6-l5-gom/kiem-mau-ket-qua.yml)"
+  - so: 2
+    ngay: null
+    nhanh: mo/sau-dot-4
+    ma_bam: null
+    nguoi:
+      luot_1: "Claude Opus 5.5 (lượt 1, mo/sau-dot-4, 24/11/2026)"
+      luot_2: null
+      review: null
+      kiem_mau: null
 ghi_chu: 'Bài học BWV 847 (tầng Tác phẩm). Bản nhạc: Mutopia bwv847a (prelude, Breitkopf & Härtel 1866) và fuga2 (fugue, Edition Peters), tải .ly và .mid 05/11/2026 với User-Agent opus-kiem-dinh; đếm ô và in nốt theo ô bằng script Python (mido): prelude 38 ô, fugue 31 ô; mọi số ô trên trang khớp. Script tìm đầu chủ đề cho ra tám lần vào (ô 1, 3, 7, 11, 15, 20, 26, 29). Mốc ::khoi-nghe "0 10 49 65 76 108 115 128 135 192" (10 mốc / 10 dòng) dùng bản thu Ishizaka hai phần (prelude 107,29 s, fugue 115,93 s); theo tools/audio/align/pieces.py mốc là ô 5, 21, 28, 34 của prelude và ô 3, 7, 9, 26 của fugue (cộng 107,29 s): khớp các dòng bảng. Không nghe lại bản thu. Sửa trang: n10 (bỏ "nhanh và gắt hơn"), n30 (bỏ "(tách tiếng, nhịp sắc)"), mục Nguồn (n126, n127, n128: bỏ hai sách in chưa đọc, thêm lời nói đầu Henle HN 14 và link tệp Mutopia). Chưa chắc: n23, n30 (các nghệ sĩ thu âm), n116, n118. Câu ve-site ở hồ sơ khác: hinh-thuc/fugue n33, lich-su/thoi-ky/baroque n48 (link tới trang này): trang có ở đúng đường dẫn, là bài học BWV 847: đúng. hinh-thuc/fugue n16–n29, n42 (BWV 847 ba bè, 31 ô, kết Đô trưởng): trang này nói giống. piano/tac-pham/bach-prelude-do n86, n87: trang này giữ (cặp ngay sau; Presto, Adagio, Allegro). Không tính là nhận định: tiêu đề mục, tiêu đề cột bảng, chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng (thuộc hồ sơ bản ghi), mốc trong ::khoi-nghe. Thuật ngữ trang dùng (mordent, staccato, legato, non legato) có trong src/data/thuat-ngu.yml; "đáp đề điệu tính", "đối đề", "đoạn chuyển", "quãng 3 Picardy" dùng như trang đã khóa hinh-thuc/fugue.'
 nguon:
   - id: mut-847-pre
@@ -102,6 +111,14 @@ nguon:
     bac: 2
     ten: Nguồn lượt 2 D6-L5-gom (www.mutopiaproject.org)
     link: "https://www.mutopiaproject.org/ftp/BachJS/BWV846/wtk1-fugue1/wtk1-fugue1.ly"
+  - id: "d4-mut-805"
+    bac: 1
+    ten: "Mutopia Project, Das Wohltemperierte Clavier I, Fuga XVI, BWV 861 (theo Bach-Gesellschaft; như hồ sơ bài học piano/tac-pham/bach-prelude-fugue-sol-thu): bốn bè, 34 ô"
+    link: "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=805"
+  - id: "d4-earsense-16"
+    bac: 2
+    ten: "Earsense, Book 1 No. 16 G minor, Fugue: stretto ở nhiều chỗ (như hồ sơ bài học piano/tac-pham/bach-prelude-fugue-sol-thu)"
+    link: "https://www.earsense.org/Earsense/WTC/Book1/16/words.html"
 nhan_dinh:
   - id: n1
     cau: 'Tiêu đề: "Bach: Prelude và fugue Đô thứ, BWV 847".'
@@ -1116,6 +1133,17 @@ nhan_dinh:
     ket_qua: dung
     ghi_chu: 'Trang có (src/content/docs/tai-lieu-tham-khao.md). Review D6-L5-gom: kiểm trên trang và dữ liệu: Dòng 318; src/content/docs/tai-lieu-tham-khao.md có.'
     review: dung
+  - id: "n130"
+    cau: "Học tiếp: Prelude và fugue Sol thứ BWV 861 (Bình quân luật) có fugue bốn bè, ngắn (34 ô), có stretto."
+    loai: "cau-truc"
+    nguon: [ "imslp-wtc1", "d4-mut-805", "d4-earsense-16" ]
+    ket_qua: "dung"
+    ghi_chu: "Như bài học piano/tac-pham/bach-prelude-fugue-sol-thu (đã khóa): \"fugue có bốn bè thay vì ba, mà vẫn ngắn (34 ô)\"; stretto ở ô 17 và ô 28–29. BWV 861 thuộc quyển 1 (IMSLP); bốn bè, 34 ô: bản Mutopia theo Bach-Gesellschaft; stretto: Earsense."
+  - id: "n131"
+    cau: "Link Học tiếp tới bài học piano/tac-pham/bach-prelude-fugue-sol-thu, ghi chặng 7."
+    loai: "ve-site"
+    ket_qua: "dung"
+    ghi_chu: "Lần mở 24/11/2026 (mo/sau-dot-4). Bản ghi bach-prelude-fugue-sol-thu chang 7 (đã khóa); trang có trong kiem-dinh/khoa.json. Câu đứng sau câu cũ về fugue Đô trưởng BWV 846 (bốn bè), chữ câu cũ giữ nguyên."
 khuong_nhac:
   - khoi: 1
     loai: trich-doan
@@ -1165,3 +1193,10 @@ doi_chu:
   - cu: 'Prelude, chuyển giọng (ô 5–20): bè trầm đi xuống dần, hòa âm đổi mỗi ô; nhạc sáng lên quanh Mi♭ trưởng (ô 11–14) rồi tối lại, về Đô thứ'
     moi: 'Prelude, chuyển giọng (ô 5–20): bè trầm nhìn chung đi xuống, hòa âm đổi mỗi ô; nhạc sáng lên quanh Mi♭ trưởng (ô 11–14) rồi tối lại, về Đô thứ'
     ly_do: 'n33 (review D6-L5-gom): bè trầm xuống ô 5–11, lên lại ô 12–15 rồi xuống tới Sol ô 21 (lượt 2, Mutopia), nên chỉ "nhìn chung" đi xuống.'
+  - cu: "Trong Bình quân luật: Prelude Đô trưởng BWV 846 nếu bạn chưa chơi; rồi các fugue ba bè khác của quyển 1, như Rê thứ BWV 851; fugue Đô trưởng BWV 846 có bốn bè, một bước tiếp theo."
+    moi: "Trong Bình quân luật: Prelude Đô trưởng BWV 846 nếu bạn chưa chơi; rồi các fugue ba bè khác của quyển 1, như Rê thứ BWV 851; fugue Đô trưởng BWV 846 có bốn bè, một bước tiếp theo. Một fugue bốn bè có bài học trên site: Prelude và fugue Sol thứ BWV 861 (chặng 7), ngắn (34 ô), có stretto."
+    ly_do: "n130, n131 (mo/sau-dot-4, 24/11/2026): link bài học BWV 861 mới."
+mo_khoa:
+  - ngay: 2026-11-24
+    nhanh: mo/sau-dot-4
+    ly_do: "Sau đợt 4 thêm tác phẩm (lượt 10, mo/sau-dot-4): Học tiếp link bài học Prelude và fugue Sol thứ BWV 861"
