@@ -8,9 +8,9 @@ lan:
     nguoi:
       luot_1: Claude Opus 5.5 (lượt 1, them/haydn-xvi-27, 24/11/2026)
       luot_2: Claude Opus 5.5 (agent riêng, độc lập với lượt 1, 24/11/2026; 43 câu, 41 đúng, 2 không chắc)
-      review: null
+      review: "Claude (agent riêng, không làm lượt 1, lượt 2; 24/11/2026)"
       kiem_mau: null
-ghi_chu: 'Bản ghi mới (tools/them-tac-pham.mjs, 24/11/2026); khóa cả bản ghi. Nguồn chung với hồ sơ trang piano/tac-pham/haydn-xvi-27 (cách đọc bản quét, đếm ô, căn mốc ghi ở đó). Không có trường cap: site không có hướng dẫn nghe cho sonata này (nghe-nhac/haydn-94 là giao hưởng). ban_thu ghi bằng attach.py --part (IMSLP, chỉ dẫn link: link Special:ImagefromIndex/836476, src trang File:, d theo ffprobe file đã tải tay 193,26 s), --ref ghi mốc. Sơ đồ (hinh) chia theo thời gian trên bản thu (mốc đo ở hồ sơ trang): chủ đề 1,6–42,1 s, biến tấu 1 42,1–83,4 s, biến tấu 2 83,4–122,0 s, nửa đầu chủ đề 122,0–129,1 s, Sol thứ 129,1–150,7 s, biến tấu cuối 150,7–190 s. them_ngay là dữ liệu nội bộ, không có nhận định.'
+ghi_chu: 'Bản ghi mới (tools/them-tac-pham.mjs, 24/11/2026); khóa cả bản ghi. Nguồn chung với hồ sơ trang piano/tac-pham/haydn-xvi-27 (cách đọc bản quét, đếm ô, căn mốc ghi ở đó). Không có trường cap: site không có hướng dẫn nghe cho sonata này (nghe-nhac/haydn-94 là giao hưởng). ban_thu ghi bằng attach.py --part (IMSLP, chỉ dẫn link: link Special:ImagefromIndex/836476, src trang File:, d theo ffprobe file đã tải tay 193,26 s), --ref ghi mốc. Sơ đồ (hinh) chia theo thời gian trên bản thu (mốc đo ở hồ sơ trang): chủ đề 1,6–42,1 s, biến tấu 1 42,1–83,4 s, biến tấu 2 83,4–122,0 s, nửa đầu chủ đề 122,0–129,1 s, Sol thứ 129,1–150,7 s, biến tấu cuối 150,7–190 s. them_ngay là dữ liệu nội bộ, không có nhận định. Review (Claude, 24/11/2026): kiểm lại mọi nhận định với IMSLP wikitext, Mutopia .ly, RCM 2022, Henle HN 1338 tải lại và bản quét; sửa n7, n9, n11 (xem từng câu).'
 nguon:
   - id: pasler-1918
     bac: 1
@@ -50,97 +50,108 @@ nhan_dinh:
     loai: ten
     nguon: [ imslp-xvi27, pasler-1918 ]
     ket_qua: dung
-    ghi_chu: 'IMSLP: Hob. XVI:27, chương 3 "Finale. Presto"; bản quét trang PDF 7 "Finale. Presto.". Tác giả: nha-soan-nhac.yml haydn (đã khóa).'
+    ghi_chu: 'IMSLP: Hob. XVI:27, chương 3 "Finale. Presto"; bản quét trang PDF 7 "Finale. Presto.". Tác giả: nha-soan-nhac.yml haydn (đã khóa). Review (Claude, 24/11/2026): IMSLP wikitext tải lại và bản quét trang PDF 7: khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/api.php?action=parse&page=Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)&prop=wikitext&format=json", "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)" ]
     luot_2_ghi_chu: Finale. Presto, chương 3, Hob. XVI:27, Haydn.
+    review: dung
   - id: n2
     cau: 'Giọng Sol trưởng, nhịp 2/4; chip "Sol trưởng · 2/4"; dòng Giọng · nhịp · tốc độ: Sol trưởng, có một đoạn Sol thứ · 2/4 · Presto (bản in không ghi số máy đếm nhịp).'
     loai: cau-truc
     nguon: [ pasler-1918, mutopia-187 ]
     ket_qua: dung
-    ghi_chu: 'Bản quét trang PDF 7: hóa biểu một dấu thăng, 2/4, "Presto.", không có số máy đếm nhịp; đoạn Sol thứ ô 81–104 (trang PDF 9). Mutopia \key g\major \time 2/4.'
+    ghi_chu: 'Bản quét trang PDF 7: hóa biểu một dấu thăng, 2/4, "Presto.", không có số máy đếm nhịp; đoạn Sol thứ ô 81–104 (trang PDF 9). Mutopia \key g\major \time 2/4. Review (Claude, 24/11/2026): bản quét trang PDF 7 (một thăng, 2/4, Presto., không số máy đếm nhịp), trang PDF 9 (Sol thứ ô 81–104, hóa biểu không đổi): khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)" ]
     luot_2_ghi_chu: Một thăng, 2/4, đoạn Sol thứ ô 81–104, chỉ ghi Presto.
+    review: dung
   - id: n3
     cau: 'Thời kỳ: Cổ điển.'
     loai: lich-su
     nguon: [ imslp-xvi27 ]
     ket_qua: dung
-    ghi_chu: 'IMSLP "Piece Style=Classical"; Mutopia Style Classical.'
+    ghi_chu: 'IMSLP "Piece Style=Classical"; Mutopia Style Classical. Review (Claude, 24/11/2026): IMSLP wikitext tải lại: "Piece Style=Classical". Khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/api.php?action=parse&page=Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)&prop=wikitext&format=json" ]
     luot_2_ghi_chu: IMSLP Piece Style=Classical.
+    review: dung
   - id: n4
     cau: 'Chặng 5, Grade 6; chip ≈ Grade 6; dòng Độ khó: đề cương RCM 2022 xếp chương này ở Level 8; Henle xếp cả bản sonata ở mức 5 trên thang 1–9; không có trong đề cương ABRSM; ước lượng Grade 6.'
     loai: cap-do
     nguon: [ rcm-2022, henle-hn1338, abrsm-2025, abrsm-2027 ]
     ket_qua: dung
-    ghi_chu: 'Như hồ sơ trang n4. Chặng 5 theo quy ước Grade 6 = chặng 5 (lo-trinh-them-tac-pham.md mục 2); khảo sát đợt 4 đã được chủ repo duyệt với chặng 5.'
+    ghi_chu: 'Như hồ sơ trang n4. Chặng 5 theo quy ước Grade 6 = chặng 5 (lo-trinh-them-tac-pham.md mục 2); khảo sát đợt 4 đã được chủ repo duyệt với chặng 5. Review (Claude, 24/11/2026): như hồ sơ trang n4 (RCM tr. 73 và Henle tải lại; so với mendelssohn-thuyen-ca, beethoven-op49-2, chopin-valse-si-thu cùng RCM Level 8): giữ chặng 5, Grade 6, chip ≈ Grade 6; dòng Độ khó ghi "Ước lượng Grade 6".'
     luot_2: dung
     luot_2_nguon: [ "https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf", "https://www.henle.de/us/Complete-Piano-Sonatas-Volume-II/HN-1338", "https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26%202026%20Prac%20syllabus%2020240524_access.pdf" ]
     luot_2_ghi_chu: "Như n4 của trang: RCM 2022 Level 8 (List B), Henle 5, không có trong ABRSM 2025 & 2026; Grade 6 ước lượng hợp lý; chặng 5 là chuyện của site."
+    review: dung
   - id: n5
     cau: 'Chip "Presto · viết khoảng 1774–1776"; dòng Sáng tác / xuất bản: viết khoảng 1774–1776; in lần đầu năm 1778 (theo IMSLP).'
     loai: nam
     nguon: [ imslp-xvi27 ]
     ket_qua: dung
-    ghi_chu: 'IMSLP: "Year/Date of Composition=1774-76 ca", "Year of First Publication=1778"; kern sonata42-3.krn ODT ~1774–1776 (hồ sơ trang).'
+    ghi_chu: 'IMSLP: "Year/Date of Composition=1774-76 ca", "Year of First Publication=1778"; kern sonata42-3.krn ODT ~1774–1776 (hồ sơ trang). Review (Claude, 24/11/2026): IMSLP wikitext tải lại: 1774-76 ca, First Publication 1778. Khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/api.php?action=parse&page=Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)&prop=wikitext&format=json" ]
     luot_2_ghi_chu: "IMSLP: 1774-76 ca; first publication 1778."
+    review: dung
   - id: n6
     cau: 'Dòng Tác phẩm: chương 3 (Finale. Presto) của Sonata cho đàn phím Sol trưởng Hob. XVI:27 (còn gọi Sonata số 42; Op. 14 số 1).'
     loai: ten
     nguon: [ imslp-xvi27 ]
     ket_qua: dung
-    ghi_chu: 'IMSLP: "Keyboard Sonata", "Alternative Title=Klaviersonate Nr.42", "Op.14 No.1".'
+    ghi_chu: 'IMSLP: "Keyboard Sonata", "Alternative Title=Klaviersonate Nr.42", "Op.14 No.1". Review (Claude, 24/11/2026): IMSLP wikitext tải lại: "Klaviersonate Nr.42", "Op.14 No.1". Khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/api.php?action=parse&page=Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)&prop=wikitext&format=json" ]
     luot_2_ghi_chu: "IMSLP: Klaviersonate Nr.42; Op.14 No.1."
+    review: dung
   - id: n7
-    cau: 'Chip "Chủ đề và biến tấu · 152 ô"; dòng Hình thức: chủ đề và biến tấu: chủ đề 24 ô, biến tấu 1, biến tấu 2, nửa đầu chủ đề trở lại, đoạn Sol thứ, biến tấu cuối.'
+    cau: 'Chip "Chủ đề và các biến tấu · 152 ô"; dòng Hình thức: một chủ đề và các biến tấu của nó: chủ đề 24 ô, biến tấu 1, biến tấu 2, nửa đầu chủ đề trở lại, đoạn Sol thứ, biến tấu cuối.'
     loai: cau-truc
     nguon: [ pasler-1918, mutopia-187 ]
-    ket_qua: dung
-    ghi_chu: 'Như hồ sơ trang n6, n15–n22.'
+    ket_qua: da-sua
+    ghi_chu: 'Như hồ sơ trang n6, n15–n22. Review (Claude, 24/11/2026): không có nguồn ngoài gọi tên hình thức chương này (hồ sơ trang n6): dòng Hình thức đổi "Chủ đề và biến tấu:" thành "Một chủ đề và các biến tấu của nó:", chip "Chủ đề và biến tấu" thành "Chủ đề và các biến tấu" (tả điều đọc được trên bản in, không gọi tên một loại hình thức). Các phần và số ô: đếm lại trên bản quét trang PDF 7–9, khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)" ]
     luot_2_ghi_chu: 152 ô; các phần như n2, n15–n21 của trang.
+    review: dung
   - id: n8
     cau: 'Sơ đồ hinh theo bản thu Kolodin (khoảng 3 phút 8 giây nhạc, giữ mọi dấu nhắc lại): Chủ đề (ô 1–24, mf) 41, Biến tấu 1 (ô 25–48, móc kép) 41, Biến tấu 2 (ô 49–72, f) 39, Chủ đề (ô 73–80, nửa đầu) 7, Sol thứ (ô 81–104) 22, Biến tấu cuối (ô 105–152, f, tay trái móc kép) 39.'
     loai: so-lieu
     nguon: [ imslp-kolodin, pasler-1918 ]
     ket_qua: dung
-    ghi_chu: 'Mốc đo ở hồ sơ trang: 1,58 / 42,12 / 83,36 / 122,0 / 129,10 / 150,7 / hợp âm cuối 189,85, tiếng tắt khoảng 190,9 s. Độ dài: 40,5; 41,2; 38,6; 7,1; 21,6; khoảng 39,5 s. Tổng 189 s, tức khoảng 3 phút 8–9 giây. Ô nhịp và sắc thái: bản quét (hồ sơ trang n15–n21, n33).'
+    ghi_chu: 'Mốc đo ở hồ sơ trang: 1,58 / 42,12 / 83,36 / 122,0 / 129,10 / 150,7 / hợp âm cuối 189,85, tiếng tắt khoảng 190,9 s. Độ dài: 40,5; 41,2; 38,6; 7,1; 21,6; khoảng 39,5 s. Tổng 189 s, tức khoảng 3 phút 8–9 giây. Ô nhịp và sắc thái: bản quét (hồ sơ trang n15–n21, n33). Review (Claude, 24/11/2026): mốc kiểm lại ở hồ sơ trang (16, 129, 157, 177 khớp); 41+41+39+7+22+39 = 189 s. Khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)", "https://imslp.org/api.php?action=parse&page=Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)&prop=wikitext&format=json" ]
     luot_2_ghi_chu: "Nhạc 1,6–190,9 s (~189 s, khoảng 3 phút 9 giây); 41+41+39+7+22+39 = 189. Chroma: vùng Sol thứ ~128–150 s khớp mốc 129,6–151,6; độ lớn giảm ~120–124 s khi chủ đề mf trở lại sau biến tấu 2."
+    review: dung
   - id: n9
-    cau: 'Kỹ năng chính (ky_nang_chinh, dòng Kỹ năng chính): Presto 2/4 nhẹ và đều; móc kép rõ từng nốt; láy trên ngắn; phát âm Cổ điển (luyến hai nốt, nốt tách nhẹ); tay trái chạy móc kép dưới giai điệu ở biến tấu cuối; đọc dấu hóa ở đoạn Sol thứ; nhận ra một chủ đề qua các biến tấu.'
+    cau: 'Kỹ năng chính (ky_nang_chinh, dòng Kỹ năng chính): Presto 2/4 nhẹ và đều; móc kép rõ từng nốt; dấu láy ngắn, đúng phách; phát âm Cổ điển (luyến hai nốt, nốt tách nhẹ); tay trái chạy móc kép dưới giai điệu ở biến tấu cuối; đọc dấu hóa ở đoạn Sol thứ; nhận ra một chủ đề qua các biến tấu.'
     loai: cau-truc
     nguon: [ pasler-1918 ]
-    ket_qua: dung
-    ghi_chu: 'Các yếu tố có trong bản quét: móc kép (biến tấu 1, 2), láy trên ô 8, luyến hai nốt (ô 2), tay trái móc kép (biến tấu cuối), dấu giáng cạnh nốt (Sol thứ).'
+    ket_qua: da-sua
+    ghi_chu: 'Các yếu tố có trong bản quét: móc kép (biến tấu 1, 2), láy trên ô 8, luyến hai nốt (ô 2), tay trái móc kép (biến tấu cuối), dấu giáng cạnh nốt (Sol thứ). Review (Claude, 24/11/2026): "láy trên ngắn" thành "dấu láy ngắn, đúng phách", theo hồ sơ trang n24 (cách chơi dấu ở ô 8 không chỉ một). Các yếu tố khác khớp bản quét.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)" ]
     luot_2_ghi_chu: "Các kỹ năng khớp bản nhạc (2/4 Presto, móc kép, dấu láy ô 8, luyến hai nốt ô 2, tay trái móc kép ô 105–152, dấu hóa đoạn Sol thứ). Cách chơi dấu láy: xem n24 của trang."
+    review: dung
   - id: n10
     cau: 'Dòng Bản nhạc: IMSLP có bản quét Haydns Werke (Päsler, Breitkopf & Härtel, 1918); bản gõ lại miễn phí trên Mutopia Project (id 187); bản Urtext G. Henle Verlag (Complete Piano Sonatas, tập II, HN 1338). Đối chiếu: chép tay từ bản quét Haydns Werke, Serie XIV, tập 2 (IMSLP #472026); đối chiếu Mutopia (phạm vi công cộng, theo C. F. Peters những năm 1880).'
     loai: so-lieu
     nguon: [ imslp-xvi27, mutopia-187, henle-hn1338, pasler-1918 ]
     ket_qua: dung
-    ghi_chu: 'IMSLP: file Päsler (#472026); Mutopia id 187 PD, Source C. F. Peters 1880s; Henle HN 1338 chứa XVI:27 (trang sản phẩm).'
+    ghi_chu: 'IMSLP: file Päsler (#472026); Mutopia id 187 PD, Source C. F. Peters 1880s; Henle HN 1338 chứa XVI:27 (trang sản phẩm). Review (Claude, 24/11/2026): IMSLP, Mutopia .ly (source "C. F. Peters, 1880s", "Public Domain"), Henle HN 1338 (trang tải lại có Hob. XVI:27): khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/api.php?action=parse&page=Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)&prop=wikitext&format=json", "https://imslp.org/api.php?action=parse&page=Template:HaydnPnSonatasPasler&prop=wikitext&format=json", "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=187", "https://www.henle.de/us/Complete-Piano-Sonatas-Volume-II/HN-1338" ]
     luot_2_ghi_chu: IMSLP có bản Päsler (Haydns Werke Serie XIV Bd.2, B&H 1918; file mang mã 472026); Mutopia id 187 phạm vi công cộng, theo Peters 1880s; Henle HN 1338 Complete Piano Sonatas Volume II.
+    review: dung
   - id: n11
-    cau: 'Bản thu: Luis Kolodin, ghi chú "IMSLP ghi năm 2020", CC BY-SA 4.0; trang IMSLP của tác phẩm; một phần chỉ dẫn link Special:ImagefromIndex/836476, trang File:PMLP1703-luis-kolodin-plays-haydn-s-sonata-in-g-major-i.mp3, 193,26 s.'
+    cau: 'Bản thu: Luis Kolodin, ghi chú "IMSLP ghi thông tin phát hành “Luis Kolodin, 2020”", CC BY-SA 4.0; trang IMSLP của tác phẩm; một phần chỉ dẫn link Special:ImagefromIndex/836476, trang File:PMLP1703-luis-kolodin-plays-haydn-s-sonata-in-g-major-i.mp3, 193,26 s.'
     loai: so-lieu
     nguon: [ imslp-xvi27, imslp-kolodin ]
-    ket_qua: dung
-    ghi_chu: 'IMSLP wikitext: "Publisher Information=Luis Kolodin, 2020.", "Copyright=Creative Commons Attribution-ShareAlike 4.0", File Name 3 như trên, "3. Finale. Presto", 3:13; file tải tay ffprobe 193,26 s (khớp 3:13). Chỉ mục 836476 theo khảo sát đợt 4 và tên file tải tay IMSLP836476-…'
+    ket_qua: da-sua
+    ghi_chu: 'IMSLP wikitext: "Publisher Information=Luis Kolodin, 2020.", "Copyright=Creative Commons Attribution-ShareAlike 4.0", File Name 3 như trên, "3. Finale. Presto", 3:13; file tải tay ffprobe 193,26 s (khớp 3:13). Chỉ mục 836476 theo khảo sát đợt 4 và tên file tải tay IMSLP836476-… Review (Claude, 24/11/2026): note cũ "IMSLP ghi năm 2020" không nói rõ năm gì; IMSLP wikitext chỉ có "Publisher Information=Luis Kolodin, 2020." (và "Date Submitted=2023/1/26"), không ghi năm thu. Ghi lại bằng attach.py --note --keep-ref (cùng link, src, d 193,26). Giấy phép "Copyright=Creative Commons Attribution-ShareAlike 4.0": khớp lic, licUrl.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/api.php?action=parse&page=Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)&prop=wikitext&format=json", "https://imslp.org/api.php?action=query&titles=File:PMLP1703-luis-kolodin-plays-haydn-s-sonata-in-g-major-i.mp3&prop=imageinfo&iiprop=size|url|timestamp&format=json", "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)" ]
     luot_2_ghi_chu: "IMSLP: 'Publisher Information=Luis Kolodin, 2020.', CC BY-SA 4.0; File:…-i.mp3 cỡ 3128430 byte, trùng file đã tải mang mã IMSLP836476; đo 193,26 s. Special:ImagefromIndex/836476 chuyển tới trang chờ nên không đọc trực tiếp."
+    review: dung

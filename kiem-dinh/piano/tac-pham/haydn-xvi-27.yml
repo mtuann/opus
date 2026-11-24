@@ -9,9 +9,9 @@ lan:
     nguoi:
       luot_1: Claude Opus 5.5 (lượt 1, them/haydn-xvi-27, 24/11/2026)
       luot_2: Claude Opus 5.5 (agent riêng, độc lập với lượt 1, 24/11/2026; 43 câu, 41 đúng, 2 không chắc)
-      review: null
+      review: "Claude (agent riêng, không làm lượt 1, lượt 2; 24/11/2026)"
       kiem_mau: null
-ghi_chu: 'Bài học mới (lộ trình thêm tác phẩm, lượt 10, đợt 4). Nốt nhạc và chữ chỉ dẫn chép từ bản quét Päsler (IMSLP #472026, PDF 10 trang không có số trang in, chỉ có sonata XVI:27; chương 1 trang PDF 1–4, Menuetto trang PDF 5–6, chương 3 trang PDF 7–10), đọc ở 100–300 dpi bằng PyMuPDF, cao độ đọc theo dòng kẻ trên ảnh phóng to. Đối chiếu: Mutopia id 187 (file .ly và .mid tải 24/11/2026 từ mutopiaproject.org/ftp/HaydnFJ/HOB-XVI-27/hob-xvi-27-iii-presto/) và kern sonata42-3.krn (Craig Sapp, theo Universal Edition 1901; CC BY-NC-SA 4.0, chỉ dùng trên máy để đếm ô và soát hình thức: các đoạn A–F có nhắc lại rồi G, *>[A,A,B,B,C,C,D,D,E,E,F,F,G]). Số ô theo Mutopia, không tính nhịp lấy đà: chủ đề 1–24, biến tấu 1 25–48, biến tấu 2 49–72, nửa đầu chủ đề 73–80, Sol thứ 81–104, biến tấu cuối 105–152 (kern đánh số lệch một từ ô 58, ghi =153 ở vạch cuối). Một chỗ Päsler khác Mutopia: nốt cuối ô 28 tay phải Päsler là Si4 (ảnh 150 dpi: đầu nốt nằm trên dòng 3), Mutopia ghi Sol4; trang theo Päsler. Mốc: tools/audio/align (cấu hình tạm ngoài repo, không thêm vào pieces.py vì ngoài phạm vi nhánh: MIDI Mutopia đặt vào bộ nhớ đệm scores/ tên mutopia_hob-xvi-27-iii-presto.mid; segs mở mọi dấu nhắc lại [(0,7),(0,7),(8,23),(8,23),(24,31),(24,31),(32,47),(32,47),(48,55),(48,55),(56,71),(56,71),(72,151)]; explore.py structure: cách nối này chi phí 0,357, biến thiên tốc độ -0,19..+0,13, tốt hơn không nhắc lại (0,386) và bỏ nhắc lại ở biến tấu 2 (0,363), nên bản thu giữ mọi dấu nhắc lại). Biến thể thường và khởi âm khớp trong 1,5 s ở mọi dòng, biến thể thô→mịn hỏng (dồn về cuối); mỗi mốc kiểm lại bằng explore.py onsets (khởi âm từng cao độ, móc đơn khoảng 0,21–0,23 s): 2 (nhịp lấy đà Rê4 1,58 s, Sol4 1,86 s); 16 (Rê5–Si4–Sol♯4–Mi4 của ô 9 ở 15,79/16,02/16,21/16,39 s, lấy đà khoảng 15,58 s); 42 (căn ra 42,8; khởi âm: lấy đà Rê4 42,12 s, ô 25 Sol4 42,40 s, ô 26 Sol4 43,24 s, ô 27 Đô5 khoảng 44,1 s); 83 (lấy đà Rê5 83,36 s, rồi Sol5 83,55, Mi5 83,78, Rê5 83,87); 122 (ô 73 Sol4–Si4–Rê5–Sol4 ở 122,23/122,46/122,65/122,83 s, lấy đà khoảng 122,0); 129 (lấy đà Rê4 129,10 s, Si♭4 129,80, Rê5 130,03); 151 (ô 105 Sol4–Si4–Rê5 ở 150,88/151,12/151,35 s, lấy đà khoảng 150,7); 157 (căn ra 157,6; ô 113 Rê5–Sol5–Si5–Rê6 móc kép ở 157,52–157,80 s, hai móc kép lấy đà khoảng 157,34); 164 (lấy đà 163,84 s, Rê6 164,03, Sol♯5 164,49, Mi5 164,63); 177 (lấy đà Mi4 176,94 s, Sol♯4 177,08, rồi Si4, Rê5, Sol♯5, Si5, Rê6 tới 177,54). Hợp âm cuối khoảng 189,85 s; có tiếng từ 1,58 s tới khoảng 190,9 s. Ghi bằng attach.py --ref. File IMSLP tải tay (_imslp/IMSLP836476-…-i.mp3, 3 128 430 byte, khớp size trên IMSLP API) thật ra là MP4/AAC (DASH), đuôi .mp3; ffprobe 193,26 s. Chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng thuộc hồ sơ du-lieu/tac-pham/haydn-xvi-27. Không tính là nhận định: tiêu đề mục, tiêu đề cột, mốc trong ::khoi-nghe (cách đo ghi ở đây), câu hỏi để nghe.'
+ghi_chu: 'Bài học mới (lộ trình thêm tác phẩm, lượt 10, đợt 4). Nốt nhạc và chữ chỉ dẫn chép từ bản quét Päsler (IMSLP #472026, PDF 10 trang không có số trang in, chỉ có sonata XVI:27; chương 1 trang PDF 1–4, Menuetto trang PDF 5–6, chương 3 trang PDF 7–10), đọc ở 100–300 dpi bằng PyMuPDF, cao độ đọc theo dòng kẻ trên ảnh phóng to. Đối chiếu: Mutopia id 187 (file .ly và .mid tải 24/11/2026 từ mutopiaproject.org/ftp/HaydnFJ/HOB-XVI-27/hob-xvi-27-iii-presto/) và kern sonata42-3.krn (Craig Sapp, theo Universal Edition 1901; CC BY-NC-SA 4.0, chỉ dùng trên máy để đếm ô và soát hình thức: các đoạn A–F có nhắc lại rồi G, *>[A,A,B,B,C,C,D,D,E,E,F,F,G]). Số ô theo Mutopia, không tính nhịp lấy đà: chủ đề 1–24, biến tấu 1 25–48, biến tấu 2 49–72, nửa đầu chủ đề 73–80, Sol thứ 81–104, biến tấu cuối 105–152 (kern đánh số lệch một từ ô 58, ghi =153 ở vạch cuối). Một chỗ Päsler khác Mutopia: nốt cuối ô 28 tay phải Päsler là Si4 (ảnh 150 dpi: đầu nốt nằm trên dòng 3), Mutopia ghi Sol4; trang theo Päsler. Mốc: tools/audio/align (cấu hình tạm ngoài repo, không thêm vào pieces.py vì ngoài phạm vi nhánh: MIDI Mutopia đặt vào bộ nhớ đệm scores/ tên mutopia_hob-xvi-27-iii-presto.mid; segs mở mọi dấu nhắc lại [(0,7),(0,7),(8,23),(8,23),(24,31),(24,31),(32,47),(32,47),(48,55),(48,55),(56,71),(56,71),(72,151)]; explore.py structure: cách nối này chi phí 0,357, biến thiên tốc độ -0,19..+0,13, tốt hơn không nhắc lại (0,386) và bỏ nhắc lại ở biến tấu 2 (0,363), nên bản thu giữ mọi dấu nhắc lại). Biến thể thường và khởi âm khớp trong 1,5 s ở mọi dòng, biến thể thô→mịn hỏng (dồn về cuối); mỗi mốc kiểm lại bằng explore.py onsets (khởi âm từng cao độ, móc đơn khoảng 0,21–0,23 s): 2 (nhịp lấy đà Rê4 1,58 s, Sol4 1,86 s); 16 (Rê5–Si4–Sol♯4–Mi4 của ô 9 ở 15,79/16,02/16,21/16,39 s, lấy đà khoảng 15,58 s); 42 (căn ra 42,8; khởi âm: lấy đà Rê4 42,12 s, ô 25 Sol4 42,40 s, ô 26 Sol4 43,24 s, ô 27 Đô5 khoảng 44,1 s); 83 (lấy đà Rê5 83,36 s, rồi Sol5 83,55, Mi5 83,78, Rê5 83,87); 122 (ô 73 Sol4–Si4–Rê5–Sol4 ở 122,23/122,46/122,65/122,83 s, lấy đà khoảng 122,0); 129 (lấy đà Rê4 129,10 s, Si♭4 129,80, Rê5 130,03); 151 (ô 105 Sol4–Si4–Rê5 ở 150,88/151,12/151,35 s, lấy đà khoảng 150,7); 157 (căn ra 157,6; ô 113 Rê5–Sol5–Si5–Rê6 móc kép ở 157,52–157,80 s, hai móc kép lấy đà khoảng 157,34); 164 (lấy đà 163,84 s, Rê6 164,03, Sol♯5 164,49, Mi5 164,63); 177 (lấy đà Mi4 176,94 s, Sol♯4 177,08, rồi Si4, Rê5, Sol♯5, Si5, Rê6 tới 177,54). Hợp âm cuối khoảng 189,85 s; có tiếng từ 1,58 s tới khoảng 190,9 s. Ghi bằng attach.py --ref. File IMSLP tải tay (_imslp/IMSLP836476-…-i.mp3, 3 128 430 byte, khớp size trên IMSLP API) thật ra là MP4/AAC (DASH), đuôi .mp3; ffprobe 193,26 s. Chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng thuộc hồ sơ du-lieu/tac-pham/haydn-xvi-27. Không tính là nhận định: tiêu đề mục, tiêu đề cột, mốc trong ::khoi-nghe (cách đo ghi ở đây), câu hỏi để nghe. Review (Claude, 24/11/2026): bốn mốc kiểm lại bằng librosa onset và CQT trên file tải tay: 16 (lấy đà Rê4 15,57 s, ô 9 Rê5 15,79, Si4 16,02, Sol♯4 16,23, Mi 16,43), 129 (lấy đà Rê4 129,16 s, ô 81 Sol4 129,52, Si♭4 129,83, Rê5 130,04), 157 (Sol4 157,35, Si4 157,47, Rê5 157,53, Sol5, Si5, Rê6 tới 157,81), 177 (Mi 176,98, Sol♯4 177,08, Si4, Rê5, Sol♯5, Si5, Rê6 tới 177,52): khớp lượt 1, không đổi mốc. note của bản thu đổi thành "IMSLP ghi thông tin phát hành “Luis Kolodin, 2020”" (wikitext: "Publisher Information=Luis Kolodin, 2020."; không nói là năm thu), ghi bằng attach.py --note --keep-ref. Đếm ô trên bản in: trang PDF 9 có 9 + 8 + 8 + 7 ô ở bốn hệ đầu (73–104), khớp số ô của Mutopia.'
 nguon:
   - id: pasler-1918
     bac: 1
@@ -69,103 +69,119 @@ nguon:
     bac: 2
     ten: 'Trang piano/tieng-dan (đã khóa), mục "Phát âm theo phong cách": Cổ điển (Haydn, Mozart, Beethoven thời trẻ): rõ, nhẹ; dấu luyến ngắn khép lại bằng nhấc tay; đệm Alberti rất nhẹ; bàn đạp ngắn, nhẹ'
     link: https://mtuann.github.io/opus/piano/tieng-dan/#phat-am-theo-phong-cach
+  - id: dolmetsch-23
+    bac: 2
+    ten: 'Dolmetsch Online, Music Theory, Lesson 23 (Ornamentation), mục Pralltriller và Mordents (tải 24/11/2026): Pralltriller của C.P.E. Bach như láy rền cực nhanh bốn nốt, nốt đầu nối với nốt trước, "never appears over detached notes"; "From the mid eighteenth century, the Schneller, the inverted mordent, gradually replaced the Pralltriller"; Schneller (upper mordent) viết bằng dấu láy rền, ba nốt: nốt viết, nốt trên, trở lại nốt viết'
+    link: https://www.dolmetsch.com/musictheory23.htm
 nhan_dinh:
   - id: n1
     cau: 'Chương cuối (chương 3) của Sonata Sol trưởng Hob. XVI:27 của Joseph Haydn ghi Finale. Presto.'
     loai: ten
     nguon: [ pasler-1918, imslp-xvi27 ]
     ket_qua: dung
-    ghi_chu: 'Bản quét trang PDF 7: "Finale." và "Presto." trên hệ đầu, hóa biểu một dấu thăng; trang PDF 10 kết bằng vạch kép. IMSLP: 3 chương, chương 3 "Finale. Presto (G)".'
+    ghi_chu: 'Bản quét trang PDF 7: "Finale." và "Presto." trên hệ đầu, hóa biểu một dấu thăng; trang PDF 10 kết bằng vạch kép. IMSLP: 3 chương, chương 3 "Finale. Presto (G)". Review (Claude, 24/11/2026): bản quét trang PDF 7 (Finale. Presto., một thăng, 2/4) và IMSLP wikitext (Finale. Presto (G)): khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)", "https://imslp.org/api.php?action=parse&page=Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)&prop=wikitext&format=json" ]
     luot_2_ghi_chu: "Bản Päsler (IMSLP #472026), trang chương 3 ghi 'Finale. Presto.'; IMSLP: 'Finale. Presto (G)'."
+    review: dung
   - id: n2
     cau: 'Chương này dựng trên một chủ đề 24 ô, Presto; chủ đề trở lại nhiều lần: thêm nốt móc kép, đổi sang Sol thứ, rồi tay trái chạy liên tục bên dưới.'
     loai: cau-truc
     nguon: [ pasler-1918, mutopia-187 ]
     ket_qua: dung
-    ghi_chu: 'Bản quét trang PDF 7: chủ đề 8 ô có nhắc lại rồi 16 ô có nhắc lại (24 ô); biến tấu 1 (trang PDF 7 hệ 4) có móc kép; đoạn Sol thứ (trang PDF 9 từ ô thứ 9 của hệ 1: Sol–Si♭–Rê–Sol); biến tấu cuối (trang PDF 9 hệ 5 trở đi) tay trái móc kép liên tục. Mutopia .ly khớp.'
+    ghi_chu: 'Bản quét trang PDF 7: chủ đề 8 ô có nhắc lại rồi 16 ô có nhắc lại (24 ô); biến tấu 1 (trang PDF 7 hệ 4) có móc kép; đoạn Sol thứ (trang PDF 9 từ ô thứ 9 của hệ 1: Sol–Si♭–Rê–Sol); biến tấu cuối (trang PDF 9 hệ 5 trở đi) tay trái móc kép liên tục. Mutopia .ly khớp. Review (Claude, 24/11/2026): đọc lại bản quét trang PDF 7–10: chủ đề 8 + 16 ô có nhắc lại; móc kép từ ô 25; Sol thứ trang PDF 9 hệ 1 ô cuối tới hệ 4; biến tấu cuối tay trái móc kép: khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)" ]
     luot_2_ghi_chu: "Đếm ô trên bản Päsler: chủ đề ô 1–24 (Presto); biến tấu 1 thêm móc kép ô 25–48; Sol thứ ô 81–104; biến tấu cuối ô 105–152 tay trái móc kép liên tục."
+    review: dung
   - id: n3
     cau: 'Đây là bài học Haydn đầu tiên trên site; bài ở chặng 5 của lộ trình.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'src/data/tac-pham.yml: trước bản ghi này không có bản ghi tac_gia haydn loai bai-hoc (chỉ có haydn-94, loai nghe); bản ghi mới chang 5.'
+    ghi_chu: 'src/data/tac-pham.yml: trước bản ghi này không có bản ghi tac_gia haydn loai bai-hoc (chỉ có haydn-94, loai nghe); bản ghi mới chang 5. Review (Claude, 24/11/2026): src/data/tac-pham.yml: bản ghi tac_gia haydn loai bai-hoc duy nhất là haydn-xvi-27 (haydn-94 loai nghe); chang 5. Đúng.'
+    review: dung
   - id: n4
     cau: 'Đề cương RCM 2022 xếp chương này ở Level 8 (danh sách B); Henle xếp cả bản sonata ở mức 5 trên thang 1–9; ABRSM chưa đưa chương này vào đề cương, nên Grade 6 là ước lượng.'
     loai: cap-do
     nguon: [ rcm-2022, henle-hn1338, abrsm-2025, abrsm-2027 ]
     ket_qua: dung
-    ghi_chu: 'RCM tr. 73: Level 8, List B, "Sonata in G Major, Hob. XVI:27 l 3rd movement: Finale". Henle HN 1338: "Piano Sonata G major Hob. XVI:27 5 medium" (thang Henle 1–9 như các trang tác phẩm khác). ABRSM 2025–2026 và 2027–2028: không có XVI:27 (tìm "Hob. XVI" trong chữ PDF); khảo sát đợt 4 đọc các đề cương 2011–2028. Grade 6 ước lượng: RCM Level 8 cũng có Beethoven Op. 49 số 2 (site ghi Grade 5, chặng 4) và lộ trình quy chặng 5 = Grade 6 (lo-trinh-them-tac-pham.md mục 2).'
+    ghi_chu: 'RCM tr. 73: Level 8, List B, "Sonata in G Major, Hob. XVI:27 l 3rd movement: Finale". Henle HN 1338: "Piano Sonata G major Hob. XVI:27 5 medium" (thang Henle 1–9 như các trang tác phẩm khác). ABRSM 2025–2026 và 2027–2028: không có XVI:27 (tìm "Hob. XVI" trong chữ PDF); khảo sát đợt 4 đọc các đề cương 2011–2028. Grade 6 ước lượng: RCM Level 8 cũng có Beethoven Op. 49 số 2 (site ghi Grade 5, chặng 4) và lộ trình quy chặng 5 = Grade 6 (lo-trinh-them-tac-pham.md mục 2). Review (Claude, 24/11/2026): đọc lại RCM 2022 (PDF tải lại): tr. 73 Level 8 List B "Sonata in G Major, Hob. XVI:27 l 3rd movement: Finale", cùng trang có Beethoven Op. 49 số 2 (chương 1, 2); tr. 64 Level 7 chương 2. Henle HN 1338 (trang tải lại): "Piano Sonata G major Hob. XVI:27 5 medium". Giữ Grade 6 (ước lượng), chặng 5; so cách site xếp các bài RCM Level 8: mendelssohn-thuyen-ca (RCM 8, ABRSM 6, Henle 4) chặng 5, Grade 5–6; beethoven-op49-2 (RCM 8, Henle 3 "dễ") chặng 4, Grade 5; chopin-valse-si-thu (RCM 8, ABRSM 8, Henle 4) chặng 6. Bài này Henle 5 (cả sonata, cao hơn Op. 49 số 2 hai mức), móc kép liên tục ở Presto: đặt cạnh Mendelssohn ở chặng 5 là nhất quán; khảo sát đợt 4 (chủ repo duyệt) cũng ghi RCM Level 8 ≈ Grade 5–6. Chữ "ước lượng" có ở mục Vì sao và dòng Độ khó.'
     luot_2: dung
     luot_2_nguon: [ "https://rcmusic-production-strapi-media.s3.ca-central-1.amazonaws.com/piano_syllabus_2022_edition_9c6a49bb96.pdf", "https://www.henle.de/us/Complete-Piano-Sonatas-Volume-II/HN-1338", "https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26%202026%20Prac%20syllabus%2020240524_access.pdf" ]
     luot_2_ghi_chu: "RCM Piano Syllabus 2022, Level 8 List B (tr. 73): 'Sonata in G Major, Hob. XVI:27, 3rd movement: Finale' (Level 7, tr. 64, chỉ có chương 2). Henle HN 1338: 'Piano Sonata G major Hob. XVI:27 5 medium'. Đề cương ABRSM Piano 2025 & 2026 không có Hob. XVI:27. Grade 6 là ước lượng hợp lý (RCM 8 khoảng ABRSM 6–7; Henle 5)."
+    review: dung
   - id: n5
     cau: 'Nhịp 2/4 nhanh, nhưng tiếng đàn phải nhẹ và đều; các nốt móc kép của biến tấu phải rõ từng nốt.'
     loai: khuyen-tap
     ket_qua: khong-can-nguon
     ghi_chu: 'Lời khuyên tập; nhịp 2/4 và móc kép ở biến tấu: bản quét trang PDF 7–8. Không trái trang lõi tieng-dan (Cổ điển: rõ, nhẹ).'
+    review: dung
   - id: n6
-    cau: 'Chương này là chủ đề và biến tấu, như chương 2 Giao hưởng số 94 của cùng tác giả, cũng là một bộ biến tấu có một biến tấu giọng thứ.'
+    cau: 'Chương này dựng trên một chủ đề và các biến tấu của nó, như chương 2 Giao hưởng số 94 của cùng tác giả, cũng là một bộ biến tấu có một biến tấu giọng thứ.'
     loai: cau-truc
     nguon: [ pasler-1918, mutopia-187, kern-sonata42-3, site-haydn-94 ]
-    ket_qua: dung
-    ghi_chu: 'Bản quét: một chủ đề hai nửa có nhắc lại, rồi các lượt cùng khung (8 ô + 16 ô, cùng hòa âm, cùng nốt chính của giai điệu) với hình nốt khác: trang PDF 7 hệ 4 (móc kép), trang PDF 8 hệ 2 (f, móc kép liên tục), trang PDF 9 (Sol thứ; Sol trưởng tay trái móc kép). Kern: các đoạn A–F có nhắc lại, G không nhắc lại. Hình thức đọc từ bản nhạc (lượt 1 không tìm được nguồn ngoài gọi tên hình thức chương này; IMSLP và Henle không ghi). Giao hưởng số 94: trang site đã khóa (biến tấu 2 Đô thứ).'
+    ket_qua: da-sua
+    ghi_chu: 'Bản quét: một chủ đề hai nửa có nhắc lại, rồi các lượt cùng khung (8 ô + 16 ô, cùng hòa âm, cùng nốt chính của giai điệu) với hình nốt khác: trang PDF 7 hệ 4 (móc kép), trang PDF 8 hệ 2 (f, móc kép liên tục), trang PDF 9 (Sol thứ; Sol trưởng tay trái móc kép). Kern: các đoạn A–F có nhắc lại, G không nhắc lại. Hình thức đọc từ bản nhạc (lượt 1 không tìm được nguồn ngoài gọi tên hình thức chương này; IMSLP và Henle không ghi). Giao hưởng số 94: trang site đã khóa (biến tấu 2 Đô thứ). Review (Claude, 24/11/2026): không tìm được nguồn ngoài gọi tên hình thức chương này (IMSLP, Henle trang sản phẩm và lời tựa HN 1338, Mutopia; hai lần tìm web 24/11/2026 không ra). Hình thức đọc từ bản in (bậc 1): đếm trên bản quét các lượt cùng khung 8 + 16 ô, cùng hòa âm (ô 1–24, 25–48, 49–72; Sol thứ 81–104; Sol trưởng 105–152), nửa đầu chủ đề trở lại ở ô 73–80, câu ô 89–96 viết lại ô 97–104 (trang PDF 9 hệ 2 ô 8 tới hệ 4). Vì không có nguồn gọi tên, trang bỏ cách gọi tên một loại hình thức ("Bài là chủ đề và biến tấu", câu hỏi "Chương này được viết theo hình thức nào?"), chỉ tả: "dựng trên một chủ đề và các biến tấu của nó". Sửa cả chip và dòng Hình thức của bản ghi (hồ sơ bản ghi n7). Giao hưởng số 94: trang site đã khóa (biến tấu 2 Đô thứ).'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)", "https://www.hollywoodbowl.com/musicdb/pieces/4078/symphony-no-94-surprise", "https://archive.org/details/surprisehaydnsce00hayd" ]
     luot_2_ghi_chu: "Chương 3: chủ đề rồi các lần trở lại biến đổi, có đoạn Sol thứ (bản Päsler). Giao hưởng 94 chương 2: LA Phil ghi 'The four ensuing variations on the theme'; bè cello của bản soạn 1823 (Clementi, Collard & Collard) có đoạn Andante đổi hóa biểu ba giáng (Đô thứ), ff."
+    review: dung
   - id: n7
     cau: 'Luyến hai nốt, nốt tách nhẹ, đệm mỏng là những thói quen dùng lại được cho Mozart và Beethoven thời trẻ.'
     loai: khuyen-tap
     ket_qua: khong-can-nguon
     ghi_chu: 'Khớp trang lõi piano/tieng-dan, bảng Phát âm theo phong cách (dòng Cổ điển: Haydn, Mozart, Beethoven thời trẻ).'
+    review: dung
   - id: n8
     cau: 'Joseph Haydn (1732–1809) viết Sonata Sol trưởng Hob. XVI:27 khoảng năm 1774–1776; bản in đầu tiên ra năm 1778 (theo IMSLP).'
     loai: nam
     nguon: [ imslp-xvi27, imslp-hob, kern-sonata42-3 ]
     ket_qua: dung
-    ghi_chu: 'IMSLP: "Year/Date of Composition=1774-76 ca", "Year of First Publication=1778"; danh sách tác phẩm IMSLP: XVI:27 "1774-76 ca"; kern ODT ~1774/~1776. Năm sinh–mất: src/data/nha-soan-nhac.yml (haydn, đã khóa) 1732–1809; kern CDT 1732/03/31–1809/05/31.'
+    ghi_chu: 'IMSLP: "Year/Date of Composition=1774-76 ca", "Year of First Publication=1778"; danh sách tác phẩm IMSLP: XVI:27 "1774-76 ca"; kern ODT ~1774/~1776. Năm sinh–mất: src/data/nha-soan-nhac.yml (haydn, đã khóa) 1732–1809; kern CDT 1732/03/31–1809/05/31. Review (Claude, 24/11/2026): IMSLP wikitext tải lại: "Year/Date of Composition=1774-76 ca", "First Publication=1778". Khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/api.php?action=parse&page=Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)&prop=wikitext&format=json", "https://www.henle.de/media/e6/ff/04/1697725898/1338-1697725898-sync.pdf", "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=187" ]
     luot_2_ghi_chu: "IMSLP: 'Year/Date of Composition=1774-76 ca', 'Year of First Publication=1778'. Henle: in thành bộ năm 1778 (Hummel), có thể viết sớm hơn. Năm sinh–mất 1732–1809: Mutopia, Henle."
+    review: dung
   - id: n9
     cau: 'Những năm ấy Haydn phục vụ gia đình quý tộc Esterházy.'
     loai: lich-su
     nguon: [ henle-hn1338 ]
     ket_qua: dung
-    ghi_chu: 'Niên biểu trên trang Henle HN 1338: 1776, Hoàng thân Nikolaus đòi diễn opera đều đặn ở Eszterháza; Haydn chuyển từ Eisenstadt tới lâu đài Eszterháza, ở đó mười tháng mỗi năm. Trang site lich-su/nha-soan-nhac (đã khóa): Haydn phục vụ gia đình Esterházy gần 30 năm.'
+    ghi_chu: 'Niên biểu trên trang Henle HN 1338: 1776, Hoàng thân Nikolaus đòi diễn opera đều đặn ở Eszterháza; Haydn chuyển từ Eisenstadt tới lâu đài Eszterháza, ở đó mười tháng mỗi năm. Trang site lich-su/nha-soan-nhac (đã khóa): Haydn phục vụ gia đình Esterházy gần 30 năm. Review (Claude, 24/11/2026): Henle HN 1338 (trang tải lại): niên biểu có mục Eszterháza (1768, nhà hát opera mới; 1776). Khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://www.henle.de/media/e6/ff/04/1697725898/1338-1697725898-sync.pdf" ]
     luot_2_ghi_chu: "Lời tựa HN 1338: sonata XVI:21–26 (1773) đề tặng 'his employer, Prince Nikolaus I Esterházy'."
+    review: dung
   - id: n10
     cau: 'Sonata có ba chương: Allegro con brio, Menuetto với Trio Sol thứ, và Finale. Presto.'
     loai: ten
     nguon: [ imslp-xvi27, pasler-1918 ]
     ket_qua: dung
-    ghi_chu: 'IMSLP: "3 movements: Allegro con brio (G); Minuet (G) - Trio (g); Finale. Presto (G)". Bản quét: trang PDF 1 "Allegro con brio.", trang PDF 5 "Menuetto.", trang PDF 7 "Finale. Presto.". Giọng Sol thứ của Trio theo IMSLP (lượt 1 không đọc Trio trên bản quét).'
+    ghi_chu: 'IMSLP: "3 movements: Allegro con brio (G); Minuet (G) - Trio (g); Finale. Presto (G)". Bản quét: trang PDF 1 "Allegro con brio.", trang PDF 5 "Menuetto.", trang PDF 7 "Finale. Presto.". Giọng Sol thứ của Trio theo IMSLP (lượt 1 không đọc Trio trên bản quét). Review (Claude, 24/11/2026): IMSLP wikitext: "Movements Header=3 movements"; bản quét trang PDF 5 "Menuetto." Khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/api.php?action=parse&page=Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)&prop=wikitext&format=json", "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)" ]
     luot_2_ghi_chu: "IMSLP: Allegro con brio (G), Minuet (G) – Trio (g), Finale. Presto (G). Bản Päsler ghi 'Menuetto', 'Trio' (hai giáng)."
+    review: dung
   - id: n11
     cau: 'Hob. XVI:27 là số trong danh mục tác phẩm Haydn của Anthony van Hoboken; nhóm XVI là các sonata cho đàn phím; một cách đánh số khác gọi bài này là sonata số 42.'
     loai: danh-muc
     nguon: [ imslp-hob, imslp-xvi27, kern-sonata42-3 ]
     ket_qua: dung
-    ghi_chu: 'IMSLP List of works: tiêu đề Hoboken, mục "Hob.XVI (1-52) Keyboard Sonatas". IMSLP trang tác phẩm: "Alternative Title=Klaviersonate Nr.42". Kern: OTL "Sonata No. 42 in G major", SCT Hob. XVI:27. Tên đầy đủ Anthony van Hoboken: lượt 2 kiểm.'
+    ghi_chu: 'IMSLP List of works: tiêu đề Hoboken, mục "Hob.XVI (1-52) Keyboard Sonatas". IMSLP trang tác phẩm: "Alternative Title=Klaviersonate Nr.42". Kern: OTL "Sonata No. 42 in G major", SCT Hob. XVI:27. Tên đầy đủ Anthony van Hoboken: lượt 2 kiểm. Review (Claude, 24/11/2026): IMSLP wikitext tải lại: "Alternative Title=Klaviersonate Nr.42", "XVI:27}} ; Op.14 No.1". Khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/api.php?action=parse&page=Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)&prop=wikitext&format=json", "https://archive.org/details/JosephHaydnThematisch-bibliographischesWerkverzeichnis", "https://www.henle.de/us/Complete-Piano-Sonatas-Volume-II/HN-1338" ]
     luot_2_ghi_chu: "IMSLP: 'Hob. XVI:27 ; Op.14 No.1', 'Klaviersonate Nr.42'. Danh mục: archive.org 'Anthony van Hoboken: Joseph Haydn thematisch-bibliographisches Werkverzeichnis'. Nhóm XVI là sonata đàn phím: Henle Complete Piano Sonatas đánh số Hob. XVI."
+    review: dung
   - id: n12
     cau: 'Haydn viết cho đàn phím nói chung: thời ấy là đàn harpsichord hay piano đời đầu.'
     loai: lich-su
     nguon: [ imslp-xvi27, mutopia-187 ]
     ket_qua: dung
-    ghi_chu: 'IMSLP: "Instrumentation=keyboard", tên "Keyboard Sonata". Mutopia: Instrument(s) "Harpsichord, Piano". Cụm "piano đời đầu": cách nói chung, lượt 2 kiểm.'
+    ghi_chu: 'IMSLP: "Instrumentation=keyboard", tên "Keyboard Sonata". Mutopia: Instrument(s) "Harpsichord, Piano". Cụm "piano đời đầu": cách nói chung, lượt 2 kiểm. Review (Claude, 24/11/2026): Mutopia .ly tải lại: mutopiainstrument "Harpsichord, Piano"; IMSLP "Instrumentation=keyboard". Khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://www.henle.de/media/e6/ff/04/1697725898/1338-1697725898-sync.pdf" ]
     luot_2_ghi_chu: "Lời tựa HN 1338: 'Until the 1780s, Haydn's keyboard music was played on the harpsichord or fortepiano, and also ... clavichord'; IMSLP Instrumentation=keyboard."
+    review: dung
   - id: n13
     cau: 'Bản nhạc trên trang chép từ ấn bản Haydns Werke (Toàn tập Haydn), Serie XIV, tập 2, do Karl Päsler biên tập, nhà Breitkopf & Härtel (Leipzig) in năm 1918.'
     loai: ten
@@ -175,33 +191,37 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/api.php?action=parse&page=Template:HaydnPnSonatasPasler&prop=wikitext&format=json", "https://imslp.org/api.php?action=parse&page=Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)&prop=wikitext&format=json", "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)" ]
     luot_2_ghi_chu: "IMSLP: file Päsler (Editor Karl Päsler); mẫu HaydnPnSonatasPasler: 'Haydns Werke, Serie XIV ... Bd.2', Breitkopf und Härtel, Leipzig, 1918."
+    review: dung
   - id: n14
     cau: 'Bản thu gợi ý là của nghệ sĩ piano Luis Kolodin, đăng trên IMSLP; người chơi giữ mọi dấu nhắc lại.'
     loai: ten
     nguon: [ imslp-kolodin, kolodin-file ]
     ket_qua: dung
-    ghi_chu: 'IMSLP: Performer Categories Kolodin, Luis = Piano; file 3 "3. Finale. Presto". Dấu nhắc lại: explore.py structure với MIDI Mutopia, mở cả 6 dấu nhắc lại cho chi phí thấp nhất (0,357) và biến thiên tốc độ nhỏ nhất (-0,19..+0,13); 224 ô ở khoảng 0,84 s một ô khớp khoảng 188 s nhạc; khởi âm: nửa sau chủ đề bắt đầu 15,6 s, biến tấu 1 ở 42,1 s, tức 48 ô (8 + 8 + 16 + 16) trong khoảng 40,5 s (xem ghi_chu chung).'
+    ghi_chu: 'IMSLP: Performer Categories Kolodin, Luis = Piano; file 3 "3. Finale. Presto". Dấu nhắc lại: explore.py structure với MIDI Mutopia, mở cả 6 dấu nhắc lại cho chi phí thấp nhất (0,357) và biến thiên tốc độ nhỏ nhất (-0,19..+0,13); 224 ô ở khoảng 0,84 s một ô khớp khoảng 188 s nhạc; khởi âm: nửa sau chủ đề bắt đầu 15,6 s, biến tấu 1 ở 42,1 s, tức 48 ô (8 + 8 + 16 + 16) trong khoảng 40,5 s (xem ghi_chu chung). Review (Claude, 24/11/2026): IMSLP wikitext: Performer Categories "Kolodin, Luis=Piano", file 3 "3. Finale. Presto". Khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/api.php?action=parse&page=Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)&prop=wikitext&format=json", "https://imslp.org/api.php?action=query&titles=File:PMLP1703-luis-kolodin-plays-haydn-s-sonata-in-g-major-i.mp3&prop=imageinfo&iiprop=size|url|timestamp&format=json", "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)" ]
     luot_2_ghi_chu: "IMSLP: bản thu Luis Kolodin, chương 3 'Finale. Presto' 3:13. Đo file: nhạc 1,6–190,9 s (~189 s). Giữ mọi nhắc lại là 224 ô (~0,85 s/ô, ♩ khoảng 142, hợp Presto); bỏ nhắc lại chỉ 128 ô (♩ khoảng 81, không hợp). Vùng Sol thứ (chroma Si giáng + Mi giáng trội) ở ~128–150 s, khớp."
+    review: dung
   - id: n15
     cau: 'Chủ đề, nửa đầu (ô 1–8, mf): ba nốt Sol–Si–Rê đi lên, tay trái đệm hợp âm thưa; nửa đầu kết ở Rê, có dấu nhắc lại.'
     loai: cau-truc
     nguon: [ pasler-1918, mutopia-187 ]
     ket_qua: dung
-    ghi_chu: 'Bản quét trang PDF 7 hệ 1: mf dưới nhịp lấy đà; ô 1 Sol4–Si4–Rê5–Sol4; tay trái hợp âm đen và móc đơn xen dấu lặng; ô 8 Rê5 nốt đen có láy, tay trái Rê4 và Rê3; vạch nhắc lại. Xem khuong_nhac khối 1.'
+    ghi_chu: 'Bản quét trang PDF 7 hệ 1: mf dưới nhịp lấy đà; ô 1 Sol4–Si4–Rê5–Sol4; tay trái hợp âm đen và móc đơn xen dấu lặng; ô 8 Rê5 nốt đen có láy, tay trái Rê4 và Rê3; vạch nhắc lại. Xem khuong_nhac khối 1. Review (Claude, 24/11/2026): so lại bản quét trang PDF 7 hệ 1 ở 150 dpi và 600 dpi (ảnh gốc 1836 × 2448 px): khớp (xem khuong_nhac khối 1).'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)" ]
     luot_2_ghi_chu: "Ô 1: G4–B4–D5–G4; tay trái hợp âm ngắn, có nghỉ; mf; ô 8 Rê, dấu nhắc lại."
+    review: dung
   - id: n16
     cau: 'Nửa sau của chủ đề (ô 9–24) mở đầu bằng những nốt đi xuống, rồi nửa đầu trở lại ở ô 17–20 và kết ở Sol trưởng; nửa sau có dấu nhắc lại.'
     loai: cau-truc
     nguon: [ pasler-1918, mutopia-187 ]
     ket_qua: dung
-    ghi_chu: 'Bản quét trang PDF 7 hệ 2: sau vạch nhắc lại, ô 9 Rê5–Si4–Sol♯4–Mi4 đi xuống; hệ 3 ô 1–4 (ô 17–20) lại Sol–Si–Rê–Sol như ô 1–4; ô 24 hợp âm Si–Sol (Sol trưởng), tay trái Sol3, Sol2; vạch nhắc lại. Mutopia: d b gis e ở ô 9; g b d g ở ô 17.'
+    ghi_chu: 'Bản quét trang PDF 7 hệ 2: sau vạch nhắc lại, ô 9 Rê5–Si4–Sol♯4–Mi4 đi xuống; hệ 3 ô 1–4 (ô 17–20) lại Sol–Si–Rê–Sol như ô 1–4; ô 24 hợp âm Si–Sol (Sol trưởng), tay trái Sol3, Sol2; vạch nhắc lại. Mutopia: d b gis e ở ô 9; g b d g ở ô 17. Review (Claude, 24/11/2026): bản quét trang PDF 7 hệ 2–3 (30 dpi): ô 9 Rê–Si–Sol♯–Mi đi xuống; hệ 3 ô 1 lại Sol–Si–Rê–Sol; vạch nhắc lại cuối hệ 3. Khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)" ]
     luot_2_ghi_chu: "Ô 9: D–B–G thăng–E đi xuống; ô 17–20 như ô 1–4; ô 24 kết Sol; nhắc lại sau ô 24."
+    review: dung
   - id: n17
     cau: 'Biến tấu 1 (ô 25–48): tay phải chen nốt móc kép (ô 25: Sol–Rê–Si–Sol rồi Rê) và quãng ba, tay trái vẫn như chủ đề; hai nửa có dấu nhắc lại.'
     loai: cau-truc
@@ -211,6 +231,7 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)" ]
     luot_2_ghi_chu: "Ô 25: móc kép G–D–B–G rồi móc đơn D, G; ô 27 quãng ba; tay trái như chủ đề; nhắc lại sau ô 32 và 48."
+    review: dung
   - id: n18
     cau: 'Biến tấu 2 (ô 49–72, f): tay phải chạy móc kép gần như liên tục (gam đi xuống, nốt xen với một nốt lặp lại), tay trái hợp âm và nốt đơn; hai nửa có dấu nhắc lại.'
     loai: cau-truc
@@ -220,33 +241,37 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)" ]
     luot_2_ghi_chu: f ở nhịp lấy đà trước ô 49; ô 49 gam móc kép đi xuống; ô 50 nốt xen với Rê lặp; tay trái hợp âm và nốt đơn; nhắc lại sau ô 56 và 72.
+    review: dung
   - id: n19
     cau: 'Sau biến tấu 2, nửa đầu chủ đề (ô 73–80, mf) trở lại gần như nguyên vẹn, chỉ một lần, không có dấu nhắc lại.'
     loai: cau-truc
     nguon: [ pasler-1918, mutopia-187 ]
     ket_qua: dung
-    ghi_chu: 'Bản quét trang PDF 9 hệ 1, ô 1–8: mf, các nốt hai tay như ô 1–8 (trang PDF 7 hệ 1); khác: ô 80 là Rê nốt đen, lặng, Rê lấy đà (không có láy), không có vạch nhắc lại. Mutopia ô 73–80 như ô 1–8, ô 80 d4 r8 d.'
+    ghi_chu: 'Bản quét trang PDF 9 hệ 1, ô 1–8: mf, các nốt hai tay như ô 1–8 (trang PDF 7 hệ 1); khác: ô 80 là Rê nốt đen, lặng, Rê lấy đà (không có láy), không có vạch nhắc lại. Mutopia ô 73–80 như ô 1–8, ô 80 d4 r8 d. Review (Claude, 24/11/2026): bản quét trang PDF 9 hệ 1: mf, ô 80 Rê đen, lặng, Rê lấy đà, không có láy, không có vạch nhắc lại. Khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)" ]
     luot_2_ghi_chu: Ô 73–80 mf, như ô 1–8 (ô 73 tay trái bỏ hợp âm đầu, thêm luyến); không có dấu nhắc lại.
+    review: dung
   - id: n20
     cau: 'Đoạn Sol thứ (ô 81–104): giai điệu chủ đề ở giọng thứ (ô 81–88); câu tiếp theo (ô 89–96) được viết ra hai lần (ô 97–104); hóa biểu vẫn một dấu thăng, các dấu giáng (Si♭, Mi♭, La♭) viết cạnh từng nốt.'
     loai: cau-truc
     nguon: [ pasler-1918, mutopia-187 ]
     ket_qua: dung
-    ghi_chu: 'Bản quét trang PDF 9: hệ 1 ô 9 Sol4–Si♭4–Rê5–Sol4 (dấu giáng cạnh nốt); các hệ 2–4 vẫn hóa biểu một dấu thăng; Mi♭ (hệ 2 ô 2), La♭ (hệ 2 ô 8: Fa–La♭–Sol–Rê); hệ 2 ô 8 tới hệ 3 ô 7 và hệ 3 ô 8 tới hệ 4 ô 7 giống nhau từng nốt. Mutopia: g bes d g; f as g d hai lần.'
+    ghi_chu: 'Bản quét trang PDF 9: hệ 1 ô 9 Sol4–Si♭4–Rê5–Sol4 (dấu giáng cạnh nốt); các hệ 2–4 vẫn hóa biểu một dấu thăng; Mi♭ (hệ 2 ô 2), La♭ (hệ 2 ô 8: Fa–La♭–Sol–Rê); hệ 2 ô 8 tới hệ 3 ô 7 và hệ 3 ô 8 tới hệ 4 ô 7 giống nhau từng nốt. Mutopia: g bes d g; f as g d hai lần. Review (Claude, 24/11/2026): đếm trên bản quét trang PDF 9: hệ 1 có 9 ô (73–81), hệ 2 có 8 ô (82–89, ô 89 Fa–La♭–Sol–Rê), hệ 3 có 8 ô (90–97, ô 97 lặp ô 89), hệ 4 có 7 ô (98–104) rồi f lấy đà; hóa biểu một thăng ở mọi hệ. Khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)" ]
     luot_2_ghi_chu: Ô 81 G–B giáng–D–G; câu ô 89–96 viết lại ô 97–104; hóa biểu vẫn một thăng, B giáng, E giáng, A giáng ghi cạnh nốt.
+    review: dung
   - id: n21
     cau: 'Biến tấu cuối (ô 105–152, f, Sol trưởng): tay trái chạy móc kép liên tục, tay phải giai điệu nốt móc đơn; các lần nhắc lại được viết ra và đổi khác: ô 113–116 (p) mọi nốt ở âm vực cao, khuông dưới gần như nghỉ; ô 117–120 (mf) chuỗi móc kép đi xuống; nửa sau ô 121–136, rồi lần hai ô 137–152 lớn dần tới ff, kết mf.'
     loai: cau-truc
     nguon: [ pasler-1918, mutopia-187 ]
     ket_qua: dung
-    ghi_chu: 'Bản quét trang PDF 9 hệ 4 cuối: f dưới lấy đà; hệ 5: tay phải Sol–Si(♮)–Rê–Sol móc đơn, tay trái móc kép liên tục; hệ 6: (p) dưới hai móc kép lấy đà cuối ô 112, ô 113–116 khuông dưới để trống (nghỉ), mọi nốt viết ở khuông trên, (mf) cuối ô 116; trang PDF 10 hệ 1: ô 117–119 chuỗi móc kép đi xuống; hệ 2 cuối (f); hệ 4 (mf), (cresc.); hệ 5 (ff) cuối ô 144; hệ 6 (mf) ở ô 150, kết vạch kép. Nửa sau lần hai đổi ô 137–144 so với ô 121–128 (Mutopia: r16 d gis b … so với d b gis e …).'
+    ghi_chu: 'Bản quét trang PDF 9 hệ 4 cuối: f dưới lấy đà; hệ 5: tay phải Sol–Si(♮)–Rê–Sol móc đơn, tay trái móc kép liên tục; hệ 6: (p) dưới hai móc kép lấy đà cuối ô 112, ô 113–116 khuông dưới để trống (nghỉ), mọi nốt viết ở khuông trên, (mf) cuối ô 116; trang PDF 10 hệ 1: ô 117–119 chuỗi móc kép đi xuống; hệ 2 cuối (f); hệ 4 (mf), (cresc.); hệ 5 (ff) cuối ô 144; hệ 6 (mf) ở ô 150, kết vạch kép. Nửa sau lần hai đổi ô 137–144 so với ô 121–128 (Mutopia: r16 d gis b … so với d b gis e …). Review (Claude, 24/11/2026): bản quét trang PDF 9 hệ 5–6: tay trái móc kép liên tục; (p) ở hệ 6, khuông dưới trống ở ô 113–116; (mf) cuối hệ 6. Khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)" ]
     luot_2_ghi_chu: "Ô 105 (f) tay trái móc kép, tay phải móc đơn; ô 113–116 (p) âm vực cao, khuông dưới gần như trống; ô 117–120 (mf) móc kép đi xuống; ô 121–136 rồi 137–152: (cresc.) ô 140, (ff) ô 144, (mf) ô 150."
+    review: dung
   - id: n22
     cau: 'Không tính nhịp lấy đà, cả chương có 152 ô.'
     loai: so-lieu
@@ -256,49 +281,55 @@ nhan_dinh:
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)" ]
     luot_2_ghi_chu: "Đếm trên bản Päsler: 152 ô trọn, không tính nhịp lấy đà."
+    review: dung
   - id: n23
     cau: 'Ô 1–4 của chủ đề: Sol–Si–Rê đi lên, Sol–Fa♯ luyến, rồi La–Đô–Mi và các quãng ba ở tay phải. Ô 5–7: nhảy lên Si cao, những nốt có dấu thăng (Rê♯, Đô♯) kéo về Mi, Rê; tay trái chơi nốt đơn ở khóa Sol. Ô 8: kết ở Rê, có dấu nhắc lại.'
     loai: cau-truc
     nguon: [ pasler-1918, mutopia-187 ]
     ket_qua: dung
-    ghi_chu: 'Xem khuong_nhac khối 1. Luyến Sol–Fa♯ ở ô 2 có trong bản quét (dấu luyến dưới hai nốt).'
+    ghi_chu: 'Xem khuong_nhac khối 1. Luyến Sol–Fa♯ ở ô 2 có trong bản quét (dấu luyến dưới hai nốt). Review (Claude, 24/11/2026): bản quét: ô 2 luyến Sol–Fa♯; ô 5 Si5 Sol5 Rê♯5 Mi5; ô 6 La5 Fa♯5 Đô♯5 Rê5 (đo dòng kẻ trên ảnh 150 dpi: Đô♯5 tâm khoảng 253 px giữa dòng Rê5 237 và Si4 270; Rê5 tâm 235); tay trái ô 5–7 khóa Sol. Khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)" ]
     luot_2_ghi_chu: Ô 1 G–B–D; ô 2 G–F thăng luyến; ô 3 A–C–E rồi quãng ba; ô 5 nhảy lên B5, D thăng–E; ô 6 C thăng–D; tay trái ô 5–7 khóa Sol nốt đơn; ô 8 Rê có nhắc lại.
+    review: dung
   - id: n24
-    cau: 'Ký hiệu răng cưa không gạch trên nốt Rê ở ô 8 là láy trên: Rê–Mi–Rê thật nhanh, đúng phách.'
+    cau: 'Dấu răng cưa ngắn trên nốt Rê ở ô 8 thường được chơi như láy trên: Rê–Mi–Rê, bắt đầu từ nốt chính, thật nhanh, đúng phách; bản thu gợi ý cũng chơi như vậy; có người chơi thành một láy rền ngắn bắt đầu từ Mi.'
     loai: dinh-nghia
-    nguon: [ pasler-1918, site-not-hoa-my ]
-    ket_qua: dung
-    ghi_chu: 'Bản quét trang PDF 7 hệ 1 ô 8 (150 dpi): răng cưa ngắn không có gạch dọc trên Rê5 (Mutopia ghi \mordent). Cách chơi chính–trên–chính đúng phách theo trang not-hoa-my (cột thế kỷ 19); trang đó cũng nêu cách đọc Baroque (bắt đầu từ nốt trên). Ở Presto chỉ kịp ba nốt; lượt 2 kiểm có hợp với nhạc Haydn những năm 1770.'
+    nguon: [ pasler-1918, site-not-hoa-my, dolmetsch-23, kolodin-file ]
+    ket_qua: da-sua
+    ghi_chu: 'Bản quét trang PDF 7 hệ 1 ô 8 (150 dpi): răng cưa ngắn không có gạch dọc trên Rê5 (Mutopia ghi \mordent). Cách chơi chính–trên–chính đúng phách theo trang not-hoa-my (cột thế kỷ 19); trang đó cũng nêu cách đọc Baroque (bắt đầu từ nốt trên). Ở Presto chỉ kịp ba nốt; lượt 2 kiểm có hợp với nhạc Haydn những năm 1770. Review (Claude, 24/11/2026): lượt 2 không chắc; viết lại. Bản quét 600 dpi và ảnh gốc: dấu răng cưa ngắn hai đỉnh (không phải dấu ba đỉnh có "(~)" ở Menuetto trang PDF 5); có một nét nhỏ ở giữa nhô ra khoảng 1–2 px ảnh gốc, không đủ để đọc chắc là gạch dọc; Mutopia (.ly tải lại, theo Peters) ghi d4\mordent (láy dưới). Câu cũ "răng cưa không gạch là láy trên" nên bỏ "không gạch". Cách chơi: Dolmetsch (Schneller = nốt viết, nốt trên, nốt viết, thay dần Pralltriller từ giữa thế kỷ 18; Pralltriller bốn nốt từ nốt trên, nối với nốt trước); trang not-hoa-my (đã khóa): láy trên đúng phách. Bản thu Kolodin (librosa CQT, bước 5,8 ms): Rê5 vào 7,93 s, Mi5 7,98 s, Rê5 lại 8,06 s, tức Rê–Mi–Rê bắt đầu từ nốt chính. Câu mới không khẳng định dấu chỉ có một cách đọc.'
     luot_2: khong-chac
     luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)", "https://www.dolmetsch.com/musictheory23.htm" ]
     luot_2_ghi_chu: "Bản Päsler ô 8 ghi dấu răng cưa ngắn không gạch. Nguồn mở được không xác nhận cách chơi riêng cho Haydn thập niên 1770: Dolmetsch nói Pralltriller (C.P.E. Bach) là trill rất nhanh bốn nốt, nốt đầu (nốt trên) nối với nốt trước, chỉ dùng sau một bước đi xuống, và từ giữa thế kỷ 18 Schneller (nốt chính, nốt trên, nốt chính) dần thay nó; cũng nói trill bắt đầu từ nốt trên là lối chính giữa thế kỷ 18. Rê ở ô 8 đến từ Đô thăng (đi lên) nên kiểu Pralltriller nối nốt không hợp, Rê–Mi–Rê là cách đọc hợp lý, nhưng dấu này ở Haydn cũng được đọc là trill ngắn bắt đầu từ Mi; chính Päsler ghi '(w?)' ở Menuetto, cho thấy dấu của Haydn còn mơ hồ. Không mở được: lời tựa Wiener Urtext (wiener-urtext.com không kết nối, bản Wayback hỏng), luận văn Yang (core.ac.uk 403); lời tựa HN 1338 không bàn chuyện này. Gợi ý viết: 'thường chơi Rê–Mi–Rê (bắt đầu từ nốt chính), thật nhanh, đúng phách; có người chơi thành láy rền ngắn bắt đầu từ Mi'."
+    review: dung
   - id: n25
     cau: 'Bản in chỉ ghi Presto, không ghi số máy đếm nhịp.'
     loai: so-lieu
     nguon: [ pasler-1918 ]
     ket_qua: dung
-    ghi_chu: 'Bản quét trang PDF 7: "Finale. Presto.", không có số máy đếm nhịp trong cả chương (trang PDF 7–10).'
+    ghi_chu: 'Bản quét trang PDF 7: "Finale. Presto.", không có số máy đếm nhịp trong cả chương (trang PDF 7–10). Review (Claude, 24/11/2026): bản quét trang PDF 7–10: không có số máy đếm nhịp. Khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)" ]
     luot_2_ghi_chu: Đầu chương chỉ ghi 'Finale. Presto.', không có số máy đếm nhịp (Q=120 chỉ có trong file Mutopia).
+    review: dung
   - id: n26
     cau: 'Ô 25–28 (biến tấu 1) đặt cạnh ô 1–4: tay trái giữ nguyên, tay phải chen nốt móc kép (ô 25) và quãng ba (ô 27), các nốt Sol–Si–Rê của chủ đề vẫn rơi đúng chỗ.'
     loai: cau-truc
     nguon: [ pasler-1918, mutopia-187 ]
     ket_qua: dung
-    ghi_chu: 'Xem khuong_nhac khối 1 và 2: tay trái hai khối giống nhau từng nốt; ô 25 Sol4 ở phách 1, Si4 ở móc kép thứ ba, Rê5 ở phách 2 (ô 1: Sol4, Si4, Rê5 ba móc đơn đầu); ô 27 Đô5 và quãng ba Đô–Mi (ô 3: La–Đô–Mi).'
+    ghi_chu: 'Xem khuong_nhac khối 1 và 2: tay trái hai khối giống nhau từng nốt; ô 25 Sol4 ở phách 1, Si4 ở móc kép thứ ba, Rê5 ở phách 2 (ô 1: Sol4, Si4, Rê5 ba móc đơn đầu); ô 27 Đô5 và quãng ba Đô–Mi (ô 3: La–Đô–Mi). Review (Claude, 24/11/2026): xem khuong_nhac khối 2. Khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)" ]
     luot_2_ghi_chu: Ô 25–28 tay trái giữ như ô 1–4; G, B, D, G rơi đúng các phách móc đơn như ô 1.
+    review: dung
   - id: n27
-    cau: 'Bảng Chỗ khó, ba dòng đầu: ba nốt rải lên (giữ bàn tay trên hình hợp âm, ngón 1-3-5); móc kép của biến tấu 1 và 2 (tập chậm với máy đếm nhịp, nhóm theo phách); láy trên ở ô 8 (tập riêng đúng phách, chưa gọn thì chơi một nốt Rê, thêm láy sau).'
+    cau: 'Bảng Chỗ khó, ba dòng đầu: ba nốt rải lên (giữ bàn tay trên hình hợp âm, ngón 1-3-5); móc kép của biến tấu 1 và 2 (tập chậm với máy đếm nhịp, nhóm theo phách); dấu láy ở ô 8 (tập riêng Rê–Mi–Rê đúng phách, chưa gọn thì chơi một nốt Rê, thêm láy sau).'
     loai: khuyen-tap
-    ket_qua: khong-can-nguon
-    ghi_chu: 'Lời khuyên tập. Không trái trang lõi not-hoa-my (láy đúng phách) và cach-tap.'
+    ket_qua: da-sua
+    ghi_chu: 'Lời khuyên tập. Không trái trang lõi not-hoa-my (láy đúng phách) và cach-tap. Review (Claude, 24/11/2026): lời khuyên tập; đổi "láy trên" thành "dấu láy" theo n24.'
     luot_2: dung
     luot_2_ghi_chu: "khuyen-tap: hợp lý."
+    review: dung
   - id: n28
     cau: 'Bảng Chỗ khó, dòng Đoạn Sol thứ và Tay trái biến tấu cuối: đọc trước, khoanh các nốt Si♭, Mi♭, La♭; tập tay trái một mình, nốt trầm hơi rõ, các nốt khác rất nhẹ.'
     loai: khuyen-tap
@@ -306,22 +337,25 @@ nhan_dinh:
     ghi_chu: 'Lời khuyên tập; các dấu giáng: n20.'
     luot_2: dung
     luot_2_ghi_chu: "khuyen-tap: hợp lý; B giáng, E giáng, A giáng có trong đoạn Sol thứ."
+    review: dung
   - id: n29
     cau: 'Với mọi dấu nhắc lại, bài dài hơn ba phút; nên đặt một tốc độ cho cả bài và chơi liền các biến tấu.'
     loai: so-lieu
     nguon: [ kolodin-file, imslp-kolodin ]
     ket_qua: dung
-    ghi_chu: 'Bản thu Kolodin giữ mọi dấu nhắc lại: tiếng đàn từ 1,58 s tới khoảng 190,9 s (khoảng 3 phút 9 giây); IMSLP ghi 3:13. Vế sau là lời khuyên tập.'
+    ghi_chu: 'Bản thu Kolodin giữ mọi dấu nhắc lại: tiếng đàn từ 1,58 s tới khoảng 190,9 s (khoảng 3 phút 9 giây); IMSLP ghi 3:13. Vế sau là lời khuyên tập. Review (Claude, 24/11/2026): IMSLP wikitext "Audio Length 3=3:13"; onset cuối khoảng 190 s. Khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/api.php?action=parse&page=Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)&prop=wikitext&format=json", "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)" ]
     luot_2_ghi_chu: "Kolodin, giữ nhắc lại: 3:13 (IMSLP), nhạc khoảng 3 phút 9 giây."
+    review: dung
   - id: n30
     cau: 'Ba bài tập soạn riêng cho trang: hợp âm rải trong lòng bàn tay (Sol trưởng, La thứ, Sol trưởng thế khác, ngón 1-3-5); móc kép xuống rồi quay quanh một nốt (5-4-3-2 rồi 1-2-1-2); tay trái chạy móc kép (ngón 5 nốt trầm, ngón 1 nốt Rê lặp lại) dưới giai điệu tay phải.'
     loai: vi-du-soan
     ket_qua: khong-can-nguon
-    ghi_chu: 'Kiểm trên khuông nhạc: khuong_nhac khối 3–5.'
+    ghi_chu: 'Kiểm trên khuông nhạc: khuong_nhac khối 3–5. Review (Claude, 24/11/2026): xem khuong_nhac khối 3–5.'
     luot_2: dung
     luot_2_ghi_chu: "vi-du-soan, kiểm trên khuông của trang: bài 1 G–B–D–B, A–C–E–C, B–D–G–D, ngón 1-3-5; bài 2 B–G–F thăng–E (5-4-3-2) rồi D thăng–E–D thăng–E (1-2-1-2); bài 3 tay trái ngón 5 nốt trầm, ngón 1 Rê lặp. Đủ phách."
+    review: dung
   - id: n31
     cau: 'Kế hoạch 7 tuần, khoảng 30 phút mỗi ngày, máy đếm nhịp từ ♩ = 60 tới 104–132.'
     loai: khuyen-tap
@@ -329,80 +363,88 @@ nhan_dinh:
     ghi_chu: 'Lời khuyên tập; tốc độ cuối chỉ là gợi ý (bản in không ghi số, n25). Bản thu Kolodin khoảng 0,84 s một ô 2/4, tức ♩ ≈ 143.'
     luot_2: dung
     luot_2_ghi_chu: "khuyen-tap: hợp lý (Kolodin khoảng ♩ 142)."
+    review: dung
   - id: n32
     cau: 'Chọn tốc độ mà các nốt móc kép của biến tấu 2 và tay trái của biến tấu cuối vẫn rõ; gần như không cần bàn đạp, nếu dùng chỉ đạp thật ngắn ở hợp âm cuối câu; luyến hai nốt kết thúc bằng một cái nhấc tay nhẹ, nốt móc đơn không luyến hơi tách, đệm tay trái mỏng.'
     loai: khuyen-tap
     ket_qua: khong-can-nguon
     ghi_chu: 'Khớp trang lõi piano/tieng-dan (Cổ điển: dấu luyến ngắn khép lại bằng nhấc tay; đệm rất nhẹ; bàn đạp ngắn, nhẹ).'
+    review: dung
   - id: n33
     cau: 'Bản Päsler ghi mf ở đầu bài và khi nửa đầu chủ đề trở lại, f ở đầu biến tấu 2 và biến tấu cuối; ở biến tấu cuối có thêm các dấu đặt trong ngoặc: (p), (mf), (f), (cresc.), (ff).'
     loai: cau-truc
     nguon: [ pasler-1918 ]
     ket_qua: dung
-    ghi_chu: 'Bản quét: mf trang PDF 7 hệ 1; f trang PDF 8 hệ 2 (lấy đà ô 49); mf trang PDF 9 hệ 1; f trang PDF 9 hệ 4 cuối (lấy đà ô 105); (p) trang PDF 9 hệ 6 ô 2, (mf) hệ 6 ô cuối; trang PDF 10: (f) hệ 2, (mf) và (cresc.) hệ 4, (ff) hệ 5, (mf) hệ 6. Lượt 1 không thấy dấu sắc thái nào khác trong chương (đoạn Sol thứ không có dấu).'
+    ghi_chu: 'Bản quét: mf trang PDF 7 hệ 1; f trang PDF 8 hệ 2 (lấy đà ô 49); mf trang PDF 9 hệ 1; f trang PDF 9 hệ 4 cuối (lấy đà ô 105); (p) trang PDF 9 hệ 6 ô 2, (mf) hệ 6 ô cuối; trang PDF 10: (f) hệ 2, (mf) và (cresc.) hệ 4, (ff) hệ 5, (mf) hệ 6. Lượt 1 không thấy dấu sắc thái nào khác trong chương (đoạn Sol thứ không có dấu). Review (Claude, 24/11/2026): bản quét: mf trang PDF 7 hệ 1 và trang PDF 9 hệ 1; f cuối hệ 4 trang PDF 9 (lấy đà ô 105) và trang PDF 8 hệ 2; (p), (mf) ở hệ 6 trang PDF 9. Khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)" ]
     luot_2_ghi_chu: mf ở nhịp lấy đà đầu bài và trước ô 73; f trước ô 49 và trước ô 105; biến tấu cuối có (p), (mf), (f), (cresc.), (ff).
+    review: dung
   - id: n34
-    cau: 'Lỗi thường gặp: chơi quá nhanh ngay từ đầu; nhanh dần ở biến tấu 2; láy trên làm trễ phách; quên dấu giáng ở đoạn Sol thứ; tay trái biến tấu cuối nặng; dừng giữa các biến tấu.'
+    cau: 'Lỗi thường gặp: chơi quá nhanh ngay từ đầu; nhanh dần ở biến tấu 2; dấu láy ở ô 8 làm trễ phách; quên dấu giáng ở đoạn Sol thứ; tay trái biến tấu cuối nặng; dừng giữa các biến tấu.'
     loai: khuyen-tap
-    ket_qua: khong-can-nguon
-    ghi_chu: 'Lời khuyên tập.'
+    ket_qua: da-sua
+    ghi_chu: 'Lời khuyên tập. Review (Claude, 24/11/2026): lời khuyên tập; đổi "láy trên" thành "dấu láy" theo n24.'
+    review: dung
   - id: n35
     cau: 'Học tiếp: Mozart Sonata Đô trưởng K. 545 cùng thời kỳ, cùng chặng, với tay trái Alberti và gam chạy; trang Biến tấu; nốt hoa mỹ; staccato và các kiểu ngắt; thứ tự các sonata Haydn ở Nhà soạn nhạc cho piano.'
     loai: ve-site
     ket_qua: dung
-    ghi_chu: 'tac-pham.yml mozart-k545: chang 5, thoi_ky Cổ điển; trang mozart-k545 có bài tập Alberti và gam. Các trang đích và anchor có trong bản xem (tests/link.test.mjs).'
+    ghi_chu: 'tac-pham.yml mozart-k545: chang 5, thoi_ky Cổ điển; trang mozart-k545 có bài tập Alberti và gam. Các trang đích và anchor có trong bản xem (tests/link.test.mjs). Review (Claude, 24/11/2026): link Học tiếp có trong bản xem (tests/link.test.mjs đạt); mozart-k545 chang 5, Cổ điển. Đúng.'
+    review: dung
   - id: n36
-    cau: 'Câu hỏi kiểm tra: chương này là chủ đề và biến tấu; ở đoạn Sol thứ hóa biểu vẫn một dấu thăng, dấu giáng viết cạnh nốt; răng cưa không gạch ở ô 8 là láy trên Rê–Mi–Rê; ở biến tấu cuối tay trái chạy móc kép liên tục, còn ở chủ đề tay trái đệm hợp âm thưa.'
+    cau: 'Câu hỏi kiểm tra: sau biến tấu 1 và 2, nửa đầu chủ đề (ô 73–80, mf) trở lại gần như nguyên vẹn, không có dấu nhắc lại, ngay trước đoạn Sol thứ; ở đoạn Sol thứ hóa biểu vẫn một dấu thăng, dấu giáng viết cạnh nốt; ở biến tấu cuối tay trái chạy móc kép liên tục, còn ở chủ đề tay trái đệm hợp âm thưa.'
     loai: cau-truc
     nguon: [ pasler-1918 ]
-    ket_qua: dung
-    ghi_chu: 'Cùng ý n6, n20, n24, n21, n15.'
+    ket_qua: da-sua
+    ghi_chu: 'Cùng ý n6, n20, n24, n21, n15. Review (Claude, 24/11/2026): lượt 2 không chắc vế dấu láy. Bỏ câu hỏi về dấu láy (cách chơi không chỉ có một, n24); thay câu hỏi "hình thức nào" (không có nguồn ngoài gọi tên, n6) bằng câu hỏi về ô 73–80 (n19, bản quét trang PDF 9 hệ 1). Hai câu còn lại (hóa biểu đoạn Sol thứ, tay trái biến tấu cuối) giữ: khớp n20, n21, n15.'
     luot_2: khong-chac
     luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)", "https://www.dolmetsch.com/musictheory23.htm" ]
     luot_2_ghi_chu: Các vế hình thức, hóa biểu đoạn Sol thứ, tay trái đúng theo bản Päsler. Vế 'răng cưa không gạch ở ô 8 là láy trên Rê–Mi–Rê' không chắc, như n24.
+    review: dung
   - id: n37
     cau: 'Mutopia id 187 (Hob. XVI:27, chương 3) thuộc phạm vi công cộng, theo bản C. F. Peters những năm 1880.'
     loai: ten
     nguon: [ mutopia-187 ]
     ket_qua: dung
-    ghi_chu: 'Trang Mutopia: "Source: C. F. Peters, 1880s", "Copyright: Public Domain"; header file .ly: copyright "Public Domain", người chép đặt vào phạm vi công cộng.'
+    ghi_chu: 'Trang Mutopia: "Source: C. F. Peters, 1880s", "Copyright: Public Domain"; header file .ly: copyright "Public Domain", người chép đặt vào phạm vi công cộng. Review (Claude, 24/11/2026): Mutopia .ly tải lại: source "C. F. Peters, 1880s", copyright "Public Domain". Khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=187", "https://www.mutopiaproject.org/ftp/HaydnFJ/HOB-XVI-27/hob-xvi-27-iii-presto/hob-xvi-27-iii-presto.ly" ]
     luot_2_ghi_chu: "Mutopia id 187: 'Opus: Hob. XVI:27, Meter: III - Presto', 'Source: C. F. Peters, 1880s', 'Copyright: Public Domain'."
+    review: dung
   - id: n38
     cau: 'Bản thu: Luis Kolodin, giấy phép CC BY-SA 4.0, trên IMSLP.'
     loai: so-lieu
     nguon: [ imslp-kolodin ]
     ket_qua: dung
-    ghi_chu: 'IMSLP: "Copyright=Creative Commons Attribution-ShareAlike 4.0" cho bộ file Kolodin đăng 2023/1/26.'
+    ghi_chu: 'IMSLP: "Copyright=Creative Commons Attribution-ShareAlike 4.0" cho bộ file Kolodin đăng 2023/1/26. Review (Claude, 24/11/2026): IMSLP wikitext tải lại: "Copyright=Creative Commons Attribution-ShareAlike 4.0", "Publisher Information=Luis Kolodin, 2020.", "Date Submitted=2023/1/26". CC BY-SA 4.0 có trong danh sách giấy phép nhận được. Khớp.'
     luot_2: dung
     luot_2_nguon: [ "https://imslp.org/api.php?action=parse&page=Keyboard_Sonata_in_G_major,_Hob.XVI:27_(Haydn,_Joseph)&prop=wikitext&format=json" ]
     luot_2_ghi_chu: "IMSLP: Performer Kolodin, Luis; 'Copyright=Creative Commons Attribution-ShareAlike 4.0'."
+    review: dung
 khuong_nhac:
   - khoi: 1
     loai: trich-doan
     kiem: [ cu-phap, nhip, giong, not, doi-chieu-an-ban ]
     ket_qua: dung
-    ghi_chu: 'Nhịp lấy đà và ô 1–8, K:G, 2/4, L:1/8. Ấn bản: pasler-1918 trang PDF 7 hệ 1 (đọc ở 100 và 150 dpi). Tay phải: lấy đà Rê4 móc đơn (mf); ô 1 Sol4 Si4 Rê5 Sol4; ô 2 Sol4 đen (luyến) Fa♯4 móc đơn, Rê4; ô 3 La4 Đô5 Mi5 [La4 Đô5]; ô 4 [La4 Đô5] đen, [Sol4 Si4] móc đơn, Si4 móc đơn; ô 5 Si5 Sol5 Rê♯5 Mi5; ô 6 La5 Fa♯5 Đô♯5 Rê5 (dấu bình); ô 7 Mi5 móc đơn, Sol5 đen, Đô♯5 móc đơn; ô 8 Rê5 đen có răng cưa không gạch, lặng móc đơn, vạch nhắc lại. Tay trái: lặng móc đơn; ô 1 [Sol3 Si3] đen, lặng, [Si3 Rê4]; ô 2 [La3 Đô4] đen, lặng đen; ô 3 lặng đen, lặng, Fa♯3; ô 4 Sol3 đen, Sol2 móc đơn, lặng, rồi khóa Sol; ô 5 Sol4 đen, lặng, Sol4; ô 6 Fa♯4 đen, lặng, Fa♯4; ô 7 Sol4 La4 đen; ô 8 khóa Fa, Rê4 đen, Rê3 móc đơn. Đối chiếu Mutopia MD/MS ô 1–8: cùng nốt, cùng trường độ; Mutopia ghi \mordent (có gạch) ở ô 8, Päsler không gạch: theo Päsler (!uppermordent!). Bỏ: dấu luyến, chấm ngắt (khối chỉ chép nốt, sắc thái, láy).'
+    ghi_chu: 'Nhịp lấy đà và ô 1–8, K:G, 2/4, L:1/8. Ấn bản: pasler-1918 trang PDF 7 hệ 1 (đọc ở 100 và 150 dpi). Tay phải: lấy đà Rê4 móc đơn (mf); ô 1 Sol4 Si4 Rê5 Sol4; ô 2 Sol4 đen (luyến) Fa♯4 móc đơn, Rê4; ô 3 La4 Đô5 Mi5 [La4 Đô5]; ô 4 [La4 Đô5] đen, [Sol4 Si4] móc đơn, Si4 móc đơn; ô 5 Si5 Sol5 Rê♯5 Mi5; ô 6 La5 Fa♯5 Đô♯5 Rê5 (dấu bình); ô 7 Mi5 móc đơn, Sol5 đen, Đô♯5 móc đơn; ô 8 Rê5 đen có răng cưa không gạch, lặng móc đơn, vạch nhắc lại. Tay trái: lặng móc đơn; ô 1 [Sol3 Si3] đen, lặng, [Si3 Rê4]; ô 2 [La3 Đô4] đen, lặng đen; ô 3 lặng đen, lặng, Fa♯3; ô 4 Sol3 đen, Sol2 móc đơn, lặng, rồi khóa Sol; ô 5 Sol4 đen, lặng, Sol4; ô 6 Fa♯4 đen, lặng, Fa♯4; ô 7 Sol4 La4 đen; ô 8 khóa Fa, Rê4 đen, Rê3 móc đơn. Đối chiếu Mutopia MD/MS ô 1–8: cùng nốt, cùng trường độ; Mutopia ghi \mordent (có gạch) ở ô 8, Päsler không gạch: theo Päsler (!uppermordent!). Bỏ: dấu luyến, chấm ngắt (khối chỉ chép nốt, sắc thái, láy). Review (Claude, 24/11/2026): so từng nốt với bản quét trang PDF 7 hệ 1 ở 150 và 600 dpi (đo dòng kẻ: khuông trên Fa5 211, Rê5 244, Si4 277, Sol4 309, Mi4 343 px; khuông dưới La3 547, Fa3 581, Rê3 615, Si2 647, Sol2 682 px ở 150 dpi): lấy đà Rê4 mf; ô 1–4 tay phải và tay trái (Fa♯3 cuối ô 3 nằm trên dòng Fa3; Sol2 ô 4 trên dòng dưới cùng); ô 5–7 (Đô♯5, Rê5 có dấu bình ở ô 6; tay trái khóa Sol Sol4, Fa♯4, Sol4 La4); ô 8 Rê5 có dấu láy, Rê4 và Rê3. Khớp; Mutopia .ly cùng nốt (ô 8 d4\mordent). Giữ !uppermordent! (răng cưa không gạch), khớp chữ mới của trang (Rê–Mi–Rê) và cách bản thu chơi.'
   - khoi: 2
     loai: trich-doan
     kiem: [ cu-phap, nhip, giong, not, doi-chieu-an-ban ]
     ket_qua: dung
-    ghi_chu: 'Nhịp lấy đà và ô 25–28, K:G, 2/4, L:1/16. Ấn bản: pasler-1918 trang PDF 7 hệ 4 (đọc ở 100, 130 và 150 dpi). Tay phải: lấy đà Rê4 móc đơn; ô 25 Sol4 Rê4 Si4 Sol4 móc kép, Rê5 móc đơn, Sol4 móc đơn; ô 26 Sol4 đen (luyến) Fa♯4, La4 móc đơn; ô 27 Đô5, [Đô5 Mi5], [Si4 Rê5], [La4 Đô5] móc đơn; ô 28 [La4 Đô5] đen, [Sol4 Si4] móc đơn, Si4 móc đơn (Päsler; Mutopia ghi Sol4: theo Päsler, đầu nốt đo trên dòng 3 của khuông ở ảnh 150 dpi, như nốt cuối ô 4 của chủ đề). Tay trái: như ô 1–4 (lặng; [Sol3 Si3], lặng, [Si3 Rê4]; [La3 Đô4], lặng; lặng, lặng, Fa♯3; Sol3, Sol2, lặng). Khối dừng ở ô 28 trọn (không có vạch nhắc lại ở đó). Bỏ dấu chấm trên Rê5 ô 25, luyến.'
+    ghi_chu: 'Nhịp lấy đà và ô 25–28, K:G, 2/4, L:1/16. Ấn bản: pasler-1918 trang PDF 7 hệ 4 (đọc ở 100, 130 và 150 dpi). Tay phải: lấy đà Rê4 móc đơn; ô 25 Sol4 Rê4 Si4 Sol4 móc kép, Rê5 móc đơn, Sol4 móc đơn; ô 26 Sol4 đen (luyến) Fa♯4, La4 móc đơn; ô 27 Đô5, [Đô5 Mi5], [Si4 Rê5], [La4 Đô5] móc đơn; ô 28 [La4 Đô5] đen, [Sol4 Si4] móc đơn, Si4 móc đơn (Päsler; Mutopia ghi Sol4: theo Päsler, đầu nốt đo trên dòng 3 của khuông ở ảnh 150 dpi, như nốt cuối ô 4 của chủ đề). Tay trái: như ô 1–4 (lặng; [Sol3 Si3], lặng, [Si3 Rê4]; [La3 Đô4], lặng; lặng, lặng, Fa♯3; Sol3, Sol2, lặng). Khối dừng ở ô 28 trọn (không có vạch nhắc lại ở đó). Bỏ dấu chấm trên Rê5 ô 25, luyến. Review (Claude, 24/11/2026): so từng nốt với bản quét trang PDF 7 hệ 4 ở 150 và 300 dpi: ô 25 Sol4 Rê4 Si4 Sol4 móc kép, Rê5, Sol4 móc đơn; ô 26 Sol4 đen, Fa♯4, La4; ô 27 Đô5, [Đô5 Mi5], [Si4 Rê5], [La4 Đô5]; ô 28 [La4 Đô5] đen, [Sol4 Si4], rồi nốt cuối nằm trên dòng giữa (Si4) ở ảnh 300 dpi, không phải Sol4 (dòng thứ hai từ dưới); tay trái như ô 1–4. Khớp; Mutopia ô 28 ghi g (Sol4), trang theo Päsler là đúng.'
   - khoi: 3
     loai: vi-du-soan
     kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
     ket_qua: dung
-    ghi_chu: '4 ô 2/4, Sol trưởng, L:1/8: tay phải rải Sol4–Si4–Rê5–Si4 (Sol trưởng), La4–Đô5–Mi5–Đô5 (La thứ), Si4–Rê5–Sol5–Rê5 (Sol trưởng thế một), ngón 1-3-5-3; ô 4 Sol5 đen (5). Tay trái hợp âm đen đầu ô: [Sol3 Si3] (5,3), [La3 Đô4] (5,3), [Sol2 Sol3] (5,1) hai lần. Mỗi ô 4 móc đơn.'
+    ghi_chu: '4 ô 2/4, Sol trưởng, L:1/8: tay phải rải Sol4–Si4–Rê5–Si4 (Sol trưởng), La4–Đô5–Mi5–Đô5 (La thứ), Si4–Rê5–Sol5–Rê5 (Sol trưởng thế một), ngón 1-3-5-3; ô 4 Sol5 đen (5). Tay trái hợp âm đen đầu ô: [Sol3 Si3] (5,3), [La3 Đô4] (5,3), [Sol2 Sol3] (5,1) hai lần. Mỗi ô 4 móc đơn. Review (Claude, 24/11/2026): nhịp (4 móc đơn mỗi ô), hòa âm (Sol trưởng, La thứ, Sol trưởng thế một), số ngón (1-3-5-3; Si4–Sol5 là quãng sáu thứ với 1-5) và lời kèm: đúng.'
   - khoi: 4
     loai: vi-du-soan
     kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
     ket_qua: dung
-    ghi_chu: '4 ô 2/4, L:1/16: tay phải Si5–Sol5–Fa♯5–Mi5, Rê♯5–Mi5–Rê♯5–Mi5 (5-4-3-2, 1-2-1-2) trên tay trái [Mi3 Sol3 Si3] (Mi thứ); La5–Fa♯5–Mi5–Rê5, Đô♯5–Rê5–Đô♯5–Rê5 trên [Rê3 Fa♯3 La3] (Rê trưởng); Sol5–Mi5–Rê5–Đô5, Si4–Đô5–Si4–Đô5 trên [Đô3 Mi3 Sol3] (Đô trưởng); ô 4 Si4 đen trên [Sol2 Sol3] (Sol trưởng). Nốt quay quanh là nốt dưới cách nửa cung, tay phải không vượt ngón. Mỗi ô 8 móc kép.'
+    ghi_chu: '4 ô 2/4, L:1/16: tay phải Si5–Sol5–Fa♯5–Mi5, Rê♯5–Mi5–Rê♯5–Mi5 (5-4-3-2, 1-2-1-2) trên tay trái [Mi3 Sol3 Si3] (Mi thứ); La5–Fa♯5–Mi5–Rê5, Đô♯5–Rê5–Đô♯5–Rê5 trên [Rê3 Fa♯3 La3] (Rê trưởng); Sol5–Mi5–Rê5–Đô5, Si4–Đô5–Si4–Đô5 trên [Đô3 Mi3 Sol3] (Đô trưởng); ô 4 Si4 đen trên [Sol2 Sol3] (Sol trưởng). Nốt quay quanh là nốt dưới cách nửa cung, tay phải không vượt ngón. Mỗi ô 8 móc kép. Review (Claude, 24/11/2026): nhịp (8 móc kép mỗi ô), hòa âm (Mi thứ, Rê trưởng, Đô trưởng, Sol trưởng), số ngón (5-4-3-2, 1-2-1-2; ngón 1 trên phím đen Rê♯, Đô♯ được ở mức này) và lời kèm: đúng.'
   - khoi: 5
     loai: vi-du-soan
     kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
     ket_qua: dung
-    ghi_chu: '4 ô 2/4, L:1/16: tay trái móc kép Sol3–Rê4–Si3–Rê4 (5-1-3-1, Sol trưởng), La3–Rê4–Đô4–Rê4 (5-1-2-1, Rê bảy), Fa♯3–Rê4–La3–Rê4 (5-1-3-1, Rê trưởng), Sol3–Rê4–Si3–Rê4 rồi Sol3 đen; tay phải Si4, Rê5 (Sol trưởng); Đô5, La4 (Rê bảy); La4, Fa♯4 (Rê trưởng); Sol4 trắng. Mỗi ô 8 móc kép; tay phải mf, tay trái p như lời kèm.'
+    ghi_chu: '4 ô 2/4, L:1/16: tay trái móc kép Sol3–Rê4–Si3–Rê4 (5-1-3-1, Sol trưởng), La3–Rê4–Đô4–Rê4 (5-1-2-1, Rê bảy), Fa♯3–Rê4–La3–Rê4 (5-1-3-1, Rê trưởng), Sol3–Rê4–Si3–Rê4 rồi Sol3 đen; tay phải Si4, Rê5 (Sol trưởng); Đô5, La4 (Rê bảy); La4, Fa♯4 (Rê trưởng); Sol4 trắng. Mỗi ô 8 móc kép; tay phải mf, tay trái p như lời kèm. Review (Claude, 24/11/2026): nhịp (8 móc kép mỗi ô; ô 4: 4 móc kép + Sol3 đen), hòa âm (Sol trưởng, Rê bảy thiếu năm, Rê trưởng, Sol trưởng), số ngón và lời kèm (tay phải mf, tay trái p): đúng.'

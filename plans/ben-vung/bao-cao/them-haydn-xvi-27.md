@@ -55,3 +55,15 @@ Nhánh `them/haydn-xvi-27`, 24/11/2026. Lượt 10 (đợt 4) của `plans/ben-v
 ## Lượt 2
 
 `node tools/khoa.mjs xuat piano/tac-pham/haydn-xvi-27 du-lieu/tac-pham/haydn-xvi-27`: 43 nhận định.
+
+## Review
+
+Claude (agent riêng, không làm lượt 1, lượt 2), 24/11/2026. Mọi nhận định của hai hồ sơ có `review: dung`; sửa (`ket_qua: da-sua`) n6, n24, n27, n34, n36 của trang và n7, n9, n11 của bản ghi.
+
+- **Dấu láy ô 8 (n24, n36; lượt 2 không chắc).** Bản quét ở 600 dpi và ảnh gốc (1836 × 2448 px): răng cưa ngắn hai đỉnh, có một nét nhỏ ở giữa nhô ra 1–2 px, không đọc chắc được là gạch dọc; Mutopia (theo Peters) ghi `\mordent` (láy dưới). Bản thu Kolodin (CQT): Rê5 7,93 s, Mi5 7,98 s, Rê5 8,06 s, tức Rê–Mi–Rê từ nốt chính. Trang viết lại: "thường được chơi như láy trên: Rê–Mi–Rê, bắt đầu từ nốt chính, thật nhanh, đúng phách; bản thu gợi ý cũng chơi như vậy. Có người chơi thành một láy rền ngắn bắt đầu từ Mi" (nguồn thêm: Dolmetsch, bài 23, Pralltriller và Schneller). Bỏ chữ "không gạch"; bảng Cấu trúc, Chỗ khó, Lỗi thường gặp và `ky_nang_chinh`/dòng Kỹ năng chính đổi "láy trên" thành "dấu láy". Bỏ câu hỏi về dấu láy (đáp án sai cũ "Rê–Đô♯–Rê" lại chính là cách đọc của Mutopia). Khối abc giữ `!uppermordent!`, khớp chữ mới.
+- **Cấp độ.** Giữ Grade 6 (ước lượng), chặng 5. RCM 2022 tr. 73 và Henle (tải lại) khớp. So các bài RCM Level 8 trên site: Mendelssohn *Thuyền ca* (ABRSM 6, Henle 4) chặng 5; Beethoven Op. 49 số 2 (Henle 3, "dễ") chặng 4; Chopin Valse Si thứ (ABRSM 8) chặng 6. Bài này Henle 5 cho cả sonata, móc kép liên tục ở Presto: đứng cạnh Mendelssohn là nhất quán. Lý do ghi ở n4 (trang, bản ghi).
+- **Hình thức.** Đếm lại trên bản in: chủ đề 1–24, biến tấu 25–48, 49–72, nửa đầu chủ đề 73–80, Sol thứ 81–104 (bốn hệ đầu trang PDF 9: 9 + 8 + 8 + 7 ô; câu 89–96 viết lại 97–104), biến tấu cuối 105–152: khớp. Không tìm được nguồn ngoài gọi tên hình thức chương này (IMSLP, Henle, Mutopia, hai lần tìm web). Trang bỏ câu "Bài là chủ đề và biến tấu" và câu hỏi "hình thức nào" (thay bằng câu hỏi về ô 73–80), chỉ tả "dựng trên một chủ đề và các biến tấu của nó"; chip và dòng Hình thức của bản ghi đổi theo.
+- **Trích đoạn.** Khối 1 (lấy đà, ô 1–8) và khối 2 (lấy đà, ô 25–28) so từng nốt với bản quét ở 150–600 dpi, đo dòng kẻ: khớp, kể cả hai chỗ khác Mutopia (dấu láy ô 8; nốt cuối ô 28 tay phải là Si4, nằm trên dòng giữa). Ba bài tập soạn: nhịp, hòa âm, số ngón, lời kèm đúng.
+- **Sự kiện kiểm ngẫu nhiên** (tải lại nguồn): năm 1774–76, in 1778; Klaviersonate Nr. 42, Op. 14 số 1; ba chương; Mutopia nguồn Peters 1880s, Public Domain; RCM tr. 73; Henle mức 5; giấy phép bản thu CC BY-SA 4.0: đều khớp.
+- **Mốc.** Đo lại 16, 129, 157, 177 (onset, CQT): khớp, không đổi. `note` của bản thu đổi thành "IMSLP ghi thông tin phát hành “Luis Kolodin, 2020”" (đó là trường Publisher Information, không phải năm thu), ghi bằng `attach.py --note --keep-ref`.
+- Thuật ngữ: láy trên, láy rền khớp `thuat-ngu.yml` (`mordent`, `trill`).

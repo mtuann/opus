@@ -12,7 +12,7 @@ Chương cuối Sonata Sol trưởng Hob. XVI:27 của Joseph Haydn dựng trên
 
 - **Ở chặng 5 của lộ trình.** Đề cương RCM 2022 xếp chương này ở Level 8; Henle xếp cả bản sonata ở mức 5 trên thang 1–9. ABRSM chưa đưa chương này vào đề cương, nên Grade 6 ở đây là ước lượng.
 - **Presto mà không vội.** Nhịp 2/4 nhanh, nhưng tiếng đàn phải nhẹ và đều; các nốt móc kép của biến tấu phải rõ từng nốt.
-- **Một chủ đề, nhiều lần đổi áo.** Bài là [chủ đề và biến tấu](/opus/hinh-thuc/bien-tau/): tập nó là tập nhận ra cùng một giai điệu dưới nhiều hình nốt khác nhau, như khi nghe chương 2 [Giao hưởng số 94](/opus/nghe-nhac/haydn-94/) của cùng tác giả.
+- **Một chủ đề, nhiều lần đổi áo.** Chương này dựng trên một chủ đề và các [biến tấu](/opus/hinh-thuc/bien-tau/) của nó: tập nó là tập nhận ra cùng một giai điệu dưới nhiều hình nốt khác nhau, như khi nghe chương 2 [Giao hưởng số 94](/opus/nghe-nhac/haydn-94/) của cùng tác giả.
 - **Phát âm Cổ điển.** Luyến hai nốt, nốt tách nhẹ, đệm mỏng: những thói quen dùng lại được cho Mozart và Beethoven thời trẻ.
 
 ## Bối cảnh
@@ -57,7 +57,7 @@ Số ô không tính nhịp lấy đà; cả bài 152 ô. Bản Päsler không �
 
 | Đoạn | Ô nhịp | Nội dung | Điều cần chú ý |
 |---|---|---|---|
-| Chủ đề | 1–24 | Hai nửa, mỗi nửa có dấu nhắc lại: ô 1–8 (kết ở Rê), ô 9–24 (nửa đầu trở lại ở ô 17–20, kết ở Sol trưởng). Tay trái hợp âm thưa | *mf*; nốt móc đơn nhẹ, đều; láy trên ở ô 8 gọn |
+| Chủ đề | 1–24 | Hai nửa, mỗi nửa có dấu nhắc lại: ô 1–8 (kết ở Rê), ô 9–24 (nửa đầu trở lại ở ô 17–20, kết ở Sol trưởng). Tay trái hợp âm thưa | *mf*; nốt móc đơn nhẹ, đều; dấu láy ở ô 8 gọn |
 | Biến tấu 1 | 25–48 | Như chủ đề, tay phải chen nốt móc kép (ô 25: Sol–Rê–Si–Sol rồi Rê) và quãng ba; hai nửa có dấu nhắc lại | Móc kép không được nhanh hơn phách; tay trái như chủ đề |
 | Biến tấu 2 | 49–72 | *f*: tay phải móc kép gần như liên tục (gam đi xuống, nốt xen với một nốt lặp lại), tay trái hợp âm và nốt đơn; hai nửa có dấu nhắc lại | Đều tay, không nhanh dần; to mà không nặng |
 | Nửa đầu chủ đề | 73–80 | *mf*: ô 1–8 trở lại gần như nguyên vẹn, không nhắc lại | Trở về tiếng nhẹ của chủ đề |
@@ -66,7 +66,7 @@ Số ô không tính nhịp lấy đà; cả bài 152 ô. Bản Päsler không �
 
 ### Chủ đề trên khuông nhạc
 
-Nhịp lấy đà và ô 1–8, chép tay từ bản Päsler (Breitkopf & Härtel, 1918), đối chiếu với bản Mutopia. Ở ô 5–7, tay trái lên khóa Sol. Ký hiệu răng cưa không gạch trên nốt Rê ở ô 8 là [láy trên](/opus/piano/not-hoa-my/#lay-tren-va-lay-duoi): Rê–Mi–Rê thật nhanh, đúng phách. Bản in không ghi số máy đếm nhịp; tốc độ trong khối là tốc độ tập.
+Nhịp lấy đà và ô 1–8, chép tay từ bản Päsler (Breitkopf & Härtel, 1918), đối chiếu với bản Mutopia. Ở ô 5–7, tay trái lên khóa Sol. Dấu răng cưa ngắn trên nốt Rê ở ô 8 thường được chơi như [láy trên](/opus/piano/not-hoa-my/#lay-tren-va-lay-duoi): Rê–Mi–Rê, bắt đầu từ nốt chính, thật nhanh, đúng phách; bản thu gợi ý cũng chơi như vậy. Có người chơi thành một láy rền ngắn bắt đầu từ Mi. Bản in không ghi số máy đếm nhịp; tốc độ trong khối là tốc độ tập.
 
 ```abc
 X:1
@@ -108,7 +108,7 @@ K:G
 |---|---|---|
 | Ba nốt rải lên của chủ đề | Ở tốc độ *Presto*, tay dễ giật khi nhảy từ Rê về Sol | Giữ cả bàn tay trên hình hợp âm, ngón 1-3-5; tập chậm, rồi nhanh dần. Bài tập 1 |
 | Móc kép của biến tấu 1 và 2 | Dễ vội, nốt ngón 4 và 5 bị nuốt | Tập chậm với máy đếm nhịp; nhóm theo phách rồi bỏ nhóm. Bài tập 2 |
-| Láy trên ở ô 8 và các ô tương tự | Ở tốc độ nhanh, láy dễ thành một cục, làm trễ phách | Tập riêng Rê–Mi–Rê đúng phách; nếu chưa gọn thì chơi một nốt Rê, thêm láy sau (xem [nốt hoa mỹ](/opus/piano/not-hoa-my/#lay-tren-va-lay-duoi)) |
+| Dấu láy ở ô 8 và các ô tương tự | Ở tốc độ nhanh, láy dễ thành một cục, làm trễ phách | Tập riêng Rê–Mi–Rê đúng phách; nếu chưa gọn thì chơi một nốt Rê, thêm láy sau (xem [nốt hoa mỹ](/opus/piano/not-hoa-my/#lay-tren-va-lay-duoi)) |
 | Đoạn Sol thứ | Nhiều dấu giáng viết cạnh nốt, dễ quên khi hóa biểu vẫn là một dấu thăng | Đọc trước, khoanh các nốt Si♭, Mi♭, La♭; chơi chậm từng tay |
 | Tay trái móc kép ở biến tấu cuối | Tay trái nặng, át giai điệu, hay nhanh dần | Tập tay trái một mình, nốt trầm hơi rõ, các nốt khác rất nhẹ. Bài tập 3 |
 | Giữ nhịp qua cả bài | Bài dài hơn ba phút với mọi dấu nhắc lại, các biến tấu đổi hình nốt liên tục | Đặt một tốc độ cho cả bài; chơi liền từ chủ đề sang biến tấu 1, rồi tới biến tấu 2, không dừng giữa các đoạn |
@@ -207,7 +207,7 @@ Gần như không cần bàn đạp: độ rõ của các nốt nhanh là chính
 
 - Chơi quá nhanh ngay từ đầu, rồi các nốt móc kép của biến tấu dính vào nhau.
 - Nhanh dần ở biến tấu 2, khi tay phải chạy móc kép liên tục.
-- Láy trên ở ô 8 làm trễ phách.
+- Dấu láy ở ô 8 làm trễ phách.
 - Quên các dấu giáng ở đoạn Sol thứ, vì hóa biểu không đổi.
 - Tay trái biến tấu cuối nặng, át giai điệu.
 - Dừng lại giữa các biến tấu, làm đứt mạch của cả bài.
@@ -224,21 +224,16 @@ Gần như không cần bàn đạp: độ rõ của các nốt nhanh là chính
 ## Kiểm tra nhanh
 
 ```quiz
-? Chương này được viết theo hình thức nào?
-+ Chủ đề và biến tấu
-- Fugue
-- Minuet và trio
-> Một chủ đề 24 ô, rồi các biến tấu: hai biến tấu ở Sol trưởng, một đoạn Sol thứ, và biến tấu cuối ở Sol trưởng.
+? Sau biến tấu 1 và biến tấu 2, điều gì trở lại ngay trước đoạn Sol thứ?
++ Nửa đầu chủ đề, gần như nguyên vẹn, chỉ một lần
+- Biến tấu 1, có nhắc lại
+- Cả chủ đề 24 ô, có nhắc lại
+> Ô 73–80 là ô 1–8 của chủ đề trở lại (*mf*), không có dấu nhắc lại; ngay sau đó là đoạn Sol thứ.
 ? Ở đoạn Sol thứ, hóa biểu trong bản Päsler thế nào?
 + Vẫn một dấu thăng; các dấu giáng được viết cạnh từng nốt
 - Đổi thành hai dấu giáng
 - Không có dấu hóa nào
 > Bản Päsler giữ hóa biểu Sol trưởng; Si♭, Mi♭ và các dấu hóa khác ghi ngay cạnh nốt.
-? Ký hiệu răng cưa ngắn, không gạch, trên nốt Rê ở ô 8 được chơi thế nào?
-+ Rê–Mi–Rê thật nhanh, đúng phách (láy trên)
-- Rê–Đô♯–Rê (láy dưới)
-- Rê ngân dài, không thêm nốt
-> Răng cưa không gạch là láy trên: nốt chính, nốt trên, nốt chính.
 ? Ở biến tấu cuối, tay trái khác chủ đề ở điểm nào?
 - Tay trái nghỉ suốt biến tấu
 + Tay trái chạy nốt móc kép liên tục
