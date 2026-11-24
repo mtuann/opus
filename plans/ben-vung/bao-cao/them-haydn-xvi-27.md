@@ -67,3 +67,7 @@ Claude (agent riêng, không làm lượt 1, lượt 2), 24/11/2026. Mọi nhậ
 - **Sự kiện kiểm ngẫu nhiên** (tải lại nguồn): năm 1774–76, in 1778; Klaviersonate Nr. 42, Op. 14 số 1; ba chương; Mutopia nguồn Peters 1880s, Public Domain; RCM tr. 73; Henle mức 5; giấy phép bản thu CC BY-SA 4.0: đều khớp.
 - **Mốc.** Đo lại 16, 129, 157, 177 (onset, CQT): khớp, không đổi. `note` của bản thu đổi thành "IMSLP ghi thông tin phát hành “Luis Kolodin, 2020”" (đó là trường Publisher Information, không phải năm thu), ghi bằng `attach.py --note --keep-ref`.
 - Thuật ngữ: láy trên, láy rền khớp `thuat-ngu.yml` (`mordent`, `trill`).
+
+## Kiểm mẫu và khóa
+
+Claude (agent riêng) kiểm thay chủ repo 5 nhận định mẫu (trang n21, n29, n32, n36; bản ghi n10) trên bản Päsler, IMSLP, Mutopia, Henle và bản thu: 5 đúng. Khóa trang và bản ghi 24/11/2026.
