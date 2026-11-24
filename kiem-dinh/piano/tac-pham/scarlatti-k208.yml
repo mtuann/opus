@@ -1,0 +1,335 @@
+# Hồ sơ kiểm định, cấu trúc ở plans/ben-vung/chuan-kiem-dinh.md mục 5. Điền xong thì khóa: node tools/khoa.mjs khoa piano/tac-pham/scarlatti-k208
+trang: src/content/docs/piano/tac-pham/scarlatti-k208.md
+tang: tac-pham
+lan:
+  - so: 1
+    ngay: null
+    nhanh: them/scarlatti-k208
+    ma_bam: null
+    nguoi:
+      luot_1: Claude Opus 5.5 (lượt 1, them/scarlatti-k208, 24/11/2026)
+      luot_2: null
+      review: null
+      kiem_mau: null
+ghi_chu: 'Bài học mới (lộ trình thêm tác phẩm, lượt 10, khảo sát đợt 4). Nốt của trích đoạn chép từ bản quét bản Longo (Ricordi 1906, tập 5, E.R. 545, tr. 147–148, số 238; file reference-edition/L238K208.pdf của kho GitHub craigsapp/scarlatti-keyboard-sonatas, tải 24/11/2026, 2 trang), đọc ở 110–450 dpi; soát với PDF của Pierre Gouin (IMSLP #293023, 2 trang) và MIDI cùng bộ (IMSLP #293026: liệt kê nốt ô 1–3 bằng mido). Bản chép tay không xem trực tiếp: "chữ của bản chép tay" trên trang dựa vào bản Gouin (IMSLP ghi "Urtext keyboard score") và vào chú thích "C. V." của chính Longo; bản Gouin ô 4 (Fa♯ Sol♯ La Sol♯ | Si Đô♯ Rê Đô♯, tay trái [Rê3 La3]) khớp cách viết "C. V." Longo in ở chú thích a), nên coi bản Gouin theo bản chép tay Venice. Đếm ô: 25 ô (Longo đánh số (5), (10), (15), (20), (25)); nửa đầu ô 1–14, nửa sau ô 15–25, mỗi nửa có dấu nhắc lại. Bản thu: Robert Stephen Hill (fortepiano), IMSLP #961413, chỉ dẫn link; file FLAC chủ repo tải tay vào ../opus-zero/_imslp/ (ffprobe 281,186667 s). Mốc: căn bằng tools/audio/align/run.py với cấu hình tạm ngoài repo (scratchpad scarlatti-k208/align_k208.py: src imslp_Scarlatti_K208.mid = MIDI Gouin, sha256 f253c962…caec, đã viết ra hai dấu nhắc lại, 50 ô; tuning -1 vì bản thu thấp hơn La 440 một nửa cung; rows {0: first, 1: 3, 2: 4, 3: 7, 4: 10, 5: 14, 6: 28, 7: 30, 8: 36, 9: 39, 10: 47}); cả 11 dòng được nhận (hai trong ba biến thể khớp trong 2 s). Dòng 6 (nửa đầu nhắc lại) run.py cho 78,5 s, nhưng khởi âm và sắc âm cho thấy nốt Mi tròn tắt khoảng 74,6 s và nốt La (nghe như La♭) của ô 1 vang ở 75,2 s, Đô♯ ở 76,3 s, Rê của ô 2 ở 78,9 s: ghi 75. Dòng 11 (ô 23 lần hai): khởi âm La có Đô♯ ở 245,2 s sau ô 22 (Rê–La, 240–244,6 s): khớp 245. Chữ do ::hop-tac-pham, ::hinh-cau-truc, ::hoc-tiep dựng thuộc hồ sơ du-lieu/tac-pham/scarlatti-k208.'
+nguon:
+  - id: longo
+    bac: 1
+    ten: 'Scarlatti, Opere complete per clavicembalo, biên tập Alessandro Longo, tập 5, Ricordi, Milano, 1906: bản quét số 238, tr. 147–148, chân trang "E.R. 545"; đầu bài "ANDANTINO CANTABILE (♩=72)"; chú thích cuối tr. 148: "C. V. Libro III, N. 3" và cách viết C. V. cho ô 4 a), 13 b), 20 c), 22 d). File reference-edition/L238K208.pdf (commit cc6526b, 18/12/2020) của kho craigsapp/scarlatti-keyboard-sonatas; cùng bản quét trên IMSLP (#914846 theo khảo sát)'
+    link: https://github.com/craigsapp/scarlatti-keyboard-sonatas/blob/master/reference-edition/L238K208.pdf
+  - id: gouin
+    bac: 1
+    ten: 'Pierre Gouin, Sonata K. 208, Les Éditions Outremontaises, Montréal, 2013 (CC BY-SA 4.0): PDF 2 trang, IMSLP #293023 (bản chủ repo tải tay, ../opus-zero/_imslp/IMSLP293023-PMLP475484-Scarlatti_Sonate_K.208.pdf); đầu bài "Adagio e cantabile", số chỉ nhịp C, không sắc thái, không ngón; ô 15 chữ "tremulo"; 25 ô, vạch nhắc lại sau ô 14 và ô 25'
+    link: https://imslp.org/wiki/Special:ImagefromIndex/293023
+  - id: gouin-midi
+    bac: 1
+    ten: 'Pierre Gouin, MIDI Sonata K. 208 (CC BY-SA 4.0), IMSLP #293026; 1024 tick mỗi phách, 4/4, viết ra hai dấu nhắc lại (199,5 phách = 50 ô); đọc bằng mido'
+    link: https://imslp.org/wiki/Special:ImagefromIndex/293026
+  - id: imslp-k208
+    bac: 2
+    ten: 'IMSLP, Keyboard Sonata in A major, K.208 (Scarlatti, Domenico), đọc wikitext qua API 24/11/2026: K.208; L.238; P.315; Adagio e cantabile; Year/Date of Composition để trống; bản Longo (ScarlattiSonatasLongo|5|1906|545|147-48, Public Domain); bản Gouin "Urtext keyboard score", CC BY-SA 4.0; MIDI Gouin; bản thu "PMLP475484-17_-_AUDIO_2004_-_Track-17_DS_Sonata_A_Major_K_208_Adagio_cristo_bhs_fr_20_04_04.flac", Performer Categories "Hill, Robert Stephen=fortepiano", Uploader Rshill05, Date Submitted 2025/3/18, Copyright "Public Domain", Misc. Notes "MS source"'
+    link: https://imslp.org/wiki/Keyboard_Sonata_in_A_major,_K.208_(Scarlatti,_Domenico)
+  - id: henle-581
+    bac: 2
+    ten: 'G. Henle Verlag, Selected Piano Sonatas, Volume IV (HN 581), trang sản phẩm (bản lưu của khảo sát đợt 4, 24/11/2026; mở lại được 24/11/2026): bảng nội dung "Piano Sonata A major K. 208 | 4 | medium | ABRSM: Piano Grade 6"; lời giới thiệu: nguồn là các bản chép sạch ở Venice và Parma; tiểu sử: 1685 sinh ở Naples, con Alessandro Scarlatti; 1719 Director of the royal musical chapel under João V, viết nhạc đàn phím cho Maria Barbara; from 1728 làm ở triều đình Tây Ban Nha, chủ yếu viết cho harpsichord; 1752–57 cho chép nhiều tập sonata; 1757 mất ở Madrid'
+    link: https://www.henle.de/Selected-Piano-Sonatas-Volume-IV/HN-581
+  - id: abrsm-2122
+    bac: 2
+    ten: 'ABRSM, Piano Practical Grades 2021 & 2022: Grade 6, danh sách A số 10 "D. Scarlatti Sonata in A, Kp. 208, L. 238", D. Scarlatti: 200 Sonatas, Vol. 2 (Editio Musica Budapest)'
+    link: https://www.abrsm.org/sites/default/files/2023-09/piano-2021-2022-syllabus-rev-sep-2020-final.pdf
+  - id: abrsm-2324
+    bac: 2
+    ten: 'ABRSM, Piano Practical Grades 2023 & 2024: Grade 6, danh sách A số 10, Sonata in A, Kp. 208, L. 238'
+    link: https://www.abrsm.org/sites/default/files/2023-09/piano-2023-2024-practical-grades-syllabus-may-2022.pdf
+  - id: abrsm-2526
+    bac: 2
+    ten: 'ABRSM, Piano Practical Grades 2025 & 2026: Grade 6 (dòng tiêu đề "GRADE 6"), danh sách A số 14, Sonata in A, Kp. 208, L. 238, EMB; phần hướng dẫn chung: "Repeats: Unless the syllabus specifies differently, all da capo and dal segno indications must be followed but other repeats (including first-time bars) should not be played unless they are very short (i.e. a few bars)."'
+    link: https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26%202026%20Prac%20syllabus%2020240524_access.pdf
+  - id: abrsm-2728
+    bac: 2
+    ten: 'ABRSM, Piano Practical Grades 2027 & 2028: Grade 6, danh sách A số 14, Sonata in A, Kp. 208, L. 238; cùng câu về dấu nhắc lại'
+    link: https://www.abrsm.org/sites/default/files/2026-06/Piano%20Practical%20Grades%20Qualification%20Specification%202027%20%26%202028.pdf
+  - id: rcm-2022
+    bac: 2
+    ten: 'The Royal Conservatory, Piano Syllabus 2022 Edition: Level 7, List A Baroque Repertoire, "Sonata in A Major, K 208, Scarlatti" (tr. 60, 63 của file)'
+    link: https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf
+  - id: wiki-list
+    bac: 2
+    ten: 'Wikipedia, List of solo keyboard sonatas by Domenico Scarlatti (wikitext qua API, 24/11/2026): "wrote 555 solo keyboard sonatas"; bảng dòng K 208 | L 238 | P 315 | A major | Adagio e cantabile; dòng cuối K 555'
+    link: https://en.wikipedia.org/wiki/List_of_solo_keyboard_sonatas_by_Domenico_Scarlatti
+  - id: wiki-fortepiano
+    bac: 2
+    ten: 'Wikipedia, Fortepiano (wikitext qua API, 24/11/2026): "A fortepiano is an early piano"; "The tone of the fortepiano is quite different from that of the modern piano, however, being softer, with less sustain."'
+    link: https://en.wikipedia.org/wiki/Fortepiano
+  - id: dolmetsch
+    bac: 2
+    ten: 'Dolmetsch Online, Music Dictionary T (defst4), đọc 24/11/2026: "Tremulo: an ornament used by Dominico Scarletti in about two dozen of his sonatas, which is to be distinguished from the trill by the fact that the tremulo uses the lower auxiliary, whereas the trill always uses the upper"'
+    link: https://www.dolmetsch.com/defst4.htm
+  - id: wiktionary-tremulo
+    bac: 2
+    ten: 'Wiktionary, tremulo (tiếng Ý, tính từ): trembling, quivering, quavering'
+    link: https://en.wiktionary.org/wiki/tremulo
+  - id: do-ban-thu
+    bac: 1
+    ten: 'Đo file FLAC của bản thu Hill (IMSLP #961413, 44,1 kHz, hai kênh, 281,19 s theo ffprobe; librosa, 24/11/2026): sắc âm (chroma) cả bài mạnh nhất ở Rê♯, Sol♯, La♯, 20 giây đầu ở Sol♯, Đô♯ (tức La trưởng thấp nửa cung); estimate_tuning lệch -0,03 nửa cung so với lưới La 440, run.py --tuning cho -1,00 nửa cung; căn với MIDI Gouin có nhắc lại khớp cả bốn đoạn (nửa đầu 0,4–75,2 s, nhắc lại 75,2–150,2 s, nửa sau 150,2–205,8 s, nhắc lại 205,8–278,3 s); khởi âm và sắc âm quanh các mốc (xem ghi_chu hồ sơ)'
+    link: https://imslp.org/wiki/Special:ImagefromIndex/961413
+  - id: thuat-ngu-site
+    bac: 2
+    ten: 'src/data/thuat-ngu.yml (Từ điển của site, đã khóa): adagio "Chậm, thong thả"; andantino; cantabile "Như hát"; appoggiatura "Nốt dựa, đúng phách, lấy bớt độ dài của nốt chính"; trill "Láy rền"; legato; non legato'
+    link: https://github.com/mtuann/opus/blob/main/src/data/thuat-ngu.yml
+  - id: not-hoa-my
+    bac: 2
+    ten: 'Trang piano/not-hoa-my của site (đã khóa): mục "Appoggiatura và acciaccatura" (quy tắc C. P. E. Bach 1753: trước nốt chấm dôi nốt dựa lấy hai phần ba; đúng phách); mục "Bắt đầu từ nốt nào" (Baroque: láy rền bắt đầu từ nốt trên, đúng phách)'
+    link: https://github.com/mtuann/opus/blob/main/src/content/docs/piano/not-hoa-my.md
+  - id: cap-do
+    bac: 2
+    ten: 'src/data/cap-do.yml (đã khóa) và quy tắc của lộ trình thêm tác phẩm (plans/ben-vung/lo-trinh-them-tac-pham.md mục 2): chặng 5 ứng với Grade 6'
+    link: https://github.com/mtuann/opus/blob/main/src/data/cap-do.yml
+nhan_dinh:
+  - id: n1
+    cau: 'Sonata La trưởng K. 208 (L. 238) của Domenico Scarlatti; chỉ dẫn gốc Adagio e cantabile (chậm và hát).'
+    loai: ten
+    nguon: [ gouin, imslp-k208, wiki-list, thuat-ngu-site ]
+    ket_qua: dung
+    ghi_chu: 'Gouin tr. 1: "Sonata K. 208", "Adagio e cantabile", hóa biểu ba thăng. IMSLP: K.208 ; L.238, Number of Movements/Sections "Adagio e cantabile". Wikipedia: K 208, L 238, A major, Adagio e cantabile. adagio "Chậm, thong thả", cantabile "Như hát" (thuat-ngu.yml).'
+  - id: n2
+    cau: 'Sonata của Scarlatti là một bản nhạc một chương cho đàn phím, chia hai nửa, mỗi nửa nhắc lại; K. 208 là một bản chậm như vậy.'
+    loai: cau-truc
+    nguon: [ gouin, longo, imslp-k208 ]
+    ket_qua: dung
+    ghi_chu: 'K. 208: IMSLP ghi một phần "Adagio e cantabile", nhạc cụ "keyboard"; Gouin và Longo đều có vạch nhắc lại sau ô 14 và ở cuối ô 25. Câu chung về sonata Scarlatti (một chương, hai nửa có nhắc lại) khớp trang nghe-nhac/scarlatti-sonata đã khóa (sơ đồ "‖: Nửa đầu … :‖"); ở đây chỉ kiểm trên K. 208.'
+  - id: n3
+    cau: 'Tay phải hát một giai điệu có nốt hoa mỹ (nốt dựa, trill, nhóm nốt nhanh); tay trái đi đều từng phách bằng nốt đen, khi một nốt, khi hai nốt.'
+    loai: cau-truc
+    nguon: [ gouin, longo ]
+    ket_qua: dung
+    ghi_chu: 'Gouin: nốt dựa ô 1 (Fa♯ trước Mi), ô 2 (Mi trước Rê, Đô♯ trước Si); tr ô 11 và 25; nhóm móc ba ô 23, 25; tay trái nốt đen gần như suốt bài (một nốt ô 1–2, ô 15; hai nốt phần lớn các ô; ô 14 nốt tròn, ô 25 có lặng đen cuối).'
+  - id: n4
+    cau: 'ABRSM xếp K. 208 ở Grade 6, danh sách A, trong cả bốn kỳ 2021–2022, 2023–2024, 2025–2026, 2027–2028; RCM 2022 Level 7; Henle mức 4 trên thang 1–9; Grade 6 ứng với chặng 5 của lộ trình.'
+    loai: cap-do
+    nguon: [ abrsm-2122, abrsm-2324, abrsm-2526, abrsm-2728, rcm-2022, henle-581, cap-do ]
+    ket_qua: dung
+    ghi_chu: 'Bản chữ trích của bốn PDF ABRSM (scratchpad ks4/pdf): dòng "D. Scarlatti Sonata in A, Kp. 208, L. 238" nằm sau tiêu đề "GRADE 6" (2025–2026: tiêu đề dòng 1709, bài dòng 1737); số thứ tự 10 (2021–2024), 14 (2025–2028) trong danh sách đầu của Grade 6 (danh sách A; đánh số lại từ 1 ở mỗi danh sách). RCM tr. 60, 63: Level 7, List A. Henle HN 581: K. 208 mức 4, ABRSM Piano Grade 6. Chặng 5 = Grade 6 (lo-trinh-them-tac-pham.md mục 2).'
+  - id: n5
+    cau: 'Ở chặng 5, K. 208 là bài Baroque duy nhất: sau hai bài Bach ở chặng 4 (Invention số 1, Prelude Đô trưởng) và trước Prelude và Fugue Đô thứ ở chặng 6; đây là bài học Scarlatti đầu tiên trên site.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'src/data/tac-pham.yml (24/11/2026): bài học chặng 5 là bartok-romanian-folk-dances (Thế kỷ 20), beethoven-anh-trang, mozart-k545 (Cổ điển), chopin-valse-la-thu, mendelssohn-thuyen-ca, schumann-traumerei (Lãng mạn) và scarlatti-k208 (Baroque); chặng 4 có bach-invention-1, bach-prelude-do; chặng 6 có bach-prelude-fugue-do-thu; không bài học nào khác có tac_gia scarlatti (scarlatti-sonata là loai nghe).'
+  - id: n6
+    cau: 'Nửa đầu đi từ La trưởng sang Mi trưởng, nửa sau trở về La trưởng; gần cuối mỗi nửa có một trill (ô 11 trên Fa♯, ô 25 trên Si).'
+    loai: cau-truc
+    nguon: [ gouin, longo ]
+    ket_qua: dung
+    ghi_chu: 'Gouin: ô 13–14 tay phải [Mi4 Sol♯4], [Rê♯4 Fa♯4] có dấu láy, rồi Mi4 nốt tròn; tay trái về Mi3 nốt tròn (kết ở Mi trưởng). Ô 25: Si4 chấm có tr, La4; tay trái La2 (kết ở La trưởng). Ô 11: Fa♯4 chấm có tr rồi Mi Fa♯ móc ba. Ô 23 Gouin ghi dấu láy (không phải tr) trên Si; trang chỉ nói ô 11 và 25.'
+  - id: n7
+    cau: 'Bản in Longo (1906) đổi chỉ dẫn tốc độ thành Andantino cantabile (♩ = 72), nhanh hơn Adagio; sắc thái (p, mf, cres., dấu lớn dần và nhỏ dần), dấu luyến dài, chấm staccato trên các nốt tay trái và số ngón đều do Longo thêm.'
+    loai: lich-su
+    nguon: [ longo, gouin, thuat-ngu-site ]
+    ket_qua: dung
+    ghi_chu: 'Longo tr. 147: "ANDANTINO CANTABILE (♩=72)"; ví dụ p ô 1, dấu lớn dần nhỏ dần ô 4, mf ô 6, p và cres. ô 8, mf ô 13, p ô 15, mf ô 16; luyến dài khắp bài; chấm staccato trên nốt tay trái (ô 1–4…); số ngón cả hai tay. Gouin không có những thứ ấy (chỉ có luyến nối nốt dựa, dấu nối, tr, dấu láy, chữ tremulo). Andantino nhanh hơn Adagio (thuat-ngu.yml: adagio chậm; andantino gần Andante).'
+  - id: n8
+    cau: 'Ở ô 15, bản chép tay ghi chữ tremulo trên nốt Si; Longo thay bằng dấu tr (láy rền).'
+    loai: lich-su
+    nguon: [ gouin, longo ]
+    ket_qua: dung
+    ghi_chu: 'Gouin tr. 2 ô 15: chữ "tremulo" phía trên Si4 đen chấm dôi (phách 3). Longo tr. 148 ô 15: dấu tr (kèm nốt nhỏ) trên Si4 cùng chỗ, không có chữ tremulo.'
+  - id: n9
+    cau: 'Tremulo (tiếng Ý: run rẩy) là một kiểu nốt hoa mỹ Scarlatti dùng trong khoảng hai chục sonata; từ điển Dolmetsch cho rằng nó khác láy rền ở chỗ dùng nốt phụ phía dưới.'
+    loai: dinh-nghia
+    nguon: [ dolmetsch, wiktionary-tremulo ]
+    ket_qua: dung
+    ghi_chu: 'Dolmetsch defst4: "an ornament used by Dominico Scarletti in about two dozen of his sonatas … the tremulo uses the lower auxiliary, whereas the trill always uses the upper". Wiktionary: tremulo (Ý) = trembling, quivering. Trang ghi rõ đây là ý của Dolmetsch.'
+  - id: n10
+    cau: 'Longo sửa nốt ở ô 4, 13, 20 và 22; cách viết của bản chép tay in ở chú thích cuối trang, đánh dấu "C. V." (bản chép tay Venice).'
+    loai: lich-su
+    nguon: [ longo, gouin ]
+    ket_qua: dung
+    ghi_chu: 'Longo tr. 148 cuối trang: "4 – C. V." a), "13 – C. V." b), "20 – C. V." c), "22 – C. V." d), mỗi chú thích một đoạn nhạc ngắn; dấu a) ở ô 4 tr. 147, b) ở ô 13, c) ô 20, d) ô 22. "C. V." cùng dòng "C. V. Libro III, N. 3" (Codice Veneziano, tập III); đọc C. V. là bản chép tay Venice là suy luận của lượt 1 từ dòng ấy. Bản Gouin ô 4 khớp cách viết a).'
+  - id: n11
+    cau: 'Domenico Scarlatti (1685–1757) sinh ở Naples, con của nhà soạn nhạc Alessandro Scarlatti.'
+    loai: nam
+    nguon: [ henle-581, wiki-list ]
+    ket_qua: dung
+    ghi_chu: 'Henle: "1685 Born in Naples on October 26, the son of Alessandro Scarlatti"; "1757 … Death in Madrid on July 23". Wikipedia: (1685–1757). Khớp nha-soan-nhac.yml (scarlatti 1685–1757).'
+  - id: n12
+    cau: 'Năm 1719 Scarlatti đứng đầu nhà nguyện hoàng gia Bồ Đào Nha và viết nhạc đàn phím cho công chúa Maria Barbara; từ năm 1728 ông phục vụ triều đình Tây Ban Nha và viết chủ yếu cho đàn harpsichord.'
+    loai: lich-su
+    nguon: [ henle-581 ]
+    ket_qua: dung
+    ghi_chu: 'Henle: "1719 Director of the royal musical chapel under João V. Composition of serenades and harpsichord pieces for Maria Barbara, the later queen of Spain"; "from 1728 Employment at the Spanish court … Instead of operas he now primarily composes harpsichord pieces". João V là vua Bồ Đào Nha; Maria Barbara là công chúa Bồ Đào Nha, như trang nghe-nhac/scarlatti-sonata đã khóa.'
+  - id: n13
+    cau: 'Danh mục của Ralph Kirkpatrick (chữ K.) đánh số 555 sonata.'
+    loai: so-lieu
+    nguon: [ wiki-list ]
+    ket_qua: dung
+    ghi_chu: 'Wikipedia: "wrote 555 solo keyboard sonatas"; bảng K chạy tới 555.'
+  - id: n14
+    cau: 'Nguồn chính của các sonata là những tập chép tay sạch lưu ở Venice và Parma; trong những năm 1752–1757 Scarlatti cho chép nhiều tập sonata như vậy.'
+    loai: lich-su
+    nguon: [ henle-581 ]
+    ket_qua: dung
+    ghi_chu: 'Henle HN 581: "the legendary fair copies from Venice and Parma that constitute the sources"; tiểu sử: "1752–57 He orders the preparation of several volumes of his collected sonatas".'
+  - id: n15
+    cau: 'Năm viết K. 208 không rõ; Longo ghi nguồn của bài là bản chép tay Venice, tập III, số 3.'
+    loai: nam
+    nguon: [ longo, imslp-k208 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Year/Date of Composition để trống. Longo tr. 148 dưới hệ cuối: "C. V. Libro III, N. 3."'
+  - id: n16
+    cau: 'K. 208 theo danh mục Kirkpatrick, L. 238 theo Alessandro Longo, người biên tập các sonata thành nhiều tập cho nhà Ricordi (Milano); K. 208 ở tập 5, in năm 1906, số bản in E.R. 545, tr. 147–148.'
+    loai: danh-muc
+    nguon: [ longo, imslp-k208, wiki-list ]
+    ket_qua: dung
+    ghi_chu: 'Longo: số "238." đầu bài, trang 147–148, chân trang "E.R. 545". IMSLP: Editor Alessandro Longo, Publisher Information {{ScarlattiSonatasLongo|5|1906|545|147-48}}. Wikipedia: K 208 = L 238. Tập 5 cho thấy có nhiều tập.'
+  - id: n17
+    cau: 'Bản của Pierre Gouin (Les Éditions Outremontaises, Montréal, 2013) là bản Urtext gõ lại, giấy phép CC BY-SA 4.0, có PDF và MIDI trên IMSLP.'
+    loai: ten
+    nguon: [ imslp-k208, gouin ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Editor Pierre Gouin, Publisher Information "Montréal: Les Éditions Outremontaises, 2013", Copyright CC BY-SA 4.0, Misc. Notes "Urtext keyboard score"; MIDI "MIDI file by Pierre Gouin", cùng nhà, cùng giấy phép. PDF chân trang "© Les Éditions Outremontaises - 2013".'
+  - id: n18
+    cau: 'Bản thu gợi ý là của Robert Stephen Hill, đăng trên IMSLP, phạm vi công cộng; ông chơi trên fortepiano.'
+    loai: ten
+    nguon: [ imslp-k208 ]
+    ket_qua: dung
+    ghi_chu: 'IMSLP: Performer Categories "Hill, Robert Stephen=fortepiano", Copyright "Public Domain", Date Submitted 2025/3/18, Uploader Rshill05.'
+  - id: n19
+    cau: 'Fortepiano là cây piano thời đầu; tiếng nhỏ hơn và ngân ngắn hơn piano hiện đại.'
+    loai: dinh-nghia
+    nguon: [ wiki-fortepiano ]
+    ket_qua: dung
+    ghi_chu: 'Wikipedia Fortepiano: "an early piano"; "softer, with less sustain".'
+  - id: n20
+    cau: 'Trong bản thu gợi ý, đàn lên dây thấp hơn piano hiện đại khoảng nửa cung, nên bài nghe như ở giọng La♭ trưởng; người chơi chơi đủ các dấu nhắc lại.'
+    loai: so-lieu
+    nguon: [ do-ban-thu ]
+    ket_qua: dung
+    ghi_chu: 'Sắc âm: Sol♯ (= La♭), Rê♯ (= Mi♭), Đô♯ (= Rê♭) trội thay cho La, Mi, Rê; run.py ước -1,00 nửa cung. Căn với MIDI có nhắc lại khớp (chi phí 0,15) hơn hẳn bản không nhắc lại (0,21, các mốc vô lý); khởi âm La ở 75,2 s sau nốt Mi tròn, và nửa sau lặp từ 205,8 s.'
+  - id: n21
+    cau: 'Bảng Theo dõi khi nghe, nửa đầu: ô 1–3 giai điệu chậm với nốt dựa, tay trái nốt La lặp bốn lần; ô 4 móc kép chạy lên cao rồi xuống; ô 5–7 chỗ ngắt ngắn sau nốt La, Rê♯, La♯ hướng sang giọng Mi; ô 8–10 nốt nối qua phách, tay trái có Sol♮, Đô♮ (màu giọng thứ); ô 11–14 trill trên Fa♯, kết bằng nốt tròn ở Mi trưởng.'
+    loai: cau-truc
+    nguon: [ gouin, longo ]
+    ket_qua: dung
+    ghi_chu: 'Gouin: ô 1 tay trái La3 ×4; ô 4 móc kép từ Fa♯4 lên Si5 rồi xuống Rê5; ô 5 Đô♯5 Si4 (móc kép) La4 (móc đơn chấm) rồi lặng móc đơn, Rê♯5; ô 6 La♯4, Rê♯5; ô 8–10 các dấu nối qua phách; tay trái ô 8 Đô♮3, ô 9 Sol♮2 và Sol♮3; ô 11 Fa♯4 có tr; ô 14 Mi4 tròn. "Màu giọng thứ": Sol♮, Đô♮ là nốt của Mi thứ.'
+  - id: n22
+    cau: 'Bảng Theo dõi khi nghe, nửa sau: ô 15–16 nốt Si giữ lâu có chữ tremulo, tay trái có Sol♮, rồi bước nhảy lên Si cao; ô 17–22 móc kép liền tay, nhảy rộng, nhiều nốt bình (Sol♮, Fa♮); ô 23–25 trở về La trưởng, kết bằng trill trên Si rồi nốt La.'
+    loai: cau-truc
+    nguon: [ gouin, longo ]
+    ket_qua: dung
+    ghi_chu: 'Gouin tr. 2: ô 15 Si4 đen, Si4 đen chấm có "tremulo", tay trái Si2 Si3 Sol♮3 Mi3; ô 16 Si4 móc đơn rồi Si5; ô 17 Sol♮5 và Sol♮4, ô 18 Fa♮5, Fa♮4, móc kép nhảy quãng rộng; ô 25 Si4 tr rồi La4, tay trái La2.'
+  - id: n23
+    cau: 'Mốc tham khảo của bảng Theo dõi khi nghe theo bản thu Hill: 0, 14, 18, 34, 51, 75, 150, 160, 186, 206, 245 giây.'
+    loai: so-lieu
+    nguon: [ do-ban-thu, gouin-midi ]
+    ket_qua: dung
+    ghi_chu: 'Căn bằng run.py (cấu hình tạm, xem ghi_chu hồ sơ): mốc lấy của run.py, trừ dòng 6 sửa tay 78,5 → 75 theo khởi âm (75,2 s). Dòng 2 (ô 4): ba biến thể 14,3/13,9/14,3; dòng 4 (ô 8): 33,5/31,8/33,9; các dòng khác ít nhất hai biến thể khớp trong 2 s.'
+  - id: n24
+    cau: 'Bảng Cấu trúc: nửa đầu ô 1–4 (chủ đề, ô 4 móc kép), 5–10 (Rê♯, La♯ dẫn sang Mi; nốt nối, Sol♮, Đô♮), 11–14 (trill Fa♯, kết Mi trưởng nốt tròn); nửa sau ô 15–16 (tremulo, Sol♮, nhảy lên Si cao), 17–22 (móc kép nhảy rộng, nốt bình), 23–25 (về La trưởng, trill trên Si, kết ở La).'
+    loai: cau-truc
+    nguon: [ gouin, longo ]
+    ket_qua: dung
+    ghi_chu: 'Như n21, n22; cột "Điều cần chú ý" là lời khuyên tập (xem n31).'
+  - id: n25
+    cau: 'Theo hướng dẫn chung của đề cương ABRSM 2025–2026, ở bài thi không chơi các dấu nhắc lại, trừ khi đoạn nhắc chỉ dài vài ô.'
+    loai: quy-tac
+    nguon: [ abrsm-2526, abrsm-2728 ]
+    ket_qua: dung
+    ghi_chu: 'abrsm-2526 (bản chữ trích dòng 430–432): "other repeats … should not be played unless they are very short (i.e. a few bars)"; đề cương 2027–2028 cùng câu. Mỗi nửa của K. 208 dài 14 và 11 ô.'
+  - id: n26
+    cau: 'Trích đoạn ô 1–3: nốt chép từ bản quét bản Longo, soát với bản Gouin, hai bản giống nhau từng nốt ở ba ô này; sắc thái, dấu luyến, chấm staccato và ngón Longo thêm không chép lại.'
+    loai: trich-doan
+    nguon: [ longo, gouin, gouin-midi ]
+    ket_qua: dung
+    ghi_chu: 'Xem khuong_nhac khối 1.'
+  - id: n27
+    cau: 'Các nốt nhỏ trước Mi (ô 1), trước Rê và trước Si (ô 2) là nốt dựa (appoggiatura): chơi đúng phách, rồi chuyển sang nốt chính nhẹ hơn; tay trái chơi nốt La rồi nốt Rê, mỗi nốt bốn lần, rồi đổi sang hai nốt cùng lúc.'
+    loai: dinh-nghia
+    nguon: [ longo, gouin, thuat-ngu-site, not-hoa-my ]
+    ket_qua: dung
+    ghi_chu: 'Longo và Gouin: nốt nhỏ móc đơn không gạch, có luyến tới nốt chính (Fa♯5→Mi5 ô 1; Mi5→Rê5, Đô♯5→Si4 ô 2). Appoggiatura: đúng phách, lấy bớt độ dài nốt chính (thuat-ngu.yml); nốt dựa được nhấn, nốt chính giải quyết nhẹ hơn (not-hoa-my). MIDI Gouin chơi Fa♯5 đúng phách 3 (phách 2,025), Mi5 sau đó. Tay trái: ô 1 La3 ×4, ô 2 Rê3 ×4, ô 3 [Rê3 Si3] [Đô♯3 La3] ×3.'
+  - id: n28
+    cau: 'Ba bài tập chuẩn bị soạn riêng: (1) tay phải legato La–Si–Đô♯–Rê–Mi trên tay trái nốt đen tách La, Rê, Fa♯, Mi, La; (2) nốt dựa Fa♯ trước Mi chấm dôi, cách viết và một cách chơi (Fa♯ đúng phách 2, nhấn nhẹ, cùng nốt La tay trái); (3) trill trên Si bắt đầu từ nốt trên Đô♯, kết La–Si rồi La.'
+    loai: vi-du-soan
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Xem khuong_nhac khối 2–5.'
+  - id: n29
+    cau: 'Theo quy tắc C. P. E. Bach nêu, nốt dựa trước một nốt chấm dôi lấy hai phần ba độ dài; người chơi có thể chơi ngắn hơn, nhưng nốt dựa luôn đúng phách.'
+    loai: quy-tac
+    nguon: [ not-hoa-my, gouin-midi ]
+    ket_qua: dung
+    ghi_chu: 'not-hoa-my mục Appoggiatura và acciaccatura: "trước một nốt có chấm dôi: lấy hai phần ba" (C. P. E. Bach 1753), và "Không phải nốt nhỏ không gạch nào cũng dài". Ví dụ chơi ngắn hơn: MIDI Gouin cho Fa♯5 ô 1 dài 0,56 phách, Mi5 vào ở phách 2,52 (nốt dựa lấy khoảng một phần ba).'
+  - id: n30
+    cau: 'Láy rền thời Baroque bắt đầu từ nốt trên.'
+    loai: quy-tac
+    nguon: [ not-hoa-my ]
+    ket_qua: dung
+    ghi_chu: 'not-hoa-my mục "Bắt đầu từ nốt nào": Baroque (Bach, Handel) thường bắt đầu từ nốt trên, đúng phách (C. P. E. Bach 1753).'
+  - id: n31
+    cau: 'Lời khuyên tập: bảng Chỗ khó và cách tập (đếm móc đơn, tay trái tách nhẹ và nhỏ hơn, nốt dựa đúng phách, trill chậm từ nốt trên, tập riêng nhóm nốt nhanh ô 23 và 25, bước nhảy với cổ tay mềm), cột Điều cần chú ý của bảng Cấu trúc, và lời dặn dưới ba bài tập.'
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Không trái trang lõi: piano/not-hoa-my (nốt dựa đúng phách, láy rền Baroque từ nốt trên), piano/tieng-dan (legato, staccato).'
+  - id: n32
+    cau: 'Kế hoạch tập 5 tuần, 30–40 phút mỗi ngày, máy đếm nhịp từ ♪ = 72–80 lên ♩ ≈ 46–50.'
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Tốc độ cuối gần tốc độ bản thu gợi ý (♩ ≈ 45–48, xem n33); không phải số của bản nhạc.'
+  - id: n33
+    cau: 'Bản chép tay không ghi số máy đếm nhịp; trong bản thu gợi ý, Hill chơi khoảng ♩ = 45–48; con số ♩ = 72 là của Longo, đi với chữ Andantino.'
+    loai: so-lieu
+    nguon: [ gouin, longo, do-ban-thu ]
+    ket_qua: dung
+    ghi_chu: 'Gouin không có số máy đếm nhịp. Bản thu: nửa đầu 56 phách từ 0,4 đến 75,2 s (1,34 s mỗi phách, ♩ ≈ 45); nửa sau 44 phách từ 150,2 đến 205,8 s (1,26 s, ♩ ≈ 47,5). Longo: "ANDANTINO CANTABILE (♩=72)".'
+  - id: n34
+    cau: 'Bản chép tay không ghi sắc thái và không ghi bàn đạp.'
+    loai: so-lieu
+    nguon: [ gouin ]
+    ket_qua: dung
+    ghi_chu: 'Bản Urtext Gouin không có ký hiệu sắc thái hay bàn đạp nào; sắc thái trong bản Longo là của Longo (n7).'
+  - id: n35
+    cau: 'Lời khuyên diễn tấu: để giai điệu dẫn sắc thái, tay trái tách nhẹ, tay phải liền tiếng; bàn đạp rất ít và nông ở vài nốt dài; ở lần nhắc lại có thể thêm vài nốt hoa mỹ, ít và nhẹ.'
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Không trái trang lõi piano/ban-dap, piano/tieng-dan, piano/not-hoa-my.'
+  - id: n36
+    cau: 'Lỗi thường gặp: chơi quá nhanh theo Andantino; tay trái to bằng tay phải; nốt dựa trước phách; trill vội; nhóm nốt nhanh ô 23, 25 bị dồn; đạp bàn đạp suốt; coi sắc thái và ngón của Longo là của Scarlatti.'
+    loai: khuyen-tap
+    ket_qua: khong-can-nguon
+    ghi_chu: 'Theo các chỗ khó đã nêu; ô 23 và 25 có nhóm nốt móc ba (Gouin).'
+  - id: n37
+    cau: 'Câu hỏi kiểm tra nhanh: chỉ dẫn gốc Adagio e cantabile (Andantino cantabile, ♩ = 72 là của Longo); nửa đầu kết ở Mi trưởng (nốt tròn Mi ô 14); Longo thêm sắc thái, dấu luyến dài, staccato tay trái, số ngón; nốt dựa ô 1 đúng phách; bản thu gợi ý trên fortepiano, lên dây thấp hơn khoảng nửa cung.'
+    loai: cau-truc
+    nguon: [ gouin, longo, imslp-k208, do-ban-thu ]
+    ket_qua: dung
+    ghi_chu: 'Như n1, n6, n7, n18, n20, n27.'
+  - id: n38
+    cau: 'Link: hướng dẫn nghe ba sonata Scarlatti (K. 380, K. 141, K. 466: cùng hình thức hai nửa, nhanh hơn, có bắt chéo tay), Nhà soạn nhạc cho piano (mục Domenico Scarlatti), bài học Bach Invention số 1 và Prelude Đô trưởng (chặng 4), Prelude và Fugue Đô thứ (chặng 6), nốt hoa mỹ (mục Appoggiatura và acciaccatura), Tiếng đàn (mục Legato, mục Staccato), Bàn đạp, Thu âm, Thời kỳ Baroque.'
+    loai: ve-site
+    ket_qua: dung
+    ghi_chu: 'Kiểm trên src/content/docs: nghe-nhac/scarlatti-sonata (hai nửa nhắc lại; bắt chéo tay); piano/nha-soan-nhac có id domenico-scarlatti-16851757 (link cùng ở trang nghe đã khóa); tac-pham.yml chặng của ba bài Bach; not-hoa-my có "## Appoggiatura và acciaccatura"; tieng-dan có "## Legato: nối liền bằng ngón", "## Staccato và các kiểu ngắt"; lich-su/thoi-ky/baroque.md có. tests/link.test.mjs kiểm link và id trên bản xem.'
+khuong_nhac:
+  - khoi: 1
+    loai: trich-doan
+    kiem: [ cu-phap, nhip, giong, not, doi-chieu-an-ban ]
+    ket_qua: dung
+    ghi_chu: 'Ô 1–3, 4/4 (bản in ghi C), K:A, L:1/16, Q:1/4=50 (gần bản thu Hill, không phải số của bản nhạc). Ấn bản: longo tr. 147 hệ 1, đọc ở 300 dpi (khuông trên: dòng kẻ Mi4 Sol4 Si4 Rê5 Fa5; khuông dưới Sol2 Si2 Rê3 Fa3 La3). Tay phải: ô 1 La4 đen, Đô♯5 đen, nốt nhỏ Fa♯5 (móc đơn, luyến) rồi Mi5 đen chấm dôi, Rê5 Đô♯5 móc kép; ô 2 Si4 móc đơn, Fa♯5 đen (Longo thêm gạch tenuto), nốt nhỏ Mi5 rồi Rê5 đen, nốt nhỏ Đô♯5 rồi Si4 đen, La4 móc đơn; ô 3 Sol♯4 móc đơn, Mi5 đen, Đô♯5 móc đơn, Sol♯4 La4 Rê♯4 Mi4 móc đơn nối vạch. Tay trái: ô 1 La3 ×4 đen; ô 2 Rê3 ×4; ô 3 [Rê3 Si3], [Đô♯3 La3] ×3. Gouin tr. 1 ô 1–3: cùng nốt, cùng trường độ (không tenuto, không sắc thái, không ngón). MIDI Gouin ô 1–3 (mido): La4, Đô♯5, Fa♯5 + Mi5, Rê5, Đô♯5 | Si4, Fa♯5, Mi5 + Rê5, Đô♯5 + Si4, La4 | Sol♯4, Mi5, Đô♯5, Sol♯4, La4, Rê♯4, Mi4; tay trái La3 ×4 | Rê3 ×4 | [Rê3 Si3] [Đô♯3 La3] ×3: khớp. Không chép: p, luyến dài, chấm staccato tay trái, ngón và tenuto của Longo; luyến Longo vẽ từ La4 cuối ô 2 sang Sol♯4 ô 3 (Gouin không có) cũng không chép. tools/khuong-nhac.mjs: 0 lỗi.'
+  - khoi: 2
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
+    ket_qua: dung
+    ghi_chu: '3 ô 4/4, La trưởng, L:1/16: tay phải La4 Si4 Đô♯5 Rê5 (ngón 1-2-3-4) | Mi5 trắng (5) Rê5 Đô♯5 | Si4 trắng (2) La4 trắng (1); tay trái nốt đen staccato La3 ×4 (ngón 1) | Rê3 ×2 (5), Fa♯3 ×2 (1) | Mi3 ×2 (2), La2 (5), lặng đen. Hòa âm I – IV (Rê, Fa♯) – V (Mi) – I. Mỗi ô 16 móc kép ở cả hai tay. Khớp lời kèm (tay phải nối liền, tay trái tách nhẹ).'
+  - khoi: 3
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, so-ngon ]
+    ket_qua: dung
+    ghi_chu: '2 ô 4/4, La trưởng: tay phải Đô♯5 đen (3), nốt nhỏ Fa♯5 rồi Mi5 đen chấm dôi (4), Rê5 Đô♯5 móc kép (3-2) | Si4 trắng (1), lặng trắng; tay trái La3 đen ×4 (1) | Mi3 đen ×2 (2), Mi3 trắng. Hình nốt dựa như ô 1 của bài (Fa♯ trước Mi chấm dôi) nhưng soạn riêng. Mỗi ô 16 móc kép.'
+  - khoi: 4
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, so-ngon ]
+    ket_qua: dung
+    ghi_chu: 'Cách chơi của khối 3: Fa♯5 đen có dấu nhấn (ngón 5) đúng phách 2, cùng nốt La3 thứ hai của tay trái; Mi5 móc đơn (4); Rê5 Đô♯5 móc kép. Fa♯ lấy hai phần ba của Mi chấm dôi (một đen trên một đen chấm dôi), đúng quy tắc ở n29. Tay trái như khối 3. Mỗi ô 16 móc kép.'
+  - khoi: 5
+    loai: vi-du-soan
+    kiem: [ cu-phap, nhip, giong, hop-am, so-ngon ]
+    ket_qua: dung
+    ghi_chu: '2 ô 4/4, La trưởng: tay phải Đô♯5 Si4 La4 Đô♯5 đen (3-2-1-3) | Si4 móc đơn chấm có !trill! (3), La4 Si4 móc kép (2-3), La4 đen (2), lặng đen; tay trái La3 Sol♯3 Fa♯3 Đô♯3 đen (1-2-3-5) | Mi3 trắng (1), La2 đen (5), lặng đen. Kết V–I (Mi dưới trill Si, La ở nốt kết). Mỗi ô 16 móc kép. Lời kèm: trill bắt đầu từ nốt trên Đô♯ (theo n30); ngón 3 trên Si, trill Đô♯–Si bằng 4-3 hay 3-2: chơi được.'
