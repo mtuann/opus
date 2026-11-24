@@ -45,3 +45,7 @@ Kết quả: 16 nhận định mới hay sửa của lần mở này đều `rev
 - `doi_chu`: mục Diabelli `cu: null` đúng với cách so theo ô (`node --test tests/chuyen.test.mjs` đạt, 18/18, có `.cache/site-cu/`).
 - Số bài theo chặng 2–7 trong `ke-hoach-mo-rong.md` (8, 6, 8, 8, 9, 7; 46) khớp khi đếm `loai: bai-hoc` theo `chang`. Câu `ke-hoach` n8 đúng: không có bài học Haydn, Scarlatti nào khác; chặng 7 trước BWV 861 có 6 bài, đều Lãng mạn hay Cuối Lãng mạn.
 - Bảy hồ sơ đọc bằng `parseDocument` không lỗi.
+
+## Kiểm mẫu và khóa
+
+Claude (agent riêng) kiểm thay chủ repo ba câu mới (tac-pham-theo-cap n90, fugue n45, scarlatti-sonata n44): 3 đúng. Khóa lại 7 mục 24/11/2026.
