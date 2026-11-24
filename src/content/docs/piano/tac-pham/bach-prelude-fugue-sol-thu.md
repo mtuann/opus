@@ -46,7 +46,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | … | **Si♭ trưởng** (ô 7–10): ý mở đầu trở lại, nhưng láy rền nay ở bè trầm, hình móc kép ở tay phải |
 | … | **Đô thứ** (ô 11–17): ý mở đầu lần thứ ba, láy rền trên nốt Đô trầm; rồi về Sol thứ |
 | … | **Kết prelude** (ô 18–19): nốt Sol trầm ngân suốt hai ô cuối; hợp âm cuối là Sol trưởng |
-| … | **Fugue, chủ đề** (ô 1–2): bè alto một mình: ba móc đơn, nhảy xuống quãng 6, rồi một chuỗi móc kép |
+| … | **Fugue, chủ đề** (ô 1–2): bè alto một mình: ba móc đơn có bước nhảy xuống quãng 6, hai móc đen, rồi một nhóm móc kép |
 | … | **Đáp đề** (ô 2–3): bè soprano vào ở Rê thứ; bè alto chuyển sang đối đề |
 | … | **Bass, rồi tenor** (ô 5–7): đủ bốn bè; mỗi lần vào đều có đối đề đi kèm |
 | … | **Si♭ trưởng** (ô 12–16): chủ đề ở alto, bass, soprano, sang giọng trưởng |
@@ -66,7 +66,7 @@ Dán link một bản thu vào khung phía trên (hoặc chọn một file trên
 | Mở đầu | 1–2 | Sol thứ. Bè trên ngân nốt Sol cao suốt ô 1 với láy rền; bè giữa chạy móc kép, bè trầm lặp nốt Sol móc đơn. Ô 2: giai điệu móc kép có móc ba, kết ở nốt Fa♯ |
 | Láy rền thứ hai, chuyển giọng | 3–6 | Láy rền trên nốt Sol thấp hơn một quãng tám (ô 3); hòa âm đi qua giọng át Rê rồi tiến về Si♭ trưởng: ô 6 là hợp âm bảy át Fa – La – Đô – Mi♭ |
 | Ý mở đầu ở Si♭ trưởng | 7–10 | Đổi tay: láy rền ở bè trầm trên nốt Si♭ (ô 7), hình móc kép lên tay phải; ô 9–10 là một chuỗi nhắc lại một mẫu ở cao độ thấp dần, dẫn sang Đô thứ |
-| Ý mở đầu ở Đô thứ | 11–17 | Láy rền trên nốt Đô trầm (ô 11); từ ô 14 về lại Sol thứ. Ô 17 dừng trên hợp âm át Rê, bè trên giữ nốt Sol rồi mới xuống Fa♯ (nốt treo) |
+| Ý mở đầu ở Đô thứ | 11–17 | Láy rền trên nốt Đô trầm (ô 11); cuối ô 12 bè trầm lên Fa♯, cảm âm của Sol thứ, và từ ô 13 nhạc về lại Sol thứ. Ô 17 dừng trên hợp âm át Rê, bè trên giữ nốt Sol rồi mới xuống Fa♯ (nốt treo) |
 | Kết | 18–19 | Nốt Sol trầm ngân suốt hai ô (âm nền); hợp âm cuối là Sol trưởng, có dấu ngân |
 
 ### Prelude, ô 1–2
@@ -107,9 +107,9 @@ K:Gm
 [V:LH] "^Chủ đề (alto)"z2D2E2G,2 ^F,4G,4 | z2A,B, C2B,A, B,4G,4 | z2"^Đối đề (alto)"A,G, F,2G,A, B,2G,2 =E,2^C2 | D6=E2 F2=E2F2G2 |]
 ```
 
-Chủ đề dài một ô rưỡi và có hai nửa rõ rệt: ba móc đơn với bước nhảy quãng 6 thứ đi xuống (Mi♭ xuống Sol), dừng trên nốt Fa♯ móc đen; rồi một chuỗi móc kép, kết ở nốt Si♭ móc đen. Đáp đề (ô 2) bắt đầu bằng Sol – Si♭ – Rê: nếu chỉ dịch chủ đề lên quãng 5 thì phải là La – Si♭ – Rê, nhưng nốt đầu được đổi thành Sol để nốt át âm của chủ đề được đáp bằng nốt chủ âm. Đó là **đáp đề điệu tính** (*tonal answer*), như ở [BWV 847](/opus/piano/tac-pham/bach-prelude-fugue-do-thu/). Từ ô 3, bè alto chơi **đối đề**: hai móc kép đi xuống, một móc đơn, hai móc kép đi lên, rồi bốn móc đơn kết bằng bước nhảy lên nốt Đô♯ và về Rê.
+Chủ đề dài một ô rưỡi và có hai nửa rõ rệt. Nửa đầu: ba móc đơn Rê – Mi♭ – Sol với bước nhảy quãng 6 thứ đi xuống (Mi♭ xuống Sol), rồi hai móc đen Fa♯ – Sol. Nửa sau, sau một dấu lặng móc đơn: một nhóm móc kép quanh nốt Si♭ (La Si♭ móc kép, Đô móc đơn, Si♭ La móc kép), kết ở nốt Si♭ móc đen. Đáp đề (ô 2) bắt đầu bằng Sol – Si♭ – Rê: nếu chỉ dịch chủ đề lên quãng 5 thì phải là La – Si♭ – Rê, nhưng nốt đầu được đổi thành Sol để nốt át âm của chủ đề được đáp bằng nốt chủ âm. Đó là **đáp đề điệu tính** (*tonal answer*), như ở [BWV 847](/opus/piano/tac-pham/bach-prelude-fugue-do-thu/). Từ ô 3, bè alto chơi **đối đề**: hai móc kép đi xuống, một móc đơn, hai móc kép đi lên, rồi bốn móc đơn kết bằng bước nhảy lên nốt Đô♯ và về Rê.
 
-Hãy để ý chỗ đối đề bắt đầu: ngay sau nốt móc đen thứ nhất của đáp đề (nốt Đô♯, cảm âm của Rê thứ). Ở các lần vào về sau, đối đề cũng bắt đầu đúng ở chỗ ấy; trong stretto, bè thứ hai vào chủ đề cũng ở chỗ ấy.
+Hãy để ý chỗ đối đề bắt đầu: đáp đề vừa chạm nốt móc đen thứ nhất (nốt Đô♯, cảm âm của Rê thứ) thì nửa phách sau, lúc nốt ấy còn đang ngân, đối đề vào. Ở các lần vào về sau, đối đề cũng bắt đầu đúng ở chỗ ấy; trong stretto, bè thứ hai vào chủ đề cũng ở chỗ ấy.
 
 ### Fugue: bản đồ các lần vào
 
@@ -152,7 +152,7 @@ K:Gm
 [V:LH] z8 z2"^Tenor"D2E2G,2 & D,4z4 z8 | ^F,4G,4 z2A,B, C2B,A, & z2"_Bass"D,2E,2G,,2 ^F,,4A,,4 |]
 ```
 
-Ba bè vào chủ đề: soprano ở nửa sau phách 1 ô 28, tenor nửa ô sau, bass nửa ô sau nữa (nửa sau phách 1 ô 29). Mỗi bè mới vào đúng lúc bè trước dừng trên nốt móc đen: chính chỗ mà ở phần trình bày, đối đề bắt đầu. Bè bass không chơi hết chủ đề: sau nốt Fa♯ nó lên La thay vì về Sol. Khi tập, hãy cho mỗi lần vào rõ lên một chút, rồi lùi lại khi bè sau vào.
+Ba bè vào chủ đề: soprano ở nửa sau phách 1 ô 28, tenor nửa ô sau, bass nửa ô sau nữa (nửa sau phách 1 ô 29). Mỗi bè mới vào nửa phách sau khi bè trước chạm nốt móc đen thứ nhất (Fa♯), lúc nốt ấy còn đang ngân: chính chỗ mà ở phần trình bày, đối đề bắt đầu. Bè bass không chơi hết chủ đề: sau nốt Fa♯ nó lên La thay vì về Sol. Khi tập, hãy cho mỗi lần vào rõ lên một chút, rồi lùi lại khi bè sau vào.
 
 ## Chỗ khó và cách tập
 
@@ -205,7 +205,7 @@ K:Gm
 [V:LH] z6 !1!G2 !2!^F4 !1!G4 & !5!G,16 | !5!D,16 | D,8 G,,8 |]
 ```
 
-Bè giữa chơi chủ đề fugue, bắt đầu từ nốt Rê cao. Ô 1: hai nốt đầu ở tay phải (ngón 1, 2), ba nốt sau sang tay trái (1, 2, 1), trong lúc ngón 5 của hai tay giữ hai nốt dài. Chơi sao cho người nghe không biết chỗ đổi tay. Ô 2: nửa sau chủ đề về lại tay phải, ngón 5 vẫn giữ nốt Sol cao. Đây là việc bạn làm ở nhiều lần vào của fugue: bè nằm giữa hai tay được chia cho cả hai.
+Bè giữa chơi chủ đề fugue, bắt đầu từ nốt Rê cao. Ô 1: hai nốt đầu ở tay phải (ngón 1, 2), ba nốt sau sang tay trái (1, 2, 1), trong lúc ngón 5 của hai tay giữ hai nốt dài. Chơi sao cho người nghe không biết chỗ đổi tay. Ô 2: nửa sau chủ đề về lại tay phải, ngón 5 giữ nốt Sol cao. Đây là việc bạn làm ở nhiều lần vào của fugue: bè nằm giữa hai tay được chia cho cả hai.
 
 ### 3. Tập fugue theo bè
 
@@ -244,7 +244,7 @@ Bản Bach-Gesellschaft không ghi tốc độ cho cả prelude lẫn fugue. Pre
 
 ### Phát âm
 
-- **Chủ đề fugue:** một cách phổ biến là tách nhẹ ba móc đơn đầu, giữ đủ nốt móc đen, nối liền chuỗi móc kép. Chọn một cách và giữ nó cho mọi lần vào, ở cả bốn bè.
+- **Chủ đề fugue:** một cách phổ biến là tách nhẹ ba móc đơn đầu, giữ đủ hai nốt móc đen, nối liền nhóm móc kép. Chọn một cách và giữ nó cho mọi lần vào, ở cả bốn bè.
 - **Đối đề:** móc kép liền, các móc đơn tách nhẹ.
 - Nốt dài luôn giữ đủ trường độ; tách tiếng ở bè này không được làm đứt bè kia.
 

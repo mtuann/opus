@@ -31,3 +31,16 @@ Nhánh `them/bach-prelude-fugue-sol-thu`, 24/11/2026. Lượt 10 của `plans/be
 - `piano/tac-pham-theo-cap`: thêm BWV 861 vào chặng 7.
 - `piano/tac-pham/bach-prelude-fugue-do-thu` (đã khóa): mục Học tiếp đang gợi ý "các fugue ba bè khác… BWV 846 có bốn bè"; có thể thêm link sang bài này.
 - `hinh-thuc/fugue` (đã khóa): có thể link sang bài này làm ví dụ stretto.
+
+## Review
+
+Claude (agent riêng, không làm lượt 1, lượt 2), 24/11/2026. Mọi nhận định của hai hồ sơ có `review`: `dung`, trừ n24 của trang (`sai`, đồng ý với lượt 2; đã sửa).
+
+- **n24 (lượt 2 sai):** chủ đề fugue là ba móc đơn Rê – Mi♭ – Sol (bước nhảy quãng 6 thứ), rồi **hai** móc đen Fa♯ – Sol; nửa sau, sau lặng móc đơn, là nhóm La Si♭ (móc kép), Đô (móc đơn), Si♭ La (móc kép), kết Si♭ móc đen. Câu cũ bỏ mất Sol móc đen và gọi nhóm có Đô móc đơn là "chuỗi móc kép". Sửa câu ở mục Fugue ô 1–4, dòng Theo dõi khi nghe và mục Phát âm ("giữ đủ hai nốt móc đen, nối liền nhóm móc kép"), theo bản quét tr. 58 hệ 1 và khối abc 2.
+- **Ghi chú lượt 2:** n26, n27 viết rõ "nửa phách sau khi bè trước chạm nốt móc đen thứ nhất, lúc nốt ấy còn đang ngân" (mục Fugue ô 1–4 và câu sau khối 3). n20: bản quét tr. 57 cho thấy cuối ô 12 bè trầm lên Fa♯ (cảm âm của Sol thứ), ô 13 mở bằng hợp âm Sol thứ; bảng prelude sửa "từ ô 14" thành "cuối ô 12 … từ ô 13 nhạc về lại Sol thứ". n16: thay nguồn nghiệp dư bach-cantatas.com của lượt 2 bằng API MusicBrainz (nguồn của lượt 1, có hãng và số đĩa: Sony, RCA, Decca, Hyperion, Deutsche Harmonia Mundi/BMG); trang Hyperion chặn máy. n22: thêm nguồn gốc C. P. E. Bach, *Versuch* I.2.3 §5 ("always starts from the second above the main tone") và bảng *Explication* của J. S. Bach (Commons), cả hai là nguồn của trang đã khóa `piano/not-hoa-my`; đủ, không cần Duffin.
+- **Soprano ô 15:** bản quét tr. 58 (400 dpi) có dấu bình trước Mi4 (Mi♮), Mutopia ghi Mi♭. Trang theo bản in: dòng "15–16 Soprano, Chủ đề, Fa trưởng" khớp; không khối abc và không câu nào nói Mi♭ ở ô 15.
+- **Khuông nhạc:** ba trích đoạn so từng nốt với bản quét ở 300–600 dpi (prelude ô 1–2; fugue ô 1–4; ô 28–29 cả bốn bè, Fa♯4 soprano ô 28 có dấu thăng in): khớp, đếm đủ 16 móc kép mỗi bè mỗi ô, kể cả ô đầu. Hai bài tập soạn: đủ phách mọi bè, hòa âm Sol thứ – át – Sol thứ, số ngón chơi được; lời kèm bài tập 2 sửa "ngón 5 vẫn giữ nốt Sol cao" thành "giữ" (ô 2 là nốt Sol mới, ô 1 giữ Si♭).
+- **Sự kiện ngẫu nhiên (đều đúng):** thứ tự 16 của BWV 861 (Henle HN 14), ba nhà in khoảng 1800 (blog Henle), danh sách ARSM 6/2024 chỉ có BWV 857, 859, 861 của quyển 1, câu bàn đạp của Schiff (PDF HN 14), mức Henle 5 và 6, alto ô 23 có Rê đầu chủ đề là móc kép (bản quét tr. 59).
+- **Mốc:** đo lại onset (librosa CQT) trên mp3 Commons tải lại: Si♭3 ô 7 prelude 39,45 s; Sol2 ô 18 110,04 s; fugue Rê3 bass ô 5 13,18 s, Fa3 bass ô 17 50,11 s, Sol3 ô 20 59,39 s, Rê4 tenor ô 33 98,92 s (cộng 134,23 s): mốc 39, 110, 147, 184, 194, 233 đều trong 0,5 s, không sửa.
+- **Bản thu:** API Commons cho cả hai file: CC0, `licUrl` creativecommons.org/publicdomain/zero/1.0, "performed by Kimiko Ishizaka", 134,23 s và 113,49 s: khớp `ban_thu`.
+- **Chữ, thuật ngữ:** chủ đề, đáp đề, đối đề, đoạn chuyển, stretto, láy rền, âm nền, nốt treo, cảm âm, chuỗi, quãng 3 Picardy khớp `thuat-ngu.yml`. Phần fugue đọc được cho người tự học sau khi viết rõ hai nửa chủ đề và chỗ các bè vào.
