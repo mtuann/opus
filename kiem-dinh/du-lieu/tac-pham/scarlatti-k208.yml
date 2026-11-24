@@ -7,7 +7,7 @@ lan:
     ma_bam: null
     nguoi:
       luot_1: Claude Opus 5.5 (lượt 1, them/scarlatti-k208, 24/11/2026)
-      luot_2: null
+      luot_2: Claude Opus 5.5 (agent riêng, độc lập với lượt 1, 24/11/2026; 46 câu, 45 đúng, 1 sai)
       review: null
       kiem_mau: null
 ghi_chu: 'Bản ghi mới (tools/them-tac-pham.mjs, 24/11/2026). Nguồn chung với hồ sơ trang piano/tac-pham/scarlatti-k208. Không có trường cap: bài không nằm trong trang nghe-nhac/scarlatti-sonata (K. 380, K. 141, K. 466), trang chỉ link bằng chữ. ban_thu ghi bằng attach.py (IMSLP, chỉ dẫn link: link Special:ImagefromIndex/961413, src trang File:, d = 281,19 s theo ffprobe file FLAC chủ repo tải tay). Sơ đồ (hinh) chia theo thời gian trên bản thu (đo ở hồ sơ trang). them_ngay là dữ liệu nội bộ, không có nhận định. goi_y: false như các bài thêm sau.'
@@ -75,63 +75,96 @@ nhan_dinh:
     nguon: [ imslp-k208, wiki-list, longo, gouin ]
     ket_qua: dung
     ghi_chu: 'IMSLP: Keyboard Sonata in A major, K.208 ; L.238, một phần (Adagio e cantabile), keyboard. Wikipedia: K 208 = L 238, A major. Longo: số 238. Gouin: "Sonata K. 208", ba thăng.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/api.php?action=parse&page=Keyboard_Sonata_in_A_major,_K.208_(Scarlatti,_Domenico)&prop=wikitext&format=json", "https://imslp.org/api.php?action=parse&page=List_of_works_by_Domenico_Scarlatti&prop=wikitext&format=json" ]
+    luot_2_ghi_chu: "IMSLP: Keyboard Sonata in A major, K.208 ; L.238; Instrumentation keyboard; một mục 'Adagio e cantabile'. K = Kirkpatrick, L = Longo theo danh sách IMSLP."
   - id: n2
     cau: 'Giọng La trưởng, nhịp 4/4; chip "La trưởng · 4/4".'
     loai: cau-truc
     nguon: [ gouin, longo ]
     ket_qua: dung
     ghi_chu: 'Hóa biểu ba thăng, kết ở La (ô 25, tay trái La2); số chỉ nhịp C (4/4) ở cả Longo và Gouin.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_A_major,_K.208_(Scarlatti,_Domenico)", "https://github.com/craigsapp/scarlatti-keyboard-sonatas/blob/master/reference-edition/L238K208.pdf" ]
+    luot_2_ghi_chu: "Bản Gouin và Longo: hóa biểu ba thăng, nhịp C (4/4); IMSLP Key = A major."
   - id: n3
     cau: 'Thời kỳ: Baroque.'
     loai: lich-su
     nguon: [ imslp-k208, henle-581 ]
     ket_qua: dung
     ghi_chu: 'IMSLP: Piece Style Baroque. Henle: Scarlatti 1685–1757, "Baroque keyboard gems".'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/api.php?action=parse&page=Keyboard_Sonata_in_A_major,_K.208_(Scarlatti,_Domenico)&prop=wikitext&format=json" ]
+    luot_2_ghi_chu: "IMSLP: 'Piece Style=Baroque'."
   - id: n4
     cau: 'Chặng 5, grade "Grade 6"; chip ≈ Grade 6; dòng Độ khó: ABRSM Grade 6, danh sách A (đề cương 2021–2022, 2023–2024, 2025–2026, 2027–2028); RCM 2022 Level 7; Henle mức 4 trên thang 1–9.'
     loai: cap-do
     nguon: [ abrsm-2122, abrsm-2324, abrsm-2526, abrsm-2728, rcm-2022, henle-581, cap-do ]
     ket_qua: dung
     ghi_chu: 'Bốn đề cương ABRSM: bài nằm dưới "GRADE 6", số 10 (2021–2024) và 14 (2025–2028) của danh sách đầu (A). RCM 2022 tr. 60, 63: Level 7, List A. Henle HN 581: mức 4, ABRSM Piano Grade 6. Chặng 5 = Grade 6.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.abrsm.org/sites/default/files/2023-09/piano-2021-2022-syllabus-rev-sep-2020-final.pdf", "https://www.abrsm.org/sites/default/files/2023-10/Piano%202023%20%26%202024%20Prac%20syllabus%2020230807.pdf", "https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20%26%202026%20Prac%20syllabus%2020240524_access.pdf", "https://www.abrsm.org/sites/default/files/2026-06/Piano%20Practical%20Grades%20Qualification%20Specification%202027%20%26%202028.pdf", "https://teacherportal.rcmusic.com/getattachment/57f3734d-97e5-4777-b67e-4b1111ee31a3/piano-syllabus-2022-edition.pdf", "https://www.henle.de/Selected-Piano-Sonatas-Volume-IV/HN-581" ]
+    luot_2_ghi_chu: "Như trang n4: ABRSM Grade 6 List A cả bốn kỳ; RCM 2022 Level 7; Henle mức 4 (medium), ghi 'ABRSM: Piano Grade 6'. Chặng 5 là quy ước của site."
   - id: n5
     cau: 'Chip "Adagio e cantabile"; dòng Giọng · nhịp · tốc độ: La trưởng · 4/4 · Adagio e cantabile (chậm và hát); Longo đổi thành Andantino cantabile, ♩ = 72.'
     loai: so-lieu
     nguon: [ gouin, imslp-k208, longo, thuat-ngu-site ]
     ket_qua: dung
     ghi_chu: 'Gouin, IMSLP, Wikipedia: Adagio e cantabile. Longo tr. 147: "ANDANTINO CANTABILE (♩=72)". adagio, cantabile theo thuat-ngu.yml.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/api.php?action=parse&page=Keyboard_Sonata_in_A_major,_K.208_(Scarlatti,_Domenico)&prop=wikitext&format=json", "https://github.com/craigsapp/scarlatti-keyboard-sonatas/blob/master/reference-edition/L238K208.pdf" ]
+    luot_2_ghi_chu: "IMSLP và bản Gouin: Adagio e cantabile; La trưởng, C. Bản Longo: 'ANDANTINO CANTABILE (♩=72)'."
   - id: n6
     cau: 'Chip "Hai nửa có nhắc lại · 25 ô"; dòng Hình thức: hai nửa, mỗi nửa nhắc lại: ô 1–14 đi từ La trưởng sang Mi trưởng, ô 15–25 trở về La trưởng.'
     loai: cau-truc
     nguon: [ gouin, longo ]
     ket_qua: dung
     ghi_chu: 'Longo đánh số (5), (10), (15), (20), (25); ô cuối là 25. Vạch nhắc lại sau ô 14 và cuối ô 25 (Gouin, Longo). Ô 14: Mi4 tròn, tay trái Mi3 tròn (Mi trưởng); ô 25: La4, tay trái La2.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_A_major,_K.208_(Scarlatti,_Domenico)", "https://github.com/craigsapp/scarlatti-keyboard-sonatas/blob/master/reference-edition/L238K208.pdf" ]
+    luot_2_ghi_chu: Bản Gouin đánh số tới ô 25; dấu nhắc lại cuối ô 14 (nốt tròn Mi, Mi trưởng) và cuối ô 25 (La). Longo cũng có số (25) ở ô cuối.
   - id: n7
     cau: 'Dòng Sáng tác / xuất bản: năm viết không rõ; Longo ghi nguồn là bản chép tay Venice, tập III, số 3; Scarlatti cho chép các tập sonata trong những năm 1752–1757 (Henle); Longo in bài trong Opere complete per clavicembalo, tập 5 (Ricordi, Milano, 1906).'
     loai: lich-su
     nguon: [ imslp-k208, longo, henle-581, imslp-longo-mau ]
     ket_qua: dung
     ghi_chu: 'IMSLP: Year/Date of Composition trống. Longo tr. 148: "C. V. Libro III, N. 3" (C. V.: Codice Veneziano, đọc là bản chép tay Venice). Henle: "1752–57 He orders the preparation of several volumes of his collected sonatas". Mẫu IMSLP: Opere complete per clavicembalo, Vol. 5, G. Ricordi & C., Milan, 1906, E.R. 545.'
+    luot_2: dung
+    luot_2_nguon: [ "https://www.henle.de/Selected-Piano-Sonatas-Volume-IV/HN-581", "https://imslp.org/wiki/Keyboard_Sonata_in_A_major,_K.208_(Scarlatti,_Domenico)", "https://github.com/craigsapp/scarlatti-keyboard-sonatas/blob/master/reference-edition/L238K208.pdf" ]
+    luot_2_ghi_chu: "IMSLP để trống năm sáng tác; Longo 'C. V. Libro III, N. 3'; Henle '1752–57 He orders the preparation of several volumes of his collected sonatas'; IMSLP #914846 'Opere complete per clavicembalo, Vol.5 … Milan: G. Ricordi & C., 1906'."
   - id: n8
     cau: 'Kỹ năng chính (ky_nang_chinh, dòng Kỹ năng chính): hát một giai điệu chậm có nốt dựa, trill và nhóm nốt nhanh, trên tay trái đi đều từng phách bằng một hay hai nốt; giữ nhịp chậm mà không lê; hình thức hai nửa; phân biệt chữ của Scarlatti với chữ người biên tập thêm.'
     loai: cau-truc
     nguon: [ gouin, longo ]
     ket_qua: dung
     ghi_chu: 'Gouin: nốt dựa ô 1–2, tr ô 11 và 25, nhóm móc ba ô 23 và 25; tay trái nốt đen (một hay hai nốt) gần như suốt bài; Adagio. Longo thêm sắc thái, ngón, luyến, staccato, đổi tốc độ (hồ sơ trang n7).'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_A_major,_K.208_(Scarlatti,_Domenico)", "https://github.com/craigsapp/scarlatti-keyboard-sonatas/blob/master/reference-edition/L238K208.pdf" ]
+    luot_2_ghi_chu: Mô tả kỹ năng khớp bản nhạc (nốt dựa, trill, nhóm móc tam; tay trái nốt đen một hay hai nốt; hai nửa có nhắc lại; Longo thêm chữ của người biên tập).
   - id: n9
     cau: 'Dòng Bản nhạc: IMSLP có bản quét bản Longo (Ricordi 1906) và bản Urtext gõ lại của Pierre Gouin; bản Urtext G. Henle Verlag HN 581 (Selected Piano Sonatas tập IV). Đối chiếu: chép tay từ bản quét bản Longo (Ricordi, Milano, 1906, tập 5, E.R. 545; kho GitHub craigsapp/scarlatti-keyboard-sonatas, cũng là IMSLP #914846); soát với bản Pierre Gouin (Les Éditions Outremontaises, 2013, CC BY-SA 4.0; PDF và MIDI trên IMSLP).'
     loai: so-lieu
     nguon: [ imslp-k208, henle-581, longo, gouin, imslp-longo-mau ]
     ket_qua: dung
     ghi_chu: 'IMSLP liệt kê bản Longo (Public Domain) và bản Gouin (Urtext keyboard score, CC BY-SA 4.0, PDF và MIDI). Henle HN 581 có K. 208. Số IMSLP #914846 lấy từ khảo sát đợt 4 (đọc HTML trang tác phẩm); file trên GitHub cùng tr. 147–148, E.R. 545.'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_A_major,_K.208_(Scarlatti,_Domenico)", "https://www.henle.de/Selected-Piano-Sonatas-Volume-IV/HN-581", "https://github.com/craigsapp/scarlatti-keyboard-sonatas/blob/master/reference-edition/L238K208.pdf" ]
+    luot_2_ghi_chu: "IMSLP: file #914846 là bản Longo (Ricordi 1906, Plate E.R. 545), bản Gouin (Montréal: Les Éditions Outremontaises, 2013, CC BY-SA 4.0, 'Urtext keyboard score') có PDF và MIDI. Henle HN 581 'Selected Piano Sonatas, Volume IV' có 'Piano Sonata A major K. 208'. Kho craigsapp có reference-edition/L238K208.pdf (2 trang, tr. 147–148)."
   - id: n10
     cau: 'Sơ đồ hinh (bài học): bốn ô theo thời gian trên bản thu Hill (có chơi nhắc lại, khoảng 4 phút 38 giây tiếng đàn): Nửa đầu (ô 1–14, La trưởng → Mi trưởng) 75, Nhắc lại nửa đầu 75, Nửa sau (ô 15–25, trở về La trưởng) 56, Nhắc lại nửa sau (kết ở La trưởng) 72.'
     loai: cau-truc
     nguon: [ do-ban-thu, gouin ]
     ket_qua: dung
     ghi_chu: 'Tiếng đàn 0,4–278,3 s = 277,9 s (4 phút 38 giây); bốn đoạn 74,8 / 75,0 / 55,6 / 72,5 s, làm tròn 75 / 75 / 56 / 72 (tổng 278).'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/wiki/Keyboard_Sonata_in_A_major,_K.208_(Scarlatti,_Domenico)" ]
+    luot_2_ghi_chu: "Đo FLAC: tiếng đàn từ 0,4 s đến ≈ 278,5 s (ngưỡng −60 dB) ≈ 4 phút 38 giây. Ranh giới (DTW với MIDI Gouin, soát bằng điểm bắt âm): nhắc lại nửa đầu 75,2 s, nửa sau 150,3 s, nhắc lại nửa sau 205,4 s. Độ dài: 75; 75,1; 55,1; ≈ 73. Ô nửa sau ghi 56 (đo 55) là làm tròn chấp nhận được."
   - id: n11
     cau: 'Bản thu: Robert Stephen Hill, ghi chú "chơi trên fortepiano (đàn piano thời đầu), lên dây thấp hơn piano hiện đại khoảng nửa cung; có chơi các dấu nhắc lại", phạm vi công cộng; trang IMSLP Keyboard Sonata in A major, K.208; một phần, chỉ dẫn link Special:ImagefromIndex/961413, file gốc PMLP475484-17_-_AUDIO_2004_-_Track-17_DS_Sonata_A_Major_K_208_Adagio_cristo_bhs_fr_20_04_04.flac, 281,19 s.'
     loai: nghe
     nguon: [ imslp-k208, do-ban-thu ]
     ket_qua: dung
     ghi_chu: 'IMSLP: File Name 1 như trên, Performer Categories "Hill, Robert Stephen=fortepiano", Copyright "Public Domain". Số chỉ mục 961413 theo khảo sát (HTML trang tác phẩm) và tên file chủ repo tải (IMSLP961413-…flac). ffprobe 281,186667 s. Lên dây thấp và nhắc lại: đo ở do-ban-thu (hồ sơ trang n20).'
+    luot_2: dung
+    luot_2_nguon: [ "https://imslp.org/api.php?action=parse&page=Keyboard_Sonata_in_A_major,_K.208_(Scarlatti,_Domenico)&prop=wikitext&format=json", "https://imslp.org/wiki/Keyboard_Sonata_in_A_major,_K.208_(Scarlatti,_Domenico)" ]
+    luot_2_ghi_chu: "IMSLP: file PMLP475484-17_-_AUDIO_2004_-_Track-17_DS_Sonata_A_Major_K_208_Adagio_cristo_bhs_fr_20_04_04.flac, Hill fortepiano, Public Domain, #961413 (4:41). ffprobe: 281,186667 s. Ghi chú về lên dây thấp nửa cung và có chơi nhắc lại: đo được (xem trang n20)."
